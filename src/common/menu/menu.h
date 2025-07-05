@@ -238,6 +238,7 @@ public:
 	bool mBackbuttonSelected;
 	bool DontDim;
 	bool DontBlur;
+	bool NoFade;
 	bool Animated;
 	bool AnimatedTransition;
 	FString mCurrentTooltip;
@@ -245,6 +246,7 @@ public:
 	double mTooltipScrollOffset;
 	FFont* mTooltipFont;
 	bool DrawTooltips;
+
 	static int InMenu;
 
 	DMenu(DMenu *parent = NULL);
