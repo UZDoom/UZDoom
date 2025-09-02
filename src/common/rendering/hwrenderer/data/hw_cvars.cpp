@@ -34,8 +34,6 @@
 **
 */ 
 
-
-
 #include "c_cvars.h"
 #include "c_dispatch.h"
 #include "v_video.h"
@@ -43,13 +41,11 @@
 #include "menu.h"
 #include "printf.h"
 
-
 CUSTOM_CVAR(Int, gl_fogmode, 2, CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
 	if (self > 2) self = 2;
 	if (self < 0) self = 0;
 }
-
 
 // OpenGL stuff moved here
 // GL related CVARs
@@ -69,10 +65,34 @@ CUSTOM_CVAR(Bool, gl_plane_reflection, true, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
 	gl_plane_reflection_i = self;
 }
 
-CUSTOM_CVARD(Float, vid_gamma, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts gamma component of gamma ramp")
+constexpr float GAMMA_DEFAULT = 2.2;
+constexpr float GAMMA_HIGH = 3.0;
+constexpr float GAMMA_LOW = 0.1;
+
+constexpr float GAMMA_LOW_FIX = (GAMMA_LOW-GAMMA_DEFAULT) / (GAMMA_HIGH-GAMMA_DEFAULT);
+
+CUSTOM_CVARD(Float, vid_gamma, GAMMA_DEFAULT, 0, "(internal) target output gamma")
 {
-	if (self < 0) self = 1;
-	else if (self > 4) self = 4;
+	if (self < GAMMA_LOW) self = GAMMA_LOW;
+}
+
+CUSTOM_CVARD(Float, vid_fixgamma, 0.0f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts gamma component of gamma ramp")
+{
+	if (self < GAMMA_LOW_FIX) self = GAMMA_LOW_FIX;
+	else vid_gamma = self*(GAMMA_HIGH-GAMMA_DEFAULT) + GAMMA_DEFAULT;
+}
+
+CCMD (bumpgamma)
+{
+	// [RH] Gamma correction tables are now generated on the fly for *any* gamma level
+
+	float newgamma = (int)(vid_fixgamma*10+1)/10.f;
+
+	if (newgamma > 1.0)
+		newgamma = -0.5;
+
+	vid_fixgamma = newgamma;
+	Printf ("Gamma correction level % 0.1f (%0.2f)\n", newgamma, newgamma*(GAMMA_HIGH-GAMMA_DEFAULT) + GAMMA_DEFAULT);
 }
 
 CUSTOM_CVARD(Float, vid_contrast, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts contrast component of gamma ramp")
@@ -105,22 +125,7 @@ CUSTOM_CVARD(Float, vid_whitepoint, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adju
 	if (self > 1) self = 1;
 }
 
-CCMD (bumpgamma)
-{
-	// [RH] Gamma correction tables are now generated on the fly for *any* gamma level
-	// Q: What are reasonable limits to use here?
-
-	float newgamma = vid_gamma + 0.1f;
-
-	if (newgamma > 4.0)
-		newgamma = 1.0;
-
-	vid_gamma = newgamma;
-	Printf ("Gamma correction level %g\n", newgamma);
-}
-
-
-CVAR(Int, gl_satformula, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
+CVAR(Int, gl_satformula, 2, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 
 //==========================================================================
 //
