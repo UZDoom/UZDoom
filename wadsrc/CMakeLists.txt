@@ -9,6 +9,9 @@ add_custom_target(
 	COMMAND ${CMAKE_COMMAND} -E copy
 		"${CMAKE_CURRENT_SOURCE_DIR}/../src/posix/freedesktop/org.zdoom.UZDoom.metainfo.xml"
 		"${CMAKE_CURRENT_SOURCE_DIR}/static/meta.xml"
+	COMMAND ${CMAKE_COMMAND} -E copy
+		"${CMAKE_CURRENT_SOURCE_DIR}/../CONTRIBUTORS"
+		"${CMAKE_CURRENT_SOURCE_DIR}/static/contributors.txt"
 )
 add_dependencies(uzdoom_pk3 copy_metadata)
 add_custom_command(
@@ -16,4 +19,6 @@ add_custom_command(
 	POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E remove
 		"${CMAKE_CURRENT_SOURCE_DIR}/static/meta.xml"
+	COMMAND ${CMAKE_COMMAND} -E remove
+		"${CMAKE_CURRENT_SOURCE_DIR}/static/contributors.txt"
 )
