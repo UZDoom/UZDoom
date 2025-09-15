@@ -24,7 +24,8 @@ private:
 	TextEdit* Notes = nullptr;
 	CheckboxLabel* ShowThis = nullptr;
 
-	static FString _ParseReleaseNotes(rapidxml::xml_document<> &);
+	static FString _ParseReleaseNotes(rapidxml::xml_node<char> *);
+	static FString _BuildReleaseNotes(rapidxml::xml_document<> &);
 	static char * _OpenRealeaseNotes();
 	static FString GetReleaseNotes();
 };
