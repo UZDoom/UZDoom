@@ -94,6 +94,7 @@ CUSTOM_CVAR(Float, m_tooltip_alpha, 0.6f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	else if (self > 1.0f)
 		self = 1.0f;
 }
+CVAR(Bool, m_fadeanim, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 static DMenu *GetCurrentMenu()
 {
@@ -400,7 +401,7 @@ void DMenu::Close ()
 		}
 		else
 		{
-			noFade = this->NoFade || CurrentMenu->NoFade || (CurrentMenu == this);
+			noFade = !m_fadeanim || this->NoFade || CurrentMenu->NoFade || (CurrentMenu == this);
 		}
 	}
 
