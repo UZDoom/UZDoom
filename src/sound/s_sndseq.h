@@ -39,6 +39,7 @@ public:
 	void AddChoice (int seqnum, seqtype_t type);
 	int GetModeNum() const { return m_ModeNum; }
 	FName GetSequenceName() const;
+	bool IsLoopingSound() const { return m_IsLooping; }
 
 	virtual void MakeSound (int loop, FSoundID id) {}
 	virtual void *Source () { return NULL; }
@@ -61,6 +62,7 @@ protected:
 	float m_Volume;
 	float m_Atten;
 	int m_ModeNum;
+	bool m_IsLooping;
 
 	FLevelLocals *Level;
 	TArray<int> m_SequenceChoices;
