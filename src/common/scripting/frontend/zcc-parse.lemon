@@ -2429,3 +2429,9 @@ variable_list_with_init(X) ::= variable_list_with_init(A) COMMA var_init(B).
 	AppendTreeNodeSibling(A, B);
 	X = A; /*X-overwrites-A*/
 }
+
+expr(X) ::= expr(A) ISNOT expr(B).			/* a is not b */
+{
+	BINARY_EXPR(A,B,PEX_Isnot);
+	X = expr2;
+}

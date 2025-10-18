@@ -296,6 +296,7 @@ enum EFxType
 	EFX_VectorPlusZ,
 	EFX_VectorBuiltin,
 	EFX_TypeCheck,
+	EFX_TypeCheckNot,
 	EFX_DynamicCast,
 	EFX_GlobalVariable,
 	EFX_Super,
@@ -1199,6 +1200,22 @@ public:
 	ExpEmit EmitCommon(VMFunctionBuilder *build);
 	ExpEmit Emit(VMFunctionBuilder *build);
 	void EmitCompare(VMFunctionBuilder *build, bool invert, TArray<size_t> &patchspots_yes, TArray<size_t> &patchspots_no);
+};
+
+class FxTypeCheckNot : public FxExpression
+{
+public:
+	FxExpression* left;
+	FxExpression* right;
+	bool ClassCheck;
+
+	FxTypeCheckNot(FxExpression*, FxExpression*);
+	~FxTypeCheckNot();
+	FxExpression* Resolve(FCompileContext&);
+
+	ExpEmit EmitCommon(VMFunctionBuilder* build);
+	ExpEmit Emit(VMFunctionBuilder* build);
+	void EmitCompare(VMFunctionBuilder* build, bool invert, TArray<size_t>& patchspots_yes, TArray<size_t>& patchspots_no);
 };
 
 //==========================================================================

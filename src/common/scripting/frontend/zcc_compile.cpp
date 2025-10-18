@@ -3333,6 +3333,8 @@ FxExpression *ZCCCompiler::ConvertNode(ZCC_TreeNode *ast, bool substitute)
 
 		case PEX_Is:
 			return new FxTypeCheck(left, right);
+		case PEX_Isnot:
+			return new FxTypeCheckNot(left, right);
 
 		case PEX_Concat:
 			return new FxConcat(left, right);

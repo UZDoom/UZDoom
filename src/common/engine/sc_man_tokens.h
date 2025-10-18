@@ -156,4 +156,5 @@ xx(TK_Slow,					"'slow'")
 xx(TK_Bright,				"'bright'")
 xx(TK_Let,					"'let'")
 xx(TK_StaticConst,			"'static const'")
+xx(TK_Isnot,				"'isnot'")
 #undef xx

@@ -45,6 +45,7 @@ xx(GTEQ,			TK_Geq)
 xx(LTGTEQ,			TK_LtGtEq)
 xx(LTEQGT,			TK_LtEqGt)
 xx(Is,				TK_Is)
+xx(Isnot,			TK_Isnot)
 
 xx(EQEQ,			TK_Eq)
 xx(NEQ,				TK_Neq)
