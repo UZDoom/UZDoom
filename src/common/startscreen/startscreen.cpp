@@ -706,6 +706,22 @@ void FStartScreen::Render(bool force)
 			DrawTexture(twod, StartupTexture, 0, 0, DTA_VirtualWidthF, displaywidth, DTA_VirtualHeightF, displayheight, TAG_END);
 		}
 
+		if (ShaderComp && NewConsoleFont)
+		{
+			FString compStr("Compiling shaders.");
+			if (GStrings.CheckString("SHADERCOMPILING"))
+			{
+				compStr = GStrings.localize("$SHADERCOMPILING");
+			}
+			if (ShaderComp == 3)
+				compStr.AppendFormat("..");
+			else if (ShaderComp == 2)
+				compStr.AppendFormat(".");
+
+			Dim(twod, PalEntry(0, 0, 0, 255), 0.5, 0, 0, screen->GetWidth(), screen->GetHeight());
+			DrawText(twod, NewConsoleFont, CR_WHITE, (CleanWidth / 2) - (NewConsoleFont->StringWidth(compStr) / 2), (CleanHeight - (NewConsoleFont->GetHeight() * 2)), compStr.GetChars(), DTA_VirtualWidth, CleanWidth, DTA_VirtualHeight, CleanHeight, TAG_DONE);
+		}
+
 		twod->End();
 		screen->Update();
 		twod->OnFrameDone();

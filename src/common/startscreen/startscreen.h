@@ -61,6 +61,8 @@ protected:
 	int Scale = 1;
 	int NetMaxPos = -1;
 	int NetCurPos = 0;
+	int ShaderComp = 0;
+	int strLocalized = -1;
 	FBitmap StartupBitmap;
 	FBitmap HeaderBitmap;
 	FBitmap NetBitmap;
@@ -72,6 +74,7 @@ public:
 	FStartScreen(int maxp) { MaxPos = maxp; }
 	virtual ~FStartScreen();
 	void Render(bool force = false);
+	void SetShaderComp(int comp) { ShaderComp = comp; }
 	bool Progress(int);
 	void NetProgress(int count);
 	virtual void LoadingStatus(const char *message, int colors) {}
