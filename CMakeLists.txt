@@ -255,6 +255,10 @@ if( MSVC )
 	# Disable run-time type information
 	set( ALL_C_FLAGS "/GF /Gy /permissive- /utf-8" )
 
+ 	if (MSVC_TOOLSET_VERSION GREATER_EQUAL 142)
+  		set( ALL_C_FLAGS "${ALL_C_FLAGS} /Zc:lambda" ) 
+  	endif()
+
 	if ( HAVE_VULKAN )
 		set( ALL_C_FLAGS "${ALL_C_FLAGS} /DHAVE_VULKAN" )
 	endif()

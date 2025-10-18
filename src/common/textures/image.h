@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+#include <functional>
 #include "tarray.h"
 #include "bitmap.h"
 #include "memarena.h"
@@ -65,8 +66,8 @@ protected:
 
 	int SourceLump;
 	int Width = 0, Height = 0;
-	int LeftOffset = 0, TopOffset = 0;			// Offsets stored in the image.
-	bool bUseGamePalette = false;				// true if this is an image without its own color set.
+	int LeftOffset = 0, TopOffset = 0;				// Global offsets stored in the image.
+	bool bUseGamePalette = false;					// true if this is an image without its own color set.
 	int ImageID = -1;
 	int NumOfFrames = 1;
 
@@ -122,6 +123,12 @@ public:
 
 	// Gets duration of frame in miliseconds.
 	virtual int GetDurationOfFrame(int frame) { return 1000; }
+
+	// Can this animated image (re)use past frame content?
+	bool UsesPastFrame() { return true; }
+
+	virtual int CopyPixelsIntoFrames(std::function<FBitmap* (int)> GetBitmap, int conversion);
+	virtual void CreatePalettedPixelsOfFrames(std::function<PalettedPixels& (int)> GetPixels, int conversion);
 
 	// Conversion option
 	enum EType
