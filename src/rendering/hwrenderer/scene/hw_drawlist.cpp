@@ -729,7 +729,7 @@ void HWDrawList::SortWalls()
 {
 	if (drawitems.Size() > 1)
 	{
-		std::sort(drawitems.begin(), drawitems.end(), [=](const HWDrawItem &a, const HWDrawItem &b) -> bool
+		std::sort(drawitems.begin(), drawitems.end(), [this](const HWDrawItem &a, const HWDrawItem &b) -> bool
 		{
 			HWWall * w1 = walls[a.index];
 			HWWall * w2 = walls[b.index];
@@ -745,7 +745,7 @@ void HWDrawList::SortFlats()
 {
 	if (drawitems.Size() > 1)
 	{
-		std::sort(drawitems.begin(), drawitems.end(), [=](const HWDrawItem &a, const HWDrawItem &b)
+		std::sort(drawitems.begin(), drawitems.end(), [this](const HWDrawItem &a, const HWDrawItem &b)
 		{
 			HWFlat * w1 = flats[a.index];
 			HWFlat* w2 = flats[b.index];
