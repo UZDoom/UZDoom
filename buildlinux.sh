@@ -1,3 +1,6 @@
+# based upon the GZDoom build guide avaliable at https://zdoom.org/wiki/Compile_GZDoom_on_Linux
+# this script is rather basic but gets the job done, executable files found in the "build" folder
+# also this script only works once you've installed all the dependencies since the install command varies from distro to distro
 mkdir -pv ~/uzdoom_build
 cd ~/uzdoom_build &&
 git clone https://github.com/UZDoom/uzdoom.git &&
