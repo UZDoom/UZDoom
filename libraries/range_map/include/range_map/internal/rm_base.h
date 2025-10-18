@@ -86,19 +86,18 @@ public:
 		: left(std::forward<kty>(left)), right(std::forward<kty>(right)), val(std::forward<ty>(val)) {}
         
         //length constructors
-        range_map_item(length_construct_type, kty&& left, const kty& length) 
-		: left(std::forward<kty>(left)), right(left+length), val() {}
+	range_map_item(length_construct_type, kty&& left, const kty& length)
+		: left(std::forward<kty>(left)), right(kty(left) + length), val() {}
         
         range_map_item(length_construct_type, const kty& left, const kty& length,
             ty&& val) : left(left), right(left+length), val(std::forward<ty>(val)) {}
         
-        range_map_item(length_construct_type, kty&& left, const kty& length, 
-            const ty& val) : left(std::forward<kty>(left)), right(left+length), val(val) {}
-        
-        range_map_item(length_construct_type, kty&& left, const kty& length,
-            ty&& val) : left(std::forward<kty>(left)), right(left+length), 
-                val(std::forward<ty>(val)) {}
-        
+	range_map_item(length_construct_type, kty&& left, const kty& length, const ty& val)
+		: left(std::forward<kty>(left)), right(kty(left) + length), val(val) {}
+
+	range_map_item(length_construct_type, kty&& left, const kty& length, ty&& val)
+		: left(std::forward<kty>(left)), right(kty(left) + length), val(std::forward<ty>(val)) {}
+
         //piecewise constructor
         template<class... left_args, class... right_args, class... mapped_args> 
         range_map_item(std::piecewise_construct_t pwc,
