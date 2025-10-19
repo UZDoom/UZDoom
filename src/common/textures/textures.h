@@ -306,6 +306,7 @@ public:
 	int CheckRealHeight();
 
 	friend class FTextureManager;
+	friend class FTextureAnimator; // the texture animator needs TexFrame to do its job
 };
 
 class FCanvas;

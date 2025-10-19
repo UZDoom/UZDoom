@@ -41,6 +41,7 @@
 #include "gstrings.h"
 #include "textures.h"
 #include "texturemanager.h"
+#include "i_interface.h"
 #include "c_dispatch.h"
 #include "sc_man.h"
 #include "image.h"
@@ -102,7 +103,6 @@ void FTextureManager::DeleteAll()
 
 	BuildTileData.Clear();
 	tmanips.Clear();
-	AnimatedTextures.Clear();
 }
 
 //==========================================================================
@@ -439,14 +439,9 @@ FTextureID FTextureManager::AddGameTexture (FGameTexture *texture, bool addtohas
 	if (bucket >= 0) HashFirst[bucket] = trans;
 	auto id = FTextureID(trans);
 	texture->SetID(id);
-
-	if (!texture->GetTexture())
-		return id;
-	
-	img = texture->GetTexture()->GetImage();
-	if (texture->GetTexture()->TexFrame == 0 && img && img->GetNumOfFrames() > 1)
+	if (sysCallbacks.HandleAnimatedTextures)
 	{
-		AnimatedTextures.Push(id);
+		sysCallbacks.HandleAnimatedTextures(id);
 	}
 	return id;
 }

@@ -52,6 +52,7 @@ struct SystemCallbacks
 	FConfigFile* (*GetConfig)();
 	bool (*WantEscape)();
 	FTranslationID(*RemapTranslation)(FTranslationID trans);
+	void (*HandleAnimatedTextures)(FTextureID id);
 };
 
 extern SystemCallbacks sysCallbacks;

@@ -87,6 +87,9 @@ class FTextureAnimator
 	TArray<FDoorAnimation> mAnimatedDoors;
 	TArray<FFireTexture> mFireTextures;
 
+	bool inited = false;
+	bool inanim = false; // Used to prevent infinite loops when lazily adding animated textures.
+
 	void ParseAnim(FScanner& sc, ETextureType usetype);
 	FAnimDef* ParseRangeAnim(FScanner& sc, FTextureID picnum, ETextureType usetype, bool missing);
 	void ParsePicAnim(FScanner& sc, FTextureID picnum, ETextureType usetype, bool missing, TArray<FAnimDef::FAnimFrame>& frames);
@@ -139,8 +142,11 @@ public:
 
 	bool InitStandaloneAnimation(FStandaloneAnimation &animInfo, FTextureID tex, uint32_t curTic);
 	FTextureID UpdateStandaloneAnimation(FStandaloneAnimation &animInfo, double curTic);
+
+	void AddAnimatedTexture(FTextureID id);
 };
 
 extern FTextureAnimator TexAnim;
 
-
+// Wrapper for texture animator
+void TexAnimAddAnimatedTexture(FTextureID id);

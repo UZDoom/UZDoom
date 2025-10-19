@@ -98,9 +98,6 @@ public:
 	void SetLinkedTexture(int lump, FGameTexture* tex);
 	FGameTexture* GetLinkedTexture(int lump);
 
-	// Used to optimize animated textures lookup.
-	TArray<FTextureID> AnimatedTextures;
-
 	enum
 	{
 		TEXMAN_TryAny = 1,

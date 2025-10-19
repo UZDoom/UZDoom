@@ -44,7 +44,6 @@
 #include "animations.h"
 #include "texturemanager.h"
 #include "image.h"
-#include "md5.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -296,37 +295,88 @@ void FTextureAnimator::InitAnimated (void)
 	}
 }
 
+//==========================================================================
+//
+// FTextureAnimator :: AddAnimatedTexture
+//
+// Processes an animated texture
+//
+//==========================================================================
+
+void FTextureAnimator::AddAnimatedTexture(FTextureID id)
+{
+	if (inanim)
+		return;
+
+	if (inited)
+	{
+		auto texture = TexMan.GetGameTexture(id);
+		auto texsource = texture->GetTexture();
+		if (texsource)
+		{
+			auto img = texsource->GetImage();
+			if (texsource->TexFrame == 0 && img && img->GetNumOfFrames() > 1)
+			{
+				inanim = true;
+				FTextureID picnum = id;
+				FGameTexture* gametex = TexMan.GetGameTexture(picnum);
+				FTexture* basetexture = gametex->GetTexture();
+				FImageSource* image = basetexture->GetImage();
+				TArray<FAnimDef::FAnimFrame> frames(32);
+
+				for (int i = 0; i < image->GetNumOfFrames(); i++)
+				{
+					FTexture* texture = CreateImageTexture(image, i + 1);
+					FGameTexture* newtex = MakeGameTexture(texture, "", gametex->GetUseType());
+					if (i == 0)
+					{
+						TexMan.ReplaceTexture(picnum, newtex, true);
+						picnum = newtex->GetID();
+					}
+					FTextureID textureId = (i == 0) ? newtex->GetID() : TexMan.AddGameTexture(newtex);
+					FAnimDef::FAnimFrame animFrame;
+					animFrame.SpeedMin = image->GetDurationOfFrame(i + 1);
+					animFrame.SpeedRange = 0;
+					animFrame.FramePic = textureId;
+					frames.Push(animFrame);
+				}
+				(void)AddComplexAnim(picnum, frames);
+				inanim = false;
+			}
+		}
+	}
+}
+
+//==========================================================================
+//
+// FTextureAnimator :: InitAnimatedTextures
+//
+// Processes all animated textures added in texture manager init.
+//
+//==========================================================================
+
 void FTextureAnimator::InitAnimatedTextures()
 {
-	auto& AnimatedTextures = TexMan.AnimatedTextures;
+	inited = true;
+	TArray<FTextureID> AnimatedTextures;
+	for (int i = 0; i < TexMan.NumTextures(); i++)
+	{
+		auto texture = TexMan.GetGameTexture(FSetTextureID(i));
+		auto texsource = texture->GetTexture();
+		if (texsource)
+		{
+			auto img = texsource->GetImage();
+			if (texsource->TexFrame == 0 && img && img->GetNumOfFrames() > 1)
+			{
+				AnimatedTextures.Push((FTextureID)FSetTextureID(i));
+			}
+		}
+	}
 
 	for (int i = 0; i < AnimatedTextures.Size(); i++)
 	{
-		FTextureID picnum = AnimatedTextures[i];
-		FGameTexture* gametex = TexMan.GetGameTexture(picnum);
-		FTexture* basetexture = gametex->GetTexture();
-		FImageSource* image = basetexture->GetImage();
-		TArray<FAnimDef::FAnimFrame> frames (32);
-
-		for (int i = 0; i < image->GetNumOfFrames(); i++)
-		{
-			FTexture* texture = CreateImageTexture(image, i + 1);
-			FGameTexture* newtex = MakeGameTexture(texture, "", gametex->GetUseType());
-			if (i == 0)
-			{
-				TexMan.ReplaceTexture(picnum, newtex, true);
-				picnum = newtex->GetID();
-			}
-			FTextureID textureId = (i == 0) ? newtex->GetID() : TexMan.AddGameTexture(newtex);
-			FAnimDef::FAnimFrame animFrame;
-			animFrame.SpeedMin = image->GetDurationOfFrame(i + 1);
-			animFrame.SpeedRange = 0;
-			animFrame.FramePic = textureId;
-			frames.Push(animFrame);
-		}
-		(void)AddComplexAnim(picnum, frames);
+		AddAnimatedTexture(AnimatedTextures[i]);
 	}
-	TexMan.AnimatedTextures.Clear();
 }
 
 //==========================================================================
@@ -1219,6 +1269,17 @@ void FTextureAnimator::UpdateAnimations (uint64_t mstime)
 			}
 		}
 	}
+}
+
+//==========================================================================
+//
+// TexAnimAddAnimatedTexture
+//
+//==========================================================================
+
+void TexAnimAddAnimatedTexture(FTextureID id)
+{
+	TexAnim.AddAnimatedTexture(id);
 }
 
 //==========================================================================

@@ -3762,7 +3762,8 @@ static int D_DoomMain_Internal (void)
 		OkForLocalization,
 		[]() ->FConfigFile* { return GameConfig; },
 		nullptr, 
-		RemapUserTranslation
+		RemapUserTranslation,
+		TexAnimAddAnimatedTexture
 	};
 
 	std::set_new_handler(NewFailure);
