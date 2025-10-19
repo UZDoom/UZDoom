@@ -9,11 +9,11 @@
 	<key>CFBundleIconFile</key>
 	<string>zdoom.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.drdteam.gzdoom</string>
+	<string>org.zdoom.UZDoom</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>GZDoom</string>
+	<string>UZDoom</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
