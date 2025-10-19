@@ -5196,14 +5196,6 @@ FxTypeCheck::FxTypeCheck(FxExpression *l, FxExpression *r)
 	ValueType = TypeBool;
 }
 
-FxTypeCheckNot::FxTypeCheckNot(FxExpression* l, FxExpression* r)
-	: FxExpression(EFX_TypeCheckNot, l->ScriptPosition)
-{
-	left = l;
-	right = r;
-	ValueType = TypeBool;
-}
-
 //==========================================================================
 //
 //
@@ -5216,12 +5208,6 @@ FxTypeCheck::~FxTypeCheck()
 	SAFE_DELETE(right);
 }
 
-FxTypeCheckNot::~FxTypeCheckNot()
-{
-	SAFE_DELETE(left);
-	SAFE_DELETE(right);
-}
-
 //==========================================================================
 //
 //
@@ -5229,33 +5215,6 @@ FxTypeCheckNot::~FxTypeCheckNot()
 //==========================================================================
 
 FxExpression *FxTypeCheck::Resolve(FCompileContext& ctx)
-{
-	CHECKRESOLVED();
-	// This must resolve the cast separately so that it can set the proper type for class descriptors.
-	RESOLVE(left, ctx);
-	RESOLVE(right, ctx);
-	ABORT(right && left);
-
-	if (left->ValueType->isClassPointer())
-	{
-		left = new FxClassTypeCast(NewClassPointer(RUNTIME_CLASS(DObject)), left, false);
-		ClassCheck = true;
-	}
-	else
-	{
-		left = new FxTypeCast(left, NewPointer(RUNTIME_CLASS(DObject), true), false);
-		ClassCheck = false;
-	}
-	right = new FxClassTypeCast(NewClassPointer(RUNTIME_CLASS(DObject)), right, false);
-
-	RESOLVE(left, ctx);
-	RESOLVE(right, ctx);
-	ABORT(right && left);
-
-	return this;
-}
-
-FxExpression* FxTypeCheckNot::Resolve(FCompileContext& ctx)
 {
 	CHECKRESOLVED();
 	// This must resolve the cast separately so that it can set the proper type for class descriptors.
@@ -5300,28 +5259,7 @@ ExpEmit FxTypeCheck::EmitCommon(VMFunctionBuilder *build)
 	return ares;
 }
 
-ExpEmit FxTypeCheckNot::EmitCommon(VMFunctionBuilder* build)
-{
-	ExpEmit castee = left->Emit(build);
-	ExpEmit casttype = right->Emit(build);
-	castee.Free(build);
-	casttype.Free(build);
-	ExpEmit ares(build, REGT_POINTER);
-	if (!ClassCheck) build->Emit(casttype.Konst ? OP_DYNCAST_K : OP_DYNCAST_R, ares.RegNum, castee.RegNum, casttype.RegNum);
-	else build->Emit(casttype.Konst ? OP_DYNCASTC_K : OP_DYNCASTC_R, ares.RegNum, castee.RegNum, casttype.RegNum);
-	return ares;
-}
-
 ExpEmit FxTypeCheck::Emit(VMFunctionBuilder *build)
-{
-	ExpEmit ares = EmitCommon(build);
-	ares.Free(build);
-	ExpEmit bres(build, REGT_INT);
-	build->Emit(OP_CASTB, bres.RegNum, ares.RegNum, CASTB_A);
-	return bres;
-}
-
-ExpEmit FxTypeCheckNot::Emit(VMFunctionBuilder* build)
 {
 	ExpEmit ares = EmitCommon(build);
 	ares.Free(build);
@@ -5335,14 +5273,6 @@ void FxTypeCheck::EmitCompare(VMFunctionBuilder *build, bool invert, TArray<size
 	ExpEmit ares = EmitCommon(build);
 	ares.Free(build);
 	build->Emit(OP_EQA_K, !invert, ares.RegNum, build->GetConstantAddress(nullptr));
-	patchspots_no.Push(build->Emit(OP_JMP, 0));
-}
-
-void FxTypeCheckNot::EmitCompare(VMFunctionBuilder* build, bool invert, TArray<size_t>& patchspots_yes, TArray<size_t>& patchspots_no)
-{
-	ExpEmit ares = EmitCommon(build);
-	ares.Free(build);
-	build->Emit(OP_EQA_K, invert, ares.RegNum, build->GetConstantAddress(nullptr));
 	patchspots_no.Push(build->Emit(OP_JMP, 0));
 }
 
