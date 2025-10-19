@@ -708,18 +708,15 @@ void FStartScreen::Render(bool force)
 
 		if (ShaderComp && NewConsoleFont)
 		{
-			FString compStr("Compiling shaders.");
-			if (GStrings.CheckString("SHADERCOMPILING"))
-			{
-				compStr = GStrings.localize("$SHADERCOMPILING");
-			}
+			FString compStr = GStrings.localize("$SHADERCOMPILING");
+			auto strWidth = NewConsoleFont->StringWidth(compStr);
 			if (ShaderComp == 3)
 				compStr.AppendFormat("..");
 			else if (ShaderComp == 2)
 				compStr.AppendFormat(".");
 
 			Dim(twod, PalEntry(0, 0, 0, 255), 0.5, 0, 0, screen->GetWidth(), screen->GetHeight());
-			DrawText(twod, NewConsoleFont, CR_WHITE, (CleanWidth / 2) - (NewConsoleFont->StringWidth(compStr) / 2), (CleanHeight - (NewConsoleFont->GetHeight() * 2)), compStr.GetChars(), DTA_VirtualWidth, CleanWidth, DTA_VirtualHeight, CleanHeight, TAG_DONE);
+			DrawText(twod, NewConsoleFont, CR_WHITE, (CleanWidth / 2) - (strWidth / 2), (CleanHeight - (NewConsoleFont->GetHeight() * 2)), compStr.GetChars(), DTA_VirtualWidth, CleanWidth, DTA_VirtualHeight, CleanHeight, TAG_DONE);
 		}
 
 		twod->End();
