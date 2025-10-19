@@ -1775,6 +1775,11 @@ expr(X) ::= expr(A) IS expr(B).			/* a is b */
 	BINARY_EXPR(A,B,PEX_Is);
 	X = expr2;
 }
+expr(X) ::= expr(A) ISNOT expr(B).			/* a is b */
+{
+	BINARY_EXPR(A,B,PEX_Isnot);
+	X = expr2;
+}
 
 expr(X) ::= expr(A) EQEQ expr(B).		/* a == b */
 {
