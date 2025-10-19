@@ -439,9 +439,17 @@ FTextureID FTextureManager::AddGameTexture (FGameTexture *texture, bool addtohas
 	if (bucket >= 0) HashFirst[bucket] = trans;
 	auto id = FTextureID(trans);
 	texture->SetID(id);
-	if (sysCallbacks.HandleAnimatedTextures)
+
+	if (!texture->GetTexture())
+		return id;
+
+	img = texture->GetTexture()->GetImage();
+	if (texture->GetTexture()->TexFrame == 0 && img && img->GetNumOfFrames() > 1)
 	{
-		sysCallbacks.HandleAnimatedTextures(id);
+		if (sysCallbacks.HandleAnimatedTextures)
+		{
+			sysCallbacks.HandleAnimatedTextures(id);
+		}
 	}
 	return id;
 }
