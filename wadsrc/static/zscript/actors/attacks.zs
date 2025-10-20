@@ -569,7 +569,7 @@ extend class Actor
 	//
 	//==========================================================================
 
-	int A_Explode(int damage = -1, double distance = -1.0, int flags = XF_HURTSOURCE, bool alert = false, double fulldamagedistance = 0.0, int nails = 0, int naildamage = 10, class<Actor> pufftype = "BulletPuff", name damagetype = "none")
+	int A_Explode(int damage = -1, double distance = -1.0, int flags = XF_HURTSOURCE, bool alert = false, double fulldamagedistance = 0.0, int nails = 0, int naildamage = 10, class<Actor> pufftype = "BulletPuff", name damagetype = "none", double nailrange = MISSILERANGE)
 	{
 
 		if (damage < 0)	// get parameters from metadata
@@ -591,7 +591,7 @@ extend class Actor
 			{
 				ang = i*360./nails;
 				// Comparing the results of a test wad with Eternity, it seems A_NailBomb does not aim
-				LineAttack(ang, MISSILERANGE, 0.,
+				LineAttack(ang, nailrange, 0.,
 					//P_AimLineAttack (self, ang, MISSILERANGE), 
 					naildamage, 'Hitscan', pufftype, bMissile ? LAF_TARGETISSOURCE : 0);
 			}

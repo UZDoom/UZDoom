@@ -294,6 +294,7 @@ DMenu::DMenu(DMenu *parent)
 	mTooltipScrollOffset = 0.0;
 	mTooltipScrollTimer = 0.0;
 	mCurrentTooltip = "";
+	DrawTooltips = false;
 	GC::WriteBarrier(this, parent);
 }
 
@@ -1050,6 +1051,7 @@ DEFINE_FIELD(DMenu, mCurrentTooltip)
 DEFINE_FIELD(DMenu, mTooltipScrollTimer)
 DEFINE_FIELD(DMenu, mTooltipScrollOffset)
 DEFINE_FIELD(DMenu, mTooltipFont)
+DEFINE_FIELD(DMenu, DrawTooltips)
 
 DEFINE_FIELD(DMenuDescriptor, mMenuName)
 DEFINE_FIELD(DMenuDescriptor, mNetgameMessage)
