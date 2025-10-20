@@ -1,0 +1,7 @@
+name = "double"
+doc = """
+The 64-bit floating point builtin type.
+
+This type can represent decimal values such as `0.5` as opposed to `int` and `uint` which are
+limited to whole numbers.
+"""

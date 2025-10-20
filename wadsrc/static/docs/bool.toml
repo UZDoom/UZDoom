@@ -1,0 +1,6 @@
+name = "bool"
+doc = """
+The built-in boolean type, representing logical truth values.
+
+This type can take on two values, `true` and `false`.
+"""

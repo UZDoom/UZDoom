@@ -1,0 +1,10 @@
+[archive]
+nice_name = "uzdoom.pk3"
+builtins = [
+    "int.toml", "uint.toml",
+    "bool.toml",
+    "double.toml",
+    "Vector2.toml", "Vector3.toml",
+    "String.toml", "Name.toml",
+]
+document_globals = true

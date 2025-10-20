@@ -1,0 +1,16 @@
+name = "Vector2"
+doc = """
+A builtin type representing 2D coordinates, either as a point or as a vector.
+"""
+
+[[member]]
+def = """
+    /// The x coordinate.
+    double x;
+"""
+
+[[member]]
+def = """
+    /// The y coordinate.
+    double y;
+"""

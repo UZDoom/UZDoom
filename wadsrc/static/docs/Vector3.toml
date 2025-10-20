@@ -1,0 +1,31 @@
+name = "Vector3"
+doc = """
+A builtin type representing 3D coordinates, either as a point or as a vector.
+"""
+
+[[member]]
+def = """
+    /// The x coordinate.
+    double x;
+"""
+
+[[member]]
+def = """
+    /// The y coordinate.
+    double y;
+"""
+
+[[member]]
+def = """
+    /// The z coordinate.
+    double z;
+"""
+
+[[member]]
+def = """
+    /// The x and y coordinates as a [`Vector2`].
+    /// 
+    /// This is not a unique piece of data and "overlaps" with [`x`] and [`y`]. Modifying this will
+    /// modify them.
+    transient Vector2 xy;
+"""

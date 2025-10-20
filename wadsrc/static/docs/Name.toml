@@ -1,0 +1,10 @@
+name = "Name"
+doc = """
+The built-in name type.
+
+This type can be seen as a case-insensitive version of [`String`], and is represented internally as
+an index into a name table, making it small and fast to check equality with.
+
+A `Name` can be assigned to a [`String`] type, which will implicitly cast it, allowing string
+operations to be used.
+"""
