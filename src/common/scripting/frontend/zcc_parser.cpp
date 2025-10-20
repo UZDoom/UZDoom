@@ -157,7 +157,6 @@ static void InitTokenMap()
 	TOKENDEF (TK_LtGtEq,		ZCC_LTGTEQ);
 	TOKENDEF (TK_LtEqGt,		ZCC_LTEQGT);
 	TOKENDEF (TK_Is,			ZCC_IS);
-	TOKENDEF (TK_Isnot,			ZCC_ISNOT);
 	TOKENDEF (TK_DotDot,		ZCC_DOTDOT);
 	TOKENDEF (TK_Ellipsis,		ZCC_ELLIPSIS);
 	TOKENDEF ('|',				ZCC_OR);

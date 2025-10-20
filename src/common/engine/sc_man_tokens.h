@@ -127,6 +127,7 @@ xx(TK_Include,				"'include'")
 xx(TK_Sealed,				"'sealed'")
 
 xx(TK_Is,					"'is'")
+xx(TK_Isnot,				"'!is'")
 xx(TK_Replaces,				"'replaces'")
 xx(TK_Vector2,				"'vector2'")
 xx(TK_Vector3,				"'vector3'")
@@ -156,5 +157,4 @@ xx(TK_Slow,					"'slow'")
 xx(TK_Bright,				"'bright'")
 xx(TK_Let,					"'let'")
 xx(TK_StaticConst,			"'static const'")
-xx(TK_Isnot,				"'is!'")
 #undef xx
