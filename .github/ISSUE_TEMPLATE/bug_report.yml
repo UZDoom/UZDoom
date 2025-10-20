@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a Bug report
 title: '[BUG] '
-labels: bug
+labels: bug/bugfix
 type: bug
 #assignees: 'anonymous@temp'
 
