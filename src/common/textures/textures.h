@@ -286,6 +286,7 @@ public:
 
 
 	virtual void ResolvePatches() {}
+	virtual bool IsAnimTex() { return false; }
 
 
 	FTexture (int lumpnum = -1);

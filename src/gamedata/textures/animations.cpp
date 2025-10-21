@@ -44,6 +44,7 @@
 #include "animations.h"
 #include "texturemanager.h"
 #include "image.h"
+#include "animtexture.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -342,6 +343,10 @@ void FTextureAnimator::InitAnimDefs ()
 			else if (sc.Compare ("animatedDoor"))
 			{
 				ParseAnimatedDoor (sc);
+			}
+			else if (sc.Compare ("animtexture"))
+			{
+				ParseAnimatedTexture (sc);
 			}
 			else if (sc.Compare("skyoffset"))
 			{
@@ -904,6 +909,31 @@ void FTextureAnimator::FixAnimations ()
 			}
 		}
 	}
+}
+
+void FTextureAnimator::ParseAnimatedTexture(FScanner &sc)
+{
+	sc.MustGetString();
+	FString firstname = sc.String;
+	sc.MustGetString();
+	FString secondname = sc.String;
+
+	FTextureID picnum1 = TexMan.CheckForTexture(firstname.GetChars(), ETextureType::Wall, TexMan.TEXMAN_TryAny);
+	FTextureID picnum2 = TexMan.CheckForTexture(firstname.GetChars(), ETextureType::Wall, TexMan.TEXMAN_TryAny);
+
+	auto mt = MakeGameTexture(new AnimTexture(), firstname.GetChars(), ETextureType::Override);
+	mt->SetUpscaleFlag(false, true);
+	if (picnum1.Exists())
+		TexMan.ReplaceTexture(picnum1, mt, true);
+	else
+		TexMan.AddGameTexture(mt);
+
+	mt = MakeGameTexture(new AnimTexture(), secondname.GetChars(), ETextureType::Override);
+	mt->SetUpscaleFlag(false, true);
+	if (picnum2.Exists())
+		TexMan.ReplaceTexture(picnum2, mt, true);
+	else
+		TexMan.AddGameTexture(mt);
 }
 
 //==========================================================================

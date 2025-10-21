@@ -19,12 +19,14 @@ public:
 	void SetFrameSize(int format, int width, int height);
 	void SetFrame(const uint8_t* palette, const void* data);
 	virtual FBitmap GetBgraBitmap(const PalEntry* remap, int* trans) override;
+
+	bool IsAnimTex() override { return true; }
 };
 
 class AnimTextures
 {
 	int active;
-	FGameTexture* tex[2];
+	FGameTexture* tex[2] = { nullptr, nullptr };
 
 public:
 	AnimTextures();
@@ -32,6 +34,7 @@ public:
 	void Clean();
 	void SetSize(int format, int width, int height);
 	void SetFrame(const uint8_t* palette, const void* data);
+	void SetTargets(FTextureID first, FTextureID second);
 	FGameTexture* GetFrame()
 	{
 		return tex[active];

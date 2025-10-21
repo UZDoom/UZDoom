@@ -51,6 +51,7 @@
 #include <cmath>
 #include <zmusic.h>
 #include "filereadermusicinterface.h"
+#include "texturemanager.h"
 
 class MoviePlayer
 {
@@ -69,6 +70,7 @@ public:
 	virtual void Stop() {}
 	virtual ~MoviePlayer() = default;
 	virtual FTextureID GetTexture() = 0;
+	virtual void SetTargets(FTextureID first, FTextureID second) = 0;
 };
 
 //---------------------------------------------------------------------------
@@ -229,6 +231,10 @@ public:
 		if (!nostopsound) soundEngine->StopAllChannels();
 	}
 
+	void SetTargets(FTextureID first, FTextureID second)
+	{
+		animtex.SetTargets(first, second);
+	}
 
 	~AnmPlayer()
 	{
@@ -295,6 +301,11 @@ public:
 		audioTrack.Finish();
 
 		decoder.Close();
+	}
+
+	void SetTargets(FTextureID first, FTextureID second)
+	{
+		decoder.animTex().SetTargets(first, second);
 	}
 
 	FTextureID GetTexture() override
@@ -631,6 +642,11 @@ public:
 	{
 		return animtex.GetFrameID();
 	}
+
+	void SetTargets(FTextureID first, FTextureID second)
+	{
+		animtex.SetTargets(first, second);
+	}
 };
 
 //---------------------------------------------------------------------------
@@ -830,6 +846,10 @@ public:
 		return animtex.GetFrameID();
 	}
 
+	void SetTargets(FTextureID first, FTextureID second)
+	{
+		animtex.SetTargets(first, second);
+	}
 };
 
 //---------------------------------------------------------------------------
@@ -981,4 +1001,15 @@ DEFINE_ACTION_FUNCTION(_MoviePlayer, GetTexture)
 {
 	PARAM_SELF_STRUCT_PROLOGUE(MoviePlayer);
 	ACTION_RETURN_INT(self->GetTexture().GetIndex());
+}
+
+DEFINE_ACTION_FUNCTION(_MoviePlayer, SetTargets)
+{
+	PARAM_SELF_STRUCT_PROLOGUE(MoviePlayer);
+	PARAM_INT(first);
+	PARAM_INT(second);
+
+	self->SetTargets(TexMan.GameByIndex(first)->GetID(), TexMan.GameByIndex(second)->GetID());
+
+	return 0;
 }

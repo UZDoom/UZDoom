@@ -105,6 +105,7 @@ class FTextureAnimator
 	FSwitchDef* ParseSwitchDef(FScanner& sc, bool ignoreBad);
 	void AddSwitchPair(FSwitchDef* def1, FSwitchDef* def2);
 	void ParseAnimatedDoor(FScanner& sc);
+	void ParseAnimatedTexture(FScanner& sc);
 
 public:
 

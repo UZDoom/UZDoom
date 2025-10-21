@@ -34,6 +34,7 @@
 #include "animtexture.h"
 #include "bitmap.h"
 #include "texturemanager.h"
+#include "engineerrors.h"
 
 #include "vpx/vpx_image.h"
 
@@ -224,6 +225,23 @@ AnimTextures::AnimTextures()
 AnimTextures::~AnimTextures()
 {
 	Clean();
+}
+
+void AnimTextures::SetTargets(FTextureID first, FTextureID second)
+{
+	Clean();
+
+	active = 1;
+	tex[0] = TexMan.GetGameTexture(first);
+	tex[1] = TexMan.GetGameTexture(second);
+
+	if (!tex[0] || !tex[1])
+		I_Error("AnimTextures not found.");
+
+	if (tex[0]->GetTexture()->IsAnimTex() == false || tex[1]->GetTexture()->IsAnimTex() == false)
+	{
+		I_Error("Invalid textures for AnimTextures specified.");
+	}
 }
 
 void AnimTextures::Clean()
