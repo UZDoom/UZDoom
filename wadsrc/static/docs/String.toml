@@ -6,5 +6,6 @@ The built-in string type.
 
 [[function]]
 def = """
+    /// Returns the number of bytes in this string.
     uint Length();
 """
