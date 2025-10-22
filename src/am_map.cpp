@@ -950,72 +950,72 @@ class DAutomap :public DAutomapBase
 	//FLevelLocals *Level;
 	// scale on entry
 	// used by MTOF to scale from map-to-frame-buffer coords
-	double scale_mtof = .2;
+	double scale_mtof;
 	// used by FTOM to scale from frame-buffer-to-map coords (=1/scale_mtof)
-	double scale_ftom = 1.0/scale_mtof;
+	double scale_ftom;
 
-	bool bigstate = false;
-	int MapPortalGroup = 0;
+	bool bigstate;
+	int MapPortalGroup;
 
 	// Disable the ML_DONTDRAW line flag if x% of all lines in a map are flagged with it
 	// (To counter annoying mappers who think they are smart by making the automap unusable)
-	bool am_showallenabled = false;
+	bool am_showallenabled;
 
 	// location of window on screen
-	int f_x = 0;
-	int f_y = 0;
+	int f_x;
+	int f_y;
 
 	// size of window on screen
-	int f_w = 0;
-	int f_h = 0;
+	int f_w;
+	int f_h;
 
-	int amclock = 0;
+	int amclock;
 
-	mpoint_t m_paninc = { 0.0, 0.0 }; // how far the window pans each tic (map coords)
-	double mtof_zoommul = 0.0; // how far the window zooms in each tic (map coords)
+	mpoint_t m_paninc; // how far the window pans each tic (map coords)
+	double mtof_zoommul; // how far the window zooms in each tic (map coords)
 
-	double m_x = 0.0;
-	double m_y = 0.0; // LL x,y where the window is on the map (map coords)
-	double m_x2 = 0.0;
-	double m_y2 = 0.0; // UR x,y where the window is on the map (map coords)
+	double m_x;
+	double m_y; // LL x,y where the window is on the map (map coords)
+	double m_x2;
+	double m_y2; // UR x,y where the window is on the map (map coords)
 
 	//
 	// width/height of window on map (map coords)
 	//
-	double m_w = 0.0;
-	double m_h = 0.0;
+	double m_w;
+	double m_h;
 
 	// based on level size
-	double min_x = 0.0, min_y = 0.0, max_x = 0.0, max_y = 0.0;
+	double min_x, min_y, max_x, max_y;
 
-	double max_w = 0.0; // max_x-min_x,
-	double max_h = 0.0; // max_y-min_y
+	double max_w; // max_x-min_x,
+	double max_h; // max_y-min_y
 
 	// based on player size
-	double min_w = 0.0;
-	double min_h = 0.0;
+	double min_w;
+	double min_h;
 
 
-	double min_scale_mtof = 0.0; // used to tell when to stop zooming out
-	double max_scale_mtof = 0.0; // used to tell when to stop zooming in
+	double min_scale_mtof; // used to tell when to stop zooming out
+	double max_scale_mtof; // used to tell when to stop zooming in
 
 	// old stuff for recovery later
-	double old_m_w = 0.0, old_m_h = 0.0;
-	double old_m_x = 0.0, old_m_y = 0.0;
+	double old_m_w, old_m_h;
+	double old_m_x, old_m_y;
 
 	// old location used by the Follower routine
-	mpoint_t f_oldloc = { 0.0, 0.0 };
+	mpoint_t f_oldloc;
 
-	std::array<mpoint_t, AutoMap::Defaults::num_mark_points> markpoints = {}; // where the points are
-	int markpointnum = 0; // next point to be assigned
+	std::array<mpoint_t, AutoMap::Defaults::num_mark_points> markpoints; // where the points are
+	int markpointnum; // next point to be assigned
 
-	FTextureID mapback = nullptr; // the automap background
-	double mapystart = 0; // y-value for the start of the map bitmap...used in the parallax stuff.
-	double mapxstart = 0; //x-value for the bitmap.
+	FTextureID mapback; // the automap background
+	double mapystart; // y-value for the start of the map bitmap...used in the parallax stuff.
+	double mapxstart; //x-value for the bitmap.
 
 	TArray<FVector2> points;
 
-	int line_thickness_scaled = 1; // line thickness scaled to resolution
+	int line_thickness_scaled; // line thickness scaled to resolution
 
 	// translates between frame-buffer and map distances
 	double FTOM(double x)
