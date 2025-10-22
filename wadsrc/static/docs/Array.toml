@@ -1,0 +1,105 @@
+name = "Array"
+doc = """
+The built-in dynamic-size array type. Written as `Array<T>`.
+"""
+
+[[function]]
+def = """
+    /// Returns the number of elements in the array.
+    int Size() const;
+"""
+
+[[function]]
+def = """
+    /// Copies all of the elements of `other` into this array, doing
+    /// nothing to the original array.
+    void Copy(Array<T> other);
+"""
+
+[[function]]
+def = """
+    /// Moves all of the elements of `other` into this array, emptying
+    /// the original array completely.
+    void Move(Array<T> other);
+"""
+
+[[function]]
+def = """
+    /// Appends the elements of `other` to this array, copying them.
+    void Append(Array<T> other);
+"""
+
+[[function]]
+def = """
+    /// Returns the index of the first element matching `item`, or
+    /// [`Size`] if no matches are found.
+    int Find(T item) const;
+"""
+
+[[function]]
+def = """
+    /// Inserts an element at the end of the array, returning the
+    /// index of the new item.
+    int Push(T item);
+"""
+
+[[function]]
+def = """
+    /// Removes the last element in the array. Returns `false` if
+    /// nothing was removed.
+    bool Pop();
+"""
+
+[[function]]
+def = """
+    /// Deletes `deletecount` elements at `index`, moving elements
+    /// back if necessary.
+    void Delete(uint index, int deletecount = 1);
+"""
+
+[[function]]
+def = """
+    /// Inserts an element at `index`. If `index` is beyond the bounds
+    /// of the array, it will initialize the leading elements to their
+    /// null value.
+    void Insert(uint index, T item);
+"""
+
+[[function]]
+def = """
+    /// Shrinks the internal array to the [`Size`] of the array.
+    void ShrinkToFit();
+"""
+
+[[function]]
+def = """
+    /// Grows the internal array's capacity so that it can fit at least
+    /// `amount` more elements.
+    void Grow(uint amount);
+"""
+
+[[function]]
+def = """
+    /// Resizes the array to `amount`, potentially removing or
+    /// initializing elements.
+    void Resize(uint amount);
+"""
+
+[[function]]
+def = """
+    /// Grows the array by exactly `amount` more elements and returns
+    /// the first new index.
+    int Reserve(uint amount);
+"""
+
+[[function]]
+def = """
+    /// Returns the size of the internal array.
+    int Max() const;
+"""
+
+[[function]]
+def = """
+    /// Removes all elements in the array.
+    void Clear();
+"""
