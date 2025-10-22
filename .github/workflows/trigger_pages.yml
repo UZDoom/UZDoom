@@ -7,6 +7,9 @@ on:
     tags:
       - '**'
 
+permissions:
+  actions: write
+
 jobs:
   trigger_pages:
     # i assume that random UZDoom forks probably don't want pages made for them by default
