@@ -4,6 +4,7 @@ builtins = [
     "int.toml", "uint.toml",
     "bool.toml",
     "double.toml",
+    "FixedArray.toml",
     "Array.toml",
     "Vector2.toml", "Vector3.toml",
     "String.toml", "Name.toml",

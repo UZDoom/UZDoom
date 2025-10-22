@@ -1,0 +1,11 @@
+name = "FixedArray"
+doc = """
+The built-in fixed-size array type. Written as `T[N]`.
+"""
+
+[[function]]
+def = """
+    /// Returns the number of elements in the array. Will always be
+    /// the same value, so this counts as a compile-time constant.
+    int Size() const;
+"""
