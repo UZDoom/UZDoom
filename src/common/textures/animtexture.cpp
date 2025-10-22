@@ -49,7 +49,7 @@ void AnimTexture::SetFrameSize(int  format, int width, int height)
 {
 	pixelformat = format;
 	FTexture::SetSize(width, height);
-	Image.Resize(width * height * 4);
+	Image.Resize(width * height * 4 * 2);
 	memset(Image.Data(), 0, Image.Size());
 }
 
@@ -73,7 +73,8 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 {
 	if (data_)
 	{
-		auto dpix = Image.Data();
+		active ^= 1;
+		auto dpix = Image.Data() + (active ? (Image.Size() / 2) : 0);
 
 		if (pixelformat == YUV)
 		{
@@ -206,7 +207,7 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 
 FBitmap AnimTexture::GetBgraBitmap(const PalEntry* remap, int* trans)
 {
-	return FBitmap(Image.Data(), Width * 4, Width, Height);
+	return FBitmap(Image.Data() + (active ? (Image.Size() / 2) : 0), Width * 4, Width, Height);
 }
 
 //==========================================================================
@@ -218,8 +219,7 @@ FBitmap AnimTexture::GetBgraBitmap(const PalEntry* remap, int* trans)
 AnimTextures::AnimTextures()
 {
 	active = 1;
-	tex[0] = TexMan.FindGameTexture("AnimTextureFrame1", ETextureType::Override);
-	tex[1] = TexMan.FindGameTexture("AnimTextureFrame2", ETextureType::Override);
+	tex = TexMan.FindGameTexture("AnimTextureFrame1", ETextureType::Override);
 }
 
 AnimTextures::~AnimTextures()
@@ -227,18 +227,17 @@ AnimTextures::~AnimTextures()
 	Clean();
 }
 
-void AnimTextures::SetTargets(FTextureID first, FTextureID second)
+void AnimTextures::SetTarget(FTextureID first)
 {
 	Clean();
 
 	active = 1;
-	tex[0] = TexMan.GetGameTexture(first);
-	tex[1] = TexMan.GetGameTexture(second);
+	tex = TexMan.GetGameTexture(first);
 
-	if (!tex[0] || !tex[1])
-		I_Error("AnimTextures not found.");
+	if (!tex)
+		I_Error("AnimTexture not found.");
 
-	if (tex[0]->GetTexture()->IsAnimTex() == false || tex[1]->GetTexture()->IsAnimTex() == false)
+	if (tex->GetTexture()->IsAnimTex() == false)
 	{
 		I_Error("Invalid textures for AnimTextures specified.");
 	}
@@ -246,24 +245,19 @@ void AnimTextures::SetTargets(FTextureID first, FTextureID second)
 
 void AnimTextures::Clean()
 {
-	if (tex[0]) tex[0]->CleanHardwareData(true);
-	if (tex[1]) tex[1]->CleanHardwareData(true);
-	tex[0] = tex[1] = nullptr;
+	if (tex) tex->CleanHardwareData(true);
+	tex = nullptr;
 }
 
 void AnimTextures::SetSize(int format, int width, int height)
 {
-	static_cast<AnimTexture*>(tex[0]->GetTexture())->SetFrameSize(format, width, height);
-	static_cast<AnimTexture*>(tex[1]->GetTexture())->SetFrameSize(format, width, height);
-	tex[0]->SetSize(width, height);
-	tex[1]->SetSize(width, height);
-	tex[0]->CleanHardwareData();
-	tex[1]->CleanHardwareData();
+	static_cast<AnimTexture*>(tex->GetTexture())->SetFrameSize(format, width, height);
+	tex->SetSize(width, height);
+	tex->CleanHardwareData();
 }
 
 void AnimTextures::SetFrame(const uint8_t* palette, const void* data)
 {
-	active ^= 1;
-	static_cast<AnimTexture*>(tex[active]->GetTexture())->SetFrame(palette, data);
-	tex[active]->CleanHardwareData();
+	static_cast<AnimTexture*>(tex->GetTexture())->SetFrame(palette, data);
+	tex->CleanHardwareData();
 }

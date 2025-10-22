@@ -70,7 +70,7 @@ public:
 	virtual void Stop() {}
 	virtual ~MoviePlayer() = default;
 	virtual FTextureID GetTexture() = 0;
-	virtual void SetTargets(FTextureID first, FTextureID second) = 0;
+	virtual void SetTarget(FTextureID first) = 0;
 };
 
 //---------------------------------------------------------------------------
@@ -231,9 +231,9 @@ public:
 		if (!nostopsound) soundEngine->StopAllChannels();
 	}
 
-	void SetTargets(FTextureID first, FTextureID second)
+	void SetTarget(FTextureID first)
 	{
-		animtex.SetTargets(first, second);
+		animtex.SetTarget(first);
 	}
 
 	~AnmPlayer()
@@ -303,9 +303,9 @@ public:
 		decoder.Close();
 	}
 
-	void SetTargets(FTextureID first, FTextureID second)
+	void SetTarget(FTextureID first)
 	{
-		decoder.animTex().SetTargets(first, second);
+		decoder.animTex().SetTarget(first);
 	}
 
 	FTextureID GetTexture() override
@@ -643,9 +643,9 @@ public:
 		return animtex.GetFrameID();
 	}
 
-	void SetTargets(FTextureID first, FTextureID second)
+	void SetTarget(FTextureID first)
 	{
-		animtex.SetTargets(first, second);
+		animtex.SetTarget(first);
 	}
 };
 
@@ -846,9 +846,9 @@ public:
 		return animtex.GetFrameID();
 	}
 
-	void SetTargets(FTextureID first, FTextureID second)
+	void SetTarget(FTextureID first)
 	{
-		animtex.SetTargets(first, second);
+		animtex.SetTarget(first);
 	}
 };
 
@@ -1003,13 +1003,12 @@ DEFINE_ACTION_FUNCTION(_MoviePlayer, GetTexture)
 	ACTION_RETURN_INT(self->GetTexture().GetIndex());
 }
 
-DEFINE_ACTION_FUNCTION(_MoviePlayer, SetTargets)
+DEFINE_ACTION_FUNCTION(_MoviePlayer, SetTarget)
 {
 	PARAM_SELF_STRUCT_PROLOGUE(MoviePlayer);
 	PARAM_INT(first);
-	PARAM_INT(second);
 
-	self->SetTargets(TexMan.GameByIndex(first)->GetID(), TexMan.GameByIndex(second)->GetID());
+	self->SetTarget(TexMan.GameByIndex(first)->GetID());
 
 	return 0;
 }

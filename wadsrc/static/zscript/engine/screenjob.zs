@@ -212,7 +212,7 @@ struct MoviePlayer native
 	native bool Frame(double clock);
 	native void Destroy();
 	native TextureID GetTexture();
-	native void SetTargets(TextureID first, TextureID second);
+	native void SetTarget(TextureID first);
 }
 
 //---------------------------------------------------------------------------

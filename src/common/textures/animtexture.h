@@ -7,6 +7,7 @@ class AnimTexture : public FTexture
 {
 	TArray<uint8_t> Image;
 	int pixelformat;
+	int active = 0;
 public:
 	enum
 	{
@@ -26,7 +27,7 @@ public:
 class AnimTextures
 {
 	int active;
-	FGameTexture* tex[2] = { nullptr, nullptr };
+	FGameTexture* tex = nullptr;
 
 public:
 	AnimTextures();
@@ -34,14 +35,14 @@ public:
 	void Clean();
 	void SetSize(int format, int width, int height);
 	void SetFrame(const uint8_t* palette, const void* data);
-	void SetTargets(FTextureID first, FTextureID second);
+	void SetTarget(FTextureID first);
 	FGameTexture* GetFrame()
 	{
-		return tex[active];
+		return tex;
 	}
 
 	FTextureID GetFrameID()
 	{
-		return tex[active]->GetID();
+		return tex->GetID();
 	}
 };
