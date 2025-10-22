@@ -1,6 +1,6 @@
 name = "int"
 doc = """
-The 32-bit signed integer builtin type.
+The 32-bit signed integer built-in type.
 
 This type can represent every integer in the range `-2147483648` to `2147483647`.
 """

@@ -1,6 +1,6 @@
 name = "Color"
 doc = """
-A builtin type representing a color.
+A built-in type representing a color.
 """
 
 [[member]]

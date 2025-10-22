@@ -1,6 +1,6 @@
 name = "Vector2"
 doc = """
-A builtin type representing 2D coordinates, either as a point or as a vector.
+A built-in type representing 2D coordinates, either as a point or as a vector.
 """
 
 [[member]]
