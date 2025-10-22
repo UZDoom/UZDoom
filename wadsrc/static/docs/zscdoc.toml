@@ -6,5 +6,6 @@ builtins = [
     "double.toml",
     "Vector2.toml", "Vector3.toml",
     "String.toml", "Name.toml",
+    "Color.toml",
 ]
 document_globals = true

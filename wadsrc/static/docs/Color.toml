@@ -1,0 +1,28 @@
+name = "Color"
+doc = """
+A builtin type representing a color.
+"""
+
+[[member]]
+def = """
+    /// The red component. 0-255, inclusive.
+    uint r;
+"""
+
+[[member]]
+def = """
+    /// The green component. 0-255, inclusive.
+    uint g;
+"""
+
+[[member]]
+def = """
+    /// The blue component. 0-255, inclusive.
+    uint b;
+"""
+
+[[member]]
+def = """
+    /// The alpha component. 0-255, inclusive.
+    uint a;
+"""
