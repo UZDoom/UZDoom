@@ -709,6 +709,7 @@ void FStartScreen::Render(bool force)
 		if (ShaderComp && NewConsoleFont)
 		{
 			FString compStr = GStrings.localize("$SHADERCOMPILING");
+			compStr.Truncate(compStr.Len() - (3 - ShaderComp));
 			auto strWidth = NewConsoleFont->StringWidth(compStr);
 			if (ShaderComp == 3)
 				compStr.AppendFormat("..");
