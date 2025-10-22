@@ -952,7 +952,7 @@ class DAutomap :public DAutomapBase
 	// used by MTOF to scale from map-to-frame-buffer coords
 	double scale_mtof = .2;
 	// used by FTOM to scale from frame-buffer-to-map coords (=1/scale_mtof)
-	double scale_ftom = 0.2;
+	double scale_ftom = 1.0/scale_mtof;
 
 	bool bigstate = false;
 	int MapPortalGroup = 0;
@@ -1074,7 +1074,6 @@ class DAutomap :public DAutomapBase
 	void drawMarks();
 	void drawAuthorMarkers();
 	void drawCrosshair(const AMColor &color);
-	void CalculateLineThicknessScaled();
 
 public:
 	bool Responder(event_t* ev, bool last) override;
@@ -1174,7 +1173,7 @@ void DAutomap::restoreScaleAndLoc ()
 
 	// Change the scaling multipliers
 	scale_mtof = f_w / m_w;
-	scale_ftom = 1. / scale_mtof;
+	scale_ftom = 1.0 / scale_mtof;
 }
 
 //=============================================================================
@@ -1418,7 +1417,7 @@ void DAutomap::LevelInit ()
 	scale_mtof = min_scale_mtof / 0.7;
 	if (scale_mtof > max_scale_mtof)
 		scale_mtof = min_scale_mtof;
-	scale_ftom = 1 / scale_mtof;
+	scale_ftom = 1.0 / scale_mtof;
 
 	UpdateShowAllLines();
 }
@@ -1432,7 +1431,7 @@ void DAutomap::LevelInit ()
 void DAutomap::minOutWindowScale ()
 {
 	scale_mtof = min_scale_mtof;
-	scale_ftom = 1/ scale_mtof;
+	scale_ftom = 1.0 / scale_mtof;
 }
 
 //=============================================================================
@@ -1444,7 +1443,7 @@ void DAutomap::minOutWindowScale ()
 void DAutomap::maxOutWindowScale ()
 {
 	scale_mtof = max_scale_mtof;
-	scale_ftom = 1 / scale_mtof;
+	scale_ftom = 1.0 / scale_mtof;
 }
 
 //=============================================================================
@@ -1486,7 +1485,7 @@ void DAutomap::NewResolution()
 	}
 	calcMinMaxMtoF();
 	scale_mtof = scale_mtof * min_scale_mtof / oldmin;
-	scale_ftom = 1 / scale_mtof;
+	scale_ftom = 1.0 / scale_mtof;
 	if (scale_mtof < min_scale_mtof)
 		minOutWindowScale();
 	else if (scale_mtof > max_scale_mtof)
@@ -1564,7 +1563,7 @@ void DAutomap::changeWindowScale (double delta)
 
 	// Change the scaling multipliers
 	scale_mtof = scale_mtof * mtof_zoommul;
-	scale_ftom = 1 / scale_mtof;
+	scale_ftom = 1.0 / scale_mtof;
 
 	if (scale_mtof < min_scale_mtof)
 		minOutWindowScale();
@@ -1891,8 +1890,8 @@ void DAutomap::drawMline (mline_t *ml, int colorindex)
 
 void DAutomap::drawGrid (int color)
 {
-	uint64_t x, y;
-	uint64_t start, end;
+	double x, y;
+	double start, end;
 	mline_t ml;
 	double minlen, extx, exty;
 	double minx, miny;
@@ -1909,14 +1908,17 @@ void DAutomap::drawGrid (int color)
 	miny = m_y;
 
 	// Figure out start of vertical gridlines
-	start = minx - extx;
+	start = (minx - extx);
 	start = ceil((start - bmaporgx) / FBlockmap::MAPBLOCKUNITS) * FBlockmap::MAPBLOCKUNITS + bmaporgx;
 
 	end = minx + minlen - extx;
 
 	// draw vertical gridlines
-	for (x = start; x < end; x += FBlockmap::MAPBLOCKUNITS)
+	uint16_t xLineCount = ceil(abs(end - start) /(double)FBlockmap::MAPBLOCKUNITS );
+	x = start;
+	for (uint16_t i = 0; i < xLineCount; ++i)
 	{
+		x += FBlockmap::MAPBLOCKUNITS;
 		ml.a.x = x;
 		ml.b.x = x;
 		ml.a.y = miny - exty;
@@ -1933,10 +1935,13 @@ void DAutomap::drawGrid (int color)
 	start = miny - exty;
 	start = ceil((start - bmaporgy) / FBlockmap::MAPBLOCKUNITS) * FBlockmap::MAPBLOCKUNITS + bmaporgy;
 	end = miny + minlen - exty;
-
+	
 	// draw horizontal gridlines
-	for (y=start; y<end; y+=FBlockmap::MAPBLOCKUNITS)
+	uint16_t yLineCount = ceil(abs(end - start) / (double)FBlockmap::MAPBLOCKUNITS);
+	y = start;
+	for (uint16_t i = 0; i < yLineCount; ++i)
 	{
+		y += FBlockmap::MAPBLOCKUNITS;
 		ml.a.x = minx - extx;
 		ml.b.x = ml.a.x + minlen;
 		ml.a.y = y;
