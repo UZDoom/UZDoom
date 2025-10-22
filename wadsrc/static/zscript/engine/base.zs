@@ -970,8 +970,8 @@ struct StringStruct native unsafe(internal)
 	native void Truncate(int newlen);
 	/// Removes `remlen` bytes starting at `index` in-place.
 	native void Remove(int index, int remlen);
-	/// Returns the byte at `pos` as a new string. Use [`ByteAt`],
-	/// [`Left`], or [`Mid`] instead.
+	/// Returns the byte at `pos` as a new string. Use [`Left`] or
+	/// [`Mid`] instead.
 	deprecated("4.1", "use Left() or Mid() instead") native String CharAt(int pos) const;
 	/// Deprecated alias of [`ByteAt`]. Use it instead.
 	deprecated("4.1", "use ByteAt() instead") native int CharCodeAt(int pos) const;
