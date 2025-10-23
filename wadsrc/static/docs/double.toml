@@ -2,6 +2,85 @@ name = "double"
 doc = """
 The 64-bit floating point built-in type.
 
-This type can represent decimal values such as `0.5` as opposed to `int` and `uint` which are
-limited to whole numbers.
+This type can represent decimal values such as `0.5` as opposed to
+`int` and `uint` which are limited to whole numbers.
+"""
+
+[[constant]]
+def = """
+    /// The lowest value representable by the type.
+    const MIN_NORMAL = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The lowest positive subnormal value of the type.
+    const MIN_DENORMAL = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The highest (non-infinity) value representable by the type.
+    const MAX = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The smallest positive value representable by the type.
+    const EPSILON = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The Not-a-Number value of the type.
+    const NAN = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The infinity value of the type.
+    const INFINITY = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The number of decimal digits guaranteed to be preserved when
+    /// converting between text to this type and back.
+    const DIG = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The minimum negative base 2 exponent that produces a normal
+    /// float.
+    const MIN_EXP = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The maximum positive base-2 exponent that produces a normal
+    /// float.
+    const MAX_EXP = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The number of bits representing the *mantissa* portion of the
+    /// float, i.e. the number of bits that can be represented without
+    /// precision loss.
+    const MANT_DIG = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The minimum negative base-10 exponent that produces a normal
+    /// float.
+    const MIN_10_EXP = 0.0;
+"""
+
+[[constant]]
+def = """
+    /// The maximum positive base-10 exponent that produces a normal
+    /// float.
+    const MAX_10_EXP = 0.0;
 """
