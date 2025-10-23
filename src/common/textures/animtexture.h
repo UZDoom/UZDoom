@@ -16,10 +16,12 @@ public:
 		YUV = 2,
 		VPX = 3
 	};
-	AnimTexture() = default;
 	void SetFrameSize(int format, int width, int height);
+	// Changed to at least initialize the texture size to sane values.
+	AnimTexture() { SetFrameSize(RGB, 128, 128); };
 	void SetFrame(const uint8_t* palette, const void* data);
 	virtual FBitmap GetBgraBitmap(const PalEntry* remap, int* trans) override;
+	void ClearFrame();
 
 	bool IsAnimTex() override { return true; }
 };
@@ -32,7 +34,8 @@ class AnimTextures
 public:
 	AnimTextures();
 	~AnimTextures();
-	void Clean();
+	void Clean(bool clearframe = false);
+	void ClearFrame();
 	void SetSize(int format, int width, int height);
 	void SetFrame(const uint8_t* palette, const void* data);
 	void SetTarget(FTextureID first);

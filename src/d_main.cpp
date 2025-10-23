@@ -115,6 +115,7 @@
 #include "v_palette.h"
 #include "v_text.h"
 #include "v_video.h"
+#include "vidtexmanager.h"
 #include "version.h"
 #include "vm.h"
 #include "wi_stuff.h"
@@ -1014,6 +1015,7 @@ void D_Display ()
 	
 	screen->FrameTime = I_msTimeFS();
 	TexAnim.UpdateAnimations(screen->FrameTime);
+	VidMan.TickAll();
 	R_UpdateSky(screen->FrameTime);
 	screen->BeginFrame();
 	twod->ClearClipRect();
@@ -4058,6 +4060,7 @@ void D_Cleanup()
 	savegameManager.ClearSaveGames();
 	LightDefaults.DeleteAndClear();			// this can leak heap memory if it isn't cleared.
 	TexAnim.DeleteAll();
+	VidMan.DeleteAll();
 	TexMan.DeleteAll();
 	
 	// delete GameStartupInfo data

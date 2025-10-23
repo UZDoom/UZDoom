@@ -52,26 +52,7 @@
 #include <zmusic.h>
 #include "filereadermusicinterface.h"
 #include "texturemanager.h"
-
-class MoviePlayer
-{
-protected:
-	enum EMovieFlags
-	{
-		NOSOUNDCUTOFF = 1,
-		FIXEDVIEWPORT = 2,	// Forces fixed 640x480 screen size like for Blood's intros.
-		NOMUSICCUTOFF = 4,
-	};
-
-	int flags;
-public:
-	virtual void Start() {}
-	virtual bool Frame(uint64_t clock) = 0;
-	virtual void Stop() {}
-	virtual ~MoviePlayer() = default;
-	virtual FTextureID GetTexture() = 0;
-	virtual void SetTarget(FTextureID first) = 0;
-};
+#include "movieplayer.h"
 
 //---------------------------------------------------------------------------
 //
@@ -170,6 +151,7 @@ public:
 	AnmPlayer(FileReader& fr, TArray<int>& ans, const int *frameticks, int flags_)
 		: animSnd(std::move(ans))
 	{
+		if (!frameticks) return;
 		memcpy(frameTicks, frameticks, 3 * sizeof(int));
 		flags = flags_;
 		buffer = fr.ReadPadded(1);
@@ -238,7 +220,7 @@ public:
 
 	~AnmPlayer()
 	{
-		animtex.Clean();
+		animtex.Clean(true);
 	}
 
 	FTextureID GetTexture() override
@@ -635,7 +617,7 @@ public:
 			ZMusic_Close(MusicStream);
 		}
 		vpx_codec_destroy(&codec);
-		animtex.Clean();
+		animtex.Clean(true);
 	}
 
 	FTextureID GetTexture() override
@@ -838,7 +820,7 @@ public:
 	{
 		AudioTrack.Finish();
 		Smacker_Close(hSMK);
-		animtex.Clean();
+		animtex.Clean(true);
 	}
 
 	FTextureID GetTexture() override

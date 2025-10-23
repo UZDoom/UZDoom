@@ -78,6 +78,7 @@
 #include "types.h"
 #include "v_video.h"
 #include "version.h"
+#include "vidtexmanager.h"
 
 	// P-codes for ACS scripts
 	enum
@@ -469,6 +470,8 @@
 		PCD_LSPEC5EXRESULT,
 		PCD_TRANSLATIONRANGE4,
 		PCD_TRANSLATIONRANGE5,
+		PCD_VIDEOWAIT,
+		PCD_VIDEOWAITDIRECT,
 
 /*385*/	PCODE_COMMAND_COUNT
 	};
@@ -697,6 +700,7 @@ public:
 		SCRIPT_Delayed,
 		SCRIPT_TagWait,
 		SCRIPT_PolyWait,
+		SCRIPT_VideoWait,
 		SCRIPT_ScriptWaitPre,
 		SCRIPT_ScriptWait,
 		SCRIPT_PleaseRemove,
@@ -4864,6 +4868,8 @@ enum EACSFunctions
 	ACSF_SetSubtitleNumber,
 	ACSF_GetNetID,
 	ACSF_SetActivatorByNetID,
+	ACSF_PlayVideoOnTexture,
+	ACSF_StopVideo,
 
 		// Eternity's
 	ACSF_GetLineX = 300,
@@ -6869,6 +6875,33 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			return DoubleToACS(result);
 		}
 
+		case ACSF_PlayVideoOnTexture:
+			MIN_ARG_COUNT(2);
+		{
+			auto lumpname = Level->Behaviors.LookupString(args[0]);
+			auto texname = Level->Behaviors.LookupString(args[1]);
+			FSoundID sid = NO_SOUND;
+
+			const char* lookup = argCount >= 3 ? Level->Behaviors.LookupString(args[2]) : nullptr;
+			if (lookup != nullptr)
+			{
+				sid = S_FindSound(lookup);
+			}
+			TArray<int> mus;
+
+			if (sid != NO_SOUND)
+				mus.Push(sid.index());
+
+			return VidMan.AddVideo(lumpname, TexMan.CheckForTexture(texname, ETextureType::Override), mus, -1, -1, argCount >= 4 ? args[3] : -1, argCount >= 5 ? args[4] : 0);
+		}
+
+		case ACSF_StopVideo:
+			MIN_ARG_COUNT(1);
+		{
+			VidMan.StopVideo(args[0]);
+			return 0;
+		}
+
 		case ACSF_SetSubtitleNumber:
 			MIN_ARG_COUNT(2);
 			// only players allowed as activator
@@ -7002,6 +7035,21 @@ int DLevelScript::RunScript()
 		}
 
 		// If we got here, none of the tagged sectors were busy
+		state = SCRIPT_Running;
+	}
+	break;
+
+	case SCRIPT_VideoWait:
+		// Wait for the video to finish playing, then enter
+		// state running
+	{
+		int videoid = statedata;
+		if (VidMan.GetVideoStatus(videoid) != VIDSTATE_Stopped)
+		{
+			return resultValue;
+		}
+
+		// If we got here, the video was not playing
 		state = SCRIPT_Running;
 	}
 	break;
@@ -8386,6 +8434,18 @@ int DLevelScript::RunScript()
 
 		case PCD_TAGWAITDIRECT:
 			state = SCRIPT_TagWait;
+			statedata = uallong(pc[0]);
+			pc++;
+			break;
+
+		case PCD_VIDEOWAIT:
+			state = SCRIPT_VideoWait;
+			statedata = STACK(1);
+			sp--;
+			break;
+
+		case PCD_VIDEOWAITDIRECT:
+			state = SCRIPT_VideoWait;
 			statedata = uallong(pc[0]);
 			pc++;
 			break;
@@ -10733,6 +10793,7 @@ void DACSThinker::DumpScriptStatus ()
 		"Delayed",
 		"TagWait",
 		"PolyWait",
+		"VideoWait",
 		"ScriptWaitPre",
 		"ScriptWait",
 		"PleaseRemove"

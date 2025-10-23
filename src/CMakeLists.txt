@@ -1061,6 +1061,7 @@ set (PCH_SOURCES
 	common/cutscenes/playmve.cpp
 	common/cutscenes/movieplayer.cpp
 	common/cutscenes/screenjob.cpp
+	common/cutscenes/vidtexmanager.cpp
 	common/utility/engineerrors.cpp
 
 	common/utility/gitinfo.cpp

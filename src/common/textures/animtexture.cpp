@@ -69,6 +69,20 @@ static inline void YUVtoRGB(uint8_t yi, uint8_t ui, uint8_t vi, uint8_t * rgb)
 	(rgb)[3] = 255;
 }
 
+void AnimTexture::ClearFrame()
+{
+	auto dpix = Image.Data();
+	for (int i = 0; i < Width * Height * 2; i++)
+	{
+		dpix[0] = 0;
+		dpix[1] = 0;
+		dpix[2] = 0;
+		dpix[3] = 255;
+
+		dpix += 4;
+	}
+}
+
 void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 {
 	if (data_)
@@ -224,6 +238,7 @@ AnimTextures::AnimTextures()
 
 AnimTextures::~AnimTextures()
 {
+	ClearFrame();
 	Clean();
 }
 
@@ -243,9 +258,14 @@ void AnimTextures::SetTarget(FTextureID first)
 	}
 }
 
-void AnimTextures::Clean()
+void AnimTextures::Clean(bool clearframe)
 {
-	if (tex) tex->CleanHardwareData(true);
+	if (tex)
+	{
+		if (clearframe)
+			ClearFrame();
+		tex->CleanHardwareData(true);
+	}
 	tex = nullptr;
 }
 
@@ -253,6 +273,14 @@ void AnimTextures::SetSize(int format, int width, int height)
 {
 	static_cast<AnimTexture*>(tex->GetTexture())->SetFrameSize(format, width, height);
 	tex->SetSize(width, height);
+	tex->CleanHardwareData();
+}
+
+void AnimTextures::ClearFrame()
+{
+	if (!tex)
+		return;
+	static_cast<AnimTexture*>(tex->GetTexture())->ClearFrame();
 	tex->CleanHardwareData();
 }
 

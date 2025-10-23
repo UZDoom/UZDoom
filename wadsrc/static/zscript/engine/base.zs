@@ -354,6 +354,21 @@ struct TexMan
 	native static Canvas GetCanvas(String texture);
 }
 
+struct VidMan
+{
+	enum EVideoState
+	{
+		VIDSTATE_Starting,
+		VIDSTATE_Running,
+		VIDSTATE_Stopped
+	};
+	// Uses same flags as MoviePlayer
+	native static int AddVideo(String filename, TextureID target, Array<int> soundinfo, int firstframetime, int lastframetime, int frametime, int flags);
+	native static int GetVideoTime(int vid);
+	native static int GetVideoStatus(int vid);
+	native static int StopVideo(int vid);
+}
+
 /*
 // Intrinsic TextureID methods
 // This isn't really a class, and can be used as an integer

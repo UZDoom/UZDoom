@@ -511,6 +511,7 @@ void InterplayDecoder::Close()
         pVideoBuffers[1] = nullptr;
     }
 
+	animTex().Clean(true);
 }
 
 bool InterplayDecoder::Open(FileReader &fr_)
