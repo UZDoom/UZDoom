@@ -941,9 +941,14 @@ struct Wads	// todo: make FileSystem an alias to 'Wads'
 	native static string GetLumpFullPath(int lump);
 }
 
+/// Identifies whether to keep or skip empty tokens.
+///
+/// Used by [`String.Split`].
 enum EmptyTokenType
 {
+	/// Skips empty tokens.
 	TOK_SKIPEMPTY = 0,
+	/// Keeps empty tokens.
 	TOK_KEEPEMPTY = 1,
 }
 
