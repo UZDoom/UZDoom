@@ -1,0 +1,39 @@
+name = "TextureID"
+doc = """
+A built-in type representing a texture's internal identifier.
+
+Texture IDs can be explicitly converted to integers, but not the other
+way around. You can add and subtract integers with a Texture ID,
+however. (This only works with the integer on the right hand side.)
+"""
+
+[[function]]
+def = """
+    /// Checks if the texture exists within the texture manager at
+    /// all.
+    bool Exists() const;
+"""
+
+[[function]]
+def = """
+    /// Checks if the texture is the null index 0.
+    bool IsNull() const;
+"""
+
+[[function]]
+def = """
+    /// Checks if the texture is not the invalid index -1.
+    bool IsValid() const;
+"""
+
+[[function]]
+def = """
+    /// Sets the texture index to the null index 0.
+    bool SetNull();
+"""
+
+[[function]]
+def = """
+    /// Sets the texture index to the invalid index -1.
+    bool SetInvalid();
+"""
