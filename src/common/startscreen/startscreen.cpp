@@ -711,10 +711,6 @@ void FStartScreen::Render(bool force)
 			FString compStr = GStrings.localize("$SHADERCOMPILING");
 			compStr.Truncate(compStr.Len() - (3 - ShaderComp));
 			auto strWidth = NewConsoleFont->StringWidth(compStr);
-			if (ShaderComp == 3)
-				compStr.AppendFormat("..");
-			else if (ShaderComp == 2)
-				compStr.AppendFormat(".");
 
 			Dim(twod, PalEntry(0, 0, 0, 255), 0.5, 0, 0, screen->GetWidth(), screen->GetHeight());
 			DrawText(twod, NewConsoleFont, CR_WHITE, (CleanWidth / 2) - (strWidth / 2), (CleanHeight - (NewConsoleFont->GetHeight() * 2)), compStr.GetChars(), DTA_VirtualWidth, CleanWidth, DTA_VirtualHeight, CleanHeight, TAG_DONE);
