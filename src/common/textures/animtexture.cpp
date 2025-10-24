@@ -52,27 +52,13 @@ void AnimTexture::SetFrameSize(int  format, int width, int height)
 	memset(Image.Data(), 0, Image.Size());
 }
 
-//TODO optimize
-static inline void YUVtoRGB(uint8_t yi, uint8_t ui, uint8_t vi, uint8_t * rgb)
-{
-	float Y = yi * (1 / 255.f);
-	float U = ui * (1 / 255.f) - 0.5f;
-	float V = vi * (1 / 255.f) - 0.5f;
-	Y = 1.1643f * (Y - 0.0625f);
-	float r = Y + 1.5958f * V;
-	float g = Y - 0.39173f * U - 0.81290f * V;
-	float b = Y + 2.017f * U;
-	(rgb)[2] = (uint8_t)(clamp(r, 0.f, 1.f) * 255);
-	(rgb)[1] = (uint8_t)(clamp(g, 0.f, 1.f) * 255);
-	(rgb)[0] = (uint8_t)(clamp(b, 0.f, 1.f) * 255);
-	(rgb)[3] = 255;
-}
-
 void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 {
 	if (data_)
 	{
 		auto dpix = Image.Data();
+
+		bYuv = !!(pixelformat == YUV || pixelformat == VPX);
 
 		if (pixelformat == YUV)
 		{
@@ -80,7 +66,10 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 
 			for (int i = 0; i < Width * Height; i++)
 			{
-				YUVtoRGB(spix[0], spix[1], spix[2], dpix);
+				dpix[2] = spix[0];
+				dpix[1] = spix[1];
+				dpix[0] = spix[2];
+				dpix[3] = 255;
 
 				spix += 4;
 				dpix += 4;
@@ -104,12 +93,10 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 				{
 					for (unsigned int x = 0; x < Width; x++)
 					{
-						YUVtoRGB(
-								yplane[ystride * y + x],
-								uplane[ustride * (y >> 1) + (x >> 1)],
-								vplane[vstride * (y >> 1) + (x >> 1)],
-								dpix
-						);
+						dpix[2] = yplane[ystride * y + x];
+						dpix[1] = uplane[ustride * (y >> 1) + (x >> 1)];
+						dpix[0] = vplane[vstride * (y >> 1) + (x >> 1)];
+						dpix[3] = 255;
 
 						dpix += 4;
 					}
@@ -121,12 +108,11 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 				{
 					for (unsigned int x = 0; x < Width; x++)
 					{
-						YUVtoRGB(
-							yplane[ystride * y + x],
-							uplane[ustride * y + x],
-							vplane[vstride * y + x],
-							dpix
-						);
+						dpix[2] = yplane[ystride * y + x];
+						dpix[1] = uplane[ustride * y + x];
+						dpix[0] = vplane[vstride * y + x];
+						dpix[3] = 255;
+
 						dpix += 4;
 					}
 				}
@@ -137,12 +123,11 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 				{
 					for (unsigned int x = 0; x < Width; x++)
 					{
-						YUVtoRGB(
-							yplane[ystride * y + x],
-							uplane[ustride * y + (x >> 1)],
-							vplane[vstride * y + (x >> 1)],
-							dpix
-						);
+						dpix[2] = yplane[ystride * y + x];
+						dpix[1] = uplane[ustride * y + (x >> 1)];
+						dpix[0] = vplane[vstride * y + (x >> 1)];
+						dpix[3] = 255;
+
 						dpix += 4;
 					}
 				}
@@ -153,12 +138,11 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 				{
 					for (unsigned int x = 0; x < Width; x++)
 					{
-						YUVtoRGB(
-							yplane[ystride * y + x],
-							uplane[ustride * (y >> 1) + x],
-							vplane[vstride * (y >> 1) + x],
-							dpix
-						);
+						dpix[2] = yplane[ystride * y + x];
+						dpix[1] = uplane[ustride * (y >> 1) + (x >> 1)];
+						dpix[0] = vplane[vstride * (y >> 1) + (x >> 1)];
+						dpix[3] = 255;
+
 						dpix += 4;
 					}
 				}

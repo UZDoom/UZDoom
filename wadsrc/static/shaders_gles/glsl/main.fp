@@ -37,6 +37,22 @@ vec2 GetTexCoord();
 //const int TEXF_Detailmap = 0x20000;
 //const int TEXF_Glowmap = 0x40000;
 
+//===========================================================================
+//
+// YUV to RGB
+//
+//===========================================================================
+
+#if (DEF_TEXTURE_FLAGS & 0x10)
+vec3 yuv2rgb(vec3 c)
+{
+	float Y = c.r;
+	float U = c.g - 0.5f;
+	float V = c.b - 0.5f;
+	Y = 1.1643f * (Y - 0.0625f);
+	return vec3(Y + 1.5958f * V, Y - 0.39173f * U - 0.81290f * V, Y + 2.017f * U);
+}
+#endif
 
 //===========================================================================
 //
@@ -161,6 +177,10 @@ const int Tex_Blend_Hardlight = 4;
 vec4 getTexel(vec2 st)
 {
 	vec4 texel = texture2D(tex, st);
+
+#if (DEF_TEXTURE_FLAGS & 0x10)
+	texel.rgb = yuv2rgb(texel.rgb);
+#endif
 	
 #if (DEF_TEXTURE_MODE == 1)
 

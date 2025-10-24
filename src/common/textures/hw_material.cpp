@@ -54,6 +54,9 @@ FMaterial::FMaterial(FGameTexture * tx, int scaleflags)
 	auto imgtex = tx->GetTexture();
 	mTextureLayers.Push({ imgtex, scaleflags, -1 });
 
+	if (imgtex && imgtex->IsYUV())
+		mLayerFlags |= TEXF_YUV;
+
 	if (tx->GetUseType() == ETextureType::SWCanvas && static_cast<FWrapperTexture*>(imgtex)->GetColorFormat() == 0)
 	{
 		mShaderIndex = SHADER_Paletted;

@@ -47,6 +47,22 @@ const int TEXF_Brightmap = 0x10000;
 const int TEXF_Detailmap = 0x20000;
 const int TEXF_Glowmap = 0x40000;
 const int TEXF_ClampY = 0x80000;
+const int TEXF_YUV = 0x100000;
+
+//===========================================================================
+//
+// YUV to RGB
+//
+//===========================================================================
+
+vec3 yuv2rgb(vec3 c)
+{
+	float Y = c.r;
+	float U = c.g - 0.5f;
+	float V = c.b - 0.5f;
+	Y = 1.1643f * (Y - 0.0625f);
+	return vec3(Y + 1.5958f * V, Y - 0.39173f * U - 0.81290f * V, Y + 2.017f * U);
+}
 
 //===========================================================================
 //
@@ -181,6 +197,10 @@ const int Tex_Blend_Hardlight = 4;
 vec4 getTexel(vec2 st)
 {
 	vec4 texel = texture(tex, st);
+
+	// Apply YUV-to-RGB conversion
+	if ((uTextureMode & TEXF_YUV) != 0)
+		texel.rgb = yuv2rgb(texel.rgb);
 
 	//
 	// Apply texture modes

@@ -92,6 +92,7 @@ enum texflags
 	TEXF_Detailmap = 0x20000,
 	TEXF_Glowmap = 0x40000,
 	TEXF_ClampY = 0x80000,
+	TEXF_YUV = 0x100000,
 };
 
 
@@ -220,6 +221,7 @@ protected:
 	bool Masked = false;			// Texture (might) have holes
 	bool bHasCanvas = false;
 	bool bHdr = false; 				// only canvas textures for now.
+	bool bYuv = false;
 	int8_t bTranslucent = -1;
 	int8_t areacount = 0;			// this is capped at 4 sections.
 
@@ -257,6 +259,7 @@ public:
 	bool isCanvas() const { return bHasCanvas; }
 
 	bool IsHDR() const { return bHdr; }
+	bool IsYUV() const { return bYuv; }
 
 	int GetSourceLump() { return SourceLump; }	// needed by the scripted GetName method.
 	void SetSourceLump(int sl) { SourceLump  = sl; }
