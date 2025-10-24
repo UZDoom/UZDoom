@@ -75,7 +75,7 @@ static dsda_option_t option_list[] = {
   { "comp_stairs", &dsda_options::comp_stairs, 0, 1 },
   { "comp_ledgeblock", &dsda_options::comp_ledgeblock, 0, 1 },
   { "comp_friendlyspawn", &dsda_options::comp_friendlyspawn, 0, 1 },
-  { "comp_reservedlineflag", &dsda_options::comp_friendlyspawn, 0, 1 },
+  { "comp_reservedlineflag", &dsda_options::comp_reservedlineflag, 0, 1 },
   { 0 }
 };
 
