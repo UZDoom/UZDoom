@@ -632,6 +632,11 @@ static inline void RenderModelFrame(FModelRenderer *renderer, int i, const FSpri
 
 		if(frameinfo.smf_flags & MDL_MODELSAREATTACHMENTS || is_decoupled)
 		{
+			if(!boneData)
+			{
+				boneData = mdl->GetBasePose();
+			}
+
 			boneStartingPosition = boneData ? screen->mBones->UploadBones(*boneData) : -1;
 			evaluatedSingle = true;
 		}

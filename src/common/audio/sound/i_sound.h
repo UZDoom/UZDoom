@@ -3,6 +3,8 @@
 **
 **---------------------------------------------------------------------------
 ** Copyright 1998-2006 Randy Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -38,6 +40,7 @@
 #include <chrono>
 #include <vector>
 #include "i_soundinternal.h"
+#include "m_argv.h"
 #include "zstring.h"
 #include <zmusic.h>
 #include "files.h"
@@ -59,6 +62,9 @@ enum ECodecType
 	CODEC_Vorbis,
 };
 
+EXTERN_FARG(nomusic);
+EXTERN_FARG(nosound);
+EXTERN_FARG(nosfx);
 
 class SoundStream
 {

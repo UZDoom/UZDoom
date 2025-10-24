@@ -785,7 +785,7 @@ struct sector_t
 	// Member functions
 
 private:
-	bool MoveAttached(int crush, double move, int floorOrCeiling, bool resetfailed, bool instant = false);
+	bool MoveAttached(int crush, double move, int floorOrCeiling, bool resetfailed, bool instant = false, bool* crushed = nullptr);
 public:
 	EMoveResult MoveFloor(double speed, double dest, int crush, int direction, bool hexencrush, bool instant = false);
 	EMoveResult MoveCeiling(double speed, double dest, int crush, int direction, bool hexencrush);

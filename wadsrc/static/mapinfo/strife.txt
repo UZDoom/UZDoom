@@ -419,7 +419,7 @@ Intermission Inter_Strife_Sad
 {
 	Image
 	{
-		Music = "D_SAD"
+		Music = "D_END"
 		Background = "SS6F1"
 		Sound = "svox/ss601a"
 		Subtitle = "$TXT_SUB_SAD1"

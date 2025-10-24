@@ -341,6 +341,7 @@ enum
 {
 	SCRIPTF_Net = 0x0001,		 // Safe to "puke" in multiplayer
 	SCRIPTF_ClientSide = 0x0002, // Executed locally for clients but not across them
+	SCRIPTF_Busy = 0x0004,		 // [TDRR] Not affected by the runaway script limit
 };
 
 enum ACSFormat { ACS_Old, ACS_Enhanced, ACS_LittleEnhanced, ACS_Unknown };

@@ -1,0 +1,100 @@
+name: Pages Deployment
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build_matrix:
+    runs-on: ubuntu-latest
+    name: Build matrix of refs to document
+    outputs:
+      json_refs: ${{ steps.generate-matrix.outputs.json_refs }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Generate Matrix
+        id: generate-matrix
+        run: |
+          echo "json_refs=$(jq -c . documentation_ref_info.json)" >> $GITHUB_OUTPUT
+
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    needs:
+      - build_matrix
+    strategy:
+      matrix:
+        ref_info: ${{ fromJSON(needs.build_matrix.outputs.json_refs) }}
+    steps:
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          cache-shared-key: pages-rust-cache
+          cache-workspaces: ""
+          cache-all-crates: true
+      - name: Display Cargo version
+        run: |
+          cargo --version
+      - name: Install zscdoc
+        run: |
+          cargo install --git https://github.com/UZDoom/zscdoc --rev 49743503acfd1fd59d23e8e15b24c74065072179
+      - name: Display zscdoc version
+        run: |
+          zscdoc --version
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ matrix.ref_info.ref }}
+      - name: Document ref
+        run: |
+          zscdoc -f ./wadsrc/static -o ./output --delete-without-confirm --base-url "/UZDoom/docs/<version>" --target-version '${{ matrix.ref_info.url_part }}' --versions '${{ needs.build_matrix.outputs.json_refs }}' --canonical-domain "https://${{ github.repository_owner }}.github.io"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.ref_info.url_part }}
+          path: output
+
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    environment:
+      name: github-pages
+      url : ${{ steps.deployment.outputs.page_url }}
+    needs:
+      - build_matrix
+      - build
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/configure-pages@v5
+      - run: gh run download ${{ vars.GITHUB_RUN_ID }} --dir refs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Bundle together
+        run: |
+          mkdir public
+          echo '${{ needs.build_matrix.outputs.json_refs }}' | jq -c '.[]' | while read ref_info; do
+            ref=$(echo $ref_info | jq -r .ref)
+            url_part=$(echo $ref_info | jq -r .url_part)
+
+            mkdir -p -- public/docs/$url_part
+            mv refs/$url_part/* public/docs/$url_part
+          done
+      - name: List public
+        run: |
+          ls -lR public/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+      - name: Deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4

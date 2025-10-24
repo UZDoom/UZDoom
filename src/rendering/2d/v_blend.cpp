@@ -53,6 +53,7 @@
 CVAR(Float, underwater_fade_scalar, 1.0f, CVAR_ARCHIVE) // [Nash] user-settable underwater blend intensity
 CVAR( Float, blood_fade_scalar, 1.0f, CVAR_ARCHIVE )	// [SP] Pulled from Skulltag - changed default from 0.5 to 1.0
 CVAR( Float, pickup_fade_scalar, 1.0f, CVAR_ARCHIVE )	// [SP] Uses same logic as blood_fade_scalar except for pickups
+CVAR(Float, powerup_fade_scalar, 1.0f, CVAR_ARCHIVE) // [Sal] Adjust screen fades for all inventory items
 
 // [RH] Amount of red flash for up to 114 damage points. Calculated by hand
 //		using a logarithmic scale and my trusty HP48G.
@@ -113,11 +114,13 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 			VMCall(func, params, 1, &ret, 1);
 		}
 
-
 		if (color.a != 0)
 		{
-			V_AddBlend (color.r/255.f, color.g/255.f, color.b/255.f, color.a/255.f, blend);
-			if (color.a/255.f > maxinvalpha) maxinvalpha = color.a/255.f;
+			// [Sal] Allow powerup fades to be adjusted.
+			float invalpha = (color.a * powerup_fade_scalar) / 255.f;
+
+			V_AddBlend (color.r/255.f, color.g/255.f, color.b/255.f, invalpha, blend);
+			if (invalpha > maxinvalpha) maxinvalpha = invalpha;
 		}
 	}
 	if (CPlayer->bonuscount)

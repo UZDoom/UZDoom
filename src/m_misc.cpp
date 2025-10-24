@@ -3,6 +3,8 @@
 // Copyright 1993-1996 id Software
 // Copyright 1999-2016 Randy Heit
 // Copyright 2002-2016 Christoph Oelckers
+// Copyright 2017-2025 GZDoom Maintainers and Contributors
+// Copyright 2025 UZDoom Maintainers and Contributors
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -75,8 +77,11 @@ CVAR(String, screenshot_type, "png", CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR(String, screenshot_dir, "", CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 EXTERN_CVAR(Bool, longsavemessages);
 
-static size_t ParseCommandLine (const char *args, int *argc, char **argv);
+FARG(shotdir, "Configuration", "Sets an alternate directory for saving screenshots.", "path",
+	"Specifies an alternate directory to use for screenshots. If this is not specified, " GAMENAME
+	" stores them in the directory indicated by the screenshot_dir CVAR.");
 
+static size_t ParseCommandLine (const char *args, int *argc, char **argv);
 
 //---------------------------------------------------------------------------
 //
@@ -137,15 +142,15 @@ void M_FindResponseFile (void)
 
 				// Copy parameters before response file.
 				for (index = 0; index < i; ++index)
-					newargs->AppendArg(Args->GetArg(index));
+					newargs->AppendRawArg(Args->GetArg(index));
 
 				// Copy parameters from response file.
 				for (index = 0; index < argc; ++index)
-					newargs->AppendArg(argv[index]);
+					newargs->AppendRawArg(argv[index]);
 
 				// Copy parameters after response file.
 				for (index = i + 1; index < Args->NumArgs(); ++index)
-					newargs->AppendArg(Args->GetArg(index));
+					newargs->AppendRawArg(Args->GetArg(index));
 
 				// Use the new argument vector as the global Args object.
 				delete Args;
@@ -581,7 +586,7 @@ void M_ScreenShot (const char *filename)
 	if (filename == NULL || filename[0] == '\0')
 	{
 		size_t dirlen;
-		autoname = Args->CheckValue("-shotdir");
+		autoname = Args->CheckValue(FArg_shotdir);
 		if (autoname.IsEmpty())
 		{
 			autoname = screenshot_dir;
@@ -667,7 +672,7 @@ CCMD(openscreenshots)
 {
 	size_t dirlen;
 	FString autoname;
-	autoname = Args->CheckValue("-shotdir");
+	autoname = Args->CheckValue(FArg_shotdir);
 	if (autoname.IsEmpty())
 	{
 		autoname = screenshot_dir;

@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a Bug report
 title: '[BUG] '
-labels: bug
+labels: bug/bugfix
 type: bug
 #assignees: 'anonymous@temp'
 
@@ -18,7 +18,7 @@ body:
       label: UZDoom version
       description: |
         What version are you using?
-        Run `gzdoom --version` or check in the console in game.
+        Run `uzdoom --version` or check in the console in game.
         Make sure to update to latest [release](https://github.com/UZDoom/UZDoom/releases) version and test again before continuing.
       placeholder: "ex: UZDoom 4.0.0, Git version, Branch, other"
     validations:
@@ -101,7 +101,7 @@ body:
     attributes:
       label: Your configuration
       description: |
-        Share the config file(s) you've been using to run the program. (`gzdoom.ini`) 
+        Share the config file(s) you've been using to run the program. (`uzdoom.ini`) 
         Please avoid pasting the full config, _use attachments or links_ in a [Gist](https://gist.github.com/)
       placeholder: "example: cl_autorun=true"
       render: ini # syntax highlighting

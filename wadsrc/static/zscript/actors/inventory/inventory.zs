@@ -782,7 +782,8 @@ class Inventory : Actor
 		{
 			return NULL;
 		}
-		if (Amount == 1 && !bKeepDepleted)
+		amt = clamp(amt, 1, Amount);
+		if (Amount == amt && !bKeepDepleted)
 		{
 			BecomePickup ();
 			DropTime = 30;
@@ -792,8 +793,6 @@ class Inventory : Actor
 		let copy = Inventory(Spawn (GetClass(), Owner.Pos, NO_REPLACE));
 		if (copy != NULL)
 		{
-			amt = clamp(amt, 1, Amount);
-			
 			copy.MaxAmount = MaxAmount;
 			copy.Amount = amt;
 			copy.DropTime = 30;

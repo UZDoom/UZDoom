@@ -4,6 +4,7 @@
 **---------------------------------------------------------------------------
 ** Copyright 2005-2016 Christoph Oelckers et.al.
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -85,6 +86,7 @@ EXTERN_CVAR (Int, vid_defwidth)
 EXTERN_CVAR (Int, vid_defheight)
 EXTERN_CVAR (Bool, cl_capfps)
 EXTERN_CVAR(Bool, vk_debug)
+EXTERN_FARG(glversion);
 
 // PUBLIC DATA DEFINITIONS -------------------------------------------------
 
@@ -544,7 +546,7 @@ SystemGLFrameBuffer::SystemGLFrameBuffer(void *hMonitor, bool fullscreen)
 	int glveridx = 0;
 	int i;
 
-	const char *version = Args->CheckValue("-glversion");
+	const char *version = Args->CheckValue(FArg_glversion);
 	if (version != NULL)
 	{
 		double gl_version = strtod(version, NULL) + 0.01;

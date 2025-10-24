@@ -5,7 +5,7 @@
 *.AppImage
 *.flatpak
 flatpak/
-gzdoom-crash.log
+uzdoom-crash.log
 fmodapi*linux/
 gitinfo.h
 

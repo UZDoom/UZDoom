@@ -4,6 +4,8 @@
 **
 **---------------------------------------------------------------------------
 ** Copyright 2005-2019 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -46,6 +48,9 @@ static TArray<FString>  m_Extensions;
 RenderContext gl;
 static double realglversion;
 static bool bindless;
+
+FARG(glversion, "", "", "",
+	"");
 
 //==========================================================================
 //
@@ -115,7 +120,7 @@ void gl_LoadExtensions()
 
 	const char *glversion = (const char*)glGetString(GL_VERSION);
 
-	const char *version = Args->CheckValue("-glversion");
+	const char *version = Args->CheckValue(FArg_glversion);
 	realglversion = strtod(glversion, NULL);
 
 

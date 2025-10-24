@@ -18,7 +18,7 @@ body:
       label: UZDoom version
       description: |
         What version are you using?
-        Run `gzdoom --version` or check in the console in game.
+        Run `uzdoom --version` or check in the console in game.
         Make sure to update to latest [release](https://github.com/UZDoom/UZDoom/releases) version and test again before continuing.
       placeholder: "ex: UZDoom 4.0.0, Git version, Branch, other"
     validations:

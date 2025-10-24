@@ -34,6 +34,8 @@
 #include "bitmap.h"
 #include "imagehelpers.h"
 #include "image.h"
+#include "m_swap.h"
+#include "printf.h"
 
 #pragma pack(1)
 
@@ -66,6 +68,9 @@ FImageSource *QOIImage_TryCreate(FileReader &file, int lumpnum)
 
         file.Seek(0, FileReader::SeekSet);
 	file.Read((void *)&header, sizeof(header));
+
+	header.width = BigLong(header.width);
+	header.height = BigLong(header.height);
 
 	if (header.magic[0] != 'q' || header.magic[1] != 'o' || header.magic[2] != 'i' || header.magic[3] != 'f')
 	{
@@ -201,13 +206,13 @@ int FQOITexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 
 				index[QOI_COLOR_HASH(pe) % 64] = pe;
 			}
-		}
 
-		pixels[0] = pe.b;
-		pixels[1] = pe.g;
-		pixels[2] = pe.r;
-		pixels[3] = pe.a;
-		pixels += 4;
+			pixels[0] = pe.b;
+			pixels[1] = pe.g;
+			pixels[2] = pe.r;
+			pixels[3] = pe.a;
+			pixels += 4;
+		}
 	}
 	return bMasked? -1 : 0;
 }

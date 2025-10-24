@@ -244,6 +244,7 @@ public:
 	double mTooltipScrollTimer;
 	double mTooltipScrollOffset;
 	FFont* mTooltipFont;
+	bool DrawTooltips;
 	static int InMenu;
 
 	DMenu(DMenu *parent = NULL);

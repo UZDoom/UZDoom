@@ -1,0 +1,18 @@
+name = "int"
+doc = """
+The 32-bit signed integer builtin type.
+
+This type can represent every integer in the range `-2147483648` to `2147483647`.
+"""
+
+[[constant]]
+def = """
+    /// The maximum value this datatype can hold. Equal to 2^31 - 1.
+    const MAX = 2147483647;
+"""
+
+[[constant]]
+def = """
+    /// The minimum value this datatype can hold. Equal to -(2^31).
+    const MIN = -2147483648;
+"""

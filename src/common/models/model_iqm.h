@@ -221,6 +221,7 @@ public:
 	{
 		return Joints.SSize() > 0 ? (TRSData.SSize() / Joints.SSize()) : 0;
 	}
+	virtual const TArray<VSMatrix>* GetBasePose() { return &baseframe; }
 };
 
 struct IQMReadErrorException { };

@@ -193,6 +193,7 @@ class Menu : Object native ui version("2.4")
 	native double mTooltipScrollTimer;
 	native double mTooltipScrollOffset;
 	native Font mTooltipFont; // This is here so generic menus can still use it.
+	native bool DrawTooltips;
 
 	native static int MenuTime();
 	native static Menu GetCurrentMenu();
@@ -325,7 +326,7 @@ class Menu : Object native ui version("2.4")
 		return false;
 	}
 
-	virtual void GetTooltipArea(ScreenArea body, ScreenArea text = null)
+	version("4.15.1") virtual void GetTooltipArea(ScreenArea body, ScreenArea text = null)
 	{
 		int xPad = 10 * CleanXFac;
 		int yPad = 5 * CleanYFac;
@@ -348,7 +349,7 @@ class Menu : Object native ui version("2.4")
 			text.SetArea(body.x + xPad, body.y + yPad, body.width - xPad * 2, body.height - yPad * 2);
 	}
 
-	virtual void UpdateTooltip(string tooltip)
+	version("4.15.1") virtual void UpdateTooltip(string tooltip)
 	{
 		if (tooltip == mCurrentTooltip)
 			return;
@@ -358,13 +359,17 @@ class Menu : Object native ui version("2.4")
 		mTooltipScrollTimer = m_tooltip_delay;
 	}
 
-	virtual void DrawTooltip()
+	version("4.15.1") virtual void DrawTooltip()
 	{
-		if (mCurrentTooltip.IsEmpty())
-			return;
-
 		ScreenArea box, text;
 		GetTooltipArea(box, text);
+
+		Screen.Dim(0u, m_tooltip_alpha, box.x, box.y, box.width, box.height);
+		Color col = (int(255 * m_tooltip_alpha) << 24) | 0x404040;
+		Screen.DrawLineFrame(col, box.x, box.y, box.width, box.height, CleanXFac_1);
+
+		if (mCurrentTooltip.IsEmpty())
+			return;
 
 		DrawTextureTags scaleType;
 		int textXScale, textYScale;
@@ -406,10 +411,6 @@ class Menu : Object native ui version("2.4")
 				}
 			}
 		}
-
-		Screen.Dim(0u, m_tooltip_alpha, box.x, box.y, box.width, box.height);
-		Color col = (int(255 * m_tooltip_alpha) << 24) | 0x404040;
-		Screen.DrawLineFrame(col, box.x, box.y, box.width, box.height, CleanXFac_1);
 
 		let [cx, cy, cw, ch] = Screen.GetClipRect();
 		Screen.SetClipRect(text.x, text.y, text.width, text.height);
@@ -465,7 +466,8 @@ class Menu : Object native ui version("2.4")
 				}
 			}
 
-			DrawTooltip();
+			if (DrawTooltips)
+				DrawTooltip();
 		}
 	}
 

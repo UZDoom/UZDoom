@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <component type="desktop-application">
-  <id>org.zdoom.GZDoom</id>
-  <launchable type="desktop-id">org.zdoom.GZDoom.desktop</launchable>
+  <id>org.zdoom.UZDoom</id>
+  <launchable type="desktop-id">org.zdoom.UZDoom.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
 
-  <name>GZDoom</name>
-  <developer id="org.zdoom.GZDoom">
-    <name>ZDoom team</name>
-    <url>https://github.com/zdoom/GZDDoom/graphs/contributors</url>
+  <name>UZDoom</name>
+  <developer id="org.zdoom.UZDoom">
+    <name>UZDoom team</name>
+    <url>https://github.com/UZDoom/UZDoom/graphs/contributors</url>
   </developer>
   <summary>Game engine for Classic Doom</summary>
 
   <url type="homepage">https://zdoom.org/index</url>
-  <url type="bugtracker">https://github.com/ZDoom/gzdoom/issues</url>
+  <url type="bugtracker">https://github.com/UZDoom/UZDoom/issues</url>
   <url type="help">https://zdoom.org/wiki/Main_Page</url>
   <url type="faq">https://zdoom.org/about</url>
   <url type="contact">https://forum.zdoom.org/</url>
-  <url type="vcs-browser">https://github.com/ZDoom/gzdoom</url>
+  <url type="vcs-browser">https://github.com/UZDoom/UZDoom</url>
 
   <branding>
     <color type="primary" scheme_preference="light">#999999</color>
@@ -25,9 +25,9 @@
   </branding>
 
   <description>
-    <p>GZDoom is a source port for the modern era, supporting current hardware and operating systems
+    <p>UZDoom is a source port for the modern era, supporting current hardware and operating systems
       and sporting a vast array of user options. Make Doom your own again!</p>
-    <p>In addition to Doom, GZDoom supports Heretic, Hexen, Strife, Chex Quest, and fan-created
+    <p>In addition to Doom, UZDoom supports Heretic, Hexen, Strife, Chex Quest, and fan-created
       games like Harmony and Hacx. Meet the entire idTech 1 family!</p>
     <p>Experience mind-bending user-created mods, made possible by ZDoom's advanced mapping features
       and the ZScript language for complex game mechanics and behaviors. Or make a mod of your own!</p>
@@ -52,27 +52,27 @@
     </ul>
     <p>Commercial data files are required to run the supported games. For more info about all
       supported games and their data files, see Help -&gt; List of supported games.</p>
-    <p>For the Flatpak distribution of GZDoom, all file access is restricted to
-      <code>~/.var/app/org.zdoom.GZDoom/.config/gzdoom</code> by default for security reasons.
+    <p>For the Flatpak distribution of UZDoom, all file access is restricted to
+      <code>~/.var/app/org.zdoom.UZDoom/.config/uzdoom</code> by default for security reasons.
       You will need to place your IWADs and PWADS there, or use an application like Flatseal
-      to give GZDoom additional permissions.</p>
+      to give UZDoom additional permissions.</p>
   </description>
 
   <screenshots>
     <screenshot type="default">
-      <image>https://cdn.jsdelivr.net/gh/ZDoom/gzdoom@master/src/posix/freedesktop/screenshot_doom.png</image>
+      <image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_doom.png</image>
       <caption>Doom screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://cdn.jsdelivr.net/gh/ZDoom/gzdoom@master/src/posix/freedesktop/screenshot_strife.png</image>
+      <image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_strife.png</image>
       <caption>Strife screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://cdn.jsdelivr.net/gh/ZDoom/gzdoom@master/src/posix/freedesktop/screenshot_heretic.png</image>
+      <image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_heretic.png</image>
       <caption>Heretic screenshot</caption>
     </screenshot>
     <screenshot>
-      <image>https://cdn.jsdelivr.net/gh/ZDoom/gzdoom@master/src/posix/freedesktop/screenshot_hexen.png</image>
+      <image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_hexen.png</image>
       <caption>Hexen screenshot</caption>
     </screenshot>
   </screenshots>
@@ -85,7 +85,7 @@
     <control>pointing</control>
   </recommends>
   <provides>
-    <binary>gzdoom</binary>
+    <binary>uzdoom</binary>
   </provides>
 
   <keywords>

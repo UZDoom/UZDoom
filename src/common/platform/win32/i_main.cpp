@@ -5,6 +5,7 @@
 **---------------------------------------------------------------------------
 ** Copyright 1998-2009 Randy Heit
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -79,6 +80,7 @@
 #include "i_interface.h"
 #include "startupinfo.h"
 #include "printf.h"
+#include "base_sysfb.h"
 
 #include "i_mainwindow.h"
 
@@ -110,8 +112,17 @@ void SignalHandler(int signal);
 
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
 
+extern const char * const BACKEND = "Win32";
 extern EXCEPTION_POINTERS CrashPointers;
 extern UINT TimerPeriod;
+EXTERN_FARG(0);
+EXTERN_FARG(norun);
+EXTERN_FARG(help);
+EXTERN_FARG(h);
+EXTERN_FARG(doshelp);
+EXTERN_FARG(help_all);
+EXTERN_FARG(version);
+EXTERN_FARG(v);
 
 // PUBLIC DATA DEFINITIONS -------------------------------------------------
 
@@ -123,6 +134,11 @@ HANDLE			MainThread;
 DWORD			MainThreadID;
 HANDLE			StdOut;
 bool			FancyStdOut, AttachedStdOut;
+
+// use custom here, because types are confusing sometimes
+FARG_CUSTOM(stdout, "-stdout", "Debug", false, "Print output to system console", "",
+	"(Win32 only)\nSends all output to a system console. Unix and MacOS builds of ZDoom will"
+	" always do that.");
 
 // CODE --------------------------------------------------------------------
 
@@ -196,7 +212,7 @@ int DoMain (HINSTANCE hInstance)
 	auto wargv = __wargv;
 	for (int i = 0; i < argc; i++)
 	{
-		Args->AppendArg(FString(wargv[i]));
+		Args->AppendRawArg(FString(wargv[i]));
 	}
 
 	if (isConsoleApp())
@@ -214,7 +230,16 @@ int DoMain (HINSTANCE hInstance)
 				FancyStdOut = IsWindows10OrGreater(); // Windows 8.1 and lower do not understand ANSI formatting.
 		}
 	}
-	else if (Args->CheckParm("-stdout") || Args->CheckParm("-norun"))
+	else if (
+		Args->CheckParm(FArg_stdout)
+		|| Args->CheckParm(FArg_norun)
+		|| Args->CheckParm(FArg_help)
+		|| Args->CheckParm(FArg_h)
+		|| Args->CheckParm(FArg_help_all)
+		|| Args->CheckParm(FArg_doshelp)
+		|| Args->CheckParm(FArg_version)
+		|| Args->CheckParm(FArg_v)
+	)
 	{
 		// As a GUI application, we don't normally get a console when we start.
 		// If we were run from the shell and are on XP+, we can attach to its
@@ -302,7 +327,7 @@ int DoMain (HINSTANCE hInstance)
 	x = (displaysettings.dmPelsWidth - width) / 2;
 	y = (displaysettings.dmPelsHeight - height) / 2;
 
-	if (Args->CheckParm ("-0"))
+	if (Args->CheckParm (FArg_0))
 	{
 		x = y = 0;
 	}

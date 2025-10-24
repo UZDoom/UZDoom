@@ -6,6 +6,7 @@
 **---------------------------------------------------------------------------
 ** Copyright 1998-2009 Randy Heit
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -129,6 +130,9 @@ bool win32EnableInput = true;
 EXTERN_CVAR(Bool, i_pauseinbackground);
 
 CVAR (Bool, k_allowfullscreentoggle, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+
+FARG_ADVANCED(noidle, "Deprecated", "",
+	"No longer has any effect. Used to reduce priority class when window was in background.");
 
 static void I_CheckGUICapture ()
 {
@@ -511,7 +515,7 @@ bool I_InitInput (void *hwnd)
 
 	Printf ("I_InitInput\n");
 
-	noidle = !!Args->CheckParm ("-noidle");
+	noidle = !!Args->CheckParm (FArg_noidle);
 	g_pdi = NULL;
 
 	hr = DirectInput8Create(g_hInst, DIRECTINPUT_VERSION, IID_IDirectInput8, (void **)&g_pdi, NULL);

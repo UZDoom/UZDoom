@@ -1,0 +1,25 @@
+name: Trigger Pages
+
+on:
+  push:
+    branches:
+      - trunk
+    tags:
+      - '**'
+
+permissions:
+  actions: write
+
+jobs:
+  trigger_pages:
+    # i assume that random UZDoom forks probably don't want pages made for them by default
+    if: ${{ github.repository == 'UZDoom/UZDoom' || github.repository == 'Gutawer/UZDoom' }}
+    runs-on: ubuntu-latest
+    name: Trigger a Pages deployment
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - run: gh workflow run pages_deploy.yml --ref trunk

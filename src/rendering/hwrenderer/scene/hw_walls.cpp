@@ -1472,7 +1472,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 		if (!tex || !tex->isValid())
 		{
 			if (front->GetTexture(sector_t::ceiling) == skyflatnum &&
-				back->GetTexture(sector_t::ceiling) == skyflatnum && !wrap)
+				back->GetTexture(sector_t::ceiling) == skyflatnum && !wrap && skew == 0)
 			{
 				// intra-sky lines do not clip the texture at all if there's no upper texture.
 				topleft = topright = texturetop;

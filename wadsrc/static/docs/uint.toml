@@ -1,0 +1,6 @@
+name = "uint"
+doc = """
+The 32-bit unsigned integer builtin type.
+
+This type can represent every integer in the range `0` to `4294967295`.
+"""

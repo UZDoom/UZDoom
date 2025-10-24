@@ -4,6 +4,7 @@
  **---------------------------------------------------------------------------
  ** Copyright 2012-2018 Alexey Lysiuk
  ** Copyright 2017-2025 GZDoom Maintainers and Contributors
+ ** Copyright 2025 UZDoom Maintainers and Contributors
  ** All rights reserved.
  **
  ** Redistribution and use in source and binary forms, with or without
@@ -52,6 +53,8 @@
 #include "zstring.h"
 
 #define ZD_UNUSED(VARIABLE) ((void)(VARIABLE))
+
+extern const char * const BACKEND = "Cocoa";
 
 // ---------------------------------------------------------------------------
 
@@ -132,7 +135,7 @@ static bool ReadSystemVersionFromPlist(NSOperatingSystemVersion& version)
 }
 
 FString sys_ostype;
-void I_DetectOS()
+FString I_DetectOS()
 {
 	NSOperatingSystemVersion version = {};
 
@@ -185,11 +188,13 @@ void I_DetectOS()
 		"Unknown";
 #endif
 
-	Printf("%s running macOS %s %d.%d.%d (%s) %s\n", model, name,
+	FString nicename = FStringf("%s running macOS %s %d.%d.%d (%s) %s", model, name,
 		   int(version.majorVersion), int(version.minorVersion), int(version.patchVersion),
 		   release, architecture);
 
 	sys_ostype.Format("macOS %d.%d %s", int(version.majorVersion), int(version.minorVersion), name);
+
+	return nicename;
 }
 
 

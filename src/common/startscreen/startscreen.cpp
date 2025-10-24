@@ -5,6 +5,8 @@
 **---------------------------------------------------------------------------
 ** Copyright 2006-2007 Randy Heit
 ** Copyright 2006-2022 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -342,10 +344,13 @@ FStartScreen* CreateHereticStartScreen(int max_progress);
 FStartScreen* CreateStrifeStartScreen(int max_progress);
 FStartScreen* CreateGenericStartScreen(int max_progress);
 
+FARG(nostartup, "Configuration", "Forces use of text-mode startup screen.", "",
+	"Disables the startup screens used by Heretic, Hexen and Strife, and use the Doom text-mode"
+	" startup instead.");
 
 FStartScreen* GetGameStartScreen(int max_progress)
 {
-	if (!Args->CheckParm("-nostartup"))
+	if (!Args->CheckParm(FArg_nostartup))
 	{
 		try
 		{
@@ -458,7 +463,7 @@ int FStartScreen::DrawChar(FBitmap& screen, double x, double y, unsigned charnum
 		dest[5] = color_array[(srcbyte >> 2) & 1];
 		dest[6] = color_array[(srcbyte >> 1) & 1];
 		dest[7] = color_array[(srcbyte) & 1];
-		if (size == 16)
+		if (size == 2)
 		{
 			srcbyte = *src++;
 

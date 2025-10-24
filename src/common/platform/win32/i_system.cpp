@@ -4,9 +4,10 @@
 **
 **---------------------------------------------------------------------------
 ** Copyright 1998-2009 Randy Heit
-** Copyright (C) 2007-2012 Skulltag Development Team
-** Copyright (C) 2007-2016 Zandronum Development Team
-** Copyright (C) 2017-2022 GZDoom Development Team
+** Copyright 2007-2012 Skulltag Development Team
+** Copyright 2007-2016 Zandronum Development Team
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -150,7 +151,7 @@ static HCURSOR CustomCursor;
 //
 //==========================================================================
 
-void I_DetectOS(void)
+FString I_DetectOS(void)
 {
 	OSVERSIONINFOEX info;
 	const char *osname;
@@ -204,12 +205,14 @@ void I_DetectOS(void)
 		break;
 	}
 
-	if (!batchrun) Printf ("OS: Windows %s (NT %lu.%lu) Build %lu\n    %s\n",
-			osname,
-			info.dwMajorVersion, info.dwMinorVersion,
-			info.dwBuildNumber, info.szCSDVersion);
+	auto nicename = FStringf("Windows %s (NT %lu.%lu) Build %lu %s",
+		osname,
+		info.dwMajorVersion, info.dwMinorVersion,
+		info.dwBuildNumber, info.szCSDVersion);
 
 	sys_ostype = osname;
+
+	return nicename;
 }
 
 //==========================================================================

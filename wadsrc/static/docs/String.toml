@@ -1,0 +1,10 @@
+name = "String"
+uses_things_from = "StringStruct"
+doc = """
+The built-in string type.
+"""
+
+[[function]]
+def = """
+    uint Length();
+"""

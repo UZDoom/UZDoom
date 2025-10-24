@@ -20,7 +20,7 @@ however, has been heavily modified from its original form and is the same
 version used by the foobar2000 component foo_dumb as of mid-2008, found at
 http://kode54.foobar2000.org/.
 
-All script code in gzdoom.pk3 is licensed under the GPL v3 unless noted 
+All script code in uzdoom.pk3 is licensed under the GPL v3 unless noted 
 otherwise.
 
 Please note that the content of brightmaps.pk3, game_support.pk3 and game_widescreen_gfx.pk3

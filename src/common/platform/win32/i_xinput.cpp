@@ -7,6 +7,7 @@
 **
 ** Copyright 2005-2016 Randy Heit
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -210,6 +211,8 @@ protected:
 // PRIVATE FUNCTION PROTOTYPES ---------------------------------------------
 
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
+
+EXTERN_FARG(nojoy);
 
 // PUBLIC DATA DEFINITIONS -------------------------------------------------
 
@@ -1062,7 +1065,7 @@ IJoystickConfig *FXInputManager::Rescan()
 
 void I_StartupXInput()
 {
-	if (!joy_xinput || !use_joystick || Args->CheckParm("-nojoy"))
+	if (!joy_xinput || !use_joystick || Args->CheckParm(FArg_nojoy))
 	{
 		if (JoyDevices[INPUT_XInput] != NULL)
 		{

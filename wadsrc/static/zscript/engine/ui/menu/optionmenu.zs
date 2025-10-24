@@ -129,7 +129,7 @@ class OptionMenu : Menu
 		AnimatedTransition = desc.mAnimatedTransition;
 		Animated = desc.mAnimated;
 		MaxItems = 1;
-		mTooltipFont = desc.mTooltipFont;
+		mTooltipFont = desc.mTooltipFont ? desc.mTooltipFont : NewConsoleFont;
 		mCurrentTooltip = "";
 		mTooltipScrollTimer = m_tooltip_delay;
 		mTooltipScrollOffset = 0.0;
@@ -168,6 +168,16 @@ class OptionMenu : Menu
 			mDesc.mItems[i].OnMenuCreated();
 		}
 
+		// Now that all items have been initialized, check if any have a tooltip to display.
+		foreach (item : mDesc.mItems)
+		{
+			if (item.GetTooltip().IsNotEmpty())
+			{
+				DrawTooltips = true;
+				break;
+			}
+		}
+
 		if (mDesc.mSelectedItem >= 0)
 			UpdateTooltip(mDesc.mItems[mDesc.mSelectedItem].GetTooltip());
 	}
@@ -187,7 +197,7 @@ class OptionMenu : Menu
 		Super.UpdateTooltip(tooltip);
 	}
 
-	virtual void DrawHoverTooltip(OptionMenuItemOptionBase selected, int indent, int y, int bottom)
+	version("4.15.1") virtual void DrawHoverTooltip(OptionMenuItemOptionBase selected, int indent, int y, int bottom)
 	{
 		if (!selected)
 			return;
@@ -911,6 +921,9 @@ class OptionMenu : Menu
 
 		ScreenArea box;
 		GetTooltipArea(box);
+		if (!DrawTooltips)
+			box.y = Screen.GetHeight();
+		
 		int ytop = y + mDesc.mScrollTop * 8 * CleanYfac_1;
 		LastRow = box.y - OptionHeight() * CleanYfac_1;
 		int rowheight = OptionMenuSettings.mLinespacing * CleanYfac_1 + 1;

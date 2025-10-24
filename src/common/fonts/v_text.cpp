@@ -226,6 +226,7 @@ public:
 
 	void Serialize(FSerializer &arc) override
 	{
+		Super::Serialize(arc);
 		arc("lines", mBroken);
 	}
 };
