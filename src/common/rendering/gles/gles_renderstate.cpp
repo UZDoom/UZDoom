@@ -439,7 +439,7 @@ void FGLRenderState::Apply()
 
 void FGLRenderState::ApplyMaterial(FMaterial *mat, int clampmode, int translation, int overrideshader)
 {
-	if (mat->Source()->isHardwareCanvas())
+	if (mat->Source()->isHardwareCanvas() && !mat->Source()->GetTranslucency())
 	{
 		mTempTM = TM_OPAQUE;
 	}

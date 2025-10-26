@@ -322,6 +322,8 @@ public:
 
 		bHasCanvas = true;
 		aspectRatio = (float)width / height;
+
+		bTranslucent = false;
 	}
 
 	~FCanvasTexture()

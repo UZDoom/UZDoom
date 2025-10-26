@@ -1715,7 +1715,7 @@ DEFINE_ACTION_FUNCTION(FCanvas, Clear)
 
 void DoDim(F2DDrawer *drawer, PalEntry color, float amount, int x1, int y1, int w, int h, FRenderStyle *style)
 {
-	if (amount <= 0)
+	if (amount < 0 || (amount == 0.f && *style != LegacyRenderStyles[STYLE_Source]))
 	{
 		return;
 	}
@@ -1779,7 +1779,8 @@ DEFINE_ACTION_FUNCTION(FCanvas, Dim)
 	PARAM_INT(w);
 	PARAM_INT(h);
 	PARAM_INT(style);
-	Dim(&self->Drawer, color, float(amount), x1, y1, w, h, &LegacyRenderStyles[style]);
+	PARAM_BOOL(overwritealpha);
+	Dim(&self->Drawer, color, float(amount), x1, y1, w, h, &LegacyRenderStyles[overwritealpha ? STYLE_Source : style]);
 	self->Tex->NeedUpdate();
 	return 0;
 }

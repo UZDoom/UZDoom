@@ -787,6 +787,18 @@ void FTextureAnimator::ParseCameraTexture(FScanner &sc)
 			sc.UnGet();
 		}
 	}
+	if (sc.GetString())
+	{
+		if (sc.Compare("translucent"))
+		{
+			viewer->SetTranslucent(true);
+		}
+		else
+		{
+			sc.UnGet();
+		}
+	}
+
 	canvas->aspectRatio = (float)fitwidth / (float)fitheight;
 	viewer->SetDisplaySize((float)fitwidth, (float)fitheight);
 }

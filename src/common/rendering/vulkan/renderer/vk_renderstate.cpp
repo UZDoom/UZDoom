@@ -372,7 +372,7 @@ void VkRenderState::ApplyPushConstants()
 	}
 
 	int tempTM = TM_NORMAL;
-	if (mMaterial.mMaterial && mMaterial.mMaterial->Source()->isHardwareCanvas())
+	if (mMaterial.mMaterial && mMaterial.mMaterial->Source()->isHardwareCanvas() && !mMaterial.mMaterial->Source()->GetTranslucency())
 		tempTM = TM_OPAQUE;
 
 	mPushConstants.uFogEnabled = fogset;
