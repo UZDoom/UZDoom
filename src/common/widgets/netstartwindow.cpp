@@ -1,12 +1,36 @@
+/*
+** netstartwindow.cpp
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2024 Magnus Norddahl
+** Copyright 2024-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
+**
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see http://www.gnu.org/licenses/
+**
+**---------------------------------------------------------------------------
+**
+*/
+
+#include <zwidget/core/timer.h>
+#include <zwidget/widgets/listview/listview.h>
+#include <zwidget/widgets/pushbutton/pushbutton.h>
+#include <zwidget/widgets/textlabel/textlabel.h>
 
 #include "netstartwindow.h"
 #include "version.h"
-#include "engineerrors.h"
-#include "gstrings.h"
-#include <zwidget/core/timer.h>
-#include <zwidget/widgets/textlabel/textlabel.h>
-#include <zwidget/widgets/listview/listview.h>
-#include <zwidget/widgets/pushbutton/pushbutton.h>
 
 NetStartWindow* NetStartWindow::Instance = nullptr;
 
@@ -155,10 +179,6 @@ bool NetStartWindow::NetLoop(bool (*loopCallback)(void*), void* data)
 
 NetStartWindow::NetStartWindow(bool host) : Widget(nullptr, WidgetType::Window)
 {
-	SetWindowBackground(Colorf::fromRgba8(51, 51, 51));
-	SetWindowBorderColor(Colorf::fromRgba8(51, 51, 51));
-	SetWindowCaptionColor(Colorf::fromRgba8(33, 33, 33));
-	SetWindowCaptionTextColor(Colorf::fromRgba8(226, 223, 219));
 	SetWindowTitle(GAMENAME);
 
 	MessageLabel = new TextLabel(this);
