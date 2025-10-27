@@ -61,9 +61,6 @@ class BulletPuff : Actor
 		+NOGRAVITY
 		+ALLOWPARTICLES
 		+RANDOMIZE
-		+ZDOOMTRANS
-		RenderStyle "Translucent";
-		Alpha 0.5;
 		VSpeed 1;
 		Mass 5;
 	}
