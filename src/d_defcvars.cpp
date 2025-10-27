@@ -45,6 +45,7 @@ void D_GrabCVarDefaults()
 
 	while ((lump = fileSystem.FindLump("DEFCVARS", &lastlump)) != -1)
 	{
+#if 0 // leaving the lines in place for now (for gzdoom sync) - can remove if needed
 		// don't parse from wads
 		if (lastlump > fileSystem.GetLastEntry(fileSystem.GetMaxIwadNum()))
 		{
@@ -52,6 +53,7 @@ void D_GrabCVarDefaults()
 			Printf(TEXTCOLOR_RED "Cannot load DEFCVARS from a wadfile!\n");
 			break;
 		}
+#endif
 
 		FScanner sc(lump);
 
