@@ -198,7 +198,6 @@ bool Trace(const DVector3 &start, sector_t *sector, const DVector3 &direction, d
 	}
 }
 
-
 //============================================================================
 //
 // traverses a sector portal
@@ -317,15 +316,6 @@ void FTraceInfo::Setup3DFloors()
 						{
 							Results->Crossed3DWater = rover;
 							Results->Crossed3DWaterPos = Results->HitPos;
-							if ((TraceFlags & TRACE_WaterCallback) && (TraceCallback != NULL))
-							{
-								// [DVR] Trace does not halt at 3D water crossings
-								// because we are only catching the crossing of the top surface/flat.
-								// In future, could extend to crossing water from the sides
-								Results->ffloor = rover;
-								TraceCallback(*Results, TraceCallbackData);
-								Results->ffloor = NULL;
-							}
 							Results->Distance = 0;
 						}
 					}
@@ -482,13 +472,8 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 				{
 					Results->CrossedWater = &Level->sectors[CurSector->sectornum];
 					Results->CrossedWaterPos = Results->HitPos;
-					if ((TraceFlags & TRACE_WaterCallback) && (TraceCallback != NULL))
-					{
-						// [DVR] Trace does not halt at water crossings even with a callback
-						TraceCallback(*Results, TraceCallbackData);
-					}
+					Results->Distance = 0;
 				}
-				Results->Distance = 0;
 			}
 		}
 	}
@@ -911,15 +896,6 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 							{
 								Results->Crossed3DWater = rover;
 								Results->Crossed3DWaterPos = Results->HitPos;
-								if ((TraceFlags & TRACE_WaterCallback) && (TraceCallback != NULL))
-								{
-									// [DVR] Trace does not halt at 3D water crossings
-									// because we are only catching the crossing of the top surface/flat.
-									// In future, could extend to crossing water from the sides
-									Results->ffloor = rover;
-									TraceCallback(*Results, TraceCallbackData);
-									Results->ffloor = NULL;
-								}
 								Results->Distance = 0;
 							}
 						}
@@ -1014,15 +990,6 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 										{
 											Results->Crossed3DWater = rover;
 											Results->Crossed3DWaterPos = Results->HitPos;
-											if ((TraceFlags & TRACE_WaterCallback) && (TraceCallback != NULL))
-											{
-												// [DVR] Trace does not halt at 3D water crossings
-												// because we are only catching the crossing of the top surface/flat.
-												// In future, could extend to crossing water from the sides
-												Results->ffloor = rover;
-												TraceCallback(*Results, TraceCallbackData);
-												Results->ffloor = NULL;
-											}
 											Results->Distance = 0;
 										}
 									}
@@ -1079,15 +1046,6 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 										{
 											Results->Crossed3DWater = rover;
 											Results->Crossed3DWaterPos = Results->HitPos;
-											if ((TraceFlags & TRACE_WaterCallback) && (TraceCallback != NULL))
-											{
-												// [DVR] Trace does not halt at 3D water crossings
-												// because we are only catching the crossing of the top surface/flat.
-												// In future, could extend to crossing water from the sides
-												Results->ffloor = rover;
-												TraceCallback(*Results, TraceCallbackData);
-												Results->ffloor = NULL;
-											}
 											Results->Distance = 0;
 										}
 									}
