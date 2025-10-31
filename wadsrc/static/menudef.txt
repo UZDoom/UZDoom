@@ -902,6 +902,12 @@ OptionValue RocketTrailTypes
 	3.0, "$OPTVAL_SPRITESPARTICLES"
 }
 
+OptionValue RocketExplosionStyles
+{
+	0, "$OPTVAL_ROCKETEXP_STYLE_TRANS"
+	1, "$OPTVAL_ROCKETEXP_STYLE_ADD"
+}
+
 OptionValue BloodTypes
 {
 	0.0, "$OPTVAL_SPRITES"
@@ -1010,6 +1016,7 @@ OptionMenu "VideoOptions" protected
 	Option "$DSPLYMNU_OLDTRANS",				"r_vanillatrans", "VanillaTrans"
 	Option "$DSPLYMNU_FAKECONTRAST",			"r_fakecontrast", "Contrast"
 	Option "$DSPLYMNU_ROCKETTRAILS",			"cl_rockettrails", "RocketTrailTypes"
+	Option "$DSPLYMNU_ROCKETEXPSTYLE",			"addrocketexplosion", "RocketExplosionStyles"
 	Option "$DSPLYMNU_BLOODTYPE",				"cl_bloodtype", "BloodTypes"
 	Option "$DSPLYMNU_PUFFTYPE",				"cl_pufftype", "PuffTypes"
 	Slider "$DSPLYMNU_MAXPARTICLES",			"r_maxparticles", 100, 10000, 100, 0
