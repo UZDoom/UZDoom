@@ -102,7 +102,7 @@ jobs:
         cd build
         mkdir package
         if [[ "${{ runner.os }}" == 'Windows' ]]; then
-          cp ${{ matrix.config.build_type }}/uzdoom.exe ${{ matrix.config.build_type }}/*.pk3 ${{ matrix.config.build_type }}/zmusic.dll package
+          cp ${{ matrix.config.build_type }}/uzdoom.exe ${{ matrix.config.build_type }}/*.pk3 package
         elif [[ "${{ runner.os }}" == 'macOS' ]]; then
           if [[ "${{ matrix.config.build_type }}" != 'Release' ]]; then
             mv ${{ matrix.config.build_type }}/uzdoom.app uzdoom.app
@@ -123,7 +123,7 @@ jobs:
             ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
             cp *.AppImage package
           else
-            cp uzdoom *.pk3 libzmusic.so* package
+            cp uzdoom *.pk3 package
           fi
         fi
 
