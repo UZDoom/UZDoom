@@ -17,23 +17,50 @@ AppDir:
 
   files:
     include:
-    - /lib64/libbz2.so.1
-    - /lib64/libwayland-client++.so.1
-    - /lib64/libwayland-client-extra++.so.1
-    - /lib64/libwayland-client-unstable++.so.1
-    - /lib64/libwayland-cursor++.so.1
-    - /lib64/libomp.so
+      - /lib/x86_64-linux-gnu/libFLAC.so.12
+      - /lib/x86_64-linux-gnu/libSDL2-2.0.so.0
+      - /lib/x86_64-linux-gnu/libasyncns.so.0
+      - /lib/x86_64-linux-gnu/libbsd.so.0
+      - /lib/x86_64-linux-gnu/libbz2.so.1.0
+      - /lib/x86_64-linux-gnu/libdecor-0.so.0
+      - /lib/x86_64-linux-gnu/libexpat.so.1
+      - /lib/x86_64-linux-gnu/libffi.so.8
+      - /lib/x86_64-linux-gnu/libgcc_s.so.1
+      - /lib/x86_64-linux-gnu/libgcrypt.so.20
+      - /lib/x86_64-linux-gnu/libglib-2.0.so.0
+      - /lib/x86_64-linux-gnu/libgpg-error.so.0
+      - /lib/x86_64-linux-gnu/liblz4.so.1
+      - /lib/x86_64-linux-gnu/liblzma.so.5
+      - /lib/x86_64-linux-gnu/libmd.so.0
+      - /lib/x86_64-linux-gnu/libmp3lame.so.0
+      - /lib/x86_64-linux-gnu/libmpg123.so.0
+      - /lib/x86_64-linux-gnu/libogg.so.0
+      - /lib/x86_64-linux-gnu/libomp.so
+      - /lib/x86_64-linux-gnu/libomp.so.5
+      - /lib/x86_64-linux-gnu/libopenal.so.1
+      - /lib/x86_64-linux-gnu/libopus.so.0
+      - /lib/x86_64-linux-gnu/libpcre2-8.so.0
+      - /lib/x86_64-linux-gnu/libpulse.so.0
+      - /lib/x86_64-linux-gnu/libsamplerate.so.0
+      - /lib/x86_64-linux-gnu/libsndfile.so.1
+      - /lib/x86_64-linux-gnu/libstdc++.so.6
+      - /lib/x86_64-linux-gnu/libvorbis.so.0
+      - /lib/x86_64-linux-gnu/libvorbisenc.so.2
+      - /lib/x86_64-linux-gnu/libvpx.so.9
+      - /lib/x86_64-linux-gnu/libwayland-client++.so.1
+      - /lib/x86_64-linux-gnu/libwayland-client-extra++.so.1
+      - /lib/x86_64-linux-gnu/libwayland-client-unstable++.so.1
+      - /lib/x86_64-linux-gnu/libwayland-cursor++.so.1
+      - /lib/x86_64-linux-gnu/libxkbcommon.so.0
+      - /lib/x86_64-linux-gnu/libzstd.so.1
+      - /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-16.1.so
     exclude:
-    - lib64/libm.so.6
-    - lib64/libc.so.6
-    - lib64/libgcc_s.so.1
-    - lib64/ld-linux-x86-64.so.2
-    - lib64/libstdc++.so.6
-    - usr/share/man
-    - usr/share/doc/*/README.*
-    - usr/share/doc/*/changelog.*
-    - usr/share/doc/*/NEWS.*
-    - usr/share/doc/*/TODO.*
+      - lib/x86_64-linux-gnu/libc.so.6
+      - lib/x86_64-linux-gnu/libm.so.6
+      - lib64/ld-linux-x86-64.so.2
+      - usr/lib/*.a
+      - usr/lib/cmake
+      - usr/include
 
   # ... why are these so old ?
   test:
