@@ -40,14 +40,12 @@ jobs:
           extra_options: -DCMAKE_C_COMPILER=gcc-12 -DCMAKE_CXX_COMPILER=g++-12
           deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libgtk-3-dev libwebp-dev
           build_type: MinSizeRel
-          export_appimage: true
 
         - name: Linux GCC Latest # rolling default, not actually latest
           os: ubuntu-latest
           extra_options: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
           deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev
           build_type: Release
-          export_appimage: true
 
         - name: Linux Clang 11 # oldest version available
           os: ubuntu-22.04
@@ -60,14 +58,12 @@ jobs:
           extra_options: -DCMAKE_C_COMPILER=clang-15 -DCMAKE_CXX_COMPILER=clang++-15
           deps_cmdline: sudo apt-get update && sudo apt-get install clang-15 libsdl2-dev libvpx-dev libwebp-dev
           build_type: Release
-          export_appimage: true
 
         - name: Linux Clang Latest # rolling default, not actually latest
           os: ubuntu-latest
           extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
           deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev
           build_type: Release
-          export_appimage: true
 
     steps:
     - uses: actions/checkout@v4
@@ -99,32 +95,60 @@ jobs:
     - name: Create Package
       shell: bash
       run: |
+        function fetch() { { curl -L "$3" | tee "$1" | sha1sum ; } && { echo "$2 $1" | sha1sum -c - ; } ; }
+
         cd build
         mkdir package
+
+        7z a package/licenses.zip ../docs/licenses/*
+
         if [[ "${{ runner.os }}" == 'Windows' ]]; then
-          cp ${{ matrix.config.build_type }}/uzdoom.exe ${{ matrix.config.build_type }}/*.pk3 package
+
+            fetch oalsoft.zip \
+                7a9871038cb8eb954b4f723c9f86b248f914fc59 \
+                https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
+            unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
+
+            fetch sndfile.zip \
+                610569766aa1c138044a30af43db6ec6195ed164 \
+                https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
+            unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
+
+            mkdir package/soundfonts
+            cp ../soundfont/uzdoom.sf2 package/soundfonts
+
+            mkdir package/fm_banks
+            cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
+
+            cp ${{ matrix.config.build_type }}/uzdoom.exe ${{ matrix.config.build_type }}/*.pk3 package
+
         elif [[ "${{ runner.os }}" == 'macOS' ]]; then
-          if [[ "${{ matrix.config.build_type }}" != 'Release' ]]; then
-            mv ${{ matrix.config.build_type }}/uzdoom.app uzdoom.app
-          fi
-          cp -r uzdoom.app package
+
+            if [[ "${{ matrix.config.build_type }}" != 'Release' ]]; then
+                mv ${{ matrix.config.build_type }}/uzdoom.app uzdoom.app
+            fi
+            mv package/licenses.zip uzdoom.app
+            # copy fm_banks + soundfonts ?
+            cp -r uzdoom.app package
+
         elif [[ "${{ runner.os }}" == 'Linux' ]]; then
-          if [[ -n "${{ matrix.config.export_appimage }}" ]]; then
+
             mkdir AppDir
             cmake --install . --prefix "$(realpath AppDir)/usr"
 
             sudo apt-get install libfuse2 # renamed to libfuse2t64 in later releases
-            wget -qO - https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage \
-              | tee appimage-builder | sha1sum
-            echo "6f83a789f6c47a745b97d1b0b3f1df2e7eea7a09 appimage-builder" | sha1sum -c -
+
+            fetch appimage-builder \
+                6f83a789f6c47a745b97d1b0b3f1df2e7eea7a09 \
+                https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
             chmod +x appimage-builder
 
             export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
             ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
             cp *.AppImage package
-          else
-            cp uzdoom *.pk3 package
-          fi
+
+            rm package/licenses.zip
+
         fi
 
     - name: Upload Package

@@ -4,6 +4,8 @@
 **
 **---------------------------------------------------------------------------
 ** Copyright 2008-2010 Chris Robinson
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -36,14 +38,10 @@
 #include <chrono>
 
 #include "c_cvars.h"
-
-#include "oalsound.h"
-#include "c_dispatch.h"
-#include "v_text.h"
-#include "i_module.h"
 #include "cmdlib.h"
-#include "m_fixed.h"
-
+#include "i_module.h"
+#include "oalsound.h"
+#include "printf.h"
 
 const char *GetSampleTypeName(SampleType type);
 const char *GetChannelConfigName(ChannelConfig chan);
@@ -62,7 +60,7 @@ CVAR (Bool, snd_efx, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (String, snd_alresampler, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 
 #ifdef _WIN32
-#define OPENALLIB "openal32.dll"
+#define OPENALLIB "soft_oal.dll"
 #elif defined(__OpenBSD__)
 #define OPENALLIB "libopenal.so"
 #else
@@ -98,24 +96,17 @@ bool IsOpenALPresent()
 #endif
 }
 
-
-
-
 ReverbContainer *ForcedEnvironment;
 
-
 #ifndef NO_OPENAL
-
 
 EXTERN_CVAR (Int, snd_channels)
 EXTERN_CVAR (Int, snd_samplerate)
 EXTERN_CVAR (Bool, snd_waterreverb)
 EXTERN_CVAR (Int, snd_hrtf)
 
-
 #define MAKE_PTRID(x)  ((void*)(uintptr_t)(x))
 #define GET_PTRID(x)  ((uint32_t)(uintptr_t)(x))
-
 
 static constexpr uint8_t SampleTypeSize(SampleType stype)
 {
@@ -563,7 +554,7 @@ ALCdevice *OpenALSoundRenderer::InitDevice()
 	}
 	else
 	{
-		Printf(TEXTCOLOR_ORANGE"Failed to load openal32.dll\n");
+		Printf(TEXTCOLOR_ORANGE"Failed to load soft_oal.dll\n");
 	}
 	return device;
 }
