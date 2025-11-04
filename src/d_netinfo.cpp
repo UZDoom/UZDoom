@@ -60,7 +60,7 @@ CVAR (Color,	color,					0x40cf00,	CVAR_USERINFO | CVAR_ARCHIVE);
 CVAR (Int,		colorset,				0,			CVAR_USERINFO | CVAR_ARCHIVE);
 CVAR (String,	skin,					"base",		CVAR_USERINFO | CVAR_ARCHIVE);
 CVAR (Int,		team,					TEAM_NONE,	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	gender,					"male",		CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String,	gender,					"neutral",	CVAR_USERINFO | CVAR_ARCHIVE);
 CVAR (Bool,		neverswitchonpickup,	false,		CVAR_USERINFO | CVAR_ARCHIVE);
 CVAR (Float,	movebob,				0.25f,		CVAR_USERINFO | CVAR_ARCHIVE);
 CVAR (Bool,		fviewbob,               true,       CVAR_USERINFO | CVAR_ARCHIVE);
