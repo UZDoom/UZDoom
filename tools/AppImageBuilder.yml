@@ -13,7 +13,7 @@ AppDir:
 
   runtime:
     path_mappings:
-      - /usr/share/games/doom:$APPDIR/usr/share/games/doom
+      - /usr/share/games:$APPDIR/usr/share/games
 
   files:
     include:

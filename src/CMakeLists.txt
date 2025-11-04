@@ -1454,7 +1454,7 @@ endif()
 if( WIN32 )
 	set( INSTALL_SOUNDFONT_PATH . CACHE STRING "Directory where soundfonts and WOPL/WOPN banks will be placed during install." )
 else()
-	set( INSTALL_SOUNDFONT_PATH share/games/doom CACHE STRING "Directory where soundfonts and WOPL/WOPN banks will be placed during install." )
+	set( INSTALL_SOUNDFONT_PATH share/games/${ZDOOM_EXE_NAME} CACHE STRING "Directory where soundfonts and WOPL/WOPN banks will be placed during install." )
 endif()
 install(DIRECTORY "${PROJECT_BINARY_DIR}/soundfonts" "${PROJECT_BINARY_DIR}/fm_banks"
 		DESTINATION ${INSTALL_SOUNDFONT_PATH}

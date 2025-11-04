@@ -5,6 +5,8 @@
 ** Copyright 1999 Martin Colberg
 ** Copyright 1999-2016 Randy Heit
 ** Copyright 2005-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -77,22 +79,20 @@ What I know has to be done. in near future.
 Everything that is changed is marked (maybe commented) with "Added by MC"
 */
 
-#include "doomdef.h"
-#include "p_local.h"
 #include "b_bot.h"
-#include "g_game.h"
-#include "doomstat.h"
 #include "cmdlib.h"
-#include "m_misc.h"
-#include "sbar.h"
-#include "p_acs.h"
-#include "teaminfo.h"
 #include "d_net.h"
 #include "d_netinf.h"
 #include "d_player.h"
+#include "doomstat.h"
 #include "events.h"
-#include "vm.h"
+#include "g_game.h"
 #include "g_levellocals.h"
+#include "i_specialpaths.h"
+#include "p_acs.h"
+#include "p_local.h"
+#include "sbar.h"
+#include "teaminfo.h"
 
 #if !defined _WIN32 && !defined __APPLE__
 #include "i_system.h"  // for SHARE_DIR
@@ -500,7 +500,7 @@ FString M_GetCajunPath(const char* botfilename)
 	{
 		// Then check in SHARE_DIR/botfilename.
 		path = SHARE_DIR;
-		path << botfilename;
+		path << "/" << botfilename;
 		if (!FileExists(path))
 		{
 			path = "";
