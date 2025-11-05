@@ -619,7 +619,6 @@ int Instruments::read_config_file(const char *name, int self, int allow_missing_
 	char buf[1024], *tmp, *w[MAXWORDS + 1], *cp;
 	ToneBank *bank = NULL;
 	int i, j, k, line = 0, words, errcnt = 0;
-	static int rcf_count = 0;
 	int dr = 0, bankno = 0, mapid = INST_NO_MAP, origbankno = 0x7FFFFFFF;
 	int extension_flag, param_parse_err;
 	MBlockList varbuf;

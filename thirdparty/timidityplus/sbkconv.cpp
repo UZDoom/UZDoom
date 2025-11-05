@@ -70,7 +70,7 @@ static int sbk_modsust(int gen, int val);
  * convertor function table
  *----------------------------------------------------------------*/
 
-static SBKConv sbk_convertors[T_EOT] = {
+static const SBKConv sbk_convertors[T_EOT] = {
 	NULL, NULL, NULL, NULL, NULL,
 
 	sbk_cutoff, sbk_filterQ, sbk_tenpct, sbk_panpos, sbk_atten, sbk_scale,

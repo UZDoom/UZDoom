@@ -182,7 +182,6 @@ int Instruments::read_config_file(const char *name)
 	char tmp[1024], *cp;
 	ToneBank *bank = NULL;
 	int i, j, k, line = 0, words;
-	static int rcf_count = 0;
 
 	if (rcf_count > 50)
 	{

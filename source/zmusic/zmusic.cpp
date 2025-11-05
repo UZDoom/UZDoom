@@ -256,15 +256,40 @@ static  MusInfo *ZMusic_OpenSongInternal (MusicIO::FileInterface *reader, EMidiD
 			{
 				streamsource = GME_OpenSong(reader, fmt, miscConfig.snd_outputrate);
 			}
-			// Check for module formats
+			// Check for module formats not supported by XMP
 			else if ((id[0] == MAKE_ID('R', 'I', 'F', 'F') && id[2] == MAKE_ID('D', 'S', 'M', 'F')))
 			{
 				streamsource = MOD_OpenSong(reader, miscConfig.snd_outputrate);
 			}
+			// Everything else is trial and error. Try both players successively, the first one that succeeds wins.
 			else
 			{
+					// XMP does not play mptm right, so force DUMB for that.
+					auto CheckMPTM = [&]()
+						{
+							bool ret = false;
+							if (id[0] == MAKE_ID('I', 'M', 'P', 'M'))
+							{
+								int chki = -1;
+								char chk[8] = "";
+								auto pos = reader->tell();
+								reader->seek(-4, SEEK_END);
+								reader->read(&chki, 8);
+								auto length = reader->tell();
+								chki = LittleLong(chki);
+								if (chki >= 4 && (chki < length - 4 || chki < 0))
+								{
+									reader->seek(chki, SEEK_SET);
+									reader->read(chk, 8);
+									ret = !memcmp(chk, "228\4mptm", 8);
+
+								}
+								reader->seek(pos, SEEK_SET);
+							}
+							return ret;
+						};
 				// give the calling app an option to select between XMP and DUMB.
-				if (dumbConfig.mod_preferred_player != 0)
+				if (dumbConfig.mod_preferred_player != 0 || CheckMPTM())
 				{
 					streamsource = MOD_OpenSong(reader, miscConfig.snd_outputrate);
 				}

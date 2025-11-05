@@ -127,7 +127,7 @@ Instrument *Instruments::extract_sample_file(char *sample_file)
 /* returns number of importers which may be suitable for the file */
 int Instruments::get_importers(const char *sample_file, int limit, SampleImporter **importers)
 {
-	static SampleImporter	sample_importers[] = {
+	SampleImporter	sample_importers[] = {
 		{"wav", &Instruments::import_wave_discriminant, &Instruments::import_wave_load},
 		{"aiff", &Instruments::import_aiff_discriminant, &Instruments::import_aiff_load},
 		{NULL, NULL, NULL},

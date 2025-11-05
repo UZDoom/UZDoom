@@ -225,8 +225,8 @@ void Instruments::free_soundfont(SFInfo *sf)
 
 int Instruments::chunkid(char *id)
 {
-	static struct idstring {
-		const char *str;
+	static const struct idstring {
+		const char str[5];
 		int id;
 	} idlist[] = {
 		{"RIFF", RIFF_ID},

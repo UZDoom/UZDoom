@@ -346,6 +346,9 @@ class Instruments
 	SampleList *last_sample_list = nullptr;
 
 	LayerItem layer_items[SF_EOF];
+	// formerly static function-local variables.
+	int rcf_count = 0;
+	char *last_name;
 
 	/* convert from 8bit value to fractional offset (15.15) */
 	int32_t to_offset_22(int offset)
