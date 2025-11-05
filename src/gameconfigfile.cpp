@@ -48,6 +48,7 @@
 #include "m_argv.h"
 #include "m_joy.h"
 #include "m_misc.h"
+#include "printf.h"
 #include "v_font.h"
 #include "v_video.h"
 #include "version.h"
@@ -85,6 +86,7 @@ EXTERN_CVAR (Int, gl_texture_hqresize_targets)
 EXTERN_CVAR(Int, wipetype)
 EXTERN_CVAR(Bool, i_pauseinbackground)
 EXTERN_CVAR(Bool, i_soundinbackground)
+EXTERN_CVAR(Bool, i_is_new_release)
 
 FARG(config, "Configuration", "Specifies an alternative configuration file to use.", "configfile",
 	"Causes " GAMENAME " to use an alternative configuration file. If configfile does not exist,"
@@ -385,6 +387,9 @@ void FGameConfigFile::DoGlobalSetup ()
 	}
 	if (SetSection ("LastRun"))
 	{
+		const char *lastRelease = GetValueForKey ("Release");
+		i_is_new_release = !lastRelease || strcmp(VERSIONSTR, lastRelease) != 0;
+
 		const char *lastver = GetValueForKey ("Version");
 		if (lastver != NULL)
 		{
@@ -993,6 +998,7 @@ void FGameConfigFile::ArchiveGlobalData ()
 	SetSection ("LastRun", true);
 	ClearCurrentSection ();
 	SetValueForKey ("Version", LASTRUNVERSION);
+	SetValueForKey ("Release", VERSIONSTR);
 
 	SetSection ("GlobalSettings", true);
 	ClearCurrentSection ();
