@@ -24,6 +24,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <algorithm>
+#include <type_traits>
 
 #include <string.h>
 #include <math.h>
@@ -102,8 +103,14 @@ void set_playback_rate(int freq)
 
 Player::Player(Instruments *instr)
 {
-	last_reverb_setting = timidity_reverb;
+	static_assert(std::is_trivially_copy_assignable<Player>::value); // make sure we don't do anything that makes memsetting dangerous.
 	memset(this, 0, sizeof(*this));
+	memset(drum_setup_xg, 9, sizeof(drum_setup_xg));
+
+	xg_reverb_type_msb = 0x01;
+	xg_chorus_type_msb = 0x41;
+
+	last_reverb_setting = timidity_reverb;
 
 	// init one-time global stuff - this should go to the device class once it exists.
 	instruments = instr;
@@ -5631,25 +5638,22 @@ void Player::set_master_tuning(int tune)
 
 void Player::set_single_note_tuning(int part, int a, int b, int rt)
 {
-	static int tp;	/* tuning program number */
-	static int kn;	/* MIDI key number */
-	static int st;	/* the nearest equal-tempered semitone */
 	double f, fst;	/* fraction of semitone */
 	int i;
 	
 	switch (part) {
 	case 0:
-		tp = a;
+		snt_tp = a;
 		break;
 	case 1:
-		kn = a, st = b;
+		snt_kn = a, snt_st = b;
 		break;
 	case 2:
-		if (st == 0x7f && a == 0x7f && b == 0x7f)	/* no change */
+		if (snt_st == 0x7f && a == 0x7f && b == 0x7f)	/* no change */
 			break;
-		f = 440 * pow(2.0, (st - 69) / 12.0);
+		f = 440 * pow(2.0, (snt_st - 69) / 12.0);
 		fst = pow(2.0, (a << 7 | b) / 196608.0);
-		freq_table_tuning[tp][kn] = f * fst * 1000 + 0.5;
+		freq_table_tuning[snt_tp][snt_kn] = f * fst * 1000 + 0.5;
 		if (rt)
 			for (i = 0; i < upper_voices; i++)
 				if (voice[i].status != VOICE_FREE) {
@@ -5662,66 +5666,57 @@ void Player::set_single_note_tuning(int part, int a, int b, int rt)
 
 void Player::set_user_temper_entry(int part, int a, int b)
 {
-	static int tp;		/* temperament program number */
-	static int ll;		/* number of formula */
-	static int fh, fl;	/* applying pitch bit mask (forward) */
-	static int bh, bl;	/* applying pitch bit mask (backward) */
-	static int aa, bb;	/* fraction (aa/bb) */
-	static int cc, dd;	/* power (cc/dd)^(ee/ff) */
-	static int ee, ff;
-	static int ifmax, ibmax, count;
-	static double rf[11], rb[11];
 	int i, j, k, l, n, m;
 	double ratio[12], f, sc;
 	
 	switch (part) {
 	case 0:
 		for (i = 0; i < 11; i++)
-			rf[i] = rb[i] = 1;
-		ifmax = ibmax = 0;
-		count = 0;
-		tp = a, ll = b;
+			ute_rf[i] = ute_rb[i] = 1;
+		ute_ifmax = ute_ibmax = 0;
+		ute_count = 0;
+		ute_tp = a, ute_ll = b;
 		break;
 	case 1:
-		fh = a, fl = b;
+		ute_fh = a, ute_fl = b;
 		break;
 	case 2:
-		bh = a, bl = b;
+		ute_bh = a, ute_bl = b;
 		break;
 	case 3:
-		aa = a, bb = b;
+		ute_aa = a, ute_bb = b;
 		break;
 	case 4:
-		cc = a, dd = b;
+		ute_cc = a, ute_dd = b;
 		break;
 	case 5:
-		ee = a, ff = b;
+		ute_ee = a, ute_ff = b;
 		for (i = 0; i < 11; i++) {
-			if (((fh & 0xf) << 7 | fl) & 1 << i) {
-				rf[i] *= (double) aa / bb
-						* pow((double) cc / dd, (double) ee / ff);
-				if (ifmax < i + 1)
-					ifmax = i + 1;
+			if (((ute_fh & 0xf) << 7 | ute_fl) & 1 << i) {
+				ute_rf[i] *= (double) ute_aa / ute_bb
+						* pow((double) ute_cc / ute_dd, (double) ute_ee / ute_ff);
+				if (ute_ifmax < i + 1)
+					ute_ifmax = i + 1;
 			}
-			if (((bh & 0xf) << 7 | bl) & 1 << i) {
-				rb[i] *= (double) aa / bb
-						* pow((double) cc / dd, (double) ee / ff);
-				if (ibmax < i + 1)
-					ibmax = i + 1;
+			if (((ute_bh & 0xf) << 7 | ute_bl) & 1 << i) {
+				ute_rb[i] *= (double) ute_aa / ute_bb
+						* pow((double) ute_cc / ute_dd, (double) ute_ee / ute_ff);
+				if (ute_ibmax < i + 1)
+					ute_ibmax = i + 1;
 			}
 		}
-		if (++count < ll)
+		if (++ute_count < ute_ll)
 			break;
 		ratio[0] = 1;
-		for (i = n = m = 0; i < ifmax; i++, m = n) {
+		for (i = n = m = 0; i < ute_ifmax; i++, m = n) {
 			n += (n > 4) ? -5 : 7;
-			ratio[n] = ratio[m] * rf[i];
+			ratio[n] = ratio[m] * ute_rf[i];
 			if (ratio[n] > 2)
 				ratio[n] /= 2;
 		}
-		for (i = n = m = 0; i < ibmax; i++, m = n) {
+		for (i = n = m = 0; i < ute_ibmax; i++, m = n) {
 			n += (n > 6) ? -7 : 5;
-			ratio[n] = ratio[m] / rb[i];
+			ratio[n] = ratio[m] / ute_rb[i];
 			if (ratio[n] < 1)
 				ratio[n] *= 2;
 		}
@@ -5733,16 +5728,16 @@ void Player::set_user_temper_entry(int part, int a, int b)
 					l = i + j * 12 + k;
 					if (l < 0 || l >= 128)
 						continue;
-					if (! (fh & 0x40)) {	/* major */
-						freq_table_user[tp][i][l] =
+					if (! (ute_fh & 0x40)) {	/* major */
+						freq_table_user[ute_tp][i][l] =
 								f * ratio[k] * 1000 + 0.5;
-						freq_table_user[tp][i + 36][l] =
+						freq_table_user[ute_tp][i + 36][l] =
 								f * ratio[k] * sc * 1000 + 0.5;
 					}
-					if (! (bh & 0x40)) {	/* minor */
-						freq_table_user[tp][i + 12][l] =
+					if (! (ute_bh & 0x40)) {	/* minor */
+						freq_table_user[ute_tp][i + 12][l] =
 								f * ratio[k] * sc * 1000 + 0.5;
-						freq_table_user[tp][i + 24][l] =
+						freq_table_user[ute_tp][i + 24][l] =
 								f * ratio[k] * 1000 + 0.5;
 					}
 				}
@@ -5780,16 +5775,14 @@ struct midi_file_info *Player::new_midi_file_info()
 void Player::playmidi_stream_init(void)
 {
     int i;
-    static int first = 1;
 
     note_key_offset = timidity_key_adjust;
     midi_time_ratio = timidity_tempo_adjust;
     CLEAR_CHANNELMASK(channel_mute);
 	if (temper_type_mute & 1)
 		FILL_CHANNELMASK(channel_mute);
-	if (first)
+	if (!midi_streaming)
 	{
-		first = 0;
 		init_mblock(&playmidi_pool);
 		midi_streaming = 1;
 	}
@@ -6113,11 +6106,10 @@ void Player::send_long_event(const uint8_t *sysexbuffer, int exlen)
 	int i, ne;
 	MidiEvent ev;
 	MidiEvent evm[260];
-	SysexConvert sc;
 
 	if ((sysexbuffer[0] != 0xf0) && (sysexbuffer[0] != 0xf7)) return;
 	
-	if (sc.parse_sysex_event(sysexbuffer + 1, exlen - 1, &ev, instruments)) 
+	if (parse_sysex_event(sysexbuffer + 1, exlen - 1, &ev, instruments)) 
 	{
 		if (ev.type == ME_RESET)
 		{
@@ -6135,7 +6127,7 @@ void Player::send_long_event(const uint8_t *sysexbuffer, int exlen)
 		play_event(&ev);
 		return;
 	}
-	if ((ne = sc.parse_sysex_event_multi(sysexbuffer + 1, exlen - 1, evm, instruments)))
+	if ((ne = parse_sysex_event_multi(sysexbuffer + 1, exlen - 1, evm, instruments)))
 	{
 		for (i = 0; i < ne; i++) 
 		{

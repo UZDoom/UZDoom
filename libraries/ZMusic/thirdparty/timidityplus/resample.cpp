@@ -44,7 +44,7 @@ static int sample_bounds_min, sample_bounds_max; /* min/max bounds for sample da
 #define DEFAULT_GAUSS_ORDER	25
 std::vector<float> gauss_table_data;
 static float *gauss_table[(1 << FRACTION_BITS)] = { 0 };	/* don't need doubles */
-static int gauss_n = DEFAULT_GAUSS_ORDER;
+static const int gauss_n = DEFAULT_GAUSS_ORDER;
 
 
 static void initialize_newton_coeffs()

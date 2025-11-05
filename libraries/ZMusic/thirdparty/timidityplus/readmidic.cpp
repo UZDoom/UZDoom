@@ -204,14 +204,12 @@ static uint16_t gm_convert_master_vol(uint16_t v1, uint16_t v2)
 * This function provides basic support for XG Bulk Dump and Parameter
 * Change SysEx events
 */
-int SysexConvert::parse_sysex_event_multi(const uint8_t *val, int32_t len, MidiEvent *evm, Instruments *instruments)
+int Player::parse_sysex_event_multi(const uint8_t *val, int32_t len, MidiEvent *evm, Instruments *instruments)
 {
 	int num_events = 0;				/* Number of events added */
 
 	uint32_t channel_tt;
 	int i, j;
-	static uint8_t xg_reverb_type_msb = 0x01, xg_reverb_type_lsb = 0x00;
-	static uint8_t xg_chorus_type_msb = 0x41, xg_chorus_type_lsb = 0x00;
 
 	/* Effect 1 or Multi EQ */
 	if (len >= 8 &&
@@ -2342,7 +2340,7 @@ int SysexConvert::parse_sysex_event_multi(const uint8_t *val, int32_t len, MidiE
 }
 
 
-int SysexConvert::parse_sysex_event(const uint8_t *val, int32_t len, MidiEvent *ev, Instruments *instruments)
+int Player::parse_sysex_event(const uint8_t *val, int32_t len, MidiEvent *ev, Instruments *instruments)
 {
 	uint16_t vol;
 
