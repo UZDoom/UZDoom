@@ -67,9 +67,15 @@ extern bool netgame;
 		return path;                    \
 	}
 #endif
+#ifdef __HAIKU__
+DEFGETPATH(Config, "XDG_CONFIG_HOME", "$HOME/config/settings");
+DEFGETPATH(Cache, "XDG_CACHE_HOME", "$HOME/config/cache");
+DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/config/non-packaged/data");
+#else
 DEFGETPATH(Config, "XDG_CONFIG_HOME", "$HOME/.config");
 DEFGETPATH(Cache, "XDG_CACHE_HOME", "$HOME/.cache");
 DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/.local/share");
+#endif
 #undef DEFGETPATH
 
 FString GetUserFile (const char *file)

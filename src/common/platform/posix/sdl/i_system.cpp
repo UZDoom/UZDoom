@@ -424,7 +424,11 @@ void I_OpenShellFolder(const char* infolder)
 	{
 		if (longsavemessages)
 			Printf("Opening folder: %s\n", infolder);
-		std::system("xdg-open .");
+		#ifdef __HAIKU__
+			std::system("open .");
+		#else
+			std::system("xdg-open .");
+		#endif
 		chdir(curdir);
 	}
 	else
