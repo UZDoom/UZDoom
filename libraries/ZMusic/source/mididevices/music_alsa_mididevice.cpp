@@ -258,7 +258,7 @@ EventType AlsaMIDIDevice::PullEvent(EventState & state) {
 		int tempo = MEVENT_EVENTPARM(event[2]);
 		if(Tempo != tempo) {
 			Tempo = tempo;
-			snd_seq_change_queue_tempo(sequencer.handle, QueueId, Tempo, &state.data);
+			snd_seq_ev_set_queue_tempo(&state.data, QueueId, Tempo);
 			return EventType::Action;
 		}
 	}
@@ -394,6 +394,10 @@ void AlsaMIDIDevice::PumpEvents() {
 		// We found an event worthy of sending to the sequencer
 		snd_seq_ev_set_source(&event.data, PortId);
 		snd_seq_ev_set_subs(&event.data);
+		if (event.data.type == SND_SEQ_EVENT_TEMPO) {
+			event.data.dest.client = SND_SEQ_CLIENT_SYSTEM;
+			event.data.dest.port = SND_SEQ_PORT_SYSTEM_TIMER;
+		}
 		snd_seq_ev_schedule_tick(&event.data, QueueId, false, buffer_ticks + event.ticks);
 		int result = snd_seq_event_output(sequencer.handle, &event.data);
 		if(result < 0) {
