@@ -4,7 +4,11 @@
 
 #if defined(__unix__) || defined(__HAIKU__)
 FString GetUserFile (const char *path);
+const char * GetConfigPath();
+const char * GetCachePath();
+const char * GetDataPath();
 #endif
+
 FString M_GetAppDataPath(bool create);
 FString M_GetCachePath(bool create);
 FString M_GetAutoexecPath();
@@ -15,7 +19,6 @@ FString M_GetDocumentsPath();
 FString M_GetDemoPath();
 
 FString M_GetNormalizedPath(const char* path);
-
 
 #ifdef __APPLE__
 FString M_GetMacAppSupportPath(const bool create = true);
