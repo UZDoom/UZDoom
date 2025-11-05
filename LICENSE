@@ -1,3 +1,18 @@
+Please note that certain assets in this repository have a different license.
+The text below is the license for the majority of the repository unless
+stated otherwise, but you can find specific exceptions for branding in
+branding/BRANDING-LICENSE.md.
+
+Additionally, assets located under wadsrc_bm, wadsrc_extra and wadsrc_widepix
+are based on copyrighted assets. Please refer to the following files for
+their respective licenses:
+
+wadsrc_bm/static/license.md
+wadsrc_extra/static/license.md
+wadsrc_widepix/static/license.md
+
+=============================================================================
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
