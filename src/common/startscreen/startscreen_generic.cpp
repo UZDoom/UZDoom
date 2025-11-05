@@ -106,7 +106,7 @@ bool FGenericStartScreen::DoProgress(int advance)
 
 	if (CurPos < MaxPos)
 	{
-		RgbQuad bcolor = { 177, 77, 16, 255 }; // [Nash June 2025] don't merge this color into VKDoom! // todo: make configurable 
+		RgbQuad bcolor = { 252, 237, 46, 255 }; // [Nash Nov 2025] this is BGRA (todo: make this mod-configurable)
 		int numnotches = 200 * 2;
 		notch_pos = ((CurPos + 1) * numnotches) / MaxPos;
 		if (notch_pos != NotchPos)
