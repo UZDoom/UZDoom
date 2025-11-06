@@ -8572,13 +8572,30 @@ FxExpression *FxFunctionCall::Resolve(FCompileContext& ctx)
 		}
 	}
 
-	for (size_t i = 0; i < countof(FxFlops); ++i)
+	// [RaveYard] resolve expression ahead to differentiate between `floor(object)` and `floor(numeric)`
+	bool singleParamIsObject = false;
+	if (ArgList.size() == 1)
 	{
-		if (MethodName == FxFlops[i].Name)
+		ArgList[0] = ArgList[0]->Resolve(ctx);
+		if (ArgList[0] == nullptr)
 		{
-			FxExpression *x = new FxFlopFunctionCall(i, ArgList, ScriptPosition);
 			delete this;
-			return x->Resolve(ctx);
+			return nullptr;
+		}
+
+		singleParamIsObject = ArgList[0]->IsObject();
+	}
+
+	if (!singleParamIsObject)
+	{
+		for (size_t i = 0; i < countof(FxFlops); ++i)
+		{
+			if (MethodName == FxFlops[i].Name)
+			{
+				FxExpression *x = new FxFlopFunctionCall(i, ArgList, ScriptPosition);
+				delete this;
+				return x->Resolve(ctx);
+			}
 		}
 	}
 
