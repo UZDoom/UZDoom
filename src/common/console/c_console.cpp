@@ -441,8 +441,8 @@ int PrintString (int iprintlevel, const char *outline)
 		if (printlevel != PRINT_LOG)
 		{
 			I_PrintStr(outline);
-
-			conbuffer->AddText(printlevel, outline);
+			if (!(iprintlevel & PRINT_NOCONSOLE))
+				conbuffer->AddText(printlevel, outline);
 			if (vidactive && screen && !(iprintlevel & PRINT_NONOTIFY) && NotifyStrings)
 			{
 				if (printlevel >= msglevel)
@@ -451,7 +451,7 @@ int PrintString (int iprintlevel, const char *outline)
 				}
 			}
 		}
-		if (Logfile != nullptr && !(iprintlevel & PRINT_NOLOG))
+		if (Logfile != nullptr && !(iprintlevel & (PRINT_NOLOG|PRINT_NOCONSOLE)))
 		{
 			WriteLineToLog(Logfile, outline);
 		}

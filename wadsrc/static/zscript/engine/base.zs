@@ -175,6 +175,7 @@ enum EPrintLevel
 	PRINT_TYPES = 1023,		// Bitmask.
 	PRINT_NONOTIFY = 1024,	// Flag - do not add to notify buffer
 	PRINT_NOLOG = 2048,		// Flag - do not print to log file
+	PRINT_NOCONSOLE = 16384 // Flag - Don't add to console (implies nolog)
 };
 
 enum EDebugLevel
