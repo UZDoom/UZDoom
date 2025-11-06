@@ -1600,14 +1600,11 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 		}
 	}
 
-	struct
-	{
-		bool operator()(intercept_t a, intercept_t b) const { return a.frac < b.frac; }
-	} lesserfrac;
 	intercept_count = intercepts.Size();
 	if (intercept_count > intercept_index)
 	{
-		std::sort(intercepts.begin(), intercepts.end(), lesserfrac); // [DVR] Can start from [intercept_index] instead of begin()??
+		std::sort(intercepts.begin(), intercepts.end(), // [DVR] Can start from [intercept_index] instead of begin()??
+				  [](const intercept_t &a, const intercept_t &b) { return a.frac < b.frac; });
 	}
 	intercepts.end()->done = true;
 }
