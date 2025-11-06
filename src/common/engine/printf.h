@@ -66,6 +66,8 @@ enum
 	PRINT_NOTIFY = 4096,	// Flag - add to game-native notify display - messages without this only go to the generic notification buffer.
 	PRINT_NODAPEVENT = 8192, // Flag - do not emit the message as DAP debugger output.
 	PRINT_NOCONSOLE = 16384,// Flag - Don't add to console
+
+	PRINT_NOLOGCONSOLE = PRINT_NOLOG|PRINT_NOCONSOLE,
 };
 
 enum

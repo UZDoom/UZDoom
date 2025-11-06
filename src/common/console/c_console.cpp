@@ -451,7 +451,7 @@ int PrintString (int iprintlevel, const char *outline)
 				}
 			}
 		}
-		if (Logfile != nullptr && !(iprintlevel & (PRINT_NOLOG|PRINT_NOCONSOLE)))
+		if (Logfile != nullptr && !(iprintlevel & PRINT_NOLOG))
 		{
 			WriteLineToLog(Logfile, outline);
 		}
