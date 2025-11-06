@@ -549,6 +549,8 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 	else
 	{ 	// made it past the wall
 		// check for 3D floors first
+		using3DFloorBottom = false;
+		using3DFloorTop = false;
 		if (entersector->e->XFloor.ffloors.Size())
 		{
 			memcpy(&DummySector[sectorsel], entersector, sizeof(sector_t));
@@ -558,8 +560,6 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 			// We need to make sure that 3D floors clipping underneath the ground/above the ceiling don't
 			// accidentally get ignored.
 			bool setFloor = false, setCeiling = false;
-			using3DFloorBottom = false;
-			using3DFloorTop = false;
 
 			for (auto rover : entersector->e->XFloor.ffloors)
 			{
