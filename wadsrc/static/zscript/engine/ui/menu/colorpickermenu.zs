@@ -136,7 +136,7 @@ class ColorpickerMenu : OptionMenu
 				MenuSound ("menu/cursor");
 				mGridPosY = 0;
 				// let it point to the last static item so that the super class code still has a valid item
-				mDesc.mSelectedItem = mStartItem+7;	
+				mDesc.mSelectedItem = mStartItem+7;
 				return true;
 			}
 			else if (mDesc.mSelectedItem == mStartItem+7)
@@ -199,7 +199,7 @@ class ColorpickerMenu : OptionMenu
 			}
 			break;
 		}
-		if (mDesc.mSelectedItem >= 0 && mDesc.mSelectedItem < mStartItem+7) 
+		if (mDesc.mSelectedItem >= 0 && mDesc.mSelectedItem < mStartItem+7)
 		{
 			if (mDesc.mItems[mDesc.mSelectedItem].MenuEvent(mkey, fromcontroller)) return true;
 		}
@@ -287,7 +287,7 @@ class ColorpickerMenu : OptionMenu
 			for (x1 = 0; x1 < 16; ++x1)
 			{
 				screen.Clear (box_x, box_y, box_x + w, box_y + h, 0, p);
-				if ((mDesc.mSelectedItem == mStartItem+7) && 
+				if ((mDesc.mSelectedItem == mStartItem+7) &&
 					(/*p == CurrColorIndex ||*/ (i == mGridPosY && x1 == mGridPosX)))
 				{
 					int r, g, b;
@@ -334,7 +334,8 @@ class ColorpickerMenu : OptionMenu
 		if (mStartItem >= 0)
 		{
 			mDesc.mItems.Resize(mStartItem);
-			if (mCVar != null) 
+			mDesc.mSelectedItem = -1;
+			if (mCVar != null)
 			{
 				mCVar.SetInt(Color(int(mRed), int(mGreen), int(mBlue)));
 			}
@@ -344,7 +345,7 @@ class ColorpickerMenu : OptionMenu
 
 	override void ResetColor()
 	{
-		if (mCVar != null) 
+		if (mCVar != null)
 		{
 			Color clr = Color(mCVar.GetInt());
 			mRed = clr.r;
