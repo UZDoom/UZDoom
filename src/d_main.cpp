@@ -2289,7 +2289,8 @@ static void AddAutoloadFiles(const char *autoname, std::vector<std::string>& all
 		D_AddDirectory (allwads, file.GetChars(), "*.wad", GameConfig, true);
 
 #ifdef __unix__
-		file = NicePath("$HOME/" GAME_DIR "/skins");
+		FString skinDir = FStringf("%s/games/" GAMENAMELOWERCASE "/skins", GetDataPath());
+		file = NicePath(skinDir.GetChars());
 		D_AddDirectory (allwads, file.GetChars(), "*.wad", GameConfig);
 #endif
 
