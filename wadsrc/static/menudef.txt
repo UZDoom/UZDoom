@@ -914,9 +914,9 @@ OptionValue PuffTypes
 OptionValue CullTypes
 {
 	0, "$OPTVAL_OFF"
-	1, "$OPTVAL_ON"
-	2, "$OPTVAL_ON_WITH_FOG"
-	3, "$OPTVAL_ON_WITH_FPS_MIN"
+	1, "$CULLVAL_ON_WITHOUT_FOG"
+	2, "$CULLVAL_ON_WITH_FOG"
+	3, "$CULLVAL_ON_WITH_FPS_MIN"
 }
 
 OptionValue Wipes

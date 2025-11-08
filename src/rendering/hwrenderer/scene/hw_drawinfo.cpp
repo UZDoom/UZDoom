@@ -41,6 +41,8 @@
 #include "g_levellocals.h"
 
 EXTERN_CVAR(Float, r_visibility)
+EXTERN_CVAR(Int, r_distance_cull_type)
+EXTERN_CVAR(Float, r_line_distance_cull)
 CVAR(Bool, gl_bandedswlight, false, CVAR_ARCHIVE)
 CVAR(Bool, gl_sort_textures, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, gl_no_skyclear, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
@@ -167,8 +169,16 @@ void HWDrawInfo::StartScene(FRenderViewpoint &parentvp, HWViewpointUniforms *uni
 		VPUniforms.mClipLine.X = -10000000.0f;
 		VPUniforms.mShadowmapFilter = gl_shadowmap_filter;
 		VPUniforms.mLightBlendMode = (level.info ? (int)level.info->lightblendmode : 0);
-		VPUniforms.mThickFogDistance = Level->thickfogdistance;
-		VPUniforms.mThickFogMultiplier = Level->thickfogmultiplier;
+		if (r_distance_cull_type > 1)
+		{
+			double rel = (0.5*sqrt(Viewpoint.culldistsq)/VPUniforms.mThickFogDistance) - 1.0;
+			VPUniforms.mThickFogDistance += (fabs(rel) > 0.25 ? 0.1 : 0.01)*(0.5*sqrt(Viewpoint.culldistsq) - VPUniforms.mThickFogDistance);
+		}
+		else
+		{
+			VPUniforms.mThickFogDistance = Level->thickfogdistance;
+		}
+		VPUniforms.mThickFogMultiplier =  (r_distance_cull_type > 1 ? 30.0 : Level->thickfogmultiplier);
 	}
 	mClipper->SetViewpoint(Viewpoint);
 	vClipper->SetViewpoint(Viewpoint);

@@ -33,7 +33,6 @@
 #include "d_player.h"
 #include "doomstat.h"
 #include "g_game.h"
-#include "c_console.h"
 #include "g_levellocals.h"
 #include "i_interface.h"
 #include "i_time.h"
@@ -147,6 +146,7 @@ CUSTOM_CVAR(Bool, r_cull_fps, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) // This h
 		r_distance_cull_type = 3;
 	}
 }
+CVAR(Color, gl_cullcolor, 0x888888, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 int 			viewwindowx;
 int 			viewwindowy;
@@ -977,15 +977,15 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 			viewPoint.culldistsq = r_line_distance_cull * r_line_distance_cull;
 			if (viewPoint.FieldOfView.Degrees() > 0.0) viewPoint.culldistsq /= viewPoint.FieldOfView.Sin() * viewPoint.FieldOfView.Sin();
 		}
-		else if (menuactive == MENU_Off && viewactive && ConsoleState == c_up)
+		else if (!WorldPaused(true))
 		{
 			if ((screen->FrameTime - viewPoint.LastFrameTime) * i_timescale > 1000.0 / r_cull_fps_target)
 			{
-				viewPoint.culldistsq *= 0.9; // Printf("Dropping culldist to %f\n", sqrt(viewPoint.culldistsq));
+				viewPoint.culldistsq *= 0.9;
 			}
-			else if (viewPoint.culldistsq < 256000000.0) // ((screen->FrameTime - viewPoint.LastFrameTime) * i_timescale < 900.0 / r_cull_fps_target)
+			else if (viewPoint.culldistsq < 256000000.0)
 			{
-				viewPoint.culldistsq *= 1.1; // Printf("Increasing culldist to %f\n", sqrt(viewPoint.culldistsq));
+				viewPoint.culldistsq *= 1.01;
 			}
 		}
 	}
@@ -1270,10 +1270,17 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 	}
 	else
 	{
-		screen->SetClearColor(GPalette.BlackIndex);
-	}
-
-
+		if (r_distance_cull_type < 2)
+		{
+			screen->SetClearColor(GPalette.BlackIndex);
+		}
+		else
+		{
+			screen->SetClearColorPal(PalEntry(gl_cullcolor));
+			SWRenderer->SetClearColor(PalEntry(gl_cullcolor));
+		}
+    }
+	
 	// And finally some info that is needed for the hardware renderer
 
 	// Scale the pitch to account for the pixel stretching, because the playsim doesn't know about this and treats it as 1:1.

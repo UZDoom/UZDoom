@@ -252,6 +252,7 @@ public:
 
 	// Report a game restart
 	void SetClearColor(int color);
+	void SetClearColorPal(PalEntry pe);
 	virtual int Backend() { return 0; }
 	virtual const char* DeviceName() const { return "Unknown"; }
 	virtual void AmbientOccludeScene(float m5) {}

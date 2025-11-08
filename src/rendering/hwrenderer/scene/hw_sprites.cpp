@@ -64,6 +64,7 @@ EXTERN_CVAR(Bool, r_debug_disable_vis_filter)
 EXTERN_CVAR(Float, transsouls)
 EXTERN_CVAR(Float, r_actorspriteshadowalpha)
 EXTERN_CVAR(Float, r_actorspriteshadowfadeheight)
+EXTERN_CVAR(Int, r_distance_cull_type)
 
 //==========================================================================
 //
@@ -200,7 +201,7 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 		if (!modelframe)
 		{
 			// non-black fog with subtractive style needs special treatment
-			if (!Colormap.FadeColor.isBlack())
+			if (!Colormap.FadeColor.isBlack() || r_distance_cull_type > 1)
 			{
 				foglayer = true;
 				// Due to the two-layer approach we need to force an alpha test that lets everything pass

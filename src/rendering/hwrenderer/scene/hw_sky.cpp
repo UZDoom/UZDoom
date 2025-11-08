@@ -31,6 +31,8 @@
 #include "hw_walldispatcher.h"
 
 CVAR(Bool,gl_noskyboxes, false, 0)
+EXTERN_CVAR(Int, r_distance_cull_type)
+EXTERN_CVAR(Color, gl_cullcolor)
 
 //===========================================================================
 //
@@ -106,7 +108,11 @@ void HWSkyInfo::init(HWDrawInfo *di, sector_t* sec, int skypos, int sky1, PalEnt
 			x_offset[0] = di->Level->hw_sky1pos;
 		}
 	}
-	if (di->Level->skyfog > 0)
+	if (r_distance_cull_type)
+	{
+		fadecolor = PalEntry(gl_cullcolor);
+	}
+	else if (di->Level->skyfog > 0)
 	{
 		fadecolor = FadeColor;
 		fadecolor.a = 0;
