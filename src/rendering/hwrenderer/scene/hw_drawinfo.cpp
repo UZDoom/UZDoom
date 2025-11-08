@@ -173,6 +173,10 @@ void HWDrawInfo::StartScene(FRenderViewpoint &parentvp, HWViewpointUniforms *uni
 		{
 			double rel = (0.5*sqrt(Viewpoint.culldistsq)/VPUniforms.mThickFogDistance) - 1.0;
 			VPUniforms.mThickFogDistance += (fabs(rel) > 0.25 ? 0.1 : 0.01)*(0.5*sqrt(Viewpoint.culldistsq) - VPUniforms.mThickFogDistance);
+			if (Level->thickfogdistance > 0.0 && VPUniforms.mThickFogDistance > Level->thickfogdistance)
+			{
+				VPUniforms.mThickFogDistance = Level->thickfogdistance; // Respect intended artistic vision of mapper if possible
+			}
 		}
 		else
 		{
