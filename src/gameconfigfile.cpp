@@ -233,7 +233,7 @@ FGameConfigFile::FGameConfigFile ()
 		SetSection ("IWADSearch.Directories", true);
 		SetValueForKey ("Path", ".", true);
 		SetValueForKey ("Path", "$DOOMWADDIR", true);
-
+		SetValueForKey ("PathList", "$DOOMWADPATH", true);
 		for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
 		{
 			SetValueForKey ("Path", DefaultSearchPaths[i].GetChars(), true);

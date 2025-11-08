@@ -304,6 +304,24 @@ const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinpr
 					}
 				}
 			}
+			else if (stricmp(key, "PathList") == 0)
+			{
+				FString dir;
+				TArray<FString> dirlist = ExpandEnvVars(value).Split(';', FString::TOK_SKIPEMPTY);
+
+				for (FString& dirname : dirlist)
+				{
+					dir = NicePath(dirname.GetChars());
+					if (dir.IsNotEmpty())
+					{
+						BFSwad.Format("%s%s%s", dir.GetChars(), dir.Back() == '/' ? "" : "/", file);
+						if (DirEntryExists(BFSwad.GetChars()))
+						{
+							return BFSwad.GetChars();
+						}
+					}
+				}
+			}
 		}
 	}
 
