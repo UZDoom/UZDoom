@@ -66,10 +66,12 @@ struct FRenderViewpoint
 	DAngle			FieldOfView;	// current field of view
 	double			ScreenProj;	// Screen projection factor for orthographic projection
 	double			ScreenProjX;	// Same for X-axis (screenspace)
+	double			culldistsq;		// r_line_distance_cull_squared / (Sin(fov))**2
 
 	double			TicFrac;		// fraction of tic for interpolation
 	uint32_t		FrameTime;		// current frame's time in tics.
-
+	uint64_t		LastFrameTime;
+	
 	int				extralight;		// extralight to be added to this viewpoint
 	bool			showviewer;		// show the camera actor?
 	bool			bForceNoViewer; // Never show the camera Actor.

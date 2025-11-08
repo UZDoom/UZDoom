@@ -79,7 +79,7 @@ namespace
 	double line_distance_cull = 1e16;
 }
 
-CUSTOM_CVAR(Float, r_sprite_distance_cull, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CUSTOM_CVAR(Float, r_sprite_distance_cull, 4000.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	if (r_sprite_distance_cull > 0.0)
 	{
@@ -91,7 +91,32 @@ CUSTOM_CVAR(Float, r_sprite_distance_cull, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG
 	}
 }
 
-CUSTOM_CVAR(Float, r_line_distance_cull, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+EXTERN_CVAR(Bool, r_cull_fps) // This had to be a CVAR for menudef greycheck
+EXTERN_CVAR(Bool, r_cull_distance) // This had to be a CVAR for menudef greycheck
+
+CUSTOM_CVAR(Int, r_distance_cull_type, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self > 3)
+	{
+		self= 3;
+	}
+	else if (self < 0)
+	{
+		self= 0;
+	}
+	r_cull_fps = (self == 3);
+	r_cull_distance = (self > 0) && (self < 3);
+}
+
+CUSTOM_CVAR(Int, r_cull_fps_target, 90, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self < 1)
+	{
+		self = 1;
+	}
+}
+
+CUSTOM_CVAR(Float, r_line_distance_cull, 4000.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	if (r_line_distance_cull > 0.0)
 	{
@@ -101,6 +126,9 @@ CUSTOM_CVAR(Float, r_line_distance_cull, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	{
 		line_distance_cull = 1e16;
 	}
+
+	sprite_distance_cull = line_distance_cull;
+	model_distance_cull = line_distance_cull;
 }
 
 CUSTOM_CVAR(Float, r_model_distance_cull, 1024.f, 0/*CVAR_ARCHIVE | CVAR_GLOBALCONFIG*/) // Experimental for the moment until a good default is chosen
@@ -617,8 +645,8 @@ namespace swrenderer
 		int count = sub->numlines;
 		while (count--)
 		{
-			double dist1 = (line->v1->fPos() - viewpointPos).LengthSquared();
-			double dist2 = (line->v2->fPos() - viewpointPos).LengthSquared();
+			double dist1 = r_distance_cull_type > 0 ? (line->v1->fPos() - viewpointPos).LengthSquared() : 0.0;
+			double dist2 = r_distance_cull_type > 0 ? (line->v2->fPos() - viewpointPos).LengthSquared() : 0.0;
 			if (dist1 > line_distance_cull && dist2 > line_distance_cull)
 			{
 				FarClipLine farclip(Thread);
@@ -1027,9 +1055,12 @@ namespace swrenderer
 			return false;
 		}
 
-		double distanceSquared = (thing->Pos() - Thread->Viewport->viewpoint.Pos).LengthSquared();
-		if (distanceSquared > sprite_distance_cull)
-			return false;
+		if (r_distance_cull_type > 0)
+		{
+			double distanceSquared = (thing->Pos() - Thread->Viewport->viewpoint.Pos).LengthSquared();
+			if (distanceSquared > sprite_distance_cull)
+				return false;
+		}
 
 		return true;
 	}

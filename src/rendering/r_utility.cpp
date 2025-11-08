@@ -33,6 +33,7 @@
 #include "d_player.h"
 #include "doomstat.h"
 #include "g_game.h"
+#include "c_console.h"
 #include "g_levellocals.h"
 #include "i_interface.h"
 #include "i_time.h"
@@ -60,6 +61,10 @@ const float MY_SQRT2    = float(1.41421356237309504880); // sqrt(2)
 extern bool DrawFSHUD;		// [RH] Defined in d_main.cpp
 EXTERN_CVAR (Bool, cl_capfps)
 EXTERN_CVAR (Bool, haptics_do_world)
+EXTERN_CVAR(Int, r_distance_cull_type)
+EXTERN_CVAR(Float, r_line_distance_cull)
+EXTERN_CVAR(Int, r_cull_fps_target)
+EXTERN_CVAR(Float, i_timescale)
 
 // TYPES -------------------------------------------------------------------
 
@@ -128,6 +133,20 @@ CUSTOM_CVARD(Float, r_actorspriteshadowfadeheight, 0.0, CVAR_ARCHIVE | CVAR_GLOB
 	else if (self > 8192.f)
 		self = 8192.f;
 }
+CUSTOM_CVAR(Bool, r_cull_distance, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) // This had to be a CVAR for menudef greycheck
+{
+	if (self && !(r_distance_cull_type > 0 && r_distance_cull_type < 3))
+	{
+		r_distance_cull_type = 2;
+	}
+}
+CUSTOM_CVAR(Bool, r_cull_fps, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) // This had to be a CVAR for menudef greycheck
+{
+	if (self && r_distance_cull_type != 3)
+	{
+		r_distance_cull_type = 3;
+	}
+}
 
 int 			viewwindowx;
 int 			viewwindowy;
@@ -155,8 +174,10 @@ FRenderViewpoint::FRenderViewpoint()
 	FieldOfView =  DAngle::fromDeg(90.); // Angles in the SCREENWIDTH wide window
 	ScreenProj = 0.0;
 	ScreenProjX = 0.0;
+	culldistsq = 16000.0 * 16000.0;
 	TicFrac = 0.0;
 	FrameTime = 0;
+	LastFrameTime = 0;
 	extralight = 0;
 	showviewer = false;
 }
@@ -948,6 +969,27 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		viewPoint.TicFrac = 1.0;
 
 	const int curTic = I_GetTime();
+
+	if (r_distance_cull_type > 0) // Best to compute this once per frame instead of once per line
+	{
+		if (r_distance_cull_type < 3)
+		{
+			viewPoint.culldistsq = r_line_distance_cull * r_line_distance_cull;
+			if (viewPoint.FieldOfView.Degrees() > 0.0) viewPoint.culldistsq /= viewPoint.FieldOfView.Sin() * viewPoint.FieldOfView.Sin();
+		}
+		else if (menuactive == MENU_Off && viewactive && ConsoleState == c_up)
+		{
+			if ((screen->FrameTime - viewPoint.LastFrameTime) * i_timescale > 1000.0 / r_cull_fps_target)
+			{
+				viewPoint.culldistsq *= 0.9; // Printf("Dropping culldist to %f\n", sqrt(viewPoint.culldistsq));
+			}
+			else if (viewPoint.culldistsq < 256000000.0) // ((screen->FrameTime - viewPoint.LastFrameTime) * i_timescale < 900.0 / r_cull_fps_target)
+			{
+				viewPoint.culldistsq *= 1.1; // Printf("Increasing culldist to %f\n", sqrt(viewPoint.culldistsq));
+			}
+		}
+	}
+	viewPoint.LastFrameTime = screen->FrameTime;
 
 	if (actor == nullptr)
 		I_Error("Tried to render from a null actor.");

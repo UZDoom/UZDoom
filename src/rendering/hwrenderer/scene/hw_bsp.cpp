@@ -76,6 +76,7 @@ struct RenderJob
 	int type;
 	subsector_t *sub;
 	seg_t *seg;
+	bool isculled;
 };
 
 
@@ -85,11 +86,11 @@ class RenderJobQueue
 	std::atomic<int> readindex{};
 	std::atomic<int> writeindex{};
 public:
-	void AddJob(int type, subsector_t *sub, seg_t *seg = nullptr)
+	void AddJob(int type, subsector_t *sub, seg_t *seg = nullptr, bool isculled = false)
 	{
 		// This does not check for array overflows. The pool should be large enough that it never hits the limit.
 
-		pool[writeindex] = { type, sub, seg };
+		pool[writeindex] = { type, sub, seg, isculled };
 		writeindex++;	// update index only after the value has been written.
 	}
 
@@ -176,7 +177,7 @@ void HWDrawInfo::WorkerThread()
 			}
 			else back = nullptr;
 
-			wall.Process(&disp, job->seg, front, back);
+			wall.Process(&disp, job->seg, front, back, job->isculled);
 			rendered_lines++;
 			SetupWall.Unclock();
 			break;
@@ -254,9 +255,30 @@ void HWDrawInfo::UnclipSubsector(subsector_t *sub)
 //
 //==========================================================================
 
+EXTERN_CVAR(Int, r_distance_cull_type)
+EXTERN_CVAR(Float, r_line_distance_cull)
+
+bool HWDrawInfo::IsDistanceCulled(seg_t *line)
+{
+	if (Viewpoint.culldistsq <= 0.0)
+		return false;
+
+	double dist1 = (line->v1->fPos() - Viewpoint.Pos).LengthSquared();
+	double dist2 = (line->v2->fPos() - Viewpoint.Pos).LengthSquared();
+	if (Viewpoint.bDoOob && r_radarclipper && !(Level->flags3 & LEVEL3_NOFOGOFWAR))
+	{
+		dist1 = (line->v1->fPos() - Viewpoint.OffPos).LengthSquared();
+		dist2 = (line->v2->fPos() - Viewpoint.OffPos).LengthSquared();
+	}
+	if ((dist1 > Viewpoint.culldistsq) && (dist2 > Viewpoint.culldistsq))
+		return true;
+	return false;
+}
+
 void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 {
 	const bool doOob = Viewpoint.bDoOob;
+	bool isculled = r_distance_cull_type > 0 ? IsDistanceCulled(seg) : false;
 
 #ifdef _DEBUG
 	if (seg->linedef && seg->linedef->Index() == 38)
@@ -302,6 +324,10 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 	// Back side, i.e. backface culling	- read: endAngle >= startAngle!
 	if (startAngle-endAngle<ANGLE_180)
 	{
+		if (isculled)
+		{
+			clipper.SafeAddClipRange(endAngle, startAngle); // Note the swap between endAngle and startAngle
+		}
 		return;
 	}
 
@@ -313,7 +339,7 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 			{
 			  currentsubsector->flags |= SSECMF_DRAWN;
 			}
-			if (doOob && (r_radarclipper && !(Level->flags3 & LEVEL3_NOFOGOFWAR)) && clipperr.SafeCheckRange(startAngleR, endAngleR))
+			if (doOob && ((r_radarclipper && !(Level->flags3 & LEVEL3_NOFOGOFWAR)) || (r_distance_cull_type > 0)) && clipperr.SafeCheckRange(startAngleR, endAngleR))
 			{
 			  currentsubsector->flags |= SSECMF_DRAWN;
 			}
@@ -335,39 +361,60 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 	// but it's possible to add & remove WALLF_BLOCKRENDERING via zscript
 	// so auto-setting it on 1s lines may result in a crash if someone
 	// later tries to remove the flag from a line.
-	if (!seg->backsector || (seg->sidedef->Flags & WALLF_BLOCKRENDERING))
+	if (!seg->backsector || (seg->sidedef->Flags & WALLF_BLOCKRENDERING) || isculled)
 	{
-		if(!doOob)
-			if (!(seg->sidedef->Flags & WALLF_DITHERTRANS_MID)) clipper.SafeAddClipRange(startAngle, endAngle);
-	}
-	else if (!ispoly)	// Two-sided polyobjects never obstruct the view
-	{
-		if (currentsector->sectornum == seg->backsector->sectornum)
+		if(doOob)
 		{
-			if (!seg->linedef->isVisualPortal())
+			if (startAngleR == 0) startAngleR = clipperr.PointToPseudoAngle(seg->v2->fX(), seg->v2->fY());
+			if (endAngleR == 0) endAngleR = clipperr.PointToPseudoAngle(seg->v1->fX(), seg->v1->fY());
+			if (startAngleR - endAngleR >= ANGLE_180) clipperr.SafeAddClipRange(startAngleR - paddingR, endAngleR + paddingR);
+		}
+		else
+		{
+			clipper.SafeAddClipRange(startAngle, endAngle);
+		}
+	}
+	else
+	{
+		if (!seg->backsector)
+		{
+			if(!doOob)
+				if (!(seg->sidedef->Flags & WALLF_DITHERTRANS_MID)) clipper.SafeAddClipRange(startAngle, endAngle);
+		}
+		else if (!ispoly)	// Two-sided polyobjects never obstruct the view
+		{
+			if (currentsector->sectornum == seg->backsector->sectornum)
 			{
-				auto tex = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::mid), true);
-				if (!tex || !tex->isValid())
+				if (!seg->linedef->isVisualPortal())
 				{
-					// nothing to do here!
-					seg->linedef->validcount=validcount;
-					return;
+					auto tex = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::mid), true);
+					if (!tex || !tex->isValid()) 
+					{
+						// nothing to do here!
+						seg->linedef->validcount=validcount;
+						return;
+					}
+				}
+				backsector=currentsector;
+			}
+			else
+			{
+				// clipping checks are only needed when the backsector is not the same as the front sector
+				if (in_area == area_default) in_area = hw_CheckViewArea(seg->v1, seg->v2, seg->frontsector, seg->backsector);
+
+				backsector = hw_FakeFlat(seg->backsector, in_area, true);
+
+				if (hw_CheckClip(seg->sidedef, currentsector, backsector))
+				{
+					if(!doOob && !(seg->sidedef->Flags & WALLF_DITHERTRANS_MID))
+						clipper.SafeAddClipRange(startAngle, endAngle);
 				}
 			}
-			backsector=currentsector;
 		}
- 		else
+		else 
 		{
-			// clipping checks are only needed when the backsector is not the same as the front sector
-			if (in_area == area_default) in_area = hw_CheckViewArea(seg->v1, seg->v2, seg->frontsector, seg->backsector);
-
-			backsector = hw_FakeFlat(seg->backsector, in_area, true);
-
-			if (hw_CheckClip(seg->sidedef, currentsector, backsector))
-			{
-				if(!doOob && !(seg->sidedef->Flags & WALLF_DITHERTRANS_MID))
-					clipper.SafeAddClipRange(startAngle, endAngle);
-			}
+			// Backsector for polyobj segs is always the containing sector itself
+			backsector = currentsector;
 		}
 	}
 	else
@@ -386,7 +433,7 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 		{
 			if (multithread)
 			{
-				jobQueue.AddJob(RenderJob::WallJob, seg->Subsector, seg);
+				jobQueue.AddJob(RenderJob::WallJob, seg->Subsector, seg, isculled);
 			}
 			else
 			{
@@ -394,7 +441,7 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 				HWWallDispatcher disp(this);
 				SetupWall.Clock();
 				wall.sub = seg->Subsector;
-				wall.Process(&disp, seg, currentsector, backsector);
+				wall.Process(&disp, seg, currentsector, backsector, isculled);
 				rendered_lines++;
 				SetupWall.Unclock();
 			}
@@ -578,9 +625,17 @@ void HWDrawInfo::RenderThings(subsector_t * sub, sector_t * sector)
 		FIntCVar *cvar = thing->GetInfo()->distancecheck;
 		if (cvar != nullptr && *cvar >= 0)
 		{
-			double dist = (thing->Pos() - vp.Pos).LengthSquared();
+			double dist = (thing->Pos() - (vp.bDoOob ? vp.OffPos : vp.Pos)).LengthSquared();
 			double check = (double)**cvar;
 			if (dist >= check * check)
+			{
+				continue;
+			}
+		}
+		if (r_distance_cull_type > 0)
+		{
+			double dist2 = (thing->Pos() - (vp.bDoOob ? vp.OffPos : vp.Pos)).LengthSquared();
+			if (dist2 >= vp.culldistsq)
 			{
 				continue;
 			}
@@ -644,6 +699,14 @@ void HWDrawInfo::RenderParticles(subsector_t *sub, sector_t *front)
 		DVisualThinker *sp = sub->sprites[i];
 		if (!sp || sp->ObjectFlags & OF_EuthanizeMe)
 			continue;
+		if (r_distance_cull_type > 0)
+		{
+			double dist = (sp->PT.Pos - (Viewpoint.bDoOob ? Viewpoint.OffPos : Viewpoint.Pos)).LengthSquared();
+			if (dist >= Viewpoint.culldistsq)
+			{
+				continue;
+			}
+		}
 		if (mClipPortal)
 		{
 			int clipres = mClipPortal->ClipPoint(sp->PT.Pos.XY());
@@ -655,6 +718,14 @@ void HWDrawInfo::RenderParticles(subsector_t *sub, sector_t *front)
 	}
 	for (int i = Level->ParticlesInSubsec[sub->Index()]; i != NO_PARTICLE; i = Level->Particles[i].snext)
 	{
+		if (r_distance_cull_type > 0)
+		{
+			double dist2 = (Level->Particles[i].Pos - (Viewpoint.bDoOob ? Viewpoint.OffPos : Viewpoint.Pos)).LengthSquared();
+			if (dist2 >= Viewpoint.culldistsq)
+			{
+				continue;
+			}
+		}
 		if (mClipPortal)
 		{
 			int clipres = mClipPortal->ClipPoint(Level->Particles[i].Pos.XY());

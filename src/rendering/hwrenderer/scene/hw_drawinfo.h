@@ -215,6 +215,7 @@ private:
 
 	void UnclipSubsector(subsector_t *sub);
 
+	bool IsDistanceCulled(seg_t *line);
 	void AddLine(seg_t *seg, bool portalclip);
 	void PolySubsector(subsector_t * sub);
 	void RenderPolyBSPNode(void *node);
