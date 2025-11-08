@@ -74,7 +74,7 @@ EXTERN_CVAR(Float, r_actorspriteshadowdist)
 EXTERN_CVAR(Bool, r_cull_fps) // This had to be a CVAR for menudef greycheck
 EXTERN_CVAR(Bool, r_cull_distance) // This had to be a CVAR for menudef greycheck
 
-CUSTOM_CVAR(Int, r_distance_cull_type, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CUSTOM_CVARD(Int, r_distance_cull_type, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Distance culling type. 0 : Don't cull. 1 : Cull to r_line_distance_cull (without fog). 2 : Cull to r_line_distance_cull (with fog). 4 : Dynamic cull to maintain fps to r_cull_fps_target (with fog). Fog only in hardware renderer.")
 {
 	if (self > 3)
 	{
@@ -88,7 +88,7 @@ CUSTOM_CVAR(Int, r_distance_cull_type, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	r_cull_distance = (self > 0) && (self < 3);
 }
 
-CUSTOM_CVAR(Int, r_cull_fps_target, 90, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CUSTOM_CVARD(Int, r_cull_fps_target, 90, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Target fps for dynamic distance culling. Active only when r_distance_cull_type == 3.")
 {
 	if (self < 1)
 	{
@@ -96,7 +96,7 @@ CUSTOM_CVAR(Int, r_cull_fps_target, 90, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	}
 }
 
-CVAR(Float, r_line_distance_cull, 4000.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVARD(Float, r_line_distance_cull, 4000.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fixed culling distance. Active only when r_distance_cull_type == 1 or 2.")
 
 namespace swrenderer
 {

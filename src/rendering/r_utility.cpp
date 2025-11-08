@@ -132,21 +132,21 @@ CUSTOM_CVARD(Float, r_actorspriteshadowfadeheight, 0.0, CVAR_ARCHIVE | CVAR_GLOB
 	else if (self > 8192.f)
 		self = 8192.f;
 }
-CUSTOM_CVAR(Bool, r_cull_distance, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) // This had to be a CVAR for menudef greycheck
+CUSTOM_CVARD(Bool, r_cull_distance, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Boolean CVAR for menudef graycheck. Sets r_distance_cull_type to 2 (unless it was 1).") // This had to be a CVAR for menudef greycheck
 {
 	if (self && !(r_distance_cull_type > 0 && r_distance_cull_type < 3))
 	{
 		r_distance_cull_type = 2;
 	}
 }
-CUSTOM_CVAR(Bool, r_cull_fps, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) // This had to be a CVAR for menudef greycheck
+CUSTOM_CVARD(Bool, r_cull_fps, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Boolean CVAR for menudef graycheck. Sets r_distance_cull_type to 3.") // This had to be a CVAR for menudef greycheck
 {
 	if (self && r_distance_cull_type != 3)
 	{
 		r_distance_cull_type = 3;
 	}
 }
-CVAR(Color, gl_cullcolor, 0x888888, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVARD(Color, gl_cullcolor, 0x888888, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fog color when r_distance_cull_type > 1. Does not override map fade colors. Hardware renderer only.")
 
 int 			viewwindowx;
 int 			viewwindowy;
