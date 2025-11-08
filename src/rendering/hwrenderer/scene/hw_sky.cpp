@@ -108,9 +108,9 @@ void HWSkyInfo::init(HWDrawInfo *di, sector_t* sec, int skypos, int sky1, PalEnt
 			x_offset[0] = di->Level->hw_sky1pos;
 		}
 	}
-	if (r_distance_cull_type)
+	if (r_distance_cull_type > 1)
 	{
-		fadecolor = PalEntry(gl_cullcolor);
+		fadecolor = FadeColor > 0 ? FadeColor : PalEntry(gl_cullcolor);
 	}
 	else if (di->Level->skyfog > 0)
 	{

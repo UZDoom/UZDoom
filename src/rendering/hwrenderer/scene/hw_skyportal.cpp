@@ -83,11 +83,11 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 
 	if ((di->Level->skyfog>0 && (origin->fadecolor & 0xffffff) != 0) || (r_distance_cull_type > 1))
 	{
-		PalEntry FadeColor = (origin->fadecolor > 0 ? origin->fadecolor : PalEntry(gl_cullcolor));
+		PalEntry FadeColor = origin->fadecolor;
 		if (r_distance_cull_type < 2) FadeColor.a = clamp<int>(di->Level->skyfog, 0, 255);
 		else FadeColor.a = 255;
 
-		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2])
+		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2] && r_distance_cull_type < 2)
 		{
 			float misth = origin->texture[2]->GetDisplayHeight();
 			float myscale = di->Level->hw_skymistyscale;
