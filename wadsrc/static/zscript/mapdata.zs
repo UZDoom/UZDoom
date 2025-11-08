@@ -119,6 +119,7 @@ struct Side native play
 		WALLF_WRAP_MIDTEX	 = 32,	// Like the line counterpart, but only for this side.
 		WALLF_POLYOBJ		 = 64,	// This wall belongs to a polyobject.
 		WALLF_LIGHT_FOG      = 128,	// This wall's Light is used even in fog.
+		WALLF_BLOCKRENDERING = 4096,// Do not render anything on the other side of this line
 	};
 
 	enum EPartFlags

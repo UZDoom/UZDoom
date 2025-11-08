@@ -331,7 +331,9 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 
 	uint8_t ispoly = uint8_t(seg->sidedef->Flags & WALLF_POLYOBJ);
 
-	if (!seg->backsector)
+	// [XA] TODO: replace backsector check with flag check outright;
+	// handle the 1s line case by setting the flag in the map loader
+	if (!seg->backsector || (seg->sidedef->Flags & WALLF_BLOCKRENDERING))
 	{
 		if(!doOob)
 			if (!(seg->sidedef->Flags & WALLF_DITHERTRANS_MID)) clipper.SafeAddClipRange(startAngle, endAngle);

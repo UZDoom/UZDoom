@@ -1187,6 +1187,8 @@ enum
 	WALLF_ABSLIGHTING_MID		= WALLF_ABSLIGHTING_TIER << 1, 	// Mid tier light is absolute instead of relative
 	WALLF_ABSLIGHTING_BOTTOM 	= WALLF_ABSLIGHTING_TIER << 2,	// Bottom tier light is absolute instead of relative
 
+	WALLF_BLOCKRENDERING		= 4096,	// [XA] Do not render any geometry on the other side of this line (similar to 1-sided walls, but only when seeing through this side of the line)
+
 	WALLF_DITHERTRANS			= 8192,	// Render with dithering transparency shader (gets reset every frame)
 	WALLF_DITHERTRANS_TOP		= WALLF_DITHERTRANS << 0,	// Top tier (gets reset every frame)
 	WALLF_DITHERTRANS_MID		= WALLF_DITHERTRANS << 1,	// Mid tier (gets reset every frame)
