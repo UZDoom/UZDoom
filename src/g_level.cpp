@@ -2565,6 +2565,27 @@ AActor* FLevelLocals::SelectActorFromTID(int tid, size_t index, bool clientSide,
 }
 
 //==========================================================================
+// UpdateSidedefRenderFlags
+//
+// [XA] The new WALLF_BLOCKRENDERING flag just exposes the behavior the
+// engine uses internally to cull geometry behind 1-sided lines; rather
+// than have the renderer check for both 1s lines _and_ the flag, just
+// internally set the flag on 1s lines to collapse the checks into one.
+//==========================================================================
+
+void FLevelLocals::UpdateSidedefRenderFlags()
+{
+	for (unsigned int i = 0; i < sides.Size(); ++i)
+	{
+		side_t& side = sides[i];
+		if (side.linedef && !side.linedef->backsector)
+		{
+			side.Flags |= WALLF_BLOCKRENDERING;
+		}
+	}
+}
+
+//==========================================================================
 // IsPointInMap
 //
 // Checks to see if a point is inside the void or not.

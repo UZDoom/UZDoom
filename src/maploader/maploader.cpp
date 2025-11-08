@@ -3023,6 +3023,11 @@ void MapLoader::LoadLevel(MapData *map, const char *lumpname, int position)
 	CalcIndices();
 	PostProcessLevel(checksum);
 
+	// [XA] NOTE: this function is intentionally called _after_ PostProcessLevel,
+	// that way zscript level postprocessors see the "real" values of any sidedef
+	// post-edits as defined in the source map, free of internal aliasing details.
+	Level->UpdateSidedefRenderFlags();
+
 	LoopSidedefs(true);
 
 	SummarizeMissingTextures(missingtex);

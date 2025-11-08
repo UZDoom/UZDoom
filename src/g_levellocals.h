@@ -150,6 +150,7 @@ struct FLevelLocals
 	void ApplyCompatibility();
 	void ApplyCompatibility2();
 	AActor* SelectActorFromTID(int tid, size_t index, bool clientSide, AActor* defactor);
+	void UpdateSidedefRenderFlags();
 
 	void Init();
 
