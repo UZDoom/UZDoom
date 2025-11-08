@@ -83,22 +83,23 @@ jobs:
     - name: Package
       shell: bash
       run: |
-        function fetch() { { curl -L "$3" | tee "$1" | sha1sum ; } && { echo "$2 $1" | sha1sum -c - ; } ; }
+        function fetch() { { curl -L "$3" | tee "$1" | sha256sum ; } && { echo "$2 $1" | sha256sum -c - ; } ; }
 
         cd build
         mkdir package
+        packagename="${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.ghd.outputs.describe }}"
 
         7z a package/licenses.zip ../docs/licenses/*
 
         if [[ "${{ runner.os }}" == 'Windows' ]]; then
 
             fetch oalsoft.zip \
-                7a9871038cb8eb954b4f723c9f86b248f914fc59 \
+                ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6 \
                 https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
             unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
 
             fetch sndfile.zip \
-                610569766aa1c138044a30af43db6ec6195ed164 \
+                2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f \
                 https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
             unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
 
@@ -110,6 +111,10 @@ jobs:
 
             cp ${{ matrix.config.build_type }}/uzdoom.exe ${{ matrix.config.build_type }}/*.pk3 package
 
+            cd package
+            7z a -sdel -r "${packagename}.zip" *
+            cd ..
+
         elif [[ "${{ runner.os }}" == 'macOS' ]]; then
 
             if [[ "${{ matrix.config.build_type }}" != 'Release' ]]; then
@@ -118,6 +123,10 @@ jobs:
             mv package/licenses.zip uzdoom.app
             # copy fm_banks + soundfonts ?
             cp -r uzdoom.app package
+
+            cd package
+            7z a -sdel -r "${packagename}.zip" *
+            cd ..
 
         elif [[ "${{ runner.os }}" == 'Linux' ]]; then
 
@@ -129,13 +138,13 @@ jobs:
             sudo apt-get install libfuse2 # renamed to libfuse2t64 in later releases
 
             fetch appimage-builder \
-                6f83a789f6c47a745b97d1b0b3f1df2e7eea7a09 \
+                4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f \
                 https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
             chmod +x appimage-builder
 
             export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
             ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
-            cp *.AppImage package
+            mv *.AppImage "package/${packagename}.AppImage"
 
             rm package/licenses.zip
 
