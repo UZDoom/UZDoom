@@ -70,7 +70,13 @@
 
 // Use 4500 as the base git save version, since it's higher than the
 // SVN revision ever got.
-#define SAVEVER 4560
+#define SAVEVER 4561
+
+// [XA] "Known" save versions for save-compat patching. Save versions
+// up to (and including) the numbered version will have the patch applied.
+// NOTE: these can generally be removed from the code whenever MINSAVEVER
+// is bumped up beyond this number, since the patch will no longer apply.
+#define SAVEVER_PATCH_BLOCKRENDER 4560
 
 // This is so that derivates can use the same savegame versions without worrying about engine compatibility
 #define GAMESIG "UZDOOM"
