@@ -4,77 +4,64 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: ${{ matrix.config.name }} | ${{ matrix.config.build_type }}
+    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: false
       matrix:
         config:
-        - name: Visual Studio 2022
-          os: windows-2022
+        - name: Windows MSVC
+          os: windows-latest
+          deps_cmdline: choco install tree
           build_type: Release
 
-        - name: Visual Studio 2022
-          os: windows-2022
+        - name: Windows MSVC
+          os: windows-latest
+          deps_cmdline: choco install tree
           build_type: Debug
 
-        - name: macOS
-          os: macos-14
-          deps_cmdline: brew install libvpx molten-vk vulkan-volk
+        - name: MacOS LLVM
+          os: macos-latest
+          deps_cmdline: brew install tree libvpx molten-vk vulkan-volk
           build_type: Release
 
-        - name: macOS
-          os: macos-14
+        - name: MacOS LLVM
+          os: macos-latest
           extra_options: -G Xcode -DDYN_OPENAL=OFF
-          deps_cmdline: brew install libvpx molten-vk vulkan-volk
+          deps_cmdline: brew install tree libvpx molten-vk vulkan-volk
           build_type: Debug
 
-        - name: Linux GCC 9 # oldest version available
-          os: ubuntu-22.04
-          extra_options: -DCMAKE_C_COMPILER=gcc-9 -DCMAKE_CXX_COMPILER=g++-9
-          deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
-          build_type: Debug
-
-        # - name: Linux GCC 12 # last known good
-        #   os: ubuntu-22.04
-        #   extra_options: -DCMAKE_C_COMPILER=gcc-12 -DCMAKE_CXX_COMPILER=g++-12
-        #   deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
-        #   build_type: Debug
-
-        - name: Linux GCC Latest # rolling default, not actually latest
+        - name: Linux GCC
           os: ubuntu-latest
-          extra_options: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
           deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
-          build_type: RelWithDebInfo
+          build_type: Release
 
-        - name: Linux Clang 11 # oldest version available
-          os: ubuntu-22.04
-          extra_options: -DCMAKE_C_COMPILER=clang-11 -DCMAKE_CXX_COMPILER=clang++-11
-          deps_cmdline: sudo apt-get update && sudo apt-get install clang-11 libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
+        - name: Linux GCC
+          os: ubuntu-latest
+          deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
           build_type: Debug
 
-        # - name: Linux Clang 15 # last known good
-        #   os: ubuntu-22.04
-        #   extra_options: -DCMAKE_C_COMPILER=clang-15 -DCMAKE_CXX_COMPILER=clang++-15
-        #   deps_cmdline: sudo apt-get update && sudo apt-get install clang-15 libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
-        #   build_type: Debug
-
-        - name: Linux Clang Latest # rolling default, not actually latest
+        - name: Linux LLVM
           os: ubuntu-latest
           extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
           deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
-          build_type: RelWithDebInfo
+          build_type: Release
+
+        - name: Linux LLVM
+          os: ubuntu-latest
+          extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+          deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
+          build_type: Debug
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install Dependencies
+    - name: Dependencies
       shell: bash
       run: |
         if [[ -n "${{ matrix.config.deps_cmdline }}" ]]; then
           eval ${{ matrix.config.deps_cmdline }}
         fi
-        mkdir build
 
     - name: Git describe
       id: ghd
@@ -83,6 +70,7 @@ jobs:
     - name: Configure
       shell: bash
       run: |
+        mkdir build
         cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} -DPK3_QUIET_ZIPDIR=ON ${{ matrix.config.extra_options }} .
 
     - name: Build
@@ -90,9 +78,9 @@ jobs:
       run: |
         export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
         export MAKEFLAGS=--keep-going
-        cmake --build build --config ${{ matrix.config.build_type }} --parallel 3
+        cmake --build build --config ${{ matrix.config.build_type }} --parallel 4
 
-    - name: Create Package
+    - name: Package
       shell: bash
       run: |
         function fetch() { { curl -L "$3" | tee "$1" | sha1sum ; } && { echo "$2 $1" | sha1sum -c - ; } ; }
@@ -153,15 +141,15 @@ jobs:
 
         fi
 
-    - name: Upload Package
+    - name: Upload
       uses: actions/upload-artifact@v4
       with:
         path: build/package
         name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
 
-    - name: List Build Directory
+    - name: List
       if: always()
       shell: bash
       run: |
         git status
-        ls -lR build
+        tree -pu
