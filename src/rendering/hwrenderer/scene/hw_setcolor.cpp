@@ -98,7 +98,7 @@ void SetFog(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, int 
 
 	if (r_distance_cull_type > 1) // even if fullbright is true
 	{
-		fogdensity = clamp<int> ((int)(19200.0 / r_line_distance_cull), 1, 255); // Let minimum be 1 to set the correct flags
+		fogdensity = clamp<int> ((int)(19200.0 / Level->culldist), 1, 255); // Let minimum be 1 to set the correct flags
 		if (cmap != nullptr && cmap->FadeColor != 0)
 		{
 			fogcolor = cmap->FadeColor;

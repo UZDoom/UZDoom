@@ -970,6 +970,11 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 
 	const int curTic = I_GetTime();
 
+	if (actor == nullptr)
+		I_Error("Tried to render from a null actor.");
+
+	viewPoint.ViewLevel = actor->Level;
+
 	if (r_distance_cull_type > 0) // Best to compute this once per frame instead of once per line
 	{
 		if (r_distance_cull_type < 3)
@@ -988,13 +993,9 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 				viewPoint.culldistsq *= 1.01;
 			}
 		}
+		actor->Level->culldist = sqrt(viewPoint.culldistsq);
 	}
 	viewPoint.LastFrameTime = screen->FrameTime;
-
-	if (actor == nullptr)
-		I_Error("Tried to render from a null actor.");
-
-	viewPoint.ViewLevel = actor->Level;
 
 	player_t* player = actor->player;
 	if (player != nullptr && player->mo == actor)
