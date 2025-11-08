@@ -982,11 +982,11 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 			viewPoint.culldistsq = r_line_distance_cull * r_line_distance_cull;
 			if (viewPoint.FieldOfView.Degrees() > 0.0) viewPoint.culldistsq /= viewPoint.FieldOfView.Sin() * viewPoint.FieldOfView.Sin();
 		}
-		else if (!WorldPaused(true))
+		else if (!WorldPaused(true) && viewactive)
 		{
 			if ((screen->FrameTime - viewPoint.LastFrameTime) * i_timescale > 1000.0 / r_cull_fps_target)
 			{
-				viewPoint.culldistsq *= 0.9;
+				if (viewPoint.culldistsq > 1100000.0) viewPoint.culldistsq *= 0.9;
 			}
 			else if (viewPoint.culldistsq < 256000000.0)
 			{

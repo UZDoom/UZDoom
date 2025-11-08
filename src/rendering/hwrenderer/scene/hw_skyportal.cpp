@@ -28,6 +28,13 @@
 
 EXTERN_CVAR(Int, r_distance_cull_type)
 EXTERN_CVAR(Color, gl_cullcolor)
+CUSTOM_CVARD(Int, gl_cull_skyfog, 255, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Sky Fog (1-255) to use when r_distance_cull_type > 1. Overlays over skymist layer. Hardware renderer only.")
+{
+	if (self < 1)
+		self = 1;
+	else if (self > 255)
+		self = 255;
+}
 
 //-----------------------------------------------------------------------------
 //
@@ -85,9 +92,9 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 	{
 		PalEntry FadeColor = origin->fadecolor;
 		if (r_distance_cull_type < 2) FadeColor.a = clamp<int>(di->Level->skyfog, 0, 255);
-		else FadeColor.a = 255;
+		else FadeColor.a = gl_cull_skyfog;
 
-		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2] && r_distance_cull_type < 2)
+		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2])
 		{
 			float misth = origin->texture[2]->GetDisplayHeight();
 			float myscale = di->Level->hw_skymistyscale;
