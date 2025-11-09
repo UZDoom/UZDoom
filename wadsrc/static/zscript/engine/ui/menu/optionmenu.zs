@@ -178,7 +178,7 @@ class OptionMenu : Menu
 			}
 		}
 
-		if (mDesc.mSelectedItem >= 0)
+		if (mDesc.mSelectedItem >= 0 && mDesc.mSelectedItem < mDesc.mItems.Size())
 			UpdateTooltip(mDesc.mItems[mDesc.mSelectedItem].GetTooltip());
 	}
 
@@ -222,7 +222,7 @@ class OptionMenu : Menu
 		int xPad = 10 * CleanXFac_1;
 		int yPad = 5 * CleanYFac_1;
 		int textHeight = mTooltipFont.GetHeight() * CleanYFac_1;
-		
+
 		int xCap, diff;
 		if (Screen.GetAspectRatio() > 16.0 / 9.0)
 		{
@@ -234,7 +234,7 @@ class OptionMenu : Menu
 			xCap = Screen.GetWidth();
 		}
 		xCap -= 11 * CleanXFac_1;
-		
+
 		int width = xCap - (indent - diff);
 		BrokenLines bl = mTooltipFont.BreakLines(StringTable.Localize(text), (width - xPad * 2) / CleanXFac_1);
 		int height = textHeight * bl.Count() + yPad * 2;
@@ -261,7 +261,7 @@ class OptionMenu : Menu
 					space = Abs(curY) - yPad - CleanXFac_1;
 					curY = CleanXFac_1;
 				}
-				
+
 				maxOffset = int(Ceil(double(space) / textHeight));
 				height -= textHeight * maxOffset;
 				if (mOptionValueTooltipScrollTimer <= 0.0)
@@ -923,11 +923,11 @@ class OptionMenu : Menu
 		GetTooltipArea(box);
 		if (!DrawTooltips)
 			box.y = Screen.GetHeight();
-		
+
 		int ytop = y + mDesc.mScrollTop * 8 * CleanYfac_1;
 		LastRow = box.y - OptionHeight() * CleanYfac_1;
 		int rowheight = OptionMenuSettings.mLinespacing * CleanYfac_1 + 1;
-		
+
 		int _MaxItems = (LastRow - y) / rowheight + 1;
 		bool resized = _MaxItems != MaxItems;
 		MaxItems = _MaxItems;
