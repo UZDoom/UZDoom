@@ -99,6 +99,7 @@ void FTextureManager::DeleteAll()
 	FirstTextureForFile.Clear();
 	memset (HashFirst, -1, sizeof(HashFirst));
 	DefaultTexture.SetInvalid();
+	WhiteTexture.SetInvalid();
 
 	BuildTileData.Clear();
 	tmanips.Clear();
@@ -1235,6 +1236,7 @@ void FTextureManager::AddTextures(void (*progressFunc_)(), void (*checkForHacks)
 	FirstTextureForFile.Push(Textures.Size());
 
 	DefaultTexture = CheckForTexture ("-NOFLAT-", ETextureType::Override, 0);
+	WhiteTexture = CheckForTexture ("-WHITE-", ETextureType::Override, 0);
 
 	InitPalettedVersions();
 	AdjustSpriteOffsets();
