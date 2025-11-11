@@ -1,0 +1,5195 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: no nb\n"
+
+msgid "PRESSKEY"
+msgstr "Trykk på en tast."
+
+msgid "SECRETMESSAGE"
+msgstr "En hemmelighet er avslørt!"
+
+msgid "D_DEVSTR"
+msgstr "Ubrukelig modus PÅ.\n"
+
+msgid "QUITMSG"
+msgstr "Er du sikker på at du vil avslutte dette flotte spillet?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Du kan ikke laste mens du er i et nettspill! \n"
+"\n"
+"Trykk på en tast."
+
+msgid "QLOADNET"
+msgstr ""
+"Du kan ikke hurtiglaste under et nettspill! \n"
+"\n"
+"Trykk på en tast."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Du har ikke valgt en hurtiglagringsplass ennå! \n"
+"\n"
+"Trykk på en tast."
+
+msgid "NEWGAME"
+msgstr ""
+"Du kan ikke starte et nytt spill mens du er i et nettverksspill. \n"
+"\n"
+"Trykk på en tast."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Er du sikker? Dette ferdighetsnivået\n"
+"er ikke i det hele tatt rettferdig.\n"
+"\n"
+"Trykk på Y eller N."
+
+msgid "SWSTRING"
+msgstr ""
+"Dette er shareware-versjonen av Doom.\n"
+"\n"
+"Du må bestille hele trilogien.\n"
+"\n"
+"Trykk på en tast."
+
+msgid "NETEND"
+msgstr ""
+"Du kan ikke avslutte et nettspill!\n"
+"\n"
+"Trykk på en tast."
+
+msgid "ENDGAME"
+msgstr ""
+"Er du sikker på at du vil avslutte spillet? \n"
+"\n"
+"Trykk på Y eller N."
+
+msgid "RAVENQUITMSG"
+msgstr "Er du sikker på at du vil avslutte?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Bare tilgjengelig i den registrerte versjonen"
+
+msgid "DOSY"
+msgstr "(Trykk Y for å avslutte)"
+
+msgid "QUITMSG1"
+msgstr "Vennligst ikke gå, det er flere demoner å skåle!"
+
+msgid "QUITMSG2"
+msgstr "La oss stikke - dette er i ferd med å bli et blodbad!"
+
+msgid "QUITMSG3"
+msgstr "Jeg ville ikke dratt hvis jeg var deg. DOS er mye verre."
+
+msgid "QUITMSG4"
+msgstr "Du prøver å si at du liker DOS bedre enn meg, ikke sant?"
+
+msgid "QUITMSG5"
+msgstr "Ikke gå ennå. Det er en demon rundt hjørnet."
+
+msgid "QUITMSG6"
+msgstr "Neste gang du kommer hit, skal jeg skåle for deg."
+
+msgid "QUITMSG7"
+msgstr "Bare gå. Jeg bryr meg ikke."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr "Vil du slutte? Da har du mistet en åttendedel!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Ikke gå nå, det er en dimensjonal shambler som venter ved DOS-prompten!"
+
+msgid "QUITMSG10"
+msgstr "Kom deg ut herfra og gå tilbake til de kjedelige programmene dine."
+
+msgid "QUITMSG11"
+msgstr "Hvis jeg var sjefen din, ville jeg dødsmatche deg med en gang!"
+
+msgid "QUITMSG12"
+msgstr "Hør her, kompis. Hvis du går nå, mister du dødstallet ditt!"
+
+msgid "QUITMSG13"
+msgstr "Bare gå. Når du kommer tilbake, venter jeg med et balltre."
+
+msgid "QUITMSG14"
+msgstr "Flaks for deg at jeg ikke slår deg for å tenke på å dra."
+
+msgid "QUITMSG15"
+msgstr "Hvor skal du?! Hva med opprøret?"
+
+msgid "QUITMSG16"
+msgstr "Carnage interruptus... For en erting!"
+
+msgid "QUITMSG17"
+msgstr "Men du er håpet... min eneste sjanse!!!"
+
+msgid "QUITMSG18"
+msgstr "Ingen forlater Blackbird."
+
+msgid "QUITMSG19"
+msgstr "Jeg trodde du var annerledes..."
+
+msgid "QUITMSG20"
+msgstr "Greit! Bare drep og løp!"
+
+msgid "QUITMSG21"
+msgstr "Du kan slutte... men du kan ikke gjemme deg..."
+
+msgid "QUITMSG22"
+msgstr "Whaaa, hva er i veien? Sier mamma at det er middag?"
+
+msgid "QUITMSG23"
+msgstr "Ikke gi opp nå, det er fortsatt flemoider på frifot!"
+
+msgid "QUITMSG24"
+msgstr "Ikke gi opp - flemoidene vil få overtaket!"
+
+msgid "QUITMSG25"
+msgstr "Ikke gå nå. Vi trenger din hjelp!"
+
+msgid "QUITMSG26"
+msgstr "Jeg håper du bare tar en pause for Chex(R) party mix."
+
+msgid "QUITMSG27"
+msgstr "Ikke gi opp nå! Vi trenger din hjelp!"
+
+msgid "QUITMSG28"
+msgstr "Ikke forlat Den intergalaktiske kornføderasjonen!"
+
+msgid "QUITMSG29"
+msgstr "Den ekte Chex(R) kriger ville ikke gitt opp så fort!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Du har en henting"
+
+msgid "PD_ANY"
+msgstr "Hvilken som helst nøkkel åpner denne døren"
+
+msgid "PD_ANYOBJ"
+msgstr "Hvilken som helst nøkkel vil aktivere dette objektet"
+
+msgid "PD_ALL3"
+msgstr "Du trenger alle tre nøklene for å åpne denne døren"
+
+msgid "PD_ALL3O"
+msgstr "Du trenger alle tre nøklene for å aktivere dette objektet"
+
+msgid "PD_ALL6"
+msgstr "Du trenger alle seks nøklene for å åpne denne døren"
+
+msgid "PD_ALL6O"
+msgstr "Du trenger alle seks nøklene for å aktivere dette objektet"
+
+msgid "PD_ALLKEYS"
+msgstr "Du trenger alle nøklene"
+
+msgid "HUSTR_MSGU"
+msgstr "[Melding ikke sendt]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Du mumler for deg selv"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Hvem er der?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Du skremmer deg selv"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Du begynner å rave"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "You've lost it..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Melding sendt]"
+
+msgid "STSTR_MUS"
+msgstr "Music Change"
+
+msgid "STSTR_NOMUS"
+msgstr "Umulig valg"
+
+msgid "STSTR_DQDON"
+msgstr "Gradløshetsmodus PÅ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Gradløshetsmodus AV"
+
+msgid "STSTR_DQD2ON"
+msgstr "Ultimativ gradløshetsmodus PÅ"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Ultimativ gradløshetsmodus AV"
+
+msgid "STSTR_KFAADDED"
+msgstr "Veldig glad ammunisjon lagt til"
+
+msgid "STSTR_FAADDED"
+msgstr "Ammo (ingen nøkler) Lagt til"
+
+msgid "STSTR_NCON"
+msgstr "Ingen klipping-modus PÅ"
+
+msgid "STSTR_NCOFF"
+msgstr "Ingen klippemodus AV"
+
+msgid "STSTR_NC2ON"
+msgstr "No Clipping Mode 2 PÅ"
+
+msgid "STSTR_NC2OFF"
+msgstr "Ingen klippemodus 2 AV"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap eller Lite-forsterker"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Oppstart aktivert"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... suger ikke - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Endre nivå ..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Buddha-modus PÅ"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Buddha-modus AV"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Ultimativ Buddha-modus PÅ"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Ultimativ Buddha-modus AV"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Strøm PÅ"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Slå AV"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Full helse"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Alle taster"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Lyd feilsøking PÅ"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Lyd feilsøking AV"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Prøver du å jukse? Nå dør du!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Juksemaker - du fortjener ikke våpen"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Ticker PÅ"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Ticker AV"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Du har det"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Du har Midas Touch, baby"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Du har greiene!"
+
+msgid "TXT_FREEZEON"
+msgstr "Frysemodus PÅ"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Frysemodus AV"
+
+msgid "TXT_STRANGE"
+msgstr "Du føler deg rar..."
+
+msgid "TXT_STRANGER"
+msgstr "Du føler deg enda merkeligere."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Du føler deg som deg selv igjen."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Blystøvler PÅ"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Blystøvler AV"
+
+msgid "TXT_LIGHTER"
+msgstr "Du føler deg lettere"
+
+msgid "TXT_GRAVITY"
+msgstr "Tyngdekraften tynger deg ned"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "No Target PÅ"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "No Target AV"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "\"Skjelv av frykt!\""
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Ikke mer Ogre Armor"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "chasecam PÅ"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "chasecam AV"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 skurk drept"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d skurker drept"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 monster drept"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d monstre drept"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "Kan ikke gjenoppstå. Spilleren er ikke lenger koblet til kroppen sin."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Alle artefakter!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Hva vil du drepe utenfor et spill?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Frosne spilleregenskaper slått av"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Følgemodus AV"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Følgemodus PÅ"
+
+msgid "AMSTR_GRIDON"
+msgstr "Rutenett PÅ"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Rutenett AV"
+
+msgid "AMSTR_TEXON"
+msgstr "Teksturmodus PÅ"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Teksturmodus AV"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Markert punkt"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Alle merker fjernet"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Fraglimit treff."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Tidsbegrensningen er nådd."
+
+msgid "SPREEKILLSELF"
+msgstr "%o så bra ut helt til %g tok livet av seg!"
+
+msgid "SPREEOVER"
+msgstr "%o's drapsturné ble avsluttet av %k."
+
+msgid "SPREE5"
+msgstr "%k er på drapsturné!"
+
+msgid "SPREE10"
+msgstr "%k går amok!"
+
+msgid "SPREE15"
+msgstr "%k dominerer!"
+
+msgid "SPREE20"
+msgstr "%k er ustoppelig!"
+
+msgid "SPREE25"
+msgstr "%k er guddommelig!"
+
+msgid "MULTI2"
+msgstr "Dobbeltdrap!"
+
+msgid "MULTI3"
+msgstr "Multidrap!"
+
+msgid "MULTI4"
+msgstr "Ultra drep!"
+
+msgid "MULTI5"
+msgstr "Monster drep!"
+
+msgid "SCORE_BONUS"
+msgstr ""
+
+msgid "SCORE_COLOR"
+msgstr "Farge"
+
+msgid "SCORE_SECRET"
+msgstr "Hemmelig"
+
+msgid "SCORE_NAME"
+msgstr "Navn"
+
+msgid "SCORE_DELAY"
+msgstr "Forsinkelse (ms)"
+
+msgid "SCORE_FRAGS"
+msgstr ""
+
+msgid "SCORE_DEATHS"
+msgstr "Dødsfall"
+
+msgid "SCORE_OTHER"
+msgstr "Andre"
+
+msgid "SCORE_MISSED"
+msgstr "Ubesvarte"
+
+msgid "SCORE_TOTAL"
+msgstr "Totalt"
+
+msgid "SCORE_LVLTIME"
+msgstr "Nivå Tid"
+
+msgid "TXT_IMKILLS"
+msgstr "Drepte"
+
+msgid "TXT_IMITEMS"
+msgstr "Gjenstander"
+
+msgid "TXT_IMSECRETS"
+msgstr "Hemmeligheter"
+
+msgid "TXT_IMTIME"
+msgstr "Tid"
+
+msgid "TXT_IMPAR"
+msgstr ""
+
+msgid "WI_FINISHED"
+msgstr "Ferdig"
+
+msgid "WI_ENTERING"
+msgstr "Går inn"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Går nå inn:"
+
+msgid "AM_MONSTERS"
+msgstr "Monstre:"
+
+msgid "AM_SECRETS"
+msgstr "Hemmeligheter:"
+
+msgid "AM_ITEMS"
+msgstr "Gjenstander:"
+
+msgid "OB_SUICIDE"
+msgstr "%o begår selvmord."
+
+msgid "OB_FALLING"
+msgstr "%o falt for langt."
+
+msgid "OB_CRUSH"
+msgstr "%o ble knust."
+
+msgid "OB_EXIT"
+msgstr "%o prøvde å dra."
+
+msgid "OB_WATER"
+msgstr "%o kan ikke svømme."
+
+msgid "OB_SLIME"
+msgstr "%o muterte."
+
+msgid "OB_LAVA"
+msgstr "%o smeltet."
+
+msgid "OB_BARREL"
+msgstr "%o gikk i lufta."
+
+msgid "OB_SPLASH"
+msgstr "%o sto på feil sted."
+
+msgid "OB_R_SPLASH"
+msgstr "%o burde ha stått tilbake."
+
+msgid "OB_ROCKET"
+msgstr "%o burde ha stått tilbake."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o begår selvmord."
+
+msgid "OB_VOODOO"
+msgstr "%o ble drept av voodooens kraft."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o ble telefragget av %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o ble telefragget."
+
+msgid "OB_DEFAULT"
+msgstr "%o døde."
+
+msgid "OB_MPDEFAULT"
+msgstr "%o ble drept av %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k meier ned en lagkamerat."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k ser ut til å trenge briller."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k får en frag for det andre laget."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k mister enda en venn."
+
+msgid "GOTARMOR"
+msgstr "Plukket opp rustningen."
+
+msgid "GOTMEGA"
+msgstr "Plukket opp mega rustningen!"
+
+msgid "GOTHTHBONUS"
+msgstr "Plukket opp en helsebonus."
+
+msgid "GOTARMBONUS"
+msgstr "Plukket opp en rustningsbonus."
+
+msgid "GOTSTIM"
+msgstr "Plukket opp en stimpack."
+
+msgid "GOTMEDINEED"
+msgstr "Plukket opp en medikit som du virkelig trenger!"
+
+msgid "GOTMEDIKIT"
+msgstr "Plukket opp en medikit."
+
+msgid "GOTSUPER"
+msgstr ""
+
+msgid "GOTBLUECARD"
+msgstr "Plukket opp et blått nøkkelkort."
+
+msgid "GOTYELWCARD"
+msgstr "Plukket opp et gult nøkkelkort."
+
+msgid "GOTREDCARD"
+msgstr "Plukket opp et rødt nøkkelkort."
+
+msgid "GOTBLUESKUL"
+msgstr "Plukket opp en blå hodeskallenøkkel."
+
+msgid "GOTYELWSKUL"
+msgstr "Plukket opp en gul hodeskallenøkkel."
+
+msgid "GOTREDSKUL"
+msgstr "Plukket opp en rød hodeskallenøkkel."
+
+msgid "GOTINVUL"
+msgstr "Usårbarhet!"
+
+msgid "GOTBERSERK"
+msgstr ""
+
+msgid "GOTINVIS"
+msgstr "Delvis usynlighet"
+
+msgid "GOTSUIT"
+msgstr "Strålingsskjermingsdrakt"
+
+msgid "GOTMAP"
+msgstr "Datakart"
+
+msgid "GOTVISOR"
+msgstr "Lysforsterkende visir"
+
+msgid "GOTMSPHERE"
+msgstr ""
+
+msgid "GOTCLIP"
+msgstr "Plukket opp et magasin."
+
+msgid "GOTCLIPBOX"
+msgstr "Plukket opp en eske med kuler."
+
+msgid "GOTROCKET"
+msgstr "Plukket opp en rakett."
+
+msgid "GOTROCKBOX"
+msgstr "Plukket opp en eske med raketter."
+
+msgid "GOTCELL"
+msgstr "Plukket opp en energicelle."
+
+msgid "GOTCELLBOX"
+msgstr "Plukket opp en energipakke."
+
+msgid "GOTSHELLS"
+msgstr "Plukket opp 4 haglpatroner."
+
+msgid "GOTSHELLBOX"
+msgstr "Plukket opp en eske med haglepatroner."
+
+msgid "GOTBACKPACK"
+msgstr "Plukket opp en ryggsekk full av ammunisjon!"
+
+msgid "GOTBFG9000"
+msgstr "Du har BFG9000! Å, ja."
+
+msgid "GOTCHAINGUN"
+msgstr "Du har en maskinpistol!"
+
+msgid "GOTCHAINSAW"
+msgstr "En motorsag! Finn litt kjøtt!"
+
+msgid "GOTLAUNCHER"
+msgstr "Du har rakettkasteren!"
+
+msgid "GOTPLASMA"
+msgstr "Du har plasmapistolen!"
+
+msgid "GOTSHOTGUN"
+msgstr "Du har haglen!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Du har supergeværet!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Plukket opp en pistol."
+
+msgid "BETA_BONUS1"
+msgstr "Du plukket opp en demonisk dolk."
+
+msgid "BETA_BONUS2"
+msgstr "Du plukker opp en hodeskalle."
+
+msgid "BETA_BONUS3"
+msgstr "Du plukker opp et ondt septer."
+
+msgid "BETA_BONUS4"
+msgstr "Du plukker opp en uhellig bibel."
+
+msgid "PD_BLUEO"
+msgstr "Du trenger en blå nøkkel for å aktivere denne gjenstanden"
+
+msgid "PD_REDO"
+msgstr "Du trenger en rød nøkkel for å aktivere dette objektet"
+
+msgid "PD_YELLOWO"
+msgstr "Du trenger en gul nøkkel for å aktivere dette objektet"
+
+msgid "PD_BLUEK"
+msgstr "Du trenger en blå nøkkel for å åpne denne døren"
+
+msgid "PD_REDK"
+msgstr "Du trenger en rød nøkkel for å åpne denne døren"
+
+msgid "PD_YELLOWK"
+msgstr "Du trenger en gul nøkkel for å åpne denne døren"
+
+msgid "PD_BLUECO"
+msgstr "Du trenger et blått kort for å aktivere dette objektet"
+
+msgid "PD_REDCO"
+msgstr "Du trenger et rødt kort for å aktivere dette objektet"
+
+msgid "PD_YELLOWCO"
+msgstr "Du trenger et gult kort for å aktivere dette objektet"
+
+msgid "PD_BLUESO"
+msgstr "Du trenger en blå hodeskalle for å aktivere dette objektet"
+
+msgid "PD_REDSO"
+msgstr "Du trenger en rød hodeskalle for å aktivere dette objektet"
+
+msgid "PD_YELLOWSO"
+msgstr "Du trenger en gul hodeskalle for å aktivere dette objektet"
+
+msgid "PD_BLUEC"
+msgstr "Du trenger et blått kort for å åpne denne døren"
+
+msgid "PD_REDC"
+msgstr "Du trenger et rødt kort for å åpne denne døren"
+
+msgid "PD_YELLOWC"
+msgstr "Du trenger et gult kort for å åpne denne døren"
+
+msgid "PD_BLUES"
+msgstr "Du trenger en blå hodeskalle for å åpne denne døren"
+
+msgid "PD_REDS"
+msgstr "Du trenger en rød hodeskalle for å åpne denne døren"
+
+msgid "PD_YELLOWS"
+msgstr "Du trenger en gul hodeskalle for å åpne denne døren"
+
+msgid "CC_ZOMBIE"
+msgstr "Zombiemann"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Sersjant"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Maskingeværskyt"
+
+msgid "CC_IMP"
+msgstr ""
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Fortapt sjel"
+
+msgid "CC_CACO"
+msgstr "Kacodemon"
+
+msgid "CC_HELL"
+msgstr "Helvetesridder"
+
+msgid "CC_BARON"
+msgstr "Helvetesbaron"
+
+msgid "CC_ARACH"
+msgstr ""
+
+msgid "CC_PAIN"
+msgstr "Smerte Elemental"
+
+msgid "CC_REVEN"
+msgstr "Gjenganger"
+
+msgid "CC_MANCU"
+msgstr ""
+
+msgid "CC_ARCH"
+msgstr "Erkefiende"
+
+msgid "CC_SPIDER"
+msgstr "Edderkopphjernen"
+
+msgid "CC_CYBER"
+msgstr "Kyberdemonen"
+
+msgid "CC_HERO"
+msgstr "Vår helt"
+
+msgid "FN_SHOTGUN"
+msgstr "Sersjant"
+
+msgid "FN_HEAVY"
+msgstr "Maskingeværskyt"
+
+msgid "FN_SPECTRE"
+msgstr "Spøkelse"
+
+msgid "FN_SPIDER"
+msgstr "Edderkopphjerne"
+
+msgid "FN_CYBER"
+msgstr "Kyberdemon"
+
+msgid "FN_WOLFSS"
+msgstr "Nazist"
+
+msgid "FN_DOG"
+msgstr "Hund"
+
+msgid "TAG_FIST"
+msgstr "Knokejern"
+
+msgid "TAG_CHAINSAW"
+msgstr "Motorsag"
+
+msgid "TAG_PISTOL"
+msgstr ""
+
+msgid "TAG_SHOTGUN"
+msgstr "Haglgevær"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Super-Haglgevær"
+
+msgid "TAG_CHAINGUN"
+msgstr "Maskinpistol"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Rakettkaster"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Plasmagevær"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Kuler"
+
+msgid "AMMO_SHELLS"
+msgstr "Haglepatroner"
+
+msgid "AMMO_ROCKETS"
+msgstr "Raketter"
+
+msgid "AMMO_CELLS"
+msgstr "Energiceller"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o trodde @[pro_dk] så et arachnotron."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o trodde @[pro_dk] så en erkefiende."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o trodde @[pro_dk] så en helvetesbaron"
+
+msgid "OB_STEALTHCACO"
+msgstr "%o trodde @[pro_dk] så en kakodemon."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o trodde @[pro_dk] så en maskingeværskyt."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o trodde @[pro_dk] så en demon."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o trodde @[pro_dk] så en helvetesridder."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o trodde @[pro_dk] så en imp."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o trodde @[pro_dk] så en mancubus."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o trodde @[pro_dk] så en gjenganger."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o trodde @[pro_dk] så en sersjant."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o trodde @[pro_dk] så en zombiemann."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o ble slått av en gjenganger."
+
+msgid "OB_IMPHIT"
+msgstr "%o ble kuttet av en imp."
+
+msgid "OB_CACOHIT"
+msgstr "%o kom for nær en kakodemon."
+
+msgid "OB_DEMONHIT"
+msgstr "%o ble bitt av en demon."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o ble spist av et spøkelse."
+
+msgid "OB_BARONHIT"
+msgstr "%o ble revet opp av en helvetesbaron."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o ble sløyet av en helvetesridder."
+
+msgid "OB_ZOMBIE"
+msgstr "%o ble drept av en zombiemann."
+
+msgid "OB_SHOTGUY"
+msgstr "%o ble skutt av en sersjant."
+
+msgid "OB_VILE"
+msgstr "%o ble brent av en erkefiende."
+
+msgid "OB_UNDEAD"
+msgstr "%o klarte ikke å unngå en gjengangers ildkule."
+
+msgid "OB_FATSO"
+msgstr "%o ble knust av en mancubus."
+
+msgid "OB_CHAINGUY"
+msgstr "%o ble perforert av en chaingunner."
+
+msgid "OB_SKULL"
+msgstr "%o ble skremt av en fortapt sjel."
+
+msgid "OB_IMP"
+msgstr "%o ble brent av en imp."
+
+msgid "OB_CACO"
+msgstr "%o ble slått av en kakodemon."
+
+msgid "OB_BARON"
+msgstr "%o ble forslått av en helvetesbaron."
+
+msgid "OB_KNIGHT"
+msgstr "Jeg ble sprettet opp av en helvetesridder."
+
+msgid "OB_SPIDER"
+msgstr "%o sto i ærefrykt for edderkoppdemonen."
+
+msgid "OB_BABY"
+msgstr "%o ble sprengt av et arachnotron."
+
+msgid "OB_CYBORG"
+msgstr "%o ble sprutet av en kyberdemon."
+
+msgid "OB_WOLFSS"
+msgstr "Jeg møtte en nazist."
+
+msgid "OB_DOG"
+msgstr "%o ble maltraktert av en hund."
+
+msgid "OB_MPFIST"
+msgstr "%o tygget på %ks knyttneve."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o ble klippet over av %ks motorsag."
+
+msgid "OB_MPPISTOL"
+msgstr "%o ble kilt av %ks ertebøsse."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o tygget på %ks boomstick."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o ble skutt med %ks super-haglgevær."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o ble meiet ned av %ks maskinpistol."
+
+msgid "OB_MPROCKET"
+msgstr "%o red på %ks rakett."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o unngikk nesten %ks rakett."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o ble smeltet av %ks plasmakanon."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o ble splintret av %ks BFG."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o kunne ikke gjemme seg for %ks BFG."
+
+msgid "OB_RAILGUN"
+msgstr "%o ble skutt av %k."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o ble brent av %ks BFG."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Blå nøkkel"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Gul nøkkel"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Grønn nøkkel"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Kvartskolbe"
+
+msgid "TXT_ARTIFLY"
+msgstr "Vredens vinger"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Uovervinnelighetens ring"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Maktens bok"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Skyggesfære"
+
+msgid "TXT_ARTIEGG"
+msgstr ""
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Mystisk urne"
+
+msgid "TXT_ARTITORCH"
+msgstr "Fakkel"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "De eldgamles tidsinnstilte bombe"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Kaosinnretning"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Krystallflaske"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Posen som holder"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Sølvskjold"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Fortryllet skjold"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Kartrulle"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Tryllestav-krystall"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Krystallgeode"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Mace-kuler"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Haug med muskettkuler"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Eteriske piler"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Kogger av eteriske piler"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Klo-kule"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Energikule"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Mindre runer"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Store runer"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Flammekule"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Inferno-kule"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Gullstav"
+
+msgid "TXT_WPNMACE"
+msgstr "Ildsted"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Eterisk armbrøst"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Drageklo"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Helvetesstav"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Føniksstaven"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Nekromantens hansker"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Du trenger en blå nøkkel for å åpne denne døren"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Du trenger en grønn nøkkel for å åpne denne døren"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Du trenger en gul nøkkel for å åpne denne døren"
+
+msgid "FN_CHICKEN"
+msgstr "Kylling"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Vardrage"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Sabreklo"
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr ""
+
+msgid "FN_IRONLICH"
+msgstr "Jernlich"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Udød kriger"
+
+msgid "FN_MINOTAUR"
+msgstr "Maulotaur"
+
+msgid "FN_MUMMY"
+msgstr ""
+
+msgid "FN_MUMMYLEADER"
+msgstr ""
+
+msgid "FN_SNAKE"
+msgstr ""
+
+msgid "FN_WIZARD"
+msgstr "Trollmann"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Tryllestavkrystaller"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Eteriske piler"
+
+msgid "AMMO_BLASTER"
+msgstr "Klo-kuler"
+
+msgid "AMMO_MACE"
+msgstr "Ildsted-kuler"
+
+msgid "AMMO_SKULLROD"
+msgstr "Helvetesstav-runer"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Flammekuler"
+
+msgid "TAG_STAFF"
+msgstr "Stav"
+
+msgid "TAG_GOLDWAND"
+msgstr "Alvestav"
+
+msgid "OB_CHICKEN"
+msgstr "%o ble hakket i hjel."
+
+msgid "OB_BEAST"
+msgstr "%o ble forkullet av en vardrage."
+
+msgid "OB_CLINK"
+msgstr "%o ble kuttet av en sabelklo."
+
+msgid "OB_DSPARIL1"
+msgstr "%o ble skåldet av D'Sparils slange."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o ble tygd opp av D'Sparils slange."
+
+msgid "OB_DSPARIL2"
+msgstr "%o var ingen match for D'Sparil."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o ble slått ned av D'Sparil."
+
+msgid "OB_HERETICIMP"
+msgstr "%o ble arret av en gargoyle."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o ble hakket av en gargoyle."
+
+msgid "OB_IRONLICH"
+msgstr "%o ble knust av en jernlich."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o fikk nærkontakt med en jernlich."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o ble hugget av en udød kriger."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o ble drept av en levende død kriger."
+
+msgid "OB_MINOTAUR"
+msgstr "%o ble sprengt til aske av en Maulotaur."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o ble knust av en maulotaur."
+
+msgid "OB_MUMMY"
+msgstr "%o ble knust av en golem."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o ble skreket i hjel av en nitrogolem."
+
+msgid "OB_SNAKE"
+msgstr "%o ble rystet av en ophidian."
+
+msgid "OB_WIZARD"
+msgstr "%o ble forbannet av en trollmann."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o ble palpert av en trollmann."
+
+msgid "OB_MPSTAFF"
+msgstr "%o ble staffet av %k."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o fikk støt av %ks hansker."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o vinket farvel til %ks alvestav."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o ble truffet av %ks eteriske armbrøst."
+
+msgid "OB_MPBLASTER"
+msgstr "%o fikk en ny en av %ks drageklo."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o ble sendt til helvete av %ks helvetesstav."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o ble svidd til aske av %ks føniksstav."
+
+msgid "OB_MPMACE"
+msgstr "%o ble kastet av %ks ildkule."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o ble klappet av %ks ladede stav."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o ble tappet for blod av %ks hansker."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o ble angrepet av %ks alvestav."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o ble truffet av %ks eteriske armbrøst."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o ble revet i filler av %ks drageklo."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k helte helvetesstaven over %o."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o ble brent ned av %ks føniksstav."
+
+msgid "OB_MPPMACE"
+msgstr "%o ble knust av %ks gigantiske muskatblomstkule."
+
+msgid "TXT_MANA_1"
+msgstr "Blå Mana"
+
+msgid "TXT_MANA_2"
+msgstr "Grønn Mana"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Kombinert mana"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Stålnøkkel"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Hulenøkkel"
+
+msgid "TXT_KEY_AXE"
+msgstr "Økse-nøkkel"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Ildnøkkel"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Smaragdnøkkel"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Dungeon-nøkkel"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Sølvnøkkel"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Rustet nøkkel"
+
+msgid "TXT_KEY_HORN"
+msgstr "Horn-nøkkel"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Sumpnøkkel"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Slottsnøkkel"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Forsvarerens ikon"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Mørk tjener"
+
+msgid "TXT_ARTIEGG2"
+msgstr ""
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Forvisningsanordning"
+
+msgid "TXT_ARTISPEED"
+msgstr "Støvler av fart"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Krater av makt"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Dragehud-bindinger"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Frastøtelsesskive"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Mystic Ambit-besvergelse"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Yoricks hodeskalle"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "D'Sparils hjerte"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Rubinplaneten"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdplaneten"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdplaneten"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Safirplaneten"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Safirplaneten"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Flammemaske"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Glaive segl"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Hellig relikvie"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Magusens segl"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Klokkeutstyr"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Du kan ikke bruke dette her"
+
+msgid "TXT_ARMOR1"
+msgstr "Nettrustning"
+
+msgid "TXT_ARMOR2"
+msgstr "Falkeskjold"
+
+msgid "TXT_ARMOR3"
+msgstr "Platinahjelm"
+
+msgid "TXT_ARMOR4"
+msgstr "Amulett av beskyttelse"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Timons øks"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Gjengjeldelsens hammer"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Quietus samlet"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Slangestav"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Ildstorm"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Wraithverge samlet"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Frostskår"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Dødens bue"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Bloodscourge samlet"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "En våpendel! Dette er lykkedagen din!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Segment av Quietus"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Segment av Wraithverge"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Segment av Bloodscourge"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Du trenger stålnøkkelen"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Du trenger hulenøkkelen"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Du trenger øksenøkkelen"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Du trenger Ildnøkkelen"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Du trenger smaragdnøkkelen"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Du trenger fangehullsnøkkelen"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Du trenger sølvnøkkelen"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Du trenger den rustne nøkkelen"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Du trenger Horn-nøkkelen"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Du trenger Sump-nøkkelen"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Du trenger slottsnøkkelen"
+
+msgid "FN_FIREDEMON"
+msgstr ""
+
+msgid "FN_DEMON1"
+msgstr "Slangen"
+
+msgid "FN_ETTIN"
+msgstr ""
+
+msgid "FN_CENTAUR"
+msgstr "Kentaur"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Slakttaur"
+
+msgid "FN_BISHOP"
+msgstr "Biskop"
+
+msgid "FN_ICEGUY"
+msgstr ""
+
+msgid "FN_SERPENT"
+msgstr ""
+
+msgid "FN_WRAITH"
+msgstr ""
+
+msgid "FN_DRAGON"
+msgstr "Døden Wyvern"
+
+msgid "FN_KORAX"
+msgstr ""
+
+msgid "FN_FBOSS"
+msgstr ""
+
+msgid "FN_MBOSS"
+msgstr ""
+
+msgid "FN_CBOSS"
+msgstr ""
+
+msgid "FN_HERESIARCH"
+msgstr "Heresiark"
+
+msgid "AMMO_MANA1"
+msgstr "Blå Mana"
+
+msgid "AMMO_MANA2"
+msgstr "Grønn Mana"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Mace of Contrition"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Slangestav"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Ildstorm"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Wraithverge"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Pigghansker"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Timons øks"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Gjengjeldelsens hammer"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr ""
+
+msgid "TAG_MWEAPWAND"
+msgstr "Safirstaven"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Frostskår"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Dødens buer"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr ""
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Frastøtelsens skive"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Dragehud-bindinger"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Krater av makt"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Giftsky-flechette"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Tidsbombe Flechette"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Granat Flechette"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr ""
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Forsvarerens ikon"
+
+msgid "TAG_ARTIPORK"
+msgstr ""
+
+msgid "TAG_ARTISPEED"
+msgstr "Støvler av fart"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Mørk tjener"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Forvisningsinnretning"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Yoricks hodeskalle"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "D'Sparils hjerte"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Rubinplaneten"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdplaneten (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdplaneten (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Safirplaneten (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Safirplaneten (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Flammemaske"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Glaive segl"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Hellig relikvie"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Magusens segl"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Jernutstyr"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Utstyr av messing"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Utstyr av messing og jern"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Utstyr av sølv og messing"
+
+msgid "OB_FIREDEMON"
+msgstr "%o smakte en Afrits ild."
+
+msgid "OB_DEMON1"
+msgstr "%o ble skåldet av en slange."
+
+msgid "OB_DEMON2"
+msgstr "%o ble forgiftet av en slange."
+
+msgid "OB_ETTIN"
+msgstr "%o ble knust av en Ettin."
+
+msgid "OB_CENTAUR"
+msgstr "%o ble kuttet opp av en Kentaur."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o ble kuttet opp av en Slakttaur."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o ble truffet av en Slakttaurs ildkule."
+
+msgid "OB_BISHOP"
+msgstr "%o bukket under for en Biskops mørke kraft."
+
+msgid "OB_ICEGUY"
+msgstr "%o ble frosset fast av en Wendigo."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o ble maltraktert av en Stalker."
+
+msgid "OB_SERPENT"
+msgstr "%o ble smeltet av en Stalker."
+
+msgid "OB_WRAITH"
+msgstr "%o ble forkullet av en Reiver."
+
+msgid "OB_WRAITHHIT"
+msgstr "%o fikk %p liv stjålet av en Reiver."
+
+msgid "OB_DRAGON"
+msgstr "%o ble brent opp av en Døden Wyvern."
+
+msgid "OB_KORAX"
+msgstr "%o ble feid fra brettet av Korax."
+
+msgid "OB_FBOSS"
+msgstr "%o ble drept av Zedek."
+
+msgid "OB_MBOSS"
+msgstr "%o kunne ikke absorbere Menelkirs Mana."
+
+msgid "OB_CBOSS"
+msgstr "%o ble døpt av Traductus."
+
+msgid "OB_HERESIARCH"
+msgstr "%o fikk %p bein rullet av Heresiark."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o ble slått til mos av %ks bare never."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o fikk øksa av %k."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%o fikk %p hode knust av %ks hammer."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o's sjel ble smidd på nytt av %ks hammer."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o ble brakt til taushet av %ks mektige Quietus."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o ble slått i ansiktet av %k."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o ble bitt av %ks slangestav."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o ble kvalt av %ks slangestav."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o ble opplyst av %ks flammer."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o ble renset av %ks Wraithverge."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o fikk en safirstråle for mye fra %k."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o ble forvandlet til en iskald fyr av %k."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o fikk en sjokkerende åpenbaring fra %k."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o ble utslettet fra universets overflate av %ks Bloodscourge."
+
+msgid "TXT_METALARMOR"
+msgstr "Du plukket opp metallrustningen."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Du plukket opp lærrustningen."
+
+msgid "TXT_MEDPATCH"
+msgstr "Du plukket opp en Med-patch."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Du plukket opp det medisinske settet."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Du plukket opp Kirurgi-settet."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Du plukket opp kartet."
+
+msgid "TXT_BELDINSRING"
+msgstr "Du plukket opp ringen."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Du plukket opp offerbegeret."
+
+msgid "TXT_EAR"
+msgstr "Du plukket opp øret."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Du plukket opp den ødelagte kraftkoblingen."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Du plukket opp Skygge-rustningen."
+
+msgid "TXT_ENVSUIT"
+msgstr "Du plukket opp miljødrakten."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Du plukket opp vaktuniformen."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Du plukket opp offisersuniformen."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Du plukket opp delene til flammekasteren."
+
+msgid "TXT_REPORT"
+msgstr "Du plukket opp rapporten."
+
+msgid "TXT_INFO"
+msgstr "Du plukket opp informasjonen."
+
+msgid "TXT_TARGETER"
+msgstr "Du plukket opp Targeteren."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Du plukket opp kommunikatoren."
+
+msgid "TXT_COIN"
+msgstr "Du plukket opp mynten."
+
+msgid "TXT_XGOLD"
+msgstr "Du plukket opp %d gull."
+
+msgid "TXT_BEACON"
+msgstr "Du plukket opp Teleporter-signalet."
+
+msgid "TXT_DEGNINORE"
+msgstr "Du plukket opp Degnin-malmen."
+
+msgid "TXT_SCANNER"
+msgstr "Du plukket opp skanneren."
+
+msgid "TXT_NEEDMAP"
+msgstr "Skanneren virker ikke uten et kart!\n"
+
+msgid "TXT_PRISONPASS"
+msgstr "Du plukket opp fengselspasset."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Du plukket opp armbrøsten."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Du plukket opp stormgeværet."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Du plukket opp mini-missilkasteren."
+
+msgid "TXT_FLAMER"
+msgstr "Du plukket opp flammekasteren."
+
+msgid "TXT_MAULER"
+msgstr "Du plukket opp mauleren."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Du plukket opp granatkasteren."
+
+msgid "TXT_SIGIL"
+msgstr "Du plukket opp SIGIL."
+
+msgid "TXT_BASEKEY"
+msgstr "Du plukket opp basenøkkelen."
+
+msgid "TXT_GOVSKEY"
+msgstr "Du plukket opp regjeringsnøkkelen."
+
+msgid "TXT_PASSCARD"
+msgstr "Du plukket opp adgangskortet."
+
+msgid "TXT_IDBADGE"
+msgstr "Du plukket opp ID-skiltet."
+
+msgid "TXT_PRISONKEY"
+msgstr "Du plukket opp Fengselsnøkkelen."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Du plukket opp den avkuttede hånden."
+
+msgid "TXT_POWER1KEY"
+msgstr "Du plukket opp Power1-nøkkelen."
+
+msgid "TXT_POWER2KEY"
+msgstr "Du plukket opp Power2-nøkkelen."
+
+msgid "TXT_POWER3KEY"
+msgstr "Du plukket opp Power3-nøkkelen."
+
+msgid "TXT_GOLDKEY"
+msgstr "Du plukket opp Gullnøkkelen."
+
+msgid "TXT_IDCARD"
+msgstr "Du plukket opp ID-kortet."
+
+msgid "TXT_SILVERKEY"
+msgstr "Du plukket opp sølvnøkkelen."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Du plukket opp Oracle-nøkkelen."
+
+msgid "TXT_MILITARYID"
+msgstr "Du plukket opp den militære ID-en."
+
+msgid "TXT_ORDERKEY"
+msgstr "Du plukket opp Bestillingsnøkkelen."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Du plukket opp Lagernøkkelen."
+
+msgid "TXT_BRASSKEY"
+msgstr "Du plukket opp messingnøkkelen."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Du plukket opp den røde krystallnøkkelen."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Du plukket opp den blå krystallnøkkelen."
+
+msgid "TXT_CHAPELKEY"
+msgstr "Du plukket opp kapellnøkkelen."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Du plukket opp Katakomb-nøkkelen."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Du plukket opp Sikkerhetsnøkkelen."
+
+msgid "TXT_COREKEY"
+msgstr "Du plukket opp Kjernenøkkelen."
+
+msgid "TXT_MAULERKEY"
+msgstr "Du plukket opp Mauler-nøkkelen."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Du plukket opp fabrikknøkkelen."
+
+msgid "TXT_MINEKEY"
+msgstr "Du plukket opp Gruvenøkkelen."
+
+msgid "TXT_NEWKEY5"
+msgstr "Du plukket opp den nye nøkkelen5."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Du plukket opp Orakelpasset."
+
+msgid "TXT_HEGRENADES"
+msgstr "Du plukket opp HE-granaten."
+
+msgid "TXT_PHGRENADES"
+msgstr "Du plukket opp fosforgranaten."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Du plukket opp magasinet med kuler."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Du plukket opp esken med kuler."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Du plukket opp minirakettene."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Du plukket opp kassen med missiler."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Du plukket opp energikapselen."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Du plukket opp energipakken."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Du plukket opp giftboltene."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Du plukket opp de elektriske boltene."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Du plukket opp ammunisjonsvesken."
+
+msgid "MSG_TALISMANRED"
+msgstr "Du har en følelse av at den ikke skulle røres..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Uansett hva det er, hører det ikke hjemme i denne verden..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Det må gjøre noe..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Du har superkrefter!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Du har ikke nøkkelen"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Du trenger et passerkort"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Du trenger en passerkortnøkkel for å åpne denne døren."
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Du trenger et ID-kort"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Du har ikke nøkkelen til fengselet."
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Håndavtrykk finnes ikke i filen"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Du trenger gullnøkkelen"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Du trenger en ID-badge"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Du trenger en ID-badge for å åpne denne døren"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Du trenger sølvnøkkelen"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Du trenger messingnøkkelen"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Du trenger den røde krystallen"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Du trenger den blå krystallen"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Dette området er bare tilgjengelig i salgsversjonen av Strife."
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Det ser ikke ut til å virke"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Du trenger begeret!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Du trenger Orakelpasset!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Dolk"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Armbrøst"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Armbrøst"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Stormgevær"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Mini rakettkaster"
+
+msgid "TAG_FLAMER"
+msgstr "Flammekaster"
+
+msgid "TAG_MAULER1"
+msgstr ""
+
+msgid "TAG_MAULER2"
+msgstr ""
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Granatkaster"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Granatkaster"
+
+msgid "TAG_SIGIL"
+msgstr ""
+
+msgid "TAG_COIN"
+msgstr "Mynt"
+
+msgid "TAG_MEDPATCH"
+msgstr "Medisinsk lapp"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Medisinsk sett"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Kirurgisk sett"
+
+msgid "TAG_BELDINSRING"
+msgstr ""
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Offerbeger"
+
+msgid "TAG_EAR"
+msgstr "Øre"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Ødelagt kraftkobling"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Skygge rustning"
+
+msgid "TAG_ENVSUIT"
+msgstr "Miljødrakt"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Vaktuniform"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Offisersuniform"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Deler til flammekaster"
+
+msgid "TAG_REPORT"
+msgstr "Rapport"
+
+msgid "TAG_INFO"
+msgstr "Informasjon"
+
+msgid "TAG_TARGETER"
+msgstr ""
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Kommunikator"
+
+msgid "TAG_DEGNINORE"
+msgstr "Degnin malm"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Nøyaktighet"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Seighet"
+
+msgid "TAG_SCANNER"
+msgstr "Skanner"
+
+msgid "TAG_PRISONPASS"
+msgstr "Fengselspass"
+
+msgid "TAG_ALARM"
+msgstr ""
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Ammunisjon"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Helse"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Teleporter Beacon"
+
+msgid "TAG_METALARMOR"
+msgstr "Metall rustning"
+
+msgid "TAG_LEATHER"
+msgstr "Lær rustning"
+
+msgid "TAG_HEGRENADES"
+msgstr "HE-Granater"
+
+msgid "TAG_PHGRENADES"
+msgstr "Fosforgranater"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Klipp av kuler"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Ammunisjon"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Mini missiler"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Kasse med missiler"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Energikapsel"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Energipakke"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Giftbolter"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Elektriske bolter"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Ammunisjonsveske"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Basenøkkel"
+
+msgid "TAG_GOVSKEY"
+msgstr "Regjeringsnøkkel"
+
+msgid "TAG_PASSCARD"
+msgstr "Adgangskort"
+
+msgid "TAG_IDBADGE"
+msgstr "ID-badge"
+
+msgid "TAG_PRISONKEY"
+msgstr "Fengselsnøkkel"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Avkuttet hånd"
+
+msgid "TAG_POWER1KEY"
+msgstr "Power1-nøkkel"
+
+msgid "TAG_POWER2KEY"
+msgstr "Power2-nøkkel"
+
+msgid "TAG_POWER3KEY"
+msgstr "Power3-nøkkel"
+
+msgid "TAG_GOLDKEY"
+msgstr "Gullnøkkel"
+
+msgid "TAG_IDCARD"
+msgstr "ID-kort"
+
+msgid "TAG_SILVERKEY"
+msgstr "Sølv-nøkkel"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Oracle-nøkkel"
+
+msgid "TAG_MILITARYID"
+msgstr "Militær ID"
+
+msgid "TAG_ORDERKEY"
+msgstr "Bestillingsnøkkel"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Lagernøkkel"
+
+msgid "TAG_BRASSKEY"
+msgstr "Messingnøkkel"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Rød krystallnøkkel"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Blå krystallnøkkel"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Kapell-nøkkel"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Katakomb-nøkkel"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Sikkerhetsnøkkel"
+
+msgid "TAG_COREKEY"
+msgstr "Kjernenøkkel"
+
+msgid "TAG_MAULERKEY"
+msgstr "Mauler-nøkkel"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Fabrikknøkkel"
+
+msgid "TAG_MINEKEY"
+msgstr "Gruve-nøkkel"
+
+msgid "TAG_NEWKEY5"
+msgstr "Ny nøkkel5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Oracle Pass"
+
+msgid "TAG_10GOLD"
+msgstr "10 gull"
+
+msgid "TAG_25GOLD"
+msgstr "25 gull"
+
+msgid "TAG_50GOLD"
+msgstr "50 gull"
+
+msgid "TAG_300GOLD"
+msgstr "300 gull"
+
+msgid "TXT_PERSON"
+msgstr ""
+
+msgid "TAG_ACOLYTE"
+msgstr "Akolytt"
+
+msgid "TAG_ARMORER"
+msgstr "Våpensmed"
+
+msgid "TAG_BARKEEP"
+msgstr "Bartender"
+
+msgid "TAG_BEGGAR"
+msgstr "Tigger"
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr ""
+
+msgid "TAG_ORACLE"
+msgstr "Orakel"
+
+msgid "TAG_PRIEST"
+msgstr "Prest"
+
+msgid "TAG_RATBUDDY"
+msgstr "Rottekompis"
+
+msgid "TAG_REBEL"
+msgstr "Rebell"
+
+msgid "TAG_TEMPLAR"
+msgstr "Tempelridder"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Våpensmed"
+
+msgid "TAG_TALISMANRED"
+msgstr "Rød talisman"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Grønn talisman"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Blå talisman"
+
+msgid "OB_ACOLYTE"
+msgstr "%o ble nidkjært skutt ned av en akolytt."
+
+msgid "OB_MACIL"
+msgstr "%o skulle aldri ha gjort opprør mot Macil."
+
+msgid "OB_REBEL"
+msgstr "%o ble skutt ned av en opprører."
+
+msgid "OB_BEGGAR"
+msgstr "%o ble slått i hjel av de fattige."
+
+msgid "OB_PEASANT"
+msgstr "%o skulle aldri ha kranglet med en sivilist."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o ble slått ned av Spekter."
+
+msgid "OB_ENTITY"
+msgstr "%o følte vreden til Den ene Gud."
+
+msgid "OB_LOREMASTER"
+msgstr "%o kunne ikke unnslippe Loremesterens grep."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o ble slettet av Programmereren."
+
+msgid "OB_STFBISHOP"
+msgstr "%o ble blåst bort av biskopen."
+
+msgid "OB_SENTINEL"
+msgstr "%o ble skutt ned av en Sentinel."
+
+msgid "OB_CRUSADER"
+msgstr "%o ble feid bort av en korsfarer."
+
+msgid "OB_INQUISITOR"
+msgstr "%o ble dømt av en inkvisitor."
+
+msgid "OB_STALKER"
+msgstr "%o ble avlyttet av en Stalker."
+
+msgid "OB_TURRET"
+msgstr "%o utløste det automatiske forsvaret."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o ble klort av en tempelridder."
+
+msgid "OB_TEMPLAR"
+msgstr "%o ble fordampet av en tempelridder."
+
+msgid "OB_REAVERHIT"
+msgstr "%o ble skåret opp av en Reaver."
+
+msgid "OB_REAVER"
+msgstr "%o ble skutt ned av en Reaver."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o ble uforvarende dolket i ryggen av %k."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o ble boltet fast til veggen av %k."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o fikk en dødelig dose av %ks vrede."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o ble boret full av hull av %ks stormgevær."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o slukte %k's missil."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o ble invertert av %ks H-E-granat."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o tok et flammebad i %ks fosforbål."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o ble grillet av %k."
+
+msgid "OB_MPMAULER1"
+msgstr "%o fikk støt av %k."
+
+msgid "OB_MPMAULER"
+msgstr "%o ble ondskapsfullt fordampet av %k."
+
+msgid "OB_MPSIGIL"
+msgstr "%o bøyde seg for kraften til %ks Sigil."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "Jakten på sigilet"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Du har befridd fangene!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Du har tilintetgjort Omformeren!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Gratulerer! Du har fullført treningsområdet"
+
+msgid "TXT_QUEST_14"
+msgstr "Du har sprengt krystallen"
+
+msgid "TXT_QUEST_16"
+msgstr "Du har sprengt portene"
+
+msgid "TXT_QUEST_27"
+msgstr "Du har sprengt Datamaskinen"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Du har drept Biskopen!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Du har drept Oraklet!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Du har drept Macil!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Du har drept Loremaster!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Din idiot! Du har utløst alarmen."
+
+msgid "TXT_YOUREDEAD"
+msgstr "Du er død! Du utløste alarmen."
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Du har visst fått nok!"
+
+msgid "TXT_GOAWAY"
+msgstr "Forsvinn!"
+
+msgid "TXT_COMM0"
+msgstr "Innkommende melding..."
+
+msgid "TXT_COMM1"
+msgstr "Innkommende melding fra BlackBird..."
+
+msgid "TXT_FINDHELP"
+msgstr "Finn hjelp"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "til %u"
+
+msgid "GOTCHEXARMOR"
+msgstr "Plukket opp Chex(R) Armor."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Plukket opp Super Chex(R) Armor!"
+
+msgid "GOTWATER"
+msgstr "Hentet et glass vann."
+
+msgid "GOTREPELLENT"
+msgstr "Plukket opp slime repellent."
+
+msgid "GOTBREAKFAST"
+msgstr "Superladet frokost!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Plukket opp en blå nøkkel."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Plukket opp en gul nøkkel."
+
+msgid "GOTCREDKEY"
+msgstr "Plukket opp en rød nøkkel."
+
+msgid "GOTFRUIT"
+msgstr "Plukket opp en bolle med frukt."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Grønnsaker er VIRKELIG bra for deg!"
+
+msgid "GOTVEGETABLES"
+msgstr "Plukket opp en bolle med grønnsaker."
+
+msgid "GOTSLIMESUIT"
+msgstr "Fant en slimsikker drakt"
+
+msgid "GOTCHEXMAP"
+msgstr "Fant et datamaskinkart"
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Plukket opp en mini zorch-opplading."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Plukket opp en mini zorch-pakke."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Plukket opp en zorch propulsor-opplading."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Plukket opp en zorch fremdriftspakke."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Plukket opp en fasing zorcher oppladning."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Plukket opp en fasing zorcher-pakke."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Plukket opp en stor zorcher-opplading."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Plukket opp en stor zorcherpakke."
+
+msgid "GOTZORCHPACK"
+msgstr "Plukket opp en Zorchpak!"
+
+msgid "GOTLAZDEVICE"
+msgstr "Du har LAZ-enheten! Woot!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Du har Rapid Zorcher!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Du har Super Bootspork!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Du fikk Zorch Propulsor!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Du har Phasing Zorcher!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Du har den store Zorcher!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Du har Mega Zorcher!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Plukket opp en Mini Zorcher."
+
+msgid "TAG_SPOON"
+msgstr "Skje"
+
+msgid "TAG_SPORK"
+msgstr ""
+
+msgid "TAG_MINIZORCHER"
+msgstr ""
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Stor Zorcher"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Super-stor Zorcher"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr ""
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr ""
+
+msgid "TAG_PHASINGZORCHER"
+msgstr ""
+
+msgid "TAG_LAZDEVICE"
+msgstr "LAZ-enhet"
+
+msgid "OB_COMMONUS"
+msgstr "%o ble slimet av en flemoid."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o ble slimet av en bipedicus."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o ble slimet av en pansret bipedicus."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o ble slimet av en cycloptis."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o ble beseiret av Flembrane."
+
+msgid "OB_MPSPOON"
+msgstr "%o ble matet med skje av %k."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o ble grundig blandet med %k's bootspork."
+
+msgid "OB_MPZORCH"
+msgstr "%o ble svidd av %k."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o ble truffet av %k's mega-zorcher."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o ble raskt svidd av %k."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o ble zorched av %k's propulsor."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o ble truffet av %k's propulsor."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o ble fasebrent av %k."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o ble offer for %k's LAZ-enhet."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o ble lazzed av %k."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Landingssone"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Lagringsanlegg"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Eksperimentelt laboratorium"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: Arboretet"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Grottene til Bazoik"
+
+msgid "CE1TEXT"
+msgstr ""
+"Oppdrag utført.\n"
+"\n"
+"Er du klar for neste oppdrag?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Trykk på escape-tasten for å fortsette..."
+
+msgid "CE2TEXT"
+msgstr "Du klarte det!"
+
+msgid "CE3TEXT"
+msgstr "Fantastisk jobb!"
+
+msgid "CE4TEXT"
+msgstr "Fantastisk!"
+
+msgid "CLOADNET"
+msgstr ""
+"Du kan ikke gjøre last mens du er i et nettoppdrag!\n"
+"\n"
+"Trykk på en tast."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Overskrive '%s' med en hurtiglagring?\n"
+"\n"
+"Trykk på Y eller N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Du kan ikke hurtiglaste under et nettoppdrag!\n"
+"\n"
+"Trykk på en tast."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Ønsker du å hurtiglaste oppdraget med navnet\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Trykk Y eller N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Du kan ikke starte et nytt oppdrag\n"
+"mens du er i et nettverksoppdrag.\n"
+"\n"
+"Trykk på en tast."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Forsiktig, dette blir vanskelig.\n"
+"Ønsker du å fortsette?\n"
+"\n"
+"Trykk Y eller N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Dette er Chex(R) Quest. se etter fremtidige nivåer på\n"
+"\n"
+"fremtidige nivåer på www.chexquest.com.\n"
+"\n"
+"Trykk på en tast."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Du kan ikke avslutte en netquest!\n"
+"\n"
+"Trykk på en tast."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Er du sikker på at du vil avslutte oppdraget?\n"
+"\n"
+"Trykk Y eller N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Uovervinnelig modus PÅ"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Uovervinnelig modus AV"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Zorch lagt til"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Super Zorch lagt til"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Spis Chex(R)!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Mini Zorch ladning"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Stor Zorch ladning"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Propulsor ladning"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Phasing-Zorcher ladning"
+
+msgid "MNU_NEWGAME"
+msgstr "Nytt spill"
+
+msgid "MNU_OPTIONS"
+msgstr "Alternativer"
+
+msgid "MNU_GAMEFILES"
+msgstr "Spillfiler"
+
+msgid "MNU_INFO"
+msgstr ""
+
+msgid "MNU_QUITGAME"
+msgstr "Avslutt spill"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Velg ferdighetsnivå:"
+
+msgid "SKILL_BABY"
+msgstr "Jeg er for ung til å dø."
+
+msgid "SKILL_EASY"
+msgstr "Hei, ikke for hardhendt."
+
+msgid "SKILL_NORMAL"
+msgstr "Skader meg mye."
+
+msgid "SKILL_HARD"
+msgstr "Ultra-vold."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Mareritt!"
+
+msgid "CSKILL_BABY"
+msgstr "Rolig nå"
+
+msgid "CSKILL_EASY"
+msgstr "Ikke så klissete"
+
+msgid "CSKILL_NORMAL"
+msgstr "Klumper av klister"
+
+msgid "CSKILL_HARD"
+msgstr "Ekstrem slim"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Super slimete!"
+
+msgid "SSKILL_BABY"
+msgstr "Trening"
+
+msgid "SSKILL_EASY"
+msgstr "Nybegynner"
+
+msgid "SSKILL_NORMAL"
+msgstr ""
+
+msgid "SSKILL_HARD"
+msgstr ""
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Blodbad"
+
+msgid "MNU_WETNURSE"
+msgstr "Du trenger en amme"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Yellowbellies-R-Us"
+
+msgid "MNU_BRINGEST"
+msgstr "Kom med dem"
+
+msgid "MNU_SMITE"
+msgstr "Du er mesterdraperen"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Den svarte pesten besetter deg"
+
+msgid "MNU_SQUIRE"
+msgstr "Væpner"
+
+msgid "MNU_KNIGHT"
+msgstr "Ridder"
+
+msgid "MNU_WARRIOR"
+msgstr "Kriger"
+
+msgid "MNU_BERSERKER"
+msgstr ""
+
+msgid "MNU_TITAN"
+msgstr ""
+
+msgid "MNU_ALTARBOY"
+msgstr "Altergutt"
+
+msgid "MNU_ACOLYTE"
+msgstr "Akolytt"
+
+msgid "MNU_PRIEST"
+msgstr "Prest"
+
+msgid "MNU_CARDINAL"
+msgstr "Kardinal"
+
+msgid "MNU_POPE"
+msgstr "Pave"
+
+msgid "MNU_APPRENTICE"
+msgstr "Lærling"
+
+msgid "MNU_ENCHANTER"
+msgstr "Trollmann"
+
+msgid "MNU_SORCERER"
+msgstr "Magiker"
+
+msgid "MNU_WARLOCK"
+msgstr "Veiviser"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Erkemagiker"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Velg klasse:"
+
+msgid "MNU_FIGHTER"
+msgstr "Kriger"
+
+msgid "MNU_CLERIC"
+msgstr "Kleriker"
+
+msgid "MNU_MAGE"
+msgstr "Magiker"
+
+msgid "MNU_RANDOM"
+msgstr "Tilfeldig"
+
+msgid "MNU_EPISODE"
+msgstr "Hvilken episode?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Velg kampanje"
+
+msgid "MNU_COTD"
+msgstr "De fordømtes by"
+
+msgid "MNU_HELLSMAW"
+msgstr "Helvetes gap"
+
+msgid "MNU_DOME"
+msgstr "D'Sparils kuppel"
+
+msgid "MNU_OSSUARY"
+msgstr "Beinhuset"
+
+msgid "MNU_DEMESNE"
+msgstr "Den stillestående herregården"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Lagspill"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Skalar for lagskade"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Smart Autoaim"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Fallende skade"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Slipp våpen"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Dobbel ammunisjon"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Uendelig ammunisjon"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Uendelig lagerbeholdning"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Ingen monstre"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Ingen monstre å avslutte"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Monstre respawn"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Monstre respawn ikke"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Gjenstander respawn"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Store powerups respawn"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Raske monstre"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Monstre mareritt reflekser"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Degenerasjon"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Tillat Autoaim"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Tillat selvmord"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Tillat hopp"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Tillat huk"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Tillat freelook"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Tillat FOV"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Tillat BFG-sikting"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Tillat automap"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Automatisk kartlegging av allierte"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Tillat spionering"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Chasecam juks"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Sjekk ammunisjon for våpenbryter"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Ikonets død dreper dets gyter"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Slutt sektor teller for drap i prosent"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Deathmatch-innstillinger"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Våpen forblir"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Tillat powerups"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Tillat helse"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Tillat rustning"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Spawn lengst"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Samme kart"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Force respawn"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Tillat utgang"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Tønner respawn"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Respawn-beskyttelse"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Miste frag hvis fragged"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Behold frags vunnet"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Ingen lagbytte"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Samarbeidsinnstillinger"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Spawn flerspillervåpen"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Miste hele beholdningen"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Behold nøkler"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Behold våpen"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Behold rustning"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Behold powerups"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Behold ammunisjon"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Miste halv ammunisjon"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Gyte der du døde"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Alltid gyte flerspillerobjekter"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Tillat vertikal kulespredning"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Våpen gir ekstra ammunisjon (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Kompatibilitetsalternativer"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Kompatibilitetsalternativer"
+
+msgid "CMPTMNU_MODE"
+msgstr "Kompatibilitetsmodus"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Skuespilleroppførsel"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Vennlige monstre er ikke blokkert"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Begrens smertelementalers tapte sjeler"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Monsterbevegelse påvirkes av effekter"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Monstre kan ikke krysse dropoffs"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Monstre blir sittende fast over dropoffs"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Monstre ser usynlige spillere"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Ingen Minotaur-gulvflammer i vann"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Spawn-element faller på gulvet"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DehackEd oppførsel"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH helseinnstillinger som Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Original A_Mushroom hastighet i DEH mods"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Kart / handling oppførsel"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Alle spesielle linjer kan blokkere <bruk>"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Tillat enhver bossdeath for nivå spesiell"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "Deaktiver BOOM dør lyseffekt"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Finn nærliggende lys som Doom"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Finn korteste teksturer som Doom"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Bruk buggier trappebygging"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Bruk Dooms gulvbevegelsesatferd"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Bruk Dooms punkt-på-nett-algoritme"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Nivåutgang kan utløses mer enn én gang"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Fysikkoppførsel"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Skuespillere er uendelig høye"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Boom scrollere er additive"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Kan ikke reise rett NSØV"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Aktiver veggkjøring"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven scrollers bruker original hastighet"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Selvrefererende sektorer blokkerer ikke skudd."
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Bruk Doom-kode for treffkontroll"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Bruk Doom-høyder for missilklipping"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Gjengivelse av oppførsel"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Tegn polyobjekter som Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Ignorer Y-forskyvninger på maskerte mellomteksturer"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Inverter sprite-sortering"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Lydoppførsel"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Krymp lyd for stille BFG-triks"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Ikke la andre høre pickupene dine"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Øyeblikkelig bevegelige gulv er ikke stille"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sektorlyder bruker senter som kilde"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Lyder stopper når skuespilleren forsvinner"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Bruk original lydmålhåndtering"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Skriptede teleporter utløser ikke sektorhandlinger"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Ikke-blokkerende linjer kan skyves"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Aktiver fejlbehæftet CheckSwitchRange-adfærd"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Aktiver fejlbehæftet Strife rekkverk"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Ingen vertikal skyvekraft fra eksplosjoner"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Bruk original Doom-eksplosjonsatferd"
+
+msgid "PLYRMNU_RED"
+msgstr "Rød"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Grønn"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Blå"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Klasse"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Hud"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Slå på pickup"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Trykk \\cjSPACE"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "for å se forsiden"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "for å se baksiden"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Vertikal kulespredning"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Våpen Zoom"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Våpenstat 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Våpenstat 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Våpenstat 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Våpentilstand 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Fly / Svøm opp"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Fly / Svøm ned"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Slutt å fly"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Tastatur utseende"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Strife Popup-skjermer Kontroller"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Lag si"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Slipp element"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Spør om element"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Slipp våpen"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Annet"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Coop-spion"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Strife Popup-skjermer"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Oppdragets mål"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Liste over nøkler"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Våpen/ammunisjon/statistikk"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Veksle resultattavle"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Sentrer automatisk"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Flytt sidelengs med musen"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Bakgrunn"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Du"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "1-sidige vegger"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "2-sidige vegger med forskjellige gulv"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "2-sidige vegger med forskjellige tak"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "2-sidige vegger med 3D-gulv"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Kartrutenett"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Midtpunkt"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Vegger som ennå ikke er sett"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Låste dører"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Teleporter til samme kart"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Teleporter til et annet kart"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Hemmelig sektor"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Uutforsket hemmelighet"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Spesielle utløserlinjer"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Juksemodus"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Usynlige 2-sidige vegger"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Hemmelige vegger"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Skuespillere"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Monstre"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Ikke-tellende monstre"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Venner"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Gjenstander"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Telle elementer"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Overleggsmodus"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Overlegg-juksemodus"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Portal-overlegg"
+
+msgid "MSGMNU_TITLE"
+msgstr "Meldinger"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Vis meldinger"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Vis dødsannonser"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Vis hemmelige meldinger"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Minste meldingsnivå"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Meldingsfarger"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Henting av element"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Nekrologer"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Kritiske meldinger"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Chat-meldinger"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Team-meldinger"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Sentrerte meldinger"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Skjermbilde-meldinger"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Detaljerte lagringsmeldinger"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Meldingsmodus for utviklere"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Kartfargesett"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Tillat kartdefinerte farger"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Angi egendefinerte farger"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Tilpass kartkontroller"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Overlegg automatisk kart"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Aktiver teksturert visning"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Vis antall elementer"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Vis antall monster"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Vis hemmelige tellinger"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Vis medgått tid"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Vis total tid som har gått"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Vis hemmeligheter på kartet"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Vis kartetikett"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Tegn kartbakgrunn"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Vis nøkler (juks)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Vis utløserlinjer"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Vis ting som sprites"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Overlegg portaler"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Tøm mellomromsmargen"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Merk skrifttype"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Merk farge"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Sett merke"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Fjern merke"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Alternativer for resultattavlen"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Alternativer for resultattavlen"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Samarbeidsalternativer"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Aktiver resultattavle"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Farge på topptekst"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Din spillerfarge"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Andre spilleres farge"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Deathmatch-alternativer"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Lag Deathmatch-alternativer"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Alternativ HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Aktiver alternativ HUD"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Vis hemmelig antall"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Vis antall monstre"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Vis antall gjenstander"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Vis utholdenhet og nøyaktighet"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Vis berserk"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Vis våpen"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Vis ammunisjon for"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Vis tid"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Tid farge"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Vis nettverksforsinkelse"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Rekkefølge for ammunisjonsvisning"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Rød visning av ammunisjonsnivå under %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Gult ammunisjonsdisplay under %."
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Rød helsevisning under"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Gul helsevisning nedenfor"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Grønn helsevisning under"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Visning av rød rustning under"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Visning av gul rustning under"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Visning av grønn rustning under"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Alternativ Automap HUD"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Farge på karttittel"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Kartets tidsfarge"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Farge for knutepunkttid"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Farge for total tid"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Koordinatfarge"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Koordinat-modus"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Farge på statistikknavn"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Statistikk farge"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Gjengivelse av interpolasjon"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Gjengivelsesmodus for gjennomsiktighet"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Stil for skjermtørking"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Vis ENDOOM-skjerm"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Intensitet for blodblits"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Intensitet av opptaksblits"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Intensitet for undervannsblanding"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Modus for gjengivelse av himmel"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Lineær himmel"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Fullbright overstyrer sektorfarge"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Skala fuzz-effekt"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Bruk fuzz-effekt"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Klassisk gjennomsiktighet"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Lost Soul gjennomskinnelighet"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Bruk falsk kontrast"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Rakettspor"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Blodtype"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Bullet Puff Type"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Antall partikler"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Antall dekaler"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Vis spillerens sprites"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Dødskamera"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Teleporter zoom"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Intensitet av jordskjelvrystelser"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Interpolere monsterbevegelse"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Demp meny"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Demp farge"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Vis bob-beløp mens du beveger deg"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Vis bobmengde mens du ikke beveger deg"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Våpen bob hastighet"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Alternativer for skalering"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Overstyrer for innstillingen ovenfor"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Meldinger"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Konsoll"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Statuslinje"
+
+msgid "SCALEMNU_HUD"
+msgstr "HUD i fullskjerm"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Alternativ HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "HUD bevarer størrelsesforholdet"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Bruk standard skala"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Skaler til fullskjerm"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Tilpass til skjermstørrelse"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUD-alternativer"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Alternativ HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Meldingsalternativer"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Skalering av brukergrensesnitt"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Tving frem standard trådkors"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Utvid trådkorset når du plukker opp elementer"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Vis navnelapper"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Farge på navneskilt"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Bruk formelen for gamle forbryterbilder"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Hexen våpen blinker"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Giftskade blinker"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Isdød blinker"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Giftoppbygging blinker"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Alternativer for skalering"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Vis IWAD-valgdialogboks"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Aktiver juks fra alle spill"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Gjør det mulig å lage skjermbilder av skript"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Last inn *.deh/*.bex-arkiver"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Bufre noder"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Tidsterskel for nodebufring"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Tøm nodebuffer"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Tillat å hoppe over pauserullere"
+
+msgid "NETMNU_TITLE"
+msgstr "Nettverksalternativer"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Lokale alternativer"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Forutsigelse av bevegelse"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Forutsi linjehandlinger"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Prediksjon Lerp-skala"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Lerp-terskel"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Vertsalternativer"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Ekstra tics"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Balansering av ventetid"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr ""
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimalisert"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Klassisk (raskere)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Presis"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Begrenset"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Partikler"
+
+msgid "OPTVAL_SPRITES"
+msgstr ""
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Sprites og partikler"
+
+msgid "OPTVAL_MELT"
+msgstr "Smelte"
+
+msgid "OPTVAL_BURN"
+msgstr "Brenne"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Overblending"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Glatt"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Glatt"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Gjennomskinnelig"
+
+msgid "OPTVAL_FUZZ"
+msgstr ""
+
+msgid "OPTVAL_SHADOW"
+msgstr "Skygge"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Gjenstander"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Våpen"
+
+msgid "OPTVAL_BOTH"
+msgstr "Begge"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Spiller"
+
+msgid "OPTVAL_MAP"
+msgstr "Kart"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Skala til 640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Dobbel piksel"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Piksel firedoblet"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Nåværende våpen"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Tilgjengelige våpen"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Alle våpen"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Nivå, millisekunder"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Nivå, sekunder"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Nivå"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Hub, sekunder"
+
+msgid "OPTVAL_HUB"
+msgstr ""
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Totalt, sekunder"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Totalt"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "System, sekunder"
+
+msgid "OPTVAL_SYSTEM"
+msgstr ""
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Kun nettspill"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Bilde og tekst"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Tekst og bilde"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Bare skript"
+
+msgid "OPTVAL_ALL"
+msgstr "Alle"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Bare den siste"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Tradisjonell undergang"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Tradisjonell strid"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Tradisjonell ravn"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Bare når funnet"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "På kun for overlegg"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr ""
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Kun overlegg"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Ikke for nav"
+
+msgid "OPTVAL_FRONT"
+msgstr "Forside"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Animert"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Rotert"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Kun kartdefinerte farger"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Alle unntatt dører"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dobbel"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Trippel"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Firedoblet"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Varehenting"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Dødsannonser"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Kritiske meldinger"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Aldri venner"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Bare monstre"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Gamle"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (streng)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (streng)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (streng)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (streng)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Alle ubekreftet"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Feil"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Advarsler"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Varsler"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Alt"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Maskinvareakselerert"
+
+msgid "OPTVAL_SWDOOM"
+msgstr ""
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr ""
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Høy ytelse"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Strømsparende"
+
+msgid "OPTVAL_VANILLA"
+msgstr ""
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (Tvunget)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Vanilla (Tvunget)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (ZDoom foretrukket)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (Vanilla foretrukket)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Liten"
+
+msgid "OPTVAL_LARGE"
+msgstr "Stor"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Konsoll"
+
+msgid "C_BRICK"
+msgstr "\\caMurstein"
+
+msgid "C_TAN"
+msgstr "\\cbBrun"
+
+msgid "C_GRAY"
+msgstr "\\ccGrå"
+
+msgid "C_GREEN"
+msgstr "\\cdGrønn"
+
+msgid "C_BROWN"
+msgstr "\\ceBrun"
+
+msgid "C_GOLD"
+msgstr "\\cfGull"
+
+msgid "C_RED"
+msgstr "\\cgRød"
+
+msgid "C_BLUE"
+msgstr "\\chBlå"
+
+msgid "C_ORANGE"
+msgstr "\\ciOransje"
+
+msgid "C_WHITE"
+msgstr "\\cjHvit"
+
+msgid "C_YELLOW"
+msgstr "\\ckGul"
+
+msgid "C_DEFAULT"
+msgstr "\\clStandard"
+
+msgid "C_BLACK"
+msgstr "\\cmSvart"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnLyseblå"
+
+msgid "C_CREAM"
+msgstr "\\coKremfarget"
+
+msgid "C_OLIVE"
+msgstr "\\cpOliven"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqMørkegrøn"
+
+msgid "C_DARKRED"
+msgstr "\\crMørkerød"
+
+msgid "C_DARKBROWN"
+msgstr "\\csMørkebrun"
+
+msgid "C_PURPLE"
+msgstr "\\ctLilla"
+
+msgid "C_DARKGRAY"
+msgstr "\\cuMørkegrå"
+
+msgid "C_CYAN"
+msgstr ""
+
+msgid "C_ICE"
+msgstr "\\cwIs"
+
+msgid "C_FIRE"
+msgstr "\\cxIld"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cySafir"
+
+msgid "C_TEAL"
+msgstr "\\czBlågrønn"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Ingen lyd"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Ingen interpolasjon"
+
+msgid "OPTSTR_SPLINE"
+msgstr ""
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr ""
+
+msgid "DSPLYMNU_SWOPT"
+msgstr ""
+
+msgid "GLMNU_TITLE"
+msgstr "Alternativer for maskinvaregjengivelse"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Alternativer for dynamisk lys"
+
+msgid "GLMNU_PREFS"
+msgstr "Innstillinger"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Trim sprite kanter"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Sorter tegningslister etter tekstur"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Dynamiske lys"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Dynamiske lys (maskinvare)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Aktiver lysdefinisjoner"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Lys påvirker sprites"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Lys påvirker partikler"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Lys skyggekart"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Shadowmap-kvalitet"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Shadowmap-filter"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Tåke-modus"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Tåke styrker fullbright"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Våpen lysstyrke"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Omgivelseskart på speil"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Forbedret nattsynsmodus"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "ENV viser stealth monstre"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Juster sprite klipping"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Glatte sprite kanter"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Fuzz-stil"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Sprites vender mot kameraet"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Partikkel-stil"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Renderingskvalitet"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr ""
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Aktiver Quad Stereo"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Båndet SW-lysmodus"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Avstand mellom øynene dine"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Avstand fra skjermen"
+
+msgid "OPTVAL_SMART"
+msgstr ""
+
+msgid "OPTVAL_SMARTER"
+msgstr "Smartere"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Kun infrarød"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Infrarød og lommelykt"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Alle faste fargekart"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Bruk som palett"
+
+msgid "OPTVAL_BLEND"
+msgstr "Blanding"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Lys"
+
+msgid "OPTVAL_DARK"
+msgstr "Mørk"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr ""
+
+msgid "OPTVAL_OPTIMAL"
+msgstr ""
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y-akse"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X/Y-akse"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Firkantet"
+
+msgid "OPTVAL_ROUND"
+msgstr "Rund"
+
+msgid "OPTVAL_RADIAL"
+msgstr ""
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr ""
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Glatt fuzz"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Virvlende fuzz"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Gjennomsiktig fuzz"
+
+msgid "OPTVAL_NOISE"
+msgstr "Støy"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Glatt støy"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Takkete fuzz"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Grønn/magenta"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Rød/cyan"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Rav/blå"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Venstre øye"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Høyre øye"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Side-ved-side Full"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Side ved side Smal"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Topp/Bunn"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Rad sammenflettet"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Kolonne sammenflettet"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Sjakkbrett"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Firebufret"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "TrueColor-alternativer"
+
+msgid "TCMNU_TITLE"
+msgstr "TrueColor-alternativer"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Ekte fargeutgang"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Lineært filter ved nedskalering"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Lineært filter ved oppskalering"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Bruk mipmapped teksturer"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dynamiske lys (programvare)"
+
+msgid "OS_TITLE"
+msgstr "Alternativt søk"
+
+msgid "OS_ANY"
+msgstr "Søk etter et vilkårlig begrep"
+
+msgid "OS_ALL"
+msgstr "Søk etter alle termer"
+
+msgid "OS_NO_RESULTS"
+msgstr "Ingen resultater funnet."
+
+msgid "OS_LABEL"
+msgstr "Søk:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Vis alltid nøkler"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Lagbytte har blitt deaktivert!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s ble med i %t-teamet"
+
+msgid "TXT_LONER"
+msgstr "%s er nå en einstøing."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s forlot spillet med %d frags"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s forlot spillet"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Kunne ikke lese savegame '%s'."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' er ikke et gyldig savegame: Mangler 'info.json'."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Kunne ikke få tilgang til savegame-info i '%s'."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Savegame '%s' er fra en inkompatibel versjon."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Savegame '%s' er fra en annen ZDoom-basert engine:"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Savegame '%s' er fra en eldre versjon: %d (%e er den eldste som støttes)."
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Savegame '%s' er fra en nyere versjon: %d (%e er den høyeste versjonen som "
+"støttes)."
+
+msgid "TXT_NOMAPSG"
+msgstr "Savegame '%s' mangler det gjeldende kartet."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' er ikke et gyldig lagringsspill: Mangler 'globals.json'."
+
+msgid "TXT_SGINFOERR"
+msgstr "Kunne ikke få tilgang til lagringsinformasjon i '%s'."
+
+msgid "TXT_SAVEPENDING"
+msgstr "En spilloppdatering venter fortsatt."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Ikke i et spill som kan lagres."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Ikke i et nivå"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Spilleren er død i et enspiller-spill"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Lagring mislyktes"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Kunne ikke opprette skjermbilde."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "Etter %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Trykk på en hvilken som helst tast eller klikk hvor som helst i vinduet for "
+"å avslutte."
+
+msgid "HUDMNU_FLASH"
+msgstr "Alternativer for skjermblanding"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D-modus"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Trådkors"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Undertekster"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Forhindre grå skygger"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Alternativer for skrifttype"
+
+msgid "FONTMNU_LOG"
+msgstr "Bruk standard skrifttype for loggvisning"
+
+msgid "FONTMNU_DLG"
+msgstr "Bruk standard skrifttype for dialoger"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Hurtigavslutning"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Egendefinert omvendt kart"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Egendefinert invers farge mørk\n"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Egendefinert invers farge lys"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Våben bob-beløp ved avfyring"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Klassisk skalering av pause og skjermkant"
+
+msgid "SCALEMNU_INTER"
+msgstr "Pause bakgrunn"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Skjermkant"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Skaleringsfaktor"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Bildeforhold"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Vis Tally-skjerm på nivåutgang"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Mod Definert"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Alltid, unntatt innenfor knutepunkter"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Alltid, også innenfor knutepunkter"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Foretrukket tastaturoppsett"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Klassisk ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr "Moderne (WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Moderne (Keypad)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Strenge KEYCONF-våpen/spillere"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Klassisk ZDoom-menyskalering"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Bruk prosenter på sammendragsskjermen"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Klassisk ZDoom-skalering på oppsummeringsskjermen"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Innbygger"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Tak-tårn"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Korsfarer"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inkvisitor"
+
+msgid "TAG_PEASANT"
+msgstr "Bonde"
+
+msgid "TAG_REAVER"
+msgstr ""
+
+msgid "TAG_SENTINEL"
+msgstr "Vaktpost"
+
+msgid "TAG_STALKER"
+msgstr "Forfølgeren"
+
+msgid "TAG_BISHOP"
+msgstr "Biskopen"
+
+msgid "TAG_ENTITY"
+msgstr "Den ene Gud"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Programmereren"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Spøkelset"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Den knelende fyren"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Spawn multiplayer ting i coop"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Sprite skygger"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Monstre og spillere"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr ""
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Deaktiver MBF21-funksjoner"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Vis tid widget"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Knuste monstre gjenoppstår som spøkelser"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Se bobbing mens du flyr"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o ble lemlestet av en slange."
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Antialias-linjer"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "Beveg deg og skyt gjennom andre spillere"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "Del nøkler med alle spillere"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Tillat ikke overstyring av kameramodus"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "Bytt helse og rustning"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "Bruk klassisk HUD-skalering"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "HUD-skaleringsfaktor"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "Opprett co-op-objekter i flerspillermodus"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "Opprett co-op-pickuper i flerspillermodus"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "Spillere plukker opp sin egen kopi av gjenstander i flerspiller"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "Deaktiver opphenting på klientsiden av gjenstander som droppes"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "Start nivået på nytt ved død"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "Start med pistol"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr ""
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr ""
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr ""
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr ""
+
+msgid "ID24_GOTINCINERATOR"
+msgstr ""
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr ""
+
+msgid "ID24_GOTFUELCAN"
+msgstr ""
+
+msgid "ID24_GOTFUELTANK"
+msgstr ""
+
+msgid "TAG_ID24INCINERATOR"
+msgstr ""
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr ""
+
+msgid "AMMO_ID24FUEL"
+msgstr ""
+
+msgid "AMMO_ID24FUELTANK"
+msgstr ""
+
+msgid "ID24_CC_GHOUL"
+msgstr ""
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr ""
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr ""
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""

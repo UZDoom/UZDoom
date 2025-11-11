@@ -1,0 +1,575 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: tr\n"
+
+msgid "QUITMSG1"
+msgstr "Bu böcekler senin için çok mu zor?"
+
+msgid "QUITMSG"
+msgstr "İşin dışında kalmak istediğine emin misin?"
+
+msgid "QUITMSG2"
+msgstr "Bırakmaya mı çalışıyorsun? Bir de kendine hacker mı diyorsun?"
+
+msgid "QUITMSG3"
+msgstr "Egzozuna bir virüs göndermeden önce buraya geri dön!"
+
+msgid "QUITMSG4"
+msgstr "Gerçek hackerlar asla aksiyondan kaçmazlar."
+
+msgid "QUITMSG5"
+msgstr "Hadi ama! Daha en iyi kısmını görmedin!"
+
+msgid "QUITMSG6"
+msgstr "Şimdi pes edersen, siber uzay kızarır!"
+
+msgid "QUITMSG7"
+msgstr "GENIE selamlarını yolladı, pislik!"
+
+msgid "QUITMSG8"
+msgstr "Hmm. Kahraman olmak için çok fazla, Hacker."
+
+msgid "QUITMSG9"
+msgstr "Ne? Kalemine geri dönmeyi mi tercih ediyorsun?"
+
+msgid "QUITMSG10"
+msgstr "Mavi hapı almalıydın."
+
+msgid "QUITMSG11"
+msgstr "Oyunun adı Twitch n' Run değil!"
+
+msgid "QUITMSG12"
+msgstr "Endişelenme. Dünyayı kurtarmak bekleyebilir, değil mi?"
+
+msgid "QUITMSG13"
+msgstr "Sanırım 'net gibi yapıp ayrılmanın zamanı geldi!"
+
+msgid "QUITMSG14"
+msgstr "HacX'i unutup gitme, şimdi!"
+
+msgid "OB_SUICIDE"
+msgstr "%o kendini evrenden sildi."
+
+msgid "OB_FALLING"
+msgstr "%o Kansas büyüklüğünde bir krater oluşturdu."
+
+msgid "OB_CRUSH"
+msgstr "%o insan bir krep oldu."
+
+msgid "OB_EXIT"
+msgstr "%o kaçmaya çalıştı."
+
+msgid "OB_WATER"
+msgstr "%o bir tuğla gibi yüzdü."
+
+msgid "OB_SLIME"
+msgstr "%o nükleer oldu."
+
+msgid "OB_LAVA"
+msgstr "%o sıcak bir banyo yaptı."
+
+msgid "OB_BARREL"
+msgstr "%o aşırı dozda nitro gliserin aldı."
+
+msgid "OB_SPLASH"
+msgstr "%o küçük parçalara ayrıldı."
+
+msgid "OB_R_SPLASH"
+msgstr "%o, içinin dışının nasıl göründüğünü görmek istedi."
+
+msgid "OB_ROCKET"
+msgstr "%o içten dışa nasıl göründüğünü görmek istedi."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o kendini evrenden sildi."
+
+msgid "OB_THUG"
+msgstr "%o artık baskın tür değil."
+
+msgid "OB_ANDROID"
+msgstr "%o yanlış makineye bağlandı."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o kendine canavar gibi bir dayak attı."
+
+msgid "OB_ICE"
+msgstr "%o buzlandı."
+
+msgid "OB_BUZZER"
+msgstr "%o biraz kafayı bulmuş gibi hissediyor."
+
+msgid "OB_STEALTH"
+msgstr "%o oldukça şok edici bir gelişmeyi ortaya çıkardı."
+
+msgid "OB_DMAN"
+msgstr "%o siber uzaydan silindi."
+
+msgid "OB_GLASS"
+msgstr "%o kendine cam çene taktı."
+
+msgid "OB_MANIAC"
+msgstr "%o hayata veda etti."
+
+msgid "OB_MANIACHIT"
+msgstr "%o anlayamadığım rastgele bir yöntemle öldü."
+
+msgid "OB_TERMIN"
+msgstr "%o bir femme fatale ucubesi tarafından kızartıldı."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o karşı cinsle biraz yakınlaştı."
+
+msgid "OB_REPLI"
+msgstr "%o eski bir arkadaşına veda etti."
+
+msgid "OB_REPLIHIT"
+msgstr "%o eski bir arkadaşı tarafından sırtından bıçaklandı."
+
+msgid "OB_PHAGE"
+msgstr "%o doğal seleksiyon tarafından ayıklandı."
+
+msgid "OB_THORN"
+msgstr "%o dikenli bir ölümden kaçamadı."
+
+msgid "OB_SUMATIC"
+msgstr "%o kasıklarına bir sumo yumruğu yedi."
+
+msgid "OB_GENIE"
+msgstr "%o üç dileğini yerine getiremedi."
+
+msgid "OB_MINE"
+msgstr "%o bir mayını sevmeye çalıştı."
+
+msgid "OB_MPKICK"
+msgstr "%o, %k tarafından tekmelendi."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o, %k tarafından kızartıldı."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o, %k tarafından cezalandırıldı."
+
+msgid "OB_MPTAZER"
+msgstr "%o, %k tarafından kapatıldı."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o, %k tarafından donduruldu."
+
+msgid "OB_MPUZI"
+msgstr "%o, %k tarafından gangsta tarzı delik deşik edildi."
+
+msgid "OB_MPZOOKA"
+msgstr "%o, %k tarafından atomize edildi."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o, %k tarafından düzgün bir foton yığınına indirgendi."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o, %k tarafından atomlara indirgendi."
+
+msgid "OB_MPNUKE"
+msgstr "%o, %k tarafından bombalandı."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o, %k tarafından bombalandı."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o, %k tarafından parçalandı."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o atomik düzeyde parçalara ayrıldı."
+
+msgid "OB_DEFAULT"
+msgstr "%o kendiliğinden öldü."
+
+msgid "GOTNUKER"
+msgstr "Sen bir NÜKER kap! Bunu em!"
+
+msgid "GOTUZI"
+msgstr "Bir UZI'n var!"
+
+msgid "GOTREZNATOR"
+msgstr "Bir HOIG Reznator - Biraz kıç kızartın"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Bir Foton 'Zooka'n var!"
+
+msgid "GOTBIGSTICK"
+msgstr "Büyük bir sopa taşıyorsun!"
+
+msgid "GOTTAZER"
+msgstr "Bir Tazer'ın var!!"
+
+msgid "GOTCRYOGUN"
+msgstr "Bir Cryogun al! DONDUR!"
+
+msgid "GOTROUNDS"
+msgstr "Biraz mermi al!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Bir kutu mermi al!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Bir Torpido al!"
+
+msgid "GOTTORPEDOS"
+msgstr "Bir kasa Torpido al!"
+
+msgid "GOTMOLECULES"
+msgstr "Bir molekül modülü kap!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Moleküllerle dolu bir tank al!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Fişekleri al!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Bir kutu fişek al!"
+
+msgid "GOTVALISE"
+msgstr "İçi mal dolu bir valiz al!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Güç Alanı!"
+
+msgid "GOTMICROTEL"
+msgstr "007Microtel"
+
+msgid "GOTENKBLIND"
+msgstr "Sen EnK Blind'sın!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Vulcan lastik botları!"
+
+msgid "GOTSIARRAY"
+msgstr "SI Dizi eşlemesi!"
+
+msgid "GOTINFRARED"
+msgstr "Kızılötesi Vizör!"
+
+msgid "GOTINHALER"
+msgstr "Derin nefes al, Inhaler!"
+
+msgid "GOTHYPONEED"
+msgstr "Hypo'dan bir doz Hydergine seni kurtarır!"
+
+msgid "GOTHYPO"
+msgstr "Bir Hypo kaptın!"
+
+msgid "GOTKEYCARD"
+msgstr "Bir Anahtar Kart buldun!"
+
+msgid "GOTCKEY"
+msgstr "Bir C-Anahtarı buldun!"
+
+msgid "GOTPASSWORD"
+msgstr "Bir Şifre buldun!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Mavi bir Z-Anahtarı buldun!"
+
+msgid "GOTYELWZKEY"
+msgstr "Sarı bir Z-Anahtarı buldun!"
+
+msgid "GOTREDZKEY"
+msgstr "Kırmızı bir Z-Anahtarı buldun!"
+
+msgid "GOTBODYARMOR"
+msgstr "Vücut Zırhı!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr ""
+
+msgid "GOTKEVLARVEST"
+msgstr "Kevlar yeleği al!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Süper Kevlar yeleği al!"
+
+msgid "GOTMICROKIT"
+msgstr "Bir MicroKit al!"
+
+msgid "GOTDAMPENER"
+msgstr "Bir Sönümleyici al!"
+
+msgid "PD_CKEY"
+msgstr "Bu eşyaya erişmek için bir C-Anahtarına ihtiyacın var!"
+
+msgid "PD_KEYCARD"
+msgstr "Bu öğeye erişmek için bir KeyCard'a ihtiyacınız var!"
+
+msgid "PD_PASSWORD"
+msgstr "Bu öğeye erişmek için bir Şifreye ihtiyacınız var!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Bunu çalıştırmak için bir Mavi Z-Anahtarına ihtiyacınız var"
+
+msgid "PD_REDZKEY"
+msgstr "Bunu çalıştırmak için Kırmızı Z-Anahtarına ihtiyacınız var!"
+
+msgid "PD_YELWZKEY"
+msgstr "Bunu yapmak için Sarı Z-Anahtarına ihtiyacın var!"
+
+msgid "X1TEXT"
+msgstr ""
+"Yirmi milyon altın bu kadar\n"
+"zahmete değmez, değil mi\n"
+"hacker? Hapishane piknik yeri\n"
+"gibi görünüyor!\n"
+"\n"
+"Çirkin biyo-mutasyonlar ve\n"
+"tavandan yiyecek çuvalları gibi\n"
+"sarkıtılmış İnsan dostlarınız.\n"
+"\n"
+"Bu GENIE de neyin nesi? Daha\n"
+"önce hacklediğin hiçbir\n"
+"bilgisayara benzemiyor!\n"
+"\n"
+"Bir sonraki terminali bulsanız\n"
+"iyi olur, c-uzayında bir yolculuk\n"
+"yapın, biraz mutant kıçı doğrayın\n"
+"ve Dodge'dan defolup gidin!"
+
+msgid "X2TEXT"
+msgstr ""
+"Bütün insanlar nerede?!\n"
+"\n"
+"Paris hayalet bir şehir, tabii\n"
+"mutant böcekleri seçkin\n"
+"vatandaşlar olarak\n"
+"görmüyorsanız.\n"
+"\n"
+"Kanlı bir direnişle karşılaştınız.\n"
+"Adamım, bu böcekler\n"
+"savaşabilir! Şanslısın ki\n"
+"mahallenin en parlak ışıkları\n"
+"değiller.\n"
+"\n"
+"Ama alt komitenin istediği bazı\n"
+"bilgileri elde ettiniz. Ve bu iğrenç!\n"
+"\n"
+"İnsan sinir sıvıları bu böcekleri\n"
+"besliyor! Mahallenin seyrekleş-\n"
+"mesine şaşmamalı. Alt komiteye\n"
+"rapor ver. Ve arkanı kolla..."
+
+msgid "X3TEXT"
+msgstr ""
+"Bildiğiniz medeniyet artık yok!\n"
+"\n"
+"Arkadaş yok, aile yok.\n"
+"Artık insan yok.\n"
+"En azından normal insanlar.\n"
+"\n"
+"Geriye tek bir şey kaldı... GENIE!\n"
+"Ve eğer sonuna kadar gitmek\n"
+"zorunda kalırsan mutant\n"
+"kıçını bulacaksın!\n"
+"Çünkü şimdi kızgınsın!\n"
+"\n"
+"Peki ya altın?\n"
+"Lanet olsun, bu bedava.\n"
+"\n"
+".....(devam edecek)....."
+
+msgid "X5TEXT"
+msgstr ""
+"Yaşıyorsun!\n"
+"\n"
+"Bu ihtimaller nedir, hacker?!\n"
+"Çünkü böceklerle dolu.\n"
+"\n"
+"Alt komiteye ulaşamıyorsunuz,\n"
+"bu da tehlikeye atıldığı\n"
+"anlamına geliyor.\n"
+"\n"
+"\n"
+"Sen... yalnızsın."
+
+msgid "TXT_HACXMAP01"
+msgstr ""
+
+msgid "TXT_HACXMAP02"
+msgstr "Tünel Kasabası"
+
+msgid "TXT_HACXMAP03"
+msgstr ""
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr "Siber Sirk"
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr "Büyük Duvar"
+
+msgid "TXT_HACXMAP08"
+msgstr "Lezzet Bahçesi"
+
+msgid "TXT_HACXMAP09"
+msgstr "Gizli Kale"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarşist Rüya"
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr ""
+
+msgid "TXT_HACXMAP13"
+msgstr "Kanalizasyonlar"
+
+msgid "TXT_HACXMAP14"
+msgstr "Elektrot Savaşları"
+
+msgid "TXT_HACXMAP15"
+msgstr "Enk'in Alacakaranlığı"
+
+msgid "TXT_HACXMAP16"
+msgstr ""
+
+msgid "TXT_HACXMAP17"
+msgstr "Kan Nehri"
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr "Savaş Odaları"
+
+msgid "TXT_HACXMAP20"
+msgstr "Hırsız Alarmı!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Kurutucu Oda"
+
+msgid "STSTR_CLEV"
+msgstr "Şimdi Geliyor...\n"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...kıçınızı kızartacak!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap veya Lite-amp?"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Ciddileşelim!"
+
+msgid "STSTR_NCON"
+msgstr "Siber dilimleyici Modu AÇIK"
+
+msgid "STSTR_NCOFF"
+msgstr "Siber dilimleyici Modu KAPALI"
+
+msgid "STSTR_NOMUS"
+msgstr "Seçim: İmkansız"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "Sesi Yükseltin\n"
+
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Twitch n'Kill Modu"
+
+msgid "STSTR_FAADDED"
+msgstr "Öyle olsun, Hacker."
+
+msgid "STSTR_DQDON"
+msgstr "Siber güç Modu AÇIK"
+
+msgid "STSTR_DQDOFF"
+msgstr "Siber güç Modu KAPALI"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "İzleme AÇIK"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "İzleme KAPALI"
+
+msgid "DOSY"
+msgstr "- Kaçmak için Y'ye basın! -"
+
+msgid "ENDGAME"
+msgstr "Deli misin yoksa uyumsuz mu? Evet mi? Evet ya da hayır!"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Emin misin? Bu yetenekle başa çıkamazsın, hacker! Ölmek için Y'ye bas."
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+
+msgid "QLPROMPT"
+msgstr ""
+
+msgid "CC_THUG"
+msgstr "Eşkıya"
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr "BUZ"
+
+msgid "CC_BUZZER"
+msgstr "Şok Uçağı"
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr "Faj"
+
+msgid "CC_MONSTRUCT"
+msgstr ""
+
+msgid "CC_MECH"
+msgstr "Meka Manyağı"
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr "Dikenli Şey"
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr "Lütfen ateş etmeyin!"
+
+msgid "SKILL_EASY"
+msgstr "Aargh, sağlığa ihtiyacım var!"
+
+msgid "SKILL_NORMAL"
+msgstr "Hadi onları parçalayalım!"
+
+msgid "SKILL_HARD"
+msgstr "Ben ölümsüzüm!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Delilik!"

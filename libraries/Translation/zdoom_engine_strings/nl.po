@@ -1,0 +1,5206 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: nl\n"
+
+msgid "PRESSKEY"
+msgstr "Druk op een toets."
+
+msgid "SECRETMESSAGE"
+msgstr "Een geheim is onthuld!"
+
+msgid "D_DEVSTR"
+msgstr "Nutteloze modus AAN."
+
+msgid "QUITMSG"
+msgstr ""
+"Weet je zeker dat je wilt stoppen \n"
+"met dit geweldige spel?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Je kunt niet laden tijdens een netwerkspel!\n"
+"\n"
+"Druk op een toets."
+
+msgid "QLOADNET"
+msgstr ""
+"Je kunt niet snelladen tijdens een netwerkspel!\n"
+"\n"
+"Druk op een toets."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Je hebt nog geen sneloplagplek gekozen!\n"
+"\n"
+"Druk op een toets."
+
+msgid "NEWGAME"
+msgstr ""
+"Je kunt geen nieuw spel starten \n"
+"wanneer je in een netwerkspel zit.\n"
+"\n"
+"Druk op een toets."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Weet je het zeker? Dit moeilijkheidsniveau\n"
+"is niet eens eerlijk.\n"
+"\n"
+"Druk op Y of N."
+
+msgid "SWSTRING"
+msgstr ""
+"Dit is de shareware versie van Doom.\n"
+"\n"
+"Je moet de hele trilogie bestellen.\n"
+"\n"
+"Druk op een toets."
+
+msgid "NETEND"
+msgstr ""
+"Je kunt een netwerkspel niet beëindigen!\n"
+"\n"
+"Druk op een toets."
+
+msgid "ENDGAME"
+msgstr ""
+"Weet je zeker dat je het spel wilt beëindigen?\n"
+"\n"
+"Druk op Y of N."
+
+msgid "RAVENQUITMSG"
+msgstr "Weet je zeker dat je wilt stoppen?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Alleen beschikbaar in de geregistreerde versie"
+
+msgid "DOSY"
+msgstr "(Druk op Y om te stoppen)"
+
+msgid "QUITMSG1"
+msgstr "Ga alsjeblieft niet weg, er zijn meer demonen te roosteren!"
+
+msgid "QUITMSG2"
+msgstr "Laten we ervoor gaan - dit wordt een bloedbad!"
+
+msgid "QUITMSG3"
+msgstr "Ik zou niet weggaan als ik jou was. DOS is veel erger."
+
+msgid "QUITMSG4"
+msgstr "Probeer je te zeggen dat DOS jou beter bevalt dan mij?"
+
+msgid "QUITMSG5"
+msgstr "Ga nog niet weg - er is een demoon hier om de hoek!"
+
+msgid "QUITMSG6"
+msgstr "Weet je, de volgende keer dat je hier binnenkomt, ga ik je roosteren."
+
+msgid "QUITMSG7"
+msgstr "Ga maar, eens kijken of het me interesseert."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr "Wil je stoppen? Dan ben je wel helemaal geschift!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Ga nu niet weg, er wacht een dimensionale schuifelaar op de DOS prompt!"
+
+msgid "QUITMSG10"
+msgstr "Ga hier weg en terug naar je saaie programma's."
+
+msgid "QUITMSG11"
+msgstr "Als ik je baas was, zou ik je in een minuut doodmaken!"
+
+msgid "QUITMSG12"
+msgstr "Luister vriend, als je nu weggaat, is je dodental verbeurd!"
+
+msgid "QUITMSG13"
+msgstr "Ga gewoon weg. Als je terugkomt, wacht ik met een knuppel op je."
+
+msgid "QUITMSG14"
+msgstr ""
+"Je hebt geluk dat ik je niet sla alleen al omdat je eraan denkt te "
+"vertrekken."
+
+msgid "QUITMSG15"
+msgstr "Waar ga je heen?! En de rebellie dan?"
+
+msgid "QUITMSG16"
+msgstr "De slachting geïnterrumpeerd... Wat flauw!"
+
+msgid "QUITMSG17"
+msgstr "Maar jij bent de hoop - Mijn enige kans!!"
+
+msgid "QUITMSG18"
+msgstr "Niemand loopt weg van Blackbird."
+
+msgid "QUITMSG19"
+msgstr "Ik dacht dat je anders was...."
+
+msgid "QUITMSG20"
+msgstr "Goed hoor, schieten en meteen wegrennen!"
+
+msgid "QUITMSG21"
+msgstr "Je kunt stoppen.... Maar je kan je niet verbergen...."
+
+msgid "QUITMSG22"
+msgstr "Hee, wat is er aan de hand? Zegt mama dat het etenstijd is?"
+
+msgid "QUITMSG23"
+msgstr "Niet stoppen nu, er lopen nog steeds vlezerijen op vrije voeten!"
+
+msgid "QUITMSG24"
+msgstr "Geef niet op - de vlezerijen krijgen de overhand!"
+
+msgid "QUITMSG25"
+msgstr "Ga nu niet weg. We hebben je hulp nodig!"
+
+msgid "QUITMSG26"
+msgstr "Ik hoop dat je gewoon een pauze neemt voor Chex(R) party mix."
+
+msgid "QUITMSG27"
+msgstr "Niet stoppen nu! We hebben je hulp nodig!"
+
+msgid "QUITMSG28"
+msgstr "Laat de Intergalactische Federatie van Granen niet in de steek!"
+
+msgid "QUITMSG29"
+msgstr "De echte Chex(R) Krijger zou niet zo snel opgeven!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Je hebt iets opgepakt..."
+
+msgid "PD_ANY"
+msgstr "Elke sleutel zal deze deur openen"
+
+msgid "PD_ANYOBJ"
+msgstr "Elke sleutel zal dit object activeren"
+
+msgid "PD_ALL3"
+msgstr "Je hebt alle drie de sleutels nodig om deze deur te openen"
+
+msgid "PD_ALL3O"
+msgstr "Je hebt alle drie de sleutels nodig om dit object te activeren"
+
+msgid "PD_ALL6"
+msgstr "Je hebt alle zes de sleutels nodig om deze deur te openen"
+
+msgid "PD_ALL6O"
+msgstr "Je hebt alle zes de sleutels nodig om dit object te activeren"
+
+msgid "PD_ALLKEYS"
+msgstr "Je hebt alle sleutels nodig"
+
+msgid "HUSTR_MSGU"
+msgstr "[Bericht niet verzonden]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Je mompelt in jezelf"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Wie is daar?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Je wordt bang van jezelf"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Je begint te razen"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Je bent het kwijt"
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Bericht verzonden]"
+
+msgid "STSTR_MUS"
+msgstr "Muziek veranderen"
+
+msgid "STSTR_NOMUS"
+msgstr "Onmogelijke selectie"
+
+msgid "STSTR_DQDON"
+msgstr "Gegradeloosheid modus AAN"
+
+msgid "STSTR_DQDOFF"
+msgstr "Gegradeloosheid modus UIT"
+
+msgid "STSTR_DQD2ON"
+msgstr "Uiteindelijke Gegradeloosheid modus AAN"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Uiteindelijke Gegradeloosheid modus UIT"
+
+msgid "STSTR_KFAADDED"
+msgstr "Zeer gelukkige munitie toegevoegd"
+
+msgid "STSTR_FAADDED"
+msgstr "Munitie (geen sleutels) toegevoegd"
+
+msgid "STSTR_NCON"
+msgstr "Geen Clipping Modus AAN"
+
+msgid "STSTR_NCOFF"
+msgstr "Geen Clipping Modus OFF"
+
+msgid "STSTR_NC2ON"
+msgstr "Geen Clipping Modus 2 AAN"
+
+msgid "STSTR_NC2OFF"
+msgstr "Geen Clipping Modus 2 OFF"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "onSterv, Bzk, Inviso, Rad, Allmap, of Lvizier"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Versterking ingeschakeld"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr ".... is niet slecht - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Level veranderen..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Boeddha-modus AAN"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Boeddha-modus UIT"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Ultieme Boeddha-modus AAN"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Ultieme Boeddha-modus UIT"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Vermogen aan"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Vermogen uit"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Volledige gezondheid"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Alle sleutels"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Geluid debug aan"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Geluid debug uit"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Je wou valsspelen, hè? Nu ga je dood!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Valsspeler - je verdient geen wapens."
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Ticker aan"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Ticker uit"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Je hebt het"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Je hebt de Midas Touch, schatje"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Je hebt het spul!"
+
+msgid "TXT_FREEZEON"
+msgstr "Bevriesmodus aan"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Bevriesmodus uit"
+
+msgid "TXT_STRANGE"
+msgstr "Je voelt je vreemd..."
+
+msgid "TXT_STRANGER"
+msgstr "Je voelt je nog vreemder."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Je voelt je weer als jezelf."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Loden laarzen aan"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Loden laarzen uit"
+
+msgid "TXT_LIGHTER"
+msgstr "Je voelt je lichter"
+
+msgid "TXT_GRAVITY"
+msgstr "Zwaartekracht werkt op je..."
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Geen doelwit AAN"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Geen doelwit UIT"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "„Beving van angst!“"
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Geen Ogre Pantser meer"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Chasecam AAN"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Chasecam UIT"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 slechterik gedood"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d slechteriken gedood"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 monster gedood"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d monsters gedood"
+
+msgid "TXT_NO_RESURRECT"
+msgstr ""
+"Kan niet reanimeren. De speler is niet langer verbonden met zijn lichaam."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Alle artefacten!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Wat wil je buiten een spel om doden?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Eigenschappen van de bevroren speler uitgeschakeld"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Volgmodus UIT"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Volgmodus AAN"
+
+msgid "AMSTR_GRIDON"
+msgstr "Raster AAN"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Raster UIT"
+
+msgid "AMSTR_TEXON"
+msgstr "Textuurmodus AAN"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Textuurmodus UIT"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Gemarkeerde plek"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Alle markingen gewist"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Fraglimiet bereikt."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Tijdslimiet bereikt."
+
+msgid "SPREEKILLSELF"
+msgstr "%o zag er goed uit tot %g zelfmoord pleegde!"
+
+msgid "SPREEOVER"
+msgstr "%o's moordpartij werd beëindigd door %k."
+
+msgid "SPREE5"
+msgstr "%k is op een moordpartij!"
+
+msgid "SPREE10"
+msgstr "%k heeft razernij!"
+
+msgid "SPREE15"
+msgstr "%k domineert!"
+
+msgid "SPREE20"
+msgstr "%k is niet te stoppen!"
+
+msgid "SPREE25"
+msgstr "%k is Goddelijk!"
+
+msgid "MULTI2"
+msgstr "Dubbele kill!"
+
+msgid "MULTI3"
+msgstr ""
+
+msgid "MULTI4"
+msgstr ""
+
+msgid "MULTI5"
+msgstr ""
+
+msgid "SCORE_BONUS"
+msgstr "Bonus"
+
+msgid "SCORE_COLOR"
+msgstr "Kleur"
+
+msgid "SCORE_SECRET"
+msgstr "Geheim"
+
+msgid "SCORE_NAME"
+msgstr "Naam"
+
+msgid "SCORE_DELAY"
+msgstr "Vertraging (ms)"
+
+msgid "SCORE_FRAGS"
+msgstr ""
+
+msgid "SCORE_DEATHS"
+msgstr "Sterfgevallen"
+
+msgid "SCORE_OTHER"
+msgstr "Anders"
+
+msgid "SCORE_MISSED"
+msgstr "Gemist"
+
+msgid "SCORE_TOTAL"
+msgstr "Totaal"
+
+msgid "SCORE_LVLTIME"
+msgstr "Leveltijd"
+
+msgid "TXT_IMKILLS"
+msgstr "Dood"
+
+msgid "TXT_IMITEMS"
+msgstr ""
+
+msgid "TXT_IMSECRETS"
+msgstr "Geheimen"
+
+msgid "TXT_IMTIME"
+msgstr "Tijd"
+
+msgid "TXT_IMPAR"
+msgstr ""
+
+msgid "WI_FINISHED"
+msgstr "Klaar"
+
+msgid "WI_ENTERING"
+msgstr "Volgende"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Volgende:"
+
+msgid "AM_MONSTERS"
+msgstr ""
+
+msgid "AM_SECRETS"
+msgstr "Geheimen:"
+
+msgid "AM_ITEMS"
+msgstr ""
+
+msgid "OB_SUICIDE"
+msgstr "%o pleegt zelfmoord."
+
+msgid "OB_FALLING"
+msgstr "%o viel te ver."
+
+msgid "OB_CRUSH"
+msgstr "%o werd geplet."
+
+msgid "OB_EXIT"
+msgstr "%o probeerde te vertrekken."
+
+msgid "OB_WATER"
+msgstr "%o kan niet zwemmen."
+
+msgid "OB_SLIME"
+msgstr "%o muteerde."
+
+msgid "OB_LAVA"
+msgstr "%o smolt."
+
+msgid "OB_BARREL"
+msgstr "%o ging boem."
+
+msgid "OB_SPLASH"
+msgstr "%o stond op de verkeerde plek."
+
+msgid "OB_R_SPLASH"
+msgstr "%o had afstand moeten houden."
+
+msgid "OB_ROCKET"
+msgstr "%o had afstand moeten houden."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o bracht zichzelf om."
+
+msgid "OB_VOODOO"
+msgstr "%o werd gedood door de kracht van voodoo."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o werd getelefragged door %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o werd getelefragged."
+
+msgid "OB_DEFAULT"
+msgstr "%o ging dood."
+
+msgid "OB_MPDEFAULT"
+msgstr "%o werd gedood door %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k maait een teamgenoot neer."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k lijkt een bril nodig te hebben."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k doet een frag voor het andere team."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k verliest nog een vriend."
+
+msgid "GOTARMOR"
+msgstr "Je hebt het harnas opgepakt."
+
+msgid "GOTMEGA"
+msgstr "Je hebt het megaharnas opgepakt!"
+
+msgid "GOTHTHBONUS"
+msgstr "Je hebt een gezondheidsbonus opgepakt."
+
+msgid "GOTARMBONUS"
+msgstr "Je hebt een harnasbonus opgepakt."
+
+msgid "GOTSTIM"
+msgstr "Je hebt een opwekpakket opgepakt."
+
+msgid "GOTMEDINEED"
+msgstr "Je hebt een verbandsdoos, die je ECHT nodig had, opgepakt!"
+
+msgid "GOTMEDIKIT"
+msgstr "Je hebt een verbandsdoos opgepakt."
+
+msgid "GOTSUPER"
+msgstr ""
+
+msgid "GOTBLUECARD"
+msgstr "Je hebt een blauwe sleutelkaart opgepakt."
+
+msgid "GOTYELWCARD"
+msgstr "Je hebt een gele sleutelkaart opgepakt."
+
+msgid "GOTREDCARD"
+msgstr "Je hebt een rode sleutelkaart opgepakt."
+
+msgid "GOTBLUESKUL"
+msgstr "Je hebt een blauwe schedelsleutel opgepakt."
+
+msgid "GOTYELWSKUL"
+msgstr "Je hebt een gele schedelsleutel opgepakt."
+
+msgid "GOTREDSKUL"
+msgstr "Je hebt een rode schedelsleutel opgepakt."
+
+msgid "GOTINVUL"
+msgstr "Onkwetsbaarheid!"
+
+msgid "GOTBERSERK"
+msgstr ""
+
+msgid "GOTINVIS"
+msgstr "Gedeeltelijke onzichtbaarheid"
+
+msgid "GOTSUIT"
+msgstr "Stralingsbeschermingspak"
+
+msgid "GOTMAP"
+msgstr "Computerkaart"
+
+msgid "GOTVISOR"
+msgstr "Lichtversterkingsvizier"
+
+msgid "GOTMSPHERE"
+msgstr ""
+
+msgid "GOTCLIP"
+msgstr "Je hebt een patroon opgepakt."
+
+msgid "GOTCLIPBOX"
+msgstr "Je hebt een doos kogels opgepakt."
+
+msgid "GOTROCKET"
+msgstr "Je hebt een raket opgepakt."
+
+msgid "GOTROCKBOX"
+msgstr "Je hebt een doos raketten opgepakt."
+
+msgid "GOTCELL"
+msgstr "Je hebt een energiecel opgepakt."
+
+msgid "GOTCELLBOX"
+msgstr "Je hebt een energiecelpakket opgepakt."
+
+msgid "GOTSHELLS"
+msgstr "Je hebt 4 jachtgeweerkogels opgepakt."
+
+msgid "GOTSHELLBOX"
+msgstr "Je hebt een doos jachtgeweerkogels opgepakt."
+
+msgid "GOTBACKPACK"
+msgstr "Je hebt een rugzak vol munitie opgepakt!"
+
+msgid "GOTBFG9000"
+msgstr "Je hebt de BFG9000! Jawel."
+
+msgid "GOTCHAINGUN"
+msgstr "Je hebt het machinegeweer!"
+
+msgid "GOTCHAINSAW"
+msgstr "Een kettingzaag! Vind vlees!"
+
+msgid "GOTLAUNCHER"
+msgstr "Je hebt de raketwerper!"
+
+msgid "GOTPLASMA"
+msgstr "Je hebt het plasmageweer!"
+
+msgid "GOTSHOTGUN"
+msgstr "Je hebt het jachtgeweer!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Je hebt het superjachtgeweer!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Je hebt het pistool opgepakt."
+
+msgid "BETA_BONUS1"
+msgstr "Je hebt een demonische dolk opgepakt."
+
+msgid "BETA_BONUS2"
+msgstr "Je hebt een schedelborst opgepakt."
+
+msgid "BETA_BONUS3"
+msgstr "Je hebt een kwaadaardige scepter opgepakt."
+
+msgid "BETA_BONUS4"
+msgstr "Je hebt een onheilige bijbel opgepakt."
+
+msgid "PD_BLUEO"
+msgstr "Je hebt een blauwe sleutel nodig om dit object te activeren."
+
+msgid "PD_REDO"
+msgstr "Je hebt een rode sleutel nodig om dit object te activeren."
+
+msgid "PD_YELLOWO"
+msgstr "Je hebt een gele sleutel nodig om dit object te activeren."
+
+msgid "PD_BLUEK"
+msgstr "Je hebt een blauwe sleutel nodig om deze deur te openen."
+
+msgid "PD_REDK"
+msgstr "Je hebt een rode sleutel nodig om deze deur te openen."
+
+msgid "PD_YELLOWK"
+msgstr "Je hebt een gele sleutel nodig om deze deur te openen."
+
+msgid "PD_BLUECO"
+msgstr "Je hebt een blauwe sleutelkaart nodig om dit voorwerp te activeren."
+
+msgid "PD_REDCO"
+msgstr "Je hebt een rode sleutelkaart nodig om dit voorwerp te activeren."
+
+msgid "PD_YELLOWCO"
+msgstr "Je hebt een gele sleutelkaart nodig om dit voorwerp te activeren."
+
+msgid "PD_BLUESO"
+msgstr "Je hebt een blauwe schedel nodig om dit voorwerp te activeren."
+
+msgid "PD_REDSO"
+msgstr "Je hebt een rode schedel nodig om dit voorwerp te activeren."
+
+msgid "PD_YELLOWSO"
+msgstr "Je hebt een gele schedel nodig om dit voorwerp te activeren."
+
+msgid "PD_BLUEC"
+msgstr "Je hebt een blauwe sleutelkaart nodig om deze deur te openen."
+
+msgid "PD_REDC"
+msgstr "Je hebt een rode sleutelkaart nodig om deze deur te openen."
+
+msgid "PD_YELLOWC"
+msgstr "Je hebt een gele sleutelkaart nodig om deze deur te openen."
+
+msgid "PD_BLUES"
+msgstr "Je hebt een blauwe schedel nodig om deze deur te openen."
+
+msgid "PD_REDS"
+msgstr "Je hebt een rode schedel nodig om deze deur te openen."
+
+msgid "PD_YELLOWS"
+msgstr "Je hebt een gele schedel nodig om deze deur te openen."
+
+msgid "CC_ZOMBIE"
+msgstr "Zombie"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Jachtgeweerkerel"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Zwarewapenskerel"
+
+msgid "CC_IMP"
+msgstr ""
+
+msgid "CC_DEMON"
+msgstr "Demoon"
+
+msgid "CC_LOST"
+msgstr "Verloren ziel"
+
+msgid "CC_CACO"
+msgstr "Cacodemoon"
+
+msgid "CC_HELL"
+msgstr "Helleridder"
+
+msgid "CC_BARON"
+msgstr "Baron des Hels"
+
+msgid "CC_ARACH"
+msgstr ""
+
+msgid "CC_PAIN"
+msgstr "Smartelementaal"
+
+msgid "CC_REVEN"
+msgstr "Wreker"
+
+msgid "CC_MANCU"
+msgstr ""
+
+msgid "CC_ARCH"
+msgstr "Aartsgedrocht"
+
+msgid "CC_SPIDER"
+msgstr "Het Spinnenmeesterbrein"
+
+msgid "CC_CYBER"
+msgstr "Het Cyberdemoon"
+
+msgid "CC_HERO"
+msgstr "Onze held"
+
+msgid "FN_SHOTGUN"
+msgstr ""
+
+msgid "FN_HEAVY"
+msgstr "Machinegeweerman"
+
+msgid "FN_SPECTRE"
+msgstr "Spook"
+
+msgid "FN_SPIDER"
+msgstr "Spinnenmeesterbrein"
+
+msgid "FN_CYBER"
+msgstr "Cyberdemoon"
+
+msgid "FN_WOLFSS"
+msgstr ""
+
+msgid "FN_DOG"
+msgstr "Hond"
+
+msgid "TAG_FIST"
+msgstr "Boksbeugels"
+
+msgid "TAG_CHAINSAW"
+msgstr "Kettingzaag"
+
+msgid "TAG_PISTOL"
+msgstr "Pistool"
+
+msgid "TAG_SHOTGUN"
+msgstr "Jachtgeweer"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Superjachtgeweer"
+
+msgid "TAG_CHAINGUN"
+msgstr "Machinegeweer"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Raketwerper"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Plasmageweer"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Kogels"
+
+msgid "AMMO_SHELLS"
+msgstr "Jachtgeweerkogels"
+
+msgid "AMMO_ROCKETS"
+msgstr "Raketten"
+
+msgid "AMMO_CELLS"
+msgstr "Energiecellen"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o dacht dat @[hij_ze_nl] een arachnotron zag."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o dacht dat @[hij_ze_nl] een aartsvijand zag."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o dacht dat @[hij_ze_nl] een baron van de Hel zag."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o dacht dat @[hij_ze_nl] een cacodemon zag."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o dacht dat @[hij_ze_nl] een zware wapens kerel zag."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o dacht dat @[hij_ze_nl] een demon zag."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o dacht dat @[hij_ze_nl] een hel ridder zag."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o dacht dat @[hij_ze_nl] een imp zag."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o dacht dat @[hij_ze_nl] een mancubus zag."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o dacht dat @[hij_ze_nl] een wraakzuchtige zag."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o dacht dat @[hij_ze_nl] een jachtgeweer kerel zag."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o dacht dat @[hij_ze_nl] een zombie zag."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o werd geslagen door een wraakzuchtige."
+
+msgid "OB_IMPHIT"
+msgstr "%o werd gesneden door een imp."
+
+msgid "OB_CACOHIT"
+msgstr "%o kwam te dicht bij een cacodemon."
+
+msgid "OB_DEMONHIT"
+msgstr "%o werd gebeten door een demon."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o werd opgegeten door een spook."
+
+msgid "OB_BARONHIT"
+msgstr "%o werd opengereten door een Baron van de hel."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o werd gestript door een hel ridder."
+
+msgid "OB_ZOMBIE"
+msgstr "%o werd gedood door een zombie."
+
+msgid "OB_SHOTGUY"
+msgstr "%o werd neergeschoten door een sergeant."
+
+msgid "OB_VILE"
+msgstr "%o werd verbrand door een aartsvijand."
+
+msgid "OB_UNDEAD"
+msgstr "%o kon de vuurbal van een wraakzuchtige niet ontwijken."
+
+msgid "OB_FATSO"
+msgstr "%o werd verpletterd door een mancubus."
+
+msgid "OB_CHAINGUY"
+msgstr "%o werd geperforeerd door een zware wapens kerel."
+
+msgid "OB_SKULL"
+msgstr "%o werd bang gemaakt door een verloren ziel."
+
+msgid "OB_IMP"
+msgstr "%o werd verbrand door een imp."
+
+msgid "OB_CACO"
+msgstr "%o werd geslagen door een cacodemon."
+
+msgid "OB_BARON"
+msgstr "%o werd gekneusd door een baron van de hel."
+
+msgid "OB_KNIGHT"
+msgstr "%o werd gespierd door een hel ridder."
+
+msgid "OB_SPIDER"
+msgstr "%o stond in ontzag voor de spindemon."
+
+msgid "OB_BABY"
+msgstr "%o werd gedood door een arachnotron"
+
+msgid "OB_CYBORG"
+msgstr "%o werd gespetterd door een cyberdemon."
+
+msgid "OB_WOLFSS"
+msgstr "%o ontmoette een nazi."
+
+msgid "OB_DOG"
+msgstr "%o werd verminkt door een hond."
+
+msgid "OB_MPFIST"
+msgstr "%o gekauwd op %k's vuist."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o werd gemaaid met %k's kettingzaag."
+
+msgid "OB_MPPISTOL"
+msgstr "%o werd gekieteld door %k's erwtenschutter."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o gekauwd op %k's boomstick."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o werd gespat door %k's super jachtgeweer."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o werd gemaaid met %k's machinegeweer."
+
+msgid "OB_MPROCKET"
+msgstr "%o reed op %k's raket."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o ontweek bijna %k's raket."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o was gesmolten door %k's plasmageweer."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o was versplinterd door %k's BFG."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o kon zich niet verbergen voor %k's BFG."
+
+msgid "OB_RAILGUN"
+msgstr "%o werd gespaakt door %k."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o werd verbrand door %k's BFG."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Blauwe sleutel"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Gele sleutel"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Groene sleutel"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Kwartskolf"
+
+msgid "TXT_ARTIFLY"
+msgstr "Vleugels der Toorn"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Ring van Onoverwinnelijkheid"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Boek van de Macht"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Schaduwbol"
+
+msgid "TXT_ARTIEGG"
+msgstr "Morfose-Ei"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Mystieke Urn"
+
+msgid "TXT_ARTITORCH"
+msgstr "Fakkel"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Tijdbom der Tijden"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Chaosapparaat"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Kristallen Flesje"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Rugzak"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Zilveren Schild"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Betoverd schild"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Kaartrol"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Toverstok van Kristal"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Kristal Geode"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Strijdknotsen"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Stapel Strijdknotsen"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Etherische Pijlen"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Koker van Etherische Pijlen"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Klauwbal"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Energiebal"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Lichte Runen"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Zware Runen"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Vuurbal"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Infernobal"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Gouden Toverstok"
+
+msgid "TXT_WPNMACE"
+msgstr "Vuurfoelie"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Etherische kruisboog"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Drakenklauw"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Hellestaf"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Feniksstaf"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Handschoenen van de Geestenbezweerder"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Je hebt een blauwe sleutel nodig om deze deur te openen"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Je hebt een groene sleutel nodig om deze deur te openen"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Je hebt een gele sleutel nodig om deze deur te openen"
+
+msgid "FN_CHICKEN"
+msgstr "Kip"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Weerdraak"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Sabelklauw"
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr ""
+
+msgid "FN_IRONLICH"
+msgstr "IJzeren Lijk"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Ondode Krijger"
+
+msgid "FN_MINOTAUR"
+msgstr "Maulotaurus"
+
+msgid "FN_MUMMY"
+msgstr ""
+
+msgid "FN_MUMMYLEADER"
+msgstr ""
+
+msgid "FN_SNAKE"
+msgstr "Ophidiaan"
+
+msgid "FN_WIZARD"
+msgstr "Tovenaar"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Toverstafkristallen"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Etherische Pijlen"
+
+msgid "AMMO_BLASTER"
+msgstr "Klauwbollen"
+
+msgid "AMMO_MACE"
+msgstr "Strijdknotsen"
+
+msgid "AMMO_SKULLROD"
+msgstr "Hellestafrunen"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Vuurballen"
+
+msgid "TAG_STAFF"
+msgstr "Staf"
+
+msgid "TAG_GOLDWAND"
+msgstr "Elvenstokje"
+
+msgid "OB_CHICKEN"
+msgstr "%o werd doodgepikt."
+
+msgid "OB_BEAST"
+msgstr "%o werd verbrand door een weerdraak."
+
+msgid "OB_CLINK"
+msgstr "%o werd door een sabelklauw gesneden."
+
+msgid "OB_DSPARIL1"
+msgstr "%o werd gebroeid door de slang van D'Sparil."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o werd door de slang van D'Sparil opgekauwd."
+
+msgid "OB_DSPARIL2"
+msgstr "%o was geen partij voor D'Sparil."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o werd neergeslagen door D'Sparil."
+
+msgid "OB_HERETICIMP"
+msgstr "%o was getekend door een gargoyle."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o werd gehackt door een gargoyle."
+
+msgid "OB_IRONLICH"
+msgstr "%o werd verwoest door een ijzeren lijk."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o werd door een ijzeren lijk onheus bejegend."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o werd doorkliefd door een ondode krijger."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o werd gedood door een ondode krijger."
+
+msgid "OB_MINOTAUR"
+msgstr "%o werd door een Maulotaurus tot sintels geblazen."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o werd verpulverd door een Maulotaurus."
+
+msgid "OB_MUMMY"
+msgstr "%o werd verbrijzeld door een golem."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o werd doodgekrijst door een nitrogolem."
+
+msgid "OB_SNAKE"
+msgstr "%o werd gerammeld door een ophidiaan."
+
+msgid "OB_WIZARD"
+msgstr "%o werd vervloekt door een tovenaar."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o werd betast door een tovenaar."
+
+msgid "OB_MPSTAFF"
+msgstr "%o kreeg een tik van %k's staf."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o kreeg een schok van %k's handschoenen."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o zwaaide afscheid van %k's elvenstaf."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o was vastgepind door %k's etherische kruisboog."
+
+msgid "OB_MPBLASTER"
+msgstr "%o werd opengescheurd door %k's drakenklauw."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o werd door %k's hellestaf naar beneden gestuurd."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o werd door %k's feniksstaf tot sintels verschroeid."
+
+msgid "OB_MPMACE"
+msgstr "%o werd door %k's vuurknots geraakt."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o kreeg een klap van %k's opgeladen staf."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o werd leeggebloed door %k's handschoenen."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o werd aangevallen door %k's elvenstaf."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o werd door %k's etherische kruisboog geschaafd."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o werd uit elkaar gescheurd door %k's drakenklauw."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k liet de helregen los op %o."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o werd afgebrand door %k's feniksstaf."
+
+msgid "OB_MPPMACE"
+msgstr "%o werd verpletterd door %k's reusachtige strijdknots."
+
+msgid "TXT_MANA_1"
+msgstr "Blauwe Mana"
+
+msgid "TXT_MANA_2"
+msgstr "Groene Mana"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Gecombineerde Mana"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Stalen Sleutel"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Grotsleutel"
+
+msgid "TXT_KEY_AXE"
+msgstr "Bijlsleutel"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Vuursleutel"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Smaragden Sleutel"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Kerkersleutel"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Zilveren Sleutel"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Geroeste Sleutel"
+
+msgid "TXT_KEY_HORN"
+msgstr "Hoornsleutel"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Moerassleutel"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Kasteelsleutel"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Symbool van de Verdediger"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Donkere Dienaar"
+
+msgid "TXT_ARTIEGG2"
+msgstr ""
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Verbanningsapparaat"
+
+msgid "TXT_ARTISPEED"
+msgstr "Snelheidslaarzen"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Beker van Macht"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Drakenhuidbescherming"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Schijf van Afstoting"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Yorick's Schedel"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "Hart van D'sparil"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Robijnrode Planeet"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdgroene Planeet"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdgroene Planeet"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Saffierblauwe Planeet"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Saffierblauwe Planeet"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Vuurmasker"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Lanszegel"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Heilige Relikwie"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Sigaar van de Magus"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Kloktandwiel"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Dat kan je hier niet gebruiken"
+
+msgid "TXT_ARMOR1"
+msgstr "Maliënkolder"
+
+msgid "TXT_ARMOR2"
+msgstr "Valkenschild"
+
+msgid "TXT_ARMOR3"
+msgstr "Platina Helm"
+
+msgid "TXT_ARMOR4"
+msgstr "Amulet van Bescherming"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Timon's Bijl"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Hamer der Vergelding"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Quietus in elkaar gezet"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Slangenstaf"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Vuurstorm"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Schimroede in elkaar gezet"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Vorstscherven"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Doodsboog"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Bloedgesel in elkaar gezet"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Een wapenstuk! Dit is je geluksdag!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Segment van Quietus"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Segment van Schimroede"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Segment van Bloedgesel"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Je hebt de Stalen Sleutel nodig."
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Je hebt de Grotsleutel nodig."
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Je hebt de Bijlsleutel nodig."
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Je hebt de Vuursleutel nodig."
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Je hebt de Smaragden Sleutel nodig."
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Je hebt de Kerkersleutel nodig."
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Je hebt de Zilveren Sleutel nodig."
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Je hebt de Geroeste Sleutel nodig."
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Je hebt de Hoornsleutel nodig."
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Je hebt de Moerassleutel nodig."
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Je hebt de Kasteelsleutel nodig."
+
+msgid "FN_FIREDEMON"
+msgstr "Afriet"
+
+msgid "FN_DEMON1"
+msgstr "Slang"
+
+msgid "FN_ETTIN"
+msgstr ""
+
+msgid "FN_CENTAUR"
+msgstr "Centaurus"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Slachttaurus"
+
+msgid "FN_BISHOP"
+msgstr "Bisschop"
+
+msgid "FN_ICEGUY"
+msgstr ""
+
+msgid "FN_SERPENT"
+msgstr ""
+
+msgid "FN_WRAITH"
+msgstr "Rover"
+
+msgid "FN_DRAGON"
+msgstr "Doodsdraak"
+
+msgid "FN_KORAX"
+msgstr ""
+
+msgid "FN_FBOSS"
+msgstr ""
+
+msgid "FN_MBOSS"
+msgstr ""
+
+msgid "FN_CBOSS"
+msgstr ""
+
+msgid "FN_HERESIARCH"
+msgstr ""
+
+msgid "AMMO_MANA1"
+msgstr "Blauwe Mana"
+
+msgid "AMMO_MANA2"
+msgstr "Groene Mana"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Knots van Wroeging"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Slangenstaf"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Vuurstorm"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Schimroede"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Spijkerhandschoenen"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Timon's Bijl"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Hamer van Vergelding"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr ""
+
+msgid "TAG_MWEAPWAND"
+msgstr "Saffieren Toverstok"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Vorstscherven"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Doodsboog"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Bloedgesel"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Schijf van Afstoting"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Drakenhuidbescherming"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Beker van Macht"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Flechette (giftige wolk)"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Flechette (tijdbom)"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Flechette (granaat)"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr ""
+
+msgid "TAG_ARTIDEFENDER"
+msgstr ""
+
+msgid "TAG_ARTIPORK"
+msgstr ""
+
+msgid "TAG_ARTISPEED"
+msgstr "Snelheidslaarzen"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Donkere Dienaar"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Verbanningsapparaat"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Yorick's Schedel"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "Hart van D'Sparil"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Robijnrode Planeet"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdgroene Planeet (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdgroene Planeet (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Saffierblauwe Planeet (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Saffierblauwe Planeet (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Vuurmasker"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Lanszegel"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Heilige Relikwie"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Sigaar van de Magus"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "IJzeren uitrusting"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Messing uitrusting"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Messing en ijzeren uitrusting"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Zilveren en messing uitrusting"
+
+msgid "OB_FIREDEMON"
+msgstr "%o proefde het vuur van een Afriet."
+
+msgid "OB_DEMON1"
+msgstr "%o werd gebroeid door een Slang."
+
+msgid "OB_DEMON2"
+msgstr "%o werd vergiftigd door een Slang."
+
+msgid "OB_ETTIN"
+msgstr "%o werd gepureerd door een Ettin."
+
+msgid "OB_CENTAUR"
+msgstr "%o werd versneden door een Centaurus."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o werd versneden door een Slachtaurus."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o werd neergeslagen door een Slachtaurus' vuurbal."
+
+msgid "OB_BISHOP"
+msgstr "%o bezweek aan de donkere kracht van een Bisschop."
+
+msgid "OB_ICEGUY"
+msgstr "%o werd bevroren door een Wendigo."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o werd verminkt door een Stalker."
+
+msgid "OB_SERPENT"
+msgstr "%o werd gesmolten door een Stalker."
+
+msgid "OB_WRAITH"
+msgstr "%o werd verbrand door een Rover."
+
+msgid "OB_WRAITHHIT"
+msgstr "%o had @[zijn_haar_nl] leven gestolen door een Rover."
+
+msgid "OB_DRAGON"
+msgstr "%o werd verbrand door de Doodsdraak."
+
+msgid "OB_KORAX"
+msgstr "%o werd door Korax van het bord geveegd."
+
+msgid "OB_FBOSS"
+msgstr "%o werd gedood door Zedek."
+
+msgid "OB_MBOSS"
+msgstr "%o kon Menelkir's mana niet absorberen."
+
+msgid "OB_CBOSS"
+msgstr "%o werd gedoopt door Traductus."
+
+msgid "OB_HERESIARCH"
+msgstr "%o @[zijn_haar_nl] botten werden opgerold door de Heresiarch."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o werd tot pulp geslagen door %k's blote vuisten."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o kreeg de bijl van %k."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%o had @[zijn_haar_nl] kop ingestort met %k's hamer."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o's ziel werd omgesmeed door %k's hamer."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o werd tot zwijgen gebracht door %k's machtige Quietus."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o kreeg een %k's gesel in @[zijn_haar_nl] gezicht."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o werd gebeten door %k's slangenstaf."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o stikte in %k's slangenstaf."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o werd opgelicht door %k's vlammen."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o werd gereinigd door %k's Schimroede."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o kreeg een saffierstraal teveel van %k."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o werd ijskoud veranderd door %k."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o kreeg een schokkende openbaring van %k."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr ""
+"%o werd van het gezicht van het universum geveegd door %k's Bloedgesel."
+
+msgid "TXT_METALARMOR"
+msgstr "Je hebt het metalen harnas opgepakt."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Je hebt het leren harnas opgepakt."
+
+msgid "TXT_MEDPATCH"
+msgstr "Je hebt de med-patch opgepakt."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Je hebt de medicijndoos opgepakt."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Je hebt het chirurgenpakket opgepakt."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Je hebt de kaart opgepakt."
+
+msgid "TXT_BELDINSRING"
+msgstr "Je hebt de ring opgepakt."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Je hebt de Offerbeker opgepakt."
+
+msgid "TXT_EAR"
+msgstr "Je hebt het oor opgepakt."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Je hebt de kapotte stroomkoppeling opgepakt."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Je hebt het schaduwharnas opgepakt."
+
+msgid "TXT_ENVSUIT"
+msgstr "Je hebt het beschermende pak opgepakt."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Je hebt het wachtersuniform opgepakt."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Je hebt het officiersuniform opgepakt."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Je hebt de vlammenwerperonderdelen opgepakt."
+
+msgid "TXT_REPORT"
+msgstr "Je hebt het rapport opgepakt."
+
+msgid "TXT_INFO"
+msgstr "Je hebt de informatie opgepakt."
+
+msgid "TXT_TARGETER"
+msgstr "Je hebt het Richter opgepakt."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Je hebt de Communicator opgepakt."
+
+msgid "TXT_COIN"
+msgstr "Je hebt de munt opgepakt."
+
+msgid "TXT_XGOLD"
+msgstr "Je hebt %d goud opgepakt."
+
+msgid "TXT_BEACON"
+msgstr "Je hebt de teleporterbaken opgepakt."
+
+msgid "TXT_DEGNINORE"
+msgstr "Je hebt het Degnin-erts opgepakt."
+
+msgid "TXT_SCANNER"
+msgstr "Je hebt de scanner opgepakt."
+
+msgid "TXT_NEEDMAP"
+msgstr "De scanner werkt niet zonder een kaart!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Je hebt de gevangenispas opgepakt."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Je hebt de kruisboog opgepakt."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Je hebt het aanvalswapen opgepakt."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Je hebt de mini-raketwerper opgepakt."
+
+msgid "TXT_FLAMER"
+msgstr "Je hebt de vlammenwerper opgepakt."
+
+msgid "TXT_MAULER"
+msgstr "Je hebt de toetakelaar opgepakt."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Je hebt de granaatwerper opgepakt."
+
+msgid "TXT_SIGIL"
+msgstr "Je hebt de SIGIL opgepakt."
+
+msgid "TXT_BASEKEY"
+msgstr "Je hebt de basissleutel opgepakt."
+
+msgid "TXT_GOVSKEY"
+msgstr "Je hebt de gouverneursleutel opgepakt."
+
+msgid "TXT_PASSCARD"
+msgstr "Je hebt de doorgangskaart opgepakt."
+
+msgid "TXT_IDBADGE"
+msgstr "Je hebt de ID-badge opgepakt."
+
+msgid "TXT_PRISONKEY"
+msgstr "Je hebt de gevangenissleutel opgepakt."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Je hebt de Gescheurde Hand opgepakt."
+
+msgid "TXT_POWER1KEY"
+msgstr "Je hebt de 1e Machtsleutel opgepakt."
+
+msgid "TXT_POWER2KEY"
+msgstr "Je hebt de 2e Machtsleutel opgepakt."
+
+msgid "TXT_POWER3KEY"
+msgstr "Je hebt de 3e Machtsleutel opgepakt."
+
+msgid "TXT_GOLDKEY"
+msgstr "Je hebt de gouden sleutel opgepakt."
+
+msgid "TXT_IDCARD"
+msgstr "Je hebt de ID-kaart opgepakt."
+
+msgid "TXT_SILVERKEY"
+msgstr "Je hebt de zilveren sleutel opgepakt."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Je hebt de Orakelsleutel opgepakt."
+
+msgid "TXT_MILITARYID"
+msgstr "Je hebt de militaire ID opgepakt."
+
+msgid "TXT_ORDERKEY"
+msgstr "Je hebt de Ordesleutel opgepakt."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Je hebt de pakhuissleutel opgepakt."
+
+msgid "TXT_BRASSKEY"
+msgstr "Je hebt de messing sleutel opgepakt."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Je hebt de rode kristallen sleutel opgepakt."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Je hebt de blauwe kristallen sleutel opgepakt."
+
+msgid "TXT_CHAPELKEY"
+msgstr "Je hebt de kapelsleutel opgepakt."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Je hebt de catacombesleutel opgepakt."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Je hebt de beveiligingssleutel opgepakt."
+
+msgid "TXT_COREKEY"
+msgstr "Je hebt de kernsleutel opgepakt."
+
+msgid "TXT_MAULERKEY"
+msgstr "Je hebt de toetakelaarssleutel opgepakt."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Je hebt de fabriekssleutel opgepakt."
+
+msgid "TXT_MINEKEY"
+msgstr "Je hebt de mijnsleutel opgepakt."
+
+msgid "TXT_NEWKEY5"
+msgstr "Je hebt de nieuwe sleutel 5 opgepakt."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Je hebt de Orakelkaart opgepakt."
+
+msgid "TXT_HEGRENADES"
+msgstr "Je hebt de HE-granaten opgepakt."
+
+msgid "TXT_PHGRENADES"
+msgstr "Je hebt de fosforgranaten opgepakt."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Je hebt de patroon met kogels opgepakt."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Je hebt de doos met kogels opgepakt."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Je hebt de mini-raketten opgepakt."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Je hebt de kist met raketten opgepakt."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Je hebt de energiecel opgepakt."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Je hebt het energiepak opgepakt."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Je hebt de gifbouten opgepakt."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Je hebt de elektrische bouten opgepakt."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Je hebt de munitietas opgepakt."
+
+msgid "MSG_TALISMANRED"
+msgstr "Je hebt het gevoel dat het niet aangeraakt dient te worden..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Wat het ook is, het hoort niet thuis in deze wereld..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Het moet iets doen...."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Je hebt superkracht!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Je hebt de sleutel niet."
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Je hebt een doorgangskaart nodig."
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Je hebt een doorgangskaart nodig om deze deur te openen."
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Je hebt een ID-kaart nodig."
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Je hebt de sleutel van de gevangenis niet."
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Handafdruk niet in het bestand."
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Je hebt de gouden sleutel nodig."
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Je hebt een ID-badge nodig."
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Je hebt een ID-badge nodig om deze deur te openen."
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Je hebt de zilveren sleutel nodig."
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Je hebt de messing sleutel nodig."
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Je hebt de rode kristallen sleutel nodig."
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Je hebt de blauwe kristallen sleutel nodig."
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Deze ruimte is alleen beschikbaar in de verkoopversie van Strife."
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Dat lijkt niet te werken."
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Je hebt de beker nodig!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Je hebt de Orakelpas nodig!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Dolk"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Kruisboog"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Kruisboog"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Aanvalswapen"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Miniraketwerper"
+
+msgid "TAG_FLAMER"
+msgstr "Vlammenwerper"
+
+msgid "TAG_MAULER1"
+msgstr "Toetakelaar"
+
+msgid "TAG_MAULER2"
+msgstr "Toetakelaar"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Granaatwerper"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Granaatwerper"
+
+msgid "TAG_SIGIL"
+msgstr ""
+
+msgid "TAG_COIN"
+msgstr "Munt"
+
+msgid "TAG_MEDPATCH"
+msgstr "Med-patch"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Medicijndoos"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Chirurgiepakket"
+
+msgid "TAG_BELDINSRING"
+msgstr ""
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Offerbeker"
+
+msgid "TAG_EAR"
+msgstr "Oor"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Gebroken stroomkoppeling"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Schaduwharnas"
+
+msgid "TAG_ENVSUIT"
+msgstr "Beschermend pak"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Wachtersuniform"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Officiersuniform"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Vlammenwerperonderdelen"
+
+msgid "TAG_REPORT"
+msgstr "Verslag"
+
+msgid "TAG_INFO"
+msgstr ""
+
+msgid "TAG_TARGETER"
+msgstr "Richter"
+
+msgid "TAG_COMMUNICATOR"
+msgstr ""
+
+msgid "TAG_DEGNINORE"
+msgstr "Degnin-erts"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Nauwkeurigheid"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Stevigheid"
+
+msgid "TAG_SCANNER"
+msgstr "Scanner"
+
+msgid "TAG_PRISONPASS"
+msgstr "Gevangenispas"
+
+msgid "TAG_ALARM"
+msgstr ""
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Munitie"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Gezondheid"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Teleporterbaken"
+
+msgid "TAG_METALARMOR"
+msgstr "Metalen harnas"
+
+msgid "TAG_LEATHER"
+msgstr "Leren harnas"
+
+msgid "TAG_HEGRENADES"
+msgstr "HE-granaten"
+
+msgid "TAG_PHGRENADES"
+msgstr "Fosforgranaten"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Patroon kogels"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Munitie"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Mini-raketten"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Krat raketten"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Energiecel"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Energiepak"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Giftige bouten"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Elektrische bouten"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Munitietassen"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Basissleutel"
+
+msgid "TAG_GOVSKEY"
+msgstr "Gouverneursleutel"
+
+msgid "TAG_PASSCARD"
+msgstr "Paspoortkaart"
+
+msgid "TAG_IDBADGE"
+msgstr "ID-Badge"
+
+msgid "TAG_PRISONKEY"
+msgstr "Gevangenissleutel"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Gescheurde Hand"
+
+msgid "TAG_POWER1KEY"
+msgstr "1e Machtsleutel"
+
+msgid "TAG_POWER2KEY"
+msgstr "2e Machtsleutel"
+
+msgid "TAG_POWER3KEY"
+msgstr "3e Machtsleutel"
+
+msgid "TAG_GOLDKEY"
+msgstr "Gouden sleutel"
+
+msgid "TAG_IDCARD"
+msgstr "ID-Kaart"
+
+msgid "TAG_SILVERKEY"
+msgstr "Zilveren sleutel"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Orakelsleutel"
+
+msgid "TAG_MILITARYID"
+msgstr "Militaire ID"
+
+msgid "TAG_ORDERKEY"
+msgstr "Ordesleutel"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Magazijnsleutel"
+
+msgid "TAG_BRASSKEY"
+msgstr "Messing sleutel"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Rode kristallen sleutel"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Blauwe kristallen sleutel"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Kappelsleutel"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Catacombesleutel"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Beveiligingssleutel"
+
+msgid "TAG_COREKEY"
+msgstr "Kernsleutel"
+
+msgid "TAG_MAULERKEY"
+msgstr "Toetakelaarssleutel"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Fabriekssleutel"
+
+msgid "TAG_MINEKEY"
+msgstr "Mijnsleutel"
+
+msgid "TAG_NEWKEY5"
+msgstr "Nieuwe sleutel 5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Orakelpas"
+
+msgid "TAG_10GOLD"
+msgstr "10 goud"
+
+msgid "TAG_25GOLD"
+msgstr "25 goud"
+
+msgid "TAG_50GOLD"
+msgstr "50 goud"
+
+msgid "TAG_300GOLD"
+msgstr "300 goud"
+
+msgid "TXT_PERSON"
+msgstr "Persoon"
+
+msgid "TAG_ACOLYTE"
+msgstr "Acoliet"
+
+msgid "TAG_ARMORER"
+msgstr "Harnassmid"
+
+msgid "TAG_BARKEEP"
+msgstr "Barman"
+
+msgid "TAG_BEGGAR"
+msgstr "Bedelaar"
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr "Paramedicus"
+
+msgid "TAG_ORACLE"
+msgstr "Orakel"
+
+msgid "TAG_PRIEST"
+msgstr "Priester"
+
+msgid "TAG_RATBUDDY"
+msgstr "Rattenvriendje"
+
+msgid "TAG_REBEL"
+msgstr ""
+
+msgid "TAG_TEMPLAR"
+msgstr "Tempelier"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Wapensmid"
+
+msgid "TAG_TALISMANRED"
+msgstr "Rode Talisman"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Groene Talisman"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Blauwe Talisman"
+
+msgid "OB_ACOLYTE"
+msgstr "%o werd gretig neergeschoten door een Acoliet."
+
+msgid "OB_MACIL"
+msgstr "%o had nooit in opstand mogen komen tegen Macil."
+
+msgid "OB_REBEL"
+msgstr "%o werd neergeschoten door een Rebel."
+
+msgid "OB_BEGGAR"
+msgstr "%o werd door de armen doodgeslagen."
+
+msgid "OB_PEASANT"
+msgstr "%o had nooit een gevecht met een burger moeten aangaan."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o werd door de Specter neergeslagen."
+
+msgid "OB_ENTITY"
+msgstr "%o voelde de toorn van de Ene God."
+
+msgid "OB_LOREMASTER"
+msgstr "%o kon niet ontsnappen aan de greep van de kennismeester."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o werd door de programmeur verwijderd."
+
+msgid "OB_STFBISHOP"
+msgstr "%o werd door de bisschop weggeblazen."
+
+msgid "OB_SENTINEL"
+msgstr "%o werd neergeschoten door een Sentinel."
+
+msgid "OB_CRUSADER"
+msgstr "%o werd weggevaagd door een kruisvaarder."
+
+msgid "OB_INQUISITOR"
+msgstr "%o werd veroordeeld door een inquisiteur."
+
+msgid "OB_STALKER"
+msgstr "%o werd afgeluisterd door een Stalker."
+
+msgid "OB_TURRET"
+msgstr "%o activeerde de automatische verdediging."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o werd geklauwd door een Tempelier."
+
+msgid "OB_TEMPLAR"
+msgstr "%o werd verdampt door een Tempelier."
+
+msgid "OB_REAVERHIT"
+msgstr "%o werd opengesneden door een Reaver."
+
+msgid "OB_REAVER"
+msgstr "%o werd neergeschoten door een Reaver."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o werd achtergestoken door %k."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o werd door %k aan de muur geschroefd."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o kreeg een dodelijke dosis van %k's toorn."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o werd geperforeerd door %k."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o heeft %k's raket naar beneden geslingerd."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o werd omgekeerd door %k's HE-granaat."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o nam een vlammenbad in %k's fosforbrandstapel."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o werd gebarbecued door %k."
+
+msgid "OB_MPMAULER1"
+msgstr "%o werd door %k gezapt."
+
+msgid "OB_MPMAULER"
+msgstr "%o was door %k verdampt."
+
+msgid "OB_MPSIGIL"
+msgstr "%o boog voor de kracht van %k's Sigil."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "Zoektocht naar de Sigil"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Je hebt de gevangenen bevrijd!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Je hebt de Converter vernietigd!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Gefeliciteerd! Je hebt de training voltooid."
+
+msgid "TXT_QUEST_14"
+msgstr "Je hebt de Crystal opgeblazen."
+
+msgid "TXT_QUEST_16"
+msgstr "Je hebt de Gates opgeblazen."
+
+msgid "TXT_QUEST_27"
+msgstr "Je hebt de computer opgeblazen."
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Je hebt de bisschop vermoord!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Je hebt het Orakel vermoord!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Je hebt Macil vermoord!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Je hebt de Kennismeester vermoord!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Jij dwaas! Je hebt het alarm laten afgaan."
+
+msgid "TXT_YOUREDEAD"
+msgstr "Je bent dood! Je hebt het alarm laten afgaan."
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Je lijkt genoeg te hebben!"
+
+msgid "TXT_GOAWAY"
+msgstr "Ga weg!"
+
+msgid "TXT_COMM0"
+msgstr "Inkomend bericht...."
+
+msgid "TXT_COMM1"
+msgstr "Inkomend bericht van BlackBird...."
+
+msgid "TXT_FINDHELP"
+msgstr "Zoek hulp"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "voor %u"
+
+msgid "GOTCHEXARMOR"
+msgstr "Je hebt het Chex(R) harnas opgepakt."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Je hebt het Super-Chex(R) harnas opgehaald!"
+
+msgid "GOTWATER"
+msgstr "Je hebt een glas water opgepakt."
+
+msgid "GOTREPELLENT"
+msgstr "Je hebt de slijmafstotende stof opgepakt."
+
+msgid "GOTBREAKFAST"
+msgstr "Overbelast ontbijt!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Je hebt een blauwe sleutel opgepakt."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Je hebt een gele sleutel opgepakt."
+
+msgid "GOTCREDKEY"
+msgstr "Je hebt een rode sleutel opgepakt."
+
+msgid "GOTFRUIT"
+msgstr "Je hebt een fruitschaal opgepakt."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Groenten zijn echt goed voor je!"
+
+msgid "GOTVEGETABLES"
+msgstr "Je hebt een kom groenten opgepakt."
+
+msgid "GOTSLIMESUIT"
+msgstr "Je hebt een slijtvast pak opgepakt."
+
+msgid "GOTCHEXMAP"
+msgstr "Je hebt een computerkaart opgepakt."
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Je hebt een minizorcherlading opgepakt."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Je hebt een pakket met minizorcherladingen opgepakt."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Je hebt een propulsorlading opgepakt."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Je hebt een pakket met propulsorladingen opgepakt."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Je hebt een phasenzorcherlading opgepakt."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Je hebt een pakket met phasenzorcherladingen opgepakt."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Je hebt een zorcherlading opgepakt."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Je hebt een pakket met zorcherladingen opgepakt."
+
+msgid "GOTZORCHPACK"
+msgstr "Je hebt en zorchpak opgepakt."
+
+msgid "GOTLAZDEVICE"
+msgstr "Je hebt het LAZ-apparaat! Woot!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Je hebt de snelle Zorcher!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Je hebt de Super Bootspork!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Je hebt de Zorch Propulsor!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Je hebt de Fasezorcher!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Je hebt de grote Zorcher!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Je hebt de Megazorcher!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Je hebt een minizorcher opgepakt."
+
+msgid "TAG_SPOON"
+msgstr "Lepel"
+
+msgid "TAG_SPORK"
+msgstr ""
+
+msgid "TAG_MINIZORCHER"
+msgstr "Minizorcher"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Grote Zorcher"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Super grote Zorcher"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Snelle Zorcher"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr ""
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Fasezorcher"
+
+msgid "TAG_LAZDEVICE"
+msgstr "LAZ-aparaat"
+
+msgid "OB_COMMONUS"
+msgstr "%o werd afgeslankt door een flemoid."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o werd afgeslankt door een bipedicus."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o werd afgeslankt door een gepantserde bipedicus."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o werd afgeslankt door een cycloptis."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o werd verslagen door de Flembrane."
+
+msgid "OB_MPSPOON"
+msgstr "%o werd met een lepel gevoed door %k."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o werd grondig gemengd met %k's bootspork."
+
+msgid "OB_MPZORCH"
+msgstr "%o werd gezorched door %k."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o werd geraakt door %k's megazorcher."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o werd snel zorched door %k."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o werd zorched door %k's propulsor."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o werd geraakt door %k's propulsor."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o was fase zorched door %k."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o viel ten prooi aan %k's LAZ apparaat."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o werd gelazed door %k."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Landingszone"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Opslagfaciliteit"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Experimenteel laboratorium"
+
+msgid "CHUSTR_E1M4"
+msgstr ""
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Grotten van Bazoik"
+
+msgid "CE1TEXT"
+msgstr ""
+"Missie volbracht.\n"
+"\n"
+"Bent u voorbereid op de volgende missie?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Druk op de Escape-toets om verder te gaan...."
+
+msgid "CE2TEXT"
+msgstr "Het is je gelukt!"
+
+msgid "CE3TEXT"
+msgstr "Geweldig werk!"
+
+msgid "CE4TEXT"
+msgstr "Fantastisch"
+
+msgid "CLOADNET"
+msgstr ""
+"Je kunt niet laden tijdens een netspel!\n"
+"\n"
+"Druk op een toets."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Snel opslaan over je spel genaamd\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Druk op Y of N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Wil je het spel snel laden met de naam\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Druk op Y of N."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Wil je het spel snel laden met de naam\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Druk op Y of N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Je kunt geen nieuw spel starten \n"
+"terwijl je in een netwerkspel zit.\n"
+"\n"
+"Druk op een toets."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Voorzichtig, dit wordt moeilijk.\n"
+"Wil je doorgaan?\n"
+"\n"
+"Druk op Y of N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Dit is Chex(R) Quest. Zoek naar\n"
+"\n"
+"toekomstige niveaus op www.chexquest.com\n"
+"\n"
+"Druk op een toets."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Je kunt een netspel niet beëindigen!\n"
+"\n"
+"Druk op een toets."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Weet je zeker dat je het spel wilt beëindigen?\n"
+"\n"
+"Druk op Y of N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Onoverwinnelijke modus AAN"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Onoverwinnelijke modus UIT"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Zorch toegevoegd"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Super Zorch toegevoegd"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Eet Chex(R)!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Mini Zorchlading"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Grote Zorchlading"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Propulsorlading"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Fasezorcherlading"
+
+msgid "MNU_NEWGAME"
+msgstr "Nieuw spel"
+
+msgid "MNU_OPTIONS"
+msgstr "Opties"
+
+msgid "MNU_GAMEFILES"
+msgstr "Spelbestanden"
+
+msgid "MNU_INFO"
+msgstr ""
+
+msgid "MNU_QUITGAME"
+msgstr "Verlaat spel"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Vaardigheidsniveau:"
+
+msgid "SKILL_BABY"
+msgstr "Ik ben te jong om te sterven."
+
+msgid "SKILL_EASY"
+msgstr "Hé, niet te ruw."
+
+msgid "SKILL_NORMAL"
+msgstr "Doe me veel pijn."
+
+msgid "SKILL_HARD"
+msgstr "Ultra Geweld."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Nachtmerrie!"
+
+msgid "CSKILL_BABY"
+msgstr "Gemakkelijk doet het"
+
+msgid "CSKILL_EASY"
+msgstr "Niet zo plakkerig."
+
+msgid "CSKILL_NORMAL"
+msgstr "brokken slijm"
+
+msgid "CSKILL_HARD"
+msgstr "Uiterst glibberig"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Super slijmerig!"
+
+msgid "SSKILL_BABY"
+msgstr "Opleiding"
+
+msgid "SSKILL_EASY"
+msgstr ""
+
+msgid "SSKILL_NORMAL"
+msgstr "Veteraan"
+
+msgid "SSKILL_HARD"
+msgstr ""
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Bloedbad"
+
+msgid "MNU_WETNURSE"
+msgstr "Waar is de verpleegster?"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Verenigd washandje"
+
+msgid "MNU_BRINGEST"
+msgstr "Geef me dat."
+
+msgid "MNU_SMITE"
+msgstr "Jij bent de meestermoordenaar."
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Geobsedeerd door de pest"
+
+msgid "MNU_SQUIRE"
+msgstr ""
+
+msgid "MNU_KNIGHT"
+msgstr "Ridder"
+
+msgid "MNU_WARRIOR"
+msgstr "Krijger"
+
+msgid "MNU_BERSERKER"
+msgstr ""
+
+msgid "MNU_TITAN"
+msgstr ""
+
+msgid "MNU_ALTARBOY"
+msgstr "Altaarjongen"
+
+msgid "MNU_ACOLYTE"
+msgstr "Acoliet"
+
+msgid "MNU_PRIEST"
+msgstr "Priester"
+
+msgid "MNU_CARDINAL"
+msgstr "Kardinaal"
+
+msgid "MNU_POPE"
+msgstr "Paus"
+
+msgid "MNU_APPRENTICE"
+msgstr "Leerling"
+
+msgid "MNU_ENCHANTER"
+msgstr "Betoveraar"
+
+msgid "MNU_SORCERER"
+msgstr "Tovenaar"
+
+msgid "MNU_WARLOCK"
+msgstr "Tovenaar"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Aartsbisschop"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Kies klasse:"
+
+msgid "MNU_FIGHTER"
+msgstr "Vechter"
+
+msgid "MNU_CLERIC"
+msgstr "Geestelijk"
+
+msgid "MNU_MAGE"
+msgstr "Tovenaar"
+
+msgid "MNU_RANDOM"
+msgstr "Willekeurig"
+
+msgid "MNU_EPISODE"
+msgstr "Welke aflevering?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Kies campagne"
+
+msgid "MNU_COTD"
+msgstr "Stad van de verdoemden"
+
+msgid "MNU_HELLSMAW"
+msgstr "De slokdarm naar de hel"
+
+msgid "MNU_DOME"
+msgstr "D'Sparils Kathedraal"
+
+msgid "MNU_OSSUARY"
+msgstr "Het Ossuarium"
+
+msgid "MNU_DEMESNE"
+msgstr "Het stagnerende rijk"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr ""
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Teamschade scalair"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Slimme Autoaim"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Vallende schade"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Laat het wapen vallen"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Dubbele munitie"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Oneindige munitie"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Oneindige voorraad"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Geen monsters"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Geen monsters om af te sluiten"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Monsters respawn"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Geen respawn"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Items respawn"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Grote power-ups respawn"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Snelle monsters"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr ""
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Degeneratie"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Autoaim toestaan"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Zelfmoord toestaan"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Springen toestaan"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Hurken toestaan"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Freelook toestaan"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Laat FOV"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Laat BFG toe om te streven naar"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Automap toestaan"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Automap bondgenoten"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Laat spionage toe"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Chasecam cheat"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Controleer munitie op wapenschakelaars."
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Icon's dood doodt zijn spawns"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Eindsector telt voor kill %"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Deathmatch instellingen"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Wapenverblijven"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Power-ups toestaan"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Gezondheid toestaan"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Pantsertoeslag toestaan"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Kuitschieten het verst verwijderd"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Dezelfde kaart"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Respawn is gedwongen"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Uitgang toestaan"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Vaten respawn"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Respawn bescherming"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Verlies frag bij dood"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Houd frags opgedaan"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Geen teamwisseling"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Coöperatieve instellingen"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Spawn multi. wapens"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Verlies van de volledige inventaris"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Sleutels bewaren"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Wapens bewaren"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Pantser bewaren"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Power-ups bewaren"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Munitie bewaren"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Verlies halve munitie"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Kuit waar gestorven is"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Altijd multiplayer objecten spawnen"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Verticale kogelspreiding toestaan"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Wapens geven extra munitie (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Compatibiliteitsopties"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Compatibiliteitsopties"
+
+msgid "CMPTMNU_MODE"
+msgstr "Compatibiliteitsmodus"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Gedrag van de acteur"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Vriendelijke monsters worden niet geblokkeerd."
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Beperk de Verloren Zielen van Pijn Elementairs"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Monsterbeweging wordt beïnvloed door effecten"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Monsters kunnen geen dropoffs kruisen"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Monsters komen vast te zitten boven dropoffs"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Monsters zien onzichtbare spelers"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Geen Minotaurus vloer vlammen in water"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Paaipunt druppels op de vloer"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DehackEd Gedrag"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH-gezondheidsinstellingen zoals Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Originele A_Mushroom in DEH-modellen"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Kaart/Actiegedrag"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Alle speciale lijnen kunnen <gebruik> blokkeren."
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Laat een eventuele bossdood voor een speciaal niveau toe...."
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "BOOM-deurlichteffect uitschakelen"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Vind naburig licht zoals Doom"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Vind de kortste texturen zoals Doom"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Gebruik buggier trapgebouw"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Gebruik Doom's vloer beweging vloer"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Gebruik Doom's point-on-line-algoritme"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Niveau-uitgang kan meer dan eens worden geactiveerd"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Fysica gedrag"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Acteurs zijn oneindig lang"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Boom scrollers zijn additief"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Kan niet rechtdoor reizen NZOW"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Wandloop mogelijk maken"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven scrollers gebruiken originele snelheid"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Zelfreferentie sectoren blokkeren geen schoten"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Gebruik Doom-code voor hitscancontroles"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Gebruik Doom hoogtes voor het knippen van raketten"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Rendering gedrag"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Teken polyobjecten zoals Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Negeer Y compensaties op gemaskerde middentexturen"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Sprite sorteren omkeren"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Geluidsgedrag"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Kreupel geluid voor een stille BFG-truc"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Laat anderen uw pick-ups niet horen"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Direct bewegende vloeren zijn niet geruisloos"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sectorgeluiden gebruiken centrum als bron"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Geluiden stoppen wanneer de acteur verdwijnt"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Gebruik originele geluidsdoelwitverwerking"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "De gescripte teleports leiden niet tot acties in de sector."
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Niet-blokkerende lijnen kunnen worden geduwd"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Buggy CheckSwitchSwitchRange gedrag inschakelen"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Buggy mogelijk maken Strijk-reling"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Geen verticale stuwkracht van explosies"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Gebruik het originele Doom explosiegedrag"
+
+msgid "PLYRMNU_RED"
+msgstr "Rood"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Groen"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Blauw"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Klasse"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Uiterlijk"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Gebruik wapen meteen na oppakken"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Druk op \\cjSPACE"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "om de voorkant te zien"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "om terug te kijken"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Verticale kogelspreiding"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Wapen Zoom"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Wapenstaat 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Wapenstaat 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Wapenstaat 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Wapenstaat 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Omhoog vliegen/zwemmen omhoog"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Naar beneden vliegen/zwemmen"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Stoppen met vliegen"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Toetsenbordaanzicht"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Strife Popup Schermen Bediening"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Zeggen in team"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Item laten vallen"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Vraag item op"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Wapen laten vallen"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Andere"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Coöpspion"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Strife Popup Schermen"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Missiedoelen"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Lijst van toetsen"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Wapens/ammo/statistieken"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Scorebord aan/uit"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Automatisch centraliseren"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Zijwaartse muisbeweging"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Achtergrond"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "1-zijdige wanden"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "2-zijdige wanden met verschillende vloeren"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "2-zijdige wanden met verschillende plafonds"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "2-zijdige wanden met 3D-vloeren"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Kaart raster"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Middenpunt"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Nog niet zichtbare wanden"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Gesloten deuren"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Teleporter naar dezelfde niveau"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Teleporter naar een andere niveau"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Geheime sector"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Onontgonnen geheim"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Speciale trekkerlijnen"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Bedriegingsmodus"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Onzichtbare 2-zijdige wanden"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Geheime muren"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Acteurs"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Niet-tellende Monsters"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Vrienden"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Artikelen"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Tellen"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Overlaadmodus"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Overlaadmodus Cheats"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Portaaloverlays"
+
+msgid "MSGMNU_TITLE"
+msgstr "Berichten"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Berichten tonen"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Doodsbrieven tonen"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Geheime meldingen tonen"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Minimaal berichtenniveau"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Bericht Kleuren"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Puntafhaling"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Doodsbrieven"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Kritische berichten"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Chatberichten"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Team Berichten"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Gecentreerde berichten"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Screenshot berichten"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Gedetailleerde berichten voor op te slaan"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Berichtenmodus voor ontwikkelaars"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Kaartkleurenset"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Niveau-specifieke kleuren toestaan"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Aangepaste kleuren instellen"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Kaartcontroles aanpassen"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Overlay automap"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Structuurweergave inschakelen"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Toon artikeltellingen"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Toon monstertellingen"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Toon geheime tellingen"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Verstreken tijd tonen"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Toon de totale verstreken tijd"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Toon geheimen op de kaart"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Toon kaartlabel"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Teken de achtergrond van de kaart"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Toon sleutels (valsspeler)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Triggerlijnen tonen"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Toon dingen als sprites"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Overlappende portalen"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Breedte van de rand"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Font voor markers"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Markeer kleur"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Markering instellen"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Duidelijke markering"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Scorebord opties"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Scorebord opties"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Coöperatieve Opties"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Scorebord inschakelen"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Kleur koptekst"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Uw Spelerskleur"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Andere spelerskleur"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Deathmatch opties"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Team Deathmatch Opties"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Alternatieve HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Alternatieve HUD inschakelen"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Toon het aantal geheimen"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Toon het aantal monsters"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Toon het aantal items"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Toon uithoudingsvermogen en nauwkeurigheid"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Toon berserk"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Toon wapens"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Toon munitie voor"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Toon tijd"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Tijdskleur"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Toon netwerklatentie"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Volgorde van de munitieweergave"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Rood munitieweergave onder %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Gele munitieweergave onder %"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Rood gezondheidsweergave beneden"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Geel gezondheidsweergave beneden"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Groen gezondheidsweergave beneden"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Rood pantserweergave beneden"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Geel pantserweergave beneden"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Groen pantserweergave beneden"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Alternatieve Automap HUD"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Kleur kaarttitel"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Kleur kaarttijd"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Kleur hubtijd"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Kleur totale tijd"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Kleur coördinaten"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Coördinatiemodus"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Kleur statistiekennaam"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Kleur statistieken"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Interpolatie renderen"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Transparantie render modus"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Schermveegstijl"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Toon ENDOOM scherm"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Intensiteit van de bloedflitser"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Intensiteit van de oppakflitser"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Intensiteit kleurvermenging onder water"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Luchtrendermodus"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Lineaire lucht"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Volledig helderheid overschrijft de sectorkleur"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Schaal fuzz effect"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Gebruik fuzz effect"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Klassieke transparantie"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Verloren Ziel doorschijnendheid"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Gebruik vals contrast"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Raketsporen"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Bloedtype"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Kogelwolvertype"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Aantal deeltjes"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Aantal stickers"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Toon speler sprites"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Doodscamera"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Teleporter zoom"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Aardbevingsschoksintensiteit"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Interpoleer monsterbewegingen"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Donkere menuachtergrond"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Donkere kleur"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Bekijk bob bedrag terwijl je beweegt"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Bekijk bob bedrag terwijl je niet beweegt"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Snelheid wapenzwaaieffect"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Schaalopties"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Overschrijdingen voor bovenstaande instelling"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Berichten"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr ""
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Statusbalk"
+
+msgid "SCALEMNU_HUD"
+msgstr "Volle scherm HUD"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Alternatieve HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "HUD behoudt de beeldverhouding"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Gebruik standaardweegschaal"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Schaalbaar tot volledig scherm"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Aanpassen aan de grootte van het scherm"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUD-opties"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Alternatieve HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Berichtopties"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Schaal gebruikersinterface"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Forceer standaard dradenkruis"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Vergroot het dradenkruis bij het oppakken van items"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Naamlabels weergeven"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Kleur naamlabel"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Oude formule voor \"Ouch\"-gezicht"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Hexen-wapen flitsen"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Vergiftigingsschade knippert"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "IJsdood knippert"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Vergiftiging Opbouw knippert"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Schaalopties"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "IWAD-selectiedialoogvenster weergeven"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Laat bedriegers van alle spellen toe"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Screenshots maken met behulp van scripts"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "*.deh/*.bex laden"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Cache nodes"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Tijdsdrempel voor het cachen van nodes"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Node cache legen"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Overslaan van intermissiescrollers toestaan"
+
+msgid "NETMNU_TITLE"
+msgstr "Netwerkopties"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Lokale opties"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Voorspelling van bewegingen"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Voorspel lijnacties"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Voorspelling Lerp Scale"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Lerp Threshold"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Verhuurders opties"
+
+msgid "NETMNU_EXTRATICS"
+msgstr ""
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Latency balans"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Origineel"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Geoptimaliseerd"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Klassiek (sneller)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Nauwkeurig"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Afgeschermd"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Deeltjes"
+
+msgid "OPTVAL_SPRITES"
+msgstr ""
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Sprites & Deeltjes"
+
+msgid "OPTVAL_MELT"
+msgstr "Smelten"
+
+msgid "OPTVAL_BURN"
+msgstr "Verbranden"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Crossfade"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Glad"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Glad"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Doorschijnend"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Fuzz"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Schaduw"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Artikelen"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Wapens"
+
+msgid "OPTVAL_BOTH"
+msgstr "Beide"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Speler"
+
+msgid "OPTVAL_MAP"
+msgstr "Kaart"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Schaal tot 640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Pixel dubbel"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Pixel viervoudig"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Huidig wapen"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Beschikbare wapens"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Alle wapens"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Niveau, milliseconden"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Niveau, seconden"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Niveau"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Naaf, seconden"
+
+msgid "OPTVAL_HUB"
+msgstr "Naaf"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Totaal, seconden"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Totaal"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Systeem, seconden"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Systeem"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Alleen Netspellen"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Beeld en tekst"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Tekst en beeld"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Alleen scripts"
+
+msgid "OPTVAL_ALL"
+msgstr "Alle"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Alleen de laatste"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Traditioneel Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Traditionele Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Traditionele Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Alleen wanneer gevonden"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Alleen op voor overlay alleen voor overlay"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Overlay+Normaal"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Alleen Overlay"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Niet voor hubs"
+
+msgid "OPTVAL_FRONT"
+msgstr "Voorkant"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Geanimeerd"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Geroteerd"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Alleen gedefinieerde kleuren op de kaart"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Allemaal behalve deuren"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dubbele"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Drievoudig"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Viervoudig"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Puntafhaling"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Doodsbrieven"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Kritische berichten"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Nooit vrienden"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Alleen monsters"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Oud"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (streng)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (streng)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (streng)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (streng)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Allemaal onbekend"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Fouten"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Waarschuwingen"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Kennisgevingen"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Alles"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Hardware versneld"
+
+msgid "OPTVAL_SWDOOM"
+msgstr ""
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr ""
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Hoogwaardige prestaties"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Energiebesparing"
+
+msgid "OPTVAL_VANILLA"
+msgstr ""
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (Gedwongen)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Vanilla (Gedwongen)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (bij voorkeur ZDoom)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (bij voorkeur Vanilla)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Klein"
+
+msgid "OPTVAL_LARGE"
+msgstr "Groot"
+
+msgid "OPTVAL_CONSOLE"
+msgstr ""
+
+msgid "C_BRICK"
+msgstr "\\casteenrood"
+
+msgid "C_TAN"
+msgstr "\\cblichtbruin"
+
+msgid "C_GRAY"
+msgstr "\\ccgrijs"
+
+msgid "C_GREEN"
+msgstr "\\cdgroen"
+
+msgid "C_BROWN"
+msgstr "\\cebruin"
+
+msgid "C_GOLD"
+msgstr "\\cfgoud"
+
+msgid "C_RED"
+msgstr "\\cgrood"
+
+msgid "C_BLUE"
+msgstr "\\chblauw"
+
+msgid "C_ORANGE"
+msgstr "\\cioranje"
+
+msgid "C_WHITE"
+msgstr "\\cjwit"
+
+msgid "C_YELLOW"
+msgstr "\\ckgeel"
+
+msgid "C_DEFAULT"
+msgstr "\\clstandaard"
+
+msgid "C_BLACK"
+msgstr "\\cmzwart"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnlicht blauw"
+
+msgid "C_CREAM"
+msgstr "\\cocrème"
+
+msgid "C_OLIVE"
+msgstr "\\cpolijf"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqdonkergroen"
+
+msgid "C_DARKRED"
+msgstr "\\crdonkerrood"
+
+msgid "C_DARKBROWN"
+msgstr "\\csdonkerbruin"
+
+msgid "C_PURPLE"
+msgstr "\\ctpaars"
+
+msgid "C_DARKGRAY"
+msgstr "\\cudonkergrijs"
+
+msgid "C_CYAN"
+msgstr "\\cvcyan"
+
+msgid "C_ICE"
+msgstr "\\cwice"
+
+msgid "C_FIRE"
+msgstr "\\cxvuur"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cysaffier"
+
+msgid "C_TEAL"
+msgstr "\\czteal"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Geen geluid"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Geen interpolatie"
+
+msgid "OPTSTR_SPLINE"
+msgstr ""
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr ""
+
+msgid "DSPLYMNU_SWOPT"
+msgstr ""
+
+msgid "GLMNU_TITLE"
+msgstr "Hardware Rendering Opties"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Dynamische Licht Opties"
+
+msgid "GLMNU_PREFS"
+msgstr "Voorkeuren"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr ""
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Tekeninglijsten sorteren op textuur"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Dynamische verlichting"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Dynamische verlichting (hardware)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Lichtdefinities mogelijk maken"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Lichten beïnvloeden sprites"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Lichten beïnvloeden deeltjes"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Lichte schaduwkaarten"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Schaduwkaart kwaliteit"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Schaduwkaart filter"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Mistmodus"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Mistkrachten volle lichtsterkte"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Sterkte van het wapenlicht"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Milieukaart op spiegels"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Verbeterde nachtzicht modus"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "ENV toont stealth monsters"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Sprite clipping"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Gladde sprite randen"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Fuzz stijl"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Sprites gezicht camera"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Deeltjes stijl"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Het teruggeven van kwaliteit"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr ""
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Quad Stereo inschakelen"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "SW-lichtmodus met banden"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Afstand tussen uw ogen"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Afstand van uw scherm"
+
+msgid "OPTVAL_SMART"
+msgstr "Slim"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Slimmer"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Alleen infrarood"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Infrarood en fakkels"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Elke vaste colormap"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Gebruik als palet"
+
+msgid "OPTVAL_BLEND"
+msgstr "Mengen"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Helder"
+
+msgid "OPTVAL_DARK"
+msgstr "Donker"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr ""
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optimaal"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y-as"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X/Y As"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Vierkant"
+
+msgid "OPTVAL_ROUND"
+msgstr "Rond"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radiaal"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Pixel fuzz"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Gladde fuzz"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Zwerpend fuzz"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Doorschijnende fuzz"
+
+msgid "OPTVAL_NOISE"
+msgstr "Lawaaierige fuzz"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Gladde lawaaierige fuzz"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Gekartelde fuzz"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Groen/Magenta"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Rood/Cyaan"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Amber/Blauw"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Linkeroog"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Rechteroog"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Zij-aan-zij Volledig"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Zij-aan-zij smal"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Boven/onderkant"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Rij interleaved"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Kolom Interleaved"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Dambord"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Viervoudig gebufferd"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "TrueColor Opties"
+
+msgid "TCMNU_TITLE"
+msgstr "TrueColor Opties"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Ware kleurenoutput"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Lineair filter voor downscaling"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Lineair filter voor upscaling"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Gebruik mipmapped texturen"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dynamische verlichting (software)"
+
+msgid "OS_TITLE"
+msgstr "Optie zoeken"
+
+msgid "OS_ANY"
+msgstr "Zoek naar eender welke term"
+
+msgid "OS_ALL"
+msgstr "Zoek naar alle termen"
+
+msgid "OS_NO_RESULTS"
+msgstr "Geen resultaten gevonden."
+
+msgid "OS_LABEL"
+msgstr "Zoeken:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Toon altijd de toetsen"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Teamwisseling is uitgeschakeld!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s zijn bij het %t team gekomen."
+
+msgid "TXT_LONER"
+msgstr "%s is nu een eenling."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s verliet het spel met %d frags"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s verliet het spel"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Kon het savegame '%s' niet lezen."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s\" is geen geldig savegame: Ontbreekt 'info.json'."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Geen toegang tot de opgeslagen informatie in '%s'."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Savegame '%s' komt uit een incompatibele versie."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Savegame '%s' is van een andere ZDoom-gebaseerde engine:"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Savegame '%s' is van een oudere versie: %d (%e is de oudste ondersteunde "
+"versie)."
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Savegame '%s' is van een nieuwere versie: %d (%e is de hoogst ondersteunde "
+"versie)."
+
+msgid "TXT_NOMAPSG"
+msgstr "Savegame '%s' mist de huidige kaart."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' is geen geldig savegame: Ontbrekende 'globals.json'."
+
+msgid "TXT_SGINFOERR"
+msgstr "Geen toegang tot savegame info in '%s'."
+
+msgid "TXT_SAVEPENDING"
+msgstr "Een spel opslaan is nog steeds in behandeling."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Geen opslagbaar spel actief."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Niet in een level"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Speler is dood in een een-speler spel"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Opslaan mislukt"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Kon geen screenshot maken."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "Met %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Druk op een willekeurige toets of klik ergens in het venster om te stoppen."
+
+msgid "HUDMNU_FLASH"
+msgstr "Opties voor schermmengsel"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D-modus"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Draadkruis"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Ondertitels"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Voorkom grijze schaduwen"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Lettertype opties"
+
+msgid "FONTMNU_LOG"
+msgstr "Gebruik het standaardlettertype voor de weergave van logboekberichten"
+
+msgid "FONTMNU_DLG"
+msgstr "Gebruik het standaardlettertype voor dialoogweergave"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Snel eindigen"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Aangepaste inversiekleuren"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Aangepaste donkere inversiekleur"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Aangepaste lichte inversiekleur"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Wapenzwaai bij schieten"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Intermissie en schermrand schalen"
+
+msgid "SCALEMNU_INTER"
+msgstr "Intermissieachtergrond"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Schermrand"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Schaalfactor"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Beeldverhouding"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Toon tellingen na eind van het level"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Volgens de mod"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Altijd, behalve binnen hubs"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Altijd, zelfs binnen hubs"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Voorkeur toetsenbordindeling"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Klassiek ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr ""
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Modern (nummeriek toetsenbord)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Strikte KEYCONF Wapens/Spelers"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Klassieke ZDoom-menuschaal"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Gebruik procenten op het overzichtsscherm"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Klassieke ZDoom-schaalverdeling op overzichtsscherm"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Burger"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Plafond torentje"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Kruisvaarder"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inquisiteur"
+
+msgid "TAG_PEASANT"
+msgstr "Onderdaan"
+
+msgid "TAG_REAVER"
+msgstr ""
+
+msgid "TAG_SENTINEL"
+msgstr ""
+
+msgid "TAG_STALKER"
+msgstr ""
+
+msgid "TAG_BISHOP"
+msgstr "De Bisschop"
+
+msgid "TAG_ENTITY"
+msgstr "De ene god"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Programmeur"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Het spook"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Knielende man"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Spawnen van multiplayer dingen in coop"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Sprite schaduwen"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Monsters en spelers"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr ""
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "MBF21-functies uitschakelen"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Tijdwidget tonen"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Verpletterde monsters worden herrezen als geesten"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Bekijk bob bedrag terwijl je vliegt"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o werd verminkt door een slang."
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Antialijnen"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "Beweeg en schiet door andere spelers"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "Deel toetsen met alle spelers"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Overschrijven van camerastand verbieden"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "Verwissel gezondheid en pantser"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "Gebruik klassieke HUD-schaling"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "HUD-schaalfactor"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "Alleen co-op-voorwerpen maken in multiplayer"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "Alleen co-op pickups maken in multiplayer"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "Spelers pikken hun eigen exemplaar van voorwerpen op in multiplayer"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "Client-side pick ups van gedropte items uitschakelen"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "Level herstarten bij dood"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "Start met pistool"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr ""
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr ""
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr ""
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr ""
+
+msgid "ID24_GOTINCINERATOR"
+msgstr ""
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr ""
+
+msgid "ID24_GOTFUELCAN"
+msgstr ""
+
+msgid "ID24_GOTFUELTANK"
+msgstr ""
+
+msgid "TAG_ID24INCINERATOR"
+msgstr ""
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr ""
+
+msgid "AMMO_ID24FUEL"
+msgstr ""
+
+msgid "AMMO_ID24FUELTANK"
+msgstr ""
+
+msgid "ID24_CC_GHOUL"
+msgstr ""
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr ""
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "Toon kaart naam"
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""

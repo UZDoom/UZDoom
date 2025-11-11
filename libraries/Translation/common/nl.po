@@ -1,0 +1,2130 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/common/nl/>"
+"\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: nl\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Druk op Y of N."
+
+msgid "TXT_YES"
+msgstr "Ja"
+
+msgid "TXT_NO"
+msgstr "Nee"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Je kunt niet opslaan als je niet speelt!\n"
+"\n"
+"Druk op een toets."
+
+msgid "SAFEMESSAGE"
+msgstr "Wil je dit echt doen?"
+
+msgid "NOTSET"
+msgstr "Niet ingesteld"
+
+msgid "QSPROMPT"
+msgstr ""
+"Snel opslaan over je spel genaamd\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Druk op Y of N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Wil je het spel snel laden met de naam\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Druk op Y of N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s bedriegt"
+
+msgid "MSGOFF"
+msgstr "Berichten UIT"
+
+msgid "MSGON"
+msgstr "Berichten AAN"
+
+msgid "TXT_SAY"
+msgstr "Zeg:"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Druk op een willekeurige toets of klik ergens in het venster om te stoppen."
+
+msgid "NEWSAVE"
+msgstr "<Nieuw sparen spel>"
+
+msgid "GGSAVED"
+msgstr "Spel opgeslagen."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Tijd"
+
+msgid "MNU_LOADGAME"
+msgstr "Laden spel"
+
+msgid "MNU_SAVEGAME"
+msgstr "Opslaan spel"
+
+msgid "MNU_NOPICTURE"
+msgstr "Geen beeld"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Anders Versie"
+
+msgid "MNU_NOFILES"
+msgstr "Geen bestanden"
+
+msgid "MNU_DELETESG"
+msgstr "Wil je echt de opgeslagen spel verwijderen?"
+
+msgid "OPTVAL_OFF"
+msgstr "Uit"
+
+msgid "OPTVAL_ON"
+msgstr "Aan"
+
+msgid "OPTVAL_AUTO"
+msgstr ""
+
+msgid "OPTMNU_TITLE"
+msgstr "Opties"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Instellen van de controle"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Muis opties"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Controller opties"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Speler instellen"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Gameplay-opties"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Automap-opties"
+
+msgid "OPTMNU_HUD"
+msgstr "HUD opties"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Diverse opties"
+
+msgid "OPTMNU_SOUND"
+msgstr "Geluidsopties"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Weergaveopties"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Videomodus instellen"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Terugzetten naar standaardinstellingen"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Reset naar laatste opgeslagen"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Huidige instellingen opslaan "
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Ga naar de console"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Netwerkopties"
+
+msgid "OPTMNU_REVERB"
+msgstr "Reverb-omgeving editor"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER om te veranderen, BACKSPACE om te wissen."
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Druk op de nieuwe toets voor controle, ESC om te annuleren."
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Bedieningselementen"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Vuur"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Secundaire vuur"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Wapenherladen"
+
+msgid "CNTRLMNU_USE"
+msgstr "Gebruik / Openen"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Voorwaarts bewegen"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Achteruit bewegen"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Verplaats naar links"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Verplaats naar rechts"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Draai naar links"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Draai naar rechts"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Snelle draai"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Springen"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Hurken"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Hurken Toggle"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Muis-look"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Kijk omhoog"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Kijk naar beneden"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Middenaanzicht"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Rennen"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Rennen aan/uit"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Zijdelings bewegen"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Scorebord tonen"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Actie"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Aanpassen van de actiecontroles"
+
+msgid "CNTRLMNU_CHAT"
+msgstr ""
+
+msgid "MNU_MULTIPLAYER"
+msgstr ""
+
+msgid "CNTRLMNU_SAY"
+msgstr "Zeg"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Chat-controles aanpassen aan uw wensen"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Wapencontroles aanpassen aan uw eigen wensen"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Inventariscontroles aanpassen aan uw wensen"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Andere bedieningselementen aanpassen"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Wapens"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Volgende wapen"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Vorige wapen"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Wapenslot 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Wapenslot 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Wapenslot 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Wapenslot 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Wapenslot 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Wapenslot 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Wapenslot 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Wapenslot 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Wapenslot 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Wapenslot 0"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventaris"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Item activeren"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Activeer alle items"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Volgende item"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Vorige item"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Kaartcontroles aanpassen"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Kaartcontroles"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Pan links"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Pan rechts"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Pan omhoog"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Pan neer"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Inzoomen"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Uitzoomen"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Omschakelen van de zoom"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Schakelen volgen"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Kiesnet"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Toggle rotatie"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Toggle textuur"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Automap aan/uit"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr ""
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr ""
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Open console"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Pauze"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Vergroot het display"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Verlaag het display"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Open hulp"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Menu opslaan openen"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Menu laden openen"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Menu Opties openen"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Displaymenu openen"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Snel opslaan"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Snel laden"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Afsluiten naar het hoofdmenu"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Berichten aan/uit"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Stop het spel"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Gamma aanpassen"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Muis inschakelen"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Muis in menu's inschakelen"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Toon terug knop"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr ""
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Horizontale gevoeligheid"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Verticale gevoeligheid"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Vlotte muisbeweging"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Draaisnelheid"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Mouselook snelheid"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Voorwaartse/achterwaartse snelheid"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Zijdelings snelheid"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Altijd Mouselook"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Muis-Y-as omkeren"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Muis-X-as omkeren"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Linksboven"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Rechtsboven"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Linksonder"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Rechtsonder"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Touchscreen-achtige"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Eenvoudige pijl"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Systeemcursor"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Standaard"
+
+msgid "JOYMNU_TITLE"
+msgstr "Controller configureren"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Controller opties"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Blokkeer de controller in het menu"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Controllerondersteuning inschakelen"
+
+msgid "JOYMNU_DINPUT"
+msgstr "DirectInput-controllers inschakelen"
+
+msgid "JOYMNU_XINPUT"
+msgstr "XInput-controllers inschakelen"
+
+msgid "JOYMNU_PS2"
+msgstr "Raw PlayStation 2-adapters inschakelen"
+
+msgid "JOYMNU_NOCON"
+msgstr "Geen controllers gedetecteerd"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Configureer controllers:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Controller ondersteuning moet ingeschakeld zijn"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "om eventuele regelaars te detecteren."
+
+msgid "JOYMNU_INVALID"
+msgstr "Ongeldige regelaar gespecificeerd voor het menu"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Algemene gevoeligheid"
+
+msgid "JOYMNU_AXIS"
+msgstr "Asconfiguratie"
+
+msgid "JOYMNU_INVERT"
+msgstr "Omkeren"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Dode zone"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Geen configureerbare assen"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Geen"
+
+msgid "OPTVAL_TURNING"
+msgstr "Draaien"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Omhoog/omlaag zoeken"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Voorwaarts bewegen"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Strafelen"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Naar boven/beneden bewegen"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Omgekeerd"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Niet omgekeerd"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Blauw"
+
+msgid "TXT_COLOR_RED"
+msgstr "Rood"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Groen"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Grijs"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Donkergrijs"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Donkergroen"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Bruin"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Donkerblauw"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Licht Rood"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Geel"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Paars"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Saaie groen"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Beige"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Licht groen"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Licht blauw"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Lichtgrijs"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Lichtbruin"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Goud"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Helder groen"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Roest"
+
+msgid "PLYRMNU_NAME"
+msgstr "Naam"
+
+msgid "PLYRMNU_TEAM"
+msgstr ""
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Kleur"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Geslacht"
+
+msgid "OPTVAL_MALE"
+msgstr "Man"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Vrouw"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neutraal"
+
+msgid "OPTVAL_OTHER"
+msgstr "Doel"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Gameplay-opties"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Altijd"
+
+msgid "OPTVAL_NEVER"
+msgstr "Nooit"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr ""
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Altijd lopen"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Schermgrootte"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Verticale Sync"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Modellen"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Dradenkruis schalen"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Helderheid"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gamma correctie"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr ""
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Verzadiging"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Statusbalkschaal"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Berichten"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Berichten centreren"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Pulserende berichtendisplay"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Berichtschaal"
+
+msgid "MNU_COLORPICKER"
+msgstr "Selecteer Kleur"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Automatisch roteren"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Volg de speler"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Doorschijnendheid van lijnen"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Dikte van lijnen"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Kaartkleuren aanpassen"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Standaard aangepaste kleuren herstellen"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Geluid actief"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Muziek actief "
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_128SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_256SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_512SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr ""
+
+msgid "OPTSTR_AUTO"
+msgstr ""
+
+msgid "OPTSTR_MONO"
+msgstr ""
+
+msgid "OPTSTR_STEREO"
+msgstr ""
+
+msgid "OPTSTR_PROLOGIC"
+msgstr ""
+
+msgid "OPTSTR_QUAD"
+msgstr ""
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 luidsprekers"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 luidsprekers"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 luidsprekers"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Afspeelapparaat"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "EFX inschakelen"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr ""
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Geluidsvolume"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Menu volume"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Muziekvolume"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI-apparaat"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Geluid in de achtergrond"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Onderwater nagalm"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Willekeurige plaatsen"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Geluidskanalen"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Geluidsarme achterkant"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL opties"
+
+msgid "SNDMNU_RESTART"
+msgstr "Herstart geluid"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Geavanceerde opties"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Module replayer opties"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Midi speler opties"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Geluid in menu's"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Geavanceerde geluidsopties"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Steekproeftarief"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL synthese"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Aantal geëmuleerde OPL chips"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Volledige MIDI stereo panning"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL Emulator Kern"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI-stemmen"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Globaal"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Globale Freeverb"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr ""
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Relatief volume"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Nagalm"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Nagalm niveau"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity++ configuratiebestand"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relatief volume"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi configuratiebestand"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Selecteer configuratie"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Geavanceerde herbemonstering"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL Emulator Kern"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Emulator maakt gebruik van PCM Samplerate"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Aantal geëmuleerde OPL chips"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Relatief volume"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Volume model"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2 Emulatorkern van de OPN2-emulator"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS-emulatie"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS-configuratiebestand"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "DMXGUS-klonten lezen"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS-geheugengrootte"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Aantal geëmuleerde OPL chips"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Relatief volume"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Gebruik de aangepaste WOPL bank"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL Bank-bestand"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Gebruik aangepaste WOPN-bank op maat"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN Bank-bestand"
+
+msgid "OPTVAL_ALIASING"
+msgstr ""
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Lineair"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Lineair"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Lineair"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Naast"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Laag)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr ""
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Hoog)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kubieke"
+
+msgid "OPTVAL_BLEP"
+msgstr "Bandbeperkte stap"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Lineair (langzamer)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Band-beperkt lineair"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kubieke (langzamer)"
+
+msgid "OPTVAL_SINC"
+msgstr ""
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Alleen toon aan/uit"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Volledige helling"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Hoofdvolume"
+
+msgid "MODMNU_QUALITY"
+msgstr "Kwaliteit"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Volume-aanvulling"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Auto (gebruik instelling van de bank)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Auto (gebruik instelling van de bank)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Algemeen"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Algemeen"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr ""
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr ""
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (accuraat, met AM bug)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (accuraat, met AM bug)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Win9X-achtig"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9X-achtig (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Win9X-achtig (Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (zonder AM voice bug)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (zonder AM voice bug)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr ""
+
+msgid "ADLVLMODEL_HMI"
+msgstr ""
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (oud, met bugs)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Onbeperkt"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Palet"
+
+msgid "OPTVAL_LOW"
+msgstr "Laag"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Middel"
+
+msgid "OPTVAL_HIGH"
+msgstr "Hoog"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Extreem"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Obvers"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Revers"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Nabewerking"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Tonemap modus"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Effect van de lensvervorming"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA-kwaliteit"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Dither output"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Tonemap Palet Orde van het Tonemap-palet"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Tonemap Palet Exponent"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr ""
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Bloom-effect"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Kwaliteit van omgevingsverduistering"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portals met AO"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Menu vervagen"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Milieukaart op spiegels"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Het teruggeven van kwaliteit"
+
+msgid "OPTVAL_SPEED"
+msgstr "Snelheid"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Kwaliteit"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Sector lichte wijze"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Mistmodus"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radiaal"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Standaard"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Textuurfiltermodus"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anisotroopfilter"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Geen (dichtstbijzijnde mipmap)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Geen (lineaire mipmap)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Geen (trilineair)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilineair"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilineair"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Textuur Opties"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Texturen ingeschakeld"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Hoge-resolutie texturen op"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Textuurschaalmodus"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Textuurschaalfactor"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Deze modus vereist %d keer meer videogeheugen."
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Texturen schalen"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Sprites schalen"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Lettertypen schalen"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr ""
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Precache GL texturen"
+
+msgid "VIDMNU_TITLE"
+msgstr "Videomodus"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Geschaald (Dichtstbijzijnd)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Geschaald (Lineair)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr ""
+
+msgid "OPTVAL_STRETCH"
+msgstr "Rek"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Rendermodus"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Volledig scherm"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina / HiDPI-ondersteuning"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Beeldverhouding"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Geforceerde beeldverhouding"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Geforceerde verhoudingsstijl"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Schakel 5:4 beeldverhouding in"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Resolutieschaal"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Schaalfactor"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Lineaire schaalverdeling gebruiken (volledig scherm)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Aangepaste pixelschaalvergroting"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Aangepaste breedte"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Aangepaste hoogte"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Wijzigingen toepassen (in venster)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Wijzigingen toepassen (Volledig scherm)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Kies een vooraf ingestelde resolutie"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Vooraf ingestelde aangepaste resoluties"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Vooraf ingestelde resolutiemodi"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Beeldverhouding 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Beeldverhouding 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Beeldverhouding 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Beeldverhouding 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Beeldverhouding 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normaal"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Laagst mogelijk schaal"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Gebruikergedefinieerd"
+
+msgid "VIDMNU_MAXFPS"
+msgstr ""
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Voorkeur rendering API"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Samenvoegen links+rechts Alt/Ctrl/Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter schakelt het volledige scherm aan/uit"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F schakelt het volledige scherm aan/uit"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Automatisch opslaan inschakelen"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Aantal auto-opslagen"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Opslaan/Laad bevestiging"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Schakel cheats uit"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rouleer snelopslag"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Aantal roulerende snelopslagplekken"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Schakel uniforme menuschaling uit"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Pauzeer het spel op de achtergrond"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Standaard dradenkruis"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Dradenkruis kleur"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Dradenkruis toont gezondheid"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Dradenkruis schalen"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Standaard"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Verbeterd"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Taal"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Wijzigingen ongedaan maken"
+
+msgid "REVMNU_SELECT"
+msgstr "Selecteer omgeving"
+
+msgid "REVMNU_TEST"
+msgstr "Test omgeving"
+
+msgid "REVMNU_EDIT"
+msgstr "Omgeving bewerken"
+
+msgid "REVMNU_NEW"
+msgstr "Nieuwe omgeving"
+
+msgid "REVMNU_REVERT"
+msgstr "Instellingen terugzetten"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_ROOM"
+msgstr ""
+
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_REVERB"
+msgstr ""
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+msgid "REVMNU_Reflections_Scale"
+msgstr ""
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr ""
+
+msgid "REVMNU_Reverb_Scale"
+msgstr ""
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Based_on"
+msgstr "Gebaseerd op"
+
+msgid "REVMNU_Name"
+msgstr "Naam"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Aanmaken"
+
+msgid "REVMNU_Save"
+msgstr "Opslaan..."
+
+msgid "REVMNU_File_name"
+msgstr "Bestandsnaam"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Omgevingen om op te slaan"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan-opties (Experimenteel)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan-opties"
+
+msgid "VKMNU_ENABLE"
+msgstr "Vulkan inschakelen"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan apparaat-ID"
+
+msgid "VKMNU_HDR"
+msgstr "Hoog dynamisch bereik"
+
+msgid "VK_WARNING"
+msgstr "Waarschuwing: De Vulkan renderer is zeer experimenteel!"
+
+msgid "VK_RESTART"
+msgstr "Deze opties vereisen een herstart om van kracht te worden."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Selecteer Vulkan Apparaat"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Oud xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Optie zoeken"
+
+msgid "OS_ANY"
+msgstr "Zoek naar eender welke term"
+
+msgid "OS_ALL"
+msgstr "Zoek naar alle termen"
+
+msgid "OS_NO_RESULTS"
+msgstr "Geen resultaten gevonden."
+
+msgid "OS_LABEL"
+msgstr "Zoeken:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k mergelde %o als een vis"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k castreerde %o"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k pureerde %o"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k decimeerde %o"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k vernietigde %o"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k sneed %o in stukjes"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k ontleedde %o"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k plette %o"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k gaf %o anale rechtvaardigheid"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k gaf aNaLe DoLhEiD aan %o"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k doodde %o"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k maakte gehakt van %o"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k slachtte %o af"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k verminkte %o"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k holde %o uit"
+
+msgid "TXT_OBITUARY16"
+msgstr "%k scheurde een opening uit %o"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k slachtte %o"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k vermorzelde %o"
+
+msgid "TXT_OBITUARY19"
+msgstr "%k sodomiseerde %o"
+
+msgid "TXT_OBITUARY20"
+msgstr "%k splette %o"
+
+msgid "TXT_OBITUARY21"
+msgstr "%k plette %o"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k wurgde %o"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k maakte %o koud"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k stopte %o in een lijkzak"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k zond %o naar de hel"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k roosterde %o"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k legde %o om"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k bespoot %o"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k besproeide %o"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k maakte hondenvlees van %o"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k sloeg %o als een hond"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o is uitschot"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o is hamburger"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o onderging scrotumscheiding"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o was vrijwilliger voor bevolkingsbeperking"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o heeft zelfmoord gepleegd"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o ontving de Darwin Award"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "ÉËÖ\n"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Alle opties tonen"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Eenvoudig optiemenu"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Door gameconfiguratie bladeren"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Door schermafbeeldingen bladeren"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Door opgeslagen games bladeren"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Muisknoppen verwisselen"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Alleen gewijzigd"
+
+msgid "TXT_UNKNOWN"
+msgstr "Onbekend"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr ""
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Dit spel heeft de volgende bestanden nodig"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Multiplayer Opties"
+
+msgid "OPTMNU_INPUT"
+msgstr "In1voeropties"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Systeem Opties"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Licht Opties"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Sprite-opties"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Corona's"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Uiterlijk"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Geavanceerde Weergave Opties"
+
+msgid "PICKER_SELECT"
+msgstr "Selecteer welk spel je wilt spelen"
+
+msgid "PICKER_PLAY"
+msgstr "Spel starten"
+
+msgid "PICKER_EXIT"
+msgstr "Verlaten"
+
+msgid "PICKER_GENERAL"
+msgstr "Algemeen"
+
+msgid "PICKER_EXTRA"
+msgstr "Extra afbeeldingen"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Volledig scherm"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Autoload uitschakelen"
+
+msgid "PICKER_DONTASK"
+msgstr "Vraag me niet opnieuw"
+
+msgid "PICKER_LIGHTS"
+msgstr "Verlichting"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Heldermaps"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Breedbeeld"
+
+msgid "PICKER_ADDPARM"
+msgstr "Extra parameters:"
+
+msgid "PICKER_WELCOME"
+msgstr "Welkom bij %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Versie %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr ""
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Spel"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Deze controller inschakelen"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Hoofdmenu openen"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Module replayer"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr ""
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr ""
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr ""
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr ""
+
+msgid "PICKER_PLAYHOST"
+msgstr ""
+
+msgid "PICKER_PLAYJOIN"
+msgstr ""
+
+msgid "PICKER_REMPARM"
+msgstr ""
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr ""
+
+msgid "PICKER_TAB_MULTI"
+msgstr ""
+
+msgid "PICKER_LOADSAVE"
+msgstr ""
+
+msgid "PICKER_REMSAVE"
+msgstr ""
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr ""
+
+msgid "PICKER_JOIN"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+msgid "PICKER_NETRATE"
+msgstr ""
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr ""
+
+msgid "PICKER_GAMEMODE"
+msgstr ""
+
+msgid "PICKER_COOP"
+msgstr ""
+
+msgid "PICKER_DM"
+msgstr ""
+
+msgid "PICKER_TDM"
+msgstr ""
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr ""
+
+msgid "PICKER_ALTDM"
+msgstr ""
+
+msgid "PICKER_PLAYERS"
+msgstr ""
+
+msgid "PICKER_PORT"
+msgstr ""
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr ""
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr ""
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr ""
+
+msgid "PICKER_IP"
+msgstr ""
+
+msgid "PICKER_TDMLABEL"
+msgstr ""
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr ""
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr ""
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

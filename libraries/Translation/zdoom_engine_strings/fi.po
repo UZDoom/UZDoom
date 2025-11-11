@@ -1,0 +1,5210 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: fi\n"
+
+msgid "PRESSKEY"
+msgstr "Paina jotain näppäintä."
+
+msgid "SECRETMESSAGE"
+msgstr "Sala löydetty!"
+
+msgid "D_DEVSTR"
+msgstr "Hyödytön tila PÄÄLLÄ."
+
+msgid "QUITMSG"
+msgstr "Haluatko varmasti lopettaa tämän mahtavan pelin?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Et voi ladata verkkopelin aikana!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "QLOADNET"
+msgstr ""
+"Et voi pikaladata verkkopelin aikana!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Et ole vielä valinnut pikatallennuslokeroa!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "NEWGAME"
+msgstr ""
+"Et voi aloittaa uutta peliä verkkopelin aikana.\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Oletko varma? Tämä vaikeustaso ei ole edes vähääkään reilu.\n"
+"\n"
+"Paina Y tai N."
+
+msgid "SWSTRING"
+msgstr ""
+"Tämä on Doomin shareware-versio.\n"
+"\n"
+"Sinun on tilattava koko trilogia.\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "NETEND"
+msgstr ""
+"Et voi päättää verkkopeliä!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "ENDGAME"
+msgstr ""
+"Haluatko varmasti päättää pelin?\n"
+"\n"
+"Paina Y tai N."
+
+msgid "RAVENQUITMSG"
+msgstr "Haluatko varmasti lopettaa?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Käytettävissä vain rekisteröidyssä versiossa"
+
+msgid "DOSY"
+msgstr "(Paina Y lopettaaksesi)"
+
+msgid "QUITMSG1"
+msgstr "Älä lähde; demoneita on vielä kärvennettävänä!"
+
+msgid "QUITMSG2"
+msgstr "Häivytään -- tämä on muuttumassa verilöylyksi!"
+
+msgid "QUITMSG3"
+msgstr "Sinuna en lähtisi. DOS on paljon pahempi."
+
+msgid "QUITMSG4"
+msgstr "Yritätkö sanoa pitäväsi DOSista enemmän kuin minusta, niinkö?"
+
+msgid "QUITMSG5"
+msgstr "Älä lähde vielä -- tuon kulman takana on demoni!"
+
+msgid "QUITMSG6"
+msgstr "Tiiäthän, että käristän sut, kun seuraavalla kerralla tuut tänne."
+
+msgid "QUITMSG7"
+msgstr "Ole hyvä vain ja lähde. Arvaa, välitänkö."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"Haluat siis lopettaa?\n"
+"Oletko menettänyt järkesi?"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr "Älä mene nyt; DOS-kehotteella väijyy hirviö toisesta ulottuvuudesta!"
+
+msgid "QUITMSG10"
+msgstr "Ala laputtaa takaisin tylsien ohjelmiesi pariin."
+
+msgid "QUITMSG11"
+msgstr "Jos oisin pomosi, lyttäisin sut kuolonottelussa minuutissa!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Kuules, kaveri: Jos menet nyt, niin siinä samassa menee myös ruumislukusi."
+
+msgid "QUITMSG13"
+msgstr "Senkus menet. Odottelen paluutasi mailalla."
+
+msgid "QUITMSG14"
+msgstr ""
+"Kiitä onneasi, etten läimäytä sinua siitä hyvästä, että mietit lähtemistä."
+
+msgid "QUITMSG15"
+msgstr ""
+"Minne olet menossa?!\n"
+"Entä kapina?"
+
+msgid "QUITMSG16"
+msgstr ""
+"Verilöyly interruptus...\n"
+"Mikä kiusoitus!"
+
+msgid "QUITMSG17"
+msgstr ""
+"Mutta sinä olet toivo\n"
+"-- ainoa mahdollisuuteni!!"
+
+msgid "QUITMSG18"
+msgstr "Kukaan ei käännä selkäänsä Blackbirdille."
+
+msgid "QUITMSG19"
+msgstr "Luulin, että olit erilainen kuin muut..."
+
+msgid "QUITMSG20"
+msgstr "Hyvä! Senkun vain tapat ja lähdet!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Voit lopettaa...\n"
+"muttet piiloutua..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Häää, mikä vikana?\n"
+"Äiti huutaa syömään?"
+
+msgid "QUITMSG23"
+msgstr "Älä lopeta nyt; limatuksia on vielä vapaalla!"
+
+msgid "QUITMSG24"
+msgstr "Älä luovuta -- limatukset pääsevät voitolle!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Älä lähde nyt.\n"
+"Tarvitsemme apuasi!"
+
+msgid "QUITMSG26"
+msgstr "Toivottavasti pidät taukoa vain Chex(R) Party Mixiä varten."
+
+msgid "QUITMSG27"
+msgstr ""
+"Älä lopeta nyt!\n"
+"Tarvitsemme apuasi!"
+
+msgid "QUITMSG28"
+msgstr "Älä hylkää intergalaktista muroliittoa!"
+
+msgid "QUITMSG29"
+msgstr "Todellinen Chex(R)-soturi ei luovuttaisi niin nopeasti!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Sait jotakin"
+
+msgid "PD_ANY"
+msgstr "Mikä tahansa avain avaa tämän oven"
+
+msgid "PD_ANYOBJ"
+msgstr "Mikä tahansa avain aktivoi tämän kappaleen"
+
+msgid "PD_ALL3"
+msgstr "Kaikki kolme avainta tarvitaan tämän oven avaamiseksi"
+
+msgid "PD_ALL3O"
+msgstr "Kaikki kolme avainta tarvitaan tämän kappaleen aktivoimiseksi"
+
+msgid "PD_ALL6"
+msgstr "Kaikki kuusi avainta tarvitaan tämän oven avaamiseksi"
+
+msgid "PD_ALL6O"
+msgstr "Kaikki kuusi avainta tarvitaan tämän kappaleen aktivoimiseksi"
+
+msgid "PD_ALLKEYS"
+msgstr "Kaikki avaimet tarvitaan"
+
+msgid "HUSTR_MSGU"
+msgstr "[Viestiä ei lähetetty]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Mutiset itseksesi"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Kuka siellä?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Pelotat itseäsi"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Alat hourailla"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Olet seonnut..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Viesti lähetetty]"
+
+msgid "STSTR_MUS"
+msgstr "Musiikin vaihtaminen"
+
+msgid "STSTR_NOMUS"
+msgstr "Valinta ei mahdollinen"
+
+msgid "STSTR_DQDON"
+msgstr "Kuolemattomuustila PÄÄLLÄ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Kuolemattomuustila POIS PÄÄLTÄ"
+
+msgid "STSTR_DQD2ON"
+msgstr "Varma kuolemattomuustila PÄÄLLÄ"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Varma kuolemattomuustila POIS PÄÄLTÄ"
+
+msgid "STSTR_KFAADDED"
+msgstr "Täysaseistus"
+
+msgid "STSTR_FAADDED"
+msgstr "Täysaseistus (ilman avaimia)"
+
+msgid "STSTR_NCON"
+msgstr "Seinänläpikulkutila PÄÄLLÄ"
+
+msgid "STSTR_NCOFF"
+msgstr "Seinänläpikulkutila POIS PÄÄLTÄ"
+
+msgid "STSTR_NC2ON"
+msgstr "Seinänläpikulkutila 2 PÄÄLLÄ"
+
+msgid "STSTR_NC2OFF"
+msgstr "Seinänläpikulkutila 2 POIS PÄÄLTÄ"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr ""
+"haavoittumattomuus (V), voima (S), näkymättömyys (I), koko kartta (A) tai "
+"valonvahvistus (L)"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Tehostin kytketty"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... ei ole syvältä - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Vaihdetaan tasoa..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Buddhatila PÄÄLLÄ"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Buddhatila POIS PÄÄLTÄ"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Korkein buddhatila PÄÄLLÄ"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Korkein buddhatila POIS PÄÄLTÄ"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Voima päällä"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Voima pois päältä"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Täysi terveys"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Kaikki avaimet"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Äänen vianmääritystila päällä"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Äänen vianmääritystila pois päältä"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Yrität huijata, vai? Nyt kuolet!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Huijari - et ansaitse aseita"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Laskuri päällä"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Laskuri pois päältä"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Saamasi pitää"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Kulta, sinulla on Midaksen kosketus"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Sait kamppeet!"
+
+msgid "TXT_FREEZEON"
+msgstr "Jäädytystila päällä"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Jäädytystila pois päältä"
+
+msgid "TXT_STRANGE"
+msgstr "Sinulla on kummallinen olo..."
+
+msgid "TXT_STRANGER"
+msgstr "Olosi on vieläkin kummempi."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Tunnet olevasi jälleen oma itsesi."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Lyijysaappaat päällä"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Lyijysaappaat pois päältä"
+
+msgid "TXT_LIGHTER"
+msgstr "Tunnet olosi kevyemmäksi"
+
+msgid "TXT_GRAVITY"
+msgstr "Painovoima painaa sinua alas"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Hyökkäämättömyystila PÄÄLLÄ"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Hyökkäämättömyystila POIS PÄÄLTÄ"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "\"Vapise pelosta!\""
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Ei enää örkkipanssaria"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Seurantakamera PÄÄLLÄ"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Seurantakamera POIS PÄÄLTÄ"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 pahis tapettu"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d pahista tapettu"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 hirviö tapettu"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d hirviötä tapettu"
+
+msgid "TXT_NO_RESURRECT"
+msgstr ""
+"Ei mahdollista herätä henkiin. Pelaaja ei ole enää yhteydessä ruumiiseensa."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Kaikki artefaktit!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Mitä haluat tappaa pelin ulkopuolella?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Jäätyneen pelaajan ominaisuudet kytketty pois päältä"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Seuraamistila POIS PÄÄLTÄ"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Seuraamistila PÄÄLLÄ"
+
+msgid "AMSTR_GRIDON"
+msgstr "Ruudukko PÄÄLLÄ"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Ruudukko POIS PÄÄLTÄ"
+
+msgid "AMSTR_TEXON"
+msgstr "Pintakuviointitila PÄÄLLÄ"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Pintakuviointitila POIS PÄÄLTÄ"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Merkitty paikka"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Kaikki merkit pyyhitty"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Frägiraja saavutettu."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Aikaraja saavutettu."
+
+msgid "SPREEKILLSELF"
+msgstr "%o oli liekeissä, kunnes meni tappamaan itsensä!"
+
+msgid "SPREEOVER"
+msgstr "%k päätti pelaajan %o tapposarjan"
+
+msgid "SPREE5"
+msgstr "%k on sarjamurhaaja!"
+
+msgid "SPREE10"
+msgstr "%k riehuu valtoimenaan!"
+
+msgid "SPREE15"
+msgstr "%k hallitsee suvereenisti!"
+
+msgid "SPREE20"
+msgstr "%k on pysäyttämätön!"
+
+msgid "SPREE25"
+msgstr "%k on kuin jumala!"
+
+msgid "MULTI2"
+msgstr "Tuplatappo!"
+
+msgid "MULTI3"
+msgstr "Multitappo!"
+
+msgid "MULTI4"
+msgstr "Ultratappo!"
+
+msgid "MULTI5"
+msgstr "Hirviömäinen tappo!"
+
+msgid "SCORE_BONUS"
+msgstr "Lisäedut"
+
+msgid "SCORE_COLOR"
+msgstr "Väri"
+
+msgid "SCORE_SECRET"
+msgstr "Salat"
+
+msgid "SCORE_NAME"
+msgstr "Nimi"
+
+msgid "SCORE_DELAY"
+msgstr "Viive (ms)"
+
+msgid "SCORE_FRAGS"
+msgstr "Frägit"
+
+msgid "SCORE_DEATHS"
+msgstr "Kuolemat"
+
+msgid "SCORE_OTHER"
+msgstr "Muu"
+
+msgid "SCORE_MISSED"
+msgstr "Hudit"
+
+msgid "SCORE_TOTAL"
+msgstr "Yhteensä"
+
+msgid "SCORE_LVLTIME"
+msgstr "Tasoaika"
+
+msgid "TXT_IMKILLS"
+msgstr "Tapot"
+
+msgid "TXT_IMITEMS"
+msgstr "Esineet"
+
+msgid "TXT_IMSECRETS"
+msgstr "Salat"
+
+msgid "TXT_IMTIME"
+msgstr "Aika"
+
+msgid "TXT_IMPAR"
+msgstr ""
+
+msgid "WI_FINISHED"
+msgstr "Suoritettu"
+
+msgid "WI_ENTERING"
+msgstr "Seuraava kohde"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Seuraava kohde:"
+
+msgid "AM_MONSTERS"
+msgstr "Hirviöt:"
+
+msgid "AM_SECRETS"
+msgstr "Salat:"
+
+msgid "AM_ITEMS"
+msgstr "Esineet:"
+
+msgid "OB_SUICIDE"
+msgstr "%o teki itsemurhan."
+
+msgid "OB_FALLING"
+msgstr "%o putosi liian kaukaa."
+
+msgid "OB_CRUSH"
+msgstr "%o liiskautui."
+
+msgid "OB_EXIT"
+msgstr "%o yritti häipyä."
+
+msgid "OB_WATER"
+msgstr "%o ei osaa uida."
+
+msgid "OB_SLIME"
+msgstr "%o mutatoitui."
+
+msgid "OB_LAVA"
+msgstr "%o suli."
+
+msgid "OB_BARREL"
+msgstr "%o poksahti."
+
+msgid "OB_SPLASH"
+msgstr "%o seisoi väärässä paikassa."
+
+msgid "OB_R_SPLASH"
+msgstr "%o oli liian likellä."
+
+msgid "OB_ROCKET"
+msgstr "%o oli liian likellä."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o tappoi itsensä."
+
+msgid "OB_VOODOO"
+msgstr "%o kuoli voodoon voimasta."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%k telefräggäsi %o paran."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o telefrägättiin."
+
+msgid "OB_DEFAULT"
+msgstr "%o kuoli."
+
+msgid "OB_MPDEFAULT"
+msgstr "%k tappoi %o paran."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k niitti joukkuetoverin."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k näyttää tarvitsevan laseja."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k teki frägin vieraalle joukkueelle."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k menetti jälleen ystävän."
+
+msgid "GOTARMOR"
+msgstr "Poimit panssarin."
+
+msgid "GOTMEGA"
+msgstr "Poimit megapanssarin!"
+
+msgid "GOTHTHBONUS"
+msgstr "Poimit terveyslisän."
+
+msgid "GOTARMBONUS"
+msgstr "Poimit panssarilisän."
+
+msgid "GOTSTIM"
+msgstr "Poimit piristeruiskeen."
+
+msgid "GOTMEDINEED"
+msgstr "Poimit lääkintälaukun, jota TODELLA tarvitsit!"
+
+msgid "GOTMEDIKIT"
+msgstr "Poimit lääkintälaukun."
+
+msgid "GOTSUPER"
+msgstr "Supervaraus!"
+
+msgid "GOTBLUECARD"
+msgstr "Poimit sinisen avainkortin."
+
+msgid "GOTYELWCARD"
+msgstr "Poimit keltaisen avainkortin."
+
+msgid "GOTREDCARD"
+msgstr "Poimit punaisen avainkortin."
+
+msgid "GOTBLUESKUL"
+msgstr "Poimit sinisen kalloavaimen."
+
+msgid "GOTYELWSKUL"
+msgstr "Poimit keltaisen kalloavaimen."
+
+msgid "GOTREDSKUL"
+msgstr "Poimit punaisen kalloavaimen."
+
+msgid "GOTINVUL"
+msgstr "Haavoittumattomuus!"
+
+msgid "GOTBERSERK"
+msgstr "Raivo!"
+
+msgid "GOTINVIS"
+msgstr "Osittainen näkymättömyys"
+
+msgid "GOTSUIT"
+msgstr "Säteilysuojapuku"
+
+msgid "GOTMAP"
+msgstr "Alueen tietokonekartta"
+
+msgid "GOTVISOR"
+msgstr "Valonvahvistusvisiiri"
+
+msgid "GOTMSPHERE"
+msgstr "Megakuula!"
+
+msgid "GOTCLIP"
+msgstr "Poimit lippaan."
+
+msgid "GOTCLIPBOX"
+msgstr "Poimit laatikollisen luoteja."
+
+msgid "GOTROCKET"
+msgstr "Poimit raketin."
+
+msgid "GOTROCKBOX"
+msgstr "Poimit laatikollisen raketteja."
+
+msgid "GOTCELL"
+msgstr "Poimit energia-akun."
+
+msgid "GOTCELLBOX"
+msgstr "Poimit energia-akkupaketin."
+
+msgid "GOTSHELLS"
+msgstr "Poimit 4 haulikon patruunaa."
+
+msgid "GOTSHELLBOX"
+msgstr "Poimit laatikollisen haulikon patruunoita."
+
+msgid "GOTBACKPACK"
+msgstr "Poimit repun täynnä ammuksia!"
+
+msgid "GOTBFG9000"
+msgstr "Sait BFG9000:n! Voi kyllä."
+
+msgid "GOTCHAINGUN"
+msgstr "Sait Gatling-konekiväärin!"
+
+msgid "GOTCHAINSAW"
+msgstr "Moottorisaha! Mene etsimään lihaa!"
+
+msgid "GOTLAUNCHER"
+msgstr "Sait singon!"
+
+msgid "GOTPLASMA"
+msgstr "Sait plasmapyssyn!"
+
+msgid "GOTSHOTGUN"
+msgstr "Sait haulikon!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Sait superhaulikon!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Poimit pistoolin."
+
+msgid "BETA_BONUS1"
+msgstr "Poimit demonisen tikarin."
+
+msgid "BETA_BONUS2"
+msgstr "Poimit kalloarkun."
+
+msgid "BETA_BONUS3"
+msgstr "Poimit pahan valtikan."
+
+msgid "BETA_BONUS4"
+msgstr "Poimit epäpyhän raamatun."
+
+msgid "PD_BLUEO"
+msgstr "Tarvitset sinisen avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_REDO"
+msgstr "Tarvitset punaisen avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_YELLOWO"
+msgstr "Tarvitset keltaisen avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_BLUEK"
+msgstr "Tarvitset sinisen avaimen avataksesi tämän oven"
+
+msgid "PD_REDK"
+msgstr "Tarvitset punaisen avaimen avataksesi tämän oven"
+
+msgid "PD_YELLOWK"
+msgstr "Tarvitset keltaisen avaimen avataksesi tämän oven"
+
+msgid "PD_BLUECO"
+msgstr "Tarvitset sinisen avainkortin aktivoidaksesi tämän kappaleen"
+
+msgid "PD_REDCO"
+msgstr "Tarvitset punaisen avainkortin aktivoidaksesi tämän kappaleen"
+
+msgid "PD_YELLOWCO"
+msgstr "Tarvitset keltaisen avainkortin aktivoidaksesi tämän kappaleen"
+
+msgid "PD_BLUESO"
+msgstr "Tarvitset sinisen kalloavaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_REDSO"
+msgstr "Tarvitset punaisen kalloavaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_YELLOWSO"
+msgstr "Tarvitset keltaisen kalloavaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_BLUEC"
+msgstr "Tarvitset sinisen avainkortin avataksesi tämän oven"
+
+msgid "PD_REDC"
+msgstr "Tarvitset punaisen avainkortin avataksesi tämän oven"
+
+msgid "PD_YELLOWC"
+msgstr "Tarvitset keltaisen avainkortin avataksesi tämän oven"
+
+msgid "PD_BLUES"
+msgstr "Tarvitset sinisen kalloavaimen avataksesi tämän oven"
+
+msgid "PD_REDS"
+msgstr "Tarvitset punaisen kalloavaimen avataksesi tämän oven"
+
+msgid "PD_YELLOWS"
+msgstr "Tarvitset keltaisen kalloavaimen avataksesi tämän oven"
+
+msgid "CC_ZOMBIE"
+msgstr "Zombimies"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Haulikkohemmo"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Raskasaseäijä"
+
+msgid "CC_IMP"
+msgstr "Piru"
+
+msgid "CC_DEMON"
+msgstr "Demoni"
+
+msgid "CC_LOST"
+msgstr "Kadonnut sielu"
+
+msgid "CC_CACO"
+msgstr "Kakodemoni"
+
+msgid "CC_HELL"
+msgstr "Hornanritari"
+
+msgid "CC_BARON"
+msgstr "Hornanparoni"
+
+msgid "CC_ARACH"
+msgstr "Araknotroni"
+
+msgid "CC_PAIN"
+msgstr "Kivun henki"
+
+msgid "CC_REVEN"
+msgstr "Henkiinpalannut"
+
+msgid "CC_MANCU"
+msgstr "Mankubus"
+
+msgid "CC_ARCH"
+msgstr "Arkkihirvitys"
+
+msgid "CC_SPIDER"
+msgstr "Hämähäkkiaivot"
+
+msgid "CC_CYBER"
+msgstr "Kyberdemoni"
+
+msgid "CC_HERO"
+msgstr "Sankarimme"
+
+msgid "FN_SHOTGUN"
+msgstr "Kersantti"
+
+msgid "FN_HEAVY"
+msgstr "Konekiväärimies"
+
+msgid "FN_SPECTRE"
+msgstr "Haamu"
+
+msgid "FN_SPIDER"
+msgstr "Hämähäkkiaivot"
+
+msgid "FN_CYBER"
+msgstr "Kyberdemoni"
+
+msgid "FN_WOLFSS"
+msgstr "Natsi"
+
+msgid "FN_DOG"
+msgstr "Koira"
+
+msgid "TAG_FIST"
+msgstr "Nyrkkirauta"
+
+msgid "TAG_CHAINSAW"
+msgstr "Moottorisaha"
+
+msgid "TAG_PISTOL"
+msgstr "Pistooli"
+
+msgid "TAG_SHOTGUN"
+msgstr "Haulikko"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Superhaulikko"
+
+msgid "TAG_CHAINGUN"
+msgstr "Gatling-kk"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Sinko"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Plasmapyssy"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Luodit"
+
+msgid "AMMO_SHELLS"
+msgstr "Haulikon patruunat"
+
+msgid "AMMO_ROCKETS"
+msgstr "Raketit"
+
+msgid "AMMO_CELLS"
+msgstr "Energia-akut"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o luuli nähneensä araknotronin."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o luuli nähneensä arkkihirvityksen"
+
+msgid "OB_STEALTHBARON"
+msgstr "%o luuli nähneensä hornanparonin."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o luuli nähneensä kakodemonin."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o luuli nähneensä konekiväärimiehen."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o luuli nähneensä demonin."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o luuli nähneensä hornanritarin."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o luuli nähneensä pirun."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o luuli nähneensä mankubuksen."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o luuli nähneensä henkiinpalanneen."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o luuli nähneensä kersantin."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o luuli nähneensä zombin."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o joutui henkiinpalanneen lyömäksi."
+
+msgid "OB_IMPHIT"
+msgstr "%o joutui pirun sivaltamaksi."
+
+msgid "OB_CACOHIT"
+msgstr "%o meni liian lähelle kakodemonia."
+
+msgid "OB_DEMONHIT"
+msgstr "%o joutui demonin puremaksi."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o joutui haamun syömäksi."
+
+msgid "OB_BARONHIT"
+msgstr "%o joutui hornanparonin auki repimäksi."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o joutui hornanritarin perkaamaksi."
+
+msgid "OB_ZOMBIE"
+msgstr "%o joutui zombin tappamaksi."
+
+msgid "OB_SHOTGUY"
+msgstr "%o joutui kersantin ampumaksi."
+
+msgid "OB_VILE"
+msgstr "%o joutui arkkihirvityksen kärventämäksi."
+
+msgid "OB_UNDEAD"
+msgstr "%o ei kyennyt väistämään henkiinpalanneen tulipalloa."
+
+msgid "OB_FATSO"
+msgstr "%o joutui mankubuksen liiskaamaksi."
+
+msgid "OB_CHAINGUY"
+msgstr "%o joutui konekiväärimiehen rei'ittämäksi."
+
+msgid "OB_SKULL"
+msgstr "%o joutui kadonneen sielun säikäyttämäksi."
+
+msgid "OB_IMP"
+msgstr "%o joutui pirun polttamaksi."
+
+msgid "OB_CACO"
+msgstr "%o joutui kakodemonin iskemäksi."
+
+msgid "OB_BARON"
+msgstr "%o joutui hornanparonin ruhjomaksi."
+
+msgid "OB_KNIGHT"
+msgstr "%o joutui hornanritarin repimäksi."
+
+msgid "OB_SPIDER"
+msgstr "%o kunnioitti syvästi hämähäkkidemonia"
+
+msgid "OB_BABY"
+msgstr "%o antoi anaktrotronin saada hänet."
+
+msgid "OB_CYBORG"
+msgstr "%o joutui kyberdemonin yltympäri roiskimaksi."
+
+msgid "OB_WOLFSS"
+msgstr "%o tapasi natsin."
+
+msgid "OB_DOG"
+msgstr "%o joutui koiran raatelemaksi."
+
+msgid "OB_MPFIST"
+msgstr "%k rusikoi %o paran."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%k katkoi %o paran."
+
+msgid "OB_MPPISTOL"
+msgstr "%o kutitti %o parkaa hernepyssyllään."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%k jauhoi %o paran tussarillaan."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%k roiski %o paran yltympäriinsä superhaulikollaan."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%k niitti %o paran konekiväärillään."
+
+msgid "OB_MPROCKET"
+msgstr "%o ratsasti pelaajan %k raketilla."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o melkein väisti pelaajan %k raketin."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%k sulatti %o paran plasmapyssyllään."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%k pirstoi %o paran BFG:llään."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o ei kyennyt piiloutumaan pelaajan %k BFG:ltä."
+
+msgid "OB_RAILGUN"
+msgstr "%o lävisti %o paran."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%k korvensi %o paran BFG:llään."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Sininen avain"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Keltainen avain"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Vihreä avain"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Kvartsipullo"
+
+msgid "TXT_ARTIFLY"
+msgstr "Kiihtymyksen siivet"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Näkymättömyyden sormus"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Väkevyyden kirja"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Varjokehrä"
+
+msgid "TXT_ARTIEGG"
+msgstr "Muodonmuutoksen muna"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Mystinen uurna"
+
+msgid "TXT_ARTITORCH"
+msgstr "Soihtu"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Vanhain aikapommi"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Kaaoskoje"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Kristallipullo"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Säilön laukku"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Hopeakilpi"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Lumottu kilpi"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Karttakäärö"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Sauvakristalli"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Kristalligeoidi"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Nuijakuulia"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Nuijakuulakasa"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Eetterinuolia"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Eetterinuoliviini"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Kynsikehrä"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Energiakehrä"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Vähäriimut"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Isoriimut"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Liekkikehrä"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Infernokehrä"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Kultasauva"
+
+msgid "TXT_WPNMACE"
+msgstr "Tulinuija"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Eetterivarsijousi"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Lohikäärmeenkynsi"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Hornansauva"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Feenikssauva"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Manaajan rautakintaat"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Tarvitset sinisen avaimen avataksesi tämän oven"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Tarvitset vihreän avaimen avataksesi tämän oven"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Tarvitset keltaisen avaimen avataksesi tämän oven"
+
+msgid "FN_CHICKEN"
+msgstr "Kana"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Ihmislohikäärme"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Sapelikynsi"
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr "Gargoili"
+
+msgid "FN_IRONLICH"
+msgstr "Rautakalmo"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Epäkuollut soturi"
+
+msgid "FN_MINOTAUR"
+msgstr "Maulotauri"
+
+msgid "FN_MUMMY"
+msgstr ""
+
+msgid "FN_MUMMYLEADER"
+msgstr ""
+
+msgid "FN_SNAKE"
+msgstr "Käärmeolio"
+
+msgid "FN_WIZARD"
+msgstr "Velho"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Sauvakristalleja"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Eetterinuolia"
+
+msgid "AMMO_BLASTER"
+msgstr "Kynsikehriä"
+
+msgid "AMMO_MACE"
+msgstr "Nuijakuulia"
+
+msgid "AMMO_SKULLROD"
+msgstr "Hornansauvan riimuja"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Liekkikehriä"
+
+msgid "TAG_STAFF"
+msgstr "Sauva"
+
+msgid "TAG_GOLDWAND"
+msgstr "Haltiasauva"
+
+msgid "OB_CHICKEN"
+msgstr "%o nokittiin kuoliaaksi."
+
+msgid "OB_BEAST"
+msgstr "%o joutui ihmislohikäärmeen kärventämäksi."
+
+msgid "OB_CLINK"
+msgstr "%o joutui sapelikynnen sivaltamaksi."
+
+msgid "OB_DSPARIL1"
+msgstr "%o joutui D'Sparilin käärmeen kalttaamaksi."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o joutui D'Sparilin käärmeen pureksimaksi."
+
+msgid "OB_DSPARIL2"
+msgstr "%o ei mahtanut mitään D'Sparilille."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o joutui D'Sparilin löylyttämäksi."
+
+msgid "OB_HERETICIMP"
+msgstr "%o joutui gargoilin arpeuttamaksi."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o joutui gargoilin pilkkomaksi."
+
+msgid "OB_IRONLICH"
+msgstr "%o joutui rautakalmon hävittämäksi."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o meni lähelle rautakalmoa."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o joutui epäkuolleen soturin kirvestämäksi."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o joutui epäkuolleen soturin tappamaksi."
+
+msgid "OB_MINOTAUR"
+msgstr "%o tuhottiin tuusan nuuskaksi maulotaurin toimesta."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o joutui maulotaurin möyhentämäksi."
+
+msgid "OB_MUMMY"
+msgstr "%o joutui golemin murskaamaksi."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o kirkaistiin kuoliaaksi nitrogolemin toimesta."
+
+msgid "OB_SNAKE"
+msgstr "%o joutui käärmeolion kalkattamaksi."
+
+msgid "OB_WIZARD"
+msgstr "%o joutui velhon kiroamaksi."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o joutui velhon tunnustelemaksi."
+
+msgid "OB_MPSTAFF"
+msgstr "%k sauvoi %k paran."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o sai sähköiskun pelaajan %k kintaista."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o heilutti hyvästit pelaajan %k haltiasauvalle."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%k ripusti %o paran eteerivarsijousellaan."
+
+msgid "OB_MPBLASTER"
+msgstr "%k puhkoi %o parkaan uuden aukon lohikäärmeenkynnellään."
+
+msgid "OB_MPSKULLROD"
+msgstr "%k lähetti %o paran maan syövereihin hornansauvallaan."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%k kärvensi %o paran tuhannen päreiksi feenikssauvallaan."
+
+msgid "OB_MPMACE"
+msgstr "%k pomputti %o parkaa tulinuijallaan."
+
+msgid "OB_MPPSTAFF"
+msgstr "%k jyrisytti %o parkaa varatulla sauvallaan."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%k vuodatti %o paran kuiviin kintaillaan."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o joutui pelaajan %k haltiasauvan pahoinpitelemäksi."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%k joutui pelaajan %k eteerivarsijousen kepittämäksi."
+
+msgid "OB_MPPBLASTER"
+msgstr "%k repi %o paran kappaleiksi lohikäärmeenkynnellään."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k vuodatti hornansauvansa %o parkaan."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%k poltti %o paran feenikssauvallaan."
+
+msgid "OB_MPPMACE"
+msgstr "%k liiskasi %o paran jättiläisnuijapallollaan."
+
+msgid "TXT_MANA_1"
+msgstr "Sininen mana"
+
+msgid "TXT_MANA_2"
+msgstr "Vihreä mana"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Yhdistetty mana"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Teräsavain"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Luola-avain"
+
+msgid "TXT_KEY_AXE"
+msgstr "Kirvesavain"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Tuliavain"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Smaragdiavain"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Tyrmän avain"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Hopea-avain"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Ruosteinen avain"
+
+msgid "TXT_KEY_HORN"
+msgstr "Sarviavain"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Suoavain"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Linnan avain"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Puolustajan ikoni"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Pimeä palvelija"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Sikaannuttaja"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Häivytyskoje"
+
+msgid "TXT_ARTISPEED"
+msgstr "Ripeyssaappaat"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Mahtikrateeri"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Lohikäärmeennahkarannesuojat"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Karkotuskiekko"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Mystisen piirin loitsu"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Yorickin kallo"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "D'Sparilin sydän"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Rubiiniplaneetta"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdiplaneetta"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdiplaneetta"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Safiiriplaneetta"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Safiiriplaneetta"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "Daemon-koodeksi"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Liekkinaamio"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Miekkasinetti"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Pyhä reliikki"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Taikurin sinetti"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Kellonratas"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Et voi käyttää tätä tässä"
+
+msgid "TXT_ARMOR1"
+msgstr "Rengashaarniska"
+
+msgid "TXT_ARMOR2"
+msgstr "Haukkakilpi"
+
+msgid "TXT_ARMOR3"
+msgstr "Platinakypärä"
+
+msgid "TXT_ARMOR4"
+msgstr "Suojelusamuletti"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Timonin kirves"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Koston vasara"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Quietus koottuna"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Käärmesauva"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Tulimyrsky"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Haamusauva koottuna"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Pakkassirpaleet"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Kuolonkaari"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Veripiiska koottuna"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Aseen osa! Tämä on onnenpäiväsi!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Quietuksen osa"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Haamusauvan osa"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Veripiiskan osa"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Tarvitset teräsavaimen"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Tarvitset luola-avaimen"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Tarvitset kirvesavaimen"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Tarvitset tuliavaimen"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Tarvitset smaragdiavaimen"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Tarvitset tyrmän avaimen"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Tarvitset hopea-avaimen"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Tarvitset ruosteisen avaimen"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Tarvitset sarviavaimen"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Tarvitset suoavaimen"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Tarvitset linnan avaimen"
+
+msgid "FN_FIREDEMON"
+msgstr ""
+
+msgid "FN_DEMON1"
+msgstr "Käärme"
+
+msgid "FN_ETTIN"
+msgstr ""
+
+msgid "FN_CENTAUR"
+msgstr "Kentauri"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Teurastauri"
+
+msgid "FN_BISHOP"
+msgstr "Piispa"
+
+msgid "FN_ICEGUY"
+msgstr ""
+
+msgid "FN_SERPENT"
+msgstr "Vaanija"
+
+msgid "FN_WRAITH"
+msgstr "Ryöväri"
+
+msgid "FN_DRAGON"
+msgstr "Kuolontraakki"
+
+msgid "FN_KORAX"
+msgstr "Kooraks"
+
+msgid "FN_FBOSS"
+msgstr "Sedek"
+
+msgid "FN_MBOSS"
+msgstr "Menelkir"
+
+msgid "FN_CBOSS"
+msgstr "Traduktus"
+
+msgid "FN_HERESIARCH"
+msgstr "Kerettiarkki"
+
+msgid "AMMO_MANA1"
+msgstr "Sininen mana"
+
+msgid "AMMO_MANA2"
+msgstr "Vihreä mana"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Katumuksen nuija"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Käärmesauva"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Tulimyrsky"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Haamusauva"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Piikkirautakintaat"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Timonin kirves"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Koston vasara"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr ""
+
+msgid "TAG_MWEAPWAND"
+msgstr "Safiirisauva"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Pakkassirpaleet"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Kuolonkaaret"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Veripiiska"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Karkotuskiekko"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Lohikäärmeennahkarannesuojat"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Mahtikrateeri"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Myrkkypilviflechette"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Aikapommiflechette"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Kranaattiflechette"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Mystisen piirin loitsu"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Puolustajan ikoni"
+
+msgid "TAG_ARTIPORK"
+msgstr "Sikaannuttaja"
+
+msgid "TAG_ARTISPEED"
+msgstr "Ripeyssaappaat"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Pimeä palvelija"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Häivytyskoje"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Yorickin kallo"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "D'Sparilin sydän"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Rubiiniplaneetta"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdiplaneetta (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdiplaneetta (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Safiiriplaneetta (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Safiiriplaneetta (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "Daemon-koodeksi"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Liekkinaamio"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Miekkasinetti"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Pyhä reliikki"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Taikurin sinetti"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Rautaratas"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Messinkiratas"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Messinki- ja rautaratas"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Hopea- ja messinkiratas"
+
+msgid "OB_FIREDEMON"
+msgstr "%o maistoi afritin tulta."
+
+msgid "OB_DEMON1"
+msgstr "%o joutui käärmeen kalttaamaksi."
+
+msgid "OB_DEMON2"
+msgstr "%o joutui käärmeen myrkyttämäksi."
+
+msgid "OB_ETTIN"
+msgstr "%o joutui ettinin muhentamaksi."
+
+msgid "OB_CENTAUR"
+msgstr "%o joutui kentaurin pilkkomaksi."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o joutui teurastaurin pilkkomaksi."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o joutui teurastaurin tulipallon kaatamaksi."
+
+msgid "OB_BISHOP"
+msgstr "%o lankesi piispan pimeään voimaan."
+
+msgid "OB_ICEGUY"
+msgstr "%o joutui wendigon läpikotaisin jäädyttämäksi."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o joutui vaanijan raatelemaksi."
+
+msgid "OB_SERPENT"
+msgstr "%o joutui vaanijan sulattamaksi."
+
+msgid "OB_WRAITH"
+msgstr "%o joutui ryövärin hiiltämäksi."
+
+msgid "OB_WRAITHHIT"
+msgstr "Ryöväri riisti pelaajan %o hengen."
+
+msgid "OB_DRAGON"
+msgstr "%o joutui kuolontraakin polttamaksi."
+
+msgid "OB_KORAX"
+msgstr "%o pyyhkäistiin laudalta Kooraksen voimasta."
+
+msgid "OB_FBOSS"
+msgstr "%o joutui Sedekin tappamaksi."
+
+msgid "OB_MBOSS"
+msgstr "%o ei kyennyt ottamaan vastaan Menelkirin manaa."
+
+msgid "OB_CBOSS"
+msgstr "%o joutui Traduktuksen kastamaksi."
+
+msgid "OB_HERESIARCH"
+msgstr "Kerettiarkki jyräsi pelaajan %o luut."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%k hakkasi %o paran muusiksi paljailla nyrkeillään."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o sai pelaajan %k kirveestä."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%k painoi vasarallaan %o paran pään kasaan."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%k uudelleentakoi %o paran sielun vasarallaan."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%k vaiensi %o paran mahtavalla Quietuksellaan."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o sai pelaajan %k nuijasta naamaansa."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%k puri %o parkaa käärmesauvallaan."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o tukehtui pelaajan %k käärmesauvaan."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o syttyi pelaajan %k liekeistä."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%k puhdisti pelaajan %o Haamusauvallaan."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o otti vastaan yhden liikaa pelaajan %k safiirisäteistä."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%k muutti %o paran pakkasveikoksi."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o sai sähköistävän ilmestyksen pelaajalta %k."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%k pyyhki %o paran maailmankaikkeudesta."
+
+msgid "TXT_METALARMOR"
+msgstr "Poimit metallihaarniskan."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Poimit nahkasuojuksen."
+
+msgid "TXT_MEDPATCH"
+msgstr "Poimit sidekääreen."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Poimit lääkintälaukun."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Poimit kirurgilaukun."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Poimit kartan."
+
+msgid "TXT_BELDINSRING"
+msgstr "Poimit sormuksen."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Poimit uhrimaljan."
+
+msgid "TXT_EAR"
+msgstr "Poimit korvan."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Poimit rikkinäisen virtaliittimen."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Poimit varjohaarniskan."
+
+msgid "TXT_ENVSUIT"
+msgstr "Poimit ympäristösuojapuvun."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Poimit vartijan univormun."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Poimit upseerin univormun."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Poimit liekinheittimen osat."
+
+msgid "TXT_REPORT"
+msgstr "Poimit raportin."
+
+msgid "TXT_INFO"
+msgstr "Poimit tiedot."
+
+msgid "TXT_TARGETER"
+msgstr "Poimit tähtäinlaitteen."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Poimit viestintälaitteen."
+
+msgid "TXT_COIN"
+msgstr "Poimit kolikon."
+
+msgid "TXT_XGOLD"
+msgstr "Poimit kultaa %d arvosta."
+
+msgid "TXT_BEACON"
+msgstr "Poimit kaukosiirrinmajakan."
+
+msgid "TXT_DEGNINORE"
+msgstr "Poimit Degnin-malmia."
+
+msgid "TXT_SCANNER"
+msgstr "Poimit skannerin."
+
+msgid "TXT_NEEDMAP"
+msgstr "Skanneri ei toimi ilman karttaa!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Poimit vankilan pääsyluvan."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Poimit jousipyssyn."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Poimit rynnäkkökiväärin."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Poimit miniohjuslaukaisimen."
+
+msgid "TXT_FLAMER"
+msgstr "Poimit liekinheittimen."
+
+msgid "TXT_MAULER"
+msgstr "Poimit moukarin."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Poimit kranaatinheittimen."
+
+msgid "TXT_SIGIL"
+msgstr "Poimit SINETIN."
+
+msgid "TXT_BASEKEY"
+msgstr "Poimit tukikohdan avaimen."
+
+msgid "TXT_GOVSKEY"
+msgstr "Poimit kuvernöörin avaimen."
+
+msgid "TXT_PASSCARD"
+msgstr "Poimit avainkortin."
+
+msgid "TXT_IDBADGE"
+msgstr "Poimit henkilötunnisteen."
+
+msgid "TXT_PRISONKEY"
+msgstr "Poimit vankilan avaimen."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Poimit katkenneen käden."
+
+msgid "TXT_POWER1KEY"
+msgstr "Poimit voimalan 1-avaimen."
+
+msgid "TXT_POWER2KEY"
+msgstr "Poimit voimalan 2-avaimen."
+
+msgid "TXT_POWER3KEY"
+msgstr "Poimit voimalan 3-avaimen."
+
+msgid "TXT_GOLDKEY"
+msgstr "Poimit kulta-avaimen."
+
+msgid "TXT_IDCARD"
+msgstr "Poimit henkilökortin."
+
+msgid "TXT_SILVERKEY"
+msgstr "Poimit hopea-avaimen."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Poimit Oraakkelin avaimen."
+
+msgid "TXT_MILITARYID"
+msgstr "Poimit sotilastunnuksen."
+
+msgid "TXT_ORDERKEY"
+msgstr "Poimit Veljeskunnan avaimen."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Poimit varaston avaimen."
+
+msgid "TXT_BRASSKEY"
+msgstr "Poimit messinkiavaimen."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Poimit punaisen kristalliavaimen."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Poimit sinisen kristalliavaimen."
+
+msgid "TXT_CHAPELKEY"
+msgstr "Poimit kappelin avaimen."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Poimit katakombin avaimen."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Poimit turvamiesavaimen."
+
+msgid "TXT_COREKEY"
+msgstr "Poimit ytimen avaimen."
+
+msgid "TXT_MAULERKEY"
+msgstr "Poimit moukarin avaimen."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Poimit tehtaan avaimen."
+
+msgid "TXT_MINEKEY"
+msgstr "Poimit kaivoksen avaimen."
+
+msgid "TXT_NEWKEY5"
+msgstr "Poimit uuden 5-avaimen."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Poimit Oraakkelin passin."
+
+msgid "TXT_HEGRENADES"
+msgstr "Poimit räjähdekranaattiammuksia."
+
+msgid "TXT_PHGRENADES"
+msgstr "Poimit fosforikranaattiammuksia."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Poimit luotilippaan."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Poimit luotilaatikon."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Poimit miniohjuksia."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Poimit ohjuslaatikon."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Poimit energia-akun."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Poimit energiapaketin."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Poimit myrkkynuolia."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Poimit sähkönuolia."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Poimit ammuslaukun."
+
+msgid "MSG_TALISMANRED"
+msgstr "Sinusta tuntuu, ettei siihen olisi pitänyt koskea."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Mikä ikinä se onkaan, se ei kuulu tähän maailmaan..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Sen on pakko tehdä jotakin..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Sinulla on supervoimat!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Sinulla ei ole avainta"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Tarvitset avainkortin"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Tarvitset avainkortin tämän oven avaamiseksi"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Tarvitset henkilökortin"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Sinulla ei ole vankilan avainta"
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Kädenjälki puuttuu tiedostosta"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Tarvitset kulta-avaimen"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Tarvitset henkilötunnisteen"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Tarvitset henkilötunnisteen tämän oven avaamiseksi"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Tarvitset hopea-avaimen"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Tarvitset messinkiavaimen"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Tarvitset punaisen kristallin"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Tarvitset sinisen kristallin"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Tämä alue on saatavilla ainoastaan Strifen kokoversiossa"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Se ei näytä toimivan"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Tarvitset maljan!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Tarvitset Oraakkelin passin"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Tikari"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Jousipyssy"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Jousipyssy"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Rynnäkkökivääri"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Miniohjuslaukaisin"
+
+msgid "TAG_FLAMER"
+msgstr "Liekinheitin"
+
+msgid "TAG_MAULER1"
+msgstr "Moukari"
+
+msgid "TAG_MAULER2"
+msgstr "Moukari"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Kranaatinheitin"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Kranaatinheitin"
+
+msgid "TAG_SIGIL"
+msgstr "Sinetti"
+
+msgid "TAG_COIN"
+msgstr "Kolikko"
+
+msgid "TAG_MEDPATCH"
+msgstr "Sidekääre"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Lääkintälaukku"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Kirurgilaukku"
+
+msgid "TAG_BELDINSRING"
+msgstr "Sormus"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Uhrimalja"
+
+msgid "TAG_EAR"
+msgstr "Korva"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Rikkinäinen virtaliitin"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Varjohaarniska"
+
+msgid "TAG_ENVSUIT"
+msgstr "Ympäristösuojapuku"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Vartijan univormu"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Upseerin univormu"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Liekinheittimen osat"
+
+msgid "TAG_REPORT"
+msgstr "Raportti"
+
+msgid "TAG_INFO"
+msgstr "Tiedot"
+
+msgid "TAG_TARGETER"
+msgstr "Tähtäinlaite"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Viestintälaite"
+
+msgid "TAG_DEGNINORE"
+msgstr "Degnin-malmi"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Tarkkuus"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Sitkeys"
+
+msgid "TAG_SCANNER"
+msgstr "Skanneri"
+
+msgid "TAG_PRISONPASS"
+msgstr "Vankilan pääsylupa"
+
+msgid "TAG_ALARM"
+msgstr "Hälytys"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Ammukset"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Terveys"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Kaukosiirrinmajakka"
+
+msgid "TAG_METALARMOR"
+msgstr "Metallihaarniska"
+
+msgid "TAG_LEATHER"
+msgstr "Nahkasuojus"
+
+msgid "TAG_HEGRENADES"
+msgstr "Räjähdekranaatit"
+
+msgid "TAG_PHGRENADES"
+msgstr "Fosforikranaatit"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Luotilipas"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Luotilaatikko"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Miniohjukset"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Ohjuslaatikko"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Energia-akku"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Energiapaketti"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Myrkkynuolet"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Sähkönuolet"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Ammuslaukku"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Tukikohdan avain"
+
+msgid "TAG_GOVSKEY"
+msgstr "Kuvernöörin avain"
+
+msgid "TAG_PASSCARD"
+msgstr "Avainkortti"
+
+msgid "TAG_IDBADGE"
+msgstr "Henkilötunniste"
+
+msgid "TAG_PRISONKEY"
+msgstr "Vankilan avain"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Katkennut käsi"
+
+msgid "TAG_POWER1KEY"
+msgstr "Voimalan 1-avain"
+
+msgid "TAG_POWER2KEY"
+msgstr "Voimalan 2-avain"
+
+msgid "TAG_POWER3KEY"
+msgstr "Voimalan 3-avain"
+
+msgid "TAG_GOLDKEY"
+msgstr "Kulta-avain"
+
+msgid "TAG_IDCARD"
+msgstr "Henkilökortti"
+
+msgid "TAG_SILVERKEY"
+msgstr "Hopea-avain"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Oraakkelin avain"
+
+msgid "TAG_MILITARYID"
+msgstr "Sotilastunnus"
+
+msgid "TAG_ORDERKEY"
+msgstr "Veljeskunnan avain"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Varaston avain"
+
+msgid "TAG_BRASSKEY"
+msgstr "Messinkiavain"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Punainen kristalliavain"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Sininen kristalliavain"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Kappelin avain"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Katakombin avain"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Turvamiesavain"
+
+msgid "TAG_COREKEY"
+msgstr "Ytimen avain"
+
+msgid "TAG_MAULERKEY"
+msgstr "Moukarin avain"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Tehtaan avain"
+
+msgid "TAG_MINEKEY"
+msgstr "Kaivoksen avain"
+
+msgid "TAG_NEWKEY5"
+msgstr "Uusi 5-avain"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Oraakkelin kulkulupa"
+
+msgid "TAG_10GOLD"
+msgstr "10 kolikkoa"
+
+msgid "TAG_25GOLD"
+msgstr "25 kolikkoa"
+
+msgid "TAG_50GOLD"
+msgstr "50 kolikkoa"
+
+msgid "TAG_300GOLD"
+msgstr "300 kolikkoa"
+
+msgid "TXT_PERSON"
+msgstr "Henkilö"
+
+msgid "TAG_ACOLYTE"
+msgstr "Akoluutti"
+
+msgid "TAG_ARMORER"
+msgstr "Asemestari"
+
+msgid "TAG_BARKEEP"
+msgstr "Baarimikko"
+
+msgid "TAG_BEGGAR"
+msgstr "Kerjäläinen"
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr "Lääkintämies"
+
+msgid "TAG_ORACLE"
+msgstr "Oraakkeli"
+
+msgid "TAG_PRIEST"
+msgstr "Pappi"
+
+msgid "TAG_RATBUDDY"
+msgstr "Rottakamu"
+
+msgid "TAG_REBEL"
+msgstr "Kapinallinen"
+
+msgid "TAG_TEMPLAR"
+msgstr "Temppeliherra"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Aseseppä"
+
+msgid "TAG_TALISMANRED"
+msgstr "Punainen talismaani"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Vihreä talismaani"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Sininen talismaani"
+
+msgid "OB_ACOLYTE"
+msgstr "%o joutui kiivailevan akoluutin ampumaksi."
+
+msgid "OB_MACIL"
+msgstr "%o paran ei olisi ikinä pitänyt kapinoida Macilia vastaan."
+
+msgid "OB_REBEL"
+msgstr "%o joutui kapinallisen alas ampumaksi."
+
+msgid "OB_BEGGAR"
+msgstr "%o joutui köyhälistön kuoliaaksi hakkaamaksi."
+
+msgid "OB_PEASANT"
+msgstr "%o hölmön ei olisi ikinä pitänyt haastaa riitaa siviilin kanssa."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o joutui haamun kaatamaksi."
+
+msgid "OB_ENTITY"
+msgstr "%o sai tuta Yhden Ainoan Jumalan vihan."
+
+msgid "OB_LOREMASTER"
+msgstr "%o ei kyennyt pakenemaan Oppi-Isän otteesta."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o joutui Ohjelmoijan poistamaksi."
+
+msgid "OB_STFBISHOP"
+msgstr "%o joutui Piispan tyrmäämäksi."
+
+msgid "OB_SENTINEL"
+msgstr "%o joutui vartijan ampumaksi."
+
+msgid "OB_CRUSADER"
+msgstr "%o joutui ristiretkeläisen pois pyyhkäisemäksi."
+
+msgid "OB_INQUISITOR"
+msgstr "%o joutui inkvisiittorin tuomitsemaksi."
+
+msgid "OB_STALKER"
+msgstr "%o joutui vaanijan häiritsemäksi."
+
+msgid "OB_TURRET"
+msgstr "%o laukaisi automaattipuolustukset."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o joutui temppeliherran raatelemaksi."
+
+msgid "OB_TEMPLAR"
+msgstr "%o joutui temppeliherran höyryttämäksi."
+
+msgid "OB_REAVERHIT"
+msgstr "%o joutui raastajan auki viiltämäksi."
+
+msgid "OB_REAVER"
+msgstr "%o joutui raastajan alas ampumaksi."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o joutui tahattomasti pelaajan %k selkäänpuukottamaksi."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o naulitsi %o paran seinään."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o sai tappavan annoksen pelaajan %k vihaa."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%k porasi %o paran täyteen reikiä rynnäkkökiväärillään."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o nieli alas pelaajan %k ohjuksen."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%k käänsi %o paran nurinpäin räjähdekranaatillaan."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o otti liekkikylvyn pelaajan %k fosforiroviolla."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%k grillasi %o paran."
+
+msgid "OB_MPMAULER1"
+msgstr "%o joutui pelaajan %k sähköistämäksi."
+
+msgid "OB_MPMAULER"
+msgstr "%o joutui pelaajan %k höyrystämäksi."
+
+msgid "OB_MPSIGIL"
+msgstr "%o kumartui pelaajan %k Sinetin silkasta voimasta."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "Päämääränä Sinetti"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Olet vapauttanut vangit!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Olet tuhonnut muuntajan!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Onnittelut! Olet suorittanut koulutusalueen"
+
+msgid "TXT_QUEST_14"
+msgstr "Olet räjäyttänyt kristallin"
+
+msgid "TXT_QUEST_16"
+msgstr "Olet räjäyttänyt portit"
+
+msgid "TXT_QUEST_27"
+msgstr "Olet räjäyttänyt tietokoneen"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Olet tappanut Piispan!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Olet tappanut Oraakkelin!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Tapoit Macilin!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Olet tappanut Oppi-Isän!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Sinä mieletön! Olet laukaissut hälytyksen."
+
+msgid "TXT_YOUREDEAD"
+msgstr "Sinä kuolet! Laukaisit hälytyksen."
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Sinulla näyttää olevan tarpeeksi!"
+
+msgid "TXT_GOAWAY"
+msgstr "Häivy!"
+
+msgid "TXT_COMM0"
+msgstr "Vastaantuleva viesti..."
+
+msgid "TXT_COMM1"
+msgstr "Vastaantuleva viesti Blackbirdiltä..."
+
+msgid "TXT_FINDHELP"
+msgstr "Etsi apua"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "hintaan %u"
+
+msgid "GOTCHEXARMOR"
+msgstr "Poimit Chex(R)-panssarin."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Poimit Super-Chex(R)-panssarin!"
+
+msgid "GOTWATER"
+msgstr "Poimit vesilasin."
+
+msgid "GOTREPELLENT"
+msgstr "Poimit limakarkotteen."
+
+msgid "GOTBREAKFAST"
+msgstr "Superaamiaislatinki!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Poimit sinisen avaimen."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Poimit keltaisen avaimen."
+
+msgid "GOTCREDKEY"
+msgstr "Poimit punaisen avaimen."
+
+msgid "GOTFRUIT"
+msgstr "Poimit hedelmäkulhon."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Vihannekset ovat TOSI terveellisiä!"
+
+msgid "GOTVEGETABLES"
+msgstr "Poimit vihannesvadin."
+
+msgid "GOTSLIMESUIT"
+msgstr "Löysit limaapitävän puvun"
+
+msgid "GOTCHEXMAP"
+msgstr "Löysit alueen tietokonekartan"
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Poimit minizorchlatauksen."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Poimit minizorchpaketin."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Poimit zorchtyöntimen latauksen."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Poimit zorchtyöntimen paketin."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Poimit vaiheiszorcherin latauksen."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Poimit vaiheiszorcherin paketin."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Poimit ison zorcherin latauksen"
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Poimit ison zorcherin paketin."
+
+msgid "GOTZORCHPACK"
+msgstr "Poimit zorchpakin!"
+
+msgid "GOTLAZDEVICE"
+msgstr "Sait SAZ-laitteen! Juhuu!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Sait pikazorcherin!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Sait superluhan!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Sait zorchtyöntimen!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Sait vaiheiszorcherin!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Sait ison zorcherin!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Sait megazorcherin!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Poimit minizorcherin."
+
+msgid "TAG_SPOON"
+msgstr "Lusikka"
+
+msgid "TAG_SPORK"
+msgstr "Superluha"
+
+msgid "TAG_MINIZORCHER"
+msgstr "Minizorcheri"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Iso zorcheri"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Superiso zorcheri"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Pikazorcheri"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Zorchtyönnin"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Vaiheiszorcheri"
+
+msgid "TAG_LAZDEVICE"
+msgstr "SAZ-laite"
+
+msgid "OB_COMMONUS"
+msgstr "%o joutui limatuksen limaamaksi."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o joutui bipedicuksen limaamaksi."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o joutui panssaroidun bipedicuksen limaamaksi."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o joutui cycloptiksen limaamaksi."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o joutui Limakalvon päihittämäksi."
+
+msgid "OB_MPSPOON"
+msgstr "%k syötti pelaajaa %o lusikalla."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%k läpikotaisin sekoitti %o paran luhallaan."
+
+msgid "OB_MPZORCH"
+msgstr "%k zorchasi %o paran."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%k osui %o parkaan megazorcherillaan."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%k pikazorchasi %o paran."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%k zorchasi %o paran työntimellään."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%k osui %o parkaan työntimellään."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%k vaiheiszorchasi %o paran."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o lankesi pelaajan %k SAZ-laitteen uhriksi."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%k sazzasi pelaajaan %o."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Laskeutumisalue"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Varastolaitos"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Koelaboratorio"
+
+msgid "CHUSTR_E1M4"
+msgstr ""
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Bazoikin luolastot"
+
+msgid "CE1TEXT"
+msgstr ""
+"Tehtävä suoritettu.\n"
+"\n"
+"Oletko valmis seuraavaan tehtävään?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Paina esc-näppäintä jatkaaksesi..."
+
+msgid "CE2TEXT"
+msgstr "Teit sen!"
+
+msgid "CE3TEXT"
+msgstr "Hienoa työtä!"
+
+msgid "CE4TEXT"
+msgstr "Fantastista"
+
+msgid "CLOADNET"
+msgstr ""
+"Et voi ladata verkkopelin aikana!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Haluatko tallentaa pelin %s päälle?\n"
+"\n"
+"Paina Y tai N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Et voi pikaladata verkkopelin aikana!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Haluatko pikaladata pelin %s?\n"
+"\n"
+"Paina Y tai N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Et voi aloittaa uutta peliä verkkopelin aikana.\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Varoitus, tästä tulee vaikeaa.\n"
+"Haluatko jatkaa?\n"
+"\n"
+"Paina Y tai N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Tämä on Chex(R)-seikkailu. Hae\n"
+"\n"
+"lisätasoja osoitteesta www.chexquest.com.\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Et voi päättää verkkopeliä!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Haluatko varmasti päättää pelin?\n"
+"\n"
+"Paina Y tai N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Kuolemattomuustila PÄÄLLÄ"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Kuolemattomuustila POIS PÄÄLLÄ"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Zorch lisätty"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Superzorch lisätty"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Syö Chex(R):ä!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Minizorchvaraus"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Ison zorcherin varaus"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Työntimen varaus"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Vaiheiszorcherin varaus"
+
+msgid "MNU_NEWGAME"
+msgstr "Uusi peli"
+
+msgid "MNU_OPTIONS"
+msgstr "Asetukset"
+
+msgid "MNU_GAMEFILES"
+msgstr "Pelitiedostot"
+
+msgid "MNU_INFO"
+msgstr "Tiedot"
+
+msgid "MNU_QUITGAME"
+msgstr "Lopeta peli"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Valitse vaikeustaso:"
+
+msgid "SKILL_BABY"
+msgstr "Olen liian nuori kuolemaan."
+
+msgid "SKILL_EASY"
+msgstr "Hei, ei liian kovaa."
+
+msgid "SKILL_NORMAL"
+msgstr "Satuta minua kunnolla."
+
+msgid "SKILL_HARD"
+msgstr "Ultraväkivalta."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Painajainen!"
+
+msgid "CSKILL_BABY"
+msgstr "Hiljaa hyvä tulee"
+
+msgid "CSKILL_EASY"
+msgstr "Ei niin tahmaista"
+
+msgid "CSKILL_NORMAL"
+msgstr "Limaklönttejä"
+
+msgid "CSKILL_HARD"
+msgstr "Äärimmäisen mönjäistä"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Superlimaista!"
+
+msgid "SSKILL_BABY"
+msgstr "Koulutus"
+
+msgid "SSKILL_EASY"
+msgstr "Aloittelija"
+
+msgid "SSKILL_NORMAL"
+msgstr "Veteraani"
+
+msgid "SSKILL_HARD"
+msgstr "Eliitti"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Verilöyly"
+
+msgid "MNU_WETNURSE"
+msgstr "Tarvitseos imettäjää"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Mameronapero"
+
+msgid "MNU_BRINGEST"
+msgstr "Antaos tullaos"
+
+msgid "MNU_SMITE"
+msgstr "Olet lyömäherra"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Musta surma on saanut sun"
+
+msgid "MNU_SQUIRE"
+msgstr "Aseenkantaja"
+
+msgid "MNU_KNIGHT"
+msgstr "Ritari"
+
+msgid "MNU_WARRIOR"
+msgstr "Soturi"
+
+msgid "MNU_BERSERKER"
+msgstr "Berserkkeri"
+
+msgid "MNU_TITAN"
+msgstr "Titaani"
+
+msgid "MNU_ALTARBOY"
+msgstr "Pyhäkköpoika"
+
+msgid "MNU_ACOLYTE"
+msgstr "Akoluutti"
+
+msgid "MNU_PRIEST"
+msgstr "Pappi"
+
+msgid "MNU_CARDINAL"
+msgstr "Kardinaali"
+
+msgid "MNU_POPE"
+msgstr "Paavi"
+
+msgid "MNU_APPRENTICE"
+msgstr "Kisälli"
+
+msgid "MNU_ENCHANTER"
+msgstr "Lumooja"
+
+msgid "MNU_SORCERER"
+msgstr "Taikuri"
+
+msgid "MNU_WARLOCK"
+msgstr "Noita"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Arkkivelho"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Valitse luokka:"
+
+msgid "MNU_FIGHTER"
+msgstr "Taistelija"
+
+msgid "MNU_CLERIC"
+msgstr "Pappi"
+
+msgid "MNU_MAGE"
+msgstr "Velho"
+
+msgid "MNU_RANDOM"
+msgstr "Satunnainen"
+
+msgid "MNU_EPISODE"
+msgstr "Mikä episodi?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Valitse kampanja"
+
+msgid "MNU_COTD"
+msgstr "Kirottuin kaupunki"
+
+msgid "MNU_HELLSMAW"
+msgstr "Hornankita"
+
+msgid "MNU_DOME"
+msgstr "D'Sparilin kupoli"
+
+msgid "MNU_OSSUARY"
+msgstr "Luuhuone"
+
+msgid "MNU_DEMESNE"
+msgstr "Seisahtunut maa"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Joukkuepeli"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Omien tulen vahinkokerroin"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Älykäs automaattitähtäys"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Putoamisvahinko"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Aseen pudottaminen"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Tupla-ammukset"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Loppumattomat ammukset"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Loppumattomat varusteet"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Ei hirviöitä"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Ei hirviöitä tason lopettamiseksi"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Hirviöt heräävät henkiin"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Ei henkiinheräämistä"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Esineet syntyvät takaisin"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Isot tehostimet syntyvät takaisin"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Nopeat hirviöt"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Painajaisvaikeustason hirviöiden reaktioajat"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Rappeutuva terveys"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Salli automaattitähtäys"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Salli itsemurha"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Salli hyppiminen"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Salli kyyristyminen"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Salli vapaa katselu"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Salli näkökentän muokkaaminen"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Salli BFG-tähtäys"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Salli automaattikartta"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Omat automaattikartalla"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Salli vakoileminen"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Seurantakamerahuijaus"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Tarkista ammustilanne aseenvaihdon yhteydessä"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Ikonin kuolema tappaa myös siitä siinneet hirviöt"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Loppusektori lasketaan mukaan tappoprosenttiin"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Kuolonotteluasetukset"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Aseet pysyvät"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Salli tehostimet"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Salli terveysesineet"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Salli panssariesineet"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Herää henkiin kauimpaa"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Sama taso"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Pakota henkiinherääminen"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Salli tasosta poistuminen"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Tynnyrit syntyvät takaisin"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Henkiinheräämissuoja"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Frägin menettäminen, jos joutuu frägätyksi"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Pidä ansaitut frägit"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Ei joukkueenvaihtoa"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Yhteispeliasetukset"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Kuolonotteluaseet saatavilla"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Menetä kaikki varusteet"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Pidä avaimet"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Pidä aseet"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Pidä panssari"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Pidä tehostimet"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Pidä ammukset"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Menetä puolet ammuksista"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Herää henkiin kuolinpaikalla"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Aina luo moninpelioliot"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Permesu Vertikalan Kuglon Disvastiĝon "
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Armiloj donas ekstran municion (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Yhteensopivuusasetukset"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Yhteensopivuusasetukset"
+
+msgid "CMPTMNU_MODE"
+msgstr "Yhteensopivuustila"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Olioiden käyttäytyminen"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Myötämielisten hirviöiden esteetön liikkuminen"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Rajoita kivun henkien kadonneitten sielujen määrää"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Tehosteet vaikuttavat hirviöiden liikkumiseen"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Hirviöt eivät voi ylittää pudotuksia"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Hirviöt joutuvat jumiin pudotusten ylle"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Hirviöt näkevät näkymättömät pelaajat"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Ei minotaurien lattialiekkejä vedessä"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Synnytä esinepudotukset lattialle"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DehackEd-käyttäytyminen"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH-terveysasetukset kuin Doom2.exessä"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Alkuperäinen A_Mushroom-nopeus DEH-modeissa"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Tason/Toimintojen käyttäytyminen"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Kaikki erikoisviivat voivat tukkia <käytä>-toiminnon"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Mikä tahansa pomokuolema lasketaan tason erikoistoiminnossa"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "BOOM-ovivalotehoste pois käytöstä"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Etsi vierustava valo niin kuin Doom"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Etsi lyhyimmät pintakuvioinnit niin kuin Doom"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Käytä viallisempaa portaanrakennusfunktiota"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Lattialiike käyttäytyy kuin Doomissa"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Käytä Doomin piste viivalla -algoritmia"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Tasosta poistumisen voi laukaista useammin kuin kerran"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Fysiikan käyttäytyminen"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Oliot ovat äärettömän korkeita"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Boom-vierittimet ovat additiivisia"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Liikkuminen puhtaasti pääilmansuuntiin mahdotonta"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Salli seinäjuoksu"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Ravenin vierittimet liikkuvat alkuperäisnopeudella"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Itseensä viittaavat sektorit eivät estä laukauksia"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Käytä Doomin osumislaskentakoodia"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Käytä Doomin korkeuksia lentokappaleiden törmäyksissä"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Hahmonnuksen käyttäytyminen"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Piirrä polyobjektit niin kuin Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Älä huomioi Y-siirroksia peitetyissä keskipintakuvioinneissa"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Käännä spritelajittelu"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Äänen käyttäytyminen"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Rampauta äänijärjestelmä hiljaista BFG-temppua varten"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Älä anna muiden kuulla, kun poimit esineitä"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Silmänräpäyksellisesti liikkuvat lattiat eivät ole hiljaisia"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sektoriäänet käyttävät keskipistettä lähteenä"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Äänet lakkaavat, kun olio katoaa"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Käytä alkuperäistä äänen kohteen käsittelyä"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Käsikirjoitetut kaukosiirtimet eivät laukaise sektoritoimintoja"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Ei-tukkivia viivoja voi työntää"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Ota käyttöön viallinen CheckSwitchRange-käyttäytyminen"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Ota käyttöön Strifen vialliset kaiteet"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Ei pystysuuntaista työntövoimaa räjähdyksistä"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Käytä Doomin alkuperäisiä räjähdysten käyttäytymissääntöjä"
+
+msgid "PLYRMNU_RED"
+msgstr "Punainen"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Vihreä"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Sininen"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Luokka"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Ulkoasu"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Vaihda uuteen aseeseen"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Paina \\cjVÄLI \\cfnähdäk-"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "sesi etupuolen"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "sesi takapuolen"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Pystysuora luodin leviäminen"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Aseen kiikaritähtäys"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Aseen tila 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Aseen tila 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Aseen tila 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Aseen tila 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Lennä / Ui ylös"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Lennä / Ui alas"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Lopeta lentäminen"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Näppäinkatselu"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Strifen ponnahdusruutujen ohjausasetukset"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Sano omille"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Pudota varuste"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Hae varustetta"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Pudota ase"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Muu"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Vakoile joukkuetovereita"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Strifen ponnahdusruudut"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Tehtävätavoitteet"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Avainlista"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Aseet/ammukset/tila"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Pistetaulun vaihtokytkin"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Katseenpalautin"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Sivuttaisastuntapalautin"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Tausta"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Sinä"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "Yksipuoliset seinät"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "Kaksipuoliset seinät eroavilla lattiakorkeuksilla"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "Kaksipuoliset seinät eroavilla kattokorkeuksilla"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "Kaksipuoliset seinät kolmiulotteisilla lattioilla"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Kartan ruudukko"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Keskipiste"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Tutkimattomat seinät"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Lukitut ovet"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Kaukosiirrin samaan tasoon"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Kaukosiirrin eri tasoon"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Salasektori"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Tutkimaton sala"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Erikoislaukaisinviivat"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Huijaustila"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Näkymättömät kaksipuoliset seinät"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Salaiset seinät"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Oliot"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Hirviöt"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Ei-laskettavat hirviöt"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Omat"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Esineet"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Laske esineet"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Projisointitila"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Projisointihuijaustila"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Portaaliprojisoinnit"
+
+msgid "MSGMNU_TITLE"
+msgstr "Viestit"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Näytä viestit"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Näytä kuolinviestit"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Ilmoita salojen löytymisestä"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Pienin viestintätaso"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Viestien värit"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Esineen poimiminen"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Kuolinviestit"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Tärkeät viestit"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Keskusteluviestit"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Joukkueen viestit"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Keskitetyt viestit"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Kuvakaappausviestit"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Yksityiskohtaiset tallennusviestit"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Pelinkehittäjäviestitila"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Kartan värikokoelma"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Salli tason määrittelemät värit"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Mukauta värejä"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Kartanohjausasetukset"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Projisoi automaattikartta"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Ota käyttöön pintakuvioinnit"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Näytä esineiden lukumäärä"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Näytä hirviöiden lukumäärä"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Näytä salojen lukumäärä"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Näytä kulunut aika"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Näytä yhteensä kulunut aika"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Näytä salat kartalla"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Näytä tason tunniste"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Piirrä tason tausta"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Näytä avaimet (huijauskeino)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Näytä laukaisinviivat"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Näytä oliot spriteinä"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Projisoi portaalit"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Tyhjän reunan leveys"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Karttamerkkien fontti"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Karttamerkkien väri"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Aseta merkki"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Pyyhi merkit"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Pistetauluasetukset"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Pistetauluasetukset"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Yhteispeliasetukset"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Ota käyttöön pistetaulu"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Otsikon väri"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Pelaajasi väri"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Muiden pelaajien väri"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Kuolonotteluasetukset"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Joukkuekuolonotteluasetukset"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Vaihtoehtoinen tilanäyttö"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Ota käyttöön vaihtoehtoinen tilanäyttö"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Näytä salojen lukumäärä"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Näytä hirviöiden lukumäärä"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Näytä esineiden lukumäärä"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Näytä puhti ja tarkkuus"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Näytä raivo"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Näytä aseet"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Näytä ammukset aseelle"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Näytä aika"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Ajan väri"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Näytä verkon viive"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Ammusten esitysjärjestys"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Punaiset ammukset ammusten alittaessa %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Keltaiset ammukset ammusten alittaessa %"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Punainen terveys terveyden alittaessa"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Keltainen terveys terveyden alittaessa"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Vihreä terveys terveyden alittaessa"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Punainen panssari panssarin alittaessa"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Keltainen panssari panssarin alittaessa"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Vihreä panssari panssarin alittaessa"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Vaihtoehtoinen automaattikartan tilanäyttö"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Tason nimen väri"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Tason ajan väri"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Tasokokoelman ajan väri"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Kokonaisajan väri"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Koordinaattien väri"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Koordinaattitila"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Tilastotiedon nimen väri"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Tilastotiedon väri"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Hahmonnuksen interpolointi"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Läpinäkyvyyden hahmonnustila"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Ruudun pyyhkiytymistyyli"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Näytä ENDOOM-ruutu"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Verivälähdyksen voimakkuus"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Poimintavälähdyksen voimakkuus"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Vedenalaissumennuksen voimakkuus"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Taivaan hahmonnustila"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Lineaariset taivaat"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Täyskirkkaat ohittavat sektorin värin"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Skaalaa sumennustehostetta"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Käytä sumennustehostetta"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Perinteinen läpinäkyvyys"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Kadonneiden sielujen läpikuultavuus"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Käytä tekosävykkyyttä"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Rakettivanat"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Verityyli"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Luotien pöllähdystyyli"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Hiukkasten lukumäärä"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Siirtokuvien lukumäärä"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Näytä pelaajaspritet"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Kuolonkamera"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Kaukosiirrynnän kameran zoomaus "
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Maanjäristystehosteen voimakkuus"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Interpoloi hirviöiden liike"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Valikon himmennys"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Himmennysväri"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Aseen heilumisvoimakkuus liikkeessä"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Aseen heilumisvoimakkuus levossa"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Aseen heilumisnopeus"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Skaalausasetukset"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Ohittaa asetuksen ylhäällä"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Viestit"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Konsoli"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Tilapalkki"
+
+msgid "SCALEMNU_HUD"
+msgstr "Täyden ruudun tilanäyttö"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Vaihtoehtoinen tilanäyttö"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "Tilanäyttö säilyttää kuvasuhteen"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Käytä oletusmittakaavaa"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Skaalaa täyteen ruutuun"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Sovita näytön kokoon"
+
+msgid "HUDMNU_TITLE"
+msgstr "Tilanäytön asetukset"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Vaihtoehtoinen tilanäyttö"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Viestiasetukset"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Käyttöliittymän skaalaus"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Pakota oletustähtäin"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Suurenna tähtäintä esineitä poimiessa"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Näytä nimitunnisteet"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Nimitunnisteen väri"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Käytä vanhaa auts-naamakuvan kaavaa"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Hexenin asevälähdykset"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Myrkkyvahinkovälähdykset"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Jääkuolemavälähdykset"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Myrkyn kertymisvälähdykset"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Skaalausasetukset"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Näytä IWAD-valintaikkuna"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Ota käyttöön huijauskoodit kaikista peleistä"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Salli komentosarjoin otetut kuvakaappaukset"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Lataa *.deh/*.bex-lump-tiedostot"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Tallenna solmut välimuistiin"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Kynnysaika solmujen välimuistitallennukseen"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Tyhjennä solmuvälimuisti"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Salli vierivien väliruutujen ohittaminen"
+
+msgid "NETMNU_TITLE"
+msgstr "Verkkoasetukset"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Paikallisasetukset"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Liikkeen ennakoiminen"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Ennakoi viivasuorat toiminnat"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Lineaarisen interpolaatioennakoinnin skaalaus"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Interpolaatiokynnys"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Isäntäasetukset"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Lisäticit"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Viiveen tasapainoitus"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Alkuperäinen"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimoitu"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Perinteinen (nopeampi)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Tarkka"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Rajoitettu"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Hiukkasina"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Spriteinä"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Spriteinä ja hiukkasina"
+
+msgid "OPTVAL_MELT"
+msgstr "Sulaminen"
+
+msgid "OPTVAL_BURN"
+msgstr "Palaminen"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Ristihäivytys"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Pehmeä"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Pehmeä"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Läpikuultava"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Sumeus"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Varjo"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Esineet"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Aseet"
+
+msgid "OPTVAL_BOTH"
+msgstr "Molemmat"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Pelaaja"
+
+msgid "OPTVAL_MAP"
+msgstr "Kartta"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Skaalaa resoluutioon 640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Kuvapistekaksinkertaistus"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Kuvapistenelinkertaistus"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Nykyinen ase"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Käytettävissä olevat aseet"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Kaikki aseet"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Taso, millisekunnit"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Taso, sekunnit"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Taso"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Tasokokoelma, sekunnit"
+
+msgid "OPTVAL_HUB"
+msgstr "Tasokokoelma"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Yhteensä, sekunnit"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Yhteensä"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Järjestelmä, sekunnit"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Järjestelmä"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Vain verkkopelit"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Kuva ja teksti"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Teksti ja kuva"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Vain komentosarjat"
+
+msgid "OPTVAL_ALL"
+msgstr "Kaikki"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Vain viimeinen"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Perinteinen Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Perinteinen Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Perinteinen Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Vain, kun löydetty"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Päällä vain karttaprojisoinnin kanssa"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Projisointi+tavallinen"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Vain projisointi"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Ei tasokokoelmille"
+
+msgid "OPTVAL_FRONT"
+msgstr "Etu"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Animoitu"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Kääntyvä"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Vain kartan määrittämät värit"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Kaikki paitsi ovet"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Kaksinkertainen"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Kolminkertainen"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Nelinkertainen"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Esineen poiminta"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Kuolinviestit"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Tärkeät viestit"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Ei koskaan ystäviä"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Vain hirviöt"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Vanha"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (tiukka)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (tiukka)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (tiukka)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (tiukka)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Kaikki kuittaamattomat"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Virheet"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Varoitukset"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Ilmoitukset"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Kaikki"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Laitteistokiihdytetty"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Doomin ohjelmistohahmonnin"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "True Color -ohjelmistohahmonnin"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Korkea suorituskyky"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Virransäästö"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Alkuperäinen"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (pakotettu)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Perus (pakotettu)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automaattinen (ZDoomia suosiva)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automaattinen (alkuperäistä suosiva)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Pieni"
+
+msgid "OPTVAL_LARGE"
+msgstr "Suuri"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Konsoli"
+
+msgid "C_BRICK"
+msgstr "\\catiili"
+
+msgid "C_TAN"
+msgstr "\\cbkeltaruskea"
+
+msgid "C_GRAY"
+msgstr "\\ccharmaa"
+
+msgid "C_GREEN"
+msgstr "\\cdvihreä"
+
+msgid "C_BROWN"
+msgstr "\\ceruskea"
+
+msgid "C_GOLD"
+msgstr "\\cfkulta"
+
+msgid "C_RED"
+msgstr "\\cgpunainen"
+
+msgid "C_BLUE"
+msgstr "\\chsininen"
+
+msgid "C_ORANGE"
+msgstr "\\cioranssi"
+
+msgid "C_WHITE"
+msgstr "\\cjvalkoinen"
+
+msgid "C_YELLOW"
+msgstr "\\ckkeltainen"
+
+msgid "C_DEFAULT"
+msgstr "\\cloletus"
+
+msgid "C_BLACK"
+msgstr "\\cmmusta"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnvaaleansininen"
+
+msgid "C_CREAM"
+msgstr "\\cokerma"
+
+msgid "C_OLIVE"
+msgstr "\\cpoliivi"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqtummanvihreä"
+
+msgid "C_DARKRED"
+msgstr "\\crtummanpunainen"
+
+msgid "C_DARKBROWN"
+msgstr "\\cstummanruskea"
+
+msgid "C_PURPLE"
+msgstr "\\ctpurppura"
+
+msgid "C_DARKGRAY"
+msgstr "\\cutummanharmaa"
+
+msgid "C_CYAN"
+msgstr "\\cvsinivihreä"
+
+msgid "C_ICE"
+msgstr "\\cwjää"
+
+msgid "C_FIRE"
+msgstr "\\cxtuli"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cysafiiri"
+
+msgid "C_TEAL"
+msgstr "\\cztummansinivihreä"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Ei ääntä"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Ei interpolaatiota"
+
+msgid "OPTSTR_SPLINE"
+msgstr "Splini"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Laitteistohahmonnin"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Ohjelmistohahmonnin"
+
+msgid "GLMNU_TITLE"
+msgstr "Laitteistohahmonnusasetukset"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Dynaamisen valon asetukset"
+
+msgid "GLMNU_PREFS"
+msgstr "Asetukset"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Siisti spritejen reunat"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Lajittele piirtotaulut pintakuvioinneittain"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Dynaamiset valot"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Dynaamiset valot (laitteistokiihdytys)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Ota käyttöön valomääritykset"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Valot vaikuttavat spriteihin"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Valot vaikuttavat hiukkasiin"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Valojen varjokartat"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Varjokarttojen laatu"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Varjokarttojen suodatus"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Sumutila"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Sumu pakottaa täyskirkkauden"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Aseiden valovoima"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Ympäristökartta peileissä"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Paranneltu pimeänäkötila"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "PPN näyttää näkymättömät hirviöt"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Spritejen asettelu"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Pehmeät spritejen reunat"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Sumennustyyli"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Spritetaulu"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Spritet suuntaavat kameraan"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Hiukkastyyli"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Hahmonnuslaatu"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr ""
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Ota käyttöön Quad Stereo"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Kaistoitettu ohjelmistoväritila"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Silmiesi etäisyys toisistaan"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Etäisyys ruudullesi"
+
+msgid "OPTVAL_SMART"
+msgstr "Älykäs"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Älykkäämpi"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Vain infrapuna"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Vain infrapuna ja soihtu"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Mikä tahansa kiinteä värikartta"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Käytä palettina"
+
+msgid "OPTVAL_BLEND"
+msgstr "Sekoitus"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Kirkas"
+
+msgid "OPTVAL_DARK"
+msgstr "Tumma"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "Ohjelmisto"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optimaalinen"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y-akseli"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X- ja Y-akselit"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Kulmikas"
+
+msgid "OPTVAL_ROUND"
+msgstr "Pyöreä"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Säteittäinen"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Kuvapistesumennus"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Pehmeä sumennus"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Pyörteinen sumennus"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Läpikuultava sumennus"
+
+msgid "OPTVAL_NOISE"
+msgstr "Kohina"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Pehmeä kohina"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Sahalaitainen sumennus"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Vihreä/Magenta"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Punainen/Sinivihreä"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Ruskeankeltainen/Sininen"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Vasen silmä"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Oikea silmä"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Täysi rinnakkaisasettelu"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Kapea rinnakkaisasettelu"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Ylä-/Alaosa"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Vaakalomitus"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Pystylomitus"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Shakkilautakuvio"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Neloispuskurointi"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "TrueColor-asetukset"
+
+msgid "TCMNU_TITLE"
+msgstr "TrueColor-asetukset"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "True color -ulostulo"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Lineaarinen suodatin alas skaalatessa"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Lineaarinen suodatin ylös skaalatessa"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Käytä mipkartallisia pintakuviointeja"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dynaamiset valot (ohjelmisto)"
+
+msgid "OS_TITLE"
+msgstr "Asetushaku"
+
+msgid "OS_ANY"
+msgstr "Etsi mitä tahansa sanaa"
+
+msgid "OS_ALL"
+msgstr "Etsi kaikki sanat"
+
+msgid "OS_NO_RESULTS"
+msgstr "Ei tuloksia."
+
+msgid "OS_LABEL"
+msgstr "Etsi:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Aina näytä avaimet"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Joukkueen vaihtaminen on kytketty pois päältä!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s liittyi joukkueeseen %t"
+
+msgid "TXT_LONER"
+msgstr "%s on nyt yksikseen."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s poistui pelistä frägimäärällä %d"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s poistui pelistä"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Pelitallennetta '%s' ei voitu lukea."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' ei ole kelvollinen pelitallenne. Puuttuva 'info.json'."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Tiedoston '%s' pelitallennetietoihin ei päästy käsiksi."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Pelitallenne '%s' on yhteensopimattomasta versiosta."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Pelitallenne '%s' on toisesta ZDoom-pohjaisesta moottorista."
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Pelitallenne '%s' on vanhemmasta versiosta: %d (%e on vanhin tuettu versio)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Pelitallenne '%s' on uudemmasta versiosta: %d (%e on korkein tuettu versio)"
+
+msgid "TXT_NOMAPSG"
+msgstr "Pelitallenteesta '%s' puuttuu nykyinen taso."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' ei ole kelvollinen pelitallenne. Puuttuva 'globals.json'."
+
+msgid "TXT_SGINFOERR"
+msgstr "Tiedoston '%s' pelitallennetietoihin ei päästy käsiksi."
+
+msgid "TXT_SAVEPENDING"
+msgstr "Pelin tallennus on vielä kesken."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Ei tallennettavassa pelissä."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Ei tasossa"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Pelaaja on kuollut yksinpelissä"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Tallennus epäonnistui"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Ei voitu ottaa kuvakaappausta."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "Pelaajan %s toimesta"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Paina mitä tahansa näppäintä tai napsauta minne tahansa ikkunaa "
+"lopettaaksesi."
+
+msgid "HUDMNU_FLASH"
+msgstr "Näytön sekoitusasetukset"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D-tila"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Tähtäin"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Tekstitys"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Estä harmaat varjot"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Fonttiasetukset"
+
+msgid "FONTMNU_LOG"
+msgstr "Käytä oletusfonttia lokinäytölle"
+
+msgid "FONTMNU_DLG"
+msgstr "Käytä oletusfonttia keskustelulle"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Pikapoistuminen"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Mukautettu käänteinen kartta"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Mukautettu käänteinen tumma väri"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Mukautettu käänteinen vaalea väri\n"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Aseen heilumisvoimakkuus ammuttaessa"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Perinteinen väliruutujen ja ruudunreunusten skaalaus"
+
+msgid "SCALEMNU_INTER"
+msgstr "Väliruutujen tausta"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Ruudunreunus"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Skaalauskerroin"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Kuvasuhde"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Näytä pisteruutu tasosta poistuttaessa"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Modin määrittämä"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Aina, keskustasoja lukuun ottamatta"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Aina, keskustasot mukaan lukien"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Lempinäppäinasettelu"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Perinteinen ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr "Nykyaikainen (WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Nykyaikainen (numeronäppäimistö)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Pelaajien/Aseiden tiukka KEYCONF"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Perinteinen ZDoomin skaalaus valikossa"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Käytä prosentteja pisteruuduilla"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Perinteinen ZDoomin skaalaus pisteruudulla"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Kansalainen"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Kattotykkitorni"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Ristiretkeläinen"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inkvisiittori"
+
+msgid "TAG_PEASANT"
+msgstr "Maallikko"
+
+msgid "TAG_REAVER"
+msgstr "Raastaja"
+
+msgid "TAG_SENTINEL"
+msgstr "Vartija"
+
+msgid "TAG_STALKER"
+msgstr "Vaanija"
+
+msgid "TAG_BISHOP"
+msgstr "Piispa"
+
+msgid "TAG_ENTITY"
+msgstr "Yksi Ainoa Jumala"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Ohjelmoija"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Haamu"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Polvistunut mies"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Luo moninpelioliot yhteispelissä"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Spritevarjot"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Hirviöt ja pelaajat"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr "Näkökenttä"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Poista MBF21-ominaisuudet käytöstä"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Näytä aikatyökalu"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Murskatut hirviöt heräävät henkiin aaveina..."
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr ""
+
+msgid "OB_DEMON1HIT"
+msgstr ""
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr ""
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr ""
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr ""
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr ""
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr ""
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr ""
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr ""
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr ""
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr ""
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr ""
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr ""
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr ""
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr ""
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr ""
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr ""
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr ""
+
+msgid "ID24_GOTINCINERATOR"
+msgstr ""
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr ""
+
+msgid "ID24_GOTFUELCAN"
+msgstr ""
+
+msgid "ID24_GOTFUELTANK"
+msgstr ""
+
+msgid "TAG_ID24INCINERATOR"
+msgstr ""
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr ""
+
+msgid "AMMO_ID24FUEL"
+msgstr ""
+
+msgid "AMMO_ID24FUELTANK"
+msgstr ""
+
+msgid "ID24_CC_GHOUL"
+msgstr ""
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr ""
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr ""
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""

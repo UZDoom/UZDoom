@@ -1,0 +1,2121 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/common/sv/"
+">\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sv\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Tryck på Y eller N."
+
+msgid "TXT_YES"
+msgstr "Ja"
+
+msgid "TXT_NO"
+msgstr "Nej"
+
+msgid "SAVEDEAD"
+msgstr "Du kan inte spara om du inte spelar! Tryck på en tangent."
+
+msgid "SAFEMESSAGE"
+msgstr "Vill du verkligen göra det här?"
+
+msgid "NOTSET"
+msgstr "Inte inställd"
+
+msgid "QSPROMPT"
+msgstr ""
+"Snabbspara över ditt spel som heter %s?\n"
+"Tryck på Y eller N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Vill du snabbladda spelet som heter \"%s\"?\n"
+"Tryck på Y eller N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s fuskar"
+
+msgid "MSGOFF"
+msgstr "Meddelanden: Av"
+
+msgid "MSGON"
+msgstr "Meddelanden: På"
+
+msgid "TXT_SAY"
+msgstr "Säg:"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Tryck på någon tangent eller klicka någonstans i fönstret för att avsluta."
+
+msgid "NEWSAVE"
+msgstr "<Nytt sparat spel>"
+
+msgid "GGSAVED"
+msgstr "Spelet är sparat."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Tid"
+
+msgid "MNU_LOADGAME"
+msgstr "Ladda spelet"
+
+msgid "MNU_SAVEGAME"
+msgstr "Spara spelet"
+
+msgid "MNU_NOPICTURE"
+msgstr "Ingen bild"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Annan version"
+
+msgid "MNU_NOFILES"
+msgstr "Inga filer"
+
+msgid "MNU_DELETESG"
+msgstr "Vill du verkligen radera sparfilen?"
+
+msgid "OPTVAL_OFF"
+msgstr "Av"
+
+msgid "OPTVAL_ON"
+msgstr "På"
+
+msgid "OPTVAL_AUTO"
+msgstr "Automatiskt"
+
+msgid "OPTMNU_TITLE"
+msgstr "Alternativ"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Anpassa kontrollerna"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Alternativ för musen"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Alternativ för styrenhet"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Inställning av spelare"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Spelalternativ"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Automap-alternativ"
+
+msgid "OPTMNU_HUD"
+msgstr "HUD-alternativ"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Diverse alternativ"
+
+msgid "OPTMNU_SOUND"
+msgstr "Ljudalternativ"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Visningsalternativ"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Ställ in videoläge"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Återställ till standardvärden"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Återställ till senast sparade"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Spara aktuella inställningar"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Gå till konsolen"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Nätverksalternativ"
+
+msgid "OPTMNU_REVERB"
+msgstr "Redigerare för reverbmiljö"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER för att ändra, BACKSPACE för att radera"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Tryck på ny tangent för kontroll, ESC för att avbryta"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Kontroller"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Eld"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Sekundär eld"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Ladda om vapen"
+
+msgid "CNTRLMNU_USE"
+msgstr "Användning/öppna"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Flytta framåt"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Flytta bakåt"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Strafe till vänster"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Strafe till höger"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Sväng vänster"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Sväng höger"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Snabb vändning"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Hoppa"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Huk"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Växla huk"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Musens utseende"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Titta uppåt"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Titta ner"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Centrerad vy"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Spring"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Växla springa"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Strafe"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Visa resultattavlan"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Åtgärd"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Anpassa kontrollerna för åtgärder"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Chatt"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Flera spelare"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Säg"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Anpassa kontrollerna för chatt"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Anpassa vapenkontroller"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Anpassa kontrollerna för inventarier"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Anpassa andra kontroller"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Vapen"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Nästa vapen"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Föregående vapen"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Vapen 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Vapen 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Vapen 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Vapen 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Vapen 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Vapen 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Vapen 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Vapen 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Vapen 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Vapen 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventarium"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Aktivera föremål"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Aktivera alla föremål"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Nästa objekt"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Föregående objekt"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Anpassa kartkontroller"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Kontroller för kartor"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Panorera till vänster"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Panorera till höger"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Panorera uppåt"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Panorera ner"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Zooma in"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Zooma ut"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Växla zoom"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Växla följning"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Växla rutnät"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Växla rotera"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Växla textur"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Växla automap"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr ""
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Skärmdump"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Öppna konsolen"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Pausa"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Öka skärmstorleken"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Minska visningsstorleken"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Öppna hjälp"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Öppna sparmenyn"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Öppna laddningsmenyn"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Öppna alternativmenyn"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Öppna visningsmenyn"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Snabbspara"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Snabbladdning"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Avsluta till huvudmenyn"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Växla meddelanden"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Avsluta spelet"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Justera Gamma"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Aktivera musen"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Aktivera musen i menyer"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Visa bakåtknappen"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Markör"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Horisontell känslighet"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Vertikal känslighet"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Smidig musrörelse"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Vändningshastighet"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Hastighet för muspekning"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Hastighet framåt/bakåt"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Hastighet för strafe"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Alltid muspekande"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Invertera mus Y"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Invertera mus X"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Övre vänster"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Övre höger"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Nedre vänster"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Nedre höger"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Pekskärmsliknande"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Enkel pil"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Systemmarkör"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Standard"
+
+msgid "JOYMNU_TITLE"
+msgstr "Konfigurera kontroller"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Alternativ för kontroller"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Blockera inmatning av kontroller i menyn"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Aktivera stöd för kontroller"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Aktivera DirectInput-kontroller"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Aktivera XInput-kontroller"
+
+msgid "JOYMNU_PS2"
+msgstr "Aktivera råa PlayStation 2-adaptrar"
+
+msgid "JOYMNU_NOCON"
+msgstr "Inga kontroller upptäcks"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Konfigurera kontroller:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Stöd för kontroller måste vara aktiverat"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "för att det ska gå att upptäcka några"
+
+msgid "JOYMNU_INVALID"
+msgstr "Ogiltig kontroller har angetts för menyn"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Övergripande känslighet"
+
+msgid "JOYMNU_AXIS"
+msgstr "Konfiguration av axlar"
+
+msgid "JOYMNU_INVERT"
+msgstr "Invertera"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Dödzon"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Inga konfigurerbara axlar"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Ingen"
+
+msgid "OPTVAL_TURNING"
+msgstr "Vridning"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Titta uppåt/nedåt"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Rör sig framåt"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Strafing"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Rör sig uppåt/nedåt"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Inverterad"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Inte inverterad"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Blå"
+
+msgid "TXT_COLOR_RED"
+msgstr "Röd"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Grön"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Grå"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Mörkgrått"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Mörkgrön"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Brun"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Mörkblå"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Ljusröd"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Gul"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Lila"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Oliv"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Beige"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Ljusgrön"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Ljusblå"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Ljusgrå"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Ljusbrun"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Guld"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Ljusgrön"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rost"
+
+msgid "PLYRMNU_NAME"
+msgstr "Namn"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Lag"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Färg"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Kön"
+
+msgid "OPTVAL_MALE"
+msgstr "Man"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Kvinna"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neutral"
+
+msgid "OPTVAL_OTHER"
+msgstr "Objekt"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Spelalternativ"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Alltid"
+
+msgid "OPTVAL_NEVER"
+msgstr "Aldrig"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "automatiskt sikte"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Alltid springa"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Skärmstorlek"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Vertikal synkronisering"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Modeller"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skala hårkorset"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Ljusstyrka"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gammakorrigering"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Mättnad"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Skala för statusfältet"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Meddelanden"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Centrerade meddelanden"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Pulserande meddelande Visning"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Meddelandeskala"
+
+msgid "MNU_COLORPICKER"
+msgstr "Välj färg"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Rotera automap"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Följ spelaren"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Linje alfa"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Linjens tjocklek"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Anpassa kartans färger"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Återställ anpassade standardfärger"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Ljud aktiverat"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Musik aktiverad"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 samplingar"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 samplingar"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 samplingar"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 samplingar"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 samplingar"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 samplingar"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 samplingar"
+
+msgid "OPTSTR_AUTO"
+msgstr "Automatisk"
+
+msgid "OPTSTR_MONO"
+msgstr ""
+
+msgid "OPTSTR_STEREO"
+msgstr ""
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Dolby Pro Logic-dekoder"
+
+msgid "OPTSTR_QUAD"
+msgstr ""
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 högtalare"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1-högtalare"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1-högtalare"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Uppspelningsenhet"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Aktivera EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr ""
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Ljudvolym"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Volym för menyer"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Musikvolym"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI-enhet"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Ljud i bakgrunden"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Undervattensreverb"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Slumpmässiga tonhöjder"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Ljudkanaler"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Ljudbakgrund"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL-alternativ"
+
+msgid "SNDMNU_RESTART"
+msgstr "Starta om ljudet"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Avancerade alternativ"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Alternativ för modulåterspelare"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Alternativ för Midi-spelare"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Ljud i menyer"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Avancerade ljudalternativ"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Samplingsfrekvens"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL-syntes"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Antal emulerade OPL-chips"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Full MIDI-stereopanorering"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL-emulatorns kärna"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI-stämmor"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr ""
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Patch-uppsättning"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Relativ volym"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Reverb-nivå"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity-konfigurationsfil"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relativ volym"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi-konfigurationsfil"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Välj konfiguration"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Avancerad återampling"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "OPL-bank"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL-emulatorns kärna"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Kör emulatorn med PCM-frekvens"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Antal emulerade OPL-chips"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Relativ volym"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Volymmodell"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2-emulatorkärna"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS-emulering"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS-konfigurationsfil"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Läsa DMXGUS-filer"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS minnesstorlek"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Antal emulerade OPN-chips"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Relativ volym"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Använd anpassad WOPL-bank"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL Bank-fil"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Använd anpassad WOPN-bank"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN Bank-fil"
+
+msgid "OPTVAL_ALIASING"
+msgstr ""
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Linjär"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Linjär"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Linjär"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Närmaste"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (låg)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (medelhög)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (hög)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kubisk"
+
+msgid "OPTVAL_BLEP"
+msgstr "Bandbegränsat steg"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Linjär (långsammare)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Bandbegränsad linjär"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kubisk (långsammare)"
+
+msgid "OPTVAL_SINC"
+msgstr ""
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Endast anteckning på/av"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Full rampning"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Huvudvolym"
+
+msgid "MODMNU_QUALITY"
+msgstr "Kvalitet"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Volymrampning"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Auto (använder bankens inställning)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Auto (använder bankens inställning)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Generisk"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Generisk"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL inhemsk"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN inhemsk"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (exakt, med AM-bugg)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (Exakt, med AM-bugg)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Win9X-liknande"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9X-liknande (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Win9X-liknande (generisk FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (utan AM-röstfel)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (utan AM-röstfel)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "IBM Audio Library Interface (gränssnitt för ljudbibliotek)"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "HMI-ljud Operativsystem"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (gammalt, med fel)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Obegränsad"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Palett"
+
+msgid "OPTVAL_LOW"
+msgstr "Låg"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Medelstor"
+
+msgid "OPTVAL_HIGH"
+msgstr "Hög"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Extremt"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Framsida"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Baksida"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Efterbehandling"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Tonemap-läge"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Linsförvrängningseffekt"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA-kvalitet"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Dither-utgång"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Tonemappalettordning"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Exponent för tonemappalett"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr ""
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Bloom-effekt"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Kvalitet för omgivande ocklusion"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portaler med omgivande ocklusion"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Menyns oskärpa"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Miljökarta på speglar"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Renderingskvalitet"
+
+msgid "OPTVAL_SPEED"
+msgstr "Hastighet"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Kvalitet"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Sektorljusläge"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Dimläge"
+
+msgid "OPTVAL_RADIAL"
+msgstr ""
+
+msgid "OPTVAL_STANDARD"
+msgstr ""
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Texturfilterläge"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anisotropt filter"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Ingen (närmaste mipmap)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Ingen (linjär mipmap)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Ingen (trilinjär)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilinjär"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilinjär"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Alternativ för textur"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Texturer aktiverade"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Aktivera texturer med högre upplösning"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Högkvalitativt storleksanpassningsläge"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Multiplikator för storleksändring av hög kvalitet"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Det här läget kräver %d gånger mer videominne"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Ändra storlek på texturer"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Ändra storlek på sprites"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Ändra storlek på teckensnitt"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Ändra storlek på modellskinn"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Precache GL-texturer"
+
+msgid "VIDMNU_TITLE"
+msgstr "Videoläge"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Skalad (närmast)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Skalad (linjär)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Brevlåda"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Sträcka"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Renderläge"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Fullskärm"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI-stöd"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Bildförhållande"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Forcerat bildförhållande"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Stil för tvingat förhållande"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Aktivera bildförhållandet 5:4"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Upplösningsskala"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Skalfaktor"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Använd linjär skalning (helskärm)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Anpassad pixelskalning"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Anpassad bredd"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Anpassad höjd"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Tillämpa ändringarna (fönsterskärm)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Tillämpa ändringar (helskärm)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Välj förinställning för upplösning"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Anpassade förinställningar för upplösning"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Förinställda upplösningslägen"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "4:3 aspekt"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "5:4 Aspekt"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "16:9 aspekt"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "16:10 aspekt"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "21:9 Aspekt"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normal"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Lägsta möjliga skala"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Anpassad"
+
+msgid "VIDMNU_MAXFPS"
+msgstr ""
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Företrädesvis API för rendering"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Sammanfoga vänster+höger Alt/Ctrl/Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter växlar till fullskärm"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F växlar till fullskärm"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Aktivera autosparande"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Antal autosparande"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Bekräftelse av sparande/laddning"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Inaktivera fusk med tangentbordet"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rotation av snabbregistrering"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Antal quicksaves i rotation"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Inaktivera ren menyskalning"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Pausa spelet i bakgrunden"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Standardkorshår"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Färg på hårkorset"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Hårkorset visar hälsa"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Skala hårkorset"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr ""
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Förbättrad"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Språk"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Ångra ändringar"
+
+msgid "REVMNU_SELECT"
+msgstr "Välj miljö"
+
+msgid "REVMNU_TEST"
+msgstr "Testa miljön"
+
+msgid "REVMNU_EDIT"
+msgstr "Redigera miljön"
+
+msgid "REVMNU_NEW"
+msgstr "Ny miljö"
+
+msgid "REVMNU_REVERT"
+msgstr "Återkalla inställningar"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Miljö storlek"
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Miljö spridning"
+
+msgid "REVMNU_ROOM"
+msgstr ""
+
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_REVERB"
+msgstr ""
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+msgid "REVMNU_Reflections_Scale"
+msgstr ""
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr ""
+
+msgid "REVMNU_Reverb_Scale"
+msgstr ""
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Based_on"
+msgstr "Baserat på"
+
+msgid "REVMNU_Name"
+msgstr "Namn"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Skapa"
+
+msgid "REVMNU_Save"
+msgstr "Spara..."
+
+msgid "REVMNU_File_name"
+msgstr "Filnamn"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Miljöer som ska sparas"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan-alternativ (experimentellt)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan-alternativ"
+
+msgid "VKMNU_ENABLE"
+msgstr "Aktivera Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan-enhets-ID"
+
+msgid "VKMNU_HDR"
+msgstr "Högt dynamiskt omfång"
+
+msgid "VK_WARNING"
+msgstr "Varning: Vulkan-renderaren är mycket experimentell!"
+
+msgid "VK_RESTART"
+msgstr "De här alternativen kräver en omstart för att få effekt."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Välj Vulkan-enhet"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Gamla xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Sökning av alternativ"
+
+msgid "OS_ANY"
+msgstr "Sök efter valfri term"
+
+msgid "OS_ALL"
+msgstr "Sök efter alla termer"
+
+msgid "OS_NO_RESULTS"
+msgstr "Inga resultat hittades."
+
+msgid "OS_LABEL"
+msgstr "Sök:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k benade %o som en fisk"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k kastrerade %o"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k gräddade %o"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k decimerade %o"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k förstörde %o"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k skar %o i tärningar"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k tog upp %o i bitar"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k plattade %o"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k gav %o anal rättvisa"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k gav %o anal rättvisa"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k dödade %o"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k gjorde köttfärs av %o"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k massakrerade %o"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k lemlästade %o"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k har gjort %o illa."
+
+msgid "TXT_OBITUARY16"
+msgstr "%k slet upp en ny öppning i %o"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k slaktade %o"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k krossade %o"
+
+msgid "TXT_OBITUARY19"
+msgstr "%k sodomiserade %o"
+
+msgid "TXT_OBITUARY20"
+msgstr "%k sprutade %o."
+
+msgid "TXT_OBITUARY21"
+msgstr "%k krossade %o"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k tog strypgrepp på %o"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k slösade bort %o"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k dödade %o"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k skickade %o till helvetet"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k rostade %o"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k snusade %o"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k sprutade %o"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k sprayade %o"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k gjorde hundkött av %o"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k rostade %o"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o är avföring"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o är hamburgare"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o fick pungen separerad"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o anmälde sig frivilligt till befolkningskontroll"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o har begått självmord"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o fick Darwinpriset"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "ÄÖÅÉ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Fullständig alternativmeny"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Enkel alternativmeny"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Bläddra i spelkonfigurationen"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Bläddra bland skärmdumpar"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Bläddra bland sparade spel"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Byta musknappar"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Endast ändrat"
+
+msgid "TXT_UNKNOWN"
+msgstr "Okänd"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr ""
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Detta sparande behöver dessa filer"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Alternativ för flera spelare"
+
+msgid "OPTMNU_INPUT"
+msgstr "Inmatningsalternativ"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Systemalternativ"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Alternativ för ljus"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Alternativ för sprite"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Koronor"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Utseende"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Avancerade visningsalternativ"
+
+msgid "PICKER_SELECT"
+msgstr "Välj vilket spel du vill spela"
+
+msgid "PICKER_PLAY"
+msgstr "Starta spel"
+
+msgid "PICKER_EXIT"
+msgstr "Avsluta"
+
+msgid "PICKER_GENERAL"
+msgstr "Allmänt"
+
+msgid "PICKER_EXTRA"
+msgstr "Extra grafik"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Fullskärm"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Inaktivera autoload"
+
+msgid "PICKER_DONTASK"
+msgstr "Fråga mig inte igen"
+
+msgid "PICKER_LIGHTS"
+msgstr "Definitioner av ljus"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Ljuskartor"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Bredbildsskärm"
+
+msgid "PICKER_ADDPARM"
+msgstr "Ytterligare parametrar:"
+
+msgid "PICKER_WELCOME"
+msgstr "Välkommen till %s!"
+
+msgid "PICKER_VERSION"
+msgstr ""
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API för rendering"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Spel"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Aktivera denna styrenhet"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Öppna huvudmenyn"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Modulåterspelare"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr ""
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr ""
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr ""
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr ""
+
+msgid "PICKER_PLAYHOST"
+msgstr ""
+
+msgid "PICKER_PLAYJOIN"
+msgstr ""
+
+msgid "PICKER_REMPARM"
+msgstr ""
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr ""
+
+msgid "PICKER_TAB_MULTI"
+msgstr ""
+
+msgid "PICKER_LOADSAVE"
+msgstr ""
+
+msgid "PICKER_REMSAVE"
+msgstr ""
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr ""
+
+msgid "PICKER_JOIN"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+msgid "PICKER_NETRATE"
+msgstr ""
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr ""
+
+msgid "PICKER_GAMEMODE"
+msgstr ""
+
+msgid "PICKER_COOP"
+msgstr ""
+
+msgid "PICKER_DM"
+msgstr ""
+
+msgid "PICKER_TDM"
+msgstr ""
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr ""
+
+msgid "PICKER_ALTDM"
+msgstr ""
+
+msgid "PICKER_PLAYERS"
+msgstr ""
+
+msgid "PICKER_PORT"
+msgstr ""
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr ""
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr ""
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr ""
+
+msgid "PICKER_IP"
+msgstr ""
+
+msgid "PICKER_TDMLABEL"
+msgstr ""
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr ""
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr ""
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

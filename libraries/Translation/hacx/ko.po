@@ -1,0 +1,570 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ko\n"
+
+msgid "QUITMSG1"
+msgstr "고작 버그들 상대하는 것도 버거운 건가?"
+
+msgid "QUITMSG"
+msgstr ""
+"지금 종료하겠다고?\n"
+"\n"
+"진심이냐?"
+
+msgid "QUITMSG2"
+msgstr "그만두려고? 해커라는 이름이 아깝군그래."
+
+msgid "QUITMSG3"
+msgstr "돌아와, 네 전선에 바이러스 주입해버리기 전에!"
+
+msgid "QUITMSG4"
+msgstr "진정한 해커는 이렇게 포기하지 않는다고!"
+
+msgid "QUITMSG5"
+msgstr "이봐! 아직 재밌는 부분은 시작도 안 했다고!"
+
+msgid "QUITMSG6"
+msgstr "포기하면 사이버 공간은 결국엔 사라질걸?"
+
+msgid "QUITMSG7"
+msgstr "어이 등신! 지니에서 안부를 전해 달라더군."
+
+msgid "QUITMSG8"
+msgstr "영웅이 될 그릇은 아닌 거 같군. 안 그래? 해커 형씨."
+
+msgid "QUITMSG9"
+msgstr "펜이나 끄적거리는 인생으로 돌아가겠다. 이건가?"
+
+msgid "QUITMSG10"
+msgstr "넌 파란 알약을 골랐어야 했어."
+
+msgid "QUITMSG11"
+msgstr "이봐, 이 게임은 때리고 도망가는 게임이 아니라고!"
+
+msgid "QUITMSG12"
+msgstr "걱정 말라고. 세상이 위험한데 급할 것 있나. 안 그래?"
+
+msgid "QUITMSG13"
+msgstr "벌써 서버를 다운시키는 '척' 할 시간인가?"
+
+msgid "QUITMSG14"
+msgstr "부디 나가지 말고 HacX를 잊지 말아줘!"
+
+msgid "OB_SUICIDE"
+msgstr "%o 은(는) 자기 자신의 존재를 소멸시켰다."
+
+msgid "OB_FALLING"
+msgstr "%o 은(는) 땅바닥에 캔자스만큼 커다란 구멍을 뚫었다."
+
+msgid "OB_CRUSH"
+msgstr "%o 은(는) 인간 빈대떡이 되었다."
+
+msgid "OB_EXIT"
+msgstr "%o 은(는) 로그아웃하려고 시도했다."
+
+msgid "OB_WATER"
+msgstr "%o 은(는) 웹서핑을 못 하는 타입이었다."
+
+msgid "OB_SLIME"
+msgstr "%o 은(는) 방사능 바람을 좀 쐬고 왔다."
+
+msgid "OB_LAVA"
+msgstr "%o 은(는) 시원하게 용암 일광욕을 즐겼다."
+
+msgid "OB_BARREL"
+msgstr "%o 은(는) 니트로글리세린을 훅 가게 흡입했다."
+
+msgid "OB_SPLASH"
+msgstr "%o 은(는) 작은 입자로 분해되었다."
+
+msgid "OB_R_SPLASH"
+msgstr "%o 은(는) 인체의 신비를 감상했다."
+
+msgid "OB_ROCKET"
+msgstr "%o 은(는) 퀀텀 여행을 즐겼다."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o 은(는) 자기 자신을 해킹했다."
+
+msgid "OB_THUG"
+msgstr "%o 은(는) 그들의 시다바리가 아니였다."
+
+msgid "OB_ANDROID"
+msgstr "%o 은(는) 잘못된 기계를 작동시켰다."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o 은(는) 저 괴물의 슈퍼-울트라-캡쑝-파워를 맛봤다."
+
+msgid "OB_ICE"
+msgstr "%o 은(는) 지독하게 물어뜯겼다."
+
+msgid "OB_BUZZER"
+msgstr "%o 은(는) 짜릿하게 찔렸다."
+
+msgid "OB_STEALTH"
+msgstr "%o 은(는) 비밀리에 만들어진 병기를 발견했다."
+
+msgid "OB_DMAN"
+msgstr "%o 은(는) 영구차단을 당했다."
+
+msgid "OB_GLASS"
+msgstr "%o 은(는) 유리창을 깨고 등장하는 액션 배우가 아니였다."
+
+msgid "OB_MANIAC"
+msgstr "%o 의 계정은 영원히 삭제되었다."
+
+msgid "OB_MANIACHIT"
+msgstr "%o 은(는) 의미불명의 이유로 잠수를 타게 되었다."
+
+msgid "OB_TERMIN"
+msgstr "%o 은(는) 미인계에 발을 들였다."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o 의 남자다운 자존심은 쪼그라들었다."
+
+msgid "OB_REPLI"
+msgstr "%o 은(는) 오랜 친구와 작별인사를 했다."
+
+msgid "OB_REPLIHIT"
+msgstr "%o 은(는) 오랜 친구에게 배신을 당했다."
+
+msgid "OB_PHAGE"
+msgstr "%o 은(는) 약육강식을 지금까진 모르고 있었다."
+
+msgid "OB_THORN"
+msgstr "%o 은(는) 따가운 죽음을 피할 수 없었다."
+
+msgid "OB_SUMATIC"
+msgstr "%o 은(는) 가랑이 사이에 정권을 찔렀다."
+
+msgid "OB_GENIE"
+msgstr "%o 은(는) 세 가지 소원을 빌 수 없었다."
+
+msgid "OB_MINE"
+msgstr "%o 은(는) 기뢰와 친구가 되고 싶었다."
+
+msgid "OB_MPKICK"
+msgstr "%o 은(는) %k 의 거침없는 하이킥을 받았다."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o 은(는) %k 이(가) 선사한 전기 찜질을 맛봤다."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o 은(는) %k 의 2총신 사격을 받았다."
+
+msgid "OB_MPTAZER"
+msgstr "%o 은(는) %k 의 무력행사에 아예 포기했다."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o 은(는) %k 덕분에 맛있게 냉동 보존되었다."
+
+msgid "OB_MPUZI"
+msgstr "%o 은(는) %k 이(가) 선사한 갱스터 스타일 난사를 막지 못했다."
+
+msgid "OB_MPZOOKA"
+msgstr "%o 은(는) %k 의 광자탄을 봤는데도 피하지 못했다."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o 은(는) %k 의 광자력을 탐냈다. 죽기 전까지는."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o 은(는) %k 의 반물질의 힘에 의해 소멸되었다."
+
+msgid "OB_MPNUKE"
+msgstr "%o 은(는) %k 덕분에 하늘을 뚫을 버섯구름이 되었다."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o 은(는) %k 의 핵실험에 참여했다."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o 은(는) %k 에 의해 자신이 분해되는 꼴을 못 봤다."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o 의 원자 마디마디가 흩어졌다."
+
+msgid "OB_DEFAULT"
+msgstr "%o 은(는) 파란만장하게 사라졌다."
+
+msgid "GOTNUKER"
+msgstr "누커 획득! 한바탕 쓸어볼까!"
+
+msgid "GOTUZI"
+msgstr "우지 기관단총 획득!"
+
+msgid "GOTREZNATOR"
+msgstr "HOIG 전자무력기 획득! 전기 통구이를 만들자고!"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "광자 바주카 획득!"
+
+msgid "GOTBIGSTICK"
+msgstr "반물질 봉 획득!"
+
+msgid "GOTTAZER"
+msgstr "테이져 획득!"
+
+msgid "GOTCRYOGUN"
+msgstr "크라이로건 획득! 그대로 멈춰라!"
+
+msgid "GOTROUNDS"
+msgstr "권총 탄약을 주웠다!"
+
+msgid "GOTROUNDSCASE"
+msgstr "권총 탄약 상자를 주웠다!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "광자탄을 주웠다!"
+
+msgid "GOTTORPEDOS"
+msgstr "광자탄 무더기를 주웠다!"
+
+msgid "GOTMOLECULES"
+msgstr "분자 모듈을 주웠다!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "분자 탱크를 주웠다!"
+
+msgid "GOTCARTRIDGES"
+msgstr "카트리지 한 줌을 주웠다!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "카트리지 박스를 주웠다!"
+
+msgid "GOTVALISE"
+msgstr "탄약이 든 서류 가방을 주웠다!"
+
+msgid "GOTFORCEFIELD"
+msgstr "방어막!"
+
+msgid "GOTMICROTEL"
+msgstr "007마이크로텔 근력 향상 칩!"
+
+msgid "GOTENKBLIND"
+msgstr "EnK 투명 위장 장치!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "벌컨 방화 부츠!"
+
+msgid "GOTSIARRAY"
+msgstr "Si 어레이 지도!"
+
+msgid "GOTINFRARED"
+msgstr "적외선 바이져!"
+
+msgid "GOTINHALER"
+msgstr "각성제를 주웠다. 잘 들이마셔!"
+
+msgid "GOTHYPONEED"
+msgstr "하이포의 하이데르진이 당신을 살렸다!"
+
+msgid "GOTHYPO"
+msgstr "하이포를 주웠다!"
+
+msgid "GOTKEYCARD"
+msgstr "키 카드를 찾았다!"
+
+msgid "GOTCKEY"
+msgstr "C-키를 찾았다!"
+
+msgid "GOTPASSWORD"
+msgstr "암호를 찾았다!"
+
+msgid "GOTBLUEZKEY"
+msgstr "청색 Z-키를 찾았다!"
+
+msgid "GOTYELWZKEY"
+msgstr "황색 Z-키를 찾았다!"
+
+msgid "GOTREDZKEY"
+msgstr "적색 Z-키를 찾았다!"
+
+msgid "GOTBODYARMOR"
+msgstr "강화복!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "메클로페녹세이트!"
+
+msgid "GOTKEVLARVEST"
+msgstr "방탄복을 주웠다!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "중 방탄복을 주웠다!"
+
+msgid "GOTMICROKIT"
+msgstr "마이크로킷을 주웠다!"
+
+msgid "GOTDAMPENER"
+msgstr "완충 장치를 주웠다!"
+
+msgid "PD_CKEY"
+msgstr "C-키가 있어야 작동이 가능하다!"
+
+msgid "PD_KEYCARD"
+msgstr "키 카드가 있어야 작동이 가능하다!"
+
+msgid "PD_PASSWORD"
+msgstr "암호를 입력해야 작동이 가능하다!"
+
+msgid "PD_BLUEZKEY"
+msgstr "청색 Z-키가 있어야 작동이 가능하다!"
+
+msgid "PD_REDZKEY"
+msgstr "적색 Z-키가 있어야 작동이 가능하다!"
+
+msgid "PD_YELWZKEY"
+msgstr "황색 Z-키가 있어야 작동이 가능하다!"
+
+msgid "X1TEXT"
+msgstr ""
+"2000만 달러 보상금 가지고는 턱도 없을 정도의 개판이었어! 안 그런가,\n"
+"해커 양반? 펜이나 끄적거리는 게 이것보다는 훨씬 쉬울 테니 말이야.\n"
+"\n"
+"이 더럽게 못생긴 돌연변이들이며, 천장에 마늘꾸러미처럼 매달려있는\n"
+"사람들을 볼 일도 없고 말이야.\n"
+"\n"
+"그리고... 이 지니란 녀석은 도대체 뭐지? 네가 해킹했던 다른 컴퓨터들과는\n"
+"완전 차원이 다른 녀석이야. 어서 다른 단말기를 찾아서 C-Space를 타고\n"
+"접속하는 게 좋을 것 같아.\n"
+"\n"
+"돌연변이들을 몇 마리 썰어버리면서, 이곳을 빠져나가 는 것도 잊지 말고!"
+
+msgid "X2TEXT"
+msgstr ""
+"여기 사람들은 도대체 어디로 간 거지?!\n"
+"\n"
+"프랑스 파리도 완전히 유령도시가 되어버렸군, 저 돌아다니는 돌연변이\n"
+"버그들이 시민은 아닐 테니까.\n"
+"\n"
+"방금 전투는 정말 위험했어. 빌어먹을 버그들 생각보다 잘 싸우더군.\n"
+"머리가 좋은 놈들은 아니라서 다행이야. 그래도 위원회 놈들이 원하는\n"
+"정보는 얻었으니 다행이야. 놈들 꽤 더러운 걸 숨기고 있더군.\n"
+"\n"
+"인간의 척수를 빨아먹는 버그들이라니! 이 주변 대가 허허벌판인 것도\n"
+"당연할 수밖에. 어서 위원회 놈들한테 보고하자고. 그리고 언제나\n"
+"등 뒤를 조심해."
+
+msgid "X3TEXT"
+msgstr ""
+"자네도 알다시피 이제 문명이란 건 존재하지 않아!\n"
+"\n"
+"친구들, 가족, 그리고 사람들도 다 사라졌지. 돌연변이들이 있긴 하지만.\n"
+"\n"
+"이제 유일하게 남은 건... 지니일 거야. 그 빌어먹을 녀석을 우주 끝까지\n"
+"쫓아가서 박살 내 버리자고! 자네를 화나게 한 값은 톡톡히 치르게 해줘야지?\n"
+"\n"
+"보상금? 이번엔 필요 없어, 이번 일은 공짜로 해줄 테니.\n"
+"\n"
+"...(다음에 계속)..."
+
+msgid "X5TEXT"
+msgstr ""
+"아직도 살아있었네!\n"
+"\n"
+"귀신 곡할 노릇이야. 안 그래, 해커 친구? 버그 놈들이 그렇게나\n"
+"들끓어댔는데 말이지.\n"
+"\n"
+"위원회들도 더는 응답을 하지 않아, 아마 놈들도 다 당한 거겠지.\n"
+"\n"
+"그래... 자넨 이제 혼자야."
+
+msgid "TXT_HACXMAP01"
+msgstr "ZONE 1: 진엠프 주식회사 본부"
+
+msgid "TXT_HACXMAP02"
+msgstr "ZONE 2: 터널 도시"
+
+msgid "TXT_HACXMAP03"
+msgstr "ZONE 3: 용암 속 건물"
+
+msgid "TXT_HACXMAP04"
+msgstr "ZONE 4: 알카트라즈"
+
+msgid "TXT_HACXMAP05"
+msgstr "ZONE 5: 사이버 서커스"
+
+msgid "TXT_HACXMAP06"
+msgstr "ZONE 6: 디지-오타"
+
+msgid "TXT_HACXMAP07"
+msgstr "ZONE 7: 만리장성"
+
+msgid "TXT_HACXMAP08"
+msgstr "ZONE 8: 쾌락의 정원"
+
+msgid "TXT_HACXMAP09"
+msgstr "ZONE 9: 숨겨진 요새"
+
+msgid "TXT_HACXMAP10"
+msgstr "ZONE 10: 아나키스트의 꿈"
+
+msgid "TXT_HACXMAP11"
+msgstr "ZONE 11: 노터스 어스!"
+
+msgid "TXT_HACXMAP12"
+msgstr "ZONE 12: 고딕풍 결투장"
+
+msgid "TXT_HACXMAP13"
+msgstr "ZONE 13: 하수 처리장"
+
+msgid "TXT_HACXMAP14"
+msgstr "ZONE 14: 전격의 전쟁"
+
+msgid "TXT_HACXMAP15"
+msgstr "ZONE 15: 전자황혼"
+
+msgid "TXT_HACXMAP16"
+msgstr "ZONE 16: 변화무쌍한 사이벡스"
+
+msgid "TXT_HACXMAP17"
+msgstr "ZONE 17: 학살의 강"
+
+msgid "TXT_HACXMAP18"
+msgstr "ZONE 18: 요상한 곳"
+
+msgid "TXT_HACXMAP19"
+msgstr "ZONE 19: 전략 회의실"
+
+msgid "TXT_HACXMAP20"
+msgstr "ZONE 20: 칩입자 경보!"
+
+msgid "TXT_HACXMAP31"
+msgstr "ZONE 31: 건조한 곳"
+
+msgid "STSTR_CLEV"
+msgstr "이동하는 중..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... 지져버리겠어!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "무적, 광전사, 투명, 보호복, 지도, 아니면 바이저?"
+
+msgid "STSTR_BEHOLDX"
+msgstr "철들 때다!"
+
+msgid "STSTR_NCON"
+msgstr "전자마귀 모드 ON"
+
+msgid "STSTR_NCOFF"
+msgstr "전자마귀 모드 OFF"
+
+msgid "STSTR_NOMUS"
+msgstr "선택 불가능"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "볼륨을 올려라!"
+
+msgid "STSTR_KFAADDED"
+msgstr "때리고 죽이는 모드 ON"
+
+msgid "STSTR_FAADDED"
+msgstr "마음대로 해, 해커 양반."
+
+msgid "STSTR_DQDON"
+msgstr "전지전능 모드 ON"
+
+msgid "STSTR_DQDOFF"
+msgstr "전지전능 모드 OFF"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "추적 모드 ON"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "추적 모드 OFF"
+
+msgid "DOSY"
+msgstr "- 달아날려먼 Y 키를 눌러! -"
+
+msgid "ENDGAME"
+msgstr ""
+"부적응은 안 하겠지? 그렇겠지?\n"
+"자신 있으면 선택해!"
+
+msgid "NIGHTMARE"
+msgstr ""
+"그렇게 만만하다면 말리지는 않을게.\n"
+"어차피 너에겐 복잡할 테니까, 해커 양반.\n"
+"\n"
+"준비됐으면 Y 키를 눌러."
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"빠른 저장?\n"
+"\n"
+"'%s'\n"
+"\n"
+"Y키 또는 N키를 입력."
+
+msgid "QLPROMPT"
+msgstr ""
+"빠른 불러오기?\n"
+"\n"
+"'%s'\n"
+"\n"
+"Y키 또는 N키를 입력."
+
+msgid "CC_THUG"
+msgstr "서그"
+
+msgid "CC_ANDROID"
+msgstr "안드로이드"
+
+msgid "CC_ICE"
+msgstr "아이스"
+
+msgid "CC_BUZZER"
+msgstr "버저"
+
+msgid "CC_DMAN"
+msgstr "디-맨"
+
+msgid "CC_PHAGE"
+msgstr "페이지"
+
+msgid "CC_MONSTRUCT"
+msgstr "몬스트럭트"
+
+msgid "CC_MECH"
+msgstr "메카 메니악"
+
+msgid "CC_TERMI"
+msgstr "터미네트릭스"
+
+msgid "CC_THORN"
+msgstr "쏜 씽"
+
+msgid "CC_MAJONG"
+msgstr "마작 7호"
+
+msgid "CC_HERO"
+msgstr "댄 에반저"
+
+msgid "SKILL_BABY"
+msgstr "쏘지 마세요!"
+
+msgid "SKILL_EASY"
+msgstr "체력이 필요해!"
+
+msgid "SKILL_NORMAL"
+msgstr "갈기갈기 찢어버려!"
+
+msgid "SKILL_HARD"
+msgstr "난 무적이다!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "코드명: 광기!"

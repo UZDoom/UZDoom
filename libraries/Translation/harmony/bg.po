@@ -1,0 +1,181 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr ""
+
+msgid "PD_BLUEO"
+msgstr ""
+
+msgid "PD_REDO"
+msgstr ""
+
+msgid "PD_YELLOWO"
+msgstr ""
+
+msgid "PD_BLUEK"
+msgstr ""
+
+msgid "PD_YELLOWK"
+msgstr ""
+
+msgid "PD_REDK"
+msgstr ""
+
+msgid "GOTARMOR"
+msgstr ""
+
+msgid "GOTMEGA"
+msgstr ""
+
+msgid "GOTMSPHERE"
+msgstr ""
+
+msgid "GOTBLUECARD"
+msgstr ""
+
+msgid "GOTYELWCARD"
+msgstr ""
+
+msgid "GOTREDCARD"
+msgstr ""
+
+msgid "GOTBLUESKUL"
+msgstr ""
+
+msgid "GOTYELWSKUL"
+msgstr ""
+
+msgid "GOTREDSKUL"
+msgstr ""
+
+msgid "GOTSTIM"
+msgstr ""
+
+msgid "GOTMEDIKIT"
+msgstr ""
+
+msgid "GOTMEDINEED"
+msgstr ""
+
+msgid "GOTMAP"
+msgstr ""
+
+msgid "GOTCLIPBOX"
+msgstr ""
+
+msgid "GOTROCKET"
+msgstr ""
+
+msgid "GOTROCKBOX"
+msgstr ""
+
+msgid "GOTSHELLBOX"
+msgstr ""
+
+msgid "GOTBACKPACK"
+msgstr ""
+
+msgid "GOTBFG9000"
+msgstr ""
+
+msgid "GOTCHAINGUN"
+msgstr ""
+
+msgid "GOTLAUNCHER"
+msgstr ""
+
+msgid "GOTPLASMA"
+msgstr ""
+
+msgid "GOTSHOTGUN"
+msgstr ""
+
+msgid "STSTR_DQDON"
+msgstr ""
+
+msgid "STSTR_DQDOFF"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgid "STSTR_FAADDED"
+msgstr ""
+
+msgid "TXT_HARMMAP01"
+msgstr ""
+
+msgid "TXT_HARMMAP02"
+msgstr ""
+
+msgid "TXT_HARMMAP03"
+msgstr ""
+
+msgid "TXT_HARMMAP04"
+msgstr ""
+
+msgid "TXT_HARMMAP05"
+msgstr ""
+
+msgid "TXT_HARMMAP06"
+msgstr ""
+
+msgid "TXT_HARMMAP07"
+msgstr ""
+
+msgid "TXT_HARMMAP08"
+msgstr ""
+
+msgid "TXT_HARMMAP09"
+msgstr ""
+
+msgid "TXT_HARMMAP10"
+msgstr ""
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr ""
+
+msgid "SKILL_EASY"
+msgstr ""
+
+msgid "SKILL_NORMAL"
+msgstr ""
+
+msgid "SKILL_HARD"
+msgstr ""
+
+msgid "SKILL_NIGHTMARE"
+msgstr ""
+
+msgid "HARMQUITMSG"
+msgstr ""
+
+msgid "TXT_D2E1"
+msgstr ""

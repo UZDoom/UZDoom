@@ -1,0 +1,201 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: da\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Tror du virkelig, at du kan klare det?\n"
+"\n"
+"Tryk på Y eller N..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Pletmærket"
+
+msgid "PD_BLUEO"
+msgstr "Kræver det GRØNNE nøglekort"
+
+msgid "PD_REDO"
+msgstr "Kræver det LILLA nøglekort"
+
+msgid "PD_YELLOWO"
+msgstr "Kræver det GULLE nøglekort"
+
+msgid "PD_BLUEK"
+msgstr "Kræver den GRØNNE nøgle"
+
+msgid "PD_YELLOWK"
+msgstr "Kræver den GULLE nøgle"
+
+msgid "PD_REDK"
+msgstr "Kræver den LILLA nøgle"
+
+msgid "GOTARMOR"
+msgstr "Hentede rustning."
+
+msgid "GOTMEGA"
+msgstr "Samlet Combat Armor op."
+
+msgid "GOTMSPHERE"
+msgstr ""
+
+msgid "GOTBLUECARD"
+msgstr "Opnået det GRØNNE nøglekort."
+
+msgid "GOTYELWCARD"
+msgstr "Opnået det GULLE nøglekort."
+
+msgid "GOTREDCARD"
+msgstr "Opnået det LILLA nøglekort."
+
+msgid "GOTBLUESKUL"
+msgstr "Opnået den GRØNNE nøgle."
+
+msgid "GOTYELWSKUL"
+msgstr "Opnået den GULLE nøgle."
+
+msgid "GOTREDSKUL"
+msgstr "Opnået den LILLA nøgle."
+
+msgid "GOTSTIM"
+msgstr "Helbredende svamp"
+
+msgid "GOTMEDIKIT"
+msgstr "Erhvervet: medicinsk kit."
+
+msgid "GOTMEDINEED"
+msgstr "Erhvervet: medicinsk kit, som du VIRKELIG har brug for."
+
+msgid "GOTMAP"
+msgstr "Kort"
+
+msgid "GOTCLIPBOX"
+msgstr "Erhvervet: kasse med kugler."
+
+msgid "GOTROCKET"
+msgstr "Erhvervet: Granat."
+
+msgid "GOTROCKBOX"
+msgstr "Erhvervet: Granater."
+
+msgid "GOTSHELLBOX"
+msgstr "Erhvervet: kasse med haglpatroner."
+
+msgid "GOTBACKPACK"
+msgstr "Erhvervet: ammunitionsrygsæk."
+
+msgid "GOTBFG9000"
+msgstr "Erhvervet: Granat."
+
+msgid "GOTCHAINGUN"
+msgstr "Erhvervet: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Erhvervet: Granatkaster."
+
+msgid "GOTPLASMA"
+msgstr "Entropi-lancer!"
+
+msgid "GOTSHOTGUN"
+msgstr "Erhvervet: Shotgun."
+
+msgid "STSTR_DQDON"
+msgstr "Gud-tilstand PÅ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Gud-tilstand  FRA"
+
+msgid "STSTR_KFAADDED"
+msgstr "Alle våben/ ammunition/ nøgler"
+
+msgid "STSTR_FAADDED"
+msgstr "Alle våben og ammunition"
+
+msgid "TXT_HARMMAP01"
+msgstr "Bortførelse"
+
+msgid "TXT_HARMMAP02"
+msgstr ""
+
+msgid "TXT_HARMMAP03"
+msgstr ""
+
+msgid "TXT_HARMMAP04"
+msgstr ""
+
+msgid "TXT_HARMMAP05"
+msgstr "Hospitalet"
+
+msgid "TXT_HARMMAP06"
+msgstr "Våbenfabrikken"
+
+msgid "TXT_HARMMAP07"
+msgstr "Undervandslaboratoriet"
+
+msgid "TXT_HARMMAP08"
+msgstr "Landingsbane et"
+
+msgid "TXT_HARMMAP09"
+msgstr "Affyringsbasen"
+
+msgid "TXT_HARMMAP10"
+msgstr "Den radioaktive zone"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Du har kvalme i maven...\n"
+"Du ser mutantdronningen i øjnene... \n"
+"Den tingest... Det plejede at være... \n"
+"din ven... Amira!\n"
+"\n"
+"De monstre må have fundet en måde at\n"
+"mutere hende på og forvandle hende til\n"
+"dette afskyelige væsen, så hun kan føde\n"
+"deres afkom.\n"
+"\n"
+"-suk-\n"
+"\n"
+"Du tager dig sammen... \n"
+"De kommer til at betale for at få dig til\n"
+"at dræbe din ven...\n"
+"\n"
+"\"Helvede har ingen vrede som en\n"
+"forsmået kvinde!\"\n"
+"\n"
+"     = T H E  E N D ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Indlæsning"
+
+msgid "SKILL_BABY"
+msgstr "Meget let"
+
+msgid "SKILL_EASY"
+msgstr "Let"
+
+msgid "SKILL_NORMAL"
+msgstr "Middel"
+
+msgid "SKILL_HARD"
+msgstr "Svær"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Meget svær"
+
+msgid "HARMQUITMSG"
+msgstr "Tak for at spille"
+
+msgid "TXT_D2E1"
+msgstr ""

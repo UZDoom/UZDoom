@@ -1,0 +1,5169 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: el\n"
+
+msgid "PRESSKEY"
+msgstr "Πάτα οποιοδήποτε πλήκτρο."
+
+msgid "SECRETMESSAGE"
+msgstr "Ένα μυστικό αποκαλύφθηκε!"
+
+msgid "D_DEVSTR"
+msgstr "Άχρηστη λειτουργία είναι ΑΝΟΙΧΤΗ"
+
+msgid "QUITMSG"
+msgstr "Είσαι σίγουρος ότι θέλεις να κλείσεις αυτο το σπουδαίο παιχνίδι;"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Δέν μπορίς να φορτώσεις σε ένα δικτυακό παιχνίδι !\n"
+"\n"
+"Πάτα οπιοδήποτε πλήκτρο."
+
+msgid "QLOADNET"
+msgstr ""
+"Δέν μπορίς να κάνεις γρήγορη φόρτωση σε ένα δικτυακό παιχνίδι !\n"
+"\n"
+"Πάτα οποιδήποτε πλήκτρο."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Δέν έχεις επιλέξει μια θυρίδα γρήγορης αποθήκευσεις ακόμα!\n"
+"\n"
+"Πάτα οποιδήποτε πλήκτρο."
+
+msgid "NEWGAME"
+msgstr ""
+"Δέν μπορείς να ξεκινήσεις ένα νέο παιχνίδι ενώ εισαι σε ένα δικτυακό παιχνίδι.\n"
+"\n"
+"Πάτα οποιδήποτε πλήκτρο."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Είσαι σίγουρος ? Αυτό το επίπεδο δυσκολίας δεν είναι καθόλου δίκαιη.\n"
+"\n"
+"Πάτα Y ή N"
+
+msgid "SWSTRING"
+msgstr ""
+"Αυτή είναι η Shareware έκδοση του Doom.\n"
+"\n"
+"Πρέπει να παραγγείλετε την ολόκληρη τριλογία.\n"
+"\n"
+"Πάτα οποιδήποτε πλήκτρο."
+
+msgid "NETEND"
+msgstr ""
+"Δέν μπορείς να τελειώσεις ένα δικτυακό παιχνίδι!\n"
+"\n"
+"Πάτα οποιδήποτε πλήκτρο."
+
+msgid "ENDGAME"
+msgstr ""
+"Είσαι σίγουρος ότι θέλεις να τελειώσεις το παιχνίδι?\n"
+"\n"
+"Πάτα Y ή N"
+
+msgid "RAVENQUITMSG"
+msgstr "Είσαι σίγουρος ότι θέλεις να φύγεις?\n"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Μόνο διαθέσιμο στήν εχγραμμένη έκδοση."
+
+msgid "DOSY"
+msgstr "(Πάτα Y για να φύγεις)"
+
+msgid "QUITMSG1"
+msgstr "Παρακαλώ μη φύγεις, υπάρχουνε περισσότεροi δαίμονες να ψήσεις!"
+
+msgid "QUITMSG2"
+msgstr "Πάεμε να φύγουμε -- έχει γίνει σφαγίο εδώ!"
+
+msgid "QUITMSG3"
+msgstr ""
+"Δέν θα έφευγα αμμα είμουνα εσύ.\n"
+"Το DOS είναι πολύ χυρότερο."
+
+msgid "QUITMSG4"
+msgstr "Προσπαθείς να πείς οτι το DOS είναι καλήτερο απο εμένα, σωστά?"
+
+msgid "QUITMSG5"
+msgstr "Μη φύγεις ακόμα, είναι ένας δαίμονας πίσω απο αυτή τι γονία!"
+
+msgid "QUITMSG6"
+msgstr "Ξέρεις, την επόμενη φορά που θα έρθεις εδώ, θα σε ψήσω."
+
+msgid "QUITMSG7"
+msgstr "Φύγε, δες αν νιάζομαι."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"Θέλεις να φύγεις ?\n"
+"Τότε, έχασες ένα έκτο!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Μη πας τώρα, υπάρχει ένας διαστατικός τρίκλιστης ο οπίος περιμένει στη DOS "
+"γραμμή εντολών!"
+
+msgid "QUITMSG10"
+msgstr "Βγές απο'δω και πήγαινε πίσω στα βαρετά προγράματα σου."
+
+msgid "QUITMSG11"
+msgstr ""
+"Άμα ήμουν το αφεντικό σου, θα σε προκαλούσα σε ενα deathmatch αυτη τη "
+"στιγμή!"
+
+msgid "QUITMSG12"
+msgstr "Κοίτα φίλε, άμα φύγεις τώρα ματαιώσες το σκόρ σου!"
+
+msgid "QUITMSG13"
+msgstr "Απλός φύγε. Ο΄ταν επιστρέψεις, θα περιμένω με ένα ρόπαλο."
+
+msgid "QUITMSG14"
+msgstr "Είσαι τυχερός που δεν σε χτυπάω που σκέφτεσε να φύγεις"
+
+msgid "QUITMSG15"
+msgstr "Που πάς ? Τί θα συμβεί στην επανάσταση ?"
+
+msgid "QUITMSG16"
+msgstr ""
+
+msgid "QUITMSG17"
+msgstr "Αλλά εσύ είσε η ελπίδα -- η μόνη μου ευκαιρία!"
+
+msgid "QUITMSG18"
+msgstr "Κανένας δεν παρατάει τον Μπλακμπερτ."
+
+msgid "QUITMSG19"
+msgstr "Νόμιζα οτι είσουν διαφορετικός..."
+
+msgid "QUITMSG20"
+msgstr "Καλά! Απλώς σκότοσε και φύγε!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Μπορείς να φύγεις...\n"
+"αλλά δεν μπορείς να κρυφτείς..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Οοοοο, τι είναι το πρόβλημα?\n"
+"Η μαμμάκα λέι οτι είναι ώρα για βραδινο?"
+
+msgid "QUITMSG23"
+msgstr "Μή παραιτηθέις, υπάρχουνε ακόμα φλέμοιντς τα οπία έχουν αποδράσει!"
+
+msgid "QUITMSG24"
+msgstr "Μή παραιτηθέις -- τα φλέμοιντς θα νικήσουνε!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Μή φύγεις τώρα.\n"
+"Χρειαζόμαστε τη βοήθεια σου!"
+
+msgid "QUITMSG26"
+msgstr "Ελπίζω οτι απλώς κάνεις ενα διάλειμμα για ένα Chex (R) μέιγμα."
+
+msgid "QUITMSG27"
+msgstr ""
+"Μή κάνεις έξοδο τώρα.\n"
+"Χρειαζόμαστε τη βοήθεια σου!"
+
+msgid "QUITMSG28"
+msgstr "Μήν εγκαταλήψεις την Διαγαλαξιακή Ομοσπονδία των Δημητριακών!"
+
+msgid "QUITMSG29"
+msgstr "Ο αληθινός Chex(R) Πολεμιστής δέν θα έφευγε τοσο γρήγορα!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Πήρες ένα πράγμα."
+
+msgid "PD_ANY"
+msgstr "Οποιδήποτε κλειδί θα ανοίξει τη πόρτα"
+
+msgid "PD_ANYOBJ"
+msgstr "Οποιδήποτε κλειδί θα ενεργοποιήσει αυτό το αντικείμενο"
+
+msgid "PD_ALL3"
+msgstr "Χρειάζεσαι όλα τα τρία κλειδία για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_ALL3O"
+msgstr ""
+"Χρειάζεσε όλα τα τρία κλειδιά για να ενεργοποιήσεις αυτό το αντικείμενο"
+
+msgid "PD_ALL6"
+msgstr "Χρειάζεσαι όλα τα έξι κλειδία για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_ALL6O"
+msgstr ""
+"Χρειάζεσε όλα τα έξι κλειδιά για να ενεργοποιήσεις αυτό το αντικείμενο"
+
+msgid "PD_ALLKEYS"
+msgstr "Χρειάζεσαι όλα τα κλειδία"
+
+msgid "HUSTR_MSGU"
+msgstr "[Δέν στάλθηκε]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Μουρμουράς στον εαυτό σου"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Πιός είναι εκεί?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Φοβήζεις τον εαυτό σου"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Αρχίζεις να ουρλίαζεις"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Το έχασες"
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Στάλθηκε]"
+
+msgid "STSTR_MUS"
+msgstr "Άλλαξε μουσική"
+
+msgid "STSTR_NOMUS"
+msgstr "Αδήνατη επιλογή"
+
+msgid "STSTR_DQDON"
+msgstr "Θεική λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Θεική λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "STSTR_DQD2ON"
+msgstr "Απόλητη θεική λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Απόλητη θεική λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "STSTR_KFAADDED"
+msgstr "Πάρα Πολύ Χαρούμενα Πυρομαχηκά Προστέθηκαν"
+
+msgid "STSTR_FAADDED"
+msgstr "Πυρομαχικά (Όχι κλειδία) προστέθηκαν"
+
+msgid "STSTR_NCON"
+msgstr "Noclip λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "STSTR_NCOFF"
+msgstr "Noclip λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "STSTR_NC2ON"
+msgstr "Δέυτερη noclip λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "STSTR_NC2OFF"
+msgstr "Noclip λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr ""
+
+msgid "STSTR_BEHOLDX"
+msgstr ""
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... δέν είναι χάλια - GW"
+
+msgid "STSTR_CLEV"
+msgstr "Αλλαγή πίστας..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Λειτουργία Βουδα ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Λειτουργία Βουδα ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Λειτουργία Απόλητου Βουδα ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Λειτουργία Απόλητου Βουδα ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Δύναμη ενεργοποιημένη"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Δύναμη άπενεργοποιημένη"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Ολόκληρη υγεία"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Όλα τα κλειδία"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Debug ήχου ενεργοποιημένη"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Debug ήχου άπενεργοποιημένη"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Προσπαθείς να εξαπατήσεις, ε? Τώρα πεθένεις!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Απατεόνα δέν σου αξήζουν όπλα"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Χρονόμετρο ενεργοποιημένο"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Χρονόμετρο άπενεργοποιημένο"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Το πήρες"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Έχεις το αγγιγμα το Μίδα, μωρό."
+
+msgid "TXT_GOTSTUFF"
+msgstr "Πήρες τηατ πράγματα !"
+
+msgid "TXT_FREEZEON"
+msgstr "Παγομένη λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Παγομένη λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_STRANGE"
+msgstr "Νιώθης περίεργα..."
+
+msgid "TXT_STRANGER"
+msgstr "Νιώθης ακόμα πιό περίεργα..."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Νιώθης σάν τον εαύτο σου ξανά..."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Μολυβδένιες μπότες ΕΝΕΡΓΟΠΟΙΗΜΈΝΕΣ"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Μολυβδένιες μπότες ΆΠΕΝΕΡΓΟΠΟΙΗΜΕΝΕΣ"
+
+msgid "TXT_LIGHTER"
+msgstr "Νιώθης πιο ελαφρής"
+
+msgid "TXT_GRAVITY"
+msgstr "Η βαρύτητα σε πιάνει."
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Αστόχευτη λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Αστόχευτη λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "\"Τρέμε με φόβο!\""
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Καθόλου δρακοντική πανοπλία πια"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Κάμερα τρίτου πρωσώπου ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Κάμερα τρίτου πρωσώπου ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "Ενας κακός πέθανε"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d τον κακόν πέθαναν"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "Ένα τέρας πέθανε"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d τον τεράτων πέθαναν"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "Ανάσταση αδύνατη, ο παίχτης δεν είναι πια στο σώμα @[pro4_gr]"
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Όλα τα τεχνουργίματα!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Τί θέλεις να σκοτώσεις έξω απο ένα παιχνίδι ?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Η ιδιότητες ενος παγομένου παίχτη απενεργοποίθηκαν"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Ακολούθηση ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Ακολούθηση ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+
+msgid "AMSTR_GRIDON"
+msgstr "Πλέχμα ΕΝΕΡΓΟΠΟΙΜΈΝΟ"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Πλέχμα ΆΠΕΝΕΡΓΟΠΟΙΜΈΝΟ"
+
+msgid "AMSTR_TEXON"
+msgstr "Γραφικός χάρτης ΕΝΕΡΓΟΠΟΙΜΈΝΟΣ"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Γραφικός χάρτης ΑΠΕΝΕΡΓΟΠΟΙΜΈΝΟΣ"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Μαρκαρησμένη τοποθεσεία"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Όλες η μαρκαρησμένη τοποθεσείες είναι καθαρησμένες"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Το όριο κοματιασμόν έχει φτάσει."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Το χρονικό όριο έχει φτάσει."
+
+msgid "SPREEKILLSELF"
+msgstr "@[art_gr] %o πήγενε μια χαρά μέχρι που αυτοκτόνησε!"
+
+msgid "SPREEOVER"
+msgstr "Ο/Η %k σταμάτησε την ανθρωποκτονία %h %o."
+
+msgid "SPREE5"
+msgstr "Ο/Η %k άρχισε μια ανθρωποκτονία!"
+
+msgid "SPREE10"
+msgstr "Ο/Η %k είναι σε ξέσπασμα!"
+
+msgid "SPREE15"
+msgstr "Ο/Η %k κατακτεί."
+
+msgid "SPREE20"
+msgstr "Ο/Η %k είναι ασταμάτητος/η!"
+
+msgid "SPREE25"
+msgstr "Ο/Η %k είναι σαν θεός/θεά!"
+
+msgid "MULTI2"
+msgstr "Δυπλός Θάνατος!"
+
+msgid "MULTI3"
+msgstr "Πολυθάνατος!"
+
+msgid "MULTI4"
+msgstr "Υπερθάνατος!"
+
+msgid "MULTI5"
+msgstr "Τερατόδες σκοτωμός!"
+
+msgid "SCORE_BONUS"
+msgstr ""
+
+msgid "SCORE_COLOR"
+msgstr "Χρώμα"
+
+msgid "SCORE_SECRET"
+msgstr "Μυστικό"
+
+msgid "SCORE_NAME"
+msgstr "Όνομα"
+
+msgid "SCORE_DELAY"
+msgstr "Kαθυστέρηση (μδ)"
+
+msgid "SCORE_FRAGS"
+msgstr "Κοματιασμοί"
+
+msgid "SCORE_DEATHS"
+msgstr "Θάνατοι"
+
+msgid "SCORE_OTHER"
+msgstr ""
+
+msgid "SCORE_MISSED"
+msgstr "Ξεχάστηκαν"
+
+msgid "SCORE_TOTAL"
+msgstr "Συνολικό"
+
+msgid "SCORE_LVLTIME"
+msgstr "Χρόνος Πίστας"
+
+msgid "TXT_IMKILLS"
+msgstr "Σκοτομοί"
+
+msgid "TXT_IMITEMS"
+msgstr "Αντεικείμενα"
+
+msgid "TXT_IMSECRETS"
+msgstr "Μυστικά"
+
+msgid "TXT_IMTIME"
+msgstr "Χρόνος"
+
+msgid "TXT_IMPAR"
+msgstr "Μέσος Όρος"
+
+msgid "WI_FINISHED"
+msgstr "Ολοκληρώθηκε"
+
+msgid "WI_ENTERING"
+msgstr "Είσοδος"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Τώρα εισέρχεσε στο:"
+
+msgid "AM_MONSTERS"
+msgstr "Τέρατα"
+
+msgid "AM_SECRETS"
+msgstr "Μυστικά"
+
+msgid "AM_ITEMS"
+msgstr "Αντεικείμενα"
+
+msgid "OB_SUICIDE"
+msgstr "@[art_gr] %o αυτοκτόνησε"
+
+msgid "OB_FALLING"
+msgstr "@[art_gr] %o έπεσε"
+
+msgid "OB_CRUSH"
+msgstr "@[art_gr] %o συνθλίφτηκε"
+
+msgid "OB_EXIT"
+msgstr "@[art_gr] %o προσπάθησε να φύγει"
+
+msgid "OB_WATER"
+msgstr "@[art_gr] %o δέν μπορεί να κολυμπήσει"
+
+msgid "OB_SLIME"
+msgstr "@[art_gr] %o μεταλάχθηκε"
+
+msgid "OB_LAVA"
+msgstr "@[art_gr] %o έλειοσε"
+
+msgid "OB_BARREL"
+msgstr "@[art_gr] %o έσκασε"
+
+msgid "OB_SPLASH"
+msgstr "@[art_gr] %o έκατσε στο λάθος σημείο"
+
+msgid "OB_R_SPLASH"
+msgstr "@[art_gr] %o έπρεπε να είχε κάτσι πίσω"
+
+msgid "OB_ROCKET"
+msgstr "@[art_gr] %o έπρεπε να είχε κάτσι πίσω"
+
+msgid "OB_KILLEDSELF"
+msgstr "@[art_gr] %o αυτοκτόνησε"
+
+msgid "OB_VOODOO"
+msgstr "@[art_gr] %o πέθανε απο τη δύναμη του βουντου"
+
+msgid "OB_MPTELEFRAG"
+msgstr "@[art_gr] %o κοματιάστηκε μέσω τηλεμεταφοράς απο τον/την %k"
+
+msgid "OB_MONTELEFRAG"
+msgstr "@[art_gr] %o κοματιάστηκε μέσω τηλεμεταφοράς"
+
+msgid "OB_DEFAULT"
+msgstr "@[art_gr] %o πέθανε"
+
+msgid "OB_MPDEFAULT"
+msgstr "@[art_gr] %o στοτώθηκε απο τον/την %k"
+
+msgid "OB_FRIENDLY1"
+msgstr "Ο/Η %k σκότωσε έναν σύμαχο"
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "Ο/Η %k φαίνεται να χρειάζετε γυαλία"
+
+msgid "OB_FRIENDLY3"
+msgstr "Ο/Η %k πάιρνει έναν κοματιασμό για την άλλη ομάδα."
+
+msgid "OB_FRIENDLY4"
+msgstr "Ο/Η %k χάνει ακόμα έναν αλλο φίλο"
+
+msgid "GOTARMOR"
+msgstr "Πήρες την πανοπλία."
+
+msgid "GOTMEGA"
+msgstr "Πήρες την μέγα πανοπλία!"
+
+msgid "GOTHTHBONUS"
+msgstr "Πήρες ένα bonus υγείας."
+
+msgid "GOTARMBONUS"
+msgstr "Πήρες ένα bonus πανο.πλίας."
+
+msgid "GOTSTIM"
+msgstr "Πήρες ένα μικρό πακέτο υγείας."
+
+msgid "GOTMEDINEED"
+msgstr "Πήρες πρώτες βοήθειες που χρειαζόσουνα ΠΆΡΑ ΠΟΛΥ!"
+
+msgid "GOTMEDIKIT"
+msgstr "Πήρες πρώτες βοήθειες."
+
+msgid "GOTSUPER"
+msgstr "Υπερφόρτοση!"
+
+msgid "GOTBLUECARD"
+msgstr "Πήρες ένα μπλε κλειδί."
+
+msgid "GOTYELWCARD"
+msgstr "Πήρες ένα κύτρινο  κλειδί."
+
+msgid "GOTREDCARD"
+msgstr "Πήρες ένα κόκινο κλειδί."
+
+msgid "GOTBLUESKUL"
+msgstr "Πήρες ένα μπλε κρανίο."
+
+msgid "GOTYELWSKUL"
+msgstr "Πήρες ένα κύτρινο κρανίο."
+
+msgid "GOTREDSKUL"
+msgstr "Πήρες ένα κοκινο κρανίο."
+
+msgid "GOTINVUL"
+msgstr "Αθανασία!"
+
+msgid "GOTBERSERK"
+msgstr "Μανία!"
+
+msgid "GOTINVIS"
+msgstr "Ημη-αoρατότητα"
+
+msgid "GOTSUIT"
+msgstr "Προστατευτηκή Στολή"
+
+msgid "GOTMAP"
+msgstr "Τοπικός Χάρτης"
+
+msgid "GOTVISOR"
+msgstr "Νυχτερινή Όραση"
+
+msgid "GOTMSPHERE"
+msgstr "Μεγασφαίρα!"
+
+msgid "GOTCLIP"
+msgstr "Πήρες ένα κουτάκι σφαιρών."
+
+msgid "GOTCLIPBOX"
+msgstr "Πήρες ένα κουτί με σφαίρες."
+
+msgid "GOTROCKET"
+msgstr "Πήρες ένα πύραυλο."
+
+msgid "GOTROCKBOX"
+msgstr "Πήρες ένα κουτί με πυράυλους."
+
+msgid "GOTCELL"
+msgstr "Πήρες ένα κύτταρο ενέργιας."
+
+msgid "GOTCELLBOX"
+msgstr "Πήρες ένα πακέτο κύτταρων ενέργιας."
+
+msgid "GOTSHELLS"
+msgstr "Πήρες τέσσερεις σφάιρες ντουγεκιόυ."
+
+msgid "GOTSHELLBOX"
+msgstr "Πήρες ένα κουτί με σφάιρες ντουγεκιόυ."
+
+msgid "GOTBACKPACK"
+msgstr "Πήρες μια τσάντα γεμάτη με πυρομαχικά!"
+
+msgid "GOTBFG9000"
+msgstr "Πήρες το BFG9000! ο, ΝΑΊ."
+
+msgid "GOTCHAINGUN"
+msgstr "Πήρες το πολυβόλο."
+
+msgid "GOTCHAINSAW"
+msgstr "Ένα αλυσοπρίονο! Βρες κρέας!"
+
+msgid "GOTLAUNCHER"
+msgstr "Πήρες το πυραβλοβόλο."
+
+msgid "GOTPLASMA"
+msgstr "Πήρες το όπλο πλάσματος!"
+
+msgid "GOTSHOTGUN"
+msgstr "Πήρες το ντουφέκι!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Πήρες το διπλό ντουφέκι!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Πήρες ενα πιστόλι."
+
+msgid "BETA_BONUS1"
+msgstr "Πήρες ένα δαιμονικό μαχαίρι."
+
+msgid "BETA_BONUS2"
+msgstr "Πήρες ένα κρανομπαούλο."
+
+msgid "BETA_BONUS3"
+msgstr "Πήρες το μοχθηρό σκήπτρο."
+
+msgid "BETA_BONUS4"
+msgstr "Πήρες τήν ανίερη βίβλο."
+
+msgid "PD_BLUEO"
+msgstr "Χρειάζεσε ένα μπλέ κλειδί για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_REDO"
+msgstr "Χρειάζεσε ένα κόκινο κλειδί για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_YELLOWO"
+msgstr ""
+"Χρειάζεσε ένα κύτρινο κλειδί για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_BLUEK"
+msgstr "Χρειάζεσε ένα μπλέ κλειδί για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_REDK"
+msgstr "Χρειάζεσε ένα κόκινο κλειδί για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_YELLOWK"
+msgstr "Χρειάζεσε ένα κύτρινο κλειδί για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_BLUECO"
+msgstr "Χρειάζεσε μια μπλέ κάρτα για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_REDCO"
+msgstr "Χρειάζεσε μια κόκινη κάρτα για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_YELLOWCO"
+msgstr "Χρειάζεσε μια κύτρινη κάρτα για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_BLUESO"
+msgstr "Χρειάζεσε ένα μπλέ κρανιο για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_REDSO"
+msgstr "Χρειάζεσε ένα κόκινο κρανιο για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_YELLOWSO"
+msgstr ""
+"Χρειάζεσε ένα κύτρινο κρανιο για να ενεργοποίησεις αυτο το αντικείμενο"
+
+msgid "PD_BLUEC"
+msgstr "Χρειάζεσε μια μπλέ κάρτα για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_REDC"
+msgstr "Χρειάζεσε μια κόκινη κάρτα για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_YELLOWC"
+msgstr "Χρειάζεσε μια κύτρινη κάρτα για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_BLUES"
+msgstr "Χρειάζεσε ένα μπλέ κρανίο για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_REDS"
+msgstr "Χρειάζεσε ένα κόκινο κρανίο για να ανοίξεις αυτή τη πόρτα"
+
+msgid "PD_YELLOWS"
+msgstr "Χρειάζεσε ένα κύτρινο κρανίο για να ανοίξεις αυτή τη πόρτα"
+
+msgid "CC_ZOMBIE"
+msgstr "Ζόμπι"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Τύπος με ντουφέκι"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Τύπος με βαρί όπλο"
+
+msgid "CC_IMP"
+msgstr "Διάβολος"
+
+msgid "CC_DEMON"
+msgstr "Δαίμονας"
+
+msgid "CC_LOST"
+msgstr "Χαμένη Ξυχή"
+
+msgid "CC_CACO"
+msgstr "Κακοδαίμονας"
+
+msgid "CC_HELL"
+msgstr "Ιππότης της Κόλασης"
+
+msgid "CC_BARON"
+msgstr "Βαρώνος της Κολασης"
+
+msgid "CC_ARACH"
+msgstr "Αράχνοτρον"
+
+msgid "CC_PAIN"
+msgstr "Στοιχείομα του Πόνου"
+
+msgid "CC_REVEN"
+msgstr "Εκδικητής"
+
+msgid "CC_MANCU"
+msgstr "Χοντρός"
+
+msgid "CC_ARCH"
+msgstr "Νεκρομάντις"
+
+msgid "CC_SPIDER"
+msgstr "Το Αραχνό Ιθύνων Νους"
+
+msgid "CC_CYBER"
+msgstr "Ο Cyber-δαίμονας"
+
+msgid "CC_HERO"
+msgstr "Ο ήρωας μας"
+
+msgid "FN_SHOTGUN"
+msgstr "Λοχίας"
+
+msgid "FN_HEAVY"
+msgstr "Πολυβόλο Ζόμπι"
+
+msgid "FN_SPECTRE"
+msgstr "Φάντασμα"
+
+msgid "FN_SPIDER"
+msgstr "Αραχνό Ιθύνων Νους"
+
+msgid "FN_CYBER"
+msgstr "Cyber-δαίμονας"
+
+msgid "FN_WOLFSS"
+msgstr "Ναζιστής"
+
+msgid "FN_DOG"
+msgstr "Σκύλος"
+
+msgid "TAG_FIST"
+msgstr "Γροθιά"
+
+msgid "TAG_CHAINSAW"
+msgstr "Αλλησοπρίονο"
+
+msgid "TAG_PISTOL"
+msgstr "Πιστόλι"
+
+msgid "TAG_SHOTGUN"
+msgstr "Ντουφέκι"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Διπλό Ντουφέκι"
+
+msgid "TAG_CHAINGUN"
+msgstr "Πολυβόλο"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Πυραυλοβόλο"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Πλάσμα Όπλο"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Σφαίρες"
+
+msgid "AMMO_SHELLS"
+msgstr "Σφαίρες Ντουφεκιού"
+
+msgid "AMMO_ROCKETS"
+msgstr "Πύραυλοι"
+
+msgid "AMMO_CELLS"
+msgstr "Κύτταρα Ενέργιας"
+
+msgid "OB_STEALTHBABY"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Αραχνοτρόν."
+
+msgid "OB_STEALTHVILE"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Νεκρομάντη"
+
+msgid "OB_STEALTHBARON"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Βαρώνο της Κόλασης."
+
+msgid "OB_STEALTHCACO"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Κακοδαίμονα."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Ζόμπι με ένα πολυβόλο."
+
+msgid "OB_STEALTHDEMON"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα δαίμονα."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "@[art_gr] %o νόμιζε οτι είδε έναν Ιππότη της Κόλασης."
+
+msgid "OB_STEALTHIMP"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Διάβολο."
+
+msgid "OB_STEALTHFATSO"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Χοντρό."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Εκδικητή."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Λοχία."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Ζόμπι."
+
+msgid "OB_UNDEADHIT"
+msgstr "@[art_gr] %o έφαγε μια μπουνία απο έναν Εκδικητή."
+
+msgid "OB_IMPHIT"
+msgstr "@[art_gr] %o κόπηκε απο ενα Διάβολο."
+
+msgid "OB_CACOHIT"
+msgstr "@[art_gr] %o ήτανε πολυ κοντά σε ένα Κακοδαίμονα."
+
+msgid "OB_DEMONHIT"
+msgstr "@[art_gr] %o δαγκόθηκε απο ένα Δαίμονα."
+
+msgid "OB_SPECTREHIT"
+msgstr "Ένα φάντασμα έφαγε @[pro_gr] %o."
+
+msgid "OB_BARONHIT"
+msgstr "@[art_gr] %o σχίστηκε απο εναν Βαρώνο της Κόλασης."
+
+msgid "OB_KNIGHTHIT"
+msgstr "@[art_gr] %o ξεκοιλιάστηκε απο έναν Ιππότη της Κόλασης."
+
+msgid "OB_ZOMBIE"
+msgstr "@[art_gr] %o σκοτώθηκε απο ένα Ζόμπι."
+
+msgid "OB_SHOTGUY"
+msgstr "Ένας Λοχίας πυροβόλησε @[pro_gr] %o."
+
+msgid "OB_VILE"
+msgstr "@[art_gr] %o αποτεφρώθηκε απο ένα Νεκρομάντη."
+
+msgid "OB_UNDEAD"
+msgstr "@[art_gr] %o δέν μπορούσε να αποφείγει τον πύραυλο ενός Εκδικητή."
+
+msgid "OB_FATSO"
+msgstr "@[art_gr] %o λιόθηκε απο έναν Χοντρό."
+
+msgid "OB_CHAINGUY"
+msgstr "@[art_gr] %o εκτελέστικε απο ένα Ζόμπι με ένα πολυβόλο."
+
+msgid "OB_SKULL"
+msgstr "Μια Χαμένη Ξυχή φόβησε @[pro_gr] %o."
+
+msgid "OB_IMP"
+msgstr "@[art_gr] %o κάικε απο έναν Διάβολο."
+
+msgid "OB_CACO"
+msgstr "@[art_gr] %o καίκε απο έναν Κακοδαίμονα."
+
+msgid "OB_BARON"
+msgstr "@[art_gr] %o γρατζουνήθηκε απο ένα Βαρώνο της Κόλασης."
+
+msgid "OB_KNIGHT"
+msgstr "@[art_gr] %o απλώθηκε απο έναν Ιππότη της Κόλασης"
+
+msgid "OB_SPIDER"
+msgstr "@[art_gr] %o στάθηκε με δέος μπροστά στόν αραχνοδαίμονα."
+
+msgid "OB_BABY"
+msgstr "@[art_gr] %o άφησε ένα Αράχνοτρον να @[pro_gr] σκοτώσει."
+
+msgid "OB_CYBORG"
+msgstr "@[art_gr] %o έσκασε απο ένα Cyber-δαίμονα."
+
+msgid "OB_WOLFSS"
+msgstr "@[art_gr] %o χνώρισε ένα Ναζιστή."
+
+msgid "OB_DOG"
+msgstr "@[art_gr] %o φαγόθικε απο ένα σκύλο."
+
+msgid "OB_MPFIST"
+msgstr "@[art_gr] %o μάσησε τη γροθία του/της %k."
+
+msgid "OB_MPCHAINSAW"
+msgstr "@[art_gr] %o κόπηκε απο το αλλησοπρίονο του/της %k."
+
+msgid "OB_MPPISTOL"
+msgstr "@[art_gr] %o γαργαλίθηκε απο το οπλάκι του/της %k."
+
+msgid "OB_MPSHOTGUN"
+msgstr "@[art_gr] %o έφαγε το ντουφέκι του/της %k."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "@[art_gr] %o διαλύθηκε απο το διπλό ντουφέκι του/της %k"
+
+msgid "OB_MPCHAINGUN"
+msgstr "@[art_gr] %o κοματίαστηκε απο το πολυβόλο του/της %k."
+
+msgid "OB_MPROCKET"
+msgstr "@[art_gr] %o καβάλησε τον πύραυλο του/της %k."
+
+msgid "OB_MPR_SPLASH"
+msgstr "@[art_gr] %o σχεδόν απόφηγε τον πύραυλο του/της %k."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "@[art_gr] %o λίοθηκε απο το πλάσμα όπλο του/της %k."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "@[art_gr] %o κοματιάστηκε απο το BFG του/της %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "@[art_gr] %o δέν μπόρεσε να κρυφτέι απο το BFG του/της %k."
+
+msgid "OB_RAILGUN"
+msgstr "@[art_gr] %o καρφόθηκε απο τον/την %k."
+
+msgid "OB_MPBFG_MBF"
+msgstr "@[art_gr] %o κάικε απο το BFG του/της %k."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Μπλέ Κλειδί"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Κύτρινο Κλειδί"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Πράσινο Κλειδί"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Φλάσκα Χαλαζίας"
+
+msgid "TXT_ARTIFLY"
+msgstr "Φτερά της Οργής"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Δαχτυλίδι της Αθανασίας"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Τομός της Δύναμης"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Σκιόσφαιρα"
+
+msgid "TXT_ARTIEGG"
+msgstr "Μετασχηματίζοντικο Ωάριο"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Μυστικό Δοχείο"
+
+msgid "TXT_ARTITORCH"
+msgstr "Πυρσός"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Χρονοβόμβα τον Αρχαίων"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Συσκευή του Χάος"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Κρυσταλλικό Φιάλιδο"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Τσάντα Κρατησης"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Ασημένια Ασπίδα"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr ""
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr ""
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr ""
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr ""
+
+msgid "TXT_AMMOMACE1"
+msgstr ""
+
+msgid "TXT_AMMOMACE2"
+msgstr ""
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr ""
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr ""
+
+msgid "TXT_AMMOBLASTER1"
+msgstr ""
+
+msgid "TXT_AMMOBLASTER2"
+msgstr ""
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr ""
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr ""
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr ""
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr ""
+
+msgid "TXT_WPNGOLDWAND"
+msgstr ""
+
+msgid "TXT_WPNMACE"
+msgstr ""
+
+msgid "TXT_WPNCROSSBOW"
+msgstr ""
+
+msgid "TXT_WPNBLASTER"
+msgstr ""
+
+msgid "TXT_WPNSKULLROD"
+msgstr ""
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr ""
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr ""
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Χρειάζεσε ένα μπλέ κλειδί για να ενεργοποίησεις αυτη τη πόρτα"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Χρειάζεσε ένα πράσινο κλειδί για να ενεργοποίησεις αυτη τη πόρτα"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Χρειάζεσε ένα κύτρινο κλειδί για να ενεργοποίησεις αυτη τη πόρτα"
+
+msgid "FN_CHICKEN"
+msgstr "Κότα"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Θηρίο"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr ""
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr ""
+
+msgid "FN_IRONLICH"
+msgstr ""
+
+msgid "FN_BONEKNIGHT"
+msgstr "Αθάνατος Πολεμιστής"
+
+msgid "FN_MINOTAUR"
+msgstr "Μινόταυρος"
+
+msgid "FN_MUMMY"
+msgstr ""
+
+msgid "FN_MUMMYLEADER"
+msgstr ""
+
+msgid "FN_SNAKE"
+msgstr ""
+
+msgid "FN_WIZARD"
+msgstr "Μάγος"
+
+msgid "AMMO_GOLDWAND"
+msgstr ""
+
+msgid "AMMO_CROSSBOW"
+msgstr ""
+
+msgid "AMMO_BLASTER"
+msgstr ""
+
+msgid "AMMO_MACE"
+msgstr ""
+
+msgid "AMMO_SKULLROD"
+msgstr ""
+
+msgid "AMMO_PHOENIXROD"
+msgstr ""
+
+msgid "TAG_STAFF"
+msgstr "Ράβδος"
+
+msgid "TAG_GOLDWAND"
+msgstr ""
+
+msgid "OB_CHICKEN"
+msgstr ""
+
+msgid "OB_BEAST"
+msgstr ""
+
+msgid "OB_CLINK"
+msgstr ""
+
+msgid "OB_DSPARIL1"
+msgstr ""
+
+msgid "OB_DSPARIL1HIT"
+msgstr ""
+
+msgid "OB_DSPARIL2"
+msgstr ""
+
+msgid "OB_DSPARIL2HIT"
+msgstr ""
+
+msgid "OB_HERETICIMP"
+msgstr ""
+
+msgid "OB_HERETICIMPHIT"
+msgstr ""
+
+msgid "OB_IRONLICH"
+msgstr ""
+
+msgid "OB_IRONLICHHIT"
+msgstr ""
+
+msgid "OB_BONEKNIGHT"
+msgstr ""
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr ""
+
+msgid "OB_MINOTAUR"
+msgstr ""
+
+msgid "OB_MINOTAURHIT"
+msgstr ""
+
+msgid "OB_MUMMY"
+msgstr ""
+
+msgid "OB_MUMMYLEADER"
+msgstr ""
+
+msgid "OB_SNAKE"
+msgstr ""
+
+msgid "OB_WIZARD"
+msgstr ""
+
+msgid "OB_WIZARDHIT"
+msgstr ""
+
+msgid "OB_MPSTAFF"
+msgstr ""
+
+msgid "OB_MPGAUNTLETS"
+msgstr ""
+
+msgid "OB_MPGOLDWAND"
+msgstr ""
+
+msgid "OB_MPCROSSBOW"
+msgstr ""
+
+msgid "OB_MPBLASTER"
+msgstr ""
+
+msgid "OB_MPSKULLROD"
+msgstr ""
+
+msgid "OB_MPPHOENIXROD"
+msgstr ""
+
+msgid "OB_MPMACE"
+msgstr ""
+
+msgid "OB_MPPSTAFF"
+msgstr ""
+
+msgid "OB_MPPGAUNTLETS"
+msgstr ""
+
+msgid "OB_MPPGOLDWAND"
+msgstr ""
+
+msgid "OB_MPPCROSSBOW"
+msgstr ""
+
+msgid "OB_MPPBLASTER"
+msgstr ""
+
+msgid "OB_MPPSKULLROD"
+msgstr ""
+
+msgid "OB_MPPPHOENIXROD"
+msgstr ""
+
+msgid "OB_MPPMACE"
+msgstr ""
+
+msgid "TXT_MANA_1"
+msgstr ""
+
+msgid "TXT_MANA_2"
+msgstr ""
+
+msgid "TXT_MANA_BOTH"
+msgstr ""
+
+msgid "TXT_KEY_STEEL"
+msgstr "Ατσάλινο Κλειδί"
+
+msgid "TXT_KEY_CAVE"
+msgstr ""
+
+msgid "TXT_KEY_AXE"
+msgstr ""
+
+msgid "TXT_KEY_FIRE"
+msgstr ""
+
+msgid "TXT_KEY_EMERALD"
+msgstr ""
+
+msgid "TXT_KEY_DUNGEON"
+msgstr ""
+
+msgid "TXT_KEY_SILVER"
+msgstr "Ασυμένιο Κλειδί"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Σκουριασμένο Κλειδί"
+
+msgid "TXT_KEY_HORN"
+msgstr ""
+
+msgid "TXT_KEY_SWAMP"
+msgstr ""
+
+msgid "TXT_KEY_CASTLE"
+msgstr ""
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr ""
+
+msgid "TXT_ARTISUMMON"
+msgstr ""
+
+msgid "TXT_ARTIEGG2"
+msgstr ""
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr ""
+
+msgid "TXT_ARTISPEED"
+msgstr ""
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr ""
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr ""
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr ""
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr ""
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr ""
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr ""
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr ""
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr ""
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr ""
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr ""
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr ""
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr ""
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr ""
+
+msgid "TXT_ARMOR1"
+msgstr ""
+
+msgid "TXT_ARMOR2"
+msgstr ""
+
+msgid "TXT_ARMOR3"
+msgstr ""
+
+msgid "TXT_ARMOR4"
+msgstr ""
+
+msgid "TXT_WEAPON_F2"
+msgstr ""
+
+msgid "TXT_WEAPON_F3"
+msgstr ""
+
+msgid "TXT_WEAPON_F4"
+msgstr ""
+
+msgid "TXT_WEAPON_C2"
+msgstr ""
+
+msgid "TXT_WEAPON_C3"
+msgstr ""
+
+msgid "TXT_WEAPON_C4"
+msgstr ""
+
+msgid "TXT_WEAPON_M2"
+msgstr ""
+
+msgid "TXT_WEAPON_M3"
+msgstr ""
+
+msgid "TXT_WEAPON_M4"
+msgstr ""
+
+msgid "TXT_WEAPONPIECE"
+msgstr ""
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr ""
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr ""
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr ""
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Χρειάζεσε το Ατσάλινο κλειδί."
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr ""
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr ""
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr ""
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr ""
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr ""
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Χρειάζεσε το Ασυμένιο κλειδί."
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Χρειάζεσε το Σκουριασμένο κλειδί."
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr ""
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr ""
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr ""
+
+msgid "FN_FIREDEMON"
+msgstr ""
+
+msgid "FN_DEMON1"
+msgstr ""
+
+msgid "FN_ETTIN"
+msgstr ""
+
+msgid "FN_CENTAUR"
+msgstr ""
+
+msgid "FN_SLAUGHTAUR"
+msgstr ""
+
+msgid "FN_BISHOP"
+msgstr ""
+
+msgid "FN_ICEGUY"
+msgstr ""
+
+msgid "FN_SERPENT"
+msgstr ""
+
+msgid "FN_WRAITH"
+msgstr ""
+
+msgid "FN_DRAGON"
+msgstr ""
+
+msgid "FN_KORAX"
+msgstr ""
+
+msgid "FN_FBOSS"
+msgstr ""
+
+msgid "FN_MBOSS"
+msgstr ""
+
+msgid "FN_CBOSS"
+msgstr ""
+
+msgid "FN_HERESIARCH"
+msgstr ""
+
+msgid "AMMO_MANA1"
+msgstr ""
+
+msgid "AMMO_MANA2"
+msgstr ""
+
+msgid "TAG_CWEAPMACE"
+msgstr ""
+
+msgid "TAG_CWEAPSTAFF"
+msgstr ""
+
+msgid "TAG_CWEAPFLAME"
+msgstr ""
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr ""
+
+msgid "TAG_FWEAPFIST"
+msgstr ""
+
+msgid "TAG_FWEAPAXE"
+msgstr ""
+
+msgid "TAG_FWEAPHAMMER"
+msgstr ""
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr ""
+
+msgid "TAG_MWEAPWAND"
+msgstr ""
+
+msgid "TAG_MWEAPFROST"
+msgstr ""
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr ""
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr ""
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr ""
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr ""
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr ""
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr ""
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr ""
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr ""
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr ""
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr ""
+
+msgid "TAG_ARTIDEFENDER"
+msgstr ""
+
+msgid "TAG_ARTIPORK"
+msgstr ""
+
+msgid "TAG_ARTISPEED"
+msgstr ""
+
+msgid "TAG_ARTISUMMON"
+msgstr ""
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr ""
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr ""
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr ""
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr ""
+
+msgid "OB_FIREDEMON"
+msgstr ""
+
+msgid "OB_DEMON1"
+msgstr ""
+
+msgid "OB_DEMON2"
+msgstr ""
+
+msgid "OB_ETTIN"
+msgstr ""
+
+msgid "OB_CENTAUR"
+msgstr ""
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr ""
+
+msgid "OB_SLAUGHTAUR"
+msgstr ""
+
+msgid "OB_BISHOP"
+msgstr ""
+
+msgid "OB_ICEGUY"
+msgstr ""
+
+msgid "OB_SERPENTHIT"
+msgstr ""
+
+msgid "OB_SERPENT"
+msgstr ""
+
+msgid "OB_WRAITH"
+msgstr ""
+
+msgid "OB_WRAITHHIT"
+msgstr ""
+
+msgid "OB_DRAGON"
+msgstr ""
+
+msgid "OB_KORAX"
+msgstr ""
+
+msgid "OB_FBOSS"
+msgstr ""
+
+msgid "OB_MBOSS"
+msgstr ""
+
+msgid "OB_CBOSS"
+msgstr ""
+
+msgid "OB_HERESIARCH"
+msgstr ""
+
+msgid "OB_MPFWEAPFIST"
+msgstr ""
+
+msgid "OB_MPFWEAPAXE"
+msgstr ""
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr ""
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr ""
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr ""
+
+msgid "OB_MPCWEAPMACE"
+msgstr ""
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr ""
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr ""
+
+msgid "OB_MPCWEAPFLAME"
+msgstr ""
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr ""
+
+msgid "OB_MPMWEAPWAND"
+msgstr ""
+
+msgid "OB_MPMWEAPFROST"
+msgstr ""
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr ""
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr ""
+
+msgid "TXT_METALARMOR"
+msgstr "Πήρες τη Μεταληκή Πανοπλία."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Πήρες τη Δερμάτινη Πανοπλία."
+
+msgid "TXT_MEDPATCH"
+msgstr ""
+
+msgid "TXT_MEDICALKIT"
+msgstr ""
+
+msgid "TXT_SURGERYKIT"
+msgstr ""
+
+msgid "TXT_STRIFEMAP"
+msgstr "Πήρες το χάρτη."
+
+msgid "TXT_BELDINSRING"
+msgstr "Πήρες το Δακτύλιο."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr ""
+
+msgid "TXT_EAR"
+msgstr "Πήρες το αυτί."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr ""
+
+msgid "TXT_SHADOWARMOR"
+msgstr ""
+
+msgid "TXT_ENVSUIT"
+msgstr ""
+
+msgid "TXT_GUARDUNIFORM"
+msgstr ""
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr ""
+
+msgid "TXT_FTHROWERPARTS"
+msgstr ""
+
+msgid "TXT_REPORT"
+msgstr ""
+
+msgid "TXT_INFO"
+msgstr "Πήρες της πληροφορίες"
+
+msgid "TXT_TARGETER"
+msgstr "Πήρες τον Στοχευτή."
+
+msgid "TXT_COMMUNICATOR"
+msgstr ""
+
+msgid "TXT_COIN"
+msgstr "Πήρες το κέρμα."
+
+msgid "TXT_XGOLD"
+msgstr ""
+
+msgid "TXT_BEACON"
+msgstr ""
+
+msgid "TXT_DEGNINORE"
+msgstr ""
+
+msgid "TXT_SCANNER"
+msgstr "Πήρες το σαρωτή."
+
+msgid "TXT_NEEDMAP"
+msgstr "Ο σαρωτής δέν θα δουλέψει χωρίς ένα χάρτη!"
+
+msgid "TXT_PRISONPASS"
+msgstr ""
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Πήρες το τόξο"
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Πήρες το πολυβόλο."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Πήρες το μίνι πυραυλοβόλο."
+
+msgid "TXT_FLAMER"
+msgstr "Πήρες το φλογοβόλο."
+
+msgid "TXT_MAULER"
+msgstr ""
+
+msgid "TXT_GLAUNCHER"
+msgstr "Πήρες το εκτοξευτη χειροβομβίδων."
+
+msgid "TXT_SIGIL"
+msgstr ""
+
+msgid "TXT_BASEKEY"
+msgstr ""
+
+msgid "TXT_GOVSKEY"
+msgstr ""
+
+msgid "TXT_PASSCARD"
+msgstr ""
+
+msgid "TXT_IDBADGE"
+msgstr ""
+
+msgid "TXT_PRISONKEY"
+msgstr ""
+
+msgid "TXT_SEVEREDHAND"
+msgstr ""
+
+msgid "TXT_POWER1KEY"
+msgstr ""
+
+msgid "TXT_POWER2KEY"
+msgstr ""
+
+msgid "TXT_POWER3KEY"
+msgstr ""
+
+msgid "TXT_GOLDKEY"
+msgstr ""
+
+msgid "TXT_IDCARD"
+msgstr ""
+
+msgid "TXT_SILVERKEY"
+msgstr ""
+
+msgid "TXT_ORACLEKEY"
+msgstr ""
+
+msgid "TXT_MILITARYID"
+msgstr ""
+
+msgid "TXT_ORDERKEY"
+msgstr ""
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr ""
+
+msgid "TXT_BRASSKEY"
+msgstr ""
+
+msgid "TXT_REDCRYSTAL"
+msgstr ""
+
+msgid "TXT_BLUECRYSTAL"
+msgstr ""
+
+msgid "TXT_CHAPELKEY"
+msgstr ""
+
+msgid "TXT_CATACOMBKEY"
+msgstr ""
+
+msgid "TXT_SECURITYKEY"
+msgstr ""
+
+msgid "TXT_COREKEY"
+msgstr ""
+
+msgid "TXT_MAULERKEY"
+msgstr ""
+
+msgid "TXT_FACTORYKEY"
+msgstr ""
+
+msgid "TXT_MINEKEY"
+msgstr ""
+
+msgid "TXT_NEWKEY5"
+msgstr ""
+
+msgid "TXT_ORACLEPASS"
+msgstr ""
+
+msgid "TXT_HEGRENADES"
+msgstr ""
+
+msgid "TXT_PHGRENADES"
+msgstr ""
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Πήρες το κουτάκι με σφαίρες."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Πήρες το κουτί με σφαίρες."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Πήρες τους μινι-πυράυλους."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Πήρες το κιβώτιο με πυράυλους."
+
+msgid "TXT_ENERGYPOD"
+msgstr ""
+
+msgid "TXT_ENERGYPACK"
+msgstr ""
+
+msgid "TXT_POISONBOLTS"
+msgstr ""
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr ""
+
+msgid "TXT_AMMOSATCHEL"
+msgstr ""
+
+msgid "MSG_TALISMANRED"
+msgstr ""
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Οτιδήποτε είναι, δέν είναι απο αυτό τον κόσμο..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Πρέπει να κάνι κάτι..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr ""
+
+msgid "TXT_NEEDKEY"
+msgstr "Δέν έχεις το κλειδί"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr ""
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr ""
+
+msgid "TXT_NEED_IDCARD"
+msgstr ""
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr ""
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr ""
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr ""
+
+msgid "TXT_NEED_IDBADGE"
+msgstr ""
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr ""
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr ""
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr ""
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr ""
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr ""
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Αυτή η περιοχή είναι μονο διαθέσημη στήν εγραμμένη έκδοση του Strife"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr ""
+
+msgid "TXT_NEED_CHALICE"
+msgstr ""
+
+msgid "TXT_NEED_OPASS"
+msgstr ""
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Μαχάιρι"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Τόξο (Δηλητήριο)"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Τόξο (Ηλεκτρικό)"
+
+msgid "TAG_ASSAULTGUN"
+msgstr ""
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Μίνι-Πυραυλοβόλο"
+
+msgid "TAG_FLAMER"
+msgstr ""
+
+msgid "TAG_MAULER1"
+msgstr ""
+
+msgid "TAG_MAULER2"
+msgstr ""
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr ""
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr ""
+
+msgid "TAG_SIGIL"
+msgstr ""
+
+msgid "TAG_COIN"
+msgstr ""
+
+msgid "TAG_MEDPATCH"
+msgstr ""
+
+msgid "TAG_MEDICALKIT"
+msgstr ""
+
+msgid "TAG_SURGERYKIT"
+msgstr ""
+
+msgid "TAG_BELDINSRING"
+msgstr ""
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr ""
+
+msgid "TAG_EAR"
+msgstr ""
+
+msgid "TAG_BROKENCOUPLING"
+msgstr ""
+
+msgid "TAG_SHADOWARMOR"
+msgstr ""
+
+msgid "TAG_ENVSUIT"
+msgstr ""
+
+msgid "TAG_GUARDUNIFORM"
+msgstr ""
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr ""
+
+msgid "TAG_FTHROWERPARTS"
+msgstr ""
+
+msgid "TAG_REPORT"
+msgstr ""
+
+msgid "TAG_INFO"
+msgstr ""
+
+msgid "TAG_TARGETER"
+msgstr ""
+
+msgid "TAG_COMMUNICATOR"
+msgstr ""
+
+msgid "TAG_DEGNINORE"
+msgstr ""
+
+msgid "TAG_GUNTRAINING"
+msgstr ""
+
+msgid "TAG_HEALTHTRAINING"
+msgstr ""
+
+msgid "TAG_SCANNER"
+msgstr ""
+
+msgid "TAG_PRISONPASS"
+msgstr ""
+
+msgid "TAG_ALARM"
+msgstr ""
+
+msgid "TAG_AMMOFILLUP"
+msgstr ""
+
+msgid "TAG_HEALTHFILLUP"
+msgstr ""
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr ""
+
+msgid "TAG_METALARMOR"
+msgstr ""
+
+msgid "TAG_LEATHER"
+msgstr ""
+
+msgid "TAG_HEGRENADES"
+msgstr ""
+
+msgid "TAG_PHGRENADES"
+msgstr ""
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr ""
+
+msgid "TAG_BOXOFBULLETS"
+msgstr ""
+
+msgid "TAG_MINIMISSILES"
+msgstr ""
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr ""
+
+msgid "TAG_ENERGYPOD"
+msgstr ""
+
+msgid "TAG_ENERGYPACK"
+msgstr ""
+
+msgid "TAG_POISONBOLTS"
+msgstr ""
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr ""
+
+msgid "TAG_AMMOSATCHEL"
+msgstr ""
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr ""
+
+msgid "TAG_GOVSKEY"
+msgstr ""
+
+msgid "TAG_PASSCARD"
+msgstr ""
+
+msgid "TAG_IDBADGE"
+msgstr ""
+
+msgid "TAG_PRISONKEY"
+msgstr ""
+
+msgid "TAG_SEVEREDHAND"
+msgstr ""
+
+msgid "TAG_POWER1KEY"
+msgstr ""
+
+msgid "TAG_POWER2KEY"
+msgstr ""
+
+msgid "TAG_POWER3KEY"
+msgstr ""
+
+msgid "TAG_GOLDKEY"
+msgstr ""
+
+msgid "TAG_IDCARD"
+msgstr ""
+
+msgid "TAG_SILVERKEY"
+msgstr ""
+
+msgid "TAG_ORACLEKEY"
+msgstr ""
+
+msgid "TAG_MILITARYID"
+msgstr ""
+
+msgid "TAG_ORDERKEY"
+msgstr ""
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr ""
+
+msgid "TAG_BRASSKEY"
+msgstr ""
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr ""
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr ""
+
+msgid "TAG_CHAPELKEY"
+msgstr ""
+
+msgid "TAG_CATACOMBKEY"
+msgstr ""
+
+msgid "TAG_SECURITYKEY"
+msgstr ""
+
+msgid "TAG_COREKEY"
+msgstr ""
+
+msgid "TAG_MAULERKEY"
+msgstr ""
+
+msgid "TAG_FACTORYKEY"
+msgstr ""
+
+msgid "TAG_MINEKEY"
+msgstr ""
+
+msgid "TAG_NEWKEY5"
+msgstr ""
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr ""
+
+msgid "TAG_10GOLD"
+msgstr ""
+
+msgid "TAG_25GOLD"
+msgstr ""
+
+msgid "TAG_50GOLD"
+msgstr ""
+
+msgid "TAG_300GOLD"
+msgstr ""
+
+msgid "TXT_PERSON"
+msgstr ""
+
+msgid "TAG_ACOLYTE"
+msgstr ""
+
+msgid "TAG_ARMORER"
+msgstr ""
+
+msgid "TAG_BARKEEP"
+msgstr ""
+
+msgid "TAG_BEGGAR"
+msgstr ""
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr ""
+
+msgid "TAG_ORACLE"
+msgstr ""
+
+msgid "TAG_PRIEST"
+msgstr ""
+
+msgid "TAG_RATBUDDY"
+msgstr ""
+
+msgid "TAG_REBEL"
+msgstr ""
+
+msgid "TAG_TEMPLAR"
+msgstr ""
+
+msgid "TAG_WEAPONSMITH"
+msgstr ""
+
+msgid "TAG_TALISMANRED"
+msgstr ""
+
+msgid "TAG_TALISMANGREEN"
+msgstr ""
+
+msgid "TAG_TALISMANBLUE"
+msgstr ""
+
+msgid "OB_ACOLYTE"
+msgstr ""
+
+msgid "OB_MACIL"
+msgstr ""
+
+msgid "OB_REBEL"
+msgstr ""
+
+msgid "OB_BEGGAR"
+msgstr ""
+
+msgid "OB_PEASANT"
+msgstr ""
+
+msgid "OB_ALIENSPECTRE"
+msgstr ""
+
+msgid "OB_ENTITY"
+msgstr ""
+
+msgid "OB_LOREMASTER"
+msgstr ""
+
+msgid "OB_PROGRAMMER"
+msgstr ""
+
+msgid "OB_STFBISHOP"
+msgstr ""
+
+msgid "OB_SENTINEL"
+msgstr ""
+
+msgid "OB_CRUSADER"
+msgstr ""
+
+msgid "OB_INQUISITOR"
+msgstr ""
+
+msgid "OB_STALKER"
+msgstr ""
+
+msgid "OB_TURRET"
+msgstr ""
+
+msgid "OB_TEMPLARHIT"
+msgstr ""
+
+msgid "OB_TEMPLAR"
+msgstr ""
+
+msgid "OB_REAVERHIT"
+msgstr ""
+
+msgid "OB_REAVER"
+msgstr ""
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr ""
+
+msgid "OB_MPELECTRICBOLT"
+msgstr ""
+
+msgid "OB_MPPOISONBOLT"
+msgstr ""
+
+msgid "OB_MPASSAULTGUN"
+msgstr ""
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr ""
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr ""
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr ""
+
+msgid "OB_MPFLAMETHROWER"
+msgstr ""
+
+msgid "OB_MPMAULER1"
+msgstr ""
+
+msgid "OB_MPMAULER"
+msgstr ""
+
+msgid "OB_MPSIGIL"
+msgstr ""
+
+msgid "TXT_STRIFE_EPI"
+msgstr ""
+
+msgid "TXT_FREED_PRISONERS"
+msgstr ""
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr ""
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr ""
+
+msgid "TXT_QUEST_14"
+msgstr ""
+
+msgid "TXT_QUEST_16"
+msgstr ""
+
+msgid "TXT_QUEST_27"
+msgstr ""
+
+msgid "TXT_KILLED_BISHOP"
+msgstr ""
+
+msgid "TXT_KILLED_ORACLE"
+msgstr ""
+
+msgid "TXT_KILLED_MACIL"
+msgstr ""
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr ""
+
+msgid "TXT_YOUFOOL"
+msgstr ""
+
+msgid "TXT_YOUREDEAD"
+msgstr ""
+
+msgid "TXT_HAVEENOUGH"
+msgstr ""
+
+msgid "TXT_GOAWAY"
+msgstr ""
+
+msgid "TXT_COMM0"
+msgstr ""
+
+msgid "TXT_COMM1"
+msgstr ""
+
+msgid "TXT_FINDHELP"
+msgstr ""
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr ""
+
+msgid "GOTCHEXARMOR"
+msgstr ""
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr ""
+
+msgid "GOTWATER"
+msgstr ""
+
+msgid "GOTREPELLENT"
+msgstr ""
+
+msgid "GOTBREAKFAST"
+msgstr ""
+
+msgid "GOTCBLUEKEY"
+msgstr ""
+
+msgid "GOTCYELLOWKEY"
+msgstr ""
+
+msgid "GOTCREDKEY"
+msgstr ""
+
+msgid "GOTFRUIT"
+msgstr ""
+
+msgid "GOTVEGETABLESNEED"
+msgstr ""
+
+msgid "GOTVEGETABLES"
+msgstr ""
+
+msgid "GOTSLIMESUIT"
+msgstr ""
+
+msgid "GOTCHEXMAP"
+msgstr ""
+
+msgid "GOTZORCHRECHARGE"
+msgstr ""
+
+msgid "GOTMINIZORCHPACK"
+msgstr ""
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr ""
+
+msgid "GOTPROPULSORPACK"
+msgstr ""
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr ""
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr ""
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr ""
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr ""
+
+msgid "GOTZORCHPACK"
+msgstr ""
+
+msgid "GOTLAZDEVICE"
+msgstr ""
+
+msgid "GOTRAPIDZORCHER"
+msgstr ""
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr ""
+
+msgid "GOTZORCHPROPULSOR"
+msgstr ""
+
+msgid "GOTPHASINGZORCHER"
+msgstr ""
+
+msgid "GOTLARGEZORCHER"
+msgstr ""
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr ""
+
+msgid "GOTMINIZORCHER"
+msgstr ""
+
+msgid "TAG_SPOON"
+msgstr ""
+
+msgid "TAG_SPORK"
+msgstr ""
+
+msgid "TAG_MINIZORCHER"
+msgstr ""
+
+msgid "TAG_LARGEZORCHER"
+msgstr ""
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr ""
+
+msgid "TAG_RAPIDZORCHER"
+msgstr ""
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr ""
+
+msgid "TAG_PHASINGZORCHER"
+msgstr ""
+
+msgid "TAG_LAZDEVICE"
+msgstr ""
+
+msgid "OB_COMMONUS"
+msgstr ""
+
+msgid "OB_BIPEDICUS"
+msgstr ""
+
+msgid "OB_BIPEDICUS2"
+msgstr ""
+
+msgid "OB_CYCLOPTIS"
+msgstr ""
+
+msgid "OB_FLEMBRANE"
+msgstr ""
+
+msgid "OB_MPSPOON"
+msgstr ""
+
+msgid "OB_MPBOOTSPORK"
+msgstr ""
+
+msgid "OB_MPZORCH"
+msgstr ""
+
+msgid "OB_MPMEGAZORCH"
+msgstr ""
+
+msgid "OB_MPRAPIDZORCH"
+msgstr ""
+
+msgid "OB_MPPROPULSOR"
+msgstr ""
+
+msgid "OB_MPP_SPLASH"
+msgstr ""
+
+msgid "OB_MPPHASEZORCH"
+msgstr ""
+
+msgid "OB_MPLAZ_BOOM"
+msgstr ""
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr ""
+
+msgid "CHUSTR_E1M1"
+msgstr ""
+
+msgid "CHUSTR_E1M2"
+msgstr ""
+
+msgid "CHUSTR_E1M3"
+msgstr ""
+
+msgid "CHUSTR_E1M4"
+msgstr ""
+
+msgid "CHUSTR_E1M5"
+msgstr ""
+
+msgid "CE1TEXT"
+msgstr ""
+
+msgid "CE2TEXT"
+msgstr ""
+
+msgid "CE3TEXT"
+msgstr ""
+
+msgid "CE4TEXT"
+msgstr ""
+
+msgid "CLOADNET"
+msgstr ""
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+
+msgid "CNEWGAME"
+msgstr ""
+
+msgid "CNIGHTMARE"
+msgstr ""
+
+msgid "CSWSTRING"
+msgstr ""
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr ""
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr ""
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr ""
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr ""
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr ""
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr ""
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr ""
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr ""
+
+msgid "MNU_NEWGAME"
+msgstr "Νέο Παιχνίδι"
+
+msgid "MNU_OPTIONS"
+msgstr "Ρυθμίσεις"
+
+msgid "MNU_GAMEFILES"
+msgstr "Αρχεία Παιχνιδιού"
+
+msgid "MNU_INFO"
+msgstr "Πληροφορίες"
+
+msgid "MNU_QUITGAME"
+msgstr "Έξοδος"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Επίλεξε ΔυσκολΊα:"
+
+msgid "SKILL_BABY"
+msgstr "Είμαι πολύ νεαρός για να πεθάνω!"
+
+msgid "SKILL_EASY"
+msgstr "Όχι πολύ δύσκολο"
+
+msgid "SKILL_NORMAL"
+msgstr "Πόνεσε με"
+
+msgid "SKILL_HARD"
+msgstr "Ύπερ-Βία"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Εφιάλτης!"
+
+msgid "CSKILL_BABY"
+msgstr ""
+
+msgid "CSKILL_EASY"
+msgstr ""
+
+msgid "CSKILL_NORMAL"
+msgstr ""
+
+msgid "CSKILL_HARD"
+msgstr ""
+
+msgid "CSKILL_NIGHTMARE"
+msgstr ""
+
+msgid "SSKILL_BABY"
+msgstr "Eκπαίδευση"
+
+msgid "SSKILL_EASY"
+msgstr "Αρχάριος"
+
+msgid "SSKILL_NORMAL"
+msgstr ""
+
+msgid "SSKILL_HARD"
+msgstr ""
+
+msgid "SSKILL_NIGHTMARE"
+msgstr ""
+
+msgid "MNU_WETNURSE"
+msgstr ""
+
+msgid "MNU_YELLOWBELLIES"
+msgstr ""
+
+msgid "MNU_BRINGEST"
+msgstr ""
+
+msgid "MNU_SMITE"
+msgstr ""
+
+msgid "MNU_BLACKPLAGUE"
+msgstr ""
+
+msgid "MNU_SQUIRE"
+msgstr ""
+
+msgid "MNU_KNIGHT"
+msgstr "Ιππότης"
+
+msgid "MNU_WARRIOR"
+msgstr "Πολεμιστής"
+
+msgid "MNU_BERSERKER"
+msgstr ""
+
+msgid "MNU_TITAN"
+msgstr "Τιτάνας"
+
+msgid "MNU_ALTARBOY"
+msgstr ""
+
+msgid "MNU_ACOLYTE"
+msgstr ""
+
+msgid "MNU_PRIEST"
+msgstr ""
+
+msgid "MNU_CARDINAL"
+msgstr ""
+
+msgid "MNU_POPE"
+msgstr "Πάπας"
+
+msgid "MNU_APPRENTICE"
+msgstr ""
+
+msgid "MNU_ENCHANTER"
+msgstr ""
+
+msgid "MNU_SORCERER"
+msgstr ""
+
+msgid "MNU_WARLOCK"
+msgstr ""
+
+msgid "MNU_ARCHMAGE"
+msgstr ""
+
+msgid "MNU_CHOOSECLASS"
+msgstr ""
+
+msgid "MNU_FIGHTER"
+msgstr ""
+
+msgid "MNU_CLERIC"
+msgstr ""
+
+msgid "MNU_MAGE"
+msgstr ""
+
+msgid "MNU_RANDOM"
+msgstr ""
+
+msgid "MNU_EPISODE"
+msgstr ""
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr ""
+
+msgid "MNU_COTD"
+msgstr ""
+
+msgid "MNU_HELLSMAW"
+msgstr ""
+
+msgid "MNU_DOME"
+msgstr ""
+
+msgid "MNU_OSSUARY"
+msgstr ""
+
+msgid "MNU_DEMESNE"
+msgstr ""
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr ""
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr ""
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr ""
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr ""
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr ""
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr ""
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr ""
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr ""
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr ""
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr ""
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr ""
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr ""
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr ""
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr ""
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr ""
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr ""
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr ""
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr ""
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr ""
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr ""
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr ""
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr ""
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr ""
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr ""
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr ""
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr ""
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr ""
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr ""
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr ""
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr ""
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr ""
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr ""
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr ""
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr ""
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr ""
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr ""
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr ""
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr ""
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr ""
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr ""
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr ""
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr ""
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr ""
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr ""
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr ""
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr ""
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr ""
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr ""
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Ρυθμίσεις Συμβατότητας"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Ρυθμίσεις Συμβατότητας"
+
+msgid "CMPTMNU_MODE"
+msgstr ""
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr ""
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr ""
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr ""
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr ""
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr ""
+
+msgid "CMPTMNU_DROPOFF"
+msgstr ""
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr ""
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr ""
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr ""
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr ""
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr ""
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr ""
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr ""
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr ""
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr ""
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr ""
+
+msgid "CMPTMNU_LIGHT"
+msgstr ""
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr ""
+
+msgid "CMPTMNU_STAIRS"
+msgstr ""
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr ""
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr ""
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr ""
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr ""
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr ""
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr ""
+
+msgid "CMPTMNU_BADANGLES"
+msgstr ""
+
+msgid "CMPTMNU_WALLRUN"
+msgstr ""
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr ""
+
+msgid "CMPTMNU_TRACE"
+msgstr ""
+
+msgid "CMPTMNU_HITSCAN"
+msgstr ""
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr ""
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr ""
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr ""
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr ""
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr ""
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr ""
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr ""
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr ""
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr ""
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr ""
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr ""
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr ""
+
+msgid "CMPTMNU_TELEPORT"
+msgstr ""
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr ""
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr ""
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Ενεργοποιηση σπασμένης συμπεριφοράς καγκέλον για το Strife"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Καθόλου κατακόρυφη ώθηση απο εκρήξεις"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Συμπεριφορά εκρήξεων απο το πρωτότυπο Doom"
+
+msgid "PLYRMNU_RED"
+msgstr ""
+
+msgid "PLYRMNU_GREEN"
+msgstr ""
+
+msgid "PLYRMNU_BLUE"
+msgstr ""
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr ""
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr ""
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr ""
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr ""
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr ""
+
+msgid "PLYRMNU_SEEBACK"
+msgstr ""
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr ""
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Ζοομ"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Κατάσταση Όπλου 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Κατάσταση Όπλου 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Κατάσταση Όπλου 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Κατάσταση Όπλου 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Πέτα/Κολύμπα πάνω"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Πέτα/Κολύμπα κάτω"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Σταμάτα πέταμα"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Κατακόρυφο κοίταχμα (Πλητρoλόγιο)"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr ""
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Πές στην ομάδα"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Πέτα Aντικείμενο"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr ""
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Πέτα Όπλο"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Άλλα"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr ""
+
+msgid "CNTRLMNU_POPUPS"
+msgstr ""
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Στόχοι Αποστολής"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Λίστα Κλειδιών"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Οπλα/Πυρομαχικά/Στατιστικές"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Ενεργοποίηση Πίνακα Σκόρ"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr ""
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr ""
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr ""
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr ""
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr ""
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr ""
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr ""
+
+msgid "MSGMNU_TITLE"
+msgstr ""
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr ""
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr ""
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr ""
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr ""
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr ""
+
+msgid "MSGMNU_OBITUARIES"
+msgstr ""
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_DEVELOPER"
+msgstr ""
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr ""
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr ""
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr ""
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr ""
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr ""
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr ""
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr ""
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr ""
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr ""
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr ""
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr ""
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr ""
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr ""
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr ""
+
+msgid "SCRBRDMNU_TITLE"
+msgstr ""
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr ""
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr ""
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr ""
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr ""
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr ""
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr ""
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr ""
+
+msgid "ALTHUDMNU_TITLE"
+msgstr ""
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr ""
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr ""
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr ""
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr ""
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr ""
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr ""
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr ""
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr ""
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr ""
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr ""
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr ""
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr ""
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr ""
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr ""
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr ""
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr ""
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr ""
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr ""
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr ""
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr ""
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr ""
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr ""
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr ""
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr ""
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr ""
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr ""
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr ""
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr ""
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr ""
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr ""
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr ""
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr ""
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr ""
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr ""
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr ""
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr ""
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr ""
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr ""
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr ""
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr ""
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr ""
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr ""
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr ""
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr ""
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr ""
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr ""
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr ""
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr ""
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr ""
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr ""
+
+msgid "SCALEMNU_TITLE"
+msgstr ""
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr ""
+
+msgid "SCALEMNU_MESSAGES"
+msgstr ""
+
+msgid "SCALEMNU_CONSOLE"
+msgstr ""
+
+msgid "SCALEMNU_STATBAR"
+msgstr ""
+
+msgid "SCALEMNU_HUD"
+msgstr ""
+
+msgid "SCALEMNU_ALTHUD"
+msgstr ""
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr ""
+
+msgid "SCALEMNU_USEUI"
+msgstr ""
+
+msgid "SCALEMNU_USEFS"
+msgstr ""
+
+msgid "SCALEMNU_ADAPT"
+msgstr ""
+
+msgid "HUDMNU_TITLE"
+msgstr ""
+
+msgid "HUDMNU_ALTHUD"
+msgstr ""
+
+msgid "HUDMNU_MESSAGE"
+msgstr ""
+
+msgid "HUDMNU_UISCALE"
+msgstr ""
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr ""
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr ""
+
+msgid "HUDMNU_NAMETAGS"
+msgstr ""
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr ""
+
+msgid "HUDMNU_OLDOUCH"
+msgstr ""
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr ""
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr ""
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr ""
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr ""
+
+msgid "HUDMNU_SCALEOPT"
+msgstr ""
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr ""
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr ""
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr ""
+
+msgid "MISCMNU_DEHLOAD"
+msgstr ""
+
+msgid "MISCMNU_CACHENODES"
+msgstr ""
+
+msgid "MISCMNU_CACHETIME"
+msgstr ""
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr ""
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr ""
+
+msgid "NETMNU_TITLE"
+msgstr ""
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr ""
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr ""
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr ""
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr ""
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr ""
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr ""
+
+msgid "NETMNU_EXTRATICS"
+msgstr ""
+
+msgid "NETMNU_TICBALANCE"
+msgstr ""
+
+msgid "OPTVAL_ORIGINAL"
+msgstr ""
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr ""
+
+msgid "OPTVAL_CLASSIC"
+msgstr ""
+
+msgid "OPTVAL_PRECISE"
+msgstr ""
+
+msgid "OPTVAL_CAPPED"
+msgstr ""
+
+msgid "OPTVAL_PARTICLES"
+msgstr ""
+
+msgid "OPTVAL_SPRITES"
+msgstr ""
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr ""
+
+msgid "OPTVAL_MELT"
+msgstr ""
+
+msgid "OPTVAL_BURN"
+msgstr ""
+
+msgid "OPTVAL_CROSSFADE"
+msgstr ""
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr ""
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr ""
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr ""
+
+msgid "OPTVAL_FUZZ"
+msgstr ""
+
+msgid "OPTVAL_SHADOW"
+msgstr ""
+
+msgid "OPTVAL_ITEMS"
+msgstr ""
+
+msgid "OPTVAL_WEAPONS"
+msgstr ""
+
+msgid "OPTVAL_BOTH"
+msgstr ""
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr ""
+
+msgid "OPTVAL_MAP"
+msgstr ""
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr ""
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr ""
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr ""
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr ""
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr ""
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr ""
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr ""
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr ""
+
+msgid "OPTVAL_LEVEL"
+msgstr ""
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr ""
+
+msgid "OPTVAL_HUB"
+msgstr ""
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr ""
+
+msgid "OPTVAL_TOTAL"
+msgstr ""
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr ""
+
+msgid "OPTVAL_SYSTEM"
+msgstr ""
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr ""
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr ""
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr ""
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr ""
+
+msgid "OPTVAL_ALL"
+msgstr ""
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr ""
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr ""
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr ""
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr ""
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr ""
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr ""
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr ""
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr ""
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr ""
+
+msgid "OPTVAL_FRONT"
+msgstr ""
+
+msgid "OPTVAL_ANIMATED"
+msgstr ""
+
+msgid "OPTVAL_ROTATED"
+msgstr ""
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr ""
+
+msgid "OPTVAL_NODOORS"
+msgstr ""
+
+msgid "OPTVAL_DOUBLE"
+msgstr ""
+
+msgid "OPTVAL_TRIPLE"
+msgstr ""
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr ""
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr ""
+
+msgid "OPTVAL_OBITUARIES"
+msgstr ""
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr ""
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr ""
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr ""
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr ""
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr ""
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr ""
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr ""
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr ""
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr ""
+
+msgid "OPTVAL_ERRORS"
+msgstr ""
+
+msgid "OPTVAL_WARNINGS"
+msgstr ""
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr ""
+
+msgid "OPTVAL_EVERYTHING"
+msgstr ""
+
+msgid "OPTVAL_HWPOLY"
+msgstr ""
+
+msgid "OPTVAL_SWDOOM"
+msgstr ""
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr ""
+
+msgid "OPTVAL_DEDICATED"
+msgstr ""
+
+msgid "OPTVAL_INTEGRATED"
+msgstr ""
+
+msgid "OPTVAL_VANILLA"
+msgstr ""
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr ""
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr ""
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr ""
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr ""
+
+msgid "OPTVAL_SMALL"
+msgstr ""
+
+msgid "OPTVAL_LARGE"
+msgstr ""
+
+msgid "OPTVAL_CONSOLE"
+msgstr ""
+
+msgid "C_BRICK"
+msgstr ""
+
+msgid "C_TAN"
+msgstr ""
+
+msgid "C_GRAY"
+msgstr ""
+
+msgid "C_GREEN"
+msgstr ""
+
+msgid "C_BROWN"
+msgstr ""
+
+msgid "C_GOLD"
+msgstr ""
+
+msgid "C_RED"
+msgstr ""
+
+msgid "C_BLUE"
+msgstr ""
+
+msgid "C_ORANGE"
+msgstr ""
+
+msgid "C_WHITE"
+msgstr ""
+
+msgid "C_YELLOW"
+msgstr ""
+
+msgid "C_DEFAULT"
+msgstr ""
+
+msgid "C_BLACK"
+msgstr ""
+
+msgid "C_LIGHTBLUE"
+msgstr ""
+
+msgid "C_CREAM"
+msgstr ""
+
+msgid "C_OLIVE"
+msgstr ""
+
+msgid "C_DARKGREEN"
+msgstr ""
+
+msgid "C_DARKRED"
+msgstr ""
+
+msgid "C_DARKBROWN"
+msgstr ""
+
+msgid "C_PURPLE"
+msgstr ""
+
+msgid "C_DARKGRAY"
+msgstr ""
+
+msgid "C_CYAN"
+msgstr ""
+
+msgid "C_ICE"
+msgstr ""
+
+msgid "C_FIRE"
+msgstr ""
+
+msgid "C_SAPPHIRE"
+msgstr ""
+
+msgid "C_TEAL"
+msgstr ""
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr ""
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr ""
+
+msgid "OPTSTR_SPLINE"
+msgstr ""
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr ""
+
+msgid "DSPLYMNU_SWOPT"
+msgstr ""
+
+msgid "GLMNU_TITLE"
+msgstr ""
+
+msgid "GLMNU_DYNLIGHT"
+msgstr ""
+
+msgid "GLMNU_PREFS"
+msgstr ""
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr ""
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr ""
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr ""
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr ""
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr ""
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr ""
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr ""
+
+msgid "GLPREFMNU_ENV"
+msgstr ""
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr ""
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr ""
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr ""
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr ""
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr ""
+
+msgid "GLPREFMNU_VRMODE"
+msgstr ""
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr ""
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr ""
+
+msgid "GLPREFMNU_VRIPD"
+msgstr ""
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr ""
+
+msgid "OPTVAL_SMART"
+msgstr ""
+
+msgid "OPTVAL_SMARTER"
+msgstr ""
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr ""
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr ""
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr ""
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr ""
+
+msgid "OPTVAL_BLEND"
+msgstr ""
+
+msgid "OPTVAL_BRIGHT"
+msgstr ""
+
+msgid "OPTVAL_DARK"
+msgstr ""
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr ""
+
+msgid "OPTVAL_OPTIMAL"
+msgstr ""
+
+msgid "OPTVAL_YAXIS"
+msgstr ""
+
+msgid "OPTVAL_XYAXIS"
+msgstr ""
+
+msgid "OPTVAL_SQUARE"
+msgstr ""
+
+msgid "OPTVAL_ROUND"
+msgstr ""
+
+msgid "OPTVAL_RADIAL"
+msgstr "Ακτινικό"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Pixel θολούρα"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Ομαλή θολούρα"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Περιστροφηκή θολούρα"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Ημιδιαφανής θολούρα"
+
+msgid "OPTVAL_NOISE"
+msgstr "Ήχος"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Ομαλός ήχος"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Ζαρομένη θολούρα"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Πράσινο/Magenta"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Κόκινο/Κυανό"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Amber/Μπλέ"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Αριστερό μάτι"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Δεξί μάτι"
+
+msgid "OPTVAL_SBSFULL"
+msgstr ""
+
+msgid "OPTVAL_SBSNARROW"
+msgstr ""
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Πάνω/Κάτω"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr ""
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr ""
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr ""
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr ""
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "TrueColor Ρυθμίσεις"
+
+msgid "TCMNU_TITLE"
+msgstr "TrueColor Ρυθμίσεις"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "TrueColor παραγωγή"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Γραμμικό φίλτρο για σμίκρυνση"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Γραμμικό φίλτρο για πολυτέληση"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Χρήση mipmapped υφών"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Δυναμικά φώτα (Λογισμικό)"
+
+msgid "OS_TITLE"
+msgstr "Αναζήτηση Ρυθμίσεων"
+
+msgid "OS_ANY"
+msgstr "Αναζήτηση για όποιαδηποτε λέξη"
+
+msgid "OS_ALL"
+msgstr "Αναζήτηση για όλες  της λέξεις"
+
+msgid "OS_NO_RESULTS"
+msgstr "Δέν βρέθηκαν αποτελέσματα"
+
+msgid "OS_LABEL"
+msgstr "Αναζήτηση:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Εμφάνιση πλήκτρων πάντα"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Η αλαγγή ομάδον απαγορεύεται!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "@[art_gr] %s έγινε μέλος τής %t ομάδας"
+
+msgid "TXT_LONER"
+msgstr "@[art_gr] %s είναι τώρα μόνο/ς/η @[pro4_gr]"
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "@[art_gr] %s έφυγε με %d κοματιασμόυς"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "@[art_gr] %s έφυγε"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Το αρχείο αποθήκευσης %s δέν μπόρε να φορτωθεί"
+
+msgid "TXT_NOINFOJSON"
+msgstr "Το %s δεν είναι ένα έγκυρο αρχείο αποθήκευσης: Το info.json λείπει"
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Η πρόσβαση πληροφοριών του αρχείου αποθήκευσης %s δέν ήταν επιτυχής"
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Το αρχείο αποθήκευσης %s είναι απο μια ασύμβατη έκδοση"
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Το αρχείο αποθήκευσης %s είναι απο μια άλλη ZDoom βασισμένη μηχανή"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Το αρχείο αποθήκευσης %s είναι απο την %d έκδοση (H %e είναι η παλιότερη "
+"υποστηριζώμενη)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Το αρχείο αποθήκευσης %s είναι απο μια πιο καινούρια έκδοση: %d (Η %e είναι "
+"η πιο καινούρια που υποστηρίζεται)"
+
+msgid "TXT_NOMAPSG"
+msgstr "Το αρχείο αποθήκευσης %s δέν έχει την τωρινή πίστα"
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "Το %s δεν είναι ένα έγκυρο αρχείο αποθήκευσης: Το globals.json λείπει"
+
+msgid "TXT_SGINFOERR"
+msgstr "Η πρόσβαση πληροφοριών του αρχείου αποθήκευσης %s δέν ήταν επιτυχής"
+
+msgid "TXT_SAVEPENDING"
+msgstr "Μια αποθήκευση παιχνιδίου είναι ακόμα σε αναμονή"
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Δέν είσαι σε ένα παιχνίδει που μπορεί να αποθηκευτεί"
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Δέν ε'ισαι σε μια πίστα"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Ο παίχτης έιναι νεκρός σε ένα singleplayer παιχνίδι"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Η αποθήκευση απέτυχε"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Ένα screenshot δέν μπόρεσε να τραβυχτεί"
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "Απο @[pro_gr] %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Πάτα οποιοδήποτε πλήκτρο ή πάτα οπουδήποτε για να κάνεις έξοδο"
+
+msgid "HUDMNU_FLASH"
+msgstr "Ρυθμίσεις Ανάμειξης Οθόνης"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D λειτουργία"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr ""
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Υπότιτλοι"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Απότρεξη γρί σκιών"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Ρυθμίσεις Γραμματοσειρών"
+
+msgid "FONTMNU_LOG"
+msgstr "Χρησιμοποίηση πρότυπης γραμματοσειράς για προβολή ημερολόγιου"
+
+msgid "FONTMNU_DLG"
+msgstr "Χρησιμοποίηση πρότυπης γραμματοσειράς"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Γρήγορη Έξοδος"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Προσαρμοσμένος Ανάποδος Χάρτης"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Προσαρμοσμένος Ανάποδο Χρώμα Σκοτεινό"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Προσαρμοσμένος Ανάποδο Χρώμα Φωτεινό"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr ""
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr ""
+
+msgid "SCALEMNU_INTER"
+msgstr ""
+
+msgid "SCALEMNU_BORDER"
+msgstr ""
+
+msgid "SCALEMNU_FACTOR"
+msgstr ""
+
+msgid "SCALEMNU_RATIO"
+msgstr ""
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr ""
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr ""
+
+msgid "OPTVAL_NOTHUBS"
+msgstr ""
+
+msgid "OPTVAL_WITHHUBS"
+msgstr ""
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr ""
+
+msgid "OPTVAL_CLASSICZ"
+msgstr ""
+
+msgid "OPTVAL_MODERN"
+msgstr ""
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr ""
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr ""
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr ""
+
+msgid "MISCMNU_WIPERCENT"
+msgstr ""
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr ""
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Πολίτης"
+
+msgid "TAG_CEILINGTURRET"
+msgstr ""
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr ""
+
+msgid "TAG_INQUISITOR"
+msgstr ""
+
+msgid "TAG_PEASANT"
+msgstr "Χωρικός"
+
+msgid "TAG_REAVER"
+msgstr ""
+
+msgid "TAG_SENTINEL"
+msgstr ""
+
+msgid "TAG_STALKER"
+msgstr ""
+
+msgid "TAG_BISHOP"
+msgstr ""
+
+msgid "TAG_ENTITY"
+msgstr "Ο ένας Θεός"
+
+msgid "TAG_PROGRAMMER"
+msgstr ""
+
+msgid "TAG_ALIENSPECTRE"
+msgstr ""
+
+msgid "TAG_KNEELINGGUY"
+msgstr ""
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr ""
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr ""
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Τέρατα και παίχτες"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr ""
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Απενεργοποίηση MBF21 λειτουργιών"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr ""
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Συνθλιμένα τέρατα αναστήνοντε ως φαντάσματα"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr ""
+
+msgid "OB_DEMON1HIT"
+msgstr ""
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr ""
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr ""
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr ""
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr ""
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr ""
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr ""
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr ""
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr ""
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr ""
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr ""
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr ""
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr ""
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr ""
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr ""
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr ""
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr ""
+
+msgid "ID24_GOTINCINERATOR"
+msgstr ""
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr ""
+
+msgid "ID24_GOTFUELCAN"
+msgstr ""
+
+msgid "ID24_GOTFUELTANK"
+msgstr ""
+
+msgid "TAG_ID24INCINERATOR"
+msgstr ""
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr ""
+
+msgid "AMMO_ID24FUEL"
+msgstr ""
+
+msgid "AMMO_ID24FUELTANK"
+msgstr ""
+
+msgid "ID24_CC_GHOUL"
+msgstr ""
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr ""
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr ""
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""

@@ -1,0 +1,196 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: fi\n"
+
+msgid "NIGHTMARE"
+msgstr "Uskotko todella pystyväsi tähän?\\n\\nPaina 'Y' tai 'N'..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Paikka merkitty"
+
+msgid "PD_BLUEO"
+msgstr "Tarvitsee VIHREÄN avainkortin"
+
+msgid "PD_REDO"
+msgstr "Tarvitsee VIOLETIN avainkortin"
+
+msgid "PD_YELLOWO"
+msgstr "Tarvitsee KELTAISEN avainkortin"
+
+msgid "PD_BLUEK"
+msgstr "Tarvitsee VIHREÄN avaimen"
+
+msgid "PD_YELLOWK"
+msgstr "Tarvitsee KELTAISEN avaimen"
+
+msgid "PD_REDK"
+msgstr "Tarvitsee VIOLETIN avaimen"
+
+msgid "GOTARMOR"
+msgstr "Panssari poimittu."
+
+msgid "GOTMEGA"
+msgstr "Taistelupanssari poimittu."
+
+msgid "GOTMSPHERE"
+msgstr "Superterveys"
+
+msgid "GOTBLUECARD"
+msgstr "VIHREÄ avainkortti poimittu."
+
+msgid "GOTYELWCARD"
+msgstr "KELTAINEN avainkortti poimittu."
+
+msgid "GOTREDCARD"
+msgstr "VIOLETTI avainkortti poimittu."
+
+msgid "GOTBLUESKUL"
+msgstr "VIHREÄ avain poimittu."
+
+msgid "GOTYELWSKUL"
+msgstr "KELTAINEN avain poimittu."
+
+msgid "GOTREDSKUL"
+msgstr "VIOLETTI avain poimittu."
+
+msgid "GOTSTIM"
+msgstr "Lääkesieni"
+
+msgid "GOTMEDIKIT"
+msgstr "Saatu: lääkintälaukku."
+
+msgid "GOTMEDINEED"
+msgstr "Saatu: lääkintälaukku, jota TODELLA tarvitsit."
+
+msgid "GOTMAP"
+msgstr "Kartta"
+
+msgid "GOTCLIPBOX"
+msgstr "Saatu: luotilaatikko."
+
+msgid "GOTROCKET"
+msgstr "Saatu: kranaatti."
+
+msgid "GOTROCKBOX"
+msgstr "Saatu: kranaatteja."
+
+msgid "GOTSHELLBOX"
+msgstr "Saatu: laatikollinen haulikon patruunoita."
+
+msgid "GOTBACKPACK"
+msgstr "Saatu: ammusreppu."
+
+msgid "GOTBFG9000"
+msgstr "Saatu: kranaatti."
+
+msgid "GOTCHAINGUN"
+msgstr "Saatu: minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Saatu: kranaatinheitin."
+
+msgid "GOTPLASMA"
+msgstr "Entropianheitin!"
+
+msgid "GOTSHOTGUN"
+msgstr "Saatu: haulikko."
+
+msgid "STSTR_DQDON"
+msgstr "Kuolemattomuustila PÄÄLLÄ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Kuolemattomuustila POIS PÄÄLTÄ"
+
+msgid "STSTR_KFAADDED"
+msgstr "Kaikki aseet/ ammukset/ avaimet"
+
+msgid "STSTR_FAADDED"
+msgstr "Kaikki aseet ja ammukset"
+
+msgid "TXT_HARMMAP01"
+msgstr "Sieppaus"
+
+msgid "TXT_HARMMAP02"
+msgstr "Vaara"
+
+msgid "TXT_HARMMAP03"
+msgstr "Nollatunnelma"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopoli"
+
+msgid "TXT_HARMMAP05"
+msgstr "Sairaala"
+
+msgid "TXT_HARMMAP06"
+msgstr "Asetehdas"
+
+msgid "TXT_HARMMAP07"
+msgstr "Vedenalainen laboratorio"
+
+msgid "TXT_HARMMAP08"
+msgstr "Kiitorata Yksi"
+
+msgid "TXT_HARMMAP09"
+msgstr "Laukaisutukikohta"
+
+msgid "TXT_HARMMAP10"
+msgstr "Radioaktiivinen vyöhyke"
+
+msgid "TXT_HARMMAP11"
+msgstr "Nokkasiili"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Vatsaasi vääntää...\n"
+"Katsot mutanttikuningattaren kasvoihin...\n"
+"Tuo olio... Se oli ennen...\n"
+"Ystäväsi... Amira!\n"
+"\n"
+"Noiden hirviöiden on täytynyt onnistua\n"
+"mutatoida ja muuttaa hänet täksi hirveäksi\n"
+"olennoksi kantamaan niiden jälkeläisiä.\n"
+"\n"
+"-huokaus-\n"
+"\n"
+"Kokoat itsesi...\n"
+"Ne saavat maksaa siitä hyvästä, että\n"
+"pakottivat sinut tappamaan ystäväsi...\n"
+"\n"
+"\"Ei tunne helvetti petetyn naisen kiivautta!\"\n"
+"\n"
+"\t = L O P P U ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Ladattavana"
+
+msgid "SKILL_BABY"
+msgstr "Erittäin helppo"
+
+msgid "SKILL_EASY"
+msgstr "Helppo"
+
+msgid "SKILL_NORMAL"
+msgstr "Keskivaikea"
+
+msgid "SKILL_HARD"
+msgstr "Vaikea"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Erittäin vaikea"
+
+msgid "HARMQUITMSG"
+msgstr "Kiitos pelaamisesta"
+
+msgid "TXT_D2E1"
+msgstr "Harmonia"

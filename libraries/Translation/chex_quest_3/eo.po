@@ -1,0 +1,277 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: eo\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Vi trovis bluan mukŝlosilon."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Vi trovis flavan mukŝlosilon."
+
+msgid "GOTREDFLEM"
+msgstr "Vi trovis ruĝan mukŝlosilon."
+
+msgid "GOTGOGGLES"
+msgstr "Vi trovis plejajn okulvitrojn."
+
+msgid "PD_BLUECO"
+msgstr ""
+"Vi bezonas bluan ŝlosilon\n"
+"por aktivigi ĉi tiun objekton."
+
+msgid "PD_REDCO"
+msgstr ""
+"Vi bezonas ruĝan ŝlosilon\n"
+"por aktivigi ĉi tiun objekton."
+
+msgid "PD_YELLOWCO"
+msgstr ""
+"Vi bezonas flavan ŝlosilon\n"
+"por aktivigi ĉi tiun objekton."
+
+msgid "PD_BLUEFO"
+msgstr ""
+"Vi bezonas bluan mukŝlosilon\n"
+"por aktivigi ĉi tiun objekton."
+
+msgid "PD_REDFO"
+msgstr ""
+"Vi bezonas ruĝan mukŝlosilon\n"
+"por aktivigi ĉi tiun objekton."
+
+msgid "PD_YELLOWFO"
+msgstr ""
+"Vi bezonas flavan mukŝlosilon\n"
+"por aktivigi ĉi tiun objekton."
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Vi trovis zorĉilon."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorĉaĵo kaj ŝlosiloj aldonitaj"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Surteriĝejo"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Stokejo"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorio"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arbejo"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Kavernoj de Bazojko"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Kosmo-haveno"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Kinejo"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Chex-muzeo"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Urbstratoj"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Defluilego-sistemo"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Centra komandejo"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Uniaj Cerealoj"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Vilao Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provinca parko"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteor-kosmoŝipo"
+
+msgid "CC_ZOMBIE"
+msgstr "Oftmukulo"
+
+msgid "CC_SHOTGUN"
+msgstr "Dupiedmukulo"
+
+msgid "CC_IMP"
+msgstr "Kirasa Dupiedmukulo"
+
+msgid "CC_DEMON"
+msgstr "Paŝmukulo"
+
+msgid "CC_LOST"
+msgstr "Muksentinelo"
+
+msgid "CC_CACO"
+msgstr "Supera Ciklopmukulo"
+
+msgid "CC_BARON"
+msgstr "Mukulestro"
+
+msgid "CC_SPIDER"
+msgstr "Mukabomeno"
+
+msgid "CC_CYBER"
+msgstr "Lordo Mukplenulo"
+
+msgid "CC_HERO"
+msgstr "Chex-batalisto"
+
+msgid "PD_BLUEC"
+msgstr ""
+"Vi bezonas bluan ŝlosilon\n"
+"por malfermi ĉi tiun pordon."
+
+msgid "PD_REDC"
+msgstr ""
+"Vi bezonas ruĝan ŝlosilon\n"
+"por malfermi ĉi tiun pordon."
+
+msgid "PD_YELLOWC"
+msgstr ""
+"Vi bezonas flavan ŝlosilon\n"
+"por malfermi ĉi tiun pordon."
+
+msgid "PD_BLUEF"
+msgstr ""
+"Vi bezonas bluan mukŝlosilon\n"
+"por malfermi ĉi tiun pordon."
+
+msgid "PD_REDF"
+msgstr ""
+"Vi bezonas ruĝan mukŝlosilon\n"
+"por malfermi ĉi tiun pordon."
+
+msgid "PD_YELLOWF"
+msgstr ""
+"Vi bezonas flavan mukŝlosilon\n"
+"por malfermi ĉi tiun pordon."
+
+msgid "OB_SLIME"
+msgstr "%o sinkas en ŝlimon."
+
+msgid "OB_LAVA"
+msgstr "%o sinkas en ŝlimon."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o estis trafita de interdimensia ŝlimo!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o estis trafita de interdimensia ŝlimo!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o estis mukigita de Paŝmukulo."
+
+msgid "OB_FLEMMINE"
+msgstr "%o estis glukovrita de Muksentinelo."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o estis ŝlimigita de Supera Ciklopmukulo."
+
+msgid "OB_MAXIMUS"
+msgstr "%o estis venkita de Mukulestro."
+
+msgid "OB_LARVA"
+msgstr "%o estis glukovrita de larvo."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o estis ŝlimigita de kvarbrakmukulo."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o estis venkita de la Mukabomeno."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o estis venkita de Lordo Mukplenulo."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o estis trafita de la propulsilo de %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o estis LAZ-ita de %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Post resendis la monstran Mukmembranon\n"
+"al lia propra dimensio, vi liberigas\n"
+"la kaptitojn. Sed mukuloj estas ĉie! \n"
+"Vi kaj la kaptitoj kuras al via kosmoŝipo. \n"
+"Kvankam la mukuloj ŝlimigas vian ŝipon,\n"
+"vi apenaŭ eskapas en orbiton.\n"
+"Dum via reveno, vi estas laŭdata pro la\n"
+"maltima savo, sed vi proklamas averton...\n"
+"Ni ne vidis la mukulojn je la fina fojo.\n"
+"\n"
+"Vi fine korektas, ĉar kiam vi revenas hejmen,\n"
+"vi vidas, ke la mukuloj iel sekvis vin ĉi tien.\n"
+"Pretu por Chex Quest 2: Teruro en Chex-urbo!"
+
+msgid "E2TEXT"
+msgstr ""
+"Vi zorĉas la ceterajn mukulojn, kiu\n"
+"kunvenis en la defluiego. Chex-urbo\n"
+"estas savita. Ŝajnas, ke la manaco de\n"
+"la mukuloj fine finis.\n"
+"\n"
+"Dek jaroj pasis en paco kaj prosperado,\n"
+"sed la mukuloj ne malvenkiĝis kaj ili\n"
+"ne malkreskis ilian volon de regi \n"
+"la nutroabundan cereal-dimension.\n"
+"Ili grupigis ĉiom da iliaj trupoj, \n"
+"malfermitis grandegan interdimensian\n"
+"fendon en kosmo, kaj nun granda bulo \n"
+"de ŝlimo iras direkte al la planeto de\n"
+"la cerealoj!\n"
+"\n"
+"Pretu por\n"
+"Chex Quest 3: Invado!"
+
+msgid "E3TEXT"
+msgstr ""
+"Per unu fina eksplodo, vi zorĉas\n"
+"Lordon Mukplenulon al lia propra\n"
+"dimensio! Malgraŭ ĉioj kontraŭaĵoj\n"
+"vi sola vanigis la invadon!\n"
+"\n"
+"Vi vere esperas, ke la mukuloj fine\n"
+"lernis ilian lecionon kaj neniam plu\n"
+"revenos al la cerealdimension.\n"
+"\n"
+"\n"
+"\n"
+"Sed se ili revenos, vi scias,\n"
+"ke vi estos preta por ili."
+
+msgid "M_EPI1"
+msgstr "Savo sur Bazojko"
+
+msgid "M_EPI2"
+msgstr "Teruro en Chex-Urbo"
+
+msgid "M_EPI3"
+msgstr "Invado!"
+
+msgid "TAG_GOGGLES"
+msgstr "Plejaj okulvitroj"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Blua mukŝlosilo"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Flava mukŝlosilo"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Ruĝa mukŝlosilo"

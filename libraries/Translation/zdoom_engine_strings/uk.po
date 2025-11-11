@@ -1,0 +1,5210 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: uk\n"
+
+msgid "PRESSKEY"
+msgstr "Натисніть будь яку клавішу."
+
+msgid "SECRETMESSAGE"
+msgstr "Знайдено схованку!"
+
+msgid "D_DEVSTR"
+msgstr "Увімкнено режим розробника"
+
+msgid "QUITMSG"
+msgstr "Ти дійсно хочеш вийти з цієї прекрасної гри?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Неможливо завантажити збереження під час мережевої гри!\n"
+"\n"
+"Натисніть будь яку клавішу."
+
+msgid "QLOADNET"
+msgstr ""
+"Неможливо завантажити швидке збереження під час мережевої гри!\n"
+"\n"
+"Натисніть будь яку клавішу."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Не вибраний слот для швидкого збереження!\n"
+"\n"
+"Натисніть будь яку клавішу."
+
+msgid "NEWGAME"
+msgstr ""
+"Ви не можете розпочати нову гру під час мережевої гри.\n"
+"\n"
+"Натисніть будь яку клавішу."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Впевнений? Цей рівень складності навіть близько не стоїть до чесного.\n"
+"\n"
+"Натисніть Y або N."
+
+msgid "SWSTRING"
+msgstr ""
+"Це демонстраційна версія Doom.\n"
+"\n"
+"Вам потрібно купити повну версію.\n"
+"\n"
+"Натисніть будь яку клавішу."
+
+msgid "NETEND"
+msgstr ""
+"Ви не можете завершити мережеву гру!\n"
+"\n"
+"Натисніть будь яку клавішу."
+
+msgid "ENDGAME"
+msgstr ""
+"Ви дійсно хочете завершити гру?\n"
+"\n"
+"Натисніть Y або N."
+
+msgid "RAVENQUITMSG"
+msgstr "Ви дійсно хочете вийти?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Доступно только в полной версии"
+
+msgid "DOSY"
+msgstr "(Натисніть Y для виходу)"
+
+msgid "QUITMSG1"
+msgstr "Будь ласка, не йди - тут ще купа демонів!"
+
+msgid "QUITMSG2"
+msgstr "Споримо, що ця кривава баня тобі не по зубах!?"
+
+msgid "QUITMSG3"
+msgstr "Я б не йшов на твоєму місці. DOS значно нудніший."
+
+msgid "QUITMSG4"
+msgstr "Хочеш сказати, що DOS цікавіший за мене, так?"
+
+msgid "QUITMSG5"
+msgstr "Зачекай! Не йди - тут за куточком сховався ще один демон!"
+
+msgid "QUITMSG6"
+msgstr "Шоб знав, коли повернешся - я намилю тобі шию."
+
+msgid "QUITMSG7"
+msgstr "Давай, йди... ніби мені не все одно."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr "Вийти? ВИЙТИ?! Це так не працює."
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr "Підіжди трохи, між строками DOS причаївся міжпросторовий шамблер!"
+
+msgid "QUITMSG10"
+msgstr "Ну і котись звідсіль, до своїх марудних програм."
+
+msgid "QUITMSG11"
+msgstr "Був би я твоїм боссом - розніс у дедматчі за хвилину!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Слухай друже. Якщо підеш зараз - твій лічильник вбивств впаде до нуля!"
+
+msgid "QUITMSG13"
+msgstr "Давай, йди. Бита почекає тебе."
+
+msgid "QUITMSG14"
+msgstr "Тобі пощастило, що я не шибану тебе за вихід."
+
+msgid "QUITMSG15"
+msgstr ""
+"Куди зібрався?!\n"
+"А повстання?"
+
+msgid "QUITMSG16"
+msgstr ""
+"Різанина затихає...\n"
+"Бісить!"
+
+msgid "QUITMSG17"
+msgstr ""
+"Ти ж моя єдина надія -\n"
+"мій останній шанс!"
+
+msgid "QUITMSG18"
+msgstr "Ще ніхто не дав чосу від Чорного дрозда."
+
+msgid "QUITMSG19"
+msgstr "Я думав, що ти інший..."
+
+msgid "QUITMSG20"
+msgstr "Прекрасно! Зробив амінь чортам і втік!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Ти можеш вийти...\n"
+"але не сховатись..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Гааа, шо таке?\n"
+"Мамуся покликала їстоньки?"
+
+msgid "QUITMSG23"
+msgstr "Не виходь поки, тут ще багато флемоїдів лишилось!"
+
+msgid "QUITMSG24"
+msgstr "Не здавайся -- а то флемоїди візьмуть верх!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Не залишай нас.\n"
+"Нам потрібна твоя допомога!"
+
+msgid "QUITMSG26"
+msgstr "Маю надію, що ти робиш перерву на пластівці Chex(R)."
+
+msgid "QUITMSG27"
+msgstr ""
+"Не виходь!\n"
+"Нам потрібна твоя допомога!"
+
+msgid "QUITMSG28"
+msgstr "Не покидай Міжгалактичну Федерацію Пластівців!"
+
+msgid "QUITMSG29"
+msgstr "Справжній воїн Chex(R) не здається так швидко!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Ви щось підібрали"
+
+msgid "PD_ANY"
+msgstr "Будь який ключ відкриє ці двері"
+
+msgid "PD_ANYOBJ"
+msgstr "Будь який ключ активує цей об'єкт"
+
+msgid "PD_ALL3"
+msgstr "Вам потрібні всі три ключі, щоб відкрити ці двері"
+
+msgid "PD_ALL3O"
+msgstr "Вам потрібні всі три ключі, щоб активувати цей об'єкт"
+
+msgid "PD_ALL6"
+msgstr "Вам потрібні всі шість ключів, щоб відкрити ці двері"
+
+msgid "PD_ALL6O"
+msgstr "Вам потрібні всі шість ключів, щоб активувати цей об'єкт"
+
+msgid "PD_ALLKEYS"
+msgstr "Потрібні всі ключі"
+
+msgid "HUSTR_MSGU"
+msgstr "[Повідомлення не відправлено]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Ви бормочете собі під ніс"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Хто тут?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Ви налякали себе"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Ви починаєте марити"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Як сумно..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Повідомлення відправлено]"
+
+msgid "STSTR_MUS"
+msgstr "Зміна музики"
+
+msgid "STSTR_NOMUS"
+msgstr "НЕКОРЕКТНИЙ ВИБІР"
+
+msgid "STSTR_DQDON"
+msgstr "Безсмертя ввімкнено"
+
+msgid "STSTR_DQDOFF"
+msgstr "Безсмертя вимкнено"
+
+msgid "STSTR_DQD2ON"
+msgstr "Повне безсмертя ввімкнено"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Повне безсмертя вимкнено"
+
+msgid "STSTR_KFAADDED"
+msgstr "Спорядження поповнено"
+
+msgid "STSTR_FAADDED"
+msgstr "Спорядження поповнено (без ключів)"
+
+msgid "STSTR_NCON"
+msgstr ""
+"Прохід крізь стіни\n"
+"ВВІМКНЕНО"
+
+msgid "STSTR_NCOFF"
+msgstr ""
+"Прохід крізь стіни\n"
+"ВИМКНЕНО"
+
+msgid "STSTR_NC2ON"
+msgstr ""
+"Проліт крізь стіни\n"
+"ВВІМКНЕНО"
+
+msgid "STSTR_NC2OFF"
+msgstr ""
+"Проліт крізь стіни\n"
+"ВИМКНЕНО"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "Безсм. (V), берс. (S), нев. (I), кос. (R), карта (A), ПНВ (L)."
+
+msgid "STSTR_BEHOLDX"
+msgstr "Підсилення ввімкнено"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... непогано — г.м."
+
+msgid "STSTR_CLEV"
+msgstr "Зміна рівня..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Будда-мод ВВІМК."
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Будда-мод ВИМК."
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Ультимативний Будда-мод ВВІМК."
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Ультимативний Будда-мод ВИМК."
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Сила активована"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Сила деактивована"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Повне здоров'я"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Усі ключі"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Налагодження звуку УВІМКНЕНО"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Налагодження звуку ВИМКНЕНО"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Хех, чітериш? Тепер помри!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Пройдисвіт - ти не заслужив зброї"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Лічильник Ввімк."
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Лічильник Вимк."
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Ви отримали це"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Дар Мідаса у твоїх руках, золотце"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Отримано предмети!"
+
+msgid "TXT_FREEZEON"
+msgstr "Режим заморозки ВВІМКНЕНО"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Режим заморозки ВИМКНЕНО"
+
+msgid "TXT_STRANGE"
+msgstr "Ви почуваєте себе дивно..."
+
+msgid "TXT_STRANGER"
+msgstr "Ви почуваєте себе ще дивніше."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Ви почуваєтесь собою."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Одягнено свинцеві чоботи"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Знято свинцеві чоботи"
+
+msgid "TXT_LIGHTER"
+msgstr "Ви побороли гравітацію"
+
+msgid "TXT_GRAVITY"
+msgstr "Гравітація знову притискає вас до землі"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Невідчутність ввімкнено"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Невідчутність вимкнено"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "\"Трясись зі страху!\""
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Броню огра знято"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Камера від 3-го лиця активована"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Камера від 3-го лиця деактивована"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 поганець вмер"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "Поганців вмерло: %d"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 монстра убито"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "Монстрів вбито: %d"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "Воскресіння неможливе. Гравець більше не з'єднаний з тілом."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Усі артефакти!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Що, хочеш вбивати в реальності?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Властивості замороженого гравця вимкнено"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Прив'язка до гравца ВВІМК."
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Прив'язка до гравца ВИМК."
+
+msgid "AMSTR_GRIDON"
+msgstr "Сітка ВВІМК."
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Сітка ВИМК."
+
+msgid "AMSTR_TEXON"
+msgstr "Текстурний режим ВВІМК."
+
+msgid "AMSTR_TEXOFF"
+msgstr "Текстурний режим ВИМК."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Позначка"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Усі позначки стерто"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Досягнуто ліміт фрагів."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Досягнуто ліміт часу."
+
+msgid "SPREEKILLSELF"
+msgstr "%o вигляда@[adj_1_ua] добре, поки не вби@[adj_1_ua] себе!"
+
+msgid "SPREEOVER"
+msgstr "%k закінчи@[adj_1_ua] бійню %o"
+
+msgid "SPREE5"
+msgstr "%k смакує різанину!"
+
+msgid "SPREE10"
+msgstr "%k лютує!"
+
+msgid "SPREE15"
+msgstr "%k домінує!"
+
+msgid "SPREE20"
+msgstr "%k неспинний!"
+
+msgid "SPREE25"
+msgstr "%k божественний!"
+
+msgid "MULTI2"
+msgstr "Подвійне вбивство!"
+
+msgid "MULTI3"
+msgstr "Массове вбивство!"
+
+msgid "MULTI4"
+msgstr "Безмежне вбивство!"
+
+msgid "MULTI5"
+msgstr "Монструозне вбивство!"
+
+msgid "SCORE_BONUS"
+msgstr "Бонус"
+
+msgid "SCORE_COLOR"
+msgstr "Колір"
+
+msgid "SCORE_SECRET"
+msgstr "Схованки"
+
+msgid "SCORE_NAME"
+msgstr "Гравець"
+
+msgid "SCORE_DELAY"
+msgstr "Затримка (мс)"
+
+msgid "SCORE_FRAGS"
+msgstr "Фраги"
+
+msgid "SCORE_DEATHS"
+msgstr "Смерті"
+
+msgid "SCORE_OTHER"
+msgstr "Інше"
+
+msgid "SCORE_MISSED"
+msgstr "Пропущено"
+
+msgid "SCORE_TOTAL"
+msgstr "Разом"
+
+msgid "SCORE_LVLTIME"
+msgstr "Час рівня"
+
+msgid "TXT_IMKILLS"
+msgstr "Вороги"
+
+msgid "TXT_IMITEMS"
+msgstr "Предмети"
+
+msgid "TXT_IMSECRETS"
+msgstr "Схованки"
+
+msgid "TXT_IMTIME"
+msgstr "Час"
+
+msgid "TXT_IMPAR"
+msgstr "Рекорд"
+
+msgid "WI_FINISHED"
+msgstr "Завершено"
+
+msgid "WI_ENTERING"
+msgstr "Заходимо"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Просуваємось до:"
+
+msgid "AM_MONSTERS"
+msgstr "Монстри"
+
+msgid "AM_SECRETS"
+msgstr "Схованки:"
+
+msgid "AM_ITEMS"
+msgstr "Предмети:"
+
+msgid "OB_SUICIDE"
+msgstr "%o самовби@[adj_2_ua]."
+
+msgid "OB_FALLING"
+msgstr "%o впа@[adj_1_ua] надто глибоко."
+
+msgid "OB_CRUSH"
+msgstr "%o розчавило."
+
+msgid "OB_EXIT"
+msgstr "%o намага@[adj_2_ua] втекти."
+
+msgid "OB_WATER"
+msgstr "%o не вміє плавати."
+
+msgid "OB_SLIME"
+msgstr "%o мутува@[adj_1_ua]."
+
+msgid "OB_LAVA"
+msgstr "%o розплави@[adj_2_ua]."
+
+msgid "OB_BARREL"
+msgstr "%o вибухну@[adj_1_ua]."
+
+msgid "OB_SPLASH"
+msgstr "%o бу@[adj_1_ua] не в тому місці."
+
+msgid "OB_R_SPLASH"
+msgstr "%o треба було відійти подалі."
+
+msgid "OB_ROCKET"
+msgstr "%o треба було відійти подалі."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o вби@[adj_1_ua] себе."
+
+msgid "OB_VOODOO"
+msgstr "%o вбито силою вуду."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o телефрагнуто %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o вбито телепортом."
+
+msgid "OB_DEFAULT"
+msgstr "%o помер@[adj_3_ua]."
+
+msgid "OB_MPDEFAULT"
+msgstr "%o вбито гравцем %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k скоси@[adj_1_ua] соратника."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "Схоже, що %k потрібні окуляри."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k відда@[adj_1_ua] фраг іншій команді."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k втрати@[adj_1_ua] ще одного друга."
+
+msgid "GOTARMOR"
+msgstr "Взято броню."
+
+msgid "GOTMEGA"
+msgstr "Взято мегаброню!"
+
+msgid "GOTHTHBONUS"
+msgstr "Взято бонус здоров'я."
+
+msgid "GOTARMBONUS"
+msgstr "Взято бонус броні."
+
+msgid "GOTSTIM"
+msgstr "Взято стимулятор."
+
+msgid "GOTMEDINEED"
+msgstr "Взято КРАЙНЄ необхідну аптечку!"
+
+msgid "GOTMEDIKIT"
+msgstr "Взято аптечку."
+
+msgid "GOTSUPER"
+msgstr "Суперзаряд!"
+
+msgid "GOTBLUECARD"
+msgstr "Взято синю ключ-карту."
+
+msgid "GOTYELWCARD"
+msgstr "Взято жовту ключ-карту."
+
+msgid "GOTREDCARD"
+msgstr "Взято червону ключ-карту."
+
+msgid "GOTBLUESKUL"
+msgstr "Взято синій ключ-череп."
+
+msgid "GOTYELWSKUL"
+msgstr "Взято жовтий ключ-череп."
+
+msgid "GOTREDSKUL"
+msgstr "Взято червоний ключ-череп."
+
+msgid "GOTINVUL"
+msgstr "Невразливість!"
+
+msgid "GOTBERSERK"
+msgstr "Берсерк!"
+
+msgid "GOTINVIS"
+msgstr "Часткова невидимість"
+
+msgid "GOTSUIT"
+msgstr "Антирадіаційний костюм"
+
+msgid "GOTMAP"
+msgstr "Комп'ютерна карта району"
+
+msgid "GOTVISOR"
+msgstr "Окуляри нічного бачення"
+
+msgid "GOTMSPHERE"
+msgstr "Мегасфера!"
+
+msgid "GOTCLIP"
+msgstr "Взято набійницю."
+
+msgid "GOTCLIPBOX"
+msgstr "Взято коробку набоїв."
+
+msgid "GOTROCKET"
+msgstr "Взято ракету."
+
+msgid "GOTROCKBOX"
+msgstr "Взято коробку з ракетами."
+
+msgid "GOTCELL"
+msgstr "Взято енергетичну батарею."
+
+msgid "GOTCELLBOX"
+msgstr "Взято велику енергетичну батарею."
+
+msgid "GOTSHELLS"
+msgstr "Взято 4 рушничні набої."
+
+msgid "GOTSHELLBOX"
+msgstr "Взято коробку рушничних набоїв."
+
+msgid "GOTBACKPACK"
+msgstr "Взято рюкзак повний набоїв!"
+
+msgid "GOTBFG9000"
+msgstr "Взято БФГ9000! О так."
+
+msgid "GOTCHAINGUN"
+msgstr "Взято кулемета."
+
+msgid "GOTCHAINSAW"
+msgstr "Бензопила! Знайди трохи м'яса!"
+
+msgid "GOTLAUNCHER"
+msgstr "Взято ракетомет!"
+
+msgid "GOTPLASMA"
+msgstr "Взято плазмаган!"
+
+msgid "GOTSHOTGUN"
+msgstr "Взято дробовик!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Взято двостволку!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Взято пістолет."
+
+msgid "BETA_BONUS1"
+msgstr "Взято демонічний кинжал."
+
+msgid "BETA_BONUS2"
+msgstr "Взято скриню з черепом."
+
+msgid "BETA_BONUS3"
+msgstr "Взято скіпетр зла."
+
+msgid "BETA_BONUS4"
+msgstr "Взято нечестиву біблію."
+
+msgid "PD_BLUEO"
+msgstr "Вам потрібна синя ключ-карта, щоб активувати цей об'єкт"
+
+msgid "PD_REDO"
+msgstr "Вам потрібна червона ключ-карта, щоб активувати цей об'єкт"
+
+msgid "PD_YELLOWO"
+msgstr "Вам потрібна жовта ключ-карта, щоб активувати цей об'єкт"
+
+msgid "PD_BLUEK"
+msgstr "Вам потрібна синя ключ-карта, щоб відкрити ці двері"
+
+msgid "PD_REDK"
+msgstr "Вам потрібна червона ключ-карта, щоб відкрити ці двері"
+
+msgid "PD_YELLOWK"
+msgstr "Вам потрібна жовта ключ-карта, щоб відкрити ці двері"
+
+msgid "PD_BLUECO"
+msgstr "Вам потрібна синя ключ-карта, щоб активувати цей об'єкт"
+
+msgid "PD_REDCO"
+msgstr "Вам потрібна червона ключ-карта, щоб активувати цей об'єкт"
+
+msgid "PD_YELLOWCO"
+msgstr "Вам потрібна жовта ключ-карта, щоб активувати цей об'єкт"
+
+msgid "PD_BLUESO"
+msgstr "Вам потрібен синій ключ-череп, щоб активувати цей об'єкт"
+
+msgid "PD_REDSO"
+msgstr "Вам потрібен червоний ключ-череп, щоб активувати цей об'єкт"
+
+msgid "PD_YELLOWSO"
+msgstr "Вам потрібен жовтий ключ-череп, щоб активувати цей об'єкт"
+
+msgid "PD_BLUEC"
+msgstr "Вам потрібна синя карта, щоб активувати цей об'єкт"
+
+msgid "PD_REDC"
+msgstr "Вам потрібна червона карта, щоб активувати цей об'єкт"
+
+msgid "PD_YELLOWC"
+msgstr "Вам потрібна жовта карта, щоб активувати цей об'єкт"
+
+msgid "PD_BLUES"
+msgstr "Вам потрібен синій череп, щоб активувати цей об'єкт"
+
+msgid "PD_REDS"
+msgstr "Вам потрібен червоний череп, щоб активувати цей об'єкт"
+
+msgid "PD_YELLOWS"
+msgstr "Вам потрібен жовтий череп, щоб активувати цей об'єкт"
+
+msgid "CC_ZOMBIE"
+msgstr "Зомбі"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Зомбі-сержант"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Кулеметник"
+
+msgid "CC_IMP"
+msgstr "Імп"
+
+msgid "CC_DEMON"
+msgstr "Демон"
+
+msgid "CC_LOST"
+msgstr "Пропаща душа"
+
+msgid "CC_CACO"
+msgstr "Какодемон"
+
+msgid "CC_HELL"
+msgstr "Лицар Пекла"
+
+msgid "CC_BARON"
+msgstr "Барон Пекла"
+
+msgid "CC_ARACH"
+msgstr "Арахнотрон"
+
+msgid "CC_PAIN"
+msgstr "Елементаль болю"
+
+msgid "CC_REVEN"
+msgstr "Ревевант"
+
+msgid "CC_MANCU"
+msgstr "Манкубус"
+
+msgid "CC_ARCH"
+msgstr "Арчвайл"
+
+msgid "CC_SPIDER"
+msgstr "Павук-полководець"
+
+msgid "CC_CYBER"
+msgstr "Кібердемон"
+
+msgid "CC_HERO"
+msgstr "Наш герой"
+
+msgid "FN_SHOTGUN"
+msgstr "Зомбі-сержант"
+
+msgid "FN_HEAVY"
+msgstr "Кулеметник"
+
+msgid "FN_SPECTRE"
+msgstr "Примара"
+
+msgid "FN_SPIDER"
+msgstr "Павук-полководець"
+
+msgid "FN_CYBER"
+msgstr "Кібердемон"
+
+msgid "FN_WOLFSS"
+msgstr "Нацист"
+
+msgid "FN_DOG"
+msgstr "Пес"
+
+msgid "TAG_FIST"
+msgstr "Кулаки"
+
+msgid "TAG_CHAINSAW"
+msgstr "Бензопила"
+
+msgid "TAG_PISTOL"
+msgstr "Пістолет"
+
+msgid "TAG_SHOTGUN"
+msgstr "Дробовик"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Двостволка"
+
+msgid "TAG_CHAINGUN"
+msgstr "Кулемет"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Ракетомет"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Плазмаган"
+
+msgid "TAG_BFG9000"
+msgstr "БФГ 9000"
+
+msgid "AMMO_CLIP"
+msgstr "Кулі"
+
+msgid "AMMO_SHELLS"
+msgstr "Рушничні набої"
+
+msgid "AMMO_ROCKETS"
+msgstr "Ракети"
+
+msgid "AMMO_CELLS"
+msgstr "Енергетичні батареї"
+
+msgid "OB_STEALTHBABY"
+msgstr "Арахнотрон мелькнув перед очима %o."
+
+msgid "OB_STEALTHVILE"
+msgstr "Арчвайл мелькнув перед очима %o."
+
+msgid "OB_STEALTHBARON"
+msgstr "Барон Пекла мелькнув перед очима %o."
+
+msgid "OB_STEALTHCACO"
+msgstr "Какодемон мелькнув перед очима %o."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "Кулеметник мелькнув перед очима %o."
+
+msgid "OB_STEALTHDEMON"
+msgstr "Демон мелькнув перед очима %o."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "Лицар Пекла мелькнув перед очима %o."
+
+msgid "OB_STEALTHIMP"
+msgstr "Імп мелькнув перед очима %o."
+
+msgid "OB_STEALTHFATSO"
+msgstr "Манкубус мелькнув перед очима %o."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "Ревенант мелькнув перед очима %o."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "Сержант мелькнув перед очима %o."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "Зомбі мелькнув перед очима %o."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o бу@[adj_1_ua] забит@[adj_4_ua] ревевантом."
+
+msgid "OB_IMPHIT"
+msgstr "%o роздер імп."
+
+msgid "OB_CACOHIT"
+msgstr "%o опини@[adj_2_ua] надто близько до какодемона."
+
+msgid "OB_DEMONHIT"
+msgstr "%o покусав демон."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o зжерла примара."
+
+msgid "OB_BARONHIT"
+msgstr "Барон Пекла роздер %o."
+
+msgid "OB_KNIGHTHIT"
+msgstr "Лицар Пекла розпотрошив %o."
+
+msgid "OB_ZOMBIE"
+msgstr "%o вбив зомбі."
+
+msgid "OB_SHOTGUY"
+msgstr "Сержант застрелив %o."
+
+msgid "OB_VILE"
+msgstr "Арчвайл спалив вщент %o."
+
+msgid "OB_UNDEAD"
+msgstr "Снаряд ревенанта дістав %o."
+
+msgid "OB_FATSO"
+msgstr "%o розчавлено манкубусом."
+
+msgid "OB_CHAINGUY"
+msgstr "%o отрима@[adj_1_ua] численні отвори від куль кулеметника."
+
+msgid "OB_SKULL"
+msgstr "Заблудла душа перестрашила %o."
+
+msgid "OB_IMP"
+msgstr "%o спалено імпом."
+
+msgid "OB_CACO"
+msgstr "%o уражено какодемоном."
+
+msgid "OB_BARON"
+msgstr "%o потовчено бароном Пекла."
+
+msgid "OB_KNIGHT"
+msgstr "Лицар Пекла розкатав %o."
+
+msgid "OB_SPIDER"
+msgstr "%o бу@[adj_1_ua] захоплен@[ao_ua] могутністю павука-воєводи."
+
+msgid "OB_BABY"
+msgstr "%o да@[adj_1_ua] арахнотрону себе вбити."
+
+msgid "OB_CYBORG"
+msgstr "Кібердемон перетворив %o в хмарину крові."
+
+msgid "OB_WOLFSS"
+msgstr "%o зустрі@[adj_1_ua] нациста."
+
+msgid "OB_DOG"
+msgstr "%o загризла собака."
+
+msgid "OB_MPFIST"
+msgstr "%o відчу@[adj_1_ua] кулак %k."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%k розпили@[adj_1_ua] %o бензопилою."
+
+msgid "OB_MPPISTOL"
+msgstr "%o бу@[adj_1_ua] заколупан@[ao_ua] пістолетом %k."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%k насипа@[adj_1_ua] свинцевого гороху %o."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%k розмаза@[adj_1_ua] з двустволки %o."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%k скоси@[adj_1_ua] кулеметом %o."
+
+msgid "OB_MPROCKET"
+msgstr "%o проїха@[adj_2_ua] на ракеті %k."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o майже укникну@[adj_1_ua] ракети %k."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%k розплавив з плазмагана %o."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o розірвало снарядом БФГ %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o не встиг@[adj_3_ua] сховатись від БФГ %k."
+
+msgid "OB_RAILGUN"
+msgstr "%k прониза@[adj_1_ua] %o наскрізь."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o спалило БФГ %k."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Синій ключ"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Жовтий ключ"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Зелений ключ"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Кварцова пляшечка"
+
+msgid "TXT_ARTIFLY"
+msgstr "Крила гніву"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Кільце Непереможності"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Том сили"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Сфера тіні"
+
+msgid "TXT_ARTIEGG"
+msgstr "Яйце трансформації"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Містична урна"
+
+msgid "TXT_ARTITORCH"
+msgstr "Смолоскип"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Часова бомба древніх"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Пристрій Хаосу"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Кришталевий флакон"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Запасний підсумок"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Срібний щит"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Зачарований щит"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Сувій-карта"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Кристал для жезлу"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Кристалічна жеода"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Сфери для булави"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Купа булавних сфер"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Ефірні стріли"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Сагайдак ефірних стріл"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Кігтьова сфера"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Енергетична сфера"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Молодші руни"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Старші руни"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Вогняна сфера"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Пекельна сфера"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Посох Ельфів"
+
+msgid "TXT_WPNMACE"
+msgstr "Вогняна булава"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Ефірний арбалет"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Кіготь Дракона"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Пекельний посох"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Жезл Фенікса"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Рукавиці Некроманта"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Вам потрібен синій ключ, щоб відкрити ці двері"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Вам потрібен зелений ключ, щоб відкрити ці двері"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Вам потрібен жовтий ключ, щоб відкрити ці двері"
+
+msgid "FN_CHICKEN"
+msgstr "Курка"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Дракон-перевертень"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Шаблекіготь"
+
+msgid "FN_DSPARIL"
+msgstr "Д'Спаріл"
+
+msgid "FN_HERETICIMP"
+msgstr "Ґарґуйль."
+
+msgid "FN_IRONLICH"
+msgstr "Залізний Ліч"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Воїн-нежить"
+
+msgid "FN_MINOTAUR"
+msgstr "Молотаур"
+
+msgid "FN_MUMMY"
+msgstr "Голем"
+
+msgid "FN_MUMMYLEADER"
+msgstr "Нітроголем"
+
+msgid "FN_SNAKE"
+msgstr "Офідіан"
+
+msgid "FN_WIZARD"
+msgstr "Чаклун"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Кристал для жезлу"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Ефірні стріли"
+
+msgid "AMMO_BLASTER"
+msgstr "Кігтьова сфера"
+
+msgid "AMMO_MACE"
+msgstr "Сфери для булави"
+
+msgid "AMMO_SKULLROD"
+msgstr "Руни пекельного посоху"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Вогняна сфера"
+
+msgid "TAG_STAFF"
+msgstr "Палиця"
+
+msgid "TAG_GOLDWAND"
+msgstr "Посох Ельфів"
+
+msgid "OB_CHICKEN"
+msgstr "%o задзьобано до смерті."
+
+msgid "OB_BEAST"
+msgstr "%o було спалено драконом-перевертнем."
+
+msgid "OB_CLINK"
+msgstr "%o було розсічено шаблекігтем."
+
+msgid "OB_DSPARIL1"
+msgstr "%o було спалено змієм Д'Спаріла."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "Змій Д'Спаріла зжер %o ."
+
+msgid "OB_DSPARIL2"
+msgstr "%o ніщо проти Д'Спаріла."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "Д'Спаріл збив %o."
+
+msgid "OB_HERETICIMP"
+msgstr "%o понівечено ґарґуйлем."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o скалічено ґарґуйлем."
+
+msgid "OB_IRONLICH"
+msgstr "%o знищено залізним лічем."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o надто зблизи@[adj_2_ua] з залізним лічем."
+
+msgid "OB_BONEKNIGHT"
+msgstr "Воїн-нежить зарубав %o."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o бу@[adj_1_ua] повален@[ao_ua] воїном-нежитю."
+
+msgid "OB_MINOTAUR"
+msgstr "%o бу@[adj_1_ua] стерт@[ao_ua] в пил Молотауром."
+
+msgid "OB_MINOTAURHIT"
+msgstr "Молотаур перетворив %o в криваве місиво."
+
+msgid "OB_MUMMY"
+msgstr "%o потовк голем."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o почу@[adj_1_ua] смертельний крик нітроголема."
+
+msgid "OB_SNAKE"
+msgstr "Офідіан загриз совість %o."
+
+msgid "OB_WIZARD"
+msgstr "%o бу@[adj_1_ua] проклят@[ao_ua] чаклуном."
+
+msgid "OB_WIZARDHIT"
+msgstr "Чаклун дослідив внутрішній світ %o."
+
+msgid "OB_MPSTAFF"
+msgstr "%o скуштува@[adj_1_ua] палицю %k."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%k використа@[adj_1_ua] зворотню дефібриляцію на %o."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%k помаха@[adj_1_ua] ельфійським посохом на прощання %o."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%k насипа@[adj_1_ua] %o трохи магічних болтів."
+
+msgid "OB_MPBLASTER"
+msgstr "%o отрима@[adj_1_ua] кігтедраконових вибухів від %k."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o па@[adj_1_ua] в самі глибини від пекельного посоху %k."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "Від %o залишився тільки попіл через жезл фенікса %k."
+
+msgid "OB_MPMACE"
+msgstr "%o вбили в землю вогняною булавою %k."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o перечепи@[adj_2_ua] через заряджену палицю %k."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%k висмокта@[adj_1_ua] дух %o через рукавиці. "
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o бу@[adj_1_ua] атакований ельфійським посохом %k."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%k проби@[adj_1_ua] %o магічним болтом."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o розірвало кігтем дракона %k."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k залив %o пекельним дощем."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o згорі@[adj_1_ua] через жезл фенікса %k."
+
+msgid "OB_MPPMACE"
+msgstr "%k розчави@[adj_1_ua] %o велитенською вогняною сферою."
+
+msgid "TXT_MANA_1"
+msgstr "Синя мана"
+
+msgid "TXT_MANA_2"
+msgstr "Зелена мана"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Комбінована мана"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Сталевий ключ"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Печерний ключ"
+
+msgid "TXT_KEY_AXE"
+msgstr "Сокирний ключ"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Вогняний ключ"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Смарагдовий ключ"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Ключ від підземелля"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Срібний ключ"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Іржавий ключ"
+
+msgid "TXT_KEY_HORN"
+msgstr "Ріговий ключ"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Болотний ключ"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Ключ від фортеці"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Символ захисника"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Темний слуга"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Захрюкувач"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "Флешета"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Пристрій заслання"
+
+msgid "TXT_ARTISPEED"
+msgstr "Семимильні чоботи"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Чаша міці"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Наручі зі шкіри дракона"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Диск відштовхування"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Закляття містичної області"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Череп Йоріка"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "Серце Д'Спаріла"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Рубінова планета"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Смарагдова планета"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Смарагдова планета"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Сапфірова планета"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Сапфірова планета"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "Демонічний кодекс"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr "Лібер Оскура"
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Полум'яна маска"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Воїнська печатка"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Свята реліквія"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Знак магів"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Механічна шестерня"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Ви не можете використати тут це"
+
+msgid "TXT_ARMOR1"
+msgstr "Кольчуга"
+
+msgid "TXT_ARMOR2"
+msgstr "Соколиний щит"
+
+msgid "TXT_ARMOR3"
+msgstr "Платиновий шолом"
+
+msgid "TXT_ARMOR4"
+msgstr "Амулет вартового"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Тімонова сокира"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Молот відплати"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Упокій зібрано воєдино"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Посох змія"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Вогняний шторм"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Символ Мари зібрано воєдино"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Льодяні уламки"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Арка смерті"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Кривава Кара зібрана воєдино"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Частина зброї! Та ви щасливчик!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Частина Упокою"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Частина Символу Мари"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Частина Кривавої Кари"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Вам потрібен сталевий ключ"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Вам потрібен печерний ключ"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Вам потрібен сокирний ключ"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Вам потрібен вогняний ключ"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Вам потрібен смарагдовий ключ"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Вам потрібен ключ від підземелля"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Вам потрібен срібний ключ"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Вам потрібен іржавий ключ"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Вам потрібен ріговий ключ"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Вам потрібен болотний ключ"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Вам потрібен ключ від фортеці"
+
+msgid "FN_FIREDEMON"
+msgstr "Африт"
+
+msgid "FN_DEMON1"
+msgstr "Змій"
+
+msgid "FN_ETTIN"
+msgstr "Еттін"
+
+msgid "FN_CENTAUR"
+msgstr "Кентавр"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Кентавр хорунжий"
+
+msgid "FN_BISHOP"
+msgstr "Єпископ"
+
+msgid "FN_ICEGUY"
+msgstr "Віндіго"
+
+msgid "FN_SERPENT"
+msgstr "Сталкер"
+
+msgid "FN_WRAITH"
+msgstr "Розбійник"
+
+msgid "FN_DRAGON"
+msgstr "Віверна Смерті"
+
+msgid "FN_KORAX"
+msgstr "Коракс"
+
+msgid "FN_FBOSS"
+msgstr "Зедек"
+
+msgid "FN_MBOSS"
+msgstr "Менелкір"
+
+msgid "FN_CBOSS"
+msgstr "Традуктус"
+
+msgid "FN_HERESIARCH"
+msgstr "Єресіарх"
+
+msgid "AMMO_MANA1"
+msgstr "Синя мана"
+
+msgid "AMMO_MANA2"
+msgstr "Зелена мана"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Булава покаяння"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Посох змія"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Вогняний шторм"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Символ Мари"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Шипасті рукавиці"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Тімонова сокира"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Молот відплати"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "Упокій"
+
+msgid "TAG_MWEAPWAND"
+msgstr "Сапфіровий жезл"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Льодяні уламки"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Арка смерті"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Кривава Кара"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Диск відштовхування"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Наручі зі шкіри дракона"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Чаша міці"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "Флешета"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Флешета отруйної хмари"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Флешета часової бомби"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Гранатна флешета"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Закляття містичної області"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Символ захисника"
+
+msgid "TAG_ARTIPORK"
+msgstr "Захрюкувач"
+
+msgid "TAG_ARTISPEED"
+msgstr "Семимильні чоботи"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Темний слуга"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Пристрій заслання"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Череп Йоріка"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "Серце Д'Спаріла"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Рубінова планета"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Смарагдова планета (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Смарагдова планета (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Сапфірова планета (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Сапфірова планета (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "Демонічний кодекс"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr "Лібер Оскура"
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Полум'яна маска"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Воїнська печатка"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Свята реліквія"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Знак магів"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Залізна шестерня"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Латунна шестерня"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Латунно-залізна шестерня"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Срібно-латунна шестерня"
+
+msgid "OB_FIREDEMON"
+msgstr "%o скуштува@[adj_1_ua] вогню Африта."
+
+msgid "OB_DEMON1"
+msgstr "%o було спалено змієм."
+
+msgid "OB_DEMON2"
+msgstr "%o було отруєно змієм."
+
+msgid "OB_ETTIN"
+msgstr "%o затовк еттін."
+
+msgid "OB_CENTAUR"
+msgstr "%o зарізав кентавр."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o зарізав кентавр хорунжий."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "Кентавр хорунжий знищив %o фаєрболом."
+
+msgid "OB_BISHOP"
+msgstr "%o підкори@[adj_2_ua] темній магії епископа."
+
+msgid "OB_ICEGUY"
+msgstr "Вендіго повністю заморозив %o."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o роздер сталкер."
+
+msgid "OB_SERPENT"
+msgstr "%o розплавив сталкер."
+
+msgid "OB_WRAITH"
+msgstr "%o було спалено розбійником."
+
+msgid "OB_WRAITHHIT"
+msgstr "Життя %o було вкрадено розбійником."
+
+msgid "OB_DRAGON"
+msgstr "Віверна Смерті спалила %o вщент."
+
+msgid "OB_KORAX"
+msgstr "Коракс скинув з ігрової дошки %o."
+
+msgid "OB_FBOSS"
+msgstr "%o зустрі@[adj_1_ua] смерть від Зедека."
+
+msgid "OB_MBOSS"
+msgstr "У %o не вийшло побороти ману Менелкіра."
+
+msgid "OB_CBOSS"
+msgstr "Традуктус похрестив %o."
+
+msgid "OB_HERESIARCH"
+msgstr "Єресіарх зіграв партію кістками %o."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%k заби@[adj_1_ua] %o голими руками."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o отрима@[adj_1_ua] сокирою від %k."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "Голова %o опинилась всередині тіла через молот %k."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "Душа %o була наново перекована молотом %k."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%k упокої@[adj_1_ua] %o. З миром?"
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o отрима@[adj_1_ua] по пиці булавою %k."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "Посох змія %k покусав %o."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "Посох змія %k задушив %o."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o було спалено в полум'ї %k."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%k очисти@[adj_1_ua] %o Символом Мари."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o хапану@[adj_1_ua] надто багато сапфірових снарядів від %k."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o перетвори@[adj_2_ua] в лід завдяки %k."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%k розкри@[adj_1_ua] для %o шокуючу істину."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o було стерто з лиця всесвіту за допомогою Кривавої Кари %k."
+
+msgid "TXT_METALARMOR"
+msgstr "Взято Металічну броню."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Взято Шкіряну броню."
+
+msgid "TXT_MEDPATCH"
+msgstr "Взято оклюзійну пов'язку."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Взято індивідуальну аптечку."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Взято медичний кейс."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Взято карту."
+
+msgid "TXT_BELDINSRING"
+msgstr "Взято каблучку."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Взято чашу для жертвоприношення."
+
+msgid "TXT_EAR"
+msgstr "Взято вухо."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Взято зламану силову муфту."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Взято Тіньову броню."
+
+msgid "TXT_ENVSUIT"
+msgstr "Взято захисний костюм."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Взято уніформу охоронця."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Взято офіцерську уніформу."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Взято деталі для вогнемету."
+
+msgid "TXT_REPORT"
+msgstr "Взято звіт."
+
+msgid "TXT_INFO"
+msgstr "Отримано данні."
+
+msgid "TXT_TARGETER"
+msgstr "Взято цілевказівник."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Взято комунікатор."
+
+msgid "TXT_COIN"
+msgstr "Взято монету."
+
+msgid "TXT_XGOLD"
+msgstr "Взято %d золотих."
+
+msgid "TXT_BEACON"
+msgstr "Взято пристрій телепортації."
+
+msgid "TXT_DEGNINORE"
+msgstr "Взято Дегінську руду."
+
+msgid "TXT_SCANNER"
+msgstr "Отримано сканер."
+
+msgid "TXT_NEEDMAP"
+msgstr "Сканер не буде працювати без карти!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Взято пропуск до тюрми."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Взято арбалет."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Взято штурмову гвинтівку."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Взято міні-ракетомет."
+
+msgid "TXT_FLAMER"
+msgstr "Взято вогнемет."
+
+msgid "TXT_MAULER"
+msgstr "Взято розсіювач."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Взято гранатомет."
+
+msgid "TXT_SIGIL"
+msgstr "Отримано СІГІЛ."
+
+msgid "TXT_BASEKEY"
+msgstr "Взято ключ від бази."
+
+msgid "TXT_GOVSKEY"
+msgstr "Взято ключ губернатора."
+
+msgid "TXT_PASSCARD"
+msgstr "Взято карту доступу."
+
+msgid "TXT_IDBADGE"
+msgstr "Взято бейджик."
+
+msgid "TXT_PRISONKEY"
+msgstr "Взято ключ від тюрми."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Взято відрізану руку."
+
+msgid "TXT_POWER1KEY"
+msgstr "Взято ключ від електростанції 1."
+
+msgid "TXT_POWER2KEY"
+msgstr "Взято ключ від електростанції 2."
+
+msgid "TXT_POWER3KEY"
+msgstr "Взято ключ від електростанції 3."
+
+msgid "TXT_GOLDKEY"
+msgstr "Взято золотий ключ."
+
+msgid "TXT_IDCARD"
+msgstr "Взято ідентифікаційну карту."
+
+msgid "TXT_SILVERKEY"
+msgstr "Взято срібний ключ"
+
+msgid "TXT_ORACLEKEY"
+msgstr "Взято ключ Оракула."
+
+msgid "TXT_MILITARYID"
+msgstr "Взято військову ID карту."
+
+msgid "TXT_ORDERKEY"
+msgstr "Взято ключ Ордену."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Взято ключ від складу."
+
+msgid "TXT_BRASSKEY"
+msgstr "Взято латунний ключ."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Взято червоний кристальний ключ."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Взято синій кристальний ключ."
+
+msgid "TXT_CHAPELKEY"
+msgstr "Взято ключ від каплиці."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Взято ключ від катакомб."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Взято ключ охорони."
+
+msgid "TXT_COREKEY"
+msgstr "Взято ключ від реактора."
+
+msgid "TXT_MAULERKEY"
+msgstr "Взято ключ розсіювача."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Взято ключ від фабрики."
+
+msgid "TXT_MINEKEY"
+msgstr "Взято ключ від шахт."
+
+msgid "TXT_NEWKEY5"
+msgstr "Взято новий ключ 5."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Взято пропуск Оракула."
+
+msgid "TXT_HEGRENADES"
+msgstr "Взято в'язку гранат."
+
+msgid "TXT_PHGRENADES"
+msgstr "Взято в'язку фосфорних гранат."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Взято набійницю."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Взято коробку куль."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Взято міні-ракети."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Взято ящик міні-ракети."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Взято енерго-капсулу."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Взято енерго-батарею."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Взято отруйні болти."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Взято електричні болти."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Взято сумку для набоїв."
+
+msgid "MSG_TALISMANRED"
+msgstr "Ви відчуваєте, що не слід це чіпати..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Що б це не було, воно не належить цьому світу..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Воно повинно мати якесь призначення..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Ви отримали суперсилу!"
+
+msgid "TXT_NEEDKEY"
+msgstr "У вас немає ключа"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Потрібна карта доступу"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Вам потрібна карта доступу, щоб відкрити ці двері"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Вам потрібна ідентифікаційна карта."
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "У вас немає ключа від в'язниці."
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Відбиток руки не упізнано"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Вам потрібен золотий ключ"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Вам потрібен бейджик"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Вам потрібен бейджик, щоб відкрити ці двері"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Вам потрібен срібний ключ"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Вам потрібен латунний ключ"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Вам потрібен червоний кристальний ключ"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Вам потрібен синій кристальний ключ"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Ця локація доступна тільки у повній версії Strife"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Здається, воно не працює"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Вам потрібна чаша!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Вам потрібен пропуск Оракула!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Кинжал"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Арбалет"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Арбалет"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Штурмова гвинтівка"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Міні-ракетниця"
+
+msgid "TAG_FLAMER"
+msgstr "Вогнемет"
+
+msgid "TAG_MAULER1"
+msgstr "Розсіювач"
+
+msgid "TAG_MAULER2"
+msgstr "Розсіювач"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Гранатомет"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Гранатомет"
+
+msgid "TAG_SIGIL"
+msgstr "Сигіл"
+
+msgid "TAG_COIN"
+msgstr "Монета"
+
+msgid "TAG_MEDPATCH"
+msgstr "Оклюзійна пов'язка"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Індивідуальна аптечка"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Медичний кейс"
+
+msgid "TAG_BELDINSRING"
+msgstr "Каблучка"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Чаша для жертвоприношення"
+
+msgid "TAG_EAR"
+msgstr "Вухо"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Зламана силова муфта"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Тіньова броня"
+
+msgid "TAG_ENVSUIT"
+msgstr "Захисний костюм"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Уніформа охоронця"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Уніформа офіцера"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Деталі для вогнемету"
+
+msgid "TAG_REPORT"
+msgstr "Звіт"
+
+msgid "TAG_INFO"
+msgstr "Дані"
+
+msgid "TAG_TARGETER"
+msgstr "Цілевказівник"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Комунікатор"
+
+msgid "TAG_DEGNINORE"
+msgstr "Дегінська руда"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Точність"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Стійкість"
+
+msgid "TAG_SCANNER"
+msgstr "Сканер"
+
+msgid "TAG_PRISONPASS"
+msgstr "Тюремний пропуск"
+
+msgid "TAG_ALARM"
+msgstr "Тривога"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Набої"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Здоров'я"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Пристрій телепортації"
+
+msgid "TAG_METALARMOR"
+msgstr "Металічна броня"
+
+msgid "TAG_LEATHER"
+msgstr "Шкіряна броня"
+
+msgid "TAG_HEGRENADES"
+msgstr "В'язка гранат"
+
+msgid "TAG_PHGRENADES"
+msgstr "В'язка фосфорних гранат."
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Набійниця"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Набої"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Міні-ракети"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Ящик мініракет"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Енерго-капсула"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Енерго-батарея"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Отруйні болти"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Електричні болти"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Сумка для набоїв"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Ключ від бази"
+
+msgid "TAG_GOVSKEY"
+msgstr "Ключ губернатора"
+
+msgid "TAG_PASSCARD"
+msgstr "Карта доступу"
+
+msgid "TAG_IDBADGE"
+msgstr "Бейджик"
+
+msgid "TAG_PRISONKEY"
+msgstr "Ключ від тюрми"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Відрізана рука"
+
+msgid "TAG_POWER1KEY"
+msgstr "Ключ від електростанції 1"
+
+msgid "TAG_POWER2KEY"
+msgstr "Ключ від електростанції 2"
+
+msgid "TAG_POWER3KEY"
+msgstr "Ключ від електростанції 3"
+
+msgid "TAG_GOLDKEY"
+msgstr "Золотий ключ"
+
+msgid "TAG_IDCARD"
+msgstr "Ідентифікаційна карта"
+
+msgid "TAG_SILVERKEY"
+msgstr "Срібний ключ"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Ключ Оракула"
+
+msgid "TAG_MILITARYID"
+msgstr "Військова ID карта"
+
+msgid "TAG_ORDERKEY"
+msgstr "Ключ Ордену"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Ключ від складу"
+
+msgid "TAG_BRASSKEY"
+msgstr "Латунний ключ"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Червоний кристальний ключ"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Синій кристальний ключ"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Ключ від каплиці"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Ключ від катакомб"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Ключ охорони"
+
+msgid "TAG_COREKEY"
+msgstr "Ключ від реактора"
+
+msgid "TAG_MAULERKEY"
+msgstr "Ключ розсіювача"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Ключ від фабрики"
+
+msgid "TAG_MINEKEY"
+msgstr "Ключ від шахт"
+
+msgid "TAG_NEWKEY5"
+msgstr "Новий ключ 5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Пропуск Оракула"
+
+msgid "TAG_10GOLD"
+msgstr "10 золотих"
+
+msgid "TAG_25GOLD"
+msgstr "25 золотих"
+
+msgid "TAG_50GOLD"
+msgstr "50 золотих"
+
+msgid "TAG_300GOLD"
+msgstr "300 золотих"
+
+msgid "TXT_PERSON"
+msgstr "Цивільний"
+
+msgid "TAG_ACOLYTE"
+msgstr "Адепт"
+
+msgid "TAG_ARMORER"
+msgstr "Коваль"
+
+msgid "TAG_BARKEEP"
+msgstr "Бармен"
+
+msgid "TAG_BEGGAR"
+msgstr "Жебрак"
+
+msgid "TAG_MACIL1"
+msgstr "Масіл"
+
+msgid "TAG_MACIL2"
+msgstr "Масіл"
+
+msgid "TAG_MEDIC"
+msgstr "Лікар"
+
+msgid "TAG_ORACLE"
+msgstr "Оракул"
+
+msgid "TAG_PRIEST"
+msgstr "Священник"
+
+msgid "TAG_RATBUDDY"
+msgstr "Друзяка щур"
+
+msgid "TAG_REBEL"
+msgstr "Повстанець"
+
+msgid "TAG_TEMPLAR"
+msgstr "Тамплієр"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Зброяр"
+
+msgid "TAG_TALISMANRED"
+msgstr "Червоний талісман"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Зелений талісман"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Синій талісман"
+
+msgid "OB_ACOLYTE"
+msgstr "Адепт пристрелив %o."
+
+msgid "OB_MACIL"
+msgstr "%o ніколи не ма@[adj_1_ua] бунтувати проти Масіла."
+
+msgid "OB_REBEL"
+msgstr "%o було розстріляно повстанцем."
+
+msgid "OB_BEGGAR"
+msgstr "%o забив до смерті жебрак."
+
+msgid "OB_PEASANT"
+msgstr "%o не варто було починати бійку з цивільним."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "Спектр вразив %o."
+
+msgid "OB_ENTITY"
+msgstr "%o відчу@[adj_1_ua] гнів Єдиного Бога."
+
+msgid "OB_LOREMASTER"
+msgstr "%o не здужа@[adj_1_ua] хват Хранителя мудрості."
+
+msgid "OB_PROGRAMMER"
+msgstr "Програміст стер %o."
+
+msgid "OB_STFBISHOP"
+msgstr "%o підірвано Єпископом."
+
+msgid "OB_SENTINEL"
+msgstr "Вартовий пристрелив %o."
+
+msgid "OB_CRUSADER"
+msgstr "%o змів хрестоносець."
+
+msgid "OB_INQUISITOR"
+msgstr "Інквізитор здійснив суд над %o."
+
+msgid "OB_STALKER"
+msgstr "%o загриз сталкер."
+
+msgid "OB_TURRET"
+msgstr "%o активува@[adj_1_ua] автоматичний захист."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o розірвав тамплієр."
+
+msgid "OB_TEMPLAR"
+msgstr "Тамплієр розсіяв %o."
+
+msgid "OB_REAVERHIT"
+msgstr "Рейдер нарізав на куски %o."
+
+msgid "OB_REAVER"
+msgstr "Рейдер пристрелив %o."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%k випадково заріза@[adj_1_ua] %o."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%k приби@[adj_1_ua] до стіни %o."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o відчу@[adj_1_ua] смертельну дозу гніву %k."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%k нароби@[adj_1_ua] дірок в %o штурмовою гвинтівкою."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o ковтну@[adj_1_ua] ракети %k."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o інвертува@[adj_2_ua] гранатою %k."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%k приготува@[adj_1_ua] ванну з чистого фосфору для %o."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%k зажари@[adj_1_ua] %o."
+
+msgid "OB_MPMAULER1"
+msgstr "%o отрима@[adj_1_ua] дозу струму від %k."
+
+msgid "OB_MPMAULER"
+msgstr "%k безжалісно розсія@[adj_1_ua] %o."
+
+msgid "OB_MPSIGIL"
+msgstr "%o покори@[adj_2_ua] Сігілу %k."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "В пошуках Сігілу"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Ви звільнили в'язнів!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Ви знищили конвертер!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Вітаю! Ви пройшли курс тренувань"
+
+msgid "TXT_QUEST_14"
+msgstr "Ви підірвали кристал"
+
+msgid "TXT_QUEST_16"
+msgstr "Ви підірвали ворота"
+
+msgid "TXT_QUEST_27"
+msgstr "Ви підірвали комп'ютер"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Єпископа вбито!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Оракула вбито!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Масіла вбито!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Хранителя мудрості вбито!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Дурень! Ти активував тривогу."
+
+msgid "TXT_YOUREDEAD"
+msgstr "Ти труп! Тривогу активовано."
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Здається, тобі досить!"
+
+msgid "TXT_GOAWAY"
+msgstr "Йди геть!"
+
+msgid "TXT_COMM0"
+msgstr "Вхідне повідомлення..."
+
+msgid "TXT_COMM1"
+msgstr "Вхідне повідомлення від Чорного Дрозда..."
+
+msgid "TXT_FINDHELP"
+msgstr "Знайди допомогу"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "за %u"
+
+msgid "GOTCHEXARMOR"
+msgstr "Взято Chex(R) броню."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Взято Chex(R) супер броню!"
+
+msgid "GOTWATER"
+msgstr "Взято стакан води."
+
+msgid "GOTREPELLENT"
+msgstr "Взято репелент проти слизняків."
+
+msgid "GOTBREAKFAST"
+msgstr "Суперзаряджений сніданок!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Взято синій ключ."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Взято жовтий ключ."
+
+msgid "GOTCREDKEY"
+msgstr "Взято червоний ключ."
+
+msgid "GOTFRUIT"
+msgstr "Взято тарілку фруктів."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Овочі ДУЖЕ корисні для тебе!"
+
+msgid "GOTVEGETABLES"
+msgstr "Взято тарілку овочів."
+
+msgid "GOTSLIMESUIT"
+msgstr "Взято протислизнячий костюм"
+
+msgid "GOTCHEXMAP"
+msgstr "Знайдено комп'ютерну карту району"
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Взято заряд міні-Зорчера."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Взято батарею для міні-Зорчера."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Взято заряд Зорч-прискорювача."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Взято батарею Зорч-прискорювача."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Взято заряд фазового Зорчера."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Взято батарею фазового Зорчера."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Взято заряд великого Зорчера."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Взято батарею великого Зорчера."
+
+msgid "GOTZORCHPACK"
+msgstr "Взято Зорч-сумку!"
+
+msgid "GOTLAZDEVICE"
+msgstr "Ти отримав пристрій LAZ! Супер!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Ти отримав Авто Зорчер!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Ти отримав Супер Вилколожку!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Ти отримав Зорч-Двигун!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Ти отримав Прискорений Зорчер!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Ти отримав Великий Зорчер!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Ти отримав Мега Зорчер!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Ти отримав Міні Зорчер."
+
+msgid "TAG_SPOON"
+msgstr "Ложка"
+
+msgid "TAG_SPORK"
+msgstr "Супер Вилколожка"
+
+msgid "TAG_MINIZORCHER"
+msgstr "Міні Зорчер"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Великий Зорчер"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Мега Зорчер"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Авто Зорчер"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Прискорений Зорчер"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Фазовий Зорчер"
+
+msgid "TAG_LAZDEVICE"
+msgstr "Пристрій LAZ"
+
+msgid "OB_COMMONUS"
+msgstr "Флемоїд покрив слизом %o."
+
+msgid "OB_BIPEDICUS"
+msgstr "Двоніг покрив слизом %o."
+
+msgid "OB_BIPEDICUS2"
+msgstr "Броньований двоніг покрив слизом %o."
+
+msgid "OB_CYCLOPTIS"
+msgstr "Циклоптіс покрив слизом %o."
+
+msgid "OB_FLEMBRANE"
+msgstr "Флембрана перемогла %o."
+
+msgid "OB_MPSPOON"
+msgstr "%k нагодува@[adj_1_ua] %o з ложечки."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%k ретельно переміша@[adj_1_ua] %o вилколожкою."
+
+msgid "OB_MPZORCH"
+msgstr "%k зорчну@[adj_1_ua] %o."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%k зорчну@[adj_1_ua] %o з мега-зорчера."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%k авто-зорчну@[adj_1_ua] %o."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%k зорчну@[adj_1_ua] %o з прискореного зорчера."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%k врази@[adj_1_ua] %o з прискореного зорчера."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%k фазорчну@[adj_1_ua] %o."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o па@[adj_1_ua] жертвою LAZ девайсу %k."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%k LAZну@[adj_1_ua] %o."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Зона висадки"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Сховище"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Експериментальна лабораторія"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: Дендропарк"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Печери Базойка"
+
+msgid "CE1TEXT"
+msgstr ""
+"Місія виконана.\n"
+"\n"
+"Ти готов@[ao_ua] до наступної місії?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Натисни клавішу escape, щоб продовжити..."
+
+msgid "CE2TEXT"
+msgstr "У тебе вийшло!"
+
+msgid "CE3TEXT"
+msgstr "Чудова робота!"
+
+msgid "CE4TEXT"
+msgstr "Фантастика"
+
+msgid "CLOADNET"
+msgstr ""
+"Ти не можеш завантажитись під час мережевого квесту!\n"
+"\n"
+"Натисни будь яку клавішу."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Швидко перезаписати твій квест під назвою\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Натисни Y або N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Ти не можеш швидко завантажитись під час мережевого квесту!\n"
+"\n"
+"Натисни будь яку клавішу."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Швидко завантажити твій квест під назвою\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Натисни Y або N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Ти не можеш почати новий квест під час мережевого квесту!\n"
+"\n"
+"Натисни будь яку клавішу."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Бережись, тут буде скрутно.\n"
+"Хочеш продовжити?\n"
+"\n"
+"Натисни Y або N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Ти граєш в Chex(R) Quest. Інші рівні тут - www.chexquest.com.\n"
+"\n"
+"Натисни Y або N."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Ти не можеш завершити мережевий квест!\n"
+"\n"
+"Натисни будь яку клавішу."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Ти дійсно хочеш завершити квест?\n"
+"\n"
+"Натисни Y або N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Невразливість увімкнено"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Невразливість вимкнено"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Додано Зорч"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Додано Супер Зорч"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Їж Chex(R)!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Заряд міні-Зорчера"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Заряд Великого Зорчера"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Заряд Прискорювача"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Заряд фазового Зорчера"
+
+msgid "MNU_NEWGAME"
+msgstr "Нова гра"
+
+msgid "MNU_OPTIONS"
+msgstr "Налаштування"
+
+msgid "MNU_GAMEFILES"
+msgstr "Ігрові файли"
+
+msgid "MNU_INFO"
+msgstr "Інформація"
+
+msgid "MNU_QUITGAME"
+msgstr "Вихід"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Виберіть рівень важкості:"
+
+msgid "SKILL_BABY"
+msgstr "Я надто молодий, щоб померти."
+
+msgid "SKILL_EASY"
+msgstr "Ей, не так грубо."
+
+msgid "SKILL_NORMAL"
+msgstr "Завдай мені болю."
+
+msgid "SKILL_HARD"
+msgstr "Ультра-насилля."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Кошмар!"
+
+msgid "CSKILL_BABY"
+msgstr "Раз плюнути"
+
+msgid "CSKILL_EASY"
+msgstr "Не так липко"
+
+msgid "CSKILL_NORMAL"
+msgstr "Кавалки слизу"
+
+msgid "CSKILL_HARD"
+msgstr "Екстрім-слиз"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Надслизько!"
+
+msgid "SSKILL_BABY"
+msgstr "Практика"
+
+msgid "SSKILL_EASY"
+msgstr "Новобранець"
+
+msgid "SSKILL_NORMAL"
+msgstr "Ветеран"
+
+msgid "SSKILL_HARD"
+msgstr "Еліта"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Кривава лазня"
+
+msgid "MNU_WETNURSE"
+msgstr "Нянька би сі здала"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Страхополох тотойво"
+
+msgid "MNU_BRINGEST"
+msgstr "Притарабань їх"
+
+msgid "MNU_SMITE"
+msgstr "Славний ти вояка"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Пані Моровиця панує наді мною"
+
+msgid "MNU_SQUIRE"
+msgstr "Зброєносець"
+
+msgid "MNU_KNIGHT"
+msgstr "Лицар"
+
+msgid "MNU_WARRIOR"
+msgstr "Вояка"
+
+msgid "MNU_BERSERKER"
+msgstr "Зірвиголова"
+
+msgid "MNU_TITAN"
+msgstr "Титан"
+
+msgid "MNU_ALTARBOY"
+msgstr "Вівтарник"
+
+msgid "MNU_ACOLYTE"
+msgstr "Помічник"
+
+msgid "MNU_PRIEST"
+msgstr "Священник"
+
+msgid "MNU_CARDINAL"
+msgstr "Кардинал"
+
+msgid "MNU_POPE"
+msgstr "Єпископ"
+
+msgid "MNU_APPRENTICE"
+msgstr "Підмайстер"
+
+msgid "MNU_ENCHANTER"
+msgstr "Чарувальник"
+
+msgid "MNU_SORCERER"
+msgstr "Чаклун"
+
+msgid "MNU_WARLOCK"
+msgstr "Відьмак"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Архімаг"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Клас:"
+
+msgid "MNU_FIGHTER"
+msgstr "Боєць"
+
+msgid "MNU_CLERIC"
+msgstr "Клірик"
+
+msgid "MNU_MAGE"
+msgstr "Маг"
+
+msgid "MNU_RANDOM"
+msgstr "Випадково"
+
+msgid "MNU_EPISODE"
+msgstr "Який епізод?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Вибрати кампанію"
+
+msgid "MNU_COTD"
+msgstr "Місто заклятих"
+
+msgid "MNU_HELLSMAW"
+msgstr "Пекельна Паща"
+
+msgid "MNU_DOME"
+msgstr "Купол Д'Спаріла"
+
+msgid "MNU_OSSUARY"
+msgstr "Склеп"
+
+msgid "MNU_DEMESNE"
+msgstr "Володіння стагнації"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Командна гра"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Шкала шкоди по своїм"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Розумне автоприцілювання"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Ушкодження від падіння"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Викидати зброю при смерті"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Подвоєні патрони"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Нескінченні патрони"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Нескінченний інвентар"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Без монстрів"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Вбити всіх монстрів для виходу"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Монстри відроджуються"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Монстри не відроджуються"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Предмети відновлюються"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Супербонуси відновлюються"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Прискорені монстри"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Кошмарні рефлекси монстрів"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Зменшення додаткового здоров'я"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Дозволити автоприцілювання"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Дозволити самовбивство"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Дозволити стрибки"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Дозволити присідання"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Дозволити огляд мишкою"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Дозволити зміну поля зору"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Дозволити прицілювання з BFG"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Дозволити автомапу"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Показувати союзників на автокарті"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Дозволити дивитись за іншими гравцями"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Вид від 3ї особи"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Перевірка патронів для зміни зброї"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Вбити всіх породжень Ікони гріха при її смерті"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Враховувати до % вбивства монстрів в секторах виходу (Е1М8)"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Налаштування смертельної сутички"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Залишати зброю після підняття"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Дозволити супербонуси"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Дозволити бонуси до здоров'я"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Дозволити броню"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Відродження подалі від інших"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Зациклення карти"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Примусове відродження"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Дозволити вихід"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Відродження бочок"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Захист при відродженні"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Втрачати фраг при смерті"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Зберігати фраги між рівнями"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Заборонити перехід між командами"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Налаштування кооперативного режиму"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Поява зброї з мультиплеєру"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Втрачати весь інвентар при смерті"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Зберігати ключі"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Зберігати зброю"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Зберігати броню"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Зберігати супербонуси"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Зберігати патрони"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Втрачати половину патронів"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Відродження на місці смерті"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Об'єкти з мультиплеєру з'являються завжди"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Дозволити вертикальний розліт куль"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Зброя дає додаткові патрони (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Налаштування сумісності"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Налаштування сумісності"
+
+msgid "CMPTMNU_MODE"
+msgstr "Режим сумісності"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Поведінка об'єктів"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Не блокувати дружніх монстрів"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Ліміт загублених душ з елементаля болі"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Ефекти впливають на рух монстрів"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Монстри не можуть перетинати підвищення"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Монстри застрягають на підвищеннях"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Монстри бачать невидимих гравців"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Мінотаури не створюють вогонь в воді"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Викинуті предмети з'являються на землі"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "Поведінка DeHackEd"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "Налаштування DEH здоров'я як в Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Швидкість A_Mushroom як в DEH модах"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Поведінка карт/дій"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Всі спеціальні лінії можуть блокувати <use>"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Дозволити будь якому bossdeath активовувати special на карті"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "Вимкнути світловий еффект BOOM-дверей"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Шукати сусіднє джероло світла як в Doom"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Шукати найкоротші текстури як у Doom"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Використовувати глючну побудову сходів"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Використовувати рух по підлозі з Doom"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Використовувати point-on-line алгоритм з Doom"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Вихід може бути активовано більше одного разу"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Поведінка фізики"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Всі об'єкти нескінченно високі"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "BOOM-скролери є адитивними"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Заборона руху прямо на Пн., Пд., Сх., Зх."
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Увімкнути Wallrun (швидкий біг біля стін)"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven скролери використовують  початкову швидкість"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Сектрори що посилаються на себе не блокують постріли"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Використовувати ванільний код Doom для перевірки хіт-сканів"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Використовувати висоти з Doom для колізії ракет"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Поведінка візуалізації"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Показувати проджектайли як в Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Ігнорувати Y зміщення в прихованих середніх текстурах"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Інвертувати сортування спрайтів"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Поведінка звуків"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Спотворити звуки для трюку з безшумною БФГ"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Інші не чують як гравець підбирає предмети"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Підлога яка моментально рухається не безшумна"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Звуки секторів використовують центр як джерело звуку"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Зупиняти звуки при зникненні об'єкту"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Використовувати оригінальну обробку звуку"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Скриптові телепорти не активують дії секторів"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Неблокуючі лінії можна посунути"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Дозволити глючну поведінку CheckSwitchRange"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Дозволити глючні перила Strife"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Вибухи не відкидають по вертикалі"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Використовувати ванільну поведінку вибухів з Doom"
+
+msgid "PLYRMNU_RED"
+msgstr "Червоний"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Зелений"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Синій"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Клас"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Скін"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Зміна зброї при підйомі"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Натисніть \\cjПРОБІЛ"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "Перегляд спереду"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "Перегляд ззаду"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Вертикальне розсіювання куль"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Зум зброї"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Стан зброї 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Стан зброї 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Стан зброї 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Стан зброї 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Летіти/пливти вверх"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Летіти/пливти вниз"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Перестати літати"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Огляд клавіатурою"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Налаштування спливаючих вікон Strife"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Чат команди"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Викинути предмет"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Показати предмет"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Викинути зброю"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Інше"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Вид від іншого гравця"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Спливаючі вікна Strife"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Цілі місії"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Список ключів"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Зброя/патрони/статистика"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Перемкнути таблицю рахунку"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Рух мишкою (в просторі)"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Стрейф мишкою"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Фон"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Ти"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "Односторонні стіни"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "Двосторонні стіни з різною підлогою"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "Двосторонні стіни з різною стелею"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "Двосторонні стіни з 3D підлогою"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Колір сітки карти"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Центральна точка"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Непобачені стіни"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Замкнені двері"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Телепорт в межах карти"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Телепорт на іншу карту"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Секретний сектор"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Незнайдений секрет"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Спеціальні трігер лінії"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Чіт режим"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Невидимі двосторонні стіни"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Секретні стіни"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Об'єкти"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Монстри"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Монстри які не зараховуються"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Дружні"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Предмети"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Предмети які зараховуються"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Оверлей режим"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Оверлей чіт режим"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Портали в оверлей-режимі"
+
+msgid "MSGMNU_TITLE"
+msgstr "Повідомлення"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Показати повідомлення"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Показати некрологи"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Показати повідомлення про секрети"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Мінімальний рівень повідомлень"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Кольори повідомлень"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Підняття предмету"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Некрологи"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Важливі повідомлення"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Повідомлення в чаті"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Командні повідомлення в чаті"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Центровані повідомлення"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Повідомлення про знімки екрану"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Детальні повідомлення про збереження"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Режим повідомлень для розробників"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Кольори автокарти"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Налаштування кольорів автокарти"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Вибір кольорів"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Керування автокартою"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Автокарта-оверлей"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Дозволити текстури на автокарті"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Показати кількість предметів"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Показати кількість монстрів"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Показати кількість секретів"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Показати скільки часу пройшло"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Показати загальний час"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Показати секрети на карті"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Показати назву карти"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Показати фон автокарти"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Показати ключі (чіт)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Показати трігер лінії"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Показати спрайте об'єктів"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Показати портали в режимі оверлею"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Краї автокарти"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Шрифт позначок"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Колір позначок"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Поставити позначку"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Зняти позначку"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Табло"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Параметри табло"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Кооперативні параметри"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Дозволити табло"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Колір заголовку"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Ваш колір"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Колір інших гравців"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Параметри бою на смерть"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Параметри командного бою на смерть"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Альтернативний інтерфейс"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Увімкнути альтернативний інтерфейс"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Показати кількість секретів"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Показати кількість монстрів"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Показати кількість предметів"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Показати витривалість і точність"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Показати берсерк"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Показати зброю"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Показати патрони для"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Показати час"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Колір часу"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Показати затримку мережі"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Порядок відображення боєзапасу"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Відображення боєзапасу червоним кольором нижче %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Відображення боєзапасу жовтим кольором нижче %"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Відображення здоров'я червоним кольором нижче %"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Відображення здоров'я жовтим кольором нижче %"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Відображення здоров'я зеленим кольором нижче %"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Відображення броні червоним кольором нижче %"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Відображення броні жовтим кольором нижче %"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Відображення броні зеленим кольором нижче %"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Альтернативний інтерфейс на автокарті"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Колір назви карти"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Колір часу карт"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Колір назви хабів"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Колір загального часу"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Колір координат"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Координати гравця"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Колір імен в статистиці"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Колір статистики"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Інтерполяція візуалізації"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Режим візуалізації прозорості"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Стиль переходу між екранами"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Показувати екран ENDOOM"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Інтенсивність спалаху при пораненні"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Інтенсивність спалаху при піднятті предмету"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Інтенсивність підводного ефекту"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Режим візуалізації неба"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Лінійне небо"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Повна яскравість замінює колір сектора"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Масштабувати ефект шуму"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Використовувати ефект шуму"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Класична прозорість"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Прозорість втрачених душ"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Імітація контрастного освітлення"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Слід від ракет"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Тип крові"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Тип ефекту рикошета"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Число частинок"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Число декалів"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Показувати спрайти гравця"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Камера смерті гравця"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Зум при телепортації"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Інтенсивність землетрусів"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Інтерполяція пересування монстрів"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Затінення фону"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Колір затінення"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Покачування камери під час руху"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Покачування камери при стоянні на місці"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Швидкість покачування зброї"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Налаштування масштабування"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Перевизначення для наведених вище налаштувань"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Повідомлення"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Консоль"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Рядок стану"
+
+msgid "SCALEMNU_HUD"
+msgstr "Повноекранний інтерфейс"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Альтернативний інтерфейс"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "Збереження співвідношення сторін інтерфейсу"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Використовувати розмір за замовчуванням"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Масштабувати на весь екран"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Адаптувати до розміру екрану"
+
+msgid "HUDMNU_TITLE"
+msgstr "Налаштування інтерфейсу"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Альтернативний інтерфейс"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Налаштування повідомлень"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Розмір інтерфейсу"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Примусово використовувати стандартний приціл"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Збільшення прицілу при підйомі предметів"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Показувати назви предметів"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Колір назв предметів"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Використовувати стару формулу для портрету гравця"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Тип спалахів зброї в Hexen"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Тип спалахів отрути"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Тип спалахів при смерті від льоду"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Тип спалахів при накопиченні отрути"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Налаштування масштабування"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Показувати вибір IWAD при запуску"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Використовувати чіти з усіх ігр"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Дозволити робити знімки екрану через скріпти"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Завантажувати *.deh/*.bex файли"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Кешування нодів"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Часовий поріг для кешування нодів"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Очистити кеш нодів"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Дозволити пропускати текстові вставки інтермісій"
+
+msgid "NETMNU_TITLE"
+msgstr "Налаштування мережі"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Локальні налаштування"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Прогнозування руху"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Прогнозування дій на карті"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Прогнозування масштабу додаткової затримки"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Поріг додаткової затримки"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Налаштування сервера"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Додаткові тіки"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Балансування затримки"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Початковий"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Оптимізований"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Класичний (швидше)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Точний"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Обмежений"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Частинки"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Спрайти"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Спрайти та частинки"
+
+msgid "OPTVAL_MELT"
+msgstr "Танення"
+
+msgid "OPTVAL_BURN"
+msgstr "Горіння"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Затухання"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Плавна"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Плавні"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Напівпрозорий"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Шумовий"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Тіньовий"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Предмети"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Зброя"
+
+msgid "OPTVAL_BOTH"
+msgstr "Обидва"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Гравець"
+
+msgid "OPTVAL_MAP"
+msgstr "Карта"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Масштабувати до 640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Подвійні пікселі"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Четверні пікселі"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "поточної зброї"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "доступної зброї"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "всіх видів зброї"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Рівень, мілісекунди"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Рівень, секунди"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Рівень"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Хаб, секунди"
+
+msgid "OPTVAL_HUB"
+msgstr "Хаб"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Загально, секунди"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Загально"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Система, секунди"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Система"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Тільки мережеві ігри"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Зображення та текст"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Текст та зображення"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Тільки скріпти"
+
+msgid "OPTVAL_ALL"
+msgstr "Все"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Тільки останнє"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Кольори з Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Кольори з Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Кольори з Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Коли знайдено"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Тільки для оверлею"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Оверлей + нормальний"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Тільки оверлей"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Крім хабів"
+
+msgid "OPTVAL_FRONT"
+msgstr "Перед"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Анімовані"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Повернуті"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Тільки кольори, визначені картою"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Все крім дверей"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Подвійний"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Потрійний"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Четверний"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Підняття предметів"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Некрологи"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Важливі повідомлення"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Не по союзникам"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Тільки монстри"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Старий"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (суворий)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (суворий)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (суворий)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (суворий)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Всі невідомі"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Помилки"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Попередження"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Сповіщення"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Все"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Апаратне прискорення"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Програмний рендер (Doom)"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "True Color програмний рендер"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Високопродуктивний"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Енергозбереження"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Ванільний"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (примусово)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Vanilla (примусово)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Автоматично (переважно ZDoom)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Автоматично (переважно Vanilla)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Маленький"
+
+msgid "OPTVAL_LARGE"
+msgstr "Великий"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Консольний"
+
+msgid "C_BRICK"
+msgstr "\\caЦегляний"
+
+msgid "C_TAN"
+msgstr "\\cbБежевий"
+
+msgid "C_GRAY"
+msgstr "\\ccСірий"
+
+msgid "C_GREEN"
+msgstr "\\cdЗелений"
+
+msgid "C_BROWN"
+msgstr "\\ceКоричневий"
+
+msgid "C_GOLD"
+msgstr "\\cfЗолотий"
+
+msgid "C_RED"
+msgstr "\\cgЧервоний"
+
+msgid "C_BLUE"
+msgstr "\\chСиній"
+
+msgid "C_ORANGE"
+msgstr "\\ciПомаранчевий"
+
+msgid "C_WHITE"
+msgstr "\\cjБілий"
+
+msgid "C_YELLOW"
+msgstr "\\ckЖовтий"
+
+msgid "C_DEFAULT"
+msgstr "\\clЗа замовчуванням"
+
+msgid "C_BLACK"
+msgstr "\\cmЧорний"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnСвітло-блакитний"
+
+msgid "C_CREAM"
+msgstr "\\coКремовий"
+
+msgid "C_OLIVE"
+msgstr "\\cpОливковий"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqТемно-зелений"
+
+msgid "C_DARKRED"
+msgstr "\\crТемно-червоний"
+
+msgid "C_DARKBROWN"
+msgstr "\\csТемно-коричневий"
+
+msgid "C_PURPLE"
+msgstr "\\ctФіолетовий"
+
+msgid "C_DARKGRAY"
+msgstr "\\cuТемно-сірий"
+
+msgid "C_CYAN"
+msgstr "\\cvБлакитний"
+
+msgid "C_ICE"
+msgstr "\\cwЛьодяний"
+
+msgid "C_FIRE"
+msgstr "\\cxВогняний"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cyСапфіровий"
+
+msgid "C_TEAL"
+msgstr "\\czБірюзовий"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Без звуку"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Без інтерполяції"
+
+msgid "OPTSTR_SPLINE"
+msgstr "Сплайн"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Апаратний рендер"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Програмний рендер"
+
+msgid "GLMNU_TITLE"
+msgstr "Налаштування апаратного рендеру"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Налаштування динамічного освітлення"
+
+msgid "GLMNU_PREFS"
+msgstr "Налаштування"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Обрізати краї спрайтів"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Сортувати списки текстур"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Динамічне освітлення"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Динамічне освітлення (OpenGL)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Дозволити визначення світла"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Освітлення впливає на спрайти"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Освітлення впливає на частинки"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Світло на проекціях тіней"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Якість проекцій тіней"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Фільтр проекцій тіней"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Режим туману"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Туман вмикає режим максимальної яскравості"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Сила спалахів зброї"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Карта оточення на дзеркалах"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Покращений режим нічного бачення"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "ПНБ показує невидимих монстрів"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Налаштувати обрізання спрайтів"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Згладжені країв спрайтів"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Тип шуму"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Поворот спрайтів"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Спрайти повертаються в камеру"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Тип частинок"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Якість рендерингу"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "Стерео 3D VR"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Увімкнути Quad Stereo (VR)"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Обмежений програмний режим освітлення"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Відстань між очима"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Відстань від екрана"
+
+msgid "OPTVAL_SMART"
+msgstr "Розумний"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Розумніший"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Тільки інфрачервоний"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Інфрачервоний та факел"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Будь яка виправлена карта кольорів"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Використовувати як палітру"
+
+msgid "OPTVAL_BLEND"
+msgstr "Змішано"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Яскраво"
+
+msgid "OPTVAL_DARK"
+msgstr "Темно"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "Програмно"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Оптимально"
+
+msgid "OPTVAL_YAXIS"
+msgstr "По горизонталі"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "По обох осях"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Квадратні"
+
+msgid "OPTVAL_ROUND"
+msgstr "Круглі"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Радіальний"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Піксельний шум"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Гладкий шум"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Вихровий шум"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Прозорий шум"
+
+msgid "OPTVAL_NOISE"
+msgstr "Шум"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "М'який шум"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Зазубрений шум"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Зелений/Маджента"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Червоний/Лазурний"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Бурштиновий/синій"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Ліве око"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Праве око"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Пліч-о-пліч повно"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Пліч-о-пліч вузько"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Зверху/знизу"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Чередування рядків"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Чередування стовбців"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Шахова дошка"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Чотирибуферний"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "Режим TrueColor"
+
+msgid "TCMNU_TITLE"
+msgstr "Налаштування TrueColor"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Вивід TrueColor"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Лінійний фільтр при зменшенні масштабу"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Лінійний фільтр при збільшенні масштабу"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Міп-маппінг для текстур"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Динамічне освітлення (програмне)"
+
+msgid "OS_TITLE"
+msgstr "Пошук налаштувань"
+
+msgid "OS_ANY"
+msgstr "Пошук по слову"
+
+msgid "OS_ALL"
+msgstr "Пошук по усіх словах"
+
+msgid "OS_NO_RESULTS"
+msgstr "Результатів не знайдено."
+
+msgid "OS_LABEL"
+msgstr "Пошук:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Завжди показувати ключі"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Зміна команди була вимкнена!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s приєднюється до %t команди"
+
+msgid "TXT_LONER"
+msgstr "%s тепер наодинці."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s покидає гру з такими фрагами: %d "
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s покидає гру"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Неможливо прочитати збереження \"%s\"."
+
+msgid "TXT_NOINFOJSON"
+msgstr "\"%s\" є недійсним збереженням: Відсутній \"info.json\"."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Неможливо отримати інформацію про збереження з \"%s\"."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Збереження \"%s\" з несумісної версії порту."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Збереження \"%s\" з іншого двигуна на базі ZDoom:"
+
+msgid "TXT_TOOOLDSG"
+msgstr "Збереження \"%s\" з старішої версії: %d (%e остання сумісна)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr "Збереження \"%s\" з новіщої версії: %d (%e остання сумісна)"
+
+msgid "TXT_NOMAPSG"
+msgstr "В збереженні \"%s\" відстутня дана карта."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "\"%s\" є недійсним збереженням: Відсутній \"globals.json\"."
+
+msgid "TXT_SGINFOERR"
+msgstr "Неможливо отримати доступ до збереження в \"%s\"."
+
+msgid "TXT_SAVEPENDING"
+msgstr "Збереження гри все ще очікується."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Не в грі зі збереженням."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Не на карті"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Гравець мертвий в однокористувацькій грі"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Помилка збереження гри"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Помилка створення знімку екрану."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "гравцем %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Натисніть будь-яку клавішу або клацніть будь-де у вікні, щоб вийти."
+
+msgid "HUDMNU_FLASH"
+msgstr "Налаштування змішування екрану"
+
+msgid "GLMNU_3DMODE"
+msgstr "Режим 3D"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Приціл"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Субтитри"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Прибрати сірі тіні"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Налаштування шрифтів"
+
+msgid "FONTMNU_LOG"
+msgstr "Використовувати стандартний шрифт для відображення логу"
+
+msgid "FONTMNU_DLG"
+msgstr "Використовувати стандартний шрифт для діалогів"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Швидкий вихід"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Налаштування кольорів безсмертя"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Темні кольори"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Світлі кольори"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Кількість тряски екрану при стрільбі"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Класичне масштабування інтермедії та меж екрану"
+
+msgid "SCALEMNU_INTER"
+msgstr "Фон інтермедії"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Межі екрану"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Значення масштабування"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Співвідношення сторін"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Показати екран статистики після виходу з карти"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "В залежності від модифікації"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Завжди (крім карт-хабів)"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Завжди (з картами-хабами)"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Бажана розкладка клавіатури"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Класична ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr "Сучасна (WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Сучасна (цифрова клавіатура)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Суворе налаштування клавіш для зброї/гравців"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Класичний розмір меню ZDoom"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Використовуйте відсотки на екрані статистики"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Класичний розмір екрану статистики ZDoom"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Містянин"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Стельова турель"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Хрестоносець"
+
+msgid "TAG_INQUISITOR"
+msgstr "Інквізитор"
+
+msgid "TAG_PEASANT"
+msgstr "Селянин"
+
+msgid "TAG_REAVER"
+msgstr "Рейдер"
+
+msgid "TAG_SENTINEL"
+msgstr "Вартовий"
+
+msgid "TAG_STALKER"
+msgstr "Сталкер"
+
+msgid "TAG_BISHOP"
+msgstr "Єпископ"
+
+msgid "TAG_ENTITY"
+msgstr "Єдиний Бог"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Програміст"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Спектр"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Хлопець на колінах"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Спаунити мультиплеєрні предмети в кооперативі"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Тіні спрайтів"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Монстрі та гравці"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr "Поле зору (FOV)"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Вимкнути функції MBF21"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Показати віджет часу"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Розчавлені монстри воскресають у вигляді привидів"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Коливання камери в польоті"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o було скалічено Змієм."
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Лінії згладжування"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "Рух і стрільба крізь інших гравців"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "Ключі даються усім гравцям"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Заборонити перевизначення повороту камери"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "Поміняти місцями покази хіт-пойнів та броні"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "Класичне масштабування інтерфейсу"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "Значення масштабування інтерфейсу"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "Спаунити тільки кооперативні актори в мультиплеєрі"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "Спаунити тільки кооперативні підбирані предмети в мультиплеєрі"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "Окремі копії предметів для кожного з гравців в мультиплеєрі"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "Вимкнути підбір випавших предметів на стороні клієнта"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "Перезавантажувати карту після смерті гравця"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "Старт тільки з пістолетом"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr "Дозволити створення гравців-зомбі"
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr "Ігнорувати діагональ підлоги (Z) при телепортації"
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr "Вимушено преспективний"
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr "Гучність кроків"
+
+msgid "ID24_GOTINCINERATOR"
+msgstr "Взято \"Випалювач\"!"
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr "Взято \"Меч Катастрофи\"! Геєна вогненна спалить їх плоть!"
+
+msgid "ID24_GOTFUELCAN"
+msgstr "Взято банку пального."
+
+msgid "ID24_GOTFUELTANK"
+msgstr "Взято каністру пального."
+
+msgid "TAG_ID24INCINERATOR"
+msgstr "Випалювач"
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr "Меч Катастрофи"
+
+msgid "AMMO_ID24FUEL"
+msgstr "Банка пального"
+
+msgid "AMMO_ID24FUELTANK"
+msgstr "Каністра пального"
+
+msgid "ID24_CC_GHOUL"
+msgstr ""
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr ""
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "Показати назву рівня"
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""

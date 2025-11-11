@@ -1,0 +1,196 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: hr\n"
+
+msgid "NIGHTMARE"
+msgstr "Stvarno misliš da to možeš podnijet?\\n\\nPritisni 'Y' ili 'N'..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Mjesto označeno."
+
+msgid "PD_BLUEO"
+msgstr "Zahtijeva ZELENU ključnu karticu."
+
+msgid "PD_REDO"
+msgstr "Zahtijeva LJUBIČASTU ključnu karticu."
+
+msgid "PD_YELLOWO"
+msgstr "Zahtijeva ŽUTU ključnu karticu."
+
+msgid "PD_BLUEK"
+msgstr "Zahtijeva ZELENI ključ."
+
+msgid "PD_YELLOWK"
+msgstr "Zahtijeva ŽUTI ključ."
+
+msgid "PD_REDK"
+msgstr "Zahtijeva LJUBIČASTI ključ."
+
+msgid "GOTARMOR"
+msgstr "Oklop je pokupljen."
+
+msgid "GOTMEGA"
+msgstr "Borbeni oklop je pokupljen."
+
+msgid "GOTMSPHERE"
+msgstr "Superzdravlje"
+
+msgid "GOTBLUECARD"
+msgstr "ZELENA ključna kartica je dobivena."
+
+msgid "GOTYELWCARD"
+msgstr "ŽUTA ključna kartica je dobivena."
+
+msgid "GOTREDCARD"
+msgstr "LJUBIČASTA ključna kartica je dobivena."
+
+msgid "GOTBLUESKUL"
+msgstr "ZELENI ključ je dobiven."
+
+msgid "GOTYELWSKUL"
+msgstr "ŽUTI ključ je dobiven."
+
+msgid "GOTREDSKUL"
+msgstr "LJUBIČASTI ključ je dobiven."
+
+msgid "GOTSTIM"
+msgstr "Ljekovita gljiva"
+
+msgid "GOTMEDIKIT"
+msgstr "Nabavljen: medicinski pribor."
+
+msgid "GOTMEDINEED"
+msgstr "Nabavljen: medicinski pribor koji ti je STVARNO potreban."
+
+msgid "GOTMAP"
+msgstr "Karta"
+
+msgid "GOTCLIPBOX"
+msgstr "Nabavljena: kutija metaka."
+
+msgid "GOTROCKET"
+msgstr "Nabavljena: granata."
+
+msgid "GOTROCKBOX"
+msgstr "Nabavljene: granate."
+
+msgid "GOTSHELLBOX"
+msgstr "Nabavljena: kutija čahura za pumpericu."
+
+msgid "GOTBACKPACK"
+msgstr "Nabavljen: ruksak streljiva."
+
+msgid "GOTBFG9000"
+msgstr "Nabavljena: granata."
+
+msgid "GOTCHAINGUN"
+msgstr "Nabavljen: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Nabavljen: bacač granata."
+
+msgid "GOTPLASMA"
+msgstr "Bacač entropije!"
+
+msgid "GOTSHOTGUN"
+msgstr "Nabavljena: pumperica."
+
+msgid "STSTR_DQDON"
+msgstr "Božanski način UKLJ."
+
+msgid "STSTR_DQDOFF"
+msgstr "Božanski način ISKLJ."
+
+msgid "STSTR_KFAADDED"
+msgstr "Sva oružja/streljivo/ključevi"
+
+msgid "STSTR_FAADDED"
+msgstr "Sva oružja i streljivo"
+
+msgid "TXT_HARMMAP01"
+msgstr "Otmica"
+
+msgid "TXT_HARMMAP02"
+msgstr "Štetan način"
+
+msgid "TXT_HARMMAP03"
+msgstr "Kakvo raspoloženje"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Bolnica"
+
+msgid "TXT_HARMMAP06"
+msgstr "Tvornica oružja"
+
+msgid "TXT_HARMMAP07"
+msgstr "Podvodni laboratorij"
+
+msgid "TXT_HARMMAP08"
+msgstr "Uzletište 1"
+
+msgid "TXT_HARMMAP09"
+msgstr "Baza za lansiranje"
+
+msgid "TXT_HARMMAP10"
+msgstr "Radioaktivna zona"
+
+msgid "TXT_HARMMAP11"
+msgstr "Echidna"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Osjećaš mučninu u želucu...\n"
+"Gledaš u lice kraljice mutanata... \n"
+"Ta stvar... To je nekad bila... \n"
+"Tvoja prijateljica... Amira!\n"
+"\n"
+"Ta čudovišta su sigurno pronašla način \n"
+"da ju mutiraju i pretvore u ovo\n"
+"odvratno stvorenje koje će nositi njihovo potomstvo.\n"
+"\n"
+"-uzdah-\n"
+"\n"
+"Saberi se... \n"
+"Oni će platiti što su te natjerali da ubiješ\n"
+"svoju prijateljicu...\n"
+"\n"
+"\"Pakao nema bijesa kao žena prezrena!\"\n"
+"\n"
+"     = K R A J ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Učitavanje"
+
+msgid "SKILL_BABY"
+msgstr "Jako lako"
+
+msgid "SKILL_EASY"
+msgstr "Lako"
+
+msgid "SKILL_NORMAL"
+msgstr "Srednje"
+
+msgid "SKILL_HARD"
+msgstr "Teško"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Jako teško"
+
+msgid "HARMQUITMSG"
+msgstr "Hvala na igranju!"
+
+msgid "TXT_D2E1"
+msgstr "Harmonija"

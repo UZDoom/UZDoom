@@ -1,0 +1,252 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: pl\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Zebrano niebieski flemowy klucz"
+
+msgid "GOTYELLOWFLEM"
+msgstr "Zebrano żółty flemowy klucz"
+
+msgid "GOTREDFLEM"
+msgstr "Zebrano czerwony flemowy klucz"
+
+msgid "GOTGOGGLES"
+msgstr "Znaleziono Ultra Gogle"
+
+msgid "PD_BLUECO"
+msgstr "Potrzebujesz niebieskiego klucza, aby aktywować ten przedmiot"
+
+msgid "PD_REDCO"
+msgstr "Potrzebujesz czerwonego klucza, aby aktywować ten przedmiot"
+
+msgid "PD_YELLOWCO"
+msgstr "Potrzebujesz żółtego klucza, aby aktywować ten przedmiot"
+
+msgid "PD_BLUEFO"
+msgstr ""
+"Potrzebujesz niebieskiego flemowego klucza, aby aktywować ten przedmiot"
+
+msgid "PD_REDFO"
+msgstr "Potrzebujesz czerwonego flemowego klucza, aby aktywować ten przedmiot"
+
+msgid "PD_YELLOWFO"
+msgstr "Potrzebujesz żółtego flemowego klucza, aby aktywować ten przedmiot"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Zebrano Zorcher"
+
+msgid "STSTR_KFAADDED"
+msgstr "Dodano amunicję Zorch i klucze"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Strefa Lądowania"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Magazyn"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorium"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arboretum"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Jaskinie Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Port Kosmiczny"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Kino"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Muzeum Chex"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Ulice Miasta"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: System Ścieków"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Centrum Dowodzenia"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Zjednoczone Płatki"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Willa Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Prowincjonalny Park"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Statek Kosmiczny \"Meteor\""
+
+msgid "CC_ZOMBIE"
+msgstr "Pospolitus"
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Opancerzony Bipedicus"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Flemowa Mina"
+
+msgid "CC_CACO"
+msgstr "Super Cykloptis"
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "Flembominacja"
+
+msgid "CC_CYBER"
+msgstr "Lord Smarkofolus"
+
+msgid "CC_HERO"
+msgstr "Wojownik Chex"
+
+msgid "PD_BLUEC"
+msgstr "Potrzebujesz niebieskiego klucza, aby otworzyć te drzwi"
+
+msgid "PD_REDC"
+msgstr "Potrzebujesz czerwonego klucza, aby otworzyć te drzwi"
+
+msgid "PD_YELLOWC"
+msgstr "Potrzebujesz żółtego klucza, aby otworzyć te drzwi"
+
+msgid "PD_BLUEF"
+msgstr "Potrzebujesz niebieskiego flemowego klucza, aby otworzyć te drzwi"
+
+msgid "PD_REDF"
+msgstr "Potrzebujesz czerwonego flemowego klucza, aby otworzyć te drzwi"
+
+msgid "PD_YELLOWF"
+msgstr "Potrzebujesz żółtego flemowego klucza, aby otworzyć te drzwi"
+
+msgid "OB_SLIME"
+msgstr "%o topi się w szlamie."
+
+msgid "OB_LAVA"
+msgstr "%o topi się w szlamie."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o został@[ao_pl] uderzon@[adj_pl] przez międzywymiarowy szlam!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o został@[ao_pl] uderzon@[adj_pl] przez międzywymiarowy szlam!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o został@[ao_pl] zaglutowan@[adj_pl] przez stridicusa."
+
+msgid "OB_FLEMMINE"
+msgstr "%o został@[ao_pl] zabrejowan@[adj_pl] przez flemową minę.\n"
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o został@[ao_pl] oszlamion@[adj_pl] przez super cykloptisa."
+
+msgid "OB_MAXIMUS"
+msgstr "%o został@[ao_pl] pokonan@[adj_pl] przez Maximusa."
+
+msgid "OB_LARVA"
+msgstr "%o został@[ao_pl] zabrejowan@[adj_pl] przez larwę."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o został@[ao_pl] oszlamion@[adj_pl] przez Quadrumpusa."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o został@[ao_pl] pokonan@[adj_pl] przez Flembominację."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o został@[ao_pl] pokonan@[adj_pl] przez Lorda Smarkofolusa."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o został@[ao_pl] uderzon@[adj_pl] przez pędnik %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o został@[ao_pl] zLAZowan@[adj_pl] przez %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Po wysłaniu Flembrany do jej własnego\n"
+"wymiaru, uwolniłeś jeńców. Ale flemoidy są\n"
+"wszędzie! Ty razem z jeńcami przebijacie się\n"
+"do statku kosmicznego. Flemoidy oszlamiły\n"
+"twój statek, ale ledwo uciekasz na orbitę.\n"
+"Podczas powrotu pogratulowano ci za brawurowy\n"
+"ratunek, ale zauważasz ostrzeżenie...\n"
+"To nie ostatni raz kiedy widzimy Flemoidy.\n"
+"\n"
+"Niestety masz rację. Jak wróciłeś do\n"
+"domu, zauważasz, że Flemoidy jakoś podążały\n"
+"za tobą. Przeygotuj się na\n"
+"Misja Chex 2: Terror w Mieście Chex!"
+
+msgid "E2TEXT"
+msgstr ""
+"Zorchujesz pozostałe flemoidy, które zebrały się\n"
+"w ściekach. Miasto Chex zostało uratowane.\n"
+"Wygląda na to, że zagrożenie flemoidami zostało\n"
+"zakończone.\n"
+"\n"
+"\n"
+"Dziesięć lat mija w spokoju i dobrobycie.\n"
+"Ale Flemoidy nie zostały pokonane, a ich chęć\n"
+"kontrolowania wymiaru z bogatym odżywianiem\n"
+"nie osłabła. Zebrały wszystkie swoje siły, otworzyły\n"
+"wielką szczelinę międzywymiarową w kosmosie\n"
+"i teraz wielka kula szlamu leci prosto na planetę\n"
+"płatków!\n"
+"\n"
+"Przygotuj się na\n"
+"Misja Chex 3: Inwazja!"
+
+msgid "E3TEXT"
+msgstr ""
+"Z ostatnim strzałem zorchujesz Lorda\n"
+"Smarkofolusa z powrotem do jego wymaru!\n"
+"Po wszystkim udało ci się w pojedynkę\n"
+"powstrzymać inwazję!\n"
+"\n"
+"Masz nadzieję, że Flemoidy w końcu się nauczyły\n"
+"i nigdy nie wrócą do wymiaru płatków.\n"
+"\n"
+"\n"
+"\n"
+"Ale jeśli jednak to zrobią, wiesz, że będziesz na nie\n"
+"gotów!"
+
+msgid "M_EPI1"
+msgstr "Ratunek na Bazoik"
+
+msgid "M_EPI2"
+msgstr "Terror w Mieście Chex"
+
+msgid "M_EPI3"
+msgstr "Inwazja"
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

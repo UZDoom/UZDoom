@@ -1,0 +1,200 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: nl\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Denk je echt dat je dat aankunt? \n"
+"\n"
+"Druk op 'Y' of 'N'..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Vlek gemarkeerd"
+
+msgid "PD_BLUEO"
+msgstr "Vereist de GROENE sleutelkaart"
+
+msgid "PD_REDO"
+msgstr "Vereist de PAARSE sleutelkaart"
+
+msgid "PD_YELLOWO"
+msgstr "Vereist de GELE sleutelkaart"
+
+msgid "PD_BLUEK"
+msgstr "Vereist de GROENE sleutel"
+
+msgid "PD_YELLOWK"
+msgstr "Vereist de GEELE sleutel"
+
+msgid "PD_REDK"
+msgstr "Vereist de PAARSE sleutel"
+
+msgid "GOTARMOR"
+msgstr "Je hebt een harnas opgehaald."
+
+msgid "GOTMEGA"
+msgstr "Je hebt een gevechtsharnas opgehaald."
+
+msgid "GOTMSPHERE"
+msgstr ""
+
+msgid "GOTBLUECARD"
+msgstr "GROENE sleutelkaart ontvangen"
+
+msgid "GOTYELWCARD"
+msgstr "GELE sleutelkaart ontvangen"
+
+msgid "GOTREDCARD"
+msgstr "PAARSE sleutelkaart ontvangen"
+
+msgid "GOTBLUESKUL"
+msgstr "GROENE sleutel ontvangen"
+
+msgid "GOTYELWSKUL"
+msgstr "GELE sleutel ontvangen"
+
+msgid "GOTREDSKUL"
+msgstr "PAARSE sleutel ontvangen"
+
+msgid "GOTSTIM"
+msgstr "Genezende paddenstoel"
+
+msgid "GOTMEDIKIT"
+msgstr "Verworven: medische kit."
+
+msgid "GOTMEDINEED"
+msgstr "Verworven: medische kit die je ECHT nodig heeft."
+
+msgid "GOTMAP"
+msgstr "Kaart"
+
+msgid "GOTCLIPBOX"
+msgstr "Verworven: geval van kogels."
+
+msgid "GOTROCKET"
+msgstr "Verworven: Granaat."
+
+msgid "GOTROCKBOX"
+msgstr "Verworven: Granaten."
+
+msgid "GOTSHELLBOX"
+msgstr "Verworven: doos met shotgun schelpen."
+
+msgid "GOTBACKPACK"
+msgstr "Verworven: munitie rugzak."
+
+msgid "GOTBFG9000"
+msgstr "Verworven: Granaat."
+
+msgid "GOTCHAINGUN"
+msgstr "Verworven: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Verworven: Granaatwerper."
+
+msgid "GOTPLASMA"
+msgstr "Entropiewerper!"
+
+msgid "GOTSHOTGUN"
+msgstr "Verworven: Shotgun."
+
+msgid "STSTR_DQDON"
+msgstr "God Modus AAN"
+
+msgid "STSTR_DQDOFF"
+msgstr "God Modus UIT"
+
+msgid "STSTR_KFAADDED"
+msgstr "Alle wapens / munitie / sleutels"
+
+msgid "STSTR_FAADDED"
+msgstr "Alle wapens en munitie"
+
+msgid "TXT_HARMMAP01"
+msgstr "Ontvoering"
+
+msgid "TXT_HARMMAP02"
+msgstr ""
+
+msgid "TXT_HARMMAP03"
+msgstr ""
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Het ziekenhuis"
+
+msgid "TXT_HARMMAP06"
+msgstr "De Wapenfabriek"
+
+msgid "TXT_HARMMAP07"
+msgstr "Het onderwaterlaboratorium"
+
+msgid "TXT_HARMMAP08"
+msgstr "Vliegveld Een"
+
+msgid "TXT_HARMMAP09"
+msgstr "De lanceerbasis"
+
+msgid "TXT_HARMMAP10"
+msgstr "De Radioactieve Zone"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Je voelt je ziek in je maag...\n"
+"Kijkend in het gezicht van de gemuteerde\n"
+"koningin... \n"
+"Dat ding... Dat was vroeger... \n"
+"Je vriendin... Amira!\n"
+"Die monsters moeten een manier hebben gevonden\n"
+"om haar te muteren en haar te veranderen\n"
+"in dit afschuwelijke wezen om hun\n"
+"nakomelingen te dragen.\n"
+"\n"
+"-zucht -\n"
+"\n"
+"Je komt jezelf bij elkaar... \n"
+"Ze gaan boeten voor het feit dat ze je laten\n"
+"vermoorden door je vriend...\n"
+"\"De hel heeft geen woede zoals een vrouw\n"
+"die wordt geminacht!\"\n"
+"\n"
+" = EINDE ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Laden van"
+
+msgid "SKILL_BABY"
+msgstr "Zeer gemakkelijk"
+
+msgid "SKILL_EASY"
+msgstr "Gemakkelijk"
+
+msgid "SKILL_NORMAL"
+msgstr "Middel"
+
+msgid "SKILL_HARD"
+msgstr "Moeilijk"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Zeer moeilijk"
+
+msgid "HARMQUITMSG"
+msgstr "Bedankt voor het spelen"
+
+msgid "TXT_D2E1"
+msgstr ""

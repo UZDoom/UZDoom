@@ -1,0 +1,201 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: sv\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Tror du verkligen att du klarar av det?\n"
+"Tryck på \"Y\" eller \"N\"..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Markerad punkt"
+
+msgid "PD_BLUEO"
+msgstr "Kräver det GRÖNA nyckelkortet."
+
+msgid "PD_REDO"
+msgstr "Kräver det LILA nyckelkortet"
+
+msgid "PD_YELLOWO"
+msgstr "Kräver det GULLA nyckelkortet"
+
+msgid "PD_BLUEK"
+msgstr "Kräver det GRÖNA nyckeln"
+
+msgid "PD_YELLOWK"
+msgstr "Kräver den GULLA nyckeln"
+
+msgid "PD_REDK"
+msgstr "Kräver den LILA nyckeln"
+
+msgid "GOTARMOR"
+msgstr "Plockade upp en rustning."
+
+msgid "GOTMEGA"
+msgstr "Plockade upp kampen rustning."
+
+msgid "GOTMSPHERE"
+msgstr "Supersundhet"
+
+msgid "GOTBLUECARD"
+msgstr "Skaffade det GRÖNA nyckelkortet."
+
+msgid "GOTYELWCARD"
+msgstr "Skaffade det GULLA nyckelkortet."
+
+msgid "GOTREDCARD"
+msgstr "Skaffade det LILA nyckelkortet."
+
+msgid "GOTBLUESKUL"
+msgstr "Skaffade den GRÖNA nyckeln."
+
+msgid "GOTYELWSKUL"
+msgstr "Skaffade den GULLA nyckeln."
+
+msgid "GOTREDSKUL"
+msgstr "Skaffade den LILA nyckeln."
+
+msgid "GOTSTIM"
+msgstr "Helande svamp"
+
+msgid "GOTMEDIKIT"
+msgstr "Förvärvad: medicinsk utrustning."
+
+msgid "GOTMEDINEED"
+msgstr "Förvärvad: medicinsk utrustning som du verkligen behöver."
+
+msgid "GOTMAP"
+msgstr "Karta"
+
+msgid "GOTCLIPBOX"
+msgstr "Förvärvad: väska med kulor."
+
+msgid "GOTROCKET"
+msgstr "Förvärvad: Granat."
+
+msgid "GOTROCKBOX"
+msgstr "Förvärvad: Granater."
+
+msgid "GOTSHELLBOX"
+msgstr "Förvärvad: låda med hagelpatroner."
+
+msgid "GOTBACKPACK"
+msgstr "Förvärvad: Ammunitionsryggsäck."
+
+msgid "GOTBFG9000"
+msgstr "Förvärvad: Granat."
+
+msgid "GOTCHAINGUN"
+msgstr "Förvärvad: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Förvärvad: Granatkastare."
+
+msgid "GOTPLASMA"
+msgstr ""
+
+msgid "GOTSHOTGUN"
+msgstr "Förvärvad: Hagelgevär"
+
+msgid "STSTR_DQDON"
+msgstr "Gud läge PÅ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Gud läge AV"
+
+msgid "STSTR_KFAADDED"
+msgstr "Alla vapen/ammunition/nycklar"
+
+msgid "STSTR_FAADDED"
+msgstr "Alla vapen och all ammunition"
+
+msgid "TXT_HARMMAP01"
+msgstr "Bortförande"
+
+msgid "TXT_HARMMAP02"
+msgstr "Harms väg"
+
+msgid "TXT_HARMMAP03"
+msgstr "Dåligt stämning"
+
+msgid "TXT_HARMMAP04"
+msgstr ""
+
+msgid "TXT_HARMMAP05"
+msgstr "Sjukhuset"
+
+msgid "TXT_HARMMAP06"
+msgstr "Vapenfabriken"
+
+msgid "TXT_HARMMAP07"
+msgstr "Undervattenslaboratoriet"
+
+msgid "TXT_HARMMAP08"
+msgstr "Landningsbana ett"
+
+msgid "TXT_HARMMAP09"
+msgstr "Avfyrningsbasen"
+
+msgid "TXT_HARMMAP10"
+msgstr "Den radioaktiva zonen"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Du mår illa i magen...\n"
+"När du ser mutantdrottningen i ansiktet... \n"
+"Den där saken... Som brukade vara... \n"
+"Din vän... Amira!\n"
+"\n"
+"De där monstren måste ha hittat ett\n"
+"sätt att mutera henne och förvandla\n"
+"henne till den här avskyvärda\n"
+"varelsen för att föda sin avkomma.\n"
+"\n"
+"-suck-\n"
+"\n"
+"Ta dig samman... \n"
+"De kommer att få betala för att de\n"
+"tvingade dig att döda din vän...\n"
+"\n"
+"\"Helvetet har ingen vrede som\n"
+"en kvinna som är föraktad!\"\n"
+"\n"
+"\n"
+"   = S L U T E T ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Laddar"
+
+msgid "SKILL_BABY"
+msgstr "Mycket lätt"
+
+msgid "SKILL_EASY"
+msgstr "Lätt"
+
+msgid "SKILL_NORMAL"
+msgstr "Medel"
+
+msgid "SKILL_HARD"
+msgstr "Svårt"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Mycket svårt"
+
+msgid "HARMQUITMSG"
+msgstr "Tack för att du spelar"
+
+msgid "TXT_D2E1"
+msgstr ""

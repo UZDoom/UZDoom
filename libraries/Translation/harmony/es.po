@@ -1,0 +1,200 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: es\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"¿Realmente crees poder con eso?\n"
+"\n"
+"Pulsa Y o N..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Punto marcado"
+
+msgid "PD_BLUEO"
+msgstr "Requiere la tarjeta llave VERDE"
+
+msgid "PD_REDO"
+msgstr "Requiere la tarjeta llave VIOLETA"
+
+msgid "PD_YELLOWO"
+msgstr "Requiere la tarjeta llave AMARILLA"
+
+msgid "PD_BLUEK"
+msgstr "Requiere la llave VERDE"
+
+msgid "PD_YELLOWK"
+msgstr "Requiere la llave AMARILLA"
+
+msgid "PD_REDK"
+msgstr "Requiere la llave VIOLETA"
+
+msgid "GOTARMOR"
+msgstr "Encuentras una armadura."
+
+msgid "GOTMEGA"
+msgstr "Encuentras una armadura de combate."
+
+msgid "GOTMSPHERE"
+msgstr "Supersalud"
+
+msgid "GOTBLUECARD"
+msgstr "Encuentras la tarjeta llave VERDE."
+
+msgid "GOTYELWCARD"
+msgstr "Encuentras la tarjeta llave AMARILLA."
+
+msgid "GOTREDCARD"
+msgstr "Encuentras la tarjeta llave VIOLETA."
+
+msgid "GOTBLUESKUL"
+msgstr "Encuentras la llave VERDE."
+
+msgid "GOTYELWSKUL"
+msgstr "Encuentras la llave AMARILLA."
+
+msgid "GOTREDSKUL"
+msgstr "Encuentras la llave VIOLETA."
+
+msgid "GOTSTIM"
+msgstr "Seta medicinal"
+
+msgid "GOTMEDIKIT"
+msgstr "Encuentras un botiquín."
+
+msgid "GOTMEDINEED"
+msgstr "Encuentras un botiquín que REALMENTE necesitabas."
+
+msgid "GOTMAP"
+msgstr "Mapa"
+
+msgid "GOTCLIPBOX"
+msgstr "Encuentras una caja de balas."
+
+msgid "GOTROCKET"
+msgstr "Encuentras una granada."
+
+msgid "GOTROCKBOX"
+msgstr "Encuentras unas granadas."
+
+msgid "GOTSHELLBOX"
+msgstr "Encuentras una caja de cartuchos de escopeta."
+
+msgid "GOTBACKPACK"
+msgstr "Encuentras una mochila de municiones."
+
+msgid "GOTBFG9000"
+msgstr "Encuentras una granada."
+
+msgid "GOTCHAINGUN"
+msgstr "Encuentras una ametralladora."
+
+msgid "GOTLAUNCHER"
+msgstr "Encuentras un lanzagranadas."
+
+msgid "GOTPLASMA"
+msgstr "¡Lanzador de entropía!"
+
+msgid "GOTSHOTGUN"
+msgstr "Encuentras una escopeta."
+
+msgid "STSTR_DQDON"
+msgstr "Modo Dios ACTIVADO"
+
+msgid "STSTR_DQDOFF"
+msgstr "Modo Dios DESACTIVADO"
+
+msgid "STSTR_KFAADDED"
+msgstr "Todas las armas/municiones/llaves"
+
+msgid "STSTR_FAADDED"
+msgstr "Todas las armas y municiones"
+
+msgid "TXT_HARMMAP01"
+msgstr "Abducción"
+
+msgid "TXT_HARMMAP02"
+msgstr "En peligro"
+
+msgid "TXT_HARMMAP03"
+msgstr "Buen humor"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalópolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "El hospital"
+
+msgid "TXT_HARMMAP06"
+msgstr "La fábrica de armas"
+
+msgid "TXT_HARMMAP07"
+msgstr "El laboratorio submarino"
+
+msgid "TXT_HARMMAP08"
+msgstr "Pista de aterrizaje uno"
+
+msgid "TXT_HARMMAP09"
+msgstr "La base de despegue"
+
+msgid "TXT_HARMMAP10"
+msgstr "La zona radioactiva"
+
+msgid "TXT_HARMMAP11"
+msgstr "Equidna"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Sientes que se te revuelve el estómago...\n"
+"Viendo el rostro de la reina mutante...\n"
+"Esa cosa... Que antes era...\n"
+"Tu amiga... ¡Amira!\n"
+"\n"
+"Esos monstruos han debido encontrar la\n"
+"forma de mutarla y convertirla en esta\n"
+"criatura horrible para parir a sus hijos.\n"
+"\n"
+"*suspiro*\n"
+"\n"
+"Consigues calmarte...\n"
+"Van a pagar por haberte obligado a matar\n"
+"a tu amiga...\n"
+"\n"
+"\"¡No hay mayor furia en el Infierno que\n"
+"la de una mujer desdeñada!\"\n"
+"\n"
+"    = F I N ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Cargando"
+
+msgid "SKILL_BABY"
+msgstr "Muy fácil"
+
+msgid "SKILL_EASY"
+msgstr "Fácil"
+
+msgid "SKILL_NORMAL"
+msgstr "Normal"
+
+msgid "SKILL_HARD"
+msgstr "Difícil"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Muy difícil"
+
+msgid "HARMQUITMSG"
+msgstr "Gracias por jugar"
+
+msgid "TXT_D2E1"
+msgstr ""

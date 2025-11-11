@@ -1,0 +1,2127 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/common/fi/"
+">\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fi\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Paina Y tai N."
+
+msgid "TXT_YES"
+msgstr "Kyllä"
+
+msgid "TXT_NO"
+msgstr "Ei"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Et voi tallentaa, jos et ole pelissä!\n"
+"\n"
+"Paina jotain näppäintä."
+
+msgid "SAFEMESSAGE"
+msgstr "Haluatko varmasti tehdä tämän?"
+
+msgid "NOTSET"
+msgstr "Ei asetettu"
+
+msgid "QSPROMPT"
+msgstr ""
+"Haluatko tallentaa pelin %s päälle?\n"
+"\n"
+"Paina Y tai N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Haluatko pikaladata pelin %s?\n"
+"\n"
+"Paina Y tai N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s huijaa"
+
+msgid "MSGOFF"
+msgstr "Viestit POIS PÄÄLTÄ"
+
+msgid "MSGON"
+msgstr "Viestit PÄÄLLÄ"
+
+msgid "TXT_SAY"
+msgstr "Sano:"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Paina mitä tahansa näppäintä tai napsauta minne tahansa ikkunaa "
+"lopettaaksesi."
+
+msgid "NEWSAVE"
+msgstr "<Uusi tallennettu peli>"
+
+msgid "GGSAVED"
+msgstr "Peli tallennettu."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Aika"
+
+msgid "MNU_LOADGAME"
+msgstr "Lataa peli"
+
+msgid "MNU_SAVEGAME"
+msgstr "Tallenna peli"
+
+msgid "MNU_NOPICTURE"
+msgstr "Ei kuvaa"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Eri versio"
+
+msgid "MNU_NOFILES"
+msgstr "Ei tiedostoja"
+
+msgid "MNU_DELETESG"
+msgstr "Haluatko varmasti poistaa tallennetun pelin "
+
+msgid "OPTVAL_OFF"
+msgstr "Pois"
+
+msgid "OPTVAL_ON"
+msgstr "Päällä"
+
+msgid "OPTVAL_AUTO"
+msgstr "Automaattinen"
+
+msgid "OPTMNU_TITLE"
+msgstr "Asetukset"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Ohjausasetukset"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Hiiriasetukset"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Peliohjainasetukset"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Pelaaja-asetukset"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Pelattavuusasetukset"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Automaattikartan asetukset"
+
+msgid "OPTMNU_HUD"
+msgstr "Tilanäytön asetukset"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Sekalaiset asetukset"
+
+msgid "OPTMNU_SOUND"
+msgstr "Ääniasetukset"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Näyttöasetukset"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Aseta videotila"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Palauta oletusasetukset"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Palauta viimeksi tallennettu tila"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Tallenna nykyiset asetukset"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Mene konsoliin"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Verkkoasetukset"
+
+msgid "OPTMNU_REVERB"
+msgstr "Kaikutilaeditori"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "Aseta ENTERILLÄ, tyhjennä ASKELPALAUTTIMELLA"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Valitse näppäin toiminnolle, ESC peruuttaa"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Ohjaimet"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Tuli"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Vaihtoehtoistuli"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Aseen lataus"
+
+msgid "CNTRLMNU_USE"
+msgstr "Käytä / Avaa"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Liiku eteenpäin"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Liiku taaksepäin"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Astu sivuun vasemmalle"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Astu sivuun oikealle"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Käänny vasemmalle"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Käänny oikealle"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Pikakäännös"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Hyppää"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Kyyristy"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Kyyristymisen vaihtokytkin"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Hiirikatselu"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Katso ylös"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Katso alas"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Keskitä katse"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Juokse"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Juoksun vaihtokytkin"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Astu sivuttain"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Näytä pistetaulu"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Toiminta"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Toimintaohjausasetukset"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Keskustelu"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Moninpeli"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Sano"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Keskusteluohjausasetukset"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Aseohjausasetukset"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Varusteohjausasetukset"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Muut ohjausasetukset"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Aseet"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Seuraava ase"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Edellinen ase"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Aselokero 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Aselokero 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Aselokero 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Aselokero 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Aselokero 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Aselokero 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Aselokero 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Aselokero 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Aselokero 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Aselokero 0"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Varusteet"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Aktivoi varuste"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Aktivoi kaikki varusteet"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Seuraava varuste"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Edellinen varuste"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Kartanohjausasetukset"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Kartanohjaus"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Panoroi vasemmalle"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Panoroi oikealle"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Panoroi ylös"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Panoroi alas"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Lähennä"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Loitonna"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Zoomauksen vaihtokytkin"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Seuraamistilan vaihtokytkin"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Ruudukon vaihtokytkin"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Kääntämisen vaihtokytkin"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Pintakuvioinnin vaihtokytkin"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Kytke automaattikartta päälle/pois"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Seurantakamera"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Kuvakaappaus"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Avaa konsoli"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Tauko"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Suurenna näytön kokoa"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Pienennä näytön kokoa"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Avaa ohje"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Avaa tallennusvalikko"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Avaa latausvalikko"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Avaa asetusvalikko"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Avaa näyttövalikko"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Pikatallenna"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Pikalataa"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Poistu päävalikkoon"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Kytke viestit päälle tai pois"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Lopeta peli"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Säädä gammaa"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Ota hiiri käyttöön"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Ota hiiri käyttöön valikoissa"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Näytä taaksenäppäin"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Osoitin"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Vaakasuuntainen herkkyys"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Pystysuuntainen herkkyys"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Sulava hiiren liike"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Kääntymisnopeus"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Katselunopeus"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Eteen-/taaksepäin liikkeen nopeus"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Sivuttaisastunnan nopeus"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Jatkuva hiirikatselu"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Käännä hiiri Y"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Käännä hiiri X"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Ylävasemmalla"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Yläoikealla"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Alavasemmalla"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Alaoikealla"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Kosketusnäyttömäinen"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Yksinkertainen nuoli"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Järjestelmän osoitin"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Oletus"
+
+msgid "JOYMNU_TITLE"
+msgstr "Peliohjainasetukset"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Peliohjainasetukset"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Estä ohjainsyötteet valikoissa"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Ota käyttöön peliohjaintuki"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Ota käyttöön DirectInput-ohjaimet"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Ota käyttöön XInput-ohjaimet"
+
+msgid "JOYMNU_PS2"
+msgstr "Ota käyttöön raa'at PlayStation 2 -adapterit"
+
+msgid "JOYMNU_NOCON"
+msgstr "Ei havaittuja ohjaimia"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Mukauta ohjaimia:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Ohjaintuen täytyy olla otettu"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "käyttöön ohjainten havaitsemiseksi"
+
+msgid "JOYMNU_INVALID"
+msgstr "Epäkelpo ohjain määritetty valikolle"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Yleisherkkyys"
+
+msgid "JOYMNU_AXIS"
+msgstr "Akseleiden säätäminen"
+
+msgid "JOYMNU_INVERT"
+msgstr "Käännä"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Kuollut alue"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Ei säädettäviä akseleita"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Ei mitään"
+
+msgid "OPTVAL_TURNING"
+msgstr "Kääntyminen"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Ylös/Alas katsominen"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Eteenpäin liikkuminen"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Sivuttaisastunta"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Ylös/Alas liikkuminen"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Käännetty"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Ei käännetty"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Sininen"
+
+msgid "TXT_COLOR_RED"
+msgstr "Punainen"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Vihreä"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Harmaa"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Tummanharmaa"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Tummanvihreä"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Ruskea"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Tummansininen"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Vaaleanpunainen"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Keltainen"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Purppura"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Haaleanvihreä"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Beesi"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Vaaleanvihreä"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Vaaleansininen"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Vaaleanharmaa"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Vaaleanruskea"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Kulta"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Vaaleanvihreä"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Ruoste"
+
+msgid "PLYRMNU_NAME"
+msgstr "Nimi"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Joukkue"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Väri"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Sukupuoli"
+
+msgid "OPTVAL_MALE"
+msgstr "Miespuolinen"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Naispuolinen"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Sukupuoleton"
+
+msgid "OPTVAL_OTHER"
+msgstr "Olio"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Pelattavuusasetukset"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Aina"
+
+msgid "OPTVAL_NEVER"
+msgstr "Ei koskaan"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Automaattitähtäys"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Jatkuva juoksu"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Näytön koko"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Pystytahdistys"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Mallit"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skaalaa tähtäintä"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Kirkkaus"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gammakorjaus"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Sävykkyys"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Värikylläisyys"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Tilapalkin skaalaus"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Viestit"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Keskitä viestit"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Sykkivät viestit"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Viestien skaalaus"
+
+msgid "MNU_COLORPICKER"
+msgstr "Valitse väri"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Kiertyvä automaattikartta"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Seuraa pelaajaa"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Viivan alpha"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Viivan paksuus"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Värien mukautus"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Palauta oletusvärit"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Ääni päällä"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Musiikki päällä"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 näytettä"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 näytettä"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 näytettä"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 näytettä"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 näytettä"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 näytettä"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 näytettä"
+
+msgid "OPTSTR_AUTO"
+msgstr "Automaattinen"
+
+msgid "OPTSTR_MONO"
+msgstr ""
+
+msgid "OPTSTR_STEREO"
+msgstr ""
+
+msgid "OPTSTR_PROLOGIC"
+msgstr ""
+
+msgid "OPTSTR_QUAD"
+msgstr "Dolby Pro Logic -dekooderi"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 kaiutinta"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 kaiutinta"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 kaiutinta"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Äänitoistolaite"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Ota käyttöön EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Näytteenottotaajuusmuunnin"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Äänitehosteiden voimakkuus"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Valikon äänenvoimakkuus"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Musiikin äänenvoimakkuus"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI-laite"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Ääni taustalla"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Vedenalaiskaiku"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Satunnaista äänenkorkeuksia"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Äänikanavat"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Äänijärjestelmä"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL-asetukset"
+
+msgid "SNDMNU_RESTART"
+msgstr "Käynnistä ääni uudelleen"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Edistyneet asetukset"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Moduulisoitinasetukset"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "MIDI-soitinasetukset"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Ääni valikoissa"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Edistyneet ääniasetukset"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Näytteenottotaajuus"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL-synteesi"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Emuloitavien OPL-piirien lukumäärä"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Täysi MIDI-stereopanorointi"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL-emulaattoriydin"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI-äänet"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Yleinen"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Yleinen Freeverb"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Patch-asetus"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Vahvistus"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Kaiku"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Kaiunvoimakkuus"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity-config-tiedosto"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Suhteellinen äänenvoimakkuus"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi-config-tiedosto"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Valitse kokoonpano"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Kehittynyt näytteenottotaajuuden muuntaminen"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "OPL-pankki"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL-emulaattoriydin"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Aja emulaattoria PCM-taajuudella"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Emuloitavien OPL-piirien lukumäärä"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Vahvistus"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Äänenvoimakkuusmalli"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2-emulaattoriydin"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS-emulaatio"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS-config-tiedosto"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Lue DMXGUS-tietoja"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS-muistikoko"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Emuloitavien OPN-piirien lukumäärä"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Vahvistus"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Käytä mukautettua WOPL-pankkia"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL-pankkitiedosto"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Käytä mukautettua WOPN-pankkia"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN-pankkitiedosto"
+
+msgid "OPTVAL_ALIASING"
+msgstr ""
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Lineaarinen"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Lineaarinen"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Lineaarinen"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Lähin"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (matala)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (keskitaso)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (korkea)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kuutio"
+
+msgid "OPTVAL_BLEP"
+msgstr "Kaistarajoitettu askel"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Lineaarinen (hitaampi)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Kaistarajoitettu lineaarinen"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kuutio (hitaampi)"
+
+msgid "OPTVAL_SINC"
+msgstr ""
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Vain nuotti päällä/pois"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Täysi kerrytys"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Yleisäänenvoimakkuus"
+
+msgid "MODMNU_QUALITY"
+msgstr "Laatu"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Äänenvoimakkuuden kertyminen"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Automaattinen (käytä pankin asetuksia)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Automaattinen (käytä pankin asetuksia)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Yleinen"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Yleinen"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "Luontainen OPL"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "Luontainen OPN"
+
+msgid "ADLVLMODEL_DMX"
+msgstr ""
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Win9x-kaltainen"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9x-kaltainen (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Win9x-kaltainen (Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (ilman AM-äänivikaa)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (ilman AM-äänivikaa)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr ""
+
+msgid "ADLVLMODEL_HMI"
+msgstr ""
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (vanha, vikainen)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Rajoittamaton"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Paletti"
+
+msgid "OPTVAL_LOW"
+msgstr "Matala"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Keskitaso"
+
+msgid "OPTVAL_HIGH"
+msgstr "Korkea"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Äärimmäinen"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Etupuoli"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Käänteinen"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Jälkikäsittely"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Sävykarttatila"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Linssinvääristystehoste"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA-laatu"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Sekoitussävytyksen (dithering) ulostulo"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Sävykartan paletin järjestys"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Sävykartan paletin eksponentti"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Moninäytteistys"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Hehkutehoste (bloom)"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Yleisvarjostuksen (ambient occlusion) laatu"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Yleisvarjostuksen portaalit"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Valikon sumennus"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Ympäristökartta peileissä"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Hahmonnuslaatu"
+
+msgid "OPTVAL_SPEED"
+msgstr "Nopeus"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Laatu"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Sektorivalojen tila"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Sumutila"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Säteittäinen"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Normaali"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Pintakuviointien suodatustapa"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anisotrooppinen suodatus"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Ei mitään (lähin mipkartta)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Ei mitään (lin. mipkartta)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Ei mitään (trilineaarinen)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilineaarinen"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilineaarinen"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Pintakuviointiasetukset"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Pintakuvioinnit otettu käyttöön"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Salli korkean erotuskyvyn pintakuvioinnit"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Korkealaatuinen kuvakoon muutostapa"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Korkealaatuisen kuvakokomuutoksen kerroin"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Tämä tila vaatii %d kertaa enemmän videomuistia"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Muuta pintakuviointien kokoa"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Muuta spritejen kokoa"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Muuta kirjasinten kokoa"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Muuta ulkoasujen kokoa"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Kirjoita GL-pintakuvioinnit välimuistiin"
+
+msgid "VIDMNU_TITLE"
+msgstr "Videotila"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Skaalattu (läheisin)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Skaalattu (lineaarinen)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Mustat reunat"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Venytetty"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Hahmonnustila"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Koko näyttö"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI-tuki"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Kuvasuhde"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Pakota kuvasuhde"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Kuvasuhteen pakotustapa"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Ota käyttöön 5:4-kuvasuhde"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Resoluution skaalaus"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Skaalauskerroin"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Lineaarinen skaalaus (koko näyttö)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Mukautettu skaalaus"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Mukautettu leveys"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Mukautettu korkeus"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Ota käyttöön muutokset (ikkuna)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Ota käyttöön muutokset (koko näyttö)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Valitse ennalta määritetty resoluutio"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Ennalta määritetyt mukautetut resoluutiot"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Ennalta määritetyt resoluutiotilat"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "4:3-tilat"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "5:4-tilat"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "16:9-tilat"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "16:10-tilat"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "21:9-tilat"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normaali"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Pienin mahdollinen skaalaus"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Mukautettu"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "Kuvataajuuden rajoitin"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 kuvaa/s"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 kuvaa/s"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 kuvaa/s"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 kuvaa/s"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 kuvaa/s"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 kuvaa/s"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Ensisijainen hahmonnuksen ohjelmointirajapinta"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Yhdistä vasen ja oikea Alt/Ctrl/Vaihto"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter kytkee täyden ruudun päälle/pois"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Komento-F kytkee täyden ruudun päälle/pois"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Ota käyttöön automaattiset tallennukset"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Automaattisten tallennusten lukumäärä"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Tallennuksen/Latauksen vahvistus"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Poista näppäinhuijaukset"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Pikatallennuskierto"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Pikatallennusten määrä kierrossa"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Poista käytöstä valikon siisti skaalautuminen"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Pysäytä peli taustalla"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Oletustähtäin"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Tähtäimen väri"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Tähtäin näyttää terveyden"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Skaalaa tähtäintä"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Normaali"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Paranneltu"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Kieli"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Peruuttaa muutokset"
+
+msgid "REVMNU_SELECT"
+msgstr "Valitse tila"
+
+msgid "REVMNU_TEST"
+msgstr "Testaa tilaa"
+
+msgid "REVMNU_EDIT"
+msgstr "Muokkaa tilaa"
+
+msgid "REVMNU_NEW"
+msgstr "Uusi tila"
+
+msgid "REVMNU_REVERT"
+msgstr "Palauta asetukset"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Tilan koko"
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Tilan äänen hajautuminen"
+
+msgid "REVMNU_ROOM"
+msgstr "Tilan keskitaajuudet"
+
+msgid "REVMNU_ROOM_HF"
+msgstr "Tilan korkeat taajuudet"
+
+msgid "REVMNU_ROOM_LF"
+msgstr "Tilan matalat taajuudet"
+
+msgid "REVMNU_DECAY_TIME"
+msgstr "Häipymäaika"
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Korkeiden taajuuksien (HF) häipymissuhdeluku"
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Matalien taajuuksien (LF) häipymissuhdeluku"
+
+msgid "REVMNU_REFLECTIONS"
+msgstr "Ensiheijastukset"
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Ensiheijastusten viive"
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Ensiheijastusten X-panorointi"
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Ensiheijastusten Y-panorointi"
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Ensiheijastusten Z-panorointi"
+
+msgid "REVMNU_REVERB"
+msgstr "Jälkikaiunta"
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Jälkikaiunnan viive"
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Jälkikaiunnan X-panorointi"
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Jälkikaiunnan Y-panorointi"
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Jälkikaiunnan Z-panorointi"
+
+msgid "REVMNU_ECHO_TIME"
+msgstr "Kaikuaika"
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Kaiun syvyys"
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Modulaatioaika"
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Modulaation syvyys"
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Korkeiden taajuuksien (HF) ilma-absorptio"
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr "Korkeiden taajuuksien vertausarvo"
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr "Matalien taajuuksien vertausarvo"
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Tilan vaimenemiskerroin"
+
+msgid "REVMNU_DIFFUSION"
+msgstr "Diffuusio"
+
+msgid "REVMNU_DENSITY"
+msgstr "Tiheys"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Ensiheijastusten skaala"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Ensiheijastusten viiveen skaala"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Häipymäajan skaala"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Häipymän korkeiden taajuuksien raja-arvo"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Jälkikaiunnan skaala"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Jälkikaiunnan viiveen skaala"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Kaikuajan skaala"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Modulaatioajan skaala"
+
+msgid "REVMNU_Based_on"
+msgstr "Perustana"
+
+msgid "REVMNU_Name"
+msgstr "Nimi"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Luo"
+
+msgid "REVMNU_Save"
+msgstr "Tallenna..."
+
+msgid "REVMNU_File_name"
+msgstr "Tiedostonimi"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Tallennettavat tilat"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan-asetukset (kokeellinen)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan-asetukset"
+
+msgid "VKMNU_ENABLE"
+msgstr "Ota käyttöön Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan-laitetunniste"
+
+msgid "VKMNU_HDR"
+msgstr "Korkea dynamiikka-alue (HDR)"
+
+msgid "VK_WARNING"
+msgstr "Varoitus: Vulkan-hahmonnin on hyvin kokeellinen!"
+
+msgid "VK_RESTART"
+msgstr "Nämä asetukset vaativat uudelleenkäynnistyksen astuakseen voimaan."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Valitse Vulkan-laite"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Vanha xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Asetushaku"
+
+msgid "OS_ANY"
+msgstr "Etsi mitä tahansa sanaa"
+
+msgid "OS_ALL"
+msgstr "Etsi kaikki sanat"
+
+msgid "OS_NO_RESULTS"
+msgstr "Ei tuloksia."
+
+msgid "OS_LABEL"
+msgstr "Etsi:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k perkasi %o paran kuin kalan"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k kastroi %o paran"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k kermasi %o paran"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k hävitti %o paran"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k tuhosi %o paran"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k pilkkosi %o paran"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k suolisti %o paran"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k lyttäsi %o paran"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k jakoi %o paralle anaalioikeutta"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k teki %o paran AnAaLiHuLlUkSi"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k tappoi %o paran"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k teki jauhelihaa %o parasta"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k verilöylytti %o parkaa"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k silpoi %o paran"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k porasi %o paran"
+
+msgid "TXT_OBITUARY16"
+msgstr "%k repi %o paralle uuden aukon"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k teurasti %o paran"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k murskasi %o paran"
+
+msgid "TXT_OBITUARY19"
+msgstr "%k anaaliraiskasi %o paran"
+
+msgid "TXT_OBITUARY20"
+msgstr "%k roiski %o paran yltympäri"
+
+msgid "TXT_OBITUARY21"
+msgstr "%k litisti %o paran"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k polki %o paran"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k kulutti %o paran"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k kääri %o paran ruumispussiin"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k lähetti %o paran helvettiin"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k käristi %o paran"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k sammutti %o paran"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k pesi %o paran"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k ruiskutti %o paran"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k teki %o parasta koiranruokaa"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k huitoi %o parkaa kuin rakkia"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o on ulostetta"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o on hakkelusta"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o kärsii kivespussin erotuksesta"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o ilmoittautui vapaaehtoiseksi väestönhallintaan"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o on tehnyt itsemurhan"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o sai Darwin-palkinnon"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "ÄÖ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Täysi asetusvalikko"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Yksinkertainen asetusvalikko"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Selaa pelin asetuksia"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Selaa kuvakaappauksia"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Selaa tallennettuja pelejä"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Vaihda hiiren painikkeita"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Vain muunneltu"
+
+msgid "TXT_UNKNOWN"
+msgstr "Tuntematon"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr ""
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Tämä pelitallenne tarvitsee nämä tiedostot"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Moninpelivaihtoehdot"
+
+msgid "OPTMNU_INPUT"
+msgstr "Syöttöasetukset"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Järjestelmäasetukset"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Valoasetukset"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Sprite-asetukset"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Coronat"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Ulkonäkö"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Näytön lisäasetukset"
+
+msgid "PICKER_SELECT"
+msgstr "Valitse suoritettava pelitiedosto."
+
+msgid "PICKER_PLAY"
+msgstr "Pelin pelaaminen"
+
+msgid "PICKER_EXIT"
+msgstr "Poistu"
+
+msgid "PICKER_GENERAL"
+msgstr "Yleistä"
+
+msgid "PICKER_EXTRA"
+msgstr "Extra Graphics"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Koko näyttö"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Poista automaattinen lataus käytöstä"
+
+msgid "PICKER_DONTASK"
+msgstr "Älä kysy uudestaan"
+
+msgid "PICKER_LIGHTS"
+msgstr "Valot"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Brightmaps"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Laajakuva"
+
+msgid "PICKER_ADDPARM"
+msgstr "Lisäparametrit:"
+
+msgid "PICKER_WELCOME"
+msgstr "Tervetuloa %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Versio %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "Renderöinti API"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Peli"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Aktivoi tämä ohjain"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Avaa päävalikko"
+
+msgid "MODMNU_REPLAYER"
+msgstr ""
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr ""
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr ""
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr ""
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr ""
+
+msgid "PICKER_PLAYHOST"
+msgstr ""
+
+msgid "PICKER_PLAYJOIN"
+msgstr ""
+
+msgid "PICKER_REMPARM"
+msgstr ""
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr ""
+
+msgid "PICKER_TAB_MULTI"
+msgstr ""
+
+msgid "PICKER_LOADSAVE"
+msgstr ""
+
+msgid "PICKER_REMSAVE"
+msgstr ""
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr ""
+
+msgid "PICKER_JOIN"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+msgid "PICKER_NETRATE"
+msgstr ""
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr ""
+
+msgid "PICKER_GAMEMODE"
+msgstr ""
+
+msgid "PICKER_COOP"
+msgstr ""
+
+msgid "PICKER_DM"
+msgstr ""
+
+msgid "PICKER_TDM"
+msgstr ""
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr ""
+
+msgid "PICKER_ALTDM"
+msgstr ""
+
+msgid "PICKER_PLAYERS"
+msgstr ""
+
+msgid "PICKER_PORT"
+msgstr ""
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr ""
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr ""
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr ""
+
+msgid "PICKER_IP"
+msgstr ""
+
+msgid "PICKER_TDMLABEL"
+msgstr ""
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr ""
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr ""
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

@@ -1,0 +1,199 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: cs\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Opravdu si myslíš, že to zvládneš?\n"
+"\n"
+"Zmáčkni Y nebo N."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Bod označen"
+
+msgid "PD_BLUEO"
+msgstr "Vyžaduje ZELENOU kartu"
+
+msgid "PD_REDO"
+msgstr "Vyžaduje FIALOVOU kartu"
+
+msgid "PD_YELLOWO"
+msgstr "Vyžaduje ŽLUTOU kartu"
+
+msgid "PD_BLUEK"
+msgstr "Vyžaduje ZELENÝ klíč"
+
+msgid "PD_YELLOWK"
+msgstr "Vyžaduje ŽLUTÝ klíč"
+
+msgid "PD_REDK"
+msgstr "Vyžaduje FIALOVÝ klíč"
+
+msgid "GOTARMOR"
+msgstr "Sebráno brnění."
+
+msgid "GOTMEGA"
+msgstr "Sebráno bojové brnění."
+
+msgid "GOTMSPHERE"
+msgstr "Superzdraví"
+
+msgid "GOTBLUECARD"
+msgstr "Sebrána ZELENÁ karta."
+
+msgid "GOTYELWCARD"
+msgstr "Sebrána ŽLUTÁ karta."
+
+msgid "GOTREDCARD"
+msgstr "Sebrána FIALOVÁ karta."
+
+msgid "GOTBLUESKUL"
+msgstr "Sebrán ZELENÝ klíč."
+
+msgid "GOTYELWSKUL"
+msgstr "Sebrán ŽLUTÝ klíč."
+
+msgid "GOTREDSKUL"
+msgstr "Sebrán FIALOVÝ klíč."
+
+msgid "GOTSTIM"
+msgstr "Léčivka"
+
+msgid "GOTMEDIKIT"
+msgstr "Získána lékárnička."
+
+msgid "GOTMEDINEED"
+msgstr "Získána lékárnička, kterou OPRAVDU potřebuješ."
+
+msgid "GOTMAP"
+msgstr "Mapa"
+
+msgid "GOTCLIPBOX"
+msgstr "Získána krabice nábojů."
+
+msgid "GOTROCKET"
+msgstr "Ziskán granát."
+
+msgid "GOTROCKBOX"
+msgstr "Ziskány granáty."
+
+msgid "GOTSHELLBOX"
+msgstr "Získána krabice broků."
+
+msgid "GOTBACKPACK"
+msgstr "Ziskán batoh s municí."
+
+msgid "GOTBFG9000"
+msgstr "Získán granát."
+
+msgid "GOTCHAINGUN"
+msgstr "Získán kulomet."
+
+msgid "GOTLAUNCHER"
+msgstr "Získán granátomet."
+
+msgid "GOTPLASMA"
+msgstr "Vrhač entropie!"
+
+msgid "GOTSHOTGUN"
+msgstr "Získána brokovnice."
+
+msgid "STSTR_DQDON"
+msgstr "Nesmrtelnost ZAP"
+
+msgid "STSTR_DQDOFF"
+msgstr "Nesmrtelnost VYP"
+
+msgid "STSTR_KFAADDED"
+msgstr "Všechny zbraně/munice/klíče"
+
+msgid "STSTR_FAADDED"
+msgstr "Všechny zbraně a munice"
+
+msgid "TXT_HARMMAP01"
+msgstr "Únos"
+
+msgid "TXT_HARMMAP02"
+msgstr "Nebezpečí"
+
+msgid "TXT_HARMMAP03"
+msgstr "Špatný pocit"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopole"
+
+msgid "TXT_HARMMAP05"
+msgstr "Nemocnice"
+
+msgid "TXT_HARMMAP06"
+msgstr "Továrna na zbraně"
+
+msgid "TXT_HARMMAP07"
+msgstr "Podvodní laboratoř"
+
+msgid "TXT_HARMMAP08"
+msgstr "Přistávací dráha jedna"
+
+msgid "TXT_HARMMAP09"
+msgstr "Vzletová základna"
+
+msgid "TXT_HARMMAP10"
+msgstr "Radioaktivní zóna"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Zvedá se ti žaludek... když se díváš\n"
+"do obličeje mutantí královny...\n"
+"ta věc... která dřív byla...\n"
+"tvá kamarádka... Amira!\n"
+"\n"
+"Ta monstra musela najít způsob, jak\n"
+"ji zmutovat a přeměnit ji v tuto\n"
+"ohavnou kreaturu, nosící jejich potomky.\n"
+"\n"
+"Povzdechneš si.\n"
+"\n"
+"Dáš se zase dohromady...\n"
+"Však oni zaplatí za to, že tě donutili\n"
+"zabít svou přítelkyni...\n"
+"\n"
+"„Není běsu většího než hněv ženy zhrzené!“\n"
+"\n"
+"     = K O N E C ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Načítá se"
+
+msgid "SKILL_BABY"
+msgstr "Velmi snadné"
+
+msgid "SKILL_EASY"
+msgstr "Snadný"
+
+msgid "SKILL_NORMAL"
+msgstr "Střední"
+
+msgid "SKILL_HARD"
+msgstr "Obtížný"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Velmi obtížné"
+
+msgid "HARMQUITMSG"
+msgstr "Díky za hraní"
+
+msgid "TXT_D2E1"
+msgstr ""

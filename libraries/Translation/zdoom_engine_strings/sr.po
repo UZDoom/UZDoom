@@ -1,0 +1,5239 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: sr\n"
+
+msgid "PRESSKEY"
+msgstr "Притисните било који тастер."
+
+msgid "SECRETMESSAGE"
+msgstr "Откривена тајна!"
+
+msgid "D_DEVSTR"
+msgstr "Програмерски режим УКЉУЧЕН."
+
+msgid "QUITMSG"
+msgstr "Желиш ли заиста да изађеш из ове чудесне игре?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Не можете да учитате чување током мрежне игре!\n"
+"\n"
+"Притисните тастер."
+
+msgid "QLOADNET"
+msgstr ""
+"Не можете да учитате брзо чување током мрежне игре!\n"
+"\n"
+"Притисните тастер."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Нисте још изабрали слот за брзо чување!\n"
+"\n"
+"Притисните тастер."
+
+msgid "NEWGAME"
+msgstr ""
+"Не можете да започнете\n"
+"нову игру током мрежне игре.\n"
+"\n"
+"Притисните тастер."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Сигурни сте? Овај ниво тежине\n"
+"није нимали фер.\n"
+"\n"
+"Притисните Y или N."
+
+msgid "SWSTRING"
+msgstr ""
+"Ово је демонстрациона верзија Doom-а.\n"
+"\n"
+"Потребно је да наручите целу трилогију.\n"
+"\n"
+"Притисните било који тастер."
+
+msgid "NETEND"
+msgstr ""
+"Не можете да завршите мрежну игру!\n"
+"\n"
+"Притисните било који тастер."
+
+msgid "ENDGAME"
+msgstr ""
+"Желите ли сигурно да завршите игру?\n"
+"\n"
+"Притисните Y или N."
+
+msgid "RAVENQUITMSG"
+msgstr "Желите ли сигурно да изађете?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Само могуће у регистрованој верзији"
+
+msgid "DOSY"
+msgstr "(Притисните Y да завршите)"
+
+msgid "QUITMSG1"
+msgstr ""
+"Молим те, не одлази!\n"
+"Има још демона да се побије!"
+
+msgid "QUITMSG2"
+msgstr ""
+"Хајде, бриши одавде\n"
+"ако ти је ово одвећ крваво!"
+
+msgid "QUITMSG3"
+msgstr ""
+"Да сам на твом месту, не бих одлазио.\n"
+"DOS је много досаднији."
+
+msgid "QUITMSG4"
+msgstr ""
+"Више ти допада DOS\n"
+"него ја, је ли?"
+
+msgid "QUITMSG5"
+msgstr ""
+"Немој да одеш --\n"
+"иза угла има још један демон!"
+
+msgid "QUITMSG6"
+msgstr ""
+"Знаш, по повратку ће те\n"
+"чекати велике невоље."
+
+msgid "QUITMSG7"
+msgstr "Хајде, одлази. Уопште ме није брига."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"Озбиљно желиш да изађеш?\n"
+"Није то нимало паметно!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Немој да одеш!\n"
+"Међудимензионално чудовиште\n"
+"чека код DOS промпта!"
+
+msgid "QUITMSG10"
+msgstr ""
+"Губи се одавде\n"
+"својим досадним програмима."
+
+msgid "QUITMSG11"
+msgstr ""
+"Да сам твој шеф,\n"
+"средио бих те за један минут!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Чуј, ортак. Одеш ли,\n"
+"изгубићеш свој број убистава!"
+
+msgid "QUITMSG13"
+msgstr ""
+"Иди, иди... али када се вратиш,\n"
+"чекаћу те са палицом."
+
+msgid "QUITMSG14"
+msgstr ""
+"Имаш среће што те не ошамарим\n"
+"због тога што одлазиш."
+
+msgid "QUITMSG15"
+msgstr ""
+"Где ћеш?\n"
+"Шта ће бити са устанком?!"
+
+msgid "QUITMSG16"
+msgstr ""
+"Покољ се прекида...\n"
+"на најзанимљивијем месту!"
+
+msgid "QUITMSG17"
+msgstr ""
+"Али на тебе је сва нада --\n"
+"ти си моја једина шанса!"
+
+msgid "QUITMSG18"
+msgstr "Нико још није побегао од Црне птице."
+
+msgid "QUITMSG19"
+msgstr "О теби сам мислила другачије..."
+
+msgid "QUITMSG20"
+msgstr "Добро! Само убијај и бежи!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Можеш да одеш...\n"
+"али не можеш да се кријеш..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Ха! Шта је било?\n"
+"Мама те зове на вечеру?"
+
+msgid "QUITMSG23"
+msgstr ""
+"Немој сада да одустајеш!\n"
+"Има још много љигавца! "
+
+msgid "QUITMSG24"
+msgstr ""
+"Немој да одустајеш --\n"
+"љигавци ће добити предност!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Не излази сада.\n"
+"Треба нам твоја помоћ!"
+
+msgid "QUITMSG26"
+msgstr ""
+"Надам се да само паузираш\n"
+"за Chex житарице."
+
+msgid "QUITMSG27"
+msgstr ""
+"Не одустај сада!\n"
+"Треба нам твоја помоћ!"
+
+msgid "QUITMSG28"
+msgstr ""
+"Не напуштај Интергалактичку\n"
+"федерацију овсених пахуљица!"
+
+msgid "QUITMSG29"
+msgstr ""
+"Прави Чекс ратници не\n"
+"би одустали тако лако!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Покупили сте нешто"
+
+msgid "PD_ANY"
+msgstr "За отварање потребан је било који кључ"
+
+msgid "PD_ANYOBJ"
+msgstr "За активирање потребан је било који кључ"
+
+msgid "PD_ALL3"
+msgstr "За отварање потребна су сва три кључа "
+
+msgid "PD_ALL3O"
+msgstr "За активирање потребна су сва три кључа"
+
+msgid "PD_ALL6"
+msgstr "За отварање потребна су свих шест кључева"
+
+msgid "PD_ALL6O"
+msgstr "За активирање потребна су свих шест кључева"
+
+msgid "PD_ALLKEYS"
+msgstr "Потребни су сви кључеви"
+
+msgid "HUSTR_MSGU"
+msgstr "[Порука непослата]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Промумљате себи"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Ко је то?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Плашите самог себе"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Брбљате"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Лудите..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Порука послата]"
+
+msgid "STSTR_MUS"
+msgstr "Промена музике"
+
+msgid "STSTR_NOMUS"
+msgstr "НЕМОГУЋИ ИЗБОР"
+
+msgid "STSTR_DQDON"
+msgstr "Нерањивост УКЉУЧЕНА"
+
+msgid "STSTR_DQDOFF"
+msgstr "Нерањивост ИСКЉУЧЕНА"
+
+msgid "STSTR_DQD2ON"
+msgstr "Ултимативна нерањивост УКЉУЧЕНА"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Ултимативна нерањивост ИСКЉУЧЕНА"
+
+msgid "STSTR_KFAADDED"
+msgstr "Веома Срећна Муниција Додана"
+
+msgid "STSTR_FAADDED"
+msgstr "Муниција (без кључева) Додана"
+
+msgid "STSTR_NCON"
+msgstr "Пролажење кроз зидове УКЉУЧЕНО"
+
+msgid "STSTR_NCOFF"
+msgstr "Пролажење кроз зидове ИСКЉУЧЕНО"
+
+msgid "STSTR_NC2ON"
+msgstr "Секундарни режим пролажења кроз зидове УКЉУЧЕНО"
+
+msgid "STSTR_NC2OFF"
+msgstr "Секундарни режим пролажења кроз зидове ИСКЉУЧЕНО"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "нерањ., снага, невидљ., радиј., мапа или ноћ. визор"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Супер моћи заглављене"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... није лоша - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Мењам ниво..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Буда Мод УКЉУЧЕН"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Буда Мод ИСКЉУЧЕН"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Ултимативни Буда Мод УКЉУЧЕН"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Ултимативни Буда Мод ИСКЉУЧЕН"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Моћ УКЉУЧЕНА"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Моћ ИСКЉУЧЕНА"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Здравље напуњено"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Сви кључеви"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Дебаговање звука УКЉУЧЕНО"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Дебаговање звука ИСКЉУЧЕНО"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Покушаваш да вараш, ех? Сада умиреш!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Варалице - ти не заслужујеш оружје"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Бројач укључен"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Бројач искључен"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Уреду"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Имаш златке руке, душо"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Покупили сте ствари!"
+
+msgid "TXT_FREEZEON"
+msgstr "Мод замрзавања УКЉУЧЕН"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Мод замрзавања ИСКЉУЧЕН"
+
+msgid "TXT_STRANGE"
+msgstr "Осећате се чудно..."
+
+msgid "TXT_STRANGER"
+msgstr "Осећате се врло чудно."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Поново се осећате као ви."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Оловне чизме УКЉУЧЕНЕ"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Оловне чизме ИСКЉУЧЕНЕ"
+
+msgid "TXT_LIGHTER"
+msgstr "Осећате лакоћу."
+
+msgid "TXT_GRAVITY"
+msgstr "Гравитација Вас вуче надоле."
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Нема мете УКЉУЧЕНО"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Нема мете ИСКЉУЧЕНО"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "„Дрхтите у страху!“"
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Нема више бауков оклоп"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Чејс-кам УКЉУЧЕН"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Чејс-кам ИСКЉУЧЕН"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "Један зликовац убијен"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d зликовца убијено"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "Једно чудовиште убијено"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d чудовишта убијено"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "Немогуће оживети. Играч није више повезан са својим телом."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Сви артифакти!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Шта желите да убијете ван игре?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Смрзнути играчи искључени"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Праћење ИСКЉУЧЕНО"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Праћење УКЉУЧЕНО"
+
+msgid "AMSTR_GRIDON"
+msgstr "Мрежа УКЉУЧЕНА"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Мрежа ИСКЉУЧЕНА"
+
+msgid "AMSTR_TEXON"
+msgstr "Текстуре УКЉУЧЕНЕ"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Текстуре ИСКЉУЧЕНЕ"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Означено место"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Ознаке избрисане"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Фраг-лимит достигнут."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Временско ограничење достигнуто."
+
+msgid "SPREEKILLSELF"
+msgstr ""
+"%o је изгледа@[ao_1_sr] добро док није уби@[ao_1_sr] сам@[ao_3_sr] себе!"
+
+msgid "SPREEOVER"
+msgstr "Серијско убијање играча %o је завршио играч %k"
+
+msgid "SPREE5"
+msgstr "%k је серијални убица!"
+
+msgid "SPREE10"
+msgstr "%k дивља!"
+
+msgid "SPREE15"
+msgstr "%k доминира!"
+
+msgid "SPREE20"
+msgstr "Играч %k је незаустављив!"
+
+msgid "SPREE25"
+msgstr "Играч %k је божанствен!"
+
+msgid "MULTI2"
+msgstr "Дупло убиство!"
+
+msgid "MULTI3"
+msgstr "Вишеструко убиство!"
+
+msgid "MULTI4"
+msgstr "Ултра убиство!"
+
+msgid "MULTI5"
+msgstr "Монструозно убиство!"
+
+msgid "SCORE_BONUS"
+msgstr "Бонус"
+
+msgid "SCORE_COLOR"
+msgstr "Боја"
+
+msgid "SCORE_SECRET"
+msgstr "Тајна"
+
+msgid "SCORE_NAME"
+msgstr "Име"
+
+msgid "SCORE_DELAY"
+msgstr "Кашњење (мс)"
+
+msgid "SCORE_FRAGS"
+msgstr "Фрагови"
+
+msgid "SCORE_DEATHS"
+msgstr "Смрти"
+
+msgid "SCORE_OTHER"
+msgstr ""
+
+msgid "SCORE_MISSED"
+msgstr "Пропуштено"
+
+msgid "SCORE_TOTAL"
+msgstr "Укупно"
+
+msgid "SCORE_LVLTIME"
+msgstr "Време нивоа"
+
+msgid "TXT_IMKILLS"
+msgstr "Непријатељи"
+
+msgid "TXT_IMITEMS"
+msgstr "Ставке"
+
+msgid "TXT_IMSECRETS"
+msgstr "Тајне"
+
+msgid "TXT_IMTIME"
+msgstr "Време"
+
+msgid "TXT_IMPAR"
+msgstr "Рекорд"
+
+msgid "WI_FINISHED"
+msgstr "Ниво завршен"
+
+msgid "WI_ENTERING"
+msgstr "Следећи ниво"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Следећи ниво:"
+
+msgid "AM_MONSTERS"
+msgstr "Чудовишта:"
+
+msgid "AM_SECRETS"
+msgstr "Тајне:"
+
+msgid "AM_ITEMS"
+msgstr "Предмети:"
+
+msgid "OB_SUICIDE"
+msgstr "%o самоубиства."
+
+msgid "OB_FALLING"
+msgstr "%o је па@[ao_1_sr] до сад."
+
+msgid "OB_CRUSH"
+msgstr "%o је здробљен@[adj_1_sr]."
+
+msgid "OB_EXIT"
+msgstr "%o покуша@[ao_1_sr] да оде."
+
+msgid "OB_WATER"
+msgstr "%o не може да плива."
+
+msgid "OB_SLIME"
+msgstr "%o је мутиран@[adj_1_sr]."
+
+msgid "OB_LAVA"
+msgstr "%o је отопљен@[adj_1_sr]."
+
+msgid "OB_BARREL"
+msgstr "%o је отиш@[ao_2_sr] бум."
+
+msgid "OB_SPLASH"
+msgstr "%o је стаја@[ao_1_sr] на погрешно место."
+
+msgid "OB_R_SPLASH"
+msgstr "Играчу %o је требало да стоји назад."
+
+msgid "OB_ROCKET"
+msgstr "Играчу %o је требало да стоји назад."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o је уби@[ao_1_sr] себе."
+
+msgid "OB_VOODOO"
+msgstr "%o је убијен@[adj_1_sr] од стране моћи Voodoo-а."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o је телефрагован@[adj_1_sr] од стране %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o је телефрагован@[adj_1_sr]."
+
+msgid "OB_DEFAULT"
+msgstr "%o је умр@[ao_1_sr]."
+
+msgid "OB_MPDEFAULT"
+msgstr "Играча %o је уби@[ao_1_sr] %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k је обори@[ao_1_sr] саиграча."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "Играчу %k би приличиле наочаре."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k осваја фраг за други тим."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k је изгуби@[ao_1_sr] још једног пријатеља."
+
+msgid "GOTARMOR"
+msgstr "Покупили сте панцир."
+
+msgid "GOTMEGA"
+msgstr "Покупили сте мегапанцир!"
+
+msgid "GOTHTHBONUS"
+msgstr "Покупили сте бонус здравља."
+
+msgid "GOTARMBONUS"
+msgstr "Покупили сте бонус панцира."
+
+msgid "GOTSTIM"
+msgstr "Покупили сте стимпак."
+
+msgid "GOTMEDINEED"
+msgstr "Покупили сте медикит који вам је СТВАРНО потребан!"
+
+msgid "GOTMEDIKIT"
+msgstr "Покупили сте медикит."
+
+msgid "GOTSUPER"
+msgstr "Супернабој!"
+
+msgid "GOTBLUECARD"
+msgstr "Покупили сте плаву кључну карту."
+
+msgid "GOTYELWCARD"
+msgstr "Покупили сте жуту кључну карту."
+
+msgid "GOTREDCARD"
+msgstr "Покупили сте црвену кључну карту."
+
+msgid "GOTBLUESKUL"
+msgstr "Покупили сте плави кључ лобање."
+
+msgid "GOTYELWSKUL"
+msgstr "Покупили сте жути кључ лобање."
+
+msgid "GOTREDSKUL"
+msgstr "Покупили сте црвени кључ лобање."
+
+msgid "GOTINVUL"
+msgstr "Нерањивост!"
+
+msgid "GOTBERSERK"
+msgstr "Берсерк!"
+
+msgid "GOTINVIS"
+msgstr "Делимична невидљивост"
+
+msgid "GOTSUIT"
+msgstr "Одело против радијације"
+
+msgid "GOTMAP"
+msgstr "Компјутерска мапа нивоа"
+
+msgid "GOTVISOR"
+msgstr "Ноћни визир"
+
+msgid "GOTMSPHERE"
+msgstr "Мегасфера!"
+
+msgid "GOTCLIP"
+msgstr "Покупили сте оквир."
+
+msgid "GOTCLIPBOX"
+msgstr "Покупили сте кутију метака."
+
+msgid "GOTROCKET"
+msgstr "Покупили сте ракету."
+
+msgid "GOTROCKBOX"
+msgstr "Покупили сте кутију ракета."
+
+msgid "GOTCELL"
+msgstr "Покупили сте енергетску ћелију."
+
+msgid "GOTCELLBOX"
+msgstr "Покупили сте паковање енергетских ћелија."
+
+msgid "GOTSHELLS"
+msgstr "Покупили сте 4 патроне од пумпарице."
+
+msgid "GOTSHELLBOX"
+msgstr "Покупили сте кутију патрона од пумпарице."
+
+msgid "GOTBACKPACK"
+msgstr "Покупили сте ранац с патронама!"
+
+msgid "GOTBFG9000"
+msgstr "Покупили сте ВЈП9000! О, да."
+
+msgid "GOTCHAINGUN"
+msgstr "Покупили сте митраљез!"
+
+msgid "GOTCHAINSAW"
+msgstr "Тестера! Нађи месо!"
+
+msgid "GOTLAUNCHER"
+msgstr "Покупили сте ракетни бацач!"
+
+msgid "GOTPLASMA"
+msgstr "Покупили сте плазма оружје!"
+
+msgid "GOTSHOTGUN"
+msgstr "Покупили сте пумпарицу!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Покупили сте двоцевку!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Покупили сте пиштољ."
+
+msgid "BETA_BONUS1"
+msgstr "Купите демонски бодеж."
+
+msgid "BETA_BONUS2"
+msgstr "Купите ковчег с лобањом."
+
+msgid "BETA_BONUS3"
+msgstr "Купите зли скиптар."
+
+msgid "BETA_BONUS4"
+msgstr "Купите несвету библију."
+
+msgid "PD_BLUEO"
+msgstr "Треба вам плави кључ да би активирали овај предмет"
+
+msgid "PD_REDO"
+msgstr "Треба вам црвени кључ да би активирали овај предмет"
+
+msgid "PD_YELLOWO"
+msgstr "Треба вам жути кључ да би активирали овај предмет"
+
+msgid "PD_BLUEK"
+msgstr "Треба вам плави кључ да би отворили ова врата"
+
+msgid "PD_REDK"
+msgstr "Треба вам црвени кључ да би отворили ова врата"
+
+msgid "PD_YELLOWK"
+msgstr "Треба вам жути кључ да би отворили ова врата"
+
+msgid "PD_BLUECO"
+msgstr "Треба вам плава карта да би активирали овај предмет"
+
+msgid "PD_REDCO"
+msgstr "Треба вам црвена карта да би активирали овај предмет"
+
+msgid "PD_YELLOWCO"
+msgstr "Треба вам жута карта да би активирали овај предмет"
+
+msgid "PD_BLUESO"
+msgstr "Треба вам плава лобања да би активирали овај предмет"
+
+msgid "PD_REDSO"
+msgstr "Треба вам црвена лобања да би активирали овај предмет"
+
+msgid "PD_YELLOWSO"
+msgstr "Треба вам жута лобања да би активирали овај предмет"
+
+msgid "PD_BLUEC"
+msgstr "Треба вам плава карта да би отворили ова врата"
+
+msgid "PD_REDC"
+msgstr "Треба вам црвена карта да би отворили ова врата"
+
+msgid "PD_YELLOWC"
+msgstr "Треба вам жута карта да би отворили ова врата"
+
+msgid "PD_BLUES"
+msgstr "Треба вам плава лобања да би отворили ова врата"
+
+msgid "PD_REDS"
+msgstr "Треба вам црвена лобања да би отворили ова врата"
+
+msgid "PD_YELLOWS"
+msgstr "Треба вам жута лобања да би отворили ова врата"
+
+msgid "CC_ZOMBIE"
+msgstr "Зомби"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Пумпераш"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Митраљезац"
+
+msgid "CC_IMP"
+msgstr "Враг"
+
+msgid "CC_DEMON"
+msgstr "Демон"
+
+msgid "CC_LOST"
+msgstr "Изгубљена душа"
+
+msgid "CC_CACO"
+msgstr "Какодемон"
+
+msgid "CC_HELL"
+msgstr "Витез пакла"
+
+msgid "CC_BARON"
+msgstr "Барон пакла"
+
+msgid "CC_ARACH"
+msgstr "Паукотрон"
+
+msgid "CC_PAIN"
+msgstr "Елементал патње"
+
+msgid "CC_REVEN"
+msgstr "Повратник"
+
+msgid "CC_MANCU"
+msgstr "Манкубус"
+
+msgid "CC_ARCH"
+msgstr "Арчвајл"
+
+msgid "CC_SPIDER"
+msgstr "Паук-руководилац"
+
+msgid "CC_CYBER"
+msgstr "Сајбердемон"
+
+msgid "CC_HERO"
+msgstr "Наш херој"
+
+msgid "FN_SHOTGUN"
+msgstr "Водник"
+
+msgid "FN_HEAVY"
+msgstr "Митраљезац"
+
+msgid "FN_SPECTRE"
+msgstr "Авет"
+
+msgid "FN_SPIDER"
+msgstr "Паук-руководилац"
+
+msgid "FN_CYBER"
+msgstr "Сајбердемон"
+
+msgid "FN_WOLFSS"
+msgstr "Нациста"
+
+msgid "FN_DOG"
+msgstr "Пас"
+
+msgid "TAG_FIST"
+msgstr "Боксер"
+
+msgid "TAG_CHAINSAW"
+msgstr "Моторна тестера"
+
+msgid "TAG_PISTOL"
+msgstr "Пиштољ"
+
+msgid "TAG_SHOTGUN"
+msgstr "Пумпарица"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Двоцевка"
+
+msgid "TAG_CHAINGUN"
+msgstr "Митраљез"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Бацач ракета"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Плазма оружје"
+
+msgid "TAG_BFG9000"
+msgstr "ВЈП 9000"
+
+msgid "AMMO_CLIP"
+msgstr "Меци"
+
+msgid "AMMO_SHELLS"
+msgstr "Патроне за пумпарицу"
+
+msgid "AMMO_ROCKETS"
+msgstr "Ракете"
+
+msgid "AMMO_CELLS"
+msgstr "Енергетске ћелије"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] паукотрона."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] једног арчвајла."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] барона пакла."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] какодемона."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] митраљезца."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] демона."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] витеза пакла."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] врага."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] манкубуса."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] повратника."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] водника."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o мисли@[ao_1_sr] да је виде@[ao_1_sr] зомбија."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o је ударен@[adj_1_sr] од стане повратника."
+
+msgid "OB_IMPHIT"
+msgstr "Играча %o је пресеко враг."
+
+msgid "OB_CACOHIT"
+msgstr "%o се превише приближи@[ao_1_sr] какодемону."
+
+msgid "OB_DEMONHIT"
+msgstr "Играча %o је ујео демон."
+
+msgid "OB_SPECTREHIT"
+msgstr "Играча %o је појео авет."
+
+msgid "OB_BARONHIT"
+msgstr "%o је поцеп@[adj_2_sr] од стране барон пакла."
+
+msgid "OB_KNIGHTHIT"
+msgstr "Играча %o је унаказио витез пакла."
+
+msgid "OB_ZOMBIE"
+msgstr "%o је убијен@[adj_1_sr] од стране зомбија."
+
+msgid "OB_SHOTGUY"
+msgstr "Играча %o је погодио водник."
+
+msgid "OB_VILE"
+msgstr "Играча %o је запалио арчвајл."
+
+msgid "OB_UNDEAD"
+msgstr "%o није мог@[ao_2_sr] да избегне повратникову пламену куглу."
+
+msgid "OB_FATSO"
+msgstr "Играча %o је изгњечио манкубус."
+
+msgid "OB_CHAINGUY"
+msgstr "Играча %o је изрешетао митраљезац."
+
+msgid "OB_SKULL"
+msgstr "%o је уплашен@[adj_1_sr] од изгубљене душе."
+
+msgid "OB_IMP"
+msgstr "%o је изгорен@[adj_1_sr] од стране врага."
+
+msgid "OB_CACO"
+msgstr "Играча %o је ударио какодемон."
+
+msgid "OB_BARON"
+msgstr "%o је мод@[adj_3_sr] због барона пакла."
+
+msgid "OB_KNIGHT"
+msgstr "%o је раширен@[adj_1_sr] због витеза пакла."
+
+msgid "OB_SPIDER"
+msgstr "%o се смрзну@[ao_1_sr] у очарању паук-руководилаца."
+
+msgid "OB_BABY"
+msgstr "%o је допусти@[ao_1_sr] да паукотрон дође до %h."
+
+msgid "OB_CYBORG"
+msgstr "%o је спљоштен@[adj_1_sr] од стране сајбердемона"
+
+msgid "OB_WOLFSS"
+msgstr "%o је упозна@[ao_1_sr] нацисту."
+
+msgid "OB_DOG"
+msgstr "Играча %o је удавио пас."
+
+msgid "OB_MPFIST"
+msgstr "Играча %o је сажвакао песницу играча %k."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o је исечен@[adj_1_sr] моторном тестером играча %k."
+
+msgid "OB_MPPISTOL"
+msgstr "%o је заголицан@[adj_1_sr] пиштољем играча %k."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o је сажвака@[ao_1_sr] на пумпарицу играча %k."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "Играча %o је спљоштила двоцевка играча %k."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o је покоси@[ao_1_sr] митраљез играча %k."
+
+msgid "OB_MPROCKET"
+msgstr "%o је ујаха@[ao_1_sr] ракету играча %k."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o је за длаку избега@[ao_1_sr] ракету играча %k."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o је отопљен@[adj_1_sr] плазма оружјем играча %k."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o је расцепан@[adj_1_sr] ВЈП играча %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o се није мог@[ao_2_sr] сакрити од ВЈП играча %k."
+
+msgid "OB_RAILGUN"
+msgstr "%o је убијен@[adj_1_sr] од играча %k."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o је изгоре@[ao_1_sr] од ВЈП играча %k."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Плави кључ"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Жути кључ"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Зелени кључ"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Кварцна боца"
+
+msgid "TXT_ARTIFLY"
+msgstr "Крила гнева"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Прстен непобедивости"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Том моћи"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Сфера сенки"
+
+msgid "TXT_ARTIEGG"
+msgstr "Преображавајуће јајашце"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Мистериозна урна"
+
+msgid "TXT_ARTITORCH"
+msgstr "Бакља"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Временска бомба древних"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Уређај хаоса"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Кристална бочица"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Торба носивости"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Сребрни штит"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Зачарани штит"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Мапа"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Кристали за штап"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Кристални камен"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Сфере за буздован"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Гомила сфера за буздован"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Етеричне стреле"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Тоболац етеричних стрела"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Канџаста сфера"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Енергетска сфера"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Нижа руна"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Већа руна"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Ватрена сфера"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Пламена сфера"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Златни магични штап"
+
+msgid "TXT_WPNMACE"
+msgstr "Ватрени буздован"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Етерични самострел"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Змајева канџа"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Паклени штап"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Шипка феникса"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Рукавице призивача духова"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Треба вам плави кључ да би отворили ова врата"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Треба вам зелени кључ да би отворили ова врата"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Треба вам жути кључ да би отворили ова врата"
+
+msgid "FN_CHICKEN"
+msgstr "Кокошка"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Змајодлак"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Тигар"
+
+msgid "FN_DSPARIL"
+msgstr "Д'Спарил"
+
+msgid "FN_HERETICIMP"
+msgstr "Камена утвара"
+
+msgid "FN_IRONLICH"
+msgstr "Челични лич"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Немртви ратник"
+
+msgid "FN_MINOTAUR"
+msgstr "Минотаур"
+
+msgid "FN_MUMMY"
+msgstr "Голем"
+
+msgid "FN_MUMMYLEADER"
+msgstr "Нитро голем"
+
+msgid "FN_SNAKE"
+msgstr "Змија"
+
+msgid "FN_WIZARD"
+msgstr "Чаробњак"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Кристали за штап"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Етеричне стреле"
+
+msgid "AMMO_BLASTER"
+msgstr "Канџаста сфера"
+
+msgid "AMMO_MACE"
+msgstr "Сфере за буздован"
+
+msgid "AMMO_SKULLROD"
+msgstr "Пуне за паклени штап"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Ватрена сфера"
+
+msgid "TAG_STAFF"
+msgstr "Штап"
+
+msgid "TAG_GOLDWAND"
+msgstr "Вилењачки штапић"
+
+msgid "OB_CHICKEN"
+msgstr "%o је искљуцан@[adj_1_sr] до смрти."
+
+msgid "OB_BEAST"
+msgstr "%o је реш печен@[adj_1_sr] од стране замјодлака."
+
+msgid "OB_CLINK"
+msgstr "Играча %o је исекао тигар."
+
+msgid "OB_DSPARIL1"
+msgstr "Играча %o је опекао Д'Спарилова змија."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o је сажвакан@[adj_1_sr] од стране Д'Спарилове змије."
+
+msgid "OB_DSPARIL2"
+msgstr "%o није ни до колена Д'Спарилу."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o је претучен@[adj_1_sr] од стране Д'Спарила."
+
+msgid "OB_HERETICIMP"
+msgstr "%o је ожиљкан@[adj_1_sr] од стране камене утваре."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "Играча %o је исекла камена утвара."
+
+msgid "OB_IRONLICH"
+msgstr "%o је уништен@[adj_1_sr] од стране челичног лича."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o се лично приближи@[ao_1_sr] челичном личу."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o је исечен@[adj_1_sr] од стане немртвог ратника."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "Играча %o је убио немртви ратник."
+
+msgid "OB_MINOTAUR"
+msgstr "%o је испуцан@[adj_1_sr] у пепео од стране минотаура."
+
+msgid "OB_MINOTAURHIT"
+msgstr "Играча %o је претукао минотаур."
+
+msgid "OB_MUMMY"
+msgstr "Играча %o је смрвио голем."
+
+msgid "OB_MUMMYLEADER"
+msgstr "Играча %o је извриштао до смрти нитроголем."
+
+msgid "OB_SNAKE"
+msgstr "Играча %o је угризла змија."
+
+msgid "OB_WIZARD"
+msgstr "%o је проклет@[adj_1_sr] од стране чаробњака."
+
+msgid "OB_WIZARDHIT"
+msgstr "Играча %o је палпатирао чаробњак."
+
+msgid "OB_MPSTAFF"
+msgstr "%o је претуцан@[adj_1_sr] штапом од стране %k."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o је доби@[ao_1_sr] шок од %k штапа."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o је рек@[ao_2_sr] збогом %k вилењачком штапићу."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o је упуц@[adj_2_sr] од стране %k етералног самострела."
+
+msgid "OB_MPBLASTER"
+msgstr "Играчу %o је отворена нова рупа змајевском канџом играча %k."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o је укопан@[adj_1_sr] од стране пакленог штапа играча %k."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o запаљен@[adj_1_sr] у пепео од стране шипке феникса играча %k."
+
+msgid "OB_MPMACE"
+msgstr "%o је ударен@[adj_1_sr] са ватреним буздованом играча %k."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o је потапшан@[adj_1_sr] напуњеним штапом играча %k."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o је путпуно искрвари@[ao_1_sr] од рукавица играча %k."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o је нападнут@[adj_1_sr] вилењачким штапом играча %k."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o је упуцан@[adj_1_sr] етеричним самострелом играча %k."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o је поцепан@[adj_1_sr] змајевим канџама играча %k."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k је просипа@[ao_1_sr] пламени штап на %o."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o је изгоре@[ao_1_sr] шипком феникса играча %k."
+
+msgid "OB_MPPMACE"
+msgstr ""
+"%o је смрвљен@[adj_1_sr] од стане огромном сферско буздована играча %k."
+
+msgid "TXT_MANA_1"
+msgstr "Плава мана"
+
+msgid "TXT_MANA_2"
+msgstr "Зелена мана"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Комбинована мана"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Челични кључ"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Пећински кључ"
+
+msgid "TXT_KEY_AXE"
+msgstr "Кључ секира"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Огњени кључ"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Смарагдни кључ"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Кључ од лагума"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Сребрни кључ"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Зарђали кључ"
+
+msgid "TXT_KEY_HORN"
+msgstr "Рогати кључ"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Мочварни кључ"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Кључ од замка"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Симбол браниоца"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Мрачни слуга"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Свињатор"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "Бочица"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Амблем прогањања"
+
+msgid "TXT_ARTISPEED"
+msgstr "Брзинске чизме"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Чаша силе"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Наруквице од змајеве коже"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Диск одбијања"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Чаролија магичног јединства"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Јорикова лобања"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "Д'Спарилино срце"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Планета рубина"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Смарагдна планета"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Смарагдна планета"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Сафирна планета"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Сафирна планета"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "Демонски кодекс"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr "Либер Оскура"
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Маска пламена"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Војников печат"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Света реликвија"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Чаробњаков симбол"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Сатни зупчаник"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Ово се не може користити овде"
+
+msgid "TXT_ARMOR1"
+msgstr "Верижњача"
+
+msgid "TXT_ARMOR2"
+msgstr "Соколов штит"
+
+msgid "TXT_ARMOR3"
+msgstr "Шлем од платине"
+
+msgid "TXT_ARMOR4"
+msgstr "Амулет страже"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Тимонова секира"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Чекић одмазде"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Самрт је сабрана"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Змијски штап"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Огњена олуја"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Жезло утвара је сабрано"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Ледене крхотине"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Лук смрти"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Крвави бич је сабран"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Део оружја! Данас Вам је срећан дан!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Део Самрти"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Део Жезла утвара"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Део Крвавог бича"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "За отварање је потребан челични кључ"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "За отварање је потребан пећински кључ"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "За отварање је потребан кључ секира"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "За отварање је потребан огњени кључ"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "За отварање је потребан смарагдни кључ"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "За отварање је потребан кључ од лагума"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "За отварање је потребан сребрни кључ"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "За отварање је потребан зарђали кључ"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "За отварање је потребан рогати кључ"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "За отварање је потребан мочварни кључ"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "За отварање је потребан кључ од замка"
+
+msgid "FN_FIREDEMON"
+msgstr "Африт"
+
+msgid "FN_DEMON1"
+msgstr "Серпент"
+
+msgid "FN_ETTIN"
+msgstr "Етин"
+
+msgid "FN_CENTAUR"
+msgstr "Кентаур"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Кентаур старешина"
+
+msgid "FN_BISHOP"
+msgstr "Епископ"
+
+msgid "FN_ICEGUY"
+msgstr "Вендиго"
+
+msgid "FN_SERPENT"
+msgstr "Вребач"
+
+msgid "FN_WRAITH"
+msgstr "Грабљивац"
+
+msgid "FN_DRAGON"
+msgstr "Змајак смрти"
+
+msgid "FN_KORAX"
+msgstr "Коракс"
+
+msgid "FN_FBOSS"
+msgstr "Зедек"
+
+msgid "FN_MBOSS"
+msgstr "Менелкир"
+
+msgid "FN_CBOSS"
+msgstr "Традуктус"
+
+msgid "FN_HERESIARCH"
+msgstr "Јересијарх"
+
+msgid "AMMO_MANA1"
+msgstr "Плава мана"
+
+msgid "AMMO_MANA2"
+msgstr "Зелена мана"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Буздован покајања"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Змијски штап"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Огњена олуја"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Жезло утвара"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Бодљикаве рукавице"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Тимонова секира"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Чекић одмазде"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "Самрт"
+
+msgid "TAG_MWEAPWAND"
+msgstr "Сафирни штап"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Ледене крхотине"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Лук смрти"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Крвави бич"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Диск одбијања"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Наруквице од змајеве коже"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Чаша силе"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "Бочица"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Бочица отровног облака"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Бочица временске бомбе"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Бочица граната"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Чаролија магичног јединства"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Симбол браниоца"
+
+msgid "TAG_ARTIPORK"
+msgstr "Свињатор"
+
+msgid "TAG_ARTISPEED"
+msgstr "Брзинске чизме"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Мрачни слуга"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Амблем прогањања"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Јорикова лобања"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "Д'Спарилово срце"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Планета рубина"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Смарагдна планета (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Смарагдна планета (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Сафирна планета (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Сафирна планета (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "Демонски кодекс"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr "Либер Оскура"
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Маска пламена"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Војников печат"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Света реликвија"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Чаробњаков симбол"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Гвожђени зупчаник"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Месингани зупчаник"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Месинганoгвожђени зупчаник"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Сребрномесигани зупчаник"
+
+msgid "OB_FIREDEMON"
+msgstr "%o је окуси@[ao_1_sr] Афритов огањ."
+
+msgid "OB_DEMON1"
+msgstr "Играча %o је спалио Серпент."
+
+msgid "OB_DEMON2"
+msgstr "Играча %o је отровао Серпент."
+
+msgid "OB_ETTIN"
+msgstr "Играча %o је смрскао Еттин."
+
+msgid "OB_CENTAUR"
+msgstr "Играча %o је расекао Кентаур."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "Играча %o је расекао Кентаур старешина."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "Играча %o је огњеном куглом оборио Кентаур старешина."
+
+msgid "OB_BISHOP"
+msgstr "%o је подлег@[ao_2_sr] Епископовим црним силама."
+
+msgid "OB_ICEGUY"
+msgstr "Играча %o је потпуно замрзнуо Вендиго."
+
+msgid "OB_SERPENTHIT"
+msgstr "Играча %o је растргао Вребач."
+
+msgid "OB_SERPENT"
+msgstr "Играча %o је растопио Вребач."
+
+msgid "OB_WRAITH"
+msgstr "Играча %o је угљенисао Вребач."
+
+msgid "OB_WRAITHHIT"
+msgstr "Играчу %o је живот украо Вребач."
+
+msgid "OB_DRAGON"
+msgstr "Играча %o је кремировао Змајак смрти."
+
+msgid "OB_KORAX"
+msgstr "Играча %o је с табле уклонио Коракс."
+
+msgid "OB_FBOSS"
+msgstr "Играча %o је оборио Коракс."
+
+msgid "OB_MBOSS"
+msgstr "%o се није узмог@[ao_2_sr] носити с Менелкировом маном."
+
+msgid "OB_CBOSS"
+msgstr "Играча %o је крстио Традуктус."
+
+msgid "OB_HERESIARCH"
+msgstr "На играча %o су пале Јересијархове коцке."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o је пребијен@[adj_1_sr] на смрт голим рукама играч %k."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o је добио секиру од %k."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "Играч %k је расцепао играчу %o главу."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "Играч %k је прековао душу играча %o чекићем."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o је утишан@[adj_1_sr] од моћи Куиетуса играч %k."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o је доби@[ao_1_sr] буздован у фацу играч %k."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o је угрижен@[adj_1_sr] змијским штапом играч %k."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o је задављен@[adj_1_sr] змијским штапом играч %k."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o је осветљен@[adj_1_sr] пламеном играч %k."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o je прочишћен@[adj_1_sr] штапом утваре играч %k."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o је узе@[ao_1_sr] превише сафирских зракова играч %k."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o је претворен@[adj_1_sr] у лед играч %k."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o је прими@[ao_1_sr] шокантно откриће играч %k."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o је обрисан@[adj_1_sr] са лица свемира од Крвавог зла играч %k."
+
+msgid "TXT_METALARMOR"
+msgstr "Покупио си метални оклоп."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Покупио си кожни оклоп."
+
+msgid "TXT_MEDPATCH"
+msgstr "Покупио си прву помоћ."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Покупио си медицински комплет"
+
+msgid "TXT_SURGERYKIT"
+msgstr "Покупио си хируршки комплет"
+
+msgid "TXT_STRIFEMAP"
+msgstr "Покупио си мапу."
+
+msgid "TXT_BELDINSRING"
+msgstr "Покупио си прстен."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Покупио си Жртвени пехар."
+
+msgid "TXT_EAR"
+msgstr "Покупио си уво."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Покупио си неисправну спојницу напајања."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Покупио си оклоп сенки."
+
+msgid "TXT_ENVSUIT"
+msgstr "Покупио си заштитно одело."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Покупио си стражарску униформу"
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Покупио си официрску униформу"
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Покупио си делове за бацач пламена."
+
+msgid "TXT_REPORT"
+msgstr "Покупио си извештај."
+
+msgid "TXT_INFO"
+msgstr "Покупио си инфо."
+
+msgid "TXT_TARGETER"
+msgstr "Покупио си нишанитеља."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Покупио си комуникатор."
+
+msgid "TXT_COIN"
+msgstr "Покупио си новчић."
+
+msgid "TXT_XGOLD"
+msgstr "Покупио си %d златника."
+
+msgid "TXT_BEACON"
+msgstr "Покупио си одашиљач за телепортовање."
+
+msgid "TXT_DEGNINORE"
+msgstr "Покупио си Дегнинску руду."
+
+msgid "TXT_SCANNER"
+msgstr "Покупио си скенер."
+
+msgid "TXT_NEEDMAP"
+msgstr "Скенер неће радити без мапе!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Покупио си затворску пропусницу."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Покупио си самострел."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Покупио си аутоматску пушку."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Покупио си мини ручни бацач."
+
+msgid "TXT_FLAMER"
+msgstr "Покупио си бацач пламена."
+
+msgid "TXT_MAULER"
+msgstr "Покупио си маулер."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Покупио си бацач граната."
+
+msgid "TXT_SIGIL"
+msgstr "Покупио си СИГИЛ."
+
+msgid "TXT_BASEKEY"
+msgstr "Покупио си кључ базе."
+
+msgid "TXT_GOVSKEY"
+msgstr "Покупио си клуч гувернанте."
+
+msgid "TXT_PASSCARD"
+msgstr "Покупио си пасош."
+
+msgid "TXT_IDBADGE"
+msgstr "Покупио си личну карту."
+
+msgid "TXT_PRISONKEY"
+msgstr "Покупио си затворски кључ"
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Покупио си шаку"
+
+msgid "TXT_POWER1KEY"
+msgstr "Покупио си први кључ од електране."
+
+msgid "TXT_POWER2KEY"
+msgstr "Покупио си други кључ од електране."
+
+msgid "TXT_POWER3KEY"
+msgstr "Покупио си трећи кључ од електране."
+
+msgid "TXT_GOLDKEY"
+msgstr "Покупио си златни кључ."
+
+msgid "TXT_IDCARD"
+msgstr "Покупио си идентификациону картицу."
+
+msgid "TXT_SILVERKEY"
+msgstr "Покупио си сребрни кључ."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Покупио си кључ пророка"
+
+msgid "TXT_MILITARYID"
+msgstr "Покупио си војну идентификацију"
+
+msgid "TXT_ORDERKEY"
+msgstr "Покупио си кључ одреда"
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Покупио си кључ складишта"
+
+msgid "TXT_BRASSKEY"
+msgstr "Покупио си кључ месинга"
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Покупио си кључ од црвеног кристала"
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Покупио си кључ од плавог кристала"
+
+msgid "TXT_CHAPELKEY"
+msgstr "Покупио си кључ капеле"
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Покупио си кључ катакомбе"
+
+msgid "TXT_SECURITYKEY"
+msgstr "Покупио си кључ обезбеђења"
+
+msgid "TXT_COREKEY"
+msgstr "Покупио си кључ језгра"
+
+msgid "TXT_MAULERKEY"
+msgstr "Покупио си кључ Маулера."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Покупио си кључ фабрике"
+
+msgid "TXT_MINEKEY"
+msgstr "Покупио си кључ рудника"
+
+msgid "TXT_NEWKEY5"
+msgstr "Покупио си нови кључ5"
+
+msgid "TXT_ORACLEPASS"
+msgstr "Покупио си пророкову пропусницу"
+
+msgid "TXT_HEGRENADES"
+msgstr "Покупио си ХЕ-Граната чауре"
+
+msgid "TXT_PHGRENADES"
+msgstr "Покупио си шаржер фосфорних граната."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr ""
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Покупио си кутију меткова"
+
+msgid "TXT_MINIMISSILES"
+msgstr "Покупио си мини ракете"
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Покупио си кутију ракета"
+
+msgid "TXT_ENERGYPOD"
+msgstr "Покупио си енергетско постоље."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Покупио си пакет енергије"
+
+msgid "TXT_POISONBOLTS"
+msgstr "Покупио си отровне стреле"
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Покупио си електричне стреле"
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Покупио си торбицу муниције"
+
+msgid "MSG_TALISMANRED"
+msgstr "Имаш осећај да није требало бити дирано..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Шта год да је, не припада овом свету..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Мора урадити нешто..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Имаш супер снагу!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Немаш кључ"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Треба ти пропусница"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Треба ти пасош да отвориш ова врата"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Треба ти идентификациона картица"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Треба ти кључ затвора"
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Отисак длана није у записнику"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Треба ти златни кључ"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Треба ти лична карта"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Треба ти лична карта да отвориш ова врата"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Треба ти сребрни кључ"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Треба ти кључ од месинга"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Треба ти црвени кристал"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Треба ти плави кристал"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Ова област је само доступна у пуној верзији Strife-а"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "То изгледа да не ради"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Треба ти пехар!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Треба ти Пророкова пропусница!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Бодеж"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Самострел"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Самострел"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Аутоматска пушка"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Мини ракетни бацач"
+
+msgid "TAG_FLAMER"
+msgstr "Бацеч пламена"
+
+msgid "TAG_MAULER1"
+msgstr "Маулер"
+
+msgid "TAG_MAULER2"
+msgstr "Маулер"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Бацач граната"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Бацач граната"
+
+msgid "TAG_SIGIL"
+msgstr "Сигил"
+
+msgid "TAG_COIN"
+msgstr "Новчић"
+
+msgid "TAG_MEDPATCH"
+msgstr "Прва помоћ"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Медицински прибор"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Хируршки прибор"
+
+msgid "TAG_BELDINSRING"
+msgstr "Прстен"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Жртвени пехар"
+
+msgid "TAG_EAR"
+msgstr "Уво"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Неисправна спојница напајања"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Оклоп сенки"
+
+msgid "TAG_ENVSUIT"
+msgstr "Заштитно одело"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Стражарска униформа"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Официрска униформа"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Делови бацача пламена"
+
+msgid "TAG_REPORT"
+msgstr "Извештај"
+
+msgid "TAG_INFO"
+msgstr "Инфо"
+
+msgid "TAG_TARGETER"
+msgstr "Нишанџија"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Комуникатор"
+
+msgid "TAG_DEGNINORE"
+msgstr "Дегнинска руда"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Прецизност"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Издржљивост"
+
+msgid "TAG_SCANNER"
+msgstr "Скенер"
+
+msgid "TAG_PRISONPASS"
+msgstr "Затворска пропусница"
+
+msgid "TAG_ALARM"
+msgstr "Аларм"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Муниција"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Живот"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Одашиљач за телепортовање"
+
+msgid "TAG_METALARMOR"
+msgstr "Метални оклоп"
+
+msgid "TAG_LEATHER"
+msgstr "Кожни оклоп"
+
+msgid "TAG_HEGRENADES"
+msgstr "Хе-Граната чауре"
+
+msgid "TAG_PHGRENADES"
+msgstr "Фосфорне гранате"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Клип метака"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Муниција"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Мини Ракете"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Кутија ракета"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Енергетска шипка"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Паковање енергије"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Отровне стреле"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Електричне стреле"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Торбица муниције"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Кључ базе"
+
+msgid "TAG_GOVSKEY"
+msgstr "Гувернеров кључ"
+
+msgid "TAG_PASSCARD"
+msgstr "Пропусница"
+
+msgid "TAG_IDBADGE"
+msgstr "Идентификациона значка"
+
+msgid "TAG_PRISONKEY"
+msgstr "Кључ од 3атвора"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Одвојена шака"
+
+msgid "TAG_POWER1KEY"
+msgstr "Кључ од ел. 1"
+
+msgid "TAG_POWER2KEY"
+msgstr "Кључ од ел. 2"
+
+msgid "TAG_POWER3KEY"
+msgstr "Кључ од ел. 3"
+
+msgid "TAG_GOLDKEY"
+msgstr "Златни кључ"
+
+msgid "TAG_IDCARD"
+msgstr "Лична карта"
+
+msgid "TAG_SILVERKEY"
+msgstr "Сребрни кључ"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Пророков кључ"
+
+msgid "TAG_MILITARYID"
+msgstr "Војна идентификација"
+
+msgid "TAG_ORDERKEY"
+msgstr "Кључ одреда"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Кључ складишта"
+
+msgid "TAG_BRASSKEY"
+msgstr "Кључ од месинга"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Кључ од црвеног кристала"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Кључ од плавог кристала"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Кључ капеле"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Кључ од катакомби"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Сигурносни кључ"
+
+msgid "TAG_COREKEY"
+msgstr "Кључ језгра"
+
+msgid "TAG_MAULERKEY"
+msgstr "Маулер кључ"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Кључ фабрике"
+
+msgid "TAG_MINEKEY"
+msgstr "Кључ рудника"
+
+msgid "TAG_NEWKEY5"
+msgstr "Нови кључ5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Пророкова пропусница"
+
+msgid "TAG_10GOLD"
+msgstr "10 златника"
+
+msgid "TAG_25GOLD"
+msgstr "25 златника"
+
+msgid "TAG_50GOLD"
+msgstr "50 златника"
+
+msgid "TAG_300GOLD"
+msgstr "300 златника"
+
+msgid "TXT_PERSON"
+msgstr "Особа"
+
+msgid "TAG_ACOLYTE"
+msgstr "Следбеник"
+
+msgid "TAG_ARMORER"
+msgstr "Ковач"
+
+msgid "TAG_BARKEEP"
+msgstr "Конобар"
+
+msgid "TAG_BEGGAR"
+msgstr "Просјак"
+
+msgid "TAG_MACIL1"
+msgstr "Мејсил"
+
+msgid "TAG_MACIL2"
+msgstr "Мејсил"
+
+msgid "TAG_MEDIC"
+msgstr "Болничар"
+
+msgid "TAG_ORACLE"
+msgstr "Пророк"
+
+msgid "TAG_PRIEST"
+msgstr "Свештеник"
+
+msgid "TAG_RATBUDDY"
+msgstr "Друг пацов"
+
+msgid "TAG_REBEL"
+msgstr "Побуњеник"
+
+msgid "TAG_TEMPLAR"
+msgstr "Темплар"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Ковач оружја"
+
+msgid "TAG_TALISMANRED"
+msgstr "Црвени талисман"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Зелени талисман"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Плави талисман"
+
+msgid "OB_ACOLYTE"
+msgstr "%o је ревносно упуцан@[adj_1_sr] од стране секташа."
+
+msgid "OB_MACIL"
+msgstr "%o никад није треба@[ao_1_sr] да се супротстави Мејсилу."
+
+msgid "OB_REBEL"
+msgstr "%o је упуцан@[adj_1_sr] од стране побуњеника."
+
+msgid "OB_BEGGAR"
+msgstr "%o је претучен@[adj_1_sr] од стране просјака."
+
+msgid "OB_PEASANT"
+msgstr "%o никад није треба@[ao_1_sr] да се потуче са цивилом."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o је обори@[ao_1_sr] са ногу утвара."
+
+msgid "OB_ENTITY"
+msgstr "Играча %o је осетио бес Јединог бога."
+
+msgid "OB_LOREMASTER"
+msgstr "%o није успе@[ao_1_sr] побећи из Чувареве мудрости домашаја."
+
+msgid "OB_PROGRAMMER"
+msgstr "Играча %о је обрисао Програмер."
+
+msgid "OB_STFBISHOP"
+msgstr "Играча %o је екслопдирао Епископ."
+
+msgid "OB_SENTINEL"
+msgstr "Играча %o је упуцао стражар."
+
+msgid "OB_CRUSADER"
+msgstr "%o је обори@[ao_1_sr] с ногу крсташ."
+
+msgid "OB_INQUISITOR"
+msgstr "Играчу %o је пресудио инквизитор."
+
+msgid "OB_STALKER"
+msgstr "Играча %o је убио прогонитељ."
+
+msgid "OB_TURRET"
+msgstr "%o је активира@[ao_1_sr] дефанзивне системе."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o је пресечен@[adj_1_sr] од стране темплара."
+
+msgid "OB_TEMPLAR"
+msgstr "Играча %o је испарио темплар."
+
+msgid "OB_REAVERHIT"
+msgstr "%o је исечен@[adj_1_sr] на отворено од стране сакупљача."
+
+msgid "OB_REAVER"
+msgstr "Играча %o је упуцао сакупљач."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o је убоден@[adj_1_sr] у леђа од стране играча %k."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o је причвршћен@[adj_1_sr] за зид од стране играча %k."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o је доби@[ao_1_sr] смртну дозу гнева играча %k."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o је изрешетан@[adj_1_sr] од стране јуришне пушке играча %k."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o је прогута@[ao_1_sr] ракету играча %k."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o се преокрену@[ao_1_sr] од стране Х-Е гранате играча %k."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o се окупа@[ao_1_sr] у пламену од стране фосфорне гранате играча %k."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o је реш печен@[adj_1_sr] од стране играча %k."
+
+msgid "OB_MPMAULER1"
+msgstr "%o је елетрошокиран@[adj_1_sr] од стране играча %k."
+
+msgid "OB_MPMAULER"
+msgstr "%o је брутално испари@[ao_1_sr] од стране играча %k."
+
+msgid "OB_MPSIGIL"
+msgstr "%o је одклекну@[ao_1_sr] сировој моћи %k Сигила."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "Потрага за Сигил"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Затвореници су ослобођени!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Претварач је уништен!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Честитке! Завршио си тренинг подручје"
+
+msgid "TXT_QUEST_14"
+msgstr "Дигао си у ваздух кристал"
+
+msgid "TXT_QUEST_16"
+msgstr "Дигао си у ваздух капију"
+
+msgid "TXT_QUEST_27"
+msgstr "Дигао си у ваздух компјутер"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Епископ је мртав!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Пророк је мртав!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Мејсил је мртав!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Чувара мудрости је мртав!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Будало! Активирао си аларм."
+
+msgid "TXT_YOUREDEAD"
+msgstr "Активирао си аларм. Спреми се да умреш!"
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Изгледа да ти је доста!"
+
+msgid "TXT_GOAWAY"
+msgstr "Одлази!"
+
+msgid "TXT_COMM0"
+msgstr "Наилази порука..."
+
+msgid "TXT_COMM1"
+msgstr "Наилази порука од Црне птице...."
+
+msgid "TXT_FINDHELP"
+msgstr "Нађи помоћ"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "за %u"
+
+msgid "GOTCHEXARMOR"
+msgstr "Покупио си Чех оклоп."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Покупио си Супер Чех оклоп."
+
+msgid "GOTWATER"
+msgstr "Покупио си чашу воде"
+
+msgid "GOTREPELLENT"
+msgstr "Покупио си одбијаш љигавца."
+
+msgid "GOTBREAKFAST"
+msgstr "Супер-напуњен доручак."
+
+msgid "GOTCBLUEKEY"
+msgstr "Покупио си плави кључ."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Покупио си жути кључ."
+
+msgid "GOTCREDKEY"
+msgstr "Покупио си црвени кључ."
+
+msgid "GOTFRUIT"
+msgstr "Покупио си чинију воћа."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Поврће је ЈАКО добро за тебе!"
+
+msgid "GOTVEGETABLES"
+msgstr "Покупио си чинију поврћа."
+
+msgid "GOTSLIMESUIT"
+msgstr "Нашо си љигаво-отпорано одело."
+
+msgid "GOTCHEXMAP"
+msgstr "Нашао компјутерку мапу окружења"
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Покупио си мини зорч пуњач."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Покупио си мини зорч пакет."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Покупио си зорч погонски пуњач."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Покупио си зорч погонски пакет."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Покупио си фазни зорчер пуњач."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Покупио си фазни зорчер пакет."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Покупио си велики зорчер пуњач."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Покупио си велики зорчер пакет."
+
+msgid "GOTZORCHPACK"
+msgstr "Покупио си зорчпак."
+
+msgid "GOTLAZDEVICE"
+msgstr "Добио си ЛАЗ уређај. ВУТ!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Добио си рапидан зорчер!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Добио си супер чизмо-порк!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Добио си зорч погон!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Добио си фазни зорчер!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Добио си велики зорчер!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Добио си мега зорчер!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Покупио си мини зорчер!"
+
+msgid "TAG_SPOON"
+msgstr "Кашика"
+
+msgid "TAG_SPORK"
+msgstr "Супер виљушка"
+
+msgid "TAG_MINIZORCHER"
+msgstr "Мини зорчер"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Велики зорчер"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Супер-велики зорчер"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Рапидни зорчер"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Погонски зорчер"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Фазни зорчер"
+
+msgid "TAG_LAZDEVICE"
+msgstr "ЛАЗ уређај"
+
+msgid "OB_COMMONUS"
+msgstr "%o је унаказио љигавац."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o је унаказио двоножни-љигавац."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o је унаказио оклопни-љигавац."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o је унаказио циклогавац."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o је поразио љигомозак."
+
+msgid "OB_MPSPOON"
+msgstr "%o је накашикан од %k"
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o је темељно измешан од стране %k супер виљушке."
+
+msgid "OB_MPZORCH"
+msgstr "%o је зорчован %k."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o је ударен од стране %k мега-зорчера."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o је рапидно зорчован %k"
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o је зорчован %k погоном."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o је ударен %k погоном."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o је фазно торчован %k."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o је постао жртва %k ЛАЗ уређаја."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o је ЛАЗ-овао %k."
+
+msgid "CHUSTR_E1M1"
+msgstr "Е1М1: Зона слетања"
+
+msgid "CHUSTR_E1M2"
+msgstr "Е1М2: Складиште"
+
+msgid "CHUSTR_E1M3"
+msgstr "Е1М3: Експериментална лабораторија"
+
+msgid "CHUSTR_E1M4"
+msgstr "Е1М4: Ботаничка башта"
+
+msgid "CHUSTR_E1M5"
+msgstr "Е1М5: Пећине Базоика"
+
+msgid "CE1TEXT"
+msgstr ""
+"Мисија је извршена.\n"
+"\n"
+"Јесте ли спремни за следећу мисију?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Притисни ESC да наставиш..."
+
+msgid "CE2TEXT"
+msgstr "Урадио си то!"
+
+msgid "CE3TEXT"
+msgstr "Изванредан посао!"
+
+msgid "CE4TEXT"
+msgstr "Фантастично"
+
+msgid "CLOADNET"
+msgstr ""
+"Не можете учитати док сте у мрежној потрази!\n"
+"\n"
+"Притисните тастер."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr "Брзо-сачувајте преко ваше потраге назване '%s'? Притисните Y или N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Не можете брзо-учитати док сте у мрежној потрази!\n"
+"\n"
+"Притисните тастер."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Да ли желиш да брзо-учиташ потрагу названу '%s'?\n"
+"\n"
+"Притисните Y или N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Не можете почети нову потрагу док сте у мрежној потрази.\n"
+"\n"
+"Притисните тастер."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Пажљиво, ово је ће бити тешко. Да ли желиш да наставиш?\n"
+"\n"
+"Притисните Y или N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Ово је Chex Quest. Тражите нове\n"
+"\n"
+"нивое на www.chexquest.com.\n"
+"\n"
+"Притисните Y или N."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Не можете завршити мрежну потрагу!\n"
+"\n"
+"Притисните тастер."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Да ли си сигуран да желиш да завршиш трагање?\n"
+"\n"
+"Притисни Y или N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Неуништив УКЉУЧЕН"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Неуништив ИСКЉУЧЕН"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Зорч додат"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Супер зорч додат"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Једи Chex(R)!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Мини зорч пуњач"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Велики зорч пуњач"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Погонски зорч пуњач"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Фазни зорч пуњач"
+
+msgid "MNU_NEWGAME"
+msgstr "Нова игра"
+
+msgid "MNU_OPTIONS"
+msgstr "Подешавања"
+
+msgid "MNU_GAMEFILES"
+msgstr "Фајлови игре"
+
+msgid "MNU_INFO"
+msgstr "Подаци"
+
+msgid "MNU_QUITGAME"
+msgstr "Заврши игру"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Ниво тежине:"
+
+msgid "SKILL_BABY"
+msgstr "Премлад сам да умрем."
+
+msgid "SKILL_EASY"
+msgstr "Хеј, не претерано грубо."
+
+msgid "SKILL_NORMAL"
+msgstr "Повреди ме кол'ко можеш."
+
+msgid "SKILL_HARD"
+msgstr "Ултра-насилно."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Ноћна мора!"
+
+msgid "CSKILL_BABY"
+msgstr "Лагано сад"
+
+msgid "CSKILL_EASY"
+msgstr "Не тако лепљиво"
+
+msgid "CSKILL_NORMAL"
+msgstr "Лопте љиге"
+
+msgid "CSKILL_HARD"
+msgstr "Екстремно љигаво"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "СУПЕР ЉИГАВО"
+
+msgid "SSKILL_BABY"
+msgstr "Тренинг"
+
+msgid "SSKILL_EASY"
+msgstr "Новајлија"
+
+msgid "SSKILL_NORMAL"
+msgstr "Ветеран"
+
+msgid "SSKILL_HARD"
+msgstr "Елитни"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Купка крви"
+
+msgid "MNU_WETNURSE"
+msgstr "Треба ти бабица"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Ми-смо-жутица"
+
+msgid "MNU_BRINGEST"
+msgstr "Донеси изабраног"
+
+msgid "MNU_SMITE"
+msgstr "Ти си обузети-мајстор"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Имаш црну кугу"
+
+msgid "MNU_SQUIRE"
+msgstr "Штитоноша"
+
+msgid "MNU_KNIGHT"
+msgstr "Витез"
+
+msgid "MNU_WARRIOR"
+msgstr "Борац"
+
+msgid "MNU_BERSERKER"
+msgstr "Делија"
+
+msgid "MNU_TITAN"
+msgstr "Титан"
+
+msgid "MNU_ALTARBOY"
+msgstr "Министрант"
+
+msgid "MNU_ACOLYTE"
+msgstr "Помоћник"
+
+msgid "MNU_PRIEST"
+msgstr "Свештеник"
+
+msgid "MNU_CARDINAL"
+msgstr "Кардинал"
+
+msgid "MNU_POPE"
+msgstr "Папа"
+
+msgid "MNU_APPRENTICE"
+msgstr "Шегрт"
+
+msgid "MNU_ENCHANTER"
+msgstr "Чаробњак"
+
+msgid "MNU_SORCERER"
+msgstr "Врачар"
+
+msgid "MNU_WARLOCK"
+msgstr "Вештац"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Врховни вештац"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Класа:"
+
+msgid "MNU_FIGHTER"
+msgstr "Борац"
+
+msgid "MNU_CLERIC"
+msgstr "Свештеник"
+
+msgid "MNU_MAGE"
+msgstr "Чаробњак"
+
+msgid "MNU_RANDOM"
+msgstr "Насумично"
+
+msgid "MNU_EPISODE"
+msgstr "Која епизода?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Изабери кампању"
+
+msgid "MNU_COTD"
+msgstr "Град проклетих"
+
+msgid "MNU_HELLSMAW"
+msgstr "Чељусти пакла"
+
+msgid "MNU_DOME"
+msgstr "Купола Д'Спарила"
+
+msgid "MNU_OSSUARY"
+msgstr "Костурница"
+
+msgid "MNU_DEMESNE"
+msgstr "Стагнирајући домени"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Тимска игра"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Мултипликатор пријатељске ватре"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Паметни нишан"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Штета од пада"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Баци оружје"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Дупла муниција"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Бесконачна муниција"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Бесконачно складиштење"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Без чудовишта"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Без чудовишта до излаза"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Чудовишта се оживљавају"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Без оживљавања"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Предмети се ресетују"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Велики предмети се ресетују"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Брза чудовишта"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr ""
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Смањење додатног здравља"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Дозволи аутоматско циљање"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Дозволи самоубиство"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Дозволи скок"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Дозволи чучање"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Дозволи слободан поглед"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Дозволи FOV"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Дозволи BFG нишање"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Дозволи мапу"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Савезници на аутомапи"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Дозволи поглед од другог играча"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Дозволи чејс-кем"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Проверити муницију за прекидач за оружје"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Смрт Икона греха убија његова потомства"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Урачунај убиство чудовишта у коначним секторима"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Детмеч подешавања"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Оружје се остаје након купљења"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Дозволи бонусе"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Дозволи бонусе за здравље"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Дозволи оклоп"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Оживљавање даље од других"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Понављање нивоа"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Форсирано оживљавање"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Дозволи излазак из нивоа"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Бурад се ресетују"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Ресетује се заштита"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Изгубити гранату ако опаљена"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Задржати стечене гранате"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Нема мешања тимова"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Кооперативне поставке"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Створити мулти оружја"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Изгубити цело складиште"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Задржати кључеве"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Задржати оружје"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Задржати панцир"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Задржати повећану моћ"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Задржати муницију"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Изгубити пола муниције"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Оживљавање на месту смрти"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Увек стварајте објекте за више играча"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Дозволи вертикално ширење метака"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Оружје даје додатну муницију (ДМ)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Компатибилност"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Компатибилна подешавања"
+
+msgid "CMPTMNU_MODE"
+msgstr "Компатибилни мод"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Понашање актора"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Пријатељска чудовишта се не блокирају"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Ограничи изгубљене душе од елементала патње"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Ефекти утицају на покретљивост чудовишта"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Чудовишта не могу прећи падове"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Чудовишта се заглављују на падовима"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Чудовишта могу да виде невидљиве играче"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Минотаури не пале ватру у води"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Одбачени предмети се појављују на поду"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DehackEd понашање"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH подешавања здравља као у Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Оригинална брзина A_Mushroom в DEH модовима"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Понашање нивоа/догађаја"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Све специјалне линије могу да блокирају <use>"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Било који случај A_BossDeath активира special на нивоу"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "Онемогући светлосни ефекат из BOOM-а на вратима"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Нађи суседно светло као у Doom-у"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Нађи најкраће текстуре као у Doom-у"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Користи непоправљено грађење степеница"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Користи Doom-ово подно моционо понашање"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Користи Doom-ов point-on-line алгоритам"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Излаз нивоа може бити активиран више пута"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Физичко понашање"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Глумци су бесконачно велики"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Boom скролери су додаци"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Немогуће путовати право на NSEW"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Омогући пролажење кроз зида"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven скролери користе оригиналну брзину"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Самореф. сектори не блокирају пуцњеве"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Користи Doom код за хитскен проверу"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Користи Doom висине за клиповање ракета"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Понашање рендовања"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Цртај поли-објекте као Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Игнориши Y нагиб на маскиране средње текстуре"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Обрнуто сортирање спрајтова"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Понашање звука"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Онемогући звук за тихи ВЈП трик"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Не допусти да други чују ваше скупљање"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Инстантно покрећући нивои нису тихи"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Секторски звукови су центрисани"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Звукови престају кад глумац нестане"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Користи оригинални звук руковања метом"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Скриптовани телепортери не активирају секторске радње"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Неблокирабе линје могу бити гурнуте"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Омогући баговано CheckSwitchRange понашање"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Омогући непоправљену ограду у Strife-у"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Нема вертикалног гурања од експлозија"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Користи оригнално Doom понашање за експлозије"
+
+msgid "PLYRMNU_RED"
+msgstr "Црвева"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Зелена"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Плава"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Класа"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Скин"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Пребаци на покупљено оружје"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Притисните \\cjSPACE"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "да видите спреда"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "да видите позади"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr ""
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Зум"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Стање оружја (1)"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Стање оружја (2)"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Стање оружја (3)"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Стање оружја (4)"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Лети/пливај нагоре"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Лети/пливај надоле"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Престани летети"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Гледај тастатуром"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Искакајући прикази контроле у Strife-у"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Пиши тиму"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Баци предмет"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Прикажи предмет"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Баци оружје"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Остало"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Поглед од другог играча"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Информација у Strife-у"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Циљ мисије"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Списка кључева"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Оружје/муниција/статистика"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Табела (без држања)"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Покрет мишем"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Стрејф мишем"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Позадина"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Ти"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "Једнострани зид"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "Двострани зид са различитим нивоима"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "Двострани зид са различитим плафонима"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "Двострани зид са 3D нивоима"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Мапа координатне мреже"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Централна тачка"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Неоткривени зидови"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Закључана врата"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Телепортер до истог нивоа"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Телепортер до различитог нивоа"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Тајни сектор"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Ноткривена тајна"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Специјалне линије окидача"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Чит мод"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Невидљиви двострани зидови"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Тајни зидови"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Актори"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Чудовишта"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Не рачунајући чудовишта"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Пријатељи"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Предмети"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Рачунајући предмети"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Провидна аутомапа"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Провидни читови"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Провидни портали"
+
+msgid "MSGMNU_TITLE"
+msgstr "Поруке"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Прикажи поруке"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Прикажи читуље"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Прикажи тајне нотификације"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Минимум левел порука"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Боје порука"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Покупити предмет"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Читуље"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Критичне поруке"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Ћаскања"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Тимске поруке"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Централне поруке"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Скриншот поруке"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Детаљно сачуване поруке"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Поруке девелопера"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Боје за мапу"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Дозволи дефинисане боје за мапу"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Промени боје"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Промени контроле мапе"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Провидна аутомапа"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Омогући приказ текстура"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Прикажи бројач за предмете"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Прикажи бројач за чудовишта"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Прикажи бројач за тајне"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Прикажи протекло време"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Прикажи укупно протекло време"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Прикажи тајне на аутомапи"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Прикажи ознаку мапе"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Нацртај позадину мапе"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Прикажи кључеве (чит)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Прикажи триггер линије"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Прикажи ствари као спрајтове"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Провидни портали"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Празна маргина"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Фонт ознака"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Боја ознака"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Постави ознаку"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Уклони ознаку"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Табеларне подешавања"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Подешавања бодовања"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Подешавања сарадње"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Омогући бодовање"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Боја заглавља"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Боја твога играча"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Боја другог играча"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Детмеч подешавања"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Тимски детмеч подешавања"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Алтернативни HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Укључи алтернативни HUD"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Прикажи количину тајна"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Прикажи количину чудовишта"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Прикажи количину предмета"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Прикажи издржљивост и прецизност"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Прикажи берсерк"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Прикажи оружја"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Прикажи муниције за"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Прикажи време"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Боја времена"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Прикажи кашњење мреже"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Редослед муниција"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Прикажи муниције црвеном испод %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Прикажи муниције жутом испод %"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Прикажи здравље црвеном испод"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Прикажи здравље жутом испод"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Прикажи здравље зеленом испод"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Прикажи оклоп црвеном испод"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Прикажи оклоп жутом испод"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Прикажи оклоп зеленом испод"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Алтернативни HUD за аутомапу"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Боја назива нивоа"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Боја времена на нивоу"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Боја времена на хабу"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Боја укупног времена"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Боја координата"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Мод координата"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Боја назива статистика"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Боја статистика"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Интерполација рендеринга"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Режим рендеринга транспарентности"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Ефект брисања екрана"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Прикажи ENDOOM екран"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Интензивност треперења током повређивања"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Интензивност треперења током купљења"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Интензивност подводног треперења"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Режим рендеринга неба"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Линеарна неба"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Пуно осветљење премошћује боју сектора"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Повечавај шумни ефект"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Користи шумни ефект"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Класична транспарентност"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Транспарентност изгубљених душа"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Користи фејк-контраст"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Траг дима код ракета"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Тип крви"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Тип рикошета"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Број честица"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Број декала"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Прикажи спрајтове играча"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Смртна камера"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Зум током телепортације"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Интенсивност земљотреса"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Интерполирај кретање чудовишта"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Пригушивање менија"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Боја пригушивања"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Тресење камере током кретања"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Тресење камере током неактивности"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Брзина трсења оружја"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Подешавања размере"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Специјална подешавања"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Поруке"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Конзола"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Статусна трака"
+
+msgid "SCALEMNU_HUD"
+msgstr "HUD преко целог екрана"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Алтернативни HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "Сачувај пропорције HUD-а"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Уобичајена размера"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Проширење преко целог екрана"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Прилагоди размери екрана"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUD подешавања"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Алтернативни HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Подешавања порука"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Размера интерфејса"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Форсирај уобичајени нишан"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Побољшај нишан током купљења предмета"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Прикажи имена предмета"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Боја имена предмета"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Стара формула за приказ лика"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Треперење оружја у Hexen-у"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Треперење током тровања"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Треперење током смрти од леда"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Треперење током гомилања отрова"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Подешавања размере"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Покажи IWAD дијалог за избор"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Омогући читове од свих игара"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Омогући прављење скриншотова по скрипти"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Учитај *.deh/*.bex фајлове"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Кеширани чворови"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Временски праг за кеширање чвора"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Избриши кеширане чворове\n"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Дозволи прескакање прелаза са текстовима"
+
+msgid "NETMNU_TITLE"
+msgstr "Мрежна подешавања"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Локална подешавања"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Предвиђање покрета"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Предвиђање линијске радње"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Предвиђање лерп скале"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Лерп праг"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Подешавања домаћина"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Додатни тикови"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Балансирање кашњења"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Оригинално"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Оптимизовано"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Класични (бржи)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Прецизно"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Ограничено"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Честице"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Спрајтови"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Спрајтови и честице"
+
+msgid "OPTVAL_MELT"
+msgstr "Топљење"
+
+msgid "OPTVAL_BURN"
+msgstr "Спаљивање"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Вењење"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Глатко"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Глатко"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Прозрачно"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Фаз"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Сенка"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Предмет"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Оружја"
+
+msgid "OPTVAL_BOTH"
+msgstr "Оба"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Играч"
+
+msgid "OPTVAL_MAP"
+msgstr "Мапа"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Скалирај на 640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Дупли пиксел"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Четвороструки пиксел"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Тренутно оружје"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Доступно оружје"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Сва оружја"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Ниво, милисекунде"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Ниво, секунде"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Ниво"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Хуб, секунде"
+
+msgid "OPTVAL_HUB"
+msgstr "Хуб"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Тотал, секунде"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Тотал"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Систем, секунде"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Систем"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Мрежне игре само"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Слика и текст"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Текст и слика"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Само скрипте"
+
+msgid "OPTVAL_ALL"
+msgstr "Све"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Само последњи"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Традиционални Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Традиционални Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Традиционални Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Само кад је пронађен"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Укључен само за навлаку"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Навлака + нормално"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Навлак само"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Није за хубове"
+
+msgid "OPTVAL_FRONT"
+msgstr "Испред"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Анимирано"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Ротирано"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Само дефинисане мапом боје"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Све осим врата"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Дупло"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Тродупло"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Четвороструко"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Подигнут предмет"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Читуље"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Критичне поруке"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Никад за пријатеље"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Само чудовишста"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Стар"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (строг)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (строг)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (строг)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (строг)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Све неусвојено"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Грешка"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Упозорење"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Обавештење"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Све"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Харвер убрзан"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Doom софтверски рендерер"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "SW рендерер праве боје"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Високо-перформанси"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Енергетско-штедљиви"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Ванила"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (присиљен)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Ванила (присиљен)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Аутоматски (ZDoom преферијални)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Аутоматски (ванила преферијални)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Мало"
+
+msgid "OPTVAL_LARGE"
+msgstr "Велико"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Конзола"
+
+msgid "C_BRICK"
+msgstr "\\caБоја цигле"
+
+msgid "C_TAN"
+msgstr "\\cbБеж"
+
+msgid "C_GRAY"
+msgstr "\\ccСива"
+
+msgid "C_GREEN"
+msgstr "\\cdЗелена"
+
+msgid "C_BROWN"
+msgstr "\\ceСмеђа"
+
+msgid "C_GOLD"
+msgstr "\\cfЗлатна"
+
+msgid "C_RED"
+msgstr "\\cgЦрвена"
+
+msgid "C_BLUE"
+msgstr "\\chПлава"
+
+msgid "C_ORANGE"
+msgstr "\\ciНаранџаста"
+
+msgid "C_WHITE"
+msgstr "\\cjБела"
+
+msgid "C_YELLOW"
+msgstr "\\ckЖута"
+
+msgid "C_DEFAULT"
+msgstr "\\clУобичајена"
+
+msgid "C_BLACK"
+msgstr "\\cmЦрна"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnСветло плава"
+
+msgid "C_CREAM"
+msgstr "\\coКрем"
+
+msgid "C_OLIVE"
+msgstr "\\cpМаслинаста"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqТамно зелена"
+
+msgid "C_DARKRED"
+msgstr "\\crБордо"
+
+msgid "C_DARKBROWN"
+msgstr "\\csБраон"
+
+msgid "C_PURPLE"
+msgstr "\\ctЉубичаста"
+
+msgid "C_DARKGRAY"
+msgstr "\\cuТамно сива"
+
+msgid "C_CYAN"
+msgstr "\\cvЦијан"
+
+msgid "C_ICE"
+msgstr "\\cwЛед"
+
+msgid "C_FIRE"
+msgstr "\\cxВатрена"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cyТамно плава"
+
+msgid "C_TEAL"
+msgstr "\\czТиркизна"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Без-звучни"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Нема уметања"
+
+msgid "OPTSTR_SPLINE"
+msgstr "Сплајн"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Хардвер рендерер"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Софтвер рендерер"
+
+msgid "GLMNU_TITLE"
+msgstr "Опција хардвер рендера"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Подешавања динамичког осветљења"
+
+msgid "GLMNU_PREFS"
+msgstr "Преференција"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Подсећи ивице спрајтова"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Сортирано цртај листе од текстуре"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Динамичко осветљење"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Динамичко осветљење (хардвер)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Омогући светлосне дефиниције"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Светло утиче на спрајтове"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Светло утиче на честице"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Светло мапе сенки"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Мапа сенки квалитет"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Мапа сенки филтер"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Магла мод"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Магла присиљава пуну светлост"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Блага снага оружја"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Околинска мапа на прозорима"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Побољшана ноћна визија мод"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "ПНВ показује скривена чудовишта"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Подеси спрајт клипинг"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Углачати ивице спрајта"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Фаз стајл"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Спрајт билборд"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Спрајт камера фаце"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Честице стајл"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Квалитет рендовања"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "Стереотоно 3D VR"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Омогући четвороструки стерео"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Повезани SW режим осветљења"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Даљина између твојих очију"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Даљина од окрена"
+
+msgid "OPTVAL_SMART"
+msgstr "Паметно"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Паметније"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Само инфрацрвена"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Инфрацрвена/бакља"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Било која поправљена табела боја"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Користи као палету"
+
+msgid "OPTVAL_BLEND"
+msgstr "Бленд"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Свијетло"
+
+msgid "OPTVAL_DARK"
+msgstr "Тамно"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "Софтвер"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Оптимал"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y оса"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X/Y оса"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Квадрат"
+
+msgid "OPTVAL_ROUND"
+msgstr "Круг"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Радијално"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Пикселизовани фаз"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Глатки фаз"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Увртен фаз"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Прозрачан фаз"
+
+msgid "OPTVAL_NOISE"
+msgstr "Звук"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Милозвучан звук"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Назубљен фаз"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Зелен/Магента"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Црвен/Цијан"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Ћилибарски/Плаво"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Лево око"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Десно око"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Раме уз раме цело"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Раме уз раме уско"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Врх/Дно"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Редно прошарано"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Колонско прошарано"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Шаховска табла"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Квад-унапређено"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "Подешавања правих боја"
+
+msgid "TCMNU_TITLE"
+msgstr "Подешавања правих боја"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Излаз правих боја"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Линеарни филтер током смањења"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Линеарни филтер током повећања"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Користи мипмаповане текстуре"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Динамичко осветљење (софтвер)"
+
+msgid "OS_TITLE"
+msgstr "Претрага"
+
+msgid "OS_ANY"
+msgstr "Тражи било коју од речи"
+
+msgid "OS_ALL"
+msgstr "Тражи све речи"
+
+msgid "OS_NO_RESULTS"
+msgstr "Нема резултата."
+
+msgid "OS_LABEL"
+msgstr "Претрага:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Увек приказуј кључеве"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Мењање тима је искључено!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s је уш@[ao_2_sr] у %t тим"
+
+msgid "TXT_LONER"
+msgstr "%s је сада самотњак."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s је изаш@[ao_2_sr] из игре са %d фраговима."
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s је изаш@[ao_2_sr] из игре"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Није могуће прочитати сачувану игру %s."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s није валидно сачувана игра: Недостаје „info.json“."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Не успешно пристопљено инфу сачуване игре %s."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Сачувана игра %s је из инкомпетабилне верзије."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Сачувана игра %s је из други ZDoom-базиран енџин:"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Сачувана игра „%s“ је из старије верзије: %d (%e је најстарија подржана)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Сачувана игра „%s“ је из новије верзије: %d (%e је најновија подржана)"
+
+msgid "TXT_NOMAPSG"
+msgstr "Сачувана игри „%s“ недостаје тренутна мапа."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s није валидно сачувана игра: Недостаје „globals.json“."
+
+msgid "TXT_SGINFOERR"
+msgstr "Не успешно приступљено саучуваној игри у %s"
+
+msgid "TXT_SAVEPENDING"
+msgstr "Сачувана игра идаље чека"
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Није у сачувајућој игри"
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Није у нивоу"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Играч је мртав у сингл-плејер игри"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Сачување није успело"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Није успело направити снимак екрана."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "играчем %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Притисните било који тастер или кликните било где на екрану да одустанете."
+
+msgid "HUDMNU_FLASH"
+msgstr "Подешавања блед екрана"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D режим"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Нишан"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Титлови"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Онемогући сиве сенке"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Подешавања фонта"
+
+msgid "FONTMNU_LOG"
+msgstr "Користи стандардни фонт за приказ лога"
+
+msgid "FONTMNU_DLG"
+msgstr "Користи стандардни фонт за дијалоге"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Брзи излаз"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Прилагођена обрнута мапа"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Прилагођена инверзна боја тамна"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Прилагођено инверзно светло у боји"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr ""
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Класично скалирање паузе и ивице екрана"
+
+msgid "SCALEMNU_INTER"
+msgstr "Интермиссион бацкгроунд"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Граница екрана"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Фактор за скалирање"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Однос ширине и висине"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Прикажи екран за израчунавање на излазу из нивоа"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Мод Дефинед"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Увек, осим унутар чворишта"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Увек, чак и унутар чворишта"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Жељени распоред тастатуре"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Цлассиц ЗДоом"
+
+msgid "OPTVAL_MODERN"
+msgstr "модерно"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Модерна (тастатура)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Строго KEYKONF оружје/играчи"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Класично скалирање ZDoom менија"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Користите проценте на екрану резимеа"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Класично ZDoom скалирање на екрану сажетка"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "грађанин"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Цеилинг Туррет"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Црусадер"
+
+msgid "TAG_INQUISITOR"
+msgstr "Инквизитор"
+
+msgid "TAG_PEASANT"
+msgstr "Сељак"
+
+msgid "TAG_REAVER"
+msgstr "Реавер"
+
+msgid "TAG_SENTINEL"
+msgstr "Сентинел"
+
+msgid "TAG_STALKER"
+msgstr "Сталкер"
+
+msgid "TAG_BISHOP"
+msgstr "Бискуп"
+
+msgid "TAG_ENTITY"
+msgstr "Једини Бог"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Програмер"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Тхе Спецтре"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Човек који клечи"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Поставите ствари за више играча у кооперацији"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Сприте схадовс"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Чудовишта и играчи"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr ""
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Онемогућите функције MBF21"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Прикажи виџет времена"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Сломљена чудовишта васкрсавају као духови"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Погледајте скакање током лета"
+
+msgid "OB_DEMON1HIT"
+msgstr ""
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr ""
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr ""
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr ""
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr ""
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr ""
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr ""
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr ""
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr ""
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr ""
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr ""
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr ""
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr ""
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr ""
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr ""
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr ""
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr ""
+
+msgid "ID24_GOTINCINERATOR"
+msgstr ""
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr ""
+
+msgid "ID24_GOTFUELCAN"
+msgstr ""
+
+msgid "ID24_GOTFUELTANK"
+msgstr ""
+
+msgid "TAG_ID24INCINERATOR"
+msgstr ""
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr ""
+
+msgid "AMMO_ID24FUEL"
+msgstr ""
+
+msgid "AMMO_ID24FUELTANK"
+msgstr ""
+
+msgid "ID24_CC_GHOUL"
+msgstr ""
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr ""
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr ""
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""

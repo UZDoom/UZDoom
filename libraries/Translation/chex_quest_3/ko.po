@@ -1,0 +1,240 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ko\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "청색 플렘열쇠 획득."
+
+msgid "GOTYELLOWFLEM"
+msgstr "황색 플렘열쇠 획득."
+
+msgid "GOTREDFLEM"
+msgstr "적색 플렘열쇠 획득."
+
+msgid "GOTGOGGLES"
+msgstr "울트라 고글 사용."
+
+msgid "PD_BLUECO"
+msgstr "이걸 작동하려면 청색 열쇠가 필요합니다"
+
+msgid "PD_REDCO"
+msgstr "이걸 작동하려면 적색 열쇠가 필요합니다"
+
+msgid "PD_YELLOWCO"
+msgstr "이걸 작동하려면 황색 열쇠가 필요합니다"
+
+msgid "PD_BLUEFO"
+msgstr "이걸 작동하려면 청색 플렘열쇠가 필요합니다"
+
+msgid "PD_REDFO"
+msgstr "이걸 작동하려면 적색 플렘열쇠가 필요합니다"
+
+msgid "PD_YELLOWFO"
+msgstr "이걸 작동하려면 황색 플렘열쇠가 필요합니다"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "자쳐 습득."
+
+msgid "STSTR_KFAADDED"
+msgstr "저치와 열쇠"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: 착륙 지점"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: 저장 시설"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: 연구소"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: 수목원"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: 바조이크의 대동굴"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: 우주공항"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: 극장"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: 첵스 박물관"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: 도시 거리"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: 하수도"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: 중앙 사령부"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: 시리얼 연합"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: 책스 주택"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: 주립공원"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: 거대 유성호"
+
+msgid "CC_ZOMBIE"
+msgstr "커머누스"
+
+msgid "CC_SHOTGUN"
+msgstr "바이피디쿠스"
+
+msgid "CC_IMP"
+msgstr "정예 바이피디쿠스"
+
+msgid "CC_DEMON"
+msgstr "스트리디쿠스"
+
+msgid "CC_LOST"
+msgstr "플렘 지뢰"
+
+msgid "CC_CACO"
+msgstr "슈퍼 사이클롭티스"
+
+msgid "CC_BARON"
+msgstr "맥시무스"
+
+msgid "CC_SPIDER"
+msgstr "플렘보미네이션"
+
+msgid "CC_CYBER"
+msgstr "스놋폴러스 마왕"
+
+msgid "CC_HERO"
+msgstr "첵스 전사"
+
+msgid "PD_BLUEC"
+msgstr "이 문을 열려면 청색 열쇠가 필요합니다"
+
+msgid "PD_REDC"
+msgstr "이 문을 열려면 적색 열쇠가 필요합니다"
+
+msgid "PD_YELLOWC"
+msgstr "이 문을 열려면 황색 열쇠가 필요합니다"
+
+msgid "PD_BLUEF"
+msgstr "이 문을 열려면 청색 플렘열쇠가 필요합니다"
+
+msgid "PD_REDF"
+msgstr "이 문을 열려면 적색 플렘열쇠가 필요합니다"
+
+msgid "PD_YELLOWF"
+msgstr "이 문을 열려면 황색 플렘열쇠가 필요합니다"
+
+msgid "OB_SLIME"
+msgstr "%o 는(은) 점액 속으로 가라앉았습니다."
+
+msgid "OB_LAVA"
+msgstr "%o 는(은) 질척하게 가라앉았습니다."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o 는(은) 차원균열 점액에 맞았습니다!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o 는(은) 모르는 사이에 점액에 당했습니다!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o 는(은) 스트리디쿠스의 코딱지에 당했습니다."
+
+msgid "OB_FLEMMINE"
+msgstr "%o 는(은) 플렘 지뢰에 의해 점액 범벅이 됐습니다."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o 는(은) 슈퍼 사이클롭티스의 점액에 당했습니다."
+
+msgid "OB_MAXIMUS"
+msgstr "%o 는(은) 맥시무스에게 패배했습니다."
+
+msgid "OB_LARVA"
+msgstr "%o 는(은) 애벌레에 의해 점액 범벅이 됐습니다."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o 는(은) 쿼드럼푸스의 점액에 당했습니다."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o 는(은) 플렘보미네이션으로부터 벗어날 수 없었습니다."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o 는(은) 스놋폴러스 마왕과 싸울 준비를 제대로 하지 못했습니다."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o 는(은) %k 의 추진력에 휘말렸습니다."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o 는(은) %k 에게 레이져를 쐬였습니다."
+
+msgid "E1TEXT"
+msgstr ""
+"플렘브레인을 원래 차원으로 보내버린 뒤, 당신은 인질들을 풀어줬지만,\n"
+"아직 플레모이드들이 사방에 있었습니다! 당신과 인질들은 당신의\n"
+"우주선으로 도망갔습니다. 플레모이드들이 당신의 우주선에\n"
+"공격을 가하지만, 아슬아슬하게 궤도 밖으로 탈출하는데\n"
+"성공했습니다. 돌아오는 동안 당신의 용맹한 구출과 활약에\n"
+"모두 축배를 들지만, 한 가지 걸리는 게 있으니...\n"
+"바로 플레모이드들과 끝장을 보지 못했다는 것!\n"
+"\n"
+"불행히도 그 예감은 맞았습니다. 집으로 돌아가는 와중,\n"
+"플레모이드들이 당신을 추적해왔다는 걸 알게 됐는데...\n"
+"다음 이야기는 \"첵스 퀘스트 2 :\n"
+"첵스 시티의 공포\"에서 계속됩니다!"
+
+msgid "E2TEXT"
+msgstr ""
+"당신은 하수구에 모인 잔존 플레모이드들을 처리하는 데 성공했습니다.\n"
+"이제 책스 시티는 안전합니다. 플레모이드들의 위협도 이로써 막을\n"
+"내린 것 같습니다.\n"
+"\n"
+"평화와 번창 속에서 10년이라는 세월이 흘렀지만,\n"
+"사실 플레모이드들 전부가 패배한 것이 아니었고, 그들의 영양가 풍부한\n"
+"시리얼 행성을 지배하려는 야망은 아직 사그라지지 않았던 것이었습니다!\n"
+"그들은 병력을 모아, 우주에 거대한 차원균열 관문을 열었고,\n"
+"그들의 거대한 녹색 점액 덩어리가 시리얼 행성을 향하고 있는데!\n"
+"\n"
+"다음 이야기는 \"첵스 퀘스트 3: 대침공\"에서 이어집니다!"
+
+msgid "E3TEXT"
+msgstr ""
+"최후의 한방으로, 당신은 스놋폴러스 마왕을 원래 세계로 추방했습니다!\n"
+"그 모든 역경 속에서 당신은 손쉽게 모든 침공을 막아냈습니다!\n"
+"\n"
+"당신은 드디어 플레모이드들이 정신을 차리고 다신 시리얼\n"
+"차원에 발을 들일 생각조차 안 하기를 바랐습니다.\n"
+"\n"
+"뭐, 다시 온다 해도 당신은 항상 대비하고 있을 테지만!"
+
+msgid "M_EPI1"
+msgstr "바조이크의 대동굴"
+
+msgid "M_EPI2"
+msgstr "첵스 시티의 공포"
+
+msgid "M_EPI3"
+msgstr "대침공!"
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

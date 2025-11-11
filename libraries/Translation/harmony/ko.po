@@ -1,0 +1,194 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ko\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"정말 이 난이도를 버틸 자신이 있으십니까?\n"
+"\n"
+"Y키, 아니면 N키를 누르시오..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "마커 표시함"
+
+msgid "PD_BLUEO"
+msgstr "필요함: 초록색 키카드"
+
+msgid "PD_REDO"
+msgstr "필요함: 보라색 키카드"
+
+msgid "PD_YELLOWO"
+msgstr "필요함: 노란색 키카드"
+
+msgid "PD_BLUEK"
+msgstr "필요함: 초록색 열쇠"
+
+msgid "PD_YELLOWK"
+msgstr "필요함: 노란색 열쇠"
+
+msgid "PD_REDK"
+msgstr "필요함: 보라색 열쇠"
+
+msgid "GOTARMOR"
+msgstr "획득: 전투복."
+
+msgid "GOTMEGA"
+msgstr "획득: 강화된 전투복."
+
+msgid "GOTMSPHERE"
+msgstr "사용: 체력강화 버섯."
+
+msgid "GOTBLUECARD"
+msgstr "획득: 초록색 키카드."
+
+msgid "GOTYELWCARD"
+msgstr "획득: 노란색 키카드."
+
+msgid "GOTREDCARD"
+msgstr "획득: 보라색 키카드."
+
+msgid "GOTBLUESKUL"
+msgstr "획득: 초록색 열쇠."
+
+msgid "GOTYELWSKUL"
+msgstr "획득: 노란색 열쇠."
+
+msgid "GOTREDSKUL"
+msgstr "획득: 보라색 열쇠."
+
+msgid "GOTSTIM"
+msgstr "사용: 체력회복 버섯."
+
+msgid "GOTMEDIKIT"
+msgstr "사용: 의료 키트."
+
+msgid "GOTMEDINEED"
+msgstr "사용: 당신을 살려줄 의료 키트."
+
+msgid "GOTMAP"
+msgstr "획득: 지도."
+
+msgid "GOTCLIPBOX"
+msgstr "획득: 회전포 탄약."
+
+msgid "GOTROCKET"
+msgstr "획득: 세열탄."
+
+msgid "GOTROCKBOX"
+msgstr "획득: 세열탄 여러 개."
+
+msgid "GOTSHELLBOX"
+msgstr "획득: 산탄총 탄약."
+
+msgid "GOTBACKPACK"
+msgstr "획득: 탄약 가방."
+
+msgid "GOTBFG9000"
+msgstr "획득: 세열탄."
+
+msgid "GOTCHAINGUN"
+msgstr "획득: 회전포."
+
+msgid "GOTLAUNCHER"
+msgstr "획득: 세열탄 추진기."
+
+msgid "GOTPLASMA"
+msgstr "획득: 엔트로피 방사기!"
+
+msgid "GOTSHOTGUN"
+msgstr "획득: 산탄총."
+
+msgid "STSTR_DQDON"
+msgstr "무적 치트: ON"
+
+msgid "STSTR_DQDOFF"
+msgstr "무적 치트: OFF"
+
+msgid "STSTR_KFAADDED"
+msgstr "추가: 모든 무기/탄약/열쇠 치트"
+
+msgid "STSTR_FAADDED"
+msgstr "추가: 모든 무기/탄약 치트"
+
+msgid "TXT_HARMMAP01"
+msgstr "유괴"
+
+msgid "TXT_HARMMAP02"
+msgstr "해함의 길"
+
+msgid "TXT_HARMMAP03"
+msgstr "이상한 분위기"
+
+msgid "TXT_HARMMAP04"
+msgstr "거대 도시"
+
+msgid "TXT_HARMMAP05"
+msgstr "병동"
+
+msgid "TXT_HARMMAP06"
+msgstr "무기 공장"
+
+msgid "TXT_HARMMAP07"
+msgstr "해저 연구소"
+
+msgid "TXT_HARMMAP08"
+msgstr "활주로 1호"
+
+msgid "TXT_HARMMAP09"
+msgstr "발진기지"
+
+msgid "TXT_HARMMAP10"
+msgstr "방사능 처리소"
+
+msgid "TXT_HARMMAP11"
+msgstr "에키드나"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"갑자기 당신의 속이 울렁거린다... 방금 해치운 돌연변이 여왕의 실체...\n"
+"그 괴물은 당신과 친하게 지낸 친구였던... 아미라였다! 그 괴물들이\n"
+"그녀를 후손을 낳을 생물로 개조시킨 방법을 알아낸 것 같다. \n"
+"개조에 성공하긴 했지만 그녀는 당신의 손에 죽은 지 오래다.\n"
+"\n"
+"\"하아아...\"\n"
+"\n"
+"당신은 마음을 가다듬고 자신의 친구를 이렇게 만든 놈들에게\n"
+"복수하기 위해서 다음 길로 나선다...\n"
+"\n"
+"\"고통받은 여자의 심정보다 더한 지옥은 없지! 그 녀석들, 가만 안 둬!\"\n"
+"\n"
+"= 끝 ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "불러오는 중"
+
+msgid "SKILL_BABY"
+msgstr "아주 쉬움"
+
+msgid "SKILL_EASY"
+msgstr "쉬움"
+
+msgid "SKILL_NORMAL"
+msgstr "중간"
+
+msgid "SKILL_HARD"
+msgstr "어려움"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "아주 어려윰"
+
+msgid "HARMQUITMSG"
+msgstr "플레이 해주셔서 감사드립니다"
+
+msgid "TXT_D2E1"
+msgstr ""

@@ -1,0 +1,196 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ro\n"
+
+msgid "NIGHTMARE"
+msgstr "Chiar crezi că poți face față?\\n\\napasă 'Y' sau 'N'..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Loc marcat"
+
+msgid "PD_BLUEO"
+msgstr "Necesită cardul VERDE"
+
+msgid "PD_REDO"
+msgstr "Necesită cardul MOV"
+
+msgid "PD_YELLOWO"
+msgstr "Necesită cardul GALBEN"
+
+msgid "PD_BLUEK"
+msgstr "Necesită cheia VERDE"
+
+msgid "PD_YELLOWK"
+msgstr "Necesită cheia GALBENĂ"
+
+msgid "PD_REDK"
+msgstr "Necesită cheia MOV"
+
+msgid "GOTARMOR"
+msgstr "Ai ridicat Armura."
+
+msgid "GOTMEGA"
+msgstr "Ai ridicat Armura de Luptă."
+
+msgid "GOTMSPHERE"
+msgstr "Supersănătate"
+
+msgid "GOTBLUECARD"
+msgstr "Ai achiziționat cardul VERDE."
+
+msgid "GOTYELWCARD"
+msgstr "Ai achiziționat cardul GALBEN."
+
+msgid "GOTREDCARD"
+msgstr "Ai achiziționat cardul MOV."
+
+msgid "GOTBLUESKUL"
+msgstr "Ai achiziționat cheia VERDE."
+
+msgid "GOTYELWSKUL"
+msgstr "Ai achiziționat cheia GALBENĂ."
+
+msgid "GOTREDSKUL"
+msgstr "Ai achiziționat cheia MOV."
+
+msgid "GOTSTIM"
+msgstr "Ciupercă vindecătoare"
+
+msgid "GOTMEDIKIT"
+msgstr "Ai ridicat: Kit de Prim-Ajutor."
+
+msgid "GOTMEDINEED"
+msgstr "Ai ridicat: Kit de Prim-Ajutor de care CHIAR ai nevoie."
+
+msgid "GOTMAP"
+msgstr "Hartă"
+
+msgid "GOTCLIPBOX"
+msgstr "Ai achiziționat: Cutie de gloanțe."
+
+msgid "GOTROCKET"
+msgstr "Ai achiziționat: Grenadă."
+
+msgid "GOTROCKBOX"
+msgstr "Ai achiziționat: Grenade."
+
+msgid "GOTSHELLBOX"
+msgstr "Ai achiziționat: Cutie de muniție pentru pușcă."
+
+msgid "GOTBACKPACK"
+msgstr "Ai achiziționat: Raniță."
+
+msgid "GOTBFG9000"
+msgstr "Ai achiziționat: Grenadă."
+
+msgid "GOTCHAINGUN"
+msgstr "Ai achiziționat: Minimitralieră."
+
+msgid "GOTLAUNCHER"
+msgstr "Ai achiziționat: Lansator de grenade."
+
+msgid "GOTPLASMA"
+msgstr "Aruncător entropic!"
+
+msgid "GOTSHOTGUN"
+msgstr "Ai achiziționat: Pușcă."
+
+msgid "STSTR_DQDON"
+msgstr "Modul Invincibil PORNIT"
+
+msgid "STSTR_DQDOFF"
+msgstr "Modul Invincibil OPRIT"
+
+msgid "STSTR_KFAADDED"
+msgstr "Toate armele/muniție/chei"
+
+msgid "STSTR_FAADDED"
+msgstr "Toate armele și muniție"
+
+msgid "TXT_HARMMAP01"
+msgstr "Răpire"
+
+msgid "TXT_HARMMAP02"
+msgstr "Calea pericolului"
+
+msgid "TXT_HARMMAP03"
+msgstr "Fricțiune"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Spitalul"
+
+msgid "TXT_HARMMAP06"
+msgstr "Fabrica de Arme"
+
+msgid "TXT_HARMMAP07"
+msgstr "Laboratorul Subacvatic"
+
+msgid "TXT_HARMMAP08"
+msgstr "Pista Unu"
+
+msgid "TXT_HARMMAP09"
+msgstr "Baza de Lansare"
+
+msgid "TXT_HARMMAP10"
+msgstr "Zona Radioactivă"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Îți vine rău de la stomac...\n"
+"Uitându-te în ochii reginei mutant...\n"
+"Acel lucru... Acel lucru obișnuia să fie...\n"
+"Prietena ta... Amira!\n"
+"\n"
+"Moștrii trebuie să fii reușit cumva să o\n"
+"transforme în această creatură hidoasă capabilă \n"
+"să le poarte progeniturile...\n"
+"\n"
+"-oftezi-\n"
+"\n"
+"Te aduni...\n"
+"Îi vei face să plătească pentru că te-au făcut să\n"
+"îți omori prietena...\n"
+"\n"
+"\"Iadul nu e nimic în comparație cu o femeie disprețuită!\"\n"
+"\n"
+"              = S F Â R Ș I T ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Se încarcă"
+
+msgid "SKILL_BABY"
+msgstr "Foarte Ușor"
+
+msgid "SKILL_EASY"
+msgstr "Ușor"
+
+msgid "SKILL_NORMAL"
+msgstr "Mediu"
+
+msgid "SKILL_HARD"
+msgstr "Greu"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Foarte Greu"
+
+msgid "HARMQUITMSG"
+msgstr "Mulțumim că ai jucat"
+
+msgid "TXT_D2E1"
+msgstr ""

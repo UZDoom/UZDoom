@@ -1,0 +1,202 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: tr\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Gerçekten bununla başa çıkabileceğini düşünüyor musun? 'Y' veya 'N' tuşuna "
+"basın..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "İşaretli nokta"
+
+msgid "PD_BLUEO"
+msgstr "YEŞİL anahtar kartı gerektirir"
+
+msgid "PD_REDO"
+msgstr "MOR anahtar kartı gerektirir"
+
+msgid "PD_YELLOWO"
+msgstr "SARI anahtar kartı gerektirir"
+
+msgid "PD_BLUEK"
+msgstr "YEŞİL tuş gerektirir"
+
+msgid "PD_YELLOWK"
+msgstr "SARI tuş gerektirir"
+
+msgid "PD_REDK"
+msgstr "MOR tuş gerektirir"
+
+msgid "GOTARMOR"
+msgstr "Zırhı aldım."
+
+msgid "GOTMEGA"
+msgstr "Savaş Zırhı aldı."
+
+msgid "GOTMSPHERE"
+msgstr "Süper Sağlık"
+
+msgid "GOTBLUECARD"
+msgstr "YEŞİL anahtar kartı elde edildi."
+
+msgid "GOTYELWCARD"
+msgstr "SARI anahtar kartı elde edildi."
+
+msgid "GOTREDCARD"
+msgstr "MOR anahtar kartı elde edildi."
+
+msgid "GOTBLUESKUL"
+msgstr "YEŞİL anahtar elde edildi."
+
+msgid "GOTYELWSKUL"
+msgstr "SARI anahtar elde edildi."
+
+msgid "GOTREDSKUL"
+msgstr "MOR anahtar elde edildi."
+
+msgid "GOTSTIM"
+msgstr "İyileştirici mantar"
+
+msgid "GOTMEDIKIT"
+msgstr "Elde edilen: tıbbi kit."
+
+msgid "GOTMEDINEED"
+msgstr "Elde edilen: GERÇEKTEN ihtiyacınız olan tıbbi kit."
+
+msgid "GOTMAP"
+msgstr "Harita"
+
+msgid "GOTCLIPBOX"
+msgstr "Elde edilen: mermi kovanı."
+
+msgid "GOTROCKET"
+msgstr "Elde edildi: El bombası."
+
+msgid "GOTROCKBOX"
+msgstr "Elde edildi: El bombaları."
+
+msgid "GOTSHELLBOX"
+msgstr "Edinildi: Bir kutu av tüfeği fişeği."
+
+msgid "GOTBACKPACK"
+msgstr "Edinildi: Cephane çantası."
+
+msgid "GOTBFG9000"
+msgstr "Elde edildi: El bombası."
+
+msgid "GOTCHAINGUN"
+msgstr "Elde edildi: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Elde edildi: El bombası fırlatıcı."
+
+msgid "GOTPLASMA"
+msgstr "Entropi fırlatıcı!"
+
+msgid "GOTSHOTGUN"
+msgstr "Edinildi: Av tüfeği."
+
+msgid "STSTR_DQDON"
+msgstr "Tanrı Modu AÇIK"
+
+msgid "STSTR_DQDOFF"
+msgstr "Tanrı Modu KAPALI"
+
+msgid "STSTR_KFAADDED"
+msgstr "Tüm silahlar/ cephane/ anahtarlar"
+
+msgid "STSTR_FAADDED"
+msgstr "Tüm silahlar ve cephane"
+
+msgid "TXT_HARMMAP01"
+msgstr "Kaçırılma"
+
+msgid "TXT_HARMMAP02"
+msgstr "Zarar Görebilecek Durumda"
+
+msgid "TXT_HARMMAP03"
+msgstr "Kötü Ruh Hali"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalapolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Hastane"
+
+msgid "TXT_HARMMAP06"
+msgstr "Silah Fabrikası"
+
+msgid "TXT_HARMMAP07"
+msgstr "Sualtı Laboratuvarı"
+
+msgid "TXT_HARMMAP08"
+msgstr "Birinci Pist"
+
+msgid "TXT_HARMMAP09"
+msgstr "Fırlatma Üssü"
+
+msgid "TXT_HARMMAP10"
+msgstr "Radyoaktif Bölge"
+
+msgid "TXT_HARMMAP11"
+msgstr "Echidna"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Kendini mutsuz hissediyorsun...\n"
+"Mutant kraliçenin yüzüne bakarken. \n"
+"O şey. O eskiden... \n"
+"Arkadaşın. Amira'ydı!\n"
+"\n"
+"O canavarlar onu mutasyona\n"
+"uğratmanın ve yavrularını doğurması\n"
+"için bu iğrenç yaratığa\n"
+"dönüştürmenin bir yolunu\n"
+"bulmuş olmalılar.\n"
+"\n"
+"-İç çek-\n"
+"\n"
+"Kendini topla. \n"
+"Sana arkadaşını öldürtmenin\n"
+"bedelini ödeyecekler.\n"
+"\n"
+"\"Cehennemde hor görülen\n"
+"bir kadın gibi öfke yoktur!\"\n"
+"\n"
+"\n"
+"= SON ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Yükleniyor"
+
+msgid "SKILL_BABY"
+msgstr "Çok Kolay"
+
+msgid "SKILL_EASY"
+msgstr "Kolay"
+
+msgid "SKILL_NORMAL"
+msgstr "Orta"
+
+msgid "SKILL_HARD"
+msgstr "Sert"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Çok Zor"
+
+msgid "HARMQUITMSG"
+msgstr "Oynadığınız için teşekkürler"
+
+msgid "TXT_D2E1"
+msgstr ""

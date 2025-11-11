@@ -1,0 +1,249 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ro\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Ai ridicat flemcheia albastră."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Ai ridicat flemcheia galbenă."
+
+msgid "GOTREDFLEM"
+msgstr "Ai ridicat flemcheia roșie."
+
+msgid "GOTGOGGLES"
+msgstr "Ai găsit Ultra Ochelarii"
+
+msgid "PD_BLUECO"
+msgstr "Ai nevoie de o cheie albastră pentru a activa acest obiect"
+
+msgid "PD_REDCO"
+msgstr "Ai nevoie de o cheie roșie pentru a activa acest obiect"
+
+msgid "PD_YELLOWCO"
+msgstr "Ai nevoie de o cheie galbenă pentru a activa acest obiect"
+
+msgid "PD_BLUEFO"
+msgstr "Ai nevoie de o flemcheie albastră pentru a activa acest obiect"
+
+msgid "PD_REDFO"
+msgstr "Ai nevoie de o flemcheie roșie pentru a activa acest obiect"
+
+msgid "PD_YELLOWFO"
+msgstr "Ai nevoie de o flemcheie galbenă pentru a activa acest obiect"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Ai ridicat un zorcher."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorcher și chei adăugate"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Zona de Aterizare"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Depozitul"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorul"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Cavernele lui Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Portul Spațial"
+
+msgid "HUSTR_E2M2"
+msgstr ""
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Muzeul Chex"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Străzile Orașului"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Sistemul de Canalizare"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Centrul de Comanda"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Cereale Unite"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Vila Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Parcul Provincial"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Nava Spațială Meteor"
+
+msgid "CC_ZOMBIE"
+msgstr "Comun"
+
+msgid "CC_SHOTGUN"
+msgstr "Biped"
+
+msgid "CC_IMP"
+msgstr "Biped cu Armură"
+
+msgid "CC_DEMON"
+msgstr "Picioare-Lungi"
+
+msgid "CC_LOST"
+msgstr "Flem Mină"
+
+msgid "CC_CACO"
+msgstr "Super Cicloptic"
+
+msgid "CC_BARON"
+msgstr "Maxim"
+
+msgid "CC_SPIDER"
+msgstr "Flembominație"
+
+msgid "CC_CYBER"
+msgstr "Lordul Snotfolus"
+
+msgid "CC_HERO"
+msgstr "Războinic Chex"
+
+msgid "PD_BLUEC"
+msgstr "Ai nevoie de o cheie albastră pentru a deschide ușa aceasta"
+
+msgid "PD_REDC"
+msgstr "Ai nevoie de o cheie roșie pentru a deschide ușa aceasta"
+
+msgid "PD_YELLOWC"
+msgstr "Ai nevoie de o cheie galbenă pentru a deschide ușa aceasta"
+
+msgid "PD_BLUEF"
+msgstr "Ai nevoie de o flemcheie albastră pentru a deschide ușa aceasta"
+
+msgid "PD_REDF"
+msgstr "Ai nevoie de o flemcheie roșie pentru a deschide ușa aceasta"
+
+msgid "PD_YELLOWF"
+msgstr "Ai nevoie de o flemcheie galbenă pentru a deschide ușa aceasta"
+
+msgid "OB_SLIME"
+msgstr "%o se scufundă în mâzgă."
+
+msgid "OB_LAVA"
+msgstr "%o se scufundă în mâzgă."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o a fost lovit de mâzgă interdimensională!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o a fost lovit de mâzgă interdimensională!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o s-a speriat de picioare-lungi."
+
+msgid "OB_FLEMMINE"
+msgstr "%o a fost lovit de mâzga unei flem mine."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o a fost transformat în mâzgă de către un super cicloptic."
+
+msgid "OB_MAXIMUS"
+msgstr "%o a fost înfrânt de către un Maxim."
+
+msgid "OB_LARVA"
+msgstr "%o a fost lovit de mâzga unei larve."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o a fost transformat în mâzgă de către o creatură cu patru mâini"
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o a fost învins de către Flembominație."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o a fost pus la pământ de către Lordul Snotfolus."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o a fost lovit de către propulsorul lui %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%k a folosit dispozitivul LAZ pe %o."
+
+msgid "E1TEXT"
+msgstr ""
+"După ce ai trimis monstruoasa Flembrană înapoi\n"
+"de unde a venit, eliberezi prizonierii. Insă\n"
+"flemoizii sunt peste tot! Tu, împreună cu cei \n"
+"captivi dați o lovitura în încercarea de a ajunge \n"
+"la navă. Flemoizii încep să umple nava cu mâzgă, \n"
+"dar reușiți să scăpați la limită. În timpul întoarcerii \n"
+"ești felicitat pentru salvarea cutezătoare, dar oferi\n"
+"un avertisment...\n"
+"Nu am văzut flemoizi pentru ultima oară.\n"
+"\n"
+"Din păcate ai dreptate. Cum te întorci acasă,\n"
+"realizezi că Flemoizii te-au urmat cumva.\n"
+"Pregătește-te pentru Chex Quest 2: Teroare în\n"
+"Orașul Chex!"
+
+msgid "E2TEXT"
+msgstr ""
+"Folosești zorcherul pentru a curăța ultimii\n"
+"flemoizi care s-au adunat în canalizare. Orașul\n"
+"Chex a fost salvat. Se pare că amenințarea\n"
+"Flemoidă a luat sfârșit.\n"
+"\n"
+"Zece ani trec în pace și prosperitate. Dar Flemozii\n"
+"nu au fost învinși, iar dorințta lor de a controla\n"
+"cerealele bogate în nutrienți nu s-a micșorat.\n"
+"Și-au adunat toate forțele, au deschis o poartă\n"
+"interdimensională gigantă, iar acum o bilă\n"
+"enormă de mâzgă e îndreptată drept către\n"
+"planeta cerealelor!\n"
+"\n"
+"Pregătește-te pentru Chex Quest 3: Invazia!"
+
+msgid "E3TEXT"
+msgstr ""
+"Cu o ultimă lovitură, îl arunci pe Lordul Snotfolus\n"
+"înapoi în dimensiunea din care a venit! În ciuda\n"
+"șanselor, ai reușit să oprești invazia de unul\n"
+"singur!\n"
+"\n"
+"Speri cu adevărat că Flemoizii și-au învățat lecția\n"
+"și nu se vor mai întoarce vreodată în dimensiunea\n"
+"cerealelor.\n"
+"\n"
+"\n"
+"Dar dacă o vor face, vei fi pregătit pentru ei!"
+
+msgid "M_EPI1"
+msgstr "Misiune de Salvare pe Bazoik"
+
+msgid "M_EPI2"
+msgstr "Teroare în Orașul Chex"
+
+msgid "M_EPI3"
+msgstr "Invazie!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ultra Ochelari"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Flemcheie Albastră"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Flemcheie Galbenă"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Flemcheie Roșie"

@@ -1,0 +1,256 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: da\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Du samlede en blå flemkey op."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Du samlede en gul flemkey op."
+
+msgid "GOTREDFLEM"
+msgstr "Du samlede en rød flemkey op."
+
+msgid "GOTGOGGLES"
+msgstr "Fandt Ultra Goggles"
+
+msgid "PD_BLUECO"
+msgstr "Du skal bruge en blå nøgle for at aktivere dette objekt"
+
+msgid "PD_REDCO"
+msgstr "Du skal bruge en rød nøgle for at aktivere dette objekt"
+
+msgid "PD_YELLOWCO"
+msgstr "Du skal bruge en gul nøgle for at aktivere dette objekt"
+
+msgid "PD_BLUEFO"
+msgstr "Du skal bruge en blå flemkey for at aktivere dette objekt"
+
+msgid "PD_REDFO"
+msgstr "Du skal bruge en rød flemkey for at aktivere dette objekt"
+
+msgid "PD_YELLOWFO"
+msgstr "Du skal bruge en gul flemkey for at aktivere dette objekt"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Du samlede en zorcher op."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch og nøgler tilføjet"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Landingszone"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Opbevaringsanlæg"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorium"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Bazoiks grotter"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Rumhavn"
+
+msgid "HUSTR_E2M2"
+msgstr ""
+
+msgid "HUSTR_E2M3"
+msgstr ""
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Byens gader"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Kloaksystem"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Centralkommando"
+
+msgid "HUSTR_E3M2"
+msgstr ""
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr ""
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteor rumskib"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Bipedicus med rustning"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr ""
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "Flembominationen"
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr "Chex Kriger"
+
+msgid "PD_BLUEC"
+msgstr "Du skal bruge en blå nøgle for at åbne denne dør"
+
+msgid "PD_REDC"
+msgstr "Du skal bruge en rød nøgle for at åbne denne dør"
+
+msgid "PD_YELLOWC"
+msgstr "Du skal bruge en gul nøgle for at åbne denne dør"
+
+msgid "PD_BLUEF"
+msgstr "Du skal bruge en blå flemkey for at åbne denne dør"
+
+msgid "PD_REDF"
+msgstr "Du skal bruge en rød flemkey for at åbne denne dør"
+
+msgid "PD_YELLOWF"
+msgstr "Du har brug for en gul flemkey for at åbne denne dør"
+
+msgid "OB_SLIME"
+msgstr "%o synker ned i noget slim."
+
+msgid "OB_LAVA"
+msgstr "%o synker ned i noget slim."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o blev ramt af interdimensionalt slim!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o blev ramt af interdimensionalt slim!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o blev buogered af en stridicus."
+
+msgid "OB_FLEMMINE"
+msgstr "%o blev smittet af en flem mine."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o blev slimet af en super cycloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "%o blev besejret af en Maximus."
+
+msgid "OB_LARVA"
+msgstr "%o blev smurt af en larve."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o blev slimet af en Quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o blev besejret af Flembomination."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o blev besejret af Lord Snotfolus."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o blev ramt af %ks propulsor."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o blev lazzed af %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Når du har sendt den uhyrlige Flembrane\n"
+"tilbage til sin egen dimension, befrier\n"
+"du fangerne. Men der er flemoider overalt!\n"
+"\n"
+"Du og fangerne flygter mod dit rumskib.\n"
+"Flemoiderne slimer dit skib, men du\n"
+"undslipper med nød og næppe i kredsløb.\n"
+"Under hjemrejsen bliver du lykønsket for\n"
+"den dristige redning, men du udsender en\n"
+"advarsel...\n"
+"Vi har ikke set det sidste af Flemoids.\n"
+"\n"
+"Desværre har du ret. For da du vender hjem,\n"
+"finder du ud af, at Flemoiderne på en eller\n"
+"anden måde har fulgt dig hertil. Forbered\n"
+"dig på Chex Quest 2: Terror i Chex City!"
+
+msgid "E2TEXT"
+msgstr ""
+"Du zorch de resterende flemoider, der\n"
+"havde samlet sig i kloakkerne. Chex City\n"
+"er blevet reddet. Det ser ud til,\n"
+"at Flemoid-truslen endelig er slut.\n"
+"\n"
+"Ti år går i fred og velstand.\n"
+"Men Flemoiderne blev ikke besejret,\n"
+"og deres ønske om at kontrollere den\n"
+"næringsrige cerealdimension er ikke\n"
+"blevet mindre.\n"
+"\n"
+"De har samlet alle deres kræfter,\n"
+"åbnet en gigantisk interdimensionel\n"
+"revne i rummet, og nu er en stor\n"
+"slimkugle på vej direkte mod\n"
+"cerealplaneten!\n"
+"\n"
+"Gør dig klar til\n"
+"Chex Quest 3: Invasion!"
+
+msgid "E3TEXT"
+msgstr ""
+"Med et sidste slag zorcherer du\n"
+"Lord Snotfolus tilbage til sin egen\n"
+"dimension! Mod alle odds har du\n"
+"egenhændigt forpurret invasionen!\n"
+"\n"
+"Du håber virkelig, at Flemoids endelig\n"
+"har lært lektien og aldrig mere vil\n"
+"vende tilbage til cerealdimensionen.\n"
+"\n"
+"Men hvis de gør det, ved du, at du\n"
+"vil være klar til at tage imod dem!"
+
+msgid "M_EPI1"
+msgstr "Redning på Bazoik"
+
+msgid "M_EPI2"
+msgstr "Terror i Chex City"
+
+msgid "M_EPI3"
+msgstr ""
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

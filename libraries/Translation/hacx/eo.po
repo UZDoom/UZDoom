@@ -1,0 +1,593 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: eo\n"
+
+msgid "QUITMSG1"
+msgstr "Ĉu ĉi tiuj cimoj estas tro forta por vi?"
+
+msgid "QUITMSG"
+msgstr ""
+"Ĉu vi certas, ke vi volas\n"
+"malkonektiĝi el la batalo?"
+
+msgid "QUITMSG2"
+msgstr "Vi provas rezigni? Kaj vi nomas vin kodrompisto?"
+
+msgid "QUITMSG3"
+msgstr ""
+"Revenu ĉi tien antaŭ ol mi sendos\n"
+"viruson en vian posttubon!"
+
+msgid "QUITMSG4"
+msgstr ""
+"Veraj kodrompistoj\n"
+"neniam fuĝas el batalo."
+
+msgid "QUITMSG5"
+msgstr ""
+"Nu! Vi ankoraŭ ne vidis\n"
+"la plej bonan parton!"
+
+msgid "QUITMSG6"
+msgstr ""
+"Se vi rezignas nun, tiam\n"
+"Interret-spaco estos detruita!"
+
+msgid "QUITMSG7"
+msgstr "ĜINIO sendas plej siajn konsiderojn, fiulo!"
+
+msgid "QUITMSG8"
+msgstr "Ĥaa. Kia domaĝo, ke vi estas hero, Kodrompisto."
+
+msgid "QUITMSG9"
+msgstr "Kio? Ĉu vi preferas, ke vi revenu al la plumon?"
+
+msgid "QUITMSG10"
+msgstr ""
+"Vi estus devinta preni\n"
+"la bluan pilolon."
+
+msgid "QUITMSG11"
+msgstr "La nomo de la ludo ne estas Tiku kaj Kuru!"
+
+msgid "QUITMSG12"
+msgstr "Ne zorgu. Savi la mondon povas atendi, ĉu ne?"
+
+msgid "QUITMSG13"
+msgstr "Tempas, ke niaj vojoj agu kiel la reto kaj dividu."
+
+msgid "QUITMSG14"
+msgstr "Ne iru forgesi HacX nun!"
+
+msgid "OB_SUICIDE"
+msgstr "%o forigis sin el la universo."
+
+msgid "OB_FALLING"
+msgstr "%o formis krateron grandan kiel Kansaso."
+
+msgid "OB_CRUSH"
+msgstr "%o Iĝis homa patkuko."
+
+msgid "OB_EXIT"
+msgstr "%o provis malkonektiĝi."
+
+msgid "OB_WATER"
+msgstr "%o naĝis kiel briko."
+
+msgid "OB_SLIME"
+msgstr "%o iĝis nuklea"
+
+msgid "OB_LAVA"
+msgstr "%o spertis varman banon."
+
+msgid "OB_BARREL"
+msgstr "%o trodozis nitroglicerinon."
+
+msgid "OB_SPLASH"
+msgstr "%o estas senhaŭtiga en malgrandetaj pecoj."
+
+msgid "OB_R_SPLASH"
+msgstr "%o volis vidi, kiel %g aspektus kun la interno ekstere."
+
+msgid "OB_ROCKET"
+msgstr "%o volis vidi, kiel %g aspektus kun la interno ekstere."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o forigis sin el la universo."
+
+msgid "OB_THUG"
+msgstr "%o ne estas la supera specio plu."
+
+msgid "OB_ANDROID"
+msgstr "%o konektiĝis en la eraran maŝinon."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o ricevis monstran cybernetik-raydist-postaĵ-piedbaton."
+
+msgid "OB_ICE"
+msgstr "%o iĝis ICE-ita"
+
+msgid "OB_BUZZER"
+msgstr "%o sentas sin iomete vibretita."
+
+msgid "OB_STEALTH"
+msgstr "%o malkovras tre ŝokantan aferon."
+
+msgid "OB_DMAN"
+msgstr "%o estas viŝita el cyberspaco."
+
+msgid "OB_GLASS"
+msgstr "%o donis al si vitran makzelon."
+
+msgid "OB_MANIAC"
+msgstr "La vivo-membrecon de %o estas finigita"
+
+msgid "OB_MANIACHIT"
+msgstr "%o mortis per iu malcerta maniero, kiun mi ne povas kompreni."
+
+msgid "OB_TERMIN"
+msgstr "%o estis fritita de femme-fatale-groteskulo."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o iĝis iomete proksime al la mala sekso."
+
+msgid "OB_REPLI"
+msgstr "%o diris \"Ĝis la revido\" al malnova amiko."
+
+msgid "OB_REPLIHIT"
+msgstr "%o estis pikita en la dorson de malnova amiko."
+
+msgid "OB_PHAGE"
+msgstr "%o estis foriga de natura elektado."
+
+msgid "OB_THORN"
+msgstr "%o ne povis eskapi dornan morton."
+
+msgid "OB_SUMATIC"
+msgstr "%o prenis sumoan baton en la ingveno."
+
+msgid "OB_GENIE"
+msgstr "%o ne ricevis siajn tri petojn."
+
+msgid "OB_MINE"
+msgstr "%o provis glatumi minon."
+
+msgid "OB_MPKICK"
+msgstr "%o ricevis la Bruce Lee piedbaton de %k en sia vizaĝo."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o diseriĝis pro la ŝokantan revelaĉio de %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o duoble dozis la puno de %k."
+
+msgid "OB_MPTAZER"
+msgstr "%o estis malŝaltita de la ŝokbateno de %k."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o ricevis la glacie malvarman koleregon de %k."
+
+msgid "OB_MPUZI"
+msgstr "%o estis borita truplena de %k, ganstere."
+
+msgid "OB_MPZOOKA"
+msgstr "%o manĝis la fotonbombon de %k."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o estis reduktita en ordeman amason da fotonoj de %k."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o estis reduktita en antimaterion de %k."
+
+msgid "OB_MPNUKE"
+msgstr "%o glutis la nuklean bombon de %k."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o iĝis nuklea pro la amasdetruado de %k."
+
+msgid "OB_MPTELEFRAG"
+msgstr "La interno de %o estis eksteriga de %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "La atoma strukturo de %o estis disfendita."
+
+msgid "OB_DEFAULT"
+msgstr "%o spontane finiĝis."
+
+msgid "GOTNUKER"
+msgstr "Vi prenis NUKER! Jen havu!"
+
+msgid "GOTUZI"
+msgstr "Vi prenis UZI!!"
+
+msgid "GOTREZNATOR"
+msgstr "HOIG-Reznilo - FRITU pugon!"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Vi prenis Fotonbazukon!"
+
+msgid "GOTBIGSTICK"
+msgstr "Vi portas grandan bastonon!"
+
+msgid "GOTTAZER"
+msgstr "Vi prenis Elektropafilon!!"
+
+msgid "GOTCRYOGUN"
+msgstr "Vi prenis Kriogenikpafilon! FROSTIĜU!"
+
+msgid "GOTROUNDS"
+msgstr "Vi prenis kuglojn!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Vi prenis skatolon da kugloj!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Vi prenis Torpedon!"
+
+msgid "GOTTORPEDOS"
+msgstr "Vi prenis skatolon da Torpedoj!"
+
+msgid "GOTMOLECULES"
+msgstr "Vi prenis molekulmodulon!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Vi prenis reservujon da molekulojn!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Vi prenis iom da kartoĉoj!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Vi prenis skatolon da kartoĉoj!"
+
+msgid "GOTVALISE"
+msgstr "Vi prenis valizon plenan de municiojn!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Fortkampo!"
+
+msgid "GOTMICROTEL"
+msgstr "007 Microtel!"
+
+msgid "GOTENKBLIND"
+msgstr "Vi estas ENK-Blinda"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Vulkanaj Kauŭĉukaj Botoj!"
+
+msgid "GOTSIARRAY"
+msgstr "SI-matric-mapado!"
+
+msgid "GOTINFRARED"
+msgstr "Transruĝa Viziero!"
+
+msgid "GOTINHALER"
+msgstr "Spiru profunde, inhalo!"
+
+msgid "GOTHYPONEED"
+msgstr ""
+
+msgid "GOTHYPO"
+msgstr "Vi prenis Injektilon!"
+
+msgid "GOTKEYCARD"
+msgstr "Vi trovis Ŝlosilkarton!"
+
+msgid "GOTCKEY"
+msgstr "Vi trovis C-Ŝlosilon!"
+
+msgid "GOTPASSWORD"
+msgstr "Vi trovis Pasvorton!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Vi trovis bluan Z-ŝlosilon!"
+
+msgid "GOTYELWZKEY"
+msgstr "Vi trovis flavan Z-ŝlosilon!"
+
+msgid "GOTREDZKEY"
+msgstr "Vi trovis ruĝan Z-ŝlosilon!"
+
+msgid "GOTBODYARMOR"
+msgstr "Kiraso!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrofenoksino!"
+
+msgid "GOTKEVLARVEST"
+msgstr "Vi prenis kevlaran veŝton!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Vi prenis superan kevlaran veŝton!"
+
+msgid "GOTMICROKIT"
+msgstr "Vi prenis Kompleteton!"
+
+msgid "GOTDAMPENER"
+msgstr "Vi prenis Dampilon!"
+
+msgid "PD_CKEY"
+msgstr "Vi bezonas C-ŝlosilon por aliri ĉi tiun objekton!"
+
+msgid "PD_KEYCARD"
+msgstr "Vi bezonas Slosilkarton por aliri ĉi tiun objekton!"
+
+msgid "PD_PASSWORD"
+msgstr "Vi bezonas Pasvorton por aliri ĉi tiun objekton!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Vi bezonas Bluan Z-ŝlosilon por funkciigi ĉi tiun!"
+
+msgid "PD_REDZKEY"
+msgstr "Vi bezonas Ruĝan Z-ŝlosilon por funkciigi ĉi tiun!"
+
+msgid "PD_YELWZKEY"
+msgstr "Vi bezonas Flavan Z-ŝlosilon por funkciigi ĉi tiun!"
+
+msgid "X1TEXT"
+msgstr ""
+"Dudek milionoj en oro ne ŝajnas valori\n"
+"ĉi tiun ĝenon, ĉu ne, kodrompisto? Fek!\n"
+"Faras la karceron aspekti kiel pikniko!\n"
+"\n"
+"Turpaĉaj bio-mataciuloj kaj viaj\n"
+"homaj kunuloj pendis de la plafono\n"
+"kiel sakoj da manĝajo.\n"
+"\n"
+"Kio diable estas ĉi tiu GENIE? Ĝi estas\n"
+"kiel neniu komputilo, kiun vi kodrompis!\n"
+"... nek kiel ia ĝino!\n"
+"\n"
+"Vi devas trovi la sekvan stacion, preni\n"
+"rajdon tra ciberspaco, haki iom da \n"
+"mutaciulo-pugo, kaj eliru de ĉi tie!"
+
+msgid "X2TEXT"
+msgstr ""
+"Kie estas ĉiuj homoj?!\n"
+"\n"
+"Parizo estas senhoma urbo, se vi ne\n"
+"konsideras mutaciajn cimojn elstaraj\n"
+"urbanoj.\n"
+"\n"
+"Vi kontraŭstaras sangan reziston. Ve,\n"
+"ĉu tiuj cimoj povas batali! Bonsorte,\n"
+"ili ne estas la plej granda saĝulo.\n"
+"\n"
+"Tamen, vi akiris iom el la informaĵoj,\n"
+"kiujn la komisiono volas. Kaj ĝi estas fia!\n"
+"\n"
+"Homaj neŭraj likvaĵoj nutras la cimojn!\n"
+"Ne mirinde, ke la urbo ŝajnas iĝi iomete\n"
+"neloĝata. Raportu al la kimisiono.\n"
+"Singardu..."
+
+msgid "X3TEXT"
+msgstr ""
+"La civilizoj, kiun vi konis, estas nulita!\n"
+"\n"
+"Neniuj amikoj, neniu familio, neniuj\n"
+"homoj plu. Neniu normaj homoj, ĉiuokaze.\n"
+"\n"
+"Nur unu aĵo restas... GENIE!\n"
+"Kaj eĉ se vi bezonos iri la limo de\n"
+"la universo, vi trovos ĝian mutacian pugon!\n"
+"Ĉar vi furiozas!\n"
+"\n"
+"Pri la oro? Diable, ĉi tio estas senpaga.\n"
+"\n"
+".....(Daŭrigota)....."
+
+msgid "X5TEXT"
+msgstr ""
+"Vi vivas!\n"
+"\n"
+"Kia estas la ŝancoj, kodrompisto?!\n"
+"Ĉar en ĝi svarmas cimoj.\n"
+"\n"
+"Vi ne povas atingi la komisionon,\n"
+"kio signifas, ke ĝi estas okupata.\n"
+"\n"
+"\n"
+"Vi... estas sola."
+
+msgid "TXT_HACXMAP01"
+msgstr "Korporacio GenEmp"
+
+msgid "TXT_HACXMAP02"
+msgstr "Tunelo Urbeto"
+
+msgid "TXT_HACXMAP03"
+msgstr "Lafa Anekso"
+
+msgid "TXT_HACXMAP04"
+msgstr "Alkatrazo"
+
+msgid "TXT_HACXMAP05"
+msgstr "Cibernetika Cirko"
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr "La Grandega Muro"
+
+msgid "TXT_HACXMAP08"
+msgstr "Ĝardeno de Ĝuoj"
+
+msgid "TXT_HACXMAP09"
+msgstr "Kaŝita Fortreso"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarkia Sonĝo"
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr "Gotika Spaliro"
+
+msgid "TXT_HACXMAP13"
+msgstr "La Kanaloj"
+
+msgid "TXT_HACXMAP14"
+msgstr "Milito de Elektrodoj"
+
+msgid "TXT_HACXMAP15"
+msgstr "Krespusko de EnK-oj"
+
+msgid "TXT_HACXMAP16"
+msgstr "Protea Cybex"
+
+msgid "TXT_HACXMAP17"
+msgstr "Rivero de Sango"
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr "La Militĉambroj"
+
+msgid "TXT_HACXMAP20"
+msgstr "Alarmo pri Entrudanto!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Ĉambro de Elsekigo"
+
+msgid "STSTR_CLEV"
+msgstr "Nun Ĝisirante..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...fritos vian pugon!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap, aŭ Lite-amp?"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Ni Serioziĝu!"
+
+msgid "STSTR_NCON"
+msgstr "Cibernetika Tranĉila Reĝimo AKTIVA"
+
+msgid "STSTR_NCOFF"
+msgstr "Cibernetika Tranĉila Reĝimo NEAKTIVA"
+
+msgid "STSTR_NOMUS"
+msgstr "Elekto: Malebla"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr "INIC-Modo de Tiku kaj Buĉu"
+
+msgid "STSTR_FAADDED"
+msgstr "Tiel estu, Kodrompisto."
+
+msgid "STSTR_DQDON"
+msgstr "Cibernetikpova Reĝimo AKTIVA"
+
+msgid "STSTR_DQDOFF"
+msgstr "Cibernetikpova Reĝimo NEAKTIVA"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Spurdado AKTIVA"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Spurdado NEAKTIVA"
+
+msgid "DOSY"
+msgstr "- premu Y por forkuri! -"
+
+msgid "ENDGAME"
+msgstr ""
+"Ĉu vi estas freneza aŭ misagordita?\n"
+"Ĉu? Jes aŭ Ne!?"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Ĉu vi certas? Vi ne povas stari\n"
+"kontraŭ ĉi tiu malfacileco, kodrompisto!\n"
+"\n"
+"Premu Y por morti."
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"Ĉu rapidkonservi anstataŭigante vian ludadon nomitan\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Ĉu vi volas rapidŝargi la ludadon nomitan\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgid "CC_THUG"
+msgstr "Perfortuloj"
+
+msgid "CC_ANDROID"
+msgstr "Androido"
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr "Zumilo"
+
+msgid "CC_DMAN"
+msgstr "D-Vir'"
+
+msgid "CC_PHAGE"
+msgstr "Faĝo"
+
+msgid "CC_MONSTRUCT"
+msgstr "Monstrukto"
+
+msgid "CC_MECH"
+msgstr "Mekanika Frenezulo"
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr "Dorna Aĵo"
+
+msgid "CC_MAJONG"
+msgstr "Maĝango 7"
+
+msgid "CC_HERO"
+msgstr "Dan Evanĝer"
+
+msgid "SKILL_BABY"
+msgstr "Bonvolu ne pafi!"
+
+msgid "SKILL_EASY"
+msgstr "Aargh, mi bezonas sanon!"
+
+msgid "SKILL_NORMAL"
+msgstr "Ni disŝiru ilin!"
+
+msgid "SKILL_HARD"
+msgstr "Mi estas senmorta!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Frenezo!"

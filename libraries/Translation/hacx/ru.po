@@ -1,0 +1,584 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ru\n"
+
+msgid "QUITMSG1"
+msgstr "Эти баги крутоваты для тебя?"
+
+msgid "QUITMSG"
+msgstr "Ты правда хочешь улизнуть\\nс поля боя?"
+
+msgid "QUITMSG2"
+msgstr "Хочешь убежать? А ещё зовёшь себя хакером!"
+
+msgid "QUITMSG3"
+msgstr "Вернись, пока я не посадил вирус тебе на хвост!"
+
+msgid "QUITMSG4"
+msgstr "Настоящие хакеры не пытаются улизнуть с поля боя."
+
+msgid "QUITMSG5"
+msgstr "Да ладно, ты ещё не видел самое крутое!"
+
+msgid "QUITMSG6"
+msgstr "Если ты сейчас сдашься, киберпространству конец!"
+
+msgid "QUITMSG7"
+msgstr "Наилучшие пожелания от ДЖИННа, ублюдок!"
+
+msgid "QUITMSG8"
+msgstr "Хм-м. Вот тебе и герой, хакер!"
+
+msgid "QUITMSG9"
+msgstr "Что? Ты хочешь вернуться в неволю?"
+
+msgid "QUITMSG10"
+msgstr "Надо было принять синюю таблетку."
+
+msgid "QUITMSG11"
+msgstr "Эта игра называется не «Дрожи и прячься»!"
+
+msgid "QUITMSG12"
+msgstr "Не парься. Спасение мира подождёт, ведь так?"
+
+msgid "QUITMSG13"
+msgstr "Кажется, настало время устроить netsplit!"
+
+msgid "QUITMSG14"
+msgstr "Только посмей уйти и забыть про HacX, ты!"
+
+msgid "OB_SUICIDE"
+msgstr "Игрок %o стёр себя с лица вселенной."
+
+msgid "OB_FALLING"
+msgstr "На месте падения игрока %o образовался кратер размером с Канзас."
+
+msgid "OB_CRUSH"
+msgstr "Игрока %o сплющило в лепешку."
+
+msgid "OB_EXIT"
+msgstr "Игрок %o хотел улизнуть."
+
+msgid "OB_WATER"
+msgstr "Игрок %o поплыл как топор."
+
+msgid "OB_SLIME"
+msgstr "Игрок %o светится в темноте."
+
+msgid "OB_LAVA"
+msgstr "Игрок %o принял горячую ванну."
+
+msgid "OB_BARREL"
+msgstr "Игрок %o перебрал нитроглицерина."
+
+msgid "OB_SPLASH"
+msgstr "Игрока %o разодрали на мелкие клочки."
+
+msgid "OB_R_SPLASH"
+msgstr "Игрок %o хотел посмотреть, что у него внутри."
+
+msgid "OB_ROCKET"
+msgstr "Игрок %o хотел посмотреть, что у него внутри."
+
+msgid "OB_KILLEDSELF"
+msgstr "Игрок %o стёр себя с лица вселенной."
+
+msgid "OB_THUG"
+msgstr "Игрок %o больше не доминантная форма жизни."
+
+msgid "OB_ANDROID"
+msgstr "Игрока %o подключили не к тому заряднику."
+
+msgid "OB_MONSTRUCT"
+msgstr "Игрок %o получил поджопника от кибердиджея."
+
+msgid "OB_ICE"
+msgstr "Игрок %o вляпался в ЛЁД."
+
+msgid "OB_BUZZER"
+msgstr "Игрок %o лёг спать в компании вертолётиков."
+
+msgid "OB_STEALTH"
+msgstr "Игрока %o встретил довольно серьёзный поворот событий."
+
+msgid "OB_DMAN"
+msgstr "Игрока %o удалили из киберпространства."
+
+msgid "OB_GLASS"
+msgstr "У игрока %o оказалась стеклянная челюсть."
+
+msgid "OB_MANIAC"
+msgstr "Игрока %o исключили из клуба живых."
+
+msgid "OB_MANIACHIT"
+msgstr "Игрок %o внезапно умер по непостижимой для меня причине."
+
+msgid "OB_TERMIN"
+msgstr "Игрока %o поджарила чокнутая роковая женщина."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "Игрок %o почти сблизился с противоположным полом."
+
+msgid "OB_REPLI"
+msgstr "Игрок %o распрощался со старым другом."
+
+msgid "OB_REPLIHIT"
+msgstr "Игрок %o получил нож в спину от старого друга."
+
+msgid "OB_PHAGE"
+msgstr "Игрок %o был отсеян естественным отбором."
+
+msgid "OB_THORN"
+msgstr "Игрока %o поджидала смерть на его тернистом пути."
+
+msgid "OB_SUMATIC"
+msgstr "Игрок %o отхватил удар в пах от сумоиста."
+
+msgid "OB_GENIE"
+msgstr "Игрок %o не загадает трёх желаний."
+
+msgid "OB_MINE"
+msgstr "Игрок %o хотел погладить мину."
+
+msgid "OB_MPKICK"
+msgstr "Игрок %o отхватил от игрока %k удар в лицо, достойный Брюса Ли."
+
+msgid "OB_MPREZNATOR"
+msgstr "Игрок %o шокирован откровениями %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "Игрок %o принял двойную дозу возмездия от %k."
+
+msgid "OB_MPTAZER"
+msgstr "Игрок %o выведен из строя электродубинкой %k."
+
+msgid "OB_MPCRYOGUN"
+msgstr "Игрок %o столкнулся с ледяной ненавистью %k."
+
+msgid "OB_MPUZI"
+msgstr "Игрок %o покрылся дырками после гангста-стрельбы игрока %k."
+
+msgid "OB_MPZOOKA"
+msgstr "Игрок %o съел фотонную бомбу %k."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "Игрок %o был разложен игроком %k в аккуратную кучку фотонов."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "Игрок %o был разложен игроком %k до антиматерии."
+
+msgid "OB_MPNUKE"
+msgstr "Игрок %o проглотил ядерный заряд %k."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "Игрок %o светится в темноте от оружия массового поражения %k."
+
+msgid "OB_MPTELEFRAG"
+msgstr "Игрок %o вывернут наизнанку игроком %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "Атомная структура игрока %o разрушена."
+
+msgid "OB_DEFAULT"
+msgstr "Время игрока %o неожиданно вышло."
+
+msgid "GOTNUKER"
+msgstr "Заполучен ЯДЕРНЫЙ ГРАНАТОМЁТ! Отсосите!"
+
+msgid "GOTUZI"
+msgstr "Заполучен УЗИ!!"
+
+msgid "GOTREZNATOR"
+msgstr "ХОЙГ Резнатор"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Заполучена фотон-базука!"
+
+msgid "GOTBIGSTICK"
+msgstr "Заполучена длинная палка!"
+
+msgid "GOTTAZER"
+msgstr "Заполучен тазер!"
+
+msgid "GOTCRYOGUN"
+msgstr "Заполучена замораживающая пушка! НИ С МЕСТА!"
+
+msgid "GOTROUNDS"
+msgstr "Заполучена обойма патронов!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Заполучена коробка патронов!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Заполучена торпеда!"
+
+msgid "GOTTORPEDOS"
+msgstr "Заполучен ящик торпед!"
+
+msgid "GOTMOLECULES"
+msgstr "Заполучен молекулярный модуль!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Заполучен контейнер с молекулами!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Заполучены картриджи!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Заполучен ящик картриджей!"
+
+msgid "GOTVALISE"
+msgstr "Заполучена полная сумка боеприпасов!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Силовое поле!"
+
+msgid "GOTMICROTEL"
+msgstr "Микрочип 007"
+
+msgid "GOTENKBLIND"
+msgstr "У тебя EnK-видимость!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Резиновые сапоги!"
+
+msgid "GOTSIARRAY"
+msgstr "Составлена карта SI-массива!"
+
+msgid "GOTINFRARED"
+msgstr "Инфракрасный визор!"
+
+msgid "GOTINHALER"
+msgstr "Ингалятор! Вдыхай глубже!"
+
+msgid "GOTHYPONEED"
+msgstr "Доза Редергина из шприца спасла тебя!"
+
+msgid "GOTHYPO"
+msgstr "Заполучен шприц!"
+
+msgid "GOTKEYCARD"
+msgstr "Найдена ключ-карта!"
+
+msgid "GOTCKEY"
+msgstr "Найден C-образный ключ!"
+
+msgid "GOTPASSWORD"
+msgstr "Найден пароль!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Найден синий Z-образный ключ!"
+
+msgid "GOTYELWZKEY"
+msgstr "Найден жёлтый Z-образный ключ!"
+
+msgid "GOTREDZKEY"
+msgstr "Найден красный Z-образный ключ!"
+
+msgid "GOTBODYARMOR"
+msgstr "Бронежилет!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Центрофеноксин"
+
+msgid "GOTKEVLARVEST"
+msgstr "Заполучен кевларовый жилет!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Заполучен усиленный кевларовый жилет!"
+
+msgid "GOTMICROKIT"
+msgstr "Заполучена мини-аптечка!"
+
+msgid "GOTDAMPENER"
+msgstr "Заполучен глушитель!"
+
+msgid "PD_CKEY"
+msgstr "Нет доступа, нужен C-образный ключ!"
+
+msgid "PD_KEYCARD"
+msgstr "Нет доступа, нужен ключ-карта!"
+
+msgid "PD_PASSWORD"
+msgstr "Нет доступа, нужен пароль!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Не работает, нужен синий Z-образный ключ!"
+
+msgid "PD_REDZKEY"
+msgstr "Не работает, нужен красный Z-образный ключ!"
+
+msgid "PD_YELWZKEY"
+msgstr "Не работает, нужен жёлтый Z-образный ключ!"
+
+msgid "X1TEXT"
+msgstr ""
+"Стоят ли двадцать лимонов золотом таких\n"
+"трудностей, а, хакер? Теперь тебе тюрьма\n"
+"грёбаным санаторием покажется!\n"
+"\n"
+"Толстозадые биомутанты и такие же люди,\n"
+"как ты, лежат рядком, как мешки с едой.\n"
+"\n"
+"Что за хрень этот ДЖИНН? Он не похож ни\n"
+"на один из компьютеров, что ты уже\n"
+"взламывал!\n"
+"\n"
+"Найди терминал, прокатись по\n"
+"киберпространству, надери всем мутантам\n"
+"задницы и выберись из этой чёртовой\n"
+"передряги!\n"
+"\n"
+
+msgid "X2TEXT"
+msgstr ""
+"Где все люди?!\n"
+"\n"
+"Париж опустел, не считая уродливых\n"
+"багов, заменивших горожан.\n"
+"\n"
+"Ты столкнулся с ожесточённым\n"
+"сопротивлением. Чёрт, эти баги слетаются\n"
+"к тебе, как мухи на свет! К счастью, ты не\n"
+"самый яркий фонарь в этом городе.\n"
+"\n"
+"Но теперь в твоих руках кое-какая\n"
+"информация, которая нужна подкомитету.\n"
+"И это скверно!\n"
+"\n"
+"Эти баги подпитываются нервными\n"
+"импульсами людей! Понятно, почему\n"
+"вокруг не осталось никого живого.\n"
+"Передай эти сведения подкомитету.\n"
+"И будь осторожен...\n"
+
+msgid "X3TEXT"
+msgstr ""
+"Цивилизация, которую ты знал, исчезла!\n"
+"\n"
+"Ни друзей, ни родных. Не осталось никого.\n"
+"Нормальных людей — точно.\n"
+"\n"
+"Осталось только одно существо. ДЖИНН!\n"
+"Ты надерёшь зад этому уроду, даже если \n"
+"придётся дойти до края вселенной. Теперь\n"
+"это личное!\n"
+"\n"
+"Что насчёт золота? К чёрту, это не ради\n"
+"денег.\n"
+"\n"
+".....(продолжение следует).....\n"
+
+msgid "X5TEXT"
+msgstr ""
+"Ты выжил!\n"
+"\n"
+"Какая теперь разница, хакер? Это место\n"
+"просто кишит багами.\n"
+"\n"
+"Ты не можешь связаться с подкомитетом.\n"
+"Похоже, ваш канал связи раскрыт.\n"
+"\n"
+"\n"
+"Ты... остался один.\n"
+
+msgid "TXT_HACXMAP01"
+msgstr "Корпорация «ГенИмп»"
+
+msgid "TXT_HACXMAP02"
+msgstr "Подземный город"
+
+msgid "TXT_HACXMAP03"
+msgstr "Лавовая электростанция"
+
+msgid "TXT_HACXMAP04"
+msgstr "Алькатрас"
+
+msgid "TXT_HACXMAP05"
+msgstr "Киберцирк"
+
+msgid "TXT_HACXMAP06"
+msgstr "Диджитал-Ота"
+
+msgid "TXT_HACXMAP07"
+msgstr "Великая стена"
+
+msgid "TXT_HACXMAP08"
+msgstr "Сад наслаждений"
+
+msgid "TXT_HACXMAP09"
+msgstr "Скрытая крепость"
+
+msgid "TXT_HACXMAP10"
+msgstr "Анархистская утопия"
+
+msgid "TXT_HACXMAP11"
+msgstr "Нас не забудут!"
+
+msgid "TXT_HACXMAP12"
+msgstr "Готическая перчатка"
+
+msgid "TXT_HACXMAP13"
+msgstr "Канализация"
+
+msgid "TXT_HACXMAP14"
+msgstr "Торговые войны"
+
+msgid "TXT_HACXMAP15"
+msgstr "Сумерки EnK"
+
+msgid "TXT_HACXMAP16"
+msgstr "Многоликий Сайбэкс"
+
+msgid "TXT_HACXMAP17"
+msgstr "Река крови"
+
+msgid "TXT_HACXMAP18"
+msgstr "Бизарро"
+
+msgid "TXT_HACXMAP19"
+msgstr "Генеральный штаб"
+
+msgid "TXT_HACXMAP20"
+msgstr "Тревога! Нарушитель!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Сушильная комната"
+
+msgid "STSTR_CLEV"
+msgstr "Переходим на..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...поджарит твою задницу!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "Бессм. (V), берс. (S), нев. (I), кос. (R), крт. (A), виз (L)."
+
+msgid "STSTR_BEHOLDX"
+msgstr "А теперь серьёзно!"
+
+msgid "STSTR_NCON"
+msgstr "Режим киберрезака ВКЛЮЧЁН"
+
+msgid "STSTR_NCOFF"
+msgstr "Режим киберрезака ОТКЛЮЧЁН"
+
+msgid "STSTR_NOMUS"
+msgstr "Выбор: Невозможен"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "Подкрутите громкость"
+
+msgid "STSTR_KFAADDED"
+msgstr "ИНИЦ: режим «Дрожи и убивай»"
+
+msgid "STSTR_FAADDED"
+msgstr "Да будет так, хакер."
+
+msgid "STSTR_DQDON"
+msgstr "Режим киберулучшения ВКЛЮЧЁН"
+
+msgid "STSTR_DQDOFF"
+msgstr "Режим киберулучшения ОТКЛЮЧЁН"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Сопровождение ВКЛЮЧЕНО"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Сопровождение ОТКЛЮЧЕНО"
+
+msgid "DOSY"
+msgstr "- нажми «Y», чтобы сбежать! -"
+
+msgid "ENDGAME"
+msgstr ""
+"Ты дурак или родом так?\n"
+"Отвечай! Да (Y) или нет (N)?"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Ты уверен? С этим уровнем сложности ты не справишься, хакер!\n"
+"\n"
+"Нажми «Y», чтобы умереть."
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"Перезаписать файл\n"
+"\n"
+"«%s»?\n"
+"\n"
+"Нажмите «Y» или «N»."
+
+msgid "QLPROMPT"
+msgstr ""
+"Загрузить файл\n"
+"\n"
+"«%s»?\n"
+"\n"
+"Нажмите «Y» или «N»."
+
+msgid "CC_THUG"
+msgstr "Головорез"
+
+msgid "CC_ANDROID"
+msgstr "Андроид"
+
+msgid "CC_ICE"
+msgstr "ЛЁД"
+
+msgid "CC_BUZZER"
+msgstr "Летун"
+
+msgid "CC_DMAN"
+msgstr "Ди-Мэн"
+
+msgid "CC_PHAGE"
+msgstr "Пожиратель"
+
+msgid "CC_MONSTRUCT"
+msgstr "Монструкт"
+
+msgid "CC_MECH"
+msgstr "Механоман"
+
+msgid "CC_TERMI"
+msgstr "Терминатриса"
+
+msgid "CC_THORN"
+msgstr "Тернистая тварь"
+
+msgid "CC_MAJONG"
+msgstr "Маджонг 7"
+
+msgid "CC_HERO"
+msgstr "Дэн Эвенджер"
+
+msgid "SKILL_BABY"
+msgstr "Не стреляй, пожалуйста!"
+
+msgid "SKILL_EASY"
+msgstr "А-а-ргх, аптечку!"
+
+msgid "SKILL_NORMAL"
+msgstr "Разорвём их на куски!"
+
+msgid "SKILL_HARD"
+msgstr "Я бессмертен!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Безумие!"

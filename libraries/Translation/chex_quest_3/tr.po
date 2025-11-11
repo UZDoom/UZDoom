@@ -1,0 +1,265 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: tr\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Mavi bir flemkey aldım."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Sarı bir flemkey aldı."
+
+msgid "GOTREDFLEM"
+msgstr "Kırmızı bir flemkey aldı."
+
+msgid "GOTGOGGLES"
+msgstr "Ultra Gözlük bulundu"
+
+msgid "PD_BLUECO"
+msgstr "Bu nesneyi etkinleştirmek için mavi bir anahtara ihtiyacınız var"
+
+msgid "PD_REDCO"
+msgstr "Bu nesneyi etkinleştirmek için kırmızı bir anahtara ihtiyacınız var"
+
+msgid "PD_YELLOWCO"
+msgstr "Bu nesneyi etkinleştirmek için sarı bir anahtara ihtiyacınız var"
+
+msgid "PD_BLUEFO"
+msgstr "Bu nesneyi etkinleştirmek için mavi bir flemkey'e ihtiyacınız var"
+
+msgid "PD_REDFO"
+msgstr "Bu nesneyi etkinleştirmek için kırmızı bir flemkey'e ihtiyacınız var"
+
+msgid "PD_YELLOWFO"
+msgstr "Bu nesneyi etkinleştirmek için sarı bir flemkey'e ihtiyacınız var"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Bir zorcher aldım."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch ve anahtarlar eklendi"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: İniş Bölgesi"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Depolama Tesisi"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratuvar"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Bazoik Mağaraları"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Uzay Limanı"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Sinema"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Chex Müzesi"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Şehir Sokakları"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Kanalizasyon Sistemi"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Merkez Komutanlığı"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Birleşik Tahıllar"
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: İl Parkı"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteor Uzay Gemisi"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Zırhlı Bipedicus"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Flem Madeni"
+
+msgid "CC_CACO"
+msgstr "Süper Cycloptis"
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "Flembomination"
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr "Chex Savaşçısı"
+
+msgid "PD_BLUEC"
+msgstr "Bu kapıyı açmak için mavi bir anahtara ihtiyacın var."
+
+msgid "PD_REDC"
+msgstr "Bu kapıyı açmak için kırmızı bir anahtara ihtiyacın var."
+
+msgid "PD_YELLOWC"
+msgstr "Bu kapıyı açmak için sarı bir anahtara ihtiyacınız var"
+
+msgid "PD_BLUEF"
+msgstr "Bu kapıyı açmak için mavi bir flemkey'e ihtiyacın var."
+
+msgid "PD_REDF"
+msgstr "Bu kapıyı açmak için kırmızı bir flemkey'e ihtiyacın var."
+
+msgid "PD_YELLOWF"
+msgstr "Bu kapıyı açmak için sarı bir flemkey'e ihtiyacın var."
+
+msgid "OB_SLIME"
+msgstr "%o balçığın içine battı."
+
+msgid "OB_LAVA"
+msgstr "%o balçığın içine battı."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o boyutlar arası balçık tarafından vuruldu!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o boyutlar arası balçık tarafından vuruldu!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o bir stridicus tarafından avlandı."
+
+msgid "OB_FLEMMINE"
+msgstr "%o bir flem mayını tarafından yapışkan hale getirildi."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o bir süper sikloptis tarafından sümüklendi."
+
+msgid "OB_MAXIMUS"
+msgstr "%o bir Maximus tarafından yenildi."
+
+msgid "OB_LARVA"
+msgstr "%o bir larva tarafından öldürüldü."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o bir Quadrumpus tarafından zayıflatıldı."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o, Flembomination tarafından yenildi."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o, Lord Snotfolus tarafından yenildi."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o, %k tarafından vuruldu."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o, %k tarafından lazzlandı."
+
+msgid "E1TEXT"
+msgstr ""
+"Canavar Flembrane'i kendi boyutuna\n"
+"geri gönderdikten sonra tutsakları\n"
+"serbest bırakıyorsunuz. Yine de\n"
+"flemoidler her yerde!\n"
+"Sen ve tutsaklar uzay geminize\n"
+"doğru kaçıyorsunuz. Flemoidler\n"
+"geminizi balçıkla sıvıyor, ama\n"
+"yörüngeye girmekten kıl payı\n"
+"kurtuluyorsunuz.\n"
+"Dönüş sırasında cesur kurtarışınız\n"
+"için tebrik ediliyorsunuz ama bir\n"
+"uyarıda bulunuyorsunuz...\n"
+"Flemoidlerin sonuncusunu\n"
+"görmedik.\n"
+"\n"
+"Ne yazık ki haklısınız. Çünkü eve\n"
+"döndüğünüzde, Flemoidlerin bir\n"
+"şekilde sizi buraya kadar takip\n"
+"ettiğini görüyorsunuz. \n"
+"Chex Quest 2: Chex Şehrinde Terör\n"
+"için hazırlanın!"
+
+msgid "E2TEXT"
+msgstr ""
+"Kanalizasyonda toplanmış olan kalan\n"
+"flemoidleri zorluyorsun. Chex Şehri\n"
+"kurtarıldı. Görünüşe göre Flemoid\n"
+"tehdidi nihayet sona erdi.\n"
+"\n"
+"\n"
+"On yıl barış ve refah içinde geçti.\n"
+"Ancak Flemoidler yenilmedi ve\n"
+"besin açısından zengin tahıl\n"
+"boyutunu kontrol etme\n"
+"arzuları azalmadı.\n"
+"Tüm güçlerini topladılar, uzayda\n"
+"devasa bir boyutlar arası yarık\n"
+"açtılar ve şimdi büyük bir balçık\n"
+"topu doğrudan tahılların\n"
+"gezegenine doğru ilerliyor!\n"
+"\n"
+"Chex Quest 3: \n"
+"İstila için hazır olun!"
+
+msgid "E3TEXT"
+msgstr ""
+"Son bir patlamayla Lord\n"
+"Snotfolus'u kendi boyutuna\n"
+"geri döndürüyorsunuz!\n"
+"Tüm olasılıklara rağmen\n"
+"istilayı tek başına engelledin!\n"
+"\n"
+"Flemoidlerin sonunda derslerini\n"
+"aldıklarını ve bir daha asla tahıl\n"
+"boyutuna geri dönmeyeceklerini\n"
+"umuyorsun.\n"
+"\n"
+"\n"
+"\n"
+"Ama dönerlerse, onlar için\n"
+"hazır olacağınızı biliyorsunuz!"
+
+msgid "M_EPI1"
+msgstr "Bazoik'te Kurtarma"
+
+msgid "M_EPI2"
+msgstr "Chex Şehrinde Terör"
+
+msgid "M_EPI3"
+msgstr "İstila!"
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

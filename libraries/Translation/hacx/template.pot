@@ -1,0 +1,508 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+
+msgid "QUITMSG1"
+msgstr ""
+
+msgid "QUITMSG"
+msgstr ""
+
+msgid "QUITMSG2"
+msgstr ""
+
+msgid "QUITMSG3"
+msgstr ""
+
+msgid "QUITMSG4"
+msgstr ""
+
+msgid "QUITMSG5"
+msgstr ""
+
+msgid "QUITMSG6"
+msgstr ""
+
+msgid "QUITMSG7"
+msgstr ""
+
+msgid "QUITMSG8"
+msgstr ""
+
+msgid "QUITMSG9"
+msgstr ""
+
+msgid "QUITMSG10"
+msgstr ""
+
+msgid "QUITMSG11"
+msgstr ""
+
+msgid "QUITMSG12"
+msgstr ""
+
+msgid "QUITMSG13"
+msgstr ""
+
+msgid "QUITMSG14"
+msgstr ""
+
+msgid "OB_SUICIDE"
+msgstr ""
+
+msgid "OB_FALLING"
+msgstr ""
+
+msgid "OB_CRUSH"
+msgstr ""
+
+msgid "OB_EXIT"
+msgstr ""
+
+msgid "OB_WATER"
+msgstr ""
+
+msgid "OB_SLIME"
+msgstr ""
+
+msgid "OB_LAVA"
+msgstr ""
+
+msgid "OB_BARREL"
+msgstr ""
+
+msgid "OB_SPLASH"
+msgstr ""
+
+msgid "OB_R_SPLASH"
+msgstr ""
+
+msgid "OB_ROCKET"
+msgstr ""
+
+msgid "OB_KILLEDSELF"
+msgstr ""
+
+msgid "OB_THUG"
+msgstr ""
+
+msgid "OB_ANDROID"
+msgstr ""
+
+msgid "OB_MONSTRUCT"
+msgstr ""
+
+msgid "OB_ICE"
+msgstr ""
+
+msgid "OB_BUZZER"
+msgstr ""
+
+msgid "OB_STEALTH"
+msgstr ""
+
+msgid "OB_DMAN"
+msgstr ""
+
+msgid "OB_GLASS"
+msgstr ""
+
+msgid "OB_MANIAC"
+msgstr ""
+
+msgid "OB_MANIACHIT"
+msgstr ""
+
+msgid "OB_TERMIN"
+msgstr ""
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr ""
+
+msgid "OB_REPLI"
+msgstr ""
+
+msgid "OB_REPLIHIT"
+msgstr ""
+
+msgid "OB_PHAGE"
+msgstr ""
+
+msgid "OB_THORN"
+msgstr ""
+
+msgid "OB_SUMATIC"
+msgstr ""
+
+msgid "OB_GENIE"
+msgstr ""
+
+msgid "OB_MINE"
+msgstr ""
+
+msgid "OB_MPKICK"
+msgstr ""
+
+msgid "OB_MPREZNATOR"
+msgstr ""
+
+msgid "OB_MPXPISTOL"
+msgstr ""
+
+msgid "OB_MPTAZER"
+msgstr ""
+
+msgid "OB_MPCRYOGUN"
+msgstr ""
+
+msgid "OB_MPUZI"
+msgstr ""
+
+msgid "OB_MPZOOKA"
+msgstr ""
+
+msgid "OB_MPZ_SPLASH"
+msgstr ""
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr ""
+
+msgid "OB_MPNUKE"
+msgstr ""
+
+msgid "OB_MPNUKESPLASH"
+msgstr ""
+
+msgid "OB_MPTELEFRAG"
+msgstr ""
+
+msgid "OB_MONTELEFRAG"
+msgstr ""
+
+msgid "OB_DEFAULT"
+msgstr ""
+
+msgid "GOTNUKER"
+msgstr ""
+
+msgid "GOTUZI"
+msgstr ""
+
+msgid "GOTREZNATOR"
+msgstr ""
+
+msgid "GOTPHOTONZOOKA"
+msgstr ""
+
+msgid "GOTBIGSTICK"
+msgstr ""
+
+msgid "GOTTAZER"
+msgstr ""
+
+msgid "GOTCRYOGUN"
+msgstr ""
+
+msgid "GOTROUNDS"
+msgstr ""
+
+msgid "GOTROUNDSCASE"
+msgstr ""
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr ""
+
+msgid "GOTTORPEDOS"
+msgstr ""
+
+msgid "GOTMOLECULES"
+msgstr ""
+
+msgid "GOTMOLECULESTANK"
+msgstr ""
+
+msgid "GOTCARTRIDGES"
+msgstr ""
+
+msgid "GOTCARTRIDGESCASE"
+msgstr ""
+
+msgid "GOTVALISE"
+msgstr ""
+
+msgid "GOTFORCEFIELD"
+msgstr ""
+
+msgid "GOTMICROTEL"
+msgstr ""
+
+msgid "GOTENKBLIND"
+msgstr ""
+
+msgid "GOTRUBBERBOOTS"
+msgstr ""
+
+msgid "GOTSIARRAY"
+msgstr ""
+
+msgid "GOTINFRARED"
+msgstr ""
+
+msgid "GOTINHALER"
+msgstr ""
+
+msgid "GOTHYPONEED"
+msgstr ""
+
+msgid "GOTHYPO"
+msgstr ""
+
+msgid "GOTKEYCARD"
+msgstr ""
+
+msgid "GOTCKEY"
+msgstr ""
+
+msgid "GOTPASSWORD"
+msgstr ""
+
+msgid "GOTBLUEZKEY"
+msgstr ""
+
+msgid "GOTYELWZKEY"
+msgstr ""
+
+msgid "GOTREDZKEY"
+msgstr ""
+
+msgid "GOTBODYARMOR"
+msgstr ""
+
+msgid "GOTCENTROPHENOXINE"
+msgstr ""
+
+msgid "GOTKEVLARVEST"
+msgstr ""
+
+msgid "GOTSKEVLARVEST"
+msgstr ""
+
+msgid "GOTMICROKIT"
+msgstr ""
+
+msgid "GOTDAMPENER"
+msgstr ""
+
+msgid "PD_CKEY"
+msgstr ""
+
+msgid "PD_KEYCARD"
+msgstr ""
+
+msgid "PD_PASSWORD"
+msgstr ""
+
+msgid "PD_BLUEZKEY"
+msgstr ""
+
+msgid "PD_REDZKEY"
+msgstr ""
+
+msgid "PD_YELWZKEY"
+msgstr ""
+
+msgid "X1TEXT"
+msgstr ""
+
+msgid "X2TEXT"
+msgstr ""
+
+msgid "X3TEXT"
+msgstr ""
+
+msgid "X5TEXT"
+msgstr ""
+
+msgid "TXT_HACXMAP01"
+msgstr ""
+
+msgid "TXT_HACXMAP02"
+msgstr ""
+
+msgid "TXT_HACXMAP03"
+msgstr ""
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr ""
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr ""
+
+msgid "TXT_HACXMAP08"
+msgstr ""
+
+msgid "TXT_HACXMAP09"
+msgstr ""
+
+msgid "TXT_HACXMAP10"
+msgstr ""
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr ""
+
+msgid "TXT_HACXMAP13"
+msgstr ""
+
+msgid "TXT_HACXMAP14"
+msgstr ""
+
+msgid "TXT_HACXMAP15"
+msgstr ""
+
+msgid "TXT_HACXMAP16"
+msgstr ""
+
+msgid "TXT_HACXMAP17"
+msgstr ""
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr ""
+
+msgid "TXT_HACXMAP20"
+msgstr ""
+
+msgid "TXT_HACXMAP31"
+msgstr ""
+
+msgid "STSTR_CLEV"
+msgstr ""
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr ""
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr ""
+
+msgid "STSTR_BEHOLDX"
+msgstr ""
+
+msgid "STSTR_NCON"
+msgstr ""
+
+msgid "STSTR_NCOFF"
+msgstr ""
+
+msgid "STSTR_NOMUS"
+msgstr ""
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgid "STSTR_FAADDED"
+msgstr ""
+
+msgid "STSTR_DQDON"
+msgstr ""
+
+msgid "STSTR_DQDOFF"
+msgstr ""
+
+msgid "AMSTR_FOLLOWON"
+msgstr ""
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr ""
+
+msgid "DOSY"
+msgstr ""
+
+msgid "ENDGAME"
+msgstr ""
+
+msgid "NIGHTMARE"
+msgstr ""
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+
+msgid "QLPROMPT"
+msgstr ""
+
+msgid "CC_THUG"
+msgstr ""
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr ""
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr ""
+
+msgid "CC_MONSTRUCT"
+msgstr ""
+
+msgid "CC_MECH"
+msgstr ""
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr ""
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr ""
+
+msgid "SKILL_EASY"
+msgstr ""
+
+msgid "SKILL_NORMAL"
+msgstr ""
+
+msgid "SKILL_HARD"
+msgstr ""
+
+msgid "SKILL_NIGHTMARE"
+msgstr ""

@@ -1,0 +1,580 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: de\n"
+
+msgid "QUITMSG1"
+msgstr "Sind diese Bugs zu viel für dich?"
+
+msgid "QUITMSG"
+msgstr "Bist du sicher, dass du den\\nStecker ziehen willst?"
+
+msgid "QUITMSG2"
+msgstr "Du willst gehen? Bist du wirklich ein Hacker?"
+
+msgid "QUITMSG3"
+msgstr "Komm zurück, oder ich schick dir 'nen Virus!"
+
+msgid "QUITMSG4"
+msgstr "Echte Hacker geben nicht auf!"
+
+msgid "QUITMSG5"
+msgstr "Komm schon. Du hast das Beste noch gar nicht gesehen!"
+
+msgid "QUITMSG6"
+msgstr "Wenn du jetzt aufgibst ist der Cyberspace am Ende."
+
+msgid "QUITMSG7"
+msgstr "GENIE sendet seine besten Grüße, Mistkerl!"
+
+msgid "QUITMSG8"
+msgstr "Hmm. So viel zum Thema \"Held\", Hacker."
+
+msgid "QUITMSG9"
+msgstr "Was? Du willst in den Knast zurück?"
+
+msgid "QUITMSG10"
+msgstr "Du hättest die blaue Pille nehmen sollen..."
+
+msgid "QUITMSG11"
+msgstr "Das Spiel heißt nicht \"wegrennen\"!"
+
+msgid "QUITMSG12"
+msgstr "Also, die Welt zu retten kann warten, richtig?"
+
+msgid "QUITMSG13"
+msgstr "Also ist es soweit, dass sich unsere Wege trennen."
+
+msgid "QUITMSG14"
+msgstr "Bitte vergesse HacX nicht!"
+
+msgid "OB_SUICIDE"
+msgstr "%o entfernte sich aus dem Universum."
+
+msgid "OB_FALLING"
+msgstr "%o wurde zu einem Krater in der Größe von Kansas."
+
+msgid "OB_CRUSH"
+msgstr "%o wurde zu einem menschlichen Pfannkuchen."
+
+msgid "OB_EXIT"
+msgstr "%o hat sich ausgeloggt."
+
+msgid "OB_WATER"
+msgstr "%o schwamm wie ein Stein."
+
+msgid "OB_SLIME"
+msgstr "%o wurde verstrahlt."
+
+msgid "OB_LAVA"
+msgstr "%o nahm ein heißes Bad."
+
+msgid "OB_BARREL"
+msgstr "%o nahm eine Überdosis Nitroglyzerin."
+
+msgid "OB_SPLASH"
+msgstr "%o wurde zerkleinert."
+
+msgid "OB_R_SPLASH"
+msgstr "%o wollte @[pp_de] Innereien sehen."
+
+msgid "OB_ROCKET"
+msgstr "%o wollte @[pp_de] Innereien sehen."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o entfernte sich aus dem Universum."
+
+msgid "OB_THUG"
+msgstr "%o ist nicht länger die dominante Spezies."
+
+msgid "OB_ANDROID"
+msgstr "%o verband sich mit der falschen Maschine."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o bekam einen monströsen Cyber-Arschtritt verpasst."
+
+msgid "OB_ICE"
+msgstr "%o wurde verEISt."
+
+msgid "OB_BUZZER"
+msgstr "%o fühlt sich etwas gekitzelt."
+
+msgid "OB_STEALTH"
+msgstr "%o machte eine schockierende Entdeckung."
+
+msgid "OB_DMAN"
+msgstr "%o wurde aus dem Cyberspace gelöscht."
+
+msgid "OB_GLASS"
+msgstr "%o bekam ein Glaskinn."
+
+msgid "OB_MANIAC"
+msgstr "%os Mitgliedschaft im Leben wurde beendet."
+
+msgid "OB_MANIACHIT"
+msgstr "%o starb auf eine unvorstellbare Art und Weise."
+
+msgid "OB_TERMIN"
+msgstr "%o wurde von einem Femme-Fatale Freak gebraten."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o kam dem anderen Geschlecht zu nahe."
+
+msgid "OB_REPLI"
+msgstr "%o verabschiedete sich von einem alten Freund."
+
+msgid "OB_REPLIHIT"
+msgstr "%o wurde von einem alten Freund in den Rücken gestochen."
+
+msgid "OB_PHAGE"
+msgstr "%o fiel der natürlichen Auslese zum Opfer."
+
+msgid "OB_THORN"
+msgstr "%o konnte einem dornigen Tod nicht entkommen."
+
+msgid "OB_SUMATIC"
+msgstr "%o bekam einen Sumo-Schlag an @[pp_de] empfindlichste Stelle."
+
+msgid "OB_GENIE"
+msgstr "%o bekam @[pp_de] drei Wünsche nicht erfüllt."
+
+msgid "OB_MINE"
+msgstr "%o versuchte, eine Mine zu streicheln."
+
+msgid "OB_MPKICK"
+msgstr "%o bekam einen Bruce-Lee-Fußtritt ins Gesicht."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o erhielt eine schockierende Enthüllung von %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o bekam eine doppelte Dosis von %ks Bestrafung."
+
+msgid "OB_MPTAZER"
+msgstr "%o wurde von %ks Schockstab ausgeschaltet."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o bekam eine Ladung von %ks eiskaltem Zorn ins Gesicht."
+
+msgid "OB_MPUZI"
+msgstr "%o wurde von %k im Gangsta-Stil perforiert."
+
+msgid "OB_MPZOOKA"
+msgstr "%o nahm %ks Photonenbombe."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o wurde von %k zu einem Haufen Photonen verarbeitet."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o wurde von %k zu Antimaterie reduziert."
+
+msgid "OB_MPNUKE"
+msgstr "%o verschluckte sich an %ks Atomrakete."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o wurde von %ks Massenzerstörungsaktion verstrahlt."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o wurde von %k zerfetzt."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%os Atomstruktur wurde vernichtet."
+
+msgid "OB_DEFAULT"
+msgstr "%o hörte spontan auf zu existieren."
+
+msgid "GOTNUKER"
+msgstr "Ein NUKER! Verschluck dich daran."
+
+msgid "GOTUZI"
+msgstr "UZI genommen!"
+
+msgid "GOTREZNATOR"
+msgstr "Ein HOIG Reznator."
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Photonen-'zooka genommen!"
+
+msgid "GOTBIGSTICK"
+msgstr "Du trägst einen langen Stock."
+
+msgid "GOTTAZER"
+msgstr "Tazer genommen!"
+
+msgid "GOTCRYOGUN"
+msgstr "Cryowaffe genommen! GEFRIER!"
+
+msgid "GOTROUNDS"
+msgstr "Munition genommen."
+
+msgid "GOTROUNDSCASE"
+msgstr "Munitionskiste genommen."
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Torpedo genommen."
+
+msgid "GOTTORPEDOS"
+msgstr "Torpedokiste genommen."
+
+msgid "GOTMOLECULES"
+msgstr "Molekülmodul genommen"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Tank mit Molekülmodulen genommen."
+
+msgid "GOTCARTRIDGES"
+msgstr "Magazin genommen."
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Magazinkiste genommen."
+
+msgid "GOTVALISE"
+msgstr "Munitionstasche genommen."
+
+msgid "GOTFORCEFIELD"
+msgstr "Kraftfeld!"
+
+msgid "GOTMICROTEL"
+msgstr ""
+
+msgid "GOTENKBLIND"
+msgstr "Du bist EnK-blind!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Gummistiefel!"
+
+msgid "GOTSIARRAY"
+msgstr "SI-Feld Karte!"
+
+msgid "GOTINFRARED"
+msgstr "Infrarotbrille!"
+
+msgid "GOTINHALER"
+msgstr "Atme tief, Inhalierer!"
+
+msgid "GOTHYPONEED"
+msgstr "Eine Dosis Hydergine rettet dich!"
+
+msgid "GOTHYPO"
+msgstr "Hypo!"
+
+msgid "GOTKEYCARD"
+msgstr "Schlüsselkarte gefunden!"
+
+msgid "GOTCKEY"
+msgstr "C-Schlüssel gefunden!"
+
+msgid "GOTPASSWORD"
+msgstr "Passwort gefunden!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Blauen Z-Schlüssel gefunden!"
+
+msgid "GOTYELWZKEY"
+msgstr "Gelben Z-Schlüssel gefunden!"
+
+msgid "GOTREDZKEY"
+msgstr "Roten Z-Schlüssel gefunden!"
+
+msgid "GOTBODYARMOR"
+msgstr "Körperpanzerung!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr ""
+
+msgid "GOTKEVLARVEST"
+msgstr "Kevlarweste!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Super-Kevlarweste!"
+
+msgid "GOTMICROKIT"
+msgstr "MicroKit genommen!"
+
+msgid "GOTDAMPENER"
+msgstr "Dämpfer genommen!"
+
+msgid "PD_CKEY"
+msgstr "Du brauchst einen C-Schlüssel um das hier zu bedienen."
+
+msgid "PD_KEYCARD"
+msgstr "Du brauchst eine Schlüsselkarte um das hier zu bedienen."
+
+msgid "PD_PASSWORD"
+msgstr "Du brauchst eine Passwort um das hier zu bedienen."
+
+msgid "PD_BLUEZKEY"
+msgstr "Du brauchst einen blauen Z-Schlüssel um das hier zu bedienen."
+
+msgid "PD_REDZKEY"
+msgstr "Du brauchst einen roten Z-Schlüssel um das hier zu bedienen."
+
+msgid "PD_YELWZKEY"
+msgstr "Du brauchst einen gelben Z-Schlüssel um das hier zu bedienen."
+
+msgid "X1TEXT"
+msgstr ""
+"Zwanzig Millionen in Gold sind nicht\n"
+"wirklich so viel wert, Hacker, nicht wahr?\n"
+"Das hier lässt den Knast wie ein\n"
+"Picknick erscheinen.\n"
+"\n"
+"Hässliche Bio-Mutationen und deine \n"
+"menschlichen Artgenossen hängen von\n"
+"der Decke wir Futtersäcke.\n"
+"\n"
+"Was zur Hölle ist dieses GENIE? Das ist\n"
+"wie kein anderer Computer den du\n"
+"jemals gehackt hast.\n"
+"\n"
+"Du findest besser das nächste Terminal,\n"
+"erledigst einige Mutantenärsche und\n"
+"siehst zu, aus Dodge herauszukommen!"
+
+msgid "X2TEXT"
+msgstr ""
+"Wo sind all die Menschen!?\n"
+"\n"
+"Paris ist eine Geisterstadt, es sei denn,\n"
+"du zählst die Mutanten als Musterbürger.\n"
+"\n"
+"Du bist auf blutigen Widerstand getroffen.\n"
+"Mann können diese Viecher kämpfen.\n"
+"Glücklicherweise sind sie nicht die hellsten\n"
+"Leuchten.\n"
+"\n"
+"Aber du hast einige Informationen, die\n"
+"das Subkommitee haben will. Und es ist\n"
+"übel.\n"
+"\n"
+"Menschliche Nervenflüssigkeit ist was\n"
+"diese Viecher antreibt. Kein Wunder, dass\n"
+"die Nachbarschaft am Aussterben ist.\n"
+"Das musst du dem Subkommitee\n"
+"mitteilen. Und pass auf!"
+
+msgid "X3TEXT"
+msgstr ""
+"Die Zivilisation, wie du sie kanntest,\n"
+"ist Nada. Keine Freunde, keine Familie.\n"
+"Keine Menschen mehr. Zumindest\n"
+"keine normalen.\n"
+"\n"
+"Nur eine Sache verbleibt: GENIE!\n"
+"Und wenn du ans Ende des Universum\n"
+"reisen müsstest, du wirst seinen\n"
+"Mutantenarsch finden, denn jetzt\n"
+"bist du sauer!\n"
+"\n"
+"Und das Gold? Das gibt's als Zugabe...\n"
+"\n"
+"... (Fortsetzung folgt) ...\n"
+"\n"
+
+msgid "X5TEXT"
+msgstr ""
+"Du lebst!\n"
+"\n"
+"War waren die Chancen, Hacker?!\n"
+"\n"
+"Du kannst das Subkommitee nicht\n"
+"erreichen, was bedeutet, dass es \n"
+"kompromittiert ist.\n"
+"\n"
+"Du... bist alleine."
+
+msgid "TXT_HACXMAP01"
+msgstr ""
+
+msgid "TXT_HACXMAP02"
+msgstr "Tunnelstadt"
+
+msgid "TXT_HACXMAP03"
+msgstr "Lavaanbau"
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr "Cyberzirkus"
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr "Die große Mauer"
+
+msgid "TXT_HACXMAP08"
+msgstr "Lustgarten"
+
+msgid "TXT_HACXMAP09"
+msgstr "Versteckte Festung"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarchistentraum"
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr ""
+
+msgid "TXT_HACXMAP13"
+msgstr "Die Kanäle"
+
+msgid "TXT_HACXMAP14"
+msgstr "Elektrodenkrieg"
+
+msgid "TXT_HACXMAP15"
+msgstr "Zwielicht von EnK"
+
+msgid "TXT_HACXMAP16"
+msgstr "Proteanischer Cybex"
+
+msgid "TXT_HACXMAP17"
+msgstr "Blutfluss"
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr "Kriegsräume"
+
+msgid "TXT_HACXMAP20"
+msgstr "Eindringlingsalarm!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Trocknungsraum"
+
+msgid "STSTR_CLEV"
+msgstr "Angekommen bei..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...ich brate deinen Arsch!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap, oder Lite-amp"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Es wird ernst!"
+
+msgid "STSTR_NCON"
+msgstr "Cyberschnetzelmodus AN"
+
+msgid "STSTR_NCOFF"
+msgstr "Cyberschnetzelmodus AUS"
+
+msgid "STSTR_NOMUS"
+msgstr "Falsche Auswahl"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr "Initiiere Twitch'n Kill-Modus"
+
+msgid "STSTR_FAADDED"
+msgstr "So sei es, Hacker."
+
+msgid "STSTR_DQDON"
+msgstr "Cyberpotenzmodus AN"
+
+msgid "STSTR_DQDOFF"
+msgstr "Cyberpotenzmodus AUS"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Verfolgung AN"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Verfolgung AUS"
+
+msgid "DOSY"
+msgstr "- drücke Y um wegzurennen -"
+
+msgid "ENDGAME"
+msgstr ""
+"Bist du verrückt oder mies gelaunt?\n"
+"Also? Ja oer Nein?"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Bist du sicher? Du kannst das nicht bewältigen, Hacker!\n"
+"\n"
+"Drücke Y um zu sterben."
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"Überschreibe %s mit einem Schnellspeicherdatenstand?\n"
+"\n"
+"Drücke Y oder N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Möchtest du den Datenstand %s schnellladen?\n"
+"\n"
+"Drücke Y oder N."
+
+msgid "CC_THUG"
+msgstr "Scherge"
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr "Summer"
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr ""
+
+msgid "CC_MONSTRUCT"
+msgstr "Monstrukt"
+
+msgid "CC_MECH"
+msgstr ""
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr "Dornending"
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr "Bitte schieß nicht!"
+
+msgid "SKILL_EASY"
+msgstr "Ich brauche Gesundheit!"
+
+msgid "SKILL_NORMAL"
+msgstr "Lass uns sie zerfetzen!"
+
+msgid "SKILL_HARD"
+msgstr "Ich bin unsterblich!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Wahnsinn!"

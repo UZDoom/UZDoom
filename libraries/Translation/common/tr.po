@@ -1,0 +1,2131 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/common/tr/"
+">\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Y veya N tuşuna basın."
+
+msgid "TXT_YES"
+msgstr "Evet"
+
+msgid "TXT_NO"
+msgstr "Hayır"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Eğer oynamıyorsanız kaydedemezsiniz!\n"
+"\n"
+"Bir tuşa bas."
+
+msgid "SAFEMESSAGE"
+msgstr "Bunu gerçekten yapmak istiyor musun?"
+
+msgid "NOTSET"
+msgstr "Ayarlanmamış"
+
+msgid "QSPROMPT"
+msgstr ""
+"%s'\n"
+"\n"
+"adlı oyununuzun üzerine hızlı kaydetme?\n"
+"\n"
+"Y veya N tuşuna basın."
+
+msgid "QLPROMPT"
+msgstr ""
+"%s'\n"
+"\n"
+"adlı oyunu hızlı yüklemek istiyor musunuz?\n"
+"\n"
+"Y veya N tuşuna basın."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s hileleri"
+
+msgid "MSGOFF"
+msgstr "Mesajlar: KAPALI"
+
+msgid "MSGON"
+msgstr "Mesajlar: AÇIK"
+
+msgid "TXT_SAY"
+msgstr "Söyle:"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Çıkmak için herhangi bir tuşa basın veya pencerede herhangi bir yere "
+"tıklayın."
+
+msgid "NEWSAVE"
+msgstr "<Yeni Oyun Kaydet>"
+
+msgid "GGSAVED"
+msgstr "Oyun kaydedildi."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Zaman"
+
+msgid "MNU_LOADGAME"
+msgstr "Oyun Yükle"
+
+msgid "MNU_SAVEGAME"
+msgstr "Oyunu Kaydet"
+
+msgid "MNU_NOPICTURE"
+msgstr "Resim yok"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Farklı Versiyon"
+
+msgid "MNU_NOFILES"
+msgstr "Dosya yok"
+
+msgid "MNU_DELETESG"
+msgstr "Gerçekten kayıt oyununu silmek istiyor musunuz?\n"
+
+msgid "OPTVAL_OFF"
+msgstr "Kapalı"
+
+msgid "OPTVAL_ON"
+msgstr "Açık"
+
+msgid "OPTVAL_AUTO"
+msgstr "Otomatik"
+
+msgid "OPTMNU_TITLE"
+msgstr "Seçenekler"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Kontrolleri Özelleştir"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Fare Seçenekleri"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Kontrolör Seçenekleri"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Oyuncu Kurulumu"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Oynanış Seçenekleri"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Otomatik Harita Seçenekleri"
+
+msgid "OPTMNU_HUD"
+msgstr "HUD Seçenekleri"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Çeşitli Seçenekler"
+
+msgid "OPTMNU_SOUND"
+msgstr "Ses Seçenekleri"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Görüntüleme Seçenekleri"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Video modunu ayarlama"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Varsayılanlara sıfırla"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Son kaydedilene sıfırla"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Geçerli ayarları kaydet"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Konsola git"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Ağ Seçenekleri"
+
+msgid "OPTMNU_REVERB"
+msgstr "Reverb ortam düzenleyicisi"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "Değiştirmek için ENTER, silmek için BACKSPACE"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Kontrol için yeni tuşa, iptal etmek için ESC'ye basın"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Kontroller"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Yangın"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "İkincil Yangın"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Silah Yeniden Doldurma"
+
+msgid "CNTRLMNU_USE"
+msgstr "Kullan / Aç"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "İlerleyin"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Geriye doğru hareket et"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Strafe sola"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Strafe sağa"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Sola dön"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Sağa dön"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Hızlı Dönüş"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Atlama"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Çömelme"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Çömelme anahtarı"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Fare bakışı"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Yukarı bak."
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Aşağı bak."
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Merkezden görünüm"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Koşmak"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Değiştir Çalıştır"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr ""
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Skor Tablosunu Göster"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Eylem"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Eylem Kontrollerini Özelleştirme"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Sohbet"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Çok Oyunculu"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Söyle"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Sohbet Kontrollerini Özelleştirme"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Silah Kontrollerini Özelleştirme"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Envanter Kontrollerini Özelleştirme"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Diğer Kontrolleri Özelleştirme"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Silahlar"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Sonraki silah"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Önceki silah"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Silah 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Silah 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Silah 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Silah 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Silah 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Silah 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Silah 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Silah 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Silah 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Silah 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Envanter"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Öğeyi etkinleştir"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Tüm öğeleri etkinleştirin"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Sonraki madde"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Önceki madde"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Harita Kontrollerini Özelleştirme"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Harita Kontrolleri"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Sola kaydırın"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Sağa kaydırın"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Yukarı kaydırın"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Aşağı kaydırın"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Yakınlaştır"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Uzaklaştır"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Yakınlaştırmayı aç / kapat"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Takip etmeyi değiştir"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Izgarayı değiştir"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Döndürmeyi değiştir"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Dokuyu değiştir"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Otomatik haritayı değiştir"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr ""
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Ekran görüntüsü"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Açık konsol"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Duraklat"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Ekran Boyutunu Artırın"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Ekran Boyutunu Azaltma"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Açık Yardım"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Kaydet Menüsünü Aç"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Yük Menüsünü Aç"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Seçenekler Menüsünü Aç"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Ekran Menüsünü Aç"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Hızlı Tasarruf"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Hızlı Yükleme"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Ana Menüden Çıkış"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Mesajları Değiştir"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Oyundan Çık"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Gama Ayarlama"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Fareyi etkinleştir"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Menülerde fareyi etkinleştir"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Geri düğmesini göster"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "İmleç"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Yatay hassasiyet"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Dikey hassasiyet"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Pürüzsüz fare hareketi"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Dönüş hızı"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Mouselook hızı"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "İleri/Geri hız"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Strafe hızı"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Her zaman Mouselook"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Fare Y'yi Ters Çevir"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Fare X'i Ters Çevir"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Sol üst"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Sağ üst"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Sol alt"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Sağ alt"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Dokunmatik ekran benzeri"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Basit ok"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Sistem imleci"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Varsayılan"
+
+msgid "JOYMNU_TITLE"
+msgstr "Denetleyiciyi Yapılandırma"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Kontrolör Seçenekleri"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Menüde kontrolör girişini engelle"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Denetleyici desteğini etkinleştir"
+
+msgid "JOYMNU_DINPUT"
+msgstr "DirectInput denetleyicilerini etkinleştirin"
+
+msgid "JOYMNU_XINPUT"
+msgstr "XInput denetleyicilerini etkinleştirin"
+
+msgid "JOYMNU_PS2"
+msgstr "Ham PlayStation 2 adaptörlerini etkinleştirin"
+
+msgid "JOYMNU_NOCON"
+msgstr "Denetleyici algılanmadı"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Denetleyicileri yapılandırın:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Denetleyici desteği şu şekilde olmalıdır"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "tespit etmek için etkinleştirildi"
+
+msgid "JOYMNU_INVALID"
+msgstr "Menü için geçersiz denetleyici belirtildi"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Genel hassasiyet"
+
+msgid "JOYMNU_AXIS"
+msgstr "Eksen Konfigürasyonu"
+
+msgid "JOYMNU_INVERT"
+msgstr "Ters çevir"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Ölü bölge"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Yapılandırılabilir eksen yok"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Hiçbiri"
+
+msgid "OPTVAL_TURNING"
+msgstr "Dönüş"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Yukarı/Aşağı Bakmak"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "İleriye Doğru"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Strafing"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Yukarı/Aşağı Hareket Etme"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Ters çevrilmiş"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Ters Çevrilmemiş"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Mavi"
+
+msgid "TXT_COLOR_RED"
+msgstr "Kırmızı"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Yeşil"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Gri"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Koyu gri"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Koyu Yeşil"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Kahverengi"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Koyu Mavi"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Açık Kırmızı"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Sarı"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Mor"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Zeytin"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Bej"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Açık Yeşil"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Açık Mavi"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Açık Gri"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Açık Kahverengi"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Altın"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Parlak Yeşil"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Pas"
+
+msgid "PLYRMNU_NAME"
+msgstr "İsim"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Takım"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Renk"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Cinsiyet"
+
+msgid "OPTVAL_MALE"
+msgstr "Erkek"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Kadın"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Nötr"
+
+msgid "OPTVAL_OTHER"
+msgstr "Nesne"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Oynanış Seçenekleri"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Her zaman"
+
+msgid "OPTVAL_NEVER"
+msgstr "Asla"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr ""
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Daima Koş"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Ekran boyutu"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Dikey Senkronizasyon"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Modeller"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Ölçekli artı işareti"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Parlaklık"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gama düzeltme"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Doygunluk"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Durum Çubuğu Ölçeği"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Mesajlar"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Merkez mesajları"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Titreşimli mesaj Ekranı"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Mesaj Ölçeği"
+
+msgid "MNU_COLORPICKER"
+msgstr "Renk Seçiniz"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Otomatik haritayı döndür"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Oyuncuyu takip et"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Çizgi alfa"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Çizgi kalınlığı"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Harita Renklerini Özelleştirin"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Varsayılan özel renkleri geri yükleme"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Ses etkin"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Müzik etkin"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 örnek"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 örnek"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 örnek"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 örnek"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 örnek"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 örnek"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 örnek"
+
+msgid "OPTSTR_AUTO"
+msgstr "Otomatik"
+
+msgid "OPTSTR_MONO"
+msgstr ""
+
+msgid "OPTSTR_STEREO"
+msgstr ""
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Dolby Pro Logic Dekoder"
+
+msgid "OPTSTR_QUAD"
+msgstr "Dörtlü"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 hoparlörler"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 hoparlörler"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 hoparlörler"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Oynatma cihazı"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "EFX'i Etkinleştir"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Yeniden Örnekleyici"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Ses seviyesi"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Menü ses seviyesi"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Müzik sesi"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI cihazı"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Arka Planda Ses"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Su altı yankısı"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Sahaları rastgele ayarlayın"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Ses kanalları"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Ses arka ucu"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL seçenekleri"
+
+msgid "SNDMNU_RESTART"
+msgstr "Sesi yeniden başlat"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Gelişmiş seçenekler"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Modül yeniden oynatıcı seçenekleri"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Midi oynatıcı seçenekleri"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Menülerde Ses"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Gelişmiş Ses Seçenekleri"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Örnek oranı"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL Sentezi"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Taklit edilen OPL çiplerinin sayısı"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Tam MIDI stereo kaydırma"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL Emülatör Çekirdeği"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI sesleri"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Küresel"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Freeverb"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Küresel Freeverb"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Yama seti"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Kazanç"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Reverb Seviyesi"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Koro"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity yapılandırma dosyası"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Bağıl hacim"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi yapılandırma dosyası"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Yapılandırma seçin"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Gelişmiş Yeniden Örnekleme"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL Emülatör Çekirdeği"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Emülatörü PCM hızında çalıştırın"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Taklit edilen OPL çiplerinin sayısı"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Kazanç"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Hacim modeli"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2 Emülatör Çekirdeği"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS Emülasyonu"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS yapılandırma dosyası"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "DMXGUS dosyalarını okuma"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS bellek boyutu"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Taklit edilen OPN çiplerinin sayısı"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Kazanç"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Özel WOPL bankası kullanın"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL Bank dosyası"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Özel WOPN bankası kullanın"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN Banka dosyası"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Takma Adlandırma"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Doğrusal"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Doğrusal"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Doğrusal"
+
+msgid "OPTVAL_NEAREST"
+msgstr "En yakın"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Düşük)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Orta)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Yüksek)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kübik"
+
+msgid "OPTVAL_BLEP"
+msgstr "Bant sınırlı adım"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Doğrusal (Daha Yavaş)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Bant sınırlı doğrusal"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kübik (Daha Yavaş)"
+
+msgid "OPTVAL_SINC"
+msgstr ""
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Yalnızca not açma/kapama"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Tam rampa"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Ana ses seviyesi"
+
+msgid "MODMNU_QUALITY"
+msgstr "Kalite"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Hacim artırma"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Otomatik (Banka kurulumunu kullan)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Otomatik (Banka kurulumunu kullan)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Jenerik"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Jenerik"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL Yerli"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN Yerli"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (Doğru, AM hatalı)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (Doğru, AM hatası ile)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Win9X benzeri"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9X benzeri (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Win9X benzeri (Jenerik FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (AM ses hatası olmadan)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (AM ses hatası olmadan)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "IBM Ses Kitaplığı Arayüzü"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "HMI Ses İşletim Sistemi"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (Eski, hatalı)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Sınırsız"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Palet"
+
+msgid "OPTVAL_LOW"
+msgstr "Düşük"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Orta"
+
+msgid "OPTVAL_HIGH"
+msgstr "Yüksek"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Aşırı"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Ön yüz"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Ters"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "İşlem sonrası"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Ton Haritası Modu"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Lens bozulma efekti"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA Kalitesi"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Dither çıkışı"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Ton Haritası Palet Sırası"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Ton Haritası Paleti Üsteli"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Çoklu Örneklem"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Çiçeklenme etkisi"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Ortam oklüzyon kalitesi"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "AO'lu Portallar"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Menü Bulanıklığı"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Aynalar üzerinde çevre haritası"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Render kalitesi"
+
+msgid "OPTVAL_SPEED"
+msgstr "Hız"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Kalite"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Sektör ışığı modu"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Sis modu"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radyal"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Standart"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Doku Filtresi modu"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anizotropik filtre"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Yok (en yakın mipmap)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Yok (doğrusal mipmap)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Yok (trilineer)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilineer"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilineer"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Doku Seçenekleri"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Dokular etkinleştirildi"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Yüksek çözünürlüklü dokuları etkinleştir"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Yüksek Kalite Yeniden Boyutlandırma modu"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Yüksek Kalite Yeniden Boyutlandırma çarpanı"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Bu mod %d kat daha fazla video belleği gerektirir"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Dokuları yeniden boyutlandırma"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Sprite'ları yeniden boyutlandırma"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Yazı tiplerini yeniden boyutlandırma"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Model kaplamalarını yeniden boyutlandırma"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "GL dokularını önceden önbelleğe alma"
+
+msgid "VIDMNU_TITLE"
+msgstr "Video Modu"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Ölçeklendirilmiş (En Yakın)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Ölçeklendirilmiş (Doğrusal)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr ""
+
+msgid "OPTVAL_STRETCH"
+msgstr "Esneme"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "İşleme Modu"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Tam Ekran"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI desteği"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "En boy oranı"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Kuvvet en-boy oranı"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Zorlanmış oran stili"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "5:4 en boy oranını etkinleştirin"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Çözünürlük ölçeği"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Ölçek Faktörü"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Doğrusal Ölçeklemeyi Kullan (Tam Ekran)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Özel Piksel Ölçeklendirme"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Özel Genişlik"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Özel Yükseklik"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Değişiklikleri Uygula (Pencereli)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Değişiklikleri Uygula (Tam Ekran)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Çözünürlük Ön Ayarını Seçin"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Özel Çözünürlük Ön Ayarları"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Önceden Ayarlanmış Çözünürlük Modları"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "4:3 Görüntü"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "5:4 Görüntü"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "16:9 Görüntü"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "16:10 Aspect"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "21:9 Görüntü"
+
+msgid "OPTVAL_NORMAL"
+msgstr ""
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Mümkün Olan En Düşük Ölçek"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Özel"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "Maksimum FPS"
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Tercih Edilen Rendering API"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Sol+sağ birleştirme Alt/Ctrl/Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter tam ekrana geçiş yapar"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F tam ekrana geçiş yapar"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Otomatik kaydetmeyi etkinleştir"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Otomatik kaydetme sayısı"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Kaydet/Yükle onayı"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Klavye hilelerini devre dışı bırak"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Hızlı kaydetme rotasyonu"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Rotasyondaki quicksave sayısı"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Menü Temiz Ölçeklendirmeyi Devre Dışı Bırak"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Oyunu arka planda duraklat"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Varsayılan Nişangah"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Nişangah rengi"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Artı işareti sağlığı gösterir"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Ölçekli artı işareti"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Standart"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Geliştirilmiş"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Dil"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Değişiklikleri Geri Al"
+
+msgid "REVMNU_SELECT"
+msgstr "Ortam Seçiniz"
+
+msgid "REVMNU_TEST"
+msgstr "Test Ortamı"
+
+msgid "REVMNU_EDIT"
+msgstr "Ortamı Düzenle"
+
+msgid "REVMNU_NEW"
+msgstr "Yeni Çevre"
+
+msgid "REVMNU_REVERT"
+msgstr "Ayarları geri döndür"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_ROOM"
+msgstr ""
+
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_REVERB"
+msgstr ""
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+msgid "REVMNU_Reflections_Scale"
+msgstr ""
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr ""
+
+msgid "REVMNU_Reverb_Scale"
+msgstr ""
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Based_on"
+msgstr "Buna göre"
+
+msgid "REVMNU_Name"
+msgstr "İsim"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Oluştur"
+
+msgid "REVMNU_Save"
+msgstr "Kaydet..."
+
+msgid "REVMNU_File_name"
+msgstr "Dosya adı"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Kurtarılacak ortamlar"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan Seçenekleri (Deneysel)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan Seçenekleri"
+
+msgid "VKMNU_ENABLE"
+msgstr "Vulkan'ı Etkinleştir"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan Cihaz Kimliği"
+
+msgid "VKMNU_HDR"
+msgstr "Yüksek Dinamik Aralık"
+
+msgid "VK_WARNING"
+msgstr "Uyarı: Vulkan işleyici son derece deneyseldir!"
+
+msgid "VK_RESTART"
+msgstr "Bu seçeneklerin etkili olması için yeniden başlatılması gerekecektir."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Vulkan Aygıtını Seçin"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Eski xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Seçenek Arama"
+
+msgid "OS_ANY"
+msgstr "Herhangi bir terim için arama yapın"
+
+msgid "OS_ALL"
+msgstr "Tüm terimler için arama yapın"
+
+msgid "OS_NO_RESULTS"
+msgstr "Sonuç bulunamadı."
+
+msgid "OS_LABEL"
+msgstr "Ara:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%o, %k tarafından balık gibi kemirildi."
+
+msgid "TXT_OBITUARY2"
+msgstr "%o, %k tarafından hadım edildi."
+
+msgid "TXT_OBITUARY3"
+msgstr ""
+
+msgid "TXT_OBITUARY4"
+msgstr "%o, %k tarafından yok edildi."
+
+msgid "TXT_OBITUARY5"
+msgstr ""
+
+msgid "TXT_OBITUARY6"
+msgstr "%o, %k tarafından doğrandı."
+
+msgid "TXT_OBITUARY7"
+msgstr ""
+
+msgid "TXT_OBITUARY8"
+msgstr "%o, %k tarafından dümdüz edildi."
+
+msgid "TXT_OBITUARY9"
+msgstr "%o, %k tarafından dümdüz edildi."
+
+msgid "TXT_OBITUARY10"
+msgstr "%o, %k tarafından dümdüz edildi."
+
+msgid "TXT_OBITUARY11"
+msgstr "%o, %k tarafından öldürüldü."
+
+msgid "TXT_OBITUARY12"
+msgstr "%o, %k tarafından kıyma haline getirildi."
+
+msgid "TXT_OBITUARY13"
+msgstr "%o, %k tarafından katledildi"
+
+msgid "TXT_OBITUARY14"
+msgstr "%o, %k tarafından sakat bırakıldı."
+
+msgid "TXT_OBITUARY15"
+msgstr "%o, %k tarafından öldürüldü."
+
+msgid "TXT_OBITUARY16"
+msgstr "%o, %k tarafından yeni bir delik açıldı."
+
+msgid "TXT_OBITUARY17"
+msgstr "%o, %k tarafından katledildi."
+
+msgid "TXT_OBITUARY18"
+msgstr "%o, %k tarafından ezildi."
+
+msgid "TXT_OBITUARY19"
+msgstr "%o, %k tarafından sodomize edildi."
+
+msgid "TXT_OBITUARY20"
+msgstr "%o, %k tarafından parçalandı."
+
+msgid "TXT_OBITUARY21"
+msgstr "%o, %k tarafından ezildi."
+
+msgid "TXT_OBITUARY22"
+msgstr "%o, %k tarafından boğazlandı."
+
+msgid "TXT_OBITUARY23"
+msgstr "%o, %k tarafından harcandı."
+
+msgid "TXT_OBITUARY24"
+msgstr "%o, %k tarafından öldürüldü."
+
+msgid "TXT_OBITUARY25"
+msgstr "%o, %k tarafından cehenneme gönderildi."
+
+msgid "TXT_OBITUARY26"
+msgstr "%o, %k tarafından öldürüldü."
+
+msgid "TXT_OBITUARY27"
+msgstr "%o, %k tarafından öldürüldü."
+
+msgid "TXT_OBITUARY28"
+msgstr "%o, %k'in hışmına uğradı."
+
+msgid "TXT_OBITUARY29"
+msgstr "%o, %k tarafından püskürtüldü."
+
+msgid "TXT_OBITUARY30"
+msgstr "%o, %k tarafından köpek etine dönüştürüldü."
+
+msgid "TXT_OBITUARY31"
+msgstr "%o, %k tarafından dövüldü."
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o dışkıdır"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o hamburgerdir"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o skrotum ayrılması yaşadı"
+
+msgid "TXT_SELFOBIT4"
+msgstr "Nüfus kontrolü için %o gönüllü oldu"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o intihar etti"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o Darwin Ödülü'nü aldı"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "ÖÜÇĞİŞ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Tam seçenekler menüsü"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Basit seçenekler menüsü"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Oyun Yapılandırmasına Gözat"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Ekran Görüntülerine Gözat"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Kaydedilen Oyunlara Gözat"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Fare düğmelerini değiştirme"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Yalnızca değiştirilmiş"
+
+msgid "TXT_UNKNOWN"
+msgstr "Bilinmiyor"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr ""
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Bu kayıt oyunu şu dosyalara ihtiyaç duyar"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Çok Oyunculu Seçenekler"
+
+msgid "OPTMNU_INPUT"
+msgstr "Girdi Seçenekleri"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Sistem Seçenekleri"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Işık Seçenekleri"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Sprite Seçenekleri"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Koronalar"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Görünüş"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Gelişmiş Görüntüleme Seçenekleri"
+
+msgid "PICKER_SELECT"
+msgstr "Hangi oyunu oynayacağınızı seçin"
+
+msgid "PICKER_PLAY"
+msgstr "Oyunu Başlat"
+
+msgid "PICKER_EXIT"
+msgstr "Çıkış"
+
+msgid "PICKER_GENERAL"
+msgstr "Genel"
+
+msgid "PICKER_EXTRA"
+msgstr "Ekstra Grafikler"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Tam Ekran"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Otomatik yükleme yok"
+
+msgid "PICKER_DONTASK"
+msgstr "Bir daha sorma."
+
+msgid "PICKER_LIGHTS"
+msgstr "Işık tanımları"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Brightmaps"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Geniş Ekran"
+
+msgid "PICKER_ADDPARM"
+msgstr "Ek Parametreler:"
+
+msgid "PICKER_WELCOME"
+msgstr "S'ye hoş geldiniz!"
+
+msgid "PICKER_VERSION"
+msgstr "Sürüm %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr ""
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Oyun"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Bu denetleyiciyi etkinleştirin"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Ana Menüyü Aç"
+
+msgid "MODMNU_REPLAYER"
+msgstr ""
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr ""
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr ""
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr ""
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr ""
+
+msgid "PICKER_PLAYHOST"
+msgstr ""
+
+msgid "PICKER_PLAYJOIN"
+msgstr ""
+
+msgid "PICKER_REMPARM"
+msgstr ""
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr ""
+
+msgid "PICKER_TAB_MULTI"
+msgstr ""
+
+msgid "PICKER_LOADSAVE"
+msgstr ""
+
+msgid "PICKER_REMSAVE"
+msgstr ""
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr ""
+
+msgid "PICKER_JOIN"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+msgid "PICKER_NETRATE"
+msgstr ""
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr ""
+
+msgid "PICKER_GAMEMODE"
+msgstr ""
+
+msgid "PICKER_COOP"
+msgstr ""
+
+msgid "PICKER_DM"
+msgstr ""
+
+msgid "PICKER_TDM"
+msgstr ""
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr ""
+
+msgid "PICKER_ALTDM"
+msgstr ""
+
+msgid "PICKER_PLAYERS"
+msgstr ""
+
+msgid "PICKER_PORT"
+msgstr ""
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr ""
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr ""
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr ""
+
+msgid "PICKER_IP"
+msgstr ""
+
+msgid "PICKER_TDMLABEL"
+msgstr ""
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr ""
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr ""
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

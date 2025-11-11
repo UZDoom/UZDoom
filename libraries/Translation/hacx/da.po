@@ -1,0 +1,587 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: da\n"
+
+msgid "QUITMSG1"
+msgstr "Er disse bugs for hårde for dig?"
+
+msgid "QUITMSG"
+msgstr "Er du sikker på, at du vil holdeop med at deltage?"
+
+msgid "QUITMSG2"
+msgstr "Prøver du at holde op? Og du kalder dig selv en hacker?"
+
+msgid "QUITMSG3"
+msgstr "Kom tilbage, før jeg sender en virus op i dit udstødningsrør!"
+
+msgid "QUITMSG4"
+msgstr "Rigtige hackere går aldrig ud af spillet."
+
+msgid "QUITMSG5"
+msgstr "Kom nu! Du har ikke set det bedste endnu!"
+
+msgid "QUITMSG6"
+msgstr "Giv op nu, og cyberspace er ristet!"
+
+msgid "QUITMSG7"
+msgstr "GENIE sender dig sine bedste hilsner, skiderik!"
+
+msgid "QUITMSG8"
+msgstr "Hmm. Så meget for at være en helt, Hacker."
+
+msgid "QUITMSG9"
+msgstr "Hvad? Vil du hellere gå tilbage til fængslet?"
+
+msgid "QUITMSG10"
+msgstr "Du skulle have taget den blå pille."
+
+msgid "QUITMSG11"
+msgstr "Spillets navn er ikke \"at flygte\"!"
+
+msgid "QUITMSG12"
+msgstr "Det er ikke noget problem. At redde verden kan vente, ikke?"
+
+msgid "QUITMSG13"
+msgstr "Så er det vist på tide at gøre som nettet og smutte!"
+
+msgid "QUITMSG14"
+msgstr "Glem nu ikke HacX!"
+
+msgid "OB_SUICIDE"
+msgstr "%o slettede sig selv fra universet."
+
+msgid "OB_FALLING"
+msgstr "%o dannede et krater på størrelse med Kansas."
+
+msgid "OB_CRUSH"
+msgstr "%o blev en menneskelig pandekage."
+
+msgid "OB_EXIT"
+msgstr "%o forsøgte at stikke af."
+
+msgid "OB_WATER"
+msgstr "%o svømmede som en mursten."
+
+msgid "OB_SLIME"
+msgstr "%o blev nuklear."
+
+msgid "OB_LAVA"
+msgstr "%o tog et varmt bad."
+
+msgid "OB_BARREL"
+msgstr "%o fik en overdosis nitroglycerin."
+
+msgid "OB_SPLASH"
+msgstr "%o er flået i småstykker."
+
+msgid "OB_R_SPLASH"
+msgstr "%o ville se, hvordan han så ud indefra."
+
+msgid "OB_ROCKET"
+msgstr "%o ville se, hvordan han så ud indvfra."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o slettede sig selv fra universet."
+
+msgid "OB_THUG"
+msgstr "%o er ikke længere den dominerende art."
+
+msgid "OB_ANDROID"
+msgstr "%o har tilsluttet sig den forkerte maskine."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o fik sig et monster af et cyber-jockey-derriere-spark."
+
+msgid "OB_ICE"
+msgstr "%o blev ICEd."
+
+msgid "OB_BUZZER"
+msgstr "%o føler sig lidt svimmel."
+
+msgid "OB_STEALTH"
+msgstr "%o opdager en temmelig chokerende udvikling."
+
+msgid "OB_DMAN"
+msgstr "%o blev slettet fra cyberspace."
+
+msgid "OB_GLASS"
+msgstr "%o gav sig selv en glaskæbe."
+
+msgid "OB_MANIAC"
+msgstr "%os medlemskab på livstid blev opsagt."
+
+msgid "OB_MANIACHIT"
+msgstr ""
+"%o døde på en eller anden tilfældig måde, som jeg ikke kan gennemskue."
+
+msgid "OB_TERMIN"
+msgstr "%o blev stegt af en femme fatale freak."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o kom lidt tæt på det modsatte køn."
+
+msgid "OB_REPLI"
+msgstr "%o sagde farvel til en gammel ven."
+
+msgid "OB_REPLIHIT"
+msgstr "%o blev stukket i ryggen af en gammel ven."
+
+msgid "OB_PHAGE"
+msgstr "%o blev sorteret fra ved naturlig udvælgelse."
+
+msgid "OB_THORN"
+msgstr "%o kunne ikke undslippe en tornedød."
+
+msgid "OB_SUMATIC"
+msgstr "%o fik et sumo-slag i lysken."
+
+msgid "OB_GENIE"
+msgstr "%o fik ikke sine tre ønsker."
+
+msgid "OB_MINE"
+msgstr "%o forsøgte at kæle for en mine."
+
+msgid "OB_MPKICK"
+msgstr "%o fik %ks Bruce Lee fu-kick i ansigtet."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o faldt fra hinanden via %ks chokerende åbenbaring."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o fik en dobbeltdosis af %ks straf."
+
+msgid "OB_MPTAZER"
+msgstr "%o blev lukket ned af %ks chok-stick."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o fik et ansigt fuld af %ks iskolde vrede."
+
+msgid "OB_MPUZI"
+msgstr "%o blev boret fuld af huller af %k, på gangsta-stil."
+
+msgid "OB_MPZOOKA"
+msgstr "%o spiste %ks fotobombe."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o blev reduceret til en ordentlig bunke fotoner af %k."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o blev reduceret til antimaterie af %k."
+
+msgid "OB_MPNUKE"
+msgstr "%o slugte %ks atombombe."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o blev atomvåben af %ks masseødelæggelser."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o blev vendt ud og ind af %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%os atomstruktur blev splittet op."
+
+msgid "OB_DEFAULT"
+msgstr "%o udåndede spontant."
+
+msgid "GOTNUKER"
+msgstr "Du tager en NUKER! Sut på den!"
+
+msgid "GOTUZI"
+msgstr "Du har en UZI!!"
+
+msgid "GOTREZNATOR"
+msgstr "En HOIG Reznator - Fritér noget røv"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Du har en Photon 'Zooka!"
+
+msgid "GOTBIGSTICK"
+msgstr "Du har en Big Stick!"
+
+msgid "GOTTAZER"
+msgstr "Du har en Tazer!!"
+
+msgid "GOTCRYOGUN"
+msgstr "Du har en Cryogun! Frys!"
+
+msgid "GOTROUNDS"
+msgstr "Du tager nogle patroner!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Du tager en kasse med patroner!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Du tager en Torpedo!"
+
+msgid "GOTTORPEDOS"
+msgstr "Du tager en kasse med torpedoer!"
+
+msgid "GOTMOLECULES"
+msgstr "Du tager et molekylmodul!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Du tager en tank fuld af molekyler!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Du tager nogle patroner!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Du tager en kasse med patroner!"
+
+msgid "GOTVALISE"
+msgstr "Du tager en kuffert fyldt med varer!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Kraftfelt!"
+
+msgid "GOTMICROTEL"
+msgstr ""
+
+msgid "GOTENKBLIND"
+msgstr "Du er EnK Blind!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Vulkaniske gummistøvler!"
+
+msgid "GOTSIARRAY"
+msgstr "SI Array kortlægning!"
+
+msgid "GOTINFRARED"
+msgstr "Infrarødt visir!"
+
+msgid "GOTINHALER"
+msgstr "Træk vejret dybt, Inhalator!"
+
+msgid "GOTHYPONEED"
+msgstr "En dosis Hydergine fra en Hypo redder dig!"
+
+msgid "GOTHYPO"
+msgstr "Du tager en Hypo!"
+
+msgid "GOTKEYCARD"
+msgstr "Du har fundet et Nøglekort!"
+
+msgid "GOTCKEY"
+msgstr "Du har fundet en C-nøgle!"
+
+msgid "GOTPASSWORD"
+msgstr "Du har fundet et kodeord!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Du fandt en blå Z-nøgle!"
+
+msgid "GOTYELWZKEY"
+msgstr "Du fandt en gul Z-nøgle!"
+
+msgid "GOTREDZKEY"
+msgstr "Du fandt en rød Z-nøgle!"
+
+msgid "GOTBODYARMOR"
+msgstr "Kropsrustning!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrophenoxine"
+
+msgid "GOTKEVLARVEST"
+msgstr "Du får fat i en kevlarvest!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Du tager Super Kevlar vest!"
+
+msgid "GOTMICROKIT"
+msgstr "Du får fat i et MicroKit!"
+
+msgid "GOTDAMPENER"
+msgstr "Du får fat i en Dampener!"
+
+msgid "PD_CKEY"
+msgstr "Du skal bruge en C-nøgle for at få adgang til dette objekt!"
+
+msgid "PD_KEYCARD"
+msgstr "Du skal bruge et Nøglekort for at få adgang til dette objekt!"
+
+msgid "PD_PASSWORD"
+msgstr "Du skal bruge et kodeord for at få adgang til dette objekt!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Du skal bruge en blå Z-nøgle for at få dette til at fungere!"
+
+msgid "PD_REDZKEY"
+msgstr "Du skal bruge en rød Z-nøgle for at få dette til at fungere!"
+
+msgid "PD_YELWZKEY"
+msgstr "Du skal bruge en gul Z-nøgle for at få dette til at fungere!"
+
+msgid "X1TEXT"
+msgstr ""
+"Tyve millioner i guld er vist ikke al\n"
+"denne besværlighed værd, vel, hacker?\n"
+"Laver\n"
+"fængslet som en skide picnic!\n"
+"\n"
+"Butt-ugly bio-mutationer og dine\n"
+"medmennesker hænger fra loftet som\n"
+"madposer.\n"
+"\n"
+"Hvad fanden er denne GENIE? Som ingen\n"
+"computer, du nogensinde har hacket!\n"
+"\n"
+"Du må hellere finde den næste terminal,\n"
+"snitte en tur gennem c-space, skære\n"
+"nogle mutant-røvhuller i småstykker\n"
+"og komme væk fra Dodge!"
+
+msgid "X2TEXT"
+msgstr ""
+"Hvor er alle de mennesker?!\n"
+"\n"
+"Paris er en spøgelsesby, medmindre\n"
+"man betragter mutante insekter som\n"
+"enestående borgere.\n"
+"\n"
+"Du har ramt den blodige modstand.\n"
+"Mand, hvor de kan slås.\n"
+"Heldigt for dig, at de ikke er de\n"
+"mest lysende dørlamper i kvarteret.\n"
+"\n"
+"Men du har fået noget af den\n"
+"information, som underudvalget vil\n"
+"have. Og det er ulækkert!\n"
+"\n"
+"Menneskers neurale væsker fodrer disse\n"
+"insekter! Ikke underligt, at kvarteret\n"
+"er ved at blive lidt tyndt. Rapport til\n"
+"underudvalget. Og pas på dig selv..."
+
+msgid "X3TEXT"
+msgstr ""
+"Civilisationen, som du kendte den, er nada!\n"
+"\n"
+"Ingen venner, ingen familie. \n"
+"Ikke flere mennesker.\n"
+"Ikke normale mennesker, i hvert fald.\n"
+"\n"
+"Kun én ting er tilbage... GENIE!\n"
+"Og hvis du er nødt til at gå til enden\n"
+"af universet, vil du finde dens\n"
+"mutant røv!\n"
+"For nu er du pissed!\n"
+"\n"
+"Og guldet? For fanden, det er gratis.\n"
+"\n"
+".....(fortsættelse følger)....."
+
+msgid "X5TEXT"
+msgstr ""
+"Du er i live!\n"
+"\n"
+"Hvad er oddsene, hacker?!\n"
+"for det vrimler med insekter.\n"
+"\n"
+"Du kan ikke nå underudvalget, hvilket\n"
+"betyder, at det er blevet\n"
+"kompromitteret.\n"
+"\n"
+"Du... er alene."
+
+msgid "TXT_HACXMAP01"
+msgstr ""
+
+msgid "TXT_HACXMAP02"
+msgstr "tunnelbyen"
+
+msgid "TXT_HACXMAP03"
+msgstr ""
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr "Cybercirkus"
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr "Den store mur"
+
+msgid "TXT_HACXMAP08"
+msgstr "Dejlighedernes have"
+
+msgid "TXT_HACXMAP09"
+msgstr "Skjulte fæstning"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarkistisk drøm"
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr ""
+
+msgid "TXT_HACXMAP13"
+msgstr "Kloakkerne"
+
+msgid "TXT_HACXMAP14"
+msgstr ""
+
+msgid "TXT_HACXMAP15"
+msgstr "Enk's tusmørke"
+
+msgid "TXT_HACXMAP16"
+msgstr ""
+
+msgid "TXT_HACXMAP17"
+msgstr "Blodets flod"
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr "Krigsrummene"
+
+msgid "TXT_HACXMAP20"
+msgstr "Advarsel om ubudne gæster!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Tørremiddel-rummet"
+
+msgid "STSTR_CLEV"
+msgstr "Nu ankommer vi til...\n"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...vil stege din røv!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap, eller Lite-amp?"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Lad os blive seriøse!"
+
+msgid "STSTR_NCON"
+msgstr "Cyberslicer tilstand TIL"
+
+msgid "STSTR_NCOFF"
+msgstr "Cyberslicer tilstand FRA"
+
+msgid "STSTR_NOMUS"
+msgstr "Forkert valg"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Twitch n'Kill Mode"
+
+msgid "STSTR_FAADDED"
+msgstr "Sådan skal det være, Hacker."
+
+msgid "STSTR_DQDON"
+msgstr "Cyberpotens-tilstand TIL"
+
+msgid "STSTR_DQDOFF"
+msgstr "Cyberpotens-tilstand FRA"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Sporing TIL"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Sporing FRA"
+
+msgid "DOSY"
+msgstr "- Tryk på Y for at løbe væk! -"
+
+msgid "ENDGAME"
+msgstr ""
+"Er du sindssyg eller utilpasset?\n"
+"Nå? Ja eller nej!"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Er du sikker? Du kan ikke klare\n"
+"denne færdighed, hacker!\n"
+"\n"
+"Tryk på Y for at dø. "
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"Quicksave over dit spil navngivet\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Tryk på Y eller N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Ønsker du at quickloade spillet ved navn\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Tryk på Y eller N."
+
+msgid "CC_THUG"
+msgstr "Bølle"
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr ""
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr ""
+
+msgid "CC_MONSTRUCT"
+msgstr ""
+
+msgid "CC_MECH"
+msgstr ""
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr "Torn ting"
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr "Lad være med at skyde!"
+
+msgid "SKILL_EASY"
+msgstr "Aargh, jeg har brug for sundhed!"
+
+msgid "SKILL_NORMAL"
+msgstr "Lad os flå dem i stykker!"
+
+msgid "SKILL_HARD"
+msgstr "Jeg er udødelig!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Sindssyge!"

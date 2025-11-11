@@ -1,0 +1,198 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ru\n"
+
+msgid "NIGHTMARE"
+msgstr "Уверены, что справитесь?\\n\\nНажмите «Y» или «N»..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Отметка"
+
+msgid "PD_BLUEO"
+msgstr "Требуется ЗЕЛЁНАЯ ключ-карта"
+
+msgid "PD_REDO"
+msgstr "Требуется ФИОЛЕТОВАЯ ключ-карта"
+
+msgid "PD_YELLOWO"
+msgstr "Требуется ЖЁЛТАЯ ключ-карта"
+
+msgid "PD_BLUEK"
+msgstr "Требуется ЗЕЛЁНЫЙ ключ"
+
+msgid "PD_YELLOWK"
+msgstr "Требуется ЖЁЛТЫЙ ключ"
+
+msgid "PD_REDK"
+msgstr "Требуется ФИОЛЕТОВЫЙ ключ"
+
+msgid "GOTARMOR"
+msgstr "Получена броня."
+
+msgid "GOTMEGA"
+msgstr "Получена боевая броня."
+
+msgid "GOTMSPHERE"
+msgstr "Суперздоровье"
+
+msgid "GOTBLUECARD"
+msgstr "Получена ЗЕЛЁНАЯ ключ-карта."
+
+msgid "GOTYELWCARD"
+msgstr "Получена ЖЁЛТАЯ ключ-карта."
+
+msgid "GOTREDCARD"
+msgstr "Получена ФИОЛЕТОВАЯ ключ-карта."
+
+msgid "GOTBLUESKUL"
+msgstr "Получен ЗЕЛЁНЫЙ ключ."
+
+msgid "GOTYELWSKUL"
+msgstr "Получен ЖЁЛТЫЙ ключ."
+
+msgid "GOTREDSKUL"
+msgstr "Получен ФИОЛЕТОВЫЙ ключ."
+
+msgid "GOTSTIM"
+msgstr "Целебный гриб"
+
+msgid "GOTMEDIKIT"
+msgstr "Получена: Аптечка."
+
+msgid "GOTMEDINEED"
+msgstr "Получена: Аптечка (КРАЙНЕ необходимая)."
+
+msgid "GOTMAP"
+msgstr "Карта"
+
+msgid "GOTCLIPBOX"
+msgstr "Получен: Ящик с пулями."
+
+msgid "GOTROCKET"
+msgstr "Получена: Граната."
+
+msgid "GOTROCKBOX"
+msgstr "Получены: Гранаты."
+
+msgid "GOTSHELLBOX"
+msgstr "Получена: Коробка патронов дробовика."
+
+msgid "GOTBACKPACK"
+msgstr "Получен: Ранец боеприпасов."
+
+msgid "GOTBFG9000"
+msgstr "Получена: Граната."
+
+msgid "GOTCHAINGUN"
+msgstr "Получен: Пулемёт."
+
+msgid "GOTLAUNCHER"
+msgstr "Получен: Гранатомёт."
+
+msgid "GOTPLASMA"
+msgstr "Энтропиемёт!"
+
+msgid "GOTSHOTGUN"
+msgstr "Получен: Дробовик."
+
+msgid "STSTR_DQDON"
+msgstr "Режим Бога ВКЛЮЧЁН"
+
+msgid "STSTR_DQDOFF"
+msgstr "Режим Бога ОТКЛЮЧЁН"
+
+msgid "STSTR_KFAADDED"
+msgstr "Всё оружие/боеприпасы/ключи"
+
+msgid "STSTR_FAADDED"
+msgstr "Всё оружие и боеприпасы"
+
+msgid "TXT_HARMMAP01"
+msgstr "Похищение"
+
+msgid "TXT_HARMMAP02"
+msgstr "Опасный путь"
+
+msgid "TXT_HARMMAP03"
+msgstr "Нестроение"
+
+msgid "TXT_HARMMAP04"
+msgstr "Мегалаполис"
+
+msgid "TXT_HARMMAP05"
+msgstr "Больница"
+
+msgid "TXT_HARMMAP06"
+msgstr "Оружейный завод"
+
+msgid "TXT_HARMMAP07"
+msgstr "Подводная лаборатория"
+
+msgid "TXT_HARMMAP08"
+msgstr "Взлётная полоса №1"
+
+msgid "TXT_HARMMAP09"
+msgstr "Пусковая площадка"
+
+msgid "TXT_HARMMAP10"
+msgstr "Заражённая зона"
+
+msgid "TXT_HARMMAP11"
+msgstr "Ехидна"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Вы почувствовали тошноту,\n"
+"присмотревшись к лицу королевы\n"
+"мутантов.\n"
+"Эта тварь. Когда-то она была... вашей\n"
+"подругой Амирой!\n"
+"\n"
+"Эти монстры смогли изменить её. Они\n"
+"превратили её в эту отвратительную тварь,\n"
+"способную выносить их потомство.\n"
+"\n"
+"-вздох-\n"
+"\n"
+"Вы берёте себя в руки.\n"
+"Они заставили вас убить свою подругу, и\n"
+"они поплатятся за это!\n"
+"\n"
+"«Ад — ничто в сравнении с отвергнутой\n"
+"женщиной!»\n"
+"\n"
+"     = К О Н Е Ц ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Загрузка уровня"
+
+msgid "SKILL_BABY"
+msgstr "Очень легко"
+
+msgid "SKILL_EASY"
+msgstr "Легко"
+
+msgid "SKILL_NORMAL"
+msgstr "Средне"
+
+msgid "SKILL_HARD"
+msgstr "Тяжело"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Очень тяжело"
+
+msgid "HARMQUITMSG"
+msgstr "Спасибо, что сыграли в Harmony"
+
+msgid "TXT_D2E1"
+msgstr "Гармония"

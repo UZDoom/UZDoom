@@ -1,0 +1,253 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ru\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Получен синий флемключ."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Получен жёлтый флемключ."
+
+msgid "GOTREDFLEM"
+msgstr "Получен красный флемключ."
+
+msgid "GOTGOGGLES"
+msgstr "Получены ультра-очки"
+
+msgid "PD_BLUECO"
+msgstr "Для открытия требуется синий ключ"
+
+msgid "PD_REDCO"
+msgstr "Для открытия требуется красный ключ"
+
+msgid "PD_YELLOWCO"
+msgstr "Для открытия требуется жёлтый ключ"
+
+msgid "PD_BLUEFO"
+msgstr "Для открытия требуется синий флемключ"
+
+msgid "PD_REDFO"
+msgstr "Для открытия требуется красный флемключ"
+
+msgid "PD_YELLOWFO"
+msgstr "Для открытия требуется жёлтый флемключ"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Получен зорчер."
+
+msgid "STSTR_KFAADDED"
+msgstr "Зорч и ключи получены"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Зона высадки"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Хранилище"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Лаборатория"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Дендрарий"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Пещеры Базоика"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Космодром"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Кинотеатр"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Музей Chex"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Городские улицы"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Канализация"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Командный центр"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Организация Объединённых Хлопьев"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Вилла Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Провинциальный парк"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Космический корабль «Метеор»"
+
+msgid "CC_ZOMBIE"
+msgstr "Обыкновеннус"
+
+msgid "CC_SHOTGUN"
+msgstr "Двуножка"
+
+msgid "CC_IMP"
+msgstr "Бронированная двуножка"
+
+msgid "CC_DEMON"
+msgstr "Длинноножка"
+
+msgid "CC_LOST"
+msgstr "Флем-мина"
+
+msgid "CC_CACO"
+msgstr "Супер-циклоптис"
+
+msgid "CC_BARON"
+msgstr "Максимус"
+
+msgid "CC_SPIDER"
+msgstr "Флемомерзость"
+
+msgid "CC_CYBER"
+msgstr "Правитель Соплезелёнус"
+
+msgid "CC_HERO"
+msgstr "Воин Chex"
+
+msgid "PD_BLUEC"
+msgstr "Нужен синий ключ, чтобы открыть"
+
+msgid "PD_REDC"
+msgstr "Нужен красный ключ, чтобы открыть"
+
+msgid "PD_YELLOWC"
+msgstr "Нужен жёлтый ключ, чтобы открыть"
+
+msgid "PD_BLUEF"
+msgstr "Нужен синий флемключ, чтобы открыть"
+
+msgid "PD_REDF"
+msgstr "Нужен красный флемключ, чтобы открыть"
+
+msgid "PD_YELLOWF"
+msgstr "Нужен жёлтый флемключ, чтобы открыть"
+
+msgid "OB_SLIME"
+msgstr "Игрок %o утонул в слизи."
+
+msgid "OB_LAVA"
+msgstr "Игрок %o утонул в слизи."
+
+msgid "OB_POWERSTRAND"
+msgstr "В игрока %o попала межпространственная слизь!"
+
+msgid "OB_KILLEDSELF"
+msgstr "В игрока %o попала межпространственная слизь!"
+
+msgid "OB_STRIDICUS"
+msgstr "Игрока %o облепила соплями длинноножка. "
+
+msgid "OB_FLEMMINE"
+msgstr "Игрока %o забрызгала флем-мина."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "Игрока %o обслюнявил супер-циклоптис."
+
+msgid "OB_MAXIMUS"
+msgstr "Игрок %o проиграл Максимусу."
+
+msgid "OB_LARVA"
+msgstr "Игрока %o обслюнявила личинка."
+
+msgid "OB_QUADRUMPUS"
+msgstr "Игрока %o обслюнявила многоручка. "
+
+msgid "OB_FLEMBOMINATION"
+msgstr "Игрока %o победила Флемомерзость."
+
+msgid "OB_SNOTFOLUS"
+msgstr "Игрока %o победил правитель Соплезелёнус."
+
+msgid "OB_MPR_SPLASH"
+msgstr "Игрок %o подстрелен из ускорителя зорча %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "Игрок %o получил заряд из «ЗБР» игрока %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Изгнав чудовищную Флембрану назад в её\n"
+"измерение, ты освободил@[ao_rus] пленников.\n"
+"Флемоиды окружили вас со всех сторон!\n"
+"Вы с пленниками прорвались с боем к\n"
+"космическому кораблю. Флемоиды\n"
+"облепили ваш корабль, но вы спаслись\n"
+"и улетели на орбиту. По дороге домой,\n"
+"пленники поблагодарили тебя за\n"
+"освобождение, но ты предупредил@[ao_rus] их...\n"
+"Мы ещё встретимся с Флемоидами.\n"
+"\n"
+"К сожалению, ты оказал@[refl_rus] прав@[ao_rus].\n"
+"Вернувшись домой, ты обнаружил@[ao_rus],\n"
+"что Флемоиды добрались и сюда.\n"
+"Тебя ждёт Chex Quest 2: Террор в Городе Chex!"
+
+msgid "E2TEXT"
+msgstr ""
+"С помощью зорчера, ты освободил@[ao_rus]\n"
+"канализацию от оставшихся флемоидов.\n"
+"Город Chex спасён. Казалось, что с\n"
+"угрозой флемоидов наконец-то покончено.\n"
+"\n"
+"Десять лет прошли в мире и процветании.\n"
+"Но флемоиды не были побеждены, им всё\n"
+"ещё хотелось править измерением\n"
+"полезных и питательных хлопьев.\n"
+"Они собрали все силы и открыли\n"
+"громадный межпространственный\n"
+"разлом в космосе. Над планетой\n"
+"хлопьев навис огромный шар из слизи!\n"
+"\n"
+"Приготовься к Chex Quest 3: Вторжение!"
+
+msgid "E3TEXT"
+msgstr ""
+"Последним метким выстрелом из зорчера,\n"
+"правитель Снотфолус был изгнан в назад своё измерение.\n"
+"Всем бедам вопреки, ты собственноручно\n"
+"покончил@[ao_rus] со вторжением!\n"
+"\n"
+"Остаётся лишь надеяться, что теперь флемоиды\n"
+"усвоят урок, и больше никогда не проникнут\n"
+"в измерение хлопьев.\n"
+"\n"
+"\n"
+"\n"
+"Но если всё-таки проникнут,\n"
+"ты уже будешь к этому готов@[ao_rus]!"
+
+msgid "M_EPI1"
+msgstr "Спасение на Базоике"
+
+msgid "M_EPI2"
+msgstr "Террор в городе Chex"
+
+msgid "M_EPI3"
+msgstr "Вторжение!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ультра-очки"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Синий флемключ"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Жёлтый флемключ"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Красный флемключ"

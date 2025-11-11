@@ -1,0 +1,252 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: cs\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Sebrán modrý slizoklíč."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Sebrán žlutý slizoklíč."
+
+msgid "GOTREDFLEM"
+msgstr "Sebrán červený slizoklíč."
+
+msgid "GOTGOGGLES"
+msgstr "Nalezeny ultrabrýle."
+
+msgid "PD_BLUECO"
+msgstr "Potřebuješ modrý klíč pro aktivaci tohoto objektu"
+
+msgid "PD_REDCO"
+msgstr "Potřebuješ červený klíč pro aktivaci tohoto objektu"
+
+msgid "PD_YELLOWCO"
+msgstr "Potřebuješ žlutý klíč pro aktivaci tohoto objektu"
+
+msgid "PD_BLUEFO"
+msgstr "Potřebuješ modrý slizoklíč pro aktivaci tohoto objektu."
+
+msgid "PD_REDFO"
+msgstr "Potřebuješ červený slizoklíč pro aktivaci tohoto objektu."
+
+msgid "PD_YELLOWFO"
+msgstr "Potřebuješ žlutý slizoklíč pro aktivaci tohoto objektu."
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Sebrán bzukr."
+
+msgid "STSTR_KFAADDED"
+msgstr "Bzukr a klíče přidány"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Přistávací zóna"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Skladiště"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Testovací laboratoř"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Bazoikské jeskyně"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Kosmodrom"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Kino"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Muzem Chex"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Městské ulice"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Kanalizace"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Centrální velení"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Spojené cereálie"
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provinciální park"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteorová vesmírná loď"
+
+msgid "CC_ZOMBIE"
+msgstr "Obecnýs"
+
+msgid "CC_SHOTGUN"
+msgstr "Dvojnožus"
+
+msgid "CC_IMP"
+msgstr "Dvojnožus s brněním"
+
+msgid "CC_DEMON"
+msgstr "Běhakus"
+
+msgid "CC_LOST"
+msgstr "Slizná mina"
+
+msgid "CC_CACO"
+msgstr "Superkykloptus"
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "Slizavnost"
+
+msgid "CC_CYBER"
+msgstr "Lord Hlenfujus"
+
+msgid "CC_HERO"
+msgstr "Bojovník Chex"
+
+msgid "PD_BLUEC"
+msgstr "Potřebuješ modrý klíč pro otevření těchto dveří"
+
+msgid "PD_REDC"
+msgstr "Potřebuješ červený klíč pro otevření těchto dveří"
+
+msgid "PD_YELLOWC"
+msgstr "Potřebuješ žlutý klíč pro otevření těchto dveří"
+
+msgid "PD_BLUEF"
+msgstr "Potřebuješ modrý slizoklíč pro otevření těchto dveří"
+
+msgid "PD_REDF"
+msgstr "Potřebuješ červený slizoklíč pro otevření těchto dveří"
+
+msgid "PD_YELLOWF"
+msgstr "Potřebuješ žlutý slizoklíč pro otevření těchto dveří"
+
+msgid "OB_SLIME"
+msgstr "%o se propadl@[ao_cs] do slizu."
+
+msgid "OB_LAVA"
+msgstr "%o se propadl@[ao_cs] do slizu."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o byl@[ao_cs] zasažen@[ao_cs] mezidimenzionálním slizem!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o byl@[ao_cs] zasažen@[ao_cs] mezidimenzionálním slizem!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o dostal@[ao_cs] holuby od běhakem."
+
+msgid "OB_FLEMMINE"
+msgstr "%o byl@[ao_cs] zablácen@[ao_cs] sliznou minou."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o byl@[ao_cs] osliznut@[ao_cs] superkykloptem."
+
+msgid "OB_MAXIMUS"
+msgstr "%o byl@[ao_cs] poražen@[ao_cs] Maximem."
+
+msgid "OB_LARVA"
+msgstr "%o byl@[ao_cs] zacáknut@[ao_cs] larvou."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o byl@[ao_cs] zahleněn@[ao_cs] Čtyřzadkem."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o byl@[ao_cs] poražen@[ao_cs] Slizavností."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o byl@[ao_cs] poražen@[ao_cs] Lordem Hlenfujem."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o byl@[ao_cs] zasažen@[ao_cs] propulzorem hráče %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o byl@[ao_cs] odlazován@[ao_cs] hráčem %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Poté, co jsi poslal@[ao_cs] nestvůrnou Slizbránu\n"
+"zpět do její dimenze, osvobodíš rukojmí.\n"
+"Ale sliznatci jsou všude! Spolu s rukojmími\n"
+"podniknete útěk zpět do tvé lodi. Sliznatci\n"
+"osliznou tvou loď, ale těsně se vám podaří\n"
+"uniknout na orbitu. Během návratu ti je\n"
+"pogratulováno za odvážnou záchranu, ale\n"
+"ty je varuješ...\n"
+"Ještě jsme neviděli Sliznatce naposledy.\n"
+"\n"
+"Bohužel máš pravdu. Při návratu domů vidíš,\n"
+"že tě nějakým způsobem sliznatci následovali.\n"
+"Připrav se na Misi Chex 2: Hrůzu v Chex City!"
+
+msgid "E2TEXT"
+msgstr ""
+"Vybzukl@[ao_cs] jsi poslední ze zbylých sliznatců,\n"
+"kteří se nahromadili ve stokách. Chex City\n"
+"je zachráněno. Zdá se, že hrozba sliznatců\n"
+"konečně skončila.\n"
+"\n"
+"\n"
+"Deset let uplyne v míru a prosperitě. Ale\n"
+"Sliznatci nebyli poraženi a jejich touha\n"
+"ovládnout nutričně bohatou dimenzi cereálií\n"
+"se nijak nezmenšila. Shromáždili veškeré\n"
+"své síly, otevřeli obrovskou mezidimenzionální\n"
+"vesmírnou trhlinu a nyní se na planetu\n"
+"cereálií řítí obrovská koule slizu!\n"
+"\n"
+"Připrav se na\n"
+"Misi Chex 3: Invazi!"
+
+msgid "E3TEXT"
+msgstr ""
+"S posledním výstřelem jsi vybzukl@[ao_cs]\n"
+"lorda Hlenfuje zpět do jeho dimenze!\n"
+"Navzdory všemu jsi vlastnoručně\n"
+"zhatil@[ao_cs] celou invazi!\n"
+"\n"
+"Opravdu doufáš, že Sliznatci dostali\n"
+"za vyučenou a už se nikdy nepokusí\n"
+"vrátit do dimenze cereálií.\n"
+"\n"
+"\n"
+"\n"
+"Ale jestli se o to pokusí, víš,\n"
+"že na ně budeš připraven@[adj_cs]!"
+
+msgid "M_EPI1"
+msgstr "Záchrana na Bazoiku"
+
+msgid "M_EPI2"
+msgstr "Hrůza v Chex City"
+
+msgid "M_EPI3"
+msgstr "Invaze!"
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

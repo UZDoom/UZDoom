@@ -1,0 +1,571 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: jp\n"
+
+msgid "QUITMSG1"
+msgstr "テメェにはあんなバグ 厳しかないだろ?"
+
+msgid "QUITMSG"
+msgstr "もしかして逃げ出そうとしてないよな?"
+
+msgid "QUITMSG2"
+msgstr "終了させる? それでハッカー自称してたのか?"
+
+msgid "QUITMSG3"
+msgstr "さっさと戻らねえと そのケツ穴にウィルスぶっこむぞ!"
+
+msgid "QUITMSG4"
+msgstr "本物のハッカーなら頭を銃で撃ち抜くことはしない。"
+
+msgid "QUITMSG5"
+msgstr "おいおい! お楽しみはこれからだぜ!"
+
+msgid "QUITMSG6"
+msgstr "さっさと止めて、サイバースペースに乾杯だ!"
+
+msgid "QUITMSG7"
+msgstr "GENIEがベストの挨拶を送るぜ、カス野郎!"
+
+msgid "QUITMSG8"
+msgstr "うーん。英雄とはこの程度だったのか、ハッカー。"
+
+msgid "QUITMSG9"
+msgstr "何? 今更ペンで計算するのか?"
+
+msgid "QUITMSG10"
+msgstr "青いピルを採るべきではなかったな。"
+
+msgid "QUITMSG11"
+msgstr "ゲーム名は 萎え落ち小僧 じゃねえぞ!"
+
+msgid "QUITMSG12"
+msgstr "気にはしない、世界を救うのは何時でも出来る、だろ?"
+
+msgid "QUITMSG13"
+msgstr "ネット切断している暇は無いだろ!"
+
+msgid "QUITMSG14"
+msgstr "HacXを忘れんじゃねえぞ、な!"
+
+msgid "OB_SUICIDE"
+msgstr "%o はこの宇宙から消滅した。"
+
+msgid "OB_FALLING"
+msgstr "%o はカンザス州程のクレーターを生成した。"
+
+msgid "OB_CRUSH"
+msgstr "%o は人肉パンケーキになった。"
+
+msgid "OB_EXIT"
+msgstr "%o は逃げ出そうとした。"
+
+msgid "OB_WATER"
+msgstr "%o はカナヅチだった。"
+
+msgid "OB_SLIME"
+msgstr "%o はニュークリアーと化した。"
+
+msgid "OB_LAVA"
+msgstr "%o は熱湯風呂に浸かった。"
+
+msgid "OB_BARREL"
+msgstr "%o はニトロを過剰摂取した。"
+
+msgid "OB_SPLASH"
+msgstr "%o は細かい粒をぶち撒けられた。"
+
+msgid "OB_R_SPLASH"
+msgstr "%o は %g が裏返しになるのを望んだ。"
+
+msgid "OB_ROCKET"
+msgstr "%o は %g が裏返しになるのを望んだ。"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o はこの宇宙から消滅した。"
+
+msgid "OB_THUG"
+msgstr "%o はもはや優性種ではなくなった。"
+
+msgid "OB_ANDROID"
+msgstr "%o は違うマシンに接続してしまった。"
+
+msgid "OB_MONSTRUCT"
+msgstr "%o は己に サイバー-ジョッキー-デリエレ-キッキング を取り入れた。"
+
+msgid "OB_ICE"
+msgstr "%o は冷えた。"
+
+msgid "OB_BUZZER"
+msgstr "%o は少し賑やかになった。"
+
+msgid "OB_STEALTH"
+msgstr "%o はかなり衝撃的な開発を発見した。"
+
+msgid "OB_DMAN"
+msgstr "%o はサイバースペースに消去された。"
+
+msgid "OB_GLASS"
+msgstr "%o は自身にグラスジョーを取り付けた。"
+
+msgid "OB_MANIAC"
+msgstr "%o のメンバーシップ生活は終幕した。"
+
+msgid "OB_MANIACHIT"
+msgstr "%o は計算外の乱数で死んだ。"
+
+msgid "OB_TERMIN"
+msgstr "%o はファム ファタル フリークに揚げられた。"
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o は少し異性に成り果てた。"
+
+msgid "OB_REPLI"
+msgstr "%o は古い友人に別れを告げた。"
+
+msgid "OB_REPLIHIT"
+msgstr "%o は古い友人に背中を刺された。"
+
+msgid "OB_PHAGE"
+msgstr "%o は自然淘汰によって除草された。"
+
+msgid "OB_THORN"
+msgstr "%o は棘のある死から逃げられなかった。"
+
+msgid "OB_SUMATIC"
+msgstr "%o は股座にスモウ ハリテを食らった。"
+
+msgid "OB_GENIE"
+msgstr "%o は %p に三願を望まなかった。"
+
+msgid "OB_MINE"
+msgstr "%o は地雷を愛撫しようとした。"
+
+msgid "OB_MPKICK"
+msgstr "%o の顔に %k のブルースリーキックを当てた。"
+
+msgid "OB_MPREZNATOR"
+msgstr "%o は %k の衝撃的な啓示によりバラバラになった。"
+
+msgid "OB_MPXPISTOL"
+msgstr "%o は %k の懲罰を二度受けた。"
+
+msgid "OB_MPTAZER"
+msgstr "%o は %k のショックスティックでシャットダウンした。"
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o は %k の冷めた表情で凍った。"
+
+msgid "OB_MPUZI"
+msgstr "%o はギャングの様な %k に蜂の巣にされた。"
+
+msgid "OB_MPZOOKA"
+msgstr "%o は %k のフォトンボムを食らった。"
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o は %k によって蛍光灯にされた。"
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o は %k のにより反物質に変換された。"
+
+msgid "OB_MPNUKE"
+msgstr "%o は %k の核を飲み干した。"
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o は %k の虐殺ごっこの犠牲者になった。"
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o は %k に裏返しにされた。"
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o の原子構造は分解された。"
+
+msgid "OB_DEFAULT"
+msgstr "%o の有効期限が自発的に切れた"
+
+msgid "GOTNUKER"
+msgstr "NUEKR を奪った! 覚悟しろ!"
+
+msgid "GOTUZI"
+msgstr "UZI をゲットした!!"
+
+msgid "GOTREZNATOR"
+msgstr "HOIGレジネイター - ぶっ潰してやれ"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "フォトン'ゾーカ をゲットした!"
+
+msgid "GOTBIGSTICK"
+msgstr "ビッグスティック を手に取った!"
+
+msgid "GOTTAZER"
+msgstr "テイザー をゲットした!"
+
+msgid "GOTCRYOGUN"
+msgstr "クライォガン を奪った! フリーズ!"
+
+msgid "GOTROUNDS"
+msgstr "幾つかのラウンド を奪った!"
+
+msgid "GOTROUNDSCASE"
+msgstr "ケースのラウンド を奪った!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "トルペード を奪った!"
+
+msgid "GOTTORPEDOS"
+msgstr "トルペードのケース を奪った!"
+
+msgid "GOTMOLECULES"
+msgstr "モーレキュールモヂュール を奪った!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "タンク満タンのモーレキュール を奪った!"
+
+msgid "GOTCARTRIDGES"
+msgstr "残弾のカートリッジ を奪った!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "カートリッジケース を奪った!"
+
+msgid "GOTVALISE"
+msgstr "代物を詰めたバリス を奪った!"
+
+msgid "GOTFORCEFIELD"
+msgstr "フォースフィールド!"
+
+msgid "GOTMICROTEL"
+msgstr "007マイクロテル"
+
+msgid "GOTENKBLIND"
+msgstr "EnKブラインドみてえだ!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "バルカンラバーブーツ!"
+
+msgid "GOTSIARRAY"
+msgstr "SIアーレイ マッピング!"
+
+msgid "GOTINFRARED"
+msgstr "赤外線バイザー!"
+
+msgid "GOTINHALER"
+msgstr "深呼吸だ、インヘイラー!"
+
+msgid "GOTHYPONEED"
+msgstr "ハイポで ヒデルギン をキメた!"
+
+msgid "GOTHYPO"
+msgstr "ハイポ を奪った!"
+
+msgid "GOTKEYCARD"
+msgstr "キーカードを見つけた!"
+
+msgid "GOTCKEY"
+msgstr "C-keyを見つけた!"
+
+msgid "GOTPASSWORD"
+msgstr "パスワードを見つけた!"
+
+msgid "GOTBLUEZKEY"
+msgstr "ブルー Z-Key を見つけた!"
+
+msgid "GOTYELWZKEY"
+msgstr "イエローZ-Key を見つけた!"
+
+msgid "GOTREDZKEY"
+msgstr "レッド Z-Key を見つけた!"
+
+msgid "GOTBODYARMOR"
+msgstr "ボディーアーマー!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "セントロフェノキシン!"
+
+msgid "GOTKEVLARVEST"
+msgstr "ケブラーベスト を奪った!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "スーパーケブラーベスト を奪った!"
+
+msgid "GOTMICROKIT"
+msgstr "マイクロキット を奪った!"
+
+msgid "GOTDAMPENER"
+msgstr "ダンプナー を奪った!"
+
+msgid "PD_CKEY"
+msgstr "アクセスには C-key が必要だ!"
+
+msgid "PD_KEYCARD"
+msgstr "アクセスには キーカード が必要だ!"
+
+msgid "PD_PASSWORD"
+msgstr "アクセスには パスワード が必要だ!"
+
+msgid "PD_BLUEZKEY"
+msgstr "アクセスには ブルーZ-key が必要だ!"
+
+msgid "PD_REDZKEY"
+msgstr "アクセスには レッドZ-key が必要だ!"
+
+msgid "PD_YELWZKEY"
+msgstr "アクセスには イエローZ-key が必要だ!"
+
+msgid "X1TEXT"
+msgstr ""
+"20ミリの金塊にこの重大な事態の価値を見出せない、\n"
+"それとも、ハッカーの仕業か?\n"
+"幻覚のピクニックってワケでもねえ!\n"
+"グロいバイオミュータントと人間の仲間が食肉のように\n"
+"天井から吊るされている。\n"
+"\n"
+"GENIEとは一体何なんだ? 少なくともこれまで\n"
+"ハックしたことのないコンピューターだってことだ!\n"
+"\n"
+"次のターミナルを抜け、c-spaceに乗り込み、\n"
+"ミュータントのダニ共を切り裂いて、このふざけた\n"
+"場所から抜け出すんだ!"
+
+msgid "X2TEXT"
+msgstr ""
+"皆何処に行った?!\n"
+"\n"
+"パリはゴーストタウンと化した、突然変異したバグ共が\n"
+"未解決なまま自分以外の住民はいなくなった。\n"
+"\n"
+"マジな敵対にぶち当たった。野郎、こんなバグ共と戦えと!\n"
+"幸運なことに先行きの見えない事態ではない。\n"
+"だがここでインフォーマティクスとサブコミッティが\n"
+"望んでいた物を探し当てた。厄介なことにな!\n"
+"\n"
+"人の神経液をバグ共が餌にしている! 近くに転がっていた\n"
+"者が損壊していたのも納得がいく、サブコミッティに\n"
+"報告しなければ。背中に気をつけながらな...\n"
+
+msgid "X3TEXT"
+msgstr ""
+"俺の知っている文明は崩壊した!\n"
+"\n"
+"友も。家族も。住民も。まともなヤツは何もかも\n"
+"消え失せた。\n"
+"\n"
+"だがまだ一つ残っている...GENIE!\n"
+"このまま銀河の終焉を迎えたらミュータントのクソになる!\n"
+"それだけは御免だ!\n"
+"\n"
+"それで金は? 有り得ん、これはフリーだ。\n"
+"\n"
+"...だがこれ以上続くことはない..."
+
+msgid "X5TEXT"
+msgstr ""
+"俺は生きている!\n"
+"\n"
+"何か勝ち目はあるか、ハッカー?!\n"
+"バグ共がそこいらを蠢いている。\n"
+"サブコミッティに繋がらないのは、侵入されたと\n"
+"思っていいだろう。\n"
+"\n"
+"俺は...また一人だ。"
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmpコーポ"
+
+msgid "TXT_HACXMAP02"
+msgstr "トンネル タウン"
+
+msgid "TXT_HACXMAP03"
+msgstr "ラバ アネックス"
+
+msgid "TXT_HACXMAP04"
+msgstr "アルカトラズ"
+
+msgid "TXT_HACXMAP05"
+msgstr "サイバーサークル"
+
+msgid "TXT_HACXMAP06"
+msgstr "デジ - オータ"
+
+msgid "TXT_HACXMAP07"
+msgstr "ザ - グレート ウォール"
+
+msgid "TXT_HACXMAP08"
+msgstr "ガーデン オブ デライト"
+
+msgid "TXT_HACXMAP09"
+msgstr "ヒドゥン フォートレス"
+
+msgid "TXT_HACXMAP10"
+msgstr "アナーキスト ドリーム"
+
+msgid "TXT_HACXMAP11"
+msgstr "ワレラノ ノータス"
+
+msgid "TXT_HACXMAP12"
+msgstr "ゴシック ガントレット"
+
+msgid "TXT_HACXMAP13"
+msgstr "ザ・サワー"
+
+msgid "TXT_HACXMAP14"
+msgstr "トレード ウォーズ"
+
+msgid "TXT_HACXMAP15"
+msgstr "Enkタチ ノ トワイライト"
+
+msgid "TXT_HACXMAP16"
+msgstr "プロテアン サイベックス"
+
+msgid "TXT_HACXMAP17"
+msgstr "リバー オブ ブラッド"
+
+msgid "TXT_HACXMAP18"
+msgstr "ビザロ"
+
+msgid "TXT_HACXMAP19"
+msgstr "ザ・ウォー ルーム"
+
+msgid "TXT_HACXMAP20"
+msgstr "シンニュウシャ アリ!"
+
+msgid "TXT_HACXMAP31"
+msgstr "ダスキン ルーム"
+
+msgid "STSTR_CLEV"
+msgstr "今到着した..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...ケツまくれ!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "V,I,S,R,A,Lのどれだ?"
+
+msgid "STSTR_BEHOLDX"
+msgstr "マジになったぜ!"
+
+msgid "STSTR_NCON"
+msgstr "サイバースライサーモード オン"
+
+msgid "STSTR_NCOFF"
+msgstr "サイバースライサーモード オフ"
+
+msgid "STSTR_NOMUS"
+msgstr "選択: 不可能"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "音量を上げろよ"
+
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Twitch n'Killモード"
+
+msgid "STSTR_FAADDED"
+msgstr "好きにしろ、ハッカー。"
+
+msgid "STSTR_DQDON"
+msgstr "サイバーポテンスモード オン"
+
+msgid "STSTR_DQDOFF"
+msgstr "サイバーポテンスモード オフ"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "トラッキング オン"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "トラッキング オフ"
+
+msgid "DOSY"
+msgstr "-Y でトンズラだ!-"
+
+msgid "ENDGAME"
+msgstr ""
+"お前はイカれた社会不適合者だろ?\n"
+"あぁ?イエスかノーか言え!"
+
+msgid "NIGHTMARE"
+msgstr ""
+"本気か?\n"
+"アンタの手に負えないぞ、ハッカー!\n"
+"\n"
+"死にたきゃYを押せ。"
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"この名称で上書きするのか?\n"
+"\n"
+"'%s'\n"
+"\n"
+"YかNで答えろ。"
+
+msgid "QLPROMPT"
+msgstr ""
+"この名称をすぐロードするのか?\n"
+"\n"
+"'%s'\n"
+"\n"
+"YかNで答えろ。"
+
+msgid "CC_THUG"
+msgstr "チンピラ"
+
+msgid "CC_ANDROID"
+msgstr "アンドロイド"
+
+msgid "CC_ICE"
+msgstr "アイス"
+
+msgid "CC_BUZZER"
+msgstr "ブザー"
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr "ファージ"
+
+msgid "CC_MONSTRUCT"
+msgstr "モンストラクト"
+
+msgid "CC_MECH"
+msgstr "メカマニア"
+
+msgid "CC_TERMI"
+msgstr "ターミネイトリクス"
+
+msgid "CC_THORN"
+msgstr "ソーンツィン"
+
+msgid "CC_MAJONG"
+msgstr "マージャン 7"
+
+msgid "CC_HERO"
+msgstr "ダン エブァンガー"
+
+msgid "SKILL_BABY"
+msgstr "撃たないでくれ!"
+
+msgid "SKILL_EASY"
+msgstr "キメてくれ!"
+
+msgid "SKILL_NORMAL"
+msgstr "ばらまいてやれ!"
+
+msgid "SKILL_HARD"
+msgstr "とっととくたばれ!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "イカれてやがる!"

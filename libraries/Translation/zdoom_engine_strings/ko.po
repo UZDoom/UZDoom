@@ -1,0 +1,5188 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ko\n"
+
+msgid "PRESSKEY"
+msgstr "키를 누르시오."
+
+msgid "SECRETMESSAGE"
+msgstr "비밀 발견!"
+
+msgid "D_DEVSTR"
+msgstr "쓸모없는 모드 켬."
+
+msgid "QUITMSG"
+msgstr "진짜 이 개쩌는 게임을 꺼버릴려고?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"멀티플레이 중엔 게임을 불러올 수 없습니다!\n"
+"\n"
+"키를 누르시오."
+
+msgid "QLOADNET"
+msgstr ""
+"멀티플레이 중엔 빠른 불러오기를 할 수 없습니다!\n"
+"\n"
+"키를 누르시오."
+
+msgid "QSAVESPOT"
+msgstr ""
+"멀티플레이 중엔 빠른 저장을 할 수 없습니다!\n"
+"\n"
+"키를 누르시오."
+
+msgid "NEWGAME"
+msgstr ""
+"멀티플레이 중엔 새로운 게임을 시작할 수 없습니다.\n"
+"\n"
+"키를 누르시오."
+
+msgid "NIGHTMARE"
+msgstr ""
+"진심입니까? 이 난이도는 매우 어렵습니다.\n"
+"\n"
+"Y키 또는 N키를 누르시오."
+
+msgid "SWSTRING"
+msgstr ""
+"이 게임은 셰어웨어 버전입니다.\n"
+"\n"
+"전 3편을 플레이하기 위해서는 구매가 필요합니다.\n"
+"\n"
+"키를 누르시오."
+
+msgid "NETEND"
+msgstr ""
+"멀티플레이를 종료할 수 없습니다!\n"
+"\n"
+"키를 누르시오."
+
+msgid "ENDGAME"
+msgstr ""
+"게임을 정말로 종료하시겠습니까?\n"
+"\n"
+"Y키 또는 N키를 누르시오."
+
+msgid "RAVENQUITMSG"
+msgstr "정말 종료하시겠습니까?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "정품 버전에서만 가능합니다"
+
+msgid "DOSY"
+msgstr "(Y을 누르시면 종료합니다)"
+
+msgid "QUITMSG1"
+msgstr "부디 나가지 말아줘, 아직 죽여야 할 악마들이 남아있단 말이야!"
+
+msgid "QUITMSG2"
+msgstr "그냥 나가자고- 유혈사태가 곧 시작될 것 같으니!"
+
+msgid "QUITMSG3"
+msgstr "만약 내가 너였다면 나가지 않았을 거야. DOS는 정말 최악이거든."
+
+msgid "QUITMSG4"
+msgstr "나보다 DOS가 훨씬 좋다 이 말씀이지, 그런 거지?"
+
+msgid "QUITMSG5"
+msgstr "나가지 마- 저 구석에 악마가 숨어있다고!"
+
+msgid "QUITMSG6"
+msgstr "있지, 만약 네가 다시 돌아온다면 너를 아예 구워버릴 거다."
+
+msgid "QUITMSG7"
+msgstr "그럼 나가버려. 난 신경 안 써."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr "나가시겠다? 그럼, 당신은 8번째 조각을 잃었다!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr "나가지 말아줘, 지금 차원을 넘나드는 쉠블러가 DOS 프롬프트에서 기다리고 있거든!"
+
+msgid "QUITMSG10"
+msgstr "당장 나가버리고 너의 후진 프로그램들이나 만지작거리시지."
+
+msgid "QUITMSG11"
+msgstr "만약 내가 너의 상사였다면, 지금 당장 데스매치를 열었을 거다!"
+
+msgid "QUITMSG12"
+msgstr "이봐, 친구. 지금 여기서 나가버리면 죽여서 얻은 점수가 다 초기화될걸?"
+
+msgid "QUITMSG13"
+msgstr "그냥 나가봐. 돌아올 때까지 방망이를 들고 기다릴테니까."
+
+msgid "QUITMSG14"
+msgstr "나간다는 이유로 싸대기를 날리지 않는 게 다행인 줄 알아."
+
+msgid "QUITMSG15"
+msgstr "어딜 가는 거야?! 저항군은 어쩌고?"
+
+msgid "QUITMSG16"
+msgstr "학살중절이라... 놀리는구먼!"
+
+msgid "QUITMSG17"
+msgstr "하지만 넌 희망이야- 나의 유일한 기회라고!!"
+
+msgid "QUITMSG18"
+msgstr "그 누구도 블랙버드를 내 버릴 수 없지."
+
+msgid "QUITMSG19"
+msgstr "난 네가 다를 줄 알았는데..."
+
+msgid "QUITMSG20"
+msgstr "그래그래 알았다! 그럼 그냥 뛰고 죽이기나 해!"
+
+msgid "QUITMSG21"
+msgstr "나갈 수는 있겠지만... 숨을 수는 없을 거다..."
+
+msgid "QUITMSG22"
+msgstr "헤에에, 무슨 일이야? 엄마가 저녁 먹으레?"
+
+msgid "QUITMSG23"
+msgstr "부디 종료하지 말아 주세요, 플레모이드들이 아직도 널려있단 말입니다!"
+
+msgid "QUITMSG24"
+msgstr "부디 포기하지 마시길- 플레모이드들이 그 순간 우세할 것입니다!"
+
+msgid "QUITMSG25"
+msgstr "지금 떠나지 말아 주세요. 우린 당신의 도움이 필요합니다!"
+
+msgid "QUITMSG26"
+msgstr "첵스(R) 한 박스를 뜯기 위해서 잠시 중단하는 거였으면 좋겠군요."
+
+msgid "QUITMSG27"
+msgstr "지금 그만두지 마세요! 우린 당신의 도움이 필요합니다!"
+
+msgid "QUITMSG28"
+msgstr "은하연합시리얼국을 위해서라도 부디 떠나지 말아 주시길 바랍니다!"
+
+msgid "QUITMSG29"
+msgstr "진정한 첵스(R)전사는 그렇게 빨리 포기하지 않을 것입니다!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "무언가를 집어냈다"
+
+msgid "PD_ANY"
+msgstr "어느 열쇠든 이 문을 열 수 있습니다"
+
+msgid "PD_ANYOBJ"
+msgstr "어느 열쇠든 이 물체를 작동 시킬 것입니다"
+
+msgid "PD_ALL3"
+msgstr "이 문을 열기 위해선 3 종류의 열쇠가 필요합니다"
+
+msgid "PD_ALL3O"
+msgstr "이 물체를 작동시키기 위해선 3 종류의 열쇠가 필요합니다"
+
+msgid "PD_ALL6"
+msgstr "이 문을 열기 위해선 6 종류의 열쇠가 필요합니다"
+
+msgid "PD_ALL6O"
+msgstr "이 물체를 작동시키기 위해선 6 종류의 열쇠가 필요합니다"
+
+msgid "PD_ALLKEYS"
+msgstr "모든 열쇠가 필요합니다"
+
+msgid "HUSTR_MSGU"
+msgstr "[메시지가 전달되지 않음]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "자기 혼자서 중얼거렸다"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "거기 누구 있나?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "자기 혼자서 벌벌 떨고 있다"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "횡설수설하기 시작했다"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "미치기 시작했다..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[메시지가 전달됨]"
+
+msgid "STSTR_MUS"
+msgstr "음악 전환"
+
+msgid "STSTR_NOMUS"
+msgstr "불가능한 선택입니다"
+
+msgid "STSTR_DQDON"
+msgstr "무미건조한 모드 켬"
+
+msgid "STSTR_DQDOFF"
+msgstr "무미건조한 모드 끔"
+
+msgid "STSTR_DQD2ON"
+msgstr "엄청나게 무미건조한 모드 켬"
+
+msgid "STSTR_DQD2OFF"
+msgstr "엄청나게 무미건조한 모드 끔"
+
+msgid "STSTR_KFAADDED"
+msgstr "아주 행복한 탄약 추가됨"
+
+msgid "STSTR_FAADDED"
+msgstr "탄약(열쇠 없이) 추가됨"
+
+msgid "STSTR_NCON"
+msgstr "노 클립 모드 켬"
+
+msgid "STSTR_NCOFF"
+msgstr "노 클립 모드 끔"
+
+msgid "STSTR_NC2ON"
+msgstr "노 클립 모드 2 켬"
+
+msgid "STSTR_NC2OFF"
+msgstr "노 클립 모드 2 끔"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "무적, 광전사, 투명, 보호복, 지도, 아니면 바이저"
+
+msgid "STSTR_BEHOLDX"
+msgstr "파워-업 전환됨"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... 후진 건 아니지만 - GM"
+
+msgid "STSTR_CLEV"
+msgstr "레벨 변경 중..."
+
+msgid "TXT_BUDDHAON"
+msgstr "부처 모드 켬"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "부처 모드 끔"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "나무 아미타불 모드 켬"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "나무 아미타불 모드 끔"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "파워 켬"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "파워 끔"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "체력 완전 회복"
+
+msgid "TXT_CHEATKEYS"
+msgstr "모든 열쇠"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "효과음 디버그 켬"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "효과음 디버그 끔"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "치트 쓸려고? 그럼 죽어야지!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "사기꾼놈! 너는 무기를 가질 자격이 없어!"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "프레임 속도 표시 켬"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "프레임 속도 표시 끔"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "얻었다"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "넌 미다스의 손을 얻었어 베이베!"
+
+msgid "TXT_GOTSTUFF"
+msgstr "무언가를 얻었다!"
+
+msgid "TXT_FREEZEON"
+msgstr "시간정지 켬"
+
+msgid "TXT_FREEZEOFF"
+msgstr "시간정지 끔"
+
+msgid "TXT_STRANGE"
+msgstr "뭔가 이상한 기분이..."
+
+msgid "TXT_STRANGER"
+msgstr "기분이 더더욱 이상해졌다."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "자기 자신처럼 생각하게 됐다."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "납 부츠 켬"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "납 부츠 끔"
+
+msgid "TXT_LIGHTER"
+msgstr "가벼운 느낌이 든다"
+
+msgid "TXT_GRAVITY"
+msgstr "중력이 당신을 붙잡았다"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "적 표적 감지 켬"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "적 표적 감지 끔"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "공포에 떨어라!"
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "오거 갑옷은 이제 없다."
+
+msgid "TXT_CHASECAM_ON"
+msgstr "3인칭 카메라 켬"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "3인칭 카메라 끔"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 명의 나쁜놈이 사살됨."
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d 명의 나쁜놈들이 사살됨."
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 마리의 몬스터가 사살됨."
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d 마리의 몬스터들이 사살됨."
+
+msgid "TXT_NO_RESURRECT"
+msgstr "부활할 수 없습니다. 플레이어는 더 이상 육체와 연결돼있지 않습니다."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "모든 유물들!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "게임 밖에서 무엇을 죽이고 싶습니까?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "플레이어 정지 속성이 꺼졌습니다."
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "추적 모드 끔"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "추적 모드 켬"
+
+msgid "AMSTR_GRIDON"
+msgstr "격자 켬"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "격자 끔"
+
+msgid "AMSTR_TEXON"
+msgstr "텍스쳐 모드 켬"
+
+msgid "AMSTR_TEXOFF"
+msgstr "텍스쳐 모드 끔"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "지점 추가"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "모든 지점 지워짐"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "킬제한에 도달했습니다."
+
+msgid "TXT_TIMELIMIT"
+msgstr "시간제한에 도달했습니다."
+
+msgid "SPREEKILLSELF"
+msgstr "%o 이(가) 잘 나가려던 참에 자살했습니다!"
+
+msgid "SPREEOVER"
+msgstr "%k 이(가) %o 의 연속 킬을 처단했습니다"
+
+msgid "SPREE5"
+msgstr "%k 연속 킬!"
+
+msgid "SPREE10"
+msgstr "%k 이(가) 미쳐 날뛰고 있습니다!"
+
+msgid "SPREE15"
+msgstr "%k 이(가) 우세하고 있습니다!"
+
+msgid "SPREE20"
+msgstr "%k 을(를) 막을 수없습니다!"
+
+msgid "SPREE25"
+msgstr "%k 은(는) 신적입니다! "
+
+msgid "MULTI2"
+msgstr "더블 킬!"
+
+msgid "MULTI3"
+msgstr "멀티 킬!"
+
+msgid "MULTI4"
+msgstr "울트라 킬!"
+
+msgid "MULTI5"
+msgstr "몬스터 킬!"
+
+msgid "SCORE_BONUS"
+msgstr "보너스"
+
+msgid "SCORE_COLOR"
+msgstr "색상"
+
+msgid "SCORE_SECRET"
+msgstr "밝혀낸 비밀"
+
+msgid "SCORE_NAME"
+msgstr "이름"
+
+msgid "SCORE_DELAY"
+msgstr "핑 (밀리초당)"
+
+msgid "SCORE_FRAGS"
+msgstr "플레이어 킬수"
+
+msgid "SCORE_DEATHS"
+msgstr "사망한 횟수"
+
+msgid "SCORE_OTHER"
+msgstr ""
+
+msgid "SCORE_MISSED"
+msgstr "놓친 수"
+
+msgid "SCORE_TOTAL"
+msgstr "총점"
+
+msgid "SCORE_LVLTIME"
+msgstr "레벨 시간"
+
+msgid "TXT_IMKILLS"
+msgstr "킬수"
+
+msgid "TXT_IMITEMS"
+msgstr "획득한 아이템"
+
+msgid "TXT_IMSECRETS"
+msgstr "밝혀낸 비밀"
+
+msgid "TXT_IMTIME"
+msgstr "소모한 시간"
+
+msgid "TXT_IMPAR"
+msgstr "기준 시간"
+
+msgid "WI_FINISHED"
+msgstr "완료"
+
+msgid "WI_ENTERING"
+msgstr "입장"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "입장합니다:"
+
+msgid "AM_MONSTERS"
+msgstr "죽인 적들:"
+
+msgid "AM_SECRETS"
+msgstr "찾은 비밀:"
+
+msgid "AM_ITEMS"
+msgstr "얻은 아이템:"
+
+msgid "OB_SUICIDE"
+msgstr "%o 은(는) 자살했다."
+
+msgid "OB_FALLING"
+msgstr "%o 은(는) 높은 곳에서 떨어져 사망했다."
+
+msgid "OB_CRUSH"
+msgstr "%o 은(는) 뭉게졌다."
+
+msgid "OB_EXIT"
+msgstr "%o 은(는) 나가려고 발버둥 쳤다."
+
+msgid "OB_WATER"
+msgstr "%o 은(는) 익사했다."
+
+msgid "OB_SLIME"
+msgstr "%o 은(는) 돌연사를 당했다."
+
+msgid "OB_LAVA"
+msgstr "%o 은(는) 녹아버렸다."
+
+msgid "OB_BARREL"
+msgstr "%o 은(는) 폭사했다."
+
+msgid "OB_SPLASH"
+msgstr "%o 은(는) 위험한 곳에 서 있었다."
+
+msgid "OB_R_SPLASH"
+msgstr "%o 은(는) 좀 더 떨어져야만 했다."
+
+msgid "OB_ROCKET"
+msgstr "%o 은(는) 더 멀리 떨어져야만 했다."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o 은(는) 자멸했다."
+
+msgid "OB_VOODOO"
+msgstr "%o 은(는) 부두 마법의 저주를 받았다."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o 은(는) %k 에 의해 텔레프랙을 당했다."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o 은(는) 텔레프랙을 당했다."
+
+msgid "OB_DEFAULT"
+msgstr "%o 은(는) 죽었다."
+
+msgid "OB_MPDEFAULT"
+msgstr "%o 은(는) %k 에 의해 죽임을 당했다."
+
+msgid "OB_FRIENDLY1"
+msgstr "%o 은(는) 자신의 팀원을 죽였다."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%o 은(는) 자신의 안경을 확인했다."
+
+msgid "OB_FRIENDLY3"
+msgstr "%o 은(는) 의도치 않게 상대방 팀을 도왔다."
+
+msgid "OB_FRIENDLY4"
+msgstr "%o 은(는) 친구를 원치 않았다."
+
+msgid "GOTARMOR"
+msgstr "방호구를 얻었다."
+
+msgid "GOTMEGA"
+msgstr "메가아머를 얻었다!"
+
+msgid "GOTHTHBONUS"
+msgstr "체력 보너스를 얻었다."
+
+msgid "GOTARMBONUS"
+msgstr "보호 보너스를 얻었다."
+
+msgid "GOTSTIM"
+msgstr "스팀팩을 사용했다."
+
+msgid "GOTMEDINEED"
+msgstr "메디킷을 필요한 순간에 사용했다!"
+
+msgid "GOTMEDIKIT"
+msgstr "메디킷을 사용했다."
+
+msgid "GOTSUPER"
+msgstr "슈퍼차지!"
+
+msgid "GOTBLUECARD"
+msgstr "청색 키카드를 얻었다."
+
+msgid "GOTYELWCARD"
+msgstr "황색 키카드를 얻었다."
+
+msgid "GOTREDCARD"
+msgstr "적색 키카드를 얻었다."
+
+msgid "GOTBLUESKUL"
+msgstr "청색 해골열쇠를 얻었다."
+
+msgid "GOTYELWSKUL"
+msgstr "황색 해골열쇠를 얻었다."
+
+msgid "GOTREDSKUL"
+msgstr "적색 해골열쇠를 얻었다."
+
+msgid "GOTINVUL"
+msgstr "무적!"
+
+msgid "GOTBERSERK"
+msgstr "광전사!"
+
+msgid "GOTINVIS"
+msgstr "일시적 투명 효과!"
+
+msgid "GOTSUIT"
+msgstr "방사능 보호복"
+
+msgid "GOTMAP"
+msgstr "구역 지도 컴퓨터"
+
+msgid "GOTVISOR"
+msgstr "야간투시 바이저"
+
+msgid "GOTMSPHERE"
+msgstr "메가스피어!"
+
+msgid "GOTCLIP"
+msgstr "탄창을 얻었다."
+
+msgid "GOTCLIPBOX"
+msgstr "실탄 탄통을 얻었다."
+
+msgid "GOTROCKET"
+msgstr "로켓을 얻었다."
+
+msgid "GOTROCKBOX"
+msgstr "로켓 상자를 얻었다."
+
+msgid "GOTCELL"
+msgstr "에너지 셀을 얻었다."
+
+msgid "GOTCELLBOX"
+msgstr "대용량 에너지 셀을 얻었다."
+
+msgid "GOTSHELLS"
+msgstr "샷건 쉘 4개를 얻었다."
+
+msgid "GOTSHELLBOX"
+msgstr "샷건 쉘 보관함을 얻었다."
+
+msgid "GOTBACKPACK"
+msgstr "탄약이 들어있는 배낭을 얻었다!"
+
+msgid "GOTBFG9000"
+msgstr "당신은 BFG9000을 습득했다! 오우 예."
+
+msgid "GOTCHAINGUN"
+msgstr "당신은 체인건을 습득했다!"
+
+msgid "GOTCHAINSAW"
+msgstr "당신은 전기톱을 습득했다! 도륙할 시간!"
+
+msgid "GOTLAUNCHER"
+msgstr "당신은 로켓 런쳐를 습득했다!"
+
+msgid "GOTPLASMA"
+msgstr "당신은 플라즈마 건을 습득했다!"
+
+msgid "GOTSHOTGUN"
+msgstr "당신은 샷건을 습득했다!"
+
+msgid "GOTSHOTGUN2"
+msgstr "당신은 슈퍼 샷건을 습득했다!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "권총을 주웠다."
+
+msgid "BETA_BONUS1"
+msgstr "당신은 마귀내린 단검을 얻었다."
+
+msgid "BETA_BONUS2"
+msgstr "당신은 해골상자를 얻었다."
+
+msgid "BETA_BONUS3"
+msgstr "당신은 사악한 홀을 얻었다."
+
+msgid "BETA_BONUS4"
+msgstr "당신은 불경스러운 성서를 얻었다."
+
+msgid "PD_BLUEO"
+msgstr "이 물체를 작동시키기 위해선 청색 열쇠가 필요합니다"
+
+msgid "PD_REDO"
+msgstr "이 물체를 작동시키기 위해선 적색 열쇠가 필요합니다"
+
+msgid "PD_YELLOWO"
+msgstr "이 물체를 작동시키기 위해선 황색 열쇠가 필요합니다"
+
+msgid "PD_BLUEK"
+msgstr "이 문을 열기 위해선 청색 열쇠가 필요합니다"
+
+msgid "PD_REDK"
+msgstr "이 문을 열기 위해선 적색 열쇠가 필요합니다"
+
+msgid "PD_YELLOWK"
+msgstr "이 문을 열기 위해선 황색 열쇠가 필요합니다"
+
+msgid "PD_BLUECO"
+msgstr "이 물체를 작동시키기 위해선 청색 키카드가 필요합니다"
+
+msgid "PD_REDCO"
+msgstr "이 물체를 작동시키기 위해선 적색 키카드가 필요합니다"
+
+msgid "PD_YELLOWCO"
+msgstr "이 물체를 작동시키기 위해선 황색 키카드가 필요합니다"
+
+msgid "PD_BLUESO"
+msgstr "이 물체를 작동시키기 위해선 청색 해골이 필요합니다"
+
+msgid "PD_REDSO"
+msgstr "이 물체를 작동시키기 위해선 적색 해골이 필요합니다"
+
+msgid "PD_YELLOWSO"
+msgstr "이 물체를 작동시키기 위해선 황색 해골이 필요합니다"
+
+msgid "PD_BLUEC"
+msgstr "이 문을 열기 위해선 청색 키카드가 필요합니다"
+
+msgid "PD_REDC"
+msgstr "이 문을 열기 위해선 적색 키카드가 필요합니다"
+
+msgid "PD_YELLOWC"
+msgstr "이 문을 열기 위해선 황색 키카드가 필요합니다"
+
+msgid "PD_BLUES"
+msgstr "이 문을 열기 위해선 청색 해골이 필요합니다"
+
+msgid "PD_REDS"
+msgstr "이 문을 열기 위해선 적색 해골이 필요합니다"
+
+msgid "PD_YELLOWS"
+msgstr "이 문을 열기 위해선 황색 해골이 필요합니다"
+
+msgid "CC_ZOMBIE"
+msgstr "좀비맨"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "샷건 가이"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "헤비 웨폰 듀드"
+
+msgid "CC_IMP"
+msgstr "임프"
+
+msgid "CC_DEMON"
+msgstr "데몬"
+
+msgid "CC_LOST"
+msgstr "로스트 소울"
+
+msgid "CC_CACO"
+msgstr "카코데몬"
+
+msgid "CC_HELL"
+msgstr "헬 나이트"
+
+msgid "CC_BARON"
+msgstr "바론 오브 헬"
+
+msgid "CC_ARACH"
+msgstr "아라크노트론"
+
+msgid "CC_PAIN"
+msgstr "페인 엘리멘탈"
+
+msgid "CC_REVEN"
+msgstr "레버넌트"
+
+msgid "CC_MANCU"
+msgstr "맨큐버스"
+
+msgid "CC_ARCH"
+msgstr "아크-바일"
+
+msgid "CC_SPIDER"
+msgstr "스파이더 마스터마인드"
+
+msgid "CC_CYBER"
+msgstr "사이버데몬"
+
+msgid "CC_HERO"
+msgstr "우리들의 영웅"
+
+msgid "FN_SHOTGUN"
+msgstr "샷건 가이"
+
+msgid "FN_HEAVY"
+msgstr "체인거너"
+
+msgid "FN_SPECTRE"
+msgstr "스펙터"
+
+msgid "FN_SPIDER"
+msgstr "스파이더 마스터마인드"
+
+msgid "FN_CYBER"
+msgstr "사이버데몬"
+
+msgid "FN_WOLFSS"
+msgstr "나치"
+
+msgid "FN_DOG"
+msgstr "개"
+
+msgid "TAG_FIST"
+msgstr "너클"
+
+msgid "TAG_CHAINSAW"
+msgstr "전기톱"
+
+msgid "TAG_PISTOL"
+msgstr "권총"
+
+msgid "TAG_SHOTGUN"
+msgstr "샷건"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "슈퍼 샷건"
+
+msgid "TAG_CHAINGUN"
+msgstr "체인건"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "로켓 런쳐"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "플라즈마 라이플"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "권총 탄약"
+
+msgid "AMMO_SHELLS"
+msgstr "샷건 탄약"
+
+msgid "AMMO_ROCKETS"
+msgstr "로켓"
+
+msgid "AMMO_CELLS"
+msgstr "에너지 셀"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o 은(는) 아라크노트론을 봤다고 생각했다."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o 은(는) 아크-바일을 봤다고 생각했다."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o 은(는) 바론 오브 헬을 봤다고 생각했다."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o 은(는) 카코데몬을 봤다고 생각했다."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o 은(는) 체인거너를 봤다고 생각했다."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o 은(는) 데몬을 봤다고 생각했다."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o 은(는) 헬 나이트를 봤다고 생각했다."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o 은(는) 임프를 봤다고 생각했다."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o 은(는) 맨큐버스를 봤다고 생각했다."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o 은(는) 레버넌트를 봤다고 생각했다."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o 은(는) 샷건 가이를 봤다고 생각했다."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o 은(는) 좀비맨을 봤다고 생각했다."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o 은(는) 레버넌트에게 맞아 죽었다."
+
+msgid "OB_IMPHIT"
+msgstr "%o 은(는) 임프에게 찢겨 죽었다."
+
+msgid "OB_CACOHIT"
+msgstr "%o 은(는) 카코데몬과 가까웠다."
+
+msgid "OB_DEMONHIT"
+msgstr "%o 은(는) 데몬에게 물렸다."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o 은(는) 스펙터에게 잡아먹혔다."
+
+msgid "OB_BARONHIT"
+msgstr "%o 은(는) 바론 오브 헬에게 뜯겨 죽었다."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o 은(는) 헬 나이트에게 도륙당했다."
+
+msgid "OB_ZOMBIE"
+msgstr "%o 은(는) 좀비맨에게 죽었다."
+
+msgid "OB_SHOTGUY"
+msgstr "%o 은(는) 서전트에게 총을 맞았다."
+
+msgid "OB_VILE"
+msgstr "%o 은(는) 아크-바일에 의해 소각되었다."
+
+msgid "OB_UNDEAD"
+msgstr "%o 은(는) 레버넌트의 화염구를 피하지 못했다."
+
+msgid "OB_FATSO"
+msgstr "%o 은(는) 맨큐버스에게 짓이겨졌다."
+
+msgid "OB_CHAINGUY"
+msgstr "%o 은(는) 체인거너에 의해 벌집이 됐다."
+
+msgid "OB_SKULL"
+msgstr "%o 은(는) 로스트 소울을 보고 깜짝 놀랐다."
+
+msgid "OB_IMP"
+msgstr "%o 은(는) 임프에게 불태워졌다."
+
+msgid "OB_CACO"
+msgstr "%o 은(는) 카코데몬에게 엄습 당했다."
+
+msgid "OB_BARON"
+msgstr "%o 은(는) 바론 오브 헬에게 상처받았다."
+
+msgid "OB_KNIGHT"
+msgstr "%o 은(는) 헬 나이트에게 갈라졌다."
+
+msgid "OB_SPIDER"
+msgstr "%o 은(는) 거미악마의 무자비함을 느꼈다."
+
+msgid "OB_BABY"
+msgstr "%o 은(는) 아라크노트론이 %o를(을) 죽이도록 놔두었다."
+
+msgid "OB_CYBORG"
+msgstr "%o 은(는) 사이버데몬에 의해 산산조각이 났다."
+
+msgid "OB_WOLFSS"
+msgstr "%o 은(는) 나치를 만났다."
+
+msgid "OB_DOG"
+msgstr "%o 은(는) 개한테 으스러졌다."
+
+msgid "OB_MPFIST"
+msgstr "%o 은(는) %k 의 주먹을 물었다."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o 은(는) %k 의 전기톱에 갈렸다."
+
+msgid "OB_MPPISTOL"
+msgstr "%o 은(는) %k 의 권총에 간지럼을 탔다."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o 은(는) %k 의 붐스틱에 꽂혔다."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o 은(는) %k 의 슈퍼 샷건에 의해 터졌다."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o 은(는) %k 의 체인건에 의해 으깨졌다."
+
+msgid "OB_MPROCKET"
+msgstr "%o 은(는) %k 의 로켓을 탔다."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o 은(는) %k 의 로켓 폭발을 거의 피했다."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o 은(는) %k 의 플라즈마 건에 의해 융해되었다."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o 은(는) %k 의 BFG덕에 산산조각 났다."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o 은(는) %k 의 BFG의 일격으로부터 피할 수 없었다."
+
+msgid "OB_RAILGUN"
+msgstr "%o 은(는) %k 의 레일건에 관통당했다."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o 은(는) %k 의 BFG에 의해 타올랐다."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "청색 열쇠"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "황색 열쇠"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "녹색 열쇠"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "석영 플라스크"
+
+msgid "TXT_ARTIFLY"
+msgstr "분노의 날개"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "불멸의 반지"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "힘의 서"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "그림자 구체"
+
+msgid "TXT_ARTIEGG"
+msgstr "변신 알"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "신비한 항아리"
+
+msgid "TXT_ARTITORCH"
+msgstr "횃불"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "고대의 시한폭탄"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "혼돈의 장치"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "수정 약병"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "보관용 가방"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "은 방패"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "마력 강화 방패"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "두루마리 지도"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "지팡이 결정"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "결정 원석"
+
+msgid "TXT_AMMOMACE1"
+msgstr "철퇴 포탄"
+
+msgid "TXT_AMMOMACE2"
+msgstr "철퇴 포탄 무더기"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "유체 화살"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "유체 화살집"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "발톱 보주"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "기력의 보주"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "룬 조각"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "최상급 룬"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "화염 구슬"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "지옥불 구슬"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "황금 지팡이"
+
+msgid "TXT_WPNMACE"
+msgstr "투사철퇴"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "유체 쇠뇌"
+
+msgid "TXT_WPNBLASTER"
+msgstr "용발톱"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "지옥지팡이"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "불사조 지팡이"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "강령술사의 건틀릿"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "이 문을 열기 위해선 청색 열쇠가 필요하다"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "이 문을 열기 위해선 녹색 열쇠가 필요하다"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "이 문을 열기 위해선 황색 열쇠가 필요하다"
+
+msgid "FN_CHICKEN"
+msgstr "닭"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "웨어드래곤"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "세이버클로"
+
+msgid "FN_DSPARIL"
+msgstr "드'스파릴"
+
+msgid "FN_HERETICIMP"
+msgstr "가고일"
+
+msgid "FN_IRONLICH"
+msgstr "아이언 리치"
+
+msgid "FN_BONEKNIGHT"
+msgstr "언데드 전사"
+
+msgid "FN_MINOTAUR"
+msgstr "몰로타우어"
+
+msgid "FN_MUMMY"
+msgstr "골렘"
+
+msgid "FN_MUMMYLEADER"
+msgstr "니트로 골렘"
+
+msgid "FN_SNAKE"
+msgstr "오피디안"
+
+msgid "FN_WIZARD"
+msgstr "마법사"
+
+msgid "AMMO_GOLDWAND"
+msgstr "지팡이 결정"
+
+msgid "AMMO_CROSSBOW"
+msgstr "유체 화살"
+
+msgid "AMMO_BLASTER"
+msgstr "발톱 보주"
+
+msgid "AMMO_MACE"
+msgstr "철퇴 포탄"
+
+msgid "AMMO_SKULLROD"
+msgstr "룬 조각"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "화염 구슬"
+
+msgid "TAG_STAFF"
+msgstr "지팡이"
+
+msgid "TAG_GOLDWAND"
+msgstr "엘프 지팡이"
+
+msgid "OB_CHICKEN"
+msgstr "%o 은(는) 쪽팔리게 쪼여 죽었다."
+
+msgid "OB_BEAST"
+msgstr "%o 은(는) 웨어드래곤에 의해 검게 탔다."
+
+msgid "OB_CLINK"
+msgstr "%o 은(는) 세이버클로에게 잘렸다."
+
+msgid "OB_DSPARIL1"
+msgstr "%o 은(는) 드'스파릴의 서펜트에 데였다."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o 은(는) 드'스파릴의 서펜트에게 씹혔다."
+
+msgid "OB_DSPARIL2"
+msgstr "%o 은(는) 드'스파릴에겐 상대가 되지 못했다."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o 은(는) 드'스파릴의 맹격에 쓰러졌다."
+
+msgid "OB_HERETICIMP"
+msgstr "%o 은(는) 가고일에 의해 다쳤다."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o 은(는) 가고일에 의해 베였다."
+
+msgid "OB_IRONLICH"
+msgstr "%o 은(는) 아이언 리치에게 붕괴 당했다."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o 은(는) 사적인 이유로 아이언 리치에게 다가왔다."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o 은(는) 언데드 전사에게 도끼질 당했다."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o 은(는) 언데드 전사에게 처단당했다."
+
+msgid "OB_MINOTAUR"
+msgstr "%o 은(는) 몰로타우어에게 잿더미가 되도록 파괴당했다."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o 은(는) 몰로타우어에 의해 내동댕이쳐졌다."
+
+msgid "OB_MUMMY"
+msgstr "%o 은(는) 골렘에게 두들겨 맞았다."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o 은(는) 니트로 골렘에 의해 비명횡사 당했다."
+
+msgid "OB_SNAKE"
+msgstr "%o 은(는) 오피디안에게 흔들렸다."
+
+msgid "OB_WIZARD"
+msgstr "%o 은(는) 드'스파릴의 제자에 의해 저주받았다."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o 은(는) 드'스파릴의 제자에게 촉진당했다."
+
+msgid "OB_MPSTAFF"
+msgstr "%o 은(는) %k 의 지팡이에 제압당했다."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o 은(는) %k 가 쓰고 있는 건틀릿의 전격을 느꼈다."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o 은(는) %k 의 엘프 지팡이를 보고 작별인사를 했다."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o 은(는) %k 의 유체 쇠뇌에 의해 처박혔다."
+
+msgid "OB_MPBLASTER"
+msgstr "%o 은(는) %k 의 용발톱에 의해 형태를 잃었다."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o 은(는) %k 의 지옥지팡이에 의해 저승으로 날아갔다."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o 은(는) %k 의 불사조 지팡이 덕에 검게 익었다."
+
+msgid "OB_MPMACE"
+msgstr "%o 은(는) %k 의 투사철퇴의 포탄을 맞고 튕겨져 날아갔다."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o 은(는) %k 의 마법부가 지팡이를 얻어맞았다."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o 은(는) %k 의 마법부가 건틀릿에 의해 바싹 말랐다."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o 은(는) %k 의 마법부가 엘프 지팡이에 의해 사냥당했다."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o 은(는) %k 의 마법부가 유체 쇠뇌에 의해 무뎌졌다."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o 은(는) %k 의 마법부가 용발톱에 갈기갈기 찢겨졌다."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k의 마법부가 지옥지팡이가 쏟아붓는 비를 %o 이(가) 맞았다."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o 은(는) %k 의 마법부가 불사조 지팡이에 의해 화장당했다."
+
+msgid "OB_MPPMACE"
+msgstr "%o 은(는) %k 의 마법부가 투사철퇴가 뿜은 거대포탄에 의해 납작해졌다."
+
+msgid "TXT_MANA_1"
+msgstr "청색 마나"
+
+msgid "TXT_MANA_2"
+msgstr "녹색 마나"
+
+msgid "TXT_MANA_BOTH"
+msgstr "윰합된 마나"
+
+msgid "TXT_KEY_STEEL"
+msgstr "강철 열쇠"
+
+msgid "TXT_KEY_CAVE"
+msgstr "동굴 열쇠"
+
+msgid "TXT_KEY_AXE"
+msgstr "도끼 열쇠"
+
+msgid "TXT_KEY_FIRE"
+msgstr "불 열쇠"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "에메랄드 열쇠"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "지하감옥 열쇠"
+
+msgid "TXT_KEY_SILVER"
+msgstr "은 열쇠"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "녹슨 열쇠"
+
+msgid "TXT_KEY_HORN"
+msgstr "뿔 열쇠"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "늪지대 열쇠"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "성 열쇠"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "수호의 성상"
+
+msgid "TXT_ARTISUMMON"
+msgstr "어둠의 하인"
+
+msgid "TXT_ARTIEGG2"
+msgstr "돈육기"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "플레셰트"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "소멸 장치"
+
+msgid "TXT_ARTISPEED"
+msgstr "속도의 신발"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "힘의 향로"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "용가죽 팔찌"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "방탄의 원반"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "신비 영역의 주문"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "요릭의 두개골"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "드'스파릴의 심장"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "루비 행성석"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "에메랄드 행성석 (1)"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "에메랄드 행성석 (2)"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "사파이어 행성석 (1)"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "사파이어 행성석 (2)"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "악마의 고문서"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr "어둠의 자유서"
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "화염의 가면"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "밀폐된 칼날"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "신성한 유물"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "마거스의 인장"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "시계 톱니바퀴"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "이것은 여기에 사용할 수 없다"
+
+msgid "TXT_ARMOR1"
+msgstr "사슬 갑옷"
+
+msgid "TXT_ARMOR2"
+msgstr "팔콘 방패"
+
+msgid "TXT_ARMOR3"
+msgstr "백금 투구"
+
+msgid "TXT_ARMOR4"
+msgstr "수호의 부적"
+
+msgid "TXT_WEAPON_F2"
+msgstr "티몬의 도끼"
+
+msgid "TXT_WEAPON_F3"
+msgstr "징벌의 망치"
+
+msgid "TXT_WEAPON_F4"
+msgstr "완성된 종언의 검"
+
+msgid "TXT_WEAPON_C2"
+msgstr "뱀 지팡이"
+
+msgid "TXT_WEAPON_C3"
+msgstr "화염폭풍"
+
+msgid "TXT_WEAPON_C4"
+msgstr "완성된 사령의 십자가"
+
+msgid "TXT_WEAPON_M2"
+msgstr "얼음 파편"
+
+msgid "TXT_WEAPON_M3"
+msgstr "죽음의 번갯불"
+
+msgid "TXT_WEAPON_M4"
+msgstr "완성된 피의 재앙"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "무기의 한 조각이다! 운수 좋은 날인 것 같다!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "종언의 검 조각"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "사령의 십자가 조각"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "피의 재앙 조각"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "강철 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "동굴 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "도끼 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "불 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "에메랄드 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "지하감옥 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "은 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "녹슨 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "뿔 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "늪지대 열쇠가 필요하다"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "성 열쇠가 필요하다"
+
+msgid "FN_FIREDEMON"
+msgstr "아프리트"
+
+msgid "FN_DEMON1"
+msgstr "서펜트"
+
+msgid "FN_ETTIN"
+msgstr "에틴"
+
+msgid "FN_CENTAUR"
+msgstr "켄타우로스"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "슬로터로스"
+
+msgid "FN_BISHOP"
+msgstr "비숍"
+
+msgid "FN_ICEGUY"
+msgstr "윈디고"
+
+msgid "FN_SERPENT"
+msgstr "스토커"
+
+msgid "FN_WRAITH"
+msgstr "리버"
+
+msgid "FN_DRAGON"
+msgstr "데스 와이번"
+
+msgid "FN_KORAX"
+msgstr "코락스"
+
+msgid "FN_FBOSS"
+msgstr "제닥"
+
+msgid "FN_MBOSS"
+msgstr "메넬키어"
+
+msgid "FN_CBOSS"
+msgstr "트라닥투스"
+
+msgid "FN_HERESIARCH"
+msgstr "헤러시아크"
+
+msgid "AMMO_MANA1"
+msgstr "청색 마나"
+
+msgid "AMMO_MANA2"
+msgstr "녹색 마나"
+
+msgid "TAG_CWEAPMACE"
+msgstr "참회의 철퇴"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "뱀 지팡이"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "화염폭풍"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "사령의 십자가"
+
+msgid "TAG_FWEAPFIST"
+msgstr "가시 장갑"
+
+msgid "TAG_FWEAPAXE"
+msgstr "티몬의 도끼"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "징벌의 망치"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "종언의 검"
+
+msgid "TAG_MWEAPWAND"
+msgstr "사파이어 지팡이"
+
+msgid "TAG_MWEAPFROST"
+msgstr "얼음 파편"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "죽음의 번갯불"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "피의 재앙"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "방탄의 원반"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "용가죽 팔찌"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "힘의 향로"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "플레셰트"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "독구름 플레셰트"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "시한폭탄 플레셰트"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "폭발성 플레셰트"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "신비 영역의 주문"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "수호의 성상"
+
+msgid "TAG_ARTIPORK"
+msgstr "돈육기"
+
+msgid "TAG_ARTISPEED"
+msgstr "속도의 부츠"
+
+msgid "TAG_ARTISUMMON"
+msgstr "어둠의 하인"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "소멸 장치"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "요릭의 두개골"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "드'스파릴의 심장"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "루비 행성석"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "에메랄드 행성석 (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "에메랄드 행성석 (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "사파이어 행성석 (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "사파이어 행성석 (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "악마의 고문서"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr "어둠의 자유서"
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "화염의 가면"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "밀폐된 칼날"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "신성한 유물"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "마거스의 인장"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "양철 톱니바퀴"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "황동 톱니바퀴"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "황동과 양철 톱니바퀴"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "은과 황동 톱니바퀴"
+
+msgid "OB_FIREDEMON"
+msgstr "%o 은(는) 아프리트의 화염을 맛봤다."
+
+msgid "OB_DEMON1"
+msgstr "%o 은(는) 서펜트에 데였다."
+
+msgid "OB_DEMON2"
+msgstr "%o 은(는) 독 서펜트에게 중독 당했다."
+
+msgid "OB_ETTIN"
+msgstr "%o 은(는) 에틴에게 철퇴를 맞았다."
+
+msgid "OB_CENTAUR"
+msgstr "%o 은(는) 켄타우로스에 의해 절단됐다."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o 은(는) 슬로터로스에 의해 심하게 절단됐다."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o 은(는) 슬로터로스의 마법구에 의해 피격당했다."
+
+msgid "OB_BISHOP"
+msgstr "%o 은(는) 비숍의 힘에 무릎을 꿇었다."
+
+msgid "OB_ICEGUY"
+msgstr "%o 은(는) 윈디고에 의해 단단하게 얼려졌다."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o 은(는) 스토커에게 발렸다."
+
+msgid "OB_SERPENT"
+msgstr "%o 은(는) 스토커에 의해 녹았다."
+
+msgid "OB_WRAITH"
+msgstr "%o 은(는) 리버에 의해 그슬렸다."
+
+msgid "OB_WRAITHHIT"
+msgstr "%o 은(는) 리버에게 영혼을 도둑맞았다."
+
+msgid "OB_DRAGON"
+msgstr "%o 은(는) 데스 와이번에 의해 분신 당했다."
+
+msgid "OB_KORAX"
+msgstr "%o 은(는) 코락스의 체스판에서 사라졌다."
+
+msgid "OB_FBOSS"
+msgstr "%o 은(는) 제닥의 이름으로 쓰러졌다."
+
+msgid "OB_MBOSS"
+msgstr "%o 은(는) 메넬키어의 마나를 흡수하지 못했다."
+
+msgid "OB_CBOSS"
+msgstr "%o 은(는) 트라닥투스에게 침례를 당했다."
+
+msgid "OB_HERESIARCH"
+msgstr "%o 은(는) 헤러시아크에 의해 뼈와 살이 분리되었다."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o 은(는) %k 의 맨손 타격으로 묵사발이 되었다."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o 은(는) %k 의 티몬의 도끼를 어설프게 받아쳤다."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%k 은(는) 징벌의 망치로 %o 의 머리 위에 우물을 만들었다."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o 의 영혼은 %k 의 징벌의 망치에 의해 철거되었다."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o 은(는) %k 의 종언의 검 덕에 침묵을 지킬 수 있었다."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o 은(는) %k 의 철퇴를 맞은 뒤에야 철이 들었다."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o 은(는) %k 의 뱀 지팡이에 의해 독살당했다."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o 은(는) %k 의 뱀 지팡이 때문에 숨을 쉬지 못했다."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o 은(는) %k 의 화염폭풍에 휩쓸렸다."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o 은(는) %k 의 사령의 지팡이에 의해 정화되었다."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o 은(는) %k 의 사파이어 빛을 너무 많이 째려봤다."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o 은(는) %k 의 얼음 파편에 의해 눈사람이 되었다."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o 은(는) %k 의 번갯불 덕에 충격적인 계시를 받았다."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o 은(는) %k 이(가) 피의 재앙을 씀으로써 전혀 존재하지 않는 존재가 되어버렸다."
+
+msgid "TXT_METALARMOR"
+msgstr "강철 갑옷을 획득했다."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "가죽 갑옷을 획득했다."
+
+msgid "TXT_MEDPATCH"
+msgstr "의료 붕대를 획득했다."
+
+msgid "TXT_MEDICALKIT"
+msgstr "구급 키트를 획득했다."
+
+msgid "TXT_SURGERYKIT"
+msgstr "수술 키트를 획득했다."
+
+msgid "TXT_STRIFEMAP"
+msgstr "지도를 획득했다."
+
+msgid "TXT_BELDINSRING"
+msgstr "반지를 획득했다."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "번제 성배를 훔쳤다."
+
+msgid "TXT_EAR"
+msgstr "잘린 귀를 주웠다."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "망가진 동력선 장치를 획득했다."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "그림자 갑옷을 획득했다."
+
+msgid "TXT_ENVSUIT"
+msgstr "환경 방호복을 획득했다."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "경비 전투복을 획득했다."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "장교 전투복을 획득했다."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "화염방사기 부품을 획득했다."
+
+msgid "TXT_REPORT"
+msgstr "보고서를 획득했다."
+
+msgid "TXT_INFO"
+msgstr "정보를 획득했다."
+
+msgid "TXT_TARGETER"
+msgstr "조준기를 획득했다."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "연락장치를 획득했다."
+
+msgid "TXT_COIN"
+msgstr "동전을 주웠다."
+
+msgid "TXT_XGOLD"
+msgstr "골드 %d 개를 획득했다."
+
+msgid "TXT_BEACON"
+msgstr "텔레포터 비콘을 획득했다."
+
+msgid "TXT_DEGNINORE"
+msgstr "데그닌 광석을 획득했다."
+
+msgid "TXT_SCANNER"
+msgstr "탐지기를 획득했다."
+
+msgid "TXT_NEEDMAP"
+msgstr "지도 없이는 탐지기를 사용할 수 없다!"
+
+msgid "TXT_PRISONPASS"
+msgstr "감옥 통행증을 획득했다."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "석궁을 획득했다."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "돌격소총을 획득했다."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "미니 미사일 런쳐를 획득했다."
+
+msgid "TXT_FLAMER"
+msgstr "완성된 화염방사기를 얻었다."
+
+msgid "TXT_MAULER"
+msgstr "마울러를 획득했다."
+
+msgid "TXT_GLAUNCHER"
+msgstr "유탄발사기를 획득했다."
+
+msgid "TXT_SIGIL"
+msgstr "시질은 이제 당신의 것이다."
+
+msgid "TXT_BASEKEY"
+msgstr "기지 키를 획득했다."
+
+msgid "TXT_GOVSKEY"
+msgstr "총독의 키를 획득했다."
+
+msgid "TXT_PASSCARD"
+msgstr "통행 카드를 획득했다."
+
+msgid "TXT_IDBADGE"
+msgstr "신분 휘장을 획득했다."
+
+msgid "TXT_PRISONKEY"
+msgstr "감옥 키를 획득했다."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "잘린 손목을 주웠다."
+
+msgid "TXT_POWER1KEY"
+msgstr "발전소 1호 키를 획득했다."
+
+msgid "TXT_POWER2KEY"
+msgstr "발전소 2호 키를 획득했다."
+
+msgid "TXT_POWER3KEY"
+msgstr "발전소 3호 키를 획득했다."
+
+msgid "TXT_GOLDKEY"
+msgstr "황금 키를 획득했다."
+
+msgid "TXT_IDCARD"
+msgstr "신분증을 획득했다."
+
+msgid "TXT_SILVERKEY"
+msgstr "은 키를 획득했다."
+
+msgid "TXT_ORACLEKEY"
+msgstr "오라클 키를 획득했다."
+
+msgid "TXT_MILITARYID"
+msgstr "군용 아이디를 획득했다."
+
+msgid "TXT_ORDERKEY"
+msgstr "오더의 키를 획득했다."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "창고 키를 획득했다."
+
+msgid "TXT_BRASSKEY"
+msgstr "황동 키를 획득했다."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "적색 크리스탈 키를 획득했다."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "청색 크리스탈 키를 획득했다."
+
+msgid "TXT_CHAPELKEY"
+msgstr "예배당 키를 획득했다."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "고대 묘지 키를 획득했다."
+
+msgid "TXT_SECURITYKEY"
+msgstr "보안 키를 획득했다."
+
+msgid "TXT_COREKEY"
+msgstr "중심부 키를 획득했다."
+
+msgid "TXT_MAULERKEY"
+msgstr "마울러 키를 획득했다."
+
+msgid "TXT_FACTORYKEY"
+msgstr "공장 키를 획득했다."
+
+msgid "TXT_MINEKEY"
+msgstr "탄광 키를 획득했다."
+
+msgid "TXT_NEWKEY5"
+msgstr "새로운 키5를 획득했다."
+
+msgid "TXT_ORACLEPASS"
+msgstr "오라클의 통행증을 획득했다."
+
+msgid "TXT_HEGRENADES"
+msgstr "고폭 유탄을 획득했다."
+
+msgid "TXT_PHGRENADES"
+msgstr "소이 유탄을 획득했다."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "돌격소총 탄창을 획득했다."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "돌격소총 탄약 박스를 획득했다."
+
+msgid "TXT_MINIMISSILES"
+msgstr "미니 미사일 꾸러미를 획득했다."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "미니 미사일 박스를 획득했다."
+
+msgid "TXT_ENERGYPOD"
+msgstr "에너지 포드를 획득했다."
+
+msgid "TXT_ENERGYPACK"
+msgstr "에너지 팩을 획득했다."
+
+msgid "TXT_POISONBOLTS"
+msgstr "맹독 볼트를 획득했다."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "전격 볼트를 획득했다."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "탄약 배낭을 획득했다."
+
+msgid "MSG_TALISMANRED"
+msgstr "결코, 만지면 안 된다는 생각이 든다..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "뭔지는 몰라도 이 세상에 속한 것이 아닌 것 같다..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "분명히 뭔가를 할 것이다..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "엄청난 힘이 솟는다!"
+
+msgid "TXT_NEEDKEY"
+msgstr "필요한 열쇠가 없다"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "통행 카드가 필요하다"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "이 문을 열기 위해서는 통행 카드가 필요하다"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "신분증이 필요하다"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "감옥에 입장하기 위한 열쇠가 없다"
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "알 수 없는 지문입니다"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "황금 키가 필요하다"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "신분 휘장이 필요하다"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "이 문을 열기 위해서는 신분 휘장이 필요하다"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "은 키가 필요하다"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "황동 키가 필요하다"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "적색 크리스탈이 필요하다"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "청색 크리스탈이 필요하다"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "이 구역은 정품 버전에서만 입장이 가능합니다"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "작동이 안 되는 것 같다"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "성배가 필요하다!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "오라클 통행증이 필요하다!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "단검"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "석궁 (전격)"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "석궁 (맹독)"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "돌격소총"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "미니 미사일 런쳐"
+
+msgid "TAG_FLAMER"
+msgstr "화염방사기"
+
+msgid "TAG_MAULER1"
+msgstr "마울러 (저출력)"
+
+msgid "TAG_MAULER2"
+msgstr "마울러 (고출력)"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "유탄발사기 (고폭탄)"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "유탄발사기 (소이탄)"
+
+msgid "TAG_SIGIL"
+msgstr "시질"
+
+msgid "TAG_COIN"
+msgstr "동전"
+
+msgid "TAG_MEDPATCH"
+msgstr "의료 붕대"
+
+msgid "TAG_MEDICALKIT"
+msgstr "구급 키트"
+
+msgid "TAG_SURGERYKIT"
+msgstr "수술 키트"
+
+msgid "TAG_BELDINSRING"
+msgstr "반지"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "번제 성배"
+
+msgid "TAG_EAR"
+msgstr "귀"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "망가진 동력선"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "그림자 갑옷"
+
+msgid "TAG_ENVSUIT"
+msgstr "환경 방호복"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "경비 전투복"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "장교 전투복"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "화염방사기 부품"
+
+msgid "TAG_REPORT"
+msgstr "보고서"
+
+msgid "TAG_INFO"
+msgstr "정보"
+
+msgid "TAG_TARGETER"
+msgstr "조준기"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "연락장치"
+
+msgid "TAG_DEGNINORE"
+msgstr "데그닌 광석"
+
+msgid "TAG_GUNTRAINING"
+msgstr "정확도"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "힘"
+
+msgid "TAG_SCANNER"
+msgstr "탐지기"
+
+msgid "TAG_PRISONPASS"
+msgstr "감옥 통행증"
+
+msgid "TAG_ALARM"
+msgstr "알람"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "탄약"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "체력"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "텔레포터 비콘"
+
+msgid "TAG_METALARMOR"
+msgstr "강철 갑옷"
+
+msgid "TAG_LEATHER"
+msgstr "가죽 갑옷"
+
+msgid "TAG_HEGRENADES"
+msgstr "고폭 유탄"
+
+msgid "TAG_PHGRENADES"
+msgstr "소이 유탄"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "소총 탄창"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "탄약"
+
+msgid "TAG_MINIMISSILES"
+msgstr "미니 미사일"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "미사일 박스"
+
+msgid "TAG_ENERGYPOD"
+msgstr "에너지 포드"
+
+msgid "TAG_ENERGYPACK"
+msgstr "에너지 팩"
+
+msgid "TAG_POISONBOLTS"
+msgstr "맹독 볼트"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "전격 볼트"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "탄약 배낭"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "기지 키"
+
+msgid "TAG_GOVSKEY"
+msgstr "총독의 키"
+
+msgid "TAG_PASSCARD"
+msgstr "통행 카드"
+
+msgid "TAG_IDBADGE"
+msgstr "신분 휘장"
+
+msgid "TAG_PRISONKEY"
+msgstr "감옥 키"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "잘린 손목"
+
+msgid "TAG_POWER1KEY"
+msgstr "발전소 1호 키"
+
+msgid "TAG_POWER2KEY"
+msgstr "발전소 2호 키"
+
+msgid "TAG_POWER3KEY"
+msgstr "발전소 3호 키"
+
+msgid "TAG_GOLDKEY"
+msgstr "황금 키"
+
+msgid "TAG_IDCARD"
+msgstr "신분증"
+
+msgid "TAG_SILVERKEY"
+msgstr "은 키"
+
+msgid "TAG_ORACLEKEY"
+msgstr "오라클 키"
+
+msgid "TAG_MILITARYID"
+msgstr "군용 아이디"
+
+msgid "TAG_ORDERKEY"
+msgstr "오더의 키"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "창고 키"
+
+msgid "TAG_BRASSKEY"
+msgstr "황동 키"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "적색 크리스탈 키"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "청색 크리스탈 키"
+
+msgid "TAG_CHAPELKEY"
+msgstr "예배당 키"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "고대 묘지 키"
+
+msgid "TAG_SECURITYKEY"
+msgstr "보안 키"
+
+msgid "TAG_COREKEY"
+msgstr "중심부 키"
+
+msgid "TAG_MAULERKEY"
+msgstr "마울러 키"
+
+msgid "TAG_FACTORYKEY"
+msgstr "공장 키"
+
+msgid "TAG_MINEKEY"
+msgstr "탄광 키"
+
+msgid "TAG_NEWKEY5"
+msgstr "새로운 키5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "오라클의 통행증"
+
+msgid "TAG_10GOLD"
+msgstr "10 골드"
+
+msgid "TAG_25GOLD"
+msgstr "25 골드"
+
+msgid "TAG_50GOLD"
+msgstr "50 골드"
+
+msgid "TAG_300GOLD"
+msgstr "300 골드"
+
+msgid "TXT_PERSON"
+msgstr "민간인"
+
+msgid "TAG_ACOLYTE"
+msgstr "아콜라이트"
+
+msgid "TAG_ARMORER"
+msgstr "병기공"
+
+msgid "TAG_BARKEEP"
+msgstr "바텐더"
+
+msgid "TAG_BEGGAR"
+msgstr "거지"
+
+msgid "TAG_MACIL1"
+msgstr "마실"
+
+msgid "TAG_MACIL2"
+msgstr "마실"
+
+msgid "TAG_MEDIC"
+msgstr "의무관"
+
+msgid "TAG_ORACLE"
+msgstr "오라클"
+
+msgid "TAG_PRIEST"
+msgstr "성직자"
+
+msgid "TAG_RATBUDDY"
+msgstr "생쥐 친구"
+
+msgid "TAG_REBEL"
+msgstr "저항군"
+
+msgid "TAG_TEMPLAR"
+msgstr "템플러"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "무기 제조상"
+
+msgid "TAG_TALISMANRED"
+msgstr "붉은 부적"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "녹색 부적"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "푸른 부적"
+
+msgid "OB_ACOLYTE"
+msgstr "%o 은(는) 아콜라이트에게 맹신적으로 사격 당했다."
+
+msgid "OB_MACIL"
+msgstr "%o 은(는) 마실의 적이 되지 말았어야 했다."
+
+msgid "OB_REBEL"
+msgstr "%o 은(는) 저항군에 의해 제압당했다."
+
+msgid "OB_BEGGAR"
+msgstr "%o 은(는) 자업자득으로 거지에게 맞아 죽었다."
+
+msgid "OB_PEASANT"
+msgstr "%o 은(는) 민간인과 싸울 힘도 전혀 없었다."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o 은(는) 스펙터에 의해 무너져 내렸다."
+
+msgid "OB_ENTITY"
+msgstr "%o 은(는) 유일신의 이름으로 천벌을 받았다."
+
+msgid "OB_LOREMASTER"
+msgstr "%o 은(는) 로어마스터의 촉수를 벗어나지 못했다."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o 은(는) 프로그래머에 의해 삭제됐다."
+
+msgid "OB_STFBISHOP"
+msgstr "%o 은(는) 비숍에 의해 초토화되었다."
+
+msgid "OB_SENTINEL"
+msgstr "%o 은(는) 센티넬의 레이져를 맞았다."
+
+msgid "OB_CRUSADER"
+msgstr "%o 은(는) 크루세이더의 공격에 날라갔다."
+
+msgid "OB_INQUISITOR"
+msgstr "%o 은(는) 인퀴지터에 의해 처벌받았다."
+
+msgid "OB_STALKER"
+msgstr "%o 은(는) 스토커에게 벌레 물림을 당했다."
+
+msgid "OB_TURRET"
+msgstr "%o 은(는) 경비 시스템에 발각되었다."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o 은(는) 템플러에게 할큄을 당했다."
+
+msgid "OB_TEMPLAR"
+msgstr "%o 은(는) 템플러에 의해 존재가 소멸됐다."
+
+msgid "OB_REAVERHIT"
+msgstr "%o 은(는) 리버에게 해부되었다."
+
+msgid "OB_REAVER"
+msgstr "%o 은(는) 리버에게 격파되었다."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o 은(는) 모르는 사이에 %k 에 의해 비수를 찔렸다."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o 은(는) %k 의 전류가 흐르는 볼트촉을 만졌다."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o 은(는) %k 로부터 암살 같지 않은 암살을 당했다."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o 은(는) %k 의 돌격소총 덕분에 멋진 구멍을 선물 받았다."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o 은(는) %k 의 미니 미사일을 고맙게 삼켰다."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o 은(는) %k 의 고폭탄에 의해 역전당했다."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o 은(는) %k 의 소이탄이 뿜는 화염에 몸을 담갔다."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o 은(는) %k 의 바비큐 파티에 참여했다. 혼자서."
+
+msgid "OB_MPMAULER1"
+msgstr "%o 은(는) %k 이(가) 가한 전기 충격을 당했다."
+
+msgid "OB_MPMAULER"
+msgstr "%o 은(는) %k 에 의해 소극적으로 소멸되었다."
+
+msgid "OB_MPSIGIL"
+msgstr "%o 은(는) %k 를 죽이기 전에 시질의 이름으로 절을 해야만 했다."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "시질을 위한 임무"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "죄수들을 탈옥시켰다!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "개조 장치를 파괴했다!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "훈련 코스를 마쳤다. 능력치 업!"
+
+msgid "TXT_QUEST_14"
+msgstr "수정체를 파괴했다"
+
+msgid "TXT_QUEST_16"
+msgstr "성문을 파괴해서 열었다"
+
+msgid "TXT_QUEST_27"
+msgstr "컴퓨터를 파괴했다"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "비숍을 사살했다!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "오라클의 음모를 막았다!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "마실을 처단했다!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "로어마스터의 목숨에 종지부를 찍었다!"
+
+msgid "TXT_YOUFOOL"
+msgstr "어리석은 것! 알람이 작동되었다고!"
+
+msgid "TXT_YOUREDEAD"
+msgstr "알람이 작동되었다. 넌 죽었어!"
+
+msgid "TXT_HAVEENOUGH"
+msgstr "충분히 가진 것 같은데?"
+
+msgid "TXT_GOAWAY"
+msgstr "저리 가!"
+
+msgid "TXT_COMM0"
+msgstr "메시지가 옴..."
+
+msgid "TXT_COMM1"
+msgstr "블랙버드로부터 메시지가 옴..."
+
+msgid "TXT_FINDHELP"
+msgstr "도움말"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "(가격: %u)"
+
+msgid "GOTCHEXARMOR"
+msgstr "첵스(R) 갑옷 획득."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "슈퍼 첵스(R) 갑옷 획득!"
+
+msgid "GOTWATER"
+msgstr "물 한 컵 섭취."
+
+msgid "GOTREPELLENT"
+msgstr "오물 방수제 획득."
+
+msgid "GOTBREAKFAST"
+msgstr "힘찬 아침식사 섭취!"
+
+msgid "GOTCBLUEKEY"
+msgstr "파란색 열쇠 획득."
+
+msgid "GOTCYELLOWKEY"
+msgstr "노란색 열쇠 획득."
+
+msgid "GOTCREDKEY"
+msgstr "빨간색 열쇠 획득."
+
+msgid "GOTFRUIT"
+msgstr "과일 한 그릇 섭취."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "채소의 건강한 영양분이 독 기운을 없앴습니다!"
+
+msgid "GOTVEGETABLES"
+msgstr "채소 한 그릇 섭취."
+
+msgid "GOTSLIMESUIT"
+msgstr "오물 보호복 사용."
+
+msgid "GOTCHEXMAP"
+msgstr "컴퓨터 지도 사용."
+
+msgid "GOTZORCHRECHARGE"
+msgstr "소형 저치 전지 획득."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "저치 전지 박스 획득."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "저치 추진료 획득."
+
+msgid "GOTPROPULSORPACK"
+msgstr "저치 추진 팩 획득."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "저치 전자 충전기 획득."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "특대 저치 충전기 획득."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "대형 저치 카트리지 획득."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "저치 카트리지 묶음 획득."
+
+msgid "GOTZORCHPACK"
+msgstr "저치 팩 획득!"
+
+msgid "GOTLAZDEVICE"
+msgstr "LAZ 장치 습득! 완전 짱인걸!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "속사 자쳐 습득!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "부트스포크 습득!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "저치 추진기 습득!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "전자 자쳐 습득!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "대형 자쳐 습득!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "초대형 자쳐 습득!"
+
+msgid "GOTMINIZORCHER"
+msgstr "소형 자쳐 습득."
+
+msgid "TAG_SPOON"
+msgstr "숟가락"
+
+msgid "TAG_SPORK"
+msgstr "부트스포크"
+
+msgid "TAG_MINIZORCHER"
+msgstr "소형 자쳐"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "대형 자쳐"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "초대형 자쳐"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "속사 자쳐"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "저치 추진기"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "전자 자쳐"
+
+msgid "TAG_LAZDEVICE"
+msgstr "LAZ 장치"
+
+msgid "OB_COMMONUS"
+msgstr "%o 은(는) 플레모이드에 의해 더러워졌습니다."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o 은(는) 바이피디쿠스의 끈쩍한 시야에 걸렸습니다."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o 은(는) 정예 바이피디쿠스의 찐득한 공격을 받았습니다."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o 은(는) 사이클롭티스 곁에 미끄러졌습니다."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o 은(는) 역겨운 플렘브레인을 돌파하지 못했습니다."
+
+msgid "OB_MPSPOON"
+msgstr "%k 이(가) %o 을(를) 숟가락으로 맛있게 먹였습니다."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%k 이(가) %o 을(를) 부트스포크로 빙빙 돌렸습니다."
+
+msgid "OB_MPZORCH"
+msgstr "%o 은(는) %k 의 소형 자쳐 광선에 맞았습니다."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o 은(는) %k 의 초대형 자쳐 광선에 날라갔습니다."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o 은(는) %k 의 속사 자쳐 때문에 춤을 췄습니다."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o 은(는) %k 의 저치 추진기 쓴 맛을 봤습니다."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o 은(는) %k 의 저치 추진기의 방사 능력을 우습게 봤습니다."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o 은(는) %k 의 전자 자쳐에 의해 쓰러졌습니다."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%k 이(가) LAZ 장치를 들기 전에 %o 은(는) 도망쳐야 했습니다."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o 은(는) %k 의 LAZ 장치 범위를 벗어날 수 없었습니다."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: 착륙 지점"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: 저장 시설"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: 연구소"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: 수목원"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: 바조이크의 대동굴"
+
+msgid "CE1TEXT"
+msgstr ""
+"퀘스트 완료.\n"
+"\n"
+"다음 퀘스트를 시작할 준비 되셨습니까?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"ESCAPE키를 누르시오..."
+
+msgid "CE2TEXT"
+msgstr "해내셨습니다!"
+
+msgid "CE3TEXT"
+msgstr "멋지게 잘하셨습니다!"
+
+msgid "CE4TEXT"
+msgstr "환상적"
+
+msgid "CLOADNET"
+msgstr ""
+"네트워크 퀘스트 중엔 다른 퀘스트를 불러올 수 없습니다!\n"
+"\n"
+"키를 누르시오."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"빠른 퀘스트 저장을 하시겠습니까?\n"
+"\n"
+"'%s'\n"
+"\n"
+"Y키 나 N키를 누르시오."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"네트워크 퀘스트 중엔 빠른 불러오기를 할 수 없습니다!\n"
+"\n"
+"키를 누르시오."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"빠른 퀘스트 불러오기를 하시겠습니까?\n"
+"\n"
+"'%s'\n"
+"\n"
+"Y키 나 N키를 누르시오."
+
+msgid "CNEWGAME"
+msgstr ""
+"네트워크 퀘스트 중엔 새로운 퀘스트를 시작 할 수 없습니다.\n"
+"\n"
+"키를 누르시오."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"이 퀘스트는 아주 위험하고 어렵습니다. 그래도 도전하시겠습니까?\n"
+"\n"
+"Y키 나 N키를 누르시오."
+
+msgid "CSWSTRING"
+msgstr ""
+"이 게임은 첵스(R) 퀘스트입니다.\n"
+"\n"
+"레벨 관련 소식은 여기서 확인해주시길 바랍니다: www.chexquest.com\n"
+"\n"
+"키를 누르시오."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"네트워크 퀘스트를 종료할 수 없습니다!\n"
+"\n"
+"키를 누르시오."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"이 퀘스트를 잠시 중단하시겠습니까?\n"
+"\n"
+"Y키 나 N키를 누르시오."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "무적 모드 켬"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "무적 모드 끔"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "모든 저치 에너지 추가"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "모든 아이템 습득!"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... 첵스(R) 를 많이 먹자!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "소형 저치 전지"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "대형 저치 카트리지"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "저치 추진료"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "저치 전자 충전기"
+
+msgid "MNU_NEWGAME"
+msgstr "새로운 게임"
+
+msgid "MNU_OPTIONS"
+msgstr "설정"
+
+msgid "MNU_GAMEFILES"
+msgstr "게임 파일"
+
+msgid "MNU_INFO"
+msgstr "정보"
+
+msgid "MNU_QUITGAME"
+msgstr "게임 종료"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "난이도를 고르시오:"
+
+msgid "SKILL_BABY"
+msgstr "난 죽기엔 너무 젊어."
+
+msgid "SKILL_EASY"
+msgstr "너무 세게 하지는 마."
+
+msgid "SKILL_NORMAL"
+msgstr "마음껏 때려봐."
+
+msgid "SKILL_HARD"
+msgstr "극단적인-폭력."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "악몽!"
+
+msgid "CSKILL_BABY"
+msgstr "살살 하면 좋겠네"
+
+msgid "CSKILL_EASY"
+msgstr "질척하진 않게"
+
+msgid "CSKILL_NORMAL"
+msgstr "적지 않은 질퍽함"
+
+msgid "CSKILL_HARD"
+msgstr "엄청난 끈끈함"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "끈쩍함 천지!"
+
+msgid "SSKILL_BABY"
+msgstr "훈련병"
+
+msgid "SSKILL_EASY"
+msgstr "신병"
+
+msgid "SSKILL_NORMAL"
+msgstr "고참병"
+
+msgid "SSKILL_HARD"
+msgstr "정예병"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "피의 목욕"
+
+msgid "MNU_WETNURSE"
+msgstr "그대에게는 유모가 필요하다"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "장난감을 가지고 노는가"
+
+msgid "MNU_BRINGEST"
+msgstr "혈투를 벌일 준비하라"
+
+msgid "MNU_SMITE"
+msgstr "그대야말로 타격의 대가"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "흑사병이 그대를 저주 내리리"
+
+msgid "MNU_SQUIRE"
+msgstr "향사"
+
+msgid "MNU_KNIGHT"
+msgstr "기사"
+
+msgid "MNU_WARRIOR"
+msgstr "전사"
+
+msgid "MNU_BERSERKER"
+msgstr "광전사"
+
+msgid "MNU_TITAN"
+msgstr "철인"
+
+msgid "MNU_ALTARBOY"
+msgstr "복사"
+
+msgid "MNU_ACOLYTE"
+msgstr "시종"
+
+msgid "MNU_PRIEST"
+msgstr "사제"
+
+msgid "MNU_CARDINAL"
+msgstr "추기경"
+
+msgid "MNU_POPE"
+msgstr "교황"
+
+msgid "MNU_APPRENTICE"
+msgstr "조수"
+
+msgid "MNU_ENCHANTER"
+msgstr "주술사"
+
+msgid "MNU_SORCERER"
+msgstr "마법사"
+
+msgid "MNU_WARLOCK"
+msgstr "전투술사"
+
+msgid "MNU_ARCHMAGE"
+msgstr "대마법사"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "영웅 선택:"
+
+msgid "MNU_FIGHTER"
+msgstr "전사"
+
+msgid "MNU_CLERIC"
+msgstr "성직자"
+
+msgid "MNU_MAGE"
+msgstr "마법사"
+
+msgid "MNU_RANDOM"
+msgstr "랜덤"
+
+msgid "MNU_EPISODE"
+msgstr "에피소드 선택:"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "캠페인을 고르시오:"
+
+msgid "MNU_COTD"
+msgstr "멸망한 도시"
+
+msgid "MNU_HELLSMAW"
+msgstr "지옥의 목구멍"
+
+msgid "MNU_DOME"
+msgstr "드'스파릴의 돔"
+
+msgid "MNU_OSSUARY"
+msgstr "납골당"
+
+msgid "MNU_DEMESNE"
+msgstr "침체된 영지"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "팀플레이"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "팀 데미지 배율"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "정확한 자동 조준"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "낙하 데미지"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "무기 버리기"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "두 배의 탄약"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "무한 탄약"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "무한 인벤토리"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "적 제거"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "탈출을 위한 적 제거"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "적 부활"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "부활 없음"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "아이템 재생성"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "파워업 재생성"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "빠른 적 개체 움직임"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr ""
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "약화"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "자동 조준 허용"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "자살 허용"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "점프 허용"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "앉기 허용"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "프리룩 허용"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "FOV 허용"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "BFG 조준 허용"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "오토맵 허용"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "오토맵에 아군 표시"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "관전 허용"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "3인칭 카메라 치트"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "탄약 소진 시 무기 변경"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "보스 사망시 소환된 적들도 사망"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "레벨종료 섹터의 적들도 킬 수에 포함"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "데스매치 설정"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "습득 후 무기가 남아있기"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "파워 업 허용"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "체력 회복 아이템 허용"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "아머 허용"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "먼 곳에서 소환"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "같은 맵 플레이"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "강제 부활"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "탈출 허용"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "폭발통 재생성"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "부활시 무적"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "적에게 사망시 점수를 잃음"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "맵 변경 시 점수 유지"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "팀 변경 없음"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "협동 플레이 설정"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "멀티플레이어 무기 소환"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "인벤토리 비우기"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "열쇠들을 소지하고 시작"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "무기들을 소지하고 시작"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "아머를 소지하고 시작"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "파워업을 소지하고 시작"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "탄약을 소지하고 시작"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "탄약의 반을 잃음"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "죽은 곳에서 소환"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr ""
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr ""
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr ""
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "호환 설정"
+
+msgid "CMPTMNU_TITLE"
+msgstr "호환성 설정"
+
+msgid "CMPTMNU_MODE"
+msgstr "호환 모드"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "개체 관련 설정"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "아군 개체는 BLOCK 선분 무시"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "로스트 소울 소환 21개로 제한"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "구역의 이동 효과가 개체들에 영향"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "개체들이 난간에서 추락 불가"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "개체들이 난간에 끼일 수 있음"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "개체들이 투명 플레이어 감지 가능"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "수면에서는 몰로타우어 지면화염 차단"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "아이템이 떨어질때 지면에 즉시 착지"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DehackEd 관련 설정"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH 자체의 체력 최댓값 사용"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "A_Mushroom효과가 MBF 원본의 속력 사용"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "맵/동작 관련 설정"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "특정 선상에 겹쳐있을 시 <사용> 무력화"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "어느 레벨에서든 BOSSDEATH 이벤트 허용"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "붐 문간 조명보정 효과 끄기"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "고전적인 조명추적 사용"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "고전적인 텍스처분류 사용"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "구형 계단상승 효과 사용"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "표면이나 천장이 서로 통과가 가능함"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "구형 선상 지점 정의법 사용"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "레벨 출구 트리거 한 번 이상 작동"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "물리 관련 설정"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "무한으로 키가 큰 개체"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "붐 스크롤러 누적법 사용"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "전방위 방향으로 이동 불가"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "벽면가속이동 허용"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "구형 헤러틱/헥센 스크롤러 사용"
+
+msgid "CMPTMNU_TRACE"
+msgstr "자기 참조 섹터가 총탄을 막지 않음"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "구형 총탄 판정법 사용"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "구형 발사체 판정법 사용"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "렌더링 관련 설정"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "구형 폴리오브젝트 시스템 사용"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "이면선분의 중앙 텍스쳐의 Y축값 무시"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "구형 스프라이트 겹침 판정 사용"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "효과음 관련 설정"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "소음 BFG 효과 허용"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "상대방의 습득 효과음 청음 불가"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "즉발식 이동표면 소음효과 제거"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "섹터 중심부를 효과음의 원천으로 판정"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "효과음 원천 소멸 시 효과음도 중단"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "구형 섹터 경고음 보존법 사용"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "순간이동 스크립트는 섹터 이벤트 발동 불가능"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "비차단 선분 밀어내기 가능"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "구형 CheckSwitchRange 판정법 사용"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "고전 스트라이프 철책 적용"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "폭발시 수직방향 반동 억제"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "고전 둠의 폭발 반발력 적용"
+
+msgid "PLYRMNU_RED"
+msgstr "빨강"
+
+msgid "PLYRMNU_GREEN"
+msgstr "초록"
+
+msgid "PLYRMNU_BLUE"
+msgstr "파랑"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "클래스"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "스킨"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "무기 획득 시 바꿈"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "회전: \\cjSPACE바"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "캐릭터 앞모습"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "캐릭터 뒷모습"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr ""
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "무기 조준"
+
+msgid "CNTRLMNU_USER1"
+msgstr "무기 상태 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "무기 상태 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "무기 상태 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "무기 상태 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "위로 날기 / 해엄치기"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "아래로 날기 / 해엄치기"
+
+msgid "CNTRLMNU_LAND"
+msgstr "비행 정지"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "키보드 룩"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "스트라이프 팝업 화면 조작"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "팀 채팅하기"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "아이템 버리기"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "아이템 정보 표시"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "무기 버리기"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "그 외 조작"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "멀티플레이 카메라"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "스트라이프 팝업 화면"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "임무 목록"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "열쇠 목록"
+
+msgid "CNTRLMNU_STATS"
+msgstr "무기/탄약/통계 목록"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "점수창 토글"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "마우스룩 시점 초기화"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "마우스룩 좌우 이동"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "배경"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "당신"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "단면 벽들"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "다른 층 추가된 양면 벽들"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "다른 천장 추가된 양면 벽들"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "3D 층 추가된 양면 벽들"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "맵 격자"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "중간 지점"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "안 본 벽들"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "잠긴 문들"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "같은 맵에 텔레포터 추가"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "다른 맵에 텔레포터 추가"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "비밀 섹터"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "발견하지 않은 비밀"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "특수 트리거 선"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "치트 모드"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "투명한 양면 벽"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "비밀 벽"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "개체"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "적들"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "킬수에 포함 되지 않는 적들"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "친구들"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "아이템들"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "아이템 계산"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "오버레이 모드"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "치트 모드 오버레이"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "포탈 오버레이"
+
+msgid "MSGMNU_TITLE"
+msgstr "메시지들"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "메시지 표시"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "사망 메시지 표시"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "비밀 알림 표시"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "메시지 축소량"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "메시지 색상"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "아이템 획득"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "사망 메시지"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "중요한 메시지"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "채팅 메시지"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "팀 채팅 메시지"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "중간에 위치한 메시지"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "스크린샷 메시지"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "자세한 저장 메시지"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "개발자 메시지 모드"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "맵 색상 설정"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "맵 정의 색상 허용"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "사용자 지정 색상 설정"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "맵 조작 설정"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "오토맵을 오버레이"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "텍스쳐 디스플레이 허용"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "주운 아이템의 갯수를 표시"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "죽인 적의 횟수 표시"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "밝힌 비밀의 수 표시"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "경과한 시간 표시"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "누적 경과한 시간 표시"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "맵의 비밀을 표시"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "맵의 이름 표시"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "맵의 배경 출력"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "키를 표시 (치트)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "트리거 선을 표시"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "물체를 스프라이트로 표시"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "포탈을 오버레이"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "빈공간 여백"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "미니맵 마킹 폰트"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "미니맵 마킹 색상"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "마크 추가"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "마크 삭제"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "점수창 설정"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "점수판 설정"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "코옵 설정"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "점수판 허용"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "헤더의 색깔"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "플레이어의 색깔"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "다른 플레이어들의 색깔"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "데스매치 설정"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "팀 데스매치 설정"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "대체 HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "대체 HUD 사용"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "비밀 수 표시"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "적 개체 수 표시"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "아이템 수 표시"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "스테미나와 정확도를 표시"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "버서크 아이템을 표시"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "무기들을 표시"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "탄약을 표시"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "시간 표시"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "시간 색상"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "내트워크 트래픽 표시"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "탄약 표시 순서"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "적색 남은 탄약 밑에 표시"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "황색 남은 탄약 밑에 표시"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "적색 체력 밑에 표시"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "황색 체력 밑에 표시"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "녹색 체력 밑에 표시"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "적색 아머 밑에 표시"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "황색 아머 밑에 표시"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "녹색 아머 밑에 표시"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "대체 오토맵 HUD"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "맵 제목 색깔"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "맵 시간 색깔"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "허브 시간 색깔"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "누적 경과한 시간 색깔"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "좌표 색깔"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "좌표 모드"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "통계표 이름 색상"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "통계표 색상"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "프레임 제한"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "투명도 표시 모드"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "화면 전환 방식"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "종료화면 표시"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "피격 표시 강도"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "습득 표시 강도"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "수중 효과 강도"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "하늘 표시 모드"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "선형 하늘"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "섹터 색상 최대밝기 우선화"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "반투명 효과 조정"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "반투명 효과 사용"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "구형 투명도"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "로스트 소울 반투명도"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "가명암 효과 사용"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "로켓 추진 효과"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "혈흔 효과"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "탄알 피격 효과"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "최대 입자 수"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "최대 데칼 수"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "1인칭 무기 표시"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "사망 화면 표시"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "순간이동 효과"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "지진 효과 강도"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "개체 이동 보정"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "메뉴 배경색 강도"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "배경색 설정"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "이동 시 화면 흔들림 강도"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "정지 시 화면 움직임 강도"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "무기 흔들림 속도"
+
+msgid "SCALEMNU_TITLE"
+msgstr "배율 설정"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "위 설정을 위해 무시"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "메시지"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "콘솔"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "상태 바"
+
+msgid "SCALEMNU_HUD"
+msgstr "전체화면 HUD"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "대체 HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "HUD 화면 비율 보존"
+
+msgid "SCALEMNU_USEUI"
+msgstr "기본 배율 사용"
+
+msgid "SCALEMNU_USEFS"
+msgstr "전체화면에 맞게 축척"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "화면 사이즈에 맞게 축척"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUD 설정"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "대체 HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "메시지 설정"
+
+msgid "HUDMNU_UISCALE"
+msgstr "인터페이스 크기 조정"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "기본 조준점 강제 설정"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "아이템 획득 시 조준점 키우기 "
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "이름표 표시"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "이름표 색깔"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "구형 피격 표정 스프라이트 방식 사용"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "헥센 무기 반짝임"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "독데미지 반짝임"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "동사시 반짝임"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "독데미지 반짝임 증강"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "배율 설정"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "IWAD 게임 선택창 표시"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "모든 게임에 치트 허용"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "저장/불러오기 확인"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "*.deh/*.bex 럼프 파일 불러오기"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "캐시 노드"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "노드 캐싱을 위한 시간 임계값 계산"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "노드 캐시를 삭제"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "인터미션 스크롤러 생략 허용"
+
+msgid "NETMNU_TITLE"
+msgstr "네트워크 설정"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "로컬 설정"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "움직임 예측도"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "라인 움직임 감지"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "러프 예측 강도"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "러프 계산"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "호스트 설정"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "추가 틱"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "지연 시간 조정"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "원형"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "최적화 형"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "구형 (빠르게)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "정확하게"
+
+msgid "OPTVAL_CAPPED"
+msgstr "색상에 맞게"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "입자만"
+
+msgid "OPTVAL_SPRITES"
+msgstr "스프라이트만"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "스프라이트+입자"
+
+msgid "OPTVAL_MELT"
+msgstr "녹는 효과"
+
+msgid "OPTVAL_BURN"
+msgstr "타는 효과"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "화면 교차"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "부드럽게"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "부드럽게"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "투명하게"
+
+msgid "OPTVAL_FUZZ"
+msgstr "퍼즈 효과"
+
+msgid "OPTVAL_SHADOW"
+msgstr "그림자 효과"
+
+msgid "OPTVAL_ITEMS"
+msgstr "아이템들"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "무기들"
+
+msgid "OPTVAL_BOTH"
+msgstr "둘 다"
+
+msgid "OPTVAL_ZDOOM"
+msgstr "Z둠"
+
+msgid "OPTVAL_STRIFE"
+msgstr "스트라이프"
+
+msgid "OPTVAL_PLAYER"
+msgstr "플레이어"
+
+msgid "OPTVAL_MAP"
+msgstr "맵"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "640x400까지 확대"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "2배 픽셀"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "4배 픽셀"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "현 무기"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "사용 가능한 무기들"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "모든 무기들"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "레벨, 밀리초당"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "레벨, 초당"
+
+msgid "OPTVAL_LEVEL"
+msgstr "레벨"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "허브, 초당"
+
+msgid "OPTVAL_HUB"
+msgstr "허브"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "누적 경과, 초당"
+
+msgid "OPTVAL_TOTAL"
+msgstr "누적 경과"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "시스템, 초당"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "시스템"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "멀티플레이에만"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "이미지와 텍스트"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "텍스트와 이미지"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "스크립트에만"
+
+msgid "OPTVAL_ALL"
+msgstr "모두 작동"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "오직 마지막 것만"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "전형적인 둠 스타일"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "전형적인 스트라이프 스타일"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "전형적인 레이븐 스타일"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "획득했을 때만"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "오버레이에만 작동"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "오버레이+기본"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "오버레이만"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "허브는 제외"
+
+msgid "OPTVAL_FRONT"
+msgstr "정면"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "움직임"
+
+msgid "OPTVAL_ROTATED"
+msgstr "회전함"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "자체 미니맵 색상 사용"
+
+msgid "OPTVAL_NODOORS"
+msgstr "문을 제외한 모두"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "2배"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "3배"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "4배"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "아이템 획득시"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "사망 메시지"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "중요한 메시지"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "아군 무시"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "적에게만"
+
+msgid "OPTVAL_HEXEN"
+msgstr "헥센"
+
+msgid "OPTVAL_OLD"
+msgstr "구형"
+
+msgid "OPTVAL_DOOM"
+msgstr "둠"
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "둠 (엄격하게)"
+
+msgid "OPTVAL_BOOM"
+msgstr "붐"
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "붐 (엄격하게)"
+
+msgid "OPTVAL_MBF"
+msgstr "마린의 절친한 친구"
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "마린의 절친한 친구 (엄격하게)"
+
+msgid "OPTVAL_MBF21"
+msgstr "마린의 절친한 친구"
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "마린의 절친한 친구21 (엄격하게)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr "Z둠 2.0.63"
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "모두 미확인함"
+
+msgid "OPTVAL_ERRORS"
+msgstr "에러"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "경고"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "알림"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "전체"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "오픈지엘 가속"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "둠 소프트웨어 렌더러"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "트루 컬러 소프트웨어 렌더러"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "고 성능"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "저전력"
+
+msgid "OPTVAL_VANILLA"
+msgstr "바닐라"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (강제 설정)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "바닐라 (강제 설정)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "자동 (ZDoom 기본 설정)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "자동 (바닐라 기본 설정)"
+
+msgid "OPTVAL_SMALL"
+msgstr "작게"
+
+msgid "OPTVAL_LARGE"
+msgstr "크게"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "콘솔"
+
+msgid "C_BRICK"
+msgstr "\\ca주홍색"
+
+msgid "C_TAN"
+msgstr "\\cb상아색"
+
+msgid "C_GRAY"
+msgstr "\\cc회색"
+
+msgid "C_GREEN"
+msgstr "\\cd녹색"
+
+msgid "C_BROWN"
+msgstr "\\ce갈색"
+
+msgid "C_GOLD"
+msgstr "\\cf금색"
+
+msgid "C_RED"
+msgstr "\\cg적색"
+
+msgid "C_BLUE"
+msgstr "\\ch청색"
+
+msgid "C_ORANGE"
+msgstr "\\ci주황색"
+
+msgid "C_WHITE"
+msgstr "\\cj흰색"
+
+msgid "C_YELLOW"
+msgstr "\\ck노란색"
+
+msgid "C_DEFAULT"
+msgstr "\\cl기본 색"
+
+msgid "C_BLACK"
+msgstr "\\cm검은색"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cn하늘색"
+
+msgid "C_CREAM"
+msgstr "\\co살구색"
+
+msgid "C_OLIVE"
+msgstr "\\cp녹갈색"
+
+msgid "C_DARKGREEN"
+msgstr "\\cq암녹색"
+
+msgid "C_DARKRED"
+msgstr "\\cr암적색"
+
+msgid "C_DARKBROWN"
+msgstr "\\cs암갈색"
+
+msgid "C_PURPLE"
+msgstr "\\ct보라색"
+
+msgid "C_DARKGRAY"
+msgstr "\\cu치색"
+
+msgid "C_CYAN"
+msgstr "\\cv청록색"
+
+msgid "C_ICE"
+msgstr "\\cw구색"
+
+msgid "C_FIRE"
+msgstr "\\cx자황색"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cy벽청색"
+
+msgid "C_TEAL"
+msgstr "\\cz암청록색"
+
+msgid "OPTSTR_HERETIC"
+msgstr "헤러틱 커서"
+
+msgid "OPTSTR_CHEX"
+msgstr "첵스 커서"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "음향 없음"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "보간 없음"
+
+msgid "OPTSTR_SPLINE"
+msgstr "스플라인"
+
+msgid "OPTSTR_OPENAL"
+msgstr "오픈에이엘"
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "오픈지엘 렌더러"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "소프트웨어 렌더러"
+
+msgid "GLMNU_TITLE"
+msgstr "오픈지엘 설정"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "광원 설정"
+
+msgid "GLMNU_PREFS"
+msgstr "성능"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "스프라이트 모서리 다듬기"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "텍스처별로 생성 목록 정렬"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "다이나믹 라이트"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "다이나믹 라이트(오픈지엘)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "조명 선명도 사용"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "조명에 영향받는 스프라이트"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "조명에 영향받는 입자들"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "조명에 영향받는 섀도우맵"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "섀도우맵 퀄리티"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "섀도우맵 필터"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "안개 모드"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "안개를 최대한 강제로 밝힘"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "무기 빛 강도"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "거울 주변의지도 활성"
+
+msgid "GLPREFMNU_ENV"
+msgstr "야시경 효과 향상"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "스텔스 적 개체를 감지하는 ENV"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "스프라이트 클리핑 조정"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "부드러운 스프라이트 모서리"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "퍼즈 스타일"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "스프라이트 샘플링"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "카메라를 향한 스프라이트"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "입자 스타일"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "렌더링 품질"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "VR 입체 스테레오 사용"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "쿼드 스테레오 사용"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "단결된 SW 라이트 모드"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "시야 간의 거리"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "화면과의 거리"
+
+msgid "OPTVAL_SMART"
+msgstr "자동 조정"
+
+msgid "OPTVAL_SMARTER"
+msgstr "고급 자동 조정"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "야시경만"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "야시경과 횃불만"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "고정된 컬러맵만"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "팔레트로 적용"
+
+msgid "OPTVAL_BLEND"
+msgstr "혼합"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "밝은"
+
+msgid "OPTVAL_DARK"
+msgstr "어두운"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "소프트웨어"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "최적함"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y 축"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X/Y 축"
+
+msgid "OPTVAL_SQUARE"
+msgstr "정사각형"
+
+msgid "OPTVAL_ROUND"
+msgstr "원형"
+
+msgid "OPTVAL_RADIAL"
+msgstr "방사형"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "픽셀 퍼즈"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "부드러운 퍼즈"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "소용돌이 퍼즈"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "반투명 퍼즈"
+
+msgid "OPTVAL_NOISE"
+msgstr "노이즈"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "부드러운 노이즈"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "들쭉날쭉한 퍼즈"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "초록/심홍색"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "빨강/하늘색"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "황토/파랑색"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "왼쪽 눈"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "오른쪽 눈"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "크게 좌우배치"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "좁게 좌우배치"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "위/아래"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "열 교차 배치"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "세로줄 교차 배치"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "체크무늬"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "쿼드 버퍼"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "트루 컬러 설정"
+
+msgid "TCMNU_TITLE"
+msgstr "트루 컬러 설정"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "트루 컬러 출력"
+
+msgid "TCMNU_MINFILTER"
+msgstr "축소시 선형 필터링함"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "확대시 선형 필터링함"
+
+msgid "TCMNU_MIPMAP"
+msgstr "밉맵 텍스쳐 사용"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "다이나믹 라이트 (소프트웨어 버전)"
+
+msgid "OS_TITLE"
+msgstr "옵션 검색"
+
+msgid "OS_ANY"
+msgstr "용어 검색"
+
+msgid "OS_ALL"
+msgstr "모든 조건 검색"
+
+msgid "OS_NO_RESULTS"
+msgstr "검색 결과 없음."
+
+msgid "OS_LABEL"
+msgstr "검색:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "항상 키들을 표시"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "팀 변경이 불가능해짐!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s 이(가) %s 팀에 합류함"
+
+msgid "TXT_LONER"
+msgstr "%s 은(는) 혼자 남음."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s 이(가) 게임에서 %d 의 점수를 기록하고 퇴장 함."
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s 이(가) 게임을 떠남."
+
+msgid "TXT_COULDNOTREAD"
+msgstr "저장된 게임을 불러올 수 없습니다.'%s'"
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' 는 유효하지 않습니다: 파일이 없습니다.'info.json'"
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "%s'의 저장된 게임 정보에 액세스 할 수 없습니다."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "저장된 게임'%s'은(는) 호환되지 않는 버전입니다."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "저장된 게임 '%s'은(는) 다른 Z둠 기반 엔진입니다:"
+
+msgid "TXT_TOOOLDSG"
+msgstr "저장된 게임'%s'은(는)  구 버전입니다: %d (%e 이 지원되는 버전 중 가장 오래된 버전)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr "저장된 게임'%s'은(는)  새 버전입니다: %d (%e 이 지원되는 버전 중 가장 최근 버전)"
+
+msgid "TXT_NOMAPSG"
+msgstr "저장된 게임 '%s'에 현재 맵이 없습니다."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' 는 유효하지 않습니다: 파일이 없습니다.'globals.json'"
+
+msgid "TXT_SGINFOERR"
+msgstr "%s'의 저장된 게임 정보에 액세스 할 수 없습니다."
+
+msgid "TXT_SAVEPENDING"
+msgstr "게임 저장이 아직 보류 중입니다."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "저장 가능한 게임에선 불가능 합니다."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "레벨 안에선 불가능 합니다."
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "플레이어가 싱글 플레이 게임에서 죽었습니다."
+
+msgid "TXT_SAVEFAILED"
+msgstr "저장 실패"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "스크린샷을 만들 수 없음."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "%s 에 의해"
+
+msgid "TXT_QUITENDOOM"
+msgstr "아무 키를 누르거나 아무 곳이나 클릭하면 종료됩니다."
+
+msgid "HUDMNU_FLASH"
+msgstr "화면 조합 설정"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D 모드 적용"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "조준점"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "자막"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "회색 그림자 없에기"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "폰트 설정"
+
+msgid "FONTMNU_LOG"
+msgstr "로그 표시에서 기본 폰트 사용"
+
+msgid "FONTMNU_DLG"
+msgstr "대화에서 기본 폰트 사용"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "빠른 종료"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "사용자 지정 반전 맵"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "사용자 지정 어두운 반전 색상"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "사용자 지정 밝은 반전 색상"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "사격 시 무기 스윙"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "인터미션 및 화면 테두리 클래식 스케일링"
+
+msgid "SCALEMNU_INTER"
+msgstr "인터미션 배경"
+
+msgid "SCALEMNU_BORDER"
+msgstr "화면 테두리"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "스케일링 계수"
+
+msgid "SCALEMNU_RATIO"
+msgstr "화면 비율"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "레벨 종료 시 집계 화면 표시"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "모드 정의"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "항상, 허브 내 제외"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "항상, 허브 내에서도"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "기본 키보드 레이아웃"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "클래식 ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr "모던(WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "모던(키패드)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "엄격한 키콘프 무기/플레이어"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "클래식 ZDoom 메뉴 크기 조정"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "요약 화면에서 퍼센트 사용"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "요약 화면에서 클래식 ZDoom 스케일링"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "시민"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "천장 터렛"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "성전사"
+
+msgid "TAG_INQUISITOR"
+msgstr "인퀴지터"
+
+msgid "TAG_PEASANT"
+msgstr "농민"
+
+msgid "TAG_REAVER"
+msgstr "사수"
+
+msgid "TAG_SENTINEL"
+msgstr "센티넬"
+
+msgid "TAG_STALKER"
+msgstr "스토커"
+
+msgid "TAG_BISHOP"
+msgstr "비숍"
+
+msgid "TAG_ENTITY"
+msgstr "유일신"
+
+msgid "TAG_PROGRAMMER"
+msgstr "프로그래머"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "스펙터"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "무릎 꿇은 남자"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "협동 플레이에서 멀티플레이어 사물 생성"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "스프라이트 그림자"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "몬스터와 플레이어"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr ""
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "MBF21 기능 비활성화"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "시간 표시 위젯"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "분쇄된 몬스터는 유령으로 부활합니다."
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "비행 중 흔들림 보기"
+
+msgid "OB_DEMON1HIT"
+msgstr ""
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr ""
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr ""
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr ""
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr ""
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr ""
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr ""
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr ""
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr ""
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr ""
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr ""
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr ""
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr ""
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr ""
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr ""
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr ""
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr ""
+
+msgid "ID24_GOTINCINERATOR"
+msgstr ""
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr ""
+
+msgid "ID24_GOTFUELCAN"
+msgstr ""
+
+msgid "ID24_GOTFUELTANK"
+msgstr ""
+
+msgid "TAG_ID24INCINERATOR"
+msgstr ""
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr ""
+
+msgid "AMMO_ID24FUEL"
+msgstr ""
+
+msgid "AMMO_ID24FUELTANK"
+msgstr ""
+
+msgid "ID24_CC_GHOUL"
+msgstr "구울"
+
+msgid "ID24_CC_BANSHEE"
+msgstr "밴시"
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr "쇼크트루퍼"
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr "마인드 위버"
+
+msgid "ID24_CC_VASSAGO"
+msgstr "바사고"
+
+msgid "ID24_CC_TYRANT"
+msgstr "타이런트"
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr ""
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""
