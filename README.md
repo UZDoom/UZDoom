@@ -1,6 +1,7 @@
 # Welcome to UZDoom!
 
 [![Continuous Integration](https://github.com/UZDoom/UZDoom/actions/workflows/continuous_integration.yml/badge.svg)](https://github.com/UZDoom/UZDoom/actions/workflows/continuous_integration.yml)
+[![Translation status](https://hosted.weblate.org/widget/uzdoom/svg-badge.svg)](https://hosted.weblate.org/engage/uzdoom/)
 
 ## UZDoom is a modder-friendly OpenGL and Vulkan source port based on the DOOM engine
 
@@ -31,4 +32,5 @@ Build For [Windows](https://github.com/UZDoom/UZDoom/wiki/Compilation#windows).
 - https://forum.zdoom.org/ - Forum
 - https://zdoom.org/wiki/ - Wiki
 - https://dsc.gg/zdoom - Discord Server
-- https://docs.google.com/spreadsheets/d/1pvwXEgytkor9SClCiDn4j5AH7FedyXS-ocCbsuQIXDU/edit?usp=sharing - Translation sheet (Google Docs)
+
+[![Translation status](https://hosted.weblate.org/widget/uzdoom/open-graph.png)](https://hosted.weblate.org/engage/uzdoom/)
