@@ -113,7 +113,7 @@ jobs:
 
         elif [[ "${{ runner.os }}" == 'macOS' ]]; then
 
-            if [[ "${{ matrix.config.build_type }}" != 'Release' ]]; then
+            if [[ ! -d uzdoom.app ]] && [[ -d ${{ matrix.config.build_type }}/uzdoom.app ]]; then
                 mv ${{ matrix.config.build_type }}/uzdoom.app uzdoom.app
             fi
             mv package/licenses.zip uzdoom.app
@@ -153,4 +153,4 @@ jobs:
       shell: bash
       run: |
         git status
-        tree -pu
+        tree -pu build
