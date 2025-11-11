@@ -139,6 +139,17 @@ function( add_pk3 PK3_NAME PK3_DIR )
 			COMPONENT "Game resources")
 endfunction()
 
+macro( generate_language_files target source destination )
+	set(lang_target "${target}_${source}")
+	set(lang_script "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/compile.sh")
+	set(lang_src "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/${source}")
+	set(lang_dst "${CMAKE_CURRENT_SOURCE_DIR}/${destination}")
+
+	add_custom_target(${lang_target} COMMAND sh -c "${lang_script} ${lang_src} ${lang_dst}")
+	add_dependencies(${target} ${lang_target})
+	add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E remove "${lang_dst}")
+endmacro()
+
 # Macro for building libraries without debugging information
 macro( make_release_only )
 	set( CMAKE_C_FLAGS_MINSIZEREL ${CMAKE_C_FLAGS_RELEASE} )
