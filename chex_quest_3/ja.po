@@ -1,0 +1,247 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: jp\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "ブルー フレムキー をみつけた"
+
+msgid "GOTYELLOWFLEM"
+msgstr "イエローフレムキー をみつけた"
+
+msgid "GOTREDFLEM"
+msgstr "レッド フレムキー をみつけた"
+
+msgid "GOTGOGGLES"
+msgstr "ウルトラゴーグル をみつけた"
+
+msgid "PD_BLUECO"
+msgstr "このそうちは ブルー キー がひつようだ"
+
+msgid "PD_REDCO"
+msgstr "このそうちは レッド キー がひつようだ"
+
+msgid "PD_YELLOWCO"
+msgstr "このそうちは イエローキー がひつようだ"
+
+msgid "PD_BLUEFO"
+msgstr "このそうちは ブルー キーがひつようだ"
+
+msgid "PD_REDFO"
+msgstr "このそうちは レッド キーがひつようだ"
+
+msgid "PD_YELLOWFO"
+msgstr "このそうちは イエローキーがひつようだ"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "ゾーチャー をひろった"
+
+msgid "STSTR_KFAADDED"
+msgstr "ゾーチ と キーがとどいた"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: ちゃくち ちてん"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: ちょぞう しせつ"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: ラボラトリー"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: じゅもく園"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: バゾイクのどうくつ"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: スペースポート"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: シネマ"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: チェックス ミュージアム"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: シティーストリート"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: サワーシステム"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: 中央しれいとう"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: ユナイテッド シリアル"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: チェックスのべっそう"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: 州立公園"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: メテオスペースシップ"
+
+msgid "CC_ZOMBIE"
+msgstr "コモンズ"
+
+msgid "CC_SHOTGUN"
+msgstr "バイピディクス"
+
+msgid "CC_IMP"
+msgstr "アーマードバイピディクス"
+
+msgid "CC_DEMON"
+msgstr "ステュリクス"
+
+msgid "CC_LOST"
+msgstr "フレムマイン"
+
+msgid "CC_CACO"
+msgstr "スーパーサイクロプティス"
+
+msgid "CC_BARON"
+msgstr "マクシムス"
+
+msgid "CC_SPIDER"
+msgstr "フレンボミネーション"
+
+msgid "CC_CYBER"
+msgstr "ロード スノフォールス"
+
+msgid "CC_HERO"
+msgstr "チェックスのせんし"
+
+msgid "PD_BLUEC"
+msgstr "このとびらは ブルー キー がひつようだ"
+
+msgid "PD_REDC"
+msgstr "このとびらは レッド キー がひつようだ"
+
+msgid "PD_YELLOWC"
+msgstr "このとびらは イエローキー がひつようだ"
+
+msgid "PD_BLUEF"
+msgstr "このとびらは ブルー キーがひつようだ"
+
+msgid "PD_REDF"
+msgstr "このとびらは レッド キーがひつようだ"
+
+msgid "PD_YELLOWF"
+msgstr "このとびらは イエローキーがひつようだ"
+
+msgid "OB_SLIME"
+msgstr "%o はスライムにしずんだ。"
+
+msgid "OB_LAVA"
+msgstr "%o はスライムにしずんだ。"
+
+msgid "OB_POWERSTRAND"
+msgstr "%o は いじげんスライムまみれになった!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o は いじげんスライムまみれになった!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o は ステュリクスに おびやかされた。"
+
+msgid "OB_FLEMMINE"
+msgstr "%o はフレムマインに ヒドいめにあった。"
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o はスーパーサイクロプティスに とかされた。"
+
+msgid "OB_MAXIMUS"
+msgstr "%o はマクシムスに 敗北した。"
+
+msgid "OB_LARVA"
+msgstr "%o はラーバに ヒドいめにあわされた。"
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o はクワッドロンプスに スライムにされた。"
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o はフレンボミネーションに敗北した。"
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o はロード スノフォールスに敗北した。"
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o に %k のロケットゾーチがとどいた。"
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o は %k にとかされた。"
+
+msgid "E1TEXT"
+msgstr ""
+"巨大なフレムブレンを元の次元に送り ほりょを解放した。\n"
+"けれども、フレモイドはまだまだいる!\n"
+"フレモイドは 君の宇宙船を スライムまみれにしたため、\n"
+"君と ほりょは 船をこわし せまい道をたどって にげだした。\n"
+"目的地に たどりついたとき、君の 大たんな救出の成功を\n"
+"いわった。しかし 君はけいかいしていた...\n"
+"さいごのフレモイドはどこにいったか。\n"
+"\n"
+"ざんねんながら けいかいは 正しかった。\n"
+"家に着くと、フレモイドが 君を探していた形跡が見つかった。\n"
+"\n"
+"チェックス クエスト2 : チェックス シティーのきょうふ\n"
+"に そなえろ!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"君は 下水道に集まっていたフレモイドを\n"
+"ぶっとばして、チェックス シティーを守った。\n"
+"フレモイドの きょういはようやく なくなったようだ。\n"
+"\n"
+"\n"
+"平和と はんえいの中で10年がたった。\n"
+"しかしフレモイドは敗北しておらず、えいようのある\n"
+"シリアルを せいふくするという野望は のこっていた。\n"
+"かれらは全ての力を集め、宇宙に巨大な次元のさけめを\n"
+"開いた。そして今や大きなボールオブスライムが\n"
+"シリアルプラネットに真っ直ぐ向かっている!\n"
+"\n"
+"チェックスクエスト3 : インベーション\n"
+"の じゅんびだ!"
+
+msgid "E3TEXT"
+msgstr ""
+"さいごのいちげきで、ロード スノフォールスを元の次元に\n"
+"もどした。君一人で全てのオーズのしゅうげきを 阻止した!\n"
+"\n"
+"君は フレモイド達のことを みんなに教え、再び\n"
+"シリアル ディメンジョンに ぎゃくしゅうをしかけて\n"
+"こないよう ねがった。\n"
+"\n"
+"\n"
+"しかし、そんな考えを持っていたとしても\n"
+"君にはかなわないと思い知るだろう!"
+
+msgid "M_EPI1"
+msgstr "バゾイクからのきゅうしゅつ"
+
+msgid "M_EPI2"
+msgstr "チェックスシティーのきょうふ"
+
+msgid "M_EPI3"
+msgstr "しんにゅう!"
+
+msgid "TAG_GOGGLES"
+msgstr "ウルトラゴーグル"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "ブルーフレムキー"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "イエローフレムキー"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "レッドフレムキー"

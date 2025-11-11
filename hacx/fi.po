@@ -1,0 +1,576 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: fi\n"
+
+msgid "QUITMSG1"
+msgstr "Taitavat nämä ötökät olla liikaa sulle?"
+
+msgid "QUITMSG"
+msgstr "Haluatko varmasti irrottaa\\npiuhan toiminnasta?"
+
+msgid "QUITMSG2"
+msgstr "Yritätkö lopettaa? Ja sinäkö muka hakkeri?"
+
+msgid "QUITMSG3"
+msgstr "Heti takaisin tänne, ennen kuin lähetän viruksen pitkin takaputkeasi!"
+
+msgid "QUITMSG4"
+msgstr "Todelliset hakkerit eivät ikinä kytkeydy irti toiminnasta."
+
+msgid "QUITMSG5"
+msgstr "Älä viitsi! Et ole edes vielä nähnyt parasta kohtaa!"
+
+msgid "QUITMSG6"
+msgstr "Luovuta nyt ja kyberavaruus kärtsää!"
+
+msgid "QUITMSG7"
+msgstr "GENIE lähettää terveisensä, mäntti!"
+
+msgid "QUITMSG8"
+msgstr "Höh, se siitä sankarina olemisesta sitten, hakkeri."
+
+msgid "QUITMSG9"
+msgstr "Täh? Menisit mieluummin takaisin kynän ääreen?"
+
+msgid "QUITMSG10"
+msgstr "Olis pitäny ottaa sininen pilleri."
+
+msgid "QUITMSG11"
+msgstr "Pelin nimi ei oo Paniikkipako!"
+
+msgid "QUITMSG12"
+msgstr "Ei huolta; maailman pelastaminen voi odottaa, eikö niin?"
+
+msgid "QUITMSG13"
+msgstr "Kai sitten on aika katkaista palvelinyhteydet!"
+
+msgid "QUITMSG14"
+msgstr "Älä nyt mene pois ja unohda HacX:ä!"
+
+msgid "OB_SUICIDE"
+msgstr "%o poisti itsensä maailmankaikkeudesta."
+
+msgid "OB_FALLING"
+msgstr "%o muodosti Kansasin kokoisen kraaterin."
+
+msgid "OB_CRUSH"
+msgstr "%o tuli ihmispannukakun muotoiseksi."
+
+msgid "OB_EXIT"
+msgstr "%o yritti irrottaa piuhan."
+
+msgid "OB_WATER"
+msgstr "%o ui kuin tiiliskivi."
+
+msgid "OB_SLIME"
+msgstr "%o kiinnostui ydinasioista."
+
+msgid "OB_LAVA"
+msgstr "%o otti kuuman kylvyn."
+
+msgid "OB_BARREL"
+msgstr "%o sai yliannostuksen nitroglyseriiniä."
+
+msgid "OB_SPLASH"
+msgstr "%o silpoutui riekaleiksi."
+
+msgid "OB_R_SPLASH"
+msgstr "%o halusi nähdä itsensä nurinperin."
+
+msgid "OB_ROCKET"
+msgstr "%o halusi nähdä itsensä nurinperin."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o poisti itsensä maailmankaikkeudesta."
+
+msgid "OB_THUG"
+msgstr "%o ei ole enää vallitsevaa lajia."
+
+msgid "OB_ANDROID"
+msgstr "%o kytkeytyi väärään koneeseen."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o sai hirviömäisen kyberlöylytyksen."
+
+msgid "OB_ICE"
+msgstr "%o raukkaa nyt varmaankin kICEmittää."
+
+msgid "OB_BUZZER"
+msgstr "%o raukan päässä hieman surisee."
+
+msgid "OB_STEALTH"
+msgstr "%o raukalle paljastuu sangen sähköistävä uutinen."
+
+msgid "OB_DMAN"
+msgstr "%o poistettiin kyberavaruudesta."
+
+msgid "OB_GLASS"
+msgstr "%o antoi itsellensä lasileuan."
+
+msgid "OB_MANIAC"
+msgstr "%o raukan elämänjäsenyys päätettiin."
+
+msgid "OB_MANIACHIT"
+msgstr "%o kuoli jollakin sattumanvaraisella tavalla, jota en voi käsittää."
+
+msgid "OB_TERMIN"
+msgstr "%o joutui kohtalokkaan kimman kärtsäämäksi."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o meni hieman liian lähelle vastakkaista sukupuolta."
+
+msgid "OB_REPLI"
+msgstr "%o sanoi hyvästit vanhalle ystävälle."
+
+msgid "OB_REPLIHIT"
+msgstr "%o joutui vanhan ystävän selkäänpuukottamaksi."
+
+msgid "OB_PHAGE"
+msgstr "%o joutui luonnonvalinnan kitkemäksi."
+
+msgid "OB_THORN"
+msgstr "%o ei kyennyt välttämään piikikästä kuolemaa."
+
+msgid "OB_SUMATIC"
+msgstr "%o otti vastaan sumoiskun nivusiin."
+
+msgid "OB_GENIE"
+msgstr "%o ei saanut kolmea toivettaan."
+
+msgid "OB_MINE"
+msgstr "%o yritti silittää miinaa."
+
+msgid "OB_MPKICK"
+msgstr "%k potkaisi %o raukkaa päin naamaa Bruce Leen kung fu-tyyliin."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o romahti käyttäjän %k sähköistävästä ilmestyksestä."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o otti tupla-annoksen käyttäjän %k kuritusta."
+
+msgid "OB_MPTAZER"
+msgstr "%o joutui käyttäjän %k sähkökepin sammuttamaksi."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o sai saamansa täyteen käyttäjän %k jääkylmää vihaa."
+
+msgid "OB_MPUZI"
+msgstr "%k porasi %o raukan täyteen reikiä gangsta-tyyliin."
+
+msgid "OB_MPZOOKA"
+msgstr "%o söi käyttäjän %k fotonipommin."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%k redusoi %o raukan sieväksi fotonipinoksi."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%k redusoi %o raukan antimateriaksi.."
+
+msgid "OB_MPNUKE"
+msgstr "%o nieli käyttäjän %k ydinpommin."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o muuttui radioaktiiviseksi käyttäjän %k massatuhoputken takia."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%k käänsi %o raukan nurinpäin."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o raukan atomirakenne hajosi."
+
+msgid "OB_DEFAULT"
+msgstr "%o spontaanisti kupsahti."
+
+msgid "GOTNUKER"
+msgstr "%Kahmaiset YDÄRIN! Ime tätä!"
+
+msgid "GOTUZI"
+msgstr "Sait UZIn!!"
+
+msgid "GOTREZNATOR"
+msgstr "HOIG-reznaattori - KÄRISTÄ takamuksia"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Sait fotonisingon!"
+
+msgid "GOTBIGSTICK"
+msgstr "Kannat isoa keppiä!"
+
+msgid "GOTTAZER"
+msgstr "Sait etälamauttimen!!"
+
+msgid "GOTCRYOGUN"
+msgstr "Kahmaiset kryopyssyn! PYSÄHDY!"
+
+msgid "GOTROUNDS"
+msgstr "Kahmaiset patruunoita!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Kahmaiset patruunalaatikon!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Kahmaiset torpedon!"
+
+msgid "GOTTORPEDOS"
+msgstr "Kahmaiset torpedolaatikon!"
+
+msgid "GOTMOLECULES"
+msgstr "Kahmaiset molekyylimoduulin!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Kahmaiset tankin täynnä molekyylejä!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Kahmaiset kasetteja!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Kahmaiset laatikollisen kasetteja!"
+
+msgid "GOTVALISE"
+msgstr "Kahmaiset laukullisen täynnä tavaraa!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Voimakenttä!"
+
+msgid "GOTMICROTEL"
+msgstr ""
+
+msgid "GOTENKBLIND"
+msgstr "Olet EnK-sokea!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Vulkanoidut kumisaappaat!"
+
+msgid "GOTSIARRAY"
+msgstr "SI-kenttäkartta!"
+
+msgid "GOTINFRARED"
+msgstr "Infrapunavisiiri!"
+
+msgid "GOTINHALER"
+msgstr "Hengitä syvään, inhalaattori!"
+
+msgid "GOTHYPONEED"
+msgstr "Hyderginepiikkiannos pelastaa sinut!"
+
+msgid "GOTHYPO"
+msgstr "Kahmaiset piikin!"
+
+msgid "GOTKEYCARD"
+msgstr "Löysit avainkortin!"
+
+msgid "GOTCKEY"
+msgstr "Löysit C-avaimen!"
+
+msgid "GOTPASSWORD"
+msgstr "Löysit salasanan!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Löysit sinisen Z-avaimen!"
+
+msgid "GOTYELWZKEY"
+msgstr "Löysit keltaisen Z-avaimen!"
+
+msgid "GOTREDZKEY"
+msgstr "Löysit punaisen Z-avaimen!"
+
+msgid "GOTBODYARMOR"
+msgstr "Suojavarustus!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Sentrofenoksiinia"
+
+msgid "GOTKEVLARVEST"
+msgstr "Kahmaiset Kevlar-liivit!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Kahmaiset Superkevlar-liivit!"
+
+msgid "GOTMICROKIT"
+msgstr "Kahmaiset Microkitin!"
+
+msgid "GOTDAMPENER"
+msgstr "Kahmaiset vaimentimen!"
+
+msgid "PD_CKEY"
+msgstr "Tarvitset C-avaimen saadaksesi pääsyn tähän kohteeseen!"
+
+msgid "PD_KEYCARD"
+msgstr "Tarvitset avainkortin saadaksesi pääsyn tähän kohteeseen!"
+
+msgid "PD_PASSWORD"
+msgstr "Tarvitset salasanan saadaksesi pääsyn tähän kohteeseen!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Tarvitset sinisen Z-avaimen saadaksesi tämän toimimaan!"
+
+msgid "PD_REDZKEY"
+msgstr "Tarvitset punaisen Z-avaimen saadaksesi tämän toimimaan!"
+
+msgid "PD_YELWZKEY"
+msgstr "Tarvitset keltaisen Z-avaimen saadaksesi tämän toimimaan!"
+
+msgid "X1TEXT"
+msgstr ""
+"20 miltsiä kultaa ei taida olla kaiken tämän\n"
+"vaivan väärti, eihän, hakkeri? Saa kynän sen\n"
+"rinnalla tuntumaan perhanan piknikiltä!\n"
+"\n"
+"Karsean rumia biomutaatioita ja kanssa-\n"
+"ihmisiäsi roikkumassa katosta kuin mitkäkin\n"
+"ruokakassit.\n"
+"\n"
+"Mikä helvetti on tämä GENIE? Ei minkään\n"
+"ennen hakkeroimasi tietokoneen kaltainen!\n"
+"\n"
+"Parasta löytää seuraava pääte, napata kyyti\n"
+"c-avaruuden läpi, piestä vähän mutantteja\n"
+"ja häipyä hittoon Dodgesta!"
+
+msgid "X2TEXT"
+msgstr ""
+"Missä kaikki ovat?!\n"
+"\n"
+"Pariisi on aavekaupunki, ellei mutantti-\n"
+"öttiäisiä sitten lasketa mallikansalaisiksi.\n"
+"\n"
+"Olet iskenyt hitonmoiseen vastukseen. Vitsi\n"
+"nämä ötökät tappelevat! Onneksesi ne eivät\n"
+"ole korttelin kirkkaimpia ulkovaloja.\n"
+"\n"
+"Mutta olet saanut osan informatiikasta, jota\n"
+"alakomitea kaipaa, ja se on pahaa luettavaa!\n"
+"\n"
+"Ihmisen hermonesteet ruokkivat ötököitä! Ei\n"
+"ihme, että tienoo alkaa tuntua väljältä.\n"
+"Raportoi alakomitealle ja vahdi selustaasi..."
+
+msgid "X3TEXT"
+msgstr ""
+"Tuntemasi sivilisaatio on mennyttä!\n"
+"\n"
+"Ei ystäviä, ei perhettä, ei enää ihmisiä;\n"
+"tai ainakaan ei normaaleja ihmisiä.\n"
+"\n"
+"Vain yksi asia jäljellä... GENIE!\n"
+"Ja vaikka joutuisit menemään universumin\n"
+"ääriin, löydät sen mutanttipersauksen!\n"
+"Sillä nyt sinua ottaa päähän!\n"
+"\n"
+"Ja kulta? Hitto, teen tämän ilmaiseksi.\n"
+"\n"
+".....(jatkuu)....."
+
+msgid "X5TEXT"
+msgstr ""
+"Sinä olet elossa!\n"
+"\n"
+"Mitkä todennäköisyydet, hakkeri?!\n"
+"Sillä se kuhisee ötököitä.\n"
+"\n"
+"Et saa tavoitettua alakomiteaa, mikä\n"
+"tarkoittaa sitä, että se on murrettu.\n"
+"\n"
+"\n"
+"Sinä... olet yksin."
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp-yhtiö"
+
+msgid "TXT_HACXMAP02"
+msgstr "Tunnelikaupunki"
+
+msgid "TXT_HACXMAP03"
+msgstr "Laavalaajennus"
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr "Kybersirkus"
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr "Suuri muuri"
+
+msgid "TXT_HACXMAP08"
+msgstr "Nautintojen puutarha"
+
+msgid "TXT_HACXMAP09"
+msgstr "Salainen linnoitus"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarkistin unelma"
+
+msgid "TXT_HACXMAP11"
+msgstr "Pane merkille mEIdät!"
+
+msgid "TXT_HACXMAP12"
+msgstr "Goottinen kujanjuoksu"
+
+msgid "TXT_HACXMAP13"
+msgstr "Viemärit"
+
+msgid "TXT_HACXMAP14"
+msgstr "Trodisodat"
+
+msgid "TXT_HACXMAP15"
+msgstr "EnKin illankoitto"
+
+msgid "TXT_HACXMAP16"
+msgstr "Muuntuvainen Kybex"
+
+msgid "TXT_HACXMAP17"
+msgstr "Verivirta"
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr "Sotahuoneet"
+
+msgid "TXT_HACXMAP20"
+msgstr "Murtohälytys!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Kuivatesali"
+
+msgid "STSTR_CLEV"
+msgstr "Seuraavana..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...kärtsää takalistosi!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr ""
+"haavoittumattomuus (V), voima (S), näkymättömyys (I), koko kartta (A) tai "
+"valonvahvistus (L)?"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Otetaanpa tosissaan!"
+
+msgid "STSTR_NCON"
+msgstr "Kyberviipaloijatila PÄÄLLÄ"
+
+msgid "STSTR_NCOFF"
+msgstr "Kyberviipaloijatila POIS PÄÄLTÄ"
+
+msgid "STSTR_NOMUS"
+msgstr "Valinta ei mahdollinen"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "Nuppi kaakkoon"
+
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Nykäise ja nylje -tila"
+
+msgid "STSTR_FAADDED"
+msgstr "Olkoon niin, hakkeri."
+
+msgid "STSTR_DQDON"
+msgstr "Kyberpotenssitila PÄÄLLÄ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Kyberpotenssitila POIS PÄÄLTÄ"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Seuranta PÄÄLLÄ"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Seuranta POIS PÄÄLTÄ"
+
+msgid "DOSY"
+msgstr "- Paina Y paetaksesi! -"
+
+msgid "ENDGAME"
+msgstr ""
+"Oletko hullu tai häiriintynyt?\n"
+"No? Y tai N!"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Oletko varma? Et pysty käsittelemään\n"
+"tätä taitotasoa, hakkeri!\n"
+"\n"
+"Paina Y kuollaksesi. \n"
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"Haluatko pikatallentaa pelin %s päälle?\n"
+"\n"
+"Paina Y tai N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Haluatko pikaladata pelin %s?\n"
+"\n"
+"Paina Y tai N."
+
+msgid "CC_THUG"
+msgstr "Roisto"
+
+msgid "CC_ANDROID"
+msgstr "Androidi"
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr "Surisija"
+
+msgid "CC_DMAN"
+msgstr "D-mies"
+
+msgid "CC_PHAGE"
+msgstr "Fagi"
+
+msgid "CC_MONSTRUCT"
+msgstr "Keinohirviö"
+
+msgid "CC_MECH"
+msgstr "Mechamaanikko"
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr "Okaolio"
+
+msgid "CC_MAJONG"
+msgstr "Mahjong 7"
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr "Pyydän, älä ammu!"
+
+msgid "SKILL_EASY"
+msgstr "Aargh, tarvitsen terveyttä!"
+
+msgid "SKILL_NORMAL"
+msgstr "Revitään ne kappaleiksi!"
+
+msgid "SKILL_HARD"
+msgstr "Olen kuolemation!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Mielettömyys!"

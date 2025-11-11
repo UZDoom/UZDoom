@@ -1,0 +1,250 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: hr\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Ključ plave sluzi je pokupljen."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Ključ žute sluzi je pokupljen."
+
+msgid "GOTREDFLEM"
+msgstr "Ključ crvene sluzi je pokupljen."
+
+msgid "GOTGOGGLES"
+msgstr "Ultra naočale su pronađene."
+
+msgid "PD_BLUECO"
+msgstr "Potreban ti je plavi ključ da aktiviraš ovaj predmet."
+
+msgid "PD_REDCO"
+msgstr "Potreban ti je crveni ključ da aktiviraš ovaj predmet."
+
+msgid "PD_YELLOWCO"
+msgstr "Potreban ti je žuti ključ da aktiviraš ovaj predmet."
+
+msgid "PD_BLUEFO"
+msgstr "Potreban ti je ključ plave sluzi da aktiviraš ovaj predmet."
+
+msgid "PD_REDFO"
+msgstr "Potreban ti je ključ crvene sluzi da aktiviraš ovaj predmet."
+
+msgid "PD_YELLOWFO"
+msgstr "Potreban ti je ključ žute sluzi da aktiviraš ovaj predmet."
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Zorčer je pokupljen."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorč i ključevi su dodani."
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Zona slijetanja"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Skladište"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorij"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arboretum"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Bazoikove pećine"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Svemirska luka"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Kino"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Muzej Chexa"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Gradske ulice"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Sustav kanalizacije"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Zapovjedništvo"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Ujedinjene žitarice"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Vila Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Pokrajinski park"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Svemirski brod Meteor"
+
+msgid "CC_ZOMBIE"
+msgstr "Uobičajenikus"
+
+msgid "CC_SHOTGUN"
+msgstr "Dvonožnikus"
+
+msgid "CC_IMP"
+msgstr "Dvonožnikus sa štitom"
+
+msgid "CC_DEMON"
+msgstr "Kamenikus"
+
+msgid "CC_LOST"
+msgstr "Sluzava mina"
+
+msgid "CC_CACO"
+msgstr "Super Kikloptis"
+
+msgid "CC_BARON"
+msgstr "Maksimus"
+
+msgid "CC_SPIDER"
+msgstr "Flembominatis"
+
+msgid "CC_CYBER"
+msgstr "Gospodin Šmrkavikus"
+
+msgid "CC_HERO"
+msgstr "Chex ratnik"
+
+msgid "PD_BLUEC"
+msgstr "Potreban ti je plavi ključ da otvoriš ova vrata."
+
+msgid "PD_REDC"
+msgstr "Potreban ti je crveni ključ da otvoriš ova vrata."
+
+msgid "PD_YELLOWC"
+msgstr "Potreban ti je žuti ključ da otvoriš ova vrata."
+
+msgid "PD_BLUEF"
+msgstr "Potreban ti je ključ plave sluzi da otvoriš ova vrata."
+
+msgid "PD_REDF"
+msgstr "Potreban ti je ključ crvene sluzi da otvoriš ova vrata."
+
+msgid "PD_YELLOWF"
+msgstr "Potreban ti je ključ žute sluzi da otvoriš ova vrata."
+
+msgid "OB_SLIME"
+msgstr "%o se utapa u malo sluzi."
+
+msgid "OB_LAVA"
+msgstr "%o se utapa u malo sluzi."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o pogađa međudimenzionalna sluz!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o pogađa međudimenzionalna sluz!"
+
+msgid "OB_STRIDICUS"
+msgstr "Kamenikus izvikava %o."
+
+msgid "OB_FLEMMINE"
+msgstr "%o raznosi sluzava mina."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "Super Kikloptis uništava %o u sluzi."
+
+msgid "OB_MAXIMUS"
+msgstr "Maksimus poražava %o."
+
+msgid "OB_LARVA"
+msgstr "Crv raznosi %o."
+
+msgid "OB_QUADRUMPUS"
+msgstr "Četverostrukus uništava %o u sluzi."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "Flembominatis poražava %o."
+
+msgid "OB_SNOTFOLUS"
+msgstr "Gospodin Šmrkavikus poražava %o."
+
+msgid "OB_MPR_SPLASH"
+msgstr "Propulzor od %k pogađa %o."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%k lijenčari %o."
+
+msgid "E1TEXT"
+msgstr ""
+"Nakon što si poslao/la čudovišnu Flembranu natrag u vlastitu dimenziju, oslobađaš zatočenike. Ipak, flemoidi su posvuda!\n"
+"Ti i zatočenici se probijate do tvog svemirskog broda. Flemoidi gađaju tvoj brod sa sluzi, ali ti usko bježiš u orbitu.\n"
+"Tijekom povrata ti se čestita za odvažno spašavanje, ali izdaješ upozorenje...\n"
+"Nismo vidjeli posljednje Flemoide.\n"
+"\n"
+"Nažalost, u pravu si. Kako se ti\n"
+"vraćaš doma, otkrivaš da su te Flemoidi\n"
+"nekako slijedili ovdje. Pripremi se\n"
+"za Chexovu potragu 2: Teror u gradu Chexu!"
+
+msgid "E2TEXT"
+msgstr ""
+"Zorčiš preostale flemoide koji su se\n"
+"okupili u kanalizaciji. Grad Chex je\n"
+"spašen. Čini se da je flemoidska prijetnja\n"
+"napokon završena.\n"
+"\n"
+"\n"
+"10 godina prolazi u miru i blagostanju.\n"
+"No, Flemoidi nisu poraženi, a\n"
+"njihova želja da kontroliraju nutritivno\n"
+"bogatu dimenziju žitarica nije se smanjila.\n"
+"Okupili su sve svoje snage, otvorili\n"
+"gigantsku međudimenzionalnu pukotinu u svemiru\n"
+"i sada velika kugla sluzi ide\n"
+"ravno prema planetu žitarica!\n"
+"\n"
+"Pripremi se za\n"
+"Chexovu potragu 3: Invazija!"
+
+msgid "E3TEXT"
+msgstr ""
+"Posljednjim udarcem, zorčiš Gospodina\n"
+"Šmrkavikusa natrag u njegovu vlastitu dimenziju!\n"
+"Unatoč svim izgledima,\n"
+"sam/a spriječavaš invaziju!\n"
+"\n"
+"Istinski se nadaš da su Flemoidi\n"
+"napokon naučili svoju lekciju i da se\n"
+"nikada više neće vraćati u dimenziju\n"
+"žitarica.\n"
+"\n"
+"\n"
+"\n"
+"Ali, ako to učine, znaš da ćeš biti\n"
+"spreman/na za njih!"
+
+msgid "M_EPI1"
+msgstr "Spas na Bazoiku"
+
+msgid "M_EPI2"
+msgstr "Teror u gradu Chexu"
+
+msgid "M_EPI3"
+msgstr "Invazija!"
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

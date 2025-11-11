@@ -1,0 +1,257 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: fr\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Flemclé bleue récupérée."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Flemclé jaune récupérée."
+
+msgid "GOTREDFLEM"
+msgstr "Flemclé rouge récupérée."
+
+msgid "GOTGOGGLES"
+msgstr "Ultra-lunettes récupérées."
+
+msgid "PD_BLUECO"
+msgstr "Il vous faut une clé bleue pour activer cet objet."
+
+msgid "PD_REDCO"
+msgstr "Il vous faut une clé rouge pour activer cet objet."
+
+msgid "PD_YELLOWCO"
+msgstr "Il vous faut une clé jaune pour activer cet objet."
+
+msgid "PD_BLUEFO"
+msgstr "Il vous faut une flemclé bleue pour activer cet objet."
+
+msgid "PD_REDFO"
+msgstr "Il vous faut une flemclé rouge pour activer cet objet."
+
+msgid "PD_YELLOWFO"
+msgstr "Il vous faut une flemclé jaune pour activer cet objet."
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Zorcheur récupéré."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch et clés ajoutées."
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Zone D'Atterissage"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Centre de Stockage"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratoire"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Cavernes de Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Spatioport"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Cinéma"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Musée Chex"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Rues de la Ville"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Système d'égouts"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Commandement"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Céréales Unies"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Villa Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Parc Naturel"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Vaisseau Météore"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Bipedicus avec Armure"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr ""
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "La Flembomination"
+
+msgid "CC_CYBER"
+msgstr "Seigneur Morvator"
+
+msgid "CC_HERO"
+msgstr "Guerrier Chex"
+
+msgid "PD_BLUEC"
+msgstr "Il vous faut une clé bleue pour ouvrir cette porte."
+
+msgid "PD_REDC"
+msgstr "Il vous faut une clé rouge pour ouvrir cette porte."
+
+msgid "PD_YELLOWC"
+msgstr "Il vous faut une clé jaune pour ouvrir cette porte."
+
+msgid "PD_BLUEF"
+msgstr "Il vous faut une flemclé bleue pour ouvrir cette porte."
+
+msgid "PD_REDF"
+msgstr "Il vous faut une flemclé rouge pour ouvrir cette porte."
+
+msgid "PD_YELLOWF"
+msgstr "Il vous faut une flemclé jaune pour ouvrir cette porte."
+
+msgid "OB_SLIME"
+msgstr "%o se noie dans la morve."
+
+msgid "OB_LAVA"
+msgstr "%o se noie dans la morve."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o s'est fait@[e_fr] toucher par de la morve interdimensionelle!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o s'est fait@[e_fr] toucher par de la morve interdimensionelle!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o s'est fait@[e_fr] engluer par un stridicus."
+
+msgid "OB_FLEMMINE"
+msgstr "%o s'est fait@[e_fr] éclabousser par une flem mine."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o s'est fait@[e_fr] gélifier par un super cycloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "%o s'est fait@[e_fr] battre par un Maximus."
+
+msgid "OB_LARVA"
+msgstr "%o s'est fait@[e_fr] tâcher par une larve."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o s'est fait@[e_fr] morver par un quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o s'est fait@[e_fr] éliminer par la Flembomination."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o est tombé@[e_fr] face au Seigneur Morvator."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o s'est fait@[e_fr] propulser par %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o est entré@[e_fr] dans la zone de zorchage large de %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Ayant renvoyé la terrible Flembrane dans\n"
+"sa dimension, vous libérez les prisonniers. \n"
+"Pourtant, les flémoïdes sont partout! \n"
+"Vous aidez les prisonniers à rejoindre\n"
+"votre vaisseau. Les flémoïdes s'agglutinent\n"
+"dessus, mais vous arrivez à vous mettre\n"
+"en orbite. Lors du retour, vous êtes félicité,\n"
+"mais vous avez un avertissement..\n"
+"Ce n'est pas la fin de la menace flémoïde.\n"
+"\n"
+"Malheureusement, vous avez raison.\n"
+"Quand vous retournez sur votre planète,\n"
+"vous découvrez que les flémoïdes vous\n"
+"ont suivi jusqu'ici. Préparez vous pour\n"
+"Chex Quest 2: Terreur à Chex City!"
+
+msgid "E2TEXT"
+msgstr ""
+"Vous zorchez les derniers flémoïdes\n"
+"restant dans les égouts. Chex City\n"
+"est sauvée. Il semble que la menace\n"
+"flémoïde n'existe plus.\n"
+"\n"
+"Dix ans se déroulent dans la paix et\n"
+"la prospérité, mais les flémoïdes ne\n"
+"se sont pas laissé battre, et veulent\n"
+"contrôler la dimension des céréales,\n"
+"riche en nutriments. Ils on regroupé\n"
+"leur forces et ont ouvert un portail\n"
+"inter-dimensionnel colossal, et \n"
+"maintenant, une sphère de morve\n"
+"géante se dirige vers la planète\n"
+"des céréales!\n"
+"\n"
+"Préparez vous pour Chex Quest 3:\n"
+"Invasion!"
+
+msgid "E3TEXT"
+msgstr ""
+"Avec un dernier tir, vous zorchez\n"
+"Seigneur Morvator dans sa propre\n"
+"dimension! Contre toute attente,\n"
+"vous avez surmonté l'invasion\n"
+"de par vos propres moyens.\n"
+"\n"
+"Vous espérez sincèrement que les\n"
+"flémoïdes ont appris leur leçon\n"
+"et qu'il n'essaieront jamais de\n"
+"revenir envahir la dimension des\n"
+"céréales.\n"
+"\n"
+"Mais vous savez que vous serez\n"
+"prêt pour eux!"
+
+msgid "M_EPI1"
+msgstr "Sauvetage sur Bazoik"
+
+msgid "M_EPI2"
+msgstr "Terreur à Chex City"
+
+msgid "M_EPI3"
+msgstr ""
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

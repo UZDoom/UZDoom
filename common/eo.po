@@ -1,0 +1,2129 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/common/"
+"eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eo\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Premu Y aŭ N."
+
+msgid "TXT_YES"
+msgstr "Jes"
+
+msgid "TXT_NO"
+msgstr "Ne"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Vi ne povas konservi kiam vi ne estas ludanta!\n"
+"\n"
+"Premu ajnan klavon."
+
+msgid "SAFEMESSAGE"
+msgstr "Ĉu vi vere volas fari tion?"
+
+msgid "NOTSET"
+msgstr "Ne agordita"
+
+msgid "QSPROMPT"
+msgstr ""
+"Ĉu rapidkonservi anstataŭigante vian ludadon nomitan\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Ĉu vi volas rapidŝargi la ludadon nomitan\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premu Y aŭ N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s trompas"
+
+msgid "MSGOFF"
+msgstr "Mesaĝoj: MALŜALTITA"
+
+msgid "MSGON"
+msgstr "Mesaĝoj: ŜALTITA"
+
+msgid "TXT_SAY"
+msgstr "Diri:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Premu ajnan klavon aŭ alklaku ie ajn en la fenestro por forlasi."
+
+msgid "NEWSAVE"
+msgstr "<Nova konservota ludado>"
+
+msgid "GGSAVED"
+msgstr "Ludado konservita."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Tempo"
+
+msgid "MNU_LOADGAME"
+msgstr "Ŝargi ludadon"
+
+msgid "MNU_SAVEGAME"
+msgstr "Konservi ludadon"
+
+msgid "MNU_NOPICTURE"
+msgstr "Neniu bildo"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Malsama versio"
+
+msgid "MNU_NOFILES"
+msgstr "Neniu dosiero"
+
+msgid "MNU_DELETESG"
+msgstr "Ĉu vi vere volas forigi la konservitan ludadon?"
+
+msgid "OPTVAL_OFF"
+msgstr "Malŝaltita"
+
+msgid "OPTVAL_ON"
+msgstr "Ŝaltita"
+
+msgid "OPTVAL_AUTO"
+msgstr "Aŭtomata"
+
+msgid "OPTMNU_TITLE"
+msgstr "Agordoj"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Adapti regilojn"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Agordo de muso"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Agordo de regilo"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Agordaĵo de la ludanto"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Agordo de ludado"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Agordo de la aŭtomata mapo"
+
+msgid "OPTMNU_HUD"
+msgstr "Agordo de la HUD"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Agordo diversa"
+
+msgid "OPTMNU_SOUND"
+msgstr "Agordo de sono"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Agordo de ekrano"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Agordi videoreĝimon"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Restarigi la defaŭltojn"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Restarigi la lastajn konservitojn"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Konservi nunan agordaĵon"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Iri al konzolo"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Agordo de reto"
+
+msgid "OPTMNU_REVERB"
+msgstr "Redaktilo de resona medio"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENEN por ŝanĝi, RETROPAŜO por forigi"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Premu novan klavon por regilo, ESC por nuligi"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Regiloj"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Pafi"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Akcesora pafado"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Reŝargi armilon"
+
+msgid "CNTRLMNU_USE"
+msgstr "Uzi/Malfermi"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Moviĝi anatŭen"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Moviĝi malantaŭen"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Flankenmoviĝi maldekstren"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Flankenmoviĝi dekstren"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Turniĝi maldekstren"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Turniĝi dekstren"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Turniĝi rapide"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Salti"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Kaŭri"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Baskuligi kaŭradon"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Rigardi per muso"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Rigardi supren"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Rigardi malsupren"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Centrigi vidon"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Kuri"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Baskuligi kuron"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Flankenmoviĝi"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Montri poentotabulon"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Agoj"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Adapti regilojn de agoj"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Babili"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Plurludanta"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Diri"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Adapti regilojn de babilado"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Adapti regilojn de armiloj"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Adapti regilojn de inventaro"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Adapti aliajn regilojn"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Armiloj"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Sekva armilo"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Antaŭa armilo"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Armilo 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Armilo 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Armilo 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Armilo 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Armilo 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Armilo 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Armilo 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Armilo 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Armilo 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Armilo 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventaro"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Aktivigi aĵon"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Aktivigi ĉiujn aĵojn"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Sekva aĵo"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Antaŭa aĵo"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Adapti regilojn de mapo"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Regiloj de mapo"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Movi maldekstren"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Movi dekstren"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Movi supren"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Movi malsupren"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Zomi"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Malzomi"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Baskuligi zomon"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Baskuligi sekvadon"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Baskuligi kradon"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Baskuligi turniĝo"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Baskuligi teksturon"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Baskuligi aŭtomatan mapon"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Sekvanta kamerao"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Ekrankopio"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Malfermi konzolon"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Paŭzo"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Pliigi ekrangrandon"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Malpliigi ekrangrandon"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Malfermi helpon"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Malfermi menuon konservi"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Malfermi menuon ŝargi"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Malfermi menuon de agordoj"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Malfermi menuon de ekrano"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Rapidkonservi"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Rapidŝargi"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Eliri al ĉefa menuo"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Baskuligi mesaĝojn"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Mallanĉi ludon"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Agordi gamaon"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Ebligi muson"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Ebligi muson en menuoj"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Montri reen-butonon"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Musmontrilo"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Horizontala sentemo"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Vertikala sentemo"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Glata musmovo"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Rapido de turniĝo"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Rapido de musrigardo"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Rapido de (mal)antaŭeniro"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Rapido de flankenmoviĝo"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Ĉiam rigardi per muso"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Inversi akson Y de muso"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Inversi akson X de muso"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Supre-maldekstre"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Supre-dekstre"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Sube-maldekstre"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Sube-dekstre"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Tuŝekranece"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Simpla sago"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Musmontrilo de la sistemo"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Defaŭlta"
+
+msgid "JOYMNU_TITLE"
+msgstr "Agordi ludregilon"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Agordo de ludregilo"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Malebligi enigon de ludregilo en menuo"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Ebligi subtenon de ludregilo"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Ebligi ludregilojn de DirectInput"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Ebligi ludregilojn de XInput"
+
+msgid "JOYMNU_PS2"
+msgstr "Ebligi adaptilojn de PlayStation 2 "
+
+msgid "JOYMNU_NOCON"
+msgstr "Neniu ludregilo detektita"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Agordi ludregilojn:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Subteno por ludregiloj devas esti"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "ebligita por detekti iun"
+
+msgid "JOYMNU_INVALID"
+msgstr "Nevalida ludregilo specifigita por menuo"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Tuta sentemeco"
+
+msgid "JOYMNU_AXIS"
+msgstr "Agordo de aksoj"
+
+msgid "JOYMNU_INVERT"
+msgstr "Inversigi"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Malviva zono"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Neniu agordebla akso"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Nenio"
+
+msgid "OPTVAL_TURNING"
+msgstr "Turniĝi"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Rigardi (mal)supren"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Antaŭeniri"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Flankenmoviĝi"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Moviĝi (mal)supren"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Inversigita"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Ne inversigita"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Blua"
+
+msgid "TXT_COLOR_RED"
+msgstr "Ruĝa"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Verda"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Griza"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Malhelgriza"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Malhelverda"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Bruna"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Malhelblua"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Helruĝa"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Flava"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Purpura"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Olivkolora"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Flavgriza"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Helverda"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Helblua"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Helgriza"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Helbruna"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Orkolora"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Brilverda"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rustokolora"
+
+msgid "PLYRMNU_NAME"
+msgstr "Nomo"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Teamo"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Koloro"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Genro"
+
+msgid "OPTVAL_MALE"
+msgstr "Vira"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Ina"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neŭtra (Ri)"
+
+msgid "OPTVAL_OTHER"
+msgstr "Objekto (Ĝi)"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Agordo de ludado"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Ĉiam"
+
+msgid "OPTVAL_NEVER"
+msgstr "Neniam"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Celasisto"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Ĉiam kuri"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Ekrangrando"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Vertikala sinkronigo"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Modeloj"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skali celilon"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Heleco"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gamaa korekto"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrasto"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Kolorintenseco"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Skalo de statobreto"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Mesaĝoj"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Centrigi mesaĝojn"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Montri mesaĝojn pulsante"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Skalo de mesaĝoj"
+
+msgid "MNU_COLORPICKER"
+msgstr "Elektu koloron"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Rotacii aŭtomatan mapon"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Sekvi ludanton"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Opako de linio"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Diko de linio"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Adapti kolorojn de mapo"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Restaŭri defaŭltajn adaptitajn kolorojn"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Sono ebligita"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Muziko ebligita"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 specimenoj"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 specimenoj"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 specimenoj"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 specimenoj"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 specimenoj"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 specimenoj"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 specimenoj"
+
+msgid "OPTSTR_AUTO"
+msgstr "Aŭtomata"
+
+msgid "OPTSTR_MONO"
+msgstr "Unukanala (\"Mono\")"
+
+msgid "OPTSTR_STEREO"
+msgstr "Stereofonia"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Malkodilo de Dolby Pro Logic "
+
+msgid "OPTSTR_QUAD"
+msgstr "Kvarkanala (\"Quad\")"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 laŭtparoliloj"
+
+msgid "OPTSTR_5POINT1"
+msgstr "Laŭtparolilaro 5.1"
+
+msgid "OPTSTR_7POINT1"
+msgstr "Laŭtparolilaro 7.1"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Aparato por ludadi"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Ebligi EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Respecimenilo"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Laŭteco de sono"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Laŭteco de menuo"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Laŭteco de muziko"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDIa aparato"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Fona sono"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Subakva resono"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Hazardigi tonaltojn"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Sonkanaloj"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Sonservilo"
+
+msgid "SNDMNU_OPENAL"
+msgstr "Agordo de OpenAL"
+
+msgid "SNDMNU_RESTART"
+msgstr "Rekomenci sonon"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Altnivelaj agordoj"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Agordo por legilo de moduloj"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Agordoj por legilo de MIDI"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Sono en menuoj"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Altnivelaj agordoj de sono"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Specimenrapido"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "Sintezo de OPL"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Nombro da imitataj blatoj OPL"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Plena MIDIa stereo-panoramado"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "Imitil-kerno de OPL"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI-aj voĉoj"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Malloka"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Malloka Freeverb"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Flikaro"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Akiro"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Resono"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Nivelo de resono"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Ĥoro"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Agorda dosiero de Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relativa laŭteco"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Agorda dosiero de WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Elekti agordon"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Altnivela respecimenado"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "Memor-banko por OPL"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Imitil-kerno por OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Lanĉi imitilon laŭ rapido de PCM"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Nombro da imitataj blatoj OPL"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Akiro"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Modelo de laŭteco"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "Imitil-kerno por OPN2"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "Imitado de GUS"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Agorda dosiero de GUS"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Legi datumarojn DMXGUS"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Memor-kapacito de GUS"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Nombro da imitataj blatoj OPN"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Akiro"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Uzi propran WOPLan memor-bankon"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Dosiero de WOPLa memor-banko"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Uzi propran WOPNan memor-bankon"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Dosiero de WOPNa memor-banko"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Grajneca"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Lineara"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Lineara"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Lineara"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Plej proksima"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Malalta)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Mezalta)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Alta)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kuba"
+
+msgid "OPTVAL_BLEP"
+msgstr "Paŝo limigita per bendo"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Lineara (Pli malrapida)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Bendo-limigite lineara"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kuba (Pli malrapida)"
+
+msgid "OPTVAL_SINC"
+msgstr ""
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Nur (mal)ŝaltataj tonoj"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Plena kresko"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Ĉeflaŭteco"
+
+msgid "MODMNU_QUALITY"
+msgstr "Kvalito"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Grada kresko de laŭteco"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Aŭtomata (agordaĵo de memor-banko)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Aŭtomata (agordaĵo de memor-banko)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Komuna"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Komuna"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "Operaciuma OPL"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "Operaciuma OPN"
+
+msgid "ADLVLMODEL_DMX"
+msgstr ""
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Kiel Win9X"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Kiel Win9X (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Kiel Win9X (Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (sen cimo de AMa voĉo)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (sen cimo de AMa voĉo)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "Son-biblioteka interfaco de IBM"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "Son-operaciumo de HMI"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "Son-op. de HMI (malnova, cimo-hava)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Senlima"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Kolorpaletro"
+
+msgid "OPTVAL_LOW"
+msgstr "Malalta"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Meza"
+
+msgid "OPTVAL_HIGH"
+msgstr "Alta"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Ekstrema"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Aversa"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Inversa"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Posttraktado"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Reĝimo de ton-mapo"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Lens-distorda efiko"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Kvalito de FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Apliki punktojn al eligo"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Ordo de la kolorpaletro de ton-mapo"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Eksponeto de kolorpaletro de ton-mapo"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Plur-specimenado"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Lum-ŝmira efiko"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Kvaliteco de media obstrukceco"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portaloj kun Media obstrukceco"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Malklarigo de menuo "
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Medimapo sur speguloj"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Kvalito de bildigado"
+
+msgid "OPTVAL_SPEED"
+msgstr "Rapido"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Kvalito"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Reĝimo de sektorlumo"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Reĝimo de nebulo"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radiusa"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Norma"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Reĝimo por Teksturfiltrado"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anizotropa filtro"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Nenio (plej proksima mipmapo)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Nenio (linia mipmapo)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Nenio (trilinia)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Dulinia"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilinia"
+
+msgid "OPTVAL_2X"
+msgstr "2-oble"
+
+msgid "OPTVAL_4X"
+msgstr "4-oble"
+
+msgid "OPTVAL_8X"
+msgstr "8-oble"
+
+msgid "OPTVAL_16X"
+msgstr "16-oble"
+
+msgid "OPTVAL_32X"
+msgstr "32-oble"
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Agordoj de Teksturoj"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Teksturoj ŝaltitaj"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Ŝalti Altdistingivajn Teksturojn"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Reĝimo de Altdistingivigo-Skalilo"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Obligilo de Altdistingivigo-Skalilo"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Ĉi tiu reĝimo bezonas %d-oble pli da ekranmemoro."
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Regrandigi teksturojn"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Regrandigi mov-rastrumojn"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Regrandigi tiparojn"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Regrandigi haŭtojn de modeloj"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Antaŭkaŝmemorigi GL-teksturojn"
+
+msgid "VIDMNU_TITLE"
+msgstr "Video-reĝimo"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Skalita (Plej proksime)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Skalita (Linie)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Leterkesto"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Streĉi"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Bildigo-reĝimo"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Plena ekrano"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retino/HiDPI subteno"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Ekran-proporcio"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Devigi ekran-proporcion"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Stilo por devigita proporcio"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Ŝalti 5:4 ekran-proporcion"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Distingivo-skalo"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Skalfaktoro"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Uzi linian skaladon (Plenekrane)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Adaptita rastrumero-skalo"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Adaptita larĝeco"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Adaptita alteco"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Apliki ŝanĝojn (Fenestrite)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Apliki ŝanĝojn (Plenekrane)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Elekti antaŭagorditan distingivon"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Viaj antaŭagorditaj distingivoj"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Reĝimoj pri antaŭagordita distingivo"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "4:3 proporcio"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "5:4 proporcio"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "16:9 proporcio"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "16:10 proporcio"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "21:9 proporcio"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normala"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Plej malalta ebla skalo"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Agordita de vi"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "Maksimumaj kadroj laŭ sekundo"
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Preferita bildigado de API"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Kunigi maldekstran kaj dekstran Alt/Ctrl/Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt+Enter baskuligas tutekranan reĝimon"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Komando-F baskuligas tutekranan reĝimon"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Ŝalti aŭtomatajn konservojn de ludadoj"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Maksimuma kvanto da aŭtomataj konservoj"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Konfirmo de konservo/ŝargo"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Malvalidigi klavarajn trompojn"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rotacio de rapidkonservo"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Kvanto da rapidkonservoj en rotaciado"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Malebligi puran skaladon en la ĉefmenuo"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Paŭzigi ludon fone"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Defaŭlta reteto"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Retetokoloro"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Reteto montras sanon"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Skali reteton"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Norma"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Bonigita"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Lingvo"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Malfari ŝanĝojn"
+
+msgid "REVMNU_SELECT"
+msgstr "Elekti medion"
+
+msgid "REVMNU_TEST"
+msgstr "Provi medion"
+
+msgid "REVMNU_EDIT"
+msgstr "Modifi medion"
+
+msgid "REVMNU_NEW"
+msgstr "Nova medio"
+
+msgid "REVMNU_REVERT"
+msgstr "Malfari agordojn"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Mediamplekso"
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Medidifuzo"
+
+msgid "REVMNU_ROOM"
+msgstr "Ĉambro"
+
+msgid "REVMNU_ROOM_HF"
+msgstr "Ĉambro (AF)"
+
+msgid "REVMNU_ROOM_LF"
+msgstr "Ĉambro (MaF)"
+
+msgid "REVMNU_DECAY_TIME"
+msgstr "Putriĝo-tempo"
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Putriĝo-proporcio (AF)"
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Putriĝo-proporcio (MaF)"
+
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflektoj"
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Prokrasto de reflektoj"
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Reflektoj alturnas tra X"
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Reflektoj alturnas tra Y"
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Reflektoj alturnas tra Z"
+
+msgid "REVMNU_REVERB"
+msgstr "Resono"
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Prokrasto de resono"
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Resono alturnas tra X"
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Resono alturnas tra Y"
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Resono alturnas tra Z"
+
+msgid "REVMNU_ECHO_TIME"
+msgstr "Tempo de eĥo"
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Produndo de eĥo"
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Tempo de modulado"
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Produndo de modulado"
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Aer-absorbo AF"
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr "AF referenco"
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr "MaF referenco"
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Ĉambro-Rolloff-faktoro"
+
+msgid "REVMNU_DIFFUSION"
+msgstr "Difuzo"
+
+msgid "REVMNU_DENSITY"
+msgstr "Denseco"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Skalo de reflektoj"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Prokrastskalo de reflektoj"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Tempskalo de purtiĝo"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "AF-Limito de purtiĝo"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Skalo de resono"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Prokrastskalo de resono"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Tempskalo de eĥo"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Tempskalo de modulado"
+
+msgid "REVMNU_Based_on"
+msgstr "Bazita de"
+
+msgid "REVMNU_Name"
+msgstr "Nomo"
+
+msgid "REVMNU_ID_1"
+msgstr "Identigo #1"
+
+msgid "REVMNU_ID_2"
+msgstr "Identigo #2"
+
+msgid "REVMNU_Create"
+msgstr "Krei"
+
+msgid "REVMNU_Save"
+msgstr "Konservi..."
+
+msgid "REVMNU_File_name"
+msgstr "Dosiernomo"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Medioj por konservi"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Agordoj por Vulkan (Eksperimenta)"
+
+msgid "VK_TITLE"
+msgstr "Agordoj por Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Ŝalti Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "Identigo de Vulkan-aparato"
+
+msgid "VKMNU_HDR"
+msgstr "Alta dinamika intervalo"
+
+msgid "VK_WARNING"
+msgstr "Averto: La bildigilo de Vulkan estas alte eksperimenta!"
+
+msgid "VK_RESTART"
+msgstr "Ĉi tiuj agordoj bezonos relanĉon por efikiĝi."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Elekti Vulkan-aparaton"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Malnova xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Serĉi agordojn"
+
+msgid "OS_ANY"
+msgstr "Serĉi iun ajn terminon"
+
+msgid "OS_ALL"
+msgstr "Serĉi ĉiujn terminojn"
+
+msgid "OS_NO_RESULTS"
+msgstr "Neniu trafo."
+
+msgid "OS_LABEL"
+msgstr "Serĉi:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k senostigis %o kiel fiŝon"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k kastris %o"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k kremigis %o"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k detruegis %o"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k detruis %o"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k diskubigis %o"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k sentripigis %o"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k platigis %o"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k donis pugan juston al %o"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k donis pUgAn frEnEzOn al %o"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k mortigis %o"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k farigis farĉon el %o"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k masakris %o"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k mutilis %o"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k alezis %o"
+
+msgid "TXT_OBITUARY16"
+msgstr "%k ŝiris novan truon en %o"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k buĉis %o"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k frakasis %o"
+
+msgid "TXT_OBITUARY19"
+msgstr "%k sodomizis %o"
+
+msgid "TXT_OBITUARY20"
+msgstr "%k disĵetis %o"
+
+msgid "TXT_OBITUARY21"
+msgstr "%k premplatigis %o"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k strangolis %o"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k malŝparis %o"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k ensakigis %o"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k sendis %o al Infero"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k tostis %o"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k snufis %o"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k hosis %o"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k ŝprucigis %o"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k farigis hundan viandon el %o"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k batis %o kiel hundaĉon"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o estas ekskremento"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o estas hamburgero"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o suferis skrotan disigon"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o volontulis por loĝantara regado"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o sin mortigis"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o ricevis la Darwin-premion"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "ĈĜĤĴŜŬ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Plena agordo-menuo"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Simpla agordo-menuo"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Foliumi agordojn de ludo"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Foliumi ekrankopiojn"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Foliumi konservitajn ludadojn"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Permuti musbutonojn"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Nur modifitaj"
+
+msgid "TXT_UNKNOWN"
+msgstr "Nekonata"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Aŭtomata mapo"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Aŭtomata mapo"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Ĉi tiu konservita ludo bezonas ĉi tiujn dosierojn"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Agordoj de la plurludanta reĝimo"
+
+msgid "OPTMNU_INPUT"
+msgstr "Enig-agordoj"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Agordoj de la sistemo"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Lum-agordoj"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Agordoj de la mov-rastrumoj"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Lum-ampoloj"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Aspekto"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Altnivelaj ekran-agordoj"
+
+msgid "PICKER_SELECT"
+msgstr "Elektu lanĉotan ludon."
+
+msgid "PICKER_PLAY"
+msgstr "Ekludi"
+
+msgid "PICKER_EXIT"
+msgstr "Mallanĉi"
+
+msgid "PICKER_GENERAL"
+msgstr "Ĝeneralaj"
+
+msgid "PICKER_EXTRA"
+msgstr "Ekstra grafiko"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Plena ekrano"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Malŝalti aŭtomatan ŝargon"
+
+msgid "PICKER_DONTASK"
+msgstr "Ne demandi denove"
+
+msgid "PICKER_LIGHTS"
+msgstr "Lumoj"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Helomapoj"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Larĝa ekrano"
+
+msgid "PICKER_ADDPARM"
+msgstr "Aldonaj parametroj:"
+
+msgid "PICKER_WELCOME"
+msgstr "Bonvenon en %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Versio %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API de bildigado"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Ludo"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Ŝalti ĉi tiun ludregilon"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Malfermi ĉefan menuon"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Legilo de moduloj"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Permesi enigon de ludregilo fone"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "Ordo de konservitaj ludadoj"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Alfabeta"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Laste konservita tempo"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Gastigi ludon"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Aliĝi al ludo"
+
+msgid "PICKER_REMPARM"
+msgstr "Memori parametrojn"
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr "Ŝargi subteno-WADojn"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Plurludanta"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Ŝargi konservitan dosieron"
+
+msgid "PICKER_REMSAVE"
+msgstr "Memori konservitan dosieron"
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr "Gastigi"
+
+msgid "PICKER_JOIN"
+msgstr "Aliĝi"
+
+msgid "PICKER_NETMODE"
+msgstr "Reĝimo de rekonektado:"
+
+msgid "PICKER_NETAUTO"
+msgstr "Aŭtomata (rekomendita)"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Datumpacketo-servilo"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Samtavola komunikada"
+
+msgid "PICKER_NETRATE"
+msgstr "Datumpacketo-tiktakrapidio:"
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr "Sendi rezervajn datumpaketojn"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Reĝimoj de ludo:"
+
+msgid "PICKER_COOP"
+msgstr "Koopera"
+
+msgid "PICKER_DM"
+msgstr "Mortmatĉo"
+
+msgid "PICKER_TDM"
+msgstr "Teama mortmatĉo"
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr "Teamo #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Uzi alternajn regulojn de mortmatĉo"
+
+msgid "PICKER_PLAYERS"
+msgstr "Maksimumaj ludantoj:"
+
+msgid "PICKER_PORT"
+msgstr "Konektejo de gastiganto:"
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr "Maks. 64"
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr "Defaŭlto 5029"
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr "255 = Hazarda"
+
+msgid "PICKER_IP"
+msgstr "Interreta protokolo de gastiganto:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Teama mortmatĉo:"
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr "Diri (Al teamo):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Riĉa ĉeesto de Discord"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "Rapido de turniĝo"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "Rapido de rigardo"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Analoga flankenmoviĝo-kuro"

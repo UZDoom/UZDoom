@@ -1,0 +1,261 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: de\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Blauen Flemschlüssel genommen"
+
+msgid "GOTYELLOWFLEM"
+msgstr "Gelben Flemschlüssel genommen"
+
+msgid "GOTREDFLEM"
+msgstr "Roten Flemschlüssel genommen."
+
+msgid "GOTGOGGLES"
+msgstr "Ultrasichtbrille gefunden"
+
+msgid "PD_BLUECO"
+msgstr "Du brauchst einen blauen Schlüssel, um dieses Objekt zu aktivieren."
+
+msgid "PD_REDCO"
+msgstr "Du brauchst einen roten Schlüssel, um dieses Objekt zu aktivieren."
+
+msgid "PD_YELLOWCO"
+msgstr "Du brauchst einen gelben Schlüssel, um dieses Objekt zu aktivieren."
+
+msgid "PD_BLUEFO"
+msgstr ""
+"Du brauchst einen blauen Flemschlüssel, um dieses Objekt zu aktivieren."
+
+msgid "PD_REDFO"
+msgstr ""
+"Du brauchst einen roten Flemschlüssel, um dieses Objekt zu aktivieren."
+
+msgid "PD_YELLOWFO"
+msgstr ""
+"Du brauchst einen gelben Flemschlüssel, um dieses Objekt zu aktivieren."
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Zorcher genommen."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch und Schlüssel hinzugefügt."
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Landezone"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Lagerhalle"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Labor"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Die Höhlen von Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Raumhafen"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Kino"
+
+msgid "HUSTR_E2M3"
+msgstr ""
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: städtische Straßen"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Kanalisation"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Kommandozentrale"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Vereinigte Zerealien"
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provinzpark"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteor-Raumschiff"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Bipedicus mit Panzerung"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr ""
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "Die Flembomination"
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr "Chex Krieger"
+
+msgid "PD_BLUEC"
+msgstr "Du brauchst einen blauen Schlüssel, um diese Tür zu öffnen."
+
+msgid "PD_REDC"
+msgstr "Du brauchst einen roten Schlüssel, um diese Tür zu öffnen."
+
+msgid "PD_YELLOWC"
+msgstr "Du brauchst einen gelben Schlüssel, um diese Tür zu öffnen."
+
+msgid "PD_BLUEF"
+msgstr "Du brauchst einen blauen Flemschlüssel, um diese Tür zu öffnen."
+
+msgid "PD_REDF"
+msgstr "Du brauchst einen roten Flemschlüssel, um diese Tür zu öffnen."
+
+msgid "PD_YELLOWF"
+msgstr "Du brauchst einen gelben Flemschlüssel, um diese Tür zu öffnen."
+
+msgid "OB_SLIME"
+msgstr "%o versank im Schleim"
+
+msgid "OB_LAVA"
+msgstr "%o versank im Schleim"
+
+msgid "OB_POWERSTRAND"
+msgstr "%o wurde von interdimensionalem Schleim getroffen"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o wurde von interdimensionalem Schleim getroffen"
+
+msgid "OB_STRIDICUS"
+msgstr "%o wurde von einem Stridicus bepopelt."
+
+msgid "OB_FLEMMINE"
+msgstr "%o wurde von einer Flem-Mine beschmiert."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o wurde von einem Super Cycloptis vollgeschleimt."
+
+msgid "OB_MAXIMUS"
+msgstr "%o wurde von einem Maximus besiegt."
+
+msgid "OB_LARVA"
+msgstr "%o wurde von einer Larve beschmiert."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o wurde von einem Quadrumpus vollgeschleimt."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o wurde von der Flembomination besiegt."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o wurde von Lord Snotfolus besiegt."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o wurde von %ks Propeller getroffen"
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o wurde von %o weggezorcht."
+
+msgid "E1TEXT"
+msgstr ""
+"Nachdem du die monströse Flembrane\n"
+"in ihre eigene Dimension zurückgeschickt\n"
+"hast, befreist du die Gefangenen.\n"
+"Und dennoch sind die Flemoiden\n"
+"überall! Du kämpfst dich mit den\n"
+"Gefangenen zu deinem Raumschiff\n"
+"durch und entkommst mit knapper Not.\n"
+"Du schickst eine Warnung ab, dass wir\n"
+"die Flemoiden noch nicht los sind.\n"
+"\n"
+"Unglückicherweise hast du Recht.\n"
+"Denn als du nach Hause kommst,\n"
+"erkennst du, dass dir die Flemoiden\n"
+"gefolgt sind. Bereite dich auf Chex\n"
+"Quest 2: Terror in Chex-City vor!"
+
+msgid "E2TEXT"
+msgstr ""
+"Du zorchst die verbleibenden\n"
+"Flemoiden, die sich noch in der \n"
+"Kanalisation aufhielten, weg. Chex\n"
+"City ist gerettet. Es sieht aus, als ob die\n"
+"Flemoidenbedrohung beendet ist.\n"
+"\n"
+"Zehn Jahre vergehen in Frieden und\n"
+"Wohlstand. Aber die Flemoiden waren\n"
+"nicht besiegt und ihr Verlangen, die\n"
+"Zerealiendimension zu kontollieren, hat\n"
+"nicht abgenommen. Sie haben all ihre\n"
+"Truppen zusammengezogen und ein \n"
+"gigantisches interdimensionales Portal\n"
+"erschaffen, und nun macht sich ein \n"
+"gigantischer Ball intergalaktischen \n"
+"Schleims auf den Weg zum Zerealien-\n"
+"planeten.\n"
+"\n"
+"Mach dich bereit für Chex Quest 3:\n"
+"Invasion!"
+
+msgid "E3TEXT"
+msgstr ""
+"Mit einem letzten Schuss zorchst du\n"
+"Lord Snotfolus zurück in seine eigene\n"
+"Dimension! Gegen alle Widerstände\n"
+"hast du eigenhändiig die Invasion\n"
+"scheitern lassen!\n"
+"\n"
+"Du hoffst wirklich, dass die Flemoiden\n"
+"ihre Lektion gelernt haben und nie \n"
+"wieder in die Zerealiendimension\n"
+"zurückkehren.\n"
+"\n"
+"Aber falls sie das doch tun, wirst du\n"
+"bereit sein!"
+
+msgid "M_EPI1"
+msgstr "Rettung auf Bazoik"
+
+msgid "M_EPI2"
+msgstr ""
+
+msgid "M_EPI3"
+msgstr ""
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

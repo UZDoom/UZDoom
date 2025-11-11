@@ -1,0 +1,5262 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: eo\n"
+
+msgid "PRESSKEY"
+msgstr "Premu klavon."
+
+msgid "SECRETMESSAGE"
+msgstr "Vi trovis sekretejon!"
+
+msgid "D_DEVSTR"
+msgstr "Senutila reĝimo ŜALTITA."
+
+msgid "QUITMSG"
+msgstr ""
+"Ĉu vi certas, ke vi volas mallanĉi\n"
+"ĉi tiun bonegan ludon?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Vi ne povas ŝargi dum retludado!\n"
+"\n"
+"Premu klavon."
+
+msgid "QLOADNET"
+msgstr ""
+"Vi ne povas rapidŝargi dum retludado!\n"
+"\n"
+"Premu klavon."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Vi ankoraŭ ne elektis rapidkonservujon!\n"
+"\n"
+"Premu klavon."
+
+msgid "NEWGAME"
+msgstr ""
+"Vi ne povas lanĉi novan ludadon dum retludo.\n"
+"\n"
+"Premu klavon."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Ĉu vi certas? Ĉi tiu malfacileco\n"
+"ne estas eĉ iomete justa.\n"
+"\n"
+"Premu Y aŭ N."
+
+msgid "SWSTRING"
+msgstr ""
+"Ĉi tiu estas la propagaĵa versio de Doom.\n"
+"\n"
+"Vi bezonas mendi la plenan version (Ultimate).\n"
+"\n"
+"Premu klavon."
+
+msgid "NETEND"
+msgstr ""
+"Vi ne povas fini retludadon!\n"
+"\n"
+"Premu klavon."
+
+msgid "ENDGAME"
+msgstr ""
+"Ĉu vi certas, ke vi volas fini la ludon?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgid "RAVENQUITMSG"
+msgstr "Ĉu vi certas, ke vi volas forlasi?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Nur havebla en la komercaĵa versio"
+
+msgid "DOSY"
+msgstr "(Premu Y por forlasi)"
+
+msgid "QUITMSG1"
+msgstr ""
+"Bonvolu ne foriri, estas pliaj\n"
+"rostindaj demonoj!"
+
+msgid "QUITMSG2"
+msgstr ""
+"Ni forlasu, ĉi tio iĝas\n"
+"sangoverŝado!"
+
+msgid "QUITMSG3"
+msgstr ""
+"Mi ne forirus, se mi estus vi:\n"
+"MS-DOS estas multe pli malbona."
+
+msgid "QUITMSG4"
+msgstr ""
+"Vi provas diri, ke MS-DOS\n"
+"estas pli bona ol mi, ĉu?"
+
+msgid "QUITMSG5"
+msgstr ""
+"Ne foriru ankoraŭ, estas\n"
+"demono ĉirkaŭ tiu angulo!"
+
+msgid "QUITMSG6"
+msgstr ""
+"Sciu, ke kiam vi sekvafoje venos ĉi tien,\n"
+"mi rostos vin."
+
+msgid "QUITMSG7"
+msgstr "Ja foriru. Mi fajfas pri tio."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"Kiu mallanĉas la ludon,\n"
+"tiu estas Idisto!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Ne foriru, dimensia malordo\n"
+"atendas ĉe la DOS-konzolo!"
+
+msgid "QUITMSG10"
+msgstr ""
+"Forigu kaj reiru al viaj\n"
+"enuigaj programoj."
+
+msgid "QUITMSG11"
+msgstr ""
+"Se mi estus via ĉefo, mi\n"
+"mortomaĉus vin post minuto!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Rigardu, ulo. Se vi nun foriros,\n"
+"vi rezignos vian mortig-nombron!"
+
+msgid "QUITMSG13"
+msgstr ""
+"Nur foriru. Kiam vi revenos,\n"
+"mi estos atendanta kun batilo."
+
+msgid "QUITMSG14"
+msgstr ""
+"Vi bonŝancas, ke mi ne batas\n"
+"vin pro pensado pri foriro."
+
+msgid "QUITMSG15"
+msgstr ""
+"Kien vi iras!?\n"
+"Kio pri la ribelo?"
+
+msgid "QUITMSG16"
+msgstr ""
+"Buĉado \"interruptus\"...\n"
+"Kia inciteto!"
+
+msgid "QUITMSG17"
+msgstr ""
+"Sed vi estas la espero...\n"
+"Mia ununura ŝanco!!"
+
+msgid "QUITMSG18"
+msgstr "Neniu forlasas Merlon."
+
+msgid "QUITMSG19"
+msgstr "Mi pensis, ke vi estas malsama..."
+
+msgid "QUITMSG20"
+msgstr "Bone! Nur mortigu kaj fuĝu!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Vi povas foriri...\n"
+"sed ne kaŝi vin..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Kio!? Kio okazas? Ĉu panjo\n"
+"diris, ke estas tempo manĝi?"
+
+msgid "QUITMSG23"
+msgstr ""
+"Ne nun foriru, ankoraŭ\n"
+"estas mukuloj amoke!"
+
+msgid "QUITMSG24"
+msgstr ""
+"Ne rezignu. La mukuloj\n"
+"atingus avantaĝon!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Ne nun foriru.\n"
+"Ni bezonas vian helpon!"
+
+msgid "QUITMSG26"
+msgstr ""
+"Mi esperas, ke vi nur paŭzas\n"
+"por manĝi Chex(R)-festmikson."
+
+msgid "QUITMSG27"
+msgstr ""
+"Ne nun forlasu!\n"
+"Ni bezonas vian helpon!"
+
+msgid "QUITMSG28"
+msgstr ""
+"Ne forlasu la Intergalaksian\n"
+"Federacion de Cerealaĵoj!"
+
+msgid "QUITMSG29"
+msgstr ""
+"La vera Chex(R)-batalisto\n"
+"ne rezignus tiel rapide!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Vi trovis aĵon"
+
+msgid "PD_ANY"
+msgstr "Iu ajn ŝlosilo povas malfermi ĉi tiun pordon"
+
+msgid "PD_ANYOBJ"
+msgstr "Iu ajn ŝlosilo povas aktivigi ĉi tiun objekton"
+
+msgid "PD_ALL3"
+msgstr "Vi bezonas ĉiujn tri ŝlosilojn por malfermi ĉi tiun pordon"
+
+msgid "PD_ALL3O"
+msgstr "Vi bezonas ĉiujn tri ŝlosilojn por aktivigi ĉi tiun objekton"
+
+msgid "PD_ALL6"
+msgstr "Vi bezonas ĉiujn ses ŝlosilojn por malfermi ĉi tiun pordon"
+
+msgid "PD_ALL6O"
+msgstr "Vi bezonas ĉiujn ses ŝlosilojn por aktivigi ĉi tiun objekton"
+
+msgid "PD_ALLKEYS"
+msgstr "Vi bezonas ĉiujn ŝlosilojn"
+
+msgid "HUSTR_MSGU"
+msgstr "[Mesaĝo ne sendita]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Vi murmuras al vi mem"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Kiu estas tie?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Vi timigas vin mem"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Vi komencas frenezi"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Vi freneziĝis..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Mesaĝo sendita]"
+
+msgid "STSTR_MUS"
+msgstr "Muzikŝanĝo"
+
+msgid "STSTR_NOMUS"
+msgstr "Malebla Elektaĵo"
+
+msgid "STSTR_DQDON"
+msgstr "Nevundebla Reĝimo ŜALTITA"
+
+msgid "STSTR_DQDOFF"
+msgstr "Nevundebla Reĝimo MALŜALTITA"
+
+msgid "STSTR_DQD2ON"
+msgstr "Pleja Nevundebla Reĝimo ŜALTITA"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Pleja Nevundebla Reĝimo MALŜALTITA"
+
+msgid "STSTR_KFAADDED"
+msgstr "Tre Feliĉa Municio Aldonita"
+
+msgid "STSTR_FAADDED"
+msgstr "Municio (neniuj ŝlosiloj) Aldonita"
+
+msgid "STSTR_NCON"
+msgstr "Reĝimo de Neniu Tondado ŜALTITA"
+
+msgid "STSTR_NCOFF"
+msgstr "Reĝimo de Neniu Tondado MALŜALTITA"
+
+msgid "STSTR_NC2ON"
+msgstr "Reĝimo de Neniu Tondado 2 ŜALTITA"
+
+msgid "STSTR_NC2OFF"
+msgstr "Reĝimo de Neniu Tondado 2 MALŜALTITA"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap, aŭ Lite-amp"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Plifortigaĵo Baskuligita"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... ne aĉas - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Ŝanĝante Nivelon..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Budha reĝimo ŜALTITA"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Budha reĝimo MALŜALTITA"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Pleja Budha Reĝimo ŜALTITA"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Pleja Budha Reĝimo MALŜALTITA"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Povo ŝaltita"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Povo malŝaltita"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Plena sano"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Ĉiuj ŝlosiloj"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Sono-sencimiga reĝimo ŝaltita"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Sono-sencimiga reĝimo malŝaltita"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Provas trompi, ĉu vi? Nun vi mortas! "
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Trompanto - vi ne meritas armilojn"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Nombrilo ŝaltita"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Nombrilo malŝaltita"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Vi akiris ĝin"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Vi akiris la Tuŝon de Midas, kara"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Vi akiris la aĵojn!"
+
+msgid "TXT_FREEZEON"
+msgstr "Movhalta reĝimo ŝaltita"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Movhalta reĝimo malŝaltita"
+
+msgid "TXT_STRANGE"
+msgstr "Vi sentas vin strange..."
+
+msgid "TXT_STRANGER"
+msgstr "Vi sentas vin eĉ pli strange."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Vi denove sentas vin kiel vi mem."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Botoj el plumbo ŝaltita"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Botoj el plumbo malŝaltita"
+
+msgid "TXT_LIGHTER"
+msgstr "Vi sentas vin pli malpeza"
+
+msgid "TXT_GRAVITY"
+msgstr "Gravito pezigas vin"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Neniu Celo ŜALTITA"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Neniu Celo MALŜALTITA"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "\"Tremu pro timo!\""
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Ne plu Ogrokiraso"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Ĉaskamerao ŜALTITA"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Ĉaskamerao MALŜALTITA"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 malbonulo mortigita"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d malbonuloj mortigitaj"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 monstro mortigita"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d monstroj mortigitaj"
+
+msgid "TXT_NO_RESURRECT"
+msgstr ""
+"Nerevivigebla. La ludanto ne plu\n"
+"estas konektita al sia korpo."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Ĉiuj Artefaktoj!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Kion vi volas mortigi ekster ludo?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Atributoj de movhaltitaj ludantoj malŝaltitaj"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Sekvigreĝimo MALŜALTITA"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Sekvigreĝimo ŜALTITA"
+
+msgid "AMSTR_GRIDON"
+msgstr "Krado ŜALTITA"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Krado MALŜALTITA"
+
+msgid "AMSTR_TEXON"
+msgstr "Tekstura Reĝimo ŜALTITA"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Tekstura Reĝimo MALŜALTITA"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Loko Markita"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Ĉiuj Markoj Forigitaj"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Ludmurdo-limo trafita."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Tempolimo trafita."
+
+msgid "SPREEKILLSELF"
+msgstr "%o estis faranta bone, ĝis @[pro_eo] mortigis sin!"
+
+msgid "SPREEOVER"
+msgstr "La mortigado de %o estis finita de %k"
+
+msgid "SPREE5"
+msgstr "%k estas sur mortigado!"
+
+msgid "SPREE10"
+msgstr "%k estas sur furiozado!"
+
+msgid "SPREE15"
+msgstr "%k estas dominanta!"
+
+msgid "SPREE20"
+msgstr "%k estas nehaltigebla!"
+
+msgid "SPREE25"
+msgstr "%k estas Dia!"
+
+msgid "MULTI2"
+msgstr "Duobla mortigo!"
+
+msgid "MULTI3"
+msgstr "Pluraj mortigoj!"
+
+msgid "MULTI4"
+msgstr "Ekstremaj mortigoj!"
+
+msgid "MULTI5"
+msgstr "Monstraj mortigoj!"
+
+msgid "SCORE_BONUS"
+msgstr "Bonuso"
+
+msgid "SCORE_COLOR"
+msgstr "Koloro"
+
+msgid "SCORE_SECRET"
+msgstr "Sekreto"
+
+msgid "SCORE_NAME"
+msgstr "Nomo"
+
+msgid "SCORE_DELAY"
+msgstr "Prokrasto (ms)"
+
+msgid "SCORE_FRAGS"
+msgstr "Ludmurdoj"
+
+msgid "SCORE_DEATHS"
+msgstr "Mortoj"
+
+msgid "SCORE_OTHER"
+msgstr "Alia"
+
+msgid "SCORE_MISSED"
+msgstr "Mankita"
+
+msgid "SCORE_TOTAL"
+msgstr "Tuto"
+
+msgid "SCORE_LVLTIME"
+msgstr "Daŭro de Nivelo"
+
+msgid "TXT_IMKILLS"
+msgstr "Mortigoj"
+
+msgid "TXT_IMITEMS"
+msgstr "Objektoj"
+
+msgid "TXT_IMSECRETS"
+msgstr "Sekretoj"
+
+msgid "TXT_IMTIME"
+msgstr "Daŭro"
+
+msgid "TXT_IMPAR"
+msgstr "Alparo"
+
+msgid "WI_FINISHED"
+msgstr "Finita"
+
+msgid "WI_ENTERING"
+msgstr "Enirante"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Nun enirante:"
+
+msgid "AM_MONSTERS"
+msgstr "Monstroj:"
+
+msgid "AM_SECRETS"
+msgstr "Sekretoj:"
+
+msgid "AM_ITEMS"
+msgstr "Objektoj:"
+
+msgid "OB_SUICIDE"
+msgstr "%o sinmortigis."
+
+msgid "OB_FALLING"
+msgstr "%o falis tro fore."
+
+msgid "OB_CRUSH"
+msgstr "%o estis dispremita."
+
+msgid "OB_EXIT"
+msgstr "%o provis foriri."
+
+msgid "OB_WATER"
+msgstr "%o ne scipovas naĝi."
+
+msgid "OB_SLIME"
+msgstr "%o mutaciis."
+
+msgid "OB_LAVA"
+msgstr "%o fandiĝis."
+
+msgid "OB_BARREL"
+msgstr "%o eksplodis."
+
+msgid "OB_SPLASH"
+msgstr "%o staris en la malĝusta loko."
+
+msgid "OB_R_SPLASH"
+msgstr "%o devintus forstarinta."
+
+msgid "OB_ROCKET"
+msgstr "%o devintus forstarinta."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o mortigis sin."
+
+msgid "OB_VOODOO"
+msgstr "%o estis mortigita de la povo de voduo."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o estis teleportumita de %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o estis teleportumita."
+
+msgid "OB_DEFAULT"
+msgstr "%o mortis."
+
+msgid "OB_MPDEFAULT"
+msgstr "%o estis mortigita de %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k buĉas teamanon."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%o ŝajnas bezoni okulvitrojn."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k gajnas ludmurdon por la alia teamo."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k perdis alian amikon."
+
+msgid "GOTARMOR"
+msgstr "Vi trovis armaĵon."
+
+msgid "GOTMEGA"
+msgstr "Vi trovis plejan armaĵon!"
+
+msgid "GOTHTHBONUS"
+msgstr "Vi trovis aldonan sanon."
+
+msgid "GOTARMBONUS"
+msgstr "Vi trovis aldonan armaĵon."
+
+msgid "GOTSTIM"
+msgstr "Vi trovis stimulilo-pakon."
+
+msgid "GOTMEDINEED"
+msgstr "Vi trovis sukurkeston, kiun vi VERE bezonas!"
+
+msgid "GOTMEDIKIT"
+msgstr "Vi trovis sukurkeston."
+
+msgid "GOTSUPER"
+msgstr "Superŝargo!"
+
+msgid "GOTBLUECARD"
+msgstr "Vi trovis bluan ŝlosilkarton."
+
+msgid "GOTYELWCARD"
+msgstr "Vi trovis flavan ŝlosilkarton."
+
+msgid "GOTREDCARD"
+msgstr "Vi trovis ruĝan ŝlosilkarton."
+
+msgid "GOTBLUESKUL"
+msgstr "Vi trovis bluan kraniŝlosilon."
+
+msgid "GOTYELWSKUL"
+msgstr "Vi trovis flavan kraniŝlosilon."
+
+msgid "GOTREDSKUL"
+msgstr "Vi trovis ruĝan kraniŝlosilon."
+
+msgid "GOTINVUL"
+msgstr "Nevundebleco!"
+
+msgid "GOTBERSERK"
+msgstr "Furiozigaĵo!"
+
+msgid "GOTINVIS"
+msgstr "Parta nevidebleco"
+
+msgid "GOTSUIT"
+msgstr "Radiado-ŝirma vesto"
+
+msgid "GOTMAP"
+msgstr "Plena mapo"
+
+msgid "GOTVISOR"
+msgstr "Vizilo de luma amplifikado"
+
+msgid "GOTMSPHERE"
+msgstr "Pleja sfero!"
+
+msgid "GOTCLIP"
+msgstr "Vi trovis magazenon."
+
+msgid "GOTCLIPBOX"
+msgstr "Vi trovis skatolon da kugloj."
+
+msgid "GOTROCKET"
+msgstr "Vi trovis misilon."
+
+msgid "GOTROCKBOX"
+msgstr "Vi trovis keston da misiloj."
+
+msgid "GOTCELL"
+msgstr "Vi trovis energiĉelon."
+
+msgid "GOTCELLBOX"
+msgstr "Vi trovis energiĉelo-pakon."
+
+msgid "GOTSHELLS"
+msgstr "Vi trovis 4 kartoĉojn."
+
+msgid "GOTSHELLBOX"
+msgstr "Vi trovis skatolon da kartoĉoj."
+
+msgid "GOTBACKPACK"
+msgstr "Vi trovis tornistron plena de municioj!"
+
+msgid "GOTBFG9000"
+msgstr "Vi trovis BFG9000! Bonege."
+
+msgid "GOTCHAINGUN"
+msgstr "Vi trovis maŝinpafilon!"
+
+msgid "GOTCHAINSAW"
+msgstr "Ĉensegilo! Trovu ian karnon!"
+
+msgid "GOTLAUNCHER"
+msgstr "Vi trovis misilpafilon!"
+
+msgid "GOTPLASMA"
+msgstr "Vi trovis plasmo-pafilon!"
+
+msgid "GOTSHOTGUN"
+msgstr "Vi trovis kartoĉan fusilon!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Vi trovis dutuban fusilon!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Prenis pistolon."
+
+msgid "BETA_BONUS1"
+msgstr "Vi trovis demonan ponardon."
+
+msgid "BETA_BONUS2"
+msgstr "Vi trovis kraniokeston."
+
+msgid "BETA_BONUS3"
+msgstr "Vi trovis malbonan sceptron."
+
+msgid "BETA_BONUS4"
+msgstr "Vi trovis malsanktan biblion."
+
+msgid "PD_BLUEO"
+msgstr "Vi bezonas bluan ŝlosilon por aktivigi ĉi tiun objekton"
+
+msgid "PD_REDO"
+msgstr "Vi bezonas ruĝan ŝlosilon por aktivigi ĉi tiun objekton"
+
+msgid "PD_YELLOWO"
+msgstr "Vi bezonas flavan ŝlosilon por aktivigi ĉi tiun objekton"
+
+msgid "PD_BLUEK"
+msgstr "Vi bezonas bluan ŝlosilon por malfermi ĉi tiun pordon"
+
+msgid "PD_REDK"
+msgstr "Vi bezonas ruĝan ŝlosilon por malfermi ĉi tiun pordon"
+
+msgid "PD_YELLOWK"
+msgstr "Vi bezonas flavan ŝlosilon por malfermi ĉi tiun pordon"
+
+msgid "PD_BLUECO"
+msgstr "Vi bezonas bluan karton por aktivigi ĉi tiun objekton"
+
+msgid "PD_REDCO"
+msgstr "Vi bezonas ruĝan karton por aktivigi ĉi tiun objekton"
+
+msgid "PD_YELLOWCO"
+msgstr "Vi bezonas flavan karton por aktivigi ĉi tiun objekton"
+
+msgid "PD_BLUESO"
+msgstr "Vi bezonas bluan kranion por aktivigi ĉi tiun objekton"
+
+msgid "PD_REDSO"
+msgstr "Vi bezonas ruĝan kranion por aktivigi ĉi tiun objekton"
+
+msgid "PD_YELLOWSO"
+msgstr "Vi bezonas flavan kranion por aktivigi ĉi tiun objekton"
+
+msgid "PD_BLUEC"
+msgstr "Vi bezonas bluan karton por malfermi ĉi tiun pordon"
+
+msgid "PD_REDC"
+msgstr "Vi bezonas ruĝan karton por malfermi ĉi tiun pordon"
+
+msgid "PD_YELLOWC"
+msgstr "Vi bezonas flavan karton por malfermi ĉi tiun pordon"
+
+msgid "PD_BLUES"
+msgstr "Vi bezonas bluan kranion por malfermi ĉi tiun pordon"
+
+msgid "PD_REDS"
+msgstr "Vi bezonas ruĝan kranion por malfermi ĉi tiun pordon"
+
+msgid "PD_YELLOWS"
+msgstr "Vi bezonas flavan kranion por malfermi ĉi tiun pordon"
+
+msgid "CC_ZOMBIE"
+msgstr "Zombio"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Ĉaspafilulo"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Pezarmilulo"
+
+msgid "CC_IMP"
+msgstr "Diableto"
+
+msgid "CC_DEMON"
+msgstr "Demono"
+
+msgid "CC_LOST"
+msgstr "Vaga animo"
+
+msgid "CC_CACO"
+msgstr "Kakodemono"
+
+msgid "CC_HELL"
+msgstr "Inferkavaliro"
+
+msgid "CC_BARON"
+msgstr "Barono de Infero"
+
+msgid "CC_ARACH"
+msgstr "Elektraraneo"
+
+msgid "CC_PAIN"
+msgstr "Doloro-Elementulo"
+
+msgid "CC_REVEN"
+msgstr "Renaskito"
+
+msgid "CC_MANCU"
+msgstr "Mankubo"
+
+msgid "CC_ARCH"
+msgstr "Ĉef-Fiulo"
+
+msgid "CC_SPIDER"
+msgstr "La Elektraraneo-Mastro"
+
+msgid "CC_CYBER"
+msgstr "La Ciberdemono"
+
+msgid "CC_HERO"
+msgstr "Nia heroo"
+
+msgid "FN_SHOTGUN"
+msgstr "Serĝento"
+
+msgid "FN_HEAVY"
+msgstr "Maŝinpafilisto"
+
+msgid "FN_SPECTRE"
+msgstr "Fantomo"
+
+msgid "FN_SPIDER"
+msgstr "Elektraraneo-Mastro"
+
+msgid "FN_CYBER"
+msgstr "Ciberdemono"
+
+msgid "FN_WOLFSS"
+msgstr "Nazio"
+
+msgid "FN_DOG"
+msgstr "Hundo"
+
+msgid "TAG_FIST"
+msgstr "Pugningo"
+
+msgid "TAG_CHAINSAW"
+msgstr "Ĉensegilo"
+
+msgid "TAG_PISTOL"
+msgstr "Pafileto"
+
+msgid "TAG_SHOTGUN"
+msgstr "Kartoĉa fusilo"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Dutuba fusilo"
+
+msgid "TAG_CHAINGUN"
+msgstr "Maŝinpafilo"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Misilpafilo"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Plasmo-pafilo"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Kugloj"
+
+msgid "AMMO_SHELLS"
+msgstr "Kartoĉoj"
+
+msgid "AMMO_ROCKETS"
+msgstr "Raketoj"
+
+msgid "AMMO_CELLS"
+msgstr "Energiĉeloj"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o pensis, ke @[pro_eo] vidis elektraraneon."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o pensis, ke @[pro_eo] vidis ĉef-fiulon."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o pensis, ke @[pro_eo] vidis Baronon de Infero."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o pensis, ke @[pro_eo] vidis kakodemonon."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o pensis, ke @[pro_eo] vidis maŝinpafiliston."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o pensis, ke @[pro_eo] vidis demonon."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o pensis, ke @[pro_eo] vidis Inferkavaliron."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o pensis, ke @[pro_eo] vidis diableton."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o pensis, ke @[pro_eo] vidis mankubon."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o pensis, ke @[pro_eo] vidis renaskiton."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o pensis, ke @[pro_eo] vidis serĝenton."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o pensis, ke @[pro_eo] vidis zombion."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o estis pugnita de renaskito."
+
+msgid "OB_IMPHIT"
+msgstr "%o estis tranĉvundita de diableto."
+
+msgid "OB_CACOHIT"
+msgstr "%o tro proksimiĝis al kakodemono."
+
+msgid "OB_DEMONHIT"
+msgstr "%o estis mordita de demono."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o estis manĝita de fantomo."
+
+msgid "OB_BARONHIT"
+msgstr "%o estis disŝirigita de Barono de Infero."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o estis senintestigita de Inferkavaliro."
+
+msgid "OB_ZOMBIE"
+msgstr "%o estis mortigita de zombio."
+
+msgid "OB_SHOTGUY"
+msgstr "%o estis pafita de serĝento."
+
+msgid "OB_VILE"
+msgstr "%o estis cindrigita de ĉef-fiulo."
+
+msgid "OB_UNDEAD"
+msgstr "%o ne povis eviti fajrobulon de renaskito."
+
+msgid "OB_FATSO"
+msgstr "%o estis dispremita de mankubo."
+
+msgid "OB_CHAINGUY"
+msgstr "%o estis truigadita de maŝinpafilisto."
+
+msgid "OB_SKULL"
+msgstr "%o estis timigita de vaga animo."
+
+msgid "OB_IMP"
+msgstr "%o estis bruligita de diableto."
+
+msgid "OB_CACO"
+msgstr "%o estis venkobatita de kakodemono."
+
+msgid "OB_BARON"
+msgstr "%o estis kontuzita de Barono de Infero."
+
+msgid "OB_KNIGHT"
+msgstr "%o estis bisekcita de Inferkavaliro."
+
+msgid "OB_SPIDER"
+msgstr "%o staris mirigita antaŭ la aranedemono."
+
+msgid "OB_BABY"
+msgstr "%o lasis elektraraneon venki @[pro_eo]n."
+
+msgid "OB_CYBORG"
+msgstr "%o estis disŝprucigita de ciberdemono."
+
+msgid "OB_WOLFSS"
+msgstr "%o renkontis Nazion."
+
+msgid "OB_DOG"
+msgstr "%o estis atakita de hundo."
+
+msgid "OB_MPFIST"
+msgstr "%o maĉis la pugnon de %k."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o estis buĉita de la ĉensegilo de %k."
+
+msgid "OB_MPPISTOL"
+msgstr "%o estis tiklita de la pistolo de %k."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o maĉis la kartoĉan fusilon de %k."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o estis disŝprucigita de la dutuba fusilo de %k."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o estis kuglo-plenigita de la maŝinpafilo de %k."
+
+msgid "OB_MPROCKET"
+msgstr "%o rajdis la raketon de %k."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o preskaŭ evitis la raketon de %k."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o estis fandigita de la plasmo-pafilo de %k."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o estis splitigita de la BFG de %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o ne povis kaŝi sin de la BFG de %k."
+
+msgid "OB_RAILGUN"
+msgstr "%o estis traborita de la elektropafilo de %k."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o estis bruligita de la BFG de %k."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Blua ŝlosilo"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Flava ŝlosilo"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Verda ŝlosilo"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Kvarca flakono"
+
+msgid "TXT_ARTIFLY"
+msgstr "Flugiloj de kolero"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Ringo de nevenkebleco"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Librego de forto"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Ombrosfero"
+
+msgid "TXT_ARTIEGG"
+msgstr "Ovo de transformado"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Mistika urno"
+
+msgid "TXT_ARTITORCH"
+msgstr "Torĉo"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Tempobombo de la Antikvuloj"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Ĥaos-Aparato"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Fiolo de Kristalo"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Taŝo de Tenado"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Arĝenta Ŝildo"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Sorĉita Ŝildo"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Map-volvolibro"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Kristalo de Sorĉbastono"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Kristalgeodo"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Klabsferoj"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Stako de Klabsferoj"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Eteraj Sagoj"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Sagujo da Eteraj Sagoj"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Kriforbo"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Energiorbo"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Runetoj"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Runegoj"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Flamorbo"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Brulorbo"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Ora Sorĉbastono"
+
+msgid "TXT_WPNMACE"
+msgstr "Fajroklabo"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Etera Arbalesto"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Drakokrifo"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Inferbastono"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Feniksvergo"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Fergantoj de la Nekromancisto"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Vi bezonas bluan ŝlosilon por malfermi ĉi tiun pordon"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Vi bezonas verdan ŝlosilon por malfermi ĉi tiun pordon"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Vi bezonas flavan ŝlosilon por malfermi ĉi tiun pordon"
+
+msgid "FN_CHICKEN"
+msgstr "Koko"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Drakfantomo"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Sabrokrifo"
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr "Gargojlo"
+
+msgid "FN_IRONLICH"
+msgstr "Ferliĉo"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Malmortinta Batalisto"
+
+msgid "FN_MINOTAUR"
+msgstr "Bategtaŭro"
+
+msgid "FN_MUMMY"
+msgstr "Golemo"
+
+msgid "FN_MUMMYLEADER"
+msgstr "Azotgolemo"
+
+msgid "FN_SNAKE"
+msgstr "Ofidio"
+
+msgid "FN_WIZARD"
+msgstr "Sorĉisto"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Sorĉbastono-Kristaloj"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Eteraj Sagoj"
+
+msgid "AMMO_BLASTER"
+msgstr "Kriforboj"
+
+msgid "AMMO_MACE"
+msgstr "Klabsferoj"
+
+msgid "AMMO_SKULLROD"
+msgstr "Inferbastono-Runoj"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Flamorboj"
+
+msgid "TAG_STAFF"
+msgstr "Bastono"
+
+msgid "TAG_GOLDWAND"
+msgstr "Elfa Sorĉbastono"
+
+msgid "OB_CHICKEN"
+msgstr "%o estis bekita ĝis morto."
+
+msgid "OB_BEAST"
+msgstr "%o brulegiĝis de drakfantomo."
+
+msgid "OB_CLINK"
+msgstr "%o tranĉegiĝis de sabrokrifo."
+
+msgid "OB_DSPARIL1"
+msgstr "%o varmegiĝis de la serpento de D'Sparil."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o maĉegiĝis de la serpento de D'Sparil."
+
+msgid "OB_DSPARIL2"
+msgstr "%o ne estis rivalo por D'Sparil. "
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o frapiĝis de D'Sparil."
+
+msgid "OB_HERETICIMP"
+msgstr "%o ĉikartiĝis de gargojlo."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o hakiĝis de gargojlo."
+
+msgid "OB_IRONLICH"
+msgstr "%o ruiniĝis de ferliĉo."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o havis proksiman kaj desonan rekonton kun ferliĉo."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o hakiliĝis de malmortinta batalisto."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o estis mortigita de malmortinta batalisto."
+
+msgid "OB_MINOTAUR"
+msgstr "%o eksplodiĝis en cindrojn de Bategtaŭro."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o pulpiĝis de Bategtaŭro."
+
+msgid "OB_MUMMY"
+msgstr "%o frakasiĝis de golemo."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o estis kriegita ĝis morto de azotgolemo."
+
+msgid "OB_SNAKE"
+msgstr "%o klakiĝis de ofidio."
+
+msgid "OB_WIZARD"
+msgstr "%o malbeniĝis de sorĉisto."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o palpatiĝis de sorĉisto."
+
+msgid "OB_MPSTAFF"
+msgstr "%o bategiĝis de %k."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o recivis ŝokon de la fergantoj de %k."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o ĝisis al la elfa sorĉbastono de %k."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o kejlis de la etera arbalesto de %k."
+
+msgid "OB_MPBLASTER"
+msgstr "%o estis diseksplodita de la drakokrifo de %k."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o forsendiĝis sub de la inferbastono de %k."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o brulegiĝis en cindrojn de la feniksvergo de %k."
+
+msgid "OB_MPMACE"
+msgstr "%o estis resaltita de la fajroklabo de %k."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o estis aplaŭdita de la ŝargita bastono de %k."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o sensangiĝis de la fergantoj de %k."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o atakiĝis de la elfa sorĉbastono de %k."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o akiris novan truon de etera arbalesto de %k."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o disrompiĝis de la drakokrifo de %k."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k ŝutas la inferbastonon sur %o."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o torĉiĝis de la feniksvergo de %k."
+
+msgid "OB_MPPMACE"
+msgstr "%o premiĝis de la grandega klubsfero de %k."
+
+msgid "TXT_MANA_1"
+msgstr "Blua Manao"
+
+msgid "TXT_MANA_2"
+msgstr "Verda Manao"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Kuna Manao"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Ŝtala Ŝlosilo"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Kavern-Ŝlosilo"
+
+msgid "TXT_KEY_AXE"
+msgstr "Hakil-Ŝlosilo"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Fajro-Ŝlosilo"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Smerelda Ŝlosilo"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Karcer-Ŝlosilo"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Arĝenta Ŝlosilo"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Rusta Ŝlosilo"
+
+msgid "TXT_KEY_HORN"
+msgstr "Hup-Ŝlosilo"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Marĉo-Ŝlosilo"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Kastel-Ŝlosilo"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Ikono de la Defendanto"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Malluma Servanto"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Porkigilo"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "Flakono"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Forpelilo"
+
+msgid "TXT_ARTISPEED"
+msgstr "Botoj de Rapideco"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Kratero de Potenco"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Brakbendo el Drakhaŭto"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Disko de Repelado"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Sorĉo de Mistika Sfero"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Kranio de Yorick"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "Koro de D'sparil"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Rubena Planedo"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Smeralda Planedo"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Smeralda Planedo"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Safira Planedo"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Safira Planedo"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "Kodekso de Demono"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Flamomasko"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Sigelo de Glavo"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Sankta Relikvo"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Sigelo de la Mago"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Dentrado de Horloĝo"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Vi ne povas uzi ĉi tion ĉi tie."
+
+msgid "TXT_ARMOR1"
+msgstr "Marŝkiraso"
+
+msgid "TXT_ARMOR2"
+msgstr "Falko-Ŝildo"
+
+msgid "TXT_ARMOR3"
+msgstr "Platena Kasko"
+
+msgid "TXT_ARMOR4"
+msgstr "Amuleto de Gardado"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Hakilo de Timon"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Martelo de Repago"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Kvietus' Muntita"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Serpentbastono"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Fajroŝtormo"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Fantomkruc' Muntita"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Frostfragmentoj"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Arko de Morto"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Sangskurĝ' Muntita"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Peco de armilo! Estas via bonŝanca tago!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Segmento de Kvietus'"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Segmento de Fantomkruc'"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Segmento de Sangskurĝ'"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Vi bezonas la Ŝtalan Ŝlosilon"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Vi bezonas la Kavern-Ŝlosilon"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Vi bezonas la Hakil-Ŝlosilon"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Vi bezonas la Fajro-Ŝlosilon"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Vi bezonas la Smeraldan Ŝlosilon"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Vi bezonas la Karcer-Ŝlosilon"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Vi bezonas la Arĝentan Ŝlosilon"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Vi bezonas la Rustan Ŝlosilon"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Vi bezonas la Hup-Ŝlosilon"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Vi bezonas la Marĉ-Ŝlosilon"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Vi bezonas la Kastel-Ŝlosilon"
+
+msgid "FN_FIREDEMON"
+msgstr "Afrito"
+
+msgid "FN_DEMON1"
+msgstr "Serpento"
+
+msgid "FN_ETTIN"
+msgstr "Gigantaĉo"
+
+msgid "FN_CENTAUR"
+msgstr "Centaŭro"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Buĉataŭro"
+
+msgid "FN_BISHOP"
+msgstr "Episkopo"
+
+msgid "FN_ICEGUY"
+msgstr "Vendiko"
+
+msgid "FN_SERPENT"
+msgstr "Gvatanto"
+
+msgid "FN_WRAITH"
+msgstr "Fantomo"
+
+msgid "FN_DRAGON"
+msgstr "Morta viverno"
+
+msgid "FN_KORAX"
+msgstr ""
+
+msgid "FN_FBOSS"
+msgstr "Zedeko"
+
+msgid "FN_MBOSS"
+msgstr "Menelkiro"
+
+msgid "FN_CBOSS"
+msgstr "Traduktuso"
+
+msgid "FN_HERESIARCH"
+msgstr "Ĉefherezulo"
+
+msgid "AMMO_MANA1"
+msgstr "Blua Manao"
+
+msgid "AMMO_MANA2"
+msgstr "Verda Manao"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Klabo de Penteco"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Serpentbastono"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Fajrŝtormo"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Fantomkruc'"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Pintaj Fergantoj"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Hakilo de Timon"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Martelo de Repago"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "Kvietus'"
+
+msgid "TAG_MWEAPWAND"
+msgstr "Safirsorĉbastono"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Frostfragmentoj"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Arkoj de Morto"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Sangskurĝ'"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Disko de Repelado"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Brakbendo el Drakhaŭto"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Kratero de Potenco"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "Flakono"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Venennub-Flakono"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Horloĝbomb-Flakono "
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Grenad-Flakono"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Sorĉo de Mistika Sfero"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Ikono de la Defendanto"
+
+msgid "TAG_ARTIPORK"
+msgstr "Porkigilo"
+
+msgid "TAG_ARTISPEED"
+msgstr "Botoj de Rapideco"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Malluma Servanto"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Forpelilo"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Kranio de Yorick"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "Koro de D'Sparil"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Rubena Planedo"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Smeralda Planedo (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Smeralda Planedo (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Safira Planedo (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Safira Planedo (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "Kodekso de Demono"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr "Liber Oscura"
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Fajrmasko"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Sigelo de Glavo"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Sankta Relikvo"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Sigelo de la Mago"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Fera Dentrado"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Latuna Dentrado"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Latuna Fera Dentrado"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Arĝenta Latuna Dentrado"
+
+msgid "OB_FIREDEMON"
+msgstr "%o gustis la fajron de Afrito."
+
+msgid "OB_DEMON1"
+msgstr "%o brogiĝis de Serpento."
+
+msgid "OB_DEMON2"
+msgstr "%o veneniĝis de Serpento."
+
+msgid "OB_ETTIN"
+msgstr "%o frakasiĝis de Gigantaĉo."
+
+msgid "OB_CENTAUR"
+msgstr "%o distranĉiĝis de Centaŭro."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o distranĉiĝis de Buĉataŭro."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o subite mortiĝis de fajropilko de Buĉataŭro."
+
+msgid "OB_BISHOP"
+msgstr "%o subfaliĝis de malluma potenco de Episkopo."
+
+msgid "OB_ICEGUY"
+msgstr "%o tute frostiĝis de Vendiko."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o vundegiĝis de Gvatanto."
+
+msgid "OB_SERPENT"
+msgstr "%o fandiĝis de Gvatanto."
+
+msgid "OB_WRAITH"
+msgstr "%o brulegiĝis de Fantomo."
+
+msgid "OB_WRAITHHIT"
+msgstr "%o havis sian vivon ŝtelita de Fantomo."
+
+msgid "OB_DRAGON"
+msgstr "%o cindriĝis de Mortviverno."
+
+msgid "OB_KORAX"
+msgstr "%o estis prenita el la tabulo de Korax."
+
+msgid "OB_FBOSS"
+msgstr "%o mortigis de Zedeko."
+
+msgid "OB_MBOSS"
+msgstr "%o ne povis absorbi la Manaon de Menelkiro."
+
+msgid "OB_CBOSS"
+msgstr "%o baptiĝis de Traduktuso."
+
+msgid "OB_HERESIARCH"
+msgstr "%o havis siajn ostojn rulis de la Ĉefherezulo."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o kaĉe draŝiĝis de la nudaj pugnoj de %k."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o ricevis la hakilon el %k."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%p havis sian kapon enfalis de la martelo de %k."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "La animo de %o nove forĝiĝis de la martelo de %k."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o slientiĝis de La Pova Kvietus' de %k."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o prenis klabon al la vizaĝon el %k."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o mordiĝis de la serpentbastono de %k."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o sufokis la serpentbastonon de %k."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o ekbruliĝis de la fajroj de %k."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o puriĝis de la Fantomkruc' de %k."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o recivis unu tro da safira radio de %k."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o farigiĝis frostulon de %k."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o recivis teruran revelacion de %k."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o disdetruiĝis el la universo de la Sangskurĝ' de %k."
+
+msgid "TXT_METALARMOR"
+msgstr "Vi trovis metalan armaĵon."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Vi trovis ledan armaĵon."
+
+msgid "TXT_MEDPATCH"
+msgstr "Vi trovis kuracbendojn."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Vi trovis sukurkeston."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Vi trovis kirurgian keston."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Vi trovis la mapon."
+
+msgid "TXT_BELDINSRING"
+msgstr "Vi havas la ringon."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Vi trovis oferdonan kalikon."
+
+msgid "TXT_EAR"
+msgstr "Vi havas la orelon."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Vi havas la rompitan energian kuplilon."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Vi trovis ombran armaĵon."
+
+msgid "TXT_ENVSUIT"
+msgstr "Vi trovis medi-ŝirman veston"
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Vi havas la uniformon de gardisto."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Vi trovis oficiran uniformon."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Vi havas la partojn de flamĵetilo."
+
+msgid "TXT_REPORT"
+msgstr "Vi havas la raporton."
+
+msgid "TXT_INFO"
+msgstr "Vi havas la informojn."
+
+msgid "TXT_TARGETER"
+msgstr "Vi trovis celilon."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Vi trovis interfonon."
+
+msgid "TXT_COIN"
+msgstr "Vi trovis moneron."
+
+msgid "TXT_XGOLD"
+msgstr "Vi trovis %d da oro."
+
+msgid "TXT_BEACON"
+msgstr "Vi trovis teleportil-signalilon."
+
+msgid "TXT_DEGNINORE"
+msgstr "Vi trovis degninan minaĵon."
+
+msgid "TXT_SCANNER"
+msgstr "Vi trovis skanilon."
+
+msgid "TXT_NEEDMAP"
+msgstr "La skanilo ne funkcias sen mapo!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Vi havas la malliberejan paspermeson."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Vi trovis arbaleston."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Vi trovis sturmofusilon."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Vi trovis misilet-pafilon."
+
+msgid "TXT_FLAMER"
+msgstr "Vi trovis flamĵetilon."
+
+msgid "TXT_MAULER"
+msgstr "Vi trovis polvigilon."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Vi trovis grenadĵetilon."
+
+msgid "TXT_SIGIL"
+msgstr "Vi trovis la SIGELON."
+
+msgid "TXT_BASEKEY"
+msgstr "Vi havas la ŝlosilon de la bazo."
+
+msgid "TXT_GOVSKEY"
+msgstr "Vi havas la ŝlosilon de la registo."
+
+msgid "TXT_PASSCARD"
+msgstr "Vi havas la ŝlosilon de la elektra centralo."
+
+msgid "TXT_IDBADGE"
+msgstr "Vi havas la insignon de la malliberejo."
+
+msgid "TXT_PRISONKEY"
+msgstr "Vi havas la ŝlosilon de la malliberejo."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Vi havas amputitan manon."
+
+msgid "TXT_POWER1KEY"
+msgstr "Vi havas la unuan centralan identigilon."
+
+msgid "TXT_POWER2KEY"
+msgstr "Vi havas la duan centralan identigilon."
+
+msgid "TXT_POWER3KEY"
+msgstr "Vi havas la trian centralan identigilon."
+
+msgid "TXT_GOLDKEY"
+msgstr "Vi havas oran ŝlosilon."
+
+msgid "TXT_IDCARD"
+msgstr "Vi havas identigilon de la kloakoj."
+
+msgid "TXT_SILVERKEY"
+msgstr "Vi havas arĝentan ŝlosilon."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Vi havas ŝlosilon de la Orakolo"
+
+msgid "TXT_MILITARYID"
+msgstr "Vi havas militan identigilon."
+
+msgid "TXT_ORDERKEY"
+msgstr "Vi havas la ŝlosilon de La Ordeno."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Vi havas la ŝlosilon de la magazeno."
+
+msgid "TXT_BRASSKEY"
+msgstr "Vi havas la latunan ŝlosilon."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Vi trovis la ruĝkristalan ŝlosilon."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Vi trovis la blukristalan ŝlosilon"
+
+msgid "TXT_CHAPELKEY"
+msgstr "Vi trovis la ŝlosilon de la kapelo."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Vi havas la ŝlosilon de la katakombo."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Vi havas la sekureco-ŝlosilon."
+
+msgid "TXT_COREKEY"
+msgstr "Vi trovis la ŝlosilon de la kernejo."
+
+msgid "TXT_MAULERKEY"
+msgstr "Vi havas la ŝlosilon de la polvigiloj."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Vi trovis la ŝlosilon de la fabriko."
+
+msgid "TXT_MINEKEY"
+msgstr "Vi trovis la ŝlosilon de la minejo."
+
+msgid "TXT_NEWKEY5"
+msgstr "Vi havas la novan ŝlosilon kvin."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Vi havas la paspermeson de la Orakolo."
+
+msgid "TXT_HEGRENADES"
+msgstr "Vi trovis eksplodeg-povajn grenadojn."
+
+msgid "TXT_PHGRENADES"
+msgstr "Vi trovis fosforajn grenadojn."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Vi trovis magazenon."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Vi trovis munici-keston."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Vi trovis misiletojn."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Vi trovis misilet-keston."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Vi trovis energi-kapsulon."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Vi trovis pakon de energio."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Vi trovis venenajn sagojn."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Vi trovis elektrajn sagojn."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Vi trovis munici-sakon."
+
+msgid "MSG_TALISMANRED"
+msgstr "Vi sentas, ke vi ne devis tuŝi ĝin..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Tio ajn, kio ĝi estas, ĝi ne apartenas al ĉi tiu mondo..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Ĝi devas fari ion..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Vi havas superan forton!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Vi ne havas la ŝlosilon"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Vi bezonas central-ŝlosilon"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr ""
+"Vi bezonas central-ŝlosilon\n"
+"por malfermi tiun pordon"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Vi bezonas identigil-karton"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr ""
+"Vi ne havas la ŝlosilon\n"
+"de la malliberejo"
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Neregistrita manspuro"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Vi bezonas la oran ŝlosilon"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Vi bezonas malliberejan insignon"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr ""
+"Vi bezonas malliberejan insignon\n"
+"por malfermi ĉi tiun pordon"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Vi bezonas la arĝentan ŝlosilon"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Vi bezonas la latunan ŝlosilon"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Vi bezonas la ruĝan kristalon"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Vi bezonas la bluan kristalon"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr ""
+"Ĉi tiu loko estas enirebla nur\n"
+"en la komercaĵa versio de Strife"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Tio ŝajne ne funkcias"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Vi bezonas la kalikon!"
+
+msgid "TXT_NEED_OPASS"
+msgstr ""
+"Vi bezonas la paspermeson\n"
+"de la Orakolo!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Ponardo"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Arbalesto (elektraj sagoj)"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Arbalesto (venenaj sagoj)"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Sturmofusilo"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Misilet-pafilo"
+
+msgid "TAG_FLAMER"
+msgstr "Flamĵetilo"
+
+msgid "TAG_MAULER1"
+msgstr "Polvigilo (normala)"
+
+msgid "TAG_MAULER2"
+msgstr "Polvigilo (fortega)"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Grenadĵetilo (eksplodeg-pova)"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Grenadĵetilo (fosfora)"
+
+msgid "TAG_SIGIL"
+msgstr "Sigelo"
+
+msgid "TAG_COIN"
+msgstr "Monero"
+
+msgid "TAG_MEDPATCH"
+msgstr "Kuracbendoj"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Sukurkesto"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Kirurgia kesto"
+
+msgid "TAG_BELDINSRING"
+msgstr "Ringo"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Oferdona kaliko"
+
+msgid "TAG_EAR"
+msgstr "Orelo"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Rompita energia kuplilo"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Ombra armaĵo"
+
+msgid "TAG_ENVSUIT"
+msgstr "Medi-ŝirma vesto"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Gardista uniformo"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Oficira uniformo"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Partoj de flamjetilo"
+
+msgid "TAG_REPORT"
+msgstr "Raporto"
+
+msgid "TAG_INFO"
+msgstr "Informoj"
+
+msgid "TAG_TARGETER"
+msgstr "Celilo"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Interfono"
+
+msgid "TAG_DEGNINORE"
+msgstr "Degnina minaĵo"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Akurateco"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Forteco"
+
+msgid "TAG_SCANNER"
+msgstr "Skanilo"
+
+msgid "TAG_PRISONPASS"
+msgstr "Mallibereja pasilo"
+
+msgid "TAG_ALARM"
+msgstr "Alarmo"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Municio"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Sano"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Teleportil-signalilo"
+
+msgid "TAG_METALARMOR"
+msgstr "Metala armaĵo"
+
+msgid "TAG_LEATHER"
+msgstr "Leda armaĵo"
+
+msgid "TAG_HEGRENADES"
+msgstr "Eksplodeg-povaj grenadoj"
+
+msgid "TAG_PHGRENADES"
+msgstr "Fosforaj grenadoj"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Magazeno"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Munici-kesto"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Misiletoj"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Misilet-kesto"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Energi-kapsulo"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Pako de energio"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Venenaj sagoj"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Elektraj sagoj"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Sako da municioj"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Ŝlosilo de la bazo"
+
+msgid "TAG_GOVSKEY"
+msgstr "Ŝlosilo de registo"
+
+msgid "TAG_PASSCARD"
+msgstr "Central-ŝlosilo"
+
+msgid "TAG_IDBADGE"
+msgstr "Mallibereja insigno"
+
+msgid "TAG_PRISONKEY"
+msgstr "Mallibereja ŝlosilo"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Amputita mano"
+
+msgid "TAG_POWER1KEY"
+msgstr "Central-identigo 1"
+
+msgid "TAG_POWER2KEY"
+msgstr "Central-identigo 2"
+
+msgid "TAG_POWER3KEY"
+msgstr "Central-identigo 3"
+
+msgid "TAG_GOLDKEY"
+msgstr "Ora ŝlosilo"
+
+msgid "TAG_IDCARD"
+msgstr "Kloaka identigilo"
+
+msgid "TAG_SILVERKEY"
+msgstr "Arĝenta ŝlosilo"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Orakolo-ŝlosilo"
+
+msgid "TAG_MILITARYID"
+msgstr "Milita identigilo"
+
+msgid "TAG_ORDERKEY"
+msgstr "Ordena ŝlosilo"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Magazena ŝlosilo"
+
+msgid "TAG_BRASSKEY"
+msgstr "Latuna ŝlosilo"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Ruĝkristala ŝlosilo"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Blukristala ŝlosilo"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Ŝlosilo de kapelo"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Katakomb-ŝlosilo"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Sekureco-ŝlosilo"
+
+msgid "TAG_COREKEY"
+msgstr "Ŝlosilo de kerno"
+
+msgid "TAG_MAULERKEY"
+msgstr "Polvigila ŝlosilo"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Ŝlosilo de fabriko"
+
+msgid "TAG_MINEKEY"
+msgstr "Ŝlosilo de minejo"
+
+msgid "TAG_NEWKEY5"
+msgstr "Nova ŝlosilo kvin"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Orakolo-pasilo"
+
+msgid "TAG_10GOLD"
+msgstr "10 da oro"
+
+msgid "TAG_25GOLD"
+msgstr "25 da oro"
+
+msgid "TAG_50GOLD"
+msgstr "50 da oro"
+
+msgid "TAG_300GOLD"
+msgstr "300 da oro"
+
+msgid "TXT_PERSON"
+msgstr "Persono"
+
+msgid "TAG_ACOLYTE"
+msgstr "Akolito"
+
+msgid "TAG_ARMORER"
+msgstr "Armilisto"
+
+msgid "TAG_BARKEEP"
+msgstr "Drinkejestro"
+
+msgid "TAG_BEGGAR"
+msgstr "Almozulo"
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr "Kuracisto"
+
+msgid "TAG_ORACLE"
+msgstr "Orakolo"
+
+msgid "TAG_PRIEST"
+msgstr "Pastro"
+
+msgid "TAG_RATBUDDY"
+msgstr "Rato"
+
+msgid "TAG_REBEL"
+msgstr "Ribelanto"
+
+msgid "TAG_TEMPLAR"
+msgstr "Templano"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Armilforĝisto"
+
+msgid "TAG_TALISMANRED"
+msgstr "Ruĝa Talismano"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Verda Talismano"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Blua Talismano"
+
+msgid "OB_ACOLYTE"
+msgstr "%o fervore pafiĝis de Akolito."
+
+msgid "OB_MACIL"
+msgstr "%o ne estus devinta ribeli kontraŭ Macil."
+
+msgid "OB_REBEL"
+msgstr "%o pafegiĝis de ribelanto."
+
+msgid "OB_BEGGAR"
+msgstr "%o morte bategiĝis de la malriĉuloj."
+
+msgid "OB_PEASANT"
+msgstr "%o ne estus devinta komenci batalon al civilulo."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o subite mortiĝis de la Fantomo."
+
+msgid "OB_ENTITY"
+msgstr "%o sentis la koleregon de la Vera Dio."
+
+msgid "OB_LOREMASTER"
+msgstr "%o ne povis eskapi el la kapto de la Folkloristo."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o eksiĝis de La Programisto."
+
+msgid "OB_STFBISHOP"
+msgstr "%o forbloviĝis de la Episkopo."
+
+msgid "OB_SENTINEL"
+msgstr "%o pafegiĝis de Sentinelo."
+
+msgid "OB_CRUSADER"
+msgstr "%o tute detruiĝis de Krucisto."
+
+msgid "OB_INQUISITOR"
+msgstr "%o kondamniĝis de Inkvizitoro."
+
+msgid "OB_STALKER"
+msgstr "%o ĝeniĝis de Gvatanto."
+
+msgid "OB_TURRET"
+msgstr "%o ekagigis la aŭtomatajn defendojn."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o ungegiĝis de Templano."
+
+msgid "OB_TEMPLAR"
+msgstr "%o vaporiĝis de Templano."
+
+msgid "OB_REAVERHIT"
+msgstr "%o distranĉiĝis de Lertulo."
+
+msgid "OB_REAVER"
+msgstr "%o pafegiĝis de Lertulo."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o akcidente dorspikiĝis de %k."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o pafiĝis de sageto sur la muro de %k."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o recivis mortigan dozon de la kolerego de %k."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o boriĝis kun multaj truoj de la sturmofusilo de %k."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o glutis la misilon de %k."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o estis inversigita de la HE-grenado de %k."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o prenis flaman banon en la fosfora ŝtiparo de %k."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o kradrostiĝis de %k."
+
+msgid "OB_MPMAULER1"
+msgstr "%o elektrokutiĝis de %k."
+
+msgid "OB_MPMAULER"
+msgstr "%o estis brutale vaporigita de %k."
+
+msgid "OB_MPSIGIL"
+msgstr "%o kliniĝis antaŭ la plena potenco de la Sigelo de %k."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "Serĉado por la Sigelo"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Vi liberigis la kaptitojn!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Vi detruis la konvertilon!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Gratulon! Vi kompletigis la trejnejon"
+
+msgid "TXT_QUEST_14"
+msgstr "Vi eksplodigis la kristalon"
+
+msgid "TXT_QUEST_16"
+msgstr "Vi detruis la pordegojn"
+
+msgid "TXT_QUEST_27"
+msgstr "Vi detruis la komputilon"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Vi mortigis la Episkopon!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Vi mortigis la Orakolon!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Vi mortigis Macil-on!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Vi mortigis la Folkloriston!"
+
+msgid "TXT_YOUFOOL"
+msgstr ""
+"Stultulo!\n"
+"Vi ekigis la alarmon."
+
+msgid "TXT_YOUREDEAD"
+msgstr ""
+"Vi estas mortinta!\n"
+"Vi ekigis la alarmon."
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Vi ŝajnas havi sufiĉe!"
+
+msgid "TXT_GOAWAY"
+msgstr "Foriru!"
+
+msgid "TXT_COMM0"
+msgstr "Alvenas mesaĝo..."
+
+msgid "TXT_COMM1"
+msgstr "Alvenas mesaĝo de Merlo..."
+
+msgid "TXT_FINDHELP"
+msgstr "Trovu helpon."
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "kontraŭ %u da oro."
+
+msgid "GOTCHEXARMOR"
+msgstr "Prenis la Chex(R)-kirason."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Prenis la superan Chex(R)-kirason!"
+
+msgid "GOTWATER"
+msgstr "Prenis glason de akvo."
+
+msgid "GOTREPELLENT"
+msgstr "Prenis muk-forigilon."
+
+msgid "GOTBREAKFAST"
+msgstr "Ŝargega Matenmanĝon!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Prenis bluan ŝlosilon."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Prenis ruĝan ŝlosilon."
+
+msgid "GOTCREDKEY"
+msgstr "Prenis flavan ŝlosilon."
+
+msgid "GOTFRUIT"
+msgstr "Prenis bovlon de fruktoj."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Legomoj estas TRE bonaj por vi!"
+
+msgid "GOTVEGETABLES"
+msgstr "Prenis bovlon de legomoj."
+
+msgid "GOTSLIMESUIT"
+msgstr "Trovis muk-imunan kompleton."
+
+msgid "GOTCHEXMAP"
+msgstr "Trovis komputilan regionmapon."
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Prenis zorĉreŝargeton."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Prenis zorĉpaketon"
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Prenis zorĉpropulsilo-reŝargon."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Prenis zorĉpropulsilo-pakon."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Prenis fluktuantzorĉilo-reŝargon."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Prenis fluktuantzorĉilo-pakon."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Prenis grandzorĉilo-reŝargon."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Prenis grandegzorĉilo-reŝargon."
+
+msgid "GOTZORCHPACK"
+msgstr "Prenis Zorĉpakon!"
+
+msgid "GOTLAZDEVICE"
+msgstr "Vi prenis la LAZ-aparaton! Hura!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Vi prenis la Rapidzorĉilon!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Vi prenis la Superan Ŝargmanĝilaron!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Vi prenis la Zorĉpropulsilon!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Vi prenis la Fluktuantzorĉilon!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Vi prenis la Grandzorĉilon"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Vi prenis la Grandegzorĉilon!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Prenis Zorĉileton."
+
+msgid "TAG_SPOON"
+msgstr "Kulero"
+
+msgid "TAG_SPORK"
+msgstr "Ega Ŝargmanĝilaro"
+
+msgid "TAG_MINIZORCHER"
+msgstr "Zorĉileto"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Granda Zorĉilo"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Grandega Zorĉilo"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Rapida Zorĉilo"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Zorĉpropulsilo"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Fluktuantzorĉilo"
+
+msgid "TAG_LAZDEVICE"
+msgstr "LAZ-Aparato"
+
+msgid "OB_COMMONUS"
+msgstr "%o estas ŝlimiga de mukulo."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o estas ŝlimiga de dupiedmukulo."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o estas ŝlimiga de kirasa dupiedmukulo."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o estas ŝlimiga de ciklopmukulo"
+
+msgid "OB_FLEMBRANE"
+msgstr "%o estas venkita de La Mukmembrano."
+
+msgid "OB_MPSPOON"
+msgstr "%o estas kulernutrita de %k."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o estas plene miksita de la ŝargmanĝilaro de %k."
+
+msgid "OB_MPZORCH"
+msgstr "%o estas zorĉita de %k."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o estas trafita de la zorĉilego de %k."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o estas rapidzorĉita de %k."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o estas zorĉita de la propulsilo de %k."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o estas trafita de la propulsilo de %k."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o estas fluktuantzorĉita de %k."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o iĝis predo de la LAZ-aparato de %k."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o estas LAZ-ita de %k."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Surterejo"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Stokejo"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Eksperimenta Laboratorio"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: Arbejo"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Kavernoj de Bazojko"
+
+msgid "CE1TEXT"
+msgstr ""
+"Misio elfarita.\n"
+"\n"
+"Ĉu vi pretas por la sekva misio?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Premu la eskapan klavon por daŭri..."
+
+msgid "CE2TEXT"
+msgstr "Vi sukcesis!"
+
+msgid "CE3TEXT"
+msgstr "Mirindan Laboron!"
+
+msgid "CE4TEXT"
+msgstr "Mirinda"
+
+msgid "CLOADNET"
+msgstr ""
+"Vi ne povas ŝargi dum ret-serĉo!\n"
+"\n"
+"Premu klavon."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Ĉu rapidkonservi anstataŭigante vian serĉon nomitan\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Vi ne povas rapidŝargi dum ret-serĉo!\n"
+"\n"
+"Premu klavon."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Ĉu vi volas rapidŝargi la serĉon nomitan\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Vi ne povas komencigi novan serĉon dum ret-serĉon.\n"
+"\n"
+"Premu klavon."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Singardu, ĉi tio malfacilos.\n"
+"Ĉu vi volas daŭri?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Ĉi tio estas Chex(R) Quest. Serĉu\n"
+"\n"
+"novajn nivelojn ĉe www.chexquest.com.\n"
+"\n"
+"Premu klavon."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Vi ne povas fini ret-serĉon!\n"
+"\n"
+"Premu klavon."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Ĉu vi certas ke vi volas fini la serĉon?\n"
+"\n"
+"Premu Y aŭ N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Nevenkebla-reĝimo ŜALTITA"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Nevenkebla-reĝimo MALŜALTITA"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Zorĉo Aldonita"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Supera Zorĉo Aldonita"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Manĝu Chex(R)-on!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Zorĉileto-Ŝarĝo"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Ŝarĝo por Granda Zorĉilo"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Zorĉpropulsilo-ŝarĝo"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Fluktuantzorĉilo-ŝarĝo"
+
+msgid "MNU_NEWGAME"
+msgstr "Nova ludado"
+
+msgid "MNU_OPTIONS"
+msgstr "Agordoj"
+
+msgid "MNU_GAMEFILES"
+msgstr "Ludo-dosieroj"
+
+msgid "MNU_INFO"
+msgstr "Informoj"
+
+msgid "MNU_QUITGAME"
+msgstr "Mallanĉi ludon"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Elektu malfacilecon:"
+
+msgid "SKILL_BABY"
+msgstr "Mi tro junas por morti."
+
+msgid "SKILL_EASY"
+msgstr "He, ne tro malafable."
+
+msgid "SKILL_NORMAL"
+msgstr "Vundu min multe."
+
+msgid "SKILL_HARD"
+msgstr "Ekstrema perforto."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Inkubo!"
+
+msgid "CSKILL_BABY"
+msgstr "Kvietiĝu"
+
+msgid "CSKILL_EASY"
+msgstr "Ne tiel glueca"
+
+msgid "CSKILL_NORMAL"
+msgstr "Buloj de muko"
+
+msgid "CSKILL_HARD"
+msgstr "Ekstrema pusado"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Tre ŝlima!"
+
+msgid "SSKILL_BABY"
+msgstr "Trejnado"
+
+msgid "SSKILL_EASY"
+msgstr "Komencanto"
+
+msgid "SSKILL_NORMAL"
+msgstr "Veterano"
+
+msgid "SSKILL_HARD"
+msgstr "Elito"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Sangoverŝado"
+
+msgid "MNU_WETNURSE"
+msgstr "Vi nutristinon bezonas"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Malkuraĝuloj-as-ni"
+
+msgid "MNU_BRINGEST"
+msgstr "Al mi ilin kunvenigu"
+
+msgid "MNU_SMITE"
+msgstr "Vi Venkobatanto estas"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Nigra morto vin posedas"
+
+msgid "MNU_SQUIRE"
+msgstr "Varleto"
+
+msgid "MNU_KNIGHT"
+msgstr "Kavaliro"
+
+msgid "MNU_WARRIOR"
+msgstr "Militisto"
+
+msgid "MNU_BERSERKER"
+msgstr "Frenezisto"
+
+msgid "MNU_TITAN"
+msgstr "Titano"
+
+msgid "MNU_ALTARBOY"
+msgstr "Messervanto"
+
+msgid "MNU_ACOLYTE"
+msgstr "Akolito"
+
+msgid "MNU_PRIEST"
+msgstr "Pastro"
+
+msgid "MNU_CARDINAL"
+msgstr "Kardinalo"
+
+msgid "MNU_POPE"
+msgstr "Papo"
+
+msgid "MNU_APPRENTICE"
+msgstr "Lernanto"
+
+msgid "MNU_ENCHANTER"
+msgstr "Ravisto"
+
+msgid "MNU_SORCERER"
+msgstr "Sorĉisto"
+
+msgid "MNU_WARLOCK"
+msgstr "Magiisto"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Magiantestro"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Elektu klason:"
+
+msgid "MNU_FIGHTER"
+msgstr "Batalanto"
+
+msgid "MNU_CLERIC"
+msgstr "Kleriko"
+
+msgid "MNU_MAGE"
+msgstr "Magianto"
+
+msgid "MNU_RANDOM"
+msgstr "Hazarda"
+
+msgid "MNU_EPISODE"
+msgstr "Kiu epizodo?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Elektu kampanjon"
+
+msgid "MNU_COTD"
+msgstr "Urbo de la damnitaj"
+
+msgid "MNU_HELLSMAW"
+msgstr "Faŭko de Infero"
+
+msgid "MNU_DOME"
+msgstr "La Kupolo de D'Sparil"
+
+msgid "MNU_OSSUARY"
+msgstr "La Ostejo"
+
+msgid "MNU_DEMESNE"
+msgstr "La Senmova Posedaĵo"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Teamludado"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Teamdamaĝo-skalio"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Inteligenta Celasisto"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Faldamaĝo"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Faligi armilon"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Duobla municio"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Senlima municio"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Senlima inventaro"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Neniu monstro"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Neniu monstro por eliri"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Monstroj reekaperas"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Monstroj ne reekaperas"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Objektoj reekaperas"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Grandaj plifortigaĵoj reekaperas"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Rapidaj monstroj"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Refleksoj de monstroj en Inkubo-modo"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Degenero"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Permesi cel-asiston"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Permesi memmortigon"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Permesi salton"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Permesi kaŭron"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Permesi liberrigardon"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Permesi vidkampon"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Permesi ekceladon de BFG"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Permesi aŭtomatan mapon"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Aliancanoj en aŭtomata mapo"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Permesi spionadon"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Trompo por ĉaskamerao"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Kontroli municion por armŝanĝi"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "La morto de la piktogramo mortigas siajn idojn"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Finsektoro kalkulas al nombro da mortigoj"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Mortmatĉo-agordoj"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Armiloj restiĝas"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Permesi plifortigaĵojn"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Permesi sanon"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Permesi kirason"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Ekaperi plej fore"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Sama mapo"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Devigi reekaperon"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Permesi eliron"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Bareloj reekaperas"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Protekto de reekapero"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Perdi ludmurdon se ludmurdita"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Teni ludmurdojn gajnitajn"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Neniu teamŝanĝado"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Agordoj de koopera reĝimo"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Ekaperigi armilojn por plurludanta reĝimo"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Perdi tutan inventaron"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Teni ŝlosiojn"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Teni armilojn"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Teni kirason"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Teni plifortigaĵojn"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Teni municion"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Perdi duonon de onia municio"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Ekaperigi kie oni mortigis"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Ĉiam ekaperi plurludantajn objektojn"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Permesi vertikalan kuglan disvastiĝon"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Armiloj donas ekstran municion (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Kongruo-agordoj"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Kongruo-agordoj"
+
+msgid "CMPTMNU_MODE"
+msgstr "Kongruo-reĝimo"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Aktorkonduto"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Amikaj monstroj ne estas baritaj"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Limigi Perditajn Animojn de Doloro-Elementuloj"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Monstromovado estas afektita per efektoj"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Monstroj ne povas movi trans krutaĵojn"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Monstroj ĉesiĝi super krutaĵoj"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Monstroj povas vidi nevideblajn ludantojn"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Neniuj plankfajroj de Mintaŭroj en akvo"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Ekaperigi faligitajn objektojn sur la plankon"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "Konduto de DehackEd"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH sanagordoj kiel Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Originala A_Mushroom rapideco en DEH-modifaĵoj"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Mapo/Ago-Konduto"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Ĉiuj el specialaj linioj povas bari je <uzi>"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Permesi iun ajn estro-morton por nivelspecialo"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "Malvalidigi pordlumo-efekton de BOOM"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Trovi najbaran lumon kiel Doom"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Trovi la plej mallongajn tekstaĵojn kiel Doom"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Uzi pli ciman ŝtupo-konstruadon"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Uzi konduton de Doom por plankmovo-konduto"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Uzi algoritmon de Doom por trovi punkton sur linio"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Nivelelirejo povas esti ekagigita pli ol unufoje"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Fizikokonduto"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Aktoroj estas senfine altaj"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Skrolantaj Teksturaj de Boom estas adicia"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Ne eblas veturi rekte NSEW"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Ebligi kuradon sur muroj"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Skrolantaj teksturoj de Raven uzas originalan rapidecon"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Sinreferencantaj sektoroj ne baras pafojn"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Uzi kodon de Doom por batskanoj-kontrolado"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Uzi altojn de Doom por misilo-tonadoj"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Bildigado-Konduto"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Desegni plurangulo-objektojn kiel Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Malatenti Y-deŝovaĵojn sur maskitaj midtekstaĵoj"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Inversigi ordigadon de mov-rastrumoj"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Sonkonduto"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Kripligi sonon por lertaĵo de silenta BFG"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Ne lasi aliulojn aŭdas viajn prenadojn"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Tujaj movantaj plankoj ne estas silentaj"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sektorsonoj uzas centron kiel fonto"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Sonoj ĉesas, kiam aktoro malaperas"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Uzi originalan manipuladon por soncelo"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Skriptitaj teleportoj ne ekagigas sektor-agojn"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Nehaltantaj linioj povas esti premitaj"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Ebligi cimajn kondutojn por CheckSwitchRange"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Ebligi ciman reladon de Strife"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Neniuj vertikalaj puŝoj de eksplodoj"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Uzi originalan konduton de Doom por eksplodoj "
+
+msgid "PLYRMNU_RED"
+msgstr "Ruĝo"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Verdo"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Bluo"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Klaso"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Aspekto"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Ŝanĝi armon ĉe preno"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Premu \\cjSPACON"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "por vidi vian antaŭon"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "por vidi vian malantaŭon"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Vertikala Kugla Disvastiĝo"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Armilzumo"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Armilstato 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Armilstato 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Armilstato 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Armilstato 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Flugi/Naĝi supren"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Flugi/Naĝi malsupren"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Ĉesi flugadon"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Klavar-rigardo"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Ŝprucfenestraĵoj de Strife"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Teama diro"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Faligi objekton"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Informpeti objekton"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Faligi armilon"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Alia"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Kunlabora spiono"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Ŝprucfenestraĵoj de Strife"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Taskoceloj"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Ŝlosilolisto"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Armiloj/municio/stataĵoj"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Baskuligi poentotabulon"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Rigardsalto"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Rigardturnmovo"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Fono"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Vi"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "1-flankaj muroj"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "2-flankaj muroj kun malsamaj plankoj"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "2-flankaj muroj kun malsamaj plafonoj"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "2-flankaj muroj kun 3D-plankoj"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Mapkrado"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Centra punkto"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Neviditaj muroj"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Ŝlositaj pordoj"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Teleportilo al la sama mapo"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Teleportilo al alia mapo"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Sekreta sektoro"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Neesplorita sekreto"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Specialaj ekagilo-linioj"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Tromp-Reĝimo"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Nevideblaj 2-flankaj muroj"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Sekretaj muroj"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Aktoroj"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Monstroj"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Nenombradaj Monstroj"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Amikoj"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Objektoj"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Nombri Objektojn"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Surmeto-Reĝimo"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Surmeto-Tromp-Reĝimo"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Portalo-Surmetoj"
+
+msgid "MSGMNU_TITLE"
+msgstr "Mesaĝoj"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Montri mesaĝojn"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Montri nekrologojn"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Montri sciigojn de sekretoj"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Minimuma nivelo de mesaĝoj"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Mesaĝkoloroj"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Objektoprenado"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Nekrologoj"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Gravaj Mesaĝoj"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Babilmesaĝoj"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Teammesaĝoj"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Centritaj Mesaĝoj"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Mesaĝoj de ekrankopio"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Detalaj konservmesaĝoj"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Reĝimo de mesaĝoj por programistoj"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Mapkoloro-agordaĵo"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Permesi mapdefinitajn kolorojn"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Agordi laŭmendajn kolorojn"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Adapti mapregilojn"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Surmeti aŭtomatan mapon"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Ŝalti teksturitan ekranon"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Montri nombron de objektoj"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Montri nombron de monstroj"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Montri nombron de sekretoj"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Montri pasintan tempon"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Montri tutan pasintan tempon"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Montri sekretojn sur mapo"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Montri mapetikedon"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Desegni mapfondon"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Montri klavojn (trompo)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Montri ekagilo-liniojn"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Montri aĵojn kiel mov-rastrumojn"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Surmeti portalojn"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Malplena spacia marĝeno"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Marki tiparon"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Marki koloron"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Meti markon"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Forigi markon"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Poentotabulo-Agordoj"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Poentotabulo-Agordoj"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Kooperativo-Agordoj"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Ŝalti Poentotabulon"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Kapokoloro"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Via ludantkoloro"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Koloro de aliaj ludantoj"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Mortmaĉo-Agordoj"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Teamo-Mortmaĉo-Agordoj"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Alternativa HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Ŝalti alternativan HUD"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Montri sekreto-nombron"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Montri monstro-nombron"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Montri objekto-nombron"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Montri viglecon kaj akuratecon"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Montri frenezecon"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Montri armilojn"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Montri municion por"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Montri tempon"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Tempkoloro"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Montri reto-respondotempon"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Vidiga aranĝo de municio"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Ruĝa municividigo sub %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Flava municividigo sub %"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Ruĝa sanvidigo sube"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Flava sanvidigo sube"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Verda sanvidigo sube"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Ruĝa kirasvidigo sube"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Flava kirasvidigo sube"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Verda kirasvidigo sube"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Alternativa HUD de aŭtomata mapo"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Koloro de la mapa titolo"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Koloro de la mapa tempo"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Koloro de la kunlig-mapa tempo"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Koloro de la totala tempo"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Koloro de koordinatoj"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Speco de koordinatoj"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Koloro de la statistika nomo"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Koloro de statistiko"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Bildigo-Interpolado"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Travidebleco-bildigo-reĝimo"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Stilo de ekranviŝo"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Montri ENDOOM-ekranon"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Egeco de sango-ekbrilo"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Egeco de prenado-ekbrilo"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Egeco de Subakva Mikso"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Ĉielo-bildigo-reĝimo"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Linearaj ĉieloj"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Plenbrileco tranpasas sektorkoloron"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Skali barblano-efekton"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Uzi barblano-efekton"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Klasika Travidebleco"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Diafaneco de Perdita Animo"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Uzi malveran kontraston"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Raketospuroj"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Sangad-efekto"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Pulvo pro kolizio de kuglo"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Nombro da partikloj"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Nombro da dekaloj"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Montri ludanto-rastrumojn"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Dummorta tripersona kamerao"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Teleportila zomo"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Egeco de tertremo"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Interpoli monstro-movadon"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Menuo-malheleco"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Malheleca koloro"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Ekrana balanciĝo dum moviĝo"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Ekrana balanciĝo dum halto"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Rapido de armila balanciĝo"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Skalo-Agordoj"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Transpasoj por ĉi-supre agordo"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Mesaĝoj"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Konzolo"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Stata baro"
+
+msgid "SCALEMNU_HUD"
+msgstr "Tutekrana HUD"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Alternativa HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "HUD konservas aspekto-proporcion"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Uzi defaŭltskalon"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Skali al tutekrano"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Adapti al ekranamplekso"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUD Agordoj"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Alternativa HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Mesaĝo-Agordoj"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Interfaco-skalo de uzanto"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Devigi defaŭltan reteton"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Grandigi reteton kiam oni prenas objektojn"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Montri nometikedojn"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Nometikeda koloro"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Uzi maljunan formulon de aj-vizaĝo-foto"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Ekbriloj de Hexen-armo"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Ekbriloj de venondamaĝo"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Ekbriloj de glacimorto"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Ekbriloj de venonamasigo"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Skalo-Agordoj"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Montri elektodialogon de IWAD"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Ebligi trompojn el tutaj ludoj"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Ebligi faradon de ekrankopioj per skriptoj"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Ŝargi je *.deh/*.bex lumpoj"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Kaŝmemoraj nodoj"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Templimo pro kaŝmemornodi"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Forigi kaŝmemorajn nodojn"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Permesi preterpason de intermitaj rulumoj"
+
+msgid "NETMNU_TITLE"
+msgstr "Reta Agordoj"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Lokaj agordoj"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Movprognozado"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Prognozi linio-agojn"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Skalo de Linia Lnterpolado"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Limito de Linia Interpolado"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Agordoj de Gastiganto"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Ekstraj Tikoj"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Respondotempo-balancado"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Originala"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimumigita"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Klasika (Pli rapide)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Preciza"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Limitigita"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Partikloj"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Mov-rastrumoj"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Mov-rastrumoj kaj partikloj"
+
+msgid "OPTVAL_MELT"
+msgstr "Fandi"
+
+msgid "OPTVAL_BURN"
+msgstr "Bruli"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Transvelki"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Glata"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Glata"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Diafana"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Lanugo"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Ombro"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Objektoj"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Armiloj"
+
+msgid "OPTVAL_BOTH"
+msgstr "Ambaŭ"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Ludanto"
+
+msgid "OPTVAL_MAP"
+msgstr "Mapo"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Skali al 640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Bilderon duobligi"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Bilderon kvarobligi"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Nuntempa armilo"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Haveblaj armiloj"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Ĉiuj armiloj"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Nivelo, milisekundoj"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Nivelo, sekundoj"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Nivelo"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Rekontejo, sekundoj"
+
+msgid "OPTVAL_HUB"
+msgstr "Rekontejo"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Tuto, sekundoj"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Tuto"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Sistemo, sekundoj"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Sistemo"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Retludoj sole"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Bildo kaj Teksto"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Teksto kaj Bildo"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Skriptoj Sole"
+
+msgid "OPTVAL_ALL"
+msgstr "Ĉiuj"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Nur fina unu"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Tradicia Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Tradicia Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Tradicia Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Nur kiam trovita"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Ŝaltita nur por surmeto"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Surmeto+Normala"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Nur surmeto"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Ne por kunlig-mapoj"
+
+msgid "OPTVAL_FRONT"
+msgstr "Fronto"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Animita"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Turnita"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Nur mapaj difinitaj koloroj"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Ĉiom krom pordoj"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Duobligi"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Triobligi"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Kvarobligi"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Objektoprenado"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Nekrologoj"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Gravaj mesaĝoj"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Neniam amikoj"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Nur monstroj"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Maljuna"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (severa)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (severa)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (severa)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (severa)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Ĉiuj neagnoskitaj"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Eraroj"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Avertoj"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Sciigoj"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Ĉio"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Aparatara plirapidigo"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Programar-bildigilo de Doom"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "Programar-bildigilo kun plenkoloro"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Alta rendimento"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Energikonservo"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Originala ludversio"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (devigita)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Originala ludversio (devigita)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Aŭtomata (preferata de ZDoom)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Aŭtomata (preferata de la originala)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Malgranda"
+
+msgid "OPTVAL_LARGE"
+msgstr "Granda"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Konzolo"
+
+msgid "C_BRICK"
+msgstr "\\caBrikkolora"
+
+msgid "C_TAN"
+msgstr "\\cbTankolora"
+
+msgid "C_GRAY"
+msgstr "\\ccGriza"
+
+msgid "C_GREEN"
+msgstr "\\cdVerda"
+
+msgid "C_BROWN"
+msgstr "\\ceBruna"
+
+msgid "C_GOLD"
+msgstr "\\cfOrkolora"
+
+msgid "C_RED"
+msgstr "\\cfRuĝa"
+
+msgid "C_BLUE"
+msgstr "\\chBlua"
+
+msgid "C_ORANGE"
+msgstr "\\ciOranĝkolora"
+
+msgid "C_WHITE"
+msgstr "\\cjBlanka"
+
+msgid "C_YELLOW"
+msgstr "\\ckFlava"
+
+msgid "C_DEFAULT"
+msgstr "\\clDefaŭlta"
+
+msgid "C_BLACK"
+msgstr "\\cmNigra"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnHelblua"
+
+msgid "C_CREAM"
+msgstr "\\coKremkolora"
+
+msgid "C_OLIVE"
+msgstr "\\cpOlivkolora"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqMalhelverda"
+
+msgid "C_DARKRED"
+msgstr "\\crMalhelruĝa"
+
+msgid "C_DARKBROWN"
+msgstr "\\csMalhelbruna"
+
+msgid "C_PURPLE"
+msgstr "\\ctPurpura"
+
+msgid "C_DARKGRAY"
+msgstr "\\cuMalhelgriza"
+
+msgid "C_CYAN"
+msgstr "\\cvCejana"
+
+msgid "C_ICE"
+msgstr "\\cwGlacikolora"
+
+msgid "C_FIRE"
+msgstr "\\cxFajrkolora"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cySafirkolora"
+
+msgid "C_TEAL"
+msgstr "\\czBluverda"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Neniu sono"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Neniu interpolado"
+
+msgid "OPTSTR_SPLINE"
+msgstr "Splajno"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Aparatara bildigilo"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Programara bildigilo"
+
+msgid "GLMNU_TITLE"
+msgstr "Agordoj de OpenGL (aparatara bildigilo)"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Agordoj de dinamikaj lumoj"
+
+msgid "GLMNU_PREFS"
+msgstr "Preferoj"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Ĉirkaŭtranĉi randojn de mov-rastrumoj"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Ordigi desegnado-listojn laŭ teksturo"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Dinamikaj lumoj"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Dinamikaj lumoj (Aparataro)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Ŝalti lumdifinojn"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Lumoj efikas mov-rastrumojn"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Lumoj efikas partiklojn"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Lum-ombro-mapoj"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Kvalito de ombro-mapo"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Filtro de ombro-mapo"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Reĝimo de nebulo"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Nebulo devigas plenbrilon"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Lumforteco de armilo"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Medimapo sur speguloj"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Plibonigita reĝimo de noktvido"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "ENV montras kaŝiĝitajn monstrojn"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Agordi trairadon de mov-rastrumoj"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Glatigi randojn de mov-rastrumoj"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Stilo de Lenugo"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Liniigi mov-rastrumojn"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Mov-rastrumoj ĉiam rigardas vian kameraon"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Partikla stilo"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Kvalito de bildigado"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "Duvida 3D VR"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Ŝalti Kvaroblo-Stereon"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Reĝimo de Bendiga Lumo de Programbildigo"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Distanco Inter Viaj Okuloj"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Distanco De Via Ekrano"
+
+msgid "OPTVAL_SMART"
+msgstr "Inteligenta"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Pli inteligenta"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Nur transruĝa"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Transruĝa kaj torĉo"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Iu ajn fiksita kolormapo"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Uzi kiel paletro"
+
+msgid "OPTVAL_BLEND"
+msgstr "Miksi"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Hela"
+
+msgid "OPTVAL_DARK"
+msgstr "Malhela"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "Programa bildigilo"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optima"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y-Akso"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X/Y-Akso"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Kvadrata"
+
+msgid "OPTVAL_ROUND"
+msgstr "Ronda"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radiusa"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Bildera lanugo"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Glata lanugo"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Kirla lanugo"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Diafana lanugo"
+
+msgid "OPTVAL_NOISE"
+msgstr "Bruo"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Glata Bruo"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Malglateca lanugo"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Verda/Magenta"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Ruĝa/Cejana"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Sukcenokolora/Blua"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Maldekstra Okulo"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Dekstra Okulo"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Flank-ĉe-flanka Tuta"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Flank-ĉe-flanka Mallarĝa"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Supero/Subo"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Vicoj interteksitaj"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Kolonoj interteksitaj"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Ŝaktablo"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Kvarobla bufro"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "Plenkolora Agordoj"
+
+msgid "TCMNU_TITLE"
+msgstr "Plenkolora Agordoj"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Plenkolora eligo"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Linia filtro kiam subskali"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Linia filtro kima superskali"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Uzi mipmapajn teksturojn"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dinamikaj lumoj (Programbildigilo)"
+
+msgid "OS_TITLE"
+msgstr "Agorda Serĉo"
+
+msgid "OS_ANY"
+msgstr "Serĉi por iu ajn termino"
+
+msgid "OS_ALL"
+msgstr "Serĉi por ĉiuj terminoj"
+
+msgid "OS_NO_RESULTS"
+msgstr "Neniuj rezultoj trovitaj."
+
+msgid "OS_LABEL"
+msgstr "Serĉi:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Ĉiam montri ŝlosilojn"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Teamŝanĝiĝo estas malvalidigita!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s aliĝis al la %t teamo"
+
+msgid "TXT_LONER"
+msgstr "%s nun estas solemulo."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s eliris el la ludado kun %d ludmurdoj"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s eliris el la ludado"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Ne povis legi la konservitan ludadon '%s'."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' ne estas valida konservita ludado: Mankas 'info.json'."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Malsukcesis aliri informon de la konservita ludado en '%s'."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Konservita ludado '%s' estas el nekongrua versio."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Konservita ludado '%s' estas el alia ZDoom-bazita modulo:"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Konservita ludado '%s' estas el pli malnova versio: %d (%e estas la plej "
+"malnova subtenata)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Konservita ludado '%s' estas el pli nova versio: %d (%e estas la plej nova "
+"subtenata)"
+
+msgid "TXT_NOMAPSG"
+msgstr "Al la konservita ludado '%s' mankas la nuna mapo."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' ne estas valida konservita ludado: Mankas 'globals.json'."
+
+msgid "TXT_SGINFOERR"
+msgstr "Malsukcesis aliri informon de la konservita ludado en '%s'"
+
+msgid "TXT_SAVEPENDING"
+msgstr "Konservita ludado ankoraŭ estas pritraktata."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Vi ne estas en konservebla ludado."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Vi ne estas en nivelo"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Ludanto estas mortinta en sol-ludula ludado"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Konservo malsukcesis"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Ne povis krei ekrankopion."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "De %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Premu ajnan klavon aŭ alklaku ie ajn en la fenestro por forlasi."
+
+msgid "HUDMNU_FLASH"
+msgstr "Ekranmisko-agordoj"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D-reĝimo"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Reteto"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Subtekstoj"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Preventi grizajn ombrojn"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Tiparo-agordoj"
+
+msgid "FONTMNU_LOG"
+msgstr "Uzi norman tiparon por protokola ekrano"
+
+msgid "FONTMNU_DLG"
+msgstr "Uzi norman tiparon por dialogoj"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Rapida eliro"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Agordi inversan mapon"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Agordi inversan malhelan koloron"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Agordi inversan helan koloron"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Armila balanciĝo dum pafado"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Klasika skalado de intermito kaj ekranbordero"
+
+msgid "SCALEMNU_INTER"
+msgstr "Fono de intermito"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Ekranbordero"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Skalfaktoro"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Proporcio"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Montri kalkul-ekranon post fino de nivelo"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Difinita per modifaĵo"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Ĉiam, krom en kunlig-mapoj"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Ĉiam, eĉ en kunlig-mapoj"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Preferita klavararanĝo"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Klasika ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr "Moderna (WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Moderna (Cifera klavaro)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Strikta KEYCONF Armiloj/Ludantoj"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Klasika skalado de ZDoom-menuo"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Uzi procentojn sur resumekrano"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Klasika ZDoom-skalado sur resumekrano"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Civilulo"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Plafona tureto"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Krucisto"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inkvizitoro"
+
+msgid "TAG_PEASANT"
+msgstr "Kamparano"
+
+msgid "TAG_REAVER"
+msgstr "Lertulo"
+
+msgid "TAG_SENTINEL"
+msgstr "Sentinelo"
+
+msgid "TAG_STALKER"
+msgstr "Gvatanto"
+
+msgid "TAG_BISHOP"
+msgstr "La Episkopo"
+
+msgid "TAG_ENTITY"
+msgstr "La Vera Dio"
+
+msgid "TAG_PROGRAMMER"
+msgstr "La Programisto"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "La Fantomo"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Genuanto"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Plurludul-reĝimajn aĵojn aperas en kunlabora reĝimo"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Ombroj de mov-rastrumoj"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Monstroj kaj ludantoj"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr "Vidkampo"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Malvalidigi funkciojn de MBF21"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Montri tempo-fenestraĵon"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Dispremitaj monstroj reviviĝas kiel fantomojn"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Ekrana balanciĝo dum flugado"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o vundegiĝis de Serpento."
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Glatigaj linioj"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "Movi kaj pafi tra aliajn ludantojn"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "Kunhavigi ŝlosilojn kun ĉiuj ludantoj"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Malebligi transpason de kamerao-rigardado-reĝimo"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "Permuti sanon kaj kirason"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "Uzi klasikan skaladon de HUD"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "Skalfaktoro de HUD"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "Nur-kunlabor-reĝimaj agemaj objektoj aperas en plurludula reĝimo"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "Nur-kunlabor-reĝimaj prenotaĵoj aperas en plurludula reĝimo"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "Objektoj prenitaj de alia ludanto ne malaperas en plurludula reĝimo"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "Malvalidigi klientflankajn prenadojn de faligitaj objektoj"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "Rekomenci nivelon post morto"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "Komenci nivelojn nur kun pistolo"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr "Permesi kreon de zombiaj ludantoj"
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr "Ignori altecon de planko dum teleportado"
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr "Trompa perspektivo de mov-rastrumoj"
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr "Laŭteco de paŝo"
+
+msgid "ID24_GOTINCINERATOR"
+msgstr "Vi trovis forbrulilon!"
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr "Vi trovis mondvarmigilon! Vi estas arda!"
+
+msgid "ID24_GOTFUELCAN"
+msgstr "Vi trovis benzin-kruĉeton."
+
+msgid "ID24_GOTFUELTANK"
+msgstr "Vi trovis benzin-kruĉon."
+
+msgid "TAG_ID24INCINERATOR"
+msgstr "Forbrulilo"
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr "Mondvarmigilo"
+
+msgid "AMMO_ID24FUEL"
+msgstr "Benzin-kruĉeto"
+
+msgid "AMMO_ID24FUELTANK"
+msgstr "Benzin-kruĉo"
+
+msgid "ID24_CC_GHOUL"
+msgstr "Gulo"
+
+msgid "ID24_CC_BANSHEE"
+msgstr "Banŝio"
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr "Ŝoktrupano"
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr "Mens-teksisto"
+
+msgid "ID24_CC_VASSAGO"
+msgstr "Vasago"
+
+msgid "ID24_CC_TYRANT"
+msgstr "Tirano"
+
+msgid "ID24_OB_GHOUL"
+msgstr "%o kaptis energisferon de gulo."
+
+msgid "ID24_OB_BANSHEE"
+msgstr "%o estis finigita de banŝio."
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr "%o estis fandigita de ŝoktrupano."
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr "%o estis kuglo-plenigita de mens-teksisto."
+
+msgid "ID24_OB_VASSAGO"
+msgstr "%o estis bruletigita de vasago."
+
+msgid "ID24_OB_TYRANT"
+msgstr "%o estis eksplodigita de tirano."
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "Montri nomon de nivelo"
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr "Fulmoklavoj de inventaro"
+
+msgid "JOYMNU_HAPTICS"
+msgstr "Forteco de tuŝ-retrokuplado"
+
+msgid "JOYMNU_CURVE"
+msgstr "Responda kurbo"
+
+msgid "JOYMNU_THRESHOLD"
+msgstr "Cifereca sojlo"
+
+msgid "OPTVAL_LINEAR"
+msgstr "Lineara"
+
+msgid "OPTVAL_QUADRATIC"
+msgstr "Kvadrata"
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr "Tipo de babilo"
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr "Malvalidigita"
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr "Nur samteamanoj"
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr "Malloka"
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr "Malvalidigi grasan tekston en babilo"
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr "Malvalidigi sonpepo de babilo"
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr "Stabiligi konektojn"
+
+msgid "NETMNU_LIMITCONVO"
+msgstr "Limigi konversaciojn al gastiganto"
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr "Limigi ripeteblajn agojn"
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr "Malebligi paŭzon"
+
+msgid "OPTVAL_HOSTONLY"
+msgstr "Nur gastiganto"
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr "Tipo de intermito-preterpaso"
+
+msgid "OPTVAL_VOTE"
+msgstr "Voĉdoni"
+
+msgid "OPTVAL_ANYONE"
+msgstr "Iu"
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr "Procento de voĉdonoj por preterpasi"
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr "Tempo de voĉdono-ĝisnombrado (sekundoj)"
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr "Malrapida babilo-reĝimo (sekundoj)"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Ŝalti tuŝ-ekagilojn"
+
+msgid "OPTMNU_HAPTICS"
+msgstr "Tuŝo-agordoj"
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr "Kongrua reĝimo de tuŝ-retrokuplado"
+
+msgid "OPTVAL_MATCH"
+msgstr "Kongrui"
+
+msgid "OPTVAL_WARN"
+msgstr "Averti"
+
+msgid "HAPMNU_OPTIONS"
+msgstr "Adapti fontojn de tuŝ-retrokuplado"
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr "Pro uzado de menuoj"
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr "Pro ago"
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr "Pro damaĝo"
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr "Pro interago de la ludomondo"
+
+msgid "PAUSE_STRING"
+msgstr "Paŭzo"
+
+msgid "TAG_BACKPACK"
+msgstr "Tornistro"
+
+msgid "TAG_ARMORBONUS"
+msgstr "Spirita armaĵo"
+
+msgid "TAG_GREENARMOR"
+msgstr "Sekuriga armaĵo"
+
+msgid "TAG_BLUEARMOR"
+msgstr "Batala armaĵo"
+
+msgid "TAG_INVULSPHERE"
+msgstr "Nevundebleco-artefakto"
+
+msgid "TAG_SOULSPHERE"
+msgstr "Animo-sfero"
+
+msgid "TAG_MEGAPSHERE"
+msgstr "Pleja sfero"
+
+msgid "TAG_INVISSPHERE"
+msgstr "Malklarigo-artefakto"
+
+msgid "TAG_RADSUIT"
+msgstr "Radiado-vesto"
+
+msgid "TAG_VISOR"
+msgstr "Vizilo de luma amplifikado"
+
+msgid "TAG_ALLMAP"
+msgstr "Komputaro-mapo"
+
+msgid "TAG_BERSERK"
+msgstr "Furiozigo-pako"
+
+msgid "TAG_HEALTHBONUS"
+msgstr "Sanpocio"
+
+msgid "TAG_STIMPACK"
+msgstr "Stimulilo-pako"
+
+msgid "TAG_MEDIKIT"
+msgstr "Sukurkesto"
+
+msgid "TAG_BLUECARD"
+msgstr "Blua ŝlosilkarto"
+
+msgid "TAG_YELLOWCARD"
+msgstr "Flava ŝlosilkarto"
+
+msgid "TAG_REDCARD"
+msgstr "Ruĝa ŝlosilkarto"
+
+msgid "TAG_BLUESKULL"
+msgstr "Blua kraniŝlosilo"
+
+msgid "TAG_YELLOWSKULL"
+msgstr "Flava kraniŝlosilo"
+
+msgid "TAG_REDSKULL"
+msgstr "Ruĝa kraniŝlosilo"
+
+msgid "TAG_GLASSOFWATER"
+msgstr "Akvoglaso"
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr "Bovlo de fruktoj"
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr "Bovlo de legomoj"
+
+msgid "TAG_BREAKFAST"
+msgstr "Ŝargega matenmanĝo"
+
+msgid "TAG_REPELLENT"
+msgstr "Muk-forigilo"
+
+msgid "TAG_CHEXARMOR"
+msgstr "Chex(R)-kiraso"
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr "Supera Chex(R)-kiraso"
+
+msgid "TAG_CHEXMAP"
+msgstr "Komputila regionmapo"
+
+msgid "TAG_SLIMESUIT"
+msgstr "Muk-imuna kompleto"
+
+msgid "TAG_ZORCHPACK"
+msgstr "Zorĉpako"
+
+msgid "TAG_CBLUEKEY"
+msgstr "Blua ŝlosilo"
+
+msgid "TAG_CYELLOWKEY"
+msgstr "Flava ŝlosilo"
+
+msgid "TAG_CREDKEY"
+msgstr "Ruĝa ŝlosilo"
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr "Uzi helecon de sektoro sur armilo-rastrumoj"
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr "Premu Spacon aŭ maldekstran musbotonon por daŭrigi"
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr "Premu je A por daŭrigi"
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr "Premu je Joy 1 por daŭrigi"
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr "Memori elektitan armilon post reekapero"
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr "Antaŭa kunlabora spiono"
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr "Forigi kunlaboran spionon"

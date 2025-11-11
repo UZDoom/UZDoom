@@ -1,0 +1,5244 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: cs\n"
+
+msgid "PRESSKEY"
+msgstr "Stiskni klávesu."
+
+msgid "SECRETMESSAGE"
+msgstr "Nalezl[@ao_cs] jsi skrýš!"
+
+msgid "D_DEVSTR"
+msgstr "Zbytečný režim ZAP."
+
+msgid "QUITMSG"
+msgstr "Jsi si jist@[adj_cs], že chceš opustit tuto skvělou hru?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Během síťové hry nelze načíst hru!\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "QLOADNET"
+msgstr ""
+"Během síťové hry nelze rychle načíst hru!\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Ještě nebyl vybrán slot pro rychlé uložení!\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "NEWGAME"
+msgstr ""
+"Během síťové hry nelze začít novou hru.\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Jsi si jist? Tato úroveň obtížnosti není ani trochu fér.\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgid "SWSTRING"
+msgstr ""
+"Toto je shareware verze Dooma.\n"
+"\n"
+"Musíš si objednat celou trilogii.\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "NETEND"
+msgstr ""
+"Síťovou hru nelze ukončit!\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "ENDGAME"
+msgstr ""
+"Opravdu si přeješ ukončit hru?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgid "RAVENQUITMSG"
+msgstr "Přeješ si odejít?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Dostupné pouze v registrované verzi"
+
+msgid "DOSY"
+msgstr "(Stiskni Y pro odchod)"
+
+msgid "QUITMSG1"
+msgstr ""
+"Nenechávej mě tu, je tu\n"
+"víc démonů k vymletí!"
+
+msgid "QUITMSG2"
+msgstr ""
+"Utečme -- začíná\n"
+"tu téct krev!"
+
+msgid "QUITMSG3"
+msgstr ""
+"Být tebou, neodcházel bych.\n"
+"DOS je mnohem horší."
+
+msgid "QUITMSG4"
+msgstr ""
+"Chceš mi říct, že máš\n"
+"radši DOS než mě?"
+
+msgid "QUITMSG5"
+msgstr ""
+"Ještě nechoď -- tam\n"
+"za rohem je démon!"
+
+msgid "QUITMSG6"
+msgstr ""
+"Tak hele, až se vrátíš,\n"
+"dostanu tě."
+
+msgid "QUITMSG7"
+msgstr ""
+"Jen do toho, odejdi; schválně,\n"
+"jestli mi to bude jedno."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"Chceš odejít?\n"
+"Nuže, přišel jsi o přízeň boží!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Teď neodcházej, na příkazové řádce\n"
+"číhá dimenzionální Jožin!"
+
+msgid "QUITMSG10"
+msgstr ""
+"Vypadni odsud a vrať se\n"
+"ke svým nudným programům."
+
+msgid "QUITMSG11"
+msgstr ""
+"Být tvým šéfem, v deathmatchi\n"
+"bych tě zabil do minuty!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Hele, kámo, když teď odejdeš,\n"
+"přijdeš o svoje skóre!"
+
+msgid "QUITMSG13"
+msgstr ""
+"Jen odejdi. Až se vrátíš,\n"
+"budu čekat s baseballkou."
+
+msgid "QUITMSG14"
+msgstr ""
+"Máš štěstí, že tě neprofackuju\n"
+"za to, že přemýšlíš o odchodu."
+
+msgid "QUITMSG15"
+msgstr ""
+"Kam jdeš?!\n"
+"A co bude s odbojem?"
+
+msgid "QUITMSG16"
+msgstr ""
+"Masakr přerušus...\n"
+"Takhle mě neškádli!"
+
+msgid "QUITMSG17"
+msgstr ""
+"Ale ty jsi naše naděje\n"
+"-- moje jediná šance!"
+
+msgid "QUITMSG18"
+msgstr "Nikdo se neobrací zády ke Strace."
+
+msgid "QUITMSG19"
+msgstr "Myslela jsem, že jsi jin@[adj_cs]..."
+
+msgid "QUITMSG20"
+msgstr "Fajn! Prostě zab a uteč!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Můžeš odejít...\n"
+"ale nemůžeš se skrýt..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Cóó, copak je?\n"
+"Maminka volá na večeři?"
+
+msgid "QUITMSG23"
+msgstr ""
+"Teď neodcházej, stále tu\n"
+"pobíhají slizouni!"
+
+msgid "QUITMSG24"
+msgstr ""
+"Teď to nevzdávej - slizouni\n"
+"budou mít výhodu!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Teď neodcházej.\n"
+"Potřebujeme tvoji pomoc!"
+
+msgid "QUITMSG26"
+msgstr ""
+"Doufám, že si jen dáváš\n"
+"pauzu na Chex(R) Party Mix."
+
+msgid "QUITMSG27"
+msgstr ""
+"Teď neodcházej.\n"
+"Potřebujeme tvoji pomoc!"
+
+msgid "QUITMSG28"
+msgstr ""
+"Neopouštěj Intergalaktickou\n"
+"federaci cereálií!"
+
+msgid "QUITMSG29"
+msgstr ""
+"Skutečný Chex(R) bojovník\n"
+"by se tak rychle nevzdal!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Dostal@[ao_cs] jsi věc"
+
+msgid "PD_ANY"
+msgstr "Tyto dveře otevře jakýkoliv klíč"
+
+msgid "PD_ANYOBJ"
+msgstr "Tento objekt aktivuje jakýkoliv klíč"
+
+msgid "PD_ALL3"
+msgstr "K otevření těchto dveří jsou potřeba všechny tři klíče"
+
+msgid "PD_ALL3O"
+msgstr "K aktivaci tohoto objektu jsou potřeba všechny tři klíče"
+
+msgid "PD_ALL6"
+msgstr "K otevření těchto dveří je potřeba všech šest klíčů"
+
+msgid "PD_ALL6O"
+msgstr "K aktivaci tohoto objektu je potřeba všech šest klíčů"
+
+msgid "PD_ALLKEYS"
+msgstr "Potřebuješ všechny klíče"
+
+msgid "HUSTR_MSGU"
+msgstr "[Zpráva neposlána]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Něco si zamumláš pro sebe."
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Kdo je tam?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Vystrašíš se."
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Začneš pařit."
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Kleplo ti..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Zpráva odeslána]"
+
+msgid "STSTR_MUS"
+msgstr "Změna hudby"
+
+msgid "STSTR_NOMUS"
+msgstr "Nemožný výběr"
+
+msgid "STSTR_DQDON"
+msgstr "Nesmrtelnost ZAP"
+
+msgid "STSTR_DQDOFF"
+msgstr "Nesmrtelnost VYP"
+
+msgid "STSTR_DQD2ON"
+msgstr "Supernesmrtelnost ZAP"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Supernesmrtelnost VYP"
+
+msgid "STSTR_KFAADDED"
+msgstr "Velmi veselá munice přidána"
+
+msgid "STSTR_FAADDED"
+msgstr "Munice (bez klíčú) přidána"
+
+msgid "STSTR_NCON"
+msgstr "Bezkolizní režim ZAP"
+
+msgid "STSTR_NCOFF"
+msgstr "Bezkolizní režim VYP"
+
+msgid "STSTR_NC2ON"
+msgstr "Bezkolizní režim 2 ZAP"
+
+msgid "STSTR_NC2OFF"
+msgstr "Bezkolizní režim 2 VYP"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "nesmrt(V), (S)íla, nev(I)d, (R)ad, m(A)pa nebo svět(L)o"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Power-up vybrán"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... není cucák - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Měním level..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Buddha mód ZAP"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Buddha mód VYP"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Super Buddha mód ZAP"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Super Buddha mód VYP"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Energie ZAP"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Energie VYP"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Plné zdraví"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Všechny klíče"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Debug zvuku ZAP"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Debug zvuku VYP"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Pokoušíš se cheatovat, co? Teď zemřeš!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Podvodníku - nezasloužíš si zbraně"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Počítadlo ZAP"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Počítadlo VYP"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Máš to mít"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Máš Midasův dotek, zlato"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Dostal jsi věci!"
+
+msgid "TXT_FREEZEON"
+msgstr "Režim zamrznutí ZAP"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Režim zamrznutí VYP"
+
+msgid "TXT_STRANGE"
+msgstr "Cítíš se divně..."
+
+msgid "TXT_STRANGER"
+msgstr "Cítíš se ještě divněji..."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Cítíš se opět jako ty."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Olověné boty ZAP"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Olověné boty VYP"
+
+msgid "TXT_LIGHTER"
+msgstr "Cítíš se lehčí"
+
+msgid "TXT_GRAVITY"
+msgstr "Gravitace tě táhne dolů"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Neútočící příšery ZAP"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Neútočící příšery VYP"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "„Třeste se strachy!“"
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Už žádné zlobří brnění"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Pohled z třetí osoby ZAP"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Pohled z třetí osoby VYP"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 zloun zabit"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d zlounů zabito"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 příšera zabita"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d příšer zabito"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "Oživení není možno, hráč už není spojen se svým tělem."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Všechny artefakty!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Co chceš zabít, když nejsi ve hře?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Vlastnosti držící hráče na místě vypnuty"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Režim sledování VYP"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Režim sledování ZAP"
+
+msgid "AMSTR_GRIDON"
+msgstr "Mřížka ZAP"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Mrizka VYP"
+
+msgid "AMSTR_TEXON"
+msgstr "Texturovaný režim ZAP"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Texturovaný režim VYP"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Značka"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Všechny značky smazány"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Fraglimit dosáhnut."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Časový limit dosáhnut."
+
+msgid "SPREEKILLSELF"
+msgstr "%o vypadal@[ao_cs] dobře dokud se @[self_cs] nezabil@[ao_cs]!"
+
+msgid "SPREEOVER"
+msgstr "%o@[psn1_cs] vraždící řádění ukončil hráč %k."
+
+msgid "SPREE5"
+msgstr "%k začal@[ao_cs] řádit!"
+
+msgid "SPREE10"
+msgstr "%k zuří!"
+
+msgid "SPREE15"
+msgstr "%k dominuje!"
+
+msgid "SPREE20"
+msgstr "%k je nezastaviteln@[adj_cs]!"
+
+msgid "SPREE25"
+msgstr "%k je boží!"
+
+msgid "MULTI2"
+msgstr "Dvoj-zabití!"
+
+msgid "MULTI3"
+msgstr "Multi-zabití!"
+
+msgid "MULTI4"
+msgstr "Ultra-zabití!"
+
+msgid "MULTI5"
+msgstr "Monstr-zabití!"
+
+msgid "SCORE_BONUS"
+msgstr ""
+
+msgid "SCORE_COLOR"
+msgstr "Barva"
+
+msgid "SCORE_SECRET"
+msgstr "Skrýše"
+
+msgid "SCORE_NAME"
+msgstr "Jméno"
+
+msgid "SCORE_DELAY"
+msgstr "Zpoždění (ms)"
+
+msgid "SCORE_FRAGS"
+msgstr "Fragy"
+
+msgid "SCORE_DEATHS"
+msgstr "Smrti"
+
+msgid "SCORE_OTHER"
+msgstr "Ostatní"
+
+msgid "SCORE_MISSED"
+msgstr "Minuto"
+
+msgid "SCORE_TOTAL"
+msgstr "Celkem"
+
+msgid "SCORE_LVLTIME"
+msgstr "Čas v levelu"
+
+msgid "TXT_IMKILLS"
+msgstr "Zabití"
+
+msgid "TXT_IMITEMS"
+msgstr "Předměty"
+
+msgid "TXT_IMSECRETS"
+msgstr "Skrýše"
+
+msgid "TXT_IMTIME"
+msgstr "Čas"
+
+msgid "TXT_IMPAR"
+msgstr ""
+
+msgid "WI_FINISHED"
+msgstr "Dokončeno"
+
+msgid "WI_ENTERING"
+msgstr "Vstupuješ do"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Nyní vstupuješ do:"
+
+msgid "AM_MONSTERS"
+msgstr "Příšery:"
+
+msgid "AM_SECRETS"
+msgstr "Skrýše:"
+
+msgid "AM_ITEMS"
+msgstr "Věci:"
+
+msgid "OB_SUICIDE"
+msgstr "%o spáchal@[ao_cs] sebevraždu."
+
+msgid "OB_FALLING"
+msgstr "%o spadl@[ao_cs] příliš daleko."
+
+msgid "OB_CRUSH"
+msgstr "%o byl@[ao_cs] rozdrcen@[ao_cs]."
+
+msgid "OB_EXIT"
+msgstr "%o se pokusil@[ao_cs] odejít."
+
+msgid "OB_WATER"
+msgstr "%o neumí plavat."
+
+msgid "OB_SLIME"
+msgstr "%o zmutoval@[ao_cs]."
+
+msgid "OB_LAVA"
+msgstr "%o se rozpustil@[ao_cs]."
+
+msgid "OB_BARREL"
+msgstr "%o udělal@[ao_cs] bum."
+
+msgid "OB_SPLASH"
+msgstr "%o stál@[ao_cs] na špatném místě."
+
+msgid "OB_R_SPLASH"
+msgstr "%o měl@[ao_cs] stát o trochu dál."
+
+msgid "OB_ROCKET"
+msgstr "%o měl@[ao_cs] stát o trochu dál."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o se zabil@[ao_cs]."
+
+msgid "OB_VOODOO"
+msgstr "%o byl@[ao_cs] zabit@[ao_cs] sílou voodoo."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o byl@[ao_cs] telefraggnut %kem."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o byl@[ao_cs] telefraggnut@[ao_cs]."
+
+msgid "OB_DEFAULT"
+msgstr "%o zemřel@[ao_cs].\n"
+
+msgid "OB_MPDEFAULT"
+msgstr "%o byl@[ao_cs] zabit@[ao_cs] hráčem %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%o rozsekal@[ao_cs] spoluhráče."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k nejspíš potřebuje brýle."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k dostal@[ao_cs] frag pro další tým."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k ztratil@[ao_cs] dalšího přítele."
+
+msgid "GOTARMOR"
+msgstr "Sebráno brnění."
+
+msgid "GOTMEGA"
+msgstr "Sebráno MegaBrnění!"
+
+msgid "GOTHTHBONUS"
+msgstr "Sebráno bonusové zdraví."
+
+msgid "GOTARMBONUS"
+msgstr "Sebráno bonusové brnění."
+
+msgid "GOTSTIM"
+msgstr "Sebrán stimulant."
+
+msgid "GOTMEDINEED"
+msgstr "Sebrána lékárnička, kterou jsi FAKT potřeboval@[ao_cs]."
+
+msgid "GOTMEDIKIT"
+msgstr "Sebrána lékárnička."
+
+msgid "GOTSUPER"
+msgstr "Superzdraví!"
+
+msgid "GOTBLUECARD"
+msgstr "Sebrána modrá karta."
+
+msgid "GOTYELWCARD"
+msgstr "Sebrána žlutá karta."
+
+msgid "GOTREDCARD"
+msgstr "Sebrána červená karta."
+
+msgid "GOTBLUESKUL"
+msgstr "Sebrána modrá lebka."
+
+msgid "GOTYELWSKUL"
+msgstr "Sebrána žlutá lebka."
+
+msgid "GOTREDSKUL"
+msgstr "Sebrána červená lebka."
+
+msgid "GOTINVUL"
+msgstr "Nezranitelnost!"
+
+msgid "GOTBERSERK"
+msgstr ""
+
+msgid "GOTINVIS"
+msgstr "Částečná neviditelnost"
+
+msgid "GOTSUIT"
+msgstr "Ochranný oblek proti radioaktivitě"
+
+msgid "GOTMAP"
+msgstr "Počítačová mapa"
+
+msgid "GOTVISOR"
+msgstr "Noktovizor"
+
+msgid "GOTMSPHERE"
+msgstr "MegaSféra!"
+
+msgid "GOTCLIP"
+msgstr "Sebrán zásobník."
+
+msgid "GOTCLIPBOX"
+msgstr "Sebrána krabice s kulkami."
+
+msgid "GOTROCKET"
+msgstr "Sebrána raketa."
+
+msgid "GOTROCKBOX"
+msgstr "Sebrána krabice s raketami."
+
+msgid "GOTCELL"
+msgstr "Sebrán energetický článek."
+
+msgid "GOTCELLBOX"
+msgstr "Sebrán svazek energetických článků."
+
+msgid "GOTSHELLS"
+msgstr "Sebrány 4 broky."
+
+msgid "GOTSHELLBOX"
+msgstr "Sebrána krabice s broky."
+
+msgid "GOTBACKPACK"
+msgstr "Sebrán batoh s haldou munice!"
+
+msgid "GOTBFG9000"
+msgstr "Sebráno BFG9000! Ó, ano!"
+
+msgid "GOTCHAINGUN"
+msgstr "Sebrán kulomet."
+
+msgid "GOTCHAINSAW"
+msgstr "Motorová pila! Najdi maso!"
+
+msgid "GOTLAUNCHER"
+msgstr "Sebrán raketomet."
+
+msgid "GOTPLASMA"
+msgstr "Sebrána plazmová puška."
+
+msgid "GOTSHOTGUN"
+msgstr "Sebrána brokovnice."
+
+msgid "GOTSHOTGUN2"
+msgstr "Sebrána superbrokovnice."
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Sebrána pistole."
+
+msgid "BETA_BONUS1"
+msgstr "Sebrána démonická dýka."
+
+msgid "BETA_BONUS2"
+msgstr "Sebrána lebkotruhla."
+
+msgid "BETA_BONUS3"
+msgstr "Sebráno zlé žezlo."
+
+msgid "BETA_BONUS4"
+msgstr "Sebrána bezbožná bible."
+
+msgid "PD_BLUEO"
+msgstr "K aktivaci tohoto objektu potřebuješ modrý klíč."
+
+msgid "PD_REDO"
+msgstr "K aktivaci tohoto objektu potřebuješ červený klíč."
+
+msgid "PD_YELLOWO"
+msgstr "K aktivaci tohoto objektu potřebuješ žlutý klíč."
+
+msgid "PD_BLUEK"
+msgstr "K otevření těchto dveří potřebuješ modrý klíč."
+
+msgid "PD_REDK"
+msgstr "K otevření těchto dveří potřebuješ červený klíč."
+
+msgid "PD_YELLOWK"
+msgstr "K otevření těchto dveří potřebuješ žlutý klíč."
+
+msgid "PD_BLUECO"
+msgstr "K aktivaci tohoto objektu potřebuješ modrou kartu."
+
+msgid "PD_REDCO"
+msgstr "K aktivaci tohoto objektu potřebuješ červenou kartu."
+
+msgid "PD_YELLOWCO"
+msgstr "K aktivaci tohoto objektu potřebuješ žlutou kartu."
+
+msgid "PD_BLUESO"
+msgstr "K aktivaci tohoto objektu potřebuješ modrou lebku."
+
+msgid "PD_REDSO"
+msgstr "K aktivaci tohoto objektu potřebuješ červenou lebku."
+
+msgid "PD_YELLOWSO"
+msgstr "K aktivaci tohoto objektu potřebuješ žlutou lebku."
+
+msgid "PD_BLUEC"
+msgstr "K otevření těchto dveří potřebuješ modrou kartu."
+
+msgid "PD_REDC"
+msgstr "K otevření těchto dveří potřebuješ červenou kartu."
+
+msgid "PD_YELLOWC"
+msgstr "K otevření těchto dveří potřebuješ žlutou kartu."
+
+msgid "PD_BLUES"
+msgstr "K otevření těchto dveří potřebuješ modrou lebku."
+
+msgid "PD_REDS"
+msgstr "K otevření těchto dveří potřebuješ červenou lebku."
+
+msgid "PD_YELLOWS"
+msgstr "K otevření těchto dveří potřebuješ žlutou lebku."
+
+msgid "CC_ZOMBIE"
+msgstr "Zombie"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Seržant"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Kulometčík"
+
+msgid "CC_IMP"
+msgstr "Čert"
+
+msgid "CC_DEMON"
+msgstr "Démon"
+
+msgid "CC_LOST"
+msgstr "Ztracená duše"
+
+msgid "CC_CACO"
+msgstr "Kakodémon"
+
+msgid "CC_HELL"
+msgstr "Pekelný rytíř"
+
+msgid "CC_BARON"
+msgstr "Baron pekel"
+
+msgid "CC_ARACH"
+msgstr ""
+
+msgid "CC_PAIN"
+msgstr "Živel trýzně"
+
+msgid "CC_REVEN"
+msgstr "Umrlec"
+
+msgid "CC_MANCU"
+msgstr "Mankubus"
+
+msgid "CC_ARCH"
+msgstr "Veleběs"
+
+msgid "CC_SPIDER"
+msgstr "Pavoučí velevůdce"
+
+msgid "CC_CYBER"
+msgstr "Kyberdémon"
+
+msgid "CC_HERO"
+msgstr "Náš hrdina"
+
+msgid "FN_SHOTGUN"
+msgstr "Seržant"
+
+msgid "FN_HEAVY"
+msgstr "Kulometčík"
+
+msgid "FN_SPECTRE"
+msgstr "Přízrak"
+
+msgid "FN_SPIDER"
+msgstr "Pavoučí velevůdce"
+
+msgid "FN_CYBER"
+msgstr "Kyberdémon"
+
+msgid "FN_WOLFSS"
+msgstr "Nácek"
+
+msgid "FN_DOG"
+msgstr "Pes"
+
+msgid "TAG_FIST"
+msgstr "Boxer"
+
+msgid "TAG_CHAINSAW"
+msgstr "Motorová pila"
+
+msgid "TAG_PISTOL"
+msgstr "Pistole"
+
+msgid "TAG_SHOTGUN"
+msgstr "Brokovnice"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Superbrokovnice"
+
+msgid "TAG_CHAINGUN"
+msgstr "Kulomet"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Raketomet"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Plazmová puška"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Kulky"
+
+msgid "AMMO_SHELLS"
+msgstr "Broky"
+
+msgid "AMMO_ROCKETS"
+msgstr "Rakety"
+
+msgid "AMMO_CELLS"
+msgstr "Energetické články"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] arachnotrona."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] veleběsa."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] barona pekel."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] kakodémona."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] kulometčíka."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] démona."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] rytíře pekel."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] čerta."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] mankuba."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] umrlce."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] seržanta."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o si myslel@[ao_cs], že viděl@[ao_cs] zombíka."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o byl@[ao_cs] udeřen@[ao_cs] umrlcem."
+
+msgid "OB_IMPHIT"
+msgstr "%o byl@[ao_cs] rozsápán@[ao_cs] čertem."
+
+msgid "OB_CACOHIT"
+msgstr "%o se dostal@[ao_cs] moc blízko ke kakodémonovi."
+
+msgid "OB_DEMONHIT"
+msgstr "%o byl@[ao_cs] rozkousán@[ao_cs] démonem."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o byl@[ao_cs] sežrán@[ao_cs] přízrakem."
+
+msgid "OB_BARONHIT"
+msgstr "%o byl@[ao_cs] rozčtvrcen@[ao_cs] baronem pekel."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o byl@[ao_cs] vykuchán@[ao_cs] rytířem pekel."
+
+msgid "OB_ZOMBIE"
+msgstr "%o byl@[ao_cs] zabit@[ao_cs] zombíkem."
+
+msgid "OB_SHOTGUY"
+msgstr "%o byl@[ao_cs] zastřelen@[ao_cs] seržantem."
+
+msgid "OB_VILE"
+msgstr "%o byl@[ao_cs] zpopelněn@[ao_cs] veleběsem."
+
+msgid "OB_UNDEAD"
+msgstr "%o se nevyhnul@[ao_cs] umrlčí ohnivé kouli."
+
+msgid "OB_FATSO"
+msgstr "%o byl@[ao_cs] rozmačkán@[ao_cs] mankubem."
+
+msgid "OB_CHAINGUY"
+msgstr "%o byl@[ao_cs] prostřelen@[ao_cs] kulometčíkem."
+
+msgid "OB_SKULL"
+msgstr "%o se lekl@[ao_cs] ztracené duše."
+
+msgid "OB_IMP"
+msgstr "%o byl@[ao_cs] spálen@[ao_cs] čertem."
+
+msgid "OB_CACO"
+msgstr "%o byl@[ao_cs] udeřen@[ao_cs] kakodémonem."
+
+msgid "OB_BARON"
+msgstr "%o byl@[ao_cs] pomačkán@[ao_cs] baronem pekel."
+
+msgid "OB_KNIGHT"
+msgstr "%o byl@[ao_cs] rozpůlen@[ao_cs] rytířem pekel."
+
+msgid "OB_SPIDER"
+msgstr "%o zůstal@[ao_cs] stát v úžasu před pavoučím démonem."
+
+msgid "OB_BABY"
+msgstr "%o se nechal@[ao_cs] dostat arachnotronem."
+
+msgid "OB_CYBORG"
+msgstr "%o byl@[ao_cs] rozplesknut@[ao_cs] na kaši kyberdémonem."
+
+msgid "OB_WOLFSS"
+msgstr "%o potkal@[ao_cs] nácka."
+
+msgid "OB_DOG"
+msgstr "%o byl@[ao_cs] roztrhán@[ao_cs] psem."
+
+msgid "OB_MPFIST"
+msgstr "%o si pochutnal@[ao_cs] na pěsti hráče %k."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o byl@[ao_cs] zkácen@[ao_cs] motorovkou hráče %k."
+
+msgid "OB_MPPISTOL"
+msgstr "%o byl@[ao_cs] polechtán@[ao_cs] pistolkou hráče %k."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o si pochutnal@[ao_cs] na brokádě hráče %k."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o byl@[ao_cs] rozplesknut@[ao_cs] na kaši superbrokovnicí hráče %k."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o byl@[ao_cs] prostřílen@[ao_cs] kulometem hráče %k."
+
+msgid "OB_MPROCKET"
+msgstr "%o se projel@[ao_cs] na raketě hráče %k."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o se skoro vyhnul@[ao_cs] raketě hráče %k."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o se roztekl@[ao_cs] plazmapuškou hráče %k."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o byl@[ao_cs] rozštěpen@[ao_cs] BFGčkem hráče %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o se nemohl@[ao_cs] ukrýt před BFGčkem hráče %k."
+
+msgid "OB_RAILGUN"
+msgstr "%o byl@[ao_cs] napíchnut@[ao_cs] hráčem %k."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o shořel@[ao_cs] BFGčkem hráče %k."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Modrý klíč"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Žlutý klíč"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Zelený klíč"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Blyštivá baňka"
+
+msgid "TXT_ARTIFLY"
+msgstr "Křídla hněvu"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Prsten nesmrtelnosti"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Kniha moci"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Šerosféra"
+
+msgid "TXT_ARTIEGG"
+msgstr "Měnivejce"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Tajemná urna"
+
+msgid "TXT_ARTITORCH"
+msgstr "Pochodeň"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Časovaná bomba starověku"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Zmatkostroj"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Křišťálový flakón"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Tlumok"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Stříbrný štít"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Kouzelný štít"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Mapa"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Zlaté krystaly"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Shluk krystalů"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Žezlometné koule"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Hromada žezlometných koulí"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Éterické šípy"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Toulec éterických šípů"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Pazouří střela"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Silová střela"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Menší runy"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Větší runy"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Plamenný náboj"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Pekelný náboj"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Zlatá hůl"
+
+msgid "TXT_WPNMACE"
+msgstr "Žezlomet"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Éterická kuše"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Drakospár"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Peklopal"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Fénixova hůl"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Nekromancerovy rukavice"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "K otevření těchto dveří potřebuješ modrý klíč"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "K otevření těchto dveří potřebuješ červený klíč"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "K otevření těchto dveří potřebuješ žlutý klíč."
+
+msgid "FN_CHICKEN"
+msgstr "Slepice"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Vlkodrak"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Šavlozub"
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr "Chrlič"
+
+msgid "FN_IRONLICH"
+msgstr "Železný kostěj"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Nemrtvý válečník"
+
+msgid "FN_MINOTAUR"
+msgstr "Minotaurus"
+
+msgid "FN_MUMMY"
+msgstr "Golém"
+
+msgid "FN_MUMMYLEADER"
+msgstr "Střelgolém"
+
+msgid "FN_SNAKE"
+msgstr "Šupinatec"
+
+msgid "FN_WIZARD"
+msgstr "Čaroděj"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Zlaté krystaly"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Éterické šípy"
+
+msgid "AMMO_BLASTER"
+msgstr "Pazouří střely"
+
+msgid "AMMO_MACE"
+msgstr "Žezlometné koule"
+
+msgid "AMMO_SKULLROD"
+msgstr "Peklopalné runy"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Plamenné náboje"
+
+msgid "TAG_STAFF"
+msgstr "Hole"
+
+msgid "TAG_GOLDWAND"
+msgstr "Elfí hůlka"
+
+msgid "OB_CHICKEN"
+msgstr "%o byl@[ao_cs] uklován@[ao_cs] k smrti."
+
+msgid "OB_BEAST"
+msgstr "%o byl@[ao_cs] spálen@[ao_cs] vlkodrakem."
+
+msgid "OB_CLINK"
+msgstr "%o byl@[ao_cs] rozsápán@[ao_cs] šavlozubem."
+
+msgid "OB_DSPARIL1"
+msgstr "%o byl@[ao_cs] zpopelněn@[ao_cs] ořem D'Sparila."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o byl@[ao_cs] rozkousán@[ao_cs] ořem D'Sparila."
+
+msgid "OB_DSPARIL2"
+msgstr "%o nebyl@[ao_cs] pro D'Sparila žádná výzva."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o byl@[ao_cs] sražen@[ao_cs] D'Sparilem."
+
+msgid "OB_HERETICIMP"
+msgstr "%o byl@[ao_cs] upálen@[ao_cs] chrličem."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o byl@[ao_cs] rozsekán@[ao_cs] chrličem."
+
+msgid "OB_IRONLICH"
+msgstr "%o byl@[ao_cs] zničen@[ao_cs] železným kostějem."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o se dostal@[ao_cs] moc blízko k železnému kostěji."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o dostal@[ao_cs] sekyrou od nemrtvého válečníka."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o byl@[ao_cs] zabit@[ao_cs] nemrtvým válečníkem."
+
+msgid "OB_MINOTAUR"
+msgstr "%o byl@[ao_cs] rozmetán@[ao_cs] na popel Minotaurem."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o byl@[ao_cs] rozmáčknut@[ao_cs] Minotaurem."
+
+msgid "OB_MUMMY"
+msgstr "%o byl@[ao_cs] umlácen@[ao_cs] golémem."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o byl@[ao_cs] ukřičen@[ao_cs] k smrti střelgolémem."
+
+msgid "OB_SNAKE"
+msgstr "%o byl@[ao_cs] zachřestěn@[ao_cs] šupinatcem."
+
+msgid "OB_WIZARD"
+msgstr "%o byl@[ao_cs] zaklet@[ao_cs] čarodějem."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o byl@[ao_cs] prozkoumán@[ao_cs] čarodějem."
+
+msgid "OB_MPSTAFF"
+msgstr "%o dostal@[ao_cs] holí od hráče %k."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o byl@[ao_cs] prošokován@[ao_cs] rukavicemi hráče %k."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o zamával@[ao_cs] elfské hůlce hráče %k."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o byl@[ao_cs] prostřelen@[ao_cs] éterickou kuší hráče %k."
+
+msgid "OB_MPBLASTER"
+msgstr "%o poznal@[ao_cs] středověk drakospárem hráče %k."
+
+msgid "OB_MPSKULLROD"
+msgstr "Pod hráčem %o se propadla zem peklopalem hráče %k."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o byl@[ao_cs] spálen@[ao_cs] na prach fénixovou holí hráče %k."
+
+msgid "OB_MPMACE"
+msgstr "%o byl@[ao_cs] odpálen@[ao_cs] žezlometem hráče %k."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o byl@[ao_cs] profackován@[ao_cs] nabitou holí hráče %k."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "Rukavicemi hráče %k nezůstala v těle hráče %o ani kapka krve."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o byl@[ao_cs] napaden@[ao_cs] elfskou hůlkou hráče %k."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o byl@[ao_cs] proděravěn@[ao_cs] éterickou kuší hráče %k."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o byl@[ao_cs] roztrhnut@[ao_cs] naskrz drakospárem hráče %k."
+
+msgid "OB_MPPSKULLROD"
+msgstr "Hráč %k vylil svůj peklopal na hráče %o."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o byl@[ao_cs] vyhořen@[ao_cs] fénixovou holí hráče %k."
+
+msgid "OB_MPPMACE"
+msgstr ""
+"%o byl@[ao_cs] rozmačkán@[ao_cs] obrovskou žezlometnou koulí hráče %k."
+
+msgid "TXT_MANA_1"
+msgstr "Modrá mana"
+
+msgid "TXT_MANA_2"
+msgstr "Zelená mana"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Smíšená mana"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Ocelový klíč"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Klíč od jeskyně"
+
+msgid "TXT_KEY_AXE"
+msgstr "Sekyrový klíč"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Ohnivý klíč"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Smaragdový klíč"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Klíč od žaláře"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Stříbrný klíč"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Zrezivělý klíč"
+
+msgid "TXT_KEY_HORN"
+msgstr "Parožní klíč"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Klíč od bažiny"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Klíč od hradu"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Obráncova ikona"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Temný služebník"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Vepřovitel"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "Střelka"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Vyhošťovač"
+
+msgid "TXT_ARTISPEED"
+msgstr "Běhuté boty"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Kalich síly"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Dračí nátepníky"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Kotouč odpuzení"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Tajemný čár koljdoucí"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Jorikova lebka"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "Srdce D'Sparila"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Rubínová planeta"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdová planeta"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdová planeta"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Safírová planeta"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Safírová planeta"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Plamenná maska"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Glévská pečeť"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Svatá relikvie"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Mágovo sigilium"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Ozubené kolečko"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Zde se tento předmět použít nedá"
+
+msgid "TXT_ARMOR1"
+msgstr "Kroužkové brnění"
+
+msgid "TXT_ARMOR2"
+msgstr "Sokolí štít"
+
+msgid "TXT_ARMOR3"
+msgstr "Platinová helma"
+
+msgid "TXT_ARMOR4"
+msgstr "Amulet uhýbání"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Timonova sekera"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Kladivo odplaty"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Složený Tišitel"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Hadí hůl"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Ohnivá bouře"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Složený Zjevitel"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Ledové střepy"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Jiskry smrti"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Složený Krvehrom"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Část zbraně! Dnes je tvůj šťastný den!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Část Tišitele"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Část Zjevitele"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Část Krvehromu"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Potřebuješ ocelový klíč"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Potřebuješ klíč od jeskyně"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Potřebuješ sekyrový klíč"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Potřebuješ ohnivý klíč"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Potřebuješ smaragdový klíč"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Potřebuješ klíč od žaláře"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Potřebuješ stříbrný klíč"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Potřebuješ zrezivělý klíč"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Potřebuješ parožní klíč"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Potřebuješ klíč od bažiny"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Potřebuješ klíč od hradu"
+
+msgid "FN_FIREDEMON"
+msgstr ""
+
+msgid "FN_DEMON1"
+msgstr "Zlohad"
+
+msgid "FN_ETTIN"
+msgstr "Skřet"
+
+msgid "FN_CENTAUR"
+msgstr "Kentaur"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Ničitaur"
+
+msgid "FN_BISHOP"
+msgstr "Biskup"
+
+msgid "FN_ICEGUY"
+msgstr ""
+
+msgid "FN_SERPENT"
+msgstr "Slídil"
+
+msgid "FN_WRAITH"
+msgstr "Přízrak"
+
+msgid "FN_DRAGON"
+msgstr "Smrtidrak"
+
+msgid "FN_KORAX"
+msgstr ""
+
+msgid "FN_FBOSS"
+msgstr ""
+
+msgid "FN_MBOSS"
+msgstr ""
+
+msgid "FN_CBOSS"
+msgstr "Traduktus"
+
+msgid "FN_HERESIARCH"
+msgstr "Arcikacíř"
+
+msgid "AMMO_MANA1"
+msgstr "Modrá mana"
+
+msgid "AMMO_MANA2"
+msgstr "Zelená mana"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Palcát kajícnosti"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Hadí hůl"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Ohnivá bouře"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Zjevitel"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Ohrocené rukavice"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Timonova sekera"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Kladivo odplaty"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "Tišitel"
+
+msgid "TAG_MWEAPWAND"
+msgstr "Safírová hůl"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Ledové střepy"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Jiskry smrti"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Krvehrom"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Kotouč odpuzení"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Dračí nátepníky"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Kalich síly"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "Střelka"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Otrávená střelka"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Časovaná střelka"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Granátová střelka"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Tajemný čár koljdoucí"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Obráncova ikona"
+
+msgid "TAG_ARTIPORK"
+msgstr "Vepřovitel"
+
+msgid "TAG_ARTISPEED"
+msgstr "Běhuté boty"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Temný služebník"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Vyhošťovač"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Jorikova lebka"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "Srdce D'Sparila"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Rubínová planeta"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Smaragdová planeta (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Smaragdová planeta (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Safírová planeta (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Safírová planeta (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr ""
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Plamenná maska"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Glévská pečeť"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Svatá relikvie"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Mágovo sigilium"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Železné kolečko"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Mosazné kolečko"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Mosazno-železné kolečko"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Stříbro-mosazné kolečko"
+
+msgid "OB_FIREDEMON"
+msgstr "%o okusil@[ao_cs] afritův oheň."
+
+msgid "OB_DEMON1"
+msgstr "%o byl@[ao_cs] upálen@[ao_cs] zlohadem."
+
+msgid "OB_DEMON2"
+msgstr "%o byl@[ao_cs] otráven@[ao_cs] zlohadem."
+
+msgid "OB_ETTIN"
+msgstr "%o byl@[ao_cs] umlácen@[ao_cs] skřetem."
+
+msgid "OB_CENTAUR"
+msgstr "%o byl@[ao_cs] rozsekán@[ao_cs] kentaurem."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o byl@[ao_cs] rozsekán@[ao_cs] ničitaurem."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o byl@[ao_cs] zabit@[ao_cs] ničitaurovou ohnivou koulí."
+
+msgid "OB_BISHOP"
+msgstr "%o podlehl@[ao_cs] biskupově temné moci."
+
+msgid "OB_ICEGUY"
+msgstr "%o byl@[ao_cs] zamrznut@[ao_cs] wendigem."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o byl@[ao_cs] umlácen@[ao_cs] slídilem."
+
+msgid "OB_SERPENT"
+msgstr "%o byl@[ao_cs] rozpuštěn@[ao_cs] slídilem."
+
+msgid "OB_WRAITH"
+msgstr "%o byl@[ao_cs] zpopelněn@[ao_cs] přízrakem."
+
+msgid "OB_WRAITHHIT"
+msgstr "%o si nechal@[ao_cs] ukradnout život přízrakem."
+
+msgid "OB_DRAGON"
+msgstr "%o byl@[ao_cs] upálen@[ao_cs] smrtidrakem."
+
+msgid "OB_KORAX"
+msgstr "%o byl@[ao_cs] odhozen@[ao_cs] ze šachovnice Koraxem."
+
+msgid "OB_FBOSS"
+msgstr "%o byl@[ao_cs] zabit@[ao_cs] Zedekem."
+
+msgid "OB_MBOSS"
+msgstr "%o nemohl@[ao_cs] pojmout Menelkirovu manu."
+
+msgid "OB_CBOSS"
+msgstr "%o byl@[ao_cs] posvěcen@[ao_cs] Traduktem."
+
+msgid "OB_HERESIARCH"
+msgstr "%o si nechal@[ao_cs] rozmetat kosti Arcikacířem."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o byl@[ao_cs] umlácen@[ao_cs] k smrti holými pěstmi hráče %k."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o dostal@[ao_cs] sekerou od hráče %k."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%o dostal@[ao_cs] po hlavě kladivem hráče %k."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o@[psf1_cs] duše byla obrozena kladivem hráče %k."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o byl@[ao_cs] umlčen@[ao_cs] mocným Tišitelem hráče %k."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o dostal@[ao_cs] palcátem po hlavě od hráče %k."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o byl@[ao_cs] kousnut@[ao_cs] hadí holí hráče %k."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o se zadusil@[ao_cs] hadí holí hráče %k."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o vzplanul@[ao_cs] plameny hráče %k."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o byl@[ao_cs] očištěn@[ao_cs] Zjevitelem hráče %k."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o koupil@[ao_cs] přespříliš safírových střel od hráče %k."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o byl@[ao_cs] zchlazen@[ao_cs] hráčem %k."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o zjistil@[ao_cs] šokující odhalení hráče %k."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr ""
+"%o byl@[ao_cs] vymýcen@[ao_cs] ze jsoucna vesmíru Krvehromem hráče %k."
+
+msgid "TXT_METALARMOR"
+msgstr "Sebral@[ao_cs] jsi kovové brnění."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Sebral@[ao_cs] jsi kožené brnění."
+
+msgid "TXT_MEDPATCH"
+msgstr "Sebral@[ao_cs] jsi obvaz."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Sebral@[ao_cs] jsi lékárničku."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Sebral@[ao_cs] jsi chirurgickou soupravu."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Sebral@[ao_cs] jsi mapu."
+
+msgid "TXT_BELDINSRING"
+msgstr "Sebral@[ao_cs] jsi prsten."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Sebral@[ao_cs] jsi obětní kalich."
+
+msgid "TXT_EAR"
+msgstr "Sebral@[ao_cs] jsi ucho."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Sebral@[ao_cs] jsi rozbitou spojku."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Sebral@[ao_cs] jsi krycí brnění."
+
+msgid "TXT_ENVSUIT"
+msgstr "Sebral@[ao_cs] jsi ochranný oděv"
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Sebral@[ao_cs] jsi hlídačovu uniformu."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Sebral@[ao_cs] jsi důstojníkovu uniformu."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Sebral@[ao_cs] jsi součásti plamenometu."
+
+msgid "TXT_REPORT"
+msgstr "Sebral@[ao_cs] jsi hlášení."
+
+msgid "TXT_INFO"
+msgstr "Sebral@[ao_cs] jsi informace."
+
+msgid "TXT_TARGETER"
+msgstr "Sebral@[ao_cs] jsi zaměřovač."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Sebral@[ao_cs] jsi komunikátor."
+
+msgid "TXT_COIN"
+msgstr "Sebral@[ao_cs] jsi minci."
+
+msgid "TXT_XGOLD"
+msgstr "Sebral@[ao_cs] jsi %d zlatých."
+
+msgid "TXT_BEACON"
+msgstr "Sebral@[ao_cs] jsi teleportační maják."
+
+msgid "TXT_DEGNINORE"
+msgstr "Sebral@[ao_cs] jsi degninskou rudu."
+
+msgid "TXT_SCANNER"
+msgstr "Sebral@[ao_cs] jsi skener."
+
+msgid "TXT_NEEDMAP"
+msgstr "Skener bez mapy fungovat nebude!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Sebral@[ao_cs] jsi propustku do vězení."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Sebral@[ao_cs] jsi kuši."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Sebral@[ao_cs] jsi pušku."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Sebral@[ao_cs] jsi miniraketomet."
+
+msgid "TXT_FLAMER"
+msgstr "Sebral@[ao_cs] jsi plamenomet."
+
+msgid "TXT_MAULER"
+msgstr "Sebral@[ao_cs] jsi trhač."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Sebral@[ao_cs] jsi granátomet."
+
+msgid "TXT_SIGIL"
+msgstr "Sebral@[ao_cs] jsi Pečeť."
+
+msgid "TXT_BASEKEY"
+msgstr "Sebral@[ao_cs] jsi klíč od základny."
+
+msgid "TXT_GOVSKEY"
+msgstr "Sebral@[ao_cs] jsi klíč ke guvernérovi."
+
+msgid "TXT_PASSCARD"
+msgstr "Sebral@[ao_cs] jsi průkazku."
+
+msgid "TXT_IDBADGE"
+msgstr "Sebral@[ao_cs] jsi identifikační odznak."
+
+msgid "TXT_PRISONKEY"
+msgstr "Sebral@[ao_cs] jsi klič k vězení."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Sebral@[ao_cs] jsi useknutou ruku."
+
+msgid "TXT_POWER1KEY"
+msgstr "Sebral@[ao_cs] jsi klíč k elektrárně 1."
+
+msgid "TXT_POWER2KEY"
+msgstr "Sebral@[ao_cs] jsi klíč k elektrárně 2."
+
+msgid "TXT_POWER3KEY"
+msgstr "Sebral@[ao_cs] jsi klíč k elektrárně 3."
+
+msgid "TXT_GOLDKEY"
+msgstr "Sebral@[ao_cs] jsi zlatý klíč."
+
+msgid "TXT_IDCARD"
+msgstr "Sebral@[ao_cs] jsi ID kartu."
+
+msgid "TXT_SILVERKEY"
+msgstr "Sebral@[ao_cs] jsi stříbrný klíč."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Sebral@[ao_cs] jsi věštcův klíč."
+
+msgid "TXT_MILITARYID"
+msgstr "Sebral@[ao_cs] jsi vojenské ID."
+
+msgid "TXT_ORDERKEY"
+msgstr "Sebral@[ao_cs] jsi klíč Řádu."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Sebral@[ao_cs] jsi klíč ke skladu."
+
+msgid "TXT_BRASSKEY"
+msgstr "Sebral@[ao_cs] jsi mosazný klíč."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Sebral@[ao_cs] jsi červený krystalový klíč."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Sebral@[ao_cs] jsi modrý krystalový klíč."
+
+msgid "TXT_CHAPELKEY"
+msgstr "Sebral@[ao_cs] jsi klíč ke kapli."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Sebral@[ao_cs] jsi klíč do katakomb."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Sebral@[ao_cs] jsi klíč ochranky."
+
+msgid "TXT_COREKEY"
+msgstr "Sebral@[ao_cs] jsi klíč k jádru."
+
+msgid "TXT_MAULERKEY"
+msgstr "Sebral@[ao_cs] jsi klíč k trhačům."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Sebral@[ao_cs] jsi klíč do továrny."
+
+msgid "TXT_MINEKEY"
+msgstr "Sebral@[ao_cs] jsi klíč do dolů."
+
+msgid "TXT_NEWKEY5"
+msgstr "Sebral@[ao_cs] jsi nový klíč 5."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Sebral@[ao_cs] jsi věštcovu propustku."
+
+msgid "TXT_HEGRENADES"
+msgstr "Sebral@[ao_cs] jsi výbušné granáty."
+
+msgid "TXT_PHGRENADES"
+msgstr "Sebral@[ao_cs] jsi fosforové granáty."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Sebral@[ao_cs] jsi zásobník s náboji."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Sebral@[ao_cs] jsi krabici nábojů."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Sebral@[ao_cs] jsi minirakety."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Sebral@[ao_cs] jsi bednu miniraket."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Sebral@[ao_cs] jsi energetický kokón."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Sebral@[ao_cs] jsi energetický svazek."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Sebral@[ao_cs] jsi otrávené šípy."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Sebral@[ao_cs] jsi elektrické šípy."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Sebral@[ao_cs] jsi brašnu na munici."
+
+msgid "MSG_TALISMANRED"
+msgstr "Máš pocit, že jsi na to sahat neměl@[ao_cs]..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Je jedno, co to je, do tohoto světa to nepatří..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Něco to dělat musí..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Získal@[ao_cs] jsi super sílu!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Nemáš klíč."
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Potřebuješ průkaz."
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Pro otevření dveří potřebuješ průkaz."
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Potřebuješ identifikační kartu."
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Nemáš klíč do vězení."
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Otisk ruky není v databázi."
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Potřebuješ zlatý klíč."
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Potřebuješ identifikační odznak."
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Pro otevření dveří potřebuješ identifikační odznak."
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Potřebuješ stříbrný klíč."
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Potřebuješ mosazný klíč."
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Potřebuješ červený krystal."
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Potřebuješ modrý krystal."
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Tato oblast je dostupná pouze v registrované verzi."
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Takhle to nepůjde."
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Potřebuješ kalich!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Potřebuješ propustku od věštce!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Dýka"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Kuše"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Kuše"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Útočná puška"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Miniraketomet"
+
+msgid "TAG_FLAMER"
+msgstr "Plamenomet"
+
+msgid "TAG_MAULER1"
+msgstr "Trhač"
+
+msgid "TAG_MAULER2"
+msgstr "Trhač"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Granátomet"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Granátomet"
+
+msgid "TAG_SIGIL"
+msgstr "Pečeť"
+
+msgid "TAG_COIN"
+msgstr "Mince"
+
+msgid "TAG_MEDPATCH"
+msgstr "Obvazy"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Lékárnička"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Chirurgická souprava"
+
+msgid "TAG_BELDINSRING"
+msgstr "Prsten"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Obětní kalich"
+
+msgid "TAG_EAR"
+msgstr "Ucho"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Rozbitá spojka"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Stínové brnění"
+
+msgid "TAG_ENVSUIT"
+msgstr "Ochranný oblek"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Hlídačova uniforma"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Důstojníkova uniforma"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Díly plamenometu"
+
+msgid "TAG_REPORT"
+msgstr "Hlášení"
+
+msgid "TAG_INFO"
+msgstr "Informace"
+
+msgid "TAG_TARGETER"
+msgstr "Zaměřovač"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Komunikátor"
+
+msgid "TAG_DEGNINORE"
+msgstr "Degninská ruda"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Přesnost"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Tvrdost"
+
+msgid "TAG_SCANNER"
+msgstr "Skener"
+
+msgid "TAG_PRISONPASS"
+msgstr "Propustka do vězení"
+
+msgid "TAG_ALARM"
+msgstr ""
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Munice"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Zdraví"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Teleportační maják"
+
+msgid "TAG_METALARMOR"
+msgstr "Kovové brnění"
+
+msgid "TAG_LEATHER"
+msgstr "Kožené brnění"
+
+msgid "TAG_HEGRENADES"
+msgstr "Výbušné granáty"
+
+msgid "TAG_PHGRENADES"
+msgstr "Fosforové granáty"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Zásobník s náboji"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Krabice nábojů"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Minirakety"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Bedna raket"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Energetický kokón"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Energetický svazek"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Otrávené šípy"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Elektrické šípy"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Brašna na munici"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Klíč od základny"
+
+msgid "TAG_GOVSKEY"
+msgstr "Klíč ke guvernérovi"
+
+msgid "TAG_PASSCARD"
+msgstr "Vstupní karta"
+
+msgid "TAG_IDBADGE"
+msgstr "Identifikační odznak"
+
+msgid "TAG_PRISONKEY"
+msgstr "Klíč od věznice"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Useknutá ruka"
+
+msgid "TAG_POWER1KEY"
+msgstr "Klíč od elektrárny 1"
+
+msgid "TAG_POWER2KEY"
+msgstr "Klíč od elektrárny 2"
+
+msgid "TAG_POWER3KEY"
+msgstr "Klíč od elektrárny 3"
+
+msgid "TAG_GOLDKEY"
+msgstr "Zlatý klíč"
+
+msgid "TAG_IDCARD"
+msgstr "Identifikační karta"
+
+msgid "TAG_SILVERKEY"
+msgstr "Stříbrný klíč"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Věštcův klíč"
+
+msgid "TAG_MILITARYID"
+msgstr "Vojenské ID"
+
+msgid "TAG_ORDERKEY"
+msgstr "Klíč Řádu"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Klíč ke skladu"
+
+msgid "TAG_BRASSKEY"
+msgstr "Mosazný klíč"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Červený krystalový klíč"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Modrý krystalový klíč"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Klíč od kaple"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Klíč do katakomb"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Klíč ochranky"
+
+msgid "TAG_COREKEY"
+msgstr "Klíč k jádru"
+
+msgid "TAG_MAULERKEY"
+msgstr "Klíč k trhačům"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Klíč do továrny"
+
+msgid "TAG_MINEKEY"
+msgstr "Klíč od dolů"
+
+msgid "TAG_NEWKEY5"
+msgstr "Nový klíč 5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Věštcova propustka"
+
+msgid "TAG_10GOLD"
+msgstr "10 zlatých"
+
+msgid "TAG_25GOLD"
+msgstr "25 zlatých"
+
+msgid "TAG_50GOLD"
+msgstr "50 zlatých"
+
+msgid "TAG_300GOLD"
+msgstr "300 zlatých"
+
+msgid "TXT_PERSON"
+msgstr "Osoba"
+
+msgid "TAG_ACOLYTE"
+msgstr "Akolyta"
+
+msgid "TAG_ARMORER"
+msgstr "Kovář"
+
+msgid "TAG_BARKEEP"
+msgstr "Výčepní"
+
+msgid "TAG_BEGGAR"
+msgstr "Žebrák"
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr "Medik"
+
+msgid "TAG_ORACLE"
+msgstr "Věštec"
+
+msgid "TAG_PRIEST"
+msgstr "Kněz"
+
+msgid "TAG_RATBUDDY"
+msgstr "Krysík"
+
+msgid "TAG_REBEL"
+msgstr ""
+
+msgid "TAG_TEMPLAR"
+msgstr "Templář"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Zbraňmistr"
+
+msgid "TAG_TALISMANRED"
+msgstr "Červený talisman"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Zelený talisman"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Modrý talisman"
+
+msgid "OB_ACOLYTE"
+msgstr "%o byl@[ao_cs] horlivě zastřelen@[ao_cs] akolytou."
+
+msgid "OB_MACIL"
+msgstr "%o se nikdy neměl@[ao_cs] vzbouřit vůči Macilovi."
+
+msgid "OB_REBEL"
+msgstr "%o byl@[ao_cs] odstřelen@[ao_cs] rebelem."
+
+msgid "OB_BEGGAR"
+msgstr "%o byl@[ao_cs] umlácen@[ao_cs] chudinou."
+
+msgid "OB_PEASANT"
+msgstr "%o si neměl@[ao_cs] začínat s civilistou."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o byl@[ao_cs] zničen@[ao_cs] přízrakem."
+
+msgid "OB_ENTITY"
+msgstr "%o pocítil@[ao_cs] vztek Jediného Boha"
+
+msgid "OB_LOREMASTER"
+msgstr "%o nemohl@[ao_cs] utéct Dějepiscově sevření."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o byl@[ao_cs] vymazán@[ao_cs] Programátorem."
+
+msgid "OB_STFBISHOP"
+msgstr "%o byl@[ao_cs] odpálen@[ao_cs] Biskupem."
+
+msgid "OB_SENTINEL"
+msgstr "%o byl@[ao_cs] odstřelen@[ao_cs] strážným robotem."
+
+msgid "OB_CRUSADER"
+msgstr "%o byl@[ao_cs] odhozen@[ao_cs] křižákem."
+
+msgid "OB_INQUISITOR"
+msgstr "%o byl@[ao_cs] odsouzen@[ao_cs] inkvizitorem."
+
+msgid "OB_STALKER"
+msgstr "%o se nechal@[ao_cs] otravovat slídilem."
+
+msgid "OB_TURRET"
+msgstr "%o spustil@[ao_cs] automatickou obranu."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o byl@[ao_cs] rozsápán@[ao_cs] templářem."
+
+msgid "OB_TEMPLAR"
+msgstr "%o byl@[ao_cs] rozpuštěn@[ao_cs] templářem."
+
+msgid "OB_REAVERHIT"
+msgstr "%o byl@[ao_cs] rozřezán@[ao_cs] pleničem."
+
+msgid "OB_REAVER"
+msgstr "%o byl@[ao_cs] zastřelen@[ao_cs] pleničem."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o dostal@[ao_cs] kudlou do zad od hráče %k."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o byl@[ao_cs] přišpendlen@[ao_cs] ke zdi hráčem %k."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o přijal@[ao_cs] smrtelnou dávku hněvu hráče %k."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o byl@[ao_cs] proděravěn@[ao_cs] skrz na skrz puškou hráče %k."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o spolknul@[ao_cs] raketu hráče %k."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o byl@[ao_cs] otočen@[ao_cs] naruby výbušným granátem hráče %k."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o si dal@[ao_cs] ohnivou koupel ve fosforovém žáru hráče %k."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o byl@[ao_cs] usmažen@[ao_cs] hráčem %k."
+
+msgid "OB_MPMAULER1"
+msgstr "%o byl@[ao_cs] zničen@[ao_cs] hráčem %k."
+
+msgid "OB_MPMAULER"
+msgstr "%o byl@[ao_cs] rozpuštěn@[ao_cs] hráčem %k."
+
+msgid "OB_MPSIGIL"
+msgstr "%o poklekl@[ao_cs] před čirou sílou Pečeti hráče %k."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "Pátrání za Pečetí"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Vysvobodil@[ao_cs] jsi vězně!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Zničil@[ao_cs] jsi konvertér!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Gratulujeme! Dokončil@[ao_cs] jsi tréninkový areál"
+
+msgid "TXT_QUEST_14"
+msgstr "Odpálil@[ao_cs] jsi krystal"
+
+msgid "TXT_QUEST_16"
+msgstr "Odpálil@[ao_cs] jsi brány"
+
+msgid "TXT_QUEST_27"
+msgstr "Odpálil@[ao_cs] jsi počítač"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Zabil@[ao_cs] jsi Biskupa!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Zabil@[ao_cs] jsi Věštce!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Zabil@[ao_cs] jsi Macila!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Zabil@[ao_cs] jsi Dějepisce!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Blázne! Spustil@[ao_cs] jsi alarm!"
+
+msgid "TXT_YOUREDEAD"
+msgstr "Jsi mrtv@[adj_cs]! Spustil@[ao_cs] jsi alarm!"
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Ty už máš přece dost!"
+
+msgid "TXT_GOAWAY"
+msgstr "Jdi pryč!"
+
+msgid "TXT_COMM0"
+msgstr "Příchozí zpráva..."
+
+msgid "TXT_COMM1"
+msgstr "Příchozí zpráva od Straky..."
+
+msgid "TXT_FINDHELP"
+msgstr "Najdi pomoc."
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "za %u zlatých"
+
+msgid "GOTCHEXARMOR"
+msgstr "Sebráno Chex(R) brnění."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Sebráno Super Chex(R) brnění!"
+
+msgid "GOTWATER"
+msgstr "Sebrána sklenice vody."
+
+msgid "GOTREPELLENT"
+msgstr "Sebrán repelent proti slizu."
+
+msgid "GOTBREAKFAST"
+msgstr "Supervýživná snídaně!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Sebrán modrý klíč."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Sebrán žlutý klíč."
+
+msgid "GOTCREDKEY"
+msgstr "Sebrán červený klíč."
+
+msgid "GOTFRUIT"
+msgstr "Sebrána mísa s ovocem."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Zelenina je VELMI zdravá!"
+
+msgid "GOTVEGETABLES"
+msgstr "Sebrána mísa se zeleninou."
+
+msgid "GOTSLIMESUIT"
+msgstr "Nalezen slizu odolný oblek."
+
+msgid "GOTCHEXMAP"
+msgstr "Nalezena počítačová mapa oblasti."
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Sebrán minibzukový náboj."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Sebrán minibzukový balík."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Sebrán náboj pro bzukový propulzor."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Sebrán balík pro bzukový propulzor."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Sebrán náboj pro fázovací bzukr."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Sebrán balík pro fázovací bzukr."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Sebrán náboj pro velký bzukr."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Sebrán balík pro velký bzukr."
+
+msgid "GOTZORCHPACK"
+msgstr "Sebrán Bzukrbatoh!"
+
+msgid "GOTLAZDEVICE"
+msgstr "Získal@[ao_cs] jsi velkodosahový bzukr! Cooo?"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Získal@[ao_cs] jsi rychlobzukr!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Získal@[ao_cs] jsi super botovidličku!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Získal@[ao_cs] jsi bzukový propulsor!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Získal@[ao_cs] jsi fázovací bzukr!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Získal@[ao_cs] jsi velký bzukr!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Získal@[ao_cs] jsi megabzukr!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Sebrán minibzukr."
+
+msgid "TAG_SPOON"
+msgstr "Lžíce"
+
+msgid "TAG_SPORK"
+msgstr "Super botodlička"
+
+msgid "TAG_MINIZORCHER"
+msgstr "Minibzukr"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Velký bzukr"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Supervelký bzukr"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Rychlobzukr"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Bzukový propulzor"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Fázovací bzukr"
+
+msgid "TAG_LAZDEVICE"
+msgstr "Velkodosahový bzukr"
+
+msgid "OB_COMMONUS"
+msgstr "%o byl@[ao_cs] osliznut@[ao_cs] slizounem."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o byl@[ao_cs] osliznut@[ao_cs] dvojnožkem."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o byl@[ao_cs] osliznut@[ao_cs] obrněným dvojnožkem."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o byl@[ao_cs] osliznut@[ao_cs] jednoočkem."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o byl@[ao_cs] poražen@[ao_cs] Slizobránou."
+
+msgid "OB_MPSPOON"
+msgstr "%o byl@[ao_cs] nakrmen@[ao_cs] lžičkou hráče %k."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o byl@[ao_cs] pořádně namíchán@[ao_cs] botovidličkou hráče %k."
+
+msgid "OB_MPZORCH"
+msgstr "%o byl@[ao_cs] bzukrnut@[ao_cs] hráčem %k."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o byl@[ao_cs] trefen@[ao_cs] megabzukrem hráče %k."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o dostal@[ao_cs] rychlobzukrem hráče %k."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o byl@[ao_cs] bzukrnut@[ao_cs] propulzorem hráče %k."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o byl@[ao_cs] zasažen@[ao_cs] propulzorem hráčem %k."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o byl@[ao_cs] bzukr-vyfázován@[ao_cs] hráčem %k."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o padl@[ao_cs] velkodosahovému bzukru hráče %k."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o byl@[ao_cs] odbzukrován hráčem %k."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Přistávací zóna"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Skladiště"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Testovací laboratoř"
+
+msgid "CHUSTR_E1M4"
+msgstr ""
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Bazoikské jeskyně"
+
+msgid "CE1TEXT"
+msgstr ""
+"Mise splněna.\n"
+"\n"
+"Jsi připraven@[ao_cs] na další misi?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Pokračuj stisknutím klávesy ESC..."
+
+msgid "CE2TEXT"
+msgstr "Dokázal@[ao_cs] jsi to!"
+
+msgid "CE3TEXT"
+msgstr "Skvělá práce!"
+
+msgid "CE4TEXT"
+msgstr "Fantastické"
+
+msgid "CLOADNET"
+msgstr ""
+"Nemůžeš použít načtení, když hraješ síťové pátrání!\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Rychle uložit přes tvé pátrání s názvem\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Nemůžeš použít rychlé načtení , když hraješ síťové pátrání!\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Přeješ si rychle načíst pátrání s názvem\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Nemůžeš začít nové pátrání dokud jsi v síťové hře.\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Opatrně, tohle bude těžké.\n"
+"Chceš pokračovat?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Toto je Chex(R) Quest. Najdi\n"
+"\n"
+"další levely na www.chexquest.com.\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Nemůžeš ukončit síťové pátrání!\n"
+"\n"
+"Stiskni libovolnou klávesu"
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Opravdu si přeješ ukončit pátrání?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Režim nezranitelnosti ZAP"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Režim nezranitelnosti VYP"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Bzukry přidány"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Superbzukry přidány"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Jez Chex(R)!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Minibzukrové náboje"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Velkobzukrové náboje"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Propulzorové náboje"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Fázovací náboje"
+
+msgid "MNU_NEWGAME"
+msgstr "Nová hra"
+
+msgid "MNU_OPTIONS"
+msgstr "Možnosti"
+
+msgid "MNU_GAMEFILES"
+msgstr "Uložené hry"
+
+msgid "MNU_INFO"
+msgstr "Informace"
+
+msgid "MNU_QUITGAME"
+msgstr "Ukončit hru"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Vyber obtížnost:"
+
+msgid "SKILL_BABY"
+msgstr "Ještě nechci umřít."
+
+msgid "SKILL_EASY"
+msgstr "Hej, ne tak tvrdě."
+
+msgid "SKILL_NORMAL"
+msgstr "Pojď do mě."
+
+msgid "SKILL_HARD"
+msgstr "Ultrařežba."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Noční můra!"
+
+msgid "CSKILL_BABY"
+msgstr "Hezky zlehka"
+
+msgid "CSKILL_EASY"
+msgstr "Ne tak ulepeně"
+
+msgid "CSKILL_NORMAL"
+msgstr "Hafo hlenu"
+
+msgid "CSKILL_HARD"
+msgstr "Extra bláto"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Superslizké!"
+
+msgid "SSKILL_BABY"
+msgstr "Trénink"
+
+msgid "SSKILL_EASY"
+msgstr "Zelenáč"
+
+msgid "SSKILL_NORMAL"
+msgstr "Veterán"
+
+msgid "SSKILL_HARD"
+msgstr "Elita"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Krveřežba"
+
+msgid "MNU_WETNURSE"
+msgstr "Potřěbuješ krmlici?"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Nemehla, tož jsme my"
+
+msgid "MNU_BRINGEST"
+msgstr "Chtějúci se práti?"
+
+msgid "MNU_SMITE"
+msgstr "Ktož jsú boží bojovníci"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Jsúci Smrtonošem morovým!"
+
+msgid "MNU_SQUIRE"
+msgstr "Panoš"
+
+msgid "MNU_KNIGHT"
+msgstr "Rytíř"
+
+msgid "MNU_WARRIOR"
+msgstr "Válečník"
+
+msgid "MNU_BERSERKER"
+msgstr "Berserkr"
+
+msgid "MNU_TITAN"
+msgstr "Titán"
+
+msgid "MNU_ALTARBOY"
+msgstr "Ministrant"
+
+msgid "MNU_ACOLYTE"
+msgstr "Akolyta"
+
+msgid "MNU_PRIEST"
+msgstr "Kněz"
+
+msgid "MNU_CARDINAL"
+msgstr "Kardinál"
+
+msgid "MNU_POPE"
+msgstr "Papež"
+
+msgid "MNU_APPRENTICE"
+msgstr "Učeň"
+
+msgid "MNU_ENCHANTER"
+msgstr "Kouzelník"
+
+msgid "MNU_SORCERER"
+msgstr "Čaroděj"
+
+msgid "MNU_WARLOCK"
+msgstr "Zaklínač"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Arcimág"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Vyber třídu:"
+
+msgid "MNU_FIGHTER"
+msgstr "Bojovník"
+
+msgid "MNU_CLERIC"
+msgstr "Klerik"
+
+msgid "MNU_MAGE"
+msgstr "Mág"
+
+msgid "MNU_RANDOM"
+msgstr "Náhodný"
+
+msgid "MNU_EPISODE"
+msgstr "Jakou epizodu?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Vyber kampaň"
+
+msgid "MNU_COTD"
+msgstr "Město zatracených"
+
+msgid "MNU_HELLSMAW"
+msgstr "Chřtán pekel"
+
+msgid "MNU_DOME"
+msgstr "Báň D'Sparilova"
+
+msgid "MNU_OSSUARY"
+msgstr "Kostnice"
+
+msgid "MNU_DEMESNE"
+msgstr "Zatuchlé panství"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Týmová hra"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Faktor týmového poškození"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Chytré automatické zaměřování"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Zranění pádem"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Odhazování zbraní"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Dvojnásobná munice"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Nekonečná munice"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Nekonečný inventář"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Bez příšer"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Ukončení levelu pouze bez příšer"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Příšery se respawnují"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Příšery se nerespawnují"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Předměty se respawnují"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Bonusy se respawnují"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Rychlé příšery"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Okamžité reakce příšer (obtížnost Noční můra!)"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Degenerace"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Povolit automatické míření"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Povolit sebevraždu"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Povolit skákání"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Povolit klečení"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Povolit koukání nahoru/dolů"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Povolit změnu FOV"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Povolit míření s BFG"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Povolit automapu"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Zobrazit na automapě spojence"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Povolit špehování"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Povolit kameru z třetí osoby (cheat)"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Přepnout na zbraň pouze s municí"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Smrt Ikony zabije i její potomky"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Započítávat monstra v ukončujících sektorech"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Nastavení deathmatche"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Zbraně zůstávají"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Povolit bonusy"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Povolit zdraví"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Povolit brnění"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Spawnovat hráče co nejdále od sebe"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Stejná mapa"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Vynutit respawn"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Povolit ukončení levelu"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Barely se respawnují"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Ochrana po respawnu"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Hráč ztratí frag, pokud je zabit"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Ponechávat fragy mezi levely"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Uzamknout týmy"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Nastavení co-op módu"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Spawnovat multiplayerově zbraně"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Ztrácet celý inventář"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Ponechat klíče"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Ponechat zbraně"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Ponechat brnění"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Ponechat bonusy"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Ponechat munici"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Ztratit polovinu munice"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Respawn na místě smrti"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Vždy spawnovat multiplayerové objekty"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Povolit svislý rozptyl střelby"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Zbraně dávají munici navíc (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Kompatibilita"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Nastavení kompatibility"
+
+msgid "CMPTMNU_MODE"
+msgstr "Režim kompatibility"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Objekty"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Spojenecké příšery nejsou blokovány"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Omezit počet Ztrac. duší (Lost Souls) od Živlů (Pain Elementals)"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Pohyb příšer je ovlivněn efekty"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Příšery nemohou překročit výšiny"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Příšery se zasekávají na výšinách"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Příšery vidí neviditelné hráče"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Minotauři nemohou tvořit plameny ve vodě"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Spadlé předměty se objeví na zemi"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DeHackEd"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "Nastavení DEH jako v Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Původní rychlost pro A_Mushroom"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Levely a akce"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Veškeré akční čáry blokují použití hráčem"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Smrt jakéhokoli bosse může aktivovat speciální akci levelu"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "Zakázat světelný efekt dveří z BOOMu"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Nacházet nejbližší světlo jako Doom"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Nacházet nejkratší textury jako Doom"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Použít méně stabilní stavění schodů"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Použít původní chování Doomu pro pohyb podlah"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Použít původní algoritmus bod-na-čáře z Doomu"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Odchod z levelu může být spuštěn vícekrát"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Fyzika"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Objekty jsou nekonečně vysoké"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Boom posuvníky jsou aditivní"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Nelze se pohybovat přímo na SJVZ"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Povolit wall running (běhaní pomocí zdi)"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven posuvníky používají původní rychlost"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Sebe-odkazující sektory neblokují střely"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Použít původní Doom kód pro kontrolu hitscanů"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Použít původní výšky z Doomu pro kolizi raket"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Vykreslování"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Vykreslovat polyobjekty jako Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Ignorovat Y posuny na průhledných mid-texturách"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Obrátit řazení spritů"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Zvuk"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Zmrzačit zvukový systém pro trik tichého BFG"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Ostatní tě neslyší sbírat předměty"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Okamžitě pohybující se podlahy nejsou tiché"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sektorové zvuky používají jeho střed jako zdroj"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Utnout zvuky, když jejich objekt zmizí"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Použít původní chování pro uchování zvukového cíle"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Skriptované teleportace neaktivují sektorové akce"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Neblokující čáry mohou být zmáčknuty"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Povolit nestabilní chování pro CheckSwitchRange"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Povolit nestabilní zábradlí ze Strifu"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Exploze neodhazují do výšky"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Používat původní chování explozí Doomu"
+
+msgid "PLYRMNU_RED"
+msgstr "Červená"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Zelená"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Modrá"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Třída"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr ""
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Přepnout zbraň při sebrání"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Zmáčkni \\cjMEZERNÍK"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "pro pohled zepředu"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "pro pohled zezadu"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Svislý rozptyl střelby"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Přiblížení zbraně"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Akce zbraně 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Akce zbraně 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Akce zbraně 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Akce zbraně 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Letět / plavat vzhůru"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Letět / plavat dolů"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Přestat létat"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Pohled klávesnicí"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Ovládání vyskakovacích oken ve Strife"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Říct týmu"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Odhodit předmět"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Informace o předmětu"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Odhodit zbraň"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Ostatní"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Co-op špehování - další"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Vyskakovací okna Strife"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Úkoly mise"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Seznam klíčů"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Zbraně/munice/staty"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Přepnout tabulku skóre"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Automatické vystředění pohledu"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Použít myš k pohybu do stran"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Pozadí"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Ty"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "Jednostranné zdi"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "Oboustranné zdi s různými podlahami"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "Oboustranné zdi s různými stropy"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "Oboustranné zdi s 3D podlahami"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Mřížka"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Středobod"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Neobjevené zdi"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Zamčené dveře"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Teleportér"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Teleportér do jiného levelu"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Skrýš"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Neobjevená skrýš"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Akční čáry"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Cheatovací režim"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Neviditelné oboustranné zdi"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Tajné zdi"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Objekty"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Příšery"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Nepočítané příšery"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Přátelé"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Předměty"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Počítané předměty"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Překryvný režim"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Překryvný cheatovací režim"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Portálové překryvy"
+
+msgid "MSGMNU_TITLE"
+msgstr "Nastavení oznámení"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Zobrazit oznámení"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Zobrazit oznámení o smrtích"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Zobrazit zprávy o skrýších"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Minimální úroveň oznámení"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Barva oznámení"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Sebrání předmětu"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Oznámení o úmrtí"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Kritická oznámení"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Chatová oznámení"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Týmová oznámení"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Oznámení na střed"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Oznámení o snímcích obrazovky"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Detailní oznámení o uložené hře"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Vývojářská oznámení"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Barevné schéma"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Povolit barvy dle modů"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Vlastní barvy"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Ovládání mapy"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Překryvná mapa"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Textury"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Počet předmětů"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Počet příšer"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Počet skrýší"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Uplynulý čas na mapě"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Celkový uplynulý čas"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Zobrazit skrýše"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Zobrazit název mapy"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Pozadí mapy"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Zobrazení klíčů (podvod)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Zobrazení aktivujících čar"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Zobrazení objektů jako spritů"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Překrývat portály"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Práh prázdného prostoru"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Písmo značek"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Barva značek"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Umístit značku"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Smazat značky"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Tabulka skóre"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Nastavení tabulky skóre"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Kooperativní mód"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Povolit tabulku skóre"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Barva hlavičky"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Barva tvého hráče"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Barva ostatních hráčů"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Deathmatch"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Týmový deathmatch"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Alternativní HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Povolit alternativní HUD"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Zobrazit počet skrýší"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Zobrazit počet příšer"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Zobrazit počet předmětů"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Zobrazit výdrž a přesnost"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Zobrazit berserk"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Zobrazit zbraně"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Zobrazit munici pro"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Zobrazit čas"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Barva času"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Zobrazit latenci sitě"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Pořadí zobrazení munice"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Červený indikátor munice pod %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Žlutý indikátor munice pod %"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Červený indikátor zdraví pod"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Žlutý indikátor zdraví pod"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Zelený indikátor zdraví pod"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Červený indikátor brnění pod"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Žlutý indikátor brnění pod"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Zelený indikátor brnění pod"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Alternativní HUD automapy"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Barva názvu levelu"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Barva času levelu"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Barva času hubu"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Barva celkového času"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Barva souřadnic"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Režim souřadnic"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Barva názvu statistik"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Barva statistik"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Interpolace vykreslování"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Režim vykreslování průhlednosti"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Styl přechodů"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Zobrazit ENDOOM obrazovku"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Intenzita bliknutí při zranění"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Intenzita bliknutí při sebrání předmětu"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Intenzita zbarvení pod vodou"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Režim vykreslování oblohy"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Lineární obloha"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Při plném jasu ignorovat barvu sektoru"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Škálovat velikost fuzz efektu"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Typ fuzz efektu"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Klasická průhlednost"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Průhlednost Ztracených duší"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Použít falešný kontrast"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Kouř raket"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Druh krve"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Druh kouře nábojů"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Množství částic"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Množství decalů"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Zobrazit hráčovy sprity"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Posmrtná kamera"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Zoom při teleportaci"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Intenzita zemětřesení"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Interpolovat pohyb příšer"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Síla barvy pozadí v menu"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Barva pozadí v menu"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Pohupování pohledu při pohybu"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Pohupování pohledu v klidu"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Rychlost pohupování zbraně"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Nastavení škálování rozhraní"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Potlačení nastavení výše"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Oznámení"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Konzole"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Stavový panel"
+
+msgid "SCALEMNU_HUD"
+msgstr "HUD přes celou obrazovku"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Alternativní HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "HUD zachovává poměr stran"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Použít výchozí velikost"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Škalovat přes celou obrazovku"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Přizpůsobit velikosti obrazovky"
+
+msgid "HUDMNU_TITLE"
+msgstr "Nastavení rozhraní a HUD"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Alternativní HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Oznámení"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Velikost rozhraní"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Vynutit výchozí zaměřovač"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Zvětšit zaměřovač při sebrání předmětu"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Zobrazovat jmenovky"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Barva jmenovek"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Použít starý vzorec pro 'ouch' portrét"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Druh bliknutí zbraní v Hexenu"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Druh bliknutí při otrávení"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Druh bliknutí při smrti umrznutím"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Druh blikání při kumulaci jedu"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Škálování velikosti rozhraní"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Zobrazit dialog pro výběr IWADu"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Povolit cheaty ze všech her"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Povolit skriptům pořizovat snímky obrazovky"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Načítat *.deh/*.bex soubory"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Cachovat nodes"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Časový práh pro cachování nodes"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Vyčistit node cache"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Povolit přeskakování skrolujících obrázků"
+
+msgid "NETMNU_TITLE"
+msgstr "Nastavení sítě"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Lokální nastavení"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Predikce pohybu"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Predikce čárových akcí"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Velikost interpolace predikce"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Práh interpolace"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Nastavení hostitele"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Extra tiky"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Vyrovnání latence"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Původní"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimalizovaný"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Klasický (rychlejší)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Přesný"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Uzavřený"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Částice"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Sprity"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Sprity a částice"
+
+msgid "OPTVAL_MELT"
+msgstr "Rozpuštění"
+
+msgid "OPTVAL_BURN"
+msgstr "Oheň"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Prolínačka"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Vyhlazený"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Vyhlazené"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Průhledný"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Šum"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Stín"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Předměty"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Zbraně"
+
+msgid "OPTVAL_BOTH"
+msgstr "Obojí"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Hráč"
+
+msgid "OPTVAL_MAP"
+msgstr "Level"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Zvětšit na 640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Zdvojení pixelů"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Zčtyřnásobení pixelů"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Současná zbraň"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Dostupně zbraně"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Všechny zbraně"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Level, milisekundy"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Level, vteřiny"
+
+msgid "OPTVAL_LEVEL"
+msgstr ""
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Hub, vteřiny"
+
+msgid "OPTVAL_HUB"
+msgstr ""
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Celkový, vteřiny"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Celkový"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Systémový, vteřiny"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Systémový"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Pouze v síťové hře"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Obrázek a text"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Text a obrázek"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Pouze skripty"
+
+msgid "OPTVAL_ALL"
+msgstr "Všechny"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Pouze poslední"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Tradiční Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Tradiční Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Tradiční Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Pouze po nalezení"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Pouze v překryvném režimu"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Překryv + normální"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Pouze překryv"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Ne pro huby"
+
+msgid "OPTVAL_FRONT"
+msgstr "Zepředu"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Animované"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Otáčivé"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Pouze barvy definované mapou"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Všechny krom dveří"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dvojitý"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Trojitý"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Čtveritý"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Sebrání předmětu"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Oznámení o smrti"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Kritická oznámení"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Nikdy spojence"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Pouze příšery"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Starý"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (striktní)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (striktní)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (striktní)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (striktní)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Všechny nepotrvzené"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Chyby"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Varování"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Oznámení"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Všechno"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Hardwarová akcelerace"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Doom softwarový renderer"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "True color softwarový renderer"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Vysoký výkon"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Nízká spotřeba"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Původní"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (vynucený)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Původní (vynucený)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (preferován ZDoom)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (preferován původní)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Malé"
+
+msgid "OPTVAL_LARGE"
+msgstr "Velké"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Konzole"
+
+msgid "C_BRICK"
+msgstr "\\caCihlová"
+
+msgid "C_TAN"
+msgstr "\\cbSvětle hnědá"
+
+msgid "C_GRAY"
+msgstr "\\ccŠedá"
+
+msgid "C_GREEN"
+msgstr "\\cdZelená"
+
+msgid "C_BROWN"
+msgstr "\\ceHnědá"
+
+msgid "C_GOLD"
+msgstr "\\cfZlatá"
+
+msgid "C_RED"
+msgstr "\\cgČervená"
+
+msgid "C_BLUE"
+msgstr "\\chModrá"
+
+msgid "C_ORANGE"
+msgstr "\\ciOranžová"
+
+msgid "C_WHITE"
+msgstr "\\cjBílá"
+
+msgid "C_YELLOW"
+msgstr "\\ckŽlutá"
+
+msgid "C_DEFAULT"
+msgstr "\\clVýchozí"
+
+msgid "C_BLACK"
+msgstr "\\cmČerná"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnSvětle modrá"
+
+msgid "C_CREAM"
+msgstr "\\coKrémová"
+
+msgid "C_OLIVE"
+msgstr "\\cpOlivová"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqTmavě zelená"
+
+msgid "C_DARKRED"
+msgstr "\\crTmavě červená"
+
+msgid "C_DARKBROWN"
+msgstr "\\csTmavě hnědá"
+
+msgid "C_PURPLE"
+msgstr "\\ctFialová"
+
+msgid "C_DARKGRAY"
+msgstr "\\cuTmavě šedá"
+
+msgid "C_CYAN"
+msgstr "\\cvAzurová"
+
+msgid "C_ICE"
+msgstr "\\cwLed"
+
+msgid "C_FIRE"
+msgstr "\\cxOheň"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cySafírová"
+
+msgid "C_TEAL"
+msgstr "\\czModrozelená"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Bez zvuku"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Bez interpolace"
+
+msgid "OPTSTR_SPLINE"
+msgstr "Křivka"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Hardwarový renderer"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Softwarový renderer"
+
+msgid "GLMNU_TITLE"
+msgstr "Nastavení hardwarového rendereru"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Nastavení dynamických světel"
+
+msgid "GLMNU_PREFS"
+msgstr "Možnosti"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Oříznout okraje spritů"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Seřadit vykreslování podle textury"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Dynamická světla"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Dynamická světla (hardware)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Povolit definice světel"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Světla ovlivňují sprity"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Světla ovlivňují částice"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Mapy stínů"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Kvalita map stínů"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Filtrování map stínů"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Režim mlhy"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Mlha vynucuje plný jas"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Intenzita světel zbraní"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Mapa prostředí na zrcadlech"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Vylepšený režim nočního vidění"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "Vylepšené noční vidění ukazuje skryté příšery"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Vyladění clippingu spritů"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Vyhladit okraje spritů"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Styl šumu"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Orientace spritů"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Sprity čelí kameře"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Styl částic"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Kvalita vykreslování"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr ""
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Povolit Quad Stereo"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Režim pruhovaného SW osvětlení"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Vzdálenost mezi očima"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Vzdálenost od obrazovky"
+
+msgid "OPTVAL_SMART"
+msgstr "Chytré"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Chytřejší"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Pouze infračervené"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Infračervené a pochodeň"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Jakákoli fixní mapa barev"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Použít jako paletu"
+
+msgid "OPTVAL_BLEND"
+msgstr "Míchat"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Světlý"
+
+msgid "OPTVAL_DARK"
+msgstr "Tmavý"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr ""
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optimální"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Po ose Y"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "Po osách X/Y"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Čtvercové"
+
+msgid "OPTVAL_ROUND"
+msgstr "Kulaté"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radiální"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Pixelový fuzz"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Hladký fuzz"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Míchající fuzz"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Průhledný fuzz"
+
+msgid "OPTVAL_NOISE"
+msgstr "Šum"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Hladký šum"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Zubatý šum"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Zelená/purpurová"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Červená/tyrkysová"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Oranžová/modrá"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Levé oko"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Pravé oko"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Vedle sebe, plné"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Vedle sebe, úzké"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Nad sebou"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Po řádcích"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Po sloupcích"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Šachovnice"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Quad buffer"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "Nastavení True color"
+
+msgid "TCMNU_TITLE"
+msgstr "Nastavení True color"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Výstup True color"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Lineární filtrování při zmenšení"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Lineární filtrování při zvětšení"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Použít mipmapy"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dynamická světla (software)"
+
+msgid "OS_TITLE"
+msgstr "Vyhledávání možností"
+
+msgid "OS_ANY"
+msgstr "Hledat jakékoli klíčové slovo"
+
+msgid "OS_ALL"
+msgstr "Hledat všechna klíčová slova"
+
+msgid "OS_NO_RESULTS"
+msgstr "Nic nenalezeno."
+
+msgid "OS_LABEL"
+msgstr "Hledat:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Vždy zobrazit klíče"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Změna týmu je vypnuta!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s se připojil@[ao_cs] k týmu %t."
+
+msgid "TXT_LONER"
+msgstr "%s je teď @[self_cs]."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s opustil@[ao_cs] hru s %d fragy"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s opustil@[ao_cs] hru"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Nepodařilo se načíst uloženou hru '%s'."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' není funkční uloženou hrou: Chybí 'info.json'."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Nepodařilo se načíst informace v uložené hře '%s'."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Uložená hra '%s' je z nekompatibilní verze."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Uložená hra '%s' je z jiného enginu založeného na ZDoomu:"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Uložená hra '%s' je ze starší verze: %d (%e je nejstarší podporovaná verze)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Uložená hra '%s' je z novější verze: %d (%e je nejvyšší podporovaná verze)"
+
+msgid "TXT_NOMAPSG"
+msgstr "Uložená hra '%s' neobsahuje současný level."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' není funkční uloženou hrou: Chybí 'globals.json'."
+
+msgid "TXT_SGINFOERR"
+msgstr "Nepodařilo se načíst informace v uložené hře '%s'."
+
+msgid "TXT_SAVEPENDING"
+msgstr "Stále se čeká na uložení hry."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Nejsi v uložitelné hře."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Nejsi v levelu."
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Hráč je mrtvý v singleplayer hře."
+
+msgid "TXT_SAVEFAILED"
+msgstr "Uložení se nezdařilo."
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Nepodařilo se pořídit snímek obrazovky."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "hráčem %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Pro ukončení stiskni libovolnou klávesu, nebo klikni kdekoliv v okně."
+
+msgid "HUDMNU_FLASH"
+msgstr "Barvení obrazovky"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D režim"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Zaměřovač"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Titulky"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Předejít šedým stínům"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Písma"
+
+msgid "FONTMNU_LOG"
+msgstr "Použít standardní font pro záznamy"
+
+msgid "FONTMNU_DLG"
+msgstr "Použít standardní font pro dialogy"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Rychlé ukončení"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Vlastní inverzní barvení"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Vlastní inverzní tmavá barva"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Vlastní inverzní světlá barva"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Pohupování zbraně při střelbě"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Klasické škálování text. obrazovek a okrajů obrazovky"
+
+msgid "SCALEMNU_INTER"
+msgstr "Pozadí textových obrazovek"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Okraje obrazovky"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Měřítko"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Poměr stran"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Zobrazit výsledky na konci mapy"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Určeno mody"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Vždy kromě hubů"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Vždy včetně hubů"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Preferované rozložení klávesnice"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Klasický ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr "Moderní (WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Moderní (číselník)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Striktně zbraně/hráči z KEYCONF"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Škálování menu dle starého ZDoomu"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Použít procenta ve výsledcích mapy"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Škálovat obrazovky se shrnutím dle starého ZDoomu"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Občan"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Střílna"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Křižák"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inkvizitor"
+
+msgid "TAG_PEASANT"
+msgstr "Rolník"
+
+msgid "TAG_REAVER"
+msgstr "Plenitel"
+
+msgid "TAG_SENTINEL"
+msgstr "Strážbot"
+
+msgid "TAG_STALKER"
+msgstr "Slídil"
+
+msgid "TAG_BISHOP"
+msgstr "Biskup"
+
+msgid "TAG_ENTITY"
+msgstr "Jeden Bůh"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Programátor"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Přízrak"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Ctitel"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Spawnovat multiplayerové předměty v co-opu"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Stíny spritů"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Monstra a hráči"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr "Zorné pole (FOV)"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Zakázat funkce MBF21"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Zobrazit widget s časem"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Oživovat rozdrcené příšery jako duchy"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Pohupování pohledu při létání"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o byl@[ao_cs] zmrzačen@[ao_cs] zlohadem."
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Vyhlazovat čáry"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "Procházet a střílet skrz ostatní hráče"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "Sdílet klíče se všemi hráči"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Zakázat potlačení nastavení čelení kameře"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "Prohodit zdraví a brnění"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "Pro HUD použít klasické škálování"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "Faktor HUD škálování"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "Co-op věci pouze v multiplayeru"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "Co-op předměty pouze v multiplayeru"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "V multiplayeru hráči sbírají své vlastní kopie předmětů"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "Zakázat sbírání odhozených předmětů na straně klientů"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "Restart po umření"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "Začít jen s pistolí"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr "Povolit zombie hráče"
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr "Při teleportu ignorovat výšku podlahy"
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr "Vynucená perspektiva"
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr "Hlasitost kroků"
+
+msgid "ID24_GOTINCINERATOR"
+msgstr "Sebrán plamenomet."
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr "Sebrána čepel pohromy! Zatraceně!"
+
+msgid "ID24_GOTFUELCAN"
+msgstr "Sebrán kanystr s benzínem."
+
+msgid "ID24_GOTFUELTANK"
+msgstr "Sebrána benzínová nádrž."
+
+msgid "TAG_ID24INCINERATOR"
+msgstr "Plamenomet"
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr "Čepel pohromy"
+
+msgid "AMMO_ID24FUEL"
+msgstr "Kanystr s benzínem"
+
+msgid "AMMO_ID24FUELTANK"
+msgstr "Benzínová nádrž"
+
+msgid "ID24_CC_GHOUL"
+msgstr "Ghúl"
+
+msgid "ID24_CC_BANSHEE"
+msgstr "Smrtonoška"
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr "Úderník"
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr "Pletichář"
+
+msgid "ID24_CC_VASSAGO"
+msgstr "Vassago"
+
+msgid "ID24_CC_TYRANT"
+msgstr "Tyran"
+
+msgid "ID24_OB_GHOUL"
+msgstr "%o byl@[ao_cs] zasažen@[ao_cs] ghúlovou energetickou střelou."
+
+msgid "ID24_OB_BANSHEE"
+msgstr "%o byl@[ao_cs] terminován@[ao_cs] smrtonoškou."
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr "%o byl@[ao_cs] roztaven@[ao_cs] úderníkem."
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr "%o byl@[ao_cs] sestřelen@[ao_cs] pletichářem."
+
+msgid "ID24_OB_VASSAGO"
+msgstr "%o byl@[ao_cs] spálen@[ao_cs] Vassagem."
+
+msgid "ID24_OB_TYRANT"
+msgstr "%o byl@[ao_cs] rozerván@[ao_cs] tyranem."
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "Zobrazit název úrovně"
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr "Inventářové zkratky"
+
+msgid "JOYMNU_HAPTICS"
+msgstr "Úroveň haptické odezvy"
+
+msgid "JOYMNU_CURVE"
+msgstr "Křivka odezvy"
+
+msgid "JOYMNU_THRESHOLD"
+msgstr "Digitální práh"
+
+msgid "OPTVAL_LINEAR"
+msgstr "Lineární"
+
+msgid "OPTVAL_QUADRATIC"
+msgstr "Kvadratická"
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr "Typ chatu"
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr "Vypnutý"
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr "Pouze spoluhráči"
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr "Všichni"
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr "V chatu zakázat tučný text"
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr "Zakázat zvuky chatu"
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr "Stabilizovat připojení"
+
+msgid "NETMNU_LIMITCONVO"
+msgstr "Omezit konverzace s hostitelem"
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr "Omezit opakovatelné akce"
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr "Zakázat pauzu hry"
+
+msgid "OPTVAL_HOSTONLY"
+msgstr "Pouze hostitel"
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr "Režim přeskakování textových obrazovek"
+
+msgid "OPTVAL_VOTE"
+msgstr "Hlasováním"
+
+msgid "OPTVAL_ANYONE"
+msgstr "Kýmkoli"
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr "Procent hlasů k přeskočení"
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr "Čas k hlasování (vteřiny)"
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr "Pomalý režim chatu (vteřiny)"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Povolit haptické aktivace"
+
+msgid "OPTMNU_HAPTICS"
+msgstr "Nastavení haptiky"
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr "Úroveň kompatibility haptiky"
+
+msgid "OPTVAL_MATCH"
+msgstr "Odpovídající"
+
+msgid "OPTVAL_WARN"
+msgstr "Varovat"
+
+msgid "HAPMNU_OPTIONS"
+msgstr "Vlastní nastavení zdrojů haptiky"
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr "Při používání menu"
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr "Při herní akci"
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr "Při zranění"
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr "Při interakci s herním světem"
+
+msgid "PAUSE_STRING"
+msgstr "Pauza"
+
+msgid "TAG_BACKPACK"
+msgstr "Batoh"
+
+msgid "TAG_ARMORBONUS"
+msgstr "Duchovní brnění"
+
+msgid "TAG_GREENARMOR"
+msgstr "Bezpečnostní brnění"
+
+msgid "TAG_BLUEARMOR"
+msgstr "Bojové brnění"
+
+msgid "TAG_INVULSPHERE"
+msgstr "Artefakt nezranitelnosti"
+
+msgid "TAG_SOULSPHERE"
+msgstr "Sféra duší"
+
+msgid "TAG_MEGAPSHERE"
+msgstr "Megasféra"
+
+msgid "TAG_INVISSPHERE"
+msgstr "Artefakt zamlžení"
+
+msgid "TAG_RADSUIT"
+msgstr "Radiační oblek"
+
+msgid "TAG_VISOR"
+msgstr "Noktovizor"
+
+msgid "TAG_ALLMAP"
+msgstr "Počítačová mapa"
+
+msgid "TAG_BERSERK"
+msgstr "Berserková sada"
+
+msgid "TAG_HEALTHBONUS"
+msgstr "Nápoj zdraví"
+
+msgid "TAG_STIMPACK"
+msgstr "Stimpak"
+
+msgid "TAG_MEDIKIT"
+msgstr "Lékárnička"
+
+msgid "TAG_BLUECARD"
+msgstr "Modrá karta"
+
+msgid "TAG_YELLOWCARD"
+msgstr "Žlutá karta"
+
+msgid "TAG_REDCARD"
+msgstr "Červená karta"
+
+msgid "TAG_BLUESKULL"
+msgstr "Modrá lebka"
+
+msgid "TAG_YELLOWSKULL"
+msgstr "Žlutá lebka"
+
+msgid "TAG_REDSKULL"
+msgstr "Červená lebka"
+
+msgid "TAG_GLASSOFWATER"
+msgstr "Sklenice vody"
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr "Ovocná mísa"
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr "Zeleninová mísa"
+
+msgid "TAG_BREAKFAST"
+msgstr "Supersnídaně"
+
+msgid "TAG_REPELLENT"
+msgstr "Repelent proti slizu"
+
+msgid "TAG_CHEXARMOR"
+msgstr "Chex brnění"
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr "Super Chex brnění"
+
+msgid "TAG_CHEXMAP"
+msgstr "Počítačová mapa oblasti"
+
+msgid "TAG_SLIMESUIT"
+msgstr "Slizuodolný oblek"
+
+msgid "TAG_ZORCHPACK"
+msgstr "Bzukový balík"
+
+msgid "TAG_CBLUEKEY"
+msgstr "Modrý klíč"
+
+msgid "TAG_CYELLOWKEY"
+msgstr "Žlutý klíč"
+
+msgid "TAG_CREDKEY"
+msgstr "Červený klíč"
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr "Pro grafiku zbraní použít jas sektorů"
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr "Pro potvrzení stiskni mezerník nebo pravé tl. myši"
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr "Pro potvrzení stiskni A"
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr "Pro potvrzení stiskni Joy 1"
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr "Pro respawn si zapamatovat vybranou zbraň"
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr "Co-op špehování - předchozí"
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr "Co-op špehování - vyčistit"

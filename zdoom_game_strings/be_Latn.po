@@ -1,0 +1,6556 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: be_Latn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "TXT_D1E1"
+msgstr ""
+
+msgid "TXT_D1E2"
+msgstr ""
+
+msgid "TXT_D1E3"
+msgstr ""
+
+# The episode and levels' names in E4 are taken from the Bible.
+# 
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr ""
+
+msgid "TXT_D2E1"
+msgstr ""
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr ""
+
+msgid "TXT_PLUT_EP"
+msgstr ""
+
+msgid "TXT_TNT_EP"
+msgstr ""
+
+msgid "TXT_CHEX_EP"
+msgstr ""
+
+msgid "HUSTR_E1M1"
+msgstr ""
+
+msgid "HUSTR_E1M2"
+msgstr ""
+
+msgid "HUSTR_E1M3"
+msgstr ""
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr ""
+
+msgid "HUSTR_E1M6"
+msgstr ""
+
+msgid "HUSTR_E1M7"
+msgstr ""
+
+msgid "HUSTR_E1M8"
+msgstr ""
+
+msgid "HUSTR_E1M9"
+msgstr ""
+
+msgid "HUSTR_E1M10"
+msgstr ""
+
+msgid "HUSTR_E2M1"
+msgstr ""
+
+msgid "HUSTR_E2M2"
+msgstr ""
+
+msgid "HUSTR_E2M3"
+msgstr ""
+
+msgid "HUSTR_E2M4"
+msgstr ""
+
+msgid "HUSTR_E2M5"
+msgstr ""
+
+msgid "HUSTR_E2M6"
+msgstr ""
+
+msgid "HUSTR_E2M7"
+msgstr ""
+
+msgid "HUSTR_E2M8"
+msgstr ""
+
+msgid "HUSTR_E2M9"
+msgstr ""
+
+msgid "HUSTR_E3M1"
+msgstr ""
+
+msgid "HUSTR_E3M2"
+msgstr ""
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr ""
+
+msgid "HUSTR_E3M5"
+msgstr ""
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr ""
+
+msgid "HUSTR_E3M7"
+msgstr ""
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr ""
+
+msgid "HUSTR_E3M9"
+msgstr ""
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr ""
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr ""
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr ""
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr ""
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr ""
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr ""
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr ""
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr ""
+
+msgid "HUSTR_E4M9"
+msgstr ""
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr ""
+
+msgid "HUSTR_2"
+msgstr ""
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr ""
+
+msgid "HUSTR_4"
+msgstr ""
+
+msgid "HUSTR_5"
+msgstr ""
+
+msgid "HUSTR_6"
+msgstr ""
+
+msgid "HUSTR_7"
+msgstr ""
+
+msgid "HUSTR_8"
+msgstr ""
+
+msgid "HUSTR_9"
+msgstr ""
+
+msgid "HUSTR_10"
+msgstr ""
+
+# Alternative title:
+# Circle of Death 
+msgid "HUSTR_11"
+msgstr ""
+
+msgid "HUSTR_12"
+msgstr ""
+
+msgid "HUSTR_13"
+msgstr ""
+
+msgid "HUSTR_14"
+msgstr ""
+
+msgid "HUSTR_15"
+msgstr ""
+
+msgid "HUSTR_16"
+msgstr ""
+
+msgid "HUSTR_17"
+msgstr ""
+
+msgid "HUSTR_18"
+msgstr ""
+
+msgid "HUSTR_19"
+msgstr ""
+
+msgid "HUSTR_20"
+msgstr ""
+
+msgid "HUSTR_21"
+msgstr ""
+
+msgid "HUSTR_22"
+msgstr ""
+
+msgid "HUSTR_23"
+msgstr ""
+
+msgid "HUSTR_24"
+msgstr ""
+
+msgid "HUSTR_25"
+msgstr ""
+
+msgid "HUSTR_26"
+msgstr ""
+
+msgid "HUSTR_27"
+msgstr ""
+
+msgid "HUSTR_28"
+msgstr ""
+
+msgid "HUSTR_29"
+msgstr ""
+
+msgid "HUSTR_30"
+msgstr ""
+
+msgid "HUSTR_31"
+msgstr ""
+
+msgid "HUSTR_32"
+msgstr ""
+
+msgid "HUSTR_31B"
+msgstr ""
+
+msgid "HUSTR_32B"
+msgstr ""
+
+msgid "HUSTR_33"
+msgstr ""
+
+msgid "NHUSTR_1"
+msgstr ""
+
+msgid "NHUSTR_2"
+msgstr ""
+
+msgid "NHUSTR_3"
+msgstr ""
+
+msgid "NHUSTR_4"
+msgstr ""
+
+msgid "NHUSTR_5"
+msgstr ""
+
+msgid "NHUSTR_6"
+msgstr ""
+
+msgid "NHUSTR_7"
+msgstr ""
+
+msgid "NHUSTR_8"
+msgstr ""
+
+msgid "NHUSTR_9"
+msgstr ""
+
+msgid "PHUSTR_1"
+msgstr ""
+
+msgid "PHUSTR_2"
+msgstr ""
+
+msgid "PHUSTR_3"
+msgstr ""
+
+msgid "PHUSTR_4"
+msgstr ""
+
+msgid "PHUSTR_5"
+msgstr ""
+
+msgid "PHUSTR_6"
+msgstr ""
+
+msgid "PHUSTR_7"
+msgstr ""
+
+msgid "PHUSTR_8"
+msgstr ""
+
+msgid "PHUSTR_9"
+msgstr ""
+
+msgid "PHUSTR_10"
+msgstr ""
+
+msgid "PHUSTR_11"
+msgstr ""
+
+msgid "PHUSTR_12"
+msgstr ""
+
+msgid "PHUSTR_13"
+msgstr ""
+
+msgid "PHUSTR_14"
+msgstr ""
+
+msgid "PHUSTR_15"
+msgstr ""
+
+msgid "PHUSTR_16"
+msgstr ""
+
+msgid "PHUSTR_17"
+msgstr ""
+
+msgid "PHUSTR_18"
+msgstr ""
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr ""
+
+msgid "PHUSTR_20"
+msgstr ""
+
+msgid "PHUSTR_21"
+msgstr ""
+
+msgid "PHUSTR_22"
+msgstr ""
+
+msgid "PHUSTR_23"
+msgstr ""
+
+msgid "PHUSTR_24"
+msgstr ""
+
+msgid "PHUSTR_25"
+msgstr ""
+
+msgid "PHUSTR_26"
+msgstr ""
+
+msgid "PHUSTR_27"
+msgstr ""
+
+msgid "PHUSTR_28"
+msgstr ""
+
+msgid "PHUSTR_29"
+msgstr ""
+
+msgid "PHUSTR_30"
+msgstr ""
+
+msgid "PHUSTR_31"
+msgstr ""
+
+msgid "PHUSTR_32"
+msgstr ""
+
+msgid "THUSTR_1"
+msgstr ""
+
+msgid "THUSTR_2"
+msgstr ""
+
+msgid "THUSTR_3"
+msgstr ""
+
+msgid "THUSTR_4"
+msgstr ""
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr ""
+
+msgid "THUSTR_6"
+msgstr ""
+
+msgid "THUSTR_7"
+msgstr ""
+
+msgid "THUSTR_8"
+msgstr ""
+
+msgid "THUSTR_9"
+msgstr ""
+
+msgid "THUSTR_10"
+msgstr ""
+
+msgid "THUSTR_11"
+msgstr ""
+
+msgid "THUSTR_12"
+msgstr ""
+
+msgid "THUSTR_13"
+msgstr ""
+
+msgid "THUSTR_14"
+msgstr ""
+
+msgid "THUSTR_15"
+msgstr ""
+
+msgid "THUSTR_16"
+msgstr ""
+
+msgid "THUSTR_17"
+msgstr ""
+
+msgid "THUSTR_18"
+msgstr ""
+
+msgid "THUSTR_19"
+msgstr ""
+
+msgid "THUSTR_20"
+msgstr ""
+
+msgid "THUSTR_21"
+msgstr ""
+
+msgid "THUSTR_22"
+msgstr ""
+
+msgid "THUSTR_23"
+msgstr ""
+
+msgid "THUSTR_24"
+msgstr ""
+
+msgid "THUSTR_25"
+msgstr ""
+
+msgid "THUSTR_26"
+msgstr ""
+
+msgid "THUSTR_27"
+msgstr ""
+
+msgid "THUSTR_28"
+msgstr ""
+
+msgid "THUSTR_29"
+msgstr ""
+
+msgid "THUSTR_30"
+msgstr ""
+
+msgid "THUSTR_31"
+msgstr ""
+
+msgid "THUSTR_32"
+msgstr ""
+
+msgid "HHUSTR_E1M1"
+msgstr ""
+
+msgid "HHUSTR_E1M2"
+msgstr ""
+
+msgid "HHUSTR_E1M3"
+msgstr ""
+
+msgid "HHUSTR_E1M4"
+msgstr ""
+
+msgid "HHUSTR_E1M5"
+msgstr ""
+
+msgid "HHUSTR_E1M6"
+msgstr ""
+
+msgid "HHUSTR_E1M7"
+msgstr ""
+
+msgid "HHUSTR_E1M8"
+msgstr ""
+
+msgid "HHUSTR_E1M9"
+msgstr ""
+
+msgid "HHUSTR_E2M1"
+msgstr ""
+
+msgid "HHUSTR_E2M2"
+msgstr ""
+
+msgid "HHUSTR_E2M3"
+msgstr ""
+
+msgid "HHUSTR_E2M4"
+msgstr ""
+
+msgid "HHUSTR_E2M5"
+msgstr ""
+
+msgid "HHUSTR_E2M6"
+msgstr ""
+
+msgid "HHUSTR_E2M7"
+msgstr ""
+
+msgid "HHUSTR_E2M8"
+msgstr ""
+
+msgid "HHUSTR_E2M9"
+msgstr ""
+
+msgid "HHUSTR_E3M1"
+msgstr ""
+
+msgid "HHUSTR_E3M2"
+msgstr ""
+
+msgid "HHUSTR_E3M3"
+msgstr ""
+
+msgid "HHUSTR_E3M4"
+msgstr ""
+
+msgid "HHUSTR_E3M5"
+msgstr ""
+
+msgid "HHUSTR_E3M6"
+msgstr ""
+
+msgid "HHUSTR_E3M7"
+msgstr ""
+
+msgid "HHUSTR_E3M8"
+msgstr ""
+
+msgid "HHUSTR_E3M9"
+msgstr ""
+
+msgid "HHUSTR_E4M1"
+msgstr ""
+
+msgid "HHUSTR_E4M2"
+msgstr ""
+
+msgid "HHUSTR_E4M3"
+msgstr ""
+
+msgid "HHUSTR_E4M4"
+msgstr ""
+
+msgid "HHUSTR_E4M5"
+msgstr ""
+
+msgid "HHUSTR_E4M6"
+msgstr ""
+
+msgid "HHUSTR_E4M7"
+msgstr ""
+
+msgid "HHUSTR_E4M8"
+msgstr ""
+
+msgid "HHUSTR_E4M9"
+msgstr ""
+
+msgid "HHUSTR_E5M1"
+msgstr ""
+
+msgid "HHUSTR_E5M2"
+msgstr ""
+
+msgid "HHUSTR_E5M3"
+msgstr ""
+
+msgid "HHUSTR_E5M4"
+msgstr ""
+
+msgid "HHUSTR_E5M5"
+msgstr ""
+
+msgid "HHUSTR_E5M6"
+msgstr ""
+
+msgid "HHUSTR_E5M7"
+msgstr ""
+
+msgid "HHUSTR_E5M8"
+msgstr ""
+
+msgid "HHUSTR_E5M9"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP01"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP02"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP03"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP04"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP05"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP06"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP07"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP08"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP09"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP10"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP11"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP12"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP13"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP14"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP15"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP16"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP17"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP18"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP19"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP20"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP21"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP22"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP23"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP24"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP25"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP26"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP27"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP28"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP29"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP30"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP31"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP32"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP33"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP34"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP35"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP36"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP37"
+msgstr ""
+
+msgid "TXT_STRIFE_MAP38"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP01"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP02"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP03"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP04"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP05"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP06"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP13"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP08"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP09"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP10"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP11"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP12"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP27"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP28"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP30"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP31"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP32"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP33"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP34"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP21"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP22"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP23"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP24"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP25"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP26"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP35"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP36"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP37"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP38"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP39"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP40"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP41"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP42"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP43"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP44"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP45"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP46"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP47"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP48"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP49"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP50"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP51"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP52"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP53"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP54"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP55"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP56"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP57"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP58"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP59"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP60"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP33"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP34"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP35"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP36"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP37"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP38"
+msgstr ""
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr ""
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr ""
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr ""
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr ""
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr ""
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr ""
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr ""
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr ""
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr ""
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr ""
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr ""
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr ""
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr ""
+
+# Yellow needs better translation
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr ""
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr ""
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr ""
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr ""
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr ""
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr ""
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr ""
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr ""
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr ""
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr ""
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr ""
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr ""
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr ""
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr ""
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr ""
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr ""
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr ""
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr ""
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr ""
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr ""
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr ""
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr ""
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr ""
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr ""
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr ""
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr ""
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr ""
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr ""
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr ""
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr ""
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr ""
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr ""
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr ""
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr ""
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr ""
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr ""
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr ""
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr ""
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr ""
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr ""
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr ""
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr ""
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr ""
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr ""
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr ""
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr ""
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr ""
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr ""
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr ""
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr ""
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr ""
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr ""
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr ""
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr ""
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr ""
+
+# 〃 (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr ""
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr ""
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr ""
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr ""
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr ""
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr ""
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr ""
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr ""
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr ""
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr ""
+
+# 〃
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr ""
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr ""
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr ""
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr ""
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr ""
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr ""
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr ""
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr ""
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr ""
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr ""
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr ""
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr ""
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr ""
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr ""
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr ""
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr ""
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr ""
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr ""
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr ""
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr ""
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr ""
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr ""
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr ""
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr ""
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr ""
+
+# 〃
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr ""
+
+# 〃
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr ""
+
+# 〃
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr ""
+
+# 〃
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr ""
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr ""
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr ""
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr ""
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr ""
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr ""
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr ""
+
+# 〃 (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr ""
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr ""
+
+# 〃 (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr ""
+
+# 〃 (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr ""
+
+# 〃 (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr ""
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr ""
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr ""
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr ""
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr ""
+
+# 〃 (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr ""
+
+# 〃 (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr ""
+
+# 〃 (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr ""
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr ""
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr ""
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr ""
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr ""
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr ""
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr ""
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr ""
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr ""
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr ""
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr ""
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr ""
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr ""
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr ""
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr ""
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr ""
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr ""
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr ""
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr ""
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr ""
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr ""
+
+# 〃
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr ""
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr ""
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr ""
+
+# 〃 (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr ""
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr ""
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr ""
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr ""
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr ""
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr ""
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr ""
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr ""
+
+# 〃
+# 
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr ""
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr ""
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr ""
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr ""
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr ""
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr ""
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr ""
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr ""
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr ""
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr ""
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr ""
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr ""
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr ""
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr ""
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr ""
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr ""
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr ""
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr ""
+
+# 〃 (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr ""
+
+# 〃 (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr ""
+
+# 〃 (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr ""
+
+# 〃 (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr ""
+
+# 〃 (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr ""
+
+# 〃 (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr ""
+
+# 〃 (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr ""
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr ""
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr ""
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr ""
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr ""
+
+# 〃 (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr ""
+
+# 〃 (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr ""
+
+# 〃 (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr ""
+
+# 〃 (〃)
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr ""
+
+# 〃 (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr ""
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr ""
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr ""
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr ""
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr ""
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr ""
+
+# 〃 (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr ""
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr ""
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr ""
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr ""
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr ""
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr ""
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr ""
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr ""
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr ""
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr ""
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr ""
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr ""
+
+# 〃
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr ""
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr ""
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr ""
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr ""
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr ""
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr ""
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr ""
+
+# 〃 (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr ""
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr ""
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr ""
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr ""
+
+# 〃
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr ""
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr ""
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr ""
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr ""
+
+# 〃 (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr ""
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr ""
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr ""
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr ""
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr ""
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr ""
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr ""
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr ""
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr ""
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr ""
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr ""
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr ""
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr ""
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr ""
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr ""
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr ""
+
+# 〃 (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr ""
+
+# 〃 (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr ""
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr ""
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr ""
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr ""
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr ""
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr ""
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr ""
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr ""
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr ""
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr ""
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr ""
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr ""
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr ""
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr ""
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr ""
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr ""
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr ""
+
+# 〃 (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr ""
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr ""
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr ""
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr ""
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr ""
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr ""
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr ""
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr ""
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr ""
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr ""
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr ""
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr ""
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr ""
+
+# 〃
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr ""
+
+# 〃
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr ""
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr ""
+
+# 〃
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr ""
+
+# 〃
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr ""
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr ""
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr ""
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr ""
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr ""
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr ""
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr ""
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr ""
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr ""
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr ""
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr ""
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr ""
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr ""
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr ""
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr ""
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr ""
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr ""
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr ""
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr ""
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr ""
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr ""
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr ""
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr ""
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr ""
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr ""
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr ""
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr ""
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr ""
+
+msgid "TXT_ILOG22"
+msgstr ""
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr ""
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr ""
+
+# 〃
+msgid "TXT_ILOG26"
+msgstr ""
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr ""
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr ""
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr ""
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr ""
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr ""
+
+msgid "TXT_ILOG46"
+msgstr ""
+
+msgid "TXT_ILOG47"
+msgstr ""
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr ""
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr ""
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr ""
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr ""
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr ""
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr ""
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr ""
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr ""
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr ""
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr ""
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr ""
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr ""
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr ""
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr ""
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr ""
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr ""
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr ""
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr ""
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr ""
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr ""
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr ""
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr ""
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr ""
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr ""
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr ""
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr ""
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr ""
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr ""
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr ""
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr ""
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr ""
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr ""
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr ""
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr ""
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr ""
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr ""
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr ""
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr ""
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr ""
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr ""
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr ""
+
+msgid "TXT_ILOG1015"
+msgstr ""
+
+msgid "TXT_ILOG1016"
+msgstr ""
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr ""
+
+msgid "TXT_ILOG1018"
+msgstr ""
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr ""
+
+msgid "TXT_ILOG1020"
+msgstr ""
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr ""
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr ""
+
+msgid "TXT_ILOG1023"
+msgstr ""
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr ""
+
+msgid "TXT_ILOG1025"
+msgstr ""
+
+msgid "TXT_ILOG1026"
+msgstr ""
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr ""
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr ""
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr ""
+
+msgid "TXT_ILOG1101"
+msgstr ""
+
+msgid "TXT_ILOG1102"
+msgstr ""
+
+msgid "TXT_ILOG1201"
+msgstr ""
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr ""
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr ""
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr ""
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr ""
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr ""
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr ""
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr ""
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr ""
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr ""
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr ""
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr ""
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr ""
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr ""
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr ""
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr ""
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr ""
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr ""
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr ""
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr ""
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr ""
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr ""
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr ""
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr ""
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr ""
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr ""
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr ""
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr ""
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr ""
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr ""
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr ""
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr ""
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr ""
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr ""
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr ""
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr ""
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr ""
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr ""
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr ""
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr ""
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr ""
+
+# Intended to appear in MAP19, but does not spawn.
+# 
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr ""
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr ""
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr ""
+
+msgid "TXT_SPEAKER_ARION"
+msgstr ""
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr ""
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr ""
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr ""
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr ""
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr ""
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr ""
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr ""
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr ""
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr ""
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr ""
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO3"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO4"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO5"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_GOOD2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_GOOD3"
+msgstr ""
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_SAD2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_SAD3"
+msgstr ""
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_BAD2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_BAD3"
+msgstr ""
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP03_2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP03_3"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP03_4"
+msgstr ""
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP10_2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP10_3"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP10_4"
+msgstr ""
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr ""
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr ""
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr ""
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr ""
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr ""
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr ""
+
+msgid "TXT_SUB_LOG8"
+msgstr ""
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr ""
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr ""
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr ""
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr ""
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr ""
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr ""
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr ""
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr ""
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr ""
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr ""
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr ""
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr ""
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr ""
+
+msgid "TXT_SUB_LOG22"
+msgstr ""
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr ""
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_LOG26"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_LOG27"
+msgstr ""
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr ""
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr ""
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr ""
+
+msgid "TXT_SUB_LOG31"
+msgstr ""
+
+msgid "TXT_SUB_LOG32"
+msgstr ""
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr ""
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr ""
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr ""
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr ""
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr ""
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr ""
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr ""
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr ""
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr ""
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr ""
+
+msgid "TXT_SUB_LOG43"
+msgstr ""
+
+msgid "TXT_SUB_LOG44"
+msgstr ""
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr ""
+
+msgid "TXT_SUB_LOG46"
+msgstr ""
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr ""
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr ""
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr ""
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr ""
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr ""
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr ""
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr ""
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr ""
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr ""
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr ""
+
+msgid "TXT_SUB_LOG58"
+msgstr ""
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr ""
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr ""
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr ""
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr ""
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr ""
+
+msgid "TXT_SUB_LOG65"
+msgstr ""
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr ""
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr ""
+
+msgid "TXT_SUB_LOG68"
+msgstr ""
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr ""
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr ""
+
+msgid "TXT_SUB_LOG71"
+msgstr ""
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr ""
+
+msgid "TXT_SUB_LOG73"
+msgstr ""
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr ""
+
+msgid "TXT_SUB_LOG75"
+msgstr ""
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr ""
+
+msgid "TXT_SUB_LOG77"
+msgstr ""
+
+msgid "TXT_SUB_LOG78"
+msgstr ""
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr ""
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr ""
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr ""
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr ""
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr ""
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr ""
+
+# STRIFE1.WAD: MAP12
+# 
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+# 
+# OR
+# 
+# MAP27
+# 
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr ""
+
+msgid "TXT_SUB_LOG86"
+msgstr ""
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr ""
+
+msgid "TXT_SUB_LOG88"
+msgstr ""
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr ""
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr ""
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr ""
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr ""
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr ""
+
+msgid "TXT_SUB_LOG94"
+msgstr ""
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr ""
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr ""
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr ""
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr ""
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr ""
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr ""
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr ""
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr ""
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr ""
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr ""
+
+msgid "TXT_SUB_LOG105"
+msgstr ""
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr ""
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr ""
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr ""
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr ""
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr ""
+
+msgid "TXT_SUB_LOG200"
+msgstr ""
+
+msgid "TXT_SUB_LOG201"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr ""
+
+msgid "TXT_SUB_LOG203"
+msgstr ""
+
+msgid "TXT_SUB_LOG204"
+msgstr ""
+
+msgid "TXT_SUB_LOG205"
+msgstr ""
+
+msgid "TXT_SUB_LOG206"
+msgstr ""
+
+msgid "TXT_SUB_LOG207"
+msgstr ""
+
+msgid "TXT_SUB_LOG208"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr ""
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr ""
+
+msgid "TXT_SUB_LOG212"
+msgstr ""
+
+msgid "TXT_SUB_LOG213"
+msgstr ""
+
+msgid "TXT_SUB_LOG214"
+msgstr ""
+
+msgid "TXT_SUB_LOG215"
+msgstr ""
+
+msgid "TXT_SUB_LOG216"
+msgstr ""
+
+msgid "TXT_SUB_LOG217"
+msgstr ""
+
+msgid "TXT_SUB_LOG218"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr ""
+
+msgid "TXT_SUB_LOG220"
+msgstr ""
+
+msgid "TXT_SUB_LOG221"
+msgstr ""
+
+msgid "TXT_SUB_LOG222"
+msgstr ""
+
+msgid "TXT_SUB_LOG223"
+msgstr ""
+
+msgid "TXT_SUB_LOG224"
+msgstr ""
+
+msgid "TXT_SUB_LOG225"
+msgstr ""
+
+msgid "TXT_SUB_LOG226"
+msgstr ""
+
+msgid "TXT_SUB_LOG227"
+msgstr ""
+
+msgid "TXT_SUB_LOG228"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr ""
+
+msgid "TXT_SUB_LOG231"
+msgstr ""
+
+msgid "TXT_SUB_LOG232"
+msgstr ""
+
+msgid "TXT_SUB_LOG233"
+msgstr ""
+
+msgid "TXT_SUB_LOG234"
+msgstr ""
+
+msgid "TXT_SUB_LOG235"
+msgstr ""
+
+msgid "TXT_SUB_LOG236"
+msgstr ""
+
+msgid "TXT_SUB_LOG237"
+msgstr ""
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr ""
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr ""
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr ""
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr ""
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr ""
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr ""
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr ""
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr ""
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr ""
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr ""
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr ""
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr ""
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr ""
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr ""

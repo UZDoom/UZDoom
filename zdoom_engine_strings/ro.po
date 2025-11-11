@@ -1,0 +1,5251 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ro\n"
+
+msgid "PRESSKEY"
+msgstr "Apasă o tastă."
+
+msgid "SECRETMESSAGE"
+msgstr "Ai găsit un secret!"
+
+msgid "D_DEVSTR"
+msgstr "Modul inutil ACTIVAT."
+
+msgid "QUITMSG"
+msgstr "Ești sigur că vrei să ieși dintr-un joc atât de grozav?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Nu poți face o încărcare în timpul unui joc în rețea!\n"
+"\n"
+"Apasă orice tastă."
+
+msgid "QLOADNET"
+msgstr ""
+"Nu poți face o încărcare rapidă în timpul unui joc\n"
+"în rețea!\n"
+"\n"
+"Apasă orice tastă."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Nu ai ales un slot pentru încărcare rapidă încă!\n"
+"\n"
+"Apasă orice tastă."
+
+msgid "NEWGAME"
+msgstr ""
+"Nu poți începe un joc nou în timpul unui joc în\n"
+"rețea.\n"
+"\n"
+"Apasă orice tastă."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Ești sigur? Nivelul ăsta de dificultate nu e nici pe\n"
+"departe corect.\n"
+"\n"
+"Apasă Y sau N."
+
+msgid "SWSTRING"
+msgstr ""
+"Asta e versiunea gratuită a jocului Doom.\n"
+"\n"
+"Trebuie să comanzi întreaga trilogie.\n"
+"\n"
+"Apasă orice tastă."
+
+msgid "NETEND"
+msgstr ""
+"Nu poți încheia brusc o sesiune în rețea!\n"
+"\n"
+"Apasă orice tastă."
+
+msgid "ENDGAME"
+msgstr ""
+"Ești sigur că dorești să închei jocul?\n"
+"\n"
+"Apasă Y sau N."
+
+msgid "RAVENQUITMSG"
+msgstr "Ești sigur că vrei să ieși din joc?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Disponibil doar în versiunea înregistrată."
+
+msgid "DOSY"
+msgstr "(Apasă Y pentru a ieși)"
+
+msgid "QUITMSG1"
+msgstr "Te rog nu ieși, mai sunt demoni care trebuie prăjiți!"
+
+msgid "QUITMSG2"
+msgstr "S-o lăsăm baltă -- se iscă un masacru!"
+
+msgid "QUITMSG3"
+msgstr ""
+"Eu n-aș pleca în locul tău - sistemul DOS e mult \n"
+"mai rău."
+
+msgid "QUITMSG4"
+msgstr ""
+"Încerci să spui că-ți place sistemul DOS mai mult\n"
+"decât de mine, așa-i?"
+
+msgid "QUITMSG5"
+msgstr "Nu pleca încă -- e un demon după colț!"
+
+msgid "QUITMSG6"
+msgstr "Să știi, data viitoare când treci pe-aici o să te prăjesc!"
+
+msgid "QUITMSG7"
+msgstr "Ia hai, pleacă, vezi dacă-mi pasă."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"Te gândești serios să ieși?\n"
+"Ai ratat ceva important!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Nu pleca acum, e un monstru interdimensional care\n"
+"te așteaptă la fereastra DOS!"
+
+msgid "QUITMSG10"
+msgstr ""
+"Cară-te de aici și întoarce-te la programele tale\n"
+"plictisitoare."
+
+msgid "QUITMSG11"
+msgstr ""
+"Dacă eram șeful tău, te-aș fi luat la o rundă de \n"
+"deathmatch!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Uite, amice, pleci acum și renunți la numărul de\n"
+"cadavre!"
+
+msgid "QUITMSG13"
+msgstr ""
+"Doar pleacă. Când te întorci o să te aștept cu o\n"
+"bâtă."
+
+msgid "QUITMSG14"
+msgstr ""
+"Ai noroc că nu-ți trag una pentru că te gândești să\n"
+"pleci."
+
+msgid "QUITMSG15"
+msgstr ""
+"Unde pleci?!\n"
+"Cu rebeliunea cum rămâne?"
+
+msgid "QUITMSG16"
+msgstr ""
+"Carnagiu întrerupt...\n"
+"Ce mai tachinare!"
+
+msgid "QUITMSG17"
+msgstr ""
+"Dar tu ești speranța\n"
+"-- singura mea șansă!!"
+
+msgid "QUITMSG18"
+msgstr "Nimeni n-a scăpat vreodată de Mierla."
+
+msgid "QUITMSG19"
+msgstr "Am crezut că tu ești diferit..."
+
+msgid "QUITMSG20"
+msgstr "Fie! Omoară și fugi!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Poți să ieși...\n"
+"dar nu te poți ascunde..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Ceee, ce s-a întâmplat?\n"
+"Mami zice că e timpul pentru cină?"
+
+msgid "QUITMSG23"
+msgstr "Nu ieși acum, încă mai sunt flemoizi liberi!"
+
+msgid "QUITMSG24"
+msgstr "Nu renunța - flemoizii vor avea avantajul!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Nu pleca.\n"
+"Avem nevoie de ajutorul tău!"
+
+msgid "QUITMSG26"
+msgstr ""
+"Sper că iei doar o pauză cu un bol de cereale \n"
+"Chex(R)."
+
+msgid "QUITMSG27"
+msgstr ""
+"Nu abandona acum!\n"
+"Avem nevoie de ajutorul tău!"
+
+msgid "QUITMSG28"
+msgstr "Nu abandona Federația Intergalactică a Cerealelor!"
+
+msgid "QUITMSG29"
+msgstr ""
+"Adevăratul Luptător Chex(R) nu s-ar da bătut atât\n"
+"de ușor!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Ai ridicat un obiect"
+
+msgid "PD_ANY"
+msgstr "Orice cheie va deschide ușa."
+
+msgid "PD_ANYOBJ"
+msgstr "Orice cheie va activa obiectul."
+
+msgid "PD_ALL3"
+msgstr "Ai nevoie de cele trei chei pentru a deschide ușa."
+
+msgid "PD_ALL3O"
+msgstr "Ai nevoie de cele trei chei pentru a activa obiectul."
+
+msgid "PD_ALL6"
+msgstr "Ai nevoie de cele șase chei pentru a deschide ușa."
+
+msgid "PD_ALL6O"
+msgstr "Ai nevoie de cele șase chei pentru a activa obiectul."
+
+msgid "PD_ALLKEYS"
+msgstr "Ai nevoie de toate cheile."
+
+msgid "HUSTR_MSGU"
+msgstr "[Mesaj netrimis]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Vorbești singur"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Cine-i acolo?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Te speri singur"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Începi să aiurezi"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Ai luat-o pe ulei..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Mesaj Trimis]"
+
+msgid "STSTR_MUS"
+msgstr "Schimbă Muzica"
+
+msgid "STSTR_NOMUS"
+msgstr "Selecție Imposibilă"
+
+msgid "STSTR_DQDON"
+msgstr "Modul Invincibil PORNIT"
+
+msgid "STSTR_DQDOFF"
+msgstr "Modul Invincibil OPRIT"
+
+msgid "STSTR_DQD2ON"
+msgstr "Analfabetismul total este PORNIT"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Analfabetismul total este OPRIT"
+
+msgid "STSTR_KFAADDED"
+msgstr "Muniția pentru fericire a fost reumplută"
+
+msgid "STSTR_FAADDED"
+msgstr "Muniție reîncărcată (fără chei)"
+
+msgid "STSTR_NCON"
+msgstr "Modul fără Coliziune PORNIT"
+
+msgid "STSTR_NCOFF"
+msgstr "Modul fără Coliziune OPRIT"
+
+msgid "STSTR_NC2ON"
+msgstr "Modul fără Coliziune 2 PORNIT"
+
+msgid "STSTR_NC2OFF"
+msgstr "Modul fără Coliziune 2 OPRIT"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr ""
+"InVinc, Neb, Invizib, HaComp, sau \n"
+"Ved-Amp"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Abilitate Comutată"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...nu e de rahat - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Schimbare Hartă..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Modul Buddha PORNIT"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Modul Buddha OPRIT"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Modul Buddha Suprem PORNIT"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Modul Buddha Suprem OPRIT"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Putere activată"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Putere dezactivată"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Sănătate întreagă"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Toate cheile"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Debug sunet activat"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Debug sunet dezactivat"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Încerci să trișezi, ei? Acum mori!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Trișor - Nu meriți arme"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Ticăitoare activată"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Ticăitoare dezactivată"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Ai ce trebuie"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Ai Atingerea lui Midas, dragule"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Ai tot ce-ți trebuie!"
+
+msgid "TXT_FREEZEON"
+msgstr "Modul înghețat pornit"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Modul înghețat oprit"
+
+msgid "TXT_STRANGE"
+msgstr "Te simți ciudat..."
+
+msgid "TXT_STRANGER"
+msgstr "Te simți și mai ciudat."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Ți-ai revenit în simțiri."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Bocanci de plumb activați"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Bocanci de plumb dezactivați"
+
+msgid "TXT_LIGHTER"
+msgstr "Te simți mai ușor"
+
+msgid "TXT_GRAVITY"
+msgstr "Gravitația te trage în jos"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Modul Ascuns PORNIT"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Modul Ascuns OPRIT"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "\"Tremură de Frică!\""
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Gata cu Armura de Căpcăun"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Perspectivă la Persoana a 3-a PORNITĂ"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Perspectivă la Persoana a 3-a OPRITĂ"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 slab ucis"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d slabi uciși"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 monstru ucis"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d monștri uciși"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "Imposibil de înviat. Jucătorul nu mai e conectat la cadavru."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Toate Artefactele!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Ce vrei să ucizi în afara jocului?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Proprietăți jucători înghețați DEZACTIVATE"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Mod Urmărire OPRIT"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Mod Urmărire PORNIT"
+
+msgid "AMSTR_GRIDON"
+msgstr "Grilă ACTIVATĂ"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Grilă DEZACTIVATĂ"
+
+msgid "AMSTR_TEXON"
+msgstr "Modul Texturat ACTIVAT"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Modul Netexturat DEZACTIVAT"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Loc Marcat"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Toate Marcajele Șterse"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Limită de ucideri atinsă."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Limită de timp atinsă."
+
+msgid "SPREEKILLSELF"
+msgstr "%o se descurca bine până s-a sinucis!"
+
+msgid "SPREEOVER"
+msgstr "Masacrul lui %o a fost întrerupt de %k"
+
+msgid "SPREE5"
+msgstr "%k are chef de ucis!"
+
+msgid "SPREE10"
+msgstr "%k e înverșunat!"
+
+msgid "SPREE15"
+msgstr "%k domină!"
+
+msgid "SPREE20"
+msgstr "%k e de neoprit!"
+
+msgid "SPREE25"
+msgstr "%k e precum un Zeu!"
+
+msgid "MULTI2"
+msgstr "Dublă ucidere!"
+
+msgid "MULTI3"
+msgstr "Ucidere multiplă!"
+
+msgid "MULTI4"
+msgstr "Ultra ucidere!"
+
+msgid "MULTI5"
+msgstr "Ucidere monstruoasă!"
+
+msgid "SCORE_BONUS"
+msgstr ""
+
+msgid "SCORE_COLOR"
+msgstr "Culoare"
+
+msgid "SCORE_SECRET"
+msgstr ""
+
+msgid "SCORE_NAME"
+msgstr "Nume"
+
+msgid "SCORE_DELAY"
+msgstr "Întârziere (ms)"
+
+msgid "SCORE_FRAGS"
+msgstr "Victime"
+
+msgid "SCORE_DEATHS"
+msgstr "Decese"
+
+msgid "SCORE_OTHER"
+msgstr "Altele"
+
+msgid "SCORE_MISSED"
+msgstr "Omise"
+
+msgid "SCORE_TOTAL"
+msgstr ""
+
+msgid "SCORE_LVLTIME"
+msgstr "Timp Petrecut"
+
+msgid "TXT_IMKILLS"
+msgstr "Ucideri"
+
+msgid "TXT_IMITEMS"
+msgstr "Obiecte"
+
+msgid "TXT_IMSECRETS"
+msgstr "Secrete"
+
+msgid "TXT_IMTIME"
+msgstr "Timp"
+
+msgid "TXT_IMPAR"
+msgstr "Record"
+
+msgid "WI_FINISHED"
+msgstr "Încheiat"
+
+msgid "WI_ENTERING"
+msgstr "Începe"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Acum începe:"
+
+msgid "AM_MONSTERS"
+msgstr "Monștri:"
+
+msgid "AM_SECRETS"
+msgstr "Secrete:"
+
+msgid "AM_ITEMS"
+msgstr "Obiecte:"
+
+msgid "OB_SUICIDE"
+msgstr "%o se sinucide."
+
+msgid "OB_FALLING"
+msgstr "%o a căzut prea departe."
+
+msgid "OB_CRUSH"
+msgstr "%o a fost strivit."
+
+msgid "OB_EXIT"
+msgstr "%o a încercat să plece."
+
+msgid "OB_WATER"
+msgstr "%o nu poate înota."
+
+msgid "OB_SLIME"
+msgstr "%o a făcut o mutație."
+
+msgid "OB_LAVA"
+msgstr "%o s-a topit."
+
+msgid "OB_BARREL"
+msgstr "%o a explodat."
+
+msgid "OB_SPLASH"
+msgstr "%o a stat în locul nepotrivit."
+
+msgid "OB_R_SPLASH"
+msgstr "%o ar fi trebuit să stea deoparte."
+
+msgid "OB_ROCKET"
+msgstr "%o ar fi trebuit să stea deoparte."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o s-a sinucis."
+
+msgid "OB_VOODOO"
+msgstr "%o a fost omorât prin voodoo."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o a fost omorât prin teleportare de către %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o a fost omorât prin teleportare."
+
+msgid "OB_DEFAULT"
+msgstr "%o a murit."
+
+msgid "OB_MPDEFAULT"
+msgstr "%o a fost omorât de către %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k face pulbere un coechipier."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k pare să aibă nevoie de ochelari."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k face o victimă pentru echipa adversă."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k mai pierde un prieten."
+
+msgid "GOTARMOR"
+msgstr "Ai ridicat armura."
+
+msgid "GOTMEGA"
+msgstr "Ai ridicat MegaArmura!"
+
+msgid "GOTHTHBONUS"
+msgstr "Ai ridicat un bonus de sănătate."
+
+msgid "GOTARMBONUS"
+msgstr "Ai ridicat un bonus de armură."
+
+msgid "GOTSTIM"
+msgstr "Ai ridicat un kit de prim-ajutor mic."
+
+msgid "GOTMEDINEED"
+msgstr ""
+"Ai ridicat un kit de prim-ajutor de care CHIAR aveai\n"
+"nevoie!"
+
+msgid "GOTMEDIKIT"
+msgstr "Ai ridicat un kit de prim-ajutor."
+
+msgid "GOTSUPER"
+msgstr "Superîncărcătură!"
+
+msgid "GOTBLUECARD"
+msgstr "Ai ridicat un card albastru."
+
+msgid "GOTYELWCARD"
+msgstr "Ai ridicat un card galben."
+
+msgid "GOTREDCARD"
+msgstr "Ai ridicat un card roșu."
+
+msgid "GOTBLUESKUL"
+msgstr "Ai ridicat un craniu albastru."
+
+msgid "GOTYELWSKUL"
+msgstr "Ai ridicat un craniu galben."
+
+msgid "GOTREDSKUL"
+msgstr "Ai ridicat un craniu roșu."
+
+msgid "GOTINVUL"
+msgstr "Invincibilitate!"
+
+msgid "GOTBERSERK"
+msgstr "Nebunie!"
+
+msgid "GOTINVIS"
+msgstr "Invizibilitate Parțială"
+
+msgid "GOTSUIT"
+msgstr "Costum de Protecție împotriva Radiațiilor"
+
+msgid "GOTMAP"
+msgstr "Hartă Completă"
+
+msgid "GOTVISOR"
+msgstr "Vedere Amplificată"
+
+msgid "GOTMSPHERE"
+msgstr "MegaSferă!"
+
+msgid "GOTCLIP"
+msgstr "Ai ridicat un cartuș."
+
+msgid "GOTCLIPBOX"
+msgstr "Ai ridicat o cutie de gloanțe."
+
+msgid "GOTROCKET"
+msgstr "Ai ridicat o rachetă."
+
+msgid "GOTROCKBOX"
+msgstr "Ai ridicat o cutie de rachete."
+
+msgid "GOTCELL"
+msgstr "Ai ridicat o celulă de energie."
+
+msgid "GOTCELLBOX"
+msgstr "Ai ridicat un pachet de celule de energie."
+
+msgid "GOTSHELLS"
+msgstr "Ai ridicat 4 cartușe de pușcă."
+
+msgid "GOTSHELLBOX"
+msgstr "Ai ridicat muniția de pușcă."
+
+msgid "GOTBACKPACK"
+msgstr "Ai ridicat o raniță plină de muniție!"
+
+msgid "GOTBFG9000"
+msgstr "Ai pus mâna pe BFG9000! Oh, da."
+
+msgid "GOTCHAINGUN"
+msgstr "Ai pus mâna pe mitraliera rotativă!"
+
+msgid "GOTCHAINSAW"
+msgstr "Drujbă! Găsește niște carne!"
+
+msgid "GOTLAUNCHER"
+msgstr "Ai pus mâna pe lansatorul de rachete!"
+
+msgid "GOTPLASMA"
+msgstr "Ai pus mâna pe arma cu plasmă!"
+
+msgid "GOTSHOTGUN"
+msgstr "Ai pus mâna pe pușcă!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Ai pus mâna pe super pușcă!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Ai ridicat un pistol."
+
+msgid "BETA_BONUS1"
+msgstr "Ai ridicat un pumnal demonic."
+
+msgid "BETA_BONUS2"
+msgstr "Ai ridicat o cutie cu craniu."
+
+msgid "BETA_BONUS3"
+msgstr "Ai ridicat un sceptru malefic."
+
+msgid "BETA_BONUS4"
+msgstr "Ai ridicat o biblie profană."
+
+msgid "PD_BLUEO"
+msgstr "Ai nevoie de o cheie albastră pentru a activa obiectul"
+
+msgid "PD_REDO"
+msgstr "Ai nevoie de o cheie roșie pentru a activa obiectul"
+
+msgid "PD_YELLOWO"
+msgstr "Ai nevoie de o cheie galbenă pentru a activa obiectul"
+
+msgid "PD_BLUEK"
+msgstr "Ai nevoie de o cheie albastră pentru a deschide ușa"
+
+msgid "PD_REDK"
+msgstr "Ai nevoie de o cheie roșie pentru a deschide ușa"
+
+msgid "PD_YELLOWK"
+msgstr "Ai nevoie de o cheie galbena pentru a deschide ușa"
+
+msgid "PD_BLUECO"
+msgstr "Ai nevoie de un card albastru pentru a activa obiectul"
+
+msgid "PD_REDCO"
+msgstr "Ai nevoie de un card roșu pentru a activa obiectul"
+
+msgid "PD_YELLOWCO"
+msgstr "Ai nevoie de un card galben pentru a activa obiectul"
+
+msgid "PD_BLUESO"
+msgstr "Ai nevoie de un craniu albastru pentru a activa obiectul"
+
+msgid "PD_REDSO"
+msgstr "Ai nevoie de un craniu roșu pentru a activa obiectul"
+
+msgid "PD_YELLOWSO"
+msgstr "Ai nevoie de un craniu galben pentru a activa obiectul"
+
+msgid "PD_BLUEC"
+msgstr "Ai nevoie de un card albastru pentru a activa ușa"
+
+msgid "PD_REDC"
+msgstr "Ai nevoie de un card galben pentru a activa ușa"
+
+msgid "PD_YELLOWC"
+msgstr "Ai nevoie de un card galben pentru a activa ușa"
+
+msgid "PD_BLUES"
+msgstr "Ai nevoie de un craniu albastru pentru a activa ușa"
+
+msgid "PD_REDS"
+msgstr "Ai nevoie de un craniu roșu pentru a activa ușa"
+
+msgid "PD_YELLOWS"
+msgstr "Ai nevoie de un craniu galben pentru a activa ușa"
+
+msgid "CC_ZOMBIE"
+msgstr "Zombi"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Pușcaș"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Mitralior"
+
+msgid "CC_IMP"
+msgstr "Drac"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Suflet Pierdut"
+
+msgid "CC_CACO"
+msgstr "Cacodemon"
+
+msgid "CC_HELL"
+msgstr "Cavaler al Infernului"
+
+msgid "CC_BARON"
+msgstr "Baron al Infernului"
+
+msgid "CC_ARACH"
+msgstr "Aracnotron"
+
+msgid "CC_PAIN"
+msgstr "Elemental al Durerii"
+
+msgid "CC_REVEN"
+msgstr "Nemort"
+
+msgid "CC_MANCU"
+msgstr ""
+
+msgid "CC_ARCH"
+msgstr "Abject"
+
+msgid "CC_SPIDER"
+msgstr "Păianjen Maestru"
+
+msgid "CC_CYBER"
+msgstr "Ciberdemon"
+
+msgid "CC_HERO"
+msgstr "Eroul Nostru"
+
+msgid "FN_SHOTGUN"
+msgstr "Sergent"
+
+msgid "FN_HEAVY"
+msgstr "Mitralior"
+
+msgid "FN_SPECTRE"
+msgstr "Spectru"
+
+msgid "FN_SPIDER"
+msgstr "Păianjen Maestru"
+
+msgid "FN_CYBER"
+msgstr "Ciberdemon"
+
+msgid "FN_WOLFSS"
+msgstr "Nazist"
+
+msgid "FN_DOG"
+msgstr "Câine"
+
+msgid "TAG_FIST"
+msgstr "Rozetă"
+
+msgid "TAG_CHAINSAW"
+msgstr "Drujbă"
+
+msgid "TAG_PISTOL"
+msgstr ""
+
+msgid "TAG_SHOTGUN"
+msgstr "Pușcă"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Super Pușcă"
+
+msgid "TAG_CHAINGUN"
+msgstr "Mitralieră rotativă"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Lansator de Rachete"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Pușcă cu Plasmă"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Gloanțe"
+
+msgid "AMMO_SHELLS"
+msgstr "Cartușe de Pușcă"
+
+msgid "AMMO_ROCKETS"
+msgstr "Rachete"
+
+msgid "AMMO_CELLS"
+msgstr "Celule de Energie"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o a crezut că %g a văzut un aracnotron."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o a crezut că %g a văzut un abject."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o a crezut că %g a văzut un Baron al Infernului."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o a crezut că %g a văzut un cacodemon."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o a crezut că %g a văzut un mitralior."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o a crezut că %g a văzut un demon."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o a crezut că %g a văzut un Cavaler al Infernului."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o a crezut că %g a văzut un drac."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o a crezut că %g a văzut un mancubus."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o a crezut că %g a văzut un nemort."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o a crezut că %g a văzut un sergent."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o a crezut că %g a văzut un zombi."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o a primit un pumn de la nemort."
+
+msgid "OB_IMPHIT"
+msgstr "%o a fost zgâriat de drac."
+
+msgid "OB_CACOHIT"
+msgstr "%o s-a apropiat prea mult de cacodemon."
+
+msgid "OB_DEMONHIT"
+msgstr "%o a fost mușcat de demon."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o a fost mâncat de spectru."
+
+msgid "OB_BARONHIT"
+msgstr "%o a fost despicat de Baronul Infernului."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o a fost măcelărit de Cavalerul Infernului."
+
+msgid "OB_ZOMBIE"
+msgstr "%o a fost omorât de zombi."
+
+msgid "OB_SHOTGUY"
+msgstr "%o a fost împușcat de sergent."
+
+msgid "OB_VILE"
+msgstr "%o a fost incinerat de abject."
+
+msgid "OB_UNDEAD"
+msgstr "%o n-a putut scăpa de mingea de foc a nemortului."
+
+msgid "OB_FATSO"
+msgstr "%o a fost strivit de mancubus."
+
+msgid "OB_CHAINGUY"
+msgstr "%o a fost perforat de mitralior."
+
+msgid "OB_SKULL"
+msgstr "%o s-a speriat de sufletul pierdut."
+
+msgid "OB_IMP"
+msgstr "%o a fost ars de demon."
+
+msgid "OB_CACO"
+msgstr "%o a fost lovit de cacodemon."
+
+msgid "OB_BARON"
+msgstr "%o a primit o contuzie de la Baronul Infernului."
+
+msgid "OB_KNIGHT"
+msgstr "%o a fost zdrobit de Cavalerul Infernului."
+
+msgid "OB_SPIDER"
+msgstr "%o a stat înfricoșat în fața păianjenului maestru."
+
+msgid "OB_BABY"
+msgstr "%o s-a lăsat prins de aracnotron."
+
+msgid "OB_CYBORG"
+msgstr "%o a fost împroșcat de ciberdemon."
+
+msgid "OB_WOLFSS"
+msgstr "%o a întâlnit un Nazist."
+
+msgid "OB_DOG"
+msgstr "%o a fost sfâșiat de câine."
+
+msgid "OB_MPFIST"
+msgstr "%o a mestecat pumnul lui %k."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o a fost feliat de drujba lui %k."
+
+msgid "OB_MPPISTOL"
+msgstr "%o a fost gâdilat de pistolașul lui %k."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o a mușcat pușca lui %k."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o a fost împroșcat de super pușca lui %k."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o a fost secerat de mitraliera rotativă a lui %k."
+
+msgid "OB_MPROCKET"
+msgstr "%o a călărit racheta lui %k."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o aproape evitase racheta lui %k."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o a fost topit de pușca cu plasmă a lui %k."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o a fost sfărâmat de către BFG-ul lui %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o nu s-a putut ascunde de BFG-ul lui %k."
+
+msgid "OB_RAILGUN"
+msgstr "%o a fost ocărit de %k."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o a fost ars de BFG-ul lui %k."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Cheie Albastră"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Cheie Galbenă"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Cheie Verde"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Flacon de Quartz"
+
+msgid "TXT_ARTIFLY"
+msgstr "Aripile Furiei"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Inelul Invincibilității"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Cartea Puterii"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Sfera Umbrei"
+
+msgid "TXT_ARTIEGG"
+msgstr "Oul Metamorfozei"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Urnă Mistică"
+
+msgid "TXT_ARTITORCH"
+msgstr "Torță"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Bombă Veche cu Ceas"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Dispozitivul Haosului"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Fiolă de Cristal"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Poșetă"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Scut de Argint"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Scut Mistic"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Derulare pe Hartă"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Cristal pentru Toiag"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Geodă de Cristal"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Sfere pentru Buzdugan"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Grămadă de Sfere pentru Buzdugan"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Săgeți Celeste"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Tolbă de Săgeți Celeste"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Glob pentru Gheară"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Glob de Energie"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Rune Mici"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Rune Mari"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Glob de Foc"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Glob Infernal"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Toiag de Aur"
+
+msgid "TXT_WPNMACE"
+msgstr "Buzdugan de Foc"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Arbaletă Celestă"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Gheara Dragonului"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Baston Infernal"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Joardă Phoenix"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Mănușile Necromantului"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Ai nevoie de o cheie albastră pentru a deschide ușa"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Ai nevoie de o cheie verde pentru a deschide ușa"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Ai nevoie de o cheie galbenă pentru a deschide ușa"
+
+msgid "FN_CHICKEN"
+msgstr "Găină"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Vârcodragon"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Gheară de Sabie"
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr "Garguie"
+
+msgid "FN_IRONLICH"
+msgstr "Cadavru de Fier"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Războinic Nemort"
+
+msgid "FN_MINOTAUR"
+msgstr ""
+
+msgid "FN_MUMMY"
+msgstr ""
+
+msgid "FN_MUMMYLEADER"
+msgstr ""
+
+msgid "FN_SNAKE"
+msgstr "Ofidian"
+
+msgid "FN_WIZARD"
+msgstr "Vrăjitor"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Cristale pentru Toiag"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Săgeți Celeste"
+
+msgid "AMMO_BLASTER"
+msgstr "Globuri pentru Gheară"
+
+msgid "AMMO_MACE"
+msgstr "Sfere pentru Buzdugan"
+
+msgid "AMMO_SKULLROD"
+msgstr "Rune pentru Bastonul Infernal"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Globuri de Foc"
+
+msgid "TAG_STAFF"
+msgstr "Baston"
+
+msgid "TAG_GOLDWAND"
+msgstr "Toiag"
+
+msgid "OB_CHICKEN"
+msgstr "%o a fost ciocănit până la moarte."
+
+msgid "OB_BEAST"
+msgstr "%o a fost ceruit de vârcodragon."
+
+msgid "OB_CLINK"
+msgstr "%o a fost sfârtecat de gheara de sabie."
+
+msgid "OB_DSPARIL1"
+msgstr "%o a fost opărit de șarpele lui D'Sparil."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o a fost mestecat de șarpele lui D'Sparil."
+
+msgid "OB_DSPARIL2"
+msgstr "%o n-a fost nici pe departe pe măsura lui D'Sparil."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o a fost pus la pământ de D'Sparil."
+
+msgid "OB_HERETICIMP"
+msgstr "%o a fost cicatrizat de garguie."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o a fost făcut felii de garguie."
+
+msgid "OB_IRONLICH"
+msgstr "%o a fost devastat de cadavrul de fier."
+
+msgid "OB_IRONLICHHIT"
+msgstr ""
+"%o s-a apropiat prea mult de un \n"
+"cadavru de fier."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o a primit un topor de la războinicul nemort."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o a fost omorât de războinicul nemort."
+
+msgid "OB_MINOTAUR"
+msgstr "%o a fost transformat în cenușă de Maulotaur."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o a fost descojit de Maulotaur."
+
+msgid "OB_MUMMY"
+msgstr "%o a fost lovit de golem."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o a fost chiuit până la moarte de nitrogolem."
+
+msgid "OB_SNAKE"
+msgstr "%o a fost omorât în bătaie de ofidian."
+
+msgid "OB_WIZARD"
+msgstr "%o a fost blestemat de vrăjitor."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o a fost palpat de vrăjitor."
+
+msgid "OB_MPSTAFF"
+msgstr "%o a fost bastonat de %k."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o a primit un șoc de la mănușile lui %k."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o a facut cu mână toiagului lui %k."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o a fost prins de arbaleta lui %k."
+
+msgid "OB_MPBLASTER"
+msgstr "%o a fost aruncat în aer de gheara lui %k."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o a fost trimis sub bastonul lui %k."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o a fost făcut cenușă de joarda lui %k."
+
+msgid "OB_MPMACE"
+msgstr "%o a fost aruncat cât colo de buzduganul lui %k."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o a fost făcut felii de bastonul încărcat al lui %k."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr ""
+"%o a fost stors până la ultima picătură de sânge\n"
+"de mănușile lui %k."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o a fost luat cu asalt de togaiul lui %k."
+
+msgid "OB_MPPCROSSBOW"
+msgstr ""
+"%o a fost pus la proțap de arbaleta lui\n"
+"%k."
+
+msgid "OB_MPPBLASTER"
+msgstr "%k a fost făcut bucăți de gheara lui %k."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%k a vărsat bastonul pe %o."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o a fost ars complet de joarda lui %k."
+
+msgid "OB_MPPMACE"
+msgstr "%o a fost strivit de globul buzduganului lui %k."
+
+msgid "TXT_MANA_1"
+msgstr "Mană Albastră"
+
+msgid "TXT_MANA_2"
+msgstr "Mană Verde"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Mană Mixtă"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Cheia de Oțel"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Cheia Peșterii"
+
+msgid "TXT_KEY_AXE"
+msgstr "Cheia Toporului"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Cheia Focului"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Cheia Smaraldului"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Cheia Temniței"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Cheia de Argint"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Cheia Ruginită"
+
+msgid "TXT_KEY_HORN"
+msgstr "Cheia Cornului"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Cheia Mlaștinii"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Cheia Castelului"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Imaginea Apărătorului"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Servitor Întunecat"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Porcolator"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "Flacon"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Dispozitivul Alungării"
+
+msgid "TXT_ARTISPEED"
+msgstr "Bocancii Vitezei"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Pocal al Puterii"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Brățări din Piele de Dragon"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Discul Repulsiei"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Pergament Mistic"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Craniul lui Yorick"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "Inima lui D'Sparil"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Planetă de Rubin"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Planetă de Smarald"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Planetă de Smarald"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Planetă de Safir"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Planetă de Safir"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "Codexul Demonilor"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Masca Focului"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Sigiliu de Spadă"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Relicvă Sfântă"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Sigiliul Magului"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Mecanism de Ceas"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Nu Poți Folosi Asta Aici"
+
+msgid "TXT_ARMOR1"
+msgstr "Armură de Zale"
+
+msgid "TXT_ARMOR2"
+msgstr "Scut de Șoim"
+
+msgid "TXT_ARMOR3"
+msgstr "Coif de Platină"
+
+msgid "TXT_ARMOR4"
+msgstr "Amuleta Protecției"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Toporul lui Timon"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Ciocanul Salvării"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Argument Final Asamblat"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Bastonul Șarpelui"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Furtuna Focului"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Toiagul Stafiei Asamblat"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Cioburi de Gheață"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Izvorul Morții"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Flagel Sângeros Asamblat"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "O piesă din super armă! E ziua ta norocoasă!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Fragment din Argumentul Final"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Fragment din Toiagul Stafie"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Fragment din Flagelul Sângeros"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Ai nevoie de Cheia de Oțel"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Ai nevoie de Cheia Peșterii"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Ai nevoie de Cheia Toporului"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Ai nevoie de Cheia Focului"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Ai nevoie de Cheia Smaraldului"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Ai nevoie de Cheia Temniței"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Ai nevoie de Cheia de Argint"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Ai nevoie de Cheia Ruginită"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Ai nevoie de Cheia Cornului"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Ai nevoie de Cheia Mlaștinii"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Ai nevoie de Cheia Castelului"
+
+msgid "FN_FIREDEMON"
+msgstr "Demon al Focului"
+
+msgid "FN_DEMON1"
+msgstr "Șarpe"
+
+msgid "FN_ETTIN"
+msgstr "Etin"
+
+msgid "FN_CENTAUR"
+msgstr ""
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Centaur Violent"
+
+msgid "FN_BISHOP"
+msgstr "Episcop"
+
+msgid "FN_ICEGUY"
+msgstr ""
+
+msgid "FN_SERPENT"
+msgstr "Vânător"
+
+msgid "FN_WRAITH"
+msgstr "Pungaș"
+
+msgid "FN_DRAGON"
+msgstr "Balaur al Morții"
+
+msgid "FN_KORAX"
+msgstr ""
+
+msgid "FN_FBOSS"
+msgstr ""
+
+msgid "FN_MBOSS"
+msgstr ""
+
+msgid "FN_CBOSS"
+msgstr ""
+
+msgid "FN_HERESIARCH"
+msgstr "Ereziarh"
+
+msgid "AMMO_MANA1"
+msgstr "Mană Albastră"
+
+msgid "AMMO_MANA2"
+msgstr "Mană Verde"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Buzduganul Remușcării"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Bastonul Șarpelui"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Furtuna Focului"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Toiagul Stafiei"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Mănuși cu Țepi"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Toporul lui Timon"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Ciocanul Salvării"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "Argument Final"
+
+msgid "TAG_MWEAPWAND"
+msgstr "Baghetă Magică de Safir"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Cioburi de Gheață"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Izvoarele Morții"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Flagel Sângeros"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Discul Repulsiei"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Brățări din Piele de Dragon"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Pocalul Puterii"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "Flacon"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Flacon Otrăvit"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Bombă cu Ceas"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Flacon-Grenadă"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Pergament Mistic"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Imaginea Apărătorului"
+
+msgid "TAG_ARTIPORK"
+msgstr "Porcolator"
+
+msgid "TAG_ARTISPEED"
+msgstr "Bocancii Vitezei"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Servitor Întunecat"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Dispozitivul Alungării"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Craniul lui Yorick"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "Inima lui D'Sparil"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Planetă de Rubin"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Planetă de Smarald (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Planetă de Smarald (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Planetă de Safir (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Planetă de Safir (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "Codexul Demonilor"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Masca Focului"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Sigiliu de Spadă"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Relicvă Sfântă"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Sigiliul Magului"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Mecanism de fier"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Mecanism de alamă"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Mecanism de alamă și fier"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Mecanism de argint și alamă"
+
+msgid "OB_FIREDEMON"
+msgstr "%o a gustat flacăra Demonului."
+
+msgid "OB_DEMON1"
+msgstr "%o a fost opărit de un Șarpe."
+
+msgid "OB_DEMON2"
+msgstr "%o a fost otrăvit de un Șarpe."
+
+msgid "OB_ETTIN"
+msgstr "%o a fost făcut piure de un Etin."
+
+msgid "OB_CENTAUR"
+msgstr "%o a fost despicat de un Centaur."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o a fost despicat de un Centaur Violent."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o a fost răpus de mingea de foc a unui Centaur Violent."
+
+msgid "OB_BISHOP"
+msgstr "%o a cedat puterii întunecate a Episcopului."
+
+msgid "OB_ICEGUY"
+msgstr "%o a fost împietrit de un Wendigo."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o a fost sfâșiat de un Vânător."
+
+msgid "OB_SERPENT"
+msgstr "%o a fost topit de un Vânător."
+
+msgid "OB_WRAITH"
+msgstr "%o a fost ceruit de un Pungaș."
+
+msgid "OB_WRAITHHIT"
+msgstr "Viața lui %o a fost furată de un Pungaș."
+
+msgid "OB_DRAGON"
+msgstr "%o a fost incinerat de Balaurul Morții."
+
+msgid "OB_KORAX"
+msgstr "%o a fost măturat de pe drum de Korax."
+
+msgid "OB_FBOSS"
+msgstr "%o a fost omorât de Zedek."
+
+msgid "OB_MBOSS"
+msgstr "%o nu a reușit să absoarbă Mana lui Menelkir."
+
+msgid "OB_CBOSS"
+msgstr "%o a fost botezat de Traductus."
+
+msgid "OB_HERESIARCH"
+msgstr "Ereziarhul a jucat zarurile jucătorului %o."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%k l-a omorât în bătaie pe %o cu mâinile goale."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o a primit un topor de la %k."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%k i-a băgat capul lui %o în interior cu ciocanul."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "Sufletul lui %o a fost reforjat de ciocanul lui %k."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o a fost redus la tăcere de argumentul lui %k."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o a primit un buzdugan în față de la %k."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o a fost mușcat de bastonul ui %k."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o s-a sufocat pe bastonul lui %k."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o s-a aprins de la flăcările lui %k."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o a fost purificat de Toiagul lui %k."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o a primit o rază în plus de la safirul lui %k."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o a fost transformat într-un amic de gheață de %k."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o a avut parte de o revelație șocantă de la %k."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr ""
+"%o a fost ras de pe fața universului de\n"
+"Flagelul lui %k."
+
+msgid "TXT_METALARMOR"
+msgstr "Ai ridicat Armura de Metal."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Ai ridicat Armura de Piele."
+
+msgid "TXT_MEDPATCH"
+msgstr "Ai ridicat Trusa de Prim-Ajutor."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Ai ridicat Kitul de Prim-Ajutor."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Ai ridicat Kitul de Operații."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Ai ridicat harta."
+
+msgid "TXT_BELDINSRING"
+msgstr "Ai ridicat inelul."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Ai ridicat Potirul Ofrandelor."
+
+msgid "TXT_EAR"
+msgstr "Ai ridicat urechea."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Ai ridicat cuplajul defect de curent."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Ai ridicat Armura Umbrei."
+
+msgid "TXT_ENVSUIT"
+msgstr "Ai ridicat Costumul de Protecție."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Ai ridicat Uniforma de Paznic."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Ai ridicat Uniforma Ofițerului."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Ai ridicat componentele aruncătorului de flăcări."
+
+msgid "TXT_REPORT"
+msgstr "Ai ridicat raportul."
+
+msgid "TXT_INFO"
+msgstr "Ai recepționat informația."
+
+msgid "TXT_TARGETER"
+msgstr "Ai ridicat Țintitorul."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Ai ridicat Comunicatorul."
+
+msgid "TXT_COIN"
+msgstr "Ai ridicat moneda."
+
+msgid "TXT_XGOLD"
+msgstr "Ai ridicat %g monezi de aur."
+
+msgid "TXT_BEACON"
+msgstr "Ai ridicat Luminatorul pentru Teleportor."
+
+msgid "TXT_DEGNINORE"
+msgstr "Ai ridicat Minereul de Degnin."
+
+msgid "TXT_SCANNER"
+msgstr "Ai ridicat scannerul."
+
+msgid "TXT_NEEDMAP"
+msgstr "Scannerul nu poate funcționa fără o hartă!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Ai ridicat Legitimația pentru Închisoare."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Ai ridicat arbaleta."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Ai ridicat pușca de asalt."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Ai ridicat mini lansatorul de rachete."
+
+msgid "TXT_FLAMER"
+msgstr "Ai ridicat aruncătorul de flăcări."
+
+msgid "TXT_MAULER"
+msgstr "Ai ridicat sfâșietorul."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Ai ridicat Lansatorul de grenade."
+
+msgid "TXT_SIGIL"
+msgstr "Ai ridicat SIGILIUL."
+
+msgid "TXT_BASEKEY"
+msgstr "Ai ridicat Cheia Bazei."
+
+msgid "TXT_GOVSKEY"
+msgstr "Ai ridicat Cheia Guvernatorului."
+
+msgid "TXT_PASSCARD"
+msgstr "Ai ridicat Legitimația."
+
+msgid "TXT_IDBADGE"
+msgstr "Ai ridicat Ecusonul de Identificare."
+
+msgid "TXT_PRISONKEY"
+msgstr "Ai ridicat Cheia Închisorii."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Ai ridicat Mâna Retezată."
+
+msgid "TXT_POWER1KEY"
+msgstr "Cheia de la centrala electrică nr. 1 a fost primită."
+
+msgid "TXT_POWER2KEY"
+msgstr "Cheia de la centrala electrică nr. 2 a fost primită."
+
+msgid "TXT_POWER3KEY"
+msgstr "Cheia de la centrala electrică nr. 3 a fost primită."
+
+msgid "TXT_GOLDKEY"
+msgstr "Ai ridicat Cheia de Aur."
+
+msgid "TXT_IDCARD"
+msgstr "Ai ridicat Cardul de Identitate."
+
+msgid "TXT_SILVERKEY"
+msgstr "Ai ridicat Cheia de Argint."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Ai ridicat Cheia Oracolului."
+
+msgid "TXT_MILITARYID"
+msgstr "Ai ridicat Legitimația Militară."
+
+msgid "TXT_ORDERKEY"
+msgstr "Ai ridicat Cheia Ordinului."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Ai ridicat Cheia Depozitului."
+
+msgid "TXT_BRASSKEY"
+msgstr "Ai ridicat Cheia de Alamă."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Ai ridicat Cheia de Cristal Roșu."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Ai ridicat Cheia de Cristal Albastru."
+
+msgid "TXT_CHAPELKEY"
+msgstr "Ai ridicat Cheia Capelei."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Ai ridicat Cheia Catacombei."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Ai ridicat Cheia Securității."
+
+msgid "TXT_COREKEY"
+msgstr "Ai ridicat Cheia Nucleului."
+
+msgid "TXT_MAULERKEY"
+msgstr "Ai ridicat Cheia Sfâșietorului."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Ai ridicat Cheia Fabricii."
+
+msgid "TXT_MINEKEY"
+msgstr "Ai ridicat Cheia Minei."
+
+msgid "TXT_NEWKEY5"
+msgstr "Am primit Noua Cheie nr. 5."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Ai ridicat Legitimația Oracolului."
+
+msgid "TXT_HEGRENADES"
+msgstr "Ai ridicat Mănunchiul de Grenade."
+
+msgid "TXT_PHGRENADES"
+msgstr "Ai ridicat Grenadele de Fosfor."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Ai ridicat cartușul de gloanțe."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Ai ridicat cutia de gloanțe."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Ai ridicat mini proiectilele."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Ai ridicat lada de proiectile."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Ai ridicat capsula de energie."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Ai ridicat pachetul de energie."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Ai ridicat bolțurile otrăvite."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Ai ridicat bolțurile electrice."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Ai ridicat sacoșa de muniție."
+
+msgid "MSG_TALISMANRED"
+msgstr "Ai sentimentul că nu trebuia atinsă..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Orice ar fi, nu are ce căuta în lumea asta..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Trebuie să fie bun la ceva..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Ai super forță!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Nu ai cheia"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Ai nevoie de un card de acces"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Ai nevoie de un card de acces ca să deschizi ușa"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Ai nevoie de un card de identitate"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Nu ai cheia închisorii"
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Amprenta mâinii nerecunoscută"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Ai nevoie de Cheia de Aur"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Ai nevoie de un Ecuson de Identificare"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Ai nevoie de un Ecuson de Identificare ca să deschizi ușa"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Ai nevoie de Cheia de Argint"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Ai nevoie de Cheia de Alamă"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Ai nevoie de Cristalul Roșu"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Ai nevoie de Cristalul Albastru"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr ""
+"Această zonă e disponibilă doar în versiunea comercială a jocului Strife"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Nu pare să funcționeze"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Ai nevoie de potir!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Ai nevoie de Legitimația Oracolului!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Pumnal"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Arbaletă"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Arbaletă"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Pușcă de Asalt"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Mini Lansator de Proiectile"
+
+msgid "TAG_FLAMER"
+msgstr "Aruncător de Flăcări"
+
+msgid "TAG_MAULER1"
+msgstr "Sfâșietor"
+
+msgid "TAG_MAULER2"
+msgstr "Sfâșietor"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Lansator de Grenade"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Lansator de Grenade"
+
+msgid "TAG_SIGIL"
+msgstr "Sigiliu"
+
+msgid "TAG_COIN"
+msgstr "Monedă"
+
+msgid "TAG_MEDPATCH"
+msgstr "Trusă de Prim-Ajutor"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Kit de Prim-Ajutor"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Kit de Operație"
+
+msgid "TAG_BELDINSRING"
+msgstr "Inel"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Potirul Ofrandelor"
+
+msgid "TAG_EAR"
+msgstr "Ureche"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Cuplaj de Putere Defect"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Armura Umbrei"
+
+msgid "TAG_ENVSUIT"
+msgstr "Costum de Protecție"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Uniformă de Paznic"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Uniformă de Ofițer"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Componente pt. Aruncătorul de Flăcări"
+
+msgid "TAG_REPORT"
+msgstr "Raport"
+
+msgid "TAG_INFO"
+msgstr "Informație"
+
+msgid "TAG_TARGETER"
+msgstr "Țintitor"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Comunicator"
+
+msgid "TAG_DEGNINORE"
+msgstr "Minereu de Degnir"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Acuratețe"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Rezistență"
+
+msgid "TAG_SCANNER"
+msgstr "Scanner"
+
+msgid "TAG_PRISONPASS"
+msgstr "Legitimația pentru Închisoare"
+
+msgid "TAG_ALARM"
+msgstr "Alarmă"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Muniție"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Sănătate"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Lumină pentru Teleportor"
+
+msgid "TAG_METALARMOR"
+msgstr "Armură de Metal"
+
+msgid "TAG_LEATHER"
+msgstr "Armură de Piele"
+
+msgid "TAG_HEGRENADES"
+msgstr "Grenade"
+
+msgid "TAG_PHGRENADES"
+msgstr "Grenade de Fosfor"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Cartuș de Gloanțe"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Muniție"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Mini Proiectile"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Ladă de Proiectile"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Capsulă de Energie"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Pachet de Energie"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Bolțuri Otrăvite"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Bolțuri Electrice"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Sacoșă de Muniție"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Cheia Bazei"
+
+msgid "TAG_GOVSKEY"
+msgstr "Cheia Guvernatorului"
+
+msgid "TAG_PASSCARD"
+msgstr "Legitimație"
+
+msgid "TAG_IDBADGE"
+msgstr "Ecuson de Identificare"
+
+msgid "TAG_PRISONKEY"
+msgstr "Cheia Închisorii"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Mână Retezată"
+
+msgid "TAG_POWER1KEY"
+msgstr "Cheia Uzinei nr. 1"
+
+msgid "TAG_POWER2KEY"
+msgstr "Cheia Uzinei nr. 2"
+
+msgid "TAG_POWER3KEY"
+msgstr "Cheia Uzinei nr. 3"
+
+msgid "TAG_GOLDKEY"
+msgstr "Cheia de Aur"
+
+msgid "TAG_IDCARD"
+msgstr "Card de Identitate"
+
+msgid "TAG_SILVERKEY"
+msgstr "Cheia de Argint"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Cheia Oracolului"
+
+msgid "TAG_MILITARYID"
+msgstr "Legitimație Militară"
+
+msgid "TAG_ORDERKEY"
+msgstr "Cheia Ordinului"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Cheia Depozitului"
+
+msgid "TAG_BRASSKEY"
+msgstr "Cheia de Alamă"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Cheia de Cristal Roșu"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Cheia de Cristal Albastru"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Cheia Capelei"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Cheia Catacombei"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Cheia Securității"
+
+msgid "TAG_COREKEY"
+msgstr "Cheia Nucleului"
+
+msgid "TAG_MAULERKEY"
+msgstr "Cheia Sfâșietorului"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Cheia Fabricii"
+
+msgid "TAG_MINEKEY"
+msgstr "Cheia Minei"
+
+msgid "TAG_NEWKEY5"
+msgstr "Noua Cheie nr. 5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Legitimația Oracolului"
+
+msgid "TAG_10GOLD"
+msgstr "10 monezi de aur"
+
+msgid "TAG_25GOLD"
+msgstr "25 de monezi de aur"
+
+msgid "TAG_50GOLD"
+msgstr "50 de monezi de aur"
+
+msgid "TAG_300GOLD"
+msgstr "300 de monezi de aur"
+
+msgid "TXT_PERSON"
+msgstr "Persoană"
+
+msgid "TAG_ACOLYTE"
+msgstr "Acolit"
+
+msgid "TAG_ARMORER"
+msgstr "Armurier"
+
+msgid "TAG_BARKEEP"
+msgstr "Barman"
+
+msgid "TAG_BEGGAR"
+msgstr "Sărman"
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr ""
+
+msgid "TAG_ORACLE"
+msgstr "Oracol"
+
+msgid "TAG_PRIEST"
+msgstr "Preot"
+
+msgid "TAG_RATBUDDY"
+msgstr "Amic al Șobolanilor"
+
+msgid "TAG_REBEL"
+msgstr ""
+
+msgid "TAG_TEMPLAR"
+msgstr "Templier"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Făurar"
+
+msgid "TAG_TALISMANRED"
+msgstr "Talisman Roșu"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Talisman Verde"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Talisman Albastru"
+
+msgid "OB_ACOLYTE"
+msgstr "%o a fost împușcat zelos de un Acolit."
+
+msgid "OB_MACIL"
+msgstr "%o nu ar fi trebuit să se răscoale împotriva lui Macil."
+
+msgid "OB_REBEL"
+msgstr "%o a fost pus la pământ de un Rebel."
+
+msgid "OB_BEGGAR"
+msgstr "%o a fost omorât în bătaie de sărmani."
+
+msgid "OB_PEASANT"
+msgstr "%o n-ar fi trebuit să se încaiere cu un civil."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o a fost răpus de Spectru."
+
+msgid "OB_ENTITY"
+msgstr "%o a simțit furia Zeului."
+
+msgid "OB_LOREMASTER"
+msgstr "%o n-a putut scăpa din ghearele Maestrului Cunoștințelor."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o a fost șters de Programator."
+
+msgid "OB_STFBISHOP"
+msgstr "%o a fost aruncat cât colo de Episcop."
+
+msgid "OB_SENTINEL"
+msgstr "%o a fost pus la pământ de o Santinelă."
+
+msgid "OB_CRUSADER"
+msgstr "%o a fost măturat de un Cruciat."
+
+msgid "OB_INQUISITOR"
+msgstr "%o a fost condamnat de un Inchizitor."
+
+msgid "OB_STALKER"
+msgstr "%o a fost cicălit de un Hărțuitor."
+
+msgid "OB_TURRET"
+msgstr "%o a alertat sistemul de protecție automat."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o a fost zgâriat de un Templier."
+
+msgid "OB_TEMPLAR"
+msgstr "%o a fost vaporizat de un Templier."
+
+msgid "OB_REAVERHIT"
+msgstr "%o a fost feliat de un Pungaș."
+
+msgid "OB_REAVER"
+msgstr "%o a fost împușcat de un Pungaș."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o a fost înjunghiat pe la spate de %k."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o a fost agățat de perete de %k."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o a primit o doză letală din furia lui %k."
+
+msgid "OB_MPASSAULTGUN"
+msgstr ""
+"%o a fost umplut de găuri de pușca lui\n"
+"%k."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o a înghițit proiectilul lui %k."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o a fost întors pe dos de grenada lui %k."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o a făcut o baie fierbinte în fosforul lui %k."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o a fost făcut la grătar de %k."
+
+msgid "OB_MPMAULER1"
+msgstr "%o a fost electrocutat de %k."
+
+msgid "OB_MPMAULER"
+msgstr "%o a fost evaporat în mod violent de %k."
+
+msgid "OB_MPSIGIL"
+msgstr "%o s-a plecat în fața puterii Sigiliului lui %k."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "În căutarea Sigiliului"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Ai eliberat prizonierii!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Ai distrus Convertorul!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Felicitări! Ai încheiat cu zona de antrenament"
+
+msgid "TXT_QUEST_14"
+msgstr "Ai aruncat în aer Cristalul"
+
+msgid "TXT_QUEST_16"
+msgstr "Ai aruncat în aer Porțile"
+
+msgid "TXT_QUEST_27"
+msgstr "Ai aruncat în aer Calculatorul"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Ai omorât Episcopul!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Ai omorât Oracolul!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "L-ai omorât pe Macil!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "L-ai omorât pe Maestrul Cunoștințelor!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Nesăbuitule! Ai declanșat alarma!"
+
+msgid "TXT_YOUREDEAD"
+msgstr "Ești mort! Ai declanșat alarma!"
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Pare că ai destule!"
+
+msgid "TXT_GOAWAY"
+msgstr "Pleacă!"
+
+msgid "TXT_COMM0"
+msgstr "Mesaj în recepționare..."
+
+msgid "TXT_COMM1"
+msgstr "Recepționare mesaj de la BlackBird..."
+
+msgid "TXT_FINDHELP"
+msgstr "Găsește ajutor"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "pentru %u"
+
+msgid "GOTCHEXARMOR"
+msgstr "Ai ridicat Armura Chex(R)."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Ai ridicat Super Armura Chex(R)!"
+
+msgid "GOTWATER"
+msgstr "Ai ridicat un pahar de apă."
+
+msgid "GOTREPELLENT"
+msgstr "Ai ridicat respingătorul de mâzga."
+
+msgid "GOTBREAKFAST"
+msgstr "Superîncărcătură Mic Dejun!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Ai ridicat o cheie albastră."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Ai ridicat o cheie galbenă."
+
+msgid "GOTCREDKEY"
+msgstr "Ai ridicat o cheie roșie."
+
+msgid "GOTFRUIT"
+msgstr "Ai ridicat un bol de fructe."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Legumele sunt FOARTE bune pentru tine!"
+
+msgid "GOTVEGETABLES"
+msgstr "Ai ridicat un bol de legume."
+
+msgid "GOTSLIMESUIT"
+msgstr "Ai ridicat un Costum Rezistent la Mâzgă"
+
+msgid "GOTCHEXMAP"
+msgstr "Ai ridicat o Hartă Computerizată a Zonei."
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Ai ridicat o mini încărcătură pentru zorch."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Ai ridicat un mini patchet de încărcătură pentru zorch."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Ai ridicat o încărcătură pentru acceleratorul zorch."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Ai ridicat un pachet de baterii pentru acceleratorul zorch."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Ai ridicat o încărcătură fazată pentru zorcher"
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr ""
+"Ai ridicat un pachet de încărcături fazate pentru \n"
+"zorcher."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Ai ridicat o încărcătură mare pentru zorcher."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Ai ridicat un pachet mare de încărcături pentru zorcher."
+
+msgid "GOTZORCHPACK"
+msgstr "Ai ridicat un Ghiozdan Zorch!"
+
+msgid "GOTLAZDEVICE"
+msgstr "Ai ridicat un Dispozitiv LAZ! Uraa!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Ai ridicat un Zorcher cu Foc Rapid!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Ai ridicat o Super Lingură!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Ai ridicat un Accelerator Zorch!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Ai ridicat un Zorcher Fazat!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Ai ridicat un Zorcher Mare!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Ai ridicat un Mega Zorcher!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Ai ridicat un Mini Zorcher."
+
+msgid "TAG_SPOON"
+msgstr "Lingură"
+
+msgid "TAG_SPORK"
+msgstr "Super Lingură"
+
+msgid "TAG_MINIZORCHER"
+msgstr ""
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Zorcher Mare"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Zorcher Super-Mare"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Zorcher cu Foc Rapid"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Accelerator Zorch"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Zorcher Fazat"
+
+msgid "TAG_LAZDEVICE"
+msgstr "Dispozitiv LAZ"
+
+msgid "OB_COMMONUS"
+msgstr "%o a fost transformat în mâzgă de flemoid."
+
+msgid "OB_BIPEDICUS"
+msgstr "% a fost transformat în mâzgă de biped."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o a fost transformat în mâzgă de un biped cu armură."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o a fost transformat în mâzgă de un ciclioptic."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o a fost învins de Flembrană."
+
+msgid "OB_MPSPOON"
+msgstr "%o a fost hrănit cu lingura de %k."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o a fost amestecat bine de lingura lui %k."
+
+msgid "OB_MPZORCH"
+msgstr "%o a fost înlăturat de zorcherul lui %k."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o a fost lovit de mega-zorcherul lui %k."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o a fost învins de zorcherul rapid al lui %k."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o a fost învins de acceleratorul zorch al lui %k."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o a fost învins de acceleratorul lui %k."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o a fost înfrânt de zorcherul fazat al lui %k."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o a căzut pradă dispozitivului LAZ al lui %k."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o a fost stropit de dispozitivul LAZ al lui %k."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Pista de Aterizare"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Depozitul"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M2: Laboratorul"
+
+msgid "CHUSTR_E1M4"
+msgstr ""
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Cavernele lui Bazoik"
+
+msgid "CE1TEXT"
+msgstr ""
+"Misiune îndeplinită.\n"
+"\n"
+"Ești pregătit pentru următoarea misiune?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Apasă Escape pentru a continua..."
+
+msgid "CE2TEXT"
+msgstr "Ai reușit!"
+
+msgid "CE3TEXT"
+msgstr "Bună treabă!"
+
+msgid "CE4TEXT"
+msgstr ""
+
+msgid "CLOADNET"
+msgstr ""
+"Nu poți face o încărcare în timpul unei căutări!\n"
+"\n"
+"Apasă orice tastă."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Salvare rapidă peste căutarea numită\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Apasă Y sau N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Nu poți faci o încărcare rapidă în timpul unei căutări!\n"
+"\n"
+"Apasă orice tastă."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Vrei să faci o încărcare rapidă a misiunii\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Apasă Y sau N."
+
+msgid "CNEWGAME"
+msgstr ""
+"Nu poți începe o căutare nouă în timpul unei căutări!\n"
+"\n"
+"Apasă orice tastă."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Ai grijă, o să fie dur.\n"
+"Vrei să continui?\n"
+"\n"
+"Apasă Y sau N."
+
+msgid "CSWSTRING"
+msgstr ""
+"Acesta este Chex(R) Quest, pentru mai multe\n"
+"\n"
+"niveluri vizitează www.chexquest.com.\n"
+"\n"
+"Apasă orice tastă."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Nu poți încheia brusc o căutare în rețea!\n"
+"\n"
+"Apasă orice tastă."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Ești sigur că vrei să încetezi căutarea?\n"
+"\n"
+"Apasă Y sau N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Modul Invincibil ACTIVAT"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Modul Invincibil DEZACTIVAT"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Zorcher Adăugat"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Super Lingură Adăugată"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "... Mănâncă Chex(R)!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Mini Încărcătură pentru Zorcher"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Încărcătură Mare pentru Zorcher"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Încărcătură pentru Accelerator"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Încărcătură pentru Zorcherul Fazat"
+
+msgid "MNU_NEWGAME"
+msgstr "Joc Nou"
+
+msgid "MNU_OPTIONS"
+msgstr "Opțiuni"
+
+msgid "MNU_GAMEFILES"
+msgstr "Fișiere Joc"
+
+msgid "MNU_INFO"
+msgstr ""
+
+msgid "MNU_QUITGAME"
+msgstr "Ieșire din Joc"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Alege Dificultatea:"
+
+msgid "SKILL_BABY"
+msgstr "Sunt prea tânăr ca să mor."
+
+msgid "SKILL_EASY"
+msgstr "Hei, nu foarte dur."
+
+msgid "SKILL_NORMAL"
+msgstr "Rănește-mă din plin."
+
+msgid "SKILL_HARD"
+msgstr "Ultra-Violență."
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Coșmar!"
+
+msgid "CSKILL_BABY"
+msgstr "Merge ușor"
+
+msgid "CSKILL_EASY"
+msgstr "Nu așa de lipicios"
+
+msgid "CSKILL_NORMAL"
+msgstr "Multă mâzgă"
+
+msgid "CSKILL_HARD"
+msgstr "Noroi Extrem"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Super Mâzgos!"
+
+msgid "SSKILL_BABY"
+msgstr "În Pregătiri"
+
+msgid "SSKILL_EASY"
+msgstr "Începător"
+
+msgid "SSKILL_NORMAL"
+msgstr ""
+
+msgid "SSKILL_HARD"
+msgstr "Elită"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Baie de sânge"
+
+msgid "MNU_WETNURSE"
+msgstr "Am Nevoie de O Bonă"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Nu Sunt Așa de Curajos"
+
+msgid "MNU_BRINGEST"
+msgstr "Aduceți-mi"
+
+msgid "MNU_SMITE"
+msgstr "Sunt Tentat de Bătălii"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Ciuma m-a Cuprins"
+
+msgid "MNU_SQUIRE"
+msgstr "Scutier"
+
+msgid "MNU_KNIGHT"
+msgstr "Cavaler"
+
+msgid "MNU_WARRIOR"
+msgstr "Războinic"
+
+msgid "MNU_BERSERKER"
+msgstr "Turbat"
+
+msgid "MNU_TITAN"
+msgstr ""
+
+msgid "MNU_ALTARBOY"
+msgstr "Paracliser"
+
+msgid "MNU_ACOLYTE"
+msgstr "Acolit"
+
+msgid "MNU_PRIEST"
+msgstr "Preot"
+
+msgid "MNU_CARDINAL"
+msgstr "Cardinal"
+
+msgid "MNU_POPE"
+msgstr "Papă"
+
+msgid "MNU_APPRENTICE"
+msgstr "Ucenic"
+
+msgid "MNU_ENCHANTER"
+msgstr "Fermecător"
+
+msgid "MNU_SORCERER"
+msgstr "Mag"
+
+msgid "MNU_WARLOCK"
+msgstr "Vrăjitor"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Prim-Vrăjitor"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Alege Clasa:"
+
+msgid "MNU_FIGHTER"
+msgstr "Luptător"
+
+msgid "MNU_CLERIC"
+msgstr ""
+
+msgid "MNU_MAGE"
+msgstr "Magician"
+
+msgid "MNU_RANDOM"
+msgstr "Aleatoriu"
+
+msgid "MNU_EPISODE"
+msgstr "Care Episod?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Alege Campania"
+
+msgid "MNU_COTD"
+msgstr "Orașul Blestemaților"
+
+msgid "MNU_HELLSMAW"
+msgstr "Străfundurile Infernului"
+
+msgid "MNU_DOME"
+msgstr "Domul lui D'Sparil"
+
+msgid "MNU_OSSUARY"
+msgstr "Osuarul"
+
+msgid "MNU_DEMESNE"
+msgstr "Tărâmul Stagnării"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Joc în Echipă"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Multiplicator daune"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Asistență la țintire"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Daune la cădere liberă"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Aruncă arma"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Muniție dublă"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Muniție infinită"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Inventar infinit"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Fără monștri"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Fără monștri pentru a ieși"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Monștri reapar"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Monștri nu reapar"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Obiectele reapar"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Super bonusurile reapar"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Monștri rapizi"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Monștri cu Reflexe de Coșmar"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Degenerare"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Permite asistența la țintire"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Permite sinuciderile"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Permite săriturile"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Permite ghemuirile"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Permite privirea în jur cu mouse-ul"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Permite ajustarea câmpului vizual"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Permite țintirea cu BFG"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Permite utilizarea hărții computerizate"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Aliați pe harta computerizată"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Permite vederea prin ochii altor jucători"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Activează vizualizarea la persoana a treia"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Verifică muniția armei pentru schimbare"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Decesul Idolului anihilează propriile creații"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Cumulare cadavre monștri în total"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Setări Deathmatch"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Părăsire arme după selectare"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Permite bonusuri"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Permite prim-ajutor"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Permite bonusuri de armură"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Apariție cât mai departată de ceilalți"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Reluare nivel"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Reapariție instantă"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Permite ieșirea"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Butoaiele reapar"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Protecție la apariția pe hartă"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Pierdere din victime la deces"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Păstrare număr victime"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Nu permite schimbarea echipelor"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Setări cooperative"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Permite apariția armelor din modul online"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Pierdere inventar"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Păstrare chei"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Păstrare arme"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Păstrare armură"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Păstrare bonusuri"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Păstrare armură"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Pierdere jumătate din armură"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Apariție la locul decesului"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Permite apariția obiectelor din multiplayer"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Permiteți răspândirea verticală a gloanțelor"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Armele oferă muniție suplimentară (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Setări de Compatibilitate"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Setări de Compatibilitate"
+
+msgid "CMPTMNU_MODE"
+msgstr "Mod Compatibilitate"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Comportament actori"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Monștri aliați nu pot fi blocați"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Limitează numărul Sufletelor Pierdute create de Elementalii Durerii"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Efectele afectează deplasarea monștrilor"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Monștrii nu pot trece peste prăpăstii"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Monștrii înțepenesc peste prăpăstii"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Monștrii pot vedea jucătorii invizibili"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Minotaurii nu pot folosi atacul de foc pe apă"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Obiectele scăpate vor apărea la nivelul podelei"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "Comportament DehackEd"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "Setări sănătate în DEH precum în Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Folosește viteza originală pentru A_Mushroom în DEH în moduri"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Comportament hartă/actori"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Toate liniile speciale pot bloca utilizarea"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Orice utilizare de A_BossDeath activează evenimente speciale în nivel"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "Dezactivează efectele de lumină BOOM pentru uși"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Caută o sursă de lumină apropriată ca în Doom"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Caută cele mai scurte texturi ca în Doom"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Utilizează modul de ridicare al scărilor incorect"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Utilizează comportamentul de mișcare al podelelor din Doom"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Utilizează algoritmul point-on-line din Doom"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Ieșirea nivelului poate fi activată de mai multe ori"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Comportament fizică"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Actorii au înălțime infinită"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Elementele derulante BOOM sunt aditive"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Interzice deplasarea liniară NSEW"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Permite fuga cu ajutorul pereților (Wallrun)"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Elementele derulante Raven folosesc viteza originală"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Sectoarele cu referință proprie blochează focurile"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Utilizează cod din Doom pentru a verifica coliziunea focurilor"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Utilizează metoda de verificare a înălțimilor din Doom"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Comportament Video"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Afișează poliobiectele precum în Hexen"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Ignoră offsetul Y de pe texturile 3D mascate"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Inversare sortare sprite-uri"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Comportament Sunet"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Taie sunetul pentru trucul BFG-ului silențios"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Nu permite celorlalți să audă sunetul ridicării obiectelor"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Podelele care se mișcă instant nu sunt silențioase"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sunetele sectoarelor au ca sursă centrul"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Sunetele se opresc când actorul sursă dispare"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Procesare originală pentru sursele de sunet"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Teleportările scriptate nu declanșează acțiuni în sectoare"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Liniile care nu blochează pot fi împinse înapoi"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Comportament incorect pentru CheckSwitchRange"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Restaurează balustradele eronate la Strife"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Fără împingere verticală la explozii"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Utilizează comportamentul original la explozii"
+
+msgid "PLYRMNU_RED"
+msgstr "Roșu"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Verde"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Albastru"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Clasă"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Textură"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Schimbă arma la ridicare"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Apasă \\cjSPACE"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "pentru a vedea fața"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "pentru a vedea spatele"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Recul Vertical Gloanțe"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Zoom Armă"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Poziție Armă 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Poziție Armă 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Poziție Armă 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Poziție Armă 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Zbor / Înot în Sus"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Zbor / Înot în Jos"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Încetare Zbor"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Utilizează Tastatură pentru Privire în Jur"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Control pentru Mesaje Strife"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Vorbește cu Echipa Proprie"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Aruncă Obiectul"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Cercetează Obiectul"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Aruncă Arma"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Altele"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Privește prin Ochii Altui Jucător"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Mesaje Strife"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Obiectivele Misiunii"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Listă Chei"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Arme/muniție/statistici"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Comutator Tabelă de Marcaj"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "Mișcarea mouse-ului"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Mișcă mouse-ul în lateral"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Fundal"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Tu"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "Pereți cu o singură față"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "Pereți cu două fețe și podele diferite"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "Pereți cu două fețe și tavane diferite"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "Pereți cu două fețe și podele 3D"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Grilă hartă"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Punct în centru"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Ziduri încă nevăzute"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Uși închise"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Teleportor către aceeași hartă"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Teleportor către altă hartă"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Sector secret"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Secret neexplorat"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Linii declașatoare speciale"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Modul Trișor"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Pereți cu două fețe invizibile"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Pereți ascunși"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Actori"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Monștri"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Monștri neacoperiți de Numărătoare"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Prieteni"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Obiecte"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Numără Obiectele"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Mod Acoperit"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Mod Acoperit Trișor"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Acoperiri Portaluri"
+
+msgid "MSGMNU_TITLE"
+msgstr "Mesaje"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Afișare mesaje"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Afișare necrologuri"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Afișare notificări pentru secrete"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Nivel minim de afișare mesaje"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Culori Mesaje"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Ridicare obiecte"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Necrologuri"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Mesaje Critice"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Mesaje Conversație"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Mesaje Echipă Proprie"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Mesaje Centrate"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Mesaje Capturi Ecran"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Mesaje detaliate pentru salvări"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Mod mesaje pentru dezvoltator"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Set culori hartă"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Permite culorilor să fie definite de hartă"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Setări culori personalizate"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Personalizare schemă de control a hărții"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Acoperire hartă computerizată"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Activare mod texturat"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Afișare numărătoare obiecte"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Afișare numărătoare monștri"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Afișare numărătoare secrete"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Afișare timp petrecut pe hartă"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Afișare timp total petrecut pe hartă"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Afișare secrete"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Afișare etichetă hartă"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Afișare fundal hartă"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Afișare chei (trișare)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Afișare linii declanșatoare"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Afișare obiecte drept sprite"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Acoperire portaluri"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Margine spațiu gol"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Font marcaj"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Culoare marcaj"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Marcaj"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Ștergere marcaj"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Opțiuni Tabelă de Marcaj"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Setări Tabelă de Marcaj"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Setări Mod Cooperativ"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Activare Tabelă de Marcaj"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Culoare Antet"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Culoarea Jucătorului Tău"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Culorile Celorlalți Jucători"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Setări Deathmatch"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Setări Deathmatch în Echipă"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Interfață alternativă"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Activează interfața alternativă"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Afișează numărul secretelor"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Afișează numărul de monștri"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Afișează numărul de obiecte"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Afișează rezistența fizică și acuratețea"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Afișează pachetul de forță mărită"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Afișează armele"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Afișează muniția pentru"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Afișează timpul"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Culoare timp"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Afișează perioada de întârziere a conexiunii"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Ordine afișare muniție"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Muniția schimbă culoarea în roșu sub %"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Muniția schimbă culoarea în galben sub %"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Sănătatea schimbă culoarea în roșu sub %"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Sănătatea schimbă culoarea în galben sub %"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Sănătatea schimbă culoarea în verde sub %"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Armura schimbă culoarea în galben sub %"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Armura schimbă culoarea în galben sub %"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Armura schimbă culoarea în verde sub %"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Hartă Computerizată Alternativă"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Culoare titlu hartă"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Culoare timp petrecut pe hartă"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Culoare timp petrecut în hub"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Culoare timp total"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Culoare coordonate"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Mod coordonate"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Culoare denumire statistici"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Culoare statistici"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Interpolare Imagine"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Mod Transparență"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Stil ștergere imagine"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Afișare fereastră ENDOOM"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Intensitate strălucire sânge"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Intensitate strălucire la ridicarea obiectelor"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Intensitate amestec de culori subacvatice"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Mod de vizualizare al cerului"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Cer rectiliniu"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Luminozitatea maximă suprascrie culoarea sectorului"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Putere efect de strălucire"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Mod efect de strălucire"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Transparență Clasică"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Transparență Suflete Pierdute"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Utilizează contrast fals"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Dâră Rachete"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Tip efecte sângeroase"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Tip efecte gloanțe"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Număr particule"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Număr autocolante"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Afișare arme"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Cameră de Deces"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Zoom la Teleportare"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Intensitate zguduire la cutremur"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Interpolare mișcare monștri"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Întunecare meniu"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Culoare întunecare"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Mișcare cameră în timpul deplasării"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Mișcare cameră în timpul staționării"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Viteză mișcare arme"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Setări Dimensiuni"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Suprascriere pentru setările de mai sus"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Mesaje"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Consolă"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Bară de Stare"
+
+msgid "SCALEMNU_HUD"
+msgstr "Interfață Ecran Complet"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Interfață Alternativă"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "Interfața își păstrează aspectul"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Folosește dimensiunea implicită"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Dimensionează la modul Fullscreen"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Adaptează la dimensiunea ecranului"
+
+msgid "HUDMNU_TITLE"
+msgstr "Setări Interfață"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Interfață Alternativă"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Setări Mesaje"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Dimensiune Interfață Utilizator"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Forțare țintă implicită"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "Mărește ținta la ridicarea obiectelor"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Indică numele obiectelor"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Culoare nume obiecte"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Utilizează modul portret vechi"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Tip strălucire arme Hexen"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Tip strălucire efect de otrăvire"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Tip strălucire deces prin înghețare"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Tip strălucire la acumulare de otravă"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Setări Dimensiuni"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Afișează fereastra de selecție a jocurilor"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Permite codurile din toate jocurile"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Posibilitate de a face poze prin scripturi"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Încarcă nodurile *.deh/*.bex"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Depozitare noduri cache"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Limită de timp pentru depozitare cache"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Ștergere noduri cache"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Permite saltul peste inserările de text"
+
+msgid "NETMNU_TITLE"
+msgstr "Setări de Rețea"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Setări Locale"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Anticipare mișcare"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Anticipează acționarea liniilor"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Anticipare scară lerp"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Prag Lerp"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Setări gazdă"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Ticăituri suplimentare"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Întârzierea echilibrării"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr ""
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimizat"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Clasic (Mai rapid)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Precis"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Limitat"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Particule"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Sprite-uri"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Sprite-uri & Particule"
+
+msgid "OPTVAL_MELT"
+msgstr "Topire"
+
+msgid "OPTVAL_BURN"
+msgstr "Ardere"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Ofilire"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Fin"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Fin"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Transparent"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Sclipitor"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Umbră"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Obiecte"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Arme"
+
+msgid "OPTVAL_BOTH"
+msgstr "Ambele"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Jucător"
+
+msgid "OPTVAL_MAP"
+msgstr "Hartă"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Dimensionare la 640x480"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Dublare pixeli"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Împătrire pixeli"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Arma curentă"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Arme disponibile"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Toate armele"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Nivel, milisecunde"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Nivel, secunde"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Nivel"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Hub, secunde"
+
+msgid "OPTVAL_HUB"
+msgstr ""
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Total, secunde"
+
+msgid "OPTVAL_TOTAL"
+msgstr ""
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Sistem, secunde"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Sistem"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Doar în rețea"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Imagine și Text"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Text și Imagine"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Numai scripturi"
+
+msgid "OPTVAL_ALL"
+msgstr "Tot"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Doar ultimul"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Tradițional Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Tradițional Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Tradițional Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Doar la descoperire"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Doar pentru modul transparent"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Transparent + Normal"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Doar modul transparent"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Nu pentru hub-uri"
+
+msgid "OPTVAL_FRONT"
+msgstr "Înainte"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Animat"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Rotit"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Doar culori definite de hartă"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Cu excepția ușilor"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dublu"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Triplu"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Cvadruplu"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Ridicare Obiecte"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Necrologuri"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Mesaje Critice"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Niciodată aliaților"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Doar monștrilor"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Vechi"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr ""
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr ""
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr ""
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr ""
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Toate necunoscute"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Erori"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Atenționări"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Notificări"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Tot"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Accelerat Hardware"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Software"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "Software Color Complet"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "De înaltă Performanță"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Economie de Energie"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Original"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (Forțat)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Original (Forțat)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (ZDoom preferat)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (Original preferat)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Mic"
+
+msgid "OPTVAL_LARGE"
+msgstr "Mare"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Consolă"
+
+msgid "C_BRICK"
+msgstr "\\caCărămiziu"
+
+msgid "C_TAN"
+msgstr "\\caBronz"
+
+msgid "C_GRAY"
+msgstr "\\ccGri"
+
+msgid "C_GREEN"
+msgstr "\\cdVerde"
+
+msgid "C_BROWN"
+msgstr "\\ceMaro"
+
+msgid "C_GOLD"
+msgstr "\\cfAuriu"
+
+msgid "C_RED"
+msgstr "\\gRoșu"
+
+msgid "C_BLUE"
+msgstr "\\chAlbastru"
+
+msgid "C_ORANGE"
+msgstr "\\ciPortocaliu"
+
+msgid "C_WHITE"
+msgstr "\\cjAlb"
+
+msgid "C_YELLOW"
+msgstr "\\ckGalben"
+
+msgid "C_DEFAULT"
+msgstr "\\clImplicită"
+
+msgid "C_BLACK"
+msgstr "\\cmNegru"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnAlbastru deschis"
+
+msgid "C_CREAM"
+msgstr "\\coCrem"
+
+msgid "C_OLIVE"
+msgstr "\\cpMăsliniu"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqVerde închis"
+
+msgid "C_DARKRED"
+msgstr "\\crRoșu închis"
+
+msgid "C_DARKBROWN"
+msgstr "\\csMaro închis"
+
+msgid "C_PURPLE"
+msgstr "\\ctMov"
+
+msgid "C_DARKGRAY"
+msgstr "\\cuGri închis"
+
+msgid "C_CYAN"
+msgstr "\\cvTurcoaz"
+
+msgid "C_ICE"
+msgstr "\\cwGheață"
+
+msgid "C_FIRE"
+msgstr "\\cxFoc"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cySafir"
+
+msgid "C_TEAL"
+msgstr "\\czMare"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Fără Sunet"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Fără interpolare"
+
+msgid "OPTSTR_SPLINE"
+msgstr ""
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Setări Mod OpenGL"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Setări Mod Software"
+
+msgid "GLMNU_TITLE"
+msgstr "Setări Rendare OpenGL"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Setări Lumini Dinamice"
+
+msgid "GLMNU_PREFS"
+msgstr "Preferințe"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Tundere margini sprite-uri"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Sortează listele de texturi"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Lumini Dinamice"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Lumini Dinamice (Hardware)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Activează definițiile pentru lumini"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Luminile afectează sprite-urile"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Luminile afectează particulele"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Umbre lumini"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Calitate umbre"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Filtru umbre"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Mod ceață"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Ceața forțează luminozitate maximă"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Intensitate lumină armă"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Efecte suplimentare pentru oglinzi"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Vedere infraroșie avansată"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "PNV afișează monștri ascunși"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Ajustare poziții sprite-uri"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Netezire margini sprite-uri"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Stil sclipire"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Rotire sprite-uri"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Sprite-urile privesc înspre cameră"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Stil particule"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Calitate video"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "Mod 3D Stereo VR"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Activează Quad Stereo"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Mod Limitat de Iluminare Software"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Distanța Dintre Ochi"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Distanța De la Ecran"
+
+msgid "OPTVAL_SMART"
+msgstr "Inteligent"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Mai inteligent"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Doar în infraroșu"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Infraroșu și torță"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Orice hartă de culori oferită"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Utilizează drept paletă"
+
+msgid "OPTVAL_BLEND"
+msgstr "Amestec"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Luminos"
+
+msgid "OPTVAL_DARK"
+msgstr "Întunecat"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr ""
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optim"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Axa Y"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "Axa Y/Z"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Pătrat"
+
+msgid "OPTVAL_ROUND"
+msgstr "Rotund"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radial"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Puf"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Lin"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Vârtej"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Transparent"
+
+msgid "OPTVAL_NOISE"
+msgstr "Zgomot"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Zgomot lin"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Zimțat"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Verde/Purpuriu"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Roșu/Turcoaz"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Chihlimbar/Albastru"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Ochiul Stâng"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Ochiul Drept"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Una lângă alta, Pline"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Una lângă alta, Înguste"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Sus/Jos"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Rând Intercalat"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Coloană Intercalată"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Tablă de Șah"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Împătrit"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "Setări Mod Culori Complete"
+
+msgid "TCMNU_TITLE"
+msgstr "Setări Mod Culori Complete"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Putere Mod Culori Complete"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Filtru liniar la micșorare"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Filtru liniar la mărire"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Aplicați mipmapping"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Lumini Dinamice (Software)"
+
+msgid "OS_TITLE"
+msgstr "Căutare Setări"
+
+msgid "OS_ANY"
+msgstr "Căutare după orice termen"
+
+msgid "OS_ALL"
+msgstr "Căutare după toți termenii"
+
+msgid "OS_NO_RESULTS"
+msgstr "Niciun rezultat găsit."
+
+msgid "OS_LABEL"
+msgstr "Căutare:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Afișează mereu cheile"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Schimbarea echipelor a fost dezactivată!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s s-a alăturat echipei %t"
+
+msgid "TXT_LONER"
+msgstr "%s este singur acum"
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s a părăsit jocul cu %d victime"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s a părăsit jocul"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "Salvarea '%s' nu a putut fi citită."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' nu este o salvare validă. Lipsește 'info.json'"
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "Nu s-au putut accesa informațiile din salvarea '%s'."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "Salvarea '%s' este dintr-o versiune incompatibilă."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "Salvarea '%s' este dintr-un alt motor care are ca bază ZDoom:"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"Salvarea '%s' este dintr-o versiune mai veche: %d (%e e cea mai veche "
+"suportată)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"Salvarea '%s' e dintr-o versiune mai nouă: %d (%e este cea mai nouă "
+"suportată)"
+
+msgid "TXT_NOMAPSG"
+msgstr "Salvării '%s' îi lipsește harta actuală."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s nu este o salvare validă. Lipsește 'globals.json'."
+
+msgid "TXT_SGINFOERR"
+msgstr "Informațiile salvării '%s' nu au putut fi accesate"
+
+msgid "TXT_SAVEPENDING"
+msgstr "O salvare este încă în așteptare."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Nu ești într-un joc în care poți salva."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Nu ești în niciun nivel"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Jucătorul este mort într-un joc single-player"
+
+msgid "TXT_SAVEFAILED"
+msgstr "Salvare eșuată"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Captura de ecran nu a putut fi salvată."
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "De către %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Apasă orice tastă sau dă click oriunde în fereastră pentru a ieși."
+
+msgid "HUDMNU_FLASH"
+msgstr "Setări Amestec Imagine"
+
+msgid "GLMNU_3DMODE"
+msgstr "Mod 3D"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Țintă"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Subtitrări"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Prevenire umbre gri"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Setări Font"
+
+msgid "FONTMNU_LOG"
+msgstr "Utilizează fontul standard pentru mesajele de tip log"
+
+msgid "FONTMNU_DLG"
+msgstr "Utiliează fontul standard pentru căsuțele de dialog"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Ieșire Rapidă"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Personalizați culorile când sunteți invulnerabil"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Culoare închisă"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Culoare deschisă"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Intensitate mișcare arme în timpul deplasării"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr ""
+"Dimensiuni clasice ale ecranului între misiuni și margini ale ecranului"
+
+msgid "SCALEMNU_INTER"
+msgstr "Fundal antract"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Bordură ecran"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Factor de scalare"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Aspect imagine"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Afișează Totalul la Ieșirea din Nivel"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Definit de către moduri"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Mereu, mai puțin în hub-uri"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Mereu, inclusiv în hub-uri"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Schemă de control preferată"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "ZDoom Clasic"
+
+msgid "OPTVAL_MODERN"
+msgstr "Modernă (WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Modernă (Tastatură)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "KEYCONF Strictă pentru Arme/Jucători"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Scară meniuri ZDoom clasică"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Folosește procentaje la totaluri"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Scară ZDoom clasică a tabelei de marcaj"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Cetățean"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Turetă de Tavan"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Cruciat"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inchizitor"
+
+msgid "TAG_PEASANT"
+msgstr "Sărman"
+
+msgid "TAG_REAVER"
+msgstr "Hoț"
+
+msgid "TAG_SENTINEL"
+msgstr "Santinelă"
+
+msgid "TAG_STALKER"
+msgstr "Hărțuitor"
+
+msgid "TAG_BISHOP"
+msgstr "Episcopul"
+
+msgid "TAG_ENTITY"
+msgstr "Adevăratul Zeu"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Programatorul"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Spectrul"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Tip Îngenunchiat"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Apariția obiectelor din jocul de rețea în cel cooperativ"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Umbre pentru sprite-uri"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Monștri și jucători"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr "Câmp vizual"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Dezactivare caracteristici MBF21"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Afișare ceas"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Monștrii striviți sunt readuși la viață ca fantome."
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Mișcare cameră în timpul zborului"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o a fost mutilat de Şarpe."
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Linii line"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "Coliziune și foc prin jucători"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "Taste generale"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Dezactivați modul de rotire prioritară a camerei"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "Schimbați afișajul de sănătate și armură"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "Scară interfață clasică"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "Valoare scară interfață"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "Obiecte din modul co-op ce apar în multiplayer"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "Obiecte colectate din modul co-op care apar în multiplayer"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr ""
+"Jucătorii își colectează propriile copii ale obiectelor în multiplayer"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "Dezactivați colectarea din partea clientului a obiectelor lăsate jos"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "Repornește nivelul după Moarte"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "Pistol la început"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr "Permite crearea de jucători zombi"
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr "Ignoră diagonala podelei (Z) la teleportare"
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr "Perspectivă forțată"
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr "Volum pași"
+
+msgid "ID24_GOTINCINERATOR"
+msgstr "Ai ridicat „Incineratorul”!"
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr "Ai Lama Necazurilor! Acum diavolii vor dansa!"
+
+msgid "ID24_GOTFUELCAN"
+msgstr "Ai ridicat o canistră de combustibil."
+
+msgid "ID24_GOTFUELTANK"
+msgstr "Ai ridicat un rezervor de combustibil."
+
+msgid "TAG_ID24INCINERATOR"
+msgstr "„Incinerator”"
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr "Lama Necazurilor"
+
+msgid "AMMO_ID24FUEL"
+msgstr "Canistră de combustibil"
+
+msgid "AMMO_ID24FUELTANK"
+msgstr "Rezervor de combustibil"
+
+msgid "ID24_CC_GHOUL"
+msgstr "Jefuitor"
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr "Stormtrooper"
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr "Țesător de Minți"
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr "Tiran"
+
+msgid "ID24_OB_GHOUL"
+msgstr "Jucătorul %o a prins bila de energie a unui jefuitor."
+
+msgid "ID24_OB_BANSHEE"
+msgstr "Jucătorul %o a fost terminat de un banshee."
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr "Jucătorul %o a fost topit de un stormtrooper."
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr "Jucătorul %o a fost doborât de un țesător de minți."
+
+msgid "ID24_OB_VASSAGO"
+msgstr "Jucătorul %o a fost ars de un vassago."
+
+msgid "ID24_OB_TYRANT"
+msgstr "Jucătorul %o a fost sfâșiat de un tiran."
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "Afișare nume nivel"
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr "Taste rapide pentru inventar"
+
+msgid "JOYMNU_HAPTICS"
+msgstr "Intensitate feedback haptic"
+
+msgid "JOYMNU_CURVE"
+msgstr "Curbă de sensibilitate"
+
+msgid "JOYMNU_THRESHOLD"
+msgstr "Prag digital"
+
+msgid "OPTVAL_LINEAR"
+msgstr "Liniar"
+
+msgid "OPTVAL_QUADRATIC"
+msgstr "Pătrat"
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr "Tip de chat"
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr "Dezactivat"
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr "Doar aliați"
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr "General"
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr "Dezactivare text îngroșat în chat"
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr "Dezactivare sunete la mesaje in chat"
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr "Stabilizarea conexiunii"
+
+msgid "NETMNU_LIMITCONVO"
+msgstr "Limitează Mesajele cu Gazda"
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr "Timp de Reactivare Acțiuni Repetabile"
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr "Dezactivare Pauză"
+
+msgid "OPTVAL_HOSTONLY"
+msgstr "Doar Gazdă"
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr "Tip de Omitere a Pregătirii"
+
+msgid "OPTVAL_VOTE"
+msgstr "Vot"
+
+msgid "OPTVAL_ANYONE"
+msgstr "Oricine"
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr "Procentaj de omitere a voturilor"
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr "Timpul cronometrului de votare (secunde)"
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr "Mod chat lent (secunde)"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Activează declanșatoarele haptice"
+
+msgid "OPTMNU_HAPTICS"
+msgstr "Setări sistem haptic"
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr "Nivel de compatibilitate cu feedback-ul haptic"
+
+msgid "OPTVAL_MATCH"
+msgstr "Potrivire"
+
+msgid "OPTVAL_WARN"
+msgstr "Avertizare"
+
+msgid "HAPMNU_OPTIONS"
+msgstr "Setări sursă feedback haptic"
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr "Din utilizarea meniului"
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr "Din efectuarea unei acțiuni"
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr "Primind daune"
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr "Din interacțiune cu lumea"
+
+msgid "PAUSE_STRING"
+msgstr "Pauză"
+
+msgid "TAG_BACKPACK"
+msgstr "Rucsac"
+
+msgid "TAG_ARMORBONUS"
+msgstr "Armură Spirituală"
+
+msgid "TAG_GREENARMOR"
+msgstr "Armură de Securitate"
+
+msgid "TAG_BLUEARMOR"
+msgstr "Armură de Luptă"
+
+msgid "TAG_INVULSPHERE"
+msgstr "Artefact de Invulnerabilitate"
+
+msgid "TAG_SOULSPHERE"
+msgstr "Sfera Sufletului"
+
+msgid "TAG_MEGAPSHERE"
+msgstr "Mega Sferă"
+
+msgid "TAG_INVISSPHERE"
+msgstr "Artefact de Estompare"
+
+msgid "TAG_RADSUIT"
+msgstr "Costum Antiradiații"
+
+msgid "TAG_VISOR"
+msgstr "Ochelari de Amplificare Lumină"
+
+msgid "TAG_ALLMAP"
+msgstr "Hartă Computerizată"
+
+msgid "TAG_BERSERK"
+msgstr "Nebunie"
+
+msgid "TAG_HEALTHBONUS"
+msgstr "Poțiune de Sănătate"
+
+msgid "TAG_STIMPACK"
+msgstr "Stimulent"
+
+msgid "TAG_MEDIKIT"
+msgstr "Kit Medical"
+
+msgid "TAG_BLUECARD"
+msgstr "Cheie Albastră"
+
+msgid "TAG_YELLOWCARD"
+msgstr "Cheie Galbenă"
+
+msgid "TAG_REDCARD"
+msgstr "Cheie Roșie"
+
+msgid "TAG_BLUESKULL"
+msgstr "Cheie Craniu Albastră"
+
+msgid "TAG_YELLOWSKULL"
+msgstr "Cheie Craniu Galbenă"
+
+msgid "TAG_REDSKULL"
+msgstr "Cheie Craniu Roșie"
+
+msgid "TAG_GLASSOFWATER"
+msgstr "Pahar de Apă"
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr "Bol de Fructe"
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr "Bol de Legume"
+
+msgid "TAG_BREAKFAST"
+msgstr "Mic Dejun de la Supercharge"
+
+msgid "TAG_REPELLENT"
+msgstr "Repelent de Mucus"
+
+msgid "TAG_CHEXARMOR"
+msgstr "Armură Chex"
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr "Super Armură Chex"
+
+msgid "TAG_CHEXMAP"
+msgstr "Hartă Computerizată Zonă"
+
+msgid "TAG_SLIMESUIT"
+msgstr "Costum Rezistent la Mâzgă"
+
+msgid "TAG_ZORCHPACK"
+msgstr "Pachet Zorch"
+
+msgid "TAG_CBLUEKEY"
+msgstr "Cheie Albastră"
+
+msgid "TAG_CYELLOWKEY"
+msgstr "Cheie Galbenă"
+
+msgid "TAG_CREDKEY"
+msgstr "Cheie Roșie"
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr "Folosește luminozitatea sectorului pentru sprite-urile armelor"
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr "Apasă Spațiu sau butonul stâng al mouse-ului pentru a fi gata"
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr "Apasă A pentru a fi gata"
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr "Apasă Joy 1 pentru a fi gata"
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr "Reține arma selectată la reapariție"
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr "Jucător anterior: vizualizare"
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr "Anulează vizualizarea altui jucător"

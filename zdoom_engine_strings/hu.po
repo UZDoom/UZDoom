@@ -1,0 +1,5236 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: hu\n"
+
+msgid "PRESSKEY"
+msgstr "Nyomjon meg egy gombot."
+
+msgid "SECRETMESSAGE"
+msgstr "Egy rejtekhely feltárva!"
+
+msgid "D_DEVSTR"
+msgstr "Haszontalan mód BE."
+
+msgid "QUITMSG"
+msgstr ""
+"Biztosan kilépnél ebből\n"
+"a nagyszerű játékból?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"Nem tudsz betölteni miközben net játékban vagy!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgid "QLOADNET"
+msgstr ""
+"Nem tudsz gyorstölteni miközben net játékban vagy!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Nem választottál ki egy gyorsmentés mezőt még!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgid "NEWGAME"
+msgstr ""
+"Nem tudsz egy új játékot kezdeni \n"
+"egy hálozatos játékban.\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgid "NIGHTMARE"
+msgstr ""
+"Biztos vagy benne? Ez a nehézségi szint \n"
+"távolról sem fair.\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgid "SWSTRING"
+msgstr ""
+"Ez a Doom shareware verziója.\n"
+"\n"
+"Rendeld meg az egész trilógiát!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgid "NETEND"
+msgstr ""
+"Nem tudsz befejezni egy netjátékot!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgid "ENDGAME"
+msgstr ""
+"Biztosan abbahagyod a játékot?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgid "RAVENQUITMSG"
+msgstr "Biztosan ki akarsz lépni?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Csak a teljes verzióban érhető el"
+
+msgid "DOSY"
+msgstr "(Nyomj Y-t a kilépéshez.)"
+
+msgid "QUITMSG1"
+msgstr "Kérlek ne lépj le, sok démon vár még arra, hogy felaprítsd!"
+
+msgid "QUITMSG2"
+msgstr "Tűnjünk innen, ebből vérfürdő lesz!"
+
+msgid "QUITMSG3"
+msgstr ""
+"A helyedben nem lépnék ki.\n"
+"A DOS sokkal rosszabb."
+
+msgid "QUITMSG4"
+msgstr ""
+"Azt akarod mondani, hogy\n"
+"a DOS jobb nálam?"
+
+msgid "QUITMSG5"
+msgstr "Még ne menj -- a sarkon túl még vár rád egy démon!"
+
+msgid "QUITMSG6"
+msgstr ""
+"Tudod, ha legközelebb idejössz,\n"
+"szét foglak kenni."
+
+msgid "QUITMSG7"
+msgstr "Menj nyugodtan, nem mintha bárkit érdekelne."
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"Ki akarsz lépni? \n"
+"Akkor beszolgáltatik a Te vagyonod nyolcada!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"Ne menj most, egy dimenzióforgató \n"
+"vár a DOS parancssornál!"
+
+msgid "QUITMSG10"
+msgstr ""
+"Húzz innen, és menj vissza az \n"
+"unalmas programjaidhoz."
+
+msgid "QUITMSG11"
+msgstr ""
+"Ha én lennék a főnököd, lejátszanék egy Deathmatch-et veled perceken belül!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Nézd, haver. Ha most kilépsz,\n"
+"feladod a pontjaidat!"
+
+msgid "QUITMSG13"
+msgstr ""
+"Menj csak. amikor visszajössz \n"
+"várni foglak egy ütővel."
+
+msgid "QUITMSG14"
+msgstr "Mákod van, hogy nem kapsz egy fülest amiért ki akartál lépni."
+
+msgid "QUITMSG15"
+msgstr ""
+"Hová mész?!\n"
+"És a forradalommal mi lesz?"
+
+msgid "QUITMSG16"
+msgstr ""
+"Carnage interruptus...\n"
+"Micsoda fenyegetés!"
+
+msgid "QUITMSG17"
+msgstr ""
+"Te vagy a remény\n"
+"-- az egyetlen esélyem!"
+
+msgid "QUITMSG18"
+msgstr "Senki nem kezdhet ki a Feketerigóval!"
+
+msgid "QUITMSG19"
+msgstr "Azt hittem te más vagy..."
+
+msgid "QUITMSG20"
+msgstr "Oké! Csak ölj és fuss!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Kiléphetsz...\n"
+"de nem bújhatsz el..."
+
+msgid "QUITMSG22"
+msgstr ""
+"Naaa, mi a baj?\n"
+"Anyuci szólt, hogy kész a vacsora?"
+
+msgid "QUITMSG23"
+msgstr "Ne lépj ki, még sok slejmoid van szabadon!"
+
+msgid "QUITMSG24"
+msgstr "Ne add fel -- máskülönben slejmoidok győznek!"
+
+msgid "QUITMSG25"
+msgstr ""
+"Még ne menj!\n"
+"Szükségünk van a segítségedre!"
+
+msgid "QUITMSG26"
+msgstr ""
+"Remélem, hogy csak \n"
+"egy szünetet tartasz a Chex(R) parti mixhez."
+
+msgid "QUITMSG27"
+msgstr ""
+"Ne menj el most!\n"
+"Kell a segítséged!"
+
+msgid "QUITMSG28"
+msgstr ""
+"Ne hagyd cserben az \n"
+"Intergalaktikus Müzli Szövetséget!"
+
+msgid "QUITMSG29"
+msgstr ""
+"Az igazi Chex(R) Harcos \n"
+"nem adná fel ilyen gyorsan!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Felvettél egy tárgyat."
+
+msgid "PD_ANY"
+msgstr "Bármilyen kulcs kinyitja ezt az ajtót."
+
+msgid "PD_ANYOBJ"
+msgstr "Bármilyen kulcs aktiválja ezt a tárgyat."
+
+msgid "PD_ALL3"
+msgstr "Mind a 3 kulcs szükséges, hogy kinyisd ezt az ajtót."
+
+msgid "PD_ALL3O"
+msgstr "Mind a 3 kulcs kell hogy aktiváld ezt a tárgyat."
+
+msgid "PD_ALL6"
+msgstr "Mind a 6 kulcsnak meg kell lennie az ajtó kinyitásához."
+
+msgid "PD_ALL6O"
+msgstr "Mind a 6 kulcs kell, hogy aktiváld ezt az objektumot."
+
+msgid "PD_ALLKEYS"
+msgstr "Az összes kulcsra szükséged van."
+
+msgid "HUSTR_MSGU"
+msgstr "[Üzenet nincs elküldve]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Magadban motyogsz"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Ki van ott?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "Megijeszted magad"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Reszketni kezdesz"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Eldobod az agyad..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Üzenet elküldve]"
+
+msgid "STSTR_MUS"
+msgstr "Zene Váltás"
+
+msgid "STSTR_NOMUS"
+msgstr "Lehetetlen Kiválasztás"
+
+msgid "STSTR_DQDON"
+msgstr "Sérthetetlenség Mód BE"
+
+msgid "STSTR_DQDOFF"
+msgstr "Sérthetetlenség Mód KI"
+
+msgid "STSTR_DQD2ON"
+msgstr "Tökéletes Sérthetetlenség Mód BE"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Tökéletes Sérthetetlenség Mód KI"
+
+msgid "STSTR_KFAADDED"
+msgstr "Összes Lőszer Megadva"
+
+msgid "STSTR_FAADDED"
+msgstr "Lőszer (nincsenek kulcsok) Megadva"
+
+msgid "STSTR_NCON"
+msgstr "Falonátmenés Mód BE"
+
+msgid "STSTR_NCOFF"
+msgstr "Falonátmenés Mód KI"
+
+msgid "STSTR_NC2ON"
+msgstr "Falonátmenés 2. Mód BE"
+
+msgid "STSTR_NC2OFF"
+msgstr "Falonátmenés 2 Mód KI"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr ""
+"Sérthetetlenség (V), berzerker mód (S), láthatatlanság (i), védőRuha, térkép"
+" (A), vagy éjjelLátó sisak"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Képesség hozzáadva"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "... nem annyira gáz - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Pályaváltás..."
+
+msgid "TXT_BUDDHAON"
+msgstr "Buddha Mód BE"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Buddha Mód KI"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Tökéletes Buddha Mód BE"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Tökéletes Buddha Mód KI"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Energia BE"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Energia KI"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Teljes életerő"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Összes kulcs"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Hang debug BE"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Hang debug KI"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Csalni akarsz, mi? Most meghalsz!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Csaló - nem érdemelsz fegyvert!"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Számláló BE"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Számláló KI"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Megkaptad"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Minden arannyá válik amit megérintesz, öreg"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Megkaptad a cuccot!"
+
+msgid "TXT_FREEZEON"
+msgstr "Fagyasztás BE"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Fagyasztás KI"
+
+msgid "TXT_STRANGE"
+msgstr "Furán érzed magad..."
+
+msgid "TXT_STRANGER"
+msgstr "Még furábban érzed magad."
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Magadhoz tértél."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Ólomcsizma BE"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Ólomcsizma KI"
+
+msgid "TXT_LIGHTER"
+msgstr "Könnyűnek érzed magad"
+
+msgid "TXT_GRAVITY"
+msgstr "A gravitáció lehúz téged"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Nem támadnak a szörnyek BE"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Nem támadnak a szörnyek KI"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "\"Reszkess, halandó!\""
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "Ogre pajzs lejárt"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "követő kamera BE"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "követő kamera KI"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 rosszfiú kinyírva"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d rosszfiú kinyírva"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 szörny kinyírva"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d szörny kinyírva"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "Nem sikerült a felélesztés. A játékos nincs összekötve a testtel."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Összes értéktárgy!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Mit tudnál megölni játékon kívül?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Fagyasztott játékos tulajdonságai kikapcsolva"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Követés mód KI"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Követés mód BE"
+
+msgid "AMSTR_GRIDON"
+msgstr "Rács BE"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Rács KI"
+
+msgid "AMSTR_TEXON"
+msgstr "Textúrák mód BE"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Textúrák mód KI"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Megjelölt hely"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Összes jelölés törölve"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "Fraghatár elérve."
+
+msgid "TXT_TIMELIMIT"
+msgstr "Időhatár elérve."
+
+msgid "SPREEKILLSELF"
+msgstr "%o jól nézett ki még mielőtt megölte magát!"
+
+msgid "SPREEOVER"
+msgstr "%o ámokfutását %k megállította."
+
+msgid "SPREE5"
+msgstr "%o egy Ámokfutó!"
+
+msgid "SPREE10"
+msgstr "%o Tombol!"
+
+msgid "SPREE15"
+msgstr "%o Uralkodik!"
+
+msgid "SPREE20"
+msgstr "%o Megállíthatatlan!"
+
+msgid "SPREE25"
+msgstr "%o Istencsászár!"
+
+msgid "MULTI2"
+msgstr "Dupla gyilok!"
+
+msgid "MULTI3"
+msgstr "Multi gyilok!"
+
+msgid "MULTI4"
+msgstr "Ultra gyilok!"
+
+msgid "MULTI5"
+msgstr "Szörnyű gyilkolás!"
+
+msgid "SCORE_BONUS"
+msgstr "Bónusz"
+
+msgid "SCORE_COLOR"
+msgstr "Szín"
+
+msgid "SCORE_SECRET"
+msgstr "Titok"
+
+msgid "SCORE_NAME"
+msgstr "Név"
+
+msgid "SCORE_DELAY"
+msgstr "Késleltetés (ms)"
+
+msgid "SCORE_FRAGS"
+msgstr "Frag-ek"
+
+msgid "SCORE_DEATHS"
+msgstr "Halálok"
+
+msgid "SCORE_OTHER"
+msgstr "Egyéb"
+
+msgid "SCORE_MISSED"
+msgstr "Kihagyva"
+
+msgid "SCORE_TOTAL"
+msgstr "Összesen"
+
+msgid "SCORE_LVLTIME"
+msgstr "Pályaidő"
+
+msgid "TXT_IMKILLS"
+msgstr "Áldozatok"
+
+msgid "TXT_IMITEMS"
+msgstr "Tárgyak"
+
+msgid "TXT_IMSECRETS"
+msgstr "Titkok"
+
+msgid "TXT_IMTIME"
+msgstr "Idő"
+
+msgid "TXT_IMPAR"
+msgstr "Átlag"
+
+msgid "WI_FINISHED"
+msgstr "Teljesítve"
+
+msgid "WI_ENTERING"
+msgstr "Következik"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Következik:"
+
+msgid "AM_MONSTERS"
+msgstr "Szörnyek:"
+
+msgid "AM_SECRETS"
+msgstr "Titkos helyek:"
+
+msgid "AM_ITEMS"
+msgstr "Tárgyak:"
+
+msgid "OB_SUICIDE"
+msgstr "%o öngyilkos lett."
+
+msgid "OB_FALLING"
+msgstr "%o túl messze esett."
+
+msgid "OB_CRUSH"
+msgstr "%o össze lett lapítva."
+
+msgid "OB_EXIT"
+msgstr "%o megpróbált lelépni."
+
+msgid "OB_WATER"
+msgstr "%o nem tud úszni."
+
+msgid "OB_SLIME"
+msgstr "%o mutánssá alakult."
+
+msgid "OB_LAVA"
+msgstr "%o megolvadt."
+
+msgid "OB_BARREL"
+msgstr "%o felrobbant."
+
+msgid "OB_SPLASH"
+msgstr "%o rossz helyre állt."
+
+msgid "OB_R_SPLASH"
+msgstr "%o túl közel állt."
+
+msgid "OB_ROCKET"
+msgstr "%o túl közel állt."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o megölte magát."
+
+msgid "OB_VOODOO"
+msgstr "%o meghalt a voodoo erejének köszönhetően."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o telefrag-et kapott %k által."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o telefraggelve lett."
+
+msgid "OB_DEFAULT"
+msgstr "%o meghalt."
+
+msgid "OB_MPDEFAULT"
+msgstr "%k megölte %o-t."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k lekaszabolta a csapattársát."
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k-nak szemüvegre van szüksége."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k szerez egy frag-et a másik csapatnak."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k elveszít egy másik barátot."
+
+msgid "GOTARMOR"
+msgstr "Felvettél egy páncélt."
+
+msgid "GOTMEGA"
+msgstr "Felvettél egy MegaPáncélt!"
+
+msgid "GOTHTHBONUS"
+msgstr "Felvettél egy életbónuszt."
+
+msgid "GOTARMBONUS"
+msgstr "Felvettél egy páncélbónuszt."
+
+msgid "GOTSTIM"
+msgstr "Felvettél egy szurit."
+
+msgid "GOTMEDINEED"
+msgstr "Felvettél egy életcsomagot amire NAGYON szükséged volt már!"
+
+msgid "GOTMEDIKIT"
+msgstr "Felvettél egy életcsomagot."
+
+msgid "GOTSUPER"
+msgstr "Szupertöltés!"
+
+msgid "GOTBLUECARD"
+msgstr "Felvettél egy kék kulcskártyát."
+
+msgid "GOTYELWCARD"
+msgstr "Felvettél egy sárga kulcskártyát."
+
+msgid "GOTREDCARD"
+msgstr "Felvettél egy piros kulcskártyát."
+
+msgid "GOTBLUESKUL"
+msgstr "Felvettél egy kék koponyakulcsot."
+
+msgid "GOTYELWSKUL"
+msgstr "Felvettél egy sárga koponyakulcsot."
+
+msgid "GOTREDSKUL"
+msgstr "Felvettél egy piros koponyakulcsot."
+
+msgid "GOTINVUL"
+msgstr "Sérthetetlenség!"
+
+msgid "GOTBERSERK"
+msgstr "Dühödt mód!"
+
+msgid "GOTINVIS"
+msgstr "Részleges láthatatlanság"
+
+msgid "GOTSUIT"
+msgstr "Védőruha"
+
+msgid "GOTMAP"
+msgstr "Térkép"
+
+msgid "GOTVISOR"
+msgstr "Éjjellátó sisak"
+
+msgid "GOTMSPHERE"
+msgstr "MegaGömb!"
+
+msgid "GOTCLIP"
+msgstr "Felvettél egy töltényt."
+
+msgid "GOTCLIPBOX"
+msgstr "Felvettél egy doboz töltényt."
+
+msgid "GOTROCKET"
+msgstr "Felvettél egy rakétát."
+
+msgid "GOTROCKBOX"
+msgstr "Felvettél egy doboz rakétát."
+
+msgid "GOTCELL"
+msgstr "Felvettél egy energia cellát."
+
+msgid "GOTCELLBOX"
+msgstr "Felvettél egy doboznyi energia cellát."
+
+msgid "GOTSHELLS"
+msgstr "Felvettél 4 sörétes töltényt."
+
+msgid "GOTSHELLBOX"
+msgstr "Felvettél egy doboz sörétes töltényt."
+
+msgid "GOTBACKPACK"
+msgstr "Felvettél egy tölténnyel teli hátizsákot!"
+
+msgid "GOTBFG9000"
+msgstr "Felvetted a BFG9000-et! Ezaz."
+
+msgid "GOTCHAINGUN"
+msgstr "Felvetted a golyószórót!"
+
+msgid "GOTCHAINSAW"
+msgstr "Egy láncfűrész! Keress valami aprítanivalót!"
+
+msgid "GOTLAUNCHER"
+msgstr "Felvetted a rakétavetőt!"
+
+msgid "GOTPLASMA"
+msgstr "Felvetted a plazmafegyvert!"
+
+msgid "GOTSHOTGUN"
+msgstr "Felvetted a puskát!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Felvetted a Szuper puskát!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Felvettél egy pisztolyt."
+
+msgid "BETA_BONUS1"
+msgstr "Felvettél egy démoni tőrt."
+
+msgid "BETA_BONUS2"
+msgstr "Felvettél egy skullchest-et."
+
+msgid "BETA_BONUS3"
+msgstr "Felvettél egy gonosz jogart."
+
+msgid "BETA_BONUS4"
+msgstr "Felvettél egy istentelen bibliát."
+
+msgid "PD_BLUEO"
+msgstr "Egy kék kulcs szükséges az tárgy aktiválásához."
+
+msgid "PD_REDO"
+msgstr "Piros kulcs kell, hogy aktiválhasd ezt a tárgyat."
+
+msgid "PD_YELLOWO"
+msgstr "Egy sárga kulccsal aktiválható ez a tárgy"
+
+msgid "PD_BLUEK"
+msgstr "Az ajtót egy kék kulcs nyitja."
+
+msgid "PD_REDK"
+msgstr "Piros kulcs szükséges, hogy az ajtót kinyithasd."
+
+msgid "PD_YELLOWK"
+msgstr "Kell egy sárga kulcs hogy kinyisd ezt az ajtót."
+
+msgid "PD_BLUECO"
+msgstr "Egy kék kártya kell, hogy ezt a tárgyat aktiválhasd"
+
+msgid "PD_REDCO"
+msgstr "Piros kártyával aktiválható ez a tárgy"
+
+msgid "PD_YELLOWCO"
+msgstr "Kell egy sárga kártya hogy aktiváld ezt a tárgyat"
+
+msgid "PD_BLUESO"
+msgstr "Kell egy kék koponya hogy aktiváld ezt a tárgyat."
+
+msgid "PD_REDSO"
+msgstr "Kell egy piros koponya hogy aktiváld ezt a tárgyat."
+
+msgid "PD_YELLOWSO"
+msgstr "Kell egy sárga koponya hogy aktiváld ezt a tárgyat."
+
+msgid "PD_BLUEC"
+msgstr "Ez az ajtó egy kék kártyával nyílik."
+
+msgid "PD_REDC"
+msgstr "Ez az ajtó egy piros kártyával nyílik."
+
+msgid "PD_YELLOWC"
+msgstr "Ez az ajtó egy sárga kártyával nyílik."
+
+msgid "PD_BLUES"
+msgstr "Ez az ajtó egy kék koponyával nyílik."
+
+msgid "PD_REDS"
+msgstr "Ez az ajtó egy piros koponyával nyílik."
+
+msgid "PD_YELLOWS"
+msgstr "Ez az ajtó egy sárga koponyával nyílik."
+
+msgid "CC_ZOMBIE"
+msgstr "Zombi"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "Őrmester"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "Kommandós"
+
+msgid "CC_IMP"
+msgstr "Tűzkobold"
+
+msgid "CC_DEMON"
+msgstr "Démon"
+
+msgid "CC_LOST"
+msgstr "Kóbor lélek"
+
+msgid "CC_CACO"
+msgstr "Kakodémon"
+
+msgid "CC_HELL"
+msgstr "Pokollovag"
+
+msgid "CC_BARON"
+msgstr "Pokolbáró"
+
+msgid "CC_ARACH"
+msgstr "Póktron"
+
+msgid "CC_PAIN"
+msgstr "Elemi Kín"
+
+msgid "CC_REVEN"
+msgstr "Kísértet"
+
+msgid "CC_MANCU"
+msgstr "Mankubusz"
+
+msgid "CC_ARCH"
+msgstr "Ősármány"
+
+msgid "CC_SPIDER"
+msgstr "Pókelme"
+
+msgid "CC_CYBER"
+msgstr "A Kiberdémon"
+
+msgid "CC_HERO"
+msgstr "Hősünk"
+
+msgid "FN_SHOTGUN"
+msgstr "Őrmester"
+
+msgid "FN_HEAVY"
+msgstr "Kommandós"
+
+msgid "FN_SPECTRE"
+msgstr "Lidérc"
+
+msgid "FN_SPIDER"
+msgstr "Pókelme"
+
+msgid "FN_CYBER"
+msgstr "Kiberdémon"
+
+msgid "FN_WOLFSS"
+msgstr "Náci"
+
+msgid "FN_DOG"
+msgstr "Kutya"
+
+msgid "TAG_FIST"
+msgstr "Bokszer"
+
+msgid "TAG_CHAINSAW"
+msgstr "Láncfűrész"
+
+msgid "TAG_PISTOL"
+msgstr "Pisztoly"
+
+msgid "TAG_SHOTGUN"
+msgstr "Sörétes Puska"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Szuper Sörétes"
+
+msgid "TAG_CHAINGUN"
+msgstr "Golyószóró"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Rakétavető"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Plazmafegyver"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "Töltények"
+
+msgid "AMMO_SHELLS"
+msgstr "Sörétek"
+
+msgid "AMMO_ROCKETS"
+msgstr "Rakéták"
+
+msgid "AMMO_CELLS"
+msgstr "Energiacellák"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o azt hitte, hogy látott egy póktront."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o azt hitte, hogy látott egy ősármányt."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o azt hitte, hogy látott egy pokolbárót."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o azt hitte, hogy látott egy kakodémont."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o azt hitte, hogy látott egy kommandóst."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o azt hitte, hogy látott egy démont."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o azt hitte, hogy látott egy pokollovagot."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o azt hitte, hogy látott egy tűzkoboldot."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o azt hitte, hogy látott egy mankubuszt."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o azt hitte, hogy látott egy kísértetet."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o azt hitte, hogy látott egy őrmestert."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o azt hitte, hogy látott egy zombit."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o-t kiütötte egy kísértet."
+
+msgid "OB_IMPHIT"
+msgstr "%o-t széttépte egy tűzkobold."
+
+msgid "OB_CACOHIT"
+msgstr "%o túl közel ment egy kakodémonhoz."
+
+msgid "OB_DEMONHIT"
+msgstr "%o-t megharapta egy démon."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o-t felfalta egy lidérc."
+
+msgid "OB_BARONHIT"
+msgstr "%o-t széttépte egy pokolbáró."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o-t kibelezte egy pokollovag."
+
+msgid "OB_ZOMBIE"
+msgstr "%o-t megölte egy zombi."
+
+msgid "OB_SHOTGUY"
+msgstr "%o-t lelőtte egy őrmester."
+
+msgid "OB_VILE"
+msgstr "%o-t megpörkölte egy ősármány."
+
+msgid "OB_UNDEAD"
+msgstr "%o nem tudta kivédeni egy kísértet tűzgolyóját."
+
+msgid "OB_FATSO"
+msgstr "%o-t szétlapította egy mankubusz."
+
+msgid "OB_CHAINGUY"
+msgstr "%o-t szitává lőtte egy kommandós."
+
+msgid "OB_SKULL"
+msgstr "%o-t halálra ijesztette egy kóbor lélek."
+
+msgid "OB_IMP"
+msgstr "%o-t szénné égette egy tűzkobold."
+
+msgid "OB_CACO"
+msgstr "%o-ra lesújtott egy kakodémon."
+
+msgid "OB_BARON"
+msgstr "%o-t összezúzta egy pokolbáró."
+
+msgid "OB_KNIGHT"
+msgstr "%o-t kilapította egy pokollovag."
+
+msgid "OB_SPIDER"
+msgstr "%o halálra ijedt a Pókelme."
+
+msgid "OB_BABY"
+msgstr "%o hagyta, hogy elkapja egy póktron."
+
+msgid "OB_CYBORG"
+msgstr "%o-t cafatokra tépték a kiberdémon rakétái."
+
+msgid "OB_WOLFSS"
+msgstr "%o találkozott egy nácival."
+
+msgid "OB_DOG"
+msgstr "%o-t szétmarcangolta egy kutya."
+
+msgid "OB_MPFIST"
+msgstr "%o megkóstolta %k ökleit."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o-t kettészelte %k láncfűrésze."
+
+msgid "OB_MPPISTOL"
+msgstr "%o meg lett csiklandozva %k játékpisztolyával."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o megízlelte %k villámbotját."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o-t cafatokra tépte %k szupersörétese."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%k gépágyúval szétszaggatta %o testét."
+
+msgid "OB_MPROCKET"
+msgstr "%o meglovagolta %k rakétáját."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o majdnem kitért %k rakétája elől."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%k plazmafegyverével megolvaszotta %o testét."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o teste atomjaira szakadt %k BFG-jétől."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o nem tudott elmenekülni %k BFG-je elől."
+
+msgid "OB_RAILGUN"
+msgstr "%o beleállt %k lézerébe."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%k hamuvá égette %o testét BFG-vel."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Kék kulcs"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Sárga kulcs"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Zöld kulcs"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Kvarc flaska"
+
+msgid "TXT_ARTIFLY"
+msgstr "A Harag Szárnyai"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "A Sérthetetlenség Gyűrűje"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Az Erő Kódexe"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Árnygömb"
+
+msgid "TXT_ARTIEGG"
+msgstr "Alakváltó tojás"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Misztikus urna"
+
+msgid "TXT_ARTITORCH"
+msgstr "Fáklya"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Az Ősök Időbombája"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Káoszszerkezet"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Kristályampulla"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "A Birtoklás Batyuja"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Ezüst Pajzs"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Bűvös Pajzs"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Térkép Tekercs"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Kristálypor"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Kristály Geoda"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Jogargömbök"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Egy rakás jogargömb"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Éteri nyílvesszők"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Éteri nyíltok"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Karomgömb"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Energiagömb"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Gyenge rúnák"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Erős rúnák"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Tűzgömb"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Pokolgömb"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Aranypálca"
+
+msgid "TXT_WPNMACE"
+msgstr "Tűzbuzogány"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Éteri számszeríj"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Sárkány karom"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Pokolpálca"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Főnix Rúd"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Halottidéző Páncélkesztyűi"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Az ajtó nyitásához szükséged van egy kék kulcsra"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Az ajtó nyitásához szükséged van egy zöld kulcsra"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Az ajtó nyitásához szükséged van egy sárga kulcsra"
+
+msgid "FN_CHICKEN"
+msgstr "Csirke"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "Vérsárkány"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "Szablyakarom"
+
+msgid "FN_DSPARIL"
+msgstr ""
+
+msgid "FN_HERETICIMP"
+msgstr "Vízköpő"
+
+msgid "FN_IRONLICH"
+msgstr "Ezüst lich"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Élőhalott harcos"
+
+msgid "FN_MINOTAUR"
+msgstr ""
+
+msgid "FN_MUMMY"
+msgstr "Gólem"
+
+msgid "FN_MUMMYLEADER"
+msgstr "Nitrógólem"
+
+msgid "FN_SNAKE"
+msgstr "Ofidián"
+
+msgid "FN_WIZARD"
+msgstr "Mágus"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Pálca kristályok"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Éteri nyilak"
+
+msgid "AMMO_BLASTER"
+msgstr "Karom golyók"
+
+msgid "AMMO_MACE"
+msgstr "Buzogány gömbök"
+
+msgid "AMMO_SKULLROD"
+msgstr "Pokolbot rúnák"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Tűzgolyók"
+
+msgid "TAG_STAFF"
+msgstr "Bot"
+
+msgid "TAG_GOLDWAND"
+msgstr "Elf pálca"
+
+msgid "OB_CHICKEN"
+msgstr "%o halálra lett csípve."
+
+msgid "OB_BEAST"
+msgstr "%o szénné égett egy Vérsárkány által."
+
+msgid "OB_CLINK"
+msgstr "%o meg lett vágva egy Szablyakarom által."
+
+msgid "OB_DSPARIL1"
+msgstr "%o le lett forrázva D'Sparil Kígyója által."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o meg lett rágva D'Sparil Kigyója által."
+
+msgid "OB_DSPARIL2"
+msgstr "%o nem volt méltó ellenfél D'Sparil számára."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o a földre lett csapva D'Sparil által."
+
+msgid "OB_HERETICIMP"
+msgstr "%o meg lett sebesítve egy vízköpő által."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o fel lett vágva egy vízköpő által."
+
+msgid "OB_IRONLICH"
+msgstr "%o elpusztult egy ezüst lich miatt."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o közel került és személyes volt egy ezüst lichhel szemben."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o baltát kapott egy Élőhalott Harcostól."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o meghalt egy Élőhalott Harcos által."
+
+msgid "OB_MINOTAUR"
+msgstr "%o darabokra robbant egy Maulotaurusz által."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o péppé lett zúzva egy Maulotaurusz által."
+
+msgid "OB_MUMMY"
+msgstr "%o össze lett törve egy Gólem által."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o halálra lett ijesztve egy Nitrógólem által."
+
+msgid "OB_SNAKE"
+msgstr "%o halálra lett csörgetve egy Ofidián által."
+
+msgid "OB_WIZARD"
+msgstr "%o meg lett átkozva egy Varázsló által."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o meg lett tapogatva egy Varázsló által."
+
+msgid "OB_MPSTAFF"
+msgstr "%o meg lett botozva %k által."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o kapott egy sokkot %k által."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o integetett egy viszlátot %k Elf Pálcájának."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o fel lett rögzítve %k Éteri Nyílpuskájának által."
+
+msgid "OB_MPBLASTER"
+msgstr "%o újszerűnek látszik %k Sárkány Karomjának köszönhetően."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o le lett küldve %k Pokolbotjának köszönhetően."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o halomra lett égve %k Főnix Rúdjának által."
+
+msgid "OB_MPMACE"
+msgstr "%o pattant egy nagyot %k Tűzbuzogányának köszönhetően."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o csattant egy nagyot %k Feltöltött Botjának által."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%k megtanította %o-t Páncélkesztyűbe dudálni."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%k megbotozta %o az Elf Botjával."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o megkóstolta %k Éteri Nyílpuskáját."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o szét lett tépve %k Sárkány Karomja által."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%o nem hozott esernyőt %o Pokolbot zápora ellen."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o elégett %k Főnix Botjának által."
+
+msgid "OB_MPPMACE"
+msgstr "%o össze lett nyomva %k hatalmas buzogány gömbje által."
+
+msgid "TXT_MANA_1"
+msgstr "Kék Mana"
+
+msgid "TXT_MANA_2"
+msgstr "Zöld Mana"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Kombinált Mana"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Acél Kulcs"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Barlang Kulcs"
+
+msgid "TXT_KEY_AXE"
+msgstr "Fejsze Kulcs"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Tűz Kulcs"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Smaragd Kulcs"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Várbörtön Kulcs"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Ezüst Kulcs"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Rozsdás Kulcs"
+
+msgid "TXT_KEY_HORN"
+msgstr "Szarv Kulcs"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Mocsár Kulcs"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Kastély Kulcs"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Védelmező Ikonja"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Árny Szolga"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Ártányátok"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "Flakon"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Száműző"
+
+msgid "TXT_ARTISPEED"
+msgstr "Sebesség Cipője"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Hatalom Krátere"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Sárkánybőr Karkötők"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Visszaverés Lemeze"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Misztikus Mágialista"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Yorick Koponyája"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "D'Sparil szíve"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Rubin Bolygó"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Smaragd Bolygó"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Smaragd Bolygó"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Zafír Bolygó"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Zafír Bolygó"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "Démon Kódex"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Láng Maszk"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Pallos Pecsét"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Szent Ereklye"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Mágus Pecsétje"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Óra Szerkezet"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "Ezt Itt Nem Használhatod"
+
+msgid "TXT_ARMOR1"
+msgstr "Háló Páncél"
+
+msgid "TXT_ARMOR2"
+msgstr "Sólyom Pajzs"
+
+msgid "TXT_ARMOR3"
+msgstr "Platina Sisak"
+
+msgid "TXT_ARMOR4"
+msgstr "Oltalom Amulettje"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Timon Baltája"
+
+msgid "TXT_WEAPON_F3"
+msgstr "Kárhozat Kalapácsa"
+
+msgid "TXT_WEAPON_F4"
+msgstr "Némusz Összerakva"
+
+msgid "TXT_WEAPON_C2"
+msgstr "Kígyó Bot"
+
+msgid "TXT_WEAPON_C3"
+msgstr "Tűzvihar"
+
+msgid "TXT_WEAPON_C4"
+msgstr "Bosszúbot Összerakva"
+
+msgid "TXT_WEAPON_M2"
+msgstr "Fagyos Szilánkok"
+
+msgid "TXT_WEAPON_M3"
+msgstr "Halál Boltíve"
+
+msgid "TXT_WEAPON_M4"
+msgstr "Vérkorbács Összerakva"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Egy fegyver darab! Szerencés napod van!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Darab a Némuszból"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Darab a Bosszúbotból"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Darab a Vérkorbácsból"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Az Acél Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "A Barlang Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "A Fejsze Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "A Tűz Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "A Smaragd Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "A Várbörtön Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Az Ezüst Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "A Rozsdás Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "A Szarv Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "A Mocsár Kulcsra van szükséged"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "A Kastély Kulcsra van szükséged"
+
+msgid "FN_FIREDEMON"
+msgstr ""
+
+msgid "FN_DEMON1"
+msgstr "Kígyó"
+
+msgid "FN_ETTIN"
+msgstr ""
+
+msgid "FN_CENTAUR"
+msgstr "Kentaur"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Vágtaur"
+
+msgid "FN_BISHOP"
+msgstr "Érsek"
+
+msgid "FN_ICEGUY"
+msgstr ""
+
+msgid "FN_SERPENT"
+msgstr "Orvhalász"
+
+msgid "FN_WRAITH"
+msgstr "Martalóc"
+
+msgid "FN_DRAGON"
+msgstr "A Halál Sárkánya"
+
+msgid "FN_KORAX"
+msgstr ""
+
+msgid "FN_FBOSS"
+msgstr ""
+
+msgid "FN_MBOSS"
+msgstr ""
+
+msgid "FN_CBOSS"
+msgstr "Traduktusz"
+
+msgid "FN_HERESIARCH"
+msgstr "Főeretnek"
+
+msgid "AMMO_MANA1"
+msgstr "Kék Mana"
+
+msgid "AMMO_MANA2"
+msgstr "Zöld Mana"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Bűnbánat Buzogánya"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Kígyó Bot"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Tűzvihar"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Lidércvég"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Tűskés Páncélkesztyűk"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Timon Baltája"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Kárhozat Kalapácsa"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "Némusz"
+
+msgid "TAG_MWEAPWAND"
+msgstr "Zafír Pálca"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Fagyos Szilánkok"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Halál Boltíve"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Vérkorbács"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Visszaverő Pajzs"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Sárkánybőr Karkötők"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Hatalom Kráterje"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "Nyílhegy"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Méregfelhő hegy"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Időbomba hegy"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Robbanó hegy"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Misztikus Mágialista"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Védelmező Ikonja"
+
+msgid "TAG_ARTIPORK"
+msgstr "Ártányátok"
+
+msgid "TAG_ARTISPEED"
+msgstr "Sebesség Cipői"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Árny Szolga"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Számüzető Szerkentyű"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Yorick Koponyája"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "D'Sparil Szíve"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Rubin Bolygó"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Smaragd Bolygó (1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Smaragd Bolygó (2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Zafír Bolygó (1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Zafír Bolygó (2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "Démon Kódex"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr ""
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Láng Maszk"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Pallos Pecsét"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Szent Ereklye"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Mágus Pecsétje"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Vas Felszerelés"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Réz Felszerelés"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Vas és Réz Felszerelés"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Ezüst és Réz Felszerelés"
+
+msgid "OB_FIREDEMON"
+msgstr "%o megkóstolta a Tűz Szellem parazsát."
+
+msgid "OB_DEMON1"
+msgstr "%o testét leforrázta egy Kígyó"
+
+msgid "OB_DEMON2"
+msgstr "%o vérébe mérget juttatott egy Kígyó"
+
+msgid "OB_ETTIN"
+msgstr "%o csillagokat lát az Ettin miatt."
+
+msgid "OB_CENTAUR"
+msgstr "%o fel lett vágva a Kentaur jóvoltából."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o nagyon felvágott és a Vágtaur is a játékost"
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o másodfokú égési sérüléseket szenvedett el a Vágtaur tűzgolyójától."
+
+msgid "OB_BISHOP"
+msgstr "%o megadta magát a Püspök sötét erejének"
+
+msgid "OB_ICEGUY"
+msgstr "%o testét keményre fagyasztotta egy Wendigo"
+
+msgid "OB_SERPENTHIT"
+msgstr "%o szét lett marcangolva egy Orhalász által."
+
+msgid "OB_SERPENT"
+msgstr "%o csontjairól a húst leolvasztotta egy Orvhalász"
+
+msgid "OB_WRAITH"
+msgstr "%o testét egy Martalóc elszenesítette."
+
+msgid "OB_WRAITHHIT"
+msgstr "%o %p életét ellopta egy Martalóc"
+
+msgid "OB_DRAGON"
+msgstr "%o testét porig égette egy Halálsárkány"
+
+msgid "OB_KORAX"
+msgstr "%o el lett söpörve a tábláról Korax által."
+
+msgid "OB_FBOSS"
+msgstr "%o meghalt Zedek által."
+
+msgid "OB_MBOSS"
+msgstr "%o nem tudta elnyelni Menelkir manáját."
+
+msgid "OB_CBOSS"
+msgstr "%o meg lett keresztelve Traductus által."
+
+msgid "OB_HERESIARCH"
+msgstr "%o csontváza ki lett forgatva az Eretnek Vezér által."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o péppé lett verve %k ökleivel."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o megkapta %k baltáját."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%o kapott egy üreges fejet %k Kalapácsa által."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o lelke újra lett kovácsolva %k Kalapácsa által."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o el lett némítva %k hatalmas Némusza által."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o kapott egy buzogányt a fejébe %k által."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o meg lett harapva %k Kígyó Botja által."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o megfulladt %k Kígyó Botja által."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o fel lett gyújtva %k tűze által."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o meg lett tisztítva %k Bosszúbot által."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o túl sok zafír sugarat kapott %k-tól/től."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o jégbaráttá alakult %k által."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o kapott egy sokkoló relevációt %k-tól/től"
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o ki lett törölve az univerzumból %k Vérkorbácsának köszönhetően."
+
+msgid "TXT_METALARMOR"
+msgstr "Felvetted a Fémpáncélt."
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Felvetted a Bőrpáncélt."
+
+msgid "TXT_MEDPATCH"
+msgstr "Felvetted a Ragtapaszt."
+
+msgid "TXT_MEDICALKIT"
+msgstr "Felvetted az Elsősegélycsomagot."
+
+msgid "TXT_SURGERYKIT"
+msgstr "Felvetted az Orvosi Műtőfelszerelést."
+
+msgid "TXT_STRIFEMAP"
+msgstr "Felvetted a térképet."
+
+msgid "TXT_BELDINSRING"
+msgstr "Felvetted a Gyűrűt."
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Felvetted az Áldozati Kelyhet."
+
+msgid "TXT_EAR"
+msgstr "Felvetted a Fület."
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Felvetted a hibás tápcsatlakozót."
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Felvetted az Árnyékpáncélt."
+
+msgid "TXT_ENVSUIT"
+msgstr "Felvetted a Védőruhát."
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Felvetted az Őr Egyenruhát."
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Felvetted a Tiszti Egyenruhát."
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Felvetted a lángszóró részeit."
+
+msgid "TXT_REPORT"
+msgstr "Felvetted a jelentést."
+
+msgid "TXT_INFO"
+msgstr "Felvetted az információt."
+
+msgid "TXT_TARGETER"
+msgstr "Felvetted a Célzóberendezést."
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Felvetted a Kommunikátort"
+
+msgid "TXT_COIN"
+msgstr "Felvetted az érmét."
+
+msgid "TXT_XGOLD"
+msgstr "Felvettél %d aranyat."
+
+msgid "TXT_BEACON"
+msgstr "Felvetted a Teleport jelzőt."
+
+msgid "TXT_DEGNINORE"
+msgstr "Felvetted a Degnin Ércet."
+
+msgid "TXT_SCANNER"
+msgstr "Felvetted a szkennert."
+
+msgid "TXT_NEEDMAP"
+msgstr "Térkép nélkül nem fog működni a szkenner!"
+
+msgid "TXT_PRISONPASS"
+msgstr "Felvetted a Börtön belépőkártyát."
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Felvetted a számszeríjat."
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Felvetted a gépfegyvert."
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Felvetted a minirakétavetőt."
+
+msgid "TXT_FLAMER"
+msgstr "Felvetted a lángszórót."
+
+msgid "TXT_MAULER"
+msgstr "Felvetted a marcangolót."
+
+msgid "TXT_GLAUNCHER"
+msgstr "Felvetted a gránátvetőt."
+
+msgid "TXT_SIGIL"
+msgstr "Felvetted a Pecsétet."
+
+msgid "TXT_BASEKEY"
+msgstr "Felvetted a Bázis kulcsát."
+
+msgid "TXT_GOVSKEY"
+msgstr "Felvetted a Kormányzó parcellájának kulcsát."
+
+msgid "TXT_PASSCARD"
+msgstr "Felvetted a Belépőkártyát."
+
+msgid "TXT_IDBADGE"
+msgstr "Felvetted az Azonosítójelvényt."
+
+msgid "TXT_PRISONKEY"
+msgstr "Felvetted a Börtönkulcsot."
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Felvetted a Levágott kezet."
+
+msgid "TXT_POWER1KEY"
+msgstr "Felvetted az 1-es Áram kulcsot."
+
+msgid "TXT_POWER2KEY"
+msgstr "Felvetted az 2-es Áram kulcsot."
+
+msgid "TXT_POWER3KEY"
+msgstr "Felvetted az 3-as Áram kulcsot."
+
+msgid "TXT_GOLDKEY"
+msgstr "Felvetted az Aranykulcsot."
+
+msgid "TXT_IDCARD"
+msgstr "Felvetted az Igazolványt."
+
+msgid "TXT_SILVERKEY"
+msgstr "Felvetted az Ezüstkulcsot."
+
+msgid "TXT_ORACLEKEY"
+msgstr "Felvetted az Orákulum kulcsát."
+
+msgid "TXT_MILITARYID"
+msgstr "Felvetted a Katonai igazolványt."
+
+msgid "TXT_ORDERKEY"
+msgstr "Felvetted a Rend kulcsát."
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Felvetted a Raktár kulcsát."
+
+msgid "TXT_BRASSKEY"
+msgstr "Felvetted a Rézkulcsot."
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Felvetted a Vörös Kristály Kulcsot."
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Felvetted a Kék Kristály Kulcsot."
+
+msgid "TXT_CHAPELKEY"
+msgstr "Felvetted a Kápolna Kulcsát."
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Felvetted a Katakombák kulcsát."
+
+msgid "TXT_SECURITYKEY"
+msgstr "Felvetted a Biztonsági Kulcsot."
+
+msgid "TXT_COREKEY"
+msgstr "Felvetted a Mag kulcsát."
+
+msgid "TXT_MAULERKEY"
+msgstr "Felvetted a Marcangoló kulcsot."
+
+msgid "TXT_FACTORYKEY"
+msgstr "Felvetted a Gyár kulcsát."
+
+msgid "TXT_MINEKEY"
+msgstr "Felvetted a Bánya kulcsát."
+
+msgid "TXT_NEWKEY5"
+msgstr "Felvetted az 5. kulcsot."
+
+msgid "TXT_ORACLEPASS"
+msgstr "Felvetted az Orákulum Belépőkártyáját."
+
+msgid "TXT_HEGRENADES"
+msgstr "Felvetted a robbanó gránátot."
+
+msgid "TXT_PHGRENADES"
+msgstr "Felvetted a foszfor-gránátokat."
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Felvettél egy tár lőszert."
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Felvettél egy doboz lőszert."
+
+msgid "TXT_MINIMISSILES"
+msgstr "Felvetted a minirakétákat."
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Felvettél egy ládányi minirakétát."
+
+msgid "TXT_ENERGYPOD"
+msgstr "Felvettél egy energiahüvelyt."
+
+msgid "TXT_ENERGYPACK"
+msgstr "Felvetted az energiacsomagot."
+
+msgid "TXT_POISONBOLTS"
+msgstr "Felvetted a mérgezett nyilakat."
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Felvetted az elektromos nyilakat."
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Felvetted a lőszeres táskát."
+
+msgid "MSG_TALISMANRED"
+msgstr "Úgy érzed azt nem kéne megérinteni..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Bármi legyen ez, nem ebben a világban van a helye..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Valamit kell hogy csináljon..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "Tied a Szuper Erő!"
+
+msgid "TXT_NEEDKEY"
+msgstr "Ehhez nincs kulcsod."
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Belépőkártyára lesz szükséged."
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Belépőkártya nélkül nem nyílik ez az ajtó."
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Igazolvány szükséges"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Nincs kulcsod a börtönhöz."
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Azonosítatlan kézlenyomat."
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Aranykulcs szükséges."
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Azonosító jelvény szükséges."
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Azonosító jelvény szükséges az ajtó kinyitásához."
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Az ezüstkulcs szükséges."
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "A rézkulcs szükséges."
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "A vörös kristályra lesz szükség itt."
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "A kék kristályra lesz szükség itt."
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Ez a terület kizárólag a Strife teljes verziójában érhető el"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Ez nem akar működni."
+
+msgid "TXT_NEED_CHALICE"
+msgstr "A Kupára van szükséged!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Az Orákulum Engedélyére van szükséged!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Tőr"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Nyílpuska"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Nyílpuska"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Gépfegyver"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Mini Rakétavető"
+
+msgid "TAG_FLAMER"
+msgstr "Lángszóró"
+
+msgid "TAG_MAULER1"
+msgstr "Marcangoló"
+
+msgid "TAG_MAULER2"
+msgstr "Marcangoló"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "Gránátvető"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "Gránátvető"
+
+msgid "TAG_SIGIL"
+msgstr "Pecsét"
+
+msgid "TAG_COIN"
+msgstr "Érme"
+
+msgid "TAG_MEDPATCH"
+msgstr "Ragtapasz"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Orvosi Készlet"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Sebészeti Készlet"
+
+msgid "TAG_BELDINSRING"
+msgstr "Gyűrű"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Áldozati kehely"
+
+msgid "TAG_EAR"
+msgstr "Fül"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Elromlott Tápcsatlakozó"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Sötét Páncél"
+
+msgid "TAG_ENVSUIT"
+msgstr "Védőöltözet"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Őr Egyenruha"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Tiszti Egyenruha"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Lángszóró Alkatrészek"
+
+msgid "TAG_REPORT"
+msgstr "Jelentés"
+
+msgid "TAG_INFO"
+msgstr "Információ"
+
+msgid "TAG_TARGETER"
+msgstr "Célzó eszköz"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Kommunikátor"
+
+msgid "TAG_DEGNINORE"
+msgstr "Degnin Érc"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Pontosság"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Kitartás"
+
+msgid "TAG_SCANNER"
+msgstr "Szkenner"
+
+msgid "TAG_PRISONPASS"
+msgstr "Börtön Engedély"
+
+msgid "TAG_ALARM"
+msgstr "Riasztó"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Lőszer"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Életerő"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Teleport Vészfény"
+
+msgid "TAG_METALARMOR"
+msgstr "Fém Páncél"
+
+msgid "TAG_LEATHER"
+msgstr "Bőr Páncél"
+
+msgid "TAG_HEGRENADES"
+msgstr "Gránát Lőszer"
+
+msgid "TAG_PHGRENADES"
+msgstr "Foszfor-Gránát Lőszer"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Golyó töltények"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Lőszer"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Mini Rakéták"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Ládányi Rakéta"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Energia Lőszer"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Energia Csomag"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Mérgező hegyek"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Elektromos hegyek"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Lőszeres táska"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "Bázis Kulcs"
+
+msgid "TAG_GOVSKEY"
+msgstr "Kormányzó Kulcs"
+
+msgid "TAG_PASSCARD"
+msgstr "Belépőkártya"
+
+msgid "TAG_IDBADGE"
+msgstr "Azonosító Jelvény"
+
+msgid "TAG_PRISONKEY"
+msgstr "Börtön Kulcs"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Levágott Kéz"
+
+msgid "TAG_POWER1KEY"
+msgstr "1. erő kulcs"
+
+msgid "TAG_POWER2KEY"
+msgstr "2. erő kulcs"
+
+msgid "TAG_POWER3KEY"
+msgstr "3. erő kulcs"
+
+msgid "TAG_GOLDKEY"
+msgstr "Aranykulcs"
+
+msgid "TAG_IDCARD"
+msgstr "Azonosító Kártya"
+
+msgid "TAG_SILVERKEY"
+msgstr "Ezüst Kulcs"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Orákulum kulcs"
+
+msgid "TAG_MILITARYID"
+msgstr "Katonai Azonosító Kártya"
+
+msgid "TAG_ORDERKEY"
+msgstr "Rend Kulcs"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Raktár Kulcs"
+
+msgid "TAG_BRASSKEY"
+msgstr "Réz Kulcs"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Piros Kristály Kulcs"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Kék Kristály Kulcs"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Kápolna Kulcs"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Katakomba Kulcs"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Biztonsági Kulcs"
+
+msgid "TAG_COREKEY"
+msgstr "Mag Kulcs"
+
+msgid "TAG_MAULERKEY"
+msgstr "Marcangoló Kulcs"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Gyár Kulcs"
+
+msgid "TAG_MINEKEY"
+msgstr "Bánya Kulcs"
+
+msgid "TAG_NEWKEY5"
+msgstr "5. kulcs"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "Orákulum útlevél"
+
+msgid "TAG_10GOLD"
+msgstr "10 arany"
+
+msgid "TAG_25GOLD"
+msgstr "25 arany"
+
+msgid "TAG_50GOLD"
+msgstr "50 arany"
+
+msgid "TAG_300GOLD"
+msgstr "300 arany"
+
+msgid "TXT_PERSON"
+msgstr "Személy"
+
+msgid "TAG_ACOLYTE"
+msgstr "Ministráns"
+
+msgid "TAG_ARMORER"
+msgstr "Páncélkovács"
+
+msgid "TAG_BARKEEP"
+msgstr "Csapos"
+
+msgid "TAG_BEGGAR"
+msgstr "Koldus"
+
+msgid "TAG_MACIL1"
+msgstr ""
+
+msgid "TAG_MACIL2"
+msgstr ""
+
+msgid "TAG_MEDIC"
+msgstr "Szanitéc"
+
+msgid "TAG_ORACLE"
+msgstr "Orákulum"
+
+msgid "TAG_PRIEST"
+msgstr "Pap"
+
+msgid "TAG_RATBUDDY"
+msgstr "Patkánypajtás"
+
+msgid "TAG_REBEL"
+msgstr "Lázadó"
+
+msgid "TAG_TEMPLAR"
+msgstr "Templomos"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Fegyverkovács"
+
+msgid "TAG_TALISMANRED"
+msgstr "Vörös Talizmán"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Zöld Talizmán"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Kék Talizmán"
+
+msgid "OB_ACOLYTE"
+msgstr "%o-t buzgó módon le lett lőve egy Oltárszolga által."
+
+msgid "OB_MACIL"
+msgstr "%o Macil ellen próbált fellázadni."
+
+msgid "OB_REBEL"
+msgstr "%o le lett lőve egy Lázadó által."
+
+msgid "OB_BEGGAR"
+msgstr "%o halálra lett verve a szegénység által."
+
+msgid "OB_PEASANT"
+msgstr "%o ujjat húzott egy civillel."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o ki lett ütve a lidérc által."
+
+msgid "OB_ENTITY"
+msgstr "%o megérezte az Egyetlen Isten haragját."
+
+msgid "OB_LOREMASTER"
+msgstr "%o nem tudott elmenekülni a Tan Mester elől."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o ki lett törölve a Programozó által."
+
+msgid "OB_STFBISHOP"
+msgstr "%o el lett fújva a Püspök által."
+
+msgid "OB_SENTINEL"
+msgstr "%o meg lett lőve egy Őrszem által."
+
+msgid "OB_CRUSADER"
+msgstr "%o el lett söpörve egy Keresztes Lovag által."
+
+msgid "OB_INQUISITOR"
+msgstr "%o el lett ítélve egy Vizsgálóbíró által."
+
+msgid "OB_STALKER"
+msgstr "%o bogaras lett egy Settenkedő által."
+
+msgid "OB_TURRET"
+msgstr "%o bekapcsolta az automata védelmi rendszert."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o meg lett karmolva egy Templomos által."
+
+msgid "OB_TEMPLAR"
+msgstr "%o elpárolgott egy Templomos által."
+
+msgid "OB_REAVERHIT"
+msgstr "%o szét lett vágva egy Fosztogató által."
+
+msgid "OB_REAVER"
+msgstr "%o le lett lőve egy Fosztogató által."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o véletlenül hátbalett szúrva %k által."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o falra lett szegezve %k által."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o kapott egy halálos adagot %k-tól/től."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o ki lett lyukasztva %k Gépfegyvere által."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o lenyelte %k rakétáját."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o ki lett fordítva %k gránátája által."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o kapott egy tűzfürdőt %k máglyájától."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o meg lett sütve %k által."
+
+msgid "OB_MPMAULER1"
+msgstr "%o kapott egy áramot %k által."
+
+msgid "OB_MPMAULER"
+msgstr "%o elpárolgott %k által."
+
+msgid "OB_MPSIGIL"
+msgstr "%o fejet hajtott %k Pecsétje ereje előtt."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "A Pecsét felkutatása"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Kiszabadítottad a foglyokat!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Elpusztítottad a konvertálót!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Gratulálok! Elvégezted a gyakorló területet."
+
+msgid "TXT_QUEST_14"
+msgstr "Szétrobbantottad a kristályt"
+
+msgid "TXT_QUEST_16"
+msgstr "A levegőbe repítetted a kapukat"
+
+msgid "TXT_QUEST_27"
+msgstr "Felrobbantottad a számítógépet"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Megölted a Püspököt!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Megölted az Orákulumot!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Megölted Macilt!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Megölted a Tudóst!"
+
+msgid "TXT_YOUFOOL"
+msgstr "Te barom! Beindítottad a riasztót."
+
+msgid "TXT_YOUREDEAD"
+msgstr "Beindult a riasztó. Halott vagy!"
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Úgy néz ki eleged van már!"
+
+msgid "TXT_GOAWAY"
+msgstr "Takarodj!"
+
+msgid "TXT_COMM0"
+msgstr "Bejövő Üzenet..."
+
+msgid "TXT_COMM1"
+msgstr "Bejövő Üzenet Feketerigótól..."
+
+msgid "TXT_FINDHELP"
+msgstr "Keress segítséget"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "%u számára"
+
+msgid "GOTCHEXARMOR"
+msgstr "Felvettél egy Chex(R) páncélt."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Felvettél egy szuper Chex(R) páncélt!"
+
+msgid "GOTWATER"
+msgstr "Felvettél egy pohár vizet."
+
+msgid "GOTREPELLENT"
+msgstr "Felvettél egy nyálkataszítót."
+
+msgid "GOTBREAKFAST"
+msgstr "Szupertöltött Reggeli!"
+
+msgid "GOTCBLUEKEY"
+msgstr "Felvettél egy kék kulcsot."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Felvettél egy sárga kulcsot."
+
+msgid "GOTCREDKEY"
+msgstr "Felvettél egy piros kulcsot."
+
+msgid "GOTFRUIT"
+msgstr "Felvettél egy tál gyümölcsöt."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "A zöldségek NAGYON jót tesznek neked!"
+
+msgid "GOTVEGETABLES"
+msgstr "Felvettél egy tál zöldséget."
+
+msgid "GOTSLIMESUIT"
+msgstr "Felvettél egy nyálkaálló védőruhát"
+
+msgid "GOTCHEXMAP"
+msgstr "Felvettél egy Számítógépes Térképet"
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Felvettél egy Mini Zorker Újratöltőt"
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Felvettél egy Mini Zorker Csomagot"
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Felvettél egy Zork Elhárító Újratöltőt"
+
+msgid "GOTPROPULSORPACK"
+msgstr "Felvettél egy Zork Elhárító Csomagot"
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Felvettél egy Fázis Zorker Újratöltőt"
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Felvettél egy Fázis Zorker Csomagot"
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Felvettél egy Nagy Zorker Újratöltőt"
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Felvettél egy Nagy Zorker Csomagot"
+
+msgid "GOTZORCHPACK"
+msgstr "Felvettél egy Zorkpakkot!"
+
+msgid "GOTLAZDEVICE"
+msgstr "Felvetted a LAZ Készüléket! Wáó!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Felvetted a Gyors Zorkert!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Felvetted a Szuper Rotációs Villát!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Felvetted a Zork Elhárítót!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Felvetted a Fázis Zorkert!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Felvetted a Nagy Zorkert!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Felvetted a Mega Zorkert!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Felvettél egy Mini Zorkert."
+
+msgid "TAG_SPOON"
+msgstr "Kanál"
+
+msgid "TAG_SPORK"
+msgstr "Szuper Rotációs Villa"
+
+msgid "TAG_MINIZORCHER"
+msgstr "Mini Zorker"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Nagy Zorker"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Hatalmas Zorker"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Gyors Zorker"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Zork Elhárító"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Fokozatos Zorker"
+
+msgid "TAG_LAZDEVICE"
+msgstr "LAZ Készülék"
+
+msgid "OB_COMMONUS"
+msgstr "%o el lett trutyizva egy Flemoid által."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o el lett trutyizva egy kétlábusz által."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o el lett trutyizva egy páncélozott kétlábusz által."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o el lett trutyizva egy kükloptisz által."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o vereséget szenvedett a Slejmbrántól."
+
+msgid "OB_MPSPOON"
+msgstr "%o kanállal lett etetve %k által."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o össze lett keverve %k Rotációsvillája által."
+
+msgid "OB_MPZORCH"
+msgstr "%o zorkolva lett %k által."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o elérte %k mega zorkerét."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o gyors zorkolva lett %k által."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o zorkolva lett %k elhárítója által."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o elérte %k elhárítóját."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o fázis zorker áldozata lett %k által."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o prédául lett ejtve %k LAZ készülékével."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o el lett lazzázva %k által."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Leszállópálya"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Raktárépület"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Laboratórium"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: Arborétum"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Bazoik barlangjai"
+
+msgid "CE1TEXT"
+msgstr ""
+"Küldetés teljesítve.\n"
+"\n"
+"Készen állsz a következő küldetésre?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Nyomd meg az ESC gombot a folytatáshoz..."
+
+msgid "CE2TEXT"
+msgstr "Megcsináltad!"
+
+msgid "CE3TEXT"
+msgstr "Tökéletes munka!"
+
+msgid "CE4TEXT"
+msgstr "Fantasztikus!"
+
+msgid "CLOADNET"
+msgstr ""
+"Nem tudsz mentést betölteni netes küldetés közben!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"Gyorsmenteni akarod az alábbi küldetést:\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Nyomj Y vagy N-t."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"Nem tudsz gyorstölteni netes küldetés közben!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"Be akarod tölteni a következő küldetést\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgid "CNEWGAME"
+msgstr ""
+"Nem tudsz új játékot indítani netes küldetés közben!\n"
+"\n"
+"Nyomj meg egy gombot."
+
+msgid "CNIGHTMARE"
+msgstr ""
+"Vigyázz, ez nehéz lesz.\n"
+"Biztosan folytatni akarod?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgid "CSWSTRING"
+msgstr ""
+"Ez a Chex(R) Quest. Keresd\n"
+"\n"
+"az új pályákat a www.chexquest.com-on.\n"
+"\n"
+"Nyomj egy gombot."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"Nem tudsz kilépni a netes küldetésből!\n"
+"\n"
+"Nyomj egy gombot."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Biztosan be akarod fejezni a küldetést?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Sérthetetlen mód BE"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Sérthetetlen mód KI"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Szörcs felvéve"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Szuper Szörcs feléve"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "...egyél Chex(R)-et!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Mini szörcs töltet"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Nagy szörcs töltet"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Hajtómű töltet"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Fázisszörcsölő töltet"
+
+msgid "MNU_NEWGAME"
+msgstr "Új játék"
+
+msgid "MNU_OPTIONS"
+msgstr "Beállítások"
+
+msgid "MNU_GAMEFILES"
+msgstr "Játékfájlok"
+
+msgid "MNU_INFO"
+msgstr "Információ"
+
+msgid "MNU_QUITGAME"
+msgstr "Kilépés"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "Nehézségi szint:"
+
+msgid "SKILL_BABY"
+msgstr "Kicsi vagyok még a halálhoz."
+
+msgid "SKILL_EASY"
+msgstr "Hé, ne túl erősen!"
+
+msgid "SKILL_NORMAL"
+msgstr "Adjál bőven!"
+
+msgid "SKILL_HARD"
+msgstr "Ultraerőszak!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Rémálom!"
+
+msgid "CSKILL_BABY"
+msgstr "Csak gyengéden."
+
+msgid "CSKILL_EASY"
+msgstr "Ne túl ragadósan!"
+
+msgid "CSKILL_NORMAL"
+msgstr "Egy csomó trutymó"
+
+msgid "CSKILL_HARD"
+msgstr "Extrém nyúlós"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Szupernyálkás!"
+
+msgid "SSKILL_BABY"
+msgstr "Kiképzés"
+
+msgid "SSKILL_EASY"
+msgstr "Újonc"
+
+msgid "SSKILL_NORMAL"
+msgstr "Veterán"
+
+msgid "SSKILL_HARD"
+msgstr "Elit"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Vérfürdő"
+
+msgid "MNU_WETNURSE"
+msgstr "Süldőgyermek"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Ne bántsék kend!"
+
+msgid "MNU_BRINGEST"
+msgstr "Ide velük hinnye"
+
+msgid "MNU_SMITE"
+msgstr "Csapjunk bele kend!"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "Ehun gyün a pestis"
+
+msgid "MNU_SQUIRE"
+msgstr "Apród"
+
+msgid "MNU_KNIGHT"
+msgstr "Lovag"
+
+msgid "MNU_WARRIOR"
+msgstr "Katona"
+
+msgid "MNU_BERSERKER"
+msgstr "Harcos"
+
+msgid "MNU_TITAN"
+msgstr "Titán"
+
+msgid "MNU_ALTARBOY"
+msgstr "Ministráns"
+
+msgid "MNU_ACOLYTE"
+msgstr "Oltárszolga"
+
+msgid "MNU_PRIEST"
+msgstr "Pap"
+
+msgid "MNU_CARDINAL"
+msgstr "Bíboros"
+
+msgid "MNU_POPE"
+msgstr "Pápa"
+
+msgid "MNU_APPRENTICE"
+msgstr "Tanonc"
+
+msgid "MNU_ENCHANTER"
+msgstr "Bűvölő"
+
+msgid "MNU_SORCERER"
+msgstr "Varázsló"
+
+msgid "MNU_WARLOCK"
+msgstr "Boszorkánymester"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Főmágus"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Válassz kasztot:"
+
+msgid "MNU_FIGHTER"
+msgstr "Harcos"
+
+msgid "MNU_CLERIC"
+msgstr "Lelkész"
+
+msgid "MNU_MAGE"
+msgstr "Mágus"
+
+msgid "MNU_RANDOM"
+msgstr "Véletlenszerű"
+
+msgid "MNU_EPISODE"
+msgstr "Melyik epizód?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Válassz hadjáratot"
+
+msgid "MNU_COTD"
+msgstr "Az átkozottak városa"
+
+msgid "MNU_HELLSMAW"
+msgstr "A Pokol bugyrai"
+
+msgid "MNU_DOME"
+msgstr "D'Sparil kupolája"
+
+msgid "MNU_OSSUARY"
+msgstr "Csontkamra"
+
+msgid "MNU_DEMESNE"
+msgstr "A pangó birtok"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Csapatjáték"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Csapatsebzés mértéke"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Okos automata célzás"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Eséskor sebzés"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Fegyver eldobása"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Dupla muníció"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Végtelen muníció"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Végtelen felszerelés"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Szörnyek nélkül"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Megölendő szörnyek nélkül"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Szörnyek újraszületnek"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Szörnyek nem születnek újra"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "tárgyak újrateremnek"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Nagy képességek újraszületnek"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Gyors szörnyek"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Rémálom szintű szörny reakciók"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Degeneráció"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Autocélzás engedélyezése"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Öngyilkosság engedélyezése"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Ugrás engedélyezése"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Guggolás engedélyezése"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Szabad egérmozgás engedélyezése"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Látószög állítás engedélyezése"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "BFG célzás engedélyezése"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Autotérkép engedélyezése"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Társak mutatása a térképen"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Kémkedés engedélyezése"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Követésőkamera csalás"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "Váltáskor üres fegyver átugrása"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Az ikon halála esetén a teremtményei is meghalnak"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "Utolsó szektornál számít az ölés %"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Deathmatch beállítások"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Fegyverek mindig felvehetőek"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Powerupok engedélyezése"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Életerő engedélyezése"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Páncél engedélyezése"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Legmesszebb születés"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Ugyanazon pálya"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Újraszületés kényszerítése"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Kijárat engedélyezése"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Hordók újraszületése"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Újraszületési védelem"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Halál esetén pont veszítése"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Megszerzett pontok megmaradnak"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Nincs csapatváltás"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Együttműködő beállítások"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Többjátékos fegyverek engedélyezése"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Teljes készlet elvesztése"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Kulcsok megtartása"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Fegyverek megtartása"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Páncél megtartása"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Powerupok megtartása"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Muníció megtartása"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Fele muníció elvesztése"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Halál helyén újraszületés"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Mindig megjelennek a többjátékos tárgyak"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Vertikális fegyverszórás engedélyezve"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "A fegyverek extra lőszert adnak (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Kompatibilitási beállítások"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Kompatibilitási beállítások"
+
+msgid "CMPTMNU_MODE"
+msgstr "Kompatibilitási mód"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Actor viselkedés"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Barátságos szörnyek nem blokkolódnak"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Kiköpött Elveszett Lelkek limitálása"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Szörny sebesség függ az effektektől"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Szörnyek le tudnak esni a lejtőről"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Szörnyek nem mennek tovább a lejtőnél"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Láthatatlanság alatt is látható a játékos"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Minotaurusz égő nyom nincs a vízben"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Spawnolt tárgy a földön jelenik meg"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DeHackEd viselkedés"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH életerő beállítások mint a Doom2.exe esetében"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Eredeti A_Mushroom sebesség a DEH modoknál"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Pálya/Akció viselkedés"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Minden speciális sor blokkolhatja a <use> parancsot"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Főgonosz halála megengedett a speciális pályákon"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "A BOOM ajtó fény effekt kikapcsolása "
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Szomszédos fényforrás keresése mint Doom-ban"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Legkisebb textúrák keresése mint Doom-ban"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Bugosabb lépcsőépítés használata"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Doom jellegű padló mozgás"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Doom jellegű point-on-line algoritmus"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Pálya kijárat többször is triggerelhető"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Fizika viselkedés"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Személyek végtelen magasak"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Boom scroller-ek összeadódnak"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Nem haladhat egyenes vonalban NSEW"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Falon futás engedélyezése"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven scroller-ek eredeti sebességűek"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Saját ref.sektorok nem blokkkolják a lövéseket"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Doom kód használata a hitscan ellenőrzéshez"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Doom féle magasság használata a rakáta találathoz"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Renderelés viselkedése"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Hexen féle tárgy kirajzolás"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Függőleges mozgatás ignorálása a maszkolt midtextúráknál"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Sprite rendzés megfordítása"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Hang viselkedés"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Bénító hang a halk BFG trükknél"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Mások ne hallhassák a tárgy felvételeidet"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Halk isntant mozgó padló"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Center forrás használata a szektor hangoknál"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Hangok megszűnnek az eltűnéskor"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Eredeti hang célpont kezelés"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Szkriptelt teleportok nem triggerelnek szektor műveletet"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Nem blokkoló vonalak megnyomhatóak"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Bugos CheckSwitchRange mechanika bekapcsolás"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Bugos Strife korlát bekapcsolása"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "A robbanásnak nincs függőleges lökése"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Eredeti Doom robbanás mechanika használata"
+
+msgid "PLYRMNU_RED"
+msgstr "Piros"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Zöld"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Kék"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Kaszt"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Kinézet"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Felvételkor váltás"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Nyomj \\cjSPACE -t"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "Előre nézni"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "Hátra Nézni"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Vertikális fegyver szórás"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Ráközelítés fegyverrel"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Fegyver 1. állapot"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Fegyver 2. állapot"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Fegyver 3. állapot"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Fegyver 4. állapot"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Repülés / Felfele úszás"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Repülés / Lefele úszás"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Repülés abbahagyása"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Billentyűzettel való nézelődés"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Strife Felugró Ablak Irányítás"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Üzenet csapattársaknak"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Tárgy eldobása"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Rákérdez a tárgy eldobásnál"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Fegyver eldobása"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Más"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Coop leskelődés"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Strife Felugró Ablakok"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Küldetési célok"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Kulcslista"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Fegyver/lőszer/statisztika"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Eredményjelző kapcsoló"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr ""
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr ""
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Háttér"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Te"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "1 oldalú falak"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "2 oldalú falak különböző padlókkal"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "2 oldalú falak különböző plafonnal"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "2 oldalú falak 3D-s padlókkal"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Pálya szél"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Pálya közepe"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Még nem látott falak"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Zárt ajtók"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Ugyanarra a pályára teleportálás"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Másik pályára teleportálás"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Rejtekhely szektora"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Még fel nem fedezett rejtekhely"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Speciális trigger vonalak"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Csalás mód"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Láthatatlan 2 oldalú falak"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Titkos falak"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Játékos"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Szörnyek"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Nem számolt szörnyek"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Barátok"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Tárgyak"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Tárgyak számolása"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Overlay mód"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "overlay csaló mód"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Portál overlay-ek"
+
+msgid "MSGMNU_TITLE"
+msgstr "Üzenetek"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Üzenetek mutatása"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Halálok mutatása"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Titkos üzenetek mutatása"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Milyen üzenet jelenjen meg"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Üzenet színek"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Tárgy felvétele"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Halálok"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Fontos üzenetek"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Chat üzenetek"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Csapat chat üzenetek"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Üzenet középre igazítása"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Képernyőkép készítés visszajelzés"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Részletes mentési információ"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Fejlesztői üzenetek"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Pálya térkép szín séma"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Pálya orientált színséma használata"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Egyéni színek beállítása"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Térkép irányítás testreszabása"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Képen felüli térkép"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Textúrázott térkép"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Tárgy számláló mutatása"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Szörny számláló mutatása"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Rejtekhely számláló mutatása"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Eltöltött idő mutatása"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Teljes eltelt idő mutatása"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Rejtekhelyek mutatása a pályán"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Pályacím mutatása"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Térkép háttér kirajzolása"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Kulcsok mutatása"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Trigger vonalak mutatása"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Tárgyak sprite-ként megjelenítése"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Overlay portálok"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Üres hely szegély"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Jelzés betűtípus"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Jelzés szín"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Jelzés beállítása"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "Jelzések törlése"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Eredményjelző beállítások"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Eredményjelző beállítások"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Együttműködő beállítása"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Eredményjelző bekapcsolása"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Fejléc szín"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Játékos színe"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Más játékosok színe"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Deathmatch Beállítások"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Team Deathmatch Beállítások"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Alternatív HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Alternatív HUD bekapcsolása"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Rejtekhely számláló mutatása"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Szörny számláló mutatása"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Tárgy számláló mutatása"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Állóképesség és pontosság mutatása"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Berserk mutatása"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Fegyverek mutatása"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Ammo mutatása a"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Idő mutatása"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Idő színe"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Válaszidő mutatása"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Muníció típus rendezése"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Piros muníció szín % alatt"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Sárga muníció szín % alatt"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Piros életerő szín ezen szám alatt"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Sárga életerő szín ezen szám alatt"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Zöld életerő szín ezen szám alatt"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Piros páncél szín ezen szám alatt"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Sárga páncél szín ezen szám alatt"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Zöld páncél szín ezen szám alatt"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "Alternatív Automap HUD"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Pálya cím szín"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Pálya idő szín"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Csomópont idő szín"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Teljes idő szín"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Koordináló szín"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Koordináló mód"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Statisztika név szín"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Statisztika szín"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Render animáció simítás"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Átlászóság render mód"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Képernyőtörlődés módja"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "ENDOOM képernyő mutatása"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Sebzéskor villanás mértéke"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Fegyver felvételekor villanás mértéke"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Vízalatti keverődés mértéke"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Égbolt render mód"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Lineáris égboltok"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Fullbright felülírja a szektor szinét"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Homályosodás effekt átméretezése"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Homályosodás effekt használata"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Klasszikus átlátszóság"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Lost soul átlátszóság"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Hamis kontraszt használata"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Rakéta füstnyomok"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Vér fajta"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Lövedék becsapódás fajtája"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Részecskék száma"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Lövésnyomok száma"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Játékos sprite-ok mutatása"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Halál kamera"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Teleporter ráközelítés"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Földrengés erőssége"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Szörny mozgás simítása"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Menü homályosítása"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Homályosítás színe"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Fegyver mozgása lépés közben"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Fegyver mozgása egy helyben"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Fegyver mozgás sebesség"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Méretezési Beállítások"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Beállítások felülírása"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Üzenetek"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Konzol"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Státusz sáv"
+
+msgid "SCALEMNU_HUD"
+msgstr "Teljes képernyős HUD"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Alternatív HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "A HUD képarány visszaállítása"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Alap arányok használata"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Teljes képernyőre arányítás"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Képernyő mérethez alkalmazkodik"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUD beállításai"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "Alternatív HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Üzenet beállítások"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Felhasználó Panel mérete"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Alapcélkereszt erőltetése"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "A célkereszt nőjön tárgyfelvételkor"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Névtábla mutatása"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Névtábla szín"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Régi sebződő fej formula használata"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Hexen fegyver villanások"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Méreg sebzés villanások"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Jéghalál villanások"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Fokozatos méreg sebzés villanások"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Méretezés Beállítások"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "IWAD kiválasztó ablak mutatása"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Minden játék csaláskódja érvényes"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Szkriptek is készíthetnek képernyőképet"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "*.deh/*.bex lump-ok betöltése"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Node-ok cache-lése"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Időhatár node cache-hez"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Cache node ürítése"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Pályaközi szünetek átugorhatóak"
+
+msgid "NETMNU_TITLE"
+msgstr "Hálózati Beállítások"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Helyi beállítások"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Mozgás előrejelzés"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Előrejelzés vonal művelet"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Előrejelzés LERP Arány"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "LERP küszöbérték"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Host beállítások"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Extra Tic-ek"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Válaszidő balanszolás"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Eredeti"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimalizált"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Klasszikus (gyorsabb)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Pontos"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Lekorlátozva"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Részecskék"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Sprite-ok"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Sprite-ok és részecskék"
+
+msgid "OPTVAL_MELT"
+msgstr "Olvadás"
+
+msgid "OPTVAL_BURN"
+msgstr "Égés"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Átvezetés"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Simítás"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Simítás"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Áttetsző"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Homályosítás"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Árnyék"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Tárgyak"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Fegyverek"
+
+msgid "OPTVAL_BOTH"
+msgstr "Mindkettő"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "Játékos"
+
+msgid "OPTVAL_MAP"
+msgstr "Pálya"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "640x480-hoz arányít"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Pixel duplázás"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Pixel négyszerezés"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Jelenlegi fegyver"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Elérhető fegyverek"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Minden fegyver"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Pálya, milliszekundum"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Pálya, másodpercek"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Pálya"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Csomópont, másodpercek"
+
+msgid "OPTVAL_HUB"
+msgstr "Csomópont"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Teljes, másodpercek"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Teljes"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Rendszer, másodpercek"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "Rendszer"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Csak Netgames"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Kép és szöveg"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Szöveg és kép"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Csak szkript"
+
+msgid "OPTVAL_ALL"
+msgstr "Mind"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Csak a legutolsó"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Tradícionális Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Tradícionális Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Tradícionális Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Csak ha megleled"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Csak az overlayen"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Overlay+Normál"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Csak Overlay-nél"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Csomópontokhoz nem"
+
+msgid "OPTVAL_FRONT"
+msgstr "Előnézet"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Animált"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Elforgatott"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Csak map orientált színek"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Minden, kivétel az ajtók"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dupla"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Tripla"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Négyszeres"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Tárgy felvétele"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Halálok"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Fontos üzenetek"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Barátokat sose"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Csak szörnyeket"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "Régi"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom (szigorú)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom (szigorú)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF (szigorú)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21 (szigorú)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Minden visszaigazolatlan"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Hibák"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Figyelmeztetések"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Üzenetek"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Minden"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Hardveres gyorsítás"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Doom szoftveres renderer"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr ""
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Nagy teljesítmény"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Energia takarékos"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Hagyományos"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom (erőltetett)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Hagyományos (erőltettt)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automata (ZDoom preferált)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automata (Hagyományos preferált)"
+
+msgid "OPTVAL_SMALL"
+msgstr "Kicsi"
+
+msgid "OPTVAL_LARGE"
+msgstr "Nagy"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Konzol"
+
+msgid "C_BRICK"
+msgstr "\\catéglavörös"
+
+msgid "C_TAN"
+msgstr "\\cbbézs"
+
+msgid "C_GRAY"
+msgstr "\\ccszürke"
+
+msgid "C_GREEN"
+msgstr "\\cdzöld"
+
+msgid "C_BROWN"
+msgstr "\\cebarna"
+
+msgid "C_GOLD"
+msgstr "\\cfarany"
+
+msgid "C_RED"
+msgstr "\\cgvörös"
+
+msgid "C_BLUE"
+msgstr "\\chkék"
+
+msgid "C_ORANGE"
+msgstr "\\cinarancs"
+
+msgid "C_WHITE"
+msgstr "\\cjfehér"
+
+msgid "C_YELLOW"
+msgstr "\\cksárga"
+
+msgid "C_DEFAULT"
+msgstr "\\clalap"
+
+msgid "C_BLACK"
+msgstr "\\cmfekete"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cnvilágoskék"
+
+msgid "C_CREAM"
+msgstr "\\cokrémszínű"
+
+msgid "C_OLIVE"
+msgstr "\\cpolíva"
+
+msgid "C_DARKGREEN"
+msgstr "\\cqsötétzöld"
+
+msgid "C_DARKRED"
+msgstr "\\crsötétvörös"
+
+msgid "C_DARKBROWN"
+msgstr "\\cssötétbarna"
+
+msgid "C_PURPLE"
+msgstr "\\ctlila"
+
+msgid "C_DARKGRAY"
+msgstr "\\cusötétszürke"
+
+msgid "C_CYAN"
+msgstr "\\cvcián"
+
+msgid "C_ICE"
+msgstr "\\cwjég"
+
+msgid "C_FIRE"
+msgstr "\\cxtűz"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cyzafír"
+
+msgid "C_TEAL"
+msgstr "\\cztürkiz"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Hang nélkül"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Nincs interoláció"
+
+msgid "OPTSTR_SPLINE"
+msgstr ""
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Hardver Render"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Szoftver Render"
+
+msgid "GLMNU_TITLE"
+msgstr "Hardver Renderelő Beállítások"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Dinamikus Fény Beállítások"
+
+msgid "GLMNU_PREFS"
+msgstr "Preferenciák"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Sprite szél igazítása"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Textúra szerinti kirajzolási lista"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Dinamikus Fények"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Dinamikus Fények (hardveres)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Fény részletesség"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "A fény hatással van a sprite-okra"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "A fény hatással van a részecskékre"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Shadowmap minőség"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr ""
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Köd mód"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Köd Fullbright-ot erőltet ki"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Fegyver lövés fényerősség"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Környezeti mappolás a tükrökön"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Felerősített éjjellátó mód"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "ENV felfedi a lopakodó szörnyeket"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Sprite átlógás igazítása"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Sprite szélek simítása"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Homályosítás stílusa"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Sprite alapú reklámtábla"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Sprite alapú kamera"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Részecske stílusa"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Renderelés minősége"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr ""
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Quad Sztereó bekapcsolása"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr ""
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Szemek közötti távolság"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Képernyőtől mért távolság"
+
+msgid "OPTVAL_SMART"
+msgstr "Okos"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Okosabb"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Csak az infravörösnél"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Infravörös és fáklya"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Bármely fixált colormap"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Palettaként használat"
+
+msgid "OPTVAL_BLEND"
+msgstr "Kever"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Világos"
+
+msgid "OPTVAL_DARK"
+msgstr "Sötét"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "Szoftver"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optimális"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y tengely"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X/Y tengely"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Négyzet"
+
+msgid "OPTVAL_ROUND"
+msgstr "Kör"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Sugaras"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Pixeles homály"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Simított homály"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Örvénylő homály"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Áttetsző homály"
+
+msgid "OPTVAL_NOISE"
+msgstr "Zaj"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Simított zaj"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Recés homály"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Zöld/Magenta"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Piros/Türkiz"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Sárga/Kék"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Bal szem"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Jobb szem"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Egymás melletti Teljes"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Egymás melletti Szűk"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Fent/Lent"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Sor beillesztés"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Oszlop beillesztés"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Tábla"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Négyszeresen bufferelt"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "TrueColor Beállítások"
+
+msgid "TCMNU_TITLE"
+msgstr "TrueColor Beállítások"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Truecolor Kimenet"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Lineáris filterezés leméretezésnél"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Lineáris filterezés felméretezésnél"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Mipmap textúrák"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dinamikus fények (szoftveres)"
+
+msgid "OS_TITLE"
+msgstr "Beállítás Keresés"
+
+msgid "OS_ANY"
+msgstr "Bármilyen szótagra keresés"
+
+msgid "OS_ALL"
+msgstr "Összes szótagra keresés"
+
+msgid "OS_NO_RESULTS"
+msgstr "Nincs keresési találat"
+
+msgid "OS_LABEL"
+msgstr "Keresés:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Kulcsokat mindig mutat"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "Csapatváltás letiltva"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s belépett a %t csapatba"
+
+msgid "TXT_LONER"
+msgstr "%s immáron magányos útralépett"
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s kilépett %d fraggel"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s kilépett"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "A '%s' nem tölthető be."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' nem egy valós mentés: Hiányzó 'info.json'."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "A '%s' mentésben nem sikerült fellelni a mentésinfókat."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "A '%s' mentés egy nem kompatibilis verzió mentése."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "A '%s' mentés egy másik ZDoom motorhoz való:"
+
+msgid "TXT_TOOOLDSG"
+msgstr ""
+"A '%s' mentés egy túl régi verzióhoz való: %d (%e a legfrissebb támogatott "
+"verzió)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr ""
+"A '%s' mentés egy túl új verzióhoz való: %d (%e a legkorábbi támogatott "
+"verzió)"
+
+msgid "TXT_NOMAPSG"
+msgstr "A '%s' mentés hiányolja a jelenlegi pályát."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "A '%s' nem valós mentés: Hiányzó 'globals.json'."
+
+msgid "TXT_SGINFOERR"
+msgstr "A '%s' -ban nem található mentési információ."
+
+msgid "TXT_SAVEPENDING"
+msgstr "A mentés folyamatban."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "Nem menthető játék."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "Nem menthető pályán van."
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "Játékos meghalt egy egyjátékos módban."
+
+msgid "TXT_SAVEFAILED"
+msgstr "Mentés meghiusult"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "Képernyőmentés meghiusult"
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "%s által"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Nyomjon egy billentyűt vagy kattintson bárhova a kilépéshez."
+
+msgid "HUDMNU_FLASH"
+msgstr "Képernyő Keverés Beállítások"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D mód"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Célkereszt"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Feliratok"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Szürke árnyákok megakadályozása"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Betű Beállítások"
+
+msgid "FONTMNU_LOG"
+msgstr "Szabvány betűstílus használata a logokhoz"
+
+msgid "FONTMNU_DLG"
+msgstr "Szabvány betűstílus használata a dialógusokhoz"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Gyors kilépés"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Egyéni inverz pálya"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Egyéni inverz sötét szín"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Egyéni inverz világos szín"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Fegyvermozgás lövésnél"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Megszakító és Képszél klasszikus arányosítása"
+
+msgid "SCALEMNU_INTER"
+msgstr "Megszakító háttér"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Kép széle"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Arányosító faktor"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Képarány"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Elért pontok mutatása a megszakító képen"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Beállított Mod"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Mindig, kivétel a csomópontoknál"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Mindig, még a csomópontoknál is"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Preferált billentyűkiosztás"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Klasszikus ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr ""
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Modern (numpad)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Szigorú KEYCONF a Fegyverek/Játékosok esetében"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "Klasszikus ZDoom menü arányok"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Százalékok használata az összefoglaló oldalon"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Klasszikus ZDoom arányok az összefoglaló oldalon"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Polgár"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Plafon lövésztorony"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "Keresztes"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inkvizítor"
+
+msgid "TAG_PEASANT"
+msgstr "Jobbágy"
+
+msgid "TAG_REAVER"
+msgstr "Fosztogató"
+
+msgid "TAG_SENTINEL"
+msgstr "Őrszem"
+
+msgid "TAG_STALKER"
+msgstr "Lesipuskás"
+
+msgid "TAG_BISHOP"
+msgstr "A Püspök"
+
+msgid "TAG_ENTITY"
+msgstr "Az Egy Isten"
+
+msgid "TAG_PROGRAMMER"
+msgstr "A Programozó"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "A Lidérc"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Térdelő"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Multiplayer tárgyak létrehozása Együttműködő módban"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Sprite árnyékok"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Szörnyek és játékosok"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr "Látószög"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "MBF21 vonások kikapcsolása"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Óra mutatása"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Összenyomott szörnyek szellemként születnek újra"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Nézet repüléskori billegése"
+
+msgid "OB_DEMON1HIT"
+msgstr ""
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr ""
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr ""
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr ""
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr ""
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr ""
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr ""
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr ""
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr ""
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr ""
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr ""
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr ""
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr ""
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr ""
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr ""
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr ""
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr ""
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr ""
+
+msgid "ID24_GOTINCINERATOR"
+msgstr ""
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr ""
+
+msgid "ID24_GOTFUELCAN"
+msgstr ""
+
+msgid "ID24_GOTFUELTANK"
+msgstr ""
+
+msgid "TAG_ID24INCINERATOR"
+msgstr ""
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr ""
+
+msgid "AMMO_ID24FUEL"
+msgstr ""
+
+msgid "AMMO_ID24FUELTANK"
+msgstr ""
+
+msgid "ID24_CC_GHOUL"
+msgstr ""
+
+msgid "ID24_CC_BANSHEE"
+msgstr ""
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_CC_VASSAGO"
+msgstr ""
+
+msgid "ID24_CC_TYRANT"
+msgstr ""
+
+msgid "ID24_OB_GHOUL"
+msgstr ""
+
+msgid "ID24_OB_BANSHEE"
+msgstr ""
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr ""
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr ""
+
+msgid "ID24_OB_VASSAGO"
+msgstr ""
+
+msgid "ID24_OB_TYRANT"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr ""
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr ""
+
+msgid "JOYMNU_HAPTICS"
+msgstr ""
+
+msgid "JOYMNU_CURVE"
+msgstr ""
+
+msgid "JOYMNU_THRESHOLD"
+msgstr ""
+
+msgid "OPTVAL_LINEAR"
+msgstr ""
+
+msgid "OPTVAL_QUADRATIC"
+msgstr ""
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr ""
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr ""
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr ""
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr ""
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr ""
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr ""
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr ""
+
+msgid "NETMNU_LIMITCONVO"
+msgstr ""
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr ""
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr ""
+
+msgid "OPTVAL_HOSTONLY"
+msgstr ""
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr ""
+
+msgid "OPTVAL_VOTE"
+msgstr ""
+
+msgid "OPTVAL_ANYONE"
+msgstr ""
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr ""
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr ""
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "OPTMNU_HAPTICS"
+msgstr ""
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr ""
+
+msgid "OPTVAL_MATCH"
+msgstr ""
+
+msgid "OPTVAL_WARN"
+msgstr ""
+
+msgid "HAPMNU_OPTIONS"
+msgstr ""
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr ""
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr ""
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr ""
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr ""
+
+msgid "PAUSE_STRING"
+msgstr ""
+
+msgid "TAG_BACKPACK"
+msgstr ""
+
+msgid "TAG_ARMORBONUS"
+msgstr ""
+
+msgid "TAG_GREENARMOR"
+msgstr ""
+
+msgid "TAG_BLUEARMOR"
+msgstr ""
+
+msgid "TAG_INVULSPHERE"
+msgstr ""
+
+msgid "TAG_SOULSPHERE"
+msgstr ""
+
+msgid "TAG_MEGAPSHERE"
+msgstr ""
+
+msgid "TAG_INVISSPHERE"
+msgstr ""
+
+msgid "TAG_RADSUIT"
+msgstr ""
+
+msgid "TAG_VISOR"
+msgstr ""
+
+msgid "TAG_ALLMAP"
+msgstr ""
+
+msgid "TAG_BERSERK"
+msgstr ""
+
+msgid "TAG_HEALTHBONUS"
+msgstr ""
+
+msgid "TAG_STIMPACK"
+msgstr ""
+
+msgid "TAG_MEDIKIT"
+msgstr ""
+
+msgid "TAG_BLUECARD"
+msgstr ""
+
+msgid "TAG_YELLOWCARD"
+msgstr ""
+
+msgid "TAG_REDCARD"
+msgstr ""
+
+msgid "TAG_BLUESKULL"
+msgstr ""
+
+msgid "TAG_YELLOWSKULL"
+msgstr ""
+
+msgid "TAG_REDSKULL"
+msgstr ""
+
+msgid "TAG_GLASSOFWATER"
+msgstr ""
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr ""
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr ""
+
+msgid "TAG_BREAKFAST"
+msgstr ""
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr ""
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr ""
+
+msgid "TAG_CHEXMAP"
+msgstr ""
+
+msgid "TAG_SLIMESUIT"
+msgstr ""
+
+msgid "TAG_ZORCHPACK"
+msgstr ""
+
+msgid "TAG_CBLUEKEY"
+msgstr ""
+
+msgid "TAG_CYELLOWKEY"
+msgstr ""
+
+msgid "TAG_CREDKEY"
+msgstr ""
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr ""
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr ""
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr ""
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr ""
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr ""
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""

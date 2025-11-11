@@ -1,0 +1,189 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: hu\n"
+
+msgid "NIGHTMARE"
+msgstr "Biztos vagy abban hogy megbírkózol vele?\\n\\nnyomj 'Y'-t vagy 'N'-t"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Hely megjelölve."
+
+msgid "PD_BLUEO"
+msgstr "ZÖLD kulcskártya szükséges"
+
+msgid "PD_REDO"
+msgstr "LILA kulcskártya szükséges"
+
+msgid "PD_YELLOWO"
+msgstr "SÁRGA kulcskártya szükséges"
+
+msgid "PD_BLUEK"
+msgstr "ZÖLD kulcs szükséges"
+
+msgid "PD_YELLOWK"
+msgstr "SÁRGA kulcs szükséges"
+
+msgid "PD_REDK"
+msgstr "LILA kulcs szükséges"
+
+msgid "GOTARMOR"
+msgstr "Vért felvéve"
+
+msgid "GOTMEGA"
+msgstr "Harci vért felvéve"
+
+msgid "GOTMSPHERE"
+msgstr "Szuperéleterő"
+
+msgid "GOTBLUECARD"
+msgstr "Megszerezted a ZÖLD kulcskártyát."
+
+msgid "GOTYELWCARD"
+msgstr "Megszerezted a SÁRGA kulcskártyát."
+
+msgid "GOTREDCARD"
+msgstr "Megszerezted a LILA kulcskártyát."
+
+msgid "GOTBLUESKUL"
+msgstr "Megszerezted a ZÖLD kulcsot."
+
+msgid "GOTYELWSKUL"
+msgstr "Megszerezted a SÁRGA kulcsot."
+
+msgid "GOTREDSKUL"
+msgstr "Megszerezted a LILA kulcsot."
+
+msgid "GOTSTIM"
+msgstr "Gyógyító gomba"
+
+msgid "GOTMEDIKIT"
+msgstr "Megszerezve: orvosi csomag"
+
+msgid "GOTMEDINEED"
+msgstr "Megszerezve: már NAGYON hiányzott orvosi csomag"
+
+msgid "GOTMAP"
+msgstr "Térkép"
+
+msgid "GOTCLIPBOX"
+msgstr "Megszerezve: doboznyi lőszer."
+
+msgid "GOTROCKET"
+msgstr "Megszerezve: Gránát."
+
+msgid "GOTROCKBOX"
+msgstr "Megszerezve: Gránátok."
+
+msgid "GOTSHELLBOX"
+msgstr "Megszerezve: doboznyi puska sörét"
+
+msgid "GOTBACKPACK"
+msgstr "Megszerezve: lőszeres hátizsák"
+
+msgid "GOTBFG9000"
+msgstr "Megszerezve: Gránát."
+
+msgid "GOTCHAINGUN"
+msgstr "Megszerezve: Gépfegyver."
+
+msgid "GOTLAUNCHER"
+msgstr "Megszerezve: Gránátvető"
+
+msgid "GOTPLASMA"
+msgstr "Entrópiavető!"
+
+msgid "GOTSHOTGUN"
+msgstr "Megszerezve: Sörétes puska"
+
+msgid "STSTR_DQDON"
+msgstr "Isten mód BE"
+
+msgid "STSTR_DQDOFF"
+msgstr "Isten mód KI"
+
+msgid "STSTR_KFAADDED"
+msgstr "Minden fegyver / lőszer / kulcs"
+
+msgid "STSTR_FAADDED"
+msgstr "Minden fegyver és lőszer"
+
+msgid "TXT_HARMMAP01"
+msgstr "Elrablás"
+
+msgid "TXT_HARMMAP02"
+msgstr "Baj"
+
+msgid "TXT_HARMMAP03"
+msgstr "Túlterhelve"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopolisz"
+
+msgid "TXT_HARMMAP05"
+msgstr "Kórház"
+
+msgid "TXT_HARMMAP06"
+msgstr "Fegyvergyár"
+
+msgid "TXT_HARMMAP07"
+msgstr "Vízalatti labor"
+
+msgid "TXT_HARMMAP08"
+msgstr "1-es kifutó"
+
+msgid "TXT_HARMMAP09"
+msgstr "Kilövő Állomás"
+
+msgid "TXT_HARMMAP10"
+msgstr "Radioaktív Zóna"
+
+msgid "TXT_HARMMAP11"
+msgstr "Hangyászsün"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Felkavarodik a gyomrod...Ahogy a mutáns királynő szemébe nézel...Az az izé...nemrég még...A barátod volt...Amira!\n"
+"\n"
+"Ezek a szörnyek minden bizonnyal meglelték a módját, hogy ezzé a borzasztó lénnyé mutálják, aki később az ivadékukat hordja ki.\n"
+"\n"
+"-sóhaj-\n"
+"\n"
+"Össze kell szedned magad...meg fognak lakolni azért, amiért megölették veled a barátodat...\n"
+"\n"
+"\"A pokolnál csak egy gyászoló nő haragja borzasztóbb!\"\n"
+"\n"
+"     = V É G E ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Betöltés"
+
+msgid "SKILL_BABY"
+msgstr "Nagyon könnyű"
+
+msgid "SKILL_EASY"
+msgstr "Könnyű"
+
+msgid "SKILL_NORMAL"
+msgstr "Normál"
+
+msgid "SKILL_HARD"
+msgstr "Nehéz"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Nagyon nehéz"
+
+msgid "HARMQUITMSG"
+msgstr "Köszönjük, hogy játszottál!"
+
+msgid "TXT_D2E1"
+msgstr "Harmónia"

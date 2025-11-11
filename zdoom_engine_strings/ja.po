@@ -1,0 +1,5245 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: jp\n"
+
+msgid "PRESSKEY"
+msgstr "何かキーを押せ"
+
+msgid "SECRETMESSAGE"
+msgstr "シークレットを解き明かした!"
+
+msgid "D_DEVSTR"
+msgstr "このモードは使わないでおけ"
+
+msgid "QUITMSG"
+msgstr ""
+"本当にこの素晴らしい運命を\n"
+"終わらせるのですね?"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"オンラインプレイでは ロードできない!\n"
+"\n"
+"何かキーを押せ\n"
+
+msgid "QLOADNET"
+msgstr ""
+"オンラインプレイでは ロードできない!\n"
+"\n"
+"何かキーを押せ"
+
+msgid "QSAVESPOT"
+msgstr ""
+"オンラインプレイでは セーブできない!\n"
+"\n"
+"何かキーを押せ"
+
+msgid "NEWGAME"
+msgstr ""
+"オンラインプレイでは勝手にニューゲームは\n"
+"始められない!\n"
+"\n"
+"何かキーを押せ"
+
+msgid "NIGHTMARE"
+msgstr ""
+"本気か? このスキルは\n"
+"マトモな状態ではないぞ。\n"
+"\n"
+"Y か N で答えろ"
+
+msgid "SWSTRING"
+msgstr ""
+"これは体験版だ。\n"
+"わかったら本体を買え。\n"
+"\n"
+"キーを押せば戻るぞ。"
+
+msgid "NETEND"
+msgstr ""
+"オンラインプレイでは勝手に終了できない!\n"
+"\n"
+"何かキーを押せ"
+
+msgid "ENDGAME"
+msgstr ""
+"本当にゲームを中断するのか?\n"
+"\n"
+"Y か N で答えろ"
+
+msgid "RAVENQUITMSG"
+msgstr "本当に終了するのか?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "製品版でのみ可能だ。"
+
+msgid "DOSY"
+msgstr "(Y で終了)"
+
+msgid "QUITMSG1"
+msgstr ""
+"離れないでくれ!\n"
+"まだ獲物が残っているんだ!"
+
+msgid "QUITMSG2"
+msgstr ""
+"まだ物足りないだろう?\n"
+"早く戻って皆殺しにしろ!"
+
+msgid "QUITMSG3"
+msgstr ""
+"俺がお前だったらここは離れない。\n"
+"デスクトップなぞ最悪だ。"
+
+msgid "QUITMSG4"
+msgstr ""
+"貴方はこちらよりも\n"
+"デスクトップの方が好みらしいな?"
+
+msgid "QUITMSG5"
+msgstr ""
+"待ってくれ!まだあそこの角に\n"
+"デーモンが残っているんだ!"
+
+msgid "QUITMSG6"
+msgstr ""
+"わかったよ。\n"
+"今度戻ってきたら一杯奢るよ。"
+
+msgid "QUITMSG7"
+msgstr "置いて行っちゃうんだ。勝手にしろ。"
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"終了したい?ならば、\n"
+"汝は8分の1を失うぞ!"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"まだやめたらダメだ、\n"
+"あの空鬼がデスクトップには\n"
+"待ち構えているんだぞ!"
+
+msgid "QUITMSG10"
+msgstr ""
+"早く出ていって、いつものつまらない\n"
+"プログラムに戻るんだな。"
+
+msgid "QUITMSG11"
+msgstr ""
+"もし私が君の上司なら、すぐにでも\n"
+"デスマッチを始める所だぞ!"
+
+msgid "QUITMSG12"
+msgstr ""
+"おいおい待てよ、今やめたら\n"
+"殺したデーモンの数を数えられないぞ!"
+
+msgid "QUITMSG13"
+msgstr ""
+"帰ればいいさ、\n"
+"君が戻ってきたときには、\n"
+"私はバットを持って待ってるから"
+
+msgid "QUITMSG14"
+msgstr ""
+"やめることについて考えたのに、\n"
+"私に殴られないなんて、\n"
+"君はラッキーだな"
+
+msgid "QUITMSG15"
+msgstr ""
+"どこに行く気だ?!\n"
+"反抗するつもりか?"
+
+msgid "QUITMSG16"
+msgstr ""
+"大虐殺は寸止めされた...\n"
+"何という意地悪なやつだ!"
+
+msgid "QUITMSG17"
+msgstr ""
+"それでもお前を信じている\n"
+"-- 唯一の希望なんだ!!"
+
+msgid "QUITMSG18"
+msgstr "ブラックバードに気付かれず抜け出せるのか。"
+
+msgid "QUITMSG19"
+msgstr "私は あなたは特別だと思っていた..."
+
+msgid "QUITMSG20"
+msgstr "いいぞ! ゲリラ戦の時間だ!"
+
+msgid "QUITMSG21"
+msgstr ""
+"終わる事は出来る...\n"
+"しかし隠れることは出来ない..."
+
+msgid "QUITMSG22"
+msgstr ""
+"はあぁ、どうしたんだい?\n"
+"ママに晩飯へ呼ばれたのかよ?"
+
+msgid "QUITMSG23"
+msgstr ""
+"まだやめないでくれ、\n"
+"にげだしたフレモイドたちが\n"
+"のこっているんだから!"
+
+msgid "QUITMSG24"
+msgstr ""
+"あきらめてはダメだ、\n"
+"フレモイドたちの しょうりに\n"
+"なってしまうぞ!"
+
+msgid "QUITMSG25"
+msgstr ""
+"まだかえらないでくれ。\n"
+"われわれには きみのたすけが\n"
+"ひつようだ!"
+
+msgid "QUITMSG26"
+msgstr ""
+"チェックス(R)パーティミックスを\n"
+"たべるためにおやすみかな?"
+
+msgid "QUITMSG27"
+msgstr ""
+"まだやめないでくれ!\n"
+"われわれには きみのたすけが\n"
+"ひつようだ!"
+
+msgid "QUITMSG28"
+msgstr ""
+"ぎんがシリアルれんぽう を\n"
+"みすてないでくれ!"
+
+msgid "QUITMSG29"
+msgstr ""
+"しんのチェックス(R)せんしは\n"
+"そんなにすぐあきらめはしないぞ!"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "何か拾った"
+
+msgid "PD_ANY"
+msgstr "いずれかのキーで開けることができる。"
+
+msgid "PD_ANYOBJ"
+msgstr "いずれかのキーで起動させることができる。"
+
+msgid "PD_ALL3"
+msgstr "3つのキー全てが無ければ開かない。"
+
+msgid "PD_ALL3O"
+msgstr "3つのキー全てが必要だ。"
+
+msgid "PD_ALL6"
+msgstr "6つ全てのキーが無ければ開かない。"
+
+msgid "PD_ALL6O"
+msgstr "6つ全てのキーが必要だ。"
+
+msgid "PD_ALLKEYS"
+msgstr "全てのキーが必要だ。"
+
+msgid "HUSTR_MSGU"
+msgstr "[メッセージ未送信]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "ネタにならない呟きだ"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "誰かいるか?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "怯えているな\n"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "イカレ始めた"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "我を失った..."
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[メッセージ送信]"
+
+msgid "STSTR_MUS"
+msgstr "music変更"
+
+msgid "STSTR_NOMUS"
+msgstr "その変更は不可能だ"
+
+msgid "STSTR_DQDON"
+msgstr "無敵モード: オン"
+
+msgid "STSTR_DQDOFF"
+msgstr "無敵モード: オフ"
+
+msgid "STSTR_DQD2ON"
+msgstr "究極無敵モード: オン"
+
+msgid "STSTR_DQD2OFF"
+msgstr "究極無敵モード: オフ"
+
+msgid "STSTR_KFAADDED"
+msgstr "とても満足する武器弾薬を受け取った"
+
+msgid "STSTR_FAADDED"
+msgstr "武器弾薬(鍵なし)を受け取った"
+
+msgid "STSTR_NCON"
+msgstr "壁抜けモード: オン"
+
+msgid "STSTR_NCOFF"
+msgstr "壁抜けモード: オフ"
+
+msgid "STSTR_NC2ON"
+msgstr "壁抜けモード2: オン"
+
+msgid "STSTR_NC2OFF"
+msgstr "壁抜けモード2: オフ"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "v,i,s,a,r,l の何れかを選べ"
+
+msgid "STSTR_BEHOLDX"
+msgstr "パワーアップ 適用"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...わるかぁねえぞ --gm"
+
+msgid "STSTR_CLEV"
+msgstr "場所を変更..."
+
+msgid "TXT_BUDDHAON"
+msgstr "ブッダモード: オン"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "ブッダモード: オフ"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "究極ブッダモード: オン"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "究極ブッダモード: オフ"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "パワー オン"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "パワー オフ"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "ヘルス全回復"
+
+msgid "TXT_CHEATKEYS"
+msgstr "キー全部"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "サウンドデバッグ オン"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "サウンドデバッグ オフ"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "その名を唱えたな? 褒美に死をやろう!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "不届き者め、貴様が偉業を成すはずがない"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "ティッカー オン"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "ティッカー オフ"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "それを渡そう。"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "ミダス王の様だな、ベイビー"
+
+msgid "TXT_GOTSTUFF"
+msgstr "スタッフを手に入れた!"
+
+msgid "TXT_FREEZEON"
+msgstr "フリーズモード オン"
+
+msgid "TXT_FREEZEOFF"
+msgstr "フリーズモード オフ"
+
+msgid "TXT_STRANGE"
+msgstr "これは奇妙な感じだな..."
+
+msgid "TXT_STRANGER"
+msgstr "これはかなり奇妙だ。"
+
+msgid "TXT_NOTSTRANGE"
+msgstr "自分自身の様に感じている。"
+
+msgid "TXT_LEADBOOTSON"
+msgstr "足枷 オン"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "足枷 オフ"
+
+msgid "TXT_LIGHTER"
+msgstr "体が軽くなった"
+
+msgid "TXT_GRAVITY"
+msgstr "重力に従った"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "ノーターゲット オン"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "ノーターゲット オフ"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "恐れおののけ!"
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "オーガアーマーはもう嫌"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "チェイスカメラ オン"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "チェイスカメラ オフ"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 体 殺した"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d 体 殺した"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 匹 殺した"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d 匹 殺した"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "復活できない。プレイヤーはこの体に宿っていない。"
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "全アーティファクト!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "ゲーム外で何を殺す気だ?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "凍ったプレイヤーのプロパティを無効化"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "追従モード: オフ"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "追従モード: オン"
+
+msgid "AMSTR_GRIDON"
+msgstr "グリッド: オン"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "グリッド: オフ"
+
+msgid "AMSTR_TEXON"
+msgstr "テクスチャーモード: オン"
+
+msgid "AMSTR_TEXOFF"
+msgstr "テクスチャーモード: オフ"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "目標をマークした"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "全目標を解除した"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "フラグリミット!"
+
+msgid "TXT_TIMELIMIT"
+msgstr "ゲームセット!"
+
+msgid "SPREEKILLSELF"
+msgstr "%o は自滅するまでなかなか良かったぞ!"
+
+msgid "SPREEOVER"
+msgstr "%k が %o の快進撃を断ち切った!"
+
+msgid "SPREE5"
+msgstr "%k が連続キル!"
+
+msgid "SPREE10"
+msgstr "%k が大暴れだ!"
+
+msgid "SPREE15"
+msgstr "%k が圧倒している!"
+
+msgid "SPREE20"
+msgstr "%k が止まらない!"
+
+msgid "SPREE25"
+msgstr "%k が神の様だ!"
+
+msgid "MULTI2"
+msgstr "ダブルキル!"
+
+msgid "MULTI3"
+msgstr "マルチキル!"
+
+msgid "MULTI4"
+msgstr "ウルトラキル!"
+
+msgid "MULTI5"
+msgstr "モンスターキル!"
+
+msgid "SCORE_BONUS"
+msgstr "ボーナス"
+
+msgid "SCORE_COLOR"
+msgstr "色"
+
+msgid "SCORE_SECRET"
+msgstr "シークレット"
+
+msgid "SCORE_NAME"
+msgstr "名前"
+
+msgid "SCORE_DELAY"
+msgstr "ping"
+
+msgid "SCORE_FRAGS"
+msgstr "フラグ"
+
+msgid "SCORE_DEATHS"
+msgstr "デス"
+
+msgid "SCORE_OTHER"
+msgstr "その他"
+
+msgid "SCORE_MISSED"
+msgstr "ミス"
+
+msgid "SCORE_TOTAL"
+msgstr "合計"
+
+msgid "SCORE_LVLTIME"
+msgstr "時間"
+
+msgid "TXT_IMKILLS"
+msgstr "キル"
+
+msgid "TXT_IMITEMS"
+msgstr "アイテム"
+
+msgid "TXT_IMSECRETS"
+msgstr "シークレット"
+
+msgid "TXT_IMTIME"
+msgstr "経過時間"
+
+msgid "TXT_IMPAR"
+msgstr "最速時間"
+
+msgid "WI_FINISHED"
+msgstr "攻略"
+
+msgid "WI_ENTERING"
+msgstr "突入開始"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "突入中:"
+
+msgid "AM_MONSTERS"
+msgstr "奴等:"
+
+msgid "AM_SECRETS"
+msgstr "隠場:"
+
+msgid "AM_ITEMS"
+msgstr "物資:"
+
+msgid "OB_SUICIDE"
+msgstr "%o は自殺した。"
+
+msgid "OB_FALLING"
+msgstr "%o はあまりにも高い所から転落した。"
+
+msgid "OB_CRUSH"
+msgstr "%o は潰された。"
+
+msgid "OB_EXIT"
+msgstr "%o は逃げようとした。"
+
+msgid "OB_WATER"
+msgstr "%o は泳げなかった。"
+
+msgid "OB_SLIME"
+msgstr "%o は変異した。"
+
+msgid "OB_LAVA"
+msgstr "%o は溶かされた。"
+
+msgid "OB_BARREL"
+msgstr "%o は爆発で吹き飛ばされた。"
+
+msgid "OB_SPLASH"
+msgstr "%o はいけない場所に立っていた。"
+
+msgid "OB_R_SPLASH"
+msgstr "%o は後ろへ引くべきだった。"
+
+msgid "OB_ROCKET"
+msgstr "%o は後ろへ引くべきだった。"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o は自滅した。"
+
+msgid "OB_VOODOO"
+msgstr "%o はブードゥー人形で殺された。"
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o は %k にテレフラグされた。"
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o はテレフラグされた。"
+
+msgid "OB_DEFAULT"
+msgstr "%o は死亡した。"
+
+msgid "OB_MPDEFAULT"
+msgstr "%o は %k によって殺された。"
+
+msgid "OB_FRIENDLY1"
+msgstr "%k は仲間を無慈悲に殺した。"
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k には眼鏡が必要なようだ。"
+
+msgid "OB_FRIENDLY3"
+msgstr "%k は敵チームに得点を入れた。"
+
+msgid "OB_FRIENDLY4"
+msgstr "%k はまた友達を失った。"
+
+msgid "GOTARMOR"
+msgstr "アーマーを身に着けた。"
+
+msgid "GOTMEGA"
+msgstr "メガアーマーを身に着けた!"
+
+msgid "GOTHTHBONUS"
+msgstr "ヘルスボーナスを拾った。"
+
+msgid "GOTARMBONUS"
+msgstr "アーマーボーナスを拾った。"
+
+msgid "GOTSTIM"
+msgstr "スティムパックを拾った。"
+
+msgid "GOTMEDINEED"
+msgstr "本当に必要なメディキットを手に入れた!"
+
+msgid "GOTMEDIKIT"
+msgstr "メディキットを拾った。"
+
+msgid "GOTSUPER"
+msgstr "スーパーチャージ!"
+
+msgid "GOTBLUECARD"
+msgstr "ブルー キーカードを手に入れた。"
+
+msgid "GOTYELWCARD"
+msgstr "イエローキーカードを手に入れた。"
+
+msgid "GOTREDCARD"
+msgstr "レッド キーカードを手に入れた。"
+
+msgid "GOTBLUESKUL"
+msgstr "ブルー スカルキーを手に入れた。"
+
+msgid "GOTYELWSKUL"
+msgstr "イエロースカルキーを手に入れた。"
+
+msgid "GOTREDSKUL"
+msgstr "レッド スカルキーを手に入れた。"
+
+msgid "GOTINVUL"
+msgstr "不死身だ!"
+
+msgid "GOTBERSERK"
+msgstr "バーサーク!"
+
+msgid "GOTINVIS"
+msgstr "半透明化スフィア"
+
+msgid "GOTSUIT"
+msgstr "放射線防護服"
+
+msgid "GOTMAP"
+msgstr "コンピューターエリアマップ"
+
+msgid "GOTVISOR"
+msgstr "暗視バイザー\n"
+
+msgid "GOTMSPHERE"
+msgstr "メガスフィアー!"
+
+msgid "GOTCLIP"
+msgstr "弾倉を拾った。"
+
+msgid "GOTCLIPBOX"
+msgstr "弾薬箱を拾った。"
+
+msgid "GOTROCKET"
+msgstr "ロケットを拾った。"
+
+msgid "GOTROCKBOX"
+msgstr "ロケット箱を拾った。"
+
+msgid "GOTCELL"
+msgstr "エネルギーセルを拾った。"
+
+msgid "GOTCELLBOX"
+msgstr "エネルギーセルパックを拾った。"
+
+msgid "GOTSHELLS"
+msgstr "4発の散弾を拾った。"
+
+msgid "GOTSHELLBOX"
+msgstr "散弾箱を拾った。"
+
+msgid "GOTBACKPACK"
+msgstr "弾薬の入ったバックパックを手に入れた!"
+
+msgid "GOTBFG9000"
+msgstr "BFG9000を手に入れた!やったぜ。"
+
+msgid "GOTCHAINGUN"
+msgstr "チェーンガンを手に入れた!"
+
+msgid "GOTCHAINSAW"
+msgstr "チェーンソウだ!肉を寄越せ!"
+
+msgid "GOTLAUNCHER"
+msgstr "ロケットランチャーを手に入れた!"
+
+msgid "GOTPLASMA"
+msgstr "プラズマライフルを手に入れた!"
+
+msgid "GOTSHOTGUN"
+msgstr "ショットガンを手に入れた!"
+
+msgid "GOTSHOTGUN2"
+msgstr "スーパーショットガンを手に入れた!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "ピストルを拾った。"
+
+msgid "BETA_BONUS1"
+msgstr "デモニックダガーを拾った。"
+
+msgid "BETA_BONUS2"
+msgstr "スカルチェストを拾った。"
+
+msgid "BETA_BONUS3"
+msgstr "エビルセプターを拾った。"
+
+msgid "BETA_BONUS4"
+msgstr "アンホーリーバイブルを拾った。"
+
+msgid "PD_BLUEO"
+msgstr "この装置には ブルーキーが必要だ。"
+
+msgid "PD_REDO"
+msgstr "この装置には レッドキーが必要だ。"
+
+msgid "PD_YELLOWO"
+msgstr "この装置にはイエローキーが必要だ。"
+
+msgid "PD_BLUEK"
+msgstr "このドアには ブルーキーが必要だ。"
+
+msgid "PD_REDK"
+msgstr "このドアには レッドキーが必要だ。"
+
+msgid "PD_YELLOWK"
+msgstr "このドアには イエローキー が必要だ。"
+
+msgid "PD_BLUECO"
+msgstr "この装置には ブルーカード が必要だ。"
+
+msgid "PD_REDCO"
+msgstr "この装置には レッドカード が必要だ。"
+
+msgid "PD_YELLOWCO"
+msgstr "この装置には イエローカード が必要だ。"
+
+msgid "PD_BLUESO"
+msgstr "この装置には ブルースカル が必要だ。"
+
+msgid "PD_REDSO"
+msgstr "この装置には レッドスカル が必要だ。"
+
+msgid "PD_YELLOWSO"
+msgstr "この装置には イエロースカル が必要だ。"
+
+msgid "PD_BLUEC"
+msgstr "このドアには ブルーカード が必要だ。"
+
+msgid "PD_REDC"
+msgstr "このドアには レッドカード が必要だ。"
+
+msgid "PD_YELLOWC"
+msgstr "このドアには イエローカード が必要だ。"
+
+msgid "PD_BLUES"
+msgstr "このドアには ブルースカル が必要だ。"
+
+msgid "PD_REDS"
+msgstr "このドアには レッドスカル が必要だ。"
+
+msgid "PD_YELLOWS"
+msgstr "このドアには イエロースカル が必要だ。"
+
+msgid "CC_ZOMBIE"
+msgstr "ゾンビ兵"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "ショットガンゾンビ"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "ヘビーウェポンゾンビ"
+
+msgid "CC_IMP"
+msgstr "インプ"
+
+msgid "CC_DEMON"
+msgstr "デーモン"
+
+msgid "CC_LOST"
+msgstr "ロストソウル"
+
+msgid "CC_CACO"
+msgstr "カコデーモン"
+
+msgid "CC_HELL"
+msgstr "ヘルナイト"
+
+msgid "CC_BARON"
+msgstr "バロンオブヘル"
+
+msgid "CC_ARACH"
+msgstr "アラクノトロン"
+
+msgid "CC_PAIN"
+msgstr "ペインエレメンタル"
+
+msgid "CC_REVEN"
+msgstr "レバナント"
+
+msgid "CC_MANCU"
+msgstr "マンキュバス"
+
+msgid "CC_ARCH"
+msgstr "アーチバイル"
+
+msgid "CC_SPIDER"
+msgstr "スパイダーマスターマインド"
+
+msgid "CC_CYBER"
+msgstr "サイバーデーモン"
+
+msgid "CC_HERO"
+msgstr "我らのヒーロー"
+
+msgid "FN_SHOTGUN"
+msgstr "ゾンビ軍曹"
+
+msgid "FN_HEAVY"
+msgstr "チェーンガンゾンビ"
+
+msgid "FN_SPECTRE"
+msgstr "スペクトル"
+
+msgid "FN_SPIDER"
+msgstr "スパイダーマスターマインド"
+
+msgid "FN_CYBER"
+msgstr "サイバーデーモン"
+
+msgid "FN_WOLFSS"
+msgstr "ナチ兵"
+
+msgid "FN_DOG"
+msgstr "犬"
+
+msgid "TAG_FIST"
+msgstr "ナックルダスター"
+
+msgid "TAG_CHAINSAW"
+msgstr "チェーンソウ"
+
+msgid "TAG_PISTOL"
+msgstr "ピストル"
+
+msgid "TAG_SHOTGUN"
+msgstr "ショットガン"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "スーパーショットガン"
+
+msgid "TAG_CHAINGUN"
+msgstr "チェーンガン"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "ロケットランチャー"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "プラズマライフル"
+
+msgid "TAG_BFG9000"
+msgstr ""
+
+msgid "AMMO_CLIP"
+msgstr "銃弾"
+
+msgid "AMMO_SHELLS"
+msgstr "散弾シェル"
+
+msgid "AMMO_ROCKETS"
+msgstr "ロケット弾"
+
+msgid "AMMO_CELLS"
+msgstr "エネルギーセル"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o がアラクノトロンを見た気がした。"
+
+msgid "OB_STEALTHVILE"
+msgstr "%o がアーチバイルを見た気がした。"
+
+msgid "OB_STEALTHBARON"
+msgstr "%o がバロンを見た気がした。"
+
+msgid "OB_STEALTHCACO"
+msgstr "%o がカコデーモンを見た気がした。"
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o がチェインガンナーを見た気がした。"
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o がデーモンを見た気がした。"
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o がヘルナイトを見た気がした。"
+
+msgid "OB_STEALTHIMP"
+msgstr "%o がインプを見た気がした。"
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o がマンキュバスを見た気がした。"
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o がレバナントを見た気がした。"
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o が軍曹を見た気がした。"
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o がゾンビ兵を見た気がした。"
+
+msgid "OB_UNDEADHIT"
+msgstr "%o はレバナントに殴られた。"
+
+msgid "OB_IMPHIT"
+msgstr "%o はインプに切り裂かれた。"
+
+msgid "OB_CACOHIT"
+msgstr "%o はカコデーモンに近づきすぎた。"
+
+msgid "OB_DEMONHIT"
+msgstr "%o はデーモンに噛まれた。"
+
+msgid "OB_SPECTREHIT"
+msgstr "%o はスペクトルに喰われた。"
+
+msgid "OB_BARONHIT"
+msgstr "%o はバロンオブヘルに体を抉じ開けられた。"
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o はヘルナイトに内臓を抉られた。"
+
+msgid "OB_ZOMBIE"
+msgstr "%o はゾンビ兵に殺された。"
+
+msgid "OB_SHOTGUY"
+msgstr "%o はゾンビ軍曹に撃たれた。"
+
+msgid "OB_VILE"
+msgstr "%o はアーチバイルに焼き尽くされた。"
+
+msgid "OB_UNDEAD"
+msgstr "%o はレバナントのファイアボールを回避できなかった。"
+
+msgid "OB_FATSO"
+msgstr "%o はマンキュバスに潰された。"
+
+msgid "OB_CHAINGUY"
+msgstr "%o はチェインガンナーに蜂の巣にされた。"
+
+msgid "OB_SKULL"
+msgstr "%o はロストソウルにビビらされた。"
+
+msgid "OB_IMP"
+msgstr "%o はインプに焼かれた。"
+
+msgid "OB_CACO"
+msgstr "%o はカコデーモンに裁きを受けた。"
+
+msgid "OB_BARON"
+msgstr "%o はバロンオブヘルに痛めつけられた。"
+
+msgid "OB_KNIGHT"
+msgstr "%o はヘルナイトにバラ撒かれた。"
+
+msgid "OB_SPIDER"
+msgstr "%o はスパイダーデーモンに恐れをなした。"
+
+msgid "OB_BABY"
+msgstr "%o が アラクノトロンに討ち取られた。"
+
+msgid "OB_CYBORG"
+msgstr "%o はサイバーデーモンにバラバラにされた。"
+
+msgid "OB_WOLFSS"
+msgstr "%o はナチ兵と遭遇した。"
+
+msgid "OB_DOG"
+msgstr "%o は犬に引き裂かれた。"
+
+msgid "OB_MPFIST"
+msgstr "%o は %k の拳を顔面に受けた。"
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o は %k のチェーンソーで刈り取られた。"
+
+msgid "OB_MPPISTOL"
+msgstr "%o は %k の豆鉄砲でくすぐられた。"
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o は %k のブームスティックを顔面に受けた。"
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o は %k のスーパーショットガンでバラバラにされた。"
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o は %k のチェーンガンで蜂の巣にされた。"
+
+msgid "OB_MPROCKET"
+msgstr "%o は %k のロケットに乗ってしまった。"
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o は %k のロケットをあと少しで避けられそうだった。"
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o は %k のプラズマガンに溶かされた。"
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o は %k のBFGで木っ端微塵にされた。"
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o は %k のBFGから隠れることはできなかった。"
+
+msgid "OB_RAILGUN"
+msgstr "%o は %k のレールガンで死亡した。"
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o は %k のBFGで焼き殺された。"
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "青の鍵"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "黄の鍵"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "緑の鍵"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "石英フラスコ"
+
+msgid "TXT_ARTIFLY"
+msgstr "レイスの翼"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "不死の指輪"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "力の術書"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "闇の球体"
+
+msgid "TXT_ARTIEGG"
+msgstr "変貌の卵子"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "神秘の骨壷"
+
+msgid "TXT_ARTITORCH"
+msgstr "松明"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "古代の時限爆薬"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "カオスデバイス"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "水晶瓶"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "持ち物袋"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "銀の盾"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "魔法の盾"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "地図の巻物"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "ワンドクリスタル"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "晶洞石"
+
+msgid "TXT_AMMOMACE1"
+msgstr "メイス球弾"
+
+msgid "TXT_AMMOMACE2"
+msgstr "メイス球弾の固まり"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "イセリアルの矢"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "イセリアルの矢筒"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "クローオーブ"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "エネルギーオーブ"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "レッサールーン"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "グレータールーン"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "フレイムオーブ"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "インフェルノオーブ"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "ゴールドワンド"
+
+msgid "TXT_WPNMACE"
+msgstr "ファイアメイス"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "イセリアルクロスボウ"
+
+msgid "TXT_WPNBLASTER"
+msgstr "ドラゴンクロー"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "ヘルスタッフ"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "フェニックスロッド"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "ネクロマンサーの篭手"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "開くには 青の鍵が必要だ"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "開くには 緑の鍵が必要だ"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "開くには 黄の鍵が必要だ"
+
+msgid "FN_CHICKEN"
+msgstr "鶏"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "ウェア ドラゴン"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "サーベルクロー"
+
+msgid "FN_DSPARIL"
+msgstr "デ'スパリル"
+
+msgid "FN_HERETICIMP"
+msgstr "ガーゴイル"
+
+msgid "FN_IRONLICH"
+msgstr "アイアンリッチ"
+
+msgid "FN_BONEKNIGHT"
+msgstr "アンデット兵"
+
+msgid "FN_MINOTAUR"
+msgstr "マウロタウロス"
+
+msgid "FN_MUMMY"
+msgstr "ゴーレム"
+
+msgid "FN_MUMMYLEADER"
+msgstr "ニトロゴーレム"
+
+msgid "FN_SNAKE"
+msgstr "オフィディアン"
+
+msgid "FN_WIZARD"
+msgstr "ウィザード"
+
+msgid "AMMO_GOLDWAND"
+msgstr "ワンド クリスタル"
+
+msgid "AMMO_CROSSBOW"
+msgstr "イセリアルの矢"
+
+msgid "AMMO_BLASTER"
+msgstr "クロー オーブ"
+
+msgid "AMMO_MACE"
+msgstr "メイス スフィア"
+
+msgid "AMMO_SKULLROD"
+msgstr "ヘルスタッフ ルーン"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "フレイム オーブ"
+
+msgid "TAG_STAFF"
+msgstr "杖"
+
+msgid "TAG_GOLDWAND"
+msgstr "エルフのワンド"
+
+msgid "OB_CHICKEN"
+msgstr "%o はくちばしで突かれ死んだ。"
+
+msgid "OB_BEAST"
+msgstr "%o はウェアドラゴンに黒焦げにされた。"
+
+msgid "OB_CLINK"
+msgstr "%o はサーベルクローに切り裂かれた。"
+
+msgid "OB_DSPARIL1"
+msgstr "%o はデ'スパリルのサーペントに火傷を負わされた。"
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o はデ'スパリルのサーペントに噛み砕かれた。"
+
+msgid "OB_DSPARIL2"
+msgstr "%o はデ'スパリルには全く歯が立たなかった。"
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o はデ'スパリルに打ち負かされた。"
+
+msgid "OB_HERETICIMP"
+msgstr "%o はガーゴイルに傷を負わされた。"
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o はガーゴイルに切り刻まれた。"
+
+msgid "OB_IRONLICH"
+msgstr "%o はアイアンリッチに吹き飛ばされた。"
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o はアイアンリッチと密接に関わった。"
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o はアンデッド兵の斧でやられた。"
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o はアンデッド兵の手で葬られた。"
+
+msgid "OB_MINOTAUR"
+msgstr "%o はマウロタウロスに燃やされ炭化した。"
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o はマウロタウロスにグシャグシャにされた。"
+
+msgid "OB_MUMMY"
+msgstr "%o はゴーレムに叩きのめされた。"
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o はニトロゴーレムに脅かされた。"
+
+msgid "OB_SNAKE"
+msgstr "%o はオフィディアンに動揺した。"
+
+msgid "OB_WIZARD"
+msgstr "%o はウィザードに呪われた。"
+
+msgid "OB_WIZARDHIT"
+msgstr "%o はウィザードに触診されてしまった。"
+
+msgid "OB_MPSTAFF"
+msgstr "%o は %k の棒でぶん殴られた。"
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o は %k の篭手からショックを受けた。"
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o は %k のエルフのワンドに別れの挨拶をした。"
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o は %k のイセリアルクロスボウで釘付けにされた。"
+
+msgid "OB_MPBLASTER"
+msgstr "%o は %k のドラゴンクローで発破体験した。"
+
+msgid "OB_MPSKULLROD"
+msgstr "%o は %k のヘルスタッフで冥界に送られた。"
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o は %k のフェニックスロッドで焼かれた。"
+
+msgid "OB_MPMACE"
+msgstr "%o は %k のファイアメイスで飛ばされた。"
+
+msgid "OB_MPPSTAFF"
+msgstr "%o は %k の魔力を帯びた棒で暖かく迎えられた。"
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o は %k の篭手で血を絞り取られた。"
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o は %k のエルフのワンドで襲われた。"
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o は %k のイセリアルクロスボウで押された。"
+
+msgid "OB_MPPBLASTER"
+msgstr "%o は %k のドラゴンの鉤爪でバラバラに引き裂かれた。"
+
+msgid "OB_MPPSKULLROD"
+msgstr "%o は %k にヘルスタッフを %p 注ぎ込まれた。"
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o は %k のフェニックスロッドで焼き滅ぼされた。"
+
+msgid "OB_MPPMACE"
+msgstr "%o は %k の巨大なメイススフィアで潰された。"
+
+msgid "TXT_MANA_1"
+msgstr "青マナ"
+
+msgid "TXT_MANA_2"
+msgstr "緑マナ"
+
+msgid "TXT_MANA_BOTH"
+msgstr "複合マナ"
+
+msgid "TXT_KEY_STEEL"
+msgstr "鋼の鍵"
+
+msgid "TXT_KEY_CAVE"
+msgstr "洞窟の鍵"
+
+msgid "TXT_KEY_AXE"
+msgstr "斧の鍵"
+
+msgid "TXT_KEY_FIRE"
+msgstr "炎の鍵"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "翠玉の鍵"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "迷宮の鍵"
+
+msgid "TXT_KEY_SILVER"
+msgstr "銀の鍵"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "錆びた鍵"
+
+msgid "TXT_KEY_HORN"
+msgstr "角の鍵"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "沼の鍵"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "城の鍵"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "守護者の像"
+
+msgid "TXT_ARTISUMMON"
+msgstr "闇の従者"
+
+msgid "TXT_ARTIEGG2"
+msgstr "ポークレイター"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "フレチェット"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "追放のデバイス"
+
+msgid "TXT_ARTISPEED"
+msgstr "素早さの靴"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "魔力の盃"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "竜皮の小手"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "反発の円盤"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "魅知国の秘法"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "ヨリックの髑髏"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "デ'スパリルの心"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "ルビーの宝石"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "エメラルドの宝石"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "エメラルドの宝石"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "サファイアの宝石"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "サファイアの宝石"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "デーモンの写本"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr "オスキュラ公文書"
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "炎の仮面"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "グレイブシール"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "聖遺物"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "メイガスの印章"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "時計の歯車"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "ここでは使用できない"
+
+msgid "TXT_ARMOR1"
+msgstr "鎖帷子"
+
+msgid "TXT_ARMOR2"
+msgstr "鷹の盾"
+
+msgid "TXT_ARMOR3"
+msgstr "白金の兜"
+
+msgid "TXT_ARMOR4"
+msgstr "回避の護符"
+
+msgid "TXT_WEAPON_F2"
+msgstr "タイモンの斧"
+
+msgid "TXT_WEAPON_F3"
+msgstr "報復の金槌"
+
+msgid "TXT_WEAPON_F4"
+msgstr "組み立てた 死滅の剣"
+
+msgid "TXT_WEAPON_C2"
+msgstr "蛇の杖"
+
+msgid "TXT_WEAPON_C3"
+msgstr "ファイアストーム"
+
+msgid "TXT_WEAPON_C4"
+msgstr "組み立てた レイスバージ"
+
+msgid "TXT_WEAPON_M2"
+msgstr "フロスト シャード"
+
+msgid "TXT_WEAPON_M3"
+msgstr "死の円弧"
+
+msgid "TXT_WEAPON_M4"
+msgstr "組み立てた 天罰"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "武器の一片! 今日は吉日だ!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "死滅の剣の切片"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "レイスバージの切片"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "天罰の切片"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "鋼の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "洞窟の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "斧の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "炎の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "翠玉の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "迷宮の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "銀の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "錆びた鍵が必要だ"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "角の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "沼の鍵が必要だ"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "城の鍵が必要だ"
+
+msgid "FN_FIREDEMON"
+msgstr "アフリート"
+
+msgid "FN_DEMON1"
+msgstr "サーペント"
+
+msgid "FN_ETTIN"
+msgstr "エティン"
+
+msgid "FN_CENTAUR"
+msgstr "ケンタウロス"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "スロアタウル"
+
+msgid "FN_BISHOP"
+msgstr "ビショップ"
+
+msgid "FN_ICEGUY"
+msgstr "ウェンディゴ"
+
+msgid "FN_SERPENT"
+msgstr "ストーカー"
+
+msgid "FN_WRAITH"
+msgstr "レイバー"
+
+msgid "FN_DRAGON"
+msgstr "デス ワイバーン"
+
+msgid "FN_KORAX"
+msgstr "唯一神コラックス"
+
+msgid "FN_FBOSS"
+msgstr "ゼデク"
+
+msgid "FN_MBOSS"
+msgstr "メネルキル"
+
+msgid "FN_CBOSS"
+msgstr "トラダクタス"
+
+msgid "FN_HERESIARCH"
+msgstr "ヘレシアーク"
+
+msgid "AMMO_MANA1"
+msgstr "ブルーマナ"
+
+msgid "AMMO_MANA2"
+msgstr "グリーンマナ"
+
+msgid "TAG_CWEAPMACE"
+msgstr "懺悔のメイス"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "蛇の杖"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "ファイアストーム"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "レイスバージ"
+
+msgid "TAG_FWEAPFIST"
+msgstr "スパイク ガントレット"
+
+msgid "TAG_FWEAPAXE"
+msgstr "タイモンの斧"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "報復の金槌"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "死滅の剣"
+
+msgid "TAG_MWEAPWAND"
+msgstr "サファイア ワンド"
+
+msgid "TAG_MWEAPFROST"
+msgstr "フロスト シャード"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "死の円弧"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "天罰"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "反発の円盤"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "竜皮の小手"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "魔力の盃"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "フレシェット"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "毒ガス フレシェット"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "時限爆弾フレシェット"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "グレネードフレシェット"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "魅知国の秘法"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "守護者の像"
+
+msgid "TAG_ARTIPORK"
+msgstr "ポークレイター"
+
+msgid "TAG_ARTISPEED"
+msgstr "素早さの靴"
+
+msgid "TAG_ARTISUMMON"
+msgstr "闇の従者"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "追放のデバイス"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "ヨリックの髑髏"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "デ'スパリルの心"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "ルビーの宝石"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "エメラルドの宝石1"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "エメラルドの宝石2"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "サファイアの宝石1"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "サファイアの宝石2"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "デーモンの写本"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr "オスキュラ公文書"
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "炎の仮面"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "グレイブシール"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "聖遺物"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "メイガスの印章"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "鉄の歯車"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "真鍮のギア"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "鉄と真鍮のギア"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "銀と真鍮のギア"
+
+msgid "OB_FIREDEMON"
+msgstr "%o はアフリートの炎を味わった。"
+
+msgid "OB_DEMON1"
+msgstr "%o はサーペントに火傷を負わされた。"
+
+msgid "OB_DEMON2"
+msgstr "%o はサーペントの毒にやられた。"
+
+msgid "OB_ETTIN"
+msgstr "%o はエティンに潰された。"
+
+msgid "OB_CENTAUR"
+msgstr "%o はケンタウロスに切り刻まれた。"
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o はスロアタウルに切り刻まれた。"
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o はスロアタウルの火玉に倒された。"
+
+msgid "OB_BISHOP"
+msgstr "%o はビショップの闇の力に屈した。"
+
+msgid "OB_ICEGUY"
+msgstr "%o はウェンディゴによって固められた。"
+
+msgid "OB_SERPENTHIT"
+msgstr "%o はストーカーに引っ掻かれた。"
+
+msgid "OB_SERPENT"
+msgstr "%o はストーカーに溶かされた。"
+
+msgid "OB_WRAITH"
+msgstr "%o はレイバーに黒焦げにされた。"
+
+msgid "OB_WRAITHHIT"
+msgstr "%o はレイバーに命を %p盗まれた。"
+
+msgid "OB_DRAGON"
+msgstr "%o はダークワイバーンに焼却された。"
+
+msgid "OB_KORAX"
+msgstr "%o は唯一神の怒りに触れた。"
+
+msgid "OB_FBOSS"
+msgstr "%o はゼデクに討ち取られた。"
+
+msgid "OB_MBOSS"
+msgstr "%o はメネルキルのマナを吸収できなかった。"
+
+msgid "OB_CBOSS"
+msgstr "%o はトラダクタスの洗礼を受けた。"
+
+msgid "OB_HERESIARCH"
+msgstr "%o はヘレシアークに骨を %p本 撒き散らされた。"
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o は %k に素手でボコボコにされた。"
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o は %k から斧を受けた。"
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%o は %k のハンマーで頭に空洞を開けられた。"
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o の魂は %k のハンマーで一から鍛え直された。"
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o は %k の強靭なクワイエタスで静かにされた。"
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o は自らの顔に %k のメイスを受けた。"
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o は %k の蛇の杖に噛まれた。"
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o は %k の蛇の杖に息の根を止められた。"
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o は %k によって炎を灯された。"
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o は %k のレイスバージによって浄化された。"
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o は %k から多量のサファイアビームを受け取った。"
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o は %k によって冷ややかな輩になった。"
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o は %k から衝撃的な啓示を受けた。"
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o は %k の天罰によりこの世から一掃された。"
+
+msgid "TXT_METALARMOR"
+msgstr "メタルアーマー 入手。"
+
+msgid "TXT_LEATHERARMOR"
+msgstr "レザーアーマー 入手。"
+
+msgid "TXT_MEDPATCH"
+msgstr "医薬パッチ 入手。"
+
+msgid "TXT_MEDICALKIT"
+msgstr "医療用キット 入手。"
+
+msgid "TXT_SURGERYKIT"
+msgstr "手術キット 入手。"
+
+msgid "TXT_STRIFEMAP"
+msgstr "マップ 取得。"
+
+msgid "TXT_BELDINSRING"
+msgstr "指輪 取得。"
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "寄贈された聖杯 取得。"
+
+msgid "TXT_EAR"
+msgstr "耳 取得。"
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "壊れたパワーカップリング 取得。"
+
+msgid "TXT_SHADOWARMOR"
+msgstr "シャドウアーマー 入手。"
+
+msgid "TXT_ENVSUIT"
+msgstr "耐環境スーツ 入手。"
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "守衛の制服 入手。"
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "士官の制服 入手。"
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "火炎放射器の部品 入手。"
+
+msgid "TXT_REPORT"
+msgstr "報告書 取得。"
+
+msgid "TXT_INFO"
+msgstr "情報 取得。"
+
+msgid "TXT_TARGETER"
+msgstr "照準器 入手。"
+
+msgid "TXT_COMMUNICATOR"
+msgstr "コミュニケーター 取得。"
+
+msgid "TXT_COIN"
+msgstr "コイン 入手。"
+
+msgid "TXT_XGOLD"
+msgstr "%d ゴールド 入手。"
+
+msgid "TXT_BEACON"
+msgstr "テレポータービーコン 取得。"
+
+msgid "TXT_DEGNINORE"
+msgstr "デグニン鉱石 取得。"
+
+msgid "TXT_SCANNER"
+msgstr "スキャナー 入手。"
+
+msgid "TXT_NEEDMAP"
+msgstr "マップが無ければ スキャナーは機能しない!"
+
+msgid "TXT_PRISONPASS"
+msgstr "刑務所の許可証 取得。"
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "クロスボウ 入手。"
+
+msgid "TXT_ASSAULTGUN"
+msgstr "アサルトガン 入手。"
+
+msgid "TXT_MMLAUNCHER"
+msgstr "ミニミサイル ランチャー入手。"
+
+msgid "TXT_FLAMER"
+msgstr "火炎放射器 入手。"
+
+msgid "TXT_MAULER"
+msgstr "マウラー 入手。"
+
+msgid "TXT_GLAUNCHER"
+msgstr "グレネードランチャー 入手。"
+
+msgid "TXT_SIGIL"
+msgstr "シジル 取得。"
+
+msgid "TXT_BASEKEY"
+msgstr "基地のキー 取得。"
+
+msgid "TXT_GOVSKEY"
+msgstr "政府のキー 取得。"
+
+msgid "TXT_PASSCARD"
+msgstr "パスカード 取得。"
+
+msgid "TXT_IDBADGE"
+msgstr "IDバッジ 取得。"
+
+msgid "TXT_PRISONKEY"
+msgstr "刑務所のキー 取得。"
+
+msgid "TXT_SEVEREDHAND"
+msgstr "切り取った手 取得。"
+
+msgid "TXT_POWER1KEY"
+msgstr "パワー1キー 取得。"
+
+msgid "TXT_POWER2KEY"
+msgstr "パワー2キー 取得。"
+
+msgid "TXT_POWER3KEY"
+msgstr "パワー3キー 取得。"
+
+msgid "TXT_GOLDKEY"
+msgstr "ゴールドキー 取得。"
+
+msgid "TXT_IDCARD"
+msgstr "IDカード 取得。"
+
+msgid "TXT_SILVERKEY"
+msgstr "シルバーキー 取得。"
+
+msgid "TXT_ORACLEKEY"
+msgstr "オラクルキー 取得。"
+
+msgid "TXT_MILITARYID"
+msgstr "ミリタリーID 取得。"
+
+msgid "TXT_ORDERKEY"
+msgstr "オーダーキー 取得。"
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "倉庫のキー 取得。"
+
+msgid "TXT_BRASSKEY"
+msgstr "ブラスキー 取得。"
+
+msgid "TXT_REDCRYSTAL"
+msgstr "赤水晶のキー 取得。"
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "青水晶のキー 取得。"
+
+msgid "TXT_CHAPELKEY"
+msgstr "チャペルキー 取得。"
+
+msgid "TXT_CATACOMBKEY"
+msgstr "カタコンベキー 取得。"
+
+msgid "TXT_SECURITYKEY"
+msgstr "警備のキー 取得。"
+
+msgid "TXT_COREKEY"
+msgstr "コアキー 取得。"
+
+msgid "TXT_MAULERKEY"
+msgstr "マウラーキー 取得。"
+
+msgid "TXT_FACTORYKEY"
+msgstr "工場のキー 取得。"
+
+msgid "TXT_MINEKEY"
+msgstr "鉱山のキー 取得。"
+
+msgid "TXT_NEWKEY5"
+msgstr "ニューキー5 取得。"
+
+msgid "TXT_ORACLEPASS"
+msgstr "オラクルパス 取得。"
+
+msgid "TXT_HEGRENADES"
+msgstr "HEグレネード弾 入手。"
+
+msgid "TXT_PHGRENADES"
+msgstr "白リングレネード弾 入手。"
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "銃弾倉 入手。"
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "弾薬箱 入手。"
+
+msgid "TXT_MINIMISSILES"
+msgstr "ミニミサイル 入手。"
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "ミサイルの箱 入手。"
+
+msgid "TXT_ENERGYPOD"
+msgstr "エネルギーポット 入手。"
+
+msgid "TXT_ENERGYPACK"
+msgstr "エネルギーパック 入手。"
+
+msgid "TXT_POISONBOLTS"
+msgstr "ポイズンボルト 入手。"
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "エレクトリックボルト 入手。"
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "弾薬鞄 入手。"
+
+msgid "MSG_TALISMANRED"
+msgstr "己の勘が 触れてはならない物だと訴えている..."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "何であろうと、この世には属さない物だ..."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "何かを成し遂げなければならない..."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "豪剛なる力を得た!"
+
+msgid "TXT_NEEDKEY"
+msgstr "キーを持っていない"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "パスカード が必要だ"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "このドアには パスカード が必要だ"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "IDカード が必要だ"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "刑務所のキーを持っていない"
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "手形認証が一致しません"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "ゴールドキーが必要だ"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "IDバッジが必要だ"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "このドアには IDバッジ が必要だ"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "シルバーキーが必要だ"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "ブラスキーが必要だ"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "赤水晶のキーが必要だ"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "青水晶のキーが必要だ"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "このエリアは Strifeの製品版でのみ利用可能です"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "それは作動していない"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "聖杯が必要だ!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "オラクルパスが必要だ!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "ダガー"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "クロスボウ"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "クロスボウ"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "アサルトガン"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "ミニミサイルランチャー"
+
+msgid "TAG_FLAMER"
+msgstr "火炎放射器"
+
+msgid "TAG_MAULER1"
+msgstr "マウラー"
+
+msgid "TAG_MAULER2"
+msgstr "マウラー"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "グレネードランチャー"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "グレネードランチャー"
+
+msgid "TAG_SIGIL"
+msgstr "シジル"
+
+msgid "TAG_COIN"
+msgstr "コイン"
+
+msgid "TAG_MEDPATCH"
+msgstr "医薬パッチ"
+
+msgid "TAG_MEDICALKIT"
+msgstr "医療キット"
+
+msgid "TAG_SURGERYKIT"
+msgstr "手術キット"
+
+msgid "TAG_BELDINSRING"
+msgstr "指輪"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "寄贈された聖杯"
+
+msgid "TAG_EAR"
+msgstr "耳"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "壊れたパワーカップリング"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "シャドウアーマー"
+
+msgid "TAG_ENVSUIT"
+msgstr "耐環境スーツ"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "ガードの制服"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "士官の制服"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "火炎放射器の部品"
+
+msgid "TAG_REPORT"
+msgstr "報告書"
+
+msgid "TAG_INFO"
+msgstr "情報"
+
+msgid "TAG_TARGETER"
+msgstr "照準器"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "コミュニケーター"
+
+msgid "TAG_DEGNINORE"
+msgstr "デグニン鉱石"
+
+msgid "TAG_GUNTRAINING"
+msgstr "精度"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "タフネス"
+
+msgid "TAG_SCANNER"
+msgstr "スキャナー"
+
+msgid "TAG_PRISONPASS"
+msgstr "刑務所の許可証"
+
+msgid "TAG_ALARM"
+msgstr "警報"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "弾薬"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "体力"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "テレポータービーコン"
+
+msgid "TAG_METALARMOR"
+msgstr "メタルアーマー"
+
+msgid "TAG_LEATHER"
+msgstr "レザーアーマー"
+
+msgid "TAG_HEGRENADES"
+msgstr "HEグレネード弾"
+
+msgid "TAG_PHGRENADES"
+msgstr "白リングレネード弾"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "弾丸のクリップ"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "弾薬箱"
+
+msgid "TAG_MINIMISSILES"
+msgstr "ミニミサイル"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "ミサイルの箱"
+
+msgid "TAG_ENERGYPOD"
+msgstr "エネルギーポット"
+
+msgid "TAG_ENERGYPACK"
+msgstr "エネルギーパック"
+
+msgid "TAG_POISONBOLTS"
+msgstr "ポイズンボルト"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "エレクトリックボルト"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "弾薬鞄"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr ""
+
+msgid "TAG_GOVSKEY"
+msgstr ""
+
+msgid "TAG_PASSCARD"
+msgstr ""
+
+msgid "TAG_IDBADGE"
+msgstr ""
+
+msgid "TAG_PRISONKEY"
+msgstr ""
+
+msgid "TAG_SEVEREDHAND"
+msgstr ""
+
+msgid "TAG_POWER1KEY"
+msgstr ""
+
+msgid "TAG_POWER2KEY"
+msgstr ""
+
+msgid "TAG_POWER3KEY"
+msgstr ""
+
+msgid "TAG_GOLDKEY"
+msgstr ""
+
+msgid "TAG_IDCARD"
+msgstr ""
+
+msgid "TAG_SILVERKEY"
+msgstr ""
+
+msgid "TAG_ORACLEKEY"
+msgstr ""
+
+msgid "TAG_MILITARYID"
+msgstr ""
+
+msgid "TAG_ORDERKEY"
+msgstr ""
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr ""
+
+msgid "TAG_BRASSKEY"
+msgstr ""
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr ""
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr ""
+
+msgid "TAG_CHAPELKEY"
+msgstr ""
+
+msgid "TAG_CATACOMBKEY"
+msgstr ""
+
+msgid "TAG_SECURITYKEY"
+msgstr ""
+
+msgid "TAG_COREKEY"
+msgstr ""
+
+msgid "TAG_MAULERKEY"
+msgstr ""
+
+msgid "TAG_FACTORYKEY"
+msgstr ""
+
+msgid "TAG_MINEKEY"
+msgstr ""
+
+msgid "TAG_NEWKEY5"
+msgstr ""
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr ""
+
+msgid "TAG_10GOLD"
+msgstr "10ゴールド"
+
+msgid "TAG_25GOLD"
+msgstr "25ゴールド"
+
+msgid "TAG_50GOLD"
+msgstr "50ゴールド"
+
+msgid "TAG_300GOLD"
+msgstr "300ゴールド"
+
+msgid "TXT_PERSON"
+msgstr "一員"
+
+msgid "TAG_ACOLYTE"
+msgstr "アコライト"
+
+msgid "TAG_ARMORER"
+msgstr "装甲"
+
+msgid "TAG_BARKEEP"
+msgstr "酒屋"
+
+msgid "TAG_BEGGAR"
+msgstr "乞食"
+
+msgid "TAG_MACIL1"
+msgstr "マシル"
+
+msgid "TAG_MACIL2"
+msgstr "マシル"
+
+msgid "TAG_MEDIC"
+msgstr "メディック"
+
+msgid "TAG_ORACLE"
+msgstr "オラクル"
+
+msgid "TAG_PRIEST"
+msgstr "プリースト"
+
+msgid "TAG_RATBUDDY"
+msgstr "ラット バディ"
+
+msgid "TAG_REBEL"
+msgstr "反乱軍"
+
+msgid "TAG_TEMPLAR"
+msgstr "騎士団員"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "武器工"
+
+msgid "TAG_TALISMANRED"
+msgstr "赤の魔除け"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "緑の魔除け"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "青の魔除け"
+
+msgid "OB_ACOLYTE"
+msgstr "%o は熱心なアコライトに堕とされた。"
+
+msgid "OB_MACIL"
+msgstr "%o はマシルに歯向かうべきではなかった。"
+
+msgid "OB_REBEL"
+msgstr "%o は反乱軍に撃ち殺された。"
+
+msgid "OB_BEGGAR"
+msgstr "%o は貧民に殴り殺された。"
+
+msgid "OB_PEASANT"
+msgstr "%o は庶民に戦いを挑むべきではなかった。"
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o はスペクトルに討ち滅ぼされた。"
+
+msgid "OB_ENTITY"
+msgstr "%o は唯一神の怒りに触れた。"
+
+msgid "OB_LOREMASTER"
+msgstr "%o はロアマスターの手から逃れられなかった。"
+
+msgid "OB_PROGRAMMER"
+msgstr "%o はプログラマーに消去された。"
+
+msgid "OB_STFBISHOP"
+msgstr "%o はビショップに吹き飛ばされた。"
+
+msgid "OB_SENTINEL"
+msgstr "%o はセンティネルに堕とされた。"
+
+msgid "OB_CRUSADER"
+msgstr "%o はクルセーダーに一掃された。\n"
+
+msgid "OB_INQUISITOR"
+msgstr "%o は審問官によって宣告された。\n"
+
+msgid "OB_STALKER"
+msgstr "%o はストーカーに精神を蝕まれた。\n"
+
+msgid "OB_TURRET"
+msgstr "%o は警備システムを起動してしまった。"
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o は騎士団員に連行された。"
+
+msgid "OB_TEMPLAR"
+msgstr "%o は騎士団員に浄化された。"
+
+msgid "OB_REAVERHIT"
+msgstr "%o はリーバーに切り裂かれた。"
+
+msgid "OB_REAVER"
+msgstr "%o はリーバーに撃ち殺された。"
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o は電気ショックを %k からもらった。"
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o は ％k に壁へ打ち付けられた。"
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o は 致死量の ％k の怒りを盛られた。"
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o は %k のアサルトガンで穴だらけにされた。"
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o は %k のミサイルを味わった。"
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o は %k のHE手榴弾によって反逆された。"
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o は %k の白リン弾で炎に包まれた。"
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o は %k に丸焼きにされてしまった。"
+
+msgid "OB_MPMAULER1"
+msgstr "%o は %k から電気ショックを浴びた。"
+
+msgid "OB_MPMAULER"
+msgstr "%o は %k の悪辣さにより気化した。"
+
+msgid "OB_MPSIGIL"
+msgstr "%o は %k のシジルによる威圧に屈した。"
+
+msgid "TXT_STRIFE_EPI"
+msgstr "シジルの探求"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "囚人を解放した!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "コンバーターを破壊した!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "おめでとう!トレーニングエリアを完了した"
+
+msgid "TXT_QUEST_14"
+msgstr "クリスタルを爆破した"
+
+msgid "TXT_QUEST_16"
+msgstr "ゲートを爆破した"
+
+msgid "TXT_QUEST_27"
+msgstr "コンピューターを爆破した"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "ビショップを殺した!"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "オラクルの予言を覆した!"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "マシルを討ち取った!"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "ロアマスターを吊り上げた!"
+
+msgid "TXT_YOUFOOL"
+msgstr "バカな真似を! 警報を鳴らしてしまった。"
+
+msgid "TXT_YOUREDEAD"
+msgstr "絶望的だ! 警報を鳴らしてしまった。"
+
+msgid "TXT_HAVEENOUGH"
+msgstr "十分に持ち合わせている!"
+
+msgid "TXT_GOAWAY"
+msgstr "逃げ出せ!"
+
+msgid "TXT_COMM0"
+msgstr "メッセージが届いた..."
+
+msgid "TXT_COMM1"
+msgstr "ブラックバードからのメッセージが届いた..."
+
+msgid "TXT_FINDHELP"
+msgstr "助けを探せ"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "%u ゴールド"
+
+msgid "GOTCHEXARMOR"
+msgstr "チェックス(R)アーマー をてにいれた。"
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "スーパーチェックス(R)アーマー をてにいれた。"
+
+msgid "GOTWATER"
+msgstr "コップいっぱいの みずをひろった。"
+
+msgid "GOTREPELLENT"
+msgstr "スライム はんぱつざい をひろった。"
+
+msgid "GOTBREAKFAST"
+msgstr "ちょうしょく スーパーチャージ!"
+
+msgid "GOTCBLUEKEY"
+msgstr "あお のかぎ をひろった。"
+
+msgid "GOTCYELLOWKEY"
+msgstr "きいろ のかぎ をひろった。"
+
+msgid "GOTCREDKEY"
+msgstr "あか のかぎ をひろった。"
+
+msgid "GOTFRUIT"
+msgstr "フルーツのボウル をひろった。"
+
+msgid "GOTVEGETABLESNEED"
+msgstr "いま とってもひつような やさいのボウルだ!"
+
+msgid "GOTVEGETABLES"
+msgstr "やさいのボウル をひろった。"
+
+msgid "GOTSLIMESUIT"
+msgstr "たい スライム スーツ をてにいれた。"
+
+msgid "GOTCHEXMAP"
+msgstr "コンピューターエリアマップ をてにいれた。"
+
+msgid "GOTZORCHRECHARGE"
+msgstr "ミニゾーチ リチャージ をひろった。"
+
+msgid "GOTMINIZORCHPACK"
+msgstr "ミニゾーチ パック をひろった。"
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "ゾーチプロパルサーリチャージ をひろった。"
+
+msgid "GOTPROPULSORPACK"
+msgstr "ゾーチプロパルサーパック をひろった。"
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "フェイシング ゾーチャーリチャージ をひろった。"
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "フェイシング ゾーチャーパック をひろった。"
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "ラージ ゾーチャーリチャージ をひろった。"
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "ラージ ゾーチャーパック をひろった。"
+
+msgid "GOTZORCHPACK"
+msgstr "ゾーチパックをてにいれた!"
+
+msgid "GOTLAZDEVICE"
+msgstr "LAZ デバイスをてにいれた! ワァオ!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "ラピッドゾーチャー をてにいれた!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "スーパーさきわれスプーン をてにいれた!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "ロケット ゾーチャー をてにいれた!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "フェイシング ゾーチャー をてにいれた!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "おおがたゾーチャー をてにいれた!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "ちょうおおがたゾーチャー をてにいれた!"
+
+msgid "GOTMINIZORCHER"
+msgstr "こがたゾーチャー をてにいれた。"
+
+msgid "TAG_SPOON"
+msgstr "スプーン"
+
+msgid "TAG_SPORK"
+msgstr "スーパーさきわれスプーン"
+
+msgid "TAG_MINIZORCHER"
+msgstr "こがたゾーチャー"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "おおがたゾーチャー"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "ちょうおおがたゾーチャー"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "れんしゃ ゾーチャー"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "ロケット ゾーチ"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "フェイシング ゾーチャー"
+
+msgid "TAG_LAZDEVICE"
+msgstr "ラージエリアゾーキング デバイス"
+
+msgid "OB_COMMONUS"
+msgstr "%o はフレモイドにベトベトにされた。"
+
+msgid "OB_BIPEDICUS"
+msgstr "%o はバイペディクスにベトベトにされた。"
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o はアーマードペディクスにベトベトにされた。"
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o はサイクロプティスにベトベトにされた。"
+
+msgid "OB_FLEMBRANE"
+msgstr "%o はフレムブランにはいぼくした。"
+
+msgid "OB_MPSPOON"
+msgstr "%o は %k にスプーンでたべさせられた。"
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o は %k にスーパーさきわれスプーンでかきまぜられた。"
+
+msgid "OB_MPZORCH"
+msgstr "%o は %k にビリビリさせられた。"
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o に %k のメガゾーチャーがヒットした。"
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o は %k に めをまわされた。"
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o は %k のロケットゾーチャーにあたった。"
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o に %k のロケットゾーチャーがとどいた。"
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o は %k によってスベスベにされた。"
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o は %k のLAZデバイスのえじきになった。"
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o は %k にとかされた。"
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: ちゃくりく ちてん"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: ほかん しせつ"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: じっけんしつ"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: じゅもくえん"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: バゾイクの どうくつ"
+
+msgid "CE1TEXT"
+msgstr ""
+"にんむはかんりょうしました。\n"
+"\n"
+"きみは つぎのにんむの じゅんびができたかい?\n"
+"\n"
+"\n"
+"エスケープ キーをおせば つづけられるよ..."
+
+msgid "CE2TEXT"
+msgstr "よくやった!"
+
+msgid "CE3TEXT"
+msgstr "ワンダフル!"
+
+msgid "CE4TEXT"
+msgstr "すばらしい!"
+
+msgid "CLOADNET"
+msgstr ""
+"オンラインモードでは セーブデータをロードできません\n"
+"\n"
+"なにか キーを おしてください。\n"
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"ぼうけんを このなまえで すぐにセーブしますか?\n"
+"\n"
+"\"%s\"\n"
+"\n"
+"Yes か No できめてください。"
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"オンラインモードでは セーブデータをロードできません\n"
+"\n"
+"なにか キーを おしてください。\n"
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"ぼうけんを このなまえで すぐにロードしますか?\n"
+"\n"
+"\"%s\"\n"
+"\n"
+"Y か N をおしてください。"
+
+msgid "CNEWGAME"
+msgstr ""
+"オンラインモードでは セーブデータをロードできません\n"
+"\n"
+"なにか キーを おしてください。\n"
+
+msgid "CNIGHTMARE"
+msgstr ""
+"きをつけて、これはすごく てごわい。\n"
+"ほんとうにはじめますか?\n"
+"\n"
+"Y か N をおしてください。\n"
+
+msgid "CSWSTRING"
+msgstr ""
+"これは チェックス(R)クエスト。\n"
+"\n"
+"つづきは doomwiki.org/wiki/Chex_Questからさがしてね。\n"
+"\n"
+"なにか キーを おしてください。"
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"オンラインモードでは タイトルがめんにはもどれません\n"
+"\n"
+"なにか キーを おしてください。\n"
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"ほんとうに いまのぼうけんを おわらせますか?\n"
+"\n"
+"Y か N をおしてください。\n"
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "むてきモード オン"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "むてきモード オフ"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "ゾーチ ついか"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "スーパーゾーチ ついか"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "...Chex(R)をたべよう!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "ミニゾーチ ほきゅう"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "ラージゾーチャー ほきゅう"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "プロパルサー ほきゅう"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "フェイシング ゾーチャー ほきゅう"
+
+msgid "MNU_NEWGAME"
+msgstr "新規ゲーム"
+
+msgid "MNU_OPTIONS"
+msgstr "オプション"
+
+msgid "MNU_GAMEFILES"
+msgstr "ゲームファイル"
+
+msgid "MNU_INFO"
+msgstr "情報"
+
+msgid "MNU_QUITGAME"
+msgstr "終了"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "実力を選べ:"
+
+msgid "SKILL_BABY"
+msgstr "死ぬには若すぎる"
+
+msgid "SKILL_EASY"
+msgstr "あまり激しくするな"
+
+msgid "SKILL_NORMAL"
+msgstr "手加減無用"
+
+msgid "SKILL_HARD"
+msgstr "ウルトラ バイオレンス"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "悪夢だ!"
+
+msgid "CSKILL_BABY"
+msgstr "やさしくして"
+
+msgid "CSKILL_EASY"
+msgstr "ダラダラしない"
+
+msgid "CSKILL_NORMAL"
+msgstr "カッチカチスライム\n"
+
+msgid "CSKILL_HARD"
+msgstr "かげきなウーズ\n"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "ちょうベトベト!"
+
+msgid "SSKILL_BABY"
+msgstr "トレーニング"
+
+msgid "SSKILL_EASY"
+msgstr "ルーキー"
+
+msgid "SSKILL_NORMAL"
+msgstr "ベテラン"
+
+msgid "SSKILL_HARD"
+msgstr "エリート"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "ブラッドバス"
+
+msgid "MNU_WETNURSE"
+msgstr "汝は乳母を欲する"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "我等こそが臆病者"
+
+msgid "MNU_BRINGEST"
+msgstr "招かれし者共"
+
+msgid "MNU_SMITE"
+msgstr "汝は芸術的殺戮者"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "汝に憑した黒死病"
+
+msgid "MNU_SQUIRE"
+msgstr "見習い騎士"
+
+msgid "MNU_KNIGHT"
+msgstr "騎士"
+
+msgid "MNU_WARRIOR"
+msgstr "戦士"
+
+msgid "MNU_BERSERKER"
+msgstr "狂戦士"
+
+msgid "MNU_TITAN"
+msgstr "タイタン"
+
+msgid "MNU_ALTARBOY"
+msgstr "堂役"
+
+msgid "MNU_ACOLYTE"
+msgstr "侍祭"
+
+msgid "MNU_PRIEST"
+msgstr "司祭"
+
+msgid "MNU_CARDINAL"
+msgstr "枢機卿"
+
+msgid "MNU_POPE"
+msgstr "教皇"
+
+msgid "MNU_APPRENTICE"
+msgstr "入門者"
+
+msgid "MNU_ENCHANTER"
+msgstr "妖術士"
+
+msgid "MNU_SORCERER"
+msgstr "魔術士"
+
+msgid "MNU_WARLOCK"
+msgstr "黒魔術士"
+
+msgid "MNU_ARCHMAGE"
+msgstr "大魔導師"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "クラス選抜:"
+
+msgid "MNU_FIGHTER"
+msgstr "戦士"
+
+msgid "MNU_CLERIC"
+msgstr "僧侶"
+
+msgid "MNU_MAGE"
+msgstr "魔導士"
+
+msgid "MNU_RANDOM"
+msgstr "ランダム"
+
+msgid "MNU_EPISODE"
+msgstr "どのエピソードだ?"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "キャンペーンを選べ"
+
+msgid "MNU_COTD"
+msgstr "呪われた都"
+
+msgid "MNU_HELLSMAW"
+msgstr "地獄の肚"
+
+msgid "MNU_DOME"
+msgstr "デ'スパリルの穹窿"
+
+msgid "MNU_OSSUARY"
+msgstr "納骨堂"
+
+msgid "MNU_DEMESNE"
+msgstr "澱んだ荘園"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "チーム制"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "チームメンバーへのダメージ倍率"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "スマートオートエイム"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "落下ダメージ"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "死亡時に武器を落とす"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "弾2倍"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "弾無限"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "所持品無限"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "モンスターを出現させない"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "モンスター全滅までMAPから脱出不可"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "モンスターの自力復活"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "プレイヤーの復活禁止"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "アイテムを復活"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "強力なパワーアップアイテムを復活"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "モンスター高速化"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "敵が悪夢と同じ機敏さ"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "プレイヤーの自動体力減少"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "オートエイム有効化"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "自殺コマンド有効化"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "ジャンプ有効化"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "しゃがみ有効化"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "フリールック有効化"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "FOVの調整を有効化"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "BFG使用時のフリールックを有効化"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "オートマップ有効化"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "オートマップに味方を表示"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "死亡時の他プレイヤー観戦を許可"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "チェイスカメラチート有効化"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "武器切替時に弾の有無を確認"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "最終ボスを殺した際に召喚モンスターも殺す"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "最終セクターの敵もキルに含む"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "デスマッチの設定"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "武器を取得時も残す"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "パワーアップアイテムを出現させる"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "回復アイテムを出現させる"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "アーマーを出現させる"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "他のプレイヤーから最遠の場所に復活"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "同じMAPを繰り返す"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "死亡後に強制復活"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "出口の使用を許可"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "爆発バレルを復活させる"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "復活したばかりのプレイヤーを保護"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "キルされた場合は得点を失う"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "MAP変更後も得点を保持する"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "チーム変更を禁止"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "協力モードの設定"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "マルチプレイ用の武器を出現させる"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "死亡時に全ての所持品を失う"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "死亡後もキーを保持する"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "死亡後も武器を保持する"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "死亡後もアーマーを保持する"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "死亡後もパワーアップを保持する"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "死亡後も弾薬を保持する"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "死亡時に弾を半分失う"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "死亡したその場で復活"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "常にマルチプレイ用の物を出現"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "垂直方向への散弾を許可"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "武器に追加弾薬を付与 (DMのみ)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "互換性 オプション"
+
+msgid "CMPTMNU_TITLE"
+msgstr "互換性 オプション"
+
+msgid "CMPTMNU_MODE"
+msgstr "互換性モード"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "アクターの挙動"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "仲間キャラは敵通行不可ラインの影響を受けない"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "ペインエレメンタルのロストソウル制限"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "敵の移動が床の影響を受ける"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "敵はdropoffを横切れない"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "敵がdropoffにスタックする"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "敵が透明を見破る"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "ミノタウロスの攻撃が水を通過しない"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "アイテムドロップが床に出る"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DehackEdの挙動"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "Doom2.exe式のDEHヘルス設定"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "DEH Modでの元のA_Mushroom速度"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "マップ/アクションの挙動"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "全てのSpecial Linesが<use>をブロック"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "いずれのBossdeathでもlevel specialを許可"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "BOOMドアライト エフェクトを無効化"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "DOOM式の最寄りライト検知"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "DOOM式の最短テクスチャー検知"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "バグだらけの階段生成を使用"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "DOOMでの床の動作挙動を使用"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "DOOMでのポイントライン アルゴリズム を使用"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Exitを複数回起動出来る"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "物理の挙動"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "アクターの上下には入れない"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "BOOM型スクロール床を適用"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "NSEW直進走法の不許可"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "壁伝い走行を許可"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven式スクロール床を原作準拠にする"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Self ref.Sectorsは射撃を阻害しない"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "DOOM式の即着弾判定を使用"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "ミサイル通過にDOOM heightsを使用"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "レンダリングの挙動"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Hexen式のPolyObjects描画"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "マスクされた中間テクスチャーのY軸ずれを無効"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "反転スプライトの並び替え"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "音の挙動"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "消音BFG技の為にサウンドを重複させない"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "他人にピックアップ音を聞かせない"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "即時稼働するFloorsの音を鳴らさない"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sectorサウンドをフロア中央で鳴らす"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "アクター消滅で音を止める"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "元のサウンドターゲット処理を使用"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "スクリプトテレポートではSector actionsを起こさない"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Non-bloking linesを押せる"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "バグのあるCheckSwitchRangeを許可"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "バグのあるStrife railingを許可"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "爆風は垂直方向全域に影響しない"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Doom本来の爆発動作を使用する"
+
+msgid "PLYRMNU_RED"
+msgstr "赤の量"
+
+msgid "PLYRMNU_GREEN"
+msgstr "緑の量"
+
+msgid "PLYRMNU_BLUE"
+msgstr "青の量"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "役職"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "外装"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "武器取得時に持ち替え"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "\\cjスペースキー"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "で前面を表示"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "で背面を表示"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "垂直方向の散弾"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "ズーム"
+
+msgid "CNTRLMNU_USER1"
+msgstr "武器特殊動作 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "武器特殊動作 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "武器特殊動作 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "武器特殊動作 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "飛行/水泳時 上昇"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "飛行/水泳時 下降"
+
+msgid "CNTRLMNU_LAND"
+msgstr "飛行停止"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "キー視点上下化"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Strifeポップアップ表示設定"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "チーム内発言"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "アイテムを捨てる\n"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "アイテム名を表示"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "武器を捨てる"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "その他"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "他者視点"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Strife ポップアップ画面"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "ミッションオブジェクト"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "キー類リスト"
+
+msgid "CNTRLMNU_STATS"
+msgstr "武器 / 弾薬 / 状態"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "スコアボード切替"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "視点水平化"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "視点横移動化"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "背景"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "自分"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "壁"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "高低差のある床"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "高低差のある天井"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "多重床"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "マップグリッド"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "中心点"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "未見の壁"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "鍵の掛かったドア"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "テレポーター"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "別マップへのテレポーター"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "シークレット"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "未知のシークレット"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "特殊トリガー"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "チートモード時"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "表示されないline"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "シークレットの壁"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "アクター"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "モンスター"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "非カウントモンスター"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "仲間"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "アイテム"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "カウント対象アイテム"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "オーバーレイモード"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "オーバーレイ チートモード"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "ポータル オーバーレイ"
+
+msgid "MSGMNU_TITLE"
+msgstr "メッセージ類"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "メッセージ表示"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "訃報表示"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "シークレット発見表示"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "最小限のメッセージ類"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "メッセージ色"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "アイテム取得"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "死亡時メッセージ"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "致命的なメッセージ"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "チャットメッセージ"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "チームメッセージ"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "スクリプトメッセージ"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "スクショメッセージ"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "詳細なセーブメッセージ"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "開発者用モード"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "地図色セット"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "定義したマップ色の許可"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "カスタム色を決める"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "マップコントロール カスタマイズ"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "オートマップを重ねる"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "床テクスチャ表示を許可"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "アイテム数 表示"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "モンスター数 表示"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "シークレット数 表示"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "経過時間 表示"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "統計時間 表示"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "シークレットを地図に表示"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "マップ名 表示"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "マップの背景 描写"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "鍵 表示(チート時)"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "トリガーライン 表示"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "thingsのスプライト表示"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "オーバーレイ ポータルズ"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "空間の余白"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "マークフォント"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "マーク色"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "マークを置く"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "マーククリア"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "スコアボード オプション"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "スコアボード オプション"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "協力モードの設定"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "スコアボード表示"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "ヘッダー色"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "自分の色"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "他者の色"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "デスマッチの設定"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "チームデスマッチの設定"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "オルタナティブHUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "オルタナティブHUD有効"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "シークレット数 表示"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "モンスター数 表示"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "アイテム数の表示"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "スタミナと精度の表示"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "バーサーク表示"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "武器表示"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "弾薬等の表示"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "時間の表示"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "時間の字色"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "ネットのラグ表示"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "弾薬表示順"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "弾薬の赤色表示%"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "弾薬の黄色表示%"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "体力の赤色表示%"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "体力の黄色表示%"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "体力の緑色表示%"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "防具の赤色表示%"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "防具の黄色表示%"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "防具の緑色表示%"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "オルタナティブ オートマップHUD"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "マップ名の色"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "経過時間の色"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "区間経過時間の色"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "合計経過時間の色"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "座標色"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "座標モード"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "統計名の色"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "統計の色"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "レンダリング補間"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "レンダリング透過モード"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "スクリーンワイプモード"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "ENDOOM画面を表示"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "血粉の濃度"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "取得の視界色濃度"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "水中反響音の濃度"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "空の表示方法"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "空の歪み"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "明るさ最大時にsector color塗り替え"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "ファズエフェクトサイズ"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "ファズエフェクトを使用"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "旧式の透明度"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "ロストソウルの透明度"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "フェイクコントラストを使用"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "ロケットの軌跡"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "血の種類"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "弾煙の種類"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "パーティクルの最大数"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "デカールの最大数"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "プレイヤーの武器の表示"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "死亡時の三人称視点"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "テレポーター使用時のズーム"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "地震エフェクトの激しさ"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "モンスターの移動補間"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "メニュー背景"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "背景色"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "視点揺れする移動値"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "視点揺れしない移動値"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "武器揺れ速度"
+
+msgid "SCALEMNU_TITLE"
+msgstr "スケーリング オプション"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "設定の上書き"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "メッセージ類"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "コンソール"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "ステータスバー"
+
+msgid "SCALEMNU_HUD"
+msgstr "全画面HUD"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "オルタナティブHUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "HUDのアスペクト比維持"
+
+msgid "SCALEMNU_USEUI"
+msgstr "通常サイズを使う"
+
+msgid "SCALEMNU_USEFS"
+msgstr "全画面に拡大"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "画面サイズに合わせる"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUDオプション"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "オルタナティブHUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "メッセージの設定"
+
+msgid "HUDMNU_UISCALE"
+msgstr "インターフェースの大きさ"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "デフォルトの照準を使う"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "アイテム取得時に照準を大きくする"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "ディスプレイネームタグ"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "ネームタグ色"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "旧式ouch mug shotを使用"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Hexen武器の視界色"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "毒ダメージの視界色"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "氷結死の視界色"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "蓄積毒の視界色"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "スケーリング オプション"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "IWADの選択画面を表示"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "全ゲームでチート使用可にする"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "スクリプトからのスクショ作成を有効化"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr ".deh/.bexファイルを読み込む"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "ノードキャッシュ"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "ノードキャッシュ時間の閾値"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "ノードのキャッシュをクリア"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "クリア結果集計のスキップを許可"
+
+msgid "NETMNU_TITLE"
+msgstr "ネットワーク オプション"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "ローカル オプション"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "移動予測"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "line actionsを予測する"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "リープスケール予測"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "リープしきい値"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "ホスト オプション"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "予備秒数"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "レイテンシーバランス"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "オリジナル"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "最適化"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "旧式(速度重視)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "精密"
+
+msgid "OPTVAL_CAPPED"
+msgstr "上限"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "パーティクル"
+
+msgid "OPTVAL_SPRITES"
+msgstr "スプライト"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "スプライト & パーティクル"
+
+msgid "OPTVAL_MELT"
+msgstr "メルト"
+
+msgid "OPTVAL_BURN"
+msgstr "バーン"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "クロスフェード"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "スムーズ"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "スムーズ"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "半透明"
+
+msgid "OPTVAL_FUZZ"
+msgstr "ファズ"
+
+msgid "OPTVAL_SHADOW"
+msgstr "シャドウ"
+
+msgid "OPTVAL_ITEMS"
+msgstr "アイテム"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "武器"
+
+msgid "OPTVAL_BOTH"
+msgstr "両方"
+
+msgid "OPTVAL_ZDOOM"
+msgstr ""
+
+msgid "OPTVAL_STRIFE"
+msgstr ""
+
+msgid "OPTVAL_PLAYER"
+msgstr "プレイヤー"
+
+msgid "OPTVAL_MAP"
+msgstr "マップ"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "640x400スケール"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "ピクセル2倍"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "ピクセル4倍"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "使用中の武器"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "所持してる武器"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "全ての武器"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "現場, ミリ秒"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "現場, 秒"
+
+msgid "OPTVAL_LEVEL"
+msgstr "現場"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "区間, 秒"
+
+msgid "OPTVAL_HUB"
+msgstr "区間"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "合計, 秒"
+
+msgid "OPTVAL_TOTAL"
+msgstr "合計"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "PC時刻, 秒"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "PC時刻"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "オンラインのみ"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "画像と字"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "字と画像"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "スクリプトのみ"
+
+msgid "OPTVAL_ALL"
+msgstr "全て"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "最後のみ"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "正式DOOM"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "正式Strife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "正式Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "発見時のみ"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "オーバーレイ専用"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "オーバーレイ+通常"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "オーバーレイのみ"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "区間では出さない"
+
+msgid "OPTVAL_FRONT"
+msgstr "画像"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "動作"
+
+msgid "OPTVAL_ROTATED"
+msgstr "回転"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "指定した色のみ"
+
+msgid "OPTVAL_NODOORS"
+msgstr "ドア以外全て"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "ダブル"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "トリプル"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "クァッド"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "アイテム取得"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "死亡時"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "重要メッセージ"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "フレンド以外"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "モンスターのみ"
+
+msgid "OPTVAL_HEXEN"
+msgstr ""
+
+msgid "OPTVAL_OLD"
+msgstr "旧式"
+
+msgid "OPTVAL_DOOM"
+msgstr ""
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom(厳密)"
+
+msgid "OPTVAL_BOOM"
+msgstr ""
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom(厳密)"
+
+msgid "OPTVAL_MBF"
+msgstr ""
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF(厳密)"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21(厳密)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "未確認全て"
+
+msgid "OPTVAL_ERRORS"
+msgstr "エラー"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "警告"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "通知"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "全て"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "ハードウェア アクセラレート"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Doom ソフトウェアレンダー"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "トゥルーカラー SWレンダー"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "ハイパフォーマンス"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "パワーセービング"
+
+msgid "OPTVAL_VANILLA"
+msgstr "バニラ"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom(強制)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "バニラ(強制)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "自動(ZDoom優先)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "自動(バニラ優先)"
+
+msgid "OPTVAL_SMALL"
+msgstr "小"
+
+msgid "OPTVAL_LARGE"
+msgstr "大"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "コンソール"
+
+msgid "C_BRICK"
+msgstr "\\ca丹"
+
+msgid "C_TAN"
+msgstr "\\cb香"
+
+msgid "C_GRAY"
+msgstr "\\cc灰"
+
+msgid "C_GREEN"
+msgstr "\\cd緑"
+
+msgid "C_BROWN"
+msgstr "\\ce茶"
+
+msgid "C_GOLD"
+msgstr "\\cf金"
+
+msgid "C_RED"
+msgstr "\\cg赤"
+
+msgid "C_BLUE"
+msgstr "\\ch青"
+
+msgid "C_ORANGE"
+msgstr "\\ci橙"
+
+msgid "C_WHITE"
+msgstr "\\cj白"
+
+msgid "C_YELLOW"
+msgstr "\\ck黄"
+
+msgid "C_DEFAULT"
+msgstr "\\cl初期"
+
+msgid "C_BLACK"
+msgstr "\\cm黒"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cn空"
+
+msgid "C_CREAM"
+msgstr "\\co肉"
+
+msgid "C_OLIVE"
+msgstr "\\cp泥"
+
+msgid "C_DARKGREEN"
+msgstr "\\cq深"
+
+msgid "C_DARKRED"
+msgstr "\\cr朱"
+
+msgid "C_DARKBROWN"
+msgstr "\\cs焦"
+
+msgid "C_PURPLE"
+msgstr "\\ct紫"
+
+msgid "C_DARKGRAY"
+msgstr "\\cu鉛"
+
+msgid "C_CYAN"
+msgstr "\\cv天"
+
+msgid "C_ICE"
+msgstr "\\cw氷"
+
+msgid "C_FIRE"
+msgstr "\\cx炎"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cy藍"
+
+msgid "C_TEAL"
+msgstr "\\cz碧"
+
+msgid "OPTSTR_HERETIC"
+msgstr ""
+
+msgid "OPTSTR_CHEX"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr "サウンドなし"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "補間無し"
+
+msgid "OPTSTR_SPLINE"
+msgstr "スプライン"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "ハードウェア レンダラー"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "ソフトウェア レンダラー"
+
+msgid "GLMNU_TITLE"
+msgstr "ハードウェアレンダリング オプション"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "ダイナミックライト オプション"
+
+msgid "GLMNU_PREFS"
+msgstr "環境設定"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "スプライトの角を取る"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "テクスチャーから描画リストを分類"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "ダイナミックライト"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "ダイナミックライト(OpenGL)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "ライト定義 許可"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "ライトがスプライトに影響"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "ライトがパーティクルに影響"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "ライトのシャドウマッピング"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "シャドウマップ 品質"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "シャドウマップ フィルター"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "フォグモード"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "濃霧は明るさ最大"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "武器ライトの強さ"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "マップオンミラーの画像表示"
+
+msgid "GLPREFMNU_ENV"
+msgstr "バイザーを暗視装置調にする"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "暗視バイザーが透明を見破る"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "スプライトのずらしを調整する"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "スプライトの角を丸める"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "ファズスタイル"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "スプライト ビルボード"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "スプライトのフェイスカメラ"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "パーティクル スタイル"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "レンダリング品質"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "ステレオ3DのVR"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "クァッドステレオを有効"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "バンデドSWライトモード"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "自分の目との距離"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "画面からの距離"
+
+msgid "OPTVAL_SMART"
+msgstr "スマート"
+
+msgid "OPTVAL_SMARTER"
+msgstr "よりスマート"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "赤外線のみ"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "赤外線と松明"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "任意の固定カラーマップ"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "パレットとして使用"
+
+msgid "OPTVAL_BLEND"
+msgstr "混合"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "明るい"
+
+msgid "OPTVAL_DARK"
+msgstr "暗い"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr ""
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "ソフトウェア"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "最適"
+
+msgid "OPTVAL_YAXIS"
+msgstr "縦軸"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "縦/横軸"
+
+msgid "OPTVAL_SQUARE"
+msgstr "平方"
+
+msgid "OPTVAL_ROUND"
+msgstr "円形"
+
+msgid "OPTVAL_RADIAL"
+msgstr "放射状"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "ピクセル ファズ"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "滑らかなファズ"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "渦状ファズ"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "半透明ファズ"
+
+msgid "OPTVAL_NOISE"
+msgstr "ノイズ"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "滑らかなノイズ"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "ギザギザ"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "緑/紫"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "赤/空"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "黄/青"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "左目"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "右目"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "両サイド フル"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "両サイド ナロー"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "天/底"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "行インターリーブ"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "列インターリーブ"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "市松模様"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "クワッドバッファー"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "トゥルーカラー オプション"
+
+msgid "TCMNU_TITLE"
+msgstr "トゥルーカラー オプション"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "トゥルーカラー出力"
+
+msgid "TCMNU_MINFILTER"
+msgstr "縮小時のリニアフィルター"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "拡大時のリニアフィルター"
+
+msgid "TCMNU_MIPMAP"
+msgstr "ミップマップテクスチャを使用"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "ダイナミックライト (ソフトウェア)"
+
+msgid "OS_TITLE"
+msgstr "オプション検索"
+
+msgid "OS_ANY"
+msgstr "いずれかの用語を探す"
+
+msgid "OS_ALL"
+msgstr "全ての用語を探す"
+
+msgid "OS_NO_RESULTS"
+msgstr "見つかりませんでした。"
+
+msgid "OS_LABEL"
+msgstr "検索:"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "常にキーを表示"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "チームの変更は受け付けない!"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s は %t のチームに入隊した"
+
+msgid "TXT_LONER"
+msgstr "%s は今 一匹狼だ。"
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s が逃げ出したので %d に点が入った\n"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s は退出した"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "%s' のセーブデータを読み込めなかった。"
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' は有効なセーブデータ ではない: 'info.json'が不明。"
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "%s' のセーブデータにアクセス出来なかった。"
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "%s' は互換性の無いバージョンのセーブデータだ。"
+
+msgid "TXT_OTHERENGINESG"
+msgstr "%s' は別のZDoom型のセーブデータだ。"
+
+msgid "TXT_TOOOLDSG"
+msgstr "%s' はバージョンが合わないセーブデータだ: %d(%e は旧式版の物)"
+
+# Shouldn’t this say “%e is the newest supported”?
+# 
+# — Undead
+# 
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr "%s' はバージョンが合わないセーブデータだ: %d(%e は最新版の物)"
+
+msgid "TXT_NOMAPSG"
+msgstr "セーブデータ '%s'に現在のマップはない。"
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' は有効なセーブデータではない: 'globals.json'が不明。"
+
+msgid "TXT_SGINFOERR"
+msgstr "%s' のセーブデータにアクセス出来なかった"
+
+msgid "TXT_SAVEPENDING"
+msgstr "セーブ中だ"
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "セーブ可能なゲームではない"
+
+msgid "TXT_NOTINLEVEL"
+msgstr "レベル内ではない"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "シングルプレイでプレイヤーが死んだ"
+
+msgid "TXT_SAVEFAILED"
+msgstr "セーブに失敗した。"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "スクリーンショットを作成できなかった。"
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "%s より\n"
+
+msgid "TXT_QUITENDOOM"
+msgstr "何かのキーを押すか、ウィンドウのどこかをクリックすると終了する。"
+
+msgid "HUDMNU_FLASH"
+msgstr "スクリーンブレンド オプション"
+
+msgid "GLMNU_3DMODE"
+msgstr "3Dモード"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "クロスヘア"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "サブタイトル"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "グレイシャドウを防ぐ"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "フォント オプション"
+
+msgid "FONTMNU_LOG"
+msgstr "ログ表示に標準フォントを使用"
+
+msgid "FONTMNU_DLG"
+msgstr "ダイアログに標準フォントを使用"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "終了メッセージ無し"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "マップ反転色カスタム"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "反転色カスタム 暗"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "反転色カスタム 明"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "射撃時の武器スイング"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "旧式スケールのクリア結果と画面ボーダー"
+
+msgid "SCALEMNU_INTER"
+msgstr "クリア結果の背景"
+
+msgid "SCALEMNU_BORDER"
+msgstr "画面ボーダー"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "スケーリング倍率"
+
+msgid "SCALEMNU_RATIO"
+msgstr "アスペクト比"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr ""
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Exit時にタリー画面を表示"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "Mod定義"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "区間を除き、常に"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "区間内でも、常に"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "優先するキー配列"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "従来のZDOOM"
+
+msgid "OPTVAL_MODERN"
+msgstr "現代的(WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "現代的(Keypad)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "厳密なKEYCONFの武器/プレイヤー"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "従来のZDメニュースケール"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "集計画面でパーセント表示"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "集計画面で従来のZDスケール"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "住民"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "警備システム"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "クルセーダー"
+
+msgid "TAG_INQUISITOR"
+msgstr "審問官"
+
+msgid "TAG_PEASANT"
+msgstr "庶民"
+
+msgid "TAG_REAVER"
+msgstr "リーバー"
+
+msgid "TAG_SENTINEL"
+msgstr "センティネル"
+
+msgid "TAG_STALKER"
+msgstr "ストーカー"
+
+msgid "TAG_BISHOP"
+msgstr "ビショップ"
+
+msgid "TAG_ENTITY"
+msgstr "唯一神"
+
+msgid "TAG_PROGRAMMER"
+msgstr "プログラマー"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "スペクトル"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "礼拝者"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "協力モードでマルチ用thingsを出す"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "スプライト シャドウ"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "敵とプレイヤー"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr ""
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "MBF21機能を無効"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "ウィジットタイマーの表示"
+
+msgid "OPTVAL_MBF21"
+msgstr ""
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "圧死した敵が蘇生でゴースト化"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "飛行中の視点揺れ"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o はサーペントに斬り捨てられた。"
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Linesのアンチエイリアス"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "移動と攻撃が他プレイヤーを通過"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "全プレイヤーにキーを共有"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Facing modeのカメラをオーバーライドしない"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "体力とアーマーをスワップ"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "旧式HUDスケーリングを使う"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "HUDスケール倍率"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "マルチで協力モード限定thingsを出す"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "マルチで協力モード限定アイテムを出す"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "マルチでプレイヤー達は複製アイテムを拾う"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "クライアント側で落としたアイテムを拾わせない"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "リスタート時に死亡する"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "ピストルスタート"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr "ゾンビプレイヤーの生成許可"
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr "テレポート時にfloor z値を無視する"
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr "強制遠近法"
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr "足音の音量"
+
+msgid "ID24_GOTINCINERATOR"
+msgstr "イニシエーターを手に入れた!"
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr "カラミティー ブレードだ! マジかよ!"
+
+msgid "ID24_GOTFUELCAN"
+msgstr "燃料缶を拾った。"
+
+msgid "ID24_GOTFUELTANK"
+msgstr "燃料タンクを拾った。"
+
+msgid "TAG_ID24INCINERATOR"
+msgstr "イニシエーター"
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr "カラミティーブレード"
+
+msgid "AMMO_ID24FUEL"
+msgstr "燃料缶"
+
+msgid "AMMO_ID24FUELTANK"
+msgstr "燃料タンク"
+
+msgid "ID24_CC_GHOUL"
+msgstr "グール"
+
+msgid "ID24_CC_BANSHEE"
+msgstr "バンシー"
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr "ショックトルーパー"
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr "マインドウィーバー"
+
+msgid "ID24_CC_VASSAGO"
+msgstr "ウァサゴ"
+
+msgid "ID24_CC_TYRANT"
+msgstr "タイラント"
+
+msgid "ID24_OB_GHOUL"
+msgstr "%o がグールのエネルギー弾を喰らった。"
+
+msgid "ID24_OB_BANSHEE"
+msgstr "%o はバンシーによって窮まった。"
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr "%o はショックトルーパーに溶解させられた。"
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr "%o はマインドウィーバーに刈り取られた。"
+
+msgid "ID24_OB_VASSAGO"
+msgstr "%o はウァサゴの業火に焼かれてしまった。"
+
+msgid "ID24_OB_TYRANT"
+msgstr "%o はタイラントに薙ぎ倒された。"
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "レベル名表示"
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr "所持品ホットキー"
+
+msgid "JOYMNU_HAPTICS"
+msgstr "Hapticフィードバックの強度"
+
+msgid "JOYMNU_CURVE"
+msgstr "レスポンスカーブ"
+
+msgid "JOYMNU_THRESHOLD"
+msgstr "デジタル入力敷居置"
+
+msgid "OPTVAL_LINEAR"
+msgstr "リニア"
+
+msgid "OPTVAL_QUADRATIC"
+msgstr "クワドラティック"
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr "チャット形式"
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr "無効"
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr "チーム内のみ"
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr "全体"
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr "チャットの太字無効"
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr "チャット音を無効"
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr "接続を安定させる"
+
+msgid "NETMNU_LIMITCONVO"
+msgstr "ホストとの接続制限"
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr "Repeatable Actionsにクールダウン"
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr "一時停止無効"
+
+msgid "OPTVAL_HOSTONLY"
+msgstr "ホストのみ"
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr "Intermissionスキップの種類"
+
+msgid "OPTVAL_VOTE"
+msgstr "投票"
+
+msgid "OPTVAL_ANYONE"
+msgstr "誰かが"
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr "スキップ投票の割合"
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr "投票クールダウン間隔 (秒数)"
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr "チャット遅延モード (秒数)"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Hapticトリガー 有効"
+
+msgid "OPTMNU_HAPTICS"
+msgstr "Hapticオプション"
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr "Hapticフィードバック互換性レベル"
+
+msgid "OPTVAL_MATCH"
+msgstr "一致"
+
+msgid "OPTVAL_WARN"
+msgstr "警告"
+
+msgid "HAPMNU_OPTIONS"
+msgstr "Haptic feedbackソースをカスタマイズ"
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr "使用メニューから"
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr "アクション中から"
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr "ダメージ時に"
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr "交信時から"
+
+msgid "PAUSE_STRING"
+msgstr "ポーズ"
+
+msgid "TAG_BACKPACK"
+msgstr "バックパック"
+
+msgid "TAG_ARMORBONUS"
+msgstr "スピリチュアル アーマー"
+
+msgid "TAG_GREENARMOR"
+msgstr "セキュリティー アーマー"
+
+msgid "TAG_BLUEARMOR"
+msgstr "コンバット アーマー"
+
+msgid "TAG_INVULSPHERE"
+msgstr "無敵スフィア"
+
+msgid "TAG_SOULSPHERE"
+msgstr "ソールスフィア"
+
+msgid "TAG_MEGAPSHERE"
+msgstr "メガスフィア"
+
+msgid "TAG_INVISSPHERE"
+msgstr "半透明化スフィア"
+
+msgid "TAG_RADSUIT"
+msgstr "放射線防護服"
+
+msgid "TAG_VISOR"
+msgstr "暗視バイザー"
+
+msgid "TAG_ALLMAP"
+msgstr "コンピューターマップ"
+
+msgid "TAG_BERSERK"
+msgstr "バーサクパック"
+
+msgid "TAG_HEALTHBONUS"
+msgstr "ヘルスポーション"
+
+msgid "TAG_STIMPACK"
+msgstr "スティムパック"
+
+msgid "TAG_MEDIKIT"
+msgstr "メディキット"
+
+msgid "TAG_BLUECARD"
+msgstr "青キーカード"
+
+msgid "TAG_YELLOWCARD"
+msgstr "黄キーカード"
+
+msgid "TAG_REDCARD"
+msgstr "赤キーカード"
+
+msgid "TAG_BLUESKULL"
+msgstr "青スカルキー"
+
+msgid "TAG_YELLOWSKULL"
+msgstr "黄スカルキー"
+
+msgid "TAG_REDSKULL"
+msgstr "赤スカルキー"
+
+msgid "TAG_GLASSOFWATER"
+msgstr "コップいっぱいの水"
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr "フルーツボウル"
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr "やさいボウル"
+
+msgid "TAG_BREAKFAST"
+msgstr "朝食スーパーチャージ"
+
+msgid "TAG_REPELLENT"
+msgstr "スライム はんぱつざい"
+
+msgid "TAG_CHEXARMOR"
+msgstr "チェックス(R)アーマー"
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr "スーパーチェックス(R)アーマー"
+
+msgid "TAG_CHEXMAP"
+msgstr "コンピューターエリアマップ"
+
+msgid "TAG_SLIMESUIT"
+msgstr "たいスライムスーツ"
+
+msgid "TAG_ZORCHPACK"
+msgstr "ゾーチパック"
+
+msgid "TAG_CBLUEKEY"
+msgstr "あおのカギ"
+
+msgid "TAG_CYELLOWKEY"
+msgstr "きいろのカギ"
+
+msgid "TAG_CREDKEY"
+msgstr "あかのカギ"
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr "武器SpritesにSector輝度を適用"
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr "SpaceキーかLMBで準備完了"
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr "Aキーで準備完了"
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr "Joy 1キーで準備完了"
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr "復活時に使用中だった武器を記憶"
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr "前者の他者視点"
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr "他者視点を解除"

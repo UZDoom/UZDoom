@@ -1,0 +1,7251 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ko\n"
+
+msgid "TXT_D1E1"
+msgstr "끝없이 밀려오는 죽음"
+
+msgid "TXT_D1E2"
+msgstr "지옥의 해변"
+
+msgid "TXT_D1E3"
+msgstr "연옥"
+
+# The episode and levels' names in E4 are taken from the Bible.
+# 
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "쇠패해진 그대의 육신"
+
+msgid "TXT_D2E1"
+msgstr "지상에 강림한 지옥"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr "산 자에게 휴식은 없다"
+
+msgid "TXT_PLUT_EP"
+msgstr "플루토니아 익스페리먼트"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: 이블루션"
+
+msgid "TXT_CHEX_EP"
+msgstr "첵스 퀘스트"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: 격납고"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: 원자력 발전소"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: 폐기물 정제소"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: 지휘 통제소"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: 포보스 연구소"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: 중앙 처리 본부"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: 컴퓨터 기지"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: 포보스 이상거점"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: 군사 기지"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: 하수구"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: 데이모스 이상거점"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: 화물 보관구역"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: 정제소"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: 데이모스 연구소"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: 사령부"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: 저주받은 회랑"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: 산란독"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: 바벨탑"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: 신비의 요새"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: 지옥 성채"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: 절망의 심연"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: 복마전"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: 고통의 집"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: 불경한 성당"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "E3M6: 에레버스 산"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: 고성소"
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "E3M8: 디스"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: 토끼굴"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "E4M1: 지옥의 밑에서"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "E4M2: 완벽한 증오"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "E4M3: 악령처단"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "E4M4: 광폭한 악마"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "E4M5: 그들은 회개할 지어다"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "E4M6: 그대와 짖궂게 맞서다"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "E4M7: 그리고 지옥이 뒤따른다"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "E4M8: 잔혹한 자에게로"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: 공포"
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr "레벨 1: 초입"
+
+msgid "HUSTR_2"
+msgstr "레벨 2: 지하수로"
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr "레벨 3: 건틀릿"
+
+msgid "HUSTR_4"
+msgstr "레벨 4: 초점"
+
+msgid "HUSTR_5"
+msgstr "레벨 5: 하수도"
+
+msgid "HUSTR_6"
+msgstr "레벨 6: 분쇄기"
+
+msgid "HUSTR_7"
+msgstr "레벨 7: 죽여주는 단순함"
+
+msgid "HUSTR_8"
+msgstr "레벨 8: 속임수와 함정들"
+
+msgid "HUSTR_9"
+msgstr "레벨 9: 구덩이"
+
+msgid "HUSTR_10"
+msgstr "레벨 10: 연료 충전소"
+
+# Alternative title:
+# Circle of Death 
+msgid "HUSTR_11"
+msgstr "레벨 11: 파괴의 고리"
+
+msgid "HUSTR_12"
+msgstr "레벨 12: 공장"
+
+msgid "HUSTR_13"
+msgstr "레벨 13: 번화가"
+
+msgid "HUSTR_14"
+msgstr "레벨 14: 깊숙한 동굴들"
+
+msgid "HUSTR_15"
+msgstr "레벨 15: 공업 지대"
+
+msgid "HUSTR_16"
+msgstr "레벨 16: 교외"
+
+msgid "HUSTR_17"
+msgstr "레벨 17: 공동주택"
+
+msgid "HUSTR_18"
+msgstr "레벨 18: 중정"
+
+msgid "HUSTR_19"
+msgstr "레벨 19: 성채"
+
+msgid "HUSTR_20"
+msgstr "레벨 20: 잡았다!"
+
+msgid "HUSTR_21"
+msgstr "레벨 21: 열반"
+
+msgid "HUSTR_22"
+msgstr "레벨 22: 지하 묘지"
+
+msgid "HUSTR_23"
+msgstr "레벨 23: 신나는 폭발통들"
+
+msgid "HUSTR_24"
+msgstr "레벨 24: 협곡"
+
+msgid "HUSTR_25"
+msgstr "레벨 25: 혈폭포"
+
+msgid "HUSTR_26"
+msgstr "레벨 26: 버려진 광산"
+
+msgid "HUSTR_27"
+msgstr "레벨 27: 괴물 콘도"
+
+msgid "HUSTR_28"
+msgstr "레벨 28: 영령의 세계"
+
+msgid "HUSTR_29"
+msgstr "레벨 29: 최종점"
+
+msgid "HUSTR_30"
+msgstr "레벨 30: 죄악의 상징"
+
+msgid "HUSTR_31"
+msgstr "레벨 31: 울펜슈타인"
+
+msgid "HUSTR_32"
+msgstr "레벨 32: 그로세"
+
+msgid "HUSTR_31B"
+msgstr "레벨 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "레벨 32: 킨"
+
+msgid "HUSTR_33"
+msgstr "레벨 33: 배반"
+
+msgid "NHUSTR_1"
+msgstr "레벨 1: 지구 기지"
+
+msgid "NHUSTR_2"
+msgstr "레벨 2: 고통의 연구소"
+
+msgid "NHUSTR_3"
+msgstr "레벨 3: 죽음의 계곡"
+
+msgid "NHUSTR_4"
+msgstr "레벨 4: 지옥의 산"
+
+msgid "NHUSTR_5"
+msgstr "레벨 5: 생체 해부"
+
+msgid "NHUSTR_6"
+msgstr "레벨 6: 연옥의 피"
+
+msgid "NHUSTR_7"
+msgstr "레벨 7: 남작의 연회"
+
+msgid "NHUSTR_8"
+msgstr "레벨 8: 증오의 무덤"
+
+msgid "NHUSTR_9"
+msgstr "레벨 9: 악마들의 행진"
+
+msgid "PHUSTR_1"
+msgstr "레벨 1: 콩고"
+
+msgid "PHUSTR_2"
+msgstr "레벨 2: 영혼의 우물"
+
+msgid "PHUSTR_3"
+msgstr "레벨 3: 아즈텍"
+
+msgid "PHUSTR_4"
+msgstr "레벨 4: 갇히다"
+
+msgid "PHUSTR_5"
+msgstr "레벨 5: 유령 도시"
+
+msgid "PHUSTR_6"
+msgstr "레벨 6: 남작의 은신처"
+
+msgid "PHUSTR_7"
+msgstr "레벨 7: 포획마당"
+
+msgid "PHUSTR_8"
+msgstr "레벨 8: 왕국"
+
+msgid "PHUSTR_9"
+msgstr "레벨 9: 도축장"
+
+msgid "PHUSTR_10"
+msgstr "레벨 10: 맹공격"
+
+msgid "PHUSTR_11"
+msgstr "레벨 11: 사냥당함"
+
+msgid "PHUSTR_12"
+msgstr "레벨 12: 스피드"
+
+msgid "PHUSTR_13"
+msgstr "레벨 13: 봉안당"
+
+msgid "PHUSTR_14"
+msgstr "레벨 14: 창세기"
+
+msgid "PHUSTR_15"
+msgstr "레벨 15: 황혼"
+
+msgid "PHUSTR_16"
+msgstr "레벨 16: 징조"
+
+msgid "PHUSTR_17"
+msgstr "레벨 17: 복합체"
+
+msgid "PHUSTR_18"
+msgstr "레벨 18: 뉴로스피어"
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr "레벨 19: NOM"
+
+msgid "PHUSTR_20"
+msgstr "레벨 20: 죽음의 영역"
+
+msgid "PHUSTR_21"
+msgstr "레벨 21: 슬레이어"
+
+msgid "PHUSTR_22"
+msgstr "레벨 22: 임파서블 미션"
+
+msgid "PHUSTR_23"
+msgstr "레벨 23: 묘비"
+
+msgid "PHUSTR_24"
+msgstr "레벨 24: 최후의 개척지"
+
+msgid "PHUSTR_25"
+msgstr "레벨 25: 어둠의 신전"
+
+msgid "PHUSTR_26"
+msgstr "레벨 26: 방공호"
+
+msgid "PHUSTR_27"
+msgstr "레벨 27: 적그리스도"
+
+msgid "PHUSTR_28"
+msgstr "레벨 28: 하수구"
+
+msgid "PHUSTR_29"
+msgstr "레벨 29: 속삭임의 여정"
+
+msgid "PHUSTR_30"
+msgstr "레벨 30: 지옥의 차원문"
+
+msgid "PHUSTR_31"
+msgstr "레벨 31: 사이버소굴"
+
+msgid "PHUSTR_32"
+msgstr "레벨 32: 함 해 봐"
+
+msgid "THUSTR_1"
+msgstr "레벨 1: 시스템 제어시설"
+
+msgid "THUSTR_2"
+msgstr "레벨 2: 인간 바비큐"
+
+msgid "THUSTR_3"
+msgstr "레벨 3: 전력 통제소"
+
+msgid "THUSTR_4"
+msgstr "레벨 4: 웜홀"
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr "레벨 5: 격납고"
+
+msgid "THUSTR_6"
+msgstr "레벨 6: 사냥철"
+
+msgid "THUSTR_7"
+msgstr "레벨 7: 감옥"
+
+msgid "THUSTR_8"
+msgstr "레벨 8: 강철"
+
+msgid "THUSTR_9"
+msgstr "레벨 9: 요새"
+
+msgid "THUSTR_10"
+msgstr "레벨 10: 구원"
+
+msgid "THUSTR_11"
+msgstr "레벨 11: 저장소"
+
+msgid "THUSTR_12"
+msgstr "레벨 12: 분화구"
+
+msgid "THUSTR_13"
+msgstr "레벨 13: 폐기물 처리소"
+
+msgid "THUSTR_14"
+msgstr "레벨 14: 제강소"
+
+msgid "THUSTR_15"
+msgstr "레벨 15: 사각지대"
+
+msgid "THUSTR_16"
+msgstr "레벨 16: 깊숙한 강"
+
+msgid "THUSTR_17"
+msgstr "레벨 17: 처리 구역"
+
+msgid "THUSTR_18"
+msgstr "레벨 18: 제분소"
+
+msgid "THUSTR_19"
+msgstr "레벨 19: 운송/리스폰 장소"
+
+msgid "THUSTR_20"
+msgstr "레벨 20: 중앙 처리소"
+
+msgid "THUSTR_21"
+msgstr "레벨 21: 관리 센터"
+
+msgid "THUSTR_22"
+msgstr "레벨 22: 서식지"
+
+msgid "THUSTR_23"
+msgstr "레벨 23: 월석 채광 계획"
+
+msgid "THUSTR_24"
+msgstr "레벨 24: 채석장"
+
+msgid "THUSTR_25"
+msgstr "레벨 25: 남작의 소굴"
+
+msgid "THUSTR_26"
+msgstr "레벨 26: 탄도스틱스"
+
+msgid "THUSTR_27"
+msgstr "레벨 27: 등신같은 등산"
+
+msgid "THUSTR_28"
+msgstr "레벨 28: 젠장함"
+
+msgid "THUSTR_29"
+msgstr "레벨 29: 스틱스 강"
+
+msgid "THUSTR_30"
+msgstr "레벨 30: 최후의 호출"
+
+msgid "THUSTR_31"
+msgstr "레벨 31: 파라오"
+
+msgid "THUSTR_32"
+msgstr "레벨 32: 카리브해"
+
+msgid "HHUSTR_E1M1"
+msgstr "항구"
+
+msgid "HHUSTR_E1M2"
+msgstr "지하감옥"
+
+msgid "HHUSTR_E1M3"
+msgstr "문루"
+
+msgid "HHUSTR_E1M4"
+msgstr "보초 누대"
+
+msgid "HHUSTR_E1M5"
+msgstr "거점"
+
+msgid "HHUSTR_E1M6"
+msgstr "대성당"
+
+msgid "HHUSTR_E1M7"
+msgstr "지하 묘실"
+
+msgid "HHUSTR_E1M8"
+msgstr "지옥의 목구멍"
+
+msgid "HHUSTR_E1M9"
+msgstr "공동묘지"
+
+msgid "HHUSTR_E2M1"
+msgstr "깊은 혈"
+
+msgid "HHUSTR_E2M2"
+msgstr "용암 구덩이"
+
+msgid "HHUSTR_E2M3"
+msgstr "화염의 강"
+
+msgid "HHUSTR_E2M4"
+msgstr "얼음 동굴"
+
+msgid "HHUSTR_E2M5"
+msgstr "태고의 무덤"
+
+msgid "HHUSTR_E2M6"
+msgstr "미궁"
+
+msgid "HHUSTR_E2M7"
+msgstr "대회관"
+
+msgid "HHUSTR_E2M8"
+msgstr "혼돈의 차원문"
+
+msgid "HHUSTR_E2M9"
+msgstr "빙하 구역"
+
+msgid "HHUSTR_E3M1"
+msgstr "저장고"
+
+msgid "HHUSTR_E3M2"
+msgstr "불결한 장소"
+
+msgid "HHUSTR_E3M3"
+msgstr "합류점"
+
+msgid "HHUSTR_E3M4"
+msgstr "청천의 요새"
+
+msgid "HHUSTR_E3M5"
+msgstr "오피디안의 소굴"
+
+msgid "HHUSTR_E3M6"
+msgstr "공포의 회관"
+
+msgid "HHUSTR_E3M7"
+msgstr "깊은 골"
+
+msgid "HHUSTR_E3M8"
+msgstr "드'스파릴의 초소"
+
+msgid "HHUSTR_E3M9"
+msgstr "대수층"
+
+msgid "HHUSTR_E4M1"
+msgstr "관대"
+
+msgid "HHUSTR_E4M2"
+msgstr "특화점"
+
+msgid "HHUSTR_E4M3"
+msgstr "유보장"
+
+msgid "HHUSTR_E4M4"
+msgstr "매장소"
+
+msgid "HHUSTR_E4M5"
+msgstr "특급 계단"
+
+msgid "HHUSTR_E4M6"
+msgstr "배교자의 회관"
+
+msgid "HHUSTR_E4M7"
+msgstr "파멸의 성벽"
+
+msgid "HHUSTR_E4M8"
+msgstr "붕괴된 다리"
+
+msgid "HHUSTR_E4M9"
+msgstr "대영묘"
+
+msgid "HHUSTR_E5M1"
+msgstr "황토 산맥"
+
+msgid "HHUSTR_E5M2"
+msgstr "여울"
+
+msgid "HHUSTR_E5M3"
+msgstr "부두"
+
+msgid "HHUSTR_E5M4"
+msgstr "안마당"
+
+msgid "HHUSTR_E5M5"
+msgstr "식수공급처"
+
+msgid "HHUSTR_E5M6"
+msgstr "열주의 길"
+
+msgid "HHUSTR_E5M7"
+msgstr "역겨운 목사관"
+
+msgid "HHUSTR_E5M8"
+msgstr "심판의 평야"
+
+msgid "HHUSTR_E5M9"
+msgstr "드'스파릴의 타래"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "구역 1: 성소"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "구역 2: 마을"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "구역 3: 프론트 기지"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "구역 4: 발전소"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "구역 5: 감옥"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "구역 6: 하수도"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "구역 7: 성"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "구역 8: 알현실"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "구역 9: 성: 프로그래머의 성채"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "구역 10: 새 프론트 기지"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "구역 11: 접경지"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "구역 12: 오라클의 신전"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "구역 13: 고대 묘지"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "구역 14: 광산"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "구역 15: 요새: 중앙 관리소"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "구역 16: 요새: 비숍의 탑"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "구역 17: 요새: 안뜰"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "구역 18: 요새: 격납고"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "구역 19: 요새: 보안 담당 기지"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "구역 20: 공장: 수납구역"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "구역 21: 공장: 조립시설"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "구역 22: 공장: 제련소"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "구역 23: 오더 식당가"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "구역 24: 공장: 전향실"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "구역 25: 고대 묘지: 무너진 사원"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "구역 26: 증명의 전장"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "구역 27: 연구소"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "구역 28: 외계 우주선"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "구역 29: 엔티티의 소굴"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "구역 30: 버려진 프론트 기지"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "구역 31: 훈련 시설"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "구역 1: 성소"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "구역 2: 마을"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "구역 3: 반군 기지"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "구역 35: 공장: 제작실"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "구역 36: 성채간의 충돌"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "구역 37: 살육의 전장"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "구역 38: 정돈된 혼란"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "바람 회관"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "일곱 차원문"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "얼음의 수호자"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "화염의 수호자"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "강철의 수호자"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "빛나는 고난"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "그림자 숲"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "흙빛호수"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "키르케의 동굴"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "황무지"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "성스러운 수풀"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "다주실"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "헤러시아크의 신학교"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "드래곤 예배실"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "그리핀 예배실"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "죽음바람 예배실"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "통탄의 과수원"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "침묵의 식당"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "늑대 예배실"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "버려진 초소"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "비탄의 성"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "교수대"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "악취"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "지하감옥"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "황폐한 정원"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "망자의 도시"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "제닥의 무덤"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "메넬키어의 무덤"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "트라닥투스의 무덤"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "사육장"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "어두운 고난"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "파괴된 마을"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "황폐화"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "웅덩이"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "지하 묘실"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "불모지"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "고사리숲"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "화장"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "무관장의 문"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "국고"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "시장"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "명복의 장소"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "시죄의 시련"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "무기고"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "본당"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "예배당"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "도살장"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "어둠의 감시초소"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "하수구"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "빙고"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "어둠의 요새"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "통로"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "높낮이"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "죽음의 안개"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "고통의 성"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "하수도"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "장밋빛"
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"당신이 악당 보스를 처치하고 달기지를 청소했다면, 당신은 이겨야 한다. \n"
+"안 그런가? 안 그런가? 그 잘난 보상금과 집으로 가는 티켓은 어딨단 말인가?\n"
+"이게 도대체 뭔가! 이런 식으로 끝날 순 없다!\n"
+"\n"
+"이곳은 썩은 고기같이 구린 곳이지만, 사라진 데이모스 기지에 온 것 같다.\n"
+"아무래도 당신이 지옥의 해변에 갇힌 것 같다.\n"
+"여기서 나가는 방법은 뚫고 지나는 것뿐이다.\n"
+"\n"
+"게임을 계속하고 싶다면 지옥의 해변과 놀라운 후속편,\n"
+"연옥을 기대하시라!"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+"당신이 해냈다! 데이모스 기지를 통치하던 마왕, 사이버데몬이 파괴되었고\n"
+"당신이 이겼다! 하지만... 지금 당신은 어디 있는가? 당신은 데이모스의\n"
+"가장자리로 갔고 거기서 무서운 사실을 내려다보게 된다.\n"
+"\n"
+"데이모스가 지옥 위에 떠 있는 지옥 그 자체였던 것이다! 당신은 지옥에서 \n"
+"빠져나갈 수 있는 사람은 없다고 들었다. 하지만 당신은 그 사실을 완전히\n"
+"바꿔 놓을 수 있다! 재빠르게 당신은 데이모스에서 내려와 지옥의 표면으로\n"
+"내려왔다.\n"
+"\n"
+"이제... 둠의 마지막 탄- 연옥이다!"
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+"달기지 침공을 주도하고 너무나 많은 죽음을 일으킨 거미악마가 영원히\n"
+"잠들게 되었다.\n"
+"\n"
+"숨겨진 문이 열렸고 당신은 들어갔다. 당신은 지옥에 가도 이길 수 있을 정도로\n"
+"강했다는 걸 입증했고, 결국 지옥도 마지막엔 공정한 승부를 내어 주었다.\n"
+"당신은 문을 통해 지구의 푸른 초원을 본 것이다. 마침내 집에 왔다...\n"
+"\n"
+"당신은 지옥과 싸울 동안 지구에서 무슨 일이 있었을지 궁금할 것이다.\n"
+"그리고 당신과 함께 지옥의 무리가 그 문으로 들어가지 않길\n"
+"진심으로 바랄 뿐이다..."
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+"스파이더 마스터마인드는 당신과의 마지막 결투가 있기 전에 지옥의 군단을\n"
+"지구로 보냈어야 했었다. 하지만 당신이 문으로 들어갔기에 놈들은 운 좋게\n"
+"지구로 올 수 있게 되었고, 당신은 영웅에서 순식간에 악마의 앞잡이로\n"
+"전락하였다.\n"
+"\n"
+"더구나 당신은 당신의 애완 토끼 데이지를 죽인 복수도 해야 할 것이다.\n"
+"\n"
+"하지만 그것보다도 당신의 잠재적인 고통을 지구에 퍼진 괴물들을 막는 데\n"
+"쓰기 바란다.\n"
+"\n"
+"이번엔, 지상에 강림한 지옥이다!"
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+"당신은 놈들에게 점령당한 우주 공항의 중심부까지 진입했다. 그러나 무언가\n"
+"잘못된 것 같다. 괴물들이 계속 소환되어 나타나는 탓에 이미 우주 공항의\n"
+"기기들이 놈들에 의해 파괴된 뒤였다.\n"
+"\n"
+"이제 요새화된 지옥의 전초기지가 당신의 눈에 들어오고 있다. 당신은\n"
+"괴물들이 출몰하는 우주 공항의 중심부까지 최대한 신속히 침투한 후,\n"
+"공항의 제어 스위치를 작동시켜 현재 인질로 사로잡혀 있는\n"
+"인류를 구출해야 한다."
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+"당신은 성공했다! 당신의 승리 덕분에 인류는 지구에서 탈출했으며 악몽에서\n"
+"벗어날 수 있었다. 이제 당신만이 이 행성에 남겨진 유일한 인간이다.\n"
+"식인 돌연변이들, 육식성 외계인들, 그리고 악령들만이 당신의 유일한\n"
+"이웃이다. 당신은 인류를 구원하기 위해 기꺼이 자신을 희생했다.\n"
+"\n"
+"그러나 잠시, 우주에서 지상 제어 전파가 수신되어 왔다. “외계인 침략의\n"
+"근원지를 센서가 감지했다. 만일 당신이 그곳에 도달한다면 놈들이\n"
+"쏟아져나오는 입구를 막아버려야 한다. 외계인의 기지는 당신의 고향 도시의\n"
+"중심부에 위치하고 있다. 우주 공항에서 그리 멀지 않은 곳이다.”\n"
+"당신은 천천히, 그리고 고통스럽게 일어나 다시 전쟁터로 향했다."
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+"당신은 타락한 도시의 중심부에서 적들의 시체에 둘러싸인 채 서 있다. 당신은\n"
+"이곳에서는 놈들의 입구를 파괴할 방법이 없다는 것을 확인했다. 결국, 당신은\n"
+"이를 꽉 다문 채 통로로 뛰어들었다.\n"
+"\n"
+"저 너머에는 분명 포탈을 닫을 방법이 있을 것이다.\n"
+"어쩌면 지옥으로 향하는 길일지도 모르지만, 무슨 상관인가?"
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+"놈의 돌출된 뇌를 향해 로켓을 몇 발 집어넣자 당신 앞에 서 있던 거대하고\n"
+"흉측한 악마는 완전히 박살 나 버렸다. 괴물들은 오그라들며 죽어갔다.\n"
+"지옥의 표면은 갈라진 깊이를 잴 수 없을 만큼 갈기갈기 쪼개지며 파괴되었다.\n"
+"\n"
+"당신은 해냈다. 침략은 격퇴되고 지구는 구원되었다. 지옥은 붕괴했다.\n"
+"나쁜 사람들이 죽어서 가게 되는 곳을 당신은 살아서 돌아온 것이다.\n"
+"이제 당신 앞에는 고향으로 돌아갈 긴 여정만이 남아있다.\n"
+"지구를 재건하는 것은 지구가 파괴되고 마는 것보다는 즐거운 일이 될 것이다."
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+"축하한다. 당신은 비밀 레벨을 찾아냈다! 여기는 악마들보다는 인간들이\n"
+"건설한 곳 같다. 그러나 당신은 구석에 있는 죄수들이 지옥에 있던 놈들임을\n"
+"알고는 매우 놀란다."
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+"축하한다. 당신은 특급 비밀 레벨을 찾아냈다! 당신은 이곳을 순식간에\n"
+"통과하는 게 좋을 것이다!"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+"당신은 익을 대로 익어버린 수호자의 시체를 지나며 흡족한 웃음을 지었다.\n"
+"놈의 죽음으로, 당신은 양자 가속기를 지옥의 역겨운 마수로부터 탈환한\n"
+"것이다. 당신은 잠시 휴식을 취하면서 가속기실을 둘러보았다. 젠장! 이곳에는\n"
+"적어도 한 대 이상의 양자 가속기 원형이 작동되고 있어야 했다. 그러나 지금은\n"
+"보이지 않는다. 분명 악마들이 가져갔을 것이다.\n"
+"\n"
+"당신은 반드시 가속기를 찾아야 한다. 그렇지 않으면 당신의 모든 노력은\n"
+"물거품이 되고 말 것이다. 계속 이동하라, 교전하라, 적들을 물리쳐라. \n"
+"아 참, 물론 계속 생존하고."
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+"아크-바일의 진절머리 나는 미궁도 당신을 막지는 못했다.\n"
+"그리고 당신은 곧 가속기를 영원히 꺼 버릴 수 있을 것이다.\n"
+"\n"
+"당신은 분명히 이 방면에는 타고난 실력을 갖추고 있다."
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+"악마의 심장부에 도달할 때까지, 당신은 계속해서 박살 내고 때려 부수면서\n"
+"나아갔다. 이제 수색 섬멸 임무를 수행할 시간이다. 그러나 지옥의 불결한\n"
+"자손들 또한 지구로 쏟아져 내려오기 위해 문지기를 향해 모여들고 있다.\n"
+"문지기 녀석은 분명 나쁜 녀석이다. 그러나 당신은 녀석이 패배할 것임을\n"
+"이미 알고 있다!\n"
+"\n"
+"당신은 사악한 웃음을 지으며 장비를 점검한 후, 놈들에게 작은 지옥을\n"
+"선사해 주기 위한 준비를 마쳤다!"
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+"문지기의 사악한 얼굴이 사방으로 흩어졌다. 놈의 추악한 시체와 변형된\n"
+"지옥의 문이 마지막 남은 양자 가속기와 남아 있는 괴물들을 빨아들여 버렸다.\n"
+"당신이 해냈다. 지옥은 살아있는 생명체들 대신 죽어있는 유령들이 가득 찬\n"
+"지옥으로 돌아가고 말았다. 미래에 당신의 자손들한테 당신 관 속에\n"
+"로켓 런쳐를 넣으라고 말하는 걸 잊지 마라. 만약 당신이 죽어서 지옥에 간다면,\n"
+"마지막으로 싹쓸이를 하는데 필요할 테니..."
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+"당신은 두 번째로 어려운 레벨을 찾아냈다. 당신이 앞서 게임을\n"
+"저장했기를 빈다. 만약 아니라면, 당신은 수많은 죽음을 각오해야 할 것이다.\n"
+"이 임무는 매우 뛰어난 해병만이 맡을 수 있다."
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+"이 레벨은 우리가 준비한 레벨 중 열라 어려운 난이도를 자랑한다 아이가!\n"
+"그 누구도 살아남지 못한데이!"
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"당신은 감염된 연구소에서 빠져나오기 위해 악전고투했다. 사태를 보자니\n"
+"또다시 UAC가 곤경에 처한 것이 틀림없다. 예전의 UAC는 건강보험에\n"
+"들어 놓기라도 했지만 지금은...\n"
+"\n"
+"현재 당신은 당신을 삼켜버릴 듯한 공포를 헤치며 군사시설로 향하고 있다.\n"
+"운이 따라준다면, 약간의 군수품들이 시설 곳곳에 놓여있을 것이다."
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"당신은 거대한 기계들의 소음이 들리는 곳으로 향하고 있다. 당신은 도장을\n"
+"찍어내듯이 지옥에서 계속 소환되어 나타나는 녀석들과 만나지 않기를\n"
+"희망할 뿐이다. 놈들은 대학살을 실행에 옮기고 있을 것이 분명하다.\n"
+"물론 당신은 놈들을 모두 쓸어버릴 준비가 되어있다. 그러나 2천 마리 이상의\n"
+"적들도 당신을 상대할 준비를 끝낸 듯하다.\n"
+"\n"
+"당신은 쉽게 내려갈 수 없을 것이다."
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"어디서 많이 본 듯한 끔찍한 광경이 펼쳐져 있다. 이전에 맡아본- 역겨운\n"
+"냄새도 나고 있다. 당신은 전에도 이 상황을 맘에 들어 하지 않았다. 그러나\n"
+"지옥 역시 현 상황을 계획에 넣은 적은 없다고 당신은 확신하고 있다. 당신이\n"
+"현 상황을 곰곰이 생각해 봐도 앞에는 피바다만 놓여있을 뿐이다. 당신은\n"
+"무기를 들어 올리며 사악한 웃음을 지었다. \n"
+"\n"
+"이제 놈들을 처치할 때가 된 것이다."
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"갑자기 모든 것이 조용해졌다. 저 먼 지평선에서 지옥의 고통에 찬 비명이\n"
+"울려 퍼졌다. 악몽 같던 하늘이 푸르게 변하고, 죽은 괴물들의 시체가 지옥의\n"
+"악한 기운과 함께 증발해 버렸다. 휴, 당신이 해낸 것 같다.\n"
+"\n"
+"그런 뭔가가 꿈틀대기 시작하였고,\n"
+"푸른 불빛이 파괴된 악마의 해골에서 빛나기 시작했다..."
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"여긴 어디인가? 주위가 완전히 변했다. 여기는 마치 파라오 투탕카멘의\n"
+"무덤처럼 보인다. 흠, 이 상황에서 더 나빠질 것은 없다.\n"
+"\n"
+"그러나 잠든 신들이 다시 깨어나게 될지도 모른다..."
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"휴가가 주어졌다. 당신은 지옥의 중심부를 박살 내고 마침내 휴식을 얻은\n"
+"것이다. 당신은 아마도 다음번에는 다른 녀석이 지옥을 혼내줄 것이라며\n"
+"낮은 소리로 투덜거렸다. 당신은 평온한 도시와 평화로운 파도, 옛스러운\n"
+"건물들, 그리고 지옥에서 소환된 녀석들이 있을지도 모르는 곳으로 가고\n"
+"있다.\n"
+"\n"
+"당신이 탈것에서 내리는 순간, 당신은 사이버데몬의 쇠 발굽 소리를 들었다."
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+"당신이 가장 좋아하는 휴가 장소에서 문제가 다시 불거지고 있었다... 제길.\n"
+"사이버데몬 녀석이 지옥을 놀이공원으로 바꾸어버리고 지구를 매표소로\n"
+"바꿀 수 있을 줄 알았나 보다.\n"
+"\n"
+"그렇지만, 그 반쪽 로봇 호러쇼는 누군가가 입장하는지 몰랐을 것이니. 피가\n"
+"끓는 악마 놈들의 사격장보다 더 재밌는 건 없을 것이다.\n"
+"\n"
+"사악한 미궁의 벽에 부딪혀 메아리치는 강철 팔다리 소리와 함께 그의\n"
+"단말마는 당신이 엉망진창으로 만든 얼굴에서 뿜어져 나왔다.\n"
+"\n"
+"이곳은 이제 폐쇄되었다."
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+"아이언 리치들과 그들의 부하들이 죽으면서, 이 차원에 존재하는 마지막\n"
+"언데드까지 모두 사라졌다.\n"
+"\n"
+"당신은 이 녀석들은 어딘가에서 온 것이 분명하므로, 저 지옥의 나락으로\n"
+"연결된 타오르는 차원문이 그들의 고향 차원으로 인도할 거라고 대충\n"
+"추측을 해본다.\n"
+"\n"
+"언데드들과 더 끔찍한 놈이 더 오기 전에, 당신은 지옥의 나락으로 가서\n"
+"차원문을 봉쇄해야 한다. 물론 저쪽 세상이 당신을 그다지 환영하지는\n"
+"않겠지만, 이교도가 되는 것이 어찌 쉬운 일이겠는가!"
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+"강력한 몰로타우어들조차 당신에게 상대가 안 된다는 것이 증명되었고,\n"
+"녀석들의 식지 않은 시체가 바닥에 나부라지는 것을 보면서 당신은 녀석들을\n"
+"파괴했다는 사실에 뭔가 씁쓸한 만족감을 느낀다.\n"
+"\n"
+"그들이 지키던 차원 관문이 열리자, 당신은 집으로 갈 거라는 희망을 품는다.\n"
+"하지만 관문에 들어서자마자, 당신을 조롱하는 웃음소리가 귓가에\n"
+"울려 퍼진다.\n"
+"\n"
+"\n"
+"몰로타우어를 이끄는 또 다른 세력이 있었단 말인가? 이 관문 너머로\n"
+"더 끔찍한 존재가 있단 말인가? 머리 위 하늘이 있어야 할 자리에\n"
+"크리스탈 돔이 넓게 펼쳐진 광경은 결코 좋은 의미가 아닐 것이다..."
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+"드'스파릴의 죽음은 이 세계의 괴물들을 조종하는 그의 마법을 약화했고,\n"
+"고통에 사무친 그의 비명은 괴물들이 죽어가면서 외치는 비명소리에 의해\n"
+"묻혀버렸다. \n"
+"\n"
+"복수의 맹세를 이룬 당신은 돔이 산산이 부서져 무너지기 직전에 당신의\n"
+"세계로 가는 차원문으로 발을 들였다.\n"
+"\n"
+"하지만 드'스파릴의 영향력이 영원히 사라졌는데, 왜 당신이 안전하다고\n"
+"생각 못 하는가? 녀석이 죽기 전에 외치던 단말마의 비명이 마치 저주처럼\n"
+"들렸는가? 아니면 무언가를 소환하는 주문이었나? 당신은 확신하지\n"
+"못하지만, 아마 그냥 비명소리에 불과했을 것이다.\n"
+"\n"
+"그런데, 다른 서펜트 라이더들은 어쩔 것인가?"
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+"드'스파릴이 죽으면 당신의 세계로 돌아가리라 생각했지만, 녀석의 마지막\n"
+"몸부림이 당신을 녀석의 차원으로 내쫓아버렸다. 당신은 드'스파릴이\n"
+"정복했던 박살 나고 남은 세상에 발을 들였다. 당신은 이 세상의 마지막\n"
+"수문장들까지 제압했었지만, 이제 당신은 드'스파릴의 근거지로 가는 관문\n"
+"앞에 이르게 되었다. 이 순간까지 당신은 당신의 능력을 확신하면서\n"
+"그 누구와 맞서 싸워도 문제없으리라 생각했지만, 이 차원문 너머에 당신의\n"
+"세계를 침략했던 그 악마의 심장부가 존재하고 있다. 드'스파릴은 죽었지만,\n"
+"그가 소환되었던 구렁텅이가 아직 남아있다. 이제 당신은 이곳을 탈출할\n"
+"희망을 품고 그곳으로 들어가야 한다. 그리고 어딘가, 드'스파릴의 영지의\n"
+"구석 어두운 곳에, 그의 개인 경호원들이 당신을 기다리고 있다..."
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+"마지막 몰로타우어의 단말마가 울리자, 당신이 이처럼 파멸에 이르렀던\n"
+"적이 없었다는 것을 깨달았다. 드'스파릴과 그의 제자들과의 혈투도 이처럼\n"
+"치열하지는 않았다. 당신 앞의 차원문이 열리는 광경을 음울하게\n"
+"지켜보면서, 당신은 과연 이것이 당신을 집으로 인도할 것인지, 아니면\n"
+"또 다른 꿈꾸지도 못한 공포로 이끌 것인지 고민하였다. 아직도 당신에게\n"
+"나아갈 힘이 있다면, 죽음과 고통만이 당신을 기다릴 것이다. 하지만\n"
+"싸우겠다는 의지가 사라진다면 어쩌겠는가? 그런 절망에 빠진 표정의\n"
+"당신을 억지로 나아가게 할 수 있나? 당신에게 그런 용기가 있는가?\n"
+"결국에는, 싸움 없이 항복하는 것 따위는 당신에게 달린 것이 아닌 것을\n"
+"깨달았다. 당신은 두 눈 크게 뜨고 당신의 운명을 맞이하러 떠난다."
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"일곱 차원문을 거치고 이 영역을 봉쇄하자, 당신 앞에 혹독한 황폐지가\n"
+"광활하게 펼쳐졌다. 당신은 화염과 얼음, 강철의 시험을 통과했으나, 이보다\n"
+"훨씬 어려운 도전이 당신을 기다리고 있다. 빽빽하게 얽힌 수풀들이 악의에\n"
+"찬 적들의 눈을 가리고 있지만, 저들 너머에 훨씬 악랄한 녀석이 있을 것이다.\n"
+"\n"
+"척박한 사막, 눅눅한 늪지대, 그리고 퀴퀴한 동굴들이 당신 앞을 막아서고\n"
+"있다. 하지만, 비록 당신이 후회하는 한이 있더라도, 그 무엇도 당신의 운명을\n"
+"막게 놔둘 수는 없다.\n"
+"\n"
+"그리고 저 너머에 멀리서, 끊임없이 움직이는 다주실의 벽들이 당신의\n"
+"노력을 비웃고 있는 듯하다."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"다주실에서의 대전 때문에 당신의 생각이 여전히 어지럽지만, 당신은\n"
+"출구이길 바라는 곳으로 비틀거리며 나아갔다. 모든 것이 점점 빠르게\n"
+"움직이고, 당신의 눈앞이 캄캄해지기 시작한다... 당신 주변의 세상이 무너져\n"
+"내리는 사이에, 차원문의 빛이 당신을 감싸 안았다. 한 줄기 빛이\n"
+"스쳐 지나간 후, 당신은 피로에 찌든 당신의 몸을 일으켜 세웠다.\n"
+"\n"
+"당신이 우뚝 솟은 탑 꼭대기에 서자, 저주받은 자들의 비명소리가\n"
+"저 아래에서 들려왔다. 앞으로 나아가자마자, 악마의 목소리가 당신을\n"
+"오싹하게 했다. 모든 죽음의 신들이시여! 대체 당신은 어디에 온 것입니까?\n"
+"모든 죽음의 신들이시여, 어찌하면 이곳에서 벗어날 수 있겠나이까?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"고대인들의 강력한 무기와 유물 덕분에, 당신은 헤러시아크와 그의\n"
+"부하들을 간신히 소탕할 수 있었다. 하지만 이제 그들의 저주받은 잔당들이\n"
+"당신 앞에 흩어진 채 펼쳐져 있다. 마지막 남은 힘을 다해서, 당신은\n"
+"헤러시아크의 깊은 성소로 향하는 차원문으로 나아갔다.\n"
+"\n"
+"저 너머에, 거대한 성채의 성곽이 나타나기 시작했다. 조용한 탑들과 텅 빈\n"
+"성벽들이 성채 중심부에서 마치 음울한 거인처럼 우뚝 솟은 검은 돌의\n"
+"첨탑을 둘러싸고 있었다. 화염과 그림자가 벌어진 창문 너머에서\n"
+"요동치고 있고, 악의에 찬 수많은 눈빛이 당신을 노려보고 있었다.\n"
+"\n"
+"저기 어딘가에, 당신의 적들이 기다리고 있다..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"“...그리고 그가 망자의 영역으로 떠나면서, 그리고 모든 세력이 속해있던\n"
+"다툼까지, 절망의 관문 그 자체로 나아갔다. 그러나 그가 언제 다시 빛의\n"
+"세계로 돌아올지는 그 누구도 알지 못하였다.”\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"빌어먹을."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"고통에 찬 비명과 함께, 당신의 몸 구석구석이 신비한 불꽃에 휩싸이면서,\n"
+"당신은 이 세계에서 빠져나가 다른 곳으로 향하기 시작했다. 당신의 눈앞이\n"
+"밝아지자, 당신은 귀신들린 메아리와 위협적인 그림자들이 가득한 거대한\n"
+"회당에서 있었다. 저 멀리 솟아오른 연단 위에 이 세상에서 유일하게\n"
+"존재하는 빛의 근원이 보이었다."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"저것은 분명 코락스의 힘의 원천인 혼돈의 구체일 것이다. 이것만 있으면\n"
+"당신은 세상을 창조하거나... 파괴할 수 있다. 당신의 떨리는 손들이 지난\n"
+"모든 전투와 정복의 전리품을 향해 뻗어 나갔다. 아마 지금쯤, 새 도전자가\n"
+"이 권력을 쟁취하는 장대한 싸움에 참여할 것이다. 퀀으로 변한 폰 처럼, 갑자기 이 판 전체가 당신의 손아귀에 쥐어진 것처럼 보였다."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n하지만 분명 어딘가에 당신보다 강력한 도전자들이 있을 것이며,\n"
+"그 누가 그들의 수를 짐작할 수 있겠는가?"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"피로 얼룩진 얼굴을 어루만지던 떨리는 손들을 치우면서, 당신은 당신 앞에\n"
+"펼쳐진 것들에 집중하기 시작했다...\n"
+"\n"
+"...그리고 당신 뒤에 남은 것들을 잊어버렸다.\n"
+"\n"
+"저 멀리에, 거대한 성채 단지의 삭막한 성곽들이 허공을 가르듯이\n"
+"솟아있었고, 썩은 내 나는 악취가 셀 수 없이 많은 시체의 무덤으로부터\n"
+"퍼지고 있었다.\n"
+"\n"
+"당신이 가진 유물들을 꼼꼼하게 정리하면서, 당신은 이 정도면 충분할\n"
+"것이라고 자기 자신을 안심시키려고 노력했다. 어찌 되었든 이 정도로\n"
+"충분해야 한다, 안 그런가?\n"
+"\n"
+"안 그런가?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"분명 저주받은 영혼이 이 세상에서 살고 있다. 올바르고 선량한 녀석들은\n"
+"이곳에서 오래 살 수 없을 것이니 말이다.\n"
+"\n"
+"그러나 방금 지나간 것은 당신 앞을 가로막는 존재인 어둠의 요새의 희미한\n"
+"그림자임이 분명하다. 성당의 음침하고 거대한 형체가 저 요새의 극히\n"
+"일부분을 제외한 모든 것을 가리고 있다. 그러나 저 보이는 부문만으로부터\n"
+"차갑고 기나긴 죽음의 속삭임이 들려오고 있었다...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...부귀영화를 위해."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"다시 한번 당신은 혼돈의 구체가 있는 회당에 이르렀다. 마치 당신이 처음\n"
+"이곳의 그림자에 발을 들인 이후로 아무런 일도 없었다는 듯이 말이다.\n"
+"\n"
+"그러나 무언가가 기분 나쁘게 달라졌다. 부드러운 속삭임이 들리던 곳에서는\n"
+"침묵만이, 지켜보는 느낌을 주던 숨어있던 눈길들이...\n"
+"\n"
+"...사악한 의도를 막아주던 그 눈길들이."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"한때 당신은 떨리는 양손으로 혼돈의 구체를 움켜 쥐었었다. 이제 당신의\n"
+"손들은 탐욕을 초월한 그 무언가로부터 떨리고 있었고, 당신의 두려움은\n"
+"절대적인 힘을 향한 욕망과 맞물리고 있었다.\n"
+"\n"
+"구체의 힘만으로도 당신을 어둠의 손아귀로부터 지켜낼 수 없다면,\n"
+"아마 당신의 운명을 거부하고 구체를 그냥 놔두는 것이 좋을 것이다. \n"
+"\n"
+"그러나, 당신은 도전은 언제든지 받아주는 그런 자였다."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr "\\n...그리고 다른 도전자들이 기다리고 있다."
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "문이 잠겨 있다"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "환영한다, 필멸자여."
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "죽을 준비는 됐는가?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "얼음의 수호자에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "이 통로는 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "수수께끼의 절반이 풀렸다"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "... 일곱 차원문에서"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "일곱 차원문에서 계단이 솟아났다"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "... 일곱 차원문에서"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "일곱 차원문에서 계단이 솟아났다"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "다른 개폐기를 찾아야 한다"
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "일곱 차원문에서 바위 부딪히는 소리가 들려왔다"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "수수께끼의 6분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "... 그림자 숲에서"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "멀리서 문이 열리는 소리가 들린다"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "수수께끼의 6분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "... 그림자 숲에서"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "수수께끼의 6분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "... 그림자 숲에서"
+
+# Yellow needs better translation
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ 마리 에틴이 남았음"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "시간을 너무 오래 끌었다. 이제 죽어라!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "버려진 초소에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "이 문은 아직 열 수 없다"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "이 몸의 하인들은 네 피 냄새를 맏고 따라온다, 인간."
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "교수대에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "성 안에서 보행판이 내려왔다"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "네 놈은 오랫동안 놀았도다, 필멸자여..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "이 몸이 너를 말 치우듯이 제거하겠다."
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "윗층에서 문이 열리는 소리가 들린다"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "이 몸에게 경배하라, 그럼 자비를 베풀 것이다."
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "허나... 그러지는 않겠지."
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "수수께끼의 9분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "... 헤러시아크의 신학교에서"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "수수께끼의 9분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "... 헤러시아크의 신학교에서"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "수수께끼의 9분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "... 헤러시아크의 신학교에서"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "차원문은 봉인되었다"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "그대의 운명을 정해라"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "네 놈은 주인들을 대면할 힘이..."
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "진심으로 있는 것인가?"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "감히 준비의 방에서 전투를 벌이다니..."
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "죽어서 값을 치러라!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "폭포가 멈췄다"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "폭포에 의해 막혔다"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "교외 근처에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "무언가가 이상하다..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "3개의 수수께끼가 아직 풀리지 않았다"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "2개의 수수께끼가 아직 풀리지 않았다"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "마지막 수수께끼가 아직 풀리지 않았다"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "모든 수수께끼가 풀렸다"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "모든 수수께끼를 풀지 못했다"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "이 층은 안전하지 않다!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "수수께끼의 3분의 2가 풀렸다"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "멀리서 보행판이 움직이는 소리가 들려왔다"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "이제 끝났다..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "모든 수수께끼를 풀지 못했다"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "나는 경고했다..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "정말 끈질기군."
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "어리석기도 하고."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "수수께끼의 4분의 1만 풀렸다"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "서투른 선택이다..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "상징이 정렬되지 않았다"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "이 문은 이 방향으로는 열리지 않는다"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "이 문은 바깥에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "신성모독이다!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "네 놈은 성 에릭의 무덤을 더렵혔다!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "그 댓가로 목숨을 바쳐라!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "수수께끼의 3분의 2가 풀렸다"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "지하 묘실의 입구가 열렸다."
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "거미의 무덤을 조심하라"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "밖에서 보행판이 올라오는 소리가 들려왔다"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "그대는 운수가 좋은가?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "잘못된 판단이다!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "옳은 판단이다"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "어쩔 수 없이 살아간다. 태어났기 때문에..."
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "에틴을 쳐죽인 것까지 신경 쓰다간, 걸을 수도 없을걸."
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "드래곤 슬레이어 인가?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "등짝을 보자!..."
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "낙원이란 있을 수 없는거야."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "신은 운명을 주셨죠. 만남이라는 운명을."
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "내 묘비를 세우지도 않았네 -cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "피 한 방울도 흘리지 말라"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "분노하여 주먹을 휘두르지 말라"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "감히 우리의 숙면을 방해하는가?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "길이 열렸다"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "지금 "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "개의 개폐기들이 남았다"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "이제 오로지 "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "개의 개폐기가 남았다"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "출구가 열렸다"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "이 문들은 이 방향으로는 열리지 않는다"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "문이 열렸다..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "... 준비 되었다면"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "지금 문이 열렸다..."
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "... 예배당에서"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "다리가 건설되었다..."
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "... 도살장에서"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "계단이 건설되었다..."
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "... 어둠의 감시초소에서"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "톱니바퀴 1개가 배치되었다"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "톱니바퀴들이 배치되었다"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "방벽이 열렸다..."
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "... 하수구에서"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "돌아가는 길이 열렸다"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "배짱이 두둑하구나..."
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "사형 집행자의 무덤을 도굴하다니."
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "죽어서 회계하라."
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "당신은"
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "개의 개폐기들을 더 찾아야 한다"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "이제 당신은 "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "개의 개폐기만 찾으면 된다"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "탑으로 가는 길이 열렸다"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "길이 열렸다"
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr ""
+"난 문제를 더 일으키고 싶지 않아, 나에게서 떨어져! 해리스 그 자식이 나를 속였어. 녀석이 돈을 준다고 해서 도와줬더니 도망치고 없었고"
+" 결국엔 붙잡혀서 프로그래머에게 심문을 받을 처지에 놓였다고!"
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "저를 도와준다면 당신을 돕겠습니다. 5 골드를 줌으로써 말이죠."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "여기 골드입니다."
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "조용히 은신해서 암살만 한다면, 경보를 울리지 않을 겁니다."
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "세상에 공짜가 어딨습니까? 먼저 돈을 주세요!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "5 골드 더 있습니까? 그러면 아주 좋을 텐데."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 골드."
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "아시나요? 맹독 볼트만 있으면 경보를 울리지 않고 경비병을 죽일 수 있다는거?"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "죄송합니다만, 전 아무것도 무료로 말해주지 않을 겁니다!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "가십거리를 이미 다 털어놓았습니다. 더 뭘 바랍니까?"
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "무엇을 구매하고 싶어?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "돌격소총"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "여기 있어."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "그걸 사기엔 여유가 없는 것 같네."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "돌격소총 탄창"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "고맙다!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "10 골드만 있으면 되는데..."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "돌격소총 탄약 박스"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "탄약 여기 있어!"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "아마도 나중에..."
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr ""
+"프론트로부터 좋은 소식을 들었어. 마실 사령관님이 보상과 훈련받을 특권을 당신에게 전해주라는군. 이미 준비된 것 같으니, 시작할까?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "고맙습니다."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "도와줄 수 있어서 영광이야."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr ""
+"좋아. 먼저 배워둬야 할 것은: 크루세이더를 제압하기 위해선 가능한 한 멀리서 상대해야 해. 그리고 돌격소총의 방아쇠를 한 번 누르면 "
+"정확한 3 점발사격이 가능하지. "
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "그게 답니까?"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "나중에 알려줄게."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "크루세이더가 사용하는 화염방사기를 사람들이 다룰 수 있도록 개조할 수 있을 것 같아. 그래서... 뭘 원해?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "화염방사기?"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "역시 잘 작동할 줄 알았어! 여기, 화염방사기야. 한번 놈들에게 사용해봐!"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "이봐, 제대로 된 부품 없이는 아무 것도 할 수 없다고!"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "돌격소총"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "여기 대령이요!"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "당연하겠지만, 아직 가질 수가 없겠네."
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "돌격소총 탄창"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "고마워."
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "이봐, 그건 10 골드짜리라고."
+
+# 〃 (〃)
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "돌격소총 탄약 박스"
+
+# 〃 (〃)
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "여기 탄약."
+
+# 〃 (〃)
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "다음번에 돈을 챙기고 예기하자. 잘 가!"
+
+# 〃 (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "이제 화염방사기를 얻었으니, 더 원하는 물품이 있나?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "돌격소총"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "여기 있어."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "그럴 여유가 전혀 없는 것 같은데 말이지."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "돌격소총 탄창"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "고마워."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "이봐, 10 골드를 먼저 달라고."
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "돌격소총 탄약 박스"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "여기 네 탄약이야."
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "지금 말고. 아마도 나중에?"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "이제 화염방사기를 얻었으니, 더 원하는 물품이 있나?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "돌격소총 탄창"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "고맙네."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "이봐, 그건 10 골드라고."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "돌격소총 탄약 박스"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "여기 탄약이야."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "다음 번에 찾아와서 알려줘."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "소이 유탄"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "고마워."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "충분치 않아."
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "맹독 볼트"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "아주 가치가 있는 것이지!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "이봐, 이건 200 골드라고!"
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr ""
+"내가 이 임무에 얽매였다는 게 믿기지 않아요. 사람들이 하수도 입구에서 뭔가 나타났다고 하던데... 이제 그게 다시 올 때까지 여기에서 "
+"서 있어야 한다니!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "무슨 입구?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "하수도 입구 말이에요."
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "안녕하십니까. 뭘 드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "전격 볼트"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "전격 볼트를 받았습니다."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "탄약 배낭"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "전격 볼트의 가격에 해당하는 게 전혀 없구먼!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "전격 볼트의 가격에 맞춰서 흥정하시길."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "감사합니다. 다른 건 없나요?"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "가질 수가 없는 것 같으니... 그럼 이만!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "무엇을 구매하고 싶으신가요, 좋은 친구여?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "전격 볼트"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "전격 볼트를 구매했습니다."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "탄약 배낭"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "감사합니다. 다른 건 더 없나요?"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "살 돈이 부족하신가요? 그럼 갈 길 가시길!"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "환영합니다! 보여드릴 게 아주 많아요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "환경 방호복"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "자, 여기있습니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "죄송합니다만, 그걸 사기엔 돈이 부족해 보입니다."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "가죽 갑옷"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "여기 있습니다."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "아마 나중에 사야 할 것 같은데?"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "강철 갑옷"
+
+# 〃
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "건강하게 입으세요."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "뭔가를 살 여유가 있을 때 오세요!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "어서 오십시오. 어떤 걸 보여드릴까요?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "환경 방호복"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "자, 여기 있습니다."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "미안하지만, 구매하기 위한 돈이 부족하신 것 같군요."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "가죽 갑옷"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "여기 있습니다."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "나중에 돈을 모아서 구매하세요."
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "강철 갑옷"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "믿고 입으셔도 됩니다."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "이런 거래는 못 하겠습니다. 돈을 모아서 다시 찾아오시길!"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "제가 어떻게 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "의료 붕대"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "의료 붕대 여깄습니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "10 골드가 필요합니다."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "구급 키트"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "이용 감사드려요."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "주고 싶지만, 이것의 가격은 25 골드입니다."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "수술 키트"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "여기 있습니다. 잘 쓰세요."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "글쎄요, 아마 의료 붕대 정돈 살 수 있을걸요?"
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr ""
+"마실 사령관님이 하는 일이 무엇인지 알고 있기를... 만약 오더가 내가 프론트를 위해 일한다는 걸 눈치챈다면 절 죽일 거예요. 물론 "
+"당신이 알 바는 아니지만. 프론트 의무관님이 업그레이드 칩을 당신에게 이식하라고 여기까지 가져왔더군요. 준비되셨습니까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "좋아요, 준비 됐습니다."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "그럼 잠깐이면 됩니다. 자, 다 됐어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "어떻게 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "의료 붕대"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "여기 의료 붕대입니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "10 골드가 필요한데."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "구급 키트"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "또 오세요."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "25 골드만 있다면 이건 당신 것인데 말이죠."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "수술 키트"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "여기 있습니다. 잘 쓰세요."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "글쎄요... 의료 붕대는 어떻습니까?"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+"안녕하신가 이방인이여, 자네는 이곳에서 처음 보는 얼굴이군. 내가 자네에게 공짜 조언을 해주지. 내가 자네라면 조심할 거야. 오더는 "
+"자유의지를 용납하지 않아. 그리고 그들의 정의는 신속하지."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "무슨 뜻이죠?"
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "무슨 말이냐 하면, 하수도 안에는 시궁쥐만 있는 게 아니라 로봇들도 숨어 있다는 거지."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "이제 자네에게 무엇을 해드릴까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "더 많은 정보를 주세요."
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "모렐 총독은 우리들이 자유롭게 남들을 도울 수 없는 이유 중 하나이기도 하다네."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "골드가 더 있다면 더 알려주지."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr "죽지 않으려고 발버둥 치듯이 질문을 많이 하는구먼. 무장한 곳에 무모하게 가서 죽지나 말게."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "정보를 좀 더 알려주시오."
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "오더의 뒤에는 더 많은 것들이 숨겨져 있다네. 비밀 같은 것들 말일세."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "골드를 더 가져오면 의논을 시작해보지."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr ""
+"친구여... 안타깝게도 지식의 우물은 이제 고갈됐다네. 내가 알려줄 수 있는 걸 다 알려줬거든. 건투를 빌겠네, 그리고 다시 돌아오지는 "
+"말고."
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr ""
+"이봐, 난 비상사태를 대비해서 여기에 있는 거라고. 만약 중심부가 파괴되면, 그 누구도 들어올 수 없게 막을 거야... 도망치는 사람도 "
+"포함해서."
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "똑바로 보고 다녀라, 시민!"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "우린 널 죽일거야!"
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "너는 누구지? 아무도 이 지역에서 어슬렁거릴 수 없다!"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "거기 너, 아무도 이곳에 지나갈 수 없다. 가던 길이나 가!"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "여기 이롤리가 중요한 물품을 판매할 거야."
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr ""
+"난 반란군을 위한 일종의 재능 중개인이야. 당신만큼 좋은 사람이라면 많은 돈을 벌 수 있겠지... 당신이 제대로 된 사람들과 연결되어 "
+"있다면."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "흥미롭군."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "반란군은 집어치워!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "안 돼, 두 번째 기회는 없어. 경비원, 저놈을 죽여."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+"좋은 선택이야. 강가 근처에 있는 성소가 바로 오더의 비공식적인 고문실이야. 그리고 그 안에는 숨겨진 금색 성배가 있지. 넌 그것을 "
+"훔치고 보상을 받으면 돼."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "내가 그걸 어떻게 하지?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr "여기 석궁이야, 똑바로 겨냥해, 그리고... '철퍼덕'. 기억해, 멋진 컵을 들고 선술집에 와."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "멋지군, 이해 했어."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "뭘 기다리는 거야? 가서 성배를 찾아."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+"이봐, 알겠어. 확실히 뭔가 꾸며 놓은 것 같다는 거. 난 훌륭한 학살 기계에게 그런 짓을 할 사람이 아니야. 그래서 그걸 가져왔나? "
+"좋아! 그럼 약속한 대로 골드와 영광을 줄 테니 준비해. 이 열쇠를 총독에게 가져다주면 보상해 줄 거야."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "살고 싶으면, 이 말이 사실이야 할 거다!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "뭐라고! 내 돈은 어디있지?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "사라져. 신경 거슬리게 하지 말고."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "너에게는 기회 따윈 없었어. 경비원, 저놈을 죽여."
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+"먼저 오더가 수천 명을 죽여놓고, 이젠 힘 좋은 시민들을 불러서 생각지도 않은 시험을 하라고 시키는구먼. 그놈들이 나한테 바라는 게 뭔지"
+" 전혀 모르겠네. 넌 원하는 게 뭐야?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "감옥 통행증만 있으면 돼."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr "이제야 말길이 가네. 지금 너에게 맡을 시험이 두 가지 있거든. 더러운 거랑... 잔인한 거."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "청소부라 불러줘."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "나는 비위가 약하지 않아."
+
+# 〃
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+"내 부하 중 한 명이 어딘가에 있는 동력선에 추출기를 꽂아 동력을 훔치고 있다는군. 그것을 찾아내서 그의 공급을 자르면 네가 원하는 것을"
+" 제공하지. 증거가 될만한 그것을 가져와."
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "그 추출기는 어디에 찾을 수 있지?"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"만약 내가 그 위치를 알았다면 지루한 심부름이 됐겠지, 그렇지 않아? 네 머리를 써! 그리고 그 추출기를 찾아.\n"
+"    \\cy배부른 돼지 같은 녀석. 난 이 추출기에 대해서 아무것도 몰라. 너무 급하게 하지 말자."
+
+# 〃
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+"그렇담, 더윈이라는 뚱땡이가 지금 아이들을 붙잡아 오더에 팔아넘기는 짓을 일삼고 있어. 너무나도 괘씸해... 내게 이득이 전혀 없으니. "
+"더윈은 발전소 주변 창고에서 일하고 있어. 그를 죽이고, 그의, 귀를 뜯어서 가져와. 그럼 거래를 진행하지."
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "어떻게 들어가지?"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr ""
+"이 열쇠만 있으면 발전소에 들어갈 수 있을 거야. 그리고 다시 생각해보니, 그 자식을 죽이기 전에, 먼저 귀를 뜯어. 그럼 더 나을 거 "
+"같군."
+
+# 〃
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+"오오, 난 기념품이 정말 좋아. 여기, 네가 원했던 감옥 통행증이야. 감옥으로 가서 몬탕 간수장에게 이야기해봐. 네가 어떤 짓을 "
+"저지르든, 그 후엔 절대로 알고 싶지 않아!"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "고마워."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "힌트를 하나 주지. 나랑 대화가 끝났으면, 넌 떠나는 거야."
+
+# 〃
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "날 위한 좋은 소식이 있나? 열심히 듣고 있다구."
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "임무 완료!"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+"오오, 난 기념품이 정말 좋아. 여기, 네가 원했던 감옥 통행증이야. 감옥으로 가서 몬탕 간수장에게 이야기해봐. 네가 어떤 짓을 "
+"저지르든, 그 후엔 절대로 알고 싶지 않아!"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "난 괜찮아."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr ""
+"그래서 네가 그 성배를 훔친 바보로군? 반군 절도범으로 체포해주지... 오더에서의 내 위치도 올리는 겸. 모르는 사이에 장물아비가 된 "
+"기분이 어떤가? 힌트를 주지, 정말 아플 거야."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "이거 정말 난감한데?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "너한테는 더욱 그럴걸."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "해리스는 내게 돈을 약속했어!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "그거 안됐네. 네가 얻는 거라곤 죽음뿐이니까!"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+"이처럼 작은 세상엔, 소문이 빨리 전해지지. 방금 자네가 장애물들을 처리한 걸 들었다네. 수고했어. 수익이 아주 짭짤한 일자리에 관심이 "
+"있나?\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "그거 좋군요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "필요 없어요."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "그럼 꺼져!"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "멍청한 것! 경비병, 이 걸리적거리는 난동꾼을 치워라."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr ""
+"좋구만... 그래서, 내 지인이 말하기를 벨딘이라는 사람의 입을 다물게 만들라는군. 그는 지금 오더에 의해 성소에 감금됐네. 그 근처 "
+"강가에 있는 작은 부두 옆에 자주 쓰이지 않는 입구가 있다네. 거기로 향해서, 그의 입을 막게. 그리고 그의 반지를 증거로 가져오게."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "노력할만한 가치가 있나요?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr ""
+"만약 이 마을의 경보를 울리지 않고 조용히 완수하면 50 골드를 보상으로 주지. 이 외에도 더 많은 보상을 받을 수 있는 일들이 아주 "
+"많이 있다네. 그리고 여기, 모험에 도움이 될 만한 무기를 가져가게."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "고마워요. 도움이 될 것 같습니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "천만에. 그리고 기억하게. 그를 입막음하는 게 유일한 희망일세."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "그를 잡겠어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "임무를 완수 한 건가? 배신자의 반지를 가지고 있어?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "그는 죽었습니다, 제 보상은요?"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "거짓말쟁이! 가서 반지를 가져오게!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+"여기 보상일세. 그는 프론트의 비밀장소를 알리려던 참이었네. 자네가 우리들의 목숨을 구했어. 폭정을 타도해서 이처럼 더 많은 보상을 얻을"
+" 준비가 되어있나?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "더 말해주시오."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "내 취향은 아닌데."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr ""
+"나는 프론트의 사령관, 마실과 깊은 관계를 가지고 있다네. 그리고 그는 자네를 비롯한 예리한 사람들을 원하고 말이지. 그리고 보상도 아주"
+" 잘 준다네. 이 수리된 통신기를 받고 이동하게나. 그럼 희망은 물론 기회가 아주 많아질 거야."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "알겠어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "어서 가게. 여기에 계속 있으면, 우리 둘 다 죽는다네."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr "유감이군. 내 친구들을 이제 알고 있으니, 어쩔 수 없이 죽어줘야겠군. 경비병! 이 인간을 체포하라!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "한심한 놈! 경비병, 이 소동피우는 불량배를 잡아라."
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "지나가라고 친구, 그냥 지나가."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "여기서 뭘 하는거야?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "이봐, 난 골드가 필요해!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr "블랙버드가 암호를 알려줬나 보군? 흠, 그럼 경보를 꺼둬야겠군. 마실은 계단 저 밑에 있어."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "고맙다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "지나가라고 친구, 그냥 지나가."
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "총독과 약속이 있으십니까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "당연하지!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "아니. 없는데?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "이런! 기다리게 할 생각은 없었는데... 부디 위로 올라가시길 바랍니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "그렇게 말할 줄 알았어."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "아주 급하시다면, 저하고 예기하는 건 시간 낭비일 뿐이에요."
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "부탁일세. 이 노인을 내버려 두게."
+
+# 〃 (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr "지혜를 찾고 싶은가, 젊은이여? 오더도 이 사실을 알고 있어서 우리들을 '왜?' 하고 묻게 했다네. 자네도 '왜' 그러나?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "동력선은 어디있나요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "오더의 동력 공급 시설은 어디있나요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "불법 추출기는 어디있나요?"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr "그게 어딨는지 말해주지. 왜 그 동력선에 손을 대려고 하는지는 모르겠지마는. 저 앞 하수도 안에 있다네."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "그렇군요."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr "저 앞 하수도 안에 있다네. 프론트가 설치한 동력선일세. 저게 오더 소유라고 우기던 사람은 거짓말을 한 게야."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "고맙습니다."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr "저게 불법이라고 말한다면 난 이제 더는 모른다네. 관련 문제도 원치 않고 말일세."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "감사합니다."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "보내주게. 이 노인은 이제 아무것도 몰라."
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr ""
+"최후의 희망 한 가닥을 잡은 것을 환영합니다. 우리만이 오더를 거부할 수 있는 의지를 갖추고 있죠. 뛰어난 과학력과 전투력은 다 갖추고 "
+"있습니다만, 정작 '해결사' 몫을 해주는 인물이 없어서 말입니다... 부디 우리를 도와주시길 바랍니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "좋아요. 받아들이죠."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "사양할게요!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr "다시... 생각을 해보는 게 좋을 것 같군요. 우리 병사들을 당황하게 만든 것 같은데 말이죠."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "그럼 도와주도록 하죠."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "싫어요! 당신은 낯선 사람이잖아요!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "그럼 불명예스럽고 초라하게 죽어버리시길!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+"좋군요. 블랙버드가 당신에게 지시를 계속 내려줄 겁니다. 당신을 꽤 신뢰하는 듯하더군요. 우리는 오더와 그들의 잔혹한 심복들의 실체를 파헤치고 폭로할 겁니다. 비밀을 헤집고 그들을 몰락시켜 버리세요.\n"
+"    \\cy듣기만 해도 꿈에 그리던 일만 같네, 그렇지?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "어디서부터 시작하면 되죠?"
+
+# 〃 (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr ""
+"애석하게도, 현재 상황은 엉망입니다. 우리가 오더를 공습하기 전에 당신이 수행해야 할 일이 몇 가지 있습니다. 몇 주 전 공습은 비참한 "
+"결과로 끝났고, 대부분의 병사가 감금당했습니다. 그들을 풀어주어야만 합니다."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "아마도 제가 할 수 있을 것 같군요."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+"이 돈을 가지고 마을의 무기상인 이롤리를 찾아가시길 바랍니다. 그리고 이 열쇠만 있으면 모렐 총독을 쉽게 만날 수 있을 겁니다. 그는 부패한 오더의 앞잡이지만, 거래에 미쳐있죠. 우리 요원들을 풀어줄 무슨 수단이든 강구해 보시길.\n"
+"    \\cy그리고 내가 너와 함께 있어 줄께."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "한 번 확인하러 가보겠습니다."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "프론트와 자유를 향하여, 전진하세요!"
+
+# 〃 (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+"감금된 병사들이 당신 덕에 다시 돌아왔습니다. 정말 감사드립니다! 이 보상을 받으시고 의무관이랑 무기 담당관을 찾아뵈시길 바랍니다. 또 "
+"다른 임무가 기다리고 있으니까요."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "그렇군요. 그 다음은 뭐죠?"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+"오더의 방어막을 생성하는 수정체가 그들의 발전소 안에 있습니다. 그것을 파괴할 수만 있다면, 오더의 방어 체계를 약화할 수 있을 겁니다. 블랙버드가 길을 알려줄 첩자의 위치를 알려줄 것입니다. 건투를 빌어요.\n"
+"    \\cy워너는 우리가 모집한 첩자야. 그는 발전소 창고에 있어."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "그 수정체를 파괴하겠습니다."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "프론트와 자유를 향하여, 전진하세요!"
+
+# 〃 (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+"당신의 성과는 우리가 예상했던 것보다 훨씬 굉장하더군요. 당신의 노고 덕에 이제 우리가 활동을 본격적으로 개시할 수 있게 되었습니다. "
+"자네와 블랙버드가 이번 공격에 참여했으면 합니다. 그리고 프로그래머를 없애버리세요. 지금이야말로 오더의 실체가 어떠한지를 폭로할 절호의 "
+"기회입니다."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "그 비밀에 대해서 알려주세요."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr ""
+"프로그래머가 거주하는 곳은 성채 안에 있습니다. 의무관과 무기 담당관을 찾아뵈서 준비를 당당히 하시길 바랍니다.\n"
+"    \\cy일생일대의 격전에 대비해. 돈 아끼지 말고 있는 대로 다 써."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "한 번 저질러 봅시다!"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "프론트와 자유를 향하여, 전진하세요!"
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr "시청이 박살난 걸 보았지? 저건 오더의 심기를 무모하게 건드린 결과같은 거야. 그러니 조심해."
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "도움이 필요한가? 그럼 마실 사령관님을 찾아."
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr "오더를 괴멸할 방법을 마실 사령관님이 찾아냈대. 잘 먹혀야 하는데 말이야... 안 그럼 우리들이 잡아먹힐 거라고."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr "그들의 배수관에서 버려진 이 통들 일부는 분명히 약간의 승산이 있을거야."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr "그래서, 네가 그 요원이지? 고맙다. 네가 없었으면 우리들은 이미 죽고 없었을걸."
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+"지금 우리들에게 승산이 갈 만한 연구를 하고 있습니다. 지구력 향상 이식 칩인데, 이 것만 있으면 당신의 체력과 힘을 더 불어넣어줄 "
+"겁니다. 오류를 거의 잡기도 했구요. 이제, 뭘 도와드릴까요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "치료가 필요합니다."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "당신, 정말 엉망이네요... 어떻게든 치료해줄게요."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "지구력 향상 이식?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "좋습니다. 시간이 오래 걸리진 않을 거예요."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "아직 완료되지는 않았어요."
+
+# 〃 (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr "당신의 이식 칩을 위한 향상 개조가 준비되었습니다. 그런 이유로 온게 아니면, 무엇을 도와드릴까요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "치료가 필요합니다."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "이제 전장에 힘을 발휘해보세요!"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "지구력 업그레이드?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "좋은 선택입니다. 이거 없이는 안전할 수가 없죠."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "거의 다 돼가지만, 아직 완성된 게 아니에요."
+
+# 〃 (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr "연구가 거의 다 끝나갑니다. 연구 도중에 오류를 좀 잡았어요. 기다리는 동안 뭐 필요한 게 있나요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "치료가 필요합니다."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "뭘 하다 왔나요? 크루세이더랑 한판 뜨기라도 했나요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "지구력 업그레이드?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "이것만 있음 될 겁니다."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "우선, 시험을 좀 거쳐야 해요."
+
+# 〃 (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "지구력 향상 관련은 이게 다입니다. 이제 치료가 좀 필요하신가요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "네."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "심각한 부상을 입은 것 같군요. 치료하겠습니다."
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "필요한 게 있으면 말씀하세요."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "탄약이 바닥났어요."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "여기 조금의 탄약을 나눠줄게요. 낭비하지 마시길."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "좋아요. 훈련에 도움이 될 만한 표적을 보여주겠습니다."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "아직 준비가 안 됐어요."
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "또 왔네? 뭐가 필요합니까?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "탄약이 바닥났어요."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "뭘 하다 탄약을 낭비한 겁니까? 여기 조금 줄게요."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "당신은 충분한 탄약을 가졌어요."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "그렇군요. 가능한 오래 싸울 수 있을겁니다."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "미안합니다. 마실 사령관님의 명령을 따라야해요."
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+"무엇을 원하십니까? 보급? 아니면 훈련? 방금 전달된 새로운 무기들을 만지고 싶습니다! 아무튼, 훈련을 거치면 복수를 멋지게 해내실 "
+"거에요."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "탄약이 떨어졌어요."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "여기 탄약입니다. 부디 열심히 싸우고 정확하게 쏘시길."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "거짓말. 탄약을 충분히 가졌잖아요."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr "좋아요! 훈련을 통해서 얻은 실력으로 저 오더 돌대가리들을 박살을 내버려요!"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "사령관님은 인내심이 많은 분입니다. 나중에 확인해주시길."
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr ""
+"제가 제공할 수 있을 만큼의 훈련을 배우셨습니다. 부디 무기를 다룰 시간을 주세요. 보급 때문에 찾아오신 게 아니라면 말이죠."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "알겠습니다. 그럼 탄약이라도?"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "여기 있어요!"
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr "아무 마을에서나 총을 갈겨대지 마세요. 알람을 울릴 거고, 성안에 있는 병력을 다 끄집어내서라도 당신을 잡을 테니까요."
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "환영합니다. 당신 같은 사람들이 더 있었더라면..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr "제가 임무 수행 중이었을 때, 생포한 아콜라이트들을 조사한 적이 있었어요. 요점은, 그 들은 인간이 절대로 아닙니다."
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr "성의 정문이 어떻게 작동하는지, 어떻게 하면 열 수 있는지 연구를 했습니다만... 아직은 희망이 없어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr ""
+"절대로 붙잡히지 마세요. 그 녀석들이 수감된 사람들에게 한 일에 대한 무서운 이야기를 들었어요. 흔적도 없이 그냥 사라져 버린 겁니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr ""
+"조언 하나 하겠습니다. 만약 오더 출신의 깡통로봇들이 당신에게 향하고 있다면, 얼른 피하세요. 그놈들은 훨씬 무섭고 잔혹합니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "방해하지 마세요. 사령관님을 위해 중요한 일을 하고 있으니."
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "유감이지만, 신분 휘장 없이는 보내줄 수 없어."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "멈춰라! 너의 신분 휘장을 보여줘."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "여기, 휘장."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "오, 정말이네. 환영한다. 좋은 하루 보내고."
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "더윈? 녀석은 저 창고 밑에 있다. 그러나 허가 없이는 못 보내준다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "허가를 받았어."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "그럼 가도 좋다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "그가 어디 있는지 아는가?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "그가 정확히 어디 있는지는 모른다. 난 도망자를 그냥 감시할 뿐이다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "당신은 지금 내 감시일을 방해하고 있다."
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "어서 움직여. 총알 먹기 싫으면."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "신분증을 보여줘. 입장하고 싶으면."
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "당장 일해. 어서."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "쉬면 알지? 어서 일해."
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+"일주일 동안 쉬지도 않고 일하느라 정신이 날아갈 것 같아요... 아무튼, 오더가 프론트 저항군을 제압할 작전을 준비한다는군요."
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+"이런 제길... 총독 새끼가 널 보낸 거지? 하필 그 녀석의 몫을 보내기 전에. 좋아, 잘 들어. 날 살려주면 내가 숨긴 비상금을 줄게!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "좋아. 그럼 널 살려주지."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "미안해, 사적인 건 아니야."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "썅! 아니야, 네가 가질 수 있는 건 전혀 없어! 경비병!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr ""
+"사적인 건 지랄하네. 경비병! 여기 노예가 도망친다!\n"
+"    \\cy실례지만, 이거 좀 골때리겠는데?"
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr ""
+"아! 마실 사령관님으로부터 당신이 여기로 온다는 소식을 들었습니다. 발전소로 깊숙이 향하는 지름길을 알고 있어요. 다만, 좀 "
+"위험하답니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "그 정도야 각오하고 있습니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr "좋습니다. 이 신분증은 조심하지도 못하고 냉각 회로로 떨어진 한 불쌍한 녀석에게서 훔쳐온 겁니다. “뿌직”! 완전히 터졌죠."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "그곳으로 들어간 후엔 뭘 해야 하죠?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr ""
+"누군가가 물어보면 통구이 씨의 후임으로 들어왔다고 하시면 됩니다. 별로 어려운 일은 아닐 거에요. 아, 그리고 우리 바로 위에 있는 창고도 한번 확인해보세요.\n"
+"    \\cy으음. 왠지 무기 같은데. 화력이야 더 많으면 좋지."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "이 방법이 통했으면 좋겠네요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "어서 가세요. 여기 계속 있다간 고인이 될 겁니다."
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr "이봐, 나 좀 내버려 둬. 우리가 이렇게 농땡이 치는 걸 들키면 둘 다 죽는다고... 아님 추가 근무를 받는다든지!"
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+"이런 압박감 속에 있다가는 다시 일반 교대 조로 복귀될 것 같아. 우린 지금 성 쪽으로 막대한 동력을 공급하고 있고, 난 저 신무기에 "
+"관한 일지를 거의 다 썼어."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "신무기?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr ""
+"무슨 생각해? 양말 더 지급 받는 거?\n"
+"    \\cy쉬운 일은 아니겠지만, 일단 한번 해보자고."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "어떤 신무기?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "귀머거리야? 조금 전에 내가 얼마나 바쁜지 설명 했을 텐데? 일이나 해."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "넌 누구지? 이곳은 2급 인원만이 출입할 수 있다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "후임 근무자로 왔습니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr ""
+"마침 잘 와주었군. 중심부에 있는 케트릭에게 가서 얘기하라. 아, 그리고 여기 키카드를 받아라. 첫날부터 총에 맞고 싶지는 않겠지, 응?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "동력 수정체는 어디에 있죠?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "근무하러 안 가면 어차피 총살이야. 어서 일하러 가!"
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr ""
+"불안감을 조장하긴 싫지만, 동력 수정체를 지금처럼 심하게 다루면, 갑자기 균열이 나고, 조각나면서, 그리고 '쾅!' ... 그냥 "
+"그렇다고."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+"이거 하나만 확실히 말하지. 이 시설이 또 고장 난다면, 냉각수 수치가 떨어질 거고 우리 둘 다 프로그래머에게 문책을 받을 거야. 만약 살아남는다면 말이지.\n"
+"    \\cy어쩌라고. 아무도 프로그래머들 이야기는 안 듣는데."
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr "너! 그래, 너 말이야. 넌 여기에 들어올 수 있는 권한이 없어. 당장 네 키카드를 내놔. 나 지금 기분 더럽다고!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "자, 카드 여기 있어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr "이게 뭐야?! 잠깐... 이런 젠장. 경비, 여기 침입자를 쏴버려!"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr "일하고, 자고, 고문받고, 인생 참 멋지네. 자, 네가 그 부주의하게 추락사한 친구의 후임 맞지?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "네, 일이 정말 기대됩니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "그래, 좋아. 일이나 하라고."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "수정체는 어디에 있죠?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr "케트릭에게 물어봐. 스위치를 눌러서 진입로를 올리고, 이 신분증을 써서 승강기를 타고 올라가."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "수정체가 어디에 있다고요?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "상관 말고, 케트릭에게 물어봐."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "알겠습니다."
+
+# 〃
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr "만약 더 쉬운 일을 원한다면 저 차단기를 계속 쳐다봐봐. 눈물 나도록 지루해 죽을걸."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+"위대하신 프로그래머님이 침입에 대해 너무나도 불안해하셔서 컴퓨터 중심부를 락다운 시켰어. 일이 점점 더 어려워지고 있는 것 같아. 내 "
+"생각엔 자살기행을 또 해봐야겠어."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "자살기행? 그건 뭡니까?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr ""
+"말 그대로 죽기 쉬운 방법인데, 더 알 필요는 없어. 궁금해 미치겠다면 밑으로 내려가 봐.\n"
+"    \\cy오, 내가 숨어있어서 다행이야. 무슨 뜻인지 알겠지?"
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "멈춰라. 총독이나 간수장의 허락을 받지 않은 이상 그 누구도 입장할 수 없다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "여기 통행증입니다. 들여보내 주세요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr ""
+"알겠다. 하지만 간수장에게만 대화해라.\n"
+"    \\cy뭐가 이리 불만이야. 나중에 얘 좀 꼭 처리해줘."
+
+# 〃 (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr ""
+"내가 친히 나서서 간수장을 찾아야겠나? 어서 움직여. 이곳은 통행 금지야.\n"
+"    \\cy“이곳은 통행 금지야!” 웃기고 앉아있네."
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr ""
+"이 죄인들이 죽음을 바라기 전까지는 오더의 심판과 응징을 받을 것이다.\n"
+"    \\cy아주 들떠있는 녀석이네."
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+"모렐 녀석이 너에게 통행증을 줬다 해도 신경 안 써. 이곳은 이 몸이 통치하는 감옥이다! 내가 가지고 있는 열쇠만 있으면 죄인들의 자유를"
+" 맘껏 조종할 수 있지. 오더는 절대로 실수 같은걸 용납하지 않아!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "그 망할 놈의 키를 건네!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr ""
+"내 시체를 밟고 얻어라!\n"
+"    \\cy아마 네가 “부탁”을 안 해서 이러나 봐."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "좋은 생각이야!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "동아줄, 아님 쇠사슬... 네 목에 잘 어울리겠네. 으하하하!"
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr "그 많은 경비와 간수장을 어떻게 해서 격파한 건지는 모르겠다만, 빠른 재판을 추천하겠네. 왜냐하면 자네는 헛수고했으니까."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "내 전우를 풀어주든지, 죽든지!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr "날 죽이면 일이 더 최악으로 변질될 것일세. 나에게 감옥 문을 열 수 있는 유일한 지문이 있으니 말이지."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "그럼 네 손길이 좀 필요할 것 같아..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "무죄, 아니면 사형 선고. 정하시게."
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "거기 서 있지 말고, 어서 우릴 내보내 줘!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "하늘, 하늘을 보고 싶어."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "나가려면 나갈 생각을 하고 나갈 준비를 해야 되는데 나갈 수가 없어 왜냐하면 나가는 걸 막는 놈들이..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "오더 놈들이 아직도 설치고 있다면 절 내보내지 마세요. 죽을까 봐 두려워요..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr "투정부리기는 싫지만, 드디어 사령관님이 구출작전을 실시한 것 같군요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "빵 한 조각이라도 먹고 싶습니다... 너무 배고파요..."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"아아... 도움이 필요한 지상인이구려. 도움을 받고 싶으면, 우리에게 도움이 되어야 할 것이야. 식량을 구할 수 있는 마을로 향하는 "
+"입구가 오더에 의해 막혔거단."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "성문 관리 장치는 어딨지?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr ""
+"나를 도와주려, 아니면 너를 도륙할 거랴!\n"
+"    \\cy다들 참 궁색하게 사네."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "어떻게 도와주면 방법을 알 수 있지?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+"오더 병사가 입고 있는 전투복을 가져오려. 내 걸인 동료가 그걸 입고 입구를 걱정 없이 영원히 열 수 있게.\n"
+"    \\cy끝내준다. 이제 시궁쥐 왕의 심부름도 해야 한다니."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "그 전투복이 정말로 필요한가?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr ""
+"입구를 열고, 전투복을 구해서, 교환 하자구려! 아님... 꺼지시라.\n"
+"    \\cy얘도 분명 냄새 하나는 죽여줄 거야."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "내가 원하는 것을 가지고 왔나랴?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "이 전투복은 어때?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "전투복을 가져와랴..."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr ""
+"아주 좋은 겨! 여기, 추가 보답을 받으라. 내 걸인 동료가 크루세이더의 잔해 속에서 이걸 구해냈다네에. 아주 좋은 화염방사기를 만들어낼"
+" 수 있을 거야. 이걸 들고 이롤리를 찾아가 바. 그리고... 요리를 즐기는 거쟈."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "관리 장치는 이제 어디있지?"
+
+# 〃
+# 
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+"하수도로 통하는 또 다른 입구로 가야 혀. 들어가려면 성안에 위치한 하수도 정비소에서 수조에 있는 오물을 배출해야 해. 그 수조 밑에는 하수도로 향하는 숨겨진 입구가 있고, 그곳으로 향하면, 정문의 장치를 찾을 수 있을 게야.\n"
+"    \\cy또 하수도라... 끝내준다. 저 아래에 또 뭐가 살고 있을까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "그 외에 당신이 할 수 있는 일은?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+"행운을 빈다. 지름길을 좀 열어놨어야. 덕분에 과제가 좀 쉬워질 거다. 오, 딱맞는 치수구먼! 완벽해... 그런데 색상이 별로다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "도움 정말 고마워."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "헤헤... 아무 일도 없는 거니 괜찮야!"
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "워렌이 우리들을 구원해 줄 겁니다. 그는 아직 믿어도 되니까요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "문제를 해결할 해답을 찾고 계신다면, 워렌을 찾아가세요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "프론트와 자유를 향하여... 는 개뿔. 때문에 우리들만 죽게 생겼어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "오더가 지상으로 향하는 입구를 막은 이상, 우리는 굶어 죽어야 할 운명에 시달려야 해요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "굶어 죽을 것 같습니다... 부디 음식 찌꺼기라도 괜찮으니까 음식을..."
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+"수감자들의 탈옥을 막지 못해서 하수도를 지키게 되었어. 만약 탈옥하게 만든 녀석을 만난다면, 녀석이 죽을 때 까지 내장을 천천히 끄집어낼"
+" 거다."
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr "저 빌어먹을 거지들이 밖으로 나가지 못하게 우리들이 입구를 꼼꼼히 막아뒀지. 천천히 굶어 죽는 순간을 재밌게 즐기고 있을걸?"
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "승인을 받지 않은 것 같은데. 여긴 출입금지 구역이다."
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "누가 성문을 열어놨어? 경보! 알람을 울려라!"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr "하수도로 향하는 또 다른 길이 있어. 저 스위치를 켜고 위로 올라가서 수조의 오물을 비워봐."
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "너희들 제정신이야? 프로그래머님이 알현실에서 뛰쳐나오는 순간, 네 놈은 죽게 될 거라고!"
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "잠깐. 너는 밑으로 내려갈 허가를 받지 않았다."
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr ""
+"프로그래머? 누가 알려준 거야? 프로그래머 따위는 존재하지 않아. 이 소문이 몇 년 동안 계속 퍼졌다는 게 믿기지 않아. 프론트도 그 잡소문을 아직도 믿고 있던 모양이었고. 한심하네.\n"
+"    \\cy여기가 아닌가 봐. 다른 곳을 찾아봐야겠어."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "그럼, 진실이 뭐야?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "다 알려줬어. 시간 낭비하지 마."
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "같이 싸우자! 우리들이 이길 거고, 밝은 날이 찾아올 거야!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "오늘이야말로 결전의 시간이야. 우리들이 바랬던 날을 위해!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "우리들 중 한 명이 죽는다 해도, 승리는 확신해. 잃을 게 없어!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "오더에 패배와 몰락을, 프론트에 인류와 영원한 자유를!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "희망 한가닥 작전을 위해! 오더여! 내가 돌아왔다!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "슬프지만, 이 것은 전쟁이잖아."
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+"경비들을 모조리 죽이시다니! 해치지 말아주세요. 제가 그분께 어리석은 짓이라고 제안을 했었는데... 진짜 프로그래머님은 성채에 있습니다."
+" 이 열쇠를 쓰세요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "넌 프로그래머잖아!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr "제가 신적인 힘을 갖고 있다고 생각하나요? 오더는 어차피 모두를 부려먹습니다. 떠나세요, 전 이미 죽은 목숨이에요."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "힘이 곧 열쇠다!"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+"아, 드디어 깨어났군요. 프로그래머가 죽고 나서 얻은 저 물건을 쥐는 동안 우리는 그것에 대한 끔찍한 비밀을 밝혀냈습니다..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "어떤 비밀인가요?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+"이 무기가 어디서 왔는지는 모르겠다만, 얼른 찾아내야만 합니다. 그 한 조각을 비롯한 나머지 '다섯' 조각도 필요합니다. 제가 알고 있는"
+" 건 이게 다입니다. 오라클이라는 자를 만나서 도움을 요청해보세요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "물자가 좀 필요할 것 같은데."
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "골드를 좀 받으세요. 의무관이랑 무기 담당관을 찾아뵈시고 이동하시길!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "네!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "프론트와 자유를 향하여, 전진하세요!"
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr "돌아왔습니까? 상처라도 입었나요? 시간이 없으니 임무를 속행하고 시질 조각을 마저 모으시길 바랍니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "오라클의 이름으로 넌 죽어야 해!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr "전 자유를 지키겠다고 맹세했습니다. 오라클이 세 번째 조각을 가지고 있단 말입니다. 그자가 바로 배신자입니다!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "그럼 오라클을 죽여야겠군."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "배신자는 바로 당신이야!"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "유일신의 혼이여, 이 세계를 잿더미로 만듦으로써 저를 위해 복수하심이!!"
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+"좋은 선택입니다. 아무래도 오더가 이끄는 악에서 오라클을 조종하는 것이 명백해졌으니, 녀석을 찾아가 시질의 세 번째 조각을 회수하세요.\n"
+"    \\cy어서 가자, 나의 영웅. 그 못생긴 녀석에게 본때를 보여주자고."
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+"우리가 마주하는 공포의 끝이 없는 것 같군요... 최근 오더가 우리를 학살하는 게 아닌 일종의 강화 인간으로 개조시키고 있었던 것이라고 소식을 들었습니다. 개조가 시행되고 있는 시설을 찾아가서 그곳을 영구적으로 정지시키세요.\n"
+"    \\cy인간개조? 음, 이거 때문에 녀석들이 끊임없이 나오는 거였어! 녀석들 성질 더러운 것도 그렇고."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "이 장소는 어디에 있죠?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+"우리 군의 한 대대장인 릭터가 식당가에 위치한 폭포 근처에서 당신을 기다리고 있습니다. 그는 그 끔찍한 시설을 보았다고 했으며, 침투할 "
+"수 있게 도와주고 싶다는군요. 부디 이 잔혹 행위를 멈출 수 있기를 바랍니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "그놈들은 죗값을 치를 것입니다!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "프론트와 자유를 향하여, 전진하세요!"
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr ""
+"유일신... 그분의 영혼의 힘으로... 나의 육신을 버리고... 그분과 자유롭게 날아가리라... 그대가 소유한 것, 그대가 직면할 운명... 모두 모를 것이다... 유일신이 자유가 되면... 나에게 보답하시매, 그와 하나가 되리라!!\n"
+"    \\cy역겨운 자식... 죽여버려!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "당신을 처단하겠어!"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "여기까지 오시다니 놀랍군요. 뭔가 필요한 게?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "치료해주세요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "그럼 긴급 치료하겠습니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "괜찮아 보이는데."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "특별한 거 없나요?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "네! 사용 가능한 하드웨어가 하나 있습니다."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "아뇨. 아직 작업 진행 중입니다."
+
+# 〃 (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+"무엇을 도와드릴까요? 페리스가 아주 복잡한 파일들을 천천히 해독하는 중입니다만, 기다리는 보람이 많이 있을 거예요. 나머지 정보를 다 "
+"해독한 뒤면 진보된 지구력 향상 이식을 받으실 수 있을 겁니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "치료해주세요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "몸 간수 잘하시고 싸우세요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "이식 준비는 다 됐습니까?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "다 됐습니다! 이제 이식을 시작하죠!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "곧 완성되요."
+
+# 〃 (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr ""
+"전에 이식한 지구력 향상 칩에 오류가 좀 발견되었더군요. 그 오류를 잡은 최근 버전을 페리스랑 같이 만드는 참입니다. 아무튼, 원하시는 "
+"게 있나요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "치료가 필요합니다."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "자, 갓 태어난 것처럼 멀쩡할 겁니다!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "향상 칩 최근 버전?"
+
+# 〃 (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "이제야 좀 멋져 보이는군요."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "페리스가 작업을 마치는 순간 보여드리겠습니다."
+
+# 〃 (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+"별일 없으시죠? 세상에나, 오더의 과학력은 세계 제일이군요! 이식한 칩이랑 추가 설치가 가능한데, 성능을 향상해줄 거에요. 현재 부품을 "
+"더 설계하고 있습니다. 만약 준비가 되면 불러줄게요. 아무튼, 치료가 필요하신가요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "네. 치료해주세요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "더욱 더 건강하게 치료했습니다."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "세계 제일의 부품은 어떻습니까?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "잘 작동되면 알려주시길!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "설계가 아직 끝나지 않았어요."
+
+# 〃 (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+"지루하지 않으신가요? 그리고 좋은 소식이 있는데, 페리스가 드디어 지구력 칩의 출력을 높일 방법을 찾아냈답니다. 그가 저에게 사양을 "
+"알려줬고, 당신의 인체 비율에 맞춰서 조정하는 중입니다. 이것이 지금 유기 조직을 강제로 생성하고 있어요. 참 신기할 따름입니다. 치료 "
+"필요하신가요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "네. 치료해주세요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "치료 끝. 이제 가까이서 불장난하지 마시길!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "칩 조정이 언제 끝나는지요?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "세상에나, 정말로 작동하는군요!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "조직이 다 자라날 때까지 기다리는 중입니다."
+
+# 〃 (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"오늘만큼은 구식으로 연구를 해야 할 것 같군요. 이식 칩의 숨겨진 비밀을 찾아냈거든요. 그나저나, 마실 사령관님이 모든 병력에 이 칩을 "
+"이식하라고 명령하셨는데, 아시나요? 당신 덕에 실험이 공인됐으니까요! 원하시는 게 있으신가요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "나 좀 치료해줘요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "좀 치료해줬습니다. 이제 어떠신가요?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "새로운 이식 칩?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "있죠. 제 생각엔 아주 좋은 품질인 것 같아요."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "시간을 좀 더 주신다면..."
+
+# 〃 (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+"마무리가 다 됐습니다. 페리스가 젖 먹던 힘까지 정보란 정보를 다 긁어모아서 연구했습니다. 한마디로, 이게 마지막 향상 칩 연구일 거라는"
+" 거죠. 우리들의 최선을 벗어나지 못한 건 꽤 섭섭하지만, 연구하랴 이식하랴 바쁜 업무에 시달리지는 않을 테니 다행인 듯싶어요!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "절 치료해줄 수 있나요?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "자, 이제 안전할 겁니다."
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+"그 프론트의 인기 많은 영웅 아닌가요? 잘하셨습니다! 무엇을 도와드릴까요? 성안에서 특이하고 질 좋은 보급물자들을 긁어모아 왔어요. 만약"
+" 탄약 보급을 위해서 오신 거라면 저스틴에게 물어보세요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "탄약이 바닥났어요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "그렇게 계속 쏘아대면 탄약이 낭비됩니다. 여기 탄약이에요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "중화기 다루는 훈련을 시작하겠습니다!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "준비가 아직 안됐습니다."
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr "전쟁 상황은 어떻게 되어가나요? 상관은 없지만. 우리들이 아직 살아있는 한 물어볼 필요도 없죠. 무엇을 원하시나요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "탄약이 바닥났어요."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "좀 도움이 될 겁니다."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "탄약을 충분히 소지한 것 같은데."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "저항군의 참된 기술들을 좀 가르쳐드리죠!"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "당신은 아직 준비가 안됐어요."
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr ""
+"무엇을 원하시나요? 훈련? 아니면 탄약 보급? 그리고 훈련은 아직 끝난 게 아니니까 끝날 걱정도, 다칠 고민도 하지 마시길 바랍니다."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "탄약이 필요하겠네요."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "좋은 병사에겐, 좋은 품질의 탄약을."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "아직 당신에게 탄약이 남아있는 것 같습니다만..."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "심화학습을 할 시간이군요!"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "넌 아직 준비가 안됐어."
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"이번엔 또 뭔가요? 휴식을 제대로 취하지 않는 성격인가요? 그래도 몸은 멀쩡히 움직이는 것 같군요! 그토록 가르침을 받던 우수한 제자가 "
+"사체로 돌아오면 정말 슬플 테니."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "총알이 좀 더 필요해."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "여기 있습니다. 낭비하지 말고 아껴 쓰세요."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "지금도 충분한 것 같은데요."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "나에게 뭘 가르쳐 줄 수 있죠?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "너무 자만하지 마세요. 아직 더 배울 게 많으니까."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "준비가 안 된 것 같으니 나중에 배웁시다."
+
+# 〃 (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr "다시 돌아오다니. 어쩐 일이십니까? 견디기 힘든 고역이었겠지만, 지금 당신은 우리들을 위해 잘 싸우고 계십니다. 믿어주세요!"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "탄약이 바닥났어요."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "여기 탄약. 그리고 더 필요한게?"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "내가 줄 수 있는 탄약의 양보다 큰데?"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "가르칠 수 있는 걸 가르쳐주세요."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "알겠습니다. 여기 과녁을 보여주지."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "지금은 안 돼요."
+
+# 〃 (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr "필요한 게 있습니까? 수 년 동안 고통을 안겨 온 오더 놈들에게 복수를 해줬으면 하는 바입니다. 끝날 때까지!"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "탄약 좀..."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "전장을 자주 누비나 보군요. 여기 탄약!"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "당신의 남은 탄약이 눈에 보이는군요. 줄 수 없습니다!"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "제가 가르칠 만한 훈련을 배우면 좀 똑똑해질 겁니다."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "훈련받기엔 가깝지만서도... 먼 것 같습니다."
+
+# 〃 (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr ""
+"아직도 살아 숨 쉬고 있다니 믿기지 않네요... 당신이 싸우고 생존하는 동안 살아 돌아온 병사들은 그렇게 많지 않아요. 원하는 게 "
+"있습니까?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "탄약이 바닥났어요."
+
+# 〃 (〃)
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "건강하고 집중됬을 때 소모하시길."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "충분히 있으면 더 안 줘요."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "흐음, 이게 다입니다. 훈련을 다 마쳤어요."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "사령관님의 말씀을 듣고 찾아와주시길."
+
+# 〃 (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr "모든 훈련을 배우고 마치셨잖아요. 당신이 알아둬야 할 건 그게 전부입니다. 그 외에는 탄약이 필요하신가요?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "알겠습니다. 그럼 탄약이라도?"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "탄약 대령이요!"
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+"이 녀석을 확인해보세요! 텔레포터 비컨이라는 건데, 사용해서 신호를 전송하면 병력을 보내겠습니다. 그 외에 원하는 게 있어요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "미니 미사일 한 박스"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "여기 있어!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "돈이 부족한 것 같은데!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "고폭 유탄"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "거래 감사드립니다!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "돈이 충분할 때 다시와요."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "에너지 포드"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "에너지 포드 한 개 대령이요!"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "이 물품은 비싸죠. 저도 압니다."
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "텔레포터 비콘"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "위급한 상황에서만 사용하시길."
+
+# 〃
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "미안하지만, 여긴 자선단체가 아니에요."
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr ""
+"성을 공격해 점령한 이후로 화력과 병력 등을 많이 증가시킬 수 있게 되었습니다. 오더 놈들은 분명히 이를 대비한 역습을 준비하고 있을 "
+"거예요."
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "부디 조심하시길."
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "부디 건투를 빕니다. 당신 덕에 희망을 잃지 않는 거니까!"
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "전 열쇠지기에요."
+
+# 〃 (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "많은 사람이 이 직업을 감사해야 하고 놀라운 일이라 말하겠죠. 하지만 아닌데, 사실은..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "그냥 망할 열쇠를 줘!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "좋아요, 하지만 기억해요. 전 열쇠지기랍니다!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "그래, 알 게 뭐야..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "열쇠지기. 그게 바로 저죠!"
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "죽어라, 배신자!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "뒈져라, 배신자!"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr "거들먹거리러 온 거냐? 비록 우리가 이 철창에 갇히긴 했지만, 계속 여기 있으면 넌 아직도 질 거라고."
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "우릴 여기서 내보내 줘!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "날 좀 내버려 둬!"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "그대가 찾고 있는 지혜는 어떤 것인가? 평범한 자여?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "유일신의 인장, 시질이다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+"그대에게서 시질의 조각 중 하나가 느껴지는군. 두 번째 조각은 진홍빛 흑요석 탑의 심장부에 있다. 거기서 기다리고 있는 비숍과 싸워야 "
+"한다. 그 자의 권력을 상징하는 문양을 따라가면 만날 수 있을 것이다. 열쇠지기에게 이 통행증을 전해주어라. 그리고 괴물을 처치하면 다시"
+" 나에게로 오라."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "금방 돌아올게."
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr "비숍은 만만치 않은 상대지만, 이보다 더한 일들이 기다리고 있다. 두 번째 조각을 찾고 다시 돌아오라."
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+"다음 도전은 그대의 정신을 시험할 것이다. 세 번째 조각은 바로 그대의 지도자가 가지고 있다. 그는 그대를 시켜서 죽였던 괴물들과 "
+"마찬가지인 존재다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "마실이 배신자라고?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr "그대의 맹목적인 믿음이 조각들을 하나하나 찾으면서 그자의 목표를 이뤄주고 있다. 그를 상대하고 구속된 운명에서 벗어나라."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "역시... 마실이였군."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "내가 믿지 않는 건 네놈이다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr "그대가 어떤 선택을 하더라도, 그대를 비롯한 종족은 유일신의 의지에 의해 멸망할 뿐이다."
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "마실을 죽이고 돌아오겠다."
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "그렇게 할 순 없어."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "그대가 가만히 있어도, 시간의 강은 계속 흐를 뿐이다."
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr ""
+"그대 몸 안의 암 덩어리를 잘라냈건만, 심장은 여전히 뛰고 있구나. 다음은 네 종족의 도살과 지배를 책임졌던 로어마스터다. 그를 "
+"막아내면, 다음 조각은 너의 것이다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "어디를 가야 그를 발견할 수 있지?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr ""
+"내가 로어마스터로 향하는 순간이동 장치를 열어두었다. 그 자가 죽으면, 똑같은 장치를 써서 다시 나에게 오라.\n"
+"    \\cy못생기긴 했어도, 이 양반 우리 편인 것 같네."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "녀석의 조각을 가지고 다시 올게!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "발버둥을 친다해도, 시간의 강은 계속 흐를 뿐."
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr "애처로운 자여, 지금껏 수천 명이 이루지 못했던 일을 해내었다... 나에게 시질의 힘을, 유일신의 목소리를 전해주는구나."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "무슨 소리야?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+"시질은 잠겨저 있던 문을 열고, 이 세상을 정화할 혼령을 깨울 것이며, 나에게 영생을 선사할 것이다. 내가 이 세상의 기운을 모두 쓸어 "
+"담아 새로 정복할 세계를 찾아 나설 힘을 모을 것이다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "네 놈의 음모를 막겠다!"
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "네가 죽으면 될 것이다..."
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+"저희를 구출하기 위해서 찾아오셨나요? 그들이 제가 성실하게 일을 한 사례로 세뇌 장치를 때어갔어요. 그런데... 아직도 위험한 것 "
+"같은데, 좀 흘린 침 자국을 좀 닦아야 할 것 같아요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "그래, 난 널 구하러 왔어."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "정말인가요?"
+
+# 〃
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr ""
+"전송기를 파괴하기 전까지는 세뇌된 사람들을 도와줄 수가 없어요. 저 위층에 방어막에 보호받고 있는 채로 있습니다. 제 원래 업무는 광석이"
+" 끼지 않게 운반 벨트를 확인하는 거였어요... 이젠 일할 필요도 없지만!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "당연하지. 너는 자유야!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "오, 고마워요!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "우린 자유야! 우린 자유라고!"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "광석을... 캐내야 해..."
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "프론트가 해냈다! 자유를 거의 되찾았어!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "광석... 데그닌... 캔다..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "살았군요. 이제 저항군 기지로 향하는 일 밖엔 남지 않은 것 같아요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "캐고... 캐고... 또 캔다..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "살았다! 이제 그 놈들이 죽이기 전에 도망쳐야해요!"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "여기서 뭘 하는거지?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "정기적 검사요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "좋아, 계속해."
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "보고할 게 전혀 없어. 모든 장치, 시설, 인력 모두 이상 무. 만약 하나라도 문제가 생기면 나에게 알려줘."
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "안녕하십니까. 조금 전에 문제가 있었습니다만 경마한 문제였고 지금 해결됐습니다."
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "탄창으로 맞고 싶지 않으면 움직여."
+
+# 〃 (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "신분증 확인."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "여기요. 급하니 빨리 확인해주세요."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "얼굴 앞에서 신분증 그만 흔들고 얼른 들어가."
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "아무 일도 안 일어났다. 어서 움직여."
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "정말 건강한 표본이군. 아마 넌 내 도움이 필요하지 않을 거야, 그렇지?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "뭐, 그렇지. 마실이 날 보냈으니까."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "쉿... 죽기 싫으면 조용히 해. 자, 내가 뭘 도와줄까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "비숍을 어떻게 찾아야 하는지 알려줘."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr ""
+"호오오, 난 네가 그걸 물어볼 줄 알았어. 뒤를 돌아봐. 저건 비숍의 성채로 향하는 입구야. 방어막으로 덮여있는데 저걸 끌 수 있는 건 "
+"허가된 방문자뿐이야. 네가 아니라."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "난 비숍을 죽여야만 해."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"아, 그렇겠지. 먼저 보안단지에 들어가서 텔레포터를 이용해. 그리고 어쩌면 이건 네 취향일지도 모르겠군. 중앙 관리소에서 컴퓨터를 파괴해. 컴퓨터도 없애고, 방어막도 없애버리라고.\n"
+"    \\cy최근 상황을 보건대, 잠입 작전은 힘들 것 같아."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "좋아, 쉬운 일인 것 같군."
+
+# 〃
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr "컴퓨터를 파괴할 승산이 있을거야, 성채로 향하는 계획서가 있는 곳이니까. 물건 좀 빼돌려 본 적 있나? 헤헷!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "뭐 다른건 없나?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"음, 듣자 하니 성안 쪽 격납고에 마울러가 입고되었다더군. 뭐든지 날려버리는 무기 말이야.\n"
+"    \\cy흠. 이유 없이 그런 소문이 났을 리는 없을 테고... 나도 그 무기 하나만 가져다줘."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "이게 전부지?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "자네, “꺼져.”가 무슨 뜻인지는 알지?"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr "퀸시에게 먼저 물어보세요. 전 그가 괜찮다 하지 않는다면 아무것도 도울 수 없습니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "오늘은 어떻게 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "의료 붕대"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "의료 붕대 하나, 여기 있습니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "그건 15 골드입니다, 친구."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "구급 키트"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "구급 키트입니다. 잘 쓰시길."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "그거 사기엔 자금이 부족한 듯."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "수술 키트."
+
+# 〃
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "수술 키트 하나 여기있습니다."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "돈이 좀 있을 때 돌아와요!"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "무슨 일이냐?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "그냥 둘러보는 중이었습니다."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "그럼 방해하지마."
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr "템플러가 곧 새 마울러를 가지러 올 거야. 그들을 방해하면 넌 죽은 목숨이야."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "마울러?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "템플러가 제일 좋아하는 무기야."
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+"최신 에너지 무기지. 이 무기를 보호하기 위해서 경비가 아주 삼엄하다고. 다만 시간 날 때 맨눈으로 보기는 했지만. 모든 템플러 분대가 "
+"이것들을 집어가기 전까지는 그 누구도 절대로 만질 수도, 볼 수도 없어."
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "이곳은 중앙 관리소에 전술이나 계획을 보고하기 위한 곳이야."
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr ""
+"난 이곳의 책임자야. 로어마스터님의 로봇 설계를 돕기 위해 일하고 있지. 만약 공식 업무 외에 온 거라면, 바쁘니까 돌아가 줘야 "
+"되겠는걸?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "공식 업무로 왔어."
+
+# 〃 (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+"티모시와 이야기를 나눴구나, 그렇지? 티모시랑 같이 한발 늦기 전에 오더의 비밀을 파헤치려고 열심히 노력했지. 아마도 우리들을 도와줄 수"
+" 있을 것 같은데 말이야. 방금 제조 공간의 문을 열어놨어."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "그 안에 무엇이 있는지 아나?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr ""
+"아주 중요한 기밀 공간이야. 난 오더가 거기에서 각종... 생물들을 만드는 거랑 부적이라는 희한한 유물을 보호하는 모습을 봤지. 그런 "
+"이유로 그 누구도 못 들어가. 그리고 이와 똑같은 다른 유물을 합치면 초월한 힘을 발휘한다는 소문도 들었어."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "내 생각엔 그걸 원하나 보지?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr ""
+"아니야! 만약 네가 가질 수만 있다면, 그건 네 거야. 아마도 우리들을 탄압으로부터 구해줄 수 있겠네. 부디 행운을 빌어. 왜냐하면 많은"
+" 걸 준비 한 뒤 각오하고 들어가야 하거든."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "그 과거에 대해서 뭐가 어떻길레?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr ""
+"주변을 돌아다니면서 각종 폐허를 봤을 거야. 믿기지는 않겠지만, 하늘에서 갑자기 추락한 혜성은 정말로 혜성이 아니라 외계인들이 타고 "
+"내려온 우주선이라는 거야. 그리고 더 놀라운 사실은, 이 녀석들은 다 이곳에서 태어났데."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "그래서 그 스펙터들과 유일신이..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr ""
+"한때 이 생물들은 이 세상을 지배했던 존재였어. 초월한 힘을 계속 유지하기 위해 온갖 생명력을 빨아먹어 왔던 거지. 태초의 사람들이 "
+"어떻게든 이 들을 봉인하긴 했지만, 많은 희생이 뒤따라야만 했지... 이게 내가 알고 있는 전부야."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "고... 고마워. 내가 할 수 있는 것을 찾아보지."
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "행운을 비네, 친구."
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr "궁금한 게 있으면 스미시 제조장관님에게 물어봐. 내 업무는 상자에 표를 붙이는 것밖엔 없어."
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "무엇을 줄까요, 형씨?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "돌격소총 탄약 박스"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "탄약을 구매해줘서 고마워요."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "가격에 맞게 돈을 가져오세요!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "미니 미사일 박스"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "여기 있습니다."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "그건 85골드입니다."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "고폭 유탄"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "여기 유탄입니다."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "그건 100 골드야, 친구."
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "에너지 포드"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "여기 있습니다."
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "미안하지만, 그건 135 골드입니다."
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "어떤 걸 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "가죽 갑옷"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "여기 있어요, 형씨."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "돈이 부족하면 다른 곳을 알아봐! 여긴 자선단체가 아니라고!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "강철 갑옷"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "탁월한 선택이십니다, 형씨."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "이것을 구입하기엔 돈이 부족합니다!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "환경 방호복"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "여기 있습니다."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "돈이 없다면 방호복을 줄 수 없습니다."
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "뭔가 다른 거는?"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "복도를 따라 문을 향해 가보세요."
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "할려면 돈을 먼저 주세요."
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "무엇을 드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "가죽 갑옷"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "적절히 입으세요, 시민."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "딴 데 가서 구걸하세요!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "강철 갑옷"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "탄탄한 게 잘 보호해준답니다."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "돈이 부족합니다. 다른 건 어떠신가요?"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "환경 방호복"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "여기 받으세요!"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "방호복을 사기엔 돈이 부족합니다."
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "환영합니다. 뭔가 필요하신지요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "의료 붕대"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "의료 붕대 하나. 경마한 부상에 쓰시길."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "15 골드가 없습니까? 유감이군요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "구급 키트"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "구급 키트는 아주 유용하죠. 잘 쓰시길!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "돈이 부족하군요. 못 줍니다!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "수술 키트"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "아주 위박한 상황에 쓰시길. 여기 수술 키트입니다!"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "돈이 많이 있으면 모를까, 살 수 없을겁니다!"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "좋은 하루! 뭐 필요한거라도?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "정보 있습니까?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr "공장에서 나오는 사람들을 전혀 못 봤어. 방어막이 꺼지는 일이 없었으니까."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "돈 없으면, 정보도 없다네."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "아, 무엇을 원하는가?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "정보가 필요해요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr "공장은 혜성이 충돌한 지점에서 건설되었다네. 우연으로 건설된 게 아니라고 생각해."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "5 골드 정도 하는데 말이지."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "다시 만났군. 오늘은 어떤 걸?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "더 많은 정보를 원해요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr "오더가 획기적이고 무서운 병기들을 생산한 후 공장의 문을 닫았다네. 그것들의 이름은 '인퀴지터'지."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "먼저 5 골드를 주게나."
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "이 바텐더는 꺼낼 수 있는 모든 조언을 꺼냈다네. 미안."
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "안녕하세요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "뭐하는 거죠?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "별거 아닙니다. 방해하지 말고 저리 가세요!"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "자, 제가 뭘 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "그림자 갑옷?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "하하하... 아주 조용하고 보이지 않는 도구죠!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "저리 가, 돈이 있을 때나 여길 찾으라고요."
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+"데우스님 감사합니다, 지원군이 왔군! 공장에 들어가려면 열쇠가 필요합니다. 그 열쇠를 가진 한 요원이 오더의 요새가 있는 고대 무덤에서 "
+"길을 잃었습니다. 지원군 10 명을 보내긴 했으나 돌아오지 못했습니다. 그곳에 무언가가 있는 것 같아요!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "그게 뭐죠? 사람? 아니면... ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+"아냐. 사람 같은 건 절대로 아니라고. 그게 무엇이든, 당신은 어떻게든 싸워서 열쇠를 돌려받아야 합니다. 고대 무덤의 입구를 "
+"열어두겠습니다. 만약 열쇠를 얻으셨다면, 광산 옆에 있는 공장으로 향하시길 바랍니다. 시간이 얼마 남지 않았습니다!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "비인간적인 녀석인가요? 좋군요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "시간과 생명이 위협받고 있다고! 서두르세요!!"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "당신의 도움이 더 되어줄 수 있겠습니까?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "정보 더 있습니까?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "티모시를 찾아보세요. 제가 듣기론 그가 오더의 비밀들을 알고 있다던데."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "5 골드만 주세요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "내가 아는 건 그것뿐입니다. 바텐더라도 할 말이 떨어질 수 있다고. 미안해요."
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "안녕하세요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "무슨 일을 하고 있는거죠?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "그냥 뭘 하고 있습니다. 저리가세요!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+"만약 시간이 남아돈다면, 푸른 성배를 찾아보러 가시는 게 어떤가요? 오더에 대한 제 연구가 맞아떨어진다면, 그것은 분명히 공장의 "
+"조립시설에 숨겨져 있을 겁니다. 그 보물은 더 할 말 없이 아주 진귀할 거에요. 그걸 찾아주면, 딱 맞는 보답을 해주지요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "푸른 성배를 정말로 찾으셨군요! 저에게 주세요. 그럼 거래를 시작하죠!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "여기 받아요. 재수 없어 보이니까."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "배 째시지, 이건 이제 제거에요."
+
+# 〃 (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "이런 식으로 나가시겠다? 그럼 거래를 취소하죠. 사라지세요!"
+
+# 〃 (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+"공장의 제련소로 찾아가세요. 제가 제공한 정보만 있으면 그곳으로 향하는 비밀구역을 쉽게 찾을 수 있을 겁니다. 제련소 직원 중 한 명이 "
+"그곳으로 향하는 문을 열 수 있어요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "그곳을 어떻게 찾을 수 있죠?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr "제가 연구를 좀 더 해봤는데, 그곳에서 사악한 고대의 기운이 솟아난다는군요. 조심하시길!"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+"저 푸른 성배... 어떻게 찾으신 거죠? 오더와 그들의 과거를 좀 조사하던 참이었습니다. 저 보물만 있으면 아주 커다란 도움이 될 "
+"것입니다. 그 성배를 주신다면, 좋은 정보를 알려주겠습니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "값어치도 없을 것 같은데, 그냥 가져가세요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "뭔 개소리야? 이제 이건 내 것이라고!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "아주 좋은 기회를 다 날려버리시는군. 꺼져요!"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "그럼, 뭘 더 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "그림자 갑옷?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "들켜도 당신을 계속 맞추진 못할 거요!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "이 유용한 도구를 공짜로 주기엔 영 그렇군요."
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+"데우스님 감사합니다, 지원군이 왔군! 공장에 들어가려면 열쇠가 필요합니다. 그 열쇠를 가진 한 요원이 오더의 요새가 있는 고대 무덤에서 "
+"길을 잃었습니다. 지원군 10 명을 보내긴 했으나 돌아오지 못했습니다. 그곳에 무언가가 있는 것 같아요!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "이게 뭐지? 사람? 아니면... ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+"아냐. 사람 같은 건 절대로 아니라고. 그게 무엇이든, 당신은 어떻게든 싸워서 열쇠를 돌려받아야 합니다. 고대 무덤의 입구를 "
+"열어두겠습니다. 만약 열쇠를 얻으셨다면, 광산 옆에 있는 공장으로 향하시길 바랍니다. 시간이 얼마 남지 않았습니다!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "비인간적인 녀석인가요? 좋군요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "시간과 생명이 위협받고 있다고! 서두르세요!!"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+"주인님은 방문자들을 싫어해. 반대로 그는 남들의 방해 없이 혼자서 일을 하는 걸 아주 좋아하지. 저장고에서 재료를 꺼내서 가져다주는 나 "
+"같은 사람들을 제외하면. 한 쌍의 팔다리가 필요하다고 들었는데... 오, 이런. 이제 이야기할 시간도 없어졌네. 그가 널 찾기 전에 "
+"도망치는 게 좋을걸?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "그건 왜지?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "왜냐하면, 그가 방문자들을 싫어한다고 내가 말했으니까!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "어디보자... 당신의 치수, 경비 전투복 크기에 적당히 딱 맞는 것 같군!"
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr ""
+"하하. 아, 난 프로그래머님이 아니야. 그는 지금 숨고 있어. 경비 훈련소를 한번 체험해봐. 어렵겠지만, 한번 통과하면 너에게 말을 걸어줄지도 몰라. 아니면 널 죽이던가!\n"
+"    \\cy내가 사람들 죽이는 걸 지겨워할 것 같지만, 이 일이 모두 끝나면 아마 그리워할 거야."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "당신은 누구죠?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "여기에 계속 머무르고 있으면 다 알지도 못할걸."
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "저리 꺼져라, 시민!"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "죽어라. 나약한 것!"
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "드디어 이 감옥에서 벗어나는구나..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "너가 왜 여기있지?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "저는 누명을 썼어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr "해리스가 말하길, 제가 총독 암살을 꾀했데요. 난 파리 한마리도 못 죽이는데..."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "조심해."
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr "친구, 나는 너를 도와주고 싶어. 그러기 전에 나에게 5 골드를 줘. 그럼 내가 아는 걸 알려줄게."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "여기 골드입니다."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "만약 네가 누군가를 주먹으로 때린다면, 알람은 울리지 않을 거야."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "무료로는 말 못 해!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "난 이미 내가 아는 걸 말해 줬어!"
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "안녕하십니까, 친구여. 구매하고 싶은 게 있습니까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "전격 볼트"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "잔소리 없이 주겠습니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "돈이 한 푼도 없는 것 같은데."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "돌격소총 탄창"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "여기 탄약입니다."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "돈 없으면 거래 못 합니다."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "돌격소총 탄약 박스"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "거래 감사드립니다."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "골드가 충분치 않군요!"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "탄약 배낭"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "좋습니다! 더 필요한 거라도?"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "제공할 수 없습니다. 유감이군요."
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "어서 오세요! 무엇이 필요한지?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "환경 방호복"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "받으세요!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "돈이 충분치 않아요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "가죽 갑옷"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "딱 맞는 치수의 갑옷이죠."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "아마 나중에 사야겠는데요?"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "강철 갑옷"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "건강하게 착용하십시오."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "돈이 좀 있을때 다시 찾아와주세요."
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "반갑습니다. 어떻게 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "의료 붕대"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "저렴한 가격의 의료 붕대입니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "10 골드입니다. 설마 이 만한 양의 돈이 없으신가요?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "수술 키트"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "말 없이 주겠습니다. 거래 고마워요!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "25 골드만 있으면 잔소리 말고 주겠습니다."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "치료 중."
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "치료가 끝났어. 몸 조심하라고."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "의료 붕대는 어떠신가요? 이 건 저렴한데."
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+"반갑네, 친구. 낯선 사람인 것 같은데, 조심하고 걸어 다니게나. 지금 이곳에서 꽤 많은 일이 일어났거든. 내가 하는 말을 들으면 이해가"
+" 될 걸세."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "정보를 줘."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "하수도엔 쥐도 있고, 오물도 있고, 그 중 위험한 로봇들도 있다네."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr "먹고 살려면 돈이 필요하다네. 이 손님들은 팁도 안 준다니까!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr "다시 돌아온 건가? 뭐, 자기 몸 간수 잘하고 살아 돌아왔기에 망정이지. 뭘 원하나?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "그 외의 정보를 줘."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "모렐 총독은 부정하고 짜증 나는 오더의 정권의 예야."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "마음이 바뀌면 돌아와주게나."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr ""
+"아주 오래 살아서 배짱이 두둑한가, 다시 돌아와 줬구먼! 나야말로 괜찮다네. 이 주정부리들 보다 자네랑 대화하는 게 그나마 낫지."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "더 많은 정보를 줘."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "여기저기 퍼지는 소문보다 오더가 지키는 비밀이 더 깊숙하다네."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "생각이 바뀌면 다시 돌아오게나."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr "이게 다일세. 내가 친히 줄 수 있는 조언이라는 이름의 술은 다 줬다네."
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr ""
+"여기저기 장난감을 살려면 돈이 필요하지. 세상에 공짜가 어디 있나? 내 심부름을 좀 하다 보면 용돈도 생기고 부자가 될 걸세. 어떤가?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "저는 할 것이 아무것도 없어요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "아뇨 괜찮습니다."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "그 누구도 나를 거절할 수 없어!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+"좋은 선택이야. 강가 근처에 있는 성소가 바로 오더의 비공식적인 고문실이야. 그리고 그 안에는 숨겨진 금색 성배가 있지. 넌 그것을 "
+"훔치고 여기 선술집으로 와서 보상을 받으면 돼."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "어떻게 하면 되나요?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "좀 생각해 보겠습니다."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "유감. 두 번째 기회는 없어. 경비원, 저놈을 죽여."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr "여기 석궁이야, 똑바로 겨냥해, 그리고... '철퍼덕'. 기억해, 멋진 컵을 들고 이 곳으로 다시 와."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "거기서 보자고."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr "뭘 기다리는 거야? 걱정하지 마, 내가 시체들을 치워줄 테니. 그냥 성배를 가져와!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "경비! 반역자를 죽여라!"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+"이봐, 무슨 생각을 하는지 알겠어. 확실히 뭔가 꾸며 놓은 것 같다는 거. 난 훌륭한 학살 기계에게 그런 짓을 할 사람이 아니야. "
+"휴... 그깟 컵 가지고. 이상해. 아무튼 준비해, 골드와 영광을. 이 열쇠를 총독에게 가져다주면 보상해 줄 거야."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "좋았어! 기다릴 수 없는걸?"
+
+# 〃 (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "성배가 없다면 돈도 없어!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "내가 성배를 가지고 있을게, 고마워."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "가지고 있겠다고? 내 생각은 아닌데?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "꾸물거리지 말고 총독을 만나. 그가 너를 보답해줄 거야."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "죽어라. 배신자!"
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr ""
+"그래서 네가 그 성배를 훔친 바보로군? 반군 절도범으로 체포해주지... 오더에서의 내 위치도 올리는 겸. 모르는 사이에 장물아비가 된 "
+"기분이 어떤가?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "기분이 아주 좆같아."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "더한 기분이 들게 해주지."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "해리스가 날 배신했어... 이 새끼!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "안됐네. 넌 여기서 죽게 될테니까!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "우린 널 죽일 거야!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "여길 나가!"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "널 죽이는걸 즐길테다."
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "여기서 뭐하는 거야? 꺼져!"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr ""
+"정말 경치 좋지? 이 박살 난 시청 주변에서. 오더 놈들이 우리들을 전멸했다고 자랑하는데, 우리들이 힘을 모아서 복수하기 전까진 그렇게 "
+"놓아두는 게 좋을 것 같아."
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "마실 사령관님에게 말해, 그가 널 도울 수 있을 거야."
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+"마실 사령관이 또 다른 작전을 준비한데. 그전에 일어났던 대참사보다 훨씬 나은 작전이었으면 좋겠는데. 운이 나쁘면 많은 병력을 잃어버릴 "
+"것 같아."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr "놈들의 상수도에서 내려온 이 통들, 이상하지 않아? 뭔가 승산이 있을 것 같아."
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+"아주 유용하고 승패를 가릴 수 있는 비장의 카드를 연구 중입니다. 바로 지구력 향상 이식 칩이죠. 이것만 있으면 체력과 힘을 "
+"증가시킵니다. 거의 완성되었어요. 이제, 뭘 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "치료가 필요합니다."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "가능한 한 아프지 않게 치료하겠습니다."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "지구력 향상 이식?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "많이 걸리진 않을거에요..."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "연구가 진행중입니다. 나중에."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr "여어! 이식 칩을 향상할 개조를 받고 싶으신가요? 아니라면, 뭐가 필요합니까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "치료가 필요합니다."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "이제 마음껏 움직여보세요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "지구력 업그레이드?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "위험 할 때도 있으니 지금 고치겠습니다."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "거의 완성했는데... 아마도 다음 시간에?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr "정말 힘든 시간이었어요. 이식 칩의 문제들의 거의 다 고쳐가고 있습니다. 기다리는 동안, 무엇을 도와드릴까요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "치료가 필요합니다."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "아콜라이트와 근접전을 펼친 것 같군요... 아마도."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "지구력 업그레이드?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "도움이 좀 될 거에요."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "시험단계를 좀 거치고 예기할게요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "이식 칩에 관한 모든 걸 해줬습니다. 더 필요한 게 있나요?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "그래."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "치료가 다 끝났습니다. 다 의료기술 덕입니다."
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "무엇을 도와줄까."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "탄약이 바닥났어요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "조금만 주겠습니다. 재고가 모자라거든요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "좋습니다. 움직이는 과녁을 쏘세요!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "당신은 아직 준비가 안됐어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "다시 왔군요. 무엇이 필요하죠?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "탄약이 바닥났어요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "적을 사살하려면, 역시 탄약을 소진해야만 하죠. 여기 탄약입니다."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "충분한 탄약을 가졌어. 다 소진하고 찾아오세요."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "여기, 적병 일부를 충분히 죽일 수 있을 만큼의 탄약입니다."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "마실 사령관님의 명령입니다. 그럴 수는 없어요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+"탄약보급? 훈련? 가능하면 모두 다 가능합니다! 그리고 방금 수송된 무기들을 만져보고 싶습니다. 조사가 끝난 뒤에는 모두가 특수 훈련을 "
+"받을 수 있을 거에요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "탄약이 떨어졌어요."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "조금 나눠주도록 하겠습니다. 부디 낭비하지 마시길."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "충분한 탄약을 가졌군..."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "가르쳐 줘."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr "이제 당신은 더 똑똑해졌습니다. 저 멍청한 오더 놈들에게 쓴맛을 보여주세요!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "마실 사령관님이 준비되었다고 말했을 때 와주세요."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr "배울 수 있는 모든 것들을 배우셨습니다. 이제 보급할 시간을 좀 주세요. 말이 나와서 하는 말인데, 탄약이 필요하십니까?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "알겠습니다. 그럼 탄약이라도?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "여기요!"
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr "무턱대고 마을에서 총질하지 마세요. 경보가 울림과 동시에 당신을 잡기 위해서 모든 병력을 보낼 겁니다."
+
+# 〃
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "어서 오세요. 당신 같은 사람에게는 많은 도움이 필요합니다!"
+
+# 〃
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr "제가 밖에서 근무했을 때 사살한 아콜라이트들을 자세히 들여다본 적이 있었어요. 그 들은 인간이 아니었습니다. 기억하세요."
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr "성문을 열려고 열심히 분석을 해보았습니다만, 결국엔 해답을 찾지 못했습니다."
+
+# 〃
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr ""
+"오더에게 잡혀가면 절대로 안 됩니다. 수감자들에게 온갖 끔찍한 짓을 저지른다는 이야기를 들은 적이 있었으니까요. 흔적없이 조용히 끌고 "
+"간다네요..."
+
+# 〃
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+"충고 하나 해주죠. 오더의 로봇 병사들을 발견한다면, 조용히 피해가세요. 특히나 성가신 놈 중 하나가 리버인데, 그놈의 산탄총은 장난 "
+"아니에요!"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr ""
+"희미한 희망에 빛에 온 것을 환영합니다. 우리만이 오더를 처치할 자유의지를 가지고 있지요. 우수한 과학력에, 뛰어난 실력을 소유한 부대도"
+" 있으니까 말입니다. 하지만, 우리들에게도 부족한 게 하나 있습니다. 바로 시련을 해결해 줄 해결사죠. 부디 도와주세요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "무엇을 해야하죠?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr ""
+"우릴 도와주세요. 놈들의 기술을 훔치고, 붙잡힌 동료들을 구출하고, 오더의 미치광이들을 타도하기 위해서 말이죠. 그리고 진실 어린 희망을"
+" 위해서 이렇게 묻는 겁니다."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "함께 하겠습니다!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+"감사드립니다! 블랙버드가 당신을 위해 계속 안내를 할 것입니다. 같이 행동한다면 오더의 흉측한 비밀들을 밝혀내고, 그들의 잔혹한 존재들을"
+" 응징할 수 있을 겁니다. 우리들의 이해심 밑에 공포를 인도하는 그들의 숨겨진 존재가 있죠. 그곳으로 들어가서, 물리치세요."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "저만 믿으세요!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "좋은 마음가짐입니다."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "어서오세요, 친구여!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "목숨만은 살려줘."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "날 괴롭히려고 여기까지 왔다면, 넌 헛수고를 한 거야."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "난 정말 아무것도 몰라."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "경비병 부르기 전에 얼른 사라져!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr "저 저항군들이 가망이 없다는 걸 빨리 눈치챘으면 정말 좋겠군."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "그냥 날 내버려 둬. 부탁이야."
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "자세히는 모르지만, 내가 본 아콜라이트들 중에 아는 사람이 있는 것 같아."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "오더가 치안유지도 그렇고 단속을 아주 실감 나게 잘하던데?"
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "저 녀석들은 단순히 치안을 유지하기 위해 온 게 아니라고 생각해."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr "오더가 프론트 저항군의 공작에 정말 불안해하고 있더라고."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "오더 녀석들이 우리를 이길 가능성은 전혀 없어."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr "반격할 준비가 거의 다 돼가고 있어. 마실 사령관님의 계획이 잘 진행되고 있으니까."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "걱정 마. 무슨 일이 있어도 우리가 지켜줄게!"
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "저 커다란 로봇들에게 다가갈 생각은 하지 마. 너를 완전 발끝까지 녹여버릴 거라고."
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr "영광스러운 새벽이 오고있어. 우리를 탄압한 녀석들에게 징벌을 내릴 새벽이!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "게으름 피울 생각하지는 마. 아직 일이 잘 안 풀렸으니까."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "마실 사령관님이 말하기를 네가 우리들의 유일한 희망이래. 명심해 둬."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr "저 허풍쟁이들을 다 물리칠 수만 있다면, 우리가 바랬던 평화로운 세상을 재건할 수 있을 거야."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "너 혼자 위해서 싸우는 게 아니라 인류를 위해서 싸우고 있다는 걸 잊지 마."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "우리 중 한 명이 남아있는 한, 이길 수 있어."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "어서 움직여, 이 자식아."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "참된 신앙이야말로 자기 자신을 깨우칠 수 있지."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "죽음을 통해서만이 진정하게 환생할 수 있는 거다."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "네 잡담 따위는 듣고 싶지 않아."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "대화하고 싶었으면 내가 먼저 말을 걸었겠지. 안 그래?"
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "귀찮게 하지 말고 가서 딴 녀석이랑 놀아!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "여어 움직여라!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "만약 알람이 작동된다면, 기도하고 도망치기나 해!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "우리 오더는 언젠간 이 세상을 정화하고 새로운 시대를 만들 것이다."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "문제가 있다고? 자. 이제 없지?"
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "부디 빈민에게 구호를..."
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "어딜 보고 있는 겁니까, 지상인씨?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "남은 식량 가지고 있습니까? 부디 있다고 말해주세요... 제발..."
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "당신 같은 지상인들은 우리를 아예 도와주지도 않죠. 그렇지 않나요?"
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr "하, 저 멍청한 경비들은 우리가 이 밑에 숨어있다는 걸 모르죠!"
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr "언젠가는 순종하는 사람들을 제외하고는 모두가 오더에 강제병합될지도 몰라요..."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "배꼽 잡고 웃으시구려. 결국엔 당신도 이 모양 이 꼴이 될 테니까."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "버릇없는 지상인 보다 더 짜증 나는 건 없을 거예요!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "오더가 당신을 비롯한 한심한 프론트 저항군을 싹슬이할 겁니다."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "조심하시오, 지상인. 우리는 적이 누군지 알고 있으니!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "우리는 긍휼의 손길이며, 불신자들을 심판하는 검일지니!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "유일신님은 반드시 이 나약하고 부패한 세상을 정화할 것이니라!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "스승님들께서 너희에게 명령하신 도를 행하라!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "오더와 그의 동포들을 따르라, 그럼 영생을 얻을 지니!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "자유의지는 나약함의 상징이요, 필멸의 꾐이라."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "힘은 영광이자 희망이며, 이를 간구함으로써 축복받을지어다!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "우리는 참됐으며 구원을 받았느니라, 함께 기도하면 두려울 것이 없을지니!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "오더는 신들을 향한 기도로 거룩하여짐이니라."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "아콜라이트들이라... 애석하게도 이 들은 믿음이 아직 부족하다고 생각함이라."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr "육체라는 나약한 껍질에 갇힌 운명을 참회하는 자들이야말로 오더와 함께할 수 있을지어다. "
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "안녕!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "그렇군요. 그럼 안녕히!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "다음에 봐요!"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr ""
+"여보세요? 본부, 통신기가 막 작동되기 시작했다... 지금 어떤... 사람의 모습이 보이는데... 이봐, 거기서 당장 나와... 그리고 "
+"성배를 버려!"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr ""
+"잘 들어, 이 통신기에 따르면 넌 100% 인간이야. 너를 믿어도 될 거 같으니 우리 편으로 끌어모으라는 지시를 받았어. 배신했다간 "
+"대가를 치를 거야. 아, 그리고, 날 블랙버드라고 불러줘."
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+"잘 들어, 이 통신기에 따르면 넌 100% 인간이야. 우리들은 너를 적극적으로 믿으니까 너도 같이 이해하고 신뢰했으면 좋겠어. 그러기 "
+"위해선 시험을 치러야 하는데, 총독의 건물 안에 화염방사기가 있어. 얻으면 우리들이 있는 곳을 알려줄게. "
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr "구 시청으로 향해. 오더가 이곳을 폭격한 후에 마실이 그곳에 아콜라이트들이 모르는 통행로를 만들어놨어."
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr "네 왼쪽의 문으로 들어간 후, 다시 오른쪽의 문으로 가. 경비의 이름은 제프야. 그에게 골드가 필요하다고 얘기해."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+"아직 시청으로 가지 마. 우리가 발각된 상태라 위험하다고. 거대한 '크루세이더' 로봇들을 먼저 처리해. 그다음에 내가 안내해줄게."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr "크루세이더들을 전부 처리하면 무기상 옆의 문이 열릴 거야. 그 안에 우리 기지로 통하는 텔레포터가 있으니 그걸 타."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr "크루세이더들을 전부 처리하면 무기상 옆의 문이 열릴 거야. 그 안에 우리 기지로 통하는 텔레포터가 있으니 그걸 타."
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr "저 거대한 '크루세이더' 로봇들을 최대한 처리해. 상황이 정리되면, 내가 너를 마실에게 데려다줄게."
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "저 문을 지나서 마실하고 대화를 해봐."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr "주 동력선 어딘가에 있는 추출기를 처리해. 총독에게 전할 증거물도 챙기고. 맥거핀을 찾아서 대화해 봐."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr ""
+"주 동력선 어딘가에 있는 추출기를 처리해. 총독에게 전할 증거물도 챙기고. 맥거핀을 찾아서 대화해 봐. 그는 하수처리장 근처 계단 밑 "
+"개구멍에 있어."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr ""
+"이 멍청이야! 우리 기지를 오더로부터 은폐시켜주는 교란 장치의 동력을 끊어버렸잖아. 당장 시청으로 가서 탐색반들을 쓸어버려! 그다음에 "
+"총독에게 부서진 장치를 전해줘."
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr "좋아, '아무도 믿지 말라'가 이 게임의 이름이겠군! 어서 총독에게 감옥 통행증이나 받자. 이 부서진 장치를 그에게 전해줘."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr ""
+"참 잘했어! 총독이 거짓말을 했군. 이건 우리의 동력 장치야. 이걸 써서 우리 기지를 오더로부터 은폐시켜주지. 여기 있는 고장 난 장치를"
+" 전해주고 통행증이나 받자."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr "간수장의 열쇠를 써서 감옥 안으로 진입하고, 수감자들을 풀어줄 방법을 찾아봐."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr "수감자들을 풀어줄 방법을 찾자. 지문인식장치를 통과할 방법을 찾아봐."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr "수감자들을 풀어줄 방법을 찾자. 판사의 손을 써서 지문인식장치를 통과하는 거야."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr "잘했어, 친구. 수감자들을 풀어주느라 고생했어. 저 텔레포터들 중 하나를 타면 우리 기지로 복귀할 수 있을 거야."
+
+msgid "TXT_ILOG22"
+msgstr ""
+"오더의 방어막을 유지하는 동력 망의 전력원인 수정체를 파괴하자. 우선, 발전소 창고에 있는 우리 쪽 첩자인 워너에게 찾아가 보자."
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "어서 여길 떠나자. 녀석들이 오기 전에 말이야."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr ""
+"본부가 공성전을 진행하기 전에 한 가지 해야 할 일이 있어. 마실이 이롤리에게 골드랑 훈련을 제공해달라고 부탁했대. 그리고 마을 병원에 "
+"가서 근력을 키워달라고 해."
+
+# 〃
+msgid "TXT_ILOG26"
+msgstr "이롤리와 마을 의무관에게 가서 골드와 훈련을 받고, 하수구를 찾아. 총독의 관저 건너편의 강을 따라서 가봐."
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr "우리는 자신을 시궁쥐 왕이라고 부르는 워렌을 찾아야 해. 알록달록해서 눈에 잘 띌 것 같은데 말이야."
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr ""
+"이 화염방사기 부품을 가지고 이롤리에게 말 걸어봐. 수조에 있는 물을 비우면 밑에 하수도로 향하는 비밀 입구가 보일 거야. 성문의 관리 "
+"장치가 여기 어딘가에 있을 거야. 찾으면 파괴해."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr ""
+"본부! 그가 해냈습니다! 성문이 열렸습니다. 공습부대를 성문으로 이동시키고 사령관님께 우리들도 따라올 거라고 전해주세요. 이제 프론트 "
+"기지로 돌아가!"
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr ""
+"성을 공략할 공성전에 참여해. 침투해서 프로그래머를 죽일 수 있게. 그의 장소와 관련된 보고들이 뭔가 혼란스러운데, 컴퓨터실에 있다고 "
+"하고, 낮은 층 신전에 숨어 있다고 하고, 다른 한 명은 긴 복도 맨 끝에 서 있대."
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "프로그래머를 찾아서 죽여."
+
+msgid "TXT_ILOG46"
+msgstr ""
+"오라클을 찾아서 다른 시질 조각이 어디에 있는지 물어봐. 오라클은 도시 외곽에 있는 접경지 근처에 있어. 강을 넘은 뒤, 성 쪽으로 "
+"향하고 아치 밑의 통로를 통해 왼쪽으로 이동해."
+
+msgid "TXT_ILOG47"
+msgstr "오라클을 찾고 다른 시질 조각에 관해 물어봐. 오라클의 신전은 도시 외곽의 접경지 근처에 있어."
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr ""
+"오라클을 찾아서 다른 시질 조각이 어디에 있는지 물어봐. 보상을 받고 치료와 훈련을 위해 의무관과 무기 담당관에게로 가. 오라클은 도시 "
+"외곽에 있는 접경지 근처에 있어."
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr ""
+"오라클의 신전을 찾아서 시질 조각이 어디에 있는지 물어봐. 그리고 지금 난 모든 걸 녹음하고 있어. 네가 살아남을 거라는 믿음을 버린게 "
+"아니라, 오더가 시질을 손에 잡게 내버려 둘 수가 없어서 말이야."
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr ""
+"두 번째 시질 조각은 진홍빛 흑요석 탑에 숨어있는 비숍에게 있어. 비숍은 그들의 잔혹한 군사 지도자이지. 거기에 녀석이 있을 거야. 그를"
+" 죽이면 두 배로 이득이 갈 거야. 이 통행증을 들고 접경지 안의 열쇠지기에게로 가봐."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr ""
+"비숍은 군사 지도자니까, 삼엄한 경비에 의해 지켜질 거야. 그러니 전투복을 입고 잠입하는 게 어때? 비숍을 찾아서, 그를 파괴하고 "
+"오라클에게 찾아가 봐."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr ""
+"요새 안에 우리들을 도울 정보원이 있다는 보고를 들었어. 그는 병원 안에 있는데, 그곳으로 찾아가 봐. 만난 뒤엔 비숍을 찾은 뒤 그를 "
+"파괴하고 오라클에게 찾아가 봐."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr ""
+"포기하지 마. 이제 거의 다 왔어. 저 텔레포터를 올라타서 관리소로 가서 컴퓨터 중심부를 파괴해. 방어막을 완전히 꺼버리고 비숍을 죽일 "
+"수 있을 거야. 그를 파괴하고 오라클에게 찾아가 봐."
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr ""
+"아주 인상 깊은데? 어서 파괴하자고. 그러면 방어막을 끌 수 있을 거야. 그 후에 안뜰로 향해서 성으로 찾아가. 그리고 비숍을 죽여버려."
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr ""
+"브라보! 두 번째 시질 조각을 얻었어! 그나저나 비숍 몸에서 튀어나왔던 검은 물체 봤어? 전에 본 적이 있나? 오라클에게 돌아가자."
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr "지금 보고를 받았는데, 비숍을 죽인 뒤에 나온 혼령의 기운이 오라클에게도 있데. 조심하자."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr ""
+"릭터가 저항군의 새로운 지도자가 될 거야. 내 생각엔 마실이 오랫동안 우리들을 속인 것 같아... 뱀 같은 자식. 오라클에게 돌아가자."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr ""
+"또 다른 시질 조각이야. 자유로 향하는 길이 거의 얼마 남지 않았어. 그리고 나와 만날 순간도 얼마 남지 않았고. 오라클을 만나러 가자!"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr "시질의 완전한 힘은 이제 네 손에 있어. 종지부를 찍을 준비 됐어? 로어마스터가 그토록 지키던 게 무엇인지 확인하자고."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr "웃기네. 이딴 예언 따위. 잠깐만, 마실이 우리들을 부르고 있어. 이제 안전하게 기지로 돌아가자."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr ""
+"공장은 광산 옆에 있어. 아마도 릭터는 데그닌 갱도를 예기한 것 같아. 데그닌 광석은 폭발성이 있는 자기력이 감도는 물질이야. 방어막을 "
+"끌 중요한 도구이기도 하지. 고대 무덤에서 그 열쇠를 얻고, 광석을 얻을 광산으로 향하자."
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr ""
+"공장은 광산 옆에 있어. 데그닌 광석은 폭발성이 있는 자기력이 감도는 물질이야. 방어막을 끌 중요한 도구이기도 하지. 고대 묘지에 가서 "
+"열쇠를 얻고 광석을 좀 구하자. 릭터의 요원들이 정찰하다 사라진 폐허인 것 같아. 조심해."
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr ""
+"공장은 광산 옆에 있어. 데그닌 광석은 폭발성이 있는 자기력이 감도는 물질이야. 방어막을 끌 중요한 도구이기도 하지. 싸우는 상대가 "
+"무엇인지는 모르겠지만, 오더보다 더한 존재인 것 같아. 식당가로 향한 뒤 광산으로 들어가. 광석이 필요하니까."
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr ""
+"공장은 광산 옆에 있어. 데그닌 광석은 폭발성이 있는 자기력이 감도는 물질이야. 방어막을 끌 중요한 도구이기도 하지. 자신을 지킬 준비 "
+"단단히 하고, 캔 광석을 두는 곳을 찾아."
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr ""
+"자신을 지킬 준비 단단히 하고, 캔 광석을 두는 곳을 찾아. 저 사람들은 불쌍한 광산의 노예들이야. 오더가 이식한 세뇌 장치 때문에 "
+"정상적인 뇌 기능을 잃었지. 전송기만 파괴한다면, 그들은 자유를 되찾을 수 있을 거야."
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr ""
+"공장은 광산 옆에 있어. 자신을 지킬 준비 단단히 하고, 캔 광석을 두는 곳을 찾아. 조언을 찾는다면, 광석을 방어막에 가까이 놔둔 뒤 "
+"쏴봐. 광석이 커다란 자기장을 만들 테고, 방어막을 완전히 무력화 시킬 거야."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr "이제 공장으로 향하자. 광산을 나가봐. 이 순간을 놓치면 안 돼. 얼른 그 기계를 찾아서 작동을 멈추자!"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr "앞쪽에서 거대한 신경교란 파장이 감지되고 있어. 우리가 찾아낸 것 같아. 어서 들어가서 꺼버리자!"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr ""
+"이렇게 끔찍한 모습을 보게 되다니! 멀쩡한 사람이 저곳에 들어갔다 나온 모습을... 차마 생각하기도 싫어. 저 경악스러운 것을 파괴해!"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr ""
+"마실이 정신 나갔나 봐. 모든 것을 알면서도 200 명이나 되는 병력을 보내서 죽게 했어. 과부들과 망령들을 위한 복수를 할 시간이야! "
+"기지로 돌아가서 한번 그에게 여쭤봐."
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr ""
+"이 공장은 '연구소'로 연결돼. 그리고 지금 오더가 그 안에서 시질의 힘을 빌릴 조짐이 보여. 공장으로 돌아가서 자유 투쟁을 계속 "
+"진행해!"
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "비숍을 찾아서 그를 파괴해! 시질 조각을 얻은 뒤 오라클에게 돌아가."
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr ""
+"로어마스터의 연구소는 방금 열린 텔레포터를 통해서 입장이 가능해. 어떤 예언을 지껄이는지 한번 확인하러 가봐. 그리고 자유 투쟁을 계속 "
+"진행해!"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr "이제 이곳을 당장 떠나. 방어막이 꺼졌으니! 비숍의 성으로 이동해서 비숍을 죽이고, 오라클을 만나러 가."
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr "강 근처에 있는 성소를 찾아서 안에 보관되어있는 성배를 훔치고 선술집으로 향해."
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "총독을 만나서 보상에 대해 예기해."
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr ""
+"강 근처에 있는 성소를 찾아서 벨딘이라는 사람을 찾고, 입을 다물게 해. 그 후에 그의 반지를 얻어서 로완에게 그를 죽였다고 증명해."
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "프론트의 기지를 찾아서 마실과 대화해봐."
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "계단 밑으로 내려가서 마실과 대화해봐."
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr ""
+"프론트의 무기상인 이롤리를 마을에서 찾아. 무기 상점 근처에 문이 있을 거야. 마실이 준 열쇠로 문을 열고 방문한 뒤, 총독과 대화해."
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr "주 동력선 어딘가에 있는 추출기를 처리해. 그 잔해를 총독에게 들고 가서 증명해."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr "발전소 창고 주변에 있는 더윈을 찾아. 그를 죽인 뒤 귀를 뜯어서 모렐 총독에게 건네줘."
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr "총독이 준 감옥 통행증을 이용해서 감옥으로 들어가. 들어간 후에 수감자들을 해방하기 위해 몬탕 간수장과 대화해. "
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr "간수장의 열쇠를 써서 감옥 안으로 진입하고, 수감자들을 풀어줄 방법을 찾아봐."
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr ""
+"오더의 방어막을 유지하는 동력 망의 전력원인 수정체를 파괴하자. 우선, 발전소 창고에 있는 우리 쪽 첩자인 워너에게 찾아가 보자. 가기 "
+"전에 의무관이랑 무기 담당관을 만나는 것도 잊지 말고!"
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr ""
+"오더의 방어막을 유지하는 동력 망의 전력원인 수정체를 파괴하자. 신분증을 이용해서 발전소 안으로 들어가. 그리고 워너 위에 창고도 "
+"확인하는 거 잊지 마!"
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr "오더의 방어막을 유지하는 동력 망의 전력원인 수정체를 파괴하자. 중심부에 있는 케트릭과 대화해."
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr "수정체를 파괴해. 케트릭과 대화하고 나서 스위치를 눌러서 진입로를 작동시켜. 그리고 이 신분증을 이용해서 승강기를 올라타."
+
+msgid "TXT_ILOG1015"
+msgstr "오더의 경비가 지키고 있는 마을의 입구를 찾아. 문을 연 뒤 그 경비의 전투복을 챙겨서 워렌에게 전해줘."
+
+msgid "TXT_ILOG1016"
+msgstr ""
+"이 화염방사기 부품을 들고 이롤리에게 가져가. 하수도 정비소로 향하는 문을 찾은 뒤, 성안에 있는 수조를 찾고 내용물을 배출해. 그 "
+"밑에는 하수도로 향하는 숨겨진 통로가 있어. 그 안에는 분명히 성문 관리 장치가 있을 거야."
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr ""
+"성을 공략할 공성전에 참여해. 침투해서 프로그래머를 죽일 수 있게. 의무관이랑 무기 담당관을 만나고 네가 살 수 있는 걸 충분히 사. "
+"왜냐하면 이 교전은 끔찍할 테니까."
+
+msgid "TXT_ILOG1018"
+msgstr ""
+"프로그래머 더미가 준 열쇠를 이용해서 프로그래머의 거주지로 향하는 문을 열어. 안에는 분명히 그가 있을 거야. 프로그래머를 찾으면, 일이"
+" 더 나빠지기 전에 죽여."
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr "오라클을 찾아서 다른 시질 조각이 어디에 있는지 물어봐. 보상을 받고 치료와 훈련을 위해 의무관과 무기 담당관에게로 가."
+
+msgid "TXT_ILOG1020"
+msgstr ""
+"두 번째 시질 조각은 진홍빛 흑요석 탑에 숨어있는 비숍에게 있어. 거기에서 너를 기다리고 있는 비숍을 찾아내야만 해. 오라클의 통행증을 "
+"들고 접경지 안의 열쇠지기에게로 가봐. 비숍을 파괴했다면, 오라클에게 돌아가."
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr ""
+"진홍빛 흑요석 탑을 찾아. 열쇠지기가 준 신분증을 이용해서 탑으로 들어가. 탑 안으로 들어가서 비숍을 찾아야 해. 비숍을 파괴했다면, "
+"오라클에게 돌아가."
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr ""
+"보안 담당 기지를 찾고, 경비와 싸워가면서 중앙 처리 본부로 향하는 텔레포터를 사용해. 그곳에서 컴퓨터 중심부를 파괴해. 그러면 비숍의 "
+"탑의 보호막을 끌 수 있을 거야. 비숍을 죽이면, 오라클에게 돌아가."
+
+msgid "TXT_ILOG1023"
+msgstr ""
+"다음 도전은 너의 정신을 시험할 거야. 세 번째 조각은 바로 우리의 지도자가 가지고 있어. 그는 너를 시켜서 죽였던 괴물들과 마찬가지인 "
+"존재지."
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr "오라클이 세 번째 조각을 가지고 있어. 그가 배신자야! 오라클을 찾아서 혼쭐을 낸 뒤 마실에게 돌아와."
+
+msgid "TXT_ILOG1025"
+msgstr ""
+"네 몸 안의 암 덩어리를 잘라냈지만, 심장은 여전히 뛰고 있네. 다음은 우리를 향한 도살과 지배를 책임졌던 과학자, 로어마스터를 찾아내야"
+" 해. 그를 막아내면, 다음 조각을 얻을 수 있을 거야."
+
+msgid "TXT_ILOG1026"
+msgstr ""
+"우리를 향한 도살과 지배를 책임졌던 과학자, 로어마스터를 찾아내야 해. 그를 막아내면, 다음 조각을 얻을 수 있을 거야. 오라클이 열어준"
+" 텔레포터를 이용해서 그를 찾아. 그가 죽으면 같은 장치를 이용해서 오라클에게 돌아와."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr "좋은 판단이야. 세 번째 시질 조각은 마실이 가지고 있어. 그를 죽여서 조각을 얻은 뒤 오라클에게 돌아와."
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr ""
+"오더가 우리 사람들을 생체병기로 개조한다는 사실을 알았어. 끔찍한 일이 일어나는 이 시설을 찾아서 작동을 중단시켜, 영원히! 폭포와 "
+"가까운 식당가에 있는 릭터를 찾아서 어떻게 하면 중단시킬 수 있는지를 물어봐."
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr ""
+"공장으로 들어가기 위해서는 열쇠가 필요해. 열쇠를 훔치기는 했지만, 소유했던 요원이 식당가 밑 고대 무덤 안에서 행방불명 되었데. 우리 "
+"병사들을 끌고 가는 무언가가 있는 것 같아. 그게 무엇이든, 파괴해서 열쇠를 얻어. 그리고 광산 옆에 있는 공장을 열쇠로 열어서 들어가."
+
+msgid "TXT_ILOG1101"
+msgstr "성소에 있는 성배를 찾은 뒤, 선술집에 있는 헤리스에게 전달해."
+
+msgid "TXT_ILOG1102"
+msgstr "총독의 거주지를 찾은 뒤 총독을 만나서 보상에 대해 예기해."
+
+msgid "TXT_ILOG1201"
+msgstr ""
+"축하해! 우리 모두 너에게 고마워하고 있어. 의무관과 무기 담당관을 찾아가면 너에게 보답을 할 준비를 할 거야. 그 후엔 기지를 마음껏 "
+"돌아다녀 봐!"
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "오더 장교"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "로언"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "페리스"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "간수"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "저스틴"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "마실"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "조수"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "열쇠지기"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "경호원"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "심문자"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "몬탕 간수장"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "릭터"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "마실의 조언자"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "울레닉 판사"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "테빅"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "해리스"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "감시원"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "죄수"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "새미스"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "무기제조인"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "발전소 경비원"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "도제"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "문지기"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "스미시 제조장관"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "격납고 감시장"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "바텐더"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "티모시"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "제임스"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "워너"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "외벽 파수병"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "노예"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "프론트 파수꾼"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "퀸시"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "하사관"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "신전 파수병"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "오라클"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "울레인"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "프론트 저항군"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "프로그래머"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "의무병"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "감시병"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "케트릭"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "워렌"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "조언자"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "제프"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "현장 감독"
+
+# Intended to appear in MAP19, but does not spawn.
+# 
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "경비원"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "컴퓨터 기술자"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "맥거핀"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "아리온"
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "항구 일꾼"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "이롤리"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "코어 경비병"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "하수도 보초병"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "기술자"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "경비병"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "민간인"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "병기공"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "벨딘"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "제랄드"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "모렐 총독"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "보여"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "더윈"
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr "혜성 하나가 아무런 경고도 없이 우리 행성에 충돌했다. 그 강력한 한 방으로 우리의 낙원을 잃어버렸다."
+
+# 〃
+msgid "TXT_SUB_INTRO2"
+msgstr "충돌의 여파로 바이러스가 사방에 퍼졌고, 이로 인해 수백만명이 목숨을 잃었다. 죽은 자들은 운이 좋은 자들이었다."
+
+# 〃
+msgid "TXT_SUB_INTRO3"
+msgstr ""
+"죽지 않은 자들에겐 큰 변화가 일어났다. 몇몇은 머릿속으로 악독한 신의 목소리를 듣기 시작했고, 이 광신도들은 그들 자신을 “오더”라고 "
+"지칭했다."
+
+# 〃
+msgid "TXT_SUB_INTRO4"
+msgstr ""
+"신의 목소리를 듣지 못하는 자들은 끔찍한 고통에 시달렸고, 우리가 가진 어떤 무기들보다 강력한 무장을 한 이 무자비한 광신도들을 강제로 "
+"섬기게 되었다."
+
+# 〃
+msgid "TXT_SUB_INTRO5"
+msgstr "그들은 우리의 여자와 아이들을 죽였고, 우리는 살아남은 자들을 지하로 대피시켜 죽음의 공포 속에서 짐승처럼 살아가야 했다."
+
+# 〃
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+"그러나 불만의 목소리가 커졌다. 우리가 단결하면, 우리의 주인을 물리칠 수 있을까? 그들의 무기를 훔치고, 병사들을 훈련해서 우리의 "
+"평생을 바칠 투쟁이 시작된 것이다!"
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr ""
+"프론트의 모든 병사는 주목하라. 그가 해냈다! 모든 것이 끝났다. 블랙버드의 병사가 악을 물리치고, 오더는 끝장이 났다. 블랙버드, 내 "
+"말 듣고 있나?"
+
+# 〃
+msgid "TXT_SUB_GOOD2"
+msgstr ""
+"나의 용감한 영웅이 이길 줄 알았어. 모든 싸움이 끝이 났고, 당신의 승리 덕분에 우리 몸에 남은 바이러스를 퇴치할 백신을 만들 수 있을"
+" 거야."
+
+# 〃
+msgid "TXT_SUB_GOOD3"
+msgstr ""
+"당신이 우리의 행성을 구하고 우리를 자유롭게 해줬어. 이제... 개인적으로 당신에게 감사하고 싶어. 아, 그리고... 내 이름은 샤나야."
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr "그래, 악은 이제 사라졌어. 하지만 우리의 불확실한 앞날은 여전히 근심의 먹구름으로 가득 찼지."
+
+# 〃
+msgid "TXT_SUB_SAD2"
+msgstr "우리 몸속의 바이러스를 퇴치하려면 수 세대의 시간이 걸릴 거야. 우리가 그때까지 살아남는다면."
+
+# 〃
+msgid "TXT_SUB_SAD3"
+msgstr "악이 원한 것이 무엇이었든, 그들은 우리에게 필요한 한 가지를 뺏어갔어: 희망이라는 미래지..."
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr ""
+"자각심을 가진 바이러스가 온 땅을 휩쓸었고, 우리 모두를 미치게 했다. 우리는 악이 들려주는 죽음의 노래에 맞춰 춤을 추었다."
+
+# 〃
+msgid "TXT_SUB_BAD2"
+msgstr "악은 우리에게서 인간적인 삶을 빼앗았고, 우리 인류를 유지해온 생식을 억제했다."
+
+# 〃
+msgid "TXT_SUB_BAD3"
+msgstr "그리고 어느 날, 악은 사라졌다. 그들에게 먹을 것이 없었기 때문이다. 우리들이 멸종했기에..."
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr "바이러스로 인한 유전적 변화는 오더의 광신도들을 만들었을 뿐만 아니라, 그들의 육신을 썩어 문드러지게 했습니다."
+
+# 〃
+msgid "TXT_SUB_MAP03_2"
+msgstr "생식능력이 사라지자, 오더에게 남은 존속 방법은 생체에 기계를 접목한 기술을 발전시키는 것 뿐이었죠."
+
+# 〃
+msgid "TXT_SUB_MAP03_3"
+msgstr ""
+"부패가 많이 진행되었기에 우리는 사람보다 기계에 가까운 적들과 싸웠고, 우리는 그들의 집단의식이 어떤 하나의 존재가 통제하는 것이라고 "
+"생각하고 있습니다..."
+
+# 〃
+msgid "TXT_SUB_MAP03_4"
+msgstr ""
+"... 프로그래머: 아콜라이트들을 통제하는 인공지능의 창조자 말입니다. 그를 파괴하면 일격으로 오더의 군대를 무력화시킬 수 있을 겁니다."
+" 하지만 조심하세요, 보고에 의하면 그는 자기 상대를 가루로 만들어 버린다는군요."
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr ""
+"프로그래머의 파괴된 기록들을 복원해보니, 오더가 자아를 가진 한 무기를 숭배하고 있다는군요. 그들은 이걸 “시질”이라고 부릅니다."
+
+# 〃
+msgid "TXT_SUB_MAP10_2"
+msgstr ""
+"당신이 건져낸 조각은 다섯 개의 조각 중 하나입니다. 이것은 사용자의 생명력을 빨아들여 위력을 발휘합니다. 당신이 살아있는 동안, 녀석의"
+" 힘은 당신의 것입니다."
+
+# 〃
+msgid "TXT_SUB_MAP10_3"
+msgstr ""
+"당신을 기절시킨 충격은 시질이 당신의 심박과 뇌파와 반응하면서 비롯되었습니다. 이 무기를 써도 되지만, 조심하세요: 당신을 말려 죽일 "
+"수도 있으니까."
+
+# 〃
+msgid "TXT_SUB_MAP10_4"
+msgstr ""
+"하나의 조각으로도 엄청난 위력을 가지게 되고, 다섯 조각 모두를 얻으면 이 세상을 평정할 만큼 강력한 위력을 발휘할 것입니다."
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr ""
+"잘 들어, 이 통신기에 따르면 넌 100% 인간이야. 너를 믿어도 될 거 같으니 우리 편으로 끌어모으라는 지시를 받았어. 배신했다간 "
+"대가를 치를 거야. 아, 그리고, 날 블랙버드라고 불러줘."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr "구 시청으로 향해. 오더가 이곳을 폭격한 후에 마실이 그곳에 아콜라이트들이 모르는 통행로를 만들어놨어."
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr "네 왼쪽의 문으로 들어간 후, 다시 오른쪽의 문으로 가. 경비의 이름은 제프야. 그에게 골드가 필요하다고 얘기해."
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr "이롤리는 프론트의 수리공이기도 해. 무기상점 근처에 그의 가게로 향하는 문이 있을 거야."
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr "기억해: 소음 없이 조용히 죽여. 그럼 경보를 울리지 않을 테니까."
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr "내가 알기로는 모렐 총독은 두 세력을 가지고 노는 걸 좋아한대. 여기는 그의 '저택'이라는 곳이야."
+
+msgid "TXT_SUB_LOG8"
+msgstr "으윽, 우리 중 나쁜 놈들만 보금자리를 구한 것 같네."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr "모렐에게 행실이 지저분하다고 말하는 건 칭찬에 불과해. 저놈은 이기적인 똥개새끼라고."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr "동력선의 위치를 알 수 있을 만한 토박이 주민과 이야기해봐. 본부가 말하길: 맥거핀을 찾으래."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr "겸손하게 말하자면 그는 “노숙자 굴”에 살아. 하수도에서 보도를 지나간 뒤 계단을 건너."
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr "느긋하게 수행해도 좋아. 본부에도 이 정보를 모으는 데 문제가 있데."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr ""
+"이 멍청이야! 우리 기지를 오더로부터 은폐시켜주는 교란 장치의 동력을 끊어버렸잖아. 당장 시청으로 가서 탐색반들을 쓸어버려! 그다음에 "
+"총독에게 부서진 장치를 전해. 당장!"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr "좋아, '아무도 믿지 말라'가 이 게임의 이름이겠군! 그냥 총독과 대화하고 수감자들을 구출하자."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr "참 잘했어! 총독이 거짓말을 했군. 이건 우리의 동력 장치야. 어서 전해주자!"
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr "창고는 발전소 근처에 있어. 어서 신속하고 죽여주게 끝내자."
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "감옥을 뚫고 들어가다니, 생각도 못 했는데?"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr "급식 먹을 시간은 없겠네. 요리할 시간이야."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr "좋아, 총독과 놀았고, 간수장도 죽었으니... 이제 관련 인간을 손 좀 봐 줘야겠네!"
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr "손을 뜯어버리다니! 아주 좋은 사람인 줄 알았는데... 귀엽네! 후훗, 가자구."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr "정말 잘했어, 친구. 저 텔레포터들 중 하나를 타면 기지로 복귀할 수 있을 거야."
+
+msgid "TXT_SUB_LOG22"
+msgstr "워너는 우리가 모집한 첩자야. 그는 발전소 창고에 있어."
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr "대장 말로는 수정체를 부술 때 멀리 피해있으라고 했어. 너도 노릇노릇하게 구워지기 싫다면 말이지."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr ""
+"본부가 공성전을 진행하기 전에 한 가지 해야 할 일이 있어. 마실이 이롤리에게 골드랑 훈련을 제공해달라고 부탁했대. 그다음에는, 마을 "
+"병원에 가서 근력을 키워달라고 해."
+
+# 〃
+msgid "TXT_SUB_LOG26"
+msgstr ""
+"오더는 성안 쪽에 지켜져 있는 거로 알겠지만, 틀렸어! 성문을 열기만 한다면 나머지는 쉬운 일일 거야. 일단 그러려면, 하수구 아래로 "
+"내려가야 해. 총독 관저 너머의 강을 지나가 봐."
+
+# 〃
+msgid "TXT_SUB_LOG27"
+msgstr ""
+"좋아, 바로 여기야. 하수구 거주민들은 끔찍한 돌연변이들이지만, 그들의 땅굴 망이 숨겨진 장소들로 인도할 거야. 숨 잘 참아... 아래로"
+" 내려간다."
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr "우리는 자신을 시궁쥐 왕이라고 부르는 워렌을 찾아야 해. 알록달록해서 눈에 잘 띌 것 같은데 말이야."
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr "웩. 네가 밟고 있는 게 뭔지 상상조차 하기 싫어!"
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr "또 시궁창이라니, 정말 보기 좋네!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "저기야! 저게 워렌이 열어줬으면 하는 문일 거야."
+
+msgid "TXT_SUB_LOG32"
+msgstr ""
+"눈 감아! 보고 싶지 않아! 오, 너무 늦었네... 역겨워. 전혀 사람 몸 같지 않던데, 대체 오더가 무슨 짓을 한 거지? 본부에 이걸 "
+"보고해야겠어."
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr "왜 우리는 딱 한 번이라도 꽃밭에서 작전을 수행할 수 없는 걸까?"
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr "말하긴 싫지만, 여긴 꼭 내 집을 보는 것 같아... 난 여기서 멀지 않은 지하에 있어."
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr "여기가 어딘지 묻지 마. 나도 길을 잃었거든, 미안해."
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr "저 벽... 아까 저 벽을 지나가지 않았던가? 아닌데..."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr "본부, 그가 해냈습니다! 성문이 열렸습니다. 공습부대를 성문으로 이동시키고 사령관님께 우리들도 따라올 거라고 전해주세요."
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr ""
+"프로그래머의 위치에 관한 보고들이 전부 제각각이야. 하나는 컴퓨터실에, 또 하나는 성채에, 다른 하나는 긴 복도에 있대. 정말 유감이야."
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr "아, 이렇게 다시 공격적으로 나가니 좋다. 맛 좀 보여줘, 얘들아!"
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr "이거 괜찮아 보이네. 컴퓨터들과... 프로그래머... 어떻게 생각해?"
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr "여기가 바로 긴 복도겠네. 아주 길다고 생각해, 아니면 내 머리가 이상하겠지."
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr "악당 같은 요소가 모인 건물이네! 엄격한 건물 구조, 커다란 기... 완전 만장일치야."
+
+msgid "TXT_SUB_LOG43"
+msgstr "저게 위대한 프로그래머라고? 말도 안 돼!"
+
+msgid "TXT_SUB_LOG44"
+msgstr ""
+"이젠 누가 맞는 건지 생각이 전혀 안나. “성채”라고 말하는 곳은 분명히 저 왼쪽에 있는 커다란 건물일 거야. 그런데 그곳으로 어떻게 "
+"들어가야 하지?"
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr "상황이 이상해지면, 이상한 일이 계속 일어난다니까... 부디 조심해."
+
+msgid "TXT_SUB_LOG46"
+msgstr "오라클은 도시 외곽에 있는 접경지 근처에 있어. 강을 넘은 뒤, 성 쪽으로 향하고 아치 밑의 통로를 통해 왼쪽으로 이동해."
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr "오라클은 인류에 동정을 가지고 있다고 하고, 오더의 바깥에서 활동하는 대사제야."
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr "오라클은 도시 외곽에 있는 접경지 근처에 있어."
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr "오더가 이 이쁘고 푸른 행성을 완전 쓰레기장으로 만들어버렸어..."
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr ""
+"여기야. 난 지금 모든 걸 녹음하고 있어. 네가 살아남을 거라는 믿음을 버린게 아니라, 오더가 시질을 손에 잡게 내버려 둘 수가 없어서 "
+"말이야."
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr "넌 정말 용맹해, 동지. 너랑 같이 일할 수 있는 게 정말 자랑스러워."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr "잠깐만 멈춰줄래? 속이 울렁거려..."
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr "왜 지하에서 시간을 낭비해야 되는 거지? 난 이미 지하에 있다고."
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "성소가 더럽게 초록색인데 이 녀석을 정말 믿어야 해?"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr "진홍빛 흑요석? 빨간 검은색이라고 말하면 어디 덧나나?"
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr ""
+"비숍은 그들의 잔혹한 군사 지도자이지. 그는 전술을 획책하고, 첩자를 부리고, 우리들을 통제하고 있어. 그를 죽이면 두 배로 이득이 갈 "
+"거야."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr "비숍은 군사 지도자니까, 삼엄한 경비에 의해 지켜질 거야. 그러니 전투복을 입고 잠입하는 게 어때?"
+
+msgid "TXT_SUB_LOG58"
+msgstr "우리가 이길 수만 있다면, 축제 분위기 나게 장식할 사람을 부를 거야."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr ""
+"요새 안에 우리들을 도울 정보원이 있다는 보고를 들었어. 그는 오더가 병원이라고 부르는 곳 안에 있는데, 그곳으로 찾아가 봐."
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr "계획서를 집고 컴퓨터를 파괴해. 간단하지?"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr "이런... 비꼬는 건 아닌데, 다음번엔 유혈사태를 일으키지 않고 일을 해결해보자."
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr "난감한 곳들을 다녀갔지만, 여기는 뭔가 새로워. 걸어갈 때마다 벽이 움직이는 것 같거든..."
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr "이거 정말 뻔하네. 군대 우두머리의 심복들은 다 난폭하고 둔하지."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr "포기하지 마. 거의 다 왔어. 가까이 왔다고."
+
+msgid "TXT_SUB_LOG65"
+msgstr "다음엔 편의점 같은 건물에 들러서 그냥 방향을 묻자."
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr "오, 안 돼! 삼엄한 경비에 피할 수도 없는 선택지라니."
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "궁금한 게 있는데, 왜 안에 들어가면 커지는 걸까?"
+
+msgid "TXT_SUB_LOG68"
+msgstr "네 주변에 적이 포착됐어. 그냥 쳐다보지 말고 어떻게든 해봐."
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr "이런 방어막들 정말 싫다니까. 저걸 끌 스위치를 찾아봐. 가까이에 있을 거야."
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr "오우, 정말 이쁘네! 이제 터뜨리자!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "텔레포터를 타고 이 놀이터를 벗어나자."
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr "잠깐, 오라클이 전에 권력을 상징하는 문양을 따라가면 만날 수 있다고 했지? 너 나랑 같은 생각 하고 있지?"
+
+msgid "TXT_SUB_LOG73"
+msgstr "저놈들은 도움이 되는 생각을 가지고 있기는 한데, 다 쓸데없이 망치고 있어."
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr "그나저나 비숍 몸에서 튀어나왔던 검은 물체 봤어? 전에 본 적이 있나?"
+
+msgid "TXT_SUB_LOG75"
+msgstr "심판의 시간이야. 시질 두 조각을 모았으니 본부로 돌아가자. 이제 너의 본능은 무슨 해답을 내놓을까?"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr "지금 보고를 받았는데, 비숍을 죽인 뒤에 나온 혼령의 기운이 오라클에게도 있데. 조심하자."
+
+msgid "TXT_SUB_LOG77"
+msgstr "마실? 이 문제의 장본인 중 한 명이라고? 정말이지 모르겠어. 부디 현명한 판단을 내리길 바래."
+
+msgid "TXT_SUB_LOG78"
+msgstr "마실은 프론트를 위해 싸워온 사람이라 의심할 수가 없어. 저 못난이가 거짓말을 하는 걸까? 모르지만, 난 너 만을 믿어."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr "릭터가 저항군의 새로운 지도자가 될 거야. 내 생각엔 마실이 오랫동안 우리들을 속인 것 같아... 뱀 같은 자식."
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr "또 전형적인 멋진 입구네. 하지만 우리가 찾는 것은 또 다른 구역에 있어. 밑으로 향해."
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr "비극적이야. 우리 기술이 생명을 살리는 데 쓰이기는 커녕 고문하는 데 쓰이고 있잖아."
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr "고통을 더하자면, 자기네 신전에 커다란 기를 세웠어."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr "또 다른 시질 조각이야. 자유를 향한 길이 거의 얼마 안 남았어. 나와 만나는 길도 얼마 안 남았고."
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr "열쇠 구멍의 모습을 보아하니, 완성된 시질이 있어야만 열 수 있는 것 같아. 이 모든 모험의 도착지점인 것 같기도 하고."
+
+# STRIFE1.WAD: MAP12
+# 
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+# 
+# OR
+# 
+# MAP27
+# 
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr "시질의 완전한 힘은 이제 네 손에 있어. 종지부를 찍을 준비 됐어?"
+
+msgid "TXT_SUB_LOG86"
+msgstr "석양이 지고 있어, 나의 영웅. 영광을 누릴 준비해!"
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr "웃기네. 이딴 예언 따위. 잠깐만, 마실이 우리들을 부르고 있어. 이제 여기를 나가자."
+
+msgid "TXT_SUB_LOG88"
+msgstr "미안. 피칠갑을 한 너의 모습을 보느라 할 말을 잃었어. 그냥 마실에게로 돌아가자."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr ""
+"공장은 광산 옆에 있어. 릭터가 데그닌 광산을 이야기한 것 같아. 데그닌 광석은 폭발성이 있는 자기력이 감도는 물질이야. 방어막을 끌 "
+"중요한 도구이기도 하지."
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr "광산, 고대 묘지, 하수도. 데이트하기엔 딱 맞는 장소들이네!"
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr "릭터가 좀 더 자세히 설명해 줬으면 좋았을 텐데. 흠, 여기서 해보자."
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr "우리는 지금... 이런 제길. 여기가 어딘지 모르겠어."
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr "릭터의 요원이 수색하던 유적지인가봐... 잠깐, 조심해! 크루세이더야!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "으윽, 이게 재생하기 시작했어. 내가 토하기 전에 파괴해!"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr "친구야, 우리가 싸우는 상대가 무엇인지는 모르겠지만, 오더보다 더한 존재인 것 같아. 광산으로 향하자!"
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr "조심해가면서, 그들이 캔 광석을 두는 곳을 찾아."
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr ""
+"저 사람들은 불쌍한 광산의 노예들이야. 오더가 이식한 세뇌 장치 때문에 정상적인 뇌 기능을 잃었지. 전송기만 파괴한다면, 그들은 자유를 "
+"되찾을 수 있을 거야!"
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr "본부가 말하길 전송기는 방어막에 의해 보호받고 있대. 광석을 사용하는 방법을 연습하면서 노예들을 해방한다면 일석이조일 거야."
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr ""
+"조언을 찾는다면, 광석을 방어막에 가까이 놔둔 뒤 쏴봐. 광석이 커다란 자기장을 만들 테고, 방어막을 완전히 무력화 시킬 거야. 불 "
+"끄는거지!"
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr "이제 공장으로 향하자. 광산을 나가면 더 재밌는 모험이 펼쳐질 거야!"
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr "미안, 영웅 친구... 이런 곳은 처음 봐."
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr "앞쪽에서 거대한 신경교란 파장이 감지되고 있어. 우리가 찾아낸 것 같아."
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr "이렇게 끔찍한 모습을 보게 되다니! 멀쩡한 사람이 저곳에 들어갔다 나온 모습을... 차마 생각하기도 싫어."
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr ""
+"마실이 정신 나갔나 봐. 모든 것을 알면서도 200 명이나 되는 병력을 보내서 죽게 했어. 과부들과 망령들을 위한 복수를 할 시간이야!"
+
+msgid "TXT_SUB_LOG105"
+msgstr "마실? 시질 조각에 의해 오염됬어. 수 년 동안 믿어온 우리가 바보인가? 아니면 이 운명을 피할 수 없었던 걸까?"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr ""
+"릭터가 말하길 우리가 파괴한 공장은 연구소로 향하는 길이 있대. 그리고 그곳에는 시질 특유의 힘이 감지됐어. 공장으로 돌아가서 자유를 "
+"위해 계속 투쟁을 하자."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr "감히 어떤 자가 이 몸을 반역하고 요새를 침입한 것이더냐? 나약한 인간이구나. 이 몸의 의해 소멸당해라."
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr "이 몸은 너에게 사살 당할 수 없다. 이 몸은 초월한 존재, 인간 따위를 넘었기에!"
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"영생, 불사, 뛰어난 지능, 이 몸은 많은 걸 지니고 있소! 강화인간, 생채병기, 반신반체, 오더를 위하여 더욱이 연구해야 하오. 이 몸의 의지에 반역하는 것이라면, 사라지시오!\n"
+"    \\cy이 미친놈은 시질 조각을 가지고 있어."
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr ""
+"하하, 이 순간만을 기다리고 있었노라. 그대와 같은 어리석은 자가 짐을 풀어줄 순간을. 그대의 조그만 행성은 이제 짐의 것이고, 그대는 "
+"태어난 것을 후회하게 될 것이니라!"
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"초월적인 힘을 가짐으로써 진정한 진실을 찾을 수가 있소. 당신은 이 세계의 유일신, 진정한 빛의 막강함에 의해 무릎을 꿇을 것이오. 종지부를 피하려면 시질을 건네고, 우리를 따르시오!\n"
+"    \\cy이런 맹신적인 하오체가 정말 싫더라!"
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr ""
+"그대... 짐의 명령을 거부하고, 많은 것을 빼앗았고, 수 백 년 동안의 욕망을 위협했느니라. 그러나 짐은, 그대를 침식하여 짐의 의지에"
+" 복종하도록 만들 것이니라..."
+
+msgid "TXT_SUB_LOG200"
+msgstr "바라던 일 같네. 그렇지 않아?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "넌 많은 걸 봤어. 얼려버려, 마실!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr "다음번엔, 내 말을 좀 들어. "
+
+msgid "TXT_SUB_LOG203"
+msgstr "으윽, 세기말 가격이네."
+
+msgid "TXT_SUB_LOG204"
+msgstr "커다란 놈을 막아. 둔하니까."
+
+msgid "TXT_SUB_LOG205"
+msgstr "꾸물거리지 말고 빨리 움직여야 해! "
+
+msgid "TXT_SUB_LOG206"
+msgstr "갈 때마다 보이는 복도가 다 똑같다고 생각해본 적 있어? "
+
+msgid "TXT_SUB_LOG207"
+msgstr "야, 어쩔 때는 나도 추측을 해본다고! "
+
+msgid "TXT_SUB_LOG208"
+msgstr "오, 그리고 경보를 조심해."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr "맙소사, 무슨 짓을 저질렀는지 알기나 해?"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr "제길, 다 망쳐 놓았네!"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr "빨리! 여길 어서 벗어나야 해!"
+
+msgid "TXT_SUB_LOG212"
+msgstr "오, 너 이 일에 정말 진지하구나?"
+
+msgid "TXT_SUB_LOG213"
+msgstr "저 녀석들을 모두 벽에 처박아놓자. 힘내! "
+
+msgid "TXT_SUB_LOG214"
+msgstr "음, 넌 괴물이야."
+
+msgid "TXT_SUB_LOG215"
+msgstr "생각보다 박자가 잘 맞는데?"
+
+msgid "TXT_SUB_LOG216"
+msgstr "저 빵야-빵야 막대기 너무나도 좋은걸? "
+
+msgid "TXT_SUB_LOG217"
+msgstr "너 스스로 챙기는 모습이 정말 보기 좋아. "
+
+msgid "TXT_SUB_LOG218"
+msgstr "날려버려! 저놈들은 인간이 아니야! "
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr "숯 빛깔 아콜라이트라! 맛과 감각을 잘 살렸는데? "
+
+msgid "TXT_SUB_LOG220"
+msgstr "이 걸 하다보면 네 눈이 좀 멀겠지만... 아찔하고 재밌는 것 같아."
+
+msgid "TXT_SUB_LOG221"
+msgstr "보답으로 저녁에 초대하지 않을 것 같아서 아쉽네! "
+
+msgid "TXT_SUB_LOG222"
+msgstr "최상층으로 올라가야 해. "
+
+msgid "TXT_SUB_LOG223"
+msgstr "잠깐... 저거 뭔가 흥미로워. 확인해보자."
+
+msgid "TXT_SUB_LOG224"
+msgstr "윽, 정말 혐오스러운 녀석들. 청소할 준비를 하자."
+
+msgid "TXT_SUB_LOG225"
+msgstr "왼쪽! 왼쪽으로 이동해!... 잠깐, 다른 왼쪽!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "뻔뻔한 고집불통 남충 놈!... 걱정 마, 너 말고."
+
+msgid "TXT_SUB_LOG227"
+msgstr "크고, 아름답고, 과묵하네. 같이 있고 싶은 타입이야."
+
+msgid "TXT_SUB_LOG228"
+msgstr "아마도 아니었던 것 같네! "
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr "만나지 못한 게 유감스럽네... 가까이서. "
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr "너를 꿈꿔왔어... 꿈은 꿈이였나봐."
+
+msgid "TXT_SUB_LOG231"
+msgstr ""
+"잠깐, 시청으로 가지 마. 이미 발각되어서 이젠 안전하지 않아. 아마도 총알의 비가 내리는 유일한 이유일 거야. 최선을 다해서 저 커다란"
+" 친구들을 격파해봐. 저놈들은 \"크루세이더\" 라고 해. 이 일을 끝마치면, 마실이 있는 곳으로 안내해줄게. "
+
+msgid "TXT_SUB_LOG232"
+msgstr "건투를 빌어, 친구! 안으로 들여보내 줄게. "
+
+msgid "TXT_SUB_LOG233"
+msgstr ""
+"크루세이더를 조심해. 저놈들은 커다랗고 강력한 기동 병기야. 난폭하기도 하지. 놈들의 무장이 뭔지 모르지만, 중요한 점은 넌 포위됐다는 "
+"거지. 조심해. "
+
+msgid "TXT_SUB_LOG234"
+msgstr ""
+"잘 싸웠어. 내가 생각지도 못한 기발한 생각을 많이 하네. 이제, 모두가 너를 보지 않는 동안 오른쪽 문으로 들어가서 계단을 올라가고 "
+"남자를 만나."
+
+msgid "TXT_SUB_LOG235"
+msgstr "결국엔 사람들이 너를 보았네. 사적인 건 아니지만 넌 죽어줘야겠어. "
+
+msgid "TXT_SUB_LOG236"
+msgstr "이 어리석은, 멍청한, 짜리몽땅한 말미잘 얼간이! 우리 곁을 떠나다니!"
+
+msgid "TXT_SUB_LOG237"
+msgstr ""
+"저 문 앞에서 내가 기다리고 있었으면 얼마나 좋을까... 하지만 난 지하에서 임무를 수행해야 해. 마실 사령관을 만날 준비를 해."
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr "배부른 돼지 같은 녀석. 난 이 추출기에 대해서 아무것도 몰라. 일단 성급하지 말자."
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "듣기만 해도 꿈에 그리던 일만 같네, 그렇지?"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "그리고 내가 너와 함께 있어 줄께."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "워너는 우리가 모집한 첩자야. 그는 발전소 창고에 있어."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "일생일대의 격전에 대비해. 돈 아끼지 말고 있는 대로 다 써."
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "실례지만, 이거 좀 골때리겠는데?"
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "으음. 왠지 무기 같은데. 화력이야 더 많으면 좋지."
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "쉬운 일 같지만, 일단 한번 해보자고."
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "어쩌라고. 아무도 프로그래머들 이야기는 안 듣는데."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "오, 내가 숨어있어서 다행이야. 무슨 뜻인지 알겠지?"
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "뭐가 이리 불만이야. 나중에 얘 좀 꼭 처리해줘."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "“이곳은 통행 금지야!” 웃기고 앉아있네."
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "아주 들떠있는 녀석이네."
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "아마 네가 “부탁”을 안 해서 이러나 봐."
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "다들 참 궁색하게 사네."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "끝내준다. 이제 시궁쥐 왕의 심부름도 해야 한다니."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "얘도 분명 냄새 하나는 죽여줄 거야."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "또 하수도라... 끝내준다. 저 아래에 또 뭐가 살고 있을까?"
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "여기가 아닌가 봐. 다른 곳을 찾아봐야겠어."
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "어서 가자, 나의 영웅. 그 못생긴 녀석에게 본때를 보여주자고."
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr "인간개조? 음, 이거 때문에 녀석들이 끊임없이 나오는 거였어! 녀석들 성질 더러운 것도 그렇고."
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "역겨운 자식... 죽여버려!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "이 양반 못생기긴 했어도, 우리 편인 것 같네."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "최근 상황을 보건대, 잠입 작전은 힘들 것 같아."
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "흠. 이유 없이 그런 소문이 났을 리는 없을 테고... 나도 그 무기 하나만 가져다줘."
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr "내가 사람들 죽이는 걸 지겨워할 것 같지만, 이 일이 모두 끝나면 아마 그리워할 거야."

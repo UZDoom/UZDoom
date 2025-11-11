@@ -1,0 +1,226 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese esh esi esu\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr ""
+
+msgid "GOTYELLOWFLEM"
+msgstr ""
+
+msgid "GOTREDFLEM"
+msgstr ""
+
+msgid "GOTGOGGLES"
+msgstr "Encuentras ultralentes"
+
+msgid "PD_BLUECO"
+msgstr ""
+
+msgid "PD_REDCO"
+msgstr ""
+
+msgid "PD_YELLOWCO"
+msgstr ""
+
+msgid "PD_BLUEFO"
+msgstr ""
+
+msgid "PD_REDFO"
+msgstr ""
+
+msgid "PD_YELLOWFO"
+msgstr ""
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgid "HUSTR_E1M1"
+msgstr ""
+
+msgid "HUSTR_E1M2"
+msgstr ""
+
+msgid "HUSTR_E1M3"
+msgstr ""
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr ""
+
+msgid "HUSTR_E2M1"
+msgstr ""
+
+msgid "HUSTR_E2M2"
+msgstr ""
+
+msgid "HUSTR_E2M3"
+msgstr ""
+
+msgid "HUSTR_E2M4"
+msgstr ""
+
+msgid "HUSTR_E2M5"
+msgstr ""
+
+msgid "HUSTR_E3M1"
+msgstr ""
+
+msgid "HUSTR_E3M2"
+msgstr ""
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr ""
+
+msgid "HUSTR_E3M5"
+msgstr ""
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr ""
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr ""
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr ""
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "PD_BLUEC"
+msgstr ""
+
+msgid "PD_REDC"
+msgstr ""
+
+msgid "PD_YELLOWC"
+msgstr ""
+
+msgid "PD_BLUEF"
+msgstr ""
+
+msgid "PD_REDF"
+msgstr ""
+
+msgid "PD_YELLOWF"
+msgstr ""
+
+msgid "OB_SLIME"
+msgstr ""
+
+msgid "OB_LAVA"
+msgstr ""
+
+msgid "OB_POWERSTRAND"
+msgstr "¡A %o l@[ao_esp] alcanzó baba interdimensional!"
+
+msgid "OB_KILLEDSELF"
+msgstr "¡A %o l@[ao_esp] alcanzó baba interdimensional!"
+
+msgid "OB_STRIDICUS"
+msgstr "A %o l@[ao_esp] moqueó un Zancadico."
+
+msgid "OB_FLEMMINE"
+msgstr "A %o l@[ao_esp] pegoteó una Flem-Mina."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "A %o l@[ao_esp] enlodó un Supercícloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "A %o l@[ao_esp] derrotó un Máximus."
+
+msgid "OB_LARVA"
+msgstr "A %o l@[ao_esp] pegoteó una larva."
+
+msgid "OB_QUADRUMPUS"
+msgstr "A %o l@[ao_esp] enlodó un Quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "A %o l@[ao_esp] derrotó la Flembominación."
+
+msgid "OB_SNOTFOLUS"
+msgstr "A %o l@[ao_esp] derrotó Lord Mocofolus."
+
+msgid "OB_MPR_SPLASH"
+msgstr "A %o l@[ao_esp] alcanzó el propulsor de %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "A %o l@[ao_esp] «lazeó» %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Tras enviar a la monstruosa Flembrana\n"
+"de vuelta a su dimensión, liberas a los\n"
+"rehenes. ¡Pero los flemoides están por\n"
+"todas partes! Tú y los rehenes escapan\n"
+"hacia tu nave. Los flemoides cubren de\n"
+"lodo tu nave, pero escapas en órbita por\n"
+"un pelo. Durante el regreso eres\n"
+"felicitad@[ao_esp] por tu valiente\n"
+"rescate, pero mandas una advertencia...\n"
+"Queda por ver lo último de los Flemoides.\n"
+"\n"
+"Desafortunadamente tienes razón. Ya que\n"
+"al llegar de vuelta a casa, te das cuenta de\n"
+"que de alguna manera los Flemoides te\n"
+"han seguido hasta aquí. ¡Prepárate para\n"
+"Chex Quest 2: Terror en Chex City!"
+
+msgid "E2TEXT"
+msgstr ""
+
+msgid "E3TEXT"
+msgstr ""
+
+msgid "M_EPI1"
+msgstr ""
+
+msgid "M_EPI2"
+msgstr ""
+
+msgid "M_EPI3"
+msgstr ""
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

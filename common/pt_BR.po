@@ -1,0 +1,2129 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"uzdoom/common/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pt\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Aperte Y ou N."
+
+msgid "TXT_YES"
+msgstr "Sim"
+
+msgid "TXT_NO"
+msgstr "Não"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Você não pode salvar se não estiver jogando!\n"
+"\n"
+"Aperte uma tecla."
+
+msgid "SAFEMESSAGE"
+msgstr "Deseja mesmo fazer isso?"
+
+msgid "NOTSET"
+msgstr "Não definido"
+
+msgid "QSPROMPT"
+msgstr ""
+"Salvar rapidamente sobre o jogo chamado\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Aperte Y ou N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Carregar rapidamente o jogo chamado\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Aperte Y ou N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s está trapaceando"
+
+msgid "MSGOFF"
+msgstr "Mensagens DESATIVADAS"
+
+msgid "MSGON"
+msgstr "Mensagens ATIVADAS"
+
+msgid "TXT_SAY"
+msgstr "Dizer:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Aperte uma tecla ou clique em qualquer lugar na janela para sair."
+
+msgid "NEWSAVE"
+msgstr "<Novo jogo salvo>"
+
+msgid "GGSAVED"
+msgstr "Jogo salvo."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Tempo"
+
+msgid "MNU_LOADGAME"
+msgstr "Carregar jogo"
+
+msgid "MNU_SAVEGAME"
+msgstr "Salvar jogo"
+
+msgid "MNU_NOPICTURE"
+msgstr "Sem imagem"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Versão diferente"
+
+msgid "MNU_NOFILES"
+msgstr "Vazio"
+
+msgid "MNU_DELETESG"
+msgstr "Deseja mesmo excluir o jogo salvo?"
+
+msgid "OPTVAL_OFF"
+msgstr "Não"
+
+msgid "OPTVAL_ON"
+msgstr "Sim"
+
+msgid "OPTVAL_AUTO"
+msgstr "Automático"
+
+msgid "OPTMNU_TITLE"
+msgstr "Opções"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Personalizar comandos"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Opções de mouse"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Opções de controle"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Configurações de jogador"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Opções de jogabilidade"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Opções de automapa"
+
+msgid "OPTMNU_HUD"
+msgstr "Opções de HUD"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Outras opções"
+
+msgid "OPTMNU_SOUND"
+msgstr "Opções de som"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Opções de vídeo"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Definir modo de vídeo"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Redefinir para configurações padrão"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Redefinir para a última configuração salva"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Salvar configurações atuais"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Abrir console"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Opções de rede"
+
+msgid "OPTMNU_REVERB"
+msgstr "Editor de ambiente de reverberação"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "Aperte ENTER para alterar e BACKSPACE para remover"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Aperte uma nova tecla para o comando e ESC para cancelar"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Comandos"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Atirar"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Tiro secundário"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Recarregar arma"
+
+msgid "CNTRLMNU_USE"
+msgstr "Usar / Abrir"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Mover-se para frente"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Mover-se para trás"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Mover-se para a esquerda"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Mover-se para a direita"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Girar para a esquerda"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Girar para a direita"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Giro rápido"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Pular"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Agachar"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Agachar (alternar)"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Visão com o mouse"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Olhar para cima"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Olhar para baixo"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Olhar para o centro"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Correr"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Correr (alternar)"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Deslocamento lateral"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Exibir placar"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Ação"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Personalizar comandos de ação"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Bate-papo"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Multijogador"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Dizer"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Personalizar comandos do bate-papo"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Personalizar comandos de arma"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Personalizar comandos do inventário"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Personalizar outros comandos"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Armas"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Arma seguinte"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Arma anterior"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Arma 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Arma 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Arma 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Arma 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Arma 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Arma 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Arma 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Arma 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Arma 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Arma 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventário"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Ativar item"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Ativar todos os itens"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Item seguinte"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Item anterior"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Peronalizar comandos do mapa"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Comandos do mapa"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Mover para a esquerda"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Mover para a direita"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Mover para cima"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Mover para baixo"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Ampliar"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Afastar"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Ativar/desativar zoom"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Ativar/desativar seguimento"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Ativar/desativar grade"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Ativar/desativar rotação"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Ativar/desativar texturas"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Ativar/desativar automapa"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Câmera em terceira pessoa"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Captura de tela"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Abrir console"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Pausar"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Aumentar tamanho da exibição"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Reduzir tamanho da exibição"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Abrir ajuda"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Abrir menu de salvar"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Abrir menu de carregar"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Abrir menu de opções"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Abrir menu de vídeo"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Salvar rapidamente"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Carregar rapidamente"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Sair para o menu principal"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Ativar/desativar mensagens"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Sair do jogo"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Ajustar gama"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Ativar mouse"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Ativar mouse nos menus"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Exibir botão de voltar"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Cursor"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Sensibilidade horizontal"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Sensibilidade vertical"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Suavizar movimento do mouse"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Velocidade de giro"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Velocidade da visão com mouse"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Velocidade de deslocamento para frente/trás"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Velocidade de deslocamento lateral"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Visão com mouse sempre ativada"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Inverter eixo Y do mouse"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Inverter eixo X do mouse"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Esquerda superior"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Direita superior"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Esquerda inferior"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Direita inferior"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Estilo touchscreen"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Seta simples"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Cursor do sistema"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Padrão"
+
+msgid "JOYMNU_TITLE"
+msgstr "Configurar controle"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Opções de controle"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Bloquear controle no menu"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Ativar detecção de controles"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Ativar controles DirectInput"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Ativar controles XInput"
+
+msgid "JOYMNU_PS2"
+msgstr "Ativar adaptadores de PlayStation 2"
+
+msgid "JOYMNU_NOCON"
+msgstr "Nenhum controle detectado."
+
+msgid "JOYMNU_CONFIG"
+msgstr "Configurar controles:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "A detecção de controles deve"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "ser ativada para exibi-los."
+
+msgid "JOYMNU_INVALID"
+msgstr "Controle inválido especificado para o menu."
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Sensibilidade geral"
+
+msgid "JOYMNU_AXIS"
+msgstr "Configuração de eixo"
+
+msgid "JOYMNU_INVERT"
+msgstr "Inverter"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Zona morta"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Nenhum eixo configurável"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Nenhum"
+
+msgid "OPTVAL_TURNING"
+msgstr "Girar"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Olhar para cima/baixo"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Mover-se para a frente"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Deslocamento lateral"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Mover-se para cima/baixo"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Invertido"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Não invertido"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Azul"
+
+msgid "TXT_COLOR_RED"
+msgstr "Vermelho"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Verde"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Cinza"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Cinza escuro"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Verde escuro"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Marrom"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Azul escuro"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Vermelho claro"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Amarelo"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Roxo"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Verde oliva"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Bege"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Verde claro"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Azul claro"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Cinza claro"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Marrom claro"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Dourado"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Verde claro"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Ferrugem"
+
+msgid "PLYRMNU_NAME"
+msgstr "Nome"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Equipe"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Cor"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Gênero"
+
+msgid "OPTVAL_MALE"
+msgstr "Masculino"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Feminino"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neutro"
+
+msgid "OPTVAL_OTHER"
+msgstr "Objeto"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Opções de jogabilidade"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Sempre"
+
+msgid "OPTVAL_NEVER"
+msgstr "Nunca"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Mira automática"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Sempre correr"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Tamanho da tela"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Sincronização vertical"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Modelos"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Escala da mira"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Brilho"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Correção de gama"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Contraste"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Saturação"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Escala da barra de estado"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Mensagens"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Centralizar mensagens"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Exibir mensagem pulsante"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Escala de mensagem"
+
+msgid "MNU_COLORPICKER"
+msgstr "Selecione uma cor"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Girar automapa"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Seguir jogador"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Transparência da linha"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Espessura da linha"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Personalizar cores do mapa"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Restaurar cores personalizadas padrão"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Som ativado"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Música ativada"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 amostras"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 amostras"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 amostras"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 amostras"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1.024 amostras"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2.048 amostras"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4.096 amostras"
+
+msgid "OPTSTR_AUTO"
+msgstr "Automático"
+
+msgid "OPTSTR_MONO"
+msgstr ""
+
+msgid "OPTSTR_STEREO"
+msgstr "Estéreo"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Decodificador Dolby Pro Logic"
+
+msgid "OPTSTR_QUAD"
+msgstr "Quadrifônico"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 alto-falantes"
+
+msgid "OPTSTR_5POINT1"
+msgstr "Auto-falantes 5.1"
+
+msgid "OPTSTR_7POINT1"
+msgstr "Auto-falantes 7.1"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Dispositivo de reprodução"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Ativar EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Reamostrador"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Volume de sons"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Volume do menu"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Volume da música"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "Dispositivo MIDI"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Som em segundo plano"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Reverberação debaixo d'água"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Tons aleatórios"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Canais de som"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Sistema de som"
+
+msgid "SNDMNU_OPENAL"
+msgstr "Opções de OpenAL"
+
+msgid "SNDMNU_RESTART"
+msgstr "Reiniciar som"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Opções avançadas"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Opções de reprodutor de módulos"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Opções de reprodutor MIDI"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Som em menus"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Opções de áudio avançadas"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Taxa de amostragem"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "Síntese OPL"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Número de chips OPL emulados"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Lateralidade estéreo completa para MIDI"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "Núcleo do emulador de OPL"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "Vozes MIDI"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr ""
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Freeverb global"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Banco de sons"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Ganho"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Reverberação"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Nível de reverberação"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Arquivo de configuração do Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Volume relativo"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Arquivo de configuração do WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Selecionar configuração"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Reamostragem avançada"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "Banco OPL"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Núcleo do emulador de OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Rodar emulador em taxa PCM"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Número de chips OPL emulados"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Ganho"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Modelo de volume"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "Núcleo do emulador de OPN2"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "Emulação de GUS"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Arquivo de configuração do GUS"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Ler lumps DMXGUS"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Tamanho de memória do GUS"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Número de chips OPN emulados"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Ganho"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Usar banco WOPL personalizado"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Banco WOPL"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Usar banco WOPN personalizado"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Banco WOPN"
+
+msgid "OPTVAL_ALIASING"
+msgstr ""
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr ""
+
+msgid "OPTVAL_LINEAR_2"
+msgstr ""
+
+msgid "OPTVAL_LINEAR_3"
+msgstr ""
+
+msgid "OPTVAL_NEAREST"
+msgstr "Mais próximo"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Baixo)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Médio)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Alto)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Cúbico"
+
+msgid "OPTVAL_BLEP"
+msgstr "Passo limitado por banda"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Linear (mais lento)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Linear limitado por banda"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Cúbico (mais lento)"
+
+msgid "OPTVAL_SINC"
+msgstr "Seno cardinal"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Somente notas ligadas/desligadas"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Rampa completa"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Volume geral"
+
+msgid "MODMNU_QUALITY"
+msgstr "Qualidade"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Rampa de volume"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Automático (usar definições de banco)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Automático (usar definições de banco)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Genérico"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Genérico"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "Nativo OPL"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "Nativo OPN"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (preciso, com bug de AM)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (preciso, com bug de AM)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Estilo Win9X"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Estilo Win9X (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Estilo Win9X (FM genérico)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (sem bug de voz de AM)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (sem bug de voz de AM)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "Interface de Biblioteca de Áudio IBM"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "Sistema Operacional de Som HMI"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "SOS HMI (antigo, com bugs)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Sem limites"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Paleta"
+
+msgid "OPTVAL_LOW"
+msgstr "Baixo"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Médio"
+
+msgid "OPTVAL_HIGH"
+msgstr "Alto"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Extremo"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Obverso"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Reverso"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Pós-processamento"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Tipo de tonemap"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Distorção de lente"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Qualidade de FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Dithering"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Ordem da paleta tonemap"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Expoente da paleta tonemap"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Multiamostragem"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Bloom"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Qualidade de oclusão de ambiente"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portais com oclusão de ambiente"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Desfoque do menu"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Mapa de ambiente em espelhos"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Qualidade de renderização"
+
+msgid "OPTVAL_SPEED"
+msgstr "Velocidade"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Qualidade"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Modo de luz de setor"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Modo de neblina"
+
+msgid "OPTVAL_RADIAL"
+msgstr ""
+
+msgid "OPTVAL_STANDARD"
+msgstr "Padrão"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Modo de filtro de textura"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Filtro anisotrópico"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Nenhum (mipmap mais próximo)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Nenhum (mipmap linear)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Nenhum (trilinear)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr ""
+
+msgid "OPTVAL_TRILINEAR"
+msgstr ""
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Opções de Textura"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Texturas ativadas"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Habilitar texturas de alta resolução"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Modo de Redimensionamento de Alta Qualidade"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Multiplicador de Redimensionamento de Alta Qualidade"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Este modo precisa de %d vezes mais memória de vídeo"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Redimensionar texturas"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Redimensionar sprites"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Redimensionar fontes"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Redimensionar skins de modelos"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Precachê de texturas GL"
+
+msgid "VIDMNU_TITLE"
+msgstr "Modo de vídeo"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Redimensionado (mais próximo)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Redimensionado (linear)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Barras pretas"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Esticado"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Modo de renderização"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Tela cheia"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Suporte para Retina/HiDPI"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Proporção de tela"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Forçar proporção de tela"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Estilo de proporção forçado"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Ativar proporção de tela 5:4"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Escala de resolução"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Fator de escala"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Usar escala linear (tela cheia)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Escala de pixels personalizada"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Largura personalizada"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Altura personalizada"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Aplicar alterações (janela)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Aplicar alterações (tela cheia)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Escolher resolução predefinida"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Predefinições de resolução personalizadas"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Modos de resolução predefinidas"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Proporção 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Proporção 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Proporção 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Proporção 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Proporção 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr ""
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Menor escala possível"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Personalizado"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "FPS máximo"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 FPS"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 FPS"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 FPS"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 FPS"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 FPS"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 FPS"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "API de renderização preferida"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Unir as teclas Alt, Ctrl e Shift esquerdos e direitos"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt+Enter ativa tela cheia"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command+F ativa tela cheia"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Ativar salvamento automático"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Número de salvamentos automáticos"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Confirmação ao salvar/carregar"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Desativar trapaças de teclado"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rotação de salvamentos rápidos"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Número de salvamentos rápidos em rotação"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Desativar escala limpa do menu"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Pausar jogo ao minimizar"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Mira padrão"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Cor da mira"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Exibir saúde na mira"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Redimensionar mira"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Padrão"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Melhorado"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Idioma"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Desfazer alterações"
+
+msgid "REVMNU_SELECT"
+msgstr "Selecione o ambiente"
+
+msgid "REVMNU_TEST"
+msgstr "Testar ambiente"
+
+msgid "REVMNU_EDIT"
+msgstr "Editar ambiente"
+
+msgid "REVMNU_NEW"
+msgstr "Novo ambiente"
+
+msgid "REVMNU_REVERT"
+msgstr "Reverter configurações"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Tamanho do ambiente"
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Difusão do ambiente"
+
+msgid "REVMNU_ROOM"
+msgstr "Sala"
+
+msgid "REVMNU_ROOM_HF"
+msgstr "Sala (alta frequência)"
+
+msgid "REVMNU_ROOM_LF"
+msgstr "Sala (baixa frequência)"
+
+msgid "REVMNU_DECAY_TIME"
+msgstr "Tempo de decaimento"
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Taxa de decaimento (alta freq.)"
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Taxa de decaimento (baixa freq.)"
+
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflexos"
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Atraso de reflexos"
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Deslocamento X de reflexos"
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Deslocamento Y de reflexos"
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Deslocamento Z de reflexos"
+
+msgid "REVMNU_REVERB"
+msgstr "Reverberação"
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Atraso de reverberação"
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Deslocamento X de reverberação"
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Deslocamento Y de reverberação"
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Deslocamento Z de reverberação"
+
+msgid "REVMNU_ECHO_TIME"
+msgstr "Tempo de eco"
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Profundidade de eco"
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Tempo de modulação"
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Profundidade de modulação"
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Absorção de ar de alta freq."
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr "Referência de alta freq."
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr "Referência de baixa freq."
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Fator de roll-off de sala"
+
+msgid "REVMNU_DIFFUSION"
+msgstr "Difusão"
+
+msgid "REVMNU_DENSITY"
+msgstr "Densidade"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Escala de reflexos"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Escala de atraso de reflexos"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Escala de tempo de decaimento"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Limite de decaimento em alta freq."
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Escala de reverberação"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Escala de atraso de reverberação"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Escala de tempo de eco"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Escala de tempo de modulação"
+
+msgid "REVMNU_Based_on"
+msgstr "Baseado em"
+
+msgid "REVMNU_Name"
+msgstr "Nome"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Criar"
+
+msgid "REVMNU_Save"
+msgstr "Salvar..."
+
+msgid "REVMNU_File_name"
+msgstr "Nome do arquivo"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Ambientes para salvar"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Opções de Vulkan (experimental)"
+
+msgid "VK_TITLE"
+msgstr "Opções de Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Ativar Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "ID do dispositivo Vulkan"
+
+msgid "VKMNU_HDR"
+msgstr "Alto alcance dinâmico (HDR)"
+
+msgid "VK_WARNING"
+msgstr "Atenção: o renderizador Vulkan é altamente experimental!"
+
+msgid "VK_RESTART"
+msgstr "É necessário reiniciar para que essas configurações surtam efeito."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Selecione o dispositivo Vulkan"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Antigo xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Buscar opção"
+
+msgid "OS_ANY"
+msgstr "Buscar por qualquer termo"
+
+msgid "OS_ALL"
+msgstr "Buscar por todos os termos"
+
+msgid "OS_NO_RESULTS"
+msgstr "Nenhum resultado encontrado."
+
+msgid "OS_LABEL"
+msgstr "Busca:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k desossou %o como um peixe"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k castrou %o"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k fez creme de %o"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k decimou %o"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k destruiu %o"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k fez picadinho de %o"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k estripou %o"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k achatou %o"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k deu Justiça Anal para %o"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k deu LoUcUrA aNaL para %o"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k matou %o"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k fez carne moída de %o"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k massacrou %o"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k mutilou %o"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k esquartejou %o"
+
+msgid "TXT_OBITUARY16"
+msgstr "%k abriu um novo orifício em %o"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k abateu %o"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k esmagou %o"
+
+msgid "TXT_OBITUARY19"
+msgstr "%k sodomizou %o"
+
+msgid "TXT_OBITUARY20"
+msgstr "%k explodiu %o"
+
+msgid "TXT_OBITUARY21"
+msgstr "%k espatifou %o"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k estrangulou %o"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k detonou %o"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k mandou %o para o necrotério"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k mandou %o para o Inferno"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k tostou %o"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k apagou %o"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k metralhou %o"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k pulverizou %o"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k fez almôndegas de %o"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k espancou %o como um cachorro"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o virou escremento"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o virou hambúrguer"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o sofreu separação escrotal"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o se voluntariou para o controle populacional"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o se suicidou"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o ganhou o Prêmio Darwin"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "ÁÉÍÓÚÀÃÕÂÊÔÇ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Menu de opções completo"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Menu de opções simples"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Abrir pasta de configuração de jogo"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Abrir pasta de capturas de tela"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Abrir pasta de jogos salvos"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Trocar botões do mouse"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Somente modificado"
+
+msgid "TXT_UNKNOWN"
+msgstr "Desconhecido"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Automapa"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Automapa"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Este jogo salvo precisa destes arquivos"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Opções de multijogador"
+
+msgid "OPTMNU_INPUT"
+msgstr "Opções de entrada"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Opções de sistema"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Opções de iluminação"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Opções de sprite"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr ""
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Aparência"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Opções de vídeo avançadas"
+
+msgid "PICKER_SELECT"
+msgstr "Selecione qual arquivo de jogo rodar."
+
+msgid "PICKER_PLAY"
+msgstr "Jogar"
+
+msgid "PICKER_EXIT"
+msgstr "Sair"
+
+msgid "PICKER_GENERAL"
+msgstr "Geral"
+
+msgid "PICKER_EXTRA"
+msgstr "Gráficos extras"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Tela cheia"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Desativar autocarregam."
+
+msgid "PICKER_DONTASK"
+msgstr "Não perguntar de novo"
+
+msgid "PICKER_LIGHTS"
+msgstr "Luzes"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr ""
+
+msgid "PICKER_WIDESCREEN"
+msgstr ""
+
+msgid "PICKER_ADDPARM"
+msgstr "Parâmetros adicionais:"
+
+msgid "PICKER_WELCOME"
+msgstr "Bem-vindo(a) ao %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Versão %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API de renderização"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Jogo"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Habilitar este controle"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Abrir menu principal"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Reprodutor de módulos"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Permitir controle em segundo plano"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "Ordem de jogos salvos"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Alfabética"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Mais recente"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Hospedar jogo"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Entrar no jogo"
+
+msgid "PICKER_REMPARM"
+msgstr "Lembrar de parâmetros"
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr "Carregar WADs de apoio"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Lembrar de parâmetros"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Carregar arquivo de jogo salvo:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Lembrar arquivo de jogo salvo"
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr "Hospedar"
+
+msgid "PICKER_JOIN"
+msgstr "Entrar"
+
+msgid "PICKER_NETMODE"
+msgstr "Modo de rede:"
+
+msgid "PICKER_NETAUTO"
+msgstr "Automático (recomendado)"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Servidor de pacotes"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Ponto a ponto"
+
+msgid "PICKER_NETRATE"
+msgstr "Taxa de tiques do pacote:"
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr "Enviar pacotes de backup"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Modos de jogo:"
+
+msgid "PICKER_COOP"
+msgstr "Cooperativo"
+
+msgid "PICKER_DM"
+msgstr "Mata-mata"
+
+msgid "PICKER_TDM"
+msgstr "Mata-mata entre equipes"
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr "Equipe #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Usar regras alternativas de mata-mata"
+
+msgid "PICKER_PLAYERS"
+msgstr "Número máximo de jogadores:"
+
+msgid "PICKER_PORT"
+msgstr "Porta de hóspede:"
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr "Máximo 64"
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr "Padrão 5029"
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr "255 = Aleatório"
+
+msgid "PICKER_IP"
+msgstr "IP de hóspede:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Mata-mata entre equipes:"
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr "Dizer (equipe):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Status de atividade no Discord"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

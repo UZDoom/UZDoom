@@ -1,0 +1,255 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: fi\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Poimit sinisen lima-avaimen"
+
+msgid "GOTYELLOWFLEM"
+msgstr "Poimit keltaisen lima-avaimen"
+
+msgid "GOTREDFLEM"
+msgstr "Poimit punaisen lima-avaimen"
+
+msgid "GOTGOGGLES"
+msgstr "Löysit ultralasit"
+
+msgid "PD_BLUECO"
+msgstr "Tarvitset sinisen avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_REDCO"
+msgstr "Tarvitset punaisen avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_YELLOWCO"
+msgstr "Tarvitset keltaisen avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_BLUEFO"
+msgstr "Tarvitset sinisen lima-avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_REDFO"
+msgstr "Tarvitset punaisen lima-avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PD_YELLOWFO"
+msgstr "Tarvitset keltaisen lima-avaimen aktivoidaksesi tämän kappaleen"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Poimit zorcherin"
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch ja avaimet lisätty"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Laskeutumisalue"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Varastolaitos"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorio"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Bazoikin luolastot"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Avaruussatama"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Elokuvateatteri"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Chex-museo"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Kaupungin kadut"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Viemärijärjestelmä"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Komentokeskus"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Yhdistyneet murot"
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provinssipuisto"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteoriavaruusalus"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Panssaroitu bipedicus"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Limamiina"
+
+msgid "CC_CACO"
+msgstr "Supercycloptis"
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "Limaoikku"
+
+msgid "CC_CYBER"
+msgstr "Herra Räkänokka"
+
+msgid "CC_HERO"
+msgstr "Chex-soturi"
+
+msgid "PD_BLUEC"
+msgstr "Tarvitset sinisen avaimen avataksesi tämän oven"
+
+msgid "PD_REDC"
+msgstr "Tarvitset punaisen avaimen avataksesi tämän oven"
+
+msgid "PD_YELLOWC"
+msgstr "Tarvitset keltaisen avaimen avataksesi tämän oven"
+
+msgid "PD_BLUEF"
+msgstr "Tarvitset sinisen lima-avaimen avataksesi tämän oven"
+
+msgid "PD_REDF"
+msgstr "Tarvitset punaisen lima-avaimen avataksesi tämän oven"
+
+msgid "PD_YELLOWF"
+msgstr "Tarvitset keltaisen lima-avaimen avataksesi tämän oven"
+
+msgid "OB_SLIME"
+msgstr "%o uppoaa limaan"
+
+msgid "OB_LAVA"
+msgstr "%o uppoaa limaan"
+
+msgid "OB_POWERSTRAND"
+msgstr "%o parkaan osui interdimensionaalista limaa!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o parkaan osui interdimensionaalista limaa!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o joutui stridicuksen räkäämäksi."
+
+msgid "OB_FLEMMINE"
+msgstr "%o joutui limamiinan mönjäämäksi."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o joutui supercycloptiksen limaamaksi."
+
+msgid "OB_MAXIMUS"
+msgstr "%o joutui Maximuksen päihittämäksi."
+
+msgid "OB_LARVA"
+msgstr "%o joutui toukan mönjäämäksi."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o joutui Neliperän limaamaksi."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o joutui Limaoikun päihittämäksi."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o joutui herra Räkänokan päihittämäksi."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%k osui %o parkaan työntimellään."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%k sazzasi pelaajaan %o."
+
+msgid "E1TEXT"
+msgstr ""
+"Toimitettuasi hirviömäisen Limakalvon\n"
+"takaisin omaan ulottuvuuteensa vapautat\n"
+"vangit. Limatuksia on kuitenkin kaikkialla!\n"
+"Sinä ja vangit pakenette avaruusaluksellesi.\n"
+"Limatukset limaavat alustasi, mutta juuri ja\n"
+"juuri pakenet kiertoradalle. Paluun aikana\n"
+"sinua onnitellaan uskaliaasta pelastus-\n"
+"tehtävästä, mutta annat varoituksen...\n"
+"Tämä ei jää viimeiseksi kerraksi, kun\n"
+"kohtaamme limatuksia.\n"
+"\n"
+"Valitettavasti olet oikeassa, sillä kun\n"
+"palaat kotiin, huomaat limatuksien jotenkin\n"
+"seuranneen sinua tänne. Valmistaudu Chex-\n"
+"seikkailun osaan 2: Kauhua Chex-kaupungissa!"
+
+msgid "E2TEXT"
+msgstr ""
+"Zorchaat jäljelle jääneet viemäreihin\n"
+"kerääntyneet limatukset. Chex-kaupunki on\n"
+"pelastetu. Limatusten uhka näyttää olevan\n"
+"viimeinkin ohi.\n"
+"\n"
+"\n"
+"Kuluu kymmenen rauhallista kukoistuksen\n"
+"vuotta. Mutta limatuksia ei päihitetty, ja\n"
+"niiden halu hallita ravinteikasta muro-\n"
+"ulottuvuutta ei ole hälvennyt. Ne ovat\n"
+"koonneet kaikki joukkonsa, avanneet valtavan\n"
+"interdimensionaalisen repeämän avaruudessa,\n"
+"ja nyt suuri limapallo on törmäämässä\n"
+"suoraan murojen planeettaan!\n"
+"\n"
+"Valmistaudu Chex-seikkailun osaan 3:\n"
+"Invaasio!"
+
+msgid "E3TEXT"
+msgstr ""
+"Yhdellä lopullisella iskulla zorchaat herra\n"
+"Räkänokan takaisin omaan ulottuvuuteensa!\n"
+"Vastoin kaikkia odotuksia olet yksinäsi\n"
+"estänyt invaasion!\n"
+"\n"
+"Toivot todella limatusten viimeinkin\n"
+"oppineen läksynsä, etteivät ne enää ikinä\n"
+"palaisi muroulottuvuuteen.\n"
+"\n"
+"\n"
+"\n"
+"Mutta jos palaavatkin, tiedät olevasi\n"
+"niihin valmis!"
+
+msgid "M_EPI1"
+msgstr "Pelastustehtävä Bazoikissa"
+
+msgid "M_EPI2"
+msgstr "Kauhua Chex-kaupungissa"
+
+msgid "M_EPI3"
+msgstr "Invaasio!"
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

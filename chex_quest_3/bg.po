@@ -1,0 +1,213 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr ""
+
+msgid "GOTYELLOWFLEM"
+msgstr ""
+
+msgid "GOTREDFLEM"
+msgstr ""
+
+msgid "GOTGOGGLES"
+msgstr ""
+
+msgid "PD_BLUECO"
+msgstr ""
+
+msgid "PD_REDCO"
+msgstr ""
+
+msgid "PD_YELLOWCO"
+msgstr ""
+
+msgid "PD_BLUEFO"
+msgstr ""
+
+msgid "PD_REDFO"
+msgstr ""
+
+msgid "PD_YELLOWFO"
+msgstr ""
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgid "HUSTR_E1M1"
+msgstr ""
+
+msgid "HUSTR_E1M2"
+msgstr ""
+
+msgid "HUSTR_E1M3"
+msgstr ""
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr ""
+
+msgid "HUSTR_E2M1"
+msgstr ""
+
+msgid "HUSTR_E2M2"
+msgstr ""
+
+msgid "HUSTR_E2M3"
+msgstr ""
+
+msgid "HUSTR_E2M4"
+msgstr ""
+
+msgid "HUSTR_E2M5"
+msgstr ""
+
+msgid "HUSTR_E3M1"
+msgstr ""
+
+msgid "HUSTR_E3M2"
+msgstr ""
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr ""
+
+msgid "HUSTR_E3M5"
+msgstr ""
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr ""
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr ""
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr ""
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "PD_BLUEC"
+msgstr ""
+
+msgid "PD_REDC"
+msgstr ""
+
+msgid "PD_YELLOWC"
+msgstr ""
+
+msgid "PD_BLUEF"
+msgstr ""
+
+msgid "PD_REDF"
+msgstr ""
+
+msgid "PD_YELLOWF"
+msgstr ""
+
+msgid "OB_SLIME"
+msgstr ""
+
+msgid "OB_LAVA"
+msgstr ""
+
+msgid "OB_POWERSTRAND"
+msgstr ""
+
+msgid "OB_KILLEDSELF"
+msgstr ""
+
+msgid "OB_STRIDICUS"
+msgstr ""
+
+msgid "OB_FLEMMINE"
+msgstr ""
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr ""
+
+msgid "OB_MAXIMUS"
+msgstr ""
+
+msgid "OB_LARVA"
+msgstr ""
+
+msgid "OB_QUADRUMPUS"
+msgstr ""
+
+msgid "OB_FLEMBOMINATION"
+msgstr ""
+
+msgid "OB_SNOTFOLUS"
+msgstr ""
+
+msgid "OB_MPR_SPLASH"
+msgstr ""
+
+msgid "OB_MPBFG_SPLASH"
+msgstr ""
+
+msgid "E1TEXT"
+msgstr ""
+
+msgid "E2TEXT"
+msgstr ""
+
+msgid "E3TEXT"
+msgstr ""
+
+msgid "M_EPI1"
+msgstr ""
+
+msgid "M_EPI2"
+msgstr ""
+
+msgid "M_EPI3"
+msgstr ""
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

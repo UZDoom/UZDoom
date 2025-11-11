@@ -1,0 +1,256 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Picked up a blue flemkey."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Picked up a yellow flemkey."
+
+msgid "GOTREDFLEM"
+msgstr "Picked up a red flemkey."
+
+msgid "GOTGOGGLES"
+msgstr "Found Ultra Goggles"
+
+msgid "PD_BLUECO"
+msgstr "You need a blue key to activate this object"
+
+msgid "PD_REDCO"
+msgstr "You need a red key to activate this object"
+
+msgid "PD_YELLOWCO"
+msgstr "You need a yellow key to activate this object"
+
+msgid "PD_BLUEFO"
+msgstr "You need a blue flemkey to activate this object"
+
+msgid "PD_REDFO"
+msgstr "You need a red flemkey to activate this object"
+
+msgid "PD_YELLOWFO"
+msgstr "You need a yellow flemkey to activate this object"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Picked up a zorcher."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch and keys added"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Landing Zone"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Storage Facility"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratory"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arboretum"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Caverns of Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Spaceport"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Cinema"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Chex Museum"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: City Streets"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Sewer System"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Central Command"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: United Cereals"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Villa Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provincial Park"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteor Spaceship"
+
+msgid "CC_ZOMBIE"
+msgstr "Commonus"
+
+msgid "CC_SHOTGUN"
+msgstr "Bipedicus"
+
+msgid "CC_IMP"
+msgstr "Bipedicus with Armor"
+
+msgid "CC_DEMON"
+msgstr "Stridicus"
+
+msgid "CC_LOST"
+msgstr "Flem Mine"
+
+msgid "CC_CACO"
+msgstr "Super Cycloptis"
+
+msgid "CC_BARON"
+msgstr "Maximus"
+
+msgid "CC_SPIDER"
+msgstr "The Flembomination"
+
+msgid "CC_CYBER"
+msgstr "Lord Snotfolus"
+
+msgid "CC_HERO"
+msgstr "Chex Warrior"
+
+msgid "PD_BLUEC"
+msgstr "You need a blue key to open this door"
+
+msgid "PD_REDC"
+msgstr "You need a red key to open this door"
+
+msgid "PD_YELLOWC"
+msgstr "You need a yellow key to open this door"
+
+msgid "PD_BLUEF"
+msgstr "You need a blue flemkey to open this door"
+
+msgid "PD_REDF"
+msgstr "You need a red flemkey to open this door"
+
+msgid "PD_YELLOWF"
+msgstr "You need a yellow flemkey to open this door"
+
+msgid "OB_SLIME"
+msgstr "%o sinks into some slime."
+
+msgid "OB_LAVA"
+msgstr "%o sinks into some slime."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o was hit by inter-dimensional slime!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o was hit by inter-dimensional slime!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o was boogered by a stridicus."
+
+msgid "OB_FLEMMINE"
+msgstr "%o was gooed by a flem mine."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o was slimed by a super cycloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "%o was defeated by a Maximus."
+
+msgid "OB_LARVA"
+msgstr "%o was gooed by a larva."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o was slimed by a Quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o was defeated by the Flembomination."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o was defeated by Lord Snotfolus."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o was hit by %k's propulsor."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o was lazzed by %k."
+
+msgid "E1TEXT"
+msgstr ""
+"After sending the monstrous Flembrane\n"
+"back to his own dimension, you free the\n"
+"captives. Yet flemoids are everywhere!\n"
+"You and the captives make a break for\n"
+"your spaceship. The flemoids slime your\n"
+"ship, but you narrowly escape into orbit.\n"
+"During the return you are congratulated\n"
+"for the daring rescue, but you issue a\n"
+"warning...\n"
+"We haven't seen the last of the Flemoids.\n"
+"\n"
+"Unfortunately you are correct. For as you\n"
+"return home, you find that the Flemoids\n"
+"have somehow followed you here. Prepare\n"
+"for Chex Quest 2: Terror in Chex City!"
+
+msgid "E2TEXT"
+msgstr ""
+"You zorch the remaining flemoids who had\n"
+"gathered in the sewers. Chex City has been\n"
+"saved. It seems that the Flemoid threat\n"
+"has finally ended.\n"
+"\n"
+"\n"
+"Ten years pass in peace and prosperity.\n"
+"But the Flemoids were not defeated and\n"
+"their desire to control the nutritionally \n"
+"rich cereal dimension has not diminished.\n"
+"They have gathered all their forces, opened\n"
+"a gigantic inter-dimensional rift in space\n"
+"and now a great ball of slime is headed\n"
+"straight for the cereals' planet!\n"
+"\n"
+"Get ready for\n"
+"Chex Quest 3: Invasion!"
+
+msgid "E3TEXT"
+msgstr ""
+"With one final blast, you zorch Lord\n"
+"Snotfolus back to his own dimension!\n"
+"Against all the odds you have single-\n"
+"handedly foiled the invasion!\n"
+"\n"
+"You truly hope that the Flemoids have\n"
+"finally learned their lesson and will\n"
+"never again return to the cereal\n"
+"dimension.\n"
+"\n"
+"\n"
+"\n"
+"But if they do you know you will be\n"
+"ready for them!"
+
+msgid "M_EPI1"
+msgstr "Rescue on Bazoik"
+
+msgid "M_EPI2"
+msgstr "Terror in Chex City"
+
+msgid "M_EPI3"
+msgstr "Invasion!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ultra Goggles"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Blue Flemkey"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Yellow Flemkey"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Red Flemkey"

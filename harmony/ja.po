@@ -1,0 +1,195 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: jp\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"ホントウニ タイショデキルト\n"
+"オモッテイマスカ?\n"
+"\n"
+"'Y'カ'N'デ オウトウセヨ"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "スポットヲ マーク シタ"
+
+msgid "PD_BLUEO"
+msgstr "グリーン キーカード ガ ヒツヨウダ"
+
+msgid "PD_REDO"
+msgstr "イエロー キーカード ガ ヒツヨウダ"
+
+msgid "PD_YELLOWO"
+msgstr "パープル キーカード ガ ヒツヨウダ"
+
+msgid "PD_BLUEK"
+msgstr "グリーン キー ガ ヒツヨウダ"
+
+msgid "PD_YELLOWK"
+msgstr "イエロー キー ガ ヒツヨウダ"
+
+msgid "PD_REDK"
+msgstr "パープル キー ガ ヒツヨウダ"
+
+msgid "GOTARMOR"
+msgstr "アーマー ニュウシュ"
+
+msgid "GOTMEGA"
+msgstr "コンバット アーマー ニュウシュ"
+
+msgid "GOTMSPHERE"
+msgstr "スーパー ヘルス"
+
+msgid "GOTBLUECARD"
+msgstr "グリーン キーカード ニュウシュ"
+
+msgid "GOTYELWCARD"
+msgstr "イエロー キーカード ニュウシュ"
+
+msgid "GOTREDCARD"
+msgstr "パープル キーカード ニュウシュ"
+
+msgid "GOTBLUESKUL"
+msgstr "グリーン キー ニュウシュ"
+
+msgid "GOTYELWSKUL"
+msgstr "イエロー キー ニュウシュ"
+
+msgid "GOTREDSKUL"
+msgstr "パープル キー ニュウシュ"
+
+msgid "GOTSTIM"
+msgstr "ヒーリング マッシュルーム"
+
+msgid "GOTMEDIKIT"
+msgstr "シュトク: メディカルキット"
+
+msgid "GOTMEDINEED"
+msgstr "シュトク: キンキュウジタイヲ スクウ メディカルキット"
+
+msgid "GOTMAP"
+msgstr "コノ クイキノ マップダ "
+
+msgid "GOTCLIPBOX"
+msgstr "シュトク: バレット ケース"
+
+msgid "GOTROCKET"
+msgstr "シュトク: グレネード"
+
+msgid "GOTROCKBOX"
+msgstr "シュトク: グレネード セット"
+
+msgid "GOTSHELLBOX"
+msgstr "シュトク: シェル ボックス"
+
+msgid "GOTBACKPACK"
+msgstr "シュトク: バックパック"
+
+msgid "GOTBFG9000"
+msgstr "シュトク: グレネード"
+
+msgid "GOTCHAINGUN"
+msgstr "シュトク: ミニガン"
+
+msgid "GOTLAUNCHER"
+msgstr "シュトク: グレネードランチャー"
+
+msgid "GOTPLASMA"
+msgstr "エントロピースロワー!"
+
+msgid "GOTSHOTGUN"
+msgstr "シュトク: ショットガン"
+
+msgid "STSTR_DQDON"
+msgstr "ゴッドモード オン"
+
+msgid "STSTR_DQDOFF"
+msgstr "ゴッドモード オフ"
+
+msgid "STSTR_KFAADDED"
+msgstr "スベテノ ブキ/カギ/ダンヤク"
+
+msgid "STSTR_FAADDED"
+msgstr "スベテノ ブキ/ダンヤク"
+
+msgid "TXT_HARMMAP01"
+msgstr "アブダクション"
+
+msgid "TXT_HARMMAP02"
+msgstr "ハーム'ズ ウェイ"
+
+msgid "TXT_HARMMAP03"
+msgstr "ヤバイムード"
+
+msgid "TXT_HARMMAP04"
+msgstr "メガラポリス"
+
+msgid "TXT_HARMMAP05"
+msgstr "ホスピタル"
+
+msgid "TXT_HARMMAP06"
+msgstr "ウェポンファクトリー"
+
+msgid "TXT_HARMMAP07"
+msgstr "アンダーウォーターラボ"
+
+msgid "TXT_HARMMAP08"
+msgstr "エアーシップ ワン"
+
+msgid "TXT_HARMMAP09"
+msgstr "ランチャーベース"
+
+msgid "TXT_HARMMAP10"
+msgstr "ラディオアクティブ ゾーン"
+
+msgid "TXT_HARMMAP11"
+msgstr "エキドナ"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"貴方はミュータントの女王の顔を見た時\n"
+"気分が凄まじく悪くなった...\n"
+"その顔は... 見覚えがあった...\n"
+"私の親友... アミラ!\n"
+"\n"
+"モンスター達が彼女に突然変異を引き起こし、\n"
+"奴等を産ませ続ける恐ろしい方法を編み出したのだろう。\n"
+"\n"
+"深い溜め息を吐き、気を取り直す...\n"
+"親友を殺した代償を奴等に支払わせるために。\n"
+"\n"
+"\"もうこの地獄に怒れた彼女を蔑むものはない!\"\n"
+"    = T H E  E N D ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "ローディング"
+
+msgid "SKILL_BABY"
+msgstr "ベリーイージー"
+
+msgid "SKILL_EASY"
+msgstr "イージー"
+
+msgid "SKILL_NORMAL"
+msgstr "ミディアム"
+
+msgid "SKILL_HARD"
+msgstr "ハード"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "ベリーハード"
+
+msgid "HARMQUITMSG"
+msgstr "プレイ シテクレテ カンシャスル"
+
+msgid "TXT_D2E1"
+msgstr ""

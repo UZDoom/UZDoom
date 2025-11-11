@@ -1,0 +1,2131 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/common/sr/"
+">\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sr\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Притисните Y или N."
+
+msgid "TXT_YES"
+msgstr "Да"
+
+msgid "TXT_NO"
+msgstr "Не"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Не можете сачувати игру ако не играте!\n"
+"\n"
+"Притисните тастер."
+
+msgid "SAFEMESSAGE"
+msgstr "Да ли заиста желите то да урадите?"
+
+msgid "NOTSET"
+msgstr "Није намештено"
+
+msgid "QSPROMPT"
+msgstr ""
+"Желите брзо чување за игру под именом\n"
+"\n"
+"„%s“?\n"
+"\n"
+"Притисните Y или N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Желите брзо учитавање за игру под именом\n"
+"\n"
+"„%s“?\n"
+"\n"
+"Притисните Y или N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s вара"
+
+msgid "MSGOFF"
+msgstr "Поруке ИСКЉУЧЕНЕ"
+
+msgid "MSGON"
+msgstr "Поруке УКЉУЧЕНЕ"
+
+msgid "TXT_SAY"
+msgstr "Пиши:"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Притисните било који тастер или кликните било где на екрану да одустанете."
+
+msgid "NEWSAVE"
+msgstr "<Нова сачувана игра>"
+
+msgid "GGSAVED"
+msgstr "Игра сачувана."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Време"
+
+msgid "MNU_LOADGAME"
+msgstr "Учитај игру"
+
+msgid "MNU_SAVEGAME"
+msgstr "Сачувај игру"
+
+msgid "MNU_NOPICTURE"
+msgstr "Нема слике"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Другачија верзија"
+
+msgid "MNU_NOFILES"
+msgstr "Нема фајлова"
+
+msgid "MNU_DELETESG"
+msgstr "Да ли стварно желите да избришете сачувану игру"
+
+msgid "OPTVAL_OFF"
+msgstr "Искљ."
+
+msgid "OPTVAL_ON"
+msgstr "Укљ."
+
+msgid "OPTVAL_AUTO"
+msgstr "Аутоматски"
+
+msgid "OPTMNU_TITLE"
+msgstr "Подешавања"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Контроле"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Миш"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Контролер"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Играч"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Гејмплеј"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Аутомапа"
+
+msgid "OPTMNU_HUD"
+msgstr ""
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Разно"
+
+msgid "OPTMNU_SOUND"
+msgstr "Звук"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Приказ"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Видео мод"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Врати подразумевано"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Врати задње сачувано"
+
+msgid "OPTMNU_WRITEINI"
+msgstr ""
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Отвори конзолу"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Мрежа"
+
+msgid "OPTMNU_REVERB"
+msgstr "Уредник одјека у околини"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER за промену, BACKSPACE за чишћење"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Притисните ново тастер за одређивање контроле, ESC за отказивање"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Контроле"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Нападни"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Секундарни напад"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Напуни"
+
+msgid "CNTRLMNU_USE"
+msgstr "Користи / Отвори"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Крећи се напред"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Крећи се уназад"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Крећи се лево"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Крећи се десно"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Окрени се лево"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Окрени се десно"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Брзи окрет"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Скок"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Чучни"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Чучни (без држања)"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Гледај мишем"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Гледај горе"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Гледај доле"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Централизирај поглед"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Трчи"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Трчи (без држања)"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Кретање у страну"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Табела"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Радња"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Контроле радње"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Ћаскање"
+
+msgid "MNU_MULTIPLAYER"
+msgstr ""
+
+msgid "CNTRLMNU_SAY"
+msgstr "Пиши"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Контроле ћаскања"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Контроле оружја"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Контроле складишта"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Друге контроле"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Оружје"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Следеће оружје"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Претходно оружје"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Оружје 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Оружје 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Оружје 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Оружје 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Оружје 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Оружје 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Оружје 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Оружје 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Оружје 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Оружје 0"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Инвентар"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Активирај предмет"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Активирај све предмете"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Следећи предмет"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Претходни предмет"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Промени контроле мапе"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Контроле мапе"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Лево"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Десно"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Горе"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Доле"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Увеличати"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Одзумирати"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Укључи зум"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Укључи праћење"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Укључи координатну мрежу"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Укључи ротацију"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Укључи текстуру"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Прикажи аутомапу"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Чејс-кем"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Усликај"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Отвори консолу"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Пауза"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Повећајте величину екрана"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Смањите величину екрана"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Отвори помоћ"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Отвори сачуване игре"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Отвори игре за учитати"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Отвори мени опција"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Отвори мени приказа"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Брзо-сачувај"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Брзо-учитај"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Изађи у главни мени"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Таглави поруке"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Изађи из игре"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Подесите осветљење"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Укључи миш"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Укључи миш у менијима"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Прикажи тастер за назад"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Курсор"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Хоризонтална осетљивост"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Вертикална осетљивост"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Глатки окрет"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Брзина окрета"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Брзина гледања мишем"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Брзина окрета напред/уназад"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Брзина стрејфа"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Гледање мишем"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Инвертуј миш Y"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Инвертуј миш X"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Горње лево"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Горње десно"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Доње лево"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Доње десно"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Као додирни екран"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Стрелица"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Системска стрелица"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Подраз."
+
+msgid "JOYMNU_TITLE"
+msgstr "Конфигурација контролера"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Подешавања контролера"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Блокирај улаз контролера у менију"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Омогући подршку за контролере"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Омогући директинпут контролере"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Омогући Иксинпут контролере"
+
+msgid "JOYMNU_PS2"
+msgstr "Омогући сирове Плејстејшн 2 адаптере"
+
+msgid "JOYMNU_NOCON"
+msgstr "Нема детектованих контролера"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Подешавања контролере:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Омогућите подржавање контролера"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr " \\n"
+
+msgid "JOYMNU_INVALID"
+msgstr "Невалидан контролер специфиран за мени"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Уупна сензитивност"
+
+msgid "JOYMNU_AXIS"
+msgstr "Конфигурација осе"
+
+msgid "JOYMNU_INVERT"
+msgstr "Инвертовано"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Мртва зона"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Нема конфигурационих оса"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Ништа"
+
+msgid "OPTVAL_TURNING"
+msgstr "Скретање"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Гледање горе/доле"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Кретање напред"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Кретање у страну"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Кретање горе/доле"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Обрнуто"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Не обрнуто"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Плава"
+
+msgid "TXT_COLOR_RED"
+msgstr "Црвена"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Зелена"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Сива"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Тамно сива"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Тамна зелена"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Браон"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Тамна Плава"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Светло црвена"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Жута"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Љубичаста"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Тупа зелена"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Беж"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Светло зелена"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Светло плава"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Светло сива"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Светло браон"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Златна"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Светла зелена"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Рђа"
+
+msgid "PLYRMNU_NAME"
+msgstr "Надимак"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Тим"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Боја"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Пол"
+
+msgid "OPTVAL_MALE"
+msgstr "Мушко"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Женско"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Неутрално"
+
+msgid "OPTVAL_OTHER"
+msgstr "Предмет"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Подешавања гејмплеја"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Увек"
+
+msgid "OPTVAL_NEVER"
+msgstr "Никад"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Аутоматско циљање"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Увек трчи"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Величина екрана"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Вертикална синхорнизација"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Модели"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Размера нишана"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Осветљење"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Корекција светлости"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Контраст"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Сатурација"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr ""
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Поруке"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Централне поруке"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr ""
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr ""
+
+msgid "MNU_COLORPICKER"
+msgstr "Изабери боју"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Ротирај аутомапу"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Прати играча"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Транслуценција линија"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Дебљина линија"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Промени боју мапе"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Врати уобичајене разне боје"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr ""
+
+msgid "SNDMNU_MUSENABLED"
+msgstr ""
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 узорка"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 узорка"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 узорка"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 узорка"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 узорка"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 узорка"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 узорка"
+
+msgid "OPTSTR_AUTO"
+msgstr "Аутоматски"
+
+msgid "OPTSTR_MONO"
+msgstr "Монотоно"
+
+msgid "OPTSTR_STEREO"
+msgstr "Стереотоно"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr ""
+
+msgid "OPTSTR_QUAD"
+msgstr "Четвородупло"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 спикер"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 спикер"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 спикер"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Аудио уређај"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Укључи EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Ресемплер"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Јачина звука"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Јачина менија"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Јачина музике"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI уређај"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Звуци у позадини"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Подводни одјек"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Рандомизација тонова"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Звучни канали"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Звучни бекенд"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL подешавања"
+
+msgid "SNDMNU_RESTART"
+msgstr "Поново покрени звук"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Напредна подешавања"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Подешавања модулног риплејера"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "MIDI плејер подешавања"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr ""
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Напредна подешавања звука"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Фреквенција узорковања"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL синтеза"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Број емулираних OPL чипа"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Пуно MIDI стерео каналисање"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL језгро емулације"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI гласови"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Глобално"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Глобални Freeverb"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Печ сет"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Појачање"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Одјек"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Ниво одјека"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Корус"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity конфигурациона датотека"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Релативна јачина"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi конфигурациона датотека"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Изабери конфигурацију"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Напредно ресампловање"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "OPL банка"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL емулационо језгро"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Покрени емулацију на PCM стопи"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Број емулираних OPL чипова"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Појачање"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Волумски модел"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2 језгро емулације"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS емулација"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS конфигурациона датотека"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Читај DMXGUS фајлове"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS величина памћења"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Број емулираних OPN чипова"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Појачање"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Користи прилагођенуу WOPL банку"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL фајл банка"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Користи прилагођену WOPN банку"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN фајл банка"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Преклапање"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Линеаран"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Линеаран"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Линеаран"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Најближе"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (ниско)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (средње)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (високо)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Кубан"
+
+msgid "OPTVAL_BLEP"
+msgstr "Постепено ограничење фреквенције"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Линеаран (спорије)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Линеарно ограничење фреквенције"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Кубан (спорије)"
+
+msgid "OPTVAL_SINC"
+msgstr "Синк"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Само током укључења/искључења ноте"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Пуно појачање"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Глацни звук"
+
+msgid "MODMNU_QUALITY"
+msgstr "Квалитет"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Појачавање звука"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Аутоматски (користи намештену банку)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Аутоматски (користи намештену банку)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Генерично"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Генерично"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL домаћи"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN домаћи"
+
+msgid "ADLVLMODEL_DMX"
+msgstr ""
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Као у Win9X-у"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Као у Win9X-у (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Као у Win9X-у (Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr ""
+
+msgid "ADLVLMODEL_AIL"
+msgstr ""
+
+msgid "ADLVLMODEL_HMI"
+msgstr ""
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr ""
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Бескрајно"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Палет"
+
+msgid "OPTVAL_LOW"
+msgstr "Ниско"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Средње"
+
+msgid "OPTVAL_HIGH"
+msgstr "Високо"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Екстремно"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Супротно"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Обрнуто"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Пост обрада"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Тонирано-мапни мод"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Дисторзија објектива ефект"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA квалитет"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Учестаност трептања"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Тонирано-мапни палетни ред"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Тонирано-мапни палетни експонент"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Мулти-узорак"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Мутан вид ефект"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Оклузија амбијента ефект"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Портали са AO"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Блур мениа"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Околинска мапа на прозорима"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Квалитет рендовања"
+
+msgid "OPTVAL_SPEED"
+msgstr "Брзина"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Квалитет"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Секторско светло мод"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Магла мод"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Радијално"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Стандардно"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Текстурни филтер мод"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Анизотропни фолтер"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Ништа (најближи мипмап)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Ништа (линеаран мипмап)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Ништа (трилинеарно)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Билинеарно"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Трилинеарно"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Подешавања текстура"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Текстуре омогућене"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Омогући текстуре велике резолуције"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Промена величине високог квалитета мод"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Промена величине високог квалитета мултипликатор"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Овај мод тражи %d пута више видео меморије"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Промена величине текстура"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Промена величине спрајтова"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Промена величине фонта"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr ""
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Прикеширане GL текстуре"
+
+msgid "VIDMNU_TITLE"
+msgstr "Видео мод"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Скалиран (најближи)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Скалиран (линеарно)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Поштанско сандуче"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Растегнуто"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Рендер мод"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Цео екран"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI подршка"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Однос гледишта"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Присили однос гледишта"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Присиљен стил односа"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Омогући 5:4 однос гледишта"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Резолуцијска скала"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Фактор скалирања"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Користи линеарно скалирање (цео екран)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Пиксел скалирање"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Ширина"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Висина"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Примени промене (прозор)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Примени промене (цели екран)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Резолуцијска подешавања"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Резолуцијска подешавања"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Постављени резолуцијски модови"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "4:3 гледиште"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "5:4 гледиште"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "16:9 гледиште"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "16:10 гледиште"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "21:9 гледиште"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Нормално"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr ""
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Прилагођ."
+
+msgid "VIDMNU_MAXFPS"
+msgstr ""
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Преферред АПИ приказивања"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Споји лево+десно Аlt/Ctrl/Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter пребацује на цео екран"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F пребацује на цео екран"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Омогући аутосејвове"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Број аутоматских чувања"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Потврђивање током чувања/учитавања"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr ""
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Окретање брзих чувања"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Број брзих чувања у окретању"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr ""
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Паузирајте игру у позадини"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Уобичајени нишан"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Боја нишана"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Нишан приказује здравље"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Размера нишана"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Стандардни"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Побољшани"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Језик"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Поништи промене"
+
+msgid "REVMNU_SELECT"
+msgstr "Изабери окружење"
+
+msgid "REVMNU_TEST"
+msgstr "Тестирај окружење"
+
+msgid "REVMNU_EDIT"
+msgstr "Уреди окружење"
+
+msgid "REVMNU_NEW"
+msgstr "Ново окружење"
+
+msgid "REVMNU_REVERT"
+msgstr "Врати подешавања"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_ROOM"
+msgstr ""
+
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_REVERB"
+msgstr ""
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+msgid "REVMNU_Reflections_Scale"
+msgstr ""
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr ""
+
+msgid "REVMNU_Reverb_Scale"
+msgstr ""
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Based_on"
+msgstr "Засновано на"
+
+msgid "REVMNU_Name"
+msgstr "Назив"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Направи"
+
+msgid "REVMNU_Save"
+msgstr "Сачувај..."
+
+msgid "REVMNU_File_name"
+msgstr "Назив фајла"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Окружења за чување"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan подешавања (експериментална)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan подешавања"
+
+msgid "VKMNU_ENABLE"
+msgstr "Омогући Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan ID уређаја"
+
+msgid "VKMNU_HDR"
+msgstr "HDR"
+
+msgid "VK_WARNING"
+msgstr "УПОЗОРЕЊЕ: Vulkan рендерер је врло експерименталан!"
+
+msgid "VK_RESTART"
+msgstr "Морате поново покренути GZDoom да би промене ступиле на снагу."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Изаберите Vulkan уређај"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Стари xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Претрага"
+
+msgid "OS_ANY"
+msgstr "Тражи било који термин"
+
+msgid "OS_ALL"
+msgstr "Тражи сваки термин"
+
+msgid "OS_NO_RESULTS"
+msgstr "Нема резултата."
+
+msgid "OS_LABEL"
+msgstr "Претрага:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k је очистио %o као рибу"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k је кастрирао %o"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k је истукао %o"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k је десетковао %o"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k је уништио %o"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k је исецкао %o"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k је ампутирао %o"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k је изравнао %o"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k је дао %o аналну правду"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k је дао АнАлНо ЛуДиЛо %o"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k је убио %o"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k је направио млевено месо од %o"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k је масакрирао %o"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k је мутилирао %o"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k је наоружао %o"
+
+msgid "TXT_OBITUARY16"
+msgstr "%k је исцепао %o нови отвор"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k је заклао %o"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k је поломио %o"
+
+msgid "TXT_OBITUARY19"
+msgstr "%k је изјебао %o"
+
+msgid "TXT_OBITUARY20"
+msgstr "%k је спљоштио %o"
+
+msgid "TXT_OBITUARY21"
+msgstr "%k је згњечио %o"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k је угушио %o"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k је убио %o"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k је умртвио %o"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k је послао %o до Врага"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k је тостирао %o"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k је угасио %o"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k је упскао %o"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k је испрскао %o"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k је направио псеће месо од %o"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k је превио %o ко мачку"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o је сада измет"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o је сада пљескавица"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o му је исечена патка"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o је волунтирао за контролу популације"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o је убио самог себе"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o је добио Дарвиново признање"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr ""
+
+msgid "OPTMNU_SIMPLEON"
+msgstr ""
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr ""
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr ""
+
+msgid "OPTMNU_OPENSAVES"
+msgstr ""
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Замените дугмад миша"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Само модификовано"
+
+msgid "TXT_UNKNOWN"
+msgstr "Непознат"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Аутомап"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Аутомап"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Овој сачуваној игри требају ови фајлови"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Опције за више играча"
+
+msgid "OPTMNU_INPUT"
+msgstr "Опције уноса"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Системске опције"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Опције осветљења"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Сприте опције"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Цоронас"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Изглед"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Напредне опције приказа"
+
+msgid "PICKER_SELECT"
+msgstr "Изаберите коју датотеку игре желите да покренете."
+
+msgid "PICKER_PLAY"
+msgstr "Играј игру"
+
+msgid "PICKER_EXIT"
+msgstr "Изађи"
+
+msgid "PICKER_GENERAL"
+msgstr "Генерал"
+
+msgid "PICKER_EXTRA"
+msgstr "Ектра Грапхицс"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Цео екран"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Онемогући аутоматско учитавање"
+
+msgid "PICKER_DONTASK"
+msgstr "Не питај ме поново"
+
+msgid "PICKER_LIGHTS"
+msgstr "Светла"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Бригхтмапс"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Широки екран"
+
+msgid "PICKER_ADDPARM"
+msgstr "Додатни параметри:"
+
+msgid "PICKER_WELCOME"
+msgstr "Добродошли у %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Верзија %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "АПИ приказивања"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Игра"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Омогућите овај контролер"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Отворите главни мени"
+
+msgid "MODMNU_REPLAYER"
+msgstr ""
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr ""
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr ""
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr ""
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr ""
+
+msgid "PICKER_PLAYHOST"
+msgstr ""
+
+msgid "PICKER_PLAYJOIN"
+msgstr ""
+
+msgid "PICKER_REMPARM"
+msgstr ""
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr ""
+
+msgid "PICKER_TAB_MULTI"
+msgstr ""
+
+msgid "PICKER_LOADSAVE"
+msgstr ""
+
+msgid "PICKER_REMSAVE"
+msgstr ""
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr ""
+
+msgid "PICKER_JOIN"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+msgid "PICKER_NETRATE"
+msgstr ""
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr ""
+
+msgid "PICKER_GAMEMODE"
+msgstr ""
+
+msgid "PICKER_COOP"
+msgstr ""
+
+msgid "PICKER_DM"
+msgstr ""
+
+msgid "PICKER_TDM"
+msgstr ""
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr ""
+
+msgid "PICKER_ALTDM"
+msgstr ""
+
+msgid "PICKER_PLAYERS"
+msgstr ""
+
+msgid "PICKER_PORT"
+msgstr ""
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr ""
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr ""
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr ""
+
+msgid "PICKER_IP"
+msgstr ""
+
+msgid "PICKER_TDMLABEL"
+msgstr ""
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr ""
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr ""
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

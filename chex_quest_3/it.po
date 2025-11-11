@@ -1,0 +1,252 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: it\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Raccolta una chiave-flem blu."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Raccolta una chiave-flem gialla."
+
+msgid "GOTREDFLEM"
+msgstr "Raccolta una chiave-flem rossa."
+
+msgid "GOTGOGGLES"
+msgstr ""
+
+msgid "PD_BLUECO"
+msgstr "Ti serve una chiave blu per attivare questo oggetto"
+
+msgid "PD_REDCO"
+msgstr "Ti serve una chiave rossa per attivare questo oggetto"
+
+msgid "PD_YELLOWCO"
+msgstr "Ti serve una chiave gialla per attivare questo oggetto"
+
+msgid "PD_BLUEFO"
+msgstr "Ti serve una chiave-flem blu per attivare questo oggetto"
+
+msgid "PD_REDFO"
+msgstr "Ti serve una chiave-flem rossa per attivare questo oggetto"
+
+msgid "PD_YELLOWFO"
+msgstr "Ti serve una chiave-flem gialla per attivare questo oggetto"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Ho preso uno zorcher."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch e chiavi aggiunte"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Zona di Atterraggio"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Struttura di Immagazzinamento"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorio"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arboreto"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Caverne di Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Spazioporto"
+
+msgid "HUSTR_E2M2"
+msgstr ""
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Museo di Chex"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Strade della città"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Rete fognaria"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Comando centrale"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Cereali uniti"
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Parco provinciale"
+
+msgid "HUSTR_E3M5"
+msgstr "E2M5: Astronave meteorica"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Bipedicus corazzato"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Bomba a Flem"
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "La Flembominio"
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr "Guerriero Chex"
+
+msgid "PD_BLUEC"
+msgstr "Ti serve una chiave blu per aprire questa porta"
+
+msgid "PD_REDC"
+msgstr "Ti serve una chiave rossa per aprire questa porta"
+
+msgid "PD_YELLOWC"
+msgstr "Ti serve una chiave gialla per aprire questa porta"
+
+msgid "PD_BLUEF"
+msgstr "Ti serve una chiave-flem blu per aprire questa porta"
+
+msgid "PD_REDF"
+msgstr "Ti serve una chiave-flem rossa per aprire questa porta"
+
+msgid "PD_YELLOWF"
+msgstr "Ti serve una chiave-flem gialla per aprire questa porta"
+
+msgid "OB_SLIME"
+msgstr "%o affonda in qualche melma."
+
+msgid "OB_LAVA"
+msgstr "%o affonda in qualche melma."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o è stato colpito da melma interdimensionale!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o è stato colpito da melma interdimensionale!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o è stato colpito da uno Stridicus."
+
+msgid "OB_FLEMMINE"
+msgstr "%o è stato colpito da una bomba a flem."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o è stato snellito da una Super Ciyloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "%o è stato sconfitto da un Maximus."
+
+msgid "OB_LARVA"
+msgstr "%o è stato colpito da una larva."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o è stato ridotto da un Quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o è stato sconfitto dalla Flembomination."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o è stato sconfitto da Lord Snotfolus."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o è stato colpito dal propulsore di %k."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o è stato lazzato da %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Dopo aver rispedito il mostruoso Flembrane\n"
+"nella sua dimensione, puoi liberare i prigionieri.\n"
+"Eppure i flemoidi sono ovunque! Tu e i\n"
+"prigionieri vi avviate per la tua astronave.\n"
+"I flemoidi coprono di melma la tua astronave,\n"
+"ma riuscite per poco a scappare in orbita.\n"
+"Dopo il vostro ritorno vieni congratulato per\n"
+"l'audace salvataggio, ma comunicate un\n"
+"avvertimento...\n"
+"Troveremo ancora i Flemoidi...\n"
+"\n"
+"Purtroppo hai ragione. Infatti, al tuo\n"
+"ritorno a casa, ti accorgi che le loro\n"
+"flotte ti hanno in qualche modo seguito qui.\n"
+"Preparati per \n"
+"Chex Quest 2: Terrore a Chex City!"
+
+msgid "E2TEXT"
+msgstr ""
+"Hai neutralizzato restante flemoidi che si erano\n"
+"riuniti nelle fogne. Chex City è stata\n"
+"salvata. Sembra che la minaccia Flemoid sia\n"
+"finalmente finita.\n"
+"\n"
+"Dieci anni passano in pace e prosperità.\n"
+"Ma i Flemoid non sono stati sconfitti\n"
+"e il loro desiderio di controllare la\n"
+"dimensione ricca di nutrienti cereali\n"
+"non è diminuito. Hanno raccolto tutte\n"
+"le loro forze, hanno aperto una gigantesca\n"
+"spaccatura interdimensionale nello spazio\n"
+"e ora una grande palla di melma è diretta\n"
+"direttamente verso il pianeta dei cereali!\n"
+"Preparati per\n"
+"Chex Quest 3: Invasione!"
+
+msgid "E3TEXT"
+msgstr ""
+"Con un ultimo colpo, hai neutralizzato Lord\n"
+"Snotfolus, che ritorna alla sua dimensione!\n"
+"Contro tutte le probabilità hai sventato\n"
+"l'invasione tutto da solo!\n"
+"\n"
+"Speri davvero che i flemoidi abbiano\n"
+"finalmente imparato la lezione e non\n"
+"torneranno mai più nella dimensione dei cereali.\n"
+"\n"
+"Ma se lo faranno, sai che sarai pronto per loro!"
+
+msgid "M_EPI1"
+msgstr "Salvataggio su Bazoik"
+
+msgid "M_EPI2"
+msgstr "Terrore a Chex City"
+
+msgid "M_EPI3"
+msgstr "Invasione!"
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

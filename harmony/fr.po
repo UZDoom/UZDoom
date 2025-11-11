@@ -1,0 +1,200 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: fr\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Vous pensez sérieusement que vous pourrez tenir le coup?\\n\\nAppuyez sur Y "
+"ou N..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Repère marqué."
+
+msgid "PD_BLUEO"
+msgstr "Carte VERTE demandée."
+
+msgid "PD_REDO"
+msgstr "Carte VIOLETTE demandée."
+
+msgid "PD_YELLOWO"
+msgstr "Carte JAUNE demandée."
+
+msgid "PD_BLUEK"
+msgstr "Clé VERTE demandée."
+
+msgid "PD_YELLOWK"
+msgstr "Clé JAUNE demandée."
+
+msgid "PD_REDK"
+msgstr "Clé VIOLETTE demandée."
+
+msgid "GOTARMOR"
+msgstr "Armure récupérée."
+
+msgid "GOTMEGA"
+msgstr "Armure de combat récupérée."
+
+msgid "GOTMSPHERE"
+msgstr "Super-Santé"
+
+msgid "GOTBLUECARD"
+msgstr "Carte VERTE obtenue."
+
+msgid "GOTYELWCARD"
+msgstr "Carte JAUNE obtenue."
+
+msgid "GOTREDCARD"
+msgstr "Carte VIOLETTE obtenue."
+
+msgid "GOTBLUESKUL"
+msgstr "Clé VERTE obtenue."
+
+msgid "GOTYELWSKUL"
+msgstr "Clé JAUNE obtenue."
+
+msgid "GOTREDSKUL"
+msgstr "Clé VIOLETTE obtenue."
+
+msgid "GOTSTIM"
+msgstr "Champignon médicinal"
+
+msgid "GOTMEDIKIT"
+msgstr "Acquis: Kit médical."
+
+msgid "GOTMEDINEED"
+msgstr "Acquis: Kit médical. Besoin critique."
+
+msgid "GOTMAP"
+msgstr "Carte"
+
+msgid "GOTCLIPBOX"
+msgstr "Acquis: Boîte de balles."
+
+msgid "GOTROCKET"
+msgstr "Acquis: Grenade."
+
+msgid "GOTROCKBOX"
+msgstr "Acquis: Grenades."
+
+msgid "GOTSHELLBOX"
+msgstr "Acquis: Boîte de cartouches."
+
+msgid "GOTBACKPACK"
+msgstr "Acquis: Sac de munitions."
+
+msgid "GOTBFG9000"
+msgstr "Acquis: Grenade."
+
+msgid "GOTCHAINGUN"
+msgstr "Acquis: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Acquis: Lance-Grenades"
+
+msgid "GOTPLASMA"
+msgstr "Acquis: Lanceur d'Entropie!"
+
+msgid "GOTSHOTGUN"
+msgstr "Acquis: Fusil à pompe."
+
+msgid "STSTR_DQDON"
+msgstr "Mode invulnérable ON"
+
+msgid "STSTR_DQDOFF"
+msgstr "Mode invulnérable OFF"
+
+msgid "STSTR_KFAADDED"
+msgstr "Toutes les armes/munitions/clés"
+
+msgid "STSTR_FAADDED"
+msgstr "Toutes les armes et munitions"
+
+msgid "TXT_HARMMAP01"
+msgstr "Enlèvement"
+
+msgid "TXT_HARMMAP02"
+msgstr "Mise en Danger"
+
+msgid "TXT_HARMMAP03"
+msgstr "Scontento"
+
+msgid "TXT_HARMMAP04"
+msgstr "Mégalopole"
+
+msgid "TXT_HARMMAP05"
+msgstr "L'Hôpital"
+
+msgid "TXT_HARMMAP06"
+msgstr "L'Usine d'Armes"
+
+msgid "TXT_HARMMAP07"
+msgstr "Le Laboratoire Sous-marin"
+
+msgid "TXT_HARMMAP08"
+msgstr "Piste D'Atterrisage Un"
+
+msgid "TXT_HARMMAP09"
+msgstr "La Base de Lancement"
+
+msgid "TXT_HARMMAP10"
+msgstr "La Zone Radioactive"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"La nausée vous envahit..\n"
+"En regardant le visage de la reine\n"
+"des mutants.. cette chose.. devait\n"
+"être.. votre amie.. Amira!\n"
+"\n"
+"Ces monstres ont trouvé un moyen\n"
+"de la faire muter en cette horrible\n"
+"créature destinée à les faire se\n"
+"reproduire.\n"
+"\n"
+"*soupir*\n"
+"\n"
+"Vous vous calmez..\n"
+"Il vont payer pour vous avoir fait\n"
+"tuer votre amie..\n"
+"\n"
+"\"L'Enfer n'a pas de fureur qui \n"
+"égale celle d'une femme dédaignée!\"\n"
+"\n"
+"  = F I N ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Chargement"
+
+msgid "SKILL_BABY"
+msgstr "Trés facile"
+
+msgid "SKILL_EASY"
+msgstr "Facile"
+
+msgid "SKILL_NORMAL"
+msgstr "Moyen"
+
+msgid "SKILL_HARD"
+msgstr "Difficile"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Très difficile"
+
+msgid "HARMQUITMSG"
+msgstr "Merci d'avoir joué"
+
+msgid "TXT_D2E1"
+msgstr ""

@@ -1,0 +1,196 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "NIGHTMARE"
+msgstr "Do you really think you can handle that?\\n\\npress 'Y' or 'N'..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Spot marked"
+
+msgid "PD_BLUEO"
+msgstr "Requires the GREEN keycard"
+
+msgid "PD_REDO"
+msgstr "Requires the PURPLE keycard"
+
+msgid "PD_YELLOWO"
+msgstr "Requires the YELLOW keycard"
+
+msgid "PD_BLUEK"
+msgstr "Requires the GREEN key"
+
+msgid "PD_YELLOWK"
+msgstr "Requires the YELLOW key"
+
+msgid "PD_REDK"
+msgstr "Requires the PURPLE key"
+
+msgid "GOTARMOR"
+msgstr "Picked up armor."
+
+msgid "GOTMEGA"
+msgstr "Picked up Combat Armor."
+
+msgid "GOTMSPHERE"
+msgstr "Superhealth"
+
+msgid "GOTBLUECARD"
+msgstr "Obtained the GREEN keycard."
+
+msgid "GOTYELWCARD"
+msgstr "Obtained the YELLOW keycard."
+
+msgid "GOTREDCARD"
+msgstr "Obtained the PURPLE keycard."
+
+msgid "GOTBLUESKUL"
+msgstr "Obtained the GREEN key."
+
+msgid "GOTYELWSKUL"
+msgstr "Obtained the YELLOW key."
+
+msgid "GOTREDSKUL"
+msgstr "Obtained the PURPLE key."
+
+msgid "GOTSTIM"
+msgstr "Healing mushroom"
+
+msgid "GOTMEDIKIT"
+msgstr "Acquired: medical kit."
+
+msgid "GOTMEDINEED"
+msgstr "Acquired: medical kit that you REALLY need."
+
+msgid "GOTMAP"
+msgstr "Map"
+
+msgid "GOTCLIPBOX"
+msgstr "Acquired: case of bullets."
+
+msgid "GOTROCKET"
+msgstr "Acquired: Grenade."
+
+msgid "GOTROCKBOX"
+msgstr "Acquired: Grenades."
+
+msgid "GOTSHELLBOX"
+msgstr "Acquired: box of shotgun shells."
+
+msgid "GOTBACKPACK"
+msgstr "Acquired: ammo backpack."
+
+msgid "GOTBFG9000"
+msgstr "Acquired: Grenade."
+
+msgid "GOTCHAINGUN"
+msgstr "Acquired: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Acquired: Grenade launcher."
+
+msgid "GOTPLASMA"
+msgstr "Entropy thrower!"
+
+msgid "GOTSHOTGUN"
+msgstr "Acquired: Shotgun."
+
+msgid "STSTR_DQDON"
+msgstr "God Mode ON"
+
+msgid "STSTR_DQDOFF"
+msgstr "God Mode OFF"
+
+msgid "STSTR_KFAADDED"
+msgstr "All weapons/ ammo/ keys"
+
+msgid "STSTR_FAADDED"
+msgstr "All weapons and ammo"
+
+msgid "TXT_HARMMAP01"
+msgstr "Abduction"
+
+msgid "TXT_HARMMAP02"
+msgstr "Harm's Way"
+
+msgid "TXT_HARMMAP03"
+msgstr "Owt Mood"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalapolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "The Hospital"
+
+msgid "TXT_HARMMAP06"
+msgstr "The Weapons Factory"
+
+msgid "TXT_HARMMAP07"
+msgstr "The Underwater Lab"
+
+msgid "TXT_HARMMAP08"
+msgstr "Airstrip One"
+
+msgid "TXT_HARMMAP09"
+msgstr "The Launch Base"
+
+msgid "TXT_HARMMAP10"
+msgstr "The Radioactive Zone"
+
+msgid "TXT_HARMMAP11"
+msgstr "Echidna"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"You feel sick to your stomach...\n"
+"Looking in the face of the mutant queen... \n"
+"That thing... That used to be... \n"
+"Your friend... Amira!\n"
+"\n"
+"Those monsters must have found a way to \n"
+"mutate her and turn her into this\n"
+"hideous creature to bear their offspring.\n"
+"\n"
+"-sigh-\n"
+"\n"
+"You get yourself together... \n"
+"They are going to pay for making you kill\n"
+"your friend...\n"
+"\n"
+"\"Hell has no fury like a woman scorned!\"\n"
+"\n"
+"     = T H E  E N D ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Loading"
+
+msgid "SKILL_BABY"
+msgstr "Very Easy"
+
+msgid "SKILL_EASY"
+msgstr "Easy"
+
+msgid "SKILL_NORMAL"
+msgstr "Medium"
+
+msgid "SKILL_HARD"
+msgstr "Hard"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Very Hard"
+
+msgid "HARMQUITMSG"
+msgstr "Thanks for playing"
+
+msgid "TXT_D2E1"
+msgstr "Harmony"

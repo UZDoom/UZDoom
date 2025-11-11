@@ -1,0 +1,199 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: eo\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Ĉu vi vere pensas, ke vi povas trakti tion?\n"
+"\n"
+"Premu \"Y\" aŭ \"N\"..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Punkto markita"
+
+msgid "PD_BLUEO"
+msgstr "Vi bezonas la VERDAN ŝlosilkarton"
+
+msgid "PD_REDO"
+msgstr "Vi bezonas la PURPURAN ŝlosilkarton"
+
+msgid "PD_YELLOWO"
+msgstr "Vi bezonas la FLAVAN ŝlosilkarton"
+
+msgid "PD_BLUEK"
+msgstr "Vi bezonas la VERDAN ŝlosilon"
+
+msgid "PD_YELLOWK"
+msgstr "Vi bezonas la PURPURAN ŝlosilon"
+
+msgid "PD_REDK"
+msgstr "Vi bezonas la FLAVAN ŝlosilon"
+
+msgid "GOTARMOR"
+msgstr "Vi trovis armaĵon."
+
+msgid "GOTMEGA"
+msgstr "Vi trovis batal-armaĵon."
+
+msgid "GOTMSPHERE"
+msgstr "Supersano"
+
+msgid "GOTBLUECARD"
+msgstr "Vi trovis la VERDAN ŝlosilkarton."
+
+msgid "GOTYELWCARD"
+msgstr "Vi trovis la FLAVAN ŝlosilkarton."
+
+msgid "GOTREDCARD"
+msgstr "Vi trovis la PURPURAN ŝlosilkarton."
+
+msgid "GOTBLUESKUL"
+msgstr "Vi trovis la VERDAN ŝlosilon."
+
+msgid "GOTYELWSKUL"
+msgstr "Vi trovis la FLAVAN ŝlosilon."
+
+msgid "GOTREDSKUL"
+msgstr "Vi trovis la PURPURAN ŝlosilon."
+
+msgid "GOTSTIM"
+msgstr "Saniga fungo"
+
+msgid "GOTMEDIKIT"
+msgstr "Vi trovis sukurkeston."
+
+msgid "GOTMEDINEED"
+msgstr "Vi trovis sukurkeston, kiun vi VERE bezonas."
+
+msgid "GOTMAP"
+msgstr "Vi trovis la mapon"
+
+msgid "GOTCLIPBOX"
+msgstr "Vi trovis skatolon da kugloj."
+
+msgid "GOTROCKET"
+msgstr "Vi trovis grenadon."
+
+msgid "GOTROCKBOX"
+msgstr "Vi trovis grenadojn."
+
+msgid "GOTSHELLBOX"
+msgstr "Vi trovis skatolon da kartoĉoj."
+
+msgid "GOTBACKPACK"
+msgstr "Vi trovis tornistron da municioj."
+
+msgid "GOTBFG9000"
+msgstr "Vi trovis grenadon."
+
+msgid "GOTCHAINGUN"
+msgstr "Vi trovis maŝinpafilon."
+
+msgid "GOTLAUNCHER"
+msgstr "Vi trovis grenadĵetilon."
+
+msgid "GOTPLASMA"
+msgstr "Entropi-ĵetilon!"
+
+msgid "GOTSHOTGUN"
+msgstr "Vi trovis kartoĉan fusilon."
+
+msgid "STSTR_DQDON"
+msgstr "Dio-Reĝimo AKTIVA"
+
+msgid "STSTR_DQDOFF"
+msgstr "Dio-Reĝimo NEAKTIVA"
+
+msgid "STSTR_KFAADDED"
+msgstr "Ĉiuj armiloj/municioj/ŝlosiloj"
+
+msgid "STSTR_FAADDED"
+msgstr "Ĉiuj armiloj kaj municioj"
+
+msgid "TXT_HARMMAP01"
+msgstr "Forkapto"
+
+msgid "TXT_HARMMAP02"
+msgstr "Vojo de danĝero"
+
+msgid "TXT_HARMMAP03"
+msgstr "Sentaĉo"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megtropolo"
+
+msgid "TXT_HARMMAP05"
+msgstr "La malsanulejo"
+
+msgid "TXT_HARMMAP06"
+msgstr "La armil-fabriko"
+
+msgid "TXT_HARMMAP07"
+msgstr "La subakva labotorio"
+
+msgid "TXT_HARMMAP08"
+msgstr "Surteriĝejo numero unu"
+
+msgid "TXT_HARMMAP09"
+msgstr "La lanĉbazo"
+
+msgid "TXT_HARMMAP10"
+msgstr "La radioaktiva zono"
+
+msgid "TXT_HARMMAP11"
+msgstr "Ekidno"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Vi sentas vin malsana...\n"
+"Vidante al la vizaĝo de la mutacia reĝino...\n"
+"Tiu aĵo... Ĝi estis... Via amikino... Amira!\n"
+"\n"
+"Tiuj bestaĉoj sendube trovis manieron\n"
+"por mutaciigi ŝin kaj fari ŝin en tiun\n"
+"hororan estulon por naski iliajn idojn.\n"
+"\n"
+"-suspiro-\n"
+"\n"
+"Vi kvietiĝas...\n"
+"Ili repagos pro igi vin mortigi\n"
+"vian amikinon...\n"
+"\n"
+"\"La Infero ne konas la furiozon\n"
+"de malestimita virino!\"\n"
+"\n"
+"     = L A  F I N ' ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Ŝargante"
+
+msgid "SKILL_BABY"
+msgstr "Tre facila"
+
+msgid "SKILL_EASY"
+msgstr "Facila"
+
+msgid "SKILL_NORMAL"
+msgstr "Meza"
+
+msgid "SKILL_HARD"
+msgstr "Malfacila"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Tre malfacila"
+
+msgid "HARMQUITMSG"
+msgstr "Dankon pro ludado"
+
+msgid "TXT_D2E1"
+msgstr "Harmonio"

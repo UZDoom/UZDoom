@@ -1,0 +1,2129 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/common/cs/>"
+"\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: cs\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Stiskni Y nebo N."
+
+msgid "TXT_YES"
+msgstr "Ano"
+
+msgid "TXT_NO"
+msgstr "Ne"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Mimo hru nelze ukládat!\n"
+"\n"
+"Stiskni libovolnou klávesu."
+
+msgid "SAFEMESSAGE"
+msgstr "Vážně to chceš udělat?"
+
+msgid "NOTSET"
+msgstr "Není nastavené"
+
+msgid "QSPROMPT"
+msgstr ""
+"Rychle uložit přes hru s názvem\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Rychle načíst hru s názvem\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Stiskni Y nebo N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s podvádí"
+
+msgid "MSGOFF"
+msgstr "Oznámení ZAP."
+
+msgid "MSGON"
+msgstr "Oznámení VYP."
+
+msgid "TXT_SAY"
+msgstr "Říct:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Pro ukončení stiskni libovolnou klávesu, nebo klikni kdekoliv v okně."
+
+msgid "NEWSAVE"
+msgstr "<Nová uložená hra>"
+
+msgid "GGSAVED"
+msgstr "Hra uložena."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Čas"
+
+msgid "MNU_LOADGAME"
+msgstr "Načíst hru"
+
+msgid "MNU_SAVEGAME"
+msgstr "Uložit hru"
+
+msgid "MNU_NOPICTURE"
+msgstr "Bez obrázku"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Jiná verze"
+
+msgid "MNU_NOFILES"
+msgstr "Žádné soubory"
+
+msgid "MNU_DELETESG"
+msgstr "Opravdu smazat tuto uloženou hru?"
+
+msgid "OPTVAL_OFF"
+msgstr "Vyp."
+
+msgid "OPTVAL_ON"
+msgstr "Zap."
+
+msgid "OPTVAL_AUTO"
+msgstr ""
+
+msgid "OPTMNU_TITLE"
+msgstr "Možnosti"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Ovládání"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Myš"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Ovladač"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Hráč"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Herní mechaniky"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Automapa"
+
+msgid "OPTMNU_HUD"
+msgstr "Rozhraní a HUD"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Ostatní"
+
+msgid "OPTMNU_SOUND"
+msgstr "Zvuk"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Grafika"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Obrazový výstup"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Obnovit původní"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Obnovit naposledy uložené"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Uložit současná nastavení"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Otevřít konzoli"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Síť"
+
+msgid "OPTMNU_REVERB"
+msgstr "Editor zvukové ozvěny"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER pro změnu, BACKSPACE pro smazání"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Zmáčkni novou klávesu, nebo ESC pro storno"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Ovládání"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Střelba"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Sekundární střelba"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Přebít zbraň"
+
+msgid "CNTRLMNU_USE"
+msgstr "Použít/otevřít"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Vpřed"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Vzad"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Úkrok vlevo"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Úkrok vpravo"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Otočení vlevo"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Otočení vpravo"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Rychlé otočení"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Skok"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Kleknutí"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Přepnout kleknutí"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Pohled myší"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Pohled vzhůru"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Pohled dolů"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Vystředit pohled"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Běh"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Přepnout běh"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Pohyb do stran"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Zobrazit tabulku skóre"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Akce"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Nastavení ovládání akcí"
+
+msgid "CNTRLMNU_CHAT"
+msgstr ""
+
+msgid "MNU_MULTIPLAYER"
+msgstr ""
+
+msgid "CNTRLMNU_SAY"
+msgstr "Říct"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Nastavení ovládání chatu"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Nastavení ovládání zbraní"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Nastavení ovládání inventáře"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Nastavení ostatních ovládání"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Zbraně"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Další zbraň"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Předchozí zbraň"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Slot zbraně 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Slot zbraně 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Slot zbraně 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Slot zbraně 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Slot zbraně 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Slot zbraně 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Slot zbraně 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Slot zbraně 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Slot zbraně 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Slot zbraně 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventář"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Aktivovat předmět"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Aktivovat všechny předměty"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Další předmět"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Předchozí předmět"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Nastavení ovládání mapy"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Mapa"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Doleva"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Doprava"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Nahoru"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Dolů"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Přiblížit"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Oddálit"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Přiblížení vyp./zap."
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Sledování hráče vyp./zap."
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Mřížka vyp./zap."
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Otáčení vyp./zap."
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Textury vyp./zap."
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Otevřít/zavřít automapu"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Kamera z třetí osoby"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Pořídit snímek obrazovky"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Otevřít konzoli"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Pauza"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Zvětšit velikost obrazovky"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Zmenšit velikost obrazovky"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Nápověda"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Uložit hru"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Načíst hru"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Nastavení"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Nastavení grafiky"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Rychlé uložení"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Rychlé načtení"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Odejít do hlavního menu"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Povolit/skrýt oznámení"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Ukončit hru"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Nastavit gamu"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Povolit myš"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Povolit myš v nabídkách"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Zobrazit tlačítko zpět"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Kurzor"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Horizontální citlivost"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Vertikální citlivost"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Vyhladit pohyb myši"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Rychlost otáčení"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Rychlost pohledu nahoru/dolů"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Rychlost pohybu vpřed/vzad"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Rychlost pohybu do stran"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Vždy se rozhlížet myší"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Vertikálně obrátit myš"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Horizontálně obrátit myš"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Vlevo nahoře"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Vpravo nahoře"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Vlevo dole"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Vpravo dole"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Jako dotyková obrazovka"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Jednoduchý kurzor"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Systémový kurzor"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Výchozí"
+
+msgid "JOYMNU_TITLE"
+msgstr "Konfigurace ovladače"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Ovladač"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Zakázat ovladač v nabídkách"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Povolit podporu pro ovladače"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Povolit ovladače DirectInput"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Povolit ovladače XInput"
+
+msgid "JOYMNU_PS2"
+msgstr "Povolit ovladače PlayStation 2"
+
+msgid "JOYMNU_NOCON"
+msgstr "Nenalezeny žádné ovladače."
+
+msgid "JOYMNU_CONFIG"
+msgstr "Nastavit ovladače:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Pro nalezení ovladačů musí"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "být zapnuta jejich podpora."
+
+msgid "JOYMNU_INVALID"
+msgstr "Vybrán nesprávný ovladač pro nabídky"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Celková citlivost"
+
+msgid "JOYMNU_AXIS"
+msgstr "Nastavení os"
+
+msgid "JOYMNU_INVERT"
+msgstr "Obrátit"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Mrtvá zóna"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Žádné nastavitelné osy"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Žádný"
+
+msgid "OPTVAL_TURNING"
+msgstr "Otáčení"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Dívání se nahoru/dolů"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Pohyb vpřed"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Pohyb do stran"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Pohyb nahoru/dolů"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Inverzní"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Neinverzní"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Modrá"
+
+msgid "TXT_COLOR_RED"
+msgstr "Červená"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Zelená"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Šedá"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Tmavě šedá"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Tmavě zelená"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Hnědá"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Tmavě modrá"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Světle červená"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Žlutá"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Fialová"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Bledě zelená"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Béžová"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Světle zelená"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Světle modrá"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Světle šedá"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Světle hnědá"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Zlatá"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Jasně zelená"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rezavá"
+
+msgid "PLYRMNU_NAME"
+msgstr "Jméno"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Tým"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Barva"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Pohlaví"
+
+msgid "OPTVAL_MALE"
+msgstr "Muž"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Žena"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neutrální"
+
+msgid "OPTVAL_OTHER"
+msgstr "Objekt"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Nastavení herních mechanik"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Vždy"
+
+msgid "OPTVAL_NEVER"
+msgstr "Nikdy"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Automatické míření"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Vždy běžet"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Velikost obrazovky"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Vertikální synchronizace"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Modely"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Velikost zaměřovače"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Jas"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Korekce gama"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Sytost"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Velikost stavového panelu"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Oznámení"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Oznámení na střed"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Pulzující oznámení"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Velikost oznámení"
+
+msgid "MNU_COLORPICKER"
+msgstr "Výběr barvy"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Otáčet automapu"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Následovat hráče"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Průhlednost čar"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Tloušťka čar"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Nastavení barev mapy"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Obnovit původní vlastní barvy"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Zvuk zapnut"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Hudba zapnuta"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 vzorků"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 vzorků"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 vzorků"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 vzorků"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 vzorků"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 vzorků"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 vzorků"
+
+msgid "OPTSTR_AUTO"
+msgstr ""
+
+msgid "OPTSTR_MONO"
+msgstr ""
+
+msgid "OPTSTR_STEREO"
+msgstr ""
+
+msgid "OPTSTR_PROLOGIC"
+msgstr ""
+
+msgid "OPTSTR_QUAD"
+msgstr ""
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 reproduktorů"
+
+msgid "OPTSTR_5POINT1"
+msgstr "Reproduktory 5.1"
+
+msgid "OPTSTR_7POINT1"
+msgstr "Reproduktory 7.1"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Přehravací zařízení"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Povolit EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr ""
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Hlasitost zvuků"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Hlasitost nabídek"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Hlasitost hudby"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI zařízení"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Zvuk na pozadí"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Ozvěna pod vodou"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Náhodné výšky tónu"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Počet zvukových kanálů"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Zvukový systém"
+
+msgid "SNDMNU_OPENAL"
+msgstr "Nastavení OpenAL"
+
+msgid "SNDMNU_RESTART"
+msgstr "Restartovat zvuk"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Pokročilá nastavení"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Nastavení přehrávače modulů"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Nastavení MIDI přehrávače"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Zvuk v menu"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Pokročilá nastavení zvuku"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Vzorkovací frekvence"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "Emulace OPL"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Počet emulovaných OPL čipů"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Plné MIDI stereo"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "Emulační jádro OPL"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "Počet MIDI hlasů"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Globální"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Globální Freeverb"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Nástrojová sada"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Zesílení"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Ozvěna"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Intenzita ozvěny"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Konfigurační soubor Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relativní hlasitost"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Konfigurační soubor WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Vybrat konfiguraci"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Pokročilé převzorkování"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "OPL sada"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Emulační jádro OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Emulátor používá PCM vzorkovací frekvenci"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Počet emulovaných OPL čipů"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Zesílení"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Model hlasitosti"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "Emulační jádro OPN2"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "Emulace GUS"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Konfigurační soubor GUS"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Načíst DMXGUS soubory"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Velikost paměti GUS"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Počet emulovaných OPN čipů"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Zesílení"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Použít vlastní WOPL sadu"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Soubor WOPL sady"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Použít vlastní WOPN sadu"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Soubor WOPN sady"
+
+msgid "OPTVAL_ALIASING"
+msgstr ""
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Lineární"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Lineární"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Lineární"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Nejbližší"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (nízké)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (střední)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (vysoké)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kubická"
+
+msgid "OPTVAL_BLEP"
+msgstr "Omezené krokování"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Lineární (pomalejší)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Omezená lineární"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kubická (pomalejší)"
+
+msgid "OPTVAL_SINC"
+msgstr ""
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Pouze začátek/konec noty"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Plný náběh"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Celková hlasitost"
+
+msgid "MODMNU_QUALITY"
+msgstr "Kvalita"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Křivka hlasitosti"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "Nuked OP2-LLE (náročné na výkon!)"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "Nuked OP3-LLE (náročné na výkon!)"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Auto (použít nastavení sady)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Auto (použít nastavení sady)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Standardní"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Standardní"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "Nativní OPL"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "Nativní OPN"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (Přesný, s AM chybou)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (Přesný, s AM chybou)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Jako Windows 9X"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Jako Windows 9X (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Jako Windows 9X (Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (Bez AM hlasové chyby)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (Bez AM hlasové chyby)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr ""
+
+msgid "ADLVLMODEL_HMI"
+msgstr ""
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (Starý, s chybami)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "Automatické"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "Po konci zvuku"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "Opětovně použít uvolněné noty na stejném nástroji"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "Opětovně použít jakoukoliv uvolněnou notu"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Neomezené"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Paleta"
+
+msgid "OPTVAL_LOW"
+msgstr "Nízká"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Střední"
+
+msgid "OPTVAL_HIGH"
+msgstr "Vysoká"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Extrémní"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Vpřed (obvers)"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Vzad (revers)"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr ""
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Režim tónovací mapy"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Efekt distorze čočky"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Kvalita FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Dithering"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Pořadí palety tónovací mapy"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Exponent palety tónovací mapy"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Multisampling"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Efekt bloom"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Kvalita ambient occlusion"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portály s AO"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Rozostření pozadí v menu"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Mapa prostředí na zrcadlech"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Kvalita vykreslování"
+
+msgid "OPTVAL_SPEED"
+msgstr "Rychlost"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Kvalita"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Režim osvětlení sektorů"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Režim mlhy"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radiální"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Standardní"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Režim filtrování textur"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anisotropické filtrování"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Žádné (mipmapa - nejbližší soused)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Žádné (mipmapa - lineární)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Žádné (trilineární)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilineární"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilineární"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Nastavení textur"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Povolit textury"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Povolit textury ve vysokém rozlišení"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Režim zvětšovače textur"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Faktor zvětšovače textur"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Tento režim potřebuje %dkrát více paměti"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Škálovat textury"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Škálovat sprity"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Škálovat fonty"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Škálovat skiny modelů"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Přednačíst GL textury do cache"
+
+msgid "VIDMNU_TITLE"
+msgstr "Režim displeje"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Škálován (nejbližší)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Škálován (lineární)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr ""
+
+msgid "OPTVAL_STRETCH"
+msgstr "Roztažený"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Režim rendereru"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Přes celou obrazovku"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Podpora Retiny/HiDPI"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Poměr stran"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Vynutit poměr stran"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Vynucený poměr stran"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Povolit poměr stran 5:4"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Škálování rozlišení"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Faktor rozlišení"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Použít lineární škálování (přes celou obrazovku)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Vlastní škálování pixelů"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Vlastní šířka"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Vlastní výška"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Použít změny (v okně)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Použít změny (přes celou obrazovku)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Vybrat přednastavené rozlišení"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Vlastní přednastavení rozlišení"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Přednastavená rozlišení"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Poměr stran 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Poměr stran 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Poměr stran 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Poměr stran 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Poměr stran 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normální"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Nejmenší možná velikost"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Vlastní"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "Maximální FPS"
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Upřednostňované renderovací API"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Kombinovat pravý a levý Alt/Ctrl/Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter přepíná celou obrazovku"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F přepíná celou obrazovku"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Povolit automatické ukládání"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Počet automaticky uložených her"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Potvrzení o uložení/načtení"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Vypnout cheaty z klávesnice"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rotace rychle uložených her"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Počet rychle uložených her v rotaci"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Zakázat čisté škálování nabídek"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Pozastavit hru na pozadí"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Výchozí zaměřovač"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Barva zaměřovače"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Zaměřovač zobrazuje zdraví"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Velikost zaměřovače"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Standardní"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Vylepšené"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Jazyk"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Zrušit změny"
+
+msgid "REVMNU_SELECT"
+msgstr "Vybrat prostředí"
+
+msgid "REVMNU_TEST"
+msgstr "Testovat prostředí"
+
+msgid "REVMNU_EDIT"
+msgstr "Upravit prostředí"
+
+msgid "REVMNU_NEW"
+msgstr "Nové prostředí"
+
+msgid "REVMNU_REVERT"
+msgstr "Obnovit nastavení"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_ROOM"
+msgstr ""
+
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_REVERB"
+msgstr ""
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+msgid "REVMNU_Reflections_Scale"
+msgstr ""
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr ""
+
+msgid "REVMNU_Reverb_Scale"
+msgstr ""
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Based_on"
+msgstr "Založeno na"
+
+msgid "REVMNU_Name"
+msgstr "Název"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Vytvořit"
+
+msgid "REVMNU_Save"
+msgstr "Uložit..."
+
+msgid "REVMNU_File_name"
+msgstr "Název souboru"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Prostředí k uložení"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Nastavení Vulkanu (Experimentální)"
+
+msgid "VK_TITLE"
+msgstr "Nastavení Vulkanu"
+
+msgid "VKMNU_ENABLE"
+msgstr "Povolit Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "ID zařízení Vulkanu"
+
+msgid "VKMNU_HDR"
+msgstr "Vysoký dynamický rozsah (HDR)"
+
+msgid "VK_WARNING"
+msgstr "Varování: Vulkan renderer je velmi experimentální!"
+
+msgid "VK_RESTART"
+msgstr "Tato nastavení vyžadují restart hry."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Vybrat zařízení Vulkanu"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "xBRZ (starší)"
+
+msgid "OS_TITLE"
+msgstr "Vyhledávání možností"
+
+msgid "OS_ANY"
+msgstr "Hledat jakékoli klíčové slovo"
+
+msgid "OS_ALL"
+msgstr "Hledat všechna klíčová slova"
+
+msgid "OS_NO_RESULTS"
+msgstr "Nic nenalezeno."
+
+msgid "OS_LABEL"
+msgstr "Hledat:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%o byl@[ao_cs] vykoštěn@[ao_cs] jako ryba hráčem %k"
+
+msgid "TXT_OBITUARY2"
+msgstr "%o byl@[ao_cs] vykastrován@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY3"
+msgstr "%o byl@[ao_cs] rozšlehán@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY4"
+msgstr "%o byl@[ao_cs] zdecimován@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY5"
+msgstr "%o byl@[ao_cs] zničen@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY6"
+msgstr "%o byl@[ao_cs] nakrájen@[ao_cs] na kostičky hráčem %k"
+
+msgid "TXT_OBITUARY7"
+msgstr "%o byl@[ao_cs] vykuchán@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY8"
+msgstr "%o byl@[ao_cs] zplacatěn@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY9"
+msgstr "%o utržil@[ao_cs] anální spravedlnost od hráče %k"
+
+msgid "TXT_OBITUARY10"
+msgstr "%o utrpěl@[ao_cs] AnÁlNí ŠíLeNsTvÍ od hráče %k"
+
+msgid "TXT_OBITUARY11"
+msgstr "%o byl@[ao_cs] zabit@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY12"
+msgstr "%o byl@[ao_cs] namelen@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY13"
+msgstr "%o byl@[ao_cs] zmasakrován@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY14"
+msgstr "%o byl@[ao_cs] zmrzačen@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY15"
+msgstr "%o byl@[ao_cs] proděravěn@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY16"
+msgstr "%o má novou díru od hráče %k"
+
+msgid "TXT_OBITUARY17"
+msgstr "%o byl@[ao_cs] zavražděn@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY18"
+msgstr "%o byl@[ao_cs] zmlácen@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY19"
+msgstr "Hráč %k se dopustil sodomie na hráči %o"
+
+msgid "TXT_OBITUARY20"
+msgstr "%o byl@[ao_cs] rozplesknut@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY21"
+msgstr "%o byl@[ao_cs] rozmáčknut@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY22"
+msgstr "%o byl@[ao_cs] zaškrcen@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY23"
+msgstr "%o byl@[ao_cs] zničen@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY24"
+msgstr "Hráč %k narval %o@[psn1_cs] tělo do pytle"
+
+msgid "TXT_OBITUARY25"
+msgstr "%o byl@[ao_cs] poslán@[ao_cs] do pekla hráčem %k"
+
+msgid "TXT_OBITUARY26"
+msgstr "%o byl@[ao_cs] upečen@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY27"
+msgstr "%o byl@[ao_cs] rozsápán@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY28"
+msgstr "%o byl@[ao_cs] odstříknut@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY29"
+msgstr "%o byl@[ao_cs] postříkán@[ao_cs] hráčem %k"
+
+msgid "TXT_OBITUARY30"
+msgstr "%o byl@[ao_cs] hozen@[ao_cs] psům hráčem %k"
+
+msgid "TXT_OBITUARY31"
+msgstr "%o byl@[ao_cs] zmlácen@[ao_cs] jako pes hráčem %k"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o je exkrement"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o je hamburger"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o prodělal@[ao_cs] separaci šourku"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o se zúčastnil@[ao_cs] čistky obyvatelstva"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o spáchal@[ao_cs] sebevraždu"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o dostal@[ao_cs] Darwinovu cenu"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "ÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Úplná nastavení"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Zjednodušená nastavení"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Procházet konfigurační soubory"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Procházet snímky obrazovky"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Procházet uložené hry"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Prohodit tlačítka myši"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Pouze upravené"
+
+msgid "TXT_UNKNOWN"
+msgstr "Neznámé"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Automapa"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Automapa"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Uložená hra potřebuje tyto soubory"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Multiplayer"
+
+msgid "OPTMNU_INPUT"
+msgstr "Vstupní zařízení"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Systém"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Osvětlení"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Sprity"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Záře"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Vzhled"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Grafika (pokročilé)"
+
+msgid "PICKER_SELECT"
+msgstr "Vyberte, jaký herní soubor spustit."
+
+msgid "PICKER_PLAY"
+msgstr "Hrát hru"
+
+msgid "PICKER_EXIT"
+msgstr "Odejít"
+
+msgid "PICKER_GENERAL"
+msgstr "Obecné"
+
+msgid "PICKER_EXTRA"
+msgstr "Grafické doplňky"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Přes celou obrazovku"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Zakázat autoload"
+
+msgid "PICKER_DONTASK"
+msgstr "Již se neptat"
+
+msgid "PICKER_LIGHTS"
+msgstr "Světla"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Brightmapy"
+
+msgid "PICKER_WIDESCREEN"
+msgstr ""
+
+msgid "PICKER_ADDPARM"
+msgstr "Dodatečné parametry:"
+
+msgid "PICKER_WELCOME"
+msgstr "Vítejte v enginu %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Verze %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "Renderovací API"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Hra"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Povolit tento ovladač"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Otevřít hlavní menu"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Nastavení přehrávače modulů"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Povolit použití na pozadí"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "Pořadí uložených her"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Dle abecedy"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Dle času uložení"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Hostovat hru"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Připojit se ke hře"
+
+msgid "PICKER_REMPARM"
+msgstr "Zapamatovat si nastavení"
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr "Načíst podpůrné WADy"
+
+msgid "PICKER_TAB_MULTI"
+msgstr ""
+
+msgid "PICKER_LOADSAVE"
+msgstr "Načíst uloženou hru:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Zapamatovat uloženou hru"
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr "Hostovat"
+
+msgid "PICKER_JOIN"
+msgstr "Připojit se"
+
+msgid "PICKER_NETMODE"
+msgstr "Síťový režim"
+
+msgid "PICKER_NETAUTO"
+msgstr "Automatický (doporučeno)"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Paketový server"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+msgid "PICKER_NETRATE"
+msgstr "Frekvence paketů:"
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr "Posílat záložní pakety"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Herní režimy:"
+
+msgid "PICKER_COOP"
+msgstr "Kooperativní"
+
+msgid "PICKER_DM"
+msgstr ""
+
+msgid "PICKER_TDM"
+msgstr "Týmový deathmatch"
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr "Číslo týmu:"
+
+msgid "PICKER_ALTDM"
+msgstr "Použít alternativní pravidla deathmatche"
+
+msgid "PICKER_PLAYERS"
+msgstr "Maximální počet hráčů:"
+
+msgid "PICKER_PORT"
+msgstr "Port hostitele"
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr "Nejvýše 64"
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr "Výchozí 5029"
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr "255 = náhodný"
+
+msgid "PICKER_IP"
+msgstr "IP hostitele"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Týmový deathmatch:"
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr "Říct (týmu):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr ""
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

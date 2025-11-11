@@ -1,0 +1,2131 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/uzdoom/common/"
+"ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ja jp\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "YかNで答えろ"
+
+msgid "TXT_YES"
+msgstr "はい"
+
+msgid "TXT_NO"
+msgstr "いいえ"
+
+msgid "SAVEDEAD"
+msgstr ""
+"プレイ中でないとセーブできない!\n"
+"\n"
+"何かキーを押せ"
+
+msgid "SAFEMESSAGE"
+msgstr "本当に実行するのか?"
+
+msgid "NOTSET"
+msgstr "セットされてない"
+
+msgid "QSPROMPT"
+msgstr ""
+"この名前で上書きするのか?\n"
+"\n"
+"'%s'\n"
+"\n"
+"Y か N で答えろ"
+
+msgid "QLPROMPT"
+msgstr ""
+"この名前のデータをロードするのか?\n"
+"\n"
+"'%s'\n"
+"\n"
+"Y か N で答えろ"
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s はチート使用"
+
+msgid "MSGOFF"
+msgstr "メッセージ: オフ"
+
+msgid "MSGON"
+msgstr "メッセージ: オン"
+
+msgid "TXT_SAY"
+msgstr "発言:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "何かのキーを押すか、ウィンドウのどこかをクリックすると終了する。"
+
+msgid "NEWSAVE"
+msgstr "<新規セーブ>"
+
+msgid "GGSAVED"
+msgstr "セーブ完了。"
+
+msgid "SAVECOMMENT_TIME"
+msgstr "時間\n"
+
+msgid "MNU_LOADGAME"
+msgstr "ロード"
+
+msgid "MNU_SAVEGAME"
+msgstr "セーブ"
+
+msgid "MNU_NOPICTURE"
+msgstr "画像無し"
+
+msgid "MNU_DIFFVERSION"
+msgstr ""
+"別バージョンの\n"
+"データ"
+
+msgid "MNU_NOFILES"
+msgstr "ファイル無し"
+
+msgid "MNU_DELETESG"
+msgstr "本当にこのセーブを消すのか?"
+
+msgid "OPTVAL_OFF"
+msgstr "オフ"
+
+msgid "OPTVAL_ON"
+msgstr "オン"
+
+msgid "OPTVAL_AUTO"
+msgstr "自動"
+
+msgid "OPTMNU_TITLE"
+msgstr "オプション"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "キー配置変更"
+
+msgid "OPTMNU_MOUSE"
+msgstr "マウス オプション"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "コントローラーオプション"
+
+msgid "OPTMNU_PLAYER"
+msgstr "プレイヤーの特徴"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "ゲームプレイ オプション"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "オートマップ オプション"
+
+msgid "OPTMNU_HUD"
+msgstr "HUD オプション"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "その他のオプション"
+
+msgid "OPTMNU_SOUND"
+msgstr "サウンド オプション"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "ディスプレイ オプション"
+
+msgid "OPTMNU_VIDEO"
+msgstr "ビデオ 調整"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "初期設定に戻す"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "最後に保存した設定に戻す"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "現在の設定を保存"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "コンソールを開く"
+
+msgid "OPTMNU_NETWORK"
+msgstr "ネットワーク オプション"
+
+msgid "OPTMNU_REVERB"
+msgstr "リバーブ環境エディタ"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "Enter で決定、BackSpaceで無効化"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "登録したいキーを押すか, Escでキャンセル"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "操作系統"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "撃つ"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "セカンダリ"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "リロード"
+
+msgid "CNTRLMNU_USE"
+msgstr "開く / スイッチ等使用"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "前進"
+
+msgid "CNTRLMNU_BACK"
+msgstr "後退"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "左移動"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "右移動"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "左を向く"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "右を向く"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "背後を向く"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "ジャンプ"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "屈む"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "屈む切替"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "マウス視点上下化"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "視点を上げる"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "視点を下げる"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "視点を戻す"
+
+msgid "CNTRLMNU_RUN"
+msgstr "駆け足"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "常時駆け足切替"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "横移動化"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "スコアボード表示"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "アクション"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "アクション操作設定"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "チャット"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "マルチプレイヤー"
+
+msgid "CNTRLMNU_SAY"
+msgstr "発言"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "チャット操作設定"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "武器操作設定"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "インベントリ操作設定"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "その他の操作設定"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "武器"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "次の武器"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "前の武器"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "武器スロット 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "武器スロット 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "武器スロット 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "武器スロット 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "武器スロット 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "武器スロット 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "武器スロット 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "武器スロット 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "武器スロット 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "武器スロット 0"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "所持品"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "アイテムを使用"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "全てのアイテムを使用"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "次のアイテム"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "前のアイテム"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "マップコントロール カスタマイズ"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "マップコントロール"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "左に振る"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "右に振る"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "上に振る"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "下に振る"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "ズームイン"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "ズームアウト"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "ズーム切替"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "追従切替"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "グリッド切替"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "回転切替"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "テクスチャ切替"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "オートマップの切替"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "背後視点"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "画面キャプチャ"
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "コンソールを開く"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "ポーズ"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "画面サイズを拡大"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "画面サイズを縮小"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "ヘルプを開く\n"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "セーブメニューを開く"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "ロードメニューを開く"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "オプションメニューを開く"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "ディスプレイメニューを開く"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "クイックセーブ"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "クイックロード"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "メインメニューに戻る"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "メッセージ表示の切替"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "ゲームを終了"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "ガンマ値を調整"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "マウスの使用"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "メニューでのマウスの使用"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "戻るボタンを表示"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "カーソル"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "水平感度"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "垂直感度"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "マウス操作を滑らかにする"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "旋回速度"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "上下視点速度"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "前進/後退速度\n"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "横移動速度"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "常に上下視点をオン"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "視点操作反転"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "視点操作反転"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "左上"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "右上"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "左下"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "右下"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "タッチスクリーン式"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "シンプル"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "システム"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "デフォルト"
+
+msgid "JOYMNU_TITLE"
+msgstr "コントローラー構成:"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "コントローラー設定"
+
+msgid "JOYMNU_NOMENU"
+msgstr "メニューではコントローラーを無視"
+
+msgid "JOYMNU_ENABLE"
+msgstr "コントローラーサポート許可"
+
+msgid "JOYMNU_DINPUT"
+msgstr "ダイレクトインプットコントローラー許可"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Xinput コントローラー許可"
+
+msgid "JOYMNU_PS2"
+msgstr "PlayStation2 アダプター許可"
+
+msgid "JOYMNU_NOCON"
+msgstr "コントローラーが見つかりません"
+
+msgid "JOYMNU_CONFIG"
+msgstr "コントローラー構成:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "コントローラーサポートは"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "検出しました"
+
+msgid "JOYMNU_INVALID"
+msgstr "メニューではコントローラーを使用しない"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "全体的な感度"
+
+msgid "JOYMNU_AXIS"
+msgstr "軸構成"
+
+msgid "JOYMNU_INVERT"
+msgstr "反転"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "デッドゾーン"
+
+msgid "JOYMNU_NOAXES"
+msgstr "軸構成を無効"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "無し"
+
+msgid "OPTVAL_TURNING"
+msgstr "旋回"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "視点上下"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "前進"
+
+msgid "OPTVAL_STRAFING"
+msgstr "横移動"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "前進後退"
+
+msgid "OPTVAL_INVERTED"
+msgstr "反転する"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "反転しない"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "青"
+
+msgid "TXT_COLOR_RED"
+msgstr "赤"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "緑"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "灰"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "鉛"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "深"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "茶"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "紺"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "丹"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "黄"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "紫"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "苔"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "淡"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "葵"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "空"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "鉛"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "褐"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "金"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "鮮"
+
+msgid "TXT_COLOR_RUST"
+msgstr "錆"
+
+msgid "PLYRMNU_NAME"
+msgstr "名前"
+
+msgid "PLYRMNU_TEAM"
+msgstr "チーム"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "色"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "性別"
+
+msgid "OPTVAL_MALE"
+msgstr "男"
+
+msgid "OPTVAL_FEMALE"
+msgstr "女"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "中間"
+
+msgid "OPTVAL_OTHER"
+msgstr "物体"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "ゲームプレイ オプション"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "常に"
+
+msgid "OPTVAL_NEVER"
+msgstr "しない"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "自動照準"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "常に駆け足"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "画面サイズ"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "垂直同期"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "モデル"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "照準スケール"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "明るさ"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "ガンマ値"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "コントラスト"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "サチュレーション"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "ステータススケール"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "メッセージ類"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "メッセージを中央に"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "取得時等の文を明滅"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "メッセージスケール"
+
+msgid "MNU_COLORPICKER"
+msgstr "色選択"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "オートマップの回転表示"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "プレイヤー追従"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "線の半透明度"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "線の太さ"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "カスタム色を決める"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "カスタム色を初期化"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "サウンド有効"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "音楽有効"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_8000HZ"
+msgstr ""
+
+msgid "OPTVAL_11025HZ"
+msgstr ""
+
+msgid "OPTVAL_22050HZ"
+msgstr ""
+
+msgid "OPTVAL_32000HZ"
+msgstr ""
+
+msgid "OPTVAL_44100HZ"
+msgstr ""
+
+msgid "OPTVAL_48000HZ"
+msgstr ""
+
+msgid "OPTVAL_64SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_128SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_256SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_512SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr ""
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr ""
+
+msgid "OPTSTR_AUTO"
+msgstr "自動"
+
+msgid "OPTSTR_MONO"
+msgstr "モノラル"
+
+msgid "OPTSTR_STEREO"
+msgstr "ステレオ"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "ドルビー プロロジック デコーダー"
+
+msgid "OPTSTR_QUAD"
+msgstr "クァッド"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 スピーカー"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 スピーカー"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 スピーカー"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "プレイバック デバイス"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "EFXを有効化"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "リサンプラー"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "効果音音量"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "メニュー音量"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "音楽音量"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDIデバイス"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "バックグラウンドでのサウンド"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "水中反響音"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "ランダマイズ ピッチ"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "サウンド チャンネル"
+
+msgid "SNDMNU_BACKEND"
+msgstr "サウンド バックエンド"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL オプション"
+
+msgid "SNDMNU_RESTART"
+msgstr "サウンド再起動"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "高度なオプション"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "モジュールリプレイヤー オプション"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Midi再生のオプション"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "メニューでのサウンド"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "高度なサウンドオプション"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "サンプルレート"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPLシンセサイズ"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "OPLチップエミュレートの番号"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Full MIDIステレオパンニング"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL エミュレート コア"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI ボイス"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "グローバル"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "フリーバーブ"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "グローバル フリーバーブ"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "パッチ セット"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "ゲイン"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "リバーブ"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "リバーブ量"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "コーラス"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity コンフィグファイル"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "相対音量"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi コンフィグファイル"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "構成選択"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "高度なリサンプリング"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL エミュレートコア"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "PCMレートでエミュレート実行"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "OPLチップエミュレートの番号"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "ゲイン"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "音量モデル"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2 エミュレート コア"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS エミュレーション"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS コンフィグファイル"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "DMXGUS ランプを読む"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS メモリーサイズ"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "OPNチップエミュレートの番号"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "ゲイン"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "カスタムWOPL bankを使用"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL bankファイル"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "カスタムWOPN bankを使用"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN bankファイル"
+
+msgid "OPTVAL_ALIASING"
+msgstr "エイリアシング"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "リニア"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "リニア"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "リニア"
+
+msgid "OPTVAL_NEAREST"
+msgstr "最寄り"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (低)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (中)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (高)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "キュービック"
+
+msgid "OPTVAL_BLEP"
+msgstr "帯域制限ステップ"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "リニア(遅め)"
+
+msgid "OPTVAL_BLAM"
+msgstr "帯域制限リニア"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "キュービック (遅め)"
+
+msgid "OPTVAL_SINC"
+msgstr "シンク"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "ノート オン/オフ のみ"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "フルランピング"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "全体音量"
+
+msgid "MODMNU_QUALITY"
+msgstr "クオリティ"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "音量ランピング"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr "チップ オー マチック"
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "自動(bankのセットアップ使用)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "自動(bankのセットアップ使用)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "一般的"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "一般的"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPLネイティブ"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPNネイティブ"
+
+msgid "ADLVLMODEL_DMX"
+msgstr ""
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Win9X式"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9X式 (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Win9X式 (Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX(AMボイスバグ無し)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee(AMボイスバグ無し)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr ""
+
+msgid "ADLVLMODEL_HMI"
+msgstr ""
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS(旧式、バグ含む)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "自動"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "サウンドオフ遅延を測定"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "同一楽器は一番目の音源を再利用"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "いずれかの音源ノートを再利用"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "無制限"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "パレット"
+
+msgid "OPTVAL_LOW"
+msgstr "低"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "中"
+
+msgid "OPTVAL_HIGH"
+msgstr "高"
+
+msgid "OPTVAL_EXTREME"
+msgstr "最高"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "正面"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "反転"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "ポストプロセッシング"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "トーンマップ モード"
+
+msgid "GLPREFMNU_LENS"
+msgstr "レンズの歪みエフェクト"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA品質"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "ディザー出力"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "トーンマップパレット順序"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "トーンマップパレット指数"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "マルチサンプル"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "ブルーム エフェクト"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "アンビエント オクルージョンの品質"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "AOを伴うポータル"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "メニューブラー"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "マップオンミラーの画像表示"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "レンダリング品質"
+
+msgid "OPTVAL_SPEED"
+msgstr "速度寄り"
+
+msgid "OPTVAL_QUALITY"
+msgstr "品質寄り"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "セクターライトモード"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "フォグモード"
+
+msgid "OPTVAL_RADIAL"
+msgstr "放射状"
+
+msgid "OPTVAL_STANDARD"
+msgstr "標準"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "テクスチャーフィルター モード"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "異方性フィルター"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "なし(最寄りミップマップ)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "なし(リニアミップマップ)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "なし(トライリニア)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "バイリニア"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "トライリニア"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "テクスチャー オプション"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "テクスチャー有効"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "ハイレゾ テクスチャー有効"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "高品質リサイズ モード"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "高品質リサイズ乗数"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "このモードでは %d 倍以上のビデオメモリが必要です!"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "テクスチャー類のリサイズ"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "スプライト類のリサイズ"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "フォント類のリサイズ"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "モデルスキン類のリサイズ"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "プリキャッシュGLテクスチャー"
+
+msgid "VIDMNU_TITLE"
+msgstr "ビデオ調整"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "スケーリング (最寄り)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "スケーリング (リニア)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "レターボックス"
+
+msgid "OPTVAL_STRETCH"
+msgstr "伸縮"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "レンダラー"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "全画面"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI サポート"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "アスペクト比"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "アスペクト比に従う"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "比率の形式"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "5:4アスペクト比を可能にする"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "画面スケール"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "スケール倍率"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "リニアスケールを使う(全画面)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "カスタム ピクセルスケール"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "カスタム 幅"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "カスタム 高さ"
+
+msgid "VIDMNU_APPLYW"
+msgstr "変更を適用(ウィンドウ化)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "変更を適用(全画面化)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "解像度プリセットを選ぶ"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "カスタム解像度プリセット"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "解像度モードの調整"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "アスペクト比 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "アスペクト比 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "アスペクト比 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "アスペクト比 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "アスペクト比 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "通常"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "可能な限り最小"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "カスタム"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "最大FPS値"
+
+msgid "OPTVAL_60FPS"
+msgstr ""
+
+msgid "OPTVAL_75FPS"
+msgstr ""
+
+msgid "OPTVAL_90FPS"
+msgstr ""
+
+msgid "OPTVAL_120FPS"
+msgstr ""
+
+msgid "OPTVAL_144FPS"
+msgstr ""
+
+msgid "OPTVAL_200FPS"
+msgstr ""
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "優先レンダリングAPI"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "左と右のALT/CTRL/SHIFTキーを統合"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "ALTとENTERで全画面に切り替え"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Ctrl + Fキーで全画面表示"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "オートセーブを有効化"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "オートセーブの最大数"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "セーブ/ロード時に確認"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "キーボードからのチート無効"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "クイックセーブ間隔"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "間隔クイックセーブの数"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "メニュー画面を伸縮させない"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "バックグラウンド時に一時停止"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "デフォルトの照準"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "照準色"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "照準のヘルス表示"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "照準サイズ"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "標準"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "強調"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "言語設定"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "変更を戻す"
+
+msgid "REVMNU_SELECT"
+msgstr "反響選択"
+
+msgid "REVMNU_TEST"
+msgstr "反響テスト"
+
+msgid "REVMNU_EDIT"
+msgstr "反響編集"
+
+msgid "REVMNU_NEW"
+msgstr "新規反響設定"
+
+msgid "REVMNU_REVERT"
+msgstr "設定を戻す"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "反響サイズ"
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "反響伝播"
+
+msgid "REVMNU_ROOM"
+msgstr ""
+
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Decay HF比率"
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Decay LF比率"
+
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Reflections X定位"
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Reflections Y定位"
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Reflections Z定位"
+
+msgid "REVMNU_REVERB"
+msgstr ""
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Reverb X定位"
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Reverb Y定位"
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Reverb Z定位"
+
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF参照値"
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF参照値"
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_DENSITY"
+msgstr "密度"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Reflections音階"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Reflections Delay音階"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Decay Time音階"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Decay HF限度"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Reverb音階"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Reverb Delay音階"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Echo Time音階"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Modulation Time音階"
+
+msgid "REVMNU_Based_on"
+msgstr "音響の元"
+
+msgid "REVMNU_Name"
+msgstr "名前"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "作成"
+
+msgid "REVMNU_Save"
+msgstr "セーブする..."
+
+msgid "REVMNU_File_name"
+msgstr "ファイル名"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "音響を保存"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan機能オプション(実験的)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan機能オプション"
+
+msgid "VKMNU_ENABLE"
+msgstr "Vulkanを有効化"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkanデバイス ID"
+
+msgid "VKMNU_HDR"
+msgstr "ハイダイナミックレンジ"
+
+msgid "VK_WARNING"
+msgstr "警告：Vulkanレンダラーは実験段階です!"
+
+msgid "VK_RESTART"
+msgstr "これらのオプションを有効にするには再起動が必要です。"
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Vulkanデバイスの選択"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "旧xBRZ"
+
+msgid "OS_TITLE"
+msgstr "オプション検索"
+
+msgid "OS_ANY"
+msgstr "いずれかの用語を探す"
+
+msgid "OS_ALL"
+msgstr "全ての用語を探す"
+
+msgid "OS_NO_RESULTS"
+msgstr "見つかりませんでした。"
+
+msgid "OS_LABEL"
+msgstr "検索:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k は %o の骨を魚のように引っこ抜いた。"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k は %o を去勢した。"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k は %o に反吐ブチ撒けさせた。"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k は %o の居場所を間引いた。"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k は %o を完全に破壊した。"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k は %o を賽の目に切った。"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k は %o の臓物を引きずり出した。"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k は %o をぶっ潰した。"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k は %o のケツにぶち込んだ。"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k は %o のケツをガバガバにした。"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k は %o をブッ殺した。"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k は %o をミンチにした。"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k は %o を虐殺した。"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k は %o をバラバラ死体にした。"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k は %o の穴を大きく広げた。"
+
+msgid "TXT_OBITUARY16"
+msgstr "%k は %o を切り裂いて新しい穴を作ってあげた。"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k は %o を屠殺した。"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k は %o をぶっ飛ばした。"
+
+msgid "TXT_OBITUARY19"
+msgstr "%o は %k にカマを掘られた。 "
+
+msgid "TXT_OBITUARY20"
+msgstr "%k は %o にばら撒かれた。"
+
+msgid "TXT_OBITUARY21"
+msgstr "%k は %o に潰された。"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k は %o に絞られた。"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k は %o に消された。"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k は %o を死体袋にした。"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k は %o を地獄に送った。"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k は %o を焼却した。"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k は %o を処刑した。"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k は %o にぶっかけた。"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k は %o を撒き散らした。"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k は %o を犬の餌にした。"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k は %o を狂犬の様に扱った。"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o はもはや排泄物のようだ。"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o はハンバーガーになった。"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o の陰嚢は剥離していた。"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o は人口削減政策の実験台に志願した。"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o は勝手にくたばった。"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o にはダーウィン賞が授与された。"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr "1"
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr ""
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "全オプション欄"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "必要なオプションのみ"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "ゲームコンフィグ参照"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "クリーンショット参照"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "セーブしたゲーム参照"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "マウスボタンを反転"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "モディファイのみ"
+
+msgid "TXT_UNKNOWN"
+msgstr "不明"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "オートマップ"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD+オートマップ"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "このセーブデータには 必要なファイルがある"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "マルチプレイ オプション"
+
+msgid "OPTMNU_INPUT"
+msgstr "入力オプション"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "システムオプション"
+
+msgid "OPTMNU_LIGHT"
+msgstr "光源オプション"
+
+msgid "OPTMNU_SPRITE"
+msgstr "スプライトオプション"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "光冠"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "アピアランス"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "高度なディスプレイオプション"
+
+msgid "PICKER_SELECT"
+msgstr "実行するゲームファイルを選択します。"
+
+msgid "PICKER_PLAY"
+msgstr "プレイ"
+
+msgid "PICKER_EXIT"
+msgstr "終了"
+
+msgid "PICKER_GENERAL"
+msgstr "一般"
+
+msgid "PICKER_EXTRA"
+msgstr "追加グラフィックス"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "フルスクリーン"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "オートロード無効"
+
+msgid "PICKER_DONTASK"
+msgstr "再度聞かない"
+
+msgid "PICKER_LIGHTS"
+msgstr "ライト"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "ブライトマップ"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "ワイドスクリーン"
+
+msgid "PICKER_ADDPARM"
+msgstr "追加パラメータ"
+
+msgid "PICKER_WELCOME"
+msgstr "ようこそ:  %s!"
+
+msgid "PICKER_VERSION"
+msgstr "バージョン %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "優先レンダリングAPI"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "ゲーム"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "このコントローラーを有効にする"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "メインメニューを開く"
+
+msgid "MODMNU_REPLAYER"
+msgstr "モジュール リプレイヤー"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "GZD外の時にコントローラー入力を許可"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "セーブゲームのソート順"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "アルファベット順"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "最終セーブ日時"
+
+msgid "PICKER_PLAYHOST"
+msgstr "ゲームホスト"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "ゲーム参加"
+
+msgid "PICKER_REMPARM"
+msgstr "パラメーターを記憶"
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr "サポートWADsをロード"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "マルチプレイヤー"
+
+msgid "PICKER_LOADSAVE"
+msgstr "セーブファイルのロード:"
+
+msgid "PICKER_REMSAVE"
+msgstr "セーブファイルを記憶"
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr "ホスト"
+
+msgid "PICKER_JOIN"
+msgstr "参加"
+
+msgid "PICKER_NETMODE"
+msgstr "ネットワークモード"
+
+msgid "PICKER_NETAUTO"
+msgstr "自動 (推奨)"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "パケットサーバー"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "P2P (直接通信)"
+
+msgid "PICKER_NETRATE"
+msgstr "パケットTicレート"
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr "バックアップパケットを送る"
+
+msgid "PICKER_GAMEMODE"
+msgstr "ゲームモード:"
+
+msgid "PICKER_COOP"
+msgstr "協力"
+
+msgid "PICKER_DM"
+msgstr "デスマッチ"
+
+msgid "PICKER_TDM"
+msgstr "チームデスマッチ"
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr "チーム #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Altデスマッチルールを採用"
+
+msgid "PICKER_PLAYERS"
+msgstr "最大人数:"
+
+msgid "PICKER_PORT"
+msgstr "ホストポート:"
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr "限界数 64"
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr "既定 5029"
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr "255 = ランダム"
+
+msgid "PICKER_IP"
+msgstr "ホストIP:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "チームデスマッチ:"
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr "発言 (チーム):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Discordに情報を表示 (DRP)"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "旋回速度"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "上下視点速度"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "アナログ ストレイフ ラン"

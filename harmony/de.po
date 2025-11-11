@@ -1,0 +1,200 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: de\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Bist du sicher, dass du das bewältigen kannst?\n"
+"\n"
+"Drücke Y oder N."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Punkt markiert"
+
+msgid "PD_BLUEO"
+msgstr "Benötigt die GRÜNE Schlüsselkarte"
+
+msgid "PD_REDO"
+msgstr "Benötigt die VIOLETTE Schlüsselkarte"
+
+msgid "PD_YELLOWO"
+msgstr "Benötigt die GELBE Schlüsselkarte"
+
+msgid "PD_BLUEK"
+msgstr "Benötigt den GRÜNEN Schlüssel"
+
+msgid "PD_YELLOWK"
+msgstr "Benötigt den GELBEN Schlüssel"
+
+msgid "PD_REDK"
+msgstr "Benötigt den VIOLETTEN Schlüssel"
+
+msgid "GOTARMOR"
+msgstr "Panzer genommen."
+
+msgid "GOTMEGA"
+msgstr "Super-Panzer genommen."
+
+msgid "GOTMSPHERE"
+msgstr "Super-Gesundheit"
+
+msgid "GOTBLUECARD"
+msgstr "GRÜNE Schlüsselkarte erhalten"
+
+msgid "GOTYELWCARD"
+msgstr "GELBE Schlüsselkarte erhalten"
+
+msgid "GOTREDCARD"
+msgstr "VIOLETTE Schlüsselkarte erhalten"
+
+msgid "GOTBLUESKUL"
+msgstr "GRÜNEN Schlüssel erhalten"
+
+msgid "GOTYELWSKUL"
+msgstr "GELBEN Schlüssel erhalten"
+
+msgid "GOTREDSKUL"
+msgstr "VIOLETTEN Schlüssel erhalten"
+
+msgid "GOTSTIM"
+msgstr "Heilpilz"
+
+msgid "GOTMEDIKIT"
+msgstr "Erhalten: Medikit"
+
+msgid "GOTMEDINEED"
+msgstr "Erhalten: Medikit, das du WIRKLICH brauchst"
+
+msgid "GOTMAP"
+msgstr "Karte"
+
+msgid "GOTCLIPBOX"
+msgstr "Erhalten: Munitionskiste"
+
+msgid "GOTROCKET"
+msgstr "Erhalten: Granate"
+
+msgid "GOTROCKBOX"
+msgstr "Erhalten: Granaten"
+
+msgid "GOTSHELLBOX"
+msgstr "Erhalten: Schrotpatronen"
+
+msgid "GOTBACKPACK"
+msgstr "Erhalten: Munitionsrucksack"
+
+msgid "GOTBFG9000"
+msgstr "Erhalten: Granate"
+
+msgid "GOTCHAINGUN"
+msgstr "Erhalten: Minigun"
+
+msgid "GOTLAUNCHER"
+msgstr "Erhalten: Granatwerfer"
+
+msgid "GOTPLASMA"
+msgstr "Entropiewerfer"
+
+msgid "GOTSHOTGUN"
+msgstr "Erhalten: Schrotflinte"
+
+msgid "STSTR_DQDON"
+msgstr "Gott-Modus AN"
+
+msgid "STSTR_DQDOFF"
+msgstr "Gott-Modus AUS"
+
+msgid "STSTR_KFAADDED"
+msgstr "Alle Waffen, Munition und Schlüssel"
+
+msgid "STSTR_FAADDED"
+msgstr "Alle Waffen und Munition"
+
+msgid "TXT_HARMMAP01"
+msgstr "Entführung"
+
+msgid "TXT_HARMMAP02"
+msgstr "In Gefahr"
+
+msgid "TXT_HARMMAP03"
+msgstr "Missstimmung"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Das Hospital"
+
+msgid "TXT_HARMMAP06"
+msgstr "Die Waffenfabrik"
+
+msgid "TXT_HARMMAP07"
+msgstr "Das Unterwasserlabor"
+
+msgid "TXT_HARMMAP08"
+msgstr "Flugplatz Eins"
+
+msgid "TXT_HARMMAP09"
+msgstr "Die Startbasis"
+
+msgid "TXT_HARMMAP10"
+msgstr "Die radioaktive Zone"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Dir ist speiübel...\n"
+"Als du in das Gesicht der Mutanten-\n"
+"königin siehst... Das Ding... Das war mal...\n"
+"Deine Freundin... Amira!\n"
+"\n"
+"Diese Monster müssen einen Weg\n"
+"gefunden haben, sie zu mutieren und\n"
+"in diese widerliche Kreatur zu verwandeln.\n"
+"\n"
+"- seufz -\n"
+"\n"
+"Du reißt dich zusammen...\n"
+"Sie werden dafür bezahlen, was sie\n"
+"deiner Freundin angetan haben...\n"
+"\n"
+"\"Die Hölle kennt den Zorn einer\n"
+"verhöhnten Frau nicht!\"\n"
+"\n"
+"    = E N D E ="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Lade"
+
+msgid "SKILL_BABY"
+msgstr "Sehr einfach"
+
+msgid "SKILL_EASY"
+msgstr "Einfach"
+
+msgid "SKILL_NORMAL"
+msgstr "Mittel"
+
+msgid "SKILL_HARD"
+msgstr "Schwer"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Sehr schwer"
+
+msgid "HARMQUITMSG"
+msgstr "Danke fürs Spielen"
+
+msgid "TXT_D2E1"
+msgstr ""

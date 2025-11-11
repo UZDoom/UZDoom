@@ -1,0 +1,578 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: cs\n"
+
+msgid "QUITMSG1"
+msgstr "Jsou ty bugy na tebe moc tvrdé?"
+
+msgid "QUITMSG"
+msgstr ""
+"Jsi si jistý, že se chceš\n"
+"zdáchnout z akce?"
+
+msgid "QUITMSG2"
+msgstr "Snažíš se skončit? To si říkáš hacker?"
+
+msgid "QUITMSG3"
+msgstr "Vrať se, než ti do zadku pošlu virus!"
+
+msgid "QUITMSG4"
+msgstr "Skuteční hackeři nikdy neprchají z akce."
+
+msgid "QUITMSG5"
+msgstr "No tak! Ještě jsi neviděl to nejlepší!"
+
+msgid "QUITMSG6"
+msgstr "Vzdej se a s kyberprostorem je konec!"
+
+msgid "QUITMSG7"
+msgstr "GENIE posílá své pozdravy, hajzle!"
+
+msgid "QUITMSG8"
+msgstr "Hmm. To by bylo pro hrdinství, Hackeře."
+
+msgid "QUITMSG9"
+msgstr "Co? Radši by ses vrátil do basy?"
+
+msgid "QUITMSG10"
+msgstr "Měl sis vzít modrou pilulku."
+
+msgid "QUITMSG11"
+msgstr "V názvu hry není napsané „uteč“!"
+
+msgid "QUITMSG12"
+msgstr "Žádný problém. Záchrana světa může počkat, ne?"
+
+msgid "QUITMSG13"
+msgstr "Hádám, že je čas vypojit server!"
+
+msgid "QUITMSG14"
+msgstr "Ať tě nenapadne odejít a zapomenout na HacX!"
+
+msgid "OB_SUICIDE"
+msgstr "%o se smazal@[ao_cs] z vesmíru."
+
+msgid "OB_FALLING"
+msgstr "%o utvořil@[ao_cs] kráter velikosti Kansasu."
+
+msgid "OB_CRUSH"
+msgstr "%o se změnil@[ao_cs] v lidskou palačinku."
+
+msgid "OB_EXIT"
+msgstr "%o se pokusil@[ao_cs] prchnout."
+
+msgid "OB_WATER"
+msgstr "%o uměl@[ao_cs] plavat jako cihla."
+
+msgid "OB_SLIME"
+msgstr "%o se rozpadl@[ao_cs] na atom."
+
+msgid "OB_LAVA"
+msgstr "%o si dal@[ao_cs] horkou koupel."
+
+msgid "OB_BARREL"
+msgstr "%o se předávkoval@[ao_cs] nitroglycerinem."
+
+msgid "OB_SPLASH"
+msgstr "%o byl@[ao_cs] sedřen@[ao_cs] na kousíčky."
+
+msgid "OB_R_SPLASH"
+msgstr "%o chtěl@[ao_cs] vědět, jak vypadá zevnitř."
+
+msgid "OB_ROCKET"
+msgstr "%o chtěl@[ao_cs] vědět, jak vypadá zevnitř."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o se smazal@[ao_cs] z vesmíru."
+
+msgid "OB_THUG"
+msgstr "%o už není vládnoucím živočichem."
+
+msgid "OB_ANDROID"
+msgstr "%o se zapojil@[ao_cs] ke špatnému stroji."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o dostal@[ao_cs] šíleně kybernakopáno."
+
+msgid "OB_ICE"
+msgstr "%o byl@[ao_cs] zmražen@[ao_cs] ICEm."
+
+msgid "OB_BUZZER"
+msgstr "%o dostal@[ao_cs] malou pecku."
+
+msgid "OB_STEALTH"
+msgstr "%o odhalil@[ao_cs] šokující informace."
+
+msgid "OB_DMAN"
+msgstr "%o byl@[ao_cs] vymazán@[ao_cs] z kyberprostoru."
+
+msgid "OB_GLASS"
+msgstr "%o si přidělal@[ao_cs] skleněnou čelist."
+
+msgid "OB_MANIAC"
+msgstr "%o@[psn_cs] členství v klubu živých bylo přerušeno."
+
+msgid "OB_MANIACHIT"
+msgstr "%o umřel@[ao_cs] nějakým způsobem, který ani nemůžu pochopit."
+
+msgid "OB_TERMIN"
+msgstr "%o byl@[ao_cs] usmažen@[ao_cs] šílenou femme fatale."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o se moc přiblížil@[ao_cs] k opačnému pohlaví."
+
+msgid "OB_REPLI"
+msgstr "%o řekl@[ao_cs] sbohem starému příteli."
+
+msgid "OB_REPLIHIT"
+msgstr "%o byl@[ao_cs] bodnuta do zad starým přítelem."
+
+msgid "OB_PHAGE"
+msgstr "%o byl@[ao_cs] vyčištěna přirozeným výběrem."
+
+msgid "OB_THORN"
+msgstr "%o nemohl@[ao_cs] utéct bodlavé smrti."
+
+msgid "OB_SUMATIC"
+msgstr "%o dostal@[ao_cs] sumo ránu pod pás."
+
+msgid "OB_GENIE"
+msgstr "%o nedostal@[ao_cs] svá tři přání."
+
+msgid "OB_MINE"
+msgstr "%o se pokusil@[ao_cs] pohladit minu."
+
+msgid "OB_MPKICK"
+msgstr "%o dostal@[ao_cs] kopanec do obličeje od kung-fuistou %k."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o se rozpadl@[ao_cs] šokujícím odhalením hráče %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o dostal@[ao_cs] dvojitou dávku potrestání hráče %k."
+
+msgid "OB_MPTAZER"
+msgstr "%o byl@[ao_cs] vypnut@[ao_cs] šokádou hráče %k."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o se zabořil@[ao_cs] do mrazivého hněvu hráče %k."
+
+msgid "OB_MPUZI"
+msgstr "%o byl@[ao_cs] prostřílen@[ao_cs] skrz na skrz gangsterem %k."
+
+msgid "OB_MPZOOKA"
+msgstr "%o sežral@[ao_cs] fotonovou bombu hráče %k."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o byl@[ao_cs] zredukován@[ao_cs] na hromádku fotonů hráčem %k."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o byl@[ao_cs] zredukován@[ao_cs] na antihmotu hráčem %k."
+
+msgid "OB_MPNUKE"
+msgstr "%o spolkl@[ao_cs] atomovku hráče %k."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o si zkrátil@[ao_cs] svůj poločas rozpadu při zabijačce hráče %k."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o byl@[ao_cs] obrácen@[ao_cs] naruby hráčem %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "Struktura atomů hráče %o se rozpadla."
+
+msgid "OB_DEFAULT"
+msgstr "%o samovolně vypršel@[ao_cs]."
+
+msgid "GOTNUKER"
+msgstr "Sebral@[ao_cs] jsi ATOMOVKÁTOR! Pojď na to!"
+
+msgid "GOTUZI"
+msgstr "Získal@[ao_cs] jsi UZI!"
+
+msgid "GOTREZNATOR"
+msgstr "HOIG Reznátor - pár jich upeč"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Sebral@[ao_cs] jsi Fotonovou bazuku!"
+
+msgid "GOTBIGSTICK"
+msgstr "Nosíš velkou bouchačku!"
+
+msgid "GOTTAZER"
+msgstr "Získal@[ao_cs] jsi tazer!"
+
+msgid "GOTCRYOGUN"
+msgstr "Sebral@[ao_cs] jsi krypušku! ANI SE NEHNI!"
+
+msgid "GOTROUNDS"
+msgstr "Sebral@[ao_cs] jsi nějaké náboje!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Sebral@[ao_cs] jsi krabici nábojů!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Sebral@[ao_cs] jsi torpédo!"
+
+msgid "GOTTORPEDOS"
+msgstr "Sebral@[ao_cs] jsi krabici torpéd!"
+
+msgid "GOTMOLECULES"
+msgstr "Sebral@[ao_cs] jsi molekulový modul!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Sebral@[ao_cs] jsi sud plný molekul!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Sebral@[ao_cs] jsi nějaké kazety!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Sebral@[ao_cs] jsi krabici kazet!"
+
+msgid "GOTVALISE"
+msgstr "Sebral@[ao_cs] jsi kufr plný munice!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Silové pole!"
+
+msgid "GOTMICROTEL"
+msgstr ""
+
+msgid "GOTENKBLIND"
+msgstr "Jsi EnK-slep@[adj_cs]!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Gumové boty!"
+
+msgid "GOTSIARRAY"
+msgstr "Mapa pole SI!"
+
+msgid "GOTINFRARED"
+msgstr "Infračervené brýle!"
+
+msgid "GOTINHALER"
+msgstr "Pořádně se nadechni, inhalátor!"
+
+msgid "GOTHYPONEED"
+msgstr "Jsi zachráněn@[ao_cs] dávkou Hyderginu z Hypa!"
+
+msgid "GOTHYPO"
+msgstr "Sebral@[ao_cs] jsi Hypo!"
+
+msgid "GOTKEYCARD"
+msgstr "Nalezl@[ao_cs] jsi přístupovou kartu!"
+
+msgid "GOTCKEY"
+msgstr "Nalezl@[ao_cs] jsi kyberklíč!"
+
+msgid "GOTPASSWORD"
+msgstr "Nalezl@[ao_cs] jsi heslo!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Nalezl@[ao_cs] jsi modrý Z-klíč!"
+
+msgid "GOTYELWZKEY"
+msgstr "Nalezl@[ao_cs] jsi žlutý Z-klíč!"
+
+msgid "GOTREDZKEY"
+msgstr "Nalezl@[ao_cs] jsi červený Z-klíč!"
+
+msgid "GOTBODYARMOR"
+msgstr "Brnění!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrofenoxin"
+
+msgid "GOTKEVLARVEST"
+msgstr "Sebral@[ao_cs] jsi kevlarovou vestu!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Sebral@[ao_cs] jsi superkevlarovou vestu!"
+
+msgid "GOTMICROKIT"
+msgstr "Sebral@[ao_cs] jsi mikrosadu!"
+
+msgid "GOTDAMPENER"
+msgstr "Sebral@[ao_cs] jsi tlumič!"
+
+msgid "PD_CKEY"
+msgstr "K přístupu potřebuješ kyberklíč!"
+
+msgid "PD_KEYCARD"
+msgstr "K přístupu potřebuješ přístupovou kartu!"
+
+msgid "PD_PASSWORD"
+msgstr "K přístupu potřebuješ heslo!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Tohle bude fungovat jen s modrým Z-klíčem."
+
+msgid "PD_REDZKEY"
+msgstr "Tohle bude fungovat jen s červeným Z-klíčem."
+
+msgid "PD_YELWZKEY"
+msgstr "Tohle bude fungovat jen se žlutým Z-klíčem."
+
+msgid "X1TEXT"
+msgstr ""
+"Dvacet miliónů ve zlatě nevypadá, že by\n"
+"stálo za všechnu tuhle otravu, co, hackeře?\n"
+"Basa teď vypadá jako krásný hotel!\n"
+"\n"
+"Ošklivé bio-mutace a tví lidští společníci\n"
+"visící ze stropu jako pytle masa.\n"
+"\n"
+"Co je sakra tenhle GENIE? Takový počítač\n"
+"jsi ještě nenaboural@[ao_cs]!\n"
+"\n"
+"Měl@[ao_cs] bys najít další terminál, projet\n"
+"se kyberprostorem, vysekat pár mutantům\n"
+"střeva a rychle z Dodge vypadnout!"
+
+msgid "X2TEXT"
+msgstr ""
+"Kde jsou všichni!?\n"
+"\n"
+"Z Paříže je město duchů, leda že bys\n"
+"zmutované bugy považoval@[ao_cs] za vzorné občany.\n"
+"\n"
+"Narazil@[ao_cs] jsi na tvrdý odpor. Sakra, tyhle\n"
+"bugy umí bojovat! Naštěstí ale nejsou\n"
+"zrovna nejchytřejší.\n"
+"\n"
+"Ale dostal@[ao_cs] jsi některé ty informace, který\n"
+"podvýbor chtěl. A je to pěkný hnus!\n"
+"\n"
+"Tyhle bugy se krmí lidským mozkovým mokem!\n"
+"Není divu, že je ve čtvrti nějak prázdno.\n"
+"Nahlaš se zpátky u výboru. A dávej pozor..."
+
+msgid "X3TEXT"
+msgstr ""
+"Civilizace, tak jak ji známe, je pryč.\n"
+"Nada. Nilch.\n"
+"\n"
+"Bez přátel, bez rodiny. Bez lidí.\n"
+"Alespoň těch normálních.\n"
+"\n"
+"Jediná zbylá věc... GENIE!\n"
+"I kdybys musel@[ao_cs] jít až na konec vesmíru,\n"
+"najdeš jeho zmutovaný ksicht!\n"
+"Protože teď jsi fakt nasran@[adj_cs]!\n"
+"\n"
+"A to zlato? Sakra, tohle děláš zadarmo.\n"
+"\n"
+".....(pokračování příště)....."
+
+msgid "X5TEXT"
+msgstr ""
+"Jsi naživu!\n"
+"\n"
+"Jaké byly naděje, hackeře!?\n"
+"Protože se to tu hemží bugy.\n"
+"\n"
+"Nemůžeš se dostat k podvýboru, což\n"
+"znamená, že byl kompromitován.\n"
+"\n"
+"\n"
+"Jsi... @[self_cs]."
+
+msgid "TXT_HACXMAP01"
+msgstr "Sídlo GenEmp"
+
+msgid "TXT_HACXMAP02"
+msgstr "Tunelové město"
+
+msgid "TXT_HACXMAP03"
+msgstr "Lávová přístavba"
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr "Kybercirkus"
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr "Velká zeď"
+
+msgid "TXT_HACXMAP08"
+msgstr "Zahrada rozkoše"
+
+msgid "TXT_HACXMAP09"
+msgstr "Skrytá pevnost"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarchistův sen"
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr "Gotický trest"
+
+msgid "TXT_HACXMAP13"
+msgstr "Kanály"
+
+msgid "TXT_HACXMAP14"
+msgstr "Válka elektrod"
+
+msgid "TXT_HACXMAP15"
+msgstr "Soumrak EnKu"
+
+msgid "TXT_HACXMAP16"
+msgstr "Proměnlivý Cybex"
+
+msgid "TXT_HACXMAP17"
+msgstr "Řeka krve"
+
+msgid "TXT_HACXMAP18"
+msgstr "Bizár"
+
+msgid "TXT_HACXMAP19"
+msgstr "Válečné kabinety"
+
+msgid "TXT_HACXMAP20"
+msgstr "Pozor, vetřelec!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Sušící místnost"
+
+msgid "STSTR_CLEV"
+msgstr "Příjezd do..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...ti upeče prdel!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "nesmrt(V), Síla, nevId, Rad, mApa nebo světLo"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Teď je to vážné!"
+
+msgid "STSTR_NCON"
+msgstr "Režim kybersekače ZAP"
+
+msgid "STSTR_NCOFF"
+msgstr "Režim kybersekače VYP"
+
+msgid "STSTR_NOMUS"
+msgstr "Nemožný výběr"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "Zesil to!"
+
+msgid "STSTR_KFAADDED"
+msgstr "Inicializuji režim Twitch and Kill"
+
+msgid "STSTR_FAADDED"
+msgstr "Budiž, Hackeře."
+
+msgid "STSTR_DQDON"
+msgstr "Režim kybermoci ZAP"
+
+msgid "STSTR_DQDOFF"
+msgstr "Režim kybermoci VYP"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Sledování ZAP"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Sledování VYP"
+
+msgid "DOSY"
+msgstr "- stiskni Y pro útěk! -"
+
+msgid "ENDGAME"
+msgstr ""
+"Jsi blb@[adj_cs] nebo jen naveden@[adj_cs]?\n"
+"Tak? Jo nebo ne?"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Jseš si jist@[adj_cs]? Takový\n"
+"skill nemáš, hackeře!"
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"Rychle uložit přes tvá data s názvem\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Přeješ si rychle načíst data s názvem\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Stiskni Y nebo N."
+
+msgid "CC_THUG"
+msgstr "Pobuda"
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr "Bzučák"
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr "Fág"
+
+msgid "CC_MONSTRUCT"
+msgstr "Monstrukce"
+
+msgid "CC_MECH"
+msgstr "Mechamaniak"
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr "Bodlák"
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr "Nestřílej, prosím!"
+
+msgid "SKILL_EASY"
+msgstr "Potřebuju zdraví!"
+
+msgid "SKILL_NORMAL"
+msgstr "Rozsekejme je na kusy!"
+
+msgid "SKILL_HARD"
+msgstr "Jsem nesmrtelný!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Šílenství!"

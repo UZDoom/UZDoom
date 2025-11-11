@@ -1,0 +1,7959 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: eo\n"
+
+msgid "TXT_D1E1"
+msgstr "Ĝiskole inter mortintoj"
+
+msgid "TXT_D1E2"
+msgstr "La Infer-bordoj"
+
+msgid "TXT_D1E3"
+msgstr ""
+
+# The episode and levels' names in E4 are taken from the Bible.
+# 
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "Kiam konsumiĝos via karno"
+
+msgid "TXT_D2E1"
+msgstr "Infero sur la Tero"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr "Nenia ripozo por la vivantoj"
+
+msgid "TXT_PLUT_EP"
+msgstr "La eksperimento de Plutonia"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Mavalucio"
+
+msgid "TXT_CHEX_EP"
+msgstr "Aventuro de Chex"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangaro"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Nuklea centralo"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Toksin-rafinejo"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Komando kaj kontrolo"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratorio sur Fobo"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Procesorad-centralo"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Komputila stacio"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Nenormalaĵo sur Fobo"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Militbazo"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Kloako"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Nenormalaĵo sur Dejmo"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Magazeno"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Rafinejo"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Laboratorio sur Dejmo"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Komandcentro"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Koridoroj de la damnitoj"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Nasko-kuvegoj"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Turo de Babelo"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Fortreso de mistero"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Infera ĉefturo"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Ŝlimejo de malespero"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonio"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Domo de doloro"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Malsankta katedralo"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Monto de Erebo"
+
+msgid "HUSTR_E3M7"
+msgstr ""
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Danteca"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Nestego"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Ŝeolo malsupre"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Ekstrema malamo"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Apartigi la malbonulojn"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Malkvieta malbono"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Ili pentos"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Pri Vi malice"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Kaj Hades sekvis"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Al la kruelulo"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Timo"
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr "Nivelo 1: Enirejo"
+
+msgid "HUSTR_2"
+msgstr "Nivelo 2: Subteraj vojoj"
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr "Nivelo 3: La vergokuro"
+
+msgid "HUSTR_4"
+msgstr "Nivelo 4: La fokuso"
+
+msgid "HUSTR_5"
+msgstr "Nivelo 5: La rubtuneloj"
+
+msgid "HUSTR_6"
+msgstr "Nivelo 6: La dispistilo"
+
+msgid "HUSTR_7"
+msgstr "Nivelo 7: Morte simpla"
+
+msgid "HUSTR_8"
+msgstr "Nivelo 8: Trompoj kaj embuskoj"
+
+msgid "HUSTR_9"
+msgstr "Nivelo 9: La fosaĵo"
+
+msgid "HUSTR_10"
+msgstr "Nivelo 10: Refuelbazo"
+
+# Alternative title:
+# Circle of Death 
+msgid "HUSTR_11"
+msgstr "Nivelo 11: Morta cirklo"
+
+msgid "HUSTR_12"
+msgstr "Nivelo 12: La fabriko"
+
+msgid "HUSTR_13"
+msgstr "Nivelo 13: Urbocentro"
+
+msgid "HUSTR_14"
+msgstr "Nivelo 14: La Internaj Kavernoj"
+
+msgid "HUSTR_15"
+msgstr "Nivelo 15: Industria Zono"
+
+msgid "HUSTR_16"
+msgstr "Nivelo 16: Antaŭurboj"
+
+msgid "HUSTR_17"
+msgstr "Nivelo 17: Loĝejoj"
+
+msgid "HUSTR_18"
+msgstr "Nivelo 18: La Korto"
+
+msgid "HUSTR_19"
+msgstr "Nivelo 19: La Citadelo"
+
+msgid "HUSTR_20"
+msgstr "Nivelo 20: Kaptis Vin!"
+
+msgid "HUSTR_21"
+msgstr "Nivelo 21: Nirvano"
+
+msgid "HUSTR_22"
+msgstr "Nivelo 22: La Katakombo"
+
+msgid "HUSTR_23"
+msgstr "Nivelo 23: Bareloj de Amuzo"
+
+msgid "HUSTR_24"
+msgstr "Nivelo 24: La Fendego"
+
+msgid "HUSTR_25"
+msgstr "Nivelo 25: Sangfaloj"
+
+msgid "HUSTR_26"
+msgstr "Nivelo 26: La Forlasitaj Minoj"
+
+msgid "HUSTR_27"
+msgstr "Nivelo 27: Monstro-Domo"
+
+msgid "HUSTR_28"
+msgstr "Nivelo 28: La Animo-Mondo"
+
+msgid "HUSTR_29"
+msgstr "Nivelo 29: La Viva Fino"
+
+msgid "HUSTR_30"
+msgstr "Nivelo 30: Ikono de Peko"
+
+msgid "HUSTR_31"
+msgstr "Nivelo 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Nivelo 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Nivelo 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Nivelo 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Nivelo 33: Perfido"
+
+msgid "NHUSTR_1"
+msgstr "Nivelo 1: La Tera Bazo"
+
+msgid "NHUSTR_2"
+msgstr "Nivelo 2: La Doloro-Laboratorio"
+
+msgid "NHUSTR_3"
+msgstr "Nivelo 3: Kanjono de La Mortintoj"
+
+msgid "NHUSTR_4"
+msgstr "Nivelo 4: Monto de Infero"
+
+msgid "NHUSTR_5"
+msgstr "Nivelo 5: Vivisekcio"
+
+msgid "NHUSTR_6"
+msgstr "Nivelo 6: Brulego de Sango"
+
+msgid "NHUSTR_7"
+msgstr "Nivelo 7: Festeno de Barono"
+
+msgid "NHUSTR_8"
+msgstr "Nivelo 8: Tombo de Malbonvolo"
+
+msgid "NHUSTR_9"
+msgstr "Nivelo 9: Marŝo de La Demonoj"
+
+msgid "PHUSTR_1"
+msgstr "Nivelo 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Nivelo 2: Puto de animoj"
+
+msgid "PHUSTR_3"
+msgstr "Nivelo 3: Azteko"
+
+msgid "PHUSTR_4"
+msgstr "Nivelo 4: Enkaĝigita"
+
+msgid "PHUSTR_5"
+msgstr "Nivelo 5: Fantoma urbeto"
+
+msgid "PHUSTR_6"
+msgstr "Nivelo 6: Kaŝejo de Barono"
+
+msgid "PHUSTR_7"
+msgstr "Nivelo 7: Kaptkorto"
+
+msgid "PHUSTR_8"
+msgstr "Nivelo 8: Regno"
+
+msgid "PHUSTR_9"
+msgstr "Nivelo 9: Buĉejo"
+
+msgid "PHUSTR_10"
+msgstr "Nivelo 10: Buĉado"
+
+msgid "PHUSTR_11"
+msgstr "Nivelo 11: Ĉasata"
+
+msgid "PHUSTR_12"
+msgstr "Nivelo 12: Rapido"
+
+msgid "PHUSTR_13"
+msgstr "Nivelo 13: La kripto"
+
+msgid "PHUSTR_14"
+msgstr "Nivelo 14: Genezo"
+
+msgid "PHUSTR_15"
+msgstr "Nivelo 15: La krepusko"
+
+msgid "PHUSTR_16"
+msgstr "Nivelo 16: La Aŭguro"
+
+msgid "PHUSTR_17"
+msgstr "Nivelo 17: Konstruaĵaro"
+
+msgid "PHUSTR_18"
+msgstr "Nivelo 18: Neŭrosfero"
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr "Nivelo 19: Mal-BN"
+
+msgid "PHUSTR_20"
+msgstr "Nivelo 20: La morta regno"
+
+msgid "PHUSTR_21"
+msgstr "Nivelo 21: Mortigisto"
+
+msgid "PHUSTR_22"
+msgstr "Nivelo 22: Neebla tasko"
+
+msgid "PHUSTR_23"
+msgstr "Nivelo 23: Tombŝtono"
+
+msgid "PHUSTR_24"
+msgstr "Nivelo 24: La Fina Limo"
+
+msgid "PHUSTR_25"
+msgstr "Nivelo 25: La Idolejo de Mallumo"
+
+msgid "PHUSTR_26"
+msgstr "Nivelo 26: Bunkro"
+
+msgid "PHUSTR_27"
+msgstr "Nivelo 27: Antikristo"
+
+msgid "PHUSTR_28"
+msgstr "Nivelo 28: La Kanalo"
+
+msgid "PHUSTR_29"
+msgstr "Nivelo 29: Vojaĝo de Sonoj"
+
+msgid "PHUSTR_30"
+msgstr "Nivelo 30: La Pordego de Inferno"
+
+msgid "PHUSTR_31"
+msgstr "Nivelo 31: Cibernesto"
+
+msgid "PHUSTR_32"
+msgstr "Nivelo 32: Iru al ĝi!"
+
+msgid "THUSTR_1"
+msgstr "Nivelo 1: Sistema Kontrolo"
+
+msgid "THUSTR_2"
+msgstr "Nivelo 2: Homo-Kradrostado"
+
+msgid "THUSTR_3"
+msgstr "Nivelo 3: Energia Kontrolo"
+
+msgid "THUSTR_4"
+msgstr "Nivelo 4: Vermtruo"
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr "Nivelo 5: Pendigejo"
+
+msgid "THUSTR_6"
+msgstr "Nivelo 6: Ĉasosezono"
+
+msgid "THUSTR_7"
+msgstr "Nivelo 7: Malliberejo"
+
+msgid "THUSTR_8"
+msgstr "Nivelo 8: Metalo"
+
+msgid "THUSTR_9"
+msgstr "Nivelo 9: Fuorto"
+
+msgid "THUSTR_10"
+msgstr "Nivelo 10: Elaĉeto"
+
+msgid "THUSTR_11"
+msgstr "Nivelo 11: Stokejo"
+
+msgid "THUSTR_12"
+msgstr "Nivelo 12: Kratero"
+
+msgid "THUSTR_13"
+msgstr "Nivelo 13: Nukleaĵo-Traktejo"
+
+msgid "THUSTR_14"
+msgstr "Nivelo 14: Ŝtalejo"
+
+msgid "THUSTR_15"
+msgstr "Nivelo 15: Senvivzono"
+
+msgid "THUSTR_16"
+msgstr "Nivelo 16: Plejsubejo"
+
+msgid "THUSTR_17"
+msgstr "Nivelo 17: Traktadareo"
+
+msgid "THUSTR_18"
+msgstr "Nivelo 18: Muelejo"
+
+msgid "THUSTR_19"
+msgstr "Nivelo 19: Ekspedo/Revivado"
+
+msgid "THUSTR_20"
+msgstr "Nivelo 20: Centra Eskpedado"
+
+msgid "THUSTR_21"
+msgstr "Nivelo 21: Administracia Centro"
+
+msgid "THUSTR_22"
+msgstr "Nivelo 22: Habitato"
+
+msgid "THUSTR_23"
+msgstr "Nivelo 23: Luna Mino-Projekto"
+
+msgid "THUSTR_24"
+msgstr "Nivelo 24: Ŝtonejo"
+
+msgid "THUSTR_25"
+msgstr "Nivelo 25: Nestego de Barono"
+
+msgid "THUSTR_26"
+msgstr "Nivelo 26: Balistikso"
+
+msgid "THUSTR_27"
+msgstr "Nivelo 27: Monto de Doloro"
+
+msgid "THUSTR_28"
+msgstr "Nivelo 28: Diable"
+
+msgid "THUSTR_29"
+msgstr "Nivelo 29: Rivero de Stikso"
+
+msgid "THUSTR_30"
+msgstr "Nivelo 30: Fina Voko"
+
+msgid "THUSTR_31"
+msgstr "Nivelo 31: Faraono"
+
+msgid "THUSTR_32"
+msgstr "Nivelo 32: Karibio"
+
+msgid "HHUSTR_E1M1"
+msgstr "La Havenoj"
+
+msgid "HHUSTR_E1M2"
+msgstr "La Malliberejoj"
+
+msgid "HHUSTR_E1M3"
+msgstr "La Pordegejo"
+
+msgid "HHUSTR_E1M4"
+msgstr "La Gardturo"
+
+msgid "HHUSTR_E1M5"
+msgstr "La Citadelo"
+
+msgid "HHUSTR_E1M6"
+msgstr "La Katedralo"
+
+msgid "HHUSTR_E1M7"
+msgstr "La Kriptoj"
+
+msgid "HHUSTR_E1M8"
+msgstr "Faŭko de Infero"
+
+msgid "HHUSTR_E1M9"
+msgstr "La Tombejo"
+
+msgid "HHUSTR_E2M1"
+msgstr "La Kratero"
+
+msgid "HHUSTR_E2M2"
+msgstr "La Lafo-Fosaĵo"
+
+msgid "HHUSTR_E2M3"
+msgstr "La Rivero de Fajro"
+
+msgid "HHUSTR_E2M4"
+msgstr "La Glacigroto"
+
+msgid "HHUSTR_E2M5"
+msgstr "La Katakomboj"
+
+msgid "HHUSTR_E2M6"
+msgstr "La Labirinto"
+
+msgid "HHUSTR_E2M7"
+msgstr "La Granda Halo"
+
+msgid "HHUSTR_E2M8"
+msgstr "La Portaloj de Ĥaoso"
+
+msgid "HHUSTR_E2M9"
+msgstr "La Glaciejo"
+
+msgid "HHUSTR_E3M1"
+msgstr "La Stokejo"
+
+msgid "HHUSTR_E3M2"
+msgstr "La Kloako"
+
+msgid "HHUSTR_E3M3"
+msgstr "La Kunfluiĝo"
+
+msgid "HHUSTR_E3M4"
+msgstr "La Lazurfortikaĵo"
+
+msgid "HHUSTR_E3M5"
+msgstr "La Nestego de Ofidia"
+
+msgid "HHUSTR_E3M6"
+msgstr "La Koridoroj de Timo"
+
+msgid "HHUSTR_E3M7"
+msgstr "La Fendego"
+
+msgid "HHUSTR_E3M8"
+msgstr "Ĉefturo de Desparilo"
+
+msgid "HHUSTR_E3M9"
+msgstr "La Akvigilo"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalko"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blokhaŭso"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ĥorĉirkaŭirejo"
+
+msgid "HHUSTR_E4M4"
+msgstr "Tombo"
+
+msgid "HHUSTR_E4M5"
+msgstr "Granda Ŝtuparo"
+
+msgid "HHUSTR_E4M6"
+msgstr "Haloj de la Apostato"
+
+msgid "HHUSTR_E4M7"
+msgstr "Muregoj de Pereo"
+
+msgid "HHUSTR_E4M8"
+msgstr "Frakasita Ponto"
+
+msgid "HHUSTR_E4M9"
+msgstr "Maŭzoleo"
+
+msgid "HHUSTR_E5M1"
+msgstr "Klifoj de Okro"
+
+msgid "HHUSTR_E5M2"
+msgstr "Rapidfluoj"
+
+msgid "HHUSTR_E5M3"
+msgstr "Kajo"
+
+msgid "HHUSTR_E5M4"
+msgstr "Korto"
+
+msgid "HHUSTR_E5M5"
+msgstr "Akvotjr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Kolonaro"
+
+msgid "HHUSTR_E5M7"
+msgstr "Haladza Domego"
+
+msgid "HHUSTR_E5M8"
+msgstr "Kampo de Juĝo"
+
+msgid "HHUSTR_E5M9"
+msgstr "Fadenaro de D'Sparil"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "AREO 1: Sanktejo"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "AREO 2: Urbeto"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "AREO 3: Front-Bazo"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "AREO 4: Elektrocentralo"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "AREO 5: Malliberejo"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "AREO 6: Kloako"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "AREO 7: Kastelo"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "AREO 8: Juĝejo"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "AREO 9: Kastelo: Fortikaĵo de Programisto"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "AREO 10: Nova Frontbazo"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "AREO 11: Limlando"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "AREO 12: La templo de la Orakolo"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "AREO 13: Katakombo"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "AREO 14: Minejo"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "AREO 15: Fortreso: Administrejo"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "AREO 16: Fortreso: Turo de la Episkopo"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "AREO 17: Fortreso: Ĉirkaŭmurigita korto"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "AREO 18: Fortreso: Magazeno"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "AREO 19: Fortreso: Sekurkomplekso"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "AREO 20: Fabriko: Ricevejo"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "AREO 21: Fabriko: Manufakturo"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "AREO 22: Fabriko: Forĝejo"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "AREO 23: Komunumo de La Ordeno"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "AREO 24: Fabriko: Konvert-kapelo"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "AREO: 25: Katakombo: Ruina templo"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "AREO 26: Provejo"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "AREO 27: La laboratorio"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "AREO 28: Aliplaneda ŝipo"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "AREO 29: Nestego de Estulo"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "AREO 30: Forlasita Front-Bazo"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "AREO 31: Trejnejo"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "AREO 1: Sanktejo"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "AREO 2: Urbeto"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "AREO 3: Movad-bazo"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "AREO 35: Fabriko: Produktejo"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "AREO 36: Batalo en la kastelo"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "AREO 37: Tereno de mortigado"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "AREO 38: Orda kaoso"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Solenejo de Separado"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Sep Portaloj"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Gardanto de Glacio"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Gardanto de Fajro"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Gardanto de Ŝtalo"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Luma Krisolo"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Ombro-Arbareto"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Malluma Marĉo"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Kavernoj de Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Senvivejo"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Sankta Bosketo"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Kolonejo"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminario de Ĉefherezulo"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Drakkapelo"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Grifkapelo"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Mortvento-Kapelo"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Horto de Lamentoj"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Silenta Manĝejo"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Lupkapelo"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Forlasita Posteno"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Kastelo de Funebro"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Pendigilo"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Efluvo"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Karceroj"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Dezerta Ĝardeno"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropolo"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Tombo de Zedek"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Tombo de Menelkir"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Tombo de Traductus"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivario"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Malluma Krisolo"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Ruina vilaĝo"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Pesto"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Olekuvo"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakombo"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Badlandoj"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Pteridejo"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Kremaciejo"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Pordego de Ĝendarmo"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Trezorejo"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Foirejo"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Provo Per Aflikto"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Armilejo"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Navo"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kapelo"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Buĉejo"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Ombra Gardisto"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloako"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Fuorto el Glacio"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Ombra Citadelo"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Vojo"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Sub kaj Supre"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Mortnebulo"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Kastelo de Doloro"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Fekaĵputo"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "La Rozo"
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"Post kiam vi elpurigis la bazon\n"
+"en Fobo je tiuj maliculoj, vi logike\n"
+"venkus, ĉu? Ĉu!? Kie estas via granda\n"
+"rekompenco kaj bileto hejmen? Kio diable\n"
+"okazis? Ĉi tio ne devus finiĝi ĉi tiel!\n"
+"\n"
+"Odoras putran karnon, sed ĝi aspektas\n"
+"kiel la perdita bazo en Dejmo. Ŝajnas,\n"
+"ke vi estas kaptita ĉe la Infer-bordoj:\n"
+"por espaki oni transiru la Inferon.\n"
+"\n"
+"Por daŭrigi la DOOM-sperton, ludu\n"
+"la epizodon «La Infer-bordoj» kaj\n"
+"ĝian bonegan sekvon: «Inferno»!"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+"Vi sukcesis! La malbelega Ciberdemono,\n"
+"kiu regis la perditan lunbazon en Dejmo,\n"
+"estis mortigita kaj vi triumfis!\n"
+"Sed... Kie vi estas? Vi grimpas al la\n"
+"rando de la luno kaj rigardas malsupren\n"
+"por vidi la malbonegan veron:\n"
+"\n"
+"Dejmo ŝvebas super la Infero mem!\n"
+"Vi neniam sciiĝis pri eskapinto el la\n"
+"Infero, sed nun tiuj aĉuloj bedaŭros,\n"
+"ke ili ja sciiĝis pri vi! Vi surteriĝas\n"
+"per ŝnuro sur la supraĵon de la Infero.\n"
+"\n"
+"Nun ek al la fina ĉapitro de\n"
+"DOOM: «Inferno»!"
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+"La abomena aranedemono, kiu kondukis\n"
+"la invadon de la lunbazoj kaj kaŭzis tiom\n"
+"da morto, havis ĝian pugon piedbatita\n"
+"por ĉiam.\n"
+"\n"
+"Kaŝita pordo malfermiĝas kaj vi eniras.\n"
+"Vi pruvis, ke vi estas tro forta por\n"
+"Infero deteni vin, kaj nun Infero fine\n"
+"ludas honeste -- ĉar vi eliras el la pordo\n"
+"por vidi la verdajn kampojn de la Tero!\n"
+"Hejme fine.\n"
+"\n"
+"Vi scivolas, kio okazis sur la Tero dum vi\n"
+"bataladis malbonon deĉenigitan. Bonas,\n"
+"ke neniu Inferido povintus veni tra la\n"
+"pordo kun vi..."
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+"La elektraraneo-mastro verŝajne sendis\n"
+"siajn legiojn de inferidoj antaŭ via fina\n"
+"konflikto kun tiu terura bestaĉo el\n"
+"Infero. Sed vi paŝis antaŭen kaj venigis\n"
+"eternan damnon kaj suferadon sur la\n"
+"hordon, kiel vera heroo farus, kiam fronte\n"
+"al io tiel malbona.\n"
+"\n"
+"Cetere, iu devis pagi pro tio, kio okazis al\n"
+"Daisy, via dombesta kuniklo.\n"
+"\n"
+"Sed nun, vi vidas, sternite antaŭ vi, pli\n"
+"eblan doloron kaj buĉadon, dum popolo\n"
+"de demonoj kuras amoke en niaj urboj.\n"
+"\n"
+"Sekva haltejo: Infero Sur La Tero!"
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+"Vi eniris profunde en la infestitan kosmo-\n"
+"havenon. Sed io estas misa. La monstroj\n"
+"alportis sian propran realon kun ili, kaj\n"
+"la teknologio de la kosmo-haveno estas\n"
+"subfosata de ilia ĉeesto.\n"
+"\n"
+"Antaŭe, vi vidas antaŭpostenon de infero,\n"
+"fortika regiono. Se vi povus iri preter ĝi,\n"
+"vi povus penetri en la hantitan koron de\n"
+"la kosmo-bazo kaj trovi la kontrolŝaltilon,\n"
+"kiu ostaĝigas la loĝantaron de la Tero."
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+"Vi gajnis! Via venko ebligis al la homaro\n"
+"evakui la Teron kaj eskapi el la teruraĵo.\n"
+"Nun vi estas la sola homo sur la supraĵo\n"
+"de la Tero. Kanibalaj mutaciuloj, \n"
+"karnovoraj eksterteranoj, kaj malbonaj\n"
+"fantomoj estas viaj nur najbaroj.\n"
+"Vi sidas kaj atendas morton, kontenta,\n"
+"ke vi savis vian specion.\n"
+"\n"
+"Sed tiam, la Tero-Kontrolcentro\n"
+"transsendas mesaĝon el kosmo: \"Sensiloj\n"
+"trovis la fonton de la ekstertera invado.\n"
+"Se vi irus tien, vi eble povas bari ilian\n"
+"eniron. La ekstertera bazo estas en la\n"
+"koro de via propra hejmurbo, ne fora\n"
+"de la kosmo-haveno.\"\n"
+"Malrapide kaj dolore, vi leviĝas kaj\n"
+"revenas al la batalo."
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+"Vi estas ĉe la malvirta koro de la urbo,\n"
+"ĉirkaŭita de la kadavroj de viaj malamikoj.\n"
+"Vi vidas nenian manieron por detrui la\n"
+"enirejon de la estaĵoj ĉe tiu ĉi flanko, do vi\n"
+"kunpremas la dentojn kaj plonĝas tra ĝi.\n"
+"\n"
+"Devas esti maniero por fermi ĝin\n"
+"ĉe la alia flanko. Kial vi zorgu, ĉu vi\n"
+"bezonas iri tra Infero por atingi ĝin?"
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+"La horora vizaĝo de la plej granda\n"
+"demono, kiun vi iam ajn vidis, pecetiĝas\n"
+"antaŭ vi, post vi pumpis la raketojn\n"
+"en lian nudan cerbon. La monstro\n"
+"ŝrumpas kaj mortas, ĝiaj draŝantaj\n"
+"membroj ruinigante nenombreblajn\n"
+"kilometrojn de la supraĵo de Infero.\n"
+"\n"
+"Vi sukcesis. La invado estas finita.\n"
+"La Tero estas savita. Infero estas ruino.\n"
+"Vi scivolas, kien malbonuloj nun iros,\n"
+"kiam ili mortos. Forviŝante la ŝviton de \n"
+"la frunto, vi komencas la longan vojaĝon\n"
+"hejmen. Rekonstrui la Teron devus esti \n"
+"multe pli amuze ol ruinigi ĝin."
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+"Gratulon! Vi trovis la sekretan nivelon!\n"
+"Ŝajnas, ke ĝi estis konstruita de homoj\n"
+"anstataŭ demonoj. Vi scivolas, kiuj estos\n"
+"la loĝantoj de ĉi tiu angulo de Infero."
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+"Gratulon! Vi trovis la super-sekretan\n"
+"nivelon! Prefere kuru tra ĉi tiu!"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+"Vi ĝojaĉas super la vaporanta kadavro de La\n"
+"Gardinto. Per ĝia morto, vi eltiris La Akcelilon\n"
+"el la fetoraj krifoj de Infero. Vi ripozas kaj \n"
+"ĉirkaŭrigardas la ĉambron. Diable! Devis esti\n"
+"almenaŭ unu funkcia prototipo, sed vi ne\n"
+"vidas ĝin. La demonoj verŝajne prenis ĝin.\n"
+"\n"
+"Vi bezonas trovi la prototipon, alie viaj\n"
+"baraktoj estos vanitaj. Daŭru iri, daŭru\n"
+"batali, daŭru mortigi.\n"
+"Ho jes, ankaŭ daŭru vivi."
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+"Eĉ la mortiga labirinto de Ĉef-Fiuloj ne\n"
+"povis haltigi vin, kaj vi iris al la prototipa\n"
+"Akcelilo, kiu estas rapide kaj neripareble\n"
+"malaktivigita.\n"
+"\n"
+"Vi faras bone tian ion."
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+"Vi bategis kaj disbatis vian vojon en la koron\n"
+"de la diablujo. Tempas por Trovado-Detruado-\n"
+"Mision, celante La Cerberon, kies aĉaj idoj\n"
+"dispeliĝas al La Tero. Jes, li estas mava, sed\n"
+"vi konas iun pli mavan!\n"
+"\n"
+"Grimacante malice, vi kontrolas vian ilaron,\n"
+"kaj pretiĝas doni al la bastardo iom da Infero\n"
+"de via farado mem!"
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+"La mava vizaĝo de La Cerbero estas\n"
+"ŝprucetiga ĉirkaŭe. Dum ĝia disŝirita\n"
+"kadavro disfalas, inversa pasejo formiĝas\n"
+"kaj sorbas la nemultajn ceterajn demonojn.\n"
+"Vi finis. Infero rekomencis pisti mavajn\n"
+"mortintojn, anstataŭ bonajn vivulojn.\n"
+"Memoru peti viajn genepojn meti\n"
+"raketlanĉilon en vian ĉerkon. Sed vi iros al\n"
+"Infero, kiam vi mortos, vi bezonos ĝin\n"
+"por kelka fina purigado..."
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+"Vi trovis la duan plej malfacilan nivelon, kiun\n"
+"ni havas. Mi esperas, ke vi havas konservitan\n"
+"ludon antaŭ unu aŭ du niveloj. Sed ne, pretu\n"
+"morti multe. Nur por majstraj soldatoj."
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+"Mi vetis, ke vi scivolis, kiu JA estas la plej\n"
+"malfacila nivelo, kiun ni pretigis por vi.\n"
+"Nun vi scias. Neniu eskapas viva."
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"Vi batalis vojante tra la infestitaj\n"
+"eksperimentaj laboratorioj. Ŝajnas, ke la UAC\n"
+"denove glutis ĝin malsupren. Kun iliaj multaj\n"
+"maldungadoj, certe malfacilas aĉeti por\n"
+"kompatinda UAC korporacian sanasekuron\n"
+"nuntempe...\n"
+"\n"
+"Antaŭe situas la militkomplekso, nun\n"
+"svarmante kun malsanaj abomenoj atendantaj\n"
+"mordi vin. Per iomete da fortuno, la komplekso\n"
+"ankoraŭ havas kelkan militan artilerion\n"
+"ĉirkaŭkuŝantan."
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"Vi aŭdas la grincadon de amasa maŝinaro\n"
+"antaŭe. Vi certe esperas, ke ili ne fabrikas\n"
+"novajn inferidojn, sed vi pretas alezi tutan\n"
+"brutaron, se vi devas. Ili eble planas\n"
+"sangfestenon, sed vi sentas vin proksimume\n"
+"aĉa, kiel du mil frenezuloj pakitaj en unu\n"
+"rabian mortiganton.\n"
+"\n"
+"Vi ne planas fali facile."
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"La vidaĵo malfermante antaŭe aspektas tre \n"
+"diable familiara. Ĝi ankaŭ odoras familiare,\n"
+"kiel fritita fekon. Vi ne ŝatis tiun placon\n"
+"antaŭe, kaj vi diable certe ne planos nun\n"
+"ŝati ĝin. Ju pli vi cerbumas, des pli vi fariĝas\n"
+"freneza. Levante vian pafilon, malica\n"
+"grimaco gutetas sur vian vizaĝon.\n"
+"Tempas por eltiri la rubon."
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"Subite, ĉio silentas, de unu horizonto al\n"
+"la alia. La agonianta eĥo de Infero\n"
+"malaperas, la inkub-ĉielo fariĝas blua,\n"
+"la amaso da monstro-kadavroj komencas\n"
+"vaporiĝi kune kun la mava odoro, kiu\n"
+"plenigis la aeron. Ho, eble vi sukcesis.\n"
+"Ĉu vi vere gajnis?\n"
+"\n"
+"Io vibrosonas malproksime. Blua lumo\n"
+"komencas brili en la ruinigita kranio de la\n"
+"demonsputisto.\n"
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"Nun kio? Aspektas tute malsame, iom\n"
+"kiel la loĝejo de Reĝo Tut. Nu, kio ajn\n"
+"estas ĉi tie ne povas esti pli malbona\n"
+"ol kutime, ĉu ne? Aŭ eble plibonas\n"
+"lasi dormantajn diojn kuŝi..."
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"Tempas ferio. Vi kreviĝis la internaĵoj\n"
+"de Infero, kaj ve, vi estas preta paŭzi.\n"
+"Vi murmuras al vi mem, ke iu alia eble\n"
+"pugbatos Inferon venontfoje. Antaŭe kuŝas\n"
+"kvieta urbeto, kun trankvila flua akvo, kuriozaj\n"
+"konstruaĵoj, kaj supozeble, neniuj inferidoj.\n"
+"\n"
+"Dum vi eliras el la veturilo, vi aŭdas la \n"
+"laŭtan paŝon de fera ŝuo de ciberdemono."
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+"Problemoj estis kreskinta denove en via ŝatata\n"
+"feriejo... Infero. Iu ciberdemono-huligano\n"
+"pensis, ke li povis farigi Inferon en\n"
+"personan amuzparkon, kaj farigi la Teron\n"
+"la biletejo.\n"
+"\n"
+"Nu, tiu duon-robota groteskulo ne sciis,\n"
+"kiu estis venanta al la foiro. Estas nenio\n"
+"pli bona ol pafejo plena de inferidoj por\n"
+"fari la sangon pumpata...\n"
+"\n"
+"Nun la muroj de la labirinto de la demono\n"
+"resonas kun la sono de liaj metalaj membroj\n"
+"trafantaj la plankon. Lia mortoĝemo gluglas\n"
+"tra la kaĉo, kiun vi faris el lia vizaĝo.\n"
+"\n"
+"Ĉi tiu atrakcio estas fermita."
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+"Per la detruo de la ferliĉoj kaj iliaj\n"
+"servistoj, la revivantoj ceteraj estas\n"
+"forigaj el ĉi tiu ebeno de ekzisto.\n"
+"\n"
+"Tamen, tiuj estuloj devis veni el ie,\n"
+"kaj vi suspektas, ke la pordego fajra\n"
+"de la faŭko de infero malfermas en\n"
+"ilian dimension hejman.\n"
+"\n"
+"Por certigi, ke pli revivantoj (aŭ eĉ pli\n"
+"malbonaj aĵoj) ne travenos, vi devos\n"
+"fermi la faŭkon de infero ĉe la flanko alia.\n"
+"Kompreneble, tio signifas, ke vi eble estos\n"
+"kaptita en mondo tre malamika, sed neniu\n"
+"iam diris, ke esti herezulo estis facila!\n"
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+"La bategtaŭroj potencaj montriĝis\n"
+"tro malfortaj kontraŭ vi, kaj dum iliaj\n"
+"kadavroj vaporantaj falas sur la teron,\n"
+"vi sentas kontenton malafablan,\n"
+"ke ili estas detruitaj.\n"
+"\n"
+"La pordegoj, kiujn ili gardis, malfermiĝas,\n"
+"rivelante tion, kion espereble estas la vojo\n"
+"hejmen, sed dum vi trapaŝas, ridado\n"
+"mokanta resonas en viaj oreloj.\n"
+"\n"
+"Ĉu forto alia regis la bategtaŭrojn?\n"
+"Ĉu estas eble eĉ pli estuloj hororaj tra\n"
+"ĉi tiu pordego? La balao de kupolo kristala\n"
+"supre, kie la ĉielo devas esti, certe ne\n"
+"estas antaŭsigno bona..."
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+"La morto de D'Sparil malfiksis la ligilojn\n"
+"sorĉajn, kiuj tenis lian estulojn sur tion\n"
+"ĉi ebeno, dum iliaj kriegoj mortaj sonas\n"
+"super liaj kriegoj propraj de agonio.\n"
+"\n"
+"Via ĵuro de venĝo verigita,\n"
+"vi eniras la portalon al vian mondon\n"
+"propran nur momentojn antaŭ la\n"
+"kupolo disfrakasiĝas en milionojn\n"
+"da pecoj\n"
+"\n"
+"Sed se la povo de D'Sparil estas eterne\n"
+"detruita, kial vi ne sentas sekura? Ĉu\n"
+"estis pro la fina kriego tuj antaŭ lia\n"
+"morto — tiu, kiu sonis kiel malbeno?\n"
+"Aŭ alvoko? Vi vere ne povas certi,\n"
+"sed ĝi eble estis nur kriego.\n"
+"\n"
+"Tamen, kio pri la aliaj Serpentrajdistoj?"
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+"Vi pensis, ke vi revenus al via mondo\n"
+"propra post D'Sparil mortis, sed lia fina\n"
+"ago forpelis vin al lia ebeno. Ĉi tie vi\n"
+"eniris la restaĵojn frakasitajn el landoj\n"
+"konkeritaj de D'Sparil. Vi venkis la finajn\n"
+"gardistojn de ĉi tiuj landoj, sed nun vi\n"
+"staras antaŭ la pordegoj inter vi kaj la\n"
+"fuorto de D'Sparil. Ĝis tiu ĉi momento,\n"
+"vi ne dubis, ke vi povus kontraŭi ĉion ajn,\n"
+"kioj vi eble trovos, sed preter ĉi tiu\n"
+"pordego estas la koro de mavo mem, \n"
+"kio invadis vian mondon. D'Sparil estas\n"
+"mortinta, sed la truo, kie li naskiĝis,\n"
+"restas. Nun vi devas eniri tiun truon,\n"
+"esperante trovi elirejon. Kaj ie, en la plej\n"
+"malhela angulo de la posedaĵo de D'Sparil,\n"
+"liaj gardistoj personaj atendas vian\n"
+"alvenon..."
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+"Dum la bategtaŭro fina blekas lian\n"
+"agonion, vi konscias, ke vi neniam\n"
+"estis tiom prokisme de via detruo\n"
+"propra. Ne eĉ la batalo kun D'Sparil\n"
+"kaj liaj disĉiploj estis tiom afliktaj.\n"
+"Malgaje, vi rigardas la pordegon,\n"
+"kiu malfermiĝas antaŭ vi, scivolante\n"
+"ĉu ĝi gvidas hejmen, aŭ ĉu ĝi\n"
+"gvidas al iu teruro neprirevita.\n"
+"Vi troviĝas vin scivolanta ĉu vi havas\n"
+"forton por daŭri plu, se nenio krom\n"
+"morto kaj doloro atendas vin. Sed\n"
+"kion alian vi povas fari, se la volo batali\n"
+"estas for? Ĉu vi povas devigi vin daŭri\n"
+"fronte al tia malespero? Ĉu vi havas\n"
+"la kuraĝon? Vi trovas, fine, ke vi\n"
+"ne havas la povo rezigni sen batalo.\n"
+"Kun okuloj malfermegitaj, vi iras\n"
+"por renkonti vian destinon."
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Pasinte la sep portalojn, kiuj sigelis\n"
+"ĉi tiun regionon, vi staras antaŭ vasta\n"
+"regno de severa sovaĝejo. Fajro, glacio,\n"
+"kaj ŝtelo provis vin. Tamen, pli grandaj\n"
+"provoj restas antaŭe. La densa ĥaoso\n"
+"de la arbaro nepre kaŝas kontraŭajn\n"
+"okulojn, sed tio, kio situas antaŭe,\n"
+"estos pli malbona.\n"
+"\n"
+"Senvivaj dezertoj, humidaj marĉoj,\n"
+"kaj mucidaj kavernoj baras vian vojon,\n"
+"sed vi devas ne lasi ĉion ajn teni vin for\n"
+"de via destino, eĉ se vi deziros, ke ili\n"
+"farus tion.\n"
+"\n"
+"Kaj pretere, flagrante malproksime,\n"
+"la movadantaj muroj de la kolonejo\n"
+"ŝajne mokas ĉiom da viaj klopodoj."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Via menso ankoraŭ ŝpinante pro viaj\n"
+"renkontoj en la kolonejo, vi ŝanceliĝas\n"
+"al tio, kion vi esperas esti eliro.\n"
+"Ĉio ŝajnas movi pli kaj pli rapide,\n"
+"via vido malklariĝas kaj ekas dissolvi...\n"
+"\n"
+"Dum la mondo disfalas ĉirkaŭ vi,\n"
+"la heleco de portalo englutas vin.\n"
+"Ekbrilas, kaj poste vi lace ekstaras\n"
+"sur via piedoj.\n"
+"\n"
+"Vi staras supre sur alta turo, kaj de\n"
+"malsupre, venas la kriegoj de la\n"
+"damnitaj. Vi paŝas antaŭen, kaj tuje la\n"
+"sono de demona ĉantado glaciigas vian\n"
+"sangon. Per ĉiuj el la dioj de morto!\n"
+"Kien vi venis? Per ĉiuj el la dioj de\n"
+"doloro, kiel iam trovos vi vian eliron?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"La plej potencaj armoj kaj artefaktoj\n"
+"de la antikvuloj apenaŭ sufiĉis\n"
+"por venki la ĉefherezulon kaj\n"
+"liajn servistojn, sed nun iliaj\n"
+"sordidaj restaĵoj situas disĵetita \n"
+"ĉe viaj piedoj. arigante vian restantan\n"
+"forton, vi preparas vin por eniri\n"
+"la portalon, kiu kondukas el la ena\n"
+"sanktejo de la ĉefherezulo.\n"
+"\n"
+"Super vi, la muregoj de grandega \n"
+"kastelo staras. Silentaj turoj kaj nudaj\n"
+"muroj ĉirkaŭas solan turon el nigra\n"
+"ŝtono, kiu situas ĉe la centro de la\n"
+"kastelo, kiel cerbumanta giganto.\n"
+"Fajro kaj ombraĵo tordiĝante preter\n"
+"faŭkantaj fenestroj, dekduoj de\n"
+"sinistraj okuloj regardegante sub al vi.\n"
+"Ie interne, viaj malamikoj atendas..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... kaj li veturos en la regnon de la\n"
+"mortintoj, kaj kontraŭos la fortojn en\n"
+"tie, eĉ ĉe la pordegoj de malespero,\n"
+"sed neniu scias, ĉu vi revenos refoje\n"
+"al la mondo de lumo.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Diable."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Kun kriego de agonio, vi iĝas tiregita \n"
+"el ĉi tiu mondo en alian, dum ĉiuj\n"
+"partoj de via korpo estas kovrita en\n"
+"mistika fajro. Kiam via vido klariĝas,\n"
+"vi troviĝas stari en grandega halo,\n"
+"kiu estas plena de fantomaj eĥoj \n"
+"kaj minacaj ombroj. Malproksime\n"
+"vi povas vidi levitan estradon,\n"
+"kaj sur ĝi estas la sola fonto de lumo\n"
+"en ĉi tiu mondo.\n"
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Ĉi tio povas esti nur la ĥaos-sfero —\n"
+"la fonto de la povo de Korax. Per tio,\n"
+"vi povas krei mondojn... aŭ detrui ilin.\n"
+"Laŭ rajtoj de batalo kaj konkero, Ĝi\n"
+"estas via, kaj per tremantaj manoj,\n"
+"vi etendas ilin por preni ĝin. Eble nun\n"
+"nova ludanto eniros la kosman ludon\n"
+"por povo. Kiel la peono, kiu estas\n"
+"promociita al reĝino, la malproksimoj\n"
+"de la tabulo ŝajnas esti atingebla."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\nTamen, estas aliaj ludantoj pli\n"
+"potenca ol vi, kaj kiu povas scii\n"
+"iliajn sekvajn agojn?"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Viŝante tran via sanganta vizaĝo per\n"
+"tremanta mano, vi penas klarigi vian\n"
+"menson por tio, kiu situas antaŭe...\n"
+"\n"
+"...kaj forgesi tion, kiu situas malantaŭe.\n"
+"\n"
+"Malproksime, la rigidaj muregoj de\n"
+"grandega kastel-komplekso ŝajnas\n"
+"traŝiri la ĉielon supran, kaj la odoraĉo\n"
+"de putraĵo blovas de la malrespektitaj\n"
+"tomboj de nenombritaj mortintaj.\n"
+"\n"
+"Zorge nombrante viajn malmultajn\n"
+"restantajn artefaktojn, vi penas\n"
+"recertiĝi, ke ĝi estos sufiĉa. Finfine,\n"
+"ĝi sendube estas sufiĉa, ĉu ne?\n"
+"\n"
+"\n"
+"Ĉu ne?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Sendube la animoj de la damnitaj\n"
+"loĝas en ĉi tiu mondo, ĉar nenio\n"
+"bela aŭ bono povus vivi longe ĉi tie.\n"
+"\n"
+"Tamen, tio, kiu okazis antaŭe estas nur\n"
+"pala ombro de tio, kiu nun baras vian\n"
+"vojon — La Citadelo Ombra mem.\n"
+"\n"
+"La malafabla dikeco de la katedralo\n"
+"kaŝas ĉiajn krom fragmentajn videtojn\n"
+"de la citadelo mem, sed tio, kiu estas\n"
+"videbla, parolas per siblaj murmuroj\n"
+"de malvarma malrapida morto...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...por la bonsortaj."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Denove vi troviĝas en la grandega\n"
+"halo de la ĥaos-sfero, kvazaŭ neniom\n"
+"da tempo pasis, ekde kiam vi lastfoje\n"
+"movis inter ĉi tiuj ombroj.\n"
+"\n"
+"Tamen, io estas timige nekutima.\n"
+"Silento tie, kie estis mallaŭtaj\n"
+"flustroj, sento, ke mi estas\n"
+"observata de kaŝitaj okuloj...\n"
+"\n"
+"...Okuloj, kiuj ŝildas malican celon."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Unufoje vi premis la ĥaos-sferon —\n"
+"tenis ĝin per tremantaj manoj.\n"
+"Nun viaj manoj tremas kun io plia\n"
+"ol avaro, kaj timo miksiĝas kun la\n"
+"sopiro por potenco.\n"
+"\n"
+"Se eĉ la potenco de la sfero ne\n"
+"sufiĉas por protekti vin kontraŭ\n"
+"la fortoj de malhelo, eble bonas\n"
+"lasi ĝin nepalpita, ĝian promeson\n"
+"neveriga.\n"
+"\n"
+"\n"
+"\n"
+"Sed tiam, vi neniam estis iu,\n"
+"kiu cedus defion..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr "\\n...kaj aliaj ludantoj atendas."
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "La pordo estas ŝlosita."
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Salutojn, mortemul'."
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Ĉu vi pretas morti?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Pordo malfermiĝis ĉe la Gardanto de Glacia."
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Ĉi tiu vojo estas barita."
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Unu duono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "ĉe la Sep Portaloj."
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Unu triono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Ŝtupoj leviĝis ĉe la Sep Portaloj."
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Unu triono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "ĉe la Sep Portaloj."
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Ŝtupoj leviĝis ĉe la Sep Portaloj."
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Vi bezonas trovi alian ŝaltilon..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Ŝtonoj grincas ĉe la Sep Portaloj."
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Unu sesono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "en la Ombro-Arbareto."
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "La pordo estas barita interne."
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Vi aŭdas pordon malfermiĝantan malproksime."
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Unu sesono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "en la Ombro-Arbareto."
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Unu sesono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "en la Ombro-Arbareto."
+
+# Yellow needs better translation
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ gigantaĉoj ceteraj"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Vi atendis tro longe, nun vi mortas!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Pordo malfermiĝis ĉe la Forlasita Posteno."
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Ĉi tiu pordo ne jam malfermiĝos."
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Miajn servantoj povas flari vian sangon, homo."
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Pordo malfermiĝis ĉe la Pendigilo."
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "La pordo estas barita interne."
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Plataĵo malleviĝis en la turo."
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Ludis ĉi tiun ludon vi tro longe, mortemul'..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Mi kredas, ke mi vin forigos el la tabul'."
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Vi aŭdas pordon malfermiĝantan superŝtupare."
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Kultu min, tiam mi ankoraŭ eble kompatos."
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Tamen, eble ne."
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Unu naŭono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "en la Monaĥejo."
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Unu naŭono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "en la Monaĥejo."
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Unu naŭono de la puzlo estas solvita"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "en la Monaĥejo."
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "La portalo estas obturita."
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Elektu vian fatalon."
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "La pordo estas barita interne."
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Ĉu vi estas sufiĉe forta"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "por stari kontraŭ viaj propraj mastroj?"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Vi aŭdacas batali en la pretĉambro?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Pro tio, vi mortos!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "La akvofalo estas malferma."
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "La akvofalo estas barita."
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Pordo malfermis en la kapelo."
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Nun tio estas stranga..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Nur tri partoj de la puzlo restas."
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Nur du partoj de la puzlo restas."
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Nur unu parto de la puzlo restas."
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "La puzlo estas kompleta."
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Vi ne kompletis la puzlon."
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "La planko ne estas sendanĝera!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Unu triono de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Du trionoj de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Vi aŭdas plataĵon movantan malproksime."
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Ĝi estas farita..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Vi ne kompletis la puzlon."
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Mi avertas vin..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Vi estas obstina, ĉu ne?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Kaj ankaŭ stulta."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Unu kvarono de la puzlo estas kompleta."
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Malbona elekto..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "La simboloj ne estas liniiga."
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "La pordo ne malfermiĝas."
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "La pordo estas barita ekstere."
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Sakrilegio !"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Vi malpurigis la tombon de Eric !!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Kaj nun vi mortas !!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Unu triono de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Du trionoj de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "La kripto estas malfermita."
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Singardu en la tombo de la araneo."
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Vi aŭdas plataĵon leviĝantan ekstere."
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Ĉu vi sentas vin bonŝanca?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Vi divenis malĝuste!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Bona diveno."
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Ĉu vi povas fari ĉiom da la skriptoj por mia nivelo?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Ne tuŝas mian gloppy-on."
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Donu al mi iom da sukeron, knanjo."
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Da-aaaa..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Kino post horo?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Mi ne eĉ ekhavis mian propran tombŝtonon. - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Lasu neniom da sango elflui."
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Lasu nenion manon estas levita pro kolero."
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Kiu aŭdacas interrompi nian dormon? "
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "La vojo estas malfermita."
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Vi havas"
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20ŝaltilojn ceterajn."
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Vi nur havas"
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20ŝaltilon ceteran."
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "La elirejo estas malfermita"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "La pordo ne malfermos de ĉi tio flanko."
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "La pordoj estas malfermitaj..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...se vi pretas."
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Pordo malfermiĝis"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "en la Kapelo."
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Ponto estis konstruita"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "en la Buĉejo."
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Ŝtuparo estis konstruita"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "en la Gardisto Ombra."
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Dentrado estis metita."
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20dentradoj estis metitaj."
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Barikado malfermiĝis"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "En la Kloako."
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "La vojo reen estas malfermita."
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "La pordo estas barita interne."
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Ĉu vi aŭdacas rabi de la tombo"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "de la ekzekutisto?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Pretiĝu por morti!"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Vi ankoraŭ havas"
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20trovindajn ŝaltilojn."
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Vi nur havas"
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20ŝaltilon ceteran."
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "La vojo al la turo estas malfermita."
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "La vojo estas malfermita."
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr ""
+"Malproksimiĝu de mi; mi ne volas pliajn problemojn. Mi jam havis sufiĉajn "
+"pro tio, kion Harriso faris: li promesis monon al mi, kaj anstataŭ tio mi "
+"nun atendas, ke La Progamisto pridemandu min."
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr ""
+"Mi helpos vin se vi helpos min. Donu kvin da oro kaj mi rakontos tion, kion "
+"mi scias."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Jen la oro."
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr ""
+"Mortigu silente por\n"
+"ne ekagigi alarmojn."
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Nu, mi ne parolos senpage!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "Ĉu eble vi havas aliajn kvin da oro?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "Kvin da oro."
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr ""
+"Mortigi per venenaj sagoj\n"
+"estas tuje kaj silente."
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "Ne, mi diros nenion senpage!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Vi jam eltiris de mi eĉ la lastan klaĉon."
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Kion mi donu al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Sturmofusilon"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr ""
+"Vi nun ne havas\n"
+"sufiĉe da oro."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Magazenon"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Dankon."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Nu, ĝi kostas dek da oro."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Munici-keston"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Jen via municio."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Eble alimomente."
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr ""
+"Estas bonaj novaĵoj el la Fronto, laŭ la kutimo. Macil sendis oron kaj "
+"trejniĝon por vi. Li instrukciis, ke mi donu ilin al vi."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Dankon."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Estas plezuro esti serva."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr ""
+"Bone, jen kelkaj konsiloj. Ne staru antaŭ Krucistoj; pafi mallongajn "
+"ŝprucojn per la sturmofusilo estas sufiĉe por teni vian celon."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "Ĉu nenio alia?"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "Nu, vi lernos pli poste."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr ""
+"Mi kredas, ke mi povas modifi la flamĵetilon de Krucisto, por ke homo povu "
+"uzi ĝin. Ha, ĉu io alia, kion mi povas doni al vi?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Flamĵetilon"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr ""
+"Mi sciis, ke tio sukcesus!\n"
+"Jen ĝi. Provu ĝin!"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr ""
+"Nu, mi povas fari nenion\n"
+"sen la ĝustaj partoj!"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Sturmofusilon"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Nu, jen, sinjoro!"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr ""
+"Evidente vi nun ne\n"
+"havas sufiĉe da mono."
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Magazenon"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Dankon."
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Nu, ĝi kostas dek da oro."
+
+# 〃 (〃)
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Munici-keston"
+
+# 〃 (〃)
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Jen via municio."
+
+# 〃 (〃)
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Eble alimomente. Ĝis!"
+
+# 〃 (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr ""
+"Nun kiam vi havas la flamĵetilon, ĉu estas io alia, kion mi povus doni al "
+"vi?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Sturmofusilon"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Jen."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr ""
+"Vi nun ne havas\n"
+"sufiĉe da oro."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Magazenon"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Dankon."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Nu, ĝi kostas dek da oro."
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Munici-keston"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Jen via municio."
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Eble alimomente."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr ""
+"Nun kiam vi havas la flamĵetilon, ĉu estas io alia, kion mi povus doni al "
+"vi?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Magazenon"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Dankon."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Nu, ĝi kostas dek da oro."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Munici-keston"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Jen via municio."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Eble alimomente."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Fosforajn grenadojn"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Dankon."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "Vi ne havas sufiĉe da mono."
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Venenajn sagojn"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr ""
+"Ili valoras po\n"
+"ĉiu monero!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Nu, ili kostas 200 da oro."
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr ""
+"Mi ne povas kredi, ke mi estas blokita kun ĉi tiu tasko: Oni diras, ke "
+"malbonaĵo aperis el ĉi tiu pordo... kaj mi nun devas resti ĉi tie ĝis ĝi "
+"reaperos!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Kio estas post la pordo?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr ""
+"La elflua truo\n"
+"de la kloako."
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Saluton, amiko. Kion mi donu al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Elektrajn sagojn"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Jen la sagoj."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Sako da municioj"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr ""
+"Ne, vi ne havas tiom,\n"
+"kiom mi petas."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr ""
+"Ne, vi ne havas tiom,\n"
+"kiom mi petas."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Dankon. Ĉu ion alian?"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr ""
+"Vi ne povas sen mono.\n"
+"Havu bonan tagon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Kion mi donu al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Elektrajn sagojn"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Jen la sagoj."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Sako da municioj"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Dankon. Ĉu ion alian?"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr ""
+"Vi ne povas sen mono.\n"
+"Havu bonan tagon!"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "Bonvenon. Kion mi montru al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "Medi-ŝirman veston"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "Nu, jen."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr ""
+"Pardonon, sed vi ne\n"
+"havas sufiĉe da mono."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Ledan armaĵon"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "Ĉu eble alian fojon?"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Metalan armaĵon"
+
+# 〃
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "Ĝuu ĝin."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr ""
+"Revenu kiam vi povos\n"
+"aĉeti ion, stultulo!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "Bonvenon. Kion mi montru al vi?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "Medi-ŝirman veston"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "Nu, jen."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr ""
+"Pardonon, sed vi ne\n"
+"havas sufiĉe da mono."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Ledan armaĵon"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "Jen."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "Ĉu eble alian fojon?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Metalan armaĵon"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "Ĝuu ĝin."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr ""
+"Revenu kiam vi povos\n"
+"aĉeti ion, stultulo!"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "Kiel mi helpu vin?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Kuracbendoj"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Jen viaj kuracbendoj"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "Vi bezonas dek da oro."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "Sukurkesto"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "Dankon."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr ""
+"Mi donacus ĝin, sed\n"
+"ĝi kostas 25 da oro."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "Kirurgia kesto"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "Jen. Estu atenta."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr ""
+"Nu, ĉu vi eble povas\n"
+"aĉeti kuracbendojn?"
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr ""
+"Mi esperas, ke Macil scias tion, kion li faras. Se La Ordeno malkovras, ke "
+"mi helpas la Fronton, mi estos sufiĉe mortinta... Ne kvazaŭ vi zorgus pri "
+"tio. La kuracisto de la Fronto donis al mi plibonigan icon por vi. Ĉu vi "
+"estas preta?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "Jes, mi estas preta."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr ""
+"Bone, mi bezonos nur\n"
+"unu sekundon... kaj finite."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "Kiel mi helpu vin?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Kuracbendoj"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Jen viaj kuracbendoj"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "Vi bezonas dek da oro."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "Sukurkesto"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "Dankon."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr ""
+"Mi donacus ĝin, sed\n"
+"ĝi kostas 25 da oro."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "Kirurgia kesto"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "Jen. Estu atenta."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr ""
+"Nu, ĉu vi eble povas\n"
+"aĉeti kuracbendojn?"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+"Saluton, fremdulo, mi ne vidis vin ĉi tie antaŭe. Jen senpaga konsilo: mi "
+"estus atenta se mi estus vi; La Ordeno ne toleras liberan volon kaj havas "
+"rapidan «juston»."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "Kion oni diras ĉi tie?"
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr ""
+"Oni diras... ke en la kloako\n"
+"ne estas nur ratoj kaj robotoj."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "Kion mi faru por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "Pliaj informoj"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr ""
+"La registo ekzistas\n"
+"nur por memorigi, ke\n"
+"ne plu estas libereco."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr ""
+"Revenu kiam vi havos\n"
+"sufiĉe da oro."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr ""
+"Nu, vi faras multe da demandoj por esti iu, kiu ne intencas morti. Certiĝu, "
+"ke vi ne kaŭzos al vi mortigon... aŭ ion pli malbonan."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "Pliaj informoj"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr ""
+"Estas pli pri La Ordeno,\n"
+"ol kiom ili ŝajnigas."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr ""
+"Ni parolos kiam\n"
+"vi alportos oron!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr ""
+"Jen ĉio, amiko, la fonto de scio sekiĝis. Malgraŭ tio, mi diris al vi pli ol"
+" tiom, kiom mi devus. Ŝancon... kaj ne revenu."
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr ""
+"Mi nur estas krizokaza gardisto: se la kerno rompiĝus, mi certiĝus, ke neniu"
+" eniru... aŭ eliru."
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "Atentu tie, kie vi piediras, kampulo!"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "Ni mortigos vin!"
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "Kiu diable vi estas? Neniu supozeble devas vagi ĉi tie!"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "He, neniu rajtas esti ĉi tie. Plue movu vin!"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "Iralo vendos al vi ĉion, kion vi bezonas!"
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr ""
+"Mi estas speco de talentul-serĉanto por la ribelantoj. Iu tiel lerta, kiel "
+"vi, povus gajni multe da oro… se vi rilatos kun la ĝustaj homoj."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "Tio interesas min."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "Fi al la ribelantoj!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "Ne, ne estas alia ŝanco. Gardistoj, mortigu lin!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+"Bona elekto. La sanktejo de La Ordeno ĉe la rojo estas ĝia neoficiala "
+"torturejo. En ĝi estas kaŝita ora kaliko. Alportu ĝin al mi kaj vi havos "
+"rekompencon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "Kiel mi supozeble faru tion?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr ""
+"Jen arbalesto. Vi nur celu laŭ rekta linio kaj «pum». Ne forgesu preni la "
+"belan pokalon kaj tiam reveni al la taverno."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "Bonege. Mi trovos ĝin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "Kion vi atendas? Alportu tiun kalikon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+"Jes, mi scias, ĉi tio ŝajnas trompo, sed mi neniam farus tion al bonega "
+"mortig-maŝino. Ĉu vi havas la kalikon? Bonege! Pretiĝu: oro kaj gloro, tiel,"
+" kiel mi promesis. Prenu ĉi tiun ŝlosilon kaj la registo rekompencos vin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "Li devus. Por via bono!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "Kio!? Kie estas mia mono?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Foriru, junulo; vi ĝenas min."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "Ne estas alia ŝanco. Gardistoj, mortigu lin!"
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+"Ili unue buĉis milojn, kaj nun volas ĉiujn sanegajn kamparanojn por "
+"nespecifaj «provoj». Kiel La Ordeno esperas, ke mi ankoraŭ povos teni la "
+"pacon?... Kion diable vi volas?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "Malliberejan enirpermeson. Ni intertraktu."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr ""
+"Mi jam ŝatas vin. Estas du farotaĵoj, kiujn mi mem ne volas fari: unu estas "
+"malpura kaj la alia estas sanga."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "Purigado estas mia specialo."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "Sango estas nenio."
+
+# 〃
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+"Unu el miaj sbiroj metis konektilon ien por ŝteli energion de la elektriza "
+"sistemo. Ĝin trovu kaj detruu, kaj mi donos al vi tion, kion vi petis. "
+"Alportu pruvon kiam vi finos."
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "Kie estas la konektilo?"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"Se mi scius tion, mi ne petus ĉi tion al vi, ĉu ne? Uzu vian ĉarmon, sed "
+"interrompu lian provizadon."
+
+# 〃
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+"Aŭskultu ĉi tion. Estas fimensogulo nomata Derwin, kiu kutimas vendi "
+"infanojn al La Ordeno, kaj mi ne toleros tian perversecon: ne se li ne donos"
+" parton de la gajnoj. Derwin laboras en la magazeno. Mortigu lin, alportu "
+"lian orelon kaj mi vidos tion, kion mi povas fari."
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "Kiel mi eniru tien?"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr ""
+"Jen ŝlosilo de la elektrocentralo. Repensante pri tio, fortranĉu lian orelon"
+" kaj tiam mortigu lin. Multe plibone."
+
+# 〃
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+"Ha, mi ŝategas memoraĵojn. Havu ĉi tion, kio ebligos al vi eniri la "
+"malliberejon. Parolu kun la provoso Montag. Kion ajn vi faros poste, tio ne "
+"interesas min."
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Dankon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "Jen konsilo: Kiam mi ĉesas paroli al vi, vi foriras."
+
+# 〃
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr ""
+"Ĉu vi alportas bonajn novaĵojn? Mi estas tute aŭskultema... Ha, ha, ha, ha, "
+"ha, ha, ha!"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "Interkonsento plenumita!"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+"Ha, mi ŝategas memoraĵojn. Havu ĉi tion, kio ebligos al vi eniri la "
+"malliberejon. Parolu kun la provoso Montag. Tion ajn, kion vi faros poste, "
+"mi ne volas scii."
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "Mi ne malkonsentas."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr ""
+"Vi do estas la stultulo, kiu ŝtelis la kalikon, ĉu? Mi kaptos vin kiel "
+"ribelan ŝteliston, tiel mi plibonigos mian statuson kun La Ordeno. Kiel vi "
+"sentas, ke vi estas nevola marioneto? Jen aludeto: tio doloros vin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "Tio estas aĉa!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "Por vi ja."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "Harris promesis monon al mi!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr ""
+"Kiel domaĝe. Ĉio, kion\n"
+"vi havos estas morto!"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+"En malgranda mondo novaĵoj flugas. Mi aŭdis, ke vi ĵus forigis kelkajn "
+"barilojn de via vojo. Bone farite. Ĉu interesas vin partopreni pli lukrajn "
+"projektojn?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Jes, kial ne?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "Ne, dankon."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "Tiuokaze malaperu!"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "Stultulo! Gardistoj, liberigu min de ĉi tiu entrudiĝema peono."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr ""
+"Bone. Kelkaj... hm, amikoj bezonas «silentigi» iun. Beldin estas retenita en"
+" la sanktejo de La Ordeno. Estas malofte uzata enirejo ĉe malgranda kajo sen"
+" viglado apud la rojo. Eniru tien, silentigu lin kaj alportu lian ringon "
+"kiel pruvon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "Ĉu la strebo estos valora?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr ""
+"Mi garantias al vi 50 monerojn da oro, kaj se vi revenos ne ekagiginte ĉiun "
+"alarmon en la urbo, estas eblo gajni multe, multe pliajn. Kaj jen malgranda "
+"helpaĵo por faciligi vian takson."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Dankon. Mi bezonos ĝin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "Bone. Memoru: lia silento estas el oro."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "Mi trovos lin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "Ĉu vi finis? Ĉu vi havas la ringon de la perfidulo?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "Mi mortigis lin. Kie estas mia mono?"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr ""
+"Ne mensongu!\n"
+"Forprenu lian ringon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+"Jen ĝi, vi gajnis ĝin. La perfidulo, kiun vi mortigis, estis malkaŝonta la "
+"lokon de la Fronto. Vi savis vivojn. Ĉu vi ŝatus gajni plian oron kaj "
+"estontecon liberan de tiranio?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "Mi aŭskultas vin."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "Tio ne estas mia stilo."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr ""
+"Mi havas negoco-ligon kun Macil la frontestro. Mi scias, ke li bezonas "
+"lertan kamaradon kiel vi, kaj cetere li pagas bone. Prenu ĉi tiun "
+"rekuperitan interfonon kaj vi havos la vojon al... ni diru, ebloj."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Dankon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "Ekmovu vin. Se vi restos ĉi tie, ni ambaŭ mortos."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr ""
+"Nun kiam vi scias pri miaj amikoj, mi bedaŭrinde devas mortigi vin. "
+"Gardistoj, forprenu ĉi tiun rubon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "Stultulo! Gardistoj, liberigu min de ĉi tiu entrudiĝema peono."
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Foriru, ulo. Vi nur foriru."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "Kion vi volas ĉi tie?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "Saluton, mi bezonas oron!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr ""
+"Merlo diris la pasfrazon al vi, ĉu? Tiuokaze mi sensonigos la alarmon. Macil"
+" estas malsupre."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Dankon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Foriru, ulo. Vi nur foriru."
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "Ĉu vi supozeble havas rendevuon kun la registo?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "Kompreneble!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "Ne, kaj mi ne bezonas ĝin!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "Ha, pardonon, mi ne intencis... Uzu la lifton."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Mi sciis, ke vi dirus tion."
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Se vi vere hastas renkonti lin, ne perdu vian tempo kun mi."
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "Sufiĉe, ne ĝenu maljunulon."
+
+# 〃 (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr ""
+"Ĉu vi serĉas saĝon, filo? La Ordeno certiĝis, ke ni nur faru unu demandon: "
+"«Kial?»."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "Kie estas la elektra kuplado?"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "Kie estas la elektriza sistemo de La Ordeno?"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "Kie estas la kontraŭleĝa konektilo?"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr ""
+"Mi respondos, sed mi ne scias, kies elektrizan sistemon vi intencas "
+"perturbi. Ĝi estas ĉi tie, en la kloakpurigejo."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "Dankon."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr ""
+"Ĝi estas ĉi tie, en la kloakpurigejo, sed ĝi estas la kuplado de la Fronto. "
+"Kiu diris, ke ĝi estas de La Ordeno, tiu ajn eraris."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "Dankon."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr ""
+"Se vi diras, ke ĝi estas kontraŭleĝa, mi volas nenian rilaton kun vi. Mi jam"
+" havas sufiĉe da problemoj."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "Dankon."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "Sufiĉe, ne ĝenu maljunulon."
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr ""
+"Bonvenon en la lasta fajrero da espero. Nur ni havas liberan volon por "
+"kontraŭstari al La Ordeno. Ni havas la plej intelektajn mensojn kaj multe da"
+" kapablaj homoj, sed mankas tiu, kiu estus, hm... vera problem-solvulo, por "
+"ke li donu al ni la necesan avantaĝon. Helpu nin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "Bone, mi akceptas."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "Ne, dankon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr ""
+"Vi eble volos rekonsideri tion, se ni konsideras, ke vi estas ĉirkaŭita de "
+"ege armitaj kaj koleraj ribelantoj."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "Bone, mi aliĝos!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "Ne, dankon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Tiuokaze mortu honte kaj senhonore."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+"Bone. Merlo plue estos via gvidanto; ŝajnas, ke ŝi jam simpatias vin. Vi "
+"kune devas malkaŝi la sekretojn de La Ordeno kaj de ĝiaj nehomaj servantoj. "
+"Enŝoviĝu kaj detruu ilin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "Kie mi komencu?"
+
+# 〃 (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr ""
+"Sincere la situacio estas malordo. Vi devas plenumi diversajn misiojn, por "
+"ke ni povu prepari pliajn atakojn kontraŭ La Ordeno. Ni malvenkis la lastan "
+"kaj tial La Ordeno kaptis la plimulton de niaj trupoj; mi bezonas, ke vi "
+"liberigu ilin."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "Mi pensas, ke mi povos fari tion."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+"Prenu ĉi tiun monon kaj renkontu Iralon, kiu provizas nin per armiloj. Poste"
+" ĉi tiu ŝlosilo ebligos al vi renkonti la registon. Li estas koruptita "
+"marioneto de La Ordeno, sed li ŝategas intertraktadojn. Faru tion ajn, kion "
+"vi bezonas por liberigi niajn soldatojn."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "Mi vidos tion, kion mi faru."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "Bataladu pro la Fronto kaj libereco. Ekagu."
+
+# 〃 (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+"Ni povis rebonveni la ekskaptitojn danke al vi. Jen iom da oro; iru renkonti"
+" la kuraciston kaj la armilan trejniston, kaj tiam mi havas pli altajn "
+"celojn por vi."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "Kompreneble. Kio sekvas?"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+"Ununura kristalo nutras la elektrizan sistemon, kiu tenas la ŝildojn de la "
+"kastelo. Detruu ĝin por fari grandegan «breĉon» en la defendojn de La "
+"Ordeno. Merlo gvidos vin al spiono, kiu havas manieron eniri. Ŝancon."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Ni sukcesos."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "Bataladu pro la Fronto kaj libereco. Ekagu."
+
+# 〃 (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+"Vi superis ĉiujn niajn atendojn. Pro viaj heroaĵoj, niaj trupoj jam ekagis. "
+"Mi volas, ke vi ambaŭ aliĝu al la sturmo kun specifa celo: mortigi La "
+"Programiston. Estas tempo malkaŝi tion, kion ni malkovris pri tiu aspekto de"
+" La Ordeno."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "Diru tion, kion vi scias."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr ""
+"La kaŝejo de la Programisto estas en la kastelo. Vi nun renkontu la "
+"kuraciston, prenu municiojn kaj iru mortigi lin."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "Mi faros tion!"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "Bataladu pro la Fronto kaj libereco. Ekagu."
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr ""
+"Ĉu vi memoras, kiel la urbodomo aspektis antaŭe? Ĝi nun estas afabla "
+"ekzemplo de tio, kion ili estas pretaj fari por forigi nin. Estu atenta."
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Parolu kun Macil. Li povos helpi vin."
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr ""
+"Mi aŭdis, ke Macil havas planon por malstabiligi La Ordenon. Pli bone, ke ĝi"
+" estas bona. Unu plua eraro kaj ni estos kadavroj."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr ""
+"Ĵeti kelkajn el ĉi tiuj bareloj en ilian akvo-provizadon devus egaligi "
+"iomete la eblojn."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr ""
+"Do ĉu vi estas la nova ano? Dankon. Sen vi, ni ĉiuj jam estus mortintaj."
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+"Mi laboras super io, kio donos avantaĝon al ni: ĝi pliigos vian energion kaj"
+" korpan forton. Mi jam korektis la plimulton de la cimoj. Ĉu mi povas fari "
+"ion por vi?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "Kuracu min."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr ""
+"Ulo, vi estas en plena malordo.\n"
+"Mi vidos tion, kion mi faru."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "Ĉu energidona enplantaĵo?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr ""
+"Bonege, ĉi tio\n"
+"estos rapidega."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr ""
+"Mi ankoraŭ\n"
+"prilaboras ĝin."
+
+# 〃 (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr ""
+"Mi laboras super plibonigita versio de via enplantaĵo. Ĉu estas io alia, "
+"kion mi povas fari por vi?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "Kuracu min."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr ""
+"Nu, almenaŭ vi ne havas\n"
+"enuigajn komisiojn."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "Ĉu plibonigo de enplantaĵo?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr ""
+"Bone. Neniam estas\n"
+"sufiĉe da sekureco."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr ""
+"Mi preskaŭ finis,\n"
+"sed ne tute."
+
+# 〃 (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr ""
+"Bone, preskaŭ ĉio funkcias perfekte. Restis nur kelkaj korektindaj "
+"problemoj. Ĉu vi bezonas ion alian?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "Kuracu min."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr ""
+"Kion vi intencis fari?\n"
+"Ĉu piki Kruciston?"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "Ĉu plibonigo de enplantaĵo?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "Ĉi tio devus esti sufiĉa."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr ""
+"Unue mi faru\n"
+"kelkajn provojn."
+
+# 〃 (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr ""
+"Tio estas ĉio, kion mi momente povas fari super la enplantaĵo. Ĉu vi bezonas"
+" kuracon?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "Jes."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr ""
+"Ulo, vi estas en plena malordo.\n"
+"Mi vidos tion, kion mi faru."
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "Kion mi faru por vi?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "Mi ne havas kuglojn."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "Trejnu min."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "Bone, jen kelkaj konsiletoj..."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr ""
+"Vi ankoraŭ\n"
+"ne estas preta."
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "Do vi revenis. Kion vi bezonas?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "Mi ne havas kuglojn."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "Vi havas sufiĉe da municio."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "Trejnu min."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr ""
+"Bone, ĉi tio devus esti\n"
+"sufiĉe utila nuntempe."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr ""
+"Pardonon, mi ne rajtas.\n"
+"Mi nur observas Macil-on."
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+"Nu, ĉu kugloj aŭ trejnado ĉi-foje? Mi sopire atendas provi tiujn novajn "
+"kaptitajn armilojn. Iom da trejnado kaj tiam multe da venĝo."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "Mi estas sen municio."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "Vi havas sufiĉe da municio."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "Trejnu min."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr ""
+"Bone. Uzu ĉi tion por gvidi tiujn\n"
+"aĉulojn de La Ordeno al la infero."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr ""
+"Revenu post kiam\n"
+"Macil ordonis tion."
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr ""
+"Mi instruis al vi ĉion, kion mi ĉi-momente povas. Donu tempon al mi por "
+"elprovi la novajn armilojn... krom se vi nur bezonas pliajn kuglojn."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Ĝuste."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "Jen."
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr ""
+"Ne uzu pafilon en la urbo; vi ekagigus la alarmon kaj ili eksendus "
+"gardistojn el la kastelo."
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "Bonvenon. Plia helpo ĉiam estas utilega."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr ""
+"Kiam mi ankoraŭ estis en misio, ni havis okazon ekzameni akoliton antaŭ ol "
+"pliaj malamikoj alvenis. Aŭskultu, ili ne estas homoj."
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr ""
+"Ni provas malkovri, kie troviĝas la mekanismoj de la pordo de la kastelo, "
+"sed ni ankoraŭ ne sukcesis."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr ""
+"Oni ne kaptu vin. Mi aŭdis terurajn historiojn pri tio, kio okazas al niaj "
+"homoj post ilia aresto: ili simple malaperas, lasinte nenian restaĵon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr ""
+"Jen konsilo: estu ĉiam fore de la artefaritaj soldatoj de La Ordeno. Ili "
+"estas rapidaj kaj brutalaj."
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "Lasu min. Mi faras ion por Macil."
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "Pardonon, sed ne, vi ne rajtas eniri."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "Haltu! Montru vian identigilon de la centralo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "Jen la identigilo."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Ha, bone. Kompreneble, eniru. Havu bonan tagon."
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr ""
+"Ĉu Derwin? Jes, li estas malsupre en la magazeno, sed vi ne rajtas iri tien,"
+" krom se vi havas paspermeson."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "Mi havas ĝin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "Vi rajtas iri."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "Ĉu vi scias, kie li estas?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr ""
+"Mi scias nenies lokon. Mi nur estas komisiito de la pordoj de ĉi tiu "
+"ratkaptilo."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "Vi estas malagrabla distraĵo."
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "Plue movu vin aŭ gustumu kuglojn."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Ŝovu vian identigilon sur la legilon por eniri."
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "Reiru al via laborposteno, tuje!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "Reiru al via laborposteno, tuje!"
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+"Ni senhalte laboras 24 horojn ĉiutage de antaŭ semajnoj. Mi dirus, ke La "
+"Ordeno planas atakon por subpremi la Fronton."
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+"Ha, fek, la registo venigis vin; mi estis pagonta lin, serioze. Nu, "
+"aŭskultu, mi havas kelke da kaŝita mono; ĝi estas via se vi rigardos "
+"aliloken."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "Bone, vi rajtas foriri."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "Pardonon, mi nur laboras."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Al mil diabloj. Se mi falos, ankaŭ vi. Gardistoj!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "«Intertraktadoj», kia feka ŝerco. Helpu, gardistoj, estas ribelanto!"
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr ""
+"Ha, Macil diris al mi, ke vi estis venonta. Mi havas manieron meti vin en la"
+" centralon, sed ĝi estas riska."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "Mi povas preni sur min la riskon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr ""
+"Bone. Mi ŝtelis la identigilon de la kadavro de stultulo, kiu falis en la "
+"malvarmigan truon de la reaktoro; «blat», tuje fritita."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "Kion mi faru post mia eniro?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr ""
+"Diru al tiu, kiu demandos, ke vi estas la anstataŭanto de la S-ro Krakulo; "
+"li estas sufiĉe stulta por kredi tion. Ha, kaj vi eble volas trarigardi la "
+"deponejon super ni."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "Espereble ĉi tiu identigilo funkcios."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "Foriru, krom se vi volas iĝi S-ro Mortinto."
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr ""
+"He, ne distru min. Se ili vidas, ke ni perdas tempon, ni estos mortigitaj..."
+" aŭ kun plia laboro."
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+"Kia premo. Laŭ ĉi tia kadenco, la normalaj deĵoroj baldaŭ revenos. Ni pumpas"
+" tunojn da energio al la kastelo kaj mi preskaŭ finis registri tiujn novajn "
+"armilojn."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "Ĉu armiloj?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "Kion vi pensas? Ĉu ke ni agos per ŝtrumpetoj?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "Kiu speco de armiloj?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr ""
+"Ĉu vi estas surda? Mi ĵus diris, kiel okupata mi estas. Reiru al via laboro."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "Kiu vi estas? Nur dunivelaj laboristoj estas permesataj ĉi tie."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "Mi estas la anstataŭanto."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr ""
+"Vi finfine aperis. Iru paroli kun Ketrick en la kerno. Ha, kaj prenu ĉi tiun"
+"  ŝlosil-karton; vi ne volas ricevi pafon dum via unua tago, ĉu?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "Kie estas la energia kristalo?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "Vi ricevos pafon ankaŭ se vi ne eklaboras. Movu vian tunikon."
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr ""
+"Mi ne intencas soni alarme, sed se ili plue superŝargas la energian "
+"kristalon tiel multe, ĝi misfunkcios, poste ĝi rompiĝos kaj tiam «Bum!»... "
+"Por ke vi havu ian ideon."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+"Mi klarigu: se ĉi tiu terminalo paneas denove, la malvarmiga nivelo falos "
+"kaj ni ĉiuj devos respondeci pri tio al la Programisto... se ni supervivis."
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr ""
+"Vi! Jes, vi! Vi ne laboras en ĉi tiu sektoro. Montru vian ŝlosil-karton, "
+"rapide! Mi estas en tre malbona humoro!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "Jen mia karto."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr ""
+"Ĉi tio estas rubaĵo! Atendu ĉi tie... Ba, al mil diabloj. Gardistoj, mortigu"
+" ĉi tiun entrudiĝanton!"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr ""
+"Labori, dormi, esti torturata; kia vivo. Do ĉu vi venis anstataŭi la "
+"senatentan tru-plonĝinton?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "Jes, kaj mi vere volas komenci."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Jes, kompreneble. Nu, eklaboru."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "Kie estas la kristalo?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr ""
+"Parolu al Ketrick. Levu la ponton per ĉi tiuj ŝaltiloj kaj tiam ekagigu la "
+"lifton per ĉi tiu identigilo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "Mi demandis, kie estas la kristalo."
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "Tio ne estas via afero. Iru paroli al Ketrick."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "Bone."
+
+# 〃
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr ""
+"Se penigan laboron vi serĉas, iru rigardi tiun ekranon dum momento: vi "
+"mortos de enuo."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+"La ĉiopova Programisto estas tiel paranoja pri ebla enŝoviĝo, ke li ŝlosis "
+"la komputilan kernon. Kiel mi supozeble laboros? La ununura ŝlosilo estas la"
+" vivo-riska vojo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "Ĉu vivo-riska vojo? Kio estas tio?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr ""
+"Ĝi estas neeraripova maniero morti, sed tio nun ne estas grava. Malsupriĝu "
+"per la lifto se vi estas inklina al tio."
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "Haltu. Neniu eniras sen permeso el la provoso aŭ la registo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "Jen mia enirpermeso; lasu min eniri."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "Bone, sed limu vin paroli kun la provoso."
+
+# 〃 (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr ""
+"Ĉu mi aspektas kiel la provoso laŭ vi? Foriru, ĉi tiu zono estas ekster la "
+"limoj."
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr ""
+"La tondro de La Ordeno pluvos sur tiujn servantojn ĝis ili petegos pri "
+"morto."
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+"Mi ne zorgas, ke Mourel donis enirpermeson al vi. Ĉi tiu estas mia "
+"malliberejo; mia ŝlosilo estas la ununura maniero eniri aŭ eliri, kaj mi ne "
+"riskos min. La Ordeno toleras nenian eraron."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "Donu la fekan ŝlosilon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "Nur post mia morto!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "Bonega ideo!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "Ĉu vi volas katenojn aŭ ŝeklojn? Mi volas, ke vi ĝuu vian restadon."
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr ""
+"Mi ne komprenas, kiel vi superis la gardistojn kaj la provoson, sed mi "
+"esperas, ke vi ŝatas la dekoracion, ĉar vi ĵus transloĝiĝis."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "Liberigu miajn samideanojn aŭ mortu!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr ""
+"Vi liberigos neniun se vi mortigos min: mi havas la ununuran manspuron, kiu "
+"ebligas malŝlosi la ĉelojn."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "Tiuokaze mi «enmanigos» ilin al vi."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "Foriru aŭ alliĝu al viaj amikoj."
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "Ne staru tie, liberigu nin!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "La ĉielon, mi volas vidi la ĉielon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr ""
+"1,2 oble 1,5 metroj.\n"
+"1,2 oble 1,5 metroj.\n"
+"1,2 oble 1,5 metroj..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "Ne liberigu min se La Ordeno ankoraŭ regas: mi ne eltenas la teruron."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr ""
+"Mi ne intencas plendi, sed Macil finfine venigis iun por liberigi nin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "Mi interŝanĝus ion ajn kontraŭ panero. Mi malsategas."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"Ha, supraĵulo bezonas komplezon. Ĉi-malsupre oni faras servon por gajni "
+"reservon, kaj mi bezonas remalfermi la enirejon al la urbo, kiu estas nia "
+"fonto de manĝaĵoj: La Ordeno ĝin ŝlosis kaj gardas."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "Kie estas la mekanismo de la pordo de la kastelo?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Vi unue faru mian komplezon se vi volas ricevi ion de mi."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "Kiel vi scios ĉu mi malfermis ĝin?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+"Alportu la uniformon de la gardisto, tiel unu el miaj «kamaratoj» surhavos "
+"ĝin kaj tiam neniu provos reŝlosi la pordon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "Ĉu vi volas lian uniformon?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr ""
+"Malfermu la pordon, alportu la uniformon kaj tiam ni intertraktos. Alie, "
+"malaperu."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "Ĉu vi alportis tion, kion mi volas?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "Kion pri ĉi tiu uniformo?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "Alportu la uniformon."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr ""
+"Bone. Jen aldonaĵo; miaj kamaradoj deŝiris ĝin de venkita Krucisto: ili "
+"estas partoj de flamĵetilo; Iralo nun povos krei unu por vi. Vi vere "
+"amuziĝos."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "Kie estas la mekanismo de la pordo de la kastelo?"
+
+# 〃
+# 
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+"Vi devas iri al alia parto de la kloako. Por atingi tien, vi devas eniri la "
+"kastelon tra pordo de ĉambro pri kloaka bontenado kaj dreni la rezervujon de"
+" akvoreuzo; en ĝia fundo estas kaŝita enirejo al la kloako, kaj ie tie estas"
+" la mana regilo de la pordo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "Ĉu estas io alia, kion vi povas fari?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+"Ŝancon. Mi malfermis diversajn el niaj tuneloj. Tio devus faciligi la taskon por vi.\n"
+"Ha, la uniformo estas M-talia. Perfekte!... Sed aĉkolora."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "Dankon pro la helpo."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "Se vi donos nenion, vi ricevos nenion."
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Weran savos nin: li neniam desapontis nin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "Se vi serĉas respondon al via problemo, renkontu Weran-on."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "Ĉu vivu la Fronto? Kia fekaĵo. Ni ĉiuj atendas morton."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "Ĉar nia irado al la supraĵo estas ŝlosita, ni eĉ ne povas nutri nin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "Manĝaĵoj... Ĉu vi havas manĝaĵojn? Bonvolu helpi nin."
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+"Jen mia rekompenco pro tio, ke mi ne evitis la liberigon de la ekskaptitoj: "
+"gardi la kloakon. Se mi iam trovos la liberiginton, mi murdos lin."
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr ""
+"Tiuj almozuloj estas precize tie, kie ni volas: ankoraŭ kelkajn tagojn en "
+"tia situo kaj ili ne plu eltenos la inanicion."
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr ""
+"Kiun paspermeson vi havas? Nerajtigita personaro ne estas permesata ĉi tie."
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "Kio diable? Kiu malfermis la pordojn? Sonorigu la alarmon!!!"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr ""
+"Estas alia enirejo al la kloako: enŝaltu ĉi tiun ŝaltilon, tiam reiru supren"
+" laŭ la ŝtuparo kaj drenu la rezervujon de akvoreuzo."
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr ""
+"Kion diable vi faras!? Se la Programisto revenos de sia juĝejo, vi mortos."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "He, vi ne rajtas iri malsupren."
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr ""
+"Ĉu Programisto? Kie vi aŭdis tion? Ne estas Programisto; tiu storio "
+"ekdisvastiĝis antaŭ jaroj. Ne diru, ke la Fronto kredis tian fekaĵon. Kiel "
+"stultaj."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "Tiuokaze, kiu estas la vero?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "Mi diris ĉion, kion mi scias. Vi perdas tempon."
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "La batalo daŭru; ni venkos. Ĉi tiu tago estas nia!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "La batalo daŭru; ni venkos. Ĉi tiu tago estas nia!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "La batalo daŭru; ni venkos. Ĉi tiu tago estas nia!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "La batalo daŭru; ni venkos. Ĉi tiu tago estas nia!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "La batalo daŭru; ni venkos. Ĉi tiu tago estas nia!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "La batalo daŭru; ni venkos. Ĉi tiu tago estas nia!"
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+"Vi mortigis ĉiujn gardistojn. Ne vundu min. Mi diris al li, ke ĉi tiu estas "
+"stulta ideo; la vera Programisto estas en la ĉefturo. Jen la ŝlosilo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "Vi estas la Programisto!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr ""
+"Ĉu mi aspektas kiel posedanto de absoluta povo? La Ordeno uzas nin ĉiujn. "
+"Foriru, mi jam estas mortinta."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "Povo estas la ŝlosilo!"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+"Bone, vi jam rekonsciiĝis. Kelkaj teruraj sekretoj malkovriĝis kiam vi "
+"prenis tiun objekton, kiu elfalis el la Programisto."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "Kiaj sekretoj?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+"Ni ne konas la originon de ĉi tiu armilo, sed ni devas malkovri ĝin. Vi jam "
+"prenis pecon el La Ordeno kaj ni bezonas la aliajn kvar. Ĝis ĉi tie ĉio, "
+"kion mi scias. Serĉu la Orakolon kaj petu lin pri helpo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "Mi bezonos pliajn provizojn."
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr ""
+"Jen iom da oro. Iru renkonti la kuraciston kaj la armilan trejniston, kaj "
+"tiam ekagu!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "Kompreneble!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "Bataladu pro la Fronto kaj libereco. Ekagu."
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr ""
+"Kial vi revenis? Ĉu vi estas vundita? Ne estas perdinda tempo, reiru al via "
+"komisio: kompletigu la Sigelon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "La Orakolo diras, ke vi devas morti!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr ""
+"Mi faris ĵuron de libereco. La Orakolo estas tiu, kiu havas la trian pecon: "
+"tie estas via perfidulo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "Tiuokaze la Orakolo mortos!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "Eble vi estas la perfidulo!"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "Spirito de la Vera Dio, venĝu min kaj polvigu ĉi tiun mondon."
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+"Vi prenis la ĝustan decidon. Estas evidente, ke la Orakolo estas regata per "
+"ia malbono de La Ordeno. Reiru al ĝi kaj akiru la trian pecon de la Sigelo."
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+"Ŝajnas, ke la teruraĵo, kiun ni alfrontas, estas senlima. Ni malkovris, ke "
+"La Ordeno ne nur mortigas niajn homojn: ĝi transformas ilin en biomekanikajn"
+" soldatojn. Trovu la instalaĵon, kie tio okazas, kaj fermu ĝin por ĉiam."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "Kie ĝi estas?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+"Unu el niaj kapitanoj, Rikter, atendas vin en la komunumo en la limlando. Li"
+" vidis la instalaĵon kaj scias eniri ĝin. Ĉesu tuj ĉi tiun teruraĵon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "Ili pentos!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "Bataladu pro la Fronto kaj libereco. Ekagu."
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr ""
+"Mi estas la Vera Dio. Mi bezonas liberigi lian spiriton, tiam mi povos "
+"forlasi mian korpon kaj aliĝi al li en la flugo! Vi ne havas ideon pri tio, "
+"kion vi posedas... nek pri la teruraĵo, kiun vi alfrontas. La Vera Dio devas"
+" esti libera! Kaj li rekompencos min... Ni estos la sama!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "Mi detruos vin!"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "Feliĉe vi supervivis. Kion vi bezonas?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "Kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "Bone, mi pretigu vin."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "Vi estas en ordo."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "Ĉu io nova?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr ""
+"Jes, mi havas novan\n"
+"aparataron por vi."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr ""
+"Ne, sed mi\n"
+"prilaboradas ĝin."
+
+# 〃 (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+"Kion mi povas fari por vi? Feriso nun malĉifras kelkajn tre malsimplajn "
+"dosierojn, sed tio estos valora. Jam estas kelkaj informoj, kiujn mi povos "
+"apliki al la sekva versio de la energidona enplantaĵo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "Kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr ""
+"Vi devus lerni esti\n"
+"pli singardema."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "Kiam ĝi estos preta?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr ""
+"Mi jam finis. Atendu\n"
+"nur unu momenton..."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "Baldaŭ."
+
+# 〃 (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr ""
+"Ŝajnas, ke mi trovis cimeton en la aparataro de via enplantaĵo. Feriso "
+"helpas al mi dezajni modernigon por ripari ĝin kaj iomete pliigi ĝian "
+"rapidon. Ĉu mi povas fari ion por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "Kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "Farite, kiel nova, mi kredas."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "Ĉu modernigo?"
+
+# 〃 (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "Ha, ĉi tio iĝas serioza."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr ""
+"Mi havos ĝin tuj\n"
+"kiam Feriso finos."
+
+# 〃 (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+"Kiel vi fartas? Ulo, kelkaj el ĉi tiuj novaj teknologioj estas nekredeblaj; "
+"ili devus helpi al via enplantaĵo. Mi havas kelkajn planatajn ideojn, kiuj "
+"baldaŭ estos pretaj. Kion mi povas fari por vi? Ĉu eble kuraci vin?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "Jes, kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "Bone, farite."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "Kio pri la nova teknologio?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "Sciigu min vi mem."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr ""
+"Mi ankoraŭ\n"
+"ne finis dezajni ĝin."
+
+# 〃 (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+"Ĉu denove ĉi tie? Ĉu vi ne estas laca pri ĉi tio? Mi havas bonajn novaĵojn: "
+"Feriso trovis manieron pliigi la eligon de via enplantaĵo; li donis al mi la"
+" specifojn kaj mi provas miksi ĝin kun via fiziologio. Mi forcas kelkajn "
+"histojn, io tute nova, tio espereble prosperos. Ĉu vi bezonas kuraci vin?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "Jes, kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "Farite, nun estu singarda."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "Kiam vi finos?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr ""
+"Nun. Bonege,\n"
+"ĝi funkciis!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr ""
+"Mi atendas, ke la disvolviĝa\n"
+"ciklo de la histoj finiĝos."
+
+# 〃 (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"Nu, mi refalas miajn malnovajn trompojn: mi ankoraŭ prilaboras viajn "
+"enplantaĵojn. Ĉu vi sciiĝis, ke Macil nun rajtigis ilian uzadon al ĉiuj? Ne,"
+" ĉu? Danke al viaj bonegaj rezultoj. Ĉu mi povas fari ion por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "Helpu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr ""
+"Tio estas ĉio,\n"
+"kion mi povas fari."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "Ĉu nova enplantaĵo?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr ""
+"Jes, la plej bona,\n"
+"kiun mi havas."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr ""
+"Pardonon, sed\n"
+"vi devas atendi."
+
+# 〃 (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+"Jen ĉio, Feriso jam ekspluatis kiel eble plej multe de niaj havataj datenoj:"
+" tiu estis la lasta kaj plej bona versio de la enplantaĵo. Estas iom "
+"malfeliĉige vidi, ke mia plej bona kreaĵo atingis la supron. Nu, almenaŭ la "
+"resto de la personaro tenos min okupata."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "Ĉu vi kuracus min?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr ""
+"Farite, vi nun\n"
+"estas en ordo."
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+"La heroo. Bonege farite! Kion mi donu al vi? Estas elektaĵo iomete pli "
+"granda nun kiam ni havas la tutan arsenalon de la kastelo. Se vi bezonas "
+"plian municion, parolu kun Justin: li solvos tion."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "Mi ne havas kuglojn."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "Trejnu min."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr ""
+"Nun kelkaj konsiloj\n"
+"pri pezaj armiloj..."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr ""
+"Vi ankoraŭ\n"
+"ne estas preta."
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr ""
+"Kiel la milito iras? Nu, ne estas grave, ni estas ankoraŭ vivaj, do ĝi certe"
+" iras bone. Kion mi faru por vi?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Mi eluzis la kuglojn."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "Ĉi tiom devus helpi."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "Vi havas sufiĉe da municio."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "Trejnu min."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr ""
+"Nu, mi montros kelkajn\n"
+"trompojn por spertuloj..."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr ""
+"Vi ankoraŭ\n"
+"ne estas preta."
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr ""
+"Nu, ĉu vi serĉas trejnadon aŭ municion? Ne kredu, ke mi finis kun vi: mi "
+"rezervas kelkajn sekretajn krizokazajn trompojn."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "Ĉi-momente, municion."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "Vi havas sufiĉe da municio."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "Trejnu min."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr ""
+"Estas tempo por la\n"
+"superaj lecionoj..."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr ""
+"Vi ankoraŭ\n"
+"ne estas preta."
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"Nu, kion ĉi-foje? Ĉu vi neniam ripozas? Ĝojigas min, ke vi ankoraŭ spiras; "
+"mi malamus, ke mia plej ŝatata studanto revenus en kadavro-sako."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "Mi bezonas pliajn kuglojn."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "Jen, ne malŝparu ĝin."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "Vi havas sufiĉe."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "Kion vi povas instrui al mi?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr ""
+"Paciencon, vi ankoraŭ\n"
+"havas multajn lernotaĵojn."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr ""
+"Nenion ĝis\n"
+"vi estos preta."
+
+# 〃 (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr ""
+"Vi revenis! Pri kio vi pensas? Mi scias, ke nenio estis facila, sed ni ĉiuj "
+"taksas viajn strebojn, kredu min."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "Mi eluzis la kuglojn."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "Nenio nova. Jen."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr ""
+"Vi havas pli ol tiom,\n"
+"kiom mi povas doni."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "Instruu ion ajn al mi."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "Bone, jen kelkaj konsiloj..."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "Ne nun."
+
+# 〃 (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr ""
+"Kion vi bezonas? Mi esperas, ke vi redonas al La Ordeno tian doloron, kian "
+"ni suferis dum jaroj."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "Iom da municio."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "Jen. Ne malŝparu ĝin."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "Vi havas sufiĉe da municio."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "Trejnu min."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr ""
+"Ankoraŭ unu leciono kaj\n"
+"vi lernis ĉion, kion mi scias."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr ""
+"Vi ankoraŭ\n"
+"ne estas preta."
+
+# 〃 (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr ""
+"Estas nekredeble, ke vi kaj ni estas ankoraŭ vivaj. Ni perdis tiom multe da "
+"homoj de kiam ĉio ekis... Kion mi povas fari por vi, amiko?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "Mi ne havas kuglojn."
+
+# 〃 (〃)
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr ""
+"Jen iom da municio.\n"
+"Ŝancon kaj ĝuu ĝin."
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "Vi havas sufiĉe."
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "Trejnu min."
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr ""
+"Nu, jen ĉio, vi estas preta.\n"
+"Mi havas nenion alian por instrui."
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr ""
+"Revenu kiam Macil diros,\n"
+"ke vi estas preta."
+
+# 〃 (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr ""
+"Mi instruis ĉion, kion mi scias, kaj mi donis ĉion, kion vi povus bezoni, "
+"krom se vi ne plu havas municion: mi certe ankoraŭ povas helpi pri tio."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Vi trafis."
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "Jen."
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+"Kia novaĵo: la teleportil-signalilo. Post kiam vi uzos ĝin, ni spuros la "
+"signalon kaj sendos helpotrupojn. Ĉu estas io, kion mi donu al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "Misilet-keston"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "Vi ne povas sen mono!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "Eksplodeg-povajn grenadojn"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr ""
+"Revenu kiam vi havos\n"
+"sufiĉe da mono."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "Energi-kapsulon"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "Jen ĝi."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr ""
+"Vi ne havas\n"
+"sufiĉe da mono."
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "Teleportil-signalilon"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr ""
+"Helpo kiam kaj kie\n"
+"vi bezonos ĝin."
+
+# 〃
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr ""
+"Pardonon, ĉi tio\n"
+"ne estas almozulejo."
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr ""
+"Nun kiam ni regas la kastelon, ni devas esti duoble atentaj por konservi "
+"ĝin; La Ordeno verŝajne pretiĝas kontraŭataki iam ajn."
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Agu singarde tie ekstere."
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "Daŭrigu tiel, ni ne estus sukcesintaj sen vi."
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "Mi estas la ŝlosilestro."
+
+# 〃 (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr ""
+"Multaj homoj dirus, ke ĉi tiu estas sendanka kaj sensignifa laboro, sed ne, "
+"fakte..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "Donu al mi la ŝlosilon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "Bone, sed memoru: mi estas la ŝlosilestro."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "Jes, ulo, mi kredas vin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "Mi estas la ŝlosilestro."
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "Mortu, perfidulo!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "Mortu, perfidulo!"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr ""
+"Ĉu vi venis rikani? Eĉ se ni estas malliberaj, dum ni eltenos, vi perdos."
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "Liberigu nin!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "Ne ĝenu min!"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "Kiun saĝecon vi serĉas, simplulo?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "La Sigelon de la Vera Dio."
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+"Mi sentas, ke fragmento resonas en vi. La dua situas en la koro de la turo "
+"karmezina kaj obsidiankolora: tie vi devas batali kontraŭ la Episkopo, kiu "
+"antaŭsciis ĉi tion kaj atendas vin; vi trovos lin sekvante lian povsimbolon."
+" Donu ĉi tiun paspermeson al la ŝlosilestro. Mortiginte la beston, revenu ĉi"
+" tien."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "Mi revenos."
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr ""
+"Kvankam la Episkopo estas timindega, ĉi tiu tasko estas sensignifa. Revenu "
+"al mi kiam vi havos la sekvan fragmenton."
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+"Via sekva defio provos vian spiriton. Via propra estro posedas la trian "
+"pecon; li estas egala al tio, kion mortigi li sendas vin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "Ĉu Macil? Ĉu perfidulo?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr ""
+"Via blinda fido ebligis al li progresi en siaj celoj per ĉiu peco, kiun vi "
+"gajnas. Alfrontu lin por solvi vian destinon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "Komprenite: nun Macil."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Vi estas tiu, kiun mi ne fidas."
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr ""
+"Tio ajn, kion vi elektos, via specio malaperos laŭ la volo de la Vera Dio."
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Mi revenos kiam Macil estos mortinta."
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "Mi ne povas permesi tion."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "La tempofluo eterne iras antaŭen dum vi restas senmova."
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr ""
+"Vi saniĝis de via kancero, sed via koro ankoraŭ batas. Vi nun devas trovi la"
+" kirurgon, kiu buĉas kaj regas viajn homojn: la Folkloristo; haltigu lin kaj"
+" la sekva peco estos via."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "Kie mi trovos lin?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr ""
+"Uzu la teleportilon tra la ĵus malfermita pordo maldekstre de vi por atingi "
+"la Folkloriston. Mortiginte lin, reuzu tiun aparaton por reveni ĉi tien."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "Mi revenos... kun lia peco!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "La tempofluo eterne iras antaŭen dum vi restas senmova."
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr ""
+"Malestiminda homo, vi faris tion, kion miloj ne povis: vi portas ĉe mi la "
+"povon de la Sigelo, la voĉo de la Vera Dio."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "Mi ne komprenas."
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+"La Sigelo malfermos la pordon kaj liberigos la spiriton, kiu elpurigos ĉi "
+"tiun planedon kaj ebligos al mi vivi eterne. Mi senigos ĉi tiun mondon je "
+"ĝia energio kaj mi trovos aliajn konkerotajn."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "Mi ne povas lasi, ke vi faru tion."
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "Vi povas... se vi estas mortinta."
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+"Ĉu vi venis liberigi nin? Ili forprenis la enplantaĵon de mi ĉar mi estis "
+"obeema. Malgraŭ tio, mi devas resti ĉi-malsupre purigi."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Jes, mi venis liberigi vin."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "Ĉu vere?"
+
+# 〃
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr ""
+"Mi povas helpi neniun alian, ne dum la transmisiilo ne estos detruita; ĝi "
+"estas post la supretaĝa fortokampo. Mia laboro estas kontroli la "
+"transportajn bendojn por certiĝi, ke ili ne blokiĝis. Ne plu!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Ĝuste, vi estas savitaj!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "Ho, dankon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "Ni estas liberaj!! Liberaj!! Liberaj!!"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "Mi elfosu pliajn minaĵojn!"
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "Ni estas liberaj!! Liberaj!! Liberaj!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "Mi elfosu pliajn minaĵojn!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "Ni estas liberaj!! Liberaj!! Liberaj!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "Mi elfosu pliajn minaĵojn!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "Ni estas liberaj!! Liberaj!! Liberaj!!"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "Kial vi estas ĉi tie?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "Rutina inspektado."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "Bone, daŭrigu."
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr ""
+"Nenio raportinda ĉi tie; ĉio funkcias ĝuste. Se io ajn malsukcesos, mi certe"
+" raportos ĝin."
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Sinjoro, estis problemo, sed ni jam solvis ĝin."
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "Plue movu vin aŭ gustumu kuglojn."
+
+# 〃 (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "Kontrolo de identigilo."
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Jen, mi hastas."
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "Ĉesu skui vian identigilon super mia vizaĝo kaj eniru."
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "Nenio vidinda ĉi tie. Plue movu vin."
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "Kia sana specimeno. Vi ne bezonas mian helpon, ĉu?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Nu, jes. Macil venigis min."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr ""
+"Ŝŝ! Ne tiel laŭte se vi ne intencas, ke ni ambaŭ estu mortigitaj. Nu, kion "
+"mi faru por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "Diru kiel mi trovu la Episkopon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr ""
+"Ho, mi sciis, ke vi estis petonta tion. Rigardu malantaŭen tra la fenestro: "
+"tie estas la enirejo al la citadelo de la Episkopo. Ĝin baras fortokampo "
+"malŝaltinda nur por oficialaj vizitantoj: ne vi, ekzemple."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "Mi devas mortigi la Episkopon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"Ho, vi certe devas. Vi unue trabatu al vi la vojon en la sekurkomplekso kaj "
+"uzu la teleportilon. Vi eble pli ŝatos la duan parton: detruu la komputilon "
+"en la centra administrejo. Sen komputilo ne estas fortokampo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "Bonege, tio ŝajnas facila."
+
+# 〃
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr ""
+"Detrui la komputilon havas profiton: en ĝi estas konservitaj la planoj de la"
+" turo. Estus bedaŭrinde, ke ili malaperus... Ha ha!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "Ĉu io alia?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"Nu, oni diras, ke la ĉi-loka magazeno ricevis mendon de polvigiloj, neniigaj"
+" armiloj."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "Temas pri tio, ĉu?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "Ĉu vi ne scias la signifon de «malaperu»?"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr ""
+"Vi unue parolu al Kvincio. Mi rajtas helpi neniun ĝis li aprobos tion."
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "Kiel mi helpu vin hodiaŭ?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Kuracbendoj"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Jen viaj kuracbendoj"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr ""
+"Ili kostas dek kvin\n"
+"da oro, amiko."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "Sukurkesto"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "Jen via sukurkesto."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "Mankas mono al vi."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "Kirurgia kesto"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "Kirurgia kesto. Farite."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr ""
+"Revenu kiam vi\n"
+"havos monon!"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "Kio okazas?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "Mi nur pririgardas."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "Vi nur ne ĝenu nin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr ""
+"La templanoj baldaŭ venos por ricevi siajn novajn polvigilojn; se vi miksos "
+"vin, vi mortos."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "Ĉu polvigiloj?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr ""
+"La preferata armilo\n"
+"de la templanoj."
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+"Ili alvenis antaŭ nelonge, tial estas ĉi tiom da sekureco; mi havis la eblon"
+" vidi ilin tiam, kiam mi enŝlosis ilin. Neniu supozeble devas iri nek en "
+"tiun deponejon nek el ĝi ĝis la resto de la plotono venos peti siajn "
+"armilojn."
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "Ĉi tie oni akiras la planojn de la centra administrejo."
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr ""
+"Mi estras ĉi tiun lokon. Mia laboro estas konstrui la necesajn partojn por "
+"la dezajnoj de la robotoj de la Folkloristo. Se vi ne venis por oficialaj "
+"aferoj, mi timas, ke mi ne havas tempon babili."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "Mi venis por oficialaj aferoj."
+
+# 〃 (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+"Do vi parolis kun Timoteo. Li kaj mi kunlaboris kun la intenco penetri la "
+"misterojn de La Ordeno. Vi eble povas helpi nin; mi malfermis la pordon de "
+"la produktejo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "Ĉu vi scias, kio estas en ĝi?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr ""
+"Ĝi estas tute konfidenca sektoro. Ne nur La Ordeno estigas specon de... "
+"vivaĵo tie, mi vidis per miaj propraj okuloj strangan artefakton nomatan "
+"talismano. Neniu rajtas aliri ĝin. Oni diras, ke ĝi posedas grandan povon se"
+" ĝi estas proksime de aliaj du el sia speco."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "Mi supozas, ke vi volas ĝin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr ""
+"Ne! Se vi trovos ĝin, konservu ĝin. Ĝi eble estos utila por ke vi liberigu "
+"nin ĉiujn de ĉi tiu opresado. Mi dezirus bonŝancon, sed vi bezonos multe pli"
+" ol tion se vi iros tien..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "Kio pri tiuj misteroj, kiujn vi menciis?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr ""
+"Vi eble vidis la proksimajn ruinojn. Ŝajnas, ke la kometo, kiu koliziis "
+"kontraŭ nia planedo, fakte estas kosmoŝipo, kaj kredeble aŭ ne, ĝi originis "
+"en ĉi tiu sama mondo antaŭ longe."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "Do la fantomoj, la Vera Dio..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr ""
+"Ili estas estaĵoj, kiuj iam dominis la mondon kaj insistas pri detrui ĝian "
+"vivon. La antikvuloj sukcese sigelfermis ilin koste de siaj vivoj. Mi timas,"
+" ke mi scias nenion plian."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Dankon... Mi faros ĉion eblan."
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "Ŝancon, amiko."
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr ""
+"Parolu kun la majstro Smithy se vi havas demandojn. Mi limas min etiketi "
+"skatolojn."
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "Kion mi donu al vi, civitano?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Munici-keston"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Jen via municio."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr ""
+"Vi ne havas\n"
+"sufiĉe da mono!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "Misilet-keston"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "Jen, civitano."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr ""
+"Ĝi kostas 85 da oro,\n"
+"civitano!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "Eksplodeg-povajn grenadojn"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "Jen viaj grenadoj."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr ""
+"Ili kostas cent da oro,\n"
+"amiko!"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "Energi-kapsulon"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr ""
+"Ĝi kostas 135 da oro.\n"
+"Pardonon."
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "Kion vi bezonas?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Ledan armaĵon"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "Jen, civitano."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr ""
+"Ĉi tio ne estas\n"
+"almozulejo!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Metalan armaĵon"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "Bonega elekto, civitano."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr ""
+"Vi ne havas\n"
+"sufiĉe da mono!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "Medi-ŝirman veston"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr ""
+"Sen mono\n"
+"ne estas vesto."
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "Ion alian...?"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr ""
+"Iru ĉe Tevick en la\n"
+"dekstra ĉambro."
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "Nenio estas senpaga."
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "Kion mi donu al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Ledan armaĵon"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "Jen, civitano."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr ""
+"Ĉi tio ne estas\n"
+"almozulejo!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Metalan armaĵon"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "Bonega elekto, civitano."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr ""
+"Vi ne havas\n"
+"sufiĉe da mono!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "Medi-ŝirman veston"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr ""
+"Sen mono\n"
+"ne estas vesto."
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "Kiel mi helpu vin hodiaŭ?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Kuracbendoj"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Jen viaj kuracbendoj"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr ""
+"Ili kostas dek kvin\n"
+"da oro, amiko."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "Sukurkesto"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "Jen via sukurkesto."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "Mankas mono al vi."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "Kirurgia kesto"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "Kirurgia kesto. Farite."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr ""
+"Revenu kiam vi\n"
+"havos monon!"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "Saluton, amiko. Kion mi donu al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "Informojn"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr ""
+"Mi neniam vidis, ke iu iris en la fabrikon\n"
+"aŭ el ĝi: la fortokampo ĉiam estas ŝaltita."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "Sen mono ne estas informoj"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "Jes, kion vi ŝatus?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "Pliajn informojn"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr ""
+"Ili konstruis la fabrikon en la kometa\n"
+"kratero, kvazaŭ tio estis hazarda koincido."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr ""
+"Ulo, mi petas nur kvin\n"
+"mizerajn monerojn."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "Saluton denove. Kion vi petos?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "Pliajn informojn"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr ""
+"La fabriko fermis post la malkaŝo de la lasta\n"
+"teruraĵo de La Ordeno: la Inkvizitoro."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "Kvin da oro, bonvolu."
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr ""
+"Mi scias nenion plian. Eĉ drinkejestroj restas sen dirindaĵoj. Pardonon."
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "Saluton."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "Kion vi faras?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "Mi umas. Foriru!"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "Nu, kion mi povas doni al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Ĉu ombran armaĵon?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr ""
+"Ha, por esti aŭdata,\n"
+"sed ne vidata!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr ""
+"Foriru. Revenu kiam\n"
+"vi havos monon."
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+"Danke al Dio vi alvenis. Ŝlosilo estas necesa por eniri la fabrikon; ni "
+"ŝtelis ĝin, sed nia agento estas perdita en la katakomba sistemo sub la "
+"fortreso de La Ordeno. Mi sendis dek bonajn virojn al tiuj tuneloj por serĉi"
+" lin kaj neniu revenis. Estas io tie malsupre!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "Kia ĝi estas? Ĉu homa aŭ...?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+"Ne, neniel. Tio ajn, kio ĝi estas, vi devas batali kontraŭ ĝi por rekuperi "
+"la ŝlosilon. Farinte tion, la fabriko estas flanke de la minejo. Hastu, ĉiu "
+"sekundo estas gravega."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "Nehomaĵo, ĉu? Bonege."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "Vi perdas tempon kaj vivojn! Agu!"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "Ĉu mi povas esti pli helpa?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "Pliajn informojn"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr ""
+"Serĉu Timoteon. Mi aŭdis,\n"
+"ke li scias ion pri La Ordeno."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr ""
+"Nur ankoraŭ\n"
+"kvin da oro."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr ""
+"Mi scias nenion plian. Eĉ drinkejestroj restas sen dirindaĵoj. Pardonon."
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "Saluton."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "Kion vi faras?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "Mi umas. Foriru!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+"Se vi estas tiel senokupa, provu trovi la bluan kalikon. Miaj studoj pri La "
+"Ordeno sugestas, ke ili kaŝis ĝin ien en la manufakturo de la fabriko. Tiu "
+"artefakto estus tre valora por mi, do alportu ĝin kaj mi helpos vin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr ""
+"Vi trovis la bluan kalikon! Bone, vi unue donu ĝin kaj tiam ni "
+"interkonsentos."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "Havu, ĝi alportas misfortunon."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "Al la diablo, mi konservos ĝin."
+
+# 〃 (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr ""
+"Tiuokaze mi donos\n"
+"nenion al vi. Foriru!"
+
+# 〃 (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+"Iru al la forĝejo. La informoj, kiujn mi donis, devus permesi al vi eniri "
+"sekretan sektoron en la fabriko. Unu el la laboristoj en la forĝejo povas "
+"malfermi la pordon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "Kion mi trovos tien?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr ""
+"Mia esplorado sugestas, ke malluma povo de la antikveco estas kaŝita tie. "
+"Gardu vin!"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+"Tiu blua kaliko, kiel vi trovis ĝin? Mi esploradis La Ordenon kaj ĝiajn "
+"rilatojn kun la fora pasinteco, kaj tiu artefakto helpus min. Ni "
+"intertraktu: donu al mi la kalikon kaj mi donos informojn al vi."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "Havu, ĝi alportas misfortunon."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "Al la diablo, mi konservos ĝin."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr ""
+"Tiuokaze mi donos\n"
+"nenion al vi. Foriru!"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "Nu, kion mi povas doni al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Ĉu ombran armaĵon?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr ""
+"Ha, por esti aŭdata,\n"
+"sed ne vidata!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr ""
+"Foriru. Revenu kiam\n"
+"vi havos monon."
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+"Danke al Dio vi alvenis. Ŝlosilo estas necesa por eniri la fabrikon; ni "
+"ŝtelis ĝin, sed nia agento estas perdita en la katakomba sistemo sub la "
+"fortreso de La Ordeno. Mi sendis dek bonajn virojn al tiuj tuneloj por serĉi"
+" lin kaj neniu revenis. Estas io tie malsupre!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "Kia ĝi estas? Ĉu homa aŭ...?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+"Ne, neniel. Tio ajn, kio ĝi estas, vi devas batali kontraŭ ĝi por rekuperi "
+"la ŝlosilon. Farinte tion, la fabriko estas flanke de la minejo. Hastu, ĉiu "
+"sekundo estas gravega."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "Nehomaĵo, ĉu? Bonege."
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "Vi perdas tempon kaj vivojn! Agu!"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+"La majstro ne ŝatas vizitantojn; li ŝatas, ke ĉiu laboro estu seninterrompa."
+" Mi devas serĉi freŝajn partojn en la deponejo: kruron kaj brakon laŭ tio, "
+"kion mi memoras. Ho, bone, ne estas tempo paroli. Se mi estus vi, mi forirus"
+" por ne esti trovita."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "Kial mi forirus?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr ""
+"Mi diris, ke li\n"
+"ne ŝatas vizitantojn!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "Interese, vi havas la ĝustan talion por surhavi akolitan uniformon."
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr ""
+"Ha ha! Ne, mi ne estas la Programisto; la reala estas kaŝita. Daŭrigu trans "
+"la trejnejo por gardistoj; tre malfacila. Se vi supervivos, vi eble povos "
+"paroli kun li... aŭ mortigi lin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "Kiu vi estas?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "Vi trovos nenion se vi restas ĉi tie."
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "Foriru, kampulo!"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "Mortu, nano!"
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "Mi finfine estas libera."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "Kial vi estas ĉi tie?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "Mi estis akuzita."
+
+# 〃
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr ""
+"Harriso diris, ke mi planas mortigi la registon. Mi neniam vundus iun."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Agu singarde tie ekstere."
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr ""
+"Nu, amiko, mi helpos vin se vi helpas min. Donu 5 da oro kaj mi diros tion, "
+"kion mi scias."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "Jen la oro."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "Piki iun ne ekagigas alarmojn."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "Mi diros nenion senpage!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Mi jam diris tion, kion mi scias."
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "Saluton, amiko. Kion mi donu al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Elektrajn sagojn"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "Jen sagoj."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "Vi ne havas monon!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "Magazenon"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "Jen via municio."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr ""
+"Pardonon. Sen mono\n"
+"ne estas kugloj."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Munici-keston"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "Jen"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "Vi ne havas sufiĉe da oro!"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Munici-sakon"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "Dankon. Ĉu ion alian?"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr ""
+"Vi ne povas sen mono.\n"
+"Havu bonan tagon!"
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "Bonvenon. Kion mi montru al vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "Medi-ŝirman veston"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "Vi ne havas sufiĉe da mono."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Ledan armaĵon."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "Jen."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "Ĉu eble alian fojon?"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Metalan armaĵon"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "Ĝuu ĝin."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr ""
+"Revenu kiam vi\n"
+"povos aĉeti ĝin."
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "Kiel mi helpu vin?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Kuracbendoj"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Jen viaj kuracbendoj"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "Vi bezonas dek da oro."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "Kirurgia kesto"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "Dankon."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr ""
+"Mi donacus ĝin, sed\n"
+"ĝi kostas 25 da oro."
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "Kuracado"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "Jen. Estu atenta."
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr ""
+"Nu, ĉu vi eble povas\n"
+"aĉeti kuracbendojn?"
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+"Saluton, amiko, mi ne vidis vin ĉi tie antaŭe. Mi povas nur diri, ke mi "
+"estus atenta se mi estus vi: okazas multaj aferoj kaj estas pli bone, ke vi "
+"ne miksu vin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "Informoj"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr ""
+"En la kloako ne estas\n"
+"nur ratoj kaj robotoj."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr ""
+"Homoj bezonas monon.\n"
+"Ĉu vi atendas bonajn\n"
+"trinkmonojn el ĉi tiaj klaŭnoj?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr ""
+"Do vi revenis. Nu, vi almenaŭ scias sufiĉe por eviti, ke vi estu vundita. "
+"Kion mi nun faru por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "Pliaj informoj"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr ""
+"La registo estas nur simbolo\n"
+"pri la influo de La Ordeno."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr ""
+"Revenu kiam\n"
+"vi ŝanĝos ideon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr ""
+"Nu, vi sendube faras multe da demandoj, kvankam vi vivis tiel longe. Mi ne "
+"plendas, mi preferus paroli kun iu kiel vi anstataŭ la ĉi-tiea plimulto."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "Pliaj informoj."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr ""
+"Estas pli pri La Ordeno\n"
+"ol tio, kio okazas ĉi tie."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr ""
+"Revenu kiam\n"
+"vi ŝanĝos ideon."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr ""
+"Jen ĉio, amiko, la fonto de scio sekiĝis. Malgraŭ tio, mi diris al vi pli ol"
+" tiom, kiom mi devus."
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr ""
+"Estas malfacile aĉeti novajn ludilojn... kiam oni estas senmona. Plenumu "
+"simplan komision por mi kaj vi gajnos pli ol tiom, kiom oni povus eĉ "
+"elspezi: mi faros vin riĉulo."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "Mi havas nenian farindaĵon."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "Ne, dankon."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "Neniu preterpasas min!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+"Bona elekto. La sanktejo de La Ordeno ĉe la rojo estas ĝia neoficiala "
+"torturejo. En ĝi estas kaŝita ora kaliko. Portu ĝin al mi en la taverno kaj "
+"vi havos rekompencon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "Kiel mi supozeble faru tion?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "Mi pensu."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Pardonon, ne estas alia ŝanco. Gardistoj, mortigu lin!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr ""
+"Jen arbalesto. Vi nur celu laŭ rekta linio kaj «pum». Ne forgesu preni la "
+"belan pokalon kaj tiam renkonti min en la taverno."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Mi estos tie."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr ""
+"Kion vi atendas? Mi mem kaŝos la kadavrojn. Vi nur alportu tiun kalikon!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "Gardistoj! Mortigu la perfidulon!"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+"Jes, mi scias, vi certe pensas, ke ĉi tio estas trompo, sed mi neniam farus "
+"tion al bonega mortig-maŝino, mi ĵuras tion. Ve, ĉi tiom da malordo pro "
+"pokalo, strange. Vi nun pretiĝu: oro kaj gloro, tiel, kiel mi promesis. "
+"Prenu ĉi tiun ŝlosilon kaj la registo mem rekompencos vin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "Bonege, mi sopire atendas!"
+
+# 〃 (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "Sen kaliko ne estas mono!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Mi konservos la kalikon. Dankon."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr ""
+"Ĉu konservi ĝin?\n"
+"Mi kredas, ke ne!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "Kion vi atendas? La registo mem rekompencos vin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "Mortu, perfidulo!"
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr ""
+"Vi do estas la stultulo, kiu ŝtelis la kalikon, ĉu? Mi kaptos vin kiel "
+"ribelan ŝteliston, tiel mi plibonigos mian statuson kun La Ordeno. Kiel vi "
+"sentas, ke vi estas nevola marioneto?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "Tio estas aĉa!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "Por vi ja."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "Harris promesis monon al mi!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr ""
+"Kiel domaĝe. Ĉio, kion\n"
+"vi havos estas morto!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "Ni mortigos vin!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "Foriru!"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "Ni mortigos vin!"
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "Foriru!"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr ""
+"Kia perfekta kaŝejo por ni: sub la antikva urbodomo. La Ordeno kredas, ke ĝi"
+" ekstermis nin, sed ĉi tio estis nur memoraĵo pri tio, kio povas okazi kiam "
+"ni estas senatentaj."
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Parolu kun Macil. Li povos helpi vin."
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+"Mi aŭdis, ke Macil baldaŭ komencos ion novan. Ni bezonas grandan trafon post"
+" la lasta fiasko: ankoraŭ unu kaj ni estos sufiĉe malfortaj por daŭrigi."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr ""
+"Ĵeti kelkajn el ĉi tiuj bareloj en ilian akvo-provizadon devus egaligi "
+"iomete la eblojn."
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+"Mi laboras super io, kio donos avantaĝon al ni: ĝi pliigos vian energion kaj"
+" korpan forton. Mi jam korektis la plimulton de la cimoj. Ĉu mi povas fari "
+"ion por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "Kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr ""
+"Ulo, vi estasege en plena malordo.\n"
+"Mi vidos tion, kion mi faru."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "Ĉu energidona enplantaĵo?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr ""
+"Bonege, ĉi tio\n"
+"estos rapidega."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr ""
+"Mi ankoraŭ\n"
+"prilaboras ĝin."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr ""
+"Mi laboras super plibonigita versio de via enplantaĵo. Ĉu estas io alia, "
+"kion mi povas fari por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "Kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr ""
+"Nu, almenaŭ vi ne havas\n"
+"enuigajn komisiojn."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "Ĉu plibonigo de enplantaĵo?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr ""
+"Bone. Neniam estas\n"
+"sufiĉe da sekureco."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr ""
+"Mi preskaŭ finis,\n"
+"sed ne tute."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr ""
+"Bone, jen ĉio; preskaŭ ĉio funkcias perfekte. Restis nur kelkaj korektindaj "
+"problemoj. Ĉu vi bezonas ion alian?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "Kuracu min."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr ""
+"Kion vi intencis fari?\n"
+"Ĉu piki Kruciston?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "Ĉu plibonigo de enplantaĵo?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "Ĉi tio devus esti sufiĉa."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr ""
+"Unue mi faru\n"
+"kelkajn provojn."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr ""
+"Tio estas ĉio, kion mi momente povas fari super la enplantaĵo. Ĉu vi bezonas"
+" kuracon?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "Jes."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr ""
+"Ulo, vi estas en plena malordo.\n"
+"Mi vidos tion, kion mi faru."
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "Kion mi faru por vi?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "Mi ne havas kuglojn."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "Trejnu min."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "Bone, jen kelkaj konsiletoj..."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr ""
+"Vi ankoraŭ\n"
+"ne estas preta."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "Do vi revenis. Kion vi bezonas?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "Mi ne havas kuglojn."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "Vi havas sufiĉe da municio."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "Trejnu min."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr ""
+"Bone, ĉi tio devus esti\n"
+"sufiĉe utila nuntempe."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr ""
+"Pardonon, mi ne rajtas.\n"
+"Mi nur observas Macil-on."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+"Nu, ĉu kugloj aŭ trejnado ĉi-foje? Mi sopire atendas provi tiujn novajn "
+"kaptitajn armilojn. Fininte tion, mi povos ektrejni la aliajn."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "Mi estas sen municio."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr ""
+"Jen iom da municio.\n"
+"Ne malŝparu ĝin."
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "Vi havas sufiĉe da municio."
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "Trejnu min."
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr ""
+"Bone. Uzu ĉi tion por gvidi tiujn\n"
+"aĉulojn de La Ordeno al la infero."
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr ""
+"Revenu post kiam\n"
+"Macil ordonis tion."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr ""
+"Mi instruis al vi ĉion, kion mi ĉi-momente povas. Donu tempon al mi por "
+"elprovi la novajn armilojn... krom se vi nur bezonas pliajn kuglojn."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Ĝuste."
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "Jen."
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr ""
+"Ne uzu pafilon en la urbo; vi ekagigus la alarmon kaj ili eksendus "
+"gardistojn el la kastelo."
+
+# 〃
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "Bonvenon. Plia helpo ĉiam estas utilega."
+
+# 〃
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr ""
+"Kiam mi ankoraŭ estis en misio, ni havis okazon ekzameni akoliton antaŭ ol "
+"pliaj malamikoj alvenis, kaj ni malkovris, ke ili ne estas homoj."
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr ""
+"Ni provas malkovri, kie troviĝas la mekanismoj de la pordo de la kastelo, "
+"sed ni ankoraŭ ne sukcesis."
+
+# 〃
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr ""
+"Oni ne kaptu vin. Mi aŭdis terurajn historiojn pri tio, kio okazas al niaj "
+"homoj post ilia aresto: ili simple malaperas, nek restaĵoj nek io ajn."
+
+# 〃
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+"Jen konsilo: estu ĉiam fore de la artefaritaj soldatoj de La Ordeno. Mi plej"
+" malŝatas Lertulojn; ili estas rapidegaj!"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr ""
+"Bonvenon en la lasta fajrero da espero. Nur ni havas liberan volon por "
+"kontraŭstari al La Ordeno. Ni havas la plej intelektajn mensojn kaj multe da"
+" kapablaj homoj, sed mankas tiu... tiu, kiu estus vera problem-solvulo, por "
+"ke li donu al ni la necesan avantaĝon."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "Kion mi bezonas fari?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr ""
+"Helpu nin: helpu al ni ŝteli ilian teknologion, liberigu niajn kamaradojn, "
+"bataladu ĝismorte kontraŭ tiuj malicaj psikopatoj. Mi petas, ke vi risku "
+"vian vivon pro la vero."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "Mi aliĝos al vi!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+"Bone. Merlo plue estos via gvidanto; ŝajnas, ke ŝi jam simpatias vin. Vi "
+"kune devas malkaŝi la sekretojn de La Ordeno kaj de ĝiaj nehomaj servantoj. "
+"Estas estaĵo trans homa kompreno, kiu gvatas kaj gvidas iliajn teruraĵojn. "
+"Enŝoviĝu kaj detruu ilin."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "Mi faros tion!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "Tiu estas la spirito."
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "Bonvenon, amiko!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "Bonvolu ne vundi min."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "Se vi intencas vundi min, vi vere gajnos nenion."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "Mi scias nenion."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "Foriĝu aŭ mi vokos la gardistojn!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr ""
+"Mi iufoje deziras, ke ĉiu ribelanto simple lernu vivi kaj haltigu sian "
+"absurdon."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Lasu min sola, ĉu?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr ""
+"Mi ne estas certa, sed mi iufoje sentas, ke mi konas iujn el la akolitoj."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "La Ordeno havas ĉion tie ĉi sufiĉe bone blokita."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "Ne estas maniero, ke ĉi tio estas nur «sekureca forto»."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr ""
+"Mi aŭdis, ke La Ordeno estas tre nervoza pro la agoj de la ĉirkaŭa Fronto."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "La Ordeno neniel povos rezisti al ni."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr ""
+"Ni estas preskaŭ pretaj ekataki. La planoj de Macil sukcesas perfekte."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "Ni gardos vin dorse, vi do estu trankvila."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr ""
+"Ne proksimiĝu tiel multe al tiuj robotegoj. Ili povus disigi vin je rubo!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr ""
+"Nia glora tago baldaŭ alvenos kaj niaj kontraŭstarantoj estos detruitaj!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "Ne agu tre pigre, ni ankoraŭ havas multe da laboro."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "Macil diras, ke vi estas la nova espero. Memoru tion."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr ""
+"Foriginte tiujn ridindulojn, ni povos ĝuste rekonstrui ĉi tiun mondon."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "Memoru, ke vi ne batalas nur por vi, sed por ĉiuj ĉi-ene kaj ele."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Dum iu ajn el ni ankoraŭ povos stari, ni venkos."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "Ne haltu, kampulo."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Sekvu la veran kredon, nur tiel vi ekkomprenos."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "Nur per morto oni povas vere renaskiĝi."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "Ne interesas min aŭdi viajn sensencaĵojn."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "Se mi volus paroli kun vi, mi unue dirus tion al vi."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "Ĝenu aliulon!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "Plue piediru!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "Se la alarmo eksonas, vi nur foriĝu de antaŭ ni!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "La Ordeno elpurigos la mondon kaj gvidos ĝin al la nova epoko."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "Ĉu ia problemo? Ne, tiel, kiel mi jam pensis."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "Ĉu almozon por malriĉuloj?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "Kion vi rigardas, supraĵulo?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "Vi ne havas iom da restaj manĝaĵoj, ĉu?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "Vi, supraĵuloj, neniam komprenos nin."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr ""
+"Ha, gardistoj ne trovas nin. Tiuj stultuloj eĉ ne scias, ke ni ekzistas."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr ""
+"Ian tagon ĉiuj, krom la servantoj de La Ordeno, estos devigataj aliĝi al ni."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "Rigardu nun, sed vi scias, ke iam ĉi tiu estos via propra vizaĝo."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "Estas nenio pli malagrabla ol supraĵulo kun aĉa sintenado!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "La Ordeno detruos senprobleme vian ridindan Fronton."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "Atentu, supraĵulo. Ni konas niajn malamikojn!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "Ni estas la manoj de la destino. Furiozigi nin estas trovi forgeson!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "La Ordeno elpurigos la mondon je malfortuloj kaj koruptitoj!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "Obeu la volon de la mastroj!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "Vivu la fratoj de La Ordeno!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "Libera volo estas iluzio, kiu ligas debiluloj."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "Povo estas la vojo al gloro. Sekvi La Ordenon estas iri laŭ tiu vojo!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "Havu vian postenon inter ĝustuloj. Aliĝu al ni!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "La Ordeno defendas siajn anojn."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "Ĉu akolitoj? Ili ankoraŭ ne vidis la tutan gloron de La Ordeno."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr ""
+"Se restas iom da honoro en tiu ridinda ŝelo nomata «korpo», vi iĝos unu el "
+"la brakoj de La Ordeno."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "Ĝis!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "Dankon. Ĝis!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "Ĝis la revido!"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr ""
+"Saluton?... Komandanto! Interfono ekagiĝis: mi ricevas bildojn kaj sonon "
+"el... iu. Hola! Eliru tuj el tie... kaj forĵetu la kalikon!"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr ""
+"Nu, ĉi tiu interfono diras, ke vi estas centelcente homa. Mi estis ordonita "
+"lasi vin eniri, mi do fidos vin. Se vi perfidos min, vi pentos. Ha, "
+"parenteze, vi rajtas nomi min Merlo."
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+"Nu, ĉi tiu interfono diras, ke vi estas centelcente homa. Vi eble estas unu "
+"el ni, tial ni povus fidi nin reciproke. Mi provos vin: estas flamĵetilo en "
+"la domego de la registo; prenu ĝin kaj mi gvidos vin al ni."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr ""
+"Iru al la antikva urbodomo (Town Hall): Macil ordonis konstrui tunelon por "
+"kaj eniri kaj eliri senscie de la akolitoj."
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr ""
+"Iru tra la maldekstra pordo kaj poste tra la dekstra. La nomo de la gardisto"
+" estas Geoff; diru al li, ke vi bezonas oron."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+"Ne eniru la urbodomon: ili detruis niajn kovrilojn, ĝi do ne plu estas "
+"sekura. Detruu ĉiujn robotegojn, alinome Krucistojn, kaj mi gvidos vin al "
+"ni."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr ""
+"Detrui la Krucistojn malfermis la pordon apud la armilvendejo. Estas "
+"teleportilo en tiu stokejo; uzu ĝin."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr ""
+"Detrui la Krucistojn malfermos la pordon apud la armilvendejo. Estas "
+"teleportilo en tiu stokejo; uzu ĝin."
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr ""
+"Detruu tiom da robotegoj, alinome Krucistoj, kiom vi povas. Tiam mi gvidos "
+"vin al Macil."
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "Iru tra la pordo kaj parolu kun Macil."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr ""
+"Trovu la konektilon en la elektriza sistemo, detruu ĝin kaj portu pruvon al "
+"la registo. Konsilo: Trovu Makgufinon kaj parolu kun li."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr ""
+"Trovu la konektilon en la elektriza sistemo, detruu ĝin kaj portu pruvon al "
+"la registo. Konsilo: Trovu Makgufinon kaj parolu kun li. Li estas malsupre "
+"laŭ ŝtuparo en «la groto de la vagulo» en la purigejo de kloaka akvo."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr ""
+"Vi rompis la kuplilon, kiu kaŝis nian bazon de La Ordeno. Reiru al la "
+"urbodomo kaj mortigu la skoltojn. Tiam reiru ĉe la registo kaj donu al li la"
+" kuplilon, kiun vi rompis."
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr ""
+"Bone, la ludo estas «Fidu neniun»! Ni akiru la enirpermeson al la "
+"malliberejo: donu la rompitan kuplilon al la registo."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr ""
+"La registo estas mensogema: tiu estis la kuplilo, kiu kaŝas nian bazon de La"
+" Ordeno. Donu al li la rompitan kuplilon por akiri la enirpermeson."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr ""
+"Uzu la ŝlosilon de la provoso por atingi la ĉelaron kaj trovu manieron "
+"liberigi la kaptitojn."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr "Trovu manieron agigi la manskanilon por liberigi la kaptitojn."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr ""
+"Uzu la manon de la juĝisto por agigi la skanilon kaj liberigi la kaptitojn."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr ""
+"Danke al vi niaj kamaradoj estas liberaj. Uzu la teleportilon en la ĉelaro "
+"por reiri al la bazo."
+
+msgid "TXT_ILOG22"
+msgstr ""
+"Renkontu nian spionon Worner en la magazeno (Warehouse) de la centralo "
+"(Power Station). Detruu la energian kristalon, kiu impulsas la elektrizan "
+"sistemon, kiu tenas la ŝildon de la kastelo."
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "Ni devas eliri: la alarmo eksonis."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr ""
+"Ankoraŭ unu komisio por ke la Fronto sentu, ke sturmi la kastelon estas "
+"sekure. Macil diris al Iralo, ke li donu oron kaj trejnadon al vi. Post tio,"
+" iru ĉe la kuracisto (Hospital) de la urbo pro la enplantaĵo."
+
+# 〃
+msgid "TXT_ILOG26"
+msgstr ""
+"Iru ĉe Iralo kaj ĉe la kuracisto (Hospital) de la urbo, tiam trovu la "
+"kloakon: serĉu enirejon inter la rojo kaj la urbodomo."
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr ""
+"Ni serĉas Weran-on, kiu proklamas sin mem la Rat-reĝo. Mi estas certa, ke "
+"tio estas tre fidela priskribo."
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr ""
+"Portu la partojn de la flamĵetilo al Iralo. Drenu la rezervujon en la "
+"kastelo: en ĝia fundo estas kaŝita enirejo al la kloako, kaj ie tie estas la"
+" regilo de la pordo; detruu ĝin."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr ""
+"Fronto, li sukcesis! Li malfermis la pordojn. Sendu la sturmantojn kaj diru "
+"al Macil, ke estas tempo eniri! Ni reiru al la bazo de la Fronto."
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr ""
+"Trovu kaj mortigu la Programiston. Estas kontraŭdiraj informoj pri lia loko:"
+" en komputila ĉambro aŭ en la subtera etaĝo de templo aŭ ĉe la fundo de "
+"longa koridoro."
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "Trovu la Programiston kaj mortigu lin."
+
+msgid "TXT_ILOG46"
+msgstr ""
+"Serĉu la Orakolon kaj demandu al li pri la aliaj pecoj de la Sigelo. Li "
+"loĝas ekster la urbo en la limlando; ĝi estas apud la pordo de la kastelo."
+
+msgid "TXT_ILOG47"
+msgstr ""
+"Serĉu la Orakolon kaj demandu al li pri la aliaj pecoj de la Sigelo. Li "
+"loĝas ekster la urbo en la limlando; ĝi estas apud la pordo de la kastelo."
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr ""
+"Parolu kun la kuracisto kaj la armila trejnisto en la malsanulejo "
+"(Hospital). Serĉu la Orakolon kaj demandu al li pri la aliaj pecoj de la "
+"Sigelo: lia templo estas ekster la urbo en la limlando."
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr ""
+"Serĉu la Orakolon kaj demandu al li pri la aliaj pecoj de la Sigelo. Jen la "
+"enirejo. Mi videoregistras ĉion; mi ne malfidas pri via supervivado, sed ni "
+"ne devas ebligi, ke La Ordeno regu la Sigelon."
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr ""
+"La dua peco situas en la koro de la turo karmezina kaj obsidiankolora: tie "
+"estas la Episkopo la militestro. Ni mortigu lin: du poentojn. Portu la "
+"paspermeson de la Orakolo al la ŝlosilestro en la limlando."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr ""
+"La Episkopo havas multe da sekureco. Kio pri ŝteli uniformon kaj miksiĝi? "
+"Trovu la Episkopon, mortigu lin kaj reiru al la Orakolo."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr ""
+"Mi ĵus estis sciigita, ke ni havas informanton en la fortreso: ni iru al la "
+"malsanulejo (Hospital) lia laborejo. Vi tiam trovu la Episkopon, mortigu lin"
+" kaj reiru al la Orakolo."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr ""
+"Uzu la teleportilon al la centra administrejo kaj detruu la kernon de la "
+"komputilo, kiu tenas la fortokampon ĉe la enirejo de la turo de la Episkopo."
+" Mortiginte lin, reiru al la Orakolo."
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr ""
+"Detruu la komputilon; tio devus forigi la fortokampon. Reiru al la korto, "
+"eniru la turon kaj serĉu la Episkopon."
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr ""
+"Brave, alia peco de la Sigelo! Kia stranga fantomo eliris el la korpo de la "
+"Episkopo. De kie ĝi ŝajnis konata al mi? Reiru al la Orakolo."
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr ""
+"Laŭ informo, la fantoma energio trovita proksime de la Episkopo estas ankaŭ "
+"apud la Orakolo. Ni estu atentaj."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr ""
+"Rikter iĝis la nova frontestro. Ŝajnas, ke Macil trompis nin de la komenco: "
+"lia vera fidelo estis al La Ordeno. Kia serpento. Reiru al la Orakolo."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr ""
+"Alia peco de la Sigelo. Ni estas unu paŝo pli proksime de la libereco... kaj"
+" ankaŭ vi de mi. Reiru al la Orakolo!"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr ""
+"Vi tenas la povon de la tuta Sigelo. Kio pri fini ĉi tiun ĉapitron? Ni vidu "
+"tion, kion la Folkloristo kaŝadis."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr ""
+"Nu, kia antaŭsento. Atendu, Macil vokas nin; ni eliru el ĉi tie senvundaj."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr ""
+"La fabriko estas apud la minejo de Degnin; ĝiaj minaĵoj estas magnetaj kaj "
+"eksplodpovaj, sufiĉe por detrui fortokampojn. Ni rekuperu tiun ŝlosilon en "
+"la katakombo kaj tiam ni serĉu tiajn minaĵojn en la minejo."
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr ""
+"La fabriko estas apud la minejo de Degnin; ĝiaj minaĵoj estas magnetaj kaj "
+"eksplodpovaj, sufiĉe por detrui fortokampojn. Ĉi tiuj verŝajne estas la "
+"ruinoj, kie malaperis la agentoj de Rikter dum ili serĉis la ŝlosilon de la "
+"minejo."
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr ""
+"Tio ajn, kion ni alfrontas, es pli ol La Ordeno. La fabriko estas apud la "
+"minejo de Degnin; ĝiaj minaĵoj estas magnetaj kaj eksplodpovaj, sufiĉe por "
+"detrui fortokampojn. Ni reiru al la komunumo kaj tiam ni serĉu tiajn "
+"minaĵojn en la minejo."
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr ""
+"La fabriko estas apud la minejo de Degnin; ĝiaj minaĵoj estas magnetaj kaj "
+"eksplodpovaj, sufiĉe por detrui fortokampojn. Serĉu kolektojn de tiaj "
+"minaĵoj."
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr ""
+"Serĉu kolektojn de degninaj minaĵoj. Estas sklavigitaj elfosantoj kun siaj "
+"sinapsoj barataj de teleregataj enplantaĵoj. Detrui la transmisiilon "
+"liberigos ilin."
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr ""
+"Serĉu kolektojn de degninaj minaĵoj. Mi sugestus meti minaĵon ĉe la "
+"fortokampo kaj tiam pafi al ĝi: la rezultinta premo devus krei magnetan "
+"kampon kaj malŝalti ĝin."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr ""
+"Nun al la fabriko, tuj tra la elirejo de la minejo. Trovu kaj malŝaltu tiun "
+"maŝinon!"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr ""
+"Mi legas amasajn distordojn de cerbaj ondoj antaŭ vi. Ŝajnas, ke ni trovis "
+"ĝin. Ni eniru kaj malŝaltu ĝin!"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr ""
+"Kaj mi kredis, ke mi jam vidis ĉiajn aferojn! Ili eniras kiel homojn kaj "
+"eliras... Mi eĉ ne volas pensi pri tio. Haltigu ĉi tiun teruraĵon!"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr ""
+"Macil freneziĝis: li intence sendis 200 homojn al la morto. Reiru al li por "
+"malkaŝi la veron."
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr ""
+"La fabriko kondukas al «laboratorio» de kie ni malkovris signon de la povo "
+"de la Sigelo. Reiru al la fabriko, nia sekva paŝo al la libereco."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "Trovu kaj mortigu la Episkopon! Tiam reiru al la Orakolo."
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr ""
+"La ĵus malfermiĝinta teleportilo kondukas al la laboratorio de la "
+"Folkloristo. Ni iru malkaŝi tion, pri kio li blablais."
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr ""
+"Nu, ni eliru. Vi malŝaltis la fortokampon ĉe la turo de la Episkopo. "
+"Mortiginte lin, reiru al la Orakolo."
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr ""
+"Trovu la sanktejon apud la rojo, ŝtelu la kalikon kaj portu ĝin al Harriso "
+"en la tavern'."
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "Trovu la registon kaj parolu al li pri via rekompenco."
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr ""
+"Trovu la sanktejon apud la rojo. Iu nomata Beldin estas retenita en ĝi. "
+"«Silentigu» lin kaj donu lian ringon kiel pruvon al Rowan."
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "Trovu la lokon de la Fronto kaj parolu kun Macil."
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "Iru malsupren laŭ la ŝtuparo. Trovu Macil-on kaj parolu kun li."
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr ""
+"Iru ĉe Iralo la armil-provizanto de la Fronto; li estas post la pordo apud "
+"la armil-vendejo (Weapons). Tiam uzu la ŝlosilon, kiun Macil donis al vi, "
+"por paroli kun la registo."
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr ""
+"Trovu la konektilon en la elektriza sistemo, detruu ĝin kaj portu pruvon al "
+"la registo."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr ""
+"Trovu Derwin-on en la magazeno (Warehouse) de la centralo (Power Station). "
+"Mortigu lin kaj portu lian orelon al Mourel."
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr ""
+"Uzu la ernipermeson de Mourel por iri en la malliberejon (Prison) de "
+"Norwall. Enirinte, parolu al la provoso Montag. Trovu manieron liberigi la "
+"kaptitojn."
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr ""
+"Uzu la ŝlosilon de la provoso por atingi la ĉelaron kaj trovu manieron "
+"liberigi la kaptitojn."
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr ""
+"Parolu kun la kuracisto kaj la armila trejnisto. Renkontu nian spionon "
+"Worner en la magazeno (Warehouse) de la centralo (Power Station). Detruu la "
+"energian kristalon, kiu impulsas la elektrizan sistemon, kiu tenas la ŝildon"
+" de la kastelo."
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr ""
+"Uzu la identigilon por eniri la centralon. Detruu la energian kristalon, kiu"
+" impulsas la elektrizan sistemon, kiu tenas la ŝildon de la kastelo. Vi eble"
+" volos esplori la deponejon en la magazeno (Warehouse)."
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr ""
+"Iru al Ketrick en la kerno. Detruu la energian kristalon, kiu impulsas la "
+"elektrizan sistemon, kiu tenas la ŝildon de la kastelo."
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr ""
+"Levu la ponton per la ŝaltiloj antaŭ Sammis kaj tiam ekagigu la lifton per "
+"lia identigilo. Iru al Ketrick kaj detruu la energian kristalon."
+
+msgid "TXT_ILOG1015"
+msgstr ""
+
+msgid "TXT_ILOG1016"
+msgstr ""
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr ""
+
+msgid "TXT_ILOG1018"
+msgstr ""
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr ""
+
+msgid "TXT_ILOG1020"
+msgstr ""
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr ""
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr ""
+
+msgid "TXT_ILOG1023"
+msgstr ""
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr ""
+
+msgid "TXT_ILOG1025"
+msgstr ""
+
+msgid "TXT_ILOG1026"
+msgstr ""
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr ""
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr ""
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr ""
+
+msgid "TXT_ILOG1101"
+msgstr ""
+
+msgid "TXT_ILOG1102"
+msgstr ""
+
+msgid "TXT_ILOG1201"
+msgstr ""
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "Serĝento de La Ordeno"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr ""
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "Feriso"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "Mallibereja gardisto"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr ""
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr ""
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "Asistanto"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "Ŝlosilestro"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "Korpogardisto"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "Pridemandisto"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "Provoso Montag"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "Rikter"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Konsilisto de Macil"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "Juĝisto Wolenick"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr ""
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "Harriso"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "Submastro"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "Kaptito"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr ""
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "Armilforĝisto"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "Reaktora gardisto"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "Komencanto"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "Pordisto"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "Majstro Smithy"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "Magazena gardisto"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "Drinkejestro"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Timoteo"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr ""
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr ""
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "Gardisto de la fortresa korto"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "Sklavo"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "Gardisto de la Fronto"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "Kvincio"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "Serĝento"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "Gardisto de la templo"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "Orakolo"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr ""
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "Soldato de la Fronto"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "Programisto"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "Kuracisto"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "Gardisto"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr ""
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr ""
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Konsilisto"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr ""
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "Inspektisto"
+
+# Intended to appear in MAP19, but does not spawn.
+# 
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "Gardisto de la sekurkomplekso"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "Komputilisto"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "Makgufino"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr ""
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "Stivisto"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "Iralo"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "Gardisto de la kerno"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "Gardisto de la kloako"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "Teknikisto"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "Gardisto"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "Kamparano"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Armilisto"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr ""
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "Gerardo"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "Registo Mourel"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr ""
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr ""
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO3"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO4"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO5"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_GOOD2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_GOOD3"
+msgstr ""
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_SAD2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_SAD3"
+msgstr ""
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_BAD2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_BAD3"
+msgstr ""
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP03_2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP03_3"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP03_4"
+msgstr ""
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP10_2"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP10_3"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_MAP10_4"
+msgstr ""
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr ""
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr ""
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr ""
+"Iru tra la maldekstra pordo kaj poste tra la dekstra. La nomo de la gardisto"
+" estas Geoff; diru al li «Saluton, mi bezonas oron»."
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr ""
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr ""
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr ""
+
+msgid "TXT_SUB_LOG8"
+msgstr ""
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr ""
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr ""
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr ""
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr ""
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr ""
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr ""
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr ""
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr ""
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "Mi neniam pensis, ke mi invadus malliberejon..."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr ""
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr ""
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr ""
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr ""
+
+msgid "TXT_SUB_LOG22"
+msgstr ""
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr ""
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_LOG26"
+msgstr ""
+
+# 〃
+msgid "TXT_SUB_LOG27"
+msgstr ""
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr ""
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr ""
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr ""
+
+msgid "TXT_SUB_LOG31"
+msgstr ""
+
+msgid "TXT_SUB_LOG32"
+msgstr ""
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr ""
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr ""
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr ""
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr ""
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr ""
+"Fronto, li sukcesis! Li malfermis la pordojn. Sendu la sturmantojn kaj diru "
+"al Macil, ke estas tempo eniri!"
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr ""
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr ""
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr ""
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr ""
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr ""
+
+msgid "TXT_SUB_LOG43"
+msgstr ""
+
+msgid "TXT_SUB_LOG44"
+msgstr ""
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr ""
+
+msgid "TXT_SUB_LOG46"
+msgstr ""
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr ""
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr ""
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr ""
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr ""
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr ""
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr ""
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "Ĉu ni vere devas fidi al iu, kies sekreta templo estas verda?"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr ""
+"Ĉu «karmezina kaj obsidiankolora»? Ĉu li ne scias diri «ruĝa kaj nigra»?"
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr ""
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr ""
+
+msgid "TXT_SUB_LOG58"
+msgstr ""
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr ""
+"Mi ĵus estis sciigita, ke ni havas informanton en la fortreso. Ni iru al "
+"tio, kion ili nomas «la malsanulejo» lia laborejo."
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr ""
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr ""
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr ""
+"Nu, ĉi tio estis divenebla: «Militestro» estas egala al multaj malbonuloj."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr ""
+
+msgid "TXT_SUB_LOG65"
+msgstr ""
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr ""
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "Nu, ĉi tiu loko aspektis malgranda de ekstere."
+
+msgid "TXT_SUB_LOG68"
+msgstr ""
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr ""
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr ""
+
+msgid "TXT_SUB_LOG71"
+msgstr ""
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr ""
+
+msgid "TXT_SUB_LOG73"
+msgstr ""
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr ""
+
+msgid "TXT_SUB_LOG75"
+msgstr ""
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr ""
+
+msgid "TXT_SUB_LOG77"
+msgstr ""
+
+msgid "TXT_SUB_LOG78"
+msgstr ""
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr ""
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr ""
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr ""
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr ""
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr ""
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr ""
+
+# STRIFE1.WAD: MAP12
+# 
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+# 
+# OR
+# 
+# MAP27
+# 
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr ""
+
+msgid "TXT_SUB_LOG86"
+msgstr ""
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr ""
+
+msgid "TXT_SUB_LOG88"
+msgstr ""
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr ""
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr ""
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr ""
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr ""
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr ""
+
+msgid "TXT_SUB_LOG94"
+msgstr ""
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr ""
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr ""
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr ""
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr ""
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr ""
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr ""
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr ""
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr ""
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr ""
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr ""
+
+msgid "TXT_SUB_LOG105"
+msgstr ""
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr ""
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr ""
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr ""
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr ""
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr ""
+
+msgid "TXT_SUB_LOG200"
+msgstr ""
+
+msgid "TXT_SUB_LOG201"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr ""
+
+msgid "TXT_SUB_LOG203"
+msgstr ""
+
+msgid "TXT_SUB_LOG204"
+msgstr ""
+
+msgid "TXT_SUB_LOG205"
+msgstr ""
+
+msgid "TXT_SUB_LOG206"
+msgstr ""
+
+msgid "TXT_SUB_LOG207"
+msgstr ""
+
+msgid "TXT_SUB_LOG208"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr ""
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr ""
+
+msgid "TXT_SUB_LOG212"
+msgstr ""
+
+msgid "TXT_SUB_LOG213"
+msgstr ""
+
+msgid "TXT_SUB_LOG214"
+msgstr ""
+
+msgid "TXT_SUB_LOG215"
+msgstr ""
+
+msgid "TXT_SUB_LOG216"
+msgstr ""
+
+msgid "TXT_SUB_LOG217"
+msgstr ""
+
+msgid "TXT_SUB_LOG218"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr ""
+
+msgid "TXT_SUB_LOG220"
+msgstr ""
+
+msgid "TXT_SUB_LOG221"
+msgstr ""
+
+msgid "TXT_SUB_LOG222"
+msgstr ""
+
+msgid "TXT_SUB_LOG223"
+msgstr ""
+
+msgid "TXT_SUB_LOG224"
+msgstr ""
+
+msgid "TXT_SUB_LOG225"
+msgstr ""
+
+msgid "TXT_SUB_LOG226"
+msgstr ""
+
+msgid "TXT_SUB_LOG227"
+msgstr ""
+
+msgid "TXT_SUB_LOG228"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr ""
+
+msgid "TXT_SUB_LOG231"
+msgstr ""
+
+msgid "TXT_SUB_LOG232"
+msgstr ""
+
+msgid "TXT_SUB_LOG233"
+msgstr ""
+
+msgid "TXT_SUB_LOG234"
+msgstr ""
+
+msgid "TXT_SUB_LOG235"
+msgstr ""
+
+msgid "TXT_SUB_LOG236"
+msgstr ""
+
+msgid "TXT_SUB_LOG237"
+msgstr ""
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr ""
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr ""
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr ""
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr ""
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr ""
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr ""
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "Kiel grumblema. Mi esperas, ke vi mortigos lin poste."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr ""
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr ""
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Eble ĉar vi ne diris «bonvole»."
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "Ĉiuj estas tiel tropetemaj."
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr ""
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr ""
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr ""
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr ""
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr ""
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr ""
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr ""

@@ -1,0 +1,8121 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: jp\n"
+
+msgid "TXT_D1E1"
+msgstr "膝元迫る亡者"
+
+msgid "TXT_D1E2"
+msgstr "地獄の瀬戸際"
+
+msgid "TXT_D1E3"
+msgstr "インフェルノ"
+
+# The episode and levels' names in E4 are taken from the Bible.
+# 
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "滅びし汝の身"
+
+msgid "TXT_D2E1"
+msgstr "第三惑星:地獄"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr "休息なき生計"
+
+msgid "TXT_PLUT_EP"
+msgstr "プルトニア記"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT:邪神化"
+
+msgid "TXT_CHEX_EP"
+msgstr "チェックス クエスト"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: 格納庫"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: 原子力発電所"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: 毒素精錬所 "
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: 指令管制塔"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: フォボス研究所"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: 中央処理施設"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: コンピューターステーション"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: フォボス アノマリー"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: 軍事基地"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: 下水道"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: 異常なるダイモス"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: 収容エリア"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: 精製所"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: ダイモス研究所"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: 指令本部"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: ダムドの会堂"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: 産卵桶"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: バベルの塔"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: 神秘の要塞"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: 牢獄"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: 絶望の大地"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: 伏魔殿"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: 苦痛の館"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: 邪教の大聖堂"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "E3M6: エレボス山"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: 忘却の地"
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "E3M8: 死"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: 兎小屋"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "E4M1: 地獄の下へ"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "E4M2: 完全なる憎悪"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "E4M3: 邪悪を絶つ"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "E4M4: 手に負えない邪悪"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "E4M5: 奴等に後悔を"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "E4M6: 汝への悪逆"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "E4M7: そして地獄は従った"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "E4M8: 容赦なき者へ"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: 恐怖"
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr "Level 1: 入口"
+
+msgid "HUSTR_2"
+msgstr "Level 2: 地下堂"
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr "Level 3: ガントレット"
+
+msgid "HUSTR_4"
+msgstr "Level 4: フォーカス"
+
+msgid "HUSTR_5"
+msgstr "Level 5: 廃棄トンネル"
+
+msgid "HUSTR_6"
+msgstr "Level 6: クラッシャー"
+
+msgid "HUSTR_7"
+msgstr "Level 7: 死ぬほど単純"
+
+msgid "HUSTR_8"
+msgstr "Level 8: 悪戯と罠"
+
+msgid "HUSTR_9"
+msgstr "Level 9: 大穴"
+
+msgid "HUSTR_10"
+msgstr "Level 10: 補給基地"
+
+# Alternative title:
+# Circle of Death 
+msgid "HUSTR_11"
+msgstr "Level 11: 破滅の'O'!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: 工場"
+
+msgid "HUSTR_13"
+msgstr "Level 13: 市内"
+
+msgid "HUSTR_14"
+msgstr "Level 14: 最深巣窟"
+
+msgid "HUSTR_15"
+msgstr "Level 15: 工業地帯"
+
+msgid "HUSTR_16"
+msgstr "Level 16: 郊外"
+
+msgid "HUSTR_17"
+msgstr "Level 17: 安アパート"
+
+msgid "HUSTR_18"
+msgstr "Level 18: 中庭"
+
+msgid "HUSTR_19"
+msgstr "Level 19: 要塞"
+
+msgid "HUSTR_20"
+msgstr "Level 20: 捉らえた!"
+
+msgid "HUSTR_21"
+msgstr "Level 21: 涅槃"
+
+msgid "HUSTR_22"
+msgstr "Level 22: 地下悪霊墓所"
+
+msgid "HUSTR_23"
+msgstr "Level 23: 戯れのバレル"
+
+msgid "HUSTR_24"
+msgstr "Level 24: 裂け目"
+
+msgid "HUSTR_25"
+msgstr "Level 25: 血の滝"
+
+msgid "HUSTR_26"
+msgstr "Level 26: 廃鉱山"
+
+msgid "HUSTR_27"
+msgstr "Level 27: モンスターマンション"
+
+msgid "HUSTR_28"
+msgstr "Level 28: 悪霊の世界"
+
+msgid "HUSTR_29"
+msgstr "Level 29: 極限の存在"
+
+msgid "HUSTR_30"
+msgstr "Level 30: 罪の聖像"
+
+msgid "HUSTR_31"
+msgstr "Level 31: ウルフェンシュタイン"
+
+msgid "HUSTR_32"
+msgstr "Level 32: グローシュ"
+
+msgid "HUSTR_31B"
+msgstr "Level 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Level 32: キーン"
+
+msgid "HUSTR_33"
+msgstr "Level 33: 裏切り"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: 地球基地"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: 生物工学実験室"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: 死の渓谷"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: 地獄山脈"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: 生体解剖"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: 血のインフェルノ"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: バロンの晩餐"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: 悪意の墓"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: デーモンの行進"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: コンゴ川"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: 魂の井戸"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: アステカ"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: 檻の中"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: ゴーストタウン"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: バロンの隠れ家"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: 囚われの庭"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: 領地"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: 屠殺場"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: 猛襲"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: 逃走"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: スピード"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: 地下聖堂"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: 創世記"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: 黄昏"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: 予兆"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: 調合"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: ニューロスフィア"
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr "Level 19: 野郎"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: 死の領域"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: スレイヤー"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: 不可能な任務"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: 墓石"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: 最後のフロンティア"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: 暗黒の神殿"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: バンカー"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: アンチキリスト"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: 下水道"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: オデッセイのノイズ"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: 地獄の関門"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: サイバーの巣"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: 逝ってこい"
+
+msgid "THUSTR_1"
+msgstr "Level 1: 制御システム"
+
+msgid "THUSTR_2"
+msgstr "Level 2: 人肉晩餐会"
+
+msgid "THUSTR_3"
+msgstr "Level 3: 制御室"
+
+msgid "THUSTR_4"
+msgstr "Level 4: 虫喰い穴"
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr "Level 5: 格納庫"
+
+msgid "THUSTR_6"
+msgstr "Level 6: 狩猟解禁"
+
+msgid "THUSTR_7"
+msgstr "Level 7: 監獄"
+
+msgid "THUSTR_8"
+msgstr "Level 8: メタル"
+
+msgid "THUSTR_9"
+msgstr "Level 9: 牙城"
+
+msgid "THUSTR_10"
+msgstr "Level 10: 償還"
+
+msgid "THUSTR_11"
+msgstr "Level 11: 貯蔵施設"
+
+msgid "THUSTR_12"
+msgstr "Level 12: 火口"
+
+msgid "THUSTR_13"
+msgstr "Level 13: 核廃棄物加工所"
+
+msgid "THUSTR_14"
+msgstr "Level 14: 製鉄所"
+
+msgid "THUSTR_15"
+msgstr "Level 15: 危険地帯"
+
+msgid "THUSTR_16"
+msgstr "Level 16: 最深部"
+
+msgid "THUSTR_17"
+msgstr "Level 17: 処理地帯"
+
+msgid "THUSTR_18"
+msgstr "Level 18: 製粉所"
+
+msgid "THUSTR_19"
+msgstr "Level 19: 出荷と再生成"
+
+msgid "THUSTR_20"
+msgstr "Level 20: 中央処理所"
+
+msgid "THUSTR_21"
+msgstr "Level 21: 行政センター"
+
+msgid "THUSTR_22"
+msgstr "Level 22: 生息地"
+
+msgid "THUSTR_23"
+msgstr "Level 23: 月面探鉱計画"
+
+msgid "THUSTR_24"
+msgstr "Level 24: 採石場"
+
+msgid "THUSTR_25"
+msgstr "Level 25: バロンの巣窟"
+
+msgid "THUSTR_26"
+msgstr "Level 26: バリステュクス"
+
+msgid "THUSTR_27"
+msgstr "Level 27: 苦しみの山"
+
+msgid "THUSTR_28"
+msgstr "Level 28: 苛立ち"
+
+msgid "THUSTR_29"
+msgstr "Level 29: 三途の川"
+
+msgid "THUSTR_30"
+msgstr "Level 30: 最終指令"
+
+msgid "THUSTR_31"
+msgstr "Level 31: ファラオ"
+
+msgid "THUSTR_32"
+msgstr "Level 32: カリビアン"
+
+msgid "HHUSTR_E1M1"
+msgstr "埠頭"
+
+msgid "HHUSTR_E1M2"
+msgstr "地下牢"
+
+msgid "HHUSTR_E1M3"
+msgstr "門塔"
+
+msgid "HHUSTR_E1M4"
+msgstr "監視塔"
+
+msgid "HHUSTR_E1M5"
+msgstr "要塞"
+
+msgid "HHUSTR_E1M6"
+msgstr "大聖堂"
+
+msgid "HHUSTR_E1M7"
+msgstr "地下聖堂"
+
+msgid "HHUSTR_E1M8"
+msgstr "地獄の肚"
+
+msgid "HHUSTR_E1M9"
+msgstr "墓場"
+
+msgid "HHUSTR_E2M1"
+msgstr "噴火口"
+
+msgid "HHUSTR_E2M2"
+msgstr "溶岩の竪穴"
+
+msgid "HHUSTR_E2M3"
+msgstr "火の河"
+
+msgid "HHUSTR_E2M4"
+msgstr "氷の洞窟"
+
+msgid "HHUSTR_E2M5"
+msgstr "地下墓所"
+
+msgid "HHUSTR_E2M6"
+msgstr "迷宮"
+
+msgid "HHUSTR_E2M7"
+msgstr "大公会堂"
+
+msgid "HHUSTR_E2M8"
+msgstr "混沌への門"
+
+msgid "HHUSTR_E2M9"
+msgstr "氷河"
+
+msgid "HHUSTR_E3M1"
+msgstr "倉庫"
+
+msgid "HHUSTR_E3M2"
+msgstr "汚水層"
+
+msgid "HHUSTR_E3M3"
+msgstr "合流点"
+
+msgid "HHUSTR_E3M4"
+msgstr "紺碧の要塞"
+
+msgid "HHUSTR_E3M5"
+msgstr "オフィディアンの塒"
+
+msgid "HHUSTR_E3M6"
+msgstr "恐怖の館"
+
+msgid "HHUSTR_E3M7"
+msgstr "裂け目"
+
+msgid "HHUSTR_E3M8"
+msgstr "デ’スパリルの間"
+
+msgid "HHUSTR_E3M9"
+msgstr "帯水層"
+
+msgid "HHUSTR_E4M1"
+msgstr "棺台"
+
+msgid "HHUSTR_E4M2"
+msgstr "丸太小屋"
+
+msgid "HHUSTR_E4M3"
+msgstr "遊歩道"
+
+msgid "HHUSTR_E4M4"
+msgstr "埋葬所"
+
+msgid "HHUSTR_E4M5"
+msgstr "大階段"
+
+msgid "HHUSTR_E4M6"
+msgstr "背教者の館"
+
+msgid "HHUSTR_E4M7"
+msgstr "破滅の塁壁"
+
+msgid "HHUSTR_E4M8"
+msgstr "崩落の橋"
+
+msgid "HHUSTR_E4M9"
+msgstr "霊廟"
+
+msgid "HHUSTR_E5M1"
+msgstr "黄土絶壁"
+
+msgid "HHUSTR_E5M2"
+msgstr "奔流"
+
+msgid "HHUSTR_E5M3"
+msgstr "岸壁"
+
+msgid "HHUSTR_E5M4"
+msgstr "中庭"
+
+msgid "HHUSTR_E5M5"
+msgstr "ヒュドラテュール"
+
+msgid "HHUSTR_E5M6"
+msgstr "柱廊"
+
+msgid "HHUSTR_E5M7"
+msgstr "悪臭の牧師館"
+
+msgid "HHUSTR_E5M8"
+msgstr "審判之地"
+
+msgid "HHUSTR_E5M9"
+msgstr "デ'スパリルの枷"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "エリア 1: 聖域"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "エリア 2: 町\n"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "エリア 3: フロント基地"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "エリア 4: 発電所"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "エリア 5: 刑務所"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "エリア 6: 下水道"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "エリア 7: 城"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "エリア 8: 観客席"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "エリア 9: 城内:プログラマーの間"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "エリア 10: 新フロント基地"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "エリア 11: 国境地帯"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "エリア 12: オラクルの神殿"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "エリア 13: 地下墓所"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "エリア 14: 鉱山"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "エリア 15: 要塞:管理室"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "エリア 16: 要塞:ビショップの塔"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "エリア 17: 要塞:ベイリー"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "エリア 18: 要塞:商店"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "エリア 19: 要塞:複合警備所"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "エリア 20: 工場:受取所\n"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "エリア 21: 工場:製造機関"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "エリア 22: 工場:鉄工所"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "エリア 23: オーダーコモンズ"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "エリア 24: 工場:改宗礼拝堂"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "エリア 25: 地下墓所:没落した寺院"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "エリア 26: 試練場"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "エリア 27: 研究所"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "エリア 28: エイリアンの船"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "エリア 29: エンティティの隠れ家"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "エリア 30: 放棄された基地"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "エリア 31: 研修施設"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "エリア 1: 聖域 "
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "エリア 2: 町"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "エリア 3: 移転基地"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "エリア 35: 工場 : 生産ライン"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "エリア 36: キャッスルクラッシュ"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "エリア 37: 殺害者の地"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "エリア 38: カオスの秩序"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "選抜の間"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "漆之門"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "氷の守護者"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "炎の守護者"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "鋼の守護者"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "光の坩堝"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "陰影樹"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "暗黒の地"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "キルケーの洞窟"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "荒野"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "神聖なる園"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "多柱の間"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "ヘレシアークの神学舎"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "ドラゴンの庵寺"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "グリフィンの庵寺"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "デスウィンドの庵寺"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "哀悼茂る園"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "寡黙なる食堂"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "狼の庵寺"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "荒れ果てた前哨地"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "嘆きの城"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "晒し台"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "腐臭漂う残骸"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "地下牢"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "荒涼とした庭"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "ネクロポリス"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "ゼデクの墓"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "メネルキルの墓"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "トダクティスの墓"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "ビバリウム"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "暗黒の坩堝\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "廃村"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "疫病"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "汚水槽"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "カタコンベ"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "不毛地帯"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "ワラビの樹"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "火葬薪"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "城守達の門"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "宝庫"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "市場"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "祈祷師の軌跡"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "試練"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "武器庫"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "身廊"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "小礼拝堂"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "屠殺場"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "闇の刻計"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "排泄腔"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "氷結"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "暗黒の城塞"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "変遷"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "天と地"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "死の霧"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "苦しみの城"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "地下溝穴"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "薔薇"
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"火星基地から巨悪をこの手で一掃し\n"
+"勝利を収めたはずだ。だがこれはいったい何だ?\n"
+"巨額の報酬と帰還チケットは? \n"
+"ふざけやがって、決着はまだついていない!\n"
+"\n"
+"どうやら地獄の泥沼に膝まで浸かってしまい、\n"
+"そのまま沈むしかないようだ。\n"
+"肉の腐敗臭がする、滅んだダイモス基地に。\n"
+"\n"
+"この運命を受け入れ、地獄の瀬戸際か\n"
+"或いは脅威なる インフェルノ へ立ち向かえ!\n"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+"よくやった! 滅んだダイモス基地を支配していた\n"
+"サイバーデーモンはナマクラの鉄屑と化した! \n"
+"だが...ここは一体何処だ?\n"
+"外壁の縁をよじ登りその鉄屑にも劣る現実に直面にした。\n"
+"\n"
+"ダイモスの大地が地獄に浮いている!\n"
+"しかもその眼下では奴等がまだ蠢いてやがる。\n"
+"\n"
+"誰の手も借りず地獄から逃げ出せた人間の話を\n"
+"聞いたことも無いが、誰がここへ来たか奴等に思い知らせ、\n"
+"後悔させる為にも今すぐ インフェルノ へ降り立て!\n"
+"\n"
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+"火星基地の侵略を企て多くの死をもたらした\n"
+"忌々しいスパイダーマスターマインドは、\n"
+"その権威と共に地に伏した。\n"
+"\n"
+"この屈強さには地獄さえ抗えず死者のように平伏し、\n"
+"封鎖されていた地獄の門を正面からくぐり抜けた! \n"
+"まだ緑の豊かさが残っている地球の故郷に遂に辿り着いたのだ。\n"
+"\n"
+"君は魔物共と戦っている間、地球では何が起こったかを\n"
+"不思議に思った。地獄からの使者が同じ門をくぐれなかったのは\n"
+"幸運なのかもしれない...\n"
+"\n"
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+"スパイダーマスターマインドは恐るべき地獄の軍勢を君との決着の前から\n"
+"地球に送り込んでいたに違いない。それでも君は突き進み、\n"
+"真の英雄として邪悪な獣たちに永遠の天罰と苦痛を下した。\n"
+"\n"
+"それに君のペットのウサギ、デイジーの死の代償は奴等に\n"
+"払わせなければいけない。\n"
+"\n"
+"仇は取った。しかし今、見渡す限り我々の街は血溜まりと化し\n"
+"肉片が撒き散らされ、苦痛をもたらす悪魔が\n"
+"さらなる血に狂いひしめいている。\n"
+"\n"
+"次の戦いは「第三惑星 地獄」だ!"
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+"怪物共に蝕まれた宇宙港に足を踏み入れる。だが何かがおかしい。\n"
+"奴等の世界から影響を及ぼしてこの地を変異させ宇宙港の機能を\n"
+"妨害しているのだ。\n"
+"\n"
+"前方に地獄の前哨、要塞地帯が見える。そこを切り抜け\n"
+"宇宙港の中心に辿り着けば生存者を解放する宇宙船のスイッチが\n"
+"見つかるはずだ。\n"
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+"勝利した!人類をこの世の地獄から脱出させ絶滅の悪夢から救ったのだ。\n"
+"そして自分が最後の地球人となった。\n"
+"デーモンもとい人食いエイリアン、共食いミュータント、\n"
+"くどい怨嗟のゴースト、そして死体だけが隣人だ。\n"
+"人類への最善を尽くし、後は座して死ぬ時を待った。\n"
+"\n"
+"だがその時、地球管理センターが宇宙からの通信を送ってきた。\n"
+"''エイリアン達による侵略の拠点をセンサー群が捕捉した。\n"
+"そこに向かえば、侵入を阻止出来るかもしれない。\n"
+"奴等の基地は宇宙港からはそこまで遠くない、\n"
+"君の故郷の街の中央にある位置だ。''\n"
+"君は痛みとともに悠然と立ち上がり、戦場へ戻った。"
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+"君は破壊された街の中心部で、殺した敵の死体に囲まれている。\n"
+"化け物たちが侵入するための入り口をこちらから破壊することは\n"
+"不可能だと判断し君は歯を食いしばり、そこへと突き進んだ。\n"
+"\n"
+"反対側に行けば、これを閉じる方法があるに違いない。\n"
+"そのためには地獄に突入しなければいけないが、\n"
+"それを躊躇する必要はもはやないはずだ。\n"
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+"剥き出しの脳めがけてロケット弾をぶちこみ続けた後、\n"
+"今までに見たこともないほど巨大で醜悪な悪魔の顔面は、\n"
+"君の前に崩れ落ちた。\n"
+"怪物は生気を失い、死に絶えた。この怪物が死に際に震わした四肢は、\n"
+"地獄の広大な大地を波打たせた。 \n"
+"\n"
+"君は成し遂げた。悪魔の侵略はとうとう終わった。\n"
+"地球は救われ、地獄は破壊された。\n"
+"悪人どもが死んだ時、奴等はこれからどこに行くのだろうか?\n"
+"君は額から汗を拭い、故郷への長い帰路を歩き始めた。\n"
+"地球を復興させるのは、滅ぼすよりもずっと楽しいに違いない。"
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+"おめでとう、君は隠しステージを発見した!\n"
+"どうやらこの場所は悪魔ではなく、人間たちによって作られたようだ。\n"
+"地獄の片隅には、どんな罪人がいるのだろうか?"
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+"おめでとう、君はスーパー隠しステージを発見した!\n"
+"あのブレイズ坊やが見つかるかもしれないぞ!"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+"蒸し焼きになった地獄の番人を見てほくそ笑み、\n"
+"アクセラレーターを遺体の手からもぎ取った。\n"
+"駄目だ!1つぐらい稼働している試作機があると思ったが\n"
+"全て奴等が奪ったに違いない。\n"
+"\n"
+"どうにかして試作機を見つけなければ今までの闘争が無駄になってしまう。\n"
+"とにかく走れ、戦い続け、殺し続けろ。\n"
+"ああそうだ、生き続けながらな。\n"
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+"アホチバイル共のイカれた迷路でさえも俺を止める事は出来なかったが、\n"
+"ようやく辿り着いたアクセラレイターの試作機が機能しなくなるのを\n"
+"止める事も出来なかった。\n"
+"\n"
+"いつものことじゃねえか。\n"
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+"悪魔共の中枢なる掃溜めへと向かう道を切り開いた。\n"
+"さあ狩りの時間だ、獲物は地球にクソガキを吐き出し続ける\n"
+"老廃物のゲートキーパー。\n"
+"悪しき者に相応しい末路を迎えさせるのだ!\n"
+"\n"
+"ありったけの得物を持ち込んで、邪悪に微笑み、\n"
+"奴等が地獄を知るのを楽しみにしながら!\n"
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+"ゲートキーパーの間抜け面が辺り一面に散らばった。\n"
+"亡骸は崩壊を続け、裏返った異次元ゲートが殺し損ねたゴミ共を\n"
+"最後のアクセラレータもろとも吸い込んでいった。\n"
+"任務は完了した。地獄は元通り悪人を裁く役目を果たすだろう。\n"
+"\n"
+"なので君には俺の棺桶にロケットランチャーを供えるよう伝えておく。\n"
+"いつか死に、デイジーの元に迎え入れなければ、\n"
+"あの世のゴミ共へ最後の審判を下す為に..."
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+"俺が現在知る中で2番目に困難な場所を見つけてしまった。\n"
+"バックアップを取っておくべきだったと思うだろう。\n"
+"そうでないなら、虫けらのような扱いを受けるだけだ。\n"
+"最悪な一時かもな。\n"
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+"もっとも困難な場所が何なのか気になっているだろう。\n"
+"それを今思い知る。\n"
+"大した苦難を受けてなかったことを。"
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"侵略された研究施設を抜け出すことが出来た。\n"
+"UACはまたもやられてしまったようだ。\n"
+"最近の大量雇用により、金の無いUACでは\n"
+"健康保険を宛がうことも難しいだろう。\n"
+"\n"
+"この先にある軍事複合施設には、今は病んだ怪物共が\n"
+"その歯を突き立てようと犇めいている。\n"
+"だが幸いかな、施設内には御誂え向きの兵器類が\n"
+"転がっているようだ。\n"
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"重工機械の稼働音が鳴っている。\n"
+"新しい地獄製造機ではないと願うが、必要とあらば\n"
+"そいつらを黙らせる準備をしなければ。\n"
+"\n"
+"向こうも虐殺の宴を計画しているだろう、\n"
+"2000体の狂人が1人の殺人鬼に詰め込まれたような興奮を覚えた。\n"
+"しかし、容易くは無いな。\n"
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"前方に開けている景色は見飽きたものだ。\n"
+"臭いもよく知っている -- 煮えた排泄物のようなヤツ。\n"
+"この場所は気に入らないし、気に入る予定もない。\n"
+"考えれば考える程、気が滅入る。\n"
+"\n"
+"武器を持ち上げると、邪悪な笑みが自分の顔に徐々に迫ってきた。\n"
+"ぶちのめしてやろうと。\n"
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"突如、地平線の彼方まで静寂が全てを包んだ。\n"
+"地獄から響く苦悶の声は消え去り、悪夢の空は青い夜空へと、\n"
+"充満していた悪臭と共に死体の山は蒸発した。\n"
+"\n"
+"あぁ、恐らくやり遂げたのだろう。\n"
+"...だが、本当に勝ったのだろうか?\n"
+"\n"
+"何かが遠くで鼓動している。\n"
+"崩壊した痰製造機の頭蓋骨から青い光が灯った...\n"
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"今度は何だ? 何もかも別物だ。\n"
+"まるでツタンカーメンの国ではないか。\n"
+"まぁ、ここにある全ては普段と変わらず悪い所なぞ無い。\n"
+"わけあるか? もしくは、眠れる神を放っておくのが\n"
+"きっと最善なのだろう...\n"
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"休息の時が来た。地獄の中枢を粉砕し\n"
+"神は君に休息を与え給うた。君は呟く、\n"
+"今度は別の誰かが、地獄に一泡吹かせるだろうと。\n"
+"静かな街へ向かおう。流れる水、古風な街並み、地獄の使者の居ない。\n"
+"\n"
+"テレポーターに足を踏み入れた瞬間、あの鋼鉄牛の蹄が\n"
+"踏み鳴らされる音が聞こえた。"
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+"厄介事は君のお気に入りのリゾート地、地獄でまた発生していた... \n"
+"サイバーデーモンのバカが、地獄をヤツの遊び場にできるとでも\n"
+"思っていたんだ。そして地球は、そのチケット売り場になる予定だった。\n"
+"\n"
+"まあ、あの半身ロボットの見世物野郎は、\n"
+"一体誰がそのお祭りに来るのかを考えていなかったようだ。\n"
+"たくさんの化け物たちを撃ちまくる射撃訓練場みたいに、\n"
+"気持ちが良いことはないからな。\n"
+"\n"
+"そしてサイバーデーモンが倒れ、金属の脚が床に崩れ落ちた。\n"
+"この音は、悪魔の迷宮の壁に響き渡った。\n"
+"サイバーデーモンの死前喘鳴が、彼の削がれた顔面から漏れてきている。\n"
+"\n"
+"この地獄のアトラクションは、運行休止となった。"
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+"アイアンリッチとその手下たちが滅ぼされたことにより、\n"
+"アンデッドは一匹残らずこの世界から消滅した。\n"
+"\n"
+"この怪物達は、別の場所から此処へ来る必要があったらしい、\n"
+"故に、地獄の肚と呼ばれる燃え盛るポータルが\n"
+"奴等の住処と繋がっているのではという不審感を覚えた。\n"
+"\n"
+"更なるアンデット(もしくはそれ以上の者)が押し寄せるのを\n"
+"阻止する為、そこを通り地獄へのポータルを封印する手段を\n"
+"探さなければならない。だがそれで貴方が不倶戴天の世界に\n"
+"立往生する事態となっても、異端者と攻め立てる権利は誰にも無い!\n"
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+"強靭と自負していたマウロタウロスは貴方に肩を並べるほど\n"
+"鍛えていなかったようで、その焼け焦げた牛の死体が\n"
+"貴方の満足感を満たした。\n"
+"\n"
+"守護されていたゲートが開き、元の世界に戻る道が出来た。\n"
+"しかし通り抜けた瞬間、嘲た笑い声が鳴り響いた。\n"
+"何者がマウロタウロスを支配していたか?\n"
+"この門の向こうにさらなる脅威が待ち受けるのか?\n"
+"頭上に広がる透き通ったクリスタルドームを見るに\n"
+"良い兆候は決して訪れないと確信した....\n"
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+"デ'スパリルの死によって魔法による従僕達は解放され\n"
+"その風靡なる死の悲鳴に貴方は圧倒された。\n"
+"復讐の誓いは成し遂げられ、元の世界へ戻るポータルを\n"
+"通った瞬間、ドームが崩壊し数百万の破片と化した。\n"
+"\n"
+"だがデ'スパリルの魔力が永久に破壊されたなら\n"
+"安全だと思うはずだろう?\n"
+"奴の死の直前、呪文のような叫びが最後に聞こえた\n"
+"ような?何かが召喚された? \n"
+"もしくはただの悲鳴だったのか?\n"
+"\n"
+"それとも、また別のサーペントライダーがいたのか?"
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+"貴方はデ'スパリルの死後、元の世界に戻れるはずだったが\n"
+"あの死に際の呪文により既に征服され破壊された古蹟へ\n"
+"送られてしまった。先程その守護者を打ち倒し、次いで\n"
+"要塞への門前に迷わず進み出た。この瞬間まで更なる脅威に\n"
+"立ち向かう魔力を疑う余地は持たなかった。\n"
+"だがそのポータルを抜けた先には世界侵略を企てる\n"
+"諸悪の根源が待ち構えている。デ'スパリルは死んだ、\n"
+"しかし彼奴のいた居城はまだ残っている。\n"
+"解決策を得る為その門に突入する必要がある。\n"
+"\n"
+"そして何処か、デ'スパリルの領地で専属の者が\n"
+"暗黒の僻地で待ち構えているだろう。\n"
+"\n"
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+"最後のマウロタウロスが死際の咆哮を放った時、\n"
+"貴方の所業が無謀ではないと証明された。\n"
+"デ'スパリルとその従僕達との闘いでさえ\n"
+"絶望的ではなかった。目前の開いた門を眺め\n"
+"手下達が自ら帰還するのか、或いは夢にも思わぬ\n"
+"恐怖に陥るか疑問に思った。自分にも立ち向かう力が\n"
+"あるかわからないが、死と苦痛以外残っていないだろう。\n"
+"だが戦う意思がなければ他に何が出来るのか? \n"
+"絶望に直面しても立ち向かう事を強制するか? \n"
+"そんな度胸はあるのか? \n"
+"わかっている、結局のところ、戦い無しに降伏することは\n"
+"有り得ないことだ。長い目で見れば己の運命は\n"
+"決まっていたと。"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"この地を封印していた漆之門を超えると広大で過酷な荒野が\n"
+"目前に広がっている。火、氷、そして鋼が貴方に試練を与えた、\n"
+"しかしそれを超える試練は残っている。\n"
+"鬱蒼とした森の絡み合いは敵対的な目を隠し視野を狭める。\n"
+"\n"
+"不毛の砂漠、湿った沼地、そしてカビの生えた洞窟が\n"
+"行く先を妨げているが、貴方が例えそれを望んでいても\n"
+"己の運命から遠ざけることは出来ない。\n"
+"\n"
+"故に、遠くでちらつく、聳え立つ柱の間は貴方のあらゆる\n"
+"努力を嘲ている様にも思える。"
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"貴方は聳え立つ柱の間での遭遇に動揺したが\n"
+"よろめきながら出口らしき所に向かった。\n"
+"そして視界がぼやけ始め、物が目まぐるしく回り出す...\n"
+"周りの世界が崩れ、転移門の光が貴方を飲み込んだ。\n"
+"閃光が輝き、そして疲れ果てていた貴方は足元に座り込んだ。\n"
+"\n"
+"高い塔の頂上に出たらしく下層から呪われた者達の悲鳴が\n"
+"響いてくる。貴方は一歩踏み出し、その悪魔達の詠唱を聞き\n"
+"血の気が引いた。\n"
+"\n"
+"何処から来たというのだ?死の神々よ!\n"
+"苦痛の神々から、どうやって逃げ出せるだろうか?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"古代人の強力な武器やアーティファクトはヘレシアークと\n"
+"その手下達を倒す程には足り、奴等の残骸は貴方の足元に\n"
+"散乱している。貴方は最後の魔力を集め、ヘレシアークの\n"
+"秘めた聖域へ通じるポータルに入る準備を始めた。\n"
+"\n"
+"頭上に巨大な織旗の掛かった城壁が見える。\n"
+"無音の塔と剥き出しの壁が黒い石の一本の尖塔を囲んでいる。\n"
+"窓から灯った火の影から不気味な何十もの目が貴方に\n"
+"向けられている。敵は何処にでも潜んでいるらしい..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"...そして彼は絶望の門を越え、死者の国にいる勢力と\n"
+"争う為に旅立った。\n"
+"しかし、彼が再び光の世界に戻れたかは誰も知らない。'\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"忌々しい。"
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"悲痛な叫びと共に貴方は別の世界に追いやられ\n"
+"自分の体が神秘的な炎により癒されていった。\n"
+"視界が戻ると、霊の威嚇する声と影が蔓延る壮観な広間に\n"
+"立っていた。遠くには盛り上がった大皿が見え、\n"
+"その上にこの場所で唯一の光が灯っている。"
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"カオススフィア、コラックスの魔力の源だ。\n"
+"これを使えば世界を創造することが出来る...または破壊することも。\n"
+"征服者の権利を得た貴方は震える手をそれに伸ばした。\n"
+"恐らく、今、新しい挑戦者が宇宙の権力ゲームに加わった。\n"
+"クイーンに成ったポーンの様に突然、世界が貴方の手に\n"
+"届く位置にあるのだ。"
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\nしかし貴方より上手の挑戦者はいる、\n"
+"そして誰が彼らの一手を読めるだろうか?"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"傷付き出血した顔を手で拭い、これから先を考える為に\n"
+"正気を保とうとした...\n"
+"\n"
+"...背負っているもの事も忘れながら。\n"
+"\n"
+"遠くで大きな城の複合体の殺風景な城壁が上空を劈く様に\n"
+"そして数え切れない程荒らされた墓地から\n"
+"死者の腐臭が漂っている。\n"
+"\n"
+"殆ど残っていないアーティファクトを注意深く数え、\n"
+"貴方は十分足りるだろうと自分自身を納得させた。\n"
+"だが結局、それで間に合うではないか、そうだろう?\n"
+"\n"
+"\n"
+"\n"
+"そうだろう?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"この世界には地獄に堕とされた善人や親切であろう\n"
+"人々の魂が居着いている。\n"
+"\n"
+"しかし通過する際には前方を遮る薄いもやでしかない\n"
+"暗黒城塞そのものだ。\n"
+"\n"
+"垣根の要塞が断片的な部分を除いて大聖堂の全てを封鎖しているが、\n"
+"見ただけで冷徹な死の低徊が囁かれている。\n"
+"\n"
+"\n"
+"\n"
+"...幸福な者に向けて。"
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"貴方は今一度、あたかも最後の時が止まったままである\n"
+"カオススフィアの影の広間に立った。\n"
+"\n"
+"しかしかつては柔らかい囁きによる静かな場所だったが\n"
+"何か影から不気味な視線がある。\n"
+"\n"
+"...悪意を遮蔽する目が。"
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"貴方はカオススフィアを掴む前に、一度震える手を握りしめた。\n"
+"今この手は貪欲に何かを超える権力を渇望している。\n"
+"スフィアの魔力でさえ貴方を暗黒の軍勢から守護するのに\n"
+"十分でないならば、恐らくそれに手を出さなければ、\n"
+"契約は破棄されるだろう。\n"
+"\n"
+"\n"
+"\n"
+"しかしそれでも、貴方は決して後へ引く事は\n"
+"出来なかった..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n...更なる挑戦者を待ち構えながら。\n"
+"\n"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "扉は施錠されている"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "御機嫌よう、小僧"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "死に急ぐ仕度は整ったか?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "氷の守護者にある扉は開かれた"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "この道は塞がれている"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "パズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "漆之門に影響を与えた"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "三種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "漆之門に階段が立ち昇った"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "三種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "漆之門 に影響を与えた"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "漆之門 に階段が立ち昇った"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "他のスイッチも探す必要がある..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "漆之門 の石壁が砕かれた"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "六種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "陰影樹 に少し影響を与えた"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "遠くから扉が開く音が聞こえる"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "六種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "陰影樹 に少し影響を与えた"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "六種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "陰影樹 に少し影響を与えた"
+
+# Yellow needs better translation
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ 匹のエティンが残っている"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "長居をしたな、命を奪うには十分な程に!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "荒れ果てた前哨地 への扉が開いた"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "扉はまだ開かない"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "我が下僕が貴様の血を嗅ぎ付けた様だぞ、小童"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "晒し台 への扉が開いた"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "塔内の昇降機が下りた"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "遊びはここまでだ、小僧"
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "盤上から貴様を排除する"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "上層階の扉が開いた"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "我を崇めろ、慈悲を残している内に"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "まあ、有り得ないな"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "九種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "修道院 にわずかに影響を与えた"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "九種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "修道院 にわずかに影響を与えた"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "九種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "修道院 にわずかに影響を与えた"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "ポータルは封印された"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "運命を撰べ"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "お前がどれだけ強かろうと"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "お前の師に立ち向かえるのか?"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "挑戦する準備は整ったか?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "ならば、死へ進め!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "滝 は開いた"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "滝 は塞がっている"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "庵寺 への扉が開いた"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "何かがおかしい..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "パズルの部品は残り 3つ"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "パズルの部品は残り 2つ"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "パズルの部品は残り 1つ"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "パズルは完成した"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "パズルはまだ完成していない"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "この場は安全ではない!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "パズルの 三分の一 が解かれた"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "パズルの 三分の二 が解かれた"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "昇降機の音が遠くで聞こえる"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "これで完了だ..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "パズルはまだ完成していない"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "お前に警告しよう..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "頑固だと、自らも思わないか?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "そして、あまりにも愚か者だ"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "パズルの 四分の一 が解かれた"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "拙い選択だ..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "シンボルが揃っていない"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "扉はこちら側から開けられない"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "この扉は外側から塞がれている"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "罰当たりが!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "貴様はエリックの墓を荒らしたな!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "万死に値する!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "パズルの 三分の一 が解かれた"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "パズルの 三分の二 が解かれた"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "地下聖堂 が開いた"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "スパイダーの墓"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "外で昇降機の音が聞こえる"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "運が良かったと思うか?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "それは違うな!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "良い推測だ"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "この階層を全て書き換える事は可能かな?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "汚らしい手で触れるな"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "ボーパル ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "砂糖が欲しいかい、ベイビー"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "えぇーとぉー..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "数時間のフィルム?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "私は自分の墓標すら得られない - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "血を零さないように"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "怒りで拳を振るわないように"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "誰が、我々の眠りを妨げる勇気があるかな?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "道は開いた"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "スイッチはまだ"
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "残っている"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "スイッチは"
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "だけ残っている\n"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "出口が開いた"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "扉はこちらから開けない"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "ドアは開いている..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...準備が良いなら"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "先へ進むドアは開いた"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "小礼拝堂 へ向かえ"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "先へ進む橋が架かった"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr " 屠殺場 へ向かえ"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "先へ進む階段が出来た"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr " 闇の刻計 へ向かえ"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "歯車を一つ配置した"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "歯車を配置した"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "バリケードは開かれた"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "排泄腔 へ向かえ"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "裏口は開いた"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "お前はあえて 執行人達の墓を"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "荒らすつもりか?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "死ぬ準備をしろ"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "スイッチはまだ"
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "残っている"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "スイッチは"
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "だけ残っている\n"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "塔への道 が開いた"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "道は開いた"
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr ""
+"もう面倒事には御免だ、私に近づくな。\n"
+"あのハリスのクズのせいでもう十分面倒な目に\n"
+"遭ったんだ。ヤツは私に金を渡すと約束したのに、\n"
+"裏切られて私がプログラマーに尋問されることに\n"
+"なってしまったんだ。"
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr ""
+"助けてくれるなら援助する。\n"
+"5ゴールドで知っている情報を全て教えよう"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "金はこれだ。"
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "始末する際は隠密に、警報を鳴らさないように。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "いや、タダで情報は渡せない!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "もしかして5ゴールド稼いだのか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5ゴールドだ。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr ""
+"そうだな、ポイズンボルトは警備員を簡単に殺せるし、\n"
+"警報を作動させることもない。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "いやいや、タダでは話せないな!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "既にイキのいい噂は聞かせたぞ!"
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "何か必要か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "アサルトガン"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "毎度あり。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "今それを買える余裕は無い。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "銃弾倉"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "どうも。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "頼むぜ、10ゴールドだぞ。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "銃弾倉箱"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "これでアンタのブツだ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "また後でな。"
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr ""
+"フロントから朗報だ。\n"
+"マシルは貴方に報酬と訓練の許可を送った。\n"
+"私はそれらを貴方に渡す為に持って来た。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "ありがとう。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "感謝する。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr ""
+"オーライ、\n"
+"それで何をすべきかについて説明がある\n"
+":クルセイダーの斜線に立つな\n"
+":アサルトガンを遠くから的に向かって撃て"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "そうなのか?"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "良し、後でもっと学べるぞ。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr ""
+"俺ならクルセイダー専用の火炎放射器を\n"
+"誰でも使える様に作り変えられるだろう。\n"
+"ああ、他に何か必要か?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "火炎放射器"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "よくやってくれた! どうよ、このアツアツな子を!"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "部品が無ければ何も出来ない!"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "アサルトガン"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "ほら、毎度あり!"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "明らかに、今買える余裕は無い。"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "銃弾倉"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "どうも。"
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "頼むぜ、10ゴールドだぞ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "弾薬箱"
+
+# 〃 (〃)
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "これでアンタのブツだ。"
+
+# 〃 (〃)
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "またの機会に、じゃあな!"
+
+# 〃 (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr ""
+"火炎放射器を手に入れたが、\n"
+"他に必要な物はあるか?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "アサルトガン"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "毎度あり。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "今それを買える余裕は無い。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "銃弾倉"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "どうも。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "頼むぜ、10ゴールドだぞ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "銃弾倉箱"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "これでアンタのブツだ。"
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "また後でな。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr ""
+"火炎放射器を手に入れたが、\n"
+"他に必要な物はあるか?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "銃弾倉"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "どうも。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "頼むぜ、10ゴールドだぞ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "銃弾倉箱"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "これでアンタのブツだ。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "また後でな。"
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "白リングレネード弾"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "どうも。"
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "十分な額じゃない"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "ポイズンボルト"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "値段に合う価値だぜ!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "頼むぜ、200ゴールドだぞ!"
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr ""
+"私がこの勤務で足止めとは信じられん。\n"
+"皆が下水ゲートから悪しきものが来たと言う。\n"
+"再びドアが開くまで、ここで立ち往生だ!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "何のゲートだ?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "下水道の溢水ゲートだ。"
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "どうも同士よ。何か必要か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "エレクトリックボルト"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "エレクトリックボルト 入手。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "弾薬鞄"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "いや。エレクトリックボルトに必要な物が足りない!"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "いや。エレクトリックボルトに必要な物が足りない!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "ありがとう。 他に何か?"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "それを買える余裕は無い、また今度。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "何か必要か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "エレクトリックボルト"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "エレクトリックボルト 入手。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "弾薬鞄"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "ありがとう。 他に何か?"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "それを買える余裕は無い、また今度。"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "ようこそ、何を見ていきますか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "耐環境スーツ"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "はい、これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "すみませんが、貴方は十分なお金を持っていません。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "レザーアーマー"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "また別の機会に?"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "メタルアーマー"
+
+# 〃
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "着ると安心しますよ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "余裕がある時にまたどうぞ!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "ようこそ、何をお探しで?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "耐環境スーツ"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "では、これをどうぞ。"
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "すみませんが、貴方は十分なお金を持っていません。"
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "レザーアーマー"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "これをどうぞ。"
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "また別の機会に?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "メタルアーマー"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "着ると安心しますよ。"
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "余裕がある時にまたどうぞ!"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "何かお困りですか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "医薬パッチ"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "10 ゴールド必要です。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "医療用キット"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "ありがとうございます。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "譲渡したい所ですが、25 ゴールド必要です。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "手術キット"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "こちらになります、お気をつけて。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "ところで、医薬パッチを買う余裕はありますか?"
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr ""
+"マシルの行いが正しければ良いですが。\n"
+"私がフロントを援助しているとオーダーが\n"
+"知ったら、私は...これは貴方には関係無いか。\n"
+"フロントのメディックが貴方へ\n"
+"アップグレードチップを送ってくれました、\n"
+"装着しますか?\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "ああ、準備良しだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "それでは、これに時間は掛かりません。はい、完了しました。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "何かお困りですか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "医薬パッチ"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "10 ゴールド必要です。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "医療用キット"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "ありがとうございます。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "譲渡したい所ですが、25 ゴールド必要です。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "手術キット"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "こちらになります、お気をつけて。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "ところで、医薬パッチを買う余裕はありますか?"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+"どうも余所者、この辺では見かけない顔だな。\n"
+"では一杯アドバイスをおごろう。この付近が\n"
+"自由な発言を許さないからって下手な真似は\n"
+"するなよ。オーダーという自警団がすぐに\n"
+"駆けつけてくるぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "他には?"
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "他は...下水道には鼠やロボが沢山だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "何か用か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "話のネタ。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "知事は俺達に自由はないと思い出させる象徴さ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "銭を一杯分持って戻ってきな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr ""
+"所で、アンタは死に行かない人達に\n"
+"聞き回ってる様だが。悪いことは言わねえ、\n"
+"あんまし死に急ぐんじゃねえぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "話のネタ。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "オーダーは見えてる以上に強大だ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "銭を持ってたら話すさ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr ""
+"これはこれは親友、心得の瓶は切らしてるぞ。\n"
+"とにかく俺が知ってる話はこれで全部だ。\n"
+"頑張りな...それともう来なくていいぞ。"
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr ""
+"おう、俺は緊急時の為にここにいる。\n"
+"コアが破壊されないか、誰が入っているかを\n"
+"確認している...出ていくのもな。"
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "気を付けろ、田舎モン!"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "お前を粛正する!"
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr ""
+"誰だお前は?この区域を立ち入ることは\n"
+"許されていないぞ!\n"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "お前は許可していないぞ。立ち去れ!"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "イラールが貴方を手助けします!"
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr ""
+"俺は反乱者への斡旋屋さ。才能を生かして\n"
+"誰よりも儲けたいと思ってるなら...\n"
+"相応しい人と関係を持つことさ。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "興味ある。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "何が反逆だ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr ""
+"次はねえな。おぅガードの旦那、\n"
+"やっちゃってくだせえ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+"良い判断だ。川沿いにあるオーダーの聖域は\n"
+"あいつらの非公式の拷問室だ。中には黄金の\n"
+"聖杯が隠してある。そいつを持ってくれば\n"
+"報酬をやるぜ。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "どうすればいい?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr ""
+"このクロスボウを使いな、狙いを定めて\n"
+"--シュッとな。覚えておけ、\n"
+"ファンシーなカップを持ってここに戻ってこい。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "良い物だ、貰っとく。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "何ボーっとしてんだ?とっとと聖杯を持ってこい。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+"おう、罠みたいだと思ったか。\n"
+"俺に暴れん坊みたいな芸当出来るわきゃねえ。\n"
+"ブツはあるか?そりゃいい!じゃあ準備しな。\n"
+"金と栄光は約束された。この鍵で知事に合えば\n"
+"報酬をありったけくれるさ。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "戻せ、お前の為だ!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "何だと! 金はどこだ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "失せろ、うざってえ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr ""
+"次はねえな。おぅガードの旦那、\n"
+"やっちゃってくだせえ。"
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+"あいつら散々大量虐殺しといて、今度は'実験'\n"
+"の為に健康な庶民を用意しろとか。オーダーは\n"
+"本当に平和を維持してくれるのか?\n"
+"で、君は何用で来たのかね?\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "刑務所の許可証だ、取引をしよう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr ""
+"いいだろう。仕事は二つあるのだが\n"
+"一つは面倒で、もう一つは血を見ることになる。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "まだ手は汚したくない"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "汚れ仕事でも構わない"
+
+# 〃
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+"私の手下の一人が水力発電から電力を盗んで\n"
+"いるらしい。それを見つけ供給を切って\n"
+"くれれば君の望む物をやろう。\n"
+"その象徴となるのも持ってきてほしい。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "どうやって突き止めたらいい?"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"私が知っていたら、こんな雑用はさせない\n"
+"だろう?誰かをでっちあげるか、\n"
+"聞き込みでもするんだ。"
+
+# 〃
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+"教えよう、ダーウィンとかいう恥知らずが\n"
+"子供をオーダーへ売りつけているようだ。\n"
+"私に分け前無しに、そんな恥ずべき行為を\n"
+"許すわけには行かん。ダーウィンは倉庫で\n"
+"勤務している。殺った証拠として奴の、耳を、\n"
+"持ってきたまえ。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "どうすれば入れる?"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr ""
+"この鍵で発電所に入るんだ。出来れば、\n"
+"先に耳を切り落としてから殺してくれ。\n"
+"その方が良い。"
+
+# 〃
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+"嬉しい手土産だ。では、これがあれば\n"
+"刑務所に入れる。モンターグ所長と話すんだ。\n"
+"君がそこで何をしようが、私の管轄外だ。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "ありがとう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "ヒントを出そう。話すのを止めたら去りたまえ。"
+
+# 〃
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "私の耳に吉報を伝えに来たかね?"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "やることはヤった"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+"嬉しい手土産だ。では、これがあれば\n"
+"刑務所に入れる。モンターグ所長と話すんだ。\n"
+"君がそこで何をしようが、私の管轄外だ。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "良好だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr ""
+"それで、お前が聖杯を盗んだ愚か者か?\n"
+"私は反賊としてお前を逮捕するつもりだ...\n"
+"そうすればオーダーの地位は上がる。\n"
+"捨て駒に成るというのはどんな感じだ?\n"
+"ヒントを教えよう、お前はもう助からない。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "クソが!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "私もそう思う。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "ハリスは俺に金を渡すと約束したのに!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "残念だな、お前にやれるものは死のみだ!"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+"この小さな世界では噂が広まるのは早いもんだ。\n"
+"あんたが素早く厄介事を片付けたと聞いたぞ。\n"
+"もっと儲かる仕事をやってみる気はないかね?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "ああ、もちろんだ。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "やめとくよ。"
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "じゃあ失せるんだな!"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr ""
+"なんと愚かな!\n"
+"衛兵、この厄介な奴を始末してくれ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr ""
+"それでいい。ええと、私の友人がある人物を\n"
+"黙らせて欲しいと望んでいるんだ。\n"
+"ベルディンはオーダーの連中の聖域に\n"
+"囚われている。建物への入り口は川に掛かった\n"
+"桟橋の先にあり、そこは誰も警備してないし\n"
+"ほぼ使われていない。潜入してヤツを黙らせて、\n"
+"仕事をした証拠としてヤツの指輪を見せてくれ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "苦労に見合った報酬だろうな?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr ""
+"50ゴールドは保証するし街の警報を鳴らさず\n"
+"戻ってこれたら、もっと金を得られる機会が\n"
+"あるぞ。それと、お前の力となる物も渡そう。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "ありがとよ、これは後々必要になるな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "いいぞ。覚えておけ、彼が沈黙したら金だ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "始末してみせる。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr ""
+"任務完了か?\n"
+"あの裏切り者の指輪は持っているんだろうな?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "奴は死んだ、報酬はあるんだろうな?"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "嘘をつくな、指輪を取ってこい!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+"よし、報酬はお前のものだ。お前が殺した\n"
+"あの裏切り者は、フロントの隠れ家をバラそうと\n"
+"していたんだ。おかげで大勢の命が救われた。\n"
+"もっと多くの金と、奴等の支配から解放された\n"
+"未来を得たいとは思わないか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "もっと教えてくれ。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "俺の趣味じゃないな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr ""
+"私はフロントのリーダー、マシルと取引を\n"
+"しているんだ。彼は君のような切れる人物を\n"
+"必要としていて、金払いも良い。\n"
+"この修理された無線機を持っていけば、\n"
+"好機に出会えるだろう。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "ありがとう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr ""
+"うまくやれよ。こんな所でもたもたしていると\n"
+"二人揃ってお陀仏だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr ""
+"残念だ、だがお前は私の友の事を知った以上\n"
+"生きて帰す事はできない。\n"
+"衛兵、このゴミを片付けてくれ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr ""
+"愚かな。\n"
+"衛兵!この厄介な奴を始末してくれ。"
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "どっか行け、若造、とっとと行け。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "ここで何をしている?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "よう、金が必要だ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr ""
+"ブラックバードに教えてもらったんだな?\n"
+"警報は切っておこう。マシルはこの先だ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "ありがとう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "向こうへ行け、新入り、急ぐんだ。"
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "知事とアポイントメントは取ってますか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "問題ない!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "いや、必要ない!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr ""
+"すいません!知らずに...\n"
+"そのまま上がって下さい。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "そう言うと思った。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr ""
+"そんなに急いでいるなら、\n"
+"お互い時間を大切にしましょう。"
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "ほっといてくれ、年寄り一人にしてくれ。"
+
+# 〃 (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr ""
+"知恵が欲しそうだな、ボウズ? \n"
+"オーダーが勘付かないよう一つだけ質問しよう、\n"
+"'何故?'"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "配電機 は何処だ?"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "オーダーの本管 は何処だ?"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "違法供給源 は何処だ?"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr ""
+"それが何処にあるかは話そう、だがオレには\n"
+"どれをイジるかまでは知らん。\n"
+"配電機はここの下水処理場にある。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "ありがとう。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr ""
+"正にここの下水処理場にあるさ。\n"
+"だがそれはフロントにも繋いでいる。\n"
+"そいつがオーダーの所有物と言われてたが、\n"
+"そりゃ間違いだ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "ありがとう。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr ""
+"それが違法だっつうんならオレには関係無い。\n"
+"トラブルは御免だ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "ありがとう。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "ほっといてくれ、年寄り一人にしてくれ。"
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr ""
+"ようこそ、ここは我々の僅かな希望が集まる\n"
+"最後の場所だ。オーダーへと立ち向かう意思を\n"
+"持っているのは我々くらいだ。\n"
+"ここには素晴らしい頭脳を持つ学者たち、そして\n"
+"丈夫な体を持った戦士たちがいる。\n"
+"だがしかし、我々には問題解決に優れた者、\n"
+"つまり私達の力となる者が足りていないんだ。\n"
+"我々に手を貸してくれ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "いいぞ、引き受けよう。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "断る!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr ""
+"少し考え直したほうが良さそうだぞ、\n"
+"君が重装備の怒れる兵士たちに\n"
+"囲まれているのはわかるだろう?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "わかった、乗ろう!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "断る。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "では、恥と不名誉と共に死ぬがいい。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+"よし、君のガイドをブラックバードが今後務める\n"
+"彼女は君に感心しているようだぞ。\n"
+"君達の二人で、オーダーとその人間離れした\n"
+"手下たちが持っている秘密を暴いてもらいたい。\n"
+"奴等の基地に潜り込んで、倒すんだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "どこから始めればいいんだ?"
+
+# 〃 (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr ""
+"はっきり言えば、今の状況は全く良くない。\n"
+"君は複数の任務をこなし、オーダーへの\n"
+"攻撃態勢を整える必要がある。\n"
+"我々が行ったこの前の襲撃は大失敗で、\n"
+"ほとんどの兵たちは捕らえられてしまった。\n"
+"君にはその捕らえられた者たちを\n"
+"救助してもらいたい。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "俺ならできるはずだ。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+"この金で、我らの武器を調達してくれている\n"
+"イラールの元を訪ねて行け。\n"
+"その次に、この鍵を使って知事に会え。\n"
+"知事はオーダーの腐敗した傀儡だが取引には\n"
+"興味を持ってくれる。我々の仲間を助けるために\n"
+"どんな手でも使ってくれ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "了解した。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "フロントと自由の為の闘争を。さあ向かえ。"
+
+# 〃 (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+"逃げ出した囚人たちを迎え入れた。\n"
+"君の活躍に感謝する。幾つか報酬を与えよう。\n"
+"それとメディックと訓練師も訪ねるといい、\n"
+"その後に頼みたいことがある。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "次は何だ?"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+"とあるパワークリスタルがオーダー基地の\n"
+"シールドを維持している。それを破壊して\n"
+"奴等の防壁に巨大な穴を開けるのだ。\n"
+"潜入する為の情報を持ったスパイを\n"
+"ブラックバードが導いてくれる。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "すぐ始めよう。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "フロントと自由の為の闘争を。さあ向かえ。"
+
+# 〃 (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+"君達は我々の期待を超える活躍を行ってくれた。\n"
+"君の勇猛さに私の部隊が動き出した。\n"
+"今度は君達二人にある目的の為、強襲部隊に\n"
+"加わって欲しい。プログラマーを討ち取るのだ。\n"
+"オーダーに纏わる様々な事情について\n"
+"明らかにする時が来た。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "こちらに知っている事を教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr ""
+"プログラマーの居場所は城内だ。それと、\n"
+"メディックと訓練士に会い弾薬を補給したら\n"
+"奴を倒せ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "任せろ!"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "フロントと自由の為の闘争を。さあ向かえ。"
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr ""
+"市庁舎の外観を見たか?あれが我々に対する\n"
+"奴等の所業を思い出させる。気をつけろ。"
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "マシルと話すんだ。彼から援助が得られるはず。"
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr ""
+"私はマシルがオーダーを転覆させる計画を\n"
+"持っていると聞いた。そうだと良かったが。\n"
+"我々は一度大敗し全滅しかけた。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr ""
+"ここの樽は捨てられていた物で\n"
+"彼らの給水を補っている。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr ""
+"貴方が新しい工作員かい? それはありがたい、\n"
+"貴方がいなければ皆死んでいた所だ。"
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+"私は研究にも取り組んでいる。貴方のスタミナを\n"
+"増強し完璧な体にすることも可能だ。\n"
+"そのインプラントのバグも殆ど取り除かれている\n"
+"ところで何か必要かい?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "治療してほしい。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "君、滅茶苦茶だな。なんとかしよう。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "スタミナインプラント?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "いいでしょう、これは時間を取りません。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "まだ完成していません。"
+
+# 〃 (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr ""
+"どうも、私は今最新版のインプラントに\n"
+"取り組んでいる。何か用かな?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "治療してほしい。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "貴方の働きは聞き届いてるよ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "インプラント アップグレード?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "良いことだ、安全すぎることはない。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "もうすぐ出来上がる、それほど掛からない。"
+
+# 〃 (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr ""
+"大丈夫、全て順調だ。残っていた問題も\n"
+"全て取り除かれた。他に何が必要かな?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "治療してほしい。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr ""
+"今度は何を始めるんだ?\n"
+"クルセイダーと向かい合うのか?"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "インプラント アップグレード?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "今取り掛かっている。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "もう少しテストしてからにしよう。"
+
+# 〃 (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr ""
+"インプラントはこれ以上ない程完成した。\n"
+"それとも治療か?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "ああ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "君、滅茶苦茶だな。なんとかしよう。"
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "どういったご用件で?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "この弾をどうぞ、無駄遣いしないように。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "わかった、貴方にやり方を幾つか教えよう。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "貴方の準備がまだ整ってないように思えます。"
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "もう戻りましたか?何が必要ですか?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "この弾をどうぞ、無駄遣いしないように。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "弾は十分に見えます。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "わかりました、これで長くやり合えるでしょう。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "すまないが、できません。マシルの命令です。"
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+"弾薬と訓練、どっちの用件ですか?\n"
+"奪った新しい武器が届くのを待ち切れないです。\n"
+"少しの訓練でデカい復讐を。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "この弾をどうぞ、無駄遣いしないように。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "弾は十分に見えます。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr ""
+"オーケー、ここで学んだ事を生かして\n"
+"オーダー共を地獄に送って上げなさい。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "マシルの命令を受けてから、また来なさい。"
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr ""
+"私が教えられる事はもうありません。\n"
+"今後新しい武器は時間が掛かるが自分のペースで\n"
+"学びなさい。弾切れでなければの話ですが。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "ああ、そうだ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "どうぞ。"
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr ""
+"街の中で銃をバンバン撃ったりするんじゃないぞ\n"
+"警報を鳴らしてしまえば、奴等が衛兵共を\n"
+"城から送り込んでくるぞ。"
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "ようこそ、我々が貴方の助けに成ります。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr ""
+"私がまだ活動していた時、我々が増援に\n"
+"囲まれる前にアコライトを調べる機会が\n"
+"あったんだ。聞いてくれ、奴等は人間では\n"
+"なかったんだ。"
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr ""
+"我々は城門のメカニズムが何処にあるか\n"
+"探し続けているが、あまり良い結果は出ていない"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr ""
+"決して捕まるな。投獄されると奴等が\n"
+"何をしでかすか怪談として聞く程だ。\n"
+"跡形もなく...消される。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr ""
+"伝えておく、オーダーの錫兵は\n"
+"他方から呼び出され押し寄せてくる。\n"
+"奴等は素早く残忍だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr ""
+"すまないが忙しい。\n"
+"私はマシルの雑用を請け負っている。"
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "すまないが、お前にクリアランスはない。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "待て! IDバッジを見せろ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "これだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "あぁ、宜しい。通れ。良い一日を。"
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr ""
+"ダーウィン? ああ、奴はこの倉庫内にいるが、\n"
+"片付かない限りお前は入れん。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "クリアランスはある。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "続けろ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "ソイツが何処にいるか知っているか?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr ""
+"俺には何処にいるかは分からない。\n"
+"俺はただネズミ捕りにフタを被せているだけだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "お前は不快で目障りだ。"
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "同行か鉄を味わうかだ。"
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "彼方のI.D.をここに提示してください。"
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "仕事へ戻れ、今すぐ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "今すぐ仕事へ戻れ!"
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+"もう数週間も休日返上で働いているんだ。\n"
+"オーダーがまたフロントを攻撃する準備を\n"
+"しているんだろうな。"
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+"クソッ、知事の回し者だな。\n"
+"本当はあいつに分け前を渡そうとしてたんだがな。\n"
+"よし、聞いてくれ。金はあるから、\n"
+"見逃してくれりゃお前にも分けてやる。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "分かった、見逃そう。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "悪いが、仕事なんでね。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr ""
+"社会の厳しさを分けてやるよ、お前もそうなれ。\n"
+"ガード!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr ""
+"クソ野郎が、タダでは死なねえ。\n"
+"助けてくれガード!イカれた奴がいる!"
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr ""
+"ああ、マシルから話は聞いたよ。\n"
+"君を発電所に入れてやれるが\n"
+"かなりリスキーな方法だぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "大丈夫だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr ""
+"わかった、このIDを受け取れ。\n"
+"これはリアクターの冷却炉に落ちた間抜けが\n"
+"持っていたものだ。\n"
+"バチッ!と一瞬で黒焦げになっちまったよ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "中に入ったらどうすればいい?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr ""
+"誰かに聞かれたら、クリスピーの代わりに来た\n"
+"と言え。皆疑うことなく信じるだろうさ。\n"
+"あと、上の階にある倉庫も行けるなら\n"
+"見てみた方がいいぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "このIDで上手くいけばいいが。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr ""
+"ここを離れた方がいい、君がミスターポックリに\n"
+"成らない為に。"
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr ""
+"話しかけないでくれ、\n"
+"奴等にバレたら処分されるか、残業させられる。"
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+"この圧力、この速さならすぐ通常のシフトに\n"
+"戻るだろう。私達は城へ大量の電気を供給して\n"
+"いるし、新しい武器の切り出しも殆ど済んだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "武器?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "どう思う、ズボンがずり落ちないか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "どんな武器だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "難聴か? 私は、忙しい、から、仕事に、戻れ。"
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr ""
+"誰だ? レベル2のクリアランスを持たない者は\n"
+"ここに来てはいけないが。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "代替要員だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr ""
+"そろそろ来ると思っていたよ。コアにいる\n"
+"ケトリックに話しかけてくれ。\n"
+"あとこのキーカードを受け取ってくれ。\n"
+"初日で撃たれたくないならな。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "パワークリスタルは何処だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr ""
+"今すぐ作業しないと奴等にバレて撃たれるぞ。\n"
+"さあ行け。"
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr ""
+"オーダーがもしパワークリスタルに負荷を\n"
+"かけ続けていたら、いずれ限界でヒビが入って、\n"
+"砕けて、*ボーン*!...だと思うよ。"
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+"万が一このターミナルがフリーズしたら、\n"
+"冷却液の水位が下がってプログラマーと\n"
+"対面しなければならないだろうな。\n"
+"メルトダウンから生還すればの話だが。"
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr ""
+"お前!そうだお前だ。ここは立入禁止だ。\n"
+"IDカードを見せろ、早く。今機嫌が悪いんだ!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "ほら、これがカードだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr ""
+"なんだこのゴミは! いや待て。ああ、畜生。\n"
+"ガード、侵入者を殺せ!"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr ""
+"働いて、寝て、処罰されて、なんて人生だ。\n"
+"で、お前はあの冷却炉に落ちたアイツの\n"
+"代替要員か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "そうだ、もう待てない。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "わかった。さっさと働け。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "クリスタルは何処だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr ""
+"ケトリックと話をしろ。\n"
+"隣のスイッチで道を上げこのカードで\n"
+"エレベーターに乗るんだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "いいからクリスタルは何処だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "大きなお世話だ、ケトリックと話をしろ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "オーケー"
+
+# 〃
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr ""
+"忙しい仕事を望んでいるなら、\n"
+"そのスクリーンをしばらく見ていなさい、\n"
+"飽きて涙が浮かぶでしょう。"
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+"プログラマー様は潜入されるのを\n"
+"非常に恐れているらしく、コンピューターコアの\n"
+"ロックを厳重にするよう命じたんだ。\n"
+"どうやってあんな危ない所で仕事するんだ?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "危ない?どういう事だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr ""
+"下手に立ち入ると射殺されるが、\n"
+"今それどころではない。\n"
+"そんなに行きたいならリフトを降りるんだな。"
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr ""
+"止まれ。所長か知事の許可が無い限り\n"
+"立ち入る事は許さん。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "これが許可証だ、入れてくれ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "良いだろう、ただし話すのは所長とだけだ。"
+
+# 〃 (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr ""
+"俺がワーデンに見えるか? どっか行け、\n"
+"この区域は立入禁止だ。"
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr ""
+"オーダーの怒りは、奴等が死を望むまで\n"
+"止む事はない。"
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+"モーレルが許可しようが構わん。\n"
+"ここは私の刑務所だ。この鍵でしか絶対出入りは\n"
+"出来ないし、渡すつもりも無い。\n"
+"オーダーは失敗を許さないからな。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "いいからとっととキーを寄越せ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "欲しけりゃ取りに来い。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "良い案だ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "鎖や手錠で、繋いだ方が良いな。"
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr ""
+"どうやってガードやセキュリティを\n"
+"抜けてきたかは知らんが、私の部署に移れば、\n"
+"この素晴らしい装飾を堪能できるぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "命が惜しければ仲間を解放しろ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr ""
+"私を殺せば誰も助かる事はない。\n"
+"私の指紋だけが檻を開けられるからな。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "じゃあ 手を貸して くれるか?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "共に行こう友よ。"
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "もう待てない、早くここを出よう!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "空を、空を見たい。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr ""
+"ファイブフィート バイ フォーフィート、\n"
+"ファイブフィート バイ フォーフィート、\n"
+"ファイブフィート バイ フォーフィート。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr ""
+"まだオーダーがいる内は出たくない。\n"
+"恐怖に打ち拉がれそうだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr ""
+"意地が悪いな、だがマシルが解放の為に\n"
+"誰か送ったのは大体わかる。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr ""
+"いつもパンの耳ばかりだったんだ。\n"
+"すごく腹減った。"
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"あー、何か用があって上から来たんだな。\n"
+"だがここでは物々交換が常識だ、\n"
+"オーダーが町の出口を封鎖しやがったから\n"
+"メシが手に入り辛くなったんだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "ゲートメカニズムは何処だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "俺の言った問題が先だ、でないと手助けできねえ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "開放を知らせるには?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+"ガードの制服を持ってくればいい。\n"
+"そうすりゃ成り代わったラットの仲間が\n"
+"もう封鎖されないよう監視するだろうさ。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "あんたに制服を渡せばいいか?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr ""
+"そうだ、ゲートを開いて制服を奪うんだ。\n"
+"それまで戻ってくるんじゃねえぞ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "必要な物は持ってきたか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "この制服はどうだ?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "制服を持ってこい。"
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr ""
+"良し。礼は果たそう。\n"
+"それと仲間が倒れたクルセイダーからこれを\n"
+"奪ってきた、火炎放射器の部品らしい。\n"
+"イラールに渡せば作り上げるはずだ。\n"
+"楽しみだろう。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "ゲートメカニズムは何処だ?"
+
+# 〃
+# 
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+"下水道の別の部分に入る必要がある。\n"
+"そこへ行くには下水道の整備室から\n"
+"城の浄水施設に入りタンクを排水する必要がある\n"
+"その下には隠された入り口があり、\n"
+"その先に手動ゲートコントロールがあるはずだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "他に出来ることは?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+"頑張れよ。それとアンタの為に俺達は幾つか\n"
+"トンネルを開けといた。多少はやり易くなるだろ。\n"
+"おぅ、サイズは10型か、ピッタリだ!\n"
+"...だが、おっかねえ色してんな。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "協力ありがとう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "何も無ければ、何も渡すモンは無い。"
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr ""
+"ウェランは皆を保護してくれている。\n"
+"彼は誰も見捨てたことはない。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr ""
+"君の問題の答えが欲しいなら、\n"
+"ウェランに会うといい。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr ""
+"フロントに入れ? 馬鹿げてる。\n"
+"死ねと言ってるようなもんだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr ""
+"外への出入口が封鎖されてるから、\n"
+"飯が調達できないんだ。\n"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "食い物、食い物を恵んでくれないか? 頼むよ。"
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+"この下水道から囚人を脱走させた奴を探す為、\n"
+"下水道を監視している。首謀者を見つけたら、\n"
+"その命を持って報いを受けてもらう。"
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr ""
+"この辺の何処かに乞食共がいるはずだ。\n"
+"数日もすれば忘れ去られ飢え死するだろうな。"
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr ""
+"お前のクリアランスは何だ?\n"
+"ここは許可の無い者は立入を禁じている。"
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr ""
+"何をしやがった?\n"
+"誰がゲートを開けた? 警報を鳴らせ!"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr ""
+"下水道に別の入り口がある、スイッチを入れ\n"
+"次に昇って浄水タンクを空にするんだ。"
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr ""
+"一体何をしに来た。プログラマーが\n"
+"オーディエンスチャンバーから来たら\n"
+"死んでいた所だ。"
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr ""
+"おい、あんたはここを降りる事は\n"
+"許可されてないぞ。"
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr ""
+"プログラマー?誰ガそんなことヲ言った?\n"
+"ここにプログラマーハいない。\n"
+"その噂ハ何年も前ニ広まったものダ。\n"
+"そんな下らない事ヲ未だニ信じていたとは。\n"
+"白痴モいいとこだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "それなら、本当の事は何だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr ""
+"私ハ知っていることヲ教えた。\n"
+"これ以上ハ互いニ時間ノ無駄ダ。"
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr ""
+"我々は勝利を志し、戦う。\n"
+"この日は我々と共に在る!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr ""
+"我々は勝利を志し、戦う。\n"
+"この日は我々と共に在る!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr ""
+"我々は勝利を志し、戦う。\n"
+"この日は我々と共に在る!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr ""
+"我々は勝利を志し、戦う。\n"
+"この日は我々と共に在る!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr ""
+"我々は勝利を志し、戦う。\n"
+"この日は我々と共に在る!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr ""
+"我々は勝利を志し、戦う。\n"
+"この日は我々と共に在る!"
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+"君がガードを全員殺したノカ。\n"
+"私ハ傷つけないでくれ。\n"
+"私ハ望んでこんなふざけた事をしたワケではない。\n"
+"本当のプログラマーはこのキーの場所ニいる。\n"
+"ほら、受け取れ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "アンタがプログラマーだろ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr ""
+"私ガそんな凄まじい力ヲ振舞っていると思うか?\n"
+"オーダーハ私達全員を利用している。\n"
+"私ハもう死人同然だ。さあ行け。"
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "キーが力だ!"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+"良し、意識が戻ったか。\n"
+"君がプログラマーの遺品を拾った時に\n"
+"恐ろしい秘密が解放されたのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "その秘密とは。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+"この武器が何処で造られたかは分からないが、\n"
+"我々はそれを突き止める必要がある様だ。\n"
+"どうやら全部で5つあり、君はオーダーから\n"
+"1つ手に入れている。我々の理解を超える存在だ\n"
+"オラクルを探し何か情報を得なければ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "それには補給がもっと必要だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr ""
+"資金を提供しよう。\n"
+"そしてメディックと訓練士に会い装備を整えて、\n"
+"向かいたまえ!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "わかった!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "フロントと自由の為の闘争を。さあ向かえ。"
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr ""
+"何が帰還を促した?怪我をしたのか?\n"
+"屈している場合ではない。\n"
+"シジルを完成させる使命を果たすんだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "オラクルは死ぬべきだと言った!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr ""
+"私は皆の自由を誓った。\n"
+"三つ目の部品を持つのはオラクルだ。\n"
+"君は裏切るつもりか。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "オラクルは後で仕留める!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "裏切り者はお前の方だ!"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr ""
+"唯一神の魂が私を討てば\n"
+"この世界を塵に変えるだろう。"
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+"君は正しい決断をした。\n"
+"オラクルがオーダーに悪しき支配をしているのは\n"
+"明白だ。戻って三番目のシジルを手に入れろ。"
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+"どうやら我々の直面する恐怖は\n"
+"まだ終わらない様だ。オーダーが民を無意味に\n"
+"殺害しているだけではなく、サイボーグ兵へ改造\n"
+"していることが解かった。その施設を探し出し\n"
+"機能を停止させるのだ。永久的に。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "手掛かりは何処にある?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+"キャプテンの一人、リヒターが\n"
+"コモンズの滝で待っている。\n"
+"彼は施設を発見し生還した者だ。\n"
+"早急にそのふざけた行為を止めさせろ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "奴等に対価を払わせてやるさ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "フロントと自由の為の闘争を。さあ向かえ。"
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr ""
+"我が唯一神だ...我は己の肉体を離れ\n"
+"自由となり、神の魂と共に飛び立てる。\n"
+"貴様には何も分かりもしないだろう...\n"
+"そして垣間見る恐怖もな...\n"
+"唯一神は解放されるのだ...\n"
+"そして神は我を表彰するだろう...\n"
+"我は一つとなる..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "お前を滅ぼす!"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "お会いできて光栄です。何が必要ですか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "治療してほしい。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "では、すぐ治療しましょう。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "貴方は大丈夫です。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "何か新しいのは?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "貴方の為に幾つか新しいハードウェアを見つけました。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "いえ、只今探しています。"
+
+# 〃 (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+"何か御用かい?幾つかの複雑に複合化された\n"
+"フェリスのファイルにはそれだけの価値はあった\n"
+"スタミナインプラントの次期バージョンに\n"
+"適用できる情報を少しばかり見つけたんだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "治療してほしい。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "もう少し慎重にやるべきでは。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "出来ているか?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "用意出来ている。すぐ終わるさ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "間もなくだ。"
+
+# 〃 (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr ""
+"インプラントハードウェアに不具合が見つかった\n"
+"フェリスがそれを修正してハードウェアの性能を\n"
+"上げる為の後付け機能を手伝ってくれた。\n"
+"何か必要かい?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "治療してほしい。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "ほら、新鮮な気分だろう。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "後付け?"
+
+# 〃 (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "ああ、早速取り掛かろう。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "完了次第フェリスから私が送ろう。"
+
+# 〃 (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+"調子はどうだ?この新技術は素晴らしいものだ。\n"
+"そちらのインプラントにも役立つ様な\n"
+"アイディアも幾つか思いついてあるぞ。\n"
+"すぐ準備しよう。それとも治療か何か必要かな?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "ああ、治してくれ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "了解、始めましょう。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "その新しい技術はどうだ?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "これでどんな調子か教えてくれ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "まだ完成していない。"
+
+# 〃 (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+"戻ったか、まだ疲れてないか?なら幾らか\n"
+"良いニュースが届いた、フェリスが君の\n"
+"インプラント機能を増幅させる方法を見つけた。\n"
+"彼がそのスペックを見せてくれたが、\n"
+"君の生体機能に適合し細胞組織を\n"
+"成長させるそうだ、これは全く新しいぞ。\n"
+"ところで治療が必要かい?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "ああ、治してくれ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "完了した、御気を付けて。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "いつ増幅できる?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "すぐにでも。素晴らしい、上手くいった!"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "生体組織が成長しきるまで待つんだ。"
+
+# 〃 (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"さて、私は古い技術をバックアップして、\n"
+"インプラントに更なる取り組みを試している。\n"
+"マシルがそれを全員に着けるのを承認したのは\n"
+"聞いたか?まだ?君が上手くやってくれたからな。\n"
+"何か出来ることはあるかい?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "ここで治してくれ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "私が出来る事はここまでだ。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "新しいインプラントは?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "よし、これは傑作だ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "すまない、だがもうすぐ出来そうだ。"
+
+# 〃 (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+"いよいよだ、フェリスが我々の保管していた\n"
+"全てのデータから全力を尽くして編み出した、\n"
+"これが最高で最後のインプラント\n"
+"アップグレードだ。が、私にこれ以上の創造に\n"
+"携われなくなるのは一種の憂鬱でもある。\n"
+"まあ、少なくとも隊員と私の休息は残っているな。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "治してくれるか?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "これで、準備完了だ。"
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+"正に英雄、流石です!\n"
+"何か必要ですか?城の全兵器が揃っております。\n"
+"弾薬が必要ならジャスティンに頼めば大丈夫ですよ"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "この弾をどうぞ、無駄遣いしないように。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "教えてくれ。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "では、大きい銃の扱い方を教えます。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "貴方の準備がまだ整ってないように思えます。"
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr ""
+"奮闘してますか?気にしないで、\n"
+"ここにいるなら上手くやってるのは分かります。\n"
+"どういうご用件ですか?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "弾を使い果たした。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "これが助けになるでしょう。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "弾は十分に見えます。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "では、幾つかのコツを教えましょう。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "貴方の準備がまだ整ってないように思えます。"
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr ""
+"指導の受講か、弾薬の受け取りですか?\n"
+"まだ全て終わったわけではありません。\n"
+"私の袖口に若干技術を忍ばせております。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "今のところ弾薬だ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "この弾をどうぞ、無駄遣いしないように。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "弾は十分に見えます。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "上級レッスンの時間です。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "貴方の準備がまだ整ってないように思えます。"
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"さて、調子はどうですか?休憩しませんか?\n"
+"貴方がまだ息をしているのが喜ばしい事です。\n"
+"お気に入りの生徒が死体袋から天を仰ぐ様に\n"
+"なるのは嫌なのです。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "もっと弾が必要だ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "大切にして下さいね。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "十分そうです。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "何か教えてくれないか?"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "ぶっきらぼうにならないで、まだ成長の余地はあります。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "準備が整うまで何も出来ません。"
+
+# 〃 (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr ""
+"誰が戻って来たかについて、貴方の考えとは?\n"
+"困難な事だとわかっています。しかし私達全員は\n"
+"貴方の努力には感謝しています。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "弾が無くなった。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "新しい試みですか、どうぞ。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "今渡せる以上に持ってますよ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "可能な限り教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "わかりました、貴方に幾つかやり方を教ましょう。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "今はまだです。"
+
+# 〃 (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr ""
+"必要な物は何ですか?私達が何年も前から感じた\n"
+"多くの苦痛の味をオーダーに与えることを\n"
+"願っています。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "弾を幾つか。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "はいどうぞ、無駄にしないように。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "弾は十分に見えます。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "もう少しで私の教えられる事が全てわかるはずです。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "貴方の準備がまだ整ってないように思えます。"
+
+# 〃 (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr ""
+"私達はまだ貴方の護衛をし続けられるとは\n"
+"思えません。昔からの仲間は殆ど去って\n"
+"しまいました。貴方の友人の為に\n"
+"何がしてあげられますか?"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃 (〃)
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "どうぞ、これで体の調子を保って下さい。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "十分に持っています。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "教えてくれ。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "これで全てです。これ以上は教える事がありません。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "マシルに許可を貰わないとなりません。"
+
+# 〃 (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr ""
+"私が教えられる事はもうありません。\n"
+"今後新しい武器は時間が掛かるが自分のペースで\n"
+"学びなさい。弾切れでなければの話ですが。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "ああ、そうだ。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "どうぞ。"
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+"何を見つけたと思う、テレポータービーコンだ。\n"
+"ビーコンを使用すると信号を追跡して増援を送る\n"
+"ことができるぞ。必要な物はあるか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "ロケット箱"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "はい、どうぞ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "買うだけの余裕が無い!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "HEグレネード"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "どうぞ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "十分持ってたらまた来い。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "エネルギーポッド"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "これがエネルギーポッドだ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "それでは足りない。"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "テレポータービーコン"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "助けが必要になったら使うんだ。"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "すまない、チャリティーじゃないんだ。"
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr ""
+"城が管理下に入った今、維持させるためには\n"
+"更なる警戒網が必要になるだろう。オーダーは\n"
+"反撃の準備をしているはずだ。"
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "外は気を付けろ。"
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr ""
+"我々は貴方無くして成し遂げる事は出来なかった\n"
+"素晴らしい働きをしてくれてます。"
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "僕がキーマスターだ。"
+
+# 〃 (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr ""
+"皆、この仕事が報われないと思っているが\n"
+"実際はそうでもないんだ..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "鍵をくれ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "オーケー、なんせ僕は、キーマスターだしな。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "わかった、何なりと。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "僕がキーマスターだ。"
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "死ね、反逆者!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "死ね、反逆者!"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr ""
+"何睨んでるんだ?この棒が俺達を囲んでる限り、\n"
+"お前は未だに負けている。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "ここから出してくれ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "ほっといてくれ!"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "迷える者よ、如何なる知識を求めに来た。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "唯一神のシジルだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+"お主の持つ欠片が共鳴しているのを感受出来る。\n"
+"二つ目の欠片は紅と黒曜の塔だ。\n"
+"そこでお主を待ち構えているビショップと戦え。\n"
+"その者が持つシンボルを辿れば見つかるだろう。\n"
+"このトークンをキーマスターに渡せ。\n"
+"魔物を討伐した後、此処へ戻るのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "すぐ戻ってくる。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr ""
+"ビショップは手強く、この使命は困難であろう。\n"
+"次の欠片を手にしたら此処へ戻るのだ。\n"
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+"次の挑戦はお主の精神が試されるだろう。\n"
+"三つ目の欠片はお主の指導者が所持している。\n"
+"彼奴はお主の死を望むが為\n"
+"戦場へ送り込んでいるのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "マシル?彼が裏切者?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr ""
+"彼を妄信するお主の活躍によって、\n"
+"彼奴の目的が果たされる間近だ。\n"
+"彼奴に立ち向かい、運命を切り開くのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "わかった、それがマシルか。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "信用できん。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr ""
+"如何なる選択でも、人類は大いなる神の元で\n"
+"浄化されるだろう。"
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "マシルの死と共に戻る。"
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "そうはさせん。"
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "事を措いても、時の河は永遠の先に進む。"
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr ""
+"心に動揺が見られるな、だがお主は己の体から\n"
+"癌を取り除いた。次の欠片は\n"
+"人々を虐殺で支配するロアマスター外科医が\n"
+"所持している。彼奴を止め、欠片を得るのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "そいつはどうやって見つける?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr ""
+"我の傍にあるテレポーターの扉を開いた。\n"
+"それがロアマスターの元に通ずる。\n"
+"彼奴に死を伝えた後、再び扉を通るがよい。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "欠片を持ってすぐ戻る!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "事を措いても、時の河は永遠の先に進む。"
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr ""
+"気の毒な者よ、お主は幾千の者達が\n"
+"遂げられなかった行いを果たした...\n"
+"お主は我にシジルの力を、唯一神の声を届けた。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "わからないな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+"シジルは門を開き、この惑星の魂を浄化し\n"
+"我に永遠の命を授け給うのだ。我はこの世の\n"
+"生命力を剥ぎ取り、新たなる星への征服に\n"
+"駆り出すのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "そんな真似はさせられないな。"
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "お主の破滅は免れぬぞ。"
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+"俺達を解放しに来たのか?あいつらに\n"
+"インプラントを外されたが、俺は大丈夫だ。\n"
+"まだ少し留まって涎を拭き取らないとならない。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "そうだ、助けに来た。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "そういう意味か?"
+
+# 〃
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr ""
+"まだ俺は手伝うことが出来ない。\n"
+"トランスミッターを壊さなければバレてしまう。\n"
+"そいつは上の階のフォースフィールドを越えた所\n"
+"にいる。コンベアーの詰まりをチェックする\n"
+"だけの仕事だったが、もう辞任だな!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "そうだ、救われたぞ!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "おう、ありがとよ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "自由だ!!俺達は自由だ!!俺達は自由だ!!"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "もっと掘らねえといけねえんだ!"
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "自由だ!!オレらは自由だ!!オレらは自由だ!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "鉱石がもっと必要なんだ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "自由だ!!私達は自由だ!!私達は自由だ!!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "いつまで採掘しなければならない!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "僕らは自由だ!!僕らは自由だ!!僕らは自由だ!!"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "ここで何をしている?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "見回りだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "わかった、続けろ。"
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr ""
+"報告することはない。全て順調だ。\n"
+"何か問題が起きたら報告する。"
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr ""
+"上官殿、以前より問題があったが、\n"
+"もう心配はいらない。"
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "同行か鉄を味わうかだ。"
+
+# 〃 (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "I.D.チェックだ。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "ほら、急いでるんだ。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "目前まで近づけるな、さっさと行け。"
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "何事も無い。進め。"
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr ""
+"なんて活きの良い標本だ。\n"
+"手当なんて必要なさそうだな、で何だ?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "そうだ。マシルの使者だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr ""
+"シーッ...静かに、\n"
+"殺されるかもしれないんだぞ。それで何か用か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "ビショップは何処か聞きたい。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr ""
+"おおぅ、そういう事だろうと思った。\n"
+"後ろを見ろ。そこがビショップの大聖堂だ。\n"
+"しかし要人以外は入れないよう\n"
+"フォースフィールドが張ってある、\n"
+"君には通れないな。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "ビショップを殺さなければならないんだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"ああ、だろうな。先にまず複合警備施設を\n"
+"制圧してそこにあるテレポーターを使え。\n"
+"君に合った方法だと思うが、テレポーター先の\n"
+"中央管理部にあるコンピューターを潰せ。\n"
+"コンピューターが無けれは、フォースも無しだ。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "そりゃいい、簡単そうだな。"
+
+# 〃
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr ""
+"コンピューターを潰す利点はな、\n"
+"奴等の塔へ送られる情報もそれに保管されている。\n"
+"それを万引き、とも言えるな?へヘッ!"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "他にあるか?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"そうだな、中庭の倉庫にマウラーが納品されたと\n"
+"聞いた。その威力は相手を消滅させられる程だと。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "それはまだあるんだな?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "次の話はバレる前に'去れ'か?"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr ""
+"先にクインシーと話を。彼から許可を\n"
+"得られない限りお助けすることは出来ません。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "本日は何かお困りで?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "医薬パッチ"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "15 ゴールド必要です。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "医療用キット"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "こちらが 医療用キットです。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "その為の資金が少し足りません。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "手術キット"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "野外用手術キット一丁。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "余裕がある時にまたどうぞ!"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "何事だ?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "見周りしている。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "この先は立入禁止だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr ""
+"新しいマウラーズを得たテンプル騎士団が\n"
+"すぐにでもここに来る。長生きしたければ\n"
+"邪魔をしようと思わない方がいい。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "マウラーズ?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "騎士団に人気の兵器だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+"以前所属したばかりだ。\n"
+"彼等は全て警備に周るだろう。\n"
+"門を閉める時に見る機会があったからな。\n"
+"残りの小隊が兵器を請求するまで\n"
+"誰も入れる事はできない。"
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr ""
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr ""
+"私がこの場所の主任者だ。\n"
+"私の仕事は、ロアマスターのロボットの\n"
+"デザインに必要な原料パーツを生産することだ。\n"
+"もしあなたが公用で来たのではないのなら、\n"
+"申し訳ないが話すための時間はないのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "私は公用で来た。"
+
+# 〃 (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+"ということは、ティモシーと話したのだな。\n"
+"彼と私は、取り返しのつかない事態に陥る前に\n"
+"オーダーの秘密を解き明かすために\n"
+"一緒に働いてきた。もしかすると、\n"
+"君は私達に手を貸せるかもしれない。\n"
+"私は今、生産セクターへの扉を開いたぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "中に何があるのかを知っているのか?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr ""
+"あの場所は極秘エリアだ。\n"
+"オーダーはある種の生物のようなものを\n"
+"そこで繁殖させているし、それだけではなく\n"
+"私はタリスマンと呼ばれる奇妙な\n"
+"アーティファクトをこの目で見た。\n"
+"誰もそれには近づくことが許されていないのだ。\n"
+"噂では、タリスマンはほかの2つのタリスマンと\n"
+"つながることで強大なパワーを発揮できるらしい。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "それが欲しいということか?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr ""
+"そうではない!もし見つけたら\n"
+"それは自分のものにしてくれ。もしかすれば、\n"
+"それを私達をオーダーから解放するために\n"
+"使えるかもしれない。幸運を祈ってはいるが、\n"
+"もしあの場所に行こうとしているなら、\n"
+"もっと多くの力が必要となるぞ..."
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "過去に何があったというんだ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr ""
+"君はこの周りの廃墟群を見てきたはずだ。\n"
+"この星に衝突した彗星は、実は宇宙船だったのだ\n"
+"信じられないかもしれないが、\n"
+"それは遥か前のこの乱世の始まりとも言える。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "だから霊の、唯一神..."
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr ""
+"奴等はかつてこの世界を支配していた生物で\n"
+"生命力をひたすら吸収する存在だった。\n"
+"古代人が辛うじて封印したが、\n"
+"その過程で彼らの命は奪われた。\n"
+"私が知っているのはそれだけだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "ありがとう...精一杯の事をしよう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "急ぎたまえ、同志よ。"
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr ""
+"相談がある場合は鍛冶屋のマスターに仰って\n"
+"下さい。私は箱にラベルを張っているだけです。"
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "何が入り用だ、お客さん?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "銃弾倉"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "これでソチラのブツだ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "そんだけの金持ってないぞ!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "ミサイル箱"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "どうぞ、お客さん。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "85ゴールドだぜ、お客さん!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "HEグレネード"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "これでソチラのブツだ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "100ゴールドだぜ、旦那!"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "エネルギーポッド"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "どうぞ。"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "135ゴールドなんだ、ワリィ!"
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "何か手伝いましょうか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "レザーアーマー"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "どうぞ、お客さん。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "これはチャリティーじゃない!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "メタルアーマー"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "良い選択です。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "これでは足りない!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "耐環境スーツ"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "どうぞ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "金が無いならスーツは無しだ。"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "何か別のやつは?"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "ホールのドアを通るんだ。"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "プレイするなら支払うべきだ。"
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "何をお求めで?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "レザーアーマー"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "どうぞ、お客さん。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "これはチャリティーじゃない!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "メタルアーマー"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "良い選択だ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "これでは足りない!"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "耐環境スーツ"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "どうぞ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "金が無いならスーツは無しだ。"
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "本日は何の用で?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "医薬パッチ"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "これが貴方のパッチです。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "これは15ゴールドですよ。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "医療用キット"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "これが貴方のキットです。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "お金が少し足りませんよ。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "手術キット"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "手術キット一丁。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "お金が有る時にまた!"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "よう旦那、何が必要だ?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "情報"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr ""
+"誰も工場を出入りしている所を見ていない、\n"
+"フォースフィールドがずっと付いてる。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "金が無いなら情報は無しだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "はい、どうしたい?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "更なる情報"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr ""
+"工場は彗星の衝突地点に建っている。\n"
+"これは偶然だと思えない。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "頼むぜ、たった5ゴールドだぞ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "また来たな、何か頼むか?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "更なる情報"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr ""
+"工場はオーダーの「新審問官」が来てから\n"
+"恐ろしい雰囲気を纏った。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "5ゴールドかかるぜ。"
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr ""
+"知ってることはこれで全部だ。\n"
+"バーテンダーの噂は売切れだ、すまない。"
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "こんにちは。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "何してるんだ?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "今は立て込んでる、離れなさい!"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "今手伝ってくれるか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "シャドウアーマー?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "ああ、声はすれど姿は見えず。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "ここを出て、稼いでからまた来てくれ!"
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+"ようやく来てくれたか。\n"
+"工場に入るためには鍵が必要だ。\n"
+"鍵は盗んだのだが、我々の密偵が砦地下にある\n"
+"地下墓所で行方不明になった。\n"
+"彼を探すため10名派遣したのだが、\n"
+"誰一人帰ってこなかった。\n"
+"地下墓地で何か異変が起こっているに違いない。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "それは一体?人間か...?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+"いや。人間の仕業だとはとても思えない。\n"
+"それが何であれ君は鍵を取り戻せ。\n"
+"地下墓所への入り口は開けておこう。\n"
+"鍵を手に入れたら、工場は採掘所の隣にある。\n"
+"時間はあまり無いから急ぐのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "非人道的な何か?流石だな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr ""
+"こうしてる間にも君は時間と人命を\n"
+"無駄にしている。行け!"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "何かお困りでも?"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "更なる情報。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr ""
+"ティモシーを探せ。彼がオーダーの秘密を\n"
+"知っていると聞いた。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "たった5ゴールドだぞ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr ""
+"知ってることはこれで全部だ。\n"
+"バーテンダーの噂は売切れだ、すまない。"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "どうも。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "何してるんだ?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "今は立て込んでる、離れろ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+"アンタがもし時間を浪費するつもりじゃないなら\n"
+"青の聖杯を見つけられるかどうかを確かめる。\n"
+"その骨董品は俺にとって非常に価値がある。\n"
+"持ってきたら協力しよう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr ""
+"青の聖杯を見つけたのか!\n"
+"良し、それをくれたら取引に応じよう。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "渡そう、兎に角運が悪かった。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "ふざけるな、俺の物だ。"
+
+# 〃 (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "何もやるモンは無いぞ。失せな!"
+
+# 〃 (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+"工場の鉄工所を探せ。俺が与えた情報は\n"
+"そこの隠された区域に入る為に必要だ。\n"
+"偽の作業員がドアを開けるだろう。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "そこには何がある?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr ""
+"俺の調査では、古代の災厄がそこに隠されている\n"
+"という話だ。注意しろよ!"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+"その青い聖杯はどうした?\n"
+"私はオーダーの遥か過去の関係について調査\n"
+"していた、その骨董品が手掛かりになりそうだ。\n"
+"取引しよう、聖杯をくれれば幾つか情報を渡す。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "渡そう、兎に角運が悪かった。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "ふざけるな、俺の物だ。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "何もやるモンは無いぞ。失せな!"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "今手伝ってくれるか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "シャドウアーマー?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "ああ、声はすれど姿は見えず。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "ここを出て、稼いでからまた来てくれ!"
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+"ようやく来てくれたか。\n"
+"工場に入るためには鍵が必要だ。\n"
+"鍵は盗んだのだが、我々の密偵が砦地下にある\n"
+"地下墓所で行方不明になった。\n"
+"彼を探すため10名派遣したのだが、\n"
+"誰一人帰ってこなかった。\n"
+"地下墓地で何か異変が起こっているに違いない。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "それは一体?人間か...?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+"いや。人間の仕業だとはとても思えない。\n"
+"それが何であれ君は鍵を取り戻せ。\n"
+"地下墓所への入り口は開けておこう。\n"
+"鍵を手に入れたら、工場は採掘所の隣にある。\n"
+"時間はあまり無いから急ぐのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "非人道的な何か?流石だな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr ""
+"こうしてる間にも君は時間と人命を\n"
+"無駄にしている。行け!"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+"マスターは訪問者ヲ嫌っている。\n"
+"彼ハ自分ノ仕事ヲ邪魔されないノガ良いからダ。\n"
+"私ハこれカラ倉庫に新品の部品を取りに行かねば\n"
+"腕と足だったカナ。オット、モウ話ス時間ハ無イ\n"
+"マスターが君を見つける前ニ出発しなけれバ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "何故そんなことを。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "ナゼなら、マスターは訪問されたくナイからダ!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr ""
+"知ッテるハズだ、アンタに合う\n"
+"アコライトの制服一着のサイズについてサ。"
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr ""
+"イヤイヤ、私ハ真ノプログラマーではない、\n"
+"彼ハ隠れている。非常ニタフなガードノ\n"
+"訓練場にダ、もし生き残れたら会えるだろう\n"
+"或いハ彼を殺せるだろう。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "お前は誰だ?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "アンタがここをふらついても何も無いよ。"
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "イラつかせるな、田吾作が!"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr ""
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "遂に、この独房から抜け出せる。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "何でここにいる?"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "私は無実だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr ""
+"ハリスに知事の暗殺を企てていると言われた。\n"
+"そんなこと心にも思ったことは無いのに。"
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "外は気をつけろ。"
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr ""
+"助けてくれるなら援助する。\n"
+"5ゴールドで知っている情報を全て教えよう"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "金はこれだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "パンチならアラームを鳴らせることはない。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "タダでは教えられないな!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "俺が知っていることはこれで全部だ。"
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "どうも同士よ。何か必要か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "エレクトリック ボルト"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "クォーレル一本だ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "スッカラカンじゃないか!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "銃弾倉"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "これでアンタのブツだ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "悪いが、金が無ければブツも無しだ。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "銃弾倉箱"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "どうぞ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "十分な額じゃない"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "弾薬鞄"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "ありがとう。 他に何か?"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "それを買える余裕は無い、また今度。"
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "ようこそ、何を見ていきますか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "耐環境スーツ"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "はい、これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "すみませんが、貴方は十分なお金を持っていません。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "レザーアーマー"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "また別の機会に?"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "メタルアーマー"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "着ると安心しますよ。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "余裕がある時にまた。"
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "何かお困りですか?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "医薬パッチ"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "これをどうぞ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "10 ゴールド必要です。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "手術キット"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "ありがとうございます。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "譲渡したい所ですが、25 ゴールド必要です。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "治療だ"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "こちらになります、お気をつけて。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "ところで、医薬パッチを買う余裕はありますか?"
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+"どうも余所者、この辺では見かけない顔だな。\n"
+"では一杯アドバイスをおごろう。\n"
+"この付近が自由な発言を\n"
+"許さないからって下手な真似をするなよ。\n"
+"オーダーという自警団がすぐに駆けつけてくるぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "情報"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "他は...下水道には鼠やロボが沢山だ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr ""
+"ちょっと男はお金を稼ぐんだ。 \n"
+"あなたはこれらのジョーカーがうまく傾くと\n"
+"思いますか?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr ""
+"また戻ってね?\n"
+"まあ、少なくともあなたは自分の肌を\n"
+"損なわないようにするのに十分知っています。\n"
+"私は今あなたのために何ができますか？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "話のネタ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "知事は俺達に自由はないと思い出させる象徴さ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "気が変わったら戻ってきな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr ""
+"所で、アンタは死に行かない人達に\n"
+"聞き回ってる様だが。悪いことは言わねえ、\n"
+"あんまし死に急ぐんじゃねえぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "話のネタ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "オーダーは見えてる以上に強大だ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "気が変わったら戻ってきな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr ""
+"これはこれは親友、心得の瓶は切らしてるぞ。\n"
+"とにかく俺が知ってる話はこれで全部だ。"
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr ""
+"新しい玩具も買えないぐらい...貧しそうだな\n"
+"アンタ。良い儲け話があるぜ。\n"
+"俺のちょっとした仕事でガッポガポだぞ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "何もしないよりはいいか。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "いらない。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "俺から逃げられると思ってるのか!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+"良い判断だ。川沿いにある オーダーの聖域 は\n"
+"あいつらの非公式の拷問室だ。\n"
+"中には黄金の聖杯が隠してある。\n"
+"そいつを持ってくれば報酬をやるぜ。\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "どうすればいいんだ?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "ちょっと考えとく。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr ""
+"残念、次はねえよ。おぅガードの旦那、\n"
+"やっちゃってくだせえ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr ""
+"このクロスボウを使いな、狙いを定めて\n"
+"--シュッとな。覚えておけ、\n"
+"ファンシーなカップを持ってここに戻ってくると。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "また会おう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr ""
+"何ボーっとしてんだ? 心配すんな、\n"
+"チャッチャと片付けて聖杯を持ってこい!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "ガード! 裏切者を殺せ!"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+"よう。アンタが何を考えてるかわかるぜ、\n"
+"まるで罠だと。\n"
+"俺には暴れん坊みたいな芸当出来ねえしな。\n"
+"おう、カップを巡って大騒ぎだろうなこりゃ、\n"
+"怖い怖い。\n"
+"だったら準備しな、金と名誉は、約束通り。\n"
+"この鍵を取ったら知事が報酬を与えるだろうな。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "そりゃいいな、待ち遠しい!"
+
+# 〃 (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "聖杯が無いなら、金も無しだ!"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "聖杯は頂く、じゃあな。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "頂く? 有り得ねえな!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "何突っ立ってんだ? 知事に報酬を受けて来いよ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "くたばれ裏切者が!"
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr ""
+"それで、お前が聖杯を盗んだ愚か者か?\n"
+"私は反賊としてお前を逮捕するつもりだ...\n"
+"そうすればオーダーでの地位が上がる。\n"
+"無意味な駒だと思うか?\n"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "クソが!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "私もそう思う。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "ハリスは俺に金を渡すと約束したのに!"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "残念だな、お前にやれるものは死のみだ!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "お前をぶっ殺す!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "ここから立ち去れ!"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "お前をぶっ殺す!"
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "ここから立ち去れ!"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr ""
+"旧市庁舎の下で、\n"
+"私たちにとって何という完璧な場所です。 \n"
+"秩序は彼らが私たちを消滅させたと考\n"
+"えていますが、それがすべてだったのは\n"
+"あなたが不注意になったときに起こり得ることを\n"
+"私たちに思い出させるものです。"
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "マシルと話すんだ。彼から援助が得られるはず。"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+"私はマシルがオーダーを転覆させる計画を\n"
+"持っていると聞いた。そうだと良かったが。\n"
+"我々は一度大敗し全滅しかけた。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr ""
+"ここの樽は捨てられていた物で\n"
+"彼らの給水を補っている。"
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+"私は研究にも取り組んでいる。貴方のスタミナを\n"
+"増強し完璧な体にすることも可能だ。\n"
+"そのインプラントのバグも殆ど取り除かれている\n"
+"ところで何か必要かい?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "治療してほしい。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "君、滅茶苦茶だな。なんとかしよう。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "スタミナインプラント?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "大丈夫、すぐ終わります。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "まだ完成していません。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr ""
+"どうも、私は今最新版のインプラントに\n"
+"取り組んでいる。何か用かな?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "治療してほしい。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "少なくとも行動を起こしているのです。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "インプラント アップグレード?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "良いことだ、安全すぎることはない。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "もうすぐ出来上がる、それほど掛からない。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr ""
+"大丈夫、全て順調だ。残っていた問題も\n"
+"全て取り除かれた。他に何が必要かな?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "治療してほしい。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr ""
+"今度は何を始めるんだ?\n"
+"クルセイダーと向かい合うのか?"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "インプラント アップグレード?"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "今取り掛かっている。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "もう少しテストしてからにしよう。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr ""
+"インプラントはこれ以上ない程完成した。\n"
+"それとも治療か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "ああ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "君、滅茶苦茶だな。なんとかしよう。"
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "それで何か用か?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "無駄遣いするなよ。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "教えてくれ。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "わかった、幾つかやり方を教えよう。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "そっちの準備がまだ整ってないようだな。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "もう戻ったか?何が必要だ?"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "この弾を使え、無駄遣いするなよ。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "もう十分に弾を持ってるようだぞ。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "教えてくれ。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "わかった、これで長くやり合えるだろう。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "すまないが、できない。マシルの命令だ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+"弾薬と訓練、どっちの用件だ?\n"
+"奪った新しい武器が届くのを待ち切れないです。\n"
+"少しの訓練でデカい復讐を。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "弾切れだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "この弾をどうぞ、無駄遣いしないように。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "もう十分に弾を持ってるようだぞ。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "教えてくれ。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr ""
+"オーケー、ここで学んだ事を生かして\n"
+"オーダー共を地獄に送って上げなさい。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "マシルの命令を受けてから、また来い。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr ""
+"私が教えられる事はもう無い。\n"
+"今後新しい武器は時間が掛かるが\n"
+"自分のペースで学んだ方がいい。\n"
+"弾切れでなければの話だが。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "ああ、そうだ。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "どうぞ。"
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr ""
+"街の中で銃をバンバン撃ったりするんじゃないぞ\n"
+"警報を鳴らしてしまえば、奴等が衛兵共を\n"
+"城から送り込んでくるぞ。"
+
+# 〃
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "ようこそ、我々が貴方の助けに成ります。"
+
+# 〃
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr ""
+"私がまだ活動していた時、我々が増援に\n"
+"囲まれる前にアコライトを調べる機会が\n"
+"あったんだ。聞いてくれ、奴等は人間では\n"
+"なかったんだ。"
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr ""
+"我々は城門のメカニズムが何処にあるか\n"
+"探し続けているが、あまり良い結果は出ていない"
+
+# 〃
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr ""
+"決して捕まるな。投獄されると奴等が\n"
+"何をしでかすか怪談として聞く程だ。\n"
+"跡形もなく...消される。"
+
+# 〃
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+"伝えておく、オーダーの錫兵は\n"
+"他方から呼び出され押し寄せてくる。\n"
+"奴等は素早く残忍だ。"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr ""
+"ようこそ、ここは我々の僅かな希望が集まる\n"
+"最後の場所だ。オーダーへと立ち向かう意思を\n"
+"持っているのは我々くらいだ。\n"
+"ここには素晴らしい頭脳を持つ学者たち、\n"
+"そして丈夫な体を持った戦士たちがいる。\n"
+"だがしかし、我々には問題解決に優れた者、\n"
+"つまり私達の力となる者が足りていないんだ。\n"
+"我々に手を貸してくれ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "何をしたらいい?"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr ""
+"我々の援護だ。我々が奴等のテクノロジーを\n"
+"盗むのを手伝って欲しい。同胞の解放の為だ。\n"
+"イカレた奴等と戦闘する必要がある。\n"
+"正義を取り戻すため君には危険の伴う任務を\n"
+"受けてほしいのだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "同意した!"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+"いいぞ、今後もブラックバードが君のガイドを\n"
+"務める。彼女は君に感心しているようだぞ。\n"
+"君たちの二人で、オーダーと\n"
+"その人間離れした手下たちが持っている秘密を\n"
+"暴いてもらいたい。\n"
+"奴等の基地に潜り込んで、倒すんだ。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "任せろ!"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "良い心掛けだ。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "よく来た、同志!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "私を傷つけないでくれ。"
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr ""
+"もしお前が私に暴力を振るいたいなら間違いだ、\n"
+"私を殴る価値はないから。"
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "私は何も知らないんだ。"
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "離れろ、さもなくば衛兵を呼ぶぞ!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr ""
+"反乱軍がこんな出鱈目な状態をひっくり返すのを\n"
+"切に願うよ。"
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "私に構わないでくれよ、頼むぞ?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr ""
+"何か、アコライトの中で見覚えのある顔したのが\n"
+"いたんだが。"
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "オーダー達はここいらを厳しく取り締まってる。"
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "お前がただの警備兵なんてことはなさそうだな。"
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr ""
+"私はオーダーがこの辺での反乱軍の行動を\n"
+"本当に厄介がってると聞いたぞ。"
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "オーダーが私達に立ち向かえるはずはない。"
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr ""
+"攻撃の準備は殆ど整った。\n"
+"マシルの計画は所定の位置に下す。"
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "後ろは見ているぞ、気にするな。"
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr ""
+"デカブツには近づくなよ。スクラップみたいに\n"
+"踏みつぶされるぞ!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr ""
+"栄光の日は我々に訪れる、\n"
+"そして反逆する者達は潰す!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr ""
+"あまり気楽でいるな。\n"
+"我々にはまだやるべき事があるんだ。"
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr ""
+"マシルは貴方が新しい希望だと言っている。\n"
+"心に留めておいてくれ。"
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr ""
+"我々が一度こんな酷いハッタリを負かせば、\n"
+"世界を本来の状態に建て直せるだろう。"
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr ""
+"貴方は自分自身だけでなく、\n"
+"国中の人の為に戦っている事を忘れないでくれよ。"
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "我々が一人でも立っていれば、それが勝利。"
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "立ち去れ、百姓。"
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "真の信仰を求めよ、それしか理解に至る道はない。"
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "人が真の意味で生まれ変われる方法は、死のみだ"
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "お前の無益な戯言なぞ興味は無い。"
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "話があったらこちらからする。"
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "あまりイライラさせるな!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "立ち去れ!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "警報を鳴らされたくないなら、邪魔をするな!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr ""
+"オーダーは世界を浄化し、\n"
+"我々を新しい時代へ導いてくれる。"
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "問題か? そうは思わないが。"
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "貧民に何か恵んでくれるのか?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "何ジロジロ見てる、地上人。"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "余ってる食べ物とかはないよな?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr ""
+"お前みたいな地上の連中には俺らのことなんて\n"
+"わかりゃしない。"
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr ""
+"衛兵共は俺らを見つけられない。\n"
+"あのバカどもは俺らがここに居ることすら\n"
+"知らないんだぞ。"
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr ""
+"そのうち、オーダーに仕える者を除いて\n"
+"全ての人間が私達のようになることを\n"
+"強いられるだろう。"
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr ""
+"今ジロジロ見てたみたいだが、\n"
+"お前もいつかこんな顔になるだろうな。"
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "腹立たしい地上人の態度は悩みの種だ!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr ""
+"オーダーはアンタの哀れなフロントに近付いてる\n"
+"ってさ。"
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "気を付けろ、地上人。敵はアンタを知ってるぞ。"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr ""
+"運命は我々の手の中だ。\n"
+"あまり歯向かわない方がいいぞ。"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr ""
+"オーダーは浅ましく腐敗した世界を\n"
+"浄化するだろう!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "主の意志に従うのだ。"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "オーダーの友に永久の命を!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "自由意志など、弱者を縛る幻想に過ぎぬ。"
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr ""
+"力は栄光への道だ。\n"
+"オーダーに従えばその道を歩めるだろう。"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "正義は我等と共に在る、参加せよ!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "オーダーは我々を守護している。"
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr ""
+"アコライト?\n"
+"奴等はオーダーの爛漫なる未来を見ていない。"
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr ""
+"その哀れな肉体の殻でも名誉の為ならば、\n"
+"オーダーの兵器を携える事が出来るだろう。"
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "じゃあな!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "どうも、じゃあ!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "また今度!"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr ""
+"もしもし? 司令部、comユニットが起動されました。\n"
+"...からビジュアルとサウンドを受け取っています\n"
+"...誰かが...ちょっと、今そこから出て行ってください\n"
+"...そして聖杯を捨ててください！"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr ""
+"聞こえるか、この無線機がアナタは100%人間だと判断した。\n"
+"私はアナタを信頼して良いとみて連れて来るよう命じられた、\n"
+"反乱への報酬は期待して良いわ。ああ、それと、私の名はブラックバードよ。"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+"聞いて、このcom-unitはあなたが100%人間だということを教えてくれます。\n"
+"あなたは私たちのうちの一人であるかもしれません、\n"
+"そしておそらく私たちは互いに試みて信頼することができます。 \n"
+"このテストを考えてください、知事の邸宅に火炎放射器があります。\n"
+"それを手に入れてください"
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr ""
+"旧市庁舎に入る。そこにはマシルがアコライトに関わる者を欺く為の\n"
+"抜け道を用意している。"
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr ""
+"すぐ左のドアを通り、右のドアから小部屋に入るんだ。\n"
+"見張りの名はジェフ。金が必要だ と言えば通じる。"
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+"町にいるフロントへの武器供給者であるイラールの元を訪ねる。\n"
+"彼は武器屋の隣のドアに居る。それで、知事と会う為にマシルから貰ったキーを使う。"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr ""
+"私が知事について知っていることは、町の中央で双方を遊ばせてる様だ。\n"
+"ソイツがここいらを'マンション'と呼んでいる。"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr ""
+"私が知事について知っていることは、町の中央で双方を遊ばせてる様だ。\n"
+"ソイツがここいらを'マンション'と呼んでいる。"
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr ""
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "ダーウィンを始末したら耳を知事に渡す。"
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr ""
+"電力盗用の場所を見つけ、それを止める。\n"
+"知事に渡す証拠も必要だ。マクガフィンと話をつける。"
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr ""
+"電力盗用の場所を見つけ、それを止める。\n"
+"知事に渡す証拠も必要だ。マクガフィンと話をつける。\n"
+"彼は下水処理場の傍にある'物乞いの巣'と呼ばれる場所にいる。"
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr ""
+"馬鹿者! お前はオーダーから我々の基地を隠す妨害回路を\n"
+"壊してしまった!市庁舎に調査隊が向かった、今すぐ片付けろ!\n"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr ""
+"よし、'信用しない'のが最も重要なことだ!\n"
+"壊れた配電機を渡して刑務所の許可証を知事から貰うんだ。"
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr ""
+"良い判断だ! 知事は嘘を付いている。\n"
+"あれはオーダーから基地を隠す為に使用している我々の配電機だ。\n"
+"この壊れた配電機を渡して奴を騙し返せ。"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr ""
+"ワーデンの鍵で刑務所の独房区域に入って\n"
+"囚人を解放する方法を見つける。"
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr ""
+"囚人を解放する方法を見つける。\n"
+" ハンドスキャナーを開く方法を見つける。"
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr ""
+"囚人を解放する方法を見つける。\n"
+"裁判官の手を使用してハンドスキャナースイッチを操作する。"
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr ""
+"よくやった相棒。囚人を解放できたのは良い働きだ。\n"
+"いずれかのテレポーターに飛び込むと基地に戻る。"
+
+msgid "TXT_ILOG22"
+msgstr ""
+"送電網を動かしているパワークリスタルを破壊してオーダーのシールドを止めろ。 \n"
+"発電所の倉庫に潜らせたスパイ、ワーナーを訪ねよ。"
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "迷子になったら、もっと楽しめるぞ。"
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr ""
+"もう一つの任務をこなす前に戦力の増強が必要と考えられる。\n"
+"マシルがイラールを介して資金と訓練の手配をしてくれるので会いなさい。\n"
+"それと近所のメディックも支援してくれるわ。"
+
+# 〃
+msgid "TXT_ILOG26"
+msgstr ""
+"イラールとメディックを尋ねて資金と訓練を受け、下水道に向かうんだ。\n"
+"入り口は知事のマンションの川を挟んだ向かい側だ。"
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr ""
+"誰が呼んだかラットキングのウェランを探すんだ。\n"
+"それが叙述的でもあり派手な呼び名なのも定かだ。"
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr ""
+"火炎放射器の部品をイラールに持っていく。\n"
+"浄化タンクを排水せよ。その下層に下水道への隠された入り口がある。\n"
+"ゲートコントロールを探し出し、破壊せよ。"
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr ""
+"司令官、彼はやったぞ!\n"
+"ゲートが開いた。突撃部隊を送って我々も続くとマシルに伝えてくれ!"
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr ""
+"城に向かう突撃部隊に参加してプログラマーを探し出せ。\n"
+"プログラマーの居場所について矛盾する報告もある。\n"
+"ある人はコンピューター室にいる、別の人は保管室にいる、\n"
+"また別の人は長い廊下にいるとも言っていた。"
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "プログラマーを見つけて殺せ。"
+
+msgid "TXT_ILOG46"
+msgstr ""
+"オラクルに会いシジルの欠片の場所を尋ねろ。\n"
+"オラクルは町外れの国境地帯にいる。\n"
+"川の向こうにある城を目指しアーチウェイを左に曲がるのだ。"
+
+msgid "TXT_ILOG47"
+msgstr ""
+"オラクルに会いシジルの欠片の場所を尋ねろ。\n"
+"オラクルは町外れの国境地帯にいる。"
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr ""
+"オラクルに会いシジルの欠片の場所を尋ねろ。\n"
+"メディックと武器トレーナーに会い訓練と体力を強化せよ。\n"
+"オラクルは町外れの国境地帯にいる。"
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr ""
+"オラクルに会いシジルの欠片の場所を尋ねろ。\n"
+"オラクルはこの場所にいる。私は全部記録している。\n"
+"私は貴方が生き残る確証がないというわけではなく、\n"
+"オーダーはシジルを操る事が出来ないというだけだ。\n"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr ""
+"二つ目の欠片は深紅と黒曜石の塔にある。そこでビショップを見つけろ。\n"
+"ビショップはオーダーの軍事指揮官だ。奴を討ち破り欠片を手に入れろ。\n"
+"国境地帯のキーマスターにオラクルのトークンを見せよ。"
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr ""
+"ビショップのいる場所の警備は厳重なので、\n"
+"奴等の制服を盗み紛れ込む方が良いのでは?\n"
+"ビショップを探し、始末したらオラクルの元へ戻ろう。"
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr ""
+"要塞の中に情報提供者がいるという話を聞いた。\n"
+"奴等が病院と呼んでいる場所に勤めているので向かいましょう。"
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr ""
+"諦めないで。これでいいんだ。真っ直ぐ行こう。\n"
+"中央管理室のテレポーターに入りコンピューターコアを破壊せよ。\n"
+"それはビショップのフォースフィールドを殺せる。\n"
+"ビショップも殺したらオラクルの元へ戻れ。"
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr ""
+"あら、見事な物ね。是非とも火薬を献上しましょう。\n"
+"それでベイリーに戻ってフォースフィールドが守っていたビショップの塔へ向かおう。"
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr ""
+"ブラボー!新たなるシジルの欠片だ!\n"
+"ビショップの体から出てきたあの奇妙な幽体を見た?\n"
+"以前に何処かで見た気がするけど?"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr ""
+"ビショップにもあったスペクトラルエネルギーがオラクルにも宿っているという\n"
+"報告があるわ、気を付けて。"
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr ""
+"リヒターが指揮官の任を引き継いだ。マシルはずっと私達を騙していたなんて。\n"
+"あの人がオーダーに真の忠誠を誓っていたなんて、とんだ蛇神憑きだわ。"
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr ""
+"更なるシジルの欠片だ。私達の自由にまた一歩近づいたわ。\n"
+"そして私にも一歩近づいている。"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr ""
+"貴方はもはや完全なシジルの力を行使できるわけね。\n"
+"後は言いがかりでもしてここを閉鎖させましょう。"
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr ""
+"まあ予言なんてそんなものでしょ。\n"
+"ちょっと待って、マシルが帰還するように言ったわ。ここから抜け出しましょう。"
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr ""
+"工場は鉱山の隣にあるわ。リヒターはデグニン鉱山とも呼んでいる。\n"
+"デグニン石は綺麗だが可燃性で、フォースフィールドを消すにはうってつけよ。\n"
+"そこへのキーを地下墓所から取り、鉱山に向かおう。"
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr ""
+"工場は鉱山の隣にあるわ。リヒターはデグニン鉱山とも呼んでいる。\n"
+"デグニン石は綺麗だが可燃性で、フォースフィールドを消すにはうってつけよ。\n"
+"そこへのキーを地下墓所から取り、鉱山に向かおう。\n"
+"ここがリヒターのエージェントが探していた遺跡のはず。気を付けて。"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr ""
+"工場は鉱山の隣にあるわ。リヒターはデグニン鉱山とも呼んでいる。\n"
+"デグニン石は綺麗だが可燃性で、フォースフィールドを消すにはうってつけよ。\n"
+"友よ、私達が戦う相手が何であろうとも、オーダー以上のものはない。\n"
+"鉱山から離れましょう!"
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr ""
+"工場は鉱山の隣にあるわ。リヒターはデグニン鉱山とも呼んでいる。\n"
+"デグニン石は綺麗だが可燃性で、フォースフィールドを消すにはうってつけよ。\n"
+"警戒を緩めることなく、鉱石の堆積所を探しましょう。"
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr ""
+"警戒を緩めることなく、鉱石の堆積所を探しましょう。\n"
+"ここの精神の乏しい労働者達は、RCインプラントでシナプス機能を妨害している。\n"
+"私達が送信機を破壊し、皆を解放しよう。"
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr ""
+"工場は鉱山の隣にあるわ。警戒を緩めることなく、鉱石の堆積所を探しましょう。\n"
+"私の案はフォースフィールドの近くに鉱石を置き撃って爆発させる方法よ。\n"
+"その結果、圧縮されていた磁場の反動で光を打ち消すわ。"
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr ""
+"工場へ今すぐ入ろう。鉱山の出口はすぐわかる。\n"
+"機械を探してシャットダウンさせろ!"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr "重い神経波歪曲が直に届いたわ。私達はそれを見つけたという事よ。"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr ""
+"今まで見てきたことについて考えている!\n"
+"奴は人の内部から出てくる...それについて考えたくないわ。\n"
+"この恐怖を打ち消すんだ!"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr ""
+"オラクルが正しかった。マシルはイカれていたなんて。\n"
+"彼は故意に200人以上の人々を死に追いやっていた。\n"
+"復讐しなくては。死んだ人達の為、そして今生きている人達の為にも!\n"
+"戻って何が起きているかも調べるんだ。"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr ""
+"リヒターの報告では我々が破壊した工場は'研究所'に繋がっていて、\n"
+"奴等はシジルの調印を内部から得ている。工場に戻って自由への次の段階に進みましょう"
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "ビショップを見つけて殺したらオラクルの元へ戻れ。"
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr ""
+"ロアマスター研究所は開いたばかりのテレポーターを越えた先だ。\n"
+"奴が何をやらかしているか調べろ。次の自由を解放するために。"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr ""
+"頼むからこんな所さっさと出よう。\n"
+"フォースフィールドは切った、ビショップの塔へ向かおう。\n"
+"ビショップを殺したらオラクルの元へ戻れ。\n"
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr ""
+"川沿いの 聖域 を探し、中にある聖杯を盗む。\n"
+"酒場にいるハリスに渡す。"
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "知事を探せ。彼と話して報酬を貰う。"
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr ""
+"川沿いの 聖域 を探せ。中にいるベルディンと\n"
+"呼ばれている捕獲された者を見つけ彼を黙らせる。\n"
+"指輪をロワンに渡す。"
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "フロントの場所を見つけ、マシルと会話する。"
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "階段を降り、マシルと会話する。"
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr ""
+"町にいるフロントへの武器供給者であるイラールの元を訪ねる。\n"
+"彼は武器屋の隣のドアに居る。それで、知事と会う為にマシルから貰ったキーを使う。"
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr ""
+"電力盗用の場所を見つけ、それを止める。\n"
+"知事に渡す証拠も必要だ。"
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr ""
+"発電所の倉庫にいるダーウィンを見つける。\n"
+"始末したら、そいつの耳をモーレルに渡す。"
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr ""
+"モーレルからもらった刑務所の許可証を使って入る。\n"
+"入ったらモンターグと話し、囚人を解放する方法を探す。\n"
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr "ワーデンから鍵を奪って内部に入れ。"
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr ""
+"送電網を動かしているパワークリスタルを破壊してオーダーのシールドを止める。 \n"
+"発電所の倉庫に潜らせたスパイ、ワーナーを訪ねる。\n"
+"その前にメディックと武器トレーナーに会うのを忘れるな。"
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr ""
+"送電網を動かしているパワークリスタルを破壊してオーダーのシールドを止める。 \n"
+"手に入れたI.D.を使って発電所に入る。\n"
+"ワーナーの言う上階の部屋も余裕があったら調べる。"
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr ""
+"送電網を動かしているパワークリスタルを破壊してオーダーのシールドを止める。 \n"
+"コアエリアでケトリックと話す。"
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr ""
+"パワークリスタルを破壊してオーダーのシールドを止める。 \n"
+"ケトリックと話し、スイッチを動かし通路を上げ、エレベーターにIDを使う。"
+
+msgid "TXT_ILOG1015"
+msgstr ""
+"オーダーが封鎖している町への入り口を見つける。\n"
+"ドアを開け、ガードの制服をウェランに持って帰る。"
+
+msgid "TXT_ILOG1016"
+msgstr ""
+"火炎放射器の部品をイラールに持っていく。 \n"
+"下水道のメンテナンス室を見つけ、 城内の貯水タンクを見つけて排水。 \n"
+"その下には下水道への隠された入り口があり、その奥にゲートコントロールがある。"
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr ""
+"城内への突撃部隊に加入し、プログラマーを探す。\n"
+"メディックと武器トレーナーに会っておく。\n"
+"この戦いは激しいものになるだろう、使えるものは全て使うつもりで行け。"
+
+msgid "TXT_ILOG1018"
+msgstr ""
+"偽プログラマーから貰ったキーを使って本物がいるはずの砦を開く。\n"
+"奴はそこに隠れなければならないはず。プログラマーを見つけて殺す。"
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr ""
+"オラクルに会いシジルの欠片について尋ねる。\n"
+"強化のためメディックと武器トレーナーに会っておく。"
+
+msgid "TXT_ILOG1020"
+msgstr ""
+"二つ目の欠片は深紅と黒曜石の塔の中心部にある。そこのビショップを討伐せよ。\n"
+"国境地帯のコモンズ側にいるキーマスターにオラクルのトークンを見せる。\n"
+"ビショップを仕留めたらオラクルの元に戻る。"
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr ""
+"二つ目の欠片は深紅と黒曜石の塔の中心部にある。そこのビショップを討伐せよ。\n"
+"キーマスターから貰ったIDキーを使って塔に入る。\n"
+"ビショップを仕留めたらオラクルの元に戻る。"
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr ""
+"複合警備所を見つけ、そこを制圧し中央管理所へのテレポーターを使う。\n"
+"そして管理所のコンピューターコアを破壊する。\n"
+"そうすればビショップの塔へのフォースフィールドを消せる。\n"
+"ビショップを仕留めたらオラクルの元に戻る。"
+
+msgid "TXT_ILOG1023"
+msgstr ""
+"次の挑戦は己の精神が試される。三つ目の欠片は我々のリーダーが保持している。\n"
+"彼は貴方を殺すために送ったのと同等だと。彼に立ち向かい、己の運命を決断せよ。"
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr ""
+"三つ目の欠片を持つのはオラクルだ。あいつが裏切者だ。\n"
+"オラクルの所に戻り討ち倒せ。終わったらマシルの元に戻る。"
+
+msgid "TXT_ILOG1025"
+msgstr ""
+"己の癌は切除したが動揺は隠せないままだ。\n"
+"次の欠片は人々を虐殺で支配する外科医...\n"
+"ロアマスターが所持している。奴を止め、欠片を自分の物にする。"
+
+msgid "TXT_ILOG1026"
+msgstr ""
+"次の欠片は人々を虐殺で支配する外科医...\n"
+"ロアマスターが所持している。奴を止め、欠片を自分の物にする。\n"
+"近辺へのテレポーターを使い、奴が死んだら再びテレポーターから戻る。"
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr ""
+"貴方は賢い判断をした。三つ目の欠片は我々のリーダーが保持している。\n"
+"貴方の胸中に隠れているものを払い彼の元に戻る。\n"
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr ""
+"我等はオーダーが人々をサイボーグ兵に改造しつつある事を発見した。\n"
+"これが行われている施設を見つけ永久に停止させる。\n"
+"コモンズの滝近くにいるリヒターに会い、この残虐な行為を止める方法を聞く。"
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr ""
+"工場に入るにはキーが必要だ。持っていた代理人はコモンズの地下墓所にはいない。\n"
+"何処かへ連れて行かれたと思われる。それが何であれキーを見つけなければならない。\n"
+"キーを手に入れたら工場の隣の鉱山に向かう。"
+
+msgid "TXT_ILOG1101"
+msgstr "聖域でチャリスを探しバーの二階にいるハリスに渡す"
+
+msgid "TXT_ILOG1102"
+msgstr "知事のマンションで知事と話し報酬を得る"
+
+msgid "TXT_ILOG1201"
+msgstr ""
+"おめでとう!私達は貴方に感謝している。\n"
+"メディックと武器トレーナーに訪れれば手助けを施せる。\n"
+"基地内部も自由に回ってよい。"
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "オーダー軍曹"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "ロワン"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "フェリス"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "刑務官"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "ジャスティン"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "マシル"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "アシスタント"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "キーマスター"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "ボディガード"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr ""
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "モンターグ刑務所長"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "リヒター"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "マシルの補佐官"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "ウォレニック裁判官"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "テビック"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "ハリス"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "フォアマン"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "囚人"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "サムミス"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "武器工"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "リアクターガード"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "見習い"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "ドアガード"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "マスター スミシー"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "倉庫のガード"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "バーテンダー"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "ティモシー"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "ジェームス"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "ワーナー"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "ベイリー ガード"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "労働者"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "フロント ガード"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "クインシー"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "軍曹"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "テンプル ガード"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "オラクル"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "ウレーヌ"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "フロント ソルジャー"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "プログラマー"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "メディック"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "警備員"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "ケトリック"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "ウェラン"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "補佐官"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "ジェフ"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "監視人"
+
+# Intended to appear in MAP19, but does not spawn.
+# 
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr ""
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "機械技術者"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "マクガフィン"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "アリオン"
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "港湾労働者"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "イラール"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "コア ガード"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "下水道ガード"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "技術者"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "ガード"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "庶民"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "兵器係"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "ベルディン"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "ジェラルド"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "モーレル知事"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "ボウヤー"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "ダーウィン"
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr "彗星がこの星に突然衝突した。私達の楽園はこの一撃で失われた。"
+
+# 〃
+msgid "TXT_SUB_INTRO2"
+msgstr ""
+"彗星の衝突によりウィルスが世界中に放たれ、数えきれないほどの人々が死んだ。\n"
+"今から考えれば、彼らはまだ運がいい方だった。"
+
+# 〃
+msgid "TXT_SUB_INTRO3"
+msgstr ""
+"死ななかった人々は、人間から変異して別の物となった。\n"
+"一部の人々は、頭の中に邪悪な神の声を伝えられた狂信者となり、\n"
+"自らの集団を'オーダー'と呼んだ。"
+
+# 〃
+msgid "TXT_SUB_INTRO4"
+msgstr ""
+"その神の声を聞き取れなかった私達は苦しんだ挙げ句、\n"
+"この無慈悲な狂人どもに仕えるのを強いられた。\n"
+"そして奴等は、私達のどんな武器とも比べ物にならないほど強力な兵器を持っているのだ。"
+
+# 〃
+msgid "TXT_SUB_INTRO5"
+msgstr ""
+"奴等は女性や子供を殺害していくため、私達はそういった人々を地下に隠さなければならなかった。\n"
+"我々は動物のように暮らすのを強いられ、命は常に危険に晒されている。"
+
+# 〃
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+"だが不満のささやきは常にある。もし私達が力を合わせれば、\n"
+"支配者たちを倒すことができるだろうか? 奴等の武器は盗まれ続けていて、\n"
+"我らの兵士たちは訓練され続けている。\n"
+"革命への動きは生まれたのだ- 終わりなき闘争(Strife)から!"
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr ""
+"フロントの兵士たちよ、聞きたまえ! 彼がすべてを終わらせたのだ。\n"
+"もうこれで何もかも終わりだ。ブラックバードの兵士が悪を滅ぼしたのだ。\n"
+"オーダーはもう存在しない。ブラックバード、聞こえるか?"
+
+# 〃
+msgid "TXT_SUB_GOOD2"
+msgstr ""
+"あなたが勝つことは分かっていたわ、私の勇敢なヒーロー。\n"
+"全ての戦いは終結した。あなたがもたらした勝利のおかげで、\n"
+"私達の体からウィルスを根絶するためのワクチンを作ることができる。"
+
+# 〃
+msgid "TXT_SUB_GOOD3"
+msgstr ""
+"あなたはこの星を救い、そして自由を取り戻した。さあ、\n"
+"あなたにお礼をするときが来たわね、個人的な意味で... \n"
+"ああ、それはそうと、私の本名はシャウナよ。"
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr ""
+"ええ、悪は消え去ったわ。だけども私達の未来は\n"
+"まだ不安と疑念に満ちている。"
+
+# 〃
+msgid "TXT_SUB_SAD2"
+msgstr ""
+"人間たちからウィルスを根絶するには、あと何世代もかかって\n"
+"しまうはず。私達がそこまで生き延びられたとしても。"
+
+# 〃
+msgid "TXT_SUB_SAD3"
+msgstr ""
+"あの邪悪な存在が何を求めていたかはともかく、\n"
+"奴は人間たちから一番大切な物、希望を奪い去った。"
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr ""
+"センティエント・ウィルスは私達を津波のように襲い、\n"
+"全ての人間を狂気に陥れた。セイレーンの死の歌声を聞いたように\n"
+"なり、死ぬまで踊り続けたのだ。"
+
+# 〃
+msgid "TXT_SUB_BAD2"
+msgstr ""
+"この邪悪な存在は人間たちの命と繁殖能力を奪い去り、\n"
+"我々の家族を再利用した。"
+
+# 〃
+msgid "TXT_SUB_BAD3"
+msgstr ""
+"そしてある時、邪悪な存在はこの星を後にした。単に、\n"
+"奴の糧となる者が一人もいなくなったからだ。我々は滅びたのだ。"
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr ""
+"ウィルスからもたらされた遺伝子変異はオーダーの者たちの精神だけではなく、\n"
+"肉体すらも蝕んだ。"
+
+# 〃
+msgid "TXT_SUB_MAP03_2"
+msgstr ""
+"繁殖行為という選択肢がないオーダーは、\n"
+"彼らのパワーと数を保つには生体工学による人体改造しかないと判断したのだ。"
+
+# 〃
+msgid "TXT_SUB_MAP03_3"
+msgstr ""
+"彼らの肉体へのダメージは深刻で、我らが遭遇した兵士たちは人間と言うよりは\n"
+"もはや機械に近いと言える。だが、彼らの集合意識はたった一人によってコントロールされていると\n"
+"我々は考えている。"
+
+# 〃
+msgid "TXT_SUB_MAP03_4"
+msgstr ""
+"その者の名はプログラマーだ。\n"
+"彼はアコライト達を操作している人工知能の作成者だ。\n"
+"プログラマーを殺害すれば、それによってオーダーの兵士たちを無力化できるはずだ。\n"
+"だが気をつけておけ、ヤツは熱で敵を蒸発させられるとの報告があるからな。"
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr ""
+"プログラマーの資料を要約するとその欠片はオーダー達が崇拝する知性を持った武器、\n"
+"'シジル'だ。"
+
+# 〃
+msgid "TXT_SUB_MAP10_2"
+msgstr ""
+"君が欠片を取り戻したがそれは5つある内の1つだ。\n"
+"使用者の生命を吸い上げ激しい力を引き出す。\n"
+"ただ制御下におけるのは生きている間だけだ。"
+
+# 〃
+msgid "TXT_SUB_MAP10_3"
+msgstr ""
+"君を気絶させた衝撃は、シジルの欠片が脈拍と脳波を同期させた際に起こした様だ。\n"
+"それを振り回す時は気を付けろ、代償で体が干上がってしまうらしい。"
+
+# 〃
+msgid "TXT_SUB_MAP10_4"
+msgstr ""
+"だがたった一つでも相当な力を放つ。\n"
+"それが5つ揃った時は圧倒的な力で世界をも支配下に置けるだろう。"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr ""
+"聞こえるか、この無線機がアナタは100%人間だと判断した。\n"
+"私はアナタを信頼して良いとみて連れて来るよう命じられた、\n"
+"反乱への報酬は期待して良いわ。ああ、それと、私の名はブラックバードよ。"
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr ""
+"旧市庁舎に向かうんだ。オーダーに爆撃された後\n"
+"そこにマシルがアコライトに関わる者を欺く為の抜け道を用意している。"
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr ""
+"すぐ左のドアを通り、右のドアから小部屋に入るんだ。\n"
+"見張りの名はジェフ。金が必要だ と言えば通じる。"
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr ""
+"イラールとはフロントの'仲介者'よ。彼は武器屋の隣のマークされてないドアに居る。\n"
+"発電所に近い所だ。"
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr "覚えておいて:静かに殺す時はナイフか毒矢だ。警報を鳴らすと厄介なことになる。"
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr ""
+"私が知事について知っていることは、町の中央で双方を遊ばせてる様だ。\n"
+"ソイツがここいらを'マンション'と呼んでいる。"
+
+msgid "TXT_SUB_LOG8"
+msgstr ""
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr ""
+"モーレルにとって汚職議員は誉め言葉だ。\n"
+"ソイツはクソを漏らした'駄犬'でしかないからな。"
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr ""
+"我々は何処にあるかについてはオールドタウンに知っている者がいる。\n"
+"指令が言うには マクガフィンに会え。"
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr ""
+"彼は行儀よく'バムホール'と呼ばれる場所に居る。\n"
+"下水処理場の側の階段を下りた小さい部屋だ。"
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr "この任務は時間が掛かりそうだ。私は司令部からこれ以上の情報は得る事は出来ない。"
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr ""
+"馬鹿者!お前はオーダーから我々の基地を隠す妨害回路を壊してしまった!\n"
+"市庁舎に調査隊が向かった、今すぐ片付けろ!"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr "よし、'信用しない'のが最も重要なことだ!壊れた配電機を渡して囚人を解放するんだ。"
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr ""
+"良い判断よ!知事は粗末な嘘を付いている。\n"
+"あれはオーダーから基地を隠す為に使用している我々の配電機だ。\n"
+"この壊れた配電機を渡して彼を騙し返そう。"
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr "倉庫は発電所にある。さっさと済ませよう。"
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "刑務所にお勤めになるなぞ考えた事もないぞ..."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr "まあタダでは済まないか。派手に暴れてやれ。"
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr ""
+"よし、知事は喜ばせ刑務所長はぶちのめした...\n"
+"私達が少々手術を施す必要が出来たわ。"
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr ""
+"おいおい手を切り取ったのかよ!\n"
+"ただのナイスガイってわけじゃないのね...まあいい、行こうか。"
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr "行きましょう、相棒。牢屋奥のテレポーターに飛び込めば基地にすぐ着くわ。"
+
+msgid "TXT_SUB_LOG22"
+msgstr ""
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr ""
+"上司が言うには、クリスタルを破壊する瞬間には隠れる必要があるな、\n"
+"でないと唐揚げになるわ。"
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr ""
+"もう一つの任務をこなす前に戦力の増強が必要と考えられる。\n"
+"マシルがイラールを介して資金と訓練の手配をしてくれるので会いなさい。\n"
+"それと近所のメディックも支援してくれるわ。"
+
+# 〃
+msgid "TXT_SUB_LOG26"
+msgstr ""
+"オーダーは封鎖した城内が安全だと思っている。大した自信だな!\n"
+"容易く侵入を許すとも知らずに。それでゲートを開けるには下水道を通る必要がある。\n"
+"知事邸の川を挟んだ所にその入り口がある。"
+
+# 〃
+msgid "TXT_SUB_LOG27"
+msgstr ""
+"下水道の住民は恐ろしい変異体だ。だが彼らのトンネル網には秘密の通路も含まれる。\n"
+"良し、ここから降りる前に鼻はつまんどけよ..."
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr ""
+"ウェランを探すんだ、誰が呼んだかラットキングでもある。\n"
+"私はそれが叙述的でもあり派手な呼び名なのも定かだ。"
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr "オェッ。君が足を踏み入れてるモノの事など考えたくないわ!"
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr "万事休すだ。更に茶色いモノだ!"
+
+msgid "TXT_SUB_LOG31"
+msgstr ""
+
+msgid "TXT_SUB_LOG32"
+msgstr ""
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr "どうして私達は綺麗な場所で一度でも任務遂行が出来ないんだ?"
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr ""
+"言いたくないが私の家の事を思い出させるわ。\n"
+"私はこの地下から遠くない場所にいたのよ。"
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr "今いる場所について私に聞かないでくれ。私も迷った。すまない。"
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr "あの煉瓦...前通ったレンガか?いや..."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr ""
+"司令官、彼はやったぞ!\n"
+"ゲートが開いた。突撃部隊を送って我々も続くとマシルに伝えてくれ!"
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr ""
+"プログラマーの居場所について矛盾する報告もあるわ。\n"
+"ある人はコンピューター室にいる、別の人は保管室にいる、\n"
+"また別の人は長い廊下にいるとも言っていたわ。何とも言えない。"
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr "再襲撃するには良い機会だ。地獄に送ってやれ、皆!"
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr ""
+"これは良い。コンピューター...\n"
+"プログラマー...アンタはどう思う?"
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr "この長い廊下に違いない。それか私のスケール感とどちらかが撃ち落されるな。"
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr ""
+"これら全部悪の神殿の特徴だ。重苦しい建築物、デカいバナー...\n"
+"ビンゴだわ!"
+
+msgid "TXT_SUB_LOG43"
+msgstr ""
+
+msgid "TXT_SUB_LOG44"
+msgstr ""
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr "怪しい状況では怪しい影が映る。気を付けて。"
+
+msgid "TXT_SUB_LOG46"
+msgstr ""
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr "オラクルはオーダーとは別の活動をしている同情的な大司祭よ。"
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr "オラクルの寺院は町の郊外にある国境地帯の西側にあるわ。"
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr "オーダーは我々の立つこの惑星を奪い、それをゴミへと変えた。"
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr ""
+"ここよ。私は全て記録している、貴方が生き残れる可能性が無いわけではなく、\n"
+"オーダー如きにシジルを制御できるわけがないという事だ。"
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr "貴方は勇敢で、私の同志。貴方に就けた事を私は誇りに思ってるわ。"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr "ちょっと待ってもらえる?少しばかりうんざりしてるわ。"
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr "何故私達は地下に長居せねばならないの?地下はもうわかったから。"
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "聖域内部と全身が緑色の者を信用するべきなの?"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr "深紅と黒曜石?何故彼は赤と黒と言わないの。"
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr ""
+"ビショップはオーダーの軍事指揮官よ。\n"
+"奴等の戦術を企てスパイを駆り立て私達の支配が管轄だ。\n"
+"奴を仕留めれば得点は倍額でしょう。"
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr "ビショップのいる場所の警備は厳重なので、奴等の制服を盗み紛れ込む方が良いのでは?"
+
+msgid "TXT_SUB_LOG58"
+msgstr ""
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr ""
+"要塞の中に情報提供者がいるという話を聞いた。\n"
+"奴等が病院と呼んでいる場所に勤めているので向かいましょう。"
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr "計画を奪いにコンピューターを破壊する、いけるわね?"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr "大丈夫、次は血のバケツをぶち撒けない方法を試した方がいい。"
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr ""
+"以前に私達は無限へ通じる玄関を通ったかと思うが、誓おう、\n"
+"通り過ぎた時に壁が動いていたからだと。"
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr "さて、貴方はフィギュアを得た。軍隊指揮者は大勢の悪人に匹敵するわ。"
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr "諦めないで。これでいいんだ。真っ直ぐ行こう。"
+
+msgid "TXT_SUB_LOG65"
+msgstr ""
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr "あーらら!鐘と笛で更に厄介な奴等を呼び込んできたな。"
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "外から見ると、此処は小さいみたいね。"
+
+msgid "TXT_SUB_LOG68"
+msgstr ""
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr "私はフォースフィールドが憎いわ。遮断させるスイッチが近くにあるはずだわ。"
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr "あら、見事な物ね。是非とも火薬を献上しましょう。"
+
+msgid "TXT_SUB_LOG71"
+msgstr ""
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr ""
+"ちょっと待って、オラクルは私達に彼のシンボルを辿ればわかると述べたか。\n"
+"貴方今、私と同じ事考えてる?"
+
+msgid "TXT_SUB_LOG73"
+msgstr ""
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr ""
+"ビショップの体から出てきたあの奇妙な幽体を見た?\n"
+"以前に何処かで見た気がするけど?"
+
+msgid "TXT_SUB_LOG75"
+msgstr ""
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr ""
+"ビショップにもあったスペクトラルエネルギーがオラクルにも宿っているという\n"
+"報告があるわ、気を付けて。"
+
+msgid "TXT_SUB_LOG77"
+msgstr ""
+
+msgid "TXT_SUB_LOG78"
+msgstr ""
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr ""
+"リヒターが指揮官の任を引き継いだ。マシルはずっと私達を騙していたなんて。\n"
+"あの人がオーダーに真の忠誠を誓っていたなんて、とんだ蛇神憑きだわ。"
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr "威風堂々とした玄関ね。でも私達が調べるのは別の階よ。慎重にね。"
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr "残念だな。我々の技術が拷問の為だけに浪費されるとは。"
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr "うぬぼれが酷いな、あいつらの寺院はデカいバナーが目に付く。"
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr ""
+"更なるシジルの欠片だ。私達の自由にまた一歩近づいたわ。\n"
+"そして私にも一歩近づいている。"
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr ""
+"この形状を見た所、解除するには完成したシジルを持って、ちっこい台座に乗るんだわ。\n"
+"誰もが雨上がりの虹を見るために。"
+
+# STRIFE1.WAD: MAP12
+# 
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+# 
+# OR
+# 
+# MAP27
+# 
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr ""
+"貴方はもはや完全なシジルの力を行使できるわけね。\n"
+"後は言いがかりでもしてここを閉鎖させましょう。\n"
+
+msgid "TXT_SUB_LOG86"
+msgstr "いい気分でしょ、私の英雄。栄光を受け入れる準備をしなさい。"
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr ""
+"まあ予言なんてそんなものでしょ。\n"
+"ちょっと待って、マシルが帰還するように言ったわ。ここから抜け出しましょう。"
+
+msgid "TXT_SUB_LOG88"
+msgstr ""
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr ""
+"工場は鉱山の隣にあるわ。リヒターはデグニン鉱山とも呼んでいる。\n"
+"デグニン石は綺麗だが可燃性で、フォースフィールドを消すにはうってつけよ。"
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr "鉱山、地下墓所、下水道...とんだ初デートだな!"
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr ""
+"リヒターがもっと具体的な部分に触れてくれて欲しいが。\n"
+"あー、私らが試してみようか。"
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr ""
+"私が思うに...ああ、クソ。\n"
+"何処にあるかさっぱりわからないわ。"
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr ""
+"ここがリヒターのエージェントが探していた遺跡のはず。\n"
+"あっと、気を付けて!クルセイダーよ!"
+
+msgid "TXT_SUB_LOG94"
+msgstr ""
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr ""
+"友よ、私達が戦う相手が何であろうとも、オーダー以上のものはない。\n"
+"鉱山から離れましょう!"
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr "警戒を緩めることなく、鉱石の堆積所を探しましょう。"
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr ""
+"これら精神の乏しい労働者達は、シナプス機能をRCインプラントで妨害している。\n"
+"私達が送信機を破壊し皆を解放するんだ!"
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr ""
+"司令官は送信機がフォースフィールドに守られていると言っていた。\n"
+"そこを潰せば鉱山と労働者を解放、一石二鳥だな。"
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr ""
+"私の案はフォースフィールドの近くに鉱石を置き撃って爆発させる方法よ。\n"
+"その結果、圧縮されていた磁場の反動で光を打ち消すわ。"
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr "今すぐ工場へ向かおう。鉱山を出たら見逃すなよ!"
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr "ごめんなさい、これは初耳なの。"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr "重い神経波の歪曲が直に届いたわ。私達はそれを見つけたという事よ。"
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr ""
+"今まで見てきたことについて考えている!\n"
+"奴は人の内部から出てくる...それについて考えたくないわ。"
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr ""
+"オラクルが正しかった。マシルはイカれていたなんて。\n"
+"彼は故意に200人以上の人々を死に追いやっていた。\n"
+"復讐しなくては。死んだ人達の為、そして今生きている人達の為にも!"
+
+msgid "TXT_SUB_LOG105"
+msgstr ""
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr ""
+"リヒターの報告では我々が破壊した工場は'研究所'に繋がっていて、\n"
+"奴等はシジルの調印を内部から得ている。工場に戻って自由への次の段階に進みましょう"
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr ""
+"我に歯向かう為に敢えて私の要塞に来たのか?無価値な人間よ?\n"
+"死をくれてやろう!"
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr "我を殺すことはできまい。貴様は人間。そして私は人間を超えし者だ。"
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"不死、更に永遠の命なぞない!\n"
+"これが私の任務だ:サイボーグ達、半人間半機械、全ては唯一神に従うため。\n"
+"お前は従わないと?では死ね!この愚か者がシジルの欠片を持っている。"
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr ""
+"ハッハッハ!ようこそ。私はこの瞬間を待ってイタ。\n"
+"自由を得る為、アンタの様な愚か者を待っていたノダ。\n"
+"キサマのワクセイはワタシのモノだ、ソシテ生マレタコトニ後悔スルデアロウ。\n"
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"真実は普遍的な意志でしか見つけられない。\n"
+"お前は唯一神の前に跪くのだ、希望の光よ。\n"
+"私の元に着き、シジルを完成させるのだ。この神秘的な戯言もうんざりする。"
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr ""
+"キサマ...キサマハ我ガオーダーヲ破壊シニシタ、\n"
+"我ノ詭謀ヲ截チ何世紀ニモワタル望ミヲ脅カシタ。\n"
+"ダガマダ終ワリデハナイ、キサマニ憑キ意志ヲヒネリ出セバ...\n"
+
+msgid "TXT_SUB_LOG200"
+msgstr ""
+
+msgid "TXT_SUB_LOG201"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr "今度は、私の言う事を聞きなさいよ。"
+
+msgid "TXT_SUB_LOG203"
+msgstr ""
+
+msgid "TXT_SUB_LOG204"
+msgstr ""
+
+msgid "TXT_SUB_LOG205"
+msgstr ""
+
+msgid "TXT_SUB_LOG206"
+msgstr ""
+
+msgid "TXT_SUB_LOG207"
+msgstr ""
+
+msgid "TXT_SUB_LOG208"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr "ああ、そうね。今貴方の仕出かした事を見直しなさい。"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr "クソが。アンタ今、台無しにしたぞ!"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr "頼むぞ!こっからとっとと失せろ!"
+
+msgid "TXT_SUB_LOG212"
+msgstr ""
+
+msgid "TXT_SUB_LOG213"
+msgstr ""
+
+msgid "TXT_SUB_LOG214"
+msgstr ""
+
+msgid "TXT_SUB_LOG215"
+msgstr ""
+
+msgid "TXT_SUB_LOG216"
+msgstr ""
+
+msgid "TXT_SUB_LOG217"
+msgstr ""
+
+msgid "TXT_SUB_LOG218"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr "うぉう!黒ずんだアコライト!新しい趣味に目覚めそうだわ..."
+
+msgid "TXT_SUB_LOG220"
+msgstr ""
+
+msgid "TXT_SUB_LOG221"
+msgstr ""
+
+msgid "TXT_SUB_LOG222"
+msgstr ""
+
+msgid "TXT_SUB_LOG223"
+msgstr ""
+
+msgid "TXT_SUB_LOG224"
+msgstr ""
+
+msgid "TXT_SUB_LOG225"
+msgstr ""
+
+msgid "TXT_SUB_LOG226"
+msgstr ""
+
+msgid "TXT_SUB_LOG227"
+msgstr ""
+
+msgid "TXT_SUB_LOG228"
+msgstr ""
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr "私達はもう会えなくなったわ...面と向かって。"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr "私は貴方に希望を抱いていた...クソ世知辛いわ。"
+
+msgid "TXT_SUB_LOG231"
+msgstr ""
+
+msgid "TXT_SUB_LOG232"
+msgstr ""
+
+msgid "TXT_SUB_LOG233"
+msgstr ""
+
+msgid "TXT_SUB_LOG234"
+msgstr ""
+
+msgid "TXT_SUB_LOG235"
+msgstr ""
+
+msgid "TXT_SUB_LOG236"
+msgstr ""
+
+msgid "TXT_SUB_LOG237"
+msgstr ""
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"慢心してた。私はこの配電機と言われている物について何も知らない。\n"
+"まあゆっくりやろう。"
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "夢の様な仕事ね、そう思わない?"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "それで貴方のすぐ傍にいるわ。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "ワーナーは発電所の倉庫に送った我々のスパイよ。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr ""
+"己の命の為に戦う準備が出来ているか確認して。\n"
+"ケチケチせずに。持ってる物全て使うのよ。"
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "失礼ながら、しゃくに障るわ。"
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "フーム。聞く限り武器の様ね。いつも以上の火力を出せそうだ。"
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "簡単すぎるけど、一発かましてみましょうか。"
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "面倒ね。プログラマーについて知ってるのは誰もいないわ。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "オオゥ。私が言わなくてもわかるけど、隠れた方がいいわね。"
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "なに拗ねてるの。後で彼を殺すのを期待してるわ。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "この区域は立入禁止!'そんなワザとらしい。"
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "あら、いい男。"
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "多分貴方が'お願いします'と言わなかったからよ。"
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "誰もがとても貧しいのよ。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "素敵ね。私達がラットキングのために買い物とか。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "この男も酷い悪臭がすると賭けるわ。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "更なる下水道...ヤッバ。下に何が住んでるのか不思議に思うわ。"
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "行き止まりだ。私達はまだこの景色を楽しめるわ。"
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "進み出よ、わがチャンピオン。ミスター生塵を捻りつぶしてやれ。"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr ""
+"生体工学'?どうやら奴等は軍隊を無限供給しているという訳だ!\n"
+"それと態度が悪いことも。\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "クソ腹立つ...!野郎を消せ!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "彼は醜いだろうが、我々に味方している。"
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "最近の記録から判断すると、秘密は公になると私は思う。"
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"うーむ。慌てず、騒がず、ママの掃除も無し...\n"
+"何か一杯お願い。"
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr ""
+"貴方は全ての人々が殺害される事にうんざりしていると思うわ、\n"
+"でも私は全てが終わったら見逃すと知っている。"

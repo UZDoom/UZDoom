@@ -1,0 +1,577 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: ro\n"
+
+msgid "QUITMSG1"
+msgstr "Sunt prea duri gândacii pentru tine?"
+
+msgid "QUITMSG"
+msgstr "Ești sigur că vrei să\\npărăsești acțiunea?"
+
+msgid "QUITMSG2"
+msgstr "Încerci să ieși? Și te mai numești hacker?"
+
+msgid "QUITMSG3"
+msgstr "Treci înapoi aici până nu-ți trimit un virus!"
+
+msgid "QUITMSG4"
+msgstr "Adevărații hackeri nu fug de acțiune."
+
+msgid "QUITMSG5"
+msgstr "Haide! Nu ai văzut partea cea mai bună încă!"
+
+msgid "QUITMSG6"
+msgstr "Te dai bătut acum, și spațiul cibernetic e prăjit!"
+
+msgid "QUITMSG7"
+msgstr "GENIE își transmite condoleanțele, ticălosule!"
+
+msgid "QUITMSG8"
+msgstr "Hmm. Asta a fost cu eroismele, Hacker."
+
+msgid "QUITMSG9"
+msgstr "Ce? Vrei să te întorci la captivitate?"
+
+msgid "QUITMSG10"
+msgstr "Trebuia să iei pastila albastră."
+
+msgid "QUITMSG11"
+msgstr "Numele jocului nu e Tremură și Ascunde-te!"
+
+msgid "QUITMSG12"
+msgstr "Nicio problemă. Salvarea lumii poate aștepta, nu?"
+
+msgid "QUITMSG13"
+msgstr "Cred că e timpul de separare!"
+
+msgid "QUITMSG14"
+msgstr "Nu pleca și uita de HacX!"
+
+msgid "OB_SUICIDE"
+msgstr "%o s-a sters pe sine din univers."
+
+msgid "OB_FALLING"
+msgstr "%o a format un crater de dimensiunile statului Kansas."
+
+msgid "OB_CRUSH"
+msgstr "%o a devenit o clătită umană."
+
+msgid "OB_EXIT"
+msgstr "%o a încercat să o taie."
+
+msgid "OB_WATER"
+msgstr "%o a înotat ca o cărămidă."
+
+msgid "OB_SLIME"
+msgstr "%o a devenit radioactiv."
+
+msgid "OB_LAVA"
+msgstr "%o a făcut o baie fierbinte."
+
+msgid "OB_BARREL"
+msgstr "%o a luat o supradoză de nitroglicerină."
+
+msgid "OB_SPLASH"
+msgstr "%o s-a spart în mii de bucățele."
+
+msgid "OB_R_SPLASH"
+msgstr "%o a vrut să vadă cum arăta %g întors pe dos."
+
+msgid "OB_ROCKET"
+msgstr "%o a vrut să vadă cum arăta %g întors pe dos."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o s-a șters pe sine din univers."
+
+msgid "OB_THUG"
+msgstr "%o nu mai e specia dominantă."
+
+msgid "OB_ANDROID"
+msgstr "%o s-a conectat la mașina greșită."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o s-a făcut praf în stil cibernetic."
+
+msgid "OB_ICE"
+msgstr "%o a ÎNGHEȚat."
+
+msgid "OB_BUZZER"
+msgstr "%o se simte puțin șocat."
+
+msgid "OB_STEALTH"
+msgstr "%o dezvăluie o schimbare șocantă."
+
+msgid "OB_DMAN"
+msgstr "%o a fost șters din spațiul cibernetic."
+
+msgid "OB_GLASS"
+msgstr "%o și-a făcut un maxilar de sticlă."
+
+msgid "OB_MANIAC"
+msgstr "%o nu mai e membru al clubului celor vii."
+
+msgid "OB_MANIACHIT"
+msgstr "%o a murit într-un mod aleatoriu pe care nu mi-l pot închipui."
+
+msgid "OB_TERMIN"
+msgstr "%o a fost prăjit de către o femme fatale psihopată."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o s-a apropriat prea mult de sexul opus."
+
+msgid "OB_REPLI"
+msgstr "%o a spus adio unui vechi prieten."
+
+msgid "OB_REPLIHIT"
+msgstr "%o a fost înjunghiat pe la spate de către un vechi prieten."
+
+msgid "OB_PHAGE"
+msgstr "%o a fost eliminat prin selecție naturală."
+
+msgid "OB_THORN"
+msgstr "%o nu a putut scăpa de o moarte spinoasă."
+
+msgid "OB_SUMATIC"
+msgstr "%o a primit un pumn sumo în vintre."
+
+msgid "OB_GENIE"
+msgstr "%o nu a putut să-și pună cele trei dorințe."
+
+msgid "OB_MINE"
+msgstr "%o a încercat să mângâie o mină."
+
+msgid "OB_MPKICK"
+msgstr "%o a primit un șut în stil Bruce Lee."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o s-a făcut praf la revelația șocantă a lui %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o a luat o doză dublă din pedeapsa lui %k."
+
+msgid "OB_MPTAZER"
+msgstr "%o a fost dezactivat de arma cu șocuri a lui %k."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o a simțit din plin furia rece a lui %k."
+
+msgid "OB_MPUZI"
+msgstr "%o a fost umplut de găuri în stil mafiot de către %k."
+
+msgid "OB_MPZOOKA"
+msgstr "%o a mâncat bomba fotonică a lui %k."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o a fost transformat într-o grămadă simpatică de fotoni de către %k."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o a fost transformat în antimaterie de către %k."
+
+msgid "OB_MPNUKE"
+msgstr "%o a înghițit proiectilul lui %k."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o a devenit radioactiv în urma distrugerii în masă a lui %k."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o a fost întors pe dos de către %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "Structura atomică a lui %o a fost spulberată."
+
+msgid "OB_DEFAULT"
+msgstr "%o a expirat în mod spontan."
+
+msgid "GOTNUKER"
+msgstr "Ai ridicat Lansatorul Nuclear! Ia de-aici!"
+
+msgid "GOTUZI"
+msgstr "Ai ridicat un UZI!!"
+
+msgid "GOTREZNATOR"
+msgstr "Un Rezonator HOIG - Arde-i!"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Ai ridicat o Bazooka Fotonică!"
+
+msgid "GOTBIGSTICK"
+msgstr "Ai ridicat un Băț Lung!"
+
+msgid "GOTTAZER"
+msgstr "Ai ridicat un Taser!!"
+
+msgid "GOTCRYOGUN"
+msgstr "Ai ridicat o Crio-armă! ÎNGHEAȚĂ!"
+
+msgid "GOTROUNDS"
+msgstr "Ai ridicat niște muniție!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Ai ridicat un cartuș de muniție!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Ai ridicat o Torpilă!"
+
+msgid "GOTTORPEDOS"
+msgstr "Ai ridicat o cutie de Torpile!"
+
+msgid "GOTMOLECULES"
+msgstr "Ai ridicat un modul molecular!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Ai ridicat un rezervor plin cu molecule!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Ai ridicat niște Cartușe!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Ai ridicat o cutie de Cartușe!"
+
+msgid "GOTVALISE"
+msgstr "Ai ridicat o Valiză plină cu bunătăți!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Câmp de Forță!"
+
+msgid "GOTMICROTEL"
+msgstr "Microtel 007"
+
+msgid "GOTENKBLIND"
+msgstr "Acum ești nedetectabil pentru Enk!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Bocanci din cauciuc Vulcan!"
+
+msgid "GOTSIARRAY"
+msgstr "Hartă SI compilată!"
+
+msgid "GOTINFRARED"
+msgstr "Vedere Infraroșie!"
+
+msgid "GOTINHALER"
+msgstr "Inspiră adânc, Inhalatorule!"
+
+msgid "GOTHYPONEED"
+msgstr "O doză de Hidrogine dintr-o seringă te salvează!"
+
+msgid "GOTHYPO"
+msgstr "Ai ridicat o Seringă!"
+
+msgid "GOTKEYCARD"
+msgstr "Ai găsit un Card-Cheie!"
+
+msgid "GOTCKEY"
+msgstr "Ai găsit o Cheie-C!"
+
+msgid "GOTPASSWORD"
+msgstr "Ai găsit o Parolă!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Ai găsit o Z-Cheie albastră!"
+
+msgid "GOTYELWZKEY"
+msgstr "Ai găsit o Z-Cheie galbenă!"
+
+msgid "GOTREDZKEY"
+msgstr "Ai găsit o Z-Cheie roșie!"
+
+msgid "GOTBODYARMOR"
+msgstr "Armură de Corp!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrofenoxine"
+
+msgid "GOTKEVLARVEST"
+msgstr "Ai ridicat o vestă din Kevlar!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Ai ridicat o Super Vestă din Kevlar!"
+
+msgid "GOTMICROKIT"
+msgstr "Ai ridicat un MicroKit!"
+
+msgid "GOTDAMPENER"
+msgstr "Ai ridicat un Amortizor!"
+
+msgid "PD_CKEY"
+msgstr "Ai nevoie de o Cheie-C pentru a accesa acest obiect!"
+
+msgid "PD_KEYCARD"
+msgstr "Ai nevoie de un Card-Cheie pentru a accesa acest obiect!"
+
+msgid "PD_PASSWORD"
+msgstr "Ai nevoie de Parolă pentru a accesa acest obiect!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Ai nevoie de o Cheie-Z albastră pentru a face asta să funcționeze!"
+
+msgid "PD_REDZKEY"
+msgstr "Ai nevoie de o Cheie-Z roșie pentru a face asta să funcționeze!"
+
+msgid "PD_YELWZKEY"
+msgstr "Ai nevoie de o Cheie-Z galbenă pentru a face asta să funcționeze!"
+
+msgid "X1TEXT"
+msgstr ""
+"Douăzeci de milioane în aur nu par să fie\n"
+"suficienți pentru tot dezastrul acesta, nu-i așa,\n"
+"hacker? Totul pare un fleac pe lângă asta!\n"
+"\n"
+"Mutanți urâți foc, împreună cu oamenii tăi\n"
+"atârnă de tavan asemeni unor saci de mâncare.\n"
+"\n"
+"Ce naiba mai e și acest GENIE? E ca un computer\n"
+"pe care nu l-ai mai spart în viața ta!\n"
+"\n"
+"Mai bine găsești următorul terminal, prinzi o\n"
+"mașină în spațiul cibernetic, feliezi niște mutanți,\n"
+"și îți iei tălpășița!"
+
+msgid "X2TEXT"
+msgstr ""
+"Unde e toată lumea?!\n"
+"\n"
+"Parisul e un oraș fantomă, asta dacă nu consideri\n"
+"mutanții cetățeni nemaipomeniți.\n"
+"\n"
+"Ai întâmpinat opoziție serioasă! Mamă, gândacii\n"
+"aceștia știu să lupte, nu glumă! Din fericire nu\n"
+"sunt cei mai tari din parcare.\n"
+"\n"
+"Dar deții niște informații pe care comitetul vrea\n"
+"să le vadă! Și nu sunt prea încântătoare!\n"
+"\n"
+"Fluidele neuro umane hrănesc acești gândaci! \n"
+"Nu-i de mirare că vecinătatea devine cam pustie.\n"
+"Raportează înapoi la comitet. Și păzește-ți\n"
+"spatele..."
+
+msgid "X3TEXT"
+msgstr ""
+"Civilizația așa cum o știai e dusă!\n"
+"\n"
+"Fără prieteni, fără familie. Nu mai sunt oameni.\n"
+"Nu oameni obișnuiți, în orice caz.\n"
+"\n"
+"Un singur lucru rămas... GENIE!\n"
+"Și îi vei găsi hoitul împuțit chiar dacă va trebui\n"
+"să traversezi până în celălalt capăt al universului!\n"
+"Pentru că acum ești mânios!\n"
+"\n"
+"Iar aurul? La naiba cu el, asta e din partea casei.\n"
+"\n"
+".....(va urma)....."
+
+msgid "X5TEXT"
+msgstr ""
+"Ești viu!\n"
+"\n"
+"Care sunt șansele, hacker?! Pentru că colcăie de\n"
+"gândaci.\n"
+"\n"
+"Nu poți ajunge la comitet, ceea ce înseamnă că\n"
+"a fost compromis.\n"
+"\n"
+"\n"
+"Ești... singur."
+
+msgid "TXT_HACXMAP01"
+msgstr "Corporația GenEmp"
+
+msgid "TXT_HACXMAP02"
+msgstr "Orașul Subteran"
+
+msgid "TXT_HACXMAP03"
+msgstr "Anexa de Lavă"
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr "Circ Cibernetic"
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr "Marele Zid"
+
+msgid "TXT_HACXMAP08"
+msgstr "Grădina Plăcerilor"
+
+msgid "TXT_HACXMAP09"
+msgstr "Fortăreața Ascunsă"
+
+msgid "TXT_HACXMAP10"
+msgstr "Vis Anarhist"
+
+msgid "TXT_HACXMAP11"
+msgstr "Nu ne vor uita!"
+
+msgid "TXT_HACXMAP12"
+msgstr "Mănușa Gotică"
+
+msgid "TXT_HACXMAP13"
+msgstr "Canale"
+
+msgid "TXT_HACXMAP14"
+msgstr "Război cu Electrozi"
+
+msgid "TXT_HACXMAP15"
+msgstr "Amurgul lui Enk"
+
+msgid "TXT_HACXMAP16"
+msgstr "Cybex Caleidoscopic"
+
+msgid "TXT_HACXMAP17"
+msgstr "Râu de Sânge"
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr "Camerele de Control"
+
+msgid "TXT_HACXMAP20"
+msgstr "Alertă Intrus!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Camera Desicanților"
+
+msgid "STSTR_CLEV"
+msgstr "Acum Sosiți La..."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "...te voi prăji!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr "inVul, Frț, Invizib, Rad, HaComp, sau Ved-amp?"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Să Devenim Serioși!"
+
+msgid "STSTR_NCON"
+msgstr "Modul Cibertăietor ACTIVAT"
+
+msgid "STSTR_NCOFF"
+msgstr "Modul Cibertăietor DEZACTIVAT"
+
+msgid "STSTR_NOMUS"
+msgstr "Selecție: Imposibilă"
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "Mărește Volumul"
+
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Modul Click-și-Elimină"
+
+msgid "STSTR_FAADDED"
+msgstr "Așa să fie, Hacker."
+
+msgid "STSTR_DQDON"
+msgstr "Ciberpotență ACTIVATĂ"
+
+msgid "STSTR_DQDOFF"
+msgstr "Ciberpotență DEZACTIVATĂ"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Urmărire ACTIVATĂ"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Urmărire DEZACTIVATĂ"
+
+msgid "DOSY"
+msgstr "- apasă Y pentru a fugi! -"
+
+msgid "ENDGAME"
+msgstr ""
+"Ești nebun sau doar prost calibrat?\n"
+"Deci? Da sau Nu?"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Ești sigur? Nu poți face față dificultății, hacker!\n"
+"\n"
+"Apasă Y ca să mori."
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+"Salvare rapidă peste fișierul numit\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Apasă Y sau N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Vrei să încarci rapid fișierul numit\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Apasă Y sau N."
+
+msgid "CC_THUG"
+msgstr "Bandit"
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr "Dronă"
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr "Mâncător"
+
+msgid "CC_MONSTRUCT"
+msgstr ""
+
+msgid "CC_MECH"
+msgstr "Meca-Maniac"
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr "Spinos"
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr "Te rog nu trage!"
+
+msgid "SKILL_EASY"
+msgstr "Aarș, am nevoie de un medic!"
+
+msgid "SKILL_NORMAL"
+msgstr "Să-i facem zob!"
+
+msgid "SKILL_HARD"
+msgstr "Sunt nemuritor!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Demență!"

@@ -1,0 +1,2130 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Belarusian (Latin script) <https://hosted.weblate.org/"
+"projects/uzdoom/common/be_Latn/>\n"
+"Language: be_Latn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: by\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "PRESSYN"
+msgstr "Націсніце Y або N."
+
+msgid "TXT_YES"
+msgstr "Так"
+
+msgid "TXT_NO"
+msgstr "Не"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Вы не можаце захаваць гульню, не пачаўшы яе!\n"
+"\n"
+"Націсніце любую клавішу."
+
+msgid "SAFEMESSAGE"
+msgstr "Вы ўпэўнены?"
+
+msgid "NOTSET"
+msgstr "Не ўстаноўлена "
+
+msgid "QSPROMPT"
+msgstr ""
+"Перазапісаць хуткае захаванне \n"
+"\n"
+"'%s'?\n"
+"\n"
+"Націсніце Y або N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Загрузіць хуткае захаванне \n"
+"\n"
+"'%s'?\n"
+"\n"
+"Націсніце Y або N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s выкарыстоўвае чыт-коды"
+
+msgid "MSGOFF"
+msgstr "Паведамленні ВЫКЛЮЧАНЫ"
+
+msgid "MSGON"
+msgstr "Паведамленні ЎКЛЮЧАНЫ"
+
+msgid "TXT_SAY"
+msgstr "Чат:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Націсніце любую клавішу або націсніце па акну, каб выйсці."
+
+msgid "NEWSAVE"
+msgstr "<Новае захаванне>"
+
+msgid "GGSAVED"
+msgstr "Гульня захавана"
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Час"
+
+msgid "MNU_LOADGAME"
+msgstr "Загрузіць гульню "
+
+msgid "MNU_SAVEGAME"
+msgstr "Захаваць гульню "
+
+msgid "MNU_NOPICTURE"
+msgstr "Няма выявы"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Іншая версія "
+
+msgid "MNU_NOFILES"
+msgstr "Няма файлаў "
+
+msgid "MNU_DELETESG"
+msgstr "Вы сапраўды хочаце выдаліць захаванне?"
+
+msgid "OPTVAL_OFF"
+msgstr "Выкл."
+
+msgid "OPTVAL_ON"
+msgstr "Укл."
+
+msgid "OPTVAL_AUTO"
+msgstr "Аўта"
+
+msgid "OPTMNU_TITLE"
+msgstr "Налады"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Налады кіравання "
+
+msgid "OPTMNU_MOUSE"
+msgstr "Налады мышы "
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Налады кантролера"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Налады гульца "
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Налады гульнявых механік "
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Налады аўтакарты"
+
+msgid "OPTMNU_HUD"
+msgstr "Налады інтэрфейсу "
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Іншыя налады "
+
+msgid "OPTMNU_SOUND"
+msgstr "Налады гуку"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Налады экрану"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Устанавіць відэарэжым"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Скінуць да налад па змаўчанні"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Скінуць да апошняга захаванага"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Захаваць бягучыя налады"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Адкрыць кансоль"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Налады сетцы "
+
+msgid "OPTMNU_REVERB"
+msgstr "Рэдактар асяроддзя рэверберацыі"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER — змяніць, BACKSPACE — ачысціць "
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Націсніце новую клавішу, ESC для скасавання "
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Кіраванне "
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Атака"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Альтэрнатыўная атака "
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Перазарадка"
+
+msgid "CNTRLMNU_USE"
+msgstr "Выкарыстоўваць / Адкрыць "
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Рух наперад"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Рух назад"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Рух налева "
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Рух направа "
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Паварот налева "
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Паварот направа "
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Хуткі разварот "
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Скачок"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Прысесці "
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Прысесці (перакл.)"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Агляд мышшу "
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Глядзець уверх"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Глядзець уніз"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Адцэнтраваць погляд"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Бегчы "
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Бегчы (перакл.)"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Рух бокам"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Паказаць табліцу ачкоў"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Дзеянне "
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Асноўныя клавішы кіравання"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Чат"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Гульня па сетцы"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Паведамленне "
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Клавішы кіравання чатам"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Клавішы кіравання зброяй"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Клавішы кіравання інвентаром "
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Іншыя клавішы"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Зброя"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Наступная зброя "
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Папярэдняя зброя "
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Зброя 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Зброя 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Зброя 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Зброя 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Зброя 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Зброя 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Зброя 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Зброя 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Зброя 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Зброя 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Інвентар "
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Актываваць прадмет"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Актываваць усе прадметы "
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Наступны прадмет"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Папярэдні прадмет"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Клавішы кіравання аўтакартай"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Аўтакарта "
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Зрух налева "
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Зрух направа"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Зрух уверх"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Зрух уніз"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Прыблізіць "
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Аддаліць"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Прыбліжэнне (перакл.)"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Прывязка да гульца (перакл.) "
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Сетка (перакл.)"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Кручэнне (перакл.)"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Тэкстуры (перакл.)"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Аўтакарта (перакл.)"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Від ад трэцяй асобы "
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Здымак экрана "
+
+msgid "CNTRLMNU_CONSOLE"
+msgstr "Адкрыць кансоль "
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Паўза"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Павялічыць размер экрану "
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Зменшыць размер экрану "
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Экран дапамогі "
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Меню захавання гульні "
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Меню загрузкі гульні"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Меню налад"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Меню налад відэа"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Хуткае захаванне "
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Хуткая загрузка "
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Выхад у галоўнае меню "
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Паведамленні (перакл.)"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Выйсці з гульні"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Настройка гамы"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Выкарыстоўваць мыш"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Выкарыстоўваць мыш у меню"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Размяшчэнне кнопкі \"назад\""
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Курсор"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Гарызантальная адчувальнасць"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Вертыкальная адчувальнасць"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Плаўнае перамяшчэнне"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Хуткасць павароту "
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Хуткасць агляду мышшу "
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Хуткасць перамяшчэння"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Хуткасць руху бокам"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Агляд мышшу"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Інверт. мыш па вертыкалі (Y)"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Інверт. мыш па гарызанталі (X)"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Уверсе злева"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Уверсе справа"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Унізе злева"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Унізе справа"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Як сэнсарны экран"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Стрэлка"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Сістэмны курсор"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Па змаўчанні"
+
+msgid "JOYMNU_TITLE"
+msgstr "Наладзіць кантролер"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Налады кантролера"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Адключыць кантролер у меню"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Уключыць падтрымку кантролера"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Уключыць кантролеры праз DirectInput"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Уключыць кантролеры праз XInput"
+
+msgid "JOYMNU_PS2"
+msgstr "Выкарыстоўваць адаптары PlayStation 2 напрамую"
+
+msgid "JOYMNU_NOCON"
+msgstr "Кантролеры не знойдзены"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Наладзіць кантролеры:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Уключыце падтрымку кантролера"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr " \\n"
+
+msgid "JOYMNU_INVALID"
+msgstr "Недапушчальны кантролер абраны для меню"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Агульная адчувальнасць"
+
+msgid "JOYMNU_AXIS"
+msgstr "Канфігурацыя восяў"
+
+msgid "JOYMNU_INVERT"
+msgstr "Інвертаваць"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Мёртвая зона"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Няма наладжвальных восяў"
+
+#, fuzzy
+msgid "OPTVAL_NONE"
+msgstr "Выкл."
+
+msgid "OPTVAL_TURNING"
+msgstr "Паварот"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Погляд уверх/уніз"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Рух наперад"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Рух бокам"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Рух уверх/уніз"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Інвертавана"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Прама"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Сіні"
+
+msgid "TXT_COLOR_RED"
+msgstr "Чырвоны"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Зялёны"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Шэры"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Цёмна-шэры"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Цёмна-зялёны"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Карычневы"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Цёмна-сіні"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Светла-чырвоны"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Жоўты"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Фіялетавы"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Каламутна-зялёны"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Бэжавы"
+
+msgid "TXT_COLOR_LIGHTGREEN"
+msgstr "Светла-зялёны"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Светла-сіні"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Светла-шэры"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Светла-карычневы"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Залаты"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Ярка-зялёны"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Іржавы"
+
+msgid "PLYRMNU_NAME"
+msgstr "Імя"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Каманда "
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Колер"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Пол"
+
+msgid "OPTVAL_MALE"
+msgstr "Мужчынскі"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Жаночы"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Нейтральны"
+
+msgid "OPTVAL_OTHER"
+msgstr "Прадметы "
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Налады гульнявых механік "
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Заўсёды "
+
+msgid "OPTVAL_NEVER"
+msgstr "Ніколі "
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Аўтапрыцэльванне "
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Пастаянны бег"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Памер экрана "
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Вертыкальная сінхранізацыя"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Мадэлі"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Памер прыцэла"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Яркасць"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Гама-карэкцыя"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Кантраст"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Насычанасць"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Памер радка стану"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Паведамлення"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Цэнтраванне паведамленняў"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Пульсацыя паведамленняў"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Памер паведамленняў"
+
+msgid "MNU_COLORPICKER"
+msgstr "Выбар колеру"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Круціць аўтакарту"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Прывязка да гульца"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Празрыстасць ліній"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Таўшчыня ліній"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Налады колераў аўтакарты"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Вярнуць колеры па змаўчанні "
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Гук уключаны"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Музыка ўключана"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Гц"
+
+msgid "OPTVAL_8000HZ"
+msgstr "8000 Гц"
+
+msgid "OPTVAL_11025HZ"
+msgstr "11025 Гц"
+
+msgid "OPTVAL_22050HZ"
+msgstr "22050 Гц"
+
+msgid "OPTVAL_32000HZ"
+msgstr "32000 Гц"
+
+msgid "OPTVAL_44100HZ"
+msgstr "44100 Гц"
+
+msgid "OPTVAL_48000HZ"
+msgstr "48000 Гц"
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 сэмпла"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 сэмплаў"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 сэмплаў"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 сэмплаў"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 сэмпла"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 сэмплаў"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 сэмплаў"
+
+msgid "OPTSTR_AUTO"
+msgstr "Аўта"
+
+msgid "OPTSTR_MONO"
+msgstr "Мона"
+
+msgid "OPTSTR_STEREO"
+msgstr "Стэрэа"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Дэкодэр Dolby Pro Logic"
+
+msgid "OPTSTR_QUAD"
+msgstr "Чатырохканальны"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 дынамікаў"
+
+msgid "OPTSTR_5POINT1"
+msgstr "Дынамікі 5.1"
+
+msgid "OPTSTR_7POINT1"
+msgstr "Дынамікі 7.1"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Прылада прайгравання"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Уключыць EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Перадыкрэтызатар"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Гучнасць гуку"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Гучнасць меню"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Гучнасць музыкі "
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI-прайгравальнік "
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Гук у фоне"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Эфект згасання пад вадой"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Выпадковая вышыня"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Колькасць каналаў"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Гукавая падсістэма"
+
+msgid "SNDMNU_OPENAL"
+msgstr "Налады OpenAL"
+
+msgid "SNDMNU_RESTART"
+msgstr "Перазапусціць гук"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Пашыраныя налады"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Налады прайгравання модуляў"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Налады MIDI-прайгравальніка"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Гук у меню"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Пашыраныя налады гуку"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Частата дыскрэтызацыі"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "Сінтэз OPL"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Колькасць эмуляваных чыпаў OPL"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Поўная стэрэапанарама для MIDI"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "Ядро эмуляцыі OPL"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI-галасы"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Агульныя"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr ""
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Глабальны Freeverb"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Патч-набор"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Узмацненне"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Рэверберацыя"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Узровень рэверберацыі"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Хор"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Файл канфігурацыі Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Адносная гучнасць"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr ""
+
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Файл канфігурацыі WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Выбар канфігурацыі"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Прасунуты рэсэмплінг"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "Банк OPL"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Ядро эмуляцыі OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Выкарыстоўваць з частатой PCM"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Колькасць эмуляваных чыпаў OPL"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Узмацненне"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Мадэль гучнасці"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "Ядро эмуляцыі OPN2"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "Эмуляцыя GUS"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Файл канфігурацыі для GUS"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Чытаць файлы DMXGUS"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Памер памяці GUS"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Колькасць эмуляваных чыпаў OPN"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Узмацненне"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr ""
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr ""
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr ""
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Выкарыстоўваць уласны банк WOPL"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr ""
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Файл з банкам WOPL"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Выкарыстоўваць уласны банк WOPN"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Файл з банкам WOPN"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Згладжванне"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Лінейнае"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Лінейная"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Лінейны"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Бліжэйшы"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (нізкі)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (сярэдні)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (высокі)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Кубічнае"
+
+msgid "OPTVAL_BLEP"
+msgstr "Абмежаваны паласой прапускання крок"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Лінейнае (павольней)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Абмежаванае паласой прапускання лінейнае"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Кубічнае (павольней)"
+
+msgid "OPTVAL_SINC"
+msgstr "Кардынальны сінус"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Толькі пры ўключэнні/адключэнні нот"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Поўнае нарошчванне"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Агульная гучнасць"
+
+msgid "MODMNU_QUALITY"
+msgstr "Якасць"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Нарошчванне гучнасці"
+
+msgid "OPTVAL_LIBXMP"
+msgstr ""
+
+msgid "OPTVAL_DUMB"
+msgstr ""
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr ""
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr ""
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr ""
+
+msgid "OPTVAL_ESFMu"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr ""
+
+msgid "OPTVAL_NP2OPNA"
+msgstr ""
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_OPALOPL3"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr ""
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr ""
+
+msgid "OPTVAL_GENSOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr ""
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr ""
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Аўта (наладжванне з банка)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Аўта (наладжванне з банка)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Агульны"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Агульны"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "Убудаваная OPL"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "Убудаваная OPN"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (Дакладная, з памылкай АМ)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr ""
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (Дакладная, з памылкай АМ)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr ""
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Падобная на Win9X"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Падобная на Win9X (Варыянт SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Падобная на Win9X (Варыянт Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (Без памылкі АМ)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Апагей (няма памылкі AM)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "IBM AIL"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "HMI SOS"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (Стары варыянт з памылкамі)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr ""
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr ""
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr ""
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr ""
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Без абмежаванняў"
+
+msgid "OPTVAL_256K"
+msgstr ""
+
+msgid "OPTVAL_512K"
+msgstr ""
+
+msgid "OPTVAL_768K"
+msgstr ""
+
+msgid "OPTVAL_1024K"
+msgstr ""
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr ""
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr ""
+
+msgid "OPTVAL_REINHARD"
+msgstr ""
+
+msgid "OPTVAL_PALETTE"
+msgstr "Палітра гульні"
+
+msgid "OPTVAL_LOW"
+msgstr "Нізкае"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Сярэдняе"
+
+msgid "OPTVAL_HIGH"
+msgstr "Высокае"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Максімальнае"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Прамы"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Зваротны"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Постабпрацоўка"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Рэжым тонавага адлюстравання"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Эфект скажэння лінзы"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Якасць FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Дызерінг"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Порядок палитры тонового отображения"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Экспанента палітры тонавага адлюстравання"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Мультысэмплінг"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Свячэнне"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Якасць глабальнага зацянення"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Парталы з глабальным зацяненнем"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Размыццё фону меню"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Карта асяроддзя на люстэрках"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Якасць апрацоўкі"
+
+msgid "OPTVAL_SPEED"
+msgstr "Хуткасць"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Якасць"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Рэжым асвятлення сектараў"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Рэжым туману"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Кругавы"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Стандартны"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Фільтрацыя тэкстур"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Анізатропная фільтрацыя"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Няма (бліжэйшы MIP-узровень)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Няма (лінейны MIP-узровень)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Няма (трылінейная)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Білінейная"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Трылінейная"
+
+msgid "OPTVAL_2X"
+msgstr ""
+
+msgid "OPTVAL_4X"
+msgstr ""
+
+msgid "OPTVAL_8X"
+msgstr ""
+
+msgid "OPTVAL_16X"
+msgstr ""
+
+msgid "OPTVAL_32X"
+msgstr ""
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Налады тэкстур"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Уключыць тэкстуры"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Тэкстуры высокага дазволу"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Режим высакаякаснага маштабавання тэкстур"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Множнік высакаякаснага маштабавання"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Данный режим патрабуе ў %d разоў больш відэапамяці"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Маштабаванне тэкстур"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Маштабаванне спрайтаў"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Маштабаванне шрыфтоў"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Маштабаванне абліччаў мадэляў"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Кэшаваць GL-тэкстуры"
+
+msgid "VIDMNU_TITLE"
+msgstr "Налады відэарэжыму"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Маштабаваць (бліжэйшае)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Маштабаваць (лінейнае)"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Экраннае кашэ"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Расцягнуты"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Рэжым апрацоўкі"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Поўны экран"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Падтрымка Retina/HiDPI"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Суадносіны бакоў"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Прымусовыя суадносіны бакоў"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Тип прымусовых суадносін бакоў"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Уключыць суадносіны бакоў 5:4"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Маштабаванне"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Значэнне маштабу"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Лінейнае маштабаванне (поўны экран)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Маштабаванне пікселяў"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Даўжыня"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Вышыня"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Захаваць змены (аконны рэжым)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Захаваць змены (поўны экран)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Выбар шаблону дазволу"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Карыстальніцкія шаблоны"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Даступныя дазволы"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Суадносіны бакоў 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Суадносіны бакоў 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Суадносіны бакоў 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Суадносіны бакоў 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Суадносіны бакоў 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Звычайны"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Найменшы магчымы маштаб"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Карыст."
+
+msgid "VIDMNU_MAXFPS"
+msgstr "Максімальная частата кадраў"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 к/с"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 к/с"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 к/с"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 к/с"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 к/с"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 к/с"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Пераважны API апрацоўкі"
+
+msgid "OPTVAL_OPENGL"
+msgstr ""
+
+msgid "OPTVAL_VULKAN"
+msgstr ""
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr ""
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Аб'яднаць левы/правы ALT/CTRL/SHIFT"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Пераключэнне поўнага экрана па ALT+ENTER"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Пераключэнне поўнага экрана па Cmd+F"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Уключыць аўтазахаванне"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Колькасць аўтазахаванняў"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Пацвярджэнне пры захаванні/загрузцы"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Адключыць клавіятурныя чыт-коды"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Змяняць ячэйкі для хуткіх захаванняў"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Колькасць ячэек для хуткіх захаванняў"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Адключыць чыстае маштабаванне меню"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Паўза пры згортванні акна"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Прыцэл па змаўчанні"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Колер прыцэла"
+
+msgid "HUDMNU_CROSSHAIRHEALTH"
+msgstr "Прыцэл адлюстроўвае здароўе"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Памер прыцэла"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Стандартны"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Палепшаны"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Мова"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Скасаваць змены"
+
+msgid "REVMNU_SELECT"
+msgstr "Выбраць асяроддзе"
+
+msgid "REVMNU_TEST"
+msgstr "Праверка асяроддзя"
+
+msgid "REVMNU_EDIT"
+msgstr "Рэдагаваць асяроддзе"
+
+msgid "REVMNU_NEW"
+msgstr "Новае асяроддзе"
+
+msgid "REVMNU_REVERT"
+msgstr "Скінуць налады"
+
+# Please translate only if you know how to properly name this technical
+# jargon!
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_ROOM"
+msgstr ""
+
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_REVERB"
+msgstr ""
+
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+msgid "REVMNU_Reflections_Scale"
+msgstr ""
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr ""
+
+msgid "REVMNU_Reverb_Scale"
+msgstr ""
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr ""
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr ""
+
+msgid "REVMNU_Based_on"
+msgstr "На падставе"
+
+msgid "REVMNU_Name"
+msgstr "Назва"
+
+msgid "REVMNU_ID_1"
+msgstr ""
+
+msgid "REVMNU_ID_2"
+msgstr ""
+
+msgid "REVMNU_Create"
+msgstr "Стварыць"
+
+msgid "REVMNU_Save"
+msgstr "Захаваць..."
+
+msgid "REVMNU_File_name"
+msgstr "Імя файла"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Захаваць асяроддзі..."
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Налады Vulkan (эксперыментальныя)"
+
+msgid "VK_TITLE"
+msgstr "Налады Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Выкарыстоўваць Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "ID прылады Vulkan"
+
+msgid "VKMNU_HDR"
+msgstr "Пашыраны дынамічны дыяпазон (HDR)"
+
+msgid "VK_WARNING"
+msgstr "Увага: апрацоўшчык Vulkan у стадыі тэсціравання!"
+
+msgid "VK_RESTART"
+msgstr "Для прымянення гэтых змен патрабуецца перазапуск гульні."
+
+# This is not yet implemented - but it is planned
+msgid "VKMNU_DEVICESELECT"
+msgstr "Выбраць прыладу Vulkan"
+
+msgid "OPTVAL_SCALENX"
+msgstr ""
+
+msgid "OPTVAL_NORMALNX"
+msgstr ""
+
+msgid "OPTVAL_HQNX"
+msgstr ""
+
+msgid "OPTVAL_HQNXMMX"
+msgstr ""
+
+msgid "OPTVAL_NXBRZ"
+msgstr ""
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Стары xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Пошук налады"
+
+msgid "OS_ANY"
+msgstr "Шукаць любое са слоў"
+
+msgid "OS_ALL"
+msgstr "Шукаць усе словы"
+
+msgid "OS_NO_RESULTS"
+msgstr "Вынікі не знойдзены."
+
+msgid "OS_LABEL"
+msgstr "Пошук:"
+
+msgid "TXT_OBITUARY1"
+msgstr "%k пералічыў костачкі %o"
+
+msgid "TXT_OBITUARY2"
+msgstr "%k спакладаў %o"
+
+msgid "TXT_OBITUARY3"
+msgstr "%k узбіў %o"
+
+msgid "TXT_OBITUARY4"
+msgstr "%k скасіў %o"
+
+msgid "TXT_OBITUARY5"
+msgstr "%k знішчыў %o"
+
+msgid "TXT_OBITUARY6"
+msgstr "%k разрэзаў %o"
+
+msgid "TXT_OBITUARY7"
+msgstr "%k выпатрашыў %o"
+
+msgid "TXT_OBITUARY8"
+msgstr "%k пляснуў %o"
+
+msgid "TXT_OBITUARY9"
+msgstr "%k зладзіў анальнае правасуддзе %o"
+
+msgid "TXT_OBITUARY10"
+msgstr "%k зладзіў АнАлЬнАе ВаР'яЦтВа %o"
+
+msgid "TXT_OBITUARY11"
+msgstr "%k забіў %o"
+
+msgid "TXT_OBITUARY12"
+msgstr "%k зрабіў адбіўную з %o"
+
+msgid "TXT_OBITUARY13"
+msgstr "%k зладзіў бойню %o"
+
+msgid "TXT_OBITUARY14"
+msgstr "%k знявечыў %o"
+
+msgid "TXT_OBITUARY15"
+msgstr "%k рассвідраваў %o"
+
+msgid "TXT_OBITUARY16"
+msgstr "%k зрабіў новую адтуліну ў %o"
+
+msgid "TXT_OBITUARY17"
+msgstr "%k зладзіў разню %o"
+
+msgid "TXT_OBITUARY18"
+msgstr "%k размазаў %o"
+
+msgid "TXT_OBITUARY19"
+msgstr "%k садамаваў %o"
+
+msgid "TXT_OBITUARY20"
+msgstr "%k распырскаў %o"
+
+msgid "TXT_OBITUARY21"
+msgstr "%k расплюшчыў %o"
+
+msgid "TXT_OBITUARY22"
+msgstr "%k задушыў %o"
+
+msgid "TXT_OBITUARY23"
+msgstr "%k замачыў %o"
+
+msgid "TXT_OBITUARY24"
+msgstr "%k спакаваў %o у мяшок для трупаў"
+
+msgid "TXT_OBITUARY25"
+msgstr "%k адправіў у пекла %o"
+
+msgid "TXT_OBITUARY26"
+msgstr "%k падсмажыў %o"
+
+msgid "TXT_OBITUARY27"
+msgstr "%k прыкончыў %o"
+
+msgid "TXT_OBITUARY28"
+msgstr "%k расстраляў %o"
+
+msgid "TXT_OBITUARY29"
+msgstr "%k распыліў %o"
+
+msgid "TXT_OBITUARY30"
+msgstr "%k скарміў сабакам %o"
+
+msgid "TXT_OBITUARY31"
+msgstr "%k забіў %o як худую свінню"
+
+msgid "TXT_SELFOBIT1"
+msgstr "%o цяпер экскрымент"
+
+msgid "TXT_SELFOBIT2"
+msgstr "%o цяпер гамбургер"
+
+msgid "TXT_SELFOBIT3"
+msgstr "%o пакутуе ад страты тэстыкул"
+
+msgid "TXT_SELFOBIT4"
+msgstr "%o стаў добраахвотнікам у барацьбе з перанасяленнем"
+
+msgid "TXT_SELFOBIT5"
+msgstr "%o самазабіўся"
+
+msgid "TXT_SELFOBIT6"
+msgstr "%o атрымаў прэмію Дарвіна"
+
+# This is not a text to be translated but an engine switch for complex
+# languages.
+msgid "USE_GENERIC_FONT"
+msgstr ""
+
+# This should list all uppercase characters that are REQUIRED for proper
+# language display. If it is acceptable that accents get omitted a character
+# should NOT be listed here!
+msgid "REQUIRED_CHARACTERS"
+msgstr "АБВГДЕЁЖЗІЙКЛМНОПРСТУЎФХЦЧШЫЬЭЮЯ"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Поўнае меню налад"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Спрошчанае меню налад"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Адкрыць файл налад гульні"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Паглядзець здымкі экрана"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Прагляд захаваных гульняў"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Памяняць месцамі кнопкі мышы"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Толькі зменены"
+
+msgid "TXT_UNKNOWN"
+msgstr "Невядома"
+
+msgid "OPTVAL_HUD"
+msgstr "Інтэрфейс"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Аўтакарта"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "Інтэрфейс + аўтакарта"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Данное захаванне патрабуе наступныя файлы"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Налады гульні па сетцы"
+
+msgid "OPTMNU_INPUT"
+msgstr "Налады ўводу"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Налады сістэмы"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Налады асвятлення"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Налады спрайтаў"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Кароны"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Знешнасць"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Пашыраныя налады экрана"
+
+msgid "PICKER_SELECT"
+msgstr "Выбар файла гульні для запуску."
+
+msgid "PICKER_PLAY"
+msgstr "Гуляць"
+
+msgid "PICKER_EXIT"
+msgstr "Выхад"
+
+msgid "PICKER_GENERAL"
+msgstr "Агульные"
+
+msgid "PICKER_EXTRA"
+msgstr "Дад. графіка"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Поўны экран"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Адкл. аўтазагрузку"
+
+msgid "PICKER_DONTASK"
+msgstr "Не пытацца зноў"
+
+msgid "PICKER_LIGHTS"
+msgstr "Асвятленне"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Карты асвятлення"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Шырокі экран"
+
+msgid "PICKER_ADDPARM"
+msgstr "Дад. параметры:"
+
+msgid "PICKER_WELCOME"
+msgstr "Вітаем у %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Версія %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API адпрацоўкі "
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Гульня "
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Уключыць гэты кантролер"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Адкрыць галоўнае меню"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Модуль-паўтаральнік"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Дазволіць кантролер на фоне"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "Парадак сартавання захаванняў"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Па алфавіце"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Час апошняга захавання"
+
+msgid "PICKER_PLAYHOST"
+msgstr ""
+
+msgid "PICKER_PLAYJOIN"
+msgstr ""
+
+msgid "PICKER_REMPARM"
+msgstr ""
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr ""
+
+msgid "PICKER_TAB_MULTI"
+msgstr ""
+
+msgid "PICKER_LOADSAVE"
+msgstr ""
+
+msgid "PICKER_REMSAVE"
+msgstr ""
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr ""
+
+msgid "PICKER_JOIN"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+msgid "PICKER_NETRATE"
+msgstr ""
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr ""
+
+msgid "PICKER_GAMEMODE"
+msgstr ""
+
+msgid "PICKER_COOP"
+msgstr ""
+
+msgid "PICKER_DM"
+msgstr ""
+
+msgid "PICKER_TDM"
+msgstr ""
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr ""
+
+msgid "PICKER_ALTDM"
+msgstr ""
+
+msgid "PICKER_PLAYERS"
+msgstr ""
+
+msgid "PICKER_PORT"
+msgstr ""
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr ""
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr ""
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr ""
+
+msgid "PICKER_IP"
+msgstr ""
+
+msgid "PICKER_TDMLABEL"
+msgstr ""
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr ""
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr ""
+
+msgid "JOYMNU_TURNSPEED"
+msgstr ""
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr ""
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr ""

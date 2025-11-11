@@ -1,0 +1,255 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: nl\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Je hebt een blauwe flemsleutel opgehaald."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Je hebt een gele flemsleutel opgehaald."
+
+msgid "GOTREDFLEM"
+msgstr "Je hebt een rode flemsleutel opgehaald."
+
+msgid "GOTGOGGLES"
+msgstr "Ultraroggles gevonden"
+
+msgid "PD_BLUECO"
+msgstr "Je hebt een blauwe sleutel nodig om dit object te activeren."
+
+msgid "PD_REDCO"
+msgstr "Je hebt een rode sleutel nodig om dit object te activeren."
+
+msgid "PD_YELLOWCO"
+msgstr "Je hebt een gele sleutel nodig om dit object te activeren."
+
+msgid "PD_BLUEFO"
+msgstr "Je hebt een blauwe flemsleutel nodig om dit object te activeren."
+
+msgid "PD_REDFO"
+msgstr "Je hebt een rode flemsleutel nodig om dit object te activeren."
+
+msgid "PD_YELLOWFO"
+msgstr "Je hebt een gele flemsleutel nodig om dit object te activeren."
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Je hebt een zorcher opgehaald."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch en sleutels toegevoegd"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Landingzone"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Opslagfaciliteit"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorium"
+
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Grotten van Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Ruimtehaven"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Bioscoop"
+
+msgid "HUSTR_E2M3"
+msgstr ""
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Stadsstraten"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Rioleringssysteem"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Centraal Commando"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Verenigde granen"
+
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provinciaal Park"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Ruimteschip"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Bipedicus met harnas"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Flemmijn"
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr "De Flembominatie"
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr "Chex Krijger"
+
+msgid "PD_BLUEC"
+msgstr "Je hebt een blauwe sleutel nodig om deze deur te openen."
+
+msgid "PD_REDC"
+msgstr "Je hebt een rode sleutel nodig om deze deur te openen."
+
+msgid "PD_YELLOWC"
+msgstr "Je hebt een gele sleutel nodig om deze deur te openen."
+
+msgid "PD_BLUEF"
+msgstr "Je hebt een blauwe flemsleutel nodig om deze deur te openen."
+
+msgid "PD_REDF"
+msgstr "Je hebt een rode flemsleutel nodig om deze deur te openen."
+
+msgid "PD_YELLOWF"
+msgstr "Je hebt een gele flemsleutel nodig om deze deur te openen."
+
+msgid "OB_SLIME"
+msgstr "%o zinkt in wat slijm."
+
+msgid "OB_LAVA"
+msgstr "%o zinkt in wat slijm."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o werd geraakt door interdimensionaal slijm!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o werd geraakt door interdimensionaal slijm!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o werd door een stridicus gezoomd."
+
+msgid "OB_FLEMMINE"
+msgstr "%o werd door een Flemmijn getreiterd."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o werd afgeslankt door een Super Cycloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "%o werd verslagen door een Maximus."
+
+msgid "OB_LARVA"
+msgstr "%o werd door een Larve weggegooid."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o werd afgeslankt door een Quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o werd verslagen door de Flembominatie."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o werd verslagen door Lord Snotfolus."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o werd geraakt door %k's propulsor."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o werd gelazzed door %k."
+
+msgid "E1TEXT"
+msgstr ""
+"Na het sturen van de monsterlijke Flembrane\n"
+"terug naar zijn eigen dimensie, bevrijd je\n"
+"de gevangenen. Toch zijn flemoids overal!\n"
+"Jij en de gevangenen maken een pauze voor\n"
+"je ruimteschip. De flemoids slijm je schip,\n"
+"maar je ontsnapt ternauwernood in een baan\n"
+"om de aarde. Tijdens de terugkeer wordt je\n"
+"gefeliciteerd met de gedurfde redding,\n"
+"maar je geeft een waarschuwing...\n"
+"\n"
+"We hebben de laatste Flemoids nog niet gezien.\n"
+"Helaas heeft u gelijk. Want als je terugkeert\n"
+"naar huis, zie je dat de Flemoids je op de\n"
+"een of andere manier gevolgd zijn.\n"
+"\n"
+"Bereid je voor op\n"
+"Chex Quest 2: Terreur in Chex City!"
+
+msgid "E2TEXT"
+msgstr ""
+"Je zorch de overige flemoids die zich in\n"
+"het riool hadden verzameld.\n"
+"Chex City is gered.\n"
+"Het lijkt erop dat de Flemoid-dreiging\n"
+"eindelijk voorbij is.\n"
+"\n"
+"Tien jaar gaan voorbij in vrede en\n"
+"voorspoed. Maar de Flemoids werden niet\n"
+"verslagen en hun verlangen om de\n"
+"voedingsrijke graandimensie onder controle\n"
+"te houden is niet afgenomen. Ze hebben al\n"
+"hun krachten verzameld, een gigantische\n"
+"interdimensionale kloof in de ruimte\n"
+"geopend en nu gaat er een grote bal slijm\n"
+"recht op weg naar de planeet van het graan!\n"
+"\n"
+"Maak je klaar voor Chex Quest 3: Invasion!"
+
+msgid "E3TEXT"
+msgstr ""
+"Met een laatste ontploffing, je zorch Lord\n"
+"Snotfolus terug naar zijn eigen dimensie!\n"
+"Tegen alle verwachtingen in heb je de\n"
+"invasie met één hand verijdeld!\n"
+"\n"
+"Je hoopt echt dat de Flemoids eindelijk\n"
+"hun lesje geleerd hebben en nooit meer\n"
+"terug zullen keren naar de graandimensie.\n"
+"\n"
+"Maar als ze dat doen, weet je dat je\n"
+"er klaar voor bent!"
+
+msgid "M_EPI1"
+msgstr "Redding op Bazoik"
+
+msgid "M_EPI2"
+msgstr "Terreur in Chex City"
+
+msgid "M_EPI3"
+msgstr ""
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

@@ -1,0 +1,200 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: pl\n"
+
+msgid "NIGHTMARE"
+msgstr ""
+"Czy ty naprawdę myślisz, że temu podołasz?\n"
+"\n"
+"Wciśnij 'Y' lub 'N'..."
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Miejsce zaznaczone"
+
+msgid "PD_BLUEO"
+msgstr "Wymaga ZIELONEJ karty"
+
+msgid "PD_REDO"
+msgstr "Wymaga FIOLETOWEJ karty"
+
+msgid "PD_YELLOWO"
+msgstr "Wymaga ŻÓŁTEJ karty"
+
+msgid "PD_BLUEK"
+msgstr "Wymaga ZIELONEGO klucza"
+
+msgid "PD_YELLOWK"
+msgstr "Wymaga ŻÓŁTEGO klucza"
+
+msgid "PD_REDK"
+msgstr "Wymaga FIOLETOWEGO klucza"
+
+msgid "GOTARMOR"
+msgstr "Zebrano pancerz."
+
+msgid "GOTMEGA"
+msgstr "Zebrano pancerz bojowy."
+
+msgid "GOTMSPHERE"
+msgstr "Superzdrowie"
+
+msgid "GOTBLUECARD"
+msgstr "Zdobyto ZIELONĄ kartę."
+
+msgid "GOTYELWCARD"
+msgstr "Zdobyto ŻÓŁTĄ kartę."
+
+msgid "GOTREDCARD"
+msgstr "Zdobyto FIOLETOWĄ kartę."
+
+msgid "GOTBLUESKUL"
+msgstr "Zdobyto ZIELONY klucz."
+
+msgid "GOTYELWSKUL"
+msgstr "Zdobyto ŻÓŁTY klucz."
+
+msgid "GOTREDSKUL"
+msgstr "Zdobyto FIOLETOWY klucz."
+
+msgid "GOTSTIM"
+msgstr "Leczący grzyb"
+
+msgid "GOTMEDIKIT"
+msgstr "Zdobyto: apteczkę."
+
+msgid "GOTMEDINEED"
+msgstr "Zdobyto: apteczkę, której NAPRAWDĘ potrzebujesz."
+
+msgid "GOTMAP"
+msgstr "Mapa"
+
+msgid "GOTCLIPBOX"
+msgstr "Zdobyto: pudełko naboi."
+
+msgid "GOTROCKET"
+msgstr "Zdobyto: Granat."
+
+msgid "GOTROCKBOX"
+msgstr "Zdobyto: Granaty."
+
+msgid "GOTSHELLBOX"
+msgstr "Zdobyto: pudełko loftek do strzelby."
+
+msgid "GOTBACKPACK"
+msgstr "Zdobyto: plecak z amunicją."
+
+msgid "GOTBFG9000"
+msgstr "Zdobyto: Granat."
+
+msgid "GOTCHAINGUN"
+msgstr "Zdobyto: Minigun."
+
+msgid "GOTLAUNCHER"
+msgstr "Zdobyto: Wyrzutnię granatów."
+
+msgid "GOTPLASMA"
+msgstr "Miotacz Entropii!"
+
+msgid "GOTSHOTGUN"
+msgstr "Zdobyto: Strzelbę."
+
+msgid "STSTR_DQDON"
+msgstr "Tryb Boga WŁĄCZONY"
+
+msgid "STSTR_DQDOFF"
+msgstr "Tryb Boga WYŁĄCZONY"
+
+msgid "STSTR_KFAADDED"
+msgstr "Wszystkie bronie/amunicja/klucze"
+
+msgid "STSTR_FAADDED"
+msgstr "Wszystkie bronie i amunicja"
+
+msgid "TXT_HARMMAP01"
+msgstr "Porwanie"
+
+msgid "TXT_HARMMAP02"
+msgstr "Niebezpieczeństwo"
+
+msgid "TXT_HARMMAP03"
+msgstr "Paskudny Nastrój"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalapolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Szpital"
+
+msgid "TXT_HARMMAP06"
+msgstr "Fabryka Broni"
+
+msgid "TXT_HARMMAP07"
+msgstr "Podwodne Laboratorium"
+
+msgid "TXT_HARMMAP08"
+msgstr "Lądowisko Numer Jeden"
+
+msgid "TXT_HARMMAP09"
+msgstr "Baza Startowa"
+
+msgid "TXT_HARMMAP10"
+msgstr "Radioaktywna Strefa"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Jest ci niedobrze...\n"
+"Patrzysz królowej mutantów prosto w twarz...\n"
+"Ta maszkara... to tak naprawdę...\n"
+"Twoja przyjaciółka... Amira!\n"
+"\n"
+"Te potwory znalazły sposób, aby ją\n"
+"zmutować i zamienić ją w tą ohydną\n"
+"poczwarę, by mogły się rozmnażać.\n"
+"\n"
+"Ech...\n"
+"\n"
+"Bierzesz się w garść...\n"
+"Zapłacą za to, że musiałaś zabić\n"
+"swoją przyjaciółkę...\n"
+"\n"
+"\"Nawet piekło nie powstrzyma\n"
+"zlekceważnonej kobiety!\"\n"
+"\n"
+"     =K O N I E C="
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "Ładowanie"
+
+msgid "SKILL_BABY"
+msgstr "Bardzo Łatwy"
+
+msgid "SKILL_EASY"
+msgstr "Łatwy"
+
+msgid "SKILL_NORMAL"
+msgstr "Średni"
+
+msgid "SKILL_HARD"
+msgstr "Trudny"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Bardzo Trudny"
+
+msgid "HARMQUITMSG"
+msgstr "Dziękuję za grę"
+
+msgid "TXT_D2E1"
+msgstr "Harmonia"
