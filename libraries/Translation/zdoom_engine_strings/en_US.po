@@ -3007,7 +3007,7 @@ msgid "MNU_WARLOCK"
 msgstr "Warlock"
 
 msgid "MNU_ARCHMAGE"
-msgstr "Archmage"
+msgstr "Archimage"
 
 msgid "MNU_CHOOSECLASS"
 msgstr "Choose Class:"
