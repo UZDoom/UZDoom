@@ -71,6 +71,7 @@ struct FRenderViewpoint
 	double			TicFrac;		// fraction of tic for interpolation
 	uint32_t		FrameTime;		// current frame's time in tics.
 	uint64_t		LastFrameTime;
+	double			I_Sum;			// Integrated term for PID feedback loop for target-FPS culling distance
 	
 	int				extralight;		// extralight to be added to this viewpoint
 	bool			showviewer;		// show the camera actor?

@@ -684,6 +684,7 @@ public:
 	float		skymistspeed;
 	float		skymistyscale;			// Y-scale for skymist layer. Scales from horizon as midpoint. Doesn't tile.
 	float		culldist;				// Some functions (SegFog() in hw_setcolor.cpp) don't have access to Viewpoint->culldistsq
+	PalEntry	cullcolor;
 
 	double		sky1pos, sky2pos;
 	float		hw_sky1pos, hw_sky2pos, hw_skymistpos, hw_skymistyscale;

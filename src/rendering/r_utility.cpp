@@ -58,6 +58,7 @@ const float MY_SQRT2    = float(1.41421356237309504880); // sqrt(2)
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
 
 extern bool DrawFSHUD;		// [RH] Defined in d_main.cpp
+extern cycle_t FrameCycles;	// [DVR] Defined in d_main.cpp
 EXTERN_CVAR (Bool, cl_capfps)
 EXTERN_CVAR (Bool, haptics_do_world)
 EXTERN_CVAR(Int, r_distance_cull_type)
@@ -174,7 +175,8 @@ FRenderViewpoint::FRenderViewpoint()
 	FieldOfView =  DAngle::fromDeg(90.); // Angles in the SCREENWIDTH wide window
 	ScreenProj = 0.0;
 	ScreenProjX = 0.0;
-	culldistsq = 16000.0 * 16000.0;
+	culldistsq = 4000.0 * 4000.0;
+	I_Sum = 0.0;
 	TicFrac = 0.0;
 	FrameTime = 0;
 	LastFrameTime = 0;
@@ -984,14 +986,22 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		}
 		else if (!WorldPaused(true) && viewactive)
 		{
-			if ((screen->FrameTime - viewPoint.LastFrameTime) * i_timescale > 1000.0 / r_cull_fps_target)
+			double frame_time_error = (screen->FrameTime - viewPoint.LastFrameTime) * i_timescale/1000.0 - 1.0 / r_cull_fps_target;
+			// Using FrameCycles.Time() - 1.0 / r_cull_fps_target; will only measure frame render time, but displayed total fps will not match
+			viewPoint.I_Sum = (0.99 * viewPoint.I_Sum) + frame_time_error;
+			if (fabs(viewPoint.I_Sum)*r_cull_fps_target < 10.0)
 			{
-				if (viewPoint.culldistsq > 1100000.0) viewPoint.culldistsq *= 0.9;
+				viewPoint.culldistsq -= (0.0001 * viewPoint.I_Sum) * viewPoint.culldistsq;
 			}
-			else if (viewPoint.culldistsq < 256000000.0)
+			else if (fabs(viewPoint.I_Sum)*r_cull_fps_target < 100.0)
 			{
-				viewPoint.culldistsq *= 1.01;
+				viewPoint.culldistsq -= (frame_time_error > 0.0 ? 0.1 : -0.1) * viewPoint.culldistsq;
 			}
+			else
+			{
+				viewPoint.culldistsq -= (frame_time_error > 0.0 ? 0.5 : -0.5) * viewPoint.culldistsq;
+			}
+			viewPoint.culldistsq = clamp(viewPoint.culldistsq, 1100000.0, 256000000.0);
 		}
 		actor->Level->culldist = sqrt(viewPoint.culldistsq);
 	}
@@ -1277,8 +1287,9 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		}
 		else
 		{
-			screen->SetClearColorPal(PalEntry(gl_cullcolor));
-			SWRenderer->SetClearColor(PalEntry(gl_cullcolor));
+			if (actor->Level->cullcolor == 0) actor->Level->cullcolor = PalEntry(gl_cullcolor);
+			screen->SetClearColorPal(actor->Level->cullcolor);
+			SWRenderer->SetClearColor(actor->Level->cullcolor);
 		}
     }
 	

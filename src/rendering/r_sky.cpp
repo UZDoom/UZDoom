@@ -73,7 +73,7 @@ void InitSkyMap(FLevelLocals *Level)
 	}
 	if (Level->skymisttexture.isNull())
 	{
-		Level->skymisttexture = TexMan.CheckForTexture("skymist1", ETextureType::Any);
+		Level->skymisttexture = TexMan.CheckForTexture("skymista", ETextureType::Any);
 	}
 
 	skytex1 = TexMan.GetGameTexture(Level->skytexture1, false);

@@ -45,6 +45,7 @@ CVAR(Bool, gl_multithread, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 EXTERN_CVAR(Float, r_actorspriteshadowdist)
 EXTERN_CVAR(Bool, r_radarclipper)
 EXTERN_CVAR(Bool, r_dithertransparency)
+EXTERN_CVAR(Color, gl_cullcolor)
 
 thread_local bool isWorkerThread;
 ctpl::thread_pool renderPool(1);
@@ -278,7 +279,7 @@ bool HWDrawInfo::IsDistanceCulled(seg_t *line)
 void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 {
 	const bool doOob = Viewpoint.bDoOob;
-	bool isculled = r_distance_cull_type > 0 ? IsDistanceCulled(seg) : false;
+	bool isculled = false;
 
 #ifdef _DEBUG
 	if (seg->linedef && seg->linedef->Index() == 38)
@@ -324,10 +325,6 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 	// Back side, i.e. backface culling	- read: endAngle >= startAngle!
 	if (startAngle-endAngle<ANGLE_180)
 	{
-		if (isculled)
-		{
-			clipper.SafeAddClipRange(endAngle, startAngle); // Note the swap between endAngle and startAngle
-		}
 		return;
 	}
 
@@ -357,12 +354,9 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 
 	uint8_t ispoly = uint8_t(seg->sidedef->Flags & WALLF_POLYOBJ);
 
-	// [XA] NOTE: ideally it'd be nice to collapse these checks into one,
-	// but it's possible to add & remove WALLF_BLOCKRENDERING via zscript
-	// so auto-setting it on 1s lines may result in a crash if someone
-	// later tries to remove the flag from a line.
-	if (!seg->backsector || (seg->sidedef->Flags & WALLF_BLOCKRENDERING) || isculled)
+	if (r_distance_cull_type > 0 && IsDistanceCulled(seg))
 	{
+		isculled = true;
 		if(doOob)
 		{
 			if (startAngleR == 0) startAngleR = clipperr.PointToPseudoAngle(seg->v2->fX(), seg->v2->fY());
@@ -373,48 +367,46 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 		{
 			clipper.SafeAddClipRange(startAngle, endAngle);
 		}
+		if (seg->frontsector->Colormap.FadeColor != 0) Level->cullcolor = seg->frontsector->Colormap.FadeColor; // Write can't be multithreaded
 	}
-	else
+
+	// [XA] NOTE: ideally it'd be nice to collapse these checks into one,
+	// but it's possible to add & remove WALLF_BLOCKRENDERING via zscript
+	// so auto-setting it on 1s lines may result in a crash if someone
+	// later tries to remove the flag from a line.
+	if (!seg->backsector || (seg->sidedef->Flags & WALLF_BLOCKRENDERING))
 	{
-		if (!seg->backsector)
+		if(!doOob)
+			if (!(seg->sidedef->Flags & WALLF_DITHERTRANS_MID)) clipper.SafeAddClipRange(startAngle, endAngle);
+	}
+	else if (!ispoly)	// Two-sided polyobjects never obstruct the view
+	{
+		if (currentsector->sectornum == seg->backsector->sectornum)
 		{
-			if(!doOob)
-				if (!(seg->sidedef->Flags & WALLF_DITHERTRANS_MID)) clipper.SafeAddClipRange(startAngle, endAngle);
-		}
-		else if (!ispoly)	// Two-sided polyobjects never obstruct the view
-		{
-			if (currentsector->sectornum == seg->backsector->sectornum)
+			if (!seg->linedef->isVisualPortal())
 			{
-				if (!seg->linedef->isVisualPortal())
+				auto tex = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::mid), true);
+				if (!tex || !tex->isValid()) 
 				{
-					auto tex = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::mid), true);
-					if (!tex || !tex->isValid()) 
-					{
-						// nothing to do here!
-						seg->linedef->validcount=validcount;
-						return;
-					}
-				}
-				backsector=currentsector;
-			}
-			else
-			{
-				// clipping checks are only needed when the backsector is not the same as the front sector
-				if (in_area == area_default) in_area = hw_CheckViewArea(seg->v1, seg->v2, seg->frontsector, seg->backsector);
-
-				backsector = hw_FakeFlat(seg->backsector, in_area, true);
-
-				if (hw_CheckClip(seg->sidedef, currentsector, backsector))
-				{
-					if(!doOob && !(seg->sidedef->Flags & WALLF_DITHERTRANS_MID))
-						clipper.SafeAddClipRange(startAngle, endAngle);
+					// nothing to do here!
+					seg->linedef->validcount=validcount;
+					return;
 				}
 			}
+			backsector=currentsector;
 		}
-		else 
+		else
 		{
-			// Backsector for polyobj segs is always the containing sector itself
-			backsector = currentsector;
+			// clipping checks are only needed when the backsector is not the same as the front sector
+			if (in_area == area_default) in_area = hw_CheckViewArea(seg->v1, seg->v2, seg->frontsector, seg->backsector);
+
+			backsector = hw_FakeFlat(seg->backsector, in_area, true);
+
+			if (hw_CheckClip(seg->sidedef, currentsector, backsector))
+			{
+				if(!doOob && !(seg->sidedef->Flags & WALLF_DITHERTRANS_MID))
+					clipper.SafeAddClipRange(startAngle, endAngle);
+			}
 		}
 	}
 	else

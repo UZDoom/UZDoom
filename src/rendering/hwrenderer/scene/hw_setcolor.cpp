@@ -23,8 +23,6 @@
 #include "hw_cvars.h"
 
 EXTERN_CVAR(Int, r_distance_cull_type)
-EXTERN_CVAR(Float, r_line_distance_cull)
-EXTERN_CVAR(Color, gl_cullcolor)
 
 //==========================================================================
 //
@@ -106,7 +104,7 @@ void SetFog(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, int 
 		}
 		else
 		{
-			fogcolor = PalEntry(gl_cullcolor);
+			fogcolor = Level->cullcolor;
 		}
 	}
 	else if (Level->flags&LEVEL_HASFADETABLE)
