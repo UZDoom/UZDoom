@@ -3682,15 +3682,15 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<std::string>& allw
 	if (!foundDeh && !foundBex &&
 		gameinfo.gametype == GAME_Doom && GameConfig->SetSection ("Doom.DefaultDehacked"))
 	{
-		const char *key;
-		const char *value;
+		FString key;
+		FString value;
 
 		while (GameConfig->NextInSection (key, value))
 		{
-			if (stricmp (key, "Path") == 0 && FileExists (value))
+			if (key.IsEqualNoCase(FConfigFile::Tokens::path) && FileExists (value))
 			{
-				if (!batchrun) Printf ("Applying patch %s\n", value);
-				D_LoadDehFile(value, 0);
+				if (!batchrun) Printf ("Applying patch %s\n", value.GetChars());
+				D_LoadDehFile(value.GetChars(), 0);
 			}
 		}
 	}

@@ -384,6 +384,26 @@ void DrawText(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double 
 	DrawTextCommon(drawer, font, normalcolor, x, y, (const uint8_t*)string, parms);
 }
 
+void DrawText(F2DDrawer* drawer, FFont* font, int normalcolor, double x, double y, const FString& string, int tag_first, ...)
+{
+	Va_List tags;
+	DrawParms parms;
+
+	if (font == NULL || string.IsEmpty())
+	{
+		return;
+	}
+
+	va_start(tags.list, tag_first);
+	bool res = ParseDrawTextureTags(drawer, nullptr, 0, 0, tag_first, tags, &parms, DrawTexture_Text);
+	va_end(tags.list);
+	if (!res)
+	{
+		return;
+	}
+	//const char* txt = (parms.localize && string[0] == '$') ? GStrings.GetString(&string[1]) : string;
+	DrawTextCommon(drawer, font, normalcolor, x, y, (const uint8_t*)string.GetChars(), parms);
+}
 
 void DrawText(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double y, const char32_t* string, int tag_first, ...)
 {

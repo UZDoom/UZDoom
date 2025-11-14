@@ -295,8 +295,11 @@ void FGameConfigFile::DoAutoloadSetup (FIWadManager *iwad_man)
 	double last = 0;
 	if (SetSection ("LastRun"))
 	{
-		const char *lastver = GetValueForKey ("Version");
-		if (lastver != NULL) last = atof(lastver);
+		const FString lastver = GetValueForKey ("Version");
+		if (lastver.IsNotEmpty())
+		{
+			last = atof(lastver.GetChars());
+		}
 	}
 
 	if (last < 211)
@@ -387,10 +390,10 @@ void FGameConfigFile::DoGlobalSetup ()
 	}
 	if (SetSection ("LastRun"))
 	{
-		const char *lastver = GetValueForKey ("Version");
-		if (lastver != NULL)
+		const FString lastver = GetValueForKey ("Version");
+		if (lastver.IsNotEmpty())
 		{
-			double last = atof (lastver);
+			double last = atof (lastver.GetChars());
 			if (last < 207)
 			{ // Now that snd_midiprecache works again, you probably don't want it on.
 				FBaseCVar *precache = FindCVar ("snd_midiprecache", NULL);
@@ -716,8 +719,8 @@ void FGameConfigFile::DoGlobalSetup ()
 
 void FGameConfigFile::DoGameSetup (const char *gamename)
 {
-	const char *key;
-	const char *value;
+	FString key;
+	FString value;
 
 	sublen = countof(section) - 1 - mysnprintf (section, countof(section), "%s.", gamename);
 	subsection = section + countof(section) - sublen - 1;
@@ -768,17 +771,17 @@ void FGameConfigFile::DoGameSetup (const char *gamename)
 	strncpy (subsection, "ConsoleAliases", sublen);
 	if (SetSection (section))
 	{
-		const char *name = NULL;
+		FString name;
 		while (NextInSection (key, value))
 		{
-			if (stricmp (key, "Name") == 0)
+			if (key.IsEqualNoCase( "Name"))
 			{
 				name = value;
 			}
-			else if (stricmp (key, "Command") == 0 && name != NULL)
+			else if (key.IsEqualNoCase( "Command") && name.IsNotEmpty())
 			{
-				C_SetAlias (name, value);
-				name = NULL;
+				C_SetAlias (name.GetChars(), value.GetChars());
+				name = "";
 			}
 		}
 	}
@@ -794,7 +797,8 @@ void FGameConfigFile::DoKeySetup(const char *gamename)
 		{ "AutomapBindings", &AutomapBindings },
 		{ NULL, NULL }
 	};
-	const char *key, *value;
+	FString key;
+	FString value;
 
 	sublen = countof(section) - 1 - mysnprintf(section, countof(section), "%s.", gamename);
 	subsection = section + countof(section) - sublen - 1;
@@ -891,19 +895,20 @@ void FGameConfigFile::ReadNetVars ()
 // to newly-created cvars that were not already defined.
 void FGameConfigFile::ReadCVars (uint32_t flags)
 {
-	const char *key, *value;
+	FString key;
+	FString value;
 	FBaseCVar *cvar;
 	UCVarValue val;
 
 	flags |= CVAR_ARCHIVE|CVAR_UNSETTABLE|CVAR_AUTO;
 	while (NextInSection (key, value))
 	{
-		cvar = FindCVar (key, NULL);
+		cvar = FindCVar (key.GetChars(), NULL);
 		if (cvar == NULL)
 		{
-			cvar = new FStringCVar (key, NULL, flags);
+			cvar = new FStringCVar (key.GetChars(), NULL, flags);
 		}
-		val.String = const_cast<char *>(value);
+		val.String = value.GetChars();
 		cvar->SetGenericRep (val, CVAR_String);
 	}
 }
@@ -1033,8 +1038,8 @@ void FGameConfigFile::CreateStandardAutoExec(const char *section, bool start)
 void FGameConfigFile::AddAutoexec (FArgs *list, const char *game)
 {
 	char section[64];
-	const char *key;
-	const char *value;
+	FString key;
+	FString value;
 
 	mysnprintf (section, countof(section), "%s.AutoExec", game);
 
@@ -1046,12 +1051,12 @@ void FGameConfigFile::AddAutoexec (FArgs *list, const char *game)
 	{
 		while (NextInSection (key, value))
 		{
-			if (stricmp (key, "Path") == 0 && *value != '\0')
+			if (key.CompareNoCase( "Path") && value.IsNotEmpty())
 			{
-				FString expanded_path = ExpandEnvVars(value);
+				FString expanded_path = ExpandEnvVars(value.GetChars());
 				if (FileExists(expanded_path))
 				{
-					list->AppendRawArg(ExpandEnvVars(value));
+					list->AppendRawArg(ExpandEnvVars(value.GetChars()));
 				}
 			}
 		}

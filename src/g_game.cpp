@@ -1053,7 +1053,7 @@ bool G_Responder (event_t *ev)
 	{
 		if (chatmodeon) chatmodeon = 0;
 
-		const char *cmd = Bindings.GetBind (ev->data1);
+		const char *cmd = Bindings.GetBind (ev->data1).GetChars();
 
 		if (ev->type == EV_KeyDown)
 		{

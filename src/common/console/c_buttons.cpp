@@ -270,21 +270,19 @@ bool FButtonStatus::ReleaseKey (int keynum)
 
 void FButtonStatus::AddAxes (FString &btn_name, float joyaxes[NUM_AXIS_CODES])
 {
-	int i;
-
 	bIsAxis = false;
 	Axis = 0.0f;
 
-	char cmd_name[16];
-	strcpy(&cmd_name[1], btn_name.GetChars());
+	FString cmd_name;
+	cmd_name = btn_name;
 
-	cmd_name[0] = '+';
+	cmd_name = '+' + cmd_name;
 	TArray<int> positive_keys = Bindings.GetKeysForCommand(cmd_name);
 
-	cmd_name[0] = '-';
+	cmd_name.LockBuffer()[0] = '-';
 	TArray<int> negative_keys = Bindings.GetKeysForCommand(cmd_name);
 
-	for (i = 0; i < NUM_AXIS_CODES; i++)
+	for (int i = 0; i < NUM_AXIS_CODES; i++)
 	{
 		float axis_value = joyaxes[i];
 

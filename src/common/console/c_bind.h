@@ -42,7 +42,6 @@ struct event_t;
 class FConfigFile;
 class FCommandLine;
 
-void C_NameKeys (char *str, int first, int second);
 FString C_NameKeys (int *keys, int count, bool colors = false);
 
 class FKeyBindings
@@ -50,18 +49,18 @@ class FKeyBindings
 	FString Binds[NUM_KEYS];
 
 public:
-	void PerformBind(FCommandLine &argv, const char *msg);
+	void PerformBind(FCommandLine &argv, const FString& msg);
 	bool DoKey(event_t *ev);
-	void ArchiveBindings(FConfigFile *F, const char *matchcmd = NULL);
-	int  GetKeysForCommand (const char *cmd, int *first, int *second);
-	TArray<int> GetKeysForCommand (const char *cmd);
-	void UnbindACommand (const char *str);
+	void ArchiveBindings(FConfigFile* F, const FString matchcmd = "");
+	int  GetKeysForCommand (const FString& cmd, int* first, int* second);
+	TArray<int> GetKeysForCommand (const FString& cmd);
+	void UnbindACommand (const FString& str);
 	void UnbindAll (const TArray<int> *filter = nullptr);
-	void UnbindKey(const char *key);
-	void DoBind (const char *key, const char *bind);
-	void DefaultBind(const char *keyname, const char *cmd);
+	void UnbindKey(const FString& key);
+	void DoBind (const FString& key, const FString& bind);
+	void DefaultBind(const FString& keyname, const FString& cmd);
 
-	void SetBind(unsigned int key, const char *bind, bool override = true)
+	void SetBind(unsigned int key, const FString& bind, bool override = true)
 	{
 		if (!override && Binds[key].IsNotEmpty()) return;
 		if (key < NUM_KEYS) Binds[key] = bind;
@@ -72,14 +71,14 @@ public:
 		return Binds[index];
 	}
 
-	const char *GetBind(unsigned int index) const
+	FString GetBind(unsigned int index) const
 	{
 		if (index < NUM_KEYS)
 		{
 			auto c = Binds[index].GetChars();
 			if (*c) return c;
 		}
-		return NULL;
+		return "";
 	}
 
 };
@@ -95,7 +94,7 @@ bool C_DoKey (event_t *ev, FKeyBindings *binds, FKeyBindings *doublebinds);
 void C_SetDefaultBindings (const TArray<int> *filter = nullptr);
 void C_UnbindAll (const TArray<int> *filter = nullptr);
 
-extern const char *KeyNames[];
+extern const FString KeyNames[];
 
 struct FKeyAction
 {

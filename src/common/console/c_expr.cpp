@@ -42,6 +42,7 @@
 #include "c_cvars.h"
 #include "cmdlib.h"
 #include "printf.h"
+#include "zstring.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -59,7 +60,7 @@ struct FProduction
 
 struct FStringProd : public FProduction
 {
-	char Value[1];
+	FString Value;
 };
 
 struct FDoubleProd : public FProduction
@@ -85,6 +86,7 @@ bool IsFloat (const char *str);
 static FProduction *ParseExpression (FCommandLine &argv, int &parsept);
 static const char *CIsNum (const char *str);
 static FStringProd *NewStringProd (const char *str);
+static FStringProd *NewStringProd (const FString& str);
 static FStringProd *NewStringProd (size_t len);
 static FDoubleProd *NewDoubleProd (double val);
 static FStringProd *DoubleToString (FProduction *prod);
@@ -305,11 +307,19 @@ static const char *CIsNum (const char *str)
 //
 //==========================================================================
 
-static FStringProd *NewStringProd (const char *str)
+static FStringProd* NewStringProd (const char *str)
 {
-	FStringProd *prod = (FStringProd *)M_Malloc (sizeof(FStringProd)+strlen(str));
+	FStringProd* prod = new FStringProd;
+	prod->Value = str;
 	prod->Type = PROD_String;
-	strcpy (prod->Value, str);
+	return prod;
+}
+
+static FStringProd* NewStringProd(const FString& str)
+{
+	FStringProd* prod = new FStringProd;
+	prod->Value = str;
+	prod->Type = PROD_String;
 	return prod;
 }
 
@@ -319,11 +329,11 @@ static FStringProd *NewStringProd (const char *str)
 //
 //==========================================================================
 
-static FStringProd *NewStringProd (size_t len)
+static FStringProd* NewStringProd (size_t len)
 {
-	FStringProd *prod = (FStringProd *)M_Malloc (sizeof(FStringProd)+len);
+	//FStringProd* prod = (FStringProd *)M_Malloc (sizeof(FStringProd)+len);
+	FStringProd* prod = new FStringProd;
 	prod->Type = PROD_String;
-	prod->Value[0] = 0;
 	return prod;
 }
 
@@ -368,7 +378,7 @@ static FDoubleProd *StringToDouble (FProduction *prod)
 {
 	FDoubleProd *newprod;
 
-	newprod = NewDoubleProd (atof (static_cast<FStringProd *>(prod)->Value));
+	newprod = NewDoubleProd (static_cast<FStringProd *>(prod)->Value.ToDouble());
 	M_Free (prod);
 	return newprod;
 }
@@ -453,12 +463,12 @@ FProduction *ProdAddDbl (FDoubleProd *prod1, FDoubleProd *prod2)
 //
 //==========================================================================
 
-FProduction *ProdAddStr (FStringProd *prod1, FStringProd *prod2)
+FProduction* ProdAddStr (FStringProd* prod1, FStringProd*prod2)
 {
-	size_t len = strlen (prod1->Value) + strlen (prod2->Value) + 1;
+	size_t len = prod1->Value.Len() + prod2->Value.Len() + 1;
+	FString NewString = prod1->Value + prod2->Value;
 	FStringProd *prod = NewStringProd (len);
-	strcpy (prod->Value, prod1->Value);
-	strcat (prod->Value, prod2->Value);
+	prod->Value = NewString;
 	return prod;
 }
 
@@ -591,7 +601,7 @@ FProduction *ProdNeqDbl (FDoubleProd *prod1, FDoubleProd *prod2)
 
 FProduction *ProdLTStr (FStringProd *prod1, FStringProd *prod2)
 {
-	return NewDoubleProd (stricmp (prod1->Value, prod2->Value) < 0);
+	return NewDoubleProd (prod1->Value.CompareNoCase( prod2->Value.GetChars()) < 0);
 }
 
 //==========================================================================
@@ -602,7 +612,7 @@ FProduction *ProdLTStr (FStringProd *prod1, FStringProd *prod2)
 
 FProduction *ProdLTEStr (FStringProd *prod1, FStringProd *prod2)
 {
-	return NewDoubleProd (stricmp (prod1->Value, prod2->Value) <= 0);
+	return NewDoubleProd (stricmp (prod1->Value.GetChars(), prod2->Value.GetChars()) <= 0);
 }
 
 //==========================================================================
@@ -613,7 +623,7 @@ FProduction *ProdLTEStr (FStringProd *prod1, FStringProd *prod2)
 
 FProduction *ProdGTStr (FStringProd *prod1, FStringProd *prod2)
 {
-	return NewDoubleProd (stricmp (prod1->Value, prod2->Value) > 0);
+	return NewDoubleProd (stricmp (prod1->Value.GetChars(), prod2->Value.GetChars()) > 0);
 }
 
 //==========================================================================
@@ -624,7 +634,7 @@ FProduction *ProdGTStr (FStringProd *prod1, FStringProd *prod2)
 
 FProduction *ProdGTEStr (FStringProd *prod1, FStringProd *prod2)
 {
-	return NewDoubleProd (stricmp (prod1->Value, prod2->Value) >= 0);
+	return NewDoubleProd (stricmp (prod1->Value.GetChars(), prod2->Value.GetChars()) >= 0);
 }
 
 //==========================================================================
@@ -635,7 +645,7 @@ FProduction *ProdGTEStr (FStringProd *prod1, FStringProd *prod2)
 
 FProduction *ProdEqStr (FStringProd *prod1, FStringProd *prod2)
 {
-	return NewDoubleProd (stricmp (prod1->Value, prod2->Value) == 0);
+	return NewDoubleProd (stricmp (prod1->Value.GetChars(), prod2->Value.GetChars()) == 0);
 }
 
 //==========================================================================
@@ -646,7 +656,7 @@ FProduction *ProdEqStr (FStringProd *prod1, FStringProd *prod2)
 
 FProduction *ProdNeqStr (FStringProd *prod1, FStringProd *prod2)
 {
-	return NewDoubleProd (stricmp (prod1->Value, prod2->Value) != 0);
+	return NewDoubleProd (stricmp (prod1->Value.GetChars(), prod2->Value.GetChars()) != 0);
 }
 
 //==========================================================================
@@ -787,7 +797,7 @@ CCMD (eval)
 					}
 					else
 					{
-						val.String = static_cast<FStringProd *>(prod)->Value;
+						val.String = static_cast<FStringProd *>(prod)->Value.GetChars();
 						var->SetGenericRep (val, CVAR_String);
 					}
 				}
@@ -800,7 +810,7 @@ CCMD (eval)
 				}
 				else
 				{
-					Printf ("%s\n", static_cast<FStringProd *>(prod)->Value);
+					Printf ("%s\n", static_cast<FStringProd *>(prod)->Value.GetChars());
 				}
 			}
 			M_Free (prod);

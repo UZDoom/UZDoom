@@ -148,7 +148,7 @@ bool M_LoadJoystickConfig(IJoystickConfig *joy)
 {
 	FConfigFile* GameConfig = sysCallbacks.GetConfig ? sysCallbacks.GetConfig() : nullptr;
 	char key[32];
-	const char *value;
+	FString value;
 	int axislen;
 	int numaxes;
 
@@ -161,30 +161,30 @@ bool M_LoadJoystickConfig(IJoystickConfig *joy)
 	assert(GameConfig);
 
 	value = GameConfig->GetValueForKey("Enabled");
-	if (value)
+	if (!value.IsEmpty())
 	{
-		joy->SetEnabled((bool)atoi(value));
+		joy->SetEnabled((bool)(value.ToULong()));
 	}
 
 	if(joy->AllowsEnabledInBackground())
 	{
 		value = GameConfig->GetValueForKey("EnabledInBackground");
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetEnabledInBackground((bool)atoi(value));
+			joy->SetEnabledInBackground((bool)(value.ToULong()));
 		}
 	}
 
 	value = GameConfig->GetValueForKey("Sensitivity");
-	if (value)
+	if (!value.IsEmpty())
 	{
-		joy->SetSensitivity((float)atof(value));
+		joy->SetSensitivity((float)(value.ToDouble()));
 	}
 
 	value = GameConfig->GetValueForKey("Haptics");
-	if (value)
+	if (!value.IsEmpty())
 	{
-		joy->SetHapticsStrength((float)atof(value));
+		joy->SetHapticsStrength((float)(value.ToDouble()));
 	}
 
 	numaxes = joy->GetNumAxes();
@@ -194,58 +194,58 @@ bool M_LoadJoystickConfig(IJoystickConfig *joy)
 
 		mysnprintf(key + axislen, countof(key) - axislen, "deadzone");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisDeadZone(i, (float)atof(value));
+			joy->SetAxisDeadZone(i, (float)(value.ToDouble()));
 		}
 
 		mysnprintf(key + axislen, countof(key) - axislen, "scale");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisScale(i, (float)atof(value));
+			joy->SetAxisScale(i, (float)(value.ToDouble()));
 		}
 
 		mysnprintf(key + axislen, countof(key) - axislen, "threshold");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisDigitalThreshold(i, (float)atof(value));
+			joy->SetAxisDigitalThreshold(i, (float)(value.ToDouble()));
 		}
 
 		mysnprintf(key + axislen, countof(key) - axislen, "curve");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisResponseCurve(i, (EJoyCurve)clamp(atoi(value), (int)JOYCURVE_CUSTOM, (int)NUM_JOYCURVE-1));
+			joy->SetAxisResponseCurve(i, (EJoyCurve)clamp(((int)value.ToLong()), (int)JOYCURVE_CUSTOM, (int)NUM_JOYCURVE-1));
 		}
 
 		mysnprintf(key + axislen, countof(key) - axislen, "curve-x1");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisResponseCurvePoint(i, 0, (float)atof(value));
+			joy->SetAxisResponseCurvePoint(i, 0, (float)(value.ToDouble()));
 		}
 
 		mysnprintf(key + axislen, countof(key) - axislen, "curve-y1");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisResponseCurvePoint(i, 1, (float)atof(value));
+			joy->SetAxisResponseCurvePoint(i, 1, (float)(value.ToDouble()));
 		}
 
 		mysnprintf(key + axislen, countof(key) - axislen, "curve-x2");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisResponseCurvePoint(i, 2, (float)atof(value));
+			joy->SetAxisResponseCurvePoint(i, 2, (float)(value.ToDouble()));
 		}
 
 		mysnprintf(key + axislen, countof(key) - axislen, "curve-y2");
 		value = GameConfig->GetValueForKey(key);
-		if (value)
+		if (!value.IsEmpty())
 		{
-			joy->SetAxisResponseCurvePoint(i, 3, (float)atof(value));
+			joy->SetAxisResponseCurvePoint(i, 3, (float)(value.ToDouble()));
 		}
 	}
 	return true;

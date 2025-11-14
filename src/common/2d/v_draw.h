@@ -277,6 +277,7 @@ bool SetTextureParms(F2DDrawer *drawer, DrawParms* parms, FGameTexture* img, dou
 void GetFullscreenRect(double width, double height, int fsmode, DoubleRect* rect);
 
 void DrawText(F2DDrawer* drawer, FFont* font, int normalcolor, double x, double y, const char* string, int tag_first, ...);
+void DrawText(F2DDrawer* drawer, FFont* font, int normalcolor, double x, double y, const FString& string, int tag_first, ...);
 void DrawText(F2DDrawer* drawer, FFont* font, int normalcolor, double x, double y, const char32_t* string, int tag_first, ...);
 void DrawChar(F2DDrawer* drawer, FFont* font, int normalcolor, double x, double y, int character, int tag_first, ...);
 

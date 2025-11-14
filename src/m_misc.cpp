@@ -297,7 +297,7 @@ bool M_SaveDefaults (const char *filename)
 void M_SaveDefaultsFinal ()
 {
 	if (GameConfig == nullptr) return;
-	while (!M_SaveDefaults (nullptr) && I_WriteIniFailed (GameConfig->GetPathName()))
+	while (!M_SaveDefaults (nullptr) && I_WriteIniFailed (GameConfig->GetPathName().GetChars()))
 	{
 		/* Loop until the config saves or I_WriteIniFailed() returns false */
 	}
@@ -321,7 +321,7 @@ UNSAFE_CCMD (writeini)
 CCMD(openconfig)
 {
 	M_SaveDefaults(nullptr);
-	I_OpenShellFolder(ExtractFilePath(GameConfig->GetPathName()).GetChars());
+	I_OpenShellFolder(ExtractFilePath(GameConfig->GetPathName().GetChars()).GetChars());
 }
 
 //

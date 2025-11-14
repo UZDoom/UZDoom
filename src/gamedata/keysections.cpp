@@ -57,7 +57,8 @@ static void LoadKeys (const char *modname, bool dbl)
 	FKeyBindings *bindings = dbl? &DoubleBindings : &Bindings;
 	if (GameConfig->SetSection (section))
 	{
-		const char *key, *value;
+		FString key;
+		FString value;
 		while (GameConfig->NextInSection (key, value))
 		{
 			bindings->DoBind (key, value);

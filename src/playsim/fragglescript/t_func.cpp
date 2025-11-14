@@ -362,8 +362,11 @@ static FSoundID T_FindSound(const char * name)
 	}
 	else
 	{
-		strcpy(buffer, name);
-		if (fileSystem.CheckNumForName(buffer, ns_sounds)<0) mysnprintf(buffer, countof(buffer), "DS%.35s", name);
+		mysnprintf(buffer, countof(buffer), name);
+		if (fileSystem.CheckNumForName(buffer, ns_sounds) < 0)
+		{
+			mysnprintf(buffer, countof(buffer), "DS%.35s", name);
+		}
 	}
 
 	FSoundID id = S_AddSound(name, buffer);

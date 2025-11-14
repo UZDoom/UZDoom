@@ -1102,8 +1102,9 @@ DEFINE_ACTION_FUNCTION(FKeyBindings, NameKeys)
 	PARAM_PROLOGUE;
 	PARAM_INT(k1);
 	PARAM_INT(k2);
-	char buffer[120];
-	C_NameKeys(buffer, k1, k2);
+	TArray<int> keysArray = { k1, k2 };
+	const bool colors = false;
+	FString buffer = C_NameKeys(keysArray.Data(), 2, colors);
 	ACTION_RETURN_STRING(buffer);
 }
 

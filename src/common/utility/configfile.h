@@ -38,6 +38,8 @@
 #include "files.h"
 #include "zstring.h"
 
+
+
 class FConfigFile
 {
 public:
@@ -49,30 +51,37 @@ public:
 	void ClearConfig ();
 	FConfigFile &operator= (const FConfigFile &other);
 
-	bool HaveSections () { return Sections != NULL; }
-	void CreateSectionAtStart (const char *name);
-	void MoveSectionToStart (const char *name);
-	void SetSectionNote (const char *section, const char *note);
-	void SetSectionNote (const char *note);
-	bool SetSection (const char *section, bool allowCreate=false);
+	class Tokens
+	{
+	public:
+		static const inline FString path = FString("Path");
+		static const inline FString recursive_path = FString("RecursivePath");
+		static const inline FString name = FString("Name");
+		static const inline FString command = FString("Command");
+		static const inline FString empty = FString("");
+		static const inline FString iwad_search_directories = FString("IWADSearch.Directories");
+	};
+
+	bool HaveSections() const { return Sections != NULL; }
+	void CreateSectionAtStart (const FString& name);
+	void MoveSectionToStart (const FString& name);
+	void SetSectionNote (const FString& section, const FString& note);
+	void SetSectionNote (const FString& note);
+	bool SetSection (const FString& section, bool allowCreate=false);
 	bool SetFirstSection ();
 	bool SetNextSection ();
 	const char *GetCurrentSection () const;
 	void ClearCurrentSection ();
 	bool DeleteCurrentSection ();
-	void ClearKey (const char *key);
+	void ClearKey (const FString& key);
 
 	bool SectionIsEmpty ();
-	bool NextInSection (const char *&key, const char *&value);
-	const char *GetValueForKey (const char *key) const;
-	void SetValueForKey (const char *key, const char *value, bool duplicates=false);
-	void SetValueForKey(const char* key, const FString& value, bool duplicates = false)
-	{
-		SetValueForKey(key, value.GetChars(), duplicates);
-	}
+	bool NextInSection (FString& key, FString& value);
+	const FString& GetValueForKey (const FString& key) const;
+	void SetValueForKey(const FString& key, const FString& value, bool duplicates = false);
 
-	const char *GetPathName () const { return PathName.GetChars(); }
-	void ChangePathName (const char *path);
+	const FString& GetPathName () const { return PathName; }
+	void ChangePathName (const FString& path);
 
 	void LoadConfigFile ();
 	bool WriteConfigFile () const;
@@ -82,51 +91,54 @@ protected:
 
 	uint8_t *ReadLine (TArray<uint8_t> &string, FileReader *file) const;
 	bool ReadConfig (FileReader *file);
-	static const char *GenerateEndTag(const char *value);
-	void RenameSection(const char *oldname, const char *newname) const;
+	static FString GenerateEndTag(const FString& value);
+	void RenameSection(const FString& oldname, const FString& newname) const;
 
 	bool OkayToWrite;
 	bool FileExisted;
 
 private:
-	struct FConfigEntry
+	struct FConfigEntry final
 	{
-		char *Value;
-		FConfigEntry *Next;
-		char Key[1];	// + length of key
+		FConfigEntry* Next = nullptr;
 
-		void SetValue (const char *val);
+		FString Key;
+		FString Value;
+
+		void SetValue (const FString& val);
+		FConfigEntry() = default;
+		~FConfigEntry() = default;
 	};
 	struct FConfigSection
 	{
 		FString SectionName;
-		FConfigEntry *RootEntry;
-		FConfigEntry **LastEntryPtr;
-		FConfigSection *Next;
+		FConfigEntry* RootEntry = nullptr;
+		FConfigEntry** LastEntryPtr = nullptr;
+		FConfigSection* Next = nullptr;
 		FString Note;
 		//char Name[1];	// + length of name
 	};
 
 	FConfigSection* Sections = nullptr;
 	FConfigSection **LastSectionPtr;
-	FConfigSection *CurrentSection;
-	FConfigEntry *CurrentEntry;
+	FConfigSection *CurrentSection = nullptr;
+	FConfigEntry *CurrentEntry = nullptr;
 	FString PathName;
 
-	FConfigSection *FindSection (const char *name) const;
-	FConfigEntry *FindEntry (FConfigSection *section, const char *key) const;
-	FConfigSection *NewConfigSection (const char *name);
-	FConfigEntry *NewConfigEntry (FConfigSection *section, const char *key, const char *value);
-	FConfigEntry *ReadMultiLineValue (FileReader *file, FConfigSection *section, const char *key, const char *terminator);
-	void SetSectionNote (FConfigSection *section, const char *note);
+	FConfigSection *FindSection (const FString& name) const;
+	FConfigEntry *FindEntry (FConfigSection* section, const FString& key) const;
+	FConfigSection *NewConfigSection (const FString& name);
+	FConfigEntry *NewConfigEntry (FConfigSection* section, const FString& key, const FString& value);
+	FConfigEntry *ReadMultiLineValue (FileReader* file, FConfigSection *section, const FString& key, const FString& terminator);
+	void SetSectionNote (FConfigSection* section, const FString& note);
 
 public:
 	class Position
 	{
 		friend class FConfigFile;
 
-		FConfigSection *Section;
-		FConfigEntry *Entry;
+		FConfigSection* Section = nullptr;
+		FConfigEntry* Entry = nullptr;
 	};
 
 	void GetPosition (Position &pos) const;

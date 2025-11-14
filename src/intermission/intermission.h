@@ -319,6 +319,15 @@ class DIntermissionController : public DObject
 	bool mAdvance, mSentAdvance;
 	int mIndex;
 
+	class Tokens
+	{
+	public:
+		static inline const FString toggle_console = FString("toggleconsole");
+		static inline const FString screenshot = FString("screenshot");
+		static inline const FString menu_main = FString("menu_main");
+		static inline const FString pause = FString("pause");
+	};
+
 public:
 	bool mEndGame;
 

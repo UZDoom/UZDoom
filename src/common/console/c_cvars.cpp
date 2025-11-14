@@ -409,7 +409,7 @@ const char *FBaseCVar::ToString (UCVarValue value, ECVarType type)
 		break;
 
 	default:
-		strcpy (cstrbuf, "<huh?>");
+		mysnprintf(cstrbuf, countof(cstrbuf), "<huh?>");
 		break;
 	}
 	return cstrbuf;

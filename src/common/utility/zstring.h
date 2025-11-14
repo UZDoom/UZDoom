@@ -354,10 +354,22 @@ public:
 	int Compare(const FString &other, size_t len) const { return strncmp(Chars, other.Chars, len); }
 	int Compare(const char *other, size_t len) const { return strncmp(Chars, other, len); }
 
+	[[nodiscard]] bool IsEqual(const FString& other) const { return strcmp(Chars, other.Chars) == 0; }
+	[[nodiscard]] bool IsEqual(const char* other) const { return strcmp(Chars, other) == 0; }
+	[[nodiscard]] bool IsEqual(const FString& other, size_t len) const { return strncmp(Chars, other.Chars, len) == 0; }
+	[[nodiscard]] bool IsEqual(const char* other, size_t len) const { return strncmp(Chars, other, len) == 0; }
+
 	int CompareNoCase (const FString &other) const { return stricmp (Chars, other.Chars); }
 	int CompareNoCase (const char *other) const { return stricmp (Chars, other); }
 	int CompareNoCase(const FString &other, size_t len) const { return strnicmp(Chars, other.Chars, len); }
 	int CompareNoCase(const char *other, size_t len) const { return strnicmp(Chars, other, len); }
+
+	[[nodiscard]] bool IsEqualNoCase(const FString& other) const { return stricmp(Chars, other.Chars) == 0; }
+	[[nodiscard]] bool IsEqualNoCase(const char* other) const { return stricmp(Chars, other) == 0; }
+	[[nodiscard]] bool IsEqualNoCase(const FString& other, size_t len) const { return strnicmp(Chars, other.Chars, len) == 0; }
+	[[nodiscard]] bool IsEqualNoCase(const char* other, size_t len) const { return strnicmp(Chars, other, len) == 0; }
+
+	[[nodiscard]] bool StartsWithNoCase(const FString& other) const { return strnicmp(Chars, other.Chars, other.Len()) == 0; }
 
 	enum EmptyTokenType
 	{

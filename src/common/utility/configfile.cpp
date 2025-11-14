@@ -108,9 +108,8 @@ FConfigFile::~FConfigFile ()
 
 		while (entry != NULL)
 		{
-			FConfigEntry *nextentry = entry->Next;
-			delete[] entry->Value;
-			delete[] (char *)entry;
+			FConfigEntry* nextentry = entry->Next;
+			delete entry;
 			entry = nextentry;
 		}
 		delete section;
@@ -173,7 +172,7 @@ void FConfigFile::ClearConfig ()
 //
 //====================================================================
 
-void FConfigFile::ChangePathName (const char *pathname)
+void FConfigFile::ChangePathName (const FString& pathname)
 {
 	PathName = pathname;
 }
@@ -187,7 +186,7 @@ void FConfigFile::ChangePathName (const char *pathname)
 //
 //====================================================================
 
-void FConfigFile::CreateSectionAtStart (const char *name)
+void FConfigFile::CreateSectionAtStart (const FString& name)
 {
 	NewConfigSection (name);
 	MoveSectionToStart (name);
@@ -202,7 +201,7 @@ void FConfigFile::CreateSectionAtStart (const char *name)
 //
 //====================================================================
 
-void FConfigFile::MoveSectionToStart (const char *name)
+void FConfigFile::MoveSectionToStart (const FString& name)
 {
 	FConfigSection *section = FindSection (name);
 
@@ -234,7 +233,7 @@ void FConfigFile::MoveSectionToStart (const char *name)
 //
 //====================================================================
 
-bool FConfigFile::SetSection (const char *name, bool allowCreate)
+bool FConfigFile::SetSection (const FString& name, bool allowCreate)
 {
 	FConfigSection *section = FindSection (name);
 	if (section == NULL && allowCreate)
@@ -245,7 +244,7 @@ bool FConfigFile::SetSection (const char *name, bool allowCreate)
 	{
 		CurrentSection = section;
 		CurrentEntry = section->RootEntry;
-		return true;
+		return CurrentEntry != nullptr;
 	}
 	return false;
 }
@@ -322,14 +321,14 @@ void FConfigFile::ClearCurrentSection ()
 {
 	if (CurrentSection != NULL)
 	{
-		FConfigEntry *entry, *next;
+		FConfigEntry* entry = nullptr;
+		FConfigEntry* next = nullptr;
 
 		entry = CurrentSection->RootEntry;
 		while (entry != NULL)
 		{
 			next = entry->Next;
-			delete[] entry->Value;
-			delete[] (char *)entry;
+			delete entry;
 			entry = next;
 		}
 		CurrentSection->RootEntry = NULL;
@@ -382,7 +381,7 @@ bool FConfigFile::DeleteCurrentSection()
 //
 //====================================================================
 
-void FConfigFile::ClearKey(const char *key)
+void FConfigFile::ClearKey(const FString& key)
 {
 	if (CurrentSection->RootEntry == NULL)
 	{
@@ -390,7 +389,7 @@ void FConfigFile::ClearKey(const char *key)
 	}
 	FConfigEntry **prober = &CurrentSection->RootEntry, *probe = *prober;
 
-	while (probe != NULL && stricmp(probe->Key, key) != 0)
+	while (probe != NULL && (!probe->Key.IsEqualNoCase((key))))
 	{
 		prober = &probe->Next;
 		probe = *prober;
@@ -402,8 +401,7 @@ void FConfigFile::ClearKey(const char *key)
 		{
 			CurrentSection->LastEntryPtr = prober;
 		}
-		delete[] probe->Value;
-		delete[] (char *)probe;
+		delete probe;
 	}
 }
 
@@ -431,7 +429,7 @@ bool FConfigFile::SectionIsEmpty()
 //
 //====================================================================
 
-bool FConfigFile::NextInSection (const char *&key, const char *&value)
+bool FConfigFile::NextInSection (FString& key, FString& value)
 {
 	FConfigEntry *entry = CurrentEntry;
 
@@ -453,7 +451,7 @@ bool FConfigFile::NextInSection (const char *&key, const char *&value)
 //
 //====================================================================
 
-const char *FConfigFile::GetValueForKey (const char *key) const
+const FString& FConfigFile::GetValueForKey (const FString& key) const
 {
 	FConfigEntry *entry = FindEntry (CurrentSection, key);
 
@@ -461,7 +459,7 @@ const char *FConfigFile::GetValueForKey (const char *key) const
 	{
 		return entry->Value;
 	}
-	return NULL;
+	return FConfigFile::Tokens::empty;
 }
 
 //====================================================================
@@ -474,7 +472,7 @@ const char *FConfigFile::GetValueForKey (const char *key) const
 //
 //====================================================================
 
-void FConfigFile::SetValueForKey (const char *key, const char *value, bool duplicates)
+void FConfigFile::SetValueForKey (const FString& key, const FString& value, bool duplicates)
 {
 	if (CurrentSection != NULL)
 	{
@@ -497,7 +495,7 @@ void FConfigFile::SetValueForKey (const char *key, const char *value, bool dupli
 //
 //====================================================================
 
-FConfigFile::FConfigSection *FConfigFile::FindSection (const char *name) const
+FConfigFile::FConfigSection *FConfigFile::FindSection (const FString& name) const
 {
 	FConfigSection *section = Sections;
 
@@ -514,7 +512,7 @@ FConfigFile::FConfigSection *FConfigFile::FindSection (const char *name) const
 //
 //====================================================================
 
-void FConfigFile::RenameSection (const char *oldname, const char *newname) const
+void FConfigFile::RenameSection (const FString& oldname, const FString& newname) const
 {
 	FConfigSection *section = FindSection(oldname);
 
@@ -531,11 +529,11 @@ void FConfigFile::RenameSection (const char *oldname, const char *newname) const
 //====================================================================
 
 FConfigFile::FConfigEntry *FConfigFile::FindEntry (
-	FConfigFile::FConfigSection *section, const char *key) const
+	FConfigFile::FConfigSection *section, const FString& key) const
 {
 	FConfigEntry *probe = section->RootEntry;
 
-	while (probe != NULL && stricmp (probe->Key, key) != 0)
+	while (probe != NULL && (!probe->Key.IsEqualNoCase(key)))
 	{
 		probe = probe->Next;
 	}
@@ -548,7 +546,7 @@ FConfigFile::FConfigEntry *FConfigFile::FindEntry (
 //
 //====================================================================
 
-FConfigFile::FConfigSection *FConfigFile::NewConfigSection (const char *name)
+FConfigFile::FConfigSection *FConfigFile::NewConfigSection (const FString& name)
 {
 	FConfigSection *section;
 
@@ -573,17 +571,15 @@ FConfigFile::FConfigSection *FConfigFile::NewConfigSection (const char *name)
 //====================================================================
 
 FConfigFile::FConfigEntry *FConfigFile::NewConfigEntry (
-	FConfigFile::FConfigSection *section, const char *key, const char *value)
+	FConfigFile::FConfigSection *section, const FString& key, const FString& value)
 {
-	FConfigEntry *entry;
+	FConfigEntry* entry = nullptr;
 	size_t keylen;
 
-	keylen = strlen (key);
-	entry = (FConfigEntry *)new char[sizeof(*section)+keylen];
-	entry->Value = NULL;
-	entry->Next = NULL;
-	memcpy (entry->Key, key, keylen);
-	entry->Key[keylen] = 0;
+	keylen = key.Len();
+	entry = new FConfigEntry;
+	entry->Key = key;
+	
 	*(section->LastEntryPtr) = entry;
 	section->LastEntryPtr = &entry->Next;
 	entry->SetValue (value);
@@ -709,18 +705,18 @@ bool FConfigFile::ReadConfig (FileReader *file)
 //
 //====================================================================
 
-FConfigFile::FConfigEntry *FConfigFile::ReadMultiLineValue(FileReader *file, FConfigSection *section, const char *key, const char *endtag)
+FConfigFile::FConfigEntry *FConfigFile::ReadMultiLineValue(FileReader *file, FConfigSection *section, const FString& key, const FString& endtag)
 {
 	TArray<uint8_t> readbuf;
 	FString value;
-	size_t endlen = strlen(endtag);
+	size_t endlen = endtag.Len();
 
 	// Keep on reading lines until we reach a line that matches >>>endtag
 	while (ReadLine(readbuf, file) != NULL)
 	{
 		// Does the start of this line match the endtag?
 		if (readbuf[0] == '>' && readbuf[1] == '>' && readbuf[2] == '>' &&
-			strncmp((char*)readbuf.Data() + 3, endtag, endlen) == 0)
+			strncmp((char*)readbuf.Data() + 3, endtag.GetChars(), endlen) == 0)
 		{ // Is there nothing but line break characters after the match?
 			size_t i;
 			for (i = endlen + 3; readbuf[i] != '\0'; ++i)
@@ -807,15 +803,15 @@ bool FConfigFile::WriteConfigFile () const
 		file->Printf ("[%s]\n", section->SectionName.GetChars());
 		while (entry != NULL)
 		{
-			if (strpbrk(entry->Value, "\r\n") == NULL)
+			if (entry->Value.IndexOfAny( "\r\n") == -1)
 			{ // Single-line value
-				file->Printf ("%s=%s\n", entry->Key, entry->Value);
+				file->Printf ("%s=%s\n", entry->Key.GetChars(), entry->Value.GetChars());
 			}
 			else
 			{ // Multi-line value
-				const char *endtag = GenerateEndTag(entry->Value);
-				file->Printf ("%s=<<<%s\n%s\n>>>%s\n", entry->Key,
-					endtag, entry->Value, endtag);
+				const FString endtag = GenerateEndTag(entry->Value);
+				file->Printf ("%s=<<<%s\n%s\n>>>%s\n", entry->Key.GetChars(),
+					endtag.GetChars(), entry->Value.GetChars(), endtag.GetChars());
 			}
 			entry = entry->Next;
 		}
@@ -835,7 +831,7 @@ bool FConfigFile::WriteConfigFile () const
 //
 //====================================================================
 
-const char *FConfigFile::GenerateEndTag(const char *value)
+FString FConfigFile::GenerateEndTag(const FString& value)
 {
 	static const char Base64Table[] =
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._";
@@ -859,7 +855,7 @@ const char *FConfigFile::GenerateEndTag(const char *value)
 			EndTag[4+i*4+3] = Base64Table[rand_bytes[i*3+2] & 63];
 		}
 	}
-	while (strstr(value, EndTag) != NULL);
+	while (value.IndexOf(EndTag) != -1);
 	return EndTag;
 }
 
@@ -881,14 +877,13 @@ void FConfigFile::WriteCommentHeader (FileWriter *file) const
 //
 //====================================================================
 
-void FConfigFile::FConfigEntry::SetValue (const char *value)
+void FConfigFile::FConfigEntry::SetValue (const FString& value)
 {
-	if (Value != NULL)
+	if (!Value.IsEmpty())
 	{
-		delete[] Value;
+		Value = Tokens::empty;
 	}
-	Value = new char[strlen (value)+1];
-	strcpy (Value, value);
+	Value = value;
 }
 
 //====================================================================
@@ -929,24 +924,20 @@ void FConfigFile::SetPosition (const FConfigFile::Position &pos)
 //
 //====================================================================
 
-void FConfigFile::SetSectionNote(const char *section, const char *note)
+void FConfigFile::SetSectionNote(const FString& section, const FString& note)
 {
 	SetSectionNote(FindSection(section), note);
 }
 
-void FConfigFile::SetSectionNote(const char *note)
+void FConfigFile::SetSectionNote(const FString& note)
 {
 	SetSectionNote(CurrentSection, note);
 }
 
-void FConfigFile::SetSectionNote(FConfigSection *section, const char *note)
+void FConfigFile::SetSectionNote(FConfigSection* section, const FString& note)
 {
 	if (section != NULL)
 	{
-		if (note == NULL)
-		{
-			note = "";
-		}
 		section->Note = note;
 	}
 }

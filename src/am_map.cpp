@@ -928,6 +928,12 @@ class DAutomap :public DAutomapBase
 		F_PANINC = 140 / TICRATE,	// how much the automap moves window per tic in frame-buffer coordinates moves 140 pixels at 320x200 in 1 second
 	};
 
+	class Tokens
+	{
+	public:
+		static inline const FString am_pan_prefix = FString("+am_pan");
+	};
+
 	//FLevelLocals *Level;
 	// scale on entry
 	// used by MTOF to scale from map-to-frame-buffer coords
@@ -1489,9 +1495,14 @@ bool DAutomap::Responder (event_t *ev, bool last)
 	{
 		if (am_followplayer)
 		{
-			// check for am_pan* and ignore in follow mode
-			const char *defbind = AutomapBindings.GetBind(ev->data1);
-			if (defbind && !strnicmp(defbind, "+am_pan", 7)) return false;
+			// check for am_pan prefix and ignore in follow mode
+			const FString& defbind = AutomapBindings.GetBind(ev->data1);
+			const size_t prefixCharCount = Tokens::am_pan_prefix.CharacterCount();
+			if (defbind.CharacterCount() >= prefixCharCount && 
+				(defbind.CompareNoCase(Tokens::am_pan_prefix, Tokens::am_pan_prefix.Len()) == 0))
+			{
+				return false;
+			}
 		}
 
 		bool res = C_DoKey(ev, &AutomapBindings, nullptr);
@@ -1499,8 +1510,8 @@ bool DAutomap::Responder (event_t *ev, bool last)
 		{
 			// If this is a release event we also need to check if it released a button in the main Bindings
 			// so that that button does not get stuck.
-			const char *defbind = Bindings.GetBind(ev->data1);
-			return (!defbind || defbind[0] != '+'); // Let G_Responder handle button releases
+			const FString& defbind = Bindings.GetBind(ev->data1);
+			return (defbind.IsEmpty() || defbind[0] != '+'); // Let G_Responder handle button releases
 		}
 		return res;
 	}

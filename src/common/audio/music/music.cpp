@@ -542,12 +542,12 @@ static void ReadGains()
 	FConfigFile gains(path.GetChars());
 	if (gains.SetSection("Gains"))
 	{
-		const char* key;
-		const char* value;
+		FString key;
+		FString value;
 
 		while (gains.NextInSection(key, value))
 		{
-			gainMap.Insert(key, (float)strtod(value, nullptr));
+			gainMap.Insert(key, (float)value.ToDouble());
 		}
 	}
 }

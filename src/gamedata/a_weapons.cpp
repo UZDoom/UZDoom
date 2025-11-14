@@ -500,7 +500,8 @@ void FWeaponSlots::SetFromPlayer(PClassActor *type)
 int FWeaponSlots::RestoreSlots(FConfigFile *config, const char *section)
 {
 	FString section_name(section);
-	const char *key, *value;
+	FString key;
+	FString value;
 	int slotsread = 0;
 
 	section_name += ".Weapons";
@@ -510,7 +511,7 @@ int FWeaponSlots::RestoreSlots(FConfigFile *config, const char *section)
 	}
 	while (config->NextInSection (key, value))
 	{
-		if (strnicmp (key, "Slot[", 5) != 0 ||
+		if (key.StartsWithNoCase("Slot[") == 0 ||
 			key[5] < '0' ||
 			key[5] > '0'+NUM_WEAPON_SLOTS ||
 			key[6] != ']' ||
@@ -518,7 +519,7 @@ int FWeaponSlots::RestoreSlots(FConfigFile *config, const char *section)
 		{
 			continue;
 		}
-		Slots[key[5] - '0'].AddWeaponList(value, true);
+		Slots[key[5] - '0'].AddWeaponList(value.GetChars(), true);
 		slotsread++;
 	}
 	return slotsread;

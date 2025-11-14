@@ -49,7 +49,7 @@
 
 #include "d_eventbase.h"
 
-const char *KeyNames[NUM_KEYS] =
+const FString KeyNames[NUM_KEYS] =
 {
 	// We use the DirectInput codes and assume a qwerty keyboard layout.
 	// See <dinput.h> for the DIK_* codes
@@ -165,21 +165,23 @@ static FixedBitArray<NUM_KEYS> DClicked;
 //
 //=============================================================================
 
-static int GetKeyFromName (const char *name)
+static int GetKeyFromName (const FString& name)
 {
 	int i;
 
 	// Names of the form #xxx are translated to key xxx automatically
 	if (name[0] == '#' && name[1] != 0)
 	{
-		return atoi (name + 1);
+		return strtoul(name.GetChars() + 1, NULL, 0);
 	}
 
 	// Otherwise, we scan the KeyNames[] array for a matching name
 	for (i = 0; i < NUM_KEYS; i++)
 	{
-		if (KeyNames[i] && !stricmp (KeyNames[i], name))
+		if (KeyNames[i].Len() > 0 && (KeyNames[i].IsEqualNoCase(name)))
+		{
 			return i;
+		}
 	}
 	return 0;
 }
@@ -190,24 +192,24 @@ static int GetKeyFromName (const char *name)
 //
 //=============================================================================
 
-static int GetConfigKeyFromName (const char *key)
+static int GetConfigKeyFromName (const FString& key)
 {
 	int keynum = GetKeyFromName(key);
 	if (keynum == 0)
 	{
-		if (stricmp (key, "LeftBracket") == 0)
+		if (key.IsEqualNoCase("LeftBracket"))
 		{
 			keynum = GetKeyFromName ("[");
 		}
-		else if (stricmp (key, "RightBracket") == 0)
+		else if (key.IsEqualNoCase("RightBracket"))
 		{
 			keynum = GetKeyFromName ("]");
 		}
-		else if (stricmp (key, "Equals") == 0)
+		else if (key.IsEqualNoCase("Equals"))
 		{
 			keynum = GetKeyFromName ("=");
 		}
-		else if (stricmp (key, "KP-Equals") == 0)
+		else if (key.IsEqualNoCase("KP-Equals"))
 		{
 			keynum = GetKeyFromName ("kp=");
 		}
@@ -221,13 +223,14 @@ static int GetConfigKeyFromName (const char *key)
 //
 //=============================================================================
 
-const char *KeyName (int key)
+FString KeyName (int key)
 {
-	static char name[5];
-
-	if (KeyNames[key])
+	if (KeyNames[key].Len() > 0)
+	{
 		return KeyNames[key];
+	}
 
+	static char name[5];
 	mysnprintf (name, countof(name), "Key_%d", key);
 	return name;
 }
@@ -238,9 +241,9 @@ const char *KeyName (int key)
 //
 //=============================================================================
 
-static const char *ConfigKeyName(int keynum)
+static FString ConfigKeyName(int keynum)
 {
-	const char *name = KeyName(keynum);
+	const FString name = KeyName(keynum);
 	if (name[1] == 0)	// Make sure given name is config-safe
 	{
 		if (name[0] == '[')
@@ -249,40 +252,10 @@ static const char *ConfigKeyName(int keynum)
 			return "RightBracket";
 		else if (name[0] == '=')
 			return "Equals";
-		else if (strcmp (name, "kp=") == 0)
+		else if (name == FString("kp="))
 			return "KP-Equals";
 	}
 	return name;
-}
-
-//=============================================================================
-//
-//
-//
-//=============================================================================
-
-void C_NameKeys (char *str, int first, int second)
-{
-	int c = 0;
-
-	*str = 0;
-	if (second == first) second = 0;
-	if (first)
-	{
-		c++;
-		strcpy (str, KeyName (first));
-		if (second)
-			strcat (str, TEXTCOLOR_BLACK ", " TEXTCOLOR_NORMAL);
-	}
-
-	if (second)
-	{
-		c++;
-		strcat (str, KeyName (second));
-	}
-
-	if (!c)
-		*str = '\0';
 }
 
 //=============================================================================
@@ -319,7 +292,7 @@ FString C_NameKeys (int *keys, int count, bool colors)
 //
 //=============================================================================
 
-void FKeyBindings::DoBind (const char *key, const char *bind)
+void FKeyBindings::DoBind (const FString& key, const FString& bind)
 {
 	int keynum = GetConfigKeyFromName (key);
 	if (keynum != 0)
@@ -360,7 +333,7 @@ void FKeyBindings::UnbindAll (const TArray<int> *filter_ptr)
 //
 //=============================================================================
 
-void FKeyBindings::UnbindKey(const char *key)
+void FKeyBindings::UnbindKey(const FString& key)
 {
 	int i;
 
@@ -370,7 +343,7 @@ void FKeyBindings::UnbindKey(const char *key)
 	}
 	else
 	{
-		Printf ("Unknown key \"%s\"\n", key);
+		Printf ("Unknown key \"%s\"\n", key.GetChars());
 		return;
 	}
 }
@@ -381,9 +354,9 @@ void FKeyBindings::UnbindKey(const char *key)
 //
 //=============================================================================
 
-void FKeyBindings::PerformBind(FCommandLine &argv, const char *msg)
+void FKeyBindings::PerformBind(FCommandLine &argv, const FString& msg)
 {
-	int i;
+	int i = -1;
 
 	if (argv.argc() > 1)
 	{
@@ -404,12 +377,12 @@ void FKeyBindings::PerformBind(FCommandLine &argv, const char *msg)
 	}
 	else
 	{
-		Printf ("%s:\n", msg);
+		Printf ("%s:\n", msg.GetChars());
 
 		for (i = 0; i < NUM_KEYS; i++)
 		{
 			if (!Binds[i].IsEmpty())
-				Printf ("%s \"%s\"\n", KeyName (i), Binds[i].GetChars());
+				Printf ("%s \"%s\"\n", KeyName (i).GetChars(), Binds[i].GetChars());
 		}
 	}
 }
@@ -430,28 +403,28 @@ void FKeyBindings::PerformBind(FCommandLine &argv, const char *msg)
 //
 //=============================================================================
 
-void FKeyBindings::ArchiveBindings(FConfigFile *f, const char *matchcmd)
+void FKeyBindings::ArchiveBindings(FConfigFile *f, const FString matchcmd)
 {
-	int i;
+	int i = -1;
 
 	for (i = 0; i < NUM_KEYS; i++)
 	{
 		if (Binds[i].IsEmpty())
 		{
-			if (matchcmd == nullptr)
+			if (matchcmd.IsEmpty())
 			{
-				f->ClearKey(ConfigKeyName(i));
+				f->ClearKey(ConfigKeyName(i).GetChars());
 			}
 		}
-		else if (matchcmd == nullptr || Binds[i].CompareNoCase(matchcmd) == 0)
+		else if (matchcmd.IsEmpty() || Binds[i].CompareNoCase(matchcmd) == 0)
 		{
 			if (Binds[i][0] == '\1')
 			{
 				Binds[i] = "";
 				continue;
 			}
-			f->SetValueForKey(ConfigKeyName(i), Binds[i].GetChars());
-			if (matchcmd != nullptr)
+			f->SetValueForKey(ConfigKeyName(i), Binds[i]);
+			if (!matchcmd.IsEmpty())
 			{ // If saving a specific command, set a marker so that
 			  // it does not get saved in the general binding list.
 				Binds[i] = "\1";
@@ -466,7 +439,7 @@ void FKeyBindings::ArchiveBindings(FConfigFile *f, const char *matchcmd)
 //
 //=============================================================================
 
-int FKeyBindings::GetKeysForCommand (const char *cmd, int *first, int *second)
+int FKeyBindings::GetKeysForCommand (const FString& cmd, int* first, int* second)
 {
 	int c, i;
 
@@ -479,7 +452,7 @@ int FKeyBindings::GetKeysForCommand (const char *cmd, int *first, int *second)
 
 	while (i < NUM_KEYS && c < 2)
 	{
-		if (stricmp (cmd, Binds[i].GetChars()) == 0)
+		if (cmd == Binds[i])
 		{
 			if (c++ == 0)
 				*first = i;
@@ -497,14 +470,14 @@ int FKeyBindings::GetKeysForCommand (const char *cmd, int *first, int *second)
 //
 //=============================================================================
 
-TArray<int> FKeyBindings::GetKeysForCommand (const char *cmd)
+TArray<int> FKeyBindings::GetKeysForCommand (const FString& cmd)
 {
 	int i = 0;
 	TArray<int> result;
 
 	while (i < NUM_KEYS)
 	{
-		if (stricmp (cmd, Binds[i].GetChars()) == 0)
+		if (cmd.IsEqualNoCase(Binds[i]))
 		{
 			result.Push(i);
 		}
@@ -519,13 +492,13 @@ TArray<int> FKeyBindings::GetKeysForCommand (const char *cmd)
 //
 //=============================================================================
 
-void FKeyBindings::UnbindACommand (const char *str)
+void FKeyBindings::UnbindACommand (const FString& str)
 {
 	int i;
 
 	for (i = 0; i < NUM_KEYS; i++)
 	{
-		if (!stricmp (str, Binds[i].GetChars()))
+		if (str.IsEqualNoCase(Binds[i]))
 		{
 			Binds[i] = "";
 		}
@@ -538,12 +511,12 @@ void FKeyBindings::UnbindACommand (const char *str)
 //
 //=============================================================================
 
-void FKeyBindings::DefaultBind(const char *keyname, const char *cmd)
+void FKeyBindings::DefaultBind(const FString& keyname, const FString& cmd)
 {
 	int key = GetKeyFromName (keyname);
 	if (key == 0)
 	{
-		Printf ("Unknown key \"%s\"\n", keyname);
+		Printf ("Unknown key \"%s\"\n", keyname.GetChars());
 		return;
 	}
 	if (!Binds[key].IsEmpty())
@@ -552,7 +525,7 @@ void FKeyBindings::DefaultBind(const char *keyname, const char *cmd)
 	}
 	for (int i = 0; i < NUM_KEYS; ++i)
 	{
-		if (!Binds[i].IsEmpty() && stricmp (Binds[i].GetChars(), cmd) == 0)
+		if (!Binds[i].IsEmpty() && Binds[i].IsEqualNoCase(cmd))
 		{ // This command is already bound to a key.
 			return;
 		}
@@ -755,7 +728,7 @@ void ReadBindings(int lump, bool override, const TArray<int> *filter = nullptr)
 //
 //=============================================================================
 
-void C_SetDefaultKeys(const char* baseconfig, const TArray<int> *filter = nullptr)
+void C_SetDefaultKeys(const FString& baseconfig, const TArray<int> *filter = nullptr)
 {
 	auto lump = fileSystem.CheckNumForFullName("engine/commonbinds.txt");
 	if (lump >= 0)
@@ -772,7 +745,7 @@ void C_SetDefaultKeys(const char* baseconfig, const TArray<int> *filter = nullpt
 	}
 	int lastlump = 0;
 
-	while ((lump = fileSystem.FindLumpFullName(baseconfig, &lastlump)) != -1)
+	while ((lump = fileSystem.FindLumpFullName(baseconfig.GetChars(), &lastlump)) != -1)
 	{
 		// Read this only from the main game resources.
 		if (fileSystem.GetFileContainer(lump) <= fileSystem.GetMaxIwadNum())

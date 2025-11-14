@@ -462,21 +462,21 @@ int FIWadManager::CheckIWADInfo(const char* fn)
 
 void FIWadManager::CollectSearchPaths()
 {
-	if (GameConfig->SetSection("IWADSearch.Directories"))
+	if (GameConfig->SetSection(FConfigFile::Tokens::iwad_search_directories))
 	{
-		const char *key;
-		const char *value;
+		FString key;
+		FString value;
 
 		while (GameConfig->NextInSection(key, value))
 		{
-			if (stricmp(key, "Path") == 0)
+			if (key.IsEqualNoCase(FConfigFile::Tokens::path))
 			{
-				FString nice = NicePath(value);
+				FString nice = NicePath(value.GetChars());
 				if (nice.Len() > 0) mSearchPaths.Push(nice);
 			}
-			else if (stricmp(key, "RecursivePath") == 0)
+			else if (key.IsEqualNoCase(FConfigFile::Tokens::recursive_path))
 			{
-				FString nice = NicePath(value);
+				FString nice = NicePath(value.GetChars());
 				if (nice.Len() > 0) mRecursiveSearchPaths.Push(nice);
 			}
 		}

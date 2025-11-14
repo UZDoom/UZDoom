@@ -394,18 +394,18 @@ void FSoundFontManager::CollectSoundfonts()
 	FConfigFile* GameConfig = sysCallbacks.GetConfig ? sysCallbacks.GetConfig() : nullptr;
 	if (GameConfig != NULL && GameConfig->SetSection ("SoundfontSearch.Directories"))
 	{
-		const char *key;
-		const char *value;
+		FString key;
+		FString value;
 
 		while (GameConfig->NextInSection (key, value))
 		{
-			if (stricmp (key, "Path") == 0)
+			if (key.IsEqualNoCase(FConfigFile::Tokens::path))
 			{
 				FileSys::FileList list;
 
 				FString dir;
 
-				dir = NicePath(value);
+				dir = NicePath(value.GetChars());
 				FixPathSeperator(dir);
 				if (dir.IsNotEmpty())
 				{
