@@ -961,6 +961,7 @@ OptionMenu "VideoOptions" protected
 	Submenu "$DSPLYMNU_VKOPT",                 VKOptions,             0, false, vid_preferbackend, 1, HideInv
 	Submenu "$GLMNU_TEXOPT",                   GLTextureGLOptions
 	Submenu "$GLMNU_DYNLIGHT",                 GLLightOptions
+	Submenu "$DSPLYMNU_CULLOPT",			   "CullingOptions"
 	StaticText " "
 	Slider "$DSPLYMNU_SCREENSIZE",             screenblocks,           3.0, 12.0, 1.0, 0
 	StaticText " "
@@ -980,9 +981,6 @@ OptionMenu "VideoOptions" protected
 	Option "$DSPLYMNU_PUFFTYPE",               cl_pufftype,            PuffTypes
 	Slider "$DSPLYMNU_MAXPARTICLES",           r_maxparticles,         100, 10000, 100, 0
 	Slider "$DSPLYMNU_MAXDECALS",              cl_maxdecals,           0, 10000, 100, 0
-	Option "$DSPLYMNU_LINECULL",				"r_distance_cull_type", "CullTypes"
-	Slider "$DSPLYMNU_LINECULLDIST",			"r_line_distance_cull",	1000.0, 16000.0, 1000.0, 0, "r_cull_distance"
-	Slider "$DSPLYMNU_CULLFPSMIN",				"r_cull_fps_target", 60, 200, 10, 0, "r_cull_fps"
 	Option "$DSPLYMNU_PLAYERSPRITES",          r_drawplayersprites,    OnOff
 	Option "$DSPLYMNU_DEATHCAM",               r_deathcamera,          OnOff
 	Option "$DSPLYMNU_TELEZOOM",               telezoom,               OnOff
@@ -1400,6 +1398,16 @@ OptionMenu "GLLightOptions" protected
 	Option "$GLLIGHTMNU_LIGHTSHADOWMAP",        gl_light_shadowmap,   YesNo
 	Option "$GLLIGHTMNU_LIGHTSHADOWMAPQUALITY", gl_shadowmap_quality, ShadowMapQuality
 	Option "$GLLIGHTMNU_LIGHTSHADOWMAPFILTER",  gl_shadowmap_filter,  ShadowMapFilter
+}
+
+OptionMenu "CullingOptions" protected
+{
+	Title "$CULLMNU_TITLE"
+	Option "$DSPLYMNU_LINECULL",				"r_distance_cull_type", "CullTypes"
+	Slider "$DSPLYMNU_LINECULLDIST",			"r_line_distance_cull",	1000.0, 16000.0, 1000.0, 0, "r_cull_distance"
+	Slider "$DSPLYMNU_CULLFPSMIN",				"r_cull_fps_target", 60, 200, 10, 0, "r_cull_fps"
+	ColorPicker "$DSPLYMNU_CULLCOLOR",			"gl_cullcolor", "r_distance_cull_type"
+	Slider "$DSPLYMNU_CULLSKYFOG",				"gl_cull_skyfog", 1, 255, 1, 0, "r_distance_cull_type"
 }
 
 OptionMenu "OpenGLOptions" protected
