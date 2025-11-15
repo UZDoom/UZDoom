@@ -121,6 +121,7 @@ TMap<int, FAmbientSound> Ambients;
 
 enum SICommands
 {
+    SI_Include,
 	SI_Ambient,
 	SI_Random,
 	SI_PlayerSound,
@@ -213,6 +214,7 @@ TMap<int, FString> HexenMusic;
 
 static const char *SICommandStrings[] =
 {
+    "$include",
 	"$ambient",
 	"$random",
 	"$playersound",
@@ -460,7 +462,7 @@ static FSoundID S_AddSound (const char *logicalname, int lumpnum, FScanner *sc)
 		sfx->bRandomHeader = false;
 		sfx->link = sfxinfo_t::NO_LINK;
 		sfx->bTentative = false;
-		if (sfx->NearLimit == -1) 
+		if (sfx->NearLimit == -1)
 		{
 			sfx->NearLimit = 2;
 			sfx->LimitRange = 256*256;
@@ -485,7 +487,7 @@ static FSoundID S_AddSound (const char *logicalname, int lumpnum, FScanner *sc)
 FSoundID S_AddPlayerSound (const char *pclass, int gender, FSoundID refid, const char *lumpname)
 {
 	int lump=-1;
-	
+
 	if (lumpname)
 	{
 		lump = fileSystem.CheckNumForFullName (lumpname, true, ns_sounds);
@@ -667,6 +669,10 @@ static void S_AddSNDINFO (int lump)
 	TArray<FSoundID> list;
 	int wantassigns = -1;
 
+    // MH 20251115 Note: list is used only by $random and cleared each time,
+    //                   so it does NOT need to be passed to recursive call;
+    //                   ideally it should be scoped to that switch case.
+
 	FScanner sc(lump);
 	skipToEndIf = false;
 
@@ -685,6 +691,18 @@ static void S_AddSNDINFO (int lump)
 		{ // Got a command
 			switch (sc.MatchString (SICommandStrings))
 			{
+            // MH 20251115
+            case SI_Include: {
+    			sc.MustGetString();
+	    		int inclump = fileSystem.CheckNumForFullName(sc.String, true);
+	    		if (inclump < 0)
+	    		{
+	    			sc.ScriptError("include file '%s' not found", sc.String);
+	    		}
+                S_AddSNDINFO (inclump);
+                }
+                break;
+
 			case SI_Ambient: {
 				// $ambient <num> <logical name> [point [atten] | surround | [world]]
 				//			<continuous | random <minsecs> <maxsecs> | periodic <secs>>
@@ -1090,7 +1108,7 @@ static void S_AddSNDINFO (int lump)
 				sc.MustGetString();
 				int lumpnum = mus_cb.FindMusic(sc.String);
 				FScanner::SavedPos save = sc.SavePos();
-				
+
 				sc.SetCMode(true);
 				sc.MustGetString();
 				MidiDeviceSetting devset;
@@ -1577,7 +1595,7 @@ const char *S_GetSoundClass(AActor *pp)
 	{
 		return Skins[player->userinfo.GetSkin()].Name.GetChars();
 	}
-		
+
 	return (!player || player->SoundClass.IsEmpty()) ? defaultsoundclass : player->SoundClass.GetChars();
 }
 
@@ -1593,7 +1611,7 @@ FSoundID S_FindSkinnedSound (AActor *actor, FSoundID refid)
 	const char *pclass;
 	int gender = 0;
 
-	if (actor != nullptr && actor->player != nullptr) 
+	if (actor != nullptr && actor->player != nullptr)
 	{
 		pclass = S_GetSoundClass(actor);
 		gender = actor->player->userinfo.GetGender();
@@ -1654,7 +1672,7 @@ void S_MarkPlayerSounds (AActor *player)
 			PlayerSounds[listidx].MarkUsed();
 		}
 	}
-	
+
 }
 
 //==========================================================================
@@ -1775,7 +1793,7 @@ DEFINE_ACTION_FUNCTION(AAmbientSound, Tick)
 	PARAM_SELF_PROLOGUE(AActor);
 
 	self->Tick();
-	
+
 	if (self->special1 > 0)
 	{
 		if (--self->special1 > 0) return 0;
@@ -1853,7 +1871,7 @@ DEFINE_ACTION_FUNCTION(AAmbientSound, Activate)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_OBJECT(activator, AActor);
-		
+
 	self->Activate(activator);
 	FAmbientSound *amb = Ambients.CheckKey(self->args[0]);
 
@@ -1959,4 +1977,3 @@ DEFINE_ACTION_FUNCTION(DObject, MarkSound)
 	soundEngine->MarkUsed(sound_id);
 	return 0;
 }
-
