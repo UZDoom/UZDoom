@@ -42,7 +42,7 @@ extern int		freelookviewheight;
 // Called whenever the sky changes.
 void InitSkyMap(FLevelLocals *Level);
 void R_InitSkyMap();
-void R_UpdateSky (uint64_t mstime);
+void R_UpdateSky (double ticFrac);
 
 
 #endif //__R_SKY_H__

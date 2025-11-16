@@ -115,7 +115,8 @@ void AttachLight(AActor *self)
 	light->pSpotInnerAngle = &self->AngleVar(NAME_SpotInnerAngle);
 	light->pSpotOuterAngle = &self->AngleVar(NAME_SpotOuterAngle);
 	light->lightDefIntensity = 1.0;
-	light->pPitch = &self->Angles.Pitch;
+	light->Yaw = self->Angles.Yaw;
+	light->Pitch = self->Angles.Pitch;
 	light->pLightFlags = (LightFlags*)&self->IntVar(NAME_lightflags);
 	light->pArgs = self->args;
 	light->specialf1 = DAngle::fromDeg(double(self->SpawnAngle)).Normalized360().Degrees();
@@ -387,6 +388,12 @@ void FDynamicLight::UpdateLocation()
 		DAngle angle = target->Angles.Yaw;
 		double s = angle.Sin();
 		double c = angle.Cos();
+		if (IsSpot())
+		{
+			Yaw = angle;
+			if (!explicitpitch)
+				Pitch = target->Angles.Pitch;
+		}
 
 		Pos = target->Vec3Offset(m_off.X * c + m_off.Y * s, m_off.X * s - m_off.Y * c, m_off.Z + target->GetBobOffset());
 		Sector = target->subsector->sector;	// Get the render sector. target->Sector is the sector according to play logic.

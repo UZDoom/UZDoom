@@ -1208,8 +1208,8 @@ void D_Display ()
 	}
 
 	screen->FrameTime = I_msTimeFS();
-	TexAnim.UpdateAnimations(screen->FrameTime);
-	R_UpdateSky(screen->FrameTime);
+	TexAnim.UpdateAnimations(static_cast<uint64_t>(((primaryLevel->LocalWorldTimer + I_GetTimeFrac()) * 1000.0) / TICRATE));
+	R_UpdateSky(I_GetTimeFrac());
 	screen->BeginFrame();
 	twod->ClearClipRect();
 	if ((gamestate == GS_LEVEL || gamestate == GS_TITLELEVEL) && gametic != 0)

@@ -2083,6 +2083,12 @@ void DAutomap::drawSubsectors()
 			continue;
 		}
 
+		// [XA] don't draw hidden subsectors for am_cheat 4 and up
+		if (am_cheat >= 4 && (sub->render_sector->MoreFlags & SECMF_HIDDEN))
+		{
+			continue;
+		}
+
 		if (am_portaloverlay && sub->render_sector->PortalGroup != MapPortalGroup && sub->render_sector->PortalGroup != 0)
 		{
 			continue;
@@ -2200,7 +2206,8 @@ void DAutomap::drawSubsectors()
 
 		// If this subsector has not actually been seen yet (because you are cheating
 		// to see it on the map), tint and desaturate it.
-		if (!(sub->flags & SSECMF_DRAWN))
+		// [XA] show it at its true color on am_cheat 4 though, since that's the intent of the feature.
+		if (!(sub->flags & SSECMF_DRAWN) && am_cheat < 4)
 		{
 			colormap.LightColor = PalEntry(
 				(colormap.LightColor.r + 255) / 2,

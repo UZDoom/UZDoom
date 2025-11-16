@@ -135,19 +135,21 @@ void R_InitSkyMap()
 //
 //==========================================================================
 
-void R_UpdateSky (uint64_t mstime)
+void R_UpdateSky(double ticFrac)
 {
-	double ms = (double)mstime * FRACUNIT;
 	for(auto Level : AllLevels())
 	{
+		double mstime = ((Level->LocalWorldTimer + ticFrac) * 1000.0) / TICRATE;
+		double ms     = mstime * FRACUNIT;
+
 		// Scroll the sky
 		Level->sky1pos = ms * Level->skyspeed1;
 		Level->sky2pos = ms * Level->skyspeed2;
 
 		// The hardware renderer uses a different value range and clamps it to a single rotation
-		Level->hw_sky1pos = (float)(fmod((double(mstime) * Level->skyspeed1), 1024.) * (90. / 256.));
-		Level->hw_sky2pos = (float)(fmod((double(mstime) * Level->skyspeed2), 1024.) * (90. / 256.));
-		Level->hw_skymistpos = (float)(fmod((double(mstime) * Level->skymistspeed), 1024.) * (90. / 256.));
+		Level->hw_sky1pos = (float)(fmod((mstime * Level->skyspeed1), 1024.) * (90. / 256.));
+		Level->hw_sky2pos = (float)(fmod((mstime * Level->skyspeed2), 1024.) * (90. / 256.));
+		Level->hw_skymistpos = (float)(fmod((mstime * Level->skymistspeed), 1024.) * (90. / 256.));
 	}
 }
 

@@ -59,6 +59,7 @@
 #include "v_draw.h"
 #include "v_video.h"
 #include "vm.h"
+#include "a_dynlight.h"
 
 const float MY_SQRT2    = float(1.41421356237309504880); // sqrt(2)
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
@@ -1095,6 +1096,17 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 	}
 
 	R_InterpolateView(viewPoint, player, viewPoint.TicFrac, iView);
+
+	// Update any spotlights to offset the camera's actual angle.
+	for (auto l : viewPoint.camera->AttachedLights)
+	{
+		if (l->IsSpot() && l->IsActive())
+		{
+			l->Yaw = viewPoint.Angles.Yaw;
+			if (!l->explicitpitch)
+				l->Pitch = viewPoint.Angles.Pitch;
+		}
+	}
 
 	viewPoint.SetViewAngle(viewWindow);
 

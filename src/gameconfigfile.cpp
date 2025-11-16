@@ -94,22 +94,79 @@ FARG(config, "Configuration", "Specifies an alternative configuration file to us
 EXTERN_CVAR(Int, in_mouse)
 #endif
 
-FGameConfigFile::FGameConfigFile ()
+static TArray<FString> DefaultSearchPaths;
+
+static void CollectDefaultSearchPaths()
 {
+	if (DefaultSearchPaths.Size() > 0)
+	{
+		// already done
+		return;
+	}
+
 #ifdef __APPLE__
 	FString user_docs, user_app_support, local_app_support;
 	M_GetMacSearchDirectories(user_docs, user_app_support, local_app_support);
 #endif
 
 #if defined(__HAIKU__) || ( defined(__unix__) && !defined(__APPLE__) )
+
 #   ifdef __HAIKU__
 #       define DEFAULT_SHARE_DIR "/boot/system/data"
 #   else
 #       define DEFAULT_SHARE_DIR "/usr/local/share"
 #   endif
+
 	bool shareDirChanged = 0 != strcmp(SHARE_DIR, DEFAULT_SHARE_DIR);
 	FString dataDir = GetDataPath();
+
 #endif
+
+#ifdef __APPLE__
+
+	DefaultSearchPaths.Push(user_docs);
+	DefaultSearchPaths.Push(user_app_support);
+	DefaultSearchPaths.Push(local_app_support);
+	DefaultSearchPaths.Push("$PROGDIR");
+
+#elif !defined(__unix__) && !defined(__HAIKU__)
+
+	DefaultSearchPaths.Push("$HOME");
+	DefaultSearchPaths.Push("$PROGDIR");
+
+#else
+
+	static FString GameDirs[] = {
+		"/games/" GAMENAMELOWERCASE,
+		"/games/doom",
+		"/doom"
+	};
+
+	for (unsigned int i = 0; i < std::size(GameDirs); i++)
+	{
+		DefaultSearchPaths.Push(dataDir + GameDirs[i]);
+		DefaultSearchPaths.Push(SHARE_DIR + GameDirs[i]);
+
+		if (shareDirChanged)
+		{
+			DefaultSearchPaths.Push(DEFAULT_SHARE_DIR + GameDirs[i]);
+		}
+
+#ifdef __HAIKU__
+		DefaultSearchPaths.Push("$HOME/config/data" + GameDirs[i]);
+#else
+		DefaultSearchPaths.Push("/usr/share" + GameDirs[i]);
+#endif
+	}
+#endif
+
+#ifdef DEFAULT_SHARE_DIR
+#   undef DEFAULT_SHARE_DIR
+#endif
+}
+
+FGameConfigFile::FGameConfigFile ()
+{
 
 	FString pathname;
 
@@ -125,43 +182,60 @@ FGameConfigFile::FGameConfigFile ()
 	pathname = GetConfigPath (false);
 	ChangePathName (pathname.GetChars());
 
+	CollectDefaultSearchPaths();
+
+	// LASTRUN < 227: convert GZDoom ini's by ensuring all
+	// system paths have the corresponding UZDoom version
+	// already present
+	double last = 0;
+	if (SetSection ("LastRun"))
+	{
+		const char *lastver = GetValueForKey ("Version");
+		if (lastver != NULL)
+		{
+			last = atof(lastver);
+		}
+	}
+
+	if (last < 227)
+	{
+		if (SetSection("IWADSearch.Directories"))
+		{
+			for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+			{
+				EnsureValueForKey ("Path", DefaultSearchPaths[i].GetChars());
+			}
+		}
+
+		if (SetSection("FileSearch.Directories"))
+		{
+			for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+			{
+				EnsureValueForKey ("Path", DefaultSearchPaths[i].GetChars());
+			}
+		}
+
+		if (SetSection("SoundfontSearch.Directories"))
+		{
+			for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+			{
+				EnsureValueForKey ("Path", (DefaultSearchPaths[i] + "/soundfonts").GetChars());
+				EnsureValueForKey ("Path", (DefaultSearchPaths[i] + "/fm_banks").GetChars());
+			}
+		}
+	}
+
 	// Set default IWAD search paths if none present
 	if (!SetSection ("IWADSearch.Directories"))
 	{
 		SetSection ("IWADSearch.Directories", true);
 		SetValueForKey ("Path", ".", true);
 		SetValueForKey ("Path", "$DOOMWADDIR", true);
-#ifdef __APPLE__
-		SetValueForKey ("Path", user_docs.GetChars(), true);
-		SetValueForKey ("Path", user_app_support.GetChars(), true);
-		SetValueForKey ("Path", "$PROGDIR", true);
-		SetValueForKey ("Path", local_app_support.GetChars(), true);
-#elif !defined(__unix__) && !defined(__HAIKU__)
-		SetValueForKey ("Path", "$HOME", true);
-		SetValueForKey ("Path", "$PROGDIR", true);
-#else
-		SetValueForKey ("Path", dataDir + "/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", dataDir + "/games/doom", true);
-		SetValueForKey ("Path", dataDir + "/doom", true);
-		SetValueForKey ("Path", SHARE_DIR "/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", SHARE_DIR "/games/doom", true);
-		SetValueForKey ("Path", SHARE_DIR "/doom", true);
-		if (shareDirChanged)
+
+		for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
 		{
-			SetValueForKey ("Path", DEFAULT_SHARE_DIR "/games/" GAMENAMELOWERCASE, true);
-			SetValueForKey ("Path", DEFAULT_SHARE_DIR "/games/doom", true);
-			SetValueForKey ("Path", DEFAULT_SHARE_DIR "/doom", true);
+			SetValueForKey ("Path", DefaultSearchPaths[i].GetChars(), true);
 		}
-	#ifdef __HAIKU__
-		SetValueForKey ("Path", "$HOME/config/data/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", "$HOME/config/data/games/doom", true);
-		SetValueForKey ("Path", "$HOME/config/data/doom", true);
-	#else
-		SetValueForKey ("Path", "/usr/share/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", "/usr/share/games/doom", true);
-		SetValueForKey ("Path", "/usr/share/doom", true);
-	#endif
-#endif
 	}
 
 	// Set default search paths if none present
@@ -169,95 +243,23 @@ FGameConfigFile::FGameConfigFile ()
 	{
 		SetSection ("FileSearch.Directories", true);
 		SetValueForKey ("Path", "$DOOMWADDIR", true);
-#ifdef __APPLE__
-		SetValueForKey ("Path", user_docs.GetChars(), true);
-		SetValueForKey ("Path", user_app_support.GetChars(), true);
-		SetValueForKey ("Path", "$PROGDIR", true);
-		SetValueForKey ("Path", local_app_support.GetChars(), true);
-#elif !defined(__unix__) && !defined(__HAIKU__)
-		SetValueForKey ("Path", "$PROGDIR", true);
-#else
-		SetValueForKey ("Path", dataDir + "/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", dataDir + "/games/doom", true);
-		SetValueForKey ("Path", dataDir + "/doom", true);
-		SetValueForKey ("Path", SHARE_DIR "/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", SHARE_DIR "/games/doom", true);
-		SetValueForKey ("Path", SHARE_DIR "/doom", true);
-		if (shareDirChanged)
+
+		for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
 		{
-			SetValueForKey ("Path", DEFAULT_SHARE_DIR "/games/" GAMENAMELOWERCASE, true);
-			SetValueForKey ("Path", DEFAULT_SHARE_DIR "/games/doom", true);
-			SetValueForKey ("Path", DEFAULT_SHARE_DIR "/doom", true);
+			SetValueForKey ("Path", DefaultSearchPaths[i].GetChars(), true);
 		}
-	#ifdef __HAIKU__
-		SetValueForKey ("Path", "$HOME/config/data/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", "$HOME/config/data/games/doom", true);
-		SetValueForKey ("Path", "$HOME/config/data/doom", true);
-	#else
-		SetValueForKey ("Path", "/usr/share/games/" GAMENAMELOWERCASE, true);
-		SetValueForKey ("Path", "/usr/share/games/doom", true);
-		SetValueForKey ("Path", "/usr/share/doom", true);
-	#endif
-#endif
 	}
 
 	// Set default search paths if none present
 	if (!SetSection("SoundfontSearch.Directories"))
 	{
 		SetSection("SoundfontSearch.Directories", true);
-#ifdef __APPLE__
-		SetValueForKey("Path", (user_docs + "/soundfonts").GetChars(), true);
-		SetValueForKey("Path", (user_docs + "/fm_banks").GetChars(), true);
-		SetValueForKey("Path", (user_app_support + "/soundfonts").GetChars(), true);
-		SetValueForKey("Path", (user_app_support + "/fm_banks").GetChars(), true);
-		SetValueForKey("Path", "$PROGDIR/soundfonts", true);
-		SetValueForKey("Path", "$PROGDIR/fm_banks", true);
-		SetValueForKey("Path", (local_app_support + "/soundfonts").GetChars(), true);
-		SetValueForKey("Path", (local_app_support + "/fm_banks").GetChars(), true);
-#elif !defined(__unix__) && !defined(__HAIKU__)
-		SetValueForKey("Path", "$PROGDIR/soundfonts", true);
-		SetValueForKey("Path", "$PROGDIR/fm_banks", true);
-#else
-		SetValueForKey ("Path", dataDir + "/games/" GAMENAMELOWERCASE "/soundfonts", true);
-		SetValueForKey ("Path", dataDir + "/games/" GAMENAMELOWERCASE "/fm_banks", true);
-		SetValueForKey ("Path", dataDir + "/games/doom/soundfonts", true);
-		SetValueForKey ("Path", dataDir + "/games/doom/fm_banks", true);
-		SetValueForKey ("Path", dataDir + "/doom/soundfonts", true);
-		SetValueForKey ("Path", dataDir + "/doom/fm_banks", true);
-		SetValueForKey("Path", SHARE_DIR "/games/" GAMENAMELOWERCASE "/soundfonts", true);
-		SetValueForKey("Path", SHARE_DIR "/games/" GAMENAMELOWERCASE "/fm_banks", true);
-		SetValueForKey("Path", SHARE_DIR "/games/doom/soundfonts", true);
-		SetValueForKey("Path", SHARE_DIR "/games/doom/fm_banks", true);
-		SetValueForKey("Path", SHARE_DIR "/doom/soundfonts", true);
-		SetValueForKey("Path", SHARE_DIR "/doom/fm_banks", true);
-		if (shareDirChanged)
+
+		for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
 		{
-			SetValueForKey("Path", DEFAULT_SHARE_DIR "/games/" GAMENAMELOWERCASE "/soundfonts", true);
-			SetValueForKey("Path", DEFAULT_SHARE_DIR "/games/" GAMENAMELOWERCASE "/fm_banks", true);
-			SetValueForKey("Path", DEFAULT_SHARE_DIR "/games/doom/soundfonts", true);
-			SetValueForKey("Path", DEFAULT_SHARE_DIR "/games/doom/fm_banks", true);
-			SetValueForKey("Path", DEFAULT_SHARE_DIR "/doom/soundfonts", true);
-			SetValueForKey("Path", DEFAULT_SHARE_DIR "/doom/fm_banks", true);
+			SetValueForKey ("Path", (DefaultSearchPaths[i] + "/soundfonts").GetChars(), true);
+			SetValueForKey ("Path", (DefaultSearchPaths[i] + "/fm_banks").GetChars(), true);
 		}
-	#ifdef __HAIKU__
-		SetValueForKey ("Path", "$HOME/config/data/games/" GAMENAMELOWERCASE "/soundfonts", true);
-		SetValueForKey ("Path", "$HOME/config/data/games/" GAMENAMELOWERCASE "/fm_banks", true);
-		SetValueForKey ("Path", "$HOME/config/data/games/doom/soundfonts", true);
-		SetValueForKey ("Path", "$HOME/config/data/games/doom/fm_banks", true);
-		SetValueForKey ("Path", "$HOME/config/data/doom/soundfonts", true);
-		SetValueForKey ("Path", "$HOME/config/data/doom/fm_banks", true);
-	#else
-		SetValueForKey("Path", "/usr/share/games/" GAMENAMELOWERCASE "/soundfonts", true);
-		SetValueForKey("Path", "/usr/share/games/" GAMENAMELOWERCASE "/fm_banks", true);
-		SetValueForKey("Path", "/usr/share/games/doom/soundfonts", true);
-		SetValueForKey("Path", "/usr/share/games/doom/fm_banks", true);
-		SetValueForKey("Path", "/usr/share/doom/soundfonts", true);
-		SetValueForKey("Path", "/usr/share/doom/fm_banks", true);
-		SetValueForKey("Path", "$HOME/.local/share/soundfonts", true);
-		SetValueForKey("Path", "/usr/local/share/soundfonts", true);
-		SetValueForKey("Path", "/usr/share/soundfonts", true);
-	#endif
-#endif
 	}
 
 	// Add some self-documentation.
@@ -271,10 +273,6 @@ FGameConfigFile::FGameConfigFile ()
 	SetSectionNote("SoundfontSearch.Directories",
 		"# These are the directories to search for soundfonts that let listed in the menu.\n"
 		"# Layout is the same as for IWADSearch.Directories\n");
-
-#ifdef DEFAULT_SHARE_DIR
-#   undef DEFAULT_SHARE_DIR
-#endif
 }
 
 FGameConfigFile::~FGameConfigFile ()

@@ -134,8 +134,8 @@ void AddLightToList(FDynLightData &dld, int group, FDynamicLight * light, bool f
 		spotInnerAngle = (float)light->pSpotInnerAngle->Cos();
 		spotOuterAngle = (float)light->pSpotOuterAngle->Cos();
 
-		DAngle negPitch = -*light->pPitch;
-		DAngle Angle = light->target->Angles.Yaw;
+		DAngle negPitch = -light->Pitch;
+		DAngle Angle = light->Yaw;
 		double xzLen = negPitch.Cos();
 		spotDirX = float(-Angle.Cos() * xzLen);
 		spotDirY = float(-negPitch.Sin());

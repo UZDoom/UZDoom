@@ -400,7 +400,7 @@ void P_SpawnParticle(FLevelLocals *Level, const DVector3 &pos, const DVector3 &v
 		particle->flags = flags;
 		if(flags & SPF_LOCAL_ANIM)
 		{
-			TexAnim.InitStandaloneAnimation(particle->animData, texture, Level->maptime);
+			TexAnim.InitStandaloneAnimation(particle->animData, texture, Level->LocalWorldTimer);
 		}
 	}
 }
@@ -1156,7 +1156,7 @@ void DVisualThinker::UpdateSpriteInfo()
 	if ((PT.flags & SPF_LOCAL_ANIM) && PT.texture != AnimatedTexture)
 	{
 		AnimatedTexture = PT.texture;
-		TexAnim.InitStandaloneAnimation(PT.animData, PT.texture, Level->maptime);
+		TexAnim.InitStandaloneAnimation(PT.animData, PT.texture, Level->LocalWorldTimer);
 	}
 }
 

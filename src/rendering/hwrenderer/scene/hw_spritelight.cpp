@@ -168,8 +168,8 @@ void HWDrawInfo::GetDynSpriteLight(AActor *self, float x, float y, float z, FSec
 					if (light->IsSpot())
 					{
 						L *= -1.0f / dist;
-						DAngle negPitch = -*light->pPitch;
-						DAngle Angle = light->target->Angles.Yaw;
+						DAngle negPitch = -light->Pitch;
+						DAngle Angle = light->Yaw;
 						double xyLen = negPitch.Cos();
 						double spotDirX = -Angle.Cos() * xyLen;
 						double spotDirY = -Angle.Sin() * xyLen;

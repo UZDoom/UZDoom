@@ -71,6 +71,12 @@ public:
 		SetValueForKey(key, value.GetChars(), duplicates);
 	}
 
+	void EnsureValueForKey (const char *key, const char *value);
+	void EnsureValueForKey(const char* key, const FString& value)
+	{
+		EnsureValueForKey(key, value.GetChars());
+	}
+
 	const char *GetPathName () const { return PathName.GetChars(); }
 	void ChangePathName (const char *path);
 

@@ -493,6 +493,37 @@ void FConfigFile::SetValueForKey (const char *key, const char *value, bool dupli
 
 //====================================================================
 //
+// FConfigFile :: EnsureValueForKey
+//
+// Creates a duplicated key, but only if the value is not present
+// across any of the other duplicated keys.
+//
+//====================================================================
+
+void FConfigFile::EnsureValueForKey (const char *key, const char *value)
+{
+	if (CurrentSection != NULL)
+	{
+		FConfigEntry *probe = CurrentSection->RootEntry;
+
+		while (probe != NULL)
+		{
+			if (stricmp(probe->Key, key) == 0
+				&& stricmp(probe->Value, value) == 0)
+			{
+				// Already exists exactly, don't duplicate
+				return;
+			}
+
+			probe = probe->Next;
+		}
+
+		NewConfigEntry (CurrentSection, key, value);
+	}
+}
+
+//====================================================================
+//
 // FConfigFile :: FindSection
 //
 //====================================================================

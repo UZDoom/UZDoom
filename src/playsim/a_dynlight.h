@@ -263,7 +263,6 @@ public:
 	// To avoid having to copy these around every tic, these are pointers to the source data.
 	const DAngle *pSpotInnerAngle;
 	const DAngle *pSpotOuterAngle;
-	const DAngle *pPitch;	// This is to handle pitch overrides through GLDEFS, it can either point to the target's pitch or the light definition.
 	const int *pArgs;
 	const LightFlags *pLightFlags;
 
@@ -272,6 +271,7 @@ public:
 	sector_t *Sector;
 	FLevelLocals *Level;
 	TObjPtr<AActor *> target;
+	DAngle            Yaw, Pitch;
 
 	float radius;			// The maximum size the light can be with its current settings.
 	float m_currentRadius;	// The current light size.

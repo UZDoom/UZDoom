@@ -133,8 +133,10 @@ void FLightDefaults::ApplyProperties(FDynamicLight * light) const
 	{
 		light->pSpotInnerAngle = &m_spotInnerAngle;
 		light->pSpotOuterAngle = &m_spotOuterAngle;
-		if (m_explicitPitch) light->pPitch = &m_pitch;
-		else light->pPitch = &light->target->Angles.Pitch;
+		light->explicitpitch   = m_explicitPitch;
+		light->Yaw             = light->target->Angles.Yaw;
+		if (m_explicitPitch) light->Pitch = m_pitch;
+		else light->Pitch = light->target->Angles.Pitch;
 	}
 	light->m_tickCount = 0;
 	if (m_type == PulseLight)
