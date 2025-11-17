@@ -48,7 +48,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) 
 
 find_package(Threads REQUIRED)
-find_package(Python REQUIRED)
+find_package(Python 3.6 REQUIRED)
 
 list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
 include( FindPackageHandleStandardArgs )
