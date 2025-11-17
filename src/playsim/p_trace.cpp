@@ -323,9 +323,9 @@ void FTraceInfo::Setup3DFloors()
 							{
 								Results->HitType = TRACE_HitFloor;
 								Results->HitVector = Vec;
-								TraceCallback(*Results, TraceCallbackData);
-								inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
+								Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
 								in3DLiquid = rover;
+								TraceCallback(*Results, TraceCallbackData);
 								Results->Crossed3DWater = NULL;
 								Results->HitType = TRACE_HitNone;
 							}
@@ -346,9 +346,9 @@ void FTraceInfo::Setup3DFloors()
 							{
 								Results->HitType = TRACE_HitCeiling;
 								Results->HitVector = Vec;
-								TraceCallback(*Results, TraceCallbackData);
-								inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
+								Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
 								in3DLiquid = rover;
+								TraceCallback(*Results, TraceCallbackData);
 								Results->Crossed3DWater = NULL;
 								Results->HitType = TRACE_HitNone;
 							}
@@ -665,6 +665,7 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 						{
 							Results->Crossed3DWater = rover;
 							Results->Crossed3DWaterPos = hit;
+							Results->entering3DLiquid = true;
 						}
 						if ((TraceFlags & TRACE_Impact) && in->d.line->special)
 						{
@@ -683,6 +684,7 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 			Results->ffloor = in3DLiquid;
 			Results->Crossed3DWater = in3DLiquid;
 			Results->Crossed3DWaterPos = hit;
+			Results->entering3DLiquid = false;
 			if ((TraceFlags & TRACE_Impact) && in->d.line->special)
 			{
 				P_ActivateLine(in->d.line, IgnoreThis, lineside, SPAC_Impact);
@@ -979,9 +981,9 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 								{
 									Results->HitType = TRACE_HitFloor;
 									Results->HitVector = Vec;
-									TraceCallback(*Results, TraceCallbackData);
-									inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
+									Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
 									in3DLiquid = rover;
+									TraceCallback(*Results, TraceCallbackData);
 									Results->Crossed3DWater = NULL;
 									Results->HitType = TRACE_HitNone;
 								}
@@ -1003,9 +1005,9 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 								{
 									Results->HitType = TRACE_HitCeiling;
 									Results->HitVector = Vec;
-									TraceCallback(*Results, TraceCallbackData);
-									inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
+									Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
 									in3DLiquid = rover;
+									TraceCallback(*Results, TraceCallbackData);
 									Results->Crossed3DWater = NULL;
 									Results->HitType = TRACE_HitNone;
 								}
@@ -1108,9 +1110,9 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 											{
 												Results->HitType = TRACE_HitFloor;
 												Results->HitVector = Vec;
-												TraceCallback(*Results, TraceCallbackData);
-												inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
+												Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
 												in3DLiquid = rover;
+												TraceCallback(*Results, TraceCallbackData);
 												Results->Crossed3DWater = NULL;
 												Results->HitType = TRACE_HitNone;
 											}
@@ -1132,9 +1134,9 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 											{
 												Results->HitType = TRACE_HitCeiling;
 												Results->HitVector = Vec;
-												TraceCallback(*Results, TraceCallbackData);
-												inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
+												Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
 												in3DLiquid = rover;
+												TraceCallback(*Results, TraceCallbackData);
 												Results->Crossed3DWater = NULL;
 												Results->HitType = TRACE_HitNone;
 											}
@@ -1199,9 +1201,9 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 											{
 												Results->HitType = TRACE_HitFloor;
 												Results->HitVector = Vec;
-												TraceCallback(*Results, TraceCallbackData);
-												inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
+												Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->top.plane->Normal()) > 0.0;
 												in3DLiquid = rover;
+												TraceCallback(*Results, TraceCallbackData);
 												Results->Crossed3DWater = NULL;
 												Results->HitType = TRACE_HitNone;
 											}
@@ -1223,9 +1225,9 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 											{
 												Results->HitType = TRACE_HitCeiling;
 												Results->HitVector = Vec;
-												TraceCallback(*Results, TraceCallbackData);
-												inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
+												Results->entering3DLiquid = inside3DLiquid = Vec.dot(rover->bottom.plane->Normal()) > 0.0;
 												in3DLiquid = rover;
+												TraceCallback(*Results, TraceCallbackData);
 												Results->Crossed3DWater = NULL;
 												Results->HitType = TRACE_HitNone;
 											}
@@ -1442,6 +1444,7 @@ DEFINE_FIELD_NAMED_X(TraceResults, FTraceResults, Line, HitLine)
 DEFINE_FIELD_X(TraceResults, FTraceResults, Side)
 DEFINE_FIELD_X(TraceResults, FTraceResults, Tier)
 DEFINE_FIELD_X(TraceResults, FTraceResults, unlinked)
+DEFINE_FIELD_X(TraceResults, FTraceResults, entering3DLiquid)
 DEFINE_FIELD_X(TraceResults, FTraceResults, HitType)
 DEFINE_FIELD_X(TraceResults, FTraceResults, ffloor)
 DEFINE_FIELD_X(TraceResults, FTraceResults, CrossedWater)
