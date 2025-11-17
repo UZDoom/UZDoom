@@ -90,6 +90,7 @@ enum
 	TRACE_ReportPortals = 0x0010,	// Report any portal crossing to the TraceCallback
 	TRACE_3DCallback	= 0x0020,	// [ZZ] use TraceCallback to determine whether we need to go through a line to do 3D floor check, or not. without this, only line flag mask is used
 	TRACE_HitSky		= 0x0040,	// Hitting the sky returns TRACE_HasHitSky
+	TRACE_3DLiquidCallback	= 0x0080,	// Hitting any surface of 3D-floor that is liquid (either from outside or inside) returns TRACE_HitWall/TRACE_HitFloor/TRACE_HitCeiling, Crossed3DWater and Crossed3DWaterPos get populated and the TraceCallback is called if present
 };
 
 // return values from callback
