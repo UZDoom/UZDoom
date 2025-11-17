@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:51+0000\n"
+"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: fr\n"
 
 msgid "PRESSKEY"
@@ -3010,6 +3017,7 @@ msgstr "Sorcier"
 msgid "MNU_WARLOCK"
 msgstr "Mage de Guerre"
 
+#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Archimage"
 
@@ -4760,7 +4768,7 @@ msgid "SCALEMNU_INTER"
 msgstr "Fond d'écran intermission"
 
 msgid "SCALEMNU_BORDER"
-msgstr "Bordure  d'écran"
+msgstr "Bordure d'écran"
 
 msgid "SCALEMNU_FACTOR"
 msgstr "Facteur de mise à l'échelle"

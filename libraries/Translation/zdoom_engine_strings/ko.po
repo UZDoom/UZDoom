@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: ko\n"
 
 msgid "PRESSKEY"
@@ -2942,6 +2949,7 @@ msgstr "마법사"
 msgid "MNU_WARLOCK"
 msgstr "전투술사"
 
+#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "대마법사"
 
@@ -4597,7 +4605,8 @@ msgid "TXT_OTHERENGINESG"
 msgstr "저장된 게임 '%s'은(는) 다른 Z둠 기반 엔진입니다:"
 
 msgid "TXT_TOOOLDSG"
-msgstr "저장된 게임'%s'은(는)  구 버전입니다: %d (%e 이 지원되는 버전 중 가장 오래된 버전)"
+msgstr "저장된 게임'%s'은(는) 구 버전입니다: %d (%e 이 지원되는 버전 중 가장 오래된 "
+"버전)"
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4605,7 +4614,8 @@ msgstr "저장된 게임'%s'은(는)  구 버전입니다: %d (%e 이 지원되�
 # 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
-msgstr "저장된 게임'%s'은(는)  새 버전입니다: %d (%e 이 지원되는 버전 중 가장 최근 버전)"
+msgstr "저장된 게임'%s'은(는) 새 버전입니다: %d (%e 이 지원되는 버전 중 가장 최근 버"
+"전)"
 
 msgid "TXT_NOMAPSG"
 msgstr "저장된 게임 '%s'에 현재 맵이 없습니다."

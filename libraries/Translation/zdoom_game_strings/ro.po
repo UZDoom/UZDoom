@@ -2,10 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: ro\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "TXT_D1E1"
 msgstr "Îngropat printre Cadavre"
@@ -3772,7 +3780,7 @@ msgstr "Continuă lupta, vom triumfa. Ziua asta ne aparține!"
 # MAP08: Northeast room.
 msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
 msgstr ""
-"Ai omorât toți gardienii.  Nu mă rănii. I-am spus că e o idee proastă. "
+"Ai omorât toți gardienii. Nu mă rănii. I-am spus că e o idee proastă. "
 "Adevăratul Programator e înăuntru. Ia cheia asta."
 
 # 〃
@@ -3927,7 +3935,7 @@ msgstr "Nu, încă lucrez la asta."
 msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
 msgstr ""
 "Ce pot face pentru tine acum? Feris decriptează niște fișiere extrem de "
-"complexe, dar merită.  Deja avem niște informații care le voi putea aplica "
+"complexe, dar merită. Deja avem niște informații care le voi putea aplica "
 "urmatoarei versiuni ale implantului tău pentru rezistență."
 
 # 〃
@@ -4427,8 +4435,8 @@ msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
 msgstr ""
 "Simt un fragment care rezonează în tine. Al doilea e în inima turnului "
 "purpuriu, din obsidian. Acolo îl vei înfrunta pe Episcop, care e conștient, "
-"și în așteptare.  Îl vei găsi urmându-i simbolul puterii. Du asta la "
-"stăpânul cheilor. Întoarce-te după ce ai înfrânt fiara."
+"și în așteptare. Îl vei găsi urmându-i simbolul puterii. Du asta la stăpânul "
+"cheilor. Întoarce-te după ce ai înfrânt fiara."
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
@@ -5709,9 +5717,9 @@ msgstr "Valea!"
 # MAP34: Barracks.
 msgid "TXT_DLG_SCRIPT34_D0_WHATA"
 msgstr ""
-"Ce loc perfect pentru noi, exact sub vechea hală a orașului.  Oridnul crede "
+"Ce loc perfect pentru noi, exact sub vechea hală a orașului. Oridnul crede "
 "că ne-a ras pe toți, dar a fost doar o amintire pentru ceea ce se poate "
-"întâmpla când devi neglijent."
+"întâmpla când devi neglijent. "
 
 # MAP34
 msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
@@ -6370,7 +6378,7 @@ msgstr ""
 # MAP11: Entrance to cave.
 msgid "TXT_ILOG50"
 msgstr ""
-"Găsește Oracolul și întreabă de celelalte piese ale Sigiliului. Aici este.  "
+"Găsește Oracolul și întreabă de celelalte piese ale Sigiliului. Aici este. "
 "Înregistrez totul. Nu e vorba că nu am încredere că vei supraviețui, dar nu "
 "putem lăsa Ordinul ca ia Sigiliul."
 

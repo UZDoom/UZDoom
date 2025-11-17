@@ -2,209 +2,213 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-11-15 23:29+0000\n"
+"Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "TXT_D1E1"
-msgstr ""
+msgstr "По коліна в трупах"
 
 msgid "TXT_D1E2"
-msgstr ""
+msgstr "Пекельні береги"
 
 msgid "TXT_D1E3"
-msgstr ""
+msgstr "Інферно"
 
 # The episode and levels' names in E4 are taken from the Bible.
 # 
 # Proverbs 5:11
 msgid "TXT_D1E4"
-msgstr ""
+msgstr "Плоть твоя зіскніта"
 
 msgid "TXT_D2E1"
-msgstr ""
+msgstr "Пекло на Землі"
 
 # References "No rest for the wicked" in Isaiah 48:22
 msgid "TXT_D2E2"
-msgstr ""
+msgstr "Живим спокою не буде"
 
 msgid "TXT_PLUT_EP"
-msgstr ""
+msgstr "Експеримент \"Плутонія\""
 
 msgid "TXT_TNT_EP"
-msgstr ""
+msgstr "TNT: Лихолюція"
 
 msgid "TXT_CHEX_EP"
-msgstr ""
+msgstr "Chex Квест"
 
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: Ангар"
 
 msgid "HUSTR_E1M2"
-msgstr ""
+msgstr "E1M2: Атомна електростанція"
 
 msgid "HUSTR_E1M3"
-msgstr ""
+msgstr "E1M3: Токсинопереробний комплекс"
 
 msgid "HUSTR_E1M4"
-msgstr ""
+msgstr "E1M4: Пункт керування"
 
 msgid "HUSTR_E1M5"
-msgstr ""
+msgstr "E1M5: Лабораторія Фобосу"
 
 msgid "HUSTR_E1M6"
-msgstr ""
+msgstr "E1M6: Центр обробки даних"
 
 msgid "HUSTR_E1M7"
-msgstr ""
+msgstr "E1M7: Комп'ютерна станція"
 
 msgid "HUSTR_E1M8"
-msgstr ""
+msgstr "E1M8: Аномалія Фобосу"
 
 msgid "HUSTR_E1M9"
-msgstr ""
+msgstr "E1M9: Військова база"
 
 msgid "HUSTR_E1M10"
-msgstr ""
+msgstr "E1M10: Каналізації"
 
 msgid "HUSTR_E2M1"
-msgstr ""
+msgstr "E2M1: Аномалія Деймосу"
 
 msgid "HUSTR_E2M2"
-msgstr ""
+msgstr "E2M2: Зона стримування"
 
 msgid "HUSTR_E2M3"
-msgstr ""
+msgstr "E2M3: Очисний комплекс"
 
 msgid "HUSTR_E2M4"
-msgstr ""
+msgstr "E2M4: Лабораторія Деймосу"
 
 msgid "HUSTR_E2M5"
-msgstr ""
+msgstr "E2M5: Командний центр"
 
 msgid "HUSTR_E2M6"
-msgstr ""
+msgstr "E2M6: Зали проклятих"
 
 msgid "HUSTR_E2M7"
-msgstr ""
+msgstr "E2M7: Нерестовища"
 
 msgid "HUSTR_E2M8"
-msgstr ""
+msgstr "E2M8: Вавилонська Вежа"
 
 msgid "HUSTR_E2M9"
-msgstr ""
+msgstr "E2M9: Фортеця Таємниці"
 
 msgid "HUSTR_E3M1"
-msgstr ""
+msgstr "E3M1: Пекельний замок"
 
 msgid "HUSTR_E3M2"
-msgstr ""
+msgstr "E3M2: Болото розпачу"
 
 msgid "HUSTR_E3M3"
-msgstr ""
+msgstr "E3M3: Пандемоніум"
 
 msgid "HUSTR_E3M4"
-msgstr ""
+msgstr "E3M4: Оселя страждань"
 
 msgid "HUSTR_E3M5"
-msgstr ""
+msgstr "E3M5: Нечестивий собор"
 
 # Volcano in Antarctica
 msgid "HUSTR_E3M6"
-msgstr ""
+msgstr "E3M6: Гора Еребус"
 
 msgid "HUSTR_E3M7"
-msgstr ""
+msgstr "E3M7: Чистилище"
 
 # Based on the City of Dis, located on the sixth circle of Hell, according to
 # Dante Alighieri's The Divine Comedy
 msgid "HUSTR_E3M8"
-msgstr ""
+msgstr "E3M8: Діс"
 
 msgid "HUSTR_E3M9"
-msgstr ""
+msgstr "E3M9: Нори"
 
 # Proverbs 15:24
 msgid "HUSTR_E4M1"
-msgstr ""
+msgstr "E4M1: Шеол вдолині"
 
 # Psalm 139:22
 msgid "HUSTR_E4M2"
-msgstr ""
+msgstr "E4M2: Досконала ненависть"
 
 # Matthew 13:49
 msgid "HUSTR_E4M3"
-msgstr ""
+msgstr "E4M3: Відділяючи злих"
 
 # James 3:8
 msgid "HUSTR_E4M4"
-msgstr ""
+msgstr "E4M4: Невгамовне зло"
 
 # Luke 16:30
 msgid "HUSTR_E4M5"
-msgstr ""
+msgstr "E4M5: Вони покаються"
 
 # Psalm 139:20
 msgid "HUSTR_E4M6"
-msgstr ""
+msgstr "E4M6: Проти тебе нечестиво"
 
 # Revelation 6:8
 msgid "HUSTR_E4M7"
-msgstr ""
+msgstr "E4M7: І Пекло слідом"
 
 # Proverbs 5:9
 msgid "HUSTR_E4M8"
-msgstr ""
+msgstr "E4M8: До мучителя"
 
 msgid "HUSTR_E4M9"
-msgstr ""
+msgstr "E4M9: Страх"
 
 # Note that the "LEVEL" part of the string will be stripped so it shouldn't be
 # translated
 msgid "HUSTR_1"
-msgstr ""
+msgstr "Рівень 1: Вхід"
 
 msgid "HUSTR_2"
-msgstr ""
+msgstr "Рівень 2: Підземні холи"
 
 # “a form of punishment in which a person is forced to run between two lines
 # of men facing each other and armed with clubs or whips to beat the victim”
 msgid "HUSTR_3"
-msgstr ""
+msgstr "Рівень 3: Прорив"
 
 msgid "HUSTR_4"
-msgstr ""
+msgstr "Рівень 4: Фокусування"
 
 msgid "HUSTR_5"
-msgstr ""
+msgstr "Рівень 5: Тунелі для відходів"
 
 msgid "HUSTR_6"
-msgstr ""
+msgstr "Рівень 6: Прес"
 
 msgid "HUSTR_7"
-msgstr ""
+msgstr "Рівень 7: До смерті просто"
 
 msgid "HUSTR_8"
-msgstr ""
+msgstr "Рівень 8: Хитрощі та пастки"
 
 msgid "HUSTR_9"
-msgstr ""
+msgstr "Рівень 9: Яма"
 
 msgid "HUSTR_10"
-msgstr ""
+msgstr "Рівень 10: База дозаправки"
 
 # Alternative title:
 # Circle of Death 
 msgid "HUSTR_11"
-msgstr ""
+msgstr "Рівень 11: 'O' руйнування!"
 
 msgid "HUSTR_12"
-msgstr ""
+msgstr "Рівень 12: Фабрика"
 
 msgid "HUSTR_13"
 msgstr ""

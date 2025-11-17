@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: \"Başar Köse (Turkish Mauser)\" <memerprime8@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: tr\n"
 
 msgid "TXT_D1E1"
@@ -33,13 +40,15 @@ msgid "TXT_PLUT_EP"
 msgstr "Plutonia Deneyi"
 
 msgid "TXT_TNT_EP"
-msgstr ""
+msgstr "TNT: Kötü-evrim"
 
+#, fuzzy
 msgid "TXT_CHEX_EP"
-msgstr ""
+msgstr "Chex Görev"
 
+#, fuzzy
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: Garaj"
 
 msgid "HUSTR_E1M2"
 msgstr "E1M2: Nükleer Santral"
@@ -953,7 +962,7 @@ msgstr ""
 "ol, yüzeye iniyorsun Cehennem.\n"
 "\n"
 "Şimdi, DOOM'un son bölümüne\n"
-"geçiyoruz!  -- İnferno."
+"geçiyoruz! -- İnferno."
 
 # Doom Ep.3
 msgid "E3TEXT"
@@ -1133,7 +1142,7 @@ msgstr ""
 "Hızlandırıcı'dan bahsetmiyorum\n"
 "bile. kalan birkaç iblis. İşin bitti.\n"
 "Cehennem kötü ölü insanları\n"
-"dövmeye geri döndü  iyi canlı\n"
+"dövmeye geri döndü iyi canlı\n"
 "olanlar yerine. Unutmayın ki\n"
 "torunlarına bir roket koymalarını\n"
 "söyle tabutunda fırlatıcı. Eğer\n"

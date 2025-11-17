@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: sv\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSKEY"
 msgstr "Tryck på en tangent."
@@ -2932,6 +2939,7 @@ msgstr "Trollkarl"
 msgid "MNU_WARLOCK"
 msgstr "Häxkarl"
 
+#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Ärkemagiker"
 

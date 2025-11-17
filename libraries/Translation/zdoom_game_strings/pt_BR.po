@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: William Weber Berrutti <wwberrutti@protonmail.ch>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"uzdoom/zdoom-game-strings/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pt\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "TXT_D1E1"
 msgstr "Corpos até os Joelhos"
@@ -14,7 +21,7 @@ msgid "TXT_D1E2"
 msgstr "As Margens do Abismo"
 
 msgid "TXT_D1E3"
-msgstr ""
+msgstr "Inferno"
 
 # The episode and levels' names in E4 are taken from the Bible.
 # 
@@ -36,10 +43,10 @@ msgid "TXT_TNT_EP"
 msgstr "TNT: Malvolução"
 
 msgid "TXT_CHEX_EP"
-msgstr ""
+msgstr "Missão Chex"
 
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: Hangar"
 
 msgid "HUSTR_E1M2"
 msgstr "E1M2: Usina Nuclear"
@@ -115,7 +122,7 @@ msgid "HUSTR_E3M6"
 msgstr "E3M6: Monte Érebo"
 
 msgid "HUSTR_E3M7"
-msgstr ""
+msgstr "E3M7: Limbo"
 
 # Based on the City of Dis, located on the sixth circle of Hell, according to
 # Dante Alighieri's The Divine Comedy

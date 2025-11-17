@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: William Weber Berrutti <wwberrutti@protonmail.ch>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pt\n"
 
 msgid "PRESSKEY"
@@ -530,7 +537,7 @@ msgid "SCORE_DELAY"
 msgstr "Atraso (ms)"
 
 msgid "SCORE_FRAGS"
-msgstr ""
+msgstr "Abates"
 
 msgid "SCORE_DEATHS"
 msgstr "Mortes"
@@ -542,7 +549,7 @@ msgid "SCORE_MISSED"
 msgstr "Perdido"
 
 msgid "SCORE_TOTAL"
-msgstr ""
+msgstr "Total"
 
 msgid "SCORE_LVLTIME"
 msgstr "Tempo de fase"
@@ -866,7 +873,7 @@ msgid "CC_REVEN"
 msgstr "Insepulto"
 
 msgid "CC_MANCU"
-msgstr ""
+msgstr "Mancubus"
 
 msgid "CC_ARCH"
 msgstr "Arquivil"
@@ -926,7 +933,7 @@ msgid "TAG_PLASMARIFLE"
 msgstr "Fuzil de Plasma"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "BFG 9000"
 
 msgid "AMMO_CLIP"
 msgstr "Balas"
@@ -3005,6 +3012,7 @@ msgstr "Feiticeiro"
 msgid "MNU_WARLOCK"
 msgstr "Mago"
 
+#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Arquimago"
 

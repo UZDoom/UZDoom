@@ -2,10 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Kebabo 500 <kebabo500@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pl\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "TXT_D1E1"
 msgstr "Po kolana w trupach"
@@ -14,7 +22,7 @@ msgid "TXT_D1E2"
 msgstr "Przedsionek piekieł"
 
 msgid "TXT_D1E3"
-msgstr ""
+msgstr "Inferno"
 
 # The episode and levels' names in E4 are taken from the Bible.
 # 
@@ -39,7 +47,7 @@ msgid "TXT_CHEX_EP"
 msgstr "Misja Chex"
 
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: Hangar"
 
 msgid "HUSTR_E1M2"
 msgstr "E1M2: Elektrownia Jądrowa"
@@ -120,7 +128,7 @@ msgstr "E3M7: Otchłań"
 # Based on the City of Dis, located on the sixth circle of Hell, according to
 # Dante Alighieri's The Divine Comedy
 msgid "HUSTR_E3M8"
-msgstr ""
+msgstr "E3M8: Dis"
 
 msgid "HUSTR_E3M9"
 msgstr "E3M9: Królikarnia"
@@ -197,7 +205,7 @@ msgstr "Level 10: Stacja Tankowania"
 # Alternative title:
 # Circle of Death 
 msgid "HUSTR_11"
-msgstr "Level 11: Krąg Śmierci"
+msgstr "Level 11: Krąg Zniszczenia!"
 
 msgid "HUSTR_12"
 msgstr "Level 12: Fabryka"
@@ -227,7 +235,7 @@ msgid "HUSTR_20"
 msgstr "Level 20: Mam Cię!"
 
 msgid "HUSTR_21"
-msgstr ""
+msgstr "Level 21: Nirvana"
 
 msgid "HUSTR_22"
 msgstr "Level 22: Katakumby"
@@ -455,7 +463,7 @@ msgid "THUSTR_19"
 msgstr "Level 19: Wysyłka/Reprodukcja"
 
 msgid "THUSTR_20"
-msgstr "Level 20: Centralny Proces"
+msgstr "Level 20: Przetwarzanie Główne"
 
 msgid "THUSTR_21"
 msgstr "Level 21: Centrum Administracyjne"
@@ -7868,7 +7876,7 @@ msgstr "Dobra robota, przyjacielu! Czas wprowadzić cię do środka."
 msgid "TXT_SUB_LOG233"
 msgstr ""
 "Uważaj na tych Krzyżowców. To wielkie, potężne roboty i wredne jak diabli. "
-"Nie wiemy nic o ich broni, ale prawdopodobnie... nie macie szans. Ostrożnie."
+"Guzik wiemy o ich broni, ale wasze szanse... są nikłe. Ostrożnie."
 
 msgid "TXT_SUB_LOG234"
 msgstr ""
@@ -7912,7 +7920,7 @@ msgstr ""
 
 # MAP04: Derwin.
 msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
-msgstr "Przepraszam, będę chory."
+msgstr "Przepraszam, niedobrze mi."
 
 # MAP04: Worner.
 msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"

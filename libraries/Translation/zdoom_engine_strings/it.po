@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:51+0000\n"
+"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: it\n"
 
 msgid "PRESSKEY"
@@ -1830,7 +1837,7 @@ msgid "OB_MPCWEAPSTAFFR"
 msgstr "%o è soffocato a causa della Staffa del Serpente di %k."
 
 msgid "OB_MPCWEAPFLAME"
-msgstr "%o è stato  illuminato dalle fiamme di %k."
+msgstr "%o è stato illuminato dalle fiamme di %k."
 
 msgid "OB_MPCWEAPWRAITHVERGE"
 msgstr "%o è stato purificato dalla Verga SconfinaSpettri di %k."
@@ -2012,10 +2019,10 @@ msgid "TXT_CATACOMBKEY"
 msgstr "Hai raccolto la chiave delle Catacombe."
 
 msgid "TXT_SECURITYKEY"
-msgstr "Hai raccolto  la chiave della Sicurezza."
+msgstr "Hai raccolto la chiave della Sicurezza."
 
 msgid "TXT_COREKEY"
-msgstr "Hai raccolto  la chiave del Nucleo."
+msgstr "Hai raccolto la chiave del Nucleo."
 
 msgid "TXT_MAULERKEY"
 msgstr "Hai raccolto la chiave del Pestatore."
@@ -2700,7 +2707,7 @@ msgid "OB_COMMONUS"
 msgstr "%o è stato coperto di slime da un flemoid."
 
 msgid "OB_BIPEDICUS"
-msgstr "%o è stato coperto di slime da un  bipedicus."
+msgstr "%o è stato coperto di slime da un bipedicus."
 
 msgid "OB_BIPEDICUS2"
 msgstr "%o è stato coperto di slime da un bipedicus corazzato."
@@ -3003,6 +3010,7 @@ msgstr "Mago"
 msgid "MNU_WARLOCK"
 msgstr "Stregone"
 
+#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Arcimago"
 

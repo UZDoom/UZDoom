@@ -2,18 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-11 22:25+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-11-15 23:29+0000\n"
+"Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/common/"
 "uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: uk\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSYN"
 msgstr "Натисніть Y або N."
@@ -510,7 +510,7 @@ msgstr "Включіть підтримку контролерів"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr " \\n"
+msgstr ""
 
 msgid "JOYMNU_INVALID"
 msgstr "Для меню вибрано невідповідний контролер"
@@ -856,7 +856,7 @@ msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Кількість емульованих OPL-чіпів"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr ""
+msgstr "Підсилення"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Повне панорамування MIDI"
@@ -868,13 +868,13 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "MIDI поліфонія"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "Загальні"
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Глобальний Freeverb"
@@ -895,13 +895,13 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr "Хорус"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_TIMIDITYCONFIG"
 msgstr "Файл конфігурації Timidity"
@@ -910,7 +910,7 @@ msgid "ADVSNDMNU_TIMIDITYVOLUME"
 msgstr "Відносна гучність"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_WILDMIDICONFIG"
 msgstr "Файл конфігурації WildMidi"
@@ -967,19 +967,20 @@ msgid "ADVSNDMNU_OPNGAIN"
 msgstr "Підсилення"
 
 msgid "ADVSNDMNU_VLMODEL"
-msgstr ""
+msgstr "Модель гучності"
 
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr ""
+msgstr "Метод розподілу каналів"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr ""
+msgstr "Автоматичне арпеджіо"
 
 msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "Використовувати власний банк WOPL"
 
+#, fuzzy
 msgid "ADVSNDMNU_ADLUSEWADBANK"
-msgstr ""
+msgstr "Використовувати банки GENMIDI ваду як кастомізований банк"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "Файл з банком WOPL"
@@ -1050,82 +1051,87 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Нарощування гучності"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "OPTVAL_MAMEOPL2"
-msgstr ""
+msgstr "MAME OPL2"
 
 msgid "OPTVAL_DOSBOXOPL3"
-msgstr ""
+msgstr "DOSBox OPL3"
 
 msgid "OPTVAL_JAVAOPL3"
-msgstr ""
+msgstr "Java OPL3"
 
 msgid "OPTVAL_ESFMu"
-msgstr ""
+msgstr "ESFMu OPL3"
 
+#, fuzzy
 msgid "OPTVAL_YMFMOPL2"
-msgstr ""
+msgstr "YMFM OPL2"
 
 msgid "OPTVAL_YMFMOPL3"
-msgstr ""
+msgstr "YMFM OPL3"
 
 msgid "OPTVAL_NUKEDOPL3"
-msgstr ""
+msgstr "Nuked OPL3"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr ""
+msgstr "OPL2-LLE (Дуже важке!)"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr ""
+msgstr "OPL3-LLE (Дуже важке!)"
 
+#, fuzzy
 msgid "OPTVAL_MAMEOPN2"
-msgstr ""
+msgstr "MAME YM2612"
 
+#, fuzzy
 msgid "OPTVAL_NP2OPNA"
-msgstr ""
+msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
+msgstr "MAME YM2608"
 
 msgid "OPTVAL_PMDWINOPNA"
-msgstr ""
+msgstr "PMDWin OPNA"
 
 msgid "OPTVAL_OPALOPL3"
-msgstr ""
+msgstr "Opal OPL3"
 
 msgid "OPTVAL_NUKEDOPL3174"
-msgstr ""
+msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr ""
+msgstr "Nuked OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr ""
+msgstr "Nuked OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM2612) (Дуже важке!)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM3438) (Дуже важке!)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr ""
+msgstr "OPN2-LLE (YMF276) (Дуже важке!)"
 
 msgid "OPTVAL_GENSOPN2"
-msgstr ""
+msgstr "GENS YM2612"
 
 msgid "OPTVAL_YMFMOPN2"
-msgstr ""
+msgstr "YMFM OPN2"
 
 msgid "OPTVAL_YMFMOPNA"
-msgstr ""
+msgstr "YMFM OPNA"
 
 msgid "ADLVLMODEL_AUTO"
 msgstr "Авто (налаштування з банку)"
@@ -1149,13 +1155,13 @@ msgid "ADLVLMODEL_DMX"
 msgstr "DMX (Точна, з помилкою АМ)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr ""
+msgstr "Як в DMX"
 
 msgid "ADLVLMODEL_APOGEE"
 msgstr "Apogee (Точна, з помилкою АМ)"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr ""
+msgstr "Як в Apogee Sound System"
 
 msgid "OPNVLMODEL_WIN9X"
 msgstr "Схожа на Win9X"
@@ -1173,49 +1179,53 @@ msgid "ADLVLMODEL_APOGEE_FIXED"
 msgstr "Apogee (Без помилки АМ)"
 
 msgid "ADLVLMODEL_AIL"
-msgstr ""
+msgstr "IBM Audio Library Interface"
 
 msgid "ADLVLMODEL_HMI"
-msgstr ""
+msgstr "HMI Sound Operating System"
 
 msgid "ADLVLMODEL_HMIOLD"
 msgstr "HMI SOS (Старий варіант з помилками)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "Авто"
 
+#, fuzzy
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr ""
+msgstr "Виміряна затримка звуку"
 
+#, fuzzy
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr ""
+msgstr "Повторне використання першого випуску того самого інструменту"
 
+#, fuzzy
 msgid "ADLCHANALLOC_ANYREL"
-msgstr ""
+msgstr "Повторне використання будь-якої першої опублікованої нотатки"
 
 msgid "OPTVAL_UNLIMITED"
 msgstr "Необмежено"
 
 msgid "OPTVAL_256K"
-msgstr ""
+msgstr "256K"
 
 msgid "OPTVAL_512K"
-msgstr ""
+msgstr "512K"
 
 msgid "OPTVAL_768K"
-msgstr ""
+msgstr "768K"
 
 msgid "OPTVAL_1024K"
-msgstr ""
+msgstr "1024K"
 
+#, fuzzy
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Палітра гри"
@@ -1320,19 +1330,19 @@ msgid "OPTVAL_TRILINEAR"
 msgstr "Трилінійна"
 
 msgid "OPTVAL_2X"
-msgstr ""
+msgstr "2x"
 
 msgid "OPTVAL_4X"
-msgstr ""
+msgstr "4x"
 
 msgid "OPTVAL_8X"
-msgstr ""
+msgstr "8x"
 
 msgid "OPTVAL_16X"
-msgstr ""
+msgstr "16x"
 
 msgid "OPTVAL_32X"
-msgstr ""
+msgstr "32x"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Параметри текстур"
@@ -1487,14 +1497,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "Бажаний інтерфейс візуалізації"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Не розділяти лівий/правий ALT/CTRL/SHIFT"
@@ -1611,7 +1621,7 @@ msgid "REVMNU_REFLECTIONS_PAN_Z"
 msgstr ""
 
 msgid "REVMNU_REVERB"
-msgstr ""
+msgstr "Реверберація"
 
 msgid "REVMNU_REVERB_DELAY"
 msgstr ""
@@ -1650,10 +1660,11 @@ msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
 msgstr ""
 
 msgid "REVMNU_DIFFUSION"
-msgstr ""
+msgstr "Дифузія"
 
+#, fuzzy
 msgid "REVMNU_DENSITY"
-msgstr ""
+msgstr "Щільність"
 
 msgid "REVMNU_Reflections_Scale"
 msgstr ""
@@ -1686,10 +1697,10 @@ msgid "REVMNU_Name"
 msgstr "Назва"
 
 msgid "REVMNU_ID_1"
-msgstr ""
+msgstr "ID #1"
 
 msgid "REVMNU_ID_2"
-msgstr ""
+msgstr "ID #2"
 
 msgid "REVMNU_Create"
 msgstr "Створити"
@@ -2005,126 +2016,138 @@ msgstr "Module replayer"
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
 msgid "JOYMNU_JOYENABLEINBACKGROUND"
-msgstr ""
+msgstr "Дозволити фонове використання даного контролера"
 
 # Order to sort the list of saved games in the save and load game menu. This
 # used to only be alphabetical.
 msgid "MISCMNU_SAVEORDER"
-msgstr ""
+msgstr "Тип сортування збережень"
 
 msgid "OPTVAL_ALPHABETICAL"
-msgstr ""
+msgstr "Алфавітний"
 
+#, fuzzy
 msgid "OPTVAL_LASTSAVEDTIME"
-msgstr ""
+msgstr "За часом збереження"
 
 msgid "PICKER_PLAYHOST"
-msgstr ""
+msgstr "Хостити гру"
 
 msgid "PICKER_PLAYJOIN"
-msgstr ""
+msgstr "Приєднатись до гри"
 
 msgid "PICKER_REMPARM"
-msgstr ""
+msgstr "Запам'ятати параметри"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr ""
+msgstr "Завантажити допоміжні вади"
 
 msgid "PICKER_TAB_MULTI"
-msgstr ""
+msgstr "Гра в мережі"
 
 msgid "PICKER_LOADSAVE"
-msgstr ""
+msgstr "Завантажити файл збереження:"
 
 msgid "PICKER_REMSAVE"
-msgstr ""
+msgstr "Запам'ятати файл збереження"
 
 # As in, to host a game.
 msgid "PICKER_HOST"
-msgstr ""
+msgstr "Хост"
 
 msgid "PICKER_JOIN"
-msgstr ""
+msgstr "Приєднатись"
 
 msgid "PICKER_NETMODE"
-msgstr ""
+msgstr "Режим мережі:"
 
 msgid "PICKER_NETAUTO"
-msgstr ""
+msgstr "Автоматичний (рекомендовано)"
 
 # Connections are routed through the host instead of all players connecting to
 # each other individually.
+#, fuzzy
 msgid "PICKER_NETSERVER"
-msgstr ""
+msgstr "Пакетний сервер"
 
 # Players connect to each other individually.
 msgid "PICKER_NETPEER"
-msgstr ""
+msgstr "Однорангова мережа (Р2Р)"
 
+#, fuzzy
 msgid "PICKER_NETRATE"
-msgstr ""
+msgstr "Швидкість пакетів:"
 
 # Sends out duplicate copies of packets to help with spotty connections e.g.
 # wifi.
+#, fuzzy
 msgid "PICKER_NETBACKUP"
-msgstr ""
+msgstr "Надіслати резервні пакети"
 
 msgid "PICKER_GAMEMODE"
-msgstr ""
+msgstr "Режим гри:"
 
 msgid "PICKER_COOP"
-msgstr ""
+msgstr "Кооператив"
 
+#, fuzzy
 msgid "PICKER_DM"
-msgstr ""
+msgstr "Дезматч"
 
+#, fuzzy
 msgid "PICKER_TDM"
-msgstr ""
+msgstr "Командний дезматч"
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
-msgstr ""
+msgstr "Команда #:"
 
+#, fuzzy
 msgid "PICKER_ALTDM"
-msgstr ""
+msgstr "Використовувати альтернативні правила дезматчу"
 
 msgid "PICKER_PLAYERS"
-msgstr ""
+msgstr "Максимум гравців:"
 
+#, fuzzy
 msgid "PICKER_PORT"
-msgstr ""
+msgstr "Порт хоста:"
 
 # Max number of players.
 msgid "PICKER_PLAYERHINT"
-msgstr ""
+msgstr "Максимум 64"
 
 # GZDoom's default port.
 msgid "PICKER_PORTHINT"
-msgstr ""
+msgstr "За замовчуванням 5029"
 
 # Team 255 randomizes which team the player gets put on.
 msgid "PICKER_TEAMHINT"
-msgstr ""
+msgstr "255 = випадково"
 
 msgid "PICKER_IP"
-msgstr ""
+msgstr "ІР хоста:"
 
+#, fuzzy
 msgid "PICKER_TDMLABEL"
-msgstr ""
+msgstr "Командний дезматч:"
 
 # Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
-msgstr ""
+msgstr "Написати (Команда):"
 
+#, fuzzy
 msgid "MISCMNU_DISCORDRPC"
-msgstr ""
+msgstr "Показати активність в Discord"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "Швидкість повороту"
 
+#, fuzzy
 msgid "JOYMNU_LOOKSPEED"
-msgstr ""
+msgstr "Швидкість огляду"
 
+#, fuzzy
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr ""
+msgstr "Аналоговий стрейф-біг"

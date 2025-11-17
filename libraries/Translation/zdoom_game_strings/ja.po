@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: jp\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "TXT_D1E1"
 msgstr "膝元迫る亡者"
@@ -1717,13 +1724,13 @@ msgid "TXT_ACS_MAP54_11_ABRID"
 msgstr "先へ進む橋が架かった"
 
 msgid "TXT_ACS_MAP54_12_ONTHE"
-msgstr " 屠殺場 へ向かえ"
+msgstr "屠殺場 へ向かえ"
 
 msgid "TXT_ACS_MAP54_13_ASTAI"
 msgstr "先へ進む階段が出来た"
 
 msgid "TXT_ACS_MAP54_14_ONTHE"
-msgstr " 闇の刻計 へ向かえ"
+msgstr "闇の刻計 へ向かえ"
 
 msgid "TXT_ACS_MAP54_15_ONEGE"
 msgstr "歯車を一つ配置した"

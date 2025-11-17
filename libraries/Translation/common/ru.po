@@ -2,18 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"PO-Revision-Date: 2025-11-15 17:51+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/common/ru/"
 ">\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: ru\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSYN"
 msgstr "Нажмите Y или N."
@@ -512,7 +512,7 @@ msgstr "Включите поддержку контроллера"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr " \\n"
+msgstr ""
 
 msgid "JOYMNU_INVALID"
 msgstr "Недопустимый контроллер выбран для меню"
@@ -1574,70 +1574,70 @@ msgstr "Сбросить настройки"
 # Please translate only if you know how to properly name this technical
 # jargon!
 msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr ""
+msgstr "Размер Окружения"
 
 msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr ""
+msgstr "Рассеивание Окружения"
 
 msgid "REVMNU_ROOM"
-msgstr ""
+msgstr "Комната"
 
 msgid "REVMNU_ROOM_HF"
-msgstr ""
+msgstr "Комната Высокая Частота"
 
 msgid "REVMNU_ROOM_LF"
-msgstr ""
+msgstr "Комната Низкая Частота"
 
 msgid "REVMNU_DECAY_TIME"
-msgstr ""
+msgstr "Время Спада"
 
 msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
+msgstr "Коэффициент Высокой Частоты Спада"
 
 msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
+msgstr "Коэффициент Низкой Частоты Спада"
 
 msgid "REVMNU_REFLECTIONS"
-msgstr ""
+msgstr "Отражения"
 
 msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
+msgstr "Задержка Отражений"
 
 msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
+msgstr "Панорамирование Отражений X"
 
 msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
+msgstr "Панорамирование Отражений Y"
 
 msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
+msgstr "Панорамирование Отражений Z"
 
 msgid "REVMNU_REVERB"
-msgstr ""
+msgstr "Реверберация"
 
 msgid "REVMNU_REVERB_DELAY"
-msgstr ""
+msgstr "Задержка Реверберации"
 
 msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
+msgstr "Панорамирование Реверберации X"
 
 msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
+msgstr "Панорамирование Реверберации Y"
 
 msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
+msgstr "Панорамирование Реверберации Z"
 
 msgid "REVMNU_ECHO_TIME"
-msgstr ""
+msgstr "Время Эхо"
 
 msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
+msgstr "Глубина Эхо"
 
 msgid "REVMNU_MODULATION_TIME"
-msgstr ""
+msgstr "Время Модуляции"
 
 msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
+msgstr "Глубина Модуляции"
 
 msgid "REVMNU_AIR_ABSORPTION_HF"
 msgstr ""
@@ -1652,28 +1652,28 @@ msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
 msgstr ""
 
 msgid "REVMNU_DIFFUSION"
-msgstr ""
+msgstr "Рассеивание"
 
 msgid "REVMNU_DENSITY"
-msgstr ""
+msgstr "Плотность"
 
 msgid "REVMNU_Reflections_Scale"
-msgstr ""
+msgstr "Размер Отражений"
 
 msgid "REVMNU_Reflections_Delay_Scale"
-msgstr ""
+msgstr "Размер Задержки Отражений"
 
 msgid "REVMNU_Decay_Time_Scale"
-msgstr ""
+msgstr "Размер Времени Спада"
 
 msgid "REVMNU_Decay_HF_Limit"
-msgstr ""
+msgstr "Лимит Высокой Частоты Спада"
 
 msgid "REVMNU_Reverb_Scale"
-msgstr ""
+msgstr "Размер Реверберации"
 
 msgid "REVMNU_Reverb_Delay_Scale"
-msgstr ""
+msgstr "Размер Задержки Реверберации"
 
 msgid "REVMNU_Echo_Time_Scale"
 msgstr ""
@@ -2123,10 +2123,10 @@ msgid "MISCMNU_DISCORDRPC"
 msgstr "Расширенный статус Discord"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "Скорость поворота"
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr ""
+msgstr "Скорость взгляда"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr ""

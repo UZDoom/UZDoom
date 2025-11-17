@@ -2,23 +2,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:52+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-game-strings/pt/>\n"
-"Language: pt\n"
+"PO-Revision-Date: 2025-11-15 17:53+0000\n"
+"Last-Translator: Joel Robert Justiawan "
+"<joelwindows7@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: ptg\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "TXT_D1E1"
 msgstr ""
 
 msgid "TXT_D1E2"
-msgstr ""
+msgstr "Pinggir Neraka"
 
 msgid "TXT_D1E3"
 msgstr ""
@@ -27,17 +27,17 @@ msgstr ""
 # 
 # Proverbs 5:11
 msgid "TXT_D1E4"
-msgstr ""
+msgstr "Daging Habis Binasa"
 
 msgid "TXT_D2E1"
-msgstr ""
+msgstr "Neraka di Bumi"
 
 # References "No rest for the wicked" in Isaiah 48:22
 msgid "TXT_D2E2"
-msgstr ""
+msgstr "Tiada Damai Sejahtera bagi yang Hidup"
 
 msgid "TXT_PLUT_EP"
-msgstr "A Experiência Plutonia"
+msgstr "Eksperimen Plutonia"
 
 msgid "TXT_TNT_EP"
 msgstr ""
@@ -46,64 +46,64 @@ msgid "TXT_CHEX_EP"
 msgstr ""
 
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: Hanggar"
 
 msgid "HUSTR_E1M2"
-msgstr "E1M2: Central Nuclear"
+msgstr "E1M2: PLTN"
 
 msgid "HUSTR_E1M3"
-msgstr ""
+msgstr "E1M3: Pengolahan Limbah"
 
 msgid "HUSTR_E1M4"
-msgstr "E1M4: Controlo de Comando"
+msgstr "E1M4: Pusat Komando"
 
 msgid "HUSTR_E1M5"
-msgstr ""
+msgstr "E1M5: Lab Phobos"
 
 msgid "HUSTR_E1M6"
-msgstr ""
+msgstr "E1M6: Pemprosesan Pusat"
 
 msgid "HUSTR_E1M7"
-msgstr ""
+msgstr "E1M7: Ruang Komputer"
 
 msgid "HUSTR_E1M8"
-msgstr ""
+msgstr "E1M8: Anomali Phobos"
 
 msgid "HUSTR_E1M9"
-msgstr ""
+msgstr "E1M9: Markas Militer"
 
 msgid "HUSTR_E1M10"
-msgstr ""
+msgstr "E1M10: Bawah Tanah"
 
 msgid "HUSTR_E2M1"
-msgstr ""
+msgstr "E2M1: Anomali Deimos"
 
 msgid "HUSTR_E2M2"
-msgstr "E2M2: Área de Confinamento"
+msgstr "E2M2: Area Penampungan"
 
 msgid "HUSTR_E2M3"
-msgstr ""
+msgstr "E2M3: Tempat Pemurnian"
 
 msgid "HUSTR_E2M4"
-msgstr ""
+msgstr "E2M4: Lab Deimos"
 
 msgid "HUSTR_E2M5"
-msgstr ""
+msgstr "E2M5: Pusat Komando"
 
 msgid "HUSTR_E2M6"
-msgstr ""
+msgstr "E2M6: Balai Kemalangan"
 
 msgid "HUSTR_E2M7"
 msgstr ""
 
 msgid "HUSTR_E2M8"
-msgstr ""
+msgstr "E2M8: Menara Babel"
 
 msgid "HUSTR_E2M9"
-msgstr ""
+msgstr "E2M9: Benteng Misteri"
 
 msgid "HUSTR_E3M1"
-msgstr ""
+msgstr "E3M1: Kediaman Neraka"
 
 msgid "HUSTR_E3M2"
 msgstr ""
@@ -112,14 +112,14 @@ msgid "HUSTR_E3M3"
 msgstr ""
 
 msgid "HUSTR_E3M4"
-msgstr ""
+msgstr "E3M4: Tempat Kertak Gigi"
 
 msgid "HUSTR_E3M5"
-msgstr ""
+msgstr "E3M5: Katedral Neraka"
 
 # Volcano in Antarctica
 msgid "HUSTR_E3M6"
-msgstr ""
+msgstr "E3M6: Gunung Erebus"
 
 msgid "HUSTR_E3M7"
 msgstr ""
@@ -134,371 +134,371 @@ msgstr ""
 
 # Proverbs 15:24
 msgid "HUSTR_E4M1"
-msgstr "E4M1: Inferno Profundo"
+msgstr "E4M1: Dunia Kematian Dibawah"
 
 # Psalm 139:22
 msgid "HUSTR_E4M2"
-msgstr ""
+msgstr "E4M2: Sama Sekali Membenci"
 
 # Matthew 13:49
 msgid "HUSTR_E4M3"
-msgstr "E4M3: Separarão o Mal"
+msgstr "E4M3: Memisahkan Orang Jahat"
 
 # James 3:8
 msgid "HUSTR_E4M4"
-msgstr "E4M4: Mal que não Refreia"
+msgstr "E4M4: Buas tak Terkuasai"
 
 # Luke 16:30
 msgid "HUSTR_E4M5"
-msgstr "E4M5: Eles Arrepender-se-iam"
+msgstr "E4M5: Mereka Akan Bertobat"
 
 # Psalm 139:20
 msgid "HUSTR_E4M6"
-msgstr ""
+msgstr "E4M6: Berdusta terhadap Engkau"
 
 # Revelation 6:8
 msgid "HUSTR_E4M7"
-msgstr "E4M7: Inferno o Seguia"
+msgstr "E4M7: Kerajaan Maut Mengikuti"
 
 # Proverbs 5:9
 msgid "HUSTR_E4M8"
-msgstr "E4M8: Entregue a Cruéis"
+msgstr "E4M8: Kepada Orang Kejam"
 
 msgid "HUSTR_E4M9"
-msgstr ""
+msgstr "E4M9: Ketakutan"
 
 # Note that the "LEVEL" part of the string will be stripped so it shouldn't be
 # translated
 msgid "HUSTR_1"
-msgstr "Nível 1: Entrada"
+msgstr "Level 1: Pintu Masuk"
 
 msgid "HUSTR_2"
-msgstr "Nível 2: Subterrâneo"
+msgstr "Level 2: Gorong-Gorong"
 
 # “a form of punishment in which a person is forced to run between two lines
 # of men facing each other and armed with clubs or whips to beat the victim”
 msgid "HUSTR_3"
-msgstr "Nível 3: A Punição"
+msgstr "Level 3: Ruang Cambuk"
 
 msgid "HUSTR_4"
-msgstr "Nível 4: O Foco"
+msgstr "Level 4: Fokus"
 
 msgid "HUSTR_5"
-msgstr "Nível 5: Os Túneis de Dejetos"
+msgstr "Level 5: Terowongan Limbah"
 
 msgid "HUSTR_6"
-msgstr "Nível 6: O Esmagador"
+msgstr "Level 6: Cobek"
 
 msgid "HUSTR_7"
-msgstr "Nível 7: Simplesmente Mortal"
+msgstr "Level 7: Sangat Mudah"
 
 msgid "HUSTR_8"
-msgstr "Nível 8: Truques e Armadilhas"
+msgstr "Level 8: Tipuan dan Jebakan"
 
 msgid "HUSTR_9"
-msgstr "Nível 9: O Fosso"
+msgstr "Level 9: Lubang"
 
 msgid "HUSTR_10"
-msgstr "Nível 10: Base de Reabastecimento"
+msgstr "Level 10: Pengisian Bahan Bakar"
 
 # Alternative title:
 # Circle of Death 
 msgid "HUSTR_11"
-msgstr "Nível 11: Círculo da Morte"
+msgstr "Level 11: Lingkaran Kehancuran!"
 
 msgid "HUSTR_12"
-msgstr "Nível 12: A Fábrica"
+msgstr "Level 12: Pabrik"
 
 msgid "HUSTR_13"
-msgstr "Nível 13: Centro Urbano"
+msgstr "Level 13: Pusat Kota"
 
 msgid "HUSTR_14"
-msgstr "Nível 14: Os Antros Profundos"
+msgstr "Level 14: Liang Terdalam"
 
 msgid "HUSTR_15"
-msgstr "Nível 15: Zona Industrial"
+msgstr "Leval 15: Kawasan Industri"
 
 msgid "HUSTR_16"
-msgstr "Nível 16: Subúrbios"
+msgstr "Level 16: Pinggir Kota"
 
 msgid "HUSTR_17"
-msgstr "Nível 17: Habitações"
+msgstr "Level 18: Rumah Susun"
 
 msgid "HUSTR_18"
-msgstr "Nível 18: O Átrio"
+msgstr "Level 18: Halaman"
 
 msgid "HUSTR_19"
-msgstr "Nível 19: A Cidadela"
+msgstr "Level 19: Citadel"
 
 msgid "HUSTR_20"
-msgstr "Nível 20: Apanhei-te!"
+msgstr "Level 20: Kena kau!"
 
 msgid "HUSTR_21"
-msgstr "Nível 21: Nirvana"
+msgstr ""
 
 msgid "HUSTR_22"
-msgstr "Nível 22: Os Calabouços"
+msgstr "Level 22: Katakombe"
 
 msgid "HUSTR_23"
-msgstr "Nível 23: Barris de Diversão"
+msgstr "Level 23: Tong Keseruan"
 
 msgid "HUSTR_24"
-msgstr "Nível 24: O Abismo"
+msgstr "Level 24: Jurang"
 
 msgid "HUSTR_25"
-msgstr "Nível 25: Cascatas de Sangue"
+msgstr "Level 25: Tumpah Darah"
 
 msgid "HUSTR_26"
-msgstr "Nível 26: As Minas Abandonadas"
+msgstr "Level 26: Tambang Tertinggal"
 
 msgid "HUSTR_27"
-msgstr "Nível 27: Condomínio Monstruoso"
+msgstr "Level 27: Rumah Monster"
 
 msgid "HUSTR_28"
-msgstr "Nível 28: O Mundo Espiritual"
+msgstr "Level 29: Dunia Roh"
 
 msgid "HUSTR_29"
-msgstr "Nível 29: O Cúmulo da Existência"
+msgstr "Level 29: Mayat Hidup"
 
 msgid "HUSTR_30"
-msgstr "Nível 30: Ícone do Pecado"
+msgstr "Level 30: Lambang Dosa"
 
 msgid "HUSTR_31"
-msgstr "Nível 31: Wolfenstein"
+msgstr ""
 
 msgid "HUSTR_32"
-msgstr "Nível 32: Grosse"
+msgstr ""
 
 msgid "HUSTR_31B"
-msgstr "Nível 31: IDKFA"
+msgstr ""
 
 msgid "HUSTR_32B"
-msgstr "Nível 32: Keen"
+msgstr ""
 
 msgid "HUSTR_33"
-msgstr "Nível 33: Traição"
+msgstr "Level 33: Pengkhianatan"
 
 msgid "NHUSTR_1"
-msgstr "Nível 1: A Base Terrestre"
+msgstr "Level 1: Markas Bumi"
 
 msgid "NHUSTR_2"
-msgstr "Nível 2: Os Laboratórios da Dor"
+msgstr "Level 2: Lab Penyiksaan"
 
 msgid "NHUSTR_3"
-msgstr "Nível 3: Desfiladeiro dos Mortos"
+msgstr "Level 3: Tebing Orang Mati"
 
 msgid "NHUSTR_4"
-msgstr "Nível 4: Montanha Infernal"
+msgstr "Level 4: Gunung Maut"
 
 msgid "NHUSTR_5"
-msgstr "Nível 5: Vivissecção"
+msgstr ""
 
 msgid "NHUSTR_6"
-msgstr "Nível 6: Inferno de Sangue"
+msgstr "Level 6: Neraka Darah"
 
 msgid "NHUSTR_7"
-msgstr "Nível 7: Banquete do Barão"
+msgstr "Level 7: Perjamuan Baron"
 
 msgid "NHUSTR_8"
-msgstr "Nível 8: Túmulo da Malevolência"
+msgstr "Level 8: Makam Kedengkian"
 
 msgid "NHUSTR_9"
-msgstr "Nível 9: Marcha dos Demônios"
+msgstr "Level 9: Pasukan Neraka"
 
 msgid "PHUSTR_1"
-msgstr "Nível 1: Congo"
+msgstr "Level 1: Kongo"
 
 msgid "PHUSTR_2"
-msgstr "Nível 2: Poço de Almas"
+msgstr "Level 2: Sumur Jiwa"
 
 msgid "PHUSTR_3"
-msgstr "Nível 3: Asteca"
+msgstr "Level 3: Aztek"
 
 msgid "PHUSTR_4"
-msgstr "Nível 4: Na Jaula"
+msgstr "Level 4: Terkurung"
 
 msgid "PHUSTR_5"
-msgstr "Nível 5: Cidade Fantasma"
+msgstr "Level 5: Kota Hantu"
 
 msgid "PHUSTR_6"
-msgstr "Nível 6: Covil do Barão"
+msgstr "Level 6: Kediaman Baron"
 
 msgid "PHUSTR_7"
-msgstr "Nível 7: Campo de Concentração"
+msgstr "Level 7: Lapangan Jebakan"
 
 msgid "PHUSTR_8"
-msgstr "Nível 8: Reino"
+msgstr "Level 8: Dimensi"
 
 msgid "PHUSTR_9"
-msgstr "Nível 9: Matadouro"
+msgstr "Level 9: Pemotongan"
 
 msgid "PHUSTR_10"
-msgstr "Nível 10: Investida"
+msgstr ""
 
 msgid "PHUSTR_11"
-msgstr "Nível 11: Perseguição"
+msgstr "Level 11: Diburu"
 
 msgid "PHUSTR_12"
-msgstr "Nível 12: Velocidade"
+msgstr "Level 12: Kecepatan"
 
 msgid "PHUSTR_13"
-msgstr "Nível 13: A Cripta"
+msgstr "Level 13: Tempat Tersembunyi"
 
 msgid "PHUSTR_14"
-msgstr "Nível 14: Gênese"
+msgstr "Level 14: Kejadian"
 
 msgid "PHUSTR_15"
-msgstr "Nível 15: O Crepúsculo"
+msgstr "Level 15: Senja"
 
 msgid "PHUSTR_16"
-msgstr "Nível 16: O Presságio"
+msgstr "Level 16: Faal"
 
 msgid "PHUSTR_17"
-msgstr "Nível 17: Complexo"
+msgstr "Level 17: Senyawa"
 
 msgid "PHUSTR_18"
-msgstr "Nível 18: Neurosfera"
+msgstr ""
 
 # “NME” read out loud means “enemy”, so translators should consider the
 # translation of “enemy” into their language.
 msgid "PHUSTR_19"
-msgstr "Nível 19: N-MIGO"
+msgstr "Level 19: MSH"
 
 msgid "PHUSTR_20"
-msgstr "Nível 20: O Domínio da Morte"
+msgstr "Level 20: Kawasan Maut"
 
 msgid "PHUSTR_21"
-msgstr "Nível 21: Matador"
+msgstr ""
 
 msgid "PHUSTR_22"
-msgstr "Nível 22: Missão Impossível"
+msgstr "Level 22: Misi Mustahil"
 
 msgid "PHUSTR_23"
-msgstr "Nível 23: Lápide"
+msgstr "Level 23: Batu Nisan"
 
 msgid "PHUSTR_24"
-msgstr "Nível 24: A Fronteira Final"
+msgstr "Level 24: Garis Terdepan"
 
 msgid "PHUSTR_25"
-msgstr "Nível 25: O Templo da Escuridão"
+msgstr "Level 25: Kuil Kegelapan"
 
 msgid "PHUSTR_26"
-msgstr "Nível 26: Bunker"
+msgstr ""
 
 msgid "PHUSTR_27"
-msgstr "Nível 27: Anticristo"
+msgstr "Level 28: Anti-kris"
 
 msgid "PHUSTR_28"
-msgstr "Nível 28: Os Esgotos"
+msgstr "Level 28: Bawah Tanah"
 
 msgid "PHUSTR_29"
-msgstr "Nível 29: Odisséia de Ruidos"
+msgstr "Level 29: Pengembara Bising"
 
 msgid "PHUSTR_30"
-msgstr "Nível 30: O Portão do Inferno"
+msgstr "Level 30: Gerbang Neraka"
 
 msgid "PHUSTR_31"
-msgstr "Nível 31: Ciberantro"
+msgstr "Level 31: Liang Cyber"
 
 msgid "PHUSTR_32"
-msgstr "Nível 32: Siga em Frente"
+msgstr "Level 32: Langsung Aja"
 
 msgid "THUSTR_1"
-msgstr "Nível 1: Controlo de Sistema"
+msgstr "Level 1: Kendali Sistem"
 
 msgid "THUSTR_2"
-msgstr "Nível 2: Churrasco Humano"
+msgstr "Level 2: Sate Manusia"
 
 msgid "THUSTR_3"
-msgstr "Nível 3: Controlo Energético"
+msgstr "Level 3: Kendali Daya"
 
 msgid "THUSTR_4"
-msgstr "Nível 4: Buraco de Minhoca"
+msgstr "Level 4: Lubang Cacing"
 
 # Not "Hangar"
 msgid "THUSTR_5"
-msgstr "Nível 5: Hangar"
+msgstr "Level 5: Gantungan"
 
 msgid "THUSTR_6"
-msgstr "Nível 6: Época Aberta"
+msgstr ""
 
 msgid "THUSTR_7"
-msgstr "Nível 7: Prisão"
+msgstr "Level 7: Penjara"
 
 msgid "THUSTR_8"
-msgstr "Nível 8: Metal"
+msgstr "Level 8: Logam"
 
 msgid "THUSTR_9"
-msgstr "Nível 9: Fortaleza"
+msgstr "Level 9: Rumah Besar"
 
 msgid "THUSTR_10"
-msgstr "Nível 10: Redenção"
+msgstr "Level 10: Pertobatan"
 
 msgid "THUSTR_11"
-msgstr "Nível 11: Centro de Armazenamento"
+msgstr "Level 11: Gudang"
 
 msgid "THUSTR_12"
-msgstr "Nível 12: Cratera"
+msgstr "Level 12: Kawah"
 
 msgid "THUSTR_13"
-msgstr "Nível 13: Processamento Nuclear"
+msgstr "Level 13: Pengolah Limbah Nuklir"
 
 msgid "THUSTR_14"
-msgstr "Nível 14: Siderúrgica"
+msgstr "Level 14: Bengkel Besi"
 
 msgid "THUSTR_15"
-msgstr "Nível 15: Zona Morta"
+msgstr "Level 15: Kawasan Maut"
 
 msgid "THUSTR_16"
-msgstr "Nível 16: Profundezas"
+msgstr "Level 16: Raihan Terdalam"
 
 msgid "THUSTR_17"
-msgstr "Nível 17: Área de Processamento"
+msgstr "Level 17: Tempat Pengolahan"
 
 msgid "THUSTR_18"
-msgstr "Nível 18: Moinho"
+msgstr "Level 18: Penggilingan"
 
 msgid "THUSTR_19"
-msgstr "Nível 19: Expedição/reaparecimento"
+msgstr "Level 19: Pengiriman/respawning"
 
 msgid "THUSTR_20"
-msgstr "Nível 20: Processamento Central"
+msgstr "Level 20: Pengolahan Pusat"
 
 msgid "THUSTR_21"
-msgstr "Nível 21: Centro de Administração"
+msgstr "Level 21: Pusat Administrasi"
 
 msgid "THUSTR_22"
-msgstr "Nível 22: Habitat"
+msgstr ""
 
 msgid "THUSTR_23"
-msgstr "Nível 23: Projeto de Escavação Lunar"
+msgstr "Level 23: Proyek Tambang Bulan"
 
 msgid "THUSTR_24"
-msgstr "Nível 24: Pedreira"
+msgstr ""
 
 msgid "THUSTR_25"
-msgstr "Nível 25: Covil do Barão"
+msgstr ""
 
 msgid "THUSTR_26"
-msgstr "Nível 26: Ballistige"
+msgstr ""
 
 msgid "THUSTR_27"
-msgstr "Nível 27: Monte Dor"
+msgstr ""
 
 msgid "THUSTR_28"
-msgstr "Nível 28: Inferno"
+msgstr ""
 
 msgid "THUSTR_29"
-msgstr "Nível 29: Rio Estige"
+msgstr ""
 
 msgid "THUSTR_30"
-msgstr "Nível 30: Última Chamada"
+msgstr ""
 
 msgid "THUSTR_31"
-msgstr "Nível 31: Faraó"
+msgstr ""
 
 msgid "THUSTR_32"
-msgstr "Nível 32: Caraíbas"
+msgstr ""
 
 msgid "HHUSTR_E1M1"
 msgstr ""
@@ -540,7 +540,7 @@ msgid "HHUSTR_E2M4"
 msgstr ""
 
 msgid "HHUSTR_E2M5"
-msgstr "Os Túmulos"
+msgstr ""
 
 msgid "HHUSTR_E2M6"
 msgstr ""
@@ -552,7 +552,7 @@ msgid "HHUSTR_E2M8"
 msgstr ""
 
 msgid "HHUSTR_E2M9"
-msgstr "O Glaciar"
+msgstr ""
 
 msgid "HHUSTR_E3M1"
 msgstr ""
@@ -645,7 +645,7 @@ msgid "TXT_STRIFE_MAP03"
 msgstr ""
 
 msgid "TXT_STRIFE_MAP04"
-msgstr "Área 4: Central Energética"
+msgstr ""
 
 msgid "TXT_STRIFE_MAP05"
 msgstr ""
@@ -672,7 +672,7 @@ msgid "TXT_STRIFE_MAP12"
 msgstr ""
 
 msgid "TXT_STRIFE_MAP13"
-msgstr "Área 13: Túmulos"
+msgstr ""
 
 msgid "TXT_STRIFE_MAP14"
 msgstr ""
@@ -708,10 +708,10 @@ msgid "TXT_STRIFE_MAP24"
 msgstr ""
 
 msgid "TXT_STRIFE_MAP25"
-msgstr "Área 25: Túmulos: Templo Arruinado"
+msgstr ""
 
 msgid "TXT_STRIFE_MAP26"
-msgstr "Área 26: Campo de Treino"
+msgstr ""
 
 msgid "TXT_STRIFE_MAP27"
 msgstr ""
@@ -828,13 +828,13 @@ msgid "TXT_HEXEN_MAP35"
 msgstr ""
 
 msgid "TXT_HEXEN_MAP36"
-msgstr "Túmulo de Zedek"
+msgstr ""
 
 msgid "TXT_HEXEN_MAP37"
-msgstr "Túmulo de Menelkir"
+msgstr ""
 
 msgid "TXT_HEXEN_MAP38"
-msgstr "Túmulo de Traductus"
+msgstr ""
 
 msgid "TXT_HEXEN_MAP39"
 msgstr ""
@@ -843,7 +843,7 @@ msgid "TXT_HEXEN_MAP40"
 msgstr ""
 
 msgid "TXT_HEXDD_MAP41"
-msgstr "Aldeia em Ruinas"
+msgstr ""
 
 msgid "TXT_HEXDD_MAP42"
 msgstr ""
@@ -923,184 +923,46 @@ msgstr ""
 # Doom Ep.1
 msgid "E1TEXT"
 msgstr ""
-"Após derrotar as criaturas miseráveis e\n"
-"limpar a base lunar devias ter ganho,\n"
-"É, não é? Não é? Onde está a tua \n"
-"grande recompensa e a passagem de volta \n"
-"para casa? Não deveria acabar assim!\n"
-"\n"
-"Cheira a carne podre, mas deve ser a base\n"
-"perdida de Deimos. Parece que estás\n"
-"preso nas Margens do Inferno. O único \n"
-"maneira de sair é por aqui. \n"
-"\n"
-"Para continuar a experiência \"DOOM\",\n"
-"jogue As Margens do Abismo e sua\n"
-"incrível sequência, Inferno!"
 
 # Doom Ep.2
 msgid "E2TEXT"
 msgstr ""
-"Conseguiste! O hediondo líder\n"
-"ciberdemônio que comandava a base\n"
-"lunar de Deimos foi morto e saiste\n"
-"triunfante! Mas... onde é que estás?\n"
-"Sobes até a borda da lua e\n"
-"olhas para baixo para descobrir uma \n"
-"verdade terrível.\n"
-"\n"
-"Deimos está a flutuar sobre o Inferno!\n"
-"nunca ouviste falar de alguém que\n"
-"tenha escapado, mas tu farás os malditos\n"
-"se arrependerem de terem ouvido falar\n"
-"de ti. Sem perder tempo, você desce\n"
-"de rapel até a superfície do Inferno.\n"
-"\n"
-"Agora, é hora do capitulo final de\n"
-"DOOM! -- Inferno."
 
 # Doom Ep.3
 msgid "E3TEXT"
 msgstr ""
-"A detestável aranha demoníaca que\n"
-"planeou a invasão das bases\n"
-"lunares e causou tanta morte foi\n"
-"derrotada para sempre.\n"
-"\n"
-"Uma passagem secreta abre e tu entras.\n"
-"Mostraste ser forte demais para o\n"
-"Inferno conseguir conter e finalmente \n"
-"o Inferno joga limpo -- pois tu emerges \n"
-"da passagem para ver os campos verdes\n"
-"da Terra! Em casa, finalmente.\n"
-"\n"
-"Perguntas o que estava acontecendo\n"
-"na Terra enquanto você batalhava o mal.\n"
-"Ainda bem que nenhum demônio veio\n"
-"por aquela porta contigo..."
 
 # Doom Ep.4
 msgid "E4TEXT"
 msgstr ""
-"A aranha-mestra deve ter enviado\n"
-"suas legiões de demônios antes da\n"
-"tua confrontação final com aquela\n"
-"terrível besta do inferno. Mas tu\n"
-"avançaste e trouxeste condenação eterna\n"
-"e sofrimento à horda como um verdadeiro\n"
-"herói faria diante de algo tão maligno.\n"
-"\n"
-"Além disso, alguém tinha que pagar pelo \n"
-"que aconteceu com a Daisy, tua coelha de\n"
-"estimação.\n"
-"\n"
-"Mas agora, tu vês mais sofrimento e \n"
-"massacre a tua frente enquanto uma \n"
-"nação de demônios se espalha \n"
-"furiosamente pelas nossas cidades.\n"
-"\n"
-"Próxima paragem, Inferno na Terra!"
 
 # Doom2 after MAP06
 msgid "C1TEXT"
 msgstr ""
-"Entraste nas profundesas do porto\n"
-"espacial infestado. Mas há algo que está \n"
-"errado. Os monstros trouxeram consigo \n"
-"a sua própria realidade, e a tecnologia \n"
-"está sendo subvertida pela presença deles.\n"
-"\n"
-"À frente, vês um posto avançado \n"
-"do inferno, uma zona fortificada. \n"
-"Se conseguires atravessá-la, poderás\n"
-"penetrar no centro infestado da base \n"
-"espacial e achar o interruptor\n"
-"que está mantendo a população da Terra \n"
-"como refém."
 
 # Doom2 after MAP11
 msgid "C2TEXT"
 msgstr ""
-"Ganhaste! A tua vitória permitiu que a\n"
-"humanidade evacuasse a Terra e escapasse\n"
-"desse pesadelo. Agora tu és @[ao_ptb] únic@[ao_ptb]\n"
-"human@[ao_ptb] que resta na face do planeta.\n"
-"Mutações canibais, alienígenas carnivoros \n"
-"e espiritos malignos são teus unicos\n"
-"vizinhos. Sentas-te e esperas pela morte, \n"
-"contente por teres salvo a tua espécie.\n"
-"\n"
-"No entanto, o comando terráqueo envia uma\n"
-"mensagem do espaço: \"Os sensores localizaram\n"
-"a fonte da invasão alienígena. Se fores lá,\n"
-"pode ser que consigas bloquear a entrada.\n"
-"A base alienígena está no centro da tua cidade \n"
-"natal, não muito longe do porto espacial.\"\n"
-"Lentamente e dolorosamente levantas-te\n"
-"e voltas para a luta.\n"
 
 # Doom 2 after MAP20
 msgid "C3TEXT"
 msgstr ""
-"Conseguiste chegar ao centro infestado\n"
-"da cidade, cercado pelos cadáveres dos \n"
-"teus inimigos. Percebeste que não há\n"
-"maneira de destruir a passagem\n"
-"das criaturas por este lado, então tu\n"
-"cerras os dentes e entravessas o portal.\n"
-"\n"
-"Deve haver uma maneira de fechá-la do\n"
-"outro lado. Queres lá saber se tens que\n"
-"atravesar o inferno para chegar lá?"
 
 # Doom2 victory
 msgid "C4TEXT"
 msgstr ""
-"A visão horrenda do maior demônio que\n"
-"alguma vez viste desfaz-se a tua frente\n"
-"depois de lançares mísseis para dentro\n"
-"do seu cérebro exposto. Ele murcha\n"
-"e morre. O resto do seu corpo treme\n"
-"devastantedo completamente vários\n"
-"qulometros da superfície do inferno.\n"
-"\n"
-"Conseguiste. A invasão acabou.\n"
-"A Terra está salva. O inferno, em ruínas.\n"
-"Perguntas para onde os vilões irão\n"
-"quando morrerem agora. Secas o\n"
-"suor da sua testa e começas a longa\n"
-"jornada de volta para casa. Reconstruir\n"
-"a Terra deveria ser bem mais divertido \n"
-"do que arrasá-la.\n"
 
 # Doom2 before MAP31
 msgid "C5TEXT"
 msgstr ""
-"Parabéns, encontraste o nível secreto!\n"
-"Parece ter sido construído por humanos,\n"
-"ao invés de demônios. Perguntas quem\n"
-"são os habitantes desta parte do inferno.\n"
 
 # Doom2 before MAP32
 msgid "C6TEXT"
 msgstr ""
-"Parabéns! Achaste o nível super secreta!\n"
-"É bom que seja canja passar este aqui."
 
 # Plutonia after MAP06
 msgid "P1TEXT"
 msgstr ""
-"Tu festejas em cima da carcaça fumegante\n"
-"do Guardião. Apôs a sua morte, tu arrancas o \n"
-"Acelerador das garras fétidas do Inferno.\n"
-"Acalmaste e olhas a tua volta. Bolas!\n"
-"Deverias ter pelo menos mais um protótipo\n"
-"a funcionar, mas tu não o encontras em lado\n"
-"nenhum. Os demônios devem te-lo levado.\n"
-"\n"
-"Tu precisas de achar o protótipo ou todos os\n"
-"teus esforços serão em vão. Mexe-te\n"
-"luta, mata. Ah sim, mantem-te viv@[ao_ptb] também.\n"
 
 # Plutonia after MAP11
 msgid "P2TEXT"
@@ -6421,7 +6283,7 @@ msgstr ""
 
 # MAP20: Exit to Commons (MAP23).
 msgid "TXT_SUB_LOG101"
-msgstr "Desculpa, meu herói, tudo isto é novo para mim."
+msgstr ""
 
 # MAP20: Path to Conversion Chapel (MAP24).
 msgid "TXT_SUB_LOG102"

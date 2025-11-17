@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: nl\n"
 
 msgid "PRESSKEY"
@@ -14,7 +21,7 @@ msgid "SECRETMESSAGE"
 msgstr "Een geheim is onthuld!"
 
 msgid "D_DEVSTR"
-msgstr "Nutteloze modus AAN."
+msgstr "Nutteloze modus AAN.\n"
 
 msgid "QUITMSG"
 msgstr ""
@@ -57,7 +64,7 @@ msgstr ""
 
 msgid "SWSTRING"
 msgstr ""
-"Dit is de shareware versie van Doom.\n"
+"Dit is de sharewareversie van Doom.\n"
 "\n"
 "Je moet de hele trilogie bestellen.\n"
 "\n"
@@ -86,61 +93,91 @@ msgid "DOSY"
 msgstr "(Druk op Y om te stoppen)"
 
 msgid "QUITMSG1"
-msgstr "Ga alsjeblieft niet weg, er zijn meer demonen te roosteren!"
+msgstr ""
+"Ga alsjeblieft niet weg, er zijn meer\n"
+"demonen te roosteren!"
 
 msgid "QUITMSG2"
-msgstr "Laten we ervoor gaan - dit wordt een bloedbad!"
+msgstr ""
+"Laten we ervoor gaan - dit wordt\n"
+"een bloedbad!"
 
 msgid "QUITMSG3"
-msgstr "Ik zou niet weggaan als ik jou was. DOS is veel erger."
+msgstr ""
+"Ik zou niet weggaan als ik jou was.\n"
+"DOS is veel erger."
 
 msgid "QUITMSG4"
-msgstr "Probeer je te zeggen dat DOS jou beter bevalt dan mij?"
+msgstr ""
+"Probeer je te zeggen dat DOS jou\n"
+"beter bevalt dan mij?"
 
 msgid "QUITMSG5"
-msgstr "Ga nog niet weg - er is een demoon hier om de hoek!"
+msgstr ""
+"Ga nog niet weg - er is een\n"
+"demoon hier om de hoek!"
 
 msgid "QUITMSG6"
-msgstr "Weet je, de volgende keer dat je hier binnenkomt, ga ik je roosteren."
+msgstr ""
+"Weet je, de volgende keer dat je hier\n"
+"binnenkomt, ga ik je roosteren."
 
 msgid "QUITMSG7"
 msgstr "Ga maar, eens kijken of het me interesseert."
 
 # More info here.
 msgid "QUITMSG8"
-msgstr "Wil je stoppen? Dan ben je wel helemaal geschift!"
+msgstr ""
+"Wil je stoppen?\n"
+"Dan heb je een achtste verloren!"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
-"Ga nu niet weg, er wacht een dimensionale schuifelaar op de DOS prompt!"
+"Ga nu niet weg, er wacht een\n"
+"dimensionale schuifelaar op\n"
+"de DOS prompt!"
 
 msgid "QUITMSG10"
-msgstr "Ga hier weg en terug naar je saaie programma's."
+msgstr ""
+"Ga hier weg en terug naar\n"
+"je saaie programma's."
 
 msgid "QUITMSG11"
-msgstr "Als ik je baas was, zou ik je in een minuut doodmaken!"
+msgstr ""
+"Als ik je baas was, zou ik je\n"
+"in een minuut doodmaken!"
 
 msgid "QUITMSG12"
-msgstr "Luister vriend, als je nu weggaat, is je dodental verbeurd!"
+msgstr ""
+"Luister vriend, als je nu weggaat,\n"
+"is je dodental verbeurd!"
 
 msgid "QUITMSG13"
-msgstr "Ga gewoon weg. Als je terugkomt, wacht ik met een knuppel op je."
+msgstr ""
+"Ga gewoon weg. Als je terugkomt,\n"
+"wacht ik met een knuppel op je."
 
 msgid "QUITMSG14"
 msgstr ""
-"Je hebt geluk dat ik je niet sla alleen al omdat je eraan denkt te "
-"vertrekken."
+"Je hebt geluk dat ik je niet sla alleen\n"
+"al omdat je eraan denkt te vertrekken."
 
 msgid "QUITMSG15"
-msgstr "Waar ga je heen?! En de rebellie dan?"
+msgstr ""
+"Waar ga je heen?!\n"
+"En de rebellie dan?"
 
 msgid "QUITMSG16"
-msgstr "De slachting geïnterrumpeerd... Wat flauw!"
+msgstr ""
+"De slachting geïnterrumpeerd...\n"
+"Wat flauw!"
 
 msgid "QUITMSG17"
-msgstr "Maar jij bent de hoop - Mijn enige kans!!"
+msgstr ""
+"Maar jij bent de hoop\n"
+" -- Mijn enige kans!!"
 
 msgid "QUITMSG18"
 msgstr "Niemand loopt weg van Blackbird."
@@ -152,34 +189,52 @@ msgid "QUITMSG20"
 msgstr "Goed hoor, schieten en meteen wegrennen!"
 
 msgid "QUITMSG21"
-msgstr "Je kunt stoppen.... Maar je kan je niet verbergen...."
+msgstr ""
+"Je kunt stoppen...\n"
+"Maar je kan je niet verbergen..."
 
 msgid "QUITMSG22"
-msgstr "Hee, wat is er aan de hand? Zegt mama dat het etenstijd is?"
+msgstr ""
+"Hee, wat is er aan de hand?\n"
+"Zegt mama dat het etenstijd is?"
 
 msgid "QUITMSG23"
-msgstr "Niet stoppen nu, er lopen nog steeds vlezerijen op vrije voeten!"
+msgstr ""
+"Niet stoppen nu, er lopen nog\n"
+"steeds vlezerijen op vrije voeten!"
 
 msgid "QUITMSG24"
-msgstr "Geef niet op - de vlezerijen krijgen de overhand!"
+msgstr ""
+"Geef niet op - de vlezerijen\n"
+"krijgen de overhand!"
 
 msgid "QUITMSG25"
-msgstr "Ga nu niet weg. We hebben je hulp nodig!"
+msgstr ""
+"Ga nu niet weg.\n"
+"We hebben je hulp nodig!"
 
 msgid "QUITMSG26"
-msgstr "Ik hoop dat je gewoon een pauze neemt voor Chex(R) party mix."
+msgstr ""
+"Ik hoop dat je gewoon een\n"
+"pauze neemt voor Chex(R) party mix."
 
 msgid "QUITMSG27"
-msgstr "Niet stoppen nu! We hebben je hulp nodig!"
+msgstr ""
+"Niet stoppen nu!\n"
+"We hebben je hulp nodig!"
 
 msgid "QUITMSG28"
-msgstr "Laat de Intergalactische Federatie van Granen niet in de steek!"
+msgstr ""
+"Laat de Intergalactische Federatie\n"
+"van Granen niet in de steek!"
 
 msgid "QUITMSG29"
-msgstr "De echte Chex(R) Krijger zou niet zo snel opgeven!"
+msgstr ""
+"De echte Chex(R) Krijger\n"
+"zou niet zo snel opgeven!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr "Je hebt iets opgepakt..."
+msgstr "Je hebt iets opgepakt"
 
 msgid "PD_ANY"
 msgstr "Elke sleutel zal deze deur openen"
@@ -218,7 +273,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "Je begint te razen"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Je bent het kwijt"
+msgstr "Je bent gek geworden..."
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Bericht verzonden]"
@@ -274,7 +329,7 @@ msgstr "Versterking ingeschakeld"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr ".... is niet slecht - GM"
+msgstr "... is niet slecht - GM"
 
 msgid "STSTR_CLEV"
 msgstr "Level veranderen..."
@@ -313,7 +368,7 @@ msgid "TXT_CHEATIDDQD"
 msgstr "Je wou valsspelen, hè? Nu ga je dood!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Valsspeler - je verdient geen wapens."
+msgstr "Valsspeler - je verdient geen wapens"
 
 msgid "TXT_CHEATTICKERON"
 msgstr "Ticker aan"
@@ -355,7 +410,7 @@ msgid "TXT_LIGHTER"
 msgstr "Je voelt je lichter"
 
 msgid "TXT_GRAVITY"
-msgstr "Zwaartekracht werkt op je..."
+msgstr "De zwaartekracht drukt je naar beneden"
 
 msgid "TXT_NOTARGET_ON"
 msgstr "Geen doelwit AAN"
@@ -370,10 +425,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Geen Ogre Pantser meer"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Chasecam AAN"
+msgstr "chasecam AAN"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Chasecam UIT"
+msgstr "chasecam UIT"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 slechterik gedood"
@@ -434,7 +489,7 @@ msgid "SPREEKILLSELF"
 msgstr "%o zag er goed uit tot %g zelfmoord pleegde!"
 
 msgid "SPREEOVER"
-msgstr "%o's moordpartij werd beëindigd door %k."
+msgstr "%o's moordpartij werd beëindigd door %k"
 
 msgid "SPREE5"
 msgstr "%k is op een moordpartij!"
@@ -455,13 +510,13 @@ msgid "MULTI2"
 msgstr "Dubbele kill!"
 
 msgid "MULTI3"
-msgstr ""
+msgstr "Meervoudige kill!"
 
 msgid "MULTI4"
-msgstr ""
+msgstr "Ultra kill!"
 
 msgid "MULTI5"
-msgstr ""
+msgstr "Monster gedood!"
 
 msgid "SCORE_BONUS"
 msgstr "Bonus"
@@ -479,7 +534,7 @@ msgid "SCORE_DELAY"
 msgstr "Vertraging (ms)"
 
 msgid "SCORE_FRAGS"
-msgstr ""
+msgstr "Frags"
 
 msgid "SCORE_DEATHS"
 msgstr "Sterfgevallen"
@@ -500,7 +555,7 @@ msgid "TXT_IMKILLS"
 msgstr "Dood"
 
 msgid "TXT_IMITEMS"
-msgstr ""
+msgstr "Items"
 
 msgid "TXT_IMSECRETS"
 msgstr "Geheimen"
@@ -509,26 +564,26 @@ msgid "TXT_IMTIME"
 msgstr "Tijd"
 
 msgid "TXT_IMPAR"
-msgstr ""
+msgstr "Par"
 
 msgid "WI_FINISHED"
 msgstr "Klaar"
 
 msgid "WI_ENTERING"
-msgstr "Volgende"
+msgstr "Binnenkomen"
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
 msgstr "Volgende:"
 
 msgid "AM_MONSTERS"
-msgstr ""
+msgstr "Monsters:"
 
 msgid "AM_SECRETS"
 msgstr "Geheimen:"
 
 msgid "AM_ITEMS"
-msgstr ""
+msgstr "Items:"
 
 msgid "OB_SUICIDE"
 msgstr "%o pleegt zelfmoord."
@@ -616,7 +671,7 @@ msgid "GOTMEDIKIT"
 msgstr "Je hebt een verbandsdoos opgepakt."
 
 msgid "GOTSUPER"
-msgstr ""
+msgstr "Supercharge!"
 
 msgid "GOTBLUECARD"
 msgstr "Je hebt een blauwe sleutelkaart opgepakt."
@@ -640,7 +695,7 @@ msgid "GOTINVUL"
 msgstr "Onkwetsbaarheid!"
 
 msgid "GOTBERSERK"
-msgstr ""
+msgstr "Berserk!"
 
 msgid "GOTINVIS"
 msgstr "Gedeeltelijke onzichtbaarheid"
@@ -649,13 +704,13 @@ msgid "GOTSUIT"
 msgstr "Stralingsbeschermingspak"
 
 msgid "GOTMAP"
-msgstr "Computerkaart"
+msgstr "Computergebiedkaart"
 
 msgid "GOTVISOR"
 msgstr "Lichtversterkingsvizier"
 
 msgid "GOTMSPHERE"
-msgstr ""
+msgstr "MegaSphere!"
 
 msgid "GOTCLIP"
 msgstr "Je hebt een patroon opgepakt."
@@ -721,58 +776,58 @@ msgid "BETA_BONUS4"
 msgstr "Je hebt een onheilige bijbel opgepakt."
 
 msgid "PD_BLUEO"
-msgstr "Je hebt een blauwe sleutel nodig om dit object te activeren."
+msgstr "Je hebt een blauwe sleutel nodig om dit object te activeren"
 
 msgid "PD_REDO"
-msgstr "Je hebt een rode sleutel nodig om dit object te activeren."
+msgstr "Je hebt een rode sleutel nodig om dit object te activeren"
 
 msgid "PD_YELLOWO"
-msgstr "Je hebt een gele sleutel nodig om dit object te activeren."
+msgstr "Je hebt een gele sleutel nodig om dit object te activeren"
 
 msgid "PD_BLUEK"
-msgstr "Je hebt een blauwe sleutel nodig om deze deur te openen."
+msgstr "Je hebt een blauwe sleutel nodig om deze deur te openen"
 
 msgid "PD_REDK"
-msgstr "Je hebt een rode sleutel nodig om deze deur te openen."
+msgstr "Je hebt een rode sleutel nodig om deze deur te openen"
 
 msgid "PD_YELLOWK"
-msgstr "Je hebt een gele sleutel nodig om deze deur te openen."
+msgstr "Je hebt een gele sleutel nodig om deze deur te openen"
 
 msgid "PD_BLUECO"
-msgstr "Je hebt een blauwe sleutelkaart nodig om dit voorwerp te activeren."
+msgstr "Je hebt een blauwe sleutelkaart nodig om dit voorwerp te activeren"
 
 msgid "PD_REDCO"
-msgstr "Je hebt een rode sleutelkaart nodig om dit voorwerp te activeren."
+msgstr "Je hebt een rode sleutelkaart nodig om dit voorwerp te activeren"
 
 msgid "PD_YELLOWCO"
-msgstr "Je hebt een gele sleutelkaart nodig om dit voorwerp te activeren."
+msgstr "Je hebt een gele sleutelkaart nodig om dit voorwerp te activeren"
 
 msgid "PD_BLUESO"
-msgstr "Je hebt een blauwe schedel nodig om dit voorwerp te activeren."
+msgstr "Je hebt een blauwe schedel nodig om dit voorwerp te activeren"
 
 msgid "PD_REDSO"
-msgstr "Je hebt een rode schedel nodig om dit voorwerp te activeren."
+msgstr "Je hebt een rode schedel nodig om dit voorwerp te activeren"
 
 msgid "PD_YELLOWSO"
-msgstr "Je hebt een gele schedel nodig om dit voorwerp te activeren."
+msgstr "Je hebt een gele schedel nodig om dit voorwerp te activeren"
 
 msgid "PD_BLUEC"
-msgstr "Je hebt een blauwe sleutelkaart nodig om deze deur te openen."
+msgstr "Je hebt een blauwe sleutelkaart nodig om deze deur te openen"
 
 msgid "PD_REDC"
-msgstr "Je hebt een rode sleutelkaart nodig om deze deur te openen."
+msgstr "Je hebt een rode sleutelkaart nodig om deze deur te openen"
 
 msgid "PD_YELLOWC"
-msgstr "Je hebt een gele sleutelkaart nodig om deze deur te openen."
+msgstr "Je hebt een gele sleutelkaart nodig om deze deur te openen"
 
 msgid "PD_BLUES"
-msgstr "Je hebt een blauwe schedel nodig om deze deur te openen."
+msgstr "Je hebt een blauwe schedel nodig om deze deur te openen"
 
 msgid "PD_REDS"
-msgstr "Je hebt een rode schedel nodig om deze deur te openen."
+msgstr "Je hebt een rode schedel nodig om deze deur te openen"
 
 msgid "PD_YELLOWS"
-msgstr "Je hebt een gele schedel nodig om deze deur te openen."
+msgstr "Je hebt een gele schedel nodig om deze deur te openen"
 
 msgid "CC_ZOMBIE"
 msgstr "Zombie"
@@ -786,7 +841,7 @@ msgid "CC_HEAVY"
 msgstr "Zwarewapenskerel"
 
 msgid "CC_IMP"
-msgstr ""
+msgstr "Imp"
 
 msgid "CC_DEMON"
 msgstr "Demoon"
@@ -804,7 +859,7 @@ msgid "CC_BARON"
 msgstr "Baron des Hels"
 
 msgid "CC_ARACH"
-msgstr ""
+msgstr "Arachnotron"
 
 msgid "CC_PAIN"
 msgstr "Smartelementaal"
@@ -813,7 +868,7 @@ msgid "CC_REVEN"
 msgstr "Wreker"
 
 msgid "CC_MANCU"
-msgstr ""
+msgstr "Mancubus"
 
 msgid "CC_ARCH"
 msgstr "Aartsgedrocht"
@@ -828,7 +883,7 @@ msgid "CC_HERO"
 msgstr "Onze held"
 
 msgid "FN_SHOTGUN"
-msgstr ""
+msgstr "Sergeant"
 
 msgid "FN_HEAVY"
 msgstr "Machinegeweerman"
@@ -843,7 +898,7 @@ msgid "FN_CYBER"
 msgstr "Cyberdemoon"
 
 msgid "FN_WOLFSS"
-msgstr ""
+msgstr "Nazi"
 
 msgid "FN_DOG"
 msgstr "Hond"
@@ -873,7 +928,7 @@ msgid "TAG_PLASMARIFLE"
 msgstr "Plasmageweer"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "BFG 9000"
 
 msgid "AMMO_CLIP"
 msgstr "Kogels"
@@ -981,7 +1036,7 @@ msgid "OB_SPIDER"
 msgstr "%o stond in ontzag voor de spindemon."
 
 msgid "OB_BABY"
-msgstr "%o werd gedood door een arachnotron"
+msgstr "%o laat een arachnotron %h krijgen."
 
 msgid "OB_CYBORG"
 msgstr "%o werd gespetterd door een cyberdemon."
@@ -1074,7 +1129,7 @@ msgid "TXT_ITEMHEALTH"
 msgstr "Kristallen Flesje"
 
 msgid "TXT_ITEMBAGOFHOLDING"
-msgstr "Rugzak"
+msgstr "Houdzak"
 
 msgid "TXT_ITEMSHIELD1"
 msgstr "Zilveren Schild"
@@ -1163,10 +1218,10 @@ msgid "FN_CLINK"
 msgstr "Sabelklauw"
 
 msgid "FN_DSPARIL"
-msgstr ""
+msgstr "D'Sparil"
 
 msgid "FN_HERETICIMP"
-msgstr ""
+msgstr "Waterspuwer"
 
 msgid "FN_IRONLICH"
 msgstr "IJzeren Lijk"
@@ -1178,10 +1233,10 @@ msgid "FN_MINOTAUR"
 msgstr "Maulotaurus"
 
 msgid "FN_MUMMY"
-msgstr ""
+msgstr "Golem"
 
 msgid "FN_MUMMYLEADER"
-msgstr ""
+msgstr "Nitrogolem"
 
 msgid "FN_SNAKE"
 msgstr "Ophidiaan"
@@ -1370,10 +1425,10 @@ msgid "TXT_ARTISUMMON"
 msgstr "Donkere Dienaar"
 
 msgid "TXT_ARTIEGG2"
-msgstr ""
+msgstr "Porkalator"
 
 msgid "TXT_ARTIPOISONBAG"
-msgstr ""
+msgstr "Flechette"
 
 msgid "TXT_ARTITELEPORTOTHER"
 msgstr "Verbanningsapparaat"
@@ -1391,7 +1446,7 @@ msgid "TXT_ARTIBLASTRADIUS"
 msgstr "Schijf van Afstoting"
 
 msgid "TXT_ARTIHEALINGRADIUS"
-msgstr ""
+msgstr "Mystieke sfeerbezwering"
 
 msgid "TXT_ARTIPUZZSKULL"
 msgstr "Yorick's Schedel"
@@ -1415,10 +1470,10 @@ msgid "TXT_ARTIPUZZGEMBLUE2"
 msgstr "Saffierblauwe Planeet"
 
 msgid "TXT_ARTIPUZZBOOK1"
-msgstr ""
+msgstr "Daemon Codex"
 
 msgid "TXT_ARTIPUZZBOOK2"
-msgstr ""
+msgstr "Liber Oscura"
 
 msgid "TXT_ARTIPUZZSKULL2"
 msgstr "Vuurmasker"
@@ -1490,37 +1545,37 @@ msgid "TXT_BLOODSCOURGE_PIECE"
 msgstr "Segment van Bloedgesel"
 
 msgid "TXT_NEED_KEY_STEEL"
-msgstr "Je hebt de Stalen Sleutel nodig."
+msgstr "Je hebt de Stalen Sleutel nodig"
 
 msgid "TXT_NEED_KEY_CAVE"
-msgstr "Je hebt de Grotsleutel nodig."
+msgstr "Je hebt de Grotsleutel nodig"
 
 msgid "TXT_NEED_KEY_AXE"
-msgstr "Je hebt de Bijlsleutel nodig."
+msgstr "Je hebt de Bijl-sleutel nodig"
 
 msgid "TXT_NEED_KEY_FIRE"
-msgstr "Je hebt de Vuursleutel nodig."
+msgstr "Je hebt de Vuursleutel nodig"
 
 msgid "TXT_NEED_KEY_EMERALD"
-msgstr "Je hebt de Smaragden Sleutel nodig."
+msgstr "Je hebt de Smaragden Sleutel nodig"
 
 msgid "TXT_NEED_KEY_DUNGEON"
-msgstr "Je hebt de Kerkersleutel nodig."
+msgstr "Je hebt de Kerkersleutel nodig"
 
 msgid "TXT_NEED_KEY_SILVER"
-msgstr "Je hebt de Zilveren Sleutel nodig."
+msgstr "Je hebt de Zilveren Sleutel nodig"
 
 msgid "TXT_NEED_KEY_RUSTED"
-msgstr "Je hebt de Geroeste Sleutel nodig."
+msgstr "Je hebt de Verroeste Sleutel nodig"
 
 msgid "TXT_NEED_KEY_HORN"
-msgstr "Je hebt de Hoornsleutel nodig."
+msgstr "Je hebt de Hoornsleutel nodig"
 
 msgid "TXT_NEED_KEY_SWAMP"
-msgstr "Je hebt de Moerassleutel nodig."
+msgstr "Je hebt de Moerassleutel nodig"
 
 msgid "TXT_NEED_KEY_CASTLE"
-msgstr "Je hebt de Kasteelsleutel nodig."
+msgstr "Je hebt de Kasteelsleutel nodig"
 
 msgid "FN_FIREDEMON"
 msgstr "Afriet"
@@ -1529,7 +1584,7 @@ msgid "FN_DEMON1"
 msgstr "Slang"
 
 msgid "FN_ETTIN"
-msgstr ""
+msgstr "Ettin"
 
 msgid "FN_CENTAUR"
 msgstr "Centaurus"
@@ -1541,10 +1596,10 @@ msgid "FN_BISHOP"
 msgstr "Bisschop"
 
 msgid "FN_ICEGUY"
-msgstr ""
+msgstr "Wendigo"
 
 msgid "FN_SERPENT"
-msgstr ""
+msgstr "Stalker"
 
 msgid "FN_WRAITH"
 msgstr "Rover"
@@ -1553,19 +1608,19 @@ msgid "FN_DRAGON"
 msgstr "Doodsdraak"
 
 msgid "FN_KORAX"
-msgstr ""
+msgstr "Korax"
 
 msgid "FN_FBOSS"
-msgstr ""
+msgstr "Zedek"
 
 msgid "FN_MBOSS"
-msgstr ""
+msgstr "Menelkir"
 
 msgid "FN_CBOSS"
-msgstr ""
+msgstr "Traductus"
 
 msgid "FN_HERESIARCH"
-msgstr ""
+msgstr "Kettermeester"
 
 msgid "AMMO_MANA1"
 msgstr "Blauwe Mana"
@@ -1595,7 +1650,7 @@ msgid "TAG_FWEAPHAMMER"
 msgstr "Hamer van Vergelding"
 
 msgid "TAG_FWEAPQUIETUS"
-msgstr ""
+msgstr "Quietus"
 
 msgid "TAG_MWEAPWAND"
 msgstr "Saffieren Toverstok"
@@ -1619,7 +1674,7 @@ msgid "TAG_ARTIBOOSTMANA"
 msgstr "Beker van Macht"
 
 msgid "TAG_ARTIPOISONBAG"
-msgstr ""
+msgstr "Flechette"
 
 msgid "TAG_ARTIPOISONBAG1"
 msgstr "Flechette (giftige wolk)"
@@ -1631,13 +1686,13 @@ msgid "TAG_ARTIPOISONBAG3"
 msgstr "Flechette (granaat)"
 
 msgid "TAG_ARTIHEALINGRADIUS"
-msgstr ""
+msgstr "Mystieke sfeerbezwering"
 
 msgid "TAG_ARTIDEFENDER"
-msgstr ""
+msgstr "Icoon van de verdediger"
 
 msgid "TAG_ARTIPORK"
-msgstr ""
+msgstr "Porkalator"
 
 msgid "TAG_ARTISPEED"
 msgstr "Snelheidslaarzen"
@@ -1670,10 +1725,10 @@ msgid "TAG_ARTIPUZZGEMBLUE2"
 msgstr "Saffierblauwe Planeet (2)"
 
 msgid "TAG_ARTIPUZZBOOK1"
-msgstr ""
+msgstr "Daemon Codex"
 
 msgid "TAG_ARTIPUZZBOOK2"
-msgstr ""
+msgstr "Liber Oscura"
 
 msgid "TAG_ARTIPUZZSKULL2"
 msgstr "Vuurmasker"
@@ -1872,7 +1927,7 @@ msgid "TXT_SCANNER"
 msgstr "Je hebt de scanner opgepakt."
 
 msgid "TXT_NEEDMAP"
-msgstr "De scanner werkt niet zonder een kaart!"
+msgstr "De scanner werkt niet zonder een kaart!\n"
 
 msgid "TXT_PRISONPASS"
 msgstr "Je hebt de gevangenispas opgepakt."
@@ -2028,49 +2083,49 @@ msgid "MSG_TALISMANPOWER"
 msgstr "Je hebt superkracht!"
 
 msgid "TXT_NEEDKEY"
-msgstr "Je hebt de sleutel niet."
+msgstr "Je hebt de sleutel niet"
 
 msgid "TXT_NEED_PASSCARD"
-msgstr "Je hebt een doorgangskaart nodig."
+msgstr "Je hebt een doorgangskaart nodig"
 
 msgid "TXT_NEED_PASSCARD_DOOR"
-msgstr "Je hebt een doorgangskaart nodig om deze deur te openen."
+msgstr "Je hebt een doorgangskaart nodig om deze deur te openen"
 
 msgid "TXT_NEED_IDCARD"
-msgstr "Je hebt een ID-kaart nodig."
+msgstr "Je hebt een ID-kaart nodig"
 
 msgid "TXT_NEED_PRISONKEY"
-msgstr "Je hebt de sleutel van de gevangenis niet."
+msgstr "Je hebt de sleutel van de gevangenis niet"
 
 msgid "TXT_NEED_HANDPRINT"
-msgstr "Handafdruk niet in het bestand."
+msgstr "Handafdruk niet in het bestand"
 
 msgid "TXT_NEED_GOLDKEY"
-msgstr "Je hebt de gouden sleutel nodig."
+msgstr "Je hebt de Gouden Sleutel nodig"
 
 msgid "TXT_NEED_IDBADGE"
-msgstr "Je hebt een ID-badge nodig."
+msgstr "Je hebt een ID-badge nodig"
 
 msgid "TXT_NEED_IDBADGE_DOOR"
-msgstr "Je hebt een ID-badge nodig om deze deur te openen."
+msgstr "Je hebt een ID-badge nodig om deze deur te openen"
 
 msgid "TXT_NEED_SILVERKEY"
-msgstr "Je hebt de zilveren sleutel nodig."
+msgstr "Je hebt de Zilveren Sleutel nodig"
 
 msgid "TXT_NEED_BRASSKEY"
-msgstr "Je hebt de messing sleutel nodig."
+msgstr "Je hebt de Koper-sleutel nodig"
 
 msgid "TXT_NEED_REDCRYSTAL"
-msgstr "Je hebt de rode kristallen sleutel nodig."
+msgstr "Je hebt de Rode Kristal nodig"
 
 msgid "TXT_NEED_BLUECRYSTAL"
-msgstr "Je hebt de blauwe kristallen sleutel nodig."
+msgstr "Je hebt de Blauwe Kristal nodig"
 
 msgid "TXT_RETAIL_ONLY"
-msgstr "Deze ruimte is alleen beschikbaar in de verkoopversie van Strife."
+msgstr "Deze ruimte is alleen beschikbaar in de verkoopversie van Strife"
 
 msgid "TXT_DOES_NOT_WORK"
-msgstr "Dat lijkt niet te werken."
+msgstr "Dat lijkt niet te werken"
 
 msgid "TXT_NEED_CHALICE"
 msgstr "Je hebt de beker nodig!"
@@ -2113,7 +2168,7 @@ msgid "TAG_GLAUNCHER2"
 msgstr "Granaatwerper"
 
 msgid "TAG_SIGIL"
-msgstr ""
+msgstr "Sigil"
 
 msgid "TAG_COIN"
 msgstr "Munt"
@@ -2128,7 +2183,7 @@ msgid "TAG_SURGERYKIT"
 msgstr "Chirurgiepakket"
 
 msgid "TAG_BELDINSRING"
-msgstr ""
+msgstr "Ring"
 
 msgid "TAG_OFFERINGCHALICE"
 msgstr "Offerbeker"
@@ -2158,13 +2213,13 @@ msgid "TAG_REPORT"
 msgstr "Verslag"
 
 msgid "TAG_INFO"
-msgstr ""
+msgstr "Info"
 
 msgid "TAG_TARGETER"
 msgstr "Richter"
 
 msgid "TAG_COMMUNICATOR"
-msgstr ""
+msgstr "Communicator"
 
 msgid "TAG_DEGNINORE"
 msgstr "Degnin-erts"
@@ -2182,7 +2237,7 @@ msgid "TAG_PRISONPASS"
 msgstr "Gevangenispas"
 
 msgid "TAG_ALARM"
-msgstr ""
+msgstr "Alarm"
 
 msgid "TAG_AMMOFILLUP"
 msgstr "Munitie"
@@ -2346,10 +2401,10 @@ msgid "TAG_BEGGAR"
 msgstr "Bedelaar"
 
 msgid "TAG_MACIL1"
-msgstr ""
+msgstr "Macil"
 
 msgid "TAG_MACIL2"
-msgstr ""
+msgstr "Macil"
 
 msgid "TAG_MEDIC"
 msgstr "Paramedicus"
@@ -2364,7 +2419,7 @@ msgid "TAG_RATBUDDY"
 msgstr "Rattenvriendje"
 
 msgid "TAG_REBEL"
-msgstr ""
+msgstr "Rebel"
 
 msgid "TAG_TEMPLAR"
 msgstr "Tempelier"
@@ -2481,16 +2536,16 @@ msgid "TXT_DESTROYED_CONVERTER"
 msgstr "Je hebt de Converter vernietigd!"
 
 msgid "TXT_COMPLETED_TRAINING"
-msgstr "Gefeliciteerd! Je hebt de training voltooid."
+msgstr "Gefeliciteerd! Je hebt het trainingsgedeelte voltooid"
 
 msgid "TXT_QUEST_14"
-msgstr "Je hebt de Crystal opgeblazen."
+msgstr "Je hebt de Kristal opgeblazen"
 
 msgid "TXT_QUEST_16"
-msgstr "Je hebt de Gates opgeblazen."
+msgstr "Je hebt de Hekken opgeblazen"
 
 msgid "TXT_QUEST_27"
-msgstr "Je hebt de computer opgeblazen."
+msgstr "Je hebt de Computer opgeblazen"
 
 msgid "TXT_KILLED_BISHOP"
 msgstr "Je hebt de bisschop vermoord!"
@@ -2563,10 +2618,10 @@ msgid "GOTVEGETABLES"
 msgstr "Je hebt een kom groenten opgepakt."
 
 msgid "GOTSLIMESUIT"
-msgstr "Je hebt een slijtvast pak opgepakt."
+msgstr "Een slijmeendicht pak gevonden"
 
 msgid "GOTCHEXMAP"
-msgstr "Je hebt een computerkaart opgepakt."
+msgstr "Een computerkaart gevonden"
 
 msgid "GOTZORCHRECHARGE"
 msgstr "Je hebt een minizorcherlading opgepakt."
@@ -2581,7 +2636,7 @@ msgid "GOTPROPULSORPACK"
 msgstr "Je hebt een pakket met propulsorladingen opgepakt."
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "Je hebt een phasenzorcherlading opgepakt."
+msgstr "Je hebt een phasenzorcherlading opgepakt"
 
 msgid "GOTPHASINGZORCHERPACK"
 msgstr "Je hebt een pakket met phasenzorcherladingen opgepakt."
@@ -2593,7 +2648,7 @@ msgid "GOTLARGEZORCHERPACK"
 msgstr "Je hebt een pakket met zorcherladingen opgepakt."
 
 msgid "GOTZORCHPACK"
-msgstr "Je hebt en zorchpak opgepakt."
+msgstr "Je hebt een Zorchpak gekocht!"
 
 msgid "GOTLAZDEVICE"
 msgstr "Je hebt het LAZ-apparaat! Woot!"
@@ -2623,7 +2678,7 @@ msgid "TAG_SPOON"
 msgstr "Lepel"
 
 msgid "TAG_SPORK"
-msgstr ""
+msgstr "Super Laarsvork"
 
 msgid "TAG_MINIZORCHER"
 msgstr "Minizorcher"
@@ -2638,7 +2693,7 @@ msgid "TAG_RAPIDZORCHER"
 msgstr "Snelle Zorcher"
 
 msgid "TAG_ZORCHPROPULSOR"
-msgstr ""
+msgstr "Zorch Stuwraket"
 
 msgid "TAG_PHASINGZORCHER"
 msgstr "Fasezorcher"
@@ -2702,7 +2757,7 @@ msgid "CHUSTR_E1M3"
 msgstr "E1M3: Experimenteel laboratorium"
 
 msgid "CHUSTR_E1M4"
-msgstr ""
+msgstr "E1M4: Arboretum"
 
 msgid "CHUSTR_E1M5"
 msgstr "E1M5: Grotten van Bazoik"
@@ -2747,11 +2802,9 @@ msgstr ""
 msgctxt "chex"
 msgid "QLOADNET"
 msgstr ""
-"Wil je het spel snel laden met de naam\n"
+"Je kunt niet snel laden tijdens een netquest!\n"
 "\n"
-"'%s'?\n"
-"\n"
-"Druk op Y of N."
+"Druk op een toets."
 
 msgctxt "chex"
 msgid "QLPROMPT"
@@ -2844,7 +2897,7 @@ msgid "MNU_GAMEFILES"
 msgstr "Spelbestanden"
 
 msgid "MNU_INFO"
-msgstr ""
+msgstr "Info"
 
 msgid "MNU_QUITGAME"
 msgstr "Verlaat spel"
@@ -2872,10 +2925,10 @@ msgid "CSKILL_BABY"
 msgstr "Gemakkelijk doet het"
 
 msgid "CSKILL_EASY"
-msgstr "Niet zo plakkerig."
+msgstr "Niet zo plakkerig"
 
 msgid "CSKILL_NORMAL"
-msgstr "brokken slijm"
+msgstr "Kluwen van slijm"
 
 msgid "CSKILL_HARD"
 msgstr "Uiterst glibberig"
@@ -2887,34 +2940,34 @@ msgid "SSKILL_BABY"
 msgstr "Opleiding"
 
 msgid "SSKILL_EASY"
-msgstr ""
+msgstr "Beginner"
 
 msgid "SSKILL_NORMAL"
 msgstr "Veteraan"
 
 msgid "SSKILL_HARD"
-msgstr ""
+msgstr "Elite"
 
 msgid "SSKILL_NIGHTMARE"
 msgstr "Bloedbad"
 
 msgid "MNU_WETNURSE"
-msgstr "Waar is de verpleegster?"
+msgstr "Gij hebt een Melkmoeder nodig"
 
 msgid "MNU_YELLOWBELLIES"
 msgstr "Verenigd washandje"
 
 msgid "MNU_BRINGEST"
-msgstr "Geef me dat."
+msgstr "Neem Hulle Een"
 
 msgid "MNU_SMITE"
-msgstr "Jij bent de meestermoordenaar."
+msgstr "Gij zijt een Smite-Meister"
 
 msgid "MNU_BLACKPLAGUE"
 msgstr "Geobsedeerd door de pest"
 
 msgid "MNU_SQUIRE"
-msgstr ""
+msgstr "Schildknaap"
 
 msgid "MNU_KNIGHT"
 msgstr "Ridder"
@@ -2923,10 +2976,10 @@ msgid "MNU_WARRIOR"
 msgstr "Krijger"
 
 msgid "MNU_BERSERKER"
-msgstr ""
+msgstr "Berserker"
 
 msgid "MNU_TITAN"
-msgstr ""
+msgstr "Titan"
 
 msgid "MNU_ALTARBOY"
 msgstr "Altaarjongen"
@@ -2955,6 +3008,7 @@ msgstr "Tovenaar"
 msgid "MNU_WARLOCK"
 msgstr "Tovenaar"
 
+#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Aartsbisschop"
 
@@ -2996,7 +3050,7 @@ msgid "MNU_DEMESNE"
 msgstr "Het stagnerende rijk"
 
 msgid "GMPLYMNU_TEAMPLAY"
-msgstr ""
+msgstr "Teamwork"
 
 msgid "GMPLYMNU_TEAMDAMAGE"
 msgstr "Teamschade scalair"
@@ -3041,7 +3095,7 @@ msgid "GMPLYMNU_FASTMONSTERS"
 msgstr "Snelle monsters"
 
 msgid "GMPLYMNU_INSTANTREACTION"
-msgstr ""
+msgstr "Monsters Nachtmerrie Reflexen"
 
 msgid "GMPLYMNU_DEGENERATION"
 msgstr "Degeneratie"
@@ -3080,7 +3134,7 @@ msgid "GMPLYMNU_CHASECAM"
 msgstr "Chasecam cheat"
 
 msgid "GMPLYMNU_DONTCHECKAMMO"
-msgstr "Controleer munitie op wapenschakelaars."
+msgstr "Controleer munitie voor wapenwissel"
 
 msgid "GMPLYMNU_KILLBOSSSPAWNS"
 msgstr "Icon's dood doodt zijn spawns"
@@ -3182,7 +3236,7 @@ msgid "CMPTMNU_ACTORBEHAVIOR"
 msgstr "Gedrag van de acteur"
 
 msgid "CMPTMNU_NOBLOCKFRIENDS"
-msgstr "Vriendelijke monsters worden niet geblokkeerd."
+msgstr "Vriendelijke monsters worden niet geblokkeerd"
 
 msgid "CMPTMNU_LIMITPAIN"
 msgstr "Beperk de Verloren Zielen van Pijn Elementairs"
@@ -3218,10 +3272,10 @@ msgid "CMPTMNU_MAPACTIONBEHAVIOR"
 msgstr "Kaart/Actiegedrag"
 
 msgid "CMPTMNU_USEBLOCKING"
-msgstr "Alle speciale lijnen kunnen <gebruik> blokkeren."
+msgstr "Alle speciale lijnen kunnen <gebruik> blokkeren"
 
 msgid "CMPTMNU_ANYBOSSDEATH"
-msgstr "Laat een eventuele bossdood voor een speciaal niveau toe...."
+msgstr "Sta elke baasdood toe voor het niveau speciaal"
 
 msgid "CMPTMNU_NODOORLIGHT"
 msgstr "BOOM-deurlichteffect uitschakelen"
@@ -3305,7 +3359,7 @@ msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Gebruik originele geluidsdoelwitverwerking"
 
 msgid "CMPTMNU_TELEPORT"
-msgstr "De gescripte teleports leiden niet tot acties in de sector."
+msgstr "Gescripte teleports activeren geen sectoracties"
 
 msgid "CMPTMNU_PUSHWINDOW"
 msgstr "Niet-blokkerende lijnen kunnen worden geduwd"
@@ -3425,7 +3479,7 @@ msgid "MAPCOLORMNU_BACKCOLOR"
 msgstr "Achtergrond"
 
 msgid "MAPCOLORMNU_YOURCOLOR"
-msgstr ""
+msgstr "Jij"
 
 msgid "MAPCOLORMNU_WALLCOLOR"
 msgstr "1-zijdige wanden"
@@ -3479,7 +3533,7 @@ msgid "MAPCOLORMNU_THINGCOLOR"
 msgstr "Acteurs"
 
 msgid "MAPCOLORMNU_MONSTERCOLOR"
-msgstr ""
+msgstr "Monsters"
 
 msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
 msgstr "Niet-tellende Monsters"
@@ -3833,7 +3887,7 @@ msgid "SCALEMNU_MESSAGES"
 msgstr "Berichten"
 
 msgid "SCALEMNU_CONSOLE"
-msgstr ""
+msgstr "Console"
 
 msgid "SCALEMNU_STATBAR"
 msgstr "Statusbalk"
@@ -3944,7 +3998,7 @@ msgid "NETMNU_HOSTOPTIONS"
 msgstr "Verhuurders opties"
 
 msgid "NETMNU_EXTRATICS"
-msgstr ""
+msgstr "Extra tics"
 
 msgid "NETMNU_TICBALANCE"
 msgstr "Latency balans"
@@ -3968,7 +4022,7 @@ msgid "OPTVAL_PARTICLES"
 msgstr "Deeltjes"
 
 msgid "OPTVAL_SPRITES"
-msgstr ""
+msgstr "Sprites"
 
 msgid "OPTVAL_SPRITESPARTICLES"
 msgstr "Sprites & Deeltjes"
@@ -4011,10 +4065,10 @@ msgid "OPTVAL_BOTH"
 msgstr "Beide"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Speler"
@@ -4149,25 +4203,25 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Alleen monsters"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Oud"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (streng)"
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (streng)"
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (streng)"
@@ -4179,7 +4233,7 @@ msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (streng)"
 
 msgid "OPTVAL_ZDOOM2063"
-msgstr ""
+msgstr "ZDoom 2.0.63"
 
 msgid "OPTVAL_ALLUNACKNOWLEDGED"
 msgstr "Allemaal onbekend"
@@ -4200,10 +4254,10 @@ msgid "OPTVAL_HWPOLY"
 msgstr "Hardware versneld"
 
 msgid "OPTVAL_SWDOOM"
-msgstr ""
+msgstr "Doom Software Renderer"
 
 msgid "OPTVAL_SWDOOMTC"
-msgstr ""
+msgstr "True Color SW-renderer"
 
 msgid "OPTVAL_DEDICATED"
 msgstr "Hoogwaardige prestaties"
@@ -4212,7 +4266,7 @@ msgid "OPTVAL_INTEGRATED"
 msgstr "Energiebesparing"
 
 msgid "OPTVAL_VANILLA"
-msgstr ""
+msgstr "Vanille"
 
 msgid "OPTVAL_VTFZDOOM"
 msgstr "ZDoom (Gedwongen)"
@@ -4233,7 +4287,7 @@ msgid "OPTVAL_LARGE"
 msgstr "Groot"
 
 msgid "OPTVAL_CONSOLE"
-msgstr ""
+msgstr "Console"
 
 msgid "C_BRICK"
 msgstr "\\casteenrood"
@@ -4314,10 +4368,10 @@ msgid "C_TEAL"
 msgstr "\\czteal"
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Ketter"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
+msgstr "Chex"
 
 msgid "OPTSTR_NOSOUND"
 msgstr "Geen geluid"
@@ -4326,16 +4380,16 @@ msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Geen interpolatie"
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
+msgstr "Spline"
 
 msgid "OPTSTR_OPENAL"
-msgstr ""
+msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
-msgstr ""
+msgstr "Hardware-renderer"
 
 msgid "DSPLYMNU_SWOPT"
-msgstr ""
+msgstr "Software-renderer"
 
 msgid "GLMNU_TITLE"
 msgstr "Hardware Rendering Opties"
@@ -4347,7 +4401,7 @@ msgid "GLMNU_PREFS"
 msgstr "Voorkeuren"
 
 msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr ""
+msgstr "Sprite-randen bijsnijden"
 
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Tekeninglijsten sorteren op textuur"
@@ -4404,7 +4458,7 @@ msgid "GLPREFMNU_FUZZSTYLE"
 msgstr "Fuzz stijl"
 
 msgid "GLPREFMNU_SPRBILLBOARD"
-msgstr ""
+msgstr "Sprite-reclamebord"
 
 msgid "GLPREFMNU_SPRBILLFACECAMERA"
 msgstr "Sprites gezicht camera"
@@ -4416,7 +4470,7 @@ msgid "GLPREFMNU_RENDERQUALITY"
 msgstr "Het teruggeven van kwaliteit"
 
 msgid "GLPREFMNU_VRMODE"
-msgstr ""
+msgstr "Stereo 3D VR"
 
 msgid "GLPREFMNU_VRQUADSTEREO"
 msgstr "Quad Stereo inschakelen"
@@ -4459,10 +4513,10 @@ msgstr "Donker"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
 msgid "OPTVAL_LEGACY"
-msgstr ""
+msgstr "Doom Legacy"
 
 msgid "OPTVAL_SOFTWARE"
-msgstr ""
+msgstr "Software"
 
 msgid "OPTVAL_OPTIMAL"
 msgstr "Optimaal"
@@ -4583,7 +4637,7 @@ msgstr "Teamwisseling is uitgeschakeld!"
 
 # %s is the player and gender sensitive
 msgid "TXT_JOINED_TEAM"
-msgstr "%s zijn bij het %t team gekomen."
+msgstr "%s zijn bij het %t team gekomen"
 
 msgid "TXT_LONER"
 msgstr "%s is nu een eenling."
@@ -4611,8 +4665,8 @@ msgstr "Savegame '%s' is van een andere ZDoom-gebaseerde engine:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Savegame '%s' is van een oudere versie: %d (%e is de oudste ondersteunde "
-"versie)."
+"Savegame '%s' is van een oudere versie: %d "
+"(%e is de oudste ondersteunde versie)"
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4621,8 +4675,8 @@ msgstr ""
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Savegame '%s' is van een nieuwere versie: %d (%e is de hoogst ondersteunde "
-"versie)."
+"Savegame '%s' is van een nieuwere versie: %d "
+"(%e is de hoogst ondersteunde versie)"
 
 msgid "TXT_NOMAPSG"
 msgstr "Savegame '%s' mist de huidige kaart."
@@ -4631,7 +4685,7 @@ msgid "TXT_NOGLOBALSJSON"
 msgstr "%s' is geen geldig savegame: Ontbrekende 'globals.json'."
 
 msgid "TXT_SGINFOERR"
-msgstr "Geen toegang tot savegame info in '%s'."
+msgstr "Kan geen toegang krijgen tot opgeslagen spelinformatie in '%s'"
 
 msgid "TXT_SAVEPENDING"
 msgstr "Een spel opslaan is nog steeds in behandeling."
@@ -4690,7 +4744,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr "Aangepaste inversiekleuren"
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "Aangepaste donkere inversiekleur"
+msgstr "Aangepaste donkere inversiekleur\n"
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr "Aangepaste lichte inversiekleur"
@@ -4717,7 +4771,7 @@ msgstr "Beeldverhouding"
 # as in "Build engine". This should not be translated unless there is a
 # translated name for the engine
 msgid "OPTVAL_BUILD"
-msgstr ""
+msgstr "Bouw"
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4740,7 +4794,7 @@ msgid "OPTVAL_CLASSICZ"
 msgstr "Klassiek ZDoom"
 
 msgid "OPTVAL_MODERN"
-msgstr ""
+msgstr "Modern (WASD)"
 
 msgid "OPTVAL_MODERNLEFT"
 msgstr "Modern (nummeriek toetsenbord)"
@@ -4749,7 +4803,7 @@ msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strikte KEYCONF Wapens/Spelers"
 
 msgid "MISCMNU_CLEANMENU\n"
-msgstr "Klassieke ZDoom-menuschaal"
+msgstr "Klassieke ZDoom-menu-schaalvergroting"
 
 msgid "MISCMNU_WIPERCENT"
 msgstr "Gebruik procenten op het overzichtsscherm"
@@ -4775,13 +4829,13 @@ msgid "TAG_PEASANT"
 msgstr "Onderdaan"
 
 msgid "TAG_REAVER"
-msgstr ""
+msgstr "Reaver"
 
 msgid "TAG_SENTINEL"
-msgstr ""
+msgstr "Sentinel"
 
 msgid "TAG_STALKER"
-msgstr ""
+msgstr "Stalker"
 
 msgid "TAG_BISHOP"
 msgstr "De Bisschop"
@@ -4810,7 +4864,7 @@ msgstr "Monsters en spelers"
 
 # the FOV slider
 msgid "DSPLYMNU_FOV"
-msgstr ""
+msgstr "FOV"
 
 msgid "CMPTMNU_NOMBF21"
 msgstr "MBF21-functies uitschakelen"
@@ -4819,7 +4873,7 @@ msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr "Tijdwidget tonen"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "CMPTMNU_VILEGHOSTS"
 msgstr "Verpletterde monsters worden herrezen als geesten"
@@ -4879,81 +4933,81 @@ msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Start met pistool"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
-msgstr ""
+msgstr "Maak het mogelijk om zombie-spelers te creëren"
 
 msgid "CMPTMNU_FDTELEPORT"
-msgstr ""
+msgstr "Negeer verdieping Z bij teleporteren"
 
 # Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
 # different position than it really is, allowing it to be rendered under the
 # floor despite clipping
 msgid "OPTVAL_ANAMORPHIC"
-msgstr ""
+msgstr "Gedwongen perspectief"
 
 msgid "SNDMNU_FOOTSTEPVOLUME"
-msgstr ""
+msgstr "Voetstapvolume"
 
 msgid "ID24_GOTINCINERATOR"
-msgstr ""
+msgstr "Je hebt de verbrandingsoven!"
 
 # Also known as Heatwave Generator.
 msgid "ID24_GOTCALAMITYBLADE"
-msgstr ""
+msgstr "Je hebt het rampzalige zwaard! Geweldig!"
 
 msgid "ID24_GOTFUELCAN"
-msgstr ""
+msgstr "Een jerrycan opgehaald."
 
 msgid "ID24_GOTFUELTANK"
-msgstr ""
+msgstr "Een brandstoftank opgehaald."
 
 msgid "TAG_ID24INCINERATOR"
-msgstr ""
+msgstr "Verbrandingsoven"
 
 msgid "TAG_ID24CALAMITYBLADE"
-msgstr ""
+msgstr "Rampspoedzwaard"
 
 msgid "AMMO_ID24FUEL"
-msgstr ""
+msgstr "Brandstofkan"
 
 msgid "AMMO_ID24FUELTANK"
-msgstr ""
+msgstr "Brandstoftank"
 
 msgid "ID24_CC_GHOUL"
-msgstr ""
+msgstr "Ghoul"
 
 msgid "ID24_CC_BANSHEE"
-msgstr ""
+msgstr "Banshee"
 
 # Also known as Plasmaguy.
 msgid "ID24_CC_SHOCKTROOPER"
-msgstr ""
+msgstr "Shocktrooper"
 
 msgid "ID24_CC_MINDWEAVER"
-msgstr ""
+msgstr "Mindweaver"
 
 msgid "ID24_CC_VASSAGO"
-msgstr ""
+msgstr "Vassago"
 
 msgid "ID24_CC_TYRANT"
-msgstr ""
+msgstr "Tiran"
 
 msgid "ID24_OB_GHOUL"
-msgstr ""
+msgstr "%o ving de energiebal van een ghoul."
 
 msgid "ID24_OB_BANSHEE"
-msgstr ""
+msgstr "%o werd beëindigd door een banshee."
 
 msgid "ID24_OB_SHOCKTROOPER"
-msgstr ""
+msgstr "%o werd gesmolten door een shocktrooper."
 
 msgid "ID24_OB_MINDWEAVER"
-msgstr ""
+msgstr "%o werd neergeslagen door een mindweaver."
 
 msgid "ID24_OB_VASSAGO"
-msgstr ""
+msgstr "%o werd verschroeid door een vassago."
 
 msgid "ID24_OB_TYRANT"
-msgstr ""
+msgstr "%o werd door een tiran aan stukken geblazen."
 
 msgid "AUTOMAPMNU_SHOWLEVELNAME"
 msgstr "Toon kaart naam"
@@ -4961,246 +5015,249 @@ msgstr "Toon kaart naam"
 # As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
 # Strife
 msgid "CNTRLMNU_INVENTORY_HOTKEYS"
-msgstr ""
+msgstr "Inventaris sneltoetsen"
 
 msgid "JOYMNU_HAPTICS"
-msgstr ""
+msgstr "Sterkte van haptische feedback"
 
 msgid "JOYMNU_CURVE"
-msgstr ""
+msgstr "Responscurve"
 
 msgid "JOYMNU_THRESHOLD"
-msgstr ""
+msgstr "Digitale drempel"
 
 msgid "OPTVAL_LINEAR"
-msgstr ""
+msgstr "Lineair"
 
 msgid "OPTVAL_QUADRATIC"
-msgstr ""
+msgstr "Kwadratisch"
 
 # The type of chat messages the player wants to be visible to them.
 msgid "NETMNU_CHATTYPE"
-msgstr ""
+msgstr "Chattype"
 
 msgid "OPTVAL_DISABLECHAT"
-msgstr ""
+msgstr "Uitgeschakeld"
 
 msgid "OPTVAL_TEAMONLYCHAT"
-msgstr ""
+msgstr "Alleen teamgenoten"
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "Globaal"
 
 # Disables /me functionality in chat when displaying.
 msgid "NETMNU_NOBOLDCHAT"
-msgstr ""
+msgstr "Vetgedrukte tekst in chat uitschakelen"
 
 # Turns off the sound that plays when someone receives a message.
 msgid "NETMNU_NOCHATSND"
-msgstr ""
+msgstr "Chatgeluid uitschakelen"
 
 # Tries to make online games less stuttery.
 msgid "NETMNU_BALANCETICS"
-msgstr ""
+msgstr "Verbindingen stabiliseren"
 
 msgid "NETMNU_LIMITCONVO"
-msgstr ""
+msgstr "Beperk gesprekken tot gastheer"
 
 # Helps stop things like e.g. door open/close spam when playing online.
 msgid "NETMNU_REPEATCOOLDOWN"
-msgstr ""
+msgstr "Koel af bij herhaalbare acties"
 
 msgid "NETMNU_DISABLEPAUSE"
-msgstr ""
+msgstr "Pauzeren uitschakelen"
 
 msgid "OPTVAL_HOSTONLY"
-msgstr ""
+msgstr "Alleen gastheer"
 
 # Type of vote system to use to bypass intermissions when playing online.
 msgid "NETMNU_READYTYPE"
-msgstr ""
+msgstr "Type pauze overslaan"
 
 msgid "OPTVAL_VOTE"
-msgstr ""
+msgstr "Stem"
 
 msgid "OPTVAL_ANYONE"
-msgstr ""
+msgstr "Iedereen"
 
 # If this percent of players or more are ready, starts a countdown when in
 # Vote intermission skip mode.
 msgid "NETMNU_READYPERCENT"
-msgstr ""
+msgstr "Stemmen Overslaan Percentage"
 
 msgid "NETMNU_READYCOUNTDOWN"
-msgstr ""
+msgstr "Aftellen tot stemming (seconden)"
 
 # Forces a cool down between chat messages for all players when playing
 # online.
 msgid "NETMNU_CHATSLOMO"
-msgstr ""
+msgstr "Chat Slow Mode (seconden)"
 
 msgid "JOYMNU_HAPTRIGGERS"
-msgstr ""
+msgstr "Haptische triggers inschakelen"
 
 msgid "OPTMNU_HAPTICS"
-msgstr ""
+msgstr "Haptische opties"
 
 # How the engine should handle haptics in old mods
 msgid "HAPMNU_COMPAT"
-msgstr ""
+msgstr "Compatibiliteitsniveau voor haptische feedback"
 
 msgid "OPTVAL_MATCH"
-msgstr ""
+msgstr "Wedstrijd"
 
 msgid "OPTVAL_WARN"
-msgstr ""
+msgstr "Waarschuwen"
 
 msgid "HAPMNU_OPTIONS"
-msgstr ""
+msgstr "Haptische feedbackbronnen aanpassen"
 
 # Rumble when using ui elements
 msgid "HAPMNU_OPT_MENU"
-msgstr ""
+msgstr "Van het gebruik van menu's"
 
 # Rumble when doing things such as pressing buttons and firing weapon
 msgid "HAPMNU_OPT_ACTION"
-msgstr ""
+msgstr "Van actie ondernemen"
 
 # Rumble when dying and getting hurt
 msgid "HAPMNU_OPT_DAMAGE"
-msgstr ""
+msgstr "Door schade te ontvangen"
 
 # Rumble from bumping into things, crossing lines, and quakes
 msgid "HAPMNU_OPT_WORLD"
-msgstr ""
+msgstr "Door interactie met de wereld"
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "Pauzeren"
 
 msgid "TAG_BACKPACK"
-msgstr ""
+msgstr "Rugzak"
 
 msgid "TAG_ARMORBONUS"
-msgstr ""
+msgstr "Geestelijke wapenrusting"
 
 msgid "TAG_GREENARMOR"
-msgstr ""
+msgstr "Beveiligingspantser"
 
 msgid "TAG_BLUEARMOR"
-msgstr ""
+msgstr "Gevechtspantser"
 
 msgid "TAG_INVULSPHERE"
-msgstr ""
+msgstr "Onkwetsbaarheid Artefact"
 
 msgid "TAG_SOULSPHERE"
-msgstr ""
+msgstr "Zielsbol"
 
 msgid "TAG_MEGAPSHERE"
-msgstr ""
+msgstr "Mega Sphere"
 
 msgid "TAG_INVISSPHERE"
-msgstr ""
+msgstr "Vervagingartefact"
 
 msgid "TAG_RADSUIT"
-msgstr ""
+msgstr "Stralingspak"
 
 msgid "TAG_VISOR"
-msgstr ""
+msgstr "Lichtversterkend vizier"
 
 msgid "TAG_ALLMAP"
-msgstr ""
+msgstr "Computerkaart"
 
 msgid "TAG_BERSERK"
-msgstr ""
+msgstr "Berserkpakket"
 
 msgid "TAG_HEALTHBONUS"
-msgstr ""
+msgstr "Gezondheidspotion"
 
 msgid "TAG_STIMPACK"
-msgstr ""
+msgstr "Stimpack"
 
 msgid "TAG_MEDIKIT"
-msgstr ""
+msgstr "Medikit"
 
 msgid "TAG_BLUECARD"
-msgstr ""
+msgstr "Blauwe sleutelkaart"
 
 msgid "TAG_YELLOWCARD"
-msgstr ""
+msgstr "Gele sleutelkaart"
 
 msgid "TAG_REDCARD"
-msgstr ""
+msgstr "Rode sleutelkaart"
 
 msgid "TAG_BLUESKULL"
-msgstr ""
+msgstr "Blauwe Schedel Sleutel"
 
 msgid "TAG_YELLOWSKULL"
-msgstr ""
+msgstr "Gele schedel sleutel"
 
 msgid "TAG_REDSKULL"
-msgstr ""
+msgstr "Rode Schedel Sleutel"
 
 msgid "TAG_GLASSOFWATER"
-msgstr ""
+msgstr "Glas water"
 
 msgid "TAG_BOWLOFFRUIT"
-msgstr ""
+msgstr "Fruitkom"
 
 msgid "TAG_BOWLOFVEGETABLES"
-msgstr ""
+msgstr "Kom met groenten"
 
 msgid "TAG_BREAKFAST"
-msgstr ""
+msgstr "Supercharged ontbijt"
 
 msgid "TAG_REPELLENT"
-msgstr ""
+msgstr "Slijmafstotend"
 
 msgid "TAG_CHEXARMOR"
-msgstr ""
+msgstr "Chex Armor"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr ""
+msgstr "Super Chex-pantser"
 
 msgid "TAG_CHEXMAP"
-msgstr ""
+msgstr "Computergebiedkaart"
 
 msgid "TAG_SLIMESUIT"
-msgstr ""
+msgstr "Slijmechtend pak"
 
 msgid "TAG_ZORCHPACK"
-msgstr ""
+msgstr "Zorch-pakket"
 
 msgid "TAG_CBLUEKEY"
-msgstr ""
+msgstr "Blauwe sleutel"
 
 msgid "TAG_CYELLOWKEY"
-msgstr ""
+msgstr "Gele sleutel"
 
 msgid "TAG_CREDKEY"
-msgstr ""
+msgstr "Rode sleutel"
 
 # Option to make the view weapon sprites be lit exactly as the sector's
 # brightness. Without this option, weapon sprites are generally brighter
 # compared to the sector's brightness
 msgid "GLPREFMNU_WPNPURELIGHT"
-msgstr ""
+msgstr "Gebruik sectorhelderheid op wapensprites"
 
 # Mark the player as ready to advance during the intermission in multiplayer
 # games
 msgid "NET_CONTINUE_MKB"
-msgstr ""
+msgstr "Druk op Spatie of LMB om je klaar te maken"
 
 msgid "NET_CONTINUE_CONTROLLER"
-msgstr ""
+msgstr "Druk op A om je klaar te maken"
 
 msgid "NET_CONTINUE_JOYSTICK"
-msgstr ""
+msgstr "Druk op Joy 1 om je voor te bereiden"
 
 msgid "GMPLYMNU_REMEMBERWEAP"
-msgstr ""
+msgstr "Onthoud geselecteerd wapen bij respawn"
 
 msgid "CNTRLMNU_COOPSPYPREV"
-msgstr ""
+msgstr "Coop-spion eerder"
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
-msgstr ""
+msgstr "Duidelijke coop-spion"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Toegankelijkheidsopties"

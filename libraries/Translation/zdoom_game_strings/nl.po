@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: nl\n"
 
 msgid "TXT_D1E1"
@@ -14,7 +21,7 @@ msgid "TXT_D1E2"
 msgstr "De Oevers van de Hel"
 
 msgid "TXT_D1E3"
-msgstr ""
+msgstr "Inferno"
 
 # The episode and levels' names in E4 are taken from the Bible.
 # 
@@ -36,10 +43,10 @@ msgid "TXT_TNT_EP"
 msgstr "Tnt: Evilutie"
 
 msgid "TXT_CHEX_EP"
-msgstr ""
+msgstr "Chex Quest"
 
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: Hangar"
 
 msgid "HUSTR_E1M2"
 msgstr "E1M2: Kerncentrale"
@@ -102,7 +109,7 @@ msgid "HUSTR_E3M2"
 msgstr "E3M2: Moeras der Wanhoop"
 
 msgid "HUSTR_E3M3"
-msgstr ""
+msgstr "E3M3: Chaos"
 
 msgid "HUSTR_E3M4"
 msgstr "E3M4: Huis van Pijn"
@@ -112,15 +119,15 @@ msgstr "E3M5: Onheilige Kathedraal"
 
 # Volcano in Antarctica
 msgid "HUSTR_E3M6"
-msgstr ""
+msgstr "E3M6: Mount Erebus"
 
 msgid "HUSTR_E3M7"
-msgstr ""
+msgstr "E3M7: Limbo"
 
 # Based on the City of Dis, located on the sixth circle of Hell, according to
 # Dante Alighieri's The Divine Comedy
 msgid "HUSTR_E3M8"
-msgstr ""
+msgstr "E3M8: Dis"
 
 msgid "HUSTR_E3M9"
 msgstr "E3M9: Doolhof"
@@ -227,7 +234,7 @@ msgid "HUSTR_20"
 msgstr "Level 20: Ik heb je!"
 
 msgid "HUSTR_21"
-msgstr ""
+msgstr "Niveau 21: Nirvana"
 
 msgid "HUSTR_22"
 msgstr "Level 22: De catacomben"
@@ -245,7 +252,7 @@ msgid "HUSTR_26"
 msgstr "Level 26: De verlaten mijnen"
 
 msgid "HUSTR_27"
-msgstr ""
+msgstr "Level 27: Monster Condo"
 
 msgid "HUSTR_28"
 msgstr "Level 28: De geestenwereld"
@@ -257,16 +264,16 @@ msgid "HUSTR_30"
 msgstr "Level 30: Pictogram van de zonde"
 
 msgid "HUSTR_31"
-msgstr ""
+msgstr "Level 31: Wolfenstein"
 
 msgid "HUSTR_32"
-msgstr ""
+msgstr "Niveau 32: Grosse"
 
 msgid "HUSTR_31B"
-msgstr ""
+msgstr "Niveau 31: IDKFA"
 
 msgid "HUSTR_32B"
-msgstr ""
+msgstr "Niveau 32: Scherpzinnig"
 
 msgid "HUSTR_33"
 msgstr "Level 33: Verraad"
@@ -338,7 +345,7 @@ msgid "PHUSTR_13"
 msgstr "Level 13: De crypte"
 
 msgid "PHUSTR_14"
-msgstr ""
+msgstr "Niveau 14: Genesis"
 
 msgid "PHUSTR_15"
 msgstr "Level 15: De schemering"
@@ -355,7 +362,7 @@ msgstr "Level 18: Neurosferen"
 # “NME” read out loud means “enemy”, so translators should consider the
 # translation of “enemy” into their language.
 msgid "PHUSTR_19"
-msgstr ""
+msgstr "Niveau 19: NME"
 
 msgid "PHUSTR_20"
 msgstr "Level 20: Het domein van de dood"
@@ -376,7 +383,7 @@ msgid "PHUSTR_25"
 msgstr "Level 25: De tempel van de duisternis"
 
 msgid "PHUSTR_26"
-msgstr ""
+msgstr "Level 26: Bunker"
 
 msgid "PHUSTR_27"
 msgstr "Level 27: Antichrist"
@@ -391,7 +398,7 @@ msgid "PHUSTR_30"
 msgstr "Level 30: De poort van de hel"
 
 msgid "PHUSTR_31"
-msgstr ""
+msgstr "Niveau 31: Cyberden"
 
 msgid "PHUSTR_32"
 msgstr "Level 32: Ga ervoor"
@@ -461,7 +468,7 @@ msgid "THUSTR_21"
 msgstr "Level 21: Administratief centrum"
 
 msgid "THUSTR_22"
-msgstr ""
+msgstr "Niveau 22: Leefgebied"
 
 msgid "THUSTR_23"
 msgstr "Level 23: Maanmijnbouw project"
@@ -473,13 +480,13 @@ msgid "THUSTR_25"
 msgstr "Level 25: Het baron's gebouw"
 
 msgid "THUSTR_26"
-msgstr ""
+msgstr "Level 26: Ballistyx"
 
 msgid "THUSTR_27"
 msgstr "Level 27: Pijn in de bergen"
 
 msgid "THUSTR_28"
-msgstr ""
+msgstr "Niveau 28: Heck"
 
 msgid "THUSTR_29"
 msgstr "Level 29: Rivier Styx"
@@ -599,7 +606,7 @@ msgid "HHUSTR_E4M8"
 msgstr "Verbrijzelde brug"
 
 msgid "HHUSTR_E4M9"
-msgstr ""
+msgstr "Mausoleum"
 
 msgid "HHUSTR_E5M1"
 msgstr "Okerkliffen"
@@ -614,7 +621,7 @@ msgid "HHUSTR_E5M4"
 msgstr "Binnenplaats"
 
 msgid "HHUSTR_E5M5"
-msgstr ""
+msgstr "Hydratyr"
 
 msgid "HHUSTR_E5M6"
 msgstr "Zuilengalerij"
@@ -806,10 +813,10 @@ msgid "TXT_HEXEN_MAP22"
 msgstr "Kasteel van verdriet"
 
 msgid "TXT_HEXEN_MAP23"
-msgstr ""
+msgstr "Galg"
 
 msgid "TXT_HEXEN_MAP24"
-msgstr ""
+msgstr "Effluvium"
 
 msgid "TXT_HEXEN_MAP25"
 msgstr "Kerkers"
@@ -818,7 +825,7 @@ msgid "TXT_HEXEN_MAP26"
 msgstr "Woeste tuin"
 
 msgid "TXT_HEXEN_MAP35"
-msgstr ""
+msgstr "Necropolis"
 
 msgid "TXT_HEXEN_MAP36"
 msgstr "Zedek's graf"
@@ -830,7 +837,7 @@ msgid "TXT_HEXEN_MAP38"
 msgstr "Traductus' graf"
 
 msgid "TXT_HEXEN_MAP39"
-msgstr ""
+msgstr "Vivarium"
 
 msgid "TXT_HEXEN_MAP40"
 msgstr "Donkere beproeving"
@@ -866,7 +873,7 @@ msgid "TXT_HEXDD_MAP50"
 msgstr "Markt"
 
 msgid "TXT_HEXDD_MAP51"
-msgstr ""
+msgstr "Rustplaats"
 
 msgid "TXT_HEXDD_MAP52"
 msgstr "Orde"
@@ -878,7 +885,7 @@ msgid "TXT_HEXDD_MAP54"
 msgstr "Naaf"
 
 msgid "TXT_HEXDD_MAP55"
-msgstr ""
+msgstr "Kapel"
 
 msgid "TXT_HEXDD_MAP56"
 msgstr "Slachthuis"
@@ -887,7 +894,7 @@ msgid "TXT_HEXDD_MAP57"
 msgstr "Donkere horloge"
 
 msgid "TXT_HEXDD_MAP58"
-msgstr ""
+msgstr "Cloaca"
 
 msgid "TXT_HEXDD_MAP59"
 msgstr "Ijskamer"
@@ -1315,7 +1322,7 @@ msgstr ""
 "Jouw eed van wraak is vervuld, je\n"
 "betreedt het portaal naar je eigen\n"
 "wereld, slechts enkele ogenblikken\n"
-"voordat de koepel  in een miljoen\n"
+"voordat de koepel in een miljoen\n"
 "stukjes uiteenvalt.\n"
 "\n"
 "Maar als D'Sparil's kracht voor altijd\n"
@@ -1327,7 +1334,7 @@ msgstr ""
 "een schreeuw zijn geweest.\n"
 "\n"
 "Maar hoe zit het dan met de andere\n"
-"servenrijders?\n"
+"servenrijders?"
 
 # Heretic Ep.4
 msgid "HE4TEXT"
@@ -1806,13 +1813,13 @@ msgid "TXT_ACS_MAP51_18_DONTT"
 msgstr "Raak mijn gloppy niet aan"
 
 msgid "TXT_ACS_MAP51_19_VORPA"
-msgstr ""
+msgstr "Vorpal?!?!?!"
 
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Geef me wat suiker, schatje."
 
 msgid "TXT_ACS_MAP51_21_DUHUH"
-msgstr ""
+msgstr "Duh-uhhh..."
 
 msgid "TXT_ACS_MAP51_22_FILMI"
 msgstr "Film in een uur?"
@@ -6922,19 +6929,19 @@ msgid "TXT_SPEAKER_ORDER_SERGEANT"
 msgstr "Soldaat van de orde"
 
 msgid "TXT_SPEAKER_ROWAN"
-msgstr ""
+msgstr "Rowan"
 
 msgid "TXT_SPEAKER_FERIS"
-msgstr ""
+msgstr "Feris"
 
 msgid "TXT_SPEAKER_PRISON_GUARD"
 msgstr "Gevangenisbewaker"
 
 msgid "TXT_SPEAKER_JUSTIN"
-msgstr ""
+msgstr "Justin"
 
 msgid "TXT_SPEAKER_MACIL"
-msgstr ""
+msgstr "Macil"
 
 msgid "TXT_SPEAKER_ASSISTANT"
 msgstr "Assistent"
@@ -6953,7 +6960,7 @@ msgid "TXT_SPEAKER_WARDEN_MONTAG"
 msgstr "Directeur Montag"
 
 msgid "TXT_SPEAKER_RICHTER"
-msgstr ""
+msgstr "Richter"
 
 msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
 msgstr "Macil's adviseur"
@@ -6962,10 +6969,10 @@ msgid "TXT_SPEAKER_JUDGE_WOLENICK"
 msgstr "Rechter Wolenick"
 
 msgid "TXT_SPEAKER_TEVICK"
-msgstr ""
+msgstr "Tevick"
 
 msgid "TXT_SPEAKER_HARRIS"
-msgstr ""
+msgstr "Harris"
 
 msgid "TXT_SPEAKER_FOREMAN"
 msgstr "Voorman"
@@ -6974,7 +6981,7 @@ msgid "TXT_SPEAKER_PRISONER"
 msgstr "Gevangene"
 
 msgid "TXT_SPEAKER_SAMMIS"
-msgstr ""
+msgstr "Sammis"
 
 msgid "TXT_SPEAKER_WEAPON_SMITH"
 msgstr "Wapen Smith"
@@ -6998,29 +7005,29 @@ msgid "TXT_SPEAKER_BARKEEP"
 msgstr "Barman"
 
 msgid "TXT_SPEAKER_TIMOTHY"
-msgstr ""
+msgstr "Timotheüs"
 
 msgid "TXT_SPEAKER_JAMES"
-msgstr ""
+msgstr "James"
 
 msgid "TXT_SPEAKER_WORNER"
-msgstr ""
+msgstr "Worner"
 
 msgid "TXT_SPEAKER_BAILEY_GUARD"
-msgstr ""
+msgstr "Bailey-bewaking"
 
 # drone ≈ slave
 msgid "TXT_SPEAKER_DRONE"
-msgstr ""
+msgstr "Drone"
 
 msgid "TXT_SPEAKER_FRONT_GUARD"
 msgstr "Voorwacht"
 
 msgid "TXT_SPEAKER_QUINCY"
-msgstr ""
+msgstr "Quincy"
 
 msgid "TXT_SPEAKER_SERGEANT"
-msgstr ""
+msgstr "Sergeant"
 
 msgid "TXT_SPEAKER_TEMPLE_GUARD"
 msgstr "Tempelwacht"
@@ -7029,10 +7036,10 @@ msgid "TXT_SPEAKER_ORACLE"
 msgstr "Orakel"
 
 msgid "TXT_SPEAKER_ULAINE"
-msgstr ""
+msgstr "Ulaine"
 
 msgid "TXT_SPEAKER_FRONT_SOLDIER"
-msgstr ""
+msgstr "Frontsoldaat"
 
 msgid "TXT_SPEAKER_PROGRAMMER"
 msgstr "Programmeur"
@@ -7044,16 +7051,16 @@ msgid "TXT_SPEAKER_WATCHMAN"
 msgstr "Waker"
 
 msgid "TXT_SPEAKER_KETRICK"
-msgstr ""
+msgstr "Ketrick"
 
 msgid "TXT_SPEAKER_WERAN"
-msgstr ""
+msgstr "Weran"
 
 msgid "TXT_SPEAKER_ADVISOR"
 msgstr "Adviseur"
 
 msgid "TXT_SPEAKER_GEOFF"
-msgstr ""
+msgstr "Geoff"
 
 msgid "TXT_SPEAKER_OVERSEER"
 msgstr "Opziener"
@@ -7067,17 +7074,17 @@ msgid "TXT_SPEAKER_COMPUTER_TECH"
 msgstr "Computertechniek"
 
 msgid "TXT_SPEAKER_MACGUFFIN"
-msgstr ""
+msgstr "MacGuffin"
 
 msgid "TXT_SPEAKER_ARION"
-msgstr ""
+msgstr "Arion"
 
 # This is a compound word. Some languages express this in one word.
 msgid "TXT_SPEAKER_DOCK_WORKER"
 msgstr "Dokwerker"
 
 msgid "TXT_SPEAKER_IRALE"
-msgstr ""
+msgstr "Irale"
 
 msgid "TXT_SPEAKER_CORE_GUARD"
 msgstr "Kernwacht"
@@ -7098,19 +7105,19 @@ msgid "TXT_SPEAKER_ARMORER"
 msgstr "Pantser"
 
 msgid "TXT_SPEAKER_BELDIN"
-msgstr ""
+msgstr "Beldin"
 
 msgid "TXT_SPEAKER_GERARD"
-msgstr ""
+msgstr "Gerard"
 
 msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
 msgstr "Gouverneur Mourel"
 
 msgid "TXT_SPEAKER_BOWYER"
-msgstr ""
+msgstr "Bowyer"
 
 msgid "TXT_SPEAKER_DERWIN"
-msgstr ""
+msgstr "Derwin"
 
 # Menu's intro.
 msgid "TXT_SUB_INTRO1"

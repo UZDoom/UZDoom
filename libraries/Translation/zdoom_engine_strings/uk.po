@@ -2,9 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: uk\n"
 
 msgid "PRESSKEY"
@@ -3269,7 +3277,7 @@ msgid "CMPTMNU_WALLRUN"
 msgstr "Увімкнути Wallrun (швидкий біг біля стін)"
 
 msgid "CMPTMNU_RAVENSCROLL"
-msgstr "Raven скролери використовують  початкову швидкість"
+msgstr "Raven скролери використовують початкову швидкість"
 
 msgid "CMPTMNU_TRACE"
 msgstr "Сектрори що посилаються на себе не блокують постріли"
@@ -4020,10 +4028,10 @@ msgid "OPTVAL_BOTH"
 msgstr "Обидва"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Гравець"
@@ -4158,25 +4166,25 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Тільки монстри"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Старий"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (суворий)"
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (суворий)"
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (суворий)"
@@ -4188,7 +4196,7 @@ msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (суворий)"
 
 msgid "OPTVAL_ZDOOM2063"
-msgstr ""
+msgstr "ZDoom 2.0.63"
 
 msgid "OPTVAL_ALLUNACKNOWLEDGED"
 msgstr "Всі невідомі"
@@ -4323,10 +4331,10 @@ msgid "C_TEAL"
 msgstr "\\czБірюзовий"
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
+msgstr "Chex"
 
 msgid "OPTSTR_NOSOUND"
 msgstr "Без звуку"
@@ -4338,7 +4346,7 @@ msgid "OPTSTR_SPLINE"
 msgstr "Сплайн"
 
 msgid "OPTSTR_OPENAL"
-msgstr ""
+msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Апаратний рендер"
@@ -4468,7 +4476,7 @@ msgstr "Темно"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
 msgid "OPTVAL_LEGACY"
-msgstr ""
+msgstr "Doom Legacy"
 
 msgid "OPTVAL_SOFTWARE"
 msgstr "Програмно"
@@ -4721,7 +4729,7 @@ msgstr "Співвідношення сторін"
 # as in "Build engine". This should not be translated unless there is a
 # translated name for the engine
 msgid "OPTVAL_BUILD"
-msgstr ""
+msgstr "Build"
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4823,7 +4831,7 @@ msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr "Показати віджет часу"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "CMPTMNU_VILEGHOSTS"
 msgstr "Розчавлені монстри воскресають у вигляді привидів"
@@ -4923,23 +4931,23 @@ msgid "AMMO_ID24FUELTANK"
 msgstr "Каністра пального"
 
 msgid "ID24_CC_GHOUL"
-msgstr ""
+msgstr "Гуль"
 
 msgid "ID24_CC_BANSHEE"
-msgstr ""
+msgstr "Банші"
 
 # Also known as Plasmaguy.
 msgid "ID24_CC_SHOCKTROOPER"
-msgstr ""
+msgstr "Штурмовик"
 
 msgid "ID24_CC_MINDWEAVER"
-msgstr ""
+msgstr "Розумовий ткач"
 
 msgid "ID24_CC_VASSAGO"
-msgstr ""
+msgstr "Вассаго"
 
 msgid "ID24_CC_TYRANT"
-msgstr ""
+msgstr "Тиран"
 
 msgid "ID24_OB_GHOUL"
 msgstr ""
@@ -4965,246 +4973,265 @@ msgstr "Показати назву рівня"
 # As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
 # Strife
 msgid "CNTRLMNU_INVENTORY_HOTKEYS"
-msgstr ""
+msgstr "Гарячі клавіші інвентарю"
 
 msgid "JOYMNU_HAPTICS"
-msgstr ""
+msgstr "Сила тактильного відгуку"
 
 msgid "JOYMNU_CURVE"
-msgstr ""
+msgstr "Крива відгуку"
 
 msgid "JOYMNU_THRESHOLD"
-msgstr ""
+msgstr "Цифровий хід"
 
 msgid "OPTVAL_LINEAR"
-msgstr ""
+msgstr "Лінійно"
 
 msgid "OPTVAL_QUADRATIC"
-msgstr ""
+msgstr "Квадратично"
 
 # The type of chat messages the player wants to be visible to them.
 msgid "NETMNU_CHATTYPE"
-msgstr ""
+msgstr "Тип повідомлень чату"
 
 msgid "OPTVAL_DISABLECHAT"
-msgstr ""
+msgstr "Вимкнено"
 
 msgid "OPTVAL_TEAMONLYCHAT"
-msgstr ""
+msgstr "Тільки команда"
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "Загальні"
 
 # Disables /me functionality in chat when displaying.
+#, fuzzy
 msgid "NETMNU_NOBOLDCHAT"
-msgstr ""
+msgstr "Вимкнути жирний шрифт у чаті"
 
 # Turns off the sound that plays when someone receives a message.
 msgid "NETMNU_NOCHATSND"
-msgstr ""
+msgstr "Вимкнути звук чату"
 
 # Tries to make online games less stuttery.
 msgid "NETMNU_BALANCETICS"
-msgstr ""
+msgstr "Стабілізувати з'єднання"
 
 msgid "NETMNU_LIMITCONVO"
-msgstr ""
+msgstr "Обмежити звернення до хоста"
 
 # Helps stop things like e.g. door open/close spam when playing online.
 msgid "NETMNU_REPEATCOOLDOWN"
-msgstr ""
+msgstr "Обмеження повторюваних дій"
 
 msgid "NETMNU_DISABLEPAUSE"
-msgstr ""
+msgstr "Вимкнути паузу"
 
 msgid "OPTVAL_HOSTONLY"
-msgstr ""
+msgstr "Тільки хост"
 
 # Type of vote system to use to bypass intermissions when playing online.
 msgid "NETMNU_READYTYPE"
-msgstr ""
+msgstr "Тип пропуску інтермісії"
 
 msgid "OPTVAL_VOTE"
-msgstr ""
+msgstr "Голосування"
 
 msgid "OPTVAL_ANYONE"
-msgstr ""
+msgstr "Будь хто"
 
 # If this percent of players or more are ready, starts a countdown when in
 # Vote intermission skip mode.
+#, fuzzy
 msgid "NETMNU_READYPERCENT"
-msgstr ""
+msgstr "Відсоток голосів для пропуску голосування"
 
 msgid "NETMNU_READYCOUNTDOWN"
-msgstr ""
+msgstr "Таймер голосування (секунди)"
 
 # Forces a cool down between chat messages for all players when playing
 # online.
 msgid "NETMNU_CHATSLOMO"
-msgstr ""
+msgstr "Повільний режим чату (секунди)"
 
 msgid "JOYMNU_HAPTRIGGERS"
-msgstr ""
+msgstr "Увімкнути тактильні курки"
 
+#, fuzzy
 msgid "OPTMNU_HAPTICS"
-msgstr ""
+msgstr "Налаштування тактильності"
 
 # How the engine should handle haptics in old mods
+#, fuzzy
 msgid "HAPMNU_COMPAT"
-msgstr ""
+msgstr "Рівень сумісності з тактильним зворотним зв'язком"
 
 msgid "OPTVAL_MATCH"
-msgstr ""
+msgstr "Матч"
 
+#, fuzzy
 msgid "OPTVAL_WARN"
-msgstr ""
+msgstr "Попередження"
 
+#, fuzzy
 msgid "HAPMNU_OPTIONS"
-msgstr ""
+msgstr "Налаштування джерел тактильного зворотного зв'язку"
 
 # Rumble when using ui elements
+#, fuzzy
 msgid "HAPMNU_OPT_MENU"
-msgstr ""
+msgstr "Від використання меню"
 
 # Rumble when doing things such as pressing buttons and firing weapon
+#, fuzzy
 msgid "HAPMNU_OPT_ACTION"
-msgstr ""
+msgstr "Від дій в грі"
 
 # Rumble when dying and getting hurt
 msgid "HAPMNU_OPT_DAMAGE"
-msgstr ""
+msgstr "При отриманні шкоди"
 
 # Rumble from bumping into things, crossing lines, and quakes
+#, fuzzy
 msgid "HAPMNU_OPT_WORLD"
-msgstr ""
+msgstr "При взаємодії з оточенням в грі"
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "Пауза"
 
 msgid "TAG_BACKPACK"
-msgstr ""
+msgstr "Рюкзак"
 
 msgid "TAG_ARMORBONUS"
-msgstr ""
+msgstr "Духовна броня"
 
 msgid "TAG_GREENARMOR"
-msgstr ""
+msgstr "Броня охорони"
 
 msgid "TAG_BLUEARMOR"
-msgstr ""
+msgstr "Бойова броня"
 
 msgid "TAG_INVULSPHERE"
-msgstr ""
+msgstr "Артефакт невразливості"
 
+#, fuzzy
 msgid "TAG_SOULSPHERE"
-msgstr ""
+msgstr "Сфера душі"
 
 msgid "TAG_MEGAPSHERE"
-msgstr ""
+msgstr "Мегасфера"
 
+#, fuzzy
 msgid "TAG_INVISSPHERE"
-msgstr ""
+msgstr "Артефакт розмиття"
 
+#, fuzzy
 msgid "TAG_RADSUIT"
-msgstr ""
+msgstr "Антирадіаційний костюм"
 
 msgid "TAG_VISOR"
-msgstr ""
+msgstr "Окуляри нічного бачення"
 
 msgid "TAG_ALLMAP"
-msgstr ""
+msgstr "Комп'ютерна карта"
 
 msgid "TAG_BERSERK"
-msgstr ""
+msgstr "Берсерк"
 
 msgid "TAG_HEALTHBONUS"
-msgstr ""
+msgstr "Зілля здоров'я"
 
 msgid "TAG_STIMPACK"
-msgstr ""
+msgstr "Стімпак"
 
 msgid "TAG_MEDIKIT"
-msgstr ""
+msgstr "Аптечка"
 
 msgid "TAG_BLUECARD"
-msgstr ""
+msgstr "Синя ключ-карта"
 
 msgid "TAG_YELLOWCARD"
-msgstr ""
+msgstr "Жовта ключ-карта"
 
 msgid "TAG_REDCARD"
-msgstr ""
+msgstr "Червона ключ-карта"
 
 msgid "TAG_BLUESKULL"
-msgstr ""
+msgstr "Синій ключ-череп"
 
 msgid "TAG_YELLOWSKULL"
-msgstr ""
+msgstr "Жовтий ключ-череп"
 
 msgid "TAG_REDSKULL"
-msgstr ""
+msgstr "Червоний ключ-череп"
 
 msgid "TAG_GLASSOFWATER"
-msgstr ""
+msgstr "Стакан води"
 
 msgid "TAG_BOWLOFFRUIT"
-msgstr ""
+msgstr "Тарілка фруктів"
 
 msgid "TAG_BOWLOFVEGETABLES"
-msgstr ""
+msgstr "Тарілка овочів"
 
 msgid "TAG_BREAKFAST"
-msgstr ""
+msgstr "Суперзаряджений сніданок"
 
 msgid "TAG_REPELLENT"
-msgstr ""
+msgstr "Репелент проти слизняків"
 
 msgid "TAG_CHEXARMOR"
-msgstr ""
+msgstr "Chex-броня"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr ""
+msgstr "Супер Chex-броня"
 
 msgid "TAG_CHEXMAP"
-msgstr ""
+msgstr "Комп'ютерна карта району"
 
+#, fuzzy
 msgid "TAG_SLIMESUIT"
-msgstr ""
+msgstr "Антислизовий костюм"
 
 msgid "TAG_ZORCHPACK"
-msgstr ""
+msgstr "Зорч-сумка"
 
 msgid "TAG_CBLUEKEY"
-msgstr ""
+msgstr "Синій ключ"
 
 msgid "TAG_CYELLOWKEY"
-msgstr ""
+msgstr "Жовтий ключ"
 
 msgid "TAG_CREDKEY"
-msgstr ""
+msgstr "Червоний ключ"
 
 # Option to make the view weapon sprites be lit exactly as the sector's
 # brightness. Without this option, weapon sprites are generally brighter
 # compared to the sector's brightness
 msgid "GLPREFMNU_WPNPURELIGHT"
-msgstr ""
+msgstr "Використовувати яскравість сектору для спрайтів зброї"
 
 # Mark the player as ready to advance during the intermission in multiplayer
 # games
 msgid "NET_CONTINUE_MKB"
-msgstr ""
+msgstr "Натисніть Пробіл або ЛКМ для готовності"
 
 msgid "NET_CONTINUE_CONTROLLER"
-msgstr ""
+msgstr "Натисніть А для готовності"
 
+#, fuzzy
 msgid "NET_CONTINUE_JOYSTICK"
-msgstr ""
+msgstr "Натисніть Joy 1 для готовності"
 
 msgid "GMPLYMNU_REMEMBERWEAP"
-msgstr ""
+msgstr "Пам'ятати вибрану зброю при відродженні"
 
+#, fuzzy
 msgid "CNTRLMNU_COOPSPYPREV"
-msgstr ""
+msgstr "Камера попереднього гравця"
 
+#, fuzzy
 msgid "CNTRLMNU_COOPSPYCANCEL"
-msgstr ""
+msgstr "Очистити вид від інших гравців"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Параметри доступності"

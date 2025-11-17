@@ -2,26 +2,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-11 22:25+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-11-15 17:51+0000\n"
+"Last-Translator: Arsix Deetwo <r6d2@msn.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/uzdoom/common/es/"
 ">\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: es\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSYN"
-msgstr "Presiona Y o N."
+msgstr "Presiona Y(Si) o N(No)."
 
 msgid "TXT_YES"
 msgstr "Sí"
 
+#, fuzzy
 msgid "TXT_NO"
-msgstr ""
+msgstr "No"
 
 msgid "SAVEDEAD"
 msgstr ""
@@ -61,8 +62,9 @@ msgstr "Mensajes DESACTIVADOS"
 msgid "MSGON"
 msgstr "Mensajes ACTIVADOS"
 
+#, fuzzy
 msgid "TXT_SAY"
-msgstr ""
+msgstr "Decir:"
 
 msgid "TXT_QUITENDOOM"
 msgstr ""

@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:53+0000\n"
+"Last-Translator: William Weber Berrutti <wwberrutti@protonmail.ch>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"uzdoom/harmony/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pt\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "NIGHTMARE"
 msgstr "Você acha que dá conta?\\n\\nAperte Y ou N..."
@@ -170,7 +177,7 @@ msgstr ""
 
 # This text is deliberately empty
 msgid "WI_FINISHED"
-msgstr ""
+msgstr "Este texto está deliberadamente vazio"
 
 # Yellow needs retranslation
 msgid "WI_ENTERING"

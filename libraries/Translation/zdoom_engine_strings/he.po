@@ -2,280 +2,233 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:51+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Greek <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/el/>\n"
-"Language: el\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: el\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : "
+"((n > 10 && n % 10 == 0) ? 2 : 3));\n"
 
 msgid "PRESSKEY"
-msgstr "Πάτα οποιοδήποτε πλήκτρο."
+msgstr ""
 
 msgid "SECRETMESSAGE"
-msgstr "Ένα μυστικό αποκαλύφθηκε!"
+msgstr ""
 
 msgid "D_DEVSTR"
-msgstr "Άχρηστη λειτουργία είναι ΑΝΟΙΧΤΗ"
+msgstr ""
 
 msgid "QUITMSG"
-msgstr "Είσαι σίγουρος ότι θέλεις να κλείσεις αυτο το σπουδαίο παιχνίδι;"
+msgstr ""
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
 msgid "LOADNET"
 msgstr ""
-"Δέν μπορίς να φορτώσεις σε ένα δικτυακό παιχνίδι !\n"
-"\n"
-"Πάτα οπιοδήποτε πλήκτρο."
 
 msgid "QLOADNET"
 msgstr ""
-"Δέν μπορίς να κάνεις γρήγορη φόρτωση σε ένα δικτυακό παιχνίδι !\n"
-"\n"
-"Πάτα οποιδήποτε πλήκτρο."
 
 msgid "QSAVESPOT"
 msgstr ""
-"Δέν έχεις επιλέξει μια θυρίδα γρήγορης αποθήκευσεις ακόμα!\n"
-"\n"
-"Πάτα οποιδήποτε πλήκτρο."
 
 msgid "NEWGAME"
 msgstr ""
-"Δέν μπορείς να ξεκινήσεις ένα νέο παιχνίδι ενώ εισαι σε ένα δικτυακό παιχνίδι.\n"
-"\n"
-"Πάτα οποιδήποτε πλήκτρο."
 
 msgid "NIGHTMARE"
 msgstr ""
-"Είσαι σίγουρος ? Αυτό το επίπεδο δυσκολίας δεν είναι καθόλου δίκαιη.\n"
-"\n"
-"Πάτα Y ή N"
 
 msgid "SWSTRING"
 msgstr ""
-"Αυτή είναι η Shareware έκδοση του Doom.\n"
-"\n"
-"Πρέπει να παραγγείλετε την ολόκληρη τριλογία.\n"
-"\n"
-"Πάτα οποιδήποτε πλήκτρο."
 
 msgid "NETEND"
 msgstr ""
-"Δέν μπορείς να τελειώσεις ένα δικτυακό παιχνίδι!\n"
-"\n"
-"Πάτα οποιδήποτε πλήκτρο."
 
 msgid "ENDGAME"
 msgstr ""
-"Είσαι σίγουρος ότι θέλεις να τελειώσεις το παιχνίδι?\n"
-"\n"
-"Πάτα Y ή N"
 
 msgid "RAVENQUITMSG"
-msgstr "Είσαι σίγουρος ότι θέλεις να φύγεις?\n"
+msgstr ""
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr "Μόνο διαθέσιμο στήν εχγραμμένη έκδοση."
+msgstr ""
 
 msgid "DOSY"
-msgstr "(Πάτα Y για να φύγεις)"
+msgstr ""
 
 msgid "QUITMSG1"
-msgstr "Παρακαλώ μη φύγεις, υπάρχουνε περισσότεροi δαίμονες να ψήσεις!"
+msgstr ""
 
 msgid "QUITMSG2"
-msgstr "Πάεμε να φύγουμε -- έχει γίνει σφαγίο εδώ!"
+msgstr ""
 
 msgid "QUITMSG3"
 msgstr ""
-"Δέν θα έφευγα αμμα είμουνα εσύ.\n"
-"Το DOS είναι πολύ χυρότερο."
 
 msgid "QUITMSG4"
-msgstr "Προσπαθείς να πείς οτι το DOS είναι καλήτερο απο εμένα, σωστά?"
+msgstr ""
 
 msgid "QUITMSG5"
-msgstr "Μη φύγεις ακόμα, είναι ένας δαίμονας πίσω απο αυτή τι γονία!"
+msgstr ""
 
 msgid "QUITMSG6"
-msgstr "Ξέρεις, την επόμενη φορά που θα έρθεις εδώ, θα σε ψήσω."
+msgstr ""
 
 msgid "QUITMSG7"
-msgstr "Φύγε, δες αν νιάζομαι."
+msgstr ""
 
 # More info here.
 msgid "QUITMSG8"
 msgstr ""
-"Θέλεις να φύγεις ?\n"
-"Τότε, έχασες ένα έκτο!"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
-"Μη πας τώρα, υπάρχει ένας διαστατικός τρίκλιστης ο οπίος περιμένει στη DOS "
-"γραμμή εντολών!"
 
 msgid "QUITMSG10"
-msgstr "Βγές απο'δω και πήγαινε πίσω στα βαρετά προγράματα σου."
+msgstr ""
 
 msgid "QUITMSG11"
 msgstr ""
-"Άμα ήμουν το αφεντικό σου, θα σε προκαλούσα σε ενα deathmatch αυτη τη "
-"στιγμή!"
 
 msgid "QUITMSG12"
-msgstr "Κοίτα φίλε, άμα φύγεις τώρα ματαιώσες το σκόρ σου!"
+msgstr ""
 
 msgid "QUITMSG13"
-msgstr "Απλός φύγε. Ο΄ταν επιστρέψεις, θα περιμένω με ένα ρόπαλο."
+msgstr ""
 
 msgid "QUITMSG14"
-msgstr "Είσαι τυχερός που δεν σε χτυπάω που σκέφτεσε να φύγεις"
+msgstr ""
 
 msgid "QUITMSG15"
-msgstr "Που πάς ? Τί θα συμβεί στην επανάσταση ?"
+msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
 
 msgid "QUITMSG17"
-msgstr "Αλλά εσύ είσε η ελπίδα -- η μόνη μου ευκαιρία!"
+msgstr ""
 
 msgid "QUITMSG18"
-msgstr "Κανένας δεν παρατάει τον Μπλακμπερτ."
+msgstr ""
 
 msgid "QUITMSG19"
-msgstr "Νόμιζα οτι είσουν διαφορετικός..."
+msgstr ""
 
 msgid "QUITMSG20"
-msgstr "Καλά! Απλώς σκότοσε και φύγε!"
+msgstr ""
 
 msgid "QUITMSG21"
 msgstr ""
-"Μπορείς να φύγεις...\n"
-"αλλά δεν μπορείς να κρυφτείς..."
 
 msgid "QUITMSG22"
 msgstr ""
-"Οοοοο, τι είναι το πρόβλημα?\n"
-"Η μαμμάκα λέι οτι είναι ώρα για βραδινο?"
 
 msgid "QUITMSG23"
-msgstr "Μή παραιτηθέις, υπάρχουνε ακόμα φλέμοιντς τα οπία έχουν αποδράσει!"
+msgstr ""
 
 msgid "QUITMSG24"
-msgstr "Μή παραιτηθέις -- τα φλέμοιντς θα νικήσουνε!"
+msgstr ""
 
 msgid "QUITMSG25"
 msgstr ""
-"Μή φύγεις τώρα.\n"
-"Χρειαζόμαστε τη βοήθεια σου!"
 
 msgid "QUITMSG26"
-msgstr "Ελπίζω οτι απλώς κάνεις ενα διάλειμμα για ένα Chex (R) μέιγμα."
+msgstr ""
 
 msgid "QUITMSG27"
 msgstr ""
-"Μή κάνεις έξοδο τώρα.\n"
-"Χρειαζόμαστε τη βοήθεια σου!"
 
 msgid "QUITMSG28"
-msgstr "Μήν εγκαταλήψεις την Διαγαλαξιακή Ομοσπονδία των Δημητριακών!"
+msgstr ""
 
 msgid "QUITMSG29"
-msgstr "Ο αληθινός Chex(R) Πολεμιστής δέν θα έφευγε τοσο γρήγορα!"
+msgstr ""
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr "Πήρες ένα πράγμα."
+msgstr ""
 
 msgid "PD_ANY"
-msgstr "Οποιδήποτε κλειδί θα ανοίξει τη πόρτα"
+msgstr ""
 
 msgid "PD_ANYOBJ"
-msgstr "Οποιδήποτε κλειδί θα ενεργοποιήσει αυτό το αντικείμενο"
+msgstr ""
 
 msgid "PD_ALL3"
-msgstr "Χρειάζεσαι όλα τα τρία κλειδία για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_ALL3O"
 msgstr ""
-"Χρειάζεσε όλα τα τρία κλειδιά για να ενεργοποιήσεις αυτό το αντικείμενο"
 
 msgid "PD_ALL6"
-msgstr "Χρειάζεσαι όλα τα έξι κλειδία για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_ALL6O"
 msgstr ""
-"Χρειάζεσε όλα τα έξι κλειδιά για να ενεργοποιήσεις αυτό το αντικείμενο"
 
 msgid "PD_ALLKEYS"
-msgstr "Χρειάζεσαι όλα τα κλειδία"
+msgstr ""
 
 msgid "HUSTR_MSGU"
-msgstr "[Δέν στάλθηκε]"
+msgstr ""
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr "Μουρμουράς στον εαυτό σου"
+msgstr ""
 
 msgid "HUSTR_TALKTOSELF2"
-msgstr "Πιός είναι εκεί?"
+msgstr ""
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr "Φοβήζεις τον εαυτό σου"
+msgstr ""
 
 msgid "HUSTR_TALKTOSELF4"
-msgstr "Αρχίζεις να ουρλίαζεις"
+msgstr ""
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Το έχασες"
+msgstr ""
 
 msgid "HUSTR_MESSAGESENT"
-msgstr "[Στάλθηκε]"
+msgstr ""
 
 msgid "STSTR_MUS"
-msgstr "Άλλαξε μουσική"
+msgstr ""
 
 msgid "STSTR_NOMUS"
-msgstr "Αδήνατη επιλογή"
+msgstr ""
 
 msgid "STSTR_DQDON"
-msgstr "Θεική λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "STSTR_DQDOFF"
-msgstr "Θεική λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "STSTR_DQD2ON"
-msgstr "Απόλητη θεική λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "STSTR_DQD2OFF"
-msgstr "Απόλητη θεική λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "STSTR_KFAADDED"
-msgstr "Πάρα Πολύ Χαρούμενα Πυρομαχηκά Προστέθηκαν"
+msgstr ""
 
 msgid "STSTR_FAADDED"
-msgstr "Πυρομαχικά (Όχι κλειδία) προστέθηκαν"
+msgstr ""
 
 msgid "STSTR_NCON"
-msgstr "Noclip λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "STSTR_NCOFF"
-msgstr "Noclip λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "STSTR_NC2ON"
-msgstr "Δέυτερη noclip λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "STSTR_NC2OFF"
-msgstr "Noclip λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -292,811 +245,809 @@ msgstr ""
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... δέν είναι χάλια - GW"
+msgstr ""
 
 msgid "STSTR_CLEV"
-msgstr "Αλλαγή πίστας..."
+msgstr ""
 
 msgid "TXT_BUDDHAON"
-msgstr "Λειτουργία Βουδα ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Λειτουργία Βουδα ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Λειτουργία Απόλητου Βουδα ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Λειτουργία Απόλητου Βουδα ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Δύναμη ενεργοποιημένη"
+msgstr ""
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Δύναμη άπενεργοποιημένη"
+msgstr ""
 
 msgid "TXT_CHEATHEALTH"
-msgstr "Ολόκληρη υγεία"
+msgstr ""
 
 msgid "TXT_CHEATKEYS"
-msgstr "Όλα τα κλειδία"
+msgstr ""
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Debug ήχου ενεργοποιημένη"
+msgstr ""
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug ήχου άπενεργοποιημένη"
+msgstr ""
 
 msgid "TXT_CHEATIDDQD"
-msgstr "Προσπαθείς να εξαπατήσεις, ε? Τώρα πεθένεις!"
+msgstr ""
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Απατεόνα δέν σου αξήζουν όπλα"
+msgstr ""
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Χρονόμετρο ενεργοποιημένο"
+msgstr ""
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Χρονόμετρο άπενεργοποιημένο"
+msgstr ""
 
 msgid "TXT_CHEATARTIFACTS3"
-msgstr "Το πήρες"
+msgstr ""
 
 msgid "TXT_MIDASTOUCH"
-msgstr "Έχεις το αγγιγμα το Μίδα, μωρό."
+msgstr ""
 
 msgid "TXT_GOTSTUFF"
-msgstr "Πήρες τηατ πράγματα !"
+msgstr ""
 
 msgid "TXT_FREEZEON"
-msgstr "Παγομένη λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_FREEZEOFF"
-msgstr "Παγομένη λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_STRANGE"
-msgstr "Νιώθης περίεργα..."
+msgstr ""
 
 msgid "TXT_STRANGER"
-msgstr "Νιώθης ακόμα πιό περίεργα..."
+msgstr ""
 
 msgid "TXT_NOTSTRANGE"
-msgstr "Νιώθης σάν τον εαύτο σου ξανά..."
+msgstr ""
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Μολυβδένιες μπότες ΕΝΕΡΓΟΠΟΙΗΜΈΝΕΣ"
+msgstr ""
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Μολυβδένιες μπότες ΆΠΕΝΕΡΓΟΠΟΙΗΜΕΝΕΣ"
+msgstr ""
 
 msgid "TXT_LIGHTER"
-msgstr "Νιώθης πιο ελαφρής"
+msgstr ""
 
 msgid "TXT_GRAVITY"
-msgstr "Η βαρύτητα σε πιάνει."
+msgstr ""
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Αστόχευτη λειτουργία ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Αστόχευτη λειτουργία ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_ANUBIS_ON"
-msgstr "\"Τρέμε με φόβο!\""
+msgstr ""
 
 msgid "TXT_ANUBIS_OFF"
-msgstr "Καθόλου δρακοντική πανοπλία πια"
+msgstr ""
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Κάμερα τρίτου πρωσώπου ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Κάμερα τρίτου πρωσώπου ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "TXT_BADDIE_KILLED"
-msgstr "Ενας κακός πέθανε"
+msgstr ""
 
 msgid "TXT_BADDIES_KILLED"
-msgstr "%d τον κακόν πέθαναν"
+msgstr ""
 
 msgid "TXT_MONSTER_KILLED"
-msgstr "Ένα τέρας πέθανε"
+msgstr ""
 
 msgid "TXT_MONSTERS_KILLED"
-msgstr "%d τον τεράτων πέθαναν"
+msgstr ""
 
 msgid "TXT_NO_RESURRECT"
-msgstr "Ανάσταση αδύνατη, ο παίχτης δεν είναι πια στο σώμα @[pro4_gr]"
+msgstr ""
 
 msgid "TXT_ALL_ARTIFACTS"
-msgstr "Όλα τα τεχνουργίματα!"
+msgstr ""
 
 msgid "TXT_WHAT_KILL"
-msgstr "Τί θέλεις να σκοτώσεις έξω απο ένα παιχνίδι ?"
+msgstr ""
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Η ιδιότητες ενος παγομένου παίχτη απενεργοποίθηκαν"
+msgstr ""
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Ακολούθηση ΆΠΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Ακολούθηση ΕΝΕΡΓΟΠΟΙΗΜΈΝΗ"
+msgstr ""
 
 msgid "AMSTR_GRIDON"
-msgstr "Πλέχμα ΕΝΕΡΓΟΠΟΙΜΈΝΟ"
+msgstr ""
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Πλέχμα ΆΠΕΝΕΡΓΟΠΟΙΜΈΝΟ"
+msgstr ""
 
 msgid "AMSTR_TEXON"
-msgstr "Γραφικός χάρτης ΕΝΕΡΓΟΠΟΙΜΈΝΟΣ"
+msgstr ""
 
 msgid "AMSTR_TEXOFF"
-msgstr "Γραφικός χάρτης ΑΠΕΝΕΡΓΟΠΟΙΜΈΝΟΣ"
+msgstr ""
 
 msgid "AMSTR_MARKEDSPOT"
-msgstr "Μαρκαρησμένη τοποθεσεία"
+msgstr ""
 
 msgid "AMSTR_MARKSCLEARED"
-msgstr "Όλες η μαρκαρησμένη τοποθεσείες είναι καθαρησμένες"
+msgstr ""
 
 msgid "TXT_FRAGLIMIT"
-msgstr "Το όριο κοματιασμόν έχει φτάσει."
+msgstr ""
 
 msgid "TXT_TIMELIMIT"
-msgstr "Το χρονικό όριο έχει φτάσει."
+msgstr ""
 
 msgid "SPREEKILLSELF"
-msgstr "@[art_gr] %o πήγενε μια χαρά μέχρι που αυτοκτόνησε!"
+msgstr ""
 
 msgid "SPREEOVER"
-msgstr "Ο/Η %k σταμάτησε την ανθρωποκτονία %h %o."
+msgstr ""
 
 msgid "SPREE5"
-msgstr "Ο/Η %k άρχισε μια ανθρωποκτονία!"
+msgstr ""
 
 msgid "SPREE10"
-msgstr "Ο/Η %k είναι σε ξέσπασμα!"
+msgstr ""
 
 msgid "SPREE15"
-msgstr "Ο/Η %k κατακτεί."
+msgstr ""
 
 msgid "SPREE20"
-msgstr "Ο/Η %k είναι ασταμάτητος/η!"
+msgstr ""
 
 msgid "SPREE25"
-msgstr "Ο/Η %k είναι σαν θεός/θεά!"
+msgstr ""
 
 msgid "MULTI2"
-msgstr "Δυπλός Θάνατος!"
+msgstr ""
 
 msgid "MULTI3"
-msgstr "Πολυθάνατος!"
+msgstr ""
 
 msgid "MULTI4"
-msgstr "Υπερθάνατος!"
+msgstr ""
 
 msgid "MULTI5"
-msgstr "Τερατόδες σκοτωμός!"
+msgstr ""
 
 msgid "SCORE_BONUS"
 msgstr ""
 
 msgid "SCORE_COLOR"
-msgstr "Χρώμα"
+msgstr ""
 
 msgid "SCORE_SECRET"
-msgstr "Μυστικό"
+msgstr ""
 
 msgid "SCORE_NAME"
-msgstr "Όνομα"
+msgstr ""
 
 msgid "SCORE_DELAY"
-msgstr "Kαθυστέρηση (μδ)"
+msgstr ""
 
 msgid "SCORE_FRAGS"
-msgstr "Κοματιασμοί"
+msgstr ""
 
 msgid "SCORE_DEATHS"
-msgstr "Θάνατοι"
+msgstr ""
 
 msgid "SCORE_OTHER"
 msgstr ""
 
 msgid "SCORE_MISSED"
-msgstr "Ξεχάστηκαν"
+msgstr ""
 
 msgid "SCORE_TOTAL"
-msgstr "Συνολικό"
+msgstr ""
 
 msgid "SCORE_LVLTIME"
-msgstr "Χρόνος Πίστας"
+msgstr ""
 
 msgid "TXT_IMKILLS"
-msgstr "Σκοτομοί"
+msgstr ""
 
 msgid "TXT_IMITEMS"
-msgstr "Αντεικείμενα"
+msgstr ""
 
 msgid "TXT_IMSECRETS"
-msgstr "Μυστικά"
+msgstr ""
 
 msgid "TXT_IMTIME"
-msgstr "Χρόνος"
+msgstr ""
 
 msgid "TXT_IMPAR"
-msgstr "Μέσος Όρος"
+msgstr ""
 
 msgid "WI_FINISHED"
-msgstr "Ολοκληρώθηκε"
+msgstr ""
 
 msgid "WI_ENTERING"
-msgstr "Είσοδος"
+msgstr ""
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
-msgstr "Τώρα εισέρχεσε στο:"
+msgstr ""
 
 msgid "AM_MONSTERS"
-msgstr "Τέρατα"
+msgstr ""
 
 msgid "AM_SECRETS"
-msgstr "Μυστικά"
+msgstr ""
 
 msgid "AM_ITEMS"
-msgstr "Αντεικείμενα"
+msgstr ""
 
 msgid "OB_SUICIDE"
-msgstr "@[art_gr] %o αυτοκτόνησε"
+msgstr ""
 
 msgid "OB_FALLING"
-msgstr "@[art_gr] %o έπεσε"
+msgstr ""
 
 msgid "OB_CRUSH"
-msgstr "@[art_gr] %o συνθλίφτηκε"
+msgstr ""
 
 msgid "OB_EXIT"
-msgstr "@[art_gr] %o προσπάθησε να φύγει"
+msgstr ""
 
 msgid "OB_WATER"
-msgstr "@[art_gr] %o δέν μπορεί να κολυμπήσει"
+msgstr ""
 
 msgid "OB_SLIME"
-msgstr "@[art_gr] %o μεταλάχθηκε"
+msgstr ""
 
 msgid "OB_LAVA"
-msgstr "@[art_gr] %o έλειοσε"
+msgstr ""
 
 msgid "OB_BARREL"
-msgstr "@[art_gr] %o έσκασε"
+msgstr ""
 
 msgid "OB_SPLASH"
-msgstr "@[art_gr] %o έκατσε στο λάθος σημείο"
+msgstr ""
 
 msgid "OB_R_SPLASH"
-msgstr "@[art_gr] %o έπρεπε να είχε κάτσι πίσω"
+msgstr ""
 
 msgid "OB_ROCKET"
-msgstr "@[art_gr] %o έπρεπε να είχε κάτσι πίσω"
+msgstr ""
 
 msgid "OB_KILLEDSELF"
-msgstr "@[art_gr] %o αυτοκτόνησε"
+msgstr ""
 
 msgid "OB_VOODOO"
-msgstr "@[art_gr] %o πέθανε απο τη δύναμη του βουντου"
+msgstr ""
 
 msgid "OB_MPTELEFRAG"
-msgstr "@[art_gr] %o κοματιάστηκε μέσω τηλεμεταφοράς απο τον/την %k"
+msgstr ""
 
 msgid "OB_MONTELEFRAG"
-msgstr "@[art_gr] %o κοματιάστηκε μέσω τηλεμεταφοράς"
+msgstr ""
 
 msgid "OB_DEFAULT"
-msgstr "@[art_gr] %o πέθανε"
+msgstr ""
 
 msgid "OB_MPDEFAULT"
-msgstr "@[art_gr] %o στοτώθηκε απο τον/την %k"
+msgstr ""
 
 msgid "OB_FRIENDLY1"
-msgstr "Ο/Η %k σκότωσε έναν σύμαχο"
+msgstr ""
 
 # English was changed to remove problematic pronoun referencing the killer
 msgid "OB_FRIENDLY2"
-msgstr "Ο/Η %k φαίνεται να χρειάζετε γυαλία"
+msgstr ""
 
 msgid "OB_FRIENDLY3"
-msgstr "Ο/Η %k πάιρνει έναν κοματιασμό για την άλλη ομάδα."
+msgstr ""
 
 msgid "OB_FRIENDLY4"
-msgstr "Ο/Η %k χάνει ακόμα έναν αλλο φίλο"
+msgstr ""
 
 msgid "GOTARMOR"
-msgstr "Πήρες την πανοπλία."
+msgstr ""
 
 msgid "GOTMEGA"
-msgstr "Πήρες την μέγα πανοπλία!"
+msgstr ""
 
 msgid "GOTHTHBONUS"
-msgstr "Πήρες ένα bonus υγείας."
+msgstr ""
 
 msgid "GOTARMBONUS"
-msgstr "Πήρες ένα bonus πανο.πλίας."
+msgstr ""
 
 msgid "GOTSTIM"
-msgstr "Πήρες ένα μικρό πακέτο υγείας."
+msgstr ""
 
 msgid "GOTMEDINEED"
-msgstr "Πήρες πρώτες βοήθειες που χρειαζόσουνα ΠΆΡΑ ΠΟΛΥ!"
+msgstr ""
 
 msgid "GOTMEDIKIT"
-msgstr "Πήρες πρώτες βοήθειες."
+msgstr ""
 
 msgid "GOTSUPER"
-msgstr "Υπερφόρτοση!"
+msgstr ""
 
 msgid "GOTBLUECARD"
-msgstr "Πήρες ένα μπλε κλειδί."
+msgstr ""
 
 msgid "GOTYELWCARD"
-msgstr "Πήρες ένα κύτρινο κλειδί."
+msgstr ""
 
 msgid "GOTREDCARD"
-msgstr "Πήρες ένα κόκινο κλειδί."
+msgstr ""
 
 msgid "GOTBLUESKUL"
-msgstr "Πήρες ένα μπλε κρανίο."
+msgstr ""
 
 msgid "GOTYELWSKUL"
-msgstr "Πήρες ένα κύτρινο κρανίο."
+msgstr ""
 
 msgid "GOTREDSKUL"
-msgstr "Πήρες ένα κοκινο κρανίο."
+msgstr ""
 
 msgid "GOTINVUL"
-msgstr "Αθανασία!"
+msgstr ""
 
 msgid "GOTBERSERK"
-msgstr "Μανία!"
+msgstr ""
 
 msgid "GOTINVIS"
-msgstr "Ημη-αoρατότητα"
+msgstr ""
 
 msgid "GOTSUIT"
-msgstr "Προστατευτηκή Στολή"
+msgstr ""
 
 msgid "GOTMAP"
-msgstr "Τοπικός Χάρτης"
+msgstr ""
 
 msgid "GOTVISOR"
-msgstr "Νυχτερινή Όραση"
+msgstr ""
 
 msgid "GOTMSPHERE"
-msgstr "Μεγασφαίρα!"
+msgstr ""
 
 msgid "GOTCLIP"
-msgstr "Πήρες ένα κουτάκι σφαιρών."
+msgstr ""
 
 msgid "GOTCLIPBOX"
-msgstr "Πήρες ένα κουτί με σφαίρες."
+msgstr ""
 
 msgid "GOTROCKET"
-msgstr "Πήρες ένα πύραυλο."
+msgstr ""
 
 msgid "GOTROCKBOX"
-msgstr "Πήρες ένα κουτί με πυράυλους."
+msgstr ""
 
 msgid "GOTCELL"
-msgstr "Πήρες ένα κύτταρο ενέργιας."
+msgstr ""
 
 msgid "GOTCELLBOX"
-msgstr "Πήρες ένα πακέτο κύτταρων ενέργιας."
+msgstr ""
 
 msgid "GOTSHELLS"
-msgstr "Πήρες τέσσερεις σφάιρες ντουγεκιόυ."
+msgstr ""
 
 msgid "GOTSHELLBOX"
-msgstr "Πήρες ένα κουτί με σφάιρες ντουγεκιόυ."
+msgstr ""
 
 msgid "GOTBACKPACK"
-msgstr "Πήρες μια τσάντα γεμάτη με πυρομαχικά!"
+msgstr ""
 
 msgid "GOTBFG9000"
-msgstr "Πήρες το BFG9000! ο, ΝΑΊ."
+msgstr ""
 
 msgid "GOTCHAINGUN"
-msgstr "Πήρες το πολυβόλο."
+msgstr ""
 
 msgid "GOTCHAINSAW"
-msgstr "Ένα αλυσοπρίονο! Βρες κρέας!"
+msgstr ""
 
 msgid "GOTLAUNCHER"
-msgstr "Πήρες το πυραβλοβόλο."
+msgstr ""
 
 msgid "GOTPLASMA"
-msgstr "Πήρες το όπλο πλάσματος!"
+msgstr ""
 
 msgid "GOTSHOTGUN"
-msgstr "Πήρες το ντουφέκι!"
+msgstr ""
 
 msgid "GOTSHOTGUN2"
-msgstr "Πήρες το διπλό ντουφέκι!"
+msgstr ""
 
 msgid "PICKUP_PISTOL_DROPPED"
-msgstr "Πήρες ενα πιστόλι."
+msgstr ""
 
 msgid "BETA_BONUS1"
-msgstr "Πήρες ένα δαιμονικό μαχαίρι."
+msgstr ""
 
 msgid "BETA_BONUS2"
-msgstr "Πήρες ένα κρανομπαούλο."
+msgstr ""
 
 msgid "BETA_BONUS3"
-msgstr "Πήρες το μοχθηρό σκήπτρο."
+msgstr ""
 
 msgid "BETA_BONUS4"
-msgstr "Πήρες τήν ανίερη βίβλο."
+msgstr ""
 
 msgid "PD_BLUEO"
-msgstr "Χρειάζεσε ένα μπλέ κλειδί για να ενεργοποίησεις αυτο το αντικείμενο"
+msgstr ""
 
 msgid "PD_REDO"
-msgstr "Χρειάζεσε ένα κόκινο κλειδί για να ενεργοποίησεις αυτο το αντικείμενο"
+msgstr ""
 
 msgid "PD_YELLOWO"
 msgstr ""
-"Χρειάζεσε ένα κύτρινο κλειδί για να ενεργοποίησεις αυτο το αντικείμενο"
 
 msgid "PD_BLUEK"
-msgstr "Χρειάζεσε ένα μπλέ κλειδί για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_REDK"
-msgstr "Χρειάζεσε ένα κόκινο κλειδί για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_YELLOWK"
-msgstr "Χρειάζεσε ένα κύτρινο κλειδί για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_BLUECO"
-msgstr "Χρειάζεσε μια μπλέ κάρτα για να ενεργοποίησεις αυτο το αντικείμενο"
+msgstr ""
 
 msgid "PD_REDCO"
-msgstr "Χρειάζεσε μια κόκινη κάρτα για να ενεργοποίησεις αυτο το αντικείμενο"
+msgstr ""
 
 msgid "PD_YELLOWCO"
-msgstr "Χρειάζεσε μια κύτρινη κάρτα για να ενεργοποίησεις αυτο το αντικείμενο"
+msgstr ""
 
 msgid "PD_BLUESO"
-msgstr "Χρειάζεσε ένα μπλέ κρανιο για να ενεργοποίησεις αυτο το αντικείμενο"
+msgstr ""
 
 msgid "PD_REDSO"
-msgstr "Χρειάζεσε ένα κόκινο κρανιο για να ενεργοποίησεις αυτο το αντικείμενο"
+msgstr ""
 
 msgid "PD_YELLOWSO"
 msgstr ""
-"Χρειάζεσε ένα κύτρινο κρανιο για να ενεργοποίησεις αυτο το αντικείμενο"
 
 msgid "PD_BLUEC"
-msgstr "Χρειάζεσε μια μπλέ κάρτα για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_REDC"
-msgstr "Χρειάζεσε μια κόκινη κάρτα για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_YELLOWC"
-msgstr "Χρειάζεσε μια κύτρινη κάρτα για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_BLUES"
-msgstr "Χρειάζεσε ένα μπλέ κρανίο για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_REDS"
-msgstr "Χρειάζεσε ένα κόκινο κρανίο για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "PD_YELLOWS"
-msgstr "Χρειάζεσε ένα κύτρινο κρανίο για να ανοίξεις αυτή τη πόρτα"
+msgstr ""
 
 msgid "CC_ZOMBIE"
-msgstr "Ζόμπι"
+msgstr ""
 
 # a.k.a. (former human) sergeant
 msgid "CC_SHOTGUN"
-msgstr "Τύπος με ντουφέκι"
+msgstr ""
 
 # a.k.a. former commando
 msgid "CC_HEAVY"
-msgstr "Τύπος με βαρί όπλο"
+msgstr ""
 
 msgid "CC_IMP"
-msgstr "Διάβολος"
+msgstr ""
 
 msgid "CC_DEMON"
-msgstr "Δαίμονας"
+msgstr ""
 
 msgid "CC_LOST"
-msgstr "Χαμένη Ξυχή"
+msgstr ""
 
 msgid "CC_CACO"
-msgstr "Κακοδαίμονας"
+msgstr ""
 
 msgid "CC_HELL"
-msgstr "Ιππότης της Κόλασης"
+msgstr ""
 
 msgid "CC_BARON"
-msgstr "Βαρώνος της Κολασης"
+msgstr ""
 
 msgid "CC_ARACH"
-msgstr "Αράχνοτρον"
+msgstr ""
 
 msgid "CC_PAIN"
-msgstr "Στοιχείομα του Πόνου"
+msgstr ""
 
 msgid "CC_REVEN"
-msgstr "Εκδικητής"
+msgstr ""
 
 msgid "CC_MANCU"
-msgstr "Χοντρός"
+msgstr ""
 
 msgid "CC_ARCH"
-msgstr "Νεκρομάντις"
+msgstr ""
 
 msgid "CC_SPIDER"
-msgstr "Το Αραχνό Ιθύνων Νους"
+msgstr ""
 
 msgid "CC_CYBER"
-msgstr "Ο Cyber-δαίμονας"
+msgstr ""
 
 msgid "CC_HERO"
-msgstr "Ο ήρωας μας"
+msgstr ""
 
 msgid "FN_SHOTGUN"
-msgstr "Λοχίας"
+msgstr ""
 
 msgid "FN_HEAVY"
-msgstr "Πολυβόλο Ζόμπι"
+msgstr ""
 
 msgid "FN_SPECTRE"
-msgstr "Φάντασμα"
+msgstr ""
 
 msgid "FN_SPIDER"
-msgstr "Αραχνό Ιθύνων Νους"
+msgstr ""
 
 msgid "FN_CYBER"
-msgstr "Cyber-δαίμονας"
+msgstr ""
 
 msgid "FN_WOLFSS"
-msgstr "Ναζιστής"
+msgstr ""
 
 msgid "FN_DOG"
-msgstr "Σκύλος"
+msgstr ""
 
 msgid "TAG_FIST"
-msgstr "Γροθιά"
+msgstr ""
 
 msgid "TAG_CHAINSAW"
-msgstr "Αλλησοπρίονο"
+msgstr ""
 
 msgid "TAG_PISTOL"
-msgstr "Πιστόλι"
+msgstr ""
 
 msgid "TAG_SHOTGUN"
-msgstr "Ντουφέκι"
+msgstr ""
 
 msgid "TAG_SUPERSHOTGUN"
-msgstr "Διπλό Ντουφέκι"
+msgstr ""
 
 msgid "TAG_CHAINGUN"
-msgstr "Πολυβόλο"
+msgstr ""
 
 msgid "TAG_ROCKETLAUNCHER"
-msgstr "Πυραυλοβόλο"
+msgstr ""
 
 msgid "TAG_PLASMARIFLE"
-msgstr "Πλάσμα Όπλο"
+msgstr ""
 
 msgid "TAG_BFG9000"
 msgstr ""
 
 msgid "AMMO_CLIP"
-msgstr "Σφαίρες"
+msgstr ""
 
 msgid "AMMO_SHELLS"
-msgstr "Σφαίρες Ντουφεκιού"
+msgstr ""
 
 msgid "AMMO_ROCKETS"
-msgstr "Πύραυλοι"
+msgstr ""
 
 msgid "AMMO_CELLS"
-msgstr "Κύτταρα Ενέργιας"
+msgstr ""
 
 msgid "OB_STEALTHBABY"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Αραχνοτρόν."
+msgstr ""
 
 msgid "OB_STEALTHVILE"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Νεκρομάντη"
+msgstr ""
 
 msgid "OB_STEALTHBARON"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Βαρώνο της Κόλασης."
+msgstr ""
 
 msgid "OB_STEALTHCACO"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Κακοδαίμονα."
+msgstr ""
 
 msgid "OB_STEALTHCHAINGUY"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Ζόμπι με ένα πολυβόλο."
+msgstr ""
 
 msgid "OB_STEALTHDEMON"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα δαίμονα."
+msgstr ""
 
 msgid "OB_STEALTHKNIGHT"
-msgstr "@[art_gr] %o νόμιζε οτι είδε έναν Ιππότη της Κόλασης."
+msgstr ""
 
 msgid "OB_STEALTHIMP"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Διάβολο."
+msgstr ""
 
 msgid "OB_STEALTHFATSO"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Χοντρό."
+msgstr ""
 
 msgid "OB_STEALTHUNDEAD"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Εκδικητή."
+msgstr ""
 
 msgid "OB_STEALTHSHOTGUNGUY"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Λοχία."
+msgstr ""
 
 msgid "OB_STEALTHZOMBIE"
-msgstr "@[art_gr] %o νόμιζε οτι είδε ένα Ζόμπι."
+msgstr ""
 
 msgid "OB_UNDEADHIT"
-msgstr "@[art_gr] %o έφαγε μια μπουνία απο έναν Εκδικητή."
+msgstr ""
 
 msgid "OB_IMPHIT"
-msgstr "@[art_gr] %o κόπηκε απο ενα Διάβολο."
+msgstr ""
 
 msgid "OB_CACOHIT"
-msgstr "@[art_gr] %o ήτανε πολυ κοντά σε ένα Κακοδαίμονα."
+msgstr ""
 
 msgid "OB_DEMONHIT"
-msgstr "@[art_gr] %o δαγκόθηκε απο ένα Δαίμονα."
+msgstr ""
 
 msgid "OB_SPECTREHIT"
-msgstr "Ένα φάντασμα έφαγε @[pro_gr] %o."
+msgstr ""
 
 msgid "OB_BARONHIT"
-msgstr "@[art_gr] %o σχίστηκε απο εναν Βαρώνο της Κόλασης."
+msgstr ""
 
 msgid "OB_KNIGHTHIT"
-msgstr "@[art_gr] %o ξεκοιλιάστηκε απο έναν Ιππότη της Κόλασης."
+msgstr ""
 
 msgid "OB_ZOMBIE"
-msgstr "@[art_gr] %o σκοτώθηκε απο ένα Ζόμπι."
+msgstr ""
 
 msgid "OB_SHOTGUY"
-msgstr "Ένας Λοχίας πυροβόλησε @[pro_gr] %o."
+msgstr ""
 
 msgid "OB_VILE"
-msgstr "@[art_gr] %o αποτεφρώθηκε απο ένα Νεκρομάντη."
+msgstr ""
 
 msgid "OB_UNDEAD"
-msgstr "@[art_gr] %o δέν μπορούσε να αποφείγει τον πύραυλο ενός Εκδικητή."
+msgstr ""
 
 msgid "OB_FATSO"
-msgstr "@[art_gr] %o λιόθηκε απο έναν Χοντρό."
+msgstr ""
 
 msgid "OB_CHAINGUY"
-msgstr "@[art_gr] %o εκτελέστικε απο ένα Ζόμπι με ένα πολυβόλο."
+msgstr ""
 
 msgid "OB_SKULL"
-msgstr "Μια Χαμένη Ξυχή φόβησε @[pro_gr] %o."
+msgstr ""
 
 msgid "OB_IMP"
-msgstr "@[art_gr] %o κάικε απο έναν Διάβολο."
+msgstr ""
 
 msgid "OB_CACO"
-msgstr "@[art_gr] %o καίκε απο έναν Κακοδαίμονα."
+msgstr ""
 
 msgid "OB_BARON"
-msgstr "@[art_gr] %o γρατζουνήθηκε απο ένα Βαρώνο της Κόλασης."
+msgstr ""
 
 msgid "OB_KNIGHT"
-msgstr "@[art_gr] %o απλώθηκε απο έναν Ιππότη της Κόλασης"
+msgstr ""
 
 msgid "OB_SPIDER"
-msgstr "@[art_gr] %o στάθηκε με δέος μπροστά στόν αραχνοδαίμονα."
+msgstr ""
 
 msgid "OB_BABY"
-msgstr "@[art_gr] %o άφησε ένα Αράχνοτρον να @[pro_gr] σκοτώσει."
+msgstr ""
 
 msgid "OB_CYBORG"
-msgstr "@[art_gr] %o έσκασε απο ένα Cyber-δαίμονα."
+msgstr ""
 
 msgid "OB_WOLFSS"
-msgstr "@[art_gr] %o χνώρισε ένα Ναζιστή."
+msgstr ""
 
 msgid "OB_DOG"
-msgstr "@[art_gr] %o φαγόθικε απο ένα σκύλο."
+msgstr ""
 
 msgid "OB_MPFIST"
-msgstr "@[art_gr] %o μάσησε τη γροθία του/της %k."
+msgstr ""
 
 msgid "OB_MPCHAINSAW"
-msgstr "@[art_gr] %o κόπηκε απο το αλλησοπρίονο του/της %k."
+msgstr ""
 
 msgid "OB_MPPISTOL"
-msgstr "@[art_gr] %o γαργαλίθηκε απο το οπλάκι του/της %k."
+msgstr ""
 
 msgid "OB_MPSHOTGUN"
-msgstr "@[art_gr] %o έφαγε το ντουφέκι του/της %k."
+msgstr ""
 
 msgid "OB_MPSSHOTGUN"
-msgstr "@[art_gr] %o διαλύθηκε απο το διπλό ντουφέκι του/της %k"
+msgstr ""
 
 msgid "OB_MPCHAINGUN"
-msgstr "@[art_gr] %o κοματίαστηκε απο το πολυβόλο του/της %k."
+msgstr ""
 
 msgid "OB_MPROCKET"
-msgstr "@[art_gr] %o καβάλησε τον πύραυλο του/της %k."
+msgstr ""
 
 msgid "OB_MPR_SPLASH"
-msgstr "@[art_gr] %o σχεδόν απόφηγε τον πύραυλο του/της %k."
+msgstr ""
 
 msgid "OB_MPPLASMARIFLE"
-msgstr "@[art_gr] %o λίοθηκε απο το πλάσμα όπλο του/της %k."
+msgstr ""
 
 msgid "OB_MPBFG_BOOM"
-msgstr "@[art_gr] %o κοματιάστηκε απο το BFG του/της %k."
+msgstr ""
 
 msgid "OB_MPBFG_SPLASH"
-msgstr "@[art_gr] %o δέν μπόρεσε να κρυφτέι απο το BFG του/της %k."
+msgstr ""
 
 msgid "OB_RAILGUN"
-msgstr "@[art_gr] %o καρφόθηκε απο τον/την %k."
+msgstr ""
 
 msgid "OB_MPBFG_MBF"
-msgstr "@[art_gr] %o κάικε απο το BFG του/της %k."
+msgstr ""
 
 msgid "TXT_GOTBLUEKEY"
-msgstr "Μπλέ Κλειδί"
+msgstr ""
 
 msgid "TXT_GOTYELLOWKEY"
-msgstr "Κύτρινο Κλειδί"
+msgstr ""
 
 msgid "TXT_GOTGREENKEY"
-msgstr "Πράσινο Κλειδί"
+msgstr ""
 
 msgid "TXT_ARTIHEALTH"
-msgstr "Φλάσκα Χαλαζίας"
+msgstr ""
 
 msgid "TXT_ARTIFLY"
-msgstr "Φτερά της Οργής"
+msgstr ""
 
 msgid "TXT_ARTIINVULNERABILITY"
-msgstr "Δαχτυλίδι της Αθανασίας"
+msgstr ""
 
 msgid "TXT_ARTITOMEOFPOWER"
-msgstr "Τομός της Δύναμης"
+msgstr ""
 
 msgid "TXT_ARTIINVISIBILITY"
-msgstr "Σκιόσφαιρα"
+msgstr ""
 
 msgid "TXT_ARTIEGG"
-msgstr "Μετασχηματίζοντικο Ωάριο"
+msgstr ""
 
 msgid "TXT_ARTISUPERHEALTH"
-msgstr "Μυστικό Δοχείο"
+msgstr ""
 
 msgid "TXT_ARTITORCH"
-msgstr "Πυρσός"
+msgstr ""
 
 msgid "TXT_ARTIFIREBOMB"
-msgstr "Χρονοβόμβα τον Αρχαίων"
+msgstr ""
 
 msgid "TXT_ARTITELEPORT"
-msgstr "Συσκευή του Χάος"
+msgstr ""
 
 msgid "TXT_ITEMHEALTH"
-msgstr "Κρυσταλλικό Φιάλιδο"
+msgstr ""
 
 msgid "TXT_ITEMBAGOFHOLDING"
-msgstr "Τσάντα Κρατησης"
+msgstr ""
 
 msgid "TXT_ITEMSHIELD1"
-msgstr "Ασημένια Ασπίδα"
+msgstr ""
 
 msgid "TXT_ITEMSHIELD2"
 msgstr ""
@@ -1162,20 +1113,20 @@ msgid "TXT_WPNGAUNTLETS"
 msgstr ""
 
 msgid "TXT_NEEDBLUEKEY"
-msgstr "Χρειάζεσε ένα μπλέ κλειδί για να ενεργοποίησεις αυτη τη πόρτα"
+msgstr ""
 
 msgid "TXT_NEEDGREENKEY"
-msgstr "Χρειάζεσε ένα πράσινο κλειδί για να ενεργοποίησεις αυτη τη πόρτα"
+msgstr ""
 
 msgid "TXT_NEEDYELLOWKEY"
-msgstr "Χρειάζεσε ένα κύτρινο κλειδί για να ενεργοποίησεις αυτη τη πόρτα"
+msgstr ""
 
 msgid "FN_CHICKEN"
-msgstr "Κότα"
+msgstr ""
 
 # Wordplay: werewolf
 msgid "FN_BEAST"
-msgstr "Θηρίο"
+msgstr ""
 
 # Wordplay: sabre-tooth
 msgid "FN_CLINK"
@@ -1191,10 +1142,10 @@ msgid "FN_IRONLICH"
 msgstr ""
 
 msgid "FN_BONEKNIGHT"
-msgstr "Αθάνατος Πολεμιστής"
+msgstr ""
 
 msgid "FN_MINOTAUR"
-msgstr "Μινόταυρος"
+msgstr ""
 
 msgid "FN_MUMMY"
 msgstr ""
@@ -1206,7 +1157,7 @@ msgid "FN_SNAKE"
 msgstr ""
 
 msgid "FN_WIZARD"
-msgstr "Μάγος"
+msgstr ""
 
 msgid "AMMO_GOLDWAND"
 msgstr ""
@@ -1227,7 +1178,7 @@ msgid "AMMO_PHOENIXROD"
 msgstr ""
 
 msgid "TAG_STAFF"
-msgstr "Ράβδος"
+msgstr ""
 
 msgid "TAG_GOLDWAND"
 msgstr ""
@@ -1350,7 +1301,7 @@ msgid "TXT_MANA_BOTH"
 msgstr ""
 
 msgid "TXT_KEY_STEEL"
-msgstr "Ατσάλινο Κλειδί"
+msgstr ""
 
 msgid "TXT_KEY_CAVE"
 msgstr ""
@@ -1368,10 +1319,10 @@ msgid "TXT_KEY_DUNGEON"
 msgstr ""
 
 msgid "TXT_KEY_SILVER"
-msgstr "Ασυμένιο Κλειδί"
+msgstr ""
 
 msgid "TXT_KEY_RUSTED"
-msgstr "Σκουριασμένο Κλειδί"
+msgstr ""
 
 msgid "TXT_KEY_HORN"
 msgstr ""
@@ -1509,7 +1460,7 @@ msgid "TXT_BLOODSCOURGE_PIECE"
 msgstr ""
 
 msgid "TXT_NEED_KEY_STEEL"
-msgstr "Χρειάζεσε το Ατσάλινο κλειδί."
+msgstr ""
 
 msgid "TXT_NEED_KEY_CAVE"
 msgstr ""
@@ -1527,10 +1478,10 @@ msgid "TXT_NEED_KEY_DUNGEON"
 msgstr ""
 
 msgid "TXT_NEED_KEY_SILVER"
-msgstr "Χρειάζεσε το Ασυμένιο κλειδί."
+msgstr ""
 
 msgid "TXT_NEED_KEY_RUSTED"
-msgstr "Χρειάζεσε το Σκουριασμένο κλειδί."
+msgstr ""
 
 msgid "TXT_NEED_KEY_HORN"
 msgstr ""
@@ -1818,10 +1769,10 @@ msgid "OB_MPMWEAPBLOODSCOURGE"
 msgstr ""
 
 msgid "TXT_METALARMOR"
-msgstr "Πήρες τη Μεταληκή Πανοπλία."
+msgstr ""
 
 msgid "TXT_LEATHERARMOR"
-msgstr "Πήρες τη Δερμάτινη Πανοπλία."
+msgstr ""
 
 msgid "TXT_MEDPATCH"
 msgstr ""
@@ -1833,16 +1784,16 @@ msgid "TXT_SURGERYKIT"
 msgstr ""
 
 msgid "TXT_STRIFEMAP"
-msgstr "Πήρες το χάρτη."
+msgstr ""
 
 msgid "TXT_BELDINSRING"
-msgstr "Πήρες το Δακτύλιο."
+msgstr ""
 
 msgid "TXT_OFFERINGCHALICE"
 msgstr ""
 
 msgid "TXT_EAR"
-msgstr "Πήρες το αυτί."
+msgstr ""
 
 msgid "TXT_BROKENCOUPLING"
 msgstr ""
@@ -1866,16 +1817,16 @@ msgid "TXT_REPORT"
 msgstr ""
 
 msgid "TXT_INFO"
-msgstr "Πήρες της πληροφορίες"
+msgstr ""
 
 msgid "TXT_TARGETER"
-msgstr "Πήρες τον Στοχευτή."
+msgstr ""
 
 msgid "TXT_COMMUNICATOR"
 msgstr ""
 
 msgid "TXT_COIN"
-msgstr "Πήρες το κέρμα."
+msgstr ""
 
 msgid "TXT_XGOLD"
 msgstr ""
@@ -1887,31 +1838,31 @@ msgid "TXT_DEGNINORE"
 msgstr ""
 
 msgid "TXT_SCANNER"
-msgstr "Πήρες το σαρωτή."
+msgstr ""
 
 msgid "TXT_NEEDMAP"
-msgstr "Ο σαρωτής δέν θα δουλέψει χωρίς ένα χάρτη!"
+msgstr ""
 
 msgid "TXT_PRISONPASS"
 msgstr ""
 
 msgid "TXT_STRIFECROSSBOW"
-msgstr "Πήρες το τόξο"
+msgstr ""
 
 msgid "TXT_ASSAULTGUN"
-msgstr "Πήρες το πολυβόλο."
+msgstr ""
 
 msgid "TXT_MMLAUNCHER"
-msgstr "Πήρες το μίνι πυραυλοβόλο."
+msgstr ""
 
 msgid "TXT_FLAMER"
-msgstr "Πήρες το φλογοβόλο."
+msgstr ""
 
 msgid "TXT_MAULER"
 msgstr ""
 
 msgid "TXT_GLAUNCHER"
-msgstr "Πήρες το εκτοξευτη χειροβομβίδων."
+msgstr ""
 
 msgid "TXT_SIGIL"
 msgstr ""
@@ -2007,16 +1958,16 @@ msgid "TXT_PHGRENADES"
 msgstr ""
 
 msgid "TXT_CLIPOFBULLETS"
-msgstr "Πήρες το κουτάκι με σφαίρες."
+msgstr ""
 
 msgid "TXT_BOXOFBULLETS"
-msgstr "Πήρες το κουτί με σφαίρες."
+msgstr ""
 
 msgid "TXT_MINIMISSILES"
-msgstr "Πήρες τους μινι-πυράυλους."
+msgstr ""
 
 msgid "TXT_CRATEOFMISSILES"
-msgstr "Πήρες το κιβώτιο με πυράυλους."
+msgstr ""
 
 msgid "TXT_ENERGYPOD"
 msgstr ""
@@ -2037,16 +1988,16 @@ msgid "MSG_TALISMANRED"
 msgstr ""
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Οτιδήποτε είναι, δέν είναι απο αυτό τον κόσμο..."
+msgstr ""
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Πρέπει να κάνι κάτι..."
+msgstr ""
 
 msgid "MSG_TALISMANPOWER"
 msgstr ""
 
 msgid "TXT_NEEDKEY"
-msgstr "Δέν έχεις το κλειδί"
+msgstr ""
 
 msgid "TXT_NEED_PASSCARD"
 msgstr ""
@@ -2085,7 +2036,7 @@ msgid "TXT_NEED_BLUECRYSTAL"
 msgstr ""
 
 msgid "TXT_RETAIL_ONLY"
-msgstr "Αυτή η περιοχή είναι μονο διαθέσημη στήν εγραμμένη έκδοση του Strife"
+msgstr ""
 
 msgid "TXT_DOES_NOT_WORK"
 msgstr ""
@@ -2097,21 +2048,21 @@ msgid "TXT_NEED_OPASS"
 msgstr ""
 
 msgid "TAG_PUNCHDAGGER"
-msgstr "Μαχάιρι"
+msgstr ""
 
 # Crossbow with electric bolts
 msgid "TAG_STRIFECROSSBOW1"
-msgstr "Τόξο (Δηλητήριο)"
+msgstr ""
 
 # Crossbow with poison bolts
 msgid "TAG_STRIFECROSSBOW2"
-msgstr "Τόξο (Ηλεκτρικό)"
+msgstr ""
 
 msgid "TAG_ASSAULTGUN"
 msgstr ""
 
 msgid "TAG_MMLAUNCHER"
-msgstr "Μίνι-Πυραυλοβόλο"
+msgstr ""
 
 msgid "TAG_FLAMER"
 msgstr ""
@@ -2806,38 +2757,38 @@ msgid "AMMO_CELLS"
 msgstr ""
 
 msgid "MNU_NEWGAME"
-msgstr "Νέο Παιχνίδι"
+msgstr ""
 
 msgid "MNU_OPTIONS"
-msgstr "Ρυθμίσεις"
+msgstr ""
 
 msgid "MNU_GAMEFILES"
-msgstr "Αρχεία Παιχνιδιού"
+msgstr ""
 
 msgid "MNU_INFO"
-msgstr "Πληροφορίες"
+msgstr ""
 
 msgid "MNU_QUITGAME"
-msgstr "Έξοδος"
+msgstr ""
 
 # This text is extremely space limited!
 msgid "MNU_CHOOSESKILL"
-msgstr "Επίλεξε ΔυσκολΊα:"
+msgstr ""
 
 msgid "SKILL_BABY"
-msgstr "Είμαι πολύ νεαρός για να πεθάνω!"
+msgstr ""
 
 msgid "SKILL_EASY"
-msgstr "Όχι πολύ δύσκολο"
+msgstr ""
 
 msgid "SKILL_NORMAL"
-msgstr "Πόνεσε με"
+msgstr ""
 
 msgid "SKILL_HARD"
-msgstr "Ύπερ-Βία"
+msgstr ""
 
 msgid "SKILL_NIGHTMARE"
-msgstr "Εφιάλτης!"
+msgstr ""
 
 msgid "CSKILL_BABY"
 msgstr ""
@@ -2855,10 +2806,10 @@ msgid "CSKILL_NIGHTMARE"
 msgstr ""
 
 msgid "SSKILL_BABY"
-msgstr "Eκπαίδευση"
+msgstr ""
 
 msgid "SSKILL_EASY"
-msgstr "Αρχάριος"
+msgstr ""
 
 msgid "SSKILL_NORMAL"
 msgstr ""
@@ -2888,16 +2839,16 @@ msgid "MNU_SQUIRE"
 msgstr ""
 
 msgid "MNU_KNIGHT"
-msgstr "Ιππότης"
+msgstr ""
 
 msgid "MNU_WARRIOR"
-msgstr "Πολεμιστής"
+msgstr ""
 
 msgid "MNU_BERSERKER"
 msgstr ""
 
 msgid "MNU_TITAN"
-msgstr "Τιτάνας"
+msgstr ""
 
 msgid "MNU_ALTARBOY"
 msgstr ""
@@ -2912,7 +2863,7 @@ msgid "MNU_CARDINAL"
 msgstr ""
 
 msgid "MNU_POPE"
-msgstr "Πάπας"
+msgstr ""
 
 msgid "MNU_APPRENTICE"
 msgstr ""
@@ -3141,10 +3092,10 @@ msgid "GMPLYMNU_NOEXTRAAMMO"
 msgstr ""
 
 msgid "OPTMNU_COMPATIBILITY"
-msgstr "Ρυθμίσεις Συμβατότητας"
+msgstr ""
 
 msgid "CMPTMNU_TITLE"
-msgstr "Ρυθμίσεις Συμβατότητας"
+msgstr ""
 
 msgid "CMPTMNU_MODE"
 msgstr ""
@@ -3285,13 +3236,13 @@ msgid "CMPTMNU_CHECKSWITCHRANGE"
 msgstr ""
 
 msgid "CMPTMNU_RAILINGHACK"
-msgstr "Ενεργοποιηση σπασμένης συμπεριφοράς καγκέλον για το Strife"
+msgstr ""
 
 msgid "CMPTMNU_EXPLODE1"
-msgstr "Καθόλου κατακόρυφη ώθηση απο εκρήξεις"
+msgstr ""
 
 msgid "CMPTMNU_EXPLODE2"
-msgstr "Συμπεριφορά εκρήξεων απο το πρωτότυπο Doom"
+msgstr ""
 
 msgid "PLYRMNU_RED"
 msgstr ""
@@ -3324,49 +3275,49 @@ msgid "PLYRMNU_VERTSPREAD"
 msgstr ""
 
 msgid "CNTRLMNU_ZOOM"
-msgstr "Ζοομ"
+msgstr ""
 
 msgid "CNTRLMNU_USER1"
-msgstr "Κατάσταση Όπλου 1"
+msgstr ""
 
 msgid "CNTRLMNU_USER2"
-msgstr "Κατάσταση Όπλου 2"
+msgstr ""
 
 msgid "CNTRLMNU_USER3"
-msgstr "Κατάσταση Όπλου 3"
+msgstr ""
 
 msgid "CNTRLMNU_USER4"
-msgstr "Κατάσταση Όπλου 4"
+msgstr ""
 
 msgid "CNTRLMNU_MOVEUP"
-msgstr "Πέτα/Κολύμπα πάνω"
+msgstr ""
 
 msgid "CNTRLMNU_MOVEDOWN"
-msgstr "Πέτα/Κολύμπα κάτω"
+msgstr ""
 
 msgid "CNTRLMNU_LAND"
-msgstr "Σταμάτα πέταμα"
+msgstr ""
 
 msgid "CNTRLMNU_KEYBOARDLOOK"
-msgstr "Κατακόρυφο κοίταχμα (Πλητρoλόγιο)"
+msgstr ""
 
 msgid "CNTRLMNU_POPUPS_TITLE"
 msgstr ""
 
 msgid "CNTRLMNU_TEAMSAY"
-msgstr "Πές στην ομάδα"
+msgstr ""
 
 msgid "CNTRLMNU_DROPITEM"
-msgstr "Πέτα Aντικείμενο"
+msgstr ""
 
 msgid "CNTRLMNU_QUERYITEM"
 msgstr ""
 
 msgid "CNTRLMNU_DROPWEAPON"
-msgstr "Πέτα Όπλο"
+msgstr ""
 
 msgid "CNTRLMNU_OTHER"
-msgstr "Άλλα"
+msgstr ""
 
 msgid "CNTRLMNU_COOPSPY"
 msgstr ""
@@ -3375,16 +3326,16 @@ msgid "CNTRLMNU_POPUPS"
 msgstr ""
 
 msgid "CNTRLMNU_MISSION"
-msgstr "Στόχοι Αποστολής"
+msgstr ""
 
 msgid "CNTRLMNU_KEYS"
-msgstr "Λίστα Κλειδιών"
+msgstr ""
 
 msgid "CNTRLMNU_STATS"
-msgstr "Οπλα/Πυρομαχικά/Στατιστικές"
+msgstr ""
 
 msgid "CNTRLMNU_TOGGLESCOREBOARD"
-msgstr "Ενεργοποίηση Πίνακα Σκόρ"
+msgstr ""
 
 msgid "MOUSEMNU_LOOKSPRING"
 msgstr ""
@@ -4451,43 +4402,43 @@ msgid "OPTVAL_ROUND"
 msgstr ""
 
 msgid "OPTVAL_RADIAL"
-msgstr "Ακτινικό"
+msgstr ""
 
 msgid "OPTVAL_PIXELFUZZ"
-msgstr "Pixel θολούρα"
+msgstr ""
 
 msgid "OPTVAL_SMOOTHFUZZ"
-msgstr "Ομαλή θολούρα"
+msgstr ""
 
 msgid "OPTVAL_SWIRLYFUZZ"
-msgstr "Περιστροφηκή θολούρα"
+msgstr ""
 
 msgid "OPTVAL_TRANSLUCENTFUZZ"
-msgstr "Ημιδιαφανής θολούρα"
+msgstr ""
 
 msgid "OPTVAL_NOISE"
-msgstr "Ήχος"
+msgstr ""
 
 msgid "OPTVAL_SMOOTHNOISE"
-msgstr "Ομαλός ήχος"
+msgstr ""
 
 msgid "OPTVAL_JAGGEDFUZZ"
-msgstr "Ζαρομένη θολούρα"
+msgstr ""
 
 msgid "OPTVAL_GREENMAGENTA"
-msgstr "Πράσινο/Magenta"
+msgstr ""
 
 msgid "OPTVAL_REDCYAN"
-msgstr "Κόκινο/Κυανό"
+msgstr ""
 
 msgid "OPTVAL_AMBERBLUE"
-msgstr "Amber/Μπλέ"
+msgstr ""
 
 msgid "OPTVAL_LEFTEYE"
-msgstr "Αριστερό μάτι"
+msgstr ""
 
 msgid "OPTVAL_RIGHTEYE"
-msgstr "Δεξί μάτι"
+msgstr ""
 
 msgid "OPTVAL_SBSFULL"
 msgstr ""
@@ -4496,7 +4447,7 @@ msgid "OPTVAL_SBSNARROW"
 msgstr ""
 
 msgid "OPTVAL_TOPBOTTOM"
-msgstr "Πάνω/Κάτω"
+msgstr ""
 
 msgid "OPTVAL_ROWINTERLEAVED"
 msgstr ""
@@ -4511,79 +4462,77 @@ msgid "OPTVAL_QUADBUFFERED"
 msgstr ""
 
 msgid "DSPLYMNU_TCOPT"
-msgstr "TrueColor Ρυθμίσεις"
+msgstr ""
 
 msgid "TCMNU_TITLE"
-msgstr "TrueColor Ρυθμίσεις"
+msgstr ""
 
 msgid "TCMNU_TRUECOLOR"
-msgstr "TrueColor παραγωγή"
+msgstr ""
 
 msgid "TCMNU_MINFILTER"
-msgstr "Γραμμικό φίλτρο για σμίκρυνση"
+msgstr ""
 
 msgid "TCMNU_MAGFILTER"
-msgstr "Γραμμικό φίλτρο για πολυτέληση"
+msgstr ""
 
 msgid "TCMNU_MIPMAP"
-msgstr "Χρήση mipmapped υφών"
+msgstr ""
 
 msgid "TCMNU_DYNLIGHTS"
-msgstr "Δυναμικά φώτα (Λογισμικό)"
+msgstr ""
 
 msgid "OS_TITLE"
-msgstr "Αναζήτηση Ρυθμίσεων"
+msgstr ""
 
 msgid "OS_ANY"
-msgstr "Αναζήτηση για όποιαδηποτε λέξη"
+msgstr ""
 
 msgid "OS_ALL"
-msgstr "Αναζήτηση για όλες της λέξεις"
+msgstr ""
 
 msgid "OS_NO_RESULTS"
-msgstr "Δέν βρέθηκαν αποτελέσματα"
+msgstr ""
 
 msgid "OS_LABEL"
-msgstr "Αναζήτηση:"
+msgstr ""
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
-msgstr "Εμφάνιση πλήκτρων πάντα"
+msgstr ""
 
 msgid "TXT_NO_TEAM_CHANGE"
-msgstr "Η αλαγγή ομάδον απαγορεύεται!"
+msgstr ""
 
 # %s is the player and gender sensitive
 msgid "TXT_JOINED_TEAM"
-msgstr "@[art_gr] %s έγινε μέλος τής %t ομάδας"
+msgstr ""
 
 msgid "TXT_LONER"
-msgstr "@[art_gr] %s είναι τώρα μόνο/ς/η @[pro4_gr]"
+msgstr ""
 
 msgid "TXT_LEFTWITHFRAGS"
-msgstr "@[art_gr] %s έφυγε με %d κοματιασμόυς"
+msgstr ""
 
 msgid "TXT_LEFTTHEGAME"
-msgstr "@[art_gr] %s έφυγε"
+msgstr ""
 
 msgid "TXT_COULDNOTREAD"
-msgstr "Το αρχείο αποθήκευσης %s δέν μπόρε να φορτωθεί"
+msgstr ""
 
 msgid "TXT_NOINFOJSON"
-msgstr "Το %s δεν είναι ένα έγκυρο αρχείο αποθήκευσης: Το info.json λείπει"
+msgstr ""
 
 msgid "TXT_FAILEDTOREADSG"
-msgstr "Η πρόσβαση πληροφοριών του αρχείου αποθήκευσης %s δέν ήταν επιτυχής"
+msgstr ""
 
 msgid "TXT_INCOMPATIBLESG"
-msgstr "Το αρχείο αποθήκευσης %s είναι απο μια ασύμβατη έκδοση"
+msgstr ""
 
 msgid "TXT_OTHERENGINESG"
-msgstr "Το αρχείο αποθήκευσης %s είναι απο μια άλλη ZDoom βασισμένη μηχανή"
+msgstr ""
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Το αρχείο αποθήκευσης %s είναι απο την %d έκδοση (H %e είναι η παλιότερη "
-"υποστηριζώμενη)"
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4592,78 +4541,76 @@ msgstr ""
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Το αρχείο αποθήκευσης %s είναι απο μια πιο καινούρια έκδοση: %d (Η %e είναι "
-"η πιο καινούρια που υποστηρίζεται)"
 
 msgid "TXT_NOMAPSG"
-msgstr "Το αρχείο αποθήκευσης %s δέν έχει την τωρινή πίστα"
+msgstr ""
 
 msgid "TXT_NOGLOBALSJSON"
-msgstr "Το %s δεν είναι ένα έγκυρο αρχείο αποθήκευσης: Το globals.json λείπει"
+msgstr ""
 
 msgid "TXT_SGINFOERR"
-msgstr "Η πρόσβαση πληροφοριών του αρχείου αποθήκευσης %s δέν ήταν επιτυχής"
+msgstr ""
 
 msgid "TXT_SAVEPENDING"
-msgstr "Μια αποθήκευση παιχνιδίου είναι ακόμα σε αναμονή"
+msgstr ""
 
 msgid "TXT_NOTSAVEABLE"
-msgstr "Δέν είσαι σε ένα παιχνίδει που μπορεί να αποθηκευτεί"
+msgstr ""
 
 msgid "TXT_NOTINLEVEL"
-msgstr "Δέν ε'ισαι σε μια πίστα"
+msgstr ""
 
 msgid "TXT_SPPLAYERDEAD"
-msgstr "Ο παίχτης έιναι νεκρός σε ένα singleplayer παιχνίδι"
+msgstr ""
 
 msgid "TXT_SAVEFAILED"
-msgstr "Η αποθήκευση απέτυχε"
+msgstr ""
 
 msgid "TXT_SCREENSHOTERR"
-msgstr "Ένα screenshot δέν μπόρεσε να τραβυχτεί"
+msgstr ""
 
 # As in paused by player %s.
 msgid "TXT_BY"
-msgstr "Απο @[pro_gr] %s"
+msgstr ""
 
 msgid "TXT_QUITENDOOM"
-msgstr "Πάτα οποιοδήποτε πλήκτρο ή πάτα οπουδήποτε για να κάνεις έξοδο"
+msgstr ""
 
 msgid "HUDMNU_FLASH"
-msgstr "Ρυθμίσεις Ανάμειξης Οθόνης"
+msgstr ""
 
 msgid "GLMNU_3DMODE"
-msgstr "3D λειτουργία"
+msgstr ""
 
 msgid "HUDMNU_CROSSHAIRON"
 msgstr ""
 
 msgid "MSGMNU_SUBTITLES"
-msgstr "Υπότιτλοι"
+msgstr ""
 
 msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Απότρεξη γρί σκιών"
+msgstr ""
 
 msgid "HUDMNU_FONTOPTIONS"
-msgstr "Ρυθμίσεις Γραμματοσειρών"
+msgstr ""
 
 msgid "FONTMNU_LOG"
-msgstr "Χρησιμοποίηση πρότυπης γραμματοσειράς για προβολή ημερολόγιου"
+msgstr ""
 
 msgid "FONTMNU_DLG"
-msgstr "Χρησιμοποίηση πρότυπης γραμματοσειράς"
+msgstr ""
 
 msgid "MISCMNU_QUICKEXIT"
-msgstr "Γρήγορη Έξοδος"
+msgstr ""
 
 msgid "DSPLYMNU_CUSTOMINVERTMAP"
-msgstr "Προσαρμοσμένος Ανάποδος Χάρτης"
+msgstr ""
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "Προσαρμοσμένος Ανάποδο Χρώμα Σκοτεινό"
+msgstr ""
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
-msgstr "Προσαρμοσμένος Ανάποδο Χρώμα Φωτεινό"
+msgstr ""
 
 msgid "DSPLYMNU_BOBFIRE"
 msgstr ""
@@ -4729,7 +4676,7 @@ msgstr ""
 
 # Called "citizens" according to Doomwiki
 msgid "TAG_STRIFEZOMBIE"
-msgstr "Πολίτης"
+msgstr ""
 
 msgid "TAG_CEILINGTURRET"
 msgstr ""
@@ -4742,7 +4689,7 @@ msgid "TAG_INQUISITOR"
 msgstr ""
 
 msgid "TAG_PEASANT"
-msgstr "Χωρικός"
+msgstr ""
 
 msgid "TAG_REAVER"
 msgstr ""
@@ -4757,7 +4704,7 @@ msgid "TAG_BISHOP"
 msgstr ""
 
 msgid "TAG_ENTITY"
-msgstr "Ο ένας Θεός"
+msgstr ""
 
 msgid "TAG_PROGRAMMER"
 msgstr ""
@@ -4776,14 +4723,14 @@ msgstr ""
 
 # Will enable sprite shadows for monster and player sprites
 msgid "OPTVAL_SPRSHADALWAYS"
-msgstr "Τέρατα και παίχτες"
+msgstr ""
 
 # the FOV slider
 msgid "DSPLYMNU_FOV"
 msgstr ""
 
 msgid "CMPTMNU_NOMBF21"
-msgstr "Απενεργοποίηση MBF21 λειτουργιών"
+msgstr ""
 
 msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr ""
@@ -4792,7 +4739,7 @@ msgid "OPTVAL_MBF21"
 msgstr ""
 
 msgid "CMPTMNU_VILEGHOSTS"
-msgstr "Συνθλιμένα τέρατα αναστήνοντε ως φαντάσματα"
+msgstr ""
 
 msgid "MISCMNU_FVIEWBOB"
 msgstr ""

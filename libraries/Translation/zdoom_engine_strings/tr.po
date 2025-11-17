@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:52+0000\n"
+"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: tr\n"
 
 msgid "PRESSKEY"
@@ -443,7 +450,7 @@ msgid "MULTI5"
 msgstr "Canavar öldürme!"
 
 msgid "SCORE_BONUS"
-msgstr ""
+msgstr "İkramiye"
 
 msgid "SCORE_COLOR"
 msgstr "Renk"
@@ -458,7 +465,7 @@ msgid "SCORE_DELAY"
 msgstr "Gecikme (ms)"
 
 msgid "SCORE_FRAGS"
-msgstr ""
+msgstr "Öldürme"
 
 msgid "SCORE_DEATHS"
 msgstr "Ölümler"
@@ -2930,6 +2937,7 @@ msgstr "Büyücü"
 msgid "MNU_WARLOCK"
 msgstr "Efsuncu"
 
+#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Başbüyücü"
 
