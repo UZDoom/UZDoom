@@ -23,13 +23,13 @@ jobs:
         - name: MacOS LLVM
           os: macos-latest
           extra_options: -DDYN_OPENAL=OFF
-          deps_cmdline: brew install tree gawk sdl2 libvpx molten-vk vulkan-volk
+          deps_cmdline: brew install tree sdl2 libvpx molten-vk vulkan-volk
           build_type: Release
 
         - name: MacOS LLVM
           os: macos-latest
           extra_options: -DDYN_OPENAL=OFF
-          deps_cmdline: brew install tree gawk sdl2 libvpx molten-vk vulkan-volk
+          deps_cmdline: brew install tree sdl2 libvpx molten-vk vulkan-volk
           build_type: Debug
 
         - name: Linux GCC
