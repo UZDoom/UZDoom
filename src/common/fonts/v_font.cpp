@@ -175,6 +175,23 @@ void V_InitCustomFonts()
 	bool ignoreoffsets = false;
 	int MinLum = -1, MaxLum = -1;
 
+	//load dynamic fonts
+	std::vector<FileSys::FolderEntry> folderdata;
+	if (fileSystem.GetFilesInFolder("fonts/dynamic/", folderdata, true))
+	{
+		for (const auto &f : folderdata)
+		{
+			//TODO: ignore the license disclosure files.
+			{
+				//TODO: proper ctor
+				FFont* const Font = new FFont(f.name);
+				//TODO: get real font name
+				//TODO: get character range from font file
+				//TODO: generate atlas
+			}
+		}
+	}
+
 	while ((llump = fileSystem.FindLump ("FONTDEFS", &lastlump)) != -1)
 	{
 		sc.OpenLumpNum(llump);

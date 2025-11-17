@@ -87,11 +87,13 @@ public:
 		Fon1,
 		Fon2,
 		BMF,
-		Custom
+		Custom,
+		Dynamic
 	};
 
 	FFont (const char *fontname, const char *nametemplate, const char *filetemplate, int first, int count, int base, int fdlump, int spacewidth=-1, bool notranslate = false, bool iwadonly = false, bool doomtemplate = false, GlyphSet *baseGlpyphs = nullptr);
 	FFont(int lump, FName nm = NAME_None);
+	explicit FFont(const char *fontname);
 	virtual ~FFont ();
 
 	virtual FGameTexture *GetChar (int code, int translation, int *const width) const;

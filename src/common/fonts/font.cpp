@@ -1070,6 +1070,17 @@ FFont::FFont (int lump, FName nm)
 	noTranslate = false;
 }
 
+FFont::FFont(const char *fontname)
+{
+	noTranslate    = false;
+	GlobalKerning  = false;
+	SpaceWidth     = 0;
+	FontHeight     = 0;
+	int FixedWidth = 0;
+
+	Type = EFontType::Dynamic;
+}
+
 //==========================================================================
 //
 // FFont :: FixXMoves
