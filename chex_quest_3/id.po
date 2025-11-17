@@ -1,0 +1,263 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-15 17:53+0000\n"
+"Last-Translator: Joel Robert Justiawan "
+"<joelwindows7@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/"
+"chex-quest-3/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Dapat flemkey biru."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Dapat flemkey kuning."
+
+msgid "GOTREDFLEM"
+msgstr "Dapat flemkey merah."
+
+msgid "GOTGOGGLES"
+msgstr "Dapat Kacamata Ultra"
+
+msgid "PD_BLUECO"
+msgstr "Anda butuh kunci biru untuk mengaktifkan objek ini"
+
+msgid "PD_REDCO"
+msgstr "Anda butuh kunci merah untuk mengaktifkan objek ini"
+
+msgid "PD_YELLOWCO"
+msgstr "Anda butuh kunci kuning untuk mengaktifkan objek ini"
+
+msgid "PD_BLUEFO"
+msgstr "Anda butuh flemkey biru untuk mengaktifkan objek ini"
+
+msgid "PD_REDFO"
+msgstr "Anda butuh flemkey merah untuk mengaktifkan objek ini"
+
+msgid "PD_YELLOWFO"
+msgstr "Anda butuh flemkey kuning untuk mengaktifkan objek ini"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Dapat zorcher."
+
+msgid "STSTR_KFAADDED"
+msgstr "Zorch dan kunci ditambahkan"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Zona Landasan"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Gudang Penyimpanan"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorium"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arboretum"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Goa Bazoik"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Bandar Angkasa"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Bioskop"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Museum Chex"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Jalanan Kota"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Sistem Bawah Tanah"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Komando Pusat"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Sereal Serikat"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Vila Chex"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Taman Provinsi"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Kapal Meteor"
+
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgid "CC_IMP"
+msgstr "Bipedicus dengan Armor"
+
+msgid "CC_DEMON"
+msgstr ""
+
+msgid "CC_LOST"
+msgstr "Ranjau Flem"
+
+msgid "CC_CACO"
+msgstr ""
+
+msgid "CC_BARON"
+msgstr ""
+
+msgid "CC_SPIDER"
+msgstr ""
+
+msgid "CC_CYBER"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr "Ksatria Chex"
+
+msgid "PD_BLUEC"
+msgstr "Anda butuh kunci biru untuk membuka pintu ini"
+
+msgid "PD_REDC"
+msgstr "Anda butuh kunci merah untuk membuka pintu ini"
+
+msgid "PD_YELLOWC"
+msgstr "Anda butuh kunci kuning untuk membuka pintu ini"
+
+msgid "PD_BLUEF"
+msgstr "Anda butuh flemkey biru untuk membuka pintu ini"
+
+msgid "PD_REDF"
+msgstr "Anda butuh flemkey merah untuk membuka pintu ini"
+
+msgid "PD_YELLOWF"
+msgstr "Anda butuh flemkey kuning untuk membuka pintu ini"
+
+msgid "OB_SLIME"
+msgstr "%s tenggelam dalam kolam slime."
+
+msgid "OB_LAVA"
+msgstr "%o tenggelam dalam kolam slime."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o telah diraup oleh slime inter-dimensional!"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o telah diraup oleh slime inter-dimensional!"
+
+msgid "OB_STRIDICUS"
+msgstr ""
+
+msgid "OB_FLEMMINE"
+msgstr ""
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr ""
+
+msgid "OB_MAXIMUS"
+msgstr "%o telah dikalahkan Maximus."
+
+msgid "OB_LARVA"
+msgstr ""
+
+msgid "OB_QUADRUMPUS"
+msgstr ""
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o telah dikalahkan Flembomination."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o telah dikalahkan Lord Snotfolus."
+
+msgid "OB_MPR_SPLASH"
+msgstr ""
+
+msgid "OB_MPBFG_SPLASH"
+msgstr ""
+
+msgid "E1TEXT"
+msgstr ""
+"Setelah mengirim Flembrane\n"
+"kembali ke dimensinya, Anda membebaskan\n"
+"para sanderaan. Namun flemoids masih dimana2!\n"
+"Anda dan para sandera pun beristirahat di\n"
+"kapal angkasa Anda. Para flemoid telah melumuri\n"
+"sebagian kapal, tetapi berhasil kabur ke orbit.\n"
+"Saat kembali Anda telah diberi selamat\n"
+"atas penyelamatan yang berani, namun Anda\n"
+"menyatakan sebuah peringatan...\n"
+"Kami belum melihat akhir dari para Flemoid.\n"
+"\n"
+"Sayangnya Anda benar. Sesaat anda sudah\n"
+"pulang, Anda melihat bahwa para Flemoid\n"
+"entah bagaimana mengikuti kalian sampai disini.\n"
+"Bersiap2lah untuk Chex Quest 2: Teror di Kota Chex!"
+
+msgid "E2TEXT"
+msgstr ""
+"Anda telah mengzorch sisa2 flemoid\n"
+"yang berkumpul di gorong2. Kota Chex telah\n"
+"diselamatkan. Sepertinya ancaman Flemoid\n"
+"sudah berakhir.\n"
+"\n"
+"\n"
+"Sepulih tahun berlalu damai dan tentram.\n"
+"Namun para Flemoid masih belum terkalahkan\n"
+"dan keinginan untuk kendali atas nutrisi masih kental.\n"
+"dimensi kaya sereal pun belum pudar.\n"
+"Mereka telah mengumpulkan pasukan lebih, membuka\n"
+"portal inter-dimensi raksasa di angkasa\n"
+"dan sekarang segerombolan slime langsung \n"
+"menyerbu planet sereal!\n"
+"\n"
+"Bersiaplah untuk\n"
+"Chex Quest 3: Invasi!"
+
+msgid "E3TEXT"
+msgstr ""
+"Dengan tembakan sekali lagi, Anda telah mengzorch\n"
+"Lord Snotfolus kembali ke dimensinya!\n"
+"Dari semua kemungkinan yang ada Anda telah\n"
+"menggagalkan invasi sendirian!\n"
+"\n"
+"Anda berharap bahwa para Flemoid \n"
+"belajar dan tidak berjanji\n"
+"tidak akan kembali ke dimensi\n"
+"sereal.\n"
+"\n"
+"\n"
+"\n"
+"Namun jika tetap saja Anda sudah tahu untuk\n"
+"bersiap2 lagi!"
+
+msgid "M_EPI1"
+msgstr "Penyelamatan di Bazoik"
+
+msgid "M_EPI2"
+msgstr "Teror di Kota Chex"
+
+msgid "M_EPI3"
+msgstr "Invasi!"
+
+msgid "TAG_GOGGLES"
+msgstr "Kacamata Ultra"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Flemkey Biru"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Flemkey Kuning"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Flemkey Merah"

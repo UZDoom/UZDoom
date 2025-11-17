@@ -1,0 +1,519 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-13 12:52+0000\n"
+"Last-Translator: Joel Robert Justiawan "
+"<joelwindows7@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/hacx/"
+"id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "QUITMSG1"
+msgstr "Monster ini susah amat ya?"
+
+msgid "QUITMSG"
+msgstr ""
+"Anda yakin untuk\\n"
+"lari dari misimu?"
+
+msgid "QUITMSG2"
+msgstr "Mau keluar? Tapi nyebut dirimu sebagai hacker?"
+
+msgid "QUITMSG3"
+msgstr "Balik woi sebelum aku kirim virus ke knalpot mu!"
+
+msgid "QUITMSG4"
+msgstr "Hacker sejati tidak pernah lari dari misi."
+
+msgid "QUITMSG5"
+msgstr "Ayolah! Kau belum lihat bagian terbaiknya!"
+
+msgid "QUITMSG6"
+msgstr "Menyerahlah, dan dunia cyber matang sudah!"
+
+msgid "QUITMSG7"
+msgstr "GENIE titip salam, kocak!"
+
+msgid "QUITMSG8"
+msgstr "Hmm. Sayang kalau jadi pahlawan, Hacker."
+
+msgid "QUITMSG9"
+msgstr "Apa? Kau mau balik ke sangkar mainan?"
+
+msgid "QUITMSG10"
+msgstr "Seharusnya ambil aja pil biru."
+
+msgid "QUITMSG11"
+msgstr "Nama gamenya bukan Twitch n' Run!"
+
+msgid "QUITMSG12"
+msgstr "Tidak apa. Menyelamatkan dunia bisa nanti, ya kan?"
+
+msgid "QUITMSG13"
+msgstr "Sepertinya waktu untuk buat seperti 'net dan berpisah!"
+
+msgid "QUITMSG14"
+msgstr "Jangan pergi dan lupa dengan HacX, sekarang!"
+
+msgid "OB_SUICIDE"
+msgstr "%o menghapus dirinya dari alam semesta."
+
+msgid "OB_FALLING"
+msgstr "%o membuat kawah segede Kansas."
+
+msgid "OB_CRUSH"
+msgstr "%o berubah jadi pancake manusia."
+
+msgid "OB_EXIT"
+msgstr "%o mencoba kabur."
+
+msgid "OB_WATER"
+msgstr "%o berenang seperti batu-bata."
+
+msgid "OB_SLIME"
+msgstr "%o meledak nuklir."
+
+msgid "OB_LAVA"
+msgstr "%o berendam air panas."
+
+msgid "OB_BARREL"
+msgstr "%o overdosis nitro gliserin."
+
+msgid "OB_SPLASH"
+msgstr "%o pecah berkeping-keping."
+
+msgid "OB_R_SPLASH"
+msgstr "%o mau melihat isi jeroannya %g luar-dalam."
+
+msgid "OB_ROCKET"
+msgstr "%o mau melihat isi jeroannya %g luar-dalam."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o menghapus dirinya dari alam semesta."
+
+msgid "OB_THUG"
+msgstr "%o bukan lagi spesies dominan."
+
+msgid "OB_ANDROID"
+msgstr "%o salah kaprah dengan mesin."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o membuat dirinya kena cyber-tumpang-tendang-bokong."
+
+msgid "OB_ICE"
+msgstr "%o dibekukan ICE."
+
+msgid "OB_BUZZER"
+msgstr "%o merasa agak nge-buzz."
+
+msgid "OB_STEALTH"
+msgstr "%o mengungkap sesuatu yang mengejutkan."
+
+msgid "OB_DMAN"
+msgstr "%o terhapus dari dunia cyber."
+
+msgid "OB_GLASS"
+msgstr ""
+
+msgid "OB_MANIAC"
+msgstr "member kehidupannya %o telah dihentikan."
+
+msgid "OB_MANIACHIT"
+msgstr "%o mati dengan sebuah metode entahlah akupun tak mengerti."
+
+msgid "OB_TERMIN"
+msgstr "%o terpanggang si cewek femme fatale."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o telalu keenakan dengan lawan jenisnya."
+
+msgid "OB_REPLI"
+msgstr "%o mengatakan selamat tinggal kepada teman lamanya."
+
+msgid "OB_REPLIHIT"
+msgstr "%o tertusuk di belakang oleh teman lamanya."
+
+msgid "OB_PHAGE"
+msgstr "%o terpilih oleh seleksi alam."
+
+msgid "OB_THORN"
+msgstr "%o tak dapat menghindari kematian atas duri."
+
+msgid "OB_SUMATIC"
+msgstr "%o kena jotos sumo di selangkangnya."
+
+msgid "OB_GENIE"
+msgstr "%o gagal dapat tiga permintaan dari %p."
+
+msgid "OB_MINE"
+msgstr "%o mencoba elus-elus ranjau."
+
+msgid "OB_MPKICK"
+msgstr "wajahnya %o ditendang %k ala tendangan-fu Bruce Lee."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o jatuh tak berdaya melalui pewahyuan mengejutkan %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o kena dosis-dobel hukumannya %k."
+
+msgid "OB_MPTAZER"
+msgstr ""
+
+msgid "OB_MPCRYOGUN"
+msgstr ""
+
+msgid "OB_MPUZI"
+msgstr ""
+
+msgid "OB_MPZOOKA"
+msgstr ""
+
+msgid "OB_MPZ_SPLASH"
+msgstr ""
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr ""
+
+msgid "OB_MPNUKE"
+msgstr ""
+
+msgid "OB_MPNUKESPLASH"
+msgstr ""
+
+msgid "OB_MPTELEFRAG"
+msgstr ""
+
+msgid "OB_MONTELEFRAG"
+msgstr ""
+
+msgid "OB_DEFAULT"
+msgstr ""
+
+msgid "GOTNUKER"
+msgstr ""
+
+msgid "GOTUZI"
+msgstr ""
+
+msgid "GOTREZNATOR"
+msgstr ""
+
+msgid "GOTPHOTONZOOKA"
+msgstr ""
+
+msgid "GOTBIGSTICK"
+msgstr ""
+
+msgid "GOTTAZER"
+msgstr ""
+
+msgid "GOTCRYOGUN"
+msgstr ""
+
+msgid "GOTROUNDS"
+msgstr ""
+
+msgid "GOTROUNDSCASE"
+msgstr ""
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr ""
+
+msgid "GOTTORPEDOS"
+msgstr ""
+
+msgid "GOTMOLECULES"
+msgstr ""
+
+msgid "GOTMOLECULESTANK"
+msgstr ""
+
+msgid "GOTCARTRIDGES"
+msgstr ""
+
+msgid "GOTCARTRIDGESCASE"
+msgstr ""
+
+msgid "GOTVALISE"
+msgstr ""
+
+msgid "GOTFORCEFIELD"
+msgstr ""
+
+msgid "GOTMICROTEL"
+msgstr ""
+
+msgid "GOTENKBLIND"
+msgstr ""
+
+msgid "GOTRUBBERBOOTS"
+msgstr ""
+
+msgid "GOTSIARRAY"
+msgstr ""
+
+msgid "GOTINFRARED"
+msgstr ""
+
+msgid "GOTINHALER"
+msgstr ""
+
+msgid "GOTHYPONEED"
+msgstr ""
+
+msgid "GOTHYPO"
+msgstr ""
+
+msgid "GOTKEYCARD"
+msgstr ""
+
+msgid "GOTCKEY"
+msgstr ""
+
+msgid "GOTPASSWORD"
+msgstr ""
+
+msgid "GOTBLUEZKEY"
+msgstr ""
+
+msgid "GOTYELWZKEY"
+msgstr ""
+
+msgid "GOTREDZKEY"
+msgstr ""
+
+msgid "GOTBODYARMOR"
+msgstr ""
+
+msgid "GOTCENTROPHENOXINE"
+msgstr ""
+
+msgid "GOTKEVLARVEST"
+msgstr ""
+
+msgid "GOTSKEVLARVEST"
+msgstr ""
+
+msgid "GOTMICROKIT"
+msgstr ""
+
+msgid "GOTDAMPENER"
+msgstr ""
+
+msgid "PD_CKEY"
+msgstr ""
+
+msgid "PD_KEYCARD"
+msgstr ""
+
+msgid "PD_PASSWORD"
+msgstr ""
+
+msgid "PD_BLUEZKEY"
+msgstr ""
+
+msgid "PD_REDZKEY"
+msgstr ""
+
+msgid "PD_YELWZKEY"
+msgstr ""
+
+msgid "X1TEXT"
+msgstr ""
+
+msgid "X2TEXT"
+msgstr ""
+
+msgid "X3TEXT"
+msgstr ""
+
+msgid "X5TEXT"
+msgstr ""
+
+msgid "TXT_HACXMAP01"
+msgstr ""
+
+msgid "TXT_HACXMAP02"
+msgstr ""
+
+msgid "TXT_HACXMAP03"
+msgstr ""
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr ""
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr ""
+
+msgid "TXT_HACXMAP08"
+msgstr ""
+
+msgid "TXT_HACXMAP09"
+msgstr ""
+
+msgid "TXT_HACXMAP10"
+msgstr ""
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr ""
+
+msgid "TXT_HACXMAP13"
+msgstr ""
+
+msgid "TXT_HACXMAP14"
+msgstr ""
+
+msgid "TXT_HACXMAP15"
+msgstr ""
+
+msgid "TXT_HACXMAP16"
+msgstr ""
+
+msgid "TXT_HACXMAP17"
+msgstr ""
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr ""
+
+msgid "TXT_HACXMAP20"
+msgstr ""
+
+msgid "TXT_HACXMAP31"
+msgstr ""
+
+msgid "STSTR_CLEV"
+msgstr ""
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr ""
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr ""
+
+msgid "STSTR_BEHOLDX"
+msgstr ""
+
+msgid "STSTR_NCON"
+msgstr ""
+
+msgid "STSTR_NCOFF"
+msgstr ""
+
+msgid "STSTR_NOMUS"
+msgstr ""
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr ""
+
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgid "STSTR_FAADDED"
+msgstr ""
+
+msgid "STSTR_DQDON"
+msgstr ""
+
+msgid "STSTR_DQDOFF"
+msgstr ""
+
+msgid "AMSTR_FOLLOWON"
+msgstr ""
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr ""
+
+msgid "DOSY"
+msgstr ""
+
+msgid "ENDGAME"
+msgstr ""
+
+msgid "NIGHTMARE"
+msgstr ""
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+
+msgid "QLPROMPT"
+msgstr ""
+
+msgid "CC_THUG"
+msgstr ""
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr ""
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr ""
+
+msgid "CC_MONSTRUCT"
+msgstr ""
+
+msgid "CC_MECH"
+msgstr ""
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr ""
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr ""
+
+msgid "SKILL_EASY"
+msgstr ""
+
+msgid "SKILL_NORMAL"
+msgstr ""
+
+msgid "SKILL_HARD"
+msgstr ""
+
+msgid "SKILL_NIGHTMARE"
+msgstr ""

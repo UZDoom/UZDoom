@@ -1,0 +1,523 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-13 12:52+0000\n"
+"Last-Translator: not aname <clay57447@gmail.com>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/uzdoom/hacx/he/>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : "
+"((n > 10 && n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "QUITMSG1"
+msgstr "הבאגים האלה מסובכים מידי בשבילך?"
+
+msgid "QUITMSG"
+msgstr ""
+
+msgid "QUITMSG2"
+msgstr "אתה מנסה לותר? ואתה קורה לעצמך האקר?"
+
+msgid "QUITMSG3"
+msgstr ""
+
+msgid "QUITMSG4"
+msgstr "האקרים אמיתיים אף פעם לא בורחים מהאקשן."
+
+msgid "QUITMSG5"
+msgstr "קדימה! עדיין לא ראית את החלק הכי טוב!"
+
+msgid "QUITMSG6"
+msgstr ""
+
+msgid "QUITMSG7"
+msgstr ""
+
+msgid "QUITMSG8"
+msgstr ""
+
+msgid "QUITMSG9"
+msgstr ""
+
+#, fuzzy
+msgid "QUITMSG10"
+msgstr "היית צריך לקחת את הגלולה הכחולה."
+
+msgid "QUITMSG11"
+msgstr ""
+
+msgid "QUITMSG12"
+msgstr "אין דאגה. הצלה של העולם יכולה לחכות, נכון?"
+
+msgid "QUITMSG13"
+msgstr ""
+
+msgid "QUITMSG14"
+msgstr ""
+
+msgid "OB_SUICIDE"
+msgstr "%o מחק את עצמו מהיקום."
+
+msgid "OB_FALLING"
+msgstr "%o יצר מכתש בגודל של קנזס."
+
+msgid "OB_CRUSH"
+msgstr "%o הפך לפנקיק אנושי."
+
+msgid "OB_EXIT"
+msgstr ""
+
+msgid "OB_WATER"
+msgstr "%o שחה כמו לבנה."
+
+msgid "OB_SLIME"
+msgstr ""
+
+msgid "OB_LAVA"
+msgstr "%o עשה אמבטיה חמה."
+
+msgid "OB_BARREL"
+msgstr "%o לקח יותר מידי ניטרוגליצרין."
+
+msgid "OB_SPLASH"
+msgstr ""
+
+msgid "OB_R_SPLASH"
+msgstr ""
+
+msgid "OB_ROCKET"
+msgstr ""
+
+msgid "OB_KILLEDSELF"
+msgstr "%o מחק את עצמו מהיקום."
+
+msgid "OB_THUG"
+msgstr ""
+
+msgid "OB_ANDROID"
+msgstr ""
+
+msgid "OB_MONSTRUCT"
+msgstr ""
+
+msgid "OB_ICE"
+msgstr ""
+
+msgid "OB_BUZZER"
+msgstr "%o מרגיש קצת שכור."
+
+msgid "OB_STEALTH"
+msgstr ""
+
+msgid "OB_DMAN"
+msgstr ""
+
+msgid "OB_GLASS"
+msgstr ""
+
+msgid "OB_MANIAC"
+msgstr ""
+
+msgid "OB_MANIACHIT"
+msgstr "%o מת בצורה אקראים שאני לא יכול להבין."
+
+msgid "OB_TERMIN"
+msgstr ""
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr ""
+
+msgid "OB_REPLI"
+msgstr "%o אמר ביי לחבר ותיק."
+
+msgid "OB_REPLIHIT"
+msgstr "%o נדקר בגב על ידי חבר ותיק."
+
+msgid "OB_PHAGE"
+msgstr ""
+
+msgid "OB_THORN"
+msgstr "%o לא יכל להימלט ממוות דוקרני."
+
+msgid "OB_SUMATIC"
+msgstr ""
+
+msgid "OB_GENIE"
+msgstr ""
+
+msgid "OB_MINE"
+msgstr "%o ניסה ללטף מכרה."
+
+msgid "OB_MPKICK"
+msgstr ""
+
+msgid "OB_MPREZNATOR"
+msgstr ""
+
+msgid "OB_MPXPISTOL"
+msgstr ""
+
+msgid "OB_MPTAZER"
+msgstr ""
+
+msgid "OB_MPCRYOGUN"
+msgstr ""
+
+msgid "OB_MPUZI"
+msgstr ""
+
+msgid "OB_MPZOOKA"
+msgstr ""
+
+msgid "OB_MPZ_SPLASH"
+msgstr ""
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr ""
+
+msgid "OB_MPNUKE"
+msgstr "%o בלע את הפצצה הגרעינית של %k."
+
+msgid "OB_MPNUKESPLASH"
+msgstr ""
+
+msgid "OB_MPTELEFRAG"
+msgstr ""
+
+#, fuzzy
+msgid "OB_MONTELEFRAG"
+msgstr "המבנה האטומי של %o התפצל."
+
+msgid "OB_DEFAULT"
+msgstr ""
+
+msgid "GOTNUKER"
+msgstr ""
+
+msgid "GOTUZI"
+msgstr "הישגת עוזי!!"
+
+msgid "GOTREZNATOR"
+msgstr ""
+
+msgid "GOTPHOTONZOOKA"
+msgstr "הישגת פוטון -זוקה!"
+
+msgid "GOTBIGSTICK"
+msgstr ""
+
+msgid "GOTTAZER"
+msgstr "הישגת טייזר!!"
+
+#, fuzzy
+msgid "GOTCRYOGUN"
+msgstr "הישגת אקדח קור!"
+
+msgid "GOTROUNDS"
+msgstr ""
+
+msgid "GOTROUNDSCASE"
+msgstr ""
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "הישגת טיל נפץ!"
+
+msgid "GOTTORPEDOS"
+msgstr ""
+
+msgid "GOTMOLECULES"
+msgstr ""
+
+msgid "GOTMOLECULESTANK"
+msgstr ""
+
+msgid "GOTCARTRIDGES"
+msgstr ""
+
+msgid "GOTCARTRIDGESCASE"
+msgstr ""
+
+msgid "GOTVALISE"
+msgstr "הישגד מזודה מלאה בטובין!"
+
+msgid "GOTFORCEFIELD"
+msgstr "שדה כוח!"
+
+msgid "GOTMICROTEL"
+msgstr ""
+
+msgid "GOTENKBLIND"
+msgstr ""
+
+msgid "GOTRUBBERBOOTS"
+msgstr ""
+
+msgid "GOTSIARRAY"
+msgstr ""
+
+msgid "GOTINFRARED"
+msgstr "משקפות אינפרה-אדומות!"
+
+msgid "GOTINHALER"
+msgstr "תנשום עמוק, משאף!"
+
+msgid "GOTHYPONEED"
+msgstr ""
+
+msgid "GOTHYPO"
+msgstr ""
+
+msgid "GOTKEYCARD"
+msgstr "מצאת כרטיס מפתח!"
+
+msgid "GOTCKEY"
+msgstr "מצאת מפתח-C!"
+
+msgid "GOTPASSWORD"
+msgstr "מצאת סיסמה!"
+
+msgid "GOTBLUEZKEY"
+msgstr "מצאת מפתח-Z כחול!"
+
+msgid "GOTYELWZKEY"
+msgstr "מצאת מפתח-Z צהוב!"
+
+msgid "GOTREDZKEY"
+msgstr "מצאת מפתח-Z אדום!"
+
+msgid "GOTBODYARMOR"
+msgstr "שריון!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr ""
+
+msgid "GOTKEVLARVEST"
+msgstr "הישגת אפוד קוולר!"
+
+msgid "GOTSKEVLARVEST"
+msgstr ""
+
+msgid "GOTMICROKIT"
+msgstr ""
+
+msgid "GOTDAMPENER"
+msgstr ""
+
+msgid "PD_CKEY"
+msgstr "את צריך מפתח-C כדי לקבל גישה לפריט זה!"
+
+msgid "PD_KEYCARD"
+msgstr "את צריך כרטיס מפתח כדי לקבל גישה לפריט זה!"
+
+msgid "PD_PASSWORD"
+msgstr "את צריך סיסמה כדי לקבל גישה לפריט זה!"
+
+msgid "PD_BLUEZKEY"
+msgstr "את צריך מפתח-Z כחול כדי לגרום לזה לעבוד"
+
+msgid "PD_REDZKEY"
+msgstr "את צריך מפתח-Z אדום כדי לגרום לזה לעבוד!"
+
+msgid "PD_YELWZKEY"
+msgstr "את צריך מפתח-Z צהוב כדי לגרום לזה לעבוד!"
+
+msgid "X1TEXT"
+msgstr ""
+
+msgid "X2TEXT"
+msgstr ""
+
+msgid "X3TEXT"
+msgstr ""
+
+msgid "X5TEXT"
+msgstr ""
+
+msgid "TXT_HACXMAP01"
+msgstr ""
+
+msgid "TXT_HACXMAP02"
+msgstr ""
+
+msgid "TXT_HACXMAP03"
+msgstr ""
+
+msgid "TXT_HACXMAP04"
+msgstr ""
+
+msgid "TXT_HACXMAP05"
+msgstr ""
+
+msgid "TXT_HACXMAP06"
+msgstr ""
+
+msgid "TXT_HACXMAP07"
+msgstr ""
+
+msgid "TXT_HACXMAP08"
+msgstr ""
+
+msgid "TXT_HACXMAP09"
+msgstr ""
+
+msgid "TXT_HACXMAP10"
+msgstr ""
+
+msgid "TXT_HACXMAP11"
+msgstr ""
+
+msgid "TXT_HACXMAP12"
+msgstr ""
+
+msgid "TXT_HACXMAP13"
+msgstr "הביוב"
+
+msgid "TXT_HACXMAP14"
+msgstr ""
+
+msgid "TXT_HACXMAP15"
+msgstr ""
+
+msgid "TXT_HACXMAP16"
+msgstr ""
+
+msgid "TXT_HACXMAP17"
+msgstr "נחל של דם"
+
+msgid "TXT_HACXMAP18"
+msgstr ""
+
+msgid "TXT_HACXMAP19"
+msgstr ""
+
+msgid "TXT_HACXMAP20"
+msgstr ""
+
+msgid "TXT_HACXMAP31"
+msgstr ""
+
+msgid "STSTR_CLEV"
+msgstr "עכשיו מגיעים אל...\n"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr ""
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgid "STSTR_BEHOLD"
+msgstr ""
+
+msgid "STSTR_BEHOLDX"
+msgstr ""
+
+msgid "STSTR_NCON"
+msgstr ""
+
+msgid "STSTR_NCOFF"
+msgstr ""
+
+msgid "STSTR_NOMUS"
+msgstr ""
+
+# Should probably not be translated...
+msgid "STSTR_MUS"
+msgstr "תגביר את הווליום\n"
+
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgid "STSTR_FAADDED"
+msgstr ""
+
+msgid "STSTR_DQDON"
+msgstr ""
+
+msgid "STSTR_DQDOFF"
+msgstr ""
+
+msgid "AMSTR_FOLLOWON"
+msgstr ""
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr ""
+
+msgid "DOSY"
+msgstr "- תלחץ על Y כדי לברוח! -"
+
+msgid "ENDGAME"
+msgstr ""
+"אתה משוגע או שלא הסתגלת?\n"
+"נו? כן או לא!"
+
+msgid "NIGHTMARE"
+msgstr ""
+
+# For most languages the original Doom text should suffice.
+msgid "QSPROMPT"
+msgstr ""
+
+msgid "QLPROMPT"
+msgstr ""
+
+msgid "CC_THUG"
+msgstr ""
+
+msgid "CC_ANDROID"
+msgstr ""
+
+msgid "CC_ICE"
+msgstr ""
+
+msgid "CC_BUZZER"
+msgstr ""
+
+msgid "CC_DMAN"
+msgstr ""
+
+msgid "CC_PHAGE"
+msgstr ""
+
+msgid "CC_MONSTRUCT"
+msgstr ""
+
+msgid "CC_MECH"
+msgstr ""
+
+msgid "CC_TERMI"
+msgstr ""
+
+msgid "CC_THORN"
+msgstr ""
+
+msgid "CC_MAJONG"
+msgstr ""
+
+msgid "CC_HERO"
+msgstr ""
+
+msgid "SKILL_BABY"
+msgstr ""
+
+#, fuzzy
+msgid "SKILL_EASY"
+msgstr "אאחח, אני צריך בריאות!"
+
+msgid "SKILL_NORMAL"
+msgstr "בוא נפצל אותם לחלקים!"
+
+#, fuzzy
+msgid "SKILL_HARD"
+msgstr "אני על מוות!"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "שיגעון!"
