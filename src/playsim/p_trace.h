@@ -81,6 +81,7 @@ struct FTraceResults
 	uint8_t Side;
 	uint8_t Tier;
 	bool unlinked;		// passed through a portal without static offset.
+	bool entering3DLiquid;		// For callback when TRACE_3DLiquidCallback is set
 	ETraceResult HitType;
 	F3DFloor *ffloor;
 

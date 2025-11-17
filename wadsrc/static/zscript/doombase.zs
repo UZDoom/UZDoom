@@ -367,6 +367,7 @@ struct TraceResults native
 	native uint8 Side;
 	native uint8 Tier;		// see Tracer.ELineTier
 	native bool unlinked;		// passed through a portal without static offset.
+	native bool entering3DLiquid;	// For callback when TRACE_3DLiquidCallback is set
 
 	native ETraceResult HitType;
 	native F3DFloor ffloor;
