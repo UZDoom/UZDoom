@@ -1369,24 +1369,8 @@ include_directories(
 
 add_dependencies( zdoom revision_check )
 
-# Due to some quirks, we need to do this in this order
-if( NOT ZDOOM_OUTPUT_OLDSTYLE )
-	# RUNTIME_OUTPUT_DIRECTORY does not exist in CMake 2.4.
-	# Linux distributions are slow to adopt 2.6. :(
-	set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
-	set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
-else()
-	set_target_properties( zdoom PROPERTIES
-		RUNTIME_OUTPUT_NAME ${ZDOOM_EXE_NAME}
-		RUNTIME_OUTPUT_DIRECTORY_RELEASE ${ZDOOM_OUTPUT_DIR}
-		RUNTIME_OUTPUT_NAME_DEBUG ${ZDOOM_EXE_NAME}d
-		RUNTIME_OUTPUT_DIRECTORY_DEBUG ${ZDOOM_OUTPUT_DIR}
-		RUNTIME_OUTPUT_NAME_MINSIZEREL ${ZDOOM_EXE_NAME}msr
-		RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${ZDOOM_OUTPUT_DIR}
-		RUNTIME_OUTPUT_NAME_RELWITHDEBINFO ${ZDOOM_EXE_NAME}rd
-		RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${ZDOOM_OUTPUT_DIR}
-	)
-endif()
+set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
+set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
 
 if( MSVC )
 	option ( CONSOLE_MODE "Compile as a console application" OFF )

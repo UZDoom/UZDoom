@@ -45,7 +45,7 @@ endif()
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF) 
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(Threads REQUIRED)
 find_package(Python 3.6 REQUIRED)
@@ -92,16 +92,10 @@ function( add_pk3 PK3_NAME PK3_DIR )
 	# Generate target name. Just use "pk3" for main pk3 target.
 	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
 
-	if( NOT ZDOOM_OUTPUT_OLDSTYLE )
-		add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-			COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
-			COMMAND ${CMAKE_COMMAND} -E copy_if_different ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} $<TARGET_FILE_DIR:zdoom>/${PK3_NAME}
-			DEPENDS zipdir )
-	else()
-		add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-			COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
-			DEPENDS zipdir )
-	endif()
+	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
+		COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
+		DEPENDS zipdir )
+
 	# Create a list of source files for this PK3, for use in the IDE
 	# Phase 1: Create a list of all source files for this PK3 archive, except
 	#  for a couple of strife image file names that confuse CMake.
@@ -120,6 +114,7 @@ function( add_pk3 PK3_NAME PK3_DIR )
 			list(REMOVE_ITEM PK3_SRCS ${PK3_SRC})
 		endif()
 	endforeach()
+
 	# Phase 2: Create the PK3 build rule, including the source file list for the IDE
 	# Touch the zipdir executable here so that the pk3s are forced to
 	# rebuild each time since their dependency has "changed."
@@ -127,17 +122,37 @@ function( add_pk3 PK3_NAME PK3_DIR )
 		COMMAND ${CMAKE_COMMAND} -E touch $<TARGET_FILE:zipdir>
 		DEPENDS ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
 		SOURCES ${PK3_SRCS})
+
 	# Phase 3: Assign source files to a nice folder structure in the IDE
 	assort_pk3_source_folder("Source Files" ${PK3_DIR})
-	# Phase 4: Add the resulting PK3 to the install target.
+
+	# Phase 4: Create separate copy step, in order to make zdoom depend on pk3s without creating cycle
+	if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
+		set(DEST_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+	elseif(WIN32)
+		set(DEST_DIR "${PROJECT_BINARY_DIR}/$<CONFIG>")
+	else()
+		set(DEST_DIR "${PROJECT_BINARY_DIR}")
+	endif()
+
+	set(COPY_TARGET_NAME "${PK3_TARGET}_copy")
+	add_custom_target(${COPY_TARGET_NAME} ALL
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different
+			"${ZDOOM_OUTPUT_DIR}/${PK3_NAME}"
+			"${DEST_DIR}/${PK3_NAME}"
+		DEPENDS ${PK3_TARGET}
+	)
+	add_dependencies(zdoom ${COPY_TARGET_NAME})
+
+	# Phase 5: Add the resulting PK3 to the install target.
 	if( WIN32 )
 		set( INSTALL_PK3_PATH . CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
 	else()
 		set( INSTALL_PK3_PATH share/games/${ZDOOM_EXE_NAME} CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
 	endif()
 	install(FILES "${PROJECT_BINARY_DIR}/${PK3_NAME}"
-			DESTINATION ${INSTALL_PK3_PATH}
-			COMPONENT "Game resources")
+		DESTINATION ${INSTALL_PK3_PATH}
+		COMPONENT "Game resources")
 endfunction()
 
 macro( generate_language_files target source destination )
@@ -169,13 +184,6 @@ ENDIF()
 
 set( ZDOOM_OUTPUT_DIR ${CMAKE_BINARY_DIR} CACHE PATH "Directory where zdoom.pk3 and the executable will be created." )
 set( ZDOOM_EXE_NAME "uzdoom" CACHE FILEPATH "Name of the executable to create" )
-if( MSVC )
-	# Allow the user to use ZDOOM_OUTPUT_DIR as a single release point.
-	# Use zdoom, zdoomd, zdoom64, and zdoomd64 for the binary names
-	option( ZDOOM_OUTPUT_OLDSTYLE "Don't use Release/Debug directories." OFF )
-else()
-	set( ZDOOM_OUTPUT_OLDSTYLE OFF )
-endif()
 
 # Replacement variables for a possible long list of C/C++ compilers compatible with GCC
 if( "${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_C_COMPILER_ID}" MATCHES "Clang" )
@@ -459,6 +467,7 @@ install(DIRECTORY docs/
 
 option( DYN_OPENAL "Dynamically load OpenAL" ON )
 
+add_subdirectory( src )
 add_subdirectory( libraries/lzma )
 add_subdirectory( tools )
 add_subdirectory( wadsrc )
@@ -466,7 +475,6 @@ add_subdirectory( wadsrc_bm )
 add_subdirectory( wadsrc_lights )
 add_subdirectory( wadsrc_extra )
 add_subdirectory( wadsrc_widepix )
-add_subdirectory( src )
 
 if( ZMUSIC_SYSTEM_INSTALL )
 	# Internal ZMusic library provides miniz target, miniz.h file in partuclar
