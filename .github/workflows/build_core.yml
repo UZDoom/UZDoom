@@ -1,0 +1,132 @@
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+      os:
+        required: true
+        type: string
+      deps_cmdline:
+        required: true
+        type: string
+      extra_options:
+        required: true
+        type: string
+      build_type:
+        required: true
+        type: string
+
+jobs:
+  run_build:
+    name: ${{ inputs.name }} ${{ inputs.build_type }}
+    runs-on: ${{ inputs.os }}
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Dependencies
+      shell: bash
+      run: |
+        if [[ -n "${{ inputs.deps_cmdline }}" ]]; then
+          eval ${{ inputs.deps_cmdline }}
+        fi
+
+    - name: Git describe
+      id: ghd
+      uses: proudust/gh-describe@v2
+
+    - name: Configure
+      shell: bash
+      run: |
+        mkdir build
+        cmake -B build -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} -DPK3_QUIET_ZIPDIR=ON ${{ inputs.extra_options }} .
+
+    - name: Build
+      shell: bash
+      run: |
+        export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
+        export MAKEFLAGS=--keep-going
+        cmake --build build --config ${{ inputs.build_type }} --parallel 4
+
+    - name: Package
+      shell: bash
+      run: |
+        function fetch() { { curl -L "$3" | tee "$1" | sha256sum ; } && { echo "$2 $1" | sha256sum -c - ; } ; }
+
+        cd build
+        mkdir package
+        packagename="${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.ghd.outputs.describe }}"
+
+        7z a package/licenses.zip ../docs/licenses/*
+
+        if [[ "${{ runner.os }}" == 'Windows' ]]; then
+
+            fetch oalsoft.zip \
+                ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6 \
+                https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
+            unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
+
+            fetch sndfile.zip \
+                2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f \
+                https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
+            unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
+
+            mkdir package/soundfonts
+            cp ../soundfont/uzdoom.sf2 package/soundfonts
+
+            mkdir package/fm_banks
+            cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
+
+            cp ${{ inputs.build_type }}/uzdoom.exe ${{ inputs.build_type }}/*.pk3 package
+
+            cd package
+            7z a -sdel -r "${packagename}.zip" *
+            cd ..
+
+        elif [[ "${{ runner.os }}" == 'macOS' ]]; then
+
+            if [[ ! -d uzdoom.app ]] && [[ -d ${{ inputs.build_type }}/uzdoom.app ]]; then
+                mv ${{ inputs.build_type }}/uzdoom.app uzdoom.app
+            fi
+            mv package/licenses.zip uzdoom.app
+            # copy fm_banks + soundfonts ?
+            cp -r uzdoom.app package
+
+            cd package
+            7z a -sdel -r "${packagename}.zip" *
+            cd ..
+
+        elif [[ "${{ runner.os }}" == 'Linux' ]]; then
+
+            ldd ./uzdoom
+
+            mkdir AppDir
+            cmake --install . --prefix "$(realpath AppDir)/usr"
+
+            sudo apt-get install libfuse2 # renamed to libfuse2t64 in later releases
+
+            fetch appimage-builder \
+                4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f \
+                https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
+            chmod +x appimage-builder
+
+            export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
+            ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
+            mv *.AppImage "package/${packagename}.AppImage"
+
+            rm package/licenses.zip
+
+        fi
+
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+        path: build/package
+        name: ${{ inputs.name }} ${{ inputs.build_type }}
+
+    - name: List
+      if: always()
+      shell: bash
+      run: |
+        git status
+        tree -pu build
