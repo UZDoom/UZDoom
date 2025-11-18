@@ -6,6 +6,7 @@
 ** Copyright 1999-2016 Randy Heit
 ** Copyright 2019-2020 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -72,10 +73,7 @@
 #include "v_font.h"
 #include "version.h"
 
-#ifndef NO_GTK
-bool I_GtkAvailable ();
-void I_ShowFatalError_Gtk(const char* errortext);
-#elif defined(__APPLE__)
+#if defined(__APPLE__)
 int I_PickIWad_Cocoa (WadStuff *wads, int numwads, bool showwin, int defaultiwad);
 #endif
 
@@ -119,28 +117,12 @@ void Unix_I_FatalError(const char* errortext)
 	// Close window or exit fullscreen and release mouse capture
 	SDL_QuitSubSystem(SDL_INIT_VIDEO);
 
-	if(I_FileAvailable("kdialog"))
-	{
-		FString cmd;
-		cmd << "kdialog --title \"" GAMENAME " " << GetVersionString()
-			<< "\" --msgbox \"" << errortext << "\"";
-		popen(cmd.GetChars(), "r");
-	}
-#ifndef NO_GTK
-	else if (I_GtkAvailable())
-	{
-		I_ShowFatalError_Gtk(errortext);
-	}
-#endif
-	else
-	{
-		FString title;
-		title << GAMENAME " " << GetVersionString();
+	FString title;
+	title << GAMENAME " " << GetVersionString();
 
-		if (SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, title.GetChars(), errortext, NULL) < 0)
-		{
-			printf("\n%s\n", errortext);
-		}
+	if (SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, title.GetChars(), errortext, NULL) < 0)
+	{
+		printf("\n%s\n", errortext);
 	}
 }
 #endif
@@ -424,11 +406,13 @@ void I_OpenShellFolder(const char* infolder)
 	{
 		if (longsavemessages)
 			Printf("Opening folder: %s\n", infolder);
-		#ifdef __HAIKU__
-			std::system("open .");
-		#else
-			std::system("xdg-open .");
-		#endif
+
+#ifdef __HAIKU__
+		std::system("open .");
+#else
+		std::system("xdg-open .");
+#endif
+
 		chdir(curdir);
 	}
 	else
