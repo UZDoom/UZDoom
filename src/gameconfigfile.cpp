@@ -152,11 +152,11 @@ static void CollectDefaultSearchPaths()
 			DefaultSearchPaths.Push(DEFAULT_SHARE_DIR + GameDirs[i]);
 		}
 
-#ifdef __HAIKU__
+#	ifdef __HAIKU__
 		DefaultSearchPaths.Push("$HOME/config/data" + GameDirs[i]);
-#else
+#	else
 		DefaultSearchPaths.Push("/usr/share" + GameDirs[i]);
-#endif
+#	endif
 	}
 #endif
 

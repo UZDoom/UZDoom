@@ -791,23 +791,26 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 #elif defined(__APPLE__)
 		gamedir = "~/Library/Application Support/" GAMENAMELOWERCASE "/";
 		cfgfile = "~/Library/Preferences/" GAMENAMELOWERCASE ".ini";
-#elif defined(IS_FLATPAK)
-		gamedir = "~/.var/app/" APPID "/.config/" GAMENAMELOWERCASE "/";
-		cfgfile = "~/.var/app/" APPID "/.config/" GAMENAMELOWERCASE "/" GAMENAMELOWERCASE ".ini";
-		extrasteps = "\n3. Validate your Flatpak permissions, so that Flatpak has access to your directories with wads";
 #else
-		gamedir = "~/.config/" GAMENAMELOWERCASE "/";
-		cfgfile = "~/.config/" GAMENAMELOWERCASE "/" GAMENAMELOWERCASE ".ini";
+		auto gd = FStringf("%s/games/" GAMENAMELOWERCASE, GetDataPath());
+		auto cd = FStringf("%s/" GAMENAMELOWERCASE ".ini", GetConfigPath());
+		gd.Substitute("$HOME/", "~/");
+		cd.Substitute("$HOME/", "~/");
+		gamedir = gd.GetChars();
+		cfgfile = cd.GetChars();
+#	if defined(IS_FLATPAK)
+		extrasteps = "\n3. Validate your Flatpak permissions, so that Flatpak has access to your directories with wads\n";
+#	endif
 #endif
 
 		I_FatalError(
-			"Cannot find a game IWAD (doom.wad, doom2.wad, heretic.wad, etc.).\n"
-			"Did you install " GAMENAME " properly? You can do either of the following:\n"
+			"Cannot find a game IWAD (doom.wad, heretic.wad, etc)!\n"
+			"Did you install " GAMENAME " properly?\n"
 			"\n"
+			"You can do any of the following:\n"
 			"1. Place one or more of these wads in %s\n"
-			"2. Edit your %s and add the\n"
-			"directories of your iwads to the list beneath [IWADSearch.Directories]"
-			"%s\n",
+			"2. Edit your %s by adding your iwad folders beneath [IWADSearch.Directories]"
+			"%s",
 			gamedir, cfgfile, extrasteps
 		);
 	}
