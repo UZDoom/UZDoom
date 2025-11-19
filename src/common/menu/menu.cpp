@@ -63,7 +63,7 @@ static ScaleOverrider *CurrentScaleOverrider;
 CVAR (Int, m_showinputgrid, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, m_blockcontrollers, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
-CVAR (Float, snd_menuvolume, 0.6f, CVAR_ARCHIVE)
+CVAR (Float, snd_menuvolume, 1.0f, CVAR_ARCHIVE)
 CVAR(Int, m_use_mouse, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR(Int, m_show_backbutton, 0, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR(Bool, m_cleanscale, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
