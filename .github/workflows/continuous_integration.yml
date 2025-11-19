@@ -111,6 +111,9 @@ jobs:
             cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
 
             cp ${{ matrix.config.build_type }}/uzdoom.exe ${{ matrix.config.build_type }}/*.pk3 package
+            
+            cd package
+            7z a "../${{ matrix.config.name }}-${{ matrix.config.build_type }}.zip" *
 
             cd package
             7z a -sdel -r "${packagename}.zip" *
@@ -124,6 +127,9 @@ jobs:
             mv package/licenses.zip uzdoom.app
             # copy fm_banks + soundfonts ?
             cp -r uzdoom.app package
+            
+            cd package
+            zip -r "../${{ matrix.config.name }}-${{ matrix.config.build_type }}.zip" ./*
 
             cd package
             7z a -sdel -r "${packagename}.zip" *
@@ -147,15 +153,31 @@ jobs:
             ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
             mv *.AppImage "package/${packagename}.AppImage"
 
-            rm package/licenses.zip
+            cd package
+            zip -r "../${{ matrix.config.name }}-${{ matrix.config.build_type }}.zip" ./*
+
+            rm ../package/licenses.zip
 
         fi
 
-    - name: Upload
+    - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         path: build/package
         name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
+
+    - name: Update dev build
+      uses: softprops/action-gh-release@v2
+      if: github.ref == 'refs/heads/trunk'
+      with:
+        tag_name: uDev
+        name: UZDoom - Latest Dev Build # name of the release
+        draft: false
+        prerelease: true
+        body: This is an automatically generated development version based on the latest commit ${{ github.sha }} pushed to trunk # release description
+        files: build/${{ matrix.config.name }}-${{ matrix.config.build_type }}.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: List
       if: always()
