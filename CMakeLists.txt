@@ -156,6 +156,9 @@ function( add_pk3 PK3_NAME PK3_DIR )
 endfunction()
 
 macro( generate_language_files target source destination )
+	# right now, this dumps temp files into the source tree and deletes them after build
+	# This should be re-worked to dump stuff into the build tree instead
+
 	set(lang_target "${target}_${source}")
 	set(lang_script "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/compile.py")
 	set(lang_src "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/${source}")

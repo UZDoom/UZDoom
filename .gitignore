@@ -8,6 +8,8 @@ flatpak/
 uzdoom-crash.log
 fmodapi*linux/
 gitinfo.h
+wadsrc*/**/language.csv
+wadsrc*/**/language.0
 
 # editor/tooling/os files
 *~
