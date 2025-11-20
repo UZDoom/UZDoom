@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "doom": {
+      "url": "http://localhost:9090/sse"
+    }
+  }
+}

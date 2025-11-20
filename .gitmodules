@@ -1,0 +1,3 @@
+[submodule "doom-mcp"]
+	path = doom-mcp
+	url = https://github.com/raulcorreia7/doom-mcp.git
