@@ -193,7 +193,7 @@ FString ReleasePage::_BuildReleaseNotes(rapidxml::xml_document<> &doc)
 }
 
 // Ensure you free returned pointer
-char * ReleasePage::_OpenRealeaseNotes()
+char * ReleasePage::_OpenReleaseNotes()
 {
 	auto wad = BaseFileSearch(BASEWAD, NULL, true, GameConfig);
 	if (!wad) return nullptr;
@@ -210,7 +210,7 @@ char * ReleasePage::_OpenRealeaseNotes()
 		auto data = resf->Read(lump);
 
 		// needs to be freed by caller
-		notes = (char *)calloc(data.size(), sizeof(char));
+		notes = (char *)calloc(data.size()+1, sizeof(char));
 
 		if (notes) strncpy(notes, data.string(), data.size());
 	}
@@ -228,7 +228,7 @@ char * ReleasePage::_OpenRealeaseNotes()
 FString ReleasePage::GetReleaseNotes()
 {
 	// we need to be free
-	char * text = _OpenRealeaseNotes();
+	char * text = _OpenReleaseNotes();
 
 	rapidxml::xml_document<> doc;
 	if (text) doc.parse<rapidxml::parse_default>(text);

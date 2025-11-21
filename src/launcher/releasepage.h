@@ -26,6 +26,6 @@ private:
 
 	static FString _ParseReleaseNotes(rapidxml::xml_node<char> *);
 	static FString _BuildReleaseNotes(rapidxml::xml_document<> &);
-	static char * _OpenRealeaseNotes();
+	static char * _OpenReleaseNotes();
 	static FString GetReleaseNotes();
 };
