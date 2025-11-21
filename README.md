@@ -11,7 +11,7 @@
 
 **UZDoom** is a modern, feature-rich source port for the classic game **DOOM**.
 
-A continuation of ZDoom and GZDoom, UZDoom enhances the original DOOM engine, providing advanced features like:
+A continuation of [ZDoom][zdoom] and [GZDoom][gzdoom], UZDoom enhances the original DOOM engine, providing advanced features like:
 
 * High-Resolution Graphics
 * Dynamic lighting
@@ -63,6 +63,9 @@ To build UZDoom from source, please see UZDoom's GitHub [wiki][gh_wiki] for a fu
 
 [![UZDoom Footer](branding/banner.png)][repo]
 [![Translation status][engage_trans]][status_trans]
+
+[gzdoom]: https://github.com/ZDoom/gzdoom/
+[zdoom]: https://github.com/rheit/zdoom/
 
 [repo]: https://github.com/UZDoom/UZDoom/
 [home]: https://zdoom.org/
