@@ -3,9 +3,23 @@ name: Continuous Integration
 on: [push, pull_request]
 
 jobs:
+  ci-success:
+    needs:
+      - debug
+      # - extra
+    if: always()
+    runs-on: ubuntu-latest
+    name: CI Success
+    steps:
+      - name: Check Status
+        run: |
+          [[ "${{ contains(needs.*.result, 'failure') }}" == "false" ]] || exit 1
+          [[ "${{ contains(needs.*.result, 'cancelled') }}" == "false" ]] || exit 1
+
   debug:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
+    secrets: inherit
     with:
       build_type: Debug
       name: ${{ matrix.config.name }}
@@ -33,13 +47,16 @@ jobs:
 
           - name: MacOS LLVM
             os: macos-latest
-            extra_options: -DDYN_OPENAL=OFF
+            extra_options: -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
             deps_cmdline: |
-              brew install  \
-                vulkan-volk \
-                molten-vk   \
-                libvpx      \
-                sdl2        \
+              brew install   \
+                dylibbundler \
+                fluid-synth  \
+                openal-soft  \
+                vulkan-volk  \
+                molten-vk    \
+                libvpx       \
+                sdl2         \
                 tree
 
           - name: Linux GCC
@@ -72,6 +89,7 @@ jobs:
   #   name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
   #   needs: debug
   #   uses: ./.github/workflows/build_core.yml
+  #   secrets: inherit
   #   with:
   #     name: ${{ matrix.config.name }}
   #     os: ${{ matrix.config.os }}
@@ -90,25 +108,11 @@ jobs:
 
 # ======================
 
-  ci-success:
-    needs: [ debug ]
-    if: always()
-    runs-on: ubuntu-latest
-    name: CI Success
-    steps:
-      - name: Check Status
-        run: |
-          # Check if any needed job failed or was cancelled
-          if [[ "${{ contains(needs.*.result, 'failure') }}" == "true" || "${{ contains(needs.*.result, 'cancelled') }}" == "true" ]]; then
-            echo "One or more builds failed."
-            exit 1
-          fi
-          echo "All builds passed successfully."
-
   release:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-    needs: debug
+    needs: ci-success
     uses: ./.github/workflows/build_core.yml
+    secrets: inherit
     with:
       build_type: Release
       name: ${{ matrix.config.name }}
@@ -122,8 +126,9 @@ jobs:
 
   debinfo:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-    needs: debug
+    needs: ci-success
     uses: ./.github/workflows/build_core.yml
+    secrets: inherit
     with:
       build_type: RelWithDebInfo
       name: ${{ matrix.config.name }}
