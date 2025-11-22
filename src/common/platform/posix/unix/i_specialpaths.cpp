@@ -75,6 +75,7 @@ DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/config/non-packaged/data");
 DEFGETPATH(Config, "XDG_CONFIG_HOME", "$HOME/.config");
 DEFGETPATH(Cache, "XDG_CACHE_HOME", "$HOME/.cache");
 DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/.local/share");
+DEFGETPATH(Pictures, "XDG_PICTURES_DIR", "$HOME/Pictures");
 #endif
 #undef DEFGETPATH
 
@@ -197,7 +198,11 @@ FString M_GetConfigPath(bool for_reading)
 
 FString M_GetDocumentsPath()
 {
+#ifdef __HAIKU__
+	return FStringf("%s/" GAMENAMELOWERCASE "/", GetConfigPath());
+#else
 	return M_GetAppDataPath(false) + "/";
+#endif
 }
 
 
@@ -211,7 +216,13 @@ FString M_GetDocumentsPath()
 
 FString M_GetScreenshotsPath()
 {
-	return M_GetDocumentsPath() + "screenshots/";
+#ifdef __HAIKU__
+	static FString path = M_GetDocumentsPath() + "screenshots";
+#else
+	static FString path = FStringf("%s/Screenshots/" GAMENAME, GetPicturesPath());
+#endif
+	path = NicePath(path.GetChars());
+	return path;
 }
 
 //===========================================================================
