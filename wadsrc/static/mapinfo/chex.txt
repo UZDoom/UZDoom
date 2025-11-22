@@ -56,7 +56,7 @@ gameinfo
 	menufontcolor_header = "YELLOW"
 	menufontcolor_highlight = "BLUE"
 	menufontcolor_selection = "GOLD"
-	menubackbutton = "M_BACK_H"
+	menubackbutton = "M_BACK_C"
 	playerclasses = "ChexPlayer"
 	pausesign = "M_PAUSE"
 	gibfactor = 1
