@@ -96,13 +96,13 @@
 #include "p_terrain.h"
 #include "r_sky.h"
 #include "r_utility.h"
+#include "s_sndseq.h"
 #include "sbar.h"
 #include "serialize_obj.h"
 #include "serializer_doom.h"
 #include "shadowinlines.h"
 #include "teaminfo.h"
 #include "thingdef.h"
-#include "s_sndseq.h"
 
 // MACROS ------------------------------------------------------------------
 
