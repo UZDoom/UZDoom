@@ -102,6 +102,7 @@
 #include "shadowinlines.h"
 #include "teaminfo.h"
 #include "thingdef.h"
+#include "s_sndseq.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -6704,9 +6705,9 @@ AActor *FLevelLocals::SpawnMapThing (FMapThing *mthing, int position)
 	{
 		int type = mthing->args[0];
 		if (type == 255) type = -1;
-		if (type > 63)
+		if (type > (MAX_SNDSEQS - 1))
 		{
-			Printf ("Sound sequence %d out of range\n", type);
+			Printf ("Sound sequence %d out of range (0-%d)\n", type, (MAX_SNDSEQS - 1));
 		}
 		else
 		{
