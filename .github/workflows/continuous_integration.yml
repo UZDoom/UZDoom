@@ -19,10 +19,17 @@ jobs:
         config: &common_config
           - name: Windows MSVC
             os: windows-latest
-            extra_options:
+            extra_options: -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
             deps_cmdline: |
               choco install \
                 tree
+
+          # - name: Windows LLVM
+          #   os: windows-latest
+          #   extra_options: -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_C_FLAGS="/arch:AVX /clang:-Wno-unused-command-line-argument" -DCMAKE_CXX_FLAGS="/arch:AVX /EHsc /GR /clang:-Wno-c++11-narrowing /clang:-Wno-unused-command-line-argument"
+          #   deps_cmdline: |
+          #     choco install \
+          #       tree
 
           - name: MacOS LLVM
             os: macos-latest

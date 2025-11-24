@@ -189,7 +189,9 @@ endif()
 
 # Set up flags for MSVC
 if (MSVC)
-	set( CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}" )
+	if (NOT CMAKE_GENERATOR MATCHES "Ninja")
+		set( CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}" )
+	endif()
 endif (MSVC)
 
 # Set up flags for GCC

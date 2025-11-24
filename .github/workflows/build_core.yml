@@ -23,6 +23,8 @@ jobs:
     runs-on: ${{ inputs.os }}
     steps:
     - uses: actions/checkout@v4
+    - uses: proudust/gh-describe@v2
+    - uses: ilammy/msvc-dev-cmd@v1
 
     - name: Dependencies
       shell: bash
@@ -31,22 +33,22 @@ jobs:
           eval ${{ inputs.deps_cmdline }}
         fi
 
-    - name: Git describe
-      id: ghd
-      uses: proudust/gh-describe@v2
-
     - name: Configure
       shell: bash
       run: |
         mkdir build
-        cmake -B build -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} -DPK3_QUIET_ZIPDIR=ON ${{ inputs.extra_options }} .
+        cmake -B build -S . \
+          -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} \
+          -DPK3_QUIET_ZIPDIR=ON \
+          ${{ inputs.extra_options }} \
+          -G Ninja
 
     - name: Build
       shell: bash
       run: |
         export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
         export MAKEFLAGS=--keep-going
-        cmake --build build --config ${{ inputs.build_type }} --parallel 4
+        cmake --build build --config ${{ inputs.build_type }}
 
     - name: Package
       shell: bash
@@ -77,7 +79,11 @@ jobs:
             mkdir package/fm_banks
             cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
 
-            cp ${{ inputs.build_type }}/uzdoom.exe ${{ inputs.build_type }}/*.pk3 package
+            if [[ -d ${{ inputs.build_type }} ]]; then
+                mv ${{ inputs.build_type }}/* .
+            fi
+
+            cp uzdoom.* *.pk3 package
 
             cd package
             7z a -sdel -r "${packagename}.zip" *
