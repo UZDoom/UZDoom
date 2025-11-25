@@ -90,7 +90,7 @@ extend class PlayerPawn
 			if (type != NULL)
 			{
 				let def = getDefaultByType(type);
-				if (giveall == ALL_YES && def.bNoCheat) {}
+				if (giveall == ALL_YES && def.bNoGiveAll) {}
 				else GiveInventory(type, 1, true);
 			}
 
@@ -109,7 +109,7 @@ extend class PlayerPawn
 				if (ammotype && getDefaultByType(ammotype).GetParentAmmo() == ammotype)
 				{
 					let def = getDefaultByType(ammotype);
-					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 					let ammoitem = FindInventory(ammotype);
 					if (ammoitem == NULL)
@@ -171,7 +171,7 @@ extend class PlayerPawn
 					{
 						let def = getDefaultByType(keytype);
 						
-						if (def.bNoCheat && giveall != ALL_YESYES) continue;
+						if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 						if (def.special1 != 0)
 						{
@@ -197,7 +197,7 @@ extend class PlayerPawn
 				if (type != null && type != "Weapon" && !type.isAbstract())
 				{
 					readonly<Weapon> def = getDefaultByType(type);
-					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 					// Don't give replaced weapons unless the replacement was done by Dehacked.
 					let rep = GetReplacement(type);
@@ -228,7 +228,7 @@ extend class PlayerPawn
 				if (type!= null)
 				{
 					let def = getDefaultByType(type);
-					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 					if (def.Icon.isValid() && (def.MaxAmount > 1 || def.bAutoActivate == false) && CheckArtifact(type))
 					{
@@ -252,7 +252,7 @@ extend class PlayerPawn
 				if (type != null)
 				{
 					let def = GetDefaultByType (type);
-					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 					if (def.Icon.isValid())
 					{
