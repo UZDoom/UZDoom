@@ -29,9 +29,15 @@ jobs:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
     runs-on: ${{ inputs.os }}
     steps:
-    - uses: actions/checkout@v4
-    - uses: proudust/gh-describe@v2
-    - uses: ilammy/msvc-dev-cmd@v1
+    - name: Setup
+      uses: actions/checkout@v4
+
+    - name: Setup
+      id: ghd
+      uses: proudust/gh-describe@v2
+
+    - name: Setup
+      uses: ilammy/msvc-dev-cmd@v1
 
     - name: Dependencies
       shell: bash
