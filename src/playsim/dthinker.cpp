@@ -246,7 +246,7 @@ void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 		dolights = false;
 	}
 	Level->flags3 &= ~LEVEL3_LIGHTCREATED;
-	Level->LocalWorldTimer += !WorldPaused();
+	Level->LocalWorldTimer += !WorldPaused(false);
 	++Level->LocalTimer;
 
 	auto recreateLights = [=]() {

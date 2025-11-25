@@ -597,6 +597,11 @@ void PClassActor::RegisterIDs()
 //
 //==========================================================================
 
+static bool VerifyClientSideReplacement(const PClass& replacee, const PClass& replacement)
+{
+	return GetDefaultByType(&replacee)->IsClientSide() == GetDefaultByType(&replacement)->IsClientSide();
+}
+
 PClassActor *PClassActor::GetReplacement(FLevelLocals *Level, bool lookskill)
 {
 	FName skillrepname = NAME_None;
@@ -604,16 +609,33 @@ PClassActor *PClassActor::GetReplacement(FLevelLocals *Level, bool lookskill)
 	if (lookskill && AllSkills.Size() > (unsigned)gameskill)
 	{
 		skillrepname = AllSkills[gameskill].GetReplacement(TypeName);
-		if (skillrepname != NAME_None && PClass::FindClass(skillrepname) == nullptr)
+		if (skillrepname != NAME_None)
 		{
-			Printf("Warning: incorrect actor name in definition of skill %s: \n"
-				   "class %s is replaced by non-existent class %s\n"
-				   "Skill replacement will be ignored for this actor.\n", 
-				   AllSkills[gameskill].Name.GetChars(), 
-				   TypeName.GetChars(), skillrepname.GetChars());
-			AllSkills[gameskill].SetReplacement(TypeName, NAME_None);
-			AllSkills[gameskill].SetReplacedBy(skillrepname, NAME_None);
-			lookskill = false; skillrepname = NAME_None;
+			bool failed = false;
+			auto cls    = PClass::FindClass(skillrepname);
+			if (cls == nullptr)
+			{
+				failed = true;
+				Printf("Warning: incorrect actor name in definition of skill %s: \n"
+				       "class %s is replaced by non-existent class %s\n"
+				       "Skill replacement will be ignored for this actor.\n",
+				       AllSkills[gameskill].Name.GetChars(), TypeName.GetChars(), skillrepname.GetChars());
+			}
+			else if (!VerifyClientSideReplacement(*this, *cls))
+			{
+				failed = true;
+				Printf("Warning: incorrect actor replacement in definition of skill %s: \n"
+				       "class %s is replaced by class %s with mismatched client-side handling\n"
+				       "Skill replacement will be ignored for this actor.\n",
+				       AllSkills[gameskill].Name.GetChars(), TypeName.GetChars(), skillrepname.GetChars());
+			}
+			if (failed)
+			{
+				AllSkills[gameskill].SetReplacement(TypeName, NAME_None);
+				AllSkills[gameskill].SetReplacedBy(skillrepname, NAME_None);
+				lookskill    = false;
+				skillrepname = NAME_None;
+			}
 		}
 	}
 	// [MK] ZScript replacement through Event Handlers, has priority over others.
@@ -623,7 +645,7 @@ PClassActor *PClassActor::GetReplacement(FLevelLocals *Level, bool lookskill)
 	if (Level && Level->localEventManager->CheckReplacement(this,&Replacement) )
 	{
 		// [MK] the replacement is final, so don't continue with the chain
-		return Replacement ? Replacement : this;
+		return Replacement && VerifyClientSideReplacement(*this, *Replacement) ? Replacement : this;
 	}
 	if (Replacement == nullptr && (!lookskill || skillrepname == NAME_None))
 	{
@@ -646,6 +668,12 @@ PClassActor *PClassActor::GetReplacement(FLevelLocals *Level, bool lookskill)
 	rep = rep->GetReplacement(Level, false);
 	// Reset the temporarily NULLed field
 	ActorInfo()->Replacement = oldrep;
+	if (!VerifyClientSideReplacement(*this, *rep))
+	{
+		Printf(TEXTCOLOR_RED "Class %s tried to replace class %s with mismatched client-side handling which is not allowed\n",
+			    rep->TypeName.GetChars(), TypeName.GetChars());
+		return this;
+	}
 	return rep;
 }
 
@@ -662,16 +690,32 @@ PClassActor *PClassActor::GetReplacee(FLevelLocals *Level, bool lookskill)
 	if (lookskill && AllSkills.Size() > (unsigned)gameskill)
 	{
 		skillrepname = AllSkills[gameskill].GetReplacedBy(TypeName);
-		if (skillrepname != NAME_None && PClass::FindClass(skillrepname) == nullptr)
+		if (skillrepname != NAME_None)
 		{
-			Printf("Warning: incorrect actor name in definition of skill %s: \n"
-				   "non-existent class %s is replaced by class %s\n"
-				   "Skill replacement will be ignored for this actor.\n", 
-				   AllSkills[gameskill].Name.GetChars(), 
-				   skillrepname.GetChars(), TypeName.GetChars());
-			AllSkills[gameskill].SetReplacedBy(TypeName, NAME_None);
-			AllSkills[gameskill].SetReplacement(skillrepname, NAME_None);
-			lookskill = false; 
+			bool failed = false;
+			auto cls    = PClass::FindClass(skillrepname);
+			if (cls == nullptr)
+			{
+				failed = true;
+				Printf("Warning: incorrect actor name in definition of skill %s: \n"
+				       "non-existent class %s is replaced by class %s\n"
+				       "Skill replacement will be ignored for this actor.\n",
+				       AllSkills[gameskill].Name.GetChars(), skillrepname.GetChars(), TypeName.GetChars());
+			}
+			else if (!VerifyClientSideReplacement(*cls, *this))
+			{
+				failed = true;
+				Printf("Warning: incorrect actor replacement in definition of skill %s: \n"
+				       "class %s is replaced by class %s with mismatched client-side handling\n"
+				       "Skill replacement will be ignored for this actor.\n",
+				       AllSkills[gameskill].Name.GetChars(), skillrepname.GetChars(), TypeName.GetChars());
+			}
+			if (failed)
+			{
+				AllSkills[gameskill].SetReplacedBy(TypeName, NAME_None);
+				AllSkills[gameskill].SetReplacement(skillrepname, NAME_None);
+				lookskill = false;
+			}
 		}
 	}
 	PClassActor *savedrep = ActorInfo()->Replacee;
@@ -683,7 +727,7 @@ PClassActor *PClassActor::GetReplacee(FLevelLocals *Level, bool lookskill)
 	if (Level->localEventManager->CheckReplacee(&savedrep, this))
 	{
 		// [MK] the replacement is final, so don't continue with the chain
-		return savedrep ? savedrep : this;
+		return savedrep && VerifyClientSideReplacement(*savedrep, *this) ? savedrep : this;
 	}
 	if (savedrep == nullptr && (!lookskill || skillrepname == NAME_None))
 	{
@@ -699,6 +743,12 @@ PClassActor *PClassActor::GetReplacee(FLevelLocals *Level, bool lookskill)
 	}
 	rep = rep->GetReplacee(Level, false);
 	ActorInfo()->Replacee = savedrep;
+	if (!VerifyClientSideReplacement(*rep, *this))
+	{
+			Printf(TEXTCOLOR_RED "Class %s tried to replace class %s with mismatched client-side handling which is not allowed\n",
+			       TypeName.GetChars(), rep->TypeName.GetChars());
+		return this;
+	}
 	return rep;
 }
 

@@ -134,7 +134,7 @@ VSMatrix FSpriteModelFrame::ObjectToWorldMatrix(AActor * actor, float x, float y
 
 	double tic = actor->Level->totaltime;
 
-	if (!WorldPaused() && !actor->isFrozen())
+	if (!WorldPaused(true) && !actor->isFrozen())
 	{
 		tic += ticFrac;
 	}
@@ -396,7 +396,7 @@ CalcModelFrameInfo CalcModelFrame(FLevelLocals *Level, const FSpriteModelFrame *
 			// [BB] To interpolate at more than 35 fps we take tic fractions into account.
 			float ticFraction = 0.;
 			// [BB] In case the tic counter is frozen we have to leave ticFraction at zero.
-			if (!WorldPaused() && !Level->isFrozen())
+			if (!WorldPaused(true) && !Level->isFrozen())
 			{
 				ticFraction = ticFrac;
 			}
@@ -648,7 +648,7 @@ static inline void RenderModelFrame(FModelRenderer *renderer, int i, const FSpri
 void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpriteModelFrame *smf, const FState *curState, int curTics, double ticFrac, FTranslationID translation, AActor* actor)
 {
 	double tic = actor->Level->totaltime;
-	if (!WorldPaused() && !actor->isFrozen())
+	if (!WorldPaused(true) && !actor->isFrozen())
 	{
 		tic += ticFrac;
 	}

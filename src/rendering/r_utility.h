@@ -149,6 +149,6 @@ extern void R_ClearPastViewer (AActor *actor);
 
 bool R_ShouldDrawSpriteShadow(AActor *thing);
 
-int WorldPaused(bool checkLag = true);
+int WorldPaused(bool checkLag);
 
 #endif

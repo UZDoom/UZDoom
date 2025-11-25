@@ -276,7 +276,7 @@ void FDynamicLight::Tick()
 
 	// Don't bother if the light won't be shown
 	if (!IsActive()) return;
-	if (!target->IsClientSide() && WorldPaused())
+	if (!target->IsClientSide() && WorldPaused(false))
 		return;
 
 	// I am doing this with a type field so that I can dynamically alter the type of light
