@@ -121,7 +121,7 @@ TMap<int, FAmbientSound> Ambients;
 
 enum SICommands
 {
-    SI_Include,
+	SI_Include,
 	SI_Ambient,
 	SI_Random,
 	SI_PlayerSound,
@@ -214,7 +214,7 @@ TMap<int, FString> HexenMusic;
 
 static const char *SICommandStrings[] =
 {
-    "$include",
+	"$include",
 	"$ambient",
 	"$random",
 	"$playersound",
@@ -657,21 +657,107 @@ void S_AddLocalSndInfo(int lump)
 
 //==========================================================================
 //
+// S_ResolveIncludePath
+//
+// MH 20251123
+//    Adapted from corresponding file in zcc_parser.cpp
+//    Resolves SNDINFO include paths.
+//    Note that including across archive boundaries is not supported.
+//
+//==========================================================================
+
+static FString S_ResolveIncludePath(int includingLump, const char* includedFile)
+{
+	// Get full path of including file and convert included file to FString
+	FString includer = FString(fileSystem.GetFileFullName(includingLump, true));
+	FString included = FString(includedFile);
+
+	// Strip any redundant "./" from included
+	// Includes shall be relative to parent directory of the including file
+	if (included.IndexOf("./") == 0)
+	{
+		included = included.Mid(2);
+	}
+
+	// Remove file name portion from includer
+	FString incDir = FString("");
+	auto includer_slash_index = includer.LastIndexOf("/");
+	if (includer_slash_index != -1)
+	{
+		incDir = includer.Mid(0, includer_slash_index);
+	}
+
+	// Handle .. references
+	if (included.IndexOf("../") == 0)
+	{
+		bool pathOk = true;
+
+		while (included.IndexOf("../") == 0) // go back one folder for each '..'
+		{
+			included = included.Mid(3);
+			auto slash_index = incDir.LastIndexOf("/");
+			if (slash_index != -1)
+			{
+				incDir = incDir.Mid(0, slash_index);
+			}
+			else if (incDir.IsNotEmpty())
+			{
+				incDir = "";
+			}
+			else
+			{
+				pathOk = false;
+				break;
+			}
+		}
+
+		if (pathOk)
+		{
+			if (incDir.IsNotEmpty())
+			{
+				included = incDir + "/" + included;
+			}
+			return included;
+		}
+
+		// Return unmodified if failed
+		// S_AddSNDINFO will report a "not found" error when trying to use it
+		return FString(includedFile);
+	}
+
+	// Handle include file relative
+	if (incDir.IsNotEmpty())
+	{
+	   included = incDir + "/" + included;
+	}
+
+	// Completed
+	return included;
+}
+
+//==========================================================================
+//
 // S_AddSNDINFO
 //
 // Reads a SNDINFO and does what it says.
+//
+// MH 20251123
+// Improved include file handling.
+//
+// Specifies that SNDINFO includes with no leading "." are always relative
+// to the containing directory of the including file (implicitly "./").
+//
+// Handles explicit "./" and also ".." references.
+//
+// Including across archives is not supported; it would be an odd thing to
+// do with SNDINFO and can't think of a valid use case. Maybe in the future.
 //
 //==========================================================================
 
 static void S_AddSNDINFO (int lump)
 {
 	bool skipToEndIf;
-	TArray<FSoundID> list;
 	int wantassigns = -1;
-
-    // MH 20251115 Note: list is used only by $random and cleared each time,
-    //                   so it does NOT need to be passed to recursive call;
-    //                   ideally it should be scoped to that switch case.
 
 	FScanner sc(lump);
 	skipToEndIf = false;
@@ -691,17 +777,18 @@ static void S_AddSNDINFO (int lump)
 		{ // Got a command
 			switch (sc.MatchString (SICommandStrings))
 			{
-            // MH 20251115
-            case SI_Include: {
-    			sc.MustGetString();
-	    		int inclump = fileSystem.CheckNumForFullName(sc.String, true);
-	    		if (inclump < 0)
-	    		{
-	    			sc.ScriptError("include file '%s' not found", sc.String);
-	    		}
-                S_AddSNDINFO (inclump);
-                }
-                break;
+			// MH 20251115
+			case SI_Include: {
+				sc.MustGetString();
+				FString included = S_ResolveIncludePath(lump, sc.String);
+				int inclump = fileSystem.CheckNumForFullName(included.GetChars(), true);
+				if (inclump < 0)
+				{
+					sc.ScriptError("include file '%s' not found", included.GetChars());
+				}
+				S_AddSNDINFO (inclump);
+				}
+				break;
 
 			case SI_Ambient: {
 				// $ambient <num> <logical name> [point [atten] | surround | [world]]
@@ -1033,8 +1120,8 @@ static void S_AddSNDINFO (int lump)
 			case SI_Random: {
 				// $random <logical name> { <logical name> ... }
 				FRandomSoundList random;
+				TArray<FSoundID> list; // MH 20251125 Now scoped only to where it's used
 
-				list.Clear ();
 				sc.MustGetString ();
 				FSoundID Owner = S_AddSound (sc.String, -1, &sc);
 				sc.MustGetStringName ("{");
@@ -1143,16 +1230,24 @@ static void S_AddSNDINFO (int lump)
 				break;
 
 			case SI_ModPlayer: {
+				// MH 20251125
+				// Modified to avoid 'player uninitialised' warning
+				// Indentation to make control flow clearer
 				sc.MustGetString();
 				int lumpnum = mus_cb.FindMusic(sc.String);
-				int player;
+				int player = -1;
 				FScanner::SavedPos save = sc.SavePos();
 
 				sc.MustGetString();
-				if (sc.Compare("XMP") || sc.Compare("libXMP")) player = 0;
-				else if (sc.Compare("dumb") || sc.Compare("libdumb")) player = 1;
-				else sc.ScriptError("Unknown Module player %s\n", sc.String);
-				if (lumpnum >= 0) ModPlayers.Insert(lumpnum, player);
+				if (sc.Compare("XMP") || sc.Compare("libXMP"))
+					player = 0;
+				else if (sc.Compare("dumb") || sc.Compare("libdumb"))
+					player = 1;
+				if (player < 0)
+					sc.ScriptError("Unknown Module player %s\n", sc.String);
+				else
+					if (lumpnum >= 0)
+						ModPlayers.Insert(lumpnum, player);
 			}
 			break;
 
