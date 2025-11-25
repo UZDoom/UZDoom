@@ -110,6 +110,10 @@ jobs:
             mv package/licenses.zip uzdoom.app/Contents/Resources
             cp *.pk3 uzdoom.app/Contents/MacOS
 
+            if dsymutil uzdoom.app/Contents/MacOS/uzdoom; then
+              mv uzdoom.app/Contents/MacOS/uzdoom.dSYM uzdoom.app/Contents/Resources/
+            fi
+
             SIGN_ID="-"
             SIGN_OPTS=""
 
