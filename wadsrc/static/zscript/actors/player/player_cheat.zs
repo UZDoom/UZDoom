@@ -86,9 +86,12 @@ extend class PlayerPawn
 		{
 			// Select the correct type of backpack based on the game
 			type = (class<Inventory>)(gameinfo.backpacktype);
+			
 			if (type != NULL)
 			{
-				GiveInventory(type, 1, true);
+				let def = getDefaultByType(type);
+				if (giveall == ALL_YES && def.bNoCheat) {}
+				else GiveInventory(type, 1, true);
 			}
 
 			if (!giveall)
@@ -103,8 +106,11 @@ extend class PlayerPawn
 			{
 				let ammotype = (class<Ammo>)(AllActorClasses[i]);
 
-				if (ammotype && GetDefaultByType(ammotype).GetParentAmmo() == ammotype)
+				if (ammotype && getDefaultByType(ammotype).GetParentAmmo() == ammotype)
 				{
+					let def = getDefaultByType(ammotype);
+					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+
 					let ammoitem = FindInventory(ammotype);
 					if (ammoitem == NULL)
 					{
@@ -159,13 +165,21 @@ extend class PlayerPawn
 			{
 				if (AllActorClasses[i] is "Key")
 				{
-					let keyitem = GetDefaultByType (AllActorClasses[i]);
-					if (keyitem.special1 != 0)
+					let keytype = (class<Ammo>)(AllActorClasses[i]);
+
+					if (keytype)
 					{
-						let item = Inventory(Spawn(AllActorClasses[i]));
-						if (!item.CallTryPickup (self))
+						let def = getDefaultByType(keytype);
+						
+						if (def.bNoCheat && giveall != ALL_YESYES) continue;
+
+						if (def.special1 != 0)
 						{
-							item.Destroy ();
+							let item = Inventory(Spawn(AllActorClasses[i]));
+							if (!item.CallTryPickup (self))
+							{
+								item.Destroy ();
+							}
 						}
 					}
 				}
@@ -182,6 +196,9 @@ extend class PlayerPawn
 				let type = (class<Weapon>)(AllActorClasses[i]);
 				if (type != null && type != "Weapon" && !type.isAbstract())
 				{
+					readonly<Weapon> def = getDefaultByType(type);
+					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+
 					// Don't give replaced weapons unless the replacement was done by Dehacked.
 					let rep = GetReplacement(type);
 					if (rep == type || rep is "DehackedPickup")
@@ -189,7 +206,6 @@ extend class PlayerPawn
 						// Give the weapon only if it is set in a weapon slot.
 						if (player.weapons.LocateWeapon(type))
 						{
-							readonly<Weapon> def = GetDefaultByType (type);
 							if (giveall == ALL_YESYES || !def.bCheatNotWeapon)
 							{
 								GiveInventory(type, 1, true);
@@ -211,7 +227,9 @@ extend class PlayerPawn
 				type = (class<Inventory>)(AllActorClasses[i]);
 				if (type!= null)
 				{
-					let def = GetDefaultByType (type);
+					let def = getDefaultByType(type);
+					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+
 					if (def.Icon.isValid() && (def.MaxAmount > 1 || def.bAutoActivate == false) && CheckArtifact(type))
 					{
 						// Do not give replaced items unless using "give everything"
@@ -234,6 +252,8 @@ extend class PlayerPawn
 				if (type != null)
 				{
 					let def = GetDefaultByType (type);
+					if (def.bNoCheat && giveall != ALL_YESYES) continue;
+
 					if (def.Icon.isValid())
 					{
 						// Do not give replaced items unless using "give everything"
