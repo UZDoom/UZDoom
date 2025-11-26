@@ -81,7 +81,6 @@
 	<keywords>
 		<keyword>retro</keyword>
 		<keyword>fps</keyword>
-		<keyword>vulkan</keyword>
 		<keyword>shooter</keyword>
 		<keyword>sourceport</keyword>
 		<keyword>doom</keyword>
@@ -93,6 +92,95 @@
 	</categories>
 
 	<releases>
+		<!-- Keep 5 full descriptions, and 2 years of releases with just urls -->
+		<release version="4.14.3" date="2025-11-28">
+			<description>
+				<h1>UZDoom’s First Release!</h1>
+				<p>Hello all, and welcome to UZDoom! You've no doubt seen our new look courtesy of Cardboard Marty. With 4.14.3 marks the first official release of the port, a smaller update designed to hold the masses over until 5.0. While we wish we could include a bunch of goodies with it, those will still need some time to bake in the oven. Rest assured, 5.0 development is still moving along smoothly and we’re now in “fix things” mode. For now, 4.14.3 will contain a bunch of bug fixes and security updates since we’re intentionally keeping it smaller in scope.</p>
+				<p>Why 4.14.3? Mainly because it makes things a lot easier to transition over since more stuff than you’d think relies on that version number. Speaking of, if you’re coming over from GZDoom, we’ve got some instructions to let you transfer over your saves and configuration files as smoothly as possible.</p>
+				<h2>Transferring From GZDoom</h2>
+				<p>For configuration files, locate the folder containing it and rename both the folder and configuration file from gzdoom to uzdoom. If you’re using a portable configuration file, rename it from gzdoom_portable.ini to uzdoom_portable.ini and place it in your UZDoom folder. If you were using a custom configuration file, UZDoom will load it as-is.</p>
+				<ul>
+					<li>On Windows, this will be located in your Documents directory under My Games.</li>
+					<li>On Linux, this will be located in <code>~/.config</code></li>
+					<li>On Mac, this will be located in your Application Support directory.</li>
+				</ul>
+				<p>For saves, locate the folder containing them and rename it from gzdoom to uzdoom. If you were already using a custom save location, transferring your configuration file will automatically handle this. Note: Only saves from GZDoom 4.0.0 and greater can be transferred.</p>
+				<ul>
+					<li>On Windows, this will be located in your Saved Games directory.</li>
+					<li>On Linux, see below</li>
+					<li>On Mac, this will be located in your Documents directory.</li>
+				</ul>
+				<h3>Linux Path Changes</h3>
+				<p>The location UZDoom searches for files has changed to more closely match the freedesktop specification.</p>
+				<ul>
+					<li>
+						Text configs have been moved to <code>$XDG_CONFIG_HOME/uzdoom</code> (<code>~/.config/uzdoom</code> by default).
+						<ul>
+							<li><code>~/.config/gzdoom/gzdoom.ini</code> → <code>~/.config/uzdoom/uzdoom.ini</code></li>
+							<li><code>~/.config/gzdoom/autoexec.cfg</code> → <code>~/.config/uzdoom/autoexec.cfg</code></li>
+						</ul>
+					</li>
+					<li>
+						Game cache has been moved to <code>$XDG_CACHE_HOME/uzdoom</code> (<code>~/.cache/uzdoom</code> by default).
+						<ul>
+							<li><code>~/.config/zdoom/cache</code> → <code>~/.cache/uzdoom</code></li>
+						</ul>
+					</li>
+					<li>
+						All other game data (eg wads, skins, saves) has been moved to <code>$XDG_DATA_HOME/games/uzdoom</code> (<code>~/.local/share/games/uzdoom</code> by default).
+						<ul>
+							<li><code>~/.config/gzdoom/DOOM.WAD</code> → <code>~/.local/share/games/uzdoom/DOOM.WAD</code></li>
+							<li><code>~/.config/gzdoom/savegames</code> → <code>~/.local/share/games/uzdoom/savegames</code></li>
+							<li><code>~/.config/gzdoom/skins</code> → <code>~/.local/share/games/uzdoom/skins</code></li>
+						</ul>
+					</li>
+				</ul>
+				<p>In practice, you want to:</p>
+				<ol>
+					<li>Create folder <code>~/.local/share/games/uzdoom</code>, and move everything from <code>~/.config/gzdoom</code> except <code>gzdoom.ini</code> and <code>autoexec.cfg</code> into it.</li>
+					<li>Rename <code>gzdoom.ini</code> to <code>uzdoom.ini</code>.</li>
+					<li>Rename <code>~/.config/gzdoom</code> to <code>~/.config/uzdoom</code>.</li>
+				</ol>
+				<h2>Defaults</h2>
+				<p>Defaults have long been a contentious issue in the ZDoom community, with some feeling it strays too far from what makes vanilla shine while others enjoy the visual flare compared to classical ports. We can understand both sides of this, and while we want to balance it as best we can, we ultimately felt that having so many extra graphical options on by default was too much. As such, we won’t be removing any of these features but instead will be going for an opt-in approach to make it easier to manage for first-time users. We feel these changes can help give better visual cohesion with content designed for vanilla while also balancing the legacy of maps and mods that relied on them. One of UZDoom’s biggest strengths, after all, is its ability to play almost anything thrown at it.</p>
+				<p>To go deeper into the why, we’d like to give some core philosophies around our decisions for how we chose defaults:</p>
+				<ul>
+					<li>Out of the box, Doom should reasonably resemble how it originally looked. There are a large number of reasons someone would want to use UZDoom including its powerful scripting capabilities, its accessibility options, and the fact it can play just about darn near anything without hassle. Forcing users into the menu to achieve this is not the correct way to go about it, so only select effects will be enabled that we feel don’t distract heavily from its original vision. For the fancier effects, we’ve tried our best to make them more consistent with Doom’s overall aesthetic so that even when used, they don’t appear to clash.</li>
+					<li>Modernization should also be done where reasonable. The reality is that we aren’t playing Doom in software on CRTs anymore but with 3D acceleration and modern monitors. This introduces some stark differences, so those should be accounted for as best as possible. For this reason, enhancements that don’t take away from the aesthetic like anisotropic filtering and distance-based filtering have been left on to help clean up the image. We also understand we have a legacy of maps designed for GZDoom to account for, and not all user options are controllable by mappers, so certain things like the software light banding have been left off to prevent breaking visual cohesion with these.</li>
+					<li>Getting a more vanilla experience should be made easier. Having to constantly go into the menu or mess with console variables isn’t fun, and things should be made more streamlined. For this reason we’re starting with a new tweak: the automap now has a Default color mode to automatically match the current game’s art style. In the future the Auto modes for ZDoom’s translucency will also be enhanced to allow better fine tuning for balancing vanilla visuals with mods expecting transparency. We’ll be looking into ways to improve this on the gameplay front as well since ZDoom introduced some differences that we know can break things like combat encounters in unexpected ways. While we have plans to fix up the menu, the best solution is for users to not feel like they need to constantly fall back on it at all.</li>
+				</ul>
+				<h2>Changes From GZDoom 4.14.2</h2>
+				<ul>
+					<li>Multiple security fixes. <b>This update is being deemed as critical.</b> It’s highly recommended to upgrade to it.</li>
+					<li>Anisotropic filtering is now disabled on Intel GPU devices if the texture filtering mode is set to any of the None options. This is to prevent texture filtering from being forced on when anisotropic filtering is enabled.</li>
+					<li>Added new game-based cursors (courtesy of Nash Muhandes and Xaser). These are much more cursor-y, and very good at pointing and clicking on things.</li>
+					<li>Changed defaults to be more balanced between vanilla and modern.</li>
+					<li>Lowered the master volume so it's less likely to blow out the system audio and become muffled (especially with things like the Plasma Rifle firing sound).</li>
+					<li>Added the Default option for automap colors, allowing the automap to choose based on which game is being played.</li>
+					<li>Added a Display option to control the render style of rocket explosions (these now default to additive instead of translucent since we felt it visually fit the other projectiles better).</li>
+					<li>Made the mouse less sensitive in menus when it’s been dormant for a short period. This should help reduce it accidentally shifting the selected option randomly while idle.</li>
+					<li>Added the powerup_fade_scalar cvar for controlling the strength of the fade on power ups (e.g. the Radiation Suit’s green tint).</li>
+					<li>Added support for the BUSY script flag for ACS.</li>
+					<li>Fixed audio not muting properly when the game is unfocused, causing it to build up and play back explosively in certain cases (especially for multiplayer games).</li>
+					<li>Fixed the master volume not properly applying to music when the game starts up.</li>
+					<li>Fixed weapon bobbing not disabling correctly when manually set to 0 via cvar.</li>
+					<li>Fixed the wrong music being played during Strife’s bad endings.</li>
+					<li>Fixed the opening subtitle for Strife not displaying.</li>
+					<li>Fixed the Iron Lich’s whirlwind blaming the wrong target for its damage dealt.</li>
+					<li>Fixed the textured automap being broken.</li>
+					<li>Fixed mid textures clipping incorrectly when skewed.</li>
+					<li>Fixed a crash with VisualThinkers when loading from a save.</li>
+					<li>Fixed IQM models with decoupled animations not displaying correctly if spawned without an animation.</li>
+					<li>Fixed gun flashes from MBF21 weapons not displaying correctly.</li>
+					<li>Fixed a bug with CreateTossable where items wouldn’t be removed if their amount was 0.</li>
+					<li>Fixed Quat’s Conjugate and Inverse functions throwing a JIT error.</li>
+					<li>Fixed the BrokenLines class being unserializable.</li>
+					<li>Fixed level data fields e.g. Sector not being cleared properly when transitioning between levels.</li>
+				</ul>
+			</description>
+			<url>https://forum.zdoom.org/viewtopic.php?t=81099</url>
+		</release>
 		<release version="4.14.2" date="2025-05-03">
 			<description>
 				<p>This update delivers various bug fixes, performance optimizations, and significantly expands modding capabilities.</p>
@@ -109,10 +197,10 @@
 			</description>
 			<url>https://forum.zdoom.org/viewtopic.php?t=80447</url>
 		</release>
-		<release version="4.14.1" date="2025-03-01">
+		<release version="4.14.1" date="2025-03-02">
 			<url>https://forum.zdoom.org/viewtopic.php?t=80243</url>
 		</release>
-		<release version="4.14.0" date="2024-12-17">
+		<release version="4.14.0" date="2024-12-24">
 			<url>https://forum.zdoom.org/viewtopic.php?t=79986</url>
 		</release>
 		<release version="4.13.2" date="2024-10-31">
@@ -132,78 +220,6 @@
 		</release>
 		<release version="4.12.0" date="2024-04-21">
 			<url>https://forum.zdoom.org/viewtopic.php?t=79013</url>
-		</release>
-		<release version="4.11.3" date="2023-10-26">
-			<url>https://forum.zdoom.org/viewtopic.php?t=78393</url>
-		</release>
-		<release version="4.11.2" date="2023-10-25">
-			<url>https://forum.zdoom.org/viewtopic.php?t=78386</url>
-		</release>
-		<release version="4.11.1" date="2023-10-10">
-			<url>https://forum.zdoom.org/viewtopic.php?t=78319</url>
-		</release>
-		<release version="4.11.0" date="2023-09-25">
-			<url>https://forum.zdoom.org/viewtopic.php?t=78251</url>
-		</release>
-		<release version="4.10.0" date="2022-12-04">
-			<url>https://forum.zdoom.org/viewtopic.php?t=76913</url>
-		</release>
-		<release version="4.9.0" date="2022-11-05">
-			<url>https://forum.zdoom.org/viewtopic.php?t=76741</url>
-		</release>
-		<release version="4.8.2" date="2022-07-04">
-			<url>https://forum.zdoom.org/viewtopic.php?t=75814</url>
-		</release>
-		<release version="4.8.1" date="2022-06-26">
-			<url>https://forum.zdoom.org/viewtopic.php?t=75729</url>
-		</release>
-		<release version="4.8.0" date="2022-06-06">
-			<url>https://forum.zdoom.org/viewtopic.php?t=75532</url>
-		</release>
-		<release version="4.7.1" date="2021-10-20">
-			<url>https://forum.zdoom.org/viewtopic.php?t=73631</url>
-		</release>
-		<release version="4.7.0" date="2021-09-22">
-			<url>https://forum.zdoom.org/viewtopic.php?t=73398</url>
-		</release>
-		<release version="4.6.1" date="2021-07-25">
-			<url>https://forum.zdoom.org/viewtopic.php?t=72879</url>
-		</release>
-		<release version="4.6.0" date="2021-05-22">
-			<url>https://forum.zdoom.org/viewtopic.php?t=72359</url>
-		</release>
-		<release version="4.5.0" date="2020-10-31">
-			<url>https://forum.zdoom.org/viewtopic.php?t=70459</url>
-		</release>
-		<release version="4.4.2" date="2020-06-16">
-			<url>https://forum.zdoom.org/viewtopic.php?t=69002</url>
-		</release>
-		<release version="4.4.1" date="2020-06-10">
-			<url>https://forum.zdoom.org/viewtopic.php?t=68918</url>
-		</release>
-		<release version="4.4.0" date="2020-06-07">
-			<url>https://forum.zdoom.org/viewtopic.php?t=68860</url>
-		</release>
-		<release version="4.3.3" date="2020-01-20">
-			<url>https://forum.zdoom.org/viewtopic.php?t=67036</url>
-		</release>
-		<release version="4.3.2" date="2020-01-12">
-			<url>https://forum.zdoom.org/viewtopic.php?t=66947</url>
-		</release>
-		<release version="4.3.1" date="2020-01-05">
-			<url>https://forum.zdoom.org/viewtopic.php?t=66882</url>
-		</release>
-		<release version="4.2.4" date="2019-11-03">
-			<url>https://forum.zdoom.org/viewtopic.php?t=66280</url>
-		</release>
-		<release version="4.2.3" date="2019-10-20">
-			<url>https://forum.zdoom.org/viewtopic.php?t=66171</url>
-		</release>
-		<release version="4.2.1" date="2019-09-11">
-			<url>https://forum.zdoom.org/viewtopic.php?t=65852</url>
-		</release>
-		<release version="4.2.0" date="2019-09-10">
-			<url>https://forum.zdoom.org/viewtopic.php?t=65600</url>
 		</release>
 	</releases>
 
