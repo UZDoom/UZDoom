@@ -432,10 +432,24 @@ bool HWSprite::CalculateVertices(HWDrawInfo* di, FVector3* v, DVector3* vp)
 		//&& di->mViewActor != nullptr
 		&& (gl_billboard_mode == 1 || (actor && actor->renderflags & RF_FORCEXYBILLBOARD)))) && !AngledRoll;
 
-	const bool drawBillboardFacingCamera = hw_force_cambbpref ? gl_billboard_faces_camera :
-		gl_billboard_faces_camera
-		|| ((actor && (!(actor->renderflags2 & RF2_BILLBOARDNOFACECAMERA) && (actor->renderflags2 & RF2_BILLBOARDFACECAMERA)))
-		|| (particle && particle->texture.isValid() && (!(particle->flags & SPF_NOFACECAMERA) && (particle->flags & SPF_FACECAMERA))));
+	bool drawBillboardFacingCamera = gl_billboard_faces_camera;
+	if (!hw_force_cambbpref)
+	{
+		if (actor)
+		{
+			if (actor->renderflags2 & RF2_BILLBOARDNOFACECAMERA)
+				drawBillboardFacingCamera = false;
+			else if (actor->renderflags2 & RF2_BILLBOARDFACECAMERA)
+				drawBillboardFacingCamera = true;
+		}
+		else if (particle && particle->texture.isValid())
+		{
+			if (particle->flags & SPF_NOFACECAMERA)
+				drawBillboardFacingCamera = false;
+			else if (particle->flags & SPF_FACECAMERA)
+				drawBillboardFacingCamera = true;
+		}
+	}
 
 	// [Nash] has +ROLLSPRITE
 	const bool drawRollSpriteActor = (actor != nullptr && actor->renderflags & RF_ROLLSPRITE);
