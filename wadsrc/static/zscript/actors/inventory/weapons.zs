@@ -959,6 +959,10 @@ class Weapon : StateProvider
 		int lAmmoUse1;
         int lAmmoUse2 = AmmoUse2;
 
+		if (Owner == null)
+		{
+			return false;
+		}
 		if (sv_infiniteammo || (Owner.FindInventory ('PowerInfiniteAmmo', true) != null))
 		{
 			return true;
