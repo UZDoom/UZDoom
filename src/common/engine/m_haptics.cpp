@@ -6,7 +6,7 @@
 **---------------------------------------------------------------------------
 **
 ** Copyright 2025 Marcus Minhorst
-** Copyright 2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** This program is free software; you can redistribute it and/or
 ** modify it under the terms of the GNU General Public License
@@ -186,7 +186,7 @@ const FName * Joy_GuessMapping(const FName identifier)
 		{ &HapticMedium, { "success", "grunt", "land", "pain", "pkup", "pickup", "fist", "weapon",
 			"fire", "shoot", "blast", "attack", "launch", "punch" } },
 		{ &HapticLight, { "push", "menu", "use", "fail", "open", "close", "eject", "reload",
-			"charge", "try" } },
+			"charge", "try", "fart" } },
 		{ &HapticNone, { "step", "floor" } },
 	};
 
