@@ -613,7 +613,9 @@ class OptionMenu : Menu
 					while (visibleLinesToScroll < visibleLinesJumped && newScrollPos < mDesc.mItems.Size() - 1)
 					{
 						newScrollPos++;
-						if ((newScrollPos + mDesc.mScrollTop) < mDesc.mItems.Size() && mDesc.mItems[newScrollPos + mDesc.mScrollTop].Visible())
+
+						int tempIndex = newScrollPos + mDesc.mScrollTop;
+						if (tempIndex >= 0 && tempIndex < mDesc.mItems.Size() && mDesc.mItems[tempIndex].Visible())
 						{
 							visibleLinesToScroll++;
 						}
