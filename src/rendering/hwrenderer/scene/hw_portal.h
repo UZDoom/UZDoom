@@ -78,7 +78,7 @@ public:
 	virtual void * GetSource() const = 0;	// GetSource MUST be implemented!
 	virtual const char *GetName() = 0;
 	virtual bool AllowSSAO() { return true; }
-	virtual bool IsSky() { return false; }
+	virtual bool IsSky(HWDrawInfo *di) { return false; }
 	virtual bool NeedCap() { return true; }
 	virtual bool NeedDepthBuffer() { return true; }
 	virtual void DrawContents(HWDrawInfo *di, FRenderState &state) = 0;
@@ -251,7 +251,7 @@ protected:
 	bool Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clipper) override;
 	void Shutdown(HWDrawInfo *di, FRenderState &rstate) override;
 	virtual void * GetSource() const { return portal; }
-	virtual bool IsSky() { return true; }
+	virtual bool IsSky(HWDrawInfo *di) { return true; }
 	virtual const char *GetName();
 	virtual bool AllowSSAO() override;
 
@@ -274,7 +274,7 @@ protected:
 	void DrawPortalStencil(FRenderState &state, int pass) override;
 	void Shutdown(HWDrawInfo *di, FRenderState &rstate) override;
 	virtual void * GetSource() const { return origin; }
-	virtual bool IsSky() { return true; }	// although this isn't a real sky it can be handled as one.
+	bool IsSky(HWDrawInfo *di) override;
 	virtual const char *GetName();
 	FSectorPortalGroup *origin;
 
@@ -311,6 +311,7 @@ public:
 	{
 		origin = pt;
 	}
+	void SetupCoverage(HWDrawInfo *di);
 
 };
 
@@ -363,7 +364,7 @@ struct HWSkyPortal : public HWPortal
 protected:
 	virtual void DrawContents(HWDrawInfo *di, FRenderState &state);
 	virtual void * GetSource() const { return origin; }
-	virtual bool IsSky() { return true; }
+	virtual bool IsSky(HWDrawInfo *di) { return true; }
 	virtual bool NeedDepthBuffer() { return false; }
 	virtual const char *GetName();
 
