@@ -2,18 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-11 22:25+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-11-28 21:00+0000\n"
+"Last-Translator: Marazm Mamazm <brutdewelopment@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/common/pl/>"
 "\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pl\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSYN"
 msgstr "Wciśnij Y lub N."
@@ -93,7 +93,7 @@ msgid "MNU_NOFILES"
 msgstr "Brak plików"
 
 msgid "MNU_DELETESG"
-msgstr "Czy naprawdę chcesz usunąć zapis gry?"
+msgstr "Czy naprawdę chcesz usunąć zapis gry?\n"
 
 msgid "OPTVAL_OFF"
 msgstr "Wyłączone"
@@ -229,7 +229,7 @@ msgid "CNTRLMNU_TOGGLERUN"
 msgstr "Przełącz bieg"
 
 msgid "CNTRLMNU_STRAFE"
-msgstr "Uniki"
+msgstr "Unik"
 
 msgid "CNTRLMNU_SCOREBOARD"
 msgstr "Pokaż tablicę wyników"
@@ -721,25 +721,25 @@ msgid "SNDMNU_MUSENABLED"
 msgstr "Muzyka włączona"
 
 msgid "OPTVAL_4000HZ"
-msgstr ""
+msgstr "4000 Hz"
 
 msgid "OPTVAL_8000HZ"
-msgstr ""
+msgstr "8000 Hz"
 
 msgid "OPTVAL_11025HZ"
-msgstr ""
+msgstr "11025 Hz"
 
 msgid "OPTVAL_22050HZ"
-msgstr ""
+msgstr "22050 Hz"
 
 msgid "OPTVAL_32000HZ"
-msgstr ""
+msgstr "32000 Hz"
 
 msgid "OPTVAL_44100HZ"
-msgstr ""
+msgstr "44100 Hz"
 
 msgid "OPTVAL_48000HZ"
-msgstr ""
+msgstr "48000 Hz"
 
 msgid "OPTVAL_64SAMPLES"
 msgstr "64 sample"
@@ -766,13 +766,13 @@ msgid "OPTSTR_AUTO"
 msgstr "Automatycznie"
 
 msgid "OPTSTR_MONO"
-msgstr ""
+msgstr "Mono"
 
 msgid "OPTSTR_STEREO"
-msgstr ""
+msgstr "Stereo"
 
 msgid "OPTSTR_PROLOGIC"
-msgstr ""
+msgstr "Dekoder Dolby Pro Logic"
 
 msgid "OPTSTR_QUAD"
 msgstr "Cztery kanały"
@@ -970,10 +970,10 @@ msgid "ADVSNDMNU_VLMODEL"
 msgstr ""
 
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr ""
+msgstr "Metoda przydziału kanałów"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr ""
+msgstr "Automatyczny arpeggiator"
 
 msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "Użyj niestandardowego banku WOPL"
@@ -1185,7 +1185,7 @@ msgid "ADLCHANALLOC_AUTO"
 msgstr ""
 
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr ""
+msgstr "Zmierzone opóźnienie dźwięku"
 
 msgid "ADLCHANALLOC_SAMEINST"
 msgstr ""
@@ -1756,7 +1756,7 @@ msgid "OS_ALL"
 msgstr "Szukaj wszystkich wyrażeń"
 
 msgid "OS_NO_RESULTS"
-msgstr "Brak wyników"
+msgstr "Brak wyników."
 
 msgid "OS_LABEL"
 msgstr "Szukaj:"
@@ -1789,7 +1789,7 @@ msgid "TXT_OBITUARY9"
 msgstr "%k dał@[ao_pl] %o Analną Sprawiedliwość"
 
 msgid "TXT_OBITUARY10"
-msgstr "%k dał@[ao_pl] %o AnAlNe SzAlEńStWo "
+msgstr "%k dał@[ao_pl] %o AnAlNe SzAlEńStWo"
 
 msgid "TXT_OBITUARY11"
 msgstr "%k zabił@[ao_pl] %o"
@@ -1825,7 +1825,7 @@ msgid "TXT_OBITUARY21"
 msgstr "%k zmiażdżył@[ao_pl] %o"
 
 msgid "TXT_OBITUARY22"
-msgstr "%k udusił@[ao_pl] %o\n"
+msgstr "%k udusił@[ao_pl] %o"
 
 msgid "TXT_OBITUARY23"
 msgstr "%k roztrwonił@[ao_pl] %o"
@@ -2005,27 +2005,27 @@ msgstr ""
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
 msgid "JOYMNU_JOYENABLEINBACKGROUND"
-msgstr ""
+msgstr "Pozwól Na Działanie Kontrolera W Tle"
 
 # Order to sort the list of saved games in the save and load game menu. This
 # used to only be alphabetical.
 msgid "MISCMNU_SAVEORDER"
-msgstr ""
+msgstr "Kolejność Sortowania Zapisanych Gier"
 
 msgid "OPTVAL_ALPHABETICAL"
-msgstr ""
+msgstr "Alfabetycznie"
 
 msgid "OPTVAL_LASTSAVEDTIME"
-msgstr ""
+msgstr "Ostatnio Zapisane"
 
 msgid "PICKER_PLAYHOST"
-msgstr ""
+msgstr "Hostuj Grę"
 
 msgid "PICKER_PLAYJOIN"
-msgstr ""
+msgstr "Dołącz do gry"
 
 msgid "PICKER_REMPARM"
-msgstr ""
+msgstr "Zapamiętaj Ustawienia"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
@@ -2035,23 +2035,23 @@ msgid "PICKER_TAB_MULTI"
 msgstr ""
 
 msgid "PICKER_LOADSAVE"
-msgstr ""
+msgstr "Wczytaj zapis:"
 
 msgid "PICKER_REMSAVE"
-msgstr ""
+msgstr "Zapamiętaj Zapis"
 
 # As in, to host a game.
 msgid "PICKER_HOST"
-msgstr ""
+msgstr "Hostuj"
 
 msgid "PICKER_JOIN"
-msgstr ""
+msgstr "Dołącz"
 
 msgid "PICKER_NETMODE"
-msgstr ""
+msgstr "Tryb sieciowy:"
 
 msgid "PICKER_NETAUTO"
-msgstr ""
+msgstr "Auto (zalecany)"
 
 # Connections are routed through the host instead of all players connecting to
 # each other individually.
@@ -2063,15 +2063,15 @@ msgid "PICKER_NETPEER"
 msgstr ""
 
 msgid "PICKER_NETRATE"
-msgstr ""
+msgstr "Częstotliwość Odświeżania Pakietów:"
 
 # Sends out duplicate copies of packets to help with spotty connections e.g.
 # wifi.
 msgid "PICKER_NETBACKUP"
-msgstr ""
+msgstr "Wyślij Zapasowe Pakiety"
 
 msgid "PICKER_GAMEMODE"
-msgstr ""
+msgstr "Tryb Gry:"
 
 msgid "PICKER_COOP"
 msgstr ""
@@ -2080,42 +2080,42 @@ msgid "PICKER_DM"
 msgstr ""
 
 msgid "PICKER_TDM"
-msgstr ""
+msgstr "Drużynowy Deathmatch"
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
-msgstr ""
+msgstr "Drużyna #:"
 
 msgid "PICKER_ALTDM"
-msgstr ""
+msgstr "Użyj Alternatywnych Zasad Deathmatchu"
 
 msgid "PICKER_PLAYERS"
-msgstr ""
+msgstr "Maks. Graczy:"
 
 msgid "PICKER_PORT"
-msgstr ""
+msgstr "Port Hosta:"
 
 # Max number of players.
 msgid "PICKER_PLAYERHINT"
-msgstr ""
+msgstr "Maks. 64"
 
 # GZDoom's default port.
 msgid "PICKER_PORTHINT"
-msgstr ""
+msgstr "Domyślny 5029"
 
 # Team 255 randomizes which team the player gets put on.
 msgid "PICKER_TEAMHINT"
-msgstr ""
+msgstr "255 = Losowy"
 
 msgid "PICKER_IP"
-msgstr ""
+msgstr "IP Hosta:"
 
 msgid "PICKER_TDMLABEL"
-msgstr ""
+msgstr "Drużynowy Deathmatch:"
 
 # Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
-msgstr ""
+msgstr "Mów (Drużyna):"
 
 msgid "MISCMNU_DISCORDRPC"
 msgstr ""
@@ -2124,7 +2124,7 @@ msgid "JOYMNU_TURNSPEED"
 msgstr ""
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr ""
+msgstr "Szybkość rozglądania"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr ""

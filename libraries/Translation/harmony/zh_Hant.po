@@ -2,68 +2,70 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-19 13:07+0000\n"
-"Last-Translator: inkoalawetrust <someb27@yahoo.gr>\n"
-"Language-Team: Greek <https://hosted.weblate.org/projects/uzdoom/harmony/el/>"
-"\n"
-"Language: el\n"
+"PO-Revision-Date: 2025-11-20 13:51+0000\n"
+"Last-Translator: Douggy Sans <dfr1238@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/uzdoom/harmony/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: el\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "NIGHTMARE"
 msgstr ""
+"你真認為自己應付得來？\\n"
+"\\n"
+"按下 'Y' 或 'N'..."
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr ""
 
 msgid "PD_BLUEO"
-msgstr "Χρειάζεται τη πράσινη κάρτα"
+msgstr ""
 
 msgid "PD_REDO"
-msgstr "Χρειάζεται τη μοβ κάρτα"
+msgstr ""
 
 msgid "PD_YELLOWO"
-msgstr "Χρειάζεται τη κίτρινη κάρτα"
+msgstr ""
 
 msgid "PD_BLUEK"
-msgstr "Χρειάζεται το πράσινο κλειδί"
+msgstr ""
 
 msgid "PD_YELLOWK"
-msgstr "Χρειάζεται το κίτρινο κλειδί"
+msgstr ""
 
 msgid "PD_REDK"
-msgstr "Χρειάζεται το μοβ κλειδί"
+msgstr ""
 
 msgid "GOTARMOR"
-msgstr "Πήρες πανοπλία."
+msgstr ""
 
 msgid "GOTMEGA"
-msgstr "Πήρες πανοπλία μάχης."
+msgstr ""
 
 msgid "GOTMSPHERE"
-msgstr "Μέγα σφαίρα"
+msgstr ""
 
 msgid "GOTBLUECARD"
-msgstr "Πήρες τη πράσινη κάρτα."
+msgstr ""
 
 msgid "GOTYELWCARD"
-msgstr "Πήρες τη κίτρινη κάρτα."
+msgstr ""
 
 msgid "GOTREDCARD"
-msgstr "Πήρες τη μοβ κάρτα."
+msgstr ""
 
 msgid "GOTBLUESKUL"
-msgstr "Πήρες το πράσινο κλειδί."
+msgstr ""
 
 msgid "GOTYELWSKUL"
-msgstr "Πήρες το κίτρινο κλειδί."
+msgstr ""
 
 msgid "GOTREDSKUL"
-msgstr "Πήρες το μοβ κλειδί."
+msgstr ""
 
 msgid "GOTSTIM"
 msgstr ""
@@ -75,7 +77,7 @@ msgid "GOTMEDINEED"
 msgstr ""
 
 msgid "GOTMAP"
-msgstr "Χάρτης"
+msgstr ""
 
 msgid "GOTCLIPBOX"
 msgstr ""
@@ -129,25 +131,25 @@ msgid "TXT_HARMMAP03"
 msgstr ""
 
 msgid "TXT_HARMMAP04"
-msgstr "Μεγαλόπολη"
+msgstr ""
 
 msgid "TXT_HARMMAP05"
-msgstr "Το Νοσοκομείο"
+msgstr ""
 
 msgid "TXT_HARMMAP06"
-msgstr "Το Οπλοστάσιο"
+msgstr ""
 
 msgid "TXT_HARMMAP07"
-msgstr "Το Υποβρύχιο Εργαστήριο"
+msgstr ""
 
 msgid "TXT_HARMMAP08"
-msgstr "Διάδρομος Ένα"
+msgstr ""
 
 msgid "TXT_HARMMAP09"
 msgstr ""
 
 msgid "TXT_HARMMAP10"
-msgstr "Η Ραδιενεργή Ζώνη"
+msgstr ""
 
 msgid "TXT_HARMMAP11"
 msgstr ""

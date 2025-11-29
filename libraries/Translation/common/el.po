@@ -2,17 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:51+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-11-19 13:07+0000\n"
+"Last-Translator: inkoalawetrust <someb27@yahoo.gr>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/uzdoom/common/el/>"
 "\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: el\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSYN"
 msgstr "Πάτα Y ή N\n"
@@ -224,7 +224,7 @@ msgid "CNTRLMNU_TOGGLERUN"
 msgstr "Ενεργοποίηση τρέξιμου"
 
 msgid "CNTRLMNU_STRAFE"
-msgstr ""
+msgstr "Σφυροκόπημα"
 
 msgid "CNTRLMNU_SCOREBOARD"
 msgstr "Εμφάνιση πίνακα αποτελεσμάτων"
@@ -357,7 +357,7 @@ msgid "CNTRLMNU_AUTOMAP"
 msgstr "Εναλλαγή automap"
 
 msgid "CNTRLMNU_CHASECAM"
-msgstr ""
+msgstr "Κάμερα τρίτου προσώπου"
 
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Στιγμιότυπο"
@@ -474,71 +474,71 @@ msgid "OPTVAL_DEFAULT"
 msgstr "Προεπιλογή"
 
 msgid "JOYMNU_TITLE"
-msgstr ""
+msgstr "Ρύθμιση χειριστηριου"
 
 msgid "JOYMNU_OPTIONS"
-msgstr ""
+msgstr "Ρυθμίσεις Χειριστήριού"
 
 msgid "JOYMNU_NOMENU"
-msgstr ""
+msgstr "Σταμάτα το χειριστήριο στα μενού"
 
 msgid "JOYMNU_ENABLE"
-msgstr ""
+msgstr "Ενεργοποίησε λειτουργία χειριστηρίων"
 
 msgid "JOYMNU_DINPUT"
-msgstr ""
+msgstr "Ενεργοποίησε DirectInput χειριστήρια"
 
 msgid "JOYMNU_XINPUT"
-msgstr ""
+msgstr "Ενεργοποίησε XInput χειριστήρια"
 
 msgid "JOYMNU_PS2"
-msgstr ""
+msgstr "Ενεργοποίησε σκέτους προσαρμοστές για PlayStation 2"
 
 msgid "JOYMNU_NOCON"
-msgstr ""
+msgstr "Δεν ανιχνεύτηκαν χειριστήρια"
 
 msgid "JOYMNU_CONFIG"
-msgstr ""
+msgstr "Ρύθμισε τα χειριστηρια:"
 
 msgid "JOYMNU_DISABLED1"
-msgstr ""
+msgstr "Λειτουργία χειριστηρίων πρέπει να είναι"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr ""
+msgstr "ενεργοποιημένη για να ανιχνευση οτιδήποτε"
 
 msgid "JOYMNU_INVALID"
-msgstr ""
+msgstr "Κακό χειριστήριο καθορίστηκε για το μενού"
 
 msgid "JOYMNU_OVRSENS"
-msgstr ""
+msgstr "Γενική ευαισθησία"
 
 msgid "JOYMNU_AXIS"
-msgstr ""
+msgstr "Ρύθμιση άξονα"
 
 msgid "JOYMNU_INVERT"
-msgstr ""
+msgstr "Αντιστροφή"
 
 msgid "JOYMNU_DEADZONE"
 msgstr ""
 
 msgid "JOYMNU_NOAXES"
-msgstr ""
+msgstr "Κανένας ρυθμιζόμενος άξονας"
 
 msgid "OPTVAL_NONE"
-msgstr ""
+msgstr "Τίποτα"
 
 msgid "OPTVAL_TURNING"
-msgstr ""
+msgstr "Στροφή"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
-msgstr ""
+msgstr "Κοίταγμα πάνω/κάτω"
 
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr ""
 
 msgid "OPTVAL_STRAFING"
-msgstr ""
+msgstr "Σφυροκόπημα"
 
 msgid "OPTVAL_MOVINGUPDOWN"
 msgstr ""
@@ -643,7 +643,7 @@ msgid "OPTVAL_NEVER"
 msgstr "Ποτέ"
 
 msgid "PLYRMNU_AUTOAIM"
-msgstr ""
+msgstr "Αυτοστόχευση"
 
 msgid "PLYRMNU_ALWAYSRUN"
 msgstr "Πάντα τρέχα"
@@ -1935,7 +1935,7 @@ msgid "DSPLYMNU_APPEARANCE"
 msgstr ""
 
 msgid "DSPLYMNU_ADVANCED"
-msgstr ""
+msgstr "Προηγμένες Ρυθμίσεις Οθόνης"
 
 msgid "PICKER_SELECT"
 msgstr ""
@@ -2042,15 +2042,15 @@ msgid "PICKER_JOIN"
 msgstr ""
 
 msgid "PICKER_NETMODE"
-msgstr ""
+msgstr "Λειτουργία Δικτυου:"
 
 msgid "PICKER_NETAUTO"
-msgstr ""
+msgstr "Αυτόματο (Προτεινόμενο)"
 
 # Connections are routed through the host instead of all players connecting to
 # each other individually.
 msgid "PICKER_NETSERVER"
-msgstr ""
+msgstr "Διακομιστής Πακετων"
 
 # Players connect to each other individually.
 msgid "PICKER_NETPEER"
@@ -2062,10 +2062,10 @@ msgstr ""
 # Sends out duplicate copies of packets to help with spotty connections e.g.
 # wifi.
 msgid "PICKER_NETBACKUP"
-msgstr ""
+msgstr "Στείλε Εφεδρικά Πακέτα"
 
 msgid "PICKER_GAMEMODE"
-msgstr ""
+msgstr "Λειτουργία Παιχνιδιού:"
 
 msgid "PICKER_COOP"
 msgstr ""
@@ -2078,47 +2078,47 @@ msgstr ""
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
-msgstr ""
+msgstr "Ομάδα #:"
 
 msgid "PICKER_ALTDM"
-msgstr ""
+msgstr "Χρησιμοποίησε διαφορετικού κανόνες για deathmatch"
 
 msgid "PICKER_PLAYERS"
-msgstr ""
+msgstr "Μέγιστη Παίκτες:"
 
 msgid "PICKER_PORT"
 msgstr ""
 
 # Max number of players.
 msgid "PICKER_PLAYERHINT"
-msgstr ""
+msgstr "Μέγιστη παίκτες είναι 64"
 
 # GZDoom's default port.
 msgid "PICKER_PORTHINT"
-msgstr ""
+msgstr "Προεπιλογή 5029"
 
 # Team 255 randomizes which team the player gets put on.
 msgid "PICKER_TEAMHINT"
-msgstr ""
+msgstr "255 = Τυχαία"
 
 msgid "PICKER_IP"
 msgstr ""
 
 msgid "PICKER_TDMLABEL"
-msgstr ""
+msgstr "Ομαδικό Deathmatch:"
 
 # Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
-msgstr ""
+msgstr "Πες (Ομάδα):"
 
 msgid "MISCMNU_DISCORDRPC"
 msgstr ""
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "Ταχύτητα στροφής"
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr ""
+msgstr "Ταχύτητα κοιτάγματος"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr ""
+msgstr "Αναλογικό σφυροκόπημο τρέξιμο"

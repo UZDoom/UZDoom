@@ -2,17 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-11 22:25+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-11-23 14:51+0000\n"
+"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/common/"
 "eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: eo\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSYN"
 msgstr "Premu Y aŭ N."
@@ -529,7 +529,6 @@ msgstr "Malviva zono"
 msgid "JOYMNU_NOAXES"
 msgstr "Neniu agordebla akso"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "Nenio"
 
@@ -855,7 +854,7 @@ msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Nombro da imitataj blatoj OPL"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr ""
+msgstr "Akiro"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Plena MIDIa stereo-panoramado"
@@ -966,7 +965,7 @@ msgid "ADVSNDMNU_OPNGAIN"
 msgstr "Akiro"
 
 msgid "ADVSNDMNU_VLMODEL"
-msgstr ""
+msgstr "Modelo de laŭteco"
 
 msgid "ADVSNDMNU_CHANALLOC"
 msgstr ""
@@ -1181,7 +1180,7 @@ msgid "ADLVLMODEL_HMIOLD"
 msgstr "Son-op. de HMI (malnova, cimo-hava)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "Aŭtomata"
 
 msgid "ADLCHANALLOC_OFFDELAY"
 msgstr ""

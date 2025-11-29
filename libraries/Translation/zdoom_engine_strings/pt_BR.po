@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:52+0000\n"
-"Last-Translator: William Weber Berrutti <wwberrutti@protonmail.ch>\n"
+"PO-Revision-Date: 2025-11-17 14:51+0000\n"
+"Last-Translator: Gustavo Rehermann <gr.wallabra@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -5269,3 +5269,6 @@ msgstr "Visualização coop anterior"
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr "Limpar visualização coop"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Opções de Acessibilidade"

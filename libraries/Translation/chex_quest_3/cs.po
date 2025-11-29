@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-24 21:51+0000\n"
+"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/"
+"chex-quest-3/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: cs\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 # Flem = phlegm
 msgid "GOTBLUEFLEM"
@@ -18,7 +25,7 @@ msgid "GOTREDFLEM"
 msgstr "Sebrán červený slizoklíč."
 
 msgid "GOTGOGGLES"
-msgstr "Nalezeny ultrabrýle."
+msgstr "Nalezeny ultrabrýle"
 
 msgid "PD_BLUECO"
 msgstr "Potřebuješ modrý klíč pro aktivaci tohoto objektu"
@@ -30,13 +37,13 @@ msgid "PD_YELLOWCO"
 msgstr "Potřebuješ žlutý klíč pro aktivaci tohoto objektu"
 
 msgid "PD_BLUEFO"
-msgstr "Potřebuješ modrý slizoklíč pro aktivaci tohoto objektu."
+msgstr "Potřebuješ modrý slizoklíč pro aktivaci tohoto objektu"
 
 msgid "PD_REDFO"
-msgstr "Potřebuješ červený slizoklíč pro aktivaci tohoto objektu."
+msgstr "Potřebuješ červený slizoklíč pro aktivaci tohoto objektu"
 
 msgid "PD_YELLOWFO"
-msgstr "Potřebuješ žlutý slizoklíč pro aktivaci tohoto objektu."
+msgstr "Potřebuješ žlutý slizoklíč pro aktivaci tohoto objektu"
 
 msgid "PICKUP_PISTOL_DROPPED"
 msgstr "Sebrán bzukr."
@@ -240,13 +247,13 @@ msgid "M_EPI3"
 msgstr "Invaze!"
 
 msgid "TAG_GOGGLES"
-msgstr ""
+msgstr "Ultrabrýle"
 
 msgid "TAG_BLUEFLEMKEY"
-msgstr ""
+msgstr "Modrý slizoklíč"
 
 msgid "TAG_YELLOWFLEMKEY"
-msgstr ""
+msgstr "Žlutý slizoklíč"
 
 msgid "TAG_REDFLEMKEY"
-msgstr ""
+msgstr "Červený slizoklíč"

@@ -2,18 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:52+0000\n"
-"Last-Translator: Kebabo 500 <kebabo500@gmail.com>\n"
+"PO-Revision-Date: 2025-11-28 21:00+0000\n"
+"Last-Translator: Marazm Mamazm <brutdewelopment@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-game-strings/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pl\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "TXT_D1E1"
 msgstr "Po kolana w trupach"
@@ -1356,7 +1356,7 @@ msgstr ""
 "W końcu zauważasz, że nie jest w twoim\n"
 "stylu poddać się bez walki. Miej oczy szeroko\n"
 "otwarte, idziesz spotkać się ze swoim\n"
-"przeznaczeniem. "
+"przeznaczeniem."
 
 msgid "TXT_HEXEN_CLUS1MSG"
 msgstr ""
@@ -1811,13 +1811,13 @@ msgid "TXT_ACS_MAP52_10_THEWA"
 msgstr "Droga jest otwarta"
 
 msgid "TXT_ACS_MAP53_2_YOUHA"
-msgstr "Masz"
+msgstr "Masz "
 
 msgid "TXT_ACS_MAP53_3_SWITC"
 msgstr "\\x20pozostałych przełączników"
 
 msgid "TXT_ACS_MAP53_4_YOUHA"
-msgstr "Masz tylko"
+msgstr "Masz tylko "
 
 msgid "TXT_ACS_MAP53_5_SWITC"
 msgstr "\\x20przełącznik"
@@ -1880,13 +1880,13 @@ msgid "TXT_ACS_MAP56_2_PREPA"
 msgstr "Przygotuj się na śmierć"
 
 msgid "TXT_ACS_MAP59_1_YOUHA"
-msgstr "Masz"
+msgstr "Masz "
 
 msgid "TXT_ACS_MAP59_2_MORES"
 msgstr "\\x20przełączników do znalezienia"
 
 msgid "TXT_ACS_MAP59_3_YOUHA"
-msgstr "Masz tylko"
+msgstr "Masz tylko "
 
 msgid "TXT_ACS_MAP59_4_SWITC"
 msgstr "\\x20przełącznik"
@@ -2345,7 +2345,7 @@ msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
 msgstr ""
 "Mam nadzieję, że Macil wie co robi. Jeśli Zakon odkryje, że pomagam "
 "Frontowi, będę martwy... Nie to, że kogokolwiek to obchodzi. Medyk frontu "
-"dał mi czip ulepszający dla ciebie, jesteś gotowy?"
+"dał mi czip ulepszający dla ciebie, jesteś gotowy? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
@@ -2468,7 +2468,7 @@ msgstr "Uważaj jak leziesz kmiocie!"
 
 # MAP02: Gray guards.
 msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
-msgstr "Zabijemy cię!"
+msgstr "Zabijemy cię! "
 
 # MAP02: Green guard.
 msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
@@ -2657,7 +2657,7 @@ msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
 msgstr ""
 "Więc... to ty jesteś tym głupcem, który ukradł kielich? Aresztuję cię jako "
 "złodzieja-buntownika... A tym samym zwiększając swe uznanie u Zakonu. Jakie "
-"to uczucie jak się jest nieświadomym pionkiem? Podpowiedź, będzie bolało."
+"to uczucie jak się jest nieświadomym pionkiem? Podpowiedź, będzie bolało. "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
@@ -2808,7 +2808,7 @@ msgstr "Odejdź stąd mały, po prostu odejdź."
 
 # Arion.
 msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
-msgstr "Masz spotkanie z Gubernatorem?"
+msgstr "Masz spotkanie z Gubernatorem? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
@@ -3095,7 +3095,7 @@ msgstr "Prawie skończyłem, ale nie do końca."
 msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
 msgstr ""
 "Dobra, prawie wszystko działa dobrze. Zostało jeszcze parę rzeczy do "
-"zrobienia. Czy coś jeszcze potrzebujesz?"
+"zrobienia. Czy coś jeszcze potrzebujesz? "
 
 # 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
@@ -3233,7 +3233,7 @@ msgstr "Masz."
 msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
 msgstr ""
 "Nie bądź taki impulsywny na mieście. Włączysz alarm i zaczną po ciebie "
-"wysyłać straże z zamku."
+"wysyłać straże z zamku. "
 
 # MAP03: Near Macil.
 msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
@@ -3714,12 +3714,12 @@ msgstr "Weran nas uratuje. Jeszcze nigdy nas nie zawiódł."
 
 # 〃
 msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
-msgstr "Jeśli szukasz rozwiązania swojego problemu, poszukaj Werana."
+msgstr "Jeśli szukasz rozwiązania swojego problemu, poszukaj Werana. "
 
 # 〃
 msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
 msgstr ""
-"Niech żyje Front? To wszystko to gówno. My po prostu czekamy na śmierć."
+"Niech żyje Front? To wszystko to gówno. My po prostu czekamy na śmierć. "
 
 # 〃
 msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
@@ -3831,7 +3831,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
-msgstr "Jakich sekretów?"
+msgstr "Jakich sekretów? "
 
 # 〃
 msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
@@ -3931,7 +3931,7 @@ msgstr "Zniszczę cię!"
 
 # MAP10: Gerald (no upgrade).
 msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
-msgstr "Dobrze widzieć, że udało ci się. Czego ci potrzeba?"
+msgstr "Dobrze widzieć, że udało ci się. Czego ci potrzeba? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
@@ -4141,7 +4141,7 @@ msgstr ""
 "wybór towaru dzięki rozporządzeniu\n"
 "z zamku. Jeśli potrzebujesz amunicji\n"
 "to porozmawiaj z Justinem. Zajmie\n"
-"się tobą."
+"się tobą. "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
@@ -4364,7 +4364,7 @@ msgstr "Tak, jestem."
 
 # 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
-msgstr "Proszę bardzo."
+msgstr "Proszę bardzo. "
 
 # MAP10: Justin.
 msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
@@ -5745,14 +5745,14 @@ msgstr "Na co czekasz? Sam gubernator cię nagrodzi."
 
 # 〃
 msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
-msgstr "Giń zdrajco!"
+msgstr "Giń zdrajco! "
 
 # MAP33: Mourel.
 msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
 msgstr ""
 "Więc to ty jesteś tym głupcem, który ukradł kielich? Każę cię aresztować "
 "jako buntowniczego złodzieja... Tym samym wzmocnię swoją pozycję w Zakonie. "
-"Jakie to uczucie być nieświadomym pionkiem?"
+"Jakie to uczucie być nieświadomym pionkiem? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
@@ -5788,8 +5788,8 @@ msgstr "Wynoś się stąd!"
 msgid "TXT_DLG_SCRIPT34_D0_WHATA"
 msgstr ""
 "Co za idealne miejsce dla nas, pod starym ratuszem. Zakon myśli, że nas "
-"wymazał, ale to było tylko przypomnienie nam, co może się stać, gdy staniesz"
-" się nieostrożny."
+"wymazał, ale to było tylko przypomnienie nam, co może się stać, gdy staniesz "
+"się nieostrożny. "
 
 # MAP34
 msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
@@ -5806,7 +5806,7 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
 msgstr ""
 "Kilka tych beczek wrzuconych do ich wodociągów powinno trochę wyrównać "
-"szanse."
+"szanse. "
 
 # MAP34: Gerald.
 # (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
@@ -5814,7 +5814,7 @@ msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
 msgstr ""
 "Pracuję nad czymś, co da nam przewagę. Zwiększy to twoją wytrzymałość i "
 "całkowicie cię podnieci. Mam już prawie dopracowane wszystkie błędy. Mogę "
-"coś dla ciebie zrobić?"
+"coś dla ciebie zrobić? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
@@ -5866,7 +5866,7 @@ msgstr "Prawie skończyłem, ale nie do końca."
 msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
 msgstr ""
 "W porządku, to jest to. Prawie wszystko działa idealnie. Zostało kilka "
-"problemów do naprawienia, potrzebujesz czegoś jeszcze?"
+"problemów do naprawienia, potrzebujesz czegoś jeszcze? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
@@ -6031,7 +6031,7 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
 msgstr ""
 "Nie daj się złapać. Słyszałem przerażające historie o tym, co robią z "
-"naszymi ludźmi po uwięzieniu. Po prostu znikają, żadnych śladów, nic."
+"naszymi ludźmi po uwięzieniu. Po prostu znikają, żadnych śladów, nic. "
 
 # 〃
 # (Similar to row 774)
@@ -6051,7 +6051,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
-msgstr "Co będę musiał zrobić?"
+msgstr "Co będę musiał zrobić? "
 
 # 〃
 msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
@@ -6070,7 +6070,7 @@ msgstr ""
 "Dobrze. Blackbird nadal będzie twoim przewodnikiem. Polubiła cię. Razem "
 "musicie odkryć tajemnice Zakonu i ich nieludzkich sług. Istnieje obecność, "
 "która czai się poza naszym rozumieniem, która kieruje ich terrorem. Dostań "
-"się do środka i zdejmij ich."
+"się do środka i zdejmij ich. "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
@@ -7214,7 +7214,7 @@ msgstr "Nazwanie Mourela obskurnym to komplement. On jest kundlem na patyku."
 msgid "TXT_SUB_LOG10"
 msgstr ""
 "Musimy porozmawiać z kimś, kto zna stare miasto i wie, gdzie jest to "
-"sprzęgło. Rozkaz mówi: znaleźć MacGuffina."
+"sprzęgło. Rozkaz mówi: znaleźć MacGuffina. "
 
 # MAP02: After accepting "messy" chore and leaving Mourel's mansion.
 msgid "TXT_SUB_LOG11"
@@ -7299,7 +7299,7 @@ msgid "TXT_SUB_LOG26"
 msgstr ""
 "Zakon myśli, że jest bezpieczny w swoim zamku. Mylisz się! Jeśli otworzysz "
 "bramy, będą łatwym łupem. A w tym celu będziesz musiał zejść do kanałów. "
-"Kieruj się wzdłuż rzeki, naprzeciwko rezydencji gubernatora."
+"Kieruj się wzdłuż rzeki, naprzeciwko rezydencji gubernatora. "
 
 # 〃
 msgid "TXT_SUB_LOG27"
@@ -7351,14 +7351,14 @@ msgstr "Ta cegła... Czy nie minęliśmy tej cegły? Nie..."
 msgid "TXT_SUB_LOG37"
 msgstr ""
 "Dowództwo, on to zrobił! Brama jest otwarta. Wyślijcie oddziały uderzeniowe "
-"i powiedzcie Macilowi, że wchodzimy!"
+"i powiedzcie Macilowi, że wchodzimy! "
 
 # MAP07: Entrace.
 msgid "TXT_SUB_LOG38"
 msgstr ""
-"Mamy sprzeczne raporty na temat lokalizacji Programisty. Jeden mówi, że jest"
-" w sali komputerowej, inny, że w magazynie, a jeszcze inny, że wspomina o "
-"długim korytarzu. Przepraszam."
+"Mamy sprzeczne raporty na temat lokalizacji Programisty. Jeden mówi, że jest "
+"w sali komputerowej, inny, że w magazynie, a jeszcze inny, że wspomina o "
+"długim korytarzu. Przepraszam. "
 
 # MAP07: Near the crusaders.
 msgid "TXT_SUB_LOG39"
@@ -7386,7 +7386,7 @@ msgstr "To jest wszechmocny Programista? Nie ma mowy!"
 msgid "TXT_SUB_LOG44"
 msgstr ""
 "Już nie wiem, w co wierzyć. Jedyne co mówi mi \"trzymaj\" to ta ogromna "
-"potworność po lewej stronie. Ale nie mam pojęcia, jak się tam dostać."
+"potworność po lewej stronie. Ale nie mam pojęcia, jak się tam dostać. "
 
 # MAP09: Entrance.
 # (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
@@ -7742,7 +7742,7 @@ msgid "TXT_SUB_LOG128"
 msgstr ""
 "Ha ha! Witam. Czekałem na tę chwilę. Czekałem, aż taki głupiec jak ty "
 "przyniesie mi wolność. Twoja mała planeta jest moja, a ty będziesz żałował, "
-"że się nie urodziłeś!"
+"że się nie urodziłeś! "
 
 # MAP27: Entrance (It talks the Loremaster and BlackBird).
 msgid "TXT_SUB_LOG129"

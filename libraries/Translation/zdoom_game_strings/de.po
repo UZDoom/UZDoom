@@ -2,9 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-22 10:52+0000\n"
+"Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-game-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: de\n"
 
 msgid "TXT_D1E1"
@@ -14,7 +21,7 @@ msgid "TXT_D1E2"
 msgstr "Die Ufer der Hölle"
 
 msgid "TXT_D1E3"
-msgstr ""
+msgstr "Inferno"
 
 # The episode and levels' names in E4 are taken from the Bible.
 # 
@@ -33,13 +40,13 @@ msgid "TXT_PLUT_EP"
 msgstr "Das Plutonia Experiment"
 
 msgid "TXT_TNT_EP"
-msgstr ""
+msgstr "TNT: Evilution"
 
 msgid "TXT_CHEX_EP"
-msgstr ""
+msgstr "Chex Quest"
 
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: Hangar"
 
 msgid "HUSTR_E1M2"
 msgstr "E1M2: Kernkraftwerk"
@@ -112,15 +119,15 @@ msgstr "E3M5: Unheilige Kathedrale"
 
 # Volcano in Antarctica
 msgid "HUSTR_E3M6"
-msgstr ""
+msgstr "E3M6: Mount Erebus"
 
 msgid "HUSTR_E3M7"
-msgstr ""
+msgstr "E3M7: Limbo"
 
 # Based on the City of Dis, located on the sixth circle of Hell, according to
 # Dante Alighieri's The Divine Comedy
 msgid "HUSTR_E3M8"
-msgstr ""
+msgstr "E3M8: Dis"
 
 msgid "HUSTR_E3M9"
 msgstr "E3M9: Rattennest"
@@ -227,7 +234,7 @@ msgid "HUSTR_20"
 msgstr "Level 20: Erwischt!"
 
 msgid "HUSTR_21"
-msgstr ""
+msgstr "Level 21: Nirvana"
 
 msgid "HUSTR_22"
 msgstr "Level 22: Katakomben"
@@ -257,16 +264,16 @@ msgid "HUSTR_30"
 msgstr "Level 30: Symbol der Sünde"
 
 msgid "HUSTR_31"
-msgstr ""
+msgstr "Level 31: Wolfenstein"
 
 msgid "HUSTR_32"
-msgstr ""
+msgstr "Level 32: Große"
 
 msgid "HUSTR_31B"
-msgstr ""
+msgstr "Level 31: IDKFA"
 
 msgid "HUSTR_32B"
-msgstr ""
+msgstr "Level 32: Keen"
 
 msgid "HUSTR_33"
 msgstr "Level 33: Verrat"
@@ -338,7 +345,7 @@ msgid "PHUSTR_13"
 msgstr "Level 13: Die Gruft"
 
 msgid "PHUSTR_14"
-msgstr ""
+msgstr "Level 14: Entstehung"
 
 msgid "PHUSTR_15"
 msgstr "Level 15: Zwielicht"
@@ -355,7 +362,7 @@ msgstr "Level 18: Neurosphäre"
 # “NME” read out loud means “enemy”, so translators should consider the
 # translation of “enemy” into their language.
 msgid "PHUSTR_19"
-msgstr ""
+msgstr "Level 19: EIND"
 
 msgid "PHUSTR_20"
 msgstr "Level 20: Die Todeszone"
@@ -376,7 +383,7 @@ msgid "PHUSTR_25"
 msgstr "Level 25: Der Tempel der Dunkelheit"
 
 msgid "PHUSTR_26"
-msgstr ""
+msgstr "Level 26: Bunker"
 
 msgid "PHUSTR_27"
 msgstr "Level 27: Antichrist"
@@ -394,7 +401,7 @@ msgid "PHUSTR_31"
 msgstr "Level 31: Cyberbau"
 
 msgid "PHUSTR_32"
-msgstr ""
+msgstr "Level 32: Geh dahin"
 
 msgid "THUSTR_1"
 msgstr "Level 1: Systemkontrolle"
@@ -461,7 +468,7 @@ msgid "THUSTR_21"
 msgstr "Level 21: Verwaltungszentrum"
 
 msgid "THUSTR_22"
-msgstr ""
+msgstr "Level 22: Biotop"
 
 msgid "THUSTR_23"
 msgstr "Level 23: Mondbergbauprojekt"
@@ -473,7 +480,7 @@ msgid "THUSTR_25"
 msgstr "Level 25: Der Bau des Barons"
 
 msgid "THUSTR_26"
-msgstr ""
+msgstr "Level 26: Ballistyx"
 
 msgid "THUSTR_27"
 msgstr "Level 27: Berg des Schmerzes"
@@ -599,7 +606,7 @@ msgid "HHUSTR_E4M8"
 msgstr "Zerstörte Brücke"
 
 msgid "HHUSTR_E4M9"
-msgstr ""
+msgstr "Grabmal"
 
 msgid "HHUSTR_E5M1"
 msgstr "Ockerfarbene Klippen"
@@ -614,7 +621,7 @@ msgid "HHUSTR_E5M4"
 msgstr "Schlosshof"
 
 msgid "HHUSTR_E5M5"
-msgstr ""
+msgstr "Hydratyr"
 
 msgid "HHUSTR_E5M6"
 msgstr "Kolonnaden"
@@ -830,7 +837,7 @@ msgid "TXT_HEXEN_MAP38"
 msgstr "Traductus' Gruft"
 
 msgid "TXT_HEXEN_MAP39"
-msgstr ""
+msgstr "Vivarium"
 
 msgid "TXT_HEXEN_MAP40"
 msgstr "Dunkle Feuerprobe"
@@ -896,7 +903,7 @@ msgid "TXT_HEXDD_MAP60"
 msgstr "Dunkle Festung"
 
 msgid "TXT_HEXDD_MAP33"
-msgstr ""
+msgstr "Durchreise"
 
 msgid "TXT_HEXDD_MAP34"
 msgstr "Drunter und Drüber"
@@ -930,7 +937,7 @@ msgstr ""
 "\n"
 "Um das DOOM-Erlebnis fortzusetzen, spiele\n"
 "„Die Ufer der Hölle“ und die erstaunliche\n"
-"Fortsetzung, „Inferno“!"
+"Fortsetzung, „Inferno“!\n"
 
 # Doom Ep.2
 msgid "E2TEXT"
@@ -945,9 +952,10 @@ msgstr ""
 "\n"
 "Deimos schwebt über der Hölle!\n"
 "Du hast noch nie von jemandem gehört,\n"
-"der aus der Hölle entkam, aber du wirst es \n"
+"der aus der Hölle entkam, aber du wirst es\n"
 "den Bastarden schon zeigen, dass sie\n"
-"wünschten, nie von dir gehört zu haben.\n"
+"wünschten, nie von dir\n"
+"gehört zu haben.\n"
 "\n"
 "Nun geht es weiter zum letzten Kapitel von\n"
 "DOOM - Inferno."
@@ -961,7 +969,7 @@ msgstr ""
 "Zeiten einen Tritt in den Arsch erhalten.\n"
 "\n"
 "Eine versteckte Tür öffnet sich und du\n"
-"trittst ein. Du hast dich als zu zäh \n"
+"trittst ein. Du hast dich als zu zäh\n"
 "erwiesen, um in der Hölle zu verbleiben,\n"
 "aber wenigstens jetzt spielt die Hölle\n"
 "fair - denn du kommst aus der Tür\n"
@@ -971,7 +979,7 @@ msgstr ""
 "Du fragst sich, was auf der Erde passiert ist,\n"
 "während du gegen das Böse gekämpft hast.\n"
 "Wie gut, dass keine Höllenkreatur mit dir\n"
-"durch das Tor gekommen ist...\n"
+"durch das Tor gekommen ist..."
 
 # Doom Ep.4
 msgid "E4TEXT"
@@ -1006,7 +1014,8 @@ msgstr ""
 "eine befestigte Zone. Wenn du daran vorbei\n"
 "kommst, kannst du in das Herz der\n"
 "Basis eindringen und den Schalter finden,\n"
-"der die Menschheit als Geiseln hält."
+"der die Menschheit als\n"
+"Geiseln hält."
 
 # Doom2 after MAP11
 msgid "C2TEXT"
@@ -1015,21 +1024,19 @@ msgstr ""
 "Menschheit die Evakuation der Erde\n"
 "ermöglicht. Jetzt bist du der einzige\n"
 "Mensch auf der Planetenoberfläche.\n"
-"Kannibalen-Mutationen,\n"
-"fleischfressende Aliens und böse Geister\n"
+"Kannibalen-Mutationen, fleischfressende Aliens und böse Geister\n"
 "sind deine einzigen Nachbarn. Du lehnst dich\n"
 "zurück und wartest auf den Tod, zufrieden,\n"
 "dass du deine Spezies gerettet hast.\n"
 "\n"
 "Dann sendet die Flotte ein Signal aus dem\n"
-"Weltraum: „Sensoren haben die Quelle der \n"
+"Weltraum: „Sensoren haben die Quelle der\n"
 "außerirdischen Invasion gefunden. Wenn du\n"
-"sie erreichst, können wir möglicherweise ihr \n"
+"sie erreichst, können wir möglicherweise ihr\n"
 "weiteres Eindringen blockieren. Die Basis\n"
-"liegt im Herzen von deiner Heimatstadt, \n"
-"nicht weit vom Hafen.“\n"
-"Langsam und schmerzerfüllt kommst\n"
-"du hoch und gehst zurück in den Kampf."
+"liegt im Herzen von deiner Heimatstadt, nicht weit vom Hafen.“\n"
+"Langsam und schmerzerfüllt kommst du hoch\n"
+"und gehst zurück in den Kampf."
 
 # Doom 2 after MAP20
 msgid "C3TEXT"
@@ -1038,32 +1045,30 @@ msgstr ""
 "umgeben von den Leichen deiner Feinde.\n"
 "Du siehst keine Möglichkeit, das Tor der\n"
 "Kreaturen von dieser Seite zu zerstören.\n"
-"Also beißt du die Zähne zusammen und\n"
-"springst hinein.\n"
+"Also beißt du die Zähne zusammen und springst hinein.\n"
 "\n"
 "Es muss einen Weg geben, um es auf der\n"
 "anderen Seite zu schließen. Und wenn du\n"
-"dafür durch die Hölle gehen musst!"
+"dafür durch die Hölle gehen musst?"
 
 # Doom2 victory
 msgid "C4TEXT"
 msgstr ""
 "Das schreckliche Antlitz des größten\n"
-"Dämonen, den du jemals gesehen hast, \n"
+"Dämonen, den du jemals gesehen hast,\n"
 "zerbröckelt, nachdem du deine Raketen in\n"
 "sein Hirn gepumpt hast.\n"
-"Das Monster schreit auf und stirbt, seine \n"
+"Das Monster schreit auf und stirbt, seine\n"
 "schlagenden Glieder unzählige Kilometer\n"
 "der Hölle verwüstend.\n"
 "\n"
 "Du hast es geschafft. Die Invasion ist vorbei.\n"
 "Die Erde ist gerettet. Die Hölle ist ein Wrack.\n"
 "Du fragst dich, wohin böse Menschen nun\n"
-"kommen, wenn sie sterben.\n"
-"Du wischst den Schweiß von deiner Stirn und\n"
+"kommen, wenn sie sterben. Du wischst den Schweiß von deiner Stirn und\n"
 "begibst dich auf den langen Weg nach Hause.\n"
 "Der Wiederaufbau der Erde dürfte\n"
-"erfreulicher sein, als ihre Zerstörung."
+"erfreulicher sein, als ihre Zerstörung.\n"
 
 # Doom2 before MAP31
 msgid "C5TEXT"
@@ -1072,24 +1077,22 @@ msgstr ""
 "Geheimlevel gefunden. Sieht so aus,\n"
 "als ob es von Menschen gebaut wurde,\n"
 "und nicht von Dämonen.\n"
-"Du fragst dich, wer wohl in diesem \n"
-"Bereich der Hölle zuhause ist.\n"
+"Du fragst dich, wer wohl in diesem Bereich der Hölle zuhause ist."
 
 # Doom2 before MAP32
 msgid "C6TEXT"
 msgstr ""
-"Herzlichen Glückwunsch, du hast den\n"
+"Herzlichen Glückwunsch, du hast das\n"
 "Super-Geheimlevel gefunden.\n"
-"Sieh zu, dass du hier schnellstens\n"
-"rauskommst!\n"
+"Sieh zu, dass du hier schnellstens rauskommst!\n"
 
 # Plutonia after MAP06
 msgid "P1TEXT"
 msgstr ""
 "Du ergötzt dich an dem dampfenden Kadaver\n"
 "des Wächters. Nach seinem Tod hast du ihm den\n"
-"Beschleuniger aus seinen stinkenden Höllen-\n"
-"klauen gerungen. Du entspannst dich und\n"
+"Beschleuniger aus seinen stinkenden Höllenklauen gerungen. Du entspannst "
+"dich und\n"
 "siehst dich im Raum um. Verdammt! Da hätte\n"
 "mindestens ein funktionierender Prototyp\n"
 "sein sollen, aber du kannst ihn nicht finden.\n"
@@ -1106,8 +1109,7 @@ msgstr ""
 "Sogar das tödliche Labyrinth der Scheusale\n"
 "konnte dich nicht aufhalten und du hast\n"
 "den Beschleuniger-Prototypen erreicht,\n"
-"der kurz darauf effizient und dauerhaft\n"
-"deaktiviert ist.\n"
+"der kurz darauf effizient und dauerhaft deaktiviert ist.\n"
 "\n"
 "Darin bist du gut."
 
@@ -1117,29 +1119,27 @@ msgstr ""
 "Du hast dich bis ins Herz dieses Höllenbaus\n"
 "durchgeschlagen. Zeit für eine Such- und \n"
 "Zerstörungsmission gegen den\n"
-"Torwächter, dessen stinkende Abkommen auf \n"
+"Torwächter, dessen stinkende Abkommen auf\n"
 "die Erde drängen. Ja, er ist schlimm. Aber\n"
 "du weißt, wer noch schlimmer ist!\n"
 "\n"
-"Böse grinsend, überprüfst du deine \n"
-"Ausrüstung und machst dich bereit, dem \n"
-"Bastard einen höllischen Empfang zu\n"
-"bereiten.\n"
+"Böse grinsend, überprüfst du deine\n"
+"Ausrüstung und machst dich bereit, dem\n"
+"Bastard einen höllischen Empfang zu bereiten!"
 
 # Plutonia victory
 msgid "P4TEXT"
 msgstr ""
 "Das böse Gesicht des Wächters ist mit\n"
-"Blut besudelt. Als seine zerfledderte \n"
+"Blut besudelt. Als seine zerfledderte\n"
 "Leiche kollabiert, bildet sich ein inverses\n"
 "Tor und saugt die letzten Überreste des\n"
-"Beschleuniger-Prototypen ab, ganz zu \n"
+"Beschleuniger-Prototypen ab, ganz zu\n"
 "schweigen von den letzten verbliebenen\n"
 "Dämonen. Du hast es geschafft, die Hölle\n"
 "ist wieder dazu zurückgekehrt, tote, böse\n"
-"Menschen zu bestrafen, statt guten,\n"
-"lebenden.\n"
-"Vergiss nicht, deinen Enkeln zu sagen, sie \n"
+"Menschen zu bestrafen, statt guten, lebenden. Vergiss nicht, deinen Enkeln "
+"zu sagen, sie\n"
 "sollen einen Raketenwerfer in deinen Sarg\n"
 "packen, damit du, wenn du in die Hölle kommst,\n"
 "eine letzte Reinigung vornehmen kannst..."
@@ -1150,16 +1150,15 @@ msgstr ""
 "Du hast den zweitschwersten Level gefunden,\n"
 "den wir haben. Lass uns hoffen, dass du noch\n"
 "einen Spielstand vom letzten oder vorletzten\n"
-"Level hast. Falls nicht, bereite dich darauf\n"
-"vor, oft zu sterben. Nur für Top-Soldaten!\n"
+"Level hast. Falls nicht, bereite dich darauf vor, oft zu sterben. Nur für "
+"Top-Soldaten."
 
 # Plutonia before MAP32
 msgid "P6TEXT"
 msgstr ""
 "Du hast dich sicher gefragt, was denn nun\n"
 "der schwerste Level ist, nicht wahr?\n"
-"Jetzt weißt du es - niemand kommt hier\n"
-"lebend raus!\n"
+"Jetzt weißt du es - niemand kommt hier lebend raus."
 
 # TNT after MAP06
 msgid "T1TEXT"
@@ -1168,14 +1167,14 @@ msgstr ""
 "mentier-Laboren herausgekämpft. Es sieht\n"
 "so aus, als ob die UAC es wieder mal ver-\n"
 "geigt hätte. Mit solchen Verlusten dürfte\n"
-"es inzwischen schwierig sein, überhaupt\n"
+"es inzwischen schwierig sein, überhaupt \n"
 "noch eine Versicherung zu erhalten...\n"
 "\n"
 "Vor dir liegt jetzt der militärische\n"
 "Komplex - jetzt heimgesucht von erkrankten\n"
 "Kreaturen, die nur darauf warten, dich zu\n"
 "zerreißen. Wenn du Glück hast, liegen hier\n"
-"vielleicht noch einige Kampfmittel herum.\n"
+"vielleicht noch einige Kampfmittel herum."
 
 # TNT after MAP11
 msgid "T2TEXT"
@@ -1186,8 +1185,7 @@ msgstr ""
 "die ganze Herde ausrotten, wenn nötig.\n"
 "Vielleicht planen sie ein Blutmahl aber\n"
 "du fühlst dich so stark wie zweitausend\n"
-"Wahnsinnige, zusammengepackt in einen\n"
-"verrückten Killer.\n"
+"Wahnsinnige, zusammengepackt in einen verrückten Killer.\n"
 "\n"
 "Du wirst es ihnen nicht einfach machen."
 
@@ -1198,11 +1196,11 @@ msgstr ""
 "Und es riecht auch bekannt - wie verbrannte\n"
 "Exkremente. Dieser Ort hat die schon vorher\n"
 "nicht gefallen, und du wirst deine Meinung\n"
-"auch sicher nicht ändern. Je mehr du darüber\n"
-"nachdenkst, desto wütender wirst du.\n"
-"Also du deine Waffe bereitmachst, überzieht\n"
-"ein böses Grinsen dein Gesicht.\n"
-"Zeit um aufzuräumen.\n"
+"auch sicher nicht ändern. Je mehr du darüber nachdenkst, desto wütender "
+"wirst du.\n"
+"Also du deine Waffe bereitmachst, überzieht ein\n"
+"böses Grinsen dein Gesicht.\n"
+"Zeit um aufzuräumen."
 
 # TNT victory
 msgid "T4TEXT"
@@ -1213,36 +1211,32 @@ msgstr ""
 "blau, der Haufen Monsterleichen beginnt sich\n"
 "aufzulösen, zusammen mit dem ekligen\n"
 "Gestank, der in der Luft hing. Ja, du hast\n"
-"es geschafft. Aber hast du wirklich\n"
-"gewonnen?\n"
+"es geschafft. Aber hast du wirklich gewonnen?\n"
 "\n"
 "In der Ferne rumpelt etwas.\n"
-"Ein blaues Licht beginnt im Inneren \n"
+"Ein blaues Licht beginnt im Inneren\n"
 "des Schädels zu leuchten."
 
 # TNT before MAP31
 msgid "T5TEXT"
 msgstr ""
 "Was jetzt? Sieht ganz anders aus. Fast\n"
-"wie die Wohnung von König Tut. Gut,\n"
-"was auch immer hier ist, kann nicht\n"
-"schlimmer sein als, was du bisher\n"
-"erlebt hast. Oder kann es? \n"
+"wie die Wohnung von König Tut. Gut, was auch immer hier ist, kann nicht\n"
+"schlimmer sein als, was du bisher erlebt hast. Oder kann es?\n"
 "Oder vielleicht ist es besser, die\n"
 "schlafenden Götter ruhen zu lassen .."
 
 # TNT before MAP32
 msgid "T6TEXT"
 msgstr ""
-"Zeit für einen Urlaub. Du hast die \n"
+"Zeit für einen Urlaub. Du hast die\n"
 "Eingeweide der Hölle platzen lassen und\n"
 "verdammt, du hast dir eine Pause verdient.\n"
 "Du murmelst zu dir selbst, vielleicht sollte\n"
-"das nächste Mal jemand anderer der Hölle\n"
-"in den Arsch treten. Vor dir liegt eine\n"
+"das nächste Mal jemand anderer der Hölle in den Arsch treten. Vor dir liegt "
+"eine\n"
 "ruhige Stadt mit friedlich fließendem Wasser,\n"
-"einfachen Gebäuden, und hoffentlich keinen\n"
-"Höllenkreaturen.\n"
+"einfachen Gebäuden, und hoffentlich keinen Höllenkreaturen.\n"
 "\n"
 "Als du den Transporter verlässt, hörst du\n"
 "das Stampfen eines Cyberdämonen."
@@ -1254,8 +1248,7 @@ msgstr ""
 "liebsten Urlaubsort... der Hölle. Irgend so\n"
 "ein Cyberdämonen-Punk glaubte doch tat-\n"
 "sächlich, er könnte die Hölle in seinen\n"
-"persönlichen Vergnügungspark\n"
-"verwandeln, und die Erde in die Kasse.\n"
+"persönlichen Vergnügungspark verwandeln, und die Erde in die Kasse.\n"
 "\n"
 "Nun, dieser halb-Roboter-Freak konnte\n"
 "nicht ahnen, wer zur Kirmes kam.\n"
@@ -1270,6 +1263,7 @@ msgstr ""
 "du hier hinterlassen hast.\n"
 "\n"
 "Der Jahrmarkt ist geschlossen.\n"
+"\n"
 
 # Heretic Ep.1
 msgid "HE1TEXT"
@@ -1511,10 +1505,10 @@ msgstr ""
 
 msgid "TXT_HEXEN_WIN3MSG"
 msgstr ""
-"\\nAber es gibt andere Spieler, die\n"
+"\\n"
+"Aber es gibt andere Spieler, die\n"
 "mächtiger sind als du, und wer\n"
-"kann schon deren nächste\n"
-"Züge erahnen?"
+"kann schon deren nächste Züge erahnen?"
 
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
@@ -1561,6 +1555,11 @@ msgstr ""
 "eigentliche Zitadelle, aber was\n"
 "man sehen kann, spricht in\n"
 "zischendem Flüstern von\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
 "Kälte und lauerndem Tod ..."
 
 msgid "TXT_HEXDD_WIN1MSG"
@@ -1568,16 +1567,15 @@ msgstr ""
 "Wieder findest du dich in der großen\n"
 "Halle der Chaossphäre, als wenn seit\n"
 "dem letzten Mal, als du dich zwischen\n"
-"diesen Schatten bewegtest, keine Zeit\n"
-"vergangen wäre.\n"
+"diesen Schatten bewegtest, keine Zeit vergangen wäre.\n"
 "\n"
-"Aber etwas ist anders, eine schaurige \n"
+"Aber etwas ist anders, eine schaurige\n"
 "Stille, wo einst leises Flüstern gewesen\n"
-"ist, ein Gefühl, von verborgenen Augen \n"
+"ist, ein Gefühl, von verborgenen Augen\n"
 "beobachtet zu werden...\n"
 "\n"
 "... Augen, die eine boshafte Absicht\n"
-"verbergen..."
+"verbergen."
 
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
@@ -1585,20 +1583,25 @@ msgstr ""
 "in deinen zitternden Händen gehalten.\n"
 "Doch dieses mal erzittert du durch mehr\n"
 "als nur Gier, denn Furcht vermischt sich\n"
-"mit dem Verlangen nach Macht.\n"
+"mit dem Verlangen nach\n"
+"Macht.\n"
 "\n"
 "Wenn selbst die Chaossphäre nicht\n"
 "genug ist, um dich vor den Mächten der\n"
 "Dunkelheit zu beschützen, dann sollte\n"
 "sie vielleicht doch lieber unberührt\n"
-"bleiben und das Versprechen\n"
-"nicht eingelöst werden.\n"
+"bleiben und das Versprechen nicht eingelöst werden.\n"
+"\n"
+"\n"
 "\n"
 "Andererseits bist du noch nie vor einer\n"
 "Herausforderung zurückgewichen..."
 
 msgid "TXT_HEXDD_WIN3MSG"
-msgstr "\\n...und andere Spieler warten."
+msgstr ""
+"\\n"
+"...und andere Spieler warten.\n"
+"\n"
 
 msgid "TXT_ACS_MAP01_5_THEDO"
 msgstr "Die Tür ist verschlossen"
@@ -1851,7 +1854,7 @@ msgid "TXT_ACS_MAP51_17_CANYO"
 msgstr "Kannst du die Skripte für all meine Level schreiben?"
 
 msgid "TXT_ACS_MAP51_18_DONTT"
-msgstr "Berühr mein Ding nicht!"
+msgstr "Berühr mein Ding nicht"
 
 msgid "TXT_ACS_MAP51_19_VORPA"
 msgstr "Tödlich ?!?!?!"
@@ -1860,7 +1863,7 @@ msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Gib mir etwas Zucker, Baby"
 
 msgid "TXT_ACS_MAP51_21_DUHUH"
-msgstr ""
+msgstr "Uh-huh..."
 
 msgid "TXT_ACS_MAP51_22_FILMI"
 msgstr "Film in einer Stunde?"
@@ -1881,13 +1884,13 @@ msgid "TXT_ACS_MAP52_10_THEWA"
 msgstr "Der Weg ist offen"
 
 msgid "TXT_ACS_MAP53_2_YOUHA"
-msgstr "Du hast"
+msgstr "Du hast "
 
 msgid "TXT_ACS_MAP53_3_SWITC"
 msgstr "\\x20Schalter übrig"
 
 msgid "TXT_ACS_MAP53_4_YOUHA"
-msgstr "Du hast nur"
+msgstr "Du hast nur "
 
 msgid "TXT_ACS_MAP53_5_SWITC"
 msgstr "\\x20Schalter übrig"
@@ -1899,7 +1902,7 @@ msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "Die Türen werden sich nicht von dieser Seite öffnen"
 
 msgid "TXT_ACS_MAP54_4_THEDO"
-msgstr "Die Türen sind offen"
+msgstr "Die Türen sind offen..."
 
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...Wenn du bereit bist"
@@ -1950,13 +1953,13 @@ msgid "TXT_ACS_MAP56_2_PREPA"
 msgstr "Bereite dich vor zu sterben"
 
 msgid "TXT_ACS_MAP59_1_YOUHA"
-msgstr "Du musst"
+msgstr "Du musst "
 
 msgid "TXT_ACS_MAP59_2_MORES"
 msgstr "\\x20weitere Schalter finden"
 
 msgid "TXT_ACS_MAP59_3_YOUHA"
-msgstr "Du musst nur"
+msgstr "Du musst nur "
 
 msgid "TXT_ACS_MAP59_4_SWITC"
 msgstr "\\x20Schalter finden"
@@ -2028,7 +2031,7 @@ msgstr "Sturmgewehr"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
-msgstr "Bitte sehr!"
+msgstr "Bitte sehr."
 
 # 〃
 msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
@@ -2036,7 +2039,7 @@ msgstr "Das kannst du dir momentan nicht leisten."
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
-msgstr "Gewehrmunition."
+msgstr "Gewehrmunition"
 
 # 〃
 msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
@@ -2070,7 +2073,7 @@ msgstr "Danke."
 
 # 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
-msgstr "Es war mir eine Freude dir zu Diensten zu sein"
+msgstr "Es war mir eine Freude dir zu Diensten zu sein."
 
 # 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
@@ -2096,7 +2099,7 @@ msgstr ""
 
 # 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
-msgstr "Flammenwerfer"
+msgstr "Flammenwerfer."
 
 # 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
@@ -2120,7 +2123,7 @@ msgstr "Offensichtlich kannst du dir das im Moment nicht leisten."
 
 # 〃 (〃)
 msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
-msgstr "Gewehrmunition."
+msgstr "Gewehrmunition"
 
 # 〃 (〃)
 msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
@@ -2154,7 +2157,7 @@ msgstr "Sturmgewehr"
 
 # 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
-msgstr "Bitte sehr!"
+msgstr "Bitte sehr."
 
 # 〃 (〃)
 msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
@@ -2162,7 +2165,7 @@ msgstr "Das kannst du dir im Moment nicht leisten."
 
 # 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
-msgstr "Gewehrmunition."
+msgstr "Gewehrmunition"
 
 # 〃 (〃)
 msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
@@ -2192,7 +2195,7 @@ msgstr ""
 
 # 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
-msgstr "Gewehrmunition."
+msgstr "Gewehrmunition"
 
 # 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
@@ -2307,11 +2310,11 @@ msgstr "Das kannst du dir nicht leisten. Guten Tag!"
 
 # MAP02: Armory.
 msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
-msgstr "Willkommen. Was kann ich dirZeigen."
+msgstr "Willkommen. Was kann ich dir zeigen?"
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
-msgstr "Schutzanzug."
+msgstr "Schutzanzug"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
@@ -2347,10 +2350,10 @@ msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
 msgstr "Komm zurück wenn du dir etwas leisten kannst, du Rüpel!"
 
 msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
-msgstr "Willkommen. Was kann ich dir zeigen."
+msgstr "Willkommen. Was kann ich dir zeigen?"
 
 msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
-msgstr "Schutzanzug."
+msgstr "Schutzanzug"
 
 msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
 msgstr "Bitte sehr."
@@ -2362,7 +2365,7 @@ msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
 msgstr "Lederrüstung"
 
 msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
-msgstr "Bitte sehr."
+msgstr "Da bist du ja."
 
 msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
 msgstr "Vielleicht ein anderes Mal?"
@@ -2387,7 +2390,7 @@ msgstr "Medizinische Bandage"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
-msgstr "Hier ist deine Bandage"
+msgstr "Hier ist deine Bandage."
 
 # 〃
 msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
@@ -2423,7 +2426,7 @@ msgstr ""
 "Ich hoffe Macil weiß was er tut. Wenn der Orden herausfindet das ich der "
 "Front helfe, bin ich so gut wie tot... auch wenn es für dich keine Rolle "
 "spielt. Ein Sanitäter der Front hat mir einen Verbesserungschip für dich "
-"mitgegeben, bist du bereit?"
+"mitgegeben, bist du bereit? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
@@ -2444,7 +2447,7 @@ msgstr "Medizinische Bandage"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
-msgstr "Hier ist deine Bandage"
+msgstr "Hier ist deine Bandage."
 
 # 〃
 msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
@@ -2548,7 +2551,7 @@ msgstr "Pass auf wo du hintrittst, Bauer!"
 
 # MAP02: Gray guards.
 msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
-msgstr "Wir werden dich umbringen!"
+msgstr "Wir werden dich umbringen! "
 
 # MAP02: Green guard.
 msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
@@ -2656,7 +2659,7 @@ msgstr "Nennen Sie mich den Säuberer"
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
-msgstr "Ich bin nicht zimperlich."
+msgstr "Ich bin nicht zimperlich"
 
 # 〃
 # ("messy" chore)
@@ -2664,7 +2667,7 @@ msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
 msgstr ""
 "Einer meiner Untertanen zapft irgendwo Strom ab. Finde die Anzapfung und "
 "kappe sie. Falls du Erfolg hast, kriegst du was du brauchst. Aber bring mir "
-"einen Beweis mit!"
+"einen Beweis mit."
 
 # 〃
 # (〃)
@@ -2744,7 +2747,7 @@ msgstr ""
 "So, du bist also der Narr der den Kelch gestohlen hat? Ich werde dich als "
 "Dieb der Rebellen verhaften lassen und dadurch meine Position im Orden "
 "verbessern. Wie fühlt es sich an als ahnungslose Schachfigur? Ich geb' dir "
-"einen Tipp: Es wird wehtun."
+"einen Tipp: Es wird wehtun. "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
@@ -2898,7 +2901,7 @@ msgstr "Geh weg Jungchen, geh einfach weg."
 
 # Arion.
 msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
-msgstr "Hast du einen Termin bei dem Gouverneur?"
+msgstr "Hast du einen Termin bei dem Gouverneur? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
@@ -2922,7 +2925,7 @@ msgstr "Wenn du so in Eile bist, dann verschwende deine Zeit nicht mit mir."
 
 # MAP02: MacGuffin
 msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
-msgstr "Pack mich nicht an, lass einen alten Mann in Ruhe"
+msgstr "Pack mich nicht an, lass einen alten Mann in Ruhe."
 
 # 〃 (after accepting "messy" chore)
 msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
@@ -2960,7 +2963,7 @@ msgstr ""
 
 # 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
-msgstr "Danke."
+msgstr "Danke"
 
 # 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
@@ -2974,7 +2977,7 @@ msgstr "Danke"
 
 # 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
-msgstr "Bitte lass einen alten Mann in Ruhe"
+msgstr "Bitte lass einen alten Mann in Ruhe."
 
 # MAP03: Macil.
 msgid "TXT_DLG_SCRIPT03_D0_WELCO"
@@ -3000,11 +3003,11 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
-msgstr "Na gut, ich bin dabei."
+msgstr "Na gut, ich bin dabei!"
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
-msgstr "Nein, danke!"
+msgstr "Nein danke."
 
 # 〃
 msgid "TXT_DLG_SCRIPT03_D3032_THEND"
@@ -3097,7 +3100,7 @@ msgstr ""
 
 # 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
-msgstr "Lass mich das nur machen."
+msgstr "Lass mich das nur machen!"
 
 # 〃 (〃)
 msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
@@ -3189,8 +3192,8 @@ msgstr "Es ist noch nicht soweit."
 # 〃 (two upgrades)
 msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
 msgstr ""
-"He, ich arbeite an einer verbesserten Version deines Implantats. Gibt es "
-"sonst etwas, das ich für dich tun kann?"
+"Okay, ich habe fast alles perfekt zum Laufen gebracht. Es gab nur noch ein "
+"paar Probleme zu beheben. Brauchen du sonst noch etwas? "
 
 # 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
@@ -3198,12 +3201,11 @@ msgstr "Flick mich zusammen."
 
 # 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
-msgstr ""
-"Mann, du siehst aber gar nicht gut aus. Mal sehen, was ich machen kann."
+msgstr "Was hast du versucht? Dich mit einem Kreuzritter anzulegen?"
 
 # 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
-msgstr "Implantatsupgrade?"
+msgstr "Implantatsupgrade?."
 
 # 〃 (〃)
 msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
@@ -3331,7 +3333,7 @@ msgstr "Bitteschön."
 msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
 msgstr ""
 "Fang nicht an, hier in der Stadt herumzuballern. Wenn du hier den Alarm "
-"auslöst, senden sie gleich die Truppen aus der Burg."
+"auslöst, senden sie gleich die Truppen aus der Burg. "
 
 # MAP03: Near Macil.
 msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
@@ -3342,7 +3344,7 @@ msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
 msgstr ""
 "Als ich noch aktiv war, hatten wir mal die Möglichkeit, einen der "
 "Ministranten zu untersuchen, bevor Verstärkung eintraf. Hör zu, sie sind "
-"nicht menschlich!"
+"nicht menschlich."
 
 # MAP03: Downstairs.
 msgid "TXT_DLG_SCRIPT03_D43964_WERET"
@@ -3360,8 +3362,8 @@ msgstr ""
 # 〃
 msgid "TXT_DLG_SCRIPT03_D46996_HERES"
 msgstr ""
-"Hier ist ein guter Rat, falls du jemals einen dieser Zinnsoldaten des Ordens"
-" vorbeigehen siehst. Sie sind schnell und brutal. "
+"Hier ist ein guter Rat, falls du jemals einen dieser Zinnsoldaten des Ordens "
+"vorbeigehen siehst. Sie sind schnell und brutal."
 
 # 〃
 msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
@@ -3408,14 +3410,14 @@ msgstr ""
 
 # 〃
 msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
-msgstr "Du bist eine unerwünschte Ablenkung"
+msgstr "Du bist eine unerwünschte Ablenkung."
 
 # MAP04: Reactor Core gray guard.
 msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
 msgstr "Beweg dich oder du schmeckst Metall."
 
 msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
-msgstr "Reichen Sie Ihre Identitätskarte hier durch!"
+msgstr "Reichen Sie Ihre Identitätskarte hier durch."
 
 # MAP04: Green guard.
 msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
@@ -3444,7 +3446,7 @@ msgstr "Ok, ich lass dich gehen."
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
-msgstr "Tut mir leid, nimm es nicht persönlich"
+msgstr "Tut mir leid, nimm es nicht persönlich."
 
 # 〃
 msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
@@ -3543,7 +3545,8 @@ msgstr "Wo ist der Energiekristall?"
 # 〃
 msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
 msgstr ""
-"Wenn du nicht arbeitest, wirst du eh erschossen. Und nun beweg deinen Arsch!"
+"Wenn du nicht arbeitest, wirst du eh erschossen. Und nun beweg deinen "
+"Hintern."
 
 # MAP04: Reactor Core → Northern alarm green door
 msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
@@ -3606,7 +3609,7 @@ msgstr "Geht dich nichts an, und jetzt rede mit Ketrick."
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
-msgstr ""
+msgstr "Okay."
 
 # 〃
 # (bored to tears = extremely bored)
@@ -3727,7 +3730,7 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
 msgstr ""
 "Ich möchte ja nicht meckern, aber es wurde auch Zeit, dass Macil jemanden "
-"schickt, der uns hier rausholt"
+"schickt, der uns hier rausholt."
 
 # 〃
 msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
@@ -3827,12 +3830,12 @@ msgstr "Weran wird uns retten. Er hat uns noch nie enttäuscht."
 
 # 〃
 msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
-msgstr "Wenn du Lösungen für deine Probleme suchst, frag Weran."
+msgstr "Wenn du Lösungen für deine Probleme suchst, frag Weran. "
 
 # 〃
 msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
 msgstr ""
-"Lang lebe die Front? Was für ein Mist. Wir warten doch nur auf den Tod."
+"Lang lebe die Front? Was für ein Mist. Wir warten doch nur auf den Tod. "
 
 # 〃
 msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
@@ -3849,7 +3852,7 @@ msgid "TXT_DLG_SCRIPT06_D21224_THISI"
 msgstr ""
 "Das ist meine Belohnung dafür, dass ich die Gefangenen entkommen lassen "
 "habe. Jetzt darf ich die Kanalisation bewachen. Wenn ich jemals den Kerl "
-"finde, der das gemacht hat, mache ich Hackfleisch aus ihm!"
+"finde, der das gemacht hat, mache ich Hackfleisch aus ihm."
 
 # MAP06: Red acolyte.
 msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
@@ -3948,7 +3951,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
-msgstr "Was für Geheimnisse?"
+msgstr "Was für Geheimnisse. "
 
 # 〃
 msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
@@ -3969,7 +3972,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
-msgstr "Ja."
+msgstr "Ja!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
@@ -3983,7 +3986,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
-msgstr "Das Orakel sagt, du musst sterben."
+msgstr "Das Orakel sagt, du musst sterben!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
@@ -3993,11 +3996,11 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
-msgstr "Dann wird das Orakel sterben."
+msgstr "Dann wird das Orakel sterben!"
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
-msgstr "Ich denke, du bist der Verräter."
+msgstr "Ich denke, du bist der Verräter!"
 
 # MAP10: Macil → You chose to kill Macil
 msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
@@ -4031,7 +4034,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
-msgstr "Dafür werden sie bezahlen."
+msgstr "Dafür werden sie bezahlen!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
@@ -4051,7 +4054,7 @@ msgstr "Ich werde dich zerstören!"
 
 # MAP10: Gerald (no upgrade).
 msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
-msgstr "Gut, dass du es geschafft hast. Was brauchst du?"
+msgstr "Gut, dass du es geschafft hast. Was brauchst du? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
@@ -4182,11 +4185,11 @@ msgstr "Wann wird es fertig sein?"
 
 # 〃
 msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
-msgstr "Oh, klasse. Es funktioniert."
+msgstr "Oh, klasse. Es funktioniert!"
 
 # 〃
 msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
-msgstr "Ich muss warten, bis das Gewebe fertig gewachsen ist. "
+msgstr "Ich muss warten, bis das Gewebe fertig gewachsen ist."
 
 # 〃 (five upgrades).
 msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
@@ -4234,9 +4237,9 @@ msgstr "So, das wär's dann."
 # MAP10: Feris (no training).
 msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
 msgstr ""
-"Das ist der Held. Guter Job! Was kann ich für dich tun. Wir haben jetzt eine"
-" größere Auswahl nachdem wir die Burg geplündert haben. Wenn du noch "
-"Munition brauchst, wende dich an Justin. Er kümmert sich darum."
+"Das ist der Held. Guter Job! Was kann ich für dich tun. Wir haben jetzt eine "
+"größere Auswahl nachdem wir die Burg geplündert haben. Wenn du noch Munition "
+"brauchst, wende dich an Justin. Er kümmert sich darum. "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
@@ -4252,11 +4255,11 @@ msgstr "Unterrichte mich."
 
 # 〃
 msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
-msgstr "Nun einige Ratschläge für die großen Waffen"
+msgstr "Nun einige Ratschläge für die großen Waffen."
 
 # 〃
 msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
-msgstr "Du bist noch nicht soweit"
+msgstr "Du bist noch nicht soweit."
 
 # 〃 (one training)
 msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
@@ -4286,7 +4289,7 @@ msgstr "Hier, ich zeige dir mal ein paar Geheimtricks."
 
 # 〃 (〃)
 msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
-msgstr "Du bist noch nicht soweit"
+msgstr "Du bist noch nicht soweit."
 
 # 〃 (two trainings)
 msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
@@ -4424,7 +4427,7 @@ msgstr "Ich habe keine Munition mehr."
 # 〃 (〃)
 # (in good health = enjoy)
 msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
-msgstr "Hier, benutze sie um gesund zu bleiben,"
+msgstr "Hier, benutze sie um gesund zu bleiben."
 
 # 〃 (〃)
 msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
@@ -4455,7 +4458,7 @@ msgstr "Ja, bin ich."
 
 # 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
-msgstr "Bitteschön."
+msgstr "Bitteschön. "
 
 # MAP10: Justin.
 msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
@@ -4466,7 +4469,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
-msgstr "Kiste Raketen."
+msgstr "Kiste an Raketen"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
@@ -4474,7 +4477,7 @@ msgstr "Bitteschön."
 
 # 〃
 msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
-msgstr "Das kannst du dir nicht leisten."
+msgstr "Das kannst du dir nicht leisten!"
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
@@ -4490,11 +4493,11 @@ msgstr "Komm wieder, wenn du genug Gold hast."
 
 # 〃
 msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
-msgstr "Energiezelle."
+msgstr "Energiezelle"
 
 # 〃
 msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
-msgstr "Hier hast du deine Energiezele."
+msgstr "Hier hast du deine Energiezele"
 
 # 〃
 msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
@@ -4502,7 +4505,7 @@ msgstr "Nein, du hast nicht genug Gold dafür."
 
 # 〃
 msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
-msgstr "Teleportersignal."
+msgstr "Teleportersignal"
 
 # 〃
 msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
@@ -4541,7 +4544,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
-msgstr "Gib mir den Schlüssel."
+msgstr "Gib mir den Schlüssel!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
@@ -4557,11 +4560,11 @@ msgstr "Ich bin der Schlüsselmeister."
 
 # MAP11: Red acolyte at temple's entrance.
 msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
-msgstr "Stirb, Verräter."
+msgstr "Stirb, Verräter!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
-msgstr "Stirb, Verräter."
+msgstr "Stirb, Verräter!"
 
 # MAP11: Prisoner.
 msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
@@ -4670,7 +4673,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
-msgstr "Ich komme wieder, mit dem Teilstück."
+msgstr "Ich komme wieder, mit seinem Teil!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT12_D13644_THERI"
@@ -4738,7 +4741,7 @@ msgstr "Wir sind frei! Wir sind frei! Wir sind frei!"
 
 # MAP14: Drone
 msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
-msgstr "Muss Erz abbauen."
+msgstr "Muss mehr Erz abbauen!"
 
 # MAP14: Peasant (ex-drone)
 msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
@@ -4746,7 +4749,7 @@ msgstr "Wir sind frei! Wir sind frei! Wir sind frei!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
-msgstr "Muss Erz abbauen."
+msgstr "Muss mehr Erz abbauen!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
@@ -4754,7 +4757,7 @@ msgstr "Wir sind frei! Wir sind frei! Wir sind frei!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
-msgstr "Muss Erz abbauen."
+msgstr "Muss mehr Erz abbauen!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
@@ -4898,7 +4901,7 @@ msgstr "Verbandskasten"
 
 # 〃
 msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
-msgstr "Hier ist dein Verbandskasten"
+msgstr "Hier ist dein Verbandskasten."
 
 # 〃
 msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
@@ -4914,7 +4917,7 @@ msgstr "Ein Erste-Hilfe-Kasten, kommt sofort."
 
 # 〃
 msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
-msgstr "Komm wieder, wenn du etwas Geld hast."
+msgstr "Komm wieder, wenn du Geld hast!"
 
 # MAP18: Yellow guard
 msgid "TXT_DLG_SCRIPT18_D0_WHATI"
@@ -5017,9 +5020,9 @@ msgstr "Also die Schemen, der Eine Gott..."
 # 〃
 msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
 msgstr ""
-"Das sind Wesen, die einst diese Welt regiert haben und sie ausbeuten wollen."
-" Die Alten haben es geschafft, sie wegzusperren aber verloren ihr Leben "
-"dabei. Tut mir leid, das ist alles, was ich weiß"
+"Das sind Wesen, die einst diese Welt regiert haben und sie ausbeuten wollen. "
+"Die Alten haben es geschafft, sie wegzusperren aber verloren ihr Leben "
+"dabei. Tut mir leid, das ist alles, was ich weiß."
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
@@ -5078,7 +5081,7 @@ msgstr "Sie kosten 100 Gold, mein Freund."
 
 # 〃
 msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
-msgstr "Energiezelle."
+msgstr "Energiezelle"
 
 # 〃
 msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
@@ -5118,7 +5121,7 @@ msgstr "Du hast nich genug Gold dafür!"
 
 # 〃
 msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
-msgstr "Schutzanzug."
+msgstr "Schutzanzug"
 
 # 〃
 msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
@@ -5170,7 +5173,7 @@ msgstr "Du hast nich genug Gold dafür!"
 
 # 〃
 msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
-msgstr "Schutzanzug."
+msgstr "Schutzanzug"
 
 # 〃
 msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
@@ -5202,7 +5205,7 @@ msgstr "Verbandskasten"
 
 # 〃
 msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
-msgstr "Hier ist dein Verbandskasten"
+msgstr "Hier ist dein Verbandskasten."
 
 # 〃
 msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
@@ -5218,7 +5221,7 @@ msgstr "Eine Erste-Hilfe-Kasten, kommt sofort."
 
 # 〃
 msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
-msgstr "Komm wieder, wenn du etwas Geld hast."
+msgstr "Komm wieder, wenn du Geld hast!"
 
 # MAP23: Barkeep.
 msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
@@ -5305,7 +5308,7 @@ msgstr "Schattenrüstung?"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
-msgstr "Ah, um gehört zu werden, aber ungesehen zu bleiben."
+msgstr "Ah, um gehört zu werden, aber ungesehen zu bleiben!"
 
 # 〃
 msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
@@ -5456,7 +5459,7 @@ msgstr "Schattenrüstung?"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
-msgstr "Ah, um gehört zu werden, aber ungesehen zu bleiben."
+msgstr "Ah, um gehört zu werden, aber ungesehen zu bleiben!"
 
 # 〃
 msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
@@ -5502,7 +5505,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
-msgstr "Wieo das?"
+msgstr "Warum ist das wohl so."
 
 # 〃
 msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
@@ -5575,7 +5578,7 @@ msgstr "Wenn du jemanden schlägst, wirst du keinen Alarm auslösen."
 
 # 〃
 msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
-msgstr "Umsonst werde ich dir nichts sagen."
+msgstr "Umsonst werde ich dir nichts sagen!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
@@ -5603,7 +5606,7 @@ msgstr "10-Kugeln-Magazin"
 
 # 〃
 msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
-msgstr "Hier ist deine Munition."
+msgstr "Hier ist deine Munition"
 
 # 〃
 msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
@@ -5615,15 +5618,15 @@ msgstr "50-Kugeln-Schachtel"
 
 # 〃
 msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
-msgstr "Bitteschön."
+msgstr "Bitteschön"
 
 # 〃
 msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
-msgstr "Du hast nicht genug Gold."
+msgstr "Du hast nicht genug Gold!"
 
 # 〃
 msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
-msgstr "Munitionstasche."
+msgstr "Munitionstasche"
 
 # 〃
 msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
@@ -5639,7 +5642,7 @@ msgstr "Willkommen. Was darf ich dir zeigen?"
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
-msgstr "Schutzanzug."
+msgstr "Schutzanzug"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
@@ -5651,7 +5654,7 @@ msgstr "Dafür hast du nicht genug Geld."
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
-msgstr "Lederrüstung"
+msgstr "Lederrüstung."
 
 # 〃
 msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
@@ -5742,7 +5745,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
-msgstr "Mehr Informationen."
+msgstr "Mehr Informationen"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
@@ -5794,7 +5797,7 @@ msgstr "Nein, danke."
 
 # 〃
 msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
-msgstr "Niemand sagt Nein zu mir."
+msgstr "Niemand sagt Nein zu mir!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
@@ -5813,7 +5816,7 @@ msgstr "Lass mich darüber nachdenken."
 
 # 〃
 msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
-msgstr "Keine zweite Chance. Oh Wachen, tötet ihn."
+msgstr "Keine zweite Chance. Oh Wachen, tötet ihn!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT33_D18192_HERES"
@@ -5829,7 +5832,7 @@ msgstr "Wir sehen uns dort."
 msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
 msgstr ""
 "Worauf wartest du noch? Keine Sorge, ich kümmere mich um die Leichen. Bring "
-"mir den Kelch."
+"mir den Kelch!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
@@ -5850,7 +5853,7 @@ msgstr "Toll, ich kann es kaum erwarten!"
 
 # 〃 (if accepting without having the chalice)
 msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
-msgstr "Kein Kelch, kein Geld."
+msgstr "Kein Kelch, kein Geld!"
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
@@ -5858,7 +5861,7 @@ msgstr "Ich behalte den Kelch, danke."
 
 # 〃
 msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
-msgstr "Behalten? Ich glaube, nicht."
+msgstr "Behalten? Ich glaube nicht!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
@@ -5866,14 +5869,14 @@ msgstr "Worauf wartest du? Der Gouverneur wird dich belohnen."
 
 # 〃
 msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
-msgstr "Stirb, Verräter!"
+msgstr "Stirb, Verräter! "
 
 # MAP33: Mourel.
 msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
 msgstr ""
 "So, du bist also der Narr der den Kelch gestohlen hat? Ich werde dich als "
 "Dieb der Rebellen verhaften lassen und dadurch meine Position im Orden "
-"verbessern. Wie fühlt es sich an als ahnungslose Schachfigur?"
+"verbessern. Wie fühlt es sich an als ahnungslose Schachfigur? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
@@ -5909,8 +5912,8 @@ msgstr "Verschwinde von hier!"
 msgid "TXT_DLG_SCRIPT34_D0_WHATA"
 msgstr ""
 "Was für ein Perfekter Ort für uns, unter dem alten Rathaus. Der Orden "
-"glaubt, er hätte uns vernichtet, aber es war nur ein Denkzettel für uns, was"
-" passieren kann wenn man unaufmerksam ist."
+"glaubt, er hätte uns vernichtet, aber es war nur ein Denkzettel für uns, was "
+"passieren kann wenn man unaufmerksam ist. "
 
 # MAP34
 msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
@@ -5927,14 +5930,14 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
 msgstr ""
 "Wenn wir ein paar von diesen Fässern in die Wasserversorgung kippen, sollte "
-"das unsere Chancen etwas verbessern."
+"das unsere Chancen etwas verbessern. "
 
 # MAP34: Gerald.
 # (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
 msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
 msgstr ""
-"Ich arbeite an etwas, das uns einen Vorteil verschaffen kann. Es würde deine"
-" Ausdauer erhöhen und dir Superkräfte verleihen. Kann ich was für dich tun?"
+"Ich arbeite an etwas, das uns einen Vorteil verschaffen kann. Es würde deine "
+"Ausdauer erhöhen und dir Superkräfte verleihen. Kann ich was für dich tun? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
@@ -5987,8 +5990,8 @@ msgstr "Es ist noch nicht soweit."
 # 〃
 msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
 msgstr ""
-"He, ich arbeite an einer verbesserten Version deines Implantats. Gibt es "
-"sonst etwas, das ich für dich tun kann?"
+"So, das war's. Ich habe fast alles perfekt zum Laufen gebracht. Es gab noch "
+"ein paar Probleme zu beheben, brauchen du sonst noch etwas? "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
@@ -5996,8 +5999,7 @@ msgstr "Flick mich zusammen."
 
 # 〃
 msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
-msgstr ""
-"Mann, du siehst aber gar nicht gut aus. Mal sehen, was ich machen kann."
+msgstr "Was hast du versucht? Dich mit einem Kreuzritter angelegt?"
 
 # 〃
 msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
@@ -6142,8 +6144,8 @@ msgstr "Willkommen, wir können immer etwas Hilfe gebrauchen."
 msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
 msgstr ""
 "Als ich noch aktiv war, hatten wir mal die Möglichkeit, einen der "
-"Ministranten zu untersuchen, bevor Verstärkung eintraf. Hör zu, sie sind "
-"nicht menschlich!"
+"Ministranten zu untersuchen, bevor Verstärkung eintraf, ich sag dir die sind "
+"nicht menschlich."
 
 # MAP34: Downstairs.
 # (Identical to row 772)
@@ -6158,14 +6160,14 @@ msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
 msgstr ""
 "Lass dich nicht erwischen. Ich habe Horrorgeschichten darüber gehört, was "
 "sie unseren Leuten antun, die sie gefangengenommen haben. Sie verschwinden "
-"einfach... ohne jede Spur."
+"einfach... ohne jede Spur. "
 
 # 〃
 # (Similar to row 774)
 msgid "TXT_DLG_SCRIPT34_D25772_HERES"
 msgstr ""
-"Hier ist ein guter Rat, falls du jemals einen dieser Zinnsoldaten des Ordens"
-" vorbeigehen siehst. Sie sind schnell und brutal. "
+"Hier ist ein guter Rat, falls du jemals einen dieser Zinnsoldaten des Ordens "
+"vorbeigehen siehst. Sie sind schnell und brutal!"
 
 # MAP34: Macil.
 msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
@@ -6177,7 +6179,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
-msgstr "Was muss ich tun?"
+msgstr "Was muss ich tun? "
 
 # 〃
 msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
@@ -6188,7 +6190,7 @@ msgstr ""
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
-msgstr "Ich bin dabei."
+msgstr "Ich bin dabei!"
 
 # 〃
 msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
@@ -6196,12 +6198,12 @@ msgstr ""
 "Gut so! Blackbird wird weiter deine Leiterin sein, sie scheint dich zu "
 "mögen. Zusammen müsst ihr die Geheimnisse des Ordens und ihrer "
 "unmenschlichen Diener ergründen. Dann haben wir eine Chance, sie "
-"niederzuringen. Da ist eine Präsenz außerhalb unseres Vorstellungsvermögens,"
-" das diesen Terror leitet. Wir müssen sie unterwandern und dann vernichten."
+"niederzuringen. Da ist eine Präsenz außerhalb unseres Vorstellungsvermögens, "
+"das diesen Terror leitet. Wir müssen sie unterwandern und dann vernichten. "
 
 # 〃
 msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
-msgstr "Lass mich das nur machen."
+msgstr "Lass mich das nur machen!"
 
 # 〃
 msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
@@ -6209,7 +6211,7 @@ msgstr "Das ist die richtige Einstellung."
 
 # 〃
 msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
-msgstr "Wilkommen, Freund."
+msgstr "Wilkommen, Freund!"
 
 msgid "TXT_RANDOM_PEASANT_01"
 msgstr "Bitte tu mir nicht weh."
@@ -6247,7 +6249,7 @@ msgstr ""
 "ist."
 
 msgid "TXT_RANDOM_REBEL_01"
-msgstr "Niemals wird sich der Orden gegen uns stellen!"
+msgstr "Niemals wird sich der Orden gegen uns stellen."
 
 msgid "TXT_RANDOM_REBEL_02"
 msgstr ""
@@ -6258,13 +6260,12 @@ msgstr "Wir stehen zu dir, keine Sorge."
 
 msgid "TXT_RANDOM_REBEL_04"
 msgstr ""
-"Komm diesen großen Robotern nicht zu nahe. Die schmelzen dich zu Schrott "
-"ein."
+"Komm diesen großen Robotern nicht zu nahe. Die schmelzen dich zu Schrott ein!"
 
 msgid "TXT_RANDOM_REBEL_05"
 msgstr ""
 "Der Tag des Triumphes ist nahe, und die, die gegen uns sind, werden "
-"vernichtet."
+"vernichtet!"
 
 msgid "TXT_RANDOM_REBEL_06"
 msgstr "Werd nicht leichtsinnig, es gibt noch eine Menge zu tun."
@@ -6286,7 +6287,7 @@ msgid "TXT_RANDOM_REBEL_10"
 msgstr "Solange nur einer von uns steht, werden wir gewinnen."
 
 msgid "TXT_RANDOM_AGUARD_01"
-msgstr "Beweg dich, Bauer!"
+msgstr "Beweg dich, Bauer."
 
 msgid "TXT_RANDOM_AGUARD_02"
 msgstr "Folge dem wahren Glauben und du wirst verstehen."
@@ -6301,7 +6302,7 @@ msgid "TXT_RANDOM_AGUARD_05"
 msgstr "Wenn ich mich mit dir unterhalten wollte, hätte ich dir das gesagt."
 
 msgid "TXT_RANDOM_AGUARD_06"
-msgstr "Bitte nerve jemand anderen."
+msgstr "Bitte nerve jemand anderen!"
 
 msgid "TXT_RANDOM_AGUARD_07"
 msgstr "Beweg dich!"
@@ -6316,7 +6317,7 @@ msgid "TXT_RANDOM_AGUARD_10"
 msgstr "Hast du Probleme? Nein, ich glaube nicht."
 
 msgid "TXT_RANDOM_BEGGAR_01"
-msgstr "Almosen für die Armen."
+msgstr "Almosen für die Armen?"
 
 msgid "TXT_RANDOM_BEGGAR_02"
 msgstr "Wonach suchst du, Oberflächler?"
@@ -6340,13 +6341,13 @@ msgid "TXT_RANDOM_BEGGAR_07"
 msgstr "Glotz nur, aber irgendwann wirst du auch so aussehen."
 
 msgid "TXT_RANDOM_BEGGAR_08"
-msgstr "Es gibt nichts nervigeres als einen Oberflächler mit Gesinnung."
+msgstr "Es gibt nichts nervigeres als einen Oberflächler mit Gesinnung!"
 
 msgid "TXT_RANDOM_BEGGAR_09"
 msgstr "Der Orden wird eure armselige Front auseinandernehmen."
 
 msgid "TXT_RANDOM_BEGGAR_10"
-msgstr "Pass nur auf, Oberflächler. Wir kennen unsere Feinde."
+msgstr "Pass nur auf, Oberflächler. Wir kennen unsere Feinde!"
 
 msgid "TXT_RANDOM_PGUARD_01"
 msgstr ""
@@ -6354,24 +6355,24 @@ msgstr ""
 "vernichtet!"
 
 msgid "TXT_RANDOM_PGUARD_02"
-msgstr "Der Orden wird die Welt von allem Schwachen und Korrupten säubern."
+msgstr "Der Orden wird die Welt von allem Schwachen und Korrupten säubern!"
 
 msgid "TXT_RANDOM_PGUARD_03"
-msgstr "Gehorche dem Willen der Meister."
+msgstr "Gehorche dem Willen der Meister!"
 
 msgid "TXT_RANDOM_PGUARD_04"
-msgstr "Lang lebe die Brüder des Ordens."
+msgstr "Lang lebe die Brüder des Ordens!"
 
 msgid "TXT_RANDOM_PGUARD_05"
-msgstr "Freier Wille ist eine Illusion die die Schwachen fesselt."
+msgstr "Freier Wille ist eine Illusion die Schwachen fesselt."
 
 msgid "TXT_RANDOM_PGUARD_06"
 msgstr ""
 "Macht ist der Weg zum Ruhm. Dem Orden zu folgen bedeutet, diesen Weg zu "
-"gehen."
+"gehen!"
 
 msgid "TXT_RANDOM_PGUARD_07"
-msgstr "Nimm deinen Platz unter den Gerechten ein. "
+msgstr "Nimm deinen Platz unter den Gerechten ein!"
 
 msgid "TXT_RANDOM_PGUARD_08"
 msgstr "Der Orden beschützt seine Jünger."
@@ -6440,7 +6441,7 @@ msgctxt "strifeteaser"
 msgid "TXT_ILOG6"
 msgstr ""
 "Die Tür neben dem Waffengeschäft wird sich öffnen, wenn alle Ordensritter "
-"tot sind. Dahinter ist ein Teleporter. Benutze ihn, er bringt dich zu uns."
+"tot sind. Dahinter ist ein Teleporter. Benutze ihn, er bringt dich zu uns"
 
 # MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
 msgctxt "strifeteaser"
@@ -6454,7 +6455,7 @@ msgctxt "strifeteaser"
 msgid "TXT_ILOG8"
 msgstr ""
 "Erledige so viele von den großen Robotern - „Ordensrittern“, wie möglich. "
-"Wann das erledigt ist, führe ich dich zu Macil."
+"Wann das erledigt ist, führe ich dich zu Macil"
 
 # MAP34: After leaving the teleporter.
 msgctxt "strifeteaser"
@@ -6465,7 +6466,7 @@ msgstr "Geh durch die Tür und rede mit Macil."
 msgid "TXT_ILOG10"
 msgstr ""
 "Finde die Stromanzapfung und schalte sie ab. Bringe einen Beweis zum "
-"Gouverneur. Finde MacGuffin und rede mit ihm. "
+"Gouverneur. Finde MacGuffin und rede mit ihm."
 
 # MAP02: After accepting "messy" chore and leaving Mourel's mansion.
 msgid "TXT_ILOG11"
@@ -6524,7 +6525,7 @@ msgid "TXT_ILOG22"
 msgstr ""
 "Zerstöre den Energiekristall der die Energieversorgung für die Kraftschilde "
 "kontrolliert. Suche Worner auf, einen Spion, den wir im Lagerhaus des "
-"Kraftwerks rekrutiert haben. "
+"Kraftwerks rekrutiert haben."
 
 # MAP04: After leaving Reactor Core.
 msgid "TXT_ILOG24"
@@ -6669,8 +6670,8 @@ msgstr ""
 # MAP27: After killing the Loremaster with either Macil or the Oracle alive.
 msgid "TXT_ILOG83"
 msgstr ""
-"Ein weiteres Teilstück des Sigils. Wir sind der Freiheit einen Schritt näher"
-" gekommen. Lass uns zurückgehen zum Orakel."
+"Ein weiteres Teilstück des Sigils. Wir sind der Freiheit einen Schritt näher "
+"gekommen. Lass uns zurückgehen zum Orakel!"
 
 # MAP27/MAP12: Remark at TXT_SUB_LOG85
 msgid "TXT_ILOG85"
@@ -6739,21 +6740,21 @@ msgstr ""
 msgid "TXT_ILOG100"
 msgstr ""
 "Und jetzt zur Fabrik. Verlasse die Minen, du kannst sie nicht verpassen. "
-"Lass uns die Maschine finden und abschalten."
+"Lass uns die Maschine finden und abschalten!"
 
 # MAP20: Path to Conversion Chapel (MAP24).
 # ("neural oscillation" or "brainwave")
 msgid "TXT_ILOG102"
 msgstr ""
 "Ich empfange massive neurale Verzerrungen direkt voraus. Ich denke, wir "
-"haben sie gefunden. Lass uns reingehen und sie abschalten."
+"haben sie gefunden. Lass uns reingehen und sie abschalten!"
 
 # MAP24: Converter room.
 msgid "TXT_ILOG103"
 msgstr ""
 "Und da denkt man, man hätte schon alles gesehen. Die kommen als Menschen "
-"rein und kommen raus als... Ich möchte gar nicht drüber nachdenken. Zerstöre"
-" diesen Horror."
+"rein und kommen raus als... Ich möchte gar nicht drüber nachdenken. Zerstöre "
+"diesen Horror!"
 
 # MAP24: After destroying the converter.
 msgid "TXT_ILOG104"
@@ -6785,7 +6786,7 @@ msgstr ""
 msgid "TXT_ILOG211"
 msgstr ""
 "Komm schon, lass uns von hier verschwinden. Das Kraftfeld ist abgeschaltet, "
-"also ab zum Turm des Bischofs. Sobald er tot ist, geht es zurück zum Orakel"
+"also ab zum Turm des Bischofs. Sobald er tot ist, geht es zurück zum Orakel."
 
 # MAP33?
 msgid "TXT_ILOG1001"
@@ -6817,7 +6818,7 @@ msgid "TXT_ILOG1006"
 msgstr ""
 "Suche Irale auf, den Waffenbeschaffer der Front in der Stadr. Er hält sich "
 "in dem Gebäude neben dem Waffengeschäft auf. Danach benutze den Schlüssel, "
-"den Macil dir gegeben hat, um mit dem Gouverneur zu reden"
+"den Macil dir gegeben hat, um mit dem Gouverneur zu reden."
 
 # MAP02: After accepting "messy" chore.
 msgid "TXT_ILOG1007"
@@ -6935,7 +6936,7 @@ msgstr ""
 # MAP10: You chose to kill the Oracle.
 msgid "TXT_ILOG1024"
 msgstr ""
-"Es ist das Orakel, das das dritte Teilstück besitzt. Es ist der Verräter. "
+"Es ist das Orakel, der das dritte Teilstück besitzt. Es ist der Verräter. "
 "Kehre zu ihm zurück und schalte es aus. Kehre zurück, wenn es tot ist."
 
 msgid "TXT_ILOG1025"
@@ -6983,8 +6984,7 @@ msgstr ""
 "Taverne."
 
 msgid "TXT_ILOG1102"
-msgstr ""
-"Finde die Villa des Gouverneurs und rede mit ihm über deine Belohnung."
+msgstr "Finde die Villa des Gouverneurs und rede mit ihm über deine Belohnung"
 
 msgid "TXT_ILOG1201"
 msgstr ""
@@ -6996,19 +6996,19 @@ msgid "TXT_SPEAKER_ORDER_SERGEANT"
 msgstr "Soldat des Ordens"
 
 msgid "TXT_SPEAKER_ROWAN"
-msgstr ""
+msgstr "Rowan"
 
 msgid "TXT_SPEAKER_FERIS"
-msgstr ""
+msgstr "Feris"
 
 msgid "TXT_SPEAKER_PRISON_GUARD"
 msgstr "Gefängniswache"
 
 msgid "TXT_SPEAKER_JUSTIN"
-msgstr ""
+msgstr "Justin"
 
 msgid "TXT_SPEAKER_MACIL"
-msgstr ""
+msgstr "Macil"
 
 msgid "TXT_SPEAKER_ASSISTANT"
 msgstr "Assistent"
@@ -7027,7 +7027,7 @@ msgid "TXT_SPEAKER_WARDEN_MONTAG"
 msgstr "Direktor Montag"
 
 msgid "TXT_SPEAKER_RICHTER"
-msgstr ""
+msgstr "Richter"
 
 msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
 msgstr "Macils Berater"
@@ -7036,10 +7036,10 @@ msgid "TXT_SPEAKER_JUDGE_WOLENICK"
 msgstr "Richter Wolenick"
 
 msgid "TXT_SPEAKER_TEVICK"
-msgstr ""
+msgstr "Tevick"
 
 msgid "TXT_SPEAKER_HARRIS"
-msgstr ""
+msgstr "Harris"
 
 msgid "TXT_SPEAKER_FOREMAN"
 msgstr "Vormann"
@@ -7048,7 +7048,7 @@ msgid "TXT_SPEAKER_PRISONER"
 msgstr "Gefangener"
 
 msgid "TXT_SPEAKER_SAMMIS"
-msgstr ""
+msgstr "Sammis"
 
 msgid "TXT_SPEAKER_WEAPON_SMITH"
 msgstr "Waffenschmied"
@@ -7072,13 +7072,13 @@ msgid "TXT_SPEAKER_BARKEEP"
 msgstr "Wirt"
 
 msgid "TXT_SPEAKER_TIMOTHY"
-msgstr ""
+msgstr "Timothy"
 
 msgid "TXT_SPEAKER_JAMES"
-msgstr ""
+msgstr "James"
 
 msgid "TXT_SPEAKER_WORNER"
-msgstr ""
+msgstr "Worner"
 
 msgid "TXT_SPEAKER_BAILEY_GUARD"
 msgstr "Vorhof-Wache"
@@ -7091,7 +7091,7 @@ msgid "TXT_SPEAKER_FRONT_GUARD"
 msgstr "Frontwache"
 
 msgid "TXT_SPEAKER_QUINCY"
-msgstr ""
+msgstr "Quincy"
 
 msgid "TXT_SPEAKER_SERGEANT"
 msgstr "Feldwebel"
@@ -7103,7 +7103,7 @@ msgid "TXT_SPEAKER_ORACLE"
 msgstr "Orakel"
 
 msgid "TXT_SPEAKER_ULAINE"
-msgstr ""
+msgstr "Ulaine"
 
 msgid "TXT_SPEAKER_FRONT_SOLDIER"
 msgstr "Front-Soldat"
@@ -7118,16 +7118,16 @@ msgid "TXT_SPEAKER_WATCHMAN"
 msgstr "Wächter"
 
 msgid "TXT_SPEAKER_KETRICK"
-msgstr ""
+msgstr "Ketrick"
 
 msgid "TXT_SPEAKER_WERAN"
-msgstr ""
+msgstr "Weran"
 
 msgid "TXT_SPEAKER_ADVISOR"
 msgstr "Berater"
 
 msgid "TXT_SPEAKER_GEOFF"
-msgstr ""
+msgstr "Geoff"
 
 msgid "TXT_SPEAKER_OVERSEER"
 msgstr "Aufseher"
@@ -7141,17 +7141,17 @@ msgid "TXT_SPEAKER_COMPUTER_TECH"
 msgstr "Computertechniker"
 
 msgid "TXT_SPEAKER_MACGUFFIN"
-msgstr ""
+msgstr "MacGuffin"
 
 msgid "TXT_SPEAKER_ARION"
-msgstr ""
+msgstr "Arion"
 
 # This is a compound word. Some languages express this in one word.
 msgid "TXT_SPEAKER_DOCK_WORKER"
 msgstr "Dockarbeiter"
 
 msgid "TXT_SPEAKER_IRALE"
-msgstr ""
+msgstr "Irale"
 
 msgid "TXT_SPEAKER_CORE_GUARD"
 msgstr "Wache"
@@ -7172,19 +7172,19 @@ msgid "TXT_SPEAKER_ARMORER"
 msgstr "Waffenmeister"
 
 msgid "TXT_SPEAKER_BELDIN"
-msgstr ""
+msgstr "Beldin"
 
 msgid "TXT_SPEAKER_GERARD"
-msgstr ""
+msgstr "Gerard"
 
 msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
 msgstr "Gouverneur Mourel"
 
 msgid "TXT_SPEAKER_BOWYER"
-msgstr ""
+msgstr "Bowyer"
 
 msgid "TXT_SPEAKER_DERWIN"
-msgstr ""
+msgstr "Derwin"
 
 # Menu's intro.
 msgid "TXT_SUB_INTRO1"
@@ -7385,7 +7385,7 @@ msgstr ""
 msgid "TXT_SUB_LOG10"
 msgstr ""
 "Wir müssen mit jemandem reden, der die alte Stadt kennt und weiß, wo diese "
-"Anzapfung it. Die Kommandozentrale sagt, finde MacGuffin."
+"Anzapfung it. Die Kommandozentrale sagt, finde MacGuffin. "
 
 # MAP02: After accepting "messy" chore and leaving Mourel's mansion.
 msgid "TXT_SUB_LOG11"
@@ -7404,7 +7404,7 @@ msgid "TXT_SUB_LOG13"
 msgstr ""
 "Du Idiot! Du hast die Energie für unsere Störsender unterbrochen, mit denen "
 "wir unsere Basis vor dem Orden verborgen haben. Geh schnell zum Rathaus und "
-"schalte den Suchtrupp aus. "
+"schalte den Suchtrupp aus!"
 
 # MAP02: After destroying Front's power coupling and killing all blue acolytes
 # in the town hall.
@@ -7472,7 +7472,7 @@ msgstr ""
 "Der Orden glaubt, er sei in seiner Burg sicher. Falsch! Wenn du die Tore "
 "öffnest werden sie ein leichtes Ziel sein. Und dafür müssen wir in die "
 "Kanalisation runter. Geh runter zum Fluss, auf der anderen Seite von der "
-"Villa des Gouverneurs."
+"Villa des Gouverneurs. "
 
 # 〃
 msgid "TXT_SUB_LOG27"
@@ -7484,11 +7484,13 @@ msgstr ""
 # MAP06: Entrance.
 msgid "TXT_SUB_LOG28"
 msgstr ""
+"Wir suchen nach Weran, der sich selbst \"Rattenkönig\" nennt. Ich bin "
+"sicher, es ist anschaulich und bildhaft gemeint."
 
 # MAP06: Down → Left.
 msgid "TXT_SUB_LOG29"
 msgstr ""
-"Igitt! Ich möchte gar nicht darüber nachdenken, wo du gerade durchwatest."
+"Igitt! Ich möchte gar nicht darüber nachdenken, wo du gerade durchwatest!"
 
 # MAP06: Down → Left → Upstairs → Left.
 msgid "TXT_SUB_LOG30"
@@ -7496,7 +7498,7 @@ msgstr "Genau das, was ich brauchte. Mehr brauner Schlamm!"
 
 msgid "TXT_SUB_LOG31"
 msgstr ""
-"Sieh dort! Ich glaube, das ist die Tür, die Weran geöffnet haben möchte."
+"Sieh dort! Ich glaube, das ist die Tür, die Weran geöffnet haben möchte!"
 
 msgid "TXT_SUB_LOG32"
 msgstr ""
@@ -7506,7 +7508,7 @@ msgstr ""
 
 # MAP06: After giving the guard's uniform.
 msgid "TXT_SUB_LOG33"
-msgstr "Warum können wir nicht mal eine Mission in einem Blumenfeld haben? "
+msgstr "Warum können wir nicht mal eine Mission in einem Blumenfeld haben?"
 
 # MAP06: Weran's hideout.
 msgid "TXT_SUB_LOG34"
@@ -7527,14 +7529,15 @@ msgid "TXT_SUB_LOG37"
 msgstr ""
 "Kommandozentrale: Er hat's geschafft! Die Tore sind offen. Schickt die "
 "Schocktruppen hinein und sagt Macil das wir auf dem Weg sind! Lass uns zur "
-"Frontbasis zurückkehren."
+"Frontbasis zurückkehren. "
 
 # MAP07: Entrace.
 msgid "TXT_SUB_LOG38"
 msgstr ""
-"Wir haben widersprüchliche Angaben über seinen Aufenthaltsort. Eine sagt, in"
-" einem Computerraum, ein anderer, dass er sich in einem Tempelkeller "
-"versteckt und noch ein anderer sagt was vom Ende eines langen Flurs."
+"Wir haben widersprüchliche Angaben über seinen Aufenthaltsort. Eine sagt, in "
+"einem Computerraum, ein anderer, dass er sich in einem Tempelkeller "
+"versteckt und noch ein anderer sagt was vom Ende eines langen Flurs. Tut mir "
+"Leid. "
 
 # MAP07: Near the crusaders.
 msgid "TXT_SUB_LOG39"
@@ -7555,7 +7558,7 @@ msgstr ""
 msgid "TXT_SUB_LOG42"
 msgstr ""
 "Das sind alles die Zeichen für einen Tempel des Bösen. Strenge Architektur, "
-"große Banner... Ich würde sagen: „Bingo!“"
+"große Banner... Ich würde sagen: Bingo!"
 
 msgid "TXT_SUB_LOG43"
 msgstr "Das ist der allmächtige Programmierer? Niemals!"
@@ -7621,7 +7624,7 @@ msgstr "Sollen wir wirklich einem Typen vertrauen, dessen Räume grün sind?"
 
 # MAP12: After talking to the Oracle.
 msgid "TXT_SUB_LOG55"
-msgstr "Purpur und Obsidian? Warum kann er nicht Rot und Schwarz sagen?"
+msgstr "Purpur und Obsidian? Warum kann er nicht Rot und Schwarz sagen."
 
 # MAP11: Afther talking to the Oracle and leaving the cave.
 msgid "TXT_SUB_LOG56"
@@ -7686,7 +7689,7 @@ msgid "TXT_SUB_LOG67"
 msgstr "Von außen sieht das hier irgendwie mickrig aus."
 
 msgid "TXT_SUB_LOG68"
-msgstr "Ich habe eine neue Feindortung. Warum wartest du, mach sie alle!"
+msgstr "Ich habe eine neue Feindortung. Warum wartest du, mach sie alle."
 
 # STRIFE1.WAD: MAP15
 msgid "TXT_SUB_LOG69"
@@ -7736,8 +7739,8 @@ msgstr ""
 
 msgid "TXT_SUB_LOG78"
 msgstr ""
-"Ob ich Macil vertraue, der sein Leben für die Front riskiert hat, oder einer"
-" hässlichen Schreckgestalt? Ich weiß nicht - aber dir vertraue ich. "
+"Ob ich Macil vertraue, der sein Leben für die Front riskiert hat, oder einer "
+"hässlichen Schreckgestalt? Ich weiß nicht - aber dir vertraue ich."
 
 # MAP10: After killing Macil (Spectre) without having destroyed the converter
 # in MAP24.
@@ -7789,7 +7792,7 @@ msgstr ""
 msgid "TXT_SUB_LOG85"
 msgstr ""
 "Du hast die Macht des kompletten Sigils. Was hälst du davon, wenn wir das "
-"hier beenden?"
+"hier beenden."
 
 msgid "TXT_SUB_LOG86"
 msgstr "Die Stunde ist gekommen, mein Held. Bereite dich auf Ruhm vor."
@@ -7834,8 +7837,8 @@ msgstr ""
 
 msgid "TXT_SUB_LOG94"
 msgstr ""
-"Ugh, es versucht, sich zu regenerieren. Mach es fertig, bevor ich anfange zu"
-" kotzen."
+"Ugh, es versucht, sich zu regenerieren. Mach es fertig, bevor ich anfange zu "
+"kotzen!"
 
 # MAP25: After killing the Spectre.
 msgid "TXT_SUB_LOG95"
@@ -7851,7 +7854,7 @@ msgstr "Sei vorsichtig und halte Ausschau nach Erzvorkommen."
 msgid "TXT_SUB_LOG97"
 msgstr ""
 "Diese armen Seelen sind Drohnen, ihre synaptischen Funktionen werden von "
-"Implantaten blockiert. Wenn wir den Transmitter zerstören, sind sie frei."
+"Implantaten blockiert. Wenn wir den Transmitter zerstören, sind sie frei!"
 
 # MAP14: After the entrance's yard and before going down.
 msgid "TXT_SUB_LOG98"
@@ -7869,7 +7872,7 @@ msgstr ""
 # MAP14: After destroying the transmitter.
 msgid "TXT_SUB_LOG100"
 msgstr ""
-"Und nun zur Fabrik. Verlasse die Minen und du kannst sie nicht verpassen."
+"Und nun zur Fabrik. Verlasse die Minen und du kannst sie nicht verpassen!"
 
 # MAP20: Exit to Commons (MAP23).
 msgid "TXT_SUB_LOG101"
@@ -7892,7 +7895,7 @@ msgid "TXT_SUB_LOG104"
 msgstr ""
 "Das Orakel hatte Recht. Macil hat den Verstand verloren. Er hat gerade "
 "absichtlich 200 unserer Leute in den Tod geschickt. Ich will Rache! Für die "
-"Toten und für die lebenden Toten."
+"Toten und für die lebenden Toten!"
 
 msgid "TXT_SUB_LOG105"
 msgstr ""
@@ -7930,9 +7933,9 @@ msgstr ""
 # MAP29: Entity (If the player is progressing through the mediocre ending)
 msgid "TXT_SUB_LOG128"
 msgstr ""
-"Ha ha! Willkommen. Ich habe auf diesen Moment gewartet, dass ein Narr wie du"
-" mir meine Freiheit bringt. Dein kleiner Planet ist mein, und du wirst dir "
-"wünschen nie geboren worden zu sein!"
+"Ha ha! Willkommen. Ich habe auf diesen Moment gewartet, dass ein Narr wie du "
+"mir meine Freiheit bringt. Dein kleiner Planet ist mein, und du wirst dir "
+"wünschen nie geboren worden zu sein! "
 
 # MAP27: Entrance (It talks the Loremaster and BlackBird).
 msgid "TXT_SUB_LOG129"
@@ -7979,12 +7982,12 @@ msgstr "Oh, und achte auf den Alarm."
 # (Strife: Veteran Edition)
 # Random comment when the player dies with Classic Mode turned off
 msgid "TXT_SUB_LOG209"
-msgstr "Oh je. Sieh nur, was du getan hast."
+msgstr "Oh je. Sieh nur, was du getan hast!"
 
 # (Strife: Veteran Edition)
 # Random comment when the player dies with Classic Mode turned off
 msgid "TXT_SUB_LOG210"
-msgstr "Mist, du hast es verbockt."
+msgstr "Mist, du hast es verbockt!"
 
 # MAP15: Computer destroyed + Room 1
 msgid "TXT_SUB_LOG211"
@@ -8020,7 +8023,7 @@ msgid "TXT_SUB_LOG220"
 msgstr "Mach so weiter und du wirst blind... aber ich finde es toll."
 
 msgid "TXT_SUB_LOG221"
-msgstr "Ich glaube nicht, dass sie uns nochmal einladen werden..."
+msgstr "Ich glaube nicht, dass sie uns nochmal einladen werden!"
 
 msgid "TXT_SUB_LOG222"
 msgstr "Wir müssen in die oberste Etage gelangen."
@@ -8029,7 +8032,7 @@ msgid "TXT_SUB_LOG223"
 msgstr "Warte... Das sieht interessant aus. Sieh mal nach."
 
 msgid "TXT_SUB_LOG224"
-msgstr "Ugh. da kriegt man ja 'ne Gänsehaut. "
+msgstr "Ugh. da kriegt man ja 'ne Gänsehaut."
 
 msgid "TXT_SUB_LOG225"
 msgstr "Links! Geh nach links... Zur anderen Seite - links!"
@@ -8041,7 +8044,7 @@ msgid "TXT_SUB_LOG227"
 msgstr "Stark, brutal und leise. Mein Typ von Partner."
 
 msgid "TXT_SUB_LOG228"
-msgstr "Ok, ich habe mich geirrt."
+msgstr "Ok, ich habe mich geirrt!"
 
 # (Strife: Veteran Edition)
 # Random comment when the player dies with Classic Mode turned off
@@ -8065,9 +8068,9 @@ msgstr "Gute Arbeit, mein Freund. Es ist Zeit dich hereinzubringen."
 
 msgid "TXT_SUB_LOG233"
 msgstr ""
-"Sieh dich vor den Ordensrittern vor. Das sind große und mächtige Roboter und"
-" höllisch gefährlich. Wir wissen nichts über ihre Waffen aber sie "
-"übertreffen deine bei weitem. Vorsicht!"
+"Sieh dich vor den Ordensrittern vor. Das sind große und mächtige Roboter und "
+"höllisch gefährlich. Wir wissen nichts über ihre Waffen aber sie übertreffen "
+"deine bei weitem. Vorsicht."
 
 msgid "TXT_SUB_LOG234"
 msgstr ""
@@ -8080,7 +8083,7 @@ msgstr "Wenn man dich sieht, machen wir dich alle."
 msgid "TXT_SUB_LOG236"
 msgstr ""
 "Du dummer, ungeschickter, klumpfüßiger, buckliger Trottel. Du hast uns "
-"verraten."
+"verraten!"
 
 msgid "TXT_SUB_LOG237"
 msgstr ""
@@ -8150,7 +8153,7 @@ msgstr "Vielleicht hättest du „Bitte“ sagen sollen."
 
 # MAP06: Weran.
 msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
-msgstr "Jeder hier ist so bedürftig!"
+msgstr "Jeder hier ist so bedürftig!\n"
 
 # 〃
 msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
@@ -8170,15 +8173,15 @@ msgstr "Sackgasse. Wir sollten es woanders versuchen."
 
 # MAP10: Macil (Possible reference to a song of The Beatles).
 msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
-msgstr "Und weiter gehts. Lass die Hackfresse zittern!"
+msgstr "Und weiter gehts. Lass die Hackfresse zittern!\n"
 
 msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
 msgstr ""
 "Biomechanisch? Das erklärt ihren anscheinend endlosen Nachschub an Truppen. "
-"Und ihre miese Gesinnung."
+"Und ihre miese Gesinnung.\n"
 
 msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
-msgstr "Der Typ ist doch krank. Mach ihn alle."
+msgstr "Der Typ ist doch krank. Mach ihn alle!"
 
 msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
 msgstr ""
@@ -8189,10 +8192,10 @@ msgstr "Nach den jüngsten Geschehnissen zu urteilen, ist Tarnung nicht drin."
 
 # This remark is for information about the maulers in the warehouse.
 msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
-msgstr "Hmm. Lass nichts anbrennen. Hol mir bitte so ein Ding."
+msgstr "Hmm. Lass nichts anbrennen. Hol mir bitte so ein Ding.\n"
 
 # MAP31
 msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
 msgstr ""
 "Man könnte denken, dass man von dieser „alle töten“-Sache müde wird, aber "
-"ich weiß, ich werde es vermissen, wenn alles vorbei ist."
+"ich weiß, ich werde es vermissen, wenn alles vorbei ist.\n"

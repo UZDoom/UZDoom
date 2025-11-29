@@ -2,18 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:52+0000\n"
-"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"PO-Revision-Date: 2025-11-28 21:00+0000\n"
+"Last-Translator: Marazm Mamazm <brutdewelopment@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-engine-strings/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pl\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSKEY"
 msgstr "Wciśnij dowolny klawisz."
@@ -22,7 +22,7 @@ msgid "SECRETMESSAGE"
 msgstr "Znaleziono sekret!"
 
 msgid "D_DEVSTR"
-msgstr "Tryb bezużyteczny WŁĄCZONY."
+msgstr "Tryb bezużyteczny WŁĄCZONY.\n"
 
 msgid "QUITMSG"
 msgstr ""
@@ -81,7 +81,7 @@ msgid "ENDGAME"
 msgstr ""
 "Czy jesteś pewien że chcesz zakończyć grę?\n"
 "\n"
-"Wciśnij Y lub N"
+"Wciśnij Y lub N."
 
 msgid "RAVENQUITMSG"
 msgstr "Czy jesteś pewien że chcesz wyjść?"
@@ -99,7 +99,9 @@ msgstr ""
 "demonów do stostowania!"
 
 msgid "QUITMSG2"
-msgstr "Zmywajmy się stąd -- robi się tu rzeźnia!"
+msgstr ""
+"Zmywajmy się stąd -- robi się\n"
+"tu rzeźnia!"
 
 msgid "QUITMSG3"
 msgstr ""
@@ -478,7 +480,7 @@ msgid "TXT_TIMELIMIT"
 msgstr "Limit czasowy wyczerpany."
 
 msgid "SPREEKILLSELF"
-msgstr "%o wyglądał dobrze dopóki się nie zabił@[ao_pl]"
+msgstr "%o wyglądał dobrze dopóki się nie zabił@[ao_pl]!"
 
 msgid "SPREEOVER"
 msgstr "Seria zabójstw %o zakończona przez %k"
@@ -1191,13 +1193,13 @@ msgid "TXT_WPNGAUNTLETS"
 msgstr "Rękawice Nekromanty"
 
 msgid "TXT_NEEDBLUEKEY"
-msgstr "Potrzebujesz niebieskiego klucza, by otworzyć te drzwi."
+msgstr "Potrzebujesz niebieskiego klucza, by otworzyć te drzwi"
 
 msgid "TXT_NEEDGREENKEY"
-msgstr "Potrzebujesz zielonego klucza, by otworzyć te drzwi."
+msgstr "Potrzebujesz zielonego klucza, by otworzyć te drzwi"
 
 msgid "TXT_NEEDYELLOWKEY"
-msgstr "Potrzebujesz żółtego klucza, by otworzyć te drzwi."
+msgstr "Potrzebujesz żółtego klucza, by otworzyć te drzwi"
 
 msgid "FN_CHICKEN"
 msgstr "Kurczak"
@@ -1280,70 +1282,70 @@ msgid "OB_DSPARIL2"
 msgstr "%o nie miał@[ao_pl] szans z D'Sparilem."
 
 msgid "OB_DSPARIL2HIT"
-msgstr "%o został@[ao_pl] roztrzaskan@[adj_pl] przez D'Sparila"
+msgstr "%o został@[ao_pl] roztrzaskan@[adj_pl] przez D'Sparila."
 
 msgid "OB_HERETICIMP"
-msgstr "%o został@[ao_pl] zadrapan@[adj_pl] przez gargulca"
+msgstr "%o został@[ao_pl] zadrapan@[adj_pl] przez gargulca."
 
 msgid "OB_HERETICIMPHIT"
-msgstr "%o został@[ao_pl] pocięt@[adj_pl] przez gargulca"
+msgstr "%o został@[ao_pl] pocięt@[adj_pl] przez gargulca."
 
 msgid "OB_IRONLICH"
-msgstr "%o został@[ao_pl] zdewastowan@[adj_pl] przez żelaznego lisza"
+msgstr "%o został@[ao_pl] zdewastowan@[adj_pl] przez żelaznego lisza."
 
 msgid "OB_IRONLICHHIT"
-msgstr "%o był@[ao_pl] blisko i na osobności z żelaznym liszem"
+msgstr "%o był@[ao_pl] blisko i na osobności z żelaznym liszem."
 
 msgid "OB_BONEKNIGHT"
-msgstr "%o został@[ao_pl] rozłupany siekierą przez nieumarłego wojownika"
+msgstr "%o został@[ao_pl] rozłupany siekierą przez nieumarłego wojownika."
 
 msgid "OB_BONEKNIGHTHIT"
-msgstr "%o został@[ao_pl] zgładzon@[adj_pl] przez nieumarłego wojownika"
+msgstr "%o został@[ao_pl] zgładzon@[adj_pl] przez nieumarłego wojownika."
 
 msgid "OB_MINOTAUR"
-msgstr "%o został@[ao_pl] obrócon@[adj_pl] w popiół przez Młototaura"
+msgstr "%o został@[ao_pl] obrócon@[adj_pl] w popiół przez Młototaura."
 
 msgid "OB_MINOTAURHIT"
-msgstr "%o został@[ao_pl] roztart@[adj_pl] na miazgę przez Młototaura"
+msgstr "%o został@[ao_pl] roztart@[adj_pl] na miazgę przez Młototaura."
 
 msgid "OB_MUMMY"
-msgstr "%o został@[ao_pl] stłuczon@[adj_pl] przez golema"
+msgstr "%o został@[ao_pl] stłuczon@[adj_pl] przez golema."
 
 msgid "OB_MUMMYLEADER"
-msgstr "%o został@[ao_pl] zakrzyczan@[adj_pl] na śmierć przez nitrogolema"
+msgstr "%o został@[ao_pl] zakrzyczan@[adj_pl] na śmierć przez nitrogolema."
 
 msgid "OB_SNAKE"
-msgstr "%o został@[ao_pl] rozgrzechotan@[adj_pl] przez wężowatego"
+msgstr "%o został@[ao_pl] rozgrzechotan@[adj_pl] przez wężowatego."
 
 msgid "OB_WIZARD"
-msgstr "%o został@[ao_pl] przeklęt@[adj_pl] przez czarownika"
+msgstr "%o został@[ao_pl] przeklęt@[adj_pl] przez czarownika."
 
 msgid "OB_WIZARDHIT"
-msgstr "%o został@[ao_pl] przebadan@[adj_pl] przez czarownika"
+msgstr "%o został@[ao_pl] przebadan@[adj_pl] przez czarownika."
 
 msgid "OB_MPSTAFF"
-msgstr "%o został@[ao_pl] walnięt@[adj_pl] laską przez %k"
+msgstr "%o został@[ao_pl] walnięt@[adj_pl] laską przez %k."
 
 msgid "OB_MPGAUNTLETS"
-msgstr "%o został@[ao_pl] wstrząśnięt@[adj_pl] rękawicami %k"
+msgstr "%o został@[ao_pl] wstrząśnięt@[adj_pl] rękawicami %k."
 
 msgid "OB_MPGOLDWAND"
-msgstr "%o pomachał@[ao_pl] na do widzenia elfiej różdżce %k"
+msgstr "%o pomachał@[ao_pl] na do widzenia elfiej różdżce %k."
 
 msgid "OB_MPCROSSBOW"
-msgstr "%o został@[ao_pl] przebit@[adj_pl] przez eteryczną kuszę %k"
+msgstr "%o został@[ao_pl] przebit@[adj_pl] przez eteryczną kuszę %k."
 
 msgid "OB_MPBLASTER"
 msgstr "%o został wysadzony nowy otwór przez %k"
 
 msgid "OB_MPSKULLROD"
-msgstr "%o został@[ao_pl] zesłan@[adj_pl] pod piekielny kostur %k"
+msgstr "%o został@[ao_pl] zesłan@[adj_pl] pod piekielny kostur %k."
 
 msgid "OB_MPPHOENIXROD"
-msgstr "%o został@[ao_pl] spalon@[adj_pl] na popiół przez różdżkę feniksa %k"
+msgstr "%o został@[ao_pl] spalon@[adj_pl] na popiół przez różdżkę feniksa %k."
 
 msgid "OB_MPMACE"
-msgstr "%o został@[ao_pl] wybit@[adj_pl] przez buzdygan ognia %k"
+msgstr "%o został@[ao_pl] wybit@[adj_pl] przez buzdygan ognia %k."
 
 msgid "OB_MPPSTAFF"
 msgstr "%o został@[ao_pl] trzepnięt@[adj_pl] naładowaną laską %k"
@@ -4616,7 +4618,7 @@ msgid "OS_ALL"
 msgstr "Szukaj wszystkich wyrażeń"
 
 msgid "OS_NO_RESULTS"
-msgstr "Brak wyników"
+msgstr "Brak wyników."
 
 msgid "OS_LABEL"
 msgstr "Szukaj:"
@@ -4931,35 +4933,35 @@ msgstr "Ignoruj wysokość podłogi podczas teleportacji"
 # different position than it really is, allowing it to be rendered under the
 # floor despite clipping
 msgid "OPTVAL_ANAMORPHIC"
-msgstr ""
+msgstr "Wymuszona Perspektywa"
 
 msgid "SNDMNU_FOOTSTEPVOLUME"
-msgstr ""
+msgstr "Głośność Kroków"
 
 msgid "ID24_GOTINCINERATOR"
-msgstr ""
+msgstr "Znajdujesz spalacz!"
 
 # Also known as Heatwave Generator.
 msgid "ID24_GOTCALAMITYBLADE"
-msgstr ""
+msgstr "Zdobywasz ostrze niedoli!  Ale czad!"
 
 msgid "ID24_GOTFUELCAN"
-msgstr ""
+msgstr "Podnosisz puszkę z paliwem."
 
 msgid "ID24_GOTFUELTANK"
-msgstr ""
+msgstr "Podnosisz bak z paliwem."
 
 msgid "TAG_ID24INCINERATOR"
-msgstr ""
+msgstr "Spalacz"
 
 msgid "TAG_ID24CALAMITYBLADE"
-msgstr ""
+msgstr "Ostrze Niedoli"
 
 msgid "AMMO_ID24FUEL"
-msgstr ""
+msgstr "Puszka z Paliwem"
 
 msgid "AMMO_ID24FUELTANK"
-msgstr ""
+msgstr "Bak z Paliwem"
 
 msgid "ID24_CC_GHOUL"
 msgstr "Ghul"
@@ -4981,58 +4983,58 @@ msgid "ID24_CC_TYRANT"
 msgstr "Tyran"
 
 msgid "ID24_OB_GHOUL"
-msgstr ""
+msgstr "%o dostał kulą energii ghula."
 
 msgid "ID24_OB_BANSHEE"
-msgstr ""
+msgstr "%o został wykończony przez kostuchę."
 
 msgid "ID24_OB_SHOCKTROOPER"
-msgstr ""
+msgstr "%o został roztopiony przez szturmowca."
 
 msgid "ID24_OB_MINDWEAVER"
-msgstr ""
+msgstr "%o został rozstrzelany przez tkacza umysłu."
 
 msgid "ID24_OB_VASSAGO"
-msgstr ""
+msgstr "%o został przypalony przez wassago."
 
 msgid "ID24_OB_TYRANT"
-msgstr ""
+msgstr "%o został wysadzony na kawałki przez tyrana."
 
 msgid "AUTOMAPMNU_SHOWLEVELNAME"
-msgstr ""
+msgstr "Pokaż nazwę poziomu"
 
 # As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
 # Strife
 msgid "CNTRLMNU_INVENTORY_HOTKEYS"
-msgstr ""
+msgstr "Skróty ekwipunku"
 
 msgid "JOYMNU_HAPTICS"
-msgstr ""
+msgstr "Siła sprzężenia zwrotnego"
 
 msgid "JOYMNU_CURVE"
-msgstr ""
+msgstr "Krzywa odpowiedzi"
 
 msgid "JOYMNU_THRESHOLD"
-msgstr ""
+msgstr "Próg cyfrowy"
 
 msgid "OPTVAL_LINEAR"
-msgstr ""
+msgstr "Liniowy"
 
 msgid "OPTVAL_QUADRATIC"
-msgstr ""
+msgstr "Kwadratowy"
 
 # The type of chat messages the player wants to be visible to them.
 msgid "NETMNU_CHATTYPE"
-msgstr ""
+msgstr "Typ Czatu"
 
 msgid "OPTVAL_DISABLECHAT"
-msgstr ""
+msgstr "Wyłączony"
 
 msgid "OPTVAL_TEAMONLYCHAT"
-msgstr ""
+msgstr "Tylko Drużyna"
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "Globalny"
 
 # Disables /me functionality in chat when displaying.
 msgid "NETMNU_NOBOLDCHAT"
@@ -5054,74 +5056,74 @@ msgid "NETMNU_REPEATCOOLDOWN"
 msgstr ""
 
 msgid "NETMNU_DISABLEPAUSE"
-msgstr ""
+msgstr "Wyłącz Pauzowanie"
 
 msgid "OPTVAL_HOSTONLY"
-msgstr ""
+msgstr "Tylko Host"
 
 # Type of vote system to use to bypass intermissions when playing online.
 msgid "NETMNU_READYTYPE"
-msgstr ""
+msgstr "Typ Pomijania Podsumowania Poziomu"
 
 msgid "OPTVAL_VOTE"
-msgstr ""
+msgstr "Głosuj"
 
 msgid "OPTVAL_ANYONE"
-msgstr ""
+msgstr "Każdy"
 
 # If this percent of players or more are ready, starts a countdown when in
 # Vote intermission skip mode.
 msgid "NETMNU_READYPERCENT"
-msgstr ""
+msgstr "Procent Głosów Za Pominięciem"
 
 msgid "NETMNU_READYCOUNTDOWN"
-msgstr ""
+msgstr "Czas Odliczania Głosowania (sekundy)"
 
 # Forces a cool down between chat messages for all players when playing
 # online.
 msgid "NETMNU_CHATSLOMO"
-msgstr ""
+msgstr "Tryb Wolny Czatu (Sekundy)"
 
 msgid "JOYMNU_HAPTRIGGERS"
-msgstr ""
+msgstr "Aktywuj Sprzężenie Zwrotne Spustów"
 
 msgid "OPTMNU_HAPTICS"
-msgstr ""
+msgstr "Opcje Sprzężenia Zwrotnego"
 
 # How the engine should handle haptics in old mods
 msgid "HAPMNU_COMPAT"
-msgstr ""
+msgstr "Poziom kompatybilności sprzężenia zwrotnego"
 
 msgid "OPTVAL_MATCH"
-msgstr ""
+msgstr "Dopasuj"
 
 msgid "OPTVAL_WARN"
-msgstr ""
+msgstr "Ostrzeż"
 
 msgid "HAPMNU_OPTIONS"
-msgstr ""
+msgstr "Dostosuj źródła sprzężenia zwrotnego"
 
 # Rumble when using ui elements
 msgid "HAPMNU_OPT_MENU"
-msgstr ""
+msgstr "Podczas używania menu"
 
 # Rumble when doing things such as pressing buttons and firing weapon
 msgid "HAPMNU_OPT_ACTION"
-msgstr ""
+msgstr "Podczas wykonywania akcji"
 
 # Rumble when dying and getting hurt
 msgid "HAPMNU_OPT_DAMAGE"
-msgstr ""
+msgstr "Podczas ponoszenia obrażeń"
 
 # Rumble from bumping into things, crossing lines, and quakes
 msgid "HAPMNU_OPT_WORLD"
-msgstr ""
+msgstr "Podczas interakcji ze światem"
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "Pauza"
 
 msgid "TAG_BACKPACK"
-msgstr ""
+msgstr "Plecak"
 
 msgid "TAG_ARMORBONUS"
 msgstr ""
@@ -5136,10 +5138,10 @@ msgid "TAG_INVULSPHERE"
 msgstr ""
 
 msgid "TAG_SOULSPHERE"
-msgstr ""
+msgstr "Sfera Dusz"
 
 msgid "TAG_MEGAPSHERE"
-msgstr ""
+msgstr "Megasfera"
 
 msgid "TAG_INVISSPHERE"
 msgstr ""
@@ -5166,13 +5168,13 @@ msgid "TAG_MEDIKIT"
 msgstr ""
 
 msgid "TAG_BLUECARD"
-msgstr ""
+msgstr "Niebieska Karta"
 
 msgid "TAG_YELLOWCARD"
-msgstr ""
+msgstr "Żółta Karta"
 
 msgid "TAG_REDCARD"
-msgstr ""
+msgstr "Czerwona Karta"
 
 msgid "TAG_BLUESKULL"
 msgstr ""
@@ -5214,13 +5216,13 @@ msgid "TAG_ZORCHPACK"
 msgstr ""
 
 msgid "TAG_CBLUEKEY"
-msgstr ""
+msgstr "Niebieski Klucz"
 
 msgid "TAG_CYELLOWKEY"
-msgstr ""
+msgstr "Żółty Klucz"
 
 msgid "TAG_CREDKEY"
-msgstr ""
+msgstr "Czerwony Klucz"
 
 # Option to make the view weapon sprites be lit exactly as the sector's
 # brightness. Without this option, weapon sprites are generally brighter
@@ -5247,3 +5249,6 @@ msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Opcje Dostępności"

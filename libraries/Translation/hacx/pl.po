@@ -2,16 +2,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-28 21:00+0000\n"
+"Last-Translator: Marazm Mamazm <brutdewelopment@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/hacx/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pl\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "QUITMSG1"
 msgstr "To robactwo jest za twarde dla ciebie?"
 
 msgid "QUITMSG"
-msgstr "Na pewo chcesz wyjść w środku akcji?"
+msgstr ""
+"Na pewno chcesz\\n"
+" wyjść w środku akcji?"
 
 msgid "QUITMSG2"
 msgstr "Próbujesz wyjść? I nazywasz siebie hakerem?"
@@ -303,7 +312,7 @@ msgid "GOTDAMPENER"
 msgstr "Podniosłeś Tłumik!"
 
 msgid "PD_CKEY"
-msgstr "Potrzebujesz Klucza C by uruchomić ten przedmiot."
+msgstr "Potrzebujesz Klucza C by uruchomić ten przedmiot!"
 
 msgid "PD_KEYCARD"
 msgstr "Potrzebujesz Karty Dostępu by uruchomić ten przedmiot!"
@@ -312,7 +321,7 @@ msgid "PD_PASSWORD"
 msgstr "Potrzebujesz Hasła by uruchomić ten przedmiot!"
 
 msgid "PD_BLUEZKEY"
-msgstr "Potrzebujesz Niebieskiego Klucza Z by zadziałało!"
+msgstr "Potrzebujesz Niebieskiego Klucza Z by to zadziałało"
 
 msgid "PD_REDZKEY"
 msgstr "Potrzebujesz Czerwonego Klucza Z by zadziałało!"
@@ -353,7 +362,7 @@ msgstr ""
 "Ludzkie płyny neuronowe są pokarmem dla\n"
 "tych robali! Nic dziwnego, że okolica jest\n"
 "spustoszona. Zgłoś się do podkomitetu.\n"
-"I uważaj na siebie..."
+"I uważaj na siebie...\n"
 
 msgid "X3TEXT"
 msgstr ""
@@ -380,6 +389,7 @@ msgstr ""
 "\n"
 "Nie możesz dotrzeć do podkomitetu, co\n"
 "oznacza, że musi być kompromis.\n"
+"\n"
 "\n"
 "Jesteś... sam."
 
@@ -447,7 +457,7 @@ msgid "TXT_HACXMAP31"
 msgstr "Śluza Osuszająca"
 
 msgid "STSTR_CLEV"
-msgstr "Wchodzisz do..."
+msgstr "Wchodzisz do...\n"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
@@ -459,8 +469,8 @@ msgstr "...skopię ci dupę!"
 # replacement is not being triggered.
 msgid "STSTR_BEHOLD"
 msgstr ""
-"niezniszczalność (V), siła (S), niewidzialność (I), kombinezon (R), mapa (A)"
-" lub gogle noktowizyjne (L)"
+"niezniszczalność (V), siła (S), niewidzialność (I), kombinezon (R), mapa (A) "
+"lub gogle noktowizyjne (L)?"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Bądźmy Poważni!"
@@ -472,11 +482,11 @@ msgid "STSTR_NCOFF"
 msgstr "Tryb Cybercięcia WYŁĄCZONY"
 
 msgid "STSTR_NOMUS"
-msgstr "Niemożliwy wybór"
+msgstr "Niemożliwy wybór "
 
 # Should probably not be translated...
 msgid "STSTR_MUS"
-msgstr "Podkręć Audio"
+msgstr "Podkręć Audio\n"
 
 msgid "STSTR_KFAADDED"
 msgstr "Inicjacja Trybu Drżenia I Zabijania"
@@ -509,7 +519,7 @@ msgstr ""
 "Na pewno? Nie dasz\n"
 "sobie rady hakerze!\n"
 "\n"
-"Wciśnij Y by zginąć."
+"Wciśnij Y by zginąć. \n"
 
 # For most languages the original Doom text should suffice.
 msgid "QSPROMPT"

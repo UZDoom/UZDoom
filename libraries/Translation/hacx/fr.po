@@ -2,28 +2,39 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-17 14:51+0000\n"
+"Last-Translator: Tapwave <kolb.rodrigue@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/uzdoom/hacx/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: fr\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "QUITMSG1"
-msgstr "Ces bestioles sont trop fortes pour vous?"
+msgstr "Ces bestioles sont trop fortes pour vous ?"
 
+#, fuzzy
 msgid "QUITMSG"
-msgstr "Etes-vous sûr de vouloir\\nvous déconnecter de l'action?"
+msgstr ""
+"Êtes-vous sûr de vouloir\\n"
+"vous déconnecter en pleine action ?"
 
 msgid "QUITMSG2"
-msgstr "On essaye de quitter?\\nvous prétendez être un hacker?"
+msgstr ""
+"On essaye de quitter ?\\n"
+"Vous prétendez être un hacker ?"
 
 msgid "QUITMSG3"
 msgstr "Reviens ici avant que je t'envoie un virus là où ça fait mal!"
 
 msgid "QUITMSG4"
-msgstr "Un vrai hacker ne se déconnecte pas en pleine action."
+msgstr "Un vrai hacker ne se déconnecte pas dans le feu de l'action."
 
 msgid "QUITMSG5"
-msgstr "Allez, on arrive presque à la meilleure partie!"
+msgstr "Allez, on arrive presque à la meilleure partie !"
 
 msgid "QUITMSG6"
 msgstr "Abandonne, et le cyberespace est foutu!"

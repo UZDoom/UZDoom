@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-17 14:51+0000\n"
+"Last-Translator: Tapwave <kolb.rodrigue@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/uzdoom/harmony/fr/"
+">\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: fr\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "NIGHTMARE"
 msgstr ""
@@ -16,22 +23,22 @@ msgid "AMSTR_MARKEDSPOT"
 msgstr "Repère marqué."
 
 msgid "PD_BLUEO"
-msgstr "Carte VERTE demandée."
+msgstr "Carte VERTE requise"
 
 msgid "PD_REDO"
-msgstr "Carte VIOLETTE demandée."
+msgstr "Carte VIOLETTE requise"
 
 msgid "PD_YELLOWO"
-msgstr "Carte JAUNE demandée."
+msgstr "Carte JAUNE requise"
 
 msgid "PD_BLUEK"
-msgstr "Clé VERTE demandée."
+msgstr "Clé VERTE requise"
 
 msgid "PD_YELLOWK"
-msgstr "Clé JAUNE demandée."
+msgstr "Clé JAUNE requise"
 
 msgid "PD_REDK"
-msgstr "Clé VIOLETTE demandée."
+msgstr "Clé VIOLETTE requise"
 
 msgid "GOTARMOR"
 msgstr "Armure récupérée."

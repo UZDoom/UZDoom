@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:51+0000\n"
-"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"PO-Revision-Date: 2025-11-17 14:51+0000\n"
+"Last-Translator: Tapwave <kolb.rodrigue@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-engine-strings/fr/>\n"
 "Language: fr\n"
@@ -18,35 +18,35 @@ msgid "PRESSKEY"
 msgstr "Appuyez sur une touche."
 
 msgid "SECRETMESSAGE"
-msgstr "Vous avez découvert un secret!"
+msgstr "Vous avez découvert un secret !"
 
 msgid "D_DEVSTR"
 msgstr "Mode inutile ON.\n"
 
 msgid "QUITMSG"
 msgstr ""
-"Voulez-vous vraiment \n"
-"quitter cet excellent jeu?"
+"Voulez-vous vraiment\n"
+"quitter cet excellent jeu ?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
 msgid "LOADNET"
 msgstr ""
 "Impossible de charger une partie\n"
-"pendant un jeu en réseau!\n"
+"pendant une partie en réseau!\n"
 "\n"
 "Appuyez sur une touche."
 
 msgid "QLOADNET"
 msgstr ""
 "Chargement Rapide impossible\n"
-"pendant un jeu en réseau!\n"
+"pendant une partie en réseau!\n"
 "\n"
 "Appuyez sur une touche."
 
 msgid "QSAVESPOT"
 msgstr ""
-"Vous n'avez pas choisi un\n"
+"Vous n'avez pas encore choisi un\n"
 "emplacement de sauvegarde!\n"
 "\n"
 "Appuyez sur une touche."
@@ -3017,7 +3017,6 @@ msgstr "Sorcier"
 msgid "MNU_WARLOCK"
 msgstr "Mage de Guerre"
 
-#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Archimage"
 

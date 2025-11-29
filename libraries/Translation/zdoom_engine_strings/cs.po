@@ -2,17 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:51+0000\n"
-"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
+"PO-Revision-Date: 2025-11-24 21:51+0000\n"
+"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-engine-strings/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: cs\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "PRESSKEY"
 msgstr "Stiskni klávesu."
@@ -21,10 +21,12 @@ msgid "SECRETMESSAGE"
 msgstr "Nalezl[@ao_cs] jsi skrýš!"
 
 msgid "D_DEVSTR"
-msgstr "Zbytečný režim ZAP."
+msgstr "Zbytečný režim ZAP.\n"
 
 msgid "QUITMSG"
-msgstr "Jsi si jist@[adj_cs], že chceš opustit tuto skvělou hru?"
+msgstr ""
+"Jsi si jist@[adj_cs], že chceš\n"
+"opustit tuto skvělou hru?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
@@ -4393,7 +4395,7 @@ msgid "GLMNU_DYNLIGHT"
 msgstr "Nastavení dynamických světel"
 
 msgid "GLMNU_PREFS"
-msgstr "Možnosti"
+msgstr "Preference"
 
 msgid "GLTEXMNU_TRIMSPREDGE"
 msgstr "Oříznout okraje spritů"

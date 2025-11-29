@@ -2,17 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:52+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-11-24 21:51+0000\n"
+"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-game-strings/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: cs\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "TXT_D1E1"
 msgstr "Po kolena v mrtvých"
@@ -27,7 +27,7 @@ msgstr ""
 # 
 # Proverbs 5:11
 msgid "TXT_D1E4"
-msgstr "Tvé tělo pozřeto"
+msgstr "Tvé tělo pozřeno"
 
 msgid "TXT_D2E1"
 msgstr "Peklo na zemi"
@@ -7829,7 +7829,7 @@ msgstr "Možná to je tím, žes neřekl „prosím“."
 
 # MAP06: Weran.
 msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
-msgstr "Každý toho tolik potřebuje."
+msgstr "Každý toho tolik potřebuje.\n"
 
 # 〃
 msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
@@ -7849,12 +7849,12 @@ msgstr "Tudy cesta nevede. Měli bychom se podívat dál."
 
 # MAP10: Macil (Possible reference to a song of The Beatles).
 msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
-msgstr "Kupředu, můj šampióne. Pojďme pana Ošklivu hezky nakopat."
+msgstr "Kupředu, můj šampióne. Pojďme pana Ošklivu hezky nakopat.\n"
 
 msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
 msgstr ""
 "Biomechanické? Tak to vysvětluje jejich zdánlivě nekonečné zásoby vojáků! A "
-"jejich špatnou náladu."
+"jejich špatnou náladu.\n"
 
 msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
 msgstr "Podlý sráč... Zab ho!"

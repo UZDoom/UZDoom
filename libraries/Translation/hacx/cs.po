@@ -2,17 +2,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-24 21:51+0000\n"
+"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/hacx/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: cs\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "QUITMSG1"
 msgstr "Jsou ty bugy na tebe moc tvrdé?"
 
 msgid "QUITMSG"
 msgstr ""
-"Jsi si jistý, že se chceš\n"
+"Jsi si jistý, že se chceš\\n"
 "zdáchnout z akce?"
 
 msgid "QUITMSG2"
@@ -34,7 +40,7 @@ msgid "QUITMSG7"
 msgstr "GENIE posílá své pozdravy, hajzle!"
 
 msgid "QUITMSG8"
-msgstr "Hmm. To by bylo pro hrdinství, Hackeře."
+msgstr "Hmm. Tolik k tvému hrdinství, Hackeře."
 
 msgid "QUITMSG9"
 msgstr "Co? Radši by ses vrátil do basy?"
@@ -313,7 +319,7 @@ msgid "PD_PASSWORD"
 msgstr "K přístupu potřebuješ heslo!"
 
 msgid "PD_BLUEZKEY"
-msgstr "Tohle bude fungovat jen s modrým Z-klíčem."
+msgstr "Tohle bude fungovat jen s modrým Z-klíčem"
 
 msgid "PD_REDZKEY"
 msgstr "Tohle bude fungovat jen s červeným Z-klíčem."
@@ -335,7 +341,8 @@ msgstr ""
 "\n"
 "Měl@[ao_cs] bys najít další terminál, projet\n"
 "se kyberprostorem, vysekat pár mutantům\n"
-"střeva a rychle z Dodge vypadnout!"
+"střeva a rychle z Dodge vypadnout!\n"
+"\n"
 
 msgid "X2TEXT"
 msgstr ""
@@ -353,7 +360,7 @@ msgstr ""
 "\n"
 "Tyhle bugy se krmí lidským mozkovým mokem!\n"
 "Není divu, že je ve čtvrti nějak prázdno.\n"
-"Nahlaš se zpátky u výboru. A dávej pozor..."
+"Nahlaš se zpátky u výboru. A dávej pozor...\n"
 
 msgid "X3TEXT"
 msgstr ""
@@ -449,7 +456,7 @@ msgid "TXT_HACXMAP31"
 msgstr "Sušící místnost"
 
 msgid "STSTR_CLEV"
-msgstr "Příjezd do..."
+msgstr "Příjezd do...\n"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
@@ -460,7 +467,7 @@ msgstr "...ti upeče prdel!"
 # string has to be defined and minimally altered so that the Dehacked
 # replacement is not being triggered.
 msgid "STSTR_BEHOLD"
-msgstr "nesmrt(V), Síla, nevId, Rad, mApa nebo světLo"
+msgstr "nesmrt(V), Síla, nevId, Rad, mApa nebo světLo?"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Teď je to vážné!"
@@ -476,7 +483,7 @@ msgstr "Nemožný výběr"
 
 # Should probably not be translated...
 msgid "STSTR_MUS"
-msgstr "Zesil to!"
+msgstr "Zesil to!\n"
 
 msgid "STSTR_KFAADDED"
 msgstr "Inicializuji režim Twitch and Kill"
