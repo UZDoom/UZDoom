@@ -1,0 +1,260 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_D2E1"
+msgstr "Hell On Earth"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr "No Rest for the Living"
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr "Level 1: Entryway"
+
+msgid "HUSTR_2"
+msgstr "Level 2: Underhalls"
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr "Level 3: The Gantlet"
+
+msgid "HUSTR_4"
+msgstr "Level 4: The Focus"
+
+msgid "HUSTR_5"
+msgstr "Level 5: The Waste Tunnels"
+
+msgid "HUSTR_6"
+msgstr "Level 6: The Crusher"
+
+msgid "HUSTR_7"
+msgstr "Level 7: Dead Simple"
+
+msgid "HUSTR_8"
+msgstr "Level 8: Tricks and Traps"
+
+msgid "HUSTR_9"
+msgstr "Level 9: The Pit"
+
+msgid "HUSTR_10"
+msgstr "Level 10: Refueling Base"
+
+# Alternative title:
+# Circle of Death
+msgid "HUSTR_11"
+msgstr "Level 11: 'O' of Destruction!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: The Factory"
+
+msgid "HUSTR_13"
+msgstr "Level 13: Downtown"
+
+msgid "HUSTR_14"
+msgstr "Level 14: The Inmost Dens"
+
+msgid "HUSTR_15"
+msgstr "Level 15: Industrial Zone"
+
+msgid "HUSTR_16"
+msgstr "Level 16: Suburbs"
+
+msgid "HUSTR_17"
+msgstr "Level 17: Tenements"
+
+msgid "HUSTR_18"
+msgstr "Level 18: The Courtyard"
+
+msgid "HUSTR_19"
+msgstr "Level 19: The Citadel"
+
+msgid "HUSTR_20"
+msgstr "Level 20: Gotcha!"
+
+msgid "HUSTR_21"
+msgstr "Level 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Level 22: The Catacombs"
+
+msgid "HUSTR_23"
+msgstr "Level 23: Barrels O' Fun"
+
+msgid "HUSTR_24"
+msgstr "Level 24: The Chasm"
+
+msgid "HUSTR_25"
+msgstr "Level 25: Bloodfalls"
+
+msgid "HUSTR_26"
+msgstr "Level 26: The Abandoned Mines"
+
+msgid "HUSTR_27"
+msgstr "Level 27: Monster Condo"
+
+msgid "HUSTR_28"
+msgstr "Level 28: The Spirit World"
+
+msgid "HUSTR_29"
+msgstr "Level 29: The Living End"
+
+msgid "HUSTR_30"
+msgstr "Level 30: Icon of Sin"
+
+msgid "HUSTR_31"
+msgstr "Level 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Level 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Level 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Level 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Level 33: Betray"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: The Earth Base"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: The Pain Labs"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: Canyon of The Dead"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: Hell Mountain"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: Vivisection"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: Inferno of Blood"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: Baron's Banquet"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: Tomb of Malevolence"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: March of The Demons"
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+"You have entered deeply into the infested\n"
+"starport. But something is wrong. The\n"
+"monsters have brought their own reality\n"
+"with them, and the starport's technology\n"
+"is being subverted by their presence.\n"
+"\n"
+"Ahead, you see an outpost of hell, a\n"
+"fortified zone. If you can get past it,\n"
+"You can penetrate into the haunted heart\n"
+"of the starbase and find the controlling\n"
+"switch which holds earth's population\n"
+"hostage."
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+"You have won! Your victory has enabled\n"
+"Humankind to evacuate earth and escape\n"
+"the nightmare. Now you are the only\n"
+"Human left on the face of the planet.\n"
+"Cannibal mutations, carnivorous aliens,\n"
+"and evil spirits are your only neighbors.\n"
+"You sit back and wait for death, content\n"
+"that you have saved your species.\n"
+"\n"
+"But then, Earth Control beams down a\n"
+"message from space: \"Sensors have located\n"
+"the source of the alien invasion. If you\n"
+"go there, you may be able to block their\n"
+"entry. The alien base is in the heart of\n"
+"your own home city, not far from the\n"
+"starport.\" Slowly and painfully you get\n"
+"up and return to the fray."
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+"You are at the corrupt heart of the city,\n"
+"surrounded by the corpses of your enemies.\n"
+"You see no way to destroy the creatures'\n"
+"entryway on this side, so you clench your\n"
+"teeth and plunge through it.\n"
+"\n"
+"There must be a way to close it on the\n"
+"other side. What do you care if you've\n"
+"got to go through hell to get to it?"
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+"The horrendous visage of the biggest\n"
+"demon you've ever seen crumbles before\n"
+"you, after you pump your rockets into\n"
+"his exposed brain. The monster shrivels\n"
+"up and dies, its thrashing limbs\n"
+"devastating untold miles of hell's\n"
+"surface.\n"
+"\n"
+"You've done it. The invasion is over.\n"
+"Earth is saved. Hell is a wreck. You\n"
+"wonder where bad folks will go when they\n"
+"die, now. Wiping the sweat from your\n"
+"forehead you begin the long trek back\n"
+"home. Rebuilding earth ought to be a\n"
+"lot more fun than ruining it was.\n"
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+"Congratulations, you've found the secret\n"
+"level! Looks like it's been built by\n"
+"Humans, rather than demons. You wonder\n"
+"who the inmates of this corner of hell\n"
+"will be."
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+"Congratulations, you've found the\n"
+"super secret level! You'd better\n"
+"blaze through this one!\n"
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+"Trouble was brewing again in your favorite\n"
+"vacation spot... Hell. Some Cyberdemon\n"
+"punk thought he could turn Hell into a\n"
+"personal amusement park, and make Earth\n"
+"the ticket booth.\n"
+"\n"
+"Well, that half-robot freak show didn't\n"
+"know who was coming to the fair. There's\n"
+"nothing like a shooting gallery full of\n"
+"hellspawn to get the blood pumping...\n"
+"\n"
+"Now the walls of the demon's labyrinth\n"
+"echo with the sound of his metallic limbs\n"
+"hitting the floor. His death moan gurgles\n"
+"out through the mess you left of his face.\n"
+"\n"
+"This ride is closed.\n"
+"\n"

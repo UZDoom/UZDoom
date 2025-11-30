@@ -1,0 +1,390 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:48+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Sat ruinat"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Cotropit"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Joampă"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Catacombă"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Deșert"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Pădure de Ferigi"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Rug"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Poarta Ofițerului"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Vistierie"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Piață"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Loc de Odihnă Veșnică"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Supliciu"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Arsenal"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Naos"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Capelă"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Abator"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Gardian Întunecat"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Fort Glaciar"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Cetatea Întunecată"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Tranzit"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Mai sus și Mai jos"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Ceața Morții"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Castelul Durerii"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Groapă de Scurgere"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Roza"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Ștergându-ți fața cu mâna tremurândă, încerci să\n"
+"îți limpezești mintea pentru ceea ce urmează în\n"
+"continuare...\n"
+"\n"
+"...și să uiți ce ai lăsat în urmă.\n"
+"\n"
+"În depărtare, meterezele unui falnic castel par\n"
+"să spintece cerul, iar mirosul \n"
+"decadenței se răspândește de la mormintele \n"
+"profanate ale nenumăraților morți.\n"
+"\n"
+"Numărând atent ce mai rămâne din artefactele tale,\n"
+"încerci să te reasiguri că vor fi suficiente. Până la\n"
+"urmă, vor trebui să fie de ajuns, nu-i așa?\n"
+"\n"
+"\n"
+"Nu-i așa?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Cu siguranță că sufletele blestemaților populează\n"
+"această lume, având în vedere faptul că nimic drept\n"
+"și bun nu poate supraviețui aici pentru multă vreme.\n"
+"\n"
+"Dar ceea ce a trecut poate să fie doar o umbră\n"
+"slabă față de ceea ce îți blochează calea acum: \n"
+"Însăși citadela întunecată.\n"
+"\n"
+"Groasele blocuri ale catedralei stopează totul,\n"
+"mai puțin întrezăririle citadelei însăși, dar ceea ce\n"
+"poate fi văzut vorbesțe doar în șoapte siflante ale\n"
+"lentei, reci morți...\n"
+"\n"
+"\n"
+"\n"
+"...pentru cei norocoși."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Te regăsești încă o dată în marea sală a sferei\n"
+"haosului, ca și cum timpul a stat în loc de când ai\n"
+"cutreierat printre aceste umbre ultima dată.\n"
+"\n"
+"Dar în mod straniu, ceva e diferit, o liniște acolo\n"
+"unde cândva erau șoapte încete, o senzație că\n"
+"ești urmărit de ochi ascunși...\n"
+"\n"
+"...ochi care ascund intenții nefaste."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Ultima dată ai apucat sfera haosului, și ai ținut-o \n"
+"cu mâini tremurânde. Acum mâinile tale\n"
+"tremură cu ceva mai mult decât avariție, și ochii\n"
+"se imbucă cu sete de putere.\n"
+"\n"
+"Dacă nici măcar puterea sferei nu e suficientă\n"
+"pentru a te proteja de forțele întunericului, poate\n"
+"că e mai bine lăsată neatinsă, iar promisiunea ei\n"
+"neținută.\n"
+"\n"
+"\n"
+"\n"
+"Dar apoi, tu n-ai fost niciodată cineva care să se\n"
+"dea înlături de la o provocare..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...și alți jucători așteaptă.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Îndrăznești să lupți în camera de așteptare?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Pentru asta, vei muri!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Cascada e deschisă"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Cascada e închisă"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "O ușă s-a deschis în capelă"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Asta e ciudat..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Trei părți din puzzle încă rămân"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Două părți din puzzle încă rămân"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "O parte din puzzle încă rămâne"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Puzzle-ul e rezolvat"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Nu ai rezolvat puzzle-ul"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Podeaua nu e sigură!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "O treime din puzzle e rezolvată"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Două treimi din puzzle sunt rezolvate"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Auzi o platformă mișcându-se în depărtare"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "E gata..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Nu ai rezolvat puzzle-ul"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Te avertizez..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Încăpățânat, nu-i așa?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Și prost, pe deasupra"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "O pătrime din puzzle e rezolvată"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Proastă alegere..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Simbolurile nu sunt aliniate"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Ușile nu se vor deschide de pe partea asta"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Ușa e încuiată pe dinafară"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Sacrilegiu!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Ai profanat mormântul lui Eric!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Iar acum, mori!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "O treime din puzzle e rezolvată"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Două treimi din puzzle sunt rezolvate"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Cripta e deschisă"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Păzește-te de mormântul păianjenului"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Auzi o platformă ridicându-se afară"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Te simți norocos?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "N-ai ghicit!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Ai ghicit"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Te poți ocupa de scripting pentru nivelul meu?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Nu-mi atinge bomboana"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Dă-mi dulcele, iubito."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Film într-o oră?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Nici măcar nu primesc piatră de mormânt - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Fie ca sângele să nu fie vărsat"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Fie ca nicio mână să nu fie ridicată în furie"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Cine cutează să-mi perturbe odihna?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Calea e deschisă"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Mai ai "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20butoane rămase"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Mai ai doar "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20buton rămas"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Ieșirea e deschisă"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Ușile nu se vor deschide de pe partea asta"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Ușile sunt deschise..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...dacă ești pregătit"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "O ușă s-a deschis"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "la Capelă"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Un pod a fost ridicat"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "pe Abator"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "O scară a fost construită"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "pe Gardianul Întunecat"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Un mecanism a fost introdus"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20mecanisme au fost introduse"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "O baricadă s-a deschis"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "pe Cloaca"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Calea e deschisă"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Ușa e încuiată din interior"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Cutezi să jefuiești mormântul"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "călăului?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Pregătește-te să mori"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Mai ai "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20butoane de găsit"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Mai ai doar "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20buton rămas"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Calea către turn e deschisă"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Calea e deschisă"

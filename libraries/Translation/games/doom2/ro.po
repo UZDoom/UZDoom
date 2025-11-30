@@ -1,0 +1,244 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:23+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "TXT_D2E1"
+msgstr "Iadul pe Pământ"
+
+msgid "TXT_D2E2"
+msgstr "Cei vii Fără de Odihnă"
+
+msgid "HUSTR_1"
+msgstr "Nivelul 1: Intrarea"
+
+msgid "HUSTR_2"
+msgstr "Nivelul 2: Pasaje subterane"
+
+msgid "HUSTR_3"
+msgstr "Nivelul 3: Stroiul"
+
+msgid "HUSTR_4"
+msgstr "Nivelul 4: Focarul"
+
+msgid "HUSTR_5"
+msgstr "Nivelul 5: Tuneluri de deșeuri"
+
+msgid "HUSTR_6"
+msgstr "Nivelul 6: Zdrobitorul"
+
+msgid "HUSTR_7"
+msgstr "Nivelul 7: Mortal de simplu"
+
+msgid "HUSTR_8"
+msgstr "Nivelul 9: Surprize și capcane"
+
+msgid "HUSTR_9"
+msgstr "Nivelul 9: Groapa"
+
+msgid "HUSTR_10"
+msgstr "Nivelul 10: Baza de alimentare"
+
+msgid "HUSTR_11"
+msgstr "Nivelul 11: Cercul distrugerii"
+
+msgid "HUSTR_12"
+msgstr "Nivelul 12: Fabrica"
+
+msgid "HUSTR_13"
+msgstr "Nivelul 13: Centru urban"
+
+msgid "HUSTR_14"
+msgstr "Nivelul 14: Cele mai intime bârloguri"
+
+msgid "HUSTR_15"
+msgstr "Nivelul 15: Zona industrială"
+
+msgid "HUSTR_16"
+msgstr "Nivelul 16: Suburbi"
+
+msgid "HUSTR_17"
+msgstr "Nivelul 17: Proprietăți"
+
+msgid "HUSTR_18"
+msgstr "Nivelul 18: Curtea"
+
+msgid "HUSTR_19"
+msgstr "Nivelul 19: Cetatea"
+
+msgid "HUSTR_20"
+msgstr "Nivelul 20: Te-am prins!"
+
+msgid "HUSTR_21"
+msgstr "Nivelul 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Nivelul 22: Catacombe"
+
+msgid "HUSTR_23"
+msgstr "Nivelul 23: Butoaiele veseliei"
+
+msgid "HUSTR_24"
+msgstr "Nivelul 24: Hăul"
+
+msgid "HUSTR_25"
+msgstr "Nivelul 25: Cascade de sânge"
+
+msgid "HUSTR_26"
+msgstr "Nivelul 26: Minele părăsite"
+
+msgid "HUSTR_27"
+msgstr "Nivelul 27: Casa monștrilor"
+
+msgid "HUSTR_28"
+msgstr "Nivelul 28: Lumea duhurilor"
+
+msgid "HUSTR_29"
+msgstr "Nivelul 29: Sfârșitul întregii vieți"
+
+msgid "HUSTR_30"
+msgstr "Nivelul 30: Icoana păcatelor"
+
+msgid "HUSTR_31"
+msgstr "Nivelul 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Nivelul 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Nivelul 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Nivelul 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Nivelul 33: Trădare"
+
+msgid "NHUSTR_1"
+msgstr "Nivelul 1: Baza terestră"
+
+msgid "NHUSTR_2"
+msgstr "Nivelul 2: Laboratoarele durerii"
+
+msgid "NHUSTR_3"
+msgstr "Nivelul 3: Canionul morților"
+
+msgid "NHUSTR_4"
+msgstr "Nivelul 4: Muntele infernal"
+
+msgid "NHUSTR_5"
+msgstr "Nivelul 5: Vivisecție"
+
+msgid "NHUSTR_6"
+msgstr "Nivelul 6: Infern sângeriu"
+
+msgid "NHUSTR_7"
+msgstr "Nivelul 7: Banchetul baronilor"
+
+msgid "NHUSTR_8"
+msgstr "Nivelul 8: Mormântul răutății"
+
+msgid "NHUSTR_9"
+msgstr "Nivelul 9: Marșul demonilor"
+
+msgid "C1TEXT"
+msgstr ""
+"Ai pătruns adânc în portul stelar. Dar ceva nu e\n"
+"în regulă. Monștrii și-au adus propria realitate cu\n"
+"ei, iar tehnologia portului stelar se corupe treptat\n"
+"datorită prezenței lor.\n"
+"\n"
+"În fața ta, vezi un avanpost al infernului, o zonă\n"
+"fortificată. Dacă poți trece de ea, poți străpunge\n"
+"inima bazei stelare bântuite și să găsești panoul\n"
+"de control care ține captivă populația Pământului."
+
+msgid "C2TEXT"
+msgstr ""
+"Ai triumfat! Victoria ta a permis omenirii să\n"
+"evacueze Pământul și să scape de coșmar. Acum\n"
+"ești ultimul Om rămas pe fața Pământului. Mutații\n"
+"canibale, extratereștri carnivori, și spirite malefice\n"
+"sunt tot ceea te înconjoară.\n"
+"\n"
+"Te așezi și aștepti să mori, mulțumit de faptul că\n"
+"ai reușit să salvezi rasa umană.\n"
+"\n"
+"Apoi, Baza de Control trimite un mesaj din\n"
+"spațiu: \"Senzorii au identificat sursa invaziei\n"
+"extraterestre. Dacă te duci acolo s-ar putea să\n"
+"poți să le blochezi intrarea. Baza extraterestră este\n"
+"în inima orașului tău natal, nu foarte departe de \n"
+"portul stelar.\" Încet și îndurerat, te ridici și te întorci\n"
+"la luptă."
+
+msgid "C3TEXT"
+msgstr ""
+"Ești în inima coruptă a orașului, înconjurat de \n"
+"cadavrele inamicilor tăi. Nu vezi nicio modalitate\n"
+"de a bloca intrarea creaturilor pe partea asta, așa\n"
+"că strângi din dinți si treci prin portal.\n"
+"\n"
+"Trebuie să existe o cale de a opri invazia pe cealaltă\n"
+"parte. Ce-ți pasă că va trebui să treci prin infern ca \n"
+"să o descoperi?"
+
+msgid "C4TEXT"
+msgstr ""
+"Oribila față a celui mai mare demon pe care l-ai\n"
+"văzut în viața ta se prăbușeste chiar sub nasul tău,\n"
+"după ce pompezi rachete în creierul expus.\n"
+"Monstrul se stafidește și în final moare, mâinile\n"
+"lui imense distrugând mile întregi din suprafața\n"
+"infernului.\n"
+"\n"
+"Ai reușit. Invazia a luat sfârșit. Pământul e salvat.\n"
+"Infernul e făcut zob. Acum te întrebi unde merg \n"
+"oamenii răi după ce mor. Stergându-ți transpirația\n"
+"de pe frunte începi expediția lungă de întoarcere \n"
+"spre casă. Reconstruirea Pământului va fi cu \n"
+"siguranță mai distractivă decât a fost distrugerea lui.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Felicitări, ai găsit nivelul secret!\n"
+"Pare să fii fost construit de oameni mai degrabă\n"
+"decât demoni. Te întrebi cine ar putea fi deținuții\n"
+"acestuit colț de infern."
+
+msgid "C6TEXT"
+msgstr ""
+"Felicitări, ai găsit nivelul super secret! Ai face bine\n"
+"să termini rapid cu el!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Se pare că problemele au început să apară în locul\n"
+"tău de vacanță preferat... Infernul. Ceva șmecher\n"
+"de Ciberdemon a crezut că poate să-și facă din Infern\n"
+"propriul parc de distracții, și Pământul chioșc de bilete.\n"
+"\n"
+"Ei, acea urâțenie pe jumătate robot nu a realizat\n"
+"cine urma să li se alăture. Nimic nu e mai bun decât\n"
+"un poligon plin cu creaturi infernale pentru a pune\n"
+"sângele în mișcare...\n"
+"\n"
+"Acum zidurile labirintului fac ecou din\n"
+"zgomotul membrelor matahalei care\n"
+"se prăbușește la pământ. Ultimul său geamăt\n"
+"gâlgâie prin mizeria în care i-ai transformat fața.\n"
+"\n"
+"Călătoria s-a încheiat.\n"
+"\n"

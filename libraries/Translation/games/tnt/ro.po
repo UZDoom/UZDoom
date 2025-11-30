@@ -1,0 +1,185 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:32+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Diavoluția"
+
+msgid "THUSTR_1"
+msgstr "Nivelul 1: Control sisteme"
+
+msgid "THUSTR_2"
+msgstr "Nivelul 2: Oameni la grătar"
+
+msgid "THUSTR_3"
+msgstr "Nivelul 3: Uzina"
+
+msgid "THUSTR_4"
+msgstr "Nivelul 4: Gaura de vierme"
+
+msgid "THUSTR_5"
+msgstr "Nivelul 5: Hangar"
+
+msgid "THUSTR_6"
+msgstr "Nivelul 6: Sezon deschis"
+
+msgid "THUSTR_7"
+msgstr "Nivelul 7: Închisoare"
+
+msgid "THUSTR_8"
+msgstr "Nivelul 8: Metal"
+
+msgid "THUSTR_9"
+msgstr "Nivelul 9: Bastion"
+
+msgid "THUSTR_10"
+msgstr "Nivelul 10: Răscumpărare"
+
+msgid "THUSTR_11"
+msgstr "Nivelul 11: Stația de depozitare"
+
+msgid "THUSTR_12"
+msgstr "Nivelul 12: Crater"
+
+msgid "THUSTR_13"
+msgstr "Nivelul 13: Prelucrarea deșeurilor nucleare"
+
+msgid "THUSTR_14"
+msgstr "Nivelul 14: Oțelărie"
+
+msgid "THUSTR_15"
+msgstr "Nivelul 15: Zona moartă"
+
+msgid "THUSTR_16"
+msgstr "Nivelul 16: În adâncuri"
+
+msgid "THUSTR_17"
+msgstr "Nivelul 17: Aria de procesare"
+
+msgid "THUSTR_18"
+msgstr "Nivelul 18: Moara"
+
+msgid "THUSTR_19"
+msgstr "Nivelul 19: Livrare/reapariție"
+
+msgid "THUSTR_20"
+msgstr "Nivelul 20: Prelucrare centrală"
+
+msgid "THUSTR_21"
+msgstr "Nivelul 21: Centru administrativ"
+
+msgid "THUSTR_22"
+msgstr "Nivelul 22: Habitat"
+
+msgid "THUSTR_23"
+msgstr "Nivelul 23: Proiect minier satelitar"
+
+msgid "THUSTR_24"
+msgstr "Nivelul 24: Carieră"
+
+msgid "THUSTR_25"
+msgstr "Nivelul 25: Cuibul Baronului"
+
+msgid "THUSTR_26"
+msgstr "Nivelul 26: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Nivelul 27: Muntele Durerii"
+
+msgid "THUSTR_28"
+msgstr "Nivelul 28: Naiba"
+
+msgid "THUSTR_29"
+msgstr "Nivelul 29: Râul Styx"
+
+msgid "THUSTR_30"
+msgstr "Nivelul 30: Ultimul apel"
+
+msgid "THUSTR_31"
+msgstr "Nivelul 31: Faraon"
+
+msgid "THUSTR_32"
+msgstr "Nivelul 32: Caraibe"
+
+msgid "T1TEXT"
+msgstr ""
+"Ai luptat pentru a putea ieși din laboratoarele\n"
+"experimentale. Se pare că UAC iar au făcut-o.\n"
+"Cu marea lor cifră de afaceri, ar trebui să fie tare\n"
+"greu pentru bătrânul UAC să investească în\n"
+"asigurare de sănătate corporatistă bună.\n"
+"\n"
+"În față este complexul militar, care acum roiește\n"
+"de orori bolnave care abia așteaptă să-și înfigă\n"
+"dinții în tine. Cu ceva noroc, complexul mai are\n"
+"niște artilerie de război pe undeva."
+
+msgid "T2TEXT"
+msgstr ""
+"Auzi rodajul mașinăriilor grele din față. Speri să nu\n"
+"tipărească mai multe creaturi infernale, dar ești\n"
+"gata să arzi o întreagă turmă dacă e necesar.\n"
+"\n"
+"Posibil să planifice un festin sângeros, dar te simți\n"
+"la fel de dur precum două mii de maniaci vârâți\n"
+"într-un singur ucigaș dement.\n"
+"\n"
+"N-ai de gând să cazi la pământ prea ușor."
+
+msgid "T3TEXT"
+msgstr ""
+"Peisajul care se întinde deasupra propriilor tăi ochi\n"
+"arată al naibii de familiar. Miroase și cunoscut --\n"
+"asemeni excrementului prăjit. Nu ți-a plăcut locul\n"
+"acesta nici înainte, și în mod categoric nu\n"
+"intenționezi să îți placă nici acum. \n"
+"\n"
+"Cu cât te gândești mai mult la asta, cu atât mai nervos devii.\n"
+"Scuturând arma, un rânjet malefic îți gâdilă fața.\n"
+"Timpul să notezi niște nume."
+
+msgid "T4TEXT"
+msgstr ""
+"Din senin, totul e limpede, de la un capăt al\n"
+"orizontului până la celălalt. Agonizantul ecou al\n"
+"Infernului dispare, munții de cadavre ai monștrilor\n"
+"încep să se evapore odată cu duhoarea malefică\n"
+"ce a umplut aerul. Sheesh, poate că ai reușit. Oare\n"
+"chiar să fii triumfat?\n"
+"\n"
+"Ceva vuiește în depărtare. O lumină albastră începe\n"
+"să strălucească în craniul zdrobit al scuipătorului\n"
+"de demoni."
+
+msgid "T5TEXT"
+msgstr ""
+"Acum ce mai e? Arată total diferit. Asemănător\n"
+"oarecum cu casa Regelui Tut. Păi, orice ar fi aici\n"
+"n-are cum să fie mai rău ca de obicei. Sau poate ar\n"
+"fi cel mai bine să lași zeii adormiți să zacă..."
+
+msgid "T6TEXT"
+msgstr ""
+"Timpul pentru o vacanță. Ai sfărâmat intestinele\n"
+"infernului și vai, în sfărșit ești pregătit să iei o\n"
+"pauză. Murmuri în sine, poate ar putea și altcineva\n"
+"să trimită Infernul la plimbare data viitoare.\n"
+"\n"
+"În față e un oraș tăcut, cu ape curgătoare line, și \n"
+"cel mai probabil fără creaturi infernale.\n"
+"\n"
+"În timp ce pășești în afara transportului, auzi pașii\n"
+"grei ai pantofilor de fier ai ciberdemonului."

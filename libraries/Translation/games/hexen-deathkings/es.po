@@ -1,0 +1,406 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:44+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: es\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Pueblo en ruinas"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Decaimiento"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Pozo de Barro"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Catacumba"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Páramos"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Brackenwood"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Pira Funeraria"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Puerta del Alguacil"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Tesorería"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Plaza del Mercado"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Lugar de Descanso Eterno"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Prueba"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Armería"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "La Nave"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Capilla"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Matadero"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Guardia Oscura"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Cloaca"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Tierra de Hielo"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Fortaleza Oscura"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Sala de Espera"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Arriba y Abajo"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Niebla de Muerte"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Castillo del Dolor"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Pozo de Residuos"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "La Rosa"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Pasando una mano temblorosa por\n"
+"tu cara sangrante, intentas \n"
+"aclarar tu mente para lo que\n"
+"se avecina...\n"
+"\n"
+"...y olvidar lo que quedó detrás.\n"
+"\n"
+"A la distancia, las murallas rígidas\n"
+"de un gran complejo de castillos\n"
+"parecen rasgar el cielo y el hedor\n"
+"putrefacto flota de las tumbas\n"
+"violadas de incontables muertos.\n"
+"\n"
+"Contando cuidadosamente lo\n"
+"que queda de tus artefactos,\n"
+"tratas de asegurarte que será\n"
+"suficiente, después de todo,\n"
+"tiene que ser suficiente, ¿o no?\n"
+"\n"
+"¿o no?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Seguramente las almas de los\n"
+"condenados habitan este mundo,\n"
+"porque nada bueno o justo podría\n"
+"sobrevivir aquí por mucho tiempo.\n"
+"\n"
+"Pero lo que has pasado antes solo\n"
+"puede ser una sombra pálida de lo\n"
+"que te impide el paso ahora: la\n"
+"mismísima ciudadela oscura.\n"
+"\n"
+"La silueta macabra de la catedral\n"
+"bloquea todo menos pequeñas\n"
+"partes de la ciudadela en si, pero\n"
+"lo que se aprecia, habla en susurros\n"
+"sibilantes de muerte fría y prolongada ...\n"
+"\n"
+"\n"
+"\n"
+"...para los afortunados."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Una vez más te encuentras en el\n"
+"gran salón de la esfera del caos,\n"
+"como si no hubiera pasado el\n"
+"tiempo desde la última vez que\n"
+"te moviste entre estas sombras.\n"
+"\n"
+"Pero algo es inquietantemente\n"
+"diferente, hay silencio donde\n"
+"antes hubo susurros suaves,\n"
+"la sensación de ser observado\n"
+"por ojos ocultos....\n"
+"\n"
+"...ojos que escudan una intención\n"
+"maléfica."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Una vez tomaste la esfera\n"
+"del caos, con manos\n"
+"temblorosas. Ahora tus manos\n"
+"tiemblan con algo más que\n"
+"avaricia y el miedo se mezcla\n"
+"con el hambre de poder.\n"
+"\n"
+"Si aún el poder de la esfera no\n"
+"es suficiente para protegerte\n"
+"de las fuerzas de la oscuridad,\n"
+"tal vez es mejor dejarlo intacto\n"
+"y su promesa incumplida.\n"
+"\n"
+"\n"
+"\n"
+"Sin embargo, nunca tú nunca has\n"
+"rechazado un desafío..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...y otros jugadores esperan.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "¿Te atreves a luchar en la sala de preparación?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Por eso, ¡deberás morir!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "La cascada se ha abierto"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "La cascada está bloqueada"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Una puerta se abrió en la Capilla"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Eso es extraño..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Quedan tres partes más del acertijo"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Quedan dos partes más del acertijo"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Queda una parte más del acertijo"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "El acertijo está completo"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "No has completado el acertijo"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "¡El suelo no es seguro!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Un tercio del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Dos tercios del acertijo se han resuelto"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Escuchas una plataforma moverse a la distancia"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Está terminado..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "No has completado el acertijo"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Te lo advierto..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Eres obstinado, ¿verdad?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Y estúpido, también"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Un cuarto del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Mala decisión..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Los símbolos no están alineados"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "La puerta no abrirá por este lado"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "La puerta está atrancada por fuera"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "¡Sacrilegio!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "¡Has profanado la tumba de Erick!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "¡Y ahora morirás!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Un tercio del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Dos tercios del acertijo se han resuelto"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "La cripta ahora está abierta"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Cuidado con la tumba de la araña"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Escuchas una plataforma erguirse afuera"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "¿Te sientes afortunado?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "¡Adivinaste incorrectamente!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Buena elección"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "¿Podrías hacer todo el script para mi nivel?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "No toques mi gloppy"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "¡¿¡¿¡¿ Vorpal ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Dame un poco de azúcar, baby"
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "¿Película en una hora?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Ni siquiera tengo mi propia lápida - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Que no se derrame sangre"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Que ninguna mano se levante con ira"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "¿Quién se atreve a perturbar nuestro sueño?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "El camino está abierto"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Aún tienes "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20interruptores restantes"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Tienes solo "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20interruptor restante"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "La salida está abierta"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Las puertas no se abren desde este lado"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Las puertas están abiertas..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...si estás listo"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Se ha abierto una puerta"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "En la capilla"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Se ha construido un puente"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "En el matadero"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Se ha construido una escalera"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "En la guardia oscura"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Un engranaje en su lugar"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20engranajes en su lugar"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "La barricada se ha abierto"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "En la Cloaca"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "El camino está abierto"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "La puerta está trabada desde el otro lado"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "¿Te atreves a saquear la tumba"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "del ejecutor?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "¡Prepárate para morir!"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Aún tienes "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20interruptores más que encontrar"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Tienes solo "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20interruptor restante"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "El camino a la torre está abierto"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "El camino está abierto"

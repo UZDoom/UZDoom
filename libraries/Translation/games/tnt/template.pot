@@ -1,0 +1,181 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_TNT_EP"
+msgstr ""
+
+msgid "THUSTR_1"
+msgstr ""
+
+msgid "THUSTR_2"
+msgstr ""
+
+msgid "THUSTR_3"
+msgstr ""
+
+msgid "THUSTR_4"
+msgstr ""
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr ""
+
+msgid "THUSTR_6"
+msgstr ""
+
+msgid "THUSTR_7"
+msgstr ""
+
+msgid "THUSTR_8"
+msgstr ""
+
+msgid "THUSTR_9"
+msgstr ""
+
+msgid "THUSTR_10"
+msgstr ""
+
+msgid "THUSTR_11"
+msgstr ""
+
+msgid "THUSTR_12"
+msgstr ""
+
+msgid "THUSTR_13"
+msgstr ""
+
+msgid "THUSTR_14"
+msgstr ""
+
+msgid "THUSTR_15"
+msgstr ""
+
+msgid "THUSTR_16"
+msgstr ""
+
+msgid "THUSTR_17"
+msgstr ""
+
+msgid "THUSTR_18"
+msgstr ""
+
+msgid "THUSTR_19"
+msgstr ""
+
+msgid "THUSTR_20"
+msgstr ""
+
+msgid "THUSTR_21"
+msgstr ""
+
+msgid "THUSTR_22"
+msgstr ""
+
+msgid "THUSTR_23"
+msgstr ""
+
+msgid "THUSTR_24"
+msgstr ""
+
+msgid "THUSTR_25"
+msgstr ""
+
+msgid "THUSTR_26"
+msgstr ""
+
+msgid "THUSTR_27"
+msgstr ""
+
+msgid "THUSTR_28"
+msgstr ""
+
+msgid "THUSTR_29"
+msgstr ""
+
+msgid "THUSTR_30"
+msgstr ""
+
+msgid "THUSTR_31"
+msgstr ""
+
+msgid "THUSTR_32"
+msgstr ""
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"

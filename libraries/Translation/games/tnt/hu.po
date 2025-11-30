@@ -1,0 +1,175 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:18+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: hu\n"
+
+msgid "THUSTR_1"
+msgstr "1. Pálya: Rendszervezérlő"
+
+msgid "THUSTR_2"
+msgstr "2. Pálya: Emberi grill"
+
+msgid "THUSTR_3"
+msgstr "3. Pálya: Energiavezérlő"
+
+msgid "THUSTR_4"
+msgstr "4. Pálya: Féreglyuk"
+
+msgid "THUSTR_5"
+msgstr "5. Pálya: Horog"
+
+msgid "THUSTR_6"
+msgstr "6. Pálya: Vadászszezon"
+
+msgid "THUSTR_7"
+msgstr "7. Pálya: Börtön"
+
+msgid "THUSTR_8"
+msgstr "8. Pálya: Fém"
+
+msgid "THUSTR_9"
+msgstr "9. Pálya: Erőd"
+
+msgid "THUSTR_10"
+msgstr "10. Pálya: Megváltás"
+
+msgid "THUSTR_11"
+msgstr "11. Pálya: Raktárépület"
+
+msgid "THUSTR_12"
+msgstr "12. Pálya: Kráter"
+
+msgid "THUSTR_13"
+msgstr "13. Pálya: Atomhulladék-feldolgozó"
+
+msgid "THUSTR_14"
+msgstr "14. Pálya: Acélművek"
+
+msgid "THUSTR_15"
+msgstr "15. Pálya: A holtak zónája"
+
+msgid "THUSTR_16"
+msgstr "16. Pálya: A legmélyebb pont"
+
+msgid "THUSTR_17"
+msgstr "17. Pálya: Feldolgozó"
+
+msgid "THUSTR_18"
+msgstr "18. Pálya: Malom"
+
+msgid "THUSTR_19"
+msgstr "19. Pálya: Szállítás/újraéledés"
+
+msgid "THUSTR_20"
+msgstr "20. Pálya: Központi feldolgozó"
+
+msgid "THUSTR_21"
+msgstr "21. Pálya: Adminisztrációs központ"
+
+msgid "THUSTR_22"
+msgstr "22. Pálya: Élőhely"
+
+msgid "THUSTR_23"
+msgstr "23. Pálya: Holdbánya-projekt"
+
+msgid "THUSTR_24"
+msgstr "24. Pálya: Kőbánya"
+
+msgid "THUSTR_25"
+msgstr "25. Pálya: A báró odúja"
+
+msgid "THUSTR_26"
+msgstr "26. Pálya: Ballisztüx"
+
+msgid "THUSTR_27"
+msgstr "27. Pálya: A Gyötrelem Hegye"
+
+msgid "THUSTR_28"
+msgstr "28. Pálya: Rosseb"
+
+msgid "THUSTR_29"
+msgstr "29. Pálya: A Sztüx folyó"
+
+msgid "THUSTR_30"
+msgstr "30. Pálya: Utolsó esély"
+
+msgid "THUSTR_31"
+msgstr "31. Pálya: Fáraó"
+
+msgid "THUSTR_32"
+msgstr "32. Pálya: Karib-térség"
+
+msgid "T1TEXT"
+msgstr ""
+"Végig küzdötted magad a fertőzött kísérleti laborokon. \n"
+"Úgy néz ki a UAC épületek láttak jobb napokat is.\n"
+"Szegény UAC gondokba fog ütközni amikor a \n"
+"munkavállalókra akar majd kötni egészségbiztosítást.\n"
+"\n"
+"Előtted tornyosul a katonai-ipari komplexum, amelynek\n"
+"borzasztó lakói alig várják, hogy beléd kóstolhassanak.\n"
+"Némi szerencsével maradt még ellenük felhasználható fegyverzet."
+
+msgid "T2TEXT"
+msgstr ""
+"Már messziről hallod az üzemi gépek zaját.\n"
+"Csak mered remélni, hogy a gépsorok nem\n"
+"démonfajzatokat gyártanak. Legbelül azonban\n"
+"készen állsz arra is hogy tömegével zúzod össze őket.\n"
+"Valószínűleg te vagy a potenciális díszlakoma,\n"
+"de érzed magadban kétezer másik katona erejét.\n"
+"\n"
+"Nem fogod könnyen adni az irhádat."
+
+msgid "T3TEXT"
+msgstr ""
+"Az előtted heverő kilátás rohadtul ismerősnek tűnik.\n"
+"És a szaga is -- égetett ürülék. Eddig sem voltál oda a helyért,\n"
+"de immáron kifejezetten gyűlölöd. Minél jobban agyalsz rajta,\n"
+"annál jobban felborzolja az idegeidet.\n"
+"Ahogy előveszed a fegyvered, egy gonosz mosoly ül ki az arcodra.\n"
+"Ideje, hogy megmutasd nekik ki az úr."
+
+msgid "T4TEXT"
+msgstr ""
+"Hirtelen minden elcsendesül amerra a szem ellát.\n"
+"A pokol kínzó visszahangja immáron a múlté, \n"
+"a rémálomszerű égbolt kékre változik, a halmokba \n"
+"mészárolt démon hullák kezdenek elpárologni a terjengő bűzzel együtt.\n"
+"Úristen, talán mégis sikerült. Tényleg győztél?\n"
+"\n"
+"Valami dörgést hallasz a távolban.\n"
+"Egy kék fény kezd világítani a legyőzött démon-köpő \n"
+"koponyájának romjai közül."
+
+msgid "T5TEXT"
+msgstr ""
+"Most mi lesz? Teljesen megváltozott. Olyan mint\n"
+"Tutanhamon Király lakosztálya. Legalább, bármi\n"
+"ami itt tartózkodik csak nem lehet rosszabb\n"
+"a szokásosnál. Vagy mégis? Vagy talán az a legjobb\n"
+"ha hagyjuk hogy a fekvő istenek aludjanak.."
+
+msgid "T6TEXT"
+msgstr ""
+"Itt az idő a vakációra. Szétrepesztetted a Pokol\n"
+"beleit, és a fenébe is, megérdemled a pihenést!\n"
+"Magadhoz motyogsz,\n"
+"Talán legközelebb valaki más rúghatná seggbe a Pokol valagát.\n"
+"Elől egy csendes város rajzolódik ki,\n"
+"békésen csobogó vízzel, furcsa épületekkel, és\n"
+"--talán-- szörnyek nélkül.\n"
+"\n"
+"Ahogy kiszállsz a járműből, hallod egy\n"
+"Kiborgdémon vas patáinak hangját."

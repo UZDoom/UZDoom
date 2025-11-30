@@ -1,0 +1,178 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:31+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pt\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "O Experimento Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Fase 1: Congo"
+
+msgid "PHUSTR_2"
+msgstr "Fase 2: Poço das Almas"
+
+msgid "PHUSTR_3"
+msgstr "Fase 3: Asteca"
+
+msgid "PHUSTR_4"
+msgstr "Fase 4: Na Jaula"
+
+msgid "PHUSTR_5"
+msgstr "Fase 5: Cidade Fantasma"
+
+msgid "PHUSTR_6"
+msgstr "Fase 6: Covil do Barão"
+
+msgid "PHUSTR_7"
+msgstr "Fase 7: Campo de Concentração"
+
+msgid "PHUSTR_8"
+msgstr "Fase 8: Reino"
+
+msgid "PHUSTR_9"
+msgstr "Fase 9: Matadouro"
+
+msgid "PHUSTR_10"
+msgstr "Fase 10: Investida"
+
+msgid "PHUSTR_11"
+msgstr "Fase 11: Perseguição"
+
+msgid "PHUSTR_12"
+msgstr "Fase 12: Velocidade"
+
+msgid "PHUSTR_13"
+msgstr "Fase 13: A Cripta"
+
+msgid "PHUSTR_14"
+msgstr "Fase 14: Gênese"
+
+msgid "PHUSTR_15"
+msgstr "Fase 15: O Crepúsculo"
+
+msgid "PHUSTR_16"
+msgstr "Fase 16: O Presságio"
+
+msgid "PHUSTR_17"
+msgstr "Fase 17: Complexo"
+
+msgid "PHUSTR_18"
+msgstr "Fase 18: Neurosfera"
+
+msgid "PHUSTR_19"
+msgstr "Fase 19: N-MIGO"
+
+msgid "PHUSTR_20"
+msgstr "Fase 20: O Domínio da Morte"
+
+msgid "PHUSTR_21"
+msgstr "Fase 21: Matador"
+
+msgid "PHUSTR_22"
+msgstr "Fase 22: Missão Impossível"
+
+msgid "PHUSTR_23"
+msgstr "Fase 23: Lápide"
+
+msgid "PHUSTR_24"
+msgstr "Fase 24: A Fronteira Final"
+
+msgid "PHUSTR_25"
+msgstr "Fase 25: O Templo da Escuridão"
+
+msgid "PHUSTR_26"
+msgstr "Fase 26: Casamata"
+
+msgid "PHUSTR_27"
+msgstr "Fase 27: Anticristo"
+
+msgid "PHUSTR_28"
+msgstr "Fase 28: Os Esgotos"
+
+msgid "PHUSTR_29"
+msgstr "Fase 29: Odisséia de Ruidos"
+
+msgid "PHUSTR_30"
+msgstr "Fase 30: O Portão do Inferno"
+
+msgid "PHUSTR_31"
+msgstr "Fase 31: Ciberantro"
+
+msgid "PHUSTR_32"
+msgstr "Fase 32: Vai Fundo"
+
+msgid "P1TEXT"
+msgstr ""
+"Você se vangloria em cima da carcaça fumegante\n"
+"do Guardião. Apos matá-lo, você arranca o \n"
+"Acelerador das garras fétidas do Inferno.\n"
+"Você relaxa e olha em volta da sala. Droga!\n"
+"Deveria ter pelo menos mais um protótipo\n"
+"funcionando, mas você não o acha em lugar\n"
+"nenhum. Os demônios devem ter levado embora.\n"
+"\n"
+"Você precisa achar o protótipo ou todos os\n"
+"seus esforços serão em vão. Mexa-se,\n"
+"lute, mate. Ah sim, mantenha-se viv@[ao_ptb] também."
+
+msgid "P2TEXT"
+msgstr ""
+"Nem mesmo o labirinto mortal do Arch-Vile \n"
+"pôde te deter. Você consegue chegar ao \n"
+"protótipo do Acelerador, que logo é \n"
+"desativado permanentemente.\n"
+"\n"
+"Você sabe mesmo como lidar com nesse \n"
+"tipo de coisa."
+
+msgid "P3TEXT"
+msgstr ""
+"Você batalhou e fez de tudo para chegar\n"
+"no meio da colméia dos demônios. Está na\n"
+"hora de localizar e destruir o Protetor do Portão, \n"
+"cuja prole repugnante está vindo aos montes \n"
+"para a Terra. Sim, ele é cruel, mas você sabe \n"
+"quem é pior!\n"
+"\n"
+"Sorrindo maldosamente, você confere seu\n"
+"equipamento e se prepara para dar ao\n"
+"filho da mãe um pequeno inferno de sua \n"
+"própria criação!"
+
+msgid "P4TEXT"
+msgstr ""
+"O rosto maligno do Protetor do Portão está \n"
+"espalhada em pedaços por toda parte. Seu corpo \n"
+"entra em colapso, um portal invertido se forma \n"
+"e engole os restos do último Acelerador, junto com \n"
+"os poucos demônios que restaram. Você venceu.\n"
+"O Inferno volta a castigar os mortos maus \n"
+"ao invés dos vivos bons. Lembre-se de pedir \n"
+"aos seus netos para colocarem um lança-foguetes\n"
+"no seu caixão. Se você for para o Inferno, vai\n"
+"precisar dele para fazer uma limpeza final..."
+
+msgid "P5TEXT"
+msgstr ""
+"Você achou a segunda fase mais difícil\n"
+"que temos. Espero que tenha salvo o\n"
+"jogo a uma ou duas fases antes. Esta é só\n"
+"para quem é mestre."
+
+msgid "P6TEXT"
+msgstr ""
+"Aposto que você estava pensando qual ERA \n"
+"a fase mais dificíl que preparamos. \n"
+"Agora você sabe. Ninguem sai vivo daqui."

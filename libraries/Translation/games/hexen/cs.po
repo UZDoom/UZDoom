@@ -1,0 +1,351 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen/cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: cs\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Sál prosetí"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Sedmero portálů"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Strážce ledu"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Strážce ohně"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Strážce oceli"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Světlý očistec"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Temný hvozd"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Černý močál"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Kirčiny jeskyně"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Pustiny"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Posvátný háj"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hypostyl"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Arcikacířův alumnát"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Dračí kaple"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Gryfova kaple"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Kaple mrakosmrtě"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Sad nářků"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Tichý refektář"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Vlčí kaple"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Opuštěné stanoviště"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Hrad smutku"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Šibenice"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Výpary"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Žalář"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Zpustošená zahrada"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropole"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedekova hrobka"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkirova hrobka"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traduktova hrobka"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivárium"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Temný očistec"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Procháziv@[tgs_past_cs] sedmerem portálů, které\n"
+"strážily tuto říši, objevuješ\n"
+"široký pás nehostinné divočiny.\n"
+"Oheň, led i ocel sic tě zkoušely,\n"
+"ukrutnější výzvy však stále čekají.\n"
+"Ačkoliv nepoddajné houštiny lesa\n"
+"určitě skrývají zlostné oči, to,\n"
+"co leží dál, bude horší.\n"
+"\n"
+"Vyprahlé pouště, ztrouchnivělé bažiny\n"
+"a zatuchlé jeskyně ti brání v cestě,\n"
+"ale ty nesmíš dopustit, aby tě cokoli\n"
+"zadrželo před tvým osudem, ačkoliv\n"
+"by sis možná přál@[ao_cs], aby tomu tak bylo.\n"
+"\n"
+"A ještě dál, mihotajíce se v dáli, neustále\n"
+"se přetvářející zdi hypostylu zdánlivě se\n"
+"smějí veškerému tvému úsilí."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Stále se vzpamatovávaj@[tgs_pr1_cs] ze střetnutí\n"
+"v hlubinách hypostylu dopotácíš se\n"
+"k něčemu, o čem doufáš, že je cesta ven.\n"
+"Všechno nabývá na rychlosti, tvé vidění\n"
+"se rozostřuje a začíná mizet...\n"
+"Zatímco se svět kolem tebe rozpadá,\n"
+"obklopuje tě zář portálu. Záblesk\n"
+"světla, a pak se nejistě vyškrábeš\n"
+"zpět na nohy.\n"
+"\n"
+"Stoj@[tgs_pr1_cs] na vrcholku vysoké věže slyšíš\n"
+"zezdola se linoucí skřehot zatracených.\n"
+"Vykráčíš vpřed a ze hřmotu pekelného\n"
+"skandování ti okamžitě tuhne krev v žilách.\n"
+"U všech bohů smrti! Do jakých končin\n"
+"ses to dostal@[ao_cs]? U všech bohů utrpení,\n"
+"jak se kdy odsud dostaneš?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Nejmocnější zbraně a starobylé artefakty\n"
+"sotva stačily k poražení arcikacíře a\n"
+"jeho nohsledů, teď ti však jejich odporné\n"
+"mršiny leží u nohou. Sebraj@[tgs_pr1_cs] poslední\n"
+"zbytky své síly připravuješ se vstoupit\n"
+"do portálu, vedoucího z arcikacířovy\n"
+"svatyně.\n"
+"\n"
+"Bradla ohromného hradu se tyčí nad tvou\n"
+"hlavou. Tiché věže a holé zdi obklopují\n"
+"osamocenou věž z černého kamene, stojící\n"
+"uprostřed hradu, vypadající jako přemítající\n"
+"obr. Za zejícími okny tančí ohně a stíny a\n"
+"desítky zlověstných očí na tě zhoubně zírají.\n"
+"Někde tam uvnitř nepřátelé čekají."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"„... i vypraví se do říše mrtvých\n"
+"a bude bojovati s mocnostmi zdějšími\n"
+"až k samotným prahům beznaděje.\n"
+"Ale jestli se někdy vrátí zpět\n"
+"do světa sluncem zalitého,\n"
+"nikdo neví.“\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Zatraceně."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Se zmučeným výkřikem jsi vyrván@[ao_cs]\n"
+"z tohoto světa do jiného, každičký\n"
+"kousek tvého těla zahalen v kouzelném\n"
+"ohni. Když se ti navrátí zrak, zjišťuješ,\n"
+"že se nacházíš v ohromném sále, naplněném\n"
+"strašidelnými ozvěnami a děsuplnými\n"
+"stíny. V dálce vidíš vyvýšené\n"
+"pódium a na něm jediný zdroj světla\n"
+"v tomto světě."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Toto může být jedině Sféra chaosu,\n"
+"zdroj Koraxovy síly. S ní můžeš\n"
+"tvořit nové světy... nebo je ničit.\n"
+"Právem boje a výhry je tvoje.\n"
+"S roztřesenýma rukama se napřahuješ\n"
+"ji uchytit.\n"
+"Možná, že se teď ke jsoucné hře\n"
+"moci přidá někdo další. Jako pěšákovi\n"
+"přeměněnému na královnu ti teď připadá,\n"
+"že máš všechny kraje šachovnice na dosah."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Ale jsou tu i jiní hráči, mocnější než ty,\n"
+"a kdo může předvídat jejich další tahy?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Dveře jsou zamčené."
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Vítej, smrtelníče,"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "jsi připraven@[ao_cs] zemřít?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Ve Strážci ledu se otevřely dveře."
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Cesta je zatarasená."
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "U Sedmera portálů byla vyřešena"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "jedna třetina rébusu."
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "U Sedmera portálů byla vyřešena"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Schody se zvedly u Sedmera portálů."
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "U Sedmera portálů byla vyřešena"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "jedna třetina rébusu."
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Schody se zvedly u Sedmera portálů."
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Musíš najít další spínač."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Kameny dřou u Sedmera portálů."
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "V Temném hvozdu byla vyřešena"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "jedna šestina rébusu."
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Dveře jsou zatarasené zevnitř."
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Slyšíš v dálce otevírající se dveře."
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "V Temném hvozdu byla vyřešena"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "jedna šestina rébusu."
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "V Temném hvozdu byla vyřešena"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "jedna šestina rébusu."
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ etinů zbývá."
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Čekal@[ao_cs] jsi moc dlouho, teď zemřeš!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Dveře se otevřely na Opuštěném stanovišti."
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Tyto dveře se ještě neotevřou."
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Mí služebníci cítí tvou krev, člověče."
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Dveře se otevřely na Šibenici."
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Dveře jsou zatarasené zevnitř."
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Plošina ve věži sjela dolů."
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Tuhle partii jsi už hrál@[ao_cs] moc dlouho, smrtelníče,"
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "myslím, že bych tě měl odstranit ze šachovnice."
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Z patra slyšíš otevírající se dveře."
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Uctívej mě a možná ještě budu milosrdný."
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Na druhou stranu, možná ne."
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "V Klášteru byla vyřešena"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "jedna devítina rébusu."
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "V Klášteru byla vyřešena"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "jedna devítina rébusu."
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "V Klášteru byla vyřešena"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "jedna devítina rébusu."
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Portál byl zapečeťen."
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Vyber si svůj osud."
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Dveře jsou zatarasené zevnitř."
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Jsi dost siln@[adj_cs],"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "čelit svým vlastním pánům?"

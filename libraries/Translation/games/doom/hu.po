@@ -1,0 +1,210 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/doom-engine-"
+"games/doom/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: hu\n"
+
+msgid "TXT_D1E1"
+msgstr "Térdig halálban"
+
+msgid "TXT_D1E2"
+msgstr "A pokol tornáca"
+
+msgid "TXT_D1E3"
+msgstr "Alvilág"
+
+msgid "TXT_D1E4"
+msgstr "Megemésztetik a te húsod"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangár"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Atomerőmű"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Méregfinomító"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Parancsnoki vezérlő"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Phoboszi laboratórium"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Központi feldolgozó"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Számítógépes központ"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Phoboszi anomália"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Katonai bázis"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Kanálisok"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Deimoszi anomália"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Raktár"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Finomító"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Deimoszi laboratórium"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Központi parancsnokság"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Az átkozottak termei"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Szaporító tartályok"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Bábel tornya"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: A rejtélyek erődje"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: A pokol bástyái"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: A kétségbeesés mocsara"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Zűrzavar"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: A kínok háza"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Az istentelen katedrális"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Erebus-hegy"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Limbus"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Nyúlkert"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: A holtak hazája odalent"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Teljes gyűlölettel"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Felnégyelni a bűnösöket"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Féktelen gonosz"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Megtérnek majd"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Hitványul ellened"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: És a pokol követé azt"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: A kegyetlennek"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Félelem"
+
+msgid "E1TEXT"
+msgstr ""
+"Most, hogy elbántál a rohadékokkal és\n"
+"kitakarítottad a holdbázist, elvileg \n"
+"győznöd kéne, nem? Nem? Hol van a \n"
+"zsíros jutalmad meg a retúrjegyed? Mégis \n"
+"mi a fene ez? Ennek nem így kéne\n"
+"végződnie!\n"
+"\n"
+"Úgy bűzlik, mint a rothadt hús, de ez az \n"
+"eltűnt Deimos bázisnak látszik. \n"
+"Úgy tűnik, a pokol tornácán ragadtál. \n"
+"Az egyetlen kiút előre vezet.\n"
+"\n"
+"A DOOM élmény folytatásához játszd \"A \n"
+"pokol tornáca\" fejezetet, és annak \n"
+"elképesztő folytatását, az \"Alvilág\"-ot!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Megcsináltad! Győzedelmeskedtél az\n"
+"elveszett Deimosz bázist uraló förtelmes\n"
+"Kiberdémon felett! De... hol is vagy most?\n"
+"Felkapaszkodsz a Hold szélére, és lenézel,\n"
+"hogy megtudd a szörnyű igazságot.\n"
+"\n"
+"A Deimosz a pokol fölött lebeg!\n"
+"Még nem hallottál arról, hogy bárki\n"
+"megszökött volna a pokolból, de te\n"
+"úgy meg fogod leckéztetni a rohadékokat,\n"
+"hogy még azt is megbánják, hogy hallottak\n"
+"rólad! Gyorsan leereszkedsz a pokol\n"
+"felszínére.\n"
+"\n"
+"Most pedig jöjjön a DOOM utolsó\n"
+"fejezete, az \"Alvilág\"!"
+
+msgid "E3TEXT"
+msgstr ""
+"Az undorító pókvezér, aki kitervelte\n"
+"a holdbázisok elleni inváziót és annyi\n"
+"ember halálát okozta, végre megkapta\n"
+"a magáét.\n"
+"\n"
+"Egy rejtett átjáró kinyílik, és belépsz\n"
+"rajta. Mivel túl keménynek bizonyultál a \n"
+"pokol számára, most az egyszer becsületesek\n"
+"lesznek veled. Az átjáróból felbukkanva\n"
+"végre megpillantod a Föld zöld mezőit!\n"
+"Otthon, édes otthon.\n"
+"\n"
+"Arra gondolsz, vajon mi történhetett\n"
+"a Földön, amíg a gonosz ellen küzdöttél.\n"
+"Még jó, hogy egyetlen pokoli lény sem\n"
+"jött át veled együtt azon az átjárón..."
+
+msgid "E4TEXT"
+msgstr ""
+"Biztosan a pókdémon küldte eléd démoni\n"
+"hadseregét, mielőtt utoljára szembeszálltál\n"
+"ezzel a borzalmas pokolbéli szörnyeteggel.\n"
+"De te egy lépéssel előttük jártál, és örök\n"
+"kárhozatot és szenvedést küldtél a hordára, \n"
+"ahogy ezt egy hős teszi a gonosszal \n"
+"szemben állva.\n"
+"\n"
+"Amúgy is, valakinek meg kellett fizetnie \n"
+"azért, ami a nyuladdal, Daisyvel történt.\n"
+"\n"
+"Most azonban szenvedést és vérontást\n"
+"látsz magad előtt, miközben városainkat\n"
+"ámokfutó démonok hadseregként rohanják le.\n"
+"\n"
+"Következő megálló: Pokol a Földön!"

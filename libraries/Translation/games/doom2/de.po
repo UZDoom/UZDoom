@@ -1,0 +1,255 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:29+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: de\n"
+
+msgid "TXT_D2E1"
+msgstr "Hölle auf Erden"
+
+msgid "TXT_D2E2"
+msgstr "Keine Ruhe für die Lebenden"
+
+msgid "HUSTR_1"
+msgstr "Level 1: Eingangshalle"
+
+msgid "HUSTR_2"
+msgstr "Level 2: Kellergewölbe"
+
+msgid "HUSTR_3"
+msgstr "Level 3: Spießrutenlauf"
+
+msgid "HUSTR_4"
+msgstr "Level 4: Der Fokus"
+
+msgid "HUSTR_5"
+msgstr "Level 5: Die Abfall-Tunnel"
+
+msgid "HUSTR_6"
+msgstr "Level 6: Die Presse"
+
+msgid "HUSTR_7"
+msgstr "Level 7: Tödlich einfach"
+
+msgid "HUSTR_8"
+msgstr "Level 8: Tricks und Fallen"
+
+msgid "HUSTR_9"
+msgstr "Level 9: Die Grube"
+
+msgid "HUSTR_10"
+msgstr "Level 10: Treibstoffbunker"
+
+msgid "HUSTR_11"
+msgstr "Level 11: 'O' der Zerstörung!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: Die Fabrik"
+
+msgid "HUSTR_13"
+msgstr "Level 13: Stadtzentrum"
+
+msgid "HUSTR_14"
+msgstr "Level 14: Die innersten Bauten"
+
+msgid "HUSTR_15"
+msgstr "Level 15: Industriegebiet"
+
+msgid "HUSTR_16"
+msgstr "Level 16: Vororte"
+
+msgid "HUSTR_17"
+msgstr "Level 17: Wohnbezirk"
+
+msgid "HUSTR_18"
+msgstr "Level 18: Der Innenhof"
+
+msgid "HUSTR_19"
+msgstr "Level 19: Die Zizadelle"
+
+msgid "HUSTR_20"
+msgstr "Level 20: Erwischt!"
+
+msgid "HUSTR_21"
+msgstr "Level 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Level 22: Katakomben"
+
+msgid "HUSTR_23"
+msgstr "Level 23: Lustige Fässer"
+
+msgid "HUSTR_24"
+msgstr "Level 24: Die Kluft"
+
+msgid "HUSTR_25"
+msgstr "Level 25: Blutfälle"
+
+msgid "HUSTR_26"
+msgstr "Level 26: Die aufgegebene Mine"
+
+msgid "HUSTR_27"
+msgstr "Level 27: Monsterbehausung"
+
+msgid "HUSTR_28"
+msgstr "Level 28: Die Geisterwelt"
+
+msgid "HUSTR_29"
+msgstr "Level 29: Das lebende Ende"
+
+msgid "HUSTR_30"
+msgstr "Level 30: Symbol der Sünde"
+
+msgid "HUSTR_31"
+msgstr "Level 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Level 32: Große"
+
+msgid "HUSTR_31B"
+msgstr "Level 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Level 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Level 33: Verrat"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: Die Erd-Basis"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: Die Folterlabore"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: Schlucht der Toten"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: Höllenberg"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: Vivisektion"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: Blutiges Inferno"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: Das Bankett des Barons"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: Feindselige Gruft"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: Marsch der Dämonen"
+
+msgid "C1TEXT"
+msgstr ""
+"Du bist tief in den verseuchten Sternenhafen\n"
+"eingedrungen. Aber etwas stimmt nicht. Die\n"
+"Monster haben ihre eigene Realität\n"
+"mitgebracht und die Technologie wird\n"
+"durch ihre Anwesenheit transformiert.\n"
+"\n"
+"Voraus siehst du einen Vorposten der Hölle,\n"
+"eine befestigte Zone. Wenn du daran vorbei\n"
+"kommst, kannst du in das Herz der\n"
+"Basis eindringen und den Schalter finden,\n"
+"der die Menschheit als\n"
+"Geiseln hält."
+
+msgid "C2TEXT"
+msgstr ""
+"Du hast gewonnen! Dein Sieg hat der\n"
+"Menschheit die Evakuation der Erde\n"
+"ermöglicht. Jetzt bist du der einzige\n"
+"Mensch auf der Planetenoberfläche.\n"
+"Kannibalen-Mutationen, fleischfressende Aliens und böse Geister\n"
+"sind deine einzigen Nachbarn. Du lehnst dich\n"
+"zurück und wartest auf den Tod, zufrieden,\n"
+"dass du deine Spezies gerettet hast.\n"
+"\n"
+"Dann sendet die Flotte ein Signal aus dem\n"
+"Weltraum: „Sensoren haben die Quelle der\n"
+"außerirdischen Invasion gefunden. Wenn du\n"
+"sie erreichst, können wir möglicherweise ihr\n"
+"weiteres Eindringen blockieren. Die Basis\n"
+"liegt im Herzen von deiner Heimatstadt, nicht weit vom Hafen.“\n"
+"Langsam und schmerzerfüllt kommst du hoch\n"
+"und gehst zurück in den Kampf."
+
+msgid "C3TEXT"
+msgstr ""
+"Du bist im korrupten Herzen der Stadt,\n"
+"umgeben von den Leichen deiner Feinde.\n"
+"Du siehst keine Möglichkeit, das Tor der\n"
+"Kreaturen von dieser Seite zu zerstören.\n"
+"Also beißt du die Zähne zusammen und springst hinein.\n"
+"\n"
+"Es muss einen Weg geben, um es auf der\n"
+"anderen Seite zu schließen. Und wenn du\n"
+"dafür durch die Hölle gehen musst?"
+
+msgid "C4TEXT"
+msgstr ""
+"Das schreckliche Antlitz des größten\n"
+"Dämonen, den du jemals gesehen hast,\n"
+"zerbröckelt, nachdem du deine Raketen in\n"
+"sein Hirn gepumpt hast.\n"
+"Das Monster schreit auf und stirbt, seine\n"
+"schlagenden Glieder unzählige Kilometer\n"
+"der Hölle verwüstend.\n"
+"\n"
+"Du hast es geschafft. Die Invasion ist vorbei.\n"
+"Die Erde ist gerettet. Die Hölle ist ein Wrack.\n"
+"Du fragst dich, wohin böse Menschen nun\n"
+"kommen, wenn sie sterben. Du wischst den Schweiß von deiner Stirn und\n"
+"begibst dich auf den langen Weg nach Hause.\n"
+"Der Wiederaufbau der Erde dürfte\n"
+"erfreulicher sein, als ihre Zerstörung.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Herzlichen Glückwunsch, du hast den\n"
+"Geheimlevel gefunden. Sieht so aus,\n"
+"als ob es von Menschen gebaut wurde,\n"
+"und nicht von Dämonen.\n"
+"Du fragst dich, wer wohl in diesem Bereich der Hölle zuhause ist."
+
+msgid "C6TEXT"
+msgstr ""
+"Herzlichen Glückwunsch, du hast das\n"
+"Super-Geheimlevel gefunden.\n"
+"Sieh zu, dass du hier schnellstens rauskommst!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Und wieder mal gab es Ärger an deinem\n"
+"liebsten Urlaubsort... der Hölle. Irgend so\n"
+"ein Cyberdämonen-Punk glaubte doch tat-\n"
+"sächlich, er könnte die Hölle in seinen\n"
+"persönlichen Vergnügungspark verwandeln, und die Erde in die Kasse.\n"
+"\n"
+"Nun, dieser halb-Roboter-Freak konnte\n"
+"nicht ahnen, wer zur Kirmes kam.\n"
+"Es gibt nichts besseres als einen\n"
+"Schießstand voller Dämonen, um das Blut in \n"
+"Wallung zu bringen...\n"
+"\n"
+"Nun hallen die Wände des Dämonenlabyrinths\n"
+"mit dem Klang, wie seine metallischen\n"
+"Gliedmaßen auf den Boden schlagen.\n"
+"Sein Stöhnen tönt durch das Chaos, das \n"
+"du hier hinterlassen hast.\n"
+"\n"
+"Der Jahrmarkt ist geschlossen.\n"
+"\n"

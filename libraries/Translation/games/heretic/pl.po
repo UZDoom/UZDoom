@@ -1,0 +1,250 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:45+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/doom-engine-games/"
+"heretic/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pl\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Doki"
+
+msgid "HHUSTR_E1M2"
+msgstr "Lochy"
+
+msgid "HHUSTR_E1M3"
+msgstr "Stróżówka"
+
+msgid "HHUSTR_E1M4"
+msgstr "Wieża Strażnicza"
+
+msgid "HHUSTR_E1M5"
+msgstr "Cytadela"
+
+msgid "HHUSTR_E1M6"
+msgstr "Katedra"
+
+msgid "HHUSTR_E1M7"
+msgstr "Krypty"
+
+msgid "HHUSTR_E1M8"
+msgstr "Paszcza Piekieł"
+
+msgid "HHUSTR_E1M9"
+msgstr "Cmentarz"
+
+msgid "HHUSTR_E2M1"
+msgstr "Krater"
+
+msgid "HHUSTR_E2M2"
+msgstr "Szyb Lawy"
+
+msgid "HHUSTR_E2M3"
+msgstr "Rzeka Ognia"
+
+msgid "HHUSTR_E2M4"
+msgstr "Lodowa Grota"
+
+msgid "HHUSTR_E2M5"
+msgstr "Katakumby"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labirynt"
+
+msgid "HHUSTR_E2M7"
+msgstr "Wielki Hol"
+
+msgid "HHUSTR_E2M8"
+msgstr "Portale Chaosu"
+
+msgid "HHUSTR_E2M9"
+msgstr "Lodowiec"
+
+msgid "HHUSTR_E3M1"
+msgstr "Magazyn"
+
+msgid "HHUSTR_E3M2"
+msgstr "Szambo"
+
+msgid "HHUSTR_E3M3"
+msgstr "Spływ"
+
+msgid "HHUSTR_E3M4"
+msgstr "Lazurowa Forteca"
+
+msgid "HHUSTR_E3M5"
+msgstr "Gniazdo Węży"
+
+msgid "HHUSTR_E3M6"
+msgstr "Korytarze Strachu"
+
+msgid "HHUSTR_E3M7"
+msgstr "Przepaść"
+
+msgid "HHUSTR_E3M8"
+msgstr "Baszta D'Sparila"
+
+msgid "HHUSTR_E3M9"
+msgstr "Wodociąg"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalk"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blokhauz"
+
+msgid "HHUSTR_E4M3"
+msgstr "Krużganek"
+
+msgid "HHUSTR_E4M4"
+msgstr "Grób"
+
+msgid "HHUSTR_E4M5"
+msgstr "Wielka Gwiazda"
+
+msgid "HHUSTR_E4M6"
+msgstr "Korytarze Odszczepieńca"
+
+msgid "HHUSTR_E4M7"
+msgstr "Wał Potępienia"
+
+msgid "HHUSTR_E4M8"
+msgstr "Zniszczony Most"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mauzoleum"
+
+msgid "HHUSTR_E5M1"
+msgstr "Ochrowe Klify"
+
+msgid "HHUSTR_E5M2"
+msgstr "Katarakty"
+
+msgid "HHUSTR_E5M3"
+msgstr "Wir"
+
+msgid "HHUSTR_E5M4"
+msgstr "Dziedziniec"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hydratyr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Kolumnada"
+
+msgid "HHUSTR_E5M7"
+msgstr "Cuchnąca Plebania"
+
+msgid "HHUSTR_E5M8"
+msgstr "Pole Sądu"
+
+msgid "HHUSTR_E5M9"
+msgstr "Motek D'Sparila"
+
+msgid "HE1TEXT"
+msgstr ""
+"Ze zniszczeniem Żelaznych Liszy i ich sług,\n"
+"ostatni z umarłych zostali wyczyszczeni\n"
+"z tego świata.\n"
+"\n"
+"Te stwory musiały skądś jednak przyjść\n"
+"i masz cień podejrzenia, że ten ognisty portal\n"
+"do paszczy piekieł prowadzi do ich rodzimego\n"
+"wymiaru.\n"
+"\n"
+"By mieć pewność, że żaden umarły (lub coś\n"
+"gorszego) nie mógł przejść, musisz\n"
+"zapieczętować Paszczę Piekieł z drugiej strony.\n"
+"Oczywiście oznacza to, że utkniesz w bardzo\n"
+"nieprzyjaznym świecie, ale kto powiedział,\n"
+"że bycie heretykiem będzie proste!"
+
+msgid "HE2TEXT"
+msgstr ""
+"Potężne młototaury udowodniły, że nie mają\n"
+"z tobą żadnych szans i jak ich stygnące zwłoki\n"
+"opadają na ziemię czujesz ponurą satysfakcję,\n"
+"że zostały zniszczone.\n"
+"\n"
+"Bramy, które chroniły, otworzyły się pokazując\n"
+"coś co masz nadzieję, że jest drogą do domu.\n"
+"Ale jak przechodzisz, drwiący śmiech dzwoni\n"
+"ci w uszach.\n"
+"\n"
+"Czyżby jakaś inna moc kontrolowała\n"
+"młototaury? Czy może być tam więcej\n"
+"przerażającyh istot za tą bramą? Strop\n"
+"kryształowej kopuły nad głową gdzie powinno\n"
+"być niebo to nie jest dobry znak..."
+
+msgid "HE3TEXT"
+msgstr ""
+"Śmierć D'Sparila wypuściła magiczną więź\n"
+"trzymającą jego kreatury w tej krainie,\n"
+"ich ostatnie krzyki zagłuszają jego własny\n"
+"płacz agonii.\n"
+"\n"
+"Twoja przysięga zemsty została spełniona,\n"
+"wchodzisz przez portal do twojego świata, \n"
+"na kilka chwil zanim kopuła się roztrzaska\n"
+"na milion kawałków.\n"
+"\n"
+"Ale jeśli potęga D'Sparila została na zawsze\n"
+"pokonana, to czemu wciąż nie czujesz się\n"
+"bezpiecznie? Czyżby to był jego ostatni\n"
+"krzyk przed śmiercią, ten który brzmiał\n"
+"jak klątwa? Albo przywołanie? Nie masz\n"
+"pewności, ale może to był po prostu krzyk.\n"
+"\n"
+"Ale znów, co z pozostałymi Wężowymi\n"
+"Jeźdźcami?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Myślałeś, że po śmierci D'Sparila wrócisz do\n"
+"swego świata, ale jego ostatni czar zesłał cię\n"
+"do jego własnego wymiaru. Wkroczyłeś\n"
+"w pozostałości krain podbitych przez D'Sparila.\n"
+"Pokonałeś ostatnich strażników tych ziem,\n"
+"ale teraz stoisz przed bramami do twierdzy\n"
+"D'Sparila. Do tego momentu nie miałeś\n"
+"wątpliwości o swoich zdolnościach do\n"
+"stawiania czoła czemukolwiek co napotkasz,\n"
+"ale poza tym portalem leży serce zła, które\n"
+"nawiedziło twój świat. D'Sparil może i jest\n"
+"martwy, ale nora, z której wypełzł\n"
+"uchowała się. Musisz teraz teraz wejść do tej\n"
+"nory mając nadzieję, że znajdziesz drogę\n"
+"wyjścia. I gdzieś w ciemnych zakątkach włości\n"
+"D'Sparila jego osobista straż czeka na\n"
+"twoje przybycie..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Podczas gdy ostatni młototaur ryczy w agonii,\n"
+"zdajesz sobie sprawę, że nie byłeś jeszcze\n"
+"tak blisko unicestwienia samego siebie.\n"
+"Nawet walka z D'Sparilem i jego uczniami nie była\n"
+"aż tak desperacka. Ponuro wpatrujesz się\n"
+"w bramy, które otwierają się przed tobą,\n"
+"zastanawiając się czy prowadzą do domu, czy do\n"
+"kolejnego niewyobrażalnego horroru.\n"
+"Zastanawiasz się czy masz siłę, by iść\n"
+"dalej, jeśli nic oprócz śmierci i bólu\n"
+"czeka na ciebie. Co innego możesz\n"
+"jeszcze zrobić, jeśli chęć walki zniknęła?\n"
+"Czy w obliczu rozpaczy możesz\n"
+"się zmusić, by iść dalej? Czy masz siłę?\n"
+"W końcu zauważasz, że nie jest w twoim\n"
+"stylu poddać się bez walki. Miej oczy szeroko\n"
+"otwarte, idziesz spotkać się ze swoim\n"
+"przeznaczeniem."

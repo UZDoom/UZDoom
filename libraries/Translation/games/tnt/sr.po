@@ -1,0 +1,191 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:22+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sr\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Ђаволуција"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Контролна система"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Људски роштиљ"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Контролна моћ"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Црвоточина"
+
+msgid "THUSTR_5"
+msgstr "Level 5: Вешалица"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Отворена сезона"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Затвор"
+
+msgid "THUSTR_8"
+msgstr "Level 8: Метал"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Упориште"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Искупљење"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Складиште"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Кратер"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Прерада нуклеарног отпада"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Челичана"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Зона смрти"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Најдубља дубина"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Подручје обраде"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Млин"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Отпремање/оживљавање"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Централна обрада"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Административни центар"
+
+msgid "THUSTR_22"
+msgstr "Level 22: Станиште"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Пројекат лунарног рударства"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Каменолом"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Баронова јазбина"
+
+msgid "THUSTR_26"
+msgstr "Level 26: Билистичкикс"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Планина боли"
+
+msgid "THUSTR_28"
+msgstr "Level 28: Пакао"
+
+msgid "THUSTR_29"
+msgstr "Level 29: Река Стикс"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Последњи позив"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Фараон"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Кариби"
+
+msgid "T1TEXT"
+msgstr ""
+"Изборили сте се из роњевите\n"
+"експерименталне лабораторије.\n"
+"Изгледа да је УАЦ опет прогутао.\n"
+"Са њиховом великим реноворирањем,\n"
+"мора да је тешко старом и бедном УАЦ\n"
+"да купи осигурање у данашње време.\n"
+"\n"
+"Напред је војни комплекс, сада\n"
+"најежден мртвим хорорима који једва\n"
+"чекају да уроне зубе у вама. Са срећом,\n"
+"комплекс идаље има неко оружје које\n"
+"лежи унаоколо."
+
+msgid "T2TEXT"
+msgstr ""
+"Чујете брушење тешке машинерије\n"
+"напред. Надате се да не штампају нове\n"
+"утваре, али сте спремни да покољете\n"
+"цело стадо ако требаш. Можда спремају\n"
+"гозбу крви, али се ви осећате као да су\n"
+"спакована две хиљада манијака у једног\n"
+"побеснолог убицу.\n"
+"\n"
+"Не планирате да паднете тако лако."
+
+msgid "T3TEXT"
+msgstr ""
+"Видик који се напред отвара изгледа\n"
+"стварно познато. Чак и мирише\n"
+"познато... као похован измет. Није вам\n"
+"се свиђало ово место пре, и сто посто\n"
+"не планирате да вам се сада свиђа.\n"
+"Што више зиљите у њега, то више\n"
+"сте љути. Подижући своју пишку,\n"
+"зао кез се оформио на вашем лицу.\n"
+"Време је за убијање."
+
+msgid "T4TEXT"
+msgstr ""
+"Изненада, све је тихо, од једног\n"
+"хоризонта до другог. Очајнички ехо\n"
+"пакла нестаје, небо ноћне море постаје\n"
+"плаво, гомиле леша чудовишта\n"
+"испарава и са њим зли смрад који је\n"
+"испуњавао ваздух. Боже, можда сте\n"
+"завршили. Да ли сте стварно\n"
+"победили?\n"
+"\n"
+"Нешто тутњи у даљини. Плава\n"
+"светлост почиње да светли унутар\n"
+"уништене лобање избацивача демона."
+
+msgid "T5TEXT"
+msgstr ""
+"Шта сад? Изгледа тотално другачије.\n"
+"Као краљ Тутова рупчага. Па штагод\n"
+"овде било не може бити горе од\n"
+"убичајеног. Или може? Или је можда\n"
+"најбоље да се допусти да успавани\n"
+"богови леже..."
+
+msgid "T6TEXT"
+msgstr ""
+"Време је за одмор. Уништили сте утробу\n"
+"пакла и заслужено сте спремни за\n"
+"одмор. Промумљате сами себи. Можда\n"
+"неко други може да растури тур паклу\n"
+"следећи пут. Напред је тиха варош, са\n"
+"мирним водама, старомодним\n"
+"зградама, и вероватно нема демона.\n"
+"\n"
+"Корачате ван својег транспорта, и чујете\n"
+"удар челичног копита сајбердемона."

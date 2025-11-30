@@ -1,0 +1,226 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_D1E1"
+msgstr "Knee-Deep in the Dead"
+
+msgid "TXT_D1E2"
+msgstr "The Shores of Hell"
+
+msgid "TXT_D1E3"
+msgstr "Inferno"
+
+# The episode and levels' names in E4 are taken from the Bible.
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "Thy Flesh Consumed"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangar"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Nuclear Plant"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Toxin Refinery"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Command Control"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Phobos Lab"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Central Processing"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Computer Station"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Phobos Anomaly"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Military Base"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Sewers"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Deimos Anomaly"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Containment Area"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Refinery"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Deimos Lab"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Command Center"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Halls of the Damned"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Spawning Vats"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Tower of Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Fortress of Mystery"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Hell Keep"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Slough of Despair"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonium"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: House of Pain"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Unholy Cathedral"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Mt. Erebus"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Limbo"
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dis"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Warrens"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Hell Beneath"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Perfect Hatred"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Sever The Wicked"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Unruly Evil"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "E4M5: They Will Repent"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Against Thee Wickedly"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "E4M7: And Hell Followed"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Unto The Cruel"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Fear"
+
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"Once you beat the big badasses and\n"
+"clean out the moon base you're supposed\n"
+"to win, aren't you? Aren't you? Where's\n"
+"your fat reward and ticket home? What\n"
+"the hell is this? It's not supposed to\n"
+"end this way!\n"
+"\n"
+"It stinks like rotten meat, but looks\n"
+"like the lost Deimos base. Looks like\n"
+"you're stuck on The Shores of Hell.\n"
+"The only way out is through.\n"
+"\n"
+"To continue the DOOM experience, play\n"
+"The Shores of Hell and its amazing\n"
+"sequel, Inferno!\n"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+"You've done it! The hideous cyber-\n"
+"demon lord that ruled the lost Deimos\n"
+"moon base has been slain and you\n"
+"are triumphant! But ... where are\n"
+"you? You clamber to the edge of the\n"
+"moon and look down to see the awful\n"
+"truth.\n"
+"\n"
+"Deimos floats above Hell itself!\n"
+"You've never heard of anyone escaping\n"
+"from Hell, but you'll make the bastards\n"
+"sorry they ever heard of you! Quickly,\n"
+"you rappel down to the surface of\n"
+"Hell.\n"
+"\n"
+"Now, it's on to the final chapter of\n"
+"DOOM! -- Inferno."
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+"The loathsome spiderdemon that\n"
+"masterminded the invasion of the moon\n"
+"bases and caused so much death has had\n"
+"its ass kicked for all time.\n"
+"\n"
+"A hidden doorway opens and you enter.\n"
+"You've proven too tough for Hell to\n"
+"contain, and now Hell at last plays\n"
+"fair -- for you emerge from the door\n"
+"to see the green fields of Earth!\n"
+"Home at last.\n"
+"\n"
+"You wonder what's been happening on\n"
+"Earth while you were battling evil\n"
+"unleashed. It's good that no Hell-\n"
+"spawn could have come through that\n"
+"door with you ..."
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+"The spider mastermind must have sent forth\n"
+"its legions of hellspawn before your\n"
+"final confrontation with that terrible\n"
+"beast from hell. but you stepped forward\n"
+"and brought forth eternal damnation and\n"
+"suffering upon the horde as a true hero\n"
+"would in the face of something so evil.\n"
+"\n"
+"Besides, someone was gonna pay for what\n"
+"happened to Daisy, your pet rabbit.\n"
+"\n"
+"But now, you see spread before you more\n"
+"potential pain and gibbitude as a nation\n"
+"of demons run amok among our cities.\n"
+"\n"
+"Next stop, Hell on Earth!"

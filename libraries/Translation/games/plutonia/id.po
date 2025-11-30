@@ -1,0 +1,101 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:21+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Eksperimen Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Sumur Jiwa"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Aztek"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: Terkurung"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Kota Hantu"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Kediaman Baron"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: Lapangan Jebakan"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Dimensi"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: Pemotongan"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Diburu"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Kecepatan"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: Tempat Tersembunyi"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: Kejadian"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: Senja"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: Faal"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Senyawa"
+
+msgid "PHUSTR_19"
+msgstr "Level 19: MSH"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: Kawasan Maut"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Misi Mustahil"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Batu Nisan"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: Garis Terdepan"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: Kuil Kegelapan"
+
+msgid "PHUSTR_27"
+msgstr "Level 28: Anti-kris"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: Bawah Tanah"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Pengembara Bising"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: Gerbang Neraka"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: Liang Cyber"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: Langsung Aja"

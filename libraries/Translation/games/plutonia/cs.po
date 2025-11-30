@@ -1,0 +1,177 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:23+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: cs\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Experiment Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Studna duší"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Azték"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: V kleci"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Město duchů"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Baronovo doupě"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: Karcer"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Říše"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: Jatka"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: Nájezd"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Loven"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Rychlost"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: Krypta"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: Soumrak"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: Znamení"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Ústav"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: Neurosféra"
+
+msgid "PHUSTR_19"
+msgstr "Level 19: Nepřítel"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: Panství smrti"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: Zabiják"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Nemožná mise"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Náhrobek"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: Poslední hranice"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: Chrám temna"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: Bunkr"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: Antikrist"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: Kanály"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Odysea křiku"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: Brána pekla"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: Kyberdoupě"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: Jdi do toho"
+
+msgid "P1TEXT"
+msgstr ""
+"S pýchou se díváš na doutnající mrtvolu\n"
+"Strážce. S jeho smrtí jsi vymanul@[ao_cs]\n"
+"Akcelerátor z prohnilých pařátů pekla.\n"
+"Uvolníš se a podíváš se kolem místnosti.\n"
+"Zatraceně! Měl tu být alespoň jeden funkční\n"
+"prototyp, ale nikde ho nevidíš. Démoni\n"
+"jej museli ukrást.\n"
+"\n"
+"Musíš najít ten prototyp, jinak byly veškeré\n"
+"tvé snahy zbytečné. Jdi dál, bij\n"
+"se dál, zabíjej dál.\n"
+"Jo, a taky žij dál."
+
+msgid "P2TEXT"
+msgstr ""
+"Ani smrtonosný labyrint plný velezrůd\n"
+"tě nemohl zastavit a ty ses dostal@[ao_cs]\n"
+"k prototypu Akcelerátoru, který je už\n"
+"brzy účinně a permanentně deaktivován.\n"
+"\n"
+"Tyhle věci by ti šly."
+
+msgid "P3TEXT"
+msgstr ""
+"Prorval@[ao_cs] a promlátil@[ao_cs] sis svou\n"
+"cestu do srdce roje démonů. Je čas na\n"
+"starou dobrou misi najdi a znič, mířenou\n"
+"na Vrátného démona, jehož odporní potomci\n"
+"se řítí na Zem. Jo, je zlý. Ale ty víš,\n"
+"kdo je zlejší!\n"
+"\n"
+"Se zlým úšklebkem si překontroluješ výstroj\n"
+"a připravíš se tomu bastardovi @[self_cs]\n"
+"trochu zatopit!"
+
+msgid "P4TEXT"
+msgstr ""
+"Zlý obličej Vrátného démona je rozmetán\n"
+"všude po okolí. Zatímco se jeho rozsápáná\n"
+"mrtvola rozpadá, objeví se obrácená brána a\n"
+"nasaje do sebe úlomky posledního prototypu\n"
+"Akcelerátoru a těch několik zbylých démonů.\n"
+"Jsi hotov@[ao_cs]. Peklo se navrátilo\n"
+"k trestání zlých, mrtvých lidí, místo těch\n"
+"dobrých a živých. Nezapomeň svým vnoučatům\n"
+"říct, aby ti do rakve přidali raketomet.\n"
+"Jestli po smrti půjdeš do pekla, budeš ho\n"
+"pro poslední úklid potřebovat."
+
+msgid "P5TEXT"
+msgstr ""
+"Nalezl@[ao_cs] jsi druhý nejtěžší level, který\n"
+"máme. Doufej, že sis jeden či dva levely\n"
+"zpátky hru uložil@[ao_cs]. Pokud ne,\n"
+"připrav se umírat, a to hodně. Tohle je\n"
+"pouze pro mistry mariňáky."
+
+msgid "P6TEXT"
+msgstr ""
+"Určitě sis říkal@[ao_cs], CO byl ten nejtěžší\n"
+"level, který jsme pro tebe měli připravený?\n"
+"Teď už víš.\n"
+"Ven se nikdo živý nedostane."

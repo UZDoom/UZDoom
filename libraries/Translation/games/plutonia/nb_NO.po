@@ -1,0 +1,182 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:20+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: no nb\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Plutonia-eksperimentet"
+
+msgid "PHUSTR_1"
+msgstr "Nivå 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Nivå 2: Sjelenes brønn"
+
+msgid "PHUSTR_3"
+msgstr "Nivå 3: Aztekisk"
+
+msgid "PHUSTR_4"
+msgstr "Nivå 4: Buret"
+
+msgid "PHUSTR_5"
+msgstr "Nivå 5: Spøkelsesbyen"
+
+msgid "PHUSTR_6"
+msgstr "Nivå 6: Baronens hule"
+
+msgid "PHUSTR_7"
+msgstr "Nivå 7: Fangegården"
+
+msgid "PHUSTR_8"
+msgstr "Nivå 8: Riket"
+
+msgid "PHUSTR_9"
+msgstr "Nivå 9: Slakteriet"
+
+msgid "PHUSTR_10"
+msgstr "Nivå 10: Angrep"
+
+msgid "PHUSTR_11"
+msgstr "Nivå 11: Jaget"
+
+msgid "PHUSTR_12"
+msgstr "Nivå 12: Hastighet"
+
+msgid "PHUSTR_13"
+msgstr "Nivå 13: Krypten"
+
+msgid "PHUSTR_15"
+msgstr "Nivå 15: Skumringen"
+
+msgid "PHUSTR_16"
+msgstr "Nivå 16: Varselet"
+
+msgid "PHUSTR_17"
+msgstr "Nivå 17: Forbindelsen"
+
+msgid "PHUSTR_18"
+msgstr "Nivå 18: Nevrosfæren"
+
+msgid "PHUSTR_20"
+msgstr "Nivå 20: Dødens domene"
+
+msgid "PHUSTR_21"
+msgstr "Nivå 21: Slakteren"
+
+msgid "PHUSTR_22"
+msgstr "Nivå 22: Umulig oppdrag"
+
+msgid "PHUSTR_23"
+msgstr "Nivå 23: Gravstein"
+
+msgid "PHUSTR_24"
+msgstr "Nivå 24: Den siste grensen"
+
+msgid "PHUSTR_25"
+msgstr "Nivå 25: Mørkets tempel"
+
+msgid "PHUSTR_27"
+msgstr "Nivå 27: Antikrist"
+
+msgid "PHUSTR_28"
+msgstr "Nivå 28: Kloakken"
+
+msgid "PHUSTR_29"
+msgstr "Nivå 29: Lydenes odyssé"
+
+msgid "PHUSTR_30"
+msgstr "Nivå 30: Porten til helvete"
+
+msgid "P1TEXT"
+msgstr ""
+"Du fryder deg over det dampende\n"
+"kadaveret av Vokteren. Med dens\n"
+"død har du vristet Akseleratoren\n"
+"fra helvetes stinkende klør. Du\n"
+"slapper av og ser deg rundt i\n"
+"rommet. Fy søren! Det skulle være\n"
+"minst én fungerende prototype,\n"
+"men du kan ikke se den.\n"
+"Demonene må ha tatt den.\n"
+"\n"
+"Du må finne prototypen, ellers vil\n"
+"alle kampene dine ha vært\n"
+"bortkastet. Fortsett å bevege\n"
+"deg, fortsett å kjempe, fortsett\n"
+"å drepe. Å ja, fortsett å leve\n"
+"også."
+
+msgid "P2TEXT"
+msgstr ""
+"Selv den dødelige Erkefiende-\n"
+"labyrinten kunne ikke stoppe\n"
+"deg, og du har kommet til\n"
+"prototypen Accelerator som\n"
+"snart er effektivt og\n"
+"permanent deaktivert.\n"
+"\n"
+"Du er flink til sånt."
+
+msgid "P3TEXT"
+msgstr ""
+"Du har slått og banket deg vei\n"
+"inn i hjertet av djevelhulen. På\n"
+"tide med et søk-og-ødelegg-\n"
+"oppdrag, rettet mot port-\n"
+"vokteren, hvis fæle avkom\n"
+"strømmer til jorden. Ja, han er\n"
+"slem. Men du vet hvem som\n"
+"er verre!\n"
+"\n"
+"Du gliser ondt, sjekker utstyret\n"
+"ditt og gjør deg klar til å gi\n"
+"jævelen et lite helvete du\n"
+"selv har laget!"
+
+msgid "P4TEXT"
+msgstr ""
+"Portvokterens onde ansikt er\n"
+"sprutet ut over det hele. Når\n"
+"det fillete liket kollapser,\n"
+"dannes en omvendt port som\n"
+"suger ned fragmentene av den\n"
+"siste prototypen av\n"
+"akseleratoren, for ikke å nevne\n"
+"de få gjenværende demonene.\n"
+"Du er ferdig. Helvete har gått\n"
+"tilbake til å banke dårlige døde\n"
+"folk i stedet for gode levende.\n"
+"Husk å be barnebarna dine\n"
+"om å legge en rakettkaster i\n"
+"kisten din. Hvis du havner i\n"
+"helvete når du dør, trenger du\n"
+"den til den siste oppryddingen..."
+
+msgid "P5TEXT"
+msgstr ""
+"Du har funnet det nest\n"
+"vanskeligste nivået vi har.\n"
+"Håper du har et lagret spill\n"
+"et nivå eller to tidligere.\n"
+"Hvis ikke, vær forberedt på\n"
+"å dø mange ganger. Kun for\n"
+"mestermarinesoldater."
+
+msgid "P6TEXT"
+msgstr ""
+"Jeg vedder på at du lurte på\n"
+"hva som var det vanskeligste\n"
+"nivået vi hadde klart for deg?\n"
+"Nå vet du det.\n"
+"Ingen kommer ut i live."

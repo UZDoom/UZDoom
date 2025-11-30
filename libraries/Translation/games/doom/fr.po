@@ -1,0 +1,207 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:59+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fr\n"
+
+msgid "TXT_D1E1"
+msgstr "Plongé dans la Mort"
+
+msgid "TXT_D1E2"
+msgstr "Les Portes de l'Enfer"
+
+msgid "TXT_D1E4"
+msgstr "Votre Chair Consumée"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Centrale Nucléaire"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Raffinerie de Toxines"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Centre de Contrôle"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratoires Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Centre de Traitement"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Station Informatique"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Anomalie de Phobos"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Base Militaire"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Egouts"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Anomalie de Déimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Zone de Stockage"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Raffinerie"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Laboratoires Déimos"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Centre de Commandement"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Halls des Damnés"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Cuves de Reproduction"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Tour de Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Mystérieuse Forteresse"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Donjon Infernal"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Bourbier du Désespoir"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandémonium"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Maison de la Douleur"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Cathédrale Profane"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Mont Erèbe"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Limbes"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dité"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Clapiers"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Le Séjour des Morts"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Une Parfaite Haine"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Séparer les Vicieux"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Un Mal Irrépréssible"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Ils se repentiront"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: D'une manière criminelle"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Et l'Enfer Suivit"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: A un Homme cruel"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Terreur"
+
+msgid "E1TEXT"
+msgstr ""
+"Après avoir vaincu les grosses brutes\n"
+"et nettoyé la base lunaire, vous êtes sensé\n"
+"avoir gagné, non? Où est votre belle\n"
+"récompense et votre billet retour?\n"
+"Qu'est-ce que ça veut dire?\n"
+"\n"
+"Ca pue la viande pourrie, mais on\n"
+"dirait la base perdue de Déimos. Il semble\n"
+"que vous êtes bloqué aux portes de l'enfer.\n"
+"La seule sortie est de l'autre côté.\n"
+"\n"
+"Pour continuer à découvrir DOOM, jouez\n"
+"à « LES PORTES DE L'ENFER » et à son\n"
+"incroyable suite, « INFERNO »!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Vous avez réussi! L'hideux cyber-démon\n"
+"qui régnait sur la base lunaire de Déimos\n"
+"est enfin mort et vous êtes triomphant!\n"
+"Mais.. Où êtes vous? Vous vous penchez\n"
+"au dessus de la bordure de la lune et\n"
+"découvrez l'atroce vérité.\n"
+"\n"
+"Déimos flotte au dessus des enfers!\n"
+"Vous n'avez jamais entendu parler que\n"
+"quelqu'un s'en soit sorti, mais vous\n"
+"allez faire payer ces fumiers pour\n"
+"le foutoir qu'ils ont causé! Rapidement,\n"
+"vous descendez en rappel aux enfers.\n"
+"\n"
+"Il est maintenant temps pour le\n"
+"chapitre final de DOOM! -- INFERNO."
+
+msgid "E3TEXT"
+msgstr ""
+"Le maléfique démon arachnéen qui\n"
+"a mené l'invasion des bases lunaires\n"
+"et causé des morts à n'en plus finir\n"
+"a enfin eu son cul botté pour toujours.\n"
+"\n"
+"Une porte cachée s'ouvre et vous y entrez.\n"
+"Vous avez prouvé que vous étiez trop\n"
+"fort pour les enfers, et il décide d'être\n"
+"bon joueur: Vous émergez de l'autre\n"
+"côté, dans les vertes prairies de la Terre!\n"
+"Enfin rentré à la maison.\n"
+"\n"
+"Vous vous demandez ce qu'il se passait\n"
+"ici tandis que vous vous battiez contre\n"
+"les forces du mal. C'est bien de savoir\n"
+"qu'aucun démon ne vous a suivi.."
+
+msgid "E4TEXT"
+msgstr ""
+"Le démon arachnéen a du envoyer ses\n"
+"légions de démons avant votre confrontation\n"
+"finale avec cette terrible bête des enfers.\n"
+"Mais vous avez mis fin à tout cela et\n"
+"apporté damnation et souffrance éternelle\n"
+"à cette horde comme un vrai héros le fairait\n"
+"face à quelque chose d'aussi atroce.\n"
+"\n"
+"De toutes façons, quelqu'un devait payer\n"
+"pour ce qu'ils ont fait à Daisy, votre lapin.\n"
+"\n"
+"Mais maintenant, vous voyez s'étendre\n"
+"devant vous encore plus de douleur et\n"
+"de massacre potentiels: une nation \n"
+"de démons se déversent dans nos cités!\n"
+"\n"
+"Prochain arrèt: L'enfer sur terre!"

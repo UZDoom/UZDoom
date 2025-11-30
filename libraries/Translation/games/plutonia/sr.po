@@ -1,0 +1,183 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:31+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sr\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Експеримент Плутонија"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: Конго"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Бунар душа"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Астек"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: Заробљен"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Град духова"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Баронова јазбина"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: Замчиште"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Царство"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: Кланица"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: Јуриш"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Уловљен"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Брзина"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: Гробница"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: Постанак"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: Сумрак"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: Знамење"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Једињење"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: Неуросфера"
+
+msgid "PHUSTR_19"
+msgstr "Level 19: Н.Е.П.Р."
+
+msgid "PHUSTR_20"
+msgstr "Level 20: Подручије смрти"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: Убица"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Немогућа мисија"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Надгробни споменик"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: Коначна граница"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: Храм таме"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: Бункер"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: Антихрист"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: Канализација"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Одисеја шумова"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: Пролаз пакла"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: Сајбер-јазбина"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: Иди ка њему"
+
+msgid "P1TEXT"
+msgstr ""
+"Пиљите над испаравајући леш Чувара.\n"
+"Са његовом смрћу, отргнули сте\n"
+"акцелератора ван смрдљивих канџа\n"
+"пакла. Опустивши се гледате унаоколо у\n"
+"соби. Доврага! Требао је бити барем\n"
+"један прототип који ради, али га не\n"
+"можете видети. Демони мора да су га\n"
+"узели.\n"
+"\n"
+"Морате наћи прототип, или су све ваше\n"
+"муке протраћене. Наставите да се\n"
+"крећете, наставите да се борите,\n"
+"наставите да убијате.\n"
+"И да, наставите и да живите."
+
+msgid "P2TEXT"
+msgstr ""
+"Чак ни смртоносан арчвилов лавиринт\n"
+"вас није могао зауставити, и узели сте\n"
+"прототип акцелератора који ће ускоро\n"
+"ефикасно бити деактивиран заувек.\n"
+"\n"
+"Добри сте у таквим стварима."
+
+msgid "P3TEXT"
+msgstr ""
+"Изударали и изубијали сте свој пут до срца\n"
+"ђаволске кошнице. Време је за мисију\n"
+"Претражити-и-Уништити, усмерен ка\n"
+"Вратару, чије се гадно потомство спушта\n"
+"на Земљу. Да, он је лош. Али знате ко је\n"
+"гори!\n"
+"\n"
+"Са злобним изразом проверавате\n"
+"опрему, и припремате се да дате том\n"
+"кучкином сину мало пакла од\n"
+"сопственог стварања!"
+
+msgid "P4TEXT"
+msgstr ""
+"Чуварово зло лице је смрвљено свугде.\n"
+"Док његов дроњав леш пада,\n"
+"инвертована капија се образује и увлачи\n"
+"делиће последњег акцелератора, камо\n"
+"ли и нешто мало преосталих демона.\n"
+"Завршили сте. Пакао се вратио ударању\n"
+"лоших мртвака уместо добрих живих.\n"
+"Не заборавите да кажете својим унучади\n"
+"да вам ставе ракетни бацач у ковчег. Ако\n"
+"одете у пакао када умрете, треба ће вам\n"
+"за последње чишћење..."
+
+msgid "P5TEXT"
+msgstr ""
+"Нашли сте другопласирани најтежи ниво\n"
+"који имамо. Надамо се да сте сачували\n"
+"игру ниво или два назад. Ако нисте,\n"
+"припремите се да умрете пуно пута.\n"
+"Само за маестро маринце."
+
+msgid "P6TEXT"
+msgstr ""
+"Гладимо се да сте се питали који је\n"
+"НАЈТЕЖИ ниво који смо спремили за\n"
+"вас? Сада знате. Нико не излази жив."

@@ -1,0 +1,191 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:21+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: it\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Malvoluzione"
+
+msgid "THUSTR_1"
+msgstr "Livello 1: Controllo del Sistema"
+
+msgid "THUSTR_2"
+msgstr "Livello 2: Barbecue Umano"
+
+msgid "THUSTR_3"
+msgstr "Livello 3: Centrale Energetica"
+
+msgid "THUSTR_4"
+msgstr "Livello 4: Wormhole"
+
+msgid "THUSTR_5"
+msgstr "Livello 5: Hanga"
+
+msgid "THUSTR_6"
+msgstr "Livello 6: Stagione Aperta"
+
+msgid "THUSTR_7"
+msgstr "Livello 7: Prigione"
+
+msgid "THUSTR_8"
+msgstr "Livello 8: Metallo"
+
+msgid "THUSTR_9"
+msgstr "Livello 9: Fortezza"
+
+msgid "THUSTR_10"
+msgstr "Livello 10: Redenzione"
+
+msgid "THUSTR_11"
+msgstr "Livello 11: Impianto di Stoccaggio"
+
+msgid "THUSTR_12"
+msgstr "Livello 12: Cratere"
+
+msgid "THUSTR_13"
+msgstr "Livello 13: Trattamento Nucleare"
+
+msgid "THUSTR_14"
+msgstr "Livello 14: Acciaieria"
+
+msgid "THUSTR_15"
+msgstr "Livello 15: Zona Morta"
+
+msgid "THUSTR_16"
+msgstr "Livello 16: Profondità"
+
+msgid "THUSTR_17"
+msgstr "Livello 17: Area di Elaborazione"
+
+msgid "THUSTR_18"
+msgstr "Livello 18: Fonderia"
+
+msgid "THUSTR_19"
+msgstr "Livello 19: Consegna/Respawn"
+
+msgid "THUSTR_20"
+msgstr "Livello 20: Centrale di Elaborazione"
+
+msgid "THUSTR_21"
+msgstr "Livello 21: Centro Amministrativo"
+
+msgid "THUSTR_22"
+msgstr "Livello 22: Habitat"
+
+msgid "THUSTR_23"
+msgstr "Livello 23: Progetto Minerario Lunare"
+
+msgid "THUSTR_24"
+msgstr "Livello 24: Caccia"
+
+msgid "THUSTR_25"
+msgstr "Livello 25: Antro del Barone"
+
+msgid "THUSTR_26"
+msgstr "Livello 26: Ballistige"
+
+msgid "THUSTR_27"
+msgstr "Livello 27: Monte del Dolore"
+
+msgid "THUSTR_28"
+msgstr "Livello 28: Al Diavolo"
+
+msgid "THUSTR_29"
+msgstr "Livello 29: Fiume Stige"
+
+msgid "THUSTR_30"
+msgstr "Livello 30: Ultima Chiamata"
+
+msgid "THUSTR_31"
+msgstr "Livello 31: Faraone"
+
+msgid "THUSTR_32"
+msgstr "Livello 32: Caraibi"
+
+msgid "T1TEXT"
+msgstr ""
+"Ti sei aperto la via fuori dai laboratori\n"
+"sperimentali infestati. Sembra che la UAC\n"
+"abbia fatto il passo più lungo della gamba\n"
+"di nuovo. Con questi continui turnover,\n"
+"deve essere dura per la UAC comprare delle\n"
+"polizze di assicurazione sulla vita degli\n"
+"impiegati di questi tempi...\n"
+"\n"
+"Più avanti si trova il complesso militare,\n"
+"ora infestato da orrori malati, ansiosi di\n"
+"mettere i loro denti su di te. Con un po'\n"
+"di fortuna nel complesso potrebbero ancora\n"
+"esserci delle armi in giro."
+
+msgid "T2TEXT"
+msgstr ""
+"Senti lo sferragliare di grossi macchinari\n"
+"più avanti. Ti auguri che non stiano\n"
+"producendo nuovi demoni, ma sei pronto per\n"
+"farne fuori un intero branco se fosse\n"
+"necessario.\n"
+"Staranno progettando un'orgia di sangue,\n"
+"ma ti senti forte come duecento pazzi\n"
+"assiepati in un unico maniaco omicida.\n"
+"\n"
+"Non intendi farti battere facilmente."
+
+msgid "T3TEXT"
+msgstr ""
+"Il panorama visibile sembra dannatamente\n"
+"familiare. Ha pure un puzzo familiare, da\n"
+"escrementi fritti. Non ti piaceva questo\n"
+"posto prima e non pensi di fartelo piace-\n"
+"re proprio adesso. Più ci pensi e più\n"
+"diventi nervoso.\n"
+"Soppesando l'arma, un sorriso maligno\n"
+"si fa strada sul tuo volto.\n"
+"È ora di fargliela vedere."
+
+msgid "T4TEXT"
+msgstr ""
+"Improvvisamente tutto si fa silenzioso, da\n"
+"un orizzonte all'altro. L'agonizzante eco\n"
+"dell'inferno svanisce, il cielo da incubo\n"
+"diventa blu, le pile dei cadaveri dei\n"
+"mostri iniziano a evaporare con il maligno\n"
+"fetore che riempiva l'aria. Diamine, forse\n"
+"ce l'hai fatta. Hai davvero vinto?\n"
+"\n"
+"Qualcosa tuona distante.\n"
+"Una luce bluastra inizia a brillare dentro\n"
+"il cranio in rovina dello sputa-demoni."
+
+msgid "T5TEXT"
+msgstr ""
+"E ora? Tutto sembra differente. Tipo\n"
+"dimora del faraone Tutankamon. Bè,\n"
+"qualunque cosa ci sia qui non sarà peggio\n"
+"del solito, o no? O forse sarebbe meglio\n"
+"non disturbare le divinità dormienti..."
+
+msgid "T6TEXT"
+msgstr ""
+"Tempo di una vacanza. Hai percorso le\n"
+"profondità dell'inferno e sei pronto\n"
+"per una pausa. Dici a te stesso che\n"
+"forse qualcun altro può rompere la testa\n"
+"ai demoni la prossima volta. Laggiù c'è\n"
+"una cittadina tranquilla, con dell'acqua\n"
+"che scorre pacifica, edifici pittoreschi\n"
+"e probabilmente nessun demone.\n"
+"\n"
+"Mentre scendi dal trasporto senti il\n"
+"tonfo del piede ferrato di un Cyberdemonio."

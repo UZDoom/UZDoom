@@ -1,0 +1,251 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:28+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eo\n"
+
+msgid "TXT_D2E1"
+msgstr "Infero sur la Tero"
+
+msgid "TXT_D2E2"
+msgstr "Nenia ripozo por la vivantoj"
+
+msgid "HUSTR_1"
+msgstr "Nivelo 1: Enirejo"
+
+msgid "HUSTR_2"
+msgstr "Nivelo 2: Subteraj vojoj"
+
+msgid "HUSTR_3"
+msgstr "Nivelo 3: La vergokuro"
+
+msgid "HUSTR_4"
+msgstr "Nivelo 4: La fokuso"
+
+msgid "HUSTR_5"
+msgstr "Nivelo 5: La rubtuneloj"
+
+msgid "HUSTR_6"
+msgstr "Nivelo 6: La dispistilo"
+
+msgid "HUSTR_7"
+msgstr "Nivelo 7: Morte simpla"
+
+msgid "HUSTR_8"
+msgstr "Nivelo 8: Trompoj kaj embuskoj"
+
+msgid "HUSTR_9"
+msgstr "Nivelo 9: La fosaĵo"
+
+msgid "HUSTR_10"
+msgstr "Nivelo 10: Refuelbazo"
+
+msgid "HUSTR_11"
+msgstr "Nivelo 11: Morta cirklo"
+
+msgid "HUSTR_12"
+msgstr "Nivelo 12: La fabriko"
+
+msgid "HUSTR_13"
+msgstr "Nivelo 13: Urbocentro"
+
+msgid "HUSTR_14"
+msgstr "Nivelo 14: La Internaj Kavernoj"
+
+msgid "HUSTR_15"
+msgstr "Nivelo 15: Industria Zono"
+
+msgid "HUSTR_16"
+msgstr "Nivelo 16: Antaŭurboj"
+
+msgid "HUSTR_17"
+msgstr "Nivelo 17: Loĝejoj"
+
+msgid "HUSTR_18"
+msgstr "Nivelo 18: La Korto"
+
+msgid "HUSTR_19"
+msgstr "Nivelo 19: La Citadelo"
+
+msgid "HUSTR_20"
+msgstr "Nivelo 20: Kaptis Vin!"
+
+msgid "HUSTR_21"
+msgstr "Nivelo 21: Nirvano"
+
+msgid "HUSTR_22"
+msgstr "Nivelo 22: La Katakombo"
+
+msgid "HUSTR_23"
+msgstr "Nivelo 23: Bareloj de Amuzo"
+
+msgid "HUSTR_24"
+msgstr "Nivelo 24: La Fendego"
+
+msgid "HUSTR_25"
+msgstr "Nivelo 25: Sangfaloj"
+
+msgid "HUSTR_26"
+msgstr "Nivelo 26: La Forlasitaj Minoj"
+
+msgid "HUSTR_27"
+msgstr "Nivelo 27: Monstro-Domo"
+
+msgid "HUSTR_28"
+msgstr "Nivelo 28: La Animo-Mondo"
+
+msgid "HUSTR_29"
+msgstr "Nivelo 29: La Viva Fino"
+
+msgid "HUSTR_30"
+msgstr "Nivelo 30: Ikono de Peko"
+
+msgid "HUSTR_31"
+msgstr "Nivelo 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Nivelo 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Nivelo 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Nivelo 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Nivelo 33: Perfido"
+
+msgid "NHUSTR_1"
+msgstr "Nivelo 1: La Tera Bazo"
+
+msgid "NHUSTR_2"
+msgstr "Nivelo 2: La Doloro-Laboratorio"
+
+msgid "NHUSTR_3"
+msgstr "Nivelo 3: Kanjono de La Mortintoj"
+
+msgid "NHUSTR_4"
+msgstr "Nivelo 4: Monto de Infero"
+
+msgid "NHUSTR_5"
+msgstr "Nivelo 5: Vivisekcio"
+
+msgid "NHUSTR_6"
+msgstr "Nivelo 6: Brulego de Sango"
+
+msgid "NHUSTR_7"
+msgstr "Nivelo 7: Festeno de Barono"
+
+msgid "NHUSTR_8"
+msgstr "Nivelo 8: Tombo de Malbonvolo"
+
+msgid "NHUSTR_9"
+msgstr "Nivelo 9: Marŝo de La Demonoj"
+
+msgid "C1TEXT"
+msgstr ""
+"Vi eniris profunde en la infestitan kosmo-\n"
+"havenon. Sed io estas misa. La monstroj\n"
+"alportis sian propran realon kun ili, kaj\n"
+"la teknologio de la kosmo-haveno estas\n"
+"subfosata de ilia ĉeesto.\n"
+"\n"
+"Antaŭe, vi vidas antaŭpostenon de infero,\n"
+"fortika regiono. Se vi povus iri preter ĝi,\n"
+"vi povus penetri en la hantitan koron de\n"
+"la kosmo-bazo kaj trovi la kontrolŝaltilon,\n"
+"kiu ostaĝigas la loĝantaron de la Tero."
+
+msgid "C2TEXT"
+msgstr ""
+"Vi gajnis! Via venko ebligis al la homaro\n"
+"evakui la Teron kaj eskapi el la teruraĵo.\n"
+"Nun vi estas la sola homo sur la supraĵo\n"
+"de la Tero. Kanibalaj mutaciuloj, \n"
+"karnovoraj eksterteranoj, kaj malbonaj\n"
+"fantomoj estas viaj nur najbaroj.\n"
+"Vi sidas kaj atendas morton, kontenta,\n"
+"ke vi savis vian specion.\n"
+"\n"
+"Sed tiam, la Tero-Kontrolcentro\n"
+"transsendas mesaĝon el kosmo: \"Sensiloj\n"
+"trovis la fonton de la ekstertera invado.\n"
+"Se vi irus tien, vi eble povas bari ilian\n"
+"eniron. La ekstertera bazo estas en la\n"
+"koro de via propra hejmurbo, ne fora\n"
+"de la kosmo-haveno.\"\n"
+"Malrapide kaj dolore, vi leviĝas kaj\n"
+"revenas al la batalo."
+
+msgid "C3TEXT"
+msgstr ""
+"Vi estas ĉe la malvirta koro de la urbo,\n"
+"ĉirkaŭita de la kadavroj de viaj malamikoj.\n"
+"Vi vidas nenian manieron por detrui la\n"
+"enirejon de la estaĵoj ĉe tiu ĉi flanko, do vi\n"
+"kunpremas la dentojn kaj plonĝas tra ĝi.\n"
+"\n"
+"Devas esti maniero por fermi ĝin\n"
+"ĉe la alia flanko. Kial vi zorgu, ĉu vi\n"
+"bezonas iri tra Infero por atingi ĝin?"
+
+msgid "C4TEXT"
+msgstr ""
+"La horora vizaĝo de la plej granda\n"
+"demono, kiun vi iam ajn vidis, pecetiĝas\n"
+"antaŭ vi, post vi pumpis la raketojn\n"
+"en lian nudan cerbon. La monstro\n"
+"ŝrumpas kaj mortas, ĝiaj draŝantaj\n"
+"membroj ruinigante nenombreblajn\n"
+"kilometrojn de la supraĵo de Infero.\n"
+"\n"
+"Vi sukcesis. La invado estas finita.\n"
+"La Tero estas savita. Infero estas ruino.\n"
+"Vi scivolas, kien malbonuloj nun iros,\n"
+"kiam ili mortos. Forviŝante la ŝviton de \n"
+"la frunto, vi komencas la longan vojaĝon\n"
+"hejmen. Rekonstrui la Teron devus esti \n"
+"multe pli amuze ol ruinigi ĝin.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Gratulon! Vi trovis la sekretan nivelon!\n"
+"Ŝajnas, ke ĝi estis konstruita de homoj\n"
+"anstataŭ demonoj. Vi scivolas, kiuj estos\n"
+"la loĝantoj de ĉi tiu angulo de Infero."
+
+msgid "C6TEXT"
+msgstr ""
+"Gratulon! Vi trovis la super-sekretan\n"
+"nivelon! Prefere kuru tra ĉi tiu!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Problemoj estis kreskinta denove en via ŝatata\n"
+"feriejo... Infero. Iu ciberdemono-huligano\n"
+"pensis, ke li povis farigi Inferon en\n"
+"personan amuzparkon, kaj farigi la Teron\n"
+"la biletejo.\n"
+"\n"
+"Nu, tiu duon-robota groteskulo ne sciis,\n"
+"kiu estis venanta al la foiro. Estas nenio\n"
+"pli bona ol pafejo plena de inferidoj por\n"
+"fari la sangon pumpata...\n"
+"\n"
+"Nun la muroj de la labirinto de la demono\n"
+"resonas kun la sono de liaj metalaj membroj\n"
+"trafantaj la plankon. Lia mortoĝemo gluglas\n"
+"tra la kaĉo, kiun vi faris el lia vizaĝo.\n"
+"\n"
+"Ĉi tiu atrakcio estas fermita.\n"
+"\n"

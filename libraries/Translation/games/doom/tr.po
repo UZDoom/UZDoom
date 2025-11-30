@@ -1,0 +1,201 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 20:09+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+
+msgid "TXT_D1E1"
+msgstr "Ölüme Diz Boyu"
+
+msgid "TXT_D1E2"
+msgstr "Cehennem Kıyıları"
+
+msgid "TXT_D1E3"
+msgstr "İnferno"
+
+msgid "TXT_D1E4"
+msgstr "Etin Tükendi"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Nükleer Santral"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Toksin Rafinerisi"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Komuta Kontrol"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Phobos Laboratuvarı"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Merkezi İşlem"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Bilgisayar İstasyonu"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Phobos Anomalisi"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Askeri Üs"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Kanalizasyonlar"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Deimos Anomalisi"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Çevreleme Alanı"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Rafineri"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Deimos Laboratuvarı"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Komuta Merkezi"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Lanetliler Salonu"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Yumurtlama Fıçıları"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Babil Kulesi"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Gizem Kalesi"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Cehennem Kalesi"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Umutsuzluk Slough'u"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonium"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Acı Evi"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Kutsal Olmayan Katedral"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Erebus Dağı"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Araf"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Sıçan yuvası"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Cehennem Altında"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Kusursuz Nefret"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Kötüleri Kesin"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Asi Kötülük"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Tövbe Edecekler"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Sana Karşı Kötüce"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Ve Cehennem Takip Etti"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Zalimlere Karşı"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Korku"
+
+msgid "E1TEXT"
+msgstr ""
+"Büyük belalıları yendikten ve ay\n"
+"üssünü temizledikten sonra\n"
+"Kazanmak için, değil mi? Değil\n"
+"misin? Nerede? büyük ödülün\n"
+"ve eve dönüş biletin? Ne? Bu da\n"
+"ne böyle? Bunun olması gerek-\n"
+"miyordu. Bu şekilde bitecek!\n"
+"\n"
+"Çürümüş et gibi kokuyor ama\n"
+"Kayıp Deimos üssü gibi.\n"
+"Görünüşe göre Cehennem\n"
+"Kıyıları'nda sıkışıp kaldınız.\n"
+"Tek çıkış yolu içinden geçmek.\n"
+"\n"
+"DOOM deneyimine devam etmek\n"
+"için Cehennem Kıyıları ve\n"
+"muhteşem Devam filmi, İnferno!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Başardınız! İğrenç siber Kayıp\n"
+"Deimos'u yöneten iblis lordu ay\n"
+"üssü öldürüldü ve sen muzafferdir!\n"
+"Ama ... nerede Sen mi? Kenarına\n"
+"tırmanıyorsun Ay'a ve aşağıya\n"
+"bakıp korkunç Gerçek.\n"
+"\n"
+"Deimos cehennemin üzerinde\n"
+"yüzüyor!\n"
+"Cehennemden kaçan birini hiç\n"
+"duymadın mı? Cehennemden,\n"
+"ama piçleri yapacaksın Seni\n"
+"duydukları için üzgünler! Çabuk\n"
+"ol, yüzeye iniyorsun Cehennem.\n"
+"\n"
+"Şimdi, DOOM'un son bölümüne\n"
+"geçiyoruz! -- İnferno."
+
+msgid "E3TEXT"
+msgstr ""
+"Ay üslerinin istilasını planlayan ve bu kadar çok ölüme neden olan iğrenç "
+"örümcek iblisin kıçı tüm zamanlar için tekmelendi.\n"
+"\n"
+"Gizli bir kapı açılıyor ve içeri giriyorsunuz.\n"
+"Cehennem'in zapt edemeyeceği kadar güçlü olduğunu kanıtladın ve şimdi "
+"Cehennem nihayet adil davranıyor - çünkü kapıdan çıktığında Dünya'nın yeşil "
+"tarlalarını görüyorsun! \n"
+"Sonunda evdesin.\n"
+"\n"
+"Siz serbest bırakılan kötülükle savaşırken Dünya'da neler olduğunu merak "
+"ediyorsunuz. İyi ki Cehennem yok spawn o yoldan gelebilirdi kapı seninle ..."
+
+msgid "E4TEXT"
+msgstr ""
+"Örümcek beyni, siz cehennemden gelen o korkunç canavarla yüzleşmeden önce "
+"cehennem lejyonlarını göndermiş olmalı. Ama sen öne çıktın. ve ebedi laneti "
+"getirdi ve gerçek bir kahraman gibi sürünün üzerine bu kadar şeytani bir "
+"şeyle yüzleşmek.\n"
+"\n"
+"Ayrıca, birileri bunun bedelini ödeyecekti. evcil tavşanınız Daisy'nin "
+"başına geldi.\n"
+"\n"
+"Ama şimdi, önünüze daha fazla yayıldığını görüyorsunuz. ulus olarak potansi̇"
+"yel aci ve sikinti iblisler şehirlerimizde cirit atıyor.\n"
+"\n"
+"Bir sonraki durak, Yeryüzündeki Cehennem!"

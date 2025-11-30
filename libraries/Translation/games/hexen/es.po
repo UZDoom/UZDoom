@@ -1,0 +1,363 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: es\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Sala de los Vientos"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Siete Portales"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Guardián de Hielo"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Guardián de Fuego"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Guardián de Acero"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Crisol de Luz"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Bosque de la Sombra"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Pantano"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Cuevas de Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Yermo"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Arboleda Sagrada"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hipóstila"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminario del Heresiarca"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Capilla Dragón"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Capilla Grifo"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Capilla Viento de Muerte"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Huerto de los Lamentos"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Refectorio Silencioso"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Capilla Lobo"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Puesto de Avanzada Abandonado"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Castillo del Pesar"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Horca"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Efluvio"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Calabozos"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Jardín Desolado"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Necrópolis"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Tumba de Zedek"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Tumba de Menelkir"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Tumba de Traductus"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivario"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Crisol de Oscuridad"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Habiendo pasado los siete portales que\n"
+"sellaban este reino, un vasto dominio\n"
+"de tierra salvaje se extiende ante ti.\n"
+"Fuego, hielo y acero te han probado,\n"
+"pero hay desafíos más grandes adelante.\n"
+"La densa maraña de bosque seguramente\n"
+"esconde ojos hostiles,pero lo que está\n"
+"más allá será peor.\n"
+"\n"
+"Desierto árido, pantanos húmedos y\n"
+"cavernas mohosas te cierran el paso,\n"
+"pero no puedes dejar que nada te\n"
+"desvíe de tu destino, aún si llegaras\n"
+"a desear que así fuera.\n"
+"\n"
+"Y más allá, parpadeantes a la distancia,\n"
+"las paredes siempre cambiantes de los\n"
+"hipóstilos parecen burlarse de todos\n"
+"tus esfuerzos."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Con tú mente aún nublada por tus\n"
+"batallas en el hipóstilo, te tambaleas\n"
+"hacia lo que esperas que sea una\n"
+"salida. Las cosas parecen moverse\n"
+"más rápido cada vez, tú visión se\n"
+"difumina y comienza a desvanecerse...\n"
+"Mientras el mundo se derrumba a tu\n"
+"alrededor, el brillo de un teleportal\n"
+"te envuelve, luego un destello de luz\n"
+"y con esfuerzo te pones en pie.\n"
+"\n"
+"Te encuentras sobre una torre alta, y\n"
+"desde abajo se oyen los gritos de los\n"
+"condenados. Das un paso adelante, y\n"
+"de inmediato el sonido de cánticos\n"
+"demoniacos enfría tu sangre.\n"
+"¡Por todos los Dioses de la muerte!\n"
+"¿A qué lugar has llegado? ¡Por todos\n"
+"los Dioses del dolor! ¿Cómo vas a\n"
+"encontrar la salida?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Las armas y artefactos más poderosos\n"
+"de los Antiguos apenas fueron\n"
+"suficientes para derrotar al Heresiarca\n"
+"y sus secuaces, pero ahora sus sucios\n"
+"restos están esparcidos a tus pies.\n"
+"Reuniendo lo último de tu fuerza te\n"
+"preparas a entrar al portal que lleva al\n"
+"santuario interior del Heresiarca.\n"
+"\n"
+"Por encima de ti se ciernen las murallas\n"
+"de un inmenso castillo. Torres silenciosas\n"
+"y paredes desnudas rodean una sola aguja\n"
+"de piedra negra, asentada en el centro del\n"
+"castillo como un gigante amenazante. Fuego\n"
+"y sombra se retuercen detrás de ventanas\n"
+"abiertas, docenas de ojos funestos descienden\n"
+"su mirada ante ti.\n"
+"En algún lugar adentro, tus enemigos\n"
+"te esperan..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... y él viajará hasta el reino\n"
+"de los muertos y competirá contra\n"
+"las fuerzas que estén en él, hasta\n"
+"las mismísimas puertas de la\n"
+"desesperación. Pero si él podrá\n"
+"regresar al mundo de la luz,\n"
+"nadie lo puede saber.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Maldición."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Con un grito de agonía eres\n"
+"arrancado de este mundo a otro,\n"
+"cada parte de tu cuerpo\n"
+"es envuelta en un fuego místico.\n"
+"Cuando tu visión se aclara, te\n"
+"encuentras de pie en un gran salón,\n"
+"lleno de ecos fantasmales y\n"
+"amenazantes sombras. A la\n"
+"distancia puedes ver un estrado\n"
+"elevado y sobre él, la única fuente\n"
+"de luz de este mundo."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Esta solo puede ser la esfera del caos,\n"
+"la fuente del poder de Korax. Con\n"
+"ella tu puedes crear mundos... o\n"
+"destruirlos. Por derechos de batalla\n"
+"y conquista ahora es tuya, y con\n"
+"manos temblorosas alcanzas a agarrarla.\n"
+"Tal vez, ahora, un nuevo jugador se\n"
+"unirá al juego cósmico de poder. Como\n"
+"un peón que es ascendido a Reina,\n"
+"de repente los bordes del tablero\n"
+"parecen estar a tu alcance."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Pero hay otros jugadores más\n"
+"fuertes que tú y ¿Quién puede\n"
+"saber sus próximos movimientos?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "La puerta está cerrada"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Saludos, mortal"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "¿Estás listo para morir?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Se abrió una puerta en el Guardián de Hielo"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Este camino está atrancado"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Una mitad del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "en los Siete Portales"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Un tercio del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Unas escaleras se han erguido en los Siete Portales"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Un tercio del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "en los Siete Portales"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Unas escaleras se han erguido en los Siete Portales"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Debes encontrar otro interruptor..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Las piedras giran en los Siete Portales"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Un sexto del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "En el Bosque de Sombras"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "La puerta está trabada desde el otro lado"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Escuchas que una puerta se abre a la distancia"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Un sexto del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "En el Bosque de Sombras"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Un sexto del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "En el Bosque de Sombras"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ Ettins restantes"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Esperaste demasiado, ¡ahora morirás!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Una puerta se abrió en el Puesto de Avanzada Abandonado"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Esta puerta no se abrirá todavía"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Mis sirvientes pueden oler tu sangre, humano"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Una puerta se abrió en la horca"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "La puerta está trabada desde el otro lado"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Una plataforma ha bajado en la torre"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Has jugado este juego demasiado tiempo, mortal..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Creo que te retiraré del tablero"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Escuchas una puerta que se abre arriba"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Adórame, y aun puedo ser misericordioso"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Aunque, tal vez no"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Un noveno del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "En el Monasterio"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Un noveno del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "En el Monasterio"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Un noveno del acertijo se ha resuelto"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "En el Monasterio"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "El portal se ha sellado"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Escoge tu destino"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "La puerta está trabada desde el otro lado"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Eres lo suficientemente fuerte"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "¿Para enfrentarte a tus maestros?"

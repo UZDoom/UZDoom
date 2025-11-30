@@ -1,0 +1,242 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:23+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pl\n"
+
+msgid "TXT_D2E1"
+msgstr "Piekło na Ziemi"
+
+msgid "TXT_D2E2"
+msgstr "Nie ma pokoju dla żywych"
+
+msgid "HUSTR_1"
+msgstr "Level 1: Wejście"
+
+msgid "HUSTR_2"
+msgstr "Level 2: Podziemia"
+
+msgid "HUSTR_3"
+msgstr "Level 3: Praszczęta"
+
+msgid "HUSTR_4"
+msgstr "Level 4: Skupisko"
+
+msgid "HUSTR_5"
+msgstr "Level 5: Kanały"
+
+msgid "HUSTR_6"
+msgstr "Level 6: Zgniatarka"
+
+msgid "HUSTR_7"
+msgstr "Level 7: Śmiertelnie Proste"
+
+msgid "HUSTR_8"
+msgstr "Level 8: Sztuczki i Pułapki"
+
+msgid "HUSTR_9"
+msgstr "Level 9: Jama"
+
+msgid "HUSTR_10"
+msgstr "Level 10: Stacja Tankowania"
+
+msgid "HUSTR_11"
+msgstr "Level 11: Krąg Zniszczenia!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: Fabryka"
+
+msgid "HUSTR_13"
+msgstr "Level 13: Śródmieście"
+
+msgid "HUSTR_14"
+msgstr "Level 14: Najgłębsze Nory"
+
+msgid "HUSTR_15"
+msgstr "Level 15: Strefa Przemysłowa"
+
+msgid "HUSTR_16"
+msgstr "Level 16: Przedmieścia"
+
+msgid "HUSTR_17"
+msgstr "Level 17: Kamienice"
+
+msgid "HUSTR_18"
+msgstr "Level 18: Dziedziniec"
+
+msgid "HUSTR_19"
+msgstr "Level 19: Cytadela"
+
+msgid "HUSTR_20"
+msgstr "Level 20: Mam Cię!"
+
+msgid "HUSTR_21"
+msgstr "Level 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Level 22: Katakumby"
+
+msgid "HUSTR_23"
+msgstr "Level 23: Beczki Śmiechu"
+
+msgid "HUSTR_24"
+msgstr "Level 24: Przepaść"
+
+msgid "HUSTR_25"
+msgstr "Level 25: Wodospad Krwi"
+
+msgid "HUSTR_26"
+msgstr "Level 26: Opuszczone Kopalnie"
+
+msgid "HUSTR_27"
+msgstr "Level 27: Apartament Potworów"
+
+msgid "HUSTR_28"
+msgstr "Level 28: Świat Dusz"
+
+msgid "HUSTR_29"
+msgstr "Level 29: Żywy Koniec"
+
+msgid "HUSTR_30"
+msgstr "Level 30: Ikona Grzechu"
+
+msgid "HUSTR_33"
+msgstr "Level 33: Zdrada"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: Ziemska Baza"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: Laboratoria Bólu"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: Kanion Umarłych"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: Piekielna Góra"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: Wiwisekcja"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: Piekło Krwi"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: Bankiet Barona"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: Grobowiec Zła"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: Marsz Demonów"
+
+msgid "C1TEXT"
+msgstr ""
+"Wszedłeś w głąb zaatakowanego gwiezdnego\n"
+"portu. Ale coś jest nie tak. Potwory \n"
+"sprowadziły ze sobą własną \n"
+"rzeczywistość i technologia portu\n"
+"została przez nie opętana.\n"
+"\n"
+"Widzisz przed sobą piekielny posterunek,\n"
+"strzeżony niczym twierdza. Jeśli uda ci się\n"
+"przejść, będziesz mógł dostać się do\n"
+"nawiedzonego serca bazy i znaleźć panel\n"
+"kontrolny, który wyzwoli populację\n"
+"Ziemi."
+
+msgid "C2TEXT"
+msgstr ""
+"Wygrałeś! Dzięki twej brawurze populacja\n"
+"Ziemi mogła uciec z tego koszmaru.\n"
+"Jesteś teraz jedynym\n"
+"człowiekiem na planecie.\n"
+"Ludożercze mutacje, krwiożerczy\n"
+"obcy oraz złe duchy są twymi jedynymi\n"
+"sąsiadami. Siadasz i czekasz na śmierć,\n"
+"ciesząc się, że uratowałeś swój\n"
+"gatunek.\n"
+"\n"
+"Nagle... Centrum dowodzenia wysyła\n"
+"wiadomość z kosmosu: \"Sensory \n"
+"zlokalizowały źródło inwazji obcych.\n"
+"Pójdź tam, a zdusisz inwazję w zarodku.\n"
+"Baza obcych znajduje się\n"
+"w centrum twojego rodzinnego miasta,\n"
+"niedaleko portu kosmicznego\".\n"
+"Wstajesz cały obolały i wracasz do boju."
+
+msgid "C3TEXT"
+msgstr ""
+"Jesteś w skażonym sercu miasta, otoczony\n"
+"przez zwłoki swych wrogów. Nie wiesz\n"
+"jak zniszczyć bramę więc zaciskasz zęby\n"
+"i przez nią przechodzisz.\n"
+"\n"
+"Musisz jakoś ją zamknąć z drugiej\n"
+"strony. Czy to takie straszne,\n"
+"że najpierw musisz przejść przez piekło?"
+
+msgid "C4TEXT"
+msgstr ""
+"Przerażające oblicze największego\n"
+"demona, jakiego kiedykolwiek spotkałeś,\n"
+"rozpada się po tym jak wysadziłeś\n"
+"jego obnażony mózg.\n"
+"Potwór usycha i umiera, a jego\n"
+"obumierające kończyny niszczą\n"
+"piekło wzdłuż i wszerz.\n"
+"\n"
+"Udało ci się. Koniec inwazji. Ziemia\n"
+"jest uratowana. Piekło jest w rozsypce.\n"
+"Zastanawiasz się gdzie teraz\n"
+"całe zło się podzieje. \n"
+"Wycierając pot z czoła zaczynasz długą\n"
+"wedrówkę do domu. Odbudowa Ziemi\n"
+"powinna być większą frajdą niż jej\n"
+"niszczenie.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Gratulacje, znalazłeś sekretny poziom!\n"
+"Wygląda na to, że został on zbudowany \n"
+"przez ludzi, a nie demony.\n"
+"Zastanawiasz się kim będą mieszkańcy\n"
+"tego zakątka piekła."
+
+msgid "C6TEXT"
+msgstr ""
+"Gratulacje, znalazłeś super sekretny\n"
+"poziom! Przejdziesz go w mgnieniu oka!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Zanosiło się znów na kłopoty w twoim\n"
+"ulubionym kurorcie... Piekle.\n"
+"Jakiś dupek Cyberdemon myślał, że może\n"
+"zmienić Piekło w swój osobisty park rozrywki\n"
+"i przerobić Ziemię na budkę z biletami.\n"
+"\n"
+"Coż... ta wpół robotyczna pokraka\n"
+"nie wiedziała kto się zbiliża na festyn.\n"
+"Nie ma to jak strzelnica pełna diabelstwa, by\n"
+"pobudzić krew w żyłach...\n"
+"\n"
+"Pośród ścian labiryntu słychać echo\n"
+"upadających metalowych kończyn demona.\n"
+"Wydobywa on swój ostatni jęk, z czegoś\n"
+"co kiedyś było jego twarzą.\n"
+"\n"
+"Ta przejażdżka jest zamknięta.\n"
+"\n"

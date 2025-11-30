@@ -1,0 +1,415 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ru\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Разрушенная деревня"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Упадок"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Грязеотстойник"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Катакомба"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Бесплодные земли"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Брекенвуд"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Погребальный костёр"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Комендантские врата"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Сокровищница"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Рыночная площадь"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Место вечного упокоения"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Испытание"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Оружейная"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Неф"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Часовня"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Бойня"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Тёмный страж"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Клоака"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ледяная твердь"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Тёмная цитадель"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Переход"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Выше и ниже"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Туман смерти"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Замок боли"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Сточная яма"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Роза"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Отерев кровь с лица дрожащей рукой,\n"
+"Вы стараетесь собраться с мыслями и\n"
+"понять, что ждёт впереди...\n"
+"\n"
+"...и забыть ужас, оставшийся позади.\n"
+"\n"
+"Вдали, в лёгкой дымке, виден\n"
+"величественный замок, подпирающий\n"
+"небо своими мрачными башнями. От\n"
+"разоренных могил веет зловонием\n"
+"и распадом разложившихся тел.\n"
+"\n"
+"Тщательно пересчитав остатки своих\n"
+"артефактов, Вы стараетесь убедить\n"
+"себя, что их хватит для завершения\n"
+"пути. И в конце концов, этого\n"
+"действительно должно быть\n"
+"достаточно, не так ли?\n"
+"\n"
+"\n"
+"Не так ли?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Лишь проклятые души населяют этот\n"
+"мир, ибо ничто доброе и справедливое\n"
+"не может здесь выжить.\n"
+"\n"
+"Страдания, пережитые вами, — ничто,\n"
+"бледная тень тех испытаний, что ждут\n"
+"в тёмной цитадели, стоящей на вашем\n"
+"пути.\n"
+"\n"
+"Силуэт тёмной цитадели едва виден за\n"
+"мрачными очертаниями кафедрального\n"
+"собора. холод, струящийся от её стен,\n"
+"свистящим шёпотом повествует о\n"
+"медленных, мучительных смертях...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...для удачливых."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Вы вновь в зале сферы хаоса. Ничего\n"
+"Не изменилось здесь с последнего\n"
+"вашего посещения. время застыло.\n"
+"\n"
+"И всё же... Тихий шёпот в темноте.\n"
+"Вы чувствуете, что невидимые\n"
+"враждебные глаза следят за\n"
+"каждым вашим движением...\n"
+"\n"
+"...Здесь те, кто таит угрозу\n"
+"и готовит погибель для вас."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Когда-то вы уже владели сферой\n"
+"хаоса и держали её в трепещущих\n"
+"руках. Теперь ваши руки дрожат не\n"
+"только от алчности, и чувство ужаса \n"
+"сливается с жаждой власти.\n"
+"\n"
+"Если силы сферы не хватило, чтобы\n"
+"защитить вас от демонов тьмы, может\n"
+"быть, не следует брать её? Ведь её\n"
+"истинное предназначение осталось\n"
+"для вас тайной.\n"
+"\n"
+"\n"
+"\n"
+"И всё же, вы не устоите перед\n"
+"искушением и примете вызов..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...В то время как другие игроки будут\n"
+"ждать своего часа, чтобы совершить\n"
+"свой ход.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Ты посмел сражаться в комнате ожидания?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Так умри же!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Поток воды остановлен"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Поток воды преграждает путь"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Дверь открылась в часовне"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Как странно..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Остались три части головоломки"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Остались две части головоломки"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Осталась одна часть головоломки"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Головоломка разгадана"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Головоломка не разгадана"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Пол совсем прогнил!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Одна треть головоломки разгадана"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Две трети головоломки разгаданы"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr ""
+"Неподалёку раздаётся звук\n"
+"движущейся деревянной площадки"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Готово..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Головоломка не разгадана"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Я тебя предупреждаю..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Не слишком ли ты упрямый?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "И не слишком-то разумный!"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Одна четвёртая этой головоломки разгадана"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Плохой выбор..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Символы не совпадают"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "С этой стороны дверь не открыть"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Дверь заблокирована снаружи"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Святотатство!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Ты осквернил@[ao_rus] могилу Эрика!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "И умрёшь за это страшной смертью!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Одна треть головоломки разгадана"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Две трети головоломки разгаданы"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Склеп открыт"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Опасайся гробницы паука"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr ""
+"Снаружи слышен звук\n"
+"поднимающегося камня"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Чувствуешь ли ты себя везучим?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Неправильное предположение!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Правильное предположение"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Может, напишешь за меня все скрипты для моего уровня?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Не трогай мою вкусняшку"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Остренько???!!!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Подай-ка мне сахар, детка"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Ага-а-а-а..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Фильм за час?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "У меня даже нет своего надгробия (К. Ф.)"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Да не прольётся кровь"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "И да не поднимется рука во гневе"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Кто осмелился потревожить наш покой?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Портал открыт"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Осталось "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20переключателей"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Остался всего "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20переключатель"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Выход открыт"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "С этой стороны дверь не открыть"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Двери открыты..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...осмелишься ли ты войти?"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Дверь открылась"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "в часовне"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Мост воздвигнут"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "у аббатства"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Лестница воздвигнута"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "у тёмной стражи"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Шестерня установлена"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20шестерней установлено"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Преграда опустилась"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "в клоаке"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Путь назад открыт"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Дверь заблокирована изнутри"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Ты посмел ограбить могилу"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "верховного палача?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Готовься к смерти"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Осталось "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20переключателей"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Остался всего "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20переключатель"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Путь к башне открыт"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Портал открыт"

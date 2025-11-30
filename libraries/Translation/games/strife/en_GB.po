@@ -1,0 +1,91 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 16:37+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
+"doom-engine-games/strife/en_GB/>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eng enc ena enz eni ens enj enb enl ent enw\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Then die in shame and dishonour."
+
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"Ah, a surfacer in need of a favour. Down here you do a favour to get a "
+"favour and I need the town entrance that is our path to food opened. The "
+"Order has it sealed and guarded."
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Do my favour first, or you'll get squat from me."
+
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"Well, what is it now? Don't you ever take a break? I'm glad that you're "
+"still breathing. I'd hate for my favourite student to come back looking out "
+"from the inside of a body bag."
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "The templar's favourite weapon."
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Shadow armour?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Shadow armour?"
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr ""
+"If there is any honour inside that pathetic shell of a body, you'll enter "
+"into the arms of the Order."
+
+msgid "TXT_ILOG103"
+msgstr ""
+"Just when I think we've seen it all! They go in human and come out... I "
+"don't even want to think about it. Destroy this horror!"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Macil's Adviser"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Adviser"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Armourer"

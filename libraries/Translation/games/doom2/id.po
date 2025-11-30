@@ -1,0 +1,134 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:27+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_D2E1"
+msgstr "Neraka di Bumi"
+
+msgid "TXT_D2E2"
+msgstr "Tiada Damai Sejahtera bagi yang Hidup"
+
+msgid "HUSTR_1"
+msgstr "Level 1: Pintu Masuk"
+
+msgid "HUSTR_2"
+msgstr "Level 2: Gorong-Gorong"
+
+msgid "HUSTR_3"
+msgstr "Level 3: Ruang Cambuk"
+
+msgid "HUSTR_4"
+msgstr "Level 4: Fokus"
+
+msgid "HUSTR_5"
+msgstr "Level 5: Terowongan Limbah"
+
+msgid "HUSTR_6"
+msgstr "Level 6: Cobek"
+
+msgid "HUSTR_7"
+msgstr "Level 7: Sangat Mudah"
+
+msgid "HUSTR_8"
+msgstr "Level 8: Tipuan dan Jebakan"
+
+msgid "HUSTR_9"
+msgstr "Level 9: Lubang"
+
+msgid "HUSTR_10"
+msgstr "Level 10: Pengisian Bahan Bakar"
+
+msgid "HUSTR_11"
+msgstr "Level 11: Lingkaran Kehancuran!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: Pabrik"
+
+msgid "HUSTR_13"
+msgstr "Level 13: Pusat Kota"
+
+msgid "HUSTR_14"
+msgstr "Level 14: Liang Terdalam"
+
+msgid "HUSTR_15"
+msgstr "Leval 15: Kawasan Industri"
+
+msgid "HUSTR_16"
+msgstr "Level 16: Pinggir Kota"
+
+msgid "HUSTR_17"
+msgstr "Level 18: Rumah Susun"
+
+msgid "HUSTR_18"
+msgstr "Level 18: Halaman"
+
+msgid "HUSTR_19"
+msgstr "Level 19: Citadel"
+
+msgid "HUSTR_20"
+msgstr "Level 20: Kena kau!"
+
+msgid "HUSTR_22"
+msgstr "Level 22: Katakombe"
+
+msgid "HUSTR_23"
+msgstr "Level 23: Tong Keseruan"
+
+msgid "HUSTR_24"
+msgstr "Level 24: Jurang"
+
+msgid "HUSTR_25"
+msgstr "Level 25: Tumpah Darah"
+
+msgid "HUSTR_26"
+msgstr "Level 26: Tambang Tertinggal"
+
+msgid "HUSTR_27"
+msgstr "Level 27: Rumah Monster"
+
+msgid "HUSTR_28"
+msgstr "Level 29: Dunia Roh"
+
+msgid "HUSTR_29"
+msgstr "Level 29: Mayat Hidup"
+
+msgid "HUSTR_30"
+msgstr "Level 30: Lambang Dosa"
+
+msgid "HUSTR_33"
+msgstr "Level 33: Pengkhianatan"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: Markas Bumi"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: Lab Penyiksaan"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: Tebing Orang Mati"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: Gunung Maut"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: Neraka Darah"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: Perjamuan Baron"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: Makam Kedengkian"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: Pasukan Neraka"

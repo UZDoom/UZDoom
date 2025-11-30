@@ -1,0 +1,372 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:45+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sr\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Предсобље просејавања"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Седам портала"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Чувар леда"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Чувар огња"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Чувар челика"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Испит светла"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Шума сенки"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Мочварна земља"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Киркине пећине"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Пустоши"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Свети шумарак"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Хипостил"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Јересијархов семинар"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Капела змајева"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Капела грифонова"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Капела ветра смрти"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Воћњак плача"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Безгласна трпезарија"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Капела вучја"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Напуштена постаја"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Замак жалости"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Вешала"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Воњави одвод"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Лагуми"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Напуштени врт"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Некропола"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Гробница Зедекова"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Гробница Менелкирова"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Гробница Традуктусова"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Виваријум"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Испит таме"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Прошли сте Седам портала који су\n"
+"владали над овим земљама,\n"
+"и сада се пред Вама простире\n"
+"злосутно, бескрајно подручје.\n"
+"Испитивали су Вас огањ, лед и\n"
+"челик, али предстоје и тежи испити.\n"
+"У шуми сенки се крију непознате и\n"
+"подмукле претње, а страх од\n"
+"непознатог није најужасније од\n"
+"онога што би Вам се могло десити.\n"
+"\n"
+"Неплодне пустоши, гњиле мочваре\n"
+"и устајале пећине Вам препречују\n"
+"пут, али ништа не може изменити\n"
+"предодређену судбу, хтели Ви то\n"
+"или не.\n"
+"\n"
+"А негде далеко, у дубинама\n"
+"бесконачног хипостила, оживели\n"
+"су и сами зидови како би\n"
+"оптеретили сваки Ваш корак."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Једва дошавши до даха након\n"
+"исцрпљујуће борбе у хипостилу,\n"
+"тетурате напред у потрази излаза\n"
+"из ових проклетих земаља. Одједном\n"
+"се простор унаоколо почиње брзо\n"
+"мењати, светло нестаје и тама Вас\n"
+"обавија...\n"
+"\n"
+"Све се распада. Сјајан бљесак пробада\n"
+"таму и портал Вас преноси у нову\n"
+"стварност. За тренутак поново чврсто\n"
+"стојите на ногама.\n"
+"\n"
+"Доспели сте на врх огромног торња.\n"
+"Од поножја долазе звукови и проклетства\n"
+"неког ђаволског потомка. Само корак\n"
+"напред па Вам демонске чаролије\n"
+"допиру до слуха, пунећи Вам крв\n"
+"страховитим ужасом.\n"
+"\n"
+"О богови смрти, какво је ово место?\n"
+"О богови бола, како се може изићи\n"
+"из њега?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Снага моћног оружја и чаролија\n"
+"древних артефаката једва беше\n"
+"довољно да оборите Јересијарха и\n"
+"његове поданике. Њихови раскидани\n"
+"остаци Вам леже под ногама. Исцрпљени\n"
+"сте од битке, али сабравши остатке\n"
+"своје воље улазите у портал унутрашњих\n"
+"одаја Јересијарховог обивалишта.\n"
+"\n"
+"Пред Вама се назире величанствен\n"
+"замак. Тмурне зидине с мрачним\n"
+"стрелницама окружују усамљен торањ.\n"
+"Уздиже се иза њих попут злосутног,\n"
+"нечујног дива. Иза отвора ђаволског\n"
+"замка се извијају огњени језици,\n"
+"трепере сенке, гледају Вас десетине\n"
+"злобних очију из таме.\n"
+"\n"
+"Непријатељи, чекајући Ваш долазак,\n"
+"вребају унутра..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"„...И отићи ће у царство мртвих,\n"
+"и очистиће га од сила таме, и доћи ће\n"
+"у жестокој борби до самих врата\n"
+"очајавања. Да ли му је суђено да се\n"
+"врати, у царство светлости, није\n"
+"знано никоме...“\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Проклетство."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Одједном Вас окружи огањ.\n"
+"Уз врисак бола и страха\n"
+"премештате се у други свет, и\n"
+"сваки део Вашег тела је прожет\n"
+"мистичном пламеном. Виђења\n"
+"се повлаче, и поглед је поново\n"
+"јасан. У огромној сте дворани,\n"
+"напуњеној сабласним одјецима\n"
+"и грозним, непознатим сенкама.\n"
+"С уздигнутог положаја, близу Вас,\n"
+"тече усамљено светло."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Ово је сфера хаоса, извор Кораксове\n"
+"силе. Помоћу ње се могу стварати\n"
+"светови... или уништавати. Дрхтавом\n"
+"руком је узимате. Сада је Ваша по\n"
+"праву моћи.\n"
+"\n"
+"Вероватно ће се сада нови играч \n"
+"придружити космичкој бици за власт,\n"
+"лукаво водећи своју партију на\n"
+"васељенску шаховску таблу,\n"
+"попут ништавног пешака који служи\n"
+"своме краљу и, издавши га, заузме\n"
+"улогу краљице."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Али постоје и искуснији играчи,\n"
+"а коме су познати њихови даљњи\n"
+"потези?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Врата су закључана"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Поздрав, смртниче"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Јеси ли спреман да умреш?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Врата су отворена код Чувара леда"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Овај пут је тренутно забрањен"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Половина загонетке је решена"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "на Седам портала"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Трећина загонетке је решена"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Степенице се подижу на Седам портала"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Трећина загонетке је решена"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "на Седам портала"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Степенице се подижу на Седам портала"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Остао је још један прекидач..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Камена препрека се повлачи"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Шестина загонетке је решена"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "у Шуми сенки"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Врата су забрављена изнутра"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Чује се звук отварања врата"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Шестина загонетке је решена"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "у Шуми сенки"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Шестина загонетке је решена"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "у Шуми сенки"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "Остало је \\ еттина"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Предуго! Припреми се за смрт!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Врата су се отворила у Напуштеној постаји"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Ова врата су тренутно закључана"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Моје слуге миришу твоју крв, човече"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Пролаз је отворен код вешала"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Врата су забрављена изнутра"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Спустио се платформ у централном торњу"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Превише си се заиграо, смртниче..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Дошло је време да се заврши твоја партија"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Од северне дворане зачује се звук"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Преклони се преда мноме, и можда ћу бити милостив"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "А можда и нећу"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Деветина загонетке је решена"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "у Јересијарховој семинарији"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Деветина загонетке је решена"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "у Јересијарховој семинарији"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Деветина загонетке је решена"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "у Јересијарховој семинарији"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Врата су затворена"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Донеси своју одлуку"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Врата су забрављена изнутра"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Јеси ли довољно снажан"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "да се суочиш са својим господарима?"

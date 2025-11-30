@@ -1,0 +1,176 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:18+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: jp\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT:邪神化"
+
+msgid "THUSTR_1"
+msgstr "Level 1: 制御システム"
+
+msgid "THUSTR_2"
+msgstr "Level 2: 人肉晩餐会"
+
+msgid "THUSTR_3"
+msgstr "Level 3: 制御室"
+
+msgid "THUSTR_4"
+msgstr "Level 4: 虫喰い穴"
+
+msgid "THUSTR_5"
+msgstr "Level 5: 格納庫"
+
+msgid "THUSTR_6"
+msgstr "Level 6: 狩猟解禁"
+
+msgid "THUSTR_7"
+msgstr "Level 7: 監獄"
+
+msgid "THUSTR_8"
+msgstr "Level 8: メタル"
+
+msgid "THUSTR_9"
+msgstr "Level 9: 牙城"
+
+msgid "THUSTR_10"
+msgstr "Level 10: 償還"
+
+msgid "THUSTR_11"
+msgstr "Level 11: 貯蔵施設"
+
+msgid "THUSTR_12"
+msgstr "Level 12: 火口"
+
+msgid "THUSTR_13"
+msgstr "Level 13: 核廃棄物加工所"
+
+msgid "THUSTR_14"
+msgstr "Level 14: 製鉄所"
+
+msgid "THUSTR_15"
+msgstr "Level 15: 危険地帯"
+
+msgid "THUSTR_16"
+msgstr "Level 16: 最深部"
+
+msgid "THUSTR_17"
+msgstr "Level 17: 処理地帯"
+
+msgid "THUSTR_18"
+msgstr "Level 18: 製粉所"
+
+msgid "THUSTR_19"
+msgstr "Level 19: 出荷と再生成"
+
+msgid "THUSTR_20"
+msgstr "Level 20: 中央処理所"
+
+msgid "THUSTR_21"
+msgstr "Level 21: 行政センター"
+
+msgid "THUSTR_22"
+msgstr "Level 22: 生息地"
+
+msgid "THUSTR_23"
+msgstr "Level 23: 月面探鉱計画"
+
+msgid "THUSTR_24"
+msgstr "Level 24: 採石場"
+
+msgid "THUSTR_25"
+msgstr "Level 25: バロンの巣窟"
+
+msgid "THUSTR_26"
+msgstr "Level 26: バリステュクス"
+
+msgid "THUSTR_27"
+msgstr "Level 27: 苦しみの山"
+
+msgid "THUSTR_28"
+msgstr "Level 28: 苛立ち"
+
+msgid "THUSTR_29"
+msgstr "Level 29: 三途の川"
+
+msgid "THUSTR_30"
+msgstr "Level 30: 最終指令"
+
+msgid "THUSTR_31"
+msgstr "Level 31: ファラオ"
+
+msgid "THUSTR_32"
+msgstr "Level 32: カリビアン"
+
+msgid "T1TEXT"
+msgstr ""
+"侵略された研究施設を抜け出すことが出来た。\n"
+"UACはまたもやられてしまったようだ。\n"
+"最近の大量雇用により、金の無いUACでは\n"
+"健康保険を宛がうことも難しいだろう。\n"
+"\n"
+"この先にある軍事複合施設には、今は病んだ怪物共が\n"
+"その歯を突き立てようと犇めいている。\n"
+"だが幸いかな、施設内には御誂え向きの兵器類が\n"
+"転がっているようだ。"
+
+msgid "T2TEXT"
+msgstr ""
+"重工機械の稼働音が鳴っている。\n"
+"新しい地獄製造機ではないと願うが、必要とあらば\n"
+"そいつらを黙らせる準備をしなければ。\n"
+"\n"
+"向こうも虐殺の宴を計画しているだろう、\n"
+"2000体の狂人が1人の殺人鬼に詰め込まれたような興奮を覚えた。\n"
+"しかし、容易くは無いな。"
+
+msgid "T3TEXT"
+msgstr ""
+"前方に開けている景色は見飽きたものだ。\n"
+"臭いもよく知っている -- 煮えた排泄物のようなヤツ。\n"
+"この場所は気に入らないし、気に入る予定もない。\n"
+"考えれば考える程、気が滅入る。\n"
+"\n"
+"武器を持ち上げると、邪悪な笑みが自分の顔に徐々に迫ってきた。\n"
+"ぶちのめしてやろうと。"
+
+msgid "T4TEXT"
+msgstr ""
+"突如、地平線の彼方まで静寂が全てを包んだ。\n"
+"地獄から響く苦悶の声は消え去り、悪夢の空は青い夜空へと、\n"
+"充満していた悪臭と共に死体の山は蒸発した。\n"
+"\n"
+"あぁ、恐らくやり遂げたのだろう。\n"
+"...だが、本当に勝ったのだろうか?\n"
+"\n"
+"何かが遠くで鼓動している。\n"
+"崩壊した痰製造機の頭蓋骨から青い光が灯った..."
+
+msgid "T5TEXT"
+msgstr ""
+"今度は何だ? 何もかも別物だ。\n"
+"まるでツタンカーメンの国ではないか。\n"
+"まぁ、ここにある全ては普段と変わらず悪い所なぞ無い。\n"
+"わけあるか? もしくは、眠れる神を放っておくのが\n"
+"きっと最善なのだろう..."
+
+msgid "T6TEXT"
+msgstr ""
+"休息の時が来た。地獄の中枢を粉砕し\n"
+"神は君に休息を与え給うた。君は呟く、\n"
+"今度は別の誰かが、地獄に一泡吹かせるだろうと。\n"
+"静かな街へ向かおう。流れる水、古風な街並み、地獄の使者の居ない。\n"
+"\n"
+"テレポーターに足を踏み入れた瞬間、あの鋼鉄牛の蹄が\n"
+"踏み鳴らされる音が聞こえた。"

@@ -1,0 +1,252 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:47+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"heretic/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: nl\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "De dokken"
+
+msgid "HHUSTR_E1M2"
+msgstr "De kerkers"
+
+msgid "HHUSTR_E1M3"
+msgstr "Het poortgebouw"
+
+msgid "HHUSTR_E1M4"
+msgstr "De wachttoren"
+
+msgid "HHUSTR_E1M5"
+msgstr "De citadel"
+
+msgid "HHUSTR_E1M6"
+msgstr "De kathedraal"
+
+msgid "HHUSTR_E1M7"
+msgstr "De grafkelders"
+
+msgid "HHUSTR_E1M8"
+msgstr "De helmouth"
+
+msgid "HHUSTR_E1M9"
+msgstr "De begraafplaats"
+
+msgid "HHUSTR_E2M1"
+msgstr "De krater"
+
+msgid "HHUSTR_E2M2"
+msgstr "De lavaputten"
+
+msgid "HHUSTR_E2M3"
+msgstr "De rivier van vuur"
+
+msgid "HHUSTR_E2M4"
+msgstr "De ijsgrot"
+
+msgid "HHUSTR_E2M5"
+msgstr "De catacomben"
+
+msgid "HHUSTR_E2M6"
+msgstr "Het labyrint"
+
+msgid "HHUSTR_E2M7"
+msgstr "De grote zaal"
+
+msgid "HHUSTR_E2M8"
+msgstr "De portalen van chaos"
+
+msgid "HHUSTR_E2M9"
+msgstr "De gletsjer"
+
+msgid "HHUSTR_E3M1"
+msgstr "Het pakhuis"
+
+msgid "HHUSTR_E3M2"
+msgstr "De zinkput"
+
+msgid "HHUSTR_E3M3"
+msgstr "De samenvloeiing"
+
+msgid "HHUSTR_E3M4"
+msgstr "De azuurblauwe vesting"
+
+msgid "HHUSTR_E3M5"
+msgstr "Het slangennest"
+
+msgid "HHUSTR_E3M6"
+msgstr "De zalen van angst"
+
+msgid "HHUSTR_E3M7"
+msgstr "De kloof"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparil's voorpost"
+
+msgid "HHUSTR_E3M9"
+msgstr "Het water reservoir"
+
+msgid "HHUSTR_E4M1"
+msgstr "Catafalk"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blokhuis"
+
+msgid "HHUSTR_E4M3"
+msgstr "Kloostergang"
+
+msgid "HHUSTR_E4M4"
+msgstr "Grafsteen"
+
+msgid "HHUSTR_E4M5"
+msgstr "Grote trap"
+
+msgid "HHUSTR_E4M6"
+msgstr "Zalen van de afvallige"
+
+msgid "HHUSTR_E4M7"
+msgstr "Wallen van de verdoemenis"
+
+msgid "HHUSTR_E4M8"
+msgstr "Verbrijzelde brug"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleum"
+
+msgid "HHUSTR_E5M1"
+msgstr "Okerkliffen"
+
+msgid "HHUSTR_E5M2"
+msgstr "Stroomversnellingen"
+
+msgid "HHUSTR_E5M3"
+msgstr "Kade"
+
+msgid "HHUSTR_E5M4"
+msgstr "Binnenplaats"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hydratyr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Zuilengalerij"
+
+msgid "HHUSTR_E5M7"
+msgstr "Stinkende pastorie"
+
+msgid "HHUSTR_E5M8"
+msgstr "Plaats van oordeelsvorming"
+
+msgid "HHUSTR_E5M9"
+msgstr "D'Sparil's gebouw"
+
+msgid "HE1TEXT"
+msgstr ""
+"Met de vernietiging van de ijzeren lijken\n"
+"en hun ondergeschikten heeft de laatste\n"
+"ondoden deze dimensie verlaten.\n"
+"\n"
+"Die wezens moesten echter ergens vandaan\n"
+"Komen, en je hebt het stiekeme vermoeden\n"
+"dat het vurige portaal van de helse muil zich\n"
+"opent naar hun thuisdimensie.\n"
+"\n"
+"Om ervoor te zorgen dat er niet nog meer\n"
+"Ondoden (of nog ergere dingen) doorkomen,\n"
+"moet je de muil van de hel van de andere kant\n"
+"verzegelen. Natuurlijk betekent dit dat je vast\n"
+"komt te zitten in een zeer onvriendelijke wereld,\n"
+"maar niemand heeft ooit gezegd dat het\n"
+"gemakkelijk is om ketter te zijn!"
+
+msgid "HE2TEXT"
+msgstr ""
+"De machtige mauloteurs waren geen uitdaging\n"
+"voor je en terwijl hun stomende karkassen\n"
+"instorten, voelt je een gevoel van grimmige\n"
+"tevredenheid dat ze zijn vernietigd.\n"
+"\n"
+"De poorten die ze bewaakten, zijn geopend en\n"
+"onthullen wat je hoopt dat de weg naar huis is.\n"
+"Maar als je er doorheen stapt, klinkt er\n"
+"een spottende lach in je oren.\n"
+"\n"
+"Was er een andere kracht die de mauloteurs\n"
+"controleerde? Kunnen er nog meer gruwelijke\n"
+"wezens door deze poort komen? Het vegen van\n"
+"een kristallen koepel op de plek waar de hemel\n"
+"zou moeten staan is zeker geen goed teken..."
+
+msgid "HE3TEXT"
+msgstr ""
+"De dood van D'Sparil heeft de magische\n"
+"banden met zijn wezens in dit vliegtuig\n"
+"losgemaakt, hun dood schreeuwt zijn\n"
+"eigen doodskreten uit.\n"
+"\n"
+"Jouw eed van wraak is vervuld, je\n"
+"betreedt het portaal naar je eigen\n"
+"wereld, slechts enkele ogenblikken\n"
+"voordat de koepel in een miljoen\n"
+"stukjes uiteenvalt.\n"
+"\n"
+"Maar als D'Sparil's kracht voor altijd\n"
+"gebroken is, waarom voel je je dan niet\n"
+"veilig? Was het die laatste schreeuw vlak\n"
+"voor zijn dood, die als een vloek klonk?\n"
+"Of een oproeping? Je kunt er niet echt\n"
+"zeker van zijn, maar het kan gewoon\n"
+"een schreeuw zijn geweest.\n"
+"\n"
+"Maar hoe zit het dan met de andere\n"
+"servenrijders?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Je dacht dat je terug zou keren naar je\n"
+"eigen wereld na de dood van D'Sparil, maar\n"
+"zijn laatste daad verbande je naar zijn\n"
+"eigen dimensie. Hier ging je de verbrijzelde\n"
+"restanten van het door D'Sparil veroverde\n"
+"land binnen. Je hebt de laatste bewakers van\n"
+"deze landen verslagen, maar nu sta je voor\n"
+"de poorten van het bolwerk van D'Sparil.\n"
+"Tot dit moment had je geen twijfel over je\n"
+"vermogen om alles wat je tegenkomt onder\n"
+"ogen te zien, maar voorbij dit portaal ligt\n"
+"het hart van het kwaad dat je wereld is\n"
+"binnengedrongen. D'Sparil mag dan dood\n"
+"zijn, maar de put waar hij geboren is,\n"
+"blijft bestaan. Nu moet je die kuil betreden\n"
+"in de hoop een uitweg te vinden. En ergens,\n"
+"in de donkerste hoek van D'Sparil's rijk,\n"
+"wachten zijn persoonlijke lijfwachten op je komst..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Als de laatste maulotaurus zijn doodsstrijd\n"
+"blaast, realiseer je je dat je nog nooit\n"
+"zo dicht bij je eigen vernietiging bent\n"
+"gekomen. Zelfs de strijd met D'Sparil en\n"
+"zijn discipelen was niet zo wanhopig geweest.\n"
+"Je staart grimmig naar de poorten die voor je\n"
+"opengaan en vraagt je af of ze je naar huis\n"
+"leiden, of dat ze zich openstellen voor een\n"
+"onvoorstelbare gruweldaad. Je vraagt je af of\n"
+"je de kracht hebt om door te gaan, of er\n"
+"alleen maar dood en pijn op je wacht. Maar\n"
+"wat kun je nog meer doen, als de wil om te\n"
+"vechten weg is? Kun je jezelf dwingen om\n"
+"door te gaan in deze wanhoop? Heb je de moed?\n"
+"Uiteindelijk vind je dat het niet in jou is\n"
+"om je over te geven zonder een gevecht.\n"
+"Ogen wijd open, je gaat je lot tegemoet."

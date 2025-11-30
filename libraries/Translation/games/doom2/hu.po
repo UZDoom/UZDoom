@@ -1,0 +1,242 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:30+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: hu\n"
+
+msgid "TXT_D2E1"
+msgstr "Földi pokol"
+
+msgid "TXT_D2E2"
+msgstr "Nincs nyugodalom az élőnek"
+
+msgid "HUSTR_1"
+msgstr "1. Pálya: Bejárat"
+
+msgid "HUSTR_2"
+msgstr "2. Pálya: Alagutak"
+
+msgid "HUSTR_3"
+msgstr "3. Pálya: Vesszőfutás"
+
+msgid "HUSTR_4"
+msgstr "4. Pálya: A középpont"
+
+msgid "HUSTR_5"
+msgstr "5. Pálya: Szennyvízalagutak"
+
+msgid "HUSTR_6"
+msgstr "6. Pálya: A zúzda"
+
+msgid "HUSTR_7"
+msgstr "7. Pálya: Halálegyszerű"
+
+msgid "HUSTR_8"
+msgstr "8. Pálya: Cselek és csapdák"
+
+msgid "HUSTR_9"
+msgstr "9. Pálya: A gödör"
+
+msgid "HUSTR_10"
+msgstr "10. Pálya: Tankolóállomás"
+
+msgid "HUSTR_11"
+msgstr "11. Pálya: A pusztulás köre"
+
+msgid "HUSTR_12"
+msgstr "12. Pálya: A gyár"
+
+msgid "HUSTR_13"
+msgstr "13. Pálya: Belváros"
+
+msgid "HUSTR_14"
+msgstr "14. Pálya: A legmélyebb rejtekek"
+
+msgid "HUSTR_15"
+msgstr "15. Pálya: Ipari zóna"
+
+msgid "HUSTR_16"
+msgstr "16. Pálya: Külváros"
+
+msgid "HUSTR_17"
+msgstr "17. Pálya: Bérházak"
+
+msgid "HUSTR_18"
+msgstr "18. Pálya: Az udvar"
+
+msgid "HUSTR_19"
+msgstr "19. Pálya: Fellegvár"
+
+msgid "HUSTR_20"
+msgstr "20. Pálya: Megvagy!"
+
+msgid "HUSTR_21"
+msgstr "21. Pálya: Nirvána"
+
+msgid "HUSTR_22"
+msgstr "22. Pálya: A katakombák"
+
+msgid "HUSTR_23"
+msgstr "23. Pálya: Mókás hordók"
+
+msgid "HUSTR_24"
+msgstr "24. Pálya: A szakadék"
+
+msgid "HUSTR_25"
+msgstr "25. Pálya: Véresések"
+
+msgid "HUSTR_26"
+msgstr "26. Pálya: Az elhagyatott bányák"
+
+msgid "HUSTR_27"
+msgstr "27. Pálya: A szörnyek háza"
+
+msgid "HUSTR_28"
+msgstr "28. Pálya: A lelkek világa"
+
+msgid "HUSTR_29"
+msgstr "29. Pálya: Az élő Végzet"
+
+msgid "HUSTR_30"
+msgstr "30. Pálya: A megtestesült bűn"
+
+msgid "HUSTR_31"
+msgstr "31. Pálya: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "32. Pálya: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "31. Pálya: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "32. Pálya: Keen"
+
+msgid "HUSTR_33"
+msgstr "33. Pálya: Árulás"
+
+msgid "NHUSTR_1"
+msgstr "1. Pálya: A földi bázis"
+
+msgid "NHUSTR_2"
+msgstr "2. Pálya: A kínok laboratóriuma"
+
+msgid "NHUSTR_3"
+msgstr "3. Pálya: A holtak szurdoka"
+
+msgid "NHUSTR_4"
+msgstr "4. Pálya: Pokol-hegy"
+
+msgid "NHUSTR_5"
+msgstr "5. Pálya: Élveboncolás"
+
+msgid "NHUSTR_6"
+msgstr "6. Pálya: Véres alvilág"
+
+msgid "NHUSTR_7"
+msgstr "7. Pálya: A báró bankettje"
+
+msgid "NHUSTR_8"
+msgstr "8. Pálya: A Gátlástalanság sírja"
+
+msgid "NHUSTR_9"
+msgstr "9. Pálya: A démonok parádéja"
+
+msgid "C1TEXT"
+msgstr ""
+"Behatoltál a démonoktól hemzsegő csillagkikötő mélyére.\n"
+"De valami nem stimmel. A szörnyek magukkal hozták a saját valóságukat, \n"
+"és csupán a jelenlétükkel megbolygatják a kikötő technológiáját.\n"
+"\n"
+"Előtted a pokol egy előőrse csillan meg, egy erődített\n"
+"zóna. Ha túljutsz rajta, akkor\n"
+"be tudsz hatolni a csillagkikötő elátkozott szívébe\n"
+"és meg tudod keresni az irányító kapcsolót, mely fogságban\n"
+"tartja a Föld teljes lakosságát."
+
+msgid "C2TEXT"
+msgstr ""
+"Nyertél! A győzelmed utat nyitott\n"
+"az emberiségnek, hogy kiüríthessék a Földet, és\n"
+"megmeneküljenek a rémálomtól. Te maradtál\n"
+"az egyetlen ember a Föld felszínén.\n"
+"Szomszédaid csupán mutáns kannibálok, húsevő űrlények, és \n"
+"gonosz lelkek.\n"
+"Elégedetten hátradőlsz, és a halálodat várod, miután megmentetted a fajodat."
+"\n"
+"\n"
+"De aztán a földi vezérlő lesugároz egy üzenetet\n"
+"az űrből: \"Szenzoraink megtalálták az űrlény\n"
+"invázió forrását. Ha odamész, talán te képes leszel\n"
+"elhárítani az áradatot. Az űrlény bázis pontosan\n"
+"a te városodban van, nem messze a\n"
+"csillagkikötőtől.\" Lassan és szenvedve felállsz,\n"
+"majd folytatod a küzdelmet."
+
+msgid "C3TEXT"
+msgstr ""
+"A város elátkozott szívéhez értél,\n"
+"körülvéve az ellenségeid hulláival. Nem találsz\n"
+"módot arra, hogy megsemmisítsd a lények átjáróját\n"
+"ezen az oldalon, így összeszorítod a fogaidat,\n"
+"és fejest ugrasz bele.\n"
+"\n"
+"Kell hogy legyen módja, hogy bezárd a másik\n"
+"oldalon. Mit érdekel téged, hogy a poklon keresztül kell verekedned magad "
+"hogy eljuss célodhoz?"
+
+msgid "C4TEXT"
+msgstr ""
+"A borzalmas ábrázata a legnagyobb démonnak\n"
+"amit valaha láttál összeomlik előtted, amikor\n"
+"betömködted a rakétáidat a kilátszódó agyába.\n"
+"A szörny összeroncsolodik és meghal, a\n"
+"végtagjai szanaszét repülnek a pokol felszínén.\n"
+"\n"
+"Megcsináltad. Az inváziónak vége.\n"
+"A Föld megmenekült. A pokol romba dőlt.\n"
+"Elgondolkodsz azon, hogy mostantól hová kerülnek a rossz\n"
+"fiúk, amikor meghalnak. Letörlöd az\n"
+"izzadtságot a homlokodról, mielőtt\n"
+"hazacammogsz. Újjáépíteni a Földet\n"
+"szórakoztatóbb lesz, mint az elpusztítása volt.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Gratulálunk, megtaláltad a titkos pályát!\n"
+"Úgy tűnik, hogy ezt emberek építették, és nem\n"
+"démonok. Elgondolkodsz azon, hogy miféle lények \n"
+"tartózkodnak a pokol eme szegletében."
+
+msgid "C6TEXT"
+msgstr ""
+"Gratulálunk, megtaláltad a szupertitkos pályát!\n"
+"Jobban jársz, ha ezen hamar áttöröd magad!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Megint csak a baj van a kedvenc vakáció\n"
+"helyeddel...a Pokollal. Valami Kiborgdémon\n"
+"tapló azt hitte, hogy a Poklot átalakíthatja a személyes \n"
+"vidámparkjává, és a Föld lesz a jegyszedő fülke.\n"
+"\n"
+"Nos, ez a félig-robot szörnyszülött nem tudta\n"
+"hogy kivel számol a vásárban. Nincs annál jobb, mint \n"
+"amikor céllövöldét játszol a démonfajzatokkal, és \n"
+"érzed a vér pumpálását a testedben.\n"
+"\n"
+"A démon labirintusának falai visszhangzanak a \n"
+"fém paták dobogásától. Halálnyögése feltör a szétzilált szájából.\n"
+"\n"
+"Démonunk parkja immáron bezár.\n"
+"\n"

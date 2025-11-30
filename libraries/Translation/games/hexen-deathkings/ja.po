@@ -1,0 +1,384 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:41+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: jp\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "廃村"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "疫病"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "汚水槽"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "カタコンベ"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "不毛地帯"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "ワラビの樹"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "火葬薪"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "城守達の門"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "宝庫"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "市場"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "祈祷師の軌跡"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "試練"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "武器庫"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "身廊"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "小礼拝堂"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "屠殺場"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "闇の刻計"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "排泄腔"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "氷結"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "暗黒の城塞"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "変遷"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "天と地"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "死の霧"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "苦しみの城"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "地下溝穴"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "薔薇"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"傷付き出血した顔を手で拭い、これから先を考える為に\n"
+"正気を保とうとした...\n"
+"\n"
+"...背負っているもの事も忘れながら。\n"
+"\n"
+"遠くで大きな城の複合体の殺風景な城壁が上空を劈く様に\n"
+"そして数え切れない程荒らされた墓地から\n"
+"死者の腐臭が漂っている。\n"
+"\n"
+"殆ど残っていないアーティファクトを注意深く数え、\n"
+"貴方は十分足りるだろうと自分自身を納得させた。\n"
+"だが結局、それで間に合うではないか、そうだろう?\n"
+"\n"
+"\n"
+"\n"
+"そうだろう?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"この世界には地獄に堕とされた善人や親切であろう\n"
+"人々の魂が居着いている。\n"
+"\n"
+"しかし通過する際には前方を遮る薄いもやでしかない\n"
+"暗黒城塞そのものだ。\n"
+"\n"
+"垣根の要塞が断片的な部分を除いて大聖堂の全てを封鎖しているが、\n"
+"見ただけで冷徹な死の低徊が囁かれている。\n"
+"\n"
+"\n"
+"\n"
+"...幸福な者に向けて。"
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"貴方は今一度、あたかも最後の時が止まったままである\n"
+"カオススフィアの影の広間に立った。\n"
+"\n"
+"しかしかつては柔らかい囁きによる静かな場所だったが\n"
+"何か影から不気味な視線がある。\n"
+"\n"
+"...悪意を遮蔽する目が。"
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"貴方はカオススフィアを掴む前に、一度震える手を握りしめた。\n"
+"今この手は貪欲に何かを超える権力を渇望している。\n"
+"スフィアの魔力でさえ貴方を暗黒の軍勢から守護するのに\n"
+"十分でないならば、恐らくそれに手を出さなければ、\n"
+"契約は破棄されるだろう。\n"
+"\n"
+"\n"
+"\n"
+"しかしそれでも、貴方は決して後へ引く事は\n"
+"出来なかった..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...更なる挑戦者を待ち構えながら。\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "挑戦する準備は整ったか?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "ならば、死へ進め!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "滝 は開いた"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "滝 は塞がっている"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "庵寺 への扉が開いた"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "何かがおかしい..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "パズルの部品は残り 3つ"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "パズルの部品は残り 2つ"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "パズルの部品は残り 1つ"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "パズルは完成した"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "パズルはまだ完成していない"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "この場は安全ではない!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "パズルの 三分の一 が解かれた"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "パズルの 三分の二 が解かれた"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "昇降機の音が遠くで聞こえる"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "これで完了だ..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "パズルはまだ完成していない"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "お前に警告しよう..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "頑固だと、自らも思わないか?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "そして、あまりにも愚か者だ"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "パズルの 四分の一 が解かれた"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "拙い選択だ..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "シンボルが揃っていない"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "扉はこちら側から開けられない"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "この扉は外側から塞がれている"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "罰当たりが!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "貴様はエリックの墓を荒らしたな!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "万死に値する!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "パズルの 三分の一 が解かれた"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "パズルの 三分の二 が解かれた"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "地下聖堂 が開いた"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "スパイダーの墓"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "外で昇降機の音が聞こえる"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "運が良かったと思うか?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "それは違うな!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "良い推測だ"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "この階層を全て書き換える事は可能かな?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "汚らしい手で触れるな"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "ボーパル ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "砂糖が欲しいかい、ベイビー"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "えぇーとぉー..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "数時間のフィルム?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "私は自分の墓標すら得られない - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "血を零さないように"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "怒りで拳を振るわないように"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "誰が、我々の眠りを妨げる勇気があるかな?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "道は開いた"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "スイッチはまだ "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "残っている"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "スイッチは "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "だけ残っている"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "出口が開いた"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "扉はこちらから開けない"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "ドアは開いている..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...準備が良いなら"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "先へ進むドアは開いた"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "小礼拝堂 へ向かえ"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "先へ進む橋が架かった"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "屠殺場 へ向かえ"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "先へ進む階段が出来た"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "闇の刻計 へ向かえ"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "歯車を一つ配置した"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "歯車を配置した"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "バリケードは開かれた"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "排泄腔 へ向かえ"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "裏口は開いた"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "お前はあえて 執行人達の墓を"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "荒らすつもりか?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "死ぬ準備をしろ"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "スイッチはまだ "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "残っている"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "スイッチは "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "だけ残っている"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "塔への道 が開いた"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "道は開いた"

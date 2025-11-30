@@ -1,0 +1,400 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:55+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fi\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Rauniokylä"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Turmelus"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Likakaivo"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakombi"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Autiomaa"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Saniaissalo"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Rovio"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Konstaapelin portti"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Rahasto"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Markkinat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Koettelemus"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Asehuone"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Laiva"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kappeli"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Teurastamo"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Pimeä vartio"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloaakki"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Jääsäilö"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Pimeä linnake"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Läpikulku"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Yli ja ali"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Kuolonsumu"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Tuskan linna"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Viemärimonttu"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Ruusu"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Vapisevin käsin pyyhit verisen naamasi ja\n"
+"yrität kirkastaa ajatuksesi siihen, mitä\n"
+"odottaa edessä...\n"
+"\n"
+"...ja unohtaa sen, mikä on jäänyt taakse.\n"
+"\n"
+"Kaukaisuudessa mahtavan linnajärjestelmän\n"
+"jyrkät suojamuurit näyttävät halkovan\n"
+"taivaan yllä, ja lukemattomien kuolleitten\n"
+"häpäistyistä haudoista lehahtaa mädäntynyt\n"
+"löyhkä.\n"
+"\n"
+"Lasket huolellisesti sen vähän, mitä\n"
+"esineistäsi on jäljellä, ja yrität rohkaista\n"
+"itseäsi, että se riittää. Sen on kuitenkin\n"
+"pakko riittää, eikö niin?\n"
+"\n"
+"\n"
+"Eikö niin?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Epäilemättä kirottujen sielut asuttavat\n"
+"tätä maailmaa, sillä mikään kaunis tai hyvä\n"
+"ei voisi selviytyä täällä pitkään.\n"
+"\n"
+"Mutta mikä on mennyt ohitse voi olla vain\n"
+"kalpea varjo sille, mikä nyt estää kulkuasi:\n"
+"Pimeä linna itse.\n"
+"\n"
+"Katedraalin synkkä valtaosa peittää\n"
+"hajanaisia pilkahduksia lukuun ottamatta\n"
+"varsinaisen linnan, mutta mitä voi nähdä,\n"
+"se kertoo suhisevin kuiskauksin kylmästä \n"
+"viipyilevästä kuolemasta...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...onnekkaille."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Jälleen kerran huomaat olevasi Kaaoskuulan\n"
+"suuressa salissa, ikään kuin yhtään aikaa\n"
+"ei olisi kulunut sitten viime kerran, kun\n"
+"kuljit näiden varjojen seassa.\n"
+"\n"
+"Mutta jotain on pelottavasti eri lailla,\n"
+"hiljaisuus siinä, missä kerran oli ollut\n"
+"vaimeita kuiskauksia, tunne siitä, että on\n"
+"näkymättömien silmien tarkkailtavana...\n"
+"\n"
+"...Silmien, jotka kätkevät taakseen pahan\n"
+"aikomuksen."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Jälleen kerran otit Kaaoskuulan ja pitelit\n"
+"sitä tärisevin käsin. Nyt kätesi tärisevät\n"
+"jostain muustakin kuin ahneudesta, ja pelko\n"
+"yhdistyy vallanhimoon.\n"
+"\n"
+"Vaikka edes kuulan mahti ei riittäisikään\n"
+"suojelemaan sinua pimeyden voimilta, olisi\n"
+"ehkä parempi jättää koskematta siihen, sen\n"
+"lupaus jättää pitämättä.\n"
+"\n"
+"\n"
+"\n"
+"Mutta toisaalta et koskaan ollut sellainen,\n"
+"joka peräytyy haasteesta..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...ja muut pelaajat odottavat.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Kuinka kehtaat taistella valmistautumishuoneessa?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Siitä hyvästä kuolet!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Vesiputous on auki"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Vesiputous on tukittu"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Ovi on avautunut kappelissa"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Onpa kummallista..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Kolme pulman palasta jäljellä"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Kaksi pulman palasta jäljellä"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Yksi pulman palanen jäljellä"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Pulma on ratkaistu"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Et ole ratkaissut pulmaa"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Kerros ei ole turvallinen!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Kolmannes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Kaksi kolmannesta pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Kuulet lavan liikkuvan etäällä"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Se on tehty..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Et ole ratkaissut pulmaa"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Varoitan sinua..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Oletpa itsepäinen"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Ja vieläpä tyhmä"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Neljännes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Huono valinta..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Symbolit eivät ole järjestyksessä"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Ovi ei aukea tältä puolelta"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Ovi on teljetty ulkopuolelta"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Pyhäinhäväistys !"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Olet turmellut Ericin haudan !!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Ja nyt sinä kuolet !!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Kolmannes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Kaksi kolmannesta pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Krypta on auki"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Varo hämähäkin hautaa"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Kuulet lavan kohoavan ulkopuolella"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Tunnetko olosi onnekkaaksi?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Arvasi väärin!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Hyvä arvaus"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Voitko tehdä kaikki tasoni skriptaukset?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Älä koske mönjääni"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Tappava ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Anna vähän sokeria, beibi"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Daa-aaa...."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Filmi tunnissa?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "En saa edes omaa hautakiveäni - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Älköön yhtään verta vuodatettako"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Ei yhtäkään kättä kohotettako vihassa"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Kuka kehtaa häiritä untamme?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Tie on auki"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Sinulla on "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20vipua jäljellä"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Sinulla on vain "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20vipu jäljellä"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Ulospääsy on auki"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Ovet eivät aukea tältä puolelta"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Ovet ovat auki..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...jos olet valmis"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Ovi on auennut"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "kappelissa"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Silta on rakennettu"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "teurastamolla"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Portaat on rakennettu"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "pimeällä vartiolla"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Ratas on asetettu"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20ratasta on asetettu"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Tiesulku on auennut"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "kloaakilla"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Tie takaisin on auki"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Ovi on teljetty sisältä"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Kuinka kehtaat ryöstää"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "teloittajan haudan?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Valmistaudu kuolemaan"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Sinulla on "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20lisää vipua löydettävänä"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Sinulla on vain "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20vipu jäljellä"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Tie tornin luo on auki"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Tie on auki"

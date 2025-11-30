@@ -1,0 +1,191 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Plutonia Deneyi"
+
+msgid "PHUSTR_1"
+msgstr "Seviye 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Seviye 2: Ruhlar Kuyusu"
+
+msgid "PHUSTR_3"
+msgstr "Seviye 3: Aztek"
+
+msgid "PHUSTR_4"
+msgstr "Seviye 4: Kafesli"
+
+msgid "PHUSTR_5"
+msgstr "Seviye 5: Hayalet Kasaba"
+
+msgid "PHUSTR_6"
+msgstr "Seviye 6: Baron'un İni"
+
+msgid "PHUSTR_7"
+msgstr "Seviye 7: Caughtyard"
+
+msgid "PHUSTR_8"
+msgstr "Seviye 8: Diyar"
+
+msgid "PHUSTR_9"
+msgstr "Seviye 9: Abattoire"
+
+msgid "PHUSTR_10"
+msgstr "Seviye 10: Saldırı"
+
+msgid "PHUSTR_11"
+msgstr "Seviye 11: Avlanmış"
+
+msgid "PHUSTR_12"
+msgstr "Seviye 12: Hız"
+
+msgid "PHUSTR_13"
+msgstr "Seviye 13: Mahzen"
+
+msgid "PHUSTR_14"
+msgstr "Seviye 14: Yaratılış"
+
+msgid "PHUSTR_15"
+msgstr "Seviye 15: Alacakaranlık"
+
+msgid "PHUSTR_16"
+msgstr "Seviye 16: Omen"
+
+msgid "PHUSTR_17"
+msgstr "Seviye 17: Bileşik"
+
+msgid "PHUSTR_18"
+msgstr "Seviye 18: Nörosfer"
+
+msgid "PHUSTR_19"
+msgstr "Seviye 19: NME"
+
+msgid "PHUSTR_20"
+msgstr "Seviye 20: Ölüm Alanı"
+
+msgid "PHUSTR_21"
+msgstr "Seviye 21: Avcı"
+
+msgid "PHUSTR_22"
+msgstr "Seviye 22: İmkansız Görev"
+
+msgid "PHUSTR_23"
+msgstr "Seviye 23: Mezar Taşı"
+
+msgid "PHUSTR_24"
+msgstr "Seviye 24: Son Sınır"
+
+msgid "PHUSTR_25"
+msgstr "Seviye 25: Karanlığın Tapınağı"
+
+msgid "PHUSTR_26"
+msgstr "Seviye 26: Sığınak"
+
+msgid "PHUSTR_27"
+msgstr "Seviye 27: Mesih Karşıtı"
+
+msgid "PHUSTR_28"
+msgstr "Seviye 28: Kanalizasyonlar"
+
+msgid "PHUSTR_29"
+msgstr "Seviye 29: Seslerin Odyssey'i"
+
+msgid "PHUSTR_30"
+msgstr "Seviye 30: Cehennem Kapısı"
+
+msgid "PHUSTR_31"
+msgstr "Seviye 31: Siber'in ini"
+
+msgid "PHUSTR_32"
+msgstr "Seviye 32: Devam Et"
+
+msgid "P1TEXT"
+msgstr ""
+"Muhafız'ın dumanı tüten leşi\n"
+"üzerinde kına yakıyorsunuz.\n"
+"Onun ölümüyle Hızlandırıcı'yı\n"
+"Cehennem'in kokuşmuş\n"
+"pençelerinden kurtardınız.\n"
+"Rahatlıyorsun ve odanın\n"
+"etrafına bakıyorsun. Lanet\n"
+"olsun! En azından bir tane\n"
+"çalışan prototip olması\n"
+"gerekiyordu ama onu\n"
+"göremiyorsun. İblisler almış\n"
+"olmalı.\n"
+"\n"
+"Prototipi bulmalısın, yoksa tüm\n"
+"çabaların boşa gidecek.\n"
+"Devam edin, savaşmaya devam\n"
+"edin, öldürmeye devam edin.\n"
+"Oh evet, yaşamaya da devam edin."
+
+msgid "P2TEXT"
+msgstr ""
+"Ölümcül Baş Aşağılık labirenti bile\n"
+"seni durduramaz, ve sen prototip\n"
+"Hızlandırıcı yakında etkili ve\n"
+"kalıcı olarak devre dışı bırakıldı.\n"
+"\n"
+"Bu tür şeylerde iyisin."
+
+msgid "P3TEXT"
+msgstr ""
+"İblis kovanının kalbine giden yolda\n"
+"savaştınız. İğrenç köleleri Dünya'yı\n"
+"istila eden Kapı Bekçisi'ni hedef\n"
+"alan bir Arama ve Yok Etme\n"
+"görevinin zamanı geldi. Evet, o\n"
+"kötü biri. Ama kimin daha kötü\n"
+"olduğunu biliyorsun!\n"
+"\n"
+"Şeytani bir sırıtışla teçhizatınızı\n"
+"kontrol edin ve piç kurusuna kendi\n"
+"yarattığı cehennemi yaşatmaya\n"
+"hazır olun!"
+
+msgid "P4TEXT"
+msgstr ""
+"Kapı Bekçisi'nin şeytani yüzü her\n"
+"yerde. Parçalanmış cesedi gibi\n"
+"çöker, ters bir geçit oluşur ve son\n"
+"parçalarını emer prototip\n"
+"Hızlandırıcı'dan bahsetmiyorum\n"
+"bile. kalan birkaç iblis. İşin bitti.\n"
+"Cehennem kötü ölü insanları\n"
+"dövmeye geri döndü iyi canlı\n"
+"olanlar yerine. Unutmayın ki\n"
+"torunlarına bir roket koymalarını\n"
+"söyle tabutunda fırlatıcı. Eğer\n"
+"cehenneme gidersen öldüğünde,\n"
+"bazılarına ihtiyacın olacak son\n"
+"temizlik ..."
+
+msgid "P5TEXT"
+msgstr ""
+"Elimizdeki en zor ikinci seviyeyi buldun.\n"
+"Umarım bir ya da iki seviye öncesine\n"
+"ait kayıtlı bir oyununuz vardır. Eğer\n"
+"yoksa, bolca ölmeye hazır olun.\n"
+"Sadece usta savaşçılar için."
+
+msgid "P6TEXT"
+msgstr ""
+"Eminim elimizdeki en zor seviyenin\n"
+"ne olduğunu merak etmişsinizdir.\n"
+"Artık biliyorsunuz.\n"
+"Kimse canlı çıkamayacak."

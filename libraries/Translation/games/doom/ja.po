@@ -1,0 +1,195 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/doom-engine-"
+"games/doom/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: jp\n"
+
+msgid "TXT_D1E1"
+msgstr "膝元迫る亡者"
+
+msgid "TXT_D1E2"
+msgstr "地獄の瀬戸際"
+
+msgid "TXT_D1E3"
+msgstr "インフェルノ"
+
+msgid "TXT_D1E4"
+msgstr "滅びし汝の身"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: 格納庫"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: 原子力発電所"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: 毒素精錬所"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: 指令管制塔"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: フォボス研究所"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: 中央処理施設"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: コンピューターステーション"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: フォボス アノマリー"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: 軍事基地"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: 下水道"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: 異常なるダイモス"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: 収容エリア"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: 精製所"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: ダイモス研究所"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: 指令本部"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: ダムドの会堂"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: 産卵桶"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: バベルの塔"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: 神秘の要塞"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: 牢獄"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: 絶望の大地"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: 伏魔殿"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: 苦痛の館"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: 邪教の大聖堂"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: エレボス山"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: 忘却の地"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: 死"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: 兎小屋"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: 地獄の下へ"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: 完全なる憎悪"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: 邪悪を絶つ"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: 手に負えない邪悪"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: 奴等に後悔を"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: 汝への悪逆"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: そして地獄は従った"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: 容赦なき者へ"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: 恐怖"
+
+msgid "E1TEXT"
+msgstr ""
+"火星基地から巨悪をこの手で一掃し\n"
+"勝利を収めたはずだ。だがこれはいったい何だ?\n"
+"巨額の報酬と帰還チケットは? \n"
+"ふざけやがって、決着はまだついていない!\n"
+"\n"
+"どうやら地獄の泥沼に膝まで浸かってしまい、\n"
+"そのまま沈むしかないようだ。\n"
+"肉の腐敗臭がする、滅んだダイモス基地に。\n"
+"\n"
+"この運命を受け入れ、地獄の瀬戸際か\n"
+"或いは脅威なる インフェルノ へ立ち向かえ!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"よくやった! 滅んだダイモス基地を支配していた\n"
+"サイバーデーモンはナマクラの鉄屑と化した! \n"
+"だが...ここは一体何処だ?\n"
+"外壁の縁をよじ登りその鉄屑にも劣る現実に直面にした。\n"
+"\n"
+"ダイモスの大地が地獄に浮いている!\n"
+"しかもその眼下では奴等がまだ蠢いてやがる。\n"
+"\n"
+"誰の手も借りず地獄から逃げ出せた人間の話を\n"
+"聞いたことも無いが、誰がここへ来たか奴等に思い知らせ、\n"
+"後悔させる為にも今すぐ インフェルノ へ降り立て!"
+
+msgid "E3TEXT"
+msgstr ""
+"火星基地の侵略を企て多くの死をもたらした\n"
+"忌々しいスパイダーマスターマインドは、\n"
+"その権威と共に地に伏した。\n"
+"\n"
+"この屈強さには地獄さえ抗えず死者のように平伏し、\n"
+"封鎖されていた地獄の門を正面からくぐり抜けた! \n"
+"まだ緑の豊かさが残っている地球の故郷に遂に辿り着いたのだ。\n"
+"\n"
+"君は魔物共と戦っている間、地球では何が起こったかを\n"
+"不思議に思った。地獄からの使者が同じ門をくぐれなかったのは\n"
+"幸運なのかもしれない..."
+
+msgid "E4TEXT"
+msgstr ""
+"スパイダーマスターマインドは恐るべき地獄の軍勢を君との決着の前から\n"
+"地球に送り込んでいたに違いない。それでも君は突き進み、\n"
+"真の英雄として邪悪な獣たちに永遠の天罰と苦痛を下した。\n"
+"\n"
+"それに君のペットのウサギ、デイジーの死の代償は奴等に\n"
+"払わせなければいけない。\n"
+"\n"
+"仇は取った。しかし今、見渡す限り我々の街は血溜まりと化し\n"
+"肉片が撒き散らされ、苦痛をもたらす悪魔が\n"
+"さらなる血に狂いひしめいている。\n"
+"\n"
+"次の戦いは「第三惑星 地獄」だ!"

@@ -1,0 +1,223 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:25+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ko\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_D2E1"
+msgstr "지상에 강림한 지옥"
+
+msgid "TXT_D2E2"
+msgstr "산 자에게 휴식은 없다"
+
+msgid "HUSTR_1"
+msgstr "레벨 1: 초입"
+
+msgid "HUSTR_2"
+msgstr "레벨 2: 지하수로"
+
+msgid "HUSTR_3"
+msgstr "레벨 3: 건틀릿"
+
+msgid "HUSTR_4"
+msgstr "레벨 4: 초점"
+
+msgid "HUSTR_5"
+msgstr "레벨 5: 하수도"
+
+msgid "HUSTR_6"
+msgstr "레벨 6: 분쇄기"
+
+msgid "HUSTR_7"
+msgstr "레벨 7: 죽여주는 단순함"
+
+msgid "HUSTR_8"
+msgstr "레벨 8: 속임수와 함정들"
+
+msgid "HUSTR_9"
+msgstr "레벨 9: 구덩이"
+
+msgid "HUSTR_10"
+msgstr "레벨 10: 연료 충전소"
+
+msgid "HUSTR_11"
+msgstr "레벨 11: 파괴의 고리"
+
+msgid "HUSTR_12"
+msgstr "레벨 12: 공장"
+
+msgid "HUSTR_13"
+msgstr "레벨 13: 번화가"
+
+msgid "HUSTR_14"
+msgstr "레벨 14: 깊숙한 동굴들"
+
+msgid "HUSTR_15"
+msgstr "레벨 15: 공업 지대"
+
+msgid "HUSTR_16"
+msgstr "레벨 16: 교외"
+
+msgid "HUSTR_17"
+msgstr "레벨 17: 공동주택"
+
+msgid "HUSTR_18"
+msgstr "레벨 18: 중정"
+
+msgid "HUSTR_19"
+msgstr "레벨 19: 성채"
+
+msgid "HUSTR_20"
+msgstr "레벨 20: 잡았다!"
+
+msgid "HUSTR_21"
+msgstr "레벨 21: 열반"
+
+msgid "HUSTR_22"
+msgstr "레벨 22: 지하 묘지"
+
+msgid "HUSTR_23"
+msgstr "레벨 23: 신나는 폭발통들"
+
+msgid "HUSTR_24"
+msgstr "레벨 24: 협곡"
+
+msgid "HUSTR_25"
+msgstr "레벨 25: 혈폭포"
+
+msgid "HUSTR_26"
+msgstr "레벨 26: 버려진 광산"
+
+msgid "HUSTR_27"
+msgstr "레벨 27: 괴물 콘도"
+
+msgid "HUSTR_28"
+msgstr "레벨 28: 영령의 세계"
+
+msgid "HUSTR_29"
+msgstr "레벨 29: 최종점"
+
+msgid "HUSTR_30"
+msgstr "레벨 30: 죄악의 상징"
+
+msgid "HUSTR_31"
+msgstr "레벨 31: 울펜슈타인"
+
+msgid "HUSTR_32"
+msgstr "레벨 32: 그로세"
+
+msgid "HUSTR_31B"
+msgstr "레벨 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "레벨 32: 킨"
+
+msgid "HUSTR_33"
+msgstr "레벨 33: 배반"
+
+msgid "NHUSTR_1"
+msgstr "레벨 1: 지구 기지"
+
+msgid "NHUSTR_2"
+msgstr "레벨 2: 고통의 연구소"
+
+msgid "NHUSTR_3"
+msgstr "레벨 3: 죽음의 계곡"
+
+msgid "NHUSTR_4"
+msgstr "레벨 4: 지옥의 산"
+
+msgid "NHUSTR_5"
+msgstr "레벨 5: 생체 해부"
+
+msgid "NHUSTR_6"
+msgstr "레벨 6: 연옥의 피"
+
+msgid "NHUSTR_7"
+msgstr "레벨 7: 남작의 연회"
+
+msgid "NHUSTR_8"
+msgstr "레벨 8: 증오의 무덤"
+
+msgid "NHUSTR_9"
+msgstr "레벨 9: 악마들의 행진"
+
+msgid "C1TEXT"
+msgstr ""
+"당신은 놈들에게 점령당한 우주 공항의 중심부까지 진입했다. 그러나 무언가\n"
+"잘못된 것 같다. 괴물들이 계속 소환되어 나타나는 탓에 이미 우주 공항의\n"
+"기기들이 놈들에 의해 파괴된 뒤였다.\n"
+"\n"
+"이제 요새화된 지옥의 전초기지가 당신의 눈에 들어오고 있다. 당신은\n"
+"괴물들이 출몰하는 우주 공항의 중심부까지 최대한 신속히 침투한 후,\n"
+"공항의 제어 스위치를 작동시켜 현재 인질로 사로잡혀 있는\n"
+"인류를 구출해야 한다."
+
+msgid "C2TEXT"
+msgstr ""
+"당신은 성공했다! 당신의 승리 덕분에 인류는 지구에서 탈출했으며 악몽에서\n"
+"벗어날 수 있었다. 이제 당신만이 이 행성에 남겨진 유일한 인간이다.\n"
+"식인 돌연변이들, 육식성 외계인들, 그리고 악령들만이 당신의 유일한\n"
+"이웃이다. 당신은 인류를 구원하기 위해 기꺼이 자신을 희생했다.\n"
+"\n"
+"그러나 잠시, 우주에서 지상 제어 전파가 수신되어 왔다. “외계인 침략의\n"
+"근원지를 센서가 감지했다. 만일 당신이 그곳에 도달한다면 놈들이\n"
+"쏟아져나오는 입구를 막아버려야 한다. 외계인의 기지는 당신의 고향 도시의\n"
+"중심부에 위치하고 있다. 우주 공항에서 그리 멀지 않은 곳이다.”\n"
+"당신은 천천히, 그리고 고통스럽게 일어나 다시 전쟁터로 향했다."
+
+msgid "C3TEXT"
+msgstr ""
+"당신은 타락한 도시의 중심부에서 적들의 시체에 둘러싸인 채 서 있다. 당신은\n"
+"이곳에서는 놈들의 입구를 파괴할 방법이 없다는 것을 확인했다. 결국, 당신은\n"
+"이를 꽉 다문 채 통로로 뛰어들었다.\n"
+"\n"
+"저 너머에는 분명 포탈을 닫을 방법이 있을 것이다.\n"
+"어쩌면 지옥으로 향하는 길일지도 모르지만, 무슨 상관인가?"
+
+msgid "C4TEXT"
+msgstr ""
+"놈의 돌출된 뇌를 향해 로켓을 몇 발 집어넣자 당신 앞에 서 있던 거대하고\n"
+"흉측한 악마는 완전히 박살 나 버렸다. 괴물들은 오그라들며 죽어갔다.\n"
+"지옥의 표면은 갈라진 깊이를 잴 수 없을 만큼 갈기갈기 쪼개지며 파괴되었다.\n"
+"\n"
+"당신은 해냈다. 침략은 격퇴되고 지구는 구원되었다. 지옥은 붕괴했다.\n"
+"나쁜 사람들이 죽어서 가게 되는 곳을 당신은 살아서 돌아온 것이다.\n"
+"이제 당신 앞에는 고향으로 돌아갈 긴 여정만이 남아있다.\n"
+"지구를 재건하는 것은 지구가 파괴되고 마는 것보다는 즐거운 일이 될 것이다.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"축하한다. 당신은 비밀 레벨을 찾아냈다! 여기는 악마들보다는 인간들이\n"
+"건설한 곳 같다. 그러나 당신은 구석에 있는 죄수들이 지옥에 있던 놈들임을\n"
+"알고는 매우 놀란다."
+
+msgid "C6TEXT"
+msgstr ""
+"축하한다. 당신은 특급 비밀 레벨을 찾아냈다! 당신은 이곳을 순식간에\n"
+"통과하는 게 좋을 것이다!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"당신이 가장 좋아하는 휴가 장소에서 문제가 다시 불거지고 있었다... 제길.\n"
+"사이버데몬 녀석이 지옥을 놀이공원으로 바꾸어버리고 지구를 매표소로\n"
+"바꿀 수 있을 줄 알았나 보다.\n"
+"\n"
+"그렇지만, 그 반쪽 로봇 호러쇼는 누군가가 입장하는지 몰랐을 것이니. 피가\n"
+"끓는 악마 놈들의 사격장보다 더 재밌는 건 없을 것이다.\n"
+"\n"
+"사악한 미궁의 벽에 부딪혀 메아리치는 강철 팔다리 소리와 함께 그의\n"
+"단말마는 당신이 엉망진창으로 만든 얼굴에서 뿜어져 나왔다.\n"
+"\n"
+"이곳은 이제 폐쇄되었다.\n"
+"\n"
