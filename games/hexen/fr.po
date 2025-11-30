@@ -1,0 +1,351 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:41+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fr\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Chambre de la Séparation"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Les Sept Portails"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Gardien de Glace"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Gardien de Feu"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Gardien d'Acier"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Creuset Radiant"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Forêt des Ombres"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Marais Noir"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Caves de Circé"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Terres Ruinées"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Bosquet Sacré"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Séminaire de l'Hérésiarche"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Chapelle du Dragon"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Chapelle du Grifon"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Chapelle du Vent Tueur"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Verger des Lamentations"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Réfectoire Silencieux"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Chapelle du Loup"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Base Abandonnée"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Château de la Souffrance"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Gibet"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Donjons"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Jardin de la Désolation"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nécropole"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Tombeau de Zedek"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Tombeau de Menelkir"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Tombeau de Traductus"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Creuset Sombre"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Après avoir passé les sept portails\n"
+"et scellé ce domaine, un vaste territoire\n"
+"de terres sauvages s'étend devant vous.\n"
+"Feu, glace et acier vous ont testé mais\n"
+"des défis plus sordides encore vous\n"
+"attendent. La forêt impénétrable cache\n"
+"sans doute des yeux hostiles, et \n"
+"bien pire encore au delà.\n"
+"\n"
+"Déserts sans vie, marais putrides et\n"
+"caves lugubres barrent le passage mais\n"
+"rien ne peut arrêter votre destinée,\n"
+"même si vous souhaitez que ce soit le\n"
+"cas.\n"
+"\n"
+"Plus loin, brillant à l'horizon, les murs\n"
+"toujours changeants de l'Hypostyle\n"
+"semblent moquer vos efforts."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Votre esprit souffre encore de vos\n"
+"combats dans l'Hypostyle. Vous vous\n"
+"traînez néanmoins dans l'espoir qu'il y\n"
+"ait une sortie. Tout semble bouger de\n"
+"plus en plus vite, votre vision devient\n"
+"floue et s'assombrit..\n"
+"Tandis que le monde s'écroule autour\n"
+"de vous, la lumière d'un téléportail\n"
+"vous envelope. Un éclair, et vous vous\n"
+"relevez difficilement.\n"
+"\n"
+"Vous êtes au sommet d'une haute\n"
+"tour, et d'en dessous émanent\n"
+"les cris des damnés. Vous vous\n"
+"avancez et les chants démoniaques\n"
+"vous glacent le sang.\n"
+"Par les dieux de la douleur, où\n"
+"êtes vous arrivé? Comment sortir d'ici?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Les plus puissantes armes et artéfacts\n"
+"des anciens ont à peine suffit à\n"
+"défaire l'Hérésiarche et ses sous-fifres.\n"
+"Leur vils cadavres s'étendent à vos\n"
+"pieds. Regagnant vos forces, vous\n"
+"vous préparez à traverser le\n"
+"portail qui mène dans le\n"
+"sanctuaire de l'Hérésiarche.\n"
+"\n"
+"Au dessus de vous, les remparts d'un\n"
+"immense château dominent le paysage.\n"
+"Des tours silencieuses et des murs nus\n"
+"entourent une pointe de pierre noire\n"
+"qui se tient au centre du château \n"
+"comme un géant esseulé. Feu et ombres\n"
+"se tordent derrière des vastes vitraux,\n"
+"des douzaines d'yeux sinistres vous\n"
+"observant.\n"
+"Quelque part ici, vos enemis vous\n"
+"attendent..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"« ...et ainsi il voyagera à travers\n"
+"le domaine des morts, et mettra au défi\n"
+"les factions qu'il y trouvera, jusqu'au\n"
+"portes du désespoir. Mais qu'il\n"
+"revienne ou non au monde\n"
+"de la lumière, personne ne le sait. »\n"
+"\n"
+"\n"
+"\n"
+"Merde!"
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Avec un cri d'agonie, vous êtes arraché\n"
+"de ce monde et violemment\n"
+"jeté dans un autre. Chaque membre \n"
+"de votre corps est recouvert de\n"
+"feu mystique. Quand votre vision\n"
+"s'éclaircit, vous vous retrouvez dans\n"
+"un grand hall, rempli d'échos spectraux\n"
+"et d'ombres menaçantes.\n"
+"Plus loin, vous pouvez voir une estrade\n"
+"sur laquelle se trouve la seule source\n"
+"de lumière dans ce monde."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Cela ne peut être que la Sphère du\n"
+"Chaos, la source du pouvoir de Korax.\n"
+"Avec ceci, vous pouvez créer des\n"
+"mondes.. Et les détruire.\n"
+"Par le droit du vainqueur\n"
+"et conquérant, elle est vôtre. Vos mains\n"
+"tremblantes la saisissent. Peut-être,\n"
+"un nouveau joueur va rejoindre le jeu\n"
+"cosmique du pouvoir.\n"
+"Comme un pion promu au rang de reine,\n"
+"les extrêmités de l'échiquier sont\n"
+"maintenant à votre portée."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"Mais il y a encore des joueurs plus\n"
+"puissants que vous encore, et qui\n"
+"peut prédire ce qu'ils feront pendant\n"
+"leur tour?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Cette porte est verouillée."
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Salutations, humain."
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Êtes-vous prêt à mourir?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Une porte s'est ouverte dans le Gardien de Glace."
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Ce chemin est barré."
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "La moitié du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "pour les Sept Portails."
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Un tiers du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Des escaliers sont apparus dans les Sept Portails."
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Un tiers du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "pour les Sept Portails."
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Des escaliers sont apparus dans les Sept Portails."
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Vous devez trouver un autre bouton.."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Des pierres grincent dans les Sept Portails."
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Un sixième du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "dans le Bois des Ombres."
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "La porte est bloquée de ce côté"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Vous entendez une porte s'ouvrir au loin."
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Un sixième du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "dans le Bois des Ombres."
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Un sixième du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "dans le Bois des Ombres."
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins restants"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Vous avez attendu trop longtemps, maintenant, mourrez!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Une porte s'est ouverte dans la base abandonnée."
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Cette porte ne s'ouvre pas pour l'instant."
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Mes servants peuvent sentir votre sang, humain."
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Une porte s'est ouverte dans le gibet."
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "La porte est bloquée de ce côté"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Une plateforme est descendue dans la tour."
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Vous avez joué à ce jeu trop longtemps, mortel.."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Je pense qu'il est l'heure de vous retirer de l'échiquier."
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Vous entendez une porte s'ouvrir à l'étage."
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Prosternez vous devant moi, et je pourrai considérer de vous épargner."
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Quoi que cela soit peu probable."
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Un neuvième du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "dans le monastère."
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Un neuvième du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "dans le monastère."
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Un neuvième du puzzle à été résolu"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "dans le monastère."
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Le portail est scellé."
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Choisissez votre sort."
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "La porte est bloquée de ce côté"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Etes vous suffisamment fort"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "pour faire face à vos maîtres?"

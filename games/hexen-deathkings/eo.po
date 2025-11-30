@@ -1,0 +1,404 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:44+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eo\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Ruina vilaĝo"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Pesto"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Olekuvo"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakombo"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Badlandoj"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Pteridejo"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Kremaciejo"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Pordego de Ĝendarmo"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Trezorejo"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Foirejo"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Provo Per Aflikto"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Armilejo"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Navo"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kapelo"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Buĉejo"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Ombra Gardisto"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloako"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Fuorto el Glacio"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Ombra Citadelo"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Vojo"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Sub kaj Supre"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Mortnebulo"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Kastelo de Doloro"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Fekaĵputo"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "La Rozo"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Viŝante tran via sanganta vizaĝo per\n"
+"tremanta mano, vi penas klarigi vian\n"
+"menson por tio, kiu situas antaŭe...\n"
+"\n"
+"...kaj forgesi tion, kiu situas malantaŭe.\n"
+"\n"
+"Malproksime, la rigidaj muregoj de\n"
+"grandega kastel-komplekso ŝajnas\n"
+"traŝiri la ĉielon supran, kaj la odoraĉo\n"
+"de putraĵo blovas de la malrespektitaj\n"
+"tomboj de nenombritaj mortintaj.\n"
+"\n"
+"Zorge nombrante viajn malmultajn\n"
+"restantajn artefaktojn, vi penas\n"
+"recertiĝi, ke ĝi estos sufiĉa. Finfine,\n"
+"ĝi sendube estas sufiĉa, ĉu ne?\n"
+"\n"
+"\n"
+"Ĉu ne?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Sendube la animoj de la damnitaj\n"
+"loĝas en ĉi tiu mondo, ĉar nenio\n"
+"bela aŭ bono povus vivi longe ĉi tie.\n"
+"\n"
+"Tamen, tio, kiu okazis antaŭe estas nur\n"
+"pala ombro de tio, kiu nun baras vian\n"
+"vojon — La Citadelo Ombra mem.\n"
+"\n"
+"La malafabla dikeco de la katedralo\n"
+"kaŝas ĉiajn krom fragmentajn videtojn\n"
+"de la citadelo mem, sed tio, kiu estas\n"
+"videbla, parolas per siblaj murmuroj\n"
+"de malvarma malrapida morto...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...por la bonsortaj."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Denove vi troviĝas en la grandega\n"
+"halo de la ĥaos-sfero, kvazaŭ neniom\n"
+"da tempo pasis, ekde kiam vi lastfoje\n"
+"movis inter ĉi tiuj ombroj.\n"
+"\n"
+"Tamen, io estas timige nekutima.\n"
+"Silento tie, kie estis mallaŭtaj\n"
+"flustroj, sento, ke mi estas\n"
+"observata de kaŝitaj okuloj...\n"
+"\n"
+"...Okuloj, kiuj ŝildas malican celon."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Unufoje vi premis la ĥaos-sferon —\n"
+"tenis ĝin per tremantaj manoj.\n"
+"Nun viaj manoj tremas kun io plia\n"
+"ol avaro, kaj timo miksiĝas kun la\n"
+"sopiro por potenco.\n"
+"\n"
+"Se eĉ la potenco de la sfero ne\n"
+"sufiĉas por protekti vin kontraŭ\n"
+"la fortoj de malhelo, eble bonas\n"
+"lasi ĝin nepalpita, ĝian promeson\n"
+"neveriga.\n"
+"\n"
+"\n"
+"\n"
+"Sed tiam, vi neniam estis iu,\n"
+"kiu cedus defion..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...kaj aliaj ludantoj atendas.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Vi aŭdacas batali en la pretĉambro?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Pro tio, vi mortos!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "La akvofalo estas malferma."
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "La akvofalo estas barita."
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Pordo malfermis en la kapelo."
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Nun tio estas stranga..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Nur tri partoj de la puzlo restas."
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Nur du partoj de la puzlo restas."
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Nur unu parto de la puzlo restas."
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "La puzlo estas kompleta."
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Vi ne kompletis la puzlon."
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "La planko ne estas sendanĝera!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Unu triono de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Du trionoj de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Vi aŭdas plataĵon movantan malproksime."
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Ĝi estas farita..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Vi ne kompletis la puzlon."
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Mi avertas vin..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Vi estas obstina, ĉu ne?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Kaj ankaŭ stulta."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Unu kvarono de la puzlo estas kompleta."
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Malbona elekto..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "La simboloj ne estas liniiga."
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "La pordo ne malfermiĝas."
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "La pordo estas barita ekstere."
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Sakrilegio !"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Vi malpurigis la tombon de Eric !!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Kaj nun vi mortas !!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Unu triono de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Du trionoj de la puzlo estas solvita."
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "La kripto estas malfermita."
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Singardu en la tombo de la araneo."
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Vi aŭdas plataĵon leviĝantan ekstere."
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Ĉu vi sentas vin bonŝanca?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Vi divenis malĝuste!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Bona diveno."
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Ĉu vi povas fari ĉiom da la skriptoj por mia nivelo?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Ne tuŝas mian gloppy-on."
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Donu al mi iom da sukeron, knanjo."
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Da-aaaa..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Kino post horo?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Mi ne eĉ ekhavis mian propran tombŝtonon. - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Lasu neniom da sango elflui."
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Lasu nenion manon estas levita pro kolero."
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Kiu aŭdacas interrompi nian dormon?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "La vojo estas malfermita."
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Vi ankoraŭ havas "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20ŝaltilojn ceterajn."
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Vi nur havas "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20ŝaltilon ceteran."
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "La elirejo estas malfermita"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "La pordo ne malfermos de ĉi tio flanko."
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "La pordoj estas malfermitaj..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...se vi pretas."
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Pordo malfermiĝis"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "en la Kapelo."
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Ponto estis konstruita"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "en la Buĉejo."
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Ŝtuparo estis konstruita"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "en la Gardisto Ombra."
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Dentrado estis metita."
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20dentradoj estis metitaj."
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Barikado malfermiĝis"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "En la Kloako."
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "La vojo reen estas malfermita."
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "La pordo estas barita interne."
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Ĉu vi aŭdacas rabi de la tombo"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "de la ekzekutisto?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Pretiĝu por morti!"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Vi ankoraŭ havas "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20trovindajn ŝaltilojn."
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Vi nur havas "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20ŝaltilon ceteran."
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "La vojo al la turo estas malfermita."
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "La vojo estas malfermita."

@@ -1,0 +1,256 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:27+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pt\n"
+
+msgid "TXT_D2E1"
+msgstr "Inferno na Terra"
+
+msgid "TXT_D2E2"
+msgstr "Não Há Paz Para os Vivos"
+
+msgid "HUSTR_1"
+msgstr "Fase 1: Entrada"
+
+msgid "HUSTR_2"
+msgstr "Fase 2: Subterrâneo"
+
+msgid "HUSTR_3"
+msgstr "Fase 3: A Punição"
+
+msgid "HUSTR_4"
+msgstr "Fase 4: O Foco"
+
+msgid "HUSTR_5"
+msgstr "Fase 5: Os Túneis de Dejetos"
+
+msgid "HUSTR_6"
+msgstr "Fase 6: O Esmagador"
+
+msgid "HUSTR_7"
+msgstr "Fase 7: Mortalmente Simples"
+
+msgid "HUSTR_8"
+msgstr "Fase 8: Truques e Armadilhas"
+
+msgid "HUSTR_9"
+msgstr "Fase 9: O Fosso"
+
+msgid "HUSTR_10"
+msgstr "Fase 10: Base de Reabastecimento"
+
+msgid "HUSTR_11"
+msgstr "Fase 11: Círculo da Morte"
+
+msgid "HUSTR_12"
+msgstr "Fase 12: A Fábrica"
+
+msgid "HUSTR_13"
+msgstr "Fase 13: Centro da Cidade"
+
+msgid "HUSTR_14"
+msgstr "Fase 14: Os Antros Profundos"
+
+msgid "HUSTR_15"
+msgstr "Fase 15: Zona Industrial"
+
+msgid "HUSTR_16"
+msgstr "Fase 16: Subúrbios"
+
+msgid "HUSTR_17"
+msgstr "Fase 17: Habitações"
+
+msgid "HUSTR_18"
+msgstr "Fase 18: O Átrio"
+
+msgid "HUSTR_19"
+msgstr "Fase 19: A Cidadela"
+
+msgid "HUSTR_20"
+msgstr "Fase 20: Te Peguei!"
+
+msgid "HUSTR_21"
+msgstr "Fase 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Fase 22: As Catacumbas"
+
+msgid "HUSTR_23"
+msgstr "Fase 23: Barris de Diversão"
+
+msgid "HUSTR_24"
+msgstr "Fase 24: O Abismo"
+
+msgid "HUSTR_25"
+msgstr "Fase 25: Cataratas de Sangue"
+
+msgid "HUSTR_26"
+msgstr "Fase 26: As Minas Abandonadas"
+
+msgid "HUSTR_27"
+msgstr "Fase 27: Mansão dos Monstros"
+
+msgid "HUSTR_28"
+msgstr "Fase 28: O Mundo Espiritual"
+
+msgid "HUSTR_29"
+msgstr "Fase 29: O Cúmulo da Existência"
+
+msgid "HUSTR_30"
+msgstr "Fase 30: Ícone do Pecado"
+
+msgid "HUSTR_31"
+msgstr "Fase 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Fase 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Fase 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Fase 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Fase 33: Traição"
+
+msgid "NHUSTR_1"
+msgstr "Fase 1: A Base Terrestre"
+
+msgid "NHUSTR_2"
+msgstr "Fase 2: Os Laboratórios da Dor"
+
+msgid "NHUSTR_3"
+msgstr "Fase 3: Desfiladeiro dos Mortos"
+
+msgid "NHUSTR_4"
+msgstr "Fase 4: Montanha Infernal"
+
+msgid "NHUSTR_5"
+msgstr "Fase 5: Vivissecção"
+
+msgid "NHUSTR_6"
+msgstr "Fase 6: Inferno de Sangue"
+
+msgid "NHUSTR_7"
+msgstr "Fase 7: Banquete do Barão"
+
+msgid "NHUSTR_8"
+msgstr "Fase 8: Tumba da Malevolência"
+
+msgid "NHUSTR_9"
+msgstr "Fase 9: Marcha dos Demônios"
+
+msgid "C1TEXT"
+msgstr ""
+"Você entrou profundamente no\n"
+"espaçoporto infestado. Mas há algo \n"
+"errado. Os monstros trouxeram consigo \n"
+"a sua própria realidade, e a tecnologia \n"
+"está sendo subvertida pela presença deles.\n"
+"\n"
+"Mais adiante, você vê um posto avançado \n"
+"do inferno, uma zona fortificada. \n"
+"Se você conseguir atravessá-la, você poderá \n"
+"penetrar no centro infestado da base \n"
+"espacial e achar o interruptor de controle \n"
+"que está mantendo a população da Terra \n"
+"como refém."
+
+msgid "C2TEXT"
+msgstr ""
+"Você venceu! Sua vitória permitiu que a\n"
+"humanidade evacuasse a Terra e escapasse\n"
+"desse pesadelo. Agora você é @[ao_ptb] únic@[ao_ptb]\n"
+"human@[ao_ptb] que resta na face do planeta.\n"
+"Mutações canibais, alienígenas carnivoros \n"
+"e espiritos malignos são seus unicos\n"
+"vizinhos. Você senta e espera pela morte, \n"
+"contente de que você salvou a sua espécie.\n"
+"\n"
+"No entanto, o comando terráqueo envia uma\n"
+"mensagem do espaço: \"Os sensores localizaram\n"
+"a fonte da invasão alienígena. Se você for lá,\n"
+"pode ser que você consiga bloquear a sua entrada.\n"
+"A base alienígena está no centro da sua cidade \n"
+"natal, não muito longe do espaçoporto.\"\n"
+"Lenta e dolorosamente você se levanta e volta \n"
+"para a briga."
+
+msgid "C3TEXT"
+msgstr ""
+"Você consegue chegar no centro infestado\n"
+"da cidade, cercado pelos cadáveres de \n"
+"seus inimigos. Você percebe que não há\n"
+"como destruir a passagem de entrada \n"
+"das criaturas por este lado, então você \n"
+"cerra os dentes e passa através dela.\n"
+"\n"
+"Deve haver um jeito de fechá-la do outro\n"
+"lado. Grande coisa ter que atravessar \n"
+"o inferno para chegar lá, não é mesmo?"
+
+msgid "C4TEXT"
+msgstr ""
+"A visão horrenda do maior demônio que\n"
+"você já viu desmorona na sua frente\n"
+"depois de você lançar alguns foguetes\n"
+"dentro do seu cérebro exposto. Ele\n"
+"murcha e morre. Seus membros estão\n"
+"se debatendo e devastando inúmeros \n"
+"quilômetros da superfície do inferno.\n"
+"\n"
+"Você conseguiu. A invasão acabou.\n"
+"A Terra está salva. O inferno, em ruínas.\n"
+"Você se pergunta para onde os vilões irão\n"
+"quando morrerem agora. Você seca o\n"
+"suor da sua testa e começa a longa\n"
+"jornada de volta para casa. Reconstruir\n"
+"a Terra deveria ser bem mais divertido \n"
+"do que arrasá-la.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Parabéns, você achou a fase secreta!\n"
+"Parece ter sido construído por humanos,\n"
+"ao invés de demônios. Você se pergunta \n"
+"quem são os habitantes desta parte do inferno."
+
+msgid "C6TEXT"
+msgstr ""
+"Parabéns! Você achou a fase super secreta!\n"
+"É melhor meter fogo por ela!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Mais uma vez estava começando a dar \n"
+"encrenca no seu local de descanso\n"
+"favorito... Que saco. Algum Ciberdemônio\n"
+"desgraçado achou que podia transformar\n"
+"o Inferno em um parque de diversões\n"
+"particular e fazer da Terra um quiosque\n"
+"de venda de ingressos.\n"
+"\n"
+"Bem, essa aberração semi-robotizada\n"
+"não imaginava quem estava por chegar.\n"
+"Nada como uma barraca de tiro ao alvo \n"
+"cheio de demônios para fazer o sangue ferver...\n"
+"\n"
+"Agora as paredes do labirinto demoníaco\n"
+"ecoam com o som de seus membros metálicos\n"
+"caindo no chão. Seu gemido de morte se\n"
+"engasga na bagunça que você fez da cara dele.\n"
+"\n"
+"Esta atração está fechada.\n"
+"\n"

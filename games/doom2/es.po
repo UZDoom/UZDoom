@@ -1,0 +1,266 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:31+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: es\n"
+
+msgid "TXT_D2E1"
+msgstr "Infierno en la Tierra"
+
+msgid "TXT_D2E2"
+msgstr "No hay descanso para los vivos"
+
+msgid "HUSTR_1"
+msgstr "Nivel 1: Entrada"
+
+msgid "HUSTR_2"
+msgstr "Nivel 2: Salones subterráneos"
+
+msgid "HUSTR_3"
+msgstr "Nivel 3: Carrera de baquetas"
+
+msgid "HUSTR_4"
+msgstr "Nivel 4: El foco"
+
+msgid "HUSTR_5"
+msgstr "Nivel 5: Los túneles de desechos"
+
+msgid "HUSTR_6"
+msgstr "Nivel 6: La trituradora"
+
+msgid "HUSTR_7"
+msgstr "Nivel 7: Simplemente muerto"
+
+msgid "HUSTR_8"
+msgstr "Nivel 8: Trucos y trampas"
+
+msgid "HUSTR_9"
+msgstr "Nivel 9: El pozo"
+
+msgid "HUSTR_10"
+msgstr "Nivel 10: Base de reabastecimiento"
+
+msgid "HUSTR_11"
+msgstr "Nivel 11: Círculo de la muerte"
+
+msgid "HUSTR_12"
+msgstr "Nivel 12: La fábrica"
+
+msgid "HUSTR_13"
+msgstr "Nivel 13: Centro de la ciudad"
+
+msgid "HUSTR_14"
+msgstr "Nivel 14: Los Antros más Recónditos"
+
+msgid "HUSTR_15"
+msgstr "Nivel 15: Zona Industrial"
+
+msgid "HUSTR_16"
+msgstr "Nivel 16: Suburbios"
+
+msgid "HUSTR_17"
+msgstr "Nivel 17: Viviendas"
+
+msgid "HUSTR_18"
+msgstr "Nivel 18: El Patio"
+
+msgid "HUSTR_19"
+msgstr "Nivel 19: La Ciudadela"
+
+msgid "HUSTR_20"
+msgstr "Nivel 20: ¡Te pillé!"
+
+msgid "HUSTR_21"
+msgstr "Nivel 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Nivel 22: Las Catacumbas"
+
+msgid "HUSTR_23"
+msgstr "Nivel 23: Barriles de Diversión"
+
+msgid "HUSTR_24"
+msgstr "Nivel 24: El Desfiladero"
+
+msgid "HUSTR_25"
+msgstr "Nivel 25: Cataratas de Sangre"
+
+msgid "HUSTR_26"
+msgstr "Nivel 26: Las Minas Abandonadas"
+
+msgid "HUSTR_27"
+msgstr "Nivel 27: Condominio de Monstruos"
+
+msgid "HUSTR_28"
+msgstr "Nivel 28: El Mundo Espiritual"
+
+msgid "HUSTR_29"
+msgstr "Nivel 29: El Final Viviente"
+
+msgid "HUSTR_30"
+msgstr "Nivel 30: Icono del pecado"
+
+msgid "HUSTR_31"
+msgstr "Nivel 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Nivel 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Nivel 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Nivel 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Nivel 33: Traición"
+
+msgid "NHUSTR_1"
+msgstr "Nivel 1: La Base Terrestre"
+
+msgid "NHUSTR_2"
+msgstr "Nivel 2: Los Laboratorios del Dolor"
+
+msgid "NHUSTR_3"
+msgstr "Nivel 3: Cañón de los Muertos"
+
+msgid "NHUSTR_4"
+msgstr "Nivel 4: Montaña Infernal"
+
+msgid "NHUSTR_5"
+msgstr "Nivel 5: Vivisección"
+
+msgid "NHUSTR_6"
+msgstr "Nivel 6: Hoguera de Sangre"
+
+msgid "NHUSTR_7"
+msgstr "Nivel 7: Banquete del Barón"
+
+msgid "NHUSTR_8"
+msgstr "Nivel 8: Tumba de Malevolencia"
+
+msgid "NHUSTR_9"
+msgstr "Nivel 9: Marcha de los Demonios"
+
+msgid "C1TEXT"
+msgstr ""
+"Te has introducido profundamente en el\n"
+"infestado puerto espacial. Pero algo está\n"
+"mal. Los monstruos han traído su propia\n"
+"realidad con ellos, y la tecnología del\n"
+"puerto espacial está siendo\n"
+"subvertida por su presencia.\n"
+"\n"
+"Adelante, ves un puesto de avanzada del\n"
+"infierno, una zona fortificada. Si puedes\n"
+"pasarlo, podrás penetrar en el corazón\n"
+"atormentado de la base espacial y\n"
+"encontrar el interruptor de control, el\n"
+"cual mantiene a la población de\n"
+"la Tierra como rehén."
+
+msgid "C2TEXT"
+msgstr ""
+"¡Has ganado! Tu victoria ha permitido a la\n"
+"humanidad evacuar la Tierra y escapar de\n"
+"la pesadilla. Ahora tú eres el único ser\n"
+"humano que queda sobre la faz del planeta.\n"
+"Mutaciones caníbales, alienígenas\n"
+"carnívoros, y espíritus malignos son tus\n"
+"únicos vecinos. Te sientas y esperas la\n"
+"muerte, content@[ao_esp] de haber salvado\n"
+"a tu especie.\n"
+"\n"
+"Pero entonces, los controles de la Tierra\n"
+"emiten un mensaje desde el espacio: \"Los\n"
+"sensores han localizado el origen de la\n"
+"invasión alienígena. Si vas ahí, serás capaz\n"
+"de bloquear su entrada. La base alienígena\n"
+"está en el corazón de tu propia ciudad\n"
+"natal, no tan lejos del puerto espacial\"\n"
+"Lenta y dolorosamente te levantas y\n"
+"vuelves a la carga."
+
+msgid "C3TEXT"
+msgstr ""
+"Estas en el corazón corrompido de la\n"
+"ciudad, rodead@[ao_esp] por los cadáveres\n"
+"de tus enemigos. No ves otra manera\n"
+"de destruir la entrada de las criaturas\n"
+"desde este lado, así que aprietas\n"
+"tus dientes y te zambulles en medio.\n"
+"\n"
+"Debe haber una forma de cerrarla desde\n"
+"el otro lado. ¿Qué te preocupa si de todas\n"
+"formas tienes que pasar por el Infierno\n"
+"para llegar a ella?"
+
+msgid "C4TEXT"
+msgstr ""
+"El horrendo rostro del demonio más grande\n"
+"que hayas visto se derrumba ante ti,\n"
+"después de bombear tus cohetes en su\n"
+"cerebro expuesto. El monstruo se\n"
+"desintegra y muere, sus miembros azotan\n"
+"el suelo devastando incontables\n"
+"kilómetros de suelo infernal.\n"
+"\n"
+"Lo has conseguido. La invasión ha terminado. La Tierra\n"
+"ha sido salvada. El Infierno es una ruina. Te\n"
+"preguntas adónde irán los malos cuando\n"
+"mueran ahora. Secándote el sudor de la\n"
+"frente comienzas el largo camino de vuelta\n"
+"a casa. Reconstruir la Tierra debería\n"
+"ser mucho más divertido que arruinarla.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"¡Enhorabuena, has encontrado el nivel\n"
+"secreto! Parece que fue creado por\n"
+"seres humanos, en lugar de demonios.\n"
+"Te preguntas quienes serán los inquilinos\n"
+"de este rincón del Infierno."
+
+msgid "C6TEXT"
+msgstr ""
+"¡Enorabuena, has encontrado el nivel\n"
+"súper secreto! ¡Será mejor que eches\n"
+"lumbre a través de este!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Otra vez se avecinan problemas en\n"
+"tu lugar de vacaciones favorito... \n"
+"El Infierno. Algún ciberdemonio mocoso\n"
+"pensó que podría convertir el Infierno\n"
+"en su parque de atracciones\n"
+"personal, y hacer de la Tierra la \n"
+"taquilla.\n"
+"\n"
+"Bien, ese fenómeno de circo \n"
+"medio-robot no sabía quien vendría a\n"
+"la feria. No hay nada como una \n"
+"galería de tiro repleta de engendros \n"
+"del averno para ver \n"
+"correr sangre a borbotones...\n"
+"\n"
+"Ahora las paredes del laberinto \n"
+"demoníaco resuenan con el eco de \n"
+"sus miembros metálicos golpeando \n"
+"el suelo. Sus gemidos de muerte \n"
+"salen a duras penas por la mezcla \n"
+"de cables y carne que solía ser su \n"
+"rostro.\n"
+"\n"
+"Esta atracción está cerrada.\n"
+"\n"

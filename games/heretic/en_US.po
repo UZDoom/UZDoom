@@ -1,0 +1,262 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "The Docks"
+
+msgid "HHUSTR_E1M2"
+msgstr "The Dungeons"
+
+msgid "HHUSTR_E1M3"
+msgstr "The Gatehouse"
+
+msgid "HHUSTR_E1M4"
+msgstr "The Guard Tower"
+
+msgid "HHUSTR_E1M5"
+msgstr "The Citadel"
+
+msgid "HHUSTR_E1M6"
+msgstr "The Cathedral"
+
+msgid "HHUSTR_E1M7"
+msgstr "The Crypts"
+
+msgid "HHUSTR_E1M8"
+msgstr "Hell's Maw"
+
+msgid "HHUSTR_E1M9"
+msgstr "The Graveyard"
+
+msgid "HHUSTR_E2M1"
+msgstr "The Crater"
+
+msgid "HHUSTR_E2M2"
+msgstr "The Lava Pits"
+
+msgid "HHUSTR_E2M3"
+msgstr "The River of Fire"
+
+msgid "HHUSTR_E2M4"
+msgstr "The Ice Grotto"
+
+msgid "HHUSTR_E2M5"
+msgstr "The Catacombs"
+
+msgid "HHUSTR_E2M6"
+msgstr "The Labyrinth"
+
+msgid "HHUSTR_E2M7"
+msgstr "The Great Hall"
+
+msgid "HHUSTR_E2M8"
+msgstr "The Portals of Chaos"
+
+msgid "HHUSTR_E2M9"
+msgstr "The Glacier"
+
+msgid "HHUSTR_E3M1"
+msgstr "The Storehouse"
+
+msgid "HHUSTR_E3M2"
+msgstr "The Cesspool"
+
+msgid "HHUSTR_E3M3"
+msgstr "The Confluence"
+
+msgid "HHUSTR_E3M4"
+msgstr "The Azure Fortress"
+
+msgid "HHUSTR_E3M5"
+msgstr "The Ophidian Lair"
+
+msgid "HHUSTR_E3M6"
+msgstr "The Halls of Fear"
+
+msgid "HHUSTR_E3M7"
+msgstr "The Chasm"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparil's Keep"
+
+msgid "HHUSTR_E3M9"
+msgstr "The Aquifer"
+
+msgid "HHUSTR_E4M1"
+msgstr "Catafalque"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blockhouse"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulatory"
+
+msgid "HHUSTR_E4M4"
+msgstr "Sepulcher"
+
+msgid "HHUSTR_E4M5"
+msgstr "Great Stair"
+
+msgid "HHUSTR_E4M6"
+msgstr "Halls of the Apostate"
+
+msgid "HHUSTR_E4M7"
+msgstr "Ramparts of Perdition"
+
+msgid "HHUSTR_E4M8"
+msgstr "Shattered Bridge"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleum"
+
+msgid "HHUSTR_E5M1"
+msgstr "Ochre Cliffs"
+
+msgid "HHUSTR_E5M2"
+msgstr "Rapids"
+
+msgid "HHUSTR_E5M3"
+msgstr "Quay"
+
+msgid "HHUSTR_E5M4"
+msgstr "Courtyard"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hydratyr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Colonnade"
+
+msgid "HHUSTR_E5M7"
+msgstr "Foetid Manse"
+
+msgid "HHUSTR_E5M8"
+msgstr "Field of Judgement"
+
+msgid "HHUSTR_E5M9"
+msgstr "Skein of D'sparil"
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+"With the destruction of the Iron\n"
+"Liches and their minions, the last\n"
+"of the undead are cleared from this\n"
+"plane of existence.\n"
+"\n"
+"Those creatures had to come from\n"
+"somewhere, though, and you have the\n"
+"sneaky suspicion that the fiery\n"
+"portal of hell's maw opens onto\n"
+"their home dimension.\n"
+"\n"
+"To make sure that more undead\n"
+"(or even worse things) don't come\n"
+"through, you'll have to seal Hell's\n"
+"maw from the other side. Of course\n"
+"this means you may get stuck in a\n"
+"very unfriendly world, but no one\n"
+"ever said being a heretic was easy!"
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+"The mighty maulotaurs have proved\n"
+"to be no match for you, and as\n"
+"their steaming corpses slide to the\n"
+"ground you feel a sense of grim\n"
+"satisfaction that they have been\n"
+"destroyed.\n"
+"\n"
+"The gateways which they guarded\n"
+"have opened, revealing what you\n"
+"hope is the way home. But as you\n"
+"step through, mocking laughter\n"
+"rings in your ears.\n"
+"\n"
+"Was some other force controlling\n"
+"the maulotaurs? Could there be even\n"
+"more horrific beings through this\n"
+"gate? The sweep of a crystal dome\n"
+"overhead where the sky should be is\n"
+"certainly not a good sign...."
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+"The death of D'Sparil has loosed\n"
+"the magical bonds holding his\n"
+"creatures on this plane, their\n"
+"dying screams overwhelming his own\n"
+"cries of agony.\n"
+"\n"
+"Your oath of vengeance fulfilled,\n"
+"you enter the portal to your own\n"
+"world, mere moments before the dome\n"
+"shatters into a million pieces.\n"
+"\n"
+"But if D'Sparil's power is broken\n"
+"forever, why don't you feel safe?\n"
+"Was it that last shout just before\n"
+"his death, the one that sounded\n"
+"like a curse? Or a summoning? You\n"
+"can't really be sure, but it might\n"
+"just have been a scream.\n"
+"\n"
+"Then again, what about the other\n"
+"Serpent Riders?"
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+"You thought you would return to your\n"
+"own world after D'Sparil died, but\n"
+"his final act banished you to his\n"
+"own plane. Here you entered the\n"
+"shattered remnants of lands\n"
+"conquered by D'Sparil. You defeated\n"
+"the last guardians of these lands,\n"
+"but now you stand before the gates\n"
+"to d'Sparil's stronghold. Until this\n"
+"moment you had no doubts about your\n"
+"ability to face anything you might\n"
+"encounter, but beyond this portal\n"
+"lies the very heart of the evil\n"
+"which invaded your world. D'Sparil\n"
+"might be dead, but the pit where he\n"
+"was spawned remains. Now you must\n"
+"enter that pit in the hopes of\n"
+"finding a way out. And somewhere,\n"
+"in the darkest corner of D'Sparil's\n"
+"demesne, his personal bodyguards\n"
+"await your arrival ..."
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+"As the final maulotaur bellows his\n"
+"death-agony, you realize that you\n"
+"have never come so close to your own\n"
+"destruction. Not even the fight with\n"
+"D'Sparil and his disciples had been\n"
+"this desperate. Grimly you stare at\n"
+"the gates which open before you,\n"
+"wondering if they lead home, or if\n"
+"they open onto some undreamed-of\n"
+"horror. You find yourself wondering\n"
+"if you have the strength to go on,\n"
+"if nothing but death and pain await\n"
+"you. But what else can you do, if\n"
+"the will to fight is gone? Can you\n"
+"force yourself to continue in the\n"
+"face of such despair? Do you have\n"
+"the courage? You find, in the end,\n"
+"that it is not within you to\n"
+"surrender without a fight. Eyes\n"
+"wide, you go to meet your fate."

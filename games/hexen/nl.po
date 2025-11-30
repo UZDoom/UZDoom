@@ -1,0 +1,355 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:45+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: nl\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Scheidingszaal"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Zeven portalen"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Bewaker van ijs"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Bewaker van vuur"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Bewaker van staal"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Heldere beproeving"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Schaduwbos"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Sombermeer"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Grotten van Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Woestenij"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Heilig bosje"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Zuilenhal"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminarie van ketterij"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Drakenkapel"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Griffioenenkapel"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Dodenwind kapel"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Boomgaard van klaagliederen"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Stil refectory"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Wolvenkapel"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Verwaarloosde buitenpost"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Kasteel van verdriet"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Galg"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Effluvium"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Kerkers"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Woeste tuin"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Necropolis"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedek's graf"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkir's graf"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traductus' graf"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivarium"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Donkere beproeving"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Na het passeren van de zeven portalen die\n"
+"dit rijk verzegeld, een groot gebied van\n"
+"harde wildernis strekt zich voor je uit.\n"
+"Vuur, ijs en staal hebben getest je, maar\n"
+"grotere uitdagingen blijven voor je.\n"
+"De dichte wirwar van bos zeker verbergt\n"
+"vijandige ogen, maar wat daarachter ligt\n"
+"zal erger zijn.\n"
+"\n"
+"De dorre woestijn, de vochtige moerassen\n"
+"en de muffe grotten blokkeren de weg,\n"
+"maar je kunt niet toestaan dat er iets\n"
+"is wat je van je lot weerhoudt, zelfs\n"
+"als je zou kunnen komen om te wensen\n"
+"dat het zou gebeuren.\n"
+"\n"
+"En verder, flikkerend in de afstand, schijnen\n"
+"de steeds veranderende muren van de zuilenhal\n"
+"om uw elke inspanning te bespotten."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Je geest nog steeds af te wankelen van je\n"
+"ontmoetingen binnen de zuilenhal, je\n"
+"wankelen in de richting van wat je hoopt\n"
+"is een uitweg. dingen lijken sneller en\n"
+"sneller te bewegen, je visie vervaagt\n"
+"en begint te vervagen....\n"
+"\n"
+"Als de wereld om je heen instort, overspoelt\n"
+"de helderheid van een teleportal je met de\n"
+"helderheid van een teleportal. Een flits van\n"
+"licht, en dan klim je vermoeid op je voeten.\n"
+"\n"
+"Je staat boven op een hoge toren en van\n"
+"onderen komt het geschreeuw van de verdoemden.\n"
+"je stapt naar voren, en het geluid van\n"
+"demonisch gezang koelt je bloed. door alle\n"
+"goden van de dood! tot welke plaats ben je\n"
+"gekomen? door alle goden van de pijn, hoe\n"
+"zal je ooit je weg naar buiten vinden?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"De machtigste wapens en artefacten van de\n"
+"ouden volstonden nauwelijks om de heresiarch\n"
+"en zijn acolieten te verslaan, maar nu\n"
+"liggen hun vuile overblijfselen aan je\n"
+"voeten bezaaid met hun vuile resten.\n"
+"\n"
+"Boven je, de wallen van een immense kasteel\n"
+"weefgetouw. stille torens en kale muren \n"
+"mringen een enkele torenspits van zwarte\n"
+"steen, die in het midden van het kasteel\n"
+"kraakt als een broeierige reus. vuur en\n"
+"schaduw draaien achter opengesperde ramen,\n"
+"tientallen onheilspellende ogen die op je neer\n"
+"schijnen.\n"
+"\n"
+"Ergens binnenin wachten je vijanden..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... en hij zal in de rijken der doden\n"
+"reizen, en met de krachten daarbinnen\n"
+"wedijveren, tot aan de poorten der\n"
+"wanhoop. maar of hij weer zal terugkeren\n"
+"naar de wereld van het licht, weet niemand.\".\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Verdomme."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Met een schreeuw van pijn wordt je van\n"
+"deze wereld in een andere wereld geworpen,\n"
+"elk deel van je lichaam omkranst in een\n"
+"mystieke vuurkern. wanneer je zicht zich\n"
+"ontruimt, sta je in een grote hal, vol\n"
+"spookachtige echo's en dreigende\n"
+"schaduwen. in de verte kun je in de verte\n"
+"zie een verhoogde madeliefje, en\n"
+"daarop de enige bron van licht in deze\n"
+"wereld."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Dit kan alleen de chaos sfeer zijn, de bron\n"
+"van Korax' kracht. hiermee kun je werelden\n"
+"creëren... of ze vernietigen. Door de\n"
+"rechten van de strijd en verovering is het\n"
+"van jou, en met trillende handen bereik je\n"
+"om het te begrijpen. misschien, nu, zal een\n"
+"nieuwe speler zich aansluiten bij het\n"
+"kosmische spel van de macht. Net als de\n"
+"pion die gepromoveerd is tot koningin,\n"
+"het hele bord is nu binnen handbereik."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"maar er zijn andere spelers machtiger\n"
+"dan jij, en wie kan hun volgende stappen\n"
+"kennen?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "De deur is op slot"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Groeten, sterfelijk"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Ben je klaar om te sterven?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Een deur opende op de bewaker van ijs"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Dit pad is geblokkeerd"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "De helft van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "op de Zeven Portalen"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Een derde van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Trappen zijn gestegen op de Zeven Portalen"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Een derde van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "op de Zeven Portalen"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Trappen zijn gestegen op de Zeven Portalen"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Je moet een andere schakelaar vinden..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Stenen slijpen op de Zeven Portalen"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Een zesde van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "op het Schaduwbos"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "De deur is van binnenuit geblokkeerd."
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "In de verte hoor je een deur openstaan."
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Een zesde van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "op het Schaduwbos"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Een zesde van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "op het Schaduwbos"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ overgebleven Ettins"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Je hebt te lang gewacht, nu ga je dood!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Een deur opende een deur op de Verwaarloosde buitenpost"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Deze deur gaat nog niet open."
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Mijn bedienden kunnen jouw bloed ruiken, mens"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Een deur geopend in de Gibbet"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "De deur is van binnenuit geblokkeerd."
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Een platform is in de toren neergelaten in de toren"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Je hebt dit spel te lang gespeeld, sterfelijke..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Ik denk dat ik u van het bord zal verwijderen"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Je hoort een deur boven opengaan"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Aanbid me, en ik mag dan nog genadig zijn"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Maar nogmaals, misschien niet"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Een negende van de puzzel is opgelost."
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "Op het klooster"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Een negende van de puzzel is opgelost."
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "Op het klooster"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Een negende van de puzzel is opgelost."
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "Op het klooster"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Het portaal is verzegeld"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Kies uw lot"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "De deur is van binnenuit geblokkeerd."
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Ben je sterk genoeg"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Om je eigen meesters onder ogen te komen?"

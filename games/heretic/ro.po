@@ -1,0 +1,242 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Docul"
+
+msgid "HHUSTR_E1M2"
+msgstr "Temnița"
+
+msgid "HHUSTR_E1M3"
+msgstr "Casa portarului"
+
+msgid "HHUSTR_E1M4"
+msgstr "Turnul de veghe"
+
+msgid "HHUSTR_E1M5"
+msgstr "Cetatea"
+
+msgid "HHUSTR_E1M6"
+msgstr "Catedrala"
+
+msgid "HHUSTR_E1M7"
+msgstr "Criptele"
+
+msgid "HHUSTR_E1M8"
+msgstr "Gura iadului"
+
+msgid "HHUSTR_E1M9"
+msgstr "Cimitirul"
+
+msgid "HHUSTR_E2M1"
+msgstr "Craterul"
+
+msgid "HHUSTR_E2M2"
+msgstr "Gropile cu lavă"
+
+msgid "HHUSTR_E2M3"
+msgstr "Râul de foc"
+
+msgid "HHUSTR_E2M4"
+msgstr "Grota de gheață"
+
+msgid "HHUSTR_E2M5"
+msgstr "Catacombele"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labirintul"
+
+msgid "HHUSTR_E2M7"
+msgstr "Sala cea mare"
+
+msgid "HHUSTR_E2M8"
+msgstr "Portalurile haosului"
+
+msgid "HHUSTR_E2M9"
+msgstr "Ghețarul"
+
+msgid "HHUSTR_E3M1"
+msgstr "Depozitul"
+
+msgid "HHUSTR_E3M2"
+msgstr "Haznaua"
+
+msgid "HHUSTR_E3M3"
+msgstr "Confluența"
+
+msgid "HHUSTR_E3M4"
+msgstr "Fortăreața de azur"
+
+msgid "HHUSTR_E3M5"
+msgstr "Cuibul ofidienilor"
+
+msgid "HHUSTR_E3M6"
+msgstr "Sălile groazei"
+
+msgid "HHUSTR_E3M7"
+msgstr "Prăpastia"
+
+msgid "HHUSTR_E3M8"
+msgstr "Palatul lui D'sparil"
+
+msgid "HHUSTR_E3M9"
+msgstr "Galerii acvifere"
+
+msgid "HHUSTR_E4M1"
+msgstr "Catafalc"
+
+msgid "HHUSTR_E4M2"
+msgstr "Fort"
+
+msgid "HHUSTR_E4M3"
+msgstr "Clinică"
+
+msgid "HHUSTR_E4M4"
+msgstr "Sepulcru"
+
+msgid "HHUSTR_E4M5"
+msgstr "Scara cea mare"
+
+msgid "HHUSTR_E4M6"
+msgstr "Sălile apostatului"
+
+msgid "HHUSTR_E4M7"
+msgstr "Meterezele pierzaniei"
+
+msgid "HHUSTR_E4M8"
+msgstr "Podul dărâmat"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleu"
+
+msgid "HHUSTR_E5M1"
+msgstr "Stâncile de ocru"
+
+msgid "HHUSTR_E5M2"
+msgstr "Ape repezi"
+
+msgid "HHUSTR_E5M3"
+msgstr "Chei"
+
+msgid "HHUSTR_E5M4"
+msgstr "Curte"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hidratir"
+
+msgid "HHUSTR_E5M6"
+msgstr "Colonadă"
+
+msgid "HHUSTR_E5M7"
+msgstr "Conac Fetid"
+
+msgid "HHUSTR_E5M8"
+msgstr "Câmpul de Judecată"
+
+msgid "HHUSTR_E5M9"
+msgstr "Jurubița lui D'Sparil"
+
+msgid "HE1TEXT"
+msgstr ""
+"Odată cu distrugerea Cadavrelor de Fier și ai\n"
+"minionilor, ultimii nemorți dispar din acest\n"
+"plan al existenței.\n"
+"\n"
+"Aceste creaturi trebuie să fii venit de undeva, și ai\n"
+"vaga suspiciune că portalul fierbinte al gurii\n"
+"infernului deschide o cale către dimensiunea lor.\n"
+"\n"
+"Pentru a fi sigur că niciun alt nemort (sau chestii\n"
+"mai oribile) nu trec prin ea, va trebui să închizi gura\n"
+"infernului de pe cealaltă parte. Firește că asta poate\n"
+"să însemne că vei rămâne blocat într-o lume extrem\n"
+"de neprimitoare, dar n-a spus nimeni că e ușor să\n"
+"fii un eretic!"
+
+msgid "HE2TEXT"
+msgstr ""
+"Puternicii maulotauri s-au dovedit a nu fi nici pe\n"
+"departe pe măsura ta, iar în timp ce cadavrele lor\n"
+"fumegânde alunecă pe pământ simți o satisfacție\n"
+"crudă că au fost distruși.\n"
+"\n"
+"Poarta care era păzită de ei e acum deschisă,\n"
+"dezvăluind ceea ce tu sperai să fie drumul spre\n"
+"casă. Dar o dată ce pășești prin ea, râset batjocoritor\n"
+"îți răsună în urechi.\n"
+"\n"
+"Să fii fost o altă forță în spatele maulotaurilor? Să\n"
+"fie oare creaturi și mai oribile dincolo de acest portal?\n"
+"Un dom de cristal în locul unde trebuia să fie cerul cu\n"
+"siguranță nu e un semn bun..."
+
+msgid "HE3TEXT"
+msgstr ""
+"Moartea lui D'Sparil a slăbit legatura magică\n"
+"care ținea creaturile în acest plan,\n"
+"strigătele lor de pierzanie înăbușindu-i ragetele \n"
+"agonizante.\n"
+"\n"
+"Odată cu îndeplinirea jurământului răzbunării,\n"
+"intri în portalul care duce înapoi spre lumea ta, cu\n"
+"doar câteva momente înainte ca domul să se spargă\n"
+"într-un milion de bucăți.\n"
+"\n"
+"Dar dacă puterea lui D'Sparil e dusă pe veci, de ce\n"
+"tot nu te simți în siguranță? O fi din cauza ultimului\n"
+"său strigăt înainte să piară, cel care a sunat ca un\n"
+"blestem? Sau o chemare? Nu poți fi tocmai sigur,\n"
+"dar e posibil să fii fost un simplu strigăt.\n"
+"\n"
+"Dar din nou, cu ceilalți Călăreți cum rămâne?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Ai crezut că te poți întoarce acasă dupa moartea\n"
+"lui D'Sparil, dar ultimul său act te-a alungat în\n"
+"propria lui dimensiune. Ai pășit pe ultimele lui\n"
+"tărâmuri cucerite. Ai învins gardienii acestor \n"
+"tărâmuri când ai trecut pe aici ultima dată, dar \n"
+"acum te regăsești în fața porților bastionului\n"
+"lui D'Sparil. Până în acest moment nu ai avut niciun\n"
+"dubiu în legătură cu abilitatea ta de a face față la\n"
+"orice întâlnești în cale, dar dincolo de acest portal\n"
+"se află însăși înima răului care ți-a invadat lumea.\n"
+"Poate că D'Sparil s-a dus, dar groapa în care s-a\n"
+"născut rămâne. Acum trebuie să intri în acea groapa\n"
+"în speranța că vei găsi și o cale de ieșire. Și undeva,\n"
+"în defensiva celui mai întunecat colț al locului,\n"
+"proprii lui gardieni îți așteaptă sosirea ..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Odată ce ultimul maulotaur începe să jelească în\n"
+"agonia propriei morți, realizezi că nu ai fost\n"
+"nicicând mai aproape de propria distrugere.\n"
+"Nici măcar lupta cu discipolii lui D'Sparil \n"
+"n-a fost atât de disperată. Privești sinistru înspre\n"
+"porțile care se deschid în fața ta, întrebându-te\n"
+"dacă întradevăr duc spre casă, sau spre alt coșmar\n"
+"din cele mai negre vise. Te regăsești întrebându-te\n"
+"dacă ai tăria de a merge mai departe, dacă tot ce\n"
+"urmează să întâlnești este doar mai multă moarte\n"
+"și durere. Dar ce ai mai putea face, dacă voința de\n"
+"a lupta în continuare dispare? Ai putea să te forțezi\n"
+"să continui în ciuda disperării? Ai curajul necesar?\n"
+"În final, realizezi că cedarea fără luptă nu-ți stă în\n"
+"fire. Cu privirea larg deschisă, te duci să-ți întâmpini\n"
+"destinul."

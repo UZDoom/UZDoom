@@ -1,0 +1,180 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:32+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Experimentul Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Nivelul 1: Congo"
+
+msgid "PHUSTR_2"
+msgstr "Nivelul 2: Fântâna sufletelor"
+
+msgid "PHUSTR_3"
+msgstr "Nivelul 3: Aztec"
+
+msgid "PHUSTR_4"
+msgstr "Nivelul 4: Încarcerat"
+
+msgid "PHUSTR_5"
+msgstr "Nivelul 5: Orașul fantomă"
+
+msgid "PHUSTR_6"
+msgstr "Nivelul 6: Claustrul Baronului"
+
+msgid "PHUSTR_7"
+msgstr "Nivelul 7: Capcana curții"
+
+msgid "PHUSTR_8"
+msgstr "Nivelul 8: Tărâm"
+
+msgid "PHUSTR_9"
+msgstr "Nivelul 9: Abator"
+
+msgid "PHUSTR_10"
+msgstr "Nivelul 10: Năvala"
+
+msgid "PHUSTR_11"
+msgstr "Nivelul 11: Vânătoarea"
+
+msgid "PHUSTR_12"
+msgstr "Nivelul 12: Viteză"
+
+msgid "PHUSTR_13"
+msgstr "Nivelul 13: Cripta"
+
+msgid "PHUSTR_14"
+msgstr "Nivelul 14: Geneza"
+
+msgid "PHUSTR_15"
+msgstr "Nivelul 15: Amurgul"
+
+msgid "PHUSTR_16"
+msgstr "Nivelul 16: Prevestirea"
+
+msgid "PHUSTR_17"
+msgstr "Nivelul 17: Complexul"
+
+msgid "PHUSTR_18"
+msgstr "Nivelul 18: Neurosferă"
+
+msgid "PHUSTR_19"
+msgstr "Nivelul 19: INMIC"
+
+msgid "PHUSTR_20"
+msgstr "Nivelul 20: Domeniul morții"
+
+msgid "PHUSTR_21"
+msgstr "Nivelul 21: Ucigător"
+
+msgid "PHUSTR_22"
+msgstr "Nivelul 22: Misiune imposibilă"
+
+msgid "PHUSTR_23"
+msgstr "Nivelul 23: Piatra de mormânt"
+
+msgid "PHUSTR_24"
+msgstr "Nivelul 24: Ultima frontieră"
+
+msgid "PHUSTR_25"
+msgstr "Nivelul 25: Templul tenebros"
+
+msgid "PHUSTR_26"
+msgstr "Nivelul 26: Buncăr"
+
+msgid "PHUSTR_27"
+msgstr "Nivelul 27: Antihrist"
+
+msgid "PHUSTR_28"
+msgstr "Nivelul 28: Canalizarea"
+
+msgid "PHUSTR_29"
+msgstr "Nivelul 29: Odiseea zgomotelor"
+
+msgid "PHUSTR_30"
+msgstr "Nivelul 30: Poarta spre infern"
+
+msgid "PHUSTR_31"
+msgstr "Nivelul 31: Cibervizuină"
+
+msgid "PHUSTR_32"
+msgstr "Nivelul 32: Du-te la ei"
+
+msgid "P1TEXT"
+msgstr ""
+"Privești cu satisfacție carcasa fumegândă a \n"
+"Gardianului. Odată cu moartea lui, ai recuperat \n"
+"Accelerator din ghearele împuțite ale Infernului. \n"
+"Te relaxezi și privești împrejur. Firar! Trebuia să fie cel \n"
+"puțin un prototip funcțional pe-aici, dar nu-l vezi \n"
+"nicăieri. Probabil că l-au luat demonii.\n"
+"\n"
+"Trebuie să găsești prototipul, altminteri toată munca\n"
+"ta se va duce de râpă. Continuă să te miști, continuă\n"
+"să lupți, continuă să omori. Ah, da, continuă și să\n"
+"trăiești, de asemenea."
+
+msgid "P2TEXT"
+msgstr ""
+"Nici măcar labirintul letal al Abjecților nu a fost în\n"
+"stare să îți vină de hac, iar acum ai pus mâna pe\n"
+"prototipul Acceleratorului care va fi dezactivat\n"
+"în mod eficient și permanent curând.\n"
+"\n"
+"Te pricepi la chestii de genul."
+
+msgid "P3TEXT"
+msgstr ""
+"Ai făcut mare bairam și tam-tam în timp ce îți croiai\n"
+"drum înspre stupul diabolic. E timpul pentru o\n"
+"misiune de Căutare-și-Distrugere, țintită către\n"
+"Gardian, ale cărui progenituri mizerabile se varsă\n"
+"asemeni cascadelor pe Pământ. Mda, e dur. Dar tu\n"
+"știi cine e și mai dur!\n"
+"\n"
+"Zâmbind malefic, îți verifici echipamentul și te\n"
+"pregătești să-i dai o mamă de bătaie ticălosului."
+
+msgid "P4TEXT"
+msgstr ""
+"Fața malefică a Gardianului e împrăștiată peste tot\n"
+"în jur. În timp ce corpul lui ferfenițos se prăbușește,\n"
+"o Poartă întoarsă se formează și\n"
+"aspiră rămășițele ultimului Accelerator,\n"
+"nemaivorbind de puținii demoni rămași.\n"
+"\n"
+"S-a terminat. Infernul se întoarce la pedepsirea\n"
+"celor răi în locul celor buni, și vii. Nu uita\n"
+"să le amintești nepoților să îți pună un lansator\n"
+"de rachete în mormânt. Dacă te duci în Iad când\n"
+"mori, vei avea nevoie de el pentru a face curățenie\n"
+"pentru ultima dată ..."
+
+msgid "P5TEXT"
+msgstr ""
+"Ai găsit al doilea cel mai dificil nivel creat de noi.\n"
+"Sper că ai o salvare cu o hartă sau două în urmă.\n"
+"\n"
+"Dacă nu, pregătește-te să mori din plin. Doar pentru\n"
+"soldați marini maeștri."
+
+msgid "P6TEXT"
+msgstr ""
+"Punem pariu că te întrebai CARE era nivelul nostru\n"
+"cel mai dificil? Ei, acum știi.\n"
+"\n"
+"Nimeni nu scapă viu."

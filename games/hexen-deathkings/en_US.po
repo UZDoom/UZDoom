@@ -1,0 +1,480 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Ruined Village"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Blight"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Sump"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Catacomb"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Badlands"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Brackenwood"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Pyre"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Constable's Gate"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Treasury"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Market Place"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Ordeal"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Armory"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Nave"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Chantry"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Abattoir"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Dark Watch"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Cloaca"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ice Hold"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Dark Citadel"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Transit"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Over'n Under"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Deathfog"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Castle of Pain"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Sewer Pit"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "The Rose"
+
+# intermission
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Wiping a trembling hand across your\n"
+"bleeding face, you try to clear\n"
+"your mind for what lies ahead...\n"
+"\n"
+"...and forget what lies behind.\n"
+"\n"
+"In the distance, the stark ramparts\n"
+"of a great castle complex seem to\n"
+"rend the sky above, and the stench\n"
+"of decay wafts from the violated\n"
+"graves of uncounted dead.\n"
+"\n"
+"Carefully counting what little\n"
+"remains of your artifacts, you try\n"
+"to reassure yourself that it will\n"
+"be enough. after all, it has to be\n"
+"enough, doesn't it?\n"
+"\n"
+"\n"
+"doesn't it?"
+
+# intermission
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Surely the souls of the damned inhabit\n"
+"this world, for nothing fair or good\n"
+"could survive here for long.\n"
+"\n"
+"But what has passed before can only\n"
+"be a pale shadow of what bars your\n"
+"passage now: the dark citadel itself.\n"
+"\n"
+"The grim bulk of the cathedral blocks\n"
+"all but fragmentary glimpses of the\n"
+"citadel proper, but what can be seen\n"
+"speaks in sibilant whispers of cold,\n"
+"lingering death...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...for the fortunate."
+
+# intermission
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Once again you find yourself in the\n"
+"great hall of the chaos sphere, as\n"
+"if no time had passed from when\n"
+"last you moved among these shadows.\n"
+"\n"
+"But something is eerily different,\n"
+"a silence where once had been soft\n"
+"whispers, a sense of being watched\n"
+"by hidden eyes...\n"
+"\n"
+"...eyes which shield a malefic\n"
+"intent."
+
+# intermission
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Once before you grasped the chaos\n"
+"sphere, held it within trembling\n"
+"hands. now your hands tremble with\n"
+"something more than avarice, and\n"
+"dread meshes with the hunger for\n"
+"power.\n"
+"\n"
+"If even the power of the sphere is\n"
+"not enough to protect you from the\n"
+"forces of darkness, perhaps it is\n"
+"better left untouched, its promise\n"
+"left unkept.\n"
+"\n"
+"\n"
+"\n"
+"But then, you never were one to\n"
+"back down from a challenge..."
+
+# intermission
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n...and other players await.\n"
+"\n"
+
+# script texts
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "You dare battle in the ready room?"
+
+# script texts
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "For that, you shall die!"
+
+# script texts
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "The waterfall is open"
+
+# script texts
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "The waterfall is blocked"
+
+# script texts
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "A door has opened in the chapel"
+
+# script texts
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Now that's odd..."
+
+# script texts
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Three more parts of the puzzle remain"
+
+# script texts
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Two more parts of the puzzle remain"
+
+# script texts
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "One more part of the puzzle remains"
+
+# script texts
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "The puzzle is complete"
+
+# script texts
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "You have not completed the puzzle"
+
+# script texts
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "The floor is not safe!"
+
+# script texts
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "One third of the puzzle is solved"
+
+# script texts
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Two thirds of the puzzle is solved"
+
+# script texts
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "You hear a platform moving in the distance"
+
+# script texts
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "It is done..."
+
+# script texts
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "You have not completed the puzzle"
+
+# script texts
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "I'm warning you..."
+
+# script texts
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Stubborn, aren't you?"
+
+# script texts
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "And stupid, too"
+
+# script texts
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "One fourth of this puzzle is complete"
+
+# script texts
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Bad choice..."
+
+# script texts
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "The symbols are not aligned"
+
+# script texts
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "The door won't open from this side"
+
+# script texts
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "The door is barred from the outside"
+
+# script texts
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Sacrilege !"
+
+# script texts
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "You have defiled Eric's tomb !!"
+
+# script texts
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "And now you die !!!"
+
+# script texts
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "One third of the puzzle is solved"
+
+# script texts
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Two thirds of the puzzle is solved"
+
+# script texts
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "The crypt is open"
+
+# script texts
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Beware the spider's tomb"
+
+# script texts
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "You hear a platform rise outside"
+
+# script texts
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Do you feel lucky?"
+
+# script texts
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "You guessed wrong!"
+
+# script texts
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Good guess"
+
+# script texts
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Can you do all the scripting for my level?"
+
+# script texts
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Don't touch my gloppy"
+
+# script texts
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal ?!?!?!"
+
+# script texts
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Gimme some sugar, baby"
+
+# script texts
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Duh-uhhh..."
+
+# script texts
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Film in an hour?"
+
+# script texts
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "I don't even get my own tombstone - cf"
+
+# script texts
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Let no blood be spilt"
+
+# script texts
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Let no hand be raised in anger"
+
+# script texts
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Who dares disturb our slumber?"
+
+# script texts
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "The way is open"
+
+# script texts
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "You have "
+
+# script texts
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20switches left"
+
+# script texts
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "You have only "
+
+# script texts
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20switch left"
+
+# script texts
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "The exit is open"
+
+# script texts
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "The doors won't open from this side"
+
+# script texts
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "The doors are open..."
+
+# script texts
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...if you are ready"
+
+# script texts
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "A door has opened"
+
+# script texts
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "on the Chantry"
+
+# script texts
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "A bridge has been built"
+
+# script texts
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "on the Abattoir"
+
+# script texts
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "A stair has been built"
+
+# script texts
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "on the Dark Watch"
+
+# script texts
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "One gear has been placed"
+
+# script texts
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20gears have been placed"
+
+# script texts
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "A barricade has opened"
+
+# script texts
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "On the Cloaca"
+
+# script texts
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "The way back is open"
+
+# script texts
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "The door is barred from the inside"
+
+# script texts
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "You dare plunder the tomb"
+
+# script texts
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "of the executioner?"
+
+# script texts
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Prepare to die"
+
+# script texts
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "You have "
+
+# script texts
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20more switches to find"
+
+# script texts
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "You have only "
+
+# script texts
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20switch left"
+
+# script texts
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "The way to the tower is open"
+
+# script texts
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "The way is open"

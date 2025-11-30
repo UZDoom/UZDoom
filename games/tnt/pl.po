@@ -1,0 +1,183 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/doom-engine-games/"
+"tnt-evilution/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pl\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Ewolucja zła"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Kontrola Systemu"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Ludzki Grill"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Kontrola Zasilania"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Tunel"
+
+msgid "THUSTR_5"
+msgstr "Level 5: Hangar"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Otwarty Sezon"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Więzienie"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Warownia"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Odkupienie"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Magazyn"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Przetwórstwo Jądrowe"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Huta"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Martwa Strefa"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Głębiny"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Strefa Przerobowa"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Młyn"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Wysyłka/Reprodukcja"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Przetwarzanie Główne"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Centrum Administracyjne"
+
+msgid "THUSTR_22"
+msgstr "Level 22: Siedlisko"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Projekt Księżycowe Górnictwo"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Kamieniołom"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Legowisko Barona"
+
+msgid "THUSTR_26"
+msgstr "Level 26: Balistyka"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Góra Bólu"
+
+msgid "THUSTR_28"
+msgstr "Level 28: Do Diabła"
+
+msgid "THUSTR_29"
+msgstr "Level 29: Styks"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Ostatni Zew"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Faraon"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Karaiby"
+
+msgid "T1TEXT"
+msgstr ""
+"Wywalczyłeś sobie drogę ucieczki z\n"
+"okupowanych laboratoriów.\n"
+"Wygląda na to, że UAC znów narobiło\n"
+"sobie kłopotów. \n"
+"Mając tyle kasy w kieszeniach, musiało to być\n"
+"trudne dla biednego UAC, by wykupić\n"
+"w tych czasach ubezpieczenie zdrowotne...\n"
+"\n"
+"Przed tobą leży kompleks militarny rojący się\n"
+"teraz od chorych straszydeł gotowych,\n"
+"by zanurzyć w tobie swe kły. Na szczęście\n"
+"kompleks wciąż ma trochę broni\n"
+"w zapasie."
+
+msgid "T2TEXT"
+msgstr ""
+"Słyszysz zgrzytanie ciężkiej maszynerii. \n"
+"Masz nadzieję, że nie tworzą tu kolejnego\n"
+"diabelstwa, ale jesteś gotów by zniszczyć całą\n"
+"hordę jeśli zajdzie taka potrzeba. Mogą\n"
+"planować krwistą ucztę, ale czujesz taką złość\n"
+"jakby siedziało w tobie dwa tysiące maniaków.\n"
+"\n"
+"Nie planujesz tak łatwo się poddać."
+
+msgid "T3TEXT"
+msgstr ""
+"Widok rozpościerający się przed tobą\n"
+"wygląda cholernie znajomo. Zapach też\n"
+"znajomy - jakby przepalone odchody. Już wtedy\n"
+"nie lubiłeś tego miejsca i masz pewność, że teraz\n"
+"też go nie polubisz. Im dalej brodzisz, tym bardziej się\n"
+"wściekasz. Podnosisz swoją broń, a na twej twarzy\n"
+"pojawia się upiorny uśmiech.\n"
+"Czas zabić parę demonów."
+
+msgid "T4TEXT"
+msgstr ""
+"Nagle następuje cisza, jak makiem zasiał.\n"
+"Agonalne jęki Piekieł zanikają, a koszmarne niebo\n"
+"znów staje się niebieskie. Hałdy ciał potworów\n"
+"zaczynają się ulatniać razem z całym tym smrodem,\n"
+"który wypełniał powietrze. Jezu... czyżby ci się udało?\n"
+"Czy na pewno wygrałeś?\n"
+"\n"
+"Coś łomocze w oddali. Niebieskie światło\n"
+"zaczyna świecić w środku zniszczonej czaszki\n"
+"demonicznej maszkary."
+
+msgid "T5TEXT"
+msgstr ""
+"Co teraz? Wygląda całkiem inaczej. Trochę\n"
+"jak mieszkanie Tutanchamona. Cóż...\n"
+"Cokolwiek tu jest, nie może być gorzej niż\n"
+"zazwyczaj. Prawda? A może lepiej dać spokój\n"
+"pogrążonym we śnie bogom..."
+
+msgid "T6TEXT"
+msgstr ""
+"Czas na wakacje. Przedzierasz się przez trzewia\n"
+"piekieł i chciałbyś w końcu zrobić sobie przerwę.\n"
+"Mruczysz do siebie, może ktoś inny mógłby\n"
+"teraz skopać Piekłu tyłek.\n"
+"Przed tobą leży ciche nadmorskie miasteczko\n"
+"pełne pięknych budowli, i miejmy nadzieję, że bez\n"
+"jakiegokolwiek diabelstwa.\n"
+"\n"
+"Nagle słyszysz tupnięcie żelaznej nogi cyberdemona."

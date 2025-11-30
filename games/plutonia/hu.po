@@ -1,0 +1,176 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:29+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: hu\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "A Plutonia-kísérlet"
+
+msgid "PHUSTR_1"
+msgstr "1. Pálya: Kongó"
+
+msgid "PHUSTR_2"
+msgstr "2. Pálya: A lelkek kútja"
+
+msgid "PHUSTR_3"
+msgstr "3. Pálya: Azték"
+
+msgid "PHUSTR_4"
+msgstr "4. Pálya: Ketrecbe zárva"
+
+msgid "PHUSTR_5"
+msgstr "5. Pálya: Szellemváros"
+
+msgid "PHUSTR_6"
+msgstr "6. Pálya: A báró rejteke"
+
+msgid "PHUSTR_7"
+msgstr "7. Pálya: A foglyok udvara"
+
+msgid "PHUSTR_8"
+msgstr "8. Pálya: Uradalom"
+
+msgid "PHUSTR_9"
+msgstr "9. Pálya: Vágóhíd"
+
+msgid "PHUSTR_10"
+msgstr "10. Pálya: Roham"
+
+msgid "PHUSTR_11"
+msgstr "11. Pálya: Űzött vad"
+
+msgid "PHUSTR_12"
+msgstr "12. Pálya: Iram"
+
+msgid "PHUSTR_13"
+msgstr "13. Pálya: A kripta"
+
+msgid "PHUSTR_14"
+msgstr "14. Pálya: Teremtés"
+
+msgid "PHUSTR_15"
+msgstr "15. Pálya: Alkonyat"
+
+msgid "PHUSTR_16"
+msgstr "16. Pálya: Az Ómen"
+
+msgid "PHUSTR_17"
+msgstr "17. Pálya: Létesítmény"
+
+msgid "PHUSTR_18"
+msgstr "18. Pálya: Neuroszféra"
+
+msgid "PHUSTR_19"
+msgstr "19. Pálya: LNSG"
+
+msgid "PHUSTR_20"
+msgstr "20. Pálya: A holtak birtoka"
+
+msgid "PHUSTR_21"
+msgstr "21. Pálya: Halálosztó"
+
+msgid "PHUSTR_22"
+msgstr "22. Pálya: Lehetetlen küldetés"
+
+msgid "PHUSTR_23"
+msgstr "23. Pálya: Sírkő"
+
+msgid "PHUSTR_24"
+msgstr "24. Pálya: A végső határ"
+
+msgid "PHUSTR_25"
+msgstr "25. Pálya: A sötétség temploma"
+
+msgid "PHUSTR_26"
+msgstr "26. Pálya: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "27. Pálya: Antikrisztus"
+
+msgid "PHUSTR_28"
+msgstr "28. Pálya: A kanális"
+
+msgid "PHUSTR_29"
+msgstr "29. Pálya: A moraj ösvénye"
+
+msgid "PHUSTR_30"
+msgstr "30. Pálya: Átjáró a pokolba"
+
+msgid "PHUSTR_31"
+msgstr "31. Pálya: Kiberodú"
+
+msgid "PHUSTR_32"
+msgstr "32. Pálya: Menj oda!"
+
+msgid "P1TEXT"
+msgstr ""
+"Kéjsóvár tekintettel nézel az áramló \n"
+"Őrző hulláján. A halálával kicsavartad a\n"
+"Gyorsítót a Pokol büdös karmaiból. Ellazulsz és\n"
+"egy pillantást teszel körül a szobában. Francba!\n"
+"Itt kéne lennie legalább egy működő\n"
+"prototípusnak, de nem találod sehol.\n"
+"A démonok talán elvihették.\n"
+"\n"
+"Meg kell találnod a prototípust, vagy az összes\n"
+"eddigi erőfeszítésed kudarcba fullad. Menj előre,\n"
+"harcolj, ölj!\n"
+"Ja igen, és ne halj meg!"
+
+msgid "P2TEXT"
+msgstr ""
+"Még a halálos Ősálnok-labirintus sem tudott\n"
+"megállítani, és eljutottál a Gyorsító prototípushoz,\n"
+"ami hamarosan végleg ki lesz iktatva.\n"
+"\n"
+"Te jó vagy az ilyesmiben."
+
+msgid "P3TEXT"
+msgstr ""
+"Beverekedted magad az ördögkaptár szívébe.\n"
+"Itt az idő arra, hogy felderítsd és kiiktasd a Kapuőrzőt,\n"
+"aki piszkos kölykeit a Földre zúdítja. \n"
+"Igen, ő rossz. De te tudod, hogy nála ki rosszabb!\n"
+"\n"
+"Gonosz vigyorral az arcodon ellenőrzöd a felszerelésed,\n"
+"és felkészülsz arra, hogy megmutasd a rohadéknak, hogy\n"
+"mi is az a pokol!"
+
+msgid "P4TEXT"
+msgstr ""
+"A Kapuőrző gonosz arca szétloccsant az egész\n"
+"környéken. Ahogy a hullája összecsuklik, egy\n"
+"átfordított Kapú megjelenik és beszippantja\n"
+"a Gyorsító Prototípus összes maradványait,\n"
+"és a pár démont ami még maradt. Készen vagy.\n"
+"A Pokol visszatért a rossz huligánok püfélésébe,\n"
+"a jó emberek helyett. Ne felejtsd el elmondani\n"
+"az unokáidnak hogy rakjanak egy Rakétavetőt\n"
+"a sírodba. Ha a pokolba jutsz amikor meghalsz,\n"
+"kelleni fog egy kis tisztogatás ..."
+
+msgid "P5TEXT"
+msgstr ""
+"Megtaláltad a második legnehezebb szintet\n"
+"amit csináltunk. Reméljük hogy van egy mentésed,\n"
+"vagy kettő. Ha nem, akkor készülj a halálra\n"
+"kegyetlenül. Csak szakértő\n"
+"tengerészgyalogosoknak."
+
+msgid "P6TEXT"
+msgstr ""
+"Feltetted magadban a kérdést, hogy mi a \n"
+"legnehezebb pálya, amit kínálunk neked?\n"
+"Most már tudod.\n"
+"Senki sem jut ki innen élve."

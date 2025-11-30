@@ -1,0 +1,400 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:51+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen-deathkings/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pl\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Zrujnowana Wioska"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Zaraza"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Studzienka"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakumba"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Pustkowia"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Las Paproci"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Ognisko"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Brama Posterunkowego"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Skarbiec"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Rynek"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Męka"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Zbrojownia"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Nawa"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kaplica Wotywna"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Rzeźnia"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Ciemna Strażnica"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloaka"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Lodowa Twierdza"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Mroczna Cytadela"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Tranzyt"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Nad I Pod"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Mgła Śmierci"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Zamek Bólu"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Ściek"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Róża"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Wycierając drżącą ręką swoją zakrwawioną\n"
+"twarz, próbujesz przygotować swój umysł na to\n"
+"co leży przed tobą...\n"
+"\n"
+"...i zapomnieć co leży za tobą.\n"
+"\n"
+"W oddali, silne mury wielkiego kompleksu\n"
+"zamkowego wydają się rozdzierać niebo\n"
+"nad tobą, i fetor ulatnia się z naruszonych\n"
+"grobów niezliczonej śmierci .\n"
+"\n"
+"Ostrożnie licząc co zostało z twoich artefaktów,\n"
+"próbujesz upewnić się czy ci ich starczy.\n"
+"W końcu musi wystarczyć, prawda?\n"
+"\n"
+"\n"
+"Prawda?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Dusze potępionych na pewno zamieszkują\n"
+"ten świat, coś uczciwego i dobrego\n"
+"nie mogłoby przetrwać tu tak długo.\n"
+"\n"
+"Ale co przyszło wcześniej, może być tylko\n"
+"wyblakłym cieniem tego co zagradza ci\n"
+"drogę: sama mroczna cytadela.\n"
+"\n"
+"Ponura masa bloków katedry to tylko \n"
+"część właściwej cytadeli, ale już\n"
+"to co widzisz mówi świszczącymi\n"
+"szeptami zimnej, powolnej śmierci...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...którą tylko szczęściarze mogą skończyć."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Po raz kolejny znajdujesz się w wielkim holu\n"
+"Sfery Chaosu tak, jakby wogóle czas nie upłynął\n"
+"od kiedy ostatnio się poruszałeś pośród tych\n"
+"cieni.\n"
+"\n"
+"Ale jest tu zupełnie inaczej. Kiedyś\n"
+"słychać było ciche szepty, a teraz tylko cisza\n"
+"i także uczucie bycia obserwowanym\n"
+"przez ukryte oczy...\n"
+"\n"
+"...oczy które skrywają zgubne zamiary."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Jak już zdołałeś chwycić Sferę Chaosu, trzymałeś\n"
+"ją przy sobie swoimi drżącymi rękami. Teraz\n"
+"twoje ręce trzęsą się z czegoś więcej niż\n"
+"chciwości, a strach miesza się z głodem siły.\n"
+"\n"
+"Nawet jeśli siła Sfery nie jest wystarczająca, by\n"
+"cię chronić przed siłami ciemności, może lepiej\n"
+"będzie zostawić ją nietkniętą i nie decydować\n"
+"się na jej obietnice.\n"
+"\n"
+"\n"
+"\n"
+"Nie byłeś jednak tym co miał się wycofać\n"
+"z wyzwania..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...a inni gracze czekają.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Śmiesz walczyć w pokoju przygotowań?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Umrzesz za to!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Wodospad jest otwarty"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Wodospad jest zablokowany"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Drzwi w kaplicy zostały otwarte"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Dziwne..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Pozostały jeszcze trzy części zagadki"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Pozostały jeszcze dwie części zagadki"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Pozostała jeszcze jedna część zagadki"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Zagadka ukończona"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Nie ukończyłeś zagadki"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Ta podłoga nie jest bezpieczna!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Jedna trzecia zagadki rozwiązana"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Dwie trzecie zagadki rozwiązane"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Słyszysz odgłos poruszającej się w oddali platformy"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Zrobione..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Nie ukończyłeś zagadki"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Ostrzegam cię..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Jesteś uparty, prawda?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Głupi też"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Jedna czwarta tej zagadki ukończona"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Zły wybór..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Symbole nie są wyrównane"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Drzwi nie otworzą się z tej strony"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Drzwi są zabarykadowane od zewnątrz"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Świętokradztwo !"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Zhańbiłeś grób Erica !!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "I teraz zginiesz !!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Jedna trzecia zagadki rozwiązana"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Dwie trzecie zagadki rozwiązane"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Krypta jest otwarta"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Strzeż się grobowca pająków"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Słyszysz odgłos unoszącej się na zewnątrz platformy"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Masz szczęście?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Źle zgadłeś!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Dobrze zgadłeś"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Czy możesz zrobić cały skrypt do mojego poziomu?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Nie ruszaj moich słodyczy"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Śmiercionośny ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Daj mi całusa skarbie"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Oooooo..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Za godzinę film?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Nawet nie dostałem swojego nagrobka - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Nie pozwól by krew została przelana"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Nie pozwól by ręka została uniesiona w gniewie"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Kto śmie przeszkadzać nam w drzemce?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Droga jest otwarta"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Masz "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20pozostałych przełączników"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Masz tylko "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20przełącznik"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Wyjście jest otwarte"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Drzwi nie otworzą się z tej strony"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Drzwi są otwarte..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...jeśli jesteś gotów"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Drzwi otworzyły się"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "w Kaplicy Wotywnej"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Most został utworzony"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "w Rzeźni"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Schody zostały utworzone"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "w Ciemnej Strażnicy"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Jedna zębatka została umieszczona"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20zębatki zostały umieszczone"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Barykada została otwarta"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "W Kloace"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Droga powrotna jest otwarta"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Drzwi są zabarykadowane od wewnątrz"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Śmiesz plądrować grobowiec"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "kata?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Przygotuj się na śmierć"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Masz "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20przełączników do znalezienia"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Masz tylko "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20przełącznik"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Droga do wieży jest otwarta"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Droga jest otwarta"

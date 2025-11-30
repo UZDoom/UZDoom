@@ -1,0 +1,113 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:59+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-"
+"games/doom/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_D1E2"
+msgstr "Pinggir Neraka"
+
+msgid "TXT_D1E4"
+msgstr "Daging Habis Binasa"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hanggar"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: PLTN"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Pengolahan Limbah"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Pusat Komando"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Lab Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Pemprosesan Pusat"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Ruang Komputer"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Anomali Phobos"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Markas Militer"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Bawah Tanah"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Anomali Deimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Area Penampungan"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Tempat Pemurnian"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Lab Deimos"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Pusat Komando"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Balai Kemalangan"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Menara Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Benteng Misteri"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Kediaman Neraka"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Tempat Kertak Gigi"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Katedral Neraka"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Gunung Erebus"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Dunia Kematian Dibawah"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Sama Sekali Membenci"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Memisahkan Orang Jahat"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Buas tak Terkuasai"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Mereka Akan Bertobat"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Berdusta terhadap Engkau"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Kerajaan Maut Mengikuti"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Kepada Orang Kejam"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Ketakutan"

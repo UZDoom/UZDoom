@@ -1,0 +1,193 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:21+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sv\n"
+
+msgid "THUSTR_1"
+msgstr "Nivå 1: Systemkontroll"
+
+msgid "THUSTR_2"
+msgstr "Nivå 2: Människogrill"
+
+msgid "THUSTR_3"
+msgstr "Nivå 3: Maktkontroll"
+
+msgid "THUSTR_4"
+msgstr "Nivå 4: Maskhål"
+
+msgid "THUSTR_5"
+msgstr "Nivå 5: Hängare"
+
+msgid "THUSTR_6"
+msgstr "Nivå 6: Öppen säsong"
+
+msgid "THUSTR_7"
+msgstr "Nivå 7: Fängelse"
+
+msgid "THUSTR_8"
+msgstr "Nivå 8: Metall"
+
+msgid "THUSTR_9"
+msgstr "Nivå 9: Fästning"
+
+msgid "THUSTR_10"
+msgstr "Nivå 10: Inlösen"
+
+msgid "THUSTR_11"
+msgstr "Nivå 11: Förvaringsanläggning"
+
+msgid "THUSTR_12"
+msgstr "Nivå 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Nivå 13: Kärnavfall Behandling"
+
+msgid "THUSTR_14"
+msgstr "Nivå 14: Stålverk"
+
+msgid "THUSTR_15"
+msgstr "Nivå 15: Dödszon"
+
+msgid "THUSTR_16"
+msgstr "Nivå 16: De djupaste hålen"
+
+msgid "THUSTR_17"
+msgstr "Nivå 17: Bearbetningsområde"
+
+msgid "THUSTR_18"
+msgstr "Nivå 18: Kvarn"
+
+msgid "THUSTR_19"
+msgstr "Nivå 19: Skeppning"
+
+msgid "THUSTR_20"
+msgstr "Nivå 20: Centralt bearbetningsområde"
+
+msgid "THUSTR_21"
+msgstr "Nivå 21: Administrationscenter"
+
+msgid "THUSTR_22"
+msgstr "Nivå 22: Livsområde"
+
+msgid "THUSTR_23"
+msgstr "Nivå 23: Gruvprojekt på månen"
+
+msgid "THUSTR_24"
+msgstr "Nivå 24: Stenbrott"
+
+msgid "THUSTR_25"
+msgstr "Nivå 25: Baronens lya"
+
+msgid "THUSTR_26"
+msgstr "Nivå 26: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Nivå 27: Smärta på berget"
+
+msgid "THUSTR_28"
+msgstr "Nivå 28: Heck"
+
+msgid "THUSTR_29"
+msgstr "Nivå 29: Floden Styx"
+
+msgid "THUSTR_30"
+msgstr "Nivå 30: Sista kallelsen"
+
+msgid "THUSTR_31"
+msgstr "Nivå 31: Farao"
+
+msgid "THUSTR_32"
+msgstr "Nivå 32: Karibien"
+
+msgid "T1TEXT"
+msgstr ""
+"Du har kämpat dig ut ur de infekterade\n"
+"experimentlaboratorierna. Det verkar\n"
+"som om UAC återigen har ställt till det.\n"
+"Med sin höga omsättning måste det\n"
+"vara svårt för stackars UAC att köpa\n"
+"en företagsförsäkring nuförtiden...\n"
+" \n"
+"Framför oss ligger militärkomplexet,\n"
+"som nu kryllar av sjuka skräckinjagare\n"
+"som är heta på att sätta tänderna i dig.\n"
+"Med lite tur har komplexet fortfarande\n"
+"lite krigsmateriel som ligger kvar."
+
+msgid "T2TEXT"
+msgstr ""
+"Du hör slipandet av tunga maskiner i\n"
+"huvudet. Du hoppas verkligen att de\n"
+"inte stampar fram nya helvetesdjur,\n"
+"men du är redo att slå ut en hel\n"
+"hjord om du måste.\n"
+"De kanske planerar en blodfest, men\n"
+"du känner dig ungefär lika elak som\n"
+"två tusen galningar packade i en\n"
+"enda galen mördare.\n"
+" \n"
+"Du planerar inte att gå ner lätt."
+
+msgid "T3TEXT"
+msgstr ""
+"Utsikten som öppnar sig framför oss\n"
+"ser jävligt bekant ut. Den luktar också\n"
+"bekant - som stekt avföring. Du\n"
+"gillade inte det här stället förut, och\n"
+"du planerar inte att gilla det nu. Ju\n"
+"mer du grubblar på det, desto\n"
+"argare blir du.\n"
+"Du lyfter din pistol och får ett\n"
+"ondskefullt flin i ansiktet.\n"
+"Dags att ta några namn."
+
+msgid "T4TEXT"
+msgstr ""
+"Plötsligt är allt tyst, från den ena\n"
+"horisonten till den andra. Helvetets\n"
+"plågsamma eko bleknar bort,\n"
+"mardrömshimlen blir blå, högarna av\n"
+"monsterkadaver börjar avdunsta\n"
+"tillsammans med den onda stanken\n"
+"som fyllde luften. Jösses, du kanske\n"
+"har gjort det. Har du verkligen vunnit?\n"
+" \n"
+"Något mullrar i fjärran.\n"
+"Ett blått ljus börjar glöda inuti\n"
+"demonspridarens förstörda skalle."
+
+msgid "T5TEXT"
+msgstr ""
+"Vad händer nu?\n"
+"Det ser helt annorlunda ut.\n"
+"Ungefär som King Tut's lägenhet.\n"
+"Det som finns här kan inte vara\n"
+"värre än vanligt. Eller hur?\n"
+"Eller så är det kanske bäst att låta\n"
+"sovande gudar ligga..."
+
+msgid "T6TEXT"
+msgstr ""
+"Dags för semester. Du har sprängt\n"
+"helvetets inälvor och du är redo för\n"
+"en paus. Du mumlar för dig själv,\n"
+"Kanske någon annan kan spöa\n"
+"helvetet nästa gång. Framför dig\n"
+"ligger en lugn stad, med fridfullt\n"
+"rinnande vatten, pittoreska byggnader\n"
+"och förmodligen inga Hellspawn.\n"
+" \n"
+"När du kliver av transporten hör du\n"
+"stampandet av en cyberdemons\n"
+"järnsko."

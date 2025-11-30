@@ -1,0 +1,186 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:18+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eo\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Mavalucio"
+
+msgid "THUSTR_1"
+msgstr "Nivelo 1: Sistema Kontrolo"
+
+msgid "THUSTR_2"
+msgstr "Nivelo 2: Homo-Kradrostado"
+
+msgid "THUSTR_3"
+msgstr "Nivelo 3: Energia Kontrolo"
+
+msgid "THUSTR_4"
+msgstr "Nivelo 4: Vermtruo"
+
+msgid "THUSTR_5"
+msgstr "Nivelo 5: Pendigejo"
+
+msgid "THUSTR_6"
+msgstr "Nivelo 6: Ĉasosezono"
+
+msgid "THUSTR_7"
+msgstr "Nivelo 7: Malliberejo"
+
+msgid "THUSTR_8"
+msgstr "Nivelo 8: Metalo"
+
+msgid "THUSTR_9"
+msgstr "Nivelo 9: Fuorto"
+
+msgid "THUSTR_10"
+msgstr "Nivelo 10: Elaĉeto"
+
+msgid "THUSTR_11"
+msgstr "Nivelo 11: Stokejo"
+
+msgid "THUSTR_12"
+msgstr "Nivelo 12: Kratero"
+
+msgid "THUSTR_13"
+msgstr "Nivelo 13: Nukleaĵo-Traktejo"
+
+msgid "THUSTR_14"
+msgstr "Nivelo 14: Ŝtalejo"
+
+msgid "THUSTR_15"
+msgstr "Nivelo 15: Senvivzono"
+
+msgid "THUSTR_16"
+msgstr "Nivelo 16: Plejsubejo"
+
+msgid "THUSTR_17"
+msgstr "Nivelo 17: Traktadareo"
+
+msgid "THUSTR_18"
+msgstr "Nivelo 18: Muelejo"
+
+msgid "THUSTR_19"
+msgstr "Nivelo 19: Ekspedo/Revivado"
+
+msgid "THUSTR_20"
+msgstr "Nivelo 20: Centra Eskpedado"
+
+msgid "THUSTR_21"
+msgstr "Nivelo 21: Administracia Centro"
+
+msgid "THUSTR_22"
+msgstr "Nivelo 22: Habitato"
+
+msgid "THUSTR_23"
+msgstr "Nivelo 23: Luna Mino-Projekto"
+
+msgid "THUSTR_24"
+msgstr "Nivelo 24: Ŝtonejo"
+
+msgid "THUSTR_25"
+msgstr "Nivelo 25: Nestego de Barono"
+
+msgid "THUSTR_26"
+msgstr "Nivelo 26: Balistikso"
+
+msgid "THUSTR_27"
+msgstr "Nivelo 27: Monto de Doloro"
+
+msgid "THUSTR_28"
+msgstr "Nivelo 28: Diable"
+
+msgid "THUSTR_29"
+msgstr "Nivelo 29: Rivero de Stikso"
+
+msgid "THUSTR_30"
+msgstr "Nivelo 30: Fina Voko"
+
+msgid "THUSTR_31"
+msgstr "Nivelo 31: Faraono"
+
+msgid "THUSTR_32"
+msgstr "Nivelo 32: Karibio"
+
+msgid "T1TEXT"
+msgstr ""
+"Vi batalis vojante tra la infestitaj\n"
+"eksperimentaj laboratorioj. Ŝajnas, ke la UAC\n"
+"denove glutis ĝin malsupren. Kun iliaj multaj\n"
+"maldungadoj, certe malfacilas aĉeti por\n"
+"kompatinda UAC korporacian sanasekuron\n"
+"nuntempe...\n"
+"\n"
+"Antaŭe situas la militkomplekso, nun\n"
+"svarmante kun malsanaj abomenoj atendantaj\n"
+"mordi vin. Per iomete da fortuno, la komplekso\n"
+"ankoraŭ havas kelkan militan artilerion\n"
+"ĉirkaŭkuŝantan."
+
+msgid "T2TEXT"
+msgstr ""
+"Vi aŭdas la grincadon de amasa maŝinaro\n"
+"antaŭe. Vi certe esperas, ke ili ne fabrikas\n"
+"novajn inferidojn, sed vi pretas alezi tutan\n"
+"brutaron, se vi devas. Ili eble planas\n"
+"sangfestenon, sed vi sentas vin proksimume\n"
+"aĉa, kiel du mil frenezuloj pakitaj en unu\n"
+"rabian mortiganton.\n"
+"\n"
+"Vi ne planas fali facile."
+
+msgid "T3TEXT"
+msgstr ""
+"La vidaĵo malfermante antaŭe aspektas tre \n"
+"diable familiara. Ĝi ankaŭ odoras familiare,\n"
+"kiel fritita fekon. Vi ne ŝatis tiun placon\n"
+"antaŭe, kaj vi diable certe ne planos nun\n"
+"ŝati ĝin. Ju pli vi cerbumas, des pli vi fariĝas\n"
+"freneza. Levante vian pafilon, malica\n"
+"grimaco gutetas sur vian vizaĝon.\n"
+"Tempas por eltiri la rubon."
+
+msgid "T4TEXT"
+msgstr ""
+"Subite, ĉio silentas, de unu horizonto al\n"
+"la alia. La agonianta eĥo de Infero\n"
+"malaperas, la inkub-ĉielo fariĝas blua,\n"
+"la amaso da monstro-kadavroj komencas\n"
+"vaporiĝi kune kun la mava odoro, kiu\n"
+"plenigis la aeron. Ho, eble vi sukcesis.\n"
+"Ĉu vi vere gajnis?\n"
+"\n"
+"Io vibrosonas malproksime. Blua lumo\n"
+"komencas brili en la ruinigita kranio de la\n"
+"demonsputisto."
+
+msgid "T5TEXT"
+msgstr ""
+"Nun kio? Aspektas tute malsame, iom\n"
+"kiel la loĝejo de Reĝo Tut. Nu, kio ajn\n"
+"estas ĉi tie ne povas esti pli malbona\n"
+"ol kutime, ĉu ne? Aŭ eble plibonas\n"
+"lasi dormantajn diojn kuŝi..."
+
+msgid "T6TEXT"
+msgstr ""
+"Tempas ferio. Vi kreviĝis la internaĵoj\n"
+"de Infero, kaj ve, vi estas preta paŭzi.\n"
+"Vi murmuras al vi mem, ke iu alia eble\n"
+"pugbatos Inferon venontfoje. Antaŭe kuŝas\n"
+"kvieta urbeto, kun trankvila flua akvo, kuriozaj\n"
+"konstruaĵoj, kaj supozeble, neniuj inferidoj.\n"
+"\n"
+"Dum vi eliras el la veturilo, vi aŭdas la \n"
+"laŭtan paŝon de fera ŝuo de ciberdemono."

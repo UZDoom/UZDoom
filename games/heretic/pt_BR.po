@@ -1,0 +1,255 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:49+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pt\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "As Docas"
+
+msgid "HHUSTR_E1M2"
+msgstr "As Masmorras"
+
+msgid "HHUSTR_E1M3"
+msgstr "O Portão de Entrada"
+
+msgid "HHUSTR_E1M4"
+msgstr "A Torre de Guarda"
+
+msgid "HHUSTR_E1M5"
+msgstr "A Cidadela"
+
+msgid "HHUSTR_E1M6"
+msgstr "A Catedral"
+
+msgid "HHUSTR_E1M7"
+msgstr "As Criptas"
+
+msgid "HHUSTR_E1M8"
+msgstr "A Boca do Inferno"
+
+msgid "HHUSTR_E1M9"
+msgstr "O Cemitério"
+
+msgid "HHUSTR_E2M1"
+msgstr "A Cratera"
+
+msgid "HHUSTR_E2M2"
+msgstr "Os Fossos de Lava"
+
+msgid "HHUSTR_E2M3"
+msgstr "O Rio de Fogo"
+
+msgid "HHUSTR_E2M4"
+msgstr "A Gruta de Gelo"
+
+msgid "HHUSTR_E2M5"
+msgstr "As Catacumbas"
+
+msgid "HHUSTR_E2M6"
+msgstr "O Labirinto"
+
+msgid "HHUSTR_E2M7"
+msgstr "O Grande Salão"
+
+msgid "HHUSTR_E2M8"
+msgstr "Os Portais do Caos"
+
+msgid "HHUSTR_E2M9"
+msgstr "A Geleira"
+
+msgid "HHUSTR_E3M1"
+msgstr "O Armazém"
+
+msgid "HHUSTR_E3M2"
+msgstr "A Fossa"
+
+msgid "HHUSTR_E3M3"
+msgstr "A Confluência"
+
+msgid "HHUSTR_E3M4"
+msgstr "A Fortaleza Azul"
+
+msgid "HHUSTR_E3M5"
+msgstr "A Cova dos Ofídios"
+
+msgid "HHUSTR_E3M6"
+msgstr "Os Salões do Medo"
+
+msgid "HHUSTR_E3M7"
+msgstr "O Abismo"
+
+msgid "HHUSTR_E3M8"
+msgstr "Fortaleza de D'Sparil"
+
+msgid "HHUSTR_E3M9"
+msgstr "O Aquífero"
+
+msgid "HHUSTR_E4M1"
+msgstr "Catafalco"
+
+msgid "HHUSTR_E4M2"
+msgstr "O Forte"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulatório"
+
+msgid "HHUSTR_E4M4"
+msgstr "Sepulcro"
+
+msgid "HHUSTR_E4M5"
+msgstr "Grande Escada"
+
+msgid "HHUSTR_E4M6"
+msgstr "Os Salões dos Apóstatas"
+
+msgid "HHUSTR_E4M7"
+msgstr "Muralhas da Perdição"
+
+msgid "HHUSTR_E4M8"
+msgstr "Ponte Despedaçada"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoléu"
+
+msgid "HHUSTR_E5M1"
+msgstr "Penhascos Ocres"
+
+msgid "HHUSTR_E5M2"
+msgstr "Corredeiras"
+
+msgid "HHUSTR_E5M3"
+msgstr "Cais"
+
+msgid "HHUSTR_E5M4"
+msgstr "Pátio"
+
+msgid "HHUSTR_E5M5"
+msgstr "Reservatório"
+
+msgid "HHUSTR_E5M6"
+msgstr "Colunata"
+
+msgid "HHUSTR_E5M7"
+msgstr "Mansão Fétida"
+
+msgid "HHUSTR_E5M8"
+msgstr "Campo de Julgamento"
+
+msgid "HHUSTR_E5M9"
+msgstr "Meada de D'Sparil"
+
+msgid "HE1TEXT"
+msgstr ""
+"Com a destruição dos Liches de Ferro\n"
+"e seus lacaios, os últimos mortos-vivos\n"
+"são varridos deste plano de existência.\n"
+"\n"
+"No entanto, essas criaturas devem ter \n"
+"vindo de algum lugar e você suspeita que\n"
+"o portal flamejante da boca do inferno\n"
+"leva até a dimensão de origem delas.\n"
+"\n"
+"Para ter certeza de que não apareçam\n"
+"mais mortos-vivos (ou coisas ainda piores)\n"
+"você deve selar a boca do inferno pelo\n"
+"outro lado. Claro que isso significa que\n"
+"você pode ficar pres@[ao_ptb] num lugar\n"
+"nada amigável, mas ninguém jamais disse\n"
+"que ser herége era fácil."
+
+msgid "HE2TEXT"
+msgstr ""
+"Os poderosos marretauros mostraram\n"
+"não ser páreos para você. Enquanto seus\n"
+"corpos despencam pelo chão você sente\n"
+"uma sensação sinistra de satisfação por \n"
+"ter destruído eles.\n"
+"\n"
+"Os portões que eles vigiavam se abrem,\n"
+"revelando o que você espera que seja o\n"
+"caminho para casa. Mas enquanto você\n"
+"entra, risos de deboche ressoam nos \n"
+"seus ouvidos.\n"
+"\n"
+"Será que havia uma outra força controlando\n"
+"os marretauros? Será que há mais criaturas\n"
+"horrendas por trás desses portões? A visão\n"
+"da cúpula de cristal acima onde deveria\n"
+"estar o céu certamente não é um bom sinal...."
+
+msgid "HE3TEXT"
+msgstr ""
+"A morte de D'Sparil acabou desfazendo\n"
+"as ligações mágicas que unem as criaturas\n"
+"deste plano, com seus gritos moribundos\n"
+"superando seus prantos de agonia.\n"
+"\n"
+"Cumprindo o seu juramento de vingança,\n"
+"você entra no portal que leva ao seu mundo,\n"
+"pouco antes da cúpula se quebrar em milhões\n"
+"de pedaços.\n"
+"\n"
+"Mas se o poder de D'Sparil foi destruído\n"
+"para sempre, por que você ainda não se\n"
+"sente segur@[ao_ptb]? Será que é por causa\n"
+"daquele último grito antes da sua morte,\n"
+"que pareceu uma maldição? Ou uma\n"
+"invocação? Você não tem muita certeza,\n"
+"mas pode ter sido apenas um grito.\n"
+"\n"
+"De qualquer forma, e quanto aos outros\n"
+"Cavaleiros de Serpentes?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Você achou que retornaria ao seu mundo\n"
+"após a morte de D'Sparil, mas o seu último \n"
+"ato encurralou você neste plano. Neste lugar \n"
+"você se encontra nas ruínas das terras \n"
+"conquistadas por D'Sparil. Você derrotou os \n"
+"últimos guardiões destas terras, mas agora \n"
+"você está diante dos portões que levam à\n"
+"fortaleza de D'Sparil. Até este momento\n"
+"você não tinha dúvidas sobre a sua habilidade\n"
+"de encarar qualquer coisa que aparecesse\n"
+"na sua frente, mas através deste portal existe\n"
+"o coração do mal que invadiu o seu mundo.\n"
+"D'Sparil pode estar morto, mas o buraco de\n"
+"onde ele surgiu ainda permanece. Agora\n"
+"você deve entrar nele na esperança de achar\n"
+"uma saída. E em algum lugar, nos cantos\n"
+"mais escuros do reino de D'Sparil, seus\n"
+"guarda-costas aguardam a sua chegada..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Enquanto o último marretauro agoniza\n"
+"até a morte, você percebe que você nunca\n"
+"esteve tão próxim@[ao_ptb] de sua própria \n"
+"destruição. Nem mesmo a luta contra D'Sparil \n"
+"e seus discípulos foi tão desesperadora assim.\n"
+"Você olha para os portões que se abrem\n"
+"à sua frente, se perguntando se eles vão\n"
+"levá-l@[ao_ptb] para casa ou para mais\n"
+"outro horror jamais sonhado. Você se\n"
+"pergunta se ainda tem forças para continuar,\n"
+"se nada além de morte e sofrimento \n"
+"@[ao_ptb] esperam. Mas o que mais você pode \n"
+"fazer se você perder a vontade de seguir lutando? \n"
+"Será que você consegue continuar diante \n"
+"de tamanho desespero? Será que você tem \n"
+"coragem? No final das contas, você descobre \n"
+"que não é de sua natureza se render sem \n"
+"uma luta. De olhos bem abertos, você segue \n"
+"em frente para encontrar o seu destino."

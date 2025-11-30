@@ -1,0 +1,396 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:41+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen-deathkings/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: nl\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Ruïneerd dorp"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Ziekte"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Moeras"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katacombe"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Woestijn"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Moorbos"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Brandstapel"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Constable's poort"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Schatkist"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Markt"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Rustplaats"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Orde"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Wapenkamer"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Naaf"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kapel"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Slachthuis"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Donkere horloge"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Cloaca"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ijskamer"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Donkere citadel"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Doorvoer"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Over'n under"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Dodenmist"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Kasteel van pijn"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Rioolput"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "De roos"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Veeg een trillende hand over je bloedende\n"
+"gezicht, en probeer je je geest vrij te\n"
+"maken voor wat er voor je ligt...\n"
+"\n"
+"...en vergeet wat er achter je ligt.\n"
+"\n"
+"In de verte lijken de grimmige vestingmuren\n"
+"van een groot kasteelcomplex de lucht boven\n"
+"te scheuren, en de stank van vervalwafels\n"
+"uit de geschonden graven van ontelbare doden. \n"
+"\n"
+"Zorgvuldig tellen wat er van je artefacten\n"
+"overblijft, probeer je jezelf ervan te\n"
+"verzekeren dat het genoeg zal zijn. het\n"
+"moet toch genoeg zijn, nietwaar?\n"
+"\n"
+"Nietwaar?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"De zielen van de verdoemden bewonen deze\n"
+"wereld toch zeker, want niets eerlijk of\n"
+"goed kan hier lang overleven.\n"
+"\n"
+"Maar wat eerder is voorbijgegaan kan\n"
+"slechts een bleke schaduw zijn van wat\n"
+"je nu tegenhoudt: de donkere citadel zelf.\n"
+"\n"
+"Het grimmigste deel van de kathedraal\n"
+"blokkeert bijna fragmentarische blikken\n"
+"van de eigenlijke citadel, maar wat er\n"
+"te zien is spreekt in sibilant gefluister\n"
+"van de koude, slepende dood...\n"
+"\n"
+"...voor de gelukkigen."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Opnieuw bevind je je in de grote hal van\n"
+"de chaos sfeer, alsof er geen tijd\n"
+"meer was verstreken vanaf de laatste\n"
+"keer dat je je tussen deze schaduwen\n"
+"bewoog.\n"
+"\n"
+"Maar iets is angstaanjagend anders,\n"
+"een stilte waar ooit zacht gefluister was,\n"
+"een gevoel van door verborgen ogen bekeken\n"
+"te worden...\n"
+"...ogen die een kwaadaardige bedoeling\n"
+"verbergen."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Ooit greep je de chaos sfeer, hield hem\n"
+"in trillende handen. nu beven je handen\n"
+"met iets meer dan gierigheid, en de angst\n"
+"sluit aan bij de honger naar macht.\n"
+"\n"
+"Als zelfs de kracht van de sfeer niet genoeg\n"
+"is om je te beschermen tegen de krachten\n"
+"van de duisternis, dan is het misschien\n"
+"beter om hem onaangeroerd te laten en zijn\n"
+"belofte onbewaakt te laten.\n"
+"\n"
+"Maar dan, je was er nooit een om je terug\n"
+"te trekken van een uitdaging..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...en andere spelers wachten op je.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Durf jij te vechten in de readyroom?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Daarvoor zal je sterven!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "De waterval is open"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "De waterval is geblokkeerd"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Een deur is geopend in de kapel"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Dat is vreemd...."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Er blijven nog drie onderdelen van de puzzel over"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Twee andere delen van de puzzel blijven over"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Nog een deel van de puzzel blijft over"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "De puzzel is compleet"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Je hebt de puzzel nog niet voltooid..."
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "De vloer is niet veilig!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Een derde van de puzzel is opgelost."
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Tweederde van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Je hoort een platform bewegen in de verte"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Het is gebeurd"
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Je hebt de puzzel nog niet voltooid..."
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Ik waarschuw je..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Koppig, nietwaar?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "En ook dom"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Een vierde van deze puzzel is compleet"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Slechte keuze...."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "De symbolen zijn niet uitgelijnd"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "De deur gaat niet open van deze kant"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "De deur is van buitenaf uitgesloten"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Heiligschennis!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Je hebt Eric's graf bevlekt!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "En nu ga je dood!!!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Een derde van de puzzel is opgelost."
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Tweederde van de puzzel is opgelost"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "De crypte is open"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Pas op voor het graf van de spin"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Je hoort een platform buiten opstijgen"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Heb je geluk?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Je hebt het verkeerd geraden!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Goede gok"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Kun je al het scripten doen voor mijn niveau?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Raak mijn gloppy niet aan"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Geef me wat suiker, schatje."
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Duh-uhhh..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Film in een uur?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Ik krijg niet eens mijn eigen grafsteen - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Laat geen bloed worden vergoten"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Laat geen hand worden opgestoken in woede..."
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Wie durft onze slaap te verstoren?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "De weg is open"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Je hebt "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20schakelaars over"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Je hebt alleen "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20schakelaar over"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "De uitgang is open"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "De deuren gaan niet open van deze kant...."
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "De deuren zijn open...."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...als je er klaar voor bent..."
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Een deur is geopend"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "op de Chantry"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Er is een brug gebouwd"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "op het slachthuis"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Er is een trap gebouwd"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "op de donkere wacht"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Een tandwiel is geplaatst"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20tandwielen zijn geplaatst"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Er is een barricade geopend"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "Op de Cloaca"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "De terugweg is open"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "De deur is van binnenuit geblokkeerd."
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Je durft de graftombe te plunderen"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "van de beul?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Bereid je voor om te sterven"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Je hebt "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20meer schakelaars te vinden"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Je hebt alleen "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20schakelaar over"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "De weg naar de toren is open"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "De weg is open"

@@ -1,0 +1,182 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:24+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pl\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Eksperyment Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Studnia Dusz"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Aztek"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: W Klatce"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Miasto Duchów"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Legowisko Barona"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: Dziedziniec Więzienny"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Królestwo"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: Rzeźnia"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: Szturm"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Nawiedzony"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Pęd"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: Krypta"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: Geneza"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: Zmierzch"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: Omen"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Mieszanka"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: Neurosfera"
+
+msgid "PHUSTR_19"
+msgstr "Level 19: WRG"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: Domena Śmierci"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: Pogromca"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Niemożliwa Misja"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Nagrobek"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: Ostateczna Granica"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: Świątynia Mroku"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: Bunkier"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: Antychryst"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: Ścieki"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Odyseja Wrzawy"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: Brama Piekieł"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: Cybernora"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: Do Dzieła"
+
+msgid "P1TEXT"
+msgstr ""
+"Triumfujesz nad stygnącymi zwłokami\n"
+"strażnika. Dzięki jego śmierci wyrwałeś\n"
+"akcelerator ze śmierdzących szponów\n"
+"piekła. Odpoczywasz i rozglądasz się po\n"
+"pokoju. Kurde! Powinien tu być\n"
+"przynajmniej jeden działający prototyp,\n"
+"ale nie możesz go znaleźć. Demony musiały\n"
+"go zabrać ze sobą.\n"
+"\n"
+"Musisz znaleźć prototyp w przeciwnym\n"
+"razie cały twój wysiłek pójdzie na marne.\n"
+"Ruszaj się, walcz, zabijaj. \n"
+"Ach i jeszcze jedno... uważaj na siebie."
+
+msgid "P2TEXT"
+msgstr ""
+"Nawet śmiercionośny labirynt\n"
+"Arcypodleców nie mógł cię zatrzymać\n"
+"i dotarłeś do prototypu akceleratora, który ma\n"
+"być trwale dezaktywowany.\n"
+"\n"
+"Jesteś dobry w te klocki."
+
+msgid "P3TEXT"
+msgstr ""
+"Wywalczyłeś sobie drogę do serca\n"
+"diabelskiej kolonii. Czas zniszczyć\n"
+"strażnika bramy, którego cuchnące\n"
+"potomstwo zalewa Ziemię. \n"
+"Taa... jest zły, ale pokażesz mu kto jest gorszy!\n"
+"\n"
+"Złowieszczo się uśmiechasz, sprawdzasz\n"
+"swe uzbrojenie i przygotowujesz się, by\n"
+"dać popalić temu sukinsynowi."
+
+msgid "P4TEXT"
+msgstr ""
+"Okrutna twarz strażnika bramy została\n"
+"rozbryzgana po całym pokoju. Jego\n"
+"rozszarpane zwłoki opadają, a odwrócona \n"
+"brama formuje się i wciąga odłamki ostatniego\n"
+"prototypu akceleratora wraz z pozostałościami\n"
+"demonów. Jesteś wykończony.\n"
+"Piekło wróciło do torturowania dusz złoczyńców\n"
+"zamiast cnotliwych żywych ludzi.\n"
+"Pamiętaj, by powiedzieć swoim wnukom, by\n"
+"włożyły wyrzutnię rakiet do twojej trumny.\n"
+"Jeśli po śmierci trafisz do piekła, będziesz jej\n"
+"potrzebował by dokonczyć sprzątanie."
+
+msgid "P5TEXT"
+msgstr ""
+"Znalazłeś drugi najtrudniejszy poziom jaki\n"
+"mieliśmy dla ciebie. Mamy nadzieję, że\n"
+"zapisałeś grę jeden lub dwa poziomy wstecz.\n"
+"Jeśli nie, badź gotów na śmierć.\n"
+"Tylko dla najlepszych żołnierzy."
+
+msgid "P6TEXT"
+msgstr ""
+"Pewnie się zastanawiasz, który poziom jest\n"
+"najtrudniejszy spośród tych, które \n"
+"przygotowaliśmy, prawda? Teraz wiesz. Nikt nie\n"
+"wyjdzie stąd żywy."

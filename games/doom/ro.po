@@ -1,0 +1,205 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/doom-engine-"
+"games/doom/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "TXT_D1E1"
+msgstr "Îngropat printre Cadavre"
+
+msgid "TXT_D1E2"
+msgstr "Țărmurile Iadului"
+
+msgid "TXT_D1E3"
+msgstr "Infernul"
+
+msgid "TXT_D1E4"
+msgstr "Carnea ta Fără de Vlagă"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Uzina Nucleară"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Rafinăria de Toxine"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Comandă și Control"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratorul Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Prelucrare Centrală"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Stația de Calculatoare"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Anomalia Phobos"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Baza Militară"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Canalizarea"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Anomalia Deimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Zona de Izolare"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Rafinărie"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Laboratorul Deimos"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Centru de Comandă"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Camerele Blestemaților"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Cuve de Reproducere"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Turnul Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Fortăreața Misterelor"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Fortul Iadului"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Mlaștinile Disperării"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemoniu"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Casa Durerii"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Catedrala Necurată"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: M. Erebus"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Limb"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dite"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Vizuini"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Iadul de Jos"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Ură Desăvârșită"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Să Desparți pe Cei Răi"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Un Rău fără Astâmpăr"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Se vor Pocăi"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Te Grăiesc de Rău"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Iadul se Ținea după El"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Unuia Fără de Milă"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Frica"
+
+msgid "E1TEXT"
+msgstr ""
+"Odată ce-i învingi pe ticăloși și cureți\n"
+"baza de pe Phobos, se presupune că\n"
+"ai câștigat, nu-i așa? Nu-i așa? Unde-ți sunt\n"
+"răsplata bine-meritată și biletul de întoarcere?\n"
+"Ce dracu-i asta? Nu așa ar trebui să se termine!\n"
+"\n"
+"Pute a hoit, dar se pare că ești pe Deimos, baza\n"
+"pierdută. Se pare că ești blocat\n"
+"pe Țărmurile Iadului. Nu poți scăpa de aici decât \n"
+"mergând tot înainte.\n"
+"\n"
+"Ca să continui experiența DOOM, joacă „Țărmurile\n"
+"Iadului” și continuarea sa nemaipomenită,\n"
+"„Infernul”!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Ai reușit! Odiosul stăpân ciberdemon care a\n"
+"condus baza pierdută a fost ucis,\n"
+"iar tu ești biruitor! Însă... unde ești? Te cațeri\n"
+"până la marginea satelitului ca să vezi ce e jos și\n"
+"afli crudul adevăr.\n"
+"\n"
+"Deimos plutește deasupra Infernului însuși! N-ai mai \n"
+"auzit de nimeni care să scape din infern, dar tu o să-i faci \n"
+"pe ticăloși să regrete că te-au cunoscut! Faci rapel \n"
+"până jos pe suprafața iadului.\n"
+"\n"
+"Urmează ultimul capitol din DOOM! -- „Infernul”."
+
+msgid "E3TEXT"
+msgstr ""
+"Revoltătorul demon păianjen care a orchestrat\n"
+"invazia bazelor selenare și a lăsat atât de multă \n"
+"moarte în urmă a fost pus la pământ pe veci.\n"
+"\n"
+"O cale ascunsă se deschide și calci pe urmele ei.\n"
+"Ai demonstrat că ești prea dur pentru a putea fi\n"
+"ținut în Infern, iar acum Infernul joacă în sfârșit\n"
+"corect -- pentru că acum ieși de după ușă\n"
+"și vezi câmpiile verzi ale Pământului!\n"
+"Acasă, în sfârșit.\n"
+"\n"
+"Te întrebi ce s-a întâmplat pe Pământ în timp ce\n"
+"tu erai ocupat cu oprirea răului. E bine că\n"
+"nici o creatură infernală nu a putut să te însoțească\n"
+"odată ce ai trecut prin acea ușă ..."
+
+msgid "E4TEXT"
+msgstr ""
+"Păianjenul maestru trebuie să-și fi trimis legiunile\n"
+"de creaturi infernale după confruntarea finală\n"
+"cu acea bestie teribilă venită din infern. Dar tu ai\n"
+"pus piciorul în prag și ai adus un blestem și o suferință\n"
+"eternă asupra hoardei asemeni unui adevărat\n"
+"erou în fața a ceva atât de diabolic.\n"
+"\n"
+"Pe lângă asta, cineva trebuia să plătească pentru\n"
+"ce i s-a întâmplat lui Daisy, iepurele tău de\n"
+"companie.\n"
+"\n"
+"Dar acum, observi un potențial și mai mare pentru\n"
+"durere si măcel întrucât o nație întreagă de demoni\n"
+"fuge prin orașele noastre.\n"
+"\n"
+"Următoarea oprire, Iadul pe Pământ!"

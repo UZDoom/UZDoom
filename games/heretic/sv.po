@@ -1,0 +1,258 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:55+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sv\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Hamnarna"
+
+msgid "HHUSTR_E1M2"
+msgstr "Fästningarna"
+
+msgid "HHUSTR_E1M3"
+msgstr "Porthuset"
+
+msgid "HHUSTR_E1M4"
+msgstr "Vakttornet"
+
+msgid "HHUSTR_E1M5"
+msgstr "Citadellet"
+
+msgid "HHUSTR_E1M6"
+msgstr "Katedralen"
+
+msgid "HHUSTR_E1M7"
+msgstr "Krypten"
+
+msgid "HHUSTR_E1M8"
+msgstr "Helvetets gap"
+
+msgid "HHUSTR_E1M9"
+msgstr "Kyrkogården"
+
+msgid "HHUSTR_E2M1"
+msgstr "Kratern"
+
+msgid "HHUSTR_E2M2"
+msgstr "Lavagruvorna"
+
+msgid "HHUSTR_E2M3"
+msgstr "Eldfloden"
+
+msgid "HHUSTR_E2M4"
+msgstr "Isgrottan"
+
+msgid "HHUSTR_E2M5"
+msgstr "Katakomberna"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labyrinten"
+
+msgid "HHUSTR_E2M7"
+msgstr "Den stora hallen"
+
+msgid "HHUSTR_E2M8"
+msgstr "Kaosets portaler"
+
+msgid "HHUSTR_E2M9"
+msgstr "Glaciären"
+
+msgid "HHUSTR_E3M1"
+msgstr "Magasinet"
+
+msgid "HHUSTR_E3M2"
+msgstr "Rännstenen"
+
+msgid "HHUSTR_E3M3"
+msgstr "Sammanflödet"
+
+msgid "HHUSTR_E3M4"
+msgstr "Den azurblå fästningen"
+
+msgid "HHUSTR_E3M5"
+msgstr "Den Ophidiska hålan"
+
+msgid "HHUSTR_E3M6"
+msgstr "Skräckens hallar"
+
+msgid "HHUSTR_E3M7"
+msgstr "Klyftan"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparils borg"
+
+msgid "HHUSTR_E3M9"
+msgstr "Akvifer"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalken"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blockhuset"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulerande"
+
+msgid "HHUSTR_E4M4"
+msgstr "Gravskålen"
+
+msgid "HHUSTR_E4M5"
+msgstr "Stora trappan"
+
+msgid "HHUSTR_E4M6"
+msgstr "Apostaternas salar"
+
+msgid "HHUSTR_E4M7"
+msgstr "Fördärvets ramper"
+
+msgid "HHUSTR_E4M8"
+msgstr "Förstörd bro"
+
+msgid "HHUSTR_E5M1"
+msgstr "Ockerfärgade klippor"
+
+msgid "HHUSTR_E5M2"
+msgstr "Forsar"
+
+msgid "HHUSTR_E5M3"
+msgstr "Kajen"
+
+msgid "HHUSTR_E5M4"
+msgstr "Gården"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hydratyr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Colonnade"
+
+msgid "HHUSTR_E5M7"
+msgstr "Foetid Manse"
+
+msgid "HHUSTR_E5M8"
+msgstr "Domarplatsen"
+
+msgid "HHUSTR_E5M9"
+msgstr "D'sparils skein"
+
+msgid "HE1TEXT"
+msgstr ""
+"I och med förintelsen av järnlicherna\n"
+"och deras hantlangare har de sista\n"
+"odöda försvunnit från det här\n"
+"existensplanet.\n"
+" \n"
+"Dessa varelser måste dock ha\n"
+"kommit någonstans ifrån, och du har\n"
+"en lömsk misstanke om att den eldiga\n"
+"portalen i helvetets gap öppnar sig på\n"
+"deras hemdimension.\n"
+" \n"
+"För att se till att inte fler odöda (eller\n"
+"ännu värre saker) kommer igenom\n"
+"måste du försegla Helvetets gap\n"
+"från andra sidan. Naturligtvis innebär\n"
+"detta att du kan fastna i en mycket\n"
+"ovänlig värld, men ingen har någonsin\n"
+"sagt att det är lätt att vara kättare!"
+
+msgid "HE2TEXT"
+msgstr ""
+"De mäktiga maulotaurerna har visat\n"
+"sig inte vara någon match för er, och\n"
+"när deras ångande lik glider ner på\n"
+"marken känner du en känsla av grym\n"
+"tillfredsställelse över att de har\n"
+"förintats.\n"
+" \n"
+"Portarna som de vaktade har öppnats\n"
+"och avslöjat vad du hoppas är vägen\n"
+"hem. Men när du kliver igenom ringer\n"
+"ett hånfullt skratt i dina öron.\n"
+" \n"
+"Var det någon annan kraft som\n"
+"kontrollerade maulotaurerna? Kan det\n"
+"finnas ännu mer hemska varelser\n"
+"bakom den här porten? En\n"
+"kristallkupol över himlen där himlen\n"
+"borde vara är verkligen inget bra\n"
+"tecken..."
+
+msgid "HE3TEXT"
+msgstr ""
+"D'Sparils död har lossat de magiska\n"
+"band som håller hans varelser på detta\n"
+"plan, deras dödliga skrik överväldigade\n"
+"hans egna skrik av plågor.\n"
+" \n"
+"Din hämndens ed uppfylld, går du in i\n"
+"portalen till din egen värld, bara några\n"
+"ögonblick innan kupolen splittras i\n"
+"en miljon bitar.\n"
+" \n"
+"Men om D'Sparils makt är bruten för\n"
+"alltid, varför känner du dig då inte\n"
+"trygg? Var det det sista ropet strax\n"
+"före hans död, det som lät som en\n"
+"förbannelse? Eller en kallelse? Du kan\n"
+"inte riktigt vara säker, men det kan\n"
+"ha varit ett skrik.\n"
+" \n"
+"Men å andra sidan,\n"
+"hur är det med de andra ormryttarna?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Du trodde att du skulle återvända till\n"
+"din egen värld efter D'Sparils död, men\n"
+"hans sista handling förvisade dig till\n"
+"hans eget plan. Här gick du in i\n"
+"krossade resterna av de länder som\n"
+"D'Sparil erövrade. Du besegrade de\n"
+"sista väktarna av dessa länder, men\n"
+"nu står du framför portarna till D'Sparils\n"
+"fäste. Fram till det här ögonblicket hade\n"
+"du inga tvivel om din förmåga att möta\n"
+"allt som du skulle kunna möta, men\n"
+"bortom den här portalen ligger själva\n"
+"hjärtat av den ondska som invaderade\n"
+"din värld. D'Sparil må vara död, men\n"
+"gropen där han föddes finns kvar. Nu\n"
+"måste du gå in i den gropen i hopp om\n"
+"att hitta en väg ut. Och någonstans, i\n"
+"det mörkaste hörnet av D'Sparils rike,\n"
+"väntar hans personliga livvakter på\n"
+"din ankomst ..."
+
+msgid "HE5TEXT"
+msgstr ""
+"När den sista maulotauren ropar sin\n"
+"dödsagoni inser du att du aldrig har\n"
+"varit så nära din egen förintelse. Inte\n"
+"ens kampen mot D'Sparil och hans\n"
+"lärjungar hade varit så desperat. Grimt\n"
+"stirrar du på portarna som öppnar\n"
+"sig framför dig och undrar om de leder\n"
+"hem eller om de öppnar sig mot någon\n"
+"oanade skräck. Du finner dig själv\n"
+"undra om du har styrkan att fortsätta,\n"
+"om inget annat än död och smärta\n"
+"väntar dig. Men vad kan man göra om\n"
+"viljan att kämpa är borta? Kan du\n"
+"tvinga dig själv att fortsätta när du\n"
+"står inför en sådan förtvivlan? Har du\n"
+"modet? Till slut upptäcker du att det\n"
+"inte finns inom dig att ge upp utan strid.\n"
+"Med stora ögon går du ditt öde till\n"
+"mötes."

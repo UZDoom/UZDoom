@@ -1,0 +1,191 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 20:08+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ko\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_D1E1"
+msgstr "끝없이 밀려오는 죽음"
+
+msgid "TXT_D1E2"
+msgstr "지옥의 해변"
+
+msgid "TXT_D1E3"
+msgstr "연옥"
+
+msgid "TXT_D1E4"
+msgstr "쇠패해진 그대의 육신"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: 격납고"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: 원자력 발전소"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: 폐기물 정제소"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: 지휘 통제소"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: 포보스 연구소"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: 중앙 처리 본부"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: 컴퓨터 기지"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: 포보스 이상거점"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: 군사 기지"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: 하수구"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: 데이모스 이상거점"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: 화물 보관구역"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: 정제소"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: 데이모스 연구소"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: 사령부"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: 저주받은 회랑"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: 산란독"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: 바벨탑"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: 신비의 요새"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: 지옥 성채"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: 절망의 심연"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: 복마전"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: 고통의 집"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: 불경한 성당"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: 에레버스 산"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: 고성소"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: 디스"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: 토끼굴"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: 지옥의 밑에서"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: 완벽한 증오"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: 악령처단"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: 광폭한 악마"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: 그들은 회개할 지어다"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: 그대와 짖궂게 맞서다"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: 그리고 지옥이 뒤따른다"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: 잔혹한 자에게로"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: 공포"
+
+msgid "E1TEXT"
+msgstr ""
+"당신이 악당 보스를 처치하고 달기지를 청소했다면, 당신은 이겨야 한다. \n"
+"안 그런가? 안 그런가? 그 잘난 보상금과 집으로 가는 티켓은 어딨단 말인가?\n"
+"이게 도대체 뭔가! 이런 식으로 끝날 순 없다!\n"
+"\n"
+"이곳은 썩은 고기같이 구린 곳이지만, 사라진 데이모스 기지에 온 것 같다.\n"
+"아무래도 당신이 지옥의 해변에 갇힌 것 같다.\n"
+"여기서 나가는 방법은 뚫고 지나는 것뿐이다.\n"
+"\n"
+"게임을 계속하고 싶다면 지옥의 해변과 놀라운 후속편,\n"
+"연옥을 기대하시라!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"당신이 해냈다! 데이모스 기지를 통치하던 마왕, 사이버데몬이 파괴되었고\n"
+"당신이 이겼다! 하지만... 지금 당신은 어디 있는가? 당신은 데이모스의\n"
+"가장자리로 갔고 거기서 무서운 사실을 내려다보게 된다.\n"
+"\n"
+"데이모스가 지옥 위에 떠 있는 지옥 그 자체였던 것이다! 당신은 지옥에서 \n"
+"빠져나갈 수 있는 사람은 없다고 들었다. 하지만 당신은 그 사실을 완전히\n"
+"바꿔 놓을 수 있다! 재빠르게 당신은 데이모스에서 내려와 지옥의 표면으로\n"
+"내려왔다.\n"
+"\n"
+"이제... 둠의 마지막 탄- 연옥이다!"
+
+msgid "E3TEXT"
+msgstr ""
+"달기지 침공을 주도하고 너무나 많은 죽음을 일으킨 거미악마가 영원히\n"
+"잠들게 되었다.\n"
+"\n"
+"숨겨진 문이 열렸고 당신은 들어갔다. 당신은 지옥에 가도 이길 수 있을 정도로\n"
+"강했다는 걸 입증했고, 결국 지옥도 마지막엔 공정한 승부를 내어 주었다.\n"
+"당신은 문을 통해 지구의 푸른 초원을 본 것이다. 마침내 집에 왔다...\n"
+"\n"
+"당신은 지옥과 싸울 동안 지구에서 무슨 일이 있었을지 궁금할 것이다.\n"
+"그리고 당신과 함께 지옥의 무리가 그 문으로 들어가지 않길\n"
+"진심으로 바랄 뿐이다..."
+
+msgid "E4TEXT"
+msgstr ""
+"스파이더 마스터마인드는 당신과의 마지막 결투가 있기 전에 지옥의 군단을\n"
+"지구로 보냈어야 했었다. 하지만 당신이 문으로 들어갔기에 놈들은 운 좋게\n"
+"지구로 올 수 있게 되었고, 당신은 영웅에서 순식간에 악마의 앞잡이로\n"
+"전락하였다.\n"
+"\n"
+"더구나 당신은 당신의 애완 토끼 데이지를 죽인 복수도 해야 할 것이다.\n"
+"\n"
+"하지만 그것보다도 당신의 잠재적인 고통을 지구에 퍼진 괴물들을 막는 데\n"
+"쓰기 바란다.\n"
+"\n"
+"이번엔, 지상에 강림한 지옥이다!"

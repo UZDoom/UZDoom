@@ -1,0 +1,371 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ru\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Зал отсеивания"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Семь порталов"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Страж льда"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Страж огня"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Страж стали"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Горнило света"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Лес теней"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Болотная топь"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Пещеры Цирцеи"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Пустоши"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Священная роща"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Гипостильный зал"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Семинария Ересиарха"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Часовня дракона"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Часовня грифона"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Часовня ветра смерти"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Сады плача"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Безмолвная трапезная"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Часовня волка"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Покинутая застава"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Замок скорби"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Виселица"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Зловонный сток"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Подземелья"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Заброшенный сад"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Некрополь"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Гробница Зедека"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Гробница Менелкира"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Гробница Традактуса"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Виварий"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Испытание тьмы"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Вы прошли семь порталов, что\n"
+"властвовали над этими землями,\n"
+"и зловещая бескрайняя местность\n"
+"простирается теперь перед вами.\n"
+"Вас испытывали огонь, лёд и сталь,\n"
+"но впереди ожидают и более тяжкие\n"
+"испытания. Неведомые и коварные\n"
+"угрозы таятся в лесу теней, и страх\n"
+"неизвестности не самое ужасное из\n"
+"того, что может случиться.\n"
+"\n"
+"Бесплодные пустоши, гнилые болота\n"
+"и затхлые подземелья преграждают\n"
+"ваш путь, но ничто не сможет\n"
+"изменить предначертанную судьбу,\n"
+"хотите вы того или нет.\n"
+"\n"
+"И где-то далеко, в глубинах\n"
+"бесконечных гипостильных залов\n"
+"сами стены ожили, чтобы отяготить\n"
+"каждый ваш шаг."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Едва переведя дух после\n"
+"изнурительного сражения, вы идёте\n"
+"вперёд, пытаясь выбраться из этих\n"
+"проклятых земель. Внезапно\n"
+"пространство вокруг начинает\n"
+"стремительно изменяться, свет\n"
+"меркнет и тьма окутывает вас...\n"
+"Всё рушится. Яркая вспышка пронзает\n"
+"тьму, — это телепорт переносит вас в\n"
+"новую реальность. Миг и вы вновь\n"
+"твёрдо стоите на ногах.\n"
+"\n"
+"Вы оказались на верхней площадке\n"
+"гигантской башни. От подножия\n"
+"доносятся крики и проклятия какого-то\n"
+"дьявольского отродья. Лишь шаг вперёд,\n"
+"и демонические заклятия касаются\n"
+"Вашего слуха, наполняя кровь\n"
+"леденящим ужасом.\n"
+"О, боги смерти, что это за место?\n"
+"О, боги боли, как выбраться из него?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Сил могущественного оружия и чар\n"
+"древних артефактов едва хватило,\n"
+"чтобы сразить Ересиарха и его\n"
+"приспешников. Их растерзанные\n"
+"останки лежат у ваших ног. Вы\n"
+"обессилены битвой, но собрав\n"
+"остатки своей воли, входите в\n"
+"портал внутренних покоев\n"
+"обители Ересиарха.\n"
+"\n"
+"Перед вами величественный замок.\n"
+"Мрачные стены с тёмными бойницами\n"
+"окружают одинокую башню. Она высится\n"
+"за ними словно зловещий, безмолвный\n"
+"гигант. За смотровыми щелями\n"
+"дьявольского замка извиваются языки\n"
+"адского пламени, мелькают тени,\n"
+"десятки злобных глаз смотрят на вас\n"
+"неотрывно из темноты.\n"
+"\n"
+"Притаившиеся враги уже ждут внутри..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"«...И сойдёт он в царство мёртвых,\n"
+"и очистит его от сил тьмы, и в\n"
+"жестокой борьбе дойдёт он до самых\n"
+"врат отчаяния. Суждено ли ему\n"
+"вернуться назад, в царство света,\n"
+"неведомо никому...»\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Проклятье."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Внезапно вас окутал огонь.\n"
+"С воплем боли и страха вы\n"
+"перемещаетесь в другой мир, и\n"
+"каждая часть вашего тела пронизана\n"
+"мистическим пламенем. Видения\n"
+"отступили, взор снова ясен. Вы в\n"
+"огромном зале, наполненном\n"
+"призрачным эхом и грозными,\n"
+"неведомыми тенями. Одинокий свет\n"
+"струится с возвышения неподалёку\n"
+"от вас."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Это сфера хаоса, источник силы\n"
+"Коракса. С её помощью можно\n"
+"создавать миры... или разрушать их.\n"
+"Дрогнувшей рукой вы берёте её.\n"
+"Теперь она ваша по праву силы.\n"
+"\n"
+"Должно быть, новый игрок теперь\n"
+"вступит в космическую битву за\n"
+"власть, хитро ведя свою партию\n"
+"на вселенской шахматной доске.\n"
+"Словно ничтожная пешка, услужающая\n"
+"своему королю, и, предав его,\n"
+"вышедшая в дамки."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"...Но есть более опытные игроки, и\n"
+"кому ведомы их дальнейшие ходы?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Дверь заперта"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Приветствую, смертный"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Готов ли ты умереть?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Дверь открыта у стража льда"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Сейчас этот путь закрыт"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Половина головоломки разгадана"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "на Семи порталах"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Треть головоломки разгадана"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Лестница воздвигнулась на Семи порталах"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Треть головоломки разгадана"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "на Семи порталах"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Лестница воздвигнулась на Семи порталах"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Остался ещё один переключатель..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Каменная преграда отступила на Семи порталах"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Одна шестая головоломки разгадана"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "в лесу теней"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Дверь заблокирована изнутри"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Слышен звук открывающейся двери"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Одна шестая головоломки разгадана"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "в лесу теней"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Одна шестая головоломки разгадана"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "в лесу теней"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ оставшихся эттинов"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Слишком долго! Готовься к смерти!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Дверь открылась на покинутой заставе"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Сейчас эта дверь закрыта"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Мои прислужники чуют твою кровь, человек"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Проход будет открыт возле виселицы"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Дверь заблокирована изнутри"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Площадка опустилась в центральной башне"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Ты слишком заигрался, смертный..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Пришло время завершить твою партию"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Слышен звук открывающейся двери наверху"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Преклонись предо мной, и, может быть, я буду милосерден"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "А может быть, и нет"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Одна девятая головоломки разгадана"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "в семинарии Ересиарха"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Одна девятая головоломки разгадана"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "в семинарии Ересиарха"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Одна девятая головоломки разгадана"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "в семинарии Ересиарха"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Портал закрылся"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Сделай свой выбор"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Дверь заблокирована изнутри"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Достаточно ли ты силён,"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "чтобы сразиться со своими наставниками?"

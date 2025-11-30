@@ -1,0 +1,102 @@
+name: Continuous Integration
+
+on: [push, pull_request]
+
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: validate
+      shell: bash
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get -qq install gettext
+        bash scripts/validate.sh
+
+    - name: templates
+      if: always()
+      shell: bash
+      run: |
+        bash scripts/mktemplate.sh
+        git diff
+
+  build:
+    if: always()
+    name: ${{ matrix.config.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - name: support
+          outfile: game_support.pk3/language.csv
+          infiles: games/doom games/doom2 games/chex games/heretic games/hexen games/hexen-deathkings games/plutonia games/tnt games/strife
+
+        - name: filter-chex3
+          outfile: game_support.pk3/filter/chex.chex3/language.csv
+          infiles: games/filter/chex_quest_3
+
+        - name: filter-harmony
+          outfile: game_support.pk3/filter/harmony/language.csv
+          infiles: games/filter/harmony
+
+        - name: filter-hacx
+          outfile: game_support.pk3/filter/hacx.hacx1/after_iwad/language.csv
+          infiles: games/filter/hacx
+
+        - name: engine-common
+          outfile: uzdoom.pk3/language.0
+          infiles: engine/common
+
+        - name: engine-zdoom
+          outfile: uzdoom.pk3/language.csv
+          infiles: engine/zdoom
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: build
+      shell: bash
+      run: |
+        outfile=out/${{ matrix.config.outfile }}
+        mkdir -p $(dirname $outfile)
+        python3 -B -E -s scripts/compile.py ${{ matrix.config.infiles }} $outfile
+
+    - name: upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: temp-${{ matrix.config.name }}
+        path: out
+
+  bundle:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: download
+      uses: actions/download-artifact@v4
+      with:
+        pattern: temp-*
+        path: files
+        merge-multiple: true
+
+    - name: check
+      shell: bash
+      run: |
+        pipx --quiet install csvkit
+
+        find . -type f -exec sh -c 'printf "\n%s\n\n" $1; csvclean -a $1 >/dev/null' _ {} \;
+
+    - name: upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: bundle
+        path: files
+
+    - name: cleanup
+      uses: geekyeggo/delete-artifact@v5
+      with:
+        name: temp-*

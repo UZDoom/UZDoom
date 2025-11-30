@@ -1,0 +1,200 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom/da/>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: da\n"
+
+msgid "TXT_D1E1"
+msgstr "Knæet dybt i de døde"
+
+msgid "TXT_D1E2"
+msgstr "Helvedes kyster"
+
+msgid "TXT_D1E4"
+msgstr "Dit kød er fortæret"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Atomkraftværk"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Giftraffinaderi"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Kommandokontrol"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Phobos-laboratorium"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Central behandling"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Computerstation"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Phobos-anomali"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Militærbase"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Kloakkerne"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Deimos Anomali"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Indespærringsområde"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Raffinaderi"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Deimos-laboratorium"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Kommandocentral"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: De Forbandedes haller"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Spirebassiner"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Babelstårn"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Mysteriets fæstning"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Helvedesborg"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Fortvivlelsens sump"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonium"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Hus af smerte"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Uhellig katedral"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Rotteboet"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Helvede nedenunder"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Perfekt had"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Afskære de onde"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Ustyrlig ondskab"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: De vil omvende sig"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Mod dig ondskabsfuldt"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Og Helvede fulgte efter"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Til de grusomme"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Frygt"
+
+msgid "E1TEXT"
+msgstr ""
+"Når du har slået de store skurke og\n"
+"ryddet månebasen, er det meningen,\n"
+"at du skal vinde, ikke sandt? Hvor er\n"
+"din fede belønning og din billet hjem?\n"
+"Hvad fanden er det her? Det er ikke\n"
+"meningen, at det skal ende på denne måde!\n"
+"\n"
+"Den stinker som råddent kød, men ligner\n"
+"den forsvundne Deimos-base. Det ser ud\n"
+"til, at du sidder fast på Helvedes kyster.\n"
+"Den eneste vej ud er gennem.\n"
+"\n"
+"Hvis du vil fortsætte DOOM-oplevelsen,\n"
+"kan du spille Helvedes kyster\n"
+"og den fantastiske efterfølger, Inferno!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Du har gjort det! Den afskyelige cyberdæmon-\n"
+"herre, der herskede over den forsvundne\n"
+"Deimos-månebase, er blevet dræbt, og du\n"
+"er triumferende! Men ... hvor er du?\n"
+"Du klatrer op på månens kant og kigger\n"
+"ned for at se den frygtelige sandhed.\n"
+"\n"
+"Deimos svæver over selve helvede!\n"
+"Du har aldrig hørt om nogen, der er\n"
+"undsluppet fra Helvede, men du vil\n"
+"få de svin til at fortryde, at de\n"
+"nogensinde har hørt om dig! Hurtigt\n"
+"stiger du ned til Helvedes overflade.\n"
+"\n"
+"Nu går det videre til det sidste\n"
+"kapitel af DOOM! -- Inferno."
+
+msgid "E3TEXT"
+msgstr ""
+"Den modbydelige edderkoppedæmon,\n"
+"der stod bag invasionen af månebaserne\n"
+"og forårsagede så mange dødsfald,\n"
+"har fået tæsk for evigt.\n"
+"\n"
+"En skjult dør åbner sig, og du træder ind.\n"
+"Du har vist dig at være for hårdfør til,\n"
+"at Helvede kunne holde dig inde,\n"
+"og nu spiller Helvede endelig fair -\n"
+"for du kommer ud af døren og ser\n"
+"Jordens grønne marker!\n"
+"Endelig er du hjemme.\n"
+"\n"
+"Du undrer dig over, hvad der er sket\n"
+"på Jorden, mens du kæmpede mod den\n"
+"uhæmmede ondskab. Det er godt, at\n"
+"ingen Hellspawn kunne være kommet\n"
+"gennem den dør med dig ..."
+
+msgid "E4TEXT"
+msgstr ""
+"Edderkoppens hjerne må have sendt sine\n"
+"legioner af helvedesyngel ud før din\n"
+"endelige konfrontation med det frygtelige\n"
+"bæst fra helvede, men du trådte frem og\n"
+"bragte evig fordømmelse og lidelse over\n"
+"horden, som en sand helt ville gøre\n"
+"det over for noget så ondt.\n"
+"\n"
+"Desuden var der nogen, der skulle betale\n"
+"for det, der skete med Daisy, din kanin.\n"
+"\n"
+"Men nu ser du, at der er mere potentiel\n"
+"smerte og fortvivlelse foran dig, når\n"
+"en nation af dæmoner går amok i vores byer.\n"
+"\n"
+"Næste stop: Helvede på Jorden!"

@@ -1,0 +1,8 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese esh esi esu\n"

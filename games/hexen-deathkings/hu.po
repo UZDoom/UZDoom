@@ -1,0 +1,398 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:54+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: hu\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Az Elpusztított Falu"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Penész"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Tócsa"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakomba"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Terméketlen Föld"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Páfrány Erdő"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Máglya"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Csendőr Kapu"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Kincstár"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Piactér"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Megpróbáltatás"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Fegyvertár"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Templomhajó"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Gyászkápolna"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Vágóhíd"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Éjjeli Őrség"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloáka"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Jégtorony"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Sötét Torony"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Tranzit"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Fent és Lent"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Halálköd"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Fájdalom Kastélya"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Kanális akna"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "A Rózsa"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Megtörlöd még mindig reszkető \n"
+"kezeddel a véres homlokod, és \n"
+"próbálod kitisztítani a gondolataidat, \n"
+"hogy rájöjj mi jön most...\n"
+"\n"
+"...egyuttal próbálod elfelejteni mi is \n"
+"történt.\n"
+"\n"
+"A messzi távolban megpillantod a \n"
+"komor körvonalú kastély sáncait, mely \n"
+"olyan magas hogy szinte széthasítja \n"
+"az eget. Az elmúlás szaga terjeng a \n"
+"meggyalázott sírokban fekvő \n"
+"megszámlálhatatlan holttestből.\n"
+"\n"
+"Óvatosan megszámolva maradék \n"
+"erekjéidet, próbálod magad biztatni, \n"
+"hogy elég lesz. Végülis elégnek \n"
+"kellene lennie, ugye?\n"
+"\n"
+"...ugye?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Az már biztos számodra, hogy miután \n"
+"csak az átkozottak lakják a vidéket, \n"
+"semmiféle jó nem maradhat életben.\n"
+"\n"
+"Ami azonban eddig történt veled, \n"
+"csak egy halvány árnyéka az \n"
+"elkövetkezendőnek: maga a Sötét \n"
+"Fellegvár.\n"
+"\n"
+"A katedrális izmos építőköveitől csak \n"
+"futó pillantást tudsz vetni a fellegvárra \n"
+"a repedéseken keresztül, de a látottak \n"
+"sziszegő hideg suttogásról és sóvár \n"
+"halálról tanuskodnak...\n"
+"\n"
+"\n"
+"...a szerencsésebbeknek."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Újra a Káosz Gömb csarnokában \n"
+"találod magad ugyanazon árnyékok \n"
+"között, mintha megállt volna itt az idő.\n"
+"\n"
+"Egy hátborzongató különbség \n"
+"azonban jelentős. Gyanús csönd \n"
+"váltotta fel a korábbi lágy suttogást, \n"
+"árgus szemek figyelik minden \n"
+"lépésed...\n"
+"\n"
+"...szemek melyek mögött gonosz \n"
+"szándék lapul."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Korábban félelemtől reszkető kézzel \n"
+"fogtad a gömböt, most azonban a \n"
+"hatalomtól megrészegedve reszketsz. \n"
+"Úgy érzed maga a hatalom fog tőrbe \n"
+"csalni.\n"
+"\n"
+"Ha ez a mérhetetlenül óriási hatalom \n"
+"sem teljesen elég arra, hogy \n"
+"megvédjen a sötétség erőitől, talán \n"
+"érdemes békében hagyni és \n"
+"megszegni a gömbnek tett ígéreted.\n"
+"\n"
+"Mindazonáltal, sosem voltál olyan, aki \n"
+"könnyen kihátrál a kihívás elől..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...és a többi játékos a te \n"
+"lépésedre vár.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Hogy merészelsz harcolni a váróteremben?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Ezért meghalsz!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "A vizesés nyitva"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "A vizesés zárva"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Egy ajtó kitárult a kápolnában"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Ez felettébb különös..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Három rész maradt a rejtvényből"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Kettő rész maradt a rejtvényből"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Egy rész maradt a rejtvényből"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "A rejtvény végleg megoldódott"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Nem fejtetted meg a rejtvényt."
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "A padló nem biztonságos!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "A rejtvény egyharmada megoldásra került."
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "A rejtvény kétharmada megoldásra került."
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Egy emelvény mozgását hallod a távolban"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Készen van..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Nem fejtetted meg a rejtvényt."
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Figyelmeztetlek..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Makacs vagy, ugye?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "És oktondi is."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Egy negyede e rejtvénynek megvan."
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Rossz választás..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "A jelek nincsenek vonalban"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Az ajtó nem fog kinyílni innen."
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Az ajtó kívülről van eltorlaszolva."
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Szentségtörés!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Megszentségtelenítetted Eric sírját!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "És most meghalsz!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "A rejtvény egyharmada megoldásra került."
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "A rejtvény kétharmada megoldásra került."
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "A kripta kinyílt."
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Óvakodj a pók sírjától!"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Egy emelvényt hallasz emelkedni odakinn"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Szerencsésnek érzed magad?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Hát rosszul érzed!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Jól sejtetted"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Meg tudnád csinálni az egészt scriptelést a pályámhoz?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Ne nyúlj a bizémhez"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Tégy magadévá, kislány!"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Nyílván..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Egy film egy óra múlva?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Még saját sírt sem kaptam - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Ne ontsunk ki vért"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Ne emeljünk kezet haragból"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Ki meri megzavarni a szunyókálásunkat?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Az út kinyílt"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Még kell találnod "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20kallantyú van hátra"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Már csak "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20darab kallantyút kell találnod"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "A kijárat kinyílt"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Az ajtó nem nyílik erről az oldalról"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Az ajtók kitárultak..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...csak rád várunk."
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Egy ajtó kinyílt"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "a kápolnánál"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Egy hidat támasztottak fel"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "a vágóhídnál"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Lépcső emelkedett ki"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "a Sötét Őrségnél"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Egy fogaskerék a helyére került"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20fogaskerék a helyére került"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Egy barikád megszűnt"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "a Kloákánál"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "A visszavezető út kinyílt"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Az ajtó bentről van bereteszelve"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "A hóhér sírját"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "próbálod fosztogatni?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Készülj a halálra"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Még kell találnod "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20darab kallantyút"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Már csak "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20darab kallantyút kell találnod"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "A toronyba vezető út kinyílt"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Az út kinyílt"

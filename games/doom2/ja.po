@@ -1,0 +1,231 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:20+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: jp\n"
+
+msgid "TXT_D2E1"
+msgstr "第三惑星:地獄"
+
+msgid "TXT_D2E2"
+msgstr "休息なき生計"
+
+msgid "HUSTR_1"
+msgstr "Level 1: 入口"
+
+msgid "HUSTR_2"
+msgstr "Level 2: 地下堂"
+
+msgid "HUSTR_3"
+msgstr "Level 3: ガントレット"
+
+msgid "HUSTR_4"
+msgstr "Level 4: フォーカス"
+
+msgid "HUSTR_5"
+msgstr "Level 5: 廃棄トンネル"
+
+msgid "HUSTR_6"
+msgstr "Level 6: クラッシャー"
+
+msgid "HUSTR_7"
+msgstr "Level 7: 死ぬほど単純"
+
+msgid "HUSTR_8"
+msgstr "Level 8: 悪戯と罠"
+
+msgid "HUSTR_9"
+msgstr "Level 9: 大穴"
+
+msgid "HUSTR_10"
+msgstr "Level 10: 補給基地"
+
+msgid "HUSTR_11"
+msgstr "Level 11: 破滅の'O'!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: 工場"
+
+msgid "HUSTR_13"
+msgstr "Level 13: 市内"
+
+msgid "HUSTR_14"
+msgstr "Level 14: 最深巣窟"
+
+msgid "HUSTR_15"
+msgstr "Level 15: 工業地帯"
+
+msgid "HUSTR_16"
+msgstr "Level 16: 郊外"
+
+msgid "HUSTR_17"
+msgstr "Level 17: 安アパート"
+
+msgid "HUSTR_18"
+msgstr "Level 18: 中庭"
+
+msgid "HUSTR_19"
+msgstr "Level 19: 要塞"
+
+msgid "HUSTR_20"
+msgstr "Level 20: 捉らえた!"
+
+msgid "HUSTR_21"
+msgstr "Level 21: 涅槃"
+
+msgid "HUSTR_22"
+msgstr "Level 22: 地下悪霊墓所"
+
+msgid "HUSTR_23"
+msgstr "Level 23: 戯れのバレル"
+
+msgid "HUSTR_24"
+msgstr "Level 24: 裂け目"
+
+msgid "HUSTR_25"
+msgstr "Level 25: 血の滝"
+
+msgid "HUSTR_26"
+msgstr "Level 26: 廃鉱山"
+
+msgid "HUSTR_27"
+msgstr "Level 27: モンスターマンション"
+
+msgid "HUSTR_28"
+msgstr "Level 28: 悪霊の世界"
+
+msgid "HUSTR_29"
+msgstr "Level 29: 極限の存在"
+
+msgid "HUSTR_30"
+msgstr "Level 30: 罪の聖像"
+
+msgid "HUSTR_31"
+msgstr "Level 31: ウルフェンシュタイン"
+
+msgid "HUSTR_32"
+msgstr "Level 32: グローシュ"
+
+msgid "HUSTR_31B"
+msgstr "Level 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Level 32: キーン"
+
+msgid "HUSTR_33"
+msgstr "Level 33: 裏切り"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: 地球基地"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: 生物工学実験室"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: 死の渓谷"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: 地獄山脈"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: 生体解剖"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: 血のインフェルノ"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: バロンの晩餐"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: 悪意の墓"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: デーモンの行進"
+
+msgid "C1TEXT"
+msgstr ""
+"怪物共に蝕まれた宇宙港に足を踏み入れる。だが何かがおかしい。\n"
+"奴等の世界から影響を及ぼしてこの地を変異させ宇宙港の機能を\n"
+"妨害しているのだ。\n"
+"\n"
+"前方に地獄の前哨、要塞地帯が見える。そこを切り抜け\n"
+"宇宙港の中心に辿り着けば生存者を解放する宇宙船のスイッチが\n"
+"見つかるはずだ。"
+
+msgid "C2TEXT"
+msgstr ""
+"勝利した!人類をこの世の地獄から脱出させ絶滅の悪夢から救ったのだ。\n"
+"そして自分が最後の地球人となった。\n"
+"デーモンもとい人食いエイリアン、共食いミュータント、\n"
+"くどい怨嗟のゴースト、そして死体だけが隣人だ。\n"
+"人類への最善を尽くし、後は座して死ぬ時を待った。\n"
+"\n"
+"だがその時、地球管理センターが宇宙からの通信を送ってきた。\n"
+"''エイリアン達による侵略の拠点をセンサー群が捕捉した。\n"
+"そこに向かえば、侵入を阻止出来るかもしれない。\n"
+"奴等の基地は宇宙港からはそこまで遠くない、\n"
+"君の故郷の街の中央にある位置だ。''\n"
+"君は痛みとともに悠然と立ち上がり、戦場へ戻った。"
+
+msgid "C3TEXT"
+msgstr ""
+"君は破壊された街の中心部で、殺した敵の死体に囲まれている。\n"
+"化け物たちが侵入するための入り口をこちらから破壊することは\n"
+"不可能だと判断し君は歯を食いしばり、そこへと突き進んだ。\n"
+"\n"
+"反対側に行けば、これを閉じる方法があるに違いない。\n"
+"そのためには地獄に突入しなければいけないが、\n"
+"それを躊躇する必要はもはやないはずだ。"
+
+msgid "C4TEXT"
+msgstr ""
+"剥き出しの脳めがけてロケット弾をぶちこみ続けた後、\n"
+"今までに見たこともないほど巨大で醜悪な悪魔の顔面は、\n"
+"君の前に崩れ落ちた。\n"
+"怪物は生気を失い、死に絶えた。この怪物が死に際に震わした四肢は、\n"
+"地獄の広大な大地を波打たせた。 \n"
+"\n"
+"君は成し遂げた。悪魔の侵略はとうとう終わった。\n"
+"地球は救われ、地獄は破壊された。\n"
+"悪人どもが死んだ時、奴等はこれからどこに行くのだろうか?\n"
+"君は額から汗を拭い、故郷への長い帰路を歩き始めた。\n"
+"地球を復興させるのは、滅ぼすよりもずっと楽しいに違いない。\n"
+
+msgid "C5TEXT"
+msgstr ""
+"おめでとう、君は隠しステージを発見した!\n"
+"どうやらこの場所は悪魔ではなく、人間たちによって作られたようだ。\n"
+"地獄の片隅には、どんな罪人がいるのだろうか?"
+
+msgid "C6TEXT"
+msgstr ""
+"おめでとう、君はスーパー隠しステージを発見した!\n"
+"あのブレイズ坊やが見つかるかもしれないぞ!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"厄介事は君のお気に入りのリゾート地、地獄でまた発生していた... \n"
+"サイバーデーモンのバカが、地獄をヤツの遊び場にできるとでも\n"
+"思っていたんだ。そして地球は、そのチケット売り場になる予定だった。\n"
+"\n"
+"まあ、あの半身ロボットの見世物野郎は、\n"
+"一体誰がそのお祭りに来るのかを考えていなかったようだ。\n"
+"たくさんの化け物たちを撃ちまくる射撃訓練場みたいに、\n"
+"気持ちが良いことはないからな。\n"
+"\n"
+"そしてサイバーデーモンが倒れ、金属の脚が床に崩れ落ちた。\n"
+"この音は、悪魔の迷宮の壁に響き渡った。\n"
+"サイバーデーモンの死前喘鳴が、彼の削がれた顔面から漏れてきている。\n"
+"\n"
+"この地獄のアトラクションは、運行休止となった。\n"
+"\n"

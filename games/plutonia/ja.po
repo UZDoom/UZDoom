@@ -1,0 +1,167 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:27+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: jp\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "プルトニア記"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: コンゴ川"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: 魂の井戸"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: アステカ"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: 檻の中"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: ゴーストタウン"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: バロンの隠れ家"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: 囚われの庭"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: 領地"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: 屠殺場"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: 猛襲"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: 逃走"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: スピード"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: 地下聖堂"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: 創世記"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: 黄昏"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: 予兆"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: 調合"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: ニューロスフィア"
+
+msgid "PHUSTR_19"
+msgstr "Level 19: 野郎"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: 死の領域"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: スレイヤー"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: 不可能な任務"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: 墓石"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: 最後のフロンティア"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: 暗黒の神殿"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: バンカー"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: アンチキリスト"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: 下水道"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: オデッセイのノイズ"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: 地獄の関門"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: サイバーの巣"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: 逝ってこい"
+
+msgid "P1TEXT"
+msgstr ""
+"蒸し焼きになった地獄の番人を見てほくそ笑み、\n"
+"アクセラレーターを遺体の手からもぎ取った。\n"
+"駄目だ!1つぐらい稼働している試作機があると思ったが\n"
+"全て奴等が奪ったに違いない。\n"
+"\n"
+"どうにかして試作機を見つけなければ今までの闘争が無駄になってしまう。\n"
+"とにかく走れ、戦い続け、殺し続けろ。\n"
+"ああそうだ、生き続けながらな。"
+
+msgid "P2TEXT"
+msgstr ""
+"アホチバイル共のイカれた迷路でさえも俺を止める事は出来なかったが、\n"
+"ようやく辿り着いたアクセラレイターの試作機が機能しなくなるのを\n"
+"止める事も出来なかった。\n"
+"\n"
+"いつものことじゃねえか。"
+
+msgid "P3TEXT"
+msgstr ""
+"悪魔共の中枢なる掃溜めへと向かう道を切り開いた。\n"
+"さあ狩りの時間だ、獲物は地球にクソガキを吐き出し続ける\n"
+"老廃物のゲートキーパー。\n"
+"悪しき者に相応しい末路を迎えさせるのだ!\n"
+"\n"
+"ありったけの得物を持ち込んで、邪悪に微笑み、\n"
+"奴等が地獄を知るのを楽しみにしながら!"
+
+msgid "P4TEXT"
+msgstr ""
+"ゲートキーパーの間抜け面が辺り一面に散らばった。\n"
+"亡骸は崩壊を続け、裏返った異次元ゲートが殺し損ねたゴミ共を\n"
+"最後のアクセラレータもろとも吸い込んでいった。\n"
+"任務は完了した。地獄は元通り悪人を裁く役目を果たすだろう。\n"
+"\n"
+"なので君には俺の棺桶にロケットランチャーを供えるよう伝えておく。\n"
+"いつか死に、デイジーの元に迎え入れなければ、\n"
+"あの世のゴミ共へ最後の審判を下す為に..."
+
+msgid "P5TEXT"
+msgstr ""
+"俺が現在知る中で2番目に困難な場所を見つけてしまった。\n"
+"バックアップを取っておくべきだったと思うだろう。\n"
+"そうでないなら、虫けらのような扱いを受けるだけだ。\n"
+"最悪な一時かもな。"
+
+msgid "P6TEXT"
+msgstr ""
+"もっとも困難な場所が何なのか気になっているだろう。\n"
+"それを今思い知る。\n"
+"大した苦難を受けてなかったことを。"

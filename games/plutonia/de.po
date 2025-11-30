@@ -1,0 +1,182 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: de\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Das Plutonia Experiment"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Seelenbrunnen"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Aztekisch"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: Eingesperrt"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Geisterstadt"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Lager des Barons"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: Gehege"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Bereich"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: Schlachthaus"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: Angriff"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Gehetzt"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Tempo"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: Die Gruft"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: Entstehung"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: Zwielicht"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: Das Omen"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Anlage"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: Neurosphäre"
+
+msgid "PHUSTR_19"
+msgstr "Level 19: EIND"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: Die Todeszone"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: Töter"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Unmögliche Mission"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Grabstein"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: Die letzte Grenze"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: Der Tempel der Dunkelheit"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: Antichrist"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: Kanäle"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Odyssee der Geräusche"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: Tor zur Hölle"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: Cyberbau"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: Geh dahin"
+
+msgid "P1TEXT"
+msgstr ""
+"Du ergötzt dich an dem dampfenden Kadaver\n"
+"des Wächters. Nach seinem Tod hast du ihm den\n"
+"Beschleuniger aus seinen stinkenden Höllenklauen gerungen. Du entspannst "
+"dich und\n"
+"siehst dich im Raum um. Verdammt! Da hätte\n"
+"mindestens ein funktionierender Prototyp\n"
+"sein sollen, aber du kannst ihn nicht finden.\n"
+"Die Dämonen haben ihn wohl mitgenommen.\n"
+"\n"
+"Du musst ihn finden oder all deine Mühen\n"
+"wären umsonst gewesen. Also marschiere\n"
+"weiter, kämpfe weiter, töte weiter.\n"
+"Und ja, lebe auch weiter."
+
+msgid "P2TEXT"
+msgstr ""
+"Sogar das tödliche Labyrinth der Scheusale\n"
+"konnte dich nicht aufhalten und du hast\n"
+"den Beschleuniger-Prototypen erreicht,\n"
+"der kurz darauf effizient und dauerhaft deaktiviert ist.\n"
+"\n"
+"Darin bist du gut."
+
+msgid "P3TEXT"
+msgstr ""
+"Du hast dich bis ins Herz dieses Höllenbaus\n"
+"durchgeschlagen. Zeit für eine Such- und \n"
+"Zerstörungsmission gegen den\n"
+"Torwächter, dessen stinkende Abkommen auf\n"
+"die Erde drängen. Ja, er ist schlimm. Aber\n"
+"du weißt, wer noch schlimmer ist!\n"
+"\n"
+"Böse grinsend, überprüfst du deine\n"
+"Ausrüstung und machst dich bereit, dem\n"
+"Bastard einen höllischen Empfang zu bereiten!"
+
+msgid "P4TEXT"
+msgstr ""
+"Das böse Gesicht des Wächters ist mit\n"
+"Blut besudelt. Als seine zerfledderte\n"
+"Leiche kollabiert, bildet sich ein inverses\n"
+"Tor und saugt die letzten Überreste des\n"
+"Beschleuniger-Prototypen ab, ganz zu\n"
+"schweigen von den letzten verbliebenen\n"
+"Dämonen. Du hast es geschafft, die Hölle\n"
+"ist wieder dazu zurückgekehrt, tote, böse\n"
+"Menschen zu bestrafen, statt guten, lebenden. Vergiss nicht, deinen Enkeln "
+"zu sagen, sie\n"
+"sollen einen Raketenwerfer in deinen Sarg\n"
+"packen, damit du, wenn du in die Hölle kommst,\n"
+"eine letzte Reinigung vornehmen kannst..."
+
+msgid "P5TEXT"
+msgstr ""
+"Du hast den zweitschwersten Level gefunden,\n"
+"den wir haben. Lass uns hoffen, dass du noch\n"
+"einen Spielstand vom letzten oder vorletzten\n"
+"Level hast. Falls nicht, bereite dich darauf vor, oft zu sterben. Nur für "
+"Top-Soldaten."
+
+msgid "P6TEXT"
+msgstr ""
+"Du hast dich sicher gefragt, was denn nun\n"
+"der schwerste Level ist, nicht wahr?\n"
+"Jetzt weißt du es - niemand kommt hier lebend raus."

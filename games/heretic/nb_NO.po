@@ -1,0 +1,256 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: no nb\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Havnen"
+
+msgid "HHUSTR_E1M2"
+msgstr "Fangehullene"
+
+msgid "HHUSTR_E1M3"
+msgstr "Porthuset"
+
+msgid "HHUSTR_E1M4"
+msgstr "Vakttårnet"
+
+msgid "HHUSTR_E1M5"
+msgstr "Citadellet"
+
+msgid "HHUSTR_E1M6"
+msgstr "Katedralen"
+
+msgid "HHUSTR_E1M7"
+msgstr "Kryptene"
+
+msgid "HHUSTR_E1M8"
+msgstr "Helvetes gap"
+
+msgid "HHUSTR_E1M9"
+msgstr "Kirkegården"
+
+msgid "HHUSTR_E2M1"
+msgstr "Krateret"
+
+msgid "HHUSTR_E2M2"
+msgstr "Lavagropene"
+
+msgid "HHUSTR_E2M3"
+msgstr "Elven av ild"
+
+msgid "HHUSTR_E2M4"
+msgstr "Isgrotten"
+
+msgid "HHUSTR_E2M5"
+msgstr "Katakombene"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labyrinten"
+
+msgid "HHUSTR_E2M7"
+msgstr "Den store salen"
+
+msgid "HHUSTR_E2M8"
+msgstr "Kaosets portaler"
+
+msgid "HHUSTR_E2M9"
+msgstr "Isbreen"
+
+msgid "HHUSTR_E3M1"
+msgstr "Forrådshuset"
+
+msgid "HHUSTR_E3M2"
+msgstr "Søledammen"
+
+msgid "HHUSTR_E3M3"
+msgstr "Sammenløpet"
+
+msgid "HHUSTR_E3M4"
+msgstr "Den azurblå festningen"
+
+msgid "HHUSTR_E3M5"
+msgstr "Ophidian-hulen"
+
+msgid "HHUSTR_E3M6"
+msgstr "Fryktens haller"
+
+msgid "HHUSTR_E3M7"
+msgstr "Kløften"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparils borg"
+
+msgid "HHUSTR_E3M9"
+msgstr "Akviferen"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalken"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blokkhuset"
+
+msgid "HHUSTR_E4M3"
+msgstr "Gangen"
+
+msgid "HHUSTR_E4M4"
+msgstr "Graven"
+
+msgid "HHUSTR_E4M5"
+msgstr "Den store trappen"
+
+msgid "HHUSTR_E4M6"
+msgstr "De frafalnes haller"
+
+msgid "HHUSTR_E4M7"
+msgstr "Fortapelsens voller"
+
+msgid "HHUSTR_E4M8"
+msgstr "Den knuste broen"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleet"
+
+msgid "HHUSTR_E5M1"
+msgstr "Oker-klippene"
+
+msgid "HHUSTR_E5M2"
+msgstr "Strykene"
+
+msgid "HHUSTR_E5M3"
+msgstr "Kai"
+
+msgid "HHUSTR_E5M4"
+msgstr "Gårdsplass"
+
+msgid "HHUSTR_E5M6"
+msgstr "Kolonnade"
+
+msgid "HHUSTR_E5M7"
+msgstr "Stinkende prestegård"
+
+msgid "HHUSTR_E5M8"
+msgstr "Dømmekraftsområde"
+
+msgid "HHUSTR_E5M9"
+msgstr "Garn av D'sparil"
+
+msgid "HE1TEXT"
+msgstr ""
+"Med ødeleggelsen av Jernliches og\n"
+"deres håndlangere, er de siste av de\n"
+"udøde fjernet fra dette\n"
+"eksistensnivået.\n"
+"\n"
+"Disse skapningene måtte imidlertid\n"
+"komme fra et sted, og du har en\n"
+"snikende mistanke om at den\n"
+"brennende portalen til helvetes gap\n"
+"åpner seg mot hjemdimensjonen\n"
+"deres.\n"
+"\n"
+"For å sørge for at ikke flere levende\n"
+"døde (eller enda verre ting) kommer\n"
+"gjennom, må du forsegle helvetes gap\n"
+"fra den andre siden. Dette betyr\n"
+"selvfølgelig at du kan bli sittende fast i\n"
+"en veldig uvennlig verden, men ingen\n"
+"har noen gang sagt at det er lett å\n"
+"være kjetter!"
+
+msgid "HE2TEXT"
+msgstr ""
+"De mektige maulotaurene har vist seg å\n"
+"ikke være noen match for deg, og når de\n"
+"dampende likene deres glir mot bakken,\n"
+"føler du en dyster tilfredshet over at de\n"
+"har blitt tilintetgjort.\n"
+"\n"
+"Portene som de voktet har åpnet seg,\n"
+"og avslører det du håper er veien hjem.\n"
+"Men når du går gjennom, ringer hånlig\n"
+"latter i ørene dine.\n"
+"\n"
+"Var det en annen kraft som kontrollerte\n"
+"maulotaurene? Kan det være enda mer\n"
+"forferdelige vesener gjennom denne\n"
+"porten? Sveipet av en krystallkuppel\n"
+"over hodet der himmelen burde være,\n"
+"er absolutt ikke et godt tegn..."
+
+msgid "HE3TEXT"
+msgstr ""
+"D'Sparils død har løsnet de magiske\n"
+"båndene som holder skapningene\n"
+"hans på dette planet, og deres\n"
+"døende skrik overvelder hans egne\n"
+"smerteskrik.\n"
+"\n"
+"Din hevned er oppfylt, og du går inn\n"
+"i portalen til din egen verden, bare\n"
+"noen øyeblikk før kuppelen knuses\n"
+"i en million biter.\n"
+"\n"
+"Men hvis D'Sparils makt er brutt for\n"
+"alltid, hvorfor føler du deg ikke trygg?\n"
+"Var det det siste ropet like før han\n"
+"døde, det som hørtes ut som en\n"
+"forbannelse? Eller en påkallelse?\n"
+"Du kan ikke være sikker, men det\n"
+"kan bare ha vært et skrik.\n"
+"\n"
+"Men igjen, hva med de andre\n"
+"Slangerytterne?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Du trodde du skulle vende tilbake til din\n"
+"egen verden etter at D'Sparil døde, men\n"
+"hans siste handling forviste deg til hans\n"
+"eget plan. Her gikk du inn i de knuste\n"
+"restene av land erobret av D'Sparil. Du\n"
+"beseiret de siste vokterne av disse\n"
+"landene, men nå står du foran portene\n"
+"til D'Sparils festning. Inntil dette øye-\n"
+"blikket hadde du ingen tvil om din evne\n"
+"til å møte alt du måtte møte, men borten-\n"
+"for denne portalen ligger selve hjertet av\n"
+"ondskapen som invaderte din verden.\n"
+"D'Sparil er kanskje død, men gropen der\n"
+"han ble skapt, finnes fortsatt. Nå må du\n"
+"gå inn i den gropen i håp om å finne en\n"
+"vei ut. Og et sted, i det mørkeste hjørnet\n"
+"av D'Sparils demesne, venter hans\n"
+"personlige livvakter på din ankomst ..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Når den siste maulotauren brøler sin\n"
+"dødsangst, innser du at du aldri har\n"
+"kommet så nær din egen ødeleggelse.\n"
+"Ikke engang kampen med D'Sparil og\n"
+"disiplene hans hadde vært så desperat.\n"
+"Du stirrer dystert på portene som åpner\n"
+"seg foran deg, og lurer på om de fører\n"
+"hjem, eller om de åpner seg mot en\n"
+"eller annen ufattelig skrekk. Du lurer\n"
+"på om du har styrke til å fortsette, omdet\n"
+"bare er død og smerte som venter deg.\n"
+"Men hva annet kan du gjøre hvis viljen til\n"
+"å kjempe er borte? Kan du tvinge deg\n"
+"selv til å fortsette i møte med slik\n"
+"fortvilelse? Har du mot til det? Du\n"
+"finner til slutt ut at det ikke ligger i deg å\n"
+"overgi deg uten kamp. Med store øyne\n"
+"går du din skjebne i møte."

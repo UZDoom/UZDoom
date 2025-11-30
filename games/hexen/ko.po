@@ -1,0 +1,321 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ko\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "바람 회관"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "일곱 차원문"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "얼음의 수호자"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "화염의 수호자"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "강철의 수호자"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "빛나는 고난"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "그림자 숲"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "흙빛호수"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "키르케의 동굴"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "황무지"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "성스러운 수풀"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "다주실"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "헤러시아크의 신학교"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "드래곤 예배실"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "그리핀 예배실"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "죽음바람 예배실"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "통탄의 과수원"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "침묵의 식당"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "늑대 예배실"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "버려진 초소"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "비탄의 성"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "교수대"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "악취"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "지하감옥"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "황폐한 정원"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "망자의 도시"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "제닥의 무덤"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "메넬키어의 무덤"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "트라닥투스의 무덤"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "사육장"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "어두운 고난"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"일곱 차원문을 거치고 이 영역을 봉쇄하자, 당신 앞에 혹독한 황폐지가\n"
+"광활하게 펼쳐졌다. 당신은 화염과 얼음, 강철의 시험을 통과했으나, 이보다\n"
+"훨씬 어려운 도전이 당신을 기다리고 있다. 빽빽하게 얽힌 수풀들이 악의에\n"
+"찬 적들의 눈을 가리고 있지만, 저들 너머에 훨씬 악랄한 녀석이 있을 것이다.\n"
+"\n"
+"척박한 사막, 눅눅한 늪지대, 그리고 퀴퀴한 동굴들이 당신 앞을 막아서고\n"
+"있다. 하지만, 비록 당신이 후회하는 한이 있더라도, 그 무엇도 당신의 운명을\n"
+"막게 놔둘 수는 없다.\n"
+"\n"
+"그리고 저 너머에 멀리서, 끊임없이 움직이는 다주실의 벽들이 당신의\n"
+"노력을 비웃고 있는 듯하다."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"다주실에서의 대전 때문에 당신의 생각이 여전히 어지럽지만, 당신은\n"
+"출구이길 바라는 곳으로 비틀거리며 나아갔다. 모든 것이 점점 빠르게\n"
+"움직이고, 당신의 눈앞이 캄캄해지기 시작한다... 당신 주변의 세상이 무너져\n"
+"내리는 사이에, 차원문의 빛이 당신을 감싸 안았다. 한 줄기 빛이\n"
+"스쳐 지나간 후, 당신은 피로에 찌든 당신의 몸을 일으켜 세웠다.\n"
+"\n"
+"당신이 우뚝 솟은 탑 꼭대기에 서자, 저주받은 자들의 비명소리가\n"
+"저 아래에서 들려왔다. 앞으로 나아가자마자, 악마의 목소리가 당신을\n"
+"오싹하게 했다. 모든 죽음의 신들이시여! 대체 당신은 어디에 온 것입니까?\n"
+"모든 죽음의 신들이시여, 어찌하면 이곳에서 벗어날 수 있겠나이까?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"고대인들의 강력한 무기와 유물 덕분에, 당신은 헤러시아크와 그의\n"
+"부하들을 간신히 소탕할 수 있었다. 하지만 이제 그들의 저주받은 잔당들이\n"
+"당신 앞에 흩어진 채 펼쳐져 있다. 마지막 남은 힘을 다해서, 당신은\n"
+"헤러시아크의 깊은 성소로 향하는 차원문으로 나아갔다.\n"
+"\n"
+"저 너머에, 거대한 성채의 성곽이 나타나기 시작했다. 조용한 탑들과 텅 빈\n"
+"성벽들이 성채 중심부에서 마치 음울한 거인처럼 우뚝 솟은 검은 돌의\n"
+"첨탑을 둘러싸고 있었다. 화염과 그림자가 벌어진 창문 너머에서\n"
+"요동치고 있고, 악의에 찬 수많은 눈빛이 당신을 노려보고 있었다.\n"
+"\n"
+"저기 어딘가에, 당신의 적들이 기다리고 있다..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"“...그리고 그가 망자의 영역으로 떠나면서, 그리고 모든 세력이 속해있던\n"
+"다툼까지, 절망의 관문 그 자체로 나아갔다. 그러나 그가 언제 다시 빛의\n"
+"세계로 돌아올지는 그 누구도 알지 못하였다.”\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"빌어먹을."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"고통에 찬 비명과 함께, 당신의 몸 구석구석이 신비한 불꽃에 휩싸이면서,\n"
+"당신은 이 세계에서 빠져나가 다른 곳으로 향하기 시작했다. 당신의 눈앞이\n"
+"밝아지자, 당신은 귀신들린 메아리와 위협적인 그림자들이 가득한 거대한\n"
+"회당에서 있었다. 저 멀리 솟아오른 연단 위에 이 세상에서 유일하게\n"
+"존재하는 빛의 근원이 보이었다."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"저것은 분명 코락스의 힘의 원천인 혼돈의 구체일 것이다. 이것만 있으면\n"
+"당신은 세상을 창조하거나... 파괴할 수 있다. 당신의 떨리는 손들이 지난\n"
+"모든 전투와 정복의 전리품을 향해 뻗어 나갔다. 아마 지금쯤, 새 도전자가\n"
+"이 권력을 쟁취하는 장대한 싸움에 참여할 것이다. 퀀으로 변한 폰 처럼, 갑자기 "
+"이 판 전체가 당신의 손아귀에 쥐어진 것처럼 보였다."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"하지만 분명 어딘가에 당신보다 강력한 도전자들이 있을 것이며,\n"
+"그 누가 그들의 수를 짐작할 수 있겠는가?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "문이 잠겨 있다"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "환영한다, 필멸자여."
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "죽을 준비는 됐는가?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "얼음의 수호자에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "이 통로는 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "수수께끼의 절반이 풀렸다"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "... 일곱 차원문에서"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "일곱 차원문에서 계단이 솟아났다"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "... 일곱 차원문에서"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "일곱 차원문에서 계단이 솟아났다"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "다른 개폐기를 찾아야 한다"
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "일곱 차원문에서 바위 부딪히는 소리가 들려왔다"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "수수께끼의 6분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "... 그림자 숲에서"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "멀리서 문이 열리는 소리가 들린다"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "수수께끼의 6분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "... 그림자 숲에서"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "수수께끼의 6분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "... 그림자 숲에서"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ 마리 에틴이 남았음"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "시간을 너무 오래 끌었다. 이제 죽어라!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "버려진 초소에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "이 문은 아직 열 수 없다"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "이 몸의 하인들은 네 피 냄새를 맏고 따라온다, 인간."
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "교수대에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "성 안에서 보행판이 내려왔다"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "네 놈은 오랫동안 놀았도다, 필멸자여..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "이 몸이 너를 말 치우듯이 제거하겠다."
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "윗층에서 문이 열리는 소리가 들린다"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "이 몸에게 경배하라, 그럼 자비를 베풀 것이다."
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "허나... 그러지는 않겠지."
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "수수께끼의 9분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "... 헤러시아크의 신학교에서"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "수수께끼의 9분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "... 헤러시아크의 신학교에서"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "수수께끼의 9분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "... 헤러시아크의 신학교에서"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "차원문은 봉인되었다"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "그대의 운명을 정해라"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "네 놈은 주인들을 대면할 힘이..."
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "진심으로 있는 것인가?"

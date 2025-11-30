@@ -1,0 +1,237 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:32+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fi\n"
+
+msgid "TXT_D2E1"
+msgstr "Helvetti maan päällä"
+
+msgid "TXT_D2E2"
+msgstr "Ei lepoa eläville"
+
+msgid "HUSTR_1"
+msgstr "Taso 1: Eteiskäytävä"
+
+msgid "HUSTR_2"
+msgstr "Taso 2: Maanalaiset käytävät"
+
+msgid "HUSTR_3"
+msgstr "Taso 3: Kujanjuoksu"
+
+msgid "HUSTR_4"
+msgstr "Taso 4: Polttopiste"
+
+msgid "HUSTR_5"
+msgstr "Taso 5: Jätetunnelit"
+
+msgid "HUSTR_6"
+msgstr "Taso 6: Murskaaja"
+
+msgid "HUSTR_7"
+msgstr "Taso 7: Kuolettavan yksinkertainen"
+
+msgid "HUSTR_8"
+msgstr "Taso 8: Metkuja ja pauloja"
+
+msgid "HUSTR_9"
+msgstr "Taso 9: Monttu"
+
+msgid "HUSTR_10"
+msgstr "Taso 10: Tankkausasema"
+
+msgid "HUSTR_11"
+msgstr "Taso 11: Hävityksen 'O'"
+
+msgid "HUSTR_12"
+msgstr "Taso 12: Tehdas"
+
+msgid "HUSTR_13"
+msgstr "Taso 13: Keskikaupunki"
+
+msgid "HUSTR_14"
+msgstr "Taso 14: Sisimmät piilot"
+
+msgid "HUSTR_15"
+msgstr "Taso 15: Teollisuusalue"
+
+msgid "HUSTR_16"
+msgstr "Taso 16: Lähiö"
+
+msgid "HUSTR_17"
+msgstr "Taso 17: Vuokratalot"
+
+msgid "HUSTR_18"
+msgstr "Taso 18: Esipiha"
+
+msgid "HUSTR_19"
+msgstr "Taso 19: Linnoitus"
+
+msgid "HUSTR_20"
+msgstr "Taso 20: Sainpas sinut!"
+
+msgid "HUSTR_22"
+msgstr "Taso 22: Katakombit"
+
+msgid "HUSTR_23"
+msgstr "Taso 23: Huvitynnyrit"
+
+msgid "HUSTR_24"
+msgstr "Taso 24: Rotko"
+
+msgid "HUSTR_25"
+msgstr "Taso 25: Veriputoukset"
+
+msgid "HUSTR_26"
+msgstr "Taso 26: Hylätyt kaivokset"
+
+msgid "HUSTR_27"
+msgstr "Taso 27: Hirviöasuntola"
+
+msgid "HUSTR_28"
+msgstr "Taso 28: Henkimaailma"
+
+msgid "HUSTR_29"
+msgstr "Taso 29: Elävä loppu"
+
+msgid "HUSTR_30"
+msgstr "Taso 30: Synnin ikoni"
+
+msgid "HUSTR_33"
+msgstr "Taso 33: Petä"
+
+msgid "NHUSTR_1"
+msgstr "Taso 1: Maatukikohta"
+
+msgid "NHUSTR_2"
+msgstr "Taso 2: Tuskalaboratoriot"
+
+msgid "NHUSTR_3"
+msgstr "Taso 3: Kalmankanjoni"
+
+msgid "NHUSTR_4"
+msgstr "Taso 4: Hornanvuori"
+
+msgid "NHUSTR_5"
+msgstr "Taso 5: Vivisektio"
+
+msgid "NHUSTR_6"
+msgstr "Taso 6: Veri-inferno"
+
+msgid "NHUSTR_7"
+msgstr "Taso 7: Paronin pidot"
+
+msgid "NHUSTR_8"
+msgstr "Taso 8: Pahantahdon hauta"
+
+msgid "NHUSTR_9"
+msgstr "Taso 9: Demonien marssi"
+
+msgid "C1TEXT"
+msgstr ""
+"Olet astunut syvälle saastuneeseen\n"
+"tähtiporttiin. Mutta jokin on vialla.\n"
+"Hirviöt ovat tuoneet mukanaan oman\n"
+"todellisuutensa, ja heidän läsnäolonsa\n"
+"turmelee tähtiportin teknologiaa.\n"
+"\n"
+"Näet edessäsi helvetin etuvartioaseman,\n"
+"linnoitetun alueen. Jos kykenet pääsemään\n"
+"sen läpi, voit tunkeutua tähtiportin\n"
+"synkkään sydämeen ja löytää ohjausvivun,\n"
+"joka pitää maailman väestön panttivankina."
+
+msgid "C2TEXT"
+msgstr ""
+"Olet voittanut! Voittosi myötä ihmiskunnan\n"
+"on mahdollista evakuoida maailma ja paeta\n"
+"painajaista. Olet nyt viimeinen ihminen\n"
+"maan päällä. Kannibaalimutantit,\n"
+"lihansyöjämuukalaiset ja pahat henget\n"
+"ovat ainoita naapureitasi. Asettaudut\n"
+"odottamaan kuolemaa tyytyväisenä, että\n"
+"olet pelastanut lajisi.\n"
+"\n"
+"Mutta sitten, Maan johto lähettää\n"
+"avaruudesta viestin: \"Mittarit ovat\n"
+"paikantaneet muukalaishyökkäyksen\n"
+"alkulähteen sijainnin. Jos menet sinne,\n"
+"saatat pystyä estämään heidän\n"
+"sisäänpääsynsä. Muukalaistukikohta on\n"
+"kotikaupunkisi sydämessä, ei kaukana\n"
+"tähtiportista.\" Hitaasti ja tuskaisesti\n"
+"nouset ylös ja palaat taistoon."
+
+msgid "C3TEXT"
+msgstr ""
+"Olet turmeltuneen kaupungin sydämessä\n"
+"vihollistesi ruumiiden ympäröimänä. Et\n"
+"näe keinoa tuhota olentojen sisäänkäyntiä\n"
+"tältä puolelta, joten hammasta purren\n"
+"syöksyt sen läpi.\n"
+"\n"
+"On oltava keino sulkea se toiselta\n"
+"puolelta. Mitä sen väliä, vaikka joudut\n"
+"kulkemaan läpi helvetin sen löytääksesi?"
+
+msgid "C4TEXT"
+msgstr ""
+"Suurimman ikinä näkemäsi demonin\n"
+"kauhistuttavat kasvot murenevat silmiesi\n"
+"edessä pumpattuasi sen paljastetut aivot\n"
+"täyteen rakettejasi. Hirviö romahtaa ja\n"
+"kuolee sen sätkivien raajojen hävittäessä\n"
+"lukemattomia kilometrejä helvetin kamaraa.\n"
+"\n"
+"Olet tehnyt sen. Invaasio on ohi. Maa on\n"
+"pelastettu. Helvetti on raunioina.\n"
+"Mietiskelet, minne pahat ihmiset nyt\n"
+"menevät kuoltuaan. Pyyhkäisten hien\n"
+"otsaltasi aloitat pitkän matkan takaisin\n"
+"kotiin. Maan jälleenrakentaminen tulee\n"
+"olemaan paljon hauskempaa kuin sen\n"
+"tuhoaminen.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Onneksi olkoon; olet löytänyt salaisen\n"
+"tason! Se näyttäisi olevan ihmisten eikä\n"
+"demonien rakentama. Pohdit, ketkä ovat\n"
+"tämän hornankolkan asukkeja."
+
+msgid "C6TEXT"
+msgstr ""
+"Onneksi olkoon; olet löytänyt\n"
+"supersalaisen tason! Sinun lienee paras\n"
+"paahtaa tämän läpi!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Ongelmia oli jälleen hautumassa lempi-\n"
+"lomakohteessasi... helvetissä. Jokin\n"
+"kyberdemonikonna luuli voivansa muuttaa\n"
+"helvetin henkilökohtaiseksi huvipuistokseen\n"
+"ja tehdä Maasta lippukojun.\n"
+"\n"
+"No, se puolirobottikummajainen ei tiennyt,\n"
+"kuka oli tulossa tivoliin. Ei ole ampuma-\n"
+"kojua voittannutta täynnä pirulaisia\n"
+"saamaan veri kiertämään...\n"
+"\n"
+"Nyt demonin labyrintin seinät kaikavat sen\n"
+"metallisten raajojen lattiaan putoamisen\n"
+"ääntä. Sen kuolonvalitus korahtelee läpi\n"
+"sotkun, jonka olit tehnyt sen kasvoille.\n"
+"\n"
+"Tämä kyyti on suljettu.\n"
+"\n"

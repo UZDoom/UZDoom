@@ -1,0 +1,4887 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 16:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"doom-engine-games/strife/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "ZONA 1: Sanctuar"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "ZONA 2: Oraș"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "ZONA 3: Baza Frontului"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "ZONA 4: Centrala"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "ZONA 5: Închisoare"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "ZONA 6: Canal"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "ZONA 7: Castel"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "ZONA 8: Camera de audiențe"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "ZONA 9: Castel: Cetatea programatorului"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "ZONA 10: Noua bază a Frontului"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "ZONA 11: Frontiere"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "ZONA 12: Templul Oracolului"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "ZONA 13: Catacombe"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "ZONA 14: Mine"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "ZONA 15: Fortăreața: Administrația"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "ZONA 16: Fortăreața: Turnul Episcopului"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "ZONA 17: Fortăreața: Curte"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "ZONA 18: Fortăreața: Depozite"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "ZONA 19: Fortăreața: Complex de Securitate"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "ZONA 20: Fabrica: Recepție"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "ZONA 21: Fabrica: Procesare"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "ZONA 22: Fabrica: Forja"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "ZONA 23: Decontare comenzi"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "ZONA 24: Fabrica: Capela de Conversie"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "ZONA 25: Catacombe: Templu în Ruine"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "ZONA 26: Tabăra de Instruire"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "ZONA 27: Laboratorul"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "ZONA 28: Nava Extraterestră"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "ZONA 29: Cuibul Entității"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "ZONA 30: Baza Abandonată a Frontului"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "ZONA 31: Spațiu de Antrenament"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "ZONA 1: Sanctuar"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "ZONA 2: Oraș"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "ZONA 3: Baza de Rezistență"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "ZONA 35: Fabrica: Producție"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "ZONA 36: Bătălia Castelului"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "ZONA 37: Teren de Ucis"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "ZONA 38: Haos Controlat"
+
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr ""
+"Nu vreau să am probleme, stai departe de mine. Am avut suficiente probleme "
+"din cauza a ceea ce\n"
+"mi-a făcut ticălosul de Harris. Mi-a promis niște bani, dar în schimb, acum "
+"aștept cu nerăbdare să fiu interogat de către Programator."
+
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr ""
+"O să te ajut dacă și tu mă ajuți. Cinci monezi de aur\n"
+"și-ți voi spune tot ce știu."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Poftim aurul."
+
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "Fii discret când omori, așa nu vei declanșa alarma."
+
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Păi, n-o să-ți spun nimic moca!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "Ai cumva, din întâmplare, 5 monezi de aur?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 monezi de aur."
+
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr ""
+"Păi, bolțurile otrăvite pot omorâ gardienii instant\n"
+"și nu vor declanșa alarma."
+
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "Nu domnule, n-o să-ți zic nimic pe gratis!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Ai stors ultimele bârfe din mine deja!"
+
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Ce pot să-ți aduc?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Pușcă de asalt"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Aici sunt."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "Nu-ți poți permite asta încă."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Cartuș de gloanțe"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Haide, 10 monezi de aur."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Cutie cu muniție"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Poftim muniția."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Poate altădată."
+
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr ""
+"În sfârșit, niște vești bune venite de pe Front. Ai venit de la Macil pentru "
+"o recompensă și instruire. Mi-a ordonat ca eu să ți le ofer."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Mă bucur să fiu util."
+
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr ""
+"În regulă, uite niște puncte de reper: Nu te băga în calea Cruciaților: "
+"Focurile scurte ale armei tale de asalt sunt cele mai eficiente."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "Asta e?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "Uite, o să afli mai multe mai târziu."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr ""
+"Cred că pot converti aruncătorul de flăcări de la un Cruciat pentru a putea "
+"fi folosit de oameni. Oh, mai pot să-ți aduc ceva?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Aruncător de flăcări."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "Știam că va funcționa! Uite, ia-o la plimbare!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "Ascultă, nu pot face nimic fără componentele corespunzătoare!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Pușcă de asalt"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Poftim, domnule!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "Evident, nu-ți poți permite asta chiar acum."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Cartuș de gloanțe"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Haide, 10 monezi de aur."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Cutie cu muniție"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Poftim muniția."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Poate altădată. La revedere!"
+
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "Acum că ai aruncătorul de flăcări, mai pot să-ți aduc ceva?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Pușcă de asalt"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Aici sunt."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "Nu-ți poți permite asta încă."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Cartuș de gloanțe"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Haide, 10 monezi de aur."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Cutie cu muniție"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Poftim muniția."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Poate altădată."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "Acum că ai aruncătorul de flăcări, mai pot să-ți aduc ceva?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Cartuș de gloanțe"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Haide, 10 monezi de aur."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Cutie cu muniție"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Poftim muniția."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Poate altădată."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Grenade cu fosfor"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "Nu ai suficiente"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Bolțuri cu otravă"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "Merită fiecare bănuț!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Haide, 200 monezi de aur!"
+
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr ""
+"Nu-mi vine să cred că am rămas blocat cu meseria asta. Se zvonește că ceva "
+"malefic a ieșit la suprafată prin poarta canalului... Acum am ocazia să stau "
+"aici până se întoarce!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Care poartă?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "Poarta de revărsare."
+
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Bună prietene, ce pot să-ți aduc?"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Bolțuri electrice"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Ai ridicat bolțurile electrice."
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Sacoșă cu muniție"
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "Nu. Nu ai ceea ce doresc pentru bolțurile electrice!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "Nu. Nu ai ceea ce doresc pentru bolțurile electrice!"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Mulțumesc. Mai dorești ceva?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "Nu îți permiți asta. O zi bună."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Ce pot să-ți aduc?"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Bolțuri electrice"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Ai ridicat bolțurile electrice."
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Sacoșă cu muniție"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Mulțumesc, mai dorești ceva?"
+
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "Nu-ți poți permite asta. O zi bună îți doresc!"
+
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "Bun venit. Ce aș putea să-ți arăt?"
+
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "Costum de protecție"
+
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "Poftim."
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "Îmi pare rău, dar nu ai suficienți bani pentru asta."
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Armură de piele"
+
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "Aici este."
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "Poate altădată?"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Armură din metal"
+
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "Să o porți sănătos."
+
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "Revin-o când o să ai bani să poți cumpăra ceva, secătură!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "Bun venit. Ce aș putea să-ți arăt?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "Costum de protecție"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "Poftim."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "Îmi pare rău, dar nu ai suficienți bani pentru asta."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Armură de piele"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "Aici este."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "Poate altădată?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Armură din metal"
+
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "Să o porți sănătos."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "Revin-o când o să ai bani să poți cumpăra ceva, secătură!"
+
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "Cu ce te pot ajuta?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Trusă de Prim-Ajutor"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Aici e bandajul."
+
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "Ai nevoie de 10 monezi de aur pentru asta."
+
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "Kit de Prim-Ajutor"
+
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "Merci."
+
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "Mi-aș dori să le pot da pe gratis, dar costă 25 de monezi de aur."
+
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "Kit chirurgical de teren."
+
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "Poftim. Ai grijă."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "Păi, poate îți permiți niște truse de prim-ajutor?"
+
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr ""
+"Sper că Macil știe ce face. Dacă Ordinul află că ajut Frontul sunt ca și "
+"mort. Nu-i ca și cum te-ar interesa asta. Medicul Frontului mi-a dat un cip "
+"pentru upgrade, ești pregătit? "
+
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "Da, sunt pregătit."
+
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "Bine atunci, va dura doar o secundă. Așa, e gata deja."
+
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "Cu ce te pot ajuta?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Trusă de Prim-Ajutor"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Aici e bandajul."
+
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "Ai nevoie de 10 monezi de aur pentru asta."
+
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "Kit de Prim-Ajutor"
+
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "Merci."
+
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "Mi-aș dori să le pot da pe gratis, dar costă 25 de monezi de aur."
+
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "Kit chirurgical de teren."
+
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "Poftim. Ai grijă."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "Păi, poate îți permiți niște truse de prim-ajutor?"
+
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+"Salutări străine, nu te-am mai văzut pe-aici. Permite-mi să-ți dau un sfat. "
+"Aș fi grijuliu în locul tău. Ordinul nu tolerează voința liberă, iar "
+"justiția lor e rapidă."
+
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "Ai vreo veste?"
+
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "Vestea e că... Canalele ascund mai mult decât roboți și șoareci."
+
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "Cu ce te mai pot ajuta?"
+
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "Mai multă informație."
+
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "Guvernatorul e un simplu memento că nu mai suntem oameni liberi."
+
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "Revin-o când ai niște aur."
+
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr ""
+"Păi, pui multe întrebări pentru cineva care încearcă să nu moară. Ai grijă "
+"să nu ajungi un om mort, sau mai rău."
+
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "Mai multă informație."
+
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr ""
+"Este ceva mai mult la Ordin decât ceea ce se poate vedea cu ochiul liber."
+
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "Vorbim când aduci aur!"
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr ""
+"Asta a fost prietene, fântâna cunoștiințelor a secat. Ți-am spus mai multe "
+"decât ar fi trebuit oricum. Baftă... Și nu te întoarce."
+
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr ""
+"Hei, sunt aici doar în caz de urgență. Dacă apare o breșă în nucleu, mă "
+"asigur că nimeni nu intră... sau iese."
+
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "Ai grijă pe unde calci, plebeule!"
+
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "O să te omorâm! "
+
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "Cine naiba mai ești tu? Nimeni nu ar trebui să zăbovească în zona asta!"
+
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "Tu, nimeni nu are voie aici. Mișcă-te!"
+
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "Irale te va pregăti adecvat!"
+
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr ""
+"Sunt un fel de broker de talent pentru rebeli. Un tip la fel de priceput "
+"precum ești tu ar putea face bani frumoși... dacă s-ar lega de cine trebuie."
+
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "Sunt interesat."
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "La naiba cu rebelii!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "Nu, nici o altă șansă. Oh gardienilor, omorâți-l."
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+"Bună alegere. Sanctuarul Ordinului de lângă râu e camera lor de tortură "
+"neoficială. Ascuns în interior e un potir auriu. Îl înhați și culegi "
+"recompensa."
+
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "Cum ar trebui să fac asta?"
+
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr ""
+"Uite o arbaletă, doar țintești drept și --pleoșc--. Ține minte, ia cana "
+"scumpă și du-te la tavernă."
+
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "Tare. O voi lua."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "Ce mai aștepți? Adu-mi potirul acela."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+"Hei, știu că pare o capcană. Nu aș face așa ceva niciodată unei mașini "
+"ucigașe atât de tare. Ai obiectul? Perfect! Acum pregătește-te, aur și "
+"glorie cum ți-am promis. Ia cheia asta și Guvernatorul te va răsplătii."
+
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "Ar face bine. De dragul tău!"
+
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "Ce! Unde sunt banii mei?"
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Cară-te puștiule, mă deranjezi."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "Nicio altă șansă. Oh gardienilor, omorâți-l."
+
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+"Mai întâi măcelăresc cu miile, apoi vor toți sărmanii capabili de muncă "
+"pentru 'teste' nespecificate. Cum se așteaptă Ordinul să mențin pacea? Ce "
+"naiba vrei?"
+
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "O legitimație pentru închisoare. Să facem un târg."
+
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr ""
+"Deja îmi placi. Am două treburi nasoale pe care nu vreau să le fac eu "
+"însumi. Una e haotică, cealalta sângeroasă."
+
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "Spune-mi curățătorul"
+
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "Nu sunt mofturos"
+
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+"Unul dintre slujitorii mei fură electricitate cu robinetul pe undeva. Află "
+"cum face asta, distruge-i proviziile, și îți voi oferi ceea ce vrei. Adu-mi "
+"și ceva ca dovadă."
+
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "Unde-i găsesc robinetul?"
+
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"Dacă știam, n-ar mai fi fost o corvoadă, este? Folosește-ți farmecul, dar "
+"distruge-i proviziile."
+
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+"Să-ți zic ceva, un gunoi mincinos pe nume Derwin vinde copii Ordinului. Nu "
+"tolerez ceva atât de depravat. Nu fără să primesc și eu ceva. Derwin "
+"lucrează în depozit. Omoară-l și adu-mi... urechea lui, și-o să văd ce pot "
+"face."
+
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "Cum ajung înăuntru?"
+
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr ""
+"Cheia asta îți va oferi acces la stația electrică. Dacă mă gândesc mai bine, "
+"mai întâi taie-i urechea și abia apoi omoară-l. Mult mai bine."
+
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+"Oh, ce mai ador suvenirurile. Aici, asta îți va permite să ajungi în "
+"interiorul închisorii. Vorbește cu gardianul Montag. Ce faci după aceea, nu "
+"vreau să știu."
+
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "Îți dau un sfat. Când termin de discutat cu tine, pleci."
+
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "Ai vești bune pentru mine? Sunt numai urechi."
+
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "Zis și făcut!"
+
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+"Oh, ce mai ador suvenirurile. Aici, asta îți va permite să ajungi în "
+"interiorul închisorii. Vorbește cu gardianul Montag. Ce faci după aceea, nu "
+"vreau să știu."
+
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "Mie-mi convine."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr ""
+"Deci tu ești prostul care a furat potirul? Te voi aresta, hoț rebel... Prin "
+"urmare avansând în rangurile Ordinului. Cum e să fii un pion neștiutor? Îți "
+"dau un indiciu, o șă doară. "
+
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "Nașpa!"
+
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "Pentru tine, cu siguranță."
+
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "Harris mi-a promis bani!"
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "Păcat. Tot ceea ce primești e moarte!"
+
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+"Într-o lume mică, vorba circulă repede. Aud că tocmai ai înlăturat niște "
+"obstacole din drum. Bună treabă. Mai ești interesat de alte proiecte "
+"profitabile?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Da, de ce nu."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "Nu merci."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "Atunci valea!"
+
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "Prostule! Gardieni, scăpați-mă de acest pion băgăreț."
+
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr ""
+"Bun. Niște um... prieteni de-ai mei au nevoie de cineva redus la tăcere. "
+"Beldin e ținut de Ordin în sanctuarul lor. E o intrare rar folosită pe niște "
+"chei lângă râu care e nepăzită. Intră, fă-l să tacă pe veci, și adu-mi "
+"inelul lui ca dovadă."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "O să merite efortul?"
+
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr ""
+"Garantez 50 de monezi de aur, și dacă nu declanșezi vreo alarmă în oraș, e o "
+"șansă de câștig mult, mult mai mare, iar aici e un mic ajutor care să-ți "
+"facă treaba mai ușoară."
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Merci, voi avea nevoie de el."
+
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "Bun. Reține, tăcerea e de aur."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "O să-l aduc."
+
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "Misiune îndeplinită? Ai inelul trădătorului?"
+
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "E mort, unde sunt banii?"
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "Mincinos! Adu inelul!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+"Aici, o meriți. Trădătorul pe care l-ai omorât urma să dezvăluie locația "
+"Frontului. Ai salvat vieți. Cum ai vrea să câștigi mai mult aur, și un "
+"viitor fără tiranie?"
+
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "Spune-mi mai multe."
+
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "Nu-i genul meu."
+
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr ""
+"Fac afaceri cu liderul Frontului, Macil. Știu că are nevoie de băieți "
+"deștepți ca tine, și plătește bine. Ia acest emițător recuperat și vei fi "
+"dus, să zicem, spre oportunități."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "Timpul să pleci. Dacă mai stai pe-aici, o să fim amândoi morți."
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr ""
+"Păcat, dar acum că-mi cunoști prietenii, voi fi nevoit să te omor. Gardieni, "
+"duceți gunoiul!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "Prostule! Gardieni, scăpați-mă de acest pion băgăreț."
+
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Pleacă, băiete, pleacă."
+
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "Ce cauți aici?"
+
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "Hei, am nevoie de aur!"
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr ""
+"Blackbird ți-a spus codul, huh? Permite-mi să opresc alarma, Macil e cu un "
+"etaj mai jos."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Mulțumesc."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Pleacă, băiete, pleacă."
+
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "Ai o programare cu Guvernatorul? "
+
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "Desigur!"
+
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "Nu, nici n-am nevoie de una!"
+
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "Scuze! Te rog, poftește sus."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Știam că vei spune asta."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Dacă te grăbești așa tare, nu-ți pierde vremea cu mine."
+
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "Lasă-mă, lasă bătrânii în pace."
+
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr ""
+"Cauți înțelepciune, fiul meu? Ordinul a avut grijă ca noi să putem fi în "
+"stare să punem o singură întrebare: 'De ce?'"
+
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "Unde e cuplajul energiei?"
+
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "Unde e linia electrică a Ordinului?"
+
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "Unde e conexiunea ilegală?"
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr ""
+"Îți voi spune unde este, dar nu știu de care cuplaj te vei lega. Este chiar "
+"aici, în sistemul de canalizare."
+
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "Mulțumesc"
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr ""
+"Este chiar aici în sistemul de canalizare. Dar este cuplajul Frontului. "
+"Oricine ți-a spus că e al Ordinului a greșit."
+
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "Mulțumesc"
+
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr ""
+"Dacă zici că e ilegal, nu vreau să am nimic de-aface cu tine. Am destule "
+"probleme deja."
+
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "Mulțumesc"
+
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "Lasă-mă, lasă bătrânii în pace."
+
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr ""
+"Bun venit la ultima fărâmă de speranță. Numai noi avem voința liberă "
+"necesară pentru a ne opune Ordinului. Avem cele mai ascuțite minți "
+"științifice, și mulți oameni capabili de muncă, dar ne lipsește acel um... "
+"adevărat Salvator de la probleme, care să ne ofere avantajul de care avem "
+"nevoie. Ajută-ne."
+
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "În regulă, accept."
+
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "Nu merci!"
+
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr ""
+"S-ar putea să vrei să reconsideri, având în vedere că ești înconjurat de "
+"rebeli nervoși înarmați până în dinți."
+
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "Bine, mă bag!"
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "Nu merci."
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Atunci mori în rușine și dezonoare."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+"Bun, Blackbird va fi ghidul tău în continuare. A luat ceva înteres în tine. "
+"Împreună trebuie să descoperiți secretele Ordinului și slujitorii lor "
+"inumani. Dați buzna ți puneții la pământ."
+
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "De unde încep?"
+
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr ""
+"Sincer situația e nasoală. Trebuie să îndepliniți câteva misiune pentru a "
+"pregătii calea pentru mai multe atacuri asupra Ordinului. Ultimul nostru "
+"raid a fost un dezastru și majoritatea trupelor noastre au fost capturate. "
+"Am nevoie ca voi să eliberați prizonierii."
+
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "Cred că mă pot descurca."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+"Ia acești bani și vizitează pe Irale, cel care ne aprovizionează cu arme. "
+"Apoi, cheia asta îți va permite să intri să îl vezi pe Guvernator. El este o "
+"marionetă coruptă a Ordinului, dar adoră să facă târguri. Fă orice e necesar "
+"pentru a ne putea elibera frații."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "O să mă ocup."
+
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "Luptați pentru Front și libertate. Acum plecați."
+
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+"Prizonierii au fost primiți înapoi, mulțumită ție. Uite niște aur, vizitează "
+"medicul și antrenorul de arme, după aceea, am planuri mai mărețe pentru tine."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "Mă voi conforma. Ce facem mai departe?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+"Un cristal unic alimentează grila de putere care acționează scuturile "
+"Ordiului. Distruge cristalul și veți provoca daune imense sistemului de "
+"apărare al Ordinului. Blackbird vă va introduce unui spion care să vă ofere "
+"o cale în interior, multă baftă."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Vom ajunge în interior."
+
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "Luptați pentru Front și libertate. Acum plecați."
+
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+"Ne-ați depășit toate așteptările. Datorită îndrăznelii voastre trupele "
+"noastre s-au putut pune în mișcare. Vreau să vă alăturați asaltului, cu o "
+"țintă specifică. Eliminați-l pe Programator. E timpul să dezvăluim ce am "
+"descoperit despre acest nivel al Ordinului."
+
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "Spune-mi ce știi."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr ""
+"Bârlogul Programatorului e în castel. Acum, dute la medic, ia niște muniție, "
+"și prindeți-l."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "Le voi arăta eu lor!"
+
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "Luptați pentru Front și libertate. Acum plecați."
+
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr ""
+"Mai ții minte cum arăta primăria? Asta e o reamintire ușoară de ceea ce sunt "
+"dispuși să facă pentru a ajunge la noi. Ai grijă."
+
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Discută cu Macil. Te va ajuta el."
+
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr ""
+"Am auzit că Macil are un plan pentru a submina Ordinul. Ar face bine să fie "
+"grozav. Încă un eșec și vom fi toți carne ambalată."
+
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr ""
+"Câteva butoaie vărsate în rezerva lor de apă ar trebui să echilibreze "
+"balanța."
+
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr ""
+"Deci tu ești noul operator? Merci, dacă nu erai tu, am fi fost cu toții "
+"morți deja."
+
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+"Lucrez la ceva care ne va oferi un avantaj. Îți va mării rezistența fizică "
+"și întări. Aproape am rezolvat toate problemele. Pot face ceva pentru tine?"
+
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "Mamă, ești un dezastru. O să văd ce pot face."
+
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "Implant pentru rezistență?"
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "În regulă, va dura doar un moment."
+
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "Încă nu e gata."
+
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr ""
+"Hei, lucrez la o variantă îmbunătățită a implantului tău. E ceva cu care pot "
+"să te ajut?"
+
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "Eh, măcar tu ai parte de acțiune."
+
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "Upgrade la implant?"
+
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "Bine zis, nu poți fi niciodată prea sigur."
+
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "Sunt aproape gata, dar nu tocmai."
+
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr ""
+"În regulă, totul funcționează aproape perfect. Au mai fost niște probleme "
+"care trebuiau rezolvate. Mai ai nevoie de altceva? "
+
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "Ce ai încercat să faci? Dai cap în cap cu un Cruciat?"
+
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "Upgrade pentru implant?"
+
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "Asta ar trebui să fie suficient."
+
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "Lasă-mă să mai fac niște teste mai întâi."
+
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "Asta e tot ce pot face implantului acum. Poate niște bandaje?"
+
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "Da."
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "Mamă, ești un dezastru. O să văd ce pot face."
+
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "Ce pot face pentru tine?"
+
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "Nu mai am gloanțe."
+
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "În regulă, o să îți arăt niște repere."
+
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "Nu ești pregătit încă."
+
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "Te-ai întors iar? De ce ai nevoie?"
+
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "Nu mai am gloanțe."
+
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "Ai destulă muniție."
+
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "În regulă, asta ar trebui să te ajute pentru moment."
+
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "Scuze, nu pot. Eu doar umez ordinele lui Macil."
+
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+"Deci ce alegi, gloanțe sau antrenament? Abia aștept să pun mâna pe noile "
+"arme pe care le-am capturat. Puțin antrenament, iar apoi multă răzbunare."
+
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "Nu mai am muniție."
+
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "Ai destulă muniție."
+
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr ""
+"În regulă. Folosește ce ai învățat aici si aratăle nătărăilor din Ordin "
+"calea spre infern."
+
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "Revin-o mai încolo, când Macil zice că e timpul."
+
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr ""
+"Te-am învățat tot ce stiu. Dă-mi niște timp să pun noile arme la treabă. "
+"Asta dacă nu ai rămas fără gloanțe."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Da sunt."
+
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "Aici sunt."
+
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr ""
+"Nu deveni încântat să apeși pe trăgaci în oraș. Vei declanșa alarma și vor "
+"trimite gardieni din castel. "
+
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "Bun venit, mereu încântați de orice ajutor."
+
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr ""
+"Când încă eram în acțiune am avut șansa de a examina un acolit până să apară "
+"întăririle. Ascultă, nu sunt oameni."
+
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr ""
+"Încercăm să găsim unde sunt mecanismele castelului, dar n-am avut noroc până "
+"acum."
+
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr ""
+"Să nu te prindă. Am auzit povești de groază despre ce le fac oamenilor în "
+"închisoare. Dispar pur și simplu... fără nicio urmă."
+
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr ""
+"Uite un sfat: Dacă vezi vreun soldat din staniu du-te în direcția opusă. "
+"Sunt rapizi și brutali."
+
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "Lasă-mă. Fac ceva pentru Macil."
+
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "Scuze, nu. Nu ai acces."
+
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "Stop! Arată-mi cardul de identitate."
+
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "Aici e cardul."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Ah, în regulă. Mergi mai departe. O zi bună."
+
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "Darwin? Da, e în depozit, dar nu intri înăuntru dacă nu ai acces."
+
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "Am acces."
+
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "Intră."
+
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "Știi unde e?"
+
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "Nu știu unde e nimeni, eu doar țin ochii pe capcana pentru șoareci."
+
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "Ești o distragere neplăcută."
+
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "Mișcă-te sau mănânci metal."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Trece cardul de acces pe aici."
+
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "Treci înapoi la muncă, acum!"
+
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "Treci înapoi la muncă, acum!"
+
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+"Muncim non-stop de săptămăni fără niciun fel de pauză. Aș zice că Ordinul "
+"plănuiește un atac de reprimare asupra Frontului."
+
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+"Of, firar. Guvernatorul te-a trimis. Urma să îi dau partea lui din câștig, "
+"chiar urma, pe cuvânt. În regulă, ascultă. Am un pachet ascuns. E al tău "
+"dacă alegi să ignori ceea ce s-a întâmplat."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "În regulă, te las în pace."
+
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "Scuze, nimic personal."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Nebunie - dacă o iau la vale, atunci o să te iau cu mine. Gardieni!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "Afaceri pe naiba. Ajutor, gardieni, am prins unul."
+
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr ""
+"Ah, am primit știrea de la Macil că urma să vii. Am o cale de a te infiltra "
+"în uzină, dar e riscantă."
+
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "Voi risca."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr ""
+"Bine. Am furat un card de acces de pe cadavrul unui nătăfleț care a căzut în "
+"groapa sistemului de răcire al reactorului. --pleoșc--făcut scrum instant."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "Ce trebuie să fac odată ce ajung în interior?"
+
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr ""
+"Spune-i oricui te întreabă că ești înlocuitorul dl. Crispy. E suficient de "
+"stupid cât să funcționeze. Ah, și probabil vrei să verifici depozitul care "
+"se află chiar deasupra noastră."
+
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "Mamă frate sper ca legitimația să funcționeze."
+
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "Valea de aici, dacă nu vrei să devii dl. Mort."
+
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr ""
+"Hei, lasă-mă în pace. Dacă ne prind pierzând vremea fie primim muncă în "
+"plus, fie moarte."
+
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+"Ce presiuni, în ritmul ăsta o să revenim la turele obișnuite curând. Pompăm "
+"o tonă de energie către castel și aproape că am terminat să înregistrez "
+"aceste arme noi."
+
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "Arme?"
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "Ce crezi, că suntem apărați pe șosete?"
+
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "Ce fel de arme?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "Ești surd? Tocmai ți-am spus că sunt ocupat. Întoarce-te la muncă."
+
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr ""
+"Cine ești? Doar personalul cu nivel 2 de acces are voie în zona aceasta."
+
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "Sunt înlocuitorul muncitorului."
+
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr ""
+"Era și timpul. Du-te și vorbește cu Ketrick în interiorul nucleului. Ah, și "
+"ia și cardul ăsta. Nu cred că vrei să fii împușcat în prima zi de lucru, eh?"
+
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "Unde e cristalul de alimentare?"
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "Dacă nu te apuci de muncă, o să fii împuscat oricum. Miscă-ți tunica."
+
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr ""
+"Nu vreau să par alarmist, dar... dacă o să continui să împingi cristalul "
+"atât de tare o să se crape, apoi sparge, iar apoi *bum*! ...Doar ziceam."
+
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+"Ca să fiu înțeles. Dacă terminalul ăsta se blochează iar, nivelul răcirii va "
+"scădea și vom fi trași la răspundere de Programator. Dacă supraviețuim."
+
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr ""
+"Tu! Da, tu! Nu ai acces în zona asta. Dă-mi cardul tău, rapid. Sunt extrem "
+"de indispus!"
+
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "Aici, aici e cardul."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr ""
+"Ăsta e gunoi! Așteaptă aici. Oh las-o baltă. Gardieni, ucideți intrusul!"
+
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr ""
+"Muncă, odihnă, tortură, ce mai viață. Și, zici că ești înlocuitorul "
+"înotătorului neatent?"
+
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "Deah, abia aștept să încep."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Deah, sigur. Bine, hai, la muncă."
+
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "Unde e cristalul?"
+
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr ""
+"Discută cu Ketrick. Ridică pasarela cu ajutorul butoanelor, apoi folosește "
+"legitimația asta pentru lift."
+
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "Unde ziceai că e cristalul?"
+
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "Nu-i treaba ta. Discută cu Ketrick."
+
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "Bine."
+
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr ""
+"Dacă vrei treabă pe bune, du-te holbează-te la ecranul ăla o vreme, te va "
+"plictisii până la lacrimi."
+
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+"Atotputernicul Programator e atât de paranoic în privința infiltrărilor "
+"încât a încuiat nucleul calculatorului. Cum mi-aș putea face treaba? Singura "
+"cale de intrare e sinucidere."
+
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "O cale sinucigașă? Cum așa?"
+
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr ""
+"E un mod garantat de a muri, dar nu contează acum. Ia liftul jos dacă ești "
+"curios."
+
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr ""
+"Stop. Nimeni nu trece pe aici fără autorizație de la Director sau Guvernator."
+
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "Aici e legitimația, lasă-mă să intru."
+
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "Bine, dar vorbești doar cu Directorul."
+
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr ""
+"Ți se pare că eu sunt Directorul? Continuă să mergi, asta e o zonă fără "
+"acces."
+
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr ""
+"Furia Ordinului se va năpusti asupra servitorilor aceștia până vor cerși "
+"după moarte."
+
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+"Nu-mi pasă că Mourel ți-a dat o legitimație. Asta e închisoarea mea. Cheia "
+"mea e singura cale de intrare sau ieșire, și nu risc nimic. Ordinul nu "
+"tolerează greșeli."
+
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "Dă-mi afurisita de cheie!"
+
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "Doar peste cadavrul meu!"
+
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "Grozavă idee!"
+
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "Cătușe sau lanțuri, vreau să rămăi pe-aici."
+
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr ""
+"Nu știu cum ai reușit să treci de gardieni și de Director, dar sper că îți "
+"place noul decor, pentru că tocmai te-ai mutat aici."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "Eliberează-mi camarazii, sau mori!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr ""
+"Omoară-mă și nu vei elibera pe nimeni în veci. Eu posed singura cheie care "
+"poate deschide celulele."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "Poți da o mână de ajutor atunci?"
+
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "Cară-te sau te vei alătura prietenilor tăi."
+
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "Nu sta acolo, scoate-ne de aici!"
+
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "Cerul, vreau să văd cerul!"
+
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "Din 5 pași 4, din 5 pași 4, din 5 pași 4."
+
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "Nu mă elibera dacă Ordinul incă e tot la putere."
+
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr ""
+"Nu vreau să mă smiorcăi, dar era și timpul ca Macil să trimită pe cineva să "
+"ne scoată afară."
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "Aș da orice pentru o coajă de pâine. Sunt așa flămând."
+
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"Ah, un locuitor de la suprafață care are nevoie de o favoare. Aici jos faci "
+"o favoare, primești o favoare, iar eu am nevoie de o cale pentru a ajunge la "
+"intrarea din oraș, să putem avea acces la provizii. Ordinul a închis-o și "
+"acum e bine păzită."
+
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "Unde e mecanismul de acționare al porții?"
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Fă-mi favoarea mai întâi, sau nu-ți zic nimic."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "Cum vei știi că e deschisă?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+"Adu-mi uniforma gardianului. Așa, unui dintre noi o va putea purta și nimeni "
+"nu va încerca să mai închidă poata vreodată."
+
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "Vrei uniforma lui?"
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr ""
+"Deschide poarta, adu-mi uniforma, și facem schimbul. Altfel, șterge-o de "
+"aici."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "Mi-ai adus ceea ce doresc?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "Ce zici de uniforma asta?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "Adu-mi uniforma."
+
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr ""
+"Bun. Uite aici ceva în plus. Tovarășii mei au smuls asta de pe un Cruciat "
+"răpus, sunt părți ale unui aruncător de flăcări. Acum Irale îți poate "
+"construi unul. Te poți distra de minune."
+
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "Unde e mecanismul de acționare al porții?"
+
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+"Va trebui să intrăm pe altă parte a canalelor. Ca să ajungi acolo trebuie să "
+"intri în castel printr-o ușa de mentenanță a canalului și să drenezi "
+"rezervorul. La bază e intrarea în canale, și imediat după aceea e controlul "
+"manual al porții."
+
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "Mai poți face altceva?"
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+"Noroc. Am deschis câteva canale pentru tine. Ar trebui să îți ușureze munca. "
+"Ah, mărimea zece, perfect! ...Dar cumplite culori."
+
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "Merci de ajutor."
+
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "Nu dai nimic, primești nimic."
+
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Weran ne va salva. Nu ne-a dezamăgit până acum."
+
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "Dacă ești în căutarea unor răspunsuri, găsește-l pe Weran. "
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "Să trăiască Frontul? Aiureli. Doar așteptăm să murim. "
+
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "Cu calea spre suprafață sigilată, nici măcar nu ne putem hrănii."
+
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "Mâncare, ai mâncare? Te rog ajută-ne."
+
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+"Asta e răsplata mea pentru că am lăsat prizonieri să scape, apărarea "
+"canalelor. Dacă îl prind pe cel care i-a lăsat să scape, îl masacrez."
+
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr ""
+"Îi avem pe sărmanii ăștia exact acolo unde vrem. Încă câteva zile, și vor "
+"muri de foame."
+
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr ""
+"Care e nivelul tău de acces? Niciun personal neautorizat nu are voie aici."
+
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "Ce naiba? Cine a deschis porțile? Sună alarma!!!"
+
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr ""
+"Mai e o cale de acces către canale, folosește butonul apoi du-te sus și "
+"scurge lichidul din rezervor."
+
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr ""
+"Care mai e problema ta? Dacă Programatorul vine sus din camera sa de "
+"audiență, ești mort."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "Hei, n-ai acces să mergi acolo jos."
+
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr ""
+"Programator? Cine ți-a spus asta? Nu e niciun Programator. Povestea asta a "
+"fost răspândită acum multă vreme. Nu-mi spune că Frontul chiar a crezut "
+"prostia asta. Idioți."
+
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "Păi, care e adevărul atunci?"
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "Ți-am spus tot ce știu, îți pierzi vremea."
+
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "Continuă lupta, vom triumfa. Ziua asta ne aparține!"
+
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "Continuă lupta, vom triumfa. Ziua asta ne aparține!"
+
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "Continuă lupta, vom triumfa. Ziua asta ne aparține!"
+
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "Continuă lupta, vom triumfa. Ziua asta ne aparține!"
+
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "Continuă lupta, vom triumfa. Ziua asta ne aparține!"
+
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "Continuă lupta, vom triumfa. Ziua asta ne aparține!"
+
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+"Ai omorât toți gardienii. Nu mă rănii. I-am spus că e o idee proastă. "
+"Adevăratul Programator e înăuntru. Ia cheia asta."
+
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "Tu ești Programatorul!"
+
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr ""
+"Ți se pare că controlez puterea supremă? Ordinul ne folosește pe toți. Acum "
+"pleacă, sunt mort deja."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "Puterea e cheia!"
+
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+"Bun, ești conștient din nou. Când ai pus mâna pe obiectul ăla Programatorul "
+"ți-a dat drumul ca să elibereze niște secrete oribile."
+
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "Ce fel de secrete? "
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+"Nu avem nicio idee în legătură cu proveniența armei, dar trebuie să aflăm. "
+"Ai luat una de la Ordin, dar avem nevoie de toate 5. Am ajuns la capătul "
+"cunoștiințelor mele. Mergi în căutarea Oracolului, și cere-i ajutorul."
+
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "O să am nevoie de mai multe provizii."
+
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr ""
+"Uite niște aur. Vizitează medicul și antrenorul de arme iar apoi, dă-i "
+"drumul!"
+
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "Într-adevăr!"
+
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "Luptați pentru Front și libertate. Acum plecați."
+
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr ""
+"Ce te aduce înapoi? Nu avem timp de pierdut, continuă-ți misiunea. "
+"Asamblează Sigiliul."
+
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "Oracolul spune că trebuie să mori!"
+
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr ""
+"Am jurat pentru libertate. Oracolul deține a treia piesă. Iată trădătorul."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "Oracolul va pieri atunci!"
+
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "Eu cred că tu ești trădătorul!"
+
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "Spiritul Adevăratului Zeu să mă răzbune și să facă lumea asta cenușă."
+
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+"Ai făcut alegerea corectă. E limpede că Oracolul e controlat de orice rău "
+"conduce și Ordinul. Întoarce-te la el și pune mâna pe cea de-a treia piesă a "
+"Sigiliului."
+
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+"Pare să nu existe limite pentru răul pe care îl înfruntăm. Îi transformă, în "
+"soldați bio-mecanici. Găsește fabrica unde se întâmplă asta și închide-o, "
+"permanent."
+
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "Unde este localizată?"
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+"Unul dintre căpitanii noștri, Richter, te așteaptă lângă cascadă. A văzut "
+"fabrica și te poate conduce în interiorul ei. Încheie atrocitatea asta, acum."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "Vor plătii pentru asta!"
+
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "Luptați pentru Front și libertate. Acum plecați."
+
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr ""
+"Eu sunt adevăratul Zeu.... Am nevoie de sufletul lui ca să pot să-mi "
+"părăsesc corpul, și să mă alătur lui în zbor. Nu ai idee despre ceea ce "
+"posezi... Și ce teroare înfrunți... Adevăratul Zeu trebuie să fie liber... "
+"Și mă va răsplătii... Voi fi unul..."
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "Te voi distruge!"
+
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "Mă bucur să văd că ai reușit. De ce ai nevoie? "
+
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "Păi, să te aranjăm."
+
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "Ești în regulă."
+
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "Ceva nou?"
+
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "Da, am ceva hardware nou pentru tine."
+
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "Nu, încă lucrez la asta."
+
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+"Ce pot face pentru tine acum? Feris decriptează niște fișiere extrem de "
+"complexe, dar merită. Deja avem niște informații care le voi putea aplica "
+"urmatoarei versiuni ale implantului tău pentru rezistență."
+
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "Ar trebui să fii mai grijuliu."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "Când va fi gata?"
+
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "E gata. Va dura doar un moment."
+
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "Curând."
+
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr ""
+"Cred că am găsit o problemă în implantul tău. Feris mă ajută la "
+"implementarea unor îmbunătățiri care vor avea grijă de el și vor crește "
+"viteza puțin. E ceva ce pot face pentru tine?"
+
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "Gata, ca și nou bănuiesc."
+
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "Îmbunătățiri?"
+
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "Ah, acum discutăm."
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "Îl voi avea imediat ce termină Feris cu el."
+
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+"Cum merge? Frate, noua tehnologie e pur și simplu uimitoare. Asta ar trebui "
+"să îți ajute și implantul. Am câteva idei pe hârtie și le voi pune în "
+"aplicare curând. Ce pot face pentru tine, poate să te bandajez?"
+
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "Da, bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "Gata."
+
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "Ce zici de tehnologia aceea nouă?"
+
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "Să-mi spui cum funcționează asta."
+
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "Încă nu am terminat să o construiesc."
+
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+"Te-ai întors din nou, nu te plictisești niciodată? Am niște vești bune, "
+"Feris a descoperit o metodă de a îți îmbunătății implantul. Mi-a dat "
+"specificațiile și acum încerc să îl combin cu fizicul tău. Cresc forțat "
+"niște țesut, ceva complet nou. Ai nevoie de asistență?"
+
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "Da, bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "Gata, acum ai grijă de tine."
+
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "Când vei fi gata?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "Acum. Hei grozav, a mers!"
+
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "Aștept ca țesutul să își continue ciclul de dezvoltare."
+
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"Păi, m-am întors la treburile mele vechi, încă lucrez la implanturile tale. "
+"Știi că Macil a vrut să le autorizeze pentru toată lumea? Nu, așa-i? E din "
+"cauză că ai ieșit prea bine. Pot face ceva pentru tine?"
+
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "Dă-mi o mână de ajutor."
+
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "Asta e tot ceea ce pot face."
+
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "Implant nou?"
+
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "Da, cel mai bun, momentan."
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "Scuze, dar trebuie să mai aștepți."
+
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+"Asta e, Feris a reușit să stoarcă tot din datele pe care le avem, acesta e "
+"ultimul, și cel mai bun upgrade pentru implant. Va fi oarecum deprimant, să-"
+"mi văd creația ajungând în vârf. Măcar restul echipajului mă va ține ocupat."
+
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "Mă poți bandaja?"
+
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "Gata, ești pregătit."
+
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+"E eroul. Bună treabă! Ce pot să-ți aduc? Avem o selecție mai largă acum, din "
+"moment ce am primit toate ordonanțele de la castel. Dacă ai nevoie de "
+"muniție vorbește cu Justin, se va ocupa de tine. "
+
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "Nu mai am gloanțe."
+
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "Acum, niște sfaturi pentru armele mari."
+
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "Nu ești pregătit încă."
+
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr ""
+"Cum merge efortul de război? Nu mai contează, dacă suntem încă aici înseamnă "
+"că e bine. Ce pot face pentru tine?"
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Am rămas fără gloanțe."
+
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "Asta ar trebui să ajute."
+
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "Ai destulă muniție."
+
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "Iată, am să te învăț niște trucuri."
+
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "Nu ești pregătit încă."
+
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr ""
+"Ai venit pentru a învăța ceva sau doar pentru muniție? Să nu crezi că am "
+"terminat cu tine, încă mai am niste ași în mânecă."
+
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "Muniție pentru moment."
+
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "Ai destulă muniție."
+
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "Timpul pentru lecțiile avansate."
+
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "Nu ești pregătit încă."
+
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"Ce mai este? Nu iei niciodată pauză? Mă bucur că încă mai respiri. Ar fi "
+"păcat dacă cel mai bun student al meu ar veni într-un sac."
+
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "Am nevoie de niște gloanțe."
+
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "Iată, n-o risipi."
+
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "Ai destule."
+
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "Ce mă poți învăța?"
+
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "Nu fi impetinent, încă mai ai ce învăța."
+
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "Nimic, până nu ești pregătit."
+
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr ""
+"Uite cine s-a întors? La ce te gândești? Știu că a fost greu, dar toți îți "
+"apreciem eforturile, crede-mă."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "Am rămas fără gloanțe."
+
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "Ce mai e nou, iată."
+
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "Ai mai multe decât ți-aș putea oferi."
+
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "Învață-mă ce poți."
+
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "În regulă, uite niște repere."
+
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "Nu chiar acum."
+
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr ""
+"De ce ai nevoie? Sper că îi dai Ordinului aceeași durere pe care și el ne-a "
+"oferit-o în toți acești ani."
+
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "Niște muniție."
+
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "Iată, n-o risipi."
+
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "Ai destulă muniție."
+
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "Câteva lecții, și vei știi tot ce știu si eu."
+
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "Nu ești pregătit încă."
+
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr ""
+"Nu-mi vine că cred că încă mai rezistăm, tu și eu. Sunt prea mulți cei care "
+"au murit de la început. Ce pot face pentru tine, prietene?"
+
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "Nu mai am gloanțe."
+
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "Aici, folosește-le ca să te menții în formă."
+
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "Ai destule."
+
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "Asta e, gata, nu mai am ce să te învăț."
+
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "Întoarce-te după ce Macil îți spune că e vremea."
+
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr ""
+"Te-am învățat tot ce știu pentru moment. Ți-am dat tot ceea ce ai putea avea "
+"avea nevoie vreodată, decât dacă nu ai rămas cumva fără gloanțe. Cu astea te "
+"pot ajuta încă."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Da sunt."
+
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "Iată. "
+
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+"Iată ce e nou, un far. Când folosești farul, ne ghidăm după el și trimitem "
+"întăriri. E ceva ce ți-aș putea aduce?"
+
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "Cutie de rachete."
+
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "Iată."
+
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "Nu-ți poți permite asta!"
+
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "Grenade."
+
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "Aici sunt."
+
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "Întoarce-te când ai destui bani."
+
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "Capsulă energetică."
+
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "Iată capsula energetică."
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "Nu ai suficiente fonduri pentru asta."
+
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "Far pentru teleportare."
+
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "Ajutor, acolo și când ai nevoie de el."
+
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "Scuze, nu e caritate."
+
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr ""
+"Acum că avem castelul sub control, va trebui să fim și mai vigilenți pentru "
+"a-l păstra. Ordinul probabil se pregătește pentru un atac de recuperare "
+"chiar acum."
+
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Ai grijă afară."
+
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "Continuă să faci treabă bună, n-am fi reușit fără tine."
+
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "Sunt stăpânul cheilor."
+
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr ""
+"O grămadă de oameni ar spune că e o muncă fără mulțumiri și insignifiantă. "
+"În realitate, nu este..."
+
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "Dă-mi cheia!"
+
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "Bine, dar ține minte, eu sunt stăpânul cheilor."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "Bine amice, cum spui tu."
+
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "Sunt stăpânul cheilor."
+
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "Mori trădătorule!"
+
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "Mori trădătorule!"
+
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr ""
+"Ai venit să te lauzi? Chiar dacă suntem în spatele gratilor, cât timp "
+"rezistăm, tu pierzi."
+
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "Scoate-ne de aici!"
+
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "Lasă-mă în pace!"
+
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "Ce înțelepciune cauți, om simplu?"
+
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "Sigiliul Adevăratului Zeu."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+"Simt un fragment care rezonează în tine. Al doilea e în inima turnului "
+"purpuriu, din obsidian. Acolo îl vei înfrunta pe Episcop, care e conștient, "
+"și în așteptare. Îl vei găsi urmându-i simbolul puterii. Du asta la stăpânul "
+"cheilor. Întoarce-te după ce ai înfrânt fiara."
+
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "Mă voi întoarce."
+
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr ""
+"Deși Episocopul e formidabil, misiunea asta e ușoara. Întoarce-te când ai "
+"cel de-al doilea fragment."
+
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+"Următoarea provocare îți va testa spiritul. A treia piesă e deținută de "
+"liderul tău. A celași care te trimite să omori."
+
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "Macil? Un trădător?"
+
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr ""
+"Credința ta oarbă i-a permis să-și avanseze planurile, cu fiecare piesă pe "
+"care o obții. Înfruntă-l și împlinește-ți destinul."
+
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "Bine, Macil să fie."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Tu ești cel în care nu am încredere."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr ""
+"Indiferent de alegerea ta, neamul tău va pieri sub voința Adevăratului Zeu."
+
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Am să mă întorc odată ce Macil e mort."
+
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "Nu voi permite asta."
+
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "Râul timpului curge în permanență, în timp ce tu stai pe loc."
+
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr ""
+"Ai scăpat de cancerul din corp, dar inima ta încă bate. Mai departe, trebuie "
+"să îl găsești pe chirurgul care îți controlează și măcelărește oamenii, "
+"Stăpânul Învățăturilor. Oprește-l, și următoarea piesă va fi a ta."
+
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "Unde îl găsesc?"
+
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr ""
+"Folosește teleportoul din spatele ușii pe care tocmai am deschis-o. După ce "
+"e mort, folosește același dispozitiv pentru a te întoarce la mine."
+
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "Mă voi întoarce, cu piesa lui."
+
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "Râul timpului curge în permanență, în timp ce tu stai pe loc."
+
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr ""
+"Om jalnic, ai reușit ceea ce nu a reușit nimeni să facă.... Îmi aduci "
+"puterea Sigiliului, vocea Adevăratului Zeu."
+
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "Nu înțeleg."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+"Sigiuliul va deschide ușa și elibera spiritul care va curăța planeta și mă "
+"va face nemuritor. Voi stoarce energia din planetă iar apoi voi găsi alte "
+"lumi de cucerit."
+
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "Nu te pot lăsa să faci asta."
+
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "Poți, dacă ești mort."
+
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+"Ai venit ca să ne eliberezi? Pentru că am fost cuminte, mi-au scos "
+"implantul. Dar tot trebuie să rămân aici și să fac curățenie însă."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Da, am venit să te eliberez."
+
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "Pe bune?"
+
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr ""
+"Nu pot ajuta pe nimeni. Nu până ce transmițătorul nu e aruncat în aer. Asta "
+"e la etaj, în spatele scuturilor. Treaba mea e să mă uit după conveioare, să "
+"mă asigur că nu sunt defecte. Numai!"
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Așa e, ești salvat!"
+
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "Oh, mulțumesc!"
+
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "Suntem liberi!! Suntem liberi!! Suntem liberi!!"
+
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "Mai trebuie să minez încă o bucată de minereu."
+
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "Suntem liberi!! Suntem liberi!! Suntem liberi!!"
+
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "Mai trebuie să minez încă o bucată de minereu."
+
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "Suntem liberi!! Suntem liberi!! Suntem liberi!!"
+
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "Mai trebuie să minez încă o bucată de minereu."
+
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "Suntem liberi!! Suntem liberi!! Suntem liberi!!"
+
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "Ce cauți aici?"
+
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "Inspecție de rutină."
+
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "Bine, mergi mai departe."
+
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "Nimic de raportat aici. Dacă e ceva, cu siguranță că voi da raportul."
+
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Domnule, a fost o problemă adineauri, dar s-a rezolvat."
+
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "Mișcă-te sau mănânci metal."
+
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "Verificare card de identitate."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Aici, mă grăbesc."
+
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "Nu mai flutura cardul în fața mea și intră."
+
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "Nimic aici. Mișcă."
+
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "Ce specimen sănătos. Nu ai nevoie de ajutorul meu, nu?"
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Ba da. Macil m-a trimis."
+
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr ""
+"Șhhhh... Mai încet, dacă nu vrei să murim amândoi. Acum, ce pot face pentru "
+"tine?"
+
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "Spune-mi cum găsesc Episcopul."
+
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr ""
+"Ohhh, știam eu că asta urma să mă întrebi. Aia e intrarea către citadela "
+"Episcopului. E apărată de un scut care se oprește numai pentru vizitatorii "
+"autorizați, nu pentru tine."
+
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "Trebuie să-l omor pe Episcop."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"Oh, normal. Mai întâi, trebuie să te zbați să ajungi în complexul de "
+"securitate și să folosești teleportorul. Și asta s-ar putea să îți placă mai "
+"mult, distruge calculatorul din camera de administrare centrală. Niciun "
+"calculator, niciun câmp de forță."
+
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "Grozav, sună simplu."
+
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr ""
+"Există un avantaj în distrugerea calculatorului, acolo sunt ținute schemele "
+"turnului. Poți spune, reducere la cinci degete? Ha ha!"
+
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "Altceva?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"Păi, vorba spune că depozitul din curtea interioară a primit un pachet de "
+"schiloditoare, asta e arma care vapozirează."
+
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "Asta e, deci?"
+
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "Nu cunoști semnificația cuvântului \"dispari\"?"
+
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr ""
+"Vorbește cu Quincy mai întâi. Nu am permisiunea să ajut pe nimeni până nu "
+"spune că e în regulă."
+
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "Cu ce te pot ajuta azi?"
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Trusă de Prim-Ajutor"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Aici e bandajul."
+
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "Costă 15 monezi amice."
+
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "Kit de Prim-Ajutor"
+
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "Aici e kitul."
+
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "Cam puțini bani pentru aia."
+
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "Kit chirurgical de teren."
+
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "Un kit chirurgical de teren, gata."
+
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "Revino când o să ai bani!"
+
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "Ce e?"
+
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "Doar mă uit împrejur."
+
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "Doar nu sta în cale."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr ""
+"Templierii vor fi curând aici pentru a ridica schiloditoarele. Dacă le stai "
+"în cale ești mort."
+
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "Schiloditoare?"
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "Arma preferată a Templierilor."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+"Au venit mai devreme. Asta e treaba cu toată securitatea. Am avut șansa să "
+"îi privesc când închideam. Nimeni nu intră sau iese până ce tot platonul "
+"vine să își ia armele."
+
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "De aici vei lua schemele pentru camera de administrare centrală."
+
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr ""
+"Eu conduc locul ăsta. Treaba mea e să produc materia primă pentru designul "
+"roboților Stăpânului Cunoștiințelor. Dacă nu ești aici cu treabă oficială, "
+"atunci nu am timp de vorbă."
+
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "Sunt cu treburi oficiale."
+
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+"Ai vorbit cu Timotei, să înțeleg. Noi am lucrat împreună în încercarea de a "
+"descoperii misterele Ordinului, înainte să fie prea târziu pentru noi toți. "
+"Poate ne poți ajuta. Am deschis ușa la sectorul de producție."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "Știi cumva ce e înăuntru?"
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr ""
+"E o zonă secretă. Nu numai că Ordinul crește un fel de... creatură acolo, am "
+"văzut cu proprii mei ochi un fel de artefact numit Talisman, nimeni nu e "
+"lăsat să se apropie.. Zvonurile zic că e un artefact de o putere imensă dacă "
+"e unit cu celelalte două părți ale lui."
+
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "Presupun că vrei chestia asta?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr ""
+"Nu! Dacă o găsești, e a ta. Poate o poți folosi ca să ne ajuți să scăpăm de "
+"oprimare. Ți-aș ura noroc, dar o să ai noroc de mult mai mult decât atât "
+"dacă mergi acolo..."
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "Care e treaba cu trecutul ăsta?"
+
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr ""
+"Cu siguranță ai vazut ruinele din apropiere. Se pare că Cometa care a căzut "
+"e de fapt o navă spațială, și crezi sau nu, e originară din lumea asta, de "
+"acum mult timp."
+
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "Deci spectrele, Adevăratul Zeu..."
+
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr ""
+"Sunt creaturi care au condus cândva lumea asta și sunt determinați să-i "
+"consume toată viața. Cei antici au reușit să-i alunge, dar și-au dat viața "
+"pentru a reuși. Mă tem că asta e tot ce știu."
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Merci... O să fac ce pot."
+
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "Noroc, prietene."
+
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr ""
+"Vorbește cu maestrul Smithy dacă ai întrebări. Tot ce fac eu e să pun "
+"embleme pe cutii."
+
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "Ce pot să-ți aduc, cetățene?"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Cutie cu muniție"
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Poftim muniția."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "Nu ai suficiente fonduri pentru asta."
+
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "Cutie de rachete."
+
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "Aici, orășene."
+
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "E 85 de monezi, cetățene!"
+
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "Grenade."
+
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "Aici sunt grenadele."
+
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "Costă 100 de monezi, prietene."
+
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "Capsulă energetică."
+
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "Aici este."
+
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "Costă 135 de monezi, scuze."
+
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "Cu ce te pot ajuta?"
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Armură de piele"
+
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "Aici e cetățene."
+
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "Nu facem caritate aici!"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Armură din metal"
+
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "Excelentă alegere cetățene."
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "Nu ai suficiente fonduri pentru asta!"
+
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "Costum de protecție"
+
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "Aici este."
+
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "Niciun ban, niciun costum."
+
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "Ceva diferit?"
+
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "Intră pe ușa din josul holului."
+
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "Trebuie să plătești dacă vrei să joci."
+
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "Ce pot să-ți aduc?"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Armură de piele"
+
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "Aici este, cetățene."
+
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "Nu facem caritate aici!"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Armură din metal"
+
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "Excelentă alegere cetățene."
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "Nu ai suficiente fonduri pentru asta!"
+
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "Costum de protecție"
+
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "Aici este."
+
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "Niciun ban, niciun costum."
+
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "Cu ce te pot ajuta azi?"
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Trusă de Prim-Ajutor"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Aici e bandajul."
+
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "Costă 15 monezi amice."
+
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "Kit de Prim-Ajutor"
+
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "Aici e kitul."
+
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "Cam puțini bani pentru aia."
+
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "Kit chirurgical de teren."
+
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "Un kit chirurgical de teren, gata."
+
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "Revino când o să ai bani!"
+
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "Bună prietene, ce pot să-ți aduc?"
+
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "Informație"
+
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr ""
+"N-am văzut niciodată pe cineva intrând sau ieșind din fabrică, câmpul de "
+"forță e mereu activ."
+
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "Niciun ban, nicio informație."
+
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "Da, ce ai dori?"
+
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "Mai multă informație."
+
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr ""
+"Fabrica e construită pe locul de prăbușire al cometei. Nu cred că e o "
+"coincidență."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "Haide, sunt 5 bănuți amărâți."
+
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "Bună din nou, ce dorești?"
+
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "Mai multă informație."
+
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr ""
+"Fabrica s-a închis când Ordinul a dezvăluit noua sa oroare: Inchizitorul."
+
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "5 bani te rog."
+
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "Asta e tot ce știu, până și barmanii rămân fără chestii de zis."
+
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "Salut."
+
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "Ce faci?"
+
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "Am treabă, pleacă!"
+
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "Acum, cu ce te pot ajuta?"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Armura umbrei?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "Ahh, să fii auzit, dar nu văzut!"
+
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "Cară-te, întoarce-te când ai bani."
+
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+"Slavă Domnului că ești aici. Ca să intri în fabrică ai nevoie de o cheie. Am "
+"furat-o dar agentul nostru a dispărut în rețeaua catacombelor fortăreței "
+"Ordinului. Am trimis zece oameni pricepuți după el, dar niciunul nu s-a "
+"întors. Ceva se întâmplă acolo!"
+
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "Ce e? Uman sau... ?"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+"Nu. Cu siguranță nu. Orice ar fi, va trebui să o înfrunți pentru a recupera "
+"cheia. Voi deschide intrarea catacombelor. Când o ai, fabrica e vizavi de "
+"mine. Grăbește-te, orice secundă contează."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "Ceva inuman, ei? Grozav."
+
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "Pierzi timp și vieți, mișcă-te!"
+
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "Pot fi mai de ajutor?"
+
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "Mai multă informație."
+
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr ""
+"Uită-te după Timotei. Am auzit că ar cunoaște mai multe secrete ale "
+"Ordinului."
+
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "Alte 5 monezi."
+
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "Asta e tot ce știu, până și barmanii rămân fără chestii de zis."
+
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "Salut."
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "Ce faci?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "Am treabă, pleacă!"
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+"Dacă ai atât de mult timp de pierdut, vezi dacă poți găsi pocalul albastru. "
+"Studiile mele indică faptul că Ordinul l-a ascuns undeva în sectorul de "
+"manufactură al fabricii. Artefactul mi-ar fi de mare folos, așa că, adu-mi-"
+"l, și o să te ajut."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "Ai găsit pocalul albastru! OK, dă-mi-l, și o să facem schimb."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "Ia-l, poartă ghinion oricum."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "Du-te naibi, îl păstrez."
+
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "Atunci nu îți dau nimic. Valea!"
+
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+"Găsește forja. Informațiile pe care ți le-am oferit ar trebui să te ajute să "
+"intri într-un sector secret al fabricii. Unul dintre făurari poate deschide "
+"ușa."
+
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "Ce pot găsi acolo?"
+
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr ""
+"Investigațiile mele indică faptul că ceva putere întunecată din trecutul "
+"antic e ascunsă acolo. Ai grijă!"
+
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+"Acel potir albastru, cum l-ai găsit? Am cercetat Ordinul și legăturile lor "
+"cu trecutul, iar acel artefact mă poate ajuta. Să facem un târg, Îmi dai "
+"potirul, iar eu îți dau informații."
+
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "Ia-l, poartă ghinion oricum."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "Du-te naibi, îl păstrez."
+
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "Atunci nu îți dau nimic. Valea!"
+
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "Acum, cu ce te pot ajuta?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Armura umbrei?"
+
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "Ahh, să fii auzit, dar nu văzut!"
+
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "Cară-te, întoarce-te când ai bani."
+
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+"Slavă Domnului că ești aici. Ca să intri în fabrică ai nevoie de o cheie. Am "
+"furat-o dar agentul nostru a dispărut în rețeaua catacombelor fortăreței "
+"Ordinului. Am trimis zece oameni pricepuți după el, dar niciunul nu s-a "
+"întors. Ceva se întâmplă acolo!"
+
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "Ce e? Uman sau... ?"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+"Nu. Cu siguranță nu. Orice ar fi, va trebui să o înfrunți pentru a recupera "
+"cheia. Voi deschide intrarea catacombelor. Când o ai, fabrica e vizavi de "
+"mine. Grăbește-te, orice secundă contează."
+
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "Ceva inuman, ei? Grozav."
+
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "Pierzi timp și vieți, mișcă-te!"
+
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+"Stăpânului nu îi plac vizitatorii. Îi place ca toată muncă să fie "
+"nederanjată. Trebuie să aduc părți noi din depozit. Cred că a zis un braț și "
+"un picior. Of, nu mai e timp de vorbă. O să plec înainte să te găsească."
+
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "De ce."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "Pentru că, ți-am spus, nu-i plac vizitatorii!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "Știi, eși marimea potrivită pentru o uniformă de acolit."
+
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr ""
+"Oh nu, nu sunt adevăratul Programator. Continuă până dincolo de câmpul de "
+"antrenament. Dacă supraviețuiești, vei putea vorbi cu el. Sau să îl omori."
+
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "Cine ești?"
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "N-o să aflii nimic dacă pierzi timpul aici."
+
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "Valea, sărmanule!"
+
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "Mori, mititelule!"
+
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "În sfârșit pot părăsi celula asta."
+
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "De ce ești închis?"
+
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "A fost o înscenare."
+
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr ""
+"Harris a spus că plănuiam să-l omor pe Guvernator. N-aș răni un suflet "
+"niciodată."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Ai grijă afară."
+
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr ""
+"Să zicem prietene, că te ajut, dacă și tu m-ajuți. Dă-mi 5 monezi și îți voi "
+"spune ce știu."
+
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "Poftim aurul."
+
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "Dacă îi tragi un pumn cuiva, nu vei declanșa alarma."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "Nu-ți voi spune nimic pe gratis."
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Ți-am spus deja tot ce știu."
+
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "Bună prietene, ce pot să-ți aduc?"
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Bolțuri electrice"
+
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "Aici sunt."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "Ești falit!"
+
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "Cartuș de gloanțe"
+
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "Aici e."
+
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "Scuze, niciun ban, niciun glonț."
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Cutie cu muniție"
+
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "Aici este"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "Nu ai suficient aur!"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Sacoșă cu muniție"
+
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "Mulțumesc, mai dorești ceva?"
+
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "Nu îți permiți asta. O zi bună."
+
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "Bun venit. Ce aș putea să-ți arăt?"
+
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "Costum de protecție"
+
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "Aici este."
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "N-ai suficienți bani."
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Armură de piele."
+
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "Aici este."
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "Poate altădată?"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Armură din metal"
+
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "Să o porți sănătos."
+
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "Întoarce-te când ai destui bani!"
+
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "Cu ce te pot ajuta?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Trusă de Prim-Ajutor"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Aici este."
+
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "Ai nevoie de 10 monezi de aur pentru asta."
+
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "Kit chirurgical de teren."
+
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "Merci."
+
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "Mi-aș dori să le pot da pe gratis, dar costă 25 de monezi de aur."
+
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "Vindecă-mă."
+
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "Poftim. Ai grijă."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "Păi, poate îți permiți niște truse de prim-ajutor?"
+
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+"Bună prietene, nu te-am mai văzut pe-aici. Tot ce spune e că aș avea grijă "
+"pe unde merg, se întâmplă multe prin jur și e mai bine să nu te amesteci."
+
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "Informație"
+
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "Canalele găzduiesc mai mult decât roboți și șobolani."
+
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr ""
+"Hei un om are nevoie și de bani. Crezi că glumeții ăștia au sfaturi bune?"
+
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr ""
+"Te-ai întors din nou, hă? Păi, măcar cunoști destule cât să rămâi întreg. Ce "
+"pot face pentru tine?"
+
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "Mai multă informație"
+
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "Guvernatorul e o simplă reamintire a influenței Ordinului."
+
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "Întoarce-te dacă te răzgândești."
+
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr ""
+"Păi, cu sigranță pui multe întrebări pentru cineva care a trăit atât. E în "
+"regulă însă, prefer să vorbesc cu cineva ca tine decât cu grămada asta."
+
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "Mai multă informație."
+
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr ""
+"Sunt mai multe lucruri care țin de Ordin decât ceea ce se petrece în jur."
+
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "Întoarce-te dacă te răzgândești."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr ""
+"Gata prietene, fântâna a secat. Ți-am spus mai multe decât ar fi trebuit "
+"oricum."
+
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr ""
+"Greu să cumperi jucarii noi... când ești falit. Dar faci o mică treabă "
+"pentru mine și o să fii putred de bogat."
+
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "N-am nimic mai bun de făcut."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "Nu merci."
+
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "Nimeni nu scapă de mine!"
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+"Bună alegere. Sanctuarul Ordinului de lângă râu e lagărul lor neoficial. "
+"Ascuns înăuntru e un potir. Îl înșfaci, mă găsești la tavernă, și îți iei "
+"răsplata."
+
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "Cum ar trebui să fac asta?"
+
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "Lasă-mă să mă gândesc."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Oh, nicio altă șansă. Gardienilor, omorâți-l."
+
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr ""
+"Aici e o arbaletă, doar țintești și -- pleoșc! --. Ține minte, pune mâna pe "
+"potir și găsește-mă la tavernă."
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Ne vedem acolo."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr ""
+"Ce mai aștepți? Nu te teme, voi curăța eu cadavrele, tu doar adu-mi potirul."
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "Gardieni, omorâți trădătorul!"
+
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+"Hei, știu la ce te gândești, pare o capcană, dar nu aș face asta niciodată "
+"unei mașini ucigașe, serios. Atâta harababură pentru un potir, . Acum "
+"pregătește-te, aur și glorie, dupa cum ți-am promis. Ia cheia asta și însuși "
+"Guvernatorul te va răsplătii."
+
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "Grozav, abia aștept."
+
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "Niciun potir, niciun ban!"
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Păstrez potirul, merci."
+
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "Păstrezi? Ba nu cred!"
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "Ce mai aștepți? Guvernatorul însuși te va răsplătii."
+
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "Mori trădătorule! "
+
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr ""
+"Deci tu ești tolomacul care a furat potirul? Am să te arestez drept un hoț "
+"rebel... Prin urmare crescând in rangurile Ordinului. Cum e să fii un pion? "
+
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "Nașpa!"
+
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "Pentru tine, cu siguranță."
+
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "Harris mi-a promis bani!"
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "Păcat. Tot ce vei primi e moarte!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "Te vom omorâ!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "Valea!"
+
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "Te vom omorâ!"
+
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "Valea!"
+
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr ""
+"Ce loc perfect pentru noi, exact sub vechea hală a orașului. Oridnul crede "
+"că ne-a ras pe toți, dar a fost doar o amintire pentru ceea ce se poate "
+"întâmpla când devi neglijent. "
+
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Vorbește cu Macil, el te poate ajuta."
+
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+"Am auzit că Macil va începe ceva curând. Trebuie să dăm lovitura după "
+"ultimul fiasco. Încă unul și vom fi prea slabi să continuăm."
+
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr ""
+"Câteva butoaie aruncate în rezerva lor de apă ar trebui să egaleze șansele. "
+
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+"Lucrez la ceva ce ne va da un avantaj. Îți va crește rezistența și forța. Am "
+"rezolvat aproape toate problemele. Pot să te ajut cu ceva acum? "
+
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "Mamă, ești un dezastru. O să văd ce pot face."
+
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "Implant pentru rezistență?"
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "În regulă, va dura doar un moment."
+
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "Încă nu e gata."
+
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr ""
+"Hei, lucrez la o variantă îmbunătățită a implantului tău. E ceva cu care pot "
+"să te ajut?"
+
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "Pă, măcar tu ai parte de niște acțiune."
+
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "Upgrade la implant?"
+
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "Bine zis, nu poți fi niciodată prea sigur."
+
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "Sunt aproape gata, dar nu tocmai."
+
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr ""
+"În regulă, asta e tot. Acum aproape totul merge perfect. Au mai fost câteva "
+"probleme de rezolvat, mai ai nevoie de ceva? "
+
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "Bandajează-mă."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "Ce ai încercat să faci? Dai cap în cap cu un Cruciat?"
+
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "Upgrade la implant?"
+
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "Asta ar trebui să fie suficient."
+
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "Lasă-mă să mai fac niște teste mai întâi."
+
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "Asta e tot ce pot face implantului acum. Poate niște bandaje?"
+
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "Da."
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "Mamă, ești un dezastru. O să văd ce pot face."
+
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "Ce pot face pentru tine?"
+
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "Nu mai am gloanțe."
+
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "În regulă, o să îți arăt niște repere."
+
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "Nu ești pregătit încă."
+
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "Te-ai întors iar? De ce ai nevoie?"
+
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "Nu mai am gloanțe."
+
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "Ai destulă muniție."
+
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "În regulă, asta ar trebui să te ajute pentru moment."
+
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "Scuze, nu pot. Eu doar umez ordinele lui Macil."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+"Deci care e, gloanțe sau instruire? Abia aștept să pun mâna pe armele pe "
+"care le-am capturat. Odată ce termin cu ele îi voi putea instrui și pe "
+"ceilalți."
+
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "Nu mai am muniție."
+
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "Uite niște muniție. N-o risipi."
+
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "Ai destulă muniție."
+
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "Învață-mă."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr ""
+"O.K. Cu ceea ce ai învățat, trimite-i pe nemernicii Ordinului către infern."
+
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "Revin-o mai încolo, când Macil zice că e timpul."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr ""
+"Te-am învățat tot ce stiu. Dă-mi niște timp să pun noile arme la treabă. "
+"Asta dacă nu ai rămas fără gloanțe."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Da sunt."
+
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "Aici sunt."
+
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr ""
+"Nu deveni prea entuziasmat în oraș, vei declanșa alarma și vor trimite "
+"gardieni din castel."
+
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "Bun venit, mereu încântați de orice ajutor."
+
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr ""
+"Când încă luam parte la acțiune am avut ocazia să examinez un acolit. "
+"înaintă să ajungă întăririle, nu sunt umani."
+
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr ""
+"Încercăm să găsim unde sunt mecanismele castelului, dar n-am avut noroc până "
+"acum."
+
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr ""
+"Nu fii prins. Am auzit povești de groază legate de ce tratament primesc "
+"oamenii odată ce sunt închiși. Pur și simplu dispar fără niciun fel de urmă. "
+
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+"Iată un sfat, dacă vezi vreodată un soldat al Ordinului, fugi în direcția "
+"opusă. Îmi displac mai ales Războinicii, ăștia sunt pur și simplu rapizi!"
+
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr ""
+"Bun-venit la ultima speranță. Numai noi avem voința de a ne opune Ordinului. "
+"Avem cele mai strălucite minți științifice și multe corpuri capabile. Dar ne "
+"lipsește acea persoană capabilă să rezolve probleme, care o să ne dea "
+"avantajul de care avem nevoie."
+
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "Ce trebuie să fac? "
+
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr ""
+"Ajută-ne. Ajută-ne să le furăm tehnologia. Să ne eliberăm compatrioții. Să "
+"luptăm cu acești psihopați suciți până la moarte. Îți cer să îți riști viața "
+"pentru adevăr."
+
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "Sunt cu tine!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+"Bun. Blackbird va continua să fie ghidul tău. A început să ia un interes "
+"asupra ta. Împreună, va trebui să aflați secretele Ordinului și servitorilor "
+"lor inumani. Există o prezență care se târăște la marginea capacității "
+"noastre de înțelegere care le ghidează teroarea. Infiltrează-te și pune-i la "
+"pământ. "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "Le voi arăta eu lor!"
+
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "Ăsta e spiritul."
+
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "Bun-venit prietene!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "Te rog nu mă răni."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "Dacă vrei să mă rănești, nu merit efortul."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "Nu știu nimic."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "Pleacă sau voi chema gardienii!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr ""
+"Uneori îmi doresc ca rebelii ăștia să își vadă de treaba lor și să înceteze "
+"cu tâmpeniile."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Doar lasă-mă în pace, OK?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "Nu sunt sigur, dar uneori am impresia că cunosc pe unii acoliți."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "Ordinul a încuiat cam tot ce se poate pe aici."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "Sub nicio formă nu e asta doar o forță de securitate."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr ""
+"Am auzit că Ordinul e destul de stresat dorită acțiunilor Frontului pe-aici."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "Nicio șansă ca Ordinul să ni se opună."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr ""
+"Suntem aproape gata să dăm lovitura. Planurile lui Macil încep să se lege."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "Suntem toți în spatele tău, nu te teme."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "Nu te apropia de roboți. Te vor topii!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr ""
+"Ziua în care noi vom avea gloria va veni curând și toti vor fi striviți."
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "Nu te fă prea comfortabil. Încă mai avem treabă de făcut."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "Macil spune că tu ești speranța. Ține minte asta."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr ""
+"Dupa ce îi vom răpune pe șarlatanii ăștia, vom putea reconstrui lumea în "
+"ceea ce trebuie să fie."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr ""
+"Ține minte că nu lupți doar pentru tine, ci pentru toți de aici și de afară."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Atâta timp cât unul din noi trăiește, vom triumfa."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "Mișcă, sărmanule."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Urmează crezul adevărat, doar atunci vei începe să înțelegi."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "Doar prin moarte poate cineva să fie renăscut cu adevărat."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "Nu sunt interesat de lipsa ta de sens."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "Dacă voiam să vorbim ți-aș fi spus."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "Du-te și enervează pe altul."
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "Continuă să mergi!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "Dacă alarma e declanșată, pur și simplu nu ne sta în cale."
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "Ordinul va curăța lumea și ne va propulsa într-o nouă eră."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "Probleme? Nu, așa credeam și eu."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "Ceva pentru ce-i sărmani?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "La ce te uiți?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "Nu ai mâncare în plus, nu-i așa?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "Voi oamenii de la suprafață nu veți înțelege niciodată."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr ""
+"Ha, gardienii nu ne pot găsi. Idioții ăștia nici măcar nu știu de existența "
+"noastră."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr ""
+"Într-o bună zi toți în afară de cei care slujesc Ordinul vor fi nevoiți să "
+"ni se alăture."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "Te holbezi acum, dar asta va fi soarta ta într-o zi."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "Nu e nimic mai enervant decât o persoană de la suprafață cu fițe!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "Ordinul va face preș din Frontul tău."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "Ai grijă, omule de la suprafață! Ne cunoaștem inamicii."
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "Suntem mâinile destinului. Să ne câștigi furia e să găsești vidul!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "Ordinul va curăța lumea de slabi și corupți!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "Supune-te voinței stăpânilor!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "Viață lungă fraților Ordinului!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "Voința liberă e o iluzie care leagă mințile slabe."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "Puterea e calea spre glorie. Să urmezi Ordinul e să urmezi acea cale!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "Alătură-te celor drepți!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "Ordinul îi protejează pe cei loiali."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "Acoliți? Încă nu au văzut gloria Ordinului."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr ""
+"Dacă e o fărâmă de onoare în acel corp jalnic, vei putea intra în brațele "
+"Ordinului."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "Pa!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "Merci, pa!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "Ne vedem mai încolo!"
+
+msgid "TXT_ILOG1"
+msgstr ""
+"Alo? Centrul de comandă, o unitate tocmai a fost activată.... Primesc "
+"imagini și audio de la... cineva... Hei tu, pleacă de acolo și lasă potirul!"
+
+msgid "TXT_ILOG2"
+msgstr ""
+"Ascultă, unitatea asta îmi spune că ești 100% uman. Am primit ordin să te "
+"arestez. Trădează-mă și plătești. Oh, apropo, îmi poți spune Blackbird."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+"Ascultă, unitatea asta îmi spune că ești 100% uman. Poate putem avea "
+"încredere unii în ceilalți. Consideră acest test, e un aruncător de flăcări "
+"în complexul Guvernatorului. Ia-l, te va duce la noi."
+
+msgid "TXT_ILOG3"
+msgstr ""
+"Du-te în vechia hală a orașului. Macil a construit un tunel care ne permite "
+"să ne deplasăm fără ca acoliții să știe."
+
+msgid "TXT_ILOG4"
+msgstr ""
+"Du-te prin ușa la stânga, apoi dreapta. Numele gardianului e Geoff. Spune-i "
+"că ai nevoie de aur."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+"Nu intra în hala orașului. Nu mai e sigură, s-a dus acoperirea noastră. "
+"Distruge toți roboții mari, Cruciații te vor conduce la noi."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr ""
+"Ușa de lângă magazinul de arme se va deschide odată ce toți Cruciații sunt "
+"morți. Înăuntru e un teleportor, ia-l, te va duce la noi."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr ""
+"Ușa de lângă magazinul de arme se va deschide odată ce toți Cruciații sunt "
+"morți. Înăuntru e un teleportor, ia-l, te va duce la noi."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr ""
+"Distruge cât mai mulți roboți, Cruciați, pe cât poți. Când ești gata, te voi "
+"duce la Macil."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "Intră pe ușă și du-te la Macil."
+
+msgid "TXT_ILOG10"
+msgstr ""
+"Găsește comutatorul de energie, și oprește-l. Du ceva înapoi la Guvernator "
+"drept dovadă. Găsește-l pe MacGuffin, și vorbește cu el."
+
+msgid "TXT_ILOG11"
+msgstr ""
+"Găsește comutatorul de energie, și oprește-l. Du ceva înapoi la Guvernator "
+"drept dovadă. Găsește-l pe MacGuffin, și vorbește cu el, e lângă fabrica de "
+"tratament, în josul scărilor."
+
+msgid "TXT_ILOG13"
+msgstr ""
+"Idiotule! Ai oprit curentul circuitelor noastre care ne mascau prezența. Du-"
+"te în hala orașului și elimină echipajul! Apoi, du-te la Guvernator și dă-i "
+"cuplajul!"
+
+msgid "TXT_ILOG14"
+msgstr ""
+"OK, 'Încrede-te în nimeni' e numele jocului. Să luam permisul închisorii de "
+"la Guvernator. Ia cuplajul defect și du-l lui."
+
+msgid "TXT_ILOG15"
+msgstr ""
+"Bună mutare! Guvernatorul e un mincins. Acela e cuplajul nostru. Îl folosim "
+"pentru a ne ascunde baza de Ordin. Ia cuplajul ăsta defect și du-l înapoi "
+"lui, să luăm permisul."
+
+msgid "TXT_ILOG18"
+msgstr ""
+"Folosește cheia pe care ți-a dat-o Guvernatorul și găsește o cale să "
+"eliberezi prizonierii."
+
+msgid "TXT_ILOG19"
+msgstr ""
+"Găsește o cale să eliberezi prizonierii. Găsește o cale să deschizi "
+"comutatorul scanner-ului de mâini."
+
+msgid "TXT_ILOG20"
+msgstr ""
+"Găsește o cale să eliberezi prizonierii. Folosește mâna judecătorului să "
+"operezi scanner-ul de mâini."
+
+msgid "TXT_ILOG21"
+msgstr ""
+"Bună treabă prietene. Sari într-un teleportor și te va duce la baza noastră."
+
+msgid "TXT_ILOG22"
+msgstr ""
+"Distruge cristalul de energie care alimentează scuturile Ordinului. "
+"Vizitează-l pe Worner, un spion recrutat în depozitul stației de energie."
+
+msgid "TXT_ILOG24"
+msgstr "Să ne pierdem. O să mai fie distracții."
+
+msgid "TXT_ILOG25"
+msgstr ""
+"Încă o aventură până ce comanda e încrezătoare în atacarea castelului. Macil "
+"a aranjat ca Irale să îți ofere bani și antrenament. Dupa ce îț vizitezi, "
+"mergi la medicul din oraș pentru forță."
+
+msgid "TXT_ILOG26"
+msgstr ""
+"Vizitează pe Irale și medicul din oraș pentru aur și antrenament, apoi "
+"găsește canalele. Urmează râul de lângă complexul Guvernatorului."
+
+msgid "TXT_ILOG28"
+msgstr ""
+"Îl căutăm pe Weran, care-și spune Regele Sobolanilor. Sunt sigur că e și "
+"descripti și colorat."
+
+msgid "TXT_ILOG33"
+msgstr ""
+"Du bucățiile aruncătorului la Irale. Drenează rezervorul recuperării. La "
+"fund e o intrare secretă către canale. Controlul porții e jos, undeva. "
+"Distruge-l."
+
+msgid "TXT_ILOG37"
+msgstr ""
+"Comandă, a reușit! Porțile sunt deschise. Trimite trupele de șoc și spune-i "
+"lui Macil că intrăm! Să ne întoarcem la baza Frontului."
+
+msgid "TXT_ILOG38"
+msgstr ""
+"Alătură-te asaltului asupra castelului. Găsește-l și elimină-l pe "
+"Programator. Avem rapoarte diferite în ceea ce privește locația lui. Unul "
+"spune că e într-o sală de calculatoare, iar altul că se ascunde într-un "
+"subnivel al templului, și încă unul care spune că e în capătul unui coridor "
+"lung."
+
+msgid "TXT_ILOG45"
+msgstr "Găsește Programatorul și ucide-l."
+
+msgid "TXT_ILOG46"
+msgstr ""
+"Găsește Oracolul și întreabă-l de piesele Sigiliului. Oracolul are reședința "
+"în mărginime, chiar la ieșirea din oraș. Trece râul, du-te spre castel și ia-"
+"o la stânga prin arcadă."
+
+msgid "TXT_ILOG47"
+msgstr ""
+"Găsește Oracolul și întreabă-l de piesele Sigiliului. Oracolul are reședința "
+"în mărginime, la ieșirea din oraș."
+
+msgid "TXT_ILOG48"
+msgstr ""
+"Găsește Oracolul și întreabă-l de piesele Sigiliului. Ia-ți recompensa ți du-"
+"te la medic și antrenorul de arme. Templul Oracolului e în mărginimea "
+"orașului."
+
+msgid "TXT_ILOG50"
+msgstr ""
+"Găsește Oracolul și întreabă de celelalte piese ale Sigiliului. Aici este. "
+"Înregistrez totul. Nu e vorba că nu am încredere că vei supraviețui, dar nu "
+"putem lăsa Ordinul ca ia Sigiliul."
+
+msgid "TXT_ILOG56"
+msgstr ""
+"A doua piesă e în inima turnului stăveziu din obsidian. Episcopul e liderul "
+"miltar ar Ordinului. Îl omorâm și înscriem de două ori. Ia semnul Oracolului "
+"la stăpânul cheii în mărginime."
+
+msgid "TXT_ILOG57"
+msgstr ""
+"Episcopul o să fie extrem de bine înarmat, deci de ce nu strecurăm o "
+"uniformă ca să ne camuflăm? Găsește Episcopul. Odată ce l-ai distrus, "
+"întoarce-te la Oracol."
+
+msgid "TXT_ILOG59"
+msgstr ""
+"Tocmai am primit informație că avem un informator în fortăreață. Să mergem "
+"către spital. Acolo lucrează. După aceea, să îl găsim pe Episcop și să-l "
+"eliminăm. Odată ce e mort întoarce-te la Oracol."
+
+msgid "TXT_ILOG64"
+msgstr ""
+"Nu te da bătut. Drept în față. Sari pe teleportorul către administrația "
+"centrală și distruge nucleul calculatoarelor. Asta va distruge câmpul de "
+"forță la intrarea în turnul Episcopului. Odată ce e mort, întoarce-te la "
+"Oracol."
+
+msgid "TXT_ILOG70"
+msgstr ""
+"Foarte impresionant. Să-l aruncăm în aer. Asta va rezolva problema câmpului "
+"de forță. Să ne întoarcem la alee, apoi către turn și Episcop."
+
+msgid "TXT_ILOG74"
+msgstr ""
+"Bravo, încă o bucată din Sigiliu! Ai văzut spectrul ciudat ce a ieșit din "
+"corpul Episcopului? Unde am mai văzut asta oare? Să ne întoarcem la Oracol."
+
+msgid "TXT_ILOG76"
+msgstr ""
+"Am un raport care spune că energia spectrală a Episcopului a prezentă și în "
+"Oracol, s-avem grijă."
+
+msgid "TXT_ILOG79"
+msgstr ""
+"Richter a preluat controlul asupra forțelor noastre. Se pare că Macil ne-a "
+"mințit tot timpul. A fost loial cu adevărat doar Ordinului. Ce șarpe. Să ne "
+"întoarcem la Oracol."
+
+msgid "TXT_ILOG83"
+msgstr ""
+"Altă piesă din Sigiliu. Suntem cu un pas mai aproape de libertate. Și tu "
+"ești cu un pas mai aproape de mne. Să ne întoarcem la Oracol."
+
+msgid "TXT_ILOG85"
+msgstr ""
+"Ai puterea întregului Sigiliu. Ce zici dacă avem parte de un sfârșit. Să "
+"vedem ce poate prezice Maestrul Cunoștiințelor."
+
+msgid "TXT_ILOG87"
+msgstr ""
+"Atât a fost cu prognoza. Stai, Macil ne sună înapoi. Să ieșim de aici "
+"întregi."
+
+msgid "TXT_ILOG89"
+msgstr ""
+"Fabrica e lângă mine, Richter se referă la minele din Degnin. Minereul de "
+"Degni e magnetic și exploziv, exact ceea ce ne trebuie pentru a opri câmpul "
+"de forță. Să luăm cheia aceea din catacombe și să ne îndreptăm înspre mine."
+
+msgid "TXT_ILOG93"
+msgstr ""
+"Fabrica e lângă mine, Richter se referă la minele din Degnin. Minereul de "
+"Degni e magnetic și exploziv, exact ceea ce ne trebuie pentru a opri câmpul "
+"de forță. Să luăm cheia aceea din catacombe și să ne îndreptăm înspre mine."
+
+msgid "TXT_ILOG95"
+msgstr ""
+"Fabrica e lângă mine, Richter se referă la minele din Degnin. Minereul de "
+"Degni e magnetic și exploziv, exact ceea ce ne trebuie pentru a opri câmpul "
+"de forță. Prietene, orice ar fi, ne luptăm cu ceva mai mult decât Ordinul. "
+"Înapoi la comune și dupaia, mine. Ne trebuie minereu."
+
+msgid "TXT_ILOG96"
+msgstr ""
+"Fabrica e lângă mine. Minereul de Degnin e magnetic și exploziv, exact ceea "
+"ce ne trebuie pentru câmpul de forță. Fără a lăsa garda jos, uită-te după "
+"depozite de minereu."
+
+msgid "TXT_ILOG97"
+msgstr ""
+"Fără a lăsa garda jos, uită-te după minereu. Sufletele ăstea sărmane sunt "
+"drone. Funcțiile lor sinaptice primesc interferență de la implanturile RC. "
+"Distrugem transmițătoarele și sunt libere."
+
+msgid "TXT_ILOG99"
+msgstr ""
+"Fabrica e lăngă mine. Fără a lăsa garda jos uită-te dupa depozite de "
+"minereu. Sugestia mea e, aruncă minereul la câmpul de forță și aruncă-l în "
+"aer, comprimarea ce va rezulta în urma ei ar trebui să creeze o încărcătură "
+"magnetică care va distruge luminile."
+
+msgid "TXT_ILOG100"
+msgstr ""
+"Acum înspre fabrică. Ieși din mine, nu o poți rata. Să găsim mașina aia și "
+"să o oprim!"
+
+msgid "TXT_ILOG102"
+msgstr ""
+"Citesc distorsiune neurale masive drept din față, cred că am găsit-o. Să "
+"intrăm și să o oprim."
+
+msgid "TXT_ILOG103"
+msgstr ""
+"Exact când credeam că am văzut tot. Intră oameni și ies...Nici nu vreau să "
+"mă gândesc. Distruge-o!"
+
+msgid "TXT_ILOG104"
+msgstr ""
+"Macil a înnebunit. A trimis intenționat 200 oameni la moarte. Vreau "
+"răzbunare! Pentru morți și morții vii! Să ne întoarcem și să vedem despre ce "
+"e vorba."
+
+msgid "TXT_ILOG106"
+msgstr ""
+"Fabrica duce înspre un laborator, și primesc putere de la o piesă din "
+"Sigiliu. Înapoi la fabrică și încă un pas spre libertate."
+
+msgid "TXT_ILOG120"
+msgstr ""
+"Găsește Episcopul și distruge-l! Odată ce e mort, întoarce-te la Oracol."
+
+msgid "TXT_ILOG122"
+msgstr ""
+"Laboratorul Maestrului Cunoștiințelor e dincolo de teleportorul care tocmai "
+"s-a deschis. Să mergem și să vedem despre ce tot bolborosea. Și următorul "
+"nostru pas spre libertate."
+
+msgid "TXT_ILOG211"
+msgstr ""
+"Hai, să ieșim de aici. Câmpul de forță e la pământ, către turnul "
+"Episcopului. Odată ce e mort, întoarce-te la Oracol."
+
+msgid "TXT_ILOG1001"
+msgstr ""
+"Găsește sanctuarul de lângă râu. Fură potirul din interior. Du-l la Harris "
+"în tavernă."
+
+msgid "TXT_ILOG1002"
+msgstr "Găsește Guvernatorul. Vorbește cu el despre recompensa ta."
+
+msgid "TXT_ILOG1003"
+msgstr ""
+"Găsește sanctuarul de lângă râu. Înăuntru cineva numit Beldin e reținut. "
+"Redu-l la tăcere și întoarce-te cu inelul la Rowan drept dovadă."
+
+msgid "TXT_ILOG1004"
+msgstr "Găsește locația Frontului și vorbește cu Macil."
+
+msgid "TXT_ILOG1005"
+msgstr "Du-te în josul scărilor, găsește-l și vorbește cu Macil."
+
+msgid "TXT_ILOG1006"
+msgstr ""
+"Vizitează pe Irale, distribuitorul de arme alFrontului în oraș. E dincolo de "
+"ușa de lângă magazinul de arme. Apoi, folosește cheia pe care Macil ți-a dat-"
+"o și vorbește cu Guvernatorul."
+
+msgid "TXT_ILOG1007"
+msgstr ""
+"Găsește cuplul de putere și oprește-l. Adu ceva drept dovadă Guvernatorului."
+
+msgid "TXT_ILOG1008"
+msgstr "Găsește-l pe Derwin în depozit. Omoară-l și adu-i urechea lui Mourel."
+
+msgid "TXT_ILOG1009"
+msgstr ""
+"Folosește parola pe care ți-a dat-o Mourel pentru a intra în închisoare. "
+"Odată înăuntru, vorbește cu Directorul Montag. Găsește o cale să eliberezi "
+"prizonierii."
+
+msgid "TXT_ILOG1010"
+msgstr ""
+"Folosește cheia pe care ți-a dat-o Guvernatorul și găsește o cale să "
+"eliberezi prizonierii."
+
+msgid "TXT_ILOG1011"
+msgstr ""
+"Distruge cristalul de nergie care alimentează câmpurile Ordinului. Vizitează "
+"pe Worner, un spion recrutat în depozitul stației. Nu uita să vorbești cu "
+"medicul și antrenorul de arme înainte."
+
+msgid "TXT_ILOG1012"
+msgstr ""
+"Distruge critalul energetic care alimentează scuturile Ordinului. Folosește "
+"cardul pentru a intra în stația de alimentare. Ai putea verifica și "
+"depozitul de deasupra lui Worner."
+
+msgid "TXT_ILOG1013"
+msgstr ""
+"Distruge cristalul de energie care alimentează scuturile Ordinului. Vorbește "
+"cu Ketrick în zona nucleului."
+
+msgid "TXT_ILOG1014"
+msgstr ""
+"Distruge cristalul energetic. Vorbește cu Ketrick, redă pasarela folosind "
+"butoanele, apoi folosește cardul pentru lift."
+
+msgid "TXT_ILOG1015"
+msgstr ""
+"Găsește intrarea orașului pe care Ordinul a păzit-o. Deschide ușa și du "
+"uniforma paznicului la Weran."
+
+msgid "TXT_ILOG1016"
+msgstr ""
+"Du bucățiile aruncătorului de flăcări la Irale. Găsește ușa de mentenanță de "
+"la canale. Găsește și drenează rezervorul de recuperare din interiorul "
+"castelului. La fund e o intrare secretă către canale. Jos, se pot acționa "
+"porțiile, de undeva."
+
+msgid "TXT_ILOG1017"
+msgstr ""
+"Alătură-te asaltului asupra castelului. Vezi medicul și antrenorul de arme. "
+"Cheltuie tot ce ai. O să fie o luptă pe cnste."
+
+msgid "TXT_ILOG1018"
+msgstr ""
+"Folosește cheia pe care Programator fals ți-a dat-o pentru a deschide "
+"intrarea către curtea Programatorului. Trebuie să fie locul în care se "
+"ascunde. Găsește Programatorul și ucide-l."
+
+msgid "TXT_ILOG1019"
+msgstr ""
+"Caută Oracolul și întreabă de celelalte piese de Sigiliu. Ia-ți recompensa "
+"și du-te la medic și antrenorul de arme."
+
+msgid "TXT_ILOG1020"
+msgstr ""
+"A doua piesă e în inima turnului stăveziu din obsidian. Episcopul te va "
+"aștepta. Ia semnul Oracolului la stăpânul cheii în mărginime. După ce ai "
+"eliminat Episcopul întoarce-te la Oracol."
+
+msgid "TXT_ILOG1021"
+msgstr ""
+"Găsește turnul străveziu din obsidian. Folosește cardul pe care ți l-a dat "
+"stăpânul cheilor pentru a intra. După aceea, găsește-l pe Episcop. Odată ce "
+"l-ai distrus, întoarce-te la Oracol."
+
+msgid "TXT_ILOG1022"
+msgstr ""
+"Găsește complexul de securitate, intră în luptă, și folosește teleportorul "
+"către administrația centrală. Distruge nucleul calculatorului. Asta va "
+"distruge scutul din turnul Episcopului. Odată ce e mort, întoarce-te la "
+"Oracol."
+
+msgid "TXT_ILOG1023"
+msgstr ""
+"Următoarea provocare îți va testa spiritul. A treia pieșă e ținută de "
+"propriul vostru lider. E același ca cel care vă trimite să ucideți. Înfruntă-"
+"l și împlinește-ți destinul."
+
+msgid "TXT_ILOG1024"
+msgstr ""
+"E Oracolul cel care deține ultima piesă. Acolo e trădătorul. Întoarce-te la "
+"Oracol, și răpune-l. Întoarce-te la mine când ai terminat."
+
+msgid "TXT_ILOG1025"
+msgstr ""
+"Ai tăiat cancerul din corp, dar inima ta încă bate. Mai departe trebuie să "
+"găsești pe chirurgul care vă masacrează oamenii.... Maestrul Cunoștiințelor. "
+"Oprește-l, și următoarea piesă va fii a ta."
+
+msgid "TXT_ILOG1026"
+msgstr ""
+"Mai departe trebuie să găsești chirurgul care vă masacrează oameni.... "
+"Maestrul Cunoștiințelor. Oprește-l, și următoarea piesă va fii a ta."
+
+msgid "TXT_ILOG1027"
+msgstr ""
+"Ai ales înțelept. A treia piesă e deținută de liderul vostru. Distruge ceea "
+"ce se ascunde în inima ta și întoarce-te la mine."
+
+msgid "TXT_ILOG1028"
+msgstr ""
+"Am aflat că Ordinul ne transformă oamenii în soldați bio-mecanici. Găsește "
+"fabrica unde se întâmplă asta și închide-o, permanent! Găsește-l pe Richter "
+"la comune, lângă cascadă și îți va spune cum să oprești atrocitatea."
+
+msgid "TXT_ILOG1029"
+msgstr ""
+"Pentru a intra în fabrică ai nevoie de cheie. Noi am furat una, dar agentul "
+"care a luat-o e undeva în caverne, sub comune. E ceva acolo care ne răpește "
+"oamenii. Orice ar fi, găsește-l și ia cheia. Când o ai, fabrica e lângă mine."
+
+msgid "TXT_ILOG1101"
+msgstr ""
+"Găsește potirul în sanctuarul capelei și du-l lui Harris sus în tavernă."
+
+msgid "TXT_ILOG1102"
+msgstr ""
+"Găsește complexul Guvernatorului și vorbește cu el pentru a-ți lua "
+"recompensa."
+
+msgid "TXT_ILOG1201"
+msgstr ""
+"Felicitări! Ne-ai câștigat recunoștiința. Vizitează medicul și antrenorul de "
+"arme și te vor pregătii pentru ceea ce urmează mai departe. Simte-te liber "
+"să te plimbi prin bază."
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "Sergent al Ordinului"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "Gardian Închisoare"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "Asistent"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "Stăpân al Cheilor"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "Gardă de Corp"
+
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "Interogator"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "Directorul Montag"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Sfetnicul lui Macil"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "Judecătorul Wolenick"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "Prizonier"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "Făurar Arme"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "Gardian Reactor"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "Ucenic"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "Paznic"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "Maestrul Smithy"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "Paznic Depozit"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "Barman"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Timotei"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "Gardian Bailey"
+
+msgid "TXT_SPEAKER_DRONE"
+msgstr "Dronă"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "Gandian Front"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "Sergent"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "Gardian Templu"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "Oracol"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "Soldat Front"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "Programator"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "Străjer"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Sfetnic"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "Supraveghetor"
+
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "Paznic Complex de Securitate"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "Tehnician Calculatoare"
+
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "Muncitor Docuri"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "Gardian Nucleu"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "Gardian Canal"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "Tehnician"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "Gardian"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "Sărman"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Armurier"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "Guvernatorul Mourel"
+
+msgid "TXT_SUB_INTRO1"
+msgstr ""
+"Cometa ne-a izbit planeta în mod violent. Ne-am pierdut paradisul într-o "
+"clipă."
+
+msgid "TXT_SUB_INTRO2"
+msgstr ""
+"Impactul a lansat un virus, care a măturat pământul și omorât milioane. "
+"Aparent ei au fost cei norocoși."
+
+msgid "TXT_SUB_INTRO3"
+msgstr ""
+"Pentru că cei care nu au murit au ajuns mutanți. Unii au devenit fanatici "
+"care au auzit vocea unui zeu perfid în capul lor și s-au numit \"Ordinul\"."
+
+msgid "TXT_SUB_INTRO4"
+msgstr ""
+"Noi cei care suntem surzi și nu auzim vocea suferim oribil și suntem forțați "
+"să servin pe acești psihopați care cârmuie arme mai puternice decat orice "
+"avem."
+
+msgid "TXT_SUB_INTRO5"
+msgstr ""
+"Ne distrug femeile și copiii pentru ca noi să ne ascundem sub pământ și să "
+"trăim ca animalele, constant în teamă pentru virțiile noastre."
+
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+"Dar există șoapte ale neliniștii. Dacă ne organizam, am putea să ne "
+"înfrângem stăpânii? Armele sunt furate, soldații antrenați. O mișcare se "
+"naște: născută din suferința de o viață!"
+
+msgid "TXT_SUB_GOOD1"
+msgstr ""
+"Atenție, toate trupele Frontului: e gata! S-a terminat. Soldatul lui "
+"Blackbird a distrus Răul. Ordinul nu mai există. Blackbird, m-auzi?"
+
+msgid "TXT_SUB_GOOD2"
+msgstr ""
+"Știam că vei câștiga, eroul meu galant. Lupta a încetat. Vitoria ta ne "
+"permite să creăm un vaccin care va elimina virusul din corpul nostru."
+
+msgid "TXT_SUB_GOOD3"
+msgstr ""
+"Ai salvat planeta și ne-ai eliberat. Aș vrea să îți mulțumesc, personal... "
+"Oh, și apropo: numele e Shauna."
+
+msgid "TXT_SUB_SAD1"
+msgstr "Da, răul s-a dus dar viitorul nostru era în ceață și neclar."
+
+msgid "TXT_SUB_SAD2"
+msgstr ""
+"Va dura generații până vom elimina virusul din oamenii noștri. Dacă vom trăi "
+"suficient."
+
+msgid "TXT_SUB_SAD3"
+msgstr ""
+"Orice ar fi vrut răul, ne-a stors de ceea ce am avut cea mai mare nevoie: "
+"speranță."
+
+msgid "TXT_SUB_BAD1"
+msgstr ""
+"Virusul viu ne-a lovit ca un val, făcându-ne să o luăm razna. Am auzit "
+"cântecul de moarte al sirenelor și am dansat."
+
+msgid "TXT_SUB_BAD2"
+msgstr ""
+"Acest rău ne-a stors de toată viața umană, detestând procreerea, reciclandu-"
+"ne familiile."
+
+msgid "TXT_SUB_BAD3"
+msgstr ""
+"Apoi, într-o zi, răul a plecat. Pur și simplu nu a mai rămas nimic din care "
+"să se hrănească. Eram dispăruți."
+
+msgid "TXT_SUB_MAP03_1"
+msgstr ""
+"Mutațiile genetice nu numai că au sucit psihicul Ordinului, dar le-a făcut "
+"corpul să se deterioreze."
+
+msgid "TXT_SUB_MAP03_2"
+msgstr ""
+"Fără procreere, Ordinul a descoperit că îmbunătățirile lor bio-mecanice erau "
+"tot ce îi ținea."
+
+msgid "TXT_SUB_MAP03_3"
+msgstr ""
+"Deteriorarea a avansat în așa fel încăt majoritatea soldațiilor pe care îi "
+"înfruntăm să fie mai mult mașini decât oameni dar credem că subconștientul "
+"lor colectiv e controlat de o singură sursă..."
+
+msgid "TXT_SUB_MAP03_4"
+msgstr ""
+"...Programatorul: creatorul inteligenței artificiale care controlează "
+"Acoliții. Distruge-l, și vom nimicii trupele Ordinului cu o singură lovitură:"
+" avem rapoarte care spun că poate vaporiza atacatorii."
+
+msgid "TXT_SUB_MAP10_1"
+msgstr ""
+"Fragmentele asamblate din fișierele Programatorului ne spun că Ordinul "
+"venerează o armă inteligentă. O numesc \"Sigiliul\"."
+
+msgid "TXT_SUB_MAP10_2"
+msgstr ""
+"Piesa pe care ai atins-o și recuperat-o e una din cinci. Își trage puterea "
+"din deținător. Cât trăiești, o controlezi."
+
+msgid "TXT_SUB_MAP10_3"
+msgstr ""
+"Șocul care te-a lăsat inconștient a fost piesa care s-a întors asupra ta. O "
+"controlezi, dar cu un preț: o să te sece."
+
+msgid "TXT_SUB_MAP10_4"
+msgstr ""
+"O piesă constituie putere uimitoare. Posesiunea tuturor pieselor ar fi "
+"devastatore și ar da deținătorului control asupra întregii planete."
+
+msgid "TXT_SUB_LOG2"
+msgstr ""
+"Ascultă, unitatea asta îmi spune că ești 100% uman. Am primit ordin să te "
+"arestez. Trădează-mă și plătești. Oh, apropo, îmi poți spune Blackbird."
+
+msgid "TXT_SUB_LOG3"
+msgstr ""
+"Du-te la vechea hală a orașului, Macil a construit un tunel care permite "
+"trecerea fără a fi detectat."
+
+msgid "TXT_SUB_LOG4"
+msgstr ""
+"Du-te prin ușa la stânga, apoi dreapta. Numele gardianului e Geoff. Spune-i "
+"că ai nevoie de aur."
+
+msgid "TXT_SUB_LOG5"
+msgstr ""
+"Irale e \"reparatorul\" Frontului. E în spatele ușii fără însemn lângă "
+"magazinul de arme."
+
+msgid "TXT_SUB_LOG6"
+msgstr "Ține minte: ucide subtil în loc de forță brută. Nu vei declanșa alarma."
+
+msgid "TXT_SUB_LOG7"
+msgstr ""
+"Tot ce știu despre Guvernator e că plătește ambele tabere. Aici e așa-zisul "
+"lui \"complex\"."
+
+msgid "TXT_SUB_LOG8"
+msgstr "Ugh. Scursurile umanității și-au găsit o casă cu siguranță."
+
+msgid "TXT_SUB_LOG9"
+msgstr ""
+"Numindu-l pe Mourel zgârcit e un compliment. E o corcitură de rahat pe băț."
+
+msgid "TXT_SUB_LOG10"
+msgstr ""
+"Avem nevoie să vorbim cu cineva care cunoaște vechiul oraș și unde e "
+"cuplajul. Centrul de comandă zice: găsește-l pe MacGuffin. "
+
+msgid "TXT_SUB_LOG11"
+msgstr ""
+"E în ceea ce se cheamă politicos \"groapa de ardere\". Ia pasarela de lângă "
+"fabrica de deșeuri și coboară scările."
+
+msgid "TXT_SUB_LOG12"
+msgstr ""
+"Poți să petreci mai mult timp cu misiunea. Nu pot găsi mai multe informații "
+"de la Centru."
+
+msgid "TXT_SUB_LOG13"
+msgstr ""
+"Idiotule! Ai oprit energia către circuitele noastre care ne permiteau să ne "
+"ascundem de Ordin. Du-te în hala vechiului oraș și elimină echipajul, acum!"
+
+msgid "TXT_SUB_LOG14"
+msgstr ""
+"OK, \"N-ai încredere în nimeni\" e numele jocului. Să luăm acea parolă de la "
+"guvernator și să eliberăm prizonierii."
+
+msgid "TXT_SUB_LOG15"
+msgstr ""
+"Bună mutare! Gvuvernatorul e un mincinos prost. Acela e cuplajul nostru. "
+"Acum să luăm parola."
+
+msgid "TXT_SUB_LOG16"
+msgstr "Depozitul e în stația de energie. Scurt și dulce."
+
+msgid "TXT_SUB_LOG17"
+msgstr "N-am crezut că o să intru într-o închisoare..."
+
+msgid "TXT_SUB_LOG18"
+msgstr "Presupun că nu e niciun prânz gratuit. Timpul să ne pregătim."
+
+msgid "TXT_SUB_LOG19"
+msgstr ""
+"OK. L-ai mulțumit pe Guvernator, împrăștiat pe Director... acum se pare că "
+"trebuie să faci niște chirurgie."
+
+msgid "TXT_SUB_LOG20"
+msgstr "Oh i-ai tăiat mâna! Și credeam că ești de treabă... oarecum. Să mergem."
+
+msgid "TXT_SUB_LOG21"
+msgstr ""
+"Bună treabă prietene. Sari într-unul din teleportoare și ne vom întoarce "
+"acasă."
+
+msgid "TXT_SUB_LOG22"
+msgstr ""
+"Worner e un spion pe care l-am recrutat în depozitul stației de energie."
+
+msgid "TXT_SUB_LOG23"
+msgstr ""
+"Vorba de la șef e să stai deoparte când spargi cristalul, altfel o să te "
+"faci terci."
+
+msgid "TXT_SUB_LOG25"
+msgstr ""
+"Încă o aventură înainte de atacarea centrului de comandă. Macil a aranjat cu "
+"Irale ca tu să primești aur și niște antrenament. Și vizitează medicul "
+"pentru forță."
+
+msgid "TXT_SUB_LOG26"
+msgstr ""
+"Ordinul crede că e în siguranță în castel. Greșit! Dacă deschizi porțile, "
+"vor fi victime ușoare. Pentru asta, va trebui să mergi în canale. Urmează "
+"râul până la complexul Guvernatorului. "
+
+msgid "TXT_SUB_LOG27"
+msgstr ""
+"OK, ghemuiește-te aici. Locuitorii canalelor sunt mutanți oribili, dar "
+"rețeaua lor de tunele le dă acces la secrete.... Mergem înăuntru."
+
+msgid "TXT_SUB_LOG28"
+msgstr ""
+"Îl căutăm pe Weran, care-și spune Regele Sobolanilor. Sunt sigur că e și "
+"descripti și colorat."
+
+msgid "TXT_SUB_LOG29"
+msgstr "Oh, yuck. Nu vreau să știu în ce calci!"
+
+msgid "TXT_SUB_LOG30"
+msgstr "Exact ce îmi trebuie. Mai multă mâzgă maro!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "Hei, uite! Acolo cred că e ușa pe care o vrea Weran!"
+
+msgid "TXT_SUB_LOG32"
+msgstr ""
+"Închide ochii! Nu vreau să văd! Oh... prea târziu... Yuck. Nu pare un "
+"cadavru uman. Ce a făcut Ordinul? Trebuie să raportez asta."
+
+msgid "TXT_SUB_LOG33"
+msgstr "De ce nu putem avea o misiune pe un câmp de flori măcar odată?"
+
+msgid "TXT_SUB_LOG34"
+msgstr ""
+"Îmi pare rău s-o spun dar asta îmi aduce aminte de casă. Stau sub pământ nu "
+"departe de aici."
+
+msgid "TXT_SUB_LOG35"
+msgstr "Nu mă întreba unde suntem, și eu sunt pierdut. Scuze."
+
+msgid "TXT_SUB_LOG36"
+msgstr "Cărămida aceea... Nu am trecut de ea? Nu..."
+
+msgid "TXT_SUB_LOG37"
+msgstr ""
+"Centru, am reușit! Porțile sunt deschise. Trimite trupele de șoc si spune-i "
+"lui Macil că intrăm! "
+
+msgid "TXT_SUB_LOG38"
+msgstr ""
+"Avem rapoarte conflictuale în privința locației Programatorului. Unul zice "
+"că e într-o sală de calculatoare, altul într-o curte, iar altul că e intr-un "
+"hol lung. Scuze. "
+
+msgid "TXT_SUB_LOG39"
+msgstr "Ah, e bine că mă regăsesc din nou pe partea ofensivă. Dați-le bătaie!"
+
+msgid "TXT_SUB_LOG40"
+msgstr "Arată bine. Calculatoare... Programator... Ce zici?"
+
+msgid "TXT_SUB_LOG41"
+msgstr ""
+"Ăsta trebuie să fie holul lung. Fie asta, fie capacitatea mea de a aprecia "
+"scara e varză."
+
+msgid "TXT_SUB_LOG42"
+msgstr ""
+"Ăsta e însemnul unui templu malefic. Arhitectura, steagurile... Eu zic bingo!"
+
+msgid "TXT_SUB_LOG43"
+msgstr "Ăsta e marele Programator? Nici vorbă!"
+
+msgid "TXT_SUB_LOG44"
+msgstr ""
+"Nu știu ce să mai cred. Singurul lucru care îmi spune \"curte\" e acea "
+"monstruozitate la stânga. Dar n-am idee cum să intrăm. "
+
+msgid "TXT_SUB_LOG45"
+msgstr "Cand lucrurile devin ciudate, ai grijă."
+
+msgid "TXT_SUB_LOG46"
+msgstr ""
+"Oracolul locuiește în mărginime, chiar la ieșirea orașului. Treci râul, du-"
+"te spre castle, și treci prin arcadă."
+
+msgid "TXT_SUB_LOG47"
+msgstr ""
+"Oracolul e un preot care simpatizează cu noi, și care se spune că operează "
+"din afara Ordinului."
+
+msgid "TXT_SUB_LOG48"
+msgstr "Templul Oracolului e în Mărginime, la ieșirea din oraș."
+
+msgid "TXT_SUB_LOG49"
+msgstr ""
+"Ordinul ne-a luat planeta minunată și a transformat-o într-o groapă de gunoi."
+
+msgid "TXT_SUB_LOG50"
+msgstr ""
+"Aici e. Înregistrez totul. Nu e vorba c nu vei supraviețui, dar nu putem "
+"permite Ordinului să controleze Sigiliul."
+
+msgid "TXT_SUB_LOG51"
+msgstr "Ești viteaz, soldatul meu. Sunt mândru să lupt alături de tne."
+
+msgid "TXT_SUB_LOG52"
+msgstr "Poți să te opreși un moment? Mi se face rău."
+
+msgid "TXT_SUB_LOG53"
+msgstr "De ce trebuie să petrecem atâta timp sub pământ? Am văzut subteranul."
+
+msgid "TXT_SUB_LOG54"
+msgstr ""
+"Chiar ar trebui să avem încredere în cineva în cineva al cărui sanctuar e "
+"verde?"
+
+msgid "TXT_SUB_LOG55"
+msgstr "Străveziu și Obsidian? De ce nu poate spune roșu și negru."
+
+msgid "TXT_SUB_LOG56"
+msgstr ""
+"Episcopul e liderul militar al Ordinului. Le planifică schemele, tacticile, "
+"spionează, și ne controlează. Îl eliminăm și înscriem de două ori."
+
+msgid "TXT_SUB_LOG57"
+msgstr ""
+"Episcopul o să fie extrem de bine păzit deci de ce nu luăm o uniformă și ne "
+"camuflăm?"
+
+msgid "TXT_SUB_LOG58"
+msgstr "Adu-mi aminte, câștigăm și chem să ne decoreze."
+
+msgid "TXT_SUB_LOG59"
+msgstr ""
+"Tocmai am primit ceva de la un informator din interiorul fortăreței. Să "
+"merge înspre ceea ce ei numesc spital, lucrează acolo."
+
+msgid "TXT_SUB_LOG60"
+msgstr "Ia planurile și distruge calculatorul, ok?"
+
+msgid "TXT_SUB_LOG61"
+msgstr ""
+"În regulă, nu mă plâng, dar data viitoare încercăm calea care nu duce la "
+"găleți de sânge."
+
+msgid "TXT_SUB_LOG62"
+msgstr ""
+"Am mai fost prin holuri nesfârșite dar jur că zidurile ăstea se mișcă odată "
+"cu noi."
+
+msgid "TXT_SUB_LOG63"
+msgstr "Ei, dă-ți seama. Lider militar înseamnă mulți băieți răi."
+
+msgid "TXT_SUB_LOG64"
+msgstr "Nu te da bătut. Asta e. Drept înainte."
+
+msgid "TXT_SUB_LOG65"
+msgstr "Data viitoare ne oprim la o benzinărie și întrebăm despre repere."
+
+msgid "TXT_SUB_LOG66"
+msgstr "Oh nu! Mai mulți băieți răi ne urmăresc!"
+
+msgid "TXT_SUB_LOG67"
+msgstr "Știi, din afară, locul ăsta arată mărunt."
+
+msgid "TXT_SUB_LOG68"
+msgstr "Citesc inamici în apropiere. Nu te oprii și holba, fă-i bucăți."
+
+msgid "TXT_SUB_LOG69"
+msgstr ""
+"Urăsc compurile de forță. Uită-te după un buton de oprire, trebuie să fie în "
+"apropiere."
+
+msgid "TXT_SUB_LOG70"
+msgstr "ooh, foarte impresionant. Să-l aruncăm în aer!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "Sari în teleportor, să aruncăm în aer totul."
+
+msgid "TXT_SUB_LOG72"
+msgstr ""
+"Stai, Oracolul zicea că îl vom cunoaște după însemnul lui. Te gândeștila "
+"același lucru?"
+
+msgid "TXT_SUB_LOG73"
+msgstr "Tipii ăștia au o idee despre decorații în aplicare."
+
+msgid "TXT_SUB_LOG74"
+msgstr "Ai văzut acel spectru ieșind din Episcop? Unde am mai văzut asta?"
+
+msgid "TXT_SUB_LOG75"
+msgstr ""
+"Timpul să judecăm. Acum că avem două piese ne putem întoarce la bază. Ce-ți "
+"zice instinctul?"
+
+msgid "TXT_SUB_LOG76"
+msgstr ""
+"Am un raport care spune că energia spectrală a Episcopului a prezentă și în "
+"Oracol, s-avem grijă."
+
+msgid "TXT_SUB_LOG77"
+msgstr ""
+"Macil? Parte la dezastrul ăsta? Nu știu ce să cred. Sper să iei decizia bună."
+
+msgid "TXT_SUB_LOG78"
+msgstr ""
+"Dacă îl cred pe Macil, care și-a riscat viața pentru Front, sau un tip în "
+"armură? Nu știu. Dar în tine, cred."
+
+msgid "TXT_SUB_LOG79"
+msgstr ""
+"Richter a preluat controlul asupra forțelor noastre. Se pare că Macil ne-a "
+"înșelat în tot acest timp. Aderărata lui loialitate era față de Ordin. Ce "
+"șarpe."
+
+msgid "TXT_SUB_LOG80"
+msgstr "Impresionantă intrare. Dar ceea ce căutăm e la alt nivel. Mergi jos."
+
+msgid "TXT_SUB_LOG81"
+msgstr ""
+"Ce rușine. Tehnologia noastră e risipită pentru tortură în loc de a crea "
+"viață."
+
+msgid "TXT_SUB_LOG82"
+msgstr "Vanitate la maxim, își marchează templele cu steaguri imense."
+
+msgid "TXT_SUB_LOG83"
+msgstr ""
+"Altă piesă de Sigiul. Suntem cu un pas mai aproape de libertate. Și tu ești "
+"cu un pas mai aproape de mine."
+
+msgid "TXT_SUB_LOG84"
+msgstr ""
+"Din câte se pare, aven nevoie de întreg Sigiliul pentru a deschide puiul. "
+"Ceva îmi spune că ăsta e capătul curcubeului."
+
+msgid "TXT_SUB_LOG85"
+msgstr "Ai puterea întregului Sigiliu. Ce zici dacă primim o încheiere?"
+
+msgid "TXT_SUB_LOG86"
+msgstr "Timpul pentru glorie, eroul meu."
+
+msgid "TXT_SUB_LOG87"
+msgstr ""
+"Atât a fost cu prognoza. Stai, Macil ne sună înapoi. Să ieșim de aici "
+"întregi."
+
+msgid "TXT_SUB_LOG88"
+msgstr ""
+"Îmi pare rău, dar nu mă pot gândi să zic nimic acum. Să ne întoarcem la "
+"Macil."
+
+msgid "TXT_SUB_LOG89"
+msgstr ""
+"Fabrica e lângă mine. Richter probabil s-a referit la minele de Degnin. "
+"Mineralul de Degnin e magnetic și exploziv, exact ce ne trebuie pentru "
+"scuturi."
+
+msgid "TXT_SUB_LOG90"
+msgstr "Mine, catacombe, canale... Ce întâlnire!"
+
+msgid "TXT_SUB_LOG91"
+msgstr "Îmi doresc ca Richter să fii fost mai specific. Să încercăm acolo."
+
+msgid "TXT_SUB_LOG92"
+msgstr "Cred că suntem... Oh, la naiba. Nu știu unde suntem."
+
+msgid "TXT_SUB_LOG93"
+msgstr ""
+"Ăstea ar trebui să fie ruinele pe care le căutau agenții lui Richter. Ai "
+"grijă! Cruciați!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "Ugh, încearcă să se regenereze. Aruncă-l în aer înainte să vomit."
+
+msgid "TXT_SUB_LOG95"
+msgstr ""
+"Prietene, orice ar fi ceea ce înfruntăm, e mai mult decât Ordinul. Către "
+"mine!"
+
+msgid "TXT_SUB_LOG96"
+msgstr "Fără a lăsa garda jos, uită-te dupa depozite de minereu."
+
+msgid "TXT_SUB_LOG97"
+msgstr ""
+"Sufletele ăstea sărmane sunt drone. Funcțiile lor sinaptice sunt întrerupte "
+"de implanturi RC. Distrugem transmițătorul și sunt libere!"
+
+msgid "TXT_SUB_LOG98"
+msgstr ""
+"Centrul de comandă e prtejat de un câmp de forță. Deci, două păsări, o "
+"piatră."
+
+msgid "TXT_SUB_LOG99"
+msgstr ""
+"Sugstia mea e, aruncă minereul în scut și aruncă-l în aer. Comprimarea "
+"rezultată ar trebui să creeze un câmp magnetic care sp oprească luminile."
+
+msgid "TXT_SUB_LOG100"
+msgstr "Acum către fabrică. Ieși din mine și nu o poți rata."
+
+msgid "TXT_SUB_LOG101"
+msgstr "Scuze, eroule, asta e nou pentru mine."
+
+msgid "TXT_SUB_LOG102"
+msgstr "Citesc distorsiuni neurale masive drept din față. Cred că am găsit-o."
+
+msgid "TXT_SUB_LOG103"
+msgstr ""
+"Tocmai când credeam că am văzut tot! Intră oameni și ies... nici nu vreau să "
+"mă gândesc."
+
+msgid "TXT_SUB_LOG104"
+msgstr ""
+"Oracolul avea dreptate. Macil a înnebunit. A trimis în mod voit 200 oameni "
+"la moarte. Vreau răzbunare! Pentru morți și morții vii!"
+
+msgid "TXT_SUB_LOG105"
+msgstr ""
+"Macil? Infectat și cu o bucată de Sigiliu. Toți anii crezând în cauza lui, "
+"și pentru ce?"
+
+msgid "TXT_SUB_LOG106"
+msgstr ""
+"Richter raportează că fabrica duce către un laborator, și sunt alimentați e "
+"puterea unui Sigiliu din interior. Înapoi la fabrică și următorul pas spre "
+"libertate."
+
+msgid "TXT_SUB_LOG120"
+msgstr "Cine îndrăznește să mă înfrunte? Un om jalnic? Înfruntă-mă și mori!"
+
+msgid "TXT_SUB_LOG121"
+msgstr "Nu mă poți ucide. Ești doar un om, iar eu sunt mai mult decât atât."
+
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"Nu moarte, viață eternă, și mai mult decât atât. Mult mai mult! Asta e "
+"misiunea mea: oameni cibernetici, jumătate oțel, jumătate carne, toți "
+"servind Adevăratul Zeu. Nu serviți? Muriți! Am altă bucată de Sigiliu."
+
+msgid "TXT_SUB_LOG128"
+msgstr ""
+"Ha ha! Bun-venit. Am așteptat momentul. Am așteptat pentru un prost ca tine "
+"să îmi aducă libertatea. Planeta la minusculă e a mea, și tu îți vei dori să "
+"nu te fii născut! "
+
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"Adevărul poate fi găsit doar în voința universală. Vei cădea în genunchi în "
+"fața Adevăratului Zeu, Singura Lumină. Alătură-mi-te și voi completa "
+"Sigiliul. M-am săturat de vorbitul ăsta mistic duplicitar."
+
+msgid "TXT_SUB_LOG130"
+msgstr ""
+"Tu... Tu mi-ai strivit Ordinul, și mi-ai amenințat secole de dorință. Dar "
+"voi învinge, te voi infecta și îți voi pervertii voința..."
+
+msgid "TXT_SUB_LOG200"
+msgstr "Sună a vis, nu?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "Ai văzut prea mult. Îngheață-l, Macil!"
+
+msgid "TXT_SUB_LOG202"
+msgstr "Data viitoare, o să mă asculți."
+
+msgid "TXT_SUB_LOG203"
+msgstr "Ugh, prețurile ăstea post-apocaliptice..."
+
+msgid "TXT_SUB_LOG204"
+msgstr "Ia-l pe cel mare, nu te va opri."
+
+msgid "TXT_SUB_LOG205"
+msgstr "Nu te lenevi. Drept în față!"
+
+msgid "TXT_SUB_LOG206"
+msgstr "Nu observi cum coridoarele ăstea arată mereu la fel?"
+
+msgid "TXT_SUB_LOG207"
+msgstr "Hei, uneori și eu ghicesc!"
+
+msgid "TXT_SUB_LOG208"
+msgstr "Oh, și ai grijă la alarmă!"
+
+msgid "TXT_SUB_LOG209"
+msgstr "Oh, vai. Ia uite ce ai făcut."
+
+msgid "TXT_SUB_LOG210"
+msgstr "Rahat. Acum ai distrus totul!"
+
+msgid "TXT_SUB_LOG211"
+msgstr "Haide, să ieșim de aici."
+
+msgid "TXT_SUB_LOG212"
+msgstr "Ooh. Nu te joci."
+
+msgid "TXT_SUB_LOG213"
+msgstr "O să le pună pe zid! Continuă să mergi!"
+
+msgid "TXT_SUB_LOG214"
+msgstr "Mm. Ești o brută."
+
+msgid "TXT_SUB_LOG215"
+msgstr "Mișto ritm."
+
+msgid "TXT_SUB_LOG216"
+msgstr "Ooh. Îmi place arma aceea nimicitoare."
+
+msgid "TXT_SUB_LOG217"
+msgstr "Ooh. Îmi place cum te descuri."
+
+msgid "TXT_SUB_LOG218"
+msgstr "La naiba! Nu sunt umane!"
+
+msgid "TXT_SUB_LOG219"
+msgstr "Wow, Acolit Înegrit! Noua senzație..."
+
+msgid "TXT_SUB_LOG220"
+msgstr "Continuă să faci asta și o să orbești... dar îmi place."
+
+msgid "TXT_SUB_LOG221"
+msgstr "Cred că n-o să ne invite la cină!"
+
+msgid "TXT_SUB_LOG222"
+msgstr "Trebuie să ajungem la ultimul etaj."
+
+msgid "TXT_SUB_LOG223"
+msgstr "Stai, asta pare interesant. Ia uite."
+
+msgid "TXT_SUB_LOG224"
+msgstr "Ugh. Tipul ăla mă sperie."
+
+msgid "TXT_SUB_LOG225"
+msgstr "Stânga! Stânga!... Oh, cealaltă stânga!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "Bărbat încăpățânat tipic... Asta dacă nu ești femeie."
+
+msgid "TXT_SUB_LOG227"
+msgstr "Puternic, brutal și silențios. Genul meu de partener."
+
+msgid "TXT_SUB_LOG228"
+msgstr "Bine! Am greșit!"
+
+msgid "TXT_SUB_LOG229"
+msgstr "Păcat că nu ne-am întâlnit... față în față."
+
+msgid "TXT_SUB_LOG230"
+msgstr "Aveam visuri pentru tine... Rahatule..."
+
+msgid "TXT_SUB_LOG231"
+msgstr ""
+"Nu. Nu intra în oraș. Ni s-a dus acoperirea. De asta plouă cu metale grele. "
+"Omoară cât de mulți băieți duri poți. Se cheamă \"Cruciați\". Când ești gata "
+"o să te îndrum spre Macil."
+
+msgid "TXT_SUB_LOG232"
+msgstr "Bună treabă, prietene! E timpul să te aduc înăuntru!"
+
+msgid "TXT_SUB_LOG233"
+msgstr ""
+"Ai grijă la Cruciați. Sunt roboți imenși, și duri ca naiba. Nu știm absolut "
+"nimic despre armamentul lor, dar șansele sunt... nu ești pe măsura lor. "
+"Grijă."
+
+msgid "TXT_SUB_LOG234"
+msgstr ""
+"Bună treabă. Acum, fără nimeni care să te vadă, du-te prin ușa de la "
+"dreapta, la etaj, și întâlnește-l."
+
+msgid "TXT_SUB_LOG235"
+msgstr "Lași pe cineva să te vadă și-ți luăm capul."
+
+msgid "TXT_SUB_LOG236"
+msgstr "Imbecilule! Ne-ai dat de gol!"
+
+msgid "TXT_SUB_LOG237"
+msgstr ""
+"Speram ca eu să te aștept în spatele ușii... dar trebuie să rămân în "
+"subteran. E timpul să ne cunoști liderul, Macil."
+
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"Porcule. Nu știu nimic despre așa-zisul cuplaj de putere, așa că să mergem "
+"încet."
+
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "Sună a vis, nu?"
+
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "O să fie alături de tine."
+
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr ""
+"Worner e un spion pe care l-am recrutat în depozitul stației de energie."
+
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "Pregătește-te pentru lupta vieții tale. Cheltuie tot ce ai."
+
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "Scuză-mă, o să mi se facă rău."
+
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "Mmm. Sună a arme. Putem folosi mai multă putere de foc oricând."
+
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "Sună ușor, dar să încercăm."
+
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "Cui îi pasă. Nimeni nu ascultă de programatori oricum."
+
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "Ooh. Mă bucur că mă ascund, dacă știi ce zic."
+
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "Ce dobitoc. Sper să îl omori mai târziu."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "\"Zona asta e interzisă!\" Pompos așa-și-așa."
+
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "Ce tip."
+
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Poate pentru nu ai spus \"te rog\"."
+
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "Toată lumea e așa neajutorată!\n"
+
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "Grozav. Acum facem cumpărături pentru Regele Șobolanilor."
+
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "Pun pariu că tipul ăsta mai și pute."
+
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "Mai multe canale... Grozav. Mă întreb ce-o mai trăi jos aici."
+
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "Capăt de linie. Mai bine ne mai uităm împrejur."
+
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "Drept în față, campionul meu. Să-l facem pe dl. Urât să țipe.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr ""
+"Biomecanic? Asta explică rezerva lor de trupe aproape infinită! Și "
+"atitudinea lor oribilă.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "Dobitoc bolnav... Nimicește-l!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "O fi urât, dar pare să fie de partea noastră."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"Uitându-ne la istoria recentă, cred că silențiozitatea iese din ecuație."
+
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "Hmm. Nu-i deranj, nu mizerie, nu nimic... Adu-mi unul, te rog.\n"
+
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr ""
+"Crezi că m-am săturat de toată chestia asta de a ucide totul, dar îmi va "
+"lipsi odată ce totul se va termina.\n"

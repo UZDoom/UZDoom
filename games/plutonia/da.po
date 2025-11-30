@@ -1,0 +1,158 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/da/>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: da\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Plutonia-eksperimentet"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Sjælebrønden"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Azteker"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: Låst op"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Spøgelsesby"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Baronens hule"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Rige"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: Stormløb"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Jaget"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Fart"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: Krypten"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: Tusmørket"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: Omenet"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Forbindelsen"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: Neurosfæren"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: Dødsdomænet"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: Slagter"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Umulig mission"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Gravsten"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: Den endelige grænse"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: Mørkets tempel"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: Kloakkerne"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Lydenes odyssé"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: Helvedes port"
+
+msgid "P1TEXT"
+msgstr ""
+"Du fryder dig over det dampende kadaver\n"
+"af den Vogter. Med dens død har du vristet\n"
+"Acceleratoren ud af Helvedes stinkende\n"
+"kløer. Du slapper af og kigger rundt i\n"
+"rummet. Fandens! Der skulle være mindst\n"
+"én fungerende prototype, men du kan ikke\n"
+"se den. Dæmonerne må have taget den.\n"
+"\n"
+"Du må finde prototypen, ellers vil al\n"
+"din kamp have været forgæves. Bliv\n"
+"ved med at bevæge dig, bliv ved med\n"
+"at kæmpe, bliv ved med at dræbe.\n"
+"Åh ja, bliv også ved med at leve."
+
+msgid "P2TEXT"
+msgstr ""
+"Selv den dødbringende ærkevile-labyrint\n"
+"kunne ikke stoppe dig, og du er nået\n"
+"frem til prototypen af acceleratoren,\n"
+"som snart er effektivt og permanent\n"
+"deaktiveret.\n"
+"\n"
+"Du er god til den slags ting."
+
+msgid "P3TEXT"
+msgstr ""
+"Du har slået og slået dig vej ind i\n"
+"hjertet af djævlehulen. Det er tid\n"
+"til en Search-and-Destroy-mission,\n"
+"der er rettet mod Gatekeeperen,\n"
+"hvis fæle afkom strømmer til Jorden.\n"
+"Ja, han er slem. Men du ved, hvem\n"
+"der er værre!\n"
+"\n"
+"Med et ondt grin tjekker du dit udstyr\n"
+"og gør dig klar til at give den\n"
+"skiderik et lille helvede af din egen\n"
+"skuffe!"
+
+msgid "P4TEXT"
+msgstr ""
+"Portvogterens onde ansigt er spredt ud\n"
+"over det hele. Da dens flossede lig\n"
+"falder sammen, dannes en omvendt port,\n"
+"som suger stumperne af den sidste prototype\n"
+"Accelerator ned, for ikke at nævne de få\n"
+"tilbageværende dæmoner. Du er færdig.\n"
+"Helvede er gået tilbage til at banke onde\n"
+"døde folk i stedet for gode levende folk.\n"
+"Husk at bede dine børnebørn om at lægge\n"
+"en raketkaster i din kiste. Hvis du\n"
+"kommer til Helvede, når du dør, får\n"
+"du brug for den til en sidste oprydning ..."
+
+msgid "P5TEXT"
+msgstr ""
+"Du har fundet det næsthårdeste niveau,\n"
+"vi har. Håber du har et gemt spil et\n"
+"niveau eller to tidligere. Hvis ikke,\n"
+"skal du være forberedt på at dø masser\n"
+"af gange. Kun for master marines."
+
+msgid "P6TEXT"
+msgstr ""
+"Du undrede dig sikkert over,\n"
+"hvad der var det sværeste niveau,\n"
+"vi havde klar til dig? Nu ved du det.\n"
+"Ingen kommer ud i live."

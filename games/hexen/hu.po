@@ -1,0 +1,359 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:44+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: hu\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Huzatos Folyosó"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Hét Portál"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "A Jég Őre"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "A Tűz Őre"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Az Acél Őre"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Fényes Ketrec"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Árnyék Erdő"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Fekete Mocsár"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Körök Barlangja"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Senkiföldje"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Szent Liget"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Oszlopterem"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "A Főeretnek Neveldéje"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Sárkány Szentély"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Griff Szentély"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Halál Szentély"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Siránkozás Kertje"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Néma Refektórium"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Farkas Szentély"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Elhagyott Őrség"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "A Gyász Kastélya"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Akasztófa"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "A Bűz Börtöne"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Kazamaták"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Sivár Kert"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropolisz"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedek Sírja"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkir Sírja"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traductus Sírja"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivárium"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Sötét Ketrec"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Elhaladva a birodalmat bezáró Hét\n"
+"Portálnál előtt, egy kíméletlen vadon \n"
+"látványa tárul eléd. A tűzes, jeges, és \n"
+"acélozott próbatételeket kiálltad, de \n"
+"még most jön a java. A sűrűn \n"
+"összenőtt erdő bizonyára ellenséges \n"
+"szempárokat rejt, de ami rád vár, még \n"
+"ennél is hitványabb.\n"
+"\n"
+"Terméketlen sivatag, nyírkos \n"
+"mocsarak,és dohos barlangok \n"
+"gátolták utadat, de semmi sem tart \n"
+"vissza a sorsodtól, még akkor sem ha \n"
+"legbelül úgy érzed jobb lenne ha \n"
+"visszatartana.\n"
+"\n"
+"A távolban káprázó, feléd magasló\n"
+"hirhedt oszlopterem falai mintha \n"
+"gúnyt űznének belőled és minden \n"
+"erőfeszítésedből."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"A küzdelemtől zsongó elméddel \n"
+"támolyogsz előre, a kiút reményében.\n"
+"Hirtelen a minden felgyorsul \n"
+"körülötted, elmosódik a világ majd el \n"
+"is sötétül...\n"
+"Ahogy a világ összeomlik a szemed\n"
+"láttára, egy előtted megjelenő átjáró\n"
+"fénye áraszt el. Egyszercsak egy\n"
+"villanás vakít meg, majd kis idő múlva \n"
+"feltápászkodsz.\n"
+"\n"
+"Egy magas tornyon találod magad, és \n"
+"lentről csak a holtak sikolyait hallani.\n"
+"Ahogy elindulsz megfagy a véred a \n"
+"démoni kántálás hallatán. A halálisten \n"
+"szerelmére! Miféle hely ez? Hogyan \n"
+"fogsz kijutni innen?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Az ősök legerősebb fegyverei és \n"
+"varázstárgyai éppen elég erősek\n"
+"voltak a Főeretnek és követői \n"
+"legyőzésére, és immáron a lábad előtt\n"
+"hevernek szétszórva az undorító \n"
+"maradványaik. Összegyűjtve maradék\n"
+"erődet, belépsz a Főeretnek belső \n"
+"szentélye felé vezető portálba.\n"
+"\n"
+"Vészjóslóan megjelennek előtted egy \n"
+"kastély sáncai. Kietlen tornyok és \n"
+"csupasz falak vesznek körbe egy \n"
+"spirális fekete követ, mely a kastély \n"
+"közepén csücsül, mint egy tűnődő \n"
+"óriás. Tűz és árnyék tánca látszik egy \n"
+"nyitott ablak résén keresztül, \n"
+"miközben tucatnyi baljós szempár \n"
+"méregetve figyel téged.\n"
+"\n"
+"Valahol odabent várnak \n"
+"ellenlábasaid..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"...majd a hős belép a holtak \n"
+"királyságába, és az ott portyázó \n"
+"sereget lekaszabolja egészen a \n"
+"Kétség Kapujáig. Azonban senki sem \n"
+"tudja visszatér e onnan a fény \n"
+"világába.\"\n"
+"\n"
+"Francba."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"A tested köré csavarodó tűzcsóvák \n"
+"szinte kitépnek ebből a világból, a \n"
+"környék csendjét csak a gyötrelmes \n"
+"ordításod töri meg. Amikor látásod \n"
+"kitisztul, megpillantod eme gigászi \n"
+"csarnokot, mely hemzseg a szellemek \n"
+"hörgésétől és fenyegető árnyaikkal. \n"
+"A messzeségben megpillantasz egy \n"
+"emelvényt, amelyen ragyog a vidék \n"
+"egyetlen fényforrása."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Ez nem lehet más, csak a Káosz \n"
+"Gömb, mely Korax hatalmának \n"
+"forrása. Ezzel a hatalommal egész \n"
+"világokat lehet teremteni...vagy éppen \n"
+"elpusztítani őket. A győzelem jogán \n"
+"immáron ez a tied, így reszkető kézzel \n"
+"nyúlsz felé. Talán ezzel egy új játékos \n"
+"lép be a kozmikus méretű hatalmi \n"
+"játékba. Mint a sakkban a parasztból \n"
+"hirtelen avanzsált királynő, egyszerre \n"
+"az egész sakktábla elérhetővé vált \n"
+"számodra."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"vannak ám nagyobb hatalmú \n"
+"játékosok is, és ki tudná előre a \n"
+"következő lépésüket?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Az ajtó zárva van."
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Üdvözöllek, halandó!"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Készen állsz a halálra?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Egy ajtó kinyillott a Jég Őrzőjénél"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Ez az út el van torlaszolva."
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "A rejtvény egyik fele meg lett fejtve"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "a Hét Portálon"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "A rejtvény egyharmada megfejtésre került"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "A Hét Portálon belül egy lépcsősor emlekedett"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "A rejtvény egyharmada megfejtésre került"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "a Hét Portálon"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "A Hét Portálon belül egy lépcsősor emlekedett"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Egy másik kapcsolót kell találnod..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Kövek örlődnek a Hét Portálnál"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "A feladványok egyhatoda megfejtésre került"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "a Sötét Erdőben"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Az ajtó bentről van bereteszelve"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Hallod ahogy egy ajtó kinyílik a távolban"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "A feladványok egyhatoda megfejtésre került"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "a Sötét Erdőben"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "A feladványok egyhatoda megfejtésre került"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "a Sötét Erdőben"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettin maradt"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Túl sokáig vártál, most meghalsz!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Egy ajtó kinyílik az Elátkozott Őrportyán"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Ez az ajtó még nem fog kitárulni."
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Szolgáim érzik a véred szagát, emberfattya"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Egy ajtó kinyílik az Akasztófánál"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Az ajtó bentről van bereteszelve"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Egy platform leereszkedett a toronyban"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Túl sokat játszadoztál, halandó..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Azt hiszem le kell, hogy üsselek a tábláról"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Hallod ahogy egy ajtó kinyílik az emeleten"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Hódolj be, és talán kegyelmes leszek"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Jól átgondolva, inkább nem"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "A rejtvény egy kilencede megfejtésre került"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "A Monostorban"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "A rejtvény egy kilencede megfejtésre került"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "A Monostorban"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "A rejtvény egy kilencede megfejtésre került"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "A Monostorban"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Az átjáró bezárult."
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Dönts sorsod felől"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Az ajtó bentről van bereteszelve"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Elég erős vagy,"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Hogy saját mestereiddel nézz szembe?"

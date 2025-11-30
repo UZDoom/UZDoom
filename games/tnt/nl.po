@@ -1,0 +1,188 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:25+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"tnt-evilution/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: nl\n"
+
+msgid "TXT_TNT_EP"
+msgstr "Tnt: Evilutie"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Systeemcontrole"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Menselijke BBQ"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Machtscontrole"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Wormgat"
+
+msgid "THUSTR_5"
+msgstr "Level 5: Hangar"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Open seizoen"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Gevangenis"
+
+msgid "THUSTR_8"
+msgstr "Level 8: Metaal"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Vesting"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Aflossing"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Opslagfaciliteit"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Nucleaire verwerking"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Staalfabrieken"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Dode zone"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Diepste reiken"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Verwerkingsgebied"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Molen"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Verzendingscentrum"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Centrale verwerking"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Administratief centrum"
+
+msgid "THUSTR_22"
+msgstr "Niveau 22: Leefgebied"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Maanmijnbouw project"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Steengroeve"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Het baron's gebouw"
+
+msgid "THUSTR_26"
+msgstr "Level 26: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Pijn in de bergen"
+
+msgid "THUSTR_28"
+msgstr "Niveau 28: Heck"
+
+msgid "THUSTR_29"
+msgstr "Level 29: Rivier Styx"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Laatste oproep"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Farao"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Caribisch"
+
+msgid "T1TEXT"
+msgstr ""
+"Je hebt je een weg gevochten uit de besmette\n"
+"experimentele laboratoria. Het lijkt erop dat\n"
+"UAC het opnieuw heeft verknald. Met hun hoge\n"
+"omzet moet het voor arme oude UAC moeilijk\n"
+"zijn om tegenwoordig een\n"
+"ziektekostenverzekering te kopen...\n"
+"\n"
+"Voor je ligt het militaire complex, nu wemelt het\n"
+"van de zieke gruwelen om hun tanden in je te\n"
+"krijgen. Met een beetje geluk heeft het complex\n"
+"nog wat wapens liggen."
+
+msgid "T2TEXT"
+msgstr ""
+"Je hoort het slijpen van zware machines vooruit.\n"
+"Je hoopt zeker dat ze geen nieuwe hellbrood\n"
+"produceren. Maar je zou de hele kudde uitroeien\n"
+"als dat nodig was. Ze plannen\n"
+"misschien een bloedfeest, maar je voelt je\n"
+"net zo stark als tweeduizend maniakken die\n"
+"verpakt zijn in een gekke moordenaar.\n"
+"\n"
+"Je maakt het hen niet gemakkelijk."
+
+msgid "T3TEXT"
+msgstr ""
+"De blik vooruit laat iets heel bekends zien.\n"
+"En het ruikt ook vertrouwd - zoals verbrande\n"
+"uitwerpselen. Deze oord vond het vroeger niet\n"
+"leuk, en je zult je niet van gedachten\n"
+"veranderen. Hoe meer je er over nadenkt,\n"
+"hoe booser je wordt.\n"
+"\n"
+"Dus je bereidt je wapen voor, een slechte\n"
+"grijns bedekt je gezicht.\n"
+"Tijd om op te ruimen."
+
+msgid "T4TEXT"
+msgstr ""
+"Plotseling is alles stil, van de ene horizon\n"
+"naar de andere. De kwellende echo van de hel\n"
+"vervaagt, de nachtmerrie lucht wordt blauw,\n"
+"de hopen monster lijken beginnen te verdampen,\n"
+"samen met de boze stank die de lucht vulde.\n"
+"Ja, je hebt het gedaan. Maar heb je echt\n"
+"gewonnen?\n"
+"\n"
+"Iets rommelt in de verte. Een blauw licht\n"
+"begint te schijnen in de geruïneerde schede\n"
+"van de demonenspuwer."
+
+msgid "T5TEXT"
+msgstr ""
+"Wat nu? Ziet er totaal anders uit. Een beetje\n"
+"zoals het appartement van Koning Tut. Nou, wat\n"
+"hier ook is, het kan niet erger zijn dan normaal.\n"
+"Kan dat? Of misschien is het het beste om\n"
+"slapende goden te laten liggen..."
+
+msgid "T6TEXT"
+msgstr ""
+"Tijd voor een vakantie. Je hebt de ingewanden\n"
+"van de hel gebarsten en bij wijze van spreken\n"
+"ben je klaar voor een pauze. Je mompelt tegen\n"
+"jezelf, misschien kan iemand anders de volgende\n"
+"keer de hel in elkaar slaan. Voor je ligt een\n"
+"rustig stadje, met stromend water, schilderachtige\n"
+"gebouwen en waarschijnlijk geen Hellbrood.\n"
+"\n"
+"Als je uit het transport stapt, hoor je het\n"
+"stampen van de ijzeren schoen van een cyberdemon."

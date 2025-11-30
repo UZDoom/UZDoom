@@ -1,0 +1,259 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:29+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sv\n"
+
+msgid "TXT_D2E1"
+msgstr "Helvetet på jorden"
+
+msgid "TXT_D2E2"
+msgstr "Ingen vila för de levande"
+
+msgid "HUSTR_1"
+msgstr "Nivå 1: Ingång"
+
+msgid "HUSTR_2"
+msgstr "Nivå 2: Underhallar"
+
+msgid "HUSTR_3"
+msgstr "Nivå 3: Utmaningen"
+
+msgid "HUSTR_4"
+msgstr "Nivå 4: Fokus"
+
+msgid "HUSTR_5"
+msgstr "Nivå 5: Avfallstunnlarna"
+
+msgid "HUSTR_6"
+msgstr "Nivå 6: krossen"
+
+msgid "HUSTR_7"
+msgstr "Nivå 7: Död enkel"
+
+msgid "HUSTR_8"
+msgstr "Nivå 8: Tricks och fällor"
+
+msgid "HUSTR_9"
+msgstr "Nivå 9: Grottan"
+
+msgid "HUSTR_10"
+msgstr "Nivå 10: Tankningsbasen"
+
+msgid "HUSTR_11"
+msgstr "Nivå 11: \"O\" av förstörelse!"
+
+msgid "HUSTR_12"
+msgstr "Nivå 12: Fabriken"
+
+msgid "HUSTR_13"
+msgstr "Nivå 13: Centrum"
+
+msgid "HUSTR_14"
+msgstr "Nivå 14: Den innersta täkten"
+
+msgid "HUSTR_15"
+msgstr "Nivå 15: Industriområde"
+
+msgid "HUSTR_16"
+msgstr "Nivå 16: Förorter"
+
+msgid "HUSTR_17"
+msgstr "Nivå 17: Hyreshus"
+
+msgid "HUSTR_18"
+msgstr "Nivå 18: Gården"
+
+msgid "HUSTR_19"
+msgstr "Nivå 19: Citadellet"
+
+msgid "HUSTR_20"
+msgstr "Nivå 20: Gotcha!"
+
+msgid "HUSTR_21"
+msgstr "Nivå 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Nivå 22: Katakomberna"
+
+msgid "HUSTR_23"
+msgstr "Nivå 23: Tunnor med kul"
+
+msgid "HUSTR_24"
+msgstr "Nivå 24: Klyftan"
+
+msgid "HUSTR_25"
+msgstr "Nivå 25: Blodfall"
+
+msgid "HUSTR_26"
+msgstr "Nivå 26: De övergivna gruvorna"
+
+msgid "HUSTR_27"
+msgstr "Nivå 27: Monster Condo"
+
+msgid "HUSTR_28"
+msgstr "Nivå 28: Den andliga världen"
+
+msgid "HUSTR_29"
+msgstr "Nivå 29: Det levande slutet"
+
+msgid "HUSTR_30"
+msgstr "Nivå 30: Syndens ikon"
+
+msgid "HUSTR_31"
+msgstr "Nivå 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Nivå 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Nivå 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Nivå 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Nivå 33: Förråda"
+
+msgid "NHUSTR_1"
+msgstr "Nivå 1: Jordbasen"
+
+msgid "NHUSTR_2"
+msgstr "Nivå 2: Smärtlaboratorierna"
+
+msgid "NHUSTR_3"
+msgstr "Nivå 3: De dödas kanjon"
+
+msgid "NHUSTR_4"
+msgstr "Nivå 4: Helvetesberget"
+
+msgid "NHUSTR_5"
+msgstr "Nivå 5: Vivisektion"
+
+msgid "NHUSTR_6"
+msgstr "Nivå 6: Blodets inferno"
+
+msgid "NHUSTR_7"
+msgstr "Nivå 7: Baronens bankett"
+
+msgid "NHUSTR_8"
+msgstr "Nivå 8: Ondskans grav"
+
+msgid "NHUSTR_9"
+msgstr "Nivå 9: Demonernas marsch"
+
+msgid "C1TEXT"
+msgstr ""
+"\"Du har gått djupt in i den infekterade\n"
+"stjärnhamnen. Men något är fel.\n"
+"Monstren har fört med sig sin egen\n"
+"verklighet, och stjärnhamnens teknik\n"
+"undergrävs av deras närvaro.\n"
+" \n"
+"Framför dig ser du en utpost av helvetet,\n"
+"en befäst zon. Om du kan ta dig förbi\n"
+"den kan du tränga in i stjärnbasens\n"
+"hemsökta hjärta och hitta den\n"
+"kontrollbrytare som håller jordens\n"
+"befolkning som gisslan."
+
+msgid "C2TEXT"
+msgstr ""
+"Du har vunnit! Er seger har gjort det\n"
+"möjligt för mänskligheten att eva-\n"
+"kuera jorden och fly från mardrömmen.\n"
+"Nu är du den enda människan som\n"
+"finns kvar på planeten. Kannibalmutationer,\n"
+"köttätande utomjordingar och onda andar\n"
+"är dina enda grannar. Du sitter tillbaka och\n"
+"väntar på döden, nöjd med att du har\n"
+"räddat din art.\n"
+" \n"
+"Men så strålar Earth Control ner ett\n"
+"meddelande från rymden: \"Sensorerna\n"
+"har lokaliserat källan till den utomjordiska\n"
+"invasionen.\" Om du går dit kan du kanske\n"
+"blockera deras inträde. Den utomjordiska\n"
+"basen ligger i hjärtat av din egen\n"
+"hemstad, inte långt från stjärnhamnen.\" \n"
+"Långsamt och smärtsamt reser du\n"
+"dig upp och återvänder till striden."
+
+msgid "C3TEXT"
+msgstr ""
+"\"Du befinner dig i stadens korrupta hjärta,\n"
+"omgiven av dina fienders lik. Du ser inget\n"
+"sätt att förstöra varelsernas ingång på\n"
+"den här sidan, så du biter ihop tänderna\n"
+"och kastar dig igenom den.\n"
+" \n"
+"Det måste finnas ett sätt att stänga den\n"
+"på andra sidan. Vad bryr du dig om du\n"
+"måste gå igenom helvetet för att\n"
+"komma dit?"
+
+msgid "C4TEXT"
+msgstr ""
+"\"Den största demonen som du någonsin\n"
+"har sett faller ihop framför dig efter att\n"
+"du har pumpat in dina raketer i hans\n"
+"utsatta hjärna. Monstret skrumpnar\n"
+"ihop och dör, dess slående lemmar\n"
+"ödelägger otaliga mil av helvetets yta.\n"
+" \n"
+"Du har gjort det. Invasionen är över.\n"
+"Jorden är räddad. Helvetet är ett vrak.\n"
+"Du undrar vart de onda människorna\n"
+"tar vägen när de dör, nu. Du torkar\n"
+"svetten från pannan och börjar den\n"
+"långa vandringen hemåt. Att\n"
+"återuppbygga jorden borde vara mycket\n"
+"roligare än vad det var att förstöra den.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Grattis, du har hittat den hemliga nivån!\n"
+"Det ser ut som om den har byggts av\n"
+"människor, snarare än demoner. Du\n"
+"undrar vilka de intagna i detta hörn\n"
+"av helvetet kommer att vara."
+
+msgid "C6TEXT"
+msgstr ""
+"Grattis, du har hittat den superhemliga\n"
+"nivån! Det är bäst att du tar dig igenom\n"
+"den här!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"\"Det var återigen oroligt på din\n"
+"favoritsemesterplats... Helvetet. \n"
+"Någon Cyberdemon-punk trodde att\n"
+"han kunde förvandla helvetet till en\n"
+"personlig nöjespark och göra\n"
+"jorden till biljettkassan.\n"
+" \n"
+"Tja, den där halvrobot-freakshowen\n"
+"visste inte vem som skulle komma till\n"
+"tivoli. Det finns inget bättre än en\n"
+"skjutbana full av helvetesgödsel\n"
+"för att få blodet att pumpa...\n"
+" \n"
+"Nu ekar väggarna i demonens labyrint\n"
+"med ljudet av hans metalliska lemmar\n"
+"som slår i golvet. Hans dödsstön gurglar\n"
+"ut genom den röra du lämnade av hans\n"
+"ansikte.\n"
+" \n"
+"Den här föreställningen är stängt.\n"
+"\n"

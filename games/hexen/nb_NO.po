@@ -1,0 +1,343 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:43+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: no nb\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Vinnersalen"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Syv portaler"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Isens vokter"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Ildens vokter"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Stålets vokter"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Lys utfordring"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Skyggeskogen"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Circes grotter"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Ødemarken"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Hellig lund"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Heresiarkens seminar"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Dragekapell"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Griffon kapell"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Dødens vind kapell"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Klagesangens hage"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Stille refektorium"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Ulvens kapell"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Forlatt utpost"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Sorgens slott"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Galgen"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Fangehull"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Øde hage"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropolis"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedeks grav"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkirs grav"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traductus' grav"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Mørkets utfordring"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Etter å ha passert de syv portalene som\n"
+"forseglet dette riket, strekker et stort\n"
+"område med barsk villmark seg foran\n"
+"deg. Ild, is og stål har satt deg på prøve,\n"
+"men større utfordringer gjenstår. Det\n"
+"tette virvaret av skog skjuler sikkert\n"
+"fiendtlige øyne, men det som\n"
+"ligger bortenfor vil være verre.\n"
+"\n"
+"Ufruktbar ørken, fuktige sumper og\n"
+"mugne huler sperrer veien, men du kan\n"
+"ikke la noe holde deg unna skjebnen din,\n"
+"selv om du kanskje skulle ønske det.\n"
+"\n"
+"Og bortenfor, flimrende i det fjerne, ser\n"
+"hypostylens stadig skiftende vegger ut\n"
+"til å håne alle dine anstrengelser."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Sinnet ditt er fortsatt rystet etter\n"
+"møtene dine i hypostylen, og du vakler\n"
+"mot det du håper er en vei ut. Ting ser\n"
+"ut til å bevege seg raskere og raskere,\n"
+"synet ditt sløres og begynner å falme...\n"
+"Mens verden kollapser rundt deg,\n"
+"oppslukes du av lyset fra en teleportal.\n"
+"Et lysglimt, og så klatrer du trøtt\n"
+"på beina.\n"
+"\n"
+"Du står på toppen av et høyt tårn, og\n"
+"nedenfra kommer de fordømtes skrik.\n"
+"Du trer frem, og med ett får lyden av\n"
+"demonisk sang blodet til å fryse i deg.\n"
+"Ved alle dødens guder! hvilket sted har\n"
+"du kommet til? Ved alle smertens\n"
+"guder, hvordan skal du noensinne finne\n"
+"veien ut?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"De eldgamles mektigste våpen og\n"
+"artefakter var knapt nok til å beseire\n"
+"heresiarken og hans håndlangere,\n"
+"men nå ligger deres skitne levninger\n"
+"strødd for dine føtter. Du samler de\n"
+"siste kreftene dine og gjør deg klar til\n"
+"å gå inn i portalen som fører fra\n"
+"heresiarkens indre helligdom.\n"
+"\n"
+"Over deg ruver vollene til en enorm\n"
+"borg. Tause tårn og nakne murer\n"
+"omgir et enkelt spir av svart stein,\n"
+"som sitter på huk i midten av borgen\n"
+"som en grublende kjempe. Ild og\n"
+"skygge vrir seg bak gapende\n"
+"vinduer, dusinvis av ondskapsfulle\n"
+"øyne stirrer ned på deg.\n"
+"Et eller annet sted der inne\n"
+"venter fiendene dine..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... og han skal reise inn i dødsrikene\n"
+"og kjempe med kreftene der, helt til\n"
+"fortvilelsens porter. Men om han\n"
+"skal vende tilbake til lysets verden\n"
+"igjen, vet ingen.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Pokker."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Med et skrik av smerte blir du revet\n"
+"fra denne verden til en annen, hver del\n"
+"av kroppen din er innhyllet i mystisk\n"
+"ild. Når synet ditt klarner, befinner du\n"
+"deg i en stor hall, fylt med spøkel-\n"
+"sesaktige ekko og truende skygger.\n"
+"I det fjerne kan du se et hevet podium,\n"
+"og på det den eneste lyskilden\n"
+"i denne verden."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Dette kan bare være kaossfæren,\n"
+"kilden til korax' kraft. med dette kan\n"
+"du skape verdener... eller ødelegge\n"
+"dem. Med rett til kamp og erobring\n"
+"er den din, og med skjelvende hender\n"
+"strekker du deg for å gripe den.\n"
+"Kanskje vil en ny spiller nå bli med i\n"
+"det kosmiske maktspillet. Som\n"
+"bonden som blir forfremmet til\n"
+"dronning, ser det plutselig ut til at\n"
+"hele brettet er innen rekkevidde."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\Men det finnes andre spillere som er\n"
+"mektigere enn deg, og hvem kan\n"
+"vite deres neste trekk?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Døren er låst"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Vær hilset, dødelige"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Er du klar til å dø?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "En dør åpnet seg på Isens vokter"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Denne veien er sperret"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Den ene halvdelen av gåten er løst"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "på de syv portaler"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "En tredjedel av puslespillet er løst"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Trappene har reist seg på De syv portaler"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "En tredjedel av puslespillet er løst"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "på de syv portaler"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Trappene har reist seg på De syv portaler"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Du må finne en annen bryter..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Steiner knuser på De syv portaler"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "En sjettedel av puslespillet har blitt løst"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "på Skyggeskogen"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Døren er sperret fra innsiden"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Du hører en dør åpnes i det fjerne"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "En sjettedel av puslespillet har blitt løst"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "på Skyggeskogen"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "En sjettedel av puslespillet har blitt løst"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "på Skyggeskogen"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins igjen"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Du ventet for lenge, nå dør du!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "En dør åpnet seg på den forlatte utposten"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Denne døren vil ikke åpne seg ennå"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Mine tjenere kan lukte blodet ditt, menneske"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "En dør åpnet seg i galgen"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Døren er sperret fra innsiden"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "En plattform har senket seg i tårnet"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Du har spilt dette spillet for lenge, dødelige..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Jeg tror jeg skal fjerne deg fra brettet"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Du hører en dør åpnes ovenpå"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Tilbe meg, og jeg kan ennå være barmhjertig."
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Men kanskje ikke"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "En niendedel av puslespillet er løst"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "på klosteret"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "En niendedel av puslespillet er løst"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "på klosteret"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "En niendedel av puslespillet er løst"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "på klosteret"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Portalen har blitt forseglet"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Velg din skjebne"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Døren er sperret fra innsiden"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Er du sterk nok"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Til å møte dine egne mestere?"

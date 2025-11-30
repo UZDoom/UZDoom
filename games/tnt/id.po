@@ -1,0 +1,77 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:18+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Kendali Sistem"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Sate Manusia"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Kendali Daya"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Lubang Cacing"
+
+msgid "THUSTR_5"
+msgstr "Level 5: Gantungan"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Penjara"
+
+msgid "THUSTR_8"
+msgstr "Level 8: Logam"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Rumah Besar"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Pertobatan"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Gudang"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Kawah"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Pengolah Limbah Nuklir"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Bengkel Besi"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Kawasan Maut"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Raihan Terdalam"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Tempat Pengolahan"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Penggilingan"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Pengiriman/respawning"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Pengolahan Pusat"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Pusat Administrasi"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Proyek Tambang Bulan"

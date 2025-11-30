@@ -1,0 +1,402 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen-deathkings/cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: cs\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Zničená vesnice"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Pohroma"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Žumpa"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakomby"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Pustiny"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Prales"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Hranice"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Konstáblova brána"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Pokladnice"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Tržnice"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Utrpení"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Zbrojnice"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Chrámová loď"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Modlitebna"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Jatka"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Tmavá hlídka"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloaka"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ledová pevnost"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Temná citadela"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Převoz"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Nad a Pod"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Mha skonu"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Hrad bolesti"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Odpadní jáma"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Růže"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Utíraj@[tgs_pr1_cs] si třesoucí rukou zakrvácený\n"
+"obličej se snažíš zachovat si chladnou\n"
+"hlavu a připravit se na to, co\n"
+"leží před tebou...\n"
+"\n"
+"...a zapomenout na to, co za tebou.\n"
+"\n"
+"V dáli vidíš strohé hradby velkolepé\n"
+"tvrze, zdánlivě rozdělující nebe na\n"
+"dva díly. Od znesvěcených hrobů\n"
+"nespočitatelna mrtvých se line\n"
+"hnilobný pach.\n"
+"\n"
+"Opatrně počítaj@[tgs_pr1_cs] to málo, co ti zbylo\n"
+"z tvých artefaktů, se pokoušíš\n"
+"ubezpečit sebe sama, že to bude stačit.\n"
+"Konec konců, musí to stačit, nebo ne?\n"
+"\n"
+"\n"
+"Nebo ne?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Duše zatracených nepochybně obývají\n"
+"tento svět, neboť nic bohulibého\n"
+"tu nemá šanci dlouho přežít.\n"
+"\n"
+"Vše, co jsi doteď překonal@[ao_cs], však\n"
+"bledne v porovnání s tím, co ti\n"
+"nyní zahrazuje cestu:\n"
+"temná citadela sama.\n"
+"\n"
+"Ponurá velkolepost katedrály nabízí\n"
+"jen letmé pohledy na samotnou\n"
+"citadelu, ale to, co lze vidět,\n"
+"syčí a šeptá o vleklé, studené smrti...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...pro ty šťastlivé."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Opět se nalézáš ve velkém sále\n"
+"Sféry chaosu, jako kdyby neuplynula\n"
+"ani chvíle od doby, kdy ses těmito stíny\n"
+"procházel@[ao_cs] naposledy.\n"
+"\n"
+"Ale něco je tíživě jinak; odkud\n"
+"se předtím ozýval nehlasný šepot,\n"
+"se nyní line jen ticho a pocit toho,\n"
+"že nať spočívají skryté oči...\n"
+"\n"
+"...oči, jež skrývají zlé úmysly."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Jen jednou předtím jsi spočinul@[ao_cs] své\n"
+"ruce na Sféře chaosu a držel@[ao_cs] ji\n"
+"ve svých třesoucích se dlaních.\n"
+"Leč nyní se tvé ruce třepetají něčím víc,\n"
+"než jen lakotou. Hlad po moci se\n"
+"mísí s děsem a bázní.\n"
+"\n"
+"Jestliže tě ani síla Sféry nedokáže\n"
+"uchránit před temnými silami, možná\n"
+"by bylo lepší ponechat ji netknutou\n"
+"a její přísliby nenaplněné.\n"
+"\n"
+"\n"
+"\n"
+"Na druhou stranu, ty jsi arci nikdy\n"
+"nebyl@[ao_cs] někdo, kdo by se ostal výzvy..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...a ostatní hráči už čekají.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Ty si dovoluješ rvát se v přípravné místnosti?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Pro to zemřeš!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Vodopád je otevřen."
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Vodopád je zatarasen."
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Dveře se otevřely v kapli."
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Tak to je divné..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Zbývají tři části rébusu."
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Zbývají dvě části rébusu."
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Zbývá jedna část rébusu."
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Rébus je kompletní."
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Nesplnil@[ao_cs] jsi rébus."
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Podlaha není bezpečná!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Jedna třetina rébusu je vyřešena."
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Dvě třetiny rébusu jsou vyřešeny."
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Slyšíš v dálce pohybující se plošinu."
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Je to dokonáno..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Nesplnil@[ao_cs] jsi rébus."
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Varuju tě..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Ty jsi ale tvrdohlav@[adj_cs], ne?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "A taky hloup@[adj_cs]."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Jedna čtvrtina rébusu je vyřešena."
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Špatná volba."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Symboly nejsou zarovnány."
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Dveře se z této strany neotevřou."
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Dveře jsou zatarasené zvenku."
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Svatokrádež!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Znesvětil@[ao_cs] jsi Erikovu hrobku!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Teď zemřeš!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Jedna třetina rébusu je vyřešena."
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Dvě třetiny rébusu jsou vyřešeny."
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Krypta je otevřena."
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Vyvaruj se pavoučí hrobky."
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Slyšíš zvenku zvedající se platformu."
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Zdá se ti, že máš štěstí?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "To máš smůlu!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Dobré zdání."
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Můžeš všechno skriptování udělat za mě?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Nesahej mi na slimáka!"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Šaršoun?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Dej mi trochu cukru, zlato."
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "A jéje."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Film za hodinu?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Ani nemám svůj vlastní náhrobek. -CF"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Nechť není prolita žádná krev."
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Nechť není žádná ruka hněvem zvednuta."
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Kdo se opovažuje narušit náš spánek?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Cesta je otevřena."
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Zbývají ti "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20spínače."
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Zbývá ti jen "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20spínač."
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Východ je otevřen."
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Dveře se z této strany neotevřou."
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Dveře jsou otevřené..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...jestli jsi připraven@[ao_cs]."
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Dveře se otevřely"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "v Modlitebně."
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Most byl postaven"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "na Jatkách."
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Schody byly postaveny"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "na Temné hlídce."
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Jedno kolo bylo umístěno."
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20kola byla umístěna."
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "V Kloace se otevřela barikáda."
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "V Kloace se otevřela barikáda."
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Cesta zpět je otevřena."
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Dveře jsou zatarasené zevnitř."
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Ty se opovažuješ rabovat"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "hrobku popravčího?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Připrav se zemřít."
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Zbývají ti "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20spínače k nalezení."
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Zbývá ti jen "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20spínač."
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Cesta do věže je otevřena."
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Cesta je otevřena."

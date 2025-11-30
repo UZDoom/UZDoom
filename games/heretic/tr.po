@@ -1,0 +1,260 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Rıhtım"
+
+msgid "HHUSTR_E1M2"
+msgstr "Zindanlar"
+
+msgid "HHUSTR_E1M3"
+msgstr "Kapı Evi"
+
+msgid "HHUSTR_E1M4"
+msgstr "Muhafız Kulesi"
+
+msgid "HHUSTR_E1M5"
+msgstr "Hisar"
+
+msgid "HHUSTR_E1M6"
+msgstr "Katedral"
+
+msgid "HHUSTR_E1M7"
+msgstr "Mahzenler"
+
+msgid "HHUSTR_E1M8"
+msgstr "Cehennem Ağzı"
+
+msgid "HHUSTR_E1M9"
+msgstr "Mezarlık"
+
+msgid "HHUSTR_E2M1"
+msgstr "Krater"
+
+msgid "HHUSTR_E2M2"
+msgstr "Lav Çukurları"
+
+msgid "HHUSTR_E2M3"
+msgstr "Ateş Nehri"
+
+msgid "HHUSTR_E2M4"
+msgstr "Buz Mağarası"
+
+msgid "HHUSTR_E2M5"
+msgstr "Yeraltı Mezarları"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labirent"
+
+msgid "HHUSTR_E2M7"
+msgstr "Büyük Salon"
+
+msgid "HHUSTR_E2M8"
+msgstr "Kaos Kapıları"
+
+msgid "HHUSTR_E2M9"
+msgstr "Buzul"
+
+msgid "HHUSTR_E3M1"
+msgstr "Depo"
+
+msgid "HHUSTR_E3M2"
+msgstr "Lağım Çukuru"
+
+msgid "HHUSTR_E3M3"
+msgstr "Confluence"
+
+msgid "HHUSTR_E3M4"
+msgstr "Azure Kalesi"
+
+msgid "HHUSTR_E3M5"
+msgstr "Ophidian İni"
+
+msgid "HHUSTR_E3M6"
+msgstr "Korku Salonları"
+
+msgid "HHUSTR_E3M7"
+msgstr "Uçurum"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparil'in Kalesi"
+
+msgid "HHUSTR_E3M9"
+msgstr "Akifer"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalk"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blok ev"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulatuvar"
+
+msgid "HHUSTR_E4M4"
+msgstr "Mezar"
+
+msgid "HHUSTR_E4M5"
+msgstr "Büyük Merdiven"
+
+msgid "HHUSTR_E4M6"
+msgstr "Mürted Salonları"
+
+msgid "HHUSTR_E4M7"
+msgstr "Azap Surları"
+
+msgid "HHUSTR_E4M8"
+msgstr "Parçalanmış Köprü"
+
+msgid "HHUSTR_E4M9"
+msgstr "Anıt Mezar"
+
+msgid "HHUSTR_E5M1"
+msgstr "Ochre Kayalıkları"
+
+msgid "HHUSTR_E5M2"
+msgstr "Akıntıları"
+
+msgid "HHUSTR_E5M3"
+msgstr "Rıhtım"
+
+msgid "HHUSTR_E5M4"
+msgstr "Avlu"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hydratyr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Kolonat"
+
+msgid "HHUSTR_E5M7"
+msgstr "Foetid Manse"
+
+msgid "HHUSTR_E5M8"
+msgstr "Yargı Alanı"
+
+msgid "HHUSTR_E5M9"
+msgstr "D'sparil Çileği"
+
+msgid "HE1TEXT"
+msgstr ""
+"Demir cesetlerin ve yardakçılarının\n"
+"yok edilmesiyle, son yaşayan ölüler\n"
+"de bu âlemden uzaklaştırılmış oldu.\n"
+"\n"
+"Bu yaratıkların bir yerde, yine de, ve\n"
+"sen var sinsi şüphesi Cehennemin\n"
+"ağzının kapısı açılıyor kendi\n"
+"boyutlarında.\n"
+"\n"
+"Daha fazla ölümsüzün (ya da daha\n"
+"kötü şeyler) gelmiyor Cehennem'i\n"
+"mühürlemek zorunda kalacaksın.\n"
+"diğer taraftan maw. Elbette. bu da,\n"
+"bir güvenlik duvarı nda sıkışıp\n"
+"kalabileceğiniz anlamına gelir. çok\n"
+"düşmanca bir dünya, ama kimse\n"
+"Kafir olmanın kolay olduğunu hiç\n"
+"söylemedim!"
+
+msgid "HE2TEXT"
+msgstr ""
+"Kudretli maulotorlar kanıtladı seninle\n"
+"boy ölçüşemez, ve dumanı tüten\n"
+"cesetleri acımasızlık hissi uyandırır\n"
+"oldukları için memnuniyet yok edildi.\n"
+"\n"
+"Korudukları geçitler açtınız, neyi\n"
+"açığa çıkardınız umut eve giden\n"
+"yoldur. Ama sen adım at, alaycı\n"
+"kahkahalar kulaklarında çınlıyor.\n"
+"\n"
+"Maulotorları kontrol eden başka\n"
+"bir güç mü vardı? Bu geçidin ardında\n"
+"daha da korkunç varlıklar olabilir\n"
+"miydi? Gökyüzünün olması gereken\n"
+"yerde kristal bir kubbenin\n"
+"yükselmesi kesinlikle iyi bir işaret\n"
+"değil...."
+
+msgid "HE3TEXT"
+msgstr ""
+"D'Sparil'in ölümü, yaratıklarını bu\n"
+"alemde tutan büyülü bağları kopardı,\n"
+"onların ölüm çığlıkları kendi acı\n"
+"çığlıklarını bastırdı.\n"
+"\n"
+"İntikam yeminini yerine getirdin ve\n"
+"kubbenin milyonlarca parçaya\n"
+"ayrılmasından sadece birkaç dakika\n"
+"önce kendi dünyana açılan kapıdan\n"
+"girdin.\n"
+"\n"
+"Ama eğer D'Sparil'in gücü kırılırsa\n"
+"Sonsuza dek, neden güvende\n"
+"hissetmiyorsun? O son bağırış mıydı?\n"
+"Onun ölümü, o ses Lanet gibi mi?\n"
+"Ya da bir çağırma? Sen emin\n"
+"olamıyorum, ama olabilir sadece\n"
+"bir çığlık olabilirdi.\n"
+"\n"
+"Sonra tekrar,\n"
+"peki ya diğer Yılan Süvarileri mi?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Kendi evine döneceğini sanıyordun.\n"
+"D'Sparil öldükten sonra kendi\n"
+"dünyasına döndü. son eylemi seni\n"
+"sürgüne gönderdi kendi uçağı. İşte\n"
+"burada parçalanmış toprak kalıntıları\n"
+"D'Sparil tarafından fethedildi. Sen\n"
+"yendin Bu toprakların son\n"
+"koruyucuları, ama şimdi kapıların\n"
+"önünde duruyorsun D'Sparil'in kalesine.\n"
+"Ta ki bu hakkında hiçbir şüphen\n"
+"olmadığı an her şeyle yüzleşebilme\n"
+"yeteneği karşılaşma, ama bu portalın\n"
+"ötesinde kötülüğün tam kalbinde\n"
+"yatıyor dünyanızı işgal eden. D'Sparil\n"
+"ölmüş olabilir, ama çukurda doğduğu\n"
+"yer kalır. Şimdi yapman gereken o\n"
+"çukura girme umuduyla bir çıkış yolu\n"
+"bulmak. Ve bir yerlerde, D'Sparil'in\n"
+"krallığının en karanlık köşesinde,\n"
+"kişisel korumaları gelişinizi bekliyor ..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Son maulotor kükrerken ölüm acısı,\n"
+"fark edersin ki hiç bu kadar yaklaş-\n"
+"mamıştın. Yıkım. Savaş bile değil\n"
+"D'Sparil ve müritleri bu kadar çaresiz.\n"
+"Acımasızca bakıyorsun Önünüzde\n"
+"açılan kapıları, eve mi götürüyorlar\n"
+"yoksa hayal bile edilemeyen Korku.\n"
+"Kendinizi merak ederken bulursunuz.\n"
+"eğer devam edecek gücün varsa,\n"
+"ölüm ve acıdan başka bir şey\n"
+"beklemiyorsa Sen. Ama başka\n"
+"ne yapabilirsin ki? Savaşma isteğinin\n"
+"gittiğini mi? Böyle bir umutsuzluk\n"
+"karşısında kendinizi devam etmeye\n"
+"zorlayabilir misiniz? Cesaretiniz var\n"
+"mı? Sonunda, savaşmadan teslim\n"
+"olmanın içinizde olmadığını\n"
+"görürsünüz. Gözlerinizi dört açarak\n"
+"kaderinizle buluşmaya gidiyorsunuz."

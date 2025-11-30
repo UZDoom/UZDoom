@@ -1,0 +1,180 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: it\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "L'Esperimento di Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Livello 1: Congo"
+
+msgid "PHUSTR_2"
+msgstr "Livello 2: Pozzo delle Anime"
+
+msgid "PHUSTR_3"
+msgstr "Livello 3: Aztec"
+
+msgid "PHUSTR_4"
+msgstr "Livello 4: Ingabbiato"
+
+msgid "PHUSTR_5"
+msgstr "Livello 5: Città Fantasma"
+
+msgid "PHUSTR_6"
+msgstr "Livello 6: Tana del Barone"
+
+msgid "PHUSTR_7"
+msgstr "Livello 7: Cortile Prigione"
+
+msgid "PHUSTR_8"
+msgstr "Livello 8: Regno"
+
+msgid "PHUSTR_9"
+msgstr "Livello 9: Mattatoio"
+
+msgid "PHUSTR_10"
+msgstr "Livello 10: Assalto"
+
+msgid "PHUSTR_11"
+msgstr "Livello 11: Braccato"
+
+msgid "PHUSTR_12"
+msgstr "Livello 12: Velocità"
+
+msgid "PHUSTR_13"
+msgstr "Livello 13: La Cripta"
+
+msgid "PHUSTR_14"
+msgstr "Livello 14: Genesi"
+
+msgid "PHUSTR_15"
+msgstr "Livello 15: Il Crepuscolo"
+
+msgid "PHUSTR_16"
+msgstr "Livello 16: Il Presagio"
+
+msgid "PHUSTR_17"
+msgstr "Livello 17: Recinto"
+
+msgid "PHUSTR_18"
+msgstr "Livello 18: Neurosfera"
+
+msgid "PHUSTR_19"
+msgstr "Livello 19: NMIC"
+
+msgid "PHUSTR_20"
+msgstr "Livello 20: Il Dominio della Morte"
+
+msgid "PHUSTR_21"
+msgstr "Livello 21: Assassino"
+
+msgid "PHUSTR_22"
+msgstr "Livello 22: Missione Impossibile"
+
+msgid "PHUSTR_23"
+msgstr "Livello 23: Pietra Tombale"
+
+msgid "PHUSTR_24"
+msgstr "Livello 24: La Frontiera Finale"
+
+msgid "PHUSTR_25"
+msgstr "Livello 25: Il Tempio dell'Oscurità"
+
+msgid "PHUSTR_26"
+msgstr "Livello 26: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "Livello 27: Anticristo"
+
+msgid "PHUSTR_28"
+msgstr "Livello 28: Le Fogne"
+
+msgid "PHUSTR_29"
+msgstr "Livello 29: Odissea dei Rumori"
+
+msgid "PHUSTR_30"
+msgstr "Livello 30: La Porta dell'Inferno"
+
+msgid "PHUSTR_31"
+msgstr "Livello 31: Cybergabbia"
+
+msgid "PHUSTR_32"
+msgstr "Livello 32: Dacci Dentro"
+
+msgid "P1TEXT"
+msgstr ""
+"Esulti sulla carcassa fumante del\n"
+"Guardiano. con la sua morte hai estratto\n"
+"l'Acceleratore dagli schifosi artigli\n"
+"dell'inferno. Ti rilassi e guardi attorno.\n"
+"Dannazione! Ci dovrebbe essere almeno un\n"
+"prototipo funzionante, ma non riesci a\n"
+"vederlo. I demoni devono averlo preso.\n"
+"\n"
+"Devi trovare il prototipo o tutti i tuoi\n"
+"sforzi saranno stati vani. Continua a\n"
+"muoverti, continua a combattere, continua\n"
+"a uccidere. E continua a restare vivo."
+
+msgid "P2TEXT"
+msgstr ""
+"Neanche il letale labirinto degli Arch-Vile\n"
+"ti ha fermato e sei arrivato al prototipo\n"
+"dell'acceleratore che viene disattivato\n"
+"efficientemente e permanentemente.\n"
+"\n"
+"Sei bravo in questo genere di cose."
+
+msgid "P3TEXT"
+msgstr ""
+"Ti sei aperto la via nel cuore del nido\n"
+"dei demoni. È ora di una missione\n"
+"Cerca e Distruggi con obiettivo il\n"
+"Guardiano del cancello le cui malvage\n"
+"creature si riversano sulla Terra. Sì,\n"
+"è malvagio, ma tu sai chi è peggio!\n"
+"\n"
+"Sorridendo malignamente controlli il tuo\n"
+"equipaggiamento e ti prepari a dare al\n"
+"bastardo un piccolo inferno di tua fattura!"
+
+msgid "P4TEXT"
+msgstr ""
+"Il viso del Guardiano è sparso dappertutto\n"
+"Mentre il suo corpo sbrindellato collassa\n"
+"un cancello invertito si forma e risucchia\n"
+"i resti dell'ultimo acceleratore\n"
+"prototipo, per non parlare dei pochi demoni\n"
+"rimanenti. Sei soddisfatto. L'Inferno\n"
+"è tornato a perseguitare i dannati invece\n"
+"dei vivi. Ricordati di dire ai tuoi nipoti\n"
+"di mettere un lanciarazzi nella tua\n"
+"bara. Se andrai all'inferno quando\n"
+"morirai, ne avrai bisogno per fare un\n"
+"repulisti finale..."
+
+msgid "P5TEXT"
+msgstr ""
+"Hai trovato il secondo livello più tosto\n"
+"che abbiamo. Spero che tu abbia salvato uno\n"
+"o due livelli fa. Se no, preparati a morire\n"
+"in continuazione. Solo per marine veterani."
+
+msgid "P6TEXT"
+msgstr ""
+"Scommetto che ti chiedevi quale fosse il\n"
+"livello più duro che avessimo per te.\n"
+"Adesso lo sai.\n"
+"Nessuno ne esce vivo."

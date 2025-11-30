@@ -1,0 +1,227 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:24+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ptg\n"
+
+msgid "HUSTR_1"
+msgstr "Nível 1: Entrada"
+
+msgid "HUSTR_2"
+msgstr "Nível 2: Subterrâneo"
+
+msgid "HUSTR_3"
+msgstr "Nível 3: A Punição"
+
+msgid "HUSTR_4"
+msgstr "Nível 4: O Foco"
+
+msgid "HUSTR_5"
+msgstr "Nível 5: Os Túneis de Dejetos"
+
+msgid "HUSTR_6"
+msgstr "Nível 6: O Esmagador"
+
+msgid "HUSTR_7"
+msgstr "Nível 7: Simplesmente Mortal"
+
+msgid "HUSTR_8"
+msgstr "Nível 8: Truques e Armadilhas"
+
+msgid "HUSTR_9"
+msgstr "Nível 9: O Fosso"
+
+msgid "HUSTR_10"
+msgstr "Nível 10: Base de Reabastecimento"
+
+msgid "HUSTR_11"
+msgstr "Nível 11: Círculo da Morte"
+
+msgid "HUSTR_12"
+msgstr "Nível 12: A Fábrica"
+
+msgid "HUSTR_13"
+msgstr "Nível 13: Centro Urbano"
+
+msgid "HUSTR_14"
+msgstr "Nível 14: Os Antros Profundos"
+
+msgid "HUSTR_15"
+msgstr "Nível 15: Zona Industrial"
+
+msgid "HUSTR_16"
+msgstr "Nível 16: Subúrbios"
+
+msgid "HUSTR_17"
+msgstr "Nível 17: Habitações"
+
+msgid "HUSTR_18"
+msgstr "Nível 18: O Átrio"
+
+msgid "HUSTR_19"
+msgstr "Nível 19: A Cidadela"
+
+msgid "HUSTR_20"
+msgstr "Nível 20: Apanhei-te!"
+
+msgid "HUSTR_21"
+msgstr "Nível 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Nível 22: Os Calabouços"
+
+msgid "HUSTR_23"
+msgstr "Nível 23: Barris de Diversão"
+
+msgid "HUSTR_24"
+msgstr "Nível 24: O Abismo"
+
+msgid "HUSTR_25"
+msgstr "Nível 25: Cascatas de Sangue"
+
+msgid "HUSTR_26"
+msgstr "Nível 26: As Minas Abandonadas"
+
+msgid "HUSTR_27"
+msgstr "Nível 27: Condomínio Monstruoso"
+
+msgid "HUSTR_28"
+msgstr "Nível 28: O Mundo Espiritual"
+
+msgid "HUSTR_29"
+msgstr "Nível 29: O Cúmulo da Existência"
+
+msgid "HUSTR_30"
+msgstr "Nível 30: Ícone do Pecado"
+
+msgid "HUSTR_31"
+msgstr "Nível 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Nível 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Nível 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Nível 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Nível 33: Traição"
+
+msgid "NHUSTR_1"
+msgstr "Nível 1: A Base Terrestre"
+
+msgid "NHUSTR_2"
+msgstr "Nível 2: Os Laboratórios da Dor"
+
+msgid "NHUSTR_3"
+msgstr "Nível 3: Desfiladeiro dos Mortos"
+
+msgid "NHUSTR_4"
+msgstr "Nível 4: Montanha Infernal"
+
+msgid "NHUSTR_5"
+msgstr "Nível 5: Vivissecção"
+
+msgid "NHUSTR_6"
+msgstr "Nível 6: Inferno de Sangue"
+
+msgid "NHUSTR_7"
+msgstr "Nível 7: Banquete do Barão"
+
+msgid "NHUSTR_8"
+msgstr "Nível 8: Túmulo da Malevolência"
+
+msgid "NHUSTR_9"
+msgstr "Nível 9: Marcha dos Demônios"
+
+msgid "C1TEXT"
+msgstr ""
+"Entraste nas profundesas do porto\n"
+"espacial infestado. Mas há algo que está \n"
+"errado. Os monstros trouxeram consigo \n"
+"a sua própria realidade, e a tecnologia \n"
+"está sendo subvertida pela presença deles.\n"
+"\n"
+"À frente, vês um posto avançado \n"
+"do inferno, uma zona fortificada. \n"
+"Se conseguires atravessá-la, poderás\n"
+"penetrar no centro infestado da base \n"
+"espacial e achar o interruptor\n"
+"que está mantendo a população da Terra \n"
+"como refém."
+
+msgid "C2TEXT"
+msgstr ""
+"Ganhaste! A tua vitória permitiu que a\n"
+"humanidade evacuasse a Terra e escapasse\n"
+"desse pesadelo. Agora tu és @[ao_ptb] únic@[ao_ptb]\n"
+"human@[ao_ptb] que resta na face do planeta.\n"
+"Mutações canibais, alienígenas carnivoros \n"
+"e espiritos malignos são teus unicos\n"
+"vizinhos. Sentas-te e esperas pela morte, \n"
+"contente por teres salvo a tua espécie.\n"
+"\n"
+"No entanto, o comando terráqueo envia uma\n"
+"mensagem do espaço: \"Os sensores localizaram\n"
+"a fonte da invasão alienígena. Se fores lá,\n"
+"pode ser que consigas bloquear a entrada.\n"
+"A base alienígena está no centro da tua cidade \n"
+"natal, não muito longe do porto espacial.\"\n"
+"Lentamente e dolorosamente levantas-te\n"
+"e voltas para a luta."
+
+msgid "C3TEXT"
+msgstr ""
+"Conseguiste chegar ao centro infestado\n"
+"da cidade, cercado pelos cadáveres dos \n"
+"teus inimigos. Percebeste que não há\n"
+"maneira de destruir a passagem\n"
+"das criaturas por este lado, então tu\n"
+"cerras os dentes e entravessas o portal.\n"
+"\n"
+"Deve haver uma maneira de fechá-la do\n"
+"outro lado. Queres lá saber se tens que\n"
+"atravesar o inferno para chegar lá?"
+
+msgid "C4TEXT"
+msgstr ""
+"A visão horrenda do maior demônio que\n"
+"alguma vez viste desfaz-se a tua frente\n"
+"depois de lançares mísseis para dentro\n"
+"do seu cérebro exposto. Ele murcha\n"
+"e morre. O resto do seu corpo treme\n"
+"devastantedo completamente vários\n"
+"qulometros da superfície do inferno.\n"
+"\n"
+"Conseguiste. A invasão acabou.\n"
+"A Terra está salva. O inferno, em ruínas.\n"
+"Perguntas para onde os vilões irão\n"
+"quando morrerem agora. Secas o\n"
+"suor da sua testa e começas a longa\n"
+"jornada de volta para casa. Reconstruir\n"
+"a Terra deveria ser bem mais divertido \n"
+"do que arrasá-la.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Parabéns, encontraste o nível secreto!\n"
+"Parece ter sido construído por humanos,\n"
+"ao invés de demônios. Perguntas quem\n"
+"são os habitantes desta parte do inferno."
+
+msgid "C6TEXT"
+msgstr ""
+"Parabéns! Achaste o nível super secreta!\n"
+"É bom que seja canja passar este aqui.\n"

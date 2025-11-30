@@ -1,0 +1,184 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fi\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Plutoniakokemus"
+
+msgid "PHUSTR_1"
+msgstr "Taso 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Taso 2: Sielujen lähde"
+
+msgid "PHUSTR_3"
+msgstr "Taso 3: Asteekki"
+
+msgid "PHUSTR_4"
+msgstr "Taso 4: Häkissä"
+
+msgid "PHUSTR_5"
+msgstr "Taso 5: Aavekaupunki"
+
+msgid "PHUSTR_6"
+msgstr "Taso 6: Paronin luola"
+
+msgid "PHUSTR_7"
+msgstr "Taso 7: Posenpiha"
+
+msgid "PHUSTR_8"
+msgstr "Taso 8: Valtapiiri"
+
+msgid "PHUSTR_9"
+msgstr "Taso 9: Teurastamo"
+
+msgid "PHUSTR_10"
+msgstr "Taso 10: Ryntäys"
+
+msgid "PHUSTR_11"
+msgstr "Taso 11: Metsästetty"
+
+msgid "PHUSTR_12"
+msgstr "Taso 12: Vauhti"
+
+msgid "PHUSTR_13"
+msgstr "Taso 13: Krypta"
+
+msgid "PHUSTR_14"
+msgstr "Taso 14: Luominen"
+
+msgid "PHUSTR_15"
+msgstr "Taso 15: Hämärä"
+
+msgid "PHUSTR_16"
+msgstr "Taso 16: Enne"
+
+msgid "PHUSTR_17"
+msgstr "Taso 17: Laitos"
+
+msgid "PHUSTR_18"
+msgstr "Taso 18: Neurosfääri"
+
+msgid "PHUSTR_19"
+msgstr "Taso 19: VHLLNN"
+
+msgid "PHUSTR_20"
+msgstr "Taso 20: Kuoleman piiri"
+
+msgid "PHUSTR_21"
+msgstr "Taso 21: Tappaja"
+
+msgid "PHUSTR_22"
+msgstr "Taso 22: Mahdoton tehtävä"
+
+msgid "PHUSTR_23"
+msgstr "Taso 23: Hautakivi"
+
+msgid "PHUSTR_24"
+msgstr "Taso 24: Viimeinen rajamaa"
+
+msgid "PHUSTR_25"
+msgstr "Taso 25: Pimeyden temppeli"
+
+msgid "PHUSTR_26"
+msgstr "Taso 26: Bunkkeri"
+
+msgid "PHUSTR_27"
+msgstr "Taso 27: Antikristus"
+
+msgid "PHUSTR_28"
+msgstr "Taso 28: Viemärit"
+
+msgid "PHUSTR_29"
+msgstr "Taso 29: Äänten harharetki"
+
+msgid "PHUSTR_30"
+msgstr "Taso 30: Helvetin porttikäytävä"
+
+msgid "PHUSTR_31"
+msgstr "Taso 31: Kyberpesä"
+
+msgid "PHUSTR_32"
+msgstr "Taso 32: Iske kii"
+
+msgid "P1TEXT"
+msgstr ""
+"Leveilet vahingoniloisesti Vartijan\n"
+"höyryävästä raadosta. Sen kuoleman myötä\n"
+"olet repäissyt kiihdyttimen helvetin\n"
+"haisevista kynsistä. Rentoudut ja\n"
+"silmäilet huonetta. Perhana! Täällä piti\n"
+"olla ainakin yksi toimiva prototyyppi,\n"
+"muttet näe sellaista. Demonien on\n"
+"täytynyt ottaa se.\n"
+"\n"
+"Sinun on löydettävä prototyyppi, tai\n"
+"muuten kaikki ponnistelusi ovat menneet\n"
+"hukkaan. Jatka matkaa, jatka taistelemista,\n"
+"jatka tappamista. Ai niin, jatka myös\n"
+"hengissä säilymistä."
+
+msgid "P2TEXT"
+msgstr ""
+"Edes tappava arkkihirvitysten labyrintti\n"
+"ei kyennyt pysäyttämään sinua, ja olet\n"
+"saavuttanut kiihdytinprototyypin, joka pian\n"
+"deaktivoidaan tehokkaasti ja pysyvästi.\n"
+"\n"
+"Olet hyvä sellaisissa hommissa."
+
+msgid "P3TEXT"
+msgstr ""
+"Olet iskenyt ja murtautunut pirulaispesän\n"
+"sydämeen. On \"etsi ja tuhoa\"-tehtävän\n"
+"aika, kohteena Portinvartija, jonka\n"
+"kuvottavat jälkeläiset ovat ryöppyämässä\n"
+"Maahan. Kyllä, hän on paha. Mutta sinä\n"
+"tiedät, kuka on pahempi!\n"
+"\n"
+"Tarkastat varustuksesi häijysti virnuen\n"
+"ja valmistaudut antamaan sille paskiaiselle\n"
+"palan omatekoista helvettiäsi!"
+
+msgid "P4TEXT"
+msgstr ""
+"Portinvartijan häijyt kasvot roiskuvat\n"
+"yltympäri. Kun sen revitty ruumis luhistuu,\n"
+"käänteinen portti muodostuu ja imee alas\n"
+"viimeisen kiihdytinprototyypin palaset,\n"
+"muutamasta jäljelle jääneestä demonista\n"
+"puhumattakaan. Olet saattanut työsi loppuun.\n"
+"Helvetti on palannut murjomaan pahoja\n"
+"kuolleita ihmisiä hyvien elävien sijaan.\n"
+"Muista kertoa lastenlapsiasi asettamaan\n"
+"singon arkkuusi. Jos menet kuollessasi\n"
+"helvettiin, tarvitset sitä vähän lopullista\n"
+"puhdistusta varten ..."
+
+msgid "P5TEXT"
+msgstr ""
+"Olet löytänyt toiseksi vaikeimman\n"
+"tasoistamme. Toivottavasti sinulla on\n"
+"tallennettuna peli edelliseltä tai sitä\n"
+"edelliseltä tasolta. Jos ei, valmistaudu\n"
+"kuolemaan rutosti. Vain mestariavaruus-\n"
+"jalkaväelle."
+
+msgid "P6TEXT"
+msgstr ""
+"Lyönpä vetoa, että mietit, MIKÄ nyt olikaan\n"
+"vaikein sinulle valmistamistamme tasoista.\n"
+"Nyt sinä tiedät. Kukaan ei pääse ulos\n"
+"elävänä."
