@@ -957,6 +957,21 @@ CCMD(skymisttoggle)
 //
 //
 //-----------------------------------------------------------------------------
+CCMD(skymistyscale)
+{
+	if (argv.argc() > 1)
+	{
+		// Do this only on the primary level.
+		primaryLevel->skymistyscale = clamp((float)strtod(argv[1], NULL), 0.002f, 544.0f);
+	}
+	Printf("%f (clamped between 0.002 and 544.0, default: 1.0)\n", primaryLevel->skymistyscale);
+}
+
+//-----------------------------------------------------------------------------
+//
+//
+//
+//-----------------------------------------------------------------------------
 CCMD(thickfogdistance)
 {
 	if (argv.argc() > 1)

@@ -150,6 +150,7 @@ void R_UpdateSky(double ticFrac)
 		Level->hw_sky1pos = (float)(fmod((mstime * Level->skyspeed1), 1024.) * (90. / 256.));
 		Level->hw_sky2pos = (float)(fmod((mstime * Level->skyspeed2), 1024.) * (90. / 256.));
 		Level->hw_skymistpos = (float)(fmod((mstime * Level->skymistspeed), 1024.) * (90. / 256.));
+		Level->hw_skymistyscale += ticFrac * (Level->skymistyscale - Level->hw_skymistyscale);
 	}
 }
 

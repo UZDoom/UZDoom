@@ -282,6 +282,7 @@ void level_info_t::Reset()
 	Snapshot = { 0,0,0,0,0,nullptr };
 	deferred.Clear();
 	skyspeed1 = skyspeed2 = skymistspeed = 0.f;
+	skymistyscale = 1.f;
 	fadeto = 0;
 	outsidefog = 0xff000000;
 	cdtrack = 0;
@@ -1119,6 +1120,13 @@ DEFINE_MAP_OPTION(skymist, true)
 		}
 		info->skymistspeed = float(parse.sc.Float * (TICRATE / 1000.));
 	}
+}
+
+DEFINE_MAP_OPTION(skymistyscale, false)
+{
+	parse.ParseAssign();
+	parse.sc.MustGetFloat();
+	info->skymistyscale = clamp(parse.sc.Float, 0.002, 544.0);
 }
 
 // Vavoom compatibility

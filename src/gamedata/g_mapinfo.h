@@ -357,6 +357,7 @@ struct level_info_t
 	float		skyspeed1;
 	float		skyspeed2;
 	float		skymistspeed;
+	float		skymistyscale;
 	uint32_t	fadeto;
 	uint32_t	outsidefog;
 	int			cdtrack;

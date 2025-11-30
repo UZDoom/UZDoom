@@ -432,7 +432,7 @@ void FSkyVertexBuffer::SetupMatrices(FGameTexture *tex, float x_offset, float y_
 	else
 	{
 		modelMatrix.translate(0.f, (-40 + texskyoffset) * skyoffsetfactor, 0.f);
-		modelMatrix.scale(1.f, 0.8f * 1.17f, 1.f);
+		modelMatrix.scale(1.f, 1.2f * 1.17f, 1.f);
 	}
 	textureMatrix.loadIdentity();
 	textureMatrix.scale(mirror ? -xscale : xscale, yscale, 1.f);
@@ -461,7 +461,7 @@ void FSkyVertexBuffer::DoRenderDome(FRenderState& state, FGameTexture* tex, int 
 	auto& primStart = which ? mPrimStartBuild : mPrimStartDoom;
 	if (tex && tex->isValid())
 	{
-		state.SetMaterial(tex, UF_Texture, 0, CLAMP_NONE, 0, -1);
+		state.SetMaterial(tex, UF_Texture, 0, (mode == FSkyVertexBuffer::SKYMODE_FOGLAYER ? CLAMP_XY : CLAMP_NONE), 0, -1);
 		state.EnableModelMatrix(true);
 		state.EnableTextureMatrix(true);
 	}

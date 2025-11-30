@@ -699,9 +699,10 @@ public:
 	float		skyspeed1;				// Scrolling speed of sky textures, in pixels per ms
 	float		skyspeed2;
 	float		skymistspeed;
+	float		skymistyscale;			// Y-scale for skymist layer. Scales from horizon as midpoint. Doesn't tile.
 
 	double		sky1pos, sky2pos;
-	float		hw_sky1pos, hw_sky2pos, hw_skymistpos;
+	float		hw_sky1pos, hw_sky2pos, hw_skymistpos, hw_skymistyscale;
 	bool		skystretch;
 	uint32_t	globalcolormap;
 

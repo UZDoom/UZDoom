@@ -90,7 +90,10 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 
 		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2])
 		{
-			vertexBuffer->RenderDome(state, origin->texture[2], origin->x_offset[2], 0.f, false, FSkyVertexBuffer::SKYMODE_FOGLAYER, !!(di->Level->flags & LEVEL_FORCETILEDSKY), 0, 0, FadeColor);
+			float misth = origin->texture[2]->GetDisplayHeight();
+			float myscale = di->Level->hw_skymistyscale;
+			float myoffset = (myscale - 1.0)*0.857*misth; // [DVR] Why so many magic numbers when it comes to sky??
+			vertexBuffer->RenderDome(state, origin->texture[2], origin->x_offset[2], myoffset, false, FSkyVertexBuffer::SKYMODE_FOGLAYER, !!(di->Level->flags & LEVEL_FORCETILEDSKY), 0, (myscale == 0.0 ? 0 : 240.0/misth/myscale), FadeColor);
 		}
 		else if (!di->isFullbrightScene())
 		{

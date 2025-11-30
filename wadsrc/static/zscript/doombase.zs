@@ -427,6 +427,7 @@ struct LevelInfo native
 	native readonly float skyspeed1;
 	native readonly float skyspeed2;
 	native readonly float skymistspeed;
+	native readonly float skymistyscale;
 	native readonly int cdtrack;
 	native readonly double gravity;
 	native readonly double aircontrol;
@@ -524,6 +525,7 @@ struct LevelLocals native
 	native float skyspeed1;
 	native float skyspeed2;
 	native float skymistspeed;
+	native float skymistyscale;
 	native int total_secrets;
 	native int found_secrets;
 	native int total_items;
@@ -618,7 +620,7 @@ struct LevelLocals native
 	native String GetChecksum() const;
 
 	native void ChangeSky(TextureID sky1, TextureID sky2 );
-	native void ChangeSkyMist(TextureID skymist, bool usemist = true);
+	native void ChangeSkyMist(TextureID skymist, bool usemist = true, float skymistyscale = 1.0);
 	native void SetSkyFog(int fogdensity);
 	native void SetThickFog(float distance, float multiplier);
 	native void ForceLightning(int mode = 0, sound tempSound = "");

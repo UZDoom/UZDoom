@@ -1765,6 +1765,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
 	 PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
 	 PARAM_INT(skymist);
 	 PARAM_BOOL(usemist);
+	 PARAM_FLOAT(skymistyscale);
 	 self->skymisttexture = FSetTextureID(skymist);
 	 if (usemist)
 	 {
@@ -1774,6 +1775,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
 	 {
 		 self->flags3 &= ~LEVEL3_SKYMIST;
 	 }
+	 self->skymistyscale = clamp(skymistyscale, 0.002, 544.0);
 	 InitSkyMap(self);
 	 return 0;
  }
@@ -2915,6 +2917,7 @@ DEFINE_FIELD_X(LevelInfo, level_info_t, musicorder)
 DEFINE_FIELD_X(LevelInfo, level_info_t, skyspeed1)
 DEFINE_FIELD_X(LevelInfo, level_info_t, skyspeed2)
 DEFINE_FIELD_X(LevelInfo, level_info_t, skymistspeed)
+DEFINE_FIELD_X(LevelInfo, level_info_t, skymistyscale)
 DEFINE_FIELD_X(LevelInfo, level_info_t, cdtrack)
 DEFINE_FIELD_X(LevelInfo, level_info_t, gravity)
 DEFINE_FIELD_X(LevelInfo, level_info_t, aircontrol)
@@ -2964,6 +2967,7 @@ DEFINE_FIELD(FLevelLocals, skymisttexture)
 DEFINE_FIELD(FLevelLocals, skyspeed1)
 DEFINE_FIELD(FLevelLocals, skyspeed2)
 DEFINE_FIELD(FLevelLocals, skymistspeed)
+DEFINE_FIELD(FLevelLocals, skymistyscale)
 DEFINE_FIELD(FLevelLocals, total_secrets)
 DEFINE_FIELD(FLevelLocals, found_secrets)
 DEFINE_FIELD(FLevelLocals, total_items)
