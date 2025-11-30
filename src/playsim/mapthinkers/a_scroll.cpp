@@ -129,7 +129,7 @@ static void RotationComp(const sector_t *sec, int which, double dx, double dy, d
 	}
 	else
 	{
-		double ca = -an.Cos();
+		double ca = an.Cos();
 		double sa = -an.Sin();
 		tdx = dx*ca - dy*sa;
 		tdy = dy*ca + dx*sa;
