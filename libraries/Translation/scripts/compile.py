@@ -54,7 +54,7 @@ def get_po_files(po_paths):
 					languages[po_id] = _po_files[po_id]["meta"]["id"]
 				if languages[po_id] != _po_files[po_id]["meta"]["id"]:
 					failed = True
-					print(f"inconsistent language mapping {languages[po_id]} / {_po_files[po_id]["meta"]["id"]}")
+					print(f"inconsistent language mapping {languages[po_id]} / {_po_files[po_id]['meta']['id']}")
 					break
 		if failed:
 			continue
