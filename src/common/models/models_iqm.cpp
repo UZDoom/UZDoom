@@ -846,3 +846,62 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, floa
 		return CalculateBonesIQMSpecialized<false, false>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
 	}
 }
+
+const TArray<VSMatrix>* IQMModel::CalculateBonesOnlyOffsets(TArray<BoneOverride> *in, double time)
+{
+	int numbones = Joints.SSize();
+
+	if(numbones <= 0) return nullptr;
+
+	boneData.Resize(numbones);
+
+	constexpr const float swapYZ[16]
+	{
+		1.0f, 0.0f, 0.0f, 0.0f,
+		0.0f, 0.0f, 1.0f, 0.0f,
+		0.0f, 1.0f, 0.0f, 0.0f,
+		0.0f, 0.0f, 0.0f, 1.0f
+	};
+	
+	if(in)
+	{
+		for (int i = 0; i < numbones; i++)
+		{
+			TRS bone;
+
+			(*in)[i].Modify(bone, time);
+
+			VSMatrix m;
+			m.loadIdentity();
+			m.translate(bone.translation.X, bone.translation.Y, bone.translation.Z);
+			m.multQuaternion(bone.rotation);
+			m.scale(bone.scaling.X, bone.scaling.Y, bone.scaling.Z);
+
+			VSMatrix& result = boneData[i];
+			if (Joints[i].Parent >= 0)
+			{
+				result = boneData[Joints[i].Parent];
+				result.multMatrix(swapYZ);
+				result.multMatrix(baseframe[Joints[i].Parent]);
+				result.multMatrix(m);
+				result.multMatrix(inversebaseframe[i]);
+			}
+			else
+			{
+				result.loadMatrix(swapYZ);
+				result.multMatrix(m);
+				result.multMatrix(inversebaseframe[i]);
+			}
+			result.multMatrix(swapYZ);
+		}
+	}
+	else
+	{
+		for (int i = 0; i < numbones; i++)
+		{
+			boneData[i].loadIdentity();
+		}
+	}
+
+	return &boneData;
+}
