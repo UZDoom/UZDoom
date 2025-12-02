@@ -1,6 +1,7 @@
 cmake_minimum_required( VERSION 3.16.0 )
 
 include(precompiled_headers)
+include(FetchContent)
 
 if( COMMAND cmake_policy )
 	cmake_policy( SET CMP0003 NEW )
@@ -50,6 +51,13 @@ if( NOT PROJECT_LIBRARIES )
 endif()
 
 add_definitions( -DTHIS_IS_GZDOOM )
+
+FetchContent_Declare(
+    trex
+    GIT_REPOSITORY https://github.com/KyrietS/trex.git
+    GIT_TAG        master
+)
+FetchContent_MakeAvailable(trex)
 
 if( WIN32 )
 
@@ -338,6 +346,7 @@ endif()
 
 list( APPEND PROJECT_LIBRARIES "zwidget" )
 list( APPEND PROJECT_LIBRARIES "webp" )
+list( APPEND PROJECT_LIBRARIES "trex" )
 
 message("Building for target architecture: ${TARGET_ARCHITECTURE}")
 
