@@ -512,6 +512,7 @@ enum ActorRenderFlag2
 	RF2_ANGLEDROLL				= 0x0800,	// Sprite roll amount depends on (actor.Angle - actor.AngledRollOffset)
 	RF2_INTERPOLATESCALE		= 0x1000,
 	RF2_INTERPOLATEALPHA		= 0x2000,
+	RF2_NODYNAMICLIGHTING		= 0x4000,	// [MC] Disable dynamic lighting effects on sprites/models
 };
 
 // This translucency value produces the closest match to Heretic's TINTTAB.
