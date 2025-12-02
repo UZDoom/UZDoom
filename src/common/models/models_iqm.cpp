@@ -682,7 +682,8 @@ ModelAnimFramePrecalculatedIQM IQMModel::CalculateFrameIQM(int frame1, int frame
 	return out;
 }
 
-const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time)
+template<bool useIn, bool useOut>
+const TArray<VSMatrix>* IQMModel::CalculateBonesIQMSpecialized(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time)
 {
 	const TArray<TRS>& animationFrames = animationData ? *animationData : TRSData;
 
@@ -691,14 +692,12 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, floa
 	int numbones = Joints.SSize();
 	outMatrix->Resize(numbones);
 
-	if(out)
+	if constexpr(useOut)
 	{
 		out->bones.Resize(numbones);
 		out->bones_with_override.Resize(numbones);
 		out->positions.Resize(numbones);
 	}
-
-	if(in && in->size() != Joints.Size()) in = nullptr;
 
 	if (numbones > 0 && animationFrames.Size() > 0)
 	{
@@ -754,18 +753,18 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, floa
 				bone = inter < 0 ? animationFrames[offset1 + i] : InterpolateBone(prev, next , inter, invt);
 			}
 
-			if(out)
+			if constexpr(useOut)
 			{
 				out->bones[i] = bone;
 
-				if(in)
+				if constexpr(useIn)
 				{
 					(*in)[i].Modify(bone, time);
 				}
-				
+
 				out->bones_with_override[i] = bone;
 			}
-			else if(in)
+			else if constexpr(useIn)
 			{
 				(*in)[i].Modify(bone, time);
 			}
@@ -793,7 +792,7 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, floa
 			}
 			result.multMatrix(swapYZ);
 
-			if(out)
+			if constexpr(useOut)
 			{
 				VSMatrix m;
 				m.loadIdentity();
@@ -823,4 +822,26 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, floa
 		return &boneData;
 	}
 	return nullptr;
+}
+
+const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time)
+{
+	if(in && in->size() != Joints.Size()) in = nullptr;
+
+	if(in && out)
+	{
+		return CalculateBonesIQMSpecialized<true, true>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
+	else if(in)
+	{
+		return CalculateBonesIQMSpecialized<true, false>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
+	else if(out)
+	{
+		return CalculateBonesIQMSpecialized<false, true>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
+	else
+	{
+		return CalculateBonesIQMSpecialized<false, false>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
 }

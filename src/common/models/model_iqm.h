@@ -130,6 +130,8 @@ public:
 
 	ModelAnimFramePrecalculatedIQM CalculateFrameIQM(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData);
 	const TArray<VSMatrix>* CalculateBonesIQM(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time);
+	template<bool useIn, bool useOut>
+	const TArray<VSMatrix>* CalculateBonesIQMSpecialized(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time);
 
 private:
 	void LoadGeometry();
