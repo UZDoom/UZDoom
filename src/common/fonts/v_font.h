@@ -29,6 +29,7 @@
 #include "palentry.h"
 #include "name.h"
 #include "palettecontainer.h"
+#include "Trex/Atlas.hpp"
 
 class FGameTexture;
 struct FRemapTable;
@@ -93,7 +94,7 @@ public:
 
 	FFont (const char *fontname, const char *nametemplate, const char *filetemplate, int first, int count, int base, int fdlump, int spacewidth=-1, bool notranslate = false, bool iwadonly = false, bool doomtemplate = false, GlyphSet *baseGlpyphs = nullptr);
 	FFont(int lump, FName nm = NAME_None);
-	explicit FFont(const char *fontname);
+	explicit FFont(const char *fontname, Trex::Atlas* fontAtlas);
 	virtual ~FFont ();
 
 	virtual FGameTexture *GetChar (int code, int translation, int *const width) const;
@@ -196,6 +197,7 @@ protected:
 	int Lump;
 	FName FontName = NAME_None;
 	FFont *Next;
+	Trex::Atlas *DynamicFontAtlas;
 
 	static FFont *FirstFont;
 	friend struct FontsDeleter;

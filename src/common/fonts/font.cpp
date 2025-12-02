@@ -1070,7 +1070,7 @@ FFont::FFont (int lump, FName nm)
 	noTranslate = false;
 }
 
-FFont::FFont(const char *fontname)
+FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas)
 {
 	noTranslate    = false;
 	GlobalKerning  = false;
@@ -1079,6 +1079,7 @@ FFont::FFont(const char *fontname)
 	int FixedWidth = 0;
 
 	Type = EFontType::Dynamic;
+	DynamicFontAtlas = fontAtlas;
 }
 
 //==========================================================================

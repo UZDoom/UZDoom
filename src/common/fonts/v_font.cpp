@@ -42,8 +42,12 @@
 #include "texturemanager.h"
 #include "printf.h"
 #include "palentry.h"
+#include "Trex/Font.hpp"
+#include "Trex/Atlas.hpp"
 
 #include "fontinternals.h"
+#include "fs_files.h"
+#include <span>
 
 // MACROS ------------------------------------------------------------------
 
@@ -181,13 +185,18 @@ void V_InitCustomFonts()
 	{
 		for (const auto &f : folderdata)
 		{
-			//TODO: ignore the license disclosure files.
+			FString fileName = f.name;
+			if (fileName.IndexOf(".ttf") > 0)
 			{
-				//TODO: proper ctor
-				FFont* const Font = new FFont(f.name);
-				//TODO: get real font name
-				//TODO: get character range from font file
-				//TODO: generate atlas
+				FileSys::FileData data = fileSystem.ReadFileFullName(f.name);
+				FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
+				Trex::Atlas*  atlas = new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), 64, Trex::Charset::Full(), Trex::RenderMode::SDF);
+				FString           outputFileName = fileName + FString("output.png");
+				atlas->SaveToFile("output.png");
+				Trex::Atlas::Bitmap  bitmap = atlas->GetBitmap();
+				FBitmap            *sheet  = new FBitmap();
+				sheet->Create(bitmap.Width(), bitmap.Height());
+				FFont* const Font = new FFont(shortName.GetChars(), atlas);
 			}
 		}
 	}
