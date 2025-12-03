@@ -2228,6 +2228,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingSpecial(101, Door_Open);
 				SetThingArgument(101, 0, 666);
 				SetThingArgument(101, 1, 16);
+				break;
+			}
+			
+			case '25F0DA23E7E54DAB05DC0B2A6B9DE1D1': // 3ha2.wad map02
+			{
+				// Enables the Imp teleport to work on easy difficulties, allowing for 100% kills
+				SetThingSkills(56,31);
+				break;
 			}
 		}
 	}
