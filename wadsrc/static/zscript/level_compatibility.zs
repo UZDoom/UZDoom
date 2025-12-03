@@ -2211,6 +2211,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingArgument(101, 0, 666);
 				SetThingArgument(101, 1, 16);
 			}
+
+			case '25F0DA23E7E54DAB05DC0B2A6B9DE1D1':  // 3ha2.wad map02
+			{
+				// Enabled the imp teleport destination on easy, allowing
+				// 100% kills on easy difficulties.
+				SetThingSkills(56,31);
+				break;
+			}
 		}
 	}
 }
