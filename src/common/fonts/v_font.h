@@ -159,6 +159,11 @@ public:
 		return DynamicFontAtlasTexture;
 	}
 
+	inline double GetInvSupersampleScale() const
+	{
+		return invSupersample;
+	}
+
 	friend void V_InitCustomFonts();
 
 	void CopyFrom(const FFont& other)
@@ -214,6 +219,7 @@ protected:
 	FFont *Next;
 	Trex::Atlas *DynamicFontAtlas = nullptr;
 	FGameTexture *DynamicFontAtlasTexture = nullptr;
+	double        invSupersample          = 0.25; // 1 / supersampling scale (default is 4x resolution)
 
 	static FFont *FirstFont;
 	friend struct FontsDeleter;

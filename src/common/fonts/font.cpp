@@ -49,6 +49,7 @@
 #include "fontinternals.h"
 #include "Trex/Atlas.hpp"
 #include "texturemanager.h"
+#include "Trex/TextShaper.hpp"
 
 TArray<FBitmap> sheetBitmaps;
 
@@ -865,7 +866,7 @@ int FFont::GetCharWidth (int code) const
 	code = GetCharCode(code, true);
 	if (Type == EFontType::Dynamic)
 	{
-		return DynamicFontAtlas->GetGlyphs().GetGlyphByCodepoint(code).width;
+		return DynamicFontAtlas->GetGlyphs().GetGlyphByCodepoint(code).width  * invSupersample;
 	}
 	if (code >= 0) return Chars[code - FirstChar].XMove;
 	return SpaceWidth;
@@ -938,6 +939,14 @@ bool FFont::CanPrint(const uint8_t *string) const
 
 int FFont::StringWidth(const uint8_t *string, int spacing) const
 {
+	if (Type == EFontType::Dynamic)
+	{
+		FString str = (char *)string;
+		Trex::TextShaper shaper(*DynamicFontAtlas);
+		auto glyphs = shaper.ShapeUtf8(std::span<const char>((const char*)string, strlen((const char*)string)));
+		return Trex::TextShaper::Measure(glyphs).width * invSupersample;
+	}
+
 	int w = 0;
 	int maxw = 0;
 
