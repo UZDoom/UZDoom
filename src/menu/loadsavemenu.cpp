@@ -62,7 +62,7 @@ EXTERN_CVAR(Int, save_sort_order)
 
 bool CheckGZDoomSaveCompat(FString &engine, FString &software)
 {
-	if(software.IndexOf("GZDoom g") == 0)
+	if(software.IndexOf("GZDoom g") == 0 || software.IndexOf("LZDoom l") == 0)
 	{
 		if(software.Len() < 11) return false; // GZDoom g????????
 
@@ -101,7 +101,7 @@ bool CheckGZDoomSaveCompat(FString &engine, FString &software)
 					//GZDoom g4.14.##, don't allow
 					return false;
 				}
-				else if(v2 > 2)
+				else if(v2 > 2 && software.IndexOf("GZDoom g") == 0)
 				{
 					//GZDoom g4.14.3+, don't allow
 					return false;
@@ -109,7 +109,7 @@ bool CheckGZDoomSaveCompat(FString &engine, FString &software)
 				/*
 				else
 				{
-					//GZDoom g4.14.0 / GZDoom g4.14.1 / GZDoom g4.14.2, allow
+					//GZDoom g4.14.0 / GZDoom g4.14.1 / GZDoom g4.14.2, LZDoom l4.14.#, allow
 				}
 				*/
 			}
@@ -123,7 +123,7 @@ bool CheckGZDoomSaveCompat(FString &engine, FString &software)
 		/*
 		else
 		{
-		//GZDoom g4.0.0 - GZDoom g4.13.2, allow
+		//GZDoom g4.0.0 - GZDoom g4.13.2, LZDoom l4.#, allow
 		}
 		*/
 	}
@@ -182,7 +182,7 @@ void FSavegameManager::ReadSaveStrings()
 						#if LOAD_GZDOOM_4142_SAVES
 						FString software = arc.GetString("Software");
 
-						if(engine.Compare("GZDOOM") == 0)
+						if(engine.Compare("GZDOOM") == 0 || engine.Compare("LZDOOM") == 0)
 						{
 							if(!CheckGZDoomSaveCompat(engine, software))
 							{

@@ -2070,7 +2070,7 @@ void G_DoLoadGame ()
 	#if LOAD_GZDOOM_4142_SAVES
 	FString software = arc.GetString("Software");
 	bool gzdoom_compat_ok = false;
-	if(engine.Compare("GZDOOM") == 0)
+	if(engine.Compare("GZDOOM") == 0 || engine.Compare("LZDOOM") == 0)
 	{
 		gzdoom_compat_ok = CheckGZDoomSaveCompat(engine, software);
 	}
