@@ -47,6 +47,8 @@
 #include "i_interface.h"
 
 #include "fontinternals.h"
+#include "Trex/Atlas.hpp"
+#include "texturemanager.h"
 
 TArray<FBitmap> sheetBitmaps;
 
@@ -1070,6 +1072,33 @@ FFont::FFont (int lump, FName nm)
 	noTranslate = false;
 }
 
+class FTrexAtlasImageSource : public FImageSource
+{
+	const Trex::Atlas::Bitmap *TrexBitmap = nullptr;
+  public:
+	FTrexAtlasImageSource(const Trex::Atlas::Bitmap * tBmp, int width, int height)
+	{
+		TrexBitmap = tBmp;
+		Width     = width;
+		Height    = height;
+	}
+
+	virtual int CopyPixels(FBitmap *dest, int conversion, int frame = 0) override
+	{
+		if (!TrexBitmap)
+		{
+			return 0;
+		}
+
+		auto& bmp = *TrexBitmap;
+		auto channels = bmp.Channels();
+		
+		dest->CopyPixelDataRGB(0, 0, bmp.Data().data(), bmp.Width(), bmp.Height(),
+		                       channels, bmp.Width() * channels, 0, CF_RGBA);
+		return 0;
+	}
+};
+
 FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas)
 {
 	noTranslate    = false;
@@ -1080,6 +1109,24 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas)
 
 	Type = EFontType::Dynamic;
 	DynamicFontAtlas = fontAtlas;
+
+	FirstChar = LastChar = 0;
+	Next                 = FirstFont;
+	FirstFont            = this;
+	Lump                 = -1;
+	FontName             = FName(fontname);
+	Cursor               = '_';
+	noTranslate          = false;
+
+	const Trex::Atlas::Bitmap& trexBitmap = fontAtlas->GetBitmap();
+	FTrexAtlasImageSource* src = new FTrexAtlasImageSource(&trexBitmap, trexBitmap.Width(), trexBitmap.Height());
+	FImageTexture *img = new FImageTexture(src);
+	img->SetSize(trexBitmap.Width(), trexBitmap.Height());
+	FGameTexture  *tex   = MakeGameTexture(img, nullptr, ETextureType::FontChar);
+	tex->SetNoMipmap(true);
+	tex->SetSize(trexBitmap.Width(), trexBitmap.Height());
+	TexMan.AddGameTexture(tex);
+	DynamicFontAtlasTexture = tex;
 }
 
 //==========================================================================

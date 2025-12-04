@@ -190,12 +190,8 @@ void V_InitCustomFonts()
 			{
 				FileSys::FileData data = fileSystem.ReadFileFullName(f.name);
 				FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
-				Trex::Atlas*  atlas = new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), 64, Trex::Charset::Full(), Trex::RenderMode::SDF);
-				FString           outputFileName = fileName + FString("output.png");
-				atlas->SaveToFile("output.png");
-				Trex::Atlas::Bitmap  bitmap = atlas->GetBitmap();
-				FBitmap            *sheet  = new FBitmap();
-				sheet->Create(bitmap.Width(), bitmap.Height());
+				Trex::Atlas*  atlas = new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), 12, Trex::Charset::Full(), Trex::RenderMode::COLOR);
+				
 				FFont* const Font = new FFont(shortName.GetChars(), atlas);
 			}
 		}
@@ -915,7 +911,7 @@ void V_LoadTranslations()
 			OriginalBigFont->forceremap = true;
 		}
 	}
-	if (SmallFont)
+	if (SmallFont && !SmallFont->IsValidDynamicFont())
 	{
 		CalcDefaultTranslation(SmallFont, CR_UNTRANSLATED * 2);
 		if (OriginalSmallFont != nullptr && OriginalSmallFont != SmallFont)
@@ -927,7 +923,7 @@ void V_LoadTranslations()
 			OriginalSmallFont->Translations[CR_UNTRANSLATED] = FTranslationID::fromInt(sometrans);
 			OriginalSmallFont->forceremap = true;
 		}
-		if (NewSmallFont != nullptr)
+		if (NewSmallFont != nullptr && !NewSmallFont->IsValidDynamicFont())
 		{
 			assert(IsLuminosityTranslation(NewSmallFont->Translations[0]));
 			int sometrans = NewSmallFont->Translations[0].index();

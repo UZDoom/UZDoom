@@ -144,6 +144,21 @@ public:
 	static int GetLuminosity(uint32_t* colorsused, TArray<double>& Luminosity, int* minlum = nullptr, int* maxlum = nullptr);
 	EFontType GetType() const { return Type; }
 
+	inline bool IsValidDynamicFont() const
+	{
+		return Type == EFontType::Dynamic && DynamicFontAtlas && DynamicFontAtlasTexture;
+	}
+
+	inline Trex::Atlas *GetDynamicFontAtlas() const
+	{
+		return DynamicFontAtlas;
+	}
+
+	inline FGameTexture* GetDynamicFontAtlasTexture() const
+	{
+		return DynamicFontAtlasTexture;
+	}
+
 	friend void V_InitCustomFonts();
 
 	void CopyFrom(const FFont& other)
@@ -197,7 +212,8 @@ protected:
 	int Lump;
 	FName FontName = NAME_None;
 	FFont *Next;
-	Trex::Atlas *DynamicFontAtlas;
+	Trex::Atlas *DynamicFontAtlas = nullptr;
+	FGameTexture *DynamicFontAtlasTexture = nullptr;
 
 	static FFont *FirstFont;
 	friend struct FontsDeleter;
