@@ -227,8 +227,8 @@ struct DrawParms
 	bool indexed;
 	bool nooffset;
 	int8_t fsscalemode;
-	double srcx, srcy;
-	double srcwidth, srcheight;
+	double srcx, srcy; //in 0-1 space
+	double srcwidth, srcheight; //in 0-1 space
 	double patchscalex, patchscaley;
 	double rotateangle;
 	IntRect viewport;

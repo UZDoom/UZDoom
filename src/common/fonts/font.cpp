@@ -863,6 +863,10 @@ FGameTexture *FFont::GetChar (int code, int translation, int *const width) const
 int FFont::GetCharWidth (int code) const
 {
 	code = GetCharCode(code, true);
+	if (Type == EFontType::Dynamic)
+	{
+		return DynamicFontAtlas->GetGlyphs().GetGlyphByCodepoint(code).width;
+	}
 	if (code >= 0) return Chars[code - FirstChar].XMove;
 	return SpaceWidth;
 }
@@ -1101,10 +1105,10 @@ class FTrexAtlasImageSource : public FImageSource
 
 FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas)
 {
-	noTranslate    = false;
+	noTranslate    = true;
 	GlobalKerning  = false;
 	SpaceWidth     = 0;
-	FontHeight     = 0;
+	FontHeight     = fontAtlas->GetFont()->GetMetrics().height;
 	int FixedWidth = 0;
 
 	Type = EFontType::Dynamic;

@@ -34,6 +34,12 @@
 #include "vm.h"
 #include "printf.h"
 
+#include "Trex/TextShaper.hpp"
+#include "Trex/BitmapHelpers.hpp"
+#include "Trex/TextShaper.hpp"
+#include <type_traits>
+#include <span>
+#include <string>
 
 int ListGetInt(VMVa_List &tags);
 
@@ -268,6 +274,64 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 
 	double scalex = parms.scalex * parms.patchscalex;
 	double scaley = parms.scaley * parms.patchscaley;
+
+	if (font && font->IsValidDynamicFont())
+	{
+		auto &atlas = *font->GetDynamicFontAtlas();
+		//double scalex = parms.scalex;
+		//double scaley = parms.scaley;
+		auto               shaper = Trex::TextShaper(atlas);
+		Trex::ShapedGlyphs glyphs;
+		if constexpr (std::is_same_v<chartype, char>)
+		{
+			glyphs = shaper.ShapeUtf8(std::span<const chartype>(string, std::char_traits<char>::length(string)));
+		}
+		else if constexpr (std::is_same_v<chartype, uint8_t>)
+		{
+			glyphs = shaper.ShapeUtf8(std::span<const char>((const char*)string, std::char_traits<uint8_t>::length(string)));
+		}
+		else if constexpr (std::is_same_v<chartype, char32_t>)
+		{
+			glyphs = shaper.ShapeUtf32(std::span<const chartype>(string, std::char_traits<chartype>::length(string)));
+		}
+		else if constexpr (std::is_same_v<chartype, char16_t>)
+		{
+			glyphs = shaper.ShapeUnicode(std::span<const chartype>(string, std::char_traits<chartype>::length(string)));
+		}
+		else
+		{
+			static_assert(false, "unsupported char type");
+		}
+
+		auto cursorx = x;//
+		//-(Trex::TextShaper::Measure(glyphs).width * scalex);
+		auto cursory =y;
+		DrawParms atlasFragmentDrawParms = parms;
+		for (const Trex::ShapedGlyph &g : glyphs)
+		{
+			SetTextureParms(drawer, &atlasFragmentDrawParms, font->GetDynamicFontAtlasTexture(), cursorx + (double)(g.xOffset*scalex) + (double)g.info.bearingX, cursory + (g.yOffset*scaley) - g.info.bearingY);
+			atlasFragmentDrawParms.masked = true;
+			atlasFragmentDrawParms.fortext = true;
+			atlasFragmentDrawParms.srcx = (double)g.info.x / (double)atlasFragmentDrawParms.texwidth; //g.info.x;
+			atlasFragmentDrawParms.srcy = (double)g.info.y / (double)atlasFragmentDrawParms.texheight;
+			atlasFragmentDrawParms.srcheight = (double)g.info.height / (double)atlasFragmentDrawParms.texheight;
+			atlasFragmentDrawParms.srcwidth  = (double)g.info.width / (double)atlasFragmentDrawParms.texwidth;
+			atlasFragmentDrawParms.bilinear   = 1;
+			atlasFragmentDrawParms.destheight = g.info.height*scalex;
+			atlasFragmentDrawParms.destwidth = g.info.width*scaley;
+
+			//if (parms.celly == 0)
+			//	atlasFragmentDrawParms.celly = g.info.height + 1;
+			
+			drawer->AddTexture(font->GetDynamicFontAtlasTexture(), atlasFragmentDrawParms);
+			cursorx += (g.xAdvance) * scalex;
+			cursory += (g.yAdvance) * scaley;
+		}
+		//drawer->AddTexture()
+		return;
+	}
+
+	
 
 	if (parms.celly == 0) parms.celly = font->GetHeight() + 1;
 	parms.celly = int (parms.celly * scaley);
