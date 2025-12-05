@@ -1,0 +1,188 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:26+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: no nb\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "THUSTR_1"
+msgstr "Nivå 1: Systemkontroll"
+
+msgid "THUSTR_2"
+msgstr "Nivå 2: Menneskelig BBQ"
+
+msgid "THUSTR_3"
+msgstr "Nivå 3: Kraftkontroll"
+
+msgid "THUSTR_4"
+msgstr "Nivå 4: Ormehull"
+
+msgid "THUSTR_5"
+msgstr "Nivå 5: Hanger"
+
+msgid "THUSTR_6"
+msgstr "Nivå 6: Åpen sesong"
+
+msgid "THUSTR_7"
+msgstr "Nivå 7: Fengsel"
+
+msgid "THUSTR_8"
+msgstr "Nivå 8: Metall"
+
+msgid "THUSTR_9"
+msgstr "Nivå 9: Festning"
+
+msgid "THUSTR_10"
+msgstr "Nivå 10: Innløsning"
+
+msgid "THUSTR_11"
+msgstr "Nivå 11: Lagringsanlegg"
+
+msgid "THUSTR_12"
+msgstr "Nivå 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Nivå 13: Nukage-prosessering"
+
+msgid "THUSTR_14"
+msgstr "Nivå 14: Stålverk"
+
+msgid "THUSTR_15"
+msgstr "Nivå 15: Død sone"
+
+msgid "THUSTR_16"
+msgstr "Nivå 16: De dypeste områdene"
+
+msgid "THUSTR_17"
+msgstr "Nivå 17: Behandlingsområde"
+
+msgid "THUSTR_18"
+msgstr "Nivå 18: Mølle"
+
+msgid "THUSTR_19"
+msgstr "Nivå 19: Frakt/omlasting"
+
+msgid "THUSTR_20"
+msgstr "Nivå 20: Sentral behandling"
+
+msgid "THUSTR_21"
+msgstr "Nivå 21: Administrasjonssenter"
+
+msgid "THUSTR_22"
+msgstr "Nivå 22: Habitat"
+
+msgid "THUSTR_23"
+msgstr "Nivå 23: Månegruveprosjekt"
+
+msgid "THUSTR_24"
+msgstr "Nivå 24: Steinbrudd"
+
+msgid "THUSTR_25"
+msgstr "Nivå 25: Baronens hule"
+
+msgid "THUSTR_27"
+msgstr "Nivå 27: Smertefjellet"
+
+msgid "THUSTR_28"
+msgstr "Nivå 28: Helvete"
+
+msgid "THUSTR_29"
+msgstr "Nivå 29: Elven Styx"
+
+msgid "THUSTR_30"
+msgstr "Nivå 30: Siste innkalling"
+
+msgid "THUSTR_31"
+msgstr "Nivå 31: Farao"
+
+msgid "THUSTR_32"
+msgstr "Nivå 32: Karibia"
+
+msgid "T1TEXT"
+msgstr ""
+"Du har kjempet deg ut av de infiserte forsøkslaboratoriene. Det ser ut til "
+"at UAC nok en gang har slukt det. Med deres høye omsetning må det være "
+"vanskelig for stakkars gamle UAC å kjøpe helseforsikring...\n"
+"...nå for tiden.\n"
+"\n"
+"Foran oss ligger det militære komplekset, som nå vrimler av sykdomsskrekk "
+"som er ute etter å sette tennene i deg. Med litt flaks har komplekset "
+"fortsatt noe krigslignende krigsmateriell liggende."
+
+msgid "T2TEXT"
+msgstr ""
+"Du hører lyden av tungt maskineri\n"
+"foran deg. Du håper virkelig at de\n"
+"ikke slipper ut nye helvetesyngel,\n"
+"men du er klar til å utslette en hel\n"
+"flokk om du må.\n"
+"De planlegger kanskje en\n"
+"blodfest, men du føler deg\n"
+"omtrent like slem som to tusen\n"
+"galninger pakket inn i en gal\n"
+"morder.\n"
+"\n"
+"Du har ikke tenkt å gi deg så lett."
+
+msgid "T3TEXT"
+msgstr ""
+"Utsikten som åpner seg foran\n"
+"oss ser veldig kjent ut. Lukter\n"
+"kjent også - som stekt\n"
+"ekskrementer. Du likte ikke dette\n"
+"stedet før, og du kommer ikke\n"
+"til å like det nå heller. Jo mer\n"
+"du grubler på det, jo sintere\n"
+"blir du.\n"
+"Når du hever pistolen din,\n"
+"får du et ondt glis i ansiktet.\n"
+"På tide å ta noen navn."
+
+msgid "T4TEXT"
+msgstr ""
+"Plutselig er alt stille, fra den\n"
+"ene horisonten til den andre.\n"
+"Det pinefulle ekkoet av helvete\n"
+"forsvinner, mareritthimmelen\n"
+"blir blå, haugene med monsterlik\n"
+"begynner å fordampe sammen\n"
+"med den onde stanken som\n"
+"fylte luften. Jøss, kanskje du\n"
+"har gjort det. Har du virkelig\n"
+"vunnet?\n"
+"\n"
+"Noe buldrer i det fjerne.\n"
+"Et blått lys begynner å gløde\n"
+"inne i den ødelagte hodeskallen\n"
+"til demonspytteren."
+
+msgid "T5TEXT"
+msgstr ""
+"Hva skjer nå? Ser helt\n"
+"annerledes ut. Litt som kong\n"
+"Tuts leilighet. Det som er her,\n"
+"kan ikke være verre enn vanlig.\n"
+"Kan det vel?\n"
+"Eller kanskje det er best å la\n"
+"sovende guder ligge..."
+
+msgid "T6TEXT"
+msgstr ""
+"På tide med ferie. Du har sprengt\n"
+"helvetes innvoller, og du er klar\n"
+"for en pause. Du mumler for\n"
+"degselv: Kanskje noen andre\n"
+"kan sparke helvete i ræva neste\n"
+"gang. Foran deg ligger en rolig by,\n"
+"med fredelig rennende vann,\n"
+"sjarmerende bygninger og\n"
+"antagelig ingen helvetesyngel."

@@ -1,0 +1,268 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:21+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+
+msgid "TXT_D2E1"
+msgstr "Yeryüzündeki Cehennem"
+
+msgid "TXT_D2E2"
+msgstr "Yaşayanlara Huzur Yok"
+
+msgid "HUSTR_1"
+msgstr "Seviye 1: Giriş Yolu"
+
+msgid "HUSTR_2"
+msgstr "Seviye 2: Tulumlar"
+
+msgid "HUSTR_3"
+msgstr "Seviye 3: Zorluk"
+
+msgid "HUSTR_4"
+msgstr "Seviye 4: Odaklanma"
+
+msgid "HUSTR_5"
+msgstr "Seviye 5: Atık Tünelleri"
+
+msgid "HUSTR_6"
+msgstr "Seviye 6: Kırıcı"
+
+msgid "HUSTR_7"
+msgstr "Seviye 7: Ölü Basit"
+
+msgid "HUSTR_8"
+msgstr "Seviye 8: Hileler ve Tuzaklar"
+
+msgid "HUSTR_9"
+msgstr "Seviye 9: Çukur"
+
+msgid "HUSTR_10"
+msgstr "Seviye 10: Yakıt İkmal Üssü"
+
+msgid "HUSTR_11"
+msgstr "Seviye 11: Yıkımın 'O'su!"
+
+msgid "HUSTR_12"
+msgstr "Seviye 12: Fabrika"
+
+msgid "HUSTR_13"
+msgstr "Seviye 13: Şehir Merkezi"
+
+msgid "HUSTR_14"
+msgstr "Seviye 14: En İçteki İnler"
+
+msgid "HUSTR_15"
+msgstr "Seviye 15: Sanayi Bölgesi"
+
+msgid "HUSTR_16"
+msgstr "Seviye 16: Banliyöler"
+
+msgid "HUSTR_17"
+msgstr "Seviye 17: Kiralık Evler"
+
+msgid "HUSTR_18"
+msgstr "Seviye 18: Avlu"
+
+msgid "HUSTR_19"
+msgstr "Seviye 19: Hisar"
+
+msgid "HUSTR_20"
+msgstr "Seviye 20: Yakaladım!"
+
+msgid "HUSTR_21"
+msgstr "Seviye 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Seviye 22: Yeraltı Mezarları"
+
+msgid "HUSTR_23"
+msgstr "Seviye 23: Eğlence Fıçıları"
+
+msgid "HUSTR_24"
+msgstr "Seviye 24: Uçurum"
+
+msgid "HUSTR_25"
+msgstr "Seviye 25: Kan Düşüşleri"
+
+msgid "HUSTR_26"
+msgstr "Seviye 26: Terk Edilmiş Madenler"
+
+msgid "HUSTR_27"
+msgstr "Seviye 27: Canavar Dairesi"
+
+msgid "HUSTR_28"
+msgstr "Seviye 28: Ruhlar Dünyası"
+
+msgid "HUSTR_29"
+msgstr "Seviye 29: Yaşamın Sonu"
+
+msgid "HUSTR_30"
+msgstr "Seviye 30: Günah Simgesi"
+
+msgid "HUSTR_31"
+msgstr "Seviye 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Seviye 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Seviye 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Seviye 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Seviye 33: İhanet"
+
+msgid "NHUSTR_1"
+msgstr "Seviye 1: Dünya Üssü"
+
+msgid "NHUSTR_2"
+msgstr "Seviye 2: Ağrı Laboratuvarları"
+
+msgid "NHUSTR_3"
+msgstr "Seviye 3: Ölüler Kanyonu"
+
+msgid "NHUSTR_4"
+msgstr "Seviye 4: Cehennem Dağı"
+
+msgid "NHUSTR_5"
+msgstr "Seviye 5: Canlı Kesim"
+
+msgid "NHUSTR_6"
+msgstr "Seviye 6: Kan Cehennemi"
+
+msgid "NHUSTR_7"
+msgstr "Seviye 7: Baron'un Ziyafeti"
+
+msgid "NHUSTR_8"
+msgstr "Seviye 8: Kötülük Mezarı"
+
+msgid "NHUSTR_9"
+msgstr "Seviye 9: Şeytanların Yürüyüşü"
+
+msgid "C1TEXT"
+msgstr ""
+"İstila edilmiş yıldız üssünün\n"
+"derinliklerine girdiniz. Ama yanlış\n"
+"giden bir şeyler var. Canavarlar\n"
+"kendi gerçekliklerini de\n"
+"beraberlerinde getirdiler ve yıldız\n"
+"limanının teknolojisi onların\n"
+"varlığıyla altüst oluyor.\n"
+"\n"
+"İleride, cehennemin bir ileri\n"
+"karakolunu, müstahkem bir\n"
+"bölgeyi görüyorsunuz. Eğer onu\n"
+"geçebilirsen, yıldız üssünün\n"
+"lanetli kalbine girebilir ve dünya\n"
+"nüfusunu rehin tutan kontrol\n"
+"düğmesini bulabilirsin."
+
+msgid "C2TEXT"
+msgstr ""
+"Siz kazandınız! Zaferiniz sayesinde\n"
+"İnsanlık dünyayı boşaltıp kaçacak\n"
+"kabus. Şimdi tek sen varsın\n"
+"Gezegende insan kalmadı.\n"
+"Yamyam mutasyonlar, etobur\n"
+"uzaylılar, ve kötü ruhlar tek\n"
+"komşunuzdur. Arkanıza yaslanıp\n"
+"ölümü beklersiniz. Türünüzü\n"
+"kurtardığınızı.\n"
+"\n"
+"Ama sonra, Dünya Kontrol bir ışın\n"
+"gönderiyor Uzaydan gelen mesaj:\n"
+"\"Algılayıcılar uzaylı istilasının\n"
+"kaynağını buldu. Oraya giderseniz,\n"
+"kapılarını kapatabilirsiniz. Uzaylı\n"
+"üssü kendi şehrinizin kalbinde.\n"
+"Yıldız üssünden çok uzakta değil.\"\n"
+"Yavaşça ve acı çekerek ve\n"
+"savaşa geri dönün."
+
+msgid "C3TEXT"
+msgstr ""
+"Şehrin yozlaşmış kalbindesiniz,\n"
+"etrafınız düşmanlarınızın\n"
+"cesetleriyle çevrili. Bu taraftaki\n"
+"geçidi yok etmenin bir yolunu\n"
+"göremiyorsun, bu yüzden\n"
+"dişlerini sıkıp geçitten\n"
+"geçiyorsun.\n"
+"\n"
+"Diğer tarafta onu kapatmanın\n"
+"bir yolu olmalı. Ona ulaşmak\n"
+"için cehennemden geçmen\n"
+"gerekiyorsa neden\n"
+"umursuyorsun?"
+
+msgid "C4TEXT"
+msgstr ""
+"Gördüğünüz en büyük iblisin\n"
+"korkunç görüntüsü, roketlerinizi\n"
+"açıktaki beynine pompaladıktan\n"
+"sonra önünüzde parçalanıyor.\n"
+"Canavar büzüşür ve ölür,\n"
+"çırpınan uzuvları cehennem\n"
+"yüzeyinin sayısız milini harap\n"
+"eder.\n"
+"\n"
+"Başardınız. İstila sona erdi.\n"
+"Dünya kurtuldu. Cehennem bir\n"
+"enkaz. Şimdi kötü insanların\n"
+"öldüklerinde nereye gideceklerini\n"
+"merak ediyorsunuz. Alnınızdaki\n"
+"teri silerek eve doğru uzun bir\n"
+"yürüyüşe başlıyorsunuz. Dünyayı\n"
+"yeniden inşa etmek, onu\n"
+"mahvetmekten çok daha\n"
+"eğlenceli olmalı.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Tebrikler. Gizli seviyeyi buldunuz!\n"
+"Şeytanlar değil de İnsanlar\n"
+"tarafından inşa edilmiş gibi\n"
+"görünüyor. Cehennemin bu\n"
+"köşesinin sakinlerinin kim\n"
+"olacağını merak ediyorsunuz."
+
+msgid "C6TEXT"
+msgstr ""
+"Tebrikler, süper gizli seviyeyi\n"
+"buldunuz! Bunu geçsen iyi olur!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"En sevdiğin tatil yerinde yine sorun\n"
+"çıkıyordu... Cehennem'de. Siber iblisin\n"
+"teki Cehennem'i kişisel bir eğlence\n"
+"parkına dönüştürebileceğini ve\n"
+"Dünya'yı da bilet gişesi\n"
+"yapabileceğini düşündü.\n"
+"\n"
+"O yarı robot ucube fuara kimin\n"
+"geldiğini bilmiyordu. Kan pompalamak\n"
+"için cehennem zebanileriyle dolu\n"
+"bir atış poligonu gibisi yoktur...\n"
+"\n"
+"Şimdi iblisin labirentinin duvarları,\n"
+"yere çarpan metalik uzuvlarının\n"
+"sesiyle yankılanıyor. Ölüm iniltisi\n"
+"yüzünde bıraktığın karmaşanın\n"
+"içinden fışkırıyor.\n"
+"\n"
+"Bu yolculuk kapandı.\n"
+"\n"

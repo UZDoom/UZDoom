@@ -1,0 +1,322 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:47+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: jp\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "選抜の間"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "漆之門"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "氷の守護者"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "炎の守護者"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "鋼の守護者"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "光の坩堝"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "陰影樹"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "暗黒の地"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "キルケーの洞窟"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "荒野"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "神聖なる園"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "多柱の間"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "ヘレシアークの神学舎"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "ドラゴンの庵寺"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "グリフィンの庵寺"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "デスウィンドの庵寺"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "哀悼茂る園"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "寡黙なる食堂"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "狼の庵寺"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "荒れ果てた前哨地"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "嘆きの城"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "晒し台"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "腐臭漂う残骸"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "地下牢"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "荒涼とした庭"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "ネクロポリス"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "ゼデクの墓"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "メネルキルの墓"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "トダクティスの墓"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "ビバリウム"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "暗黒の坩堝"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"この地を封印していた漆之門を超えると広大で過酷な荒野が\n"
+"目前に広がっている。火、氷、そして鋼が貴方に試練を与えた、\n"
+"しかしそれを超える試練は残っている。\n"
+"鬱蒼とした森の絡み合いは敵対的な目を隠し視野を狭める。\n"
+"\n"
+"不毛の砂漠、湿った沼地、そしてカビの生えた洞窟が\n"
+"行く先を妨げているが、貴方が例えそれを望んでいても\n"
+"己の運命から遠ざけることは出来ない。\n"
+"\n"
+"故に、遠くでちらつく、聳え立つ柱の間は貴方のあらゆる\n"
+"努力を嘲ている様にも思える。"
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"貴方は聳え立つ柱の間での遭遇に動揺したが\n"
+"よろめきながら出口らしき所に向かった。\n"
+"そして視界がぼやけ始め、物が目まぐるしく回り出す...\n"
+"周りの世界が崩れ、転移門の光が貴方を飲み込んだ。\n"
+"閃光が輝き、そして疲れ果てていた貴方は足元に座り込んだ。\n"
+"\n"
+"高い塔の頂上に出たらしく下層から呪われた者達の悲鳴が\n"
+"響いてくる。貴方は一歩踏み出し、その悪魔達の詠唱を聞き\n"
+"血の気が引いた。\n"
+"\n"
+"何処から来たというのだ?死の神々よ!\n"
+"苦痛の神々から、どうやって逃げ出せるだろうか?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"古代人の強力な武器やアーティファクトはヘレシアークと\n"
+"その手下達を倒す程には足り、奴等の残骸は貴方の足元に\n"
+"散乱している。貴方は最後の魔力を集め、ヘレシアークの\n"
+"秘めた聖域へ通じるポータルに入る準備を始めた。\n"
+"\n"
+"頭上に巨大な織旗の掛かった城壁が見える。\n"
+"無音の塔と剥き出しの壁が黒い石の一本の尖塔を囲んでいる。\n"
+"窓から灯った火の影から不気味な何十もの目が貴方に\n"
+"向けられている。敵は何処にでも潜んでいるらしい..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"...そして彼は絶望の門を越え、死者の国にいる勢力と\n"
+"争う為に旅立った。\n"
+"しかし、彼が再び光の世界に戻れたかは誰も知らない。'\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"忌々しい。"
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"悲痛な叫びと共に貴方は別の世界に追いやられ\n"
+"自分の体が神秘的な炎により癒されていった。\n"
+"視界が戻ると、霊の威嚇する声と影が蔓延る壮観な広間に\n"
+"立っていた。遠くには盛り上がった大皿が見え、\n"
+"その上にこの場所で唯一の光が灯っている。"
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"カオススフィア、コラックスの魔力の源だ。\n"
+"これを使えば世界を創造することが出来る...または破壊することも。\n"
+"征服者の権利を得た貴方は震える手をそれに伸ばした。\n"
+"恐らく、今、新しい挑戦者が宇宙の権力ゲームに加わった。\n"
+"クイーンに成ったポーンの様に突然、世界が貴方の手に\n"
+"届く位置にあるのだ。"
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"しかし貴方より上手の挑戦者はいる、\n"
+"そして誰が彼らの一手を読めるだろうか?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "扉は施錠されている"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "御機嫌よう、小僧"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "死に急ぐ仕度は整ったか?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "氷の守護者にある扉は開かれた"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "この道は塞がれている"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "パズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "漆之門 に影響を与えた"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "三種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "漆之門 に階段が立ち昇った"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "三種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "漆之門 に影響を与えた"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "漆之門 に階段が立ち昇った"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "他のスイッチも探す必要がある..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "漆之門 の石壁が砕かれた"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "六種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "陰影樹 に少し影響を与えた"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "遠くから扉が開く音が聞こえる"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "六種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "陰影樹 に少し影響を与えた"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "六種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "陰影樹 に少し影響を与えた"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ 匹のエティンが残っている"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "長居をしたな、命を奪うには十分な程に!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "荒れ果てた前哨地 への扉が開いた"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "扉はまだ開かない"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "我が下僕が貴様の血を嗅ぎ付けた様だぞ、小童"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "晒し台 への扉が開いた"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "塔内の昇降機が下りた"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "遊びはここまでだ、小僧"
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "盤上から貴様を排除する"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "上層階の扉が開いた"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "我を崇めろ、慈悲を残している内に"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "まあ、有り得ないな"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "九種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "修道院 にわずかに影響を与えた"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "九種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "修道院 にわずかに影響を与えた"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "九種のパズルの一つが解かれた"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "修道院 にわずかに影響を与えた"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "ポータルは封印された"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "運命を撰べ"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "この扉は内側から塞がれている"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "お前がどれだけ強かろうと"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "お前の師に立ち向かえるのか?"

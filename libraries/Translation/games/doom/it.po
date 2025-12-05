@@ -1,0 +1,210 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 20:08+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom/it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: it\n"
+
+msgid "TXT_D1E1"
+msgstr "Nella morte fino al collo"
+
+msgid "TXT_D1E2"
+msgstr "Le rive dell'Inferno"
+
+msgid "TXT_D1E4"
+msgstr "La tua Carne Consumata"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Centrale Nucleare"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Raffineria delle Tossine"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Centrale di Comando"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratorio di Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Zona Elaboratori"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Stazione dei Computer"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: L'anomalia di Phobos"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Base militare"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Le Fogne"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: L'anomalia di Deimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Area di contenimento"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Raffineria"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Laboratorio di Deimos"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Centro di Comando"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Sale dei Dannati"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Vasche di Riproduzione"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Torre di Babele"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Fortezza del Mistero"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Bastioni dell'Inferno"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Palude della Disperazione"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonio"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Casa del Dolore"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Cattedrale Blasfema"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Monte Erebus"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dite"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Le Garenne"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: In Basso"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Odio Perfetto"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Separeranno I Cattivi"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Male Senza Posa"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Si Ravvederanno"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Contro di te Malvagiamente"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: E l'inferno seguitava"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Al Crudele"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Paura"
+
+msgid "E1TEXT"
+msgstr ""
+"Una volta che hai eliminato i cattivi e\n"
+"liberato la base lunare dovresti aver\n"
+"vinto, vero? Vero? Dove sono la tua\n"
+"ricca ricompensa e il biglietto per\n"
+"casa? Cosa diavolo è questo? Non\n"
+"avrebbe dovuto finire così!\n"
+"\n"
+"Puzza come carne marcia, ma pare\n"
+"essere la dispersa base di Deimos.\n"
+"Pare proprio che tu sia approdato\n"
+"sulle Coste dell'Inferno.\n"
+"L'unica uscita ci passa in mezzo.\n"
+"\n"
+"Per continuare l'esperienza di DOOM\n"
+"gioca \"Le rive dell'Inferno\" e il suo\n"
+"incredibile seguito: \"Inferno\"!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Ce l'hai fatta! Il malvagio cyber-\n"
+"demonio che governava la dispersa\n"
+"base di Deimos è stato ucciso e tu\n"
+"sei trionfante! Ma... dove ti trovi?\n"
+"Sali fino all'orlo della luna e\n"
+"guardi giù scoprendo l'orribile verità.\n"
+"\n"
+"Deimos fluttua sopra l'Inferno stesso!\n"
+"Non hai mai sentito di nessuno fuggito\n"
+"dall'Inferno, ma quei bastardi si\n"
+"pentiranno di aver anche solo\n"
+"sentito parlare di te!\n"
+"Velocemente scendi verso la superficie\n"
+"dell'Inferno.\n"
+"\n"
+"È ora del capitolo finale di\n"
+"DOOM: \"Inferno\"!"
+
+msgid "E3TEXT"
+msgstr ""
+"Il terribile demone-ragno che aveva\n"
+"progettato l'invasione delle basi\n"
+"lunari e causato così tanta morte ha\n"
+"sempre avuto i minuti contati.\n"
+"\n"
+"Una porta nascosta si apre ed entri.\n"
+"Sei stato troppo forte perchè l'Inferno\n"
+"ti fermasse ed ora l'Inferno gioca pulito\n"
+"per una volta, perchè emergi dalla porta\n"
+"per vedere i campi verdi della Terra!\n"
+"Finalmente a casa.\n"
+"\n"
+"Ti chiedi cosa sia successo sulla\n"
+"Terra mentre combattevi il male.\n"
+"è un bene che nessuna creatura dell'\n"
+"Inferno sia passata per quella porta\n"
+"con te..."
+
+msgid "E4TEXT"
+msgstr ""
+"Il demone ragno doveva aver mandato\n"
+"avanti le sue legioni infernali prima\n"
+"del tuo confronto finale con quella\n"
+"terribile bestia. Ma ti sei fatto avanti\n"
+"e hai portato dannazione eterna e\n"
+"sofferenza all'orda come un vero eroe\n"
+"farebbe di fronte a qualcosa di così\n"
+"crudele.\n"
+"\n"
+"Inoltre, qualcuno doveva pagare per\n"
+"quello che era successo a Daisy, la\n"
+"tua coniglietta domestica.\n"
+"\n"
+"Ma ora vedi diffondersi davanti a te\n"
+"ulteriori dolori e massacri mentre\n"
+"una popolazione di demoni si sparge\n"
+"furiosa per le nostre città.\n"
+"\n"
+"prossima fermata, l'Inferno in terra!"

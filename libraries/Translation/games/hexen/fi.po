@@ -1,0 +1,352 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:44+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fi\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Viskaussali"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Seitsemän portaalia"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Jään vartija"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Tulen vartija"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Teräksen vartija"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Kirkas tulikoe"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Varjosalo"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Pikiräme"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Circeluolat"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Erämaat"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Pyhä metsikkö"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hypostyyli"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Kerettiarkin seminaari"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Lohikäärmekappeli"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Aarnikotkakappeli"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Kuolontuulikappeli"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Valitusvirtten tarha"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Hiljainen ruokasali"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Susikappeli"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Hylätty etuvartio"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Surulinna"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Hirsipuu"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Katku"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Tyrmät"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Autio puutarha"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropoli"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Sedekin hauta"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkirin hauta"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traduktuksen hauta"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivaario"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Pimeä tulikoe"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Läpäistyäsi seitsemän tätä maailmaa\n"
+"sinetöinyttä portaalia eteesi aukeaa\n"
+"valtaisa karu erämaa. Tuli, jää ja teräs\n"
+"ovat koetelleet sinua, mutta suuremmat\n"
+"haasteet odottavat edessäsi. Tiheässä\n"
+"metsäryteikössä varmastikin piilottelee\n"
+"vihamielisiä silmiä, mutta mitä piilee\n"
+"sitä edempänä, tulee olemaan pahempaa.\n"
+"\n"
+"Kuivat aavikot, kosteat suot ja tunkkaiset\n"
+"luolastot estävät kulkuasi, muttet voi\n"
+"antaa minkään pidättää sinua kohtaloltasi,\n"
+"vaikka saattaisit alkaa sitä toivoakin.\n"
+"\n"
+"Ja niiden takana, välkkyen kaukaisuudessa,\n"
+"hypostyylin alati muuttuvat seinät ikään\n"
+"kuin pilkkaavat jok'ikistä ponnisteluasi."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Ollessasi vielä pyörällä päästä kohtauksista\n"
+"hypostyylissä hoiput kohti tietä, jonka\n"
+"toivot vievän ulos. Kaikki tuntuu liikkuvan\n"
+"nopeammin ja nopeammin, näkösi sumenee ja\n"
+"alkaa hämärtyä...\n"
+"Maailman sortuessa ympärilläsi kirkkaus\n"
+"teleportaalista kietoo sinut. Valo välähtää\n"
+"ja nouset väsyneesti jaloillesi.\n"
+"\n"
+"Seisot korkean tornin huipulla, ja alhaalla\n"
+"kajahtavat kirottujen huudot. Astut eteen,\n"
+"ja välittömästi vertahyytävä demoninen\n"
+"hyminä kantautuu korviisi.\n"
+"Kautta kaikkien kuoleman jumalien! Mihin\n"
+"paikkaan olet joutunut? Kautta kaikkien\n"
+"tuskan jumalien, kuinka ikinä löydät tiesi\n"
+"ulos?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Mahtavimmatkaan vanhain aseet ja esineet\n"
+"hädin tuskin riittivät päihittämään\n"
+"Kerettiarkin ja hänen kätyrinsä, mutta\n"
+"nyt niiden saastaiset jäännökset lojuvat\n"
+"ripoteltuina jalkojesi ympärillä. Keräten\n"
+"loput voimistasi valmistaudut kulkemaan\n"
+"portaalista, joka johtaa Kerettiarkin\n"
+"pyhäkköön.\n"
+"\n"
+"Yläpuolellasi siintävät valtavan linnan\n"
+"vallit. Hiljaiset tornit ja paljaat muurit\n"
+"ympäröivät yksittäistä mustakivistä tornia,\n"
+"joka kyyhöttää linnan keskellä kuin\n"
+"murjottava jättiläinen. Tuli ja varjo\n"
+"lepattavat ammottavien ikkunoiden takana,\n"
+"kymmenet uhkaavat silmät mulkoilevat alas\n"
+"kohti sinua.\n"
+"Jossakin sisällä, vihollisesi odottavat\n"
+"sinua..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... ja hän on kulkeva kuolleitten maahan\n"
+"ja mittelöivä siellä olevain valtain kanssa\n"
+"peräti epätoivon porteille asti. Mutta onko\n"
+"hän jälleen palajava valon maailmaan, kukaan\n"
+"ei tiedä.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Hitto."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Piinaisin huudoin sinut temmataan tästä\n"
+"maailmasta toiseen salaperäisen tulen\n"
+"ympäröimänä. Kun näkösi selkeytyy, huomaat\n"
+"seisovasi kammottavien kaikujen ja uhkaavien\n"
+"varjojen täyttämässä suuressa salissa.\n"
+"Näet kaukana korokkeen, ja sen päällä tämän\n"
+"maailman ainoan valonlähteen."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Tämä voi olla ainoastaan Kaaoskuula,\n"
+"Kooraksen mahdin lähde. Tällä on mahdollista\n"
+"luoda maailmoja... tai tuhota niitä.\n"
+"Taistelun ja valloituksen oikeuttamana se on\n"
+"sinun, ja vapisevin käsin kurottaudut\n"
+"tarttumaan siihen. Kenties nyt uusi peluri\n"
+"liittyy kosmiseen voimaleikkiin. Niin kuin\n"
+"kuningattareksi ylennetyllä sotilaalla,\n"
+"yhtäkkiä pelilaudan kaikki ääret tuntuvat\n"
+"olevan ulottuvillasi."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Mutta on muita pelaajia, jotka ovat sinua\n"
+"mahtavampia, ja kuka voi tietää heidän\n"
+"seuraavat liikkeensä?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Ovi on lukittu"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Tervehdys, kuolevainen"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Oletko valmis kuolemaan?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Ovi avautui jään vartijan luona"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Tämä polku on teljetty"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Puolet pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "seitsemän portaalin luona"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Kolmannes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Portaat ovat kohonneet seitsemän portaalin luona"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Kolmannes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "seitsemän portaalin luona"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Portaat ovat kohonneet seitsemän portaalin luona"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Sinun on löydettävä toinen vipu..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Kiviä vierii seitsemän portaalin luona"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Kuudennes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "Varjosalossa"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Ovi on teljetty sisältä"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Kuulet oven avautuvan etäällä"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Kuudennes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "Varjosalossa"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Kuudennes pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "Varjosalossa"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettiniä jäljellä"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Odotit liian pitkään, nyt kuolet!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Ovi avautui hylätyssä etuvartiossa"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Tämä ovi ei aukea vielä"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Palvelijani voivat haistaa veresi, ihminen"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Ovi avautui hirsipuulla"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Ovi on teljetty sisältä"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Lava on laskeutunut tornissa"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Olet pelannut tätä peliä liian pitkään, kuolevainen..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Ajattelenpa poistaa sinut pelilaudalta"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Kuulet oven avautuvat yläkerrassa"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Palvo minua, ja saatan vielä olla armahtavainen"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Mutta toisaalta, ehken sittenkään"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Yhdeksäsosa pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "luostarissa"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Yhdeksäsosa pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "luostarissa"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Yhdeksäsosa pulmasta on ratkaistu"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "luostarissa"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Portaali on sinetöity"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Valitse kohtalosi"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Ovi on teljetty sisältä"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Olet riittävän vahva"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "kohtaamaan omat mestarisi?"

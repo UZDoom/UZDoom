@@ -1,0 +1,253 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:22+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: it\n"
+
+msgid "TXT_D2E1"
+msgstr "Inferno sulla Terra"
+
+msgid "TXT_D2E2"
+msgstr "Nessun Riposo per i Vivi"
+
+msgid "HUSTR_1"
+msgstr "Livello 1: Ingresso"
+
+msgid "HUSTR_2"
+msgstr "Livello 2: Sotterranei"
+
+msgid "HUSTR_3"
+msgstr "Livello 3: Le Forche"
+
+msgid "HUSTR_4"
+msgstr "Livello 4: L'Epicentro"
+
+msgid "HUSTR_5"
+msgstr "Livello 5: I Tunnel dei Rifiuti"
+
+msgid "HUSTR_6"
+msgstr "Livello 6: La Pressa"
+
+msgid "HUSTR_7"
+msgstr "Livello 7: Morte Pura"
+
+msgid "HUSTR_8"
+msgstr "Livello 8: Trucchi e Trappole"
+
+msgid "HUSTR_9"
+msgstr "Livello 9: Il Pozzo"
+
+msgid "HUSTR_10"
+msgstr "Livello 10: Base di Rifornimento"
+
+msgid "HUSTR_11"
+msgstr "Livello 11: Il Cerchio della Morte"
+
+msgid "HUSTR_12"
+msgstr "Livello 12: La Fabbrica"
+
+msgid "HUSTR_13"
+msgstr "Livello 13: Periferia"
+
+msgid "HUSTR_14"
+msgstr "Livello 14: Gli Antri Profondi"
+
+msgid "HUSTR_15"
+msgstr "Livello 15: Zona Industriale"
+
+msgid "HUSTR_16"
+msgstr "Livello 16: Sobborghi"
+
+msgid "HUSTR_17"
+msgstr "Livello 17: Possedimenti"
+
+msgid "HUSTR_18"
+msgstr "Livello 18: Il Cortile"
+
+msgid "HUSTR_19"
+msgstr "Livello 19: La Cittadella"
+
+msgid "HUSTR_20"
+msgstr "Livello 20: Preso!"
+
+msgid "HUSTR_21"
+msgstr "Livello 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Livello 22: Le Catacombe"
+
+msgid "HUSTR_23"
+msgstr "Livello 23: Barili da Sballo"
+
+msgid "HUSTR_24"
+msgstr "Livello 24: L'Abisso"
+
+msgid "HUSTR_25"
+msgstr "Livello 25: Cascate di Sangue"
+
+msgid "HUSTR_26"
+msgstr "Livello 26: Le Miniere Abbandonate"
+
+msgid "HUSTR_27"
+msgstr "Livello 27: Casa dei Mostri"
+
+msgid "HUSTR_28"
+msgstr "Livello 28: Il Mondo dello Spirito"
+
+msgid "HUSTR_29"
+msgstr "Livello 29: La Fine Imminente"
+
+msgid "HUSTR_30"
+msgstr "Livello 30: Icona del Peccato"
+
+msgid "HUSTR_31"
+msgstr "Livello 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Livello 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Livello 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Livello 32: Keen"
+
+msgid "HUSTR_33"
+msgstr "Livello 33: Tradimento"
+
+msgid "NHUSTR_1"
+msgstr "Livello 1: La Base Terrestre"
+
+msgid "NHUSTR_2"
+msgstr "Livello 2: I Laboratori del Dolore"
+
+msgid "NHUSTR_3"
+msgstr "Livello 3: Il Canyon dei Morti"
+
+msgid "NHUSTR_4"
+msgstr "Livello 4: Montagna Infernale"
+
+msgid "NHUSTR_5"
+msgstr "Livello 5: Vivisezione"
+
+msgid "NHUSTR_6"
+msgstr "Livello 6: Inferno di Sangue"
+
+msgid "NHUSTR_7"
+msgstr "Livello 7: Il Banchetto del Barone"
+
+msgid "NHUSTR_8"
+msgstr "Livello 8: Tomba della Malevolenza"
+
+msgid "NHUSTR_9"
+msgstr "Livello 9: La Marcia dei Demoni"
+
+msgid "C1TEXT"
+msgstr ""
+"Sei entrato profondamente nel spazioporto\n"
+"infestato. Ma qualcosa non va. I\n"
+"mostri hanno portato la loro realtà\n"
+"con sè e la tecnologia dello spazioporto\n"
+"è sovvertita dalla loro presenza.\n"
+"Più avanti vedi un avamposto dell'inferno,\n"
+"una zona fortificata. Se riesci a passarla,\n"
+"potrai penetrare nel cuore infestato della\n"
+"stazione spaziale e trovare l'interruttore\n"
+"di controllo che tiene la popolazione \n"
+"della terra in ostaggio."
+
+msgid "C2TEXT"
+msgstr ""
+"Hai vinto! La tua vittoria ha permesso\n"
+"al genere umano di evacuare la terra e\n"
+"di fuggire dall'incubo. Ora sei il solo\n"
+"umano rimasto sulla faccia del pianeta.\n"
+"Mutazioni cannibali, alieni carnivori e\n"
+"spiriti malvagi sono i tuoi soli vicini.\n"
+"Ti siedi e aspetti la morte, felice di\n"
+"aver salvato la tua specie.\n"
+"\n"
+"Proprio allora, il controllo della terra\n"
+"trasmette un messaggio dallo spazio: \"I\n"
+"sensori hanno localizzato la fonte \n"
+"dell'invasione aliena. Se andrai lì\n"
+"forse potrai bloccare il loro\n"
+"ingresso. La base aliena è nel cuore\n"
+"della tua città natale, non lontano\n"
+"dallo spazioporto.\"\n"
+"Lentamente e dolorosamente ti alzi\n"
+"e ritorni alla battaglia."
+
+msgid "C3TEXT"
+msgstr ""
+"Sei nel cuore infestato della città,\n"
+"Circondato dai corpi dei tuoi nemici.\n"
+"Non vedi il modo di distruggere l'ingresso\n"
+"delle creature da questo lato, così\n"
+"stringi I denti e ti ci butti attraverso.\n"
+"\n"
+"Ci deve essere un modo per chiuderelo dall'\n"
+"altro lato. Quello che ti chiedi è se\n"
+"dovrai attraversare l'inferno per trovarlo?"
+
+msgid "C4TEXT"
+msgstr ""
+"L'orrendo viso del demone più grosso\n"
+"che tu abbia mai visto si sfascia davanti\n"
+"a te, dopo che hai sparato I tuoi razzi\n"
+"nel suo cervello esposto. Il mostro si\n"
+"contorce e muore, le sue membra che si\n"
+"agitano devastano miglia indicibili\n"
+"della superficie dell'inferno.\n"
+"\n"
+"Ce l'hai fatta. L'invasione è finita.\n"
+"La terra è salva. L'inferno una rovina.\n"
+"Ti chiedi dove andranno I malvagi quando\n"
+"moriranno, ora. Asciugandoti il sudore\n"
+"dalla fronte inizi la lunga strada per\n"
+"casa.\n"
+"Ricostruire la terra dovrebbe essere\n"
+"molto più divertente di quanto non\n"
+"lo sia stato distruggerla.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Congratulazioni, hai trovato il livello\n"
+"segreto! Sembra essere stato edificato\n"
+"da umani più che da demoni. Ti chiedi\n"
+"chi siano gli abitanti di questo angolo\n"
+"dell'inferno."
+
+msgid "C6TEXT"
+msgstr ""
+"Congratulazioni, hai trovato il\n"
+"livello super segreto! È meglio\n"
+"che tu lo percorra di corsa!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"C'era di nuovo odore di guai nella tua meta di vacanze preferita... "
+"L'inferno. Questo teppista di un cyberdemonio pensava di poter fare "
+"dell'inferno il proprio parco giochi personale. E rendere la terra la "
+"bancarella dei biglietti di ingresso. \n"
+"\n"
+"Beh, quel fenomeno mezzo-robot non sapeva chi sarebbe venuto alla festa. Non "
+"c'è niente di meglio di un po' di tiro a segno con della prole Infernale per "
+"sentire il sangue pompare nelle vene... \n"
+"\n"
+"Adesso le mura del labirinto del demone riecheggiano col suono dei suoi arti "
+"mozzati che cadono al suolo. I suoi gemiti di morte gorgogliano fuori dallo "
+"schifo che hai lasciato della sua faccia.\n"
+"\n"
+"Questo giro di giostra è finito.\n"
+"\n"

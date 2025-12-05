@@ -1,0 +1,184 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/doom-engine-games/"
+"tnt-evilution/cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: cs\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Zlovoluce"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Administrace"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Člověčí grilovačka"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Napájecí vedení"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Červí díra"
+
+msgid "THUSTR_5"
+msgstr "Level 5: Hangár"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Lovecká sezóna"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Vězení"
+
+msgid "THUSTR_8"
+msgstr "Level 8: Kov"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Pevnost"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Vykoupení"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Skladiště"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Kráter"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Jaderné zpracování"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Ocelárna"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Mrtvá zóna"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Nejhlubší sluje"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Kombinát"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Mlýn"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Přeprava"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Centrální zpracování"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Administrativní centrum"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Lunární těžební projekt"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Kamenolom"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Baronovo doupě"
+
+msgid "THUSTR_26"
+msgstr "Level 26: Balistika"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Hora bolesti"
+
+msgid "THUSTR_28"
+msgstr "Level 28: Sakra"
+
+msgid "THUSTR_29"
+msgstr "Level 29: Řeka Styx"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Poslední mise"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Faraón"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Karibik"
+
+msgid "T1TEXT"
+msgstr ""
+"Probojoval@[ao_cs] sis svou cestu skrz zamořené\n"
+"laboratoře. Zdá se, že to v UAC zase\n"
+"podělali. S takovou fluktuací zaměstnanců\n"
+"musí být pro chudáky z UAC těžké\n"
+"najít si životní pojištění...\n"
+"\n"
+"V dáli leží vojenský komplex, ve kterém\n"
+"se to hemží nakaženými příšerami,\n"
+"horlivými se do tebe zakousnout.\n"
+"S trochou štěstí se tam taky stále\n"
+"válí nějaké těžké kalibry."
+
+msgid "T2TEXT"
+msgstr ""
+"Před sebou slyšíš rachotění těžké mašinérie.\n"
+"Sice doufáš, že nepohání linku na nové\n"
+"pekelné zplozence, ale jestli bude třeba,\n"
+"jsi připraven@[adj_cs] vybít celé stádo.\n"
+"Oni se možná chystají na krvavé hody,\n"
+"ty se ale cítíš jako tisíc šílenců narvaných\n"
+"do jednoho šíleného zabijáka.\n"
+"\n"
+"Tak snadno jít k zemi v plánu nemáš."
+
+msgid "T3TEXT"
+msgstr ""
+"Výhled naskýtající se ti před tebou je\n"
+"ti zatraceně dobře povědomý. Stejně povědomě\n"
+"i smrdí -- jako spálený hnůj. Už předtím\n"
+"se ti tu nelíbilo a rozhodně nemáš v plánu\n"
+"mít to tu rád teď. Čím déle nad tím uvažuješ,\n"
+"tím rozzuřenější se cítíš. Zvedaj@[tgs_pr1_cs] svou\n"
+"zbraň cítíš zlý škleb, vlévající se ti do tváře.\n"
+"Je čas vyřídit si účty."
+
+msgid "T4TEXT"
+msgstr ""
+"Najednou všechno utichne, od obzoru\n"
+"k obzoru. Nesnesitelná ozvěna pekla\n"
+"se vytratí, hrůzná obloha zmodrá\n"
+"a hromady zmasakrovaných těl příšer\n"
+"se začínají vypařovat spolu se zlým\n"
+"puchem, který naplňoval vzduch.\n"
+"Sakra, možná jsi to zvládl@[ao_cs].\n"
+"Opravdu jsi vyhrál@[ao_cs]?\n"
+"\n"
+"V dáli něco zahřmí. Z rozborcené\n"
+"lebky plivače démonů začíná zářit\n"
+"jakési modré světlo..."
+
+msgid "T5TEXT"
+msgstr ""
+"A co teď? Tohle vypadá úplně jinak.\n"
+"Trochu jako sídlo krále Tutanchamona.\n"
+"Ať už je tu cokoliv, nemůže to být\n"
+"horší než obvykle. Nebo může? Možná\n"
+"je lepší nechat spící bohy odpočívat."
+
+msgid "T6TEXT"
+msgstr ""
+"Čas na dovolenou. Vyhřezl@[ao_cs] jsi střeva\n"
+"samotného pekla a teď jsi pro pána boha\n"
+"připraven@[ao_cs] dát si oraz. Možná může\n"
+"peklo nakopat někdo jiný, říkáš si. Před\n"
+"tebou leží tiché městečko s poklidnými\n"
+"hladinami vod, malebnými budovami a, podle\n"
+"všeho, bez žádných splozenců pekelných.\n"
+"\n"
+"Vystoupiv@[tgs_past_cs] z transportu, slyšíš\n"
+"rachot kyberdémonovy železné podkovy."

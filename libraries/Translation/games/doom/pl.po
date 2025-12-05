@@ -1,0 +1,212 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pl\n"
+
+msgid "TXT_D1E1"
+msgstr "Po kolana w trupach"
+
+msgid "TXT_D1E2"
+msgstr "Przedsionek piekieł"
+
+msgid "TXT_D1E3"
+msgstr "Inferno"
+
+msgid "TXT_D1E4"
+msgstr "Ciało twe zwiotczeje"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangar"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Elektrownia Jądrowa"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Rafineria Toksyn"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Kontrola Dowodzenia"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratoria Fobosa"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Centralne Przetwarzanie"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Stacja Komputerowa"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Anomalia Fobosa"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Baza Wojskowa"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Ścieki"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Anomalia Deimosa"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Obszar Zastrzeżony"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Rafineria"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Laboratoria Deimosa"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Centrum Dowodzenia"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Korytarze Przeklętych"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Kadzie Reprodukcyjne"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Wieża Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Forteca Tajemnic"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Twierdza Piekieł"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Bagno Rozpaczy"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Piekło"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Dom Bólu"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Bluźniercza Katedra"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Góra Erebus"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Otchłań"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dis"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Królikarnia"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Piekło Najgłębsze"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Pełnia Nienawiści"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Oddzielą Niegodziwych"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Niepohamowane Zło"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Nawrócą Się"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Podstępnie Przeciw Tobie"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: A Piekło Szło Za Nim"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Kto Nie Zna Litości"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Strach"
+
+msgid "E1TEXT"
+msgstr ""
+"Pokonałeś wielkich bydlaków\n"
+"i wyczyściłeś bazę na księżycu,\n"
+"więc powinieneś wygrać, prawda?\n"
+"Prawda? Gdzie twoja wielka\n"
+"nagroda i bilet powrotny do domu?\n"
+"Co to ma być do diabła?\n"
+"To nie miało się tak skończyć!\n"
+"\n"
+"Śmierdzi jak zgniłe mięso, ale przypomina\n"
+"opuszczoną bazę na Deimosie.\n"
+"Wygląda na to, że utknąłeś w\n"
+"Przedsionku Piekieł. Nie ma już odwrotu.\n"
+"\n"
+"Aby kontynuować przygodę z DOOM-em, \n"
+"zagraj w \"Przedsionek piekieł\"\n"
+"oraz jego niesamowitą kontynuację - \"Inferno\"!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Udało się! Zabiłeś paskudnego cyberdemona,\n"
+"który rządził opuszczoną bazą na\n"
+"Deimosie!\n"
+"Ale... gdzie jesteś? Wspinasz się na\n"
+"krawędź księżyca i patrzysz w dół,\n"
+"by ujrzeć straszliwą prawdę.\n"
+"\n"
+"Deimos unosi się nad samym Piekłem!\n"
+"Jeszcze nigdy nie słyszałeś o kimś,\n"
+"kto by uciekł z Piekła. Te sukinsyny zapłacą za to,\n"
+"że kiedykolwiek usłyszały o tobie!\n"
+"Prędko schodzisz na powierzchnię Piekła.\n"
+"\n"
+"Czas na finałowy rozdział \n"
+"DOOM-a: \"Inferno\"!"
+
+msgid "E3TEXT"
+msgstr ""
+"Odrażający pajęczy demon, mózg\n"
+"inwazji, odebrał życie wielu śmiałkom,\n"
+"ale w końcu skopałeś mu dupsko.\n"
+"\n"
+"Twym oczom ukazuje się sekretne przejście.\n"
+"Udowodniłeś, że jesteś za silny, by\n"
+"demony mogły cię powstrzymać. Piekło\n"
+"poddało się. Przechodzisz przez portal\n"
+"i widzisz piękne ziemskie łąki!\n"
+"Nareszcie w domu. \n"
+"\n"
+"Zastanawiasz się co cię ominęło na Ziemi, \n"
+"kiedy walczyłeś z szerzącym się złem.\n"
+"Całe szczęście, że żadne diabelstwo nie\n"
+"poszło twoim tropem..."
+
+msgid "E4TEXT"
+msgstr ""
+"Pajęczy Mistrz wysłał swe\n"
+"diabelskie legiony tuż przed twym\n"
+"ostatecznym starciem z piekielną bestią.\n"
+"Jednak nie poddałeś się i przyniosłeś\n"
+"wieczne potępienie hordzie demonów,\n"
+"niczym prawdziwy bohater.\n"
+"\n"
+"Ktoś musiał też pomścić\n"
+"śmierć Daisy - twojego króliczka.\n"
+"\n"
+"Teraz rozumiesz ile bólu i zniszczenia\n"
+"mogą wyrządzić demony hulające \n"
+"po ulicach naszych miast.\n"
+"\n"
+"Następny przystanek: Piekło na Ziemi!"

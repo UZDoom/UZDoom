@@ -1,0 +1,389 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:43+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sr\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Уништено село"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Пошаст"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Сливник"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Катакомба"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Пустош"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Папрат"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Ломача"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Чиновникова капија"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Трезор"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Пијаца"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Место починка"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Изазов"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Оружарница"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Брод"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Капела"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Кланица"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Мрачни чувар"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Клоака"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ледена утврда"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Мрачна цитадела"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Прелаз"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Изнад и испод"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Магла смрти"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Тврђава бола"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Канализациона јама"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Ружа"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Бришете дрхтаву руку преко вашег крвавог лица, пробате да се саберете и "
+"спремите се за оно што стоји испред...\n"
+"\n"
+"...и да заборавите шта стоји иза вас.\n"
+"\n"
+"У даљини, снажни бедеми величанственог замка изгледају да искидају небо "
+"изнад, и смрад пропадања допире из прекршених гробова безбројних мртвих.\n"
+"\n"
+"Пажљиво бројите шта ти је остало од артефакта и пробате се поново уверити да "
+"ће бити довољно. На крају крајева, треба да буде довољно, је ли тако?\n"
+"\n"
+"\n"
+"Је ли тако?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Сигурно душе проклетих насељавају овај свет,\n"
+"јер овде ништа поштено или добро не би \n"
+"могло преживети.\n"
+"\n"
+"Али оно што је пре прошло би могло само да \n"
+"буде бледа сенка која ти стоји на путу: сама тамна\n"
+"тврђава.\n"
+"\n"
+"Блистави део катедрале блокира све осим фрагментарних\n"
+"погледа на саму цитаделу, али оно што се види говори у \n"
+"шуштавом шапату хладне, дуготрајне смрти...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...за срећнике."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Још једном се проналазите у великој дворани\n"
+"сфере хаоса, као да време није прошло од како \n"
+"сте се кретали међу овим сенкама.\n"
+"\n"
+"Али нешто је другачије, тишина у којој је некада \n"
+"било тихо шапутање, осећај да вас неко посматра\n"
+"скривеним очима...\n"
+"\n"
+"...очи које штите злобну намеру."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Једном пре сте зграбили сферу хаоса\n"
+"дрхтећим рукама. Сада ваше руке дрхте са нечим\n"
+"што је више од похлепе, и ужасне мреже које су\n"
+"гладне моћи.\n"
+"\n"
+"Чак и ако моћ сфере није довољна да вас заштити\n"
+"од мрачних сила, можда је боље да остане нетакнуто,\n"
+"његово обећање остало неиспуњено.\n"
+"\n"
+"Али још увек, нисте били од оних који се повлаче од изазова..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...и други играчи вас чекају.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Усуђујеш се борити у припремној соби?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "За то ћеш умрети!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Водопад је отворен"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Водопад је блокиран"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Врата су се отворила у катедрали"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "То је чудно..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Остају још три дела загонетке"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Остају још два дела загонетке"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Остаје још један део загонетке"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Загонетка је решена"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Ниси решио загонетку"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Под није безбедан!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Трећина загонетке је решена"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Две трећине загонетке су решене"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Чујете како се платформа помера у даљини"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Готово је..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Ниси решио загонетку"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Упозоравам те..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Тврдоглав си, зар не?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "А још си и глуп"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Четвртина загонетке је решена"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Лош избор..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Симболи нису поравнати"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Врата неће да се отворе са стране"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Врата су блокирана споља"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Светогрђе !"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Оскрнавио си Ерикову гробницу !!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "И због тога ћеш умрети !!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Трећина загонетке је решена"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Две трећине загонетке су решене"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Гробница је отворена"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Чувај се паукове гробнице"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Чујете како се платформа диже споља"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Да ли се осећаш срећним?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Погрешно си погодио!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Добар погодак"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Можеш ли да напишеш све скриптове за мој ниво?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Не дирај мој слаткиш"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Вајтолни мач ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Дај ми мало шећера, душо"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Дух-уххх..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Снимамо за сат времена?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Ја ни немам свој надгробни споменик - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Нека се не пролије крв"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Нека се ни рука из беса не подигне"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Ко се усуђује узнемиравати наш спокој?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Портал је отворен"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Остало је "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20прекидача"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Oстао је само "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20прекидач"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Излаз је отворен"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Врата неће да се отворе са стране"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Врата су отворена..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...ако си спреман"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Врата су се отворила"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "у Капели"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Мост се саградио"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "на Кланици"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Степенице су се саградиле"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "на Црној стражи"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Један зупчаник је постављен"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20зупчаника су постављена"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Барикада је отворена"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "у клоаци"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Пролаз назад је отворен"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Врата су забрављена изнутра"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Усуђујеш се пљачкати"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "желатову гробницу?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Припреми се да умреш"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Остало је "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20прекидача да се нађе"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Oстао је само "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20прекидач"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Пут до куле је отворен"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Портал је отворен"

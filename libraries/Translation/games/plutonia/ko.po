@@ -1,0 +1,164 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ko\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "플루토니아 익스페리먼트"
+
+msgid "PHUSTR_1"
+msgstr "레벨 1: 콩고"
+
+msgid "PHUSTR_2"
+msgstr "레벨 2: 영혼의 우물"
+
+msgid "PHUSTR_3"
+msgstr "레벨 3: 아즈텍"
+
+msgid "PHUSTR_4"
+msgstr "레벨 4: 갇히다"
+
+msgid "PHUSTR_5"
+msgstr "레벨 5: 유령 도시"
+
+msgid "PHUSTR_6"
+msgstr "레벨 6: 남작의 은신처"
+
+msgid "PHUSTR_7"
+msgstr "레벨 7: 포획마당"
+
+msgid "PHUSTR_8"
+msgstr "레벨 8: 왕국"
+
+msgid "PHUSTR_9"
+msgstr "레벨 9: 도축장"
+
+msgid "PHUSTR_10"
+msgstr "레벨 10: 맹공격"
+
+msgid "PHUSTR_11"
+msgstr "레벨 11: 사냥당함"
+
+msgid "PHUSTR_12"
+msgstr "레벨 12: 스피드"
+
+msgid "PHUSTR_13"
+msgstr "레벨 13: 봉안당"
+
+msgid "PHUSTR_14"
+msgstr "레벨 14: 창세기"
+
+msgid "PHUSTR_15"
+msgstr "레벨 15: 황혼"
+
+msgid "PHUSTR_16"
+msgstr "레벨 16: 징조"
+
+msgid "PHUSTR_17"
+msgstr "레벨 17: 복합체"
+
+msgid "PHUSTR_18"
+msgstr "레벨 18: 뉴로스피어"
+
+msgid "PHUSTR_19"
+msgstr "레벨 19: NOM"
+
+msgid "PHUSTR_20"
+msgstr "레벨 20: 죽음의 영역"
+
+msgid "PHUSTR_21"
+msgstr "레벨 21: 슬레이어"
+
+msgid "PHUSTR_22"
+msgstr "레벨 22: 임파서블 미션"
+
+msgid "PHUSTR_23"
+msgstr "레벨 23: 묘비"
+
+msgid "PHUSTR_24"
+msgstr "레벨 24: 최후의 개척지"
+
+msgid "PHUSTR_25"
+msgstr "레벨 25: 어둠의 신전"
+
+msgid "PHUSTR_26"
+msgstr "레벨 26: 방공호"
+
+msgid "PHUSTR_27"
+msgstr "레벨 27: 적그리스도"
+
+msgid "PHUSTR_28"
+msgstr "레벨 28: 하수구"
+
+msgid "PHUSTR_29"
+msgstr "레벨 29: 속삭임의 여정"
+
+msgid "PHUSTR_30"
+msgstr "레벨 30: 지옥의 차원문"
+
+msgid "PHUSTR_31"
+msgstr "레벨 31: 사이버소굴"
+
+msgid "PHUSTR_32"
+msgstr "레벨 32: 함 해 봐"
+
+msgid "P1TEXT"
+msgstr ""
+"당신은 익을 대로 익어버린 수호자의 시체를 지나며 흡족한 웃음을 지었다.\n"
+"놈의 죽음으로, 당신은 양자 가속기를 지옥의 역겨운 마수로부터 탈환한\n"
+"것이다. 당신은 잠시 휴식을 취하면서 가속기실을 둘러보았다. 젠장! 이곳에는\n"
+"적어도 한 대 이상의 양자 가속기 원형이 작동되고 있어야 했다. 그러나 지금은\n"
+"보이지 않는다. 분명 악마들이 가져갔을 것이다.\n"
+"\n"
+"당신은 반드시 가속기를 찾아야 한다. 그렇지 않으면 당신의 모든 노력은\n"
+"물거품이 되고 말 것이다. 계속 이동하라, 교전하라, 적들을 물리쳐라. \n"
+"아 참, 물론 계속 생존하고."
+
+msgid "P2TEXT"
+msgstr ""
+"아크-바일의 진절머리 나는 미궁도 당신을 막지는 못했다.\n"
+"그리고 당신은 곧 가속기를 영원히 꺼 버릴 수 있을 것이다.\n"
+"\n"
+"당신은 분명히 이 방면에는 타고난 실력을 갖추고 있다."
+
+msgid "P3TEXT"
+msgstr ""
+"악마의 심장부에 도달할 때까지, 당신은 계속해서 박살 내고 때려 부수면서\n"
+"나아갔다. 이제 수색 섬멸 임무를 수행할 시간이다. 그러나 지옥의 불결한\n"
+"자손들 또한 지구로 쏟아져 내려오기 위해 문지기를 향해 모여들고 있다.\n"
+"문지기 녀석은 분명 나쁜 녀석이다. 그러나 당신은 녀석이 패배할 것임을\n"
+"이미 알고 있다!\n"
+"\n"
+"당신은 사악한 웃음을 지으며 장비를 점검한 후, 놈들에게 작은 지옥을\n"
+"선사해 주기 위한 준비를 마쳤다!"
+
+msgid "P4TEXT"
+msgstr ""
+"문지기의 사악한 얼굴이 사방으로 흩어졌다. 놈의 추악한 시체와 변형된\n"
+"지옥의 문이 마지막 남은 양자 가속기와 남아 있는 괴물들을 빨아들여 버렸다.\n"
+"당신이 해냈다. 지옥은 살아있는 생명체들 대신 죽어있는 유령들이 가득 찬\n"
+"지옥으로 돌아가고 말았다. 미래에 당신의 자손들한테 당신 관 속에\n"
+"로켓 런쳐를 넣으라고 말하는 걸 잊지 마라. 만약 당신이 죽어서 지옥에 간다면,\n"
+"마지막으로 싹쓸이를 하는데 필요할 테니..."
+
+msgid "P5TEXT"
+msgstr ""
+"당신은 두 번째로 어려운 레벨을 찾아냈다. 당신이 앞서 게임을\n"
+"저장했기를 빈다. 만약 아니라면, 당신은 수많은 죽음을 각오해야 할 것이다.\n"
+"이 임무는 매우 뛰어난 해병만이 맡을 수 있다."
+
+msgid "P6TEXT"
+msgstr ""
+"이 레벨은 우리가 준비한 레벨 중 열라 어려운 난이도를 자랑한다 아이가!\n"
+"그 누구도 살아남지 못한데이!"

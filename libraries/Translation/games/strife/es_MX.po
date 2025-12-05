@@ -1,0 +1,1436 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 16:36+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/"
+"doom-engine-games/strife/es_MX/>\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese "
+"esh esi esu\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr ""
+"Bueno, ¡no voy a decir\n"
+"nada gratis!"
+
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "¡No, no voy a decir nada gratis!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Ya me sacaste hasta el último chisme."
+
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr ""
+"Buenas noticias desde el Frente, para variar. Macil te manda oro y "
+"entrenamiento. Me solicitó dártelos."
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr ""
+"Ya vas a aprender\n"
+"más después."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr ""
+"Puede que en otro\n"
+"momento. ¡Nos vemos!"
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "¿Tal vez en otra ocasión?"
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "¿Tal vez en otra ocasión?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Curitas"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Aquí tienes tus curitas."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr ""
+"Bueno, ¿tal vez tengas\n"
+"para comprar curitas?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Curitas"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Aquí tienes tus curitas."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr ""
+"Bueno, ¿tal vez tengas\n"
+"para comprar curitas?"
+
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+"Hola, extranjero, es la primera vez que te veo por aquí. Te voy a dar un "
+"consejo gratis: tendría cuidado si fuera tú; La Orden no tolera el libre "
+"albedrío y su justicia es veloz."
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr ""
+"Ya está, amigo, el pozo del conocimiento ya se secó. De todas formas ya te "
+"dije más de lo que debería. Suerte... y no vuelvas."
+
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "¡Cuidado por donde caminas, campesino!"
+
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr ""
+"¿Quién demonios eres tú? ¡Se supone que nadie tiene que estar curioseando "
+"por esta zona!"
+
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "¡Irale te va a vender lo necesario!"
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "¡Al carajo los rebeldes!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "No, no hay otra oportunidad. ¡Guardias, mátenlo!"
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+"Buena elección. El santuario de La Orden junto al río es su cámara de "
+"tortura extraoficial. Adentro hay un cáliz dorado escondido. Si me lo traes, "
+"tu recompensa."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "¿Qué estás esperando? Tráeme ese cáliz."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+"Sí, ya lo sé, esto parece una estafa, pero nunca le haría eso a una gran "
+"máquina de matar. ¿Tienes el cáliz? ¡Genial! Ahora prepárate: oro y gloria, "
+"tal y como prometí. Toma esta llave y el gobernador te va a recompensar."
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Ya vete de una vez, que eres pesado."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "No hay otra oportunidad. ¡Guardias, mátenlo!"
+
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+"Primero matan a miles y ahora quieren a todos los campesinos sanos para "
+"«pruebas» no especificadas. ¿Cómo espera La Orden que yo pueda seguir "
+"manteniendo la paz?... ¿Y tú qué carajo quieres?"
+
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+"Uno de mis secuaces puso en algún lado una toma en la red eléctrica para "
+"robar energía. Encuéntrala, destruye su suministro y te voy a dar lo que "
+"pides. Tráeme algo como prueba una vez que termines."
+
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+"A ver, te cuento. Hay un sucio mentiroso llamado Derwin que ha estado "
+"vendiendo niños a La Orden, y no puedo tolerar ese tipo de perversión: no si "
+"no me da mi parte. Derwin trabaja en el almacén. Mátalo, tráeme su oreja y "
+"voy a ver qué puedo hacer."
+
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+"Ah, me encantan los recuerdos. Toma, con esto vas a poder entrar a la "
+"prisión. Habla con el carcelero Montag. Lo que hagas después de eso no "
+"quiero saberlo."
+
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+"Ah, me encantan los recuerdos. Toma, con esto vas a poder entrar a la "
+"prisión. Habla con el carcelero Montag. Lo que hagas después de eso no "
+"quiero saberlo."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr ""
+"¿Así que tú eres el tonto que se robó el cáliz? Te voy a capturar como "
+"ladrón rebelde, mejorando así mi posición con La Orden. ¿Qué se siente ser "
+"un peón involuntario? Una pista: te va a doler. "
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr ""
+"Qué mal. ¡Lo único que\n"
+"vas a tener es la muerte!"
+
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+"El mundo es un pañuelo y las noticias vuelan. Oí que acabas de quitarte un "
+"par de obstáculos de encima. Bien hecho. ¿Te interesaría participar en "
+"proyectos más lucrativos?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Claro, ¿por qué no?"
+
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "¡Tonto! Guardias, libérenme de este entrometido peón."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "¿Va a valer la pena el esfuerzo?"
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Gracias. Lo voy a necesitar."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "Lo voy a encontrar."
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr ""
+"¡Mentiroso!\n"
+"¡Ve por el anillo!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+"Toma, te lo ganaste. El traidor que mataste estaba a punto de revelar la "
+"ubicación del Frente. Salvaste vidas. ¿Te gustaría ganar más oro y un futuro "
+"libre de tiranía?"
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr ""
+"Una pena, pero ahora que sabes de mis amigos, no me queda de otra que "
+"matarte. ¡Guardias, a sacar la basura!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "¡Idiota! Guardias, libérenme de este entrometido peón."
+
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Vete, muchacho. Solo vete."
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr ""
+"Así que Blackbird te dio la clave, ¿eh? Ya apago la alarma, entonces. Macil "
+"está bajando las escaleras."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Vete, muchacho. Solo vete."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Sabía que ibas a decir eso."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Si realmente estás tan apurado, no pierdas el tiempo conmigo."
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr ""
+"Te voy a decir, aunque no sé de quién será la red eléctrica que quieres "
+"manipular. Está justo aquí en la planta de aguas residuales."
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr ""
+"Está justo aquí en la planta de aguas residuales, aunque es el acoplamiento "
+"del Frente. Quien te haya dicho que era de La Orden te dijo mal."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+"Bien. Blackbird va a seguir siendo tu guía; parece que ya le caes bien. "
+"Juntos deben descubrir los secretos de La Orden y de sus sirvientes "
+"inhumanos. Infíltrense y destrúyanlos."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+"Toma este dinero y ve con Irale, que es el que suministra nuestras armas. "
+"Después, esta llave te va a servir para ver al gobernador. Es una marioneta "
+"corrupta de La Orden, pero le encantan los tratos. Haz lo que creas "
+"necesario para liberar a nuestros conmilitones."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "Voy a ver qué hacer."
+
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+"Los prisioneros ya fueron bienvenidos de vuelta gracias a ti. Toma este oro, "
+"ve a ver al médico y al entrenador de armas, y después... tengo mayores "
+"metas para ti."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "Claro. ¿Qué sigue?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+"Un único cristal alimenta la red eléctrica que mantiene los escudos del "
+"castillo. Destruye ese cristal para abrir grandes brechas en las defensas de "
+"La Orden. Blackbird te va a guiar hacia un espía que tiene una forma de "
+"entrar. Buena suerte."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Lo vamos a lograr."
+
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+"Superaste todas nuestras expectativas. Por tu hazaña nuestras tropas ya "
+"están en movimiento. Quiero que los dos se unan al asalto con un objetivo "
+"específico: matar al Programador. Ya es hora de revelar lo que descubrimos "
+"sobre ese lado de La Orden."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr ""
+"La guarida del Programador está en el castillo. Ahora ve a ver al médico, "
+"toma munición y ve por él."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "¡Voy por ellos!"
+
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Habla con Macil. Él te va a poder ayudar."
+
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr ""
+"Oí que Macil tiene un plan para desestabilizar a La Orden. Más vale que sea "
+"bueno. Un fallo más y somos fiambres."
+
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+"Estoy trabajando en algo que nos va a dar una ventaja: va a aumentar tu "
+"aguante y fuerza física. Ya casi tengo todos los fallos corregidos. ¿Puedo "
+"hacer algo por ti?"
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr ""
+"Chico, estás hecho un desastre.\n"
+"A ver qué puedo hacer."
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr ""
+"Muy bien, solo va a\n"
+"tomar un momento."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr ""
+"¿Qué anduviste haciendo?\n"
+"¿Ir cara a cara con un Cruzado?"
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr ""
+"Chico, estás hecho un desastre.\n"
+"A ver qué puedo hacer."
+
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+"Bueno, ¿qué va a ser?, ¿balas o entrenamiento? No puedo esperar a poner mis "
+"manos en esas nuevas armas que capturamos. Un poco de entrenamiento y luego "
+"mucha venganza."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr ""
+"Bien. Usa lo aprendido para guiar a esos\n"
+"desgraciados de La Orden al infierno."
+
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr ""
+"Ya te enseñé todo lo que puedo por ahora. Dame tiempo para probar al 100% "
+"las nuevas armas... a menos que solo necesites más balas, claro."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Acertaste."
+
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr ""
+"No andes a los tiros en el pueblo, que vas a activar la alarma y van a "
+"empezar a mandar guardias desde el castillo. "
+
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr ""
+"Estamos tratando de descubrir la ubicación de los mecanismos de la puerta "
+"del castillo, pero por ahora no hubo suerte."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Ah, bueno. Claro, adelante. Ten un buen día."
+
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+"Llevamos semanas trabajando 24 horas al día sin parar. Diría que La Orden "
+"está planeando una incursión para suprimir al Frente."
+
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+"Ah, no puede ser, te manda el gobernador; iba a darle su parte, en serio. "
+"Bueno, escucha, tengo un puñado escondido; es tuyo si miras para otro lado."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "Muy bien, te dejo ir."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Al carajo. Si yo caigo, tú también. ¡¡Guardias!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "«Negocios» las pelotas. ¡Ayuda, guardias, que hay rebelde!"
+
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr ""
+"Ah, Macil me dijo que ibas a venir. Tengo una forma de meterte a la central "
+"eléctrica, pero es algo arriesgada."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr ""
+"Muy bien. Me robé la identificación del cadáver de un inútil que se cayó al "
+"pozo refrigerante del reactor; «blat», frito al instante."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "¿Qué hago una vez adentro?"
+
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr ""
+"Oye, déjame en paz. Si nos ven perdiendo el tiempo nos matan... o nos dan "
+"más trabajo."
+
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+"Cuanta presión. A este ritmo vamos a volver pronto a turnos normales. "
+"Estamos dándole toneladas de energía al castillo y ya casi termino de "
+"registrar esas nuevas armas."
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "¿Qué crees?, ¿que vamos con medias o calcetines?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "¿Estás sordo? Ya te dije lo ocupado que estoy. Vuelve al trabajo."
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "Si no te pones a trabajar, te van a pegar igual un tiro. Ya muévete."
+
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr ""
+"No quiero sonar alarmante, pero si siguen forzando tanto el cristal de "
+"poder, primero va a fallar, luego se va a partir y luego «¡Pum!»... Para que "
+"te hagas una idea."
+
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+"Que quede claro: si esta terminal vuelve a bloquearse, el nivel de "
+"refrigerante va a caer y todos vamos a tener que dar la cara ante el "
+"Programador... si no morimos antes."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr ""
+"¡Esto es basura! Espera aquí... Bah, al carajo. ¡Guardias, maten a este "
+"intruso!"
+
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr ""
+"Trabajar, dormir, ser torturado; qué vida. A ver, ¿eres el sustituto del "
+"distraído clavadista de pozos?"
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Sí, claro. Bueno, ponte a trabajar."
+
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr ""
+"Si es trabajo duro lo que buscas, ve a mirar esa pantalla un rato: te vas a "
+"morir de aburrimiento."
+
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+"El todopoderoso Programador tiene tanta paranoia de infiltración que hasta "
+"cerró el núcleo de la computadora. ¿Cómo se supone que voy a trabajar así? "
+"La única forma es por la vía suicida."
+
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr ""
+"La ira de La Orden va a caer sobre estos sirvientes hasta que supliquen por "
+"su muerte."
+
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+"No me importa que Mourel te haya dado un pase. Esta es mi prisión; mi llave "
+"es la única forma de entrar o salir, y no me voy a arriesgar. La Orden no "
+"tolera los fallos."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "¡Libera a mis compañeros o muere!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr ""
+"Mátame y no vas a liberar a nadie: poseo la única huella digital que abre "
+"las celdas."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "¿Me das una mano, entonces?"
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "Daría lo que fuera por una miga de pan. Tengo tanta hambre."
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Cumple mi favor primero o no vas a tener nada de mí."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "¿Cómo vas a comprobar si la abrí?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+"Tráeme el uniforme del guardia, así uno de mis «camarratas» va a poder "
+"ponérselo para que nadie intente cerrarla de nuevo."
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr ""
+"Abre la puerta, tráeme el uniforme y negociamos. Caso contrario, esfúmate."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "¿Trajiste lo que quiero?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "¿Qué hay de este uniforme?"
+
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+"Tienes que ir a otra parte de las cloacas. Para llegar ahí debes entrar al "
+"castillo por la puerta de mantenimiento de las cloacas y drenar el tanque de "
+"recuperación de agua; al fondo está la entrada oculta a las cloacas y por "
+"ahí mismo el control manual de la puerta."
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+"Buena suerte. Te abrimos varios de nuestros túneles; eso debería facilitarte "
+"las cosas.\n"
+"Ah, es de talle M. ¡Perfecto!... Aunque de colores espantosos."
+
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Weran nos va a salvar: nunca nos ha fallado."
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "¿Que viva el Frente? Pura mierda. A todos nos espera la muerte. "
+
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+"Esta es mi recompensa por dejar escapar a los presos: vigilar las cloacas. "
+"Si llego a encontrar al tipo que los liberó, lo asesino."
+
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr ""
+"Tenemos a esos mendigos justo donde los queremos: un par de días más así y "
+"ya no van a poder más del hambre."
+
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "¿Qué carajo? ¿Quién abrió las puertas? ¡¡¡Activen la alarma!!!"
+
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr ""
+"¿¡Qué carajo te pasa!? Si el Programador vuelve de su sala de audiencias, "
+"estás muerto."
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "Ya te dije todo lo que sé. Estás perdiendo el tiempo."
+
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+"Mataste a todos los guardias. No me hagas nada. Le dije que era una idea "
+"estúpida; el verdadero Programador está en el torreón. Toma, esta es la "
+"llave."
+
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+"Bien, ya despertaste. Se revelaron un par de secretos terribles en cuanto "
+"agarraste el objeto ese que se le cayó al Programador."
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+"No sabemos de dónde habrá salido esta arma, pero hay que averiguarlo. Ya le "
+"quitaste una pieza a La Orden y nos estarían faltando las otras cuatro. "
+"Hasta ahí todo lo que sé. Busca al Oráculo y pídele ayuda."
+
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr ""
+"¿A qué volviste?, ¿estás herido? No hay tiempo que perder, continúa con la "
+"misión: completa el Emblema."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "¡El Oráculo se muere, entonces!"
+
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+"Tomaste la decisión correcta. Está claro que el Oráculo está siendo "
+"controlado por el mal que está detrás de La Orden. Vuelve ante él y reclama "
+"la tercera pieza del Emblema."
+
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+"Parece que no hay fin para el horror al que nos enfrentamos. Descubrimos que "
+"La Orden no solo mata a nuestra gente, sino que la está transformando en "
+"soldados biomecánicos. Encuentra la instalación donde hacen eso y clausúrala "
+"permanentemente."
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+"Uno de nuestros capitanes, Richter, está esperándote en la comuna de las "
+"tierras fronterizas. Vio la instalación y sabe como entrar. Detén esta "
+"atrocidad ahora."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "¡Se van a arrepentir!"
+
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr ""
+"Soy el Dios Único. ¡Necesito liberar su espíritu para poder abandonar mi "
+"cuerpo y unirme a él en vuelo! No tienes ni idea de lo que posees... ni del "
+"terror al que te enfrentas. ¡El Dios Único debe ser libre! Y me va a "
+"recompensar... ¡Vamos a ser el mismo!"
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "¡Te voy a destruir!"
+
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+"¿Qué puedo hacer por ti? Feris está descifrando unos archivos bastante "
+"complejos, pero va a valer la pena. Ya hay algo de información que puedo "
+"aplicar a la próxima versión del implante de aguante."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "¿Cuándo va a estar listo?"
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr ""
+"La voy a tener lista\n"
+"en cuanto Feris la termine."
+
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+"¿Cómo te va? Hombre, algunas de estas nuevas tecnologías son realmente "
+"sorprendentes; deberían ayudar con tu implante. Tengo unas cuantas ideas que "
+"voy planeando y las voy a tener listas pronto. ¿Qué puedo hacer por ti?, ¿"
+"tal vez curarte?"
+
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+"¿De vuelta otra vez?, ¿no te cansas de esto? Tengo buenas noticias: Feris "
+"encontró una forma de potenciar la salida de tu implante; me dio las "
+"especificaciones y estoy tratando de mezclarlo con tu fisiología. Estoy "
+"forzando el crecimiento de algunos tejidos, algo totalmente nuevo, a ver si "
+"sirve. ¿Necesitas curarte?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr ""
+"Ahora. Mira qué bien,\n"
+"¡funcionó!"
+
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"Bueno, vuelvo a las andadas otra vez: sigo trabajando en tus implantes. ¿"
+"Sabías que Macil ahora los autorizó para todos? No, ¿eh? Es por lo bien que "
+"te ha salido. ¿Algo que pueda hacer por ti?"
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr ""
+"Lo siento, pero\n"
+"vas a tener que esperar."
+
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+"Ya está, Feris ya exprimió todo lo que se podía de los datos que tenemos: "
+"esa fue la mejor y última versión del implante. Es un poco triste ver mi "
+"mejor creación llegar a su cima. Bueno, al menos el resto del personal me va "
+"a mantener ocupado."
+
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+"Es el héroe. ¡Muy bien hecho! ¿Qué puedo ofrecerte? Hay una selección un "
+"poco más amplia ahora que tenemos todo el arsenal del castillo. Si necesitas "
+"comprar munición, habla con Justin: él se va a ocupar de ti. "
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Me quedé sin balas."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr ""
+"Bien, te voy a mostrar\n"
+"un par de trucos del oficio."
+
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr ""
+"Bueno, ¿viniste por tutela o por municiones? No creas que ya terminé contigo:"
+" aún tengo un par de trucos bajo la manga."
+
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr ""
+"Mira quien volvió. ¿En qué estás pensando? Sé que son tiempos difíciles, "
+"pero todos apreciamos tus esfuerzos, créeme."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "Me quedé sin balas."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr ""
+"Una lección más y\n"
+"vas a saber todo lo que sé."
+
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr ""
+"Ya te enseñé todo lo que puedo y te di todo lo que podrías necesitar, a "
+"menos que te hayas quedado sin balas, claro: con eso sí te puedo seguir "
+"ayudando."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Acertaste."
+
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+"Mira qué novedad: la baliza de teletransporte. Cuando la uses, vamos a "
+"rastrear la señal y a mandarte refuerzos. ¿Hay algo que pueda ofrecerte?"
+
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Ten cuidado ahí afuera."
+
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr ""
+"Mucha gente diría que este es un trabajo ingrato e insignificante, pero no, "
+"de hecho..."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "Sí, amigo, como tú digas."
+
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr ""
+"¿Viniste a burlarte? Aunque estemos entre rejas, mientras sigamos en pie, "
+"ustedes pierden."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+"Siento un fragmento resonar en ti. El segundo se encuentra en el corazón de "
+"la torre carmesí y obsidiana: ahí debes combatir con el Obispo que sabe y "
+"espera tu llegada; lo vas a encontrar siguiendo su símbolo de poder. Llévale "
+"este pase al amo de llaves. Vuelve a mí después de matar a la bestia."
+
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+"Tu próximo desafío va a poner a prueba tu espíritu. El tercer fragmento está "
+"en manos de tu propio líder; él es igual a aquello que te manda a matar."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Eres tú en quien no confío."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr ""
+"Cualquiera que sea tu elección tu especie va a perecer bajo la voluntad del "
+"Dios Único."
+
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Voy a volver cuando Macil esté muerto."
+
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr ""
+"Despreciable humano, lograste lo que miles no han podido: traes ante mí el "
+"poder del Emblema, la voz del Dios Único."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+"El Emblema va a abrir la puerta y a liberar al espíritu que va a limpiar "
+"este planeta y a dejarme vivir eternamente. Voy a despojar este mundo de su "
+"energía y a buscar otros que conquistar."
+
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+"¿Viniste a liberarnos? Como he sido bueno, me quitaron el implante, pero aun "
+"así tengo que quedarme aquí abajo a limpiar."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Sí, vine a liberarlos."
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Correcto, ¡están a salvo!"
+
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr ""
+"Nada que reportar aquí; todo está funcionando bien. Si algo sale mal, me voy "
+"a asegurar de reportarlo."
+
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Señor, hubo un problema antes, pero ya lo solucionamos."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Toma, que estoy apurado."
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Bueno, sí. Me manda Macil."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"Ah, seguro que sí. Primero ábrete camino por el complejo de seguridad y usa "
+"el teletransportador. Lo segundo puede que sea más de tu agrado: destruye la "
+"computadora en la oficina de la administración central. Sin computadora no "
+"hay campo de fuerza."
+
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr ""
+"Hay una ventaja al destruir la computadora: ahí se guardan los planos de la "
+"torre. Suena ideal para gente con las manos largas... ¡Je, je!"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"Bueno, se dice que el almacén de por aquí recibió un envío de trituradores, "
+"que son unas armas que pulverizan."
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Curitas"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Aquí tienes tus curitas."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr ""
+"Los templarios van a estar aquí pronto para recibir sus nuevos trituradores; "
+"si los molestas eres hombre muerto."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+"Llegaron hace poco, para eso toda esta seguridad; tuve la oportunidad de "
+"verlos al cerrar el depósito. Se supone que nadie puede entrar o salir hasta "
+"que el resto del pelotón venga a pedir sus armas."
+
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+"Así que hablaste con Timothy, ya veo. Él y yo hemos trabajado juntos para "
+"tratar de descifrar los misterios de La Orden antes de que sea demasiado "
+"tarde para todos nosotros. Tal vez puedas ayudarnos; acabo de abrir la "
+"puerta al sector de producción."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "¿Sabes qué hay adentro?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr ""
+"¡No! Si lo encuentras, quédatelo. Puede que te sirva para tratar de "
+"librarnos de esta opresión. Te desearía suerte, pero vas a necesitar mucho "
+"más que eso si vas ahí..."
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "¿Qué hay de esos misterios que mencionaste?"
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Gracias... Voy a hacer lo que pueda."
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Curitas"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Aquí tienes tus curitas."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr ""
+"Vamos, solo cinco míseras\n"
+"monedas de oro."
+
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+"Gracias a Dios, llegaste. Para entrar a la fábrica se necesita una llave; la "
+"robamos, pero nuestro agente está perdido en la red de catacumbas debajo de "
+"la fortaleza de La Orden. Mandé a diez buenos hombres a esos túneles a "
+"buscarlo y ninguno volvió. ¡Hay algo ahí abajo!"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+"No, definitivamente no. Sea lo que sea, debes pelear contra eso para "
+"recuperar la llave; voy a abrir la entrada a las catacumbas. Cuando la "
+"tengas, la fábrica está junto a la mina. Apúrate, que cada segundo cuenta."
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+"Si tan aburrido estás, ve a ver si puedes encontrar el cáliz azul. Mis "
+"estudios sobre La Orden sugieren que está oculto en alguna parte del sector "
+"de manufactura de la fábrica. Ese artefacto me sería de gran valor, así que "
+"tráemelo y te voy a ayudar."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "¡Encontraste el cáliz azul! Bueno, dámelo primero y negociamos."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "Al diablo, me lo quedo."
+
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+"Ve a la forja. La información que te di debería permitirte entrar a un "
+"sector secreto de la fábrica. Uno de los trabajadores de la forja puede "
+"abrir la puerta."
+
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+"Ese cáliz azul, ¿de dónde lo sacaste? He estado investigando a La Orden y "
+"sus conexiones con el pasado lejano, y ese artefacto me serviría. Hagamos un "
+"trato: dame el cáliz y te doy algo de información."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "Al diablo, me lo quedo."
+
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+"Gracias a Dios, llegaste. Para entrar a la fábrica se necesita una llave; la "
+"robamos, pero nuestro agente está perdido en la red de catacumbas debajo de "
+"la fortaleza de La Orden. Mandé a diez buenos hombres a esos túneles a "
+"buscarlo y ninguno volvió. ¡Hay algo ahí abajo!"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+"No, definitivamente no. Sea lo que sea, debes pelear contra eso para "
+"recuperar la llave; voy a abrir la entrada a las catacumbas. Cuando la "
+"tengas, la fábrica está junto a la mina. Apúrate, que cada segundo cuenta."
+
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+"Al maestro no le gustan las visitas; le gusta que su trabajo permanezca "
+"ininterrumpido. Tengo que ir a buscar partes frescas al almacén: una pierna "
+"y un brazo, creo que dijo. Ah, bueno, no hay tiempo para hablar. Yo que tú "
+"me iría antes de que te encuentre."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr ""
+"¡Te estoy diciendo que\n"
+"no le gustan las visitas!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "¿Sabes? Tienes el talle justo para alguno de los uniformes de acólito."
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "No vas a encontrar nada si sigues aquí."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Ten cuidado ahí afuera."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "¡No te voy a decir nada gratis!"
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Ya te dije lo que sé."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "¡No traes dinero!"
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "¿Tal vez en otra ocasión?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Curitas"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Aquí tienes tus curitas."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr ""
+"Bueno, ¿tal vez tengas\n"
+"para comprar curitas?"
+
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+"Hola, amigo, es la primera vez que te veo por aquí. Todo lo que puedo decir "
+"es que tendría cuidado si fuera tú: están pasando muchas cosas y es mejor "
+"que no te entrometas."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr ""
+"Ya está, amigo, el pozo del conocimiento ya se secó. De todas formas ya te "
+"dije más de lo que debería."
+
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr ""
+"Difícil comprarse nuevos juguetes... cuando se está pobre. Haz un encargo "
+"para mí y vas a ganar más de lo que puedas gastarte: te voy a hacer un "
+"hombre rico."
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+"Buena elección. El santuario de La Orden junto al río es su cámara de "
+"tortura extraoficial. Adentro hay un cáliz dorado escondido. Si lo tomas y "
+"me lo llevas a la taberna, tu recompensa."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Lo siento, no hay otra oportunidad. ¡Guardias, mátenlo!"
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Ahí voy a estar."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr ""
+"¿Qué estás esperando? Yo me deshago de los cuerpos, así que tranquilo. ¡Tú "
+"solo tráeme ese cáliz!"
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "¡Guardias! ¡Maten al traidor!"
+
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+"Sí, sé lo que estás pensando: esto parece una estafa, pero nunca le haría "
+"eso una tal máquina de matar, lo juro. Uf, todo este lío por una copa, que "
+"raro. Ahora prepárate: oro y gloria, tal y como prometí. Toma esta llave y "
+"el mismísimo gobernador te va a recompensar."
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "¿Qué estás esperando? El mismísimo gobernador te va a recompensar."
+
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr ""
+"¿Así que tú eres el tonto que se robó el cáliz? Te voy a capturar como "
+"ladrón rebelde, mejorando así mi posición con La Orden. ¿Qué se siente ser "
+"un peón involuntario? "
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr ""
+"Qué mal. ¡Lo único que\n"
+"vas a tener es la muerte!"
+
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Habla con Macil. Él te va a poder ayudar."
+
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+"Oí que Macil va a empezar algo nuevo pronto. Necesitamos algo bueno después "
+"del último fracaso: uno más así y vamos a ser demasiado débiles para "
+"continuar."
+
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+"Estoy trabajando en algo que nos va a dar una ventaja: va a aumentar tu "
+"aguante y fuerza física. Ya casi tengo todos los fallos corregidos. ¿Puedo "
+"hacer algo por ti? "
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr ""
+"Chico, estás hecho un desastre.\n"
+"A ver qué puedo hacer."
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr ""
+"Muy bien, solo va a\n"
+"tomar un momento."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr ""
+"¿Qué anduviste haciendo?\n"
+"¿Ir cara a cara con un Cruzado?"
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr ""
+"Chico, estás hecho un desastre.\n"
+"A ver qué puedo hacer."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+"Bueno, ¿qué va a ser?, ¿balas o entrenamiento? No puedo esperar a poner mis "
+"manos en esas nuevas armas que capturamos. En cuanto termine, voy a poder "
+"empezar a entrenar al resto."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr ""
+"Bien. Usa lo aprendido para guiar a esos\n"
+"desgraciados de La Orden al infierno."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr ""
+"Ya te enseñé todo lo que puedo por ahora. Dame tiempo para probar al 100% "
+"las nuevas armas... a menos que solo necesites más balas, claro."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Acertaste."
+
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr ""
+"No andes a los tiros en el pueblo, que vas a activar la alarma y van a "
+"empezar a mandar guardias desde el castillo."
+
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr ""
+"Estamos tratando de descubrir la ubicación de los mecanismos de la puerta "
+"del castillo, pero por ahora no hubo suerte."
+
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+"Un consejo: mantente siempre alejado de los soldados artificiales de La "
+"Orden. Los Saqueadores son los peores; ¡esos desgraciados son rápidos!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+"Bien. Blackbird va a seguir siendo tu guía; parece que ya le caes bien. "
+"Juntos deben descubrir los secretos de La Orden y de sus sirvientes "
+"inhumanos. Hay una presencia ultramundana observando y guiando su terror "
+"desde las sombras. Infíltrense y destrúyanlos. "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "¡Voy por ellos!"
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "Si estás tratando de hacerme algo, no va a valer la pena, la verdad."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Déjame en paz, ¿sí?"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr ""
+"¡El día de nuestra gloria va a llegar pronto y aquellos que se opusieron a "
+"nosotros van a ser destruidos!"
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr ""
+"Una vez eliminados esos charlatanes, vamos a poder reconstruir este mundo "
+"como debe ser."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr ""
+"Recuerda que no estás peleando solo por ti, sino por todos aquí y afuera."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Mientras uno de nosotros siga en pie, vamos a ganar."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Sigue la fe verdadera, solo así vas a entender."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "No me interesa oír tus estupideces."
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "La Orden va a limpiar el mundo y marcar el inicio de la nueva era."
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "¿Que estás mirando, tipo de la superficie?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "Ustedes, los de la superficie, jamás nos van a entender."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr ""
+"Algún día todos, menos aquellos que le sirven a La Orden, se van a ver "
+"obligados a unirse a nosotros."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr ""
+"Observa ahora, pero ya sabes que esta va a ser tu propia cara algún día."
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "La Orden va a destruir como si nada su patético Frente."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr ""
+"Cuidado, tipo de la superficie. ¡Nosotros conocemos a nuestros enemigos!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "¡La Orden va a limpiar el mundo de los débiles y los corruptos!"
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "¿Acólitos? Aún no vieron toda la gloria de La Orden."
+
+msgid "TXT_ILOG2"
+msgstr ""
+"Escucha, este intercomunicador me dice que eres 100% humano. Se ordenadó "
+"dejarte entrar, así que hablamos en confianza. Traicióname y te vas a "
+"arrepentir. Ah, por cierto, puedes llamarme BlackBird."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+"A ver, este intercomunicador me dice que eres 100% humano. Podrías ser uno "
+"de nosotros y tal vez podamos intentar confiar el uno en el otro. Te pongo a "
+"prueba: hay un lanzallamas en la mansión del gobernador; agárralo y te voy a "
+"guiar a nosotros."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+"No entres al ayuntamiento: nos descubrieron, o sea que ya no es seguro. Mata "
+"a todos los robots grandes, o sea, a los Cruzados, y te guío a nosotros."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr ""
+"La puerta junto a la armería se abrió al matar a los cruzados. Adentro de "
+"ese almacén hay un teletransporte; úsalo."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr ""
+"La puerta junto a la armería se va a abrir al matar a los cruzados. Adentro "
+"de ese almacén hay un teletransporte; úsalo."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr ""
+"Mata a tantos de los robots grandes, o sea, a los Cruzados, como puedas. "
+"Cuando termines, te guío hasta Macil."
+
+msgid "TXT_ILOG13"
+msgstr ""
+"Rompiste el acoplador que le ocultaba nuestra base a La Orden. Dirígete al "
+"ayuntamiento y elimina a la tropa de reconocimiento. Luego vuelve con el "
+"gobernador y dale el acoplador que rompiste."
+
+msgid "TXT_ILOG14"
+msgstr ""
+"Bueno, ¡«No confíes en nadie» se llama el juego! Ya es hora de conseguir el "
+"pase a la prisión: llévale el acoplador roto al gobernador."
+
+msgid "TXT_ILOG25"
+msgstr ""
+"Una misión más para que el comando sienta que es seguro asaltar el castillo. "
+"Macil le dijo a Irale que te dé oro y entrenamiento. Tras visitarlo, ve con "
+"el médico del pueblo para cambiar el implante."
+
+msgid "TXT_ILOG37"
+msgstr ""
+"¡Comando, lo logró! Las puertas ya están abiertas. ¡Manden a las tropas de "
+"choque y díganle a Macil que ya es hora de entrar! Volvamos a la base del "
+"Frente."
+
+msgid "TXT_ILOG38"
+msgstr ""
+"Encuentra y elimina al Programador. Tenemos informes contradictorios sobre "
+"su ubicación: uno que está en una sala de computadoras, otro en el sótano de "
+"un templo y otro al final de un largo pasillo."
+
+msgid "TXT_ILOG46"
+msgstr ""
+"Busca al Oráculo y pregúntale sobre las otras piezas del Emblema. Reside "
+"afuera del pueblo en las tierras fronterizas que están justo al lado de la "
+"puerta del castillo."
+
+msgid "TXT_ILOG47"
+msgstr ""
+"Busca al Oráculo y pregúntale sobre las otras piezas del Emblema. Reside "
+"afuera del pueblo en las tierras fronterizas que están justo al lado de la "
+"puerta del castillo."
+
+msgid "TXT_ILOG56"
+msgstr ""
+"La segunda pieza está en el corazón de la torre carmesí y obsidiana: allá "
+"está el Obispo el líder militar de La Orden. Lo matamos y premios dobles. "
+"Llévale el pase del Oráculo al amo de llaves en las tierras fronterizas."
+
+msgid "TXT_ILOG59"
+msgstr ""
+"Acaban de decirme que tenemos un informante adentro de la fortaleza: vayamos "
+"al hospital, que es donde trabaja. Luego encuentra al Obispo, mátalo y "
+"vuelve con el Oráculo."
+
+msgid "TXT_ILOG64"
+msgstr ""
+"Entra al teletransportador a la administración central y destruye el núcleo "
+"de la computadora que mantiene el campo de fuerza en la entrada de la torre "
+"del Obispo. Una vez muerto, vuelve con el Oráculo."
+
+msgid "TXT_ILOG70"
+msgstr ""
+"Destruye la computadora; eso debería deshacerse del campo de fuerza. "
+"Volvamos al patio, luego directo a la torre y al Obispo."
+
+msgid "TXT_ILOG74"
+msgstr ""
+"¡Bravo, otra pieza del Emblema! ¿Viste ese extraño espectro que había salido "
+"del cuerpo del Obispo?, ¿de dónde me sonará? Volvamos con el Oráculo."
+
+msgid "TXT_ILOG79"
+msgstr ""
+"Richter tomó el mando del Frente. Parece que Macil nos ha estado engañando "
+"todo este tiempo: su verdadera lealtad era a La Orden. Tremenda víbora. "
+"Volvamos con el Oráculo."
+
+msgid "TXT_ILOG93"
+msgstr ""
+"La fábrica está junto a la mina de Degnin; su mineral es magnético y "
+"explosivo, justo como para destruir campos de fuerza. Estas deben de ser las "
+"ruinas donde los agentes de Richter desaparecieron al buscar al llave de la "
+"mina."
+
+msgid "TXT_ILOG97"
+msgstr ""
+"Busca depósitos del mineral de Degnin. Hay mineros esclavizados con sus "
+"funciones sinápticas bloqueadas con implantes a control remoto. Destruir el "
+"transmisor los va a liberar."
+
+msgid "TXT_ILOG102"
+msgstr ""
+"Estoy leyendo distorsiones masivas de ondas cerebrales adelante. Parece que "
+"la encontramos. ¡Entremos ahí y apaguémosla!"
+
+msgid "TXT_ILOG104"
+msgstr ""
+"Macil se volvió loco: mandó intencionalmente a 200 hombres directo a la "
+"muerte. Regresemos a ver qué está pasando."
+
+msgid "TXT_ILOG211"
+msgstr ""
+"Vamos, salgamos de aquí. Ya se desactivó el campo de fuerza en la torre del "
+"Obispo. En cuanto lo mates, vuelve con el Oráculo."
+
+msgid "TXT_ILOG1001"
+msgstr ""
+"Encuentra el santuario junto al arroyo, roba el cáliz de adentro y llévaselo "
+"a Harris a la taberna (Tavern)."
+
+msgid "TXT_ILOG1003"
+msgstr ""
+"Encuentra el santuario junto al arroyo. Alguien llamado Beldin está retenido "
+"adentro. «Siléncialo» y dale su anillo a Rowan como prueba."
+
+msgid "TXT_ILOG1009"
+msgstr ""
+"Usa el pase que te dio Mourel para entrar a la prisión de Norwall. Una vez "
+"adentro, habla con el carcelero Montag. Encuentra una forma de liberar a los "
+"prisioneros."
+
+msgid "TXT_ILOG1012"
+msgstr ""
+"Usa la identificación para entrar a la central eléctrica. Destruye el "
+"cristal de poder que impulsa la red eléctrica que mantiene los escudos del "
+"castillo. Quizás quieras revisar el cuarto de almacenamiento en el almacén "
+"(Warehouse)."
+
+msgid "TXT_ILOG1016"
+msgstr ""
+"Llévale las partes del lanzallamas a Irale. Encuentra la puerta de "
+"mantenimiento de la alcantarilla. Encuentra y drena el tanque de "
+"recuperación adentro del castillo. En el fondo de esa entrada están los "
+"controles de las puertas, en algún lugar."
+
+msgid "TXT_ILOG1017"
+msgstr ""
+"Únete al asalto en el castillo. Encuentra y elimina al Programador. Ve al "
+"médico y al entrenador de armas. Gasta todo lo que tengas. Esta será una "
+"tremenda batalla."
+
+msgid "TXT_ILOG1018"
+msgstr ""
+"Usa la llave que el falso Programador te dió para abrir la entrada a la "
+"güarida del Programador. Debe ser donde está escondido. Encuentra al "
+"Programador y mátalo."
+
+msgid "TXT_ILOG1020"
+msgstr ""
+"La segunda pieza está en el corazón de la torre carmesí y obsidiana. Ahí "
+"deberás encontrar al Obispo, que te está esperando. Lleva el símbolo del "
+"Oráculo al Amo de Llaves en las fronteras. Cuando hayas destruido al Obispo, "
+"regresa con el Oráculo."
+
+msgid "TXT_ILOG1021"
+msgstr ""
+"Encuentra la torre carmesí y obsidiana. Usa la llave que te dio el Amo de "
+"Llaves para entrar en la torre. Una vez adentro localiza al Obispo. Una vez "
+"destruido el Obispo, regresa con el Oráculo."
+
+msgid "TXT_ILOG1023"
+msgstr ""
+"Tú siguiente desafío probará tú espíritu. La tercera pieza la tiene tú "
+"propio líder. Él es igual que aquello que te envía a matar. Confróntalo y "
+"resuelve tú destino."
+
+msgid "TXT_ILOG1025"
+msgstr ""
+"Haz cortado el cáncer de tu cuerpo, pero tú corazón todavía late. Ahora "
+"debes encontrar al cirujano que encarniza y controla a tú gente... El "
+"Maestro del Conocimiento. Deténlo y la siguiente pieza será tuya."
+
+msgid "TXT_ILOG1026"
+msgstr ""
+"Ahora debes encontrar al cirujano que encarniza y controla a tú gente... El "
+"Maestro del Conocimiento. Deténlo y la siguiente pieza será tuya. Usa el "
+"teleporte que he abierto para alcanzarlo. Cuando esté muerto, usa el mismo "
+"dispositivo para regresar conmigo."
+
+msgid "TXT_ILOG1201"
+msgstr ""
+"¡Felicitaciones! Te ganaste nuestra gratitud. Visita al médico y al "
+"entrenador de armas y ellos te dejarán listo para lo que sigue. Sientete "
+"libre de andar através de la base."
+
+msgid "TXT_SUB_LOG2"
+msgstr ""
+"Escucha, este intercomunicador me dice que eres 100% humano. Se ordenadó "
+"dejarte entrar, así que hablamos en confianza. Traicióname y te vas a "
+"arrepentir. Ah, por cierto, puedes llamarme BlackBird."
+
+msgid "TXT_SUB_LOG5"
+msgstr ""
+"Irale es el «soluccionador» del Frente. Está pasando la puerta sin cartel "
+"junto a la tienda de armas."
+
+msgid "TXT_SUB_LOG13"
+msgstr ""
+"¡Idiota! Apagaste la energía de los circuitos de interferencia que usamos "
+"para ocultarle nuestra base a La Orden. Dirígete al ayuntamiento y elimina "
+"al equipo de escaneo, ¡ya!"
+
+msgid "TXT_SUB_LOG14"
+msgstr ""
+"Bueno, ¡«No confíes en nadie» se llama el juego! Ya es hora de conseguir ese "
+"pase del Gobernador y liberar a esos prisioneros."
+
+msgid "TXT_SUB_LOG20"
+msgstr ""
+"¡Uh, le cortaste la mano! Y yo creía que eras una buena persona... más o "
+"menos. Bueno, vamos."
+
+msgid "TXT_SUB_LOG37"
+msgstr ""
+"¡Comando, lo logró! Las puertas ya están abiertas. ¡Manden a las tropas de "
+"choque y díganle a Macil que ya es hora de entrar! "
+
+msgid "TXT_SUB_LOG38"
+msgstr ""
+"Tenemos informes contradictorios sobre la ubicación del Programador: uno "
+"dice que está en una sala de computadoras, otro que está en un torreón y "
+"otro más menciona un pasillo largo. Perdón. "
+
+msgid "TXT_SUB_LOG45"
+msgstr "Esto se va a poner feo. Ve con cuidado."
+
+msgid "TXT_SUB_LOG54"
+msgstr "¿En serio hay que confiar en un tipo cuyo templo secreto es verde?"
+
+msgid "TXT_SUB_LOG56"
+msgstr ""
+"El Obispo es el líder militar de La Orden: planea sus tácticas, maneja a sus "
+"espías y está al cargo de controlarnos. Lo matamos y premios dobles."
+
+msgid "TXT_SUB_LOG59"
+msgstr ""
+"Acaban de decirme que tenemos un informante adentro de la fortaleza. Vayamos "
+"a lo que le dicen «el hospital», que es donde trabaja."
+
+msgid "TXT_SUB_LOG60"
+msgstr "Toma los planos y destruye la computadora, ¿sí?"
+
+msgid "TXT_SUB_LOG67"
+msgstr "O sea, este lugar se veía enano desde afuera."
+
+msgid "TXT_SUB_LOG70"
+msgstr "Muy impresionante. ¡Vamos a destruirla!"
+
+msgid "TXT_SUB_LOG72"
+msgstr ""
+"Momento, el Oráculo dijo que lo reconoceríamos por su símbolo de poder. ¿"
+"Estás pensando lo mismo que yo?"
+
+msgid "TXT_SUB_LOG102"
+msgstr ""
+"Estoy leyendo distorsiones neuronales masivas adelante. Creo que la hemos "
+"encontrado."
+
+msgid "TXT_SUB_LOG104"
+msgstr ""
+"El Oráculo tenía razón. Macil se volvió loco: mandó intencionalmente a 200 "
+"hombres directo a la muerte. Quiero venganza, ¡por los muertos y los muertos "
+"vivientes!"
+
+msgid "TXT_SUB_LOG120"
+msgstr ""
+"¿Quién se atreve a desafiarme y entrar a mi fortaleza? ¿Un insignificante "
+"humano? ¡Enfréntate a mí y muere!"
+
+msgid "TXT_SUB_LOG209"
+msgstr "Dios. ¡Mira lo que hiciste!"
+
+msgid "TXT_SUB_LOG210"
+msgstr "Carajo. ¡Ya metiste la pata!"
+
+msgid "TXT_SUB_LOG211"
+msgstr "¡Vamos! Vayámonos de aquí."
+
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "Disculpa, pero me voy a enfermar."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "«Istí firi di lis límitis». Pero qué creído."
+
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "Qué «agradable» sujeto."
+
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Habrá sido porque no dijiste «por favor»."

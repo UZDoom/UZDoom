@@ -1,0 +1,223 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:44+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: jp\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "埠頭"
+
+msgid "HHUSTR_E1M2"
+msgstr "地下牢"
+
+msgid "HHUSTR_E1M3"
+msgstr "門塔"
+
+msgid "HHUSTR_E1M4"
+msgstr "監視塔"
+
+msgid "HHUSTR_E1M5"
+msgstr "要塞"
+
+msgid "HHUSTR_E1M6"
+msgstr "大聖堂"
+
+msgid "HHUSTR_E1M7"
+msgstr "地下聖堂"
+
+msgid "HHUSTR_E1M8"
+msgstr "地獄の肚"
+
+msgid "HHUSTR_E1M9"
+msgstr "墓場"
+
+msgid "HHUSTR_E2M1"
+msgstr "噴火口"
+
+msgid "HHUSTR_E2M2"
+msgstr "溶岩の竪穴"
+
+msgid "HHUSTR_E2M3"
+msgstr "火の河"
+
+msgid "HHUSTR_E2M4"
+msgstr "氷の洞窟"
+
+msgid "HHUSTR_E2M5"
+msgstr "地下墓所"
+
+msgid "HHUSTR_E2M6"
+msgstr "迷宮"
+
+msgid "HHUSTR_E2M7"
+msgstr "大公会堂"
+
+msgid "HHUSTR_E2M8"
+msgstr "混沌への門"
+
+msgid "HHUSTR_E2M9"
+msgstr "氷河"
+
+msgid "HHUSTR_E3M1"
+msgstr "倉庫"
+
+msgid "HHUSTR_E3M2"
+msgstr "汚水層"
+
+msgid "HHUSTR_E3M3"
+msgstr "合流点"
+
+msgid "HHUSTR_E3M4"
+msgstr "紺碧の要塞"
+
+msgid "HHUSTR_E3M5"
+msgstr "オフィディアンの塒"
+
+msgid "HHUSTR_E3M6"
+msgstr "恐怖の館"
+
+msgid "HHUSTR_E3M7"
+msgstr "裂け目"
+
+msgid "HHUSTR_E3M8"
+msgstr "デ’スパリルの間"
+
+msgid "HHUSTR_E3M9"
+msgstr "帯水層"
+
+msgid "HHUSTR_E4M1"
+msgstr "棺台"
+
+msgid "HHUSTR_E4M2"
+msgstr "丸太小屋"
+
+msgid "HHUSTR_E4M3"
+msgstr "遊歩道"
+
+msgid "HHUSTR_E4M4"
+msgstr "埋葬所"
+
+msgid "HHUSTR_E4M5"
+msgstr "大階段"
+
+msgid "HHUSTR_E4M6"
+msgstr "背教者の館"
+
+msgid "HHUSTR_E4M7"
+msgstr "破滅の塁壁"
+
+msgid "HHUSTR_E4M8"
+msgstr "崩落の橋"
+
+msgid "HHUSTR_E4M9"
+msgstr "霊廟"
+
+msgid "HHUSTR_E5M1"
+msgstr "黄土絶壁"
+
+msgid "HHUSTR_E5M2"
+msgstr "奔流"
+
+msgid "HHUSTR_E5M3"
+msgstr "岸壁"
+
+msgid "HHUSTR_E5M4"
+msgstr "中庭"
+
+msgid "HHUSTR_E5M5"
+msgstr "ヒュドラテュール"
+
+msgid "HHUSTR_E5M6"
+msgstr "柱廊"
+
+msgid "HHUSTR_E5M7"
+msgstr "悪臭の牧師館"
+
+msgid "HHUSTR_E5M8"
+msgstr "審判之地"
+
+msgid "HHUSTR_E5M9"
+msgstr "デ'スパリルの枷"
+
+msgid "HE1TEXT"
+msgstr ""
+"アイアンリッチとその手下たちが滅ぼされたことにより、\n"
+"アンデッドは一匹残らずこの世界から消滅した。\n"
+"\n"
+"この怪物達は、別の場所から此処へ来る必要があったらしい、\n"
+"故に、地獄の肚と呼ばれる燃え盛るポータルが\n"
+"奴等の住処と繋がっているのではという不審感を覚えた。\n"
+"\n"
+"更なるアンデット(もしくはそれ以上の者)が押し寄せるのを\n"
+"阻止する為、そこを通り地獄へのポータルを封印する手段を\n"
+"探さなければならない。だがそれで貴方が不倶戴天の世界に\n"
+"立往生する事態となっても、異端者と攻め立てる権利は誰にも無い!"
+
+msgid "HE2TEXT"
+msgstr ""
+"強靭と自負していたマウロタウロスは貴方に肩を並べるほど\n"
+"鍛えていなかったようで、その焼け焦げた牛の死体が\n"
+"貴方の満足感を満たした。\n"
+"\n"
+"守護されていたゲートが開き、元の世界に戻る道が出来た。\n"
+"しかし通り抜けた瞬間、嘲た笑い声が鳴り響いた。\n"
+"何者がマウロタウロスを支配していたか?\n"
+"この門の向こうにさらなる脅威が待ち受けるのか?\n"
+"頭上に広がる透き通ったクリスタルドームを見るに\n"
+"良い兆候は決して訪れないと確信した...."
+
+msgid "HE3TEXT"
+msgstr ""
+"デ'スパリルの死によって魔法による従僕達は解放され\n"
+"その風靡なる死の悲鳴に貴方は圧倒された。\n"
+"復讐の誓いは成し遂げられ、元の世界へ戻るポータルを\n"
+"通った瞬間、ドームが崩壊し数百万の破片と化した。\n"
+"\n"
+"だがデ'スパリルの魔力が永久に破壊されたなら\n"
+"安全だと思うはずだろう?\n"
+"奴の死の直前、呪文のような叫びが最後に聞こえた\n"
+"ような?何かが召喚された? \n"
+"もしくはただの悲鳴だったのか?\n"
+"\n"
+"それとも、また別のサーペントライダーがいたのか?"
+
+msgid "HE4TEXT"
+msgstr ""
+"貴方はデ'スパリルの死後、元の世界に戻れるはずだったが\n"
+"あの死に際の呪文により既に征服され破壊された古蹟へ\n"
+"送られてしまった。先程その守護者を打ち倒し、次いで\n"
+"要塞への門前に迷わず進み出た。この瞬間まで更なる脅威に\n"
+"立ち向かう魔力を疑う余地は持たなかった。\n"
+"だがそのポータルを抜けた先には世界侵略を企てる\n"
+"諸悪の根源が待ち構えている。デ'スパリルは死んだ、\n"
+"しかし彼奴のいた居城はまだ残っている。\n"
+"解決策を得る為その門に突入する必要がある。\n"
+"\n"
+"そして何処か、デ'スパリルの領地で専属の者が\n"
+"暗黒の僻地で待ち構えているだろう。"
+
+msgid "HE5TEXT"
+msgstr ""
+"最後のマウロタウロスが死際の咆哮を放った時、\n"
+"貴方の所業が無謀ではないと証明された。\n"
+"デ'スパリルとその従僕達との闘いでさえ\n"
+"絶望的ではなかった。目前の開いた門を眺め\n"
+"手下達が自ら帰還するのか、或いは夢にも思わぬ\n"
+"恐怖に陥るか疑問に思った。自分にも立ち向かう力が\n"
+"あるかわからないが、死と苦痛以外残っていないだろう。\n"
+"だが戦う意思がなければ他に何が出来るのか? \n"
+"絶望に直面しても立ち向かう事を強制するか? \n"
+"そんな度胸はあるのか? \n"
+"わかっている、結局のところ、戦い無しに降伏することは\n"
+"有り得ないことだ。長い目で見れば己の運命は\n"
+"決まっていたと。"

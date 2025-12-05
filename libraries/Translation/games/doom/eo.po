@@ -1,0 +1,205 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 20:08+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eo\n"
+
+msgid "TXT_D1E1"
+msgstr "Ĝiskole inter mortintoj"
+
+msgid "TXT_D1E2"
+msgstr "La Infer-bordoj"
+
+msgid "TXT_D1E4"
+msgstr "Kiam konsumiĝos via karno"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangaro"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Nuklea centralo"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Toksin-rafinejo"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Komando kaj kontrolo"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratorio sur Fobo"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Procesorad-centralo"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Komputila stacio"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Nenormalaĵo sur Fobo"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Militbazo"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Kloako"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Nenormalaĵo sur Dejmo"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Magazeno"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Rafinejo"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Laboratorio sur Dejmo"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Komandcentro"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Koridoroj de la damnitoj"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Nasko-kuvegoj"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Turo de Babelo"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Fortreso de mistero"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Infera ĉefturo"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Ŝlimejo de malespero"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonio"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Domo de doloro"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Malsankta katedralo"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Monto de Erebo"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Danteca"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Nestego"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Ŝeolo malsupre"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Ekstrema malamo"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Apartigi la malbonulojn"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Malkvieta malbono"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Ili pentos"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Pri Vi malice"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Kaj Hades sekvis"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Al la kruelulo"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Timo"
+
+msgid "E1TEXT"
+msgstr ""
+"Post kiam vi elpurigis la bazon\n"
+"en Fobo je tiuj maliculoj, vi logike\n"
+"venkus, ĉu? Ĉu!? Kie estas via granda\n"
+"rekompenco kaj bileto hejmen? Kio diable\n"
+"okazis? Ĉi tio ne devus finiĝi ĉi tiel!\n"
+"\n"
+"Odoras putran karnon, sed ĝi aspektas\n"
+"kiel la perdita bazo en Dejmo. Ŝajnas,\n"
+"ke vi estas kaptita ĉe la Infer-bordoj:\n"
+"por espaki oni transiru la Inferon.\n"
+"\n"
+"Por daŭrigi la DOOM-sperton, ludu\n"
+"la epizodon «La Infer-bordoj» kaj\n"
+"ĝian bonegan sekvon: «Inferno»!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Vi sukcesis! La malbelega Ciberdemono,\n"
+"kiu regis la perditan lunbazon en Dejmo,\n"
+"estis mortigita kaj vi triumfis!\n"
+"Sed... Kie vi estas? Vi grimpas al la\n"
+"rando de la luno kaj rigardas malsupren\n"
+"por vidi la malbonegan veron:\n"
+"\n"
+"Dejmo ŝvebas super la Infero mem!\n"
+"Vi neniam sciiĝis pri eskapinto el la\n"
+"Infero, sed nun tiuj aĉuloj bedaŭros,\n"
+"ke ili ja sciiĝis pri vi! Vi surteriĝas\n"
+"per ŝnuro sur la supraĵon de la Infero.\n"
+"\n"
+"Nun ek al la fina ĉapitro de\n"
+"DOOM: «Inferno»!"
+
+msgid "E3TEXT"
+msgstr ""
+"La abomena aranedemono, kiu kondukis\n"
+"la invadon de la lunbazoj kaj kaŭzis tiom\n"
+"da morto, havis ĝian pugon piedbatita\n"
+"por ĉiam.\n"
+"\n"
+"Kaŝita pordo malfermiĝas kaj vi eniras.\n"
+"Vi pruvis, ke vi estas tro forta por\n"
+"Infero deteni vin, kaj nun Infero fine\n"
+"ludas honeste -- ĉar vi eliras el la pordo\n"
+"por vidi la verdajn kampojn de la Tero!\n"
+"Hejme fine.\n"
+"\n"
+"Vi scivolas, kio okazis sur la Tero dum vi\n"
+"bataladis malbonon deĉenigitan. Bonas,\n"
+"ke neniu Inferido povintus veni tra la\n"
+"pordo kun vi..."
+
+msgid "E4TEXT"
+msgstr ""
+"La elektraraneo-mastro verŝajne sendis\n"
+"siajn legiojn de inferidoj antaŭ via fina\n"
+"konflikto kun tiu terura bestaĉo el\n"
+"Infero. Sed vi paŝis antaŭen kaj venigis\n"
+"eternan damnon kaj suferadon sur la\n"
+"hordon, kiel vera heroo farus, kiam fronte\n"
+"al io tiel malbona.\n"
+"\n"
+"Cetere, iu devis pagi pro tio, kio okazis al\n"
+"Daisy, via dombesta kuniklo.\n"
+"\n"
+"Sed nun, vi vidas, sternite antaŭ vi, pli\n"
+"eblan doloron kaj buĉadon, dum popolo\n"
+"de demonoj kuras amoke en niaj urboj.\n"
+"\n"
+"Sekva haltejo: Infero Sur La Tero!"

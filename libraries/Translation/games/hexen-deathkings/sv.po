@@ -1,0 +1,384 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:45+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sv\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Ruinerad by"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Sköldpest"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakomb"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Dåliga marker"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Brackenwood"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Bål"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Konstapelns port"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Skattkammaren"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Marknadsplats"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Rättegång"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Vapenförråd"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kyrkogård"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Slakthus"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Mörk vakt"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ishållet"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Mörkt citadell"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Över'n Under"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Dödsfog"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Slottet av smärta"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Avloppsgrop"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Rosen"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Du stryker en darrande hand över ditt\n"
+"blödande ansikte och försöker rensa\n"
+"ditt sinne för det som väntar dig...\n"
+" \n"
+"...och glömma det som ligger bakom.\n"
+" \n"
+"I fjärran tycks de karga vallarna till\n"
+"ett stort slottsanläggning slita sönder\n"
+"himlen ovanför, och stanken av\n"
+"förruttnelse vajar från de våldtagna\n"
+"gravarna av oräkneliga döda.\n"
+" \n"
+"När du noggrant räknar det som\n"
+"återstår av dina artefakter försöker du\n"
+"försäkra dig själv om att det kommer\n"
+"att räcka. Det måste ju räcka, eller hur?\n"
+" \n"
+" \n"
+" eller hur?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Säkert bor de fördömdas själar i denna\n"
+"värld, för inget rättvist eller gott skulle\n"
+"kunna överleva här länge.\n"
+" \n"
+" Men det som har passerat tidigare\n"
+"kan bara vara en blek skugga av det\n"
+"som hindrar din passage nu: själva\n"
+"det mörka citadellet.\n"
+" \n"
+"Katedralens dystra massa blockerar\n"
+"alla utom fragmentariska glimtar av\n"
+"själva citadellet, men det som kan ses\n"
+"talar i svischande viskningar om kall,\n"
+"kvardröjande död...\n"
+" \n"
+" \n"
+" \n"
+" \n"
+" \n"
+" ...för de lyckligt lottade."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Ännu en gång befinner du dig i den\n"
+"stora salen i kaos-sfären, som om\n"
+"ingen tid hade gått sedan du senast\n"
+"rörde dig bland dessa skuggor.\n"
+" \n"
+"Men något är kusligt annorlunda,\n"
+"en tystnad där det en gång hade\n"
+"varit mjuka viskningar, en känsla\n"
+"av att bli iakttagen av dolda ögon...\n"
+" \n"
+"...ögon som skyddar en ondskefull\n"
+"avsikt."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"En gång i tiden greppade du kaos-\n"
+"sfären, höll den i darrande händer. Nu\n"
+"darrar dina händer av något mer än\n"
+"girighet, och rädsla förenas med\n"
+"hunger efter makt.\n"
+" \n"
+"Om inte ens sfärens kraft är tillräcklig\n"
+"för att skydda dig från mörkrets krafter\n"
+"är det kanske bättre att lämna den\n"
+"orörd, att inte hålla dess löfte.\n"
+" \n"
+" \n"
+" \n"
+"Men du var aldrig den som\n"
+"backade från en utmaning..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"... och andra spelare väntar.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Vågar du slåss i det färdiga rummet?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "För det ska du dö!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Vattenfallet är öppet"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Vattenfallet är blockerat"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "En dörr har öppnats i kapellet."
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Det där är konstigt..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Det återstår tre delar av pusslet."
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Ytterligare två delar av pusslet återstår"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Ytterligare en del av pusslet återstår"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Pusslet är komplett"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Du har inte fullbordat pusslet."
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Golvet är inte säkert!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "En tredjedel av pusslet är löst"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Två tredjedelar av pusslet är löst."
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Du hör en plattform som rör sig på avstånd."
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Det är gjort..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Du har inte fullbordat pusslet."
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Jag varnar dig..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Du är envis, eller hur?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Och dum också."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "En fjärdedel av pusslet är klart."
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Dåligt val..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Symbolerna är inte i linje med varandra."
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Dörren öppnas inte från den här sidan."
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Dörren är spärrad från utsidan"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Helgerån!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Du har besudlat Erics grav!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Och nu dör du !!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "En tredjedel av pusslet är löst"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Två tredjedelar av pusslet är löst."
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Kryptan är öppen."
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Akta dig för spindelns grav"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Du hör en plattform stiga upp utanför."
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Känner du dig lycklig?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Du gissade fel!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Bra gissning"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Kan du göra alla skript för min nivå?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Rör inte min glittriga"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Ge mig lite socker, baby"
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Filma om en timme?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Jag får inte ens min egen gravsten - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Låt inget blod spillas"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Låt ingen hand höjas i ilska"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Vem vågar störa vår slummer?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Vägen är öppen."
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Du har "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20växlar kvar"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Du har bara "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "1 växel kvar"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Utgången är öppen"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Dörrarna öppnas inte från den här sidan"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Dörrarna är öppna..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...om du är redo"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "En dörr har öppnats"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "på Chantry"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "En bro har byggts"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "på slakthuset"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "En trappa har byggts"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "på den mörka vakten"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "En kugghjul har placerats"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20 kugghjul har placerats"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "En barrikad har öppnats"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "På Cloaca"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Vägen tillbaka är öppen"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Dörren är spärrad från insidan"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Du vågar plundra graven"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "av bödeln?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Förbered dig på att dö"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Du har "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20fler växlar att hitta."
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Du har bara "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "1 växel kvar"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Vägen till tornet är öppen."
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Vägen är öppen."

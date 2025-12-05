@@ -1,0 +1,387 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: no nb\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Den ødelagte landsbyen"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Skade"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakombe"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Dårlige land"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Bål"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Konstabelporten"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Skattkammeret"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Markedsplassen"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Prøvelsen"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Våpenkammer"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Skipet"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Minnekapellet"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Slakteriet"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Mørkets vakt"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ishall"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Mørkets citadell"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Transitt"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Over og under"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Dødståke"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Smertens slott"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Kloakkgropen"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Rosen"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Du stryker en skjelvende hånd over det\n"
+"blødende ansiktet og prøver å klarne\n"
+"tankene for det som ligger foran deg...\n"
+"\n"
+"...og glemme det som ligger bak.\n"
+"\n"
+"I det fjerne ser det ut til at de nakne\n"
+"vollene til et stort slottskompleks\n"
+"flenger himmelen over deg, og stanken\n"
+"av forråtnelse svever fra de krenkede\n"
+"gravene til utallige døde.\n"
+"\n"
+"mens du nøye teller det lille som er\n"
+"igjen av gjenstandene dine, prøver du\n"
+"å forsikre deg selv om at det vil være\n"
+"nok. det må tross alt være nok,\n"
+"ikke sant?\n"
+"\n"
+"\n"
+"ikke sant?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Sjelene til de fordømte bebor sikkert\n"
+"denne verden, for ingenting rettferdig\n"
+"eller godt kan overleve her lenge.\n"
+"\n"
+"Men det som har passert før kan bare\n"
+"være en blek skygge av det som\n"
+"sperrer passasjen din nå: det\n"
+"mørke citadellet selv.\n"
+"\n"
+"katedralens dystre masse blokkerer\n"
+"alt annet enn fragmentariske glimt av\n"
+"selve citadellet, men det som kan sees,\n"
+"taler i hviskende hvisker om kald,\n"
+"dvelende død...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...for de heldige."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Nok en gang befinner du deg i kaos-\n"
+"sfærens store sal, som om det ikke\n"
+"hadde gått noen tid siden sist du\n"
+"beveget deg blant disse skyggene.\n"
+"\n"
+"...men noe er uhyggelig annerledes,\n"
+"en stillhet der det en gang var stille\n"
+"hvisking, en følelse av å bli iakttatt\n"
+"av skjulte øyne...\n"
+"\n"
+"...øyne som skjuler en ondskapsfull\n"
+"...onde hensikter."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"en gang før grep du kaos-sfæren, holdt\n"
+"den i skjelvende hender. nå skjelver\n"
+"hendene dine av noe mer enn\n"
+"grådighet, og frykt blander seg\n"
+"med hungeren etter makt.\n"
+"\n"
+"hvis ikke engang sfærens kraft er nok\n"
+"til å beskytte deg mot mørkets krefter,\n"
+"er det kanskje bedre å la den stå\n"
+"urørt, la løftet stå uinnfridd.\n"
+"\n"
+"\n"
+"\n"
+"men så har du aldri vært den som\n"
+"har veket tilbake for en utfordring..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"... og andre aktører venter.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Våger du å kjempe i det klare rommet?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "For det skal du dø!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Fossen er åpen"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Fossen er blokkert"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "En dør har åpnet seg i kapellet"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Det var merkelig..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Tre deler av puslespillet gjenstår"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "To deler av puslespillet gjenstår"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "En del av puslespillet gjenstår"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Puslespillet er komplett"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Du har ikke fullført puslespillet"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Gulvet er ikke trygt!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "En tredjedel av gåten er løst"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "To tredjedeler av puslespillet er løst."
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Du hører en plattform bevege seg i det fjerne"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Det er gjort..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Du har ikke fullført puslespillet"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Jeg advarer deg..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Du er sta, ikke sant?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Og dum også."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "En fjerdedel av dette puslespillet er ferdig"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Dårlig valg..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Symbolene er ikke på linje."
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Døren kan ikke åpnes fra denne siden"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Døren er sperret fra utsiden"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Helligbrøde!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Du har vanhelliget Erics grav !!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Og nå dør du!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "En tredjedel av gåten er løst"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "To tredjedeler av puslespillet er løst."
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Krypten er åpen"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Se opp for edderkoppens grav"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Du hører en plattform stige utenfor"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Føler du deg heldig?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Du gjettet feil!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Godt gjettet"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Kan du gjøre alt skriptet for mitt nivå?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Ikke rør min gloppy"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Gi meg litt sukker, baby"
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Film på en time?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Jeg får ikke engang min egen gravstein - cf..."
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "La ikke noe blod bli spilt"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "La ingen hånd bli løftet i sinne"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Hvem våger å forstyrre vår søvn?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Veien er åpen"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Du har "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20brytere igjen"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Du har bare "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "1 bryter igjen"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Utgangen er åpen"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Dørene kan ikke åpnes fra denne siden"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Dørene er åpne..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...hvis du er klar"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "En dør har åpnet seg"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "på Minnekapellet"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "En bro har blitt bygget"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "på slakteriet"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "En trapp har blitt bygget"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "på den mørke vakten"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Ett tannhjul har blitt plassert"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20 tannhjul har blitt plassert"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "En barrikade har åpnet seg"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "på Cloaca"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Veien tilbake er åpen"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Døren er sperret fra innsiden"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Våger du å plyndre graven"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "til bøddelen?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Forbered deg på å dø"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Du har "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20 brytere til å finne"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Du har bare "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "1 bryter igjen"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Veien til tårnet er åpen"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Veien er åpen"

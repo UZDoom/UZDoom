@@ -1,0 +1,250 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:27+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fr\n"
+
+msgid "TXT_D2E1"
+msgstr "Enfer sur Terre"
+
+msgid "TXT_D2E2"
+msgstr "Pas de Paix pour les Vivants"
+
+msgid "HUSTR_1"
+msgstr "NIVEAU 1: Hall D'Entrée"
+
+msgid "HUSTR_2"
+msgstr "NIVEAU 2: Souterrains"
+
+msgid "HUSTR_3"
+msgstr "NIVEAU 3: Parcours du Combatant"
+
+msgid "HUSTR_4"
+msgstr "NIVEAU 4: Le Focus"
+
+msgid "HUSTR_5"
+msgstr "NIVEAU 5: Les Egouts"
+
+msgid "HUSTR_6"
+msgstr "NIVEAU 6: Le Broyeur"
+
+msgid "HUSTR_7"
+msgstr "NIVEAU 7: Mortellement Simple"
+
+msgid "HUSTR_8"
+msgstr "NIVEAU 8: Ruses et Pièges"
+
+msgid "HUSTR_9"
+msgstr "NIVEAU 9: La Fosse"
+
+msgid "HUSTR_10"
+msgstr "NIVEAU 10: Base de Ravitaillement"
+
+msgid "HUSTR_11"
+msgstr "NIVEAU 11: Le Cercle de la Mort!"
+
+msgid "HUSTR_12"
+msgstr "NIVEAU 12: L'Usine"
+
+msgid "HUSTR_13"
+msgstr "NIVEAU 13: Centre-Ville"
+
+msgid "HUSTR_14"
+msgstr "NIVEAU 14: Les Antres Profondes"
+
+msgid "HUSTR_15"
+msgstr "NIVEAU 15: Zone Industrielle"
+
+msgid "HUSTR_16"
+msgstr "NIVEAU 16: Banlieue"
+
+msgid "HUSTR_17"
+msgstr "NIVEAU 17: Immeubles"
+
+msgid "HUSTR_18"
+msgstr "NIVEAU 18: La Cour"
+
+msgid "HUSTR_19"
+msgstr "NIVEAU 19: La Citadelle"
+
+msgid "HUSTR_20"
+msgstr "NIVEAU 20: Je t'ai eu!"
+
+msgid "HUSTR_21"
+msgstr "NIVEAU 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "NIVEAU 22: Les Catacombes"
+
+msgid "HUSTR_23"
+msgstr "NIVEAU 23: Une Tonne-eau de plaisir"
+
+msgid "HUSTR_24"
+msgstr "NIVEAU 24: Le Gouffre"
+
+msgid "HUSTR_25"
+msgstr "NIVEAU 25: Chutes de Sang"
+
+msgid "HUSTR_26"
+msgstr "NIVEAU 26: Les Mines Abandonnées"
+
+msgid "HUSTR_27"
+msgstr "NIVEAU 27: Monstrueuse Résidence"
+
+msgid "HUSTR_28"
+msgstr "NIVEAU 28: Le Monde Spirituel"
+
+msgid "HUSTR_29"
+msgstr "NIVEAU 29: La Limite"
+
+msgid "HUSTR_30"
+msgstr "NIVEAU 30: L'Icône du Péché"
+
+msgid "HUSTR_31B"
+msgstr "NIVEAU 31: IDKFQ"
+
+msgid "HUSTR_33"
+msgstr "NIVEAU 33: Trahison"
+
+msgid "NHUSTR_1"
+msgstr "NIVEAU 1: La Base Terrienne"
+
+msgid "NHUSTR_2"
+msgstr "NIVEAU 2: Les Laboratoires de la Douleur"
+
+msgid "NHUSTR_3"
+msgstr "NIVEAU 3: Canyon des Morts"
+
+msgid "NHUSTR_4"
+msgstr "NIVEAU 4: Montagne Infernale"
+
+msgid "NHUSTR_5"
+msgstr "NIVEAU 5: Vivisection"
+
+msgid "NHUSTR_6"
+msgstr "NIVEAU 6: Enfer Sanglant"
+
+msgid "NHUSTR_7"
+msgstr "NIVEAU 7: Banquet du Baron"
+
+msgid "NHUSTR_8"
+msgstr "NIVEAU 8: Tombe Maléfique"
+
+msgid "NHUSTR_9"
+msgstr "NIVEAU 9: Marche des Démons"
+
+msgid "C1TEXT"
+msgstr ""
+"Vous êtes maintenant au plus profond\n"
+"de l'astroport infesté, mais quelque chose\n"
+"ne va pas. Les monstres ont apporté\n"
+"leur propre réalité, et la technologie de \n"
+"l'astroport se déforme en leur présence.\n"
+"\n"
+"Devant vous se trouve une base infernale,\n"
+"une zone fortifiée. Si vous pouvez la\n"
+"traverser, vous pénétrerez dans le cœur\n"
+"hanté de la base spatiale et trouverez la \n"
+"commande qui garde les terriens en\n"
+"otage."
+
+msgid "C2TEXT"
+msgstr ""
+"Vous avez gagné! Votre victoire a permis à\n"
+"l'humanité d'évacuer la Terre et d'échapper\n"
+"au cauchemar. Vous êtes maintenant le\n"
+"seul humain sur la surface de la planète.\n"
+"Mutants cannibales, aliens carnivores et\n"
+"esprits maléfiques sont votre seule\n"
+"companie. Vous vous reposez et attendez la\n"
+"mort, satisfait d'avoir sauvé votre espèce.\n"
+"\n"
+"Mais le commandement vous envoie un\n"
+"message depuis l'espace: « Les senseurs\n"
+"ont découvert l'origine de l'invasion\n"
+"alien. Si vous y allez, vous pouvez les\n"
+"empêcher de nous envahir. La base\n"
+"se trouve au cœur de votre ville natale,\n"
+"non loin de l'astroport. » Lentement et\n"
+"douloureusement, vous vous levez\n"
+"et retournez au combat."
+
+msgid "C3TEXT"
+msgstr ""
+"Vous êtes au cœur de la cité corrompue,\n"
+"entouré des cadavres de vos ennemis.\n"
+"Il ne semble qu'il y ait pas de manière\n"
+"de détruire leur point d'entrée de ce côté.\n"
+"Vous grincez des dents et plongez à\n"
+"travers.\n"
+"\n"
+"Il doit y avoir un moyen de l'autre côté.\n"
+"En quoi ça importe d'avoir à traverser\n"
+"les enfers pour y arriver?"
+
+msgid "C4TEXT"
+msgstr ""
+"L'horrible visage du démon le plus\n"
+"colossal que vous n'avez jamais vu\n"
+"s'écroule devant vos yeux après que\n"
+"vous avez explosé sa cervelle avec\n"
+"vos roquettes. Le monstre s'écroule et\n"
+"meurt, ses membres dévastant des\n"
+"kilomètres de la surface des enfers\n"
+"dans leurs spasmes d'agonie.\n"
+"\n"
+"Vous avez réussi. L'invasion est terminée.\n"
+"La Terre est sauvée. L'enfer est ruiné.\n"
+"Vous vous demandez où les salopards\n"
+"iront quand ils seront morts maintenant.\n"
+"Essuyant la sueur de votre front, vous\n"
+"entreprenez le long chemin du retour.\n"
+"Reconstruire la Terre devrait être plus \n"
+"amusant que de la détruire.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Félicitations! Vous avez découvert le\n"
+"niveau secret! Il semble avoir été\n"
+"construit part des humains, plutôt \n"
+"que par des démons. Vous vous\n"
+"demandez qui donc se trouve\n"
+"prisonnier des enfers ici..."
+
+msgid "C6TEXT"
+msgstr ""
+"Félicitations, vous avez trouvé le \n"
+"niveau super secret! Vous avez\n"
+"intérêt à y aller franchement\n"
+"pour celui-ci!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Quelqu'un avait décidé de foutre le bordel\n"
+"sur votre lieu de vacances préféré: L'Enfer.\n"
+"Un cyberdémon à la noix avait décidé d'en\n"
+"faire son parc d'attractions, et la terre\n"
+"son petit guichet.\n"
+"\n"
+"Cet abruti méchanique ne s'attendait pas\n"
+"à ce que vous visitiez son chantier,\n"
+"rien de mieux qu'un stand de tir plein de\n"
+"démons pour faire chauffer l'ambiance..\n"
+"\n"
+"Maintenant que le cadavre croulant du\n"
+"démon résonne en s'écrasant au sol, ses\n"
+"gémissements d'agonie se déversent de\n"
+"son visage que vous avez laissé en charpie.\n"
+"\n"
+"Le manège est fermé!\n"
+"\n"

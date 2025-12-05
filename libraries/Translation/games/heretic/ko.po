@@ -1,0 +1,220 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:54+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"heretic/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ko\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "항구"
+
+msgid "HHUSTR_E1M2"
+msgstr "지하감옥"
+
+msgid "HHUSTR_E1M3"
+msgstr "문루"
+
+msgid "HHUSTR_E1M4"
+msgstr "보초 누대"
+
+msgid "HHUSTR_E1M5"
+msgstr "거점"
+
+msgid "HHUSTR_E1M6"
+msgstr "대성당"
+
+msgid "HHUSTR_E1M7"
+msgstr "지하 묘실"
+
+msgid "HHUSTR_E1M8"
+msgstr "지옥의 목구멍"
+
+msgid "HHUSTR_E1M9"
+msgstr "공동묘지"
+
+msgid "HHUSTR_E2M1"
+msgstr "깊은 혈"
+
+msgid "HHUSTR_E2M2"
+msgstr "용암 구덩이"
+
+msgid "HHUSTR_E2M3"
+msgstr "화염의 강"
+
+msgid "HHUSTR_E2M4"
+msgstr "얼음 동굴"
+
+msgid "HHUSTR_E2M5"
+msgstr "태고의 무덤"
+
+msgid "HHUSTR_E2M6"
+msgstr "미궁"
+
+msgid "HHUSTR_E2M7"
+msgstr "대회관"
+
+msgid "HHUSTR_E2M8"
+msgstr "혼돈의 차원문"
+
+msgid "HHUSTR_E2M9"
+msgstr "빙하 구역"
+
+msgid "HHUSTR_E3M1"
+msgstr "저장고"
+
+msgid "HHUSTR_E3M2"
+msgstr "불결한 장소"
+
+msgid "HHUSTR_E3M3"
+msgstr "합류점"
+
+msgid "HHUSTR_E3M4"
+msgstr "청천의 요새"
+
+msgid "HHUSTR_E3M5"
+msgstr "오피디안의 소굴"
+
+msgid "HHUSTR_E3M6"
+msgstr "공포의 회관"
+
+msgid "HHUSTR_E3M7"
+msgstr "깊은 골"
+
+msgid "HHUSTR_E3M8"
+msgstr "드'스파릴의 초소"
+
+msgid "HHUSTR_E3M9"
+msgstr "대수층"
+
+msgid "HHUSTR_E4M1"
+msgstr "관대"
+
+msgid "HHUSTR_E4M2"
+msgstr "특화점"
+
+msgid "HHUSTR_E4M3"
+msgstr "유보장"
+
+msgid "HHUSTR_E4M4"
+msgstr "매장소"
+
+msgid "HHUSTR_E4M5"
+msgstr "특급 계단"
+
+msgid "HHUSTR_E4M6"
+msgstr "배교자의 회관"
+
+msgid "HHUSTR_E4M7"
+msgstr "파멸의 성벽"
+
+msgid "HHUSTR_E4M8"
+msgstr "붕괴된 다리"
+
+msgid "HHUSTR_E4M9"
+msgstr "대영묘"
+
+msgid "HHUSTR_E5M1"
+msgstr "황토 산맥"
+
+msgid "HHUSTR_E5M2"
+msgstr "여울"
+
+msgid "HHUSTR_E5M3"
+msgstr "부두"
+
+msgid "HHUSTR_E5M4"
+msgstr "안마당"
+
+msgid "HHUSTR_E5M5"
+msgstr "식수공급처"
+
+msgid "HHUSTR_E5M6"
+msgstr "열주의 길"
+
+msgid "HHUSTR_E5M7"
+msgstr "역겨운 목사관"
+
+msgid "HHUSTR_E5M8"
+msgstr "심판의 평야"
+
+msgid "HHUSTR_E5M9"
+msgstr "드'스파릴의 타래"
+
+msgid "HE1TEXT"
+msgstr ""
+"아이언 리치들과 그들의 부하들이 죽으면서, 이 차원에 존재하는 마지막\n"
+"언데드까지 모두 사라졌다.\n"
+"\n"
+"당신은 이 녀석들은 어딘가에서 온 것이 분명하므로, 저 지옥의 나락으로\n"
+"연결된 타오르는 차원문이 그들의 고향 차원으로 인도할 거라고 대충\n"
+"추측을 해본다.\n"
+"\n"
+"언데드들과 더 끔찍한 놈이 더 오기 전에, 당신은 지옥의 나락으로 가서\n"
+"차원문을 봉쇄해야 한다. 물론 저쪽 세상이 당신을 그다지 환영하지는\n"
+"않겠지만, 이교도가 되는 것이 어찌 쉬운 일이겠는가!"
+
+msgid "HE2TEXT"
+msgstr ""
+"강력한 몰로타우어들조차 당신에게 상대가 안 된다는 것이 증명되었고,\n"
+"녀석들의 식지 않은 시체가 바닥에 나부라지는 것을 보면서 당신은 녀석들을\n"
+"파괴했다는 사실에 뭔가 씁쓸한 만족감을 느낀다.\n"
+"\n"
+"그들이 지키던 차원 관문이 열리자, 당신은 집으로 갈 거라는 희망을 품는다.\n"
+"하지만 관문에 들어서자마자, 당신을 조롱하는 웃음소리가 귓가에\n"
+"울려 퍼진다.\n"
+"\n"
+"\n"
+"몰로타우어를 이끄는 또 다른 세력이 있었단 말인가? 이 관문 너머로\n"
+"더 끔찍한 존재가 있단 말인가? 머리 위 하늘이 있어야 할 자리에\n"
+"크리스탈 돔이 넓게 펼쳐진 광경은 결코 좋은 의미가 아닐 것이다..."
+
+msgid "HE3TEXT"
+msgstr ""
+"드'스파릴의 죽음은 이 세계의 괴물들을 조종하는 그의 마법을 약화했고,\n"
+"고통에 사무친 그의 비명은 괴물들이 죽어가면서 외치는 비명소리에 의해\n"
+"묻혀버렸다. \n"
+"\n"
+"복수의 맹세를 이룬 당신은 돔이 산산이 부서져 무너지기 직전에 당신의\n"
+"세계로 가는 차원문으로 발을 들였다.\n"
+"\n"
+"하지만 드'스파릴의 영향력이 영원히 사라졌는데, 왜 당신이 안전하다고\n"
+"생각 못 하는가? 녀석이 죽기 전에 외치던 단말마의 비명이 마치 저주처럼\n"
+"들렸는가? 아니면 무언가를 소환하는 주문이었나? 당신은 확신하지\n"
+"못하지만, 아마 그냥 비명소리에 불과했을 것이다.\n"
+"\n"
+"그런데, 다른 서펜트 라이더들은 어쩔 것인가?"
+
+msgid "HE4TEXT"
+msgstr ""
+"드'스파릴이 죽으면 당신의 세계로 돌아가리라 생각했지만, 녀석의 마지막\n"
+"몸부림이 당신을 녀석의 차원으로 내쫓아버렸다. 당신은 드'스파릴이\n"
+"정복했던 박살 나고 남은 세상에 발을 들였다. 당신은 이 세상의 마지막\n"
+"수문장들까지 제압했었지만, 이제 당신은 드'스파릴의 근거지로 가는 관문\n"
+"앞에 이르게 되었다. 이 순간까지 당신은 당신의 능력을 확신하면서\n"
+"그 누구와 맞서 싸워도 문제없으리라 생각했지만, 이 차원문 너머에 당신의\n"
+"세계를 침략했던 그 악마의 심장부가 존재하고 있다. 드'스파릴은 죽었지만,\n"
+"그가 소환되었던 구렁텅이가 아직 남아있다. 이제 당신은 이곳을 탈출할\n"
+"희망을 품고 그곳으로 들어가야 한다. 그리고 어딘가, 드'스파릴의 영지의\n"
+"구석 어두운 곳에, 그의 개인 경호원들이 당신을 기다리고 있다..."
+
+msgid "HE5TEXT"
+msgstr ""
+"마지막 몰로타우어의 단말마가 울리자, 당신이 이처럼 파멸에 이르렀던\n"
+"적이 없었다는 것을 깨달았다. 드'스파릴과 그의 제자들과의 혈투도 이처럼\n"
+"치열하지는 않았다. 당신 앞의 차원문이 열리는 광경을 음울하게\n"
+"지켜보면서, 당신은 과연 이것이 당신을 집으로 인도할 것인지, 아니면\n"
+"또 다른 꿈꾸지도 못한 공포로 이끌 것인지 고민하였다. 아직도 당신에게\n"
+"나아갈 힘이 있다면, 죽음과 고통만이 당신을 기다릴 것이다. 하지만\n"
+"싸우겠다는 의지가 사라진다면 어쩌겠는가? 그런 절망에 빠진 표정의\n"
+"당신을 억지로 나아가게 할 수 있나? 당신에게 그런 용기가 있는가?\n"
+"결국에는, 싸움 없이 항복하는 것 따위는 당신에게 달린 것이 아닌 것을\n"
+"깨달았다. 당신은 두 눈 크게 뜨고 당신의 운명을 맞이하러 떠난다."

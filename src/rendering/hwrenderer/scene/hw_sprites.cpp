@@ -616,7 +616,9 @@ bool HWSprite::CalculateVertices(HWDrawInfo* di, FVector3* v, DVector3* vp)
 inline void HWSprite::PutSprite(HWDrawInfo *di, bool translucent)
 {
 	// That's a lot of checks...
-	if (modelframe && !modelframe->isVoxel && !(modelframeflags & MDL_NOPERPIXELLIGHTING) && RenderStyle.BlendOp != STYLEOP_Shadow && gl_light_sprites && di->Level->HasDynamicLights && !di->isFullbrightScene() && !fullbright)
+	if (modelframe && !modelframe->isVoxel && !(modelframeflags & MDL_NOPERPIXELLIGHTING) && RenderStyle.BlendOp != STYLEOP_Shadow
+		&& gl_light_sprites && di->Level->HasDynamicLights && !di->isFullbrightScene() && !fullbright
+		&& actor && !(actor->renderflags2 & RF2_NODYNAMICLIGHTING))
 	{
 		hw_GetDynModelLight(actor, lightdata);
 		dynlightindex = screen->mLights->UploadLights(lightdata);

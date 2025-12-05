@@ -1,0 +1,381 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen-deathkings/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ko\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "파괴된 마을"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "황폐화"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "웅덩이"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "지하 묘실"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "불모지"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "고사리숲"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "화장"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "무관장의 문"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "국고"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "시장"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "명복의 장소"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "시죄의 시련"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "무기고"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "본당"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "예배당"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "도살장"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "어둠의 감시초소"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "하수구"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "빙고"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "어둠의 요새"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "통로"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "높낮이"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "죽음의 안개"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "고통의 성"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "하수도"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "장밋빛"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"피로 얼룩진 얼굴을 어루만지던 떨리는 손들을 치우면서, 당신은 당신 앞에\n"
+"펼쳐진 것들에 집중하기 시작했다...\n"
+"\n"
+"...그리고 당신 뒤에 남은 것들을 잊어버렸다.\n"
+"\n"
+"저 멀리에, 거대한 성채 단지의 삭막한 성곽들이 허공을 가르듯이\n"
+"솟아있었고, 썩은 내 나는 악취가 셀 수 없이 많은 시체의 무덤으로부터\n"
+"퍼지고 있었다.\n"
+"\n"
+"당신이 가진 유물들을 꼼꼼하게 정리하면서, 당신은 이 정도면 충분할\n"
+"것이라고 자기 자신을 안심시키려고 노력했다. 어찌 되었든 이 정도로\n"
+"충분해야 한다, 안 그런가?\n"
+"\n"
+"안 그런가?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"분명 저주받은 영혼이 이 세상에서 살고 있다. 올바르고 선량한 녀석들은\n"
+"이곳에서 오래 살 수 없을 것이니 말이다.\n"
+"\n"
+"그러나 방금 지나간 것은 당신 앞을 가로막는 존재인 어둠의 요새의 희미한\n"
+"그림자임이 분명하다. 성당의 음침하고 거대한 형체가 저 요새의 극히\n"
+"일부분을 제외한 모든 것을 가리고 있다. 그러나 저 보이는 부문만으로부터\n"
+"차갑고 기나긴 죽음의 속삭임이 들려오고 있었다...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...부귀영화를 위해."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"다시 한번 당신은 혼돈의 구체가 있는 회당에 이르렀다. 마치 당신이 처음\n"
+"이곳의 그림자에 발을 들인 이후로 아무런 일도 없었다는 듯이 말이다.\n"
+"\n"
+"그러나 무언가가 기분 나쁘게 달라졌다. 부드러운 속삭임이 들리던 곳에서는\n"
+"침묵만이, 지켜보는 느낌을 주던 숨어있던 눈길들이...\n"
+"\n"
+"...사악한 의도를 막아주던 그 눈길들이."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"한때 당신은 떨리는 양손으로 혼돈의 구체를 움켜 쥐었었다. 이제 당신의\n"
+"손들은 탐욕을 초월한 그 무언가로부터 떨리고 있었고, 당신의 두려움은\n"
+"절대적인 힘을 향한 욕망과 맞물리고 있었다.\n"
+"\n"
+"구체의 힘만으로도 당신을 어둠의 손아귀로부터 지켜낼 수 없다면,\n"
+"아마 당신의 운명을 거부하고 구체를 그냥 놔두는 것이 좋을 것이다. \n"
+"\n"
+"그러나, 당신은 도전은 언제든지 받아주는 그런 자였다."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...그리고 다른 도전자들이 기다리고 있다.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "감히 준비의 방에서 전투를 벌이다니..."
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "죽어서 값을 치러라!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "폭포가 멈췄다"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "폭포에 의해 막혔다"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "교외 근처에서 문이 열렸다"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "무언가가 이상하다..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "3개의 수수께끼가 아직 풀리지 않았다"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "2개의 수수께끼가 아직 풀리지 않았다"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "마지막 수수께끼가 아직 풀리지 않았다"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "모든 수수께끼가 풀렸다"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "모든 수수께끼를 풀지 못했다"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "이 층은 안전하지 않다!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "수수께끼의 3분의 2가 풀렸다"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "멀리서 보행판이 움직이는 소리가 들려왔다"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "이제 끝났다..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "모든 수수께끼를 풀지 못했다"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "나는 경고했다..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "정말 끈질기군."
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "어리석기도 하고."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "수수께끼의 4분의 1만 풀렸다"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "서투른 선택이다..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "상징이 정렬되지 않았다"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "이 문은 이 방향으로는 열리지 않는다"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "이 문은 바깥에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "신성모독이다!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "네 놈은 성 에릭의 무덤을 더렵혔다!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "그 댓가로 목숨을 바쳐라!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "수수께끼의 3분의 1이 풀렸다"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "수수께끼의 3분의 2가 풀렸다"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "지하 묘실의 입구가 열렸다."
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "거미의 무덤을 조심하라"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "밖에서 보행판이 올라오는 소리가 들려왔다"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "그대는 운수가 좋은가?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "잘못된 판단이다!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "옳은 판단이다"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "어쩔 수 없이 살아간다. 태어났기 때문에..."
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "에틴을 쳐죽인 것까지 신경 쓰다간, 걸을 수도 없을걸."
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "드래곤 슬레이어 인가?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "등짝을 보자!..."
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "낙원이란 있을 수 없는거야."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "신은 운명을 주셨죠. 만남이라는 운명을."
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "내 묘비를 세우지도 않았네 -cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "피 한 방울도 흘리지 말라"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "분노하여 주먹을 휘두르지 말라"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "감히 우리의 숙면을 방해하는가?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "길이 열렸다"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "당신은 "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "개의 개폐기들이 남았다"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "이제 당신은 "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "개의 개폐기만 찾으면 된다"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "출구가 열렸다"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "이 문들은 이 방향으로는 열리지 않는다"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "문이 열렸다..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "... 준비 되었다면"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "지금 문이 열렸다..."
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "... 예배당에서"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "다리가 건설되었다..."
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "... 도살장에서"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "계단이 건설되었다..."
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "... 어둠의 감시초소에서"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "톱니바퀴 1개가 배치되었다"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "톱니바퀴들이 배치되었다"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "방벽이 열렸다..."
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "... 하수구에서"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "돌아가는 길이 열렸다"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "이 문은 안에 빗장이 걸려있다"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "배짱이 두둑하구나..."
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "사형 집행자의 무덤을 도굴하다니."
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "죽어서 회계하라."
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "당신은 "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "개의 개폐기들을 더 찾아야 한다"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "이제 당신은 "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "개의 개폐기만 찾으면 된다"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "탑으로 가는 길이 열렸다"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "길이 열렸다"

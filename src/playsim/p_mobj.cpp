@@ -5600,7 +5600,7 @@ AActor *AActor::StaticSpawn(FLevelLocals *Level, PClassActor *type, const DVecto
 
 	AActor *actor;
 
-	if (GetDefaultByType(type)->ObjectFlags & OF_ClientSide)
+	if (GetDefaultByType(type)->IsClientSide())
 	{
 		actor = static_cast<AActor*>(Level->CreateClientSideThinker(type));
 	}
@@ -5627,7 +5627,7 @@ DEFINE_ACTION_FUNCTION(AActor, Spawn)
 
 static AActor* SpawnClientSide(PClassActor* type, double x, double y, double z, int flags)
 {
-	if (!(GetDefaultByType(type)->ObjectFlags & OF_ClientSide))
+	if (!GetDefaultByType(type)->IsClientSide())
 	{
 		ThrowAbortException(X_OTHER, "Tried to spawn a non-clientside Actor from a clientside spawn function.");
 		return nullptr;

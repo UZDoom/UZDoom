@@ -1,0 +1,399 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:42+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen-deathkings/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Yıkık Köy"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Yanıklık"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Karter"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakomb"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Çorak Topraklar"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Bataklık orman"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Ateş Yakmak"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Muhafız Kapısı"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Hazine Müsteşarlığı"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Pazar Yeri"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Çile"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Cephanelik"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Nef"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Dua Odası"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Mezbaha"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Karanlık Saat"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloaka"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Buz Tutucu"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Karanlık Kale"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Transit"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Üst ve Alt"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Ölüm Sisi"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Acı Kalesi"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Kanalizasyon Çukuru"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Gül"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Titreyen elinizi kanayan yüzünüze silerek,\n"
+"önünüzdekiler için zihninizi temizlemeye\n"
+"çalışıyorsunuz...\n"
+"\n"
+"...ve geride kalanları unutmaya çalışıyorsun.\n"
+"\n"
+"Uzakta, büyük bir kale kompleksinin sert\n"
+"surları gökyüzünü parçalıyor gibi görünüyor\n"
+"ve sayısız ölünün ihlal edilmiş mezar-\n"
+"larından çürümenin pis kokusu yayılıyor.\n"
+"\n"
+"Eserlerinizden geriye kalanları dikkatlice\n"
+"sayarak, her şeyin yolunda gideceğine\n"
+"dair kendinizi rahatlatmaya çalışıyorsunuz.\n"
+"Yeterli olacaktır. Yeterli, değil mi?\n"
+"\n"
+"\n"
+"Değil mi?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"kesinlikle lanetlenmişlerin ruhları bu\n"
+"dünya, hiçbir şey için adil ya da iyi\n"
+"burada uzun süre hayatta kalabilirdi. \n"
+"\n"
+"ama daha önce geçenler sadece soluk\n"
+"bir gölge olacak Şimdi geçit: Karanlık\n"
+"kalenin kendisi.\n"
+"\n"
+"Katedral bloklarının acımasız kütlesi\n"
+"parçalı bakışlar dışında ama\n"
+"görülebilenler soğuk fısıltılarla\n"
+"konuşuyor, kalıcı ölüm.\n"
+"\n"
+"\n"
+"\n"
+"...talihliler için."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Kendinizi bir kez daha kaos küresinin\n"
+"büyük salonu üzerinden hiç zaman\n"
+"geçmemiş olsaydı en son bu gölgeler\n"
+"arasında hareket etmiştin.\n"
+"\n"
+"Ama bir şeyler ürkütücü bir şekilde\n"
+"farklı, bir zamanlar yumuşak fısıltıların\n"
+"olduğu yerde bir sessizlik, gizli gözler\n"
+"tarafından izlenme hissi...\n"
+"\n"
+"...kötücül bir niyeti koruyan gözler."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Bir zamanlar kaos küresini kavradın,\n"
+"titreyen ellerinde tuttun. şimdi ellerin\n"
+"açgözlülükten daha fazla bir şeyle\n"
+"titriyor ve dehşet güç açlığıyla birleşiyor.\n"
+"\n"
+"Küreni̇n gücü bi̇le seni̇ karanliğin\n"
+"güçleri̇nden korumaya yetmi̇yorsa,\n"
+"belki̇ de dokunulmamasi, vaadi̇ni̇n\n"
+"tutulmamasi daha i̇yi̇di̇r.\n"
+"\n"
+"\n"
+"\n"
+"Ama sen hiçbir zaman meydan\n"
+"okumalardan geri adım atan biri\n"
+"olmadın..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...ve diğer oyuncular bekliyor.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Hazırlanma odasında savaşmaya mı cüret ediyorsun?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Bunun için öleceksin!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Şelale açık"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Şelale tıkalı"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Şapelde bir kapı açıldı."
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "İşte bu garip."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Bulmacanın üç parçası daha kaldı."
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Bulmacanın iki parçası daha kaldı"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Bulmacanın bir parçası daha kaldı"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Bulmaca tamamlandı"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Bulmacayı tamamlamadınız"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Zemin güvenli değil!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Bulmacanın üçte biri çözüldü."
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Bulmacanın üçte ikisi çözüldü"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Uzakta bir platformun hareket ettiğini duyuyorsunuz."
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Bitti..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Bulmacayı tamamlamadınız"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Seni uyarıyorum."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "İnatçısın, değil mi?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Ve de aptal."
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Bu bulmacanın dörtte biri tamamlandı"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Kötü seçim..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Semboller aynı hizada değil"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Kapı bu taraftan açılmıyor."
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Kapı dışarıdan parmaklıklı."
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Kutsala saygısızlık!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Eric'in mezarını kirlettin!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Ve şimdi öleceksin!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Bulmacanın üçte biri çözüldü."
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Bulmacanın üçte ikisi çözüldü"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Mahzen açık"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Örümceğin mezarına dikkat edin"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Dışarıda bir platformun yükseldiğini duyarsınız"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Kendinizi şanslı mı hissediyorsunuz?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Yanlış tahmin ettin!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "İyi tahmin"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Benim seviyem için tüm senaryoyu yazabilir misin?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Benim cıvıklığıma dokunma."
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Bana biraz şeker ver, bebeğim."
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Duh-uhhh..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Bir saat içinde film mi?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Kendi mezar taşımı bile alamıyorum - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Kan dökülmesin"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Öfkeyle el kaldırmayın"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Uykumuzu bölmeye kim cüret eder?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Yol açık"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Bulmanız gereken\\x20 "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20anahtarınız kaldı"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Bulmanız gereken\\x20 "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20anahtar daha var."
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Çıkış açık"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Kapılar bu taraftan açılmıyor."
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Kapılar açık."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...eğer hazırsanız"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Bir kapı açıldı"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "Chantry'de"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Bir köprü inşa edildi"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "Mezbahada"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Bir merdiven inşa edildi"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "Karanlık Nöbet'te"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Bir dişli yerleştirildi"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20dişliler yerleştirildi"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Bir barikat açıldı"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "Kloaka Üzerine"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Dönüş yolu açık"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Kapı içeriden kilitli."
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Mezarı yağmalamaya cüret ediyorsun"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "Celladın mı?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Ölmeye hazırlanın"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Bulmanız gereken\\x20 "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20anahtar daha var."
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Bulmanız gereken\\x20 "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20anahtar daha var."
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Kuleye giden yol açık."
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Yol açık"

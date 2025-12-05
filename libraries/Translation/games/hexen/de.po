@@ -1,0 +1,369 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:40+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: de\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Trennungshalle"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Sieben Portale"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Wächter des Eises"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Wächter des Feuers"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Wächter des Stahls"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Glänzende Feuerprobe"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Schattenwald"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Düstersee"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Circes Höhle"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Ödland"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Heiliger Hain"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Säulenhalle"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminar des Erzketzers"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Drachenkapelle"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Greifenkapelle"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Todeswindkapelle"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Garten der Wehklagen"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Stilles Refektorium"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Wolfskapelle"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Verlassener Vorposten"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Leidensburg"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Richtstätte"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Effluvium"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Kerker"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Verwildeter Garten"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropole"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedeks Gruft"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkirs Gruft"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traductus' Gruft"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivarium"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Dunkle Feuerprobe"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Nachdem du die Sieben Portale passiert\n"
+"hast, die dieses Reich versiegelten,\n"
+"erstreckt sich vor dir das weite Land\n"
+"einer rauen Wildnis. Feuer, Eis und\n"
+"Stahl hast du getrotzt, aber größere\n"
+"Herausforderungen stehen noch bevor.\n"
+"Das dichte Gewirr des Waldes versteckt\n"
+"gewiss bedrohliche Augen, aber was\n"
+"dahinter liegt wird schlimmer sein.\n"
+"\n"
+"Karge Wüsten, feuchte Sümpfe und \n"
+"modrige Höhlen versperren den Weg,\n"
+"aber du lässt dich durch nichts von\n"
+"deinem Schicksal abhalten, selbst wenn \n"
+"du es dir wünschen könntest.\n"
+"\n"
+"Und dahinter, flackernd in der Ferne,\n"
+"scheinen die sich ständig verändernen\n"
+"Wände der Säulenhalle all\n"
+"deinen Fortschritt zu verspotten."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Während deine Gedanken immer noch\n"
+"um die Begegnungen in der Säulenhalle \n"
+"kreisen, taumelst du auf etwas zu, von \n"
+"dem du hoffst, dass es ein Ausweg ist. \n"
+"Alles scheint sich schneller und schneller \n"
+"zu bewegen, dein Blick trübt sich und \n"
+"beginnt zu schwinden...\n"
+"Als die Welt um dich herum zusammen-\n"
+"bricht umgibt dich das Licht eines\n"
+"Teleportals. Ein Lichtblitz, dann\n"
+"richtest du dich erschöpft auf.\n"
+"\n"
+"Du stehst oben auf einem hohen Turm\n"
+"und kannst von unten die Schreie der\n"
+"Verdammten hören. Du trittst vor\n"
+"und sofort lassen dir die Geräusche von\n"
+"dämonischen Gesängen das Blut in\n"
+"den Adern gefrieren. Bei all den\n"
+"Göttern des Todes! An welchem Ort\n"
+"bist du hier nur gelandet? Bei all\n"
+"den Göttern des Schmerzes, wie wirst\n"
+"du jemals hinaus finden können?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Die mächtigsten Waffen und Artefakte\n"
+"der Alten reichte kaum aus um den\n"
+"Erzketzer und seine Schergen zu\n"
+"besiegen. Aber jetzt liegen ihre\n"
+"stinkenden Überreste zu deinen Füßen.\n"
+"Du sammelst alle Kräfte und\n"
+"durchschreitest das Portal, das dich\n"
+"aus dem Heiligtum des Erzketzers\n"
+"herausführt.\n"
+"\n"
+"Hoch über dir drohen die Wälle einer\n"
+"gewaltigen Burg mit stillen Türmen und\n"
+"nackten Wänden, die einen Turm aus \n"
+"schwarzem Stein umgeben, der in der \n"
+"Mitte der Burg wie ein brütender Riese\n"
+"zu thronen scheint. Feuer und Schatten\n"
+"verzerren sich hinter klaffenden\n"
+"Fenstern. Dutzende von bösen Augen\n"
+"blicken auf dich herab.\n"
+"Irgendwo da drin warten deine Feinde\n"
+"auf dich..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"„... und er soll reisen in das Reich der\n"
+"Toten und die Mächte darin \n"
+"bekämpfen, bis hin zu den wahrhaftigen\n"
+"Toren der Verzweiflung. Aber ob er\n"
+"zur Welt des Lichtes zurückkehren soll,\n"
+"mag niemand vorraussagen.“\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Verdammt."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Mit einem Schmerzensschrei wirst du\n"
+"aus dieser Welt in eine andere gerissen,\n"
+"jeder Teil deines Körpers in mystisches\n"
+"Feuer gehüllt. Nachdem du wieder klar\n"
+"sehen kannst, findest du dich in einem \n"
+"großen Saal wieder, gefüllt mit\n"
+"geisterhaften Echos und bedrohlichen\n"
+"Schatten. In der Ferne siehst du ein\n"
+"erhabenes Podium und darauf die\n"
+"einzige Lichtquelle in dieser Welt."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Dies kann nur die Chaossphäre sein,\n"
+"die Quelle von Korax' Macht. Mit ihr\n"
+"kannst du Welten erschaffen... oder\n"
+"sie zerstören. Durch Kampf und\n"
+"Eroberung ist sie nun dein und du\n"
+"streckst deine zitternden Hände aus\n"
+"um sie zu greifen. Vielleicht, jetzt,\n"
+"wird ein neuer Spieler dem\n"
+"kosmischen Spiel der Macht\n"
+"beitreten. Genau so wie der Bauer\n"
+"zur Königin befördert wird, ist nun\n"
+"das gesamte Spielbrett für dich zum\n"
+"Greifen nahe."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Aber es gibt andere Spieler, die\n"
+"mächtiger sind als du, und wer\n"
+"kann schon deren nächste Züge erahnen?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Die Tür ist verschlossen"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Sei gegrüßt, Sterblicher"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Bist du bereit zu sterben?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Eine Tür öffnet sich zum Wächter des Eises"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Dieser Pfad ist blockiert"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Eine Hälfte des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "bei den Sieben Portalen"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Ein Drittel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Stufen bei den Sieben Portale wurden erbaut"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Ein Drittel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "bei den Sieben Portalen"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Stufen bei den Sieben Portale wurden erbaut"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Du must einen weiteren Schalter finden..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Steine schleifen bei den Sieben Portalen"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Ein Sechstel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "Im Schattenwald"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Die Tür ist von innen verriegelt"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Du hörst, wie sich in der Ferne eine Tür öffnet"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Ein Sechstel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "Im Schattenwald"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Ein Sechstel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "Im Schattenwald"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ Ettins übrig"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Du hast zu lange gewartet, jetzt stirbst du!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Eine Tür im verlassenen Vorposten hat sich geöffnet"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Die Tür öffnet sich noch nicht"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Meine Diener riechen dein Blut, Menschling"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Eine Tür in der Richtstätte wurde geöffnet"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Die Tür ist von innen verriegelt"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Im Turm hat sich eine Plattform gesenkt"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Du spielst schon zu lange, Sterblicher..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Ich denke ich sollte dich vom Brett entfernen"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Du hörst, wie sich oben eine Tür öffnet"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Verehre mich und ich könnte gnädig sein"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Andererseits, vielleicht aber auch nicht"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Ein Neuntel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "Im Kloster"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Ein Neuntel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "Im Kloster"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Ein Neuntel des Rätsels wurde gelöst"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "Im Kloster"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Das Portal wurde versiegelt"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Wähle dein Schicksal"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Die Tür ist von innen verriegelt"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Bist du stark genug"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Dich deinen eigenen Meistern zu stellen?"

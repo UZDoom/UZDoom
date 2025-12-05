@@ -1,0 +1,236 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:20+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: cs\n"
+
+msgid "TXT_D2E1"
+msgstr "Peklo na zemi"
+
+msgid "TXT_D2E2"
+msgstr "Nemajíť živí pokoje"
+
+msgid "HUSTR_1"
+msgstr "Level 1: Vchod"
+
+msgid "HUSTR_2"
+msgstr "Level 2: Podzemí"
+
+msgid "HUSTR_3"
+msgstr "Level 3: Trest"
+
+msgid "HUSTR_4"
+msgstr "Level 4: Ohnisko"
+
+msgid "HUSTR_5"
+msgstr "Level 5: Odpadní tunely"
+
+msgid "HUSTR_6"
+msgstr "Level 6: Drtička"
+
+msgid "HUSTR_7"
+msgstr "Level 7: Smrtelně prosté"
+
+msgid "HUSTR_8"
+msgstr "Level 8: Lesti a léčky"
+
+msgid "HUSTR_9"
+msgstr "Level 9: Jáma"
+
+msgid "HUSTR_10"
+msgstr "Level 10: Tankovací základna"
+
+msgid "HUSTR_11"
+msgstr "Level 11: Kruh smrti"
+
+msgid "HUSTR_12"
+msgstr "Level 12: Továrna"
+
+msgid "HUSTR_13"
+msgstr "Level 13: Centrum"
+
+msgid "HUSTR_14"
+msgstr "Level 14: Nejhlubší doupata"
+
+msgid "HUSTR_15"
+msgstr "Level 15: Průmyslová zóna"
+
+msgid "HUSTR_16"
+msgstr "Level 16: Předměstí"
+
+msgid "HUSTR_17"
+msgstr "Level 17: Sídliště"
+
+msgid "HUSTR_18"
+msgstr "Level 18: Nádvoří"
+
+msgid "HUSTR_19"
+msgstr "Level 19: Citadela"
+
+msgid "HUSTR_20"
+msgstr "Level 20: Mám tě!"
+
+msgid "HUSTR_21"
+msgstr "Level 21: Nirvána"
+
+msgid "HUSTR_22"
+msgstr "Level 22: Katakomby"
+
+msgid "HUSTR_23"
+msgstr "Level 23: Barely srandy"
+
+msgid "HUSTR_24"
+msgstr "Level 24: Rokle"
+
+msgid "HUSTR_25"
+msgstr "Level 25: Krvopády"
+
+msgid "HUSTR_26"
+msgstr "Level 26: Opuštěné doly"
+
+msgid "HUSTR_27"
+msgstr "Level 27: Netvoří dům"
+
+msgid "HUSTR_28"
+msgstr "Level 28: Onen svět"
+
+msgid "HUSTR_29"
+msgstr "Level 29: Živoucí konec"
+
+msgid "HUSTR_30"
+msgstr "Level 30: Ikona hříchu"
+
+msgid "HUSTR_33"
+msgstr "Level 33: Zraď"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: Pozemská základna"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: Laboratoře bolesti"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: Kaňon mrtvých"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: Pekelná hora"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: Vivisekce"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: Krvavé inferno"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: Baronova hostina"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: Hrobka zlovolnosti"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: Pochod démonů"
+
+msgid "C1TEXT"
+msgstr ""
+"Dostal@[ao_cs] ses hluboko do zamořené základny,\n"
+"ale něco je špatně. Ty příšery si s sebou\n"
+"přinesly svou vlastní realitu, která jejich\n"
+"přítomností překrucuje techniku základny.\n"
+"\n"
+"V dáli vidíš opevněné stanoviště pekla.\n"
+"Jestli se ti podaří dostat se skrz,\n"
+"mohl@[ao_cs] bys proniknout do hrůzného\n"
+"srdce základny a najít ono tlačítko, které\n"
+"drží populaci Země jako rukojmí."
+
+msgid "C2TEXT"
+msgstr ""
+"Zvládl@[ao_cs] jsi to! Tvé vítězství umožnilo\n"
+"lidstvu evakuovat Zemi a uniknout noční\n"
+"můře. Nyní jsi posledním člověkem, který\n"
+"na povrchu Země zůstal. Tvými jedinými\n"
+"sousedy jsou lidojedské zrůdy,\n"
+"masožraví vetřelci a zlí duchové.\n"
+"Uvelebil@[ao_cs] ses a čekal@[ao_cs] na smrt, spokojen@[ao_cs],\n"
+"že jsi zachránil@[ao_cs] svůj druh.\n"
+"\n"
+"Pak ale vedení Země poslalo zprávu z\n"
+"vesmíru: „Senzory lokalizovaly zdroj\n"
+"mimozemské invaze. Pokud se tam vydáte,\n"
+"mohl@[ao_cs] byste jim zamezit ve vstupu. Vetřelecká\n"
+"základna leží v centru Vašeho rodného města,\n"
+"nedaleko hvězdné základny.“\n"
+"Pomalu a bolestivě se zvedneš a vracíš se\n"
+"zpět do boje."
+
+msgid "C3TEXT"
+msgstr ""
+"Jsi v prohnilém centru města, obklopen@[ao_cs]\n"
+"mrtvolami svých nepřátel. Nevidíš žádný\n"
+"způsob, jak z této strany zničit zrůdám\n"
+"vchod. Zatínaj@[tgs_pr1_cs] zuby procházíš skrz.\n"
+"\n"
+"Na druhé straně musí být nějaký způsob,\n"
+"jak jim zabránit v cestě. Co tě zajímá,\n"
+"že kvůli tomu musíš projít peklem?"
+
+msgid "C4TEXT"
+msgstr ""
+"Hrůzná podobizna největšího démona,\n"
+"kterého jsi kdy viděl@[ao_cs], se ti rozpadá\n"
+"před očima poté, co jsi vpálil@[ao_cs] rakety\n"
+"do jeho obnaženého mozku. Příšera umírá,\n"
+"její tělo zpuchří a její končetiny\n"
+"škubajíc sebou ničí lány a míle povrchu\n"
+"pekla.\n"
+"\n"
+"Dokázal@[ao_cs] jsi to. Invaze skončila.\n"
+"Země je zachráněna. Z pekla jsou trosky.\n"
+"Napadá tě, kam teď špatní lidé po\n"
+"smrti půjdou. Utíraj@[tgs_pr1_cs] pot z čela se\n"
+"vydáváš na dlouhou cestu zpět domů.\n"
+"Přebudovávání Země by mělo být hezčí,\n"
+"než její ničení.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Gratulujeme, objevil@[ao_cs] jsi tajný level!\n"
+"Zdá se, že tohle místo bylo postaveno\n"
+"lidmi, ne démony. Zajímalo by tě, koho\n"
+"v tomhle rohu pekla vězní."
+
+msgid "C6TEXT"
+msgstr ""
+"Gratulujeme, objevil@[ao_cs] jsi supertajný level!\n"
+"Radši bys tímhle místem měl@[ao_cs] prosvištět!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"V tvém oblíbeném resortu zase bujely\n"
+"problémy... v pekle. Nějaký neposedný\n"
+"kyberdémon si myslel, že si peklo změní\n"
+"ve vlastní zábavní park a ze Země si\n"
+"udělá vrátnici.\n"
+"\n"
+"Ten napůl robotický hnusák ale nevěděl,\n"
+"kdo přijde na pouť. Pro zahřátí není nic \n"
+"lepšího než střelnice plná pekelníků...\n"
+"\n"
+"A nyní se mezi stěnami labyrintu tohoto\n"
+"démona ozývají zvuky jeho kovových\n"
+"končetin, padajících na zem. Jeho smrtelné\n"
+"zurčení klokotá z toho, co tvým dočiněním\n"
+"kdysi bývala jeho tvář.\n"
+"\n"
+"Tahle jízda skončila.\n"
+"\n"

@@ -1,0 +1,96 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:31+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/el/>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: el\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_D2E1"
+msgstr "Αρμαγεδδών"
+
+msgid "TXT_D2E2"
+msgstr "Καμία Ανάπαυση για τους Ζωντανούς"
+
+msgid "HUSTR_1"
+msgstr "Επίπεδο 1: Είσοδος"
+
+msgid "HUSTR_5"
+msgstr "Επίπεδο 5: Οι Σήραγγες Αποβλήτων"
+
+msgid "HUSTR_6"
+msgstr "Επίπεδο 6: Ο Συνθλιπτής"
+
+msgid "HUSTR_7"
+msgstr "Επίπεδο 7: Πανεύκολο"
+
+msgid "HUSTR_8"
+msgstr "Επίπεδο 8: Κόλπα και Παγίδες"
+
+msgid "HUSTR_9"
+msgstr "Επίπεδο 9: Λάκκος"
+
+msgid "HUSTR_10"
+msgstr "Επίπεδο 10: Βάση Ανεφοδιασμού"
+
+msgid "HUSTR_11"
+msgstr "Επίπεδο 11: Ο Κύκλος της Καταστροφής"
+
+msgid "HUSTR_12"
+msgstr "Επίπεδο 12: To Εργοστάσιο"
+
+msgid "HUSTR_13"
+msgstr "Επίπεδο 13: Κέντρο"
+
+msgid "HUSTR_14"
+msgstr "Επίπεδο 14: Οι Ενδότερες Φωλιές"
+
+msgid "HUSTR_15"
+msgstr "Επίπεδο 15: Βιομηχανική Ζώνη"
+
+msgid "HUSTR_16"
+msgstr "Επίπεδο 16: Προάστια"
+
+msgid "HUSTR_17"
+msgstr "Επίπεδο 17: Καταλύματα"
+
+msgid "HUSTR_18"
+msgstr "Επίπεδο 18: Η Αυλή"
+
+msgid "HUSTR_19"
+msgstr "Επίπεδο 19: Το Κάστρο"
+
+msgid "HUSTR_20"
+msgstr "Επίπεδο 20: Σ'έπιασα!"
+
+msgid "HUSTR_21"
+msgstr "Επίπεδο 21: Νιρβάνα"
+
+msgid "HUSTR_22"
+msgstr "Επίπεδο 22: Οι Κατακόμβες"
+
+msgid "HUSTR_24"
+msgstr "Επίπεδο 24: Το Χάσμα"
+
+msgid "HUSTR_25"
+msgstr "Επίπεδο 25: Καταρράκτες Αίματος"
+
+msgid "HUSTR_26"
+msgstr "Επίπεδο 26: Τα Εγκαταλελειμμένα Ορυχεία"
+
+msgid "HUSTR_28"
+msgstr "Επίπεδο 28: Ο Κόσμος των Πνευμάτων"
+
+msgid "HUSTR_29"
+msgstr "Επίπεδο 29: Το Ζωντανό Τέλος"
+
+msgid "HUSTR_30"
+msgstr "Επίπεδο 30: Σύμβολο της Αμαρτίας"

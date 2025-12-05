@@ -1,0 +1,346 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:56+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
+"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ro\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Sala de Separare"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Șapte Portaluri"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Străjerul Gheții"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Străjerul Focului"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Străjerul Oțelului"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Creuzetul Luminos"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Pădurea Umbrelor"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Mlaștinile Întunecate"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Peșterile lui Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Tărâmurile Pustii"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Crângul Sacru"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hipostil"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminarul Ereziarhului"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Capela Dragonilor"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Capela Grifonilor"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Capela Suflului Morții"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Livada Amărăciunii"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Refectoriul Tăcerii"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Capela Lupilor"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Avanpostul Părăsit"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Castelul Întristării"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Eșafod"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Efluviu"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Temnițe"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Grădină Dezolantă"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Necropolă"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Mormântul lui Zedek"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Mormântul lui Menelkir"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Mormântul lui Traductus"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivariu"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Creuzetul Întunecat"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Trecând de cele Șapte Portaluri, un vast domeniu\n"
+"al cruzii sălbăticii se destinde deasupra ochiilor tăi.\n"
+"Focul, gheața, si oțelul te-au testat, dar provocări\n"
+"și mai mari te așteaptă în continuare. Deasa pădure\n"
+"ascunde ochi ostili cu siguranță, dar ceea ce se află\n"
+"dincolo de ea o să fie și mai rău.\n"
+"\n"
+"Deșerturi sterpe, mlaștinii tenebroase, si caverne \n"
+"mucegăite îți stau în cale, dar nu poți lăsa nimic\n"
+"să intervină între tine și destin, chiar și dacă ai\n"
+"ajunge să îți dorești acest lucru.\n"
+"\n"
+"Iar dincolo, strălucind în zare, zidurile veșnic\n"
+"schimbătoare ale hipostilei par să își bată joc de tine\n"
+"la fiecare efort pe care îl faci."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"În timp ce capul tău încă se învârte în urma\n"
+"bătăliilor din hipostil, înaintezi împleticit înspre ceea\n"
+"ce speri să fie o ieșire. Lucrurile par să se miște din\n"
+"ce în ce mai rapid, vederea ți se încețoșează, și \n"
+"începe să se întunece...\n"
+"\n"
+"În timp ce lumea se prăbușește în jurul tău, lumina\n"
+"unui teleportor te înghite. O sclipire, și te ridici\n"
+"obosit înapoi pe picioare.\n"
+"\n"
+"Stai în vârful unui turn înalt, iar de dedesubt se aud\n"
+"urletele celor blestemați. Faci un pas în față, și din\n"
+"senin, zgomotul scandărilor demonice îți îngheață\n"
+"sângele în vene. În numele tuturor zeilor morții, în\n"
+"ce loc ai aterizat? În numele tuturor zeilor durerii,\n"
+"cum vei putea ieși de aici vreodată?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Cele mai puternice arme si artefacte ale anticilor\n"
+"abia au reușit să îți aducă victoria în lupta împotriva\n"
+"Ereziarhului și ai minionilor lui, dar acum rămășițele\n"
+"lor împuțite stau împrăștiate la picioarele tale.\n"
+"Adunându-ți ultimele puteri, te pregătești să intri\n"
+"în portalul care duce spre interiorul sanctuarului\n"
+"Ereziarhului.\n"
+"\n"
+"Deasupra ta, se ivesc meterezele unui castel imens.\n"
+"Turnuri tăcute și pereți goi înconjoară o singură turlă\n"
+"din piatră neagră, care stă în mijlocul castelului \n"
+"asemeni unui gigant în stare meditativă.\n"
+"\n"
+"Foc și umbre se stâlcesc în spatele ferestrelor \n"
+"prăpăstioase, și zeci de ochi nefaști se holbează la \n"
+"tine. Undeva în interior, dușmanii te așteaptă..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... și va călători în tărâmurile morților, și se va duela\n"
+"cu forțele din interior, până la porțile disperării\n"
+"însăși. Dar dacă se va mai întoarce sau nu pe\n"
+"tărâmul luminii, nimeni nu știe.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Firar să fie."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Cu un strigăt agonizant ești aruncat din această\n"
+"dimensiune în alta, întregul tău corp fiind acoperit\n"
+"de foc mistic. Odată ce vederea redevine limpede,\n"
+"te regăsești stând într-o sală imensă, plină de\n"
+"ecouri fantomatice și umbre amenințătoare. În\n"
+"depărtare vezi un podium ridicat, și pe el, singura\n"
+"sursă de lumină din această lume."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Asta nu poate fi decât sfera haosului, sursa puterii\n"
+"lui Korax. Cu ea, ai puterea de a crea lumi... sau\n"
+"de a le distruge. Prin dreptul bătălilei, îți aparține,\n"
+"și cu mâinile tremurânde te întinzi să o apuci. Poate\n"
+"că acum, un nou participant se va alătura jocului\n"
+"cosmic pentru putere. Asemeni pionului care e\n"
+"promovat la rang de regină, din senin pare că toată\n"
+"tabla e în mâinile tale."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"dar mai există și alți jucători care sunt mai\n"
+"puternici decât tine, și cine le-ar putea anticipa\n"
+"următoarele mișcări?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Ușa e încuiată"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Salutări, muritorule"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Ești pregătit să mori?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "O ușă s-a deschis pe Gardianul de Foc"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Această cale e blocată"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "O jumătate din puzzle e rezolvată"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "pe cele Șapte Portaluri"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "O treime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "S-au ridicat scări pe cele Șapte Portaluri"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "O treime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "pe cele Șapte Portaluri"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "S-au ridicat scări pe cele Șapte Portaluri"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Trebuie să găsești alt buton..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Pietrele încep să macine pe cele Șapte Portaluri"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "O șesime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "în Pădurea Umbrelor"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Ușa e încuiată din interior"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Auzi o ușă deschizându-se în depărtare"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "O șesime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "în Pădurea Umbrelor"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "O șesime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "în Pădurea Umbrelor"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ etini rămași"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Ți-a luat prea mult, acum mori!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "O ușă s-a deschis pe Avanpostul Părăsit"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Ușa n-o să se deschidă încă"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Servitorii mei îți pot adulmeca sângele, muritorule"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "O ușă s-a deschis pe Eșafod"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Ușa e încuiată din interior"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "O platformă a coborât în turn"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Ai jucat acest joc prea multă vreme, muritorule..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Cred că e timpul să te înlătur de pe tablă"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Auzi o ușă deschizându-se sus"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Venerează-mă, și s-ar putea să mai fiu milostiv încă"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Dar apoi, poate că nu"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "O noime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "pe Mănăstire"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "O noime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "pe Mănăstire"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "O noime din puzzle a fost rezolvată"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "pe Mănăstire"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Portalul a fost închis"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Alegeți destinul"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Ușa e încuiată din interior"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Ești întradevăr suficient de puternic"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Să îți înfrunți proprii stăpâni?"

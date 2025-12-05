@@ -1,0 +1,203 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 20:07+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sv\n"
+
+msgid "TXT_D1E1"
+msgstr "Knä-djupt i de döda"
+
+msgid "TXT_D1E2"
+msgstr "Helvetets stränder"
+
+msgid "TXT_D1E4"
+msgstr "Ditt kött är uppslukat"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Kärnkraftverk"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Toxinraffinaderi"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Kommandokontroll"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Phobos-laboratorium"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Central bearbetning"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Datorstation"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Phobos anomali"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Militärbas"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Avloppsledningar"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Deimos-anomali"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Lagringsområde"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Raffinaderi"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Deimos Lab"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Kommandocentrum"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: De fördömdas salar"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Växthus för spädning"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Babels torn"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Mysteriets fästning"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Helvetesborg"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Förtvivlans svackor"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonium"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Smärtans hus"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Den oheliga katedralen"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Vildmark"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Helvetet under"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Perfekt Hass"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Separera de onda"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Den oregerliga ondskan"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: De kommer att ångra sig"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Mot dig ondskan"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Och helvetet följde"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Mot de grymma"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Rädsla"
+
+msgid "E1TEXT"
+msgstr ""
+"När du har besegrat de stora\n"
+"skurkarna och rensat månbasen\n"
+"är det meningen att du ska vinna,\n"
+"eller hur? Eller hur? Var är din feta\n"
+"belöning och din biljett hem? Vad\n"
+"i helvete är det här? Det är inte\n"
+"meningen att det ska sluta så här!\n"
+" \n"
+"Det stinker som ruttet kött, men ser\n"
+"ut som den förlorade Deimosbasen.\n"
+"Det ser ut som om du är fast på\n"
+"helvetets stränder.\n"
+"Den enda vägen ut är genom.\n"
+" \n"
+"För att fortsätta DOOM-upplevelsen\n"
+"kan du spela Helvetets stränder och\n"
+"dess fantastiska uppföljare Inferno!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Du har gjort det! Den avskyvärda\n"
+"cyberdemonherren som styrde den\n"
+"förlorade Deimos månbasen har\n"
+"dödats och du är triumferande! Men ...\n"
+"var är du? Du klättrar till månens\n"
+"kant och tittar ner för att se de\n"
+" hemska sanningen.\n"
+" \n"
+"Deimos svävar över själva helvetet!\n"
+"Du har aldrig hört talas om någon\n"
+"som har lyckats fly från helvetet, men\n"
+"du kommer att få de jävlarna att ångra\n"
+"att de någonsin hört talas om dig!\n"
+"Snabbt stiger du ner till helvetets yta.\n"
+" \n"
+"Nu är det dags för det sista\n"
+"kapitlet i DOOM! -- Inferno."
+
+msgid "E3TEXT"
+msgstr ""
+"Den avskyvärda spindeldemon som\n"
+"ledde invasionen av månbaserna och\n"
+"orsakade så mycket död har fått\n"
+"stryk för all framtid.\n"
+" \n"
+"En dold dörr öppnas och du går in.\n"
+"Du har visat dig vara för tuff för att\n"
+"helvetet skulle kunna hålla dig kvar,\n"
+"och nu spelar helvetet äntligen rättvist -\n"
+"för du kommer ut genom dörren och\n"
+"ser jordens gröna fält! Äntligen hemma.\n"
+" \n"
+"Du undrar vad som har hänt på jorden\n"
+"medan du har kämpat mot ondskan\n"
+"som släppts lös. Det är bra att inga\n"
+"demoner kunde ha kommit in genom\n"
+"dörren med dig ..."
+
+msgid "E4TEXT"
+msgstr ""
+"\"Spindelhjärnan måste ha skickat ut\n"
+"sina legioner av helvetesgudar före din\n"
+"slutliga konfrontation med det\n"
+"fruktansvärda odjuret från helvetet, men\n"
+"du klev fram och förde fram evig\n"
+"fördömelse och lidande över horden,\n"
+"som en sann hjälte skulle göra inför\n"
+"något så ondskefullt.\n"
+" \n"
+"Dessutom skulle någon få betala för vad\n"
+"som hände Daisy, din husdjurskanin.\n"
+" \n"
+"Men nu ser du framför dig mer potentiell\n"
+"smärta och död när en nation av demoner\n"
+"löper amok bland våra städer.\n"
+" \n"
+"Nästa stopp: Helvetet på jorden!"

@@ -40,7 +40,7 @@ class TRS
 public:
 	FVector3 translation = FVector3(0,0,0);
 	FQuaternion rotation = FQuaternion::Identity();
-	FVector3 scaling = FVector3(0,0,0);
+	FVector3 scaling = FVector3(1,1,1);
 
 	bool operator==(const TRS& other) const
 	{

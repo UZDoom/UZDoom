@@ -1,0 +1,187 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Evilution"
+
+msgid "THUSTR_1"
+msgstr "Level 1: System Control"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Human BBQ"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Power Control"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Wormhole"
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr "Level 5: Hanger"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Open Season"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Prison"
+
+msgid "THUSTR_8"
+msgstr "Level 8: Metal"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Stronghold"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Redemption"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Storage Facility"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Crater"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Nukage Processing"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Steel Works"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Dead Zone"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Deepest Reaches"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Processing Area"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Mill"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Shipping/respawning"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Central Processing"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Administration Center"
+
+msgid "THUSTR_22"
+msgstr "Level 22: Habitat"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Lunar Mining Project"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Quarry"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Baron's Den"
+
+msgid "THUSTR_26"
+msgstr "Level 26: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Mount Pain"
+
+msgid "THUSTR_28"
+msgstr "Level 28: Heck"
+
+msgid "THUSTR_29"
+msgstr "Level 29: River Styx"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Last Call"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Pharaoh"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Caribbean"
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"You've fought your way out of the infested\n"
+"experimental labs. It seems that UAC has\n"
+"once again gulped it down. With their\n"
+"high turnover, it must be hard for poor\n"
+"old UAC to buy corporate health insurance\n"
+"nowadays..\n"
+"\n"
+"Ahead lies the military complex, now\n"
+"swarming with diseased horrors hot to get\n"
+"their teeth into you. With luck, the\n"
+"complex still has some warlike ordnance\n"
+"laying around."
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"You hear the grinding of heavy machinery\n"
+"ahead. You sure hope they're not stamping\n"
+"out new hellspawn, but you're ready to\n"
+"ream out a whole herd if you have to.\n"
+"They might be planning a blood feast, but\n"
+"you feel about as mean as two thousand\n"
+"maniacs packed into one mad killer.\n"
+"\n"
+"You don't plan to go down easy."
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"The vista opening ahead looks real damn\n"
+"familiar. Smells familiar, too -- like\n"
+"fried excrement. You didn't like this\n"
+"place before, and you sure as hell ain't\n"
+"planning to like it now. The more you\n"
+"brood on it, the madder you get.\n"
+"Hefting your gun, an evil grin trickles\n"
+"onto your face. Time to take some names."
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"Suddenly, all is silent, from one horizon\n"
+"to the other. The agonizing echo of Hell\n"
+"fades away, the nightmare sky turns to\n"
+"blue, the heaps of monster corpses start \n"
+"to evaporate along with the evil stench \n"
+"that filled the air. Jeeze, maybe you've\n"
+"done it. Have you really won?\n"
+"\n"
+"Something rumbles in the distance.\n"
+"A blue light begins to glow inside the\n"
+"ruined skull of the demon-spitter."
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"What now? Looks totally different. Kind\n"
+"of like King Tut's condo. Well,\n"
+"whatever's here can't be any worse\n"
+"than usual. Can it? Or maybe it's best\n"
+"to let sleeping gods lie.."
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"Time for a vacation. You've burst the\n"
+"bowels of hell and by golly you're ready\n"
+"for a break. You mutter to yourself,\n"
+"Maybe someone else can kick Hell's ass\n"
+"next time around. Ahead lies a quiet town,\n"
+"with peaceful flowing water, quaint\n"
+"buildings, and presumably no Hellspawn.\n"
+"\n"
+"As you step off the transport, you hear\n"
+"the stomp of a cyberdemon's iron shoe."

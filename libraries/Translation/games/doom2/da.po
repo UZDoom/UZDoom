@@ -1,0 +1,239 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:29+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/da/>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: da\n"
+
+msgid "TXT_D2E1"
+msgstr "Helvede på jorden"
+
+msgid "TXT_D2E2"
+msgstr "Ingen hvile for de levende"
+
+msgid "HUSTR_1"
+msgstr "Level 1: Indgang"
+
+msgid "HUSTR_2"
+msgstr "Level 2: Underbukser"
+
+msgid "HUSTR_3"
+msgstr "Level 3: Spidsrod"
+
+msgid "HUSTR_4"
+msgstr "Level 4: Fokus"
+
+msgid "HUSTR_5"
+msgstr "Level 5: Affaldstunnellerne"
+
+msgid "HUSTR_6"
+msgstr "Level 6: Knuseren"
+
+msgid "HUSTR_7"
+msgstr "Level 7: Død simpel"
+
+msgid "HUSTR_8"
+msgstr "Level 8: Tricks og fælder"
+
+msgid "HUSTR_9"
+msgstr "Level 9: Gruben"
+
+msgid "HUSTR_10"
+msgstr "Level 10: Tankstation"
+
+msgid "HUSTR_11"
+msgstr "Level 11: Ødelæggelsens cirkel!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: Fabrikken"
+
+msgid "HUSTR_13"
+msgstr "Level 13: Centrum"
+
+msgid "HUSTR_14"
+msgstr "Level 14: Den inderste hule"
+
+msgid "HUSTR_15"
+msgstr "Level 15: Industriområde"
+
+msgid "HUSTR_16"
+msgstr "Level 16: Forstæderne"
+
+msgid "HUSTR_17"
+msgstr "Level 17: Lejligheder"
+
+msgid "HUSTR_18"
+msgstr "Level 18: Gårdspladsen"
+
+msgid "HUSTR_19"
+msgstr "Level 19: Citadellet"
+
+msgid "HUSTR_22"
+msgstr "Level 22: Katakomberne"
+
+msgid "HUSTR_23"
+msgstr "Level 23: Tønder af sjov"
+
+msgid "HUSTR_24"
+msgstr "Level 24: Kløften"
+
+msgid "HUSTR_25"
+msgstr "Level 25: Blodfald"
+
+msgid "HUSTR_26"
+msgstr "Level 26: De forladte miner"
+
+msgid "HUSTR_28"
+msgstr "Level 28: Åndeverdenen"
+
+msgid "HUSTR_29"
+msgstr "Level 29: Den levende ende"
+
+msgid "HUSTR_30"
+msgstr "Level 30: Syndens ikon"
+
+msgid "HUSTR_33"
+msgstr "Level 33: Forræderi"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: Jordbasen"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: Smerte laboratorier"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: De dødes kløft"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: Helvede bjerg"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: Vivisektion"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: Blodets inferno"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: Baron's Banquet"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: Ondskabens grav"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: Dæmonernes march"
+
+msgid "C1TEXT"
+msgstr ""
+"Du er kommet dybt ind i den inficerede\n"
+"stjernehavn. Men der er noget galt.\n"
+"Monstrene har bragt deres egen virkelighed\n"
+"med sig, og stjernehavnens teknologi er\n"
+"ved at blive undergravet af deres\n"
+"tilstedeværelse.\n"
+"\n"
+"Foran dig ser du en forpost af helvede,\n"
+"en befæstet zone. Hvis du kan komme forbi\n"
+"den, kan du trænge ind i det hjemsøgte\n"
+"hjerte af stjernebasen og finde den\n"
+"kontrollerende kontakt, der holder\n"
+"Jordens befolkning som gidsel."
+
+msgid "C2TEXT"
+msgstr ""
+"Du har vundet! Jeres sejr har gjort det\n"
+"muligt for menneskeheden at evakuere\n"
+"jorden og undslippe mareridtet. Nu er\n"
+"du det eneste menneske, der er tilbage\n"
+"på planeten. Kannibale mutationer,\n"
+"kødædende rumvæsener og onde ånder er\n"
+"dine eneste naboer. Du læner dig tilbage\n"
+"og venter på døden, tilfreds med,\n"
+"at du har reddet din art.\n"
+"\n"
+"Men så stråler Earth Control en besked\n"
+"ned fra rummet: \"Sensorerne har lokaliseret\n"
+"kilden til den fremmede invasion. Hvis du\n"
+"tager derhen, kan du måske blokere deres\n"
+"indtrængen. Den fremmede base er i hjertet\n"
+"af din egen hjemby, ikke langt fra\n"
+"stjernehavnen.\"\n"
+"Langsomt og smertefuldt rejser du dig\n"
+"op og vender tilbage til kampen."
+
+msgid "C3TEXT"
+msgstr ""
+"Du befinder dig i byens korrupte hjerte,\n"
+"omgivet af dine fjenders lig.\n"
+"Du kan ikke se nogen måde at ødelægge\n"
+"væsenernes indgang på denne side, så du\n"
+"bider tænderne sammen og kaster dig\n"
+"igennem den.\n"
+"\n"
+"Der må være en måde at lukke den på den\n"
+"anden side. Hvad rager det dig, hvis\n"
+"du skal gå gennem helvede for at nå\n"
+"frem til den?"
+
+msgid "C4TEXT"
+msgstr ""
+"Det forfærdelige ansigt af den største\n"
+"dæmon, du nogensinde har set, smuldrer\n"
+"foran dig, efter at du har pumpet dine\n"
+"raketter ind i hans blottede hjerne.\n"
+"Monsteret skrumper sammen og dør, mens\n"
+"dets smældende lemmer ødelægger utallige\n"
+"kilometer af helvedes overflade.\n"
+"\n"
+"Du har gjort det. Invasionen er forbi.\n"
+"Jorden er reddet. Helvede er et vrag.\n"
+"Du spekulerer på, hvor de onde folk vil\n"
+"tage hen, når de dør nu. Du tørrer sveden\n"
+"af din pande og begynder den lange\n"
+"vandring hjemad. Det burde være meget\n"
+"sjovere at genopbygge Jorden end at\n"
+"ødelægge den.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Tillykke, du har fundet det hemmelige\n"
+"niveau! Det ser ud til at være bygget\n"
+"af mennesker og ikke af dæmoner. Du\n"
+"spekulerer på, hvem de indsatte i\n"
+"dette hjørne af helvede vil være."
+
+msgid "C6TEXT"
+msgstr ""
+"Tillykke, du har fundet det\n"
+"superhemmelige niveau! Du må hellere\n"
+"komme hurtigt igennem denne!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Der var igen ballade på vej i dit\n"
+"yndlingsferieområde... Helvede. En eller\n"
+"anden cyberdemon troede, at han kunne\n"
+"forvandle Helvede til en personlig\n"
+"forlystelsespark og gøre Jorden til\n"
+"billetluge.\n"
+"\n"
+"Nå, men den halv-robot freak show vidste\n"
+"ikke hvem der kom til tivoli. Der er intet\n"
+"som en skydebane fuld af dæmoner til at\n"
+"få blodet til at pumpe...\n"
+"\n"
+"Nu ekkoede væggene i dæmonens labyrint med\n"
+"lyden af hans metalliske lemmer, der ramte\n"
+"gulvet. Hans dødsstøn gisper ud gennem det\n"
+"rod, du har efterladt af hans ansigt.\n"
+"\n"
+"Denne tur er lukket.\n"
+"\n"

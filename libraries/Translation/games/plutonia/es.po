@@ -1,0 +1,190 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:31+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: es\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "El experimento Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Nivel 1: Congo"
+
+msgid "PHUSTR_2"
+msgstr "Nivel 2: Pozo de almas"
+
+msgid "PHUSTR_3"
+msgstr "Nivel 3: Azteca"
+
+msgid "PHUSTR_4"
+msgstr "Nivel 4: Enjaulado"
+
+msgid "PHUSTR_5"
+msgstr "Nivel 5: Pueblo Fantasma"
+
+msgid "PHUSTR_6"
+msgstr "Nivel 6: Guarida del Barón"
+
+msgid "PHUSTR_7"
+msgstr "Nivel 7: Campo de Concentración"
+
+msgid "PHUSTR_8"
+msgstr "Nivel 8: Reino"
+
+msgid "PHUSTR_9"
+msgstr "Nivel 9: Matadero"
+
+msgid "PHUSTR_10"
+msgstr "Nivel 10: Arremetida"
+
+msgid "PHUSTR_11"
+msgstr "Nivel 11: Cazado"
+
+msgid "PHUSTR_12"
+msgstr "Nivel 12: Velocidad"
+
+msgid "PHUSTR_13"
+msgstr "Nivel 13: La cripta"
+
+msgid "PHUSTR_14"
+msgstr "Nivel 14: Génesis"
+
+msgid "PHUSTR_15"
+msgstr "Nivel 15: El ocaso"
+
+msgid "PHUSTR_16"
+msgstr "Nivel 16: El Presagio"
+
+msgid "PHUSTR_17"
+msgstr "Nivel 17: Complejo"
+
+msgid "PHUSTR_18"
+msgstr "Nivel 18: Neuroesfera"
+
+msgid "PHUSTR_19"
+msgstr "Nivel 19: N-MIGO"
+
+msgid "PHUSTR_20"
+msgstr "Nivel 20: El Dominio Mortal"
+
+msgid "PHUSTR_21"
+msgstr "Nivel 21: Descuatizador"
+
+msgid "PHUSTR_22"
+msgstr "Nivel 22: Misión imposible"
+
+msgid "PHUSTR_23"
+msgstr "Nivel 23: Lápida"
+
+msgid "PHUSTR_24"
+msgstr "Nivel 24: La Frontera Final"
+
+msgid "PHUSTR_25"
+msgstr "Nivel 25: El Templo de la Oscuridad"
+
+msgid "PHUSTR_26"
+msgstr "Nivel 26: Búnker"
+
+msgid "PHUSTR_27"
+msgstr "Nivel 27: Anticristo"
+
+msgid "PHUSTR_28"
+msgstr "Nivel 28: Las Alcantarillas"
+
+msgid "PHUSTR_29"
+msgstr "Nivel 29: Odisea de Ruidos"
+
+msgid "PHUSTR_30"
+msgstr "Nivel 30: La Puerta del Infierno"
+
+msgid "PHUSTR_31"
+msgstr "Nivel 31: Ciber-guarida"
+
+msgid "PHUSTR_32"
+msgstr "Nivel 32: Ve a x ello"
+
+msgid "P1TEXT"
+msgstr ""
+"Te regocijas sobre el cadáver humeante del\n"
+"Guardián. Con su muerte, has arrebatado\n"
+"el acelerador de las pestilentes garras del\n"
+"Infierno. Te relajas y echas un vistazo a la\n"
+"habitación. ¡Maldición!\n"
+"Se suponía que al menos había un prototipo\n"
+"en funcionamiento, pero no puedes verlo. Los\n"
+"demonios debieron haberlo tomado.\n"
+"\n"
+"Debes encontrar el prototipo o todo tu\n"
+"esfuerzo habrá sido en vano. Sigue en\n"
+"movimiento, sigue peleando, sigue matando.\n"
+"Ah, y sigue viviendo, también."
+
+msgid "P2TEXT"
+msgstr ""
+"Ni siquiera el laberinto mortal de los\n"
+"Arch-Viles te ha podido detener y \n"
+"has llegado al prototipo de acelerador\n"
+"el cual es desactivado de forma\n"
+"eficiente y permanente.\n"
+"\n"
+"Eres buen@[ao_esp] para ese tipo de \n"
+"cosas."
+
+msgid "P3TEXT"
+msgstr ""
+"Has golpeado y vapuleado abriéndote camino hacia\n"
+"el corazón de la colmena diabólica. Es \n"
+"hora de una misión de búsqueda y\n"
+"destrucción, con el guardián del portal\n"
+"como objetivo, cuyos viles vástagos se\n"
+"dirigen a la Tierra. Sí, él es malo.\n"
+"¡Pero sabes quién es peor!\n"
+"\n"
+"Sonriendo maliciosamente, compruebas\n"
+"tú equipo y te preparas para darle a ese\n"
+"bastardo un poco de su propia medicina."
+
+msgid "P4TEXT"
+msgstr ""
+"El malvado rostro del guardián del\n"
+"portal está repartido por todo el\n"
+"lugar. Conforme su andrajoso \n"
+"cadáver se desmorona, se forma un\n"
+"portal invertido y absorbe los restos\n"
+"del último prototipo del acelerador,\n"
+"sin mencionar a los pocos demonios\n"
+"que quedan. Lo lograste. El Infierno\n"
+"nuevamente va a castigar a los \n"
+"muertos que hacen el mal, en vez\n"
+"de hacerlo con los vivos que obran\n"
+"bien. Recuerda decirle a tus nietos que\n"
+"pongan un lanzacohetes en tú\n"
+"ataúd. Si al morir vas al Infierno, \n"
+"lo necesitarás para hacer la\n"
+"última ronda de limpieza..."
+
+msgid "P5TEXT"
+msgstr ""
+"Has encontrado el segundo nivel más\n"
+"difícil que tenemos. Esperemos que\n"
+"hayas guardado la partida con uno\n"
+"o dos niveles de anticipación. De lo\n"
+"contrario, prepárate a morir de placer.\n"
+"Solo para marines profesionales."
+
+msgid "P6TEXT"
+msgstr ""
+"A que te preguntabas cuál\n"
+"SERÍA el nivel más difícil que \n"
+"teníamos para ti; ahora lo sabes.\n"
+"Nadie sale con vida de aquí."

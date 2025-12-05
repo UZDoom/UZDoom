@@ -1,0 +1,180 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "The Plutonia Experiment"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: Congo"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Well of Souls"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Aztec"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: Caged"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Ghost Town"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Baron's Lair"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: Caughtyard"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Realm"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: Abattoire"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: Onslaught"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Hunted"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Speed"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: The Crypt"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: Genesis"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: The Twilight"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: The Omen"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Compound"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: Neurosphere"
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr "Level 19: NME"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: The Death Domain"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: Slayer"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Impossible Mission"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Tombstone"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: The Final Frontier"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: The Temple of Darkness"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: Anti-christ"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: The Sewers"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Odyssey of Noises"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: The Gateway of Hell"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: Cyberden"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: Go 2 It"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+"You gloat over the steaming carcass of the\n"
+"Guardian. With its death, you've wrested\n"
+"the Accelerator from the stinking claws\n"
+"of Hell. You relax and glance around the\n"
+"room. Damn! There was supposed to be at\n"
+"least one working prototype, but you can't\n"
+"see it. The demons must have taken it.\n"
+"\n"
+"You must find the prototype, or all your\n"
+"struggles will have been wasted. Keep\n"
+"moving, keep fighting, keep killing.\n"
+"Oh yes, keep living, too."
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+"Even the deadly Arch-Vile labyrinth could\n"
+"not stop you, and you've gotten to the\n"
+"prototype Accelerator which is soon\n"
+"efficiently and permanently deactivated.\n"
+"\n"
+"You're good at that kind of thing."
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+"You've bashed and battered your way into\n"
+"the heart of the devil-hive. Time for a\n"
+"Search-and-Destroy mission, aimed at the\n"
+"Gatekeeper, whose foul offspring is\n"
+"cascading to Earth. Yeah, he's bad. But\n"
+"you know who's worse!\n"
+"\n"
+"Grinning evilly, you check your gear, and\n"
+"get ready to give the bastard a little Hell\n"
+"of your own making!"
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+"The Gatekeeper's evil face is splattered\n"
+"all over the place. As its tattered corpse\n"
+"collapses, an inverted Gate forms and\n"
+"sucks down the shards of the last\n"
+"prototype Accelerator, not to mention the\n"
+"few remaining demons. You're done. Hell\n"
+"has gone back to pounding bad dead folks \n"
+"instead of good live ones. Remember to\n"
+"tell your grandkids to put a rocket\n"
+"launcher in your coffin. If you go to Hell\n"
+"when you die, you'll need it for some\n"
+"final cleaning-up ..."
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+"You've found the second-hardest level we\n"
+"got. Hope you have a saved game a level or\n"
+"two previous. If not, be prepared to die\n"
+"aplenty. For master marines only."
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+"Betcha wondered just what WAS the hardest\n"
+"level we had ready for ya? Now you know.\n"
+"No one gets out alive."

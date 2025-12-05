@@ -338,7 +338,7 @@ bool bPredictionGuard = false;
 
 static void NativeDestroy(DObject* self)
 {
-	if (bPredictionGuard && !(self->ObjectFlags & OF_ClientSide) && ((self->ObjectFlags & OF_Networked) || self->IsKindOf(NAME_Thinker)))
+	if (bPredictionGuard && !self->IsClientSide() && ((self->ObjectFlags & OF_Networked) || self->IsKindOf(NAME_Thinker)))
 		DPrintf(DMSG_WARNING, TEXTCOLOR_RED "Destroyed non-client-side Object %s while predicting\n", self->GetClass()->TypeName.GetChars());
 	if (!(self->ObjectFlags & OF_EuthanizeMe))
 		self->Destroy();

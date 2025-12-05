@@ -1,0 +1,353 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:42+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"doom-engine-games/hexen/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Ayrılma Salonu"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Yedi Portal"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Buz Muhafızı"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Ateşin Koruyucusu"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Çelik Muhafız"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Parlak Pota"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Gölge Ahşap"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Koyu göl"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Kirke Mağaraları"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Çorak Topraklar"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Kutsal Koru"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hipostil"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Heresiark'ın Ruhban Okulu"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Ejderha Şapeli"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Griffin Şapeli"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Ölüm Rüzgarı Şapeli"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Ağıtlar Bahçesi"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Sessiz Yemekhane"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Kurt Şapeli"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Unutulmuş Karakol"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Keder Kalesi"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "İnfaz yeri"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Atık Su"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Zindanlar"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Issız Bahçe"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropol"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedek'in Mezarı"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkir'in Mezarı"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traductus'un Mezarı"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Karanlık Pota"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Bu diyarı mühürleyen yedi kapıyı\n"
+"geçtikten sonra, önünüzde uçsuz\n"
+"bucaksız bir vahşi doğa uzanıyor.\n"
+"Ateş, buz ve çelik sizi sınadı ama\n"
+"önünüzde daha büyük zorluklar var.\n"
+"Ormanın sık karmaşası kesinlikle\n"
+"düşman gözleri gizliyor, Ama ötesi\n"
+"daha da kötü olacak.\n"
+"\n"
+"Çorak çöller, nemli bataklıklar ve küflü\n"
+"mağaralar yolunuzu kesiyor, ama siz\n"
+"hiçbir şeyin sizi kaderiniz, gelseniz\n"
+"bile olmasını dilemek için.\n"
+"\n"
+"Ve ötesinde, titreyen mesafe, sürekli\n"
+"değişen duvarlar hipostil alay ediyor\n"
+"gibi görünüyor her türlü çabanı."
+
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Zihniniz hâlâ hipostil içindeki karşı-\n"
+"laşmalarınızdan dolayı sersemlemiş\n"
+"durumda. Bir çıkış yolu olduğunu\n"
+"umduğun şeye doğru sendeliyorsun.\n"
+"Her şey gittikçe daha hızlı hareket\n"
+"ediyor gibi görünüyor, görüşünüz\n"
+"bulanıklaşıyor ve solmaya başlıyor...\n"
+"Dünya etrafınızda çökerken, bir\n"
+"ışınlanma aracının parlaklığı sizi\n"
+"sarmalıyor. Bir ışık parlaması ve\n"
+"ardından yorgun bir şekilde\n"
+"ayağa kalkıyorsunuz.\n"
+"\n"
+"Yüksek bir kulenin tepesinde duru-\n"
+"yorsunuz ve aşağıdan lanetlen mişlerin\n"
+"çığlıkları geliyor. İleriye doğru bir adım\n"
+"atıyorsun ve anında şeytani ilahilerin\n"
+"sesi kanını donduruyor.\n"
+"Tüm ölüm tanrıları adına! Nereye geldin\n"
+"sen? Tüm acı tanrıları adına, çıkış\n"
+"yolunu nasıl bulacaksın?"
+
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Kadimlerin en güçlü silahları ve eserleri\n"
+"kâfir hükümdarı ve yardakçılarını\n"
+"yenmeye ancak yetti, ama şimdi onların\n"
+"iğrenç kalıntıları ayaklarınızın dibine\n"
+"serilmiş durumda. Son gücünüzü\n"
+"toplayarak, geçide girmeye hazırlanıyor-\n"
+"sunuz. Heresiark'ın iç mabedinden çıkıyor.\n"
+"\n"
+"Üstünüzde muazzam bir kalenin surları\n"
+"yükseliyor. Sessiz kuleler ve çıplak\n"
+"duvarlar, kalenin ortasına düşünceli bir\n"
+"dev gibi çömelen siyah taştan tek bir\n"
+"kuleyi çevreliyor. Açık pencerelerinardında\n"
+"ateş ve gölge kıvrılıyor, düzinelerce\n"
+"uğursuz göz size dik dik bakıyor.\n"
+"İçeride bir yerlerde düşmanlarınız bekliyor..."
+
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... ve ölüler diyarına yolculuk edecek\n"
+"ve oradaki güçlerle umutsuzluğun\n"
+"kapılarına kadar mücadele edecek.\n"
+"Ama tekrar ışık dünyasına dönüp\n"
+"dönmeyeceğini kimse bilemez.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Lanet olsun."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Acı dolu bir çığlıkla bu dünyadan\n"
+"başka bir dünyaya savruluyorsunuz,\n"
+"vücudunuzun her parçası mistik bir\n"
+"ateşle kaplanıyor. Görüşünüz\n"
+"açıldığında, kendinizi hayaletimsi\n"
+"yankılar ve tehditkâr gölgelerle dolu\n"
+"büyük bir salonda buluyorsunuz.\n"
+"Uzakta yükseltilmiş bir kürsü ve onun\n"
+"üzerinde bu dünyadaki tek\n"
+"ışık kaynağını görüyorsunuz."
+
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Bu sadece Korax'ın gücünün kaynağı\n"
+"olan kaos küresi olabilir. Bununla\n"
+"dünyalar yaratabilirsin... ya da onları\n"
+"yok edebilirsin. Savaş ve fetih\n"
+"haklarıyla sizindir ve titreyen ellerinizle\n"
+"onu kavramak için uzanırsınız. Belki\n"
+"de şimdi, kozmik güç oyununa yeni\n"
+"bir oyuncu katılacak. Vezirliğe terfi\n"
+"eden piyon gibi, aniden tahtanın en\n"
+"uç noktaları avucunuzun içindeymiş\n"
+"gibi görünür."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Ama senden daha güçlü başka\n"
+"oyuncular da var.\n"
+"Sonraki hamleler?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Kapı kilitli"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Selamlar, ölümlü"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Ölmeye hazır mısın?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Buz Muhafızı'nda bir kapı açıldı"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Bu yol yasaklandı"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Bulmacanın bir yarısı çözüldü"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "Yedi Portalda"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Bulmacanın üçte biri çözüldü"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Yedi Portalda merdivenler yükseldi"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Bulmacanın üçte biri çözüldü"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "Yedi Portalda"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Yedi Portalda merdivenler yükseldi"
+
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Başka bir anahtar bulmalısın..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Taşlar Yedi Portalda öğütülüyor"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Bulmacanın altıda biri çözüldü"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "Gölge Ormanı'nda"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Kapı içeriden kilitli."
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Uzakta bir kapının açıldığını duyuyorsun."
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Bulmacanın altıda biri çözüldü"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "Gölge Ormanı'nda"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Bulmacanın altıda biri çözüldü"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "Gölge Ormanı'nda"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins ayrıldı"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Çok bekledin, şimdi öleceksin!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Unutulmuş Karakol'da bir kapı açıldı"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Bu kapı henüz açılmayacak."
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Hizmetçilerim kanının kokusunu alabiliyor, insan."
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "İnfaz yerinde bir kapı açıldı"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Kapı içeriden kilitli."
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Kuleye bir platform indirildi"
+
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Bu oyunu çok uzun oynadın, ölümlü."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Sanırım seni tahtadan kaldırmalıyım."
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Üst katta bir kapının açıldığını duyuyorsun."
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Bana ibadet et, belki merhamet ederim"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Sonra tekrar, belki de değil"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Bulmacanın dokuzda biri çözüldü"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "Manastır Üzerine"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Bulmacanın dokuzda biri çözüldü"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "Manastır Üzerine"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Bulmacanın dokuzda biri çözüldü"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "Manastır Üzerine"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Geçit mühürlendi"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Kaderinizi seçin"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Kapı içeriden kilitli."
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Yeterince güçlü müsün?"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Kendi efendilerinizle yüzleşmek için mi?"

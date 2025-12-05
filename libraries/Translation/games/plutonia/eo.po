@@ -1,0 +1,175 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:26+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eo\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "La eksperimento de Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Nivelo 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Nivelo 2: Puto de animoj"
+
+msgid "PHUSTR_3"
+msgstr "Nivelo 3: Azteko"
+
+msgid "PHUSTR_4"
+msgstr "Nivelo 4: Enkaĝigita"
+
+msgid "PHUSTR_5"
+msgstr "Nivelo 5: Fantoma urbeto"
+
+msgid "PHUSTR_6"
+msgstr "Nivelo 6: Kaŝejo de Barono"
+
+msgid "PHUSTR_7"
+msgstr "Nivelo 7: Kaptkorto"
+
+msgid "PHUSTR_8"
+msgstr "Nivelo 8: Regno"
+
+msgid "PHUSTR_9"
+msgstr "Nivelo 9: Buĉejo"
+
+msgid "PHUSTR_10"
+msgstr "Nivelo 10: Buĉado"
+
+msgid "PHUSTR_11"
+msgstr "Nivelo 11: Ĉasata"
+
+msgid "PHUSTR_12"
+msgstr "Nivelo 12: Rapido"
+
+msgid "PHUSTR_13"
+msgstr "Nivelo 13: La kripto"
+
+msgid "PHUSTR_14"
+msgstr "Nivelo 14: Genezo"
+
+msgid "PHUSTR_15"
+msgstr "Nivelo 15: La krepusko"
+
+msgid "PHUSTR_16"
+msgstr "Nivelo 16: La Aŭguro"
+
+msgid "PHUSTR_17"
+msgstr "Nivelo 17: Konstruaĵaro"
+
+msgid "PHUSTR_18"
+msgstr "Nivelo 18: Neŭrosfero"
+
+msgid "PHUSTR_19"
+msgstr "Nivelo 19: Mal-BN"
+
+msgid "PHUSTR_20"
+msgstr "Nivelo 20: La morta regno"
+
+msgid "PHUSTR_21"
+msgstr "Nivelo 21: Mortigisto"
+
+msgid "PHUSTR_22"
+msgstr "Nivelo 22: Neebla tasko"
+
+msgid "PHUSTR_23"
+msgstr "Nivelo 23: Tombŝtono"
+
+msgid "PHUSTR_24"
+msgstr "Nivelo 24: La Fina Limo"
+
+msgid "PHUSTR_25"
+msgstr "Nivelo 25: La Idolejo de Mallumo"
+
+msgid "PHUSTR_26"
+msgstr "Nivelo 26: Bunkro"
+
+msgid "PHUSTR_27"
+msgstr "Nivelo 27: Antikristo"
+
+msgid "PHUSTR_28"
+msgstr "Nivelo 28: La Kanalo"
+
+msgid "PHUSTR_29"
+msgstr "Nivelo 29: Vojaĝo de Sonoj"
+
+msgid "PHUSTR_30"
+msgstr "Nivelo 30: La Pordego de Inferno"
+
+msgid "PHUSTR_31"
+msgstr "Nivelo 31: Cibernesto"
+
+msgid "PHUSTR_32"
+msgstr "Nivelo 32: Iru al ĝi!"
+
+msgid "P1TEXT"
+msgstr ""
+"Vi ĝojaĉas super la vaporanta kadavro de La\n"
+"Gardinto. Per ĝia morto, vi eltiris La Akcelilon\n"
+"el la fetoraj krifoj de Infero. Vi ripozas kaj \n"
+"ĉirkaŭrigardas la ĉambron. Diable! Devis esti\n"
+"almenaŭ unu funkcia prototipo, sed vi ne\n"
+"vidas ĝin. La demonoj verŝajne prenis ĝin.\n"
+"\n"
+"Vi bezonas trovi la prototipon, alie viaj\n"
+"baraktoj estos vanitaj. Daŭru iri, daŭru\n"
+"batali, daŭru mortigi.\n"
+"Ho jes, ankaŭ daŭru vivi."
+
+msgid "P2TEXT"
+msgstr ""
+"Eĉ la mortiga labirinto de Ĉef-Fiuloj ne\n"
+"povis haltigi vin, kaj vi iris al la prototipa\n"
+"Akcelilo, kiu estas rapide kaj neripareble\n"
+"malaktivigita.\n"
+"\n"
+"Vi faras bone tian ion."
+
+msgid "P3TEXT"
+msgstr ""
+"Vi bategis kaj disbatis vian vojon en la koron\n"
+"de la diablujo. Tempas por Trovado-Detruado-\n"
+"Mision, celante La Cerberon, kies aĉaj idoj\n"
+"dispeliĝas al La Tero. Jes, li estas mava, sed\n"
+"vi konas iun pli mavan!\n"
+"\n"
+"Grimacante malice, vi kontrolas vian ilaron,\n"
+"kaj pretiĝas doni al la bastardo iom da Infero\n"
+"de via farado mem!"
+
+msgid "P4TEXT"
+msgstr ""
+"La mava vizaĝo de La Cerbero estas\n"
+"ŝprucetiga ĉirkaŭe. Dum ĝia disŝirita\n"
+"kadavro disfalas, inversa pasejo formiĝas\n"
+"kaj sorbas la nemultajn ceterajn demonojn.\n"
+"Vi finis. Infero rekomencis pisti mavajn\n"
+"mortintojn, anstataŭ bonajn vivulojn.\n"
+"Memoru peti viajn genepojn meti\n"
+"raketlanĉilon en vian ĉerkon. Sed vi iros al\n"
+"Infero, kiam vi mortos, vi bezonos ĝin\n"
+"por kelka fina purigado..."
+
+msgid "P5TEXT"
+msgstr ""
+"Vi trovis la duan plej malfacilan nivelon, kiun\n"
+"ni havas. Mi esperas, ke vi havas konservitan\n"
+"ludon antaŭ unu aŭ du niveloj. Sed ne, pretu\n"
+"morti multe. Nur por majstraj soldatoj."
+
+msgid "P6TEXT"
+msgstr ""
+"Mi vetis, ke vi scivolis, kiu JA estas la plej\n"
+"malfacila nivelo, kiun ni pretigis por vi.\n"
+"Nun vi scias. Neniu eskapas viva."

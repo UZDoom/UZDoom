@@ -1,0 +1,191 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:29+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fr\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "L'Expérience Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "NIVEAU 1: Congo"
+
+msgid "PHUSTR_2"
+msgstr "NIVEAU 2: Puits des Ames"
+
+msgid "PHUSTR_3"
+msgstr "NIVEAU 3: Aztèque"
+
+msgid "PHUSTR_4"
+msgstr "NIVEAU 4: Enfermé"
+
+msgid "PHUSTR_5"
+msgstr "NIVEAU 5: Ville Fantôme"
+
+msgid "PHUSTR_6"
+msgstr "NIVEAU 6: Repaire du Baron"
+
+msgid "PHUSTR_7"
+msgstr "NIVEAU 7: Pris de court"
+
+msgid "PHUSTR_8"
+msgstr "NIVEAU 8: Royaume"
+
+msgid "PHUSTR_9"
+msgstr "NIVEAU 9: Abattoir"
+
+msgid "PHUSTR_10"
+msgstr "NIVEAU 10: Assaut"
+
+msgid "PHUSTR_11"
+msgstr "NIVEAU 11: Traque"
+
+msgid "PHUSTR_12"
+msgstr "NIVEAU 12: Vitesse"
+
+msgid "PHUSTR_13"
+msgstr "NIVEAU 13: La Crypte"
+
+msgid "PHUSTR_14"
+msgstr "NIVEAU 14: Genèse"
+
+msgid "PHUSTR_15"
+msgstr "NIVEAU 15: Le Crépuscule"
+
+msgid "PHUSTR_16"
+msgstr "NIVEAU 16: Le Présage"
+
+msgid "PHUSTR_17"
+msgstr "NIVEAU 17: Installation"
+
+msgid "PHUSTR_18"
+msgstr "NIVEAU 18: Neurosphère"
+
+msgid "PHUSTR_19"
+msgstr "NIVEAU 19: NMI"
+
+msgid "PHUSTR_20"
+msgstr "NIVEAU 20: Le Domaine de la Mort"
+
+msgid "PHUSTR_21"
+msgstr "NIVEAU 21: Pourfendeur"
+
+msgid "PHUSTR_22"
+msgstr "NIVEAU 22: Mission Impossible"
+
+msgid "PHUSTR_23"
+msgstr "NIVEAU 23: Pierre Tombale"
+
+msgid "PHUSTR_24"
+msgstr "NIVEAU 24: La Frontière Finale"
+
+msgid "PHUSTR_25"
+msgstr "NIVEAU 25: Le Temple des Ténèbres"
+
+msgid "PHUSTR_26"
+msgstr "NIVEAU 26: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "NIVEAU 27: Anti-Christ"
+
+msgid "PHUSTR_28"
+msgstr "NIVEAU 28: Les Egouts"
+
+msgid "PHUSTR_29"
+msgstr "NIVEAU 29: Odysée de Bruits"
+
+msgid "PHUSTR_30"
+msgstr "NIVEAU 30: La Porte des Enfers"
+
+msgid "PHUSTR_31"
+msgstr "NIVEAU 31: Cyber-Antre"
+
+msgid "PHUSTR_32"
+msgstr "NIVEAU 32: Go 2 It"
+
+msgid "P1TEXT"
+msgstr ""
+"Vous jubilez sur la carcasse brûlante \n"
+"du Gardien. Avec sa mort, vous avez \n"
+"arraché l'accélerateur des griffes \n"
+"fétides de l'enfer. Vous vous reposez \n"
+"et observez vos alentours. \n"
+"Mince! Il était sensé y avoir au\n"
+"moins un prototype qui marche, \n"
+"mais vous ne le trouvez pas. Les démons \n"
+"l'on sûrement pris avec eux. \n"
+"\n"
+"Vous devez trouver le prototype, ou \n"
+"tous vos combats auront été vains. \n"
+"continez à avancer, à vous battre, à tuer. \n"
+"Oh oui, à vivre, aussi."
+
+msgid "P2TEXT"
+msgstr ""
+"Même le labyrinthe mortel des \n"
+"arche-viles ne vous a pas arrêté,\n"
+"et vous obtenez le prototype \n"
+"d'accélérateur que vous parvenez à \n"
+"désactiver efficacement et pour toujours.\n"
+"\n"
+"Vous êtes doué pour ces choses là."
+
+msgid "P3TEXT"
+msgstr ""
+"Vous vous êtes frayé votre chemin à \n"
+"travers le cœur d'une ruche de \n"
+"diables. Il est temps pour une mission\n"
+"de recherche et destruction visant le \n"
+"gardien de la porte, avec sa \n"
+"progéniture répugnante descendant en \n"
+"cascade sur terre. Oui, il est cruel. \n"
+"Mais vous savez qui est pire!\n"
+"\n"
+"Souriant malicieusement, vous vérifiez \n"
+"l'équipement et vous vous préparez a\n"
+"faire voir a ce fumier un petit enfer\n"
+"fait de vos propres mains!"
+
+msgid "P4TEXT"
+msgstr ""
+"La face maléfique du gardien de la porte \n"
+"s'éparpille aux alentours. Tandis que son \n"
+"corps en lambeaux vacille, un portail \n"
+"inverse se forme et aspire les éclats du \n"
+"dernier prototype d'accélerateur, sans \n"
+"parler des quelques démons restants.\n"
+"Vous avez gagné. L'enfer a fini de\n"
+"libérer des mort-vivants au lieu de \n"
+"gens bien vivants.\n"
+"Souvenez vous de dire a vos enfants de\n"
+"mettre un lance-roquette dans votre\n"
+"cercueil. Si vous allez en enfer,\n"
+"quand vous serez mort, vous en aurez \n"
+"besoin, pour un nettoyage définitif..."
+
+msgid "P5TEXT"
+msgstr ""
+"Vous avez trouvé le deuxième niveau\n"
+"le plus difficile que nous avons.\n"
+"J'espère que vous avez sauvegardé\n"
+"lors du précédent...\n"
+"Sinon, soyez prêt a mourir souvent.\n"
+"Pour les pros seulement."
+
+msgid "P6TEXT"
+msgstr ""
+"Alors, vous vous demandiez quel\n"
+"était le niveau le plus dur que nous\n"
+"avions préparé pour vous? \n"
+"Maintenant, vous savez. \n"
+"Nul n'en sortira vivant."

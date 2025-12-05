@@ -1,0 +1,248 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: hu\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "A Kikötő"
+
+msgid "HHUSTR_E1M2"
+msgstr "A Kazamaták"
+
+msgid "HHUSTR_E1M3"
+msgstr "A Kapuház"
+
+msgid "HHUSTR_E1M4"
+msgstr "Az Őrtorony"
+
+msgid "HHUSTR_E1M5"
+msgstr "A Citadella"
+
+msgid "HHUSTR_E1M6"
+msgstr "A Katedrális"
+
+msgid "HHUSTR_E1M7"
+msgstr "A Kripták"
+
+msgid "HHUSTR_E1M8"
+msgstr "A Pokol Szája"
+
+msgid "HHUSTR_E1M9"
+msgstr "A Temető"
+
+msgid "HHUSTR_E2M1"
+msgstr "A Kráter"
+
+msgid "HHUSTR_E2M2"
+msgstr "A Lávaárok"
+
+msgid "HHUSTR_E2M3"
+msgstr "A Tűzfolyó"
+
+msgid "HHUSTR_E2M4"
+msgstr "A Jégbarlang"
+
+msgid "HHUSTR_E2M5"
+msgstr "A Katakombák"
+
+msgid "HHUSTR_E2M6"
+msgstr "A Labirintus"
+
+msgid "HHUSTR_E2M7"
+msgstr "A Nagy Folyosó"
+
+msgid "HHUSTR_E2M8"
+msgstr "A Káosz Portáljai"
+
+msgid "HHUSTR_E2M9"
+msgstr "A Gleccser"
+
+msgid "HHUSTR_E3M1"
+msgstr "A Raktár"
+
+msgid "HHUSTR_E3M2"
+msgstr "A Pöcegödör"
+
+msgid "HHUSTR_E3M3"
+msgstr "A Kereszteződés"
+
+msgid "HHUSTR_E3M4"
+msgstr "Az Azúr Erőd"
+
+msgid "HHUSTR_E3M5"
+msgstr "Az Opfidiánok Fészke"
+
+msgid "HHUSTR_E3M6"
+msgstr "A Félelem Folyosói"
+
+msgid "HHUSTR_E3M7"
+msgstr "A Szakadék"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparil Terme"
+
+msgid "HHUSTR_E3M9"
+msgstr "A Víztorony"
+
+msgid "HHUSTR_E4M1"
+msgstr "Ravatal"
+
+msgid "HHUSTR_E4M2"
+msgstr "Gerendaház"
+
+msgid "HHUSTR_E4M3"
+msgstr "Kerengő"
+
+msgid "HHUSTR_E4M4"
+msgstr "Síremlék"
+
+msgid "HHUSTR_E4M5"
+msgstr "Nagy Lépcső"
+
+msgid "HHUSTR_E4M6"
+msgstr "A Hitehagyott Csarnoka"
+
+msgid "HHUSTR_E4M7"
+msgstr "A Kárhozat Támasza"
+
+msgid "HHUSTR_E4M8"
+msgstr "Az Összeomlott Híd"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mauzóleum"
+
+msgid "HHUSTR_E5M1"
+msgstr "Okker Szakadékok"
+
+msgid "HHUSTR_E5M2"
+msgstr "Zuhatagok"
+
+msgid "HHUSTR_E5M3"
+msgstr "Rakpart"
+
+msgid "HHUSTR_E5M4"
+msgstr "Pitvar"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hidratáló"
+
+msgid "HHUSTR_E5M6"
+msgstr "Kolonnád"
+
+msgid "HHUSTR_E5M7"
+msgstr "Bűzös Parókia"
+
+msgid "HHUSTR_E5M8"
+msgstr "Az Itélet Mezeje"
+
+msgid "HHUSTR_E5M9"
+msgstr "D'Sparil Káosza"
+
+msgid "HE1TEXT"
+msgstr ""
+"Az Ezüst Félholtak és szolgái \n"
+"elpusztításával együtt az utolsó élőhalott \n"
+"is el lett törölve a létsík ezen szintjéről. \n"
+"\n"
+"Ezeknek a teremtményeknek azonban valahonnan\n"
+"jönniük kellett, és az a sanda \n"
+"gyanúd támadt hogy a pokol szájának \n"
+"izzó portálja az ő világuk felé visz. \n"
+"\n"
+"Annak érdekében hogy ne tudjon több élőhalott \n"
+"(vagy valami mégrosszabb) átjutni, \n"
+"be kell rekesztened a pokol száját a túloldalról. \n"
+"Ez persze azt jelenti, hogy valószínű \n"
+"egy barátságtalan világban ragadhatsz \n"
+"node ki mondta hogy ertneknek lenni könnyű?"
+
+msgid "HE2TEXT"
+msgstr ""
+"Immáron nyílvánvaló, hogy a hatalmas \n"
+"maulotaurok nem a te súlycsoportodban voltak,\n"
+"és ahogy a bűzölgő holtestük összeesik,\n"
+"egyfajta morbid elégedettséget érzel kimúlásuk láttán.\n"
+"\n"
+"Az általuk őrzött kapuk kinyíltak, és a haza vezető \n"
+"utat sejtetik maguk mögött. Azonban amikor átlépsz, \n"
+"egy gúnyos kacaj nyilall a füledbe.\n"
+"\n"
+"Talán egy másik erő irányította mindvégig a maulotaurokat?\n"
+"Létezne, hogy még ennél is borzasztóbb teremtmények \n"
+"várnak a kapu másik túloldalán? A tiszta égbolt helyett feléd \n"
+"tornyosuló kristály kupola íve nem jelent semmi biztatót..."
+
+msgid "HE3TEXT"
+msgstr ""
+"D'Sparil halála megszüntette a\n"
+"varázslatos köteléket mely\n"
+"a lényeket ezen a szinten tartotta.\n"
+"A végső sikolyaik túlharsogják\n"
+"az ő saját gyötrelmes sírását.\n"
+"\n"
+"Az esküd a bosszúról beteljesült,\n"
+"belépsz a hazafelé vezető\n"
+"portálba, pillanatokkal a kupola\n"
+"millió kis szilánkra esése előtt.\n"
+"\n"
+"De ha D'Sparil erejének \n"
+"örökidőkre vége, miért nem\n"
+"érzed magad biztonságban?\n"
+"Talán az utolsó kiáltása mielőtt\n"
+"meghalt, egy átok lehetett valójában? \n"
+"Vagy egy megidézés? Nem lehetsz biztos \n"
+"benne, de reméled hogy csak egy \n"
+"egyszerű kiáltás volt.\n"
+"\n"
+"Másfelől mi lesz majd a többi kígyólovaggal?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Azt hitted, hogy D'Sparil halála után visszatérhetsz \n"
+"a saját világodba, de utolsó lehelletével száműzött \n"
+"a saját dimenziójába. Belépbe megpillantod a \n"
+"D'Sparil által leigázott romos vidéket. Legyőzted a vidék\n"
+"védelmezőit, és immáron D'Sparil erődjének kapujában állsz.\n"
+"Ezidáig nem volt szívedben kétség afelől, hogy legyőzöl \n"
+"bármit amit a sors eléd vet, azonban itt magával a \n"
+"világodra törő gonosz szívével van dolgod.\n"
+"D'Sparil ugyan meghalt, de a völgy ahol született \n"
+"továbbra is fennáll. Belépsz a völgybe annak reményében,\n"
+"hogy találsz egy kiutat. Valahol, ennek a birtoknak is a legsötétebb\n"
+"sarkában, a személyi testőrei várnak a revansra..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Amikor az utolsó maulotaur végső \n"
+"lehelletével felbőg, tudatosul benned, \n"
+"hogy még sosem voltál ennyire közel \n"
+"a halálhoz. Talán még a D'Sparil és \n"
+"tanítványai elleni harc sem volt \n"
+"ennyire kétségbeejtően nehéz. \n"
+"Elkeseredetten tekintesz az előtted \n"
+"kinyíló kapura, azon morfondírozva, \n"
+"hogy haza vezet e, vagy valami olyan \n"
+"horror van mögötte amiről álmodni \n"
+"se mernél. Azon veszed észre magad, \n"
+"hogy elgondolkozol érdemes e ennyi \n"
+"fájdalom és öldöklés árán is \n"
+"továbbmenni. Azonban mi mást\n"
+"tehetszha elfogyott az akaratod? \n"
+"Mégis rá tudod erőltetni magad, hogy\n"
+"folytasd reménytelen utad? Megvan \n"
+"hozzá a kellő bátorságod? A végén \n"
+"ráébredsz, hogy nem olyan fából \n"
+"faragtak aki harc nélkül feladja. \n"
+"Tágra nyílt szemekkel várod a \n"
+"végzettel való találkát."

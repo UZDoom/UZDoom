@@ -1,0 +1,193 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fi\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Paholuutio"
+
+msgid "THUSTR_1"
+msgstr "Taso 1: Järjestelmäohjaamo"
+
+msgid "THUSTR_2"
+msgstr "Taso 2: Ihmisgrilli"
+
+msgid "THUSTR_3"
+msgstr "Taso 3: Voimalan ohjaamo"
+
+msgid "THUSTR_4"
+msgstr "Taso 4: Madonreikä"
+
+msgid "THUSTR_5"
+msgstr "Taso 5: Lentoalushalli"
+
+msgid "THUSTR_6"
+msgstr "Taso 6: Avoin sesonki"
+
+msgid "THUSTR_7"
+msgstr "Taso 7: Vankila"
+
+msgid "THUSTR_8"
+msgstr "Taso 8: Metalli"
+
+msgid "THUSTR_9"
+msgstr "Taso 9: Linnake"
+
+msgid "THUSTR_10"
+msgstr "Taso 10: Lunastus"
+
+msgid "THUSTR_11"
+msgstr "Taso 11: Varastolaitos"
+
+msgid "THUSTR_12"
+msgstr "Taso 12: Kraateri"
+
+msgid "THUSTR_13"
+msgstr "Taso 13: Ydinjätekäsittely"
+
+msgid "THUSTR_14"
+msgstr "Taso 14: Terästehdas"
+
+msgid "THUSTR_15"
+msgstr "Taso 15: Kuollut alue"
+
+msgid "THUSTR_16"
+msgstr "Taso 16: Syvyydet"
+
+msgid "THUSTR_17"
+msgstr "Taso 17: Käsittelyalue"
+
+msgid "THUSTR_18"
+msgstr "Taso 18: Mylly"
+
+msgid "THUSTR_19"
+msgstr "Taso 19: Huolinta/Ylösnostatus"
+
+msgid "THUSTR_20"
+msgstr "Taso 20: Käsittelykeskus"
+
+msgid "THUSTR_21"
+msgstr "Taso 21: Keskushallinto"
+
+msgid "THUSTR_22"
+msgstr "Taso 22: Asuinpaikka"
+
+msgid "THUSTR_23"
+msgstr "Taso 23: Kuukaivosprojekti"
+
+msgid "THUSTR_24"
+msgstr "Taso 24: Louhos"
+
+msgid "THUSTR_25"
+msgstr "Taso 25: Paronin pesä"
+
+msgid "THUSTR_26"
+msgstr "Taso 26: Ballistyks"
+
+msgid "THUSTR_27"
+msgstr "Taso 27: Tuskavuori"
+
+msgid "THUSTR_28"
+msgstr "Taso 28: Hemmetti"
+
+msgid "THUSTR_29"
+msgstr "Taso 29: Styksjoki"
+
+msgid "THUSTR_30"
+msgstr "Taso 30: Viimeinen koollehuuto"
+
+msgid "THUSTR_31"
+msgstr "Taso 31: Faarao"
+
+msgid "THUSTR_32"
+msgstr "Taso 32: Karibia"
+
+msgid "T1TEXT"
+msgstr ""
+"Olet taistellut tiesi ulos saastuneesta\n"
+"koelaboratoriosta. UAC on näköjään jälleen\n"
+"kerran päässyt tunaroimaan. Korkealla\n"
+"vaihtuvuudellaan UAC-paralla täytyy\n"
+"varmaankin olla nykyään vaikea ostaa\n"
+"yritysterveysvakuutuksia..\n"
+"\n"
+"Edessä sijaitsee sotilastukikohta kuhisten\n"
+"tautisia kauhistuksia, jotka himoitsevat\n"
+"upottaa hampaansa sinuun. Jos onni on\n"
+"myötä, kompleksissa vielä lojuu ympäriinsä\n"
+"sotatarvikkeita."
+
+msgid "T2TEXT"
+msgstr ""
+"Kuulet raskaiden koneiden jylinän edessä.\n"
+"Toivot toden teolla, etteivät ne vain\n"
+"ole painamassa lisää pirulaisia, mutta\n"
+"olet valmis survoamaan vaikka kokonaisen\n"
+"lauman, jos niikseen tulee. Ne saattavat\n"
+"olla suunnittelemassa verijuhlapitoja,\n"
+"mutta tunnet olosi aika lailla yhtä\n"
+"häijyksi kuin kaksituhatta raivohullua\n"
+"tiivistettynä yhdeksi hillittömäksi\n"
+"tappajaksi.\n"
+"\n"
+"Et aio mennä kanveesiin helpolla."
+
+msgid "T3TEXT"
+msgstr ""
+"Edessä avautuva näköala näyttää tosi hiton\n"
+"tutulta. Haisee myös tutulta -- niin kuin\n"
+"käristetyltä ulosteelta. Et pitänyt tästä\n"
+"paikasta ennen, etkä totta helvetissä\n"
+"aio pitää siitä nytkään. Mitä enemmän\n"
+"haudot asiaa, sitä vihaisemmaksi tulet.\n"
+"Kohotat aseesi, ja häijy virne kirpoaa\n"
+"kasvoillesi. Aika panna pystyyn\n"
+"pieksäjäiset."
+
+msgid "T4TEXT"
+msgstr ""
+"Yhtäkkiä, kaikki on hiljaista, taivaan-\n"
+"rannasta toiseen. Helvetin piinallinen\n"
+"kaiku vaimenee, painajaistaivas muuttuu\n"
+"siniseksi, hirviöiden ruumisröykkiöt\n"
+"alkavat haihtua pahan löyhkän kanssa,\n"
+"joka täytti ilman. Hittolainen, ehkä olet\n"
+"tehnyt sen. Oletko todella voittanut?\n"
+"\n"
+"Jokin jyrisee etäällä. Sininen valo\n"
+"alkaa hehkua sylkijädemonin murjotussa\n"
+"pääkallossa."
+
+msgid "T5TEXT"
+msgstr ""
+"Mitä nyt? Näyttää täysin erilaiselta.\n"
+"Vähän niin kuin Tutankhamonin lukaalilta.\n"
+"No, mitä tahansa täällä onkaan, se ei\n"
+"voi olla sen pahempaa kuin muutenkin,\n"
+"eihän? Tai ehkä lienee parempi antaa\n"
+"nukkuvien jumalten nukkua rauhassa.."
+
+msgid "T6TEXT"
+msgstr ""
+"Loman aika. Olet hajottanut helvetin\n"
+"uumenet ja olet totta vie tauon tarpeessa.\n"
+"Mietit itseksesi, että ehkä joku muu voi\n"
+"ensi kerralla löylyttää helvettiä. Edessä\n"
+"sijaitsee hiljainen kylä rauhallisesti\n"
+"virtaavine vesineen, viehättävine\n"
+"rakennuksineen ja oletettavasti ilman\n"
+"helvetinsikiöitä.\n"
+"\n"
+"Astuessasi alas kulkuvälineestä kuulet\n"
+"kyberdemonin rautakengän töminän."

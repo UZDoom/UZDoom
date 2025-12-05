@@ -1,0 +1,409 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Winnowing Hall"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Seven Portals"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Guardian of Ice"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Guardian of Fire"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Guardian of Steel"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Bright Crucible"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Shadow Wood"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Darkmere"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Caves of Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Wastelands"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Sacred Grove"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hypostyle"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Heresiarch's Seminary"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Dragon Chapel"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Griffin Chapel"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Deathwind Chapel"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Orchard of Lamentations"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Silent Refectory"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Wolf Chapel"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Forsaken Outpost"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Castle of Grief"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Gibbet"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Effluvium"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Dungeons"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Desolate Garden"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Necropolis"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedek's Tomb"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkir's Tomb"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Traductus' Tomb"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivarium"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Dark Crucible"
+
+# intermission
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Having passed the seven portals\n"
+"which sealed this realm, a vast\n"
+"domain of harsh wilderness stretches\n"
+"before you. Fire, ice and steel have\n"
+"tested you, but greater challenges\n"
+"remain ahead. The dense tangle of\n"
+"forest surely hides hostile eyes,\n"
+"but what lies beyond will be worse.\n"
+"\n"
+"Barren desert, dank swamps and\n"
+"musty caverns bar your way, but you\n"
+"cannot let anything keep you from\n"
+"your fate, even if you might come\n"
+"to wish that it would.\n"
+"\n"
+"And beyond, flickering in the\n"
+"distance, the ever-shifting walls\n"
+"of the hypostyle seem to mock\n"
+"your every effort."
+
+# intermission
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Your mind still reeling from your\n"
+"encounters within the hypostyle, you\n"
+"stagger toward what you hope is\n"
+"a way out. Things seem to move faster\n"
+"and faster, your vision blurs and\n"
+"begins to fade...\n"
+"As the world collapses around you,\n"
+"the brightness of a teleportal\n"
+"engulfs you. A flash of light, and then\n"
+"you climb wearily to your feet.\n"
+"\n"
+"You stand atop a high tower, and\n"
+"from below come the screams of the\n"
+"damned. You step forward, and\n"
+"instantly the sound of demonic\n"
+"chanting chills your blood.\n"
+"By all the gods of death! what place\n"
+"have you come to? By all the gods of\n"
+"pain, how will you ever find your\n"
+"way out?"
+
+# intermission
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"The mightiest weapons and artifacts\n"
+"of the ancients barely sufficed to\n"
+"defeat the heresiarch and his\n"
+"minions, but now their foul remains\n"
+"lie strewn at your feet. Gathering\n"
+"the last of your strength, you\n"
+"prepare to enter the portal which\n"
+"leads from the Heresiarch's inner\n"
+"sanctum.\n"
+"\n"
+"Above you, the ramparts of an\n"
+"immense castle loom. Silent towers\n"
+"and bare walls surround a single\n"
+"spire of black stone, which squats\n"
+"in the center of the castle like a\n"
+"brooding giant. Fire and shadow\n"
+"twist behind gaping windows, dozens\n"
+"of baleful eyes glaring down upon\n"
+"you.\n"
+"Somewhere within, your enemies are\n"
+"waiting..."
+
+# intermission
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... and he shall journey into the\n"
+"realms of the dead, and contest with\n"
+"the forces therein, unto the very\n"
+"gates of despair. But whether he\n"
+"shall return again to the world of\n"
+"light, no man knows.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Damn."
+
+# intermission
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"With a scream of agony you are\n"
+"wrenched from this world into\n"
+"another, every part of your body\n"
+"wreathed in mystic fire. When your\n"
+"vision clears, you find yourself\n"
+"standing in a great hall, filled\n"
+"with ghostly echoes and menacing\n"
+"shadows. In the distance you can\n"
+"see a raised dais, and upon it the\n"
+"only source of light in this world."
+
+# intermission
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"This can only be the chaos sphere,\n"
+"the source of korax's power. with\n"
+"this, you can create worlds... or\n"
+"destroy them. By rights of battle\n"
+"and conquest it is yours, and with\n"
+"trembling hands you reach to grasp\n"
+"it. Perhaps, now, a new player will\n"
+"join the cosmic game of power. Like\n"
+"the pawn who is promoted to queen,\n"
+"suddenly the very reaches of the\n"
+"board seem to be within your grasp."
+
+# intermission
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\nbut there are other players mightier\n"
+"than you, and who can know their\n"
+"next moves?"
+
+# script texts
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "The door is locked"
+
+# script texts
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Greetings, mortal"
+
+# script texts
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Are you ready to die?"
+
+# script texts
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "A door opened on the Guardian of Ice"
+
+# script texts
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "This path is barred"
+
+# script texts
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "One half of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "on the Seven Portals"
+
+# script texts
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "One third of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Stairs have risen on the Seven Portals"
+
+# script texts
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "One third of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "on the Seven Portals"
+
+# script texts
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Stairs have risen on the Seven Portals"
+
+# script texts
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "You have to find another switch..."
+
+# script texts
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Stones grind on the Seven Portals"
+
+# script texts
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "One sixth of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "on the Shadow Wood"
+
+# script texts
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "The door is barred from the inside"
+
+# script texts
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "You hear a door open in the distance"
+
+# script texts
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "One sixth of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "on the Shadow Wood"
+
+# script texts
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "One sixth of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "on the Shadow Wood"
+
+# script texts
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins left"
+
+# script texts
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "You waited too long, now you die!"
+
+# script texts
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "A door opened on the Forsaken Outpost"
+
+# script texts
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "This door won't open yet"
+
+# script texts
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "My servants can smell your blood, human"
+
+# script texts
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "A door opened in the Gibbet"
+
+# script texts
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "The door is barred from the inside"
+
+# script texts
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "A platform has lowered in the tower"
+
+# script texts
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "You have played this game too long, mortal..."
+
+# script texts
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "I think I shall remove you from the board"
+
+# script texts
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "You hear a door open upstairs"
+
+# script texts
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Worship me, and I may yet be merciful"
+
+# script texts
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Then again, maybe not"
+
+# script texts
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "One ninth of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "On the Monastery"
+
+# script texts
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "One ninth of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "On the Monastery"
+
+# script texts
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "One ninth of the puzzle has been solved"
+
+# script texts
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "On the Monastery"
+
+# script texts
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "The portal has been sealed"
+
+# script texts
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Choose your fate"
+
+# script texts
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "The door is barred from the inside"
+
+# script texts
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Are you strong enough"
+
+# script texts
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "To face your own masters?"

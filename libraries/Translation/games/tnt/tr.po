@@ -1,0 +1,192 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:26+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: tr\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Kötü-evrim"
+
+msgid "THUSTR_1"
+msgstr "Seviye 1: Sistem Kontrolü"
+
+msgid "THUSTR_2"
+msgstr "Seviye 2: İnsan Barbekü"
+
+msgid "THUSTR_3"
+msgstr "Seviye 3: Güç Kontrolü"
+
+msgid "THUSTR_4"
+msgstr "Seviye 4: Solucan Deliği"
+
+msgid "THUSTR_5"
+msgstr "Seviye 5: Askı"
+
+msgid "THUSTR_6"
+msgstr "Seviye 6: Açık Sezon"
+
+msgid "THUSTR_7"
+msgstr "Seviye 7: Hapishane"
+
+msgid "THUSTR_8"
+msgstr "Seviye 8: Metal"
+
+msgid "THUSTR_9"
+msgstr "Seviye 9: Kale"
+
+msgid "THUSTR_10"
+msgstr "Seviye 10: Kefaret"
+
+msgid "THUSTR_11"
+msgstr "Seviye 11: Depolama Tesisi"
+
+msgid "THUSTR_12"
+msgstr "Seviye 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Seviye 13: Nukage İşleme"
+
+msgid "THUSTR_14"
+msgstr "Seviye 14: Çelik İşleri"
+
+msgid "THUSTR_15"
+msgstr "Seviye 15: Ölü Bölge"
+
+msgid "THUSTR_16"
+msgstr "Seviye 16: En Derin Erişimler"
+
+msgid "THUSTR_17"
+msgstr "Seviye 17: İşleme Alanı"
+
+msgid "THUSTR_18"
+msgstr "Seviye 18: Değirmen"
+
+msgid "THUSTR_19"
+msgstr "Seviye 19: Nakliye Merkezi"
+
+msgid "THUSTR_20"
+msgstr "Seviye 20: Merkezi İşlem"
+
+msgid "THUSTR_21"
+msgstr "Seviye 21: Yönetim Merkezi"
+
+msgid "THUSTR_22"
+msgstr "Seviye 22: Habitat"
+
+msgid "THUSTR_23"
+msgstr "Seviye 23: Ay Madenciliği Projesi"
+
+msgid "THUSTR_24"
+msgstr "Seviye 24: Taş Ocağı"
+
+msgid "THUSTR_25"
+msgstr "Seviye 25: Baron'un İni"
+
+msgid "THUSTR_26"
+msgstr "Seviye 26: Balistyx"
+
+msgid "THUSTR_27"
+msgstr "Seviye 27: Acı Dağı"
+
+msgid "THUSTR_28"
+msgstr "Seviye 28: Cehennem"
+
+msgid "THUSTR_29"
+msgstr "Seviye 29: Styx Nehri"
+
+msgid "THUSTR_30"
+msgstr "Seviye 30: Son Çağrı"
+
+msgid "THUSTR_31"
+msgstr "Seviye 31: Firavun"
+
+msgid "THUSTR_32"
+msgstr "Seviye 32: Karayipler"
+
+msgid "T1TEXT"
+msgstr ""
+"İstilaya uğradığın yerden savaşarak\n"
+"çıktın. deneysel laboratuarlar.\n"
+"Görünüşe göre UAC bir kez daha\n"
+"yuttu. Onların yüksek ciro, yoksullar\n"
+"için zor olmalı kurumsal sağlık\n"
+"sigortası satın almak için eski\n"
+"UAC Bugünlerde.\n"
+"\n"
+"Önümüzde askeri kompleks uzanıyor,\n"
+"şimdi hastalıklı dehşetlerle kaynıyor\n"
+"dişlerini sana geçirirler. Şansın varsa\n"
+"kompleksinde hala bazı savaş\n"
+"mühimmatları var etrafta yatıyor."
+
+msgid "T2TEXT"
+msgstr ""
+"İleride ağır makinelerin gıcırtılarını\n"
+"duyuyorsunuz. Yeni iblisler\n"
+"üretmediklerini umuyorsunuz ama\n"
+"gerekirse bütün bir sürüyü ortadan\n"
+"kaldırmaya hazırsınız.\n"
+"Bir kan ziyafeti planlıyor olabilirler,\n"
+"ama sen kendini iki bin manyağın\n"
+"tek bir çılgın katilde toplanması\n"
+"kadar kötü hissediyorsun.\n"
+"\n"
+"Kolayca ölmeyi planlamıyorsun."
+
+msgid "T3TEXT"
+msgstr ""
+"İleride açılan manzara gerçekten\n"
+"çok tanıdık geliyor. Kokusu da\n"
+"tanıdık, kızarmış dışkı gibi. Bundan\n"
+"hoşlanmayacağın kesin. Düşündükçe\n"
+"daha da sinirleniyorsun.\n"
+"Silahını çekerken yüzünde şeytani bir\n"
+"sırıtma beliriyor. Biraz hareket zamanı."
+
+msgid "T4TEXT"
+msgstr ""
+"Birdenbire, bir ufuktan diğerine her şey\n"
+"sessizleşir. Cehennemin acı veren\n"
+"yankısı kaybolur. Kabus gökyüzü\n"
+"maviye döner. Canavar ceset yığınları,\n"
+"havayı dolduran kötü kokuyla birlikte\n"
+"buharlaşmaya başlar. Tanrım, belki\n"
+"de başardın. Gerçekten kazandın mı?\n"
+"\n"
+"Uzaktan bir şey gürlüyor.\n"
+"İblis-yaratığın yıkık kafatasının\n"
+"içinde mavi bir ışık parlamaya başlar."
+
+msgid "T5TEXT"
+msgstr ""
+"Şimdi ne oldu? Tamamen farklı\n"
+"görünüyor. Kral Tut'un evi gibi.\n"
+"Burada her ne varsa normalden\n"
+"daha kötü olamaz. Değil mi?\n"
+"Belki de en iyisi uyuyan tanrıların\n"
+"dinlenmesine izin vermektir."
+
+msgid "T6TEXT"
+msgstr ""
+"Tatil zamanı. Cehennemin\n"
+"bağırsaklarını patlattınız ve bir mola\n"
+"için hazırsınız. Belki bir dahaki\n"
+"sefere başka biri Cehennem'in kıçını\n"
+"tekmeleyebilir. Önünüzde huzurlu\n"
+"akan suları, şirin binaları olan ve\n"
+"muhtemelen iblislerin olmadığı\n"
+"sakin bir kasaba uzanıyor.\n"
+"\n"
+"Taşıttan indiğinizde, bir siber\n"
+"iblisin demir ayakkabısının\n"
+"sesini duyuyorsunuz."

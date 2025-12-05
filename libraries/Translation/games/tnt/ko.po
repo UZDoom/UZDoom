@@ -1,0 +1,169 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:31+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"tnt-evilution/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: ko\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: 이블루션"
+
+msgid "THUSTR_1"
+msgstr "레벨 1: 시스템 제어시설"
+
+msgid "THUSTR_2"
+msgstr "레벨 2: 인간 바비큐"
+
+msgid "THUSTR_3"
+msgstr "레벨 3: 전력 통제소"
+
+msgid "THUSTR_4"
+msgstr "레벨 4: 웜홀"
+
+msgid "THUSTR_5"
+msgstr "레벨 5: 격납고"
+
+msgid "THUSTR_6"
+msgstr "레벨 6: 사냥철"
+
+msgid "THUSTR_7"
+msgstr "레벨 7: 감옥"
+
+msgid "THUSTR_8"
+msgstr "레벨 8: 강철"
+
+msgid "THUSTR_9"
+msgstr "레벨 9: 요새"
+
+msgid "THUSTR_10"
+msgstr "레벨 10: 구원"
+
+msgid "THUSTR_11"
+msgstr "레벨 11: 저장소"
+
+msgid "THUSTR_12"
+msgstr "레벨 12: 분화구"
+
+msgid "THUSTR_13"
+msgstr "레벨 13: 폐기물 처리소"
+
+msgid "THUSTR_14"
+msgstr "레벨 14: 제강소"
+
+msgid "THUSTR_15"
+msgstr "레벨 15: 사각지대"
+
+msgid "THUSTR_16"
+msgstr "레벨 16: 깊숙한 강"
+
+msgid "THUSTR_17"
+msgstr "레벨 17: 처리 구역"
+
+msgid "THUSTR_18"
+msgstr "레벨 18: 제분소"
+
+msgid "THUSTR_19"
+msgstr "레벨 19: 운송/리스폰 장소"
+
+msgid "THUSTR_20"
+msgstr "레벨 20: 중앙 처리소"
+
+msgid "THUSTR_21"
+msgstr "레벨 21: 관리 센터"
+
+msgid "THUSTR_22"
+msgstr "레벨 22: 서식지"
+
+msgid "THUSTR_23"
+msgstr "레벨 23: 월석 채광 계획"
+
+msgid "THUSTR_24"
+msgstr "레벨 24: 채석장"
+
+msgid "THUSTR_25"
+msgstr "레벨 25: 남작의 소굴"
+
+msgid "THUSTR_26"
+msgstr "레벨 26: 탄도스틱스"
+
+msgid "THUSTR_27"
+msgstr "레벨 27: 등신같은 등산"
+
+msgid "THUSTR_28"
+msgstr "레벨 28: 젠장함"
+
+msgid "THUSTR_29"
+msgstr "레벨 29: 스틱스 강"
+
+msgid "THUSTR_30"
+msgstr "레벨 30: 최후의 호출"
+
+msgid "THUSTR_31"
+msgstr "레벨 31: 파라오"
+
+msgid "THUSTR_32"
+msgstr "레벨 32: 카리브해"
+
+msgid "T1TEXT"
+msgstr ""
+"당신은 감염된 연구소에서 빠져나오기 위해 악전고투했다. 사태를 보자니\n"
+"또다시 UAC가 곤경에 처한 것이 틀림없다. 예전의 UAC는 건강보험에\n"
+"들어 놓기라도 했지만 지금은...\n"
+"\n"
+"현재 당신은 당신을 삼켜버릴 듯한 공포를 헤치며 군사시설로 향하고 있다.\n"
+"운이 따라준다면, 약간의 군수품들이 시설 곳곳에 놓여있을 것이다."
+
+msgid "T2TEXT"
+msgstr ""
+"당신은 거대한 기계들의 소음이 들리는 곳으로 향하고 있다. 당신은 도장을\n"
+"찍어내듯이 지옥에서 계속 소환되어 나타나는 녀석들과 만나지 않기를\n"
+"희망할 뿐이다. 놈들은 대학살을 실행에 옮기고 있을 것이 분명하다.\n"
+"물론 당신은 놈들을 모두 쓸어버릴 준비가 되어있다. 그러나 2천 마리 이상의\n"
+"적들도 당신을 상대할 준비를 끝낸 듯하다.\n"
+"\n"
+"당신은 쉽게 내려갈 수 없을 것이다."
+
+msgid "T3TEXT"
+msgstr ""
+"어디서 많이 본 듯한 끔찍한 광경이 펼쳐져 있다. 이전에 맡아본- 역겨운\n"
+"냄새도 나고 있다. 당신은 전에도 이 상황을 맘에 들어 하지 않았다. 그러나\n"
+"지옥 역시 현 상황을 계획에 넣은 적은 없다고 당신은 확신하고 있다. 당신이\n"
+"현 상황을 곰곰이 생각해 봐도 앞에는 피바다만 놓여있을 뿐이다. 당신은\n"
+"무기를 들어 올리며 사악한 웃음을 지었다. \n"
+"\n"
+"이제 놈들을 처치할 때가 된 것이다."
+
+msgid "T4TEXT"
+msgstr ""
+"갑자기 모든 것이 조용해졌다. 저 먼 지평선에서 지옥의 고통에 찬 비명이\n"
+"울려 퍼졌다. 악몽 같던 하늘이 푸르게 변하고, 죽은 괴물들의 시체가 지옥의\n"
+"악한 기운과 함께 증발해 버렸다. 휴, 당신이 해낸 것 같다.\n"
+"\n"
+"그런 뭔가가 꿈틀대기 시작하였고,\n"
+"푸른 불빛이 파괴된 악마의 해골에서 빛나기 시작했다..."
+
+msgid "T5TEXT"
+msgstr ""
+"여긴 어디인가? 주위가 완전히 변했다. 여기는 마치 파라오 투탕카멘의\n"
+"무덤처럼 보인다. 흠, 이 상황에서 더 나빠질 것은 없다.\n"
+"\n"
+"그러나 잠든 신들이 다시 깨어나게 될지도 모른다..."
+
+msgid "T6TEXT"
+msgstr ""
+"휴가가 주어졌다. 당신은 지옥의 중심부를 박살 내고 마침내 휴식을 얻은\n"
+"것이다. 당신은 아마도 다음번에는 다른 녀석이 지옥을 혼내줄 것이라며\n"
+"낮은 소리로 투덜거렸다. 당신은 평온한 도시와 평화로운 파도, 옛스러운\n"
+"건물들, 그리고 지옥에서 소환된 녀석들이 있을지도 모르는 곳으로 가고\n"
+"있다.\n"
+"\n"
+"당신이 탈것에서 내리는 순간, 당신은 사이버데몬의 쇠 발굽 소리를 들었다."

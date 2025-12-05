@@ -1,0 +1,179 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/doom-engine-games/"
+"tnt-evilution/da/>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: da\n"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Systemkontrol"
+
+msgid "THUSTR_2"
+msgstr "Level 2: Menneskelig grill"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Kontrol med magten"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Ormehul"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Åben sæson"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Fængsel"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Borgen"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Forløsning"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Opbevaringsanlæg"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Nukageforarbejdning"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Stålværk"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Død zone"
+
+msgid "THUSTR_16"
+msgstr "Level 16: De dybeste afkroge"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Forarbejdningsområde"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Mølle"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Forsendelsescenter"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Central forarbejdning"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Administrationscenter"
+
+msgid "THUSTR_22"
+msgstr "Level 22: Levested"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Projekt for månens minedrift"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Stenbrud"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Baronens hule"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Smertefjellet"
+
+msgid "THUSTR_29"
+msgstr "Level 29: Floden Styx"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Sidste opkald"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Farao"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Caribien"
+
+msgid "T1TEXT"
+msgstr ""
+"Du har kæmpet dig ud af de inficerede\n"
+"forsøgslaboratorier. Det ser ud til,\n"
+"at UAC endnu en gang har slugt det hele.\n"
+"Med deres høje omsætning må det være\n"
+"svært for stakkels gamle UAC at købe\n"
+"sygeforsikring nu om dage...\n"
+"\n"
+"Foran ligger det militære kompleks,\n"
+"der nu vrimler med syge rædsler,\n"
+"der er varme på at sætte tænderne i dig.\n"
+"Med lidt held har komplekset stadig\n"
+"noget krigsmateriel liggende."
+
+msgid "T2TEXT"
+msgstr ""
+"Du kan høre det kværnen fra tunge\n"
+"maskiner forude. Du håber virkelig\n"
+"ikke, at de lader nye helvede-\n"
+"synder, men du er klar til at\n"
+"udrydde en hel flok, hvis du\n"
+"er nødt til det.\n"
+"De planlægger måske en blodfest,\n"
+"men du føler dig lige så ondskabsfuld\n"
+"som to tusinde galninge, der er samlet\n"
+"i én gal morder.\n"
+"\n"
+"Du har ikke tænkt dig at gå let ned."
+
+msgid "T3TEXT"
+msgstr ""
+"Udsigten, der åbner sig forude, ser\n"
+"fandeme bekendt ud. Den lugter også\n"
+"bekendt - som stegt ekskrementer.\n"
+"Du kunne ikke lide det her sted før,\n"
+"og du har helt sikkert ikke tænkt\n"
+"dig at kunne lide det nu. Jo mere du\n"
+"grubler over det, jo mere vred bliver du.\n"
+"\n"
+"Du løfter din pistol og får et ondt\n"
+"grin på dit ansigt.\n"
+"Tid til at rydde op."
+
+msgid "T4TEXT"
+msgstr ""
+"Pludselig er alt stille, fra den ene\n"
+"horisont til den anden. Helvedes\n"
+"kvalfulde ekko forsvinder, mareridtshimlen\n"
+"bliver blå, bunkerne af monsterkadavere\n"
+"begynder at fordampe sammen med den onde\n"
+"stank, der fyldte luften. Jøsses, måske\n"
+"har du gjort det. Har du virkelig vundet?\n"
+"\n"
+"Noget rumler i det fjerne. \n"
+"Et blåt lys begynder at gløde inde i\n"
+"dæmonspytterens ødelagte kranie."
+
+msgid "T5TEXT"
+msgstr ""
+"Hvad nu? Det ser helt anderledes ud.\n"
+"Lidt ligesom King Tut's lejlighed.\n"
+"Hvad end der er her, kan det ikke\n"
+"være værre end normalt. Kan det?\n"
+"Eller måske er det bedst at\n"
+"lade sovende guder ligge..."
+
+msgid "T6TEXT"
+msgstr ""
+"Det er tid til en ferie. Du har sprængt\n"
+"helvedes indvolde, og du er klar til at\n"
+"tage en pause. Du mumler for dig selv, at\n"
+"måske kan en anden give Helvede røvfuld\n"
+"næste gang. Forude ligger en stille by\n"
+"med fredeligt rindende vand, maleriske\n"
+"bygninger og formentlig ingen dæmoner.\n"
+"\n"
+"Da du træder ud af transporten, hører\n"
+"du en cyberdæmons jernsko trampe."

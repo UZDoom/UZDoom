@@ -1,0 +1,414 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:39+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/"
+"hexen-deathkings/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: de\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Zerstörtes Dorf"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Fäule"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Sumpf"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakombe"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Ödland"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Moorwald"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Scheiterhaufen"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Wachtor"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Schatzkammer"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Marktplatz"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Heimsuchung"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Waffenkammer"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Kirchenschiff"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kantorei"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Schlachthaus"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Dunkle Wache"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloake"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Eiskammer"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Dunkle Festung"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Durchreise"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Drunter und Drüber"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Todesnebel"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Burg der Angst"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Kanalgrube"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Die Rose"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Mit zitternden Händen wischst du dir\n"
+"über dein blutiges Gesicht und\n"
+"versuchst, einen klaren Kopf für das\n"
+"zu bekommen, was vor dir liegt...\n"
+"\n"
+"...und um das zu vergessen was du \n"
+"hinter dir gelassen hast.\n"
+"\n"
+"In der Ferne siehst du einen kahlen\n"
+"Befestigungswall eines großen\n"
+"Schlosses, das den Himmel darüber\n"
+"zu zerreißen scheint, und der\n"
+"Gestank der Verwesung\n"
+"weht von den unzähligen Toten der\n"
+"geschändeten Gräber herüber.\n"
+"\n"
+"Sorgfältig zählst du die wenigen\n"
+"Artefakte die du noch übrig hast\n"
+"und versucht dir zu versichern, das\n"
+"sie ausreichen werden. Im\n"
+"Grunde genommen muss es doch\n"
+"einfach ausreichen, oder nicht?\n"
+"\n"
+"Oder nicht?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Es sind sicherlich die Seelen der\n"
+"Verdammten, die diese Welt be-\n"
+"wohnen, denn nichts Gutes oder\n"
+"Ehrliches könnte hier lange überleben.\n"
+"\n"
+"Aber was vorher vergangen ist,\n"
+"kann nur ein blasser Schatten\n"
+"dessen sein, was deinen Weg\n"
+"blockiert: die dunkle Zitadelle selbst.\n"
+"\n"
+"Die düstere Masse der Kathedrale\n"
+"blockiert alles andere als frag-\n"
+"mentarische Einblicke in die\n"
+"eigentliche Zitadelle, aber was\n"
+"man sehen kann, spricht in\n"
+"zischendem Flüstern von\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Kälte und lauerndem Tod ..."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Wieder findest du dich in der großen\n"
+"Halle der Chaossphäre, als wenn seit\n"
+"dem letzten Mal, als du dich zwischen\n"
+"diesen Schatten bewegtest, keine Zeit vergangen wäre.\n"
+"\n"
+"Aber etwas ist anders, eine schaurige\n"
+"Stille, wo einst leises Flüstern gewesen\n"
+"ist, ein Gefühl, von verborgenen Augen\n"
+"beobachtet zu werden...\n"
+"\n"
+"... Augen, die eine boshafte Absicht\n"
+"verbergen."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Schon einmal hast du die Chaossphäre\n"
+"in deinen zitternden Händen gehalten.\n"
+"Doch dieses mal erzittert du durch mehr\n"
+"als nur Gier, denn Furcht vermischt sich\n"
+"mit dem Verlangen nach\n"
+"Macht.\n"
+"\n"
+"Wenn selbst die Chaossphäre nicht\n"
+"genug ist, um dich vor den Mächten der\n"
+"Dunkelheit zu beschützen, dann sollte\n"
+"sie vielleicht doch lieber unberührt\n"
+"bleiben und das Versprechen nicht eingelöst werden.\n"
+"\n"
+"\n"
+"\n"
+"Andererseits bist du noch nie vor einer\n"
+"Herausforderung zurückgewichen..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"...und andere Spieler warten.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Du wagst es im Bereitschaftsraum zu kämpfen?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Dafür sollst du sterben!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Der Wasserfall ist geöffnet"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Der Wasserfall ist blockiert"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Eine Tür in der Kapelle hat sich geöffnet"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Hm. Das ist merkwürdig..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Drei weitere Teile des Rätsels verbleiben"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Zwei weitere Teile des Rätsels verbleiben"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Ein weiteres Teil des Rätsels ist übrig"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Das Rätsel ist abgeschlossen"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Du hast das Rätsel noch nicht gelöst"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Der Boden hier ist nicht sicher!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Ein Drittel des Rätsels ist gelöst"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Zwei Drittel des Rätsels sind gelöst"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Du hörst, wie sich in der Ferne eine Platform bewegt"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Es ist getan..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Du hast das Rätsel noch nicht gelöst"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Ich warne dich..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Du bist aber stur, was?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Und auch noch dumm"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Ein Viertel des Rätsels ist gelöst"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Falsche Wahl..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Die Symbole sind nicht ausgerichtet"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Die Tür kann sich von dieser Seite nicht öffnen"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Die Tür ist von außen verriegelt"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Gotteslästerung!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Du hast Erics Gruft entehrt!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Und nun stirbst du!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Ein Drittel des Rätsels ist gelöst"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Zwei Drittel des Rätsels sind gelöst"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Die Gruft ist offen"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Hüte dich vor dem Grab der Spinne"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Du hörst, wie sich draußen eine Plattform erhebt"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Denkst du das heute dein Glückstag ist?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Du hast falsch geraten!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Gut geraten"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Kannst du die Skripte für all meine Level schreiben?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Berühr mein Ding nicht"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Tödlich ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Gib mir etwas Zucker, Baby"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Uh-huh..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Film in einer Stunde?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Ich bekomme noch nicht einmal meinen eigenen Grabstein - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Lass kein Blut vergossen sein"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Lass keine Hand in Wut erhoben sein"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Wer wagt es unseren Schlummer zu stören?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Der Weg ist offen"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Du musst "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20Schalter übrig"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Du musst nur "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20Schalter finden"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Der Ausgang ist offen"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Die Türen werden sich nicht von dieser Seite öffnen"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Die Türen sind offen..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...Wenn du bereit bist"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Eine Tür hat sich geöffnet"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "In der Kantorei"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Eine Brücke wurde errichtet"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "Im Schlachthaus"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Eine Treppe wurde errichtet"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "auf der Dunklen Wache"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Ein Zahnrad wurde eingesetzt"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20Zahnräder wurden eingesetzt"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Eine Barrikade wurde geöffnet"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "In der Kloake"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Der Weg zurück ist offen"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Die Tür ist von innen verriegelt"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Wagst du es"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "das Grab des Henkers zu plündern?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Bereite dich vor zu sterben"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Du musst "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20weitere Schalter finden"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Du musst nur "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20Schalter finden"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Der Weg zum Turm ist offen"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Der Weg ist offen"

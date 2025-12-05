@@ -1,0 +1,183 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:30+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: nl\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Het Plutonia Experiment"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: Bron van zielen"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: Azteken"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: Gekooid"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: Spookstad"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: Baron's kamp"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: Omheining"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: Rijk"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: Abattoir"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: Aanval"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: Gejaagd"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: Haast"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: De crypte"
+
+msgid "PHUSTR_14"
+msgstr "Niveau 14: Genesis"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: De schemering"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: De omen"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: Faciliteit"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: Neurosferen"
+
+msgid "PHUSTR_19"
+msgstr "Niveau 19: NME"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: Het domein van de dood"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: Doder"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: Onmogelijke missie"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: Grafsteen"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: De eindgrens"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: De tempel van de duisternis"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: Antichrist"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: De rioleringen"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: Odyssee van geluiden"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: De poort van de hel"
+
+msgid "PHUSTR_31"
+msgstr "Niveau 31: Cyberden"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: Ga ervoor"
+
+msgid "P1TEXT"
+msgstr ""
+"Je leed je over het stomende karkas van de\n"
+"Bewaker. Met zijn dood heb je de versneller\n"
+"uit de stinkende klauwen van de hel gehaald.\n"
+"Je ontspant je en kijkt in de kamer rond.\n"
+"Verdomme! Er zou minstens één werkend\n"
+"prototype moeten zijn, maar je kunt het\n"
+"niet zien. De demonen moeten het hebben\n"
+"genomen.\n"
+"\n"
+"Je moet het prototype vinden, anders zijn al\n"
+"je gevechten verloren gegaan. Blijf in\n"
+"beweging, blijf vechten, blijf doden.\n"
+"Oh ja, blijf ook leven."
+
+msgid "P2TEXT"
+msgstr ""
+"Zelfs het dodelijke Arch-Vile labyrint kon\n"
+"je niet tegenhouden, en je hebt het prototype in\n"
+"handen, dat snel efficiënt en permanent wordt\n"
+"gedeactiveerd.\n"
+"\n"
+"Daar ben je goed in."
+
+msgid "P3TEXT"
+msgstr ""
+"Je hebt je een weg gevochten naar het hart\n"
+"van de duivelskamer. \n"
+"Tijd voor een zoek-en-vernietigingsmissie,\n"
+"gericht op de Poortwachter, wiens vuile\n"
+"nakomelingen de aarde binnenvallen. Ja, hij\n"
+"is slecht. Maar je weet wie erger is!\n"
+"\n"
+"Je controleert je spullen en maakt je klaar\n"
+"om de klootzak een beetje de hel van je\n"
+"eigen makelij te geven!"
+
+msgid "P4TEXT"
+msgstr ""
+"Het boze gezicht van de poortwachter is bevlekt\n"
+"met bloed. Terwijl het gehavende lijk instort,\n"
+"vormt zich een omgekeerde poort en zuigt de\n"
+"scherven van het laatste prototype versneller,\n"
+"om nog maar te zwijgen van de enkele resterende\n"
+"demonen. Je bent klaar. De hel is teruggegaan\n"
+"naar het verpletteren van slechte dode mensen\n"
+"in plaats van goede levende mensen. Vergeet\n"
+"niet om je kleinkinderen te vertellen dat ze\n"
+"een raketwerper in je kist moeten stoppen\n"
+"zodat je nog een laatste keer kunt opruimen\n"
+"als je naar de hel gaat."
+
+msgid "P5TEXT"
+msgstr ""
+"Je hebt het op een na hardste niveau\n"
+"gevonden dat we hebben. Hopelijk heb je\n"
+"een opgeslagen spel een of twee eerdere\n"
+"niveaus. Zo niet, wees bereid om te\n"
+"sterven in overvloed. Alleen voor\n"
+"meesterlijke mariniers."
+
+msgid "P6TEXT"
+msgstr ""
+"Wedden dat je je afvroeg wat het moeilijkste\n"
+"niveau was dat we voor je hadden?\n"
+"Nu weet je het.\n"
+"Niemand komt er levend uit."

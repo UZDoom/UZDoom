@@ -1,0 +1,476 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"HeaderCode: default\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP42"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP43"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP44"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP45"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP46"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP47"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP48"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP49"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP50"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP51"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP52"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP53"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP54"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP55"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP56"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP57"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP58"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP59"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP60"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP33"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP34"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP35"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP36"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP37"
+msgstr ""
+
+msgid "TXT_HEXDD_MAP38"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# intermission
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# intermission
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# intermission
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+# intermission
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\n"
+"\n"
+
+# script texts
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr ""

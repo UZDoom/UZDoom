@@ -1,0 +1,252 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 05:42+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: eo\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "La Havenoj"
+
+msgid "HHUSTR_E1M2"
+msgstr "La Malliberejoj"
+
+msgid "HHUSTR_E1M3"
+msgstr "La Pordegejo"
+
+msgid "HHUSTR_E1M4"
+msgstr "La Gardturo"
+
+msgid "HHUSTR_E1M5"
+msgstr "La Citadelo"
+
+msgid "HHUSTR_E1M6"
+msgstr "La Katedralo"
+
+msgid "HHUSTR_E1M7"
+msgstr "La Kriptoj"
+
+msgid "HHUSTR_E1M8"
+msgstr "Faŭko de Infero"
+
+msgid "HHUSTR_E1M9"
+msgstr "La Tombejo"
+
+msgid "HHUSTR_E2M1"
+msgstr "La Kratero"
+
+msgid "HHUSTR_E2M2"
+msgstr "La Lafo-Fosaĵo"
+
+msgid "HHUSTR_E2M3"
+msgstr "La Rivero de Fajro"
+
+msgid "HHUSTR_E2M4"
+msgstr "La Glacigroto"
+
+msgid "HHUSTR_E2M5"
+msgstr "La Katakomboj"
+
+msgid "HHUSTR_E2M6"
+msgstr "La Labirinto"
+
+msgid "HHUSTR_E2M7"
+msgstr "La Granda Halo"
+
+msgid "HHUSTR_E2M8"
+msgstr "La Portaloj de Ĥaoso"
+
+msgid "HHUSTR_E2M9"
+msgstr "La Glaciejo"
+
+msgid "HHUSTR_E3M1"
+msgstr "La Stokejo"
+
+msgid "HHUSTR_E3M2"
+msgstr "La Kloako"
+
+msgid "HHUSTR_E3M3"
+msgstr "La Kunfluiĝo"
+
+msgid "HHUSTR_E3M4"
+msgstr "La Lazurfortikaĵo"
+
+msgid "HHUSTR_E3M5"
+msgstr "La Nestego de Ofidia"
+
+msgid "HHUSTR_E3M6"
+msgstr "La Koridoroj de Timo"
+
+msgid "HHUSTR_E3M7"
+msgstr "La Fendego"
+
+msgid "HHUSTR_E3M8"
+msgstr "Ĉefturo de Desparilo"
+
+msgid "HHUSTR_E3M9"
+msgstr "La Akvigilo"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalko"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blokhaŭso"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ĥorĉirkaŭirejo"
+
+msgid "HHUSTR_E4M4"
+msgstr "Tombo"
+
+msgid "HHUSTR_E4M5"
+msgstr "Granda Ŝtuparo"
+
+msgid "HHUSTR_E4M6"
+msgstr "Haloj de la Apostato"
+
+msgid "HHUSTR_E4M7"
+msgstr "Muregoj de Pereo"
+
+msgid "HHUSTR_E4M8"
+msgstr "Frakasita Ponto"
+
+msgid "HHUSTR_E4M9"
+msgstr "Maŭzoleo"
+
+msgid "HHUSTR_E5M1"
+msgstr "Klifoj de Okro"
+
+msgid "HHUSTR_E5M2"
+msgstr "Rapidfluoj"
+
+msgid "HHUSTR_E5M3"
+msgstr "Kajo"
+
+msgid "HHUSTR_E5M4"
+msgstr "Korto"
+
+msgid "HHUSTR_E5M5"
+msgstr "Akvotjr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Kolonaro"
+
+msgid "HHUSTR_E5M7"
+msgstr "Haladza Domego"
+
+msgid "HHUSTR_E5M8"
+msgstr "Kampo de Juĝo"
+
+msgid "HHUSTR_E5M9"
+msgstr "Fadenaro de D'Sparil"
+
+msgid "HE1TEXT"
+msgstr ""
+"Per la detruo de la ferliĉoj kaj iliaj\n"
+"servistoj, la revivantoj ceteraj estas\n"
+"forigaj el ĉi tiu ebeno de ekzisto.\n"
+"\n"
+"Tamen, tiuj estuloj devis veni el ie,\n"
+"kaj vi suspektas, ke la pordego fajra\n"
+"de la faŭko de infero malfermas en\n"
+"ilian dimension hejman.\n"
+"\n"
+"Por certigi, ke pli revivantoj (aŭ eĉ pli\n"
+"malbonaj aĵoj) ne travenos, vi devos\n"
+"fermi la faŭkon de infero ĉe la flanko alia.\n"
+"Kompreneble, tio signifas, ke vi eble estos\n"
+"kaptita en mondo tre malamika, sed neniu\n"
+"iam diris, ke esti herezulo estis facila!"
+
+msgid "HE2TEXT"
+msgstr ""
+"La bategtaŭroj potencaj montriĝis\n"
+"tro malfortaj kontraŭ vi, kaj dum iliaj\n"
+"kadavroj vaporantaj falas sur la teron,\n"
+"vi sentas kontenton malafablan,\n"
+"ke ili estas detruitaj.\n"
+"\n"
+"La pordegoj, kiujn ili gardis, malfermiĝas,\n"
+"rivelante tion, kion espereble estas la vojo\n"
+"hejmen, sed dum vi trapaŝas, ridado\n"
+"mokanta resonas en viaj oreloj.\n"
+"\n"
+"Ĉu forto alia regis la bategtaŭrojn?\n"
+"Ĉu estas eble eĉ pli estuloj hororaj tra\n"
+"ĉi tiu pordego? La balao de kupolo kristala\n"
+"supre, kie la ĉielo devas esti, certe ne\n"
+"estas antaŭsigno bona..."
+
+msgid "HE3TEXT"
+msgstr ""
+"La morto de D'Sparil malfiksis la ligilojn\n"
+"sorĉajn, kiuj tenis lian estulojn sur tion\n"
+"ĉi ebeno, dum iliaj kriegoj mortaj sonas\n"
+"super liaj kriegoj propraj de agonio.\n"
+"\n"
+"Via ĵuro de venĝo verigita,\n"
+"vi eniras la portalon al vian mondon\n"
+"propran nur momentojn antaŭ la\n"
+"kupolo disfrakasiĝas en milionojn\n"
+"da pecoj\n"
+"\n"
+"Sed se la povo de D'Sparil estas eterne\n"
+"detruita, kial vi ne sentas sekura? Ĉu\n"
+"estis pro la fina kriego tuj antaŭ lia\n"
+"morto — tiu, kiu sonis kiel malbeno?\n"
+"Aŭ alvoko? Vi vere ne povas certi,\n"
+"sed ĝi eble estis nur kriego.\n"
+"\n"
+"Tamen, kio pri la aliaj Serpentrajdistoj?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Vi pensis, ke vi revenus al via mondo\n"
+"propra post D'Sparil mortis, sed lia fina\n"
+"ago forpelis vin al lia ebeno. Ĉi tie vi\n"
+"eniris la restaĵojn frakasitajn el landoj\n"
+"konkeritaj de D'Sparil. Vi venkis la finajn\n"
+"gardistojn de ĉi tiuj landoj, sed nun vi\n"
+"staras antaŭ la pordegoj inter vi kaj la\n"
+"fuorto de D'Sparil. Ĝis tiu ĉi momento,\n"
+"vi ne dubis, ke vi povus kontraŭi ĉion ajn,\n"
+"kioj vi eble trovos, sed preter ĉi tiu\n"
+"pordego estas la koro de mavo mem, \n"
+"kio invadis vian mondon. D'Sparil estas\n"
+"mortinta, sed la truo, kie li naskiĝis,\n"
+"restas. Nun vi devas eniri tiun truon,\n"
+"esperante trovi elirejon. Kaj ie, en la plej\n"
+"malhela angulo de la posedaĵo de D'Sparil,\n"
+"liaj gardistoj personaj atendas vian\n"
+"alvenon..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Dum la bategtaŭro fina blekas lian\n"
+"agonion, vi konscias, ke vi neniam\n"
+"estis tiom prokisme de via detruo\n"
+"propra. Ne eĉ la batalo kun D'Sparil\n"
+"kaj liaj disĉiploj estis tiom afliktaj.\n"
+"Malgaje, vi rigardas la pordegon,\n"
+"kiu malfermiĝas antaŭ vi, scivolante\n"
+"ĉu ĝi gvidas hejmen, aŭ ĉu ĝi\n"
+"gvidas al iu teruro neprirevita.\n"
+"Vi troviĝas vin scivolanta ĉu vi havas\n"
+"forton por daŭri plu, se nenio krom\n"
+"morto kaj doloro atendas vin. Sed\n"
+"kion alian vi povas fari, se la volo batali\n"
+"estas for? Ĉu vi povas devigi vin daŭri\n"
+"fronte al tia malespero? Ĉu vi havas\n"
+"la kuraĝon? Vi trovas, fine, ke vi\n"
+"ne havas la povo rezigni sen batalo.\n"
+"Kun okuloj malfermegitaj, vi iras\n"
+"por renkonti vian destinon."

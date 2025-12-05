@@ -925,6 +925,11 @@ void ZCCDoomCompiler::InitDefaults()
 				{
 					bag.Info->SetDropItems(bag.DropItemList);
 				}
+
+				if (GetDefaultByType(ti)->IsClientSide() && ti->IsDescendantOf(NAME_Inventory))
+				{
+					Error(c->cls, "Inventory item %s cannot be client-sided", ti->TypeName.GetChars());
+				}
 			}
 		}
 	}

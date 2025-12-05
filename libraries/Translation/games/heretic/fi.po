@@ -1,0 +1,250 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 06:45+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/"
+"doom-engine-games/heretic/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: fi\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Satamat"
+
+msgid "HHUSTR_E1M2"
+msgstr "Tyrmät"
+
+msgid "HHUSTR_E1M3"
+msgstr "Porttitalo"
+
+msgid "HHUSTR_E1M4"
+msgstr "Vartiotorni"
+
+msgid "HHUSTR_E1M5"
+msgstr "Linnake"
+
+msgid "HHUSTR_E1M6"
+msgstr "Katedraali"
+
+msgid "HHUSTR_E1M7"
+msgstr "Kryptat"
+
+msgid "HHUSTR_E1M8"
+msgstr "Helvetin kita"
+
+msgid "HHUSTR_E1M9"
+msgstr "Hautausmaa"
+
+msgid "HHUSTR_E2M1"
+msgstr "Kraateri"
+
+msgid "HHUSTR_E2M2"
+msgstr "Laavamontut"
+
+msgid "HHUSTR_E2M3"
+msgstr "Tulijoki"
+
+msgid "HHUSTR_E2M4"
+msgstr "Jääluola"
+
+msgid "HHUSTR_E2M5"
+msgstr "Katakombit"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labyrintti"
+
+msgid "HHUSTR_E2M7"
+msgstr "Suuri halli"
+
+msgid "HHUSTR_E2M8"
+msgstr "Kaaoksen portaalit"
+
+msgid "HHUSTR_E2M9"
+msgstr "Jäätikkö"
+
+msgid "HHUSTR_E3M1"
+msgstr "Varasto"
+
+msgid "HHUSTR_E3M2"
+msgstr "Likakaivo"
+
+msgid "HHUSTR_E3M3"
+msgstr "Yhtymäkohta"
+
+msgid "HHUSTR_E3M4"
+msgstr "Sininen linnoitus"
+
+msgid "HHUSTR_E3M5"
+msgstr "Käärmeiden pesä"
+
+msgid "HHUSTR_E3M6"
+msgstr "Pelon salit"
+
+msgid "HHUSTR_E3M7"
+msgstr "Rotko"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparilin linna"
+
+msgid "HHUSTR_E3M9"
+msgstr "Akviferi"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalkki"
+
+msgid "HHUSTR_E4M2"
+msgstr "Linnoitus"
+
+msgid "HHUSTR_E4M3"
+msgstr "Kuorikäytävä"
+
+msgid "HHUSTR_E4M4"
+msgstr "Hautakammio"
+
+msgid "HHUSTR_E4M5"
+msgstr "Suuret portaat"
+
+msgid "HHUSTR_E4M6"
+msgstr "Luopioiden salit"
+
+msgid "HHUSTR_E4M7"
+msgstr "Kadotuksen vallit"
+
+msgid "HHUSTR_E4M8"
+msgstr "Särkynyt silta"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleumi"
+
+msgid "HHUSTR_E5M1"
+msgstr "Okrajyrkänteet"
+
+msgid "HHUSTR_E5M2"
+msgstr "Koski"
+
+msgid "HHUSTR_E5M3"
+msgstr "Satamalaituri"
+
+msgid "HHUSTR_E5M4"
+msgstr "Linnanpiha"
+
+msgid "HHUSTR_E5M6"
+msgstr "Pylväikkö"
+
+msgid "HHUSTR_E5M7"
+msgstr "Löyhkäävä kartano"
+
+msgid "HHUSTR_E5M8"
+msgstr "Tuomion kenttä"
+
+msgid "HHUSTR_E5M9"
+msgstr "D'Sparilin vyyhti"
+
+msgid "HE1TEXT"
+msgstr ""
+"Rautakalmojen ynnä niiden kätyreiden tuhon\n"
+"myötä viimeisetkin epäkuolleet on korjattu\n"
+"tältä olevaisuuden tasolta.\n"
+"\n"
+"Olentojen on täytynyt kuitenkin tulla\n"
+"jostakin, ja ounastelet helvetin kidan\n"
+"palavan portaalin aukeavan niiden\n"
+"kotiulottuvuuteen.\n"
+"\n"
+"Varmistaaksesi, ettei enempää epäkuolleita\n"
+"(tai vielä pahempaa) tule läpi, sinun on\n"
+"sinetöitävä helvetin kita toiselta puolelta.\n"
+"Se tietenkin tarkoittaa, että saatat jäädä\n"
+"jumiin hyvin vihamieliseen maailmaan, mutta\n"
+"kukaan ei sanonutkaan kerettiläisyyden\n"
+"olevan helppoa!"
+
+msgid "HE2TEXT"
+msgstr ""
+"Mahtavat maulotaurit eivät osoittautuneet\n"
+"sinulle vastukseksi, ja niiden savuavien\n"
+"ruumiiden syöksyessä maahan tunnet julmaa\n"
+"mielihyvää niiden tuhoutumisesta.\n"
+"\n"
+"Niiden vartioimat porttikäytävät ovat\n"
+"avautuneet paljastamaan tien, jonka toivot\n"
+"johtavan kotiin. Mutta astuessasi läpi\n"
+"kuulet pilkkaavan naurun soivan korvissasi.\n"
+"\n"
+"Hallitsiko jokin muu voima maulotaureja?\n"
+"Voisiko tämän portin takana olla vieläkin\n"
+"kamalampia olentoja? Yläpuolellesi kaartuva\n"
+"kristallikupoli, jossa taivaan pitäisi olla,\n"
+"ei ainakaan lupaa hyvää...."
+
+msgid "HE3TEXT"
+msgstr ""
+"D'Sparilin kuoleman heikennettyä\n"
+"taikavoimia, jotka sitovat hänen olentonsa\n"
+"tähän ulottuvuuteen, niiden kuolonhuudot\n"
+"hukuttavat allensa hänen omat piinaiset\n"
+"parahduksensa.\n"
+"\n"
+"Kostonvalasi täytettynä astut portaalista\n"
+"omaan maailmaasi vain hetkeä ennen kupolin\n"
+"särkymistä miljooniksi palasiksi.\n"
+"\n"
+"Mutta jos D'Sparilin voima on murrettu\n"
+"iäksi, mikset tunne oloasi turvalliseksi?\n"
+"Oliko se hänen viimeinen juuri ennen hänen\n"
+"kuolemaansa edeltänyt huuto, joka kuulosti\n"
+"kiroukselta? Tai manaukselta? Et voi olla\n"
+"ihan varma, mutta se saattoi olla vain huuto.\n"
+"\n"
+"Mutta toisaalta, miten on muiden\n"
+"Käärmeratsastajien laita?"
+
+msgid "HE4TEXT"
+msgstr ""
+"Luulit palaavasi maailmaasi D'Sparilin\n"
+"kuoleman jälkeen, mutta hänen viimeinen\n"
+"tekonsa karkotti sinut hänen omaan\n"
+"ulottuvuuteensa. Täällä sinä astuit\n"
+"raunioisten maiden rippeisiin, jotka\n"
+"D'Sparil oli valloittanut. Päihitit näiden\n"
+"maiden viimeiset vartijat, mutta nyt seisot\n"
+"D'Sparilin linnoituksen porttien edessä.\n"
+"Ennen tätä hetkeä sinulla ei ollut\n"
+"epäilystäkään kyvyistäsi kohdata mitä\n"
+"tahansa vastaasi mahdollisesti tulevaa,\n"
+"mutta tämän portin takana sijaitsee juuri\n"
+"sen samaisen pahuuden sydän, joka oli\n"
+"hyökännyt maailmaasi. D'Sparil saattaa olla\n"
+"kuollut, mutta syvyys, josta hänet\n"
+"synnytettiin, jatkuu olemistaan. Nyt sinun\n"
+"on laskeuduttava siihen syvyyteen ulospääsyn\n"
+"toivossa, ja jossakin D'Sparilin piirin\n"
+"pimeimmässä nurkassa hänen henkivartijansa\n"
+"odottavat saapumistasi."
+
+msgid "HE5TEXT"
+msgstr ""
+"Viimeisen maulotaurin mylviessä\n"
+"kuolontuskaansa tajuat, ettet ole koskaan\n"
+"tullut näin lähelle omaa tuhoasi. Edes\n"
+"taistelu D'Sparilin ja hänen opetuslastensa\n"
+"kanssa ei ollut näin epätoivoinen. Tuijotat\n"
+"synkästi edessäsi aukeavia portteja miettien,\n"
+"johtavatko ne kotiin, vai avautuvatko ne\n"
+"johonkin kauhuun, josta et ole osannut\n"
+"uneksiakaan. Huomaat pohtivasi, onko sinulla\n"
+"voimia jatkaa, jos vastassasi ei ole muuta\n"
+"kuin kuolemaa ja tuskaa. Mutta mitä\n"
+"muutakaan voit tehdä, jos tahto taistella on\n"
+"loppu? Voitko pakottaa itsesi jatkamaan\n"
+"sellaisen toivottomuuden edessä? Riittääkö\n"
+"sinulla rohkeus? Päädyt lopulta siihen,\n"
+"ettei taistelematta luovuttaminen kuulu\n"
+"luontoosi. Menet silmät avoinna tapaamaan\n"
+"kohtalosi."

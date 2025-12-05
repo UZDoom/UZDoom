@@ -1,0 +1,259 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:26+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: nl\n"
+
+msgid "TXT_D2E1"
+msgstr "Hel op Aarde"
+
+msgid "TXT_D2E2"
+msgstr "Geen Rust voor de Levenden"
+
+msgid "HUSTR_1"
+msgstr "Level 1: Ingang"
+
+msgid "HUSTR_2"
+msgstr "Level 2: Onderhallen"
+
+msgid "HUSTR_3"
+msgstr "Level 3: De gantlet"
+
+msgid "HUSTR_4"
+msgstr "Level 4: De focus"
+
+msgid "HUSTR_5"
+msgstr "Level 5: De afvaltunnels"
+
+msgid "HUSTR_6"
+msgstr "Level 6: De maalmachine"
+
+msgid "HUSTR_7"
+msgstr "Level 7: Dodelijk eenvoudig"
+
+msgid "HUSTR_8"
+msgstr "Level 8: Trucs en vallen"
+
+msgid "HUSTR_9"
+msgstr "Level 9: De groeve"
+
+msgid "HUSTR_10"
+msgstr "Level 10: Tankstation"
+
+msgid "HUSTR_11"
+msgstr "Level 11: 'O' van vernietiging!"
+
+msgid "HUSTR_12"
+msgstr "Level 12: De fabriek"
+
+msgid "HUSTR_13"
+msgstr "Level 13: De binnenstad"
+
+msgid "HUSTR_14"
+msgstr "Level 14: De binnenste gebouwen"
+
+msgid "HUSTR_15"
+msgstr "Level 15: Industriegebied"
+
+msgid "HUSTR_16"
+msgstr "Level 16: Buitenwijken"
+
+msgid "HUSTR_17"
+msgstr "Level 17: Huurwoningen"
+
+msgid "HUSTR_18"
+msgstr "Level 18: De binnenplaats"
+
+msgid "HUSTR_19"
+msgstr "Level 19: De citadel"
+
+msgid "HUSTR_20"
+msgstr "Level 20: Ik heb je!"
+
+msgid "HUSTR_21"
+msgstr "Niveau 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Level 22: De catacomben"
+
+msgid "HUSTR_23"
+msgstr "Level 23: Grappige vaten"
+
+msgid "HUSTR_24"
+msgstr "Level 24: De afgrond"
+
+msgid "HUSTR_25"
+msgstr "Level 25: Bloeddruppels"
+
+msgid "HUSTR_26"
+msgstr "Level 26: De verlaten mijnen"
+
+msgid "HUSTR_27"
+msgstr "Level 27: Monster Condo"
+
+msgid "HUSTR_28"
+msgstr "Level 28: De geestenwereld"
+
+msgid "HUSTR_29"
+msgstr "Level 29: Het levende einde"
+
+msgid "HUSTR_30"
+msgstr "Level 30: Pictogram van de zonde"
+
+msgid "HUSTR_31"
+msgstr "Level 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Niveau 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Niveau 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Niveau 32: Scherpzinnig"
+
+msgid "HUSTR_33"
+msgstr "Level 33: Verraad"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: De basis van de aarde"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: De pijnlaboratoria"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: Canyon van de doden"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: Helleberg"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: Vivisectie"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: Bloederige inferno"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: Baron's banket"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: Graf van kwaadwilligheid"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: Maart van de demonen"
+
+msgid "C1TEXT"
+msgstr ""
+"Je bent diep in de besmette sterhaven\n"
+"terechtgekomen. Maar er is iets mis.\n"
+"De monsters hebben hun eigen realiteit met\n"
+"zich meegebracht, en de technologie van de\n"
+"sterhaven wordt ondermijnd door hun\n"
+"aanwezigheid.\n"
+"\n"
+"Vooruit, zie je een buitenpost van de hel,\n"
+"een versterkte zone. Als je er voorbij kunt\n"
+"komen, kun je doordringen in het besmette\n"
+"centrum van de sterhaven en de controle-\n"
+"schakelaar vinden die de bevolking van de\n"
+"aarde gegijzeld houdt."
+
+msgid "C2TEXT"
+msgstr ""
+"Je hebt gewonnen! Je overwinning heeft de\n"
+"mensheid in staat gesteld om de aarde te\n"
+"evacueren en te ontsnappen aan de nachtmerrie.\n"
+"Nu ben jij de enige mens op de planeet.\n"
+"Kannibale mutaties, vleesetende aliens\n"
+"en boze geesten zijn je enige buren.\n"
+"Je zit achterover en wacht op de dood,\n"
+"tevreden dat je je soort hebt gered.\n"
+"\n"
+"Maar dan, Earth Control straalt een\n"
+"boodschap uit de ruimte: \"Sensoren hebben\n"
+"de oorsprong van de invasie gelokaliseerd.\n"
+"Als je daar naartoe gaat, kan je misschien in\n"
+"staat zijn om hun verdere inbreuk te\n"
+"blokkeren. De basis bevindt zich in het hart\n"
+"van je eigen thuisstad, niet ver van de\n"
+"sterhaven.\"\n"
+"Langzaam en pijnlijk sta je op en keer\n"
+"je terug naar de strijd."
+
+msgid "C3TEXT"
+msgstr ""
+"Je bent in het corrupte hart van\n"
+"de stad, omringd door de lijken van\n"
+"je vijanden. Je ziet geen manier om de\n"
+"ingang van de wezens aan deze kant te\n"
+"vernietigen, dus je bijt je tanden\n"
+"samen en springt erin.\n"
+"\n"
+"Er moet een manier zijn om het aan de\n"
+"andere kant te sluiten. Wat kan het je\n"
+"schelen als je door de hel moet gaan om\n"
+"er bij te komen?"
+
+msgid "C4TEXT"
+msgstr ""
+"Het afschuwelijke gezicht van de grootste\n"
+"demon die je ooit hebt gezien, brokkelt\n"
+"voor je af, nadat je je raketten in zijn\n"
+"blootgestelde hersenen hebt gepompt. Het\n"
+"monster verschrompelt en sterft, de\n"
+"fladderende ledematen zijn verwoestende,\n"
+"Talloze mijlen van de helse\n"
+"oppervlakte.\n"
+"\n"
+"Het is je gelukt. De invasie is voorbij.\n"
+"De aarde is gered. De hel is een wrak.\n"
+"Je vraagt je af, waar gaan slechte mensen\n"
+"nu heen komen wanneer ze sterven.\n"
+"Als je het zweet van je voorhoofd veegt,\n"
+"begin je aan de lange tocht terug naar huis.\n"
+"Het herbouwen zou veel leuker moeten zijn\n"
+"dan het verpesten van de aarde.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Gefeliciteerd, je hebt het geheime niveau\n"
+"gevonden! Het lijkt erop dat het is gebouwd\n"
+"door mensen, in plaats van demonen. Je vraagt\n"
+"je af wie de bewoners van deze hoek van de\n"
+"hel zullen zijn."
+
+msgid "C6TEXT"
+msgstr ""
+"Gefeliciteerd, je hebt het super geheime\n"
+"niveau gevonden! Zorg dat je hier zo snel\n"
+"mogelijk weg bent!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Nogmaals, er waren problemen op je favoriete\n"
+"vakantieoord... in de hel. Een Cyberdemon\n"
+"punker dacht dat hij van de hel een persoonlijk\n"
+"pretpark kon maken, en van de aarde de kassa.\n"
+"\n"
+"Nou, die halve robot freakshow wist niet wie er\n"
+"naar de beurs kwam. Er gaat niets boven een\n"
+"schietbaan vol met demonen om het bloed te pompen...\n"
+"\n"
+"Nu weerklinken de muren van het labyrint van de\n"
+"demon met het geluid van zijn metalen ledematen\n"
+"die de vloer raken. Zijn doodskreun klatert door\n"
+"de rotzooi die je nog van zijn gezicht hebt\n"
+"achtergelaten.\n"
+"\n"
+"Deze rit is gesloten.\n"
+"\n"

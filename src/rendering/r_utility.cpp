@@ -191,6 +191,12 @@ DEFINE_GLOBAL(LocalViewPitch);
 
 // CODE --------------------------------------------------------------------
 
+static bool UseChaseCam(const player_t& player)
+{
+	return gamestate == GS_LEVEL &&
+	       ((player.cheats & CF_CHASECAM) || (r_deathcamera && player.playerstate == PST_DEAD));
+}
+
 //==========================================================================
 //
 // R_SetFOV
@@ -627,7 +633,7 @@ void R_InterpolateView(FRenderViewpoint& viewPoint, const player_t* const player
 
 	const DViewPosition* const vPos = iView->ViewActor->ViewPos;
 	if (vPos != nullptr && !(vPos->Flags & VPSF_ABSOLUTEPOS)
-		&& (player == nullptr || gamestate == GS_TITLELEVEL || (!(player->cheats & CF_CHASECAM) && (!r_deathcamera || !(iView->ViewActor->flags6 & MF6_KILLED)))))
+		&& (player == nullptr || !UseChaseCam(*player)))
 	{
 		DVector3 vOfs = {};
 		if (player == nullptr || !(player->cheats & CF_NOVIEWPOSINTERP))
@@ -1017,8 +1023,7 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		viewPoint.showviewer = false;
 		viewPoint.bForceNoViewer = matchPlayer;
 
-		if (player != nullptr && gamestate != GS_TITLELEVEL
-			&& ((player->cheats & CF_CHASECAM) || (r_deathcamera && (viewPoint.camera->flags6 & MF6_KILLED))))
+		if (player != nullptr && UseChaseCam(*player))
 		{
 			// The cam Actor should probably be visible in third person.
 			viewPoint.showviewer = true;

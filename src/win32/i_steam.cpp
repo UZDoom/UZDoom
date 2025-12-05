@@ -1,11 +1,13 @@
 /*
-** i_system.cpp
-** Timers, pre-console output, IWAD selection, and misc system routines.
+** i_steam.cpp
+** Detection for IWADs installed by Steam (or other distributors)
 **
 **---------------------------------------------------------------------------
 ** Copyright 1998-2009 Randy Heit
-** Copyright (C) 2007-2012 Skulltag Development Team
-** Copyright (C) 2007-2016 Zandronum Development Team
+** Copyright 2007-2012 Skulltag Development Team
+** Copyright 2007-2016 Zandronum Development Team
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -80,64 +82,6 @@
 #include "bitmap.h"
 #include "cmdlib.h"
 #include "i_interface.h"
-
-
-//TODO maybe move this code to a separate cpp file, so that there isn't code duplication between the win32 and posix backends
-static void PSR_FindEndBlock(FScanner &sc)
-{
-	int depth = 1;
-	do
-	{
-		if(sc.CheckToken('}'))
-			--depth;
-		else if(sc.CheckToken('{'))
-			++depth;
-		else
-			sc.MustGetAnyToken();
-	}
-	while(depth);
-}
-
-static TArray<FString> ParseSteamRegistry(const char* path)
-{
-	TArray<FString> result;
-	FScanner sc;
-	if (sc.OpenFile(path))
-	{
-		sc.SetCMode(true);
-
-		sc.MustGetToken(TK_StringConst);
-		sc.MustGetToken('{');
-		// Get a list of possible install directories.
-		while(sc.GetToken() && sc.TokenType != '}')
-		{
-			sc.TokenMustBe(TK_StringConst);
-			sc.MustGetToken('{');
-
-			while(sc.GetToken() && sc.TokenType != '}')
-			{
-				sc.TokenMustBe(TK_StringConst);
-				FString key(sc.String);
-				if(key.CompareNoCase("path") == 0)
-				{
-					sc.MustGetToken(TK_StringConst);
-					result.Push(FString(sc.String) + "/steamapps/common");
-					PSR_FindEndBlock(sc);
-					break;
-				}
-				else if(sc.CheckToken('{'))
-				{
-					PSR_FindEndBlock(sc);
-				}
-				else
-				{
-					sc.MustGetToken(TK_StringConst);
-				}
-			}
-		}
-	}
-	return result;
-}
 
 //==========================================================================
 //
@@ -261,7 +205,7 @@ TArray<FString> I_GetGogPaths()
 	{
 		result.Push(path);	// directly in install folder
 	}
-	
+
 	// Look for Hexen: Beyond Heretic
 	gamepath = gogregistrypath + L"\\1247951670";
 	if (QueryPathKey(HKEY_LOCAL_MACHINE, gamepath.c_str(), L"Path", path))
@@ -288,66 +232,17 @@ TArray<FString> I_GetGogPaths()
 //
 //==========================================================================
 
-TArray<FString> I_GetSteamPath()
+FString I_GetSteamPath()
 {
-	TArray<FString> result;
-	static const char *const steam_dirs[] =
-	{
-		"doom 2/base",
-		"final doom/base",
-		"heretic shadow of the serpent riders/base",
-		"hexen/base",
-		"hexen deathkings of the dark citadel/base",
-		"ultimate doom/base",
-		"ultimate doom/base/doom2",                          // 2024 Update
-		"ultimate doom/base/tnt",                            // 2024 Update
-		"ultimate doom/base/plutonia",                       // 2024 Update
-		"DOOM 3 BFG Edition/base/wads",
-		"Strife",
-		"Ultimate Doom/rerelease/DOOM_Data/StreamingAssets", // 2019 Unity port (previous-re-release branch in Doom + Doom II app)
-		"Ultimate Doom/rerelease",                           // 2024 KEX Port
-		"Doom 2/rerelease/DOOM II_Data/StreamingAssets",
-		"Doom 2/finaldoombase",
-        "Master Levels of Doom/doom2",
-		"Heretic + Hexen/dos/base/heretic",                  // vanilla WAD included with the 2025 Kex port
-		"Heretic + Hexen/dos/base/hexen",                    // vanilla WAD included with the 2025 Kex port
-		"Heretic + Hexen/dos/base/hexendk"                   // vanilla WAD included with the 2025 Kex port
-	};
+	FString SteamPath;
 
-	FString steamPath;
-
-	if (!QueryPathKey(HKEY_CURRENT_USER, L"Software\\Valve\\Steam", L"SteamPath", steamPath))
+	if (!QueryPathKey(HKEY_CURRENT_USER, L"Software\\Valve\\Steam", L"SteamPath", SteamPath))
 	{
-		if (!QueryPathKey(HKEY_LOCAL_MACHINE, L"Software\\Valve\\Steam", L"InstallPath", steamPath))
-			return result;
+		if (!QueryPathKey(HKEY_LOCAL_MACHINE, L"Software\\Valve\\Steam", L"InstallPath", SteamPath))
+			return "";
 	}
 
-	try
-	{
-		TArray<FString> paths = ParseSteamRegistry((steamPath + "/config/libraryfolders.vdf").GetChars());
-
-		for (FString& path : paths)
-		{
-			path.ReplaceChars('\\', '/');
-			path += "/";
-		}
-
-		paths.Push(steamPath + "/steamapps/common/");
-
-		for (unsigned int i = 0; i < countof(steam_dirs); ++i)
-		{
-			for (const FString& path : paths)
-			{
-				result.Push(path + steam_dirs[i]);
-			}
-		}
-	}
-	catch (const CRecoverableError&)
-	{
-		// don't abort on errors in here. Just return an empty path.
-	}
-
-	return result;
+	return SteamPath;
 }
 
 //==========================================================================

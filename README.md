@@ -7,7 +7,8 @@
 ## Welcome to UZDoom!
 
 [![Continuous Integration][badge_git]][status_git]
-[![Translation status][badge_trans]][status_trans]
+[![Engine Translation status][badge_trans]][status_trans]
+[![Game Translation status][badge_trans_games]][status_trans_games]
 
 **UZDoom** is a modern, feature-rich source port for the classic game **DOOM**.
 
@@ -55,14 +56,21 @@ You can view the full license text here: <https://www.gnu.org/licenses/>
 * [Wiki][wiki]
 * [Discord Server][community]
 * [Forum][forum]
-* [Translation][status_trans]
+* [Engine Translation][status_trans]
+* [Game Translation][status_trans_games]
 
 ### 🛠️ Building UZDoom
 
 To build UZDoom from source, please see UZDoom's GitHub [wiki][gh_wiki] for a full list of dependencies and detailed instructions. Build For [Linux][gh_linux] / [Windows][gh_windows] / [MacOS][gh_apple]
 
 [![UZDoom Footer](branding/banner.png)][repo]
-[![Translation status][engage_trans]][status_trans]
+
+<div align="center">
+
+[<img alt="Translation status" style="width: 49%" src="https://hosted.weblate.org/widget/uzdoom/open-graph.png" />][status_trans]
+[<img alt="Translation status" style="width: 49%" src="https://hosted.weblate.org/widget/doom-engine-games/open-graph.png" />][status_trans_games]
+
+</div>
 
 [gzdoom]: https://github.com/ZDoom/gzdoom/
 [zdoom]: https://github.com/rheit/zdoom/
@@ -83,4 +91,6 @@ To build UZDoom from source, please see UZDoom's GitHub [wiki][gh_wiki] for a fu
 
 [badge_trans]: https://hosted.weblate.org/widget/uzdoom/svg-badge.svg
 [status_trans]: https://hosted.weblate.org/engage/uzdoom/
-[engage_trans]: https://hosted.weblate.org/widget/uzdoom/open-graph.png
+
+[badge_trans_games]: https://hosted.weblate.org/widget/doom-engine-games/svg-badge.svg
+[status_trans_games]: https://hosted.weblate.org/engage/doom-engine-games/

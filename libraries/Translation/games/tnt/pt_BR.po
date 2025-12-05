@@ -1,0 +1,187 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"doom-engine-games/tnt-evilution/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: pt\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Malvolução"
+
+msgid "THUSTR_1"
+msgstr "Fase 1: Controle do Sistema"
+
+msgid "THUSTR_2"
+msgstr "Fase 2: Churrasco Humano"
+
+msgid "THUSTR_3"
+msgstr "Fase 3: Controle de Energia"
+
+msgid "THUSTR_4"
+msgstr "Fase 4: Buraco de Minhoca"
+
+msgid "THUSTR_5"
+msgstr "Fase 5: Hangar"
+
+msgid "THUSTR_6"
+msgstr "Fase 6: Temporada Aberta"
+
+msgid "THUSTR_7"
+msgstr "Fase 7: Prisão"
+
+msgid "THUSTR_8"
+msgstr "Fase 8: Metal"
+
+msgid "THUSTR_9"
+msgstr "Fase 9: Fortaleza"
+
+msgid "THUSTR_10"
+msgstr "Fase 10: Redenção"
+
+msgid "THUSTR_11"
+msgstr "Fase 11: Centro de Armazenamento"
+
+msgid "THUSTR_12"
+msgstr "Fase 12: Cratera"
+
+msgid "THUSTR_13"
+msgstr "Fase 13: Processamento Nuclear"
+
+msgid "THUSTR_14"
+msgstr "Fase 14: Siderúrgica"
+
+msgid "THUSTR_15"
+msgstr "Fase 15: Zona Morta"
+
+msgid "THUSTR_16"
+msgstr "Fase 16: Profundezas"
+
+msgid "THUSTR_17"
+msgstr "Fase 17: Área de Processamento"
+
+msgid "THUSTR_18"
+msgstr "Fase 18: Moinho"
+
+msgid "THUSTR_19"
+msgstr "Fase 19: Expedição/reaparecimento"
+
+msgid "THUSTR_20"
+msgstr "Fase 20: Processamento Central"
+
+msgid "THUSTR_21"
+msgstr "Fase 21: Centro de Administração"
+
+msgid "THUSTR_22"
+msgstr "Fase 22: Habitat"
+
+msgid "THUSTR_23"
+msgstr "Fase 23: Projeto de Mineração Lunar"
+
+msgid "THUSTR_24"
+msgstr "Fase 24: Pedreira"
+
+msgid "THUSTR_25"
+msgstr "Fase 25: Covil do Barão"
+
+msgid "THUSTR_26"
+msgstr "Fase 26: Ballistige"
+
+msgid "THUSTR_27"
+msgstr "Fase 27: Monte Dor"
+
+msgid "THUSTR_28"
+msgstr "Fase 28: Capeta"
+
+msgid "THUSTR_29"
+msgstr "Fase 29: Rio Estige"
+
+msgid "THUSTR_30"
+msgstr "Fase 30: Última Chamada"
+
+msgid "THUSTR_31"
+msgstr "Fase 31: Faraó"
+
+msgid "THUSTR_32"
+msgstr "Fase 32: Caribe"
+
+msgid "T1TEXT"
+msgstr ""
+"Você lutou para sair dos laboratórios infestados.\n"
+"Parece que a UAC pisou na bola mais uma vez.\n"
+"Com tanta rotatividade de funcionários, deve ser\n"
+"complicado para a pobre empresa conseguir\n"
+"financiar planos de saúde hoje em dia...\n"
+"\n"
+"Mais adiante fica a base militar, agora repleta\n"
+"de criaturas horrendas e ansiosas para fincar os\n"
+"dentes em você. Com sorte, a base ainda tem\n"
+"equipamento militar em algum canto."
+
+msgid "T2TEXT"
+msgstr ""
+"Você escuta o barulho de máquinas pesadas\n"
+"mais adiante. Você espera que eles não estejam\n"
+"gerando mais criaturas infernais, mas está pront@[ao_ptb]\n"
+"para aniquilar um bando inteiro se for necessário.\n"
+"Pode ser que pretendam fazer um banquete\n"
+"sangrento, mas você se sente tão tinhos@[ao_ptb] \n"
+"quanto milhares de maníacos unidos no mesmo\n"
+"psicopata homicida.\n"
+"\n"
+"Você não pretende ser derrotad@[ao_ptb] facilmente."
+
+msgid "T3TEXT"
+msgstr ""
+"A paisagem que se revela a sua frente parece\n"
+"muito familiar. Assim como o cheiro -- lembra\n"
+"bosta frita. Você já não gostava desse lugar\n"
+"antes e com certeza não pretende começar\n"
+"a gostar agora. Quanto mais você pensa sobre \n"
+"isso, mais furios@[ao_ptb] você fica.\n"
+"Com a sua arma em mãos, um sorriso maldoso\n"
+"se abre em seu rosto. Tá na hora de massacrar\n"
+"uns demônios."
+
+msgid "T4TEXT"
+msgstr ""
+"De repente, tudo fica quieto, de um horizonte\n"
+"ao outro. O eco agonizante do Inferno se cala\n"
+"aos poucos, o céu que parece sair de pesadelos\n"
+"vai ficando azul, as pilhas de corpos dos monstros\n"
+"começam a evaporar junto com a cheiro maligno\n"
+"que preenchia o ar. Caramba, talvez você tenha\n"
+"conseguido. Será que você venceu mesmo?\n"
+"\n"
+"Alguma coisa ressoa lá longe. Uma luz azul começa\n"
+"a brilhar dentro da caveira destruida do cuspidor\n"
+"de demônios."
+
+msgid "T5TEXT"
+msgstr ""
+"O que foi desta vez? Parece algo totalmente\n"
+"diferente. Algo como o apê do Rei Tutancâmon.\n"
+"Bom, seja lá o que tiver aqui não deve ser pior\n"
+"que o normal. Ou pode? Ou talvez seja melhor\n"
+"não perturbar os deuses..."
+
+msgid "T6TEXT"
+msgstr ""
+"Hora de tirar umas férias. Você arrebenta as\n"
+"tripas do inferno e com certeza está precisando\n"
+"de um descanso. Você resmunga para si mesm@[ao_ptb],\n"
+"bem que outra pessoa poderia dar um jeito\n"
+"no Inferno da próxima vez. Mais adiante há uma\n"
+"cidadezinha sossegada, com um riacho tranquilo,\n"
+"casinhas pacatas e, a princípio, sem demônios.\n"
+"\n"
+"Ao desembarcar, você ouve as pisoteadas \n"
+"da pata de ferro de um ciberdemônio."

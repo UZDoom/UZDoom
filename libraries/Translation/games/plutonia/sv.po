@@ -1,0 +1,184 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:24+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/"
+"doom-engine-games/the-plutonia-experiment/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: sv\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Plutonia-experimentet"
+
+msgid "PHUSTR_1"
+msgstr "Nivå 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Nivå 2: Själarnas brunn"
+
+msgid "PHUSTR_3"
+msgstr "Nivå 3: Azteker"
+
+msgid "PHUSTR_4"
+msgstr "Nivå 4: Burad"
+
+msgid "PHUSTR_5"
+msgstr "Nivå 5: Spökstad"
+
+msgid "PHUSTR_6"
+msgstr "Nivå 6: Baronens lya"
+
+msgid "PHUSTR_7"
+msgstr "Nivå 7: Fångården"
+
+msgid "PHUSTR_8"
+msgstr "Nivå 8: Riket"
+
+msgid "PHUSTR_9"
+msgstr "Nivå 9: Slakthus"
+
+msgid "PHUSTR_10"
+msgstr "Nivå 10: Angrepp"
+
+msgid "PHUSTR_11"
+msgstr "Nivå 11: Jaktad"
+
+msgid "PHUSTR_12"
+msgstr "Nivå 12: Hastighet"
+
+msgid "PHUSTR_13"
+msgstr "Nivå 13: Kryptan"
+
+msgid "PHUSTR_14"
+msgstr "Nivå 14: Genesis"
+
+msgid "PHUSTR_15"
+msgstr "Nivå 15: Skymningen"
+
+msgid "PHUSTR_16"
+msgstr "Nivå 16: Omen"
+
+msgid "PHUSTR_17"
+msgstr "Nivå 17: Förbandet"
+
+msgid "PHUSTR_18"
+msgstr "Nivå 18: Neurosfären"
+
+msgid "PHUSTR_19"
+msgstr "Nivå 19: FiND"
+
+msgid "PHUSTR_20"
+msgstr "Nivå 20: Dödsdomänen"
+
+msgid "PHUSTR_21"
+msgstr "Nivå 21: Jägare"
+
+msgid "PHUSTR_22"
+msgstr "Nivå 22: Omöjligt uppdrag"
+
+msgid "PHUSTR_23"
+msgstr "Nivå 23: Gravsten"
+
+msgid "PHUSTR_24"
+msgstr "Nivå 24: Den sista gränsen"
+
+msgid "PHUSTR_25"
+msgstr "Nivå 25: Mörkrets tempel"
+
+msgid "PHUSTR_26"
+msgstr "Nivå 26: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "Nivå 27: Antikrist"
+
+msgid "PHUSTR_28"
+msgstr "Nivå 28: Sjukhusen"
+
+msgid "PHUSTR_29"
+msgstr "Nivå 29: Ljudets odyssé"
+
+msgid "PHUSTR_30"
+msgstr "Nivå 30: Helvetets port"
+
+msgid "PHUSTR_31"
+msgstr "Nivå 31: Cyberden"
+
+msgid "PHUSTR_32"
+msgstr "Nivå 32: Gå till det"
+
+msgid "P1TEXT"
+msgstr ""
+"Ni gläds åt Väktarens rykande kadaver.\n"
+"Med dess död har du vridit Acceleratorn\n"
+"ur helvetets stinkande klor. Du slappnar\n"
+"av och tittar runt i rummet. Fan! Det\n"
+"skulle finnas åtminstone en fungerande\n"
+"prototyp, men du kan inte se den.\n"
+"Demonerna måste ha tagit den.\n"
+" \n"
+" Du måste hitta prototypen, annars har\n"
+"all din kamp varit bortkastad. Fortsätt\n"
+"röra på dig, fortsätt kämpa, fortsätt\n"
+"döda. Åh ja, fortsätt att leva också."
+
+msgid "P2TEXT"
+msgstr ""
+"Inte ens den dödliga Ärkevild-labyrinten\n"
+"kunde stoppa dig, och du har nått fram\n"
+"till prototypen av Acceleratorn som\n"
+"snart är effektivt och permanent\n"
+"avaktiverad.\n"
+" \n"
+"Du är bra på den typen av saker."
+
+msgid "P3TEXT"
+msgstr ""
+"Du har slagit och slagit dig in i\n"
+"djävulskyrkans hjärta. Dags för ett\n"
+"uppdrag att söka och förstöra,\n"
+"riktat mot Portvakten, vars avkommor\n"
+"som sprider sig till jorden. Ja, han är\n"
+"ond. Men du vet vem som är värre!\n"
+" \n"
+"Med ett illvilligt flin kontrollerar du din\n"
+"utrustning och gör dig redo att ge\n"
+"jäveln ett litet helvete som du själv\n"
+"har skapat!"
+
+msgid "P4TEXT"
+msgstr ""
+"Portvaktens onda ansikte är utspridd\n"
+"överallt. När dess söndertrasade lik\n"
+"kollapsar bildas en inverterad port\n"
+"som suger ner skärvorna av den sista\n"
+"prototypen av acceleratorn, för att inte\n"
+"nämna de få återstående demonerna.\n"
+"Du är klar. Helvetet har återgått till att\n"
+"slå på dåliga döda människor i stället\n"
+"för goda levande. Kom ihåg att be dina\n"
+"barnbarn att lägga en raketkastare i din\n"
+"kista. Om du kommer till helvetet när\n"
+"du dör kommer du att behöva den\n"
+"för att göra en sista städning ..."
+
+msgid "P5TEXT"
+msgstr ""
+"Du har hittat den näst svåraste nivån\n"
+"vi har. Hoppas att du har ett sparat\n"
+"spel en nivå eller två tidigare. Om inte,\n"
+"var beredd på att dö i mängder.\n"
+"Endast för master marines."
+
+msgid "P6TEXT"
+msgstr ""
+"Du undrade säkert vad som var den\n"
+"svåraste nivån vi hade redo för dig?\n"
+"Nu vet du det.\n"
+"Ingen kommer ut levande."

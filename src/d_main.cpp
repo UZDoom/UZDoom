@@ -1205,7 +1205,7 @@ void D_Display ()
 	}
 
 	screen->FrameTime = I_msTimeFS();
-	TexAnim.UpdateAnimations(static_cast<uint64_t>(((primaryLevel->LocalWorldTimer + I_GetTimeFrac()) * 1000.0) / TICRATE));
+	TexAnim.UpdateAnimations(screen->FrameTime);
 	R_UpdateSky(I_GetTimeFrac());
 	screen->BeginFrame();
 	twod->ClearClipRect();

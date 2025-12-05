@@ -1,0 +1,135 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 19:58+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom/el/>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: el\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "TXT_D1E1"
+msgstr "Βουτηγμένος στους Νεκρούς μέχρι τα γόνατα"
+
+msgid "TXT_D1E2"
+msgstr "Οι Ακτές της Κόλασης"
+
+msgid "TXT_D1E3"
+msgstr "Πυρ το Εξώτερον"
+
+msgid "TXT_D1E4"
+msgstr "Η Σάρκα σου θα Καταναλωθεί"
+
+msgid "HUSTR_E1M1"
+msgstr "E1Χ1: Υπόστεγο"
+
+msgid "HUSTR_E1M2"
+msgstr "E1Χ2: Πυρηνικό Εργοστάσιο"
+
+msgid "HUSTR_E1M3"
+msgstr "E1Χ3: Διυλιστήριο Τοξινών"
+
+msgid "HUSTR_E1M4"
+msgstr "E1Χ4: Κέντρο Ελέγχου"
+
+msgid "HUSTR_E1M5"
+msgstr "E1Χ5: Εργαστήριο Φόβου"
+
+msgid "HUSTR_E1M6"
+msgstr "E1Χ6: Κεντρική Επεξεργασία"
+
+msgid "HUSTR_E1M7"
+msgstr "E1Χ7: Σταθμός Υπολογιστών"
+
+msgid "HUSTR_E1M8"
+msgstr "E1Χ8: Ανωμαλία στον Φόβο"
+
+msgid "HUSTR_E1M9"
+msgstr "E1Χ9: Στρατιωτική Βάση"
+
+msgid "HUSTR_E2M1"
+msgstr "E2Χ1: Ανωμαλία στον Δείμο"
+
+msgid "HUSTR_E2M2"
+msgstr "E2Χ2: Ζώνη Περιορισμού"
+
+msgid "HUSTR_E2M3"
+msgstr "E2Χ3: Διυλιστήριο"
+
+msgid "HUSTR_E2M4"
+msgstr "E2Χ4: Εργαστήριο Δείμου"
+
+msgid "HUSTR_E2M5"
+msgstr "E2Χ5: Κέντρο Διοίκησης"
+
+msgid "HUSTR_E2M6"
+msgstr "E2X6: Διάδρομοι των Κολασμένων"
+
+msgid "HUSTR_E2M7"
+msgstr "E2X7: Δεξαμενές Γέννησης"
+
+msgid "HUSTR_E2M8"
+msgstr "E2Χ8: Πύργος της Βαβέλ"
+
+msgid "HUSTR_E2M9"
+msgstr "E2Χ9: Φρούριο του Μυστηρίου"
+
+msgid "HUSTR_E3M1"
+msgstr "E3Χ1: Ακροπύργιο της Κολάσεως"
+
+msgid "HUSTR_E3M2"
+msgstr "E3Χ2: Έλος της Απελπισίας"
+
+msgid "HUSTR_E3M3"
+msgstr "E3Χ3: Πανδαιμόνιο"
+
+msgid "HUSTR_E3M4"
+msgstr "E3Χ4: Σπίτι του Πόνου"
+
+msgid "HUSTR_E3M5"
+msgstr "E3X5: Ανίερος Καθεδρικός"
+
+msgid "HUSTR_E3M6"
+msgstr "E3X6: Όρος Έρεβος"
+
+msgid "HUSTR_E3M7"
+msgstr "E3Χ7: Είσοδος της Κολάσεως"
+
+msgid "HUSTR_E3M8"
+msgstr "E3Χ8: Δίτα"
+
+msgid "HUSTR_E3M9"
+msgstr "E3X9: Λαγούμια"
+
+msgid "HUSTR_E4M1"
+msgstr "E4Χ1: Κάτω Κόσμος"
+
+msgid "HUSTR_E4M2"
+msgstr "E4Χ2: Τέλειο Μίσος"
+
+msgid "HUSTR_E4M3"
+msgstr "E4Χ3: Ξερίζωσε τους Πονηρούς"
+
+msgid "HUSTR_E4M4"
+msgstr "E4X4: Ασυγκράτητο Κακό"
+
+msgid "HUSTR_E4M5"
+msgstr "E4X5: Θα Μετανοήσουν"
+
+msgid "HUSTR_E4M6"
+msgstr "E4X6: Κακόβουλα Εναντίον Σου"
+
+msgid "HUSTR_E4M7"
+msgstr "E4X7: Και η Κόλαση Ακολούθησε"
+
+msgid "HUSTR_E4M8"
+msgstr "E4X8: Προς Τους Ανελεήμονες"
+
+msgid "HUSTR_E4M9"
+msgstr "E4Χ9: Τρόμος"
