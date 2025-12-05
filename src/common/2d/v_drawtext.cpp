@@ -310,7 +310,7 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		double    baseFontHeight         = font->GetHeight();
 		for (const Trex::ShapedGlyph &g : glyphs)
 		{
-			SetTextureParms(drawer, &atlasFragmentDrawParms, font->GetDynamicFontAtlasTexture(), cursorx + (shrinkScale*scalex)*(g.xOffset + g.info.bearingX), cursory + (scaley * shrinkScale) * (baseFontHeight*.5 + g.yOffset - g.info.bearingY));
+			SetTextureParms(drawer, &atlasFragmentDrawParms, font->GetDynamicFontAtlasTexture(), cursorx + (shrinkScale*scalex)*(g.xOffset + g.info.bearingX), cursory + (scaley * shrinkScale) * (baseFontHeight*(1.0-shrinkScale) + g.yOffset - g.info.bearingY));
 			atlasFragmentDrawParms.masked = true;
 			atlasFragmentDrawParms.fortext = true;
 			atlasFragmentDrawParms.srcx = (double)g.info.x / (double)atlasFragmentDrawParms.texwidth; //g.info.x;
