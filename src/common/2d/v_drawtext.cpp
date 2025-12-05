@@ -303,32 +303,28 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			static_assert(false, "unsupported char type");
 		}
 
-		auto cursorx = x;//
-		//-(Trex::TextShaper::Measure(glyphs).width * scalex);
+		auto cursorx = x;
 		auto cursory =y;
 		DrawParms atlasFragmentDrawParms = parms;
 		double    shrinkScale            = font->GetInvSupersampleScale();
+		double    baseFontHeight         = font->GetHeight();
 		for (const Trex::ShapedGlyph &g : glyphs)
 		{
-			SetTextureParms(drawer, &atlasFragmentDrawParms, font->GetDynamicFontAtlasTexture(), cursorx + (double)(g.xOffset*shrinkScale) + ((double)g.info.bearingX), cursory + (g.yOffset) - (g.info.bearingY*scaley*shrinkScale));
+			SetTextureParms(drawer, &atlasFragmentDrawParms, font->GetDynamicFontAtlasTexture(), cursorx + (shrinkScale*scalex)*(g.xOffset + g.info.bearingX), cursory + (scaley * shrinkScale) * (baseFontHeight*.5 + g.yOffset - g.info.bearingY));
 			atlasFragmentDrawParms.masked = true;
 			atlasFragmentDrawParms.fortext = true;
 			atlasFragmentDrawParms.srcx = (double)g.info.x / (double)atlasFragmentDrawParms.texwidth; //g.info.x;
-			atlasFragmentDrawParms.srcy = ((double)g.info.y) / (double)atlasFragmentDrawParms.texheight;
+			atlasFragmentDrawParms.srcy = (double)g.info.y / (double)atlasFragmentDrawParms.texheight;
 			atlasFragmentDrawParms.srcheight = (double)g.info.height / (double)atlasFragmentDrawParms.texheight;
 			atlasFragmentDrawParms.srcwidth  = (double)g.info.width / (double)atlasFragmentDrawParms.texwidth;
 			atlasFragmentDrawParms.bilinear   = 1;
-			atlasFragmentDrawParms.destheight = g.info.height *scalex * shrinkScale;
-			atlasFragmentDrawParms.destwidth = g.info.width*scaley  * shrinkScale;
-
-			//if (parms.celly == 0)
-			//	atlasFragmentDrawParms.celly = g.info.height + 1;
+			atlasFragmentDrawParms.destheight = g.info.height * scaley * shrinkScale;
+			atlasFragmentDrawParms.destwidth = g.info.width * scalex  * shrinkScale;
 			
 			drawer->AddTexture(font->GetDynamicFontAtlasTexture(), atlasFragmentDrawParms);
 			cursorx += (g.xAdvance) * scalex * shrinkScale;
 			cursory += (g.yAdvance) * scaley * shrinkScale;
 		}
-		//drawer->AddTexture()
 		return;
 	}
 
