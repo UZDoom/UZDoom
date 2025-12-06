@@ -856,7 +856,7 @@ public:
 	// Adjusts the angle for deflection/reflection of incoming missiles
 	// Returns true if the missile should be allowed to explode anyway
 	bool AdjustReflectionAngle (AActor *thing, DAngle &angle);
-	int AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *source, int flags);
+	int AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *source, int flags, DAngle angle);
 	void AlterWeaponSprite(visstyle_t *vis);
 
 	bool CheckNoDelay();
@@ -883,11 +883,11 @@ public:
 	// Perform some special damage action. Returns the amount of damage to do.
 	// Returning -1 signals the damage routine to exit immediately
 	int DoSpecialDamage (AActor *target, int damage, FName damagetype);
-	int CallDoSpecialDamage(AActor *target, int damage, FName damagetype);
+	int CallDoSpecialDamage(AActor *target, int damage, FName damagetype, int flags, DAngle angle);
 
 	// Like DoSpecialDamage, but called on the actor receiving the damage.
 	int TakeSpecialDamage (AActor *inflictor, AActor *source, int damage, FName damagetype);
-	int CallTakeSpecialDamage(AActor *inflictor, AActor *source, int damage, FName damagetype);
+	int CallTakeSpecialDamage(AActor *inflictor, AActor *source, int damage, FName damagetype, int flags, DAngle angle);
 
 	// Actor had MF_SKULLFLY set and rammed into something
 	// Returns false to stop moving and true to keep moving
@@ -1712,7 +1712,7 @@ public:
 
 	int GetLightLevel(sector_t* rendersector);
 	int ApplyDamageFactor(FName damagetype, int damage) const;
-	int GetModifiedDamage(FName damagetype, int damage, bool passive, AActor *inflictor, AActor *source, int flags = 0);
+	int GetModifiedDamage(FName damagetype, int damage, bool passive, AActor *inflictor, AActor *source, int flags, DAngle angle);
 	void DeleteAttachedLights();
 	bool isFrozen() const;
 

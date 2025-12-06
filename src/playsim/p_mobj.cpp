@@ -3901,7 +3901,7 @@ bool AActor::AdjustReflectionAngle (AActor *thing, DAngle &angle)
 	return false;
 }
 
-int AActor::AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *source, int flags)
+int AActor::AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *source, int flags, DAngle angle)
 {
 	AActor *next;
 	for (AActor *item = Inventory; item != nullptr; item = next)
@@ -3910,8 +3910,8 @@ int AActor::AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *s
 		next = item->Inventory;
 		IFVIRTUALPTRNAME(item, NAME_Inventory, AbsorbDamage)
 		{
-			VMValue params[7] = { item, damage, dmgtype.GetIndex(), &damage, inflictor, source, flags };
-			VMCall(func, params, 7, nullptr, 0);
+			VMValue params[8] = { item, damage, dmgtype.GetIndex(), &damage, inflictor, source, flags, angle.Degrees() };
+			VMCall(func, params, 8, nullptr, 0);
 		}
 	}
 	return damage;
@@ -8332,19 +8332,22 @@ DEFINE_ACTION_FUNCTION(AActor, DoSpecialDamage)
 	PARAM_OBJECT_NOT_NULL(target, AActor);
 	PARAM_INT(damage);
 	PARAM_NAME(damagetype);
+	PARAM_INT(flags); //[MC] Only needed for Super.DoSpecialDamage() calls to maintain consistency for all parameters
+	PARAM_ANGLE(angle);
+
 	ACTION_RETURN_INT(self->DoSpecialDamage(target, damage, damagetype));
 }
 
-int AActor::CallDoSpecialDamage(AActor *target, int damage, FName damagetype)
+int AActor::CallDoSpecialDamage(AActor *target, int damage, FName damagetype, int flags, DAngle angle)
 {
 	IFVIRTUAL(AActor, DoSpecialDamage)
 	{
 		// Without the type cast this picks the 'void *' assignment...
-		VMValue params[4] = { (DObject*)this, (DObject*)target, damage, damagetype.GetIndex() };
+		VMValue params[6] = {(DObject *)this, (DObject *)target, damage, damagetype.GetIndex(), flags, angle.Degrees() };
 		VMReturn ret;
 		int retval;
 		ret.IntAt(&retval);
-		VMCall(func, params, 4, &ret, 1);
+		VMCall(func, params, 6, &ret, 1);
 		return retval;
 	}
 	else return DoSpecialDamage(target, damage, damagetype);
@@ -8398,18 +8401,21 @@ DEFINE_ACTION_FUNCTION(AActor, TakeSpecialDamage)
 	PARAM_OBJECT(source, AActor);
 	PARAM_INT(damage);
 	PARAM_NAME(damagetype);
+	PARAM_INT(flags); //[MC] Only needed for Super.TakeSpecialDamage() calls to maintain consistency for all parameters
+	PARAM_ANGLE(angle);
+
 	ACTION_RETURN_INT(self->TakeSpecialDamage(inflictor, source, damage, damagetype));
 }
 
-int AActor::CallTakeSpecialDamage(AActor *inflictor, AActor *source, int damage, FName damagetype)
+int AActor::CallTakeSpecialDamage(AActor *inflictor, AActor *source, int damage, FName damagetype, int flags, DAngle angle)
 {
 	IFVIRTUAL(AActor, TakeSpecialDamage)
 	{
-		VMValue params[5] = { (DObject*)this, inflictor, source, damage, damagetype.GetIndex() };
+		VMValue params[7] = { (DObject*)this, inflictor, source, damage, damagetype.GetIndex(), flags, angle.Degrees() };
 		VMReturn ret;
 		int retval;
 		ret.IntAt(&retval);
-		VMCall(func, params, 5, &ret, 1);
+		VMCall(func, params, 7, &ret, 1);
 		return retval;
 	}
 	else return TakeSpecialDamage(inflictor, source, damage, damagetype);
@@ -8656,7 +8662,7 @@ void AActor::ClearCounters()
 	}
 }
 
-int AActor::GetModifiedDamage(FName damagetype, int damage, bool passive, AActor *inflictor, AActor *source, int flags)
+int AActor::GetModifiedDamage(FName damagetype, int damage, bool passive, AActor *inflictor, AActor *source, int flags, DAngle angle)
 {
 	auto inv = Inventory;
 	while (inv != nullptr && !(inv->ObjectFlags & OF_EuthanizeMe))
@@ -8664,8 +8670,8 @@ int AActor::GetModifiedDamage(FName damagetype, int damage, bool passive, AActor
 		auto nextinv = inv->Inventory;
 		IFVIRTUALPTRNAME(inv, NAME_Inventory, ModifyDamage)
 		{
-			VMValue params[8] = { (DObject*)inv, damage, damagetype.GetIndex(), &damage, passive, inflictor, source, flags };
-			VMCall(func, params, 8, nullptr, 0);
+			VMValue params[9] = { (DObject*)inv, damage, damagetype.GetIndex(), &damage, passive, inflictor, source, flags, angle.Degrees() };
+			VMCall(func, params, 9, nullptr, 0);
 		}
 		inv = nextinv;
 	}

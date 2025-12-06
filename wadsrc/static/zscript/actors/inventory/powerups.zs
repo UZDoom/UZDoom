@@ -767,7 +767,7 @@ class PowerIronFeet : Powerup
 		Powerup.Mode "Normal";
 	}
 	
-	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags)
+	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (damageType == 'Drowning')
 		{
@@ -801,7 +801,7 @@ class PowerMask : PowerIronFeet
 		Inventory.Icon "I_MASK";
 	}
 	
-	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags)
+	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (damageType == 'Fire' || damageType == 'Drowning')
 		{
@@ -1662,7 +1662,7 @@ class PowerDamage : Powerup
 	//
 	//===========================================================================
 
-	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags)
+	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (!passive && damage > 0)
 		{
@@ -1756,7 +1756,7 @@ class PowerProtection : Powerup
 	//
 	//===========================================================================
 
-	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags)
+	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (passive && damage > 0)
 		{

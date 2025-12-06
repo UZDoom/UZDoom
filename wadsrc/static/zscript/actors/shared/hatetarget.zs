@@ -34,7 +34,7 @@ class HateTarget : Actor
 		}
 	}
 
-	override int TakeSpecialDamage(Actor inflictor, Actor source, int damage, Name damagetype)
+	override int TakeSpecialDamage(Actor inflictor, Actor source, int damage, Name damagetype, int flags, double angle)
 	{
 		if (special2 != 0)
 		{

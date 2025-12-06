@@ -1759,7 +1759,7 @@ class ForceFieldGuard : Actor
 		Stop;
 	}
 	
-	override int TakeSpecialDamage (Actor inflictor, Actor source, int damage, Name damagetype)
+	override int TakeSpecialDamage (Actor inflictor, Actor source, int damage, Name damagetype, int flags, double angle)
 	{
 		if (inflictor == NULL || !(inflictor is "DegninOre"))
 		{
