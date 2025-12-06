@@ -94,7 +94,7 @@ public:
 
 	FFont (const char *fontname, const char *nametemplate, const char *filetemplate, int first, int count, int base, int fdlump, int spacewidth=-1, bool notranslate = false, bool iwadonly = false, bool doomtemplate = false, GlyphSet *baseGlpyphs = nullptr);
 	FFont(int lump, FName nm = NAME_None);
-	explicit FFont(const char *fontname, Trex::Atlas* fontAtlas);
+	explicit FFont(const char *fontname, Trex::Atlas* fontAtlas, const int supersampleScale);
 	virtual ~FFont ();
 
 	virtual FGameTexture *GetChar (int code, int translation, int *const width) const;
@@ -219,7 +219,7 @@ protected:
 	FFont *Next;
 	Trex::Atlas *DynamicFontAtlas = nullptr;
 	FGameTexture *DynamicFontAtlasTexture = nullptr;
-	double        invSupersample          = 0.25; // 1 / supersampling scale (default is 4x resolution)
+	double        invSupersample          = 1.0 / 3.0; // 1 / supersampling scale (default is 4x resolution)
 
 	static FFont *FirstFont;
 	friend struct FontsDeleter;

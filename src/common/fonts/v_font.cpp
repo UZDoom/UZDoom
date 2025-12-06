@@ -190,9 +190,17 @@ void V_InitCustomFonts()
 			{
 				FileSys::FileData data = fileSystem.ReadFileFullName(f.name);
 				FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
-				Trex::Atlas*  atlas = new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), 16, Trex::Charset::Full(), Trex::RenderMode::LCD);
+				//TODO: determine required character set based on current language
+				//TODO: determine if fonts actually cover the required language
+				Trex::Charset     UZDoomCharSet = Trex::Charset::Full();
+				//UZDoomCharSet.AddCodepoint(0xe29784);// "left arrow"
+				//TODO: we'll need to be able to defer creating the atlas
+				//because we need to decide the supersampling scale before we build it.
+				const int    defaultLineHeight = 17;
+				const int    supersampleScale  = 2;
+				Trex::Atlas*  atlas = new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), defaultLineHeight*supersampleScale, UZDoomCharSet, Trex::RenderMode::LCD);
 				
-				FFont* const Font = new FFont(shortName.GetChars(), atlas);
+				FFont* const Font = new FFont(shortName.GetChars(), atlas, supersampleScale);
 			}
 		}
 	}
@@ -898,7 +906,7 @@ void V_LoadTranslations()
 		if (!font->noTranslate) font->LoadTranslations();
 	}
 
-	if (BigFont)
+	if (BigFont && !BigFont->IsValidDynamicFont())
 	{
 		CalcDefaultTranslation(BigFont, CR_UNTRANSLATED * 2 + 1);
 		if (OriginalBigFont != nullptr && OriginalBigFont != BigFont)
