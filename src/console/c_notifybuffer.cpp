@@ -170,6 +170,14 @@ void FNotifyBuffer::Draw()
 			int scale = active_con_scaletext(twod, generic_ui);
 			FString suffix      = "";
 			int     suffixWidth = 0;
+			
+			if (font->IsValidDynamicFont())
+			{
+				scale *= font->GetInvSupersampleScale();
+			}
+			
+			int w = twod->GetWidth();
+			int h = twod->GetHeight();
 
 			if (con_stackident && i == Text.Size() - 1 && countedIdentical > 1)
 			{
@@ -184,21 +192,20 @@ void FNotifyBuffer::Draw()
 			if (center)
 			{
 				// Calculate center of text + suffix
-				xPos = (twod->GetWidth() / scale - totalWidth) / 2;
+				xPos = (w / scale - totalWidth) / 2;
 			}
 
 			// Draw the main text
-			DrawText(twod, font, color, xPos, line, notify.Text.GetChars(), DTA_VirtualWidth, twod->GetWidth() / scale,
-			         DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true, DTA_Alpha, alpha, TAG_DONE);
+			DrawText(twod, font, color, xPos, line, notify.Text.GetChars(), DTA_VirtualWidth, w / scale,
+			         DTA_VirtualHeight, h / scale, DTA_KeepRatio, true, DTA_Alpha, alpha, TAG_DONE);
 
 			// Draw the suffix if it exists
 			if (suffixWidth > 0)
 			{
 				DrawText(twod, font, color, xPos + textWidth, line, suffix.GetChars(), DTA_VirtualWidth,
-				         twod->GetWidth() / scale, DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true,
+				         w / scale, DTA_VirtualHeight, h / scale, DTA_KeepRatio, true,
 				         DTA_Alpha, alpha, TAG_DONE);
 			}
-
 			line += lineadv;
 			canskip = false;
 		}
