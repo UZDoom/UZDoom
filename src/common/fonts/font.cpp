@@ -569,6 +569,31 @@ FFont *FFont::FindFont (FName name)
 	return nullptr;
 }
 
+FFont *FindDynamicFallbackFontForLanguage(const char *lang)
+{
+	FString language = lang;
+	if (language.CompareNoCase("ko")==0)
+	{
+		return V_GetFont("IBMPLEXK");
+	}
+	return V_GetFont("IBMPLEXS");
+}
+
+void FFont::UpdateFontDynamicFallbacks(const char* lang)
+{
+	auto font = FirstFont;
+	while (font)
+	{
+		if (font->GetType() == EFontType::Dynamic)
+		{
+			//set dynamic fallback to match the current language
+			auto          fallback = FindDynamicFallbackFontForLanguage(lang);
+			font->SetDynamicFallback(fallback);
+		}
+		font = font->Next;
+	}
+}
+
 //==========================================================================
 //
 // RecordTextureColors

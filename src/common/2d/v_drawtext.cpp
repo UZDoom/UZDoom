@@ -477,7 +477,7 @@ void DrawText(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double 
 		return;
 	}
 	const char *txt = (parms.localize && string.Len() >= 2 && string[0] == '$') ? GStrings.GetString(string.GetChars() + 1) : string.GetChars();
-	if (!font->CanPrint(txt))
+	if (font && !font->CanPrint(txt))
 	{
 		font = font->GetDynamicFontFallback();
 	}

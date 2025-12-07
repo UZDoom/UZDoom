@@ -115,6 +115,7 @@ public:
 	}
 
 	static FFont *FindFont(FName fontname);
+	static void   UpdateFontDynamicFallbacks(const char* lang);
 
 	// Return width of string in pixels (unscaled)
 	int StringWidth (const uint8_t *str, int spacing = 0) const;

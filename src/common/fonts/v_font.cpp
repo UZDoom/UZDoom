@@ -183,11 +183,7 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 	return nullptr;
 }
 
-FFont *FindDynamicFallbackFontForLanguage()
-{
-	//if (activeLanguage)
-	return V_GetFont("NOTOSJP-");
-}
+
 
 void V_InitCustomFonts()
 {
@@ -222,14 +218,14 @@ void V_InitCustomFonts()
 			}
 		}
 
-		//TODO: expose as a user setting
-		FFont *dynamicFallback = FindDynamicFallbackFontForLanguage();
+		//current design is that there is one single dynamic fallback layer,
+		//that is a font hand-chosen by devs to fully support the desired language.
+		//ideally this will eventually be user configurable, but there are only so many CJK, turkish etc fonts out there.
 		for (auto *font : fontsWeAdded)
 		{
-			if (font != dynamicFallback)
-			{
-				font->SetDynamicFallback(dynamicFallback);
-			}		
+			const FName  fontName        = font->GetName();
+			FFont *const dynamicFallback = V_GetFont("NOTOSANS");
+			font->SetDynamicFallback(dynamicFallback);
 		}
 	}
 
@@ -922,7 +918,9 @@ void V_InitFonts()
 	if (lump == -1) I_FatalError("newconsolefont.hex not found");	// This font is needed - do not start up without it.
 	NewConsoleFont = CreateHexLumpFont("NewConsoleFont", lump);
 	NewSmallFont = CreateHexLumpFont2("NewSmallFont", lump);
+	NewSmallFont       = V_GetFont("IBMPLEXS");
 	CurrentConsoleFont = NewConsoleFont;
+	//BigUpper           = V_GetFont("WDXLLUBR");
 	ConFont = V_GetFont("ConsoleFont", "CONFONT");
 	V_GetFont("IndexFont", "INDEXFON");	// detect potential replacements for this one.
 }
