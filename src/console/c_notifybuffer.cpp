@@ -173,7 +173,7 @@ void FNotifyBuffer::Draw()
 			
 			if (font->IsValidDynamicFont())
 			{
-				scale *= font->GetInvSupersampleScale();
+				scale = 1;
 			}
 			
 			int w = twod->GetWidth();
