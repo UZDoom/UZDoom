@@ -208,10 +208,10 @@ void V_InitCustomFonts()
 	std::vector<FileSys::FolderEntry> folderdata;
 	if (fileSystem.GetFilesInFolder("fonts/dynamic/", folderdata, true))
 	{
-		std::vector<FFont *> fontsWeAdded;
-		for (const auto &f : folderdata)
+		std::vector<FFont*> fontsWeAdded;
+		for (const auto&f : folderdata)
 		{
-			FFont *NewFont = FontFromTTF(f);
+			FFont* const NewFont = FontFromTTF(f);
 			if (NewFont)
 			{
 				fontsWeAdded.push_back(NewFont);

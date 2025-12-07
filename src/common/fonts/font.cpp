@@ -895,7 +895,7 @@ int FFont::GetCharWidth (int code) const
 	code = GetCharCode(code, true);
 	if (Type == EFontType::Dynamic)
 	{
-		return DynamicFontAtlas->GetGlyphs().GetGlyphByCodepoint(code).width  * invSupersample;
+		return DynamicFontAtlas->GetGlyphs().GetGlyphByCodepoint(code).width  * InvSupersampleFactor;
 	}
 	if (code >= 0) return Chars[code - FirstChar].XMove;
 	return SpaceWidth;
@@ -987,7 +987,7 @@ int FFont::StringWidth(const uint8_t *string, int spacing) const
 	{
 		Trex::TextShaper shaper(*DynamicFontAtlas);
 		auto glyphs = shaper.ShapeUtf8(std::span<const char>((const char*)string, strlen((const char*)string)));
-		return Trex::TextShaper::Measure(glyphs).width * invSupersample;
+		return Trex::TextShaper::Measure(glyphs).width * InvSupersampleFactor;
 	}
 
 	int w = 0;
@@ -1181,9 +1181,9 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 	tex->SetSize(trexBitmap.Width(), trexBitmap.Height());
 	TexMan.AddGameTexture(tex);
 	DynamicFontAtlasTexture = tex;
-	invSupersample          = 1.0 / (superSampleScale + 0.00001);
+	InvSupersampleFactor          = 1.0 / (superSampleScale + 0.00001);
 
-	FontHeight = fontAtlas->GetFont()->GetMetrics().height * invSupersample;
+	FontHeight = fontAtlas->GetFont()->GetMetrics().height * InvSupersampleFactor;
 }
 
 //==========================================================================

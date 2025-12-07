@@ -166,7 +166,7 @@ public:
 
 	inline double GetInvSupersampleScale() const
 	{
-		return invSupersample;
+		return InvSupersampleFactor;
 	}
 
 	inline FFont *GetDynamicFontFallback() const
@@ -227,13 +227,16 @@ protected:
 	int Lump;
 	FName FontName = NAME_None;
 	FFont *Next;
+
+	//DYNAMIC FONTS
 	Trex::Atlas *DynamicFontAtlas = nullptr;
 	FGameTexture *DynamicFontAtlasTexture = nullptr;
-	double        invSupersample          = 1.0 / 3.0;
+	double        InvSupersampleFactor          = 1.0 / 3.0;
 
 	//when using dynamic fonts, if CanPrint indicates that a string is unable to be rendered
 	//using the current font, we attempt to render it with this one instead.
 	FFont        *DynamicFontFallback     = nullptr;
+	//DYNAMIC FONTS
 
 	static FFont *FirstFont;
 	friend struct FontsDeleter;
