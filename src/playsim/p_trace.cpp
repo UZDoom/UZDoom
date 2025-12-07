@@ -540,6 +540,7 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 		bc = entersector->ceilingplane.ZatPoint(hit);
 	}
 
+	bool thinfloor = (using3DFloorBottom && !!(usedBottom->flags&FF_THINFLOOR));
 	if (CurSector != NULL && hit.Z <= ff && (using3DFloorTop && !inside3DFloor ? -1.0 : 1.0)*Vec.dot(CurSector->floorplane.Normal()) < 0)
 	{
 		// hit floor in front of wall
@@ -548,7 +549,7 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 		if (using3DFloorTop) Results->ffloor = usedTop;
 		else if (inside3DFloor && using3DFloorBottom) Results->ffloor = usedBottom;
 	}
-	else if (CurSector != NULL && hit.Z >= fc && (using3DFloorBottom && !inside3DFloor ? -1.0 : 1.0)*Vec.dot(CurSector->ceilingplane.Normal()) < 0)
+	else if (CurSector != NULL && hit.Z >= fc && (using3DFloorBottom && !inside3DFloor && !thinfloor? -1.0 : 1.0)*Vec.dot(CurSector->ceilingplane.Normal()) < 0)
 	{
 		// hit ceiling in front of wall
 		Results->HitType = (inside3DFloor ? TRACE_HitFloor : TRACE_HitCeiling);
@@ -1275,6 +1276,7 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 	{
 		while (!lastflathit)
 		{
+			bool thinfloor = (using3DFloorBottom && !!(usedBottom->flags&FF_THINFLOOR));
 			if ((using3DFloorTop && !inside3DFloor ? -1.0 : 1.0)*Vec.dot(CurSector->floorplane.Normal()) < 0 && CurSector->PortalBlocksMovement(sector_t::floor) && CheckSectorPlane(CurSector, true))
 			{
 				Results->HitType = (inside3DFloor ? TRACE_HitCeiling : TRACE_HitFloor);
@@ -1284,7 +1286,7 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 				else if (inside3DFloor && using3DFloorBottom) Results->ffloor = usedBottom;
 				else Results->ffloor = NULL;
 			}
-			else if ((using3DFloorBottom && !inside3DFloor ? -1.0 : 1.0)*Vec.dot(CurSector->ceilingplane.Normal()) < 0 && CurSector->PortalBlocksMovement(sector_t::ceiling) && CheckSectorPlane(CurSector, false))
+			else if ((using3DFloorBottom && !inside3DFloor && !thinfloor ? -1.0 : 1.0)*Vec.dot(CurSector->ceilingplane.Normal()) < 0 && CurSector->PortalBlocksMovement(sector_t::ceiling) && CheckSectorPlane(CurSector, false))
 			{
 				Results->HitType = (inside3DFloor ? TRACE_HitFloor : TRACE_HitCeiling);
 				Results->HitTexture = CurSector->GetTexture(sector_t::ceiling);
