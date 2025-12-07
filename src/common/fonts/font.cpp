@@ -1181,7 +1181,8 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 	tex->SetSize(trexBitmap.Width(), trexBitmap.Height());
 	TexMan.AddGameTexture(tex);
 	DynamicFontAtlasTexture = tex;
-	InvSupersampleFactor          = 1.0 / (superSampleScale + 0.00001);
+	assert(superSampleScale > 0.0);
+	InvSupersampleFactor          = 1.0 / (superSampleScale);
 
 	FontHeight = fontAtlas->GetFont()->GetMetrics().height * InvSupersampleFactor;
 }

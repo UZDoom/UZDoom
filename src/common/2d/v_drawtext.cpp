@@ -310,7 +310,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		for (const Trex::ShapedGlyph &g : glyphs)
 		{
 			const double cx = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
-			const double cy = cursory + (scaley * shrinkScale) * (baseFontHeight * (1.0 - shrinkScale) + g.yOffset - g.info.bearingY);
+			const double heightAdjust = 1.0 / font->GetInvSupersampleScale();
+			const double cy = cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) + g.yOffset - g.info.bearingY);
 			SetTextureParms(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy);
 			atlasFragmentDrawParms.masked = true;
 			atlasFragmentDrawParms.fortext = true;
