@@ -576,6 +576,10 @@ FFont *FindDynamicFallbackFontForLanguage(const char *lang)
 	{
 		return V_GetFont("IBMPLEXK");
 	}
+	else if (language.CompareNoCase("jp") == 0)
+	{
+		return V_GetFont("IBMPLEXJ");
+	}
 	return V_GetFont("IBMPLEXS");
 }
 
