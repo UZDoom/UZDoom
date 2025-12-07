@@ -109,6 +109,10 @@ public:
 	int GetMaxAscender(const FString &text) const { return GetMaxAscender((uint8_t*)text.GetChars()); }
 	virtual void LoadTranslations();
 	FName GetName() const { return FontName; }
+	void SetDynamicFallback(FFont *const fallbackFont)
+	{
+		DynamicFontFallback = fallbackFont;
+	}
 
 	static FFont *FindFont(FName fontname);
 
@@ -162,6 +166,11 @@ public:
 	inline double GetInvSupersampleScale() const
 	{
 		return invSupersample;
+	}
+
+	inline FFont *GetDynamicFontFallback() const
+	{
+		return DynamicFontFallback;
 	}
 
 	friend void V_InitCustomFonts();
@@ -219,7 +228,11 @@ protected:
 	FFont *Next;
 	Trex::Atlas *DynamicFontAtlas = nullptr;
 	FGameTexture *DynamicFontAtlasTexture = nullptr;
-	double        invSupersample          = 1.0 / 3.0; // 1 / supersampling scale (default is 4x resolution)
+	double        invSupersample          = 1.0 / 3.0;
+
+	//when using dynamic fonts, if CanPrint indicates that a string is unable to be rendered
+	//using the current font, we attempt to render it with this one instead.
+	FFont        *DynamicFontFallback     = nullptr;
 
 	static FFont *FirstFont;
 	friend struct FontsDeleter;

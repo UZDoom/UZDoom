@@ -160,6 +160,35 @@ FFont *V_GetFont(const char *name, const char *fontlumpname)
 //
 //==========================================================================
 
+FFont *FontFromTTF(const FileSys::FolderEntry &f)
+{
+	FString fileName = f.name;
+	if (fileName.IndexOf(".ttf") > 0)
+	{
+		FileSys::FileData data      = fileSystem.ReadFileFullName(f.name);
+		FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
+		// TODO: determine required character set based on current language
+		// TODO: determine if fonts actually cover the required language
+		Trex::Charset UZDoomCharSet = Trex::Charset::Full();
+
+		// TODO: we need to base this on the real line height and not a hardcoded number.. how??
+		const int    defaultLineHeight = 17;
+		const int    supersampleScale  = 1;
+		Trex::Atlas *atlas =
+			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), defaultLineHeight * supersampleScale,
+		                    UZDoomCharSet, Trex::RenderMode::LCD);
+
+		return new FFont(shortName.GetChars(), atlas, supersampleScale);
+	}
+	return nullptr;
+}
+
+FFont *FindDynamicFallbackFontForLanguage()
+{
+	//if (activeLanguage)
+	return V_GetFont("NOTOSJP-");
+}
+
 void V_InitCustomFonts()
 {
 	FScanner sc;
@@ -183,25 +212,24 @@ void V_InitCustomFonts()
 	std::vector<FileSys::FolderEntry> folderdata;
 	if (fileSystem.GetFilesInFolder("fonts/dynamic/", folderdata, true))
 	{
+		std::vector<FFont *> fontsWeAdded;
 		for (const auto &f : folderdata)
 		{
-			FString fileName = f.name;
-			if (fileName.IndexOf(".ttf") > 0)
+			FFont *NewFont = FontFromTTF(f);
+			if (NewFont)
 			{
-				FileSys::FileData data = fileSystem.ReadFileFullName(f.name);
-				FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
-				//TODO: determine required character set based on current language
-				//TODO: determine if fonts actually cover the required language
-				Trex::Charset     UZDoomCharSet = Trex::Charset::Full();
-				//UZDoomCharSet.AddCodepoint(0xe29784);// "left arrow"
-				//TODO: we'll need to be able to defer creating the atlas
-				//because we need to decide the supersampling scale before we build it.
-				const int    defaultLineHeight = 17;
-				const int    supersampleScale  = 2;
-				Trex::Atlas*  atlas = new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), defaultLineHeight*supersampleScale, UZDoomCharSet, Trex::RenderMode::LCD);
-				
-				FFont* const Font = new FFont(shortName.GetChars(), atlas, supersampleScale);
+				fontsWeAdded.push_back(NewFont);
 			}
+		}
+
+		//TODO: expose as a user setting
+		FFont *dynamicFallback = FindDynamicFallbackFontForLanguage();
+		for (auto *font : fontsWeAdded)
+		{
+			if (font != dynamicFallback)
+			{
+				font->SetDynamicFallback(dynamicFallback);
+			}		
 		}
 	}
 

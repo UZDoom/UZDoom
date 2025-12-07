@@ -898,6 +898,21 @@ double GetBottomAlignOffset(FFont *font, int c)
 bool FFont::CanPrint(const uint8_t *string) const
 {
 	if (!string) return true;
+
+	if (Type == EFontType::Dynamic)
+	{
+		while (*string)
+		{
+			uint32_t codepoint = GetCharFromString(string);
+			if (!DynamicFontAtlas->GetFont()->GetGlyphIndex(codepoint))
+			{
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
 	while (*string)
 	{
 		auto chr = GetCharFromString(string);
