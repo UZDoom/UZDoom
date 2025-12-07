@@ -1848,7 +1848,7 @@ void P_PoisonDamage (player_t *player, AActor *source, int damage, bool playPain
 	// Take half damage in trainer mode
 	damage = int(damage * G_SkillProperty(SKILLP_DamageFactor) * sv_damagefactorplayer);
 	// Handle passive damage modifiers (e.g. PowerProtection)
-	damage = target->GetModifiedDamage(player->poisontype, damage, true, nullptr, source, 0, DAngle::fromDeg(0));
+	damage = target->GetModifiedDamage(player->poisontype, damage, true, nullptr, source, 0, nullAngle);
 	// Modify with damage factors
 	damage = target->ApplyDamageFactor(player->poisontype, damage);
 
