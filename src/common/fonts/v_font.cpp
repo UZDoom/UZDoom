@@ -224,7 +224,7 @@ void V_InitCustomFonts()
 		for (auto *font : fontsWeAdded)
 		{
 			const FName  fontName        = font->GetName();
-			FFont *const dynamicFallback = V_GetFont("NOTOSANS");
+			FFont *const dynamicFallback = V_GetFont("IBMPLEXS");
 			font->SetDynamicFallback(dynamicFallback);
 		}
 	}
