@@ -277,9 +277,7 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 
 	if (font && font->IsValidDynamicFont())
 	{
-		auto &atlas = *font->GetDynamicFontAtlas();
-		//double scalex = parms.scalex;
-		//double scaley = parms.scaley;
+		const auto&atlas = *font->GetDynamicFontAtlas();
 		auto               shaper = Trex::TextShaper(atlas);
 		Trex::ShapedGlyphs glyphs;
 		if constexpr (std::is_same_v<chartype, char>)
@@ -303,17 +301,20 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			static_assert(false, "unsupported char type");
 		}
 
-		auto cursorx = x;
-		auto cursory =y;
+		double cursorx = x;
+		double cursory = y;
 		DrawParms atlasFragmentDrawParms = parms;
-		double    shrinkScale            = font->GetInvSupersampleScale();
-		double    baseFontHeight         = font->GetHeight();
+		const double    shrinkScale            = font->GetInvSupersampleScale();
+		const double    baseFontHeight         = font->GetHeight();
+		FGameTexture *const atlasTexture           = font->GetDynamicFontAtlasTexture();
 		for (const Trex::ShapedGlyph &g : glyphs)
 		{
-			SetTextureParms(drawer, &atlasFragmentDrawParms, font->GetDynamicFontAtlasTexture(), cursorx + (shrinkScale*scalex)*(g.xOffset + g.info.bearingX), cursory + (scaley * shrinkScale) * (baseFontHeight*(1.0-shrinkScale) + g.yOffset - g.info.bearingY));
+			const double cx = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
+			const double cy = cursory + (scaley * shrinkScale) * (baseFontHeight * (1.0 - shrinkScale) + g.yOffset - g.info.bearingY);
+			SetTextureParms(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy);
 			atlasFragmentDrawParms.masked = true;
 			atlasFragmentDrawParms.fortext = true;
-			atlasFragmentDrawParms.srcx = (double)g.info.x / (double)atlasFragmentDrawParms.texwidth; //g.info.x;
+			atlasFragmentDrawParms.srcx = (double)g.info.x / (double)atlasFragmentDrawParms.texwidth;
 			atlasFragmentDrawParms.srcy = (double)g.info.y / (double)atlasFragmentDrawParms.texheight;
 			atlasFragmentDrawParms.srcheight = (double)g.info.height / (double)atlasFragmentDrawParms.texheight;
 			atlasFragmentDrawParms.srcwidth  = (double)g.info.width / (double)atlasFragmentDrawParms.texwidth;
@@ -321,14 +322,12 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			atlasFragmentDrawParms.destheight = g.info.height * scaley * shrinkScale;
 			atlasFragmentDrawParms.destwidth = g.info.width * scalex  * shrinkScale;
 			
-			drawer->AddTexture(font->GetDynamicFontAtlasTexture(), atlasFragmentDrawParms);
+			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
 			cursorx += (g.xAdvance) * scalex * shrinkScale;
 			cursory += (g.yAdvance) * scaley * shrinkScale;
 		}
 		return;
 	}
-
-	
 
 	if (parms.celly == 0) parms.celly = font->GetHeight() + 1;
 	parms.celly = int (parms.celly * scaley);
