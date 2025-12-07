@@ -1116,7 +1116,6 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 	noTranslate    = true;
 	GlobalKerning  = false;
 	SpaceWidth     = 0;
-	FontHeight     = fontAtlas->GetFont()->GetMetrics().height;
 
 	Type = EFontType::Dynamic;
 	DynamicFontAtlas = fontAtlas;
@@ -1139,6 +1138,8 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 	TexMan.AddGameTexture(tex);
 	DynamicFontAtlasTexture = tex;
 	invSupersample          = 1.0 / (superSampleScale + 0.00001);
+
+	FontHeight = fontAtlas->GetFont()->GetMetrics().height * invSupersample;
 }
 
 //==========================================================================
