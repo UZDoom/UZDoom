@@ -906,6 +906,15 @@ void PPCustomShaders::Run(PPRenderState *renderstate, FString target)
 
 	CreateShaders();
 
+	int width = renderstate->Viewport.width;
+	int height = renderstate->Viewport.height;
+
+	if (width > 0 && height > 0 && width <= 16384 && height <= 16384)
+	{
+		mLastWidth = width;
+		mLastHeight = height;
+	}
+
 	for (auto &shader : mShaders)
 	{
 		if (shader->Desc->Target == target && shader->Desc->Enabled)
@@ -913,6 +922,26 @@ void PPCustomShaders::Run(PPRenderState *renderstate, FString target)
 			shader->Run(renderstate);
 		}
 	}
+}
+
+void PPCustomShaders::UpdateLastInputTexture(PPRenderState *renderstate)
+{
+	int width = renderstate->Viewport.width;
+	int height = renderstate->Viewport.height;
+
+	if (width <= 0 || height <= 0 || width > 16384 || height > 16384)
+		return;
+
+	if (!mLastInputTexture ||
+		mLastInputTexture->GetRead()->Width != width ||
+		mLastInputTexture->GetRead()->Height != height)
+	{
+		mLastInputTexture = std::make_unique<PPPersistentBuffer>(width, height, PixelFormat::Rgba16f);
+	}
+
+	renderstate->CopyToTexture(mLastInputTexture->GetWrite());
+
+	mLastInputTexture->Swap();
 }
 
 void PPCustomShaders::CreateShaders()
@@ -924,13 +953,13 @@ void PPCustomShaders::CreateShaders()
 
 	for (unsigned int i = 0; i < PostProcessShaders.Size(); i++)
 	{
-		mShaders.push_back(std::make_unique<PPCustomShaderInstance>(&PostProcessShaders[i]));
+		mShaders.push_back(std::make_unique<PPCustomShaderInstance>(&PostProcessShaders[i], &mLastInputTexture));
 	}
 }
 
 /////////////////////////////////////////////////////////////////////////////
 
-PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc) : Desc(desc)
+PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture) : Desc(desc), LastInputTexture(lastInputTexture)
 {
 	// Build an uniform block to be used as input
 	TMap<FString, PostProcessUniformValue>::Iterator it(Desc->Uniforms);
@@ -977,6 +1006,9 @@ PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc) : Desc(d
 		pipelineInOut += "in vec2 TexCoord;\n";
 		pipelineInOut += "out vec4 FragColor;\n";
 	}
+
+	LastInputTextureBinding = binding;
+	uniformTextures.AppendFormat("layout(binding=%d) uniform sampler2D LastInputTexture;\n", LastInputTextureBinding);
 
 	FString prolog;
 	prolog += uniformTextures;
@@ -1046,6 +1078,15 @@ void PPCustomShaderInstance::SetTextures(PPRenderState *renderstate)
 
 			renderstate->SetInputTexture(textureIndex, pptex.get(), PPFilterMode::Linear, PPWrapMode::Repeat);
 			textureIndex++;
+		}
+	}
+
+	if (LastInputTexture && *LastInputTexture && LastInputTextureBinding >= 0)
+	{
+		auto texture = (*LastInputTexture)->GetRead();
+		if (texture->Backend)
+		{
+			renderstate->SetInputTexture(LastInputTextureBinding, texture, PPFilterMode::Linear, PPWrapMode::Clamp);
 		}
 	}
 }
@@ -1139,5 +1180,8 @@ void Postprocess::Pass2(PPRenderState* state, int fixedcm, float flash, int scen
 	colormap.Render(state, fixedcm, flash);
 	lens.Render(state);
 	fxaa.Render(state);
+
 	customShaders.Run(state, "scene");
+
+	customShaders.UpdateLastInputTexture(state);
 }

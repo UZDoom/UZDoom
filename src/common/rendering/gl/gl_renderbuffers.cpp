@@ -969,6 +969,21 @@ void GLPPRenderState::Draw()
 	glViewport(screen->mScreenViewport.left, screen->mScreenViewport.top, screen->mScreenViewport.width, screen->mScreenViewport.height);
 }
 
+void GLPPRenderState::CopyToTexture(PPTexture* dst)
+{
+	PPGLTextureBackend* backend = GetGLTexture(dst);
+	GLuint dstTexture = backend->Tex.handle;
+
+	GLuint srcFB = buffers->mPipelineFB[buffers->mCurrentPipelineTexture].handle;
+	glBindFramebuffer(GL_READ_FRAMEBUFFER, srcFB);
+
+	glBindTexture(GL_TEXTURE_2D, dstTexture);
+
+	glCopyTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 0, 0, dst->Width, dst->Height);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+}
+
 void GLPPRenderState::PushGroup(const FString &name)
 {
 	FGLDebug::PushGroup(name.GetChars());

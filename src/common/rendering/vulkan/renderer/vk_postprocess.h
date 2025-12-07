@@ -36,6 +36,7 @@ public:
 
 	void BlitSceneToPostprocess();
 	void BlitCurrentToImage(VkTextureImage *image, VkImageLayout finallayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+	void CopyCurrentToImage(VkTextureImage *image, VkImageLayout finallayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 	void DrawPresentTexture(const IntRect &box, bool applyGamma, bool screenshot);
 
 	int GetCurrentPipelineImage() const { return mCurrentPipelineImage; }

@@ -19,6 +19,7 @@ public:
 	void PopGroup() override;
 
 	void Draw() override;
+	void CopyToTexture(PPTexture* dst) override;
 
 private:
 	void RenderScreenQuad(VkPPRenderPassSetup *passSetup, VulkanDescriptorSet *descriptorSet, VulkanFramebuffer *framebuffer, int framebufferWidth, int framebufferHeight, int x, int y, int width, int height, const void *pushConstants, uint32_t pushConstantsSize, bool stencilTest);

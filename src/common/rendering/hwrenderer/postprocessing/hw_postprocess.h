@@ -5,6 +5,8 @@
 #include <map>
 #include "intrect.h"
 
+#include "hwrenderer/postprocessing/hw_postprocessshader.h"
+
 struct PostProcessShader;
 
 typedef FRenderStyle PPBlendMode;
@@ -96,6 +98,7 @@ public:
 	virtual void PopGroup() = 0;
 
 	virtual void Draw() = 0;
+	virtual void CopyToTexture(PPTexture* dst) = 0;
 
 	void Clear()
 	{
@@ -227,15 +230,6 @@ public:
 	PPBlendMode BlendMode;
 	PPOutput Output;
 	bool ShadowMapBuffers = false;
-};
-
-enum class PixelFormat
-{
-	Rgba8,
-	Rgba16f,
-	R32f,
-	Rg16f,
-	Rgba16_snorm
 };
 
 class PPResource
@@ -782,10 +776,29 @@ struct ShadowMapUniforms
 	}
 };
 
+class PPPersistentBuffer
+{
+public:
+	PPPersistentBuffer() = default;
+	PPPersistentBuffer(int width, int height, PixelFormat format)
+	{
+		Buffers[0] = PPTexture(width, height, format);
+		Buffers[1] = PPTexture(width, height, format);
+	}
+
+	void Swap() { CurrentIndex = 1 - CurrentIndex; }
+	PPTexture* GetRead() { return &Buffers[CurrentIndex]; }
+	PPTexture* GetWrite() { return &Buffers[1 - CurrentIndex]; }
+
+private:
+	PPTexture Buffers[2];
+	int CurrentIndex = 0;
+};
+
 class PPCustomShaderInstance
 {
 public:
-	PPCustomShaderInstance(PostProcessShader *desc);
+	PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture);
 
 	void Run(PPRenderState *renderstate);
 
@@ -802,17 +815,24 @@ private:
 	std::vector<std::unique_ptr<FString>> FieldNames;
 	std::map<FTexture*, std::unique_ptr<PPTexture>> Textures;
 	std::map<FString, size_t> FieldOffset;
+
+	std::unique_ptr<PPPersistentBuffer> *LastInputTexture;
+	int LastInputTextureBinding = -1;
 };
 
 class PPCustomShaders
 {
 public:
 	void Run(PPRenderState *renderstate, FString target);
+	void UpdateLastInputTexture(PPRenderState *renderstate);
 
 private:
 	void CreateShaders();
 
 	std::vector<std::unique_ptr<PPCustomShaderInstance>> mShaders;
+	std::unique_ptr<PPPersistentBuffer> mLastInputTexture;
+	int mLastWidth = 0;
+	int mLastHeight = 0;
 };
 
 class PPShadowMap

@@ -97,6 +97,16 @@ void VkPPRenderState::Draw()
 	}
 }
 
+void VkPPRenderState::CopyToTexture(PPTexture* dst)
+{
+	if (!dst->Backend)
+		dst->Backend = std::make_unique<VkPPTexture>(fb, dst);
+
+	auto backend = static_cast<VkPPTexture*>(dst->Backend.get());
+
+	fb->GetPostprocess()->CopyCurrentToImage(&backend->TexImage, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+}
+
 void VkPPRenderState::RenderScreenQuad(VkPPRenderPassSetup *passSetup, VulkanDescriptorSet *descriptorSet, VulkanFramebuffer *framebuffer, int framebufferWidth, int framebufferHeight, int x, int y, int width, int height, const void *pushConstants, uint32_t pushConstantsSize, bool stencilTest)
 {
 	auto cmdbuffer = fb->GetCommands()->GetDrawCommands();

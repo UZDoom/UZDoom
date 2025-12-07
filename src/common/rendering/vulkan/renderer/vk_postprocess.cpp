@@ -182,6 +182,39 @@ void VkPostprocess::BlitCurrentToImage(VkTextureImage *dstimage, VkImageLayout f
 		.Execute(cmdbuffer);
 }
 
+void VkPostprocess::CopyCurrentToImage(VkTextureImage *dstimage, VkImageLayout finallayout)
+{
+	fb->GetRenderState()->EndRenderPass();
+
+	auto srcimage = &fb->GetBuffers()->PipelineImage[mCurrentPipelineImage];
+	auto cmdbuffer = fb->GetCommands()->GetDrawCommands();
+
+	VkImageTransition()
+	.AddImage(srcimage, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, false)
+	.AddImage(dstimage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, true)
+	.Execute(cmdbuffer);
+
+	VkImageCopy region = {};
+	region.srcSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	region.srcSubresource.layerCount = 1;
+	region.dstSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	region.dstSubresource.layerCount = 1;
+	region.extent.width = srcimage->Image->width;
+	region.extent.height = srcimage->Image->height;
+	region.extent.depth = 1;
+
+	cmdbuffer->copyImage(
+		srcimage->Image->image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL,
+		dstimage->Image->image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+		1, &region
+	);
+
+	VkImageTransition()
+	.AddImage(srcimage, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, false)
+	.AddImage(dstimage, finallayout, false)
+	.Execute(cmdbuffer);
+}
+
 void VkPostprocess::DrawPresentTexture(const IntRect &box, bool applyGamma, bool screenshot)
 {
 	VkPPRenderState renderstate(fb);

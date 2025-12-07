@@ -31,6 +31,7 @@ private:
 
 	friend class FGLRenderBuffers;
 	friend class PPGLTextureBackend;
+	friend class GLPPRenderState;
 };
 
 class PPGLFrameBuffer
@@ -48,6 +49,7 @@ private:
 
 	friend class FGLRenderBuffers;
 	friend class PPGLTextureBackend;
+	friend class GLPPRenderState;
 };
 
 class PPGLRenderBuffer
@@ -91,6 +93,7 @@ public:
 	void PushGroup(const FString &name) override;
 	void PopGroup() override;
 	void Draw() override;
+	void CopyToTexture(PPTexture* dst) override;
 
 private:
 	PPGLTextureBackend *GetGLTexture(PPTexture *texture);

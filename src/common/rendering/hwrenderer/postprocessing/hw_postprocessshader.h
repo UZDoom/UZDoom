@@ -3,6 +3,15 @@
 #include "zstring.h"
 #include "tarray.h"
 
+enum class PixelFormat
+{
+	Rgba8,
+	Rgba16f,
+	R32f,
+	Rg16f,
+	Rgba16_snorm
+};
+
 enum class PostProcessUniformType
 {
 	Undefined,
