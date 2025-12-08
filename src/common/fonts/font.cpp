@@ -893,7 +893,7 @@ FGameTexture *FFont::GetChar (int code, int translation, int *const width) const
 int FFont::GetCharWidth (int code) const
 {
 	code = GetCharCode(code, true);
-	if (Type == EFontType::Dynamic)
+	if (IsValidDynamicFont())
 	{
 		return DynamicFontAtlas->GetGlyphs().GetGlyphByCodepoint(code).width  * InvSupersampleFactor;
 	}
