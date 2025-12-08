@@ -306,22 +306,22 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		DrawParms atlasFragmentDrawParms = parms;
 		const double    shrinkScale            = font->GetInvSupersampleScale();
 		const double    baseFontHeight         = font->GetHeight();
-		FGameTexture *const atlasTexture           = font->GetDynamicFontAtlasTexture();
+		FGameTexture *const atlasTexture       = font->GetDynamicFontAtlasTexture();
 		for (const Trex::ShapedGlyph &g : glyphs)
 		{
 			const double cx = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
 			const double heightAdjust = 1.0 / font->GetInvSupersampleScale();
 			const double cy = cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) + g.yOffset - g.info.bearingY);
-			SetTextureParms(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy);
+			const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
+			const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
+			const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
+			const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
+			SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
 			atlasFragmentDrawParms.masked = true;
 			atlasFragmentDrawParms.fortext = true;
-			atlasFragmentDrawParms.srcx = (double)g.info.x / (double)atlasFragmentDrawParms.texwidth;
-			atlasFragmentDrawParms.srcy = (double)g.info.y / (double)atlasFragmentDrawParms.texheight;
-			atlasFragmentDrawParms.srcheight = (double)g.info.height / (double)atlasFragmentDrawParms.texheight;
-			atlasFragmentDrawParms.srcwidth  = (double)g.info.width / (double)atlasFragmentDrawParms.texwidth;
 			atlasFragmentDrawParms.bilinear   = 1;
-			atlasFragmentDrawParms.destheight = g.info.height * scaley * shrinkScale;
-			atlasFragmentDrawParms.destwidth = g.info.width * scalex  * shrinkScale;
+			atlasFragmentDrawParms.destwidth *= scaley * shrinkScale;
+			atlasFragmentDrawParms.destheight *= scaley * shrinkScale;
 			
 			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
 			cursorx += (g.xAdvance) * scalex * shrinkScale;
