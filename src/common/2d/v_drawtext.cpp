@@ -321,8 +321,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			atlasFragmentDrawParms.masked = true;
 			atlasFragmentDrawParms.fortext = true;
 			atlasFragmentDrawParms.bilinear   = 1;
-			atlasFragmentDrawParms.destwidth *= scaley * shrinkScale;
-			atlasFragmentDrawParms.destheight *= scaley * shrinkScale;
+			atlasFragmentDrawParms.destwidth *= (shrinkScale);
+			atlasFragmentDrawParms.destheight *= (shrinkScale);
 			
 			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
 			cursorx += (g.xAdvance) * scalex * shrinkScale;
