@@ -825,8 +825,8 @@ bool SetTextureParmsSubrect(F2DDrawer *drawer, DrawParms *parms, FGameTexture *i
 				double adder      = parms->keepratio < 0 ? 0 : parms->keepratio == 0 ? rect.left : 2 * rect.left;
 				parms->x          = parms->viewport.left + adder + parms->x * rect.width / parms->virtWidth;
 				parms->y          = parms->viewport.top + rect.top + parms->y * rect.height / parms->virtHeight;
-				parms->destwidth  = (parms->destwidth * w) * rect.width / parms->virtWidth;
-				parms->destheight = (parms->destheight * h) * rect.height / parms->virtHeight;
+				parms->destwidth  = (parms->destwidth) * rect.width / parms->virtWidth;
+				parms->destheight = (parms->destheight) * rect.height / parms->virtHeight;
 				return false;
 			}
 			break;
