@@ -596,6 +596,9 @@ void FFont::UpdateFontDynamicFallbacks(const char* lang)
 		}
 		font = font->Next;
 	}
+
+	//the primary small font should also be changed so correct text shaping is used in menus.
+	NewSmallFont = FindDynamicFallbackFontForLanguage(lang);
 }
 
 //==========================================================================
