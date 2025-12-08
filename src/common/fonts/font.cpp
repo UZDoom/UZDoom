@@ -1163,6 +1163,7 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 
 	Type = EFontType::Dynamic;
 	DynamicFontAtlas = fontAtlas;
+	DynamicTextShaper = new Trex::TextShaper(*fontAtlas);
 
 	FirstChar = LastChar = 0;
 	Next                 = FirstFont;
