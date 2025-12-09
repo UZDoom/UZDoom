@@ -1,15 +1,34 @@
+/*
+** widgetresourcedata.cpp
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2024-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
+**
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see http://www.gnu.org/licenses/
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include <zwidget/core/resourcedata.h>
 #include <zwidget/core/theme.h>
+
 #include "c_cvars.h"
 #include "filesystem.h"
 #include "printf.h"
-#include "zstring.h"
-
-#ifdef _WIN32
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-#endif
 
 CUSTOM_CVARD(Int, ui_theme, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
 {
@@ -116,27 +135,13 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
 		for (unsigned i = 0; i < count; i++)
 			returnv[i].fontdata = LoadFile(fonts[i]);
 
-#ifdef _WIN32
-		wchar_t wbuffer[256];
-		if (GetWindowsDirectoryW(wbuffer, 256))
-		{
-			returnv.resize(5);
-			FString windir(wbuffer);
-			returnv[3].fontdata = LoadDiskFile((windir + "/fonts/yugothm.ttc").GetChars());
-			returnv[3].language = "ja";
-			returnv[4].fontdata = LoadDiskFile((windir + "/fonts/malgun.ttf").GetChars());
-			returnv[4].language = "ko";
-			// Don't fail if these cannot be found
-			if (returnv[4].fontdata.size() == 0) returnv.erase(returnv.begin() + 4);
-			if (returnv[3].fontdata.size() == 0) returnv.erase(returnv.begin() + 3);
-		}
-#endif
 		return returnv;
-
 	}
+
 	returnv.resize(1);
-	std::string fn = "widgets/font/" +name + ".ttf";
+	std::string fn = "widgets/font/" + name + ".ttf";
 	returnv[0].fontdata = LoadFile(fn.c_str());
+
 	return returnv;
 }
 
