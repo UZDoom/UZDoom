@@ -101,10 +101,19 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
 	std::vector<SingleFontData> returnv;
 	if (!stricmp(name.c_str(), "notosans"))
 	{
-		returnv.resize(3);
-		returnv[0].fontdata = LoadFile("widgets/noto/notosans-regular.ttf");
-		returnv[1].fontdata = LoadFile("widgets/noto/notosansarmenian-regular.ttf");
-		returnv[2].fontdata = LoadFile("widgets/noto/notosansgeorgian-regular.ttf");
+		// to update/add fonts:
+		// tools/download-fonts.sh wadsrc/static widgets/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian'
+		const char* fonts[] = {
+			"widgets/noto/noto-sans.ttf",
+			"widgets/noto/noto-sans-armenian.ttf",
+			"widgets/noto/noto-sans-georgian.ttf"
+		};
+
+		auto count = sizeof(fonts) / sizeof(fonts[0]);
+		returnv.resize(count);
+		for (unsigned i = 0; i < count; i++)
+			returnv[i].fontdata = LoadFile(fonts[i]);
+
 #ifdef _WIN32
 		wchar_t wbuffer[256];
 		if (GetWindowsDirectoryW(wbuffer, 256))
