@@ -173,7 +173,8 @@ public:
 
 	const char &operator[] (int index) const
 	{
-		if(index < 0 || index >= Len()) ThrowStringBoundsException((int64_t)index, Len());
+		assert(index >= 0);
+		if(index < 0 || (unsigned)index >= Len()) ThrowStringBoundsException((int64_t)index, Len());
 		return Chars[index];
 	}
 #if defined(_WIN32) && !defined(_WIN64) && defined(_MSC_VER)
