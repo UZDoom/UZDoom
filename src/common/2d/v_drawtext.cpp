@@ -338,9 +338,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 				if (newcolor != CR_UNDEFINED)
 				{
 					currentcolor = newcolor;
-					PalEntry color;
-					auto trans        = font->GetColorTranslation((EColorRange)normalcolor, &color);
-					atlasFragmentDrawParms.color = MAKEARGB(255, color.r, color.g, color.b);
+					atlasFragmentDrawParms.color = V_LogColorFromColorRange(newcolor);
+					atlasFragmentDrawParms.color.a = 255;
 					strPos++;
 					continue;
 				}
