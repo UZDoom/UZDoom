@@ -986,7 +986,7 @@ bool FFont::CanPrint(const uint8_t *string) const
 
 int FFont::StringWidth(const uint8_t *string, int spacing) const
 {
-	if (Type == EFontType::Dynamic)
+	if (IsValidDynamicFont())
 	{
 		auto &shaper = *DynamicTextShaper;
 		auto glyphs = shaper.ShapeUtf8(std::span<const char>((const char*)string, strlen((const char*)string)));
