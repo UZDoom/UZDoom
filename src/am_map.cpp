@@ -4,6 +4,8 @@
 // Copyright 1994-1996 Raven Software
 // Copyright 1999-2016 Randy Heit
 // Copyright 2002-2016 Christoph Oelckers
+// Copyright 2017-2025 GZDoom Maintainers and Contributors
+// Copyright 2025 UZDoom Maintainers and Contributors
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -28,49 +30,41 @@
 #include <stdio.h>
 #include <array>
 
-#include "doomdef.h"
-
-#include "g_level.h"
-#include "st_stuff.h"
-#include "p_local.h"
-#include "p_lnspec.h"
-#include "filesystem.h"
+#include "a_keys.h"
 #include "a_sharedglobal.h"
-#include "d_event.h"
-#include "gi.h"
-#include "p_setup.h"
+#include "am_map.h"
 #include "c_bind.h"
-#include "serializer_doom.h"
-#include "r_sky.h"
-#include "sbar.h"
-#include "d_player.h"
-#include "p_blockmap.h"
-#include "g_game.h"
-#include "v_video.h"
-#include "d_main.h"
-#include "v_draw.h"
-
-#include "m_cheat.h"
+#include "c_buttons.h"
 #include "c_dispatch.h"
+#include "d_buttons.h"
+#include "d_event.h"
+#include "d_main.h"
 #include "d_netinf.h"
-
-// State.
+#include "d_player.h"
+#include "doomdef.h"
+#include "earcut.hpp"
+#include "filesystem.h"
+#include "g_game.h"
+#include "g_levellocals.h"
+#include "gi.h"
+#include "gstrings.h"
+#include "m_cheat.h"
+#include "p_blockmap.h"
+#include "p_lnspec.h"
+#include "p_local.h"
+#include "p_setup.h"
+#include "po_man.h"
+#include "r_sky.h"
 #include "r_state.h"
 #include "r_utility.h"
-
-// Data.
-#include "gstrings.h"
-
-#include "am_map.h"
-#include "po_man.h"
-#include "a_keys.h"
-#include "g_levellocals.h"
-#include "actorinlines.h"
-#include "earcut.hpp"
-#include "c_buttons.h"
-#include "d_buttons.h"
+#include "sbar.h"
+#include "serializer_doom.h"
+#include "st_stuff.h"
 #include "texturemanager.h"
+#include "v_draw.h"
+#include "v_video.h"
 
+#include "actorinlines.h"
 
 //=============================================================================
 //
@@ -2907,7 +2901,7 @@ void DAutomap::drawPlayers ()
 		}
 
 		// We don't always want to show allies on the automap.
-		if (dmflags2 & DF2_NO_AUTOMAP_ALLIES && i != consoleplayer)
+		if (dmflags2 & DF2_NO_AUTOMAP_ALLIES && (int)i != consoleplayer)
 			continue;
 		
 		if (deathmatch && !demoplayback &&
