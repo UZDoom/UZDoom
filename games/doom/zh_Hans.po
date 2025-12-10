@@ -1,0 +1,217 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 12:21+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/doom/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_D1E1"
+msgstr "膝陷死域"
+
+msgid "TXT_D1E2"
+msgstr "地狱岸边"
+
+msgid "TXT_D1E3"
+msgstr "炼狱"
+
+# The episode and levels' names in E4 are taken from the Bible.
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "噬尽汝肉"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: 机库"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: 核电站"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: 毒素精炼厂"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: 指挥控制中心"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: 火卫一实验室"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: 中央处理区"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: 计算机站"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: 火卫一异常区"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: 军事基地"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: 下水道"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: 火卫二异常区"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: 抑制区"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: 精炼厂"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: 火卫二实验室"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: 指挥中心"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: 恶灵殿堂"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: 孵化桶"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: 巴别塔"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: 神秘堡垒"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: 地狱要塞"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: 绝望泥潭"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: 骚动"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: 痛苦之屋"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: 邪恶大教堂"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "E3M6: 厄瑞玻斯山"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: 境地"
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "E3M8: 死"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: 兔子窝"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "E4M1: 地狱之下"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "E4M2: 完美憎恨"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "E4M3: 斩断恶人"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "E4M4: 桀骜邪恶"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "E4M5: 他们将忏悔"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "E4M6: 以恶制恶"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "E4M7: 地狱随行"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "E4M8: 直面残暴"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: 恐惧"
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"当你打败那些大坏蛋，清理完卫星基地时，\n"
+"你就该赢了，不是吗？不是吗？\n"
+"你的丰厚奖赏和回家的票呢？\n"
+"这到底是怎么回事？不该这样结束的！\n"
+"\n"
+"这里臭气熏天，像腐肉一样，\n"
+"但看起来像是失落的火卫二基地。\n"
+"看来你被困在地狱岸边了。\n"
+"唯一的出路就是向前冲。\n"
+"\n"
+"想继续体验《DOOM》，\n"
+"就玩《地狱岸边》\n"
+"以及惊人的续作《炼狱》！\n"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+"你成功了！统治着失落的火卫二卫星\n"
+"基地的丑恶机械巨魔领主已被消灭了，\n"
+"你取得了胜利！但是……你在哪里？\n"
+"你爬到卫星边缘向下望去，\n"
+"看到了可怕的真相。\n"
+"\n"
+"火卫二竟然漂浮在地狱之上！\n"
+"你从未听说过有人能从地狱逃脱，\n"
+"但你会让那些混蛋后悔认识你！\n"
+"你迅速用绳索滑降到地狱表面。\n"
+"\n"
+"现在，是时候开启《DOOM》的\n"
+"最终篇章——《炼狱》了。"
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+"那个策划入侵卫星基地并造成无数\n"
+"死亡的可恶蜘蛛恶魔已经被永远击败了。\n"
+"\n"
+"一道隐藏的门打开了，你走了进去。\n"
+"你证明了自己强大到地狱都无法再将你囚禁，\n"
+"现在地狱终于公平行事——\n"
+"因为你从门里出来了，\n"
+"看到了地球那片绿色的田野！终于回家了。\n"
+"\n"
+"你好奇在你与邪恶势力的战斗期间\n"
+"地球上发生了什么。\n"
+"好在地狱里的家伙们没能\n"
+"跟你一起从那道门出来……"
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+"在你与来自地狱的可怕怪兽最终对决之前\n"
+"蜘蛛首脑肯定已经派出大批地狱恶灵。\n"
+"但你挺身而出，像真正的英雄那样，\n"
+"给大群恶魔带来了永恒的诅咒和折磨。\n"
+"\n"
+"而且，总得有人为黛西——\n"
+"你的宠物兔子——所遭受的一切付出代价。\n"
+"\n"
+"但现在，你面前展现的是更多的痛苦和残杀，\n"
+"恶魔大军在我们的城市中横行肆虐。\n"
+"\n"
+"下一站，《人间地狱》！"

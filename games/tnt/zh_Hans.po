@@ -1,0 +1,186 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 15:48+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/tnt-evilution/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT：邪恶进化"
+
+msgid "THUSTR_1"
+msgstr "Level 1: 系统控制中心"
+
+msgid "THUSTR_2"
+msgstr "Level 2: 人类烧烤"
+
+msgid "THUSTR_3"
+msgstr "Level 3: 电源控制中心"
+
+msgid "THUSTR_4"
+msgstr "Level 4: 虫洞"
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr "Level 5: 挂钩"
+
+msgid "THUSTR_6"
+msgstr "Level 6: 开放狩猎"
+
+msgid "THUSTR_7"
+msgstr "Level 7: 监狱"
+
+msgid "THUSTR_8"
+msgstr "Level 8: 金属"
+
+msgid "THUSTR_9"
+msgstr "Level 9: 要塞"
+
+msgid "THUSTR_10"
+msgstr "Level 10: 救赎"
+
+msgid "THUSTR_11"
+msgstr "Level 11: 储存设施"
+
+msgid "THUSTR_12"
+msgstr "Level 12: 火山口"
+
+msgid "THUSTR_13"
+msgstr "Level 13: 核辐射处理区"
+
+msgid "THUSTR_14"
+msgstr "Level 14: 钢铁厂"
+
+msgid "THUSTR_15"
+msgstr "Level 15: 死亡地带"
+
+msgid "THUSTR_16"
+msgstr "Level 16: 最深处"
+
+msgid "THUSTR_17"
+msgstr "Level 17: 加工区"
+
+msgid "THUSTR_18"
+msgstr "Level 18: 磨坊"
+
+msgid "THUSTR_19"
+msgstr "Level 19: 运输/重生"
+
+msgid "THUSTR_20"
+msgstr "Level 20: 中央处理区"
+
+msgid "THUSTR_21"
+msgstr "Level 21: 行政中心"
+
+msgid "THUSTR_22"
+msgstr "Level 22: 栖息地"
+
+msgid "THUSTR_23"
+msgstr "Level 23: 月球采矿工程"
+
+msgid "THUSTR_24"
+msgstr "Level 24: 采石场"
+
+msgid "THUSTR_25"
+msgstr "Level 25: 男爵的巢穴"
+
+msgid "THUSTR_26"
+msgstr "Level 26: 弹幕"
+
+msgid "THUSTR_27"
+msgstr "Level 27: 痛苦山"
+
+msgid "THUSTR_28"
+msgstr "Level 28: 冥界"
+
+msgid "THUSTR_29"
+msgstr "Level 29: 冥河"
+
+msgid "THUSTR_30"
+msgstr "Level 30: 最后通牒"
+
+msgid "THUSTR_31"
+msgstr "Level 31: 法老"
+
+msgid "THUSTR_32"
+msgstr "Level 32: 加勒比"
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"你从被感染的实验室内杀出一条血路。\n"
+"看来UAC又把这地方吞下去了。\n"
+"他们人员流动率那么高，\n"
+"可怜的UAC现在买公司健康保险肯定很难吧……\n"
+"\n"
+"前方就是军事基地，此刻到处都是病态的怪物，\n"
+"急切地想要咬你一口。\n"
+"但愿基地里还留有一些作战武器。"
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"你听到前方传来重型机械的轰鸣声。\n"
+"你真心希望他们不是在制造新的恶魔，\n"
+"但要是真有大批怪物出现，\n"
+"你也做好了杀个痛快的准备。\n"
+"他们或许在策划一场血腥盛宴，\n"
+"但你觉得自己就像两千个疯子\n"
+"汇聚成的一个疯狂杀手。\n"
+"\n"
+"你可不想轻易倒下。"
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"前方展现的景象看起来真是再熟悉不过了。\n"
+"气味也熟悉——就像炸焦的粪便。\n"
+"你以前就不喜欢这个地方，\n"
+"现在更没打算喜欢上它。你越想越气。\n"
+"举起枪，脸上露出邪恶的笑容。\n"
+"是时候给这些家伙点颜色瞧瞧了。"
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"突然，从这一头到那一头，\n"
+"一切都安静了下来。\n"
+"地狱般的痛苦回声渐渐消失，\n"
+"噩梦般的天空变成了蓝色，\n"
+"怪物的尸体堆开始蒸发，\n"
+"连同弥漫在空气中的恶臭一起。\n"
+"天哪，也许你成功了。你真的赢了吗？\n"
+"\n"
+"远处传来一阵轰鸣声。\n"
+"恶魔喷射器那残破的头颅里，\n"
+"开始发出一道蓝光。"
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"这又是什么情况？看起来完全不一样了。\n"
+"有点像法老王的公寓。\n"
+"不过，不管这里有什么，\n"
+"应该也不会比平常更糟吧？\n"
+"还是说，最好别去招惹沉睡中的神明……"
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"该去度假了。\n"
+"你已经把地狱搅得天翻地覆，\n"
+"该好好休息一下了。你自言自语道，\n"
+"也许下次让别人去收拾地狱的烂摊子吧。\n"
+"前方是一座宁静的小镇，有潺潺流淌的溪水，\n"
+"古色古香的建筑，想必也没有地狱的爪牙。\n"
+"\n"
+"当你从传送器上下来时，\n"
+"听到了机械巨魔的铁鞋重重的踩踏声。"

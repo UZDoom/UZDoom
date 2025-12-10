@@ -1,0 +1,5255 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 19:00+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "PRESSKEY"
+msgstr "请按下任意按键以继续。"
+
+msgid "SECRETMESSAGE"
+msgstr "你发现了一个秘密！"
+
+msgid "D_DEVSTR"
+msgstr "Useless模式启动。\n"
+
+msgid "QUITMSG"
+msgstr ""
+"你确定要退出这\n"
+"精彩的游戏吗？"
+
+# In some languages, it may make more sense to translate “Press a key” as
+# “Press any key.”
+msgid "LOADNET"
+msgstr ""
+"在进行网络游戏时无法进行读取！\n"
+"\n"
+"请按下任意按键以继续。"
+
+msgid "QLOADNET"
+msgstr ""
+"在进行网络游戏时无法进行快速读取！\n"
+"\n"
+"请按下任意按键以继续。"
+
+msgid "QSAVESPOT"
+msgstr ""
+"你还没选择快速保存的槽位咧！\n"
+"\n"
+"请按下任意按键以继续。"
+
+msgid "NEWGAME"
+msgstr ""
+"在进行网络游戏时\n"
+"无法开启新游戏。\n"
+"\n"
+"请按下任意按键以继续。"
+
+msgid "NIGHTMARE"
+msgstr ""
+"你真的确定吗？这个难度等级\n"
+"是一点也不公平的哟。\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgid "SWSTRING"
+msgstr ""
+"这是毁灭战士的shareware试玩版本。\n"
+"\n"
+"你需要购买完整的三部曲。\n"
+"\n"
+"请按下任意按键以继续。"
+
+msgid "NETEND"
+msgstr ""
+"你无法结束一局网络游戏！\n"
+"\n"
+"请按下任意按键以继续。"
+
+msgid "ENDGAME"
+msgstr ""
+"你真的确定要结束游戏吗？\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgid "RAVENQUITMSG"
+msgstr "你真的确定要退出吗？"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "仅在已激活的游戏版本提供"
+
+msgid "DOSY"
+msgstr "（按下Y键退出）"
+
+msgid "QUITMSG1"
+msgstr ""
+"别走嘛，还有好多恶魔\n"
+"等着你来干掉咧！"
+
+msgid "QUITMSG2"
+msgstr ""
+"快撤吧 — 离开\n"
+"这场血雨腥风！"
+
+msgid "QUITMSG3"
+msgstr ""
+"要换成我，可不会选择退出。\n"
+"DOS比这糟多啦。"
+
+msgid "QUITMSG4"
+msgstr ""
+"你想说你比起我，\n"
+"更爱DOS是吗？"
+
+msgid "QUITMSG5"
+msgstr ""
+"先别急着走 — 转角\n"
+"那儿还有只恶魔咧！"
+
+msgid "QUITMSG6"
+msgstr ""
+"你给我等着，下次你进来的时候\n"
+"就把你干碎。"
+
+msgid "QUITMSG7"
+msgstr "哼，那你就走吧。好像我会在乎似的。"
+
+# More info here.
+msgid "QUITMSG8"
+msgstr ""
+"想退出了？\n"
+"那便与八大美德之一失之交臂吧！"
+
+# A “dimensional shambler” is a creature appearing in the works of H. P.
+# Lovecraft.
+msgid "QUITMSG9"
+msgstr ""
+"别现在就走，\n"
+"有只空鬼正在\n"
+"DOS里等着你！"
+
+msgid "QUITMSG10"
+msgstr ""
+"从这里滚出去，回到你\n"
+"那些无聊的程序里去吧。"
+
+msgid "QUITMSG11"
+msgstr ""
+"如果我是你的boss\n"
+"现在就给你关死斗里面！"
+
+msgid "QUITMSG12"
+msgstr ""
+"你看，伙计。你现在离开\n"
+"就等于放弃你的击杀数！"
+
+msgid "QUITMSG13"
+msgstr ""
+"走吧。你回来的时候，\n"
+"我会拿着球棒等着你。"
+
+msgid "QUITMSG14"
+msgstr ""
+"我没因为你想离开就\n"
+"扇你几巴掌算你走运。"
+
+msgid "QUITMSG15"
+msgstr ""
+"你要去哪儿？！\n"
+"你那叛逆哪去了？"
+
+msgid "QUITMSG16"
+msgstr ""
+"杀卡壳了……\n"
+"真让人失望！"
+
+msgid "QUITMSG17"
+msgstr ""
+"但你就是一线希望\n"
+"——我唯一的机会！！"
+
+msgid "QUITMSG18"
+msgstr "没人能从黑鸟这里溜走。"
+
+msgid "QUITMSG19"
+msgstr "我还以为你与众不同……"
+
+msgid "QUITMSG20"
+msgstr "好嘛！杀完就跑！"
+
+msgid "QUITMSG21"
+msgstr ""
+"你可以退出……\n"
+"但你躲不掉……"
+
+msgid "QUITMSG22"
+msgstr ""
+"哇，怎么啦？\n"
+"妈妈喊你回家吃饭？"
+
+msgid "QUITMSG23"
+msgstr ""
+"先别退出，还有\n"
+"黏液怪在逃窜呢！"
+
+msgid "QUITMSG24"
+msgstr ""
+"别放弃——黏液怪会\n"
+"占上风的！"
+
+msgid "QUITMSG25"
+msgstr ""
+"先别离开。\n"
+"我们需要你的帮助！"
+
+msgid "QUITMSG26"
+msgstr ""
+"我希望你只是在吃\n"
+"奇克斯(R)派对组合休息一下。"
+
+msgid "QUITMSG27"
+msgstr ""
+"先别退出！\n"
+"我们需要你的帮助！"
+
+msgid "QUITMSG28"
+msgstr ""
+"别抛弃\n"
+"星系谷物联盟！"
+
+msgid "QUITMSG29"
+msgstr ""
+"真正的奇克斯(R)战士\n"
+"不会这么快就放弃！"
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "获得了一个道具"
+
+msgid "PD_ANY"
+msgstr "需要某个钥匙才能开此门"
+
+msgid "PD_ANYOBJ"
+msgstr "需要某个钥匙才能激活此物体"
+
+msgid "PD_ALL3"
+msgstr "需要所有三把钥匙才能开此门"
+
+msgid "PD_ALL3O"
+msgstr "需要所有三把钥匙才能激活此物体"
+
+msgid "PD_ALL6"
+msgstr "需要所有六把钥匙才能开此门"
+
+msgid "PD_ALL6O"
+msgstr "需要所有六把钥匙才能激活此物体"
+
+msgid "PD_ALLKEYS"
+msgstr "需要所有钥匙"
+
+msgid "HUSTR_MSGU"
+msgstr "[消息未发送]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "你在喃喃自语"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "是谁？"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "自己吓自己"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "你开始胡言乱语"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "你失去了意识……"
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[消息已发出]"
+
+msgid "STSTR_MUS"
+msgstr "音乐更换"
+
+msgid "STSTR_NOMUS"
+msgstr "无法选择"
+
+msgid "STSTR_DQDON"
+msgstr "无敌模式：开"
+
+msgid "STSTR_DQDOFF"
+msgstr "无敌模式：关"
+
+msgid "STSTR_DQD2ON"
+msgstr "终极无敌模式：开"
+
+msgid "STSTR_DQD2OFF"
+msgstr "终极无敌模式：关"
+
+msgid "STSTR_KFAADDED"
+msgstr "增加了非常满意的弹药"
+
+msgid "STSTR_FAADDED"
+msgstr "增加了弹药(无钥匙)"
+
+msgid "STSTR_NCON"
+msgstr "穿墙模式：开"
+
+msgid "STSTR_NCOFF"
+msgstr "穿墙模式：关"
+
+msgid "STSTR_NC2ON"
+msgstr "穿墙模式2：开"
+
+msgid "STSTR_NC2OFF"
+msgstr "穿墙模式2：关"
+
+# “inVuln”: Invulnerability sphere
+# “Str”: Berserk
+# “Inviso”: Blur sphere
+# “Rad”: Radiation-shielding suit
+# “Allmap”: Computer area map
+# “Lite-amp”: Light-amplification visor
+msgid "STSTR_BEHOLD"
+msgstr "无敌(V)、狂暴(S)、隐身(I)、防辐射(R)、全地图(A)、目镜(L)"
+
+msgid "STSTR_BEHOLDX"
+msgstr "能量提升已切换"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgid "STSTR_CHOPPERS"
+msgstr "……不恶心 - GM"
+
+msgid "STSTR_CLEV"
+msgstr "更换关卡……"
+
+msgid "TXT_BUDDHAON"
+msgstr "佛陀模式：开"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "佛陀模式：关"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "终极佛陀模式：开"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "终极佛陀模式：关"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "电源：开"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "电源：关"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "生命全满"
+
+msgid "TXT_CHEATKEYS"
+msgstr "所有钥匙"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "声音调试：开"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "声音调试：关"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "想作弊，嗯？那你死了！"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "作弊者——你不配拥有武器"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Ticker：开"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Ticker：关"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "你得到了"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "你得到了点金术，孩子"
+
+msgid "TXT_GOTSTUFF"
+msgstr "你收获满满！"
+
+msgid "TXT_FREEZEON"
+msgstr "冻结模式：开"
+
+msgid "TXT_FREEZEOFF"
+msgstr "冻结模式：关"
+
+msgid "TXT_STRANGE"
+msgstr "你感觉很怪……"
+
+msgid "TXT_STRANGER"
+msgstr "你感觉更怪了。"
+
+msgid "TXT_NOTSTRANGE"
+msgstr "你感觉又做回自己了。"
+
+msgid "TXT_LEADBOOTSON"
+msgstr "防辐射靴：开"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "防辐射靴：关"
+
+msgid "TXT_LIGHTER"
+msgstr "你感觉变轻了"
+
+msgid "TXT_GRAVITY"
+msgstr "重力将你拉了下来"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "无目标：开"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "无目标：关"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "“吓得发抖！”"
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "再也没有食人魔盔甲"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "跟随视角：开"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "跟随视角：关"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "干掉了1个坏蛋"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "干掉了%d个坏蛋"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "干掉了1个怪物"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "干掉了%d个怪物"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "无法复活，玩家不再能连接到其身体了。"
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "所有神器！"
+
+msgid "TXT_WHAT_KILL"
+msgstr "游戏之外你想杀些什么？"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "关闭玩家属性冻结"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "跟随模式：关"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "跟随模式：开"
+
+msgid "AMSTR_GRIDON"
+msgstr "网格：开"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "网格：关"
+
+msgid "AMSTR_TEXON"
+msgstr "纹理模式：开"
+
+msgid "AMSTR_TEXOFF"
+msgstr "纹理模式：关"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "标记点"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "所有标记都清除了"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "已达分数上限。"
+
+msgid "TXT_TIMELIMIT"
+msgstr "已达时间上限。"
+
+msgid "SPREEKILLSELF"
+msgstr "%o 还感觉良好直到被 %g 击杀！"
+
+msgid "SPREEOVER"
+msgstr "%o 的大杀特杀被 %k 终结"
+
+msgid "SPREE5"
+msgstr "%k 正在大杀特杀！"
+
+msgid "SPREE10"
+msgstr "%k 暴走了！"
+
+msgid "SPREE15"
+msgstr "%k 正在主宰！"
+
+msgid "SPREE20"
+msgstr "%k 已经无人能挡！"
+
+msgid "SPREE25"
+msgstr "%k 已经超神！"
+
+msgid "MULTI2"
+msgstr "双杀！"
+
+msgid "MULTI3"
+msgstr "三杀！"
+
+msgid "MULTI4"
+msgstr "终极杀！"
+
+msgid "MULTI5"
+msgstr "鬼畜杀！"
+
+msgid "SCORE_BONUS"
+msgstr "奖励"
+
+msgid "SCORE_COLOR"
+msgstr "颜色"
+
+msgid "SCORE_SECRET"
+msgstr "秘密"
+
+msgid "SCORE_NAME"
+msgstr "名称"
+
+msgid "SCORE_DELAY"
+msgstr "延迟(ms)"
+
+msgid "SCORE_FRAGS"
+msgstr "得分"
+
+msgid "SCORE_DEATHS"
+msgstr "死亡"
+
+msgid "SCORE_OTHER"
+msgstr "其它"
+
+msgid "SCORE_MISSED"
+msgstr "未命中"
+
+msgid "SCORE_TOTAL"
+msgstr "总计"
+
+msgid "SCORE_LVLTIME"
+msgstr "关卡时间"
+
+msgid "TXT_IMKILLS"
+msgstr "击杀"
+
+msgid "TXT_IMITEMS"
+msgstr "物品"
+
+msgid "TXT_IMSECRETS"
+msgstr "秘密"
+
+msgid "TXT_IMTIME"
+msgstr "时间"
+
+msgid "TXT_IMPAR"
+msgstr "标准时间"
+
+msgid "WI_FINISHED"
+msgstr "已完成"
+
+msgid "WI_ENTERING"
+msgstr "正在进入"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "现在正在进入："
+
+msgid "AM_MONSTERS"
+msgstr "怪物："
+
+msgid "AM_SECRETS"
+msgstr "秘密："
+
+msgid "AM_ITEMS"
+msgstr "物品："
+
+msgid "OB_SUICIDE"
+msgstr "%o 自杀了。"
+
+msgid "OB_FALLING"
+msgstr "%o 摔得太狠。"
+
+msgid "OB_CRUSH"
+msgstr "%o 被压扁。"
+
+msgid "OB_EXIT"
+msgstr "%o 试图离开。"
+
+msgid "OB_WATER"
+msgstr "%o 不会游泳。"
+
+msgid "OB_SLIME"
+msgstr "%o 变异了。"
+
+msgid "OB_LAVA"
+msgstr "%o 融解了。"
+
+msgid "OB_BARREL"
+msgstr "%o 被炸了。"
+
+msgid "OB_SPLASH"
+msgstr "%o 站在了错误的地点。"
+
+msgid "OB_R_SPLASH"
+msgstr "%o 应该躲在后面。"
+
+msgid "OB_ROCKET"
+msgstr "%o 应该躲在后面。"
+
+msgid "OB_KILLEDSELF"
+msgstr "%o 杀了自己。"
+
+msgid "OB_VOODOO"
+msgstr "%o 死于巫毒术。"
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o 被 %k 传送杀了。"
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o 被传送杀了。"
+
+msgid "OB_DEFAULT"
+msgstr "%o 死了。"
+
+msgid "OB_MPDEFAULT"
+msgstr "%o 被 %k 击杀。"
+
+msgid "OB_FRIENDLY1"
+msgstr "%k 放倒了一个队友。"
+
+# English was changed to remove problematic pronoun referencing the killer
+msgid "OB_FRIENDLY2"
+msgstr "%k 该配眼镜了。"
+
+msgid "OB_FRIENDLY3"
+msgstr "%k 给其他团队送了一分。"
+
+msgid "OB_FRIENDLY4"
+msgstr "%k 失去一个队友。"
+
+msgid "GOTARMOR"
+msgstr "拾取了护甲。"
+
+msgid "GOTMEGA"
+msgstr "拾取了重型护甲！"
+
+msgid "GOTHTHBONUS"
+msgstr "拾取了生命加成。"
+
+msgid "GOTARMBONUS"
+msgstr "拾取了护甲加成。"
+
+msgid "GOTSTIM"
+msgstr "拾取了急救包。"
+
+msgid "GOTMEDINEED"
+msgstr "拾取了正需要的医疗包！"
+
+msgid "GOTMEDIKIT"
+msgstr "拾取了医疗包。"
+
+msgid "GOTSUPER"
+msgstr "超级充能！"
+
+msgid "GOTBLUECARD"
+msgstr "拾取了蓝钥匙卡。"
+
+msgid "GOTYELWCARD"
+msgstr "拾取了黄钥匙卡。"
+
+msgid "GOTREDCARD"
+msgstr "拾取了红钥匙卡。"
+
+msgid "GOTBLUESKUL"
+msgstr "拾取了蓝骷髅钥匙。"
+
+msgid "GOTYELWSKUL"
+msgstr "拾取了黄骷髅钥匙。"
+
+msgid "GOTREDSKUL"
+msgstr "拾取了红骷髅钥匙。"
+
+msgid "GOTINVUL"
+msgstr "无敌！"
+
+msgid "GOTBERSERK"
+msgstr "狂暴！"
+
+msgid "GOTINVIS"
+msgstr "部分隐身"
+
+msgid "GOTSUIT"
+msgstr "防辐射服"
+
+msgid "GOTMAP"
+msgstr "电子区域地图"
+
+msgid "GOTVISOR"
+msgstr "光线强化目镜"
+
+msgid "GOTMSPHERE"
+msgstr "巨型球！"
+
+msgid "GOTCLIP"
+msgstr "拾取了一个弹夹。"
+
+msgid "GOTCLIPBOX"
+msgstr "拾取了一盒子弹。"
+
+msgid "GOTROCKET"
+msgstr "拾取了一枚火箭。"
+
+msgid "GOTROCKBOX"
+msgstr "拾取了一箱火箭。"
+
+msgid "GOTCELL"
+msgstr "拾取了一个能量电池。"
+
+msgid "GOTCELLBOX"
+msgstr "拾取了一个能量电池组。"
+
+msgid "GOTSHELLS"
+msgstr "拾取了4发霰弹枪弹药。"
+
+msgid "GOTSHELLBOX"
+msgstr "拾取了一盒霰弹枪弹药。"
+
+msgid "GOTBACKPACK"
+msgstr "拾取了一个弹药背包！"
+
+msgid "GOTBFG9000"
+msgstr "你获得了BFG9000！哦，太棒了。"
+
+msgid "GOTCHAINGUN"
+msgstr "你获得了机枪！"
+
+msgid "GOTCHAINSAW"
+msgstr "一把电锯！割肉时间到！"
+
+msgid "GOTLAUNCHER"
+msgstr "你获得了火箭发射器！"
+
+msgid "GOTPLASMA"
+msgstr "你获得了等离子枪！"
+
+msgid "GOTSHOTGUN"
+msgstr "你获得了霰弹枪！"
+
+msgid "GOTSHOTGUN2"
+msgstr "你获得了超级霰弹枪！"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "拾取了手枪。"
+
+msgid "BETA_BONUS1"
+msgstr "你拾取了恶魔匕首。"
+
+msgid "BETA_BONUS2"
+msgstr "你拾取了骷髅箱。"
+
+msgid "BETA_BONUS3"
+msgstr "你拾取了邪恶法杖。"
+
+msgid "BETA_BONUS4"
+msgstr "你拾取了邪恶圣经。"
+
+msgid "PD_BLUEO"
+msgstr "你需要蓝钥匙才能激活此物体"
+
+msgid "PD_REDO"
+msgstr "你需要红钥匙才能激活此物体"
+
+msgid "PD_YELLOWO"
+msgstr "你需要黄钥匙才能激活此物体"
+
+msgid "PD_BLUEK"
+msgstr "你需要蓝钥匙才能开此门"
+
+msgid "PD_REDK"
+msgstr "你需要红钥匙才能开此门"
+
+msgid "PD_YELLOWK"
+msgstr "你需要黄钥匙才能开此门"
+
+msgid "PD_BLUECO"
+msgstr "你需要蓝钥匙卡才能激活此物体"
+
+msgid "PD_REDCO"
+msgstr "你需要红钥匙卡才能激活此物体"
+
+msgid "PD_YELLOWCO"
+msgstr "你需要黄钥匙卡才能激活此物体"
+
+msgid "PD_BLUESO"
+msgstr "你需要蓝骷髅钥匙才能激活此物体"
+
+msgid "PD_REDSO"
+msgstr "你需要红骷髅钥匙才能激活此物体"
+
+msgid "PD_YELLOWSO"
+msgstr "你需要黄骷髅钥匙才能激活此物体"
+
+msgid "PD_BLUEC"
+msgstr "你需要蓝钥匙卡才能开此门"
+
+msgid "PD_REDC"
+msgstr "你需要红钥匙卡才能开此门"
+
+msgid "PD_YELLOWC"
+msgstr "你需要黄钥匙卡才能开此门"
+
+msgid "PD_BLUES"
+msgstr "你需要蓝骷髅钥匙才能开此门"
+
+msgid "PD_REDS"
+msgstr "你需要红骷髅钥匙才能开此门"
+
+msgid "PD_YELLOWS"
+msgstr "你需要黄骷髅钥匙才能开此门"
+
+msgid "CC_ZOMBIE"
+msgstr "僵尸兵"
+
+# a.k.a. (former human) sergeant
+msgid "CC_SHOTGUN"
+msgstr "霰弹枪军士"
+
+# a.k.a. former commando
+msgid "CC_HEAVY"
+msgstr "机枪突击手"
+
+msgid "CC_IMP"
+msgstr "幼魔"
+
+msgid "CC_DEMON"
+msgstr "粉红魔"
+
+msgid "CC_LOST"
+msgstr "丧魂"
+
+msgid "CC_CACO"
+msgstr "巨脑魔"
+
+msgid "CC_HELL"
+msgstr "地狱骑士"
+
+msgid "CC_BARON"
+msgstr "地狱男爵"
+
+msgid "CC_ARACH"
+msgstr "机械蜘蛛"
+
+msgid "CC_PAIN"
+msgstr "痛苦元素"
+
+msgid "CC_REVEN"
+msgstr "亡魂"
+
+msgid "CC_MANCU"
+msgstr "肥球"
+
+msgid "CC_ARCH"
+msgstr "恶魔召唤师"
+
+msgid "CC_SPIDER"
+msgstr "蜘蛛首脑"
+
+msgid "CC_CYBER"
+msgstr "机械巨魔"
+
+msgid "CC_HERO"
+msgstr "我们的英雄"
+
+msgid "FN_SHOTGUN"
+msgstr "霰弹枪军士"
+
+msgid "FN_HEAVY"
+msgstr "机枪突击手"
+
+msgid "FN_SPECTRE"
+msgstr "幽鬼"
+
+msgid "FN_SPIDER"
+msgstr "蜘蛛首脑"
+
+msgid "FN_CYBER"
+msgstr "机械巨魔"
+
+msgid "FN_WOLFSS"
+msgstr "纳粹兵"
+
+msgid "FN_DOG"
+msgstr "军犬"
+
+msgid "TAG_FIST"
+msgstr "铜指虎"
+
+msgid "TAG_CHAINSAW"
+msgstr "电锯"
+
+msgid "TAG_PISTOL"
+msgstr "手枪"
+
+msgid "TAG_SHOTGUN"
+msgstr "霰弹枪"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "超级霰弹枪"
+
+msgid "TAG_CHAINGUN"
+msgstr "机枪"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "火箭炮"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "电浆步枪"
+
+msgid "TAG_BFG9000"
+msgstr "BFG 9000"
+
+msgid "AMMO_CLIP"
+msgstr "子弹"
+
+msgid "AMMO_SHELLS"
+msgstr "霰弹"
+
+msgid "AMMO_ROCKETS"
+msgstr "火箭弹"
+
+msgid "AMMO_CELLS"
+msgstr "电池"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o 以为 %g 看到了机械蜘蛛。"
+
+msgid "OB_STEALTHVILE"
+msgstr "%o 以为 %g 看到了恶魔召唤师。"
+
+msgid "OB_STEALTHBARON"
+msgstr "%o 以为 %g 看到了地狱男爵。"
+
+msgid "OB_STEALTHCACO"
+msgstr "%o 以为 %g 看到了巨脑魔。"
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o 以为 %g 看到了机枪突击手。"
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o 以为 %g 看到了粉红魔。"
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o 以为 %g 看到了地狱骑士。"
+
+msgid "OB_STEALTHIMP"
+msgstr "%o 以为 %g 看到了幼魔。"
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o 以为 %g 看到了肥球。"
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o 以为 %g 看到了亡魂。"
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o 以为 %g 看到了霰弹枪军士。"
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o 以为 %g 看到了僵尸兵。"
+
+msgid "OB_UNDEADHIT"
+msgstr "%o 被亡魂锤爆了。"
+
+msgid "OB_IMPHIT"
+msgstr "%o 被幼魔撕碎了。"
+
+msgid "OB_CACOHIT"
+msgstr "%o 离巨脑魔太近了。"
+
+msgid "OB_DEMONHIT"
+msgstr "%o 被粉红魔咬碎了。"
+
+msgid "OB_SPECTREHIT"
+msgstr "%o 被幽鬼吞下去了。"
+
+msgid "OB_BARONHIT"
+msgstr "%o 被地狱男爵开膛破肚了。"
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o 被地狱骑士肢解了。"
+
+msgid "OB_ZOMBIE"
+msgstr "%o 被僵尸兵杀了。"
+
+msgid "OB_SHOTGUY"
+msgstr "%o 被霰弹枪军士射成了筛子。"
+
+msgid "OB_VILE"
+msgstr "%o 被恶魔召唤师烧成了灰。"
+
+msgid "OB_UNDEAD"
+msgstr "%o 没躲开亡魂的火球。"
+
+msgid "OB_FATSO"
+msgstr "%o 被肥球压烂了。"
+
+msgid "OB_CHAINGUY"
+msgstr "%o 被机枪突击手打的浑身是洞。"
+
+msgid "OB_SKULL"
+msgstr "%o 被丧魂吓死了。"
+
+msgid "OB_IMP"
+msgstr "%o 被幼魔烧死了。"
+
+msgid "OB_CACO"
+msgstr "%o 被巨脑魔轰死了。"
+
+msgid "OB_BARON"
+msgstr "%o 被地狱男爵的重击了。"
+
+msgid "OB_KNIGHT"
+msgstr "%o 被地狱骑士的分尸了。"
+
+msgid "OB_SPIDER"
+msgstr "%o 对蜘蛛首脑产生了敬畏。"
+
+msgid "OB_BABY"
+msgstr "%o 被机械蜘蛛逮了个正着。"
+
+msgid "OB_CYBORG"
+msgstr "%o 被机械巨魔轰成了肉泥。"
+
+msgid "OB_WOLFSS"
+msgstr "%o 遭遇了纳粹兵。"
+
+msgid "OB_DOG"
+msgstr "%o 被军犬撕咬了。"
+
+msgid "OB_MPFIST"
+msgstr "%o 被 %k 的拳头锤死了。"
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o 被 %k 的电锯捅穿了。"
+
+msgid "OB_MPPISTOL"
+msgstr "%o 被 %k 的豌豆射手逗死了。"
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o 吃了一发 %k 的火枪。"
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o 被 %k 的超级霰弹枪喷成了肉泥。"
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o 被 %k 的机枪打成了筛子。"
+
+msgid "OB_MPROCKET"
+msgstr "%o 骑上了 %k 火箭弹。"
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o 差点躲开了 %k 火箭弹。"
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o 被 %k 的电浆步枪融解了。"
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o 被 %k 的BFG打爆了。"
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o 无法躲藏 %k 的BFG。"
+
+msgid "OB_RAILGUN"
+msgstr "%o 死于 %k 的轨道枪。"
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o 被 %k 的BFG烧死了。"
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "蓝钥匙"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "黄钥匙"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "绿钥匙"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "石英药瓶"
+
+msgid "TXT_ARTIFLY"
+msgstr "愤怒之翼"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "无敌戒指"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "力量宝典"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "暗影球"
+
+msgid "TXT_ARTIEGG"
+msgstr "变形卵"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "神秘瓮"
+
+msgid "TXT_ARTITORCH"
+msgstr "火把"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "远古定时炸弹"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "混沌装置"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "水晶药瓶"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "弹药袋"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "白银护盾"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "附魔护盾"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "地图卷轴"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "魔杖水晶"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "水晶原石"
+
+msgid "TXT_AMMOMACE1"
+msgstr "钉锤之球"
+
+msgid "TXT_AMMOMACE2"
+msgstr "钉锤球堆"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "空灵箭"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "空灵箭箭袋"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "魔爪宝珠"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "能量宝珠"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "次级符文"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "高级符文"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "火焰宝珠"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "炼狱宝珠"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "黄金魔杖"
+
+msgid "TXT_WPNMACE"
+msgstr "火焰钉锤"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "空灵弩"
+
+msgid "TXT_WPNBLASTER"
+msgstr "龙爪"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "地狱法杖"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "凤凰权杖"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "死灵法师护手"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "你需要蓝钥匙才能开此门"
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "你需要绿钥匙才能开此门"
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "你需要黄钥匙才能开此门"
+
+msgid "FN_CHICKEN"
+msgstr "小鸡"
+
+# Wordplay: werewolf
+msgid "FN_BEAST"
+msgstr "龙人"
+
+# Wordplay: sabre-tooth
+msgid "FN_CLINK"
+msgstr "剑爪"
+
+msgid "FN_DSPARIL"
+msgstr "迪萨魔"
+
+msgid "FN_HERETICIMP"
+msgstr "石像鬼"
+
+msgid "FN_IRONLICH"
+msgstr "铁巫妖"
+
+msgid "FN_BONEKNIGHT"
+msgstr "亡灵战士"
+
+msgid "FN_MINOTAUR"
+msgstr "牛头怪"
+
+msgid "FN_MUMMY"
+msgstr "魔像"
+
+msgid "FN_MUMMYLEADER"
+msgstr "爆裂魔像"
+
+msgid "FN_SNAKE"
+msgstr "蛇妖"
+
+msgid "FN_WIZARD"
+msgstr "巫师"
+
+msgid "AMMO_GOLDWAND"
+msgstr "魔杖水晶"
+
+msgid "AMMO_CROSSBOW"
+msgstr "空灵箭"
+
+msgid "AMMO_BLASTER"
+msgstr "魔爪宝珠"
+
+msgid "AMMO_MACE"
+msgstr "钉锤之球"
+
+msgid "AMMO_SKULLROD"
+msgstr "地狱法杖符文"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "火焰宝珠"
+
+msgid "TAG_STAFF"
+msgstr "法杖"
+
+msgid "TAG_GOLDWAND"
+msgstr "精灵魔杖"
+
+msgid "OB_CHICKEN"
+msgstr "%o 被啄死了。"
+
+msgid "OB_BEAST"
+msgstr "%o 被龙人烧焦了。"
+
+msgid "OB_CLINK"
+msgstr "%o 被剑爪割裂了。"
+
+msgid "OB_DSPARIL1"
+msgstr "%o 被迪萨魔之巨蛇烧死了。"
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o 被迪萨魔之巨蛇咬碎了。"
+
+msgid "OB_DSPARIL2"
+msgstr "%o 打不过迪萨魔。"
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o 被迪萨魔打倒了。"
+
+msgid "OB_HERETICIMP"
+msgstr "%o 被石像鬼打得伤痕累累。"
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o 被石像鬼砍死了。"
+
+msgid "OB_IRONLICH"
+msgstr "%o 被铁巫妖摧毁了。"
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o 跟铁巫妖近距离亲密接触了。"
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o 被亡灵战士劈死了。"
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o 被亡灵战士杀死了。"
+
+msgid "OB_MINOTAUR"
+msgstr "%o 被牛头怪炸成了灰烬。"
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o 被牛头怪捣成了浆糊。"
+
+msgid "OB_MUMMY"
+msgstr "%o 被魔像撞死了。"
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o 被爆裂魔像吼死了。"
+
+msgid "OB_SNAKE"
+msgstr "%o 被蛇妖吓死了。"
+
+msgid "OB_WIZARD"
+msgstr "%o 被巫师咒死了。"
+
+msgid "OB_WIZARDHIT"
+msgstr "%o 被巫师触死了。"
+
+msgid "OB_MPSTAFF"
+msgstr "%o 被 %k 的法杖捅死了。"
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o 被 %k 铁手套电死了。"
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o 向 %k 的精灵魔杖挥手拜拜。"
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o 被 %k 的空灵弩钉死了。"
+
+msgid "OB_MPBLASTER"
+msgstr "%o 被 %k 的龙爪轰到了转世。"
+
+msgid "OB_MPSKULLROD"
+msgstr "%o 被 %k 的地狱法杖送到了下界。"
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o 被 %k 的凤凰权杖烧成了灰烬。"
+
+msgid "OB_MPMACE"
+msgstr "%o 被 %k 的火焰钉锤弹飞了。"
+
+msgid "OB_MPPSTAFF"
+msgstr "%o 被 %k 的充能法杖热烈迎接了。"
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o 被 %k 的铁手套榨干了。"
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o 被 %k 的精灵魔杖袭击了。"
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o 被 %k 的空灵弩欺诈了。"
+
+msgid "OB_MPPBLASTER"
+msgstr "%o 被 %k 的龙爪撕裂了。"
+
+msgid "OB_MPPSKULLROD"
+msgstr "%o 被 %k 的地狱法杖喷死了。"
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o 被 %k 的凤凰法杖烧成了灰烬。"
+
+msgid "OB_MPPMACE"
+msgstr "%o 被 %k 巨大的战锤之球压死了。"
+
+msgid "TXT_MANA_1"
+msgstr "蓝魔能"
+
+msgid "TXT_MANA_2"
+msgstr "绿魔能"
+
+msgid "TXT_MANA_BOTH"
+msgstr "组合魔能"
+
+msgid "TXT_KEY_STEEL"
+msgstr "钢铁钥匙"
+
+msgid "TXT_KEY_CAVE"
+msgstr "洞穴钥匙"
+
+msgid "TXT_KEY_AXE"
+msgstr "斧头钥匙"
+
+msgid "TXT_KEY_FIRE"
+msgstr "火焰钥匙"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "翡翠钥匙"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "地牢钥匙"
+
+msgid "TXT_KEY_SILVER"
+msgstr "白银钥匙"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "生锈钥匙"
+
+msgid "TXT_KEY_HORN"
+msgstr "兽角钥匙"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "沼泽钥匙"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "城堡钥匙"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "守护者圣像"
+
+msgid "TXT_ARTISUMMON"
+msgstr "黑暗仆从"
+
+msgid "TXT_ARTIEGG2"
+msgstr "猪化器"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "弹瓶"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "放逐装置"
+
+msgid "TXT_ARTISPEED"
+msgstr "速度之靴"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "威能圣杯"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "龙皮护腕"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "排斥之盘"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "奥域法咒"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "约里克的头骨"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "迪萨魔之心"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "红宝石之星"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "翡翠之星"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "翡翠之星"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "蓝宝石之星"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "蓝宝石之星"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "恶魔秘典"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr "晦暗之书"
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "火焰面具"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "长刀封印"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "神圣遗物"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "魔导法印"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "时钟齿轮"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "你无法在这使用"
+
+msgid "TXT_ARMOR1"
+msgstr "织网护甲"
+
+msgid "TXT_ARMOR2"
+msgstr "猎鹰护盾"
+
+msgid "TXT_ARMOR3"
+msgstr "白金头盔"
+
+msgid "TXT_ARMOR4"
+msgstr "守护护符"
+
+msgid "TXT_WEAPON_F2"
+msgstr "泰蒙之斧"
+
+msgid "TXT_WEAPON_F3"
+msgstr "惩戒之锤"
+
+msgid "TXT_WEAPON_F4"
+msgstr "已组装的安息神剑"
+
+msgid "TXT_WEAPON_C2"
+msgstr "巨蛇法杖"
+
+msgid "TXT_WEAPON_C3"
+msgstr "火焰风暴"
+
+msgid "TXT_WEAPON_C4"
+msgstr "已组装的幽魂权杖"
+
+msgid "TXT_WEAPON_M2"
+msgstr "冰霜碎片"
+
+msgid "TXT_WEAPON_M3"
+msgstr "死亡电弧"
+
+msgid "TXT_WEAPON_M4"
+msgstr "已组装的血腥浩劫"
+
+msgid "TXT_WEAPONPIECE"
+msgstr "武器部件！今天是你的幸运日！"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "安息神剑部件"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "幽魂权杖部件"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "血腥浩劫部件"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "你需要钢铁钥匙"
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "你需要洞穴钥匙"
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "你需要斧头钥匙"
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "你需要火焰钥匙"
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "你需要翡翠钥匙"
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "你需要地牢钥匙"
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "你需要白银钥匙"
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "你需要生锈钥匙"
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "你需要兽角钥匙"
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "你需要沼泽钥匙"
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "你需要城堡钥匙"
+
+msgid "FN_FIREDEMON"
+msgstr "火魔"
+
+msgid "FN_DEMON1"
+msgstr "巨蛇"
+
+msgid "FN_ETTIN"
+msgstr "双头魔"
+
+msgid "FN_CENTAUR"
+msgstr "半人马"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "嗜血半人马"
+
+msgid "FN_BISHOP"
+msgstr "主教"
+
+msgid "FN_ICEGUY"
+msgstr "温迪戈"
+
+msgid "FN_SERPENT"
+msgstr "潜行者"
+
+msgid "FN_WRAITH"
+msgstr "劫掠者"
+
+msgid "FN_DRAGON"
+msgstr "死亡飞龙"
+
+msgid "FN_KORAX"
+msgstr "科拉克斯"
+
+msgid "FN_FBOSS"
+msgstr "泽德克"
+
+msgid "FN_MBOSS"
+msgstr "梅内尔基尔"
+
+msgid "FN_CBOSS"
+msgstr "特拉杜克图斯"
+
+msgid "FN_HERESIARCH"
+msgstr "异端首领"
+
+msgid "AMMO_MANA1"
+msgstr "蓝魔能"
+
+msgid "AMMO_MANA2"
+msgstr "绿魔能"
+
+msgid "TAG_CWEAPMACE"
+msgstr "忏悔钉锤"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "巨蛇法杖"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "火焰风暴"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "幽魂权杖"
+
+msgid "TAG_FWEAPFIST"
+msgstr "尖刺护手"
+
+msgid "TAG_FWEAPAXE"
+msgstr "泰蒙之斧"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "惩戒之锤"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "安息神剑"
+
+msgid "TAG_MWEAPWAND"
+msgstr "蓝宝石魔杖"
+
+msgid "TAG_MWEAPFROST"
+msgstr "冰霜碎片"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "死亡电弧"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "血腥浩劫"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "排斥之盘"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "龙皮护腕"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "威能圣杯"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "弹瓶"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "毒云弹瓶"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "定时炸弹瓶"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "榴弹瓶"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "奥域法咒"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "守护者圣像"
+
+msgid "TAG_ARTIPORK"
+msgstr "猪化器"
+
+msgid "TAG_ARTISPEED"
+msgstr "速度之靴"
+
+msgid "TAG_ARTISUMMON"
+msgstr "黑暗仆从"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "放逐装置"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "约里克的头骨"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "迪萨魔之心"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "红宝石之星"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "翡翠之星(1)"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "翡翠之星(2)"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "蓝宝石之星(1)"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "蓝宝石之星(2)"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "恶魔秘典"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr "晦暗之书"
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "火焰面具"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "长刀封印"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "神圣遗物"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "魔导法印"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "铁齿轮"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "铜齿轮"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "铜铁齿轮"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "银铜齿轮"
+
+msgid "OB_FIREDEMON"
+msgstr "%o 尝到了火魔之火。"
+
+msgid "OB_DEMON1"
+msgstr "%o 被巨蛇烧死了。"
+
+msgid "OB_DEMON2"
+msgstr "%o 被巨蛇毒死了。"
+
+msgid "OB_ETTIN"
+msgstr "%o 被双头魔捣碎了。"
+
+msgid "OB_CENTAUR"
+msgstr "%o 被半人马切开了。"
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o 被嗜血半人马切开了。"
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o 被嗜血半人马的火球击倒了。"
+
+msgid "OB_BISHOP"
+msgstr "%o 屈服于主教的黑暗力量。"
+
+msgid "OB_ICEGUY"
+msgstr "%o 被温迪戈冰冻得结结实实。"
+
+msgid "OB_SERPENTHIT"
+msgstr "%o 被潜行者撕咬了。"
+
+msgid "OB_SERPENT"
+msgstr "%o 被潜行者溶解了。"
+
+msgid "OB_WRAITH"
+msgstr "%o 被劫掠者烧焦了。"
+
+msgid "OB_WRAITHHIT"
+msgstr "%o 的生命被劫掠者偷取了。"
+
+msgid "OB_DRAGON"
+msgstr "%o 被死亡飞龙烧成了灰。"
+
+msgid "OB_KORAX"
+msgstr "%o 被科拉克斯从台上扫了下去。"
+
+msgid "OB_FBOSS"
+msgstr "%o 被泽德克杀死了。"
+
+msgid "OB_MBOSS"
+msgstr "%o 无法再吸收梅内尔基尔的魔力了。"
+
+msgid "OB_CBOSS"
+msgstr "%o 受到了特拉杜克图斯的洗礼。"
+
+msgid "OB_HERESIARCH"
+msgstr "%o 的骨头被异端首领撒了一地。"
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o 被 %k 的赤手空拳打成稀烂。"
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o 尝到了 %k 的斧子。"
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%o 的头被 %k 的锤子敲了个洞。"
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o 的灵魂被 %k 的锤子重新锻造了。"
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o 被 %k 强大的安息神剑陷入了沉默。"
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o 的脸挨了 %k 一钉锤。"
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o 被 %k 的巨蛇法杖咬了。"
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o 被 %k 的巨蛇法杖缠住了喉咙。"
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o 被 %k 的火焰照亮了。"
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o 被 %k 的幽魂权杖净化了。"
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o 受到了 %k 太多的蓝宝石射线。"
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o 被 %k 冻成了一个冷冰冰的家伙。"
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o 收到了 %k 的一个令人震惊的启示。"
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o 被 %k 的血腥浩劫从宇宙中抹掉了。"
+
+msgid "TXT_METALARMOR"
+msgstr "你拾取了金属护甲。"
+
+msgid "TXT_LEATHERARMOR"
+msgstr "你拾取了皮革护甲。"
+
+msgid "TXT_MEDPATCH"
+msgstr "你拾取了治疗贴。"
+
+msgid "TXT_MEDICALKIT"
+msgstr "你拾取了医疗工具。"
+
+msgid "TXT_SURGERYKIT"
+msgstr "你拾取了手术工具。"
+
+msgid "TXT_STRIFEMAP"
+msgstr "你拾取了地图。"
+
+msgid "TXT_BELDINSRING"
+msgstr "你拾取了戒指。"
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "你拾取了供品圣杯。"
+
+msgid "TXT_EAR"
+msgstr "你拾取了耳朵。"
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "你拾取了损坏的电源耦合器。"
+
+msgid "TXT_SHADOWARMOR"
+msgstr "你拾取了暗影护甲。"
+
+msgid "TXT_ENVSUIT"
+msgstr "你拾取了防护套装。"
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "你拾取了守卫制服。"
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "你拾取了士官制服。"
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "你拾取了火焰喷射器部件。"
+
+msgid "TXT_REPORT"
+msgstr "你拾取了报告。"
+
+msgid "TXT_INFO"
+msgstr "你拾取了情报。"
+
+msgid "TXT_TARGETER"
+msgstr "你拾取了瞄准器。"
+
+msgid "TXT_COMMUNICATOR"
+msgstr "你拾取了通讯器。"
+
+msgid "TXT_COIN"
+msgstr "你拾取了硬币。"
+
+msgid "TXT_XGOLD"
+msgstr "你拾取了 %d 金币。"
+
+msgid "TXT_BEACON"
+msgstr "你拾取了传送器信标。"
+
+msgid "TXT_DEGNINORE"
+msgstr "你拾取了德宁矿石。"
+
+msgid "TXT_SCANNER"
+msgstr "你拾取了扫描器。"
+
+msgid "TXT_NEEDMAP"
+msgstr "没有地图扫描器无法工作！\n"
+
+msgid "TXT_PRISONPASS"
+msgstr "你拾取了监狱许可证。"
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "你拾取了十字弓。"
+
+msgid "TXT_ASSAULTGUN"
+msgstr "你拾取了突击枪。"
+
+msgid "TXT_MMLAUNCHER"
+msgstr "你拾取了迷你导弹发射器。"
+
+msgid "TXT_FLAMER"
+msgstr "你拾取了火焰喷射器。"
+
+msgid "TXT_MAULER"
+msgstr "你拾取了毛勒。"
+
+msgid "TXT_GLAUNCHER"
+msgstr "你拾取了榴弹发射器。"
+
+msgid "TXT_SIGIL"
+msgstr "你拾取了印记。"
+
+msgid "TXT_BASEKEY"
+msgstr "你拾取了基地钥匙。"
+
+msgid "TXT_GOVSKEY"
+msgstr "你拾取了政府钥匙。"
+
+msgid "TXT_PASSCARD"
+msgstr "你拾取了通行卡。"
+
+msgid "TXT_IDBADGE"
+msgstr "你拾取了ID章。"
+
+msgid "TXT_PRISONKEY"
+msgstr "你拾取了监狱钥匙。"
+
+msgid "TXT_SEVEREDHAND"
+msgstr "你拾取了切断的手。"
+
+msgid "TXT_POWER1KEY"
+msgstr "你拾取了电源1钥匙。"
+
+msgid "TXT_POWER2KEY"
+msgstr "你拾取了电源2钥匙。"
+
+msgid "TXT_POWER3KEY"
+msgstr "你拾取了电源3钥匙。"
+
+msgid "TXT_GOLDKEY"
+msgstr "你拾取了黄金钥匙。"
+
+msgid "TXT_IDCARD"
+msgstr "你拾取了ID卡。"
+
+msgid "TXT_SILVERKEY"
+msgstr "你拾取了白银钥匙。"
+
+msgid "TXT_ORACLEKEY"
+msgstr "你拾取了神谕钥匙。"
+
+msgid "TXT_MILITARYID"
+msgstr "你拾取了军事ID。"
+
+msgid "TXT_ORDERKEY"
+msgstr "你拾取了教团钥匙。"
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "你拾取了仓库钥匙。"
+
+msgid "TXT_BRASSKEY"
+msgstr "你拾取了黄铜钥匙。"
+
+msgid "TXT_REDCRYSTAL"
+msgstr "你拾取了红水晶钥匙。"
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "你拾取了蓝水晶钥匙。"
+
+msgid "TXT_CHAPELKEY"
+msgstr "你拾取了教堂钥匙。"
+
+msgid "TXT_CATACOMBKEY"
+msgstr "你拾取了墓穴钥匙。"
+
+msgid "TXT_SECURITYKEY"
+msgstr "你拾取了安保钥匙。"
+
+msgid "TXT_COREKEY"
+msgstr "你拾取了核心钥匙。"
+
+msgid "TXT_MAULERKEY"
+msgstr "你拾取了毛勒钥匙。"
+
+msgid "TXT_FACTORYKEY"
+msgstr "你拾取了工厂钥匙。"
+
+msgid "TXT_MINEKEY"
+msgstr "你拾取了矿场钥匙。"
+
+msgid "TXT_NEWKEY5"
+msgstr "你拾取了新钥匙5。"
+
+msgid "TXT_ORACLEPASS"
+msgstr "你拾取了神谕通行证。"
+
+msgid "TXT_HEGRENADES"
+msgstr "你拾取了高爆榴弹桶。"
+
+msgid "TXT_PHGRENADES"
+msgstr "你拾取了磷榴弹桶。"
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "你拾取了子弹夹。"
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "你拾取了子弹盒。"
+
+msgid "TXT_MINIMISSILES"
+msgstr "你拾取了迷你导弹。"
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "你拾取了导弹箱。"
+
+msgid "TXT_ENERGYPOD"
+msgstr "你拾取了能量罐。"
+
+msgid "TXT_ENERGYPACK"
+msgstr "你拾取了能量包。"
+
+msgid "TXT_POISONBOLTS"
+msgstr "你拾取了毒箭。"
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "你拾取了电击箭。"
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "你拾取了弹药背包。"
+
+msgid "MSG_TALISMANRED"
+msgstr "你有种直觉它不能碰……"
+
+msgid "MSG_TALISMANGREEN"
+msgstr "不管是什么，它都不属于这个世界……"
+
+msgid "MSG_TALISMANBLUE"
+msgstr "必须做点什么……"
+
+msgid "MSG_TALISMANPOWER"
+msgstr "你得到了超级力量！"
+
+msgid "TXT_NEEDKEY"
+msgstr "你还没有这把钥匙"
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "你需要一张通行卡"
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "你需要一张通行卡才能开这扇门"
+
+msgid "TXT_NEED_IDCARD"
+msgstr "你需要一张ID卡"
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "你还没有打开监狱的钥匙"
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "手印未存档"
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "你需要黄金钥匙"
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "你需要一枚ID章"
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "你需要一枚ID章才能开这扇门"
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "你需要白银钥匙"
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "你需要黄铜钥匙"
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "你需要红水晶"
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "你需要蓝水晶"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "此区域只在零售版的《抗争》中可用"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "看起来打不开"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "你需要圣杯！"
+
+msgid "TXT_NEED_OPASS"
+msgstr "你需要神谕通行证！"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "匕首"
+
+# Crossbow with electric bolts
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "十字弓"
+
+# Crossbow with poison bolts
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "十字弓"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "突击枪"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "迷你导弹发射器"
+
+msgid "TAG_FLAMER"
+msgstr "火焰喷射器"
+
+msgid "TAG_MAULER1"
+msgstr "毛勒"
+
+msgid "TAG_MAULER2"
+msgstr "毛勒"
+
+# High-explosive grenade launcher
+msgid "TAG_GLAUNCHER1"
+msgstr "榴弹发射器"
+
+# White phosphorous grenade launcher 
+msgid "TAG_GLAUNCHER2"
+msgstr "榴弹发射器"
+
+msgid "TAG_SIGIL"
+msgstr "印记"
+
+msgid "TAG_COIN"
+msgstr "硬币"
+
+msgid "TAG_MEDPATCH"
+msgstr "治疗贴"
+
+msgid "TAG_MEDICALKIT"
+msgstr "医疗工具"
+
+msgid "TAG_SURGERYKIT"
+msgstr "手术工具"
+
+msgid "TAG_BELDINSRING"
+msgstr "戒指"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "供品圣杯"
+
+msgid "TAG_EAR"
+msgstr "耳朵"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "损坏的电源耦合器"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "暗影护甲"
+
+msgid "TAG_ENVSUIT"
+msgstr "防护套装"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "守卫制服"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "士官制服"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "火焰喷射器部件"
+
+msgid "TAG_REPORT"
+msgstr "报告"
+
+msgid "TAG_INFO"
+msgstr "信息"
+
+msgid "TAG_TARGETER"
+msgstr "瞄准器"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "通讯器"
+
+msgid "TAG_DEGNINORE"
+msgstr "德宁矿石"
+
+msgid "TAG_GUNTRAINING"
+msgstr "准确度"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "韧性"
+
+msgid "TAG_SCANNER"
+msgstr "扫描器"
+
+msgid "TAG_PRISONPASS"
+msgstr "监狱许可证"
+
+msgid "TAG_ALARM"
+msgstr "警报"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "弹药"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "生命"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "传送器信标"
+
+msgid "TAG_METALARMOR"
+msgstr "金属护甲"
+
+msgid "TAG_LEATHER"
+msgstr "皮革护甲"
+
+msgid "TAG_HEGRENADES"
+msgstr "高爆榴弹桶"
+
+msgid "TAG_PHGRENADES"
+msgstr "磷榴弹桶"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "子弹夹"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "子弹盒"
+
+msgid "TAG_MINIMISSILES"
+msgstr "迷你导弹"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "导弹箱"
+
+msgid "TAG_ENERGYPOD"
+msgstr "能量罐"
+
+msgid "TAG_ENERGYPACK"
+msgstr "能量包"
+
+msgid "TAG_POISONBOLTS"
+msgstr "毒箭"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "电击箭"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "弹药背包"
+
+# In-game key list. Use short strings.
+msgid "TAG_BASEKEY"
+msgstr "基地钥匙"
+
+msgid "TAG_GOVSKEY"
+msgstr "政府钥匙"
+
+msgid "TAG_PASSCARD"
+msgstr "通行卡"
+
+msgid "TAG_IDBADGE"
+msgstr "ID章"
+
+msgid "TAG_PRISONKEY"
+msgstr "监狱钥匙"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "切断的手"
+
+msgid "TAG_POWER1KEY"
+msgstr "电源1钥匙"
+
+msgid "TAG_POWER2KEY"
+msgstr "电源2钥匙"
+
+msgid "TAG_POWER3KEY"
+msgstr "电源3钥匙"
+
+msgid "TAG_GOLDKEY"
+msgstr "黄金钥匙"
+
+msgid "TAG_IDCARD"
+msgstr "ID卡"
+
+msgid "TAG_SILVERKEY"
+msgstr "白银钥匙"
+
+msgid "TAG_ORACLEKEY"
+msgstr "神谕钥匙"
+
+msgid "TAG_MILITARYID"
+msgstr "军事ID"
+
+msgid "TAG_ORDERKEY"
+msgstr "教团钥匙"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "仓库钥匙"
+
+msgid "TAG_BRASSKEY"
+msgstr "黄铜钥匙"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "红水晶钥匙"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "蓝水晶钥匙"
+
+msgid "TAG_CHAPELKEY"
+msgstr "教堂钥匙"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "墓穴钥匙"
+
+msgid "TAG_SECURITYKEY"
+msgstr "安保钥匙"
+
+msgid "TAG_COREKEY"
+msgstr "核心钥匙"
+
+msgid "TAG_MAULERKEY"
+msgstr "毛勒钥匙"
+
+msgid "TAG_FACTORYKEY"
+msgstr "工厂钥匙"
+
+msgid "TAG_MINEKEY"
+msgstr "矿场钥匙"
+
+msgid "TAG_NEWKEY5"
+msgstr "新钥匙5"
+
+# End of key list.
+msgid "TAG_ORACLEPASS"
+msgstr "神谕通行证"
+
+msgid "TAG_10GOLD"
+msgstr "10金币"
+
+msgid "TAG_25GOLD"
+msgstr "25金币"
+
+msgid "TAG_50GOLD"
+msgstr "50金币"
+
+msgid "TAG_300GOLD"
+msgstr "300金币"
+
+msgid "TXT_PERSON"
+msgstr "普通人"
+
+msgid "TAG_ACOLYTE"
+msgstr "侍从"
+
+msgid "TAG_ARMORER"
+msgstr "盔甲匠"
+
+msgid "TAG_BARKEEP"
+msgstr "酒吧主"
+
+msgid "TAG_BEGGAR"
+msgstr "乞丐"
+
+msgid "TAG_MACIL1"
+msgstr "马希尔"
+
+msgid "TAG_MACIL2"
+msgstr "马希尔"
+
+msgid "TAG_MEDIC"
+msgstr "医生"
+
+msgid "TAG_ORACLE"
+msgstr "祭司"
+
+msgid "TAG_PRIEST"
+msgstr "牧师"
+
+msgid "TAG_RATBUDDY"
+msgstr "老鼠巴迪"
+
+msgid "TAG_REBEL"
+msgstr "反叛者"
+
+msgid "TAG_TEMPLAR"
+msgstr "圣骑士"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "武器工匠"
+
+msgid "TAG_TALISMANRED"
+msgstr "红色护符"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "绿色护符"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "蓝色护符"
+
+msgid "OB_ACOLYTE"
+msgstr "%o 被一位热心的侍从击倒了。"
+
+msgid "OB_MACIL"
+msgstr "%o 应该永不背叛马希尔。"
+
+msgid "OB_REBEL"
+msgstr "%o 被一位反叛者枪杀了。"
+
+msgid "OB_BEGGAR"
+msgstr "%o 被这位贫民殴打致死。"
+
+msgid "OB_PEASANT"
+msgstr "%o 不应该跟平民挑起战斗。"
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o 被幽灵打倒了。"
+
+msgid "OB_ENTITY"
+msgstr "%o 感受到了唯一神的怒火。"
+
+msgid "OB_LOREMASTER"
+msgstr "%o 无法从贤者的手中逃脱。"
+
+msgid "OB_PROGRAMMER"
+msgstr "%o 被程序员删除了。"
+
+msgid "OB_STFBISHOP"
+msgstr "%o 被主教吹飞了。"
+
+msgid "OB_SENTINEL"
+msgstr "%o 被哨兵击倒了。"
+
+msgid "OB_CRUSADER"
+msgstr "%o 被圣战士清除了。"
+
+msgid "OB_INQUISITOR"
+msgstr "%o 被审判官宣判了。"
+
+msgid "OB_STALKER"
+msgstr "%o 被潜行者侵蚀了。"
+
+msgid "OB_TURRET"
+msgstr "%o 触发了自动防御。"
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o 被圣骑士抓住了。"
+
+msgid "OB_TEMPLAR"
+msgstr "%o 被圣骑士净化了。"
+
+msgid "OB_REAVERHIT"
+msgstr "%o 被掠夺者切开了。"
+
+msgid "OB_REAVER"
+msgstr "%o 被掠夺者击倒了。"
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o 无意中被 %k 陷害了。"
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o 被 %k 拴在了墙上。"
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o 受到了 %k 致死量的怒火。"
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o 被 %k 的突击枪钻得满身是洞。"
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o 咽下了 %k 的导弹。"
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o 被 %k 的高爆榴弹炸翻了。"
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o 被 %k 的磷堆洗了次火浴。"
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o 被 %k 烧烤了。"
+
+msgid "OB_MPMAULER1"
+msgstr "%o 被 %k 电死了。"
+
+msgid "OB_MPMAULER"
+msgstr "%o 被 %k 恶意地蒸发了。"
+
+msgid "OB_MPSIGIL"
+msgstr "%o 屈服于 %k 印记的压倒性力量。"
+
+msgid "TXT_STRIFE_EPI"
+msgstr "印记任务"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "你释放了囚犯！"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "你摧毁了转换器！"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "祝贺你！你完成了训练区"
+
+msgid "TXT_QUEST_14"
+msgstr "你炸毁了水晶"
+
+msgid "TXT_QUEST_16"
+msgstr "你炸毁了大门"
+
+msgid "TXT_QUEST_27"
+msgstr "你炸毁了计算机"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "你杀了主教！"
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "你杀了祭司！"
+
+msgid "TXT_KILLED_MACIL"
+msgstr "你杀了马希尔！"
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "你杀了贤者！"
+
+msgid "TXT_YOUFOOL"
+msgstr "你真笨！你触发了警报。"
+
+msgid "TXT_YOUREDEAD"
+msgstr "你死定了！你触发了警报。"
+
+msgid "TXT_HAVEENOUGH"
+msgstr "你看起来已经有了！"
+
+msgid "TXT_GOAWAY"
+msgstr "走开！"
+
+msgid "TXT_COMM0"
+msgstr "传入消息……"
+
+msgid "TXT_COMM1"
+msgstr "从黑鸟传来消息……"
+
+msgid "TXT_FINDHELP"
+msgstr "寻找帮助"
+
+# As in for %u amount of money.
+msgid "TXT_TRADE"
+msgstr "%u 金币"
+
+msgid "GOTCHEXARMOR"
+msgstr "拾取了奇克斯(R)护甲。"
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "拾取了超级奇克斯(R)护甲！"
+
+msgid "GOTWATER"
+msgstr "拾取了一杯水。"
+
+msgid "GOTREPELLENT"
+msgstr "拾取了slime repellent."
+
+msgid "GOTBREAKFAST"
+msgstr "超级充能早餐！"
+
+msgid "GOTCBLUEKEY"
+msgstr "拾取了蓝钥匙。"
+
+msgid "GOTCYELLOWKEY"
+msgstr "拾取了黄钥匙。"
+
+msgid "GOTCREDKEY"
+msgstr "拾取了红钥匙。"
+
+msgid "GOTFRUIT"
+msgstr "拾取了一碗水果。"
+
+msgid "GOTVEGETABLESNEED"
+msgstr "蔬菜对你非常非常有益！"
+
+msgid "GOTVEGETABLES"
+msgstr "拾取了一碗蔬菜。"
+
+msgid "GOTSLIMESUIT"
+msgstr "发现了一件防粘液套装"
+
+msgid "GOTCHEXMAP"
+msgstr "发现了一张电子区域地图"
+
+msgid "GOTZORCHRECHARGE"
+msgstr "拾取了一个迷你zorch recharge."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "拾取了一个迷你zorch包."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "拾取了一个zorch propulsor recharge."
+
+msgid "GOTPROPULSORPACK"
+msgstr "拾取了一个zorch propulsor包."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "拾取了一个phasing zorcher recharge"
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "拾取了一个phasing zorcher包."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "拾取了一个大型zorcher recharge."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "拾取了一个大型zorcher包."
+
+msgid "GOTZORCHPACK"
+msgstr "拾取了一个Zorchpak!"
+
+msgid "GOTLAZDEVICE"
+msgstr "你得到了the LAZ装置！Woot!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "你得到了the Rapid Zorcher!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "你得到了超级Bootspork!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "你得到了the Zorch Propulsor!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "你得到了the Phasing Zorcher!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "你得到了大型Zorcher!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "你得到了巨型Zorcher!"
+
+msgid "GOTMINIZORCHER"
+msgstr "拾取了迷你Zorcher."
+
+msgid "TAG_SPOON"
+msgstr "勺子"
+
+msgid "TAG_SPORK"
+msgstr "超级Bootspork"
+
+msgid "TAG_MINIZORCHER"
+msgstr "迷你Zorcher"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "大型Zorcher"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "超大Zorcher"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr ""
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr ""
+
+msgid "TAG_PHASINGZORCHER"
+msgstr ""
+
+msgid "TAG_LAZDEVICE"
+msgstr "LAZ装置"
+
+msgid "OB_COMMONUS"
+msgstr "%o 被a flemoid粘住了。"
+
+msgid "OB_BIPEDICUS"
+msgstr "%o 被a bipedicus粘住了。"
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o 被an armored bipedicus粘住了。"
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o 被一只独眼巨人粘住了。"
+
+msgid "OB_FLEMBRANE"
+msgstr ""
+
+msgid "OB_MPSPOON"
+msgstr ""
+
+msgid "OB_MPBOOTSPORK"
+msgstr ""
+
+msgid "OB_MPZORCH"
+msgstr ""
+
+msgid "OB_MPMEGAZORCH"
+msgstr ""
+
+msgid "OB_MPRAPIDZORCH"
+msgstr ""
+
+msgid "OB_MPPROPULSOR"
+msgstr ""
+
+msgid "OB_MPP_SPLASH"
+msgstr ""
+
+msgid "OB_MPPHASEZORCH"
+msgstr ""
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o fell prey to %k's LAZ装置。"
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr ""
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: 着陆区"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: 储存设施"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: 实验室"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: 植物园"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: 巴佐伊克洞穴"
+
+msgid "CE1TEXT"
+msgstr ""
+"任务圆满完成。\n"
+"\n"
+"你准备好下个任务了吗？\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"按Esc键继续……"
+
+msgid "CE2TEXT"
+msgstr "你已经完成了！"
+
+msgid "CE3TEXT"
+msgstr "干得好！"
+
+msgid "CE4TEXT"
+msgstr "好极了"
+
+msgid "CLOADNET"
+msgstr ""
+"在网络任务中你不能执行加载！\n"
+"\n"
+"按任意键。"
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr ""
+"是否快速保存并覆盖存档名：\n"
+"\n"
+"“%s”\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"在网络任务中你不能执行快速加载！\n"
+"\n"
+"按任意键。"
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr ""
+"是否快速加载存档名：\n"
+"\n"
+"“%s”\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgid "CNEWGAME"
+msgstr ""
+"在网络任务中\n"
+"你不能开始一个新任务。\n"
+"\n"
+"按任意键。"
+
+msgid "CNIGHTMARE"
+msgstr ""
+"小心，这会很艰难。\n"
+"你还希望继续吗？\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgid "CSWSTRING"
+msgstr ""
+"这是奇克斯(R)任务。寻找更多关卡\n"
+"\n"
+"请访问www.chexquest.com。\n"
+"\n"
+"按任意键。"
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"你不能结束网络任务！\n"
+"\n"
+"按任意键。"
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"你确认想结束此任务吗？\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "无敌模式开启"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "无敌模式关闭"
+
+#, fuzzy
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "增加了Zorch"
+
+#, fuzzy
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "增加了超级Zorch"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "……吃奇克斯(R)！"
+
+#, fuzzy
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "迷你Zorch Charge"
+
+#, fuzzy
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "大型Zorcher Charge"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr ""
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr ""
+
+msgid "MNU_NEWGAME"
+msgstr "新游戏"
+
+msgid "MNU_OPTIONS"
+msgstr "选项"
+
+msgid "MNU_GAMEFILES"
+msgstr "游戏文件"
+
+msgid "MNU_INFO"
+msgstr "信息"
+
+msgid "MNU_QUITGAME"
+msgstr "退出游戏"
+
+# This text is extremely space limited!
+msgid "MNU_CHOOSESKILL"
+msgstr "选择难度等级："
+
+msgid "SKILL_BABY"
+msgstr "我太年轻不想死。"
+
+msgid "SKILL_EASY"
+msgstr "嘿，不要太粗暴。"
+
+msgid "SKILL_NORMAL"
+msgstr "用力打我。"
+
+msgid "SKILL_HARD"
+msgstr "超暴力。"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "噩梦！"
+
+msgid "CSKILL_BABY"
+msgstr "小菜一碟"
+
+msgid "CSKILL_EASY"
+msgstr "小试牛刀"
+
+msgid "CSKILL_NORMAL"
+msgstr "黏液涌现"
+
+msgid "CSKILL_HARD"
+msgstr "极限黏液"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "超级黏滞！"
+
+msgid "SSKILL_BABY"
+msgstr "训练"
+
+msgid "SSKILL_EASY"
+msgstr "菜鸟"
+
+msgid "SSKILL_NORMAL"
+msgstr "老兵"
+
+msgid "SSKILL_HARD"
+msgstr "精英"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "血浴"
+
+msgid "MNU_WETNURSE"
+msgstr "汝需乳娘"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "懦夫之地"
+
+msgid "MNU_BRINGEST"
+msgstr "放马过来"
+
+msgid "MNU_SMITE"
+msgstr "汝乃猛将"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "黑死附体"
+
+msgid "MNU_SQUIRE"
+msgstr "卫士"
+
+msgid "MNU_KNIGHT"
+msgstr "骑士"
+
+msgid "MNU_WARRIOR"
+msgstr "战士"
+
+msgid "MNU_BERSERKER"
+msgstr "狂战士"
+
+msgid "MNU_TITAN"
+msgstr "泰坦"
+
+msgid "MNU_ALTARBOY"
+msgstr "祭童"
+
+msgid "MNU_ACOLYTE"
+msgstr "侍从"
+
+msgid "MNU_PRIEST"
+msgstr "牧师"
+
+msgid "MNU_CARDINAL"
+msgstr "主教"
+
+msgid "MNU_POPE"
+msgstr "教皇"
+
+msgid "MNU_APPRENTICE"
+msgstr "学徒"
+
+msgid "MNU_ENCHANTER"
+msgstr "附魔师"
+
+msgid "MNU_SORCERER"
+msgstr "术士"
+
+msgid "MNU_WARLOCK"
+msgstr "巫师"
+
+msgid "MNU_ARCHMAGE"
+msgstr "大法师"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "选择职位："
+
+msgid "MNU_FIGHTER"
+msgstr "战士"
+
+msgid "MNU_CLERIC"
+msgstr "牧师"
+
+msgid "MNU_MAGE"
+msgstr "法师"
+
+msgid "MNU_RANDOM"
+msgstr "随机"
+
+msgid "MNU_EPISODE"
+msgstr "哪个章节？"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "选择战役"
+
+msgid "MNU_COTD"
+msgstr "被诅咒的城市"
+
+msgid "MNU_HELLSMAW"
+msgstr "地狱深渊"
+
+msgid "MNU_DOME"
+msgstr "迪萨魔的穹顶"
+
+msgid "MNU_OSSUARY"
+msgstr "纳骨堂"
+
+msgid "MNU_DEMESNE"
+msgstr "死寂领地"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "团队游戏"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "队友伤害倍率"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "智能自动瞄准"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "跌落伤害"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "丢弃武器"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "双倍弹药"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "无限弹药"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "无限物品"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "无怪物"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "怪物全灭才能过关"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "怪物自动重生"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "禁止怪物自动重生"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "物品自动重生"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "自动重生大幅能力提升的物品"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "加速怪物"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "怪物有噩梦级的反应"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "退化(玩家生命自动逐渐减少)"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "允许自动瞄准"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "允许自杀"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "允许跳跃"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "允许下蹲"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "允许自由视角"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "允许调整FOV"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "允许BFG瞄准"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "允许查看地图"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "地图上显示友方"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "允许监视(死亡时观战其他玩家)"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "跟随视角作弊"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "武器切换时检查武器弹药"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "罪恶圣像(最终BOSS)死亡时杀死其刷出来的怪物"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "(关底)最终区域的怪物数也计入击杀"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "死斗设置"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "武器保留(拾取后留在原地)"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "允许出现能力提升物品"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "允许出现生命恢复物品"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "允许出现护甲"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "玩家以离其他玩家最远的重生点复活"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "重复游玩当前地图"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "(死亡后)强制重生"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "允许通过关卡出口离开"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "油桶爆炸后重生"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "刚重生时受保护"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "被杀时失去击杀数"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "(换地图时)保留击杀数"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "(比赛时)不能改变队伍"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "合作设置"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "刷出多人游戏的专用武器"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "(死亡时)失去全部物品"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "(死亡时)保留钥匙"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "(死亡时)保留武器"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "(死亡时)保留护甲"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "(死亡时)保留能力提升效果"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "(死亡时)保留弹药"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "(死亡时)失去一半弹药"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "在死亡地点重生"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "总是刷出多人游戏专用物体"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "允许垂直方向的子弹散射"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "给武器增加更多弹药 (DM)"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "兼容性选项"
+
+msgid "CMPTMNU_TITLE"
+msgstr "兼容性选项"
+
+msgid "CMPTMNU_MODE"
+msgstr "兼容模式"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "角色行为"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "友军怪物不会被阻挡"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "限制痛苦元素招出的丧魂数量"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "怪物移动受各种效果的影响"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "怪物不能从高处掉落"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "怪物遇到掉落时被卡住"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "怪物能看见隐身玩家"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "牛头怪发出的地面火焰不会穿过水面"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "刷出的道具会掉落到地面上"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "DehackEd行为"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "DEH生命设置同Doom2.exe"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "DEH模组中采用原版A_Mushroom速度"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "地图/动作行为"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "所有特殊线都能阻止<use>"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "允许所有关卡特殊的BOSS死法"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "禁用BOOM门光效"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "像DOOM那样寻找临近区域的光照"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "像DOOM那样寻找最短纹理"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "使用带bug的楼梯生成"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "使用DOOM的地面移动算法"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "使用DOOM的判断点在线上算法"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "可以多次触发关卡出口"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "物理行为"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "角色都是无限高度"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "BOOM型的地面滚动是叠加的"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "不允许沿NSEW方向的直线走法"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "允许沿墙壁跑"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Raven游戏中的地面滚动使用原始速度"
+
+msgid "CMPTMNU_TRACE"
+msgstr "自我参照的区域不会阻挡射击"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "使用DOOM代码做瞬间击中判定检测"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "使用DOOM高度做炮弹碰撞判定"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "渲染行为"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "像《毁灭巫师》那样绘制多物体"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "忽略透明通道中层纹理的Y轴偏移"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "反转精灵排序"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "音效行为"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "为BFG的安静技巧而消音"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "不让别人听到你拾取的声音"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "会瞬移的地板不再静音"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "区域音效用中心位置作为声源"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "角色消失时停止音效"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "使用原版的声音目标处理方式"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "剧本传送不再触发区域动作"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "无阻挡的线可以被按下(交互)"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "允许有bug的开关范围检测行为"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "允许有bug的《抗争》栏杆"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "爆炸不会有垂直方向的冲击"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "使用原始DOOM的爆炸行为"
+
+msgid "PLYRMNU_RED"
+msgstr "红色"
+
+msgid "PLYRMNU_GREEN"
+msgstr "绿色"
+
+msgid "PLYRMNU_BLUE"
+msgstr "蓝色"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "职位"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "外观"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "拾取新武器时自动切换"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "按 \\cj空格键"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "看前面"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "看后面"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "垂直的子弹散射"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "武器缩放"
+
+msgid "CNTRLMNU_USER1"
+msgstr "武器状态1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "武器状态2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "武器状态3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "武器状态4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "向上飞行/游泳"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "向下飞行/游泳"
+
+msgid "CNTRLMNU_LAND"
+msgstr "停止飞行"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "用键盘控制视角"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "《抗争》弹出画面的控制"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "团队发言"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "丢弃物品"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "查询物品"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "丢弃武器"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "其它"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "查看下一个玩家视角"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "《抗争》弹出画面"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "任务目标"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "钥匙列表"
+
+msgid "CNTRLMNU_STATS"
+msgstr "武器/弹药/状态"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "切换分数板"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "移动时居中视角"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "移动鼠标来平移"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "背景"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "你"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "单面墙"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "不同地面的双面墙"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "不同天花板的双面墙"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "3D地面的双面墙"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "地图网格"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "中心点"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "没见过的墙"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "上锁的门"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "去同一地图的传送点"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "去不同地图的传送点"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "秘密区域"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "未发现的秘密"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "特殊触发线"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "作弊模式"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "隐形双面墙"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "秘密墙"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "角色"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "怪物"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "非计数怪物"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "友方"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "物品"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "计数物品"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "重叠模式"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "重叠作弊模式"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "传送点重叠"
+
+msgid "MSGMNU_TITLE"
+msgstr "消息"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "显示消息"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "显示被击杀"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "显示发现秘密的通知"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "最低消息等级"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "消息颜色"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "物品拾取"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "被击杀"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "关键消息"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "聊天消息"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "团队消息"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "脚本消息"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "截图消息"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "详细存档消息"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "开发者消息模式"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "地图颜色设置"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "允许地图定义颜色"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "设置自定义颜色"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "自定义地图控制"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "重叠地图"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "启用纹理显示"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "显示物品计数"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "显示怪物计数"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "显示秘密计数"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "显示本关用时"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "显示游戏总用时"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "在地图上显示秘密地点"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "显示地图标签"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "绘制地图背景"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "显示钥匙（作弊）"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "显示触发线"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "以精灵图表现物体"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "重叠传送点"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "空白空间边距"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "标记字体"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "标记颜色"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "设置标记"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "清除标记"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "分数板选项"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "分数板选项"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "联机合作选项"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "启用分数板"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "标题颜色"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "自身玩家的颜色"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "其他玩家的颜色"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "死斗选项"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "团队死斗选项"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "替换HUD"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "启用替换HUD"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "显示秘密计数"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "显示怪物计数"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "显示物品计数"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "显示耐力和准确度"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "显示狂战包"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "显示武器"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "显示弹药"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "显示时间"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "时间颜色"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "显示网络延迟"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "弹药显示顺序"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "弹药在百分之多少以下时显示成红色"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "弹药在百分之多少以下时显示成黄色"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "生命在多少以下时显示成红色"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "生命在多少以下时显示成黄色"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "生命在多少以下时显示成绿色"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "护甲在多少以下时显示成红色"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "护甲在多少以下时显示成黄色"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "护甲在多少以下时显示成绿色"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "替换地图HUD"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "地图标题颜色"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "地图内时间颜色"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "枢纽内时间颜色"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "总时间颜色"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "坐标颜色"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "坐标模式"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "统计名称颜色"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "统计颜色"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "渲染插值"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "透明渲染模式"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "屏幕擦拭样式"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "显示ENDOOM画面"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "受伤闪烁强度"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "拾取闪烁强度"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "水下混合强度"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "天空渲染模式"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "线性天空"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "全亮覆盖区域颜色"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "缩放模糊效果"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "使用模糊效果"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "经典透明度"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "丧魂透明度"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "使用虚假对比度"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "火箭弹尾迹"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "血迹类型"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "子弹烟雾类型"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "粒子数量"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "贴花数量"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "显示玩家(武器)精灵"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "死亡时(第三人称)镜头"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "传送时缩放视角"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "地震时(画面)震动强度"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "怪物移动插值"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "暗化菜单(背景)"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "暗化颜色"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "移动时视角上下晃动量"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "不移动时视角上下晃动量"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "武器上下晃动速度"
+
+msgid "SCALEMNU_TITLE"
+msgstr "缩放选项"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "覆盖以上设置"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "消息"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "控制台"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "状态栏"
+
+msgid "SCALEMNU_HUD"
+msgstr "全屏HUD"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "替换HUD"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "HUD保持纵横比"
+
+msgid "SCALEMNU_USEUI"
+msgstr "使用默认缩放"
+
+msgid "SCALEMNU_USEFS"
+msgstr "放大到全屏"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "适应屏幕大小"
+
+msgid "HUDMNU_TITLE"
+msgstr "HUD选项"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "替换HUD"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "消息选项"
+
+msgid "HUDMNU_UISCALE"
+msgstr "用户界面缩放"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "强制默认准星"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "拾取物品时准星放大"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "显示名字标签"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "名字标签颜色"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "使用旧的头像方式"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "《毁灭巫师》武器闪光"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "毒药伤害闪光"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "冰冻死亡闪光"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "毒药堆积闪光"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "缩放选项"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "显示IWAD选择对话框"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "所有游戏都启用作弊"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "启用通过脚本制作屏幕截图"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "加载*.deh/*.bex块"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "缓存节点"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "节点缓存的时间阈值"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "清除节点缓存"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "允许跳过关卡间歇滚动"
+
+msgid "NETMNU_TITLE"
+msgstr "网络选项"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "本地选项"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "移动预测"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "预测线动作"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "预测插值缩放"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "插值阈值"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "主机选项"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "预备秒数"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "延迟平衡"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "原始"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "优化"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "经典(更快)"
+
+msgid "OPTVAL_PRECISE"
+msgstr "精确"
+
+msgid "OPTVAL_CAPPED"
+msgstr "限制"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "颗粒化"
+
+msgid "OPTVAL_SPRITES"
+msgstr "精灵"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "精灵和粒子"
+
+msgid "OPTVAL_MELT"
+msgstr "融化"
+
+msgid "OPTVAL_BURN"
+msgstr "燃烧"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "淡入淡出"
+
+# This setting is duplicated in order to allow for different grammatical
+# gender endings in the Russian language (and any other language that depends
+# on a grammatical gender system). In English, due to the lack of a
+# grammatical gender system, both option values are the same.
+msgid "OPTVAL_SMOOTH_1"
+msgstr "平滑"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "平滑"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "半透明"
+
+msgid "OPTVAL_FUZZ"
+msgstr "模糊"
+
+msgid "OPTVAL_SHADOW"
+msgstr "阴影"
+
+msgid "OPTVAL_ITEMS"
+msgstr "物品"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "武器"
+
+msgid "OPTVAL_BOTH"
+msgstr "二者"
+
+msgid "OPTVAL_ZDOOM"
+msgstr "ZDoom"
+
+msgid "OPTVAL_STRIFE"
+msgstr "《抗争》"
+
+msgid "OPTVAL_PLAYER"
+msgstr "玩家"
+
+msgid "OPTVAL_MAP"
+msgstr "地图"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "缩放到640x400"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "双倍像素"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "四倍像素"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "当前武器"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "可用武器"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "全武器"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "关卡，毫秒"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "关卡，秒"
+
+msgid "OPTVAL_LEVEL"
+msgstr "关卡"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "枢纽，秒"
+
+msgid "OPTVAL_HUB"
+msgstr "枢纽"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "总计，秒"
+
+msgid "OPTVAL_TOTAL"
+msgstr "总计"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "系统，秒"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "系统"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "仅网络游戏"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "图像和文字"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "文字和图像"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "仅脚本"
+
+msgid "OPTVAL_ALL"
+msgstr "全部"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "仅最近的"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "传统Doom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "传统《抗争》"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "传统Raven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "仅发现时"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "仅在覆盖时开启"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "覆盖+普通"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "仅覆盖"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "不针对枢纽"
+
+msgid "OPTVAL_FRONT"
+msgstr "前面"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "动画的"
+
+msgid "OPTVAL_ROTATED"
+msgstr "旋转的"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "仅映射指定的颜色"
+
+msgid "OPTVAL_NODOORS"
+msgstr "除了门以外"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "双倍"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "三倍"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "四倍"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "物品拾取"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "被击杀"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "关键消息"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "友军除外"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "仅怪物"
+
+msgid "OPTVAL_HEXEN"
+msgstr "《毁灭巫师》"
+
+msgid "OPTVAL_OLD"
+msgstr "旧"
+
+msgid "OPTVAL_DOOM"
+msgstr "Doom"
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doom(严格)"
+
+msgid "OPTVAL_BOOM"
+msgstr "Boom"
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boom(严格)"
+
+msgid "OPTVAL_MBF"
+msgstr "MBF"
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "MBF(严格)"
+
+msgid "OPTVAL_MBF21"
+msgstr "MBF21"
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "MBF21(严格)"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr "ZDoom 2.0.63"
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "所有未确认的"
+
+msgid "OPTVAL_ERRORS"
+msgstr "错误"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "警告"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "通知"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "所有"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "硬件加速"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Doom软件渲染器"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "真彩色软件渲染器"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "高性能"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "节能"
+
+msgid "OPTVAL_VANILLA"
+msgstr "原始版"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "ZDoom(强制)"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "原始版(强制)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "自动(ZDoom优先)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "自动(原始版优先)"
+
+msgid "OPTVAL_SMALL"
+msgstr "小"
+
+msgid "OPTVAL_LARGE"
+msgstr "大"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "控制台"
+
+msgid "C_BRICK"
+msgstr "\\ca砖红色"
+
+msgid "C_TAN"
+msgstr "\\cb褐色"
+
+msgid "C_GRAY"
+msgstr "\\cc灰色"
+
+msgid "C_GREEN"
+msgstr "\\cd绿色"
+
+msgid "C_BROWN"
+msgstr "\\ce棕色"
+
+msgid "C_GOLD"
+msgstr "\\cf金色"
+
+msgid "C_RED"
+msgstr "\\cg红色"
+
+msgid "C_BLUE"
+msgstr "\\ch蓝色"
+
+msgid "C_ORANGE"
+msgstr "\\ci橙色"
+
+msgid "C_WHITE"
+msgstr "\\cj白色"
+
+msgid "C_YELLOW"
+msgstr "\\ck黄色"
+
+msgid "C_DEFAULT"
+msgstr "\\cl默认"
+
+msgid "C_BLACK"
+msgstr "\\cm黑色"
+
+msgid "C_LIGHTBLUE"
+msgstr "\\cn淡蓝色"
+
+msgid "C_CREAM"
+msgstr "\\co奶油色"
+
+msgid "C_OLIVE"
+msgstr "\\cp橄榄色"
+
+msgid "C_DARKGREEN"
+msgstr "\\cq暗绿色"
+
+msgid "C_DARKRED"
+msgstr "\\cr暗红色"
+
+msgid "C_DARKBROWN"
+msgstr "\\cs暗棕色"
+
+msgid "C_PURPLE"
+msgstr "\\ct紫色"
+
+msgid "C_DARKGRAY"
+msgstr "\\cu暗灰色"
+
+msgid "C_CYAN"
+msgstr "\\cv青色"
+
+msgid "C_ICE"
+msgstr "\\cw冰色"
+
+msgid "C_FIRE"
+msgstr "\\cx火色"
+
+msgid "C_SAPPHIRE"
+msgstr "\\cy天蓝色"
+
+msgid "C_TEAL"
+msgstr "\\cz蓝绿色"
+
+msgid "OPTSTR_HERETIC"
+msgstr "《异教徒》"
+
+msgid "OPTSTR_CHEX"
+msgstr "《奇克斯》"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "无声音"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "无插值"
+
+msgid "OPTSTR_SPLINE"
+msgstr "样条函数"
+
+msgid "OPTSTR_OPENAL"
+msgstr "OpenAL"
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "硬件渲染器"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "软件渲染器"
+
+msgid "GLMNU_TITLE"
+msgstr "硬件渲染选项"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "动态光源选项"
+
+msgid "GLMNU_PREFS"
+msgstr "偏好选项"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "修剪精灵边缘"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "根据纹理排序绘制列表"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "动态光源"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "动态光源(硬件)"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "启用光照定义"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "光源影响精灵"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "光源影响粒子"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "光照阴影贴图"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "阴影贴图质量"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "阴影贴图过滤器"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "雾效模式"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "雾效强制使用全亮度"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "武器光照强度"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "镜面使用环境映射"
+
+msgid "GLPREFMNU_ENV"
+msgstr "增强夜视模式"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "夜视时显示隐身怪物"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "调整精灵剪裁"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "平滑精灵边缘"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "模糊样式"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "精灵公告板"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "精灵面部相机"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "粒子样式"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "渲染质量"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "立体3D VR"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "启用四倍立体"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "层级式软件光照模式"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "你的两眼之间距离"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "从你的屏幕距离"
+
+msgid "OPTVAL_SMART"
+msgstr "智能"
+
+msgid "OPTVAL_SMARTER"
+msgstr "更智能"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "仅红外线"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "红外线和火把"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "任何修复的彩色图"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "用作调色盘"
+
+msgid "OPTVAL_BLEND"
+msgstr "混合"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "明亮"
+
+msgid "OPTVAL_DARK"
+msgstr "黑暗"
+
+# This refers to the Doom Legacy port, not a legacy lighting style!
+msgid "OPTVAL_LEGACY"
+msgstr "Doom遗产"
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "软件"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "最佳"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Y轴"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "X/Y轴"
+
+msgid "OPTVAL_SQUARE"
+msgstr "方形"
+
+msgid "OPTVAL_ROUND"
+msgstr "圆形"
+
+msgid "OPTVAL_RADIAL"
+msgstr "放射"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "像素模糊"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "平滑模糊"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "漩涡模糊"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "半透明模糊"
+
+msgid "OPTVAL_NOISE"
+msgstr "噪音"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "平滑噪音"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "锯齿模糊"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "绿/洋红"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "红/青"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "琥珀/蓝"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "左眼"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "右眼"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "完全并排"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "狭窄并排"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "顶部/底部"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "行交错"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "列交错"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "棋盘"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "四倍缓冲"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "真彩色选项"
+
+msgid "TCMNU_TITLE"
+msgstr "真彩色选项"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "真彩色输出"
+
+msgid "TCMNU_MINFILTER"
+msgstr "缩小时用线性过滤"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "放大时用线性过滤"
+
+msgid "TCMNU_MIPMAP"
+msgstr "使用mip映射纹理"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "动态光源(软件)"
+
+msgid "OS_TITLE"
+msgstr "选项搜索"
+
+msgid "OS_ANY"
+msgstr "搜索任意条目"
+
+msgid "OS_ALL"
+msgstr "搜索全部条目"
+
+msgid "OS_NO_RESULTS"
+msgstr "无搜索结果。"
+
+msgid "OS_LABEL"
+msgstr "搜索："
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "总是显示钥匙"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "更换队伍已被禁止！"
+
+# %s is the player and gender sensitive
+msgid "TXT_JOINED_TEAM"
+msgstr "%s 加入了 %t 的队伍"
+
+msgid "TXT_LONER"
+msgstr "%s 现在孤独一人了。"
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s 以 %d 的分数离开了游戏"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s 离开了游戏"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "无法读取存档“%s”。"
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s' 不是有效存档：缺失“info.json”。"
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "访问存档“%s”的信息失败。"
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "存档“%s”的版本不兼容。"
+
+msgid "TXT_OTHERENGINESG"
+msgstr "存档“%s”来自另一种基于ZDoom的引擎："
+
+msgid "TXT_TOOOLDSG"
+msgstr "存档“%s”来自旧版本：%d (最低支持到 %e)"
+
+# Shouldn’t this say “%e is the newest supported”?
+#
+# — Undead
+#
+# Ask Randi: The text is old. I won't change it.
+msgid "TXT_TOONEWSG"
+msgstr "存档“%s”来自新版本：%d (最高支持到 %e)"
+
+msgid "TXT_NOMAPSG"
+msgstr "存档“%s”的当前地图找不到了。"
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s' 不是有效存档：缺失“globals.json”。"
+
+msgid "TXT_SGINFOERR"
+msgstr "访问存档“%s”的信息失败"
+
+msgid "TXT_SAVEPENDING"
+msgstr "已经有存档在保存中了。"
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "这是不可存档的游戏。"
+
+msgid "TXT_NOTINLEVEL"
+msgstr "还没进入关卡"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "玩家在单人模式下死亡"
+
+msgid "TXT_SAVEFAILED"
+msgstr "存档失败"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "无法创建截屏。"
+
+# As in paused by player %s.
+msgid "TXT_BY"
+msgstr "被 %s"
+
+msgid "TXT_QUITENDOOM"
+msgstr "按任意键或点击窗口内任意位置来退出。"
+
+msgid "HUDMNU_FLASH"
+msgstr "画面混合选项"
+
+msgid "GLMNU_3DMODE"
+msgstr "3D模式"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "准星"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "字幕"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "防止灰色阴影"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "字体选项"
+
+msgid "FONTMNU_LOG"
+msgstr "使用标准字体显示日志"
+
+msgid "FONTMNU_DLG"
+msgstr "使用标准字体显示对话"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "快速退出"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "自定义反色地图"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "自定义反色 深色\n"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "自定义反色 亮色"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "攻击时武器上下晃动量"
+
+# HUD->Scaling Options
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "关卡间歇时及画面边框使用经典缩放"
+
+msgid "SCALEMNU_INTER"
+msgstr "关卡间歇时的背景"
+
+msgid "SCALEMNU_BORDER"
+msgstr "画面边框"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "缩放因子"
+
+msgid "SCALEMNU_RATIO"
+msgstr "宽高比"
+
+# as in "Build engine". This should not be translated unless there is a
+# translated name for the engine
+msgid "OPTVAL_BUILD"
+msgstr "Build"
+
+# sv_alwaystally
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "在关卡出口显示统计画面"
+
+# this is '==0'
+msgid "OPTVAL_MODDEFINED"
+msgstr "模组定义"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "总是，除了枢纽"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "总是，包括枢纽"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "首选键盘布局"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "经典ZDoom"
+
+msgid "OPTVAL_MODERN"
+msgstr "现代(WASD)"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "现代(小键盘)"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "严格的KEYCONF武器/玩家"
+
+msgid "MISCMNU_CLEANMENU\n"
+msgstr "经典ZDoom的菜单缩放"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "在结算画面上使用百分比"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "在结算画面上用经典ZDoom缩放"
+
+# Called "citizens" according to Doomwiki
+msgid "TAG_STRIFEZOMBIE"
+msgstr "市民"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "天花板炮塔"
+
+# Names need to match the obituaries!
+msgid "TAG_CRUSADER"
+msgstr "圣战士"
+
+msgid "TAG_INQUISITOR"
+msgstr "审判官"
+
+msgid "TAG_PEASANT"
+msgstr "农民"
+
+msgid "TAG_REAVER"
+msgstr "掠夺者"
+
+msgid "TAG_SENTINEL"
+msgstr "哨兵"
+
+msgid "TAG_STALKER"
+msgstr "潜行者"
+
+msgid "TAG_BISHOP"
+msgstr "主教"
+
+msgid "TAG_ENTITY"
+msgstr "唯一神"
+
+msgid "TAG_PROGRAMMER"
+msgstr "程序员"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "幽灵"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "祈祷者"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "合作模式中刷出多人专用物体"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "精灵阴影"
+
+# Will enable sprite shadows for monster and player sprites
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "怪物和玩家"
+
+# the FOV slider
+msgid "DSPLYMNU_FOV"
+msgstr "FOV"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "禁用MBF21特性"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "显示时间部件"
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "压死的怪物能复活成鬼魂"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "飞行中视角晃动"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o 被巨蛇重伤了。"
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "线条反锯齿"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "移动和射击能穿过其他玩家"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "所有玩家共享钥匙"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "不允许覆盖面向摄像机的模式"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "交换生命和护甲"
+
+# hud_oldscale
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "使用经典的HUD缩放"
+
+# hud_scalefactor
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "HUD缩放因子"
+
+# Any Actor that only appears in co-op is disabled
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "多人游戏中只刷出合作专用物体"
+
+# Items that only appear in co-op are disabled
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "多人游戏中只刷出合作专用的拾取物品"
+
+# Items are picked up client-side rather than fully taken by the client who
+# picked it up
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "多人游戏中玩家只拾取物品的自身所属复制品"
+
+# Drops from Actors aren't picked up locally
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "禁用客户端侧拾取丢弃的物品"
+
+# Disables autoloading save on death
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "死亡时重新开始关卡"
+
+# Resets inventory on every map
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "以手枪开局"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr "允许创建僵尸玩家"
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr "传送时无视地板Z值"
+
+# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
+# different position than it really is, allowing it to be rendered under the
+# floor despite clipping
+msgid "OPTVAL_ANAMORPHIC"
+msgstr "强制主视角"
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr "脚步音量"
+
+msgid "ID24_GOTINCINERATOR"
+msgstr "你取得了焚化器！"
+
+# Also known as Heatwave Generator.
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr "你得到了灾刃！真厉害！"
+
+msgid "ID24_GOTFUELCAN"
+msgstr "拾取了一个燃料罐。"
+
+msgid "ID24_GOTFUELTANK"
+msgstr "拾取了一个燃料箱。"
+
+msgid "TAG_ID24INCINERATOR"
+msgstr "焚化器"
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr "灾刃"
+
+msgid "AMMO_ID24FUEL"
+msgstr "燃料罐"
+
+msgid "AMMO_ID24FUELTANK"
+msgstr "燃料箱"
+
+msgid "ID24_CC_GHOUL"
+msgstr "尸鬼"
+
+msgid "ID24_CC_BANSHEE"
+msgstr "女妖"
+
+# Also known as Plasmaguy.
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr "电击尖兵"
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr "心灵编织者"
+
+msgid "ID24_CC_VASSAGO"
+msgstr "瓦沙克"
+
+msgid "ID24_CC_TYRANT"
+msgstr "暴君"
+
+msgid "ID24_OB_GHOUL"
+msgstr "%o 挨了尸鬼的能量球。"
+
+msgid "ID24_OB_BANSHEE"
+msgstr "%o 被女妖终结了。"
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr "%o 被电击尖兵融解了。"
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr "%o 被心灵编织者割草了。"
+
+msgid "ID24_OB_VASSAGO"
+msgstr "%o 被瓦沙克烧焦了。"
+
+msgid "ID24_OB_TYRANT"
+msgstr "%o 被暴君炸开花了。"
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "显示关卡名"
+
+# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
+# Strife
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr "物品快捷键"
+
+msgid "JOYMNU_HAPTICS"
+msgstr "触觉反馈力度"
+
+msgid "JOYMNU_CURVE"
+msgstr "响应曲线"
+
+msgid "JOYMNU_THRESHOLD"
+msgstr "数字阈值"
+
+msgid "OPTVAL_LINEAR"
+msgstr "线性"
+
+msgid "OPTVAL_QUADRATIC"
+msgstr "平方"
+
+# The type of chat messages the player wants to be visible to them.
+msgid "NETMNU_CHATTYPE"
+msgstr "聊天类型"
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr "已禁用"
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr "仅队友"
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr "全局"
+
+# Disables /me functionality in chat when displaying.
+msgid "NETMNU_NOBOLDCHAT"
+msgstr "禁用聊天文字中的粗体效果"
+
+# Turns off the sound that plays when someone receives a message.
+msgid "NETMNU_NOCHATSND"
+msgstr "禁用聊天声音"
+
+# Tries to make online games less stuttery.
+msgid "NETMNU_BALANCETICS"
+msgstr "稳定连接"
+
+msgid "NETMNU_LIMITCONVO"
+msgstr "限制到主机的会话数"
+
+# Helps stop things like e.g. door open/close spam when playing online.
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr "重复动作的冷却"
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr "禁用暂停"
+
+msgid "OPTVAL_HOSTONLY"
+msgstr "仅主机"
+
+# Type of vote system to use to bypass intermissions when playing online.
+msgid "NETMNU_READYTYPE"
+msgstr "关卡间歇的跳过类型"
+
+msgid "OPTVAL_VOTE"
+msgstr "投票"
+
+msgid "OPTVAL_ANYONE"
+msgstr "任何人"
+
+# If this percent of players or more are ready, starts a countdown when in
+# Vote intermission skip mode.
+msgid "NETMNU_READYPERCENT"
+msgstr "投票跳过的百分比"
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr "投屏倒计时(秒)"
+
+# Forces a cool down between chat messages for all players when playing
+# online.
+msgid "NETMNU_CHATSLOMO"
+msgstr "聊天缓动模式(秒)"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "启用触觉触发器"
+
+msgid "OPTMNU_HAPTICS"
+msgstr "触觉选项"
+
+# How the engine should handle haptics in old mods
+msgid "HAPMNU_COMPAT"
+msgstr "触觉反馈兼容等级"
+
+msgid "OPTVAL_MATCH"
+msgstr "匹配"
+
+msgid "OPTVAL_WARN"
+msgstr "警告"
+
+msgid "HAPMNU_OPTIONS"
+msgstr "自定义触觉反馈源"
+
+# Rumble when using ui elements
+msgid "HAPMNU_OPT_MENU"
+msgstr "源自使用菜单"
+
+# Rumble when doing things such as pressing buttons and firing weapon
+msgid "HAPMNU_OPT_ACTION"
+msgstr "源自施展中的动作"
+
+# Rumble when dying and getting hurt
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr "通过受到伤害"
+
+# Rumble from bumping into things, crossing lines, and quakes
+msgid "HAPMNU_OPT_WORLD"
+msgstr "源自与世界交互"
+
+msgid "PAUSE_STRING"
+msgstr "暂停"
+
+msgid "TAG_BACKPACK"
+msgstr "背包"
+
+msgid "TAG_ARMORBONUS"
+msgstr "精神护甲"
+
+msgid "TAG_GREENARMOR"
+msgstr "安保护甲"
+
+msgid "TAG_BLUEARMOR"
+msgstr "战斗护甲"
+
+msgid "TAG_INVULSPHERE"
+msgstr "无敌神器"
+
+msgid "TAG_SOULSPHERE"
+msgstr "灵魂球"
+
+msgid "TAG_MEGAPSHERE"
+msgstr "超级球"
+
+msgid "TAG_INVISSPHERE"
+msgstr "模糊神器"
+
+msgid "TAG_RADSUIT"
+msgstr "防辐射服"
+
+msgid "TAG_VISOR"
+msgstr "光线强化目镜"
+
+msgid "TAG_ALLMAP"
+msgstr "电子地图"
+
+msgid "TAG_BERSERK"
+msgstr "狂战包"
+
+msgid "TAG_HEALTHBONUS"
+msgstr "生命药水"
+
+msgid "TAG_STIMPACK"
+msgstr "急救包"
+
+msgid "TAG_MEDIKIT"
+msgstr "医疗包"
+
+msgid "TAG_BLUECARD"
+msgstr "蓝钥匙卡"
+
+msgid "TAG_YELLOWCARD"
+msgstr "黄钥匙卡"
+
+msgid "TAG_REDCARD"
+msgstr "红钥匙卡"
+
+msgid "TAG_BLUESKULL"
+msgstr "蓝骷髅钥匙"
+
+msgid "TAG_YELLOWSKULL"
+msgstr "黄骷髅钥匙"
+
+msgid "TAG_REDSKULL"
+msgstr "红骷髅钥匙"
+
+msgid "TAG_GLASSOFWATER"
+msgstr "一杯水"
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr "一碗水果"
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr "一碗蔬菜"
+
+msgid "TAG_BREAKFAST"
+msgstr "超级充能早餐"
+
+msgid "TAG_REPELLENT"
+msgstr ""
+
+msgid "TAG_CHEXARMOR"
+msgstr "奇克斯护甲"
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr "超级奇克斯护甲"
+
+msgid "TAG_CHEXMAP"
+msgstr "电子区域地图"
+
+msgid "TAG_SLIMESUIT"
+msgstr "防粘液服"
+
+msgid "TAG_ZORCHPACK"
+msgstr "Zorch包"
+
+msgid "TAG_CBLUEKEY"
+msgstr "蓝钥匙"
+
+msgid "TAG_CYELLOWKEY"
+msgstr "黄钥匙"
+
+msgid "TAG_CREDKEY"
+msgstr "红钥匙"
+
+# Option to make the view weapon sprites be lit exactly as the sector's
+# brightness. Without this option, weapon sprites are generally brighter
+# compared to the sector's brightness
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr "武器精灵上使用区域亮度"
+
+# Mark the player as ready to advance during the intermission in multiplayer
+# games
+msgid "NET_CONTINUE_MKB"
+msgstr "按空格键或鼠标左键做好准备"
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr "按A键做好准备"
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr "按摇杆1键做好准备"
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr "重生后自动选择先前选择的武器"
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr "查看上一个玩家视角"
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr "离开其他玩家视角"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "辅助选项"
