@@ -1,0 +1,202 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 15:48+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/harmony-filter/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "NIGHTMARE"
+msgstr "你真认为能接受得了？\\n\\n按“Y”确认，按“N”取消……"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "已做标记点"
+
+msgid "PD_BLUEO"
+msgstr "需要绿钥匙卡"
+
+msgid "PD_REDO"
+msgstr "需要紫钥匙卡"
+
+msgid "PD_YELLOWO"
+msgstr "需要黄钥匙卡"
+
+msgid "PD_BLUEK"
+msgstr "需要绿钥匙"
+
+msgid "PD_YELLOWK"
+msgstr "需要黄钥匙"
+
+msgid "PD_REDK"
+msgstr "需要紫钥匙"
+
+msgid "GOTARMOR"
+msgstr "拾取了护甲。"
+
+msgid "GOTMEGA"
+msgstr "拾取了战斗护甲。"
+
+msgid "GOTMSPHERE"
+msgstr "超级治疗"
+
+msgid "GOTBLUECARD"
+msgstr "获得了绿钥匙卡。"
+
+msgid "GOTYELWCARD"
+msgstr "获得了黄钥匙卡。"
+
+msgid "GOTREDCARD"
+msgstr "获得了紫钥匙卡。"
+
+msgid "GOTBLUESKUL"
+msgstr "获得了绿钥匙。"
+
+msgid "GOTYELWSKUL"
+msgstr "获得了黄钥匙。"
+
+msgid "GOTREDSKUL"
+msgstr "获得了紫钥匙。"
+
+msgid "GOTSTIM"
+msgstr "治疗蘑菇"
+
+msgid "GOTMEDIKIT"
+msgstr "获取了：医疗工具。"
+
+msgid "GOTMEDINEED"
+msgstr "获取了：你急需的医疗工具。"
+
+msgid "GOTMAP"
+msgstr "地图"
+
+msgid "GOTCLIPBOX"
+msgstr "获取了：一箱子弹。"
+
+msgid "GOTROCKET"
+msgstr "获取了：手雷。"
+
+msgid "GOTROCKBOX"
+msgstr "获取了：手雷包。"
+
+msgid "GOTSHELLBOX"
+msgstr "获取了：一盒霰弹枪子弹。"
+
+msgid "GOTBACKPACK"
+msgstr "获取了：弹药背包。"
+
+msgid "GOTBFG9000"
+msgstr "获取了：手雷。"
+
+msgid "GOTCHAINGUN"
+msgstr "获取了：机枪。"
+
+msgid "GOTLAUNCHER"
+msgstr "获取了：榴弹发射器。"
+
+msgid "GOTPLASMA"
+msgstr "熵投掷器！"
+
+msgid "GOTSHOTGUN"
+msgstr "获取了：霰弹枪。"
+
+msgid "STSTR_DQDON"
+msgstr "上帝模式开启"
+
+msgid "STSTR_DQDOFF"
+msgstr "上帝模式关闭"
+
+msgid "STSTR_KFAADDED"
+msgstr "全武器/弹药/钥匙"
+
+msgid "STSTR_FAADDED"
+msgstr "全武器和弹药"
+
+msgid "TXT_HARMMAP01"
+msgstr "绑架"
+
+msgid "TXT_HARMMAP02"
+msgstr "险境"
+
+msgid "TXT_HARMMAP03"
+msgstr "怪异心境"
+
+msgid "TXT_HARMMAP04"
+msgstr "巨型都市"
+
+msgid "TXT_HARMMAP05"
+msgstr "医院"
+
+msgid "TXT_HARMMAP06"
+msgstr "武器工厂"
+
+msgid "TXT_HARMMAP07"
+msgstr "水下实验室"
+
+msgid "TXT_HARMMAP08"
+msgstr "一号机场"
+
+msgid "TXT_HARMMAP09"
+msgstr "发射基地"
+
+msgid "TXT_HARMMAP10"
+msgstr "放射区"
+
+msgid "TXT_HARMMAP11"
+msgstr "厄喀德那"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"你感到胃里一阵翻腾……\n"
+"凝视着眼前这只变异女皇……\n"
+"那只怪物……曾是……\n"
+"你的朋友……阿米拉！\n"
+"\n"
+"那些怪物一定找到了某种方法，\n"
+"将她突变为这个畸形的可怕生物，\n"
+"为它们繁衍后代。\n"
+"\n"
+"——唉——\n"
+"\n"
+"你振作起来……\n"
+"他们要为逼你亲手杀死\n"
+"你的朋友而付出代价……\n"
+"\n"
+"“地狱的怒火，怎比得上一个被鄙视的女人！”\n"
+"\n"
+"     ＝ 剧 终 ＝"
+
+# This text is deliberately empty
+msgid "WI_FINISHED"
+msgstr "> WI_ENTERING"
+
+# Yellow needs retranslation
+msgid "WI_ENTERING"
+msgstr "正在加载"
+
+msgid "SKILL_BABY"
+msgstr "非常简单"
+
+msgid "SKILL_EASY"
+msgstr "简单"
+
+msgid "SKILL_NORMAL"
+msgstr "普通"
+
+msgid "SKILL_HARD"
+msgstr "困难"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "非常困难"
+
+msgid "HARMQUITMSG"
+msgstr "感谢体验"
+
+msgid "TXT_D2E1"
+msgstr "哈莫尼"

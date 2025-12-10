@@ -2,8 +2,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-12-02 00:42+0000\n"
+"Last-Translator: Joel Robert Justiawan "
+"<joelwindows7@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/common/"
 "id/>\n"
 "Language: id\n"
@@ -100,261 +101,264 @@ msgid "OPTVAL_ON"
 msgstr "Nyala"
 
 msgid "OPTVAL_AUTO"
-msgstr ""
+msgstr "Otomatis"
 
 msgid "OPTMNU_TITLE"
-msgstr ""
+msgstr "Setelan"
 
 msgid "OPTMNU_CONTROLS"
-msgstr ""
+msgstr "Ubah Kontrol"
 
 msgid "OPTMNU_MOUSE"
-msgstr ""
+msgstr "Setelan Tetikus"
 
 msgid "OPTMNU_JOYSTICK"
-msgstr ""
+msgstr "Setelan Kontroler"
 
 msgid "OPTMNU_PLAYER"
-msgstr ""
+msgstr "Pengaturan Player"
 
 msgid "OPTMNU_GAMEPLAY"
-msgstr ""
+msgstr "Setelan Gameplay"
 
 msgid "OPTMNU_AUTOMAP"
-msgstr ""
+msgstr "Setelan Automap"
 
 msgid "OPTMNU_HUD"
-msgstr ""
+msgstr "Setelan HUD"
 
 msgid "OPTMNU_MISCELLANEOUS"
-msgstr ""
+msgstr "Setelan Lainnya"
 
 msgid "OPTMNU_SOUND"
-msgstr ""
+msgstr "Setelan Suara"
 
 msgid "OPTMNU_DISPLAY"
-msgstr ""
+msgstr "Setelan Tampilan"
 
 msgid "OPTMNU_VIDEO"
-msgstr ""
+msgstr "Atur mode video"
 
 msgid "OPTMNU_DEFAULTS"
-msgstr ""
+msgstr "Atur ulang ke default"
 
 msgid "OPTMNU_RESETTOSAVED"
-msgstr ""
+msgstr "Atur ulang ke terakhir disimpan"
 
 msgid "OPTMNU_WRITEINI"
-msgstr ""
+msgstr "Simpan setelan saat ini"
 
 msgid "OPTMNU_CONSOLE"
-msgstr ""
+msgstr "Pergi ke konsol"
 
 msgid "OPTMNU_NETWORK"
-msgstr ""
+msgstr "Setelan Jaringan"
 
 msgid "OPTMNU_REVERB"
-msgstr ""
+msgstr "Editor reverb ruang"
 
 msgid "CNTRLMNU_SWITCHTEXT1"
-msgstr ""
+msgstr "ENTER utk ubah, BACKSPACE utk bersihkan"
 
 msgid "CNTRLMNU_SWITCHTEXT2"
-msgstr ""
+msgstr "Tekan tombol baru untuk kontrol, ESC utk batal"
 
 msgid "CNTRLMNU_CONTROLS"
-msgstr ""
+msgstr "Kontrol"
 
 msgid "CNTRLMNU_ATTACK"
-msgstr ""
+msgstr "Tembak"
 
 msgid "CNTRLMNU_ALTATTACK"
-msgstr ""
+msgstr "Tembak Sekunder"
 
 msgid "CNTRLMNU_RELOAD"
-msgstr ""
+msgstr "Isi Ulang Senjata"
 
 msgid "CNTRLMNU_USE"
-msgstr ""
+msgstr "Gunakan / Buka"
 
 msgid "CNTRLMNU_FORWARD"
-msgstr ""
+msgstr "Gerak maju"
 
 msgid "CNTRLMNU_BACK"
-msgstr ""
+msgstr "Gerak mundur"
 
 msgid "CNTRLMNU_MOVELEFT"
-msgstr ""
+msgstr "Serong kiri"
 
 msgid "CNTRLMNU_MOVERIGHT"
-msgstr ""
+msgstr "Serong kanan"
 
 msgid "CNTRLMNU_TURNLEFT"
-msgstr ""
+msgstr "Belok kiri"
 
 msgid "CNTRLMNU_TURNRIGHT"
-msgstr ""
+msgstr "Belok kanan"
 
 msgid "CNTRLMNU_TURN180"
-msgstr ""
+msgstr "Belok cepat"
 
 msgid "CNTRLMNU_JUMP"
-msgstr ""
+msgstr "Lompat"
 
 msgid "CNTRLMNU_CROUCH"
-msgstr ""
+msgstr "Nunduk"
 
 msgid "CNTRLMNU_TOGGLECROUCH"
-msgstr ""
+msgstr "Nunduk Toggle"
 
 msgid "CNTRLMNU_MOUSELOOK"
-msgstr ""
+msgstr "Lihat dgn. mouse"
 
 # Look doesn't change the aim! It only alters the view pitch
 msgid "CNTRLMNU_LOOKUP"
-msgstr ""
+msgstr "Lihat atas"
 
 msgid "CNTRLMNU_LOOKDOWN"
-msgstr ""
+msgstr "Lihat bawah"
 
 msgid "CNTRLMNU_CENTERVIEW"
-msgstr ""
+msgstr "Tengahkan lihat"
 
 msgid "CNTRLMNU_RUN"
-msgstr ""
+msgstr "Lari"
 
 msgid "CNTRLMNU_TOGGLERUN"
-msgstr ""
+msgstr "Toggle Lari"
 
 msgid "CNTRLMNU_STRAFE"
-msgstr ""
+msgstr "Serong"
 
 msgid "CNTRLMNU_SCOREBOARD"
-msgstr ""
+msgstr "Tunjukan Papan Skor"
 
 msgid "CNTRLMNU_ACTION"
-msgstr ""
+msgstr "Aksi"
 
 msgid "CNTRLMNU_ACTION_TITLE"
-msgstr ""
+msgstr "Ubah Kontrol Aksi"
 
 msgid "CNTRLMNU_CHAT"
-msgstr ""
+msgstr "Obrolan"
 
 msgid "MNU_MULTIPLAYER"
-msgstr ""
+msgstr "Multipemain"
 
 msgid "CNTRLMNU_SAY"
-msgstr ""
+msgstr "Katakan"
 
 msgid "CNTRLMNU_CHAT_TITLE"
-msgstr ""
+msgstr "Atur Kontrol Obrolan"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
-msgstr ""
+msgstr "Ubah Kontrol Senjata"
 
 msgid "CNTRLMNU_INVENTORY_TITLE"
-msgstr ""
+msgstr "Ubah Kontrol Inventori"
 
 msgid "CNTRLMNU_OTHER_TITLE"
-msgstr ""
+msgstr "Ubah Kontrol Lainnya"
 
 msgid "CNTRLMNU_WEAPONS"
-msgstr ""
+msgstr "Senjata"
 
 msgid "CNTRLMNU_NEXTWEAPON"
-msgstr ""
+msgstr "Senjata berikut"
 
 msgid "CNTRLMNU_PREVIOUSWEAPON"
-msgstr ""
+msgstr "Senjata sebelum"
 
 # Todo - make game specific
 msgid "CNTRLMNU_SLOT1"
-msgstr ""
+msgstr "Senjata 1"
 
 # only show appropriate slots per game
 # 
 msgid "CNTRLMNU_SLOT2"
-msgstr ""
+msgstr "Senjata 2"
 
 msgid "CNTRLMNU_SLOT3"
-msgstr ""
+msgstr "Senjata 3"
 
 msgid "CNTRLMNU_SLOT4"
-msgstr ""
+msgstr "Senjata 4"
 
 msgid "CNTRLMNU_SLOT5"
-msgstr ""
+msgstr "Senjata 5"
 
 msgid "CNTRLMNU_SLOT6"
-msgstr ""
+msgstr "Senjata 6"
 
 msgid "CNTRLMNU_SLOT7"
-msgstr ""
+msgstr "Senjata 7"
 
 msgid "CNTRLMNU_SLOT8"
-msgstr ""
+msgstr "Senjata 8"
 
 msgid "CNTRLMNU_SLOT9"
-msgstr ""
+msgstr "Senjata 9"
 
 msgid "CNTRLMNU_SLOT0"
-msgstr ""
+msgstr "Senjata 10"
 
 msgid "CNTRLMNU_INVENTORY"
-msgstr ""
+msgstr "Inventori"
 
 msgid "CNTRLMNU_USEITEM"
-msgstr ""
+msgstr "Aktifkan item"
 
 msgid "CNTRLMNU_USEALLITEMS"
-msgstr ""
+msgstr "Aktifkan semua item"
 
 msgid "CNTRLMNU_NEXTITEM"
-msgstr ""
+msgstr "Item berikut"
 
 msgid "CNTRLMNU_PREVIOUSITEM"
-msgstr ""
+msgstr "Item sebelum"
 
 # most are not used yet but will be
 msgid "MAPCNTRLMNU_TITLE"
-msgstr ""
+msgstr "Ubah Kontrol Map"
 
 msgid "MAPCNTRLMNU_CONTROLS"
-msgstr ""
+msgstr "Kontrol Map"
 
 msgid "MAPCNTRLMNU_PANLEFT"
-msgstr ""
+msgstr "Geser kiri"
 
+#, fuzzy
 msgid "MAPCNTRLMNU_PANRIGHT"
-msgstr ""
+msgstr "Geser kanan"
 
+#, fuzzy
 msgid "MAPCNTRLMNU_PANUP"
-msgstr ""
+msgstr "Geser atas"
 
+#, fuzzy
 msgid "MAPCNTRLMNU_PANDOWN"
-msgstr ""
+msgstr "Geser bawah"
 
 msgid "MAPCNTRLMNU_ZOOMIN"
-msgstr ""
+msgstr "Perbesar"
 
 msgid "MAPCNTRLMNU_ZOOMOUT"
-msgstr ""
+msgstr "Perkecil"
 
 msgid "MAPCNTRLMNU_TOGGLEZOOM"
 msgstr ""
 
 msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
-msgstr ""
+msgstr "Toggle ikuti"
 
 msgid "MAPCNTRLMNU_TOGGLEGRID"
 msgstr ""
 
 msgid "MAPCNTRLMNU_ROTATE"
-msgstr ""
+msgstr "Toggle putar"
 
 msgid "MAPCNTRLMNU_TOGGLETEXTURE"
-msgstr ""
+msgstr "Toggle tekstur"
 
 msgid "CNTRLMNU_AUTOMAP"
 msgstr ""
@@ -366,136 +370,137 @@ msgid "CNTRLMNU_SCREENSHOT"
 msgstr ""
 
 msgid "CNTRLMNU_CONSOLE"
-msgstr ""
+msgstr "Buka konsol"
 
 msgid "CNTRLMNU_PAUSE"
-msgstr ""
+msgstr "Tunda"
 
 msgid "CNTRLMNU_DISPLAY_INC"
-msgstr ""
+msgstr "Naikan Ukuran Tampilan"
 
 msgid "CNTRLMNU_DISPLAY_DEC"
-msgstr ""
+msgstr "Turunkan Ukuran Tampilan"
 
 msgid "CNTRLMNU_OPEN_HELP"
-msgstr ""
+msgstr "Buka Petunjuk"
 
 msgid "CNTRLMNU_OPEN_SAVE"
-msgstr ""
+msgstr "Buka Menu Save"
 
 msgid "CNTRLMNU_OPEN_LOAD"
-msgstr ""
+msgstr "Bukan Menu Load"
 
 msgid "CNTRLMNU_OPEN_OPTIONS"
-msgstr ""
+msgstr "Buka Menu Setelan"
 
 msgid "CNTRLMNU_OPEN_DISPLAY"
-msgstr ""
+msgstr "Buka Menu Tampilan"
 
 msgid "CNTRLMNU_QUICKSAVE"
-msgstr ""
+msgstr "Save cepat"
 
 msgid "CNTRLMNU_QUICKLOAD"
-msgstr ""
+msgstr "Load cepat"
 
 msgid "CNTRLMNU_EXIT_TO_MAIN"
-msgstr ""
+msgstr "Keluar ke Menu Utama"
 
 msgid "CNTRLMNU_TOGGLE_MESSAGES"
-msgstr ""
+msgstr "Toggle Pesan"
 
 msgid "CNTRLMNU_MENU_QUIT"
-msgstr ""
+msgstr "Keluar Game"
 
 msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr ""
+msgstr "Atur Gamma"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
-msgstr ""
+msgstr "Aktifkan mouse"
 
 msgid "MOUSEMNU_MOUSEINMENU"
-msgstr ""
+msgstr "Aktifkan mouse di menu"
 
 msgid "MOUSEMNU_SHOWBACKBUTTON"
-msgstr ""
+msgstr "Munculkan tombol kembali"
 
 msgid "MOUSEMNU_CURSOR"
-msgstr ""
+msgstr "Kursor"
 
 msgid "MOUSEMNU_SENSITIVITY_X"
-msgstr ""
+msgstr "Sensitivitas horizontal"
 
 msgid "MOUSEMNU_SENSITIVITY_Y"
-msgstr ""
+msgstr "Sensitivitas vertikal"
 
 msgid "MOUSEMNU_SMOOTHMOUSE"
-msgstr ""
+msgstr "Gerakan mouse halus"
 
 msgid "MOUSEMNU_TURNSPEED"
-msgstr ""
+msgstr "Kecepatan belok"
 
+#, fuzzy
 msgid "MOUSEMNU_MOUSELOOKSPEED"
-msgstr ""
+msgstr "Kecepatan mouselook"
 
 msgid "MOUSEMNU_FORWBACKSPEED"
-msgstr ""
+msgstr "Kecepatan Maju/Mundur"
 
 msgid "MOUSEMNU_STRAFESPEED"
-msgstr ""
+msgstr "Kecepatan Serong"
 
 msgid "MOUSEMNU_ALWAYSMOUSELOOK"
-msgstr ""
+msgstr "Selalu Mouselook"
 
 msgid "MOUSEMNU_INVERTMOUSE"
-msgstr ""
+msgstr "Balikan Y Mouse"
 
 msgid "MOUSEMNU_INVERTMOUSEX"
-msgstr ""
+msgstr "Balikan X Mouse"
 
 msgid "OPTVAL_UPPERLEFT"
-msgstr ""
+msgstr "Atas kiri"
 
 msgid "OPTVAL_UPPERRIGHT"
-msgstr ""
+msgstr "Atas kanan"
 
 msgid "OPTVAL_LOWERLEFT"
-msgstr ""
+msgstr "Bawah kiri"
 
 msgid "OPTVAL_LOWERRIGHT"
-msgstr ""
+msgstr "Bawah kanan"
 
 msgid "OPTVAL_TOUCHSCREENLIKE"
-msgstr ""
+msgstr "Spt. Layar Sentuh"
 
 msgid "OPTSTR_SIMPLEARROW"
-msgstr ""
+msgstr "Panah simpel"
 
 msgid "OPTSTR_SYSTEMCURSOR"
-msgstr ""
+msgstr "Kursor sistem"
 
 msgid "OPTVAL_DEFAULT"
 msgstr ""
 
 msgid "JOYMNU_TITLE"
-msgstr ""
+msgstr "Konfigurasikan Kontroler"
 
 msgid "JOYMNU_OPTIONS"
-msgstr ""
+msgstr "Setelan Kontroler"
 
 msgid "JOYMNU_NOMENU"
-msgstr ""
+msgstr "Blokir input kontroler di menu"
 
 msgid "JOYMNU_ENABLE"
-msgstr ""
+msgstr "Aktifkan dukungan kontroler"
 
 msgid "JOYMNU_DINPUT"
-msgstr ""
+msgstr "Aktifkan kontroler DirectInput"
 
 msgid "JOYMNU_XINPUT"
-msgstr ""
+msgstr "Aktifkan kontroller XInput"
 
 msgid "JOYMNU_PS2"
-msgstr ""
+msgstr "Aktifkan adapter PlayStation 2 mentahan"
 
 msgid "JOYMNU_NOCON"
 msgstr ""
@@ -1371,7 +1376,7 @@ msgid "OPTVAL_STRETCH"
 msgstr ""
 
 msgid "VIDMNU_RENDERMODE"
-msgstr ""
+msgstr "Mode Render"
 
 msgid "VIDMNU_FULLSCREEN"
 msgstr ""
@@ -1382,8 +1387,9 @@ msgstr ""
 msgid "VIDMNU_ASPECTRATIO"
 msgstr ""
 
+#, fuzzy
 msgid "VIDMNU_FORCEASPECT"
-msgstr ""
+msgstr "Paksa aspect ratio"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr ""
@@ -1407,22 +1413,22 @@ msgid "VIDMNU_CUSTOMX"
 msgstr ""
 
 msgid "VIDMNU_CUSTOMY"
-msgstr ""
+msgstr "Tinggi Custom"
 
 msgid "VIDMNU_APPLYW"
-msgstr ""
+msgstr "Terapkan Perubahan (Jendela)"
 
 msgid "VIDMNU_APPLYFS"
-msgstr ""
+msgstr "Terapkan Perubahan (Layar Penuh)"
 
 msgid "VIDMNU_RESPRESET"
-msgstr ""
+msgstr "Pilih Preset Resolusi"
 
 msgid "VIDMNU_RESPRESETTTL"
-msgstr ""
+msgstr "Pilih Preset Resolusi"
 
 msgid "VIDMNU_RESPRESETHEAD"
-msgstr ""
+msgstr "Mode Preset Resolusi"
 
 msgid "VIDMNU_ASPECT43"
 msgstr ""
@@ -1445,13 +1451,13 @@ msgstr ""
 # This describes vid_scalemode 1, which represents the lowest possible scaling
 # to fill the allocated screen area
 msgid "OPTVAL_LOWEST"
-msgstr ""
+msgstr "Skala Terkecil"
 
 msgid "OPTVAL_CUSTOM"
 msgstr ""
 
 msgid "VIDMNU_MAXFPS"
-msgstr ""
+msgstr "FPS Maks"
 
 msgid "OPTVAL_60FPS"
 msgstr ""
@@ -1472,7 +1478,7 @@ msgid "OPTVAL_200FPS"
 msgstr ""
 
 msgid "VIDMNU_PREFERBACKEND"
-msgstr ""
+msgstr "Rendering API yg. Diinginkan"
 
 msgid "OPTVAL_OPENGL"
 msgstr ""
@@ -1490,8 +1496,9 @@ msgstr ""
 msgid "MISCMNU_WINFULLSCREENTOGGLE"
 msgstr ""
 
+#, fuzzy
 msgid "MISCMNU_MACFULLSCREENTOGGLE"
-msgstr ""
+msgstr "Command-F mentoggle layar penuh"
 
 msgid "MISCMNU_ENABLEAUTOSAVES"
 msgstr ""
@@ -1527,43 +1534,48 @@ msgid "HUDMNU_CROSSHAIRHEALTH"
 msgstr ""
 
 msgid "HUDMNU_CROSSHAIRSCALE"
-msgstr ""
+msgstr "Skala Crosshair"
 
 # copied from elsewhere
 msgid "OPTVAL_YES_STANDARD"
-msgstr ""
+msgstr "Standar"
 
 msgid "OPTVAL_YES_ENHANCED"
-msgstr ""
+msgstr "Ditingkatkan"
 
 msgid "OPTMNU_LANGUAGE"
-msgstr ""
+msgstr "Bahasa"
 
 msgid "TXT_UNDOCHANGES"
-msgstr ""
+msgstr "Urungkan Perubahan"
 
+#, fuzzy
 msgid "REVMNU_SELECT"
-msgstr ""
+msgstr "Pilih Environment"
 
+#, fuzzy
 msgid "REVMNU_TEST"
-msgstr ""
+msgstr "Uji Environment"
 
+#, fuzzy
 msgid "REVMNU_EDIT"
-msgstr ""
+msgstr "Ubah Environment"
 
+#, fuzzy
 msgid "REVMNU_NEW"
-msgstr ""
+msgstr "Environment Baru"
 
 msgid "REVMNU_REVERT"
-msgstr ""
+msgstr "Kembalikan setelan"
 
 # Please translate only if you know how to properly name this technical
 # jargon!
 msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr ""
+msgstr "Ukuran Environment"
 
+#, fuzzy
 msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr ""
+msgstr "Difusi Environment"
 
 msgid "REVMNU_ROOM"
 msgstr ""
@@ -1575,13 +1587,13 @@ msgid "REVMNU_ROOM_LF"
 msgstr ""
 
 msgid "REVMNU_DECAY_TIME"
-msgstr ""
+msgstr "Waktu Decay"
 
 msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
+msgstr "Rasio Decay HF"
 
 msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
+msgstr "Rasio Decay LF"
 
 msgid "REVMNU_REFLECTIONS"
 msgstr ""
@@ -1680,44 +1692,44 @@ msgid "REVMNU_ID_2"
 msgstr ""
 
 msgid "REVMNU_Create"
-msgstr ""
+msgstr "Buat"
 
 msgid "REVMNU_Save"
-msgstr ""
+msgstr "Simpan..."
 
 msgid "REVMNU_File_name"
-msgstr ""
+msgstr "Nama file"
 
 msgid "REVMNU_Environments_to_save"
-msgstr ""
+msgstr "Ruang untuk disimpan"
 
 msgid "DSPLYMNU_VKOPT"
-msgstr ""
+msgstr "Setelan Vulkan (Eksperimental)"
 
 msgid "VK_TITLE"
-msgstr ""
+msgstr "Setelan Vulkan"
 
 msgid "VKMNU_ENABLE"
-msgstr ""
+msgstr "Aktifkan Vulkan"
 
 msgid "VKMNU_DEVICE"
-msgstr ""
+msgstr "ID Perangkat Vulkan"
 
 msgid "VKMNU_HDR"
 msgstr ""
 
 msgid "VK_WARNING"
-msgstr ""
+msgstr "Peringatan: Renderer Vulkan masih tahap eksperimental!"
 
 msgid "VK_RESTART"
-msgstr ""
+msgstr "Setelan ini butuh restart agar bekerja."
 
 # This is not yet implemented - but it is planned
 msgid "VKMNU_DEVICESELECT"
-msgstr ""
+msgstr "Pilih Perangkat Vulkan"
 
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "SkalaNx"
 
 msgid "OPTVAL_NORMALNX"
 msgstr ""
@@ -1738,79 +1750,80 @@ msgid "OS_TITLE"
 msgstr ""
 
 msgid "OS_ANY"
-msgstr ""
+msgstr "Cari kata kunci apapun"
 
 msgid "OS_ALL"
-msgstr ""
+msgstr "Cari semua kata kunci"
 
 msgid "OS_NO_RESULTS"
-msgstr ""
+msgstr "Tiada hasil."
 
 msgid "OS_LABEL"
-msgstr ""
+msgstr "Cari:"
 
 msgid "TXT_OBITUARY1"
 msgstr ""
 
 msgid "TXT_OBITUARY2"
-msgstr ""
+msgstr "%k mengkebirikan %o"
 
 msgid "TXT_OBITUARY3"
-msgstr ""
+msgstr "%k mengkrimkan %o"
 
 msgid "TXT_OBITUARY4"
-msgstr ""
+msgstr "%k memecahkan %o"
 
 msgid "TXT_OBITUARY5"
-msgstr ""
+msgstr "%k menghancurkan %o"
 
 msgid "TXT_OBITUARY6"
-msgstr ""
+msgstr "%k memotong %o"
 
 msgid "TXT_OBITUARY7"
-msgstr ""
+msgstr "%k menyembelih %o"
 
 msgid "TXT_OBITUARY8"
-msgstr ""
+msgstr "%k menggiling %o"
 
 msgid "TXT_OBITUARY9"
-msgstr ""
+msgstr "%k membalaskan %o dgn. Keadilan Buntut"
 
 msgid "TXT_OBITUARY10"
-msgstr ""
+msgstr "%k membalaskan KeKaCaUan BuNtUT kpd. %o"
 
 msgid "TXT_OBITUARY11"
-msgstr ""
+msgstr "%k membunuh %o"
 
 msgid "TXT_OBITUARY12"
-msgstr ""
+msgstr "%k membuat daging cincang dari %o"
 
 msgid "TXT_OBITUARY13"
-msgstr ""
+msgstr "%k membantai %o"
 
 msgid "TXT_OBITUARY14"
-msgstr ""
+msgstr "%k memutilasi %o"
 
 msgid "TXT_OBITUARY15"
-msgstr ""
+msgstr "%k melubangi %o"
 
+#, fuzzy
 msgid "TXT_OBITUARY16"
-msgstr ""
+msgstr "%k menarik isi perutnya %o"
 
 msgid "TXT_OBITUARY17"
-msgstr ""
+msgstr "%k menyembelih %o"
 
 msgid "TXT_OBITUARY18"
-msgstr ""
+msgstr "%k menumbuk %o"
 
 msgid "TXT_OBITUARY19"
-msgstr ""
+msgstr "%k menyodomi %o"
 
 msgid "TXT_OBITUARY20"
-msgstr ""
+msgstr "%k menghamburi %o"
 
 msgid "TXT_OBITUARY21"
-msgstr ""
+msgstr "%k melumatkan %o"
 
 msgid "TXT_OBITUARY22"
 msgstr ""
@@ -1819,46 +1832,48 @@ msgid "TXT_OBITUARY23"
 msgstr ""
 
 msgid "TXT_OBITUARY24"
-msgstr ""
+msgstr "%k membungkus %o"
 
 msgid "TXT_OBITUARY25"
-msgstr ""
+msgstr "%k menjerumuskan %o ke Neraka"
 
 msgid "TXT_OBITUARY26"
-msgstr ""
+msgstr "%k memanggang %o"
 
 msgid "TXT_OBITUARY27"
-msgstr ""
+msgstr "%k memadamkan %o"
 
 msgid "TXT_OBITUARY28"
 msgstr ""
 
 msgid "TXT_OBITUARY29"
-msgstr ""
+msgstr "%k menyemprot %o"
 
+#, fuzzy
 msgid "TXT_OBITUARY30"
-msgstr ""
+msgstr "%k membuat daging dari %o"
 
 msgid "TXT_OBITUARY31"
-msgstr ""
+msgstr "%k menghajar %o hingga babak belur"
 
+#, fuzzy
 msgid "TXT_SELFOBIT1"
-msgstr ""
+msgstr "%o menjadi buangan"
 
 msgid "TXT_SELFOBIT2"
-msgstr ""
+msgstr "%o menjadi hamburger"
 
 msgid "TXT_SELFOBIT3"
-msgstr ""
+msgstr "%o mengalami putus zakar"
 
 msgid "TXT_SELFOBIT4"
-msgstr ""
+msgstr "%o sukarela untuk kendali populasi"
 
 msgid "TXT_SELFOBIT5"
-msgstr ""
+msgstr "%o bunuh diri"
 
 msgid "TXT_SELFOBIT6"
-msgstr ""
+msgstr "%o meraih Penghargaan Darwin"
 
 # This is not a text to be translated but an engine switch for complex
 # languages.
@@ -1905,7 +1920,7 @@ msgid "OPTVAL_HUDANDMAP"
 msgstr ""
 
 msgid "TXT_SAVEGAMENEEDS"
-msgstr ""
+msgstr "Savegame ini membutuhkan file2 tersebut"
 
 msgid "OPTMNU_MULTIPLAYER"
 msgstr ""
@@ -1935,25 +1950,25 @@ msgid "PICKER_SELECT"
 msgstr ""
 
 msgid "PICKER_PLAY"
-msgstr ""
+msgstr "Mainkan Game"
 
 msgid "PICKER_EXIT"
-msgstr ""
+msgstr "Keluar"
 
 msgid "PICKER_GENERAL"
-msgstr ""
+msgstr "Umum"
 
 msgid "PICKER_EXTRA"
-msgstr ""
+msgstr "Grafik Ekstra"
 
 msgid "PICKER_FULLSCREEN"
-msgstr ""
+msgstr "Layar Penuh"
 
 msgid "PICKER_NOAUTOLOAD"
-msgstr ""
+msgstr "Nonaktifkan autoload"
 
 msgid "PICKER_DONTASK"
-msgstr ""
+msgstr "Jangan tanya lagi"
 
 msgid "PICKER_LIGHTS"
 msgstr ""
@@ -1962,19 +1977,19 @@ msgid "PICKER_BRIGHTMAPS"
 msgstr ""
 
 msgid "PICKER_WIDESCREEN"
-msgstr ""
+msgstr "Layar Lebar"
 
 msgid "PICKER_ADDPARM"
-msgstr ""
+msgstr "Parameter Tambahan:"
 
 msgid "PICKER_WELCOME"
-msgstr ""
+msgstr "Selamat datang di %s!"
 
 msgid "PICKER_VERSION"
-msgstr ""
+msgstr "Versi %s"
 
 msgid "PICKER_PREFERBACKEND"
-msgstr ""
+msgstr "API Rendering"
 
 msgid "PICKER_TAB_PLAY"
 msgstr ""
@@ -1982,7 +1997,7 @@ msgstr ""
 # Option to enable or disable individual controllers/joysticks when
 # configuring it in the Controller Options menu
 msgid "JOYMNU_JOYENABLE"
-msgstr ""
+msgstr "Aktifkan kontroler ini"
 
 msgid "CNTRLMNU_OPEN_MAIN"
 msgstr ""
@@ -2010,23 +2025,23 @@ msgid "PICKER_PLAYHOST"
 msgstr ""
 
 msgid "PICKER_PLAYJOIN"
-msgstr ""
+msgstr "Gabung Game"
 
 msgid "PICKER_REMPARM"
-msgstr ""
+msgstr "Ingat Parameter"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr ""
+msgstr "Muat WAD Pendukung"
 
 msgid "PICKER_TAB_MULTI"
-msgstr ""
+msgstr "Multipemain"
 
 msgid "PICKER_LOADSAVE"
-msgstr ""
+msgstr "Muat File Save:"
 
 msgid "PICKER_REMSAVE"
-msgstr ""
+msgstr "Ingat File Save"
 
 # As in, to host a game.
 msgid "PICKER_HOST"
@@ -2059,7 +2074,7 @@ msgid "PICKER_NETBACKUP"
 msgstr ""
 
 msgid "PICKER_GAMEMODE"
-msgstr ""
+msgstr "Mode Game:"
 
 msgid "PICKER_COOP"
 msgstr ""
@@ -2116,3 +2131,6 @@ msgstr ""
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr ""
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Catatan Rilis"

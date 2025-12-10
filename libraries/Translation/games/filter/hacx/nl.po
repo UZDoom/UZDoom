@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 11:51+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"hacx-filter/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: nl\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "QUITMSG1"
 msgstr "Zijn deze bugs te hard voor je?"
@@ -246,7 +253,7 @@ msgid "GOTFORCEFIELD"
 msgstr "Krachtveld!"
 
 msgid "GOTMICROTEL"
-msgstr ""
+msgstr "007Microtel"
 
 msgid "GOTENKBLIND"
 msgstr "Jij bent EnK Blind!"
@@ -255,7 +262,7 @@ msgid "GOTRUBBERBOOTS"
 msgstr "Vulcan rubber Laarzen!"
 
 msgid "GOTSIARRAY"
-msgstr ""
+msgstr "SI Array-toewijzing!"
 
 msgid "GOTINFRARED"
 msgstr "Infrarood vizier!"
@@ -291,7 +298,7 @@ msgid "GOTBODYARMOR"
 msgstr "Kogelvrije vesten!"
 
 msgid "GOTCENTROPHENOXINE"
-msgstr ""
+msgstr "Centrofenoxine"
 
 msgid "GOTKEVLARVEST"
 msgstr "Pak een Kevlar vest!"
@@ -383,7 +390,7 @@ msgstr ""
 "Je... bent alleen."
 
 msgid "TXT_HACXMAP01"
-msgstr ""
+msgstr "GenEmp Corp."
 
 msgid "TXT_HACXMAP02"
 msgstr "Tunnelstad"
@@ -392,13 +399,13 @@ msgid "TXT_HACXMAP03"
 msgstr "Lava Bijlage"
 
 msgid "TXT_HACXMAP04"
-msgstr ""
+msgstr "Alcatraz"
 
 msgid "TXT_HACXMAP05"
-msgstr ""
+msgstr "Cyber Circus"
 
 msgid "TXT_HACXMAP06"
-msgstr ""
+msgstr "Digi-Ota"
 
 msgid "TXT_HACXMAP07"
 msgstr "De grote muur"
@@ -413,10 +420,10 @@ msgid "TXT_HACXMAP10"
 msgstr "Anarchistische droom"
 
 msgid "TXT_HACXMAP11"
-msgstr ""
+msgstr "Nietus Onsus!"
 
 msgid "TXT_HACXMAP12"
-msgstr ""
+msgstr "Gothische-handschoen"
 
 msgid "TXT_HACXMAP13"
 msgstr "De Riolen"
@@ -434,7 +441,7 @@ msgid "TXT_HACXMAP17"
 msgstr "Rivier van bloed"
 
 msgid "TXT_HACXMAP18"
-msgstr ""
+msgstr "Bizarro"
 
 msgid "TXT_HACXMAP19"
 msgstr "De oorlogskamers"
@@ -457,7 +464,7 @@ msgstr "...gaat je kont bakken!"
 # string has to be defined and minimally altered so that the Dehacked
 # replacement is not being triggered.
 msgid "STSTR_BEHOLD"
-msgstr ""
+msgstr "inVuln, Str, Inviso, Rad, Allmap of Lite-amp?"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Laten we serieus worden!"
@@ -473,10 +480,10 @@ msgstr "Selectie: Onmogelijk"
 
 # Should probably not be translated...
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "Zet het volume harder\n"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "INIT-Twitch n'Kill-modus"
 
 msgid "STSTR_FAADDED"
 msgstr "Het zij zo, Hacker."
@@ -532,13 +539,13 @@ msgid "CC_ANDROID"
 msgstr "Androïde"
 
 msgid "CC_ICE"
-msgstr ""
+msgstr "IJS"
 
 msgid "CC_BUZZER"
 msgstr "Zoemer"
 
 msgid "CC_DMAN"
-msgstr ""
+msgstr "D-Man"
 
 msgid "CC_PHAGE"
 msgstr "Faag"
@@ -550,16 +557,16 @@ msgid "CC_MECH"
 msgstr "Mecha Maniak"
 
 msgid "CC_TERMI"
-msgstr ""
+msgstr "Terminatrix"
 
 msgid "CC_THORN"
 msgstr "Doornding"
 
 msgid "CC_MAJONG"
-msgstr ""
+msgstr "Majong 7"
 
 msgid "CC_HERO"
-msgstr ""
+msgstr "Dan Evanger"
 
 msgid "SKILL_BABY"
 msgstr "Niet schieten, alsjeblieft!"

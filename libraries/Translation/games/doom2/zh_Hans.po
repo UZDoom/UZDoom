@@ -1,0 +1,245 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 12:26+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/doom-2/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_D2E1"
+msgstr "人间地狱"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr "生者无休"
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr "Level 1: 入口"
+
+msgid "HUSTR_2"
+msgstr "Level 2: 地下大厅"
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr "Level 3: 严酷考验"
+
+msgid "HUSTR_4"
+msgstr "Level 4: 焦点"
+
+msgid "HUSTR_5"
+msgstr "Level 5: 废料隧道"
+
+msgid "HUSTR_6"
+msgstr "Level 6: 粉碎机"
+
+msgid "HUSTR_7"
+msgstr "Level 7: 简单粗暴"
+
+msgid "HUSTR_8"
+msgstr "Level 8: 机关陷阱"
+
+msgid "HUSTR_9"
+msgstr "Level 9: 深坑"
+
+msgid "HUSTR_10"
+msgstr "Level 10: 补给基地"
+
+# Alternative title:
+# Circle of Death
+msgid "HUSTR_11"
+msgstr "Level 11: 毁灭之环！"
+
+msgid "HUSTR_12"
+msgstr "Level 12: 工厂"
+
+msgid "HUSTR_13"
+msgstr "Level 13: 市中心"
+
+msgid "HUSTR_14"
+msgstr "Level 14: 深处巢穴"
+
+msgid "HUSTR_15"
+msgstr "Level 15: 工业地带"
+
+msgid "HUSTR_16"
+msgstr "Level 16: 郊外"
+
+msgid "HUSTR_17"
+msgstr "Level 17: 贫民窟"
+
+msgid "HUSTR_18"
+msgstr "Level 18: 庭院"
+
+msgid "HUSTR_19"
+msgstr "Level 19: 城堡"
+
+msgid "HUSTR_20"
+msgstr "Level 20: 逮住了!"
+
+msgid "HUSTR_21"
+msgstr "Level 21: 涅槃"
+
+msgid "HUSTR_22"
+msgstr "Level 22: 地下墓穴"
+
+msgid "HUSTR_23"
+msgstr "Level 23: 桶中作乐"
+
+msgid "HUSTR_24"
+msgstr "Level 24: 裂缝"
+
+msgid "HUSTR_25"
+msgstr "Level 25: 血瀑"
+
+msgid "HUSTR_26"
+msgstr "Level 26: 废弃矿山"
+
+msgid "HUSTR_27"
+msgstr "Level 27: 怪物公寓"
+
+msgid "HUSTR_28"
+msgstr "Level 28: 恶灵世界"
+
+msgid "HUSTR_29"
+msgstr "Level 29: 生命尽头"
+
+msgid "HUSTR_30"
+msgstr "Level 30: 罪恶圣像"
+
+msgid "HUSTR_31"
+msgstr "Level 31: 德军总部"
+
+msgid "HUSTR_32"
+msgstr "Level 32: 格罗斯"
+
+msgid "HUSTR_31B"
+msgstr "Level 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Level 32: 基恩"
+
+msgid "HUSTR_33"
+msgstr "Level 33: 背叛"
+
+msgid "NHUSTR_1"
+msgstr "Level 1: 地球基地"
+
+msgid "NHUSTR_2"
+msgstr "Level 2: 痛苦实验"
+
+msgid "NHUSTR_3"
+msgstr "Level 3: 死亡峡谷"
+
+msgid "NHUSTR_4"
+msgstr "Level 4: 地狱山脉"
+
+msgid "NHUSTR_5"
+msgstr "Level 5: 活体解剖"
+
+msgid "NHUSTR_6"
+msgstr "Level 6: 血之炼狱"
+
+msgid "NHUSTR_7"
+msgstr "Level 7: 男爵盛宴"
+
+msgid "NHUSTR_8"
+msgstr "Level 8: 恶意之墓"
+
+msgid "NHUSTR_9"
+msgstr "Level 9: 恶魔行军"
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+"你已深入被怪物侵扰的星际港。\n"
+"但情况不对劲。怪物带来了它们自己的现实，\n"
+"它们的存在正在颠覆星际港的技术。\n"
+"\n"
+"前方，你看到一座地狱前哨，一个设防地带。\n"
+"若能突破它，你就能\n"
+"深入到被诅咒的星际港核心，\n"
+"找到控制着地球人质们命运的开关。"
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+"你赢了！你的胜利让人类得以撤离地球，\n"
+"逃离噩梦。如今你是这颗星球上唯一的人类。\n"
+"食人变异体、食肉外星人和恶灵是你唯一的邻居。\n"
+"你坐等死亡，心满意足于自己拯救了人类。\n"
+"\n"
+"但随后，地球控制中心从太空传来了信息：\n"
+"“传感器已定位到外星入侵的源头。\n"
+"如果你前往那里，或许能够阻止他们的入侵。\n"
+"外星基地就在你自己的家园城市中心，\n"
+"离星际港不远。”\n"
+"你艰难而痛苦地起身，重新投入战斗。"
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+"你身处这座城市的腐坏中心，\n"
+"四周都是敌人的尸体。\n"
+"你发现无法在这边摧毁怪物的入口，\n"
+"于是咬紧牙关，纵身一跃冲了进去。\n"
+"\n"
+"在另一边肯定有办法把它关上。\n"
+"就算得穿过地狱才能到达，你又何必在意呢？"
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+"你朝那颗暴露在外的大脑猛射火箭弹后，\n"
+"眼前出现的那张你所见过的\n"
+"最大恶魔的可怕面孔瞬间崩塌。\n"
+"那个怪物萎缩着死去，它抽搐的四肢\n"
+"毁掉了地狱表面无数英里。\n"
+"\n"
+"你做到了。入侵结束了。\n"
+"地球得救了。地狱一片狼藉。\n"
+"你不禁好奇，现在坏人死后会去往何处。\n"
+"擦去额头上的汗水，你踏上了漫长的归家之路。\n"
+"重建地球应该比毁坏它有趣得多。\n"
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+"祝贺你，你找到了秘密关卡！\n"
+"看起来这是由人类建造的，而非恶魔。\n"
+"你不禁好奇，这地狱角落里的囚犯会是谁。"
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+"祝贺你，你找到了超级秘密关卡！\n"
+"你最好速战速决！\n"
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+"麻烦又在你最钟爱的度假胜地——地狱\n"
+"里酝酿起来了……\n"
+"有个不知天高地的机械巨魔以为\n"
+"能将地狱变成私人游乐场，把地球当作售票亭。\n"
+"\n"
+"哼，那个半机械怪物杂耍团可没想到会碰上谁。\n"
+"没有什么比射击场里满是地狱孽种\n"
+"更能让人热血沸腾的了……\n"
+"\n"
+"此刻，恶魔迷宫的墙壁回荡着\n"
+"金属肢体撞击地面的声音。\n"
+"他临终的呻吟从你在他脸上留下的\n"
+"血肉模糊中咕噜咕噜地冒了出来。\n"
+"\n"
+"此游乐设施已关闭。\n"
+"\n"

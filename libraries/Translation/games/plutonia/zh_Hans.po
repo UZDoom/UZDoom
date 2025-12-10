@@ -1,0 +1,176 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 15:48+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/the-plutonia-experiment/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "冥王星实验"
+
+msgid "PHUSTR_1"
+msgstr "Level 1: 刚果"
+
+msgid "PHUSTR_2"
+msgstr "Level 2: 灵魂之井"
+
+msgid "PHUSTR_3"
+msgstr "Level 3: 阿兹特克"
+
+msgid "PHUSTR_4"
+msgstr "Level 4: 囚笼"
+
+msgid "PHUSTR_5"
+msgstr "Level 5: 鬼镇"
+
+msgid "PHUSTR_6"
+msgstr "Level 6: 男爵巢穴"
+
+msgid "PHUSTR_7"
+msgstr "Level 7: 陷阱场"
+
+msgid "PHUSTR_8"
+msgstr "Level 8: 领地"
+
+msgid "PHUSTR_9"
+msgstr "Level 9: 屠宰场"
+
+msgid "PHUSTR_10"
+msgstr "Level 10: 猛攻"
+
+msgid "PHUSTR_11"
+msgstr "Level 11: 追捕"
+
+msgid "PHUSTR_12"
+msgstr "Level 12: 速度"
+
+msgid "PHUSTR_13"
+msgstr "Level 13: 地穴"
+
+msgid "PHUSTR_14"
+msgstr "Level 14: 创世"
+
+msgid "PHUSTR_15"
+msgstr "Level 15: 黄昏"
+
+msgid "PHUSTR_16"
+msgstr "Level 16: 预兆"
+
+msgid "PHUSTR_17"
+msgstr "Level 17: 围地"
+
+msgid "PHUSTR_18"
+msgstr "Level 18: 神经球"
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr "Level 19: 敌"
+
+msgid "PHUSTR_20"
+msgstr "Level 20: 死亡领域"
+
+msgid "PHUSTR_21"
+msgstr "Level 21: 杀戮者"
+
+msgid "PHUSTR_22"
+msgstr "Level 22: 不可能的任务"
+
+msgid "PHUSTR_23"
+msgstr "Level 23: 墓碑"
+
+msgid "PHUSTR_24"
+msgstr "Level 24: 最后的边境"
+
+msgid "PHUSTR_25"
+msgstr "Level 25: 黑暗神庙"
+
+msgid "PHUSTR_26"
+msgstr "Level 26: 掩体"
+
+msgid "PHUSTR_27"
+msgstr "Level 27: 反基督"
+
+msgid "PHUSTR_28"
+msgstr "Level 28: 下水道"
+
+msgid "PHUSTR_29"
+msgstr "Level 29: 噪音奥德赛"
+
+msgid "PHUSTR_30"
+msgstr "Level 30: 地狱之门"
+
+msgid "PHUSTR_31"
+msgstr "Level 31: 赛博巢穴"
+
+msgid "PHUSTR_32"
+msgstr "Level 32: 放手一搏"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+"你得意洋洋地盯着那具冒着热气的守护者残骸。\n"
+"随着它的死亡，你从地狱那腐臭的爪牙中\n"
+"夺回了加速器。你放松下来，环顾四周。\n"
+"该死！本应至少有一台能用的原型机，\n"
+"可你却看不到。肯定是恶魔们把它拿走了。\n"
+"\n"
+"你必须找到原型机，\n"
+"否则你所有的努力都将白费。\n"
+"继续前进，继续战斗，继续杀戮。\n"
+"哦，对了，也要继续活下去。"
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+"就连致命的恶魔召唤师迷宫也无法阻挡你，\n"
+"而你已经找到了原型加速器，\n"
+"它很快就会被高效且永久地关闭。\n"
+"\n"
+"你擅长干这种事。"
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+"你一路砍砍杀杀闯进了恶魔巢穴的核心。\n"
+"现在是时候来一场搜剿行动，\n"
+"目标是看门人，他的恶毒后代\n"
+"正源源不断地涌向地球。\n"
+"没错，他很坏。但你知道谁更坏！\n"
+"\n"
+"你露出邪恶的笑容，检查了一下装备，\n"
+"准备给那混蛋一点自创的地狱之苦！"
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+"守门人的邪恶面孔四分五裂。\n"
+"随着它残破的尸体倒下，一个倒置的传送门形成，\n"
+"将最后的原型加速器碎片以及仅存的几个恶魔\n"
+"都吸了进去。你成功了。\n"
+"地狱又回去惩罚那些坏死人了，而不是好活人。\n"
+"记得告诉你的孙辈们在你的棺材里放一把火箭筒。\n"
+"要是你死后去了地狱，你还需要它来清理一下……"
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+"你找到了我们准备的第二难的关卡。\n"
+"希望你之前有存档，至少在前一两关。\n"
+"如果没有，做好多次死亡的准备吧。\n"
+"只有高手才能通过。"
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+"你肯定好奇我们为你准备的\n"
+"最难关卡到底是什么吧？\n"
+"现在你知道了。没人能活着出去。"

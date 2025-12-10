@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:38+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
+"PO-Revision-Date: 2025-12-09 19:00+0000\n"
+"Last-Translator: Marazm Mamazm <brutdewelopment@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/common/pl/>"
 "\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural="
-"(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pl\n"
 
@@ -66,7 +66,7 @@ msgid "TXT_SAY"
 msgstr "Mów:"
 
 msgid "TXT_QUITENDOOM"
-msgstr "Wciśnij dowolny klawisz lub kliknij myszką by wyjść."
+msgstr "Wciśnij dowolny klawisz lub kliknij gdziekolwiek myszką by wyjść."
 
 msgid "NEWSAVE"
 msgstr "<Nowy zapis gry>"
@@ -530,9 +530,8 @@ msgstr "Martwa strefa"
 msgid "JOYMNU_NOAXES"
 msgstr "Brak osi do skonfigurowania"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
-msgstr "Żaden"
+msgstr "Żadne"
 
 msgid "OPTVAL_TURNING"
 msgstr "Obracanie się"
@@ -742,25 +741,25 @@ msgid "OPTVAL_48000HZ"
 msgstr "48000 Hz"
 
 msgid "OPTVAL_64SAMPLES"
-msgstr "64 sample"
+msgstr "64 próbek"
 
 msgid "OPTVAL_128SAMPLES"
-msgstr "128 sampli"
+msgstr "128 próbek"
 
 msgid "OPTVAL_256SAMPLES"
-msgstr "256 sampli"
+msgstr "256 próbek"
 
 msgid "OPTVAL_512SAMPLES"
-msgstr "512 sampli"
+msgstr "512 próbek"
 
 msgid "OPTVAL_1024SAMPLES"
-msgstr "1024 sampli"
+msgstr "1024 próbek"
 
 msgid "OPTVAL_2048SAMPLES"
-msgstr "2048 sampli"
+msgstr "2048 próbek"
 
 msgid "OPTVAL_4096SAMPLES"
-msgstr "4096 sampli"
+msgstr "4096 próbek"
 
 msgid "OPTSTR_AUTO"
 msgstr "Automatycznie"
@@ -793,7 +792,7 @@ msgid "OPENALMNU_ENABLEEFX"
 msgstr "Pozwól na EFX"
 
 msgid "OPENALMNU_RESAMPLER"
-msgstr ""
+msgstr "Próbkowanie"
 
 msgid "SNDMNU_SFXVOLUME"
 msgstr "Głośność Dźwięku"
@@ -847,7 +846,7 @@ msgid "ADVSNDMNU_SAMPLERATE"
 msgstr "Częstotliwość próbkowania"
 
 msgid "ADVSNDMNU_HRTF"
-msgstr ""
+msgstr "HRTF"
 
 msgid "ADVSNDMNU_OPLSYNTHESIS"
 msgstr "Synteza OPL"
@@ -856,7 +855,7 @@ msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Liczba emulowanych czipów OPL"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr ""
+msgstr "Wzmocnienie"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Pełne efekty stereo dla MIDI"
@@ -868,13 +867,13 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "Głosy MIDI"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "Globalne"
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Globalny Freeverb"
@@ -892,16 +891,16 @@ msgid "ADVSNDMNU_REVERB_LEVEL"
 msgstr "Poziom pogłosu"
 
 msgid "ADVSNDMNU_CHORUS"
-msgstr ""
+msgstr "Chorus"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_TIMIDITYCONFIG"
 msgstr "Plik konfiguracyjny Timidity"
@@ -910,7 +909,7 @@ msgid "ADVSNDMNU_TIMIDITYVOLUME"
 msgstr "Względna głośność"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_WILDMIDICONFIG"
 msgstr "Plik konfiguracyjny WildMidi"
@@ -970,7 +969,7 @@ msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "Użyj niestandardowego banku WOPL"
 
 msgid "ADVSNDMNU_ADLUSEWADBANK"
-msgstr ""
+msgstr "Użyj banku GENMIDI z WAD'a jako własny bank"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "Plik banku WOPL"
@@ -982,7 +981,7 @@ msgid "ADVSNDMNU_OPNBANKFILE"
 msgstr "Plik banku WOPN"
 
 msgid "OPTVAL_ALIASING"
-msgstr ""
+msgstr "Aliasing"
 
 # This setting is duplicated threefold in order to allow for different
 # grammatical gender endings
@@ -1023,7 +1022,7 @@ msgid "OPTVAL_CUBICSLOW"
 msgstr "Sześcienny (wolniejszy)"
 
 msgid "OPTVAL_SINC"
-msgstr ""
+msgstr "Sinc"
 
 msgid "OPTVAL_NOTEONOFFONLY"
 msgstr "Tylko dla włączonych/wyłączonych notatek"
@@ -1041,82 +1040,82 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Zwiększenie głośności"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Prosty"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "OPTVAL_MAMEOPL2"
-msgstr ""
+msgstr "MAME OPL2"
 
 msgid "OPTVAL_DOSBOXOPL3"
-msgstr ""
+msgstr "DOSBox OPL3"
 
 msgid "OPTVAL_JAVAOPL3"
-msgstr ""
+msgstr "Java OPL3"
 
 msgid "OPTVAL_ESFMu"
-msgstr ""
+msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
-msgstr ""
+msgstr "YMFM OPL2"
 
 msgid "OPTVAL_YMFMOPL3"
-msgstr ""
+msgstr "YMFM OPL3"
 
 msgid "OPTVAL_NUKEDOPL3"
-msgstr ""
+msgstr "Nuked OPL3"
 
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr ""
+msgstr "OPL2-LLE (Bardzo wymagający!)"
 
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr ""
+msgstr "OPL3-LLE (Bardzo wymagający!)"
 
 msgid "OPTVAL_MAMEOPN2"
-msgstr ""
+msgstr "MAME YM2612"
 
 msgid "OPTVAL_NP2OPNA"
-msgstr ""
+msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
+msgstr "MAME YM2608"
 
 msgid "OPTVAL_PMDWINOPNA"
-msgstr ""
+msgstr "PMDWin OPNA"
 
 msgid "OPTVAL_OPALOPL3"
-msgstr ""
+msgstr "Opal OPL3"
 
 msgid "OPTVAL_NUKEDOPL3174"
-msgstr ""
+msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr ""
+msgstr "Nuked OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr ""
+msgstr "Nuked OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM2612) (Bardzo wymagający!)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM3438) (Bardzo wymagający!)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr ""
+msgstr "OPN2-LLE (YMF276) (Bardzo wymagający!)"
 
 msgid "OPTVAL_GENSOPN2"
-msgstr ""
+msgstr "GENS YM2612"
 
 msgid "OPTVAL_YMFMOPN2"
-msgstr ""
+msgstr "YMFM OPN2"
 
 msgid "OPTVAL_YMFMOPNA"
-msgstr ""
+msgstr "YMFM OPNA"
 
 msgid "ADLVLMODEL_AUTO"
 msgstr "Automatycznie (Użyj ustawień banku)"
@@ -1137,16 +1136,16 @@ msgid "OPNVLMODEL_NATIVE"
 msgstr "Natywne OPN"
 
 msgid "ADLVLMODEL_DMX"
-msgstr ""
+msgstr "DMX (Dokładny, z błędem AM)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr ""
+msgstr "Jak w DMX"
 
 msgid "ADLVLMODEL_APOGEE"
-msgstr ""
+msgstr "Apogee (Dokładny, z błędem AM)"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr ""
+msgstr "Jak w Apogee Sound System"
 
 msgid "OPNVLMODEL_WIN9X"
 msgstr "Jak w Win9X"
@@ -1173,40 +1172,40 @@ msgid "ADLVLMODEL_HMIOLD"
 msgstr "HMI SOS (Stare, z błędami)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "Automatyczne"
 
 msgid "ADLCHANALLOC_OFFDELAY"
 msgstr "Zmierzone opóźnienie dźwięku"
 
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr ""
+msgstr "Ponownie użyj pierwszej zwolnionej próbki instrumentu"
 
 msgid "ADLCHANALLOC_ANYREL"
-msgstr ""
+msgstr "Ponownie użyj dowolnej pierwszej zwolnionej nuty"
 
 msgid "OPTVAL_UNLIMITED"
 msgstr "Nieskończone"
 
 msgid "OPTVAL_256K"
-msgstr ""
+msgstr "256K"
 
 msgid "OPTVAL_512K"
-msgstr ""
+msgstr "512K"
 
 msgid "OPTVAL_768K"
-msgstr ""
+msgstr "768K"
 
 msgid "OPTVAL_1024K"
-msgstr ""
+msgstr "1024K"
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Paleta"
@@ -1287,7 +1286,7 @@ msgid "OPTVAL_RADIAL"
 msgstr "Promieniowe"
 
 msgid "OPTVAL_STANDARD"
-msgstr ""
+msgstr "Standard"
 
 msgid "GLTEXMNU_TEXFILTER"
 msgstr "Tryb Filtrowania Tekstur"
@@ -1311,19 +1310,19 @@ msgid "OPTVAL_TRILINEAR"
 msgstr "Trzyliniowe"
 
 msgid "OPTVAL_2X"
-msgstr ""
+msgstr "2x"
 
 msgid "OPTVAL_4X"
-msgstr ""
+msgstr "4x"
 
 msgid "OPTVAL_8X"
-msgstr ""
+msgstr "8x"
 
 msgid "OPTVAL_16X"
-msgstr ""
+msgstr "16x"
 
 msgid "OPTVAL_32X"
-msgstr ""
+msgstr "32x"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Opcje Tekstur"
@@ -1368,7 +1367,7 @@ msgid "OPTVAL_SCALELINEAR"
 msgstr "Przeskalowany (Liniowy)"
 
 msgid "OPTVAL_LETTERBOX"
-msgstr ""
+msgstr "Letterbox"
 
 msgid "OPTVAL_STRETCH"
 msgstr "Rozciągnięty"
@@ -1457,35 +1456,35 @@ msgid "VIDMNU_MAXFPS"
 msgstr "Maksymalna ilość klatek"
 
 msgid "OPTVAL_60FPS"
-msgstr ""
+msgstr "60 fps"
 
 msgid "OPTVAL_75FPS"
-msgstr ""
+msgstr "75 fps"
 
 msgid "OPTVAL_90FPS"
-msgstr ""
+msgstr "90 fps"
 
 msgid "OPTVAL_120FPS"
-msgstr ""
+msgstr "120 fps"
 
 msgid "OPTVAL_144FPS"
-msgstr ""
+msgstr "144 fps"
 
 msgid "OPTVAL_200FPS"
-msgstr ""
+msgstr "200 fps"
 
 msgid "VIDMNU_PREFERBACKEND"
 msgstr "Preferowany interfejs API renderowania"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Połącz przyciski lewo+prawo Alt/Ctrl/Shift"
@@ -1534,7 +1533,7 @@ msgstr "Skala celownika"
 
 # copied from elsewhere
 msgid "OPTVAL_YES_STANDARD"
-msgstr ""
+msgstr "Standard"
 
 msgid "OPTVAL_YES_ENHANCED"
 msgstr "Ulepszone"
@@ -1677,10 +1676,10 @@ msgid "REVMNU_Name"
 msgstr "Nazwa"
 
 msgid "REVMNU_ID_1"
-msgstr ""
+msgstr "ID #1"
 
 msgid "REVMNU_ID_2"
-msgstr ""
+msgstr "ID #2"
 
 msgid "REVMNU_Create"
 msgstr "Stwórz"
@@ -1720,19 +1719,19 @@ msgid "VKMNU_DEVICESELECT"
 msgstr "Wybierz Urządzenie Vulkan"
 
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
-msgstr ""
+msgstr "hqNx MMX"
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Stare xBRZ"
@@ -1900,7 +1899,7 @@ msgid "TXT_UNKNOWN"
 msgstr "Nieznane"
 
 msgid "OPTVAL_HUD"
-msgstr ""
+msgstr "HUD"
 
 msgid "OPTVAL_AUTOMAP"
 msgstr "Automapa"
@@ -1992,7 +1991,7 @@ msgid "CNTRLMNU_OPEN_MAIN"
 msgstr "Otwórz meny główne"
 
 msgid "MODMNU_REPLAYER"
-msgstr ""
+msgstr "Powtarzacz Modułów"
 
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
@@ -2021,10 +2020,10 @@ msgstr "Zapamiętaj Ustawienia"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr ""
+msgstr "Wczytaj WAD'y Wspierające"
 
 msgid "PICKER_TAB_MULTI"
-msgstr ""
+msgstr "Wieloosobowy"
 
 msgid "PICKER_LOADSAVE"
 msgstr "Wczytaj zapis:"
@@ -2048,11 +2047,11 @@ msgstr "Auto (zalecany)"
 # Connections are routed through the host instead of all players connecting to
 # each other individually.
 msgid "PICKER_NETSERVER"
-msgstr ""
+msgstr "Serwer Pakietów"
 
 # Players connect to each other individually.
 msgid "PICKER_NETPEER"
-msgstr ""
+msgstr "Peer-to-peer"
 
 msgid "PICKER_NETRATE"
 msgstr "Częstotliwość Odświeżania Pakietów:"
@@ -2066,10 +2065,10 @@ msgid "PICKER_GAMEMODE"
 msgstr "Tryb Gry:"
 
 msgid "PICKER_COOP"
-msgstr ""
+msgstr "Kooperacja"
 
 msgid "PICKER_DM"
-msgstr ""
+msgstr "Deathmatch"
 
 msgid "PICKER_TDM"
 msgstr "Drużynowy Deathmatch"
@@ -2110,13 +2109,43 @@ msgid "TXT_SAYTEAM"
 msgstr "Mów (Drużyna):"
 
 msgid "MISCMNU_DISCORDRPC"
-msgstr ""
+msgstr "Discord Rich Presence"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "Prędkość obrotu"
 
 msgid "JOYMNU_LOOKSPEED"
 msgstr "Szybkość rozglądania"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr ""
+msgstr "Analogowy bieg boczny"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Nieznane"
+
+msgid "NOTES_EMPTY"
+msgstr "Brak podanego opisu."
+
+msgid "NOTES_DETAILS"
+msgstr "Po więcej szczegółów zobacz:"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Pokaż listę zmian"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Lista Zmian"
+
+msgid "NOTES_RELEASED"
+msgstr "Wydane"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Pokaż tę stronę po aktualizacji"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "O"
+
+msgid "NOTES_VERSION"
+msgstr "wersja"
+
+msgid "NOTES_FAIL"
+msgstr "Błąd wczytywania listy zmian"

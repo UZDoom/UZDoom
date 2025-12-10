@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 11:51+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
+"chex-quest-3-filter/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: nl\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 # Flem = phlegm
 msgid "GOTBLUEFLEM"
@@ -54,7 +61,7 @@ msgid "HUSTR_E1M3"
 msgstr "E1M3: Laboratorium"
 
 msgid "HUSTR_E1M4"
-msgstr ""
+msgstr "E1M4: Arboretum"
 
 msgid "HUSTR_E1M5"
 msgstr "E1M5: Grotten van Bazoik"
@@ -66,7 +73,7 @@ msgid "HUSTR_E2M2"
 msgstr "E2M2: Bioscoop"
 
 msgid "HUSTR_E2M3"
-msgstr ""
+msgstr "E2M3: Chex Museum"
 
 msgid "HUSTR_E2M4"
 msgstr "E2M4: Stadsstraten"
@@ -81,7 +88,7 @@ msgid "HUSTR_E3M2"
 msgstr "E3M2: Verenigde granen"
 
 msgid "HUSTR_E3M3"
-msgstr ""
+msgstr "E3M3: Villa Chex"
 
 msgid "HUSTR_E3M4"
 msgstr "E3M4: Provinciaal Park"
@@ -90,31 +97,31 @@ msgid "HUSTR_E3M5"
 msgstr "E3M5: Ruimteschip"
 
 msgid "CC_ZOMBIE"
-msgstr ""
+msgstr "Gewoonus"
 
 msgid "CC_SHOTGUN"
-msgstr ""
+msgstr "Bipedicus"
 
 msgid "CC_IMP"
 msgstr "Bipedicus met harnas"
 
 msgid "CC_DEMON"
-msgstr ""
+msgstr "Stapicus"
 
 msgid "CC_LOST"
 msgstr "Flemmijn"
 
 msgid "CC_CACO"
-msgstr ""
+msgstr "Super Cyclooptis"
 
 msgid "CC_BARON"
-msgstr ""
+msgstr "Maximus"
 
 msgid "CC_SPIDER"
 msgstr "De Flembominatie"
 
 msgid "CC_CYBER"
-msgstr ""
+msgstr "Heer Snotrijkus"
 
 msgid "CC_HERO"
 msgstr "Chex Krijger"
@@ -240,16 +247,16 @@ msgid "M_EPI2"
 msgstr "Terreur in Chex City"
 
 msgid "M_EPI3"
-msgstr ""
+msgstr "Invasie!"
 
 msgid "TAG_GOGGLES"
-msgstr ""
+msgstr "Ultra-bril"
 
 msgid "TAG_BLUEFLEMKEY"
-msgstr ""
+msgstr "Blauwe Flemsleutel"
 
 msgid "TAG_YELLOWFLEMKEY"
-msgstr ""
+msgstr "Gele Flemsleutel"
 
 msgid "TAG_REDFLEMKEY"
-msgstr ""
+msgstr "Rode Flemsleutel"

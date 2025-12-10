@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 17:38+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
+"PO-Revision-Date: 2025-12-03 00:14+0000\n"
+"Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/common/de/>"
 "\n"
 "Language: de\n"
@@ -920,7 +920,7 @@ msgid "ADVSNDMNU_ADVRESAMPLING"
 msgstr "Erweitertes Resampling"
 
 msgid "ADVSNDMNU_OPLBANK"
-msgstr "OPL Bank"
+msgstr "OPL-Bank"
 
 msgid "ADVSNDMNU_ADLOPLCORES"
 msgstr "OPL Emulatorkern"
@@ -938,7 +938,7 @@ msgid "ADVSNDMNU_OPNCORES"
 msgstr "OPN2 Emulatorkern"
 
 msgid "ADVSNDMNU_GUSEMULATION"
-msgstr "GUS Emulation"
+msgstr "GUS-Emulation"
 
 msgid "ADVSNDMNU_GUSCONFIG"
 msgstr "GUS Konfigurationsdatei"
@@ -1869,9 +1869,8 @@ msgstr ""
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
 # should NOT be listed here!
-#, fuzzy
 msgid "REQUIRED_CHARACTERS"
-msgstr "ÄÖÜẞ"
+msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÜÖß"
 
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "Alle Optionen"
@@ -2070,7 +2069,7 @@ msgid "PICKER_DM"
 msgstr "Deathmatch"
 
 msgid "PICKER_TDM"
-msgstr "Team Deathmatch"
+msgstr "Team-Deathmatch"
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
@@ -2118,3 +2117,33 @@ msgstr "Blickgeschwindigkeit"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr "Analoger Strafe-Run"
+
+msgid "NOTES_FAIL"
+msgstr "Versionshinweise konnten nicht automatisch verarbeitet werden"
+
+msgid "NOTES_VERSION"
+msgstr "Version"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Unbekannt"
+
+msgid "NOTES_RELEASED"
+msgstr "veröffentlicht"
+
+msgid "NOTES_EMPTY"
+msgstr "Keine Beschreibung vorhanden."
+
+msgid "NOTES_DETAILS"
+msgstr "Weitere Details hier:"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Nach Aktualisierungen diese Seite anzeigen"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Versionshinweise anzeigen"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Über"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Versionshinweise"

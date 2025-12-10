@@ -2,11 +2,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:53+0000\n"
-"Last-Translator: Joel Robert Justiawan "
-"<joelwindows7@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/id/>\n"
+"PO-Revision-Date: 2025-12-04 01:00+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -2845,7 +2844,7 @@ msgid "MNU_NEWGAME"
 msgstr ""
 
 msgid "MNU_OPTIONS"
-msgstr ""
+msgstr "Setelan"
 
 msgid "MNU_GAMEFILES"
 msgstr ""
@@ -2854,7 +2853,7 @@ msgid "MNU_INFO"
 msgstr ""
 
 msgid "MNU_QUITGAME"
-msgstr ""
+msgstr "Keluar Game"
 
 # This text is extremely space limited!
 msgid "MNU_CHOOSESKILL"
@@ -3864,7 +3863,7 @@ msgid "SCALEMNU_ADAPT"
 msgstr ""
 
 msgid "HUDMNU_TITLE"
-msgstr ""
+msgstr "Setelan HUD"
 
 msgid "HUDMNU_ALTHUD"
 msgstr ""
@@ -3930,7 +3929,7 @@ msgid "MISCMNU_INTERSCROLL"
 msgstr ""
 
 msgid "NETMNU_TITLE"
-msgstr ""
+msgstr "Setelan Jaringan"
 
 msgid "NETMNU_LOCALOPTIONS"
 msgstr ""
@@ -4012,7 +4011,7 @@ msgid "OPTVAL_ITEMS"
 msgstr ""
 
 msgid "OPTVAL_WEAPONS"
-msgstr ""
+msgstr "Senjata"
 
 msgid "OPTVAL_BOTH"
 msgstr ""
@@ -4571,16 +4570,16 @@ msgid "OS_TITLE"
 msgstr ""
 
 msgid "OS_ANY"
-msgstr ""
+msgstr "Cari kata kunci apapun"
 
 msgid "OS_ALL"
-msgstr ""
+msgstr "Cari semua kata kunci"
 
 msgid "OS_NO_RESULTS"
-msgstr ""
+msgstr "Tiada hasil."
 
 msgid "OS_LABEL"
-msgstr ""
+msgstr "Cari:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr ""
@@ -5074,7 +5073,7 @@ msgid "HAPMNU_OPT_WORLD"
 msgstr ""
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "Tunda"
 
 msgid "TAG_BACKPACK"
 msgstr ""

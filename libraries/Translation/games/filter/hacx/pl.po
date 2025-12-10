@@ -2,17 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-28 21:00+0000\n"
+"PO-Revision-Date: 2025-12-06 19:58+0000\n"
 "Last-Translator: Marazm Mamazm <brutdewelopment@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/hacx/pl/>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/doom-engine-games/"
+"hacx-filter/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: pl\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 msgid "QUITMSG1"
 msgstr "To robactwo jest za twarde dla ciebie?"
@@ -252,7 +253,7 @@ msgid "GOTFORCEFIELD"
 msgstr "Pole Siłowe!"
 
 msgid "GOTMICROTEL"
-msgstr ""
+msgstr "007Microtel"
 
 msgid "GOTENKBLIND"
 msgstr "Jesteś oślepiony przez EnK!"
@@ -394,7 +395,7 @@ msgstr ""
 "Jesteś... sam."
 
 msgid "TXT_HACXMAP01"
-msgstr ""
+msgstr "GenEmp Corp."
 
 msgid "TXT_HACXMAP02"
 msgstr "Miasto Tuneli"
@@ -403,13 +404,13 @@ msgid "TXT_HACXMAP03"
 msgstr "Aneks Lawy"
 
 msgid "TXT_HACXMAP04"
-msgstr ""
+msgstr "Alcatraz"
 
 msgid "TXT_HACXMAP05"
 msgstr "Cyber Cyrk"
 
 msgid "TXT_HACXMAP06"
-msgstr ""
+msgstr "Digi-Ota"
 
 msgid "TXT_HACXMAP07"
 msgstr "Wielka Ściana"
@@ -424,7 +425,7 @@ msgid "TXT_HACXMAP10"
 msgstr "Sen Anarchisty"
 
 msgid "TXT_HACXMAP11"
-msgstr ""
+msgstr "Powiadum nos!"
 
 msgid "TXT_HACXMAP12"
 msgstr "Gotycka Rękawica"
@@ -445,7 +446,7 @@ msgid "TXT_HACXMAP17"
 msgstr "Rzeka Krwi"
 
 msgid "TXT_HACXMAP18"
-msgstr ""
+msgstr "Bizarro"
 
 msgid "TXT_HACXMAP19"
 msgstr "Pokoje Wojny"
@@ -542,16 +543,16 @@ msgid "CC_THUG"
 msgstr "Zbir"
 
 msgid "CC_ANDROID"
-msgstr ""
+msgstr "Android"
 
 msgid "CC_ICE"
-msgstr ""
+msgstr "ICE"
 
 msgid "CC_BUZZER"
 msgstr "Brzęczyk"
 
 msgid "CC_DMAN"
-msgstr ""
+msgstr "D-Man"
 
 msgid "CC_PHAGE"
 msgstr "Fag"
@@ -563,16 +564,16 @@ msgid "CC_MECH"
 msgstr "Mechaniczny Maniak"
 
 msgid "CC_TERMI"
-msgstr ""
+msgstr "Terminatrix"
 
 msgid "CC_THORN"
 msgstr "Cierniowe Coś"
 
 msgid "CC_MAJONG"
-msgstr ""
+msgstr "Majong 7"
 
 msgid "CC_HERO"
-msgstr ""
+msgstr "Dan Evanger"
 
 msgid "SKILL_BABY"
 msgstr "Proszę nie strzelaj!"

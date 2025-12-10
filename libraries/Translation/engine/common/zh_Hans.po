@@ -2,722 +2,720 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 10:49+0000\n"
-"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/common/"
-"hr/>\n"
-"Language: hr\n"
+"PO-Revision-Date: 2025-12-09 19:00+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/uzdoom/common/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: hr\n"
 
 msgid "PRESSYN"
-msgstr "Pritisni Y ili N."
+msgstr "按Y键确认，按N键取消。"
 
 msgid "TXT_YES"
-msgstr "Da"
+msgstr "是"
 
 msgid "TXT_NO"
-msgstr "Ne"
+msgstr "否"
 
 msgid "SAVEDEAD"
 msgstr ""
-"Ne možeš spremiti ako ne igraš!\n"
+"未在游戏中无法保存！\n"
 "\n"
-"Pritisni tipku."
+"按下任意键。"
 
 msgid "SAFEMESSAGE"
-msgstr "Želiš li ovo stvarno učiniti?"
+msgstr "你确定要这么做吗？"
 
 msgid "NOTSET"
-msgstr "Nije postavljeno"
+msgstr "未设置"
 
 msgid "QSPROMPT"
 msgstr ""
-"Brzo spremiti preko tvoje igre pod nazivom\n"
+"快速保存覆盖到存档名\n"
 "\n"
-"'%s'?\n"
+"“%s”？\n"
 "\n"
-"Pritisni Y ili N."
+"按Y键确认，按N键取消。"
 
 msgid "QLPROMPT"
 msgstr ""
-"Želiš li brzo učitati igru pod nazivom\n"
+"你确定要快速加载存档名\n"
 "\n"
-"'%s'?\n"
+"“%s”？\n"
 "\n"
-"Pritisni Y ili N."
+"按Y键确认，按N键取消。"
 
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
-msgstr "%s vara"
+msgstr "%s 作弊了"
 
 msgid "MSGOFF"
-msgstr "Poruke: ISKLJ."
+msgstr "消息：关闭"
 
 msgid "MSGON"
-msgstr "Poruke: UKLJ."
+msgstr "消息：开启"
 
 msgid "TXT_SAY"
-msgstr "Reci:"
+msgstr "发言："
 
 msgid "TXT_QUITENDOOM"
-msgstr "Pritisni bilo koju tipku ili klikni bilo gdje na prozoru da izađeš."
+msgstr "按任意键或点击窗口内任意位置来退出。"
 
 msgid "NEWSAVE"
-msgstr "<Nova spremljena igra>"
+msgstr "<新存档>"
 
 msgid "GGSAVED"
-msgstr "Igra je spremljena."
+msgstr "保存完成。"
 
 msgid "SAVECOMMENT_TIME"
-msgstr "Vrijeme"
+msgstr "时间"
 
 msgid "MNU_LOADGAME"
-msgstr "Učitaj igru"
+msgstr "加载存档"
 
 msgid "MNU_SAVEGAME"
-msgstr "Spremi igru"
+msgstr "保存存档"
 
 msgid "MNU_NOPICTURE"
-msgstr "Nema slike"
+msgstr "无图像"
 
 msgid "MNU_DIFFVERSION"
-msgstr "Druga verzija"
+msgstr "其它版本"
 
 msgid "MNU_NOFILES"
-msgstr "Nema datoteka"
+msgstr "无文件"
 
 msgid "MNU_DELETESG"
-msgstr "Želite li zaista izbrisati spremljenu igru?\n"
+msgstr "你真的想要删除此存档吗？\n"
 
 msgid "OPTVAL_OFF"
-msgstr "Isklj."
+msgstr "关"
 
 msgid "OPTVAL_ON"
-msgstr "Uklj."
+msgstr "开"
 
 msgid "OPTVAL_AUTO"
-msgstr "Automatski"
+msgstr "自动"
 
 msgid "OPTMNU_TITLE"
-msgstr "Postavke"
+msgstr "选项"
 
 msgid "OPTMNU_CONTROLS"
-msgstr "Prilagodi kontrole"
+msgstr "自定义控制"
 
 msgid "OPTMNU_MOUSE"
-msgstr "Postavke miša"
+msgstr "鼠标选项"
 
 msgid "OPTMNU_JOYSTICK"
-msgstr "Postavke kontrolera"
+msgstr "控制器选项"
 
 msgid "OPTMNU_PLAYER"
-msgstr "Postavljanje igrača"
+msgstr "玩家设置"
 
 msgid "OPTMNU_GAMEPLAY"
-msgstr "Postavke igranja"
+msgstr "玩法选项"
 
 msgid "OPTMNU_AUTOMAP"
-msgstr "Postavke autokarte"
+msgstr "地图选项"
 
 msgid "OPTMNU_HUD"
-msgstr "Postavke sučelja"
+msgstr "界面选项"
 
 msgid "OPTMNU_MISCELLANEOUS"
-msgstr "Razne postavke"
+msgstr "其它选项"
 
 msgid "OPTMNU_SOUND"
-msgstr "Postavke zvuka"
+msgstr "声音选项"
 
 msgid "OPTMNU_DISPLAY"
-msgstr "Postavke prikaza"
+msgstr "显示选项"
 
 msgid "OPTMNU_VIDEO"
-msgstr "Postavi video način"
+msgstr "设置视频模式"
 
 msgid "OPTMNU_DEFAULTS"
-msgstr "Vrati na zadano"
+msgstr "重置成默认"
 
 msgid "OPTMNU_RESETTOSAVED"
-msgstr "Resetiraj na posljednje spremanje"
+msgstr "重置成上次保存的设置"
 
 msgid "OPTMNU_WRITEINI"
-msgstr "Spremi trenutne postavke"
+msgstr "保存当前设置"
 
 msgid "OPTMNU_CONSOLE"
-msgstr "Idi na konzolu"
+msgstr "进入控制台"
 
 msgid "OPTMNU_NETWORK"
-msgstr "Postavke mreže"
+msgstr "网络选项"
 
 msgid "OPTMNU_REVERB"
-msgstr "Uređivač odjekivanja okoliša"
+msgstr "混响环境编辑器"
 
 msgid "CNTRLMNU_SWITCHTEXT1"
-msgstr "ENTER za promjenu, BACKSPACE za čišćenje"
+msgstr "按回车键更改，按退格键清除"
 
 msgid "CNTRLMNU_SWITCHTEXT2"
-msgstr "Pritisni novu tipku za ovu radnju, ESC za otkazivanje"
+msgstr "按一个键作为新键位，按ESC键取消"
 
 msgid "CNTRLMNU_CONTROLS"
-msgstr "Kontrole"
+msgstr "控制键位"
 
 msgid "CNTRLMNU_ATTACK"
-msgstr "Pucanje"
+msgstr "攻击"
 
 msgid "CNTRLMNU_ALTATTACK"
-msgstr "Sekundarno pucanje"
+msgstr "副攻击"
 
 msgid "CNTRLMNU_RELOAD"
-msgstr "Punjenje oružja"
+msgstr "武器装填"
 
 msgid "CNTRLMNU_USE"
-msgstr "Upotrijebi/Otvori"
+msgstr "使用/打开"
 
 msgid "CNTRLMNU_FORWARD"
-msgstr "Kretanje naprijed"
+msgstr "前移"
 
 msgid "CNTRLMNU_BACK"
-msgstr "Kretanje unatrag"
+msgstr "后移"
 
 msgid "CNTRLMNU_MOVELEFT"
-msgstr "Kretanje ulijevo"
+msgstr "左移"
 
 msgid "CNTRLMNU_MOVERIGHT"
-msgstr "Kretanje udesno"
+msgstr "右移"
 
 msgid "CNTRLMNU_TURNLEFT"
-msgstr "Okretanje ulijevo"
+msgstr "向左转"
 
 msgid "CNTRLMNU_TURNRIGHT"
-msgstr "Okretanje udesno"
+msgstr "向右转"
 
 msgid "CNTRLMNU_TURN180"
-msgstr "Brzi okret"
+msgstr "快速转身"
 
 msgid "CNTRLMNU_JUMP"
-msgstr "Skok"
+msgstr "跳跃"
 
 msgid "CNTRLMNU_CROUCH"
-msgstr "Čučanj"
+msgstr "按住下蹲"
 
 msgid "CNTRLMNU_TOGGLECROUCH"
-msgstr "Prekidač čučnja"
+msgstr "切换下蹲"
 
 msgid "CNTRLMNU_MOUSELOOK"
-msgstr "Pogled mišem"
+msgstr "鼠标视角"
 
 # Look doesn't change the aim! It only alters the view pitch
 msgid "CNTRLMNU_LOOKUP"
-msgstr "Pogledaj gore"
+msgstr "向上看"
 
 msgid "CNTRLMNU_LOOKDOWN"
-msgstr "Pogledaj dolje"
+msgstr "向下看"
 
 msgid "CNTRLMNU_CENTERVIEW"
-msgstr "Centriraj pogled"
+msgstr "视野居中"
 
 msgid "CNTRLMNU_RUN"
-msgstr "Trčanje"
+msgstr "按住奔跑"
 
 msgid "CNTRLMNU_TOGGLERUN"
-msgstr "Prekidač trčanja"
+msgstr "切换奔跑"
 
 msgid "CNTRLMNU_STRAFE"
-msgstr "Kretanje u stranu"
+msgstr "按住平移"
 
 msgid "CNTRLMNU_SCOREBOARD"
-msgstr "Prikaži ploču s rezultatima"
+msgstr "按住显示分数板"
 
 msgid "CNTRLMNU_ACTION"
-msgstr "Radnja"
+msgstr "动作"
 
 msgid "CNTRLMNU_ACTION_TITLE"
-msgstr "Prilagodi kontrole radnje"
+msgstr "自定义动作控制"
 
 msgid "CNTRLMNU_CHAT"
-msgstr "Čavrljanje"
+msgstr "聊天"
 
 msgid "MNU_MULTIPLAYER"
-msgstr "Više igrača"
+msgstr "多人游戏"
 
 msgid "CNTRLMNU_SAY"
-msgstr "Reci"
+msgstr "发言"
 
 msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Prilagodi kontrole čavrljanja"
+msgstr "自定义聊天控制"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
-msgstr "Prilagodi kontrole oružja"
+msgstr "自定义武器控制"
 
 msgid "CNTRLMNU_INVENTORY_TITLE"
-msgstr "Prilagodi kontrole inventara"
+msgstr "自定义物品控制"
 
 msgid "CNTRLMNU_OTHER_TITLE"
-msgstr "Prilagodi ostale kontrole"
+msgstr "自定义其它控制"
 
 msgid "CNTRLMNU_WEAPONS"
-msgstr "Oružja"
+msgstr "武器"
 
 msgid "CNTRLMNU_NEXTWEAPON"
-msgstr "Slijedeće oružje"
+msgstr "下一个武器"
 
 msgid "CNTRLMNU_PREVIOUSWEAPON"
-msgstr "Prethodno oružje"
+msgstr "上一个武器"
 
 # Todo - make game specific
 msgid "CNTRLMNU_SLOT1"
-msgstr "Oružje 1"
+msgstr "武器1"
 
 # only show appropriate slots per game
-# 
+#
 msgid "CNTRLMNU_SLOT2"
-msgstr "Oružje 2"
+msgstr "武器2"
 
 msgid "CNTRLMNU_SLOT3"
-msgstr "Oružje 3"
+msgstr "武器3"
 
 msgid "CNTRLMNU_SLOT4"
-msgstr "Oružje 4"
+msgstr "武器4"
 
 msgid "CNTRLMNU_SLOT5"
-msgstr "Oružje 5"
+msgstr "武器5"
 
 msgid "CNTRLMNU_SLOT6"
-msgstr "Oružje 6"
+msgstr "武器6"
 
 msgid "CNTRLMNU_SLOT7"
-msgstr "Oružje 7"
+msgstr "武器7"
 
 msgid "CNTRLMNU_SLOT8"
-msgstr "Oružje 8"
+msgstr "武器8"
 
 msgid "CNTRLMNU_SLOT9"
-msgstr "Oružje 9"
+msgstr "武器9"
 
 msgid "CNTRLMNU_SLOT0"
-msgstr "Oružje 10"
+msgstr "武器10"
 
 msgid "CNTRLMNU_INVENTORY"
-msgstr "Inventar"
+msgstr "物品栏"
 
 msgid "CNTRLMNU_USEITEM"
-msgstr "Aktiviraj stavku"
+msgstr "激活当前物品"
 
 msgid "CNTRLMNU_USEALLITEMS"
-msgstr "Aktiviraj sve stavke"
+msgstr "激活全部物品"
 
 msgid "CNTRLMNU_NEXTITEM"
-msgstr "Slijedeća stavka"
+msgstr "下一件物品"
 
 msgid "CNTRLMNU_PREVIOUSITEM"
-msgstr "Prethodna stavka"
+msgstr "上一件物品"
 
 # most are not used yet but will be
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Prilagodi kontrole karte"
+msgstr "自定义地图控制"
 
 msgid "MAPCNTRLMNU_CONTROLS"
-msgstr "Kontrole karte"
+msgstr "地图控制"
 
 msgid "MAPCNTRLMNU_PANLEFT"
-msgstr "Pomicanje ulijevo"
+msgstr "左平移"
 
 msgid "MAPCNTRLMNU_PANRIGHT"
-msgstr "Pomicanje udesno"
+msgstr "右平移"
 
 msgid "MAPCNTRLMNU_PANUP"
-msgstr "Pomicanje gore"
+msgstr "上平移"
 
 msgid "MAPCNTRLMNU_PANDOWN"
-msgstr "Pomicanje dolje"
+msgstr "下平移"
 
 msgid "MAPCNTRLMNU_ZOOMIN"
-msgstr "Približi zum"
+msgstr "放大"
 
 msgid "MAPCNTRLMNU_ZOOMOUT"
-msgstr "Udalji zum"
+msgstr "缩小"
 
 msgid "MAPCNTRLMNU_TOGGLEZOOM"
-msgstr "Prekidač zuma"
+msgstr "切换缩放模式"
 
 msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
-msgstr "Prekidač praćenja"
+msgstr "切换跟随模式"
 
 msgid "MAPCNTRLMNU_TOGGLEGRID"
-msgstr "Prekidač mreže"
+msgstr "切换网格模式"
 
 msgid "MAPCNTRLMNU_ROTATE"
-msgstr "Prekidač rotacije"
+msgstr "切换旋转模式"
 
 msgid "MAPCNTRLMNU_TOGGLETEXTURE"
-msgstr "Prekidač tekstura"
+msgstr "切换纹理模式"
 
 msgid "CNTRLMNU_AUTOMAP"
-msgstr "Prekidač autokarte"
+msgstr "切换地图模式"
 
 msgid "CNTRLMNU_CHASECAM"
-msgstr "Prateća kamera"
+msgstr "跟随镜头"
 
 msgid "CNTRLMNU_SCREENSHOT"
-msgstr "Snimka zaslona"
+msgstr "截屏"
 
 msgid "CNTRLMNU_CONSOLE"
-msgstr "Otvori konzolu"
+msgstr "打开控制台"
 
 msgid "CNTRLMNU_PAUSE"
-msgstr "Pauza"
+msgstr "暂停"
 
 msgid "CNTRLMNU_DISPLAY_INC"
-msgstr "Povećaj veličinu prikaza"
+msgstr "增加显示尺寸"
 
 msgid "CNTRLMNU_DISPLAY_DEC"
-msgstr "Smanji veličinu prikaza"
+msgstr "减少显示尺寸"
 
 msgid "CNTRLMNU_OPEN_HELP"
-msgstr "Otvori pomoć"
+msgstr "打开帮助"
 
 msgid "CNTRLMNU_OPEN_SAVE"
-msgstr "Otvori izbornik spremanja"
+msgstr "打开保存菜单"
 
 msgid "CNTRLMNU_OPEN_LOAD"
-msgstr "Otvori izbornik učitavanja"
+msgstr "打开加载菜单"
 
 msgid "CNTRLMNU_OPEN_OPTIONS"
-msgstr "Otvori izbornik postavki"
+msgstr "打开选项菜单"
 
 msgid "CNTRLMNU_OPEN_DISPLAY"
-msgstr "Otvori izbornik prikaza"
+msgstr "打开显示菜单"
 
 msgid "CNTRLMNU_QUICKSAVE"
-msgstr "Brzo spremanje"
+msgstr "快速保存"
 
 msgid "CNTRLMNU_QUICKLOAD"
-msgstr "Brzo učitavanje"
+msgstr "快速加载"
 
 msgid "CNTRLMNU_EXIT_TO_MAIN"
-msgstr "Izlaz u glavni izbornik"
+msgstr "退出到主菜单"
 
 msgid "CNTRLMNU_TOGGLE_MESSAGES"
-msgstr "Prekidač poruka"
+msgstr "切换消息模式"
 
 msgid "CNTRLMNU_MENU_QUIT"
-msgstr "Izađi iz igre"
+msgstr "退出游戏"
 
 msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Prilagodi gamu"
+msgstr "调整伽马值"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
-msgstr "Omogući miš"
+msgstr "启用鼠标"
 
 msgid "MOUSEMNU_MOUSEINMENU"
-msgstr "Omogući miš u izbornicima"
+msgstr "在菜单里启用鼠标"
 
 msgid "MOUSEMNU_SHOWBACKBUTTON"
-msgstr "Prikaži gumb za povratak"
+msgstr "显示后退按钮"
 
 msgid "MOUSEMNU_CURSOR"
-msgstr "Pokazivač"
+msgstr "光标"
 
 msgid "MOUSEMNU_SENSITIVITY_X"
-msgstr "Horizontalna osjetljivost"
+msgstr "水平灵敏度"
 
 msgid "MOUSEMNU_SENSITIVITY_Y"
-msgstr "Vertikalna osjetljivost"
+msgstr "垂直灵敏度"
 
 msgid "MOUSEMNU_SMOOTHMOUSE"
-msgstr "Glatko kretanje miša"
+msgstr "平滑鼠标移动"
 
 msgid "MOUSEMNU_TURNSPEED"
-msgstr "Brzina okreta"
+msgstr "转身速度"
 
 msgid "MOUSEMNU_MOUSELOOKSPEED"
-msgstr "Brzina pogleda mišem"
+msgstr "鼠标视角速度"
 
 msgid "MOUSEMNU_FORWBACKSPEED"
-msgstr "Brzina kretanja naprijed/natrag"
+msgstr "前进/后退速度"
 
 msgid "MOUSEMNU_STRAFESPEED"
-msgstr "Brzina kretanja u stranu"
+msgstr "平移速度"
 
 msgid "MOUSEMNU_ALWAYSMOUSELOOK"
-msgstr "Uvijek pogled mišem"
+msgstr "总是使用鼠标视角"
 
 msgid "MOUSEMNU_INVERTMOUSE"
-msgstr "Obrni miš Y"
+msgstr "反转鼠标Y轴"
 
 msgid "MOUSEMNU_INVERTMOUSEX"
-msgstr "Obrni miš X"
+msgstr "反转鼠标X轴"
 
 msgid "OPTVAL_UPPERLEFT"
-msgstr "Gore lijevo"
+msgstr "左上"
 
 msgid "OPTVAL_UPPERRIGHT"
-msgstr "Gore desno"
+msgstr "右上"
 
 msgid "OPTVAL_LOWERLEFT"
-msgstr "Dolje lijevo"
+msgstr "左下"
 
 msgid "OPTVAL_LOWERRIGHT"
-msgstr "Dolje desno"
+msgstr "右下"
 
 msgid "OPTVAL_TOUCHSCREENLIKE"
-msgstr "Poput ekrana na dodir"
+msgstr "触屏式"
 
 msgid "OPTSTR_SIMPLEARROW"
-msgstr "Jednostavna strelica"
+msgstr "简易箭头"
 
 msgid "OPTSTR_SYSTEMCURSOR"
-msgstr "Pokazivač sustava"
+msgstr "系统光标"
 
 msgid "OPTVAL_DEFAULT"
-msgstr "Zadano"
+msgstr "默认"
 
 msgid "JOYMNU_TITLE"
-msgstr "Konfiguriraj kontroler"
+msgstr "配置控制器"
 
 msgid "JOYMNU_OPTIONS"
-msgstr "Postavke kontrolera"
+msgstr "控制器选项"
 
 msgid "JOYMNU_NOMENU"
-msgstr "Blokiraj unos kontrolera u izborniku"
+msgstr "在菜单里停用控制器输入"
 
 msgid "JOYMNU_ENABLE"
-msgstr "Omogući podršku za kontroler"
+msgstr "启用控制器支持"
 
 msgid "JOYMNU_DINPUT"
-msgstr "Omogući DirectInput kontrolere"
+msgstr "启用DirectInput控制器"
 
 msgid "JOYMNU_XINPUT"
-msgstr "Omogući XInput kontrolere"
+msgstr "启用XInput控制器"
 
 msgid "JOYMNU_PS2"
-msgstr "Omogući PlayStation 2 adaptere"
+msgstr "启用旧的PS2适配器"
 
 msgid "JOYMNU_NOCON"
-msgstr "Kontroler nije otkriven"
+msgstr "未检测到控制器"
 
 msgid "JOYMNU_CONFIG"
-msgstr "Konfiguriraj kontrolere:"
+msgstr "配置控制器："
 
 msgid "JOYMNU_DISABLED1"
-msgstr "Podrška za kontroler mora biti"
+msgstr "支持控制器必须"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr "omogućeno otkrivanje bilo kojeg"
+msgstr "启用才能检测到"
 
 msgid "JOYMNU_INVALID"
-msgstr "Nevažeći kontroler je naveden za izbornik"
+msgstr "只在菜单中让控制器无效"
 
 msgid "JOYMNU_OVRSENS"
-msgstr "Ukupna osjetljivost"
+msgstr "总体灵敏度"
 
 msgid "JOYMNU_AXIS"
-msgstr "Konfiguracija osi"
+msgstr "轴配置"
 
 msgid "JOYMNU_INVERT"
-msgstr "Obrni"
+msgstr "反转"
 
 msgid "JOYMNU_DEADZONE"
-msgstr "Mrtva zona"
+msgstr "死区"
 
 msgid "JOYMNU_NOAXES"
-msgstr "Nema konfigurabilnih osi"
+msgstr "没有可配置的轴"
 
 msgid "OPTVAL_NONE"
-msgstr "Nema"
+msgstr "无"
 
 msgid "OPTVAL_TURNING"
-msgstr "Okretanje"
+msgstr "转身"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
-msgstr "Gledanje gore/dolje"
+msgstr "向上/下看"
 
 msgid "OPTVAL_MOVINGFORWARD"
-msgstr "Kretanje naprijed"
+msgstr "前移"
 
 msgid "OPTVAL_STRAFING"
-msgstr "Kretanje u stranu"
+msgstr "平移"
 
 msgid "OPTVAL_MOVINGUPDOWN"
-msgstr "Kretanje gore/dolje"
+msgstr "上/下移"
 
 msgid "OPTVAL_INVERTED"
-msgstr "Obrnuto"
+msgstr "反转"
 
 msgid "OPTVAL_NOTINVERTED"
-msgstr "Nije obrnuto"
+msgstr "不反转"
 
 msgid "TXT_COLOR_BLUE"
-msgstr "Plava"
+msgstr "蓝色"
 
 msgid "TXT_COLOR_RED"
-msgstr "Crvena"
+msgstr "红色"
 
 msgid "TXT_COLOR_GREEN"
-msgstr "Zelena"
+msgstr "绿色"
 
 msgid "TXT_COLOR_GRAY"
-msgstr "Siva"
+msgstr "灰色"
 
 msgid "TXT_COLOR_DARKGRAY"
-msgstr "Tamnosiva"
+msgstr "深灰色"
 
 msgid "TXT_COLOR_DARKGREEN"
-msgstr "Tamnozelena"
+msgstr "深绿色"
 
 msgid "TXT_COLOR_BROWN"
-msgstr "Smeđa"
+msgstr "棕色"
 
 msgid "TXT_COLOR_DARKBLUE"
-msgstr "Tamnoplava"
+msgstr "深蓝色"
 
 msgid "TXT_COLOR_LIGHTRED"
-msgstr "Svijetlocrvena"
+msgstr "浅红色"
 
 msgid "TXT_COLOR_YELLOW"
-msgstr "Žuta"
+msgstr "黄色"
 
 msgid "TXT_COLOR_PURPLE"
-msgstr "Ljubičasta"
+msgstr "紫色"
 
 msgid "TXT_COLOR_DULLGREEN"
-msgstr "Maslinasta"
+msgstr "黄褐色"
 
 msgid "TXT_COLOR_BEIGE"
-msgstr "Bež"
+msgstr "米黄色"
 
 msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Svijetlozelena"
+msgstr "浅绿色"
 
 msgid "TXT_COLOR_LIGHTBLUE"
-msgstr "Svijetloplava"
+msgstr "浅蓝色"
 
 msgid "TXT_COLOR_LIGHTGRAY"
-msgstr "Svijetlosiva"
+msgstr "浅灰色"
 
 msgid "TXT_COLOR_LIGHTBROWN"
-msgstr "Svijetlosmeđa"
+msgstr "浅棕色"
 
 msgid "TXT_COLOR_GOLD"
-msgstr "Zlatna"
+msgstr "金色"
 
 msgid "TXT_COLOR_BRIGHTGREEN"
-msgstr "Svijetlozelena"
+msgstr "亮绿色"
 
 msgid "TXT_COLOR_RUST"
-msgstr "Hrđava"
+msgstr "锈色"
 
 msgid "PLYRMNU_NAME"
-msgstr "Ime"
+msgstr "名称"
 
 msgid "PLYRMNU_TEAM"
-msgstr "Tim"
+msgstr "团队"
 
 msgid "PLYRMNU_PLAYERCOLOR"
-msgstr "Boja"
+msgstr "颜色"
 
 msgid "PLYRMNU_PLAYERGENDER"
-msgstr "Spol"
+msgstr "性别"
 
 msgid "OPTVAL_MALE"
-msgstr "Muški"
+msgstr "男"
 
 msgid "OPTVAL_FEMALE"
-msgstr "Ženski"
+msgstr "女"
 
 msgid "OPTVAL_NEUTRAL"
-msgstr "Neutralni"
+msgstr "中性"
 
 msgid "OPTVAL_OTHER"
-msgstr "Predmet"
+msgstr "其它"
 
 msgid "GMPLYMNU_TITLE"
-msgstr "Postavke igranja"
+msgstr "玩法选项"
 
 msgid "OPTVAL_ALWAYS"
-msgstr "Uvijek"
+msgstr "总是"
 
 msgid "OPTVAL_NEVER"
-msgstr "Nikad"
+msgstr "从不"
 
 msgid "PLYRMNU_AUTOAIM"
-msgstr "Autociljanje"
+msgstr "自动瞄准"
 
 msgid "PLYRMNU_ALWAYSRUN"
-msgstr "Uvijek trčiš"
+msgstr "总是奔跑"
 
 msgid "DSPLYMNU_SCREENSIZE"
-msgstr "Veličina zaslona"
+msgstr "屏幕尺寸"
 
 msgid "DSPLYMNU_VSYNC"
-msgstr "Vertikalna sinkronizacija"
+msgstr "垂直同步"
 
 msgid "DSPLYMNU_MODELS"
-msgstr "Modeli"
+msgstr "模型"
 
 msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Skaliraj ciljnik"
+msgstr "准星比例"
 
 msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Svjetlina"
+msgstr "亮度"
 
 msgid "DSPLYMNU_GAMMA"
-msgstr "Korekcija game"
+msgstr "伽马校正"
 
 msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
+msgstr "对比度"
 
 msgid "DSPLYMNU_SATURATION"
-msgstr "Saturacija"
+msgstr "饱和度"
 
 msgid "DSPLYMNU_SBSCALE"
-msgstr "Skaliraj statusnu traku"
+msgstr "状态栏比例"
 
 msgid "DSPLYMNU_MESSAGES"
-msgstr "Poruke"
+msgstr "消息"
 
 msgid "MSGMNU_CENTERMESSAGES"
-msgstr "Centriraj poruke"
+msgstr "居中消息"
 
 msgid "MSGMNU_PULSEMESSAGES"
-msgstr "Prikaz pulsirajućih poruka"
+msgstr "闪烁消息显示"
 
 msgid "MSGMNU_MESSAGESCALE"
-msgstr "Skaliraj poruka"
+msgstr "消息比例"
 
 msgid "MNU_COLORPICKER"
-msgstr "Odaberi boju"
+msgstr "选择颜色"
 
 msgid "AUTOMAPMNU_ROTATE"
-msgstr "Rotiraj autokartu"
+msgstr "旋转地图"
 
 msgid "AUTOMAPMNU_FOLLOW"
-msgstr "Slijedi igrača"
+msgstr "跟随玩家"
 
 msgid "AUTOMAPMNU_LINEALPHA"
-msgstr "Linija alfa"
+msgstr "线条透明度"
 
 msgid "AUTOMAPMNU_LINETHICKNESS"
-msgstr "Debljina linije"
+msgstr "线条粗细"
 
 msgid "MAPCOLORMNU_TITLE"
-msgstr "Prilagodi boje mape"
+msgstr "自定义地图颜色"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
-msgstr "Vrati prilagođene boje na zadane"
+msgstr "自定义颜色恢复成默认"
 
 msgid "SNDMNU_SNDENABLED"
-msgstr "Zvuk omogućen"
+msgstr "音效已启用"
 
 msgid "SNDMNU_MUSENABLED"
-msgstr "Glazba omogućena"
+msgstr "音乐已启用"
 
 msgid "OPTVAL_4000HZ"
 msgstr "4000 Hz"
@@ -741,160 +739,160 @@ msgid "OPTVAL_48000HZ"
 msgstr "48000 Hz"
 
 msgid "OPTVAL_64SAMPLES"
-msgstr "64 uzorka"
+msgstr "64采样"
 
 msgid "OPTVAL_128SAMPLES"
-msgstr "128 uzoraka"
+msgstr "128采样"
 
 msgid "OPTVAL_256SAMPLES"
-msgstr "256 uzoraka"
+msgstr "256采样"
 
 msgid "OPTVAL_512SAMPLES"
-msgstr "512 uzoraka"
+msgstr "512采样"
 
 msgid "OPTVAL_1024SAMPLES"
-msgstr "1024 uzorka"
+msgstr "1024采样"
 
 msgid "OPTVAL_2048SAMPLES"
-msgstr "2048 uzoraka"
+msgstr "2048采样"
 
 msgid "OPTVAL_4096SAMPLES"
-msgstr "4096 uzoraka"
+msgstr "4096采样"
 
 msgid "OPTSTR_AUTO"
-msgstr "Automatski"
+msgstr "自动"
 
 msgid "OPTSTR_MONO"
-msgstr "Mono"
+msgstr "单声道"
 
 msgid "OPTSTR_STEREO"
-msgstr "Stereo"
+msgstr "立体声"
 
 msgid "OPTSTR_PROLOGIC"
-msgstr "Dolby Pro Logic dekoder"
+msgstr "杜比Pro逻辑解码器"
 
 msgid "OPTSTR_QUAD"
-msgstr "4 zvučnika"
+msgstr "四声道"
 
 msgid "OPTSTR_SURROUND"
-msgstr "5 zvučnika"
+msgstr "5声道"
 
 msgid "OPTSTR_5POINT1"
-msgstr "Zvučnici 5.1"
+msgstr "5.1声道"
 
 msgid "OPTSTR_7POINT1"
-msgstr "Zvučnici 7.1"
+msgstr "7.1声道"
 
 msgid "OPENALMNU_PLAYBACKDEVICE"
-msgstr "Uređaj za reprodukciju"
+msgstr "播放设备"
 
 msgid "OPENALMNU_ENABLEEFX"
-msgstr "Omogući efekte"
+msgstr "开启EFX"
 
 msgid "OPENALMNU_RESAMPLER"
-msgstr "Uzorkovanje"
+msgstr "重采样"
 
 msgid "SNDMNU_SFXVOLUME"
-msgstr "Glasnoća zvuka"
+msgstr "音效音量"
 
 msgid "SNDMNU_MENUVOLUME"
-msgstr "Glasnoća izbornika"
+msgstr "菜单音量"
 
 msgid "SNDMNU_MUSICVOLUME"
-msgstr "Glasnoća glazbe"
+msgstr "音乐音量"
 
 msgid "SNDMNU_MIDIDEVICE"
-msgstr "MIDI uređaj"
+msgstr "MIDI设备"
 
 msgid "SNDMNU_BACKGROUND"
-msgstr "Zvuk u pozadini"
+msgstr "背景音效"
 
 msgid "SNDMNU_UNDERWATERREVERB"
-msgstr "Podvodno odjekivanje"
+msgstr "水下混响"
 
 msgid "SNDMNU_RANDOMIZEPITCHES"
-msgstr "Nasumična visina tonova"
+msgstr "随机声调"
 
 msgid "SNDMNU_CHANNELS"
-msgstr "Zvučni kanali"
+msgstr "声道"
 
 msgid "SNDMNU_BACKEND"
-msgstr "Zvučna pozadina"
+msgstr "声音后台"
 
 msgid "SNDMNU_OPENAL"
-msgstr "Postavke OpenAL-a"
+msgstr "OpenAL选项"
 
 msgid "SNDMNU_RESTART"
-msgstr "Restartaj zvuk"
+msgstr "重启声音"
 
 msgid "SNDMNU_ADVANCED"
-msgstr "Napredne postavke"
+msgstr "高级选项"
 
 msgid "SNDMNU_MODREPLAYER"
-msgstr "Postavke repriziranja modula"
+msgstr "MOD播放选项"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Postavke Midi reproduktora"
+msgstr "MIDI播放选项"
 
 msgid "SNDMNU_MENUSOUND"
-msgstr "Zvukovi u izborniku"
+msgstr "菜单中的音效"
 
 msgid "ADVSNDMNU_TITLE"
-msgstr "Napredne postavke zvuka"
+msgstr "高级声音选项"
 
 msgid "ADVSNDMNU_SAMPLERATE"
-msgstr "Stopa uzorka"
+msgstr "采样率"
 
 msgid "ADVSNDMNU_HRTF"
 msgstr "HRTF"
 
 msgid "ADVSNDMNU_OPLSYNTHESIS"
-msgstr "OPL sinteza"
+msgstr "OPL合成器"
 
 msgid "ADVSNDMNU_OPLNUMCHIPS"
-msgstr "Broj emuliranih OPL čipova"
+msgstr "模拟OPL芯片数"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr "Dobitak"
+msgstr "增益"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
-msgstr "Poptuno MIDI stereo pomicanje"
+msgstr "全MIDI立体声偏移"
 
 msgid "ADVSNDMNU_OPLCORES"
-msgstr "Jezgra OPL emulatora"
+msgstr "OPL模拟器核心"
 
 msgid "ADVSNDMNU_MIDIVOICES"
-msgstr "MIDI glasovi"
+msgstr "MIDI语音"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
 msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
-msgstr "Globalno"
+msgstr "全局"
 
 msgid "ADVSNDMNU_FREEVERB"
 msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
-msgstr "Globalni Freeverb"
+msgstr "全局Freeverb"
 
 msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Set zakrpa"
+msgstr "补丁设置"
 
 msgid "ADVSNDMNU_FLUIDGAIN"
-msgstr "Jačina"
+msgstr "增益"
 
 msgid "ADVSNDMNU_REVERB"
-msgstr "Odjekivanje"
+msgstr "混响"
 
 msgid "ADVSNDMNU_REVERB_LEVEL"
-msgstr "Razina odjekivanja"
+msgstr "混响等级"
 
 msgid "ADVSNDMNU_CHORUS"
-msgstr "Refren"
+msgstr "和声"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr "Plašljivost++"
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
 msgstr "ADLMidi"
@@ -903,150 +901,150 @@ msgid "ADVSNDMNU_OPNMIDI"
 msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Konfiguracijska datoteka za Timidity"
+msgstr "Timidity配置文件"
 
 msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Relativna glasnoća"
+msgstr "相对音量"
 
 msgid "ADVSNDMNU_WILDMIDI"
 msgstr "WildMidi"
 
 msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "Konfiguracijska datoteka za WildMidi"
+msgstr "WildMidi配置文件"
 
 msgid "ADVSNDMNU_SELCONFIG"
-msgstr "Odabir konfiguracije"
+msgstr "选择配置"
 
 msgid "ADVSNDMNU_ADVRESAMPLING"
-msgstr "Napredno uzorkovanje"
+msgstr "高级重采样"
 
 msgid "ADVSNDMNU_OPLBANK"
-msgstr "OPL banka"
+msgstr "OPL库"
 
 msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "Jezgra OPL emulatora"
+msgstr "OPL模拟器核心"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
-msgstr "Pokreni emulator brzinom PCM-a"
+msgstr "按PCM速率运行模拟器"
 
 msgid "ADVSNDMNU_ADLNUMCHIPS"
-msgstr "Broj emuliranih OPL čipova"
+msgstr "模拟OPL芯片数"
 
 msgid "ADVSNDMNU_ADLGAIN"
-msgstr "Jačina"
+msgstr "增益"
 
 msgid "ADVSNDMNU_VLMODEL"
-msgstr "Model glasnoće"
+msgstr "音量模型"
 
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr "Metoda dodjele kanala"
+msgstr "通道分配方法"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr "Automatski arpeggio"
+msgstr "自动琶音"
 
 msgid "ADVSNDMNU_OPNCORES"
-msgstr "Jezgra OPN2 emulatora"
+msgstr "OPN2模拟器核心"
 
 msgid "ADVSNDMNU_GUSEMULATION"
-msgstr "GUS emulacija"
+msgstr "GUS模拟"
 
 msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "Konfiguracijska datoteka za GUS"
+msgstr "GUS配置文件"
 
 msgid "ADVSNDMNU_DMXGUS"
-msgstr "Čitaj grudice DMXGUS-a"
+msgstr "读取DMXGUS块"
 
 msgid "ADVSNDMNU_GUSMEMSIZE"
-msgstr "Veličina GUS memorije"
+msgstr "GUS内存大小"
 
 msgid "ADVSNDMNU_OPNNUMCHIPS"
-msgstr "Broj emuliranih OPN čipova"
+msgstr "模拟OPN芯片数"
 
 msgid "ADVSNDMNU_OPNGAIN"
-msgstr "Jačina"
+msgstr "增益"
 
 msgid "ADVSNDMNU_ADLCUSTOMBANK"
-msgstr "Upotrijebi prilagođenu WOPL banku"
+msgstr "使用自定义WOPL库"
 
 msgid "ADVSNDMNU_ADLUSEWADBANK"
-msgstr "Koristite WAD-ovu GENMIDI banku kao prilagođenu banku"
+msgstr "使用WAD的GENMIDI库作为自定义库"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
-msgstr "WOPL bankovna datoteka"
+msgstr "WOPL库文件"
 
 msgid "ADVSNDMNU_OPNCUSTOMBANK"
-msgstr "Upotrijebi prilagođenu WOPL banku"
+msgstr "使用自定义WOPN库"
 
 msgid "ADVSNDMNU_OPNBANKFILE"
-msgstr "WOPL bankovna datoteka"
+msgstr "WOPN库文件"
 
 msgid "OPTVAL_ALIASING"
-msgstr "Alijaziranje"
+msgstr "混叠"
 
 # This setting is duplicated threefold in order to allow for different
 # grammatical gender endings
 msgid "OPTVAL_LINEAR_1"
-msgstr "Linearno"
+msgstr "线性"
 
 msgid "OPTVAL_LINEAR_2"
-msgstr "Linearno"
+msgstr "线性"
 
 msgid "OPTVAL_LINEAR_3"
-msgstr "Linearno"
+msgstr "线性"
 
 msgid "OPTVAL_NEAREST"
-msgstr "Najbliže"
+msgstr "最邻近"
 
 msgid "OPTVAL_PCF_LOW"
-msgstr "PCF (nisko)"
+msgstr "PCF(低)"
 
 msgid "OPTVAL_PCF_MEDIUM"
-msgstr "PCF (srednje)"
+msgstr "PCF(中)"
 
 msgid "OPTVAL_PCF_HIGH"
-msgstr "PCF (visoko)"
+msgstr "PCF(高)"
 
 msgid "OPTVAL_CUBIC"
-msgstr "Kubik"
+msgstr "方波"
 
 msgid "OPTVAL_BLEP"
-msgstr "Korak ograničen pojasom"
+msgstr "带宽限制步进"
 
 msgid "OPTVAL_LINEARSLOW"
-msgstr "Linearno (sporije)"
+msgstr "线性(较慢)"
 
 msgid "OPTVAL_BLAM"
-msgstr "Linearno ograničeno pojasom"
+msgstr "带宽限制线性"
 
 msgid "OPTVAL_CUBICSLOW"
-msgstr "Kubik (sporije)"
+msgstr "方波(较慢)"
 
 msgid "OPTVAL_SINC"
-msgstr "Sink"
+msgstr "正弦波"
 
 msgid "OPTVAL_NOTEONOFFONLY"
-msgstr "Napomena uklj./isklj. samo"
+msgstr "仅记录开/关"
 
 msgid "OPTVAL_FULLRAMPING"
-msgstr "Potpuno pojačavanje"
+msgstr "完全音量平滑"
 
 msgid "MODMNU_MASTERVOLUME"
-msgstr "Glavna glasnoća"
+msgstr "主音量"
 
 msgid "MODMNU_QUALITY"
-msgstr "Kvaliteta"
+msgstr "质量"
 
 msgid "MODMNU_VOLUMERAMPING"
-msgstr "Pojačavanje glasnoće"
+msgstr "音量放大"
 
 msgid "OPTVAL_LIBXMP"
 msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr "Glup"
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr "Chip-o-matic"
+msgstr "芯片自动化"
 
 msgid "OPTVAL_MAMEOPL2"
 msgstr "MAME OPL2"
@@ -1067,13 +1065,13 @@ msgid "OPTVAL_YMFMOPL3"
 msgstr "YMFM OPL3"
 
 msgid "OPTVAL_NUKEDOPL3"
-msgstr "Nuklearni napad na OPL3"
+msgstr "Nuked OPL3"
 
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr "OPL2-LLE (Izuzetno teški!)"
+msgstr "OPL2-LLE (特重!)"
 
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr "OPL3-LLE (Izuzetno teški!)"
+msgstr "OPL3-LLE (特重!)"
 
 msgid "OPTVAL_MAMEOPN2"
 msgstr "MAME YM2612"
@@ -1094,19 +1092,19 @@ msgid "OPTVAL_NUKEDOPL3174"
 msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr "Nuklearni napad na OPN2 (YM3438)"
+msgstr "Nuked OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr "Nuklearni napad na OPN2 (YM2612)"
+msgstr "Nuked OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr "OPN2-LLE (YM2612) (Izuzetno težak!)"
+msgstr "OPN2-LLE (YM2612) (特重!)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr "OPN2-LLE (YM3438) (Izuzetno težak!)"
+msgstr "OPN2-LLE (YM3438) (特重!)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr "OPN2-LLE (YMF276) (Izuzetno težak!)"
+msgstr "OPN2-LLE (YMF276) (特重!)"
 
 msgid "OPTVAL_GENSOPN2"
 msgstr "GENS YM2612"
@@ -1118,88 +1116,88 @@ msgid "OPTVAL_YMFMOPNA"
 msgstr "YMFM OPNA"
 
 msgid "ADLVLMODEL_AUTO"
-msgstr "Automatski (koristi postavke banke)"
+msgstr "自动(使用库设置)"
 
 msgid "OPNVLMODEL_AUTO"
-msgstr "Automatski (koristi postavke banke)"
+msgstr "自动(使用库设置)"
 
 msgid "ADLVLMODEL_GENERIC"
-msgstr "Generički"
+msgstr "通用"
 
 msgid "OPNVLMODEL_GENERIC"
-msgstr "Generički"
+msgstr "通用"
 
 msgid "ADLVLMODEL_NATIVE"
-msgstr "OPL izvorni"
+msgstr "OPL本机"
 
 msgid "OPNVLMODEL_NATIVE"
-msgstr "OPN izvorni"
+msgstr "OPN本机"
 
 msgid "ADLVLMODEL_DMX"
-msgstr "DMX (precizan, s AM pogreškom)"
+msgstr "DMX(精确的，带AM bug)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr "Kao u DMX-u"
+msgstr "类似DMX"
 
 msgid "ADLVLMODEL_APOGEE"
-msgstr "Apogee (precizan, s AM pogreškom)"
+msgstr "Apogee(精确的，带AM bug)"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr "Kao u Apogee Sound Systemu"
+msgstr "类似Apogee声音系统"
 
 msgid "OPNVLMODEL_WIN9X"
-msgstr "Poput WIN9X"
+msgstr "Win9X式"
 
 msgid "ADLVLMODEL_WIN9X"
-msgstr "Poput WIN9X (SB-16)"
+msgstr "Win9X式(SB16)"
 
 msgid "ADLVLMODEL_WIN9XGENERIC"
-msgstr "Poput WIN9X (generički FM)"
+msgstr "Win9X式(通用FM)"
 
 msgid "ADLVLMODEL_DMX_FIXED"
-msgstr "DMX (bez AM glasovne pogreške)"
+msgstr "DMX(没有AM语音bug)"
 
 msgid "ADLVLMODEL_APOGEE_FIXED"
-msgstr "Apogee (bez AM glasovne pogreške)"
+msgstr "Apogee(没有AM语音bug)"
 
 msgid "ADLVLMODEL_AIL"
-msgstr "Sučelje IBM zvučne knjižnice"
+msgstr "IBM音频库接口"
 
 msgid "ADLVLMODEL_HMI"
-msgstr "HMI zvučni operacijski sustav"
+msgstr "HMI声音操作系统"
 
 msgid "ADLVLMODEL_HMIOLD"
-msgstr "HMI ZOS (stari, s pogreškama)"
+msgstr "HMI SOS(旧式，含bugs)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr "Automatski"
+msgstr "自动"
 
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr "Izmjereno kašnjenje zvuka"
+msgstr "测量过的关闭声音延迟"
 
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr "Ponovna upotreba prvog izdanja istog instrumenta"
+msgstr "重用相同乐器的首次释放"
 
 msgid "ADLCHANALLOC_ANYREL"
-msgstr "Ponovno upotrijebite bilo koju prvu objavljenu notu"
+msgstr "重用所有首次释放的音符"
 
 msgid "OPTVAL_UNLIMITED"
-msgstr "Neograničeno"
+msgstr "无限制"
 
 msgid "OPTVAL_256K"
-msgstr "256 tisuća"
+msgstr "256K"
 
 msgid "OPTVAL_512K"
-msgstr "512 tisuća"
+msgstr "512K"
 
 msgid "OPTVAL_768K"
-msgstr "768 tisuća"
+msgstr "768K"
 
 msgid "OPTVAL_1024K"
-msgstr "1024 tisuća"
+msgstr "1024K"
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr "Neistraženo 2"
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
 msgstr "Hejl Dawson"
@@ -1208,106 +1206,106 @@ msgid "OPTVAL_REINHARD"
 msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
-msgstr "Paleta"
+msgstr "调色板"
 
 msgid "OPTVAL_LOW"
-msgstr "Nisko"
+msgstr "低"
 
 msgid "OPTVAL_MEDIUM"
-msgstr "Srednje"
+msgstr "中"
 
 msgid "OPTVAL_HIGH"
-msgstr "Visoko"
+msgstr "高"
 
 msgid "OPTVAL_EXTREME"
-msgstr "Ekstremno"
+msgstr "极高"
 
 msgid "OPTVAL_OBVERSEFIRST"
-msgstr "Suprotno"
+msgstr "正面"
 
 msgid "OPTVAL_REVERSEFIRST"
-msgstr "Obrnuto"
+msgstr "反面"
 
 msgid "GLMNU_POSTPROCESS"
-msgstr "Naknadna obrada"
+msgstr "后处理"
 
 msgid "GLPREFMNU_TONEMAP"
-msgstr "Metoda prikaza boja"
+msgstr "色调映射模式"
 
 msgid "GLPREFMNU_LENS"
-msgstr "Efekt izobličenja objektiva"
+msgstr "镜头失真效果"
 
 msgid "GLPREFMNU_FXAA"
-msgstr "FXAA kvaliteta"
+msgstr "FXAA质量"
 
 msgid "GLPREFMNU_DITHER"
-msgstr "Izlaz sjenčanja"
+msgstr "抖动输出"
 
 msgid "GLPREFMNU_PALTONEMAPORDER"
-msgstr "Redoslijed palete prikaza boja"
+msgstr "色调映射调色板顺序"
 
 msgid "GLPREFMNU_PALTONEMAPPOWER"
-msgstr "Eksponent palete prikaza boja"
+msgstr "色调映射调色板指数"
 
 msgid "GLPREFMNU_MULTISAMPLE"
-msgstr "Višestruko uzorkovanje"
+msgstr "多重采样"
 
 msgid "GLPREFMNU_BLOOM"
-msgstr "Efekt sjaja (bloom)"
+msgstr "泛光效果"
 
 msgid "GLPREFMNU_SSAO"
-msgstr "Kvaliteta ambijentalne okluzije"
+msgstr "环境光遮蔽质量"
 
 msgid "GLPREFMNU_SSAO_PORTALS"
-msgstr "Portali s AO"
+msgstr "入口带环境光遮蔽"
 
 msgid "GLPREFMNU_MENUBLUR"
-msgstr "Zamućenje izbornika"
+msgstr "菜单模糊"
 
 msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Karta okruženja na zrcalima"
+msgstr "镜面使用环境映射"
 
 msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Kvaliteta renderiranja"
+msgstr "渲染质量"
 
 msgid "OPTVAL_SPEED"
-msgstr "Brzina"
+msgstr "速度"
 
 msgid "OPTVAL_QUALITY"
-msgstr "Kvaliteta"
+msgstr "质量"
 
 msgid "GLPREFMNU_SECLIGHTMODE"
-msgstr "Način sektorskog svjetla"
+msgstr "区域光照模式"
 
 msgid "GLPREFMNU_FOGMODE"
-msgstr "Način magle"
+msgstr "雾效模式"
 
 msgid "OPTVAL_RADIAL"
-msgstr "Radijalno"
+msgstr "放射"
 
 msgid "OPTVAL_STANDARD"
-msgstr "Standardno"
+msgstr "标准"
 
 msgid "GLTEXMNU_TEXFILTER"
-msgstr "Način filtera tekstura"
+msgstr "纹理过滤模式"
 
 msgid "GLTEXMNU_ANISOTROPIC"
-msgstr "Anizotropski filter"
+msgstr "各项异性过滤"
 
 msgid "OPTVAL_NONENEARESTMIPMAP"
-msgstr "Ništa (najbliža mipmapa)"
+msgstr "无(mip映射使用最邻近)"
 
 msgid "OPTVAL_NONELINEARMIPMAP"
-msgstr "Ništa (linearna mipmapa)"
+msgstr "无(mip映射使用双线性)"
 
 msgid "OPTVAL_NONETRILINEAR"
-msgstr "Ništa (trilinearno)"
+msgstr "无(三线性)"
 
 msgid "OPTVAL_BILINEAR"
-msgstr "Bilinearno"
+msgstr "双线性"
 
 msgid "OPTVAL_TRILINEAR"
-msgstr "Trilinearno"
+msgstr "三线性"
 
 msgid "OPTVAL_2X"
 msgstr "2x"
@@ -1325,156 +1323,156 @@ msgid "OPTVAL_32X"
 msgstr "32x"
 
 msgid "GLTEXMNU_TITLE"
-msgstr "Postavke tekstura"
+msgstr "纹理选项"
 
 msgid "GLTEXMNU_TEXENABLED"
-msgstr "Teksture su omogućene"
+msgstr "纹理已启用"
 
 msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Omogući teksture visoke rezolucije"
+msgstr "启用高精度纹理"
 
 msgid "GLTEXMNU_HQRESIZE"
-msgstr "Način promjene veličine visoke kvalitete"
+msgstr "高质量缩放模式"
 
 msgid "GLTEXMNU_HQRESIZEMULT"
-msgstr "Množitelj promjene veličine visoke kvalitete"
+msgstr "高质量缩放倍率"
 
 msgid "GLTEXMNU_HQRESIZEWARN"
-msgstr "Ovaj način zahtijeva %d puta više video memorije"
+msgstr "这种模式需要%d倍以上的显存"
 
 msgid "GLTEXMNU_RESIZETEX"
-msgstr "Promjena veličine tekstura"
+msgstr "缩放纹理"
 
 msgid "GLTEXMNU_RESIZESPR"
-msgstr "Promjena veličine spriteova"
+msgstr "缩放精灵"
 
 msgid "GLTEXMNU_RESIZEFNT"
-msgstr "Promjena veličine fontova"
+msgstr "缩放字体"
 
 msgid "GLTEXMNU_RESIZESKN"
-msgstr "Promjena veličine izgleda modela"
+msgstr "缩放模型皮肤"
 
 msgid "GLTEXMNU_PRECACHETEX"
-msgstr "Predmemoriranje GL tekstura"
+msgstr "预缓存GL纹理"
 
 msgid "VIDMNU_TITLE"
-msgstr "Video način"
+msgstr "视频模式"
 
 msgid "OPTVAL_SCALENEAREST"
-msgstr "Skaliran (najbliži)"
+msgstr "缩放(最邻近)"
 
 msgid "OPTVAL_SCALELINEAR"
-msgstr "Skaliran (linearni)"
+msgstr "缩放(线性)"
 
 msgid "OPTVAL_LETTERBOX"
-msgstr "Crni rubovi"
+msgstr "信箱边框"
 
 msgid "OPTVAL_STRETCH"
-msgstr "Rastegnuto"
+msgstr "拉伸"
 
 msgid "VIDMNU_RENDERMODE"
-msgstr "Način renderiranja"
+msgstr "渲染模式"
 
 msgid "VIDMNU_FULLSCREEN"
-msgstr "Puni zaslon"
+msgstr "全屏"
 
 msgid "VIDMNU_HIDPI"
-msgstr "Podrška za Retinu/HiDPI"
+msgstr "视网膜/高DPI支持"
 
 msgid "VIDMNU_ASPECTRATIO"
-msgstr "Omjer slike"
+msgstr "宽高比"
 
 msgid "VIDMNU_FORCEASPECT"
-msgstr "Forsiraj omjer slike"
+msgstr "强制宽高比"
 
 msgid "VIDMNU_CROPASPECT"
-msgstr "Stil forsiranog omjera"
+msgstr "强制比例风格"
 
 msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Omogući omjer slike 5:4"
+msgstr "启用5:4宽高比"
 
 msgid "VIDMNU_SCALEMODE"
-msgstr "Skaliranje rezolucije"
+msgstr "分辨率比例"
 
 msgid "VIDMNU_SCALEFACTOR"
-msgstr "Factor skaliranja"
+msgstr "比例因子"
 
 msgid "VIDMNU_USELINEAR"
-msgstr "Upotrijebi linearno skaliranje (puni zaslon)"
+msgstr "使用线性缩放(全屏)"
 
 msgid "VIDMNU_CUSTOMRES"
-msgstr "Prilagođena širina piksela"
+msgstr "自定义像素缩放"
 
 msgid "VIDMNU_CUSTOMX"
-msgstr "Prilagođena širina"
+msgstr "自定义宽度"
 
 msgid "VIDMNU_CUSTOMY"
-msgstr "Prilagođena visina"
+msgstr "自定义高度"
 
 msgid "VIDMNU_APPLYW"
-msgstr "Primijeni promjene (prozorski)"
+msgstr "应用修改(窗口化)"
 
 msgid "VIDMNU_APPLYFS"
-msgstr "Primijeni promjene (puni zaslon)"
+msgstr "应用修改(全屏)"
 
 msgid "VIDMNU_RESPRESET"
-msgstr "Odaberi unaprijed postavljenu rezoluciju"
+msgstr "选择分辨率预设"
 
 msgid "VIDMNU_RESPRESETTTL"
-msgstr "Odaberi unaprijed postavljene rezolucije"
+msgstr "自定义分辨率预设"
 
 msgid "VIDMNU_RESPRESETHEAD"
-msgstr "Unaprijed postavljeni načini rezolucije"
+msgstr "预设分辨率模式"
 
 msgid "VIDMNU_ASPECT43"
-msgstr "Omjer 4:3"
+msgstr "4:3宽高比"
 
 msgid "VIDMNU_ASPECT54"
-msgstr "Omjer 5:4"
+msgstr "5:4宽高比"
 
 msgid "VIDMNU_ASPECT169"
-msgstr "Omjer 16:9"
+msgstr "16:9宽高比"
 
 msgid "VIDMNU_ASPECT1610"
-msgstr "Omjer 16:10"
+msgstr "16:10宽高比"
 
 msgid "VIDMNU_ASPECT219"
-msgstr "Omjer 21:9"
+msgstr "21:9宽高比"
 
 msgid "OPTVAL_NORMAL"
-msgstr "Normalno"
+msgstr "正常"
 
 # This describes vid_scalemode 1, which represents the lowest possible scaling
 # to fill the allocated screen area
 msgid "OPTVAL_LOWEST"
-msgstr "Najniže moguće skaliranje"
+msgstr "比例尽可能最小"
 
 msgid "OPTVAL_CUSTOM"
-msgstr "Prilagođeno"
+msgstr "自定义"
 
 msgid "VIDMNU_MAXFPS"
-msgstr "Maks. FPS"
+msgstr "最大帧率"
 
 msgid "OPTVAL_60FPS"
-msgstr "60 FPS-a"
+msgstr "60帧/秒"
 
 msgid "OPTVAL_75FPS"
-msgstr "75 FPS-a"
+msgstr "75帧/秒"
 
 msgid "OPTVAL_90FPS"
-msgstr "90 FPS-a"
+msgstr "90帧/秒"
 
 msgid "OPTVAL_120FPS"
-msgstr "120 FPS-a"
+msgstr "120帧/秒"
 
 msgid "OPTVAL_144FPS"
-msgstr "144 FPS-a"
+msgstr "144帧/秒"
 
 msgid "OPTVAL_200FPS"
-msgstr "200 FPS-a"
+msgstr "200帧/秒"
 
 msgid "VIDMNU_PREFERBACKEND"
-msgstr "Preferirani API za renderiranje"
+msgstr "优先渲染API"
 
 msgid "OPTVAL_OPENGL"
 msgstr "OpenGL"
@@ -1487,243 +1485,242 @@ msgid "OPTVAL_OPENGLES"
 msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
-msgstr "Spoji lijevo+desno Alt/Ctrl/Shift"
+msgstr "合并左+右Alt/Ctrl/Shift键"
 
 msgid "MISCMNU_WINFULLSCREENTOGGLE"
-msgstr "Alt-Enter je prekidač za puni zaslon"
+msgstr "Alt+回车键切换全屏"
 
 msgid "MISCMNU_MACFULLSCREENTOGGLE"
-msgstr "Command-F je prekidač za puni zaslon"
+msgstr "Command+F键切换全屏"
 
 msgid "MISCMNU_ENABLEAUTOSAVES"
-msgstr "Omogući automatska spremanja"
+msgstr "启用自动保存"
 
 msgid "MISCMNU_AUTOSAVECOUNT"
-msgstr "Broj automatskih spremanja"
+msgstr "自动保存上限数量"
 
 msgid "MISCMNU_SAVELOADCONFIRMATION"
-msgstr "Potvrda spremanja/učitavanja"
+msgstr "保存/加载时需要确认"
 
 msgid "MISCMNU_NOCHEATS"
-msgstr "Onemogući tipkovničke šifre"
+msgstr "禁用键盘作弊"
 
 msgid "MISCMNU_QUICKSAVEROTATION"
-msgstr "Brzo spremanje u rotaciji"
+msgstr "快速保存间隔"
 
 msgid "MISCMNU_QUICKSAVECOUNT"
-msgstr "Broj brzih spremanja u rotaciji"
+msgstr "快速保存上限数量"
 
 msgid "MISCMNU_CLEANMENU"
-msgstr "Onemogući čisto skaliranje izbornika"
+msgstr "禁用菜单缩放"
 
 msgid "MISCMNU_PAUSEINBACKGROUND"
-msgstr "Pauziraj igru u pozadini"
+msgstr "后台运行时暂停游戏"
 
 msgid "HUDMNU_CROSSHAIR"
-msgstr "Zadani ciljnik"
+msgstr "默认准星"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
-msgstr "Boja ciljnika"
+msgstr "准星颜色"
 
 msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Ciljnik prikazuje zdravlje"
+msgstr "准星显示生命值"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
-msgstr "Skaliranje ciljnika"
+msgstr "准星比例"
 
 # copied from elsewhere
 msgid "OPTVAL_YES_STANDARD"
-msgstr "Standardno"
+msgstr "标准"
 
 msgid "OPTVAL_YES_ENHANCED"
-msgstr "Poboljšano"
+msgstr "增强"
 
 msgid "OPTMNU_LANGUAGE"
-msgstr "Jezik"
+msgstr "语言"
 
 msgid "TXT_UNDOCHANGES"
-msgstr "Poništi promjene"
+msgstr "撤回更改"
 
 msgid "REVMNU_SELECT"
-msgstr "Odaberi okoliš"
+msgstr "选择环境"
 
 msgid "REVMNU_TEST"
-msgstr "Testiraj okoliš"
+msgstr "测试回声"
 
 msgid "REVMNU_EDIT"
-msgstr "Uredi okoliš"
+msgstr "编辑环境"
 
 msgid "REVMNU_NEW"
-msgstr "Novi okoliš"
+msgstr "新建环境"
 
 msgid "REVMNU_REVERT"
-msgstr "Povrati postavke"
+msgstr "还原设置"
 
 # Please translate only if you know how to properly name this technical
 # jargon!
 msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Veličina okoliša"
+msgstr "环境大小"
 
 msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Difuzija okoliša"
+msgstr "环境传播"
 
 msgid "REVMNU_ROOM"
-msgstr "Soba"
+msgstr "房间"
 
 msgid "REVMNU_ROOM_HF"
-msgstr "Soba visoke frekvencije"
+msgstr "房间HF"
 
 msgid "REVMNU_ROOM_LF"
-msgstr "Soba niske frekvencije"
+msgstr "房间LF"
 
 msgid "REVMNU_DECAY_TIME"
-msgstr "Vrijeme raspadanja"
+msgstr "衰减时间"
 
 msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Omjer raspadanja visoke frekvencije"
+msgstr "衰减HF率"
 
 msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Omjer raspadanja niske frekvencije"
+msgstr "衰减LF率"
 
 msgid "REVMNU_REFLECTIONS"
-msgstr "Odrazi"
+msgstr "反射"
 
 msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Kašnjenje odraza"
+msgstr "反射延迟"
 
 msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Kretanje odraza X"
+msgstr "反射X定位"
 
 msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Kretanje odraza Y"
+msgstr "反射Y定位"
 
 msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Kretanje odraza Z"
+msgstr "反射Z定位"
 
 msgid "REVMNU_REVERB"
-msgstr "Odjekivanje"
+msgstr "混响"
 
 msgid "REVMNU_REVERB_DELAY"
-msgstr "Kašnjenje odjekivanja"
+msgstr "混响延迟"
 
 msgid "REVMNU_REVERB_PAN_X"
-msgstr "Kretanje odjekivanja X"
+msgstr "混响X定位"
 
 msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Kretanje odjekivanja Y"
+msgstr "混响Y定位"
 
 msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Kretanje odjekivanja Z"
+msgstr "混响Z定位"
 
 msgid "REVMNU_ECHO_TIME"
-msgstr "Vrijeme jeke"
+msgstr "回声时间"
 
 msgid "REVMNU_ECHO_DEPTH"
-msgstr "Dubina jeke"
+msgstr "回声深度"
 
 msgid "REVMNU_MODULATION_TIME"
-msgstr "Vrijeme modulacije"
+msgstr "调制时间"
 
 msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Dubina modulacije"
+msgstr "调制深度"
 
 msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Apsorpcija zraka visoke frekvencije"
+msgstr "空气吸收HF"
 
 msgid "REVMNU_HF_REFERENCE"
-msgstr "Referenca visoke frekvencije"
+msgstr "HF参考值"
 
 msgid "REVMNU_LF_REFERENCE"
-msgstr "Referenca niske frekvencije"
+msgstr "LF参考值"
 
 msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Faktor opadanja prostorije"
+msgstr "房间滚降因子"
 
 msgid "REVMNU_DIFFUSION"
-msgstr "Difuzija okoliša"
+msgstr "传播"
 
 msgid "REVMNU_DENSITY"
-msgstr "Gustoća"
+msgstr "密度"
 
 msgid "REVMNU_Reflections_Scale"
-msgstr "Skaliranje odraza"
+msgstr "反射比例"
 
 msgid "REVMNU_Reflections_Delay_Scale"
-msgstr "Kašnjenje skaliranja odraza"
+msgstr "反射延迟比例"
 
 msgid "REVMNU_Decay_Time_Scale"
-msgstr "Skaliranje vremena raspadanja"
+msgstr "衰减时间比例"
 
 msgid "REVMNU_Decay_HF_Limit"
-msgstr "Ograničenje raspadanja visoke frekvencije"
+msgstr "衰减HF限制"
 
 msgid "REVMNU_Reverb_Scale"
-msgstr "Skaliranje odjekivanja"
+msgstr "混响比例"
 
 msgid "REVMNU_Reverb_Delay_Scale"
-msgstr "Kašnjenje skaliranja odjekivanja"
+msgstr "混响延迟比例"
 
 msgid "REVMNU_Echo_Time_Scale"
-msgstr "Skaliranje vremena jeke"
+msgstr "回声时间比例"
 
 msgid "REVMNU_Modulation_Time_Scale"
-msgstr "Skaliranje vremena modulacije"
+msgstr "调制时间比例"
 
 msgid "REVMNU_Based_on"
-msgstr "Bazirano na"
+msgstr "基于"
 
 msgid "REVMNU_Name"
-msgstr "Naziv"
+msgstr "名称"
 
 msgid "REVMNU_ID_1"
-msgstr "ID 1"
+msgstr "ID #1"
 
 msgid "REVMNU_ID_2"
-msgstr "ID 2"
+msgstr "ID #2"
 
 msgid "REVMNU_Create"
-msgstr "Stvori"
+msgstr "创建"
 
 msgid "REVMNU_Save"
-msgstr "Spremi..."
+msgstr "保存..."
 
 msgid "REVMNU_File_name"
-msgstr "Naziv datoteke"
+msgstr "文件名"
 
 msgid "REVMNU_Environments_to_save"
-msgstr "Okoliši za spremiti"
+msgstr "保存环境"
 
 msgid "DSPLYMNU_VKOPT"
-msgstr "Postavke Vulkana (eksperimentalno)"
+msgstr "Vulkan选项(实验版)"
 
 msgid "VK_TITLE"
-msgstr "Postavke Vulkana"
+msgstr "Vulkan选项"
 
 msgid "VKMNU_ENABLE"
-msgstr "Omogući Vulkan"
+msgstr "启用Vulkan"
 
 msgid "VKMNU_DEVICE"
-msgstr "ID uređaja Vulkan"
+msgstr "Vulkan设备ID"
 
 msgid "VKMNU_HDR"
-msgstr "Visoki dinamički raspon (HDR)"
+msgstr "高动态范围"
 
 msgid "VK_WARNING"
-msgstr "Upozorenje: Vulkan renderer je jako eksperimentalan!"
+msgstr "警告: Vulkan渲染器处于高度实验阶段！"
 
 msgid "VK_RESTART"
-msgstr ""
-"Ove postavke će zahtijevati ponovno pokretanje kako bi stupile na snagu."
+msgstr "这些选项需要重启才能生效。"
 
 # This is not yet implemented - but it is planned
 msgid "VKMNU_DEVICESELECT"
-msgstr "Odaberi uređaj Vulkana"
+msgstr "选择Vulkan设备"
 
 msgid "OPTVAL_SCALENX"
 msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr "NormalniNx"
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
 msgstr "hqNx"
@@ -1735,417 +1732,417 @@ msgid "OPTVAL_NXBRZ"
 msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
-msgstr "Stari xBRZ"
+msgstr "旧式xBRZ"
 
 msgid "OS_TITLE"
-msgstr "Traženje postavke"
+msgstr "选项搜索"
 
 msgid "OS_ANY"
-msgstr "Potraži bilo koji pojam"
+msgstr "搜索任意条目"
 
 msgid "OS_ALL"
-msgstr "Potraži sve pojmove"
+msgstr "搜索全部条目"
 
 msgid "OS_NO_RESULTS"
-msgstr "Nema rezultata."
+msgstr "无搜索结果。"
 
 msgid "OS_LABEL"
-msgstr "Traži:"
+msgstr "搜索："
 
 msgid "TXT_OBITUARY1"
-msgstr "%k otkošćuje %o kao ribu"
+msgstr "%k 像对鱼一样剔了 %o 的骨"
 
 msgid "TXT_OBITUARY2"
-msgstr "%k kastrira %o"
+msgstr "%k 阉割了 %o"
 
 msgid "TXT_OBITUARY3"
-msgstr "%k kremira %o"
+msgstr "%k 彻底打败了 %o"
 
 msgid "TXT_OBITUARY4"
-msgstr "%k desetkuje %o"
+msgstr "%k 消灭了 %o"
 
 msgid "TXT_OBITUARY5"
-msgstr "%k uništava %o"
+msgstr "%k 毁灭了 %o"
 
 msgid "TXT_OBITUARY6"
-msgstr "%k sjecka %o na kockice"
+msgstr "%k 切碎了 %o"
 
 msgid "TXT_OBITUARY7"
-msgstr "%k vadi utrobu iz %o"
+msgstr "%k 解脱了 %o"
 
 msgid "TXT_OBITUARY8"
-msgstr "%k spljošćuje %o"
+msgstr "%k 拍扁了 %o"
 
 msgid "TXT_OBITUARY9"
-msgstr "%k pruža analnu pravdu %o"
+msgstr "%k 对 %o 使出千年杀"
 
 msgid "TXT_OBITUARY10"
-msgstr "%k pruža AnAlNo LuDiLo prema %o"
+msgstr "%k 对 %o 使出疯狂千年杀"
 
 msgid "TXT_OBITUARY11"
-msgstr "%k ubija %o"
+msgstr "%k 杀死了 %o"
 
 msgid "TXT_OBITUARY12"
-msgstr "%k pravi mljeveno meso od %o"
+msgstr "%o 把 %k 剁成了肉馅"
 
 msgid "TXT_OBITUARY13"
-msgstr "%k masakrira %o"
+msgstr "%k 屠杀了 %o"
 
 msgid "TXT_OBITUARY14"
-msgstr "%k sakati %o"
+msgstr "%k 肢解了 %o"
 
 msgid "TXT_OBITUARY15"
-msgstr "%k razvlači %o"
+msgstr "%k 给 %o 开了个洞"
 
 msgid "TXT_OBITUARY16"
-msgstr "%k pravi novi otvor na %o"
+msgstr "%k 给 %o 撕了个新洞"
 
 msgid "TXT_OBITUARY17"
-msgstr "%k kolje %o"
+msgstr "%k 宰了 %o"
 
 msgid "TXT_OBITUARY18"
-msgstr "%k smrskava %o"
+msgstr "%k 击飞了 %o"
 
 msgid "TXT_OBITUARY19"
-msgstr "%k sodomizira %o"
+msgstr "%o 爆菊了 %k"
 
 msgid "TXT_OBITUARY20"
-msgstr "%k raspršuje %o"
+msgstr "%k 把 %o 撒了一地"
 
 msgid "TXT_OBITUARY21"
-msgstr "%k gnječi %o"
+msgstr "%k 踩扁了 %o"
 
 msgid "TXT_OBITUARY22"
-msgstr "%k guši %o"
+msgstr "%k 勒死了 %o"
 
 msgid "TXT_OBITUARY23"
-msgstr "%k iscrpljuje %o"
+msgstr "%k 废了 %o"
 
 msgid "TXT_OBITUARY24"
-msgstr "%k stavlja %o u mrtvačku vreću"
+msgstr "%k 把 %o 装进了裹尸袋"
 
 msgid "TXT_OBITUARY25"
-msgstr "%k šalje %o u Pakao"
+msgstr "%k 把 %o 送进地狱"
 
 msgid "TXT_OBITUARY26"
-msgstr "% prži %o"
+msgstr "%o 烧烤了 %k"
 
 msgid "TXT_OBITUARY27"
-msgstr "%k gasi %o"
+msgstr "%o 灭了 %k"
 
 msgid "TXT_OBITUARY28"
-msgstr "%k prska %o crijevom"
+msgstr "%k 把 %o 喷得到处都是"
 
 msgid "TXT_OBITUARY29"
-msgstr "%k raspršiva %o"
+msgstr "%k 把 %o 洒得到处都是"
 
 msgid "TXT_OBITUARY30"
-msgstr "%k pravi meso za pse od %o"
+msgstr "%k 把 %o 做成了狗粮"
 
 msgid "TXT_OBITUARY31"
-msgstr "%k tuče %o kao nitkova"
+msgstr "%k 像对野狗一样痛扁 %o"
 
 msgid "TXT_SELFOBIT1"
-msgstr "%o je izmet"
+msgstr "%o 成了便便"
 
 msgid "TXT_SELFOBIT2"
-msgstr "%o je hamburger"
+msgstr "%o 成了汉堡"
 
 msgid "TXT_SELFOBIT3"
-msgstr "%o trpi odvajanje skrotuma"
+msgstr "%o 的蛋碎了"
 
 msgid "TXT_SELFOBIT4"
-msgstr "%o volontira za kontrolu populacije"
+msgstr "%o 自愿参加了人口控制"
 
 msgid "TXT_SELFOBIT5"
-msgstr "%o čini samoubojstvo"
+msgstr "%o 自杀了"
 
 msgid "TXT_SELFOBIT6"
-msgstr "%o prima Darwinovu nagradu"
+msgstr "%o 被授予了达尔文奖"
 
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr "USE_GENERIC_FONT"
+msgstr "1"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
 # should NOT be listed here!
 msgid "REQUIRED_CHARACTERS"
-msgstr "ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽ"
+msgstr ""
 
 msgid "OPTMNU_FULLOPTIONS"
-msgstr "Potpuni izbornik postavki"
+msgstr "菜单列出完整选项"
 
 msgid "OPTMNU_SIMPLEON"
-msgstr "Jednostavni izbornik postavki"
+msgstr "菜单列出简要选项"
 
 msgid "OPTMNU_OPENCONFIG"
-msgstr "Pregledaj konfiguraciju igre"
+msgstr "浏览游戏配置"
 
 msgid "OPTMNU_OPENSCREENSHOTS"
-msgstr "Pregledaj snimke zaslona"
+msgstr "浏览截图"
 
 msgid "OPTMNU_OPENSAVES"
-msgstr "Pregledaj spremljene igre"
+msgstr "浏览游戏存档"
 
 msgid "MOUSEMNU_SWAPBUTTONS"
-msgstr "Zamijeni tipke miša"
+msgstr "交换鼠标按钮"
 
 msgid "OPTVAL_ONLYMODIFIED"
-msgstr "Samo modificirano"
+msgstr "仅修改的"
 
 msgid "TXT_UNKNOWN"
-msgstr "Nepoznato"
+msgstr "未知"
 
 msgid "OPTVAL_HUD"
-msgstr "Sučelje"
+msgstr "HUD"
 
 msgid "OPTVAL_AUTOMAP"
-msgstr "Autokarta"
+msgstr "地图"
 
 msgid "OPTVAL_HUDANDMAP"
-msgstr "Sučelje + Autokarta"
+msgstr "HUD+地图"
 
 msgid "TXT_SAVEGAMENEEDS"
-msgstr "Za ovu spremljenu igru potrebne su ove datoteke"
+msgstr "此存档需要这些文件"
 
 msgid "OPTMNU_MULTIPLAYER"
-msgstr "Postavke za više igrača"
+msgstr "多人游戏选项"
 
 msgid "OPTMNU_INPUT"
-msgstr "Postavke unosa"
+msgstr "输入选项"
 
 msgid "OPTMNU_SYSTEM"
-msgstr "Postavke sustava"
+msgstr "系统选项"
 
 msgid "OPTMNU_LIGHT"
-msgstr "Postavke svjetla"
+msgstr "光照选项"
 
 msgid "OPTMNU_SPRITE"
-msgstr "Postavke spriteova"
+msgstr "精灵选项"
 
 msgid "GLPREFMNU_CORONAS"
-msgstr "Korone"
+msgstr "光晕"
 
 msgid "DSPLYMNU_APPEARANCE"
-msgstr "Izgled"
+msgstr "外观"
 
 msgid "DSPLYMNU_ADVANCED"
-msgstr "Napredne postavke zaslona"
+msgstr "高级显示选项"
 
 msgid "PICKER_SELECT"
-msgstr "Odaberi koju igru želiš pokrenuti."
+msgstr "选择运行哪个游戏文件。"
 
 msgid "PICKER_PLAY"
-msgstr "Zaigraj igru"
+msgstr "玩游戏"
 
 msgid "PICKER_EXIT"
-msgstr "Izlaz"
+msgstr "退出"
 
 msgid "PICKER_GENERAL"
-msgstr "Općenito"
+msgstr "一般"
 
 msgid "PICKER_EXTRA"
-msgstr "Dodatna grafika"
+msgstr "附加图像"
 
 msgid "PICKER_FULLSCREEN"
-msgstr "Puni zaslon"
+msgstr "全屏"
 
 msgid "PICKER_NOAUTOLOAD"
-msgstr "Onemogući automatsko učitavanje"
+msgstr "禁用自动加载"
 
 msgid "PICKER_DONTASK"
-msgstr "Više me ne pitaj"
+msgstr "不要再问我"
 
 msgid "PICKER_LIGHTS"
-msgstr "Svjetla"
+msgstr "光照"
 
 msgid "PICKER_BRIGHTMAPS"
-msgstr "Svijetle karte"
+msgstr "光照图"
 
 msgid "PICKER_WIDESCREEN"
-msgstr "Široki zaslon"
+msgstr "宽屏"
 
 msgid "PICKER_ADDPARM"
-msgstr "Dodatni parametri:"
+msgstr "附加参数："
 
 msgid "PICKER_WELCOME"
-msgstr "Dobrodošao/la u %s!"
+msgstr "欢迎来到 %s!"
 
 msgid "PICKER_VERSION"
-msgstr "Verzija %s"
+msgstr "版本 %s"
 
 msgid "PICKER_PREFERBACKEND"
-msgstr "Api za renderiranje"
+msgstr "渲染API"
 
 msgid "PICKER_TAB_PLAY"
-msgstr "Igra"
+msgstr "游戏"
 
 # Option to enable or disable individual controllers/joysticks when
 # configuring it in the Controller Options menu
 msgid "JOYMNU_JOYENABLE"
-msgstr "Omogući ovaj kontroler"
+msgstr "启用此控制器"
 
 msgid "CNTRLMNU_OPEN_MAIN"
-msgstr "Otvori glavni izbornik"
+msgstr "打开主菜单"
 
 msgid "MODMNU_REPLAYER"
-msgstr "Ponavljač modula"
+msgstr "模块播放器"
 
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
 msgid "JOYMNU_JOYENABLEINBACKGROUND"
-msgstr "Dopusti unos kontrolera u pozadini"
+msgstr "在后台也允许控制器输入"
 
 # Order to sort the list of saved games in the save and load game menu. This
 # used to only be alphabetical.
 msgid "MISCMNU_SAVEORDER"
-msgstr "Redoslijed sortiranja spremljenih igara"
+msgstr "存档排列顺序"
 
 msgid "OPTVAL_ALPHABETICAL"
-msgstr "Abecedni"
+msgstr "字母顺序"
 
 msgid "OPTVAL_LASTSAVEDTIME"
-msgstr "Posljednje spremljeno vrijeme"
+msgstr "上次保存时间"
 
 msgid "PICKER_PLAYHOST"
-msgstr "Domaćin utakmice"
+msgstr "创建主机"
 
 msgid "PICKER_PLAYJOIN"
-msgstr "Pridruži se igri"
+msgstr "加入游戏"
 
 msgid "PICKER_REMPARM"
-msgstr "Zapamti parametre"
+msgstr "记住参数"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr "WAD-ovi za potporu opterećenja"
+msgstr "加载支持的WADs"
 
 msgid "PICKER_TAB_MULTI"
-msgstr "Više igrača"
+msgstr "多人游戏"
 
 msgid "PICKER_LOADSAVE"
-msgstr "Učitaj spremljenu datoteku:"
+msgstr "加载存档文件："
 
 msgid "PICKER_REMSAVE"
-msgstr "Zapamti Spremi datoteku"
+msgstr "记住存档文件"
 
 # As in, to host a game.
 msgid "PICKER_HOST"
-msgstr "Poslužitelj"
+msgstr "主机"
 
 msgid "PICKER_JOIN"
-msgstr "Pridruži"
+msgstr "加入"
 
 msgid "PICKER_NETMODE"
-msgstr "Način rada u mreži:"
+msgstr "网络模式："
 
 msgid "PICKER_NETAUTO"
-msgstr "Automatski (preporučeno)"
+msgstr "自动(推荐)"
 
 # Connections are routed through the host instead of all players connecting to
 # each other individually.
 msgid "PICKER_NETSERVER"
-msgstr "Paketni poslužitelj"
+msgstr "数据包服务器"
 
 # Players connect to each other individually.
 msgid "PICKER_NETPEER"
-msgstr "Ravnopravno Povezivanje"
+msgstr "点对点"
 
 msgid "PICKER_NETRATE"
-msgstr "Paket Tikrat:"
+msgstr "数据包帧率："
 
 # Sends out duplicate copies of packets to help with spotty connections e.g.
 # wifi.
 msgid "PICKER_NETBACKUP"
-msgstr "Pošalji sigurnosne kopije paketa"
+msgstr "发送备份数据包"
 
 msgid "PICKER_GAMEMODE"
-msgstr "Način igre:"
+msgstr "游戏模式："
 
 msgid "PICKER_COOP"
-msgstr "Kavez"
+msgstr "合作"
 
 msgid "PICKER_DM"
-msgstr "Deathmatch"
+msgstr "死斗"
 
 msgid "PICKER_TDM"
-msgstr "Timski deathmatch"
+msgstr "团队死斗"
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
-msgstr "Broj tima:"
+msgstr "团队#："
 
 msgid "PICKER_ALTDM"
-msgstr "Koristite alternativna pravila Deathmatcha"
+msgstr "使用替换的死斗规则"
 
 msgid "PICKER_PLAYERS"
-msgstr "Maksimalan broj igrača:"
+msgstr "最多玩家："
 
 msgid "PICKER_PORT"
-msgstr "Port hosta:"
+msgstr "主机端口："
 
 # Max number of players.
 msgid "PICKER_PLAYERHINT"
-msgstr "Maks. 64"
+msgstr "最多64"
 
 # GZDoom's default port.
 msgid "PICKER_PORTHINT"
-msgstr "Zadano 5029"
+msgstr "默认5029"
 
 # Team 255 randomizes which team the player gets put on.
 msgid "PICKER_TEAMHINT"
-msgstr "255 = Slučajno"
+msgstr "255 = 随机"
 
 msgid "PICKER_IP"
-msgstr "IP adresa hosta:"
+msgstr "主机IP:"
 
 msgid "PICKER_TDMLABEL"
-msgstr "Timski deathmatch:"
+msgstr "团队死斗："
 
 # Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
-msgstr "Reci (tim):"
+msgstr "发言(团队)："
 
 msgid "MISCMNU_DISCORDRPC"
-msgstr "Discord Rich Presence"
+msgstr "Discord上呈现详细状态"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr "Brzina okretanja"
+msgstr "转身速度"
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr "Brzina gledanja"
+msgstr "转视角速度"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr "Analogni strejf trk"
+msgstr "模拟平移跑"
 
 msgid "NOTES_FAIL"
-msgstr "Nije moguće obraditi bilješke o izdanju"
+msgstr "无法匹配发布说明"
 
 msgid "NOTES_VERSION"
-msgstr "verzija"
+msgstr "版本"
 
 msgid "NOTES_UNKNOWN"
-msgstr "Nepoznato"
+msgstr "未知"
 
 msgid "NOTES_RELEASED"
-msgstr "objavljeno"
+msgstr "已发布"
 
 msgid "NOTES_EMPTY"
-msgstr "Nije naveden opis."
+msgstr "未提供描述。"
 
 msgid "NOTES_DETAILS"
-msgstr "Za više detalja pogledajte:"
+msgstr "更多细节查看："
 
 msgid "PICKER_SHOWTHIS"
-msgstr "Prikažite ovu stranicu nakon ažuriranja"
+msgstr "更新后展示此页"
 
 msgid "PICKER_SHOWNOTES"
-msgstr "Prikažite bilješke o izdanju"
+msgstr "展示发布说明"
 
 msgid "PICKER_TAB_ABOUT"
-msgstr "O"
+msgstr "关于"
 
 msgid "PICKER_TAB_RELEASE"
-msgstr "Bilješke o izdanju"
+msgstr "发布说明"
