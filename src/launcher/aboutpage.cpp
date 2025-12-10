@@ -33,6 +33,7 @@
 #include <zwidget/widgets/tabwidget/tabwidget.h>
 
 #include "aboutpage.h"
+#include "filesystem.h"
 #include "findfile.h"
 #include "gameconfigfile.h"
 #include "gstrings.h"

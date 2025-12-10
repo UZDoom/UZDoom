@@ -3,6 +3,8 @@
 **
 **---------------------------------------------------------------------------
 ** Copyright 1998-2006 Randy Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -35,15 +37,15 @@
 #define __G_LEVEL_H__
 
 #include "autosegs.h"
+#include "doomdef.h"
 #include "doomtype.h"
-#include "vectors.h"
+#include "fs_decompress.h"
+#include "hw_viewpointuniforms.h"
+#include "hwrenderer/postprocessing/hw_postprocess.h"
+#include "maps.h"
 #include "sc_man.h"
 #include "screenjob.h"
-#include "hwrenderer/postprocessing/hw_postprocess.h"
-#include "hw_viewpointuniforms.h"
-#include "vm.h"
-#include "maps.h"
-#include "doomdef.h"
+#include "vectors.h"
 
 struct level_info_t;
 struct cluster_info_t;

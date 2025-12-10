@@ -1,8 +1,8 @@
 #pragma once
 
-#include <memory>
 #include "tarray.h"
 #include "refcounted.h"
+#include "vm.h"
 
 class ZSMapInfo : public RefCountedBase
 {

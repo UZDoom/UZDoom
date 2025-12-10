@@ -3,6 +3,8 @@
 **
 **---------------------------------------------------------------------------
 ** Copyright 1998-2006 Randy Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -35,21 +37,15 @@
 ** This class manages a list of localizable strings stored in a wad file.
 */
 
-#ifndef __STRINGTABLE_H__
-#define __STRINGTABLE_H__
-
-#ifdef _MSC_VER
 #pragma once
-#endif
-
 
 #include <stdlib.h>
-#include <vector>
-#include "basics.h"
-#include "zstring.h"
-#include "tarray.h"
-#include "name.h"
 
+#include "basics.h"
+#include "fs_filesystem.h"
+#include "name.h"
+#include "tarray.h"
+#include "zstring.h"
 
 struct TableElement
 {
@@ -138,5 +134,3 @@ public:
 		return *str == '$' ? GetString(str + 1) : str;
 	}
 };
-
-#endif //__STRINGTABLE_H__

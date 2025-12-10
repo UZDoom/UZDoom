@@ -32,6 +32,7 @@
 
 #include "errorwindow.h"
 #include "printf.h"
+#include "utf8.h"
 #include "v_font.h"
 #include "version.h"
 

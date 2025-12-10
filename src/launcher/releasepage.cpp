@@ -31,6 +31,7 @@
 #include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
 #include <zwidget/widgets/textedit/textedit.h>
 
+#include "filesystem.h"
 #include "findfile.h"
 #include "gameconfigfile.h"
 #include "gstrings.h"

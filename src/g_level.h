@@ -1,10 +1,7 @@
 #pragma once
 
-#include "doomtype.h"
-#include "vectors.h"
-#include "sc_man.h"
+#include "filesystem.h"
 #include "g_mapinfo.h"
-
 
 using FileSys::FCompressedBuffer;
 extern bool savegamerestore;
@@ -40,4 +37,3 @@ void G_WriteSnapshots (TArray<FString> &, TArray<FCompressedBuffer> &);
 void G_WriteVisited(FSerializer &arc);
 void G_ReadVisited(FSerializer &arc);
 void G_ClearHubInfo();
-

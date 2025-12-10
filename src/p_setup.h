@@ -3,6 +3,8 @@
 // Copyright 1993-1996 id Software
 // Copyright 1999-2016 Randy Heit
 // Copyright 2002-2016 Christoph Oelckers
+// Copyright 2017-2025 GZDoom Maintainers and Contributors
+// Copyright 2025 UZDoom Maintainers and Contributors
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -28,12 +30,11 @@
 #ifndef __P_SETUP__
 #define __P_SETUP__
 
-#include "fs_filesystem.h"
-#include "doomdata.h"
-#include "r_defs.h"
-#include "nodebuild.h"
 #include "cmdlib.h"
-
+#include "doomdata.h"
+#include "filesystem.h"
+#include "nodebuild.h"
+#include "r_defs.h"
 
 struct MapData
 {

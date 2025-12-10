@@ -3,13 +3,15 @@
 
 #include <stdint.h>
 #include <type_traits>
+
+#include "bonecomponents.h"
+#include "dictionary.h"
+#include "fs_decompress.h"
+#include "name.h"
+#include "palentry.h"
 #include "tarray.h"
 #include "tflags.h"
 #include "vectors.h"
-#include "palentry.h"
-#include "name.h"
-#include "dictionary.h"
-#include "bonecomponents.h"
 
 extern bool save_full;
 

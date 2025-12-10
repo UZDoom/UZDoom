@@ -5,6 +5,8 @@
 **---------------------------------------------------------------------------
 ** Copyright 2008-2016 Randy Heit
 ** Copyright 2016-2017 Cheistoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -33,18 +35,16 @@
 **
 */
 
-#include <cinttypes>
-
-#include "vmintern.h"
-#include "s_soundinternal.h"
-#include "types.h"
-#include "printf.h"
-#include "textureid.h"
+#include "filesystem.h"
+#include "i_interface.h"
 #include "maps.h"
 #include "palettecontainer.h"
+#include "printf.h"
+#include "s_soundinternal.h"
+#include "textureid.h"
 #include "texturemanager.h"
-#include "i_interface.h"
-
+#include "types.h"
+#include "vmintern.h"
 
 FTypeTable TypeTable;
 
