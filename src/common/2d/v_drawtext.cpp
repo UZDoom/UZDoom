@@ -281,7 +281,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		const Trex::Atlas& atlas = *font->GetDynamicFontAtlas();
 		Trex::TextShaper& shaper = *font->GetDynamicTextShaper();
 		Trex::ShapedGlyphs glyphs;
-		FString            strippedString = FString::RemoveColorTags(FString((const char *)string));
+		//FString            strippedString = FString::RemoveColorTags(FString((const char *)string));
+		FString            strippedString = (const char *)string;
 		if constexpr (std::is_same_v<chartype, char>)
 		{
 			glyphs = shaper.ShapeUtf8(
@@ -311,6 +312,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		const double    shrinkScale            = font->GetInvSupersampleScale();
 		const double    baseFontHeight         = font->GetHeight();
 		FGameTexture *const atlasTexture       = font->GetDynamicFontAtlasTexture();
+		size_t              strPos                 = 0;
+		EColorRange         currentcolor = CR_UNTRANSLATED;
 		for (const Trex::ShapedGlyph &g : glyphs)
 		{
 			const double cx = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
@@ -326,10 +329,27 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			atlasFragmentDrawParms.bilinear   = 1;
 			atlasFragmentDrawParms.destwidth *= (shrinkScale);
 			atlasFragmentDrawParms.destheight *= (shrinkScale);
+
+			const chartype *substr = reinterpret_cast<const chartype *>(&string[strPos]);
+			if (GetCharFromString(substr) == TEXTCOLOR_ESCAPE)
+			{
+				
+				EColorRange newcolor = V_ParseFontColor(substr, normalcolor , normalcolor-1);
+				if (newcolor != CR_UNDEFINED)
+				{
+					currentcolor = newcolor;
+					PalEntry color;
+					auto trans        = font->GetColorTranslation((EColorRange)normalcolor, &color);
+					atlasFragmentDrawParms.color = MAKEARGB(255, color.r, color.g, color.b);
+					strPos++;
+					continue;
+				}
+			}
 			
 			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
 			cursorx += (g.xAdvance) * scalex * shrinkScale;
 			cursory += (g.yAdvance) * scaley * shrinkScale;
+			strPos++;
 		}
 		return;
 	}
