@@ -984,12 +984,16 @@ bool FFont::CanPrint(const uint8_t *string) const
 //
 //==========================================================================
 
+
+
 int FFont::StringWidth(const uint8_t *string, int spacing) const
 {
 	if (IsValidDynamicFont())
 	{
+		FString fString          = FString::RemoveColorTags(FString((const char *)string));
 		auto &shaper = *DynamicTextShaper;
-		auto glyphs = shaper.ShapeUtf8(std::span<const char>((const char*)string, strlen((const char*)string)));
+		auto    utf8span = std::span<const char>(fString.GetChars(), fString.Len());
+		auto glyphs = shaper.ShapeUtf8(utf8span);
 		return Trex::TextShaper::Measure(glyphs).width * InvSupersampleFactor;
 	}
 

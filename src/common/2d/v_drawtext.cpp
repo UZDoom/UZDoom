@@ -281,21 +281,24 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		const Trex::Atlas& atlas = *font->GetDynamicFontAtlas();
 		Trex::TextShaper& shaper = *font->GetDynamicTextShaper();
 		Trex::ShapedGlyphs glyphs;
+		FString            strippedString = FString::RemoveColorTags(FString((const char *)string));
 		if constexpr (std::is_same_v<chartype, char>)
 		{
-			glyphs = shaper.ShapeUtf8(std::span<const chartype>(string, std::char_traits<char>::length(string)));
+			glyphs = shaper.ShapeUtf8(
+				std::span<const chartype>(strippedString.GetChars(), std::char_traits<char>::length(strippedString.GetChars())));
 		}
 		else if constexpr (std::is_same_v<chartype, uint8_t>)
 		{
-			glyphs = shaper.ShapeUtf8(std::span<const char>((const char*)string, std::char_traits<uint8_t>::length(string)));
+			glyphs = shaper.ShapeUtf8(std::span<const char>((const char *)strippedString.GetChars(), std::char_traits<uint8_t>::length((uint8_t*)strippedString.GetChars())));
 		}
 		else if constexpr (std::is_same_v<chartype, char32_t>)
 		{
-			glyphs = shaper.ShapeUtf32(std::span<const chartype>(string, std::char_traits<chartype>::length(string)));
+			glyphs = shaper.ShapeUtf32(std::span<const chartype>((chartype *)strippedString.GetChars(), std::char_traits<chartype>::length((chartype*)strippedString.GetChars())));
 		}
 		else if constexpr (std::is_same_v<chartype, char16_t>)
 		{
-			glyphs = shaper.ShapeUnicode(std::span<const chartype>(string, std::char_traits<chartype>::length(string)));
+			glyphs = shaper.ShapeUnicode(std::span<const chartype>(
+				(chartype *)strippedString.GetChars(), std::char_traits<chartype>::length(strippedString.GetChars())));
 		}
 		else
 		{
