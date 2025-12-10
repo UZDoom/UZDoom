@@ -314,6 +314,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		FGameTexture *const atlasTexture       = font->GetDynamicFontAtlasTexture();
 		size_t              strPos                 = 0;
 		EColorRange         currentcolor = CR_UNTRANSLATED;
+		bool                insideEscapeSequence   = false;
+		bool                insideNamedColorTagSequence = false;
 		for (const Trex::ShapedGlyph &g : glyphs)
 		{
 			const double cx = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
@@ -331,10 +333,12 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			atlasFragmentDrawParms.destheight *= (shrinkScale);
 
 			const chartype *substr = reinterpret_cast<const chartype *>(&string[strPos]);
-			if (GetCharFromString(substr) == TEXTCOLOR_ESCAPE)
+
+			auto nextChar = GetCharFromString(substr);
+			if (nextChar == TEXTCOLOR_ESCAPE)
 			{
-				
-				EColorRange newcolor = V_ParseFontColor(substr, normalcolor , normalcolor-1);
+				insideEscapeSequence = true;
+				EColorRange newcolor = V_ParseFontColor(substr, normalcolor , normalcolor);
 				if (newcolor != CR_UNDEFINED)
 				{
 					currentcolor = newcolor;
@@ -343,6 +347,38 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 					strPos++;
 					continue;
 				}
+			}
+
+			
+			if (insideEscapeSequence && nextChar == '[')
+			{
+				insideNamedColorTagSequence = true;
+				strPos++;
+				continue;
+			}
+			else if (insideNamedColorTagSequence && insideEscapeSequence && nextChar == ']')
+			{
+				insideEscapeSequence = false;
+				insideNamedColorTagSequence = false;
+				strPos++;
+				continue;
+			}
+			else if (insideNamedColorTagSequence)
+			{
+				strPos++;
+				continue;
+			}
+			else if (insideEscapeSequence && nextChar != TEXTCOLOR_ESCAPE && nextChar != '[')
+			{
+				insideEscapeSequence        = false;
+				insideNamedColorTagSequence = false;
+				strPos++;
+				continue;
+			}
+			else if (insideEscapeSequence)
+			{
+				strPos++;
+				continue;
 			}
 			
 			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);

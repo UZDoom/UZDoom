@@ -112,6 +112,34 @@ FString FString::RemoveColorTags(const FString &srcString)
 	newString.Substitute(TEXTCOLOR_BRICK, "");
 	newString.Substitute(TEXTCOLOR_TAN, "");
 	newString.Substitute(TEXTCOLOR_ESCAPE, "");
+
+	//also need to strip named color tags. Make sure everything in EColorRange is covered.
+	newString.Substitute("[BLACK]", "");
+	newString.Substitute("[BLUE]", "");
+	newString.Substitute("[TEAL]", "");
+	newString.Substitute("[ORANGE]", "");
+	newString.Substitute("[GOLD]", "");
+	newString.Substitute("[GREEN]", "");
+	newString.Substitute("[YELLOW]", "");
+	newString.Substitute("[PURPLE]", "");
+	newString.Substitute("[CYAN]", "");
+	newString.Substitute("[BRICK]", "");
+	newString.Substitute("[TAN]", "");
+	newString.Substitute("[GRAY]", "");
+	newString.Substitute("[GREY]", "");
+	newString.Substitute("[GREY]", "");
+	newString.Substitute("[BROWN]", "");
+	newString.Substitute("[RED]", "");
+	newString.Substitute("[WHITE]", "");
+	newString.Substitute("[UNTRANSLATED]", "");
+	newString.Substitute("[LIGHTBLUE]", "");
+	newString.Substitute("[CREAM]", "");
+	newString.Substitute("[OLIVE]", "");
+	newString.Substitute("[DARKGREEN]", "");
+	newString.Substitute("[DARKRED]", "");
+	newString.Substitute("[DARKBROWN]", "");
+	newString.Substitute("[DARKGRAY]", "");
+	newString.Substitute("[ICE]", "");
 	return newString;
 }
 
