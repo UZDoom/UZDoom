@@ -159,7 +159,14 @@ class OptionMenu : Menu
 			}
 		}
 
-		if (mDesc.mSelectedItem == -1) mDesc.mSelectedItem = FirstSelectable();
+		if (mDesc.mSelectedItem == -1)
+		{
+			mDesc.mSelectedItem = FirstSelectable();
+			if (mDesc.mSelectedItem >= 0 && mDesc.mItems[mDesc.mSelectedItem].mLabel == "$OS_TITLE")
+			{
+				mDesc.mSelectedItem = FirstSelectable(mDesc.mSelectedItem);
+			}
+		}
 		mDesc.CalcIndent();
 
 		// notify all items that the menu was just created.
@@ -335,17 +342,17 @@ class OptionMenu : Menu
 	//
 	//=============================================================================
 
-	int FirstSelectable()
+	int FirstSelectable(int start = -1)
 	{
 		// Go down to the first selectable item
-		int i = -1;
+		int i = start;
 		do
 		{
 			i++;
 		}
 		while (i < mDesc.mItems.Size() && !(mDesc.mItems[i].Selectable() && mDesc.mItems[i].Visible()));
 		if (i>=0 && i < mDesc.mItems.Size()) return i;
-		else return -1;
+		else return start;
 	}
 
 	//=============================================================================
