@@ -1,14 +1,15 @@
 name: Auto-Comment on PR
+
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
 
-permissions:
-  pull-requests: write
-  issues: write
-
 jobs:
   welcome:
+    permissions:
+      pull-requests: write
+      contents: read
+      issues: write
     runs-on: ubuntu-latest
     steps:
       - name: Post Comment
