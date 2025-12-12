@@ -5,6 +5,8 @@
 OptionMenu "OptionsMenuSimple" protected
 {
 	Title "$OPTMNU_TITLE"
+	Submenu "$OS_TITLE", "os_Menu"
+	StaticText " "
 	Submenu "$OPTMNU_CONTROLS",			"CustomizeControls"
 	Submenu "$OPTMNU_MOUSE",			"MouseOptionsSimple"
 	Submenu "$OPTMNU_JOYSTICK",			"JoystickOptions"
@@ -17,8 +19,6 @@ OptionMenu "OptionsMenuSimple" protected
 	Submenu "$HUDMNU_SCALEOPT",			"ScalingOptionsSimple"
 	StaticText " "
 	Submenu "$OPTMNU_MISCELLANEOUS",	"MiscOptionsSimple"	
-	StaticText " "
-	Submenu "$OS_TITLE", "os_Menu"
 	StaticText " "
 	Submenu "$OPTMNU_FULLOPTIONS", "OptionsMenuFull"
 	StaticText " "

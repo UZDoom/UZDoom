@@ -356,6 +356,8 @@ DefaultOptionMenu
 OptionMenu "OptionsMenu" protected
 {
 	Title "$OPTMNU_TITLE"
+	Submenu "$OS_TITLE", "os_Menu"
+	StaticText " "
 	Submenu "$OPTMNU_CONTROLS",			"CustomizeControls"
 	Submenu "$OPTMNU_MOUSE",			"MouseOptions"
 	Submenu "$OPTMNU_JOYSTICK",			"JoystickOptions"
@@ -373,9 +375,7 @@ OptionMenu "OptionsMenu" protected
 	Submenu "$OPTMNU_DISPLAY",			"VideoOptions"
 	Submenu "$OPTMNU_VIDEO",			"VideoModeMenu"
 	StaticText " "
-	Submenu "$OS_TITLE", "os_Menu"
 	Option "$OPTMNU_SIMPLEON",			"m_simpleoptions", "OnOff"
-	
 	StaticText " "
 	SafeCommand	"$OPTMNU_DEFAULTS",		"reset2defaults"
 	SafeCommand	"$OPTMNU_RESETTOSAVED",	"reset2saved"
