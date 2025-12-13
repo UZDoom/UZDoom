@@ -124,6 +124,8 @@ public:
 	inline int StringWidth (const char *str, int spacing = 0) const { return StringWidth ((const uint8_t *)str, spacing); }
 	inline int StringWidth (const FString &str, int spacing = 0) const { return StringWidth ((const uint8_t *)str.GetChars(), spacing); }
 
+	bool CanPrint(const char32_t utf32char) const;
+
 	// Checks if the font contains all characters to print this text.
 	bool CanPrint(const uint8_t *str) const;
 	inline bool CanPrint(const char *str) const { return CanPrint((const uint8_t *)str); }

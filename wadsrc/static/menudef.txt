@@ -1723,6 +1723,56 @@ OptionMenu FontOptions protected
 	Title "$HUDMNU_FONTOPTIONS"
 	Option "$FONTMNU_LOG",					"log_vgafont", "YesNo"
 	Option "$FONTMNU_DLG",					"dlg_vgafont", "YesNo"
+	StaticText ""
+	Option "Use Generic UI",				"ui_generic", "YesNo"
+	Option "NewSmallFont override",			"fontoverride_NewSmallFont", "DynamicFontOptions"
+	Option "NewSmallFont override JP",		"fontoverride_NewSmallFontJP", "DynamicFontOptionsJP"
+	Option "NewSmallFont override KO",		"fontoverride_NewSmallFontKR", "DynamicFontOptionsKO"
+	StaticText ""
+	StaticText "FALLBACKS"
+	Option "Fallback Font",			"fontoverride_Fallback", "DynamicFontFallbackOptions"
+	Option "Fallback Font JP",			"fontoverride_FallbackJP", "DynamicFontFallbackOptionsJP"
+	Option "Fallback Font KO",			"fontoverride_FallbackKR", "DynamicFontFallbackOptionsKO"
+}
+
+//TODO: dynamically populate with known dynamic fonts
+OptionString DynamicFontOptions
+{
+	"FO_DEFAULT", "Don't override"
+	"LEXENDDE", "Lexend Deca"
+	"IBMPLEXS", "IBM Plex Sans"
+}
+
+//TODO: dynamically populate with known dynamic fonts
+OptionString DynamicFontFallbackOptions
+{
+	"IBMPLEXS", "IBM Plex Sans"
+}
+
+//TODO: dynamically populate with known dynamic fonts
+OptionString DynamicFontFallbackOptionsJP
+{
+	"IBMPLEXJ", "IBM Plex Sans JP"
+	"KOSUGIMA",	"Kosugi Maru"
+}
+
+OptionString DynamicFontOptionsKO
+{
+	"IBMPLEXK", "IBM Plex Sans KR"
+}
+
+//specific language fallbacks are defined here since you 100% need a font that actually has the required glyphs.
+OptionString DynamicFontOptionsJP
+{
+	"FO_DEFAULT", "Don't override"
+	"IBMPLEXJ", "IBM Plex Sans JP"
+	"KOSUGIMA",	"Kosugi Maru"
+}
+
+OptionString DynamicFontOptionsKO
+{
+	"FO_DEFAULT", "Don't override"
+	"IBMPLEXK", "IBM Plex Sans KR"
 }
 
 /*=======================================

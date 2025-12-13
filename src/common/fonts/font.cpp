@@ -50,10 +50,32 @@
 #include "Trex/Atlas.hpp"
 #include "texturemanager.h"
 #include "Trex/TextShaper.hpp"
+#include "c_cvars.h"
 
 TArray<FBitmap> sheetBitmaps;
 
+CVAR(String, fontoverride_Fallback, "IBMPLEXS", CVAR_ARCHIVE);
 
+CVAR(String, fontoverride_FallbackJP, "IBMPLEXJ", CVAR_ARCHIVE);
+CVAR(String, fontoverride_FallbackKR, "IBMPLEXK", CVAR_ARCHIVE);
+
+void SetNewSmallFontOverride(const char *newFont);
+CUSTOM_CVAR(String, fontoverride_NewSmallFont, "IBMPLEXS", CVAR_ARCHIVE)
+{
+	SetNewSmallFontOverride(self);
+}
+
+void SetNewSmallFontOverrideJP(const char *newFont);
+CUSTOM_CVAR(String, fontoverride_NewSmallFontJP, "IBMPLEXJ", CVAR_ARCHIVE)
+{
+	SetNewSmallFontOverrideJP(self);
+}
+
+void SetNewSmallFontOverrideKR(const char *newFont);
+CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "IBMPLEXK", CVAR_ARCHIVE)
+{
+	SetNewSmallFontOverrideKR(self);
+}
 //==========================================================================
 //
 // FFont :: FFont
@@ -574,13 +596,40 @@ FFont *FindDynamicFallbackFontForLanguage(const char *lang)
 	FString language = lang;
 	if (language.CompareNoCase("ko")==0)
 	{
-		return V_GetFont("IBMPLEXK");
+		return V_GetFont(*fontoverride_FallbackKR);
 	}
 	else if (language.CompareNoCase("jp") == 0)
 	{
-		return V_GetFont("IBMPLEXJ");
+		return V_GetFont(*fontoverride_FallbackJP);
 	}
-	return V_GetFont("IBMPLEXS");
+	return V_GetFont(*fontoverride_Fallback);
+}
+
+void SetNewSmallFontOverride(const char* newFont)
+{
+	NewSmallFont = V_GetFont(newFont);
+	if (!NewSmallFont)
+	{
+		NewSmallFont = FindDynamicFallbackFontForLanguage("en");
+	}
+}
+
+void SetNewSmallFontOverrideJP(const char *newFont)
+{
+	NewSmallFont = V_GetFont(newFont);
+	if (!NewSmallFont)
+	{
+		NewSmallFont = FindDynamicFallbackFontForLanguage("jp");
+	}
+}
+
+void SetNewSmallFontOverrideKR(const char *newFont)
+{
+	NewSmallFont = V_GetFont(newFont);
+	if (!NewSmallFont)
+	{
+		NewSmallFont = FindDynamicFallbackFontForLanguage("ko");
+	}
 }
 
 void FFont::UpdateFontDynamicFallbacks(const char* lang)
@@ -597,9 +646,18 @@ void FFont::UpdateFontDynamicFallbacks(const char* lang)
 		font = font->Next;
 	}
 
-	//the primary small font should also be changed so correct text shaping is used in menus.
-	//TODO: when the configuration menu is added, we'll need to change this
-	NewSmallFont = FindDynamicFallbackFontForLanguage(lang);
+	if (strcmp(lang, "jp") == 0)
+	{
+		NewSmallFont = V_GetFont(*fontoverride_NewSmallFontJP);
+	}
+	else if (strcmp(lang, "ko") == 0)
+	{
+		NewSmallFont = V_GetFont(*fontoverride_NewSmallFontKR);
+	}
+	else 
+	{
+		NewSmallFont = V_GetFont(*fontoverride_NewSmallFont);
+	}
 }
 
 //==========================================================================
@@ -920,6 +978,15 @@ double GetBottomAlignOffset(FFont *font, int c)
 	if (texc) offset += texc->GetDisplayTopOffset();
 	if (tex_zero) offset += -tex_zero->GetDisplayTopOffset() + tex_zero->GetDisplayHeight();
 	return offset;
+}
+
+bool FFont::CanPrint(const char32_t utf32char) const
+{
+	if (Type == EFontType::Dynamic)
+	{
+		return DynamicFontAtlas->GetFont()->GetGlyphIndex(utf32char);
+	}
+	return false;
 }
 
 //==========================================================================

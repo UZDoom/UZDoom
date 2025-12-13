@@ -41,6 +41,9 @@
 #include <span>
 #include <string>
 #include "Trex/Atlas.hpp"
+#include <vector>
+#include <string_view>
+#include "simdutf.h"
 
 int ListGetInt(VMVa_List &tags);
 
@@ -260,6 +263,99 @@ DEFINE_ACTION_FUNCTION(FCanvas, DrawChar)
 // This is only needed as a dummy. The code using wide strings does not need color control.
 EColorRange V_ParseFontColor(const char32_t *&color_value, int normalcolor, int boldcolor) { return CR_UNTRANSLATED; }
 
+struct IntermediateDrawString
+{
+	std::basic_string<char32_t> StringUTF32;
+	Trex::ShapedGlyphs TrexGlyphs;
+	std::vector<int>  Colors;
+	std::vector<int>  Codepoints;
+	FFont*                   Font;
+};
+
+//split the strings into substrings based on what glyphs are supported by the target fonts.
+//shape each substring separately.
+void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, FFont* font, int normalcolor, std::vector<IntermediateDrawString> &outStrings)
+{
+	outStrings.clear();
+	
+	auto* currentDrawString = &outStrings.emplace_back(IntermediateDrawString());
+	currentDrawString->Font = font;
+	bool insideEscapeSequence = false;
+	bool insideNamedColorTagSequence = false;
+	int  currentcolor = 0;
+	bool isInFallback                = false;
+	std::u32string colorSubStr;
+	for (int i =0; i < utf32SrcString.size(); ++i)
+	{
+		const char32_t& srcChar = utf32SrcString[i];
+		if (srcChar == TEXTCOLOR_ESCAPE)
+		{
+			insideEscapeSequence = true;
+		}
+
+		if (insideEscapeSequence && srcChar == '[')
+		{
+			insideNamedColorTagSequence = true;
+			continue;
+		}
+		else if (insideNamedColorTagSequence && srcChar != ']')
+		{
+			colorSubStr += srcChar;
+			continue;
+		}
+		else if (insideNamedColorTagSequence && srcChar == ']')
+		{
+			insideEscapeSequence        = false;
+			insideNamedColorTagSequence = false;
+			std::string utf8ColorSubStr;
+			utf8ColorSubStr.resize(
+				simdutf::utf8_length_from_utf32(std::span<const char32_t>(colorSubStr.cbegin(), colorSubStr.cend())));
+			simdutf::convert_utf32_to_utf8(colorSubStr.data(), colorSubStr.size(), utf8ColorSubStr.data());
+			EColorRange newcolor        = V_FindFontColor(FName(utf8ColorSubStr.data()));
+			if (newcolor != CR_UNDEFINED)
+			{
+				currentcolor = V_LogColorFromColorRange(newcolor);
+				continue;
+			}
+			continue;
+		}
+		else if (insideEscapeSequence && srcChar != TEXTCOLOR_ESCAPE && srcChar != '[')
+		{
+			insideEscapeSequence        = false;
+			insideNamedColorTagSequence = false;
+		}
+		else if (insideEscapeSequence)
+		{
+			continue;
+		}
+		//is this codepoint supported by the target font? If no, split
+		//TODO: if we were writing to fallback and we encounter chars we can render with the desired font again,
+		//go back to writing with the desired font
+		if (!font->CanPrint(srcChar))
+		{
+			currentDrawString = &outStrings.emplace_back(IntermediateDrawString());
+			currentDrawString->Font = font->GetDynamicFontFallback();
+			isInFallback            = true;
+		}
+		else if (isInFallback && font->CanPrint(srcChar))
+		{
+			currentDrawString       = &outStrings.emplace_back(IntermediateDrawString());
+			currentDrawString->Font = font;
+			isInFallback            = false;
+		}
+		currentDrawString->StringUTF32 += srcChar;
+		currentDrawString->Codepoints.push_back(srcChar);
+		currentDrawString->Colors.push_back(currentcolor);
+	}
+
+	for (auto &s : outStrings)
+	{
+		auto res = s.Font->GetDynamicTextShaper()->ShapeUtf32(
+			std::span<const char32_t>(s.StringUTF32.begin(), s.StringUTF32.end()));
+		s.TrexGlyphs = res;
+	}
+}
+
 template<class chartype>
 void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string, DrawParms &parms)
 {
@@ -278,113 +374,70 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 
 	if (font && font->IsValidDynamicFont())
 	{
-		const Trex::Atlas& atlas = *font->GetDynamicFontAtlas();
-		Trex::TextShaper& shaper = *font->GetDynamicTextShaper();
-		Trex::ShapedGlyphs glyphs;
-		//FString            strippedString = FString::RemoveColorTags(FString((const char *)string));
-		FString            strippedString = (const char *)string;
-		if constexpr (std::is_same_v<chartype, char>)
+		//convert string to utf32 for straightforward and debuggable string parsing.
+		std::vector<IntermediateDrawString> DrawStrings;
+		std::u32string utf32String;
+		
+		if constexpr (std::is_same_v<chartype, uint8_t> || std::is_same_v<chartype, char> ||
+		              std::is_same_v<chartype, char8_t>)
 		{
-			glyphs = shaper.ShapeUtf8(
-				std::span<const chartype>(strippedString.GetChars(), std::char_traits<char>::length(strippedString.GetChars())));
-		}
-		else if constexpr (std::is_same_v<chartype, uint8_t>)
-		{
-			glyphs = shaper.ShapeUtf8(std::span<const char>((const char *)strippedString.GetChars(), std::char_traits<uint8_t>::length((uint8_t*)strippedString.GetChars())));
-		}
-		else if constexpr (std::is_same_v<chartype, char32_t>)
-		{
-			glyphs = shaper.ShapeUtf32(std::span<const chartype>((chartype *)strippedString.GetChars(), std::char_traits<chartype>::length((chartype*)strippedString.GetChars())));
+			utf32String.resize(
+				simdutf::utf32_length_from_utf8((const char *)string, std::char_traits<chartype>::length(string)),
+				'\0');
+			simdutf::convert_utf8_to_utf32((const char*)string, std::char_traits<chartype>::length(string), utf32String.data());
 		}
 		else if constexpr (std::is_same_v<chartype, char16_t>)
 		{
-			glyphs = shaper.ShapeUnicode(std::span<const chartype>(
-				(chartype *)strippedString.GetChars(), std::char_traits<chartype>::length(strippedString.GetChars())));
+			utf32String.resize(
+				simdutf::utf32_length_from_utf16((const char16_t*)string, std::char_traits<chartype>::length(string)),
+				'\0');
+			simdutf::convert_utf16_to_utf32(string, std::char_traits<chartype>::length(string), utf32String);
 		}
-		else
+		else if constexpr (std::is_same_v<chartype, char32_t>)
 		{
-			static_assert(false, "unsupported char type");
+			utf32String = string;
 		}
-
+		assert(simdutf::validate_utf32(utf32String.c_str(), utf32String.length()));
+		ParseIntoIntermediateDrawStrings(utf32String, font, normalcolor, DrawStrings);
+		
 		double cursorx = x;
 		double cursory = y;
-		DrawParms atlasFragmentDrawParms = parms;
-		const double    shrinkScale            = font->GetInvSupersampleScale();
-		const double    baseFontHeight         = font->GetHeight();
-		FGameTexture *const atlasTexture       = font->GetDynamicFontAtlasTexture();
-		size_t              strPos                 = 0;
-		EColorRange         currentcolor = CR_UNTRANSLATED;
-		bool                insideEscapeSequence   = false;
-		bool                insideNamedColorTagSequence = false;
-		for (const Trex::ShapedGlyph &g : glyphs)
+		for (auto &s : DrawStrings)
 		{
-			const double cx = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
-			const double heightAdjust = 1.0 / font->GetInvSupersampleScale();
-			const double cy = cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) + g.yOffset - g.info.bearingY);
-			const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
-			const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
-			const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
-			const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
-			SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
-			atlasFragmentDrawParms.masked = true;
-			atlasFragmentDrawParms.fortext = true;
-			atlasFragmentDrawParms.bilinear   = 1;
-			atlasFragmentDrawParms.destwidth *= (shrinkScale);
-			atlasFragmentDrawParms.destheight *= (shrinkScale);
-
-			const chartype *substr = reinterpret_cast<const chartype *>(&string[strPos]);
-
-			auto nextChar = GetCharFromString(substr);
-			if (nextChar == TEXTCOLOR_ESCAPE)
+			DrawParms           atlasFragmentDrawParms      = parms;
+			const double        shrinkScale                 = s.Font->GetInvSupersampleScale();
+			const double        baseFontHeight              = s.Font->GetHeight();
+			FGameTexture *const atlasTexture                = s.Font->GetDynamicFontAtlasTexture();
+			const Trex::Atlas  &atlas                       = *s.Font->GetDynamicFontAtlas();
+			Trex::TextShaper   &shaper                      = *s.Font->GetDynamicTextShaper();
+			
+			for (int i = 0; i < s.TrexGlyphs.size(); ++i)
 			{
-				insideEscapeSequence = true;
-				EColorRange newcolor = V_ParseFontColor(substr, normalcolor , normalcolor);
-				if (newcolor != CR_UNDEFINED)
+				const Trex::ShapedGlyph &g = s.TrexGlyphs[i];
+				const double cx           = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
+				const double heightAdjust = 1.0 / s.Font->GetInvSupersampleScale();
+				const double cy =
+					cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) + g.yOffset - g.info.bearingY);
+				const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
+				const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
+				const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
+				const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
+				SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
+				atlasFragmentDrawParms.masked  = true;
+				atlasFragmentDrawParms.fortext = true;
+				atlasFragmentDrawParms.bilinear   = 1;
+				atlasFragmentDrawParms.destwidth *= (shrinkScale);
+				atlasFragmentDrawParms.destheight *= (shrinkScale);
+				if (s.Colors[i] != 0)
 				{
-					currentcolor = newcolor;
-					atlasFragmentDrawParms.color = V_LogColorFromColorRange(newcolor);
+					atlasFragmentDrawParms.color = s.Colors[i];
 					atlasFragmentDrawParms.color.a = 255;
-					strPos++;
-					continue;
 				}
-			}
 
-			
-			if (insideEscapeSequence && nextChar == '[')
-			{
-				insideNamedColorTagSequence = true;
-				strPos++;
-				continue;
+				drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
+				cursorx += (g.xAdvance) * scalex * shrinkScale;
+				cursory += (g.yAdvance) * scaley * shrinkScale;
 			}
-			else if (insideNamedColorTagSequence && insideEscapeSequence && nextChar == ']')
-			{
-				insideEscapeSequence = false;
-				insideNamedColorTagSequence = false;
-				strPos++;
-				continue;
-			}
-			else if (insideNamedColorTagSequence)
-			{
-				strPos++;
-				continue;
-			}
-			else if (insideEscapeSequence && nextChar != TEXTCOLOR_ESCAPE && nextChar != '[')
-			{
-				insideEscapeSequence        = false;
-				insideNamedColorTagSequence = false;
-				strPos++;
-				continue;
-			}
-			else if (insideEscapeSequence)
-			{
-				strPos++;
-				continue;
-			}
-			
-			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
-			cursorx += (g.xAdvance) * scalex * shrinkScale;
-			cursory += (g.yAdvance) * scaley * shrinkScale;
-			strPos++;
 		}
 		return;
 	}
@@ -491,13 +544,8 @@ void DrawText(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double 
 		return;
 	}
 
-	if (!font->CanPrint(string))
-	{
-		font = font->GetDynamicFontFallback();
-	}
-
 	const char *txt = (parms.localize && string[0] == '$') ? GStrings.GetString(string + 1) : string;
-	DrawTextCommon(drawer, font, normalcolor, x, y, (const uint8_t*)string, parms);
+	DrawTextCommon<uint8_t>(drawer, font, normalcolor, x, y, (const uint8_t*)string, parms);
 }
 
 
@@ -536,10 +584,6 @@ void DrawText(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double 
 		return;
 	}
 	const char *txt = (parms.localize && string.Len() >= 2 && string[0] == '$') ? GStrings.GetString(string.GetChars() + 1) : string.GetChars();
-	if (font && !font->CanPrint(txt))
-	{
-		font = font->GetDynamicFontFallback();
-	}
 
 	DrawTextCommon(drawer, font, normalcolor, x, y, (uint8_t*)txt, parms);
 }
