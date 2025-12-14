@@ -2383,7 +2383,7 @@ OptionMenu ModReplayerOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	Option "$ACCMNU_TOOLTIP_CAP", "m_tooltip_capwidth", "OnOff"
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	Option "$ACCMNU_TOOLIP_SCALE", "m_tooltip_small", "OffOn"
+	Option "$ACCMNU_TOOLTIP_SCALE", "m_tooltip_small", "OffOn"
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	
 	StaticText ""
