@@ -48,6 +48,7 @@
 #include "fontinternals.h"
 #include "fs_files.h"
 #include <span>
+#include "c_cvars.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -224,7 +225,8 @@ void V_InitCustomFonts()
 		for (auto *font : fontsWeAdded)
 		{
 			const FName  fontName        = font->GetName();
-			FFont *const dynamicFallback = V_GetFont("IBMPLEXS");
+			auto         cvar            = FindCVar("fontoverride_Fallback", nullptr);
+			FFont *const dynamicFallback = V_GetFont(cvar->GetHumanString());
 			font->SetDynamicFallback(dynamicFallback);
 		}
 	}
