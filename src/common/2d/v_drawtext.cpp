@@ -291,9 +291,47 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 		if (srcChar == TEXTCOLOR_ESCAPE)
 		{
 			insideEscapeSequence = true;
+			continue;
 		}
 
-		if (insideEscapeSequence && srcChar == '[')
+		if (insideEscapeSequence && !insideNamedColorTagSequence && srcChar != '[')
+		{
+			if (srcChar == '+')
+			{
+				currentcolor         = FindCVar("msgmidcolor", nullptr)->ToInt();
+				insideEscapeSequence = false;
+				continue;
+			}
+			else if (srcChar == '-')
+			{
+				currentcolor         = FindCVar("msgmidcolor2", nullptr)->ToInt();
+				insideEscapeSequence = false;
+				continue;
+			}
+			else if (srcChar == '*')
+			{
+				// use chat color
+				currentcolor         = FindCVar("msg3color", nullptr)->ToInt();
+				insideEscapeSequence = false;
+				continue;
+			}
+			else if (srcChar == '!')
+			{
+				//use team chat color
+				currentcolor         = FindCVar("msg4color", nullptr)->ToInt();
+				insideEscapeSequence   = false;
+				continue;
+			}
+			else if (srcChar != '[')
+			{
+				// each letter a,b,c etc maps to 1,2,3 .. and so on in EColorRange
+				EColorRange colorRange = (EColorRange)((int)srcChar - (int)'a');
+				currentcolor           = V_LogColorFromColorRange(colorRange);
+				insideEscapeSequence   = false;
+				continue;
+			}
+		}
+		else if (insideEscapeSequence && srcChar == '[')
 		{
 			insideNamedColorTagSequence = true;
 			continue;
