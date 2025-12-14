@@ -434,6 +434,17 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 					atlasFragmentDrawParms.color.a = 255;
 				}
 
+				// TODO: cvar
+				const bool drawDropShadow = true;
+				if (drawDropShadow)
+				{
+					auto shadowAtlasFragmentDrawParms = atlasFragmentDrawParms;
+					shadowAtlasFragmentDrawParms.x += 3.0*scalex;
+					shadowAtlasFragmentDrawParms.y += 3.0*scaley;
+					shadowAtlasFragmentDrawParms.color = MAKEARGB(255, 33, 33, 33);
+					drawer->AddTexture(atlasTexture, shadowAtlasFragmentDrawParms);
+				}
+
 				drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
 				cursorx += (g.xAdvance) * scalex * shrinkScale;
 				cursory += (g.yAdvance) * scaley * shrinkScale;
