@@ -2,10 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-11 03:35+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-"
+"games/chex-quest-3-filter/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15-dev\n"
 "HeaderCode: hr\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 # Flem = phlegm
 msgid "GOTBLUEFLEM"
@@ -18,31 +26,31 @@ msgid "GOTREDFLEM"
 msgstr "Ključ crvene sluzi je pokupljen."
 
 msgid "GOTGOGGLES"
-msgstr "Ultra naočale su pronađene."
+msgstr "Ultra naočale su pronađene"
 
 msgid "PD_BLUECO"
-msgstr "Potreban ti je plavi ključ da aktiviraš ovaj predmet."
+msgstr "Potreban ti je plavi ključ da aktiviraš ovaj predmet"
 
 msgid "PD_REDCO"
-msgstr "Potreban ti je crveni ključ da aktiviraš ovaj predmet."
+msgstr "Potreban ti je crveni ključ da aktiviraš ovaj predmet"
 
 msgid "PD_YELLOWCO"
-msgstr "Potreban ti je žuti ključ da aktiviraš ovaj predmet."
+msgstr "Potreban ti je žuti ključ da aktiviraš ovaj predmet"
 
 msgid "PD_BLUEFO"
-msgstr "Potreban ti je ključ plave sluzi da aktiviraš ovaj predmet."
+msgstr "Potreban ti je ključ plave sluzi da aktiviraš ovaj predmet"
 
 msgid "PD_REDFO"
-msgstr "Potreban ti je ključ crvene sluzi da aktiviraš ovaj predmet."
+msgstr "Potreban ti je ključ crvene sluzi da aktiviraš ovaj predmet"
 
 msgid "PD_YELLOWFO"
-msgstr "Potreban ti je ključ žute sluzi da aktiviraš ovaj predmet."
+msgstr "Potreban ti je ključ žute sluzi da aktiviraš ovaj predmet"
 
 msgid "PICKUP_PISTOL_DROPPED"
 msgstr "Zorčer je pokupljen."
 
 msgid "STSTR_KFAADDED"
-msgstr "Zorč i ključevi su dodani."
+msgstr "Zorč i ključevi su dodani"
 
 msgid "HUSTR_E1M1"
 msgstr "E1M1: Zona slijetanja"
@@ -120,22 +128,22 @@ msgid "CC_HERO"
 msgstr "Chex ratnik"
 
 msgid "PD_BLUEC"
-msgstr "Potreban ti je plavi ključ da otvoriš ova vrata."
+msgstr "Potreban ti je plavi ključ da otvoriš ova vrata"
 
 msgid "PD_REDC"
-msgstr "Potreban ti je crveni ključ da otvoriš ova vrata."
+msgstr "Potreban ti je crveni ključ da otvoriš ova vrata"
 
 msgid "PD_YELLOWC"
-msgstr "Potreban ti je žuti ključ da otvoriš ova vrata."
+msgstr "Potreban ti je žuti ključ da otvoriš ova vrata"
 
 msgid "PD_BLUEF"
-msgstr "Potreban ti je ključ plave sluzi da otvoriš ova vrata."
+msgstr "Potreban ti je ključ plave sluzi da otvoriš ova vrata"
 
 msgid "PD_REDF"
-msgstr "Potreban ti je ključ crvene sluzi da otvoriš ova vrata."
+msgstr "Potreban ti je ključ crvene sluzi da otvoriš ova vrata"
 
 msgid "PD_YELLOWF"
-msgstr "Potreban ti je ključ žute sluzi da otvoriš ova vrata."
+msgstr "Potreban ti je ključ žute sluzi da otvoriš ova vrata"
 
 msgid "OB_SLIME"
 msgstr "%o se utapa u malo sluzi."
@@ -181,9 +189,14 @@ msgstr "%k lijenčari %o."
 
 msgid "E1TEXT"
 msgstr ""
-"Nakon što si poslao/la čudovišnu Flembranu natrag u vlastitu dimenziju, oslobađaš zatočenike. Ipak, flemoidi su posvuda!\n"
-"Ti i zatočenici se probijate do tvog svemirskog broda. Flemoidi gađaju tvoj brod sa sluzi, ali ti usko bježiš u orbitu.\n"
-"Tijekom povrata ti se čestita za odvažno spašavanje, ali izdaješ upozorenje...\n"
+"Nakon što si poslao/la čudovišnu\n"
+"Flembranu natrag u vlastitu dimenziju,\n"
+"oslobađaš zatočenike. Ipak, flemoidi\n"
+"su posvuda! Ti i zatočenici se probijate\n"
+"do tvog svemirskog broda. Flemoidi gađaju\n"
+"tvoj brod sa sluzi, ali ti usko bježiš u orbitu.\n"
+"Tijekom povrata ti se čestita za odvažno\n"
+"spašavanje, ali izdaješ upozorenje...\n"
 "Nismo vidjeli posljednje Flemoide.\n"
 "\n"
 "Nažalost, u pravu si. Kako se ti\n"
@@ -238,13 +251,13 @@ msgid "M_EPI3"
 msgstr "Invazija!"
 
 msgid "TAG_GOGGLES"
-msgstr ""
+msgstr "Ultra naočale"
 
 msgid "TAG_BLUEFLEMKEY"
-msgstr ""
+msgstr "Plavi Flemkey"
 
 msgid "TAG_YELLOWFLEMKEY"
-msgstr ""
+msgstr "Žuti Flemkey"
 
 msgid "TAG_REDFLEMKEY"
-msgstr ""
+msgstr "Crveni Flemkey"

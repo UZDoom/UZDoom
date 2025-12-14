@@ -12,6 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: chs\n"
 
 msgid "NIGHTMARE"
 msgstr "你真认为能接受得了？\\n\\n按“Y”确认，按“N”取消……"

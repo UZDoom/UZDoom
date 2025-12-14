@@ -12,6 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15-dev\n"
+"HeaderCode: chs\n"
 
 msgid "TXT_TNT_EP"
 msgstr "TNT：邪恶进化"

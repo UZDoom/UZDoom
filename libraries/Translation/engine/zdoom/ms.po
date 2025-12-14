@@ -2,20 +2,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-20 13:51+0000\n"
-"Last-Translator: Douggy Sans <dfr1238@gmail.com>\n"
-"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
-"projects/uzdoom/zdoom-engine-strings/zh_Hant/>\n"
-"Language: zh_Hant\n"
+"PO-Revision-Date: 2025-12-10 20:00+0000\n"
+"Last-Translator: NuruTheDoomer <nuruthedoomer@gmail.com>\n"
+"Language-Team: Malay <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/ms/>\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: cht\n"
 
 msgid "PRESSKEY"
-msgstr "按下任何鍵。"
+msgstr ""
 
 msgid "SECRETMESSAGE"
 msgstr ""
@@ -45,6 +44,11 @@ msgstr ""
 
 msgid "SWSTRING"
 msgstr ""
+"Ini adalah Doom versi shareware.\n"
+"\n"
+"Anda perlu memesan trilogi penuh.\n"
+"\n"
+"Tekan mana-mana kekunci."
 
 msgid "NETEND"
 msgstr ""
@@ -4538,9 +4542,9 @@ msgid "TXT_TOOOLDSG"
 msgstr ""
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
@@ -5120,4 +5124,7 @@ msgid "CNTRLMNU_COOPSPYPREV"
 msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr ""
+
+msgid "OPTMNU_ACCESSIBILITY"
 msgstr ""

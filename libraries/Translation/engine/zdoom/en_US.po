@@ -2,10 +2,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:51+0000\n"
-"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
-"Language-Team: English <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/en/>\n"
+"PO-Revision-Date: 2025-12-12 21:41+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/en/>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -5252,3 +5252,71 @@ msgstr "Clear coop spy"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Accessibility Options"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Analog Run"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Tooltip Lines"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Tooltip Scroll Speed"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Tooltip Scroll Delay"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Tooltip Background Alpha"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Limit Tooltip Width"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Scale Tooltip"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"This is an example tooltip.\n"
+"Here is some supplementary text.\n"
+"…\n"
+"Here is a very long line of text that just seems to go on and on without "
+"ever having anything interesting to say, seemingly only being so long "
+"because the developers are having a hard time explaining what an option does."
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Tooltips"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Extra Lighting"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr "Controls how quickly lighting falls off around the player."
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+"Amount of sector lighting to add on top of existing sector light levels, "
+"while preserving the existing lighting mode."
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Lighting Radius"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Lighting"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Explosion Display Style"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Additive"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Transparent"
+
+msgid "OPTVAL_LAX"
+msgstr "Relaxed"
+
+msgid "OPTVAL_STRICT"
+msgstr "Strict"
+
+msgid "PICKER_FILELOADING"
+msgstr "File Loading"
