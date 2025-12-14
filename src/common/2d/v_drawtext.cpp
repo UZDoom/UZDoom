@@ -478,8 +478,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 				{
 					auto shadowAtlasFragmentDrawParms = atlasFragmentDrawParms;
 					double textScale                    = (double)atlasFragmentDrawParms.destheight / baseFontHeight;
-					shadowAtlasFragmentDrawParms.x += (1.33*scalex*CleanXfac_1*textScale);
-					shadowAtlasFragmentDrawParms.y += (1.33*scaley*CleanYfac_1*textScale);
+					shadowAtlasFragmentDrawParms.x += (1.33*scalex*textScale);
+					shadowAtlasFragmentDrawParms.y += (1.33*scaley*textScale);
 					shadowAtlasFragmentDrawParms.color = MAKEARGB(255, 33, 33, 33);
 					drawer->AddTexture(atlasTexture, shadowAtlasFragmentDrawParms);
 				}
