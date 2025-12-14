@@ -920,7 +920,17 @@ void V_InitFonts()
 	if (lump == -1) I_FatalError("newconsolefont.hex not found");	// This font is needed - do not start up without it.
 	NewConsoleFont = CreateHexLumpFont("NewConsoleFont", lump);
 	NewSmallFont = CreateHexLumpFont2("NewSmallFont", lump);
-	NewSmallFont       = V_GetFont("IBMPLEXS");
+	auto newSmallFontPreOverride = NewSmallFont;
+	
+	{
+		auto fontcvar = FindCVar("fontOverride_NewSmallFont", nullptr);
+		NewSmallFont = V_GetFont(fontcvar->GetHumanString());
+		if (!NewSmallFont)
+		{
+			NewSmallFont = newSmallFontPreOverride;
+		}
+	}
+	
 	CurrentConsoleFont = NewConsoleFont;
 	//BigUpper           = V_GetFont("WDXLLUBR");
 	ConFont = V_GetFont("ConsoleFont", "CONFONT");
