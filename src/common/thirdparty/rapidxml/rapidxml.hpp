@@ -382,8 +382,8 @@ namespace rapidxml
     public:
 
         //! \cond internal
-        typedef void *((alloc_func)(std::size_t));       // Type of user-defined function used to allocate memory
-        typedef void (free_func)(void *);              // Type of user-defined function used to free memory
+        typedef void *alloc_func(std::size_t);       // Type of user-defined function used to allocate memory
+        typedef void free_func(void *);              // Type of user-defined function used to free memory
         //! \endcond
         
         //! Constructs empty pool with default allocator functions.
