@@ -978,7 +978,7 @@ class OptionMenu : Menu
 				}
 			}
 
-			y += rowheight;
+			y += fontheight;
 		}
 
 		lastVisible = LastVisibleItem();
