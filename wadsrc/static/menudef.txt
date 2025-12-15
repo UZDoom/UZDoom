@@ -1046,6 +1046,8 @@ OptionMenu "ImageAdjustMenu" protected
 	Tooltip "Adjusts perceived difference between similar colours. Controls how sharp/washed out the images looks. Adjust to personal taste."
 	Slider "$DSPLYMNU_SATURATION",	"vid_saturation",	-1.0,	2.0,	0.01,	2
 	Tooltip "Adjusts the intensity of colors, making the image look more vivid or muted. Adjust to personal taste."
+	StaticText ""
+	StaticText "Adjust until this looks like a uniform Gray color.", "Cyan"
 }
 
 //-------------------------------------------------------------------------------------------
