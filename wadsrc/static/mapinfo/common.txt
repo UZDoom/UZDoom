@@ -222,6 +222,7 @@ DoomEdNums
  14065 = AmbientSound
  14066 = SoundSequence
  14067 = AmbientSoundNoGravity
+ 14100 = MusicChanger, 0
  14101 = MusicChanger, 1
  14102 = MusicChanger, 2
  14103 = MusicChanger, 3
