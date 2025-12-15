@@ -512,8 +512,35 @@ void DIntermissionScreenText::Drawer ()
 		// draw some of the text onto the screen
 		count = (mTicker - mTextDelay) / mTextSpeed;
 
-		for ( ; count > 0 ; count-- )
+		
+		if (font->IsValidDynamicFont())
 		{
+			std::string        str = mText.GetChars();
+			Trex::ShapedGlyphs glyphs =
+				font->GetDynamicTextShaper()->ShapeUtf8(std::span<const char>(str.cbegin(), str.cend()));
+			TArray<FString> lines;
+			mText.Split(lines, '\n', FString::TOK_SKIPEMPTY);
+			int countAtEndOfLine = 0;
+			for (auto l : lines)
+			{
+				if (count > countAtEndOfLine)
+				{
+					FString subStr = l.Left((count - countAtEndOfLine));
+					DrawText(twod, font, CR_UNTRANSLATED, cx / fontscale, cy / fontscale, subStr.GetChars(),
+					         DTA_KeepRatio, true, DTA_VirtualWidth, cleanwidth, DTA_VirtualHeight, cleanheight,
+					         TAG_DONE);
+					countAtEndOfLine += l.Len();
+					cy += rowheight;
+				}
+			}
+		}
+		else
+		{
+			for (; count > 0; count--)
+			{
+
+				
+			// old-style bitmap char-by-char
 			c = GetCharFromString(ch);
 			if (!c)
 				break;
@@ -530,9 +557,15 @@ void DIntermissionScreenText::Drawer ()
 			if (cx + w > twod->GetWidth())
 				continue;
 
-			DrawChar(twod, font, mTextColor, cx/fontscale, cy/fontscale, c, DTA_KeepRatio, true, DTA_VirtualWidth, cleanwidth, DTA_VirtualHeight, cleanheight, TAG_DONE);
+			{
+				DrawChar(twod, font, mTextColor, cx / fontscale, cy / fontscale, c, DTA_KeepRatio, true,
+				         DTA_VirtualWidth, cleanwidth, DTA_VirtualHeight, cleanheight, TAG_DONE);
+			}
+
 			cx += w;
+			}
 		}
+		
 	}
 }
 
