@@ -626,8 +626,10 @@ void HWDrawInfo::RenderThings(subsector_t * sub, sector_t * sector)
 		}
 		if (r_distance_cull_type > 0)
 		{
-			double dist2 = (thing->Pos() - (vp.bDoOob ? vp.OffPos : vp.Pos)).LengthSquared();
-			if (dist2 >= vp.culldistsq)
+			bool renderradcheck = thing->RenderRadius() < 0.25 * vp.culldist;
+			double dist2 = renderradcheck ? (thing->Pos() - (vp.bDoOob ? vp.OffPos : vp.Pos)).LengthSquared() :
+				(thing->Pos() - (vp.bDoOob ? vp.OffPos : vp.Pos)).Length() - 1.414 * thing->RenderRadius();
+			if (dist2 >= (renderradcheck ? vp.culldistsq : vp.culldist))
 			{
 				continue;
 			}

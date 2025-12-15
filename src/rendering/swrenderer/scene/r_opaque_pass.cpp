@@ -1015,6 +1015,10 @@ namespace swrenderer
 			double distanceSquared = (thing->Pos() - Thread->Viewport->viewpoint.Pos).LengthSquared();
 			if (distanceSquared > Thread->Viewport->viewpoint.culldistsq)
 				return false;
+			// This is slower because of sqrt? Skip in software renderer?
+			// double thingdistance = (thing->Pos() - Thread->Viewport->viewpoint.Pos).Length();
+			// if (thingdistance - 1.414 * thing->RenderRadius() > Thread->Viewport->viewpoint.culldist)
+			// 	return false;
 		}
 
 		return true;

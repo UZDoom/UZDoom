@@ -1003,7 +1003,7 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 			}
 			viewPoint.culldistsq = clamp(viewPoint.culldistsq, 1100000.0, 256000000.0);
 		}
-		actor->Level->culldist = sqrt(viewPoint.culldistsq);
+		viewPoint.culldist = actor->Level->culldist = sqrt(viewPoint.culldistsq);
 	}
 	viewPoint.LastFrameTime = screen->FrameTime;
 
