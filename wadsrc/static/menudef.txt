@@ -1039,7 +1039,7 @@ OptionMenu "ImageAdjustMenu" protected
 	Tooltip "Compensates for monitors that fail to display dark pixels correctly. Adjust until diagonal white blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
 	Slider "Whitepoint",			"vid_whitepoint",	0.75,	1.0,	0.01,	2
 	Tooltip "Compensates for monitors that fail to display bright pixels correctly. Adjust until diagonal black blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
-	StaticText ""
+	Command "Reset All",			"vid_reset2defaults"
 	Slider "$DSPLYMNU_BRIGHTNESS",	"vid_brightness",	-0.25,	0.25,	0.01,	2
 	Tooltip "Applies linear brightness adjustment. Adjust to personal taste, or to see in the dark."
 	Slider "$DSPLYMNU_CONTRAST",	"vid_contrast",		0.5,	2.0,	0.01,	2
