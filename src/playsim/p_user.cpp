@@ -1169,7 +1169,7 @@ void P_FallingDamage (AActor *actor)
 
 	if (actor->player)
 	{
-		S_Sound (actor, CHAN_AUTO, 0, "*land", 1, ATTN_NORM);
+		S_Sound (actor, CHAN_AUTO, CHANF_NONE, "*land", 1, ATTN_NORM);
 		P_NoiseAlert (actor, actor, true);
 		if (damage >= TELEFRAG_DAMAGE && ((actor->player->cheats & (CF_GODMODE | CF_BUDDHA) ||
 			(actor->FindInventory(PClass::FindActor(NAME_PowerBuddha), true) != nullptr))))
@@ -1236,7 +1236,7 @@ void P_CheckEnvironment(player_t *player)
 		auto id = S_FindSkinnedSound(player->mo, S_FindSound("*falling"));
 		if (id != NO_SOUND && !S_IsActorPlayingSomething(player->mo, CHAN_VOICE, id))
 		{
-			S_Sound(player->mo, CHAN_VOICE, 0, id, 1, ATTN_NORM);
+			S_Sound(player->mo, CHAN_VOICE, CHANF_NONE, id, 1, ATTN_NORM);
 		}
 	}
 }

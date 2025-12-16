@@ -181,11 +181,11 @@ void DLightningThinker::LightningFlash ()
 	Level->flags |= LEVEL_SWAPSKIES;	// set alternate sky
 	if (TempLightningSound == NO_SOUND)
 	{
-		S_Sound(CHAN_AUTO, 0, Level->LightningSound, 1.0, ATTN_NONE);
+		S_Sound(CHAN_AUTO, CHANF_NONE, Level->LightningSound, 1.0, ATTN_NONE);
 	}
 	else
 	{
-		S_Sound(CHAN_AUTO, 0, TempLightningSound, 1.0, ATTN_NONE);
+		S_Sound(CHAN_AUTO, CHANF_NONE, TempLightningSound, 1.0, ATTN_NONE);
 		TempLightningSound = NO_SOUND;
 	}
 	// [ZZ] just in case

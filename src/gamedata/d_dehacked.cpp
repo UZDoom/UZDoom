@@ -4158,7 +4158,7 @@ void ClearBounces(AActor* info)
 	info->flags6 &= ~MF6_VULNERABLE;
 	info->flags3 &= ~MF3_NOBLOCKMONST;
 	info->flags4 &= ~(MF4_FORCERADIUSDMG | MF4_DONTHARMCLASS);
-	info->BounceFlags = 0;
+	info->BounceFlags = BOUNCE_None;
 }
 
 // The missile flag affects the bouncing mode.

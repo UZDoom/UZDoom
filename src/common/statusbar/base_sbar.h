@@ -2,8 +2,9 @@
 
 #include "dobject.h"
 #include "textureid.h"
-#include "zstring.h"
+#include "tflags.h"
 #include "v_draw.h"
+#include "zstring.h"
 
 class FGameTexture;
 class FFont;
@@ -13,7 +14,7 @@ void ST_UnloadCrosshair();
 void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngle angle = nullAngle);
 
 
-enum DI_Flags
+enum DI_Flags : uint32_t
 {
 	DI_SKIPICON = 0x1,
 	DI_SKIPALTICON = 0x2,
@@ -97,6 +98,7 @@ enum DI_Flags
 	DI_ALTERNATEONFAIL = DI_TEXT_ALIGN_CENTER,
 
 };
+using EDrawImageFlags = TFlags<DI_Flags>;
 
 //============================================================================
 //
@@ -184,10 +186,10 @@ public:
 	virtual void SetScale();
 	void ValidateResolution(int& hres, int& vres) const;
 	void StatusbarToRealCoords(double& x, double& y, double& w, double& h) const;
-	void DrawGraphic(FGameTexture* texture, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style = STYLE_Translucent, PalEntry color = 0xffffffff, int translation = 0, double clipwidth = -1.0);
-	void DrawGraphic(FTextureID texture, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style = STYLE_Translucent, PalEntry color = 0xffffffff, int translation = 0, double clipwidth = -1.0);
-	void DrawRotated(FTextureID texture, double x, double y, int flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color = 0xffffffff, int translation = 0, ERenderStyle style = STYLE_Translucent);
-	void DrawRotated(FGameTexture* tex, double x, double y, int flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color = 0xffffffff, int translation = 0, ERenderStyle style = STYLE_Translucent);
+	void DrawGraphic(FGameTexture* texture, double x, double y, EDrawImageFlags flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style = STYLE_Translucent, PalEntry color = 0xffffffff, int translation = 0, double clipwidth = -1.0);
+	void DrawGraphic(FTextureID texture, double x, double y, EDrawImageFlags flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style = STYLE_Translucent, PalEntry color = 0xffffffff, int translation = 0, double clipwidth = -1.0);
+	void DrawRotated(FTextureID texture, double x, double y, EDrawImageFlags flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color = 0xffffffff, int translation = 0, ERenderStyle style = STYLE_Translucent);
+	void DrawRotated(FGameTexture* tex, double x, double y, EDrawImageFlags flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color = 0xffffffff, int translation = 0, ERenderStyle style = STYLE_Translucent);
 	void DrawString(FFont* font, const FString& cstring, double x, double y, int flags, double Alpha, int translation, int spacing, EMonospacing monospacing, int shadowX, int shadowY, double scaleX, double scaleY, FTranslationID pt, int style);
 	void TransformRect(double& x, double& y, double& w, double& h, int flags = 0);
 	void Fill(PalEntry color, double x, double y, double w, double h, int flags = 0);

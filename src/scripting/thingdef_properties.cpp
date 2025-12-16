@@ -1058,15 +1058,15 @@ DEFINE_PROPERTY(friction, F, Actor)
 //==========================================================================
 DEFINE_PROPERTY(clearflags, 0, Actor)
 {
-	defaults->flags = 0;
+	defaults->flags = MF_NONE;
 	defaults->flags2 &= MF2_ARGSDEFINED;	// this flag must not be cleared
-	defaults->flags3 = 0;
-	defaults->flags4 = 0;
-	defaults->flags5 = 0;
-	defaults->flags6 = 0;
-	defaults->flags7 = 0;
-	defaults->flags8 = 0;
-	defaults->flags9 = 0;
+	defaults->flags3 = MF3_NONE;
+	defaults->flags4 = MF4_NONE;
+	defaults->flags5 = MF5_NONE;
+	defaults->flags6 = MF6_NONE;
+	defaults->flags7 = MF7_NONE;
+	defaults->flags8 = MF8_NONE;
+	defaults->flags9 = MF9_NONE;
 }
 
 //==========================================================================

@@ -520,7 +520,7 @@ int P_CheckKeys (AActor *owner, int keynum, bool remote, bool quiet)
 				auto snd = S_FindSkinnedSound(owner, failsound[i]);
 				if (snd != NO_SOUND)
 				{
-					S_Sound (owner, CHAN_VOICE, 0, snd, 1, ATTN_NORM);
+					S_Sound (owner, CHAN_VOICE, CHANF_NONE, snd, 1, ATTN_NORM);
 					break;
 				}
 			}

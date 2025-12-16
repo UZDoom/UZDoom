@@ -1354,7 +1354,7 @@ void P_DoMissileDamage(AActor* self, AActor* victim)
 	if (damage > 0 || (self->flags6 & MF6_FORCEPAIN) || (self->flags7 & MF7_CAUSEPAIN))
 	{
 		if (ripper)
-			S_Sound(self, CHAN_BODY, 0, self->SoundVar(NAME_RipSound), 1.0f, ATTN_IDLE);
+			S_Sound(self, CHAN_BODY, CHANF_NONE, self->SoundVar(NAME_RipSound), 1.0f, ATTN_IDLE);
 
 		int dealt = P_DamageMobj(victim, self, self->target, damage, self->DamageType);
 		if (damage > 0 && !(self->flags3 & MF3_BLOODLESSIMPACT)
@@ -2877,7 +2877,7 @@ bool P_TryMove(AActor *thing, const DVector2 &pos,
 //
 //==========================================================================
 
-bool P_CheckMove(AActor *thing, const DVector2 &pos, FCheckPosition& tm, int flags)
+bool P_CheckMove(AActor *thing, const DVector2 &pos, FCheckPosition& tm, ECheckMoveFlags flags)
 {
 	double		newz = thing->Z();
 
@@ -2971,7 +2971,7 @@ bool P_CheckMove(AActor *thing, const DVector2 &pos, FCheckPosition& tm, int fla
 	return true;
 }
 
-bool P_CheckMove(AActor *thing, const DVector2 &pos, int flags)
+bool P_CheckMove(AActor *thing, const DVector2 &pos, ECheckMoveFlags flags)
 {
 	FCheckPosition tm;
 	return P_CheckMove(thing, pos, tm, flags);
@@ -3048,7 +3048,7 @@ void FSlide::HitSlideLine(line_t* ld)
 			tmmove.Y /= 2; // absorb half the velocity
 			if (slidemo->player && slidemo->health > 0 && !(slidemo->player->cheats & CF_PREDICTING))
 			{
-				S_Sound(slidemo, CHAN_VOICE, 0, "*grunt", 1, ATTN_IDLE); // oooff!//   ^
+				S_Sound(slidemo, CHAN_VOICE, CHANF_NONE, "*grunt", 1, ATTN_IDLE); // oooff!//   ^
 			}
 		}																		//   |
 		else																	// phares
@@ -3064,7 +3064,7 @@ void FSlide::HitSlideLine(line_t* ld)
 			tmmove.Y = -tmmove.Y / 2;
 			if (slidemo->player && slidemo->health > 0 && !(slidemo->player->cheats & CF_PREDICTING))
 			{
-				S_Sound(slidemo, CHAN_VOICE, 0, "*grunt", 1, ATTN_IDLE); // oooff!
+				S_Sound(slidemo, CHAN_VOICE, CHANF_NONE, "*grunt", 1, ATTN_IDLE); // oooff!
 			}
 		}
 		else
@@ -3096,7 +3096,7 @@ void FSlide::HitSlideLine(line_t* ld)
 		movelen /= 2; // absorb
 		if (slidemo->player && slidemo->health > 0 && !(slidemo->player->cheats & CF_PREDICTING))
 		{
-			S_Sound(slidemo, CHAN_VOICE, 0, "*grunt", 1, ATTN_IDLE); // oooff!
+			S_Sound(slidemo, CHAN_VOICE, CHANF_NONE, "*grunt", 1, ATTN_IDLE); // oooff!
 		}
 		tmmove = moveangle.ToVector(movelen);
 	}	
@@ -4817,7 +4817,7 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 	{ // hit nothing
 		if (!nointeract && puffDefaults && puffDefaults->ActiveSound.isvalid())
 		{ // Play miss sound
-			S_Sound(t1, CHAN_WEAPON, 0, puffDefaults->ActiveSound, 1, ATTN_NORM);
+			S_Sound(t1, CHAN_WEAPON, CHANF_NONE, puffDefaults->ActiveSound, 1, ATTN_NORM);
 		}
 
 		// [MC] LAF_NOINTERACT guarantees puff spawning and returns it directly to the calling function.
@@ -5263,7 +5263,7 @@ void P_TraceBleed(int damage, const DVector3 &pos, AActor *actor, DAngle angle, 
 		if (bleedDist <= 0.0)
 			bleedDist = (double)172.0;
 
-		if (Trace(pos, actor->Sector, vdir, bleedDist, 0, ML_BLOCKEVERYTHING, actor, bleedtrace, TRACE_NoSky))
+		if (Trace(pos, actor->Sector, vdir, bleedDist, MF_NONE, ML_BLOCKEVERYTHING, actor, bleedtrace, TRACE_NoSky))
 		{
 			if (bleedtrace.HitType == TRACE_HitWall)
 			{
@@ -5667,7 +5667,7 @@ void R_OffsetView(FRenderViewpoint& viewPoint, const DVector3& dir, const double
 		viewPoint.Pos += dir * distance;
 		viewPoint.sector = viewPoint.ViewLevel->PointInRenderSubsector(viewPoint.Pos)->sector;
 	}
-	else if (Trace(viewPoint.Pos, viewPoint.sector, dir, distance, 0u, 0u, nullptr, trace))
+	else if (Trace(viewPoint.Pos, viewPoint.sector, dir, distance, MF_NONE, 0u, nullptr, trace))
 	{
 		viewPoint.Pos = trace.HitPos - trace.HitVector * min<double>(5.0, trace.Distance);
 		viewPoint.sector = viewPoint.ViewLevel->PointInRenderSubsector(viewPoint.Pos)->sector;
@@ -5862,7 +5862,7 @@ bool P_UseTraverse(AActor *usething, const DVector2 &start, const DVector2 &end,
 
 				if (usething->player)
 				{
-					S_Sound(usething, CHAN_VOICE, 0, "*usefail", 1, ATTN_IDLE);
+					S_Sound(usething, CHAN_VOICE, CHANF_NONE, "*usefail", 1, ATTN_IDLE);
 				}
 				return true;		// can't use through a wall
 			}
@@ -5979,7 +5979,7 @@ void P_UseLines(player_t *player)
 		if ((!sec->SecActTarget || !sec->TriggerSectorActions(player->mo, spac)) &&
 			P_NoWayTraverse(player->mo, start, end))
 		{
-			S_Sound(player->mo, CHAN_VOICE, 0, "*usefail", 1, ATTN_IDLE);
+			S_Sound(player->mo, CHAN_VOICE, CHANF_NONE, "*usefail", 1, ATTN_IDLE);
 		}
 	}
 }
@@ -6678,7 +6678,7 @@ void P_DoCrunch(AActor *thing, FChangePosition *cpos)
 			}
 			if (thing->CrushPainSound != NO_SOUND && !S_GetSoundPlayingInfo(thing, thing->CrushPainSound))
 			{
-				S_Sound(thing, CHAN_VOICE, 0, thing->CrushPainSound, 1.f, ATTN_NORM);
+				S_Sound(thing, CHAN_VOICE, CHANF_NONE, thing->CrushPainSound, 1.f, ATTN_NORM);
 			}
 		}
 	}

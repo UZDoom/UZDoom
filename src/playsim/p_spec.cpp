@@ -692,7 +692,7 @@ void P_ActorOnSpecialFlat (AActor *victim, int floorType)
 		}
 		if (damage > 0 && Terrains[floorType].Splash != -1)
 		{
-			S_Sound (victim, CHAN_AUTO, 0,
+			S_Sound (victim, CHAN_AUTO, CHANF_NONE,
 				Splashes[Terrains[floorType].Splash].NormalSplashSound, 1,
 				ATTN_IDLE);
 		}

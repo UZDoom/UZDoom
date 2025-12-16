@@ -469,7 +469,7 @@ void DStatusBarCore::StatusbarToRealCoords(double& x, double& y, double& w, doub
 //
 //============================================================================
 
-void DStatusBarCore::DrawGraphic(FTextureID texture, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth)
+void DStatusBarCore::DrawGraphic(FTextureID texture, double x, double y, EDrawImageFlags flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth)
 {
 	if (!texture.isValid())
 		return;
@@ -478,7 +478,7 @@ void DStatusBarCore::DrawGraphic(FTextureID texture, double x, double y, int fla
 	DrawGraphic(tex, x, y, flags, Alpha, boxwidth, boxheight, scaleX, scaleY, style, color, translation, clipwidth);
 }
 
-void DStatusBarCore::DrawGraphic(FGameTexture* tex, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth)
+void DStatusBarCore::DrawGraphic(FGameTexture* tex, double x, double y, EDrawImageFlags flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth)
 {
 	double texwidth = tex->GetDisplayWidth() * scaleX;
 	double texheight = tex->GetDisplayHeight() * scaleY;
@@ -619,7 +619,7 @@ void DStatusBarCore::DrawGraphic(FGameTexture* tex, double x, double y, int flag
 //
 //============================================================================
 
-void DStatusBarCore::DrawRotated(FTextureID texture, double x, double y, int flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color, int translation, ERenderStyle style)
+void DStatusBarCore::DrawRotated(FTextureID texture, double x, double y, EDrawImageFlags flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color, int translation, ERenderStyle style)
 {
 	if (!texture.isValid())
 		return;
@@ -628,7 +628,7 @@ void DStatusBarCore::DrawRotated(FTextureID texture, double x, double y, int fla
 	DrawRotated(tex, x, y, flags, angle, Alpha, scaleX, scaleY, color, translation, style);
 }
 
-void DStatusBarCore::DrawRotated(FGameTexture* tex, double x, double y, int flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color, int translation, ERenderStyle style)
+void DStatusBarCore::DrawRotated(FGameTexture* tex, double x, double y, EDrawImageFlags flags, double angle, double Alpha, double scaleX, double scaleY, PalEntry color, int translation, ERenderStyle style)
 {
 	double texwidth = tex->GetDisplayWidth() * scaleX;
 	double texheight = tex->GetDisplayHeight() * scaleY;

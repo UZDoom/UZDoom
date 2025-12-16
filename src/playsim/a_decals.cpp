@@ -850,7 +850,7 @@ void SprayDecal(AActor *shooter, const char *name, double distance, DVector3 off
 	auto trans = useBloodColor ? shooter->BloodTranslation : translation;
 	PalEntry entry = !useBloodColor ? (PalEntry)decalColor : shooter->BloodColor;
 
-	if (Trace(off, shooter->Sector, dir, distance, 0, ML_BLOCKEVERYTHING, shooter, trace, TRACE_NoSky))
+	if (Trace(off, shooter->Sector, dir, distance, MF_NONE, ML_BLOCKEVERYTHING, shooter, trace, TRACE_NoSky))
 	{
 		if (trace.HitType == TRACE_HitWall)
 		{
@@ -874,7 +874,7 @@ DBaseDecal *ShootDecal(FLevelLocals *Level, const FDecalTemplate *tpl, sector_t 
 
 	FTraceResults trace;
 
-	Trace(DVector3(x,y,z), sec, DVector3(angle.ToVector(), 0), tracedist, 0, 0, NULL, trace, TRACE_NoSky);
+	Trace(DVector3(x,y,z), sec, DVector3(angle.ToVector(), 0), tracedist, MF_NONE, 0, NULL, trace, TRACE_NoSky);
 
 	if (trace.HitType == TRACE_HitWall)
 	{

@@ -588,7 +588,7 @@ void FParser::SF_Input(void)
 
 void FParser::SF_Beep(void)
 {
-	S_Sound(CHAN_AUTO, 0, "misc/chat", 1.0f, ATTN_IDLE);
+	S_Sound(CHAN_AUTO, CHANF_NONE, "misc/chat", 1.0f, ATTN_IDLE);
 }
 
 //==========================================================================
@@ -1474,7 +1474,7 @@ void FParser::SF_StartSound(void)
 		
 		if (mo)
 		{
-			S_Sound(mo, CHAN_BODY, 0, T_FindSound(stringvalue(t_argv[1])), 1, ATTN_NORM);
+			S_Sound(mo, CHAN_BODY, CHANF_NONE, T_FindSound(stringvalue(t_argv[1])), 1, ATTN_NORM);
 		}
 	}
 }
@@ -1500,7 +1500,7 @@ void FParser::SF_StartSectorSound(void)
 		while ((i = itr.Next()) >= 0)
 		{
 			sector = &Level->sectors[i];
-			S_Sound(sector, CHAN_BODY, 0, T_FindSound(stringvalue(t_argv[1])), 1.0f, ATTN_NORM);
+			S_Sound(sector, CHAN_BODY, CHANF_NONE, T_FindSound(stringvalue(t_argv[1])), 1.0f, ATTN_NORM);
 		}
 	}
 }
@@ -2817,7 +2817,7 @@ void FParser::SF_AmbientSound(void)
 {
 	if (CheckArgs(1))
 	{
-		S_Sound(CHAN_AUTO, 0, T_FindSound(stringvalue(t_argv[0])), 1, ATTN_NORM);
+		S_Sound(CHAN_AUTO, CHANF_NONE, T_FindSound(stringvalue(t_argv[0])), 1, ATTN_NORM);
 	}
 }
 
@@ -2916,7 +2916,7 @@ void FParser::SF_SpawnExplosion()
 		{
 			spawn->ClearCounters();
 			t_return.value.i = spawn->SetState(spawn->FindState(NAME_Death));
-			if(spawn->DeathSound.isvalid()) S_Sound (spawn, CHAN_BODY, 0, spawn->DeathSound, 1, ATTN_NORM);
+			if(spawn->DeathSound.isvalid()) S_Sound (spawn, CHAN_BODY, CHANF_NONE, spawn->DeathSound, 1, ATTN_NORM);
 		}
 	}
 }
@@ -3743,7 +3743,7 @@ void FParser::SF_SpawnShot2(void)
 		AActor *mo = Spawn(Level, pclass, source->PosPlusZ(z), ALLOW_REPLACE);
 		if (mo)
 		{
-			S_Sound(mo, CHAN_VOICE, 0, mo->SeeSound, 1, ATTN_NORM);
+			S_Sound(mo, CHAN_VOICE, CHANF_NONE, mo->SeeSound, 1, ATTN_NORM);
 			mo->target = source;
 			mo->Angles.Yaw = source->Angles.Yaw;
 			mo->Thrust();

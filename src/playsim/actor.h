@@ -126,6 +126,7 @@ struct FDynamicLight;
 // --- mobj.flags ---
 enum ActorFlag
 {
+	MF_NONE = 0,
 	MF_SPECIAL			= 0x00000001,	// call P_SpecialThing when touched
 	MF_SOLID			= 0x00000002,
 	MF_SHOOTABLE		= 0x00000004,
@@ -173,6 +174,7 @@ enum ActorFlag
 // --- mobj.flags2 ---
 enum ActorFlag2
 {
+	MF2_NONE = 0,
 	MF2_DONTREFLECT		= 0x00000001,	// this projectile cannot be reflected
 	MF2_WINDTHRUST		= 0x00000002,	// gets pushed around by the wind specials
 	MF2_DONTSEEKINVISIBLE=0x00000004,	// For seeker missiles: Don't home in on invisible/shadow targets
@@ -214,6 +216,7 @@ enum ActorFlag2
 // --- mobj.flags3 ---
 enum ActorFlag3
 {
+	MF3_NONE = 0,
 	MF3_FLOORHUGGER		= 0x00000001,	// Missile stays on floor
 	MF3_CEILINGHUGGER	= 0x00000002,	// Missile stays on ceiling
 	MF3_NORADIUSDMG		= 0x00000004,	// Actor does not take radius damage
@@ -251,6 +254,7 @@ enum ActorFlag3
 // --- mobj.flags4 ---
 enum ActorFlag4
 {
+	MF4_NONE = 0,
 	MF4_NOHATEPLAYERS	= 0x00000001,	// Ignore player attacks
 	MF4_QUICKTORETALIATE= 0x00000002,	// Always switch targets when hurt
 	MF4_NOICEDEATH		= 0x00000004,	// Actor never enters an ice death, not even the generic one
@@ -290,6 +294,7 @@ enum ActorFlag4
 
 enum ActorFlag5
 {
+	MF5_NONE = 0,
 	MF5_DONTDRAIN		= 0x00000001,	// cannot be drained health from.
 	MF5_GETOWNER		= 0x00000002,
 	MF5_NODROPOFF		= 0x00000004,	// cannot drop off under any circumstances.
@@ -328,6 +333,7 @@ enum ActorFlag5
 // --- mobj.flags6 ---
 enum ActorFlag6
 {
+	MF6_NONE = 0,
 	MF6_NOBOSSRIP		= 0x00000001,	// For rippermissiles: Don't rip through bosses.
 	MF6_THRUSPECIES		= 0x00000002,	// Actors passes through other of the same species.
 	MF6_MTHRUSPECIES	= 0x00000004,	// Missile passes through actors of its shooter's species.
@@ -365,6 +371,7 @@ enum ActorFlag6
 // --- mobj.flags7 ---
 enum ActorFlag7
 {
+	MF7_NONE = 0,
 	MF7_NEVERTARGET		= 0x00000001,	// can not be targetted at all, even if monster friendliness is considered.
 	MF7_NOTELESTOMP		= 0x00000002,	// cannot telefrag under any circumstances (even when set by MAPINFO)
 	MF7_ALWAYSTELEFRAG	= 0x00000004,	// will unconditionally be telefragged when in the way. Overrides all other settings.
@@ -402,6 +409,7 @@ enum ActorFlag7
 // --- mobj.flags8 ---
 enum ActorFlag8
 {
+	MF8_NONE = 0,
 	MF8_FRIGHTENING		= 0x00000001,	// for those moments when halloween just won't do
 	MF8_INSCROLLSEC		= 0x00000002,	// actor is partially inside a scrolling sector
 	MF8_BLOCKASPLAYER	= 0x00000004,	// actor is blocked by player-blocking lines even if not a player
@@ -438,6 +446,7 @@ enum ActorFlag8
 // --- mobj.flags9 ---
 enum ActorFlag9
 {
+	MF9_NONE = 0,
 	MF9_SHADOWAIM				= 0x00000001,	// [inkoalawetrust] Monster still gets aim penalty from aiming at shadow actors even with MF6_SEEINVISIBLE on.
 	MF9_DOSHADOWBLOCK			= 0x00000002,	// [inkoalawetrust] Should the monster look for SHADOWBLOCK actors ?
 	MF9_SHADOWBLOCK				= 0x00000004,	// [inkoalawetrust] Actors in the line of fire with this flag trigger the MF_SHADOW aiming penalty.

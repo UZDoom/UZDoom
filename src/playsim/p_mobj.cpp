@@ -1619,7 +1619,7 @@ static int Grind(AActor* actor, int items)
 			actor->SetState (state);
 			if (isgeneric)	// Not a custom crush state, so colorize it appropriately.
 			{
-				S_Sound (actor, CHAN_BODY, 0, "misc/fallingsplat", 1, ATTN_IDLE);
+				S_Sound (actor, CHAN_BODY, CHANF_NONE, "misc/fallingsplat", 1, ATTN_IDLE);
 				actor->Translation = actor->BloodTranslation;
 			}
 			actor->Level->localEventManager->WorldThingGround(actor, state);
@@ -1665,7 +1665,7 @@ static int Grind(AActor* actor, int items)
 				gib->radius = 0;
 				gib->Translation = actor->BloodTranslation;
 			}
-			S_Sound (actor, CHAN_BODY, 0, "misc/fallingsplat", 1, ATTN_IDLE);
+			S_Sound (actor, CHAN_BODY, CHANF_NONE, "misc/fallingsplat", 1, ATTN_IDLE);
 			actor->Level->localEventManager->WorldThingGround(actor, nullptr);
 		}
 		if (actor->flags & MF_ICECORPSE)
@@ -2059,7 +2059,7 @@ void P_ExplodeMissile (AActor *mo, line_t *line, AActor *target, bool onsky, FNa
 	// play the sound before changing the state, so that AActor::OnDestroy can call S_RelinkSounds on it and the death state can override it.
 	if (mo->DeathSound.isvalid())
 	{
-		S_Sound (mo, CHAN_VOICE, 0, mo->DeathSound, 1,
+		S_Sound (mo, CHAN_VOICE, CHANF_NONE, mo->DeathSound, 1,
 			(mo->flags3 & MF3_FULLVOLDEATH) ? ATTN_NONE : ATTN_NORM);
 	}
 
@@ -2123,15 +2123,15 @@ void AActor::PlayBounceSound(bool onfloor, double volume)
 		volume = clamp(volume, 0.0, 1.0);
 		if (BounceFlags & BOUNCE_UseSeeSound)
 		{
-			S_Sound (this, CHAN_VOICE, 0, SeeSound, (float)volume, ATTN_IDLE);
+			S_Sound (this, CHAN_VOICE, CHANF_NONE, SeeSound, (float)volume, ATTN_IDLE);
 		}
 		else if (onfloor || !WallBounceSound.isvalid())
 		{
-			S_Sound (this, CHAN_VOICE, 0, BounceSound, (float)volume, ATTN_IDLE);
+			S_Sound (this, CHAN_VOICE, CHANF_NONE, BounceSound, (float)volume, ATTN_IDLE);
 		}
 		else
 		{
-			S_Sound (this, CHAN_VOICE, 0, WallBounceSound, (float)volume, ATTN_IDLE);
+			S_Sound (this, CHAN_VOICE, CHANF_NONE, WallBounceSound, (float)volume, ATTN_IDLE);
 		}
 	}
 }
@@ -3755,7 +3755,7 @@ void AActor::Howl ()
 	FSoundID howl = SoundVar(NAME_HowlSound);
 	if (!S_IsActorPlayingSomething(this, CHAN_BODY, howl))
 	{
-		S_Sound (this, CHAN_BODY, 0, howl, 1, ATTN_NORM);
+		S_Sound (this, CHAN_BODY, CHANF_NONE, howl, 1, ATTN_NORM);
 	}
 }
 
@@ -3940,7 +3940,7 @@ void AActor::PlayActiveSound ()
 {
 	if (ActiveSound.isvalid() && !S_IsActorPlayingSomething(this, CHAN_VOICE))
 	{
-		S_Sound (this, CHAN_VOICE, 0, ActiveSound, 1,
+		S_Sound (this, CHAN_VOICE, CHANF_NONE, ActiveSound, 1,
 			(flags3 & MF3_FULLVOLACTIVE) ? ATTN_NONE : ATTN_IDLE);
 	}
 }
@@ -3957,7 +3957,7 @@ void AActor::PlayPushSound()
 	FSoundID push = SoundVar(NAME_PushSound);
 	if (!S_IsActorPlayingSomething(this, CHAN_BODY, push))
 	{
-		S_Sound(this, CHAN_BODY, 0, push, 1, ATTN_NORM);
+		S_Sound(this, CHAN_BODY, CHANF_NONE, push, 1, ATTN_NORM);
 	}
 }
 
@@ -7481,13 +7481,13 @@ foundone:
 		}
 		if (mo)
 		{
-			S_Sound(mo, CHAN_ITEM, 0, smallsplash ?
+			S_Sound(mo, CHAN_ITEM, CHANF_NONE, smallsplash ?
 				splash->SmallSplashSound : splash->NormalSplashSound,
 				1, ATTN_IDLE);
 		}
 		else
 		{
-			S_Sound(thing->Level, pos, CHAN_ITEM, 0, smallsplash ?
+			S_Sound(thing->Level, pos, CHAN_ITEM, CHANF_NONE, smallsplash ?
 				splash->SmallSplashSound : splash->NormalSplashSound,
 				1, ATTN_IDLE);
 		}
@@ -7716,18 +7716,18 @@ void P_PlaySpawnSound(AActor *missile, AActor *spawner)
 	{
 		if (!(missile->flags & MF_SPAWNSOUNDSOURCE))
 		{
-			S_Sound (missile, CHAN_VOICE, 0, missile->SeeSound, 1, ATTN_NORM);
+			S_Sound (missile, CHAN_VOICE, CHANF_NONE, missile->SeeSound, 1, ATTN_NORM);
 		}
 		else if (spawner != NULL)
 		{
-			S_Sound (spawner, CHAN_WEAPON, 0, missile->SeeSound, 1, ATTN_NORM);
+			S_Sound (spawner, CHAN_WEAPON, CHANF_NONE, missile->SeeSound, 1, ATTN_NORM);
 		}
 		else
 		{
 			// If there is no spawner use the spawn position.
 			// But not in a silenced sector.
 			if (!(missile->Sector->Flags & SECF_SILENT))
-				S_Sound (missile->Level, missile->Pos(), CHAN_WEAPON, 0, missile->SeeSound, 1, ATTN_NORM);
+				S_Sound (missile->Level, missile->Pos(), CHAN_WEAPON, CHANF_NONE, missile->SeeSound, 1, ATTN_NORM);
 		}
 	}
 }
@@ -8723,7 +8723,7 @@ void AActor::RestoreSpecialPosition()
 	SetXY(sp);
 	LinkToWorld(&ctx, true);
 	SetZ(Sector->floorplane.ZatPoint(sp));
-	P_FindFloorCeiling(this, FFCF_ONLYSPAWNPOS | FFCF_NOPORTALS);	// no portal checks here so that things get spawned in this sector.
+	P_FindFloorCeiling(this, (FFCF_ONLYSPAWNPOS | FFCF_NOPORTALS));	// no portal checks here so that things get spawned in this sector.
 
 	if (flags & MF_SPAWNCEILING)
 	{

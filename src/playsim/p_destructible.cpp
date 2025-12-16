@@ -425,7 +425,7 @@ static bool PGRA_CheckExplosionBlocked(DVector3 pt, DVector3 check, sector_t* ch
 	double ptDst = ptVec.Length() - 0.5;
 	ptVec.MakeUnit();
 	FTraceResults res;
-	bool isblocked = Trace(check, checksector, ptVec, ptDst, 0, ML_BLOCKEVERYTHING, nullptr, res);
+	bool isblocked = Trace(check, checksector, ptVec, ptDst, MF_NONE, ML_BLOCKEVERYTHING, nullptr, res);
 	return isblocked;
 }
 

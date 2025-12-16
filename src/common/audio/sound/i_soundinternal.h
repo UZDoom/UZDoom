@@ -7,7 +7,7 @@
 #include "tflags.h"
 #include "vectors.h"
 
-enum EChanFlag
+enum EChanFlag : uint32_t
 {
 	// modifier flags
 	CHANF_LISTENERZ = 8,

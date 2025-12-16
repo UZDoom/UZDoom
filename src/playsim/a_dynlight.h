@@ -34,6 +34,7 @@ enum
 
 enum LightFlag
 {
+	LF_NONE = 0,
 	LF_SUBTRACTIVE = 1,
 	LF_ADDITIVE = 2,
 	LF_DONTLIGHTSELF = 4,
@@ -122,7 +123,7 @@ protected:
 	DVector3 m_Pos = { 0,0,0 };
 	int m_type;
 	int8_t m_attenuate = -1;
-	LightFlags m_lightFlags = 0;
+	LightFlags m_lightFlags = LF_NONE;
 	bool m_swapped = false;
 	bool m_spot = false;
 	bool m_explicitPitch = false;

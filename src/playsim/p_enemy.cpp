@@ -2014,11 +2014,11 @@ DEFINE_ACTION_FUNCTION(AActor, A_Look)
 	{
 		if ((self->flags2 & MF2_BOSS) || (self->flags8 & MF8_FULLVOLSEE))
 		{ // full volume
-			S_Sound (self, CHAN_VOICE, 0, self->SeeSound, 1, ATTN_NONE);
+			S_Sound (self, CHAN_VOICE, CHANF_NONE, self->SeeSound, 1, ATTN_NONE);
 		}
 		else
 		{
-			S_Sound (self, CHAN_VOICE, 0, self->SeeSound, 1, ATTN_NORM);
+			S_Sound (self, CHAN_VOICE, CHANF_NONE, self->SeeSound, 1, ATTN_NORM);
 		}
 	}
 
@@ -2195,11 +2195,11 @@ DEFINE_ACTION_FUNCTION(AActor, A_LookEx)
 	{
 		if (flags & LOF_FULLVOLSEESOUND)
 		{ // full volume
-			S_Sound (self, CHAN_VOICE, 0, self->SeeSound, 1, ATTN_NONE);
+			S_Sound (self, CHAN_VOICE, CHANF_NONE, self->SeeSound, 1, ATTN_NONE);
 		}
 		else
 		{
-			S_Sound (self, CHAN_VOICE, 0, self->SeeSound, 1, ATTN_NORM);
+			S_Sound (self, CHAN_VOICE, CHANF_NONE, self->SeeSound, 1, ATTN_NORM);
 		}
 	}
 
@@ -2624,7 +2624,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 		if (meleestate && P_CheckMeleeRange(actor))
 		{
 			if (actor->AttackSound.isvalid())
-				S_Sound (actor, CHAN_WEAPON, 0, actor->AttackSound, 1, ATTN_NORM);
+				S_Sound (actor, CHAN_WEAPON, CHANF_NONE, actor->AttackSound, 1, ATTN_NORM);
 
 			actor->SetState (meleestate);
 			actor->flags7 &= ~MF7_INCHASE;
@@ -2887,7 +2887,7 @@ bool P_CheckForResurrection(AActor* self, bool usevilestates, FState* state = nu
 					}
 				}
 				if (sound == NO_SOUND) sound = S_FindSound("vile/raise");
-				S_Sound(corpsehit, CHAN_BODY, 0, sound, 1, ATTN_IDLE);
+				S_Sound(corpsehit, CHAN_BODY, CHANF_NONE, sound, 1, ATTN_IDLE);
 				info = corpsehit->GetDefault();
 
 				if (GetTranslationType(corpsehit->Translation) == TRANSLATION_Blood)
@@ -3224,7 +3224,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Pain)
 	}
 	else if (self->PainSound.isvalid())
 	{
-		S_Sound (self, CHAN_VOICE, 0, self->PainSound, 1, ATTN_NORM);
+		S_Sound (self, CHAN_VOICE, CHANF_NONE, self->PainSound, 1, ATTN_NORM);
 	}
 	return 0;
 }

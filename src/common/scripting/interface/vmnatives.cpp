@@ -120,7 +120,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(DStatusBarCore, StatusbarToRealCoords, StatusbarTo
 	return min(4, numret);
 }
 
-void SBar_DrawTexture(DStatusBarCore* self, int texid, double x, double y, int flags, double alpha, double w, double h, double scaleX, double scaleY, int style, int color, int translation, double clipwidth)
+void SBar_DrawTexture(DStatusBarCore* self, int texid, double x, double y, EDrawImageFlags flags, double alpha, double w, double h, double scaleX, double scaleY, int style, int color, int translation, double clipwidth)
 {
 	if (!twod->HasBegun2D()) ThrowAbortException(X_OTHER, "Attempt to draw to screen outside a draw function");
 	self->DrawGraphic(FSetTextureID(texid), x, y, flags, alpha, w, h, scaleX, scaleY, ERenderStyle(style), color, translation, clipwidth);
@@ -132,21 +132,21 @@ DEFINE_ACTION_FUNCTION_NATIVE(DStatusBarCore, DrawTexture, SBar_DrawTexture)
 	PARAM_INT(texid);
 	PARAM_FLOAT(x);
 	PARAM_FLOAT(y);
-	PARAM_INT(flags);
+	PARAM_FLAGS(EDrawImageFlags, flags);
 	PARAM_FLOAT(alpha);
 	PARAM_FLOAT(w);
 	PARAM_FLOAT(h);
 	PARAM_FLOAT(scaleX);
 	PARAM_FLOAT(scaleY);
-	PARAM_INT(style);
+	PARAM_ENUM(ERenderStyle, style);
 	PARAM_INT(col);
 	PARAM_INT(trans);
 	PARAM_FLOAT(clipwidth);
-	SBar_DrawTexture(self, texid, x, y, flags, alpha, w, h, scaleX, scaleY, style, col, trans, clipwidth);
+	SBar_DrawTexture(self, texid, x, y, EDrawImageFlags(flags), alpha, w, h, scaleX, scaleY, ERenderStyle(style), col, trans, clipwidth);
 	return 0;
 }
 
-void SBar_DrawImage(DStatusBarCore* self, const FString& texid, double x, double y, int flags, double alpha, double w, double h, double scaleX, double scaleY, int style, int color, int translation, double clipwidth)
+void SBar_DrawImage(DStatusBarCore* self, const FString& texid, double x, double y, EDrawImageFlags flags, double alpha, double w, double h, double scaleX, double scaleY, ERenderStyle style, int color, int translation, double clipwidth)
 {
 	if (!twod->HasBegun2D()) ThrowAbortException(X_OTHER, "Attempt to draw to screen outside a draw function");
 	self->DrawGraphic(TexMan.CheckForTexture(texid.GetChars(), ETextureType::Any), x, y, flags, alpha, w, h, scaleX, scaleY, ERenderStyle(style), color, translation, clipwidth);
@@ -158,21 +158,21 @@ DEFINE_ACTION_FUNCTION_NATIVE(DStatusBarCore, DrawImage, SBar_DrawImage)
 	PARAM_STRING(texid);
 	PARAM_FLOAT(x);
 	PARAM_FLOAT(y);
-	PARAM_INT(flags);
+	PARAM_FLAGS(EDrawImageFlags, flags);
 	PARAM_FLOAT(alpha);
 	PARAM_FLOAT(w);
 	PARAM_FLOAT(h);
 	PARAM_FLOAT(scaleX);
 	PARAM_FLOAT(scaleY);
-	PARAM_INT(style);
+	PARAM_ENUM(ERenderStyle, style);
 	PARAM_INT(col);
 	PARAM_INT(trans);
 	PARAM_FLOAT(clipwidth);
-	SBar_DrawImage(self, texid, x, y, flags, alpha, w, h, scaleX, scaleY, style, col, trans, clipwidth);
+	SBar_DrawImage(self, texid, x, y, (EDrawImageFlags)flags, alpha, w, h, scaleX, scaleY, (ERenderStyle)style, col, trans, clipwidth);
 	return 0;
 }
 
-void SBar_DrawImageRotated(DStatusBarCore* self, const FString& texid, double x, double y, int flags, double angle, double alpha, double scaleX, double scaleY, int style, int color, int translation)
+void SBar_DrawImageRotated(DStatusBarCore* self, const FString& texid, double x, double y, EDrawImageFlags flags, double angle, double alpha, double scaleX, double scaleY, ERenderStyle style, int color, int translation)
 {
 	if (!twod->HasBegun2D()) ThrowAbortException(X_OTHER, "Attempt to draw to screen outside a draw function");
 	self->DrawRotated(TexMan.CheckForTexture(texid.GetChars(), ETextureType::Any), x, y, flags, angle, alpha, scaleX, scaleY, color, translation, (ERenderStyle)style);
@@ -184,22 +184,22 @@ DEFINE_ACTION_FUNCTION_NATIVE(DStatusBarCore, DrawImageRotated, SBar_DrawImageRo
 	PARAM_STRING(texid);
 	PARAM_FLOAT(x);
 	PARAM_FLOAT(y);
-	PARAM_INT(flags);
+	PARAM_FLAGS(EDrawImageFlags, flags);
 	PARAM_FLOAT(angle);
 	PARAM_FLOAT(alpha);
 	PARAM_FLOAT(scaleX);
 	PARAM_FLOAT(scaleY);
-	PARAM_INT(style);
+	PARAM_ENUM(ERenderStyle, style);
 	PARAM_INT(col);
 	PARAM_INT(trans);
-	SBar_DrawImageRotated(self, texid, x, y, flags, angle, alpha, scaleX, scaleY, style, col, trans);
+	SBar_DrawImageRotated(self, texid, x, y, EDrawImageFlags(flags), angle, alpha, scaleX, scaleY, ERenderStyle(style), col, trans);
 	return 0;
 }
 
-void SBar_DrawTextureRotated(DStatusBarCore* self, int texid, double x, double y, int flags, double angle, double alpha, double scaleX, double scaleY, int style, int color, int translation)
+void SBar_DrawTextureRotated(DStatusBarCore* self, int texid, double x, double y, EDrawImageFlags flags, double angle, double alpha, double scaleX, double scaleY, ERenderStyle style, int color, int translation)
 {
 	if (!twod->HasBegun2D()) ThrowAbortException(X_OTHER, "Attempt to draw to screen outside a draw function");
-	self->DrawRotated(FSetTextureID(texid), x, y, flags, angle, alpha, scaleX, scaleY, color, translation, (ERenderStyle)style);
+	self->DrawRotated(FSetTextureID(texid), x, y, flags, angle, alpha, scaleX, scaleY, color, translation, style);
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(DStatusBarCore, DrawTextureRotated, SBar_DrawTextureRotated)
@@ -208,15 +208,15 @@ DEFINE_ACTION_FUNCTION_NATIVE(DStatusBarCore, DrawTextureRotated, SBar_DrawTextu
 	PARAM_INT(texid);
 	PARAM_FLOAT(x);
 	PARAM_FLOAT(y);
-	PARAM_INT(flags);
+	PARAM_FLAGS(EDrawImageFlags, flags);
 	PARAM_FLOAT(angle);
 	PARAM_FLOAT(alpha);
 	PARAM_FLOAT(scaleX);
 	PARAM_FLOAT(scaleY);
-	PARAM_INT(style);
+	PARAM_ENUM(ERenderStyle, style);
 	PARAM_INT(col);
 	PARAM_INT(trans);
-	SBar_DrawTextureRotated(self, texid, x, y, flags, angle, alpha, scaleX, scaleY, style, col, trans);
+	SBar_DrawTextureRotated(self, texid, x, y, EDrawImageFlags(flags), angle, alpha, scaleX, scaleY, (ERenderStyle)style, col, trans);
 	return 0;
 }
 

@@ -673,7 +673,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetFriendPlayer, SetFriendPlayer)
 
 void ClearBounce(AActor *self)
 {
-	self->BounceFlags = 0;
+	self->BounceFlags = BOUNCE_None;
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(AActor, ClearBounce, ClearBounce)
@@ -1142,7 +1142,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, TryMove, TryMove)
 	ACTION_RETURN_BOOL(TryMove(self, x, y, dropoff, missilecheck, tm));
 }
 
-static int CheckMove(AActor *self ,double x, double y, int flags, FCheckPosition *tm)
+static int CheckMove(AActor *self ,double x, double y, ECheckMoveFlags flags, FCheckPosition *tm)
 {
 	if (tm == nullptr)
 	{
@@ -1159,9 +1159,9 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, CheckMove, CheckMove)
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_FLOAT(x);
 	PARAM_FLOAT(y);
-	PARAM_INT(flags);
+	PARAM_FLAGS(ECheckMoveFlags, flags);
 	PARAM_POINTER(tm, FCheckPosition);
-	ACTION_RETURN_BOOL(CheckMove(self, x, y, flags, tm));
+	ACTION_RETURN_BOOL(CheckMove(self, x, y, ECheckMoveFlags(flags), tm));
 }
 
 static double AimLineAttack(AActor *self, double angle, double distance, FTranslatedLineTarget *pLineTarget, double vrange, int flags, AActor *target, AActor *friender)
