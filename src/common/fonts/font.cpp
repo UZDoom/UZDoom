@@ -76,6 +76,11 @@ CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "IBMPLEXK", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverrideKR(self);
 }
+CUSTOM_CVAR(String, fontoverride_HUDFont, "IBMPLEXS", CVAR_ARCHIVE)
+{
+	SetHUDFontOverride(self);
+}
+
 //==========================================================================
 //
 // FFont :: FFont
@@ -630,6 +635,11 @@ void SetNewSmallFontOverrideKR(const char *newFont)
 	{
 		NewSmallFont = FindDynamicFallbackFontForLanguage("ko");
 	}
+}
+
+void SetHUDFontOverride(const char *newFont)
+{
+	//
 }
 
 void FFont::UpdateFontDynamicFallbacks(const char* lang)
