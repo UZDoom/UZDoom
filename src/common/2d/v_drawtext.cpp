@@ -448,6 +448,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			FGameTexture *const atlasTexture                = s.Font->GetDynamicFontAtlasTexture();
 			const Trex::Atlas  &atlas                       = *s.Font->GetDynamicFontAtlas();
 			Trex::TextShaper   &shaper                      = *s.Font->GetDynamicTextShaper();
+			scalex = atlasFragmentDrawParms.scalex * atlasFragmentDrawParms.patchscalex;
+			scaley = atlasFragmentDrawParms.scaley * atlasFragmentDrawParms.patchscaley;
 			
 			for (int i = 0; i < s.TrexGlyphs.size(); ++i)
 			{
