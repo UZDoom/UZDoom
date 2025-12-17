@@ -968,7 +968,7 @@ class OptionMenu : Menu
 				}
 				if (((MenuTime() % 8) < 6) || GetCurrentMenu() != self)
 				{
-					DrawOptionText(cur_indent + 3 * CleanXfac_1, y, OptionMenuSettings.mFontColorSelection, "<");
+					DrawOptionText(cur_indent + 3 * CleanXfac_1, y, OptionMenuSettings.mFontColorSelection, "\cg◀");
 				}
 			}
 
