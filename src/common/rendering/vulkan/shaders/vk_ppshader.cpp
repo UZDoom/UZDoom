@@ -33,6 +33,14 @@ VkPPShader::VkPPShader(VulkanRenderDevice* fb, PPShader *shader) : fb(fb)
 	FString prolog;
 	if (!shader->Uniforms.empty())
 		prolog = UniformBlockDecl::Create("Uniforms", shader->Uniforms, -1);
+
+	// Add automatic uniforms in separate block at AUTOMATIC_UNIFORMS_BINDING
+	prolog.AppendFormat("layout(set = 0, binding = %d) uniform AutomaticUniforms {\n", AUTOMATIC_UNIFORMS_BINDING);
+	prolog += "    float InputTimeDelta;\n";
+	prolog += "    float InputTime;\n";
+	prolog += "    float InputTimeGame;\n";
+	prolog += "};\n";
+
 	prolog += shader->Defines;
 
 	VertexShader = ShaderBuilder()

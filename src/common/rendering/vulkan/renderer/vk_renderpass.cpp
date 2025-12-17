@@ -352,6 +352,10 @@ void VkPPRenderPassSetup::CreateDescriptorLayout(const VkPPRenderPassKey& key)
 	DescriptorSetLayoutBuilder builder;
 	for (int i = 0; i < key.InputTextures; i++)
 		builder.AddBinding(i, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 1, VK_SHADER_STAGE_FRAGMENT_BIT);
+
+	// Automatic uniforms at dedicated binding point (separate from push constants)
+	builder.AddBinding(AUTOMATIC_UNIFORMS_BINDING, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1, VK_SHADER_STAGE_FRAGMENT_BIT);
+
 	if (key.ShadowMapBuffers)
 	{
 		builder.AddBinding(LIGHTNODES_BINDINGPOINT, VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 1, VK_SHADER_STAGE_FRAGMENT_BIT);

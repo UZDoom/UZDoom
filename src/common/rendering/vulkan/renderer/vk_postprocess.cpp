@@ -42,10 +42,19 @@
 #include "flatvertices.h"
 #include "r_videoscale.h"
 
+#include "i_time.h"
+#include "g_levellocals.h"
+
 EXTERN_CVAR(Int, gl_dither_bpc)
 
 VkPostprocess::VkPostprocess(VulkanRenderDevice* fb) : fb(fb)
 {
+	// Create buffer for automatic uniforms (12 bytes: 3 floats)
+	AutomaticUniformsBuffer = BufferBuilder()
+	.Size(16)  // 16 bytes (pad to alignment)
+	.Usage(VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU)
+	.DebugName("AutomaticUniformsBuffer")
+	.Create(fb->device.get());
 }
 
 VkPostprocess::~VkPostprocess()
@@ -70,6 +79,27 @@ void VkPostprocess::PostProcessScene(int fixedcm, float flash, const std::functi
 	int sceneHeight = fb->GetBuffers()->GetSceneHeight();
 
 	VkPPRenderState renderstate(fb);
+
+	renderstate.TimeDelta = static_cast<float>(GetDeltaTime());
+	renderstate.Time = static_cast<float>(fb->FrameTime / 1000.0);
+	renderstate.TimeGame = static_cast<float>(primaryLevel->LocalWorldTimer / (double)GameTicRate);
+
+	// Upload automatic uniforms to buffer
+	struct AutomaticUniforms {
+		float InputTimeDelta;
+		float InputTime;
+		float InputTimeGame;
+		float padding;  // Align to 16 bytes
+	} autoUniforms;
+
+	autoUniforms.InputTimeDelta = renderstate.TimeDelta;
+	autoUniforms.InputTime = renderstate.Time;
+	autoUniforms.InputTimeGame = renderstate.TimeGame;
+	autoUniforms.padding = 0.0f;
+
+	void* data = AutomaticUniformsBuffer->Map(0, sizeof(autoUniforms));
+	memcpy(data, &autoUniforms, sizeof(autoUniforms));
+	AutomaticUniformsBuffer->Unmap();
 
 	hw_postprocess.Pass1(&renderstate, fixedcm, sceneWidth, sceneHeight);
 	SetActiveRenderTarget();

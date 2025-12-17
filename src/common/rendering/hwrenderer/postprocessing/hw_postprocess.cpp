@@ -1013,6 +1013,7 @@ PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::uni
 	FString prolog;
 	prolog += uniformTextures;
 	prolog += pipelineInOut;
+	// Note: Automatic uniforms (InputTimeDelta, InputTime, InputTimeGame) are added by backends
 
 	Shader = PPShader(Desc->ShaderLumpName, prolog, Fields);
 }
@@ -1138,6 +1139,30 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 				break;
 			}
 		}
+	}
+
+	auto timeDeltaOffset = FieldOffset.find("InputTimeDelta");
+	if (timeDeltaOffset != FieldOffset.end())
+	{
+		if (uniforms.Size() < timeDeltaOffset->second + sizeof(float))
+			uniforms.Resize(timeDeltaOffset->second + sizeof(float));
+		memcpy(&uniforms[timeDeltaOffset->second], &renderstate->TimeDelta, sizeof(float));
+	}
+
+	auto timeOffset = FieldOffset.find("InputTime");
+	if (timeOffset != FieldOffset.end())
+	{
+		if (uniforms.Size() < timeOffset->second + sizeof(float))
+			uniforms.Resize(timeOffset->second + sizeof(float));
+		memcpy(&uniforms[timeOffset->second], &renderstate->Time, sizeof(float));
+	}
+
+	auto timeGameOffset = FieldOffset.find("InputTimeGame");
+	if (timeGameOffset != FieldOffset.end())
+	{
+		if (uniforms.Size() < timeGameOffset->second + sizeof(float))
+			uniforms.Resize(timeGameOffset->second + sizeof(float));
+		memcpy(&uniforms[timeGameOffset->second], &renderstate->TimeGame, sizeof(float));
 	}
 
 	renderstate->Uniforms.Data = uniforms;

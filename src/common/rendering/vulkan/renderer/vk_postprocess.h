@@ -41,12 +41,16 @@ public:
 
 	int GetCurrentPipelineImage() const { return mCurrentPipelineImage; }
 
+	VulkanBuffer* GetAutomaticUniformsBuffer() { return AutomaticUniformsBuffer.get(); }
+
 private:
 	void NextEye(int eyeCount);
 
 	VulkanRenderDevice* fb = nullptr;
 
 	int mCurrentPipelineImage = 0;
+
+	std::unique_ptr<VulkanBuffer> AutomaticUniformsBuffer;
 
 	friend class VkPPRenderState;
 };

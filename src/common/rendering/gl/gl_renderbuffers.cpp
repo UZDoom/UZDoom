@@ -830,18 +830,20 @@ FShaderProgram *GLPPRenderState::GetGLShader(PPShader *shader)
 	if (!shader->Backend)
 	{
 		auto glshader = std::make_unique<FShaderProgram>();
-
 		FString prolog;
 		if (!shader->Uniforms.empty())
 			prolog = UniformBlockDecl::Create("Uniforms", shader->Uniforms, POSTPROCESS_BINDINGPOINT);
 		prolog += shader->Defines;
+
+		prolog += "uniform float InputTimeDelta;\n";
+		prolog += "uniform float InputTime;\n";
+		prolog += "uniform float InputTimeGame;\n";
 
 		glshader->Compile(FShaderProgram::Vertex, shader->VertexShader.GetChars(), "", shader->Version);
 		glshader->Compile(FShaderProgram::Fragment, shader->FragmentShader.GetChars(), prolog.GetChars(), shader->Version);
 		glshader->Link(shader->FragmentShader.GetChars());
 		if (!shader->Uniforms.empty())
 			glshader->SetUniformBufferLocation(POSTPROCESS_BINDINGPOINT, "Uniforms");
-
 		shader->Backend = std::move(glshader);
 	}
 	return static_cast<FShaderProgram*>(shader->Backend.get());
@@ -958,6 +960,19 @@ void GLPPRenderState::Draw()
 
 	// Set shader
 	shader->Bind();
+
+	GLuint program = shader->Handle();
+	GLint timeDeltaLoc = glGetUniformLocation(program, "InputTimeDelta");
+	if (timeDeltaLoc != -1)
+		glUniform1f(timeDeltaLoc, TimeDelta);
+
+	GLint timeLoc = glGetUniformLocation(program, "InputTime");
+	if (timeLoc != -1)
+		glUniform1f(timeLoc, Time);
+
+	GLint timeGameLoc = glGetUniformLocation(program, "InputTimeGame");
+	if (timeGameLoc != -1)
+		glUniform1f(timeGameLoc, TimeGame);
 
 	// Draw the screen quad
 	GLRenderer->RenderScreenQuad();

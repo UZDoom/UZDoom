@@ -15,6 +15,10 @@ typedef IntRect PPViewport;
 class PPTexture;
 class PPShader;
 
+// Binding point for automatic uniforms (separate from user uniforms)
+// Chosen to not conflict with texture bindings (0-N) or shadow map buffers
+constexpr int AUTOMATIC_UNIFORMS_BINDING = 15;
+
 enum class ETonemapMode : uint8_t
 {
 	None,
@@ -230,6 +234,10 @@ public:
 	PPBlendMode BlendMode;
 	PPOutput Output;
 	bool ShadowMapBuffers = false;
+
+	float TimeDelta = 0.0f;
+	float Time = 0.0f;
+	float TimeGame = 0.0f;
 };
 
 class PPResource

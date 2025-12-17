@@ -37,6 +37,8 @@
 #include "hw_viewpointuniforms.h"
 #include "v_2ddrawer.h"
 
+#include "vk_postprocess.h"
+
 VkDescriptorSetManager::VkDescriptorSetManager(VulkanRenderDevice* fb) : fb(fb)
 {
 	CreateHWBufferSetLayout();
@@ -210,6 +212,9 @@ VulkanDescriptorSet* VkDescriptorSetManager::GetInput(VkPPRenderPassSetup* passS
 		imageTransition.AddImage(tex, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, false);
 	}
 
+	// Bind automatic uniforms buffer
+	write.AddBuffer(descriptors.get(), AUTOMATIC_UNIFORMS_BINDING, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, fb->GetPostprocess()->GetAutomaticUniformsBuffer());
+
 	if (bindShadowMapBuffers)
 	{
 		write.AddBuffer(descriptors.get(), LIGHTNODES_BINDINGPOINT, VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, fb->GetBufferManager()->LightNodes->mBuffer.get());
@@ -239,6 +244,7 @@ std::unique_ptr<VulkanDescriptorSet> VkDescriptorSetManager::AllocatePPDescripto
 	PPDescriptorPool = DescriptorPoolBuilder()
 		.AddPoolSize(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 200)
 		.AddPoolSize(VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 4)
+		.AddPoolSize(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 100)  // For automatic uniforms
 		.MaxSets(100)
 		.DebugName("PPDescriptorPool")
 		.Create(fb->device.get());
