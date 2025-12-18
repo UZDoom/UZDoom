@@ -76,6 +76,8 @@ CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "IBMPLEXK", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverrideKR(self);
 }
+
+void SetHUDFontOverride(const char *newFont);
 CUSTOM_CVAR(String, fontoverride_HUDFont, "IBMPLEXS", CVAR_ARCHIVE)
 {
 	SetHUDFontOverride(self);
@@ -612,28 +614,49 @@ FFont *FindDynamicFallbackFontForLanguage(const char *lang)
 
 void SetNewSmallFontOverride(const char* newFont)
 {
-	NewSmallFont = V_GetFont(newFont);
-	if (!NewSmallFont)
+	if (strcmp(newFont, "FO_DEFAULT") == 0)
 	{
-		NewSmallFont = FindDynamicFallbackFontForLanguage("en");
+		NewSmallFont = V_GetFont("NewSmallFont");
+	}
+	else
+	{
+		NewSmallFont = V_GetFont(newFont);
+		if (!NewSmallFont)
+		{
+			NewSmallFont = FindDynamicFallbackFontForLanguage("en");
+		}
 	}
 }
 
 void SetNewSmallFontOverrideJP(const char *newFont)
 {
-	NewSmallFont = V_GetFont(newFont);
-	if (!NewSmallFont)
+	if (strcmp(newFont, "FO_DEFAULT") == 0)
 	{
-		NewSmallFont = FindDynamicFallbackFontForLanguage("jp");
+		NewSmallFont = V_GetFont("NewSmallFont");
 	}
+	else
+	{
+		NewSmallFont = V_GetFont(newFont);
+		if (!NewSmallFont)
+		{
+			NewSmallFont = FindDynamicFallbackFontForLanguage("jp");
+		}
+	}	
 }
 
 void SetNewSmallFontOverrideKR(const char *newFont)
 {
-	NewSmallFont = V_GetFont(newFont);
-	if (!NewSmallFont)
+	if (strcmp(newFont, "FO_DEFAULT") == 0)
 	{
-		NewSmallFont = FindDynamicFallbackFontForLanguage("ko");
+		NewSmallFont = V_GetFont("NewSmallFont");
+	}
+	else
+	{
+		NewSmallFont = V_GetFont(newFont);
+		if (!NewSmallFont)
+		{
+			NewSmallFont = FindDynamicFallbackFontForLanguage("ko");
+		}
 	}
 }
 
