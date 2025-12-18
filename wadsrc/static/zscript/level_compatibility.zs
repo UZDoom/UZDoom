@@ -2233,9 +2233,38 @@ class LevelCompatibility : LevelPostProcessor
 			
 			case '25F0DA23E7E54DAB05DC0B2A6B9DE1D1': // 3ha2.wad map02
 			{
-				// Enables the Imp teleport to work on easy difficulties, allowing for 100% kills
+				// Enables the Imp teleport to work on easy difficulties, allowing for 100% kills.
 				SetThingSkills(56,31);
 				break;
+			}
+			
+			case 'A9AA12629AF5AC866EBB6F8281382ED8': // 3hafinal.wad map19
+			{
+			// Enables the Imp and Hell Knight teleport to work on easy difficulties, allowing for 100% kills.
+			for (int i = 143; i < 148; i++)
+				SetThingSkills(i, 31);
+			for (int i = 137; i < 139; i++)
+				SetThingSkills(i, 31);
+			break;
+			}
+			
+			case '6F4F2E068AA7B937C7B76FDB86B31FF5': //3ha3.wad map24
+			{
+			// Enables the Revenant teleport to work on easy difficulties, allowing for 100% kills.
+			SetThingSkills(212,31);
+			break;
+			}
+			
+			case 'A8AB197CBABE8F5FAE504FCF51FDE830': //3ha3.wad map32
+			{
+			// Removes the out of bounds items
+			SetThingSkills(1487,0);
+			SetThingSkills(1768,0);
+			for (int i = 1773; i < 1777; i++)
+				SetThingSkills(i, 0); 
+			for (int i = 1807; i < 1811; i++)
+				SetThingSkills(i, 0); 
+			break;
 			}
 		}
 	}
