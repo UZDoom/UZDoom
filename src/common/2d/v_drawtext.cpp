@@ -282,7 +282,8 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 	currentDrawString->Font = font;
 	bool insideEscapeSequence = false;
 	bool insideNamedColorTagSequence = false;
-	int  currentcolor = 0;
+	int currentcolor = 0;
+	int boldcolor = normalcolor ? normalcolor - 1 : NumTextColors - 1;
 	bool isInFallback                = false;
 	std::u32string colorSubStr;
 	for (int i =0; i < utf32SrcString.size(); ++i)
@@ -298,28 +299,30 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 		{
 			if (srcChar == '+')
 			{
-				currentcolor         = FindCVar("msgmidcolor", nullptr)->ToInt();
+				int intVal           = FindCVar("msgmidcolor", nullptr)->ToInt();
+				currentcolor         = V_LogColorFromColorRange((EColorRange)boldcolor);
 				insideEscapeSequence = false;
 				continue;
 			}
 			else if (srcChar == '-')
 			{
-				//default color for dynamic text is white
-				currentcolor = V_LogColorFromColorRange(CR_WHITE);
+				currentcolor = V_LogColorFromColorRange((EColorRange)normalcolor);
 				insideEscapeSequence = false;
 				continue;
 			}
 			else if (srcChar == '*')
 			{
 				// use chat color
-				currentcolor         = FindCVar("msg3color", nullptr)->ToInt();
+				int intVal   = FindCVar("msg3color", nullptr)->ToInt();
+				currentcolor         = V_LogColorFromColorRange((EColorRange)intVal);
 				insideEscapeSequence = false;
 				continue;
 			}
 			else if (srcChar == '!')
 			{
 				//use team chat color
-				currentcolor         = FindCVar("msg4color", nullptr)->ToInt();
+				int intVal           = FindCVar("msg4color", nullptr)->ToInt();
+				currentcolor         = V_LogColorFromColorRange((EColorRange)intVal);
 				insideEscapeSequence   = false;
 				continue;
 			}
@@ -357,6 +360,7 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 				currentcolor = V_LogColorFromColorRange(newcolor);
 				continue;
 			}
+			
 			continue;
 		}
 		else if (insideEscapeSequence && srcChar != TEXTCOLOR_ESCAPE && srcChar != '[')
