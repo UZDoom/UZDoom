@@ -304,7 +304,8 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 			}
 			else if (srcChar == '-')
 			{
-				currentcolor         = FindCVar("msgmidcolor2", nullptr)->ToInt();
+				//default color for dynamic text is white
+				currentcolor = V_LogColorFromColorRange(CR_WHITE);
 				insideEscapeSequence = false;
 				continue;
 			}
@@ -350,6 +351,7 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 				simdutf::utf8_length_from_utf32(std::span<const char32_t>(colorSubStr.cbegin(), colorSubStr.cend())));
 			simdutf::convert_utf32_to_utf8(colorSubStr.data(), colorSubStr.size(), utf8ColorSubStr.data());
 			EColorRange newcolor        = V_FindFontColor(FName(utf8ColorSubStr.data()));
+			colorSubStr.clear();
 			if (newcolor != CR_UNDEFINED)
 			{
 				currentcolor = V_LogColorFromColorRange(newcolor);
