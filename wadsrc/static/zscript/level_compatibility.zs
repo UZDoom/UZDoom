@@ -2238,6 +2238,14 @@ class LevelCompatibility : LevelPostProcessor
 				break;
 			}
 			
+			case '41DFF94B72403AF725049C5F10AFD365': // 3ha2.wad map13
+			{
+				// Fixes the ground below the exit sign being a damaging floor.
+				for (int i = 85; i < 87; i++)
+				SetSectorSpecial(i, 0);
+				break;
+			}
+			
 			case 'A9AA12629AF5AC866EBB6F8281382ED8': // 3hafinal.wad map19
 			{
 			// Enables the Imp and Hell Knight teleport to work on easy difficulties, allowing for 100% kills.
@@ -2264,6 +2272,36 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingSkills(i, 0); 
 			for (int i = 1807; i < 1811; i++)
 				SetThingSkills(i, 0); 
+			break;
+			}
+			
+			case '2EEE8546A6328792DA3B7ED18DAB2D1A': // 1024CLAU.wad map22
+			{
+			//Floor only elevator bug fix
+			SetLineSpecial(791, Floor_RaiseToNearest, 1, 64);
+			SetLineSpecial(793, Floor_RaiseToNearest, 1, 64);
+			SetLineSpecial(794, Floor_RaiseToNearest, 1, 64);
+			break;
+			}
+			
+			case '02140759002C3F68ECD0C4EC08667026': 1024.wad map10
+			{
+			//Removes the enemies who are unable to teleport in.
+			for (int i = 123; i < 129; i++)
+			SetThingSkills(i, 0); 
+			SetThingSkills(163,0);
+			SetThingSkills(162,0);
+			break;
+			}
+			
+			case '1E29380A2D08D68D707E7FE7A0671941': 1024.wad map13
+			{
+			//Removes the enemies who are unable to teleport in.
+			for (int i = 230; i < 238; i++)
+			SetThingSkills(i, 0); 
+			//Fixes missing texture at the exit, also unpegs the wall for consistency
+			SetWallTexture(2406, Line.front, Side.mid, "Doortrak");
+			SetLineFlags(2406, Line.ML_DONTPEGBOTTOM);
 			break;
 			}
 		}
