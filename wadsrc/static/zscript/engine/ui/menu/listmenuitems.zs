@@ -354,7 +354,7 @@ class ListMenuItemCaptionItem : ListMenuItem
 
 	override void Draw(bool selected, ListMenuDescriptor desc)
 	{
-		let font = menuDelegate.PickFont(desc.mFont);
+		let font = Font.GetTitleFont(menuDelegate.PickFont(desc.mFont));
 		if (font && mText.Length() > 0)
 		{
 			menuDelegate.DrawCaption(mText, font, 0, true);

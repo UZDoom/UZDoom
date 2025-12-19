@@ -120,7 +120,10 @@ public:
 	static void   UpdateFontDynamicFallbacks(const char* lang);
 
 	//standard font choices
+	//TODO: this seems not super extensible - what if mods want to add semantic font choices?
 	static FFont *GetSmallTextFont(FFont* fallbackIfNoUserChoice);
+	static FFont *GetTitleFont(FFont* fallbackIfNoUserChoice);
+	static FFont *GetDescriptionFont(FFont* fallbackIfNoUserChoice);
 
 	// Return width of string in pixels (unscaled)
 	int StringWidth (const uint8_t *str, int spacing = 0) const;

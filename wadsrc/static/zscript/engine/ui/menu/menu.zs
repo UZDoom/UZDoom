@@ -204,7 +204,7 @@ class Menu : Object native ui version("2.4")
 		DontBlur = false;
 		AnimatedTransition = false;
 		Animated = false;
-		mTooltipFont = NewConsoleFont;
+		mTooltipFont = Font.GetDescriptionFont(NewConsoleFont);
 		mCurrentTooltip = "";
 		mTooltipScrollTimer = m_tooltip_delay;
 		mTooltipScrollOffset = 0.0;

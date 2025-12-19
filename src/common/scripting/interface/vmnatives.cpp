@@ -625,6 +625,31 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetSmallTextFont, GetSmallTextFont)
 	ACTION_RETURN_POINTER(FFont::GetSmallTextFont(fallbackIfNoUserChoice));
 }
 
+static FFont *GetTitleFont(FFont *fallbackIfNoUserChoice)
+{
+	return FFont::GetTitleFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetTitleFont, GetTitleFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetTitleFont(fallbackIfNoUserChoice));
+}
+
+static FFont *GetDescriptionFont(FFont *fallbackIfNoUserChoice)
+{
+	return FFont::GetDescriptionFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetDescriptionFont, GetDescriptionFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetDescriptionFont(fallbackIfNoUserChoice));
+}
+
+
 static int GetCharWidth(FFont *font, int code)
 {
 	return font->GetCharWidth(code);

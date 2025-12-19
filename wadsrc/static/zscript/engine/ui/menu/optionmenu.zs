@@ -117,7 +117,7 @@ class OptionMenu : Menu
 		AnimatedTransition = desc.mAnimatedTransition;
 		Animated = desc.mAnimated;
 		MaxItems = 1;
-		mTooltipFont = desc.mTooltipFont ? desc.mTooltipFont : NewConsoleFont;
+		mTooltipFont = Font.GetDescriptionFont(desc.mTooltipFont ? desc.mTooltipFont : NewConsoleFont);
 		mCurrentTooltip = "";
 		mTooltipScrollTimer = m_tooltip_delay;
 		mTooltipScrollOffset = 0.0;
@@ -889,7 +889,7 @@ class OptionMenu : Menu
 
 	virtual int DrawCaption(String title, int y, bool drawit)
 	{
-		let font = menuDelegate.PickFont(mDesc.mFont);
+		let font = Font.GetTitleFont(menuDelegate.PickFont(mDesc.mFont));
 		if (font && mDesc.mTitle.Length() > 0)
 		{
 			return menuDelegate.DrawCaption(title, font, y, drawit);

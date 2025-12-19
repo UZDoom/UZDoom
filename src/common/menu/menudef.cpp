@@ -810,7 +810,7 @@ static void ParseListMenu(FScanner &sc)
 	desc->mFont = DefaultListMenuSettings->mFont;
 	desc->mFontColor = DefaultListMenuSettings->mFontColor;
 	desc->mFontColor2 = DefaultListMenuSettings->mFontColor2;
-	desc->mTooltipFont = DefaultListMenuSettings->mTooltipFont;
+	desc->mTooltipFont = FFont::GetDescriptionFont(DefaultListMenuSettings->mTooltipFont);
 	desc->mClass = nullptr;
 	desc->mWLeft = 0;
 	desc->mWRight = 0;
@@ -1111,7 +1111,7 @@ static void ParseOptionMenuBody(FScanner &sc, DOptionMenuDescriptor *desc, int i
 		else if (sc.Compare("TooltipFont"))
 		{
 			sc.MustGetString();
-			FFont* newfont = V_GetFont(sc.String);
+			FFont* newfont = FFont::GetDescriptionFont(V_GetFont(sc.String));
 			if (newfont != nullptr) desc->mTooltipFont = newfont;
 		}
 		else if (sc.Compare("Tooltip"))
@@ -1299,7 +1299,7 @@ static void ParseOptionMenu(FScanner &sc)
 
 	DOptionMenuDescriptor *desc = Create<DOptionMenuDescriptor>();
 	desc->mFont = BigUpper;
-	desc->mTooltipFont = DefaultOptionMenuSettings->mTooltipFont;
+	desc->mTooltipFont = FFont::GetDescriptionFont(DefaultOptionMenuSettings->mTooltipFont);
 	desc->mMenuName = sc.String;
 	desc->mSelectedItem = -1;
 	desc->mScrollPos = 0;
@@ -1598,7 +1598,7 @@ static void ParseImageScroller(FScanner& sc)
 	desc->mAnimated = false;
 	desc->virtWidth = 320;
 	desc->virtHeight = 200;
-	desc->mTooltipFont = NewConsoleFont;
+	desc->mTooltipFont = FFont::GetDescriptionFont(NewConsoleFont);
 
 	ParseImageScrollerBody(sc, desc);
 	bool scratch = ReplaceMenu(sc, desc);

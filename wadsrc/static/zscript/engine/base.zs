@@ -697,7 +697,8 @@ struct Font native
 	native TextureID, int GetChar(int c);
 
 	native static Font GetSmallTextFont(Font fallbackIfNoUserChoice);
-	//native static Font GetHeaderFont();
+	native static Font GetTitleFont(Font fallbackIfNoUserChoice);
+	native static Font GetDescriptionFont(Font fallbackIfNoUserChoice);
 }
 
 struct Console native
