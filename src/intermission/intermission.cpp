@@ -803,11 +803,18 @@ void DIntermissionScreenScroller::Init(FIntermissionAction *desc, bool first)
 int DIntermissionScreenScroller::Responder (FInputEvent *ev)
 {
 	int res = Super::Responder(ev);
-	if (res == -1 && !nointerscrollabort)
+
+	if (res == -1)
 	{
+		if (nointerscrollabort) {
+			// Consume the key press to prevent advancing the scroller
+			return 0;
+		}
+
 		mBackground = mSecondPic;
 		mTicker = mScrollDelay + mScrollTime;
 	}
+	
 	return res;
 }
 
