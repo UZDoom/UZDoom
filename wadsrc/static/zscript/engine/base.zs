@@ -699,6 +699,7 @@ struct Font native
 	native static Font GetSmallTextFont(Font fallbackIfNoUserChoice);
 	native static Font GetTitleFont(Font fallbackIfNoUserChoice);
 	native static Font GetDescriptionFont(Font fallbackIfNoUserChoice);
+	native static Font GetConsoleFont(Font fallbackIfNoUserChoice);
 }
 
 struct Console native

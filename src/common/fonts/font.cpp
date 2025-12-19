@@ -76,6 +76,12 @@ CUSTOM_CVAR(String, fontchoice_description, "IBMPLEXS", CVAR_ARCHIVE)
 	SetFontChoice_Description(self);
 }
 
+void SetFontChoice_Console(const char *newFont);
+CUSTOM_CVAR(String, fontchoice_console, "HACKBO", CVAR_ARCHIVE)
+{
+	SetFontChoice_Console(self);
+}
+
 
 //actually overriding the font directly will become a last resort option
 //if you are having mod compatibility issues.
@@ -647,6 +653,11 @@ void SetFontChoice_Description(const char *newFont)
 	//
 }
 
+void SetFontChoice_Console(const char *newFont)
+{
+	//
+}
+
 void SetNewSmallFontOverride(const char* newFont)
 {
 	if (strcmp(newFont, "FO_DEFAULT") == 0)
@@ -751,6 +762,16 @@ FFont *FFont::GetTitleFont(FFont *fallbackIfNoUserChoice)
 FFont *FFont::GetDescriptionFont(FFont *fallbackIfNoUserChoice)
 {
 	FFont *userFont = V_GetFont(*fontchoice_description);
+	if (userFont)
+	{
+		return userFont;
+	}
+	return fallbackIfNoUserChoice;
+}
+
+FFont *FFont::GetConsoleFont(FFont *fallbackIfNoUserChoice)
+{
+	FFont *userFont = V_GetFont(*fontchoice_console);
 	if (userFont)
 	{
 		return userFont;

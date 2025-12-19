@@ -649,6 +649,19 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetDescriptionFont, GetDescriptionFont)
 	ACTION_RETURN_POINTER(FFont::GetDescriptionFont(fallbackIfNoUserChoice));
 }
 
+static FFont *GetConsoleFont(FFont *fallbackIfNoUserChoice)
+{
+	return FFont::GetConsoleFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetConsoleFont, GetConsoleFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetConsoleFont(fallbackIfNoUserChoice));
+}
+
+
 
 static int GetCharWidth(FFont *font, int code)
 {

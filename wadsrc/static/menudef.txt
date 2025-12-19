@@ -1734,6 +1734,8 @@ OptionMenu FontOptions protected
 	Tooltip "Choose a font to use for menu titles."
 	Option "Description Font",				"fontchoice_description", "DynamicFontOptions"
 	Tooltip "Choose a font to use for text descriptions. Used by tooltips, for example."
+	Option "Console Font",				"fontchoice_console", "DynamicFontOptions"
+	Tooltip "Choose a font to use for the command console. Also often used for misc small text or numbers."
 	StaticText ""
 	StaticText "ADVANCED - OVERRIDES"
 	Option "NewSmallFont override",			"fontoverride_NewSmallFont", "DynamicFontOptions"
