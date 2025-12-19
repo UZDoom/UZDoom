@@ -2459,7 +2459,8 @@ OptionMenu ModReplayerOptions protected
  OptionMenu AccessibilityOptions protected
  {
 	Title "$ACCMNU_TITLE"
-	
+
+	Submenu "$HUDMNU_FONTOPTIONS",			"FontOptions"
 	StaticText "$ACCMNU_TOOLTIP"
 	Slider "$ACCMNU_TOOLTIP_LINES", "m_tooltip_lines", 1, 4, 1, 0
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
