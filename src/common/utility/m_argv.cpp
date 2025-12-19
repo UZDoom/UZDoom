@@ -419,7 +419,7 @@ const char * FArgs::CheckValue(const FArg check) const
 	if (i > 0 && i < (int)Argv.Size() - 1)
 	{
 		i++;
-		return Argv[i][0] != '+' && Argv[i][0] != '-' ? Argv[i].GetChars() : nullptr;
+		return Argv[i].IsNotEmpty() && Argv[i][0] != '+' && Argv[i][0] != '-' ? Argv[i].GetChars() : nullptr;
 	}
 	else
 	{
