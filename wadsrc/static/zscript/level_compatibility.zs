@@ -2256,14 +2256,14 @@ class LevelCompatibility : LevelPostProcessor
 			break;
 			}
 			
-			case '6F4F2E068AA7B937C7B76FDB86B31FF5': //3ha3.wad map24
+			case '6F4F2E068AA7B937C7B76FDB86B31FF5': // 3ha3.wad map24
 			{
 			// Enables the Revenant teleport to work on easy difficulties, allowing for 100% kills.
 			SetThingSkills(212,31);
 			break;
 			}
 			
-			case 'A8AB197CBABE8F5FAE504FCF51FDE830': //3ha3.wad map32
+			case 'A8AB197CBABE8F5FAE504FCF51FDE830': // 3ha3.wad map32
 			{
 			// Removes the out of bounds items
 			SetThingSkills(1487,0);
@@ -2284,7 +2284,7 @@ class LevelCompatibility : LevelPostProcessor
 			break;
 			}
 			
-			case '02140759002C3F68ECD0C4EC08667026': 1024.wad map10
+			case '02140759002C3F68ECD0C4EC08667026': // 1024.wad map10
 			{
 			//Removes the enemies who are unable to teleport in.
 			for (int i = 123; i < 129; i++)
@@ -2294,7 +2294,7 @@ class LevelCompatibility : LevelPostProcessor
 			break;
 			}
 			
-			case '1E29380A2D08D68D707E7FE7A0671941': 1024.wad map13
+			case '1E29380A2D08D68D707E7FE7A0671941': // 1024.wad map13
 			{
 			//Removes the enemies who are unable to teleport in.
 			for (int i = 230; i < 238; i++)
