@@ -119,6 +119,9 @@ public:
 	static FFont *FindFont(FName fontname);
 	static void   UpdateFontDynamicFallbacks(const char* lang);
 
+	//standard font choices
+	static FFont *GetSmallTextFont(FFont* fallbackIfNoUserChoice);
+
 	// Return width of string in pixels (unscaled)
 	int StringWidth (const uint8_t *str, int spacing = 0) const;
 	inline int StringWidth (const char *str, int spacing = 0) const { return StringWidth ((const uint8_t *)str, spacing); }

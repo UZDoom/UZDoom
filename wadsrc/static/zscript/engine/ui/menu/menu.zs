@@ -509,7 +509,7 @@ class Menu : Object native ui version("2.4")
 
 	static Font OptionFont()
 	{
-		return NewSmallFont;
+		return Font.GetSmallTextFont(NewSmallFont);
 	}
 
 	static int OptionHeight()

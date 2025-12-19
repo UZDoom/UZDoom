@@ -1725,38 +1725,51 @@ OptionMenu FontOptions protected
 	Option "$FONTMNU_DLG",					"dlg_vgafont", "YesNo"
 	StaticText ""
 	Option "Use Generic UI",				"ui_generic", "YesNo"
-	Option "NewSmallFont override",			"fontoverride_NewSmallFont", "DynamicFontOptions"
-	Option "NewSmallFont override JP",		"fontoverride_NewSmallFontJP", "DynamicFontOptionsJP"
-	Option "NewSmallFont override KO",		"fontoverride_NewSmallFontKR", "DynamicFontOptionsKO"
+	Tooltip "Use the Small Text Font in more places. Often used for localization."
 	StaticText ""
-	StaticText "FALLBACKS"
+	StaticText "USER FONT CHOICES"
+	Option "Small Text Font",				"fontchoice_smalltext", "DynamicFontOptions"
+	Tooltip "Choose a font to use for standard small text. This is frequently used in list menus."
+	StaticText ""
+	StaticText "ADVANCED - OVERRIDES"
+	Option "NewSmallFont override",			"fontoverride_NewSmallFont", "DynamicFontOptions"
+	Tooltip "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
+	Option "NewSmallFont override JP",		"fontoverride_NewSmallFontJP", "DynamicFontOptionsJP"
+	Tooltip "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
+	Option "NewSmallFont override KO",		"fontoverride_NewSmallFontKR", "DynamicFontOptionsKO"
+	Tooltip "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
+	StaticText ""
+	StaticText "ADVANCED - FALLBACKS"
 	Option "Fallback Font",			"fontoverride_Fallback", "DynamicFontFallbackOptions"
 	Option "Fallback Font JP",			"fontoverride_FallbackJP", "DynamicFontFallbackOptionsJP"
-	Option "Fallback Font KO",			"fontoverride_FallbackKR", "DynamicFontFallbackOptionsKO"
+	Option "Fallback Font KO",			"fontoverride_FallbackKR", "DynamicFontFallbackOptionsKR"
 }
 
-//TODO: dynamically populate with known dynamic fonts
+//TODO: dynamically populate with known dynamic fonts ??
 OptionString DynamicFontOptions
 {
-	"FO_DEFAULT", "Don't override"
+	"FO_DEFAULT", "Default"
 	"LEXENDDE", "Lexend Deca"
 	"IBMPLEXS", "IBM Plex Sans"
+	"HACK-BOL", "Hack Bold"
+	"KREON-BO", "Kreon Bold"
 }
 
-//TODO: dynamically populate with known dynamic fonts
+//TODO: dynamically populate with known dynamic fonts ?? 
 OptionString DynamicFontFallbackOptions
 {
 	"IBMPLEXS", "IBM Plex Sans"
+	"HACK-BOL", "Hack Bold"
 }
 
-//TODO: dynamically populate with known dynamic fonts
+//TODO: dynamically populate with known dynamic fonts ??
 OptionString DynamicFontFallbackOptionsJP
 {
 	"IBMPLEXJ", "IBM Plex Sans JP"
 	"KOSUGIMA",	"Kosugi Maru"
 }
 
-OptionString DynamicFontOptionsKO
+OptionString DynamicFontFallbackOptionsKR
 {
 	"IBMPLEXK", "IBM Plex Sans KR"
 }
@@ -2460,7 +2473,6 @@ OptionMenu ModReplayerOptions protected
  {
 	Title "$ACCMNU_TITLE"
 
-	Submenu "$HUDMNU_FONTOPTIONS",			"FontOptions"
 	StaticText "$ACCMNU_TOOLTIP"
 	Slider "$ACCMNU_TOOLTIP_LINES", "m_tooltip_lines", 1, 4, 1, 0
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
@@ -2482,6 +2494,9 @@ OptionMenu ModReplayerOptions protected
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
 
+	StaticText ""
+	Submenu "$HUDMNU_FONTOPTIONS",			"FontOptions"
+	
 	StaticText ""
 	SafeCommand "$OPTMNU_DEFAULTS", "acc_reset2defaults"
  }

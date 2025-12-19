@@ -115,7 +115,7 @@ class ListMenuItemStaticPatch : ListMenuItem
 		}
 		else
 		{
-			let font = generic_ui ? NewSmallFont : mFont;
+			let font = Font.GetSmallTextFont(generic_ui ? NewSmallFont : mFont);
 			if (mCentered) x -= font.StringWidth(mSubstitute) / 2;
 			DrawText(desc, font, mColor, x, abs(mYpos), mSubstitute, mYpos < 0);
 		}
@@ -165,7 +165,8 @@ class ListMenuItemStaticText : ListMenuItem
 	{
 		if (mText.Length() != 0)
 		{
-			let font = generic_ui? NewSmallFont : mFont;
+			//let font = generic_ui? NewSmallFont : mFont;
+			let font = Font.GetSmallTextFont(generic_ui? NewSmallFont : mFont);
 
 			String text = Stringtable.Localize(mText);
 

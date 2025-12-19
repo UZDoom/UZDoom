@@ -720,7 +720,7 @@ class AltHud ui
 	{
 		Vector3 pos;
 		String coordstr;
-		let fnt = generic_ui ? NewSmallFont : SmallFont;
+		let fnt = Font.GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		int h = fnt.GetHeight();
 		let mo = CPlayer.mo;
 		
@@ -739,7 +739,7 @@ class AltHud ui
 
 		if (withmapname)
 		{
-			let font = generic_ui? NewSmallFont : SmallFont.CanPrint(Level.LevelName)? SmallFont : OriginalSmallFont;
+			let font = Font.GetSmallTextFont(generic_ui? NewSmallFont : SmallFont.CanPrint(Level.LevelName)? SmallFont : OriginalSmallFont);
 			int hh = font.GetHeight();
 
 			screen.DrawText(font, hudcolor_titl, hudwidth - 6 - font.StringWidth(Level.MapName), ypos, Level.MapName,
@@ -943,7 +943,7 @@ class AltHud ui
 
 	virtual void DrawAutomap(PlayerInfo CPlayer)
 	{
-		let font = generic_ui? NewSmallFont : SmallFont;
+		let font = Font.GetSmallTextFont(generic_ui? NewSmallFont : SmallFont);
 
 		int fonth = font.GetHeight() + 1;
 		int bottom = hudheight - 1;
@@ -967,7 +967,7 @@ class AltHud ui
 		}
 
 		let amstr = Level.FormatMapName(hudcolor_titl);
-		font = generic_ui? NewSmallFont : SmallFont.CanPrint(amstr)? SmallFont : OriginalSmallFont;
+		font = Font.GetSmallTextFont(generic_ui? NewSmallFont : SmallFont.CanPrint(amstr)? SmallFont : OriginalSmallFont);
 
 		bottom = hudheight - fonth - 1;
 

@@ -528,7 +528,7 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	int vwidth = int(twod->GetWidth() / scalev.X);
 	int vheight = int(twod->GetHeight() / scalev.Y);
 	
-	auto font = generic_ui ? NewSmallFont : SmallFont;
+	auto font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 	auto font2 = font;
 	auto fheight = font->GetHeight();
 	FString textbuffer;
@@ -1102,7 +1102,7 @@ void DBaseStatusBar::DrawLog ()
 		auto scale = active_con_scaletext(twod, generic_ui || log_vgafont);
 		hudwidth = twod->GetWidth() / scale;
 		hudheight = twod->GetHeight() / scale;
-		FFont *font = (generic_ui || log_vgafont)? NewSmallFont : SmallFont;
+		FFont *font = FFont::GetSmallTextFont((generic_ui || log_vgafont)? NewSmallFont : SmallFont);
 
 		int linelen = hudwidth<640? Scale(hudwidth,9,10)-40 : 560;
 		auto lines = V_BreakLines (font, linelen, text[0] == '$'? GStrings.GetString(text.GetChars()+1) : text.GetChars());

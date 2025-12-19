@@ -189,11 +189,12 @@ class LoadSaveMenu : ListMenu
 
 			if (manager.SavegameCount() > 0)
 			{
+				Font font = Font.GetSmallTextFont(NewSmallFont);
 				if (Selected >= manager.SavegameCount()) Selected = 0;
 				String text = (Selected == -1 || !manager.GetSavegame(Selected).bOldVersion)? Stringtable.Localize("$MNU_NOPICTURE") : Stringtable.Localize("$MNU_DIFFVERSION");
-				int textlen = NewSmallFont.StringWidth(text);
+				int textlen = font.StringWidth(text);
 
-				screen.DrawText (NewSmallFont, Font.CR_GOLD, (savepicLeft + savepicWidth / 2) / FontScale - textlen/2,
+				screen.DrawText (font, Font.CR_GOLD, (savepicLeft + savepicWidth / 2) / FontScale - textlen/2,
 					(savepicTop+(savepicHeight-rowHeight)/2) / FontScale, text, DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
 			}
 		}

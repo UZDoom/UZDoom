@@ -38,7 +38,7 @@ class DeathmatchStatusScreen : StatusScreen
 
 		CurState = StatCount;
 		acceleratestage = 0;
-		displayFont = NewSmallFont;
+		displayFont = Font.GetSmallTextFont(NewSmallFont);
 		FontScale = max(screen.GetHeight() / 400, 1);
 		RowHeight = int(max((displayFont.GetHeight() + 1) * FontScale, 1));
 

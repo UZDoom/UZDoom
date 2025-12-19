@@ -48,7 +48,7 @@ class MenuDelegateBase ui
 
 	virtual Font PickFont(Font fnt)
 	{
-		if (generic_ui || !fnt) return NewSmallFont;
+		if (generic_ui || !fnt) return Font.GetSmallTextFont(NewSmallFont);
 		if (fnt == SmallFont) return AlternativeSmallFont;
 		if (fnt == BigFont) return AlternativeBigFont;
 		return fnt;

@@ -695,6 +695,9 @@ struct Font native
 	native int GetGlyphHeight(int code);
 	native int GetDefaultKerning();
 	native TextureID, int GetChar(int c);
+
+	native static Font GetSmallTextFont(Font fallbackIfNoUserChoice);
+	//native static Font GetHeaderFont();
 }
 
 struct Console native

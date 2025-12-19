@@ -255,7 +255,7 @@ void DIntermissionScreen::Drawer ()
 		if (CheckOverlay(i))
 			DrawTexture(twod, mOverlays[i].mPic, false, mOverlays[i].x, mOverlays[i].y, DTA_320x200, true, TAG_DONE);
 	}
-	FFont* font = generic_ui ? NewSmallFont : SmallFont;
+	FFont* font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 	DrawFullscreenSubtitle(font, mSubtitle.GetChars());
 }
 
@@ -422,7 +422,7 @@ void DIntermissionScreenText::Init(FIntermissionAction *desc, bool first)
 
 		mTextX *= 2;
 		mTextY *= 2;
-		int width = NewSmallFont->StringWidth(mText);
+		int width = FFont::GetSmallTextFont(NewSmallFont)->StringWidth(mText);
 		if (usesDefault && mTextX + width > 640 - mTextX)
 		{
 			mTextX = (640 - width) / 2;
@@ -463,7 +463,7 @@ void DIntermissionScreenText::Drawer ()
 		// Count number of rows in this text. Since it does not word-wrap, we just count
 		// line feed characters.
 		int numrows;
-		auto font = generic_ui ? NewSmallFont : SmallFont;
+		auto font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		auto fontscale = max(generic_ui ? min(twod->GetWidth() / 640, twod->GetHeight() / 400) : min(twod->GetWidth() / 400, twod->GetHeight() / 250), 1);
 		int cleanwidth = twod->GetWidth() / fontscale;
 		int cleanheight = twod->GetHeight() / fontscale;
@@ -748,7 +748,7 @@ void DIntermissionScreenCast::Drawer ()
 	const char *name = mName;
 	if (name != NULL)
 	{
-		auto font = generic_ui ? NewSmallFont : SmallFont;
+		auto font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		if (*name == '$') name = GStrings.GetString(name+1);
 		DrawText(twod, font, CR_UNTRANSLATED,
 			(twod->GetWidth() - font->StringWidth (name) * CleanXfac)/2,

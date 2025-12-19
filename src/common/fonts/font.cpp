@@ -55,10 +55,17 @@
 TArray<FBitmap> sheetBitmaps;
 
 CVAR(String, fontoverride_Fallback, "IBMPLEXS", CVAR_ARCHIVE);
-
 CVAR(String, fontoverride_FallbackJP, "IBMPLEXJ", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackKR, "IBMPLEXK", CVAR_ARCHIVE);
 
+void SetFontChoice_SmallText(const char *newFont);
+CUSTOM_CVAR(String, fontchoice_smalltext, "IBMPLEXS", CVAR_ARCHIVE)
+{
+	SetFontChoice_SmallText(self);
+}
+
+//actually overriding the font directly will become a last resort option
+//if you are having mod compatibility issues.
 void SetNewSmallFontOverride(const char *newFont);
 CUSTOM_CVAR(String, fontoverride_NewSmallFont, "IBMPLEXS", CVAR_ARCHIVE)
 {
@@ -612,6 +619,11 @@ FFont *FindDynamicFallbackFontForLanguage(const char *lang)
 	return V_GetFont(*fontoverride_Fallback);
 }
 
+void SetFontChoice_SmallText(const char *newFont)
+{
+	//
+}
+
 void SetNewSmallFontOverride(const char* newFont)
 {
 	if (strcmp(newFont, "FO_DEFAULT") == 0)
@@ -691,6 +703,16 @@ void FFont::UpdateFontDynamicFallbacks(const char* lang)
 	{
 		NewSmallFont = V_GetFont(*fontoverride_NewSmallFont);
 	}
+}
+
+FFont *FFont::GetSmallTextFont(FFont* fallbackIfNoUserChoice)
+{
+	FFont *userFont = V_GetFont(*fontchoice_smalltext);
+	if (userFont)
+	{
+		return userFont;
+	}
+	return fallbackIfNoUserChoice;
 }
 
 //==========================================================================
@@ -1256,9 +1278,13 @@ class FTrexAtlasImageSource : public FImageSource
 
 		auto& bmp = *TrexBitmap;
 		auto channels = bmp.Channels();
-		
+		auto  format   = CF_RGBA;
+		if (channels == 1)
+		{
+			format = CF_IA;
+		}
 		dest->CopyPixelDataRGB(0, 0, bmp.Data().data(), bmp.Width(), bmp.Height(),
-		                       channels, bmp.Width() * channels, 0, CF_RGBA);
+		                       channels, bmp.Width() * channels, 0, format);
 		return 0;
 	}
 };

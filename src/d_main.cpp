@@ -1335,7 +1335,7 @@ void D_Display ()
 				}
 				if (paused && multiplayer)
 				{
-					FFont *font = generic_ui ? NewSmallFont : SmallFont;
+					FFont *font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 					FString plrString = GStrings.GetString("TXT_BY");
 					plrString.Substitute("%s", players[paused - 1].userinfo.GetName());
 					TArray<FBrokenLines> txtbyLines = V_BreakLines(font, maxWidth, plrString);
@@ -1524,7 +1524,7 @@ void D_PageDrawer (void)
 	}
 	if (Subtitle != nullptr)
 	{
-		FFont* font = generic_ui ? NewSmallFont : SmallFont;
+		FFont* font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		DrawFullscreenSubtitle(font, Subtitle);
 	}
 	if (Advisory.isValid())

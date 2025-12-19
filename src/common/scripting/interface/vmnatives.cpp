@@ -613,6 +613,18 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, FindFont, FindFont)
 	ACTION_RETURN_POINTER(FFont::FindFont(name));
 }
 
+static FFont* GetSmallTextFont(FFont* fallbackIfNoUserChoice)
+{
+	return FFont::GetSmallTextFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetSmallTextFont, GetSmallTextFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetSmallTextFont(fallbackIfNoUserChoice));
+}
+
 static int GetCharWidth(FFont *font, int code)
 {
 	return font->GetCharWidth(code);
