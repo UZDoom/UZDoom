@@ -667,18 +667,6 @@ msgstr "3D Моделі"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Розмір прицілу"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Яскравість"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Гамма-корекція"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Контраст"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Насиченість"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Розмір строки стану"
 

@@ -665,18 +665,6 @@ msgstr "Modele"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Skala celownika"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Jasność"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Korekta gammy"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Nasycenie"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Skala paska statusu"
 

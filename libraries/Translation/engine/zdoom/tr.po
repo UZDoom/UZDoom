@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:48+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/tr/>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: tr\n"
 
 msgid "PRESSKEY"
@@ -799,7 +799,7 @@ msgid "CC_REVEN"
 msgstr ""
 
 msgid "CC_MANCU"
-msgstr ""
+msgstr "İğrenç Kütle"
 
 msgid "CC_ARCH"
 msgstr "Baş Aşağılık"
@@ -829,7 +829,7 @@ msgid "FN_CYBER"
 msgstr "Siber İblis"
 
 msgid "FN_WOLFSS"
-msgstr ""
+msgstr "SS Askeri"
 
 msgid "FN_DOG"
 msgstr "Köpek"
@@ -850,7 +850,7 @@ msgid "TAG_SUPERSHOTGUN"
 msgstr "Süper Av Tüfeği"
 
 msgid "TAG_CHAINGUN"
-msgstr ""
+msgstr "Mitralyöz"
 
 msgid "TAG_ROCKETLAUNCHER"
 msgstr "Roket Fırlatıcı"
@@ -1356,7 +1356,7 @@ msgid "TXT_ARTISUMMON"
 msgstr "Karanlık Hizmetkar"
 
 msgid "TXT_ARTIEGG2"
-msgstr ""
+msgstr "Domuz-eti-hesaplayıcı"
 
 msgid "TXT_ARTIPOISONBAG"
 msgstr ""
@@ -1401,10 +1401,10 @@ msgid "TXT_ARTIPUZZGEMBLUE2"
 msgstr "Safir Gezegen"
 
 msgid "TXT_ARTIPUZZBOOK1"
-msgstr ""
+msgstr "Daemon Kodeksi"
 
 msgid "TXT_ARTIPUZZBOOK2"
-msgstr ""
+msgstr "Karanlık Liber"
 
 msgid "TXT_ARTIPUZZSKULL2"
 msgstr "Alev Maskesi"
@@ -1656,7 +1656,7 @@ msgid "TAG_ARTIPUZZGEMBLUE2"
 msgstr "Safir Gezegen (2)"
 
 msgid "TAG_ARTIPUZZBOOK1"
-msgstr ""
+msgstr "Daemon Kodeksi"
 
 msgid "TAG_ARTIPUZZBOOK2"
 msgstr ""
@@ -4731,9 +4731,6 @@ msgstr "Modern (Tuş Takımı)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Sıkı KEYCONF Silahlar/Oyuncular"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Klasik ZDoom menü ölçeklendirme"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Özet ekranında yüzdeleri kullanma"
 
@@ -5184,3 +5181,15 @@ msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Parlaklık"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gama düzeltme"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Doygunluk"

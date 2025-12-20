@@ -664,18 +664,6 @@ msgstr "Modelle"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Fadenkreuz skalieren"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Helligkeit"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gammakorrektur"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Sättigung"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Statusleistengröße"
 

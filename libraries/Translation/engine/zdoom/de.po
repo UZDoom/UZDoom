@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-02 00:42+0000\n"
-"Last-Translator: Madoc <madocdoyu@gmail.com>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/de/>\n"
 "Language: de\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: de\n"
 
 msgid "PRESSKEY"
@@ -4800,9 +4800,6 @@ msgstr "Modern (Keypad)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strikte KEYKONF Behandlung für Waffen und Spieler"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Alte ZDoom-Skalierung im Menü"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Zeige Prozente auf Statistikseite"
 
@@ -5261,3 +5258,15 @@ msgstr "Lösche Coop Spy"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Optionen zur Barrierefreiheit"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Helligkeit"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gammakorrektur"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Sättigung"

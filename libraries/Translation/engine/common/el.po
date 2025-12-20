@@ -660,18 +660,6 @@ msgstr "Μοντέλα"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr ""
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Φωτηνότητα"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr ""
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr ""
-
-msgid "DSPLYMNU_SATURATION"
-msgstr ""
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr ""
 

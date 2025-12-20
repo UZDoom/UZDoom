@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-17 14:51+0000\n"
-"Last-Translator: Gustavo Rehermann <gr.wallabra@proton.me>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: pt\n"
 
 msgid "PRESSKEY"
@@ -4810,9 +4810,6 @@ msgstr "Moderno (Teclado numérico)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Armas/Jogadores estritamente de acordo com KEYCONF"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Escala clássica para menu do ZDoom"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Usar porcentagem na tela de resumo"
 
@@ -5269,3 +5266,15 @@ msgstr "Limpar visualização coop"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Opções de Acessibilidade"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Brilho"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Correção de gama"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Contraste"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Saturação"

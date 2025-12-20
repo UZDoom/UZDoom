@@ -665,18 +665,6 @@ msgstr "Modelos"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Escala da mira"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Brilho"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Correção de gama"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Contraste"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Saturação"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Escala da barra de estado"
 

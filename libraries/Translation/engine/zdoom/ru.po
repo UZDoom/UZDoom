@@ -2,18 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 17:37+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/ru/>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural="
-"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
-"1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: ru\n"
 
 msgid "PRESSKEY"
@@ -4797,9 +4796,6 @@ msgstr "Современная (цифр. клавиатура)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Строгий KEYCONF для оружия/игроков"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Классический размер меню ZDoom"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Использовать проценты на экране итогов уровня"
 
@@ -5253,3 +5249,15 @@ msgstr "Отменить вид от другого игрока"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Настройки Доступности"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Яркость"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Гамма-коррекция"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Контраст"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Насыщенность"

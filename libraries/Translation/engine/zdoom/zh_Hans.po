@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 19:00+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: chs\n"
 
 msgid "PRESSKEY"
-msgstr "请按下任意按键以继续。"
+msgstr "按下任意键。"
 
 msgid "SECRETMESSAGE"
 msgstr "你发现了一个秘密！"
@@ -34,26 +34,26 @@ msgid "LOADNET"
 msgstr ""
 "在进行网络游戏时无法进行读取！\n"
 "\n"
-"请按下任意按键以继续。"
+"按下任意键。"
 
 msgid "QLOADNET"
 msgstr ""
 "在进行网络游戏时无法进行快速读取！\n"
 "\n"
-"请按下任意按键以继续。"
+"按下任意键。"
 
 msgid "QSAVESPOT"
 msgstr ""
 "你还没选择快速保存的槽位咧！\n"
 "\n"
-"请按下任意按键以继续。"
+"按下任意键。"
 
 msgid "NEWGAME"
 msgstr ""
 "在进行网络游戏时\n"
 "无法开启新游戏。\n"
 "\n"
-"请按下任意按键以继续。"
+"按下任意键。"
 
 msgid "NIGHTMARE"
 msgstr ""
@@ -68,13 +68,13 @@ msgstr ""
 "\n"
 "你需要购买完整的三部曲。\n"
 "\n"
-"请按下任意按键以继续。"
+"按下任意键。"
 
 msgid "NETEND"
 msgstr ""
 "你无法结束一局网络游戏！\n"
 "\n"
-"请按下任意按键以继续。"
+"按下任意键。"
 
 msgid "ENDGAME"
 msgstr ""
@@ -2786,7 +2786,7 @@ msgid "CLOADNET"
 msgstr ""
 "在网络任务中你不能执行加载！\n"
 "\n"
-"按任意键。"
+"按下任意键。"
 
 msgctxt "chex"
 msgid "QSPROMPT"
@@ -2802,7 +2802,7 @@ msgid "QLOADNET"
 msgstr ""
 "在网络任务中你不能执行快速加载！\n"
 "\n"
-"按任意键。"
+"按下任意键。"
 
 msgctxt "chex"
 msgid "QLPROMPT"
@@ -2818,7 +2818,7 @@ msgstr ""
 "在网络任务中\n"
 "你不能开始一个新任务。\n"
 "\n"
-"按任意键。"
+"按下任意键。"
 
 msgid "CNIGHTMARE"
 msgstr ""
@@ -2833,14 +2833,14 @@ msgstr ""
 "\n"
 "请访问www.chexquest.com。\n"
 "\n"
-"按任意键。"
+"按下任意键。"
 
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
 "你不能结束网络任务！\n"
 "\n"
-"按任意键。"
+"按下任意键。"
 
 msgctxt "chex"
 msgid "ENDGAME"
@@ -4020,7 +4020,7 @@ msgid "OPTVAL_CAPPED"
 msgstr "限制"
 
 msgid "OPTVAL_PARTICLES"
-msgstr "颗粒化"
+msgstr "粒子"
 
 msgid "OPTVAL_SPRITES"
 msgstr "精灵"
@@ -4798,9 +4798,6 @@ msgstr "现代(小键盘)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "严格的KEYCONF武器/玩家"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "经典ZDoom的菜单缩放"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "在结算画面上使用百分比"
 
@@ -5254,3 +5251,83 @@ msgstr "离开其他玩家视角"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "辅助选项"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "模拟奔跑"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "附加光照"
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "玩家光照半径"
+
+msgid "ACCMNU_LIGHT"
+msgstr "光照"
+
+msgid "OPTVAL_STRICT"
+msgstr "严格"
+
+msgid "PICKER_FILELOADING"
+msgstr "文件加载"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "经典ZDoom的菜单缩放"
+
+msgid "OPTVAL_LAX"
+msgstr "宽松"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "透明"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "累加"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "爆炸显示风格"
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "提示信息"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "大段提示信息文字"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "提示信息宽度限制"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "提示信息背景透明度"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "提示信息滚动速度"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "提示信息滚动延迟"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr "控制玩家周围光照的半径距离(以地图单位计)。数值越大，场景越亮。"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr "在保持现有光照模式不变的情况下，叠加到现有的区域亮度水平上的额外光照强度。"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"这是一个提示信息示例。\n"
+"这里是一些补充说明文字。\n"
+"…\n"
+"这是一行非常长的文字，似乎一直说个不停，但又没有提到任何有趣的内容，这么长似"
+"乎仅仅是因为开发者难以解释该选项的具体功能。"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "提示信息行数"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "亮度"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "伽马校正"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "对比度"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "饱和度"

@@ -666,18 +666,6 @@ msgstr "Мадэлі"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Памер прыцэла"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Яркасць"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Гама-карэкцыя"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Кантраст"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Насычанасць"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Памер радка стану"
 

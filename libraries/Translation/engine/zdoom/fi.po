@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 05:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/fi/>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: fi\n"
 
 msgid "PRESSKEY"
@@ -4760,9 +4760,6 @@ msgstr "Nykyaikainen (numeronäppäimistö)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Pelaajien/Aseiden tiukka KEYCONF"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Perinteinen ZDoomin skaalaus valikossa"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Käytä prosentteja pisteruuduilla"
 
@@ -5213,3 +5210,15 @@ msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Kirkkaus"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gammakorjaus"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Sävykkyys"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Värikylläisyys"

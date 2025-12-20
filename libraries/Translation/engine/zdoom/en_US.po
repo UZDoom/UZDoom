@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-12 21:41+0000\n"
+"PO-Revision-Date: 2025-12-20 20:43+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/en/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: default\n"
 
 msgid "PRESSKEY"
@@ -4796,9 +4796,6 @@ msgstr "Modern (Keypad)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strict KEYCONF Weapons/Players"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Classic ZDoom menu scaling"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Use percents on summary screen"
 
@@ -5272,7 +5269,7 @@ msgid "ACCMNU_TOOLTIP_CAP"
 msgstr "Limit Tooltip Width"
 
 msgid "ACCMNU_TOOLTIP_SCALE"
-msgstr "Scale Tooltip"
+msgstr "Large Tooltip Text"
 
 msgid "ACCMNU_TOOLTIP_EXAMPLE"
 msgstr ""
@@ -5290,7 +5287,9 @@ msgid "ACCMNU_LIGHT_EXTRA"
 msgstr "Extra Lighting"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
-msgstr "Controls how quickly lighting falls off around the player."
+msgstr ""
+"Controls the light radius distance around the player in map units. Larger "
+"values make the scene brighter."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
@@ -5298,7 +5297,7 @@ msgstr ""
 "while preserving the existing lighting mode."
 
 msgid "ACCMNU_LIGHT_RADIUS"
-msgstr "Lighting Radius"
+msgstr "Player Light Radius"
 
 msgid "ACCMNU_LIGHT"
 msgstr "Lighting"
@@ -5320,3 +5319,78 @@ msgstr "Strict"
 
 msgid "PICKER_FILELOADING"
 msgstr "File Loading"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Classic ZDoom menu scaling"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Image Calibration"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "From a normal viewing distance, adjust these sliders."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr "Upscaling/Supersampling may result in incorrect output."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Please disable them before adjusting."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+"Compensates for your monitor's limitations. Adjust until vertical grey "
+"blocks fade. Do not use this to make the game brighter, only to ensure the "
+"image is calibrated for your setup."
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Blackpoint compensation"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Compensates for monitors that fail to display dark pixels correctly. Adjust "
+"until diagonal white blocks fade. Do not use this to make the game brighter, "
+"only to ensure the image is calibrated for your setup."
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "Whitepoint compensation"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"Compensates for monitors that fail to display bright pixels correctly. "
+"Adjust until diagonal black blocks fade. Do not use this to make the game "
+"brighter, only to ensure the image is calibrated for your setup."
+
+msgid "OPTMNU_RESETALL"
+msgstr "Reset All"
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "Resets all options in this menu to default settings."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Applies linear brightness adjustment. Adjust to personal taste, or to see in "
+"the dark."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Adjusts perceived difference between similar colors. Controls how sharp/"
+"washed out the images looks. Adjust to personal taste."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Adjusts the intensity of colors, making the image look more vivid or muted. "
+"Adjust to personal taste."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Adjust until this looks like a uniform Gray color."
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Brightness"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gamma correction"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Contrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Saturation"

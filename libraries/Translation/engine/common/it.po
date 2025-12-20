@@ -666,18 +666,6 @@ msgstr "Modelli"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Scala del mirino"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Luminosità"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Correzione gamma"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Contrasto"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Saturazione"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Dimensioni Status Bar"
 

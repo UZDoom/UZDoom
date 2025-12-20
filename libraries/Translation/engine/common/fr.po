@@ -667,18 +667,6 @@ msgstr "Modèles"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Mise à l'échelle du viseur"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Luminosité"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Correction Gamma"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Contraste"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr ""
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Mise à l'échelle HUD"
 

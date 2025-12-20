@@ -665,18 +665,6 @@ msgstr "3D modellek"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Célkereszt méret"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Fényerő"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gamma korrekció"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontraszt"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Telítettség"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Állapotjelző mérete"
 

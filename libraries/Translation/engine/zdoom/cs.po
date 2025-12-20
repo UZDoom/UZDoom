@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-24 21:51+0000\n"
-"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/cs/>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: cs\n"
 
 msgid "PRESSKEY"
@@ -4793,9 +4793,6 @@ msgstr "Moderní (číselník)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Striktně zbraně/hráči z KEYCONF"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Škálování menu dle starého ZDoomu"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Použít procenta ve výsledcích mapy"
 
@@ -5249,3 +5246,15 @@ msgstr "Co-op špehování - předchozí"
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr "Co-op špehování - vyčistit"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Jas"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Korekce gama"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Sytost"

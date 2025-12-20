@@ -664,18 +664,6 @@ msgstr "Modeloj"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Skali celilon"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Heleco"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gamaa korekto"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrasto"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Kolorintenseco"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Skalo de statobreto"
 

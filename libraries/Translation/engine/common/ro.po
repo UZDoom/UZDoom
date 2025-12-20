@@ -666,18 +666,6 @@ msgstr "Modele"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Scară țintă"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Luminozitate"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gamma"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr ""
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Saturație"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Scară Bară de Stare"
 

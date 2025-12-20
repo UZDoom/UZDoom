@@ -666,18 +666,6 @@ msgstr "Модели"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Размер прицела"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Яркость"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Гамма-коррекция"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Контраст"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Насыщенность"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Размер строки состояния"
 

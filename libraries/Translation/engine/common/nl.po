@@ -665,18 +665,6 @@ msgstr "Modellen"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Dradenkruis schalen"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Helderheid"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gamma correctie"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Contrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Verzadiging"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Statusbalkschaal"
 

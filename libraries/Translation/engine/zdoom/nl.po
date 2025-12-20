@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:52+0000\n"
-"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/nl/>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: nl\n"
 
 msgid "PRESSKEY"
@@ -4799,9 +4799,6 @@ msgstr "Modern (nummeriek toetsenbord)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strikte KEYCONF Wapens/Spelers"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Klassieke ZDoom-menu-schaalvergroting"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Gebruik procenten op het overzichtsscherm"
 
@@ -5258,3 +5255,15 @@ msgstr "Duidelijke coop-spion"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Toegankelijkheidsopties"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Helderheid"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gamma correctie"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Contrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Verzadiging"

@@ -668,18 +668,6 @@ msgstr "Modelos"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Escalar retícula"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Brillo"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Corrección gamma"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Contraste"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Saturación"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Escala de barra de estado"
 

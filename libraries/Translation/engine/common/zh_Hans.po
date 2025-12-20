@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 19:00+0000\n"
+"PO-Revision-Date: 2025-12-17 13:00+0000\n"
 "Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/common/zh_Hans/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1-dev\n"
 "HeaderCode: chs\n"
 
 msgid "PRESSYN"
@@ -663,18 +663,6 @@ msgstr "模型"
 
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "准星比例"
-
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "亮度"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "伽马校正"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "对比度"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "饱和度"
 
 msgid "DSPLYMNU_SBSCALE"
 msgstr "状态栏比例"
@@ -1936,13 +1924,13 @@ msgid "PICKER_SELECT"
 msgstr "选择运行哪个游戏文件。"
 
 msgid "PICKER_PLAY"
-msgstr "玩游戏"
+msgstr "开始游戏"
 
 msgid "PICKER_EXIT"
 msgstr "退出"
 
 msgid "PICKER_GENERAL"
-msgstr "一般"
+msgstr "通用"
 
 msgid "PICKER_EXTRA"
 msgstr "附加图像"

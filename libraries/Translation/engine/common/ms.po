@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-10 20:00+0000\n"
-"Last-Translator: NuruTheDoomer <nuruthedoomer@gmail.com>\n"
+"PO-Revision-Date: 2025-12-20 20:26+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Malay <https://hosted.weblate.org/projects/uzdoom/common/ms/>"
 "\n"
 "Language: ms\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 
 msgid "PRESSYN"
 msgstr "Tekan Y atau N."
@@ -42,19 +42,20 @@ msgstr ""
 
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
-msgstr ""
+msgstr "%s mengelat"
 
 msgid "MSGOFF"
-msgstr ""
+msgstr "Mesej: TUTUP"
 
 msgid "MSGON"
-msgstr ""
+msgstr "Mesej: BUKA"
 
 msgid "TXT_SAY"
-msgstr ""
+msgstr "Katakan:"
 
 msgid "TXT_QUITENDOOM"
 msgstr ""
+"Tekan mana-mana kekunci atau klik mana-mana di dalam tetingkap untuk keluar."
 
 msgid "NEWSAVE"
 msgstr ""
@@ -63,7 +64,7 @@ msgid "GGSAVED"
 msgstr ""
 
 msgid "SAVECOMMENT_TIME"
-msgstr ""
+msgstr "Masa"
 
 msgid "MNU_LOADGAME"
 msgstr ""
@@ -72,34 +73,34 @@ msgid "MNU_SAVEGAME"
 msgstr ""
 
 msgid "MNU_NOPICTURE"
-msgstr ""
+msgstr "Tiada Gambar"
 
 msgid "MNU_DIFFVERSION"
-msgstr ""
+msgstr "Versi Berbeza"
 
 msgid "MNU_NOFILES"
-msgstr ""
+msgstr "Tiada fail"
 
 msgid "MNU_DELETESG"
 msgstr ""
 
 msgid "OPTVAL_OFF"
-msgstr ""
+msgstr "Tutup"
 
 msgid "OPTVAL_ON"
-msgstr ""
+msgstr "Buka"
 
 msgid "OPTVAL_AUTO"
-msgstr ""
+msgstr "Automatik"
 
 msgid "OPTMNU_TITLE"
-msgstr ""
+msgstr "Tetapan"
 
 msgid "OPTMNU_CONTROLS"
-msgstr ""
+msgstr "Suaikan Kawalan"
 
 msgid "OPTMNU_MOUSE"
-msgstr ""
+msgstr "Tetapan Tetikus"
 
 msgid "OPTMNU_JOYSTICK"
 msgstr ""
@@ -108,22 +109,22 @@ msgid "OPTMNU_PLAYER"
 msgstr ""
 
 msgid "OPTMNU_GAMEPLAY"
-msgstr ""
+msgstr "Tetapan Tatamain"
 
 msgid "OPTMNU_AUTOMAP"
 msgstr ""
 
 msgid "OPTMNU_HUD"
-msgstr ""
+msgstr "Tetapan HUD"
 
 msgid "OPTMNU_MISCELLANEOUS"
-msgstr ""
+msgstr "Tetapan Lain"
 
 msgid "OPTMNU_SOUND"
-msgstr ""
+msgstr "Tetapan Suara"
 
 msgid "OPTMNU_DISPLAY"
-msgstr ""
+msgstr "Tetapan Paparan"
 
 msgid "OPTMNU_VIDEO"
 msgstr ""
@@ -141,7 +142,7 @@ msgid "OPTMNU_CONSOLE"
 msgstr ""
 
 msgid "OPTMNU_NETWORK"
-msgstr ""
+msgstr "Tetapan Rangkaian"
 
 msgid "OPTMNU_REVERB"
 msgstr ""
@@ -377,7 +378,7 @@ msgid "CNTRLMNU_OPEN_LOAD"
 msgstr ""
 
 msgid "CNTRLMNU_OPEN_OPTIONS"
-msgstr ""
+msgstr "Buka Menu Tetapan"
 
 msgid "CNTRLMNU_OPEN_DISPLAY"
 msgstr ""
@@ -603,13 +604,13 @@ msgid "TXT_COLOR_RUST"
 msgstr ""
 
 msgid "PLYRMNU_NAME"
-msgstr ""
+msgstr "Nama"
 
 msgid "PLYRMNU_TEAM"
 msgstr ""
 
 msgid "PLYRMNU_PLAYERCOLOR"
-msgstr ""
+msgstr "Warna"
 
 msgid "PLYRMNU_PLAYERGENDER"
 msgstr ""
@@ -627,7 +628,7 @@ msgid "OPTVAL_OTHER"
 msgstr ""
 
 msgid "GMPLYMNU_TITLE"
-msgstr ""
+msgstr "Tetapan Tatamain"
 
 msgid "OPTVAL_ALWAYS"
 msgstr ""
@@ -651,18 +652,6 @@ msgid "DSPLYMNU_MODELS"
 msgstr ""
 
 msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr ""
-
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr ""
-
-msgid "DSPLYMNU_GAMMA"
-msgstr ""
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr ""
-
-msgid "DSPLYMNU_SATURATION"
 msgstr ""
 
 msgid "DSPLYMNU_SBSCALE"
@@ -810,13 +799,13 @@ msgid "SNDMNU_BACKEND"
 msgstr ""
 
 msgid "SNDMNU_OPENAL"
-msgstr ""
+msgstr "Tetapan OpenAL"
 
 msgid "SNDMNU_RESTART"
 msgstr ""
 
 msgid "SNDMNU_ADVANCED"
-msgstr ""
+msgstr "Tetapan lanjutan"
 
 msgid "SNDMNU_MODREPLAYER"
 msgstr ""
@@ -828,7 +817,7 @@ msgid "SNDMNU_MENUSOUND"
 msgstr ""
 
 msgid "ADVSNDMNU_TITLE"
-msgstr ""
+msgstr "Tetapan Suara Lanjutan"
 
 msgid "ADVSNDMNU_SAMPLERATE"
 msgstr ""
@@ -1313,7 +1302,7 @@ msgid "OPTVAL_32X"
 msgstr ""
 
 msgid "GLTEXMNU_TITLE"
-msgstr ""
+msgstr "Tetapan Tekstur"
 
 msgid "GLTEXMNU_TEXENABLED"
 msgstr ""
@@ -1661,7 +1650,7 @@ msgid "REVMNU_Based_on"
 msgstr ""
 
 msgid "REVMNU_Name"
-msgstr ""
+msgstr "Nama"
 
 msgid "REVMNU_ID_1"
 msgstr ""
@@ -1682,10 +1671,10 @@ msgid "REVMNU_Environments_to_save"
 msgstr ""
 
 msgid "DSPLYMNU_VKOPT"
-msgstr ""
+msgstr "Tetapan Vulkan (Eksperimental)"
 
 msgid "VK_TITLE"
-msgstr ""
+msgstr "Tetapan Vulkan"
 
 msgid "VKMNU_ENABLE"
 msgstr ""
@@ -1700,7 +1689,7 @@ msgid "VK_WARNING"
 msgstr ""
 
 msgid "VK_RESTART"
-msgstr ""
+msgstr "Permainan perlu dimulakan semula agar tetapan itu berfungsi."
 
 # This is not yet implemented - but it is planned
 msgid "VKMNU_DEVICESELECT"
@@ -1862,10 +1851,10 @@ msgid "REQUIRED_CHARACTERS"
 msgstr ""
 
 msgid "OPTMNU_FULLOPTIONS"
-msgstr ""
+msgstr "Menu tetapan penuh"
 
 msgid "OPTMNU_SIMPLEON"
-msgstr ""
+msgstr "Menu tetapan mudah"
 
 msgid "OPTMNU_OPENCONFIG"
 msgstr ""
@@ -1898,19 +1887,19 @@ msgid "TXT_SAVEGAMENEEDS"
 msgstr ""
 
 msgid "OPTMNU_MULTIPLAYER"
-msgstr ""
+msgstr "Tetapan Multipemain"
 
 msgid "OPTMNU_INPUT"
-msgstr ""
+msgstr "Tetapan Input"
 
 msgid "OPTMNU_SYSTEM"
-msgstr ""
+msgstr "Tetapan Sistem"
 
 msgid "OPTMNU_LIGHT"
-msgstr ""
+msgstr "Tetapan Cahaya"
 
 msgid "OPTMNU_SPRITE"
-msgstr ""
+msgstr "Tetapan Sprite"
 
 msgid "GLPREFMNU_CORONAS"
 msgstr ""
@@ -1919,7 +1908,7 @@ msgid "DSPLYMNU_APPEARANCE"
 msgstr ""
 
 msgid "DSPLYMNU_ADVANCED"
-msgstr ""
+msgstr "Tetapan Paparan Lanjutan"
 
 msgid "PICKER_SELECT"
 msgstr ""

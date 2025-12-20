@@ -657,18 +657,6 @@ msgstr "Modeller"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Skala hårkorset"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Ljusstyrka"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gammakorrigering"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Mättnad"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Skala för statusfältet"
 

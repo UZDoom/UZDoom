@@ -664,18 +664,6 @@ msgstr "Models"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Scale crosshair"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Brightness"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gamma correction"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Contrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Saturation"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Status Bar Scale"
 

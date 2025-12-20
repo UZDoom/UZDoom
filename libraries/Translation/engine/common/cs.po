@@ -665,18 +665,6 @@ msgstr "Modely"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Velikost zaměřovače"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Jas"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Korekce gama"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Sytost"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Velikost stavového panelu"
 

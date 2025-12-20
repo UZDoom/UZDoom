@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:42+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/sv/>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: sv\n"
 
 msgid "PRESSKEY"
@@ -4733,9 +4733,6 @@ msgstr "Modernt (tangentbord)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strikt KEYCONF Vapen/spelare"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Skalning av Classic ZDoom-menyn"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Använd procentsatser på sammanfattningsskärmen"
 
@@ -5186,3 +5183,15 @@ msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Ljusstyrka"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gammakorrigering"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Mättnad"

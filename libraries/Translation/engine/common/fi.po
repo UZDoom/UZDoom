@@ -663,18 +663,6 @@ msgstr "Mallit"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Skaalaa tähtäintä"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Kirkkaus"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gammakorjaus"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Sävykkyys"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Värikylläisyys"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Tilapalkin skaalaus"
 

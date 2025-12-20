@@ -667,18 +667,6 @@ msgstr "モデル"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "照準スケール"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "明るさ"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "ガンマ値"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "コントラスト"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "サチュレーション"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "ステータススケール"
 

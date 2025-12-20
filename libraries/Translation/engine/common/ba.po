@@ -666,18 +666,6 @@ msgstr "Modeli"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Veličina mete"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Svjetlina"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Ispravljanje game"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Saturacija"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Veličina statusne trake"
 

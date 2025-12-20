@@ -665,18 +665,6 @@ msgstr "모델"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "조준점 크기"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "밝기"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "감마 조정"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "대비"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "채도"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr ""
 

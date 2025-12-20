@@ -651,18 +651,6 @@ msgstr ""
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr ""
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr ""
-
-msgid "DSPLYMNU_GAMMA"
-msgstr ""
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr ""
-
-msgid "DSPLYMNU_SATURATION"
-msgstr ""
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr ""
 

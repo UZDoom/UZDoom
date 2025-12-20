@@ -663,18 +663,6 @@ msgstr "Modeller"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Skala trådkors"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Lysstyrke"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gammakorreksjon"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Metning"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Statuslinjeskala"
 

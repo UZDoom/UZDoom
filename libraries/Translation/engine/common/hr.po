@@ -665,18 +665,6 @@ msgstr "Modeli"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Skaliraj ciljnik"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Svjetlina"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Korekcija game"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Saturacija"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Skaliraj statusnu traku"
 

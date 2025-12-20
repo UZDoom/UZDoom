@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 10:49+0000\n"
-"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/sr/>\n"
 "Language: sr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: sr\n"
 
 msgid "PRESSKEY"
@@ -4782,9 +4782,6 @@ msgstr "Модерна (тастатура)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Строго KEYKONF оружје/играчи"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Класично скалирање менија ZDoom-а"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Користите проценте на екрану резимеа"
 
@@ -5238,3 +5235,15 @@ msgstr "Чист шпијун задруге"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Опције приступачности"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Осветљење"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Корекција светлости"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Контраст"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Сатурација"

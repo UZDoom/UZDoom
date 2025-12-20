@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 19:00+0000\n"
-"Last-Translator: Marazm Mamazm <brutdewelopment@gmail.com>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/pl/>\n"
 "Language: pl\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: pl\n"
 
 msgid "PRESSKEY"
@@ -4793,9 +4793,6 @@ msgstr "Współczesny (klawiatura numeryczna)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Surowe opcje KEYCONF dla broni/graczy"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Klasyczne skalowanie menu z ZDooma"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Używaj procentów w ekranie wyników pod koniec poziomu"
 
@@ -5249,3 +5246,21 @@ msgstr "Anuluj podgląd gracza"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Opcje Dostępności"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Transparentny"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Oświetlenie"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Jasność"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Korekta gammy"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Kontrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Nasycenie"

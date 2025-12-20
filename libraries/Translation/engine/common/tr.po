@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:36+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/common/tr/"
-">\n"
+"PO-Revision-Date: 2025-12-18 19:00+0000\n"
+"Last-Translator: \"Başar Köse (Turkish Mauser)\" <memerprime8@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/common/"
+"tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1-dev\n"
 "HeaderCode: tr\n"
 
 msgid "PRESSYN"
@@ -667,18 +667,6 @@ msgstr "Modeller"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Ölçekli artı işareti"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Parlaklık"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Gama düzeltme"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Kontrast"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Doygunluk"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Durum Çubuğu Ölçeği"
 
@@ -857,7 +845,7 @@ msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Taklit edilen OPL çiplerinin sayısı"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr ""
+msgstr "Kazan"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Tam MIDI stereo kaydırma"
@@ -887,7 +875,7 @@ msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Kazanç"
 
 msgid "ADVSNDMNU_REVERB"
-msgstr ""
+msgstr "Yankı"
 
 msgid "ADVSNDMNU_REVERB_LEVEL"
 msgstr "Reverb Seviyesi"
@@ -941,10 +929,10 @@ msgid "ADVSNDMNU_VLMODEL"
 msgstr "Hacim modeli"
 
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr ""
+msgstr "Kanal tahsis metodu"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr ""
+msgstr "Otomatik arpeggio"
 
 msgid "ADVSNDMNU_OPNCORES"
 msgstr "OPN2 Emülatör Çekirdeği"
@@ -971,7 +959,7 @@ msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "Özel WOPL bankası kullanın"
 
 msgid "ADVSNDMNU_ADLUSEWADBANK"
-msgstr ""
+msgstr "WAD'ın GENMIDI bankasını özel banka olarak kullan"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "WOPL Bank dosyası"
@@ -1045,10 +1033,10 @@ msgid "OPTVAL_LIBXMP"
 msgstr ""
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Aptal"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Çip makinesi"
 
 msgid "OPTVAL_MAMEOPL2"
 msgstr ""
@@ -1069,19 +1057,19 @@ msgid "OPTVAL_YMFMOPL3"
 msgstr ""
 
 msgid "OPTVAL_NUKEDOPL3"
-msgstr ""
+msgstr "Bombalanmış OPL3"
 
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr ""
+msgstr "OPL2-LLE (Sisteme ağır!)"
 
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr ""
+msgstr "OPL3-LLE (Sisteme ağır!)"
 
 msgid "OPTVAL_MAMEOPN2"
 msgstr ""
 
 msgid "OPTVAL_NP2OPNA"
-msgstr ""
+msgstr "Neko Projesi II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
 msgstr ""
@@ -1093,22 +1081,22 @@ msgid "OPTVAL_OPALOPL3"
 msgstr ""
 
 msgid "OPTVAL_NUKEDOPL3174"
-msgstr ""
+msgstr "Bombalanmış OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr ""
+msgstr "Bombalanmış OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr ""
+msgstr "Bombalanmış OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM2612) (Sisteme ağır!)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM3438) (Sisteme ağır!)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr ""
+msgstr "OPN2-LLE (YMF276) (Sisteme ağır!)"
 
 msgid "OPTVAL_GENSOPN2"
 msgstr ""
@@ -1141,13 +1129,13 @@ msgid "ADLVLMODEL_DMX"
 msgstr "DMX (Doğru, AM hatalı)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr ""
+msgstr "DMX'e benzer"
 
 msgid "ADLVLMODEL_APOGEE"
 msgstr "Apogee (Doğru, AM hatası ile)"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr ""
+msgstr "Apogee Ses Sistemi'ndeki gibi"
 
 msgid "OPNVLMODEL_WIN9X"
 msgstr "Win9X benzeri"
@@ -1174,16 +1162,16 @@ msgid "ADLVLMODEL_HMIOLD"
 msgstr "HMI SOS (Eski, hatalı)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "Oto"
 
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr ""
+msgstr "Ses kesintisi gecikmesi ölçüldü"
 
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr ""
+msgstr "Aynı enstürmanın ilk çıkarılmışını yeniden kullan"
 
 msgid "ADLCHANALLOC_ANYREL"
-msgstr ""
+msgstr "İlk çıkan herhangi notayı yeniden kullan"
 
 msgid "OPTVAL_UNLIMITED"
 msgstr "Sınırsız"
@@ -1369,7 +1357,7 @@ msgid "OPTVAL_SCALELINEAR"
 msgstr "Ölçeklendirilmiş (Doğrusal)"
 
 msgid "OPTVAL_LETTERBOX"
-msgstr ""
+msgstr "Posta kutusu"
 
 msgid "OPTVAL_STRETCH"
 msgstr "Esneme"
@@ -1564,97 +1552,97 @@ msgstr "Ayarları geri döndür"
 # Please translate only if you know how to properly name this technical
 # jargon!
 msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr ""
+msgstr "Çevre Boyutu"
 
 msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr ""
+msgstr "Çevre Yayılması"
 
 msgid "REVMNU_ROOM"
-msgstr ""
+msgstr "Oda"
 
 msgid "REVMNU_ROOM_HF"
-msgstr ""
+msgstr "Oda HF"
 
 msgid "REVMNU_ROOM_LF"
-msgstr ""
+msgstr "Oda LF"
 
 msgid "REVMNU_DECAY_TIME"
-msgstr ""
+msgstr "Yokolma zamanı"
 
 msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
+msgstr "Yokolma HF Oranı"
 
 msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
+msgstr "Yokolma LF Oranı"
 
 msgid "REVMNU_REFLECTIONS"
-msgstr ""
+msgstr "Yansımalar"
 
 msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
+msgstr "Yansıma Gecikmesi"
 
 msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
+msgstr "X Ekseninde Yansımanın Yönü"
 
 msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
+msgstr "Y Ekseninde Yansımanın Yönü"
 
 msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
+msgstr "Z Ekseninde Yansımanın Yönü"
 
 msgid "REVMNU_REVERB"
-msgstr ""
+msgstr "Yankı"
 
 msgid "REVMNU_REVERB_DELAY"
-msgstr ""
+msgstr "Yankı Gecikmesi"
 
 msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
+msgstr "X Ekseninde Yankı Yönü"
 
 msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
+msgstr "Y Ekseninde Yankı Yönü"
 
 msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
+msgstr "Z Ekseninde Yankı Yönü"
 
 msgid "REVMNU_ECHO_TIME"
-msgstr ""
+msgstr "Yankı Zamanı"
 
 msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
+msgstr "Yankı Derinliği"
 
 msgid "REVMNU_MODULATION_TIME"
-msgstr ""
+msgstr "Modulasyon Zamanı"
 
 msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
+msgstr "Modülasyon Derinliği"
 
 msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
+msgstr "Hava Emilimi HF"
 
 msgid "REVMNU_HF_REFERENCE"
-msgstr ""
+msgstr "HF Göndermesi"
 
 msgid "REVMNU_LF_REFERENCE"
-msgstr ""
+msgstr "LF Göndermesi"
 
 msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
+msgstr "Oda Rolloff Faktörü"
 
 msgid "REVMNU_DIFFUSION"
-msgstr ""
+msgstr "Difüzyon"
 
 msgid "REVMNU_DENSITY"
-msgstr ""
+msgstr "Yoğunluk"
 
 msgid "REVMNU_Reflections_Scale"
-msgstr ""
+msgstr "Yansıma boyutu"
 
 msgid "REVMNU_Reflections_Delay_Scale"
-msgstr ""
+msgstr "Yansıma Gecikme Boyutu"
 
 msgid "REVMNU_Decay_Time_Scale"
-msgstr ""
+msgstr "Yokolma Zamanı Boyutu"
 
 msgid "REVMNU_Decay_HF_Limit"
 msgstr ""

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 15:59+0000\n"
-"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"PO-Revision-Date: 2025-12-20 20:24+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/en_GB/>\n"
 "Language: en_GB\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: eng enc ena enz eni ens enj enb enl ent enw\n"
 
 msgid "PRESSKEY"
@@ -422,7 +422,7 @@ msgid "TXT_ANUBIS_ON"
 msgstr "\"Quake with fear!\""
 
 msgid "TXT_ANUBIS_OFF"
-msgstr "No more Ogre Armor"
+msgstr "No more Ogre Armour"
 
 msgid "TXT_CHASECAM_ON"
 msgstr "chasecam ON"
@@ -649,16 +649,16 @@ msgid "OB_FRIENDLY4"
 msgstr "%k loses another friend."
 
 msgid "GOTARMOR"
-msgstr "Picked up the armor."
+msgstr "Picked up the armour."
 
 msgid "GOTMEGA"
-msgstr "Picked up the MegaArmor!"
+msgstr "Picked up the MegaArmour!"
 
 msgid "GOTHTHBONUS"
 msgstr "Picked up a health bonus."
 
 msgid "GOTARMBONUS"
-msgstr "Picked up an armor bonus."
+msgstr "Picked up an armour bonus."
 
 msgid "GOTSTIM"
 msgstr "Picked up a stimpack."
@@ -739,7 +739,7 @@ msgid "GOTBACKPACK"
 msgstr "Picked up a backpack full of ammo!"
 
 msgid "GOTBFG9000"
-msgstr "You've got the BFG9000! Oh, yes."
+msgstr "You got the BFG9000! Oh, yes."
 
 msgid "GOTCHAINGUN"
 msgstr "You've got the chaingun!"
@@ -1493,7 +1493,7 @@ msgid "TXT_USEPUZZLEFAILED"
 msgstr "You Cannot Use This Here"
 
 msgid "TXT_ARMOR1"
-msgstr "Mesh Armor"
+msgstr "Mesh Armour"
 
 msgid "TXT_ARMOR2"
 msgstr "Falcon Shield"
@@ -1853,10 +1853,10 @@ msgid "OB_MPMWEAPBLOODSCOURGE"
 msgstr "%o was wiped off the face of the universe by %k's Bloodscourge."
 
 msgid "TXT_METALARMOR"
-msgstr "You picked up the Metal Armor."
+msgstr "You picked up the Metal Armour."
 
 msgid "TXT_LEATHERARMOR"
-msgstr "You picked up the Leather Armor."
+msgstr "You picked up the Leather Armour."
 
 msgid "TXT_MEDPATCH"
 msgstr "You picked up the Med patch."
@@ -1883,7 +1883,7 @@ msgid "TXT_BROKENCOUPLING"
 msgstr "You picked up the broken power coupling."
 
 msgid "TXT_SHADOWARMOR"
-msgstr "You picked up the Shadow armor."
+msgstr "You picked up the Shadow armour."
 
 msgid "TXT_ENVSUIT"
 msgstr "You picked up the Environmental Suit."
@@ -2193,7 +2193,7 @@ msgid "TAG_BROKENCOUPLING"
 msgstr "Broken Power Coupling"
 
 msgid "TAG_SHADOWARMOR"
-msgstr "Shadow Armor"
+msgstr "Shadow Armour"
 
 msgid "TAG_ENVSUIT"
 msgstr "Environmental Suit"
@@ -2390,7 +2390,7 @@ msgid "TAG_ACOLYTE"
 msgstr "Acolyte"
 
 msgid "TAG_ARMORER"
-msgstr "Armorer"
+msgstr "Armourer"
 
 msgid "TAG_BARKEEP"
 msgstr "Bar Keep"
@@ -2583,10 +2583,10 @@ msgid "TXT_TRADE"
 msgstr "for %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Picked up the Chex(R) Armor."
+msgstr "Picked up the Chex(R) Armour."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Picked up the Super Chex(R) Armor!"
+msgstr "Picked up the Super Chex(R) Armour!"
 
 msgid "GOTWATER"
 msgstr "Picked up a glass of water."
@@ -2706,7 +2706,7 @@ msgid "OB_BIPEDICUS"
 msgstr "%o was slimed by a bipedicus."
 
 msgid "OB_BIPEDICUS2"
-msgstr "%o was slimed by an armored bipedicus."
+msgstr "%o was slimed by an armoured bipedicus."
 
 msgid "OB_CYCLOPTIS"
 msgstr "%o was slimed by a cycloptis."
@@ -3152,7 +3152,7 @@ msgid "GMPLYMNU_ALLOWHEALTH"
 msgstr "Allow health"
 
 msgid "GMPLYMNU_ALLOWARMOR"
-msgstr "Allow armor"
+msgstr "Allow armour"
 
 msgid "GMPLYMNU_SPAWNFARTHEST"
 msgstr "Spawn farthest"
@@ -3197,7 +3197,7 @@ msgid "GMPLYMNU_KEEPWEAPONS"
 msgstr "Keep weapons"
 
 msgid "GMPLYMNU_KEEPARMOR"
-msgstr "Keep armor"
+msgstr "Keep armour"
 
 msgid "GMPLYMNU_KEEPPOWERUPS"
 msgstr "Keep powerups"
@@ -3230,7 +3230,7 @@ msgid "CMPTMNU_MODE"
 msgstr "Compatibility mode"
 
 msgid "CMPTMNU_ACTORBEHAVIOR"
-msgstr "Actor Behavior"
+msgstr "Actor Behaviour"
 
 msgid "CMPTMNU_NOBLOCKFRIENDS"
 msgstr "Friendly monsters aren't blocked"
@@ -3257,7 +3257,7 @@ msgid "CMPTMNU_NOTOSSDROPS"
 msgstr "Spawn item drops on the floor"
 
 msgid "CMPTMNU_DEHACKEDBEHAVIOR"
-msgstr "DehackEd Behavior"
+msgstr "DehackEd Behaviour"
 
 msgid "CMPTMNU_DEHHEALTH"
 msgstr "DEH health settings like Doom2.exe"
@@ -3266,7 +3266,7 @@ msgid "CMPTMNU_MUSHROOM"
 msgstr "Original A_Mushroom speed in DEH mods"
 
 msgid "CMPTMNU_MAPACTIONBEHAVIOR"
-msgstr "Map/Action Behavior"
+msgstr "Map/Action Behaviour"
 
 msgid "CMPTMNU_USEBLOCKING"
 msgstr "All special lines can block <use>"
@@ -3278,7 +3278,7 @@ msgid "CMPTMNU_NODOORLIGHT"
 msgstr "Disable BOOM door light effect"
 
 msgid "CMPTMNU_LIGHT"
-msgstr "Find neighboring light like Doom"
+msgstr "Find neighbouring light like Doom"
 
 msgid "CMPTMNU_SHORTTEX"
 msgstr "Find shortest textures like Doom"
@@ -3287,7 +3287,7 @@ msgid "CMPTMNU_STAIRS"
 msgstr "Use buggier stair building"
 
 msgid "CMPTMNU_FLOORMOVE"
-msgstr "Use Doom's floor motion behavior"
+msgstr "Use Doom's floor motion behaviour"
 
 msgid "CMPTMNU_POINTONLINE"
 msgstr "Use Doom's point-on-line algorithm"
@@ -3296,7 +3296,7 @@ msgid "CMPTMNU_MULTIEXIT"
 msgstr "Level exit can be triggered more than once"
 
 msgid "CMPTMNU_PHYSICSBEHAVIOR"
-msgstr "Physics Behavior"
+msgstr "Physics Behaviour"
 
 msgid "CMPTMNU_NOPASSOVER"
 msgstr "Actors are infinitely tall"
@@ -3323,7 +3323,7 @@ msgid "CMPTMNU_MISSILECLIP"
 msgstr "Use Doom heights for missile clipping"
 
 msgid "CMPTMNU_RENDERINGBEHAVIOR"
-msgstr "Rendering Behavior"
+msgstr "Rendering Behaviour"
 
 msgid "CMPTMNU_POLYOBJ"
 msgstr "Draw polyobjects like Hexen"
@@ -3335,7 +3335,7 @@ msgid "CMPTMNU_SPRITESORT"
 msgstr "Invert sprite sorting"
 
 msgid "CMPTMNU_SOUNDBEHAVIOR"
-msgstr "Sound Behavior"
+msgstr "Sound Behaviour"
 
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Cripple sound for silent BFG trick"
@@ -3362,7 +3362,7 @@ msgid "CMPTMNU_PUSHWINDOW"
 msgstr "Non-blocking lines can be pushed"
 
 msgid "CMPTMNU_CHECKSWITCHRANGE"
-msgstr "Enable buggy CheckSwitchRange behavior"
+msgstr "Enable buggy CheckSwitchRange behaviour"
 
 msgid "CMPTMNU_RAILINGHACK"
 msgstr "Enable buggy Strife railing"
@@ -3371,7 +3371,7 @@ msgid "CMPTMNU_EXPLODE1"
 msgstr "No vertical thrust from explosions"
 
 msgid "CMPTMNU_EXPLODE2"
-msgstr "Use original Doom explosion behavior"
+msgstr "Use original Doom explosion behaviour"
 
 msgid "PLYRMNU_RED"
 msgstr "Red"
@@ -3494,7 +3494,7 @@ msgid "MAPCOLORMNU_GRIDCOLOR"
 msgstr "Map grid"
 
 msgid "MAPCOLORMNU_XHAIRCOLOR"
-msgstr "Center point"
+msgstr "Centre point"
 
 msgid "MAPCOLORMNU_NOTSEENCOLOR"
 msgstr "Not-yet-seen walls"
@@ -3587,7 +3587,7 @@ msgid "MSGMNU_TEAMMESSAGES"
 msgstr "Team Messages"
 
 msgid "MSGMNU_CENTEREDMESSAGES"
-msgstr "Centered Messages"
+msgstr "Centred Messages"
 
 msgid "MSGMNU_SCREENSHOTMESSAGES"
 msgstr "Screenshot messages"
@@ -3749,13 +3749,13 @@ msgid "ALTHUDMNU_HEALTHGREEN"
 msgstr "Green health display below"
 
 msgid "ALTHUDMNU_ARMORRED"
-msgstr "Red armor display below"
+msgstr "Red armour display below"
 
 msgid "ALTHUDMNU_ARMORYELLOW"
-msgstr "Yellow armor display below"
+msgstr "Yellow armour display below"
 
 msgid "ALTHUDMNU_ARMORGREEN"
-msgstr "Green armor display below"
+msgstr "Green armour display below"
 
 msgid "ALTHUDMNU_AUTOMAPHUD"
 msgstr "Alternative Automap HUD"
@@ -4794,9 +4794,6 @@ msgstr "Modern (Keypad)"
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strict KEYCONF Weapons/Players"
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr "Classic ZDoom menu scaling"
-
 msgid "MISCMNU_WIPERCENT"
 msgstr "Use percents on summary screen"
 
@@ -4886,7 +4883,7 @@ msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
 msgstr "Disallow override of camera facing mode"
 
 msgid "ALTHUDMNU_SWAPHEALTHARMOR"
-msgstr "Swap health and armor"
+msgstr "Swap health and armour"
 
 # hud_oldscale
 msgid "SCALEMNU_HUD_OLDSCALE"
@@ -5044,7 +5041,7 @@ msgstr "Disable Chat Sound"
 
 # Tries to make online games less stuttery.
 msgid "NETMNU_BALANCETICS"
-msgstr "Stabilize Connections"
+msgstr "Stabilise Connections"
 
 msgid "NETMNU_LIMITCONVO"
 msgstr "Limit Conversations to Host"
@@ -5124,13 +5121,13 @@ msgid "TAG_BACKPACK"
 msgstr "Backpack"
 
 msgid "TAG_ARMORBONUS"
-msgstr "Spiritual Armor"
+msgstr "Spiritual Armour"
 
 msgid "TAG_GREENARMOR"
-msgstr "Security Armor"
+msgstr "Security Armour"
 
 msgid "TAG_BLUEARMOR"
-msgstr "Combat Armor"
+msgstr "Combat Armour"
 
 msgid "TAG_INVULSPHERE"
 msgstr "Invulnerability Artifact"
@@ -5199,10 +5196,10 @@ msgid "TAG_REPELLENT"
 msgstr "Slime Repellent"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Chex Armor"
+msgstr "Chex Armour"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Super Chex Armor"
+msgstr "Super Chex Armour"
 
 msgid "TAG_CHEXMAP"
 msgstr "Computer Area Map"
@@ -5250,3 +5247,88 @@ msgstr "Clear coop spy"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Accessibility Options"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Analogue Run"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Tooltip Lines"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Tooltip Scroll Speed"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Tooltip Scroll Delay"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Tooltip Background Alpha"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Limit Tooltip Width"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Large Tooltip Text"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"This is an example tooltip.\n"
+"Here is some supplementary text.\n"
+"…\n"
+"Here is a very long line of text that just seems to go on and on without "
+"ever having anything interesting to say, seemingly only being so long "
+"because the developers are having a hard time explaining what an option does."
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Tooltips"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Extra Lighting"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr ""
+"Controls the light radius distance around the player in map units. Larger "
+"values make the scene brighter."
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+"Amount of sector lighting to add on top of existing sector light levels, "
+"while preserving the existing lighting mode."
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Player Light Radius"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Lighting"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Explosion Display Style"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Additive"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Transparent"
+
+msgid "OPTVAL_LAX"
+msgstr "Relaxed"
+
+msgid "OPTVAL_STRICT"
+msgstr "Strict"
+
+msgid "PICKER_FILELOADING"
+msgstr "File Loading"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Classic ZDoom menu scaling"
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Brightness"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Gamma correction"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Contrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Saturation"

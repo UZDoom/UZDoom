@@ -666,18 +666,6 @@ msgstr "Модели"
 msgid "DSPLYMNU_CROSSHAIRSCALE"
 msgstr "Размера нишана"
 
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr "Осветљење"
-
-msgid "DSPLYMNU_GAMMA"
-msgstr "Корекција светлости"
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr "Контраст"
-
-msgid "DSPLYMNU_SATURATION"
-msgstr "Сатурација"
-
 msgid "DSPLYMNU_SBSCALE"
 msgstr "Размера статусне траке"
 
