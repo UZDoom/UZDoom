@@ -5071,6 +5071,26 @@ void AActor::Tick ()
 		}
 	}
 
+	if (Sector->Flags & SECF_KILLMONSTERS && Z() == floorz && player == nullptr && (flags & MF_SHOOTABLE) &&
+	    !(flags & MF_FLOAT))
+	{
+		P_DamageMobj(this, nullptr, nullptr, TELEFRAG_DAMAGE, NAME_InstantDeath);
+		// must have been removed
+		if (ObjectFlags & OF_EuthanizeMe)
+			return;
+	}
+	//[inkoalawetrust] Genericized level damage handling that makes sector, 3D floor, and TERRAIN flat damage affect
+	//monsters and other NPCs too.
+	P_ActorOnSpecial3DFloor(
+		this); // 3D floors must be checked separately to see if their control sector allows non-player damage
+	if (checkForSpecialSector(this, Sector))
+	{
+		P_ActorInSpecialSector(this, Sector);
+		if (!isAbove(Sector->floorplane.ZatPoint(this)) ||
+		    waterlevel) // Actor must be touching the floor for TERRAIN flats.
+			P_ActorOnSpecialFlat(this, P_GetThingFloorType(this));
+	}
+
 	assert (state != NULL);
 	if (state == NULL)
 	{
@@ -5081,22 +5101,6 @@ void AActor::Tick ()
 		return; // freed itself
 
 	UpdateRenderSectorList();
-
-	if (Sector->Flags & SECF_KILLMONSTERS && Z() == floorz &&
-		player == nullptr && (flags & MF_SHOOTABLE) && !(flags & MF_FLOAT))
-	{
-		P_DamageMobj(this, nullptr, nullptr, TELEFRAG_DAMAGE, NAME_InstantDeath);
-		// must have been removed
-		if (ObjectFlags & OF_EuthanizeMe) return;
-	}
-	//[inkoalawetrust] Genericized level damage handling that makes sector, 3D floor, and TERRAIN flat damage affect monsters and other NPCs too.
-	P_ActorOnSpecial3DFloor(this); //3D floors must be checked separately to see if their control sector allows non-player damage
-	if (checkForSpecialSector(this,Sector))
-	{
-		P_ActorInSpecialSector(this,Sector);
-		if (!isAbove(Sector->floorplane.ZatPoint(this)) || waterlevel) // Actor must be touching the floor for TERRAIN flats.
-			P_ActorOnSpecialFlat(this, P_GetThingFloorType(this));
-	}
 
 	if (tics != -1)
 	{
