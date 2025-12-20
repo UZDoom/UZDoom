@@ -993,7 +993,7 @@ OptionMenu "VideoOptions" protected
 
 	Submenu "$DSPLYMNU_GLOPT", 			"OpenGLOptions"
 	Submenu "$DSPLYMNU_SWOPT", 			"SWROptions"
-	Submenu "Image Calibration",		"ImageAdjustMenu"
+	Submenu "$DSPLYMNU_IMAGEADJUST",	"ImageAdjustMenu"
 	StaticText " "
 	Submenu "$DSPLYMNU_VKOPT",			"VKOptions"
 	Submenu "$GLMNU_TEXOPT", 			"GLTextureGLOptions"
@@ -1026,28 +1026,29 @@ OptionMenu "VideoOptions" protected
 
 OptionMenu "ImageAdjustMenu" protected
 {
-	Title "Image Calibration Options"
+	Title "$DSPLYMNU_IMAGEADJUST"
 	Class "VideoOptions"
 
-	StaticText "From a normal viewing distance, adjust these sliders.", "Cyan"
-	StaticText "Upscaling/Supersampling may result in incorrect output.", "Cyan"
-	StaticText "Please disable them before adjusting.", "Cyan"
+	StaticText "$DSPLYMNU_IMAGEADJUST_TOP1", "Cyan"
+	StaticText "$DSPLYMNU_IMAGEADJUST_TOP2", "Cyan"
+	StaticText "$DSPLYMNU_IMAGEADJUST_TOP3", "Cyan"
 	StaticText ""
 	Slider "$DSPLYMNU_GAMMA",		"vid_fixgamma",		-1.0,	1.0,	0.01,	2
-	Tooltip "Compensates for your monitor's limitations. Adjust until vertical grey blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
-	Slider "Blackpoint",			"vid_blackpoint",	0.0,	0.25,	0.01,	2
-	Tooltip "Compensates for monitors that fail to display dark pixels correctly. Adjust until diagonal white blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
-	Slider "Whitepoint",			"vid_whitepoint",	0.75,	1.0,	0.01,	2
-	Tooltip "Compensates for monitors that fail to display bright pixels correctly. Adjust until diagonal black blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
-	Command "Reset All",			"vid_reset2defaults"
+	Tooltip "$DSPLYMNU_TOOLTIP_GAMMA"
+	Slider "$DSPLYMNU_BLACKPOINT",	"vid_blackpoint",	0.0,	0.25,	0.01,	2
+	Tooltip "$DSPLYMNU_TOOLTIP_BLACKPOINT"
+	Slider "$DSPLYMNU_WHITEPOINT",	"vid_whitepoint",	0.75,	1.0,	0.01,	2
+	Tooltip "$DSPLYMNU_TOOLTIP_WHITEPOINT"
+	Command "$OPTMNU_RESETALL",		"vid_reset2defaults"
+	Tooltip "$DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 	Slider "$DSPLYMNU_BRIGHTNESS",	"vid_brightness",	-0.25,	0.25,	0.01,	2
-	Tooltip "Applies linear brightness adjustment. Adjust to personal taste, or to see in the dark."
+	Tooltip "$DSPLYMNU_TOOLTIP_BRIGHTNESS"
 	Slider "$DSPLYMNU_CONTRAST",	"vid_contrast",		0.5,	2.0,	0.01,	2
-	Tooltip "Adjusts perceived difference between similar colours. Controls how sharp/washed out the images looks. Adjust to personal taste."
+	Tooltip "$DSPLYMNU_TOOLTIP_CONTRAST"
 	Slider "$DSPLYMNU_SATURATION",	"vid_saturation",	-1.0,	2.0,	0.01,	2
-	Tooltip "Adjusts the intensity of colors, making the image look more vivid or muted. Adjust to personal taste."
+	Tooltip "$DSPLYMNU_TOOLTIP_SATURATION"
 	StaticText ""
-	StaticText "Adjust until this looks like a uniform Gray color.", "Cyan"
+	StaticText "$DSPLYMNU_IMAGEADJUST_BOTTOM", "Cyan"
 }
 
 //-------------------------------------------------------------------------------------------

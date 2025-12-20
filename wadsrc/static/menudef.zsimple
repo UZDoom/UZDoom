@@ -54,7 +54,7 @@ OptionMenu VideoOptionsSimple protected
 		Option "$VIDMNU_RENDERMODE",		"vid_rendermode", "RenderMode"
 	}
 	Option "$VIDMNU_FULLSCREEN",		"vid_fullscreen", "YesNo"
-	Submenu "Image Calibration",	"ImageAdjustMenu"
+	Submenu "$DSPLYMNU_IMAGEADJUST",	"ImageAdjustMenu"
 	IfOption(Mac)
 	{
 		Option "$VIDMNU_HIDPI",			"vid_hidpi", "YesNo"
