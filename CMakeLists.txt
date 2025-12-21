@@ -65,9 +65,14 @@ if(CMAKE_CROSSCOMPILING)
 endif()
 
 # Recursive function to place PK3 archive source files into a hierarchy of source file in the IDE
-function( assort_pk3_source_folder FOLDER_NAME PK3_DIR )
+function( assort_pk3_source_folder FOLDER_NAME )
 	# Assort source files into folders in the IDE
-	file(GLOB PK3_SRCS ${PK3_DIR}/*) # Create list of all files in this folder
+	# Create wildcard patterns for all directories
+	set(PK3_PATTERNS)
+	foreach(PK3_DIR ${ARGN})
+		list(APPEND PK3_PATTERNS "${PK3_DIR}/*")
+	endforeach()
+	file(GLOB PK3_SRCS ${PK3_PATTERNS}) # Create list of all files in these folders
 	foreach(PK3_SRC ${PK3_SRCS})
 		# If there are subfolders, recurse into them
 		if(IS_DIRECTORY ${PK3_SRC})
@@ -87,19 +92,24 @@ if( PK3_QUIET_ZIPDIR )
 	set( PK3_ZIPDIR_OPTIONS "-q" )
 endif()
 
-# Simplify pk3 building, add_pk3(filename srcdirectory)
-function( add_pk3 PK3_NAME PK3_DIR )
+# Simplify pk3 building, add_pk3(filename srcdirectory [srcdirectory2 ...])
+function( add_pk3 PK3_NAME )
 	# Generate target name. Just use "pk3" for main pk3 target.
 	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
 
 	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-		COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
+		COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
 		DEPENDS zipdir )
 
 	# Create a list of source files for this PK3, for use in the IDE
 	# Phase 1: Create a list of all source files for this PK3 archive, except
 	#  for a couple of strife image file names that confuse CMake.
-	file(GLOB_RECURSE PK3_SRCS ${PK3_DIR}/*)
+	# Create wildcard patterns for all directories
+	set(PK3_PATTERNS)
+	foreach(PK3_DIR ${ARGN})
+		list(APPEND PK3_PATTERNS "${PK3_DIR}/*")
+	endforeach()
+	file(GLOB_RECURSE PK3_SRCS ${PK3_PATTERNS})
 	# Exclude from the source list some files with brackets in the
 	# file names here, because they confuse CMake.
 	# This only affects the list of source files shown in the IDE.
@@ -124,7 +134,7 @@ function( add_pk3 PK3_NAME PK3_DIR )
 		SOURCES ${PK3_SRCS})
 
 	# Phase 3: Assign source files to a nice folder structure in the IDE
-	assort_pk3_source_folder("Source Files" ${PK3_DIR})
+	assort_pk3_source_folder("Source Files" ${ARGN})
 
 	# Phase 4: Create separate copy step, in order to make zdoom depend on pk3s without creating cycle
 	if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
@@ -478,6 +488,7 @@ install(DIRECTORY docs/
 		COMPONENT "Documentation")
 
 option( DYN_OPENAL "Dynamically load OpenAL" ON )
+option( BUILD_NONFREE "Build non-free assets used by commercial games" ON )
 
 add_subdirectory( src )
 add_subdirectory( libraries/lzma )
