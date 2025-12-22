@@ -1726,6 +1726,8 @@ OptionMenu FontOptions protected
 	StaticText ""
 	Option "Use Generic UI",				"ui_generic", "YesNo"
 	Tooltip "Use the Small Text Font in more places. Often used for localization."
+	Option "Text atlas resolution scale",	"font_supersamplescale", "FontSuperSampleOptions"
+	Tooltip "How big to generate our font atlases. Each increase uses substantially more memory. Requires restart."
 	StaticText ""
 	StaticText "USER FONT CHOICES"
 	Option "Small Text Font",				"fontchoice_smalltext", "DynamicFontOptions"
@@ -1736,6 +1738,8 @@ OptionMenu FontOptions protected
 	Tooltip "Choose a font to use for text descriptions. Used by tooltips, for example."
 	Option "Console Font",				"fontchoice_console", "DynamicFontOptions"
 	Tooltip "Choose a font to use for the command console. Also often used for misc small text or numbers."
+	Option "Big Text Font",				"fontchoice_bigtext", "DynamicFontOptions"
+	Tooltip "Choose a font to use for big text, such as main menu items."
 	StaticText ""
 	StaticText "ADVANCED - OVERRIDES"
 	Option "NewSmallFont override",			"fontoverride_NewSmallFont", "DynamicFontOptions"
@@ -1759,6 +1763,7 @@ OptionString DynamicFontOptions
 	"IBMPLEXS", "IBM Plex Sans"
 	"HACK-BOL", "Hack Bold"
 	"KREON-BO", "Kreon Bold"
+	"ATKINSON", "Atkinson Hyperlegible Bold"
 }
 
 //TODO: dynamically populate with known dynamic fonts ?? 
@@ -1792,6 +1797,14 @@ OptionString DynamicFontOptionsKO
 {
 	"FO_DEFAULT", "Don't override"
 	"IBMPLEXK", "IBM Plex Sans KR"
+}
+
+OptionValue  FontSuperSampleOptions
+{
+	1, "1x"
+	2, "2x"
+	3, "3x"
+	4, "4x"
 }
 
 /*=======================================

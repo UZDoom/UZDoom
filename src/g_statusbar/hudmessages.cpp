@@ -190,10 +190,10 @@ DHUDMessage::DHUDMessage (FFont *font, const char *text, float x, float y, int h
 
 	// Try to find the optimal font if none is specified. Prefer SmallFont, but if that cannot handle this text use the IWAD's SmallFont and if that doesn't work either, use the VGA font.
 	if (font) Font = font;
-	else if (generic_ui) Font = NewSmallFont;
-	else if (SmallFont->CanPrint(text)) Font = SmallFont;
-	else if (OriginalSmallFont->CanPrint(text)) Font = OriginalSmallFont;
-	else Font = NewSmallFont;
+	else if (generic_ui) Font = FFont::GetSmallTextFont(NewSmallFont);
+	else if (SmallFont->CanPrint(text)) Font = FFont::GetSmallTextFont(SmallFont);
+	else if (OriginalSmallFont->CanPrint(text)) Font = FFont::GetSmallTextFont(OriginalSmallFont);
+	else Font = FFont::GetSmallTextFont(NewSmallFont);
 
 	TextColor = textColor;
 	State = 0;

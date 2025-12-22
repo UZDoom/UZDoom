@@ -164,7 +164,8 @@ bool M_SetSpecialMenu(FName& menu, int param)
 	case NAME_MainMenu:
 		if (gameinfo.gametype & GAME_DoomStrifeChex)	// Raven's games always used text based menus
 		{
-			if (gameinfo.forcetextinmenus)	// If text is forced, this overrides any check.
+			FFont *desiredMenuFont = FFont::GetBigTextFont(BigUpper);
+			if (gameinfo.forcetextinmenus || (desiredMenuFont && desiredMenuFont->IsValidDynamicFont()))	// If text is forced, this overrides any check.
 			{
 				menu = NAME_MainMenuTextOnly;
 			}

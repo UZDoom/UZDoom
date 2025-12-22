@@ -27,6 +27,7 @@ class ListMenuItem : MenuItemBase
 	{
 		int w = desc ? desc.DisplayWidth() : ListMenuDescriptor.CleanScale;
 		int h = desc ? desc.DisplayHeight() : -1;
+		fnt = Font.GetSmallTextFont(fnt);
 		if (w == ListMenuDescriptor.CleanScale)
 		{
 			screen.DrawText(fnt, color, x, y, text, ontop? DTA_CleanTop : DTA_Clean, true);
@@ -263,7 +264,7 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 	{
 		Super.Init(desc.mXpos, desc.mYpos, desc.mLinespacing, child, param);
 		mText = text;
-		mFont = desc.mFont;
+		mFont = Font.GetSmallTextFont(desc.mFont);
 		mColor = desc.mFontColor;
 		mColorSelected = desc.mFontcolor2;
 		mHotkey = hotkey.GetNextCodePoint(0);

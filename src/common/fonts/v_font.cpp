@@ -161,6 +161,8 @@ FFont *V_GetFont(const char *name, const char *fontlumpname)
 //
 //==========================================================================
 
+CVAR(Int, font_supersamplescale, 1, CVAR_ARCHIVE);
+
 FFont *FontFromTTF(const FileSys::FolderEntry &f)
 {
 	FString fileName = f.name;
@@ -174,7 +176,7 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 
 		// TODO: we need to base this on the real line height and not a hardcoded number.. how??
 		const int    defaultLineHeight = 17;
-		const int    supersampleScale  = 1;
+		const int    supersampleScale  = *font_supersamplescale;
 		Trex::Atlas *atlas =
 			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), defaultLineHeight * supersampleScale,
 		                    UZDoomCharSet, Trex::RenderMode::LCD);
@@ -944,7 +946,7 @@ void V_LoadTranslations()
 		if (!font->noTranslate) font->LoadTranslations();
 	}
 
-	if (BigFont && !BigFont->IsValidDynamicFont())
+	if (BigFont)
 	{
 		CalcDefaultTranslation(BigFont, CR_UNTRANSLATED * 2 + 1);
 		if (OriginalBigFont != nullptr && OriginalBigFont != BigFont)
@@ -957,7 +959,7 @@ void V_LoadTranslations()
 			OriginalBigFont->forceremap = true;
 		}
 	}
-	if (SmallFont && !SmallFont->IsValidDynamicFont())
+	if (SmallFont)
 	{
 		CalcDefaultTranslation(SmallFont, CR_UNTRANSLATED * 2);
 		if (OriginalSmallFont != nullptr && OriginalSmallFont != SmallFont)
@@ -969,7 +971,7 @@ void V_LoadTranslations()
 			OriginalSmallFont->Translations[CR_UNTRANSLATED] = FTranslationID::fromInt(sometrans);
 			OriginalSmallFont->forceremap = true;
 		}
-		if (NewSmallFont != nullptr && !NewSmallFont->IsValidDynamicFont())
+		if (NewSmallFont != nullptr)
 		{
 			assert(IsLuminosityTranslation(NewSmallFont->Translations[0]));
 			int sometrans = NewSmallFont->Translations[0].index();

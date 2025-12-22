@@ -82,6 +82,11 @@ CUSTOM_CVAR(String, fontchoice_console, "HACKBO", CVAR_ARCHIVE)
 	SetFontChoice_Console(self);
 }
 
+void SetFontChoice_BigText(const char *newFont);
+CUSTOM_CVAR(String, fontchoice_bigtext, "LEXENDDE", CVAR_ARCHIVE)
+{
+	SetFontChoice_BigText(self);
+}
 
 //actually overriding the font directly will become a last resort option
 //if you are having mod compatibility issues.
@@ -650,10 +655,15 @@ void SetFontChoice_Title(const char *newFont)
 
 void SetFontChoice_Description(const char *newFont)
 {
-	//
+	//TODO: need to refresh tooltip font
 }
 
 void SetFontChoice_Console(const char *newFont)
+{
+	//
+}
+
+void SetFontChoice_BigText(const char *newFont)
 {
 	//
 }
@@ -772,6 +782,16 @@ FFont *FFont::GetDescriptionFont(FFont *fallbackIfNoUserChoice)
 FFont *FFont::GetConsoleFont(FFont *fallbackIfNoUserChoice)
 {
 	FFont *userFont = V_GetFont(*fontchoice_console);
+	if (userFont)
+	{
+		return userFont;
+	}
+	return fallbackIfNoUserChoice;
+}
+
+FFont *FFont::GetBigTextFont(FFont *fallbackIfNoUserChoice)
+{
+	FFont *userFont = V_GetFont(*fontchoice_bigtext);
 	if (userFont)
 	{
 		return userFont;
