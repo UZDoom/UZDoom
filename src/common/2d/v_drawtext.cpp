@@ -446,6 +446,9 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		
 		double cursorx = x;
 		double cursory = y;
+
+		FRenderStyle trexTextRenderStyle = {STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_One, STYLEF_RedIsAlpha | STYLEF_ColorIsFixed};
+
 		for (auto &s : DrawStrings)
 		{
 			DrawParms           atlasFragmentDrawParms      = parms;
@@ -469,9 +472,10 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 				const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
 				const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
 				SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
-				atlasFragmentDrawParms.masked  = true;
+				atlasFragmentDrawParms.masked  = false;
 				atlasFragmentDrawParms.fortext = true;
 				atlasFragmentDrawParms.bilinear   = 1;
+				atlasFragmentDrawParms.style    = trexTextRenderStyle;
 				atlasFragmentDrawParms.destwidth *= (shrinkScale);
 				atlasFragmentDrawParms.destheight *= (shrinkScale);
 				if (s.Colors[i] != 0)
@@ -489,6 +493,9 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 					shadowAtlasFragmentDrawParms.x += (1.33*scalex*textScale);
 					shadowAtlasFragmentDrawParms.y += (1.33*scaley*textScale);
 					shadowAtlasFragmentDrawParms.color = MAKEARGB(255, 33, 33, 33);
+					shadowAtlasFragmentDrawParms.masked = 1;
+					const auto &shadowRenderStyle       = LegacyRenderStyles[10];
+					shadowAtlasFragmentDrawParms.style = shadowRenderStyle;
 					drawer->AddTexture(atlasTexture, shadowAtlasFragmentDrawParms);
 				}
 
