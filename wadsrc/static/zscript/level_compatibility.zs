@@ -2304,6 +2304,25 @@ class LevelCompatibility : LevelPostProcessor
 			SetLineFlags(2406, Line.ML_DONTPEGBOTTOM);
 			break;
 			}
+			
+			case '727D06AF11504938596C5D4FEB3BD53E': // scythex.wad map02
+			{
+			// Missing textures on steps behind the blue key door, also given them suitable alignments
+			SetWallTexture(1531, Line.front, Side.bottom, "SUPPA32B");
+			SetWallTexture(1523, Line.front, Side.bottom, "SUPPA32B");
+			level.lines[1531].sidedef[0].SetTextureXOffset(Side.Bottom,11);
+			level.lines[1531].sidedef[0].SetTextureYOffset(Side.Bottom,14);
+			level.lines[1523].sidedef[0].SetTextureXOffset(Side.Bottom,11);
+			level.lines[1523].sidedef[0].SetTextureYOffset(Side.Bottom,6);
+			break;
+			}
+			
+			case '65E48442E4B6FC75133A149E87D59BEA': // ma_sincity.wad
+			{
+			//Missing texture in secret area.
+			SetWallTexture(4032, Line.front, Side.mid, "BRICK8");
+			break;
+			}
 		}
 	}
 }
