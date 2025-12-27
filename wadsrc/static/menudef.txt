@@ -2412,7 +2412,7 @@ OptionMenu ModReplayerOptions protected
 	
 	StaticText ""
 	StaticText "$ACCMNU_LIGHT"
-	Slider "$ACCMNU_LIGHT_EXTRA", "r_extralight", -8, 8, 1, 0
+	Slider "$ACCMNU_LIGHT_EXTRA", "r_extralight", -64, 128, 1, 0
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_EXTRA"
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"

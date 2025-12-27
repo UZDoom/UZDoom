@@ -1143,7 +1143,7 @@ void HWEEHorizonPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 	{
 		HWHorizonInfo horz;
 		horz.plane.GetFromSector(sector, sector_t::ceiling);
-		horz.lightlevel = hw_ClampLight(sector->GetCeilingLight());
+		horz.lightlevel = RescaleLightLevel(sector->GetCeilingLight());
 		horz.colormap = sector->Colormap;
 		horz.specialcolor = 0xffffffff;
 		if (portal->mType == PORTS_PLANE)
@@ -1157,7 +1157,7 @@ void HWEEHorizonPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 	{
 		HWHorizonInfo horz;
 		horz.plane.GetFromSector(sector, sector_t::floor);
-		horz.lightlevel = hw_ClampLight(sector->GetFloorLight());
+		horz.lightlevel = RescaleLightLevel(sector->GetFloorLight());
 		horz.colormap = sector->Colormap;
 		horz.specialcolor = 0xffffffff;
 		if (portal->mType == PORTS_PLANE)

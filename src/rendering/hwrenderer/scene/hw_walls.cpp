@@ -307,7 +307,7 @@ void HWWall::RenderTexturedWall(HWWallDispatcher*di, FRenderState &state, int rf
 
 			if (low1 < ztop[0] || low2 < ztop[1])
 			{
-				int thisll = (*lightlist)[i].caster != nullptr ? hw_ClampLight(*(*lightlist)[i].p_lightlevel) : lightlevel;
+				int thisll = (*lightlist)[i].caster != nullptr ? RescaleLightLevel(*(*lightlist)[i].p_lightlevel) : lightlevel;
 				FColormap thiscm;
 				thiscm.FadeColor = Colormap.FadeColor;
 				thiscm.FogDensity = Colormap.FogDensity;
@@ -789,7 +789,7 @@ void HWWall::Put3DWall(HWWallDispatcher *di, lightlist_t * lightlist, bool trans
 	// only modify the light di->Level-> if it doesn't originate from the seg's frontsector. This is to account for light transferring effects
 	if (lightlist->p_lightlevel != &seg->sidedef->sector->lightlevel)
 	{
-		lightlevel = hw_ClampLight(*lightlist->p_lightlevel);
+		lightlevel = RescaleLightLevel(*lightlist->p_lightlevel);
 	}
 	// relative light won't get changed here. It is constant across the entire wall.
 
@@ -1038,7 +1038,7 @@ bool HWWall::DoHorizon(HWWallDispatcher *di, seg_t * seg,sector_t * fs, vertex_t
 			else
 			{
 				hi.plane.GetFromSector(fs, sector_t::ceiling);
-				hi.lightlevel = hw_ClampLight(fs->GetCeilingLight());
+				hi.lightlevel = RescaleLightLevel(fs->GetCeilingLight());
 				hi.colormap = fs->Colormap;
 				hi.specialcolor = fs->SpecialColors[sector_t::ceiling];
 
@@ -1046,7 +1046,7 @@ bool HWWall::DoHorizon(HWWallDispatcher *di, seg_t * seg,sector_t * fs, vertex_t
 				{
 					light = P_GetPlaneLight(fs, &fs->ceilingplane, true);
 
-					if (!(fs->GetFlags(sector_t::ceiling) & PLANEF_ABSLIGHTING)) hi.lightlevel = hw_ClampLight(*light->p_lightlevel);
+					if (!(fs->GetFlags(sector_t::ceiling) & PLANEF_ABSLIGHTING)) hi.lightlevel = RescaleLightLevel(*light->p_lightlevel);
 					hi.colormap.CopyLight(light->extra_colormap);
 				}
 
@@ -1067,7 +1067,7 @@ bool HWWall::DoHorizon(HWWallDispatcher *di, seg_t * seg,sector_t * fs, vertex_t
 			else
 			{
 				hi.plane.GetFromSector(fs, sector_t::floor);
-				hi.lightlevel = hw_ClampLight(fs->GetFloorLight());
+				hi.lightlevel = RescaleLightLevel(fs->GetFloorLight());
 				hi.colormap = fs->Colormap;
 				hi.specialcolor = fs->SpecialColors[sector_t::floor];
 
@@ -1075,7 +1075,7 @@ bool HWWall::DoHorizon(HWWallDispatcher *di, seg_t * seg,sector_t * fs, vertex_t
 				{
 					light = P_GetPlaneLight(fs, &fs->floorplane, false);
 
-					if (!(fs->GetFlags(sector_t::floor) & PLANEF_ABSLIGHTING)) hi.lightlevel = hw_ClampLight(*light->p_lightlevel);
+					if (!(fs->GetFlags(sector_t::floor) & PLANEF_ABSLIGHTING)) hi.lightlevel = RescaleLightLevel(*light->p_lightlevel);
 					hi.colormap.CopyLight(light->extra_colormap);
 				}
 
@@ -1782,7 +1782,7 @@ void HWWall::BuildFFBlock(HWWallDispatcher *di, seg_t * seg, F3DFloor * rover, i
 			Colormap.Clear();
 			Colormap.LightColor = light->extra_colormap.FadeColor;
 			// the fog plane defines the light di->Level->, not the front sector
-			lightlevel = hw_ClampLight(*light->p_lightlevel);
+			lightlevel = RescaleLightLevel(*light->p_lightlevel);
 			texture = NULL;
 			type = RENDERWALL_FFBLOCK;
 		}
@@ -2237,7 +2237,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 	lightlist = NULL;
 
 	int rel = 0;
-	int orglightlevel = hw_ClampLight(frontsector->lightlevel, false);
+	int orglightlevel = hw_ClampLight(frontsector->lightlevel);
 	bool foggy = (!Colormap.FadeColor.isBlack() || di->Level->flags&LEVEL_HASFADETABLE);	// fog disables fake contrast
 
 	alpha = 1.0f;
@@ -2284,7 +2284,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 		else
 		{
 			// normal texture
-			lightlevel = hw_ClampLight(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::mid, false, &rel));
+			lightlevel = RescaleLightLevel(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::mid, false, &rel));
 			rellight = CalcRelLight(lightlevel, orglightlevel, rel);
 			texture = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::mid), true);
 			if (texture && texture->isValid())
@@ -2359,7 +2359,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 
 			if (bch1a < fch1 || bch2a < fch2)
 			{
-				lightlevel = hw_ClampLight(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::top, false, &rel));
+				lightlevel = RescaleLightLevel(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::top, false, &rel));
 				rellight = CalcRelLight(lightlevel, orglightlevel, rel);
 				texture = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::top), true);
 				if (texture && texture->isValid())
@@ -2433,7 +2433,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 			texture = tex;
 		}
 		else texture = nullptr;
-		lightlevel = hw_ClampLight(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::mid, false, &rel));
+		lightlevel = RescaleLightLevel(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::mid, false, &rel));
 		rellight = CalcRelLight(lightlevel, orglightlevel, rel);
 
 		float skew;
@@ -2484,7 +2484,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 
 			if (backsector->e->XFloor.ffloors.Size() || frontsector->e->XFloor.ffloors.Size())
 			{
-				lightlevel = hw_ClampLight(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::top, false, &rel));
+				lightlevel = RescaleLightLevel(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::top, false, &rel));
 				rellight = CalcRelLight(lightlevel, orglightlevel, rel);
 				DoFFloorBlocks(di, seg, frontsector, backsector, fch1, fch2, ffh1, ffh2, bch1, bch2, bfh1, bfh2);
 			}
@@ -2501,7 +2501,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 
 		if (bfh1 > ffh1 || bfh2 > ffh2)
 		{
-			lightlevel = hw_ClampLight(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::bottom, false, &rel));
+			lightlevel = RescaleLightLevel(seg->sidedef->GetLightLevel(foggy, orglightlevel, side_t::bottom, false, &rel));
 			rellight = CalcRelLight(lightlevel, orglightlevel, rel);
 			texture = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::bottom), true);
 			if (texture && texture->isValid())
@@ -2603,7 +2603,7 @@ void HWWall::ProcessLowerMiniseg(HWWallDispatcher *di, seg_t *seg, sector_t * fr
 		flags = 0;
 
 		// can't do fake contrast without a sidedef
-		lightlevel = hw_ClampLight(frontsector->lightlevel);
+		lightlevel = RescaleLightLevel(frontsector->lightlevel);
 		rellight = 0;
 
 		alpha = 1.0f;

@@ -43,6 +43,7 @@
 #include "g_levellocals.h"
 #include "swrenderer/scene/r_light.h"
 #include "swrenderer/viewport/r_viewport.h"
+#include "hwrenderer/scene/hw_lighting.h"
 
 EXTERN_CVAR(Bool, r_fullbrightignoresectorcolor)
 EXTERN_CVAR(Int, r_extralight)
@@ -147,7 +148,7 @@ namespace swrenderer
 
 	fixed_t LightVisibility::LightLevelToShadeImpl(RenderViewport *viewport, int lightlevel, bool foggy)
 	{
-		lightlevel += r_extralight;
+		lightlevel = RescaleLightLevel<false>(lightlevel);
 		bool nolightfade = !foggy && ((viewport->Level()->flags3 & LEVEL3_NOLIGHTFADE));
 		if (nolightfade)
 		{

@@ -522,7 +522,19 @@ bool FCajunMaster::LoadBots ()
 	tmp = M_GetCajunPath(BOTFILENAME);
 	if (tmp.IsEmpty())
 	{
-		DPrintf (DMSG_ERROR, "No " BOTFILENAME ", so no bots\n");
+		// Adds a few default bots that can always be summoned for testing.
+		for (int i = 0; i < 5; ++i)
+		{
+			botinfo_t* defaultBot = new botinfo_t;
+			defaultBot->Name = FStringf("DefaultBot%d", i);
+			defaultBot->Info = FStringf("\\autoaim\\0\\movebob\\.25\\name\\%s\\team\\255\\playerclass\\random", defaultBot->Name.GetChars());
+			int skillVal = 25 * i;
+			defaultBot->skill = { i, i, i, i };
+			defaultBot->next = botinfo;
+			defaultBot->lastteam = TEAM_NONE;
+			botinfo = defaultBot;
+		}
+
 		return false;
 	}
 	if (!sc.OpenFile(tmp.GetChars()))

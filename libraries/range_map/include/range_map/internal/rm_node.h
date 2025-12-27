@@ -7,7 +7,7 @@
 
 namespace beneficii {
 
-// the nodes the are allocated in memory by the range_map; the range_map_item used
+// the nodes are allocated in memory by the range_map; the range_map_item used
 // is constructed in this node; start and end points are kept track of here
 // nothing outside the range_map library needs to call on _range_node, except on the
 // individual points (which are of value_type) through the range_map iterators
@@ -19,11 +19,10 @@ struct _range_node {
     typedef _range_node<_key, _mpd> _myt;
     
     struct _point {
-        
-        _point(void* _node) : _node((_myt*) _node) {}
-      
+        _point(void* _node) : _node(static_cast<_myt *>(_node)) {}
+
         //returns whether current point is right end point
-        bool is_rgt_pt() const {
+        [[nodiscard]] bool is_rgt_pt() const noexcept {
             return this == &_node->_end;
         }
         
@@ -249,22 +248,25 @@ struct _range_node {
                     _ret = false;
                 }
             } else {
-                *_n = _max((_np) (*_n)->_left);
+                *_n = _max(static_cast<_np>((*_n)->_left));
                 _ret = true;
             }
         }
         return _ret;
     }
     
-    static const int _black = 0;
-    static const int _red = 1;
+    static constexpr int _black = 0;
+    static constexpr int _red = 1;
 };
 
 /*#if __cplusplus >= 201103L
 template<class _key, class _mpd>
 using range_map_point = _range_node<_key, _mpd>::_point;
 #endif*/
-
+#if __cplusplus >= 201103L
+template<class _key, class _mpd>
+using range_map_point = typename _range_node<_key, _mpd>::_point;
+#endif
 }
 
 #endif	/* RM_NODE_HPP */

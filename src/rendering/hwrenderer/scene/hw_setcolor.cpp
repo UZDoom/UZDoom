@@ -51,7 +51,7 @@ void SetColor(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, in
 		int hwlightlevel = CalcLightLevel(lightmode, sectorlightlevel, rellight, weapon, cm.BlendFactor);
 		PalEntry pe = CalcLightColor(lightmode, hwlightlevel, cm.LightColor, cm.BlendFactor);
 		state.SetColorAlpha(pe, alpha, cm.Desaturation);
-		if (isSoftwareLighting(lightmode)) state.SetSoftLightLevel(hw_ClampLight(sectorlightlevel + rellight, false), cm.BlendFactor);
+		if (isSoftwareLighting(lightmode)) state.SetSoftLightLevel(hw_ClampLight(sectorlightlevel + rellight), cm.BlendFactor);
 		else state.SetNoSoftLightLevel();
 	}
 }

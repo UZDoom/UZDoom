@@ -329,7 +329,7 @@ WeaponLighting HWDrawInfo::GetWeaponLighting(sector_t *viewsector, const DVector
 		auto fakesec = hw_FakeFlat(viewsector, in_area, false);
 
 		// calculate light level for weapon sprites
-		l.lightlevel = hw_ClampLight(fakesec->lightlevel);
+		l.lightlevel = RescaleLightLevel(fakesec->lightlevel);
 
 		// calculate colormap for weapon sprites
 		if (viewsector->e->XFloor.ffloors.Size() && !(Level->flags3 & LEVEL3_NOCOLOREDSPRITELIGHTING))
@@ -351,7 +351,7 @@ WeaponLighting HWDrawInfo::GetWeaponLighting(sector_t *viewsector, const DVector
 				if (lightbottom < pos.Z)
 				{
 					l.cm = lightlist[i].extra_colormap;
-					l.lightlevel = hw_ClampLight(*lightlist[i].p_lightlevel);
+					l.lightlevel = RescaleLightLevel(*lightlist[i].p_lightlevel);
 					break;
 				}
 			}

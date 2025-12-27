@@ -187,7 +187,7 @@ float GetFogDensity(FLevelLocals* Level, ELightMode lightmode, int lightlevel, P
 		// case 2: black fog
 		if ((!isDoomSoftwareLighting(lightmode) || blendfactor > 0) && !(Level->flags3 & LEVEL3_NOLIGHTFADE))
 		{
-			density = distfogtable[lightmode != ELightMode::LinearStandard][hw_ClampLight(lightlevel, false)];
+			density = distfogtable[lightmode != ELightMode::LinearStandard][hw_ClampLight(lightlevel)];
 		}
 		else
 		{

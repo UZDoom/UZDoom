@@ -110,6 +110,7 @@ static FDynamicLight *GetLight(FLevelLocals *Level)
 
 void AttachLight(AActor *self)
 {
+	if(self->ObjectFlags & OF_EuthanizeMe) return;
 	auto light = GetLight(self->Level);
 
 	light->pSpotInnerAngle = &self->AngleVar(NAME_SpotInnerAngle);
@@ -713,6 +714,8 @@ void FDynamicLight::UnlinkLight()
 
 void AActor::AttachLight(unsigned int count, const FLightDefaults *lightdef)
 {
+	if(ObjectFlags & OF_EuthanizeMe) return;
+
 	FDynamicLight *light;
 
 	if (count < AttachedLights.Size()) 
@@ -817,6 +820,8 @@ unsigned FindUserLight(AActor *self, FName id, bool create = false)
 
 int AttachLightDef(AActor *self, int _lightid, int _lightname)
 {
+	if(self->ObjectFlags & OF_EuthanizeMe) return 0;
+
 	FName lightid = FName(ENamedName(_lightid));
 	FName lightname = FName(ENamedName(_lightname));
 	
@@ -851,6 +856,8 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, A_AttachLightDef, AttachLightDef)
 
 int AttachLightDirect(AActor *self, int _lightid, int type, int color, int radius1, int radius2, int flags, double ofs_x, double ofs_y, double ofs_z, double param, double spoti, double spoto, double spotp, double intensity)
 {
+	if(self->ObjectFlags & OF_EuthanizeMe) return 0;
+
 	FName lightid = FName(ENamedName(_lightid));
 	auto userlight = self->UserLights[FindUserLight(self, lightid, true)];
 	userlight->SetType(ELightType(type));

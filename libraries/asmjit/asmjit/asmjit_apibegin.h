@@ -84,16 +84,16 @@
 
 // [ASMJIT_NON...]
 #if ASMJIT_CC_HAS_DELETE_FUNCTION
-#define ASMJIT_NONCONSTRUCTIBLE(...)                         \
+#define ASMJIT_NONCONSTRUCTIBLE(cls)                         \
 private:                                                     \
-  __VA_ARGS__() = delete;                                    \
-  __VA_ARGS__(const __VA_ARGS__& other) = delete;            \
-  __VA_ARGS__& operator=(const __VA_ARGS__& other) = delete; \
+  cls() = delete;                                    \
+  cls(const cls& other) = delete;            \
+  cls& operator=(const cls& other) = delete; \
 public:
-#define ASMJIT_NONCOPYABLE(...)                              \
+#define ASMJIT_NONCOPYABLE(cls)                              \
 private:                                                     \
-  __VA_ARGS__(const __VA_ARGS__& other) = delete;            \
-  __VA_ARGS__& operator=(const __VA_ARGS__& other) = delete; \
+  cls(const cls& other) = delete;            \
+  cls& operator=(const cls& other) = delete; \
 public:
 #else
 #define ASMJIT_NONCONSTRUCTIBLE(...)                         \

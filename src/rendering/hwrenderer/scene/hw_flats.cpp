@@ -470,7 +470,7 @@ void HWFlat::SetFrom3DFloor(F3DFloor *rover, bool top, bool underside)
 
 	// FF_FOG requires an inverted logic where to get the light from
 	lightlist_t *light = P_GetPlaneLight(sector, plane.plane, underside);
-	lightlevel = hw_ClampLight(*light->p_lightlevel);
+	lightlevel = RescaleLightLevel(*light->p_lightlevel);
 
 	if (rover->flags & FF_FOG)
 	{
@@ -536,7 +536,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 
 		srf |= SSRF_RENDERFLOOR;
 
-		lightlevel = hw_ClampLight(frontsector->GetFloorLight());
+		lightlevel = RescaleLightLevel(frontsector->GetFloorLight());
 		Colormap = frontsector->Colormap;
 		FlatColor = frontsector->SpecialColors[sector_t::floor];
 		AddColor = frontsector->AdditiveColors[sector_t::floor];
@@ -571,7 +571,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 				if ((!(sector->GetFlags(sector_t::floor)&PLANEF_ABSLIGHTING) || light->lightsource == NULL)
 					&& (light->p_lightlevel != &frontsector->lightlevel))
 				{
-					lightlevel = hw_ClampLight(*light->p_lightlevel);
+					lightlevel = RescaleLightLevel(*light->p_lightlevel);
 				}
 
 				CopyFrom3DLight(Colormap, light);
@@ -594,7 +594,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 
 		srf |= SSRF_RENDERCEILING;
 
-		lightlevel = hw_ClampLight(frontsector->GetCeilingLight());
+		lightlevel = RescaleLightLevel(frontsector->GetCeilingLight());
 		Colormap = frontsector->Colormap;
 		FlatColor = frontsector->SpecialColors[sector_t::ceiling];
 		AddColor = frontsector->AdditiveColors[sector_t::ceiling];
@@ -628,7 +628,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 				if ((!(sector->GetFlags(sector_t::ceiling)&PLANEF_ABSLIGHTING))
 					&& (light->p_lightlevel != &frontsector->lightlevel))
 				{
-					lightlevel = hw_ClampLight(*light->p_lightlevel);
+					lightlevel = RescaleLightLevel(*light->p_lightlevel);
 				}
 				CopyFrom3DLight(Colormap, light);
 			}
@@ -720,7 +720,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 
 							if (rover->flags&FF_FIX)
 							{
-								lightlevel = hw_ClampLight(rover->model->lightlevel);
+								lightlevel = RescaleLightLevel(rover->model->lightlevel);
 								Colormap = rover->GetColormap();
 							}
 

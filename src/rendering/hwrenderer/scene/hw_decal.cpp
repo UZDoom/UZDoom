@@ -111,7 +111,7 @@ void HWDecal::DrawDecal(HWDrawInfo *di, FRenderState &state)
 
 			if (low1 < dv[1].z || low2 < dv[2].z)
 			{
-				int thisll = lightlist[k].caster != nullptr ? hw_ClampLight(*lightlist[k].p_lightlevel) : lightlevel;
+				int thisll = lightlist[k].caster != nullptr ? RescaleLightLevel(*lightlist[k].p_lightlevel) : lightlevel;
 				FColormap thiscm;
 				thiscm.FadeColor = Colormap.FadeColor;
 				CopyFrom3DLight(thiscm, &lightlist[k]);

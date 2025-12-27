@@ -348,10 +348,10 @@ CUSTOM_CVAR(Float, r_visibility, 8.0f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 CUSTOM_CVAR(Int, r_extralight, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
-	if (self < -8)
-		self = -8;
-	else if (self > 8)
-		self = 8;
+	if (self < -64)
+		self = -64;
+	else if (self > 128)
+		self = 128;
 }
 
 //==========================================================================
