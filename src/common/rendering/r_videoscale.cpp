@@ -199,7 +199,7 @@ CUSTOM_CVAR(Bool, vid_cropaspect, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 static bool IsVideoMenuActive()
 {
-	if (menuactive != MENU_Off)
+	if (menuactive != MENU_Off && CurrentMenu != nullptr)
 		return CurrentMenu->IsKindOf("VideoOptions");
 	else
 		return false;
