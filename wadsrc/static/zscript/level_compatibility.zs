@@ -1308,6 +1308,11 @@ class LevelCompatibility : LevelPostProcessor
 				AddSectorTag(38, 32000);
 				AddSectorTag(37, 32000);
 				AddSectorTag(34, 32000);
+				
+				// Removes errenous secrets
+				SetSectorSpecial(154, 0);
+				SetSectorSpecial(155, 0);
+				SetSectorSpecial(156, 0);
 				break;
 			}
 			
@@ -2321,6 +2326,52 @@ class LevelCompatibility : LevelPostProcessor
 			{
 			//Missing texture in secret area.
 			SetWallTexture(4032, Line.front, Side.mid, "BRICK8");
+			break;
+			}
+			
+			case '3E340892C200F1894FCE0565260760EE': // TVR!.wad map05
+			{
+			// Remove unreachable secrets
+			SetSectorSpecial(127, 0);
+			break;
+			}
+			
+			case 'A0629BCFFE721651FCC39D3E49CCC0BD': // TVR!.wad map20
+			{
+			// Remove unreachable secrets
+			SetSectorSpecial(73, 0);
+			break;
+			}
+			
+			case '9650973E7DE8C85279C2E724B56CD5CC': // BStain.wad map06
+			{
+			// Moves teleport destination to it's correct place, allowing for 100% kills
+			SetThingXY(481, -2016, 1888);
+			break;
+			}
+			
+			case '76AD580CA69A2AC1808DADC8C5B90708': // AV.wad map09
+			{
+			// Changes the additional player 4 start to a deathmatch start
+			SetThingEdNum(53, 11);
+			break;
+			}
+			
+			case '2FE901F659A16E58D7BCD7C30021C238': // AV.wad map15
+			{
+			// Prevents the player from being trapped in the backpack compartment opposite the blue armour secret
+			SetLineSpecial(2548, Door_Raise, 234, 16, 150);
+			SetLineActivation(2548, SPAC_Use);
+			SetLineFlags(2548, Line.ML_REPEAT_SPECIAL);
+			break;
+			}
+			
+			case 'DF758FE3DCD6B052839C88718D48CB4C': // AV.wad map25
+			{
+			// Sets the invulnerability spheres for co-op to only appear on co-op and not single player
+			SetThingFlags(2548,MTF_COOPERATIVE);
+			SetThingFlags(2551,MTF_COOPERATIVE);
+			SetThingFlags(2552,MTF_COOPERATIVE);
 			break;
 			}
 		}
