@@ -1,9 +1,11 @@
 /*
 ** d_steam.h
+**
 ** Detection for IWADs installed by Steam (or other distributors)
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2009 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2007-2012 Skulltag Development Team
 ** Copyright 2007-2016 Zandronum Development Team
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
@@ -41,6 +43,7 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */

@@ -1,12 +1,14 @@
 /*
+** i_rawps2.cpp
+**
 **
 **
 **---------------------------------------------------------------------------
 **
-** Copyright 2005-2016 Randy Heit
+** Copyright 2005-2016 Marisa Heit
+** Copyright 2010-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions

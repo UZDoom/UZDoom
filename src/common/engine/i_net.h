@@ -1,3 +1,46 @@
+/*
+** i_net.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 by id Software, Inc.
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2009-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
+**
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 2 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <https://www.gnu.org/licenses/>.
+**
+**---------------------------------------------------------------------------
+**
+** Alternatively the following applies:
+**
+** This source is available for distribution and/or modification
+** only under the terms of the DOOM Source Code License as
+** published by id Software. All rights reserved.
+**
+** The source is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
+** for more details.
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef __I_NET_H__
 #define __I_NET_H__
 

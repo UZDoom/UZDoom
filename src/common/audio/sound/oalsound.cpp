@@ -1,9 +1,12 @@
 /*
 ** oalsound.cpp
+**
 ** System interface for sound; uses OpenAL
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2008-2010 Chris Robinson
+** Copyright 2010-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025 UZDoom Maintainers and Contributors
 ** All rights reserved.
@@ -30,6 +33,7 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */

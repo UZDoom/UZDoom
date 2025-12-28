@@ -1,13 +1,15 @@
 /*
-** loadsavemenu.cpp
+** savegamemanager.cpp
+**
 ** The load game and save game menus
 **
 **---------------------------------------------------------------------------
-** Copyright 2001-2010 Randy Heit
-** Copyright 2010-2020 Christoph Oelckers
+**
+** Copyright 2001-2016 Marisa Heit
+** Copyright 2008-2020 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
+**
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
@@ -31,6 +33,7 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */

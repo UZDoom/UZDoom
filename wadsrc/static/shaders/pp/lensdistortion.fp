@@ -1,32 +1,57 @@
 /*
-	Original Lens Distortion Algorithm from SSontech
-	http://www.ssontech.com/content/lensalg.htm
-
-	If (u,v) are the coordinates of a feature in the undistorted perfect
-	image plane, then (u', v') are the coordinates of the feature on the
-	distorted image plate, ie the scanned or captured image from the
-	camera. The distortion occurs radially away from the image center,
-	with correction for the image aspect ratio (image_aspect = physical
-	image width/height), as follows:
-
-	r2 = image_aspect*image_aspect*u*u + v*v
-	f = 1 + r2*(k + kcube*sqrt(r2))
-	u' = f*u
-	v' = f*v
-
-	The constant k is the distortion coefficient that appears on the lens
-	panel and through Sizzle. It is generally a small positive or negative
-	number under 1%. The constant kcube is the cubic distortion value found
-	on the image preprocessor's lens panel: it can be used to undistort or
-	redistort images, but it does not affect or get computed by the solver.
-	When no cubic distortion is needed, neither is the square root, saving
-	time.
-
-	Chromatic Aberration example,
-	using red distord channel with green and blue undistord channel:
-
-	k = vec3(-0.15, 0.0, 0.0);
-	kcube = vec3(0.15, 0.0, 0.0);
+** lensdistortion.fp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016 Magnus Norddahl
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
+**
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <https://www.gnu.org/licenses/>.
+**
+**---------------------------------------------------------------------------
+**
+** Original Lens Distortion Algorithm from SSontech
+** http://www.ssontech.com/content/lensalg.htm
+**
+** If (u,v) are the coordinates of a feature in the undistorted perfect
+** image plane, then (u', v') are the coordinates of the feature on the
+** distorted image plate, ie the scanned or captured image from the
+** camera. The distortion occurs radially away from the image center,
+** with correction for the image aspect ratio (image_aspect = physical
+** image width/height), as follows:
+**
+** r2 = image_aspect*image_aspect*u*u + v*v
+** f = 1 + r2*(k + kcube*sqrt(r2))
+** u' = f*u
+** v' = f*v
+**
+** The constant k is the distortion coefficient that appears on the lens
+** panel and through Sizzle. It is generally a small positive or negative
+** number under 1%. The constant kcube is the cubic distortion value found
+** on the image preprocessor's lens panel: it can be used to undistort or
+** redistort images, but it does not affect or get computed by the solver.
+** When no cubic distortion is needed, neither is the square root, saving
+** time.
+**
+** Chromatic Aberration example,
+** using red distord channel with green and blue undistord channel:
+**
+** k = vec3(-0.15, 0.0, 0.0);
+** kcube = vec3(0.15, 0.0, 0.0);
 */
 
 layout(location=0) in vec2 TexCoord;

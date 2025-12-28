@@ -1,11 +1,15 @@
 /*
 ** hu_scores.cpp
+**
 ** Routines for drawing the scoreboards.
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2008 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2007-2008 Christopher Westley
-** All rights reserved.
+** Copyright 2007-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
@@ -29,6 +33,7 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */

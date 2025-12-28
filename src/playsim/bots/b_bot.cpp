@@ -1,11 +1,15 @@
 /*
+** b_bot.cpp
 **
+** Cajun bot
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 1999 Martin Colberg
-** Copyright 1999-2016 Randy Heit
+** Copyright 1999-2016 Marisa Heit
 ** Copyright 2005-2016 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
@@ -29,11 +33,11 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */
-// Cajun bot
-//
+
 // [RH] Moved console commands out of d_netcmd.c (in Cajun source), because
 // they don't really belong there.
 

@@ -1,11 +1,13 @@
 /*
-** c_dispatch.cpp
+** c_buttons.cpp
+**
 ** Functions for executing console commands and aliases
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2007 Randy Heit
-** Copyright 2019 Christoph Oelckers
-** All rights reserved.
+**
+** Copyright 2017-2019 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions

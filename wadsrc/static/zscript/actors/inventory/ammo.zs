@@ -1,9 +1,11 @@
 /*
-** a_ammo.cpp
-** Implements ammo and backpack items.
+** ammo.zs
+**
+**
 **
 **---------------------------------------------------------------------------
-** Copyright 2000-2016 Randy Heit
+**
+** Copyright 2000-2016 Marisa Heit
 ** Copyright 2006-2017 Christoph Oelckers
 ** All rights reserved.
 **
@@ -29,6 +31,7 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */

@@ -1,10 +1,15 @@
 /*
 ** wi_stuff.cpp
+**
 ** Support code for intermission status screens
 **
 **---------------------------------------------------------------------------
-** Copyright 2003-2017 Christoph Oelckers
-** All rights reserved.
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2017 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions

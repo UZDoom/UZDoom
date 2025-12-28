@@ -1,9 +1,13 @@
-/* 
+/*
+** r_vanillatrans.cpp
+**
+** Figures out whether to turn off transparency for certain native game objects
+**
 **---------------------------------------------------------------------------
 **
-** Copyright(C) 2017 Rachael Alexanderson
-** All rights reserved.
-**
+** Copyright 2017 Rachael Alexanderson
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
@@ -30,12 +34,6 @@
 **---------------------------------------------------------------------------
 **
 */
-/*
-** r_vanillatrans.cpp
-** Figures out whether to turn off transparency for certain native game objects
-**
-**/
-
 
 #include "c_cvars.h"
 #include "filesystem.h"

@@ -1,11 +1,13 @@
 /*
-** gl_framebuffer.cpp
-** Implementation of the non-hardware specific parts of the
-** OpenGL frame buffer
+** gles_framebuffer.cpp
+**
+** Implementation of non-hardware specific parts of the frame buffer
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2010-2020 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
@@ -29,9 +31,10 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
-*/ 
+*/
 
 #include "gles_system.h"
 #include "v_video.h"

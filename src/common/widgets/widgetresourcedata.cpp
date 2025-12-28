@@ -1,8 +1,11 @@
 /*
 ** widgetresourcedata.cpp
 **
+**
+**
 **---------------------------------------------------------------------------
 **
+** Copyright 2024 Magnus Norddahl
 ** Copyright 2024-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025 UZDoom Maintainers and Contributors
 **
@@ -17,7 +20,7 @@
 ** GNU General Public License for more details.
 **
 ** You should have received a copy of the GNU General Public License
-** along with this program.  If not, see http://www.gnu.org/licenses/
+** along with this program.  If not, see <https://www.gnu.org/licenses/>.
 **
 **---------------------------------------------------------------------------
 **

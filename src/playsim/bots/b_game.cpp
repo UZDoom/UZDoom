@@ -1,13 +1,15 @@
 /*
+** b_game.cpp
 **
+** Makes the bot fit into game
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 1999 Martin Colberg
-** Copyright 1999-2016 Randy Heit
+** Copyright 1999-2016 Marisa Heit
 ** Copyright 2005-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
@@ -31,17 +33,12 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
+** Misc things that has to do with the bot, like it's spawning etc.
 */
-/*******************************************
-* B_game.h                                 *
-* Description:                             *
-* Misc things that has to do with the bot, *
-* like it's spawning etc.                  *
-* Makes the bot fit into game              *
-*                                          *
-*******************************************/
+
 /*The files which are modified for Cajun Purpose
 D_player.h (v0.85: added some variables)
 D_netcmd.c (v0.71)

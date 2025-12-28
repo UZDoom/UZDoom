@@ -1,35 +1,41 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright(c) 1993 - 1997 Ken Silverman
-// Copyright(c) 1998 - 2016 Randy Heit
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-// 
-//---------------------------------------------------------------------------
-//
-// Voxel rendering
-//
-// Draw a voxel slab. This function is taken from the Build Engine.
-//
-// "Build Engine & Tools" Copyright (c) 1993-1997 Ken Silverman
-// Ken Silverman's official web site: "http://www.advsys.net/ken"
-//
-// Permission has been obtained to use this code under the terms of
-// the GNU General Public License v3.0.
+/*
+** r_voxel.cpp
+**
+** Voxel rendering
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1997 Ken Silverman
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
+**
+** This program is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 3 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program.  If not, see <https://www.gnu.org/licenses/>.
+**
+**---------------------------------------------------------------------------
+**
+** Draw a voxel slab. This function is taken from the Build Engine.
+**
+** "Build Engine & Tools" Copyright (c) 1993-1997 Ken Silverman
+** Ken Silverman's official web site: "http://www.advsys.net/ken"
+**
+** Permission has been obtained to use this code under the terms of
+** the GNU General Public License v3.0.
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include <stdlib.h>
 

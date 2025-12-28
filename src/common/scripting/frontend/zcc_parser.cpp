@@ -1,11 +1,13 @@
 /*
-** zcc_expr.cpp
+** zcc_parser.cpp
+**
+**
 **
 **---------------------------------------------------------------------------
-** Copyright -2016 Randy Heit
+**
+** Copyright 2010-2016 Marisa Heit
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
@@ -29,6 +31,7 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -301,7 +304,7 @@ FARG_ADVANCED(tracefile, "Debug", "",
 	"Invokes Lemon's debug tracer output to print messages for every change of the parser state."
 	" See https://sqlite.org/src/doc/trunk/doc/lemon.html");
 
-//**--------------------------------------------------------------------------
+//**---------------------------------------------------------------------------
 
 static void ParseSingleFile(FScanner *pSC, const char *filename, int lump, void *parser, ZCCParseState &state)
 {
@@ -416,7 +419,7 @@ parse_end:
 	state.sc = nullptr;
 }
 
-//**--------------------------------------------------------------------------
+//**---------------------------------------------------------------------------
 
 PNamespace *ParseOneScript(const int baselump, ZCCParseState &state)
 {
@@ -625,7 +628,7 @@ void AppendTreeNodeSibling(ZCC_TreeNode *thisnode, ZCC_TreeNode *sibling)
 		siblingend->SiblingNext = thisnode;
 }
 
-//**--------------------------------------------------------------------------
+//**---------------------------------------------------------------------------
 
 const char *GetMixinTypeString(EZCCMixinType type) {
 	switch (type) {
@@ -638,7 +641,7 @@ const char *GetMixinTypeString(EZCCMixinType type) {
 	}
 }
 
-//**--------------------------------------------------------------------------
+//**---------------------------------------------------------------------------
 
 ZCC_TreeNode *TreeNodeDeepCopy_Internal(ZCC_AST *ast, ZCC_TreeNode *orig, bool copySiblings, TMap<ZCC_TreeNode *, ZCC_TreeNode *> *copiedNodesList);
 void TreeNodeDeepCopy_Base(ZCC_AST *ast, ZCC_TreeNode *orig, ZCC_TreeNode *copy, bool copySiblings, TMap<ZCC_TreeNode *, ZCC_TreeNode *> *copiedNodesList)

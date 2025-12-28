@@ -1,39 +1,39 @@
-// Emacs style mode select -*- C++ -*-
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2000 Simon Howard
-// Copyright(C) 2005-2008 Christoph Oelckers
-//
-// This program is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 2 of the License, or
-// (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-// 
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//--------------------------------------------------------------------------
-//
-// Functions
-//
-// functions are stored as variables(see variable.c), the
-// value being a pointer to a 'handler' function for the
-// function. Arguments are stored in an argc/argv-style list
-//
-// this module contains all the handler functions for the
-// basic FraggleScript Functions.
-//
-// By Simon Howard
-//
-//---------------------------------------------------------------------------
-//
-
+/*
+** t_func.cpp
+**
+** Functions
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2000 Simon Howard
+** Copyright 2005-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
+**
+** This program is free software; you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation; either version 2 of the License, or
+** (at your option) any later version.
+**
+** This program is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with this program; if not, see <https://www.gnu.org/licenses/>.
+**
+**---------------------------------------------------------------------------
+**
+** functions are stored as variables(see variable.c), the
+** value being a pointer to a 'handler' function for the
+** function. Arguments are stored in an argc/argv-style list
+**
+** this module contains all the handler functions for the
+** basic FraggleScript Functions.
+**
+** By Simon Howard
+*/
 
 #include "p_local.h"
 #include "t_script.h"

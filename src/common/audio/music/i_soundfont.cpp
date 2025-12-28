@@ -1,9 +1,11 @@
 /*
 ** i_soundfont.cpp
+**
 ** The sound font manager for the MIDI synths
 **
 **---------------------------------------------------------------------------
-** Copyright 2018 Christoph Oelckers
+**
+** Copyright 2009-2018 Christoph Oelckers
 ** Copyright 2018-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025 UZDoom Maintainers and Contributors
 *
@@ -31,6 +33,7 @@
 ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
 **---------------------------------------------------------------------------
 **
 */

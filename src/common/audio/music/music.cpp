@@ -1,13 +1,14 @@
 /*
-**
 ** music.cpp
 **
 ** music engine
 **
-** Copyright 1999-2016 Randy Heit
-** Copyright 2002-2016 Christoph Oelckers
-**
 **---------------------------------------------------------------------------
+**
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025 UZDoom Maintainers and Contributors
 **
 ** Redistribution and use in source and binary forms, with or without
 ** modification, are permitted provided that the following conditions
