@@ -2374,6 +2374,58 @@ class LevelCompatibility : LevelPostProcessor
 			SetThingFlags(2552,MTF_COOPERATIVE);
 			break;
 			}
+			
+			case '51DB0FFB25BF59DBA4F4F3AF06D54415': // Scythe.wad map01
+			{
+			// Missing Textures
+			SetWallTexture(290, Line.front, Side.top, "BRICK11");
+			SetLineFlags(290, Line.ML_DONTPEGTop);
+			break;
+			}
+			
+			case 'F70D163957D711AF1E18D9153660DBEF': // ur_final.wad map07
+			{
+			// Sets the tag for the easy only Hell Knight at the end, allowing it to teleport into the map.
+			AddSectorTag(667, 52);
+			break;
+			}
+			
+			case '7B1EB6C1231CD03E90F4A1C0D51A8B6D': // ur_final.wad map17
+			{
+			// Sets teleports for imps on HMP or lower to teleport in, allowing to 100% kills.
+			SetThingSkills(230, 31);
+			SetThingFlags(228, MTF_SINGLE|MTF_COOPERATIVE|MTF_DEATHMATCH);
+			SetThingSkills(228, 31);
+			SetThingSkills(229, 31);
+			break;
+			}
+			
+			case '7602F3D482CEB6B7EC72B0FF027AA34C': // ur_final.wad map28
+			{
+			//Removes enemies who are unable to teleport in due to not hearing any sound.
+			SetThingSkills(416, 0);
+			SetThingSkills(417, 0);
+			SetThingSkills(418, 0);
+			SetThingSkills(419, 0);
+			break;
+			}
+			
+			case '9D7A536180E56A702657E515B9594887': ur_final.wad map29
+			{
+			// Offsets the floor and ceiling in the teleport closet, allowing for Mancubi to teleport into the map.
+			OffsetSectorPlane(417, Sector.ceiling, 16);
+			OffsetSectorPlane(417, Sector.Floor, 16);
+			break;
 		}
+		
+			case 'A2A9A8F87CC284CDC9063A685761247C': // hr2_final.wad map12
+			{
+			// Moves the vertices in the teleport closest, allowing for arachnotrons to teleport into the map.
+			SetVertex(973, 4544, 6752);
+			SetVertex(974, 5056, 6752);
+			SetVertex(975, 5056, 5856);
+			SetVertex(976, 4544, 5856);
+			break;
+			}
 	}
 }
