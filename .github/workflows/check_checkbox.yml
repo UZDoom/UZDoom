@@ -1,0 +1,25 @@
+name: Check Contributor Agreement
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  enforce-checkbox:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Contributors Agreement Checkbox
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const expected = "- [ ] I have reviewed [CONTRIBUTING.md] and agree to its terms.";
+            const pattern = /- \[([ |x])\] I have reviewed \[CONTRIBUTING\.md\](\(.+\))? and agree to its terms\./i;
+
+            if (!pattern.test(expected)) throw new Error("expected string does not match test string");
+
+            const body = context.payload.pull_request.body;
+            const match = pattern.exec(body);
+            if (!match) {
+              core.setFailed(`Ensure this checkbox is in the PR: '${expected}'`);
+            } else if (match[1] !== 'x') {
+              core.setFailed("You must agree to the terms in CONTRIBUTING.md by checking the box in the PR description.");
+            }
