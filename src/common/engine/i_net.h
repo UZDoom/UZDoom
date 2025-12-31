@@ -11,31 +11,13 @@
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
 ** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** This program is free software: you can redistribute it and/or modify
-** it under the terms of the GNU General Public License as published by
-** the Free Software Foundation, either version 3 of the License, or
-** (at your option) any later version.
-**
-** This program is distributed in the hope that it will be useful,
-** but WITHOUT ANY WARRANTY; without even the implied warranty of
-** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-** GNU General Public License for more details.
-**
-** You should have received a copy of the GNU General Public License
-** along with this program.  If not, see <https://www.gnu.org/licenses/>.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
 **---------------------------------------------------------------------------
 **
-** Alternatively the following applies:
+** Code written prior to 2026 is also licensed under:
 **
-** This source is available for distribution and/or modification
-** only under the terms of the DOOM Source Code License as
-** published by id Software. All rights reserved.
-**
-** The source is distributed in the hope that it will be useful,
-** but WITHOUT ANY WARRANTY; without even the implied warranty of
-** FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
-** for more details.
+** SPDX-License-Identifier: LicenseRef-Doom-Source-License
 **
 **---------------------------------------------------------------------------
 **
