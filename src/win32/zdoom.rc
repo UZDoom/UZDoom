@@ -72,7 +72,7 @@ BEGIN
     "            VALUE ""FileDescription"", ""UZDoom""\r\n"
     "            VALUE ""FileVersion"", RC_FILEVERSION2\r\n"
     "            VALUE ""InternalName"", ""UZDoom""\r\n"
-    "            VALUE ""LegalCopyright"", ""Copyright © 1993-1996 id Software, 1998-2016 Marisa Heit, 2002-2016 Christoph Oelckers, , 2017-2025 GZDoom Maintainers and Contributors, 2025 UZDoom Maintainers and Contributors.""\r\n"
+    "            VALUE ""LegalCopyright"", ""Copyright © 1993-1996 id Software, 1998-2016 Marisa Heit, 2002-2016 Christoph Oelckers, , 2017-2025 GZDoom Maintainers and Contributors, 2025-2026 UZDoom Maintainers and Contributors.""\r\n"
     "            VALUE ""LegalTrademarks"", ""DoomR is a Registered Trademark of id Software, Inc.""\r\n"
     "            VALUE ""OriginalFilename"", ""uzdoom.exe""\r\n"
     "            VALUE ""ProductName"", ""UZDoom""\r\n"
@@ -319,7 +319,7 @@ BEGIN
             VALUE "FileDescription", "UZDoom " GIT_DESCRIPTION
             VALUE "FileVersion", RC_FILEVERSION2
             VALUE "InternalName", "UZDoom"
-            VALUE "LegalCopyright", "Copyright © 1993-1996 id Software, 1998-2016 Marisa Heit, 2002-2016 Christoph Oelckers, 2017-2025 GZDoom Maintainers and Contributors, 2025 UZDoom Maintainers and Contributors."
+            VALUE "LegalCopyright", "Copyright © 1993-1996 id Software, 1998-2016 Marisa Heit, 2002-2016 Christoph Oelckers, 2017-2025 GZDoom Maintainers and Contributors, 2025-2026 UZDoom Maintainers and Contributors."
             VALUE "LegalTrademarks", "Doom® is a Registered Trademark of id Software, Inc."
             VALUE "OriginalFilename", "uzdoom.exe"
             VALUE "ProductName", "UZDoom"

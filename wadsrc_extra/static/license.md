@@ -2,7 +2,7 @@ UZDoom game content
 
 Copyright 1998-2016 ZDoom Maintainers and Contributors
 Copyright 2005-2025 GZDoom Maintainers and Contributors
-Copyright 2025 UZDoom Maintainers and Contributors
+Copyright 2025-2026 UZDoom Maintainers and Contributors
 
 The content in here is based on original game content, i.e.
 
