@@ -215,7 +215,27 @@ int DoMain(int argc, char** argv)
 	Args = new FArgs(argc, argv);
 
 	NSString* exePath = [[NSBundle mainBundle] executablePath];
-	progdir = [[exePath stringByDeletingLastPathComponent] UTF8String];
+	NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
+
+	// Check if Resources directory exists and contains our PK3 files
+	// If so, use Resources as progdir (following macOS app bundle conventions)
+	// Otherwise fall back to the MacOS directory (for development builds)
+	if (resourcePath != nil)
+	{
+		NSString* basewadPath = [resourcePath stringByAppendingPathComponent:@"uzdoom.pk3"];
+		if ([[NSFileManager defaultManager] fileExistsAtPath:basewadPath])
+		{
+			progdir = [resourcePath UTF8String];
+		}
+		else
+		{
+			progdir = [[exePath stringByDeletingLastPathComponent] UTF8String];
+		}
+	}
+	else
+	{
+		progdir = [[exePath stringByDeletingLastPathComponent] UTF8String];
+	}
 	progdir += "/";
 
 	auto ret = GameMain();
