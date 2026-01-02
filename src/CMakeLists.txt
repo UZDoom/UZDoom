@@ -1312,8 +1312,7 @@ endif()
 if(CMAKE_SYSTEM MATCHES "Emscripten")
 
 	target_link_options(zdoom PRIVATE
-			#-sASYNCIFY
-			#-sASYNCIFY_STACK_SIZE=1MB
+			$<$<CONFIG:RELEASE>:-sASYNCIFY -sASYNCIFY_STACK_SIZE=1MB>
 			--use-port=sdl2
 			-sSTACK_SIZE=8MB
 			-sINITIAL_MEMORY=256MB
