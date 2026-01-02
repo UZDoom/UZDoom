@@ -38,7 +38,6 @@ EXTERN_CVAR(Int, vr_mode)
 EXTERN_CVAR(Float, vid_whitepoint)
 EXTERN_CVAR(Float, vid_blackpoint)
 EXTERN_CVAR(Float, vid_saturation)
-EXTERN_CVAR(Float, vid_brightness)
 EXTERN_CVAR(Float, vid_contrast)
 EXTERN_CVAR(Int, gl_satformula)
 EXTERN_CVAR(Int, gl_dither_bpc)
@@ -218,7 +217,6 @@ void FGLRenderer::prepareInterleavedPresent(FPresentShaderBase& shader)
 	{
 		shader.Uniforms->InvGamma = 1.0f;
 		shader.Uniforms->Contrast = 1.0f;
-		shader.Uniforms->Brightness = 0.0f;
 		shader.Uniforms->Saturation = 1.0f;
 		shader.Uniforms->BlackPoint = 0.0f;
 		shader.Uniforms->WhitePoint = 1.0f;
@@ -227,12 +225,12 @@ void FGLRenderer::prepareInterleavedPresent(FPresentShaderBase& shader)
 	{
 		shader.Uniforms->InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		shader.Uniforms->Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
-		shader.Uniforms->Brightness = clamp<float>(vid_brightness, -0.8f, 0.8f);
 		shader.Uniforms->Saturation = clamp<float>(vid_saturation, -15.0f, 15.0f);
 		shader.Uniforms->BlackPoint = clamp<float>(vid_blackpoint*vid_blackpoint, 0.f, 1.f);
 		shader.Uniforms->WhitePoint = clamp<float>(vid_whitepoint, 0.f, 1.f);
 		shader.Uniforms->GrayFormula = static_cast<int>(gl_satformula);
 	}
+
 	shader.Uniforms->HdrMode = 0;
 	shader.Uniforms->ColorScale = (gl_dither_bpc == -1) ? 255.0f : (float)((1 << gl_dither_bpc) - 1);
 	shader.Uniforms->Scale = {
@@ -241,6 +239,7 @@ void FGLRenderer::prepareInterleavedPresent(FPresentShaderBase& shader)
 	};
 	shader.Uniforms->Offset = { 0.0f, 0.0f };
 	shader.Uniforms.SetData();
+
 	static_cast<GLDataBuffer*>(shader.Uniforms.GetBuffer())->BindBase();
 }
 

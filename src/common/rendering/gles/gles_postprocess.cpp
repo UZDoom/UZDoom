@@ -132,7 +132,6 @@ void FGLRenderer::DrawPresentTexture(const IntRect &box, bool applyGamma)
 	{
 		mPresentShader->Uniforms->InvGamma = 1.0f;
 		mPresentShader->Uniforms->Contrast = 1.0f;
-		mPresentShader->Uniforms->Brightness = 0.0f;
 		mPresentShader->Uniforms->Saturation = 1.0f;
 		mPresentShader->Uniforms->BlackPoint = 0.0f;
 		mPresentShader->Uniforms->WhitePoint = 1.0f;
@@ -141,7 +140,6 @@ void FGLRenderer::DrawPresentTexture(const IntRect &box, bool applyGamma)
 	{
 		mPresentShader->Uniforms->InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		mPresentShader->Uniforms->Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
-		mPresentShader->Uniforms->Brightness = clamp<float>(vid_brightness, -0.8f, 0.8f);
 		mPresentShader->Uniforms->Saturation = clamp<float>(vid_saturation, -15.0f, 15.f);
 		mPresentShader->Uniforms->BlackPoint = clamp<float>(vid_blackpoint*vid_blackpoint, -1.f, 1.f);
 		mPresentShader->Uniforms->WhitePoint = clamp<float>(vid_whitepoint, 0.f, 1.f);
@@ -159,10 +157,10 @@ void FGLRenderer::DrawPresentTexture(const IntRect &box, bool applyGamma)
 		mPresentShader->Uniforms->HdrMode = 0;
 		mPresentShader->Uniforms->ColorScale = (gl_dither_bpc == -1) ? 255.0f : (float)((1 << gl_dither_bpc) - 1);
 	}
+
 	mPresentShader->Uniforms->Scale = { screen->mScreenViewport.width / (float)mBuffers->GetWidth(), screen->mScreenViewport.height / (float)mBuffers->GetHeight() };
 	mPresentShader->Uniforms->Offset = { 0.0f, 0.0f };
 	mPresentShader->Uniforms.SetData();
-
 
 	for (size_t n = 0; n < mPresentShader->Uniforms.mFields.size(); n++)
 	{

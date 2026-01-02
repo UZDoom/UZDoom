@@ -88,12 +88,6 @@ CUSTOM_CVARD(Float, vid_contrast, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjust
 	else if (self > 5) self = 5;
 }
 
-CUSTOM_CVARD(Float, vid_brightness, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts brightness component of gamma ramp")
-{
-	if (self < -2) self = -2;
-	else if (self > 2) self = 2;
-}
-
 CUSTOM_CVARD(Float, vid_saturation, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts saturation component of gamma ramp")
 {
 	if (self < -3) self = -3;

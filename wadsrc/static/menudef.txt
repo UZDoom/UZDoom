@@ -1041,8 +1041,6 @@ OptionMenu "ImageAdjustMenu" protected
 	Tooltip "$DSPLYMNU_TOOLTIP_WHITEPOINT"
 	Command "$OPTMNU_RESETALL",		"vid_reset2defaults"
 	Tooltip "$DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
-	Slider "$DSPLYMNU_BRIGHTNESS",	"vid_brightness",	-0.25,	0.25,	0.01,	2
-	Tooltip "$DSPLYMNU_TOOLTIP_BRIGHTNESS"
 	Slider "$DSPLYMNU_CONTRAST",	"vid_contrast",		0.5,	2.0,	0.01,	2
 	Tooltip "$DSPLYMNU_TOOLTIP_CONTRAST"
 	Slider "$DSPLYMNU_SATURATION",	"vid_saturation",	-1.0,	2.0,	0.01,	2
