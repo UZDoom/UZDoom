@@ -159,7 +159,9 @@ enum EDemoCommand
 	DEM_ZSC_CMD,		// 74 String: Command, Word: Byte size of command
 	DEM_CHANGESKILL,	// 75 Int: Skill
 	DEM_KICK,			// 76 Byte: Player number
-	DEM_READIED,		// 77 
+	DEM_READIED,		// 77
+	DEM_WEAPSELECT,		// 78 Byte: Slot
+	DEM_USEFLECHETTE,	// 79	
 };
 
 // The following are implemented by cht_DoCheat in m_cheat.cpp

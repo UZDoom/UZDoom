@@ -311,30 +311,21 @@ CCMD (turnspeeds)
 	}
 }
 
-CCMD (slot)
+CCMD(slot)
 {
 	if (argv.argc() > 1)
 	{
-		int slot = atoi (argv[1]);
-
-		auto mo = players[consoleplayer].mo;
-		if (slot < NUM_WEAPON_SLOTS && mo)
+		int slot = WST_NONE;
+		if (!C_IsValidInt(argv[1], slot))
 		{
-			// Needs to be redone
-			IFVIRTUALPTRNAME(mo, NAME_PlayerPawn, PickWeapon)
-			{
-				SendItemUse = CallVM<AActor *>(func, mo, slot, (int)!(dmflags2 & DF2_DONTCHECKAMMO));
-			}
-		}
-
-		// [Nash] Option to display the name of the weapon being switched to.
-		if ((paused || pauseext) || players[consoleplayer].playerstate != PST_LIVE)
+			Printf("Invalid weapon slot %s\n", argv[1]);
 			return;
-		if (SendItemUse != players[consoleplayer].ReadyWeapon && (displaynametags & 2) && StatusBar && SmallFont && SendItemUse)
-		{
-			StatusBar->AttachMessage(Create<DHUDMessageFadeOut>(nullptr, SendItemUse->GetTag(),
-				1.5f, 0.90f, 0, 0, (EColorRange)*nametagcolor, 2.f, 0.35f), MAKE_ID('W', 'E', 'P', 'N'));
 		}
+
+		if (slot >= 0 && slot < NUM_WEAPON_SLOTS)
+			SendWeaponSlot = slot;
+		else
+			SendWeaponSlot = WST_NONE;
 	}
 }
 
@@ -379,54 +370,14 @@ CCMD (turn180)
 	sendturn180 = true;
 }
 
-CCMD (weapnext)
+CCMD(weapnext)
 {
-	auto mo = players[consoleplayer].mo;
-	if (mo)
-	{
-		// Needs to be redone
-		IFVIRTUALPTRNAME(mo, NAME_PlayerPawn, PickNextWeapon)
-		{
-			SendItemUse = CallVM<AActor *>(func, mo);
-		}
-	}
-
-	// [BC] Option to display the name of the weapon being cycled to.
-	if ((paused || pauseext) || players[consoleplayer].playerstate != PST_LIVE) return;
-	if ((displaynametags & 2) && StatusBar && SmallFont && SendItemUse)
-	{
-		StatusBar->AttachMessage(Create<DHUDMessageFadeOut>(nullptr, SendItemUse->GetTag(),
-			1.5f, 0.90f, 0, 0, (EColorRange)*nametagcolor, 2.f, 0.35f), MAKE_ID( 'W', 'E', 'P', 'N' ));
-	}
-	if (SendItemUse != players[consoleplayer].ReadyWeapon)
-	{
-		S_Sound(CHAN_AUTO, 0, "misc/weaponchange", 1.0, ATTN_NONE);
-	}
+	SendWeaponSlot = WST_NEXT;
 }
 
-CCMD (weapprev)
+CCMD(weapprev)
 {
-	auto mo = players[consoleplayer].mo;
-	if (mo)
-	{
-		// Needs to be redone
-		IFVIRTUALPTRNAME(mo, NAME_PlayerPawn, PickPrevWeapon)
-		{
-			SendItemUse = CallVM<AActor *>(func, mo);
-		}
-	}
-
-	// [BC] Option to display the name of the weapon being cycled to.
-	if ((paused || pauseext) || players[consoleplayer].playerstate != PST_LIVE) return;
-	if ((displaynametags & 2) && StatusBar && SmallFont && SendItemUse)
-	{
-		StatusBar->AttachMessage(Create<DHUDMessageFadeOut>(nullptr, SendItemUse->GetTag(),
-			1.5f, 0.90f, 0, 0, (EColorRange)*nametagcolor, 2.f, 0.35f), MAKE_ID( 'W', 'E', 'P', 'N' ));
-	}
-	if (SendItemUse != players[consoleplayer].ReadyWeapon)
-	{
-		S_Sound(CHAN_AUTO, 0, "misc/weaponchange", 1.0, ATTN_NONE);
-	}
+	SendWeaponSlot = WST_PREV;
 }
 
 static void DisplayNameTag(AActor *actor)
@@ -470,13 +421,18 @@ CCMD(invprev)
 CCMD (invuseall)
 {
 	SendItemUse = (const AActor *)1;
+	WantsFlechetteItem = false;
 }
 
 CCMD (invuse)
 {
 	if (players[consoleplayer].inventorytics == 0)
 	{
-		if (players[consoleplayer].mo) SendItemUse = players[consoleplayer].mo->PointerVar<AActor>(NAME_InvSel);
+		if (players[consoleplayer].mo)
+		{
+			SendItemUse = players[consoleplayer].mo->PointerVar<AActor>(NAME_InvSel);
+			WantsFlechetteItem = false;
+		}
 	}
 	players[consoleplayer].inventorytics = 0;
 }
@@ -501,6 +457,7 @@ CCMD (use)
 			subclass = !stricmp(argv[2], True) || atoi(argv[2]);
 
 		SendItemUse = players[consoleplayer].mo->FindInventory(argv[1], subclass);
+		WantsFlechetteItem = false;
 	}
 }
 
@@ -533,14 +490,11 @@ CCMD (drop)
 }
 
 CCMD (useflechette)
-{ 
-	if (players[consoleplayer].mo == nullptr) return;
-	IFVIRTUALPTRNAME(players[consoleplayer].mo, NAME_PlayerPawn, GetFlechetteItem)
-	{
-		AActor * cls = CallVM<AActor *>(func, players[consoleplayer].mo);
-
-		if (cls != nullptr) SendItemUse = cls;
-	}
+{
+	// These should be mutually exclusive to prevent the flechette from being used at
+	// the same time as another item.
+	WantsFlechetteItem = true;
+	SendItemUse = nullptr;
 }
 
 CCMD (select)
@@ -847,6 +801,17 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		Net_WriteInt32 (SendItemDrop->InventoryID);
 		Net_WriteInt32(SendItemDropAmount);
 		SendItemDrop = NULL;
+	}
+	if (SendWeaponSlot != WST_NONE)
+	{
+		Net_WriteInt8(DEM_WEAPSELECT);
+		Net_WriteInt8(SendWeaponSlot);
+		SendWeaponSlot = WST_NONE;
+	}
+	if (WantsFlechetteItem)
+	{
+		Net_WriteInt8(DEM_USEFLECHETTE);
+		WantsFlechetteItem = false;
 	}
 
 	cmd->forwardmove <<= 8;

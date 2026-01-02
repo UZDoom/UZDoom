@@ -1367,6 +1367,8 @@ void G_DoLoadLevel(const FString &nextmapname, int position, bool autosave, bool
 	// clear cmd building stuff
 	buttonMap.ResetButtonStates();
 
+	WantsFlechetteItem = false;
+	SendWeaponSlot = WST_NONE;
 	SendItemUse = nullptr;
 	SendItemDrop = nullptr;
 	mousex = mousey = 0;

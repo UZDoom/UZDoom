@@ -29,6 +29,7 @@ struct event_t;
 #include "dobjgc.h"
 #include "name.h"
 #include "gamestate.h"
+#include "a_pickups.h"
 
 
 // wipegamestate can be set to -1
@@ -112,6 +113,15 @@ class DIntermissionController;
 struct level_info_t;
 void RunIntermission(level_info_t* oldlevel, level_info_t* newlevel, DIntermissionController* intermissionScreen, DObject* statusScreen, bool ending, std::function<void(bool)> completionf);
 
+enum EWeaponSelectType
+{
+	WST_NONE = NUM_WEAPON_SLOTS,
+	WST_PREV,
+	WST_NEXT,
+};
+
+inline int SendWeaponSlot = WST_NONE;
+inline bool WantsFlechetteItem = false;
 extern const AActor *SendItemUse, *SendItemDrop;
 extern int SendItemDropAmount;
 
