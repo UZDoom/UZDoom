@@ -131,7 +131,7 @@ else()
 	endif()
 
 	# Non-Windows version also needs SDL except native OS X backend
-	if( NOT APPLE OR NOT OSX_COCOA_BACKEND )
+	if( NOT APPLE OR NOT OSX_COCOA_BACKEND AND NOT CMAKE_SYSTEM MATCHES "Emscripten" )
 		find_package( SDL2 REQUIRED )
 		include_directories( SYSTEM "${SDL2_INCLUDE_DIR}" )
 		link_directories(${SDL2_LINK_DIR})
@@ -514,17 +514,32 @@ else()
 	endif( NOT NO_OPENMP )
 endif()
 
-add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h
-	COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y
-	DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y )
+if(NOT CMAKE_SYSTEM MATCHES "Emscripten")
+	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h
+		COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y
+		DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y )
 
-add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h
-	COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon
-	DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon )
+	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h
+		COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon
+		DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon )
 
-add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h
-	COMMAND re2c --no-generation-date -s -o ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re
-	DEPENDS re2c ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re )
+	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h
+		COMMAND re2c --no-generation-date -s -o ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re
+		DEPENDS re2c ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re )
+else ()
+	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h
+			COMMAND ${CMAKE_SOURCE_DIR}/lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y
+			DEPENDS ${CMAKE_SOURCE_DIR}/lemon ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y )
+
+	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h
+			COMMAND ${CMAKE_SOURCE_DIR}/lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon
+			DEPENDS ${CMAKE_SOURCE_DIR}/lemon ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon )
+
+	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h
+			COMMAND ${CMAKE_SOURCE_DIR}/re2c --no-generation-date -s -o ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re
+			DEPENDS ${CMAKE_SOURCE_DIR}/re2c ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re )
+
+endif ()
 
 include_directories( ${CMAKE_CURRENT_BINARY_DIR} )
 
@@ -1293,6 +1308,37 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")
 	# [BL] Solaris requires these to be explicitly linked.
 	set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} nsl socket)
 endif()
+
+if(CMAKE_SYSTEM MATCHES "Emscripten")
+
+	target_link_options(zdoom PRIVATE
+			#-sASYNCIFY
+			#-sASYNCIFY_STACK_SIZE=1MB
+			--use-port=sdl2
+			-sSTACK_SIZE=8MB
+			-sINITIAL_MEMORY=256MB
+			-sALLOW_MEMORY_GROWTH
+			-sMODULARIZE
+			-sEXPORT_ALL
+			-sENVIRONMENT=web
+			-sEXPORTED_RUNTIME_METHODS=callMain,addRunDependency,removeRunDependency
+			-lidbfs.js
+			-sEXIT_RUNTIME
+			-sNO_DISABLE_EXCEPTION_CATCHING
+			-sMAX_WEBGL_VERSION=2
+			-sMIN_WEBGL_VERSION=2
+			-sFULL_ES2
+			$<$<NOT:$<BOOL:${DYN_SNDFILE}>>:-L$ENV{EMSDK}/upstream/emscripten/cache/sysroot/lib/ -lFLAC -lvorbis -lvorbisfile -lopus -logg>
+			$<$<CONFIG:RELEASE>:-O2>
+			$<$<CONFIG:DEBUG>:-g -gsource-map -sASSERTIONS=2 --profiling-funcs>
+	)
+
+	target_compile_options(zdoom PRIVATE
+			--use-port=sdl2
+			$<$<CONFIG:RELEASE>:-O2>
+			$<$<CONFIG:DEBUG>:-g -gsource-map>
+	)
+endif ()
 
 if( UNIX )
 	find_package( Backtrace )

@@ -132,6 +132,27 @@ unsigned int FHardwareTexture::CreateTexture(unsigned char * buffer, int w, int 
 			texformat = GL_BGRA;
 		}
 	}
+	else if (gles.glesMode == GLES_MODE_WEBGL)
+	{
+		if (glTextureBytes == 1)
+		{
+			sourcetype = GL_ALPHA;
+			texformat = GL_ALPHA;
+		}
+		else
+		{
+			for (int i = 0; i < rw*rh; ++i) {//todo: (ololoken) consider shader fix `outFragColor = color.brga`
+				uint8_t *p = buffer + i * 4;
+
+				uint8_t b = p[0];  // B
+				p[0] = p[2];       // R
+				p[2] = b;          // B
+			}
+			sourcetype = GL_RGBA;
+			texformat = GL_RGBA;
+		}
+
+	}
 	else
 	{
 		if (glTextureBytes == 1) //Use Red channel instread becuase Alpha does not work in OpenGL, swizzle later

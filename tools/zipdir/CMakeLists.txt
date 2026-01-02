@@ -1,5 +1,8 @@
 cmake_minimum_required( VERSION 3.16 )
-
+if (CMAKE_SYSTEM MATCHES "Emscripten") #mock target
+	file(WRITE zzipdir.c "")
+	add_executable( zipdir zzipdir.c)
+endif ()
 if( NOT CMAKE_CROSSCOMPILING )
 	include_directories( SYSTEM "${BZIP2_INCLUDE_DIR}" "${LZMA_INCLUDE_DIR}" )
 	add_executable( zipdir

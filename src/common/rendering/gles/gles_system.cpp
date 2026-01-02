@@ -212,7 +212,10 @@ namespace OpenGLESRenderer
 			else
 				gles.glesMode = GLES_MODE_OGL2; // Below 3.3
 		}
-
+#if __EMSCRIPTEN__
+		gles.glesMode = GLES_MODE_WEBGL;
+		glVersion = 3.3;
+#endif
 
 		if (gles.glesMode == GLES_MODE_GLES)
 		{
@@ -243,6 +246,17 @@ namespace OpenGLESRenderer
 			gles.depthStencilAvailable = true;
 			gles.npotAvailable = true;
 			gles.useMappedBuffers = true;
+			gles.depthClampAvailable = true;
+			gles.anistropicFilterAvailable = true;
+		}
+		else if (gles.glesMode == GLES_MODE_WEBGL)
+		{
+			Printf("GLES choosing mode: GLES_MODE_WEBGL\n");
+
+			gles.shaderVersionString = "300 es";
+			gles.depthStencilAvailable = true;
+			gles.npotAvailable = false;
+			gles.useMappedBuffers = false;
 			gles.depthClampAvailable = true;
 			gles.anistropicFilterAvailable = true;
 		}

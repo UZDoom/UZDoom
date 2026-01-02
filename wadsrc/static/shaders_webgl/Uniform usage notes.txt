@@ -1,0 +1,1 @@
+see shaders_gles/Uniform usage notes.txt
