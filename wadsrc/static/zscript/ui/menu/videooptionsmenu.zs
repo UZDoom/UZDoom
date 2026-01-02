@@ -150,7 +150,7 @@ class VideoOptions : OptionMenu
 		PPShader.SetUniform1i("GammaTestPattern", "uYmax", y);
 		PPShader.SetUniform1f("GammaTestPattern", "uInvGamma", 1.0/vid_gamma);
 		PPShader.SetUniform1f("GammaTestPattern", "uWhitePoint", vid_whitepoint);
-		PPShader.SetUniform1f("GammaTestPattern", "uBlackPoint", vid_blackpoint);
+		PPShader.SetUniform1f("GammaTestPattern", "uBlackPoint", vid_blackpoint*vid_blackpoint);
 		PPShader.SetEnabled("GammaTestPattern", true);
 
 		Super.Drawer();

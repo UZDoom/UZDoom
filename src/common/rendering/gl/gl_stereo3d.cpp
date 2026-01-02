@@ -229,7 +229,7 @@ void FGLRenderer::prepareInterleavedPresent(FPresentShaderBase& shader)
 		shader.Uniforms->Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
 		shader.Uniforms->Brightness = clamp<float>(vid_brightness, -0.8f, 0.8f);
 		shader.Uniforms->Saturation = clamp<float>(vid_saturation, -15.0f, 15.0f);
-		shader.Uniforms->BlackPoint = clamp<float>(vid_blackpoint, 0.f, 1.f);
+		shader.Uniforms->BlackPoint = clamp<float>(vid_blackpoint*vid_blackpoint, 0.f, 1.f);
 		shader.Uniforms->WhitePoint = clamp<float>(vid_whitepoint, 0.f, 1.f);
 		shader.Uniforms->GrayFormula = static_cast<int>(gl_satformula);
 	}
