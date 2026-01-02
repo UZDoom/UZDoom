@@ -1424,7 +1424,7 @@ void D_ErrorCleanup ()
 
 void D_DoomLoopIteration(void* lasttic_)
 {
-	int lasttic = *reinterpret_cast<int*>(lasttic_);
+	int& lasttic = *reinterpret_cast<int*>(lasttic_);
 	try
 	{
 		GStrings.SetDefaultGender(players[consoleplayer].userinfo.GetGender()); // cannot be done when the CVAR changes because we don't know if it's for the consoleplayer.
@@ -1432,7 +1432,7 @@ void D_DoomLoopIteration(void* lasttic_)
 		// frame syncronous IO operations
 		if (gametic > lasttic)
 		{
-			*(int*)lasttic_ = gametic;
+			lasttic = gametic;
 			I_StartFrame ();
 		}
 		I_SetFrameTime();

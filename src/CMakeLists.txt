@@ -131,7 +131,7 @@ else()
 	endif()
 
 	# Non-Windows version also needs SDL except native OS X backend
-	if( NOT APPLE OR NOT OSX_COCOA_BACKEND AND NOT CMAKE_SYSTEM MATCHES "Emscripten" )
+	if( NOT APPLE OR NOT OSX_COCOA_BACKEND AND NOT EMSCRIPTEN )
 		find_package( SDL2 REQUIRED )
 		include_directories( SYSTEM "${SDL2_INCLUDE_DIR}" )
 		link_directories(${SDL2_LINK_DIR})
@@ -514,7 +514,7 @@ else()
 	endif( NOT NO_OPENMP )
 endif()
 
-if(NOT CMAKE_SYSTEM MATCHES "Emscripten")
+if(NOT EMSCRIPTEN)
 	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h
 		COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y
 		DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y )
@@ -1309,7 +1309,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")
 	set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} nsl socket)
 endif()
 
-if(CMAKE_SYSTEM MATCHES "Emscripten")
+if(EMSCRIPTEN)
 
 	target_link_options(zdoom PRIVATE
 			$<$<CONFIG:RELEASE>:-sASYNCIFY -sASYNCIFY_STACK_SIZE=1MB>

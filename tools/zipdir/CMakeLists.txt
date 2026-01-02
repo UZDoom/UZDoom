@@ -1,5 +1,5 @@
 cmake_minimum_required( VERSION 3.16 )
-if (CMAKE_SYSTEM MATCHES "Emscripten") #mock target
+if (EMSCRIPTEN) #mock target
 	file(WRITE zzipdir.c "")
 	add_executable( zipdir zzipdir.c)
 endif ()

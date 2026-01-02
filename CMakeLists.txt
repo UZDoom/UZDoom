@@ -50,7 +50,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(Threads REQUIRED)
 find_package(Python3 3.6 REQUIRED)
 
-if(CMAKE_SYSTEM MATCHES "Emscripten")
+if(EMSCRIPTEN)
 	option(WASM_64 "Enable WASM64 build" OFF)
 	option(WASM_THREADS "Enable WASM pthread emulation" OFF)
 	if (WASM_64)
@@ -74,7 +74,7 @@ if( FORCE_CROSSCOMPILE )
 	set( CMAKE_CROSSCOMPILING TRUE )
 endif()
 
-if(CMAKE_CROSSCOMPILING AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
+if(CMAKE_CROSSCOMPILING AND NOT EMSCRIPTEN)
 	set(IMPORT_EXECUTABLES "IMPORTFILE-NOTFOUND" CACHE FILEPATH "Export file from native build.")
 	include(${IMPORT_EXECUTABLES})
 endif()
@@ -107,7 +107,7 @@ function( add_pk3 PK3_NAME PK3_DIR )
 	# Generate target name. Just use "pk3" for main pk3 target.
 	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
 
-	if(CMAKE_SYSTEM MATCHES "Emscripten")
+	if(EMSCRIPTEN)
 		add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
 				COMMAND ${CMAKE_SOURCE_DIR}/zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
 		DEPENDS ${CMAKE_SOURCE_DIR}/zipdir)
