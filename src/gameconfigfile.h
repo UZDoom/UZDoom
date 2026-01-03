@@ -59,7 +59,7 @@ private:
 	void ReadCVars (unsigned flags);
 
 	bool bModSetup;
-	bool b226ResetGamepad;
+	int bResetBindFlags;
 
 	char section[64];
 	char *subsection;

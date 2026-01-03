@@ -717,7 +717,7 @@ OptionMenu "OtherControlsMenu" protected
 	Control    "$CNTRLMNU_DISPLAY_INC"     , "sizeup"
 	Control    "$CNTRLMNU_DISPLAY_DEC"     , "sizedown"
 	Control    "$CNTRLMNU_TOGGLE_MESSAGES" , "togglemessages"
-	Control    "$CNTRLMNU_ADJUST_GAMMA"    , "bumpgamma"
+	Control    "$CNTRLMNU_ADJUST_LIGHTS"   , "bumplight"
 
 	StaticText ""
 	Control    "$CNTRLMNU_OPEN_MAIN"       , "menu_main"

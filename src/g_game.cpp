@@ -1028,7 +1028,7 @@ bool G_Responder (event_t *ev)
 				stricmp (cmd, "spyprev") &&
 				stricmp (cmd, "chase") &&
 				stricmp (cmd, "+showscores") &&
-				stricmp (cmd, "bumpgamma") &&
+				stricmp (cmd, "bumplight") &&
 				stricmp (cmd, "screenshot")))
 			{
 				M_StartControlPanel(true);
