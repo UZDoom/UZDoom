@@ -30,10 +30,10 @@
 #include "printf.h"
 #include <chrono>
 
-#ifdef __EMSCRIPTEN__
-CVAR(Int, r_multithreaded, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
-#else
+#if defined(__EMSCRIPTEN_PTHREADS__) || !defined(__EMSCRIPTEN__)
 CVAR(Int, r_multithreaded, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
+#else
+CVAR(Int, r_multithreaded, 0, CVAR_NOSET);
 #endif
 CVAR(Int, r_debug_draw, 0, 0);
 
