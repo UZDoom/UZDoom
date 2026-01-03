@@ -141,8 +141,8 @@ void FGLRenderer::DrawPresentTexture(const IntRect &box, bool applyGamma)
 		mPresentShader->Uniforms->InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		mPresentShader->Uniforms->Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
 		mPresentShader->Uniforms->Saturation = clamp<float>(vid_saturation, -15.0f, 15.f);
-		mPresentShader->Uniforms->BlackPoint = clamp<float>(vid_blackpoint*vid_blackpoint, -1.f, 1.f);
-		mPresentShader->Uniforms->WhitePoint = clamp<float>(vid_whitepoint, 0.f, 1.f);
+		mPresentShader->Uniforms->BlackPoint = clamp<float>(vid_i_blackpoint, 0.f, 1.f);
+		mPresentShader->Uniforms->WhitePoint = clamp<float>(vid_i_whitepoint, 0.f, 5.f);
 		mPresentShader->Uniforms->GrayFormula = static_cast<int>(gl_satformula);
 	}
 	if (vid_hdr_active && framebuffer->IsFullscreen())

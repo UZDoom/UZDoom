@@ -27,6 +27,7 @@
 #include "hw_cvars.h"
 #include "menu.h"
 #include "printf.h"
+#include <algorithm>
 
 CUSTOM_CVAR(Int, gl_fogmode, 2, CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
@@ -94,17 +95,39 @@ CUSTOM_CVARD(Float, vid_saturation, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adju
 	else if (self > 3) self = 3;
 }
 
+#ifndef BW_GAP
+#define BW_GAP 0.2
+#endif
+
+CVAR(Float, vid_i_blackpoint, 1.f, CVAR_VIRTUAL | CVAR_NOINITCALL | CVAR_SYSTEM_ONLY);
+CVAR(Float, vid_i_whitepoint, 1.f, CVAR_VIRTUAL | CVAR_NOINITCALL | CVAR_SYSTEM_ONLY);
+
 CUSTOM_CVARD(Float, vid_blackpoint, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts what the engine outputs as black")
 {
 	if (self < 0) self = 0;
 	if (self > 1) self = 1;
+
+	float value = self*self;
+	float bound = 1 - BW_GAP;
+	float buffer = vid_i_whitepoint - BW_GAP;
+
+	vid_i_blackpoint = min(min(buffer, value), bound);
 }
 
-CUSTOM_CVARD(Float, vid_whitepoint, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts what the engine outputs as white")
+CUSTOM_CVARD(Float, vid_whitepoint, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adjusts what the engine outputs as white")
 {
-	if (self < 0) self = 0;
-	if (self > 1) self = 1;
+	if (self < -1) self = -1;
+	if (self > 2) self = 2;
+
+	float value = self + 1;
+	float bound = 0 + BW_GAP;
+	float buffer = vid_i_blackpoint + BW_GAP;
+	value = (value*value*value+1)/2;
+
+	vid_i_whitepoint = max(max(buffer, value), bound);
 }
+
+#undef BW_GAP
 
 CVAR(Int, gl_satformula, 2, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 

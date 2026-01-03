@@ -35,8 +35,8 @@
 
 
 EXTERN_CVAR(Int, vr_mode)
-EXTERN_CVAR(Float, vid_whitepoint)
-EXTERN_CVAR(Float, vid_blackpoint)
+EXTERN_CVAR(Float, vid_i_whitepoint)
+EXTERN_CVAR(Float, vid_i_blackpoint)
 EXTERN_CVAR(Float, vid_saturation)
 EXTERN_CVAR(Float, vid_contrast)
 EXTERN_CVAR(Int, gl_satformula)
@@ -226,8 +226,8 @@ void FGLRenderer::prepareInterleavedPresent(FPresentShaderBase& shader)
 		shader.Uniforms->InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		shader.Uniforms->Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
 		shader.Uniforms->Saturation = clamp<float>(vid_saturation, -15.0f, 15.0f);
-		shader.Uniforms->BlackPoint = clamp<float>(vid_blackpoint*vid_blackpoint, 0.f, 1.f);
-		shader.Uniforms->WhitePoint = clamp<float>(vid_whitepoint, 0.f, 1.f);
+		shader.Uniforms->BlackPoint = clamp<float>(vid_i_blackpoint, 0.f, 1.f);
+		shader.Uniforms->WhitePoint = clamp<float>(vid_i_whitepoint, 0.f, 5.f);
 		shader.Uniforms->GrayFormula = static_cast<int>(gl_satformula);
 	}
 

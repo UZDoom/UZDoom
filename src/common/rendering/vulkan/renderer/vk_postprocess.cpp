@@ -266,8 +266,8 @@ void VkPostprocess::DrawPresentTexture(const IntRect &box, bool applyGamma, bool
 		uniforms.InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		uniforms.Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
 		uniforms.Saturation = clamp<float>(vid_saturation, -15.0f, 15.f);
-		uniforms.BlackPoint = clamp<float>(vid_blackpoint*vid_blackpoint, 0.f, 1.f);
-		uniforms.WhitePoint = clamp<float>(vid_whitepoint, 0.f, 1.f);
+		uniforms.BlackPoint = clamp<float>(vid_i_blackpoint, 0.f, 1.f);
+		uniforms.WhitePoint = clamp<float>(vid_i_whitepoint, 0.f, 5.f);
 		uniforms.GrayFormula = static_cast<int>(gl_satformula);
 	}
 
