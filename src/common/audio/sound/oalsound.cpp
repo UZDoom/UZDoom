@@ -1477,7 +1477,12 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 	else
 	{
 		if((chanflags&SNDF_ABSTIME))
-			alSourcei(source, AL_SAMPLE_OFFSET, ALint(reuse_chan->StartTime));
+		{
+			ALfloat duration = 0;
+			alGetSourcef(source, AL_SEC_LENGTH_SOFT, &duration);
+			if (duration > reuse_chan->StartTime)
+				alSourcei(source, AL_SAMPLE_OFFSET, ALint(reuse_chan->StartTime));
+		}
 		else
 		{
 			float offset = std::chrono::duration_cast<std::chrono::duration<float>>(
