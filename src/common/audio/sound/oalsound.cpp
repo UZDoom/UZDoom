@@ -643,14 +643,15 @@ OpenALSoundRenderer::OpenALSoundRenderer()
 	attribs.Clear();
 
 	const ALchar *const version = alGetString(AL_VERSION);
+	const ALchar *const vendor = alGetString(AL_VENDOR);
 
-	if (strstr(version, "ALSOFT") == nullptr)
+	if (strstr(version, "ALSOFT") == nullptr && strstr(vendor, "Emscripten") == nullptr)
 	{
 		Printf(TEXTCOLOR_RED "  You are using an unsupported OpenAL implementation\n"
 			"  Install OpenAL Soft library for a better experience\n");
 	}
 
-	DPrintf(DMSG_SPAMMY, "  Vendor: " TEXTCOLOR_ORANGE"%s\n", alGetString(AL_VENDOR));
+	DPrintf(DMSG_SPAMMY, "  Vendor: " TEXTCOLOR_ORANGE"%s\n", vendor);
 	DPrintf(DMSG_SPAMMY, "  Renderer: " TEXTCOLOR_ORANGE"%s\n", alGetString(AL_RENDERER));
 	DPrintf(DMSG_SPAMMY, "  Version: " TEXTCOLOR_ORANGE"%s\n", version);
 	DPrintf(DMSG_SPAMMY, "  Extensions: " TEXTCOLOR_ORANGE"%s\n", alGetString(AL_EXTENSIONS));

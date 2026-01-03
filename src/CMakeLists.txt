@@ -1315,7 +1315,7 @@ if(EMSCRIPTEN)
 			$<$<CONFIG:RELEASE>:-sASYNCIFY -sASYNCIFY_STACK_SIZE=1MB>
 			--use-port=sdl2
 			-sSTACK_SIZE=8MB
-			-sINITIAL_MEMORY=256MB
+			-sINITIAL_MEMORY=1GB
 			-sALLOW_MEMORY_GROWTH
 			-sMODULARIZE
 			-sEXPORT_ALL
@@ -1328,13 +1328,13 @@ if(EMSCRIPTEN)
 			-sMIN_WEBGL_VERSION=2
 			-sFULL_ES2
 			$<$<NOT:$<BOOL:${DYN_SNDFILE}>>:-L$ENV{EMSDK}/upstream/emscripten/cache/sysroot/lib/ -lFLAC -lvorbis -lvorbisfile -lopus -logg>
-			$<$<CONFIG:RELEASE>:-O2>
+			$<$<CONFIG:RELEASE>:-O2 -flto>
 			$<$<CONFIG:DEBUG>:-g -gsource-map -sASSERTIONS=2 --profiling-funcs>
 	)
 
 	target_compile_options(zdoom PRIVATE
 			--use-port=sdl2
-			$<$<CONFIG:RELEASE>:-O2>
+			$<$<CONFIG:RELEASE>:-O2 -flto>
 			$<$<CONFIG:DEBUG>:-g -gsource-map>
 	)
 endif ()
