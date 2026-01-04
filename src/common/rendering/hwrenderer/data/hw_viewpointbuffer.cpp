@@ -36,7 +36,9 @@ HWViewpointBuffer::HWViewpointBuffer(int pipelineNbr):
 		mBufferPipeline[n]->SetData(mByteSize, nullptr, BufferUsageType::Persistent);
 	}
 
+	mUploadIndex = 0;
 	Clear();
+
 	mLastMappedIndex = UINT_MAX;
 }
 

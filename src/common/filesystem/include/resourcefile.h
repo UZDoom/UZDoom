@@ -25,6 +25,7 @@
 #ifndef __RESFILE_H
 #define __RESFILE_H
 
+#include <assert.h>
 #include <limits.h>
 #include <vector>
 #include <string>
@@ -138,7 +139,7 @@ public:
 	FResourceFile(const char* filename, FileReader& r, StringPool* sp);
 	const char* NormalizeFileName(const char* fn, int fallbackcp = 0);
 	FResourceEntry* AllocateEntries(int count);
-	void GenerateHash();
+	void GenerateHash(bool no_reader = false);
 	void PostProcessArchive(LumpFilterInfo* filter);
 protected:
 	FileReader Reader;
@@ -146,6 +147,7 @@ protected:
 	FResourceEntry* Entries = nullptr;
 	uint32_t NumLumps;
 	char Hash[48];
+	bool HashGenerated;
 	StringPool* stringpool;
 
 	// for archives that can contain directories
@@ -170,12 +172,16 @@ public:
 	static FResourceFile *OpenResourceFile(const char *filename, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr);
 	static FResourceFile *OpenDirectory(const char *filename, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr);
 	virtual ~FResourceFile();
-    // If this FResourceFile represents a directory, the Reader object is not usable so don't return it.
+	// If this FResourceFile represents a directory, the Reader object is not usable so don't return it.
 	FileReader *GetContainerReader() { return Reader.isOpen()? &Reader : nullptr; }
 	const char* GetFileName() const { return FileName; }
 	uint32_t GetFirstEntry() const { return FirstLump; }
 	void SetFirstLump(uint32_t f) { FirstLump = f; }
-	const char* GetHash() const { return Hash; }
+	const char* GetHash() const
+	{
+		assert(HashGenerated == true);
+		return Hash;
+	}
 
 	int EntryCount() const { return NumLumps; }
 	uint32_t EntryCountU() const { return NumLumps; }
@@ -190,10 +196,10 @@ public:
 		return (entry < NumLumps) ? Entries[entry].Position : 0;
 	}
 
-  size_t GetEntryHash(uint32_t entry)
-  {
-    return (entry < NumLumps) ? Entries[entry].CRC32 : 0;
-  }
+	size_t GetEntryHash(uint32_t entry)
+	{
+		return (entry < NumLumps) ? Entries[entry].CRC32 : 0;
+	}
 
 	// default is the safest reader type.
 	virtual FileReader GetEntryReader(uint32_t entry, int readertype = READER_NEW, int flags = READERFLAG_SEEKABLE);

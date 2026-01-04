@@ -169,7 +169,7 @@ void P_LineOpening (FLineOpening &open, AActor *actor, const line_t *linedef, co
 				usefront = !P_PointOnLineSide (*ref, linedef);
 		}
 
-		open.lowfloorthroughportal = false;
+		open.lowfloorthroughportal = 0;
 		if (usefront)
 		{
 			open.bottom = ff;
@@ -213,6 +213,7 @@ void P_LineOpening (FLineOpening &open, AActor *actor, const line_t *linedef, co
 		open.lowfloor = LINEOPEN_MAX;
 		open.frontfloorplane.SetAtHeight(LINEOPEN_MIN, sector_t::floor);
 		open.backfloorplane.SetAtHeight(LINEOPEN_MIN, sector_t::floor);
+		open.lowfloorthroughportal = 0;
 	}
 
 	open.topffloor = open.bottomffloor = nullptr;

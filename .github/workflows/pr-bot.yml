@@ -1,0 +1,138 @@
+name: Auto-Comment on PR
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  welcome:
+    permissions:
+      pull-requests: write
+      contents: read
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post Comment
+        uses: actions/github-script@v8
+        with:
+          script: |
+            //
+            // Preamble stuff
+            // Probably no need to touch
+            //
+
+            const marker = "our-nice-little-helper-bot-983247854" // used for comment updates
+            const { pull_request: pr, repository } = context.payload;
+            const { issues, pulls } = github.rest;
+            const auth = { owner: context.repo.owner, repo: context.repo.repo };
+            const base = `${repository.html_url}/blob/${repository.default_branch}`;
+            const body = [
+                `<!--${marker}-->`,
+                "Thanks for opening this PR! We'll review it shortly."
+            ];
+
+            //
+            // Message body stuff
+            // Push string to body array to add new sections
+            //
+
+            const newFace = pr.author_association === "FIRST_TIME_CONTRIBUTOR";
+            const canModify = pr.head.repo.full_name === pr.base.repo.full_name || pr.maintainer_can_modify;
+            const claSigned = true; // todo maybe probably
+            const updated = (await github.paginate(pulls.listFiles, {
+                ...auth, pull_number: context.issue.number,
+            }));
+            const blockers = [];
+            const quibbles = [];
+
+            // stuff for first time contributors
+            if (newFace)
+            {
+                const temp = [];
+
+                temp.push(
+                    `- Welcome the community and thank you for your contribution! Please take a moment to familiarize yourself with the resources available in our [README.md](${base}/README.md) file.`
+                );
+
+                if (!updated.some(file => file.filename === 'CONTRIBUTORS'))
+                {
+                    temp.push(`- Please take a moment to add your name to the bottom of the [CONTRIBUTORS](${base}/CONTRIBUTORS) file!`);
+                }
+
+                if (!claSigned)
+                {
+                    temp.push("- Please ensure the CLA is signed. We cannot accept code before this is done.");
+                }
+
+                if (temp.length > 0)
+                {
+                    body.push(
+                        "#### Looks like it's your first time contributing!",
+                        ...temp,
+                    );
+                }
+            }
+
+            if (!claSigned)
+            {
+                blockers.push("- CLA must be signed!");
+            }
+
+            if (!canModify)
+            {
+                quibbles.push(
+                    `- While it is not required, allowing edits by maintainers will speed up the review process. We require PRs to be up-to-date in order to merge them, and this permission allows us to quickly rebase the PR in order to merge it.`,
+                );
+            }
+
+            // notify about subtree edits in quibbles section
+            const subtrees = [ "libraries/Translation/", "libraries/ZMusic/", "libraries/ZWidget/" ];
+            for (const subtree of subtrees)
+            {
+                if (updated.some(file => file.filename.startsWith(subtree)))
+                {
+                    quibbles.push(
+                        `- Head's up, \`${subtree}\` is a subtree. Please ensure you're Pushing these changes upstream`,
+                    );
+                }
+            }
+
+            if (blockers.length > 0)
+            {
+                body.push(
+                    "#### Here are some issues, that must be fixed.",
+                    ...blockers,
+                );
+            }
+
+            if (quibbles.length > 0)
+            {
+                body.push(
+                    "#### Here are some minor issues, that might need fixing.",
+                    ...quibbles,
+                );
+            }
+
+            //
+            // Create / Update comment stuff
+            // Probably no need to touch
+            //
+
+            const data = { ...auth, body: body.join("\n") };
+
+            const { data: comments } = await issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+            });
+            const oldComment = comments.find(c => c.body.includes(marker));
+
+            if (oldComment) {
+                await issues.updateComment({
+                    ...data, comment_id: oldComment.id
+                });
+            } else {
+                await issues.createComment({
+                    ...data, issue_number: context.issue.number
+                });
+            }

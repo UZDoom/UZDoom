@@ -303,12 +303,15 @@ int entrycmp(const void* a, const void* b)
 //
 //==========================================================================
 
-void FResourceFile::GenerateHash()
+void FResourceFile::GenerateHash(bool no_reader)
 {
 	// hash the directory after sorting
 	using namespace FileSys::md5;
 
-	auto n = snprintf(Hash, 48, "%08X-%04X-", (unsigned)Reader.GetLength(), NumLumps);
+	// FIXME: Directories do not have a file reader from which they
+	// can generate a full hash. However, we need to generate
+	// *something* to avoid reading uninitialized memory later.
+	auto n = snprintf(Hash, 48, "%08X-%04X-", no_reader ? 0 : (unsigned)Reader.GetLength(), NumLumps);
 
 	md5_state_t state;
 	md5_init(&state);
@@ -328,6 +331,8 @@ void FResourceFile::GenerateHash()
 	{
 		n += snprintf(Hash + n, 3, "%02X", c);
 	}
+
+	HashGenerated = true;
 }
 
 //==========================================================================

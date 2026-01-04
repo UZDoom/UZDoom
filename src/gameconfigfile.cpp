@@ -157,11 +157,11 @@ static void CollectDefaultSearchPaths()
 
 FGameConfigFile::FGameConfigFile ()
 {
-
 	FString pathname;
 
 	OkayToWrite = false;	// Do not allow saving of the config before DoKeySetup()
 	bModSetup = false;
+	b226ResetGamepad = false;
 	pathname = GetConfigPath (true);
 	ChangePathName (pathname.GetChars());
 	LoadConfigFile ();
