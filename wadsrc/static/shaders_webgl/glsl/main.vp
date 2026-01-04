@@ -65,7 +65,7 @@ void main()
 	parmPosition = bones.Position;
 	
 	#ifndef SIMPLE
-		vec4 worldcoord = ModelMatrix * mix(parmPosition, vec4(aVertex2, 0.0), uInterpolationFactor);
+		vec4 worldcoord = ModelMatrix * mix(parmPosition, vec4(aVertex2, 1.0), uInterpolationFactor);
 	#else
 		vec4 worldcoord = ModelMatrix * parmPosition;
 	#endif
@@ -177,7 +177,7 @@ void AddWeightedBone(int boneIndex, float weight, inout vec4 position, inout vec
 	{
 		mat4 transform = bones[uBoneIndexBase + boneIndex];
 		mat3 rotation = mat3(transform);
-		position += (transform * vec4(aPosition, 0.0)) * weight;
+		position += (transform * vec4(aPosition, 1.0)) * weight;
 		normal += (rotation * aNormal.xyz) * weight;
 	}
 }
@@ -204,7 +204,7 @@ BonesResult ApplyBones()
 	}
 	else
 	{
-		result.Position = vec4(aPosition, 0.0);
+		result.Position = vec4(aPosition, 1.0);
 		result.Normal = GetAttrNormal();
 	}
 	return result;
@@ -216,7 +216,7 @@ BonesResult ApplyBones()
 {
 	BonesResult result;
 	
-	result.Position = vec4(aPosition, 0.0);
+	result.Position = vec4(aPosition, 1.0);
 	result.Normal = GetAttrNormal();
 	
 	return result;
@@ -228,7 +228,7 @@ BonesResult ApplyBones()
 BonesResult ApplyBones()
 {
 	BonesResult result;
-	result.Position = vec4(aPosition, 0.0);
+	result.Position = vec4(aPosition, 1.0);
 	return result;
 }
 

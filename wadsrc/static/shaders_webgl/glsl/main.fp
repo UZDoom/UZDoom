@@ -178,7 +178,7 @@ const int Tex_Blend_Hardlight = 4;
 vec4 getTexel(vec2 st)
 {
 	vec4 texel = texture(tex, st);
-	
+
 #if (DEF_TEXTURE_MODE == 1)
 
 	texel.rgb = vec3(1.0,1.0,1.0);
