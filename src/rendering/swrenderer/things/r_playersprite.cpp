@@ -483,7 +483,7 @@ namespace swrenderer
 				DTA_FillColor, sprite.FillColor,
 				DTA_SpecialColormap, sprite.special,
 				DTA_ColorOverlay, sprite.overlay.d,
-				DTA_Color, sprite.LightColor | 0xff000000,	// the color here does not have a valid alpha component.
+				DTA_Color, static_cast<uint32_t>(sprite.LightColor) | 0xff000000,	// the color here does not have a valid alpha component.
 				DTA_Desaturate, sprite.Desaturate,
 				TAG_DONE);
 		}
