@@ -1755,7 +1755,6 @@ OptionMenu FontOptions protected
 	Option "Fallback Font KO",			"fontoverride_FallbackKR", "DynamicFontFallbackOptionsKR"
 }
 
-//TODO: dynamically populate with known dynamic fonts ??
 OptionString DynamicFontOptions
 {
 	"FO_DEFAULT", "Default"
@@ -1766,14 +1765,12 @@ OptionString DynamicFontOptions
 	"ATKINSON", "Atkinson Hyperlegible Bold"
 }
 
-//TODO: dynamically populate with known dynamic fonts ?? 
 OptionString DynamicFontFallbackOptions
 {
 	"IBMPLEXS", "IBM Plex Sans"
 	"HACK-BOL", "Hack Bold"
 }
 
-//TODO: dynamically populate with known dynamic fonts ??
 OptionString DynamicFontFallbackOptionsJP
 {
 	"IBMPLEXJ", "IBM Plex Sans JP"
