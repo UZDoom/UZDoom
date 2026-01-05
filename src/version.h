@@ -79,6 +79,10 @@ const char *GetVersionString();
 // This is so that derivates can use the same savegame versions without worrying about engine compatibility
 #define GAMESIG "UZDOOM"
 
+// list of compatible ports, ex.:
+// #define ALLOWLOADIN "PORT1", "PORT2", "PORT3"
+#define ALLOWLOADIN "LZDOOM"
+
 #ifndef LOAD_GZDOOM_4142_SAVES
     #define LOAD_GZDOOM_4142_SAVES 1
 #endif

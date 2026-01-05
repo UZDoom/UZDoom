@@ -168,6 +168,13 @@ void FSavegameManager::ReadSaveStrings()
 						FString creationtime = arc.GetString("Creation Time");
 						FString uuid = arc.GetString("GameUUID");
 
+						TArray<FString> allowLoadIn;
+
+						if(arc.HasKey("AllowLoadIn"))
+						{
+							arc("AllowLoadIn", allowLoadIn);
+						}
+
 						#if LOAD_GZDOOM_4142_SAVES
 						FString software = arc.GetString("Software");
 
@@ -180,7 +187,7 @@ void FSavegameManager::ReadSaveStrings()
 						}
 						else
 						#endif
-						if (engine.Compare(GAMESIG) != 0 || savever > SAVEVER)
+						if ((engine.CompareNoCase(GAMESIG) != 0 && allowLoadIn.FindNoCase(GAMESIG) == allowLoadIn.Size()) || savever > SAVEVER)
 						{
 							// different engine or newer version:
 							// not our business. Leave it alone.

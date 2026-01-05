@@ -2,7 +2,7 @@ name: Auto-Comment on PR
 
 on:
   pull_request_target:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
   welcome:
@@ -31,6 +31,8 @@ jobs:
                 "Thanks for opening this PR! We'll review it shortly."
             ];
 
+            console.log(JSON.stringify(pr)); // for debugging
+
             //
             // Message body stuff
             // Push string to body array to add new sections
@@ -38,10 +40,25 @@ jobs:
 
             const newFace = pr.author_association === "FIRST_TIME_CONTRIBUTOR";
             const canModify = pr.head.repo.full_name === pr.base.repo.full_name || pr.maintainer_can_modify;
-            const claSigned = true; // todo maybe probably
+
+            const checkboxProblem = (() => {
+              const expected = "- [ ] I have reviewed [CONTRIBUTING.md] and agree to its terms.";
+              const pattern = /- \[([ |x])\] I have reviewed \[CONTRIBUTING\.md\](\(.+\))? and agree to its terms\./i;
+
+              if (!pattern.test(expected)) throw new Error("expected string does not match test string");
+              const match = pattern.exec(pr.body);
+              if (!match) {
+                return `Ensure this checkbox is in the PR: '${expected}'`;
+              } else if (match[1] !== 'x') {
+                return "Please agree to the terms in CONTRIBUTING.md, by checking the box in the description.";
+              }
+              return false;
+            })();
+
             const updated = (await github.paginate(pulls.listFiles, {
                 ...auth, pull_number: context.issue.number,
             }));
+
             const blockers = [];
             const quibbles = [];
 
@@ -59,9 +76,9 @@ jobs:
                     temp.push(`- Please take a moment to add your name to the bottom of the [CONTRIBUTORS](${base}/CONTRIBUTORS) file!`);
                 }
 
-                if (!claSigned)
+                if (checkboxProblem)
                 {
-                    temp.push("- Please ensure the CLA is signed. We cannot accept code before this is done.");
+                    temp.push("- Please ensure you have read CONTRIBUTING.md and agree to its terms. We cannot accept code before this is done.");
                 }
 
                 if (temp.length > 0)
@@ -73,9 +90,9 @@ jobs:
                 }
             }
 
-            if (!claSigned)
+            if (checkboxProblem)
             {
-                blockers.push("- CLA must be signed!");
+                blockers.push(`- ${checkboxProblem}`);
             }
 
             if (!canModify)
@@ -92,7 +109,7 @@ jobs:
                 if (updated.some(file => file.filename.startsWith(subtree)))
                 {
                     quibbles.push(
-                        `- Head's up, \`${subtree}\` is a subtree. Please ensure you're Pushing these changes upstream`,
+                        `- Head's up, \`${subtree}\` is a subtree. Please ensure you're pushing these changes upstream`,
                     );
                 }
             }
@@ -120,6 +137,8 @@ jobs:
 
             const data = { ...auth, body: body.join("\n") };
 
+            console.log(data);
+
             const { data: comments } = await issues.listComments({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -135,4 +154,9 @@ jobs:
                 await issues.createComment({
                     ...data, issue_number: context.issue.number
                 });
+            }
+
+            if (blockers.length > 0)
+            {
+              core.setFailed(`There are ${blockers.length} issue(s) that need resolving. See the bot's comment for details`);
             }

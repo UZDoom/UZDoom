@@ -2030,6 +2030,13 @@ void G_DoLoadGame ()
 	arc("Current Map", map);
 	arc("GameUUID", GameUUID);
 
+	TArray<FString> allowLoadIn;
+
+	if(arc.HasKey("AllowLoadIn"))
+	{
+		arc("AllowLoadIn", allowLoadIn);
+	}
+
 	#if LOAD_GZDOOM_4142_SAVES
 	FString software = arc.GetString("Software");
 	bool gzdoom_compat_ok = false;
@@ -2037,9 +2044,9 @@ void G_DoLoadGame ()
 	{
 		gzdoom_compat_ok = CheckGZDoomSaveCompat(engine, software);
 	}
-	if (engine.CompareNoCase(GAMESIG) != 0 && !gzdoom_compat_ok)
+	if ((engine.CompareNoCase(GAMESIG) != 0 && allowLoadIn.FindNoCase(GAMESIG) == allowLoadIn.Size()) && !gzdoom_compat_ok)
 	#else
-	if (engine.CompareNoCase(GAMESIG) != 0)
+	if (engine.CompareNoCase(GAMESIG) != 0 && allowLoadIn.FindNoCase(GAMESIG) == allowLoadIn.Size())
 	#endif
 	{
 		// Make a special case for the message printed for old savegames that don't
@@ -2430,6 +2437,17 @@ void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, c
 		.AddString("Title", description)
 		.AddString("Current Map", primaryLevel->MapName.GetChars());
 
+	TArray<const char *> allowLoadIn {ALLOWLOADIN};
+
+	if(allowLoadIn.Size() > 0)
+	{
+		savegameinfo.BeginArray("AllowLoadIn");
+		for(const char *port : allowLoadIn)
+		{
+			savegameinfo.AddString(nullptr, port);
+		}
+		savegameinfo.EndArray();
+	}
 
 	PutSaveWads (savegameinfo);
 	PutSaveComment (savegameinfo);

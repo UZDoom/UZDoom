@@ -369,6 +369,17 @@ public:
         return i;
     }
 
+	unsigned int FindNoCase(const T& item) const requires requires(const T& t) {t.CompareNoCase(t) == 0;}
+	{
+		unsigned int i;
+		for(i = 0;i < Count;++i)
+		{
+			if(Array[i].CompareNoCase(item) == 0)
+				break;
+		}
+		return i;
+	}
+
 	// !!! THIS REQUIRES AN ELEMENT TYPE THAT'S COMPARABLE WITH THE LT OPERATOR !!!
 	bool IsSorted()
 	{
