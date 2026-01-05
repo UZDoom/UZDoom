@@ -22,24 +22,38 @@ jobs:
             //
 
             const marker = "our-nice-little-helper-bot-983247854" // used for comment updates
-            const { pull_request: pr, repository } = context.payload;
+            const { repository } = context.payload;
             const { issues, pulls } = github.rest;
             const auth = { owner: context.repo.owner, repo: context.repo.repo };
             const base = `${repository.html_url}/blob/${repository.default_branch}`;
+            const { data: pr } = await pulls.get({
+              ...auth, pull_number: context.issue.number
+            });
+
             const body = [
-                `<!--${marker}-->`,
-                "Thanks for opening this PR! We'll review it shortly."
+              `<!--${marker}-->`,
+              "#### Thanks for opening this PR! We'll review it soon.",
+              "I'm a bot that checks for some common problems. I'll update this comment with anything I find."
             ];
 
             console.log(JSON.stringify(pr)); // for debugging
+
+            const link = f => `[${f}](${base}/${f})`;
 
             //
             // Message body stuff
             // Push string to body array to add new sections
             //
 
-            const newFace = pr.author_association === "FIRST_TIME_CONTRIBUTOR";
-            const canModify = pr.head.repo.full_name === pr.base.repo.full_name || pr.maintainer_can_modify;
+            const newFace = (() => {
+              console.log("newFace", pr.author_association);
+              return pr.author_association === "FIRST_TIME_CONTRIBUTOR";
+            })();
+
+            const canModify = (() => {
+              console.log("canModify", pr.head.repo.full_name, pr.base.repo.full_name, pr.maintainer_can_modify);
+              return pr.head.repo.full_name === pr.base.repo.full_name || pr.maintainer_can_modify;
+            })();
 
             const checkboxProblem = (() => {
               const expected = "- [ ] I have reviewed [CONTRIBUTING.md] and agree to its terms.";
@@ -47,17 +61,19 @@ jobs:
 
               if (!pattern.test(expected)) throw new Error("expected string does not match test string");
               const match = pattern.exec(pr.body);
+              console.log("checkboxProblem", match);
               if (!match) {
                 return `Ensure this checkbox is in the PR: '${expected}'`;
               } else if (match[1] !== 'x') {
-                return "Please agree to the terms in CONTRIBUTING.md, by checking the box in the description.";
+                return `Please agree to the terms in ${link("CONTRIBUTING.md")}, by checking the box in the description.`;
               }
               return false;
             })();
 
             const updated = (await github.paginate(pulls.listFiles, {
-                ...auth, pull_number: context.issue.number,
-            }));
+              ...auth, pull_number: context.issue.number,
+            })).map(f => f.filename);
+            console.log("updated", updated);
 
             const blockers = [];
             const quibbles = [];
@@ -65,69 +81,86 @@ jobs:
             // stuff for first time contributors
             if (newFace)
             {
-                const temp = [];
+              const temp = [];
 
-                temp.push(
-                    `- Welcome the community and thank you for your contribution! Please take a moment to familiarize yourself with the resources available in our [README.md](${base}/README.md) file.`
+              temp.push([
+                "-",
+                "Welcome the community and thank you for your contribution!",
+                `Please take a moment to familiarize yourself with the resources available in our ${link("README.md")} file.`,
+              ].join(" "));
+
+              if (!updated.some(file => file === "CONTRIBUTORS"))
+              {
+                temp.push([
+                  "-",
+                  `Please take a moment to add your name to the bottom of the ${link("CONTRIBUTORS")} file!`,
+                ].join(" "));
+              }
+
+              if (checkboxProblem)
+              {
+                temp.push([
+                  "-",
+                  `Please ensure you have read ${link("CONTRIBUTING.md")} and agree to its terms.`,
+                  "We cannot accept code before this is done.",
+                ].join(" "));
+              }
+
+              if (temp.length > 0)
+              {
+                body.push(
+                  "#### Looks like it's your first time contributing!",
+                  ...temp,
                 );
-
-                if (!updated.some(file => file.filename === 'CONTRIBUTORS'))
-                {
-                    temp.push(`- Please take a moment to add your name to the bottom of the [CONTRIBUTORS](${base}/CONTRIBUTORS) file!`);
-                }
-
-                if (checkboxProblem)
-                {
-                    temp.push("- Please ensure you have read CONTRIBUTING.md and agree to its terms. We cannot accept code before this is done.");
-                }
-
-                if (temp.length > 0)
-                {
-                    body.push(
-                        "#### Looks like it's your first time contributing!",
-                        ...temp,
-                    );
-                }
+              }
             }
 
             if (checkboxProblem)
             {
-                blockers.push(`- ${checkboxProblem}`);
+              blockers.push(`- ${checkboxProblem}`);
             }
 
             if (!canModify)
             {
-                quibbles.push(
-                    `- While it is not required, allowing edits by maintainers will speed up the review process. We require PRs to be up-to-date in order to merge them, and this permission allows us to quickly rebase the PR in order to merge it.`,
-                );
+              quibbles.push([
+                "-",
+                "While it is not required, allowing edits by maintainers will speed up the review process.",
+                "We require PRs to be up-to-date in order to merge them, and this permission allows us to quickly rebase the PR in order to merge it.",
+              ].join(" "));
             }
 
             // notify about subtree edits in quibbles section
-            const subtrees = [ "libraries/Translation/", "libraries/ZMusic/", "libraries/ZWidget/" ];
+            const subtrees = [
+              "libraries/Translation/",
+              "libraries/ZMusic/",
+              "libraries/ZWidget/",
+            ];
             for (const subtree of subtrees)
             {
-                if (updated.some(file => file.filename.startsWith(subtree)))
-                {
-                    quibbles.push(
-                        `- Head's up, \`${subtree}\` is a subtree. Please ensure you're pushing these changes upstream`,
-                    );
-                }
+              if (updated.some(file => file.startsWith(subtree)))
+              {
+                quibbles.push([
+                  "-",
+                  `Head's up, \`${subtree}\` is a subtree.`,
+                  "Please ensure you're pushing these changes upstream.",
+                ].join(" "));
+              }
             }
 
             if (blockers.length > 0)
             {
-                body.push(
-                    "#### Here are some issues, that must be fixed.",
-                    ...blockers,
-                );
+              body.push(
+                "#### Here are some issues, that must be fixed:",
+                ...blockers,
+              );
             }
 
             if (quibbles.length > 0)
             {
-                body.push(
-                    "#### Here are some minor issues, that might need fixing.",
-                    ...quibbles,
-                );
+              body.push(
+                "#### Here are some minor issues, that might need fixing:",
+                ...quibbles,
+              );
             }
 
             //
@@ -140,20 +173,20 @@ jobs:
             console.log(data);
 
             const { data: comments } = await issues.listComments({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
             });
             const oldComment = comments.find(c => c.body.includes(marker));
 
             if (oldComment) {
-                await issues.updateComment({
-                    ...data, comment_id: oldComment.id
-                });
+              await issues.updateComment({
+                ...data, comment_id: oldComment.id
+              });
             } else {
-                await issues.createComment({
-                    ...data, issue_number: context.issue.number
-                });
+              await issues.createComment({
+                ...data, issue_number: context.issue.number
+              });
             }
 
             if (blockers.length > 0)
