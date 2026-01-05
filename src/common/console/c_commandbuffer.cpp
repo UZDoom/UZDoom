@@ -46,27 +46,29 @@ FString FCommandBuffer::GetText() const
 
 void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 {
+	FFont *const ourConsoleFont = FFont::GetConsoleFont(CurrentConsoleFont);
 	if (scale == 1)
 	{
-		DrawChar(twod, CurrentConsoleFont, CR_ORANGE, x, y, '\x1c', TAG_DONE);
-		DrawText(twod, CurrentConsoleFont, CR_ORANGE, x + CurrentConsoleFont->GetCharWidth(0x1c), y,
+		DrawChar(twod, ourConsoleFont, CR_ORANGE, x, y, '\x1c', TAG_DONE);
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x + ourConsoleFont->GetCharWidth(0x1c), y,
 			&Text[StartPos], TAG_DONE);
 
 		if (cursor)
 		{
-			DrawChar(twod, CurrentConsoleFont, CR_YELLOW,
-				x + CurrentConsoleFont->GetCharWidth(0x1c) + (CursorPosCells - StartPosCells) * CurrentConsoleFont->GetCharWidth(0xb),
+			DrawChar(twod, ourConsoleFont, CR_YELLOW,
+			         x + ourConsoleFont->GetCharWidth(0x1c) +
+			             (CursorPosCells - StartPosCells) * ourConsoleFont->GetCharWidth(0xb),
 				y, '\xb', TAG_DONE);
 		}
 	}
 	else
 	{
-		DrawChar(twod, CurrentConsoleFont, CR_ORANGE, x, y, '\x1c',
+		DrawChar(twod, ourConsoleFont, CR_ORANGE, x, y, '\x1c',
 			DTA_VirtualWidth, twod->GetWidth() / scale,
 			DTA_VirtualHeight, twod->GetHeight() / scale,
 			DTA_KeepRatio, true, TAG_DONE);
 
-		DrawText(twod, CurrentConsoleFont, CR_ORANGE, x + CurrentConsoleFont->GetCharWidth(0x1c), y,
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x + ourConsoleFont->GetCharWidth(0x1c), y,
 			&Text[StartPos],
 			DTA_VirtualWidth, twod->GetWidth() / scale,
 			DTA_VirtualHeight, twod->GetHeight() / scale,
@@ -74,8 +76,9 @@ void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 
 		if (cursor)
 		{
-			DrawChar(twod, CurrentConsoleFont, CR_YELLOW,
-				x + CurrentConsoleFont->GetCharWidth(0x1c) + (CursorPosCells - StartPosCells) * CurrentConsoleFont->GetCharWidth(0xb),
+			DrawChar(twod, ourConsoleFont, CR_YELLOW,
+			         x + ourConsoleFont->GetCharWidth(0x1c) +
+			             (CursorPosCells - StartPosCells) * ourConsoleFont->GetCharWidth(0xb),
 				y, '\xb',
 				DTA_VirtualWidth, twod->GetWidth() / scale,
 				DTA_VirtualHeight, twod->GetHeight() / scale,

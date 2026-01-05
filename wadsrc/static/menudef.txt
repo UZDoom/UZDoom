@@ -1736,7 +1736,7 @@ OptionMenu FontOptions protected
 	Tooltip "Choose a font to use for menu titles."
 	Option "Description Font",				"fontchoice_description", "DynamicFontOptions"
 	Tooltip "Choose a font to use for text descriptions. Used by tooltips, for example."
-	Option "Console Font",				"fontchoice_console", "DynamicFontOptions"
+	Option "Console Font",				"fontchoice_console", "ConsoleFontOptions"
 	Tooltip "Choose a font to use for the command console. Also often used for misc small text or numbers."
 	Option "Big Text Font",				"fontchoice_bigtext", "DynamicFontOptions"
 	Tooltip "Choose a font to use for big text, such as main menu items."
@@ -1797,6 +1797,12 @@ OptionString DynamicFontOptionsKO
 {
 	"FO_DEFAULT", "Don't override"
 	"IBMPLEXK", "IBM Plex Sans KR"
+}
+
+OptionString ConsoleFontOptions
+{
+	"FO_DEFAULT", "Don't override"
+	"HACK-BOL", "Hack Bold"
 }
 
 OptionValue  FontSuperSampleOptions
