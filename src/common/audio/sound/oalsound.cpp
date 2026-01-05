@@ -41,7 +41,6 @@ FModule OpenALModule{"OpenAL"};
 
 #include "oalload.h"
 
-
 CUSTOM_CVAR(Int, snd_channels, 128, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)	// number of channels available
 {
 	if (self < 64) self = 64;
@@ -940,9 +939,6 @@ void OpenALSoundRenderer::AddStream(OpenALSoundStream *stream)
 	lock.unlock();
 	// There's a stream to play, make sure the background thread is aware
 	StreamWake.notify_all();
-#if !defined(__EMSCRIPTEN_PTHREADS__) && defined(__EMSCRIPTEN__)
-	EM_ASM({ Module.SoundStreamsWorker() });
-#endif
 }
 
 void OpenALSoundRenderer::RemoveStream(OpenALSoundStream *stream)
@@ -1476,13 +1472,13 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 	}
 	else
 	{
+#ifdef __EMSCRIPTEN__ // check if buffer can be played
+		ALfloat duration = 0;
+		alGetSourcef(source, AL_SEC_LENGTH_SOFT, &duration);
+		if (duration <= 0.f) return NULL;
+#endif
 		if((chanflags&SNDF_ABSTIME))
-		{
-			ALfloat duration = 0;
-			alGetSourcef(source, AL_SEC_LENGTH_SOFT, &duration);
-			if (duration > reuse_chan->StartTime)
-				alSourcei(source, AL_SAMPLE_OFFSET, ALint(reuse_chan->StartTime));
-		}
+			alSourcei(source, AL_SAMPLE_OFFSET, ALint(reuse_chan->StartTime));
 		else
 		{
 			float offset = std::chrono::duration_cast<std::chrono::duration<float>>(
