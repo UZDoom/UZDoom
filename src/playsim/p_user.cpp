@@ -1455,9 +1455,10 @@ void P_PredictPlayer (player_t *player)
 		return;
 	}
 
-	bPredictionGuard = true;
 	// Avoid memcpying in bad pointers.
 	GC::CheckGC();
+
+	bPredictionGuard = true;
 
 	FRandom::SaveRNGState(PredictionRNG);
 
@@ -1697,6 +1698,7 @@ void P_UnPredictPlayer ()
 		player->inventorytics = inventorytics;
 
 		bPredictionGuard = false;
+		GC::CheckGC(); // HACK: See the comment in the bPredictionGuard block of CheckGC
 	}
 }
 
