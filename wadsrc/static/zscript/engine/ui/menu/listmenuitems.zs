@@ -292,6 +292,23 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 		DrawText(desc, font, selected ? mColorSelected : mColor, x, mYpos, mText);
 	}
 
+	override void DrawSelector(double xofs, double yofs, TextureID tex, ListMenuDescriptor desc)
+	{
+		if (tex.isNull())
+		{
+			if ((Menu.MenuTime() % 8) < 6)
+			{
+				DrawText(desc, ConFont, OptionMenuSettings.mFontColorSelection, mXpos + xofs, mYpos + yofs + 8, "\xd");
+			}
+		}
+		else
+		{
+			let font = menuDelegate.PickFont(mFont);
+			yofs += float(font.GetHeight()) * 0.33;
+			DrawTexture(desc, tex, mXpos + xofs, mYpos + yofs);
+		}
+	}
+
 	override int GetWidth()
 	{
 		let font = menuDelegate.PickFont(mFont);
