@@ -483,6 +483,17 @@ int FKeyBindings::GetKeysForCommand (const char *cmd, int *first, int *second)
 
 //=============================================================================
 //
+// Returns bind from key name, or NULL if unbound
+//
+//=============================================================================
+
+const char *FKeyBindings::GetBind (const char *key)
+{
+	return GetBind(GetKeyFromName(key));
+}
+
+//=============================================================================
+//
 //
 //
 //=============================================================================
@@ -524,7 +535,7 @@ void FKeyBindings::UnbindACommand (const char *str)
 
 //=============================================================================
 //
-//
+// Bind a command to a key if the neither the key or command are already bound
 //
 //=============================================================================
 
@@ -538,12 +549,14 @@ void FKeyBindings::DefaultBind(const char *keyname, const char *cmd)
 	}
 	if (!Binds[key].IsEmpty())
 	{ // This key is already bound.
+		Printf ("Key already bound to \"%s\"\n", Binds[key].GetChars());
 		return;
 	}
 	for (int i = 0; i < NUM_KEYS; ++i)
 	{
 		if (!Binds[i].IsEmpty() && stricmp (Binds[i].GetChars(), cmd) == 0)
 		{ // This command is already bound to a key.
+			Printf ("Command already bound to \"%d\"\n", i);
 			return;
 		}
 	}
