@@ -1156,7 +1156,7 @@ void D_Display ()
 		else
 		{
 			R_ExecuteSetViewSize (vp, r_viewwindow);
-	}
+		}
 	}
 
 	// [RH] Allow temporarily disabling wipes

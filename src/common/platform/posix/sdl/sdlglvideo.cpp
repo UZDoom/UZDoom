@@ -54,6 +54,10 @@
 #include <zvulkan/vulkansurface.h>
 #endif
 
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
 // MACROS ------------------------------------------------------------------
 
 #if defined HAVE_VULKAN
@@ -157,14 +161,19 @@ namespace Priv
 
 		if (win_w <= 0 || win_h <= 0)
 		{
+#ifdef __EMSCRIPTEN__ // SDL_GetDisplayBounds doesn't work
+			win_w = EM_ASM_INT({ return canvas.getBoundingClientRect().width });
+			win_h = EM_ASM_INT({ return canvas.getBoundingClientRect().height });
+#else
 			win_w = bounds->w * 8 / 10;
 			win_h = bounds->h * 8 / 10;
+#endif
 		}
 
 		int xWindowPos = (win_x <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(vid_adapter) : win_x;
 		int yWindowPos = (win_y <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(vid_adapter) : win_y;
 		Printf("Creating window [%dx%d] on adapter %d\n", (*win_w), (*win_h), (*vid_adapter));
-		
+
 		FString caption;
 		caption.Format(GAMENAME " %s (%s)", GetVersionString(), GetGitTime());
 
