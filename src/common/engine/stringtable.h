@@ -93,8 +93,9 @@ public:
 	void SetDefaultGender(int gender) { defaultgender = gender; }
 	FName GetLangName() const { return langName; }
 
-private:
+	[[nodiscard]] FString GetActiveLanguage() const { return activeLanguage; }
 
+private:
 	FString activeLanguage;
 	StringMacroMap allMacros;
 	LangMap allStrings;
