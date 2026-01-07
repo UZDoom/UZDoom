@@ -763,7 +763,7 @@ void M_StartupEpisodeMenu(FNewGameStartup *gs)
 				for(unsigned i = 0; i < AllEpisodes.Size(); i++)
 				{
 					DMenuItemBase *it = nullptr;
-					if (AllEpisodes[i].mPicName.IsNotEmpty())
+					if (AllEpisodes[i].mPicName.IsNotEmpty() && !generic_ui)
 					{
 						FTextureID tex = GetMenuTexture(AllEpisodes[i].mPicName.GetChars());
 						if (AllEpisodes[i].mEpisodeName.IsEmpty() || OkForLocalization(tex, AllEpisodes[i].mEpisodeName.GetChars()))
@@ -1329,7 +1329,7 @@ void M_StartupSkillMenu(FNewGameStartup *gs)
 
 				EColorRange color = (EColorRange)skill.GetTextColor();
 				if (color == CR_UNTRANSLATED) color = ld->mFontColor;
-				if (skill.PicName.Len() != 0 && pItemText == nullptr)
+				if (!generic_ui && skill.PicName.Len() != 0 && pItemText == nullptr)
 				{
 					FTextureID tex = GetMenuTexture(skill.PicName.GetChars());
 					if (skill.MenuName.IsEmpty() || OkForLocalization(tex, skill.MenuName.GetChars()))
