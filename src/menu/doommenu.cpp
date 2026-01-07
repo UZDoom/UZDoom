@@ -165,7 +165,7 @@ bool M_SetSpecialMenu(FName& menu, int param)
 		if (gameinfo.gametype & GAME_DoomStrifeChex)	// Raven's games always used text based menus
 		{
 			FFont *desiredMenuFont = FFont::GetBigTextFont(BigUpper);
-			if (gameinfo.forcetextinmenus || (desiredMenuFont && desiredMenuFont->IsValidDynamicFont()))	// If text is forced, this overrides any check.
+			if (generic_ui || gameinfo.forcetextinmenus || (desiredMenuFont && desiredMenuFont->IsValidDynamicFont()))	// If text is forced, this overrides any check.
 			{
 				menu = NAME_MainMenuTextOnly;
 			}
