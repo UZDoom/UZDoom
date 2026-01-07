@@ -3125,10 +3125,6 @@ void System_LanguageChanged(const char* lang)
 		if (Level->info != nullptr) Level->LevelName = Level->info->LookupLevelName();
 	}
 
-	//TODO: set dynamic font fallbacks with intended languages
-	//TODO: load/purge atlases?
-	FFont::UpdateFontDynamicFallbacks(lang);
-
 	I_UpdateWindowTitle();
 }
 

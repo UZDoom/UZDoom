@@ -88,6 +88,14 @@ CUSTOM_CVAR(String, fontchoice_bigtext, "LEXENDDE", CVAR_ARCHIVE)
 	SetFontChoice_BigText(self);
 }
 
+CVAR(String, fontchoice_smalltextJP, "IBMPLEXJ", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleJP, "IBMPLEXJ", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionJP, "KOSUGIMA", CVAR_ARCHIVE);
+
+CVAR(String, fontchoice_smalltextKO, "IBMPLEXK", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleKO, "IBMPLEXK", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionKO, "IBMPLEXK", CVAR_ARCHIVE);
+
 //actually overriding the font directly will become a last resort option
 //if you are having mod compatibility issues.
 void SetNewSmallFontOverride(const char *newFont);
@@ -752,6 +760,17 @@ void FFont::UpdateFontDynamicFallbacks(const char* lang)
 FFont *FFont::GetSmallTextFont(FFont* fallbackIfNoUserChoice)
 {
 	FFont *userFont = V_GetFont(*fontchoice_smalltext);
+	FString lang     = GStrings.GetActiveLanguage();
+
+	if (lang.CompareNoCase("jp") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_smalltextJP);
+	}
+	else if (lang.CompareNoCase("ko") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_smalltextKO);
+	}
+
 	if (userFont)
 	{
 		return userFont;
@@ -762,6 +781,17 @@ FFont *FFont::GetSmallTextFont(FFont* fallbackIfNoUserChoice)
 FFont *FFont::GetTitleFont(FFont *fallbackIfNoUserChoice)
 {
 	FFont *userFont = V_GetFont(*fontchoice_title);
+	FString lang = GStrings.GetActiveLanguage();
+
+	if (lang.CompareNoCase("jp") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_titleJP);
+	}
+	else if (lang.CompareNoCase("ko") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_titleKO);
+	}
+
 	if (userFont)
 	{
 		return userFont;
@@ -772,6 +802,17 @@ FFont *FFont::GetTitleFont(FFont *fallbackIfNoUserChoice)
 FFont *FFont::GetDescriptionFont(FFont *fallbackIfNoUserChoice)
 {
 	FFont *userFont = V_GetFont(*fontchoice_description);
+	FString lang     = GStrings.GetActiveLanguage();
+
+	if (lang.CompareNoCase("jp") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_descriptionJP);
+	}
+	else if (lang.CompareNoCase("ko") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_descriptionKO);
+	}
+
 	if (userFont)
 	{
 		return userFont;
