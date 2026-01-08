@@ -479,7 +479,7 @@ namespace swrenderer
 				DTA_ClipRight, viewwindowx + viewwidth,
 				DTA_ClipBottom, viewwindowy + viewheight,
 				DTA_Alpha, sprite.Alpha,
-				DTA_RenderStyle, sprite.RenderStyle,
+				DTA_RenderStyle, sprite.RenderStyle.AsDWORD,
 				DTA_FillColor, sprite.FillColor,
 				DTA_SpecialColormap, sprite.special,
 				DTA_ColorOverlay, sprite.overlay.d,

@@ -762,7 +762,7 @@ void DIntermissionScreenCast::Drawer ()
 			DTA_FlipX, sprframe->Flip & 1,
 			DTA_DestHeightF, pic->GetDisplayHeight() * castscale.Y,
 			DTA_DestWidthF, pic->GetDisplayWidth() * castscale.X,
-			DTA_RenderStyle, mDefaults->RenderStyle,
+			DTA_RenderStyle, mDefaults->RenderStyle.AsDWORD,
 			DTA_Alpha, mDefaults->Alpha,
 			DTA_TranslationIndex, casttranslation.index(),
 			TAG_DONE);
