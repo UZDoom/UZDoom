@@ -11,11 +11,6 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/harfbuzz/harfbuzz.git
     GIT_TAG        7.3.0
 )
-FetchContent_Declare(
-    stb
-    GIT_REPOSITORY https://github.com/nothings/stb.git
-    GIT_TAG        5736b15f7ea0ffb08dd38af21067c314d6a3aae9
-)
 
 project(Trex)
 
