@@ -44,8 +44,7 @@ set(HB_BUILD_SUBSET OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(harfbuzz)
 
 # stb
-FetchContent_MakeAvailable(stb)
-target_include_directories(trex PRIVATE ${stb_SOURCE_DIR})
+target_include_directories(trex PRIVATE "../../common/thirdparty/stb")
 
 ####################
 
