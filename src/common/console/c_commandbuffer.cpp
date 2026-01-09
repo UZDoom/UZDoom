@@ -47,7 +47,27 @@ FString FCommandBuffer::GetText() const
 void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 {
 	FFont *const ourConsoleFont = FFont::GetConsoleFont(CurrentConsoleFont);
-	if (scale == 1)
+	const bool   isDynamicFont  = ourConsoleFont->IsValidDynamicFont();
+	
+	if (isDynamicFont)
+	{
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x, y, "]", DTA_VirtualWidth, twod->GetWidth() / scale,
+		         DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true, TAG_DONE);
+
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x + ourConsoleFont->GetCharWidth(0x1c), y, &Text[StartPos],
+		         DTA_VirtualWidth, twod->GetWidth() / scale, DTA_VirtualHeight, twod->GetHeight() / scale,
+		         DTA_KeepRatio, true, TAG_DONE);
+
+		if (cursor)
+		{
+			DrawText(twod, ourConsoleFont, CR_YELLOW,
+			         x + ourConsoleFont->GetCharWidth(0x1c) +
+			             (CursorPosCells - StartPosCells) * ourConsoleFont->GetCharWidth(0xb),
+			         y, "█", DTA_VirtualWidth, twod->GetWidth() / scale, DTA_VirtualHeight,
+			         twod->GetHeight() / scale, DTA_KeepRatio, true, TAG_DONE);
+		}
+	}
+	else if (scale == 1)
 	{
 		DrawChar(twod, ourConsoleFont, CR_ORANGE, x, y, '\x1c', TAG_DONE);
 		DrawText(twod, ourConsoleFont, CR_ORANGE, x + ourConsoleFont->GetCharWidth(0x1c), y,
@@ -58,7 +78,7 @@ void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 			DrawChar(twod, ourConsoleFont, CR_YELLOW,
 			         x + ourConsoleFont->GetCharWidth(0x1c) +
 			             (CursorPosCells - StartPosCells) * ourConsoleFont->GetCharWidth(0xb),
-				y, '\xb', TAG_DONE);
+			         y, '\xb', TAG_DONE);
 		}
 	}
 	else
@@ -79,7 +99,7 @@ void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 			DrawChar(twod, ourConsoleFont, CR_YELLOW,
 			         x + ourConsoleFont->GetCharWidth(0x1c) +
 			             (CursorPosCells - StartPosCells) * ourConsoleFont->GetCharWidth(0xb),
-				y, '\xb',
+			         y, '\xb',
 				DTA_VirtualWidth, twod->GetWidth() / scale,
 				DTA_VirtualHeight, twod->GetHeight() / scale,
 				DTA_KeepRatio, true, TAG_DONE);
