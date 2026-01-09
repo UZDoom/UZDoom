@@ -221,9 +221,6 @@ void V_InitCustomFonts()
 			}
 		}
 
-		//current design is that there is one single dynamic fallback layer,
-		//that is a font hand-chosen by devs to fully support the desired language.
-		//ideally this will eventually be user configurable, but there are only so many CJK, turkish etc fonts out there.
 		for (auto *font : fontsWeAdded)
 		{
 			const FName  fontName        = font->GetName();
