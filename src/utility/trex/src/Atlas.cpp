@@ -457,7 +457,8 @@ namespace
 	{
 		assert( glyph.Channels() == 1 );
 		uint8_t gray = glyph.ByteAt(glyphX, glyphY);
-		data[atlasIdx] = 255 - gray;
+		//UZDOOM EDIT - Assume white text on black background, not the other way around
+		data[atlasIdx] = gray;
 	}
 
 	void DrawRGB( std::vector<uint8_t>& data, const Atlas::FreeTypeGlyph& glyph, size_t atlasIdx, int glyphX, int glyphY )
