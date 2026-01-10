@@ -336,6 +336,8 @@ if (HAVE_VULKAN)
 	list( APPEND PROJECT_LIBRARIES "zvulkan" )
 endif()
 
+add_subdirectory("common/thirdparty/freetype-2.13.3")
+add_subdirectory("common/thirdparty/harfbuzz-7.3.0")
 add_subdirectory("utility/trex")
 list( APPEND PROJECT_LIBRARIES "trex" )
 list( APPEND PROJECT_LIBRARIES "zwidget" )
