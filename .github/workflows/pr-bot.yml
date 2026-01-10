@@ -134,6 +134,7 @@ jobs:
               "libraries/Translation/",
               "libraries/ZMusic/",
               "libraries/ZWidget/",
+              "libraries/ZVulkan/",
             ];
             for (const subtree of subtrees)
             {

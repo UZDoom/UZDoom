@@ -25,6 +25,7 @@ pull() {
 		--squash --message "Update ${dest} to ${ref}" || exit
 }
 
-pull 'zwidget'     'libraries/ZWidget'     'https://github.com/UZDoom/ZWidget'     'trunk' "${@}"
-pull 'zmusic'      'libraries/ZMusic'      'https://github.com/UZDoom/ZMusic'      'trunk' "${@}"
-pull 'translation' 'libraries/Translation' 'https://github.com/UZDoom/Translation' 'main'  "${@}"
+pull 'zwidget'     'libraries/ZWidget'     'https://github.com/UZDoom/ZWidget'     'trunk'  "${@}"
+pull 'zmusic'      'libraries/ZMusic'      'https://github.com/UZDoom/ZMusic'      'trunk'  "${@}"
+pull 'translation' 'libraries/Translation' 'https://github.com/UZDoom/Translation' 'main'   "${@}"
+pull 'zvulkan'     'libraries/ZVulkan'     'https://github.com/UZDoom/ZVulkan'     'legacy' "${@}"
