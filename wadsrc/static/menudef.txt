@@ -1781,9 +1781,9 @@ OptionString DynamicFontOptions
 {
 	"FO_DEFAULT", "Default"
 	"LEXENDDE", "Lexend Deca"
-	"IBMPLEXS", "IBM Plex Sans"
+	"PLEXSANS", "IBM Plex Sans"
+	"PLEXSERI", "IBM Plex Serif"
 	"HACK-BOL", "Hack Bold"
-	"KREON-BO", "Kreon Bold"
 	"LEXICAUL", "Lexica Ultralegible Bold"
 }
 

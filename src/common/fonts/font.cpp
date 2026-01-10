@@ -55,36 +55,36 @@
 
 TArray<FBitmap> sheetBitmaps;
 
-CVAR(String, fontoverride_Fallback, "IBMPLEXS", CVAR_ARCHIVE);
+CVAR(String, fontoverride_Fallback, "PLEXSANS", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackJP, "IBMPLEXJ", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackKR, "IBMPLEXK", CVAR_ARCHIVE);
 
 void SetFontChoice_SmallText(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_smalltext, "IBMPLEXS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_smalltext, "PLEXSANS", CVAR_ARCHIVE)
 {
 	SetFontChoice_SmallText(self);
 }
 
 void SetFontChoice_Title(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_title, "LEXENDDE", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_title, "PLEXSANS", CVAR_ARCHIVE)
 {
 	SetFontChoice_Title(self);
 }
 
 void SetFontChoice_Description(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_description, "IBMPLEXS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_description, "PLEXSANS", CVAR_ARCHIVE)
 {
 	SetFontChoice_Description(self);
 }
 
 void SetFontChoice_Console(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_console, "HACKBO", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_console, "HACK-BOL", CVAR_ARCHIVE)
 {
 	SetFontChoice_Console(self);
 }
 
 void SetFontChoice_BigText(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_bigtext, "LEXENDDE", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_bigtext, "PLEXSANS", CVAR_ARCHIVE)
 {
 	SetFontChoice_BigText(self);
 }
@@ -104,7 +104,7 @@ CVAR(String, fontchoice_descriptionCYR, "HACK-BOL", CVAR_ARCHIVE);
 //actually overriding the font directly will become a last resort option
 //if you are having mod compatibility issues.
 void SetNewSmallFontOverride(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFont, "IBMPLEXS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontoverride_NewSmallFont, "PLEXSANS", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverride(self);
 }
@@ -122,7 +122,7 @@ CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "IBMPLEXK", CVAR_ARCHIVE)
 }
 
 void SetHUDFontOverride(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_HUDFont, "IBMPLEXS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontoverride_HUDFont, "PLEXSANS", CVAR_ARCHIVE)
 {
 	SetHUDFontOverride(self);
 }
