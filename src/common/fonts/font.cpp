@@ -96,9 +96,9 @@ CVAR(String, fontchoice_smalltextKO, "IBMPLEXK", CVAR_ARCHIVE);
 CVAR(String, fontchoice_titleKO, "IBMPLEXK", CVAR_ARCHIVE);
 CVAR(String, fontchoice_descriptionKO, "IBMPLEXK", CVAR_ARCHIVE);
 
-CVAR(String, fontchoice_smalltextCYR, "HACK-BO", CVAR_ARCHIVE);
-CVAR(String, fontchoice_titleCYR, "HACK-BO", CVAR_ARCHIVE);
-CVAR(String, fontchoice_descriptionCYR, "HACK-BO", CVAR_ARCHIVE);
+CVAR(String, fontchoice_smalltextCYR, "HACK-BOL", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleCYR, "HACK-BOL", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionCYR, "HACK-BOL", CVAR_ARCHIVE);
 
 //actually overriding the font directly will become a last resort option
 //if you are having mod compatibility issues.
