@@ -1784,7 +1784,7 @@ OptionString DynamicFontOptions
 	"IBMPLEXS", "IBM Plex Sans"
 	"HACK-BOL", "Hack Bold"
 	"KREON-BO", "Kreon Bold"
-	"ATKINSON", "Atkinson Hyperlegible Bold"
+	"LEXICAUL", "Lexica Ultralegible Bold"
 }
 
 OptionString DynamicFontFallbackOptions
