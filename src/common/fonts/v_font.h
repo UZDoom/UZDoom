@@ -141,6 +141,8 @@ public:
 	inline int StringWidth (const char *str, int spacing = 0) const { return StringWidth ((const uint8_t *)str, spacing); }
 	inline int StringWidth (const FString &str, int spacing = 0) const { return StringWidth ((const uint8_t *)str.GetChars(), spacing); }
 
+	[[nodiscard]] int StringWidthUTF32(const std::u32string_view str) const;
+
 	bool CanPrint(const char32_t utf32char) const;
 
 	// Checks if the font contains all characters to print this text.

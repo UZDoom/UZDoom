@@ -1311,6 +1311,25 @@ int FFont::StringWidth(const uint8_t *string, int spacing) const
 	return max(maxw, w);
 }
 
+//only supports dynamic fonts.
+int FFont::StringWidthUTF32(const std::u32string_view string) const
+{
+	if (IsValidDynamicFont())
+	{
+		std::vector<IntermediateDrawString> drawStrings;
+		drawStrings.reserve(4);
+		ParseIntoIntermediateDrawStrings(string, this, 0, drawStrings);
+
+		float totalWidth = 0.0f;
+		for (auto &s : drawStrings)
+		{
+			totalWidth += Trex::TextShaper::Measure(s.TrexGlyphs).width * (float)InvSupersampleFactor;
+		}
+		return std::ceil(totalWidth);
+	}
+	return 0;
+}
+
 //==========================================================================
 //
 // Get the largest ascender in the first line of this text.
