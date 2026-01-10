@@ -1780,7 +1780,6 @@ OptionMenu FontOptions protected
 OptionString DynamicFontOptions
 {
 	"FO_DEFAULT", "Default"
-	"LEXENDDE", "Lexend Deca"
 	"PLEXSANS", "IBM Plex Sans"
 	"PLEXSERI", "IBM Plex Serif"
 	"HACK-BOL", "Hack Bold"
