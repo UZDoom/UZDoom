@@ -1754,12 +1754,21 @@ OptionMenu FontOptions protected
 	Tooltip "Choose a font to use for menu titles."
 	Option "Description Font KO",				"fontchoice_descriptionKO", "DynamicFontOptionsKO"
 	Tooltip "Choose a font to use for text descriptions. Used by tooltips, for example."
+	StaticText ""
+	Option "Small Text Font Cyrillic",				"fontchoice_smalltextCYR", "DynamicFontOptionsCYR"
+	Tooltip "Choose a font to use for standard small text. This is frequently used in list menus."
+	Option "Title Font Cyrillic",				"fontchoice_titleCYR", "DynamicFontOptionsCYR"
+	Tooltip "Choose a font to use for menu titles."
+	Option "Description Font Cyrillic",				"fontchoice_descriptionCYR", "DynamicFontOptionsCYR"
+	Tooltip "Choose a font to use for text descriptions. Used by tooltips, for example."
 	StaticText "ADVANCED - OVERRIDES"
 	Option "NewSmallFont override",			"fontoverride_NewSmallFont", "DynamicFontOptions"
 	Tooltip "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
 	Option "NewSmallFont override JP",		"fontoverride_NewSmallFontJP", "DynamicFontOptionsJP"
 	Tooltip "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
 	Option "NewSmallFont override KO",		"fontoverride_NewSmallFontKR", "DynamicFontOptionsKO"
+	Tooltip "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
+	Option "NewSmallFont override Cyrillic",		"fontoverride_NewSmallFontCYR", "DynamicFontOptionsCYR"
 	Tooltip "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
 	StaticText ""
 	StaticText "ADVANCED - FALLBACKS"
@@ -1807,6 +1816,12 @@ OptionString DynamicFontOptionsKO
 {
 	"FO_DEFAULT", "Don't override"
 	"IBMPLEXK", "IBM Plex Sans KR"
+}
+
+OptionString DynamicFontOptionsCYR
+{
+	"FO_DEFAULT", "Don't override"
+	"HACK-BOL", "Hack Bold"
 }
 
 OptionString ConsoleFontOptions
