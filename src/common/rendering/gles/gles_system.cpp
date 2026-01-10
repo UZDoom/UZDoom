@@ -19,6 +19,9 @@
 #include "tarray.h"
 #include "v_video.h"
 #include "printf.h"
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
 
 CVAR(Bool, gles_use_mapped_buffer, false, 0);
 CVAR(Bool, gles_force_glsl_v100, false, 0);
@@ -166,8 +169,19 @@ namespace OpenGLESRenderer
 #endif
 		CollectExtensions();
 
-		Printf("GL_VENDOR: %s\n", glGetString(GL_VENDOR));
-		Printf("GL_RENDERER: %s\n", glGetString(GL_RENDERER));
+		GLenum vendor = GL_VENDOR;
+		GLenum renderer = GL_RENDERER;
+#ifdef __EMSCRIPTEN__ // attempt to resolve real vendor and renderer
+		if (EM_ASM_INT({ return Number(Boolean(GL.currentContext.GLctx.getExtension('WEBGL_debug_renderer_info'))) }))
+		{
+			// Browser have WEBGL_debug_renderer_info
+			vendor = EM_ASM_INT({ return GL.currentContext.GLctx.getExtension('WEBGL_debug_renderer_info').UNMASKED_VENDOR_WEBGL });
+			renderer = EM_ASM_INT({ return GL.currentContext.GLctx.getExtension('WEBGL_debug_renderer_info').UNMASKED_RENDERER_WEBGL });
+		}
+#endif
+
+		Printf("GL_VENDOR: %s\n", glGetString(vendor));
+		Printf("GL_RENDERER: %s\n", glGetString(renderer));
 		Printf("GL_VERSION: %s\n", glGetString(GL_VERSION));
 		Printf("GL_SHADING_LANGUAGE_VERSION: %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
 		Printf(PRINT_LOG, "GL_EXTENSIONS:\n");
@@ -187,8 +201,8 @@ namespace OpenGLESRenderer
 		gles.maxlights = gles_max_lights_per_surface;
 		gles.numlightvectors = (gles.maxlights * LIGHT_VEC4_NUM);
 
-		gles.modelstring = (char*)glGetString(GL_RENDERER);
-		gles.vendorstring = (char*)glGetString(GL_VENDOR);
+		gles.modelstring = (char*)glGetString(renderer);
+		gles.vendorstring = (char*)glGetString(vendor);
 
 
 		gl_customshader = false; // Disable user shaders for GLES renderer
