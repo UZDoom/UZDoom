@@ -375,7 +375,7 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 		//is this codepoint supported by the target font? If no, split
 		//TODO: if we were writing to fallback and we encounter chars we can render with the desired font again,
 		//go back to writing with the desired font
-		if (!font->CanPrint(srcChar))
+		if (!font->CanPrint(srcChar) && !isInFallback)
 		{
 			currentDrawString = &outStrings.emplace_back(IntermediateDrawString());
 			currentDrawString->Font = font->GetDynamicFontFallback();
