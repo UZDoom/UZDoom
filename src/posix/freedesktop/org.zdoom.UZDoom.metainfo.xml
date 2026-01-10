@@ -20,8 +20,8 @@
 	<url type="vcs-browser">https://github.com/UZDoom/UZDoom</url>
 
 	<branding>
-	  <color type="primary" scheme_preference="light">#77bdc9</color>
-	  <color type="primary" scheme_preference="dark">#23393d</color>
+		<color type="primary" scheme_preference="light">#77bdc9</color>
+		<color type="primary" scheme_preference="dark">#23393d</color>
 	</branding>
 
 	<description>
