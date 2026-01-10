@@ -1,0 +1,22 @@
+name: Lint FreeDesktop metainfo.xml
+
+on:
+  push:
+    paths:
+      - '**.metainfo.xml'
+  workflow_dispatch:
+
+jobs:
+  lint_metainfo:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/flathub/flatpak-builder-lint:latest
+    name: Lint FreeDesktop metadata 
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+      - run: |
+          flatpak-builder-lint --gha-format \
+            appstream src/posix/freedesktop/org.zdoom.UZDoom.metainfo.xml
