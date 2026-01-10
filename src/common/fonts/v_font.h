@@ -75,6 +75,15 @@ enum EColorRange : int
 
 extern int NumTextColors;
 
+struct IntermediateDrawString
+{
+	std::basic_string<char32_t> StringUTF32;
+	Trex::ShapedGlyphs          TrexGlyphs;
+	std::vector<int>            Colors;
+	std::vector<int>            Codepoints;
+	const FFont                      *Font;
+};
+
 using GlyphSet = TMap<int, FGameTexture*>;
 
 class FFont
@@ -181,7 +190,7 @@ public:
 		return InvSupersampleFactor;
 	}
 
-	inline Trex::TextShaper* GetDynamicTextShaper()
+	inline Trex::TextShaper* GetDynamicTextShaper() const
 	{
 		return DynamicTextShaper;
 	}
@@ -262,6 +271,9 @@ protected:
 	friend void V_ClearFonts();
 	friend void V_InitFonts();
 };
+
+void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, const FFont *font, int normalcolor,
+                                      std::vector<IntermediateDrawString> &outStrings);
 
 extern FFont *SmallFont, *SmallFont2, *BigFont, *BigUpper, *ConFont, *IntermissionFont, *NewConsoleFont, *NewSmallFont, *CurrentConsoleFont, *OriginalSmallFont, *AlternativeSmallFont, *OriginalBigFont, *AlternativeBigFont;
 

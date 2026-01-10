@@ -51,6 +51,7 @@
 #include "texturemanager.h"
 #include "Trex/TextShaper.hpp"
 #include "c_cvars.h"
+#include "simdutf.h"
 
 TArray<FBitmap> sheetBitmaps;
 
@@ -1248,20 +1249,25 @@ bool FFont::CanPrint(const uint8_t *string) const
 //
 //==========================================================================
 
-
-
 int FFont::StringWidth(const uint8_t *string, int spacing) const
 {
 	if (IsValidDynamicFont())
 	{
-		const FFont *const ourFont  = CanPrint(string) ? this : GetDynamicFontFallback();
-		assert(ourFont);
-		FString fString          = FString::RemoveColorTags(FString((const char *)string));
-		auto &shaper = *ourFont->DynamicTextShaper;
-		auto    utf8span = std::span<const char>(fString.GetChars(), fString.Len());
-		auto glyphs = shaper.ShapeUtf8(utf8span);
-		auto    measurement      = Trex::TextShaper::Measure(glyphs).width * (float)InvSupersampleFactor;
-		return std::ceil(measurement);
+		std::vector<IntermediateDrawString> drawStrings;
+		drawStrings.reserve(4);
+		std::u32string utf32String;
+		utf32String.resize(
+			simdutf::utf32_length_from_utf8((const char *)string, std::char_traits<uint8_t>::length(string)), '\0');
+		simdutf::convert_utf8_to_utf32((const char *)string, std::char_traits<uint8_t>::length(string),
+		                               utf32String.data());
+		ParseIntoIntermediateDrawStrings(utf32String, this, 0, drawStrings);
+
+		float totalWidth = 0.0f;
+		for (auto &s : drawStrings)
+		{
+			totalWidth += Trex::TextShaper::Measure(s.TrexGlyphs).width * (float)InvSupersampleFactor;
+		}
+		return std::ceil(totalWidth);
 	}
 
 	int w = 0;

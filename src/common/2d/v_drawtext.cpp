@@ -263,18 +263,9 @@ DEFINE_ACTION_FUNCTION(FCanvas, DrawChar)
 // This is only needed as a dummy. The code using wide strings does not need color control.
 EColorRange V_ParseFontColor(const char32_t *&color_value, int normalcolor, int boldcolor) { return CR_UNTRANSLATED; }
 
-struct IntermediateDrawString
-{
-	std::basic_string<char32_t> StringUTF32;
-	Trex::ShapedGlyphs TrexGlyphs;
-	std::vector<int>  Colors;
-	std::vector<int>  Codepoints;
-	FFont*                   Font;
-};
-
 //split the strings into substrings based on what glyphs are supported by the target fonts.
 //shape each substring separately.
-void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, FFont* font, int normalcolor, std::vector<IntermediateDrawString> &outStrings)
+void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, const FFont* font, int normalcolor, std::vector<IntermediateDrawString> &outStrings)
 {
 	outStrings.clear();
 	
