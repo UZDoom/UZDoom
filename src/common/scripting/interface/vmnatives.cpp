@@ -696,6 +696,17 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetHeight, GetHeight)
 	ACTION_RETURN_INT(self->GetHeight());
 }
 
+static int IsValidDynamicFont(FFont *font)
+{
+	return font->IsValidDynamicFont();
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, IsValidDynamicFont, IsValidDynamicFont)
+{
+	PARAM_SELF_STRUCT_PROLOGUE(FFont);
+	ACTION_RETURN_INT(self->IsValidDynamicFont());
+}
+
 static int GetDisplacement(FFont* font)
 {
 	return font->GetDisplacement();
