@@ -1,0 +1,99 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  linux:
+    runs-on: ubuntu-20.04
+    name: 🐧 Ubuntu 20.04
+    steps:
+      - name: 🧰 Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: ⬇️ Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential       \
+            gcc-10                \
+            g++-10                \
+            libsdl2-dev           \
+            libsdl2-mixer-dev
+      - name: Create Build Environment
+        run: cmake -E make_directory ${{runner.workspace}}/build
+
+      - name: Configure CMake
+        shell: bash
+        env:
+          CC: gcc-10
+          CXX: g++-10
+        working-directory: ${{runner.workspace}}/build
+        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+
+      - name: Build
+        working-directory: ${{runner.workspace}}/build
+        shell: bash
+        env:
+          CC: gcc-10
+          CXX: g++-10
+        run: cmake --build . --config $BUILD_TYPE
+
+  win:
+    runs-on: windows-latest
+    name: 🟦 Windows x64
+    steps:
+
+      - name: 🧰 Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Create Build Environment
+        run: cmake -E make_directory ${{runner.workspace}}/build
+
+      - name: Configure CMake Windows
+        shell: bash
+        working-directory: ${{runner.workspace}}/build
+        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" -DVCPKG_BIN_DIR="c:/vcpkg/installed/x64-windows/bin"
+
+      - name: Build
+        working-directory: ${{runner.workspace}}/build
+        shell: bash
+        run: cmake --build . --config $BUILD_TYPE
+
+#  macos-build:
+#     runs-on: macos-10.15
+#     name: 🍎 macOS 10.15
+#     steps:
+
+#       - name: 🧰 Checkout
+#         uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+#           submodules: true
+
+#       - name: ⬇️ Install dependencies
+#         run: brew install sdl2 sdl2_mixer
+
+#       - name: Create Build Environment
+#         run: cmake -E make_directory ${{runner.workspace}}/build
+
+#       - name: Configure CMake
+#         shell: bash
+#         working-directory: ${{runner.workspace}}/build
+#         run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+
+#       - name: Build
+#         working-directory: ${{runner.workspace}}/build
+#         shell: bash
+#         run: |
+#           cmake --build . --config $BUILD_TYPE
