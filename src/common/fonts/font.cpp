@@ -52,6 +52,7 @@
 #include "Trex/TextShaper.hpp"
 #include "c_cvars.h"
 #include "simdutf.h"
+#include <string>
 
 TArray<FBitmap> sheetBitmaps;
 
@@ -1198,9 +1199,16 @@ bool FFont::CanPrint(const uint8_t *string) const
 
 	if (Type == EFontType::Dynamic)
 	{
-		while (*string)
+		FString stripped = (const char*)string;
+		stripped         = FString::RemoveColorTags(stripped);
+		std::u32string utf32String;
+		utf32String.resize(
+			simdutf::utf32_length_from_utf8(stripped.GetChars(), std::char_traits<char>::length(stripped.GetChars())), '\0');
+		simdutf::convert_utf8_to_utf32(stripped.GetChars(), std::char_traits<char>::length(stripped.GetChars()),
+		                               utf32String.data());
+		for (auto c : utf32String)
 		{
-			uint32_t codepoint = GetCharFromString(string);
+			uint32_t codepoint = c;
 			if (!DynamicFontAtlas->GetFont()->GetGlyphIndex(codepoint))
 			{
 				return false;
