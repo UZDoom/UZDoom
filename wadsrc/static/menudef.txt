@@ -2414,6 +2414,9 @@ OptionMenu ModReplayerOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_EXTRA"
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
+
+	StaticText ""
+	SafeCommand "$ACCMNU_RESET", "acc_reset2defaults"
  }
 
 /*=======================================
