@@ -547,7 +547,11 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	{
 		sec = Tics2Seconds(primaryLevel->time);
 		textbuffer.Format("%02d:%02d:%02d", sec / 3600, (sec % 3600) / 60, sec % 60);
-		DrawText(twod, font, crdefault, vwidth - zerowidth * 8 - textdist, y, textbuffer.GetChars(), DTA_VirtualWidth, vwidth, DTA_VirtualHeight, vheight,
+		const bool useDynamicAlighment = font->IsValidDynamicFont();
+		auto       xpos =
+            useDynamicAlighment ? vwidth - font->StringWidth(textbuffer) - textdist : vwidth - zerowidth * 8 - textdist;
+		DrawText(twod, font, crdefault, xpos, y, textbuffer.GetChars(),
+		         DTA_VirtualWidth, vwidth, DTA_VirtualHeight, vheight,
 			DTA_Monospace, EMonospacing::CellCenter, DTA_Spacing, zerowidth, DTA_KeepRatio, true, TAG_END);
 		y += fheight;
 	}
