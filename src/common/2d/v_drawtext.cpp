@@ -386,8 +386,8 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 
 	for (auto &s : outStrings)
 	{
-		auto res = s.Font->GetDynamicTextShaper()->ShapeUtf32(
-			std::span<const char32_t>(s.StringUTF32.begin(), s.StringUTF32.end()));
+		auto res = s.Font->GetDynamicTextShaper()->ShapeUnicode(
+			std::span<const uint32_t>(s.Codepoints.begin(), s.Codepoints.end()));
 		s.TrexGlyphs = res;
 	}
 }

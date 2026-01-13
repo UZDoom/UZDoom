@@ -80,7 +80,7 @@ struct IntermediateDrawString
 	std::basic_string<char32_t> StringUTF32;
 	Trex::ShapedGlyphs          TrexGlyphs;
 	std::vector<int>            Colors;
-	std::vector<int>            Codepoints;
+	std::vector<uint32_t>            Codepoints;
 	const FFont                      *Font;
 };
 
