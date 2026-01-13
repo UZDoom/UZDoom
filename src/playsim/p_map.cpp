@@ -4546,7 +4546,8 @@ DAngle P_AimLineAttack(AActor *t1, DAngle angle, double distance, FTranslatedLin
 				// vrange of 0 degrees, because then toppitch and bottompitch will
 				// be equal, and PTR_AimTraverse will never find anything to shoot at
 				// if it crosses a line.
-				vrange = DAngle::fromDeg(clamp(t1->player->userinfo.GetAimDist(), 0.5, 35.));
+				double bound = (dmflags & DF_NO_FREELOOK)? 35: 70;
+				vrange = DAngle::fromDeg(clamp(t1->player->userinfo.GetAimDist(), 0.5, bound));
 			}
 		}
 	}

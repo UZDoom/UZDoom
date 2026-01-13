@@ -348,7 +348,7 @@ class OptionMenuItemAutoaimSlider : OptionMenuSliderBase
 {
 	OptionMenuItemAutoaimSlider Init(String label)
 	{
-		Super.Init(label, 0, 35, 1, false, 'none');
+		Super.Init(label, 0, 70, 1, false, 'none');
 		return self;
 	}
 

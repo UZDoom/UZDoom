@@ -492,7 +492,7 @@ ListMenu "PlayerMenu"
 	ValueText "$PLYRMNU_PLAYERCLASS", "Class"
 	ValueText "$PLYRMNU_PLAYERSKIN", "Skin"
 	ValueText "$PLYRMNU_PLAYERGENDER", "Gender", "Gender"
-	Slider "$PLYRMNU_AUTOAIM", "Autoaim", 0, 35, 1
+	Slider "$PLYRMNU_AUTOAIM", "Autoaim", 0, 70, 1
 	ValueText "$PLYRMNU_VERTSPREAD", vertspread, "OnOff"
 	ValueText "$PLYRMNU_SWITCHONPICKUP", "Switch", "OffOn"
 	ValueText "$PLYRMNU_ALWAYSRUN", "AlwaysRun", "OnOff"

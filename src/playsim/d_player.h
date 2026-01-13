@@ -37,6 +37,7 @@
 #include "basics.h"
 #include "d_netinf.h"
 #include "d_protocol.h"
+#include "doomdef.h"
 #include "doomstat.h"
 #include "p_pspr.h"
 
@@ -192,9 +193,10 @@ struct userinfo_t : TMap<FName,FBaseCVar *>
 		}
 
 		float aim = *static_cast<FFloatCVar *>(*CheckKey(NAME_Autoaim));
-		if (aim > 35 || aim < 0)
+		float bound = (dmflags & DF_NO_FREELOOK)? 35: 70;
+		if (aim > bound || aim < 0)
 		{
-			return 35.;
+			return bound;
 		}
 		else
 		{
