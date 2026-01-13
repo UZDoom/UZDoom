@@ -6,7 +6,7 @@
 	<project_license>GPL-3.0</project_license>
 
 	<name>UZDoom</name>
-	<developer id="org.zdoom.UZDoom">
+	<developer id="org.zdoom.uzdoom">
 		<name>UZDoom team</name>
 		<url>https://github.com/UZDoom/UZDoom/graphs/contributors</url>
 	</developer>
@@ -25,16 +25,23 @@
 	</branding>
 
 	<description>
-		<p>UZDoom is a source port for the modern era, supporting current hardware and operating systems and sporting a vast array of user options. Make Doom your own again!</p>
-		<p>In addition to Doom, UZDoom supports Heretic, Hexen, Strife, Chex Quest, and fan-created games like Harmony and Hacx. Meet the entire idTech 1 family!</p>
-		<p>Experience mind-bending user-created mods, made possible by ZDoom's advanced mapping features and the ZScript language for complex game mechanics and behaviors. Or make a mod of your own!</p>
+		<p>UZDoom is a source port for the modern era, supporting current hardware and operating systems
+			and sporting a vast array of user options. Make Doom your own again!</p>
+		<p>In addition to Doom, UZDoom supports Heretic, Hexen, Strife, Chex Quest, and fan-created games
+			like Harmony and Hacx. Meet the entire idTech 1 family!</p>
+		<p>Experience mind-bending user-created mods, made possible by ZDoom's advanced mapping features
+			and the ZScript language for complex game mechanics and behaviors. Or make a mod of your
+			own!</p>
 		<ul>
-			<li>Can play all Doom engine games, including Ultimate Doom, Doom II, Heretic, Hexen, Strife, and more</li>
+			<li>Can play all Doom engine games, including Ultimate Doom, Doom II, Heretic, Hexen, Strife,
+				and more</li>
 			<li>Supports all the editing features of Hexen. (ACS, hubs, new map format, etc.)</li>
 			<li>Supports most of the Boom editing features</li>
-			<li>Features complete translations of Doom, Heretic, Hexen, Strife and other games into over ten different languages with Unicode support for Latin, Cyrillic, and Hangul so far</li>
+			<li>Features complete translations of Doom, Heretic, Hexen, Strife and other games into over
+				ten different languages with Unicode support for Latin, Cyrillic, and Hangul so far</li>
 			<li>All Doom limits are gone</li>
-			<li>Several softsynths for MUS and MIDI playback, including an OPL softsynth for an authentic "oldschool" flavor</li>
+			<li>Several softsynths for MUS and MIDI playback, including an OPL softsynth for an authentic
+				"oldschool" flavor</li>
 			<li>High resolutions</li>
 			<li>Quake-style console and key bindings</li>
 			<li>Crosshairs</li>
@@ -44,25 +51,29 @@
 			<li>Support for the Bloodbath announcer from the classic Monolith game Blood</li>
 			<li>Walk over/under monsters and other things</li>
 		</ul>
-		<p>Commercial data files are required to run the supported games. For more info about all supported games and their data files, see Help -&gt; List of supported games.</p>
-		<p>For the Flatpak distribution of UZDoom, all file access is restricted to <code>~/.var/app/org.zdoom.UZDoom/.config/uzdoom</code> by default for security reasons. You will need to place your IWADs and PWADS there, or use an application like Flatseal to give UZDoom additional permissions.</p>
+		<p>Commercial data files are required to run the supported games. For more info about all
+			supported games and their data files, see Help -&gt; List of supported games.</p>
+		<p>For the Flatpak distribution of UZDoom, all file access is restricted to
+			<code>~/.var/app/org.zdoom.UZDoom/</code> by default for security reasons. You
+			will need to place your IWADs and PWADS there, or use an application like Flatseal
+			to give UZDoom additional permissions.</p>
 	</description>
 
 	<screenshots>
 		<screenshot type="default">
-			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_doom.png</image>
+			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@trunk/src/posix/freedesktop/screenshot_doom.png</image>
 			<caption>Doom screenshot</caption>
 		</screenshot>
 		<screenshot>
-			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_strife.png</image>
+			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@trunk/src/posix/freedesktop/screenshot_strife.png</image>
 			<caption>Strife screenshot</caption>
 		</screenshot>
 		<screenshot>
-			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_heretic.png</image>
+			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@trunk/src/posix/freedesktop/screenshot_heretic.png</image>
 			<caption>Heretic screenshot</caption>
 		</screenshot>
 		<screenshot>
-			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@master/src/posix/freedesktop/screenshot_hexen.png</image>
+			<image>https://cdn.jsdelivr.net/gh/UZDoom/UZDoom@trunk/src/posix/freedesktop/screenshot_hexen.png</image>
 			<caption>Hexen screenshot</caption>
 		</screenshot>
 	</screenshots>
@@ -92,104 +103,174 @@
 	</categories>
 
 	<releases>
-		<!-- Keep 5 full descriptions, and 2 years of releases with just urls -->
 		<release version="4.14.3" date="2025-11-28">
 			<description>
-				<h1>UZDoom’s First Release!</h1>
-				<p>Hello all, and welcome to UZDoom! You've no doubt seen our new look courtesy of Cardboard Marty. With 4.14.3 marks the first official release of the port, a smaller update designed to hold the masses over until 5.0. While we wish we could include a bunch of goodies with it, those will still need some time to bake in the oven. Rest assured, 5.0 development is still moving along smoothly and we’re now in “fix things” mode. For now, 4.14.3 will contain a bunch of bug fixes and security updates since we’re intentionally keeping it smaller in scope.</p>
-				<p>Why 4.14.3? Mainly because it makes things a lot easier to transition over since more stuff than you’d think relies on that version number. Speaking of, if you’re coming over from GZDoom, we’ve got some instructions to let you transfer over your saves and configuration files as smoothly as possible.</p>
-				<h2>Transferring From GZDoom</h2>
-				<p>For configuration files, locate the folder containing it and rename both the folder and configuration file from gzdoom to uzdoom. If you’re using a portable configuration file, rename it from gzdoom_portable.ini to uzdoom_portable.ini and place it in your UZDoom folder. If you were using a custom configuration file, UZDoom will load it as-is.</p>
+				<p>Hello all, and welcome to UZDoom's first release! You've no doubt seen our new look
+					courtesy of Cardboard Marty. With 4.14.3 marks the first official release of the port,
+					a smaller update designed to hold the masses over until 5.0. While we wish we could
+					include a bunch of goodies with it, those will still need some time to bake in the oven.
+					Rest assured, 5.0 development is still moving along smoothly and we're now in "fix
+					things" mode. For now, 4.14.3 will contain a bunch of bug fixes and security updates
+					since we're intentionally keeping it smaller in scope.</p>
+				<p>Why 4.14.3? Mainly because it makes things a lot easier to transition over since more
+					stuff than you'd think relies on that version number. Speaking of, if you're coming over
+					from GZDoom, we've got some instructions to let you transfer over your saves and
+					configuration files as smoothly as possible. The source and destination directories
+					depend on whether you're using the Flatpak versions or another version of both GZDoom
+					and UZDoom; the locations UZDoom uses for user data and configuration have changed
+					to be more in line with the FreeDesktop project's specification.</p>
+
+				<p><em>Configuration files</em></p>
 				<ul>
-					<li>On Windows, this will be located in your Documents directory under My Games.</li>
-					<li>On Linux, this will be located in <code>~/.config</code></li>
-					<li>On Mac, this will be located in your Application Support directory.</li>
+					<li>If you're using the Flatpak version of GZDoom, your configuration file is located
+						in <code>~/.var/app/org.zdoom.GZDoom/.config/gzdoom.ini</code></li>
+					<li>For non-Flatpak installations of of GZDoom, your configuration file is located in
+						<code>~/.config/gzdoom.ini</code></li>
 				</ul>
-				<p>For saves, locate the folder containing them and rename it from gzdoom to uzdoom. If you were already using a custom save location, transferring your configuration file will automatically handle this. Note: Only saves from GZDoom 4.0.0 and greater can be transferred.</p>
+				<p>This should be moved to:</p>
 				<ul>
-					<li>On Windows, this will be located in your Saved Games directory.</li>
-					<li>On Linux, see below</li>
-					<li>On Mac, this will be located in your Documents directory.</li>
+					<li>For the UZDoom Flatpak, move the configration file to
+						<code>~/.var/app/org.zdoom.UZDoom/config/uzdoom.ini</code></li>
+					<li>For other installations of UZDoom, move the configuration file to
+						<code>~/.config/uzdoom.ini</code></li>
 				</ul>
-				<h3>Linux Path Changes</h3>
-				<p>The location UZDoom searches for files has changed to more closely match the freedesktop specification.</p>
+				<p>Similarly, any other configuration files you have should also best be moved to this
+					directory.</p>
+
+				<p><em>Save games, WADs, skins etc.</em></p>
 				<ul>
-					<li>
-						Text configs have been moved to <code>$XDG_CONFIG_HOME/uzdoom</code> (<code>~/.config/uzdoom</code> by default).
-						<ul>
-							<li><code>~/.config/gzdoom/gzdoom.ini</code> → <code>~/.config/uzdoom/uzdoom.ini</code></li>
-							<li><code>~/.config/gzdoom/autoexec.cfg</code> → <code>~/.config/uzdoom/autoexec.cfg</code></li>
-						</ul>
-					</li>
-					<li>
-						Game cache has been moved to <code>$XDG_CACHE_HOME/uzdoom</code> (<code>~/.cache/uzdoom</code> by default).
-						<ul>
-							<li><code>~/.config/zdoom/cache</code> → <code>~/.cache/uzdoom</code></li>
-						</ul>
-					</li>
-					<li>
-						All other game data (eg wads, skins, saves) has been moved to <code>$XDG_DATA_HOME/games/uzdoom</code> (<code>~/.local/share/games/uzdoom</code> by default).
-						<ul>
-							<li><code>~/.config/gzdoom/DOOM.WAD</code> → <code>~/.local/share/games/uzdoom/DOOM.WAD</code></li>
-							<li><code>~/.config/gzdoom/savegames</code> → <code>~/.local/share/games/uzdoom/savegames</code></li>
-							<li><code>~/.config/gzdoom/skins</code> → <code>~/.local/share/games/uzdoom/skins</code></li>
-						</ul>
-					</li>
+					<li>If you're using the GZDoom Flatpak, save games, skins, WAD files etc. are stored
+						in <code>~/.var/app/org.zdoom.GZDoom/.config/</code></li>
+					<li>For other installations of GZDoom, this data can be found in
+						<code>~/.config/gzdoom/</code></li>
 				</ul>
-				<p>In practice, you want to:</p>
-				<ol>
-					<li>Create folder <code>~/.local/share/games/uzdoom</code>, and move everything from <code>~/.config/gzdoom</code> except <code>gzdoom.ini</code> and <code>autoexec.cfg</code> into it.</li>
-					<li>Rename <code>gzdoom.ini</code> to <code>uzdoom.ini</code>.</li>
-					<li>Rename <code>~/.config/gzdoom</code> to <code>~/.config/uzdoom</code>.</li>
-				</ol>
-				<h2>Defaults</h2>
-				<p>Defaults have long been a contentious issue in the ZDoom community, with some feeling it strays too far from what makes vanilla shine while others enjoy the visual flare compared to classical ports. We can understand both sides of this, and while we want to balance it as best we can, we ultimately felt that having so many extra graphical options on by default was too much. As such, we won’t be removing any of these features but instead will be going for an opt-in approach to make it easier to manage for first-time users. We feel these changes can help give better visual cohesion with content designed for vanilla while also balancing the legacy of maps and mods that relied on them. One of UZDoom’s biggest strengths, after all, is its ability to play almost anything thrown at it.</p>
-				<p>To go deeper into the why, we’d like to give some core philosophies around our decisions for how we chose defaults:</p>
+				<p>This should be moved to:</p>
 				<ul>
-					<li>Out of the box, Doom should reasonably resemble how it originally looked. There are a large number of reasons someone would want to use UZDoom including its powerful scripting capabilities, its accessibility options, and the fact it can play just about darn near anything without hassle. Forcing users into the menu to achieve this is not the correct way to go about it, so only select effects will be enabled that we feel don’t distract heavily from its original vision. For the fancier effects, we’ve tried our best to make them more consistent with Doom’s overall aesthetic so that even when used, they don’t appear to clash.</li>
-					<li>Modernization should also be done where reasonable. The reality is that we aren’t playing Doom in software on CRTs anymore but with 3D acceleration and modern monitors. This introduces some stark differences, so those should be accounted for as best as possible. For this reason, enhancements that don’t take away from the aesthetic like anisotropic filtering and distance-based filtering have been left on to help clean up the image. We also understand we have a legacy of maps designed for GZDoom to account for, and not all user options are controllable by mappers, so certain things like the software light banding have been left off to prevent breaking visual cohesion with these.</li>
-					<li>Getting a more vanilla experience should be made easier. Having to constantly go into the menu or mess with console variables isn’t fun, and things should be made more streamlined. For this reason we’re starting with a new tweak: the automap now has a Default color mode to automatically match the current game’s art style. In the future the Auto modes for ZDoom’s translucency will also be enhanced to allow better fine tuning for balancing vanilla visuals with mods expecting transparency. We’ll be looking into ways to improve this on the gameplay front as well since ZDoom introduced some differences that we know can break things like combat encounters in unexpected ways. While we have plans to fix up the menu, the best solution is for users to not feel like they need to constantly fall back on it at all.</li>
+					<li>For the UZDoom Flatpak, move the game data to
+						<code>~/.var/app/org.zdoom.UZDoom/data/uzdoom/</code></li>
+					<li>For other installations of UZDoom, the correct location for this data is
+						<code>~/.local/share/games/uzdoom/</code></li>
 				</ul>
-				<h2>Changes From GZDoom 4.14.2</h2>
+
+				<p><em>Game cache</em></p>
+				<p>Game cache data will be re-generated if it is missing, but if you want to save
+					a likely minor amount of performance the first time you play a game with UZDoom,
+					or if you want to simply remove your existing GZDoom cache and start fresh:</p>
 				<ul>
-					<li>Multiple security fixes. <b>This update is being deemed as critical.</b> It’s highly recommended to upgrade to it.</li>
-					<li>Anisotropic filtering is now disabled on Intel GPU devices if the texture filtering mode is set to any of the None options. This is to prevent texture filtering from being forced on when anisotropic filtering is enabled.</li>
-					<li>Added new game-based cursors (courtesy of Nash Muhandes and Xaser). These are much more cursor-y, and very good at pointing and clicking on things.</li>
+					<li>If you're using the GZDoom Flatpak, the game cache is stored
+						in <code>~/.var/app/org.zdoom.GZDoom/.config/zdoom/cache</code></li>
+					<li>For other installations of GZDoom, this data can be found in
+						<code>~/.config/zdoom/cache/</code></li>
+				</ul>
+				<p>This should be moved to:</p>
+				<ul>
+					<li>For the UZDoom Flatpak, move the game cache to
+						<code>~/.var/app/org.zdoom.UZDoom/cache/uzdoom/</code></li>
+					<li>For other installations of UZDoom, the correct location for this data is
+						<code>~/.cache/uzdoom/</code></li>
+				</ul>
+
+				<p><em>Defaults</em></p>
+				<p>Defaults have long been a contentious issue in the ZDoom community, with some feeling it
+					strays too far from what makes vanilla shine while others enjoy the visual flare compared
+					to classical ports. We can understand both sides of this, and while we want to balance
+					it as best we can, we ultimately felt that having so many extra graphical options on by
+					default was too much. As such, we won't be removing any of these features but instead
+					will be going for an opt-in approach to make it easier to manage for first-time users. We
+					feel these changes can help give better visual cohesion with content designed for vanilla
+					while also balancing the legacy of maps and mods that relied on them. One of UZDoom's
+					biggest strengths, after all, is its ability to play almost anything thrown at it.</p>
+				<p>To go deeper into the why, we'd like to give some core philosophies around our decisions
+					for how we chose defaults:</p>
+				<ul>
+					<li>Out of the box, Doom should reasonably resemble how it originally looked. There are
+						a large number of reasons someone would want to use UZDoom including its powerful
+						scripting capabilities, its accessibility options, and the fact it can play just
+						about darn near anything without hassle. Forcing users into the menu to achieve this
+						is not the correct way to go about it, so only select effects will be enabled that
+						we feel don't distract heavily from its original vision. For the fancier effects,
+						we've tried our best to make them more consistent with Doom's overall aesthetic so
+						that even when used, they don't appear to clash.</li>
+					<li>Modernization should also be done where reasonable. The reality is that we aren't
+						playing Doom in software on CRTs anymore but with 3D acceleration and modern
+						monitors. This introduces some stark differences, so those should be accounted for
+						as best as possible. For this reason, enhancements that don't take away from the
+						aesthetic like anisotropic filtering and distance-based filtering have been left
+						on to help clean up the image. We also understand we have a legacy of maps designed
+						for GZDoom to account for, and not all user options are controllable by mappers,
+						so certain things like the software light banding have been left off to prevent
+						breaking visual cohesion with these.</li>
+					<li>Getting a more vanilla experience should be made easier. Having to constantly go
+						into the menu or mess with console variables isn't fun, and things should be made
+						more streamlined. For this reason we're starting with a new tweak: the automap now
+						has a Default color mode to automatically match the current game's art style.
+						In the future the Auto modes for ZDoom's translucency will also be enhanced to
+						allow better fine tuning for balancing vanilla visuals with mods expecting
+						transparency. We'll be looking into ways to improve this on the gameplay front as
+						well since ZDoom introduced some differences that we know can break things like
+						combat encounters in unexpected ways. While we have plans to fix up the menu, the
+						best solution is for users to not feel like they need to constantly fall back on
+						it at all.</li>
+				</ul>
+				<p><em>Changes From GZDoom 4.14.2</em></p>
+				<ul>
+					<li>Multiple security fixes. <em>This update is being deemed as critical.</em> It's
+						highly recommended to upgrade to it.</li>
+					<li>Anisotropic filtering is now disabled on Intel GPU devices if the texture filtering
+						mode is set to any of the None options. This is to prevent texture filtering from
+						being forced on when anisotropic filtering is enabled.</li>
+					<li>Added new game-based cursors (courtesy of Nash Muhandes and Xaser). These are much
+						more cursor-y, and very good at pointing and clicking on things.</li>
 					<li>Changed defaults to be more balanced between vanilla and modern.</li>
-					<li>Lowered the master volume so it's less likely to blow out the system audio and become muffled (especially with things like the Plasma Rifle firing sound).</li>
-					<li>Added the Default option for automap colors, allowing the automap to choose based on which game is being played.</li>
-					<li>Added a Display option to control the render style of rocket explosions (these now default to additive instead of translucent since we felt it visually fit the other projectiles better).</li>
-					<li>Made the mouse less sensitive in menus when it’s been dormant for a short period. This should help reduce it accidentally shifting the selected option randomly while idle.</li>
-					<li>Added the powerup_fade_scalar cvar for controlling the strength of the fade on power ups (e.g. the Radiation Suit’s green tint).</li>
+					<li>Lowered the master volume so it's less likely to blow out the system audio and
+						become muffled (especially with things like the Plasma Rifle firing sound).</li>
+					<li>Added the Default option for automap colors, allowing the automap to choose based
+						on which game is being played.</li>
+					<li>Added a Display option to control the render style of rocket explosions (these now
+						default to additive instead of translucent since we felt it visually fit the other
+						projectiles better).</li>
+					<li>Made the mouse less sensitive in menus when it's been dormant for a short period.
+						This should help reduce it accidentally shifting the selected option randomly while
+						idle.</li>
+					<li>Added the powerup_fade_scalar cvar for controlling the strength of the fade on power
+						ups (e.g. the Radiation Suit's green tint).</li>
 					<li>Added support for the BUSY script flag for ACS.</li>
-					<li>Fixed audio not muting properly when the game is unfocused, causing it to build up and play back explosively in certain cases (especially for multiplayer games).</li>
+					<li>Fixed audio not muting properly when the game is unfocused, causing it to build up
+						and play back explosively in certain cases (especially for multiplayer games).</li>
 					<li>Fixed the master volume not properly applying to music when the game starts up.</li>
 					<li>Fixed weapon bobbing not disabling correctly when manually set to 0 via cvar.</li>
-					<li>Fixed the wrong music being played during Strife’s bad endings.</li>
+					<li>Fixed the wrong music being played during Strife's bad endings.</li>
 					<li>Fixed the opening subtitle for Strife not displaying.</li>
-					<li>Fixed the Iron Lich’s whirlwind blaming the wrong target for its damage dealt.</li>
+					<li>Fixed the Iron Lich's whirlwind blaming the wrong target for its damage dealt.</li>
 					<li>Fixed the textured automap being broken.</li>
 					<li>Fixed mid textures clipping incorrectly when skewed.</li>
 					<li>Fixed a crash with VisualThinkers when loading from a save.</li>
-					<li>Fixed IQM models with decoupled animations not displaying correctly if spawned without an animation.</li>
+					<li>Fixed IQM models with decoupled animations not displaying correctly if spawned
+						without an animation.</li>
 					<li>Fixed gun flashes from MBF21 weapons not displaying correctly.</li>
-					<li>Fixed a bug with CreateTossable where items wouldn’t be removed if their amount was 0.</li>
-					<li>Fixed Quat’s Conjugate and Inverse functions throwing a JIT error.</li>
+					<li>Fixed a bug with CreateTossable where items wouldn't be removed if their amount
+						was 0.</li>
+					<li>Fixed Quat's Conjugate and Inverse functions throwing a JIT error.</li>
 					<li>Fixed the BrokenLines class being unserializable.</li>
-					<li>Fixed level data fields e.g. Sector not being cleared properly when transitioning between levels.</li>
+					<li>Fixed level data fields e.g. Sector not being cleared properly when transitioning
+						between levels.</li>
 				</ul>
 			</description>
 			<url>https://forum.zdoom.org/viewtopic.php?t=81099</url>
 		</release>
 		<release version="4.14.2" date="2025-05-03">
 			<description>
-				<p>This update delivers various bug fixes, performance optimizations, and significantly expands modding capabilities.</p>
+				<p>This update delivers various bug fixes, performance optimizations, and significantly
+					expands modding capabilities.</p>
 				<ul>
 					<li>Ortho + OOB fixes and improvements</li>
 					<li>Revert clipper to older code path when not in Ortho/OOB (speed improvement)</li>
 					<li>Fix to some crashes and memory leaks</li>
-					<li>Exposed DDoor to ZScript, Exposed DPlat to ZScript, Exposed more of the Ceiling thinker, Exposed more of the Floor thinker, Exposed DElevator to ZScript.</li>
-					<li>Exported: GetLumpContainer, GetContainerName, GetLumpFullPath for WADS struct, useful for debugging custom-made parsers and identifying where problems may arise.</li>
+					<li>Exposed DDoor to ZScript, Exposed DPlat to ZScript, Exposed more of the Ceiling
+						thinker, Exposed more of the Floor thinker, Exposed DElevator to ZScript.</li>
+					<li>Exported: GetLumpContainer, GetContainerName, GetLumpFullPath for WADS struct,
+						useful for debugging custom-made parsers and identifying where problems may
+						arise.</li>
 					<li>Added autoSwitch parameter to A_ReFire</li>
 					<li>add a few commonly-used gzdoom-specific properties to the dehacked parser</li>
 					<li>many more fixes and improvements</li>
