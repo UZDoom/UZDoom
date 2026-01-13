@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '**.metainfo.xml'
+  pull_request:
+    paths:
+      - '**.metainfo.xml'
   workflow_dispatch:
 
 jobs:
