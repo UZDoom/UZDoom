@@ -103,6 +103,7 @@
 	</categories>
 
 	<releases>
+		<!-- Keep 5 full descriptions, and 2 years of releases with just urls -->
 		<release version="4.14.3" date="2025-11-28">
 			<description>
 				<p>Hello all, and welcome to UZDoom's first release! You've no doubt seen our new look
