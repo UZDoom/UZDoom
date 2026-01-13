@@ -1499,6 +1499,22 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 	FontHeight = fontAtlas->GetFont()->GetMetrics().height * InvSupersampleFactor;
 }
 
+FFont *FFont::GetDynamicFontFallbackForChar32(char32_t srcChar) const
+{
+	//try special writing system fonts and see if they can handle it
+	auto JPNFont = V_GetFont(*fontoverride_FallbackJP);
+	auto KRFont  = V_GetFont(*fontoverride_FallbackKR);
+	if (JPNFont->CanPrint(srcChar))
+	{
+		return JPNFont;
+	}
+	else if (KRFont->CanPrint(srcChar))
+	{
+		return KRFont;
+	}
+	return V_GetFont(*fontoverride_Fallback);
+}
+
 //==========================================================================
 //
 // FFont :: FixXMoves

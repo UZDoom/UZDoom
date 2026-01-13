@@ -202,6 +202,8 @@ public:
 		return DynamicFontFallback;
 	}
 
+	FFont *GetDynamicFontFallbackForChar32(char32_t srcChar) const;
+
 	friend void V_InitCustomFonts();
 
 	void CopyFrom(const FFont& other)

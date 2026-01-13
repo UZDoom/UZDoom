@@ -370,7 +370,7 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 		if (!font->CanPrint(srcChar) && !isInFallback)
 		{
 			currentDrawString = &outStrings.emplace_back(IntermediateDrawString());
-			currentDrawString->Font = font->GetDynamicFontFallback();
+			currentDrawString->Font = font->GetDynamicFontFallbackForChar32(srcChar);
 			isInFallback            = true;
 		}
 		else if (isInFallback && font->CanPrint(srcChar))
