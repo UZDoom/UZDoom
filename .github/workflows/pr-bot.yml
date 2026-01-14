@@ -22,13 +22,10 @@ jobs:
             //
 
             const marker = "our-nice-little-helper-bot-983247854" // used for comment updates
-            const { repository } = context.payload;
-            const { issues, pulls } = github.rest;
+            const { repository, pull_request: pr } = context.payload;
+            const { issues, pulls, repos } = github.rest;
             const auth = { owner: context.repo.owner, repo: context.repo.repo };
             const base = `${repository.html_url}/blob/${repository.default_branch}`;
-            const { data: pr } = await pulls.get({
-              ...auth, pull_number: context.issue.number
-            });
 
             const body = [
               `<!--${marker}-->`,
@@ -45,9 +42,14 @@ jobs:
             // Push string to body array to add new sections
             //
 
-            const newFace = (() => {
+            const newFace = await (async () => {
               console.log("newFace", pr.author_association);
-              return pr.author_association === "FIRST_TIME_CONTRIBUTOR";
+              if (pr.author_association === "FIRST_TIME_CONTRIBUTOR")
+                return true;
+              const commits = await repos.listCommits({...auth, author: pr.user.login})
+                .then(({data: commits}) => commits.map(c => c.sha.substring(0,8)));
+              console.log("newFace", commits);
+              return commits.length === 0;
             })();
 
             const canModify = (() => {
@@ -57,14 +59,14 @@ jobs:
 
             const checkboxProblem = (() => {
               const expected = "- [ ] I have reviewed [CONTRIBUTING.md] and agree to its terms.";
-              const pattern = /- \[([ |x])\] I have reviewed \[CONTRIBUTING\.md\](\(.+\))? and agree to its terms\./i;
+              const pattern = /- \[ *(.*) *\] I have reviewed \[CONTRIBUTING\.md\](\(.+\))? and agree to its terms\./i;
 
               if (!pattern.test(expected)) throw new Error("expected string does not match test string");
               const match = pattern.exec(pr.body);
               console.log("checkboxProblem", match);
               if (!match) {
                 return `Ensure this checkbox is in the PR: '${expected}'`;
-              } else if (match[1] !== 'x') {
+              } else if (match[1].length === 0) {
                 return `Please agree to the terms in ${link("CONTRIBUTING.md")}, by checking the box in the description.`;
               }
               return false;
@@ -161,6 +163,13 @@ jobs:
               body.push(
                 "#### Here are some minor issues, that might need fixing:",
                 ...quibbles,
+              );
+            }
+
+            if (blockers.length === 0 && quibbles.length === 0)
+            {
+              body.push(
+                "#### Nothing to report. Nice :)"
               );
             }
 
