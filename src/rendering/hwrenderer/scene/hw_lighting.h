@@ -32,9 +32,12 @@ inline int hw_ClampLight(int lightlevel)
 }
 
 template<bool doClamp = true>
-inline int RescaleLightLevel(int lightlevel) // TODO/tidy: move out of hwrenderer namespace
+inline int RescaleLightLevel(int lightlevel, AActor *mo = nullptr, DVisualThinker *vt = nullptr) // TODO/tidy: move out of hwrenderer namespace
 {
-	if constexpr(doClamp)
+	if ((mo && mo->LightLevel > -1 && !(mo->flags8 & MF8_ADDLIGHTLEVEL)) ||
+	    (vt && vt->LightLevel > -1 && !(vt->flags & VTF_AddLightLevel)))
+		return hw_ClampLight(lightlevel);
+	else if constexpr(doClamp)
 	{
 		//max is needed for negative r_extralight values
 		return max(int((clamp(lightlevel, 0, 255) / 255.0) * (255.0 - r_extralight)) + r_extralight, 0);

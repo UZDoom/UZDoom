@@ -1253,7 +1253,7 @@ void HWSprite::Process(HWDrawInfo *di, AActor* thing, sector_t * sector, area_t 
 		((thing->renderflags & RF_FULLBRIGHT) && (!texture || !texture->isFullbrightDisabled()));
 
 	if (fullbright)	lightlevel = 255;
-	else lightlevel = RescaleLightLevel(thing->GetLightLevel(rendersector));
+	else lightlevel = RescaleLightLevel(thing->GetLightLevel(rendersector), thing);
 
 	foglevel = (uint8_t)clamp<short>(rendersector->lightlevel, 0, 255); // this *must* use the sector's light level or the fog will just look bad.
 
@@ -1481,7 +1481,7 @@ void HWSprite::ProcessParticle(HWDrawInfo *di, particle_t *particle, sector_t *s
 	if (spr && !spr->ValidTexture())
 		return;
 
-	lightlevel = RescaleLightLevel(spr ? spr->GetLightLevel(sector) : sector->GetSpriteLight());
+	lightlevel = RescaleLightLevel(spr ? spr->GetLightLevel(sector) : sector->GetSpriteLight(), nullptr, spr);
 	foglevel = (uint8_t)clamp<short>(sector->lightlevel, 0, 255);
 
 	trans = particle->alpha;
