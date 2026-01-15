@@ -428,7 +428,9 @@ namespace
 	{
 		m_Data.resize(width * height * channels);
 
-		int fillColor = Channels() > 1 ? 0 : 255;
+		//UZDOOM EDIT: always use black as the fill color, even with the single channel texture.
+		//reason: Trex assumes you wanted Black-on-White for anything other than LCD mode.
+		int fillColor = 0;
 		std::fill(m_Data.begin(), m_Data.end(), fillColor );
 	}
 

@@ -179,7 +179,7 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 		const int    supersampleScale  = *font_supersamplescale;
 		Trex::Atlas *atlas =
 			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), defaultLineHeight * supersampleScale,
-		                    UZDoomCharSet, Trex::RenderMode::LCD);
+		                    UZDoomCharSet, Trex::RenderMode::DEFAULT);
 
 		return new FFont(shortName.GetChars(), atlas, supersampleScale);
 	}
