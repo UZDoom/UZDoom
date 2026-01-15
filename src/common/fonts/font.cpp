@@ -1489,7 +1489,6 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 	FImageTexture *img = new FImageTexture(src);
 	img->SetSize(trexBitmap.Width(), trexBitmap.Height());
 	FGameTexture  *tex   = MakeGameTexture(img, nullptr, ETextureType::FontChar);
-	tex->SetNoMipmap(true);
 	tex->SetSize(trexBitmap.Width(), trexBitmap.Height());
 	TexMan.AddGameTexture(tex);
 	DynamicFontAtlasTexture = tex;
