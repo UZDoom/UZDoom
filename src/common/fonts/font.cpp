@@ -59,6 +59,7 @@ TArray<FBitmap> sheetBitmaps;
 CVAR(String, fontoverride_Fallback, "PLEXSANS", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackJP, "IBMPLEXJ", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackKR, "IBMPLEXK", CVAR_ARCHIVE);
+CVAR(String, fontoverride_FallbackCYR, "HACK_BOL", CVAR_ARCHIVE);
 
 void SetFontChoice_SmallText(const char *newFont);
 CUSTOM_CVAR(String, fontchoice_smalltext, "PLEXSANS", CVAR_ARCHIVE)
@@ -120,6 +121,12 @@ void SetNewSmallFontOverrideKR(const char *newFont);
 CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "IBMPLEXK", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverrideKR(self);
+}
+
+void SetNewSmallFontOverrideCYR(const char *newFont);
+CUSTOM_CVAR(String, fontoverride_NewSmallFontCYR, "HACK-BOL", CVAR_ARCHIVE)
+{
+	SetNewSmallFontOverrideCYR(self);
 }
 
 void SetHUDFontOverride(const char *newFont);
@@ -654,6 +661,11 @@ FFont *FindDynamicFallbackFontForLanguage(const char *lang)
 	{
 		return V_GetFont(*fontoverride_FallbackJP);
 	}
+	else if (language.CompareNoCase("ru") == 0 ||
+		language.CompareNoCase("sr") == 0)
+	{
+		return V_GetFont(*fontoverride_FallbackCYR);
+	}
 	return V_GetFont(*fontoverride_Fallback);
 }
 
@@ -726,6 +738,22 @@ void SetNewSmallFontOverrideKR(const char *newFont)
 		if (!NewSmallFont)
 		{
 			NewSmallFont = FindDynamicFallbackFontForLanguage("ko");
+		}
+	}
+}
+
+void SetNewSmallFontOverrideCYR(const char *newFont)
+{
+	if (strcmp(newFont, "FO_DEFAULT") == 0)
+	{
+		NewSmallFont = V_GetFont("NewSmallFont");
+	}
+	else
+	{
+		NewSmallFont = V_GetFont(newFont);
+		if (!NewSmallFont)
+		{
+			NewSmallFont = FindDynamicFallbackFontForLanguage("ru");
 		}
 	}
 }
@@ -1479,7 +1507,7 @@ FFont *FFont::GetDynamicFontFallbackForChar32(char32_t srcChar) const
 	{
 		return JPNFont;
 	}
-	else if (KRFont->CanPrint(srcChar))
+	else if (KRFont->CanPrint(srcChar)) 
 	{
 		return KRFont;
 	}
