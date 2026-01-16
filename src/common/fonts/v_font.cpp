@@ -49,6 +49,9 @@
 #include "fs_files.h"
 #include <span>
 #include "c_cvars.h"
+#include "freetype/freetype.h"
+#include <exception>
+#include "freetype/tttables.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -170,15 +173,26 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 	{
 		FileSys::FileData data      = fileSystem.ReadFileFullName(f.name);
 		FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
-		// TODO: determine required character set based on current language
-		// TODO: determine if fonts actually cover the required language
 		Trex::Charset UZDoomCharSet = Trex::Charset::Full();
 
-		// TODO: we need to base this on the real line height and not a hardcoded number.. how??
-		const int    defaultLineHeight = 17;
+		auto TrexFont = Trex::Font::Font(std::span<const uint8_t>(data.bytes(), data.size()));
+		auto       flags      = TrexFont.face->face_flags;
+		const bool bIsUnicode = TrexFont.face->charmap->encoding & FT_ENCODING_UNICODE;
+		if (!bIsUnicode)
+		{
+			throw std::exception("only unicode dynamic fonts are supported.");
+		}
+
+		//scale the line height based on the deviation from latin
+		auto        em                        = TrexFont.face->units_per_EM;
+		const double emMultiplier               = 1000.0 / em;
+		const double emAdjustedHeight = (double)TrexFont.face->height * emMultiplier;
+		const double baselineAdjustedHeight     = 1300.0; //em adjusted height for the plex fonts
+		const double actualFontHeightMultiplier = baselineAdjustedHeight / emAdjustedHeight;
+		const int    adjustedFontSize          = ceil((double)17 * actualFontHeightMultiplier);
 		const int    supersampleScale  = *font_supersamplescale;
 		Trex::Atlas *atlas =
-			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), defaultLineHeight * supersampleScale,
+			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), adjustedFontSize * supersampleScale,
 		                    UZDoomCharSet, Trex::RenderMode::DEFAULT);
 
 		return new FFont(shortName.GetChars(), atlas, supersampleScale);
