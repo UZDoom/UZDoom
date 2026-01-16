@@ -52,6 +52,7 @@
 #include "freetype/freetype.h"
 #include <exception>
 #include "freetype/tttables.h"
+#include <stdexcept>
 
 // MACROS ------------------------------------------------------------------
 
@@ -180,7 +181,7 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 		const bool bIsUnicode = TrexFont.face->charmap->encoding & FT_ENCODING_UNICODE;
 		if (!bIsUnicode)
 		{
-			throw std::exception("only unicode dynamic fonts are supported.");
+			throw std::runtime_error("only unicode dynamic fonts are supported.");
 		}
 
 		//scale the line height based on the deviation from latin
