@@ -176,7 +176,7 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 		FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
 		Trex::Charset UZDoomCharSet = Trex::Charset::Full();
 
-		auto TrexFont = Trex::Font::Font(std::span<const uint8_t>(data.bytes(), data.size()));
+		Trex::Font TrexFont = Trex::Font(std::span<const uint8_t>(data.bytes(), data.size()));
 		auto       flags      = TrexFont.face->face_flags;
 		const bool bIsUnicode = TrexFont.face->charmap->encoding & FT_ENCODING_UNICODE;
 		if (!bIsUnicode)
