@@ -735,34 +735,6 @@ void SetHUDFontOverride(const char *newFont)
 	//
 }
 
-void FFont::UpdateFontDynamicFallbacks(const char* lang)
-{
-	auto font = FirstFont;
-	while (font)
-	{
-		if (font->GetType() == EFontType::Dynamic)
-		{
-			//set dynamic fallback to match the current language
-			auto          fallback = FindDynamicFallbackFontForLanguage(lang);
-			font->SetDynamicFallback(fallback);
-		}
-		font = font->Next;
-	}
-
-	if (strcmp(lang, "jp") == 0)
-	{
-		NewSmallFont = V_GetFont(*fontoverride_NewSmallFontJP);
-	}
-	else if (strcmp(lang, "ko") == 0)
-	{
-		NewSmallFont = V_GetFont(*fontoverride_NewSmallFontKR);
-	}
-	else 
-	{
-		NewSmallFont = V_GetFont(*fontoverride_NewSmallFont);
-	}
-}
-
 FFont *FFont::GetSmallTextFont(FFont* fallbackIfNoUserChoice)
 {
 	FFont *userFont = V_GetFont(*fontchoice_smalltext);

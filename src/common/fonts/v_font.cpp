@@ -235,14 +235,6 @@ void V_InitCustomFonts()
 				fontsWeAdded.push_back(NewFont);
 			}
 		}
-
-		for (auto *font : fontsWeAdded)
-		{
-			const FName  fontName        = font->GetName();
-			auto         cvar            = FindCVar("fontoverride_Fallback", nullptr);
-			FFont *const dynamicFallback = V_GetFont(cvar->GetHumanString());
-			font->SetDynamicFallback(dynamicFallback);
-		}
 	}
 
 	while ((llump = fileSystem.FindLump ("FONTDEFS", &lastlump)) != -1)
