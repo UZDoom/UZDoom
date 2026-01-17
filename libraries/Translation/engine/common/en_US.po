@@ -2288,11 +2288,14 @@ msgstr "Choose a font to use for the command console. Also often used for misc s
 msgid "FONTMNU_BIG_TEXT_FONT"
 msgstr "Big Text Font choice: "
 
-msgid "FONTMNU_BIG_TEXT_TOOLTIP"
+msgid "FONTMNU_BIG_TEXT_FONT_TOOLTIP"
 msgstr "Choose a font to use for big text, such as main menu items."
 
 msgid "FONTMNU_SMALL_TEXT_FONT_JP"
 msgstr "Small Text Font choice (Japanese): "
+
+msgid "FONTMNU_BIG_TEXT_FONT_JP"
+msgstr "Big Text Font choice (Japanese): "
 
 msgid "FONTMNU_TITLE_FONT_JP"
 msgstr "Title Font choice (Japanese): "
@@ -2303,6 +2306,9 @@ msgstr "Description Font choice (Japanese): "
 msgid "FONTMNU_SMALL_TEXT_FONT_KO"
 msgstr "Small Text Font choice (Korean): "
 
+msgid "FONTMNU_BIG_TEXT_FONT_KO"
+msgstr "Big Text Font choice (Korean): "
+
 msgid "FONTMNU_TITLE_FONT_KO"
 msgstr "Title Font choice (Korean): "
 
@@ -2311,6 +2317,9 @@ msgstr "Description Font choice (Korean): "
 
 msgid "FONTMNU_SMALL_TEXT_FONT_CYR"
 msgstr "Small Text Font choice (Cyrillic): "
+
+msgid "FONTMNU_BIG_TEXT_FONT_CYR"
+msgstr "Big Text Font choice (Cyrillic): "
 
 msgid "FONTMNU_TITLE_FONT_CYR"
 msgstr "Title Font choice (Cyrillic): "

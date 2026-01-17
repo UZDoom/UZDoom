@@ -92,14 +92,17 @@ CUSTOM_CVAR(String, fontchoice_bigtext, "PLEXSANS", CVAR_ARCHIVE)
 }
 
 CVAR(String, fontchoice_smalltextJP, "IBMPLEXJ", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextJP, "IBMPLEXJ", CVAR_ARCHIVE);
 CVAR(String, fontchoice_titleJP, "IBMPLEXJ", CVAR_ARCHIVE);
 CVAR(String, fontchoice_descriptionJP, "KOSUGIMA", CVAR_ARCHIVE);
 
 CVAR(String, fontchoice_smalltextKO, "IBMPLEXK", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextKO, "IBMPLEXK", CVAR_ARCHIVE);
 CVAR(String, fontchoice_titleKO, "IBMPLEXK", CVAR_ARCHIVE);
 CVAR(String, fontchoice_descriptionKO, "IBMPLEXK", CVAR_ARCHIVE);
 
 CVAR(String, fontchoice_smalltextCYR, "HACK-BOL", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextCYR, "HACK-BOL", CVAR_ARCHIVE);
 CVAR(String, fontchoice_titleCYR, "HACK-BOL", CVAR_ARCHIVE);
 CVAR(String, fontchoice_descriptionCYR, "HACK-BOL", CVAR_ARCHIVE);
 
@@ -851,6 +854,20 @@ FFont *FFont::GetConsoleFont(FFont *fallbackIfNoUserChoice)
 FFont *FFont::GetBigTextFont(FFont *fallbackIfNoUserChoice)
 {
 	FFont *userFont = V_GetFont(*fontchoice_bigtext);
+	FString lang     = GStrings.GetActiveLanguage();
+
+	if (lang.CompareNoCase("jp") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_bigtextJP);
+	}
+	else if (lang.CompareNoCase("ko") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_bigtextKO);
+	}
+	else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
+	{
+		userFont = V_GetFont(*fontchoice_bigtextCYR);
+	}
 	if (userFont)
 	{
 		return userFont;
