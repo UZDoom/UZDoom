@@ -274,7 +274,7 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 	currentDrawString->Font = font;
 	bool insideEscapeSequence = false;
 	bool insideNamedColorTagSequence = false;
-	int currentcolor = 0;
+	int currentcolor = V_LogColorFromColorRange((EColorRange)normalcolor);
 	int boldcolor = normalcolor ? normalcolor - 1 : NumTextColors - 1;
 	bool isInFallback                = false;
 	std::u32string colorSubStr;
@@ -466,11 +466,8 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 				atlasFragmentDrawParms.style    = trexTextRenderStyle;
 				atlasFragmentDrawParms.destwidth *= (shrinkScale);
 				atlasFragmentDrawParms.destheight *= (shrinkScale);
-				if (s.Colors[i] != 0)
-				{
-					atlasFragmentDrawParms.color = s.Colors[i];
-					atlasFragmentDrawParms.color.a = 255;
-				}
+				atlasFragmentDrawParms.color   = s.Colors[i];
+				atlasFragmentDrawParms.color.a = 255;
 
 				// TODO: cvar
 				const bool drawDropShadow = true;
