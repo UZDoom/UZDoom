@@ -438,7 +438,7 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		
 		double cursorx = x;
 		double cursory = y;
-		const FRenderStyle trexTextRenderStyle = {STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_One, STYLEF_Alpha1};
+		const FRenderStyle trexTextRenderStyle = {STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha};
 
 		for (auto &s : DrawStrings)
 		{
