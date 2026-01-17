@@ -22,17 +22,17 @@ class LevelCompatibility : LevelPostProcessor
 	protected void Apply(Name checksum, String mapname)
 	{
 		switch (checksum)
-		{			
+		{
 			case 'none':
 				return;
-				
+
 			case '9BC9E12781903D7C2D5697A5E0AEFD6F': // HACX.WAD map05 from 21.10.2010
 			case '9527DD0809FDA39CCFC316A21D135783': // HACX.WAD map05 from 20.10.2010
 			{
 				// fix non-functional self-referencing sector hack.
-				for(int i = 578; i < 582; i++) 
+				for(int i = 578; i < 582; i++)
 					SetLineSectorRef(i, Line.back, 91);
-				
+
 				for(int i = 707; i < 714; i++)
 					SetLineSectorRef(i, Line.back, 91);
 
@@ -41,8 +41,8 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(659, Transfer_Heights, 60);
 				break;
 			}
-			
-		
+
+
 			case 'E2B5D1400279335811C1C1C0B437D9C8': // Deathknights of the Dark Citadel, map54
 			{
 				// This map has two gear boxes which are flagged for player cross
@@ -51,13 +51,13 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineActivation(963, SPAC_Use);
 				break;
 			}
-			
+
 			case '3F249EDD62A3A08F53A6C53CB4C7ABE5': // Artica 3 map01
 			{
 				ClearLineSpecial(66);
 				break;
 			}
-			
+
 			case 'F481922F4881F74760F3C0437FD5EDD0': // Community Chest 3 map03
 			{
 				// I have no idea how this conveyor belt setup manages to work under Boom.
@@ -97,7 +97,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '3B9CAA02952F405269353FAAD8F8EC33': // Master Levels, nessus.wad
 			{
 				// move secret sector from too-thin doorframe to BFG closet
@@ -118,12 +118,12 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingSkills(32, 31);
 				break;
 			}
-  
+
 			case '1891E029994B023910CFE0B3209C3CDB': // Ultimate Simplicity, map07
 			{
 				// It is possible to get stuck on skill 0 or 1 when no shots have been fired
 				// after sector 17 became accessible and before entering famous mancubus room.
-				// Monsters from the mentioned sector won't be alerted and so 
+				// Monsters from the mentioned sector won't be alerted and so
 				// they won't teleport into the battle. ACS will wait forever for their deaths.
 				SetLineSpecial(397, NoiseAlert);
 				SetLineSpecial(411, NoiseAlert);
@@ -154,7 +154,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '0F898F0688AECD42F2CD102FAE06F271': // TNT: Evilution MAP07
 			{
 				// Dropping onto the outdoor lava now also raises the
@@ -173,7 +173,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '1E785E841A5247B6223C042EC712EBB3': // TNT: Evilution MAP08
 			{
 				// Missing texture when lowering sector to red keycard
@@ -187,7 +187,7 @@ class LevelCompatibility : LevelPostProcessor
 				AddSectorTag(330, 11);
 				break;
 			}
-			
+
 			case '55C8DA7B531AE47014AD73FFF4687A36': // TNT: Evilution MAP21
 			{
 				// Missing texture that is most likely unintentional
@@ -229,14 +229,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(1240, Floor_LowerToLowest, 38, 32);
 				break;
 			}
-			
+
 			case '56D4060662C290791822EDB7225273B7': // Plutonia Experiment MAP08
 			{
 				// Raising ceiling causing a HOM.
 				OffsetSectorPlane(130, Sector.ceiling, 16);
 				break;
 			}
-			
+
 			case '25A16C30CD10157382C01E5DD9C6604B': // Plutonia Experiment MAP10
 			{
 				// Missing textures
@@ -251,7 +251,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSectorRef(41, Line.back, 6);
 				break;
 			}
-			
+
 			case 'B02ACA32AE9630042543037BA630CDE9': // Plutonia Experiment MAP13
 			{
 				// Textures on wrong side at level start.
@@ -259,7 +259,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(119, Line.back, Side.top, "A-BROWN1");
 				break;
 			}
-			
+
 			case 'ECA0559E85EFFB6966ECB8DE01E3A35B': // Plutonia Experiment MAP16
 			{
 				// Have it so that the slime pit at the end of the level can
@@ -268,14 +268,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetSectorSpecial(96, 768);
 				break;
 			}
-			
+
 			case '9D84B423D8FD28553DDE23B55F97CF4A': // Plutonia Experiment MAP25
 			{
 				// Missing texture at level exit.
 				SetWallTexture(1152, Line.front, Side.top, "A-BROCK2");
 				break;
 			}
-			
+
 			case 'ABC4EB5A1535ECCD0061AD14F3547908': // Plutonia Experiment, map26
 			{
 				SetSectorSpecial(156, 0);
@@ -284,7 +284,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(323, Line.front, Side.top, "A-MUD");
 				break;
 			}
-			
+
 			case 'A2634C462717328CC1AD81E81EE77B08': // Plutonia Experiment MAP28
 			{
 				// Missing textures
@@ -294,21 +294,21 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(835, Line.front, Side.bottom, "WOOD8");
 				SetWallTexture(2460, Line.front, Side.top, "BIGDOOR7");
 				SetWallTexture(2496, Line.front, Side.top, "BRICK10");
-				
+
 				// Allow a player to leave the room in deathmatch without
 				// needing another player to activate a switch.
 				SetLineSpecial(1033, Floor_LowerToLowest, 10, 8);
 				SetLineActivation(1033, SPAC_Use);
 				break;
 			}
-			
+
 			case '850AC6D62F0AC57A4DD7EBC2689AC38E': // Plutonia Experiment MAP29
 			{
 				// Texture applied on bottom instead of top
 				SetWallTexture(2842, Line.front, Side.top, "A-BROCK2");
 				break;
 			}
-			
+
 			case '279BB50468FE9F5B36C6D821E4902369': // Plutonia Experiment map30
 			{
 				// Missing texture and unpegged gate texture during boss reveal
@@ -324,7 +324,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingFlags(206, 17);
 				break;
 			}
-			
+
 			case 'D5F64E02679A81B82006AF34A6A8EAC3': // Plutonia Experiment MAP32
 			{
 				// Missing textures
@@ -413,7 +413,7 @@ class LevelCompatibility : LevelPostProcessor
 
 			case '5B26545FF21B051CA06D389CE535684C': // doom.wad e1m4
 			{
-				// missing textures	
+				// missing textures
 				SetWallTexture(693, Line.back, Side.top, "BROWN1");
 				// fix HOM errors with sectors too low
 				OffsetSectorPlane(9,  Sector.floor, 8);
@@ -422,7 +422,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(137, Sector.floor, 8);
 				break;
 			}
-			
+
 			case 'A24FE135D5B6FD427FE27BEF89717A65': // doom.wad e2m2
 			{
 				// missing textures
@@ -430,7 +430,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(1596, Line.back, Side.top, "WOOD1");
 				break;
 			}
-			
+
 			case '1BC04D646B32D3A3E411DAF3C1A38FF8': // doom.wad e2m4
 			{
 				// missing textures
@@ -444,7 +444,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(165, 0, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '99C580AD8FABE923CAB485CB7F3C5E5D': // doom.wad e2m5
 			{
 				// missing textures
@@ -459,21 +459,21 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(388, Door_Open, 100, 16);
 				break;
 			}
-			
+
 			case '3838AB29292587A7EE3CA71E7040868D': // doom.wad e2m6
 			{
 				// missing texture
 				SetWallTexture(1091, Line.back, Side.top, "compspan");
 				break;
 			}
-			
+
 			case '8590F489879870C098CD7029C3187159': // doom.wad e2m7
 			{
 				// missing texture
 				SetWallTexture(1286, Line.front, Side.bottom, "SHAWN2");
 				break;
 			}
-			
+
 			case '8A6399FAAA2E68649D4E4B16642074BE': // doom.wad e2m9
 			{
 				// missing textures
@@ -482,14 +482,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(140, Line.back, Side.top, "GSTONE1");
 				break;
 			}
-			
+
 			case 'BBDC4253AE277DA5FCE2F19561627496': // Doom E3M2
 			{
 				// Switch at index finger repeatable in case of being stuck
 				SetLineFlags(368, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '2B65CB046EA40D2E44576949381769CA': // Commercial Doom e3m4
 			{
 				// This line is erroneously specified as Door_Raise that monsters
@@ -501,7 +501,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(470, Line.front, Side.top, "BIGDOOR2");
 				break;
 			}
-			
+
 			case '100106C75157B7DECB0DCAD2A59C1919': // Doom E3M5
 			{
 				// Replace AASTINKY textures
@@ -514,7 +514,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(1330, Line.back, Side.bottom, "METAL");
 				break;
 			}
-			
+
 			case '5AC51CA9F1B57D4538049422A5E37291': // doom.wad e3m7
 			{
 				// missing textures
@@ -522,7 +522,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(971, Line.back, Side.top, "SP_HOT1");
 				break;
 			}
-			
+
 			case 'FE97DCB9E6235FB3C52AE7C143160D73': // Doom E3M9
 			{
 				// Missing textures
@@ -538,7 +538,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(194, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case 'DA0C8281AC70EEC31127C228BCD7FE2C': // doom.wad e4m1
 			{
 				// missing textures
@@ -551,14 +551,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(470, Line.front, Side.top, "GSTONE1");
 				break;
 			}
-			
+
 			case '771092812F38236C9DF2CB06B2D6B24F': // Ultimate Doom E4M2
 			{
 				// Missing texture
 				SetWallTexture(165, Line.back, Side.top, "WOOD5");
 				break;
 			}
-			
+
 			case 'F6EE16F770AD309D608EA0B1F1E249FC': // Ultimate Doom, e4m3
 			{
 				// Remove unreachable secrets
@@ -592,7 +592,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(46, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case 'AAECADD4D97970AFF702D86FAFAC7D17': // doom.wad e4m4
 			{
 				// missing textures
@@ -603,7 +603,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTextureID(572, Line.front, Side.top, BROWNHUG);
 				break;
 			}
-			
+
 			case 'C2E09AB0BDD03925305A48AE935B71CA': // Ultimate Doom E4M5
 			{
 				// Missing textures
@@ -615,7 +615,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(35, Sector.ceiling, -24);
 				break;
 			}
-			
+
 			case 'CBBFF61A8C231DFFC8E8A2A2BAEB77FF': // Ultimate Doom E4M6
 			{
 				// Textures on wrong side at Yellow Skull room.
@@ -627,7 +627,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(482, Line.back, Side.top, "MARBLE2");
 				break;
 			}
-			
+
 			case '94D4C869A0C02EF4F7375022B36AAE45': // Ultimate Doom, e4m7
 			{
 				// Remove unreachable secrets
@@ -635,14 +635,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetSectorSpecial(264, 0);
 				break;
 			}
-			
+
 			case '2DC939E508AB8EB68AF79D5B60568711': // Ultimate Doom E4M8
 			{
 				// Missing texture
 				SetWallTexture(425, Line.front, Side.mid, "SP_HOT1");
 				break;
 			}
-			
+
 			case 'AB24AE6E2CB13CBDD04600A4D37F9189':   // doom2.wad map02
 			case '1EC0AF1E3985650F0C9000319C599D0C':  // doom2bfg.wad map02
 			{
@@ -680,7 +680,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(3, Transfer_Heights, 14, 6);
 				break;
 			}
-			
+
 			case '9E061AD7FBCD7FAD968C976CB4AA3B9D': // doom2.wad map05
 			{
 				// fix bug with opening westmost door in door hallway
@@ -692,7 +692,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(560, Line.back, Side.top, "SUPPORT3");
 				break;
 			}
-			
+
 			case '291F24417FB3DD411339AE82EF9B3597': // Doom II MAP07
 			{
 				// Missing texture at BFG deathmatch spawn.
@@ -700,14 +700,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(168, 0, Line.ML_DONTPEGBOTTOM);
 				break;
 			}
-			
+
 			case '66C46385EB1A23D60839D1532522076B':  // doom2.wad map08
 			{
 				// Missing texture
 				SetWallTexture(101, Line.back, Side.top, "BRICK7");
 				break;
 			}
-			
+
 			case '6C620F43705BEC0ABBABBF46AC3E62D2': // Doom II MAP10
 			{
 				// Allow player to leave exit room
@@ -716,7 +716,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(786, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '1AF4DEC2627360A55B3EB397BC15C39D': // Doom II MAP12
 			{
 				// Missing texture
@@ -725,14 +725,14 @@ class LevelCompatibility : LevelPostProcessor
 				ClearSectorTags(149);
 				break;
 			}
-			
+
 			case 'FBA6547B9FD44E95671A923A066E516F': // Doom II MAP13
 			{
 				// Missing texture
 				SetWallTexture(622, Line.back, Side.top, "BROWNGRN");
 				break;
 			}
-			
+
 			case '5BDA34DA60C0530794CC1EA2DA017976': // doom2.wad map14
 			{
 				// missing textures
@@ -741,19 +741,19 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(531, Line.front, Side.top, "BSTONE1");
 				SetWallTexture(1259, Line.back, Side.top, "BSTONE2");
 				SetWallTexture(1305, Line.back, Side.top, "BSTONE2");
-				
+
 				TextureID bstone2 = TexMan.CheckForTexture("BSTONE2", TexMan.Type_Wall);
 				for(int i=0; i<3; i++)
 				{
 					SetWallTextureID(607+i, Line.back, Side.top, BSTONE2);
 				}
-				
+
 				TextureID tanrock5 = TexMan.CheckForTexture("TANROCK5", TexMan.Type_Wall);
 				for(int i=0; i<7; i++)
 				{
 					SetWallTextureID(786+i, Line.back, Side.top, TANROCK5);
 				}
-				
+
 				TextureID bstone1 = TexMan.CheckForTexture("BSTONE1", TexMan.Type_Wall);
 				for(int i=0; i<3; i++)
 				{
@@ -761,12 +761,12 @@ class LevelCompatibility : LevelPostProcessor
 					SetWallTextureID(1137+i, Line.back, Side.top, BSTONE1);
 					SetWallTextureID(1140+i, Line.back, Side.top, BSTONE1);
 				}
-				
+
 				// Raise floor between lifts to correspond with others.
 				OffsetSectorPlane(106, Sector.floor, 16);
 				break;
 			}
-			
+
 			case '1A540BA717BF9EC85F8522594C352F2A': // Doom II, map15
 			{
 				// Remove unreachable secret
@@ -777,7 +777,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(989, Line.back, Side.top, "BRICK10");
 				break;
 			}
-			
+
 			case '6B60F37B91309DFF1CDF02E5E476210D': // Doom II MAP16
 			{
 				// Missing textures
@@ -786,14 +786,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(304, Line.front, Side.top, "STUCCO");
 				break;
 			}
-			
+
 			case 'E1CFD5C6E60C3B6C30F8B95FC287E9FE': // Doom II MAP17
 			{
 				// Missing texture
 				SetWallTexture(379, Line.back, Side.top, "METAL2");
 				break;
 			}
-			
+
 			case '0D491365C1B88B7D1B603890100DD03E': // doom2.wad map18
 			{
 				// missing textures
@@ -802,14 +802,14 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(574, Line.front, Side.top, "grayvine");
 				break;
 			}
-			
+
 			case 'B5506B1E8F2FC272AD0C77B9E0DF5491': // doom2.wad map19
 			{
 				// missing textures
 				SetWallTexture(355, Line.back, Side.top, "STONE2");
 				SetWallTexture(736, Line.front, Side.top, "SLADWALL");
 				SetWallTexture(1181, Line.back, Side.top, "MARBLE1");
-				
+
 				TextureID step4 = TexMan.CheckForTexture("STEP4", TexMan.Type_Wall);
 				for(int i=0; i<3; i++)
 				{
@@ -820,7 +820,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingSkills(112, 31);
 				break;
 			}
-			
+
 			case 'EBDAC00E9D25D884B2C8F4B1F0390539': // doom2.wad map21
 			{
 				// push ceiling down in glitchy sectors above the stair switches
@@ -828,28 +828,28 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(54, Sector.ceiling, -56);
 				break;
 			}
-			
+
 			case '4AA9B3CE449FB614497756E96509F096': // Doom II MAP22
 			{
 				// Only use switch once to raise sector to rocket launcher
 				SetLineFlags(120, 0, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '94893A0DC429A22ADC4B3A73DA537E16': // Doom II MAP25
 			{
 				// Missing texture at bloodfall near level start
 				SetWallTexture(436, Line.back, Side.top, "STONE6");
 				break;
 			}
-			
+
 			case '1037366026AAB4B0CF11BAB27DB90E4E': // Doom II MAP26
 			{
 				// Missing texture at level exit
 				SetWallTexture(761, Line.back, Side.top, "METAL2");
 				break;
 			}
-			
+
 			case '110F84DE041052B59307FAF0293E6BC0': // Doom II, map27
 			{
 				// Remove unreachable secret
@@ -865,7 +865,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineActivation(581, SPAC_Use);
 				break;
 			}
-			
+
 			case '84BB2C8ED2343C91136B87F1832E7CA5': // Doom II MAP28
 			{
 				// Missing textures
@@ -887,7 +887,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '20251EDA21B2F2ECF6FF5B8BBC00B26C': // Doom II, MAP29
 			{
 				// Missing textures on teleporters
@@ -905,7 +905,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTexture(603, Line.back, Side.top, "WOOD5");
 				break;
 			}
-			
+
 			case '915409A89746D6BFD92C7956BE6A0A2D': // Doom II: BFG Edition MAP33
 			{
 				// Missing textures on sector with a Super Shotgun at map start.
@@ -941,16 +941,16 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTextureID(1057, Line.front, Side.top, mossrck1);
 				break;
 			}
-			
+
 			case 'ADD0FAC41AFB0B3C9B9F3C0006F93805': // heretic.wad e1m3
 			{
-				// Broken door between the hallway that leads to a Torch 
+				// Broken door between the hallway that leads to a Torch
 				// and the passage that has a Bag of Holding at its end
 				OffsetSectorPlane(86, Sector.floor,   -128);
 				OffsetSectorPlane(86, Sector.ceiling, -128);
 				break;
 			}
-			
+
 			case '916318D8B06DAC2D83424B23E4B66531': // heretic.wad e1m4
 			{
 				// Wrong sector offsets
@@ -973,7 +973,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTextureID(1296, Line.front, Side.bottom, woodwl);
 				break;
 			}
-			
+
 			case '397A0E17A39542E4E8294E156FAB0502': // heretic.wad e2m2
 			{
 				// Missing green door statues on easy and hard difficulties
@@ -981,15 +981,15 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingSkills(18, 31);
 				break;
 			}
-			
+
 			case 'FAA0550BE9923B3A3332B4F7DB897A4A': // heretic.wad e2m7
 			{
 				// missing texture
 				TextureID looserck = TexMan.CheckForTexture("LOOSERCK", TexMan.Type_Wall);
-				SetWallTextureID( 629, Line.back,  Side.top, looserck);				
+				SetWallTextureID( 629, Line.back,  Side.top, looserck);
 				break;
 			}
-			
+
 			case 'CA3773ED313E8899311F3DD0CA195A68': // heretic.wad e3m6
 			{
 				// Quartz flask outside of map
@@ -1002,7 +1002,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetWallTextureID(370, Line.front, Side.top, mossrck1);
 				break;
 			}
-			
+
 			case '5E3FCFDE78310BB89F92B1626A47D0AD': // heretic.wad E4M7
 			{
 				// Missing textures
@@ -1127,7 +1127,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingFlags(177, GetThingFlags(177) | MTF_NOCOUNT);
 				break;
 			}
-		
+
 			case 'DCE862393CAAA6FF1294FB7056B53057': // UAC Ultra map07
 			{
 				// Contains a scroller depending on Boom side effects
@@ -1169,21 +1169,21 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '57386AEF275684BA06756359B08F4391': // Perdition's Gate MAP03
 			{
 				// Stairs where one sector is too thin to score.
 				SetSectorSpecial(227, 0);
 				break;
 			}
-			
+
 			case 'F1A9938C4FC3906A582AB7D5088B5F87': // Perdition's Gate MAP12
 			{
 				// Sector unintentionally left as a secret near switch
 				SetSectorSpecial(112, 0);
 				break;
 			}
-			
+
 			case '5C419E581D9570F44A24163A83032086': // Perdition's Gate MAP27
 			{
 				// Sectors unintentionally left as secrets and cannot be scored
@@ -1206,7 +1206,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(357, Transfer_Heights, 4, 6);
 				break;
 			}
-			
+
 			case '5379C080299EB961792B50AD96821543': // Hell to Pay MAP14
 			{
 				// Two secrets are unreachable without jumping and crouching.
@@ -1214,7 +1214,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetSectorSpecial(83, 0);
 				break;
 			}
-			
+
 			case '7837B5334A277F107515D649BCEFB682': // Hell to Pay MAP22
 			{
 				// Four enemies (six if multiplayer) never spawn in the map,
@@ -1222,13 +1222,13 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(1835, Teleport, 0, 40);
 				SetLineActivation(1835, SPAC_MCross);
 				SetLineFlags(1835, Line.ML_REPEAT_SPECIAL);
-				
+
 				SetLineSpecial(1847, Teleport, 0, 40);
 				SetLineActivation(1847, SPAC_MCross);
 				SetLineFlags(1847, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '1A1AB6415851B9F17715A0C36412752E': // Hell to Pay MAP24
 			{
 				// Remove Chaingunner far below the map, making 100% kills
@@ -1236,7 +1236,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingFlags(70, 0);
 				break;
 			}
-			
+
 			case 'A7ACB57A2CAF17434D0DFE0FAC0E0480': // Hell to Pay MAP28
 			{
 				// Three Lost Souls placed outside the map for some reason.
@@ -1246,7 +1246,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '2F1A18633C30E938B50B6D928C730CB6': // Hell to Pay MAP29
 			{
 				// Three Lost Souls placed outside the map, again...
@@ -1256,7 +1256,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '712BB4CFBD0753178CA0C6814BE4C288': // beta version of map12 BTSX_E1
 			{
 				// patch some rendering glitches that are problematic to detect
@@ -1271,7 +1271,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(2410, Sector_Set3DFloor, 32002, 4, 1);
 				break;
 			}
-			
+
 			case '5A24FC83A3F9A2D6D54AF04E2E96684F': // AV.WAD MAP01
 			{
 				SetLineSectorRef(225, Line.back, 36);
@@ -1308,14 +1308,14 @@ class LevelCompatibility : LevelPostProcessor
 				AddSectorTag(38, 32000);
 				AddSectorTag(37, 32000);
 				AddSectorTag(34, 32000);
-				
+
 				// Removes errenous secrets
 				SetSectorSpecial(154, 0);
 				SetSectorSpecial(155, 0);
 				SetSectorSpecial(156, 0);
 				break;
 			}
-			
+
 			case '32FADD80710CAFCC2B09B4610C3340B3': // ksutra.wad map01
 			{
 				// This rebuilds the ending pit with a 3D floor.
@@ -1329,11 +1329,11 @@ class LevelCompatibility : LevelPostProcessor
 					for(int j = 538; j <= 544; j++)
 					{
 						SetLineSectorRef(j, i, 129);
-					}						
+					}
 					for(int j = 547; j <= 552; j++)
 					{
 						SetLineSectorRef(j, i, 129);
-					}					
+					}
 				}
 				AddSectorTag(129, 32000);
 				SetSectorLight(129, 160);
@@ -1384,7 +1384,7 @@ class LevelCompatibility : LevelPostProcessor
 				GetDefaultActor('WolfensteinSS').bActivateMCross = true;
 				break;
 			}
-			
+
 			case 'D67CECE3F60083383DF992B8C824E4AC': // Icarus: Alien Vanguard MAP13
 			{
 				// Moves sector special to platform with Berserk powerup. The
@@ -1393,7 +1393,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetSectorSpecial(122, 1024);
 				break;
 			}
-			
+
 			case '61373587339A768854E2912CC99A4781': // Icarus: Alien Vanguard MAP15
 			{
 				// Can press use on the lift to reveal the secret Shotgun,
@@ -1403,7 +1403,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(222, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '9F66B0797925A09D4DC0725540F8EEF7': // Icarus: Alien Vanguard MAP16
 			{
 				// Can press use on the walls at the secret Rocket Launcher in
@@ -1416,7 +1416,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '09645D198010BF634EF0DE3EFCB0052C': // Flashback to Hell MAP12
 			{
 				// Can press use behind bookshelf in case of getting stuck.
@@ -1425,7 +1425,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(4884, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '7FB847B522DE80D0B2A217E1EF8D1A15': // av.wad map28
 			{
 				// Fix the soulsphere in a secret area (sector 324)
@@ -1433,20 +1433,20 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingXY(516, -934, 48);
 				break;
 			}
-			
+
 			case '11EA5B8357DEB70A8F00900117831191': // kdizd_12.pk3 z1m3
 			{
 				// Fix incorrectly tagged underwater sector which causes render glitches.
 				AddSectorTag(7857, 82);
 				break;
 			}
-			
+
 			case '7B1EB6C1231CD03E90F4A1C0D51A8B6D': // ur_final.wad map17
 			{
 				SetLineSpecial(3020, Transfer_Heights, 19);
 				break;
 			}
-			
+
 			case '01592ACF001C534076556D9E1B5D85E7': // Darken2.wad map12
 			{
 				// fix some holes the player can fall in. This map went a bit too far with lighting hacks depending on holes in the floor.
@@ -1495,7 +1495,7 @@ class LevelCompatibility : LevelPostProcessor
 				level.sectors[700].SetPlaneLight(Sector.floor, level.sectors[696].GetLightLevel() - level.sectors[700].GetLightLevel());
 				break;
 			}
-			
+
 			case '3B1F637295F5669E99BE63F1B1CA29DF': // titan426.wad map01
 			{
 				// Missing teleport destinations on easy skill
@@ -1623,7 +1623,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingSkills(164, 31);
 				break;
 			}
-			
+
 			case '1B27E04F707E7988800582F387F609CD': // One against hell (ONE1.wad)
 			{
 				//Turn map spots into teleport destinations so that teleports work
@@ -1643,7 +1643,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingEdNum(247, 14);
 				break;
 			}
-			
+
 			case '25E178C981BAC28BA586B3B0A2A0FD72': // swan fox doom v2.4.wad map13
 			{
 				//Actors with no game mode will now appear
@@ -1658,7 +1658,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(1655, 177, 9);
 				break;
 			}
-		
+
 			case 'FDFB3D209CC0F3706AAF3E51646003D5': // swan fox doom v2.4.wad map23
 			{
 				//Missing Teleport Destination on Easy/Normal difficulty
@@ -1689,7 +1689,7 @@ class LevelCompatibility : LevelPostProcessor
 					SetThingFlags(i, MTF_SINGLE|MTF_COOPERATIVE|MTF_DEATHMATCH);
 				break;
 			}
-			
+
 			case '52F532F95E2D5862E56F7214FA5C5C59': // Toon Doom II (toon2b.wad) map10
 			{
 				//This lift needs to be repeatable to prevent trapping the player
@@ -1698,7 +1698,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(224, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '3345D12AD97F20EDCA5E27BA4288F758': // Toon Doom II (toon2b.wad) map30
 			{
 				//These doors need to be repeatable to prevent trapping the player
@@ -1713,7 +1713,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(430, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case 'BA1288DF7A7AD637948825EA87E18728': // Valletta's Doom Nightmare (vltnight.wad) map02
 			{
 				//This door's backside had a backwards linedef so it wouldn't work
@@ -1722,7 +1722,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(564, Exit_Normal, 0);
 				break;
 			}
-			
+
 			case '9B966DA88265AC8972B7E15C86928AFB': // Clavicula Nox: Revised Edition map01
 			{
 				// All swimmable water in Clavicula Nox is Vavoom-style, and doesn't work.
@@ -1732,7 +1732,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(121, Sector.floor, -32);
 				break;
 			}
-			
+
 			case '9FD0C47C2E132F64B48CA5BFBDE47F1D': // clavnoxr map02
 			{
 				SetLineSpecial(953, 160, 12, 2, 0, 128);
@@ -1745,7 +1745,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(236, Sector.floor, -96);
 				break;
 			}
-			
+
 			case '969B9691007490CF022B632B2729CA49': // clavnoxr map03
 			{
 				SetLineSpecial(96, 160, 1, 2, 0, 128);
@@ -1764,7 +1764,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(217, Sector.floor, -16);
 				break;
 			}
-			
+
 			case '748EDAEB3990F13B22C13C593631B2E6': // clavnoxr map04
 			{
 				SetLineSpecial(859, 160, 22, 2, 0, 128);
@@ -1772,7 +1772,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(172, Sector.floor, -168);
 				break;
 			}
-			
+
 			case 'A066B0B432FAE8ED20B83383F9E03E12': // clavnoxr map05
 			{
 				SetLineSpecial(1020, 160, 2, 2, 0, 128);
@@ -1780,7 +1780,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(190, Sector.floor, -24);
 				break;
 			}
-			
+
 			case '5F36D758ED26CAE907FA79902330877D': // clavnoxr map06
 			{
 				SetLineSpecial(1086, 160, 1, 2, 0, 128);
@@ -1809,7 +1809,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(284, Sector.floor, -56);
 				break;
 			}
-			
+
 			case 'B7E98C1EA1B38B707ADA8097C25CFA75': // clavnoxr map07
 			{
 				SetLineSpecial(1307, 160, 22, 2, 0, 128);
@@ -1817,7 +1817,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(218, Sector.floor, -64);
 				break;
 			}
-			
+
 			case '7DAB2E8BB5759D742211505A3E5054D1': // clavnoxr map08
 			{
 				SetLineSpecial(185, 160, 1, 2, 0, 128);
@@ -1827,7 +1827,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(102, Sector.floor, -64);
 				break;
 			}
-			
+
 			case 'C17A9D1350399E251C70711EB22856AE': // clavnoxr map09
 			{
 				SetLineSpecial(63, 160, 1, 2, 0, 128);
@@ -1843,7 +1843,7 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(75, Sector.floor, -64);
 				break;
 			}
-			
+
 			case 'B6BB8A1792FE51C773E6770CD91DB618': // clavnoxr map11
 			{
 				SetLineSpecial(1235, 160, 23, 2, 0, 128);
@@ -1851,13 +1851,13 @@ class LevelCompatibility : LevelPostProcessor
 				OffsetSectorPlane(240, Sector.floor, -80);
 				break;
 			}
-			
+
 			case 'ADDF57B80E389F86D324571D43F3CAB7': // clavnoxr map12
 			{
 				SetLineSpecial(1619, 160, 19, 2, 0, 128);
 				SetLineSpecial(1658, 160, 20, 2, 0, 128);
 				SetLineSpecial(1659, 160, 21, 2, 0, 128);
-				OffsetSectorPlane(254, Sector.floor, -160);				
+				OffsetSectorPlane(254, Sector.floor, -160);
 				// Raising platforms in MAP12 didn't work, so this will redo them.
 				SetLineSpecial(1469, 160, 6, 1, 0, 255);
 				OffsetSectorPlane(65, Sector.floor, -8);
@@ -1879,7 +1879,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(11518, 9, 0, 0, 0, 0);
 				break;
 			}
-			
+
 			case 'BA530202AF0BA0C6CBAE6A0C7076FB72': // Requiem MAP04
 			{
 				// Flag deathmatch berserk for 100% items in single-player
@@ -1888,7 +1888,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(823, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '104415DDEBCAFB9783CA60807C46B57D': // Requiem MAP05
 			{
 				// Raise spectre pit near soulsphere if player drops into it
@@ -1899,7 +1899,7 @@ class LevelCompatibility : LevelPostProcessor
 				}
 				break;
 			}
-			
+
 			case '1B0AF5286D4E914C5E903BC505E6A844': // Requiem MAP06
 			{
 				// Flag deathmatch berserks for 100% items in single-player
@@ -1925,7 +1925,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(2600, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '3C10B1B017E902BE7CDBF2436DF56973': // Requiem MAP08
 			{
 				// Flag deathmatch soulsphere for 100% items in single-player
@@ -1945,16 +1945,16 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(895, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '14FE46ED0458979118007E1906A0C9BC': // Requiem MAP09
 			{
 				// Flag deathmatch items for 100% items in single-player
 				for(int i = 0; i < 6; i++)
 					SetThingFlags(371+i, 17);
-				
+
 				for(int i = 0; i < 19; i++)
 					SetThingFlags(402+i, 17);
-				
+
 				SetThingFlags(359, 17);
 				SetThingFlags(389, 17);
 				SetThingFlags(390, 17);
@@ -1965,7 +1965,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(2719, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case '53A6369C3C8DA4E7AC443A8F8684E38E': // Requiem MAP12
 			{
 				// Remove unreachable secrets
@@ -1976,7 +1976,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineSpecial(4873, Floor_LowerToLowest, 62, 8);
 				break;
 			}
-			
+
 			case '2DAB6E4B19B4F2763695267D39CD0275': // Requiem MAP13
 			{
 				// Fix missing nukage at starting bridge on hardware renderer
@@ -1984,13 +1984,13 @@ class LevelCompatibility : LevelPostProcessor
 					SetLineSectorRef(2152+i, Line.back, 8);
 				break;
 			}
-			
+
 			case 'F55FB2A8DC68CFC75E4340EF4ED7A8BF': // Requiem MAP21
 			{
 				// Fix self-referencing floor hack
 				for(int i = 0; i < 4; i++)
 					SetLineSectorRef(3+i, Line.back, 219);
-					
+
 				SetLineSpecial(8, Transfer_Heights, 80);
 				// Fix south side of pit hack so textures don't bleed through
 				// the fake floor on hardware renderer
@@ -2013,7 +2013,7 @@ class LevelCompatibility : LevelPostProcessor
 				AddSectorTag(91, 1000);
 				SetSectorTexture(90, Sector.floor, "MFLR8_4");
 				SetSectorTexture(91, Sector.floor, "MFLR8_4");
-				
+
 				SetLineSectorRef(553, Line.back, 841);
 				SetLineSectorRef(554, Line.back, 841);
 				SetLineSectorRef(559, Line.back, 841);
@@ -2042,7 +2042,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetSectorSpecial(123, 0);
 				break;
 			}
-			
+
 			case '2499CF9A9351BE9BC4E9C66FC9F291A7': // Requiem MAP23
 			{
 				// Have arch-vile who creates ghost monsters not count as a kill
@@ -2154,7 +2154,7 @@ class LevelCompatibility : LevelPostProcessor
 			case '988DFF5BB7073B857DEE3957A91C8518': // Speed of Doom MAP14
 			{
 				// you can get only one of the soulspheres, the other, depending on your choice, becomes unavailable
-				SetThingFlags(1044, GetThingFlags (1044) | MTF_NOCOUNT);			
+				SetThingFlags(1044, GetThingFlags (1044) | MTF_NOCOUNT);
 				SetThingFlags(1045, GetThingFlags (1045) | MTF_NOCOUNT);
 				break;
 			}
@@ -2185,7 +2185,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetLineFlags(1468, Line.ML_REPEAT_SPECIAL);
 				break;
 			}
-			
+
 			case 'E0D747B9EE58A0CB74B9AD54423AC15C': // return01.wad e1m2
 			{
 				// fix broken switch to raise the exit bridge
@@ -2196,10 +2196,10 @@ class LevelCompatibility : LevelPostProcessor
 			case '1C35384B22BD805F51B3B2C9D17D62E4': // 007ltsd.wad E4M7
 			{
 				// Fix impassable exit line
-				SetLineFlags(6842, 0, Line.ML_BLOCKING); 
+				SetLineFlags(6842, 0, Line.ML_BLOCKING);
 				break;
 			}
-			
+
 			case '50E394239FF64264950D11883E933553': // 1024.wad map05
 			{
 				// Change duplicate player 2 start to player 3 start
@@ -2213,7 +2213,7 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingEdNum(699, 9044);
 				break;
 			}
-			
+
 			case 'C8E727FFBA0BA445666C80340BF3D0AC': // god_.WAD E1M2
 			{
 				// fix bad skill flags for a monster that's required to be killed.
@@ -2235,197 +2235,296 @@ class LevelCompatibility : LevelPostProcessor
 				SetThingArgument(101, 1, 16);
 				break;
 			}
-			
+
 			case '25F0DA23E7E54DAB05DC0B2A6B9DE1D1': // 3ha2.wad map02
 			{
 				// Enables the Imp teleport to work on easy difficulties, allowing for 100% kills.
 				SetThingSkills(56,31);
 				break;
 			}
-			
+
 			case '41DFF94B72403AF725049C5F10AFD365': // 3ha2.wad map13
 			{
 				// Fixes the ground below the exit sign being a damaging floor.
 				for (int i = 85; i < 87; i++)
-				SetSectorSpecial(i, 0);
+					SetSectorSpecial(i, 0);
 				break;
 			}
-			
+
 			case 'A9AA12629AF5AC866EBB6F8281382ED8': // 3hafinal.wad map19
 			{
-			// Enables the Imp and Hell Knight teleport to work on easy difficulties, allowing for 100% kills.
-			for (int i = 143; i < 148; i++)
-				SetThingSkills(i, 31);
-			for (int i = 137; i < 139; i++)
-				SetThingSkills(i, 31);
-			break;
+				// Enables the Imp and Hell Knight teleport to work on easy difficulties, allowing for 100% kills.
+				for (int i = 143; i < 148; i++)
+					SetThingSkills(i, 31);
+				for (int i = 137; i < 139; i++)
+					SetThingSkills(i, 31);
+				break;
 			}
-			
+
 			case '6F4F2E068AA7B937C7B76FDB86B31FF5': // 3ha3.wad map24
 			{
-			// Enables the Revenant teleport to work on easy difficulties, allowing for 100% kills.
-			SetThingSkills(212,31);
-			break;
+				// Enables the Revenant teleport to work on easy difficulties, allowing for 100% kills.
+				SetThingSkills(212,31);
+				break;
 			}
-			
+
 			case 'A8AB197CBABE8F5FAE504FCF51FDE830': // 3ha3.wad map32
 			{
-			// Removes the out of bounds items
-			SetThingSkills(1487,0);
-			SetThingSkills(1768,0);
-			for (int i = 1773; i < 1777; i++)
-				SetThingSkills(i, 0); 
-			for (int i = 1807; i < 1811; i++)
-				SetThingSkills(i, 0); 
-			break;
+				// Removes the out of bounds items
+				SetThingSkills(1487,0);
+				SetThingSkills(1768,0);
+				for (int i = 1773; i < 1777; i++)
+					SetThingSkills(i, 0);
+				for (int i = 1807; i < 1811; i++)
+					SetThingSkills(i, 0);
+				break;
 			}
-			
+
 			case '2EEE8546A6328792DA3B7ED18DAB2D1A': // 1024CLAU.wad map22
 			{
-			//Floor only elevator bug fix
-			SetLineSpecial(791, Floor_RaiseToNearest, 1, 64);
-			SetLineSpecial(793, Floor_RaiseToNearest, 1, 64);
-			SetLineSpecial(794, Floor_RaiseToNearest, 1, 64);
-			break;
+				//Floor only elevator bug fix
+				SetLineSpecial(791, Floor_RaiseToNearest, 1, 64);
+				SetLineSpecial(793, Floor_RaiseToNearest, 1, 64);
+				SetLineSpecial(794, Floor_RaiseToNearest, 1, 64);
+				break;
 			}
-			
+
 			case '02140759002C3F68ECD0C4EC08667026': // 1024.wad map10
 			{
-			//Removes the enemies who are unable to teleport in.
-			for (int i = 123; i < 129; i++)
-			SetThingSkills(i, 0); 
-			SetThingSkills(163,0);
-			SetThingSkills(162,0);
-			break;
+				//Removes the enemies who are unable to teleport in.
+				for (int i = 123; i < 129; i++)
+					SetThingSkills(i, 0);
+				SetThingSkills(163,0);
+				SetThingSkills(162,0);
+				break;
 			}
-			
+
 			case '1E29380A2D08D68D707E7FE7A0671941': // 1024.wad map13
 			{
-			//Removes the enemies who are unable to teleport in.
-			for (int i = 230; i < 238; i++)
-			SetThingSkills(i, 0); 
-			//Fixes missing texture at the exit, also unpegs the wall for consistency
-			SetWallTexture(2406, Line.front, Side.mid, "Doortrak");
-			SetLineFlags(2406, Line.ML_DONTPEGBOTTOM);
-			break;
+				//Removes the enemies who are unable to teleport in.
+				for (int i = 230; i < 238; i++)
+					SetThingSkills(i, 0);
+				//Fixes missing texture at the exit, also unpegs the wall for consistency
+				SetWallTexture(2406, Line.front, Side.mid, "Doortrak");
+				SetLineFlags(2406, Line.ML_DONTPEGBOTTOM);
+				break;
 			}
-			
+
 			case '727D06AF11504938596C5D4FEB3BD53E': // scythex.wad map02
 			{
-			// Missing textures on steps behind the blue key door, also given them suitable alignments
-			SetWallTexture(1531, Line.front, Side.bottom, "SUPPA32B");
-			SetWallTexture(1523, Line.front, Side.bottom, "SUPPA32B");
-			level.lines[1531].sidedef[0].SetTextureXOffset(Side.Bottom,11);
-			level.lines[1531].sidedef[0].SetTextureYOffset(Side.Bottom,14);
-			level.lines[1523].sidedef[0].SetTextureXOffset(Side.Bottom,11);
-			level.lines[1523].sidedef[0].SetTextureYOffset(Side.Bottom,6);
-			break;
+				// Missing textures on steps behind the blue key door, also given them suitable alignments
+				SetWallTexture(1531, Line.front, Side.bottom, "SUPPA32B");
+				SetWallTexture(1523, Line.front, Side.bottom, "SUPPA32B");
+				level.lines[1531].sidedef[0].SetTextureXOffset(Side.Bottom,11);
+				level.lines[1531].sidedef[0].SetTextureYOffset(Side.Bottom,14);
+				level.lines[1523].sidedef[0].SetTextureXOffset(Side.Bottom,11);
+				level.lines[1523].sidedef[0].SetTextureYOffset(Side.Bottom,6);
+				break;
 			}
-			
+
 			case '65E48442E4B6FC75133A149E87D59BEA': // ma_sincity.wad
 			{
-			//Missing texture in secret area.
-			SetWallTexture(4032, Line.front, Side.mid, "BRICK8");
-			break;
+				//Missing texture in secret area.
+				SetWallTexture(4032, Line.front, Side.mid, "BRICK8");
+				break;
 			}
-			
+
 			case '3E340892C200F1894FCE0565260760EE': // TVR!.wad map05
 			{
-			// Remove unreachable secrets
-			SetSectorSpecial(127, 0);
-			break;
+				// Remove unreachable secrets
+				SetSectorSpecial(127, 0);
+				break;
 			}
-			
+
 			case 'A0629BCFFE721651FCC39D3E49CCC0BD': // TVR!.wad map20
 			{
-			// Remove unreachable secrets
-			SetSectorSpecial(73, 0);
-			break;
+				// Remove unreachable secrets
+				SetSectorSpecial(73, 0);
+				break;
 			}
-			
+
 			case '9650973E7DE8C85279C2E724B56CD5CC': // BStain.wad map06
 			{
-			// Moves teleport destination to it's correct place, allowing for 100% kills
-			SetThingXY(481, -2016, 1888);
-			break;
+				// Moves teleport destination to it's correct place, allowing for 100% kills
+				SetThingXY(481, -2016, 1888);
+				break;
 			}
-			
+
 			case '76AD580CA69A2AC1808DADC8C5B90708': // AV.wad map09
 			{
-			// Changes the additional player 4 start to a deathmatch start
-			SetThingEdNum(53, 11);
-			break;
+				// Changes the additional player 4 start to a deathmatch start
+				SetThingEdNum(53, 11);
+				break;
 			}
-			
+
 			case '2FE901F659A16E58D7BCD7C30021C238': // AV.wad map15
 			{
-			// Prevents the player from being trapped in the backpack compartment opposite the blue armour secret
-			SetLineSpecial(2548, Door_Raise, 234, 16, 150);
-			SetLineActivation(2548, SPAC_Use);
-			SetLineFlags(2548, Line.ML_REPEAT_SPECIAL);
-			break;
+				// Prevents the player from being trapped in the backpack compartment opposite the blue armour secret
+				SetLineSpecial(2548, Door_Raise, 234, 16, 150);
+				SetLineActivation(2548, SPAC_Use);
+				SetLineFlags(2548, Line.ML_REPEAT_SPECIAL);
+				break;
 			}
-			
+
 			case 'DF758FE3DCD6B052839C88718D48CB4C': // AV.wad map25
 			{
-			// Sets the invulnerability spheres for co-op to only appear on co-op and not single player
-			SetThingFlags(2548,MTF_COOPERATIVE);
-			SetThingFlags(2551,MTF_COOPERATIVE);
-			SetThingFlags(2552,MTF_COOPERATIVE);
-			break;
+				// Sets the invulnerability spheres for co-op to only appear on co-op and not single player
+				SetThingFlags(2548,MTF_COOPERATIVE);
+				SetThingFlags(2551,MTF_COOPERATIVE);
+				SetThingFlags(2552,MTF_COOPERATIVE);
+				break;
 			}
-			
+
 			case '51DB0FFB25BF59DBA4F4F3AF06D54415': // Scythe.wad map01
 			{
-			// Missing Textures
-			SetWallTexture(290, Line.front, Side.top, "BRICK11");
-			SetLineFlags(290, Line.ML_DONTPEGTop);
-			break;
+				// Missing Textures
+				SetWallTexture(290, Line.front, Side.top, "BRICK11");
+				SetLineFlags(290, Line.ML_DONTPEGTop);
+				break;
 			}
-			
+
 			case 'F70D163957D711AF1E18D9153660DBEF': // ur_final.wad map07
 			{
-			// Sets the tag for the easy only Hell Knight at the end, allowing it to teleport into the map.
-			AddSectorTag(667, 52);
-			break;
+				// Sets the tag for the easy only Hell Knight at the end, allowing it to teleport into the map.
+				AddSectorTag(667, 52);
+				break;
 			}
-			
+
 			case '7B1EB6C1231CD03E90F4A1C0D51A8B6D': // ur_final.wad map17
 			{
-			// Sets teleports for imps on HMP or lower to teleport in, allowing to 100% kills.
-			SetThingSkills(230, 31);
-			SetThingFlags(228, MTF_SINGLE|MTF_COOPERATIVE|MTF_DEATHMATCH);
-			SetThingSkills(228, 31);
-			SetThingSkills(229, 31);
-			break;
+				// Sets teleports for imps on HMP or lower to teleport in, allowing to 100% kills.
+				SetThingSkills(230, 31);
+				SetThingFlags(228, MTF_SINGLE|MTF_COOPERATIVE|MTF_DEATHMATCH);
+				SetThingSkills(228, 31);
+				SetThingSkills(229, 31);
+				break;
 			}
-			
+
 			case '7602F3D482CEB6B7EC72B0FF027AA34C': // ur_final.wad map28
 			{
-			//Removes enemies who are unable to teleport in due to not hearing any sound.
-			SetThingSkills(416, 0);
-			SetThingSkills(417, 0);
-			SetThingSkills(418, 0);
-			SetThingSkills(419, 0);
-			break;
+				//Removes enemies who are unable to teleport in due to not hearing any sound.
+				SetThingSkills(416, 0);
+				SetThingSkills(417, 0);
+				SetThingSkills(418, 0);
+				SetThingSkills(419, 0);
+				break;
 			}
-			
-			case '9D7A536180E56A702657E515B9594887': ur_final.wad map29
+
+			case '9D7A536180E56A702657E515B9594887': // ur_final.wad map29
 			{
-			// Offsets the floor and ceiling in the teleport closet, allowing for Mancubi to teleport into the map.
-			OffsetSectorPlane(417, Sector.ceiling, 16);
-			OffsetSectorPlane(417, Sector.Floor, 16);
-			break;
-		}
-		
+				// Offsets the floor and ceiling in the teleport closet, allowing for Mancubi to teleport into the map.
+				OffsetSectorPlane(417, Sector.ceiling, 16);
+				OffsetSectorPlane(417, Sector.Floor, 16);
+				break;
+			}
+
 			case 'A2A9A8F87CC284CDC9063A685761247C': // hr2_final.wad map12
 			{
-			// Moves the vertices in the teleport closest, allowing for arachnotrons to teleport into the map.
-			SetVertex(973, 4544, 6752);
-			SetVertex(974, 5056, 6752);
-			SetVertex(975, 5056, 5856);
-			SetVertex(976, 4544, 5856);
-			break;
+				// Moves the vertices in the teleport closest, allowing for arachnotrons to teleport into the map.
+				SetVertex(973, 4544, 6752);
+				SetVertex(974, 5056, 6752);
+				SetVertex(975, 5056, 5856);
+				SetVertex(976, 4544, 5856);
+				break;
 			}
+
+			case '670AA31D31959B4394417B72DAC4411C': // 50monstr.wad map15
+			{
+				// Fixes unobtainable secret.
+				SetSectorSpecial(186, 0);
+				break;
+			}
+
+			case '404E8E623EED06EB69816A26CE4E4D3D': // 50monstr.wad map32
+			{
+				// Removes deaf enemies in monster compartments who cannot teleport in the map.
+				SetThingSkills(172, 0);
+				SetThingSkills(267, 0);
+				break;
+			}
+
+			case '732E5C06918E93499B2D0C3C74BAC2E4': // BStain.wad map25
+			{
+				// Changes The PEs in the Red Skull Room to appear only on HMP or higher, allowing the cacos to be killed on Easy difficulties.
+				SetThingSkills(997, 28);
+				SetThingSkills(998, 28);
+				break;
+			}
+
+			case '8ECBC7855699C6E4C3785FD945C3AAFA': // TWM01.wad
+			{
+				// Allows the Blue Card to appear on HMP
+				SetThingSkills(58, 31);
+				// Fixes stuck enemies, Chaingunners will now only spawn on HMP instead of an imp
+				SetThingSkills(14, 3);
+				SetThingSkills(16, 3);
+				SetThingSkills(18, 3);
+				SetThingSkills(20, 3);
+				SetThingSkills(72, 3);
+				SetThingSkills(120, 3);
+				// Correctly configures the Shotgun Guys who are stuck in Zombiemen to appear on UV or higher only
+				SetThingSkills(81, 24);
+				SetThingSkills(82, 24);
+				SetThingSkills(83, 24);
+				SetThingSkills(84, 24);
+				break;
+			}
+
+			case 'DF6E3DC8062DF2061FD142D535F86F7B': // scythe2.wad map03
+			{
+				// Moves the health bonus slightly in the secret near the exit, stopping it from getting caught on the walls near it, allowing it to be obtained.
+				SetThingXY(66, -3940, 1728);
+				break;
+			}
+
+			case '0D018A66752C91F251C84320C8DC63BE': // scythe2.wad map04
+			{
+				// Has the secret Megasphere spawn on UV or above only due to the set up of reaching it.
+				SetThingSkills(192, 24);
+				break;
+			}
+
+			case '4621BA4060AB81AEE731D727065484F2': // scythe2.wad map15
+			{
+				// Moves vertexes in monster closest containing Demons in case they do not teleport in due to being stuck
+				SetVertex(1946, -320, -64);
+				SetVertex(1945, -128, -64);
+				break;
+			}
+
+			case '4138EAE0A8868CC732EBDAEE46EF0BE3': // scythe2.wad map28
+			{
+				// Missing textures
+				SetWallTexture(2039, Line.front, Side.top, "ETBRIK2");
+				SetWallTexture(2412, Line.front, Side.top, "ETBRIK2");
+				SetWallTexture(2416, Line.front, Side.top, "ETBRIK2");
+				SetWallTexture(2422, Line.front, Side.top, "ETBRIK2");
+				break;
+			}
+
+			case '05D4E78485E22DF98F362955871BB908': // ksutra.wad map20
+			{
+				// Moves the vertex by the arachnotron in the nukage near the end, allowing you to escape the area as intended
+				SetVertex(2478, -908, -1632);
+				break;
+			}
+
+			case '3507A4C4392D0FA6412F6AA1E0C50CDE': // 1024.wad map22
+			{
+				// Prevents the player from being trapped in the room with the yellow key
+				SetLineSpecial(896, Door_Raise, 0, 64, 150);
+				SetLineActivation(896, SPAC_Use);
+				SetLineFlags(896, Line.ML_REPEAT_SPECIAL);
+				break;
+			}
+
+			case '3E1299FF71276B673B064FA65EF13891': // Ultimate Simplicity, map20
+			{
+				// Adds tags to the bars that are supposed to lower after beating the boss, allowing access to the secret map
+				AddSectorTag(378, 27);
+				break;
+			}
+		}
 	}
 }
+
