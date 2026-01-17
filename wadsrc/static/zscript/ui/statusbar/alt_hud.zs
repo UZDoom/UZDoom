@@ -869,13 +869,20 @@ class AltHud ui
 			int width = 0;
 			if (font.IsValidDynamicFont())
 			{
-				width = font.StringWidth(timeString) + 2; // small offset from screen's border
+				width = font.StringWidth(timeString);
+				float scaleAdjust = font.GetHeight() / SmallFont.GetHeight();
+				int adjustedWidth = hudwidth*scaleAdjust;
+				int adjustedHeight = hudheight*scaleAdjust;
+				screen.DrawText(font, hud_timecolor, int(ceil(hudwidth*scaleAdjust - width))-2, y-font.GetHeight(), timeString,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, adjustedWidth, DTA_VirtualHeight, adjustedHeight);
 			}
 			else
 			{
 				width = font.GetCharWidth("0") * characterCount + 2; // small offset from screen's border
+				DrawHudText(font, hud_timecolor, timeString, hudwidth - width, y, 1);
 			}
-			DrawHudText(font, hud_timecolor, timeString, hudwidth - width, y, 1);
+			
 			return true;
 		}
 		return false;
@@ -905,14 +912,21 @@ class AltHud ui
 			int width = 0;
 			if (font.IsValidDynamicFont())
 			{
-				width = font.StringWidth(tempstr) + 2; // small offset from screen's border
+				width = font.StringWidth(tempstr);
+				float scaleAdjust = font.GetHeight() / SmallFont.GetHeight();
+				int adjustedWidth = hudwidth*scaleAdjust;
+				int adjustedHeight = hudheight*scaleAdjust;
+				screen.DrawText(font, color, int(ceil(hudwidth*scaleAdjust - width))-2, y-font.GetHeight(), tempstr,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, adjustedWidth, DTA_VirtualHeight, adjustedHeight);
 			}
 			else
 			{
 				width = font.GetCharWidth("0") * characterCount + 2; // small offset from screen's border
+				DrawHudText(font, color, tempstr, hudwidth - width, y, 1);
 			}
 
-			DrawHudText(font, color, tempstr, hudwidth - width, y, 1);
+			
 			return true;
 		}
 		return false;
