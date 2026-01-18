@@ -136,7 +136,15 @@ class AltHud ui
 	{
 		let seconds = Thinker.Tics2Seconds(timer);
 		String s = String.Format("%02i:%02i:%02i", seconds / 3600, (seconds % 3600) / 60, seconds % 60);
-		int length = 8 * fnt.GetCharWidth("0");
+		int length;
+		if (fnt.IsValidDynamicFont())
+		{
+			length = fnt.StringWidth(s);
+		}
+		else
+		{
+			length = 8 * fnt.GetCharWidth("0");
+		}
 		DrawHudText(fnt, color, s, x-length, y, trans);
 	}
 	
