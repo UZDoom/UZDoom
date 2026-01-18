@@ -452,6 +452,7 @@ bool vid_hdr_active = false;
 DEFINE_GLOBAL(SmallFont)
 DEFINE_GLOBAL(SmallFont2)
 DEFINE_GLOBAL(BigFont)
+DEFINE_GLOBAL(BigUpper)
 DEFINE_GLOBAL(ConFont)
 DEFINE_GLOBAL(NewConsoleFont)
 DEFINE_GLOBAL(NewSmallFont)
