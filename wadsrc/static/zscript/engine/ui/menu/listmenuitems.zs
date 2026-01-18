@@ -166,8 +166,7 @@ class ListMenuItemStaticText : ListMenuItem
 	{
 		if (mText.Length() != 0)
 		{
-			//let font = generic_ui? NewSmallFont : mFont;
-			let font = Font.GetSmallTextFont(generic_ui? NewSmallFont : mFont);
+			let font = menuDelegate.PickFont(generic_ui? NewSmallFont : mFont);
 
 			String text = Stringtable.Localize(mText);
 
