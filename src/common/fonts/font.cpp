@@ -132,12 +132,6 @@ CUSTOM_CVAR(String, fontoverride_NewSmallFontCYR, "HACK-BOL", CVAR_ARCHIVE)
 	SetNewSmallFontOverrideCYR(self);
 }
 
-void SetHUDFontOverride(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_HUDFont, "PLEXSANS", CVAR_ARCHIVE)
-{
-	SetHUDFontOverride(self);
-}
-
 //==========================================================================
 //
 // FFont :: FFont
@@ -759,11 +753,6 @@ void SetNewSmallFontOverrideCYR(const char *newFont)
 			NewSmallFont = FindDynamicFallbackFontForLanguage("ru");
 		}
 	}
-}
-
-void SetHUDFontOverride(const char *newFont)
-{
-	//
 }
 
 FFont *FFont::GetSmallTextFont(FFont* fallbackIfNoUserChoice)
