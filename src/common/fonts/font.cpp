@@ -56,78 +56,78 @@
 
 TArray<FBitmap> sheetBitmaps;
 
-CVAR(String, fontoverride_Fallback, "PLEXSANS", CVAR_ARCHIVE);
+CVAR(String, fontoverride_Fallback, "HACK-BOL", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackJP, "IBMPLEXJ", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackKR, "IBMPLEXK", CVAR_ARCHIVE);
-CVAR(String, fontoverride_FallbackCYR, "HACK_BOL", CVAR_ARCHIVE);
+CVAR(String, fontoverride_FallbackCYR, "HACK-BOL", CVAR_ARCHIVE);
 
 void SetFontChoice_SmallText(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_smalltext, "PLEXSANS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_smalltext, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetFontChoice_SmallText(self);
 }
 
 void SetFontChoice_Title(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_title, "PLEXSANS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_title, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetFontChoice_Title(self);
 }
 
 void SetFontChoice_Description(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_description, "PLEXSANS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_description, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetFontChoice_Description(self);
 }
 
 void SetFontChoice_Console(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_console, "HACK-BOL", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_console, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetFontChoice_Console(self);
 }
 
 void SetFontChoice_BigText(const char *newFont);
-CUSTOM_CVAR(String, fontchoice_bigtext, "PLEXSANS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontchoice_bigtext, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetFontChoice_BigText(self);
 }
 
-CVAR(String, fontchoice_smalltextJP, "IBMPLEXJ", CVAR_ARCHIVE);
-CVAR(String, fontchoice_bigtextJP, "IBMPLEXJ", CVAR_ARCHIVE);
-CVAR(String, fontchoice_titleJP, "IBMPLEXJ", CVAR_ARCHIVE);
-CVAR(String, fontchoice_descriptionJP, "KOSUGIMA", CVAR_ARCHIVE);
+CVAR(String, fontchoice_smalltextJP, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextJP, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleJP, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionJP, "FO_DEFAULT", CVAR_ARCHIVE);
 
-CVAR(String, fontchoice_smalltextKO, "IBMPLEXK", CVAR_ARCHIVE);
-CVAR(String, fontchoice_bigtextKO, "IBMPLEXK", CVAR_ARCHIVE);
-CVAR(String, fontchoice_titleKO, "IBMPLEXK", CVAR_ARCHIVE);
-CVAR(String, fontchoice_descriptionKO, "IBMPLEXK", CVAR_ARCHIVE);
+CVAR(String, fontchoice_smalltextKO, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextKO, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleKO, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionKO, "FO_DEFAULT", CVAR_ARCHIVE);
 
-CVAR(String, fontchoice_smalltextCYR, "HACK-BOL", CVAR_ARCHIVE);
-CVAR(String, fontchoice_bigtextCYR, "HACK-BOL", CVAR_ARCHIVE);
-CVAR(String, fontchoice_titleCYR, "HACK-BOL", CVAR_ARCHIVE);
-CVAR(String, fontchoice_descriptionCYR, "HACK-BOL", CVAR_ARCHIVE);
+CVAR(String, fontchoice_smalltextCYR, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextCYR, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleCYR, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionCYR, "FO_DEFAULT", CVAR_ARCHIVE);
 
 //actually overriding the font directly will become a last resort option
 //if you are having mod compatibility issues.
 void SetNewSmallFontOverride(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFont, "PLEXSANS", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontoverride_NewSmallFont, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverride(self);
 }
 
 void SetNewSmallFontOverrideJP(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFontJP, "IBMPLEXJ", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontoverride_NewSmallFontJP, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverrideJP(self);
 }
 
 void SetNewSmallFontOverrideKR(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "IBMPLEXK", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverrideKR(self);
 }
 
 void SetNewSmallFontOverrideCYR(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFontCYR, "HACK-BOL", CVAR_ARCHIVE)
+CUSTOM_CVAR(String, fontoverride_NewSmallFontCYR, "FO_DEFAULT", CVAR_ARCHIVE)
 {
 	SetNewSmallFontOverrideCYR(self);
 }
