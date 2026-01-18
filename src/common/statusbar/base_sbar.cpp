@@ -873,17 +873,6 @@ void SBar_DrawString(DStatusBarCore* self, DHUDFont* font, const FString& string
 		else flags |= DI_SCREEN_TOP;
 	}
 	FFont *renderFont = font->mFont;
-	//TODO: this should be handled by the hud class itself, but that's outside the scope of work
-	auto fontCvar = FindCVar("fontOverride_HUDFont", nullptr);
-	auto hud_althud = FindCVar("hud_althud", nullptr);
-	if (fontCvar && (DrawFSHUD || (hud_althud->ToInt() && DrawFSHUD)))
-	{
-		renderFont = V_GetFont(fontCvar->GetHumanString());
-		if (!renderFont)
-		{
-			renderFont = font->mFont;
-		}
-	}
 	assert(renderFont);
 
 	if (wrapwidth > 0)
