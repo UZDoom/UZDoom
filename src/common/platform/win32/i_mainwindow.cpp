@@ -33,8 +33,8 @@
 #include "v_font.h"
 #include "i_net.h"
 #include "engineerrors.h"
-#include "common/widgets/errorwindow.h"
-#include "common/widgets/netstartwindow.h"
+#include "widgets/errorwindow.h"
+#include "widgets/netstartwindow.h"
 #include <richedit.h>
 #include <shellapi.h>
 #include <commctrl.h>

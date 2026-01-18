@@ -52,7 +52,7 @@
 #include "cmdlib.h"
 #include "i_interface.h"
 #include "i_sound.h"
-#include "launcherwindow.h"
+#include "widgets/launcherwindow.h"
 #include "m_argv.h"
 #include "palutil.h"
 #include "printf.h"

@@ -48,7 +48,7 @@
 #include "c_dispatch.h"
 #include "cmdlib.h"
 #include "common/scripting/dap/DebugServer.h"
-#include "common/widgets/errorwindow.h"
+#include "widgets/errorwindow.h"
 #include "d_buttons.h"
 #include "d_dehacked.h"
 #include "d_event.h"

@@ -21,6 +21,7 @@
 #include "c_cvars.h"
 #include "filesystem.h"
 #include "printf.h"
+#include "widgets/themedata.h"
 
 CUSTOM_CVARD(Int, ui_theme, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
 {
@@ -41,35 +42,23 @@ void InitWidgetResources(const char* filename)
 	if (!WidgetResources)
 		I_FatalError("Unable to open %s", filename);
 
-	bool use_dark = ui_theme != 2;
+	bool use_dark = ui_theme == 1;
 
 	if (ui_theme == 0)
 	{
 		// TODO: detect system theme
 	}
 
-	if (use_dark) // light
-	{
-		// TODO: make a nice theme
-		WidgetTheme::SetTheme(std::make_unique<DarkWidgetTheme>());
-	}
-	else
-	{
-		WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new WidgetTheme{{
-			Colorf::fromRgb(0xeee8d5), // background
-			Colorf::fromRgb(0x000000), // text
-			Colorf::fromRgb(0xfdf6e3), // headers / inputs
-			Colorf::fromRgb(0x000000), // headers / inputs text
-			Colorf::fromRgb(0xd7d2bf), // interactive elements
-			Colorf::fromRgb(0x000000), // interactive elements text
-			Colorf::fromRgb(0xa4c2e9), // hover / highlight
-			Colorf::fromRgb(0x000000), // hover / highlight text
-			Colorf::fromRgb(0x7ca2e9), // click
-			Colorf::fromRgb(0x000000), // click text
-			Colorf::fromRgb(0x586e75), // around elements
-			Colorf::fromRgb(0xbdb8a7)  // between elements
-		}}));
-	}
+	Theme::initilize(use_dark? DARK: LIGHT);
+
+	WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new WidgetTheme{{
+		Theme::getMain(0),   Theme::getMain(1),
+		Theme::getHeader(0), Theme::getHeader(1),
+		Theme::getButton(0), Theme::getButton(1),
+		Theme::getHover(0),  Theme::getHover(1),
+		Theme::getClick(0),  Theme::getClick(1),
+		Theme::getBorder(0), Theme::getBorder(1),
+	}}));
 }
 
 void CloseWidgetResources()

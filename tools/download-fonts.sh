@@ -3,7 +3,7 @@
 # source:
 # https://github.com/majodev/google-webfonts-helper?tab=readme-ov-file#json-api
 #
-# used for src/common/widgets/widgetresourcedata.cpp
+# used for src/widgets/widgetresourcedata.cpp
 #
 # Basic usage:
 # download-fonts.sh wad_root font_path font_name ...
