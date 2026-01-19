@@ -20,8 +20,6 @@ public:
 	void SetDefaultExtension(const std::string& extension) override;
 
 private:
-	DisplayWindow* owner = nullptr;
-
 	std::string filename;
 	std::string initial_directory;
 	std::string initial_filename;

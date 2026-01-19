@@ -3,6 +3,7 @@
 #include <vector>
 #include <cstdint>
 #include <string>
+#include <memory>
 
 struct SingleFontData
 {
@@ -10,5 +11,24 @@ struct SingleFontData
 	std::string language;
 };
 
-std::vector<SingleFontData> LoadWidgetFontData(const std::string& name);
-std::vector<uint8_t> LoadWidgetData(const std::string& name);
+class ResourceLoader
+{
+public:
+	static ResourceLoader* Get();
+	static void Set(std::unique_ptr<ResourceLoader> instance);
+
+	virtual ~ResourceLoader() = default;
+	virtual std::vector<SingleFontData> LoadFont(const std::string& name) = 0;
+	virtual std::vector<uint8_t> ReadAllBytes(const std::string& filename) = 0;
+};
+
+class ResourceData
+{
+public:
+	static std::vector<SingleFontData> LoadFont(const std::string& name) { return ResourceLoader::Get()->LoadFont(name); }
+	static std::vector<uint8_t> ReadAllBytes(const std::string& filename) { return ResourceLoader::Get()->ReadAllBytes(filename); }
+
+	static std::vector<SingleFontData> LoadSystemFont();
+	static std::vector<SingleFontData> LoadMonospaceSystemFont();
+	static double GetSystemFontSize();
+};

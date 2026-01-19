@@ -34,11 +34,15 @@ public:
 	int GetSelectionLength() const;
 
 	int GetCursorPos() const;
-	Size GetTextSize();
 
+	Size GetTextSize();
 	Size GetTextSize(const std::string& str);
-	double GetPreferredContentWidth();
-	double GetPreferredContentHeight(double width);
+
+	double GetPreferredWidth() override;
+	double GetPreferredHeight() override;
+
+	int GetIntrinsicSize() const { return IntrinsicSize; }
+	void SetIntrinsicSize(int numChars) { IntrinsicSize = numChars; }
 
 	void SetSelectAllOnFocusGain(bool enable);
 	void SelectAll();
@@ -128,12 +132,13 @@ private:
 	std::string input_mask;
 	std::string decimal_char = ".";
 
+	int IntrinsicSize = 21;
+
 	VerticalTextPosition vertical_text_align;
 	Timer* scroll_timer = nullptr;
 
 	bool mouse_moves_left = false;
 	bool cursor_blink_visible = true;
-	unsigned int blink_timer = 0;
 	int clip_start_offset = 0;
 	int clip_end_offset = 0;
 

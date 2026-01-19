@@ -79,7 +79,7 @@ void WaylandDisplayWindow::InitializeToplevel()
 
 	// These have to be added after the roundtrip
 	m_XDGToplevel.on_configure() = [&] (int32_t width, int32_t height, wayland::array_t states) {
-		OnXDGToplevelConfigureEvent(width, height);
+		OnXDGToplevelConfigureEvent(width, height, std::vector<wayland::xdg_toplevel_state>(states));
 	};
 
 	m_XDGToplevel.on_close() = [&] () {
@@ -236,32 +236,44 @@ void WaylandDisplayWindow::ShowCursor(bool enable)
 	backend->ShowCursor(enable);
 }
 
+void WaylandDisplayWindow::LockKeyboard()
+{
+	// Enables raw keyboard scancode events (OnRawKeyboard should be called for keyboard input)
+}
+
+void WaylandDisplayWindow::UnlockKeyboard()
+{
+	// Disable raw keyboard scancode events (OnKeyDown/OnKeyUp/OnKeyChar should be called for keyboard input)
+}
+
 void WaylandDisplayWindow::LockCursor()
 {
 	m_LockedPointer = backend->m_PointerConstraints.lock_pointer(m_AppSurface, backend->m_waylandPointer, nullptr, wayland::zwp_pointer_constraints_v1_lifetime::persistent);
-	backend->SetMouseLocked(true);
-	ShowCursor(false);
+	backend->SetMouseLockOwnerWindow(this);
+	// ShowCursor(false);
 }
 
 void WaylandDisplayWindow::UnlockCursor()
 {
 	if (m_LockedPointer)
 		m_LockedPointer.proxy_release();
-	backend->SetMouseLocked(false);
-	ShowCursor(true);
+	backend->SetMouseLockOwnerWindow(nullptr);
+	// ShowCursor(true);
 }
 
 void WaylandDisplayWindow::CaptureMouse()
 {
 	m_ConfinedPointer = backend->m_PointerConstraints.confine_pointer(GetWindowSurface(), backend->m_waylandPointer, nullptr, wayland::zwp_pointer_constraints_v1_lifetime::persistent);
-	ShowCursor(false);
+	backend->SetMouseLockOwnerWindow(this);
+	// ShowCursor(false);
 }
 
 void WaylandDisplayWindow::ReleaseMouseCapture()
 {
 	if (m_ConfinedPointer)
 		m_ConfinedPointer.proxy_release();
-	ShowCursor(true);
+	backend->SetMouseLockOwnerWindow(nullptr);
+	// ShowCursor(true);
 }
 
 void WaylandDisplayWindow::Update()
@@ -274,9 +286,9 @@ bool WaylandDisplayWindow::GetKeyState(InputKey key)
 	return backend->GetKeyState(key);
 }
 
-void WaylandDisplayWindow::SetCursor(StandardCursor cursor)
+void WaylandDisplayWindow::SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom)
 {
-	backend->SetCursor(cursor);
+	backend->SetCursor(cursor, custom);
 }
 
 Rect WaylandDisplayWindow::GetWindowFrame() const
@@ -357,13 +369,34 @@ Point WaylandDisplayWindow::MapToGlobal(const Point& pos) const
 	return (m_WindowGlobalPos + pos) / m_ScaleFactor;
 }
 
-void WaylandDisplayWindow::OnXDGToplevelConfigureEvent(int32_t width, int32_t height)
+void WaylandDisplayWindow::OnXDGToplevelConfigureEvent(int32_t width, int32_t height, const std::vector<wayland::xdg_toplevel_state>& states)
 {
-	Rect rect = GetWindowFrame();
-	rect.width = width / m_ScaleFactor;
-	rect.height = height / m_ScaleFactor;
-	SetWindowFrame(rect);
-	windowHost->OnWindowGeometryChanged();
+	for (const auto state : states)
+	{
+		if (state == wayland::xdg_toplevel_state::activated)
+		{
+			if (backend->GetMouseLockOwnerWindow() == this)
+				ShowCursor(false);
+			windowHost->OnWindowActivated();
+		}
+		// waylandpp's XDG_Toplevel seems to only have states up until tiled_top for the time being.
+		// yet later versions of XDGWMBase has more states (like suspended)
+		// so to not blow things up when waylandpp adds the missing states, we individually add the relevant states here
+		else if (state == wayland::xdg_toplevel_state::fullscreen ||
+				 state == wayland::xdg_toplevel_state::maximized ||
+				 state == wayland::xdg_toplevel_state::resizing ||
+				 state == wayland::xdg_toplevel_state::tiled_bottom ||
+				 state == wayland::xdg_toplevel_state::tiled_left ||
+				 state == wayland::xdg_toplevel_state::tiled_right ||
+				 state == wayland::xdg_toplevel_state::tiled_top)
+		{
+			Rect rect = GetWindowFrame();
+			rect.width = width / m_ScaleFactor;
+			rect.height = height / m_ScaleFactor;
+			SetWindowFrame(rect);
+			windowHost->OnWindowGeometryChanged();
+		}
+	}
 }
 
 void WaylandDisplayWindow::OnExportHandleEvent(std::string exportedHandle)

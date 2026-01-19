@@ -97,7 +97,7 @@ public:
 	void OnWindowCreated(WaylandDisplayWindow* window);
 	void OnWindowDestroyed(WaylandDisplayWindow* window);
 
-	void SetCursor(StandardCursor cursor);
+	void SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom);
 	void ShowCursor(bool enable);
 	bool GetKeyState(InputKey key);
 
@@ -151,15 +151,16 @@ public:
 
 	std::map<InputKey, bool> inputKeyStates; // True when the key is pressed, false when isn't
 
-	bool IsMouseLocked() { return hasMouseLock; }
-	void SetMouseLocked(bool val) { hasMouseLock = val; }
+	void SetMouseLockOwnerWindow(WaylandDisplayWindow* owner) { m_MouseLockOwnerWindow = owner; }
+	WaylandDisplayWindow* GetMouseLockOwnerWindow() const { return m_MouseLockOwnerWindow; }
 
 private:
 	void CheckNeedsUpdate();
 	void UpdateTimers();
 	void WaitForEvents(int timeout);
 	int GetTimerTimeout();
-	void ConnectDeviceEvents();
+	void ConnectKeyboardEvents();
+	void ConnectMouseEvents();
 	void OnKeyboardKeyEvent(xkb_keysym_t xkbKeySym, wayland::keyboard_key_state state);
 	void OnKeyboardCharEvent(const char* ch, wayland::keyboard_key_state state);
 	void OnKeyboardDelayEnd();
@@ -171,6 +172,7 @@ private:
 	void OnMouseMoveEvent(Point surfacePos);
 	void OnMouseMoveRawEvent(int surfaceX, int surfaceY);
 	void OnMouseWheelEvent(InputKey button);
+	void OnCapabilitiesEvent(uint32_t capabilities);
 
 	InputKey XKBKeySymToInputKey(xkb_keysym_t keySym);
 	InputKey LinuxInputEventCodeToInputKey(uint32_t inputCode);
@@ -180,7 +182,8 @@ private:
 
 	bool hasKeyboard = false;
 	bool hasPointer = false;
-	bool hasMouseLock = false;
+
+	WaylandDisplayWindow* m_MouseLockOwnerWindow = nullptr;
 
 	ZTimer::TimePoint m_previousTime;
 	ZTimer::TimePoint m_currentTime;

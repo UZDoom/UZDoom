@@ -2,7 +2,7 @@
 
 #include <unordered_map>
 #include <zwidget/window/window.h>
-#include <zwidget/window/sdl2nativehandle.h>
+#include <zwidget/window/sdlnativehandle.h>
 #include <SDL2/SDL.h>
 
 class SDL2DisplayWindow : public DisplayWindow
@@ -24,13 +24,15 @@ public:
 	void Hide() override;
 	void Activate() override;
 	void ShowCursor(bool enable) override;
+	void LockKeyboard() override;
+	void UnlockKeyboard() override;
 	void LockCursor() override;
 	void UnlockCursor() override;
 	void CaptureMouse() override;
 	void ReleaseMouseCapture() override;
 	void Update() override;
 	bool GetKeyState(InputKey key) override;
-	void SetCursor(StandardCursor cursor) override;
+	void SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom) override;
 
 	Rect GetWindowFrame() const override;
 	Size GetClientSize() const override;
@@ -93,7 +95,7 @@ public:
 	static Uint32 ExecTimer(Uint32 interval, void* id);
 
 	DisplayWindowHost* WindowHost = nullptr;
-	SDL2NativeHandle Handle;
+	SDLNativeHandle Handle;
 	SDL_Renderer* RendererHandle = nullptr;
 	SDL_Texture* BackBufferTexture = nullptr;
 	int BackBufferWidth = 0;

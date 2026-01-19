@@ -110,12 +110,12 @@ void X11Connection::ProcessEvents()
 void X11Connection::RunLoop()
 {
 	X11Connection* connection = GetX11Connection();
-	connection->ExitRunLoop = false;
 	while (!connection->ExitRunLoop && !connection->windows.empty())
 	{
 		ProcessEvents();
 		WaitForEvents(GetTimerTimeout());
 	}
+	connection->ExitRunLoop = false; // So that closing a dialog doesn't close everything else
 }
 
 void X11Connection::ExitLoop()

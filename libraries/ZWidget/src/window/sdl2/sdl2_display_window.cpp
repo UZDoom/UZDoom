@@ -1,5 +1,7 @@
 #include "sdl2_display_window.h"
 #include <stdexcept>
+#include <vector>
+#include <string>
 #include <SDL2/SDL_vulkan.h>
 
 Uint32 SDL2DisplayWindow::PaintEventNumber = 0xffffffff;
@@ -160,6 +162,16 @@ void SDL2DisplayWindow::ShowCursor(bool enable)
 	SDL_ShowCursor(enable);
 }
 
+void SDL2DisplayWindow::LockKeyboard()
+{
+	// Enables raw keyboard scancode events (OnRawKeyboard should be called for keyboard input)
+}
+
+void SDL2DisplayWindow::UnlockKeyboard()
+{
+	// Disable raw keyboard scancode events (OnKeyDown/OnKeyUp/OnKeyChar should be called for keyboard input)
+}
+
 void SDL2DisplayWindow::LockCursor()
 {
 	if (!CursorLocked)
@@ -186,7 +198,7 @@ void SDL2DisplayWindow::ReleaseMouseCapture()
 {
 }
 
-void SDL2DisplayWindow::SetCursor(StandardCursor cursor)
+void SDL2DisplayWindow::SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom)
 {
 }
 
