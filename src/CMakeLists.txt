@@ -1197,6 +1197,7 @@ set (PCH_SOURCES
 	common/scripting/dap/Nodes/RegistersScopeStateNode.cpp
 	common/scripting/dap/Nodes/StatePointerNode.cpp
 	common/scripting/dap/Nodes/DummyNode.cpp
+	utility/colorspace.cpp
 	utility/nodebuilder/nodebuild.cpp
 	utility/nodebuilder/nodebuild_classify_nosse2.cpp
 	utility/nodebuilder/nodebuild_events.cpp
