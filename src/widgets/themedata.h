@@ -45,7 +45,7 @@ private:
 	static ThemeData *theme;
 	static Mode mode;
 
-	static Colorf mix(const ColorLayers color, float mix);
+	static Colorf mix(const ColorLayers& color, float mix);
 
 public:
 	static void initilize(Mode mode);
