@@ -13,6 +13,8 @@
 **
 */
 
+#include <cmath>
+
 #include "themedata.h"
 #include "zwidget/core/colorf.h"
 
@@ -43,11 +45,11 @@ void Theme::initilize(Mode mode)
 
 	// hard-coded nice fallback
 	t = &Theme::light;
-	t->main.bg   = Colorf::fromRgb(0xeee8d5);
+	t->main.bg   = Colorf::fromRgb(0xf1eee2);
 	t->main.fg   = Colorf::fromRgb(0x000000);
-	t->header.bg = Colorf::fromRgb(0xfdf6e3);
+	t->header.bg = Colorf::fromRgb(0xf5f4ef);
 	t->header.fg = Colorf::fromRgb(0x000000);
-	t->button.bg = Colorf::fromRgb(0xd7d2bf);
+	t->button.bg = Colorf::fromRgb(0xefe8cd);
 	t->button.fg = Colorf::fromRgb(0x000000);
 	t->hover.bg  = Colorf::fromRgb(0xa4c2e9);
 	t->hover.fg  = Colorf::fromRgb(0x000000);
@@ -56,26 +58,34 @@ void Theme::initilize(Mode mode)
 	t->border.bg = Colorf::fromRgb(0x586e75);
 	t->border.fg = Colorf::fromRgb(0xbdb8a7);
 	t = &Theme::dark;
-	t->main.bg   = Colorf::fromRgb(0x2a2a2a);
-	t->main.fg   = Colorf::fromRgb(0xe2dfdb);
-	t->header.bg = Colorf::fromRgb(0x212121);
-	t->header.fg = Colorf::fromRgb(0xe2dfdb);
-	t->button.bg = Colorf::fromRgb(0x444444);
+	t->main.bg   = Colorf::fromRgb(0x002033);
+	t->main.fg   = Colorf::fromRgb(0xffffff);
+	t->header.bg = Colorf::fromRgb(0x001017);
+	t->header.fg = Colorf::fromRgb(0xffffff);
+	t->button.bg = Colorf::fromRgb(0x003747);
 	t->button.fg = Colorf::fromRgb(0xffffff);
-	t->hover.bg  = Colorf::fromRgb(0xc83c00);
-	t->hover.fg  = Colorf::fromRgb(0xffffff);
-	t->click.bg  = Colorf::fromRgb(0xbbbbbb);
+	t->hover.bg  = Colorf::fromRgb(0xa4c2e9);
+	t->hover.fg  = Colorf::fromRgb(0x000000);
+	t->click.bg  = Colorf::fromRgb(0x7ca2e9);
 	t->click.fg  = Colorf::fromRgb(0x000000);
-	t->border.bg = Colorf::fromRgb(0x646464);
-	t->border.fg = Colorf::fromRgb(0x555555);
+	t->border.bg = Colorf::fromRgb(0x536078);
+	t->border.fg = Colorf::fromRgb(0x2b3e5b);
 
 	// TODO: load from file
 }
 
 Colorf Theme::mix(ColorLayers color, float mix)
 {
-	// TODO: actually mix
-	return mix>0.5? color.fg: color.bg;
+	if (mix <= 0) return color.bg;
+	if (mix >= 1) return color.fg;
+
+	// TODO: better mix
+
+	float r = std::lerp(color.bg.r, color.fg.r, mix);
+	float g = std::lerp(color.bg.g, color.fg.g, mix);
+	float b = std::lerp(color.bg.b, color.fg.b, mix);
+
+	return { r, g, b };
 }
 
 Colorf Theme::getMain  (float mix) { return Theme::mix(Theme::theme->main,   mix); }

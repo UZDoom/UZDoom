@@ -27,6 +27,7 @@ LauncherBanner::LauncherBanner(Widget* parent) : Widget(parent)
 	Logo = new ImageBox(this);
 	auto imgsrc = Theme::getMode() == LIGHT ? "widgets/banner-light.png": "widgets/banner-dark.png";
 	Logo->SetImage(Image::LoadResource(imgsrc));
+	this->SetStyleColor("background-color", Theme::getHeader(COLOR_BACKGROUND));
 }
 
 double LauncherBanner::GetPreferredHeight() const

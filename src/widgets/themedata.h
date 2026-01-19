@@ -19,6 +19,12 @@
 
 enum Mode { LIGHT, DARK };
 
+constexpr auto COLOR_BACKGROUND = 0.0f;
+constexpr auto COLOR_MIX = 0.5f;
+constexpr auto COLOR_TEXT = 1.0f;
+constexpr auto COLOR_LIGHT = 0.0f;
+constexpr auto COLOR_HEAVY = 1.0f;
+
 typedef struct { Colorf bg; Colorf fg; } ColorLayers;
 
 typedef struct ThemeData

@@ -52,12 +52,12 @@ void InitWidgetResources(const char* filename)
 	Theme::initilize(use_dark? DARK: LIGHT);
 
 	WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new WidgetTheme{{
-		Theme::getMain(0),   Theme::getMain(1),
-		Theme::getHeader(0), Theme::getHeader(1),
-		Theme::getButton(0), Theme::getButton(1),
-		Theme::getHover(0),  Theme::getHover(1),
-		Theme::getClick(0),  Theme::getClick(1),
-		Theme::getBorder(0), Theme::getBorder(1),
+		Theme::getMain  (COLOR_BACKGROUND), Theme::getMain  (COLOR_TEXT),
+		Theme::getHeader(COLOR_BACKGROUND), Theme::getHeader(COLOR_TEXT),
+		Theme::getButton(COLOR_BACKGROUND), Theme::getButton(COLOR_TEXT),
+		Theme::getHover (COLOR_BACKGROUND), Theme::getHover (COLOR_TEXT),
+		Theme::getClick (COLOR_BACKGROUND), Theme::getClick (COLOR_TEXT),
+		Theme::getBorder(COLOR_LIGHT),      Theme::getBorder(COLOR_HEAVY),
 	}}));
 }
 
