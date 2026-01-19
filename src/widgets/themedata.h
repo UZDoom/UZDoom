@@ -40,6 +40,8 @@ typedef struct ThemeData
 class Theme
 {
 private:
+	static Colorf accent; // UZDoom brand color
+
 	static ThemeData light;
 	static ThemeData dark;
 	static ThemeData *theme;
@@ -56,6 +58,8 @@ public:
 		Theme::mode = mode;
 		theme = mode == LIGHT? &light: &dark;
 	}
+
+	static Colorf getAccent();
 
 	static Colorf getMain(float mix);
 	static Colorf getHeader(float mix);

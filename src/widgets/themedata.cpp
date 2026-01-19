@@ -19,6 +19,7 @@
 #include "basics.h"
 #include "zwidget/core/colorf.h"
 
+Colorf Theme::accent;
 ThemeData Theme::dark = {};
 ThemeData Theme::light = {};
 ThemeData* Theme::theme = nullptr;
@@ -31,20 +32,8 @@ void Theme::initilize(Mode mode)
 	setMode(mode);
 	ThemeData *t;
 
-	// basic fallback
-	Theme::light.main.bg = Colorf::fromRgb(0xffffff);
-	Theme::light.main.fg = Colorf::fromRgb(0x000000);
-	Theme::light.border.fg = Colorf::fromRgb(0x7f7f7f);
-	t = &Theme::light;
-	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Theme::light.main.bg;
-	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Theme::light.main.fg;
-	t->border.bg = t->border.fg = Theme::light.border.fg;
-	t = &Theme::dark;
-	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Theme::light.main.fg;
-	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Theme::light.main.bg;
-	t->border.bg = t->border.fg = Theme::light.border.fg;
-
 	// hard-coded nice fallback
+	Theme::accent = Colorf::fromRgb(0x237887);
 	t = &Theme::light;
 	t->main.bg   = Colorf::fromRgb(0xf1eee2);
 	t->main.fg   = Colorf::fromRgb(0x000000);
@@ -156,6 +145,8 @@ Colorf Theme::mix(const ColorLayers& color, float mix)
 
 	return { a.rgb.r, a.rgb.g, a.rgb.b };
 }
+
+Colorf Theme::getAccent() { return { Theme::accent }; }
 
 Colorf Theme::getMain  (float mix) { return Theme::mix(Theme::theme->main,   mix); }
 Colorf Theme::getHeader(float mix) { return Theme::mix(Theme::theme->header, mix); }
