@@ -392,107 +392,98 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 	}
 }
 
-template<class chartype>
-void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string, DrawParms &parms)
+void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitutedFont, int normalcolor, double x, double y,
+                         std::u32string utf32String, DrawParms &parms)
 {
-	int 		w;
+	auto                                font = substitutedFont;
+	std::vector<IntermediateDrawString> DrawStrings;
+	ParseIntoIntermediateDrawStrings(utf32String, font, normalcolor, DrawStrings);
+
+	assert(originalFont == substitutedFont || originalFont && substitutedFont->IsValidDynamicFont());
+
+	double                 cursorx             = x;
+	double                 cursory             = y;
+	double                 scalex              = parms.scalex;// * parms.patchscalex;
+	double                 scaley              = parms.scaley;// * parms.patchscaley;
+	constexpr FRenderStyle trexTextRenderStyle = {STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha};
+
+	for (auto &s : DrawStrings)
+	{
+		DrawParms           atlasFragmentDrawParms = parms;
+		const bool          autoScale              = true;
+		const double        scaleAdjust =  autoScale? (double)originalFont->GetHeight() / (double)substitutedFont->GetHeight() : 1.0;
+		const double        shrinkScale            = s.Font->GetInvSupersampleScale();
+		const double        baseFontHeight         = s.Font->GetHeight();
+		FGameTexture *const atlasTexture           = s.Font->GetDynamicFontAtlasTexture();
+		const Trex::Atlas  &atlas                  = *s.Font->GetDynamicFontAtlas();
+		Trex::TextShaper   &shaper                 = *s.Font->GetDynamicTextShaper();
+		scalex                                     = atlasFragmentDrawParms.scalex * atlasFragmentDrawParms.patchscalex * scaleAdjust;
+		scaley                                     = atlasFragmentDrawParms.scaley * atlasFragmentDrawParms.patchscaley * scaleAdjust;
+
+		for (int i = 0; i < s.TrexGlyphs.size(); ++i)
+		{
+			const Trex::ShapedGlyph &g            = s.TrexGlyphs[i];
+			const double             cx           = (cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX));
+			const double             heightAdjust = (1.0 / s.Font->GetInvSupersampleScale());
+			double             cy =
+				(cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) + g.yOffset - g.info.bearingY));
+
+			//classic doom fonts don't really have descenders or ascenders. As a result, let's nudge the
+			//vertical coords up by the descender to better match the intent of how they were placed.
+			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender * scaleAdjust;
+
+			const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
+			const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
+			const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
+			const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
+			SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
+			atlasFragmentDrawParms.style = trexTextRenderStyle;
+			atlasFragmentDrawParms.destwidth *= (shrinkScale*scaleAdjust);
+			atlasFragmentDrawParms.destheight *= (shrinkScale*scaleAdjust);
+			atlasFragmentDrawParms.color   = s.Colors[i];
+			atlasFragmentDrawParms.color.a = 255;
+
+			// TODO: cvar
+			const bool drawDropShadow = true;
+			if (drawDropShadow)
+			{
+				DrawParms shadowAtlasFragmentDrawParms = atlasFragmentDrawParms;
+				//double    textScale                    = (double)atlasFragmentDrawParms.destheight / baseFontHeight;
+				shadowAtlasFragmentDrawParms.x += 1.5 * scalex;// * textScale;
+				shadowAtlasFragmentDrawParms.y += 1.5 * scaley;// * textScale;
+				shadowAtlasFragmentDrawParms.color    = MAKEARGB(255, 11, 11, 11);
+				const FRenderStyle &shadowRenderStyle = LegacyRenderStyles[10];
+				shadowAtlasFragmentDrawParms.style    = shadowRenderStyle;
+				drawer->AddTexture(atlasTexture, shadowAtlasFragmentDrawParms);
+			}
+
+			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
+			cursorx += (g.xAdvance) * scalex * shrinkScale;
+			cursory += (g.yAdvance) * scaley * shrinkScale;
+		}
+	}
+}
+
+template <typename chartype>
+void DrawStaticFontText(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string,
+                        DrawParms &parms)
+{
+	int             w;
 	const chartype *ch;
-	int 		c;
-	double 		cx;
-	double 		cy;
-	int			boldcolor;
-	FTranslationID			trans = INVALID_TRANSLATION;
-	int			kerning;
-	FGameTexture *pic;
+	int             c;
+	double          cx;
+	double          cy;
+	int             boldcolor;
+	FTranslationID  trans = INVALID_TRANSLATION;
+	int             kerning;
+	FGameTexture   *pic;
 
 	double scalex = parms.scalex * parms.patchscalex;
 	double scaley = parms.scaley * parms.patchscaley;
 
-	if (font && font->IsValidDynamicFont())
-	{
-		//convert string to utf32 for straightforward and debuggable string parsing.
-		std::vector<IntermediateDrawString> DrawStrings;
-		std::u32string utf32String;
-		
-		if constexpr (std::is_same_v<chartype, uint8_t> || std::is_same_v<chartype, char> ||
-		              std::is_same_v<chartype, char8_t>)
-		{
-			utf32String.resize(
-				simdutf::utf32_length_from_utf8((const char *)string, std::char_traits<chartype>::length(string)),
-				'\0');
-			simdutf::convert_utf8_to_utf32((const char*)string, std::char_traits<chartype>::length(string), utf32String.data());
-		}
-		else if constexpr (std::is_same_v<chartype, char16_t>)
-		{
-			utf32String.resize(
-				simdutf::utf32_length_from_utf16((const char16_t*)string, std::char_traits<chartype>::length(string)),
-				'\0');
-			simdutf::convert_utf16_to_utf32(string, std::char_traits<chartype>::length(string), utf32String);
-		}
-		else if constexpr (std::is_same_v<chartype, char32_t>)
-		{
-			utf32String = string;
-		}
-		assert(simdutf::validate_utf32(utf32String.c_str(), utf32String.length()));
-		ParseIntoIntermediateDrawStrings(utf32String, font, normalcolor, DrawStrings);
-		
-		double cursorx = x;
-		double cursory = y;
-		const FRenderStyle trexTextRenderStyle = {STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha};
-
-		for (auto &s : DrawStrings)
-		{
-			DrawParms           atlasFragmentDrawParms      = parms;
-			const double        shrinkScale                 = s.Font->GetInvSupersampleScale();
-			const double        baseFontHeight              = s.Font->GetHeight();
-			FGameTexture *const atlasTexture                = s.Font->GetDynamicFontAtlasTexture();
-			const Trex::Atlas  &atlas                       = *s.Font->GetDynamicFontAtlas();
-			Trex::TextShaper   &shaper                      = *s.Font->GetDynamicTextShaper();
-			scalex = atlasFragmentDrawParms.scalex * atlasFragmentDrawParms.patchscalex;
-			scaley = atlasFragmentDrawParms.scaley * atlasFragmentDrawParms.patchscaley;
-			
-			for (int i = 0; i < s.TrexGlyphs.size(); ++i)
-			{
-				const Trex::ShapedGlyph &g = s.TrexGlyphs[i];
-				const double cx           = cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX);
-				const double heightAdjust = 1.0 / s.Font->GetInvSupersampleScale();
-				const double cy =
-					cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) + g.yOffset - g.info.bearingY);
-				const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
-				const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
-				const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
-				const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
-				SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
-				atlasFragmentDrawParms.style    = trexTextRenderStyle;
-				atlasFragmentDrawParms.destwidth *= (shrinkScale);
-				atlasFragmentDrawParms.destheight *= (shrinkScale);
-				atlasFragmentDrawParms.color   = s.Colors[i];
-				atlasFragmentDrawParms.color.a = 255;
-
-				// TODO: cvar
-				const bool drawDropShadow = true;
-				if (drawDropShadow)
-				{
-					auto shadowAtlasFragmentDrawParms = atlasFragmentDrawParms;
-					double textScale                    = (double)atlasFragmentDrawParms.destheight / baseFontHeight;
-					shadowAtlasFragmentDrawParms.x += (1.33*scalex*textScale);
-					shadowAtlasFragmentDrawParms.y += (1.33*scaley*textScale);
-					shadowAtlasFragmentDrawParms.color = MAKEARGB(255, 33, 33, 33);
-					const auto &shadowRenderStyle       = LegacyRenderStyles[10];
-					shadowAtlasFragmentDrawParms.style = shadowRenderStyle;
-					drawer->AddTexture(atlasTexture, shadowAtlasFragmentDrawParms);
-				}
-
-				drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
-				cursorx += (g.xAdvance) * scalex * shrinkScale;
-				cursory += (g.yAdvance) * scaley * shrinkScale;
-			}
-		}
-		return;
-	}
-
-	if (parms.celly == 0) parms.celly = font->GetHeight() + 1;
-	parms.celly = int (parms.celly * scaley);
+	if (parms.celly == 0)
+		parms.celly = font->GetHeight() + 1;
+	parms.celly = int(parms.celly * scaley);
 
 	bool palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
 
@@ -501,9 +492,10 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 	boldcolor = normalcolor ? normalcolor - 1 : NumTextColors - 1;
 
 	PalEntry colorparm = parms.color;
-	PalEntry color = 0xffffffff;
-	trans = palettetrans? INVALID_TRANSLATION : font->GetColorTranslation((EColorRange)normalcolor, &color);
-	parms.color = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255, (color.b * colorparm.b) / 255);
+	PalEntry color     = 0xffffffff;
+	trans       = palettetrans ? INVALID_TRANSLATION : font->GetColorTranslation((EColorRange)normalcolor, &color);
+	parms.color = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255,
+	                       (color.b * colorparm.b) / 255);
 
 	kerning = font->GetDefaultKerning();
 
@@ -515,7 +507,6 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		cx += parms.spacing / 2;
 	else if (parms.monospace == EMonospacing::CellRight)
 		cx += parms.spacing;
-
 
 	auto currentcolor = normalcolor;
 	while (ch - string < parms.maxstrlen)
@@ -529,8 +520,9 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			EColorRange newcolor = V_ParseFontColor(ch, normalcolor, boldcolor);
 			if (newcolor != CR_UNDEFINED)
 			{
-				trans = font->GetColorTranslation(newcolor, &color);
-				parms.color = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255, (color.b * colorparm.b) / 255);
+				trans        = font->GetColorTranslation(newcolor, &color);
+				parms.color  = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255,
+				                        (color.b * colorparm.b) / 255);
 				currentcolor = newcolor;
 			}
 			continue;
@@ -546,12 +538,13 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		if (NULL != (pic = font->GetChar(c, currentcolor, &w)))
 		{
 			// if palette translation is used, font colors will be ignored.
-			if (!palettetrans) parms.TranslationId = trans;
+			if (!palettetrans)
+				parms.TranslationId = trans;
 			SetTextureParms(drawer, &parms, pic, cx, cy);
 			if (parms.cellx)
 			{
-				w = parms.cellx;
-				parms.destwidth = parms.cellx;
+				w                = parms.cellx;
+				parms.destwidth  = parms.cellx;
 				parms.destheight = parms.celly;
 			}
 			if (parms.monospace == EMonospacing::CellLeft)
@@ -571,10 +564,77 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		{
 			cx += (parms.spacing) * scalex;
 		}
-
 	}
 }
 
+template<class chartype>
+void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string, DrawParms &parms)
+{
+	int 		w;
+	const chartype *ch;
+	int 		c;
+	double 		cx;
+	double 		cy;
+	int			boldcolor;
+	FTranslationID			trans = INVALID_TRANSLATION;
+	int			kerning;
+	FGameTexture *pic;
+
+	double scalex = parms.scalex * parms.patchscalex;
+	double scaley = parms.scaley * parms.patchscaley;
+
+	FString fontName = font->GetName().GetChars();
+	//if the substitution happens here, we might be able to determine the text scale automatically..
+	//then callsites in script don't necessarily have to be different
+	FFont *originalFont = font;
+	FFont *substitutedFont = font;
+	if (fontName.CompareNoCase("TinyFont") == 0)
+	{
+		substitutedFont = FFont::GetDescriptionFont(font);
+	}
+	else if (fontName.CompareNoCase("BigUpper") == 0 || fontName.CompareNoCase("BigFont") == 0 ||
+	         fontName.CompareNoCase("TITLEHI") == 0)
+	{
+		substitutedFont = FFont::GetBigTextFont(font);
+	}
+	else if (fontName.CompareNoCase("SmallFont") == 0 || fontName.CompareNoCase("NewSmallFont") == 0)
+	{
+		substitutedFont = FFont::GetSmallTextFont(font);
+	}
+	if (substitutedFont && substitutedFont->IsValidDynamicFont())
+	{
+		// convert string to utf32 for straightforward and debuggable string parsing.
+		
+		std::u32string                      utf32String;
+
+		if constexpr (std::is_same_v<chartype, uint8_t> || std::is_same_v<chartype, char> ||
+		              std::is_same_v<chartype, char8_t>)
+		{
+			utf32String.resize(
+				simdutf::utf32_length_from_utf8((const char *)string, std::char_traits<chartype>::length(string)),
+				'\0');
+			simdutf::convert_utf8_to_utf32((const char *)string, std::char_traits<chartype>::length(string),
+			                               utf32String.data());
+		}
+		else if constexpr (std::is_same_v<chartype, char16_t>)
+		{
+			utf32String.resize(
+				simdutf::utf32_length_from_utf16((const char16_t *)string, std::char_traits<chartype>::length(string)),
+				'\0');
+			simdutf::convert_utf16_to_utf32(string, std::char_traits<chartype>::length(string), utf32String);
+		}
+		else if constexpr (std::is_same_v<chartype, char32_t>)
+		{
+			utf32String = string;
+		}
+		assert(simdutf::validate_utf32(utf32String.c_str(), utf32String.length()));
+		DrawDynamicFontText(drawer, font, substitutedFont, normalcolor, x, y, utf32String, parms);
+	}
+	else
+	{
+		DrawStaticFontText<chartype>(drawer, font, normalcolor, x, y, string, parms);
+	}
+}
 
 // For now the 'drawer' parameter is a placeholder - this should be the way to handle it later to allow different drawers.
 void DrawText(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double y, const char* string, int tag_first, ...)
