@@ -793,8 +793,16 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetCursor, GetCursor)
 
 static int GetGlyphHeight(FFont* fnt, int code)
 {
-	auto glyph = fnt->GetChar(code, CR_UNTRANSLATED, nullptr);
-	return glyph ? (int)glyph->GetDisplayHeight() : 0;
+	if (fnt->IsValidDynamicFont())
+	{
+		char32_t srcChar = code;
+		return fnt->GetDynamicFontAtlas()->GetGlyphs().GetGlyphByCodepoint(srcChar).height;
+	}
+	else
+	{
+		auto glyph = fnt->GetChar(code, CR_UNTRANSLATED, nullptr);
+		return glyph ? (int)glyph->GetDisplayHeight() : 0;
+	}
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetGlyphHeight, GetGlyphHeight)
