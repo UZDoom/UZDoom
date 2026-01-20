@@ -95,8 +95,6 @@ CVARD(Bool, gl_showboundingbox, false, CVAR_GLOBALCONFIG | CVAR_CHEAT, "Show Act
 //
 //==========================================================================
 
-
-
 void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 {
 	bool additivefog = false;
@@ -370,7 +368,7 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 		SetColor(state, di->Level, di->lightmode, 255, 0, true, Colormap, 1.0);
 		state.EnableTexture(false);
 
-		double scales[12][6] = {
+		int scales[12][6] = {
 			// bottom
 			{-1, 0, -1, -1, 0,  1},
 			{-1, 0,  1,  1, 0,  1},
@@ -425,8 +423,6 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 				state.Draw(DT_Lines, vertexindex, 2);
 			}
 		}
-	// double amsh = actor->MaxStepHeight;
-
 		state.EnableTexture(true);
 	}
 
