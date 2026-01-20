@@ -1354,6 +1354,11 @@ int FFont::GetMaxAscender(const uint8_t* string) const
 {
 	int retval = 0;
 
+	if (IsValidDynamicFont())
+	{
+		return GetDynamicFontAtlas()->GetFont()->GetMetrics().ascender;
+	}
+
 	while (*string)
 	{
 		auto chr = GetCharFromString(string);
