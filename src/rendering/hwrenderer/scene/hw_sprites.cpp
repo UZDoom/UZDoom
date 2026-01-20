@@ -87,12 +87,15 @@ CUSTOM_CVAR(Int, gl_fuzztype, 8, CVAR_ARCHIVE)
 {
 	if (self < 0 || self > 8) self = 0;
 }
+CVARD(Bool, gl_showboundingbox, false, CVAR_GLOBALCONFIG | CVAR_CHEAT, "Show Actors Bounding Boxes");
 
 //==========================================================================
 //
 // 
 //
 //==========================================================================
+
+
 
 void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 {
@@ -337,6 +340,94 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 	else if (modelframe == nullptr)
 	{
 		state.ClearDepthBias();
+	}
+
+	if (gl_showboundingbox && actor)
+	{
+		state.EnableLineSmooth(true);
+
+		PalEntry hitboxColor = 0x640064;
+
+		if (actor->flags & MF_SOLID)
+			hitboxColor = 0x00ff00;
+		if (actor->flags & MF_SHOOTABLE)
+			hitboxColor = 0xffff00;
+		if (actor->flags3 & MF3_ISMONSTER && actor->health > 0)
+			hitboxColor = 0xff0000;
+		if (actor->flags & MF_SPECIAL && actor->health > 0)
+			hitboxColor = 0x00ffff;
+		if (actor->flags & MF_NOBLOCKMAP)
+			hitboxColor = 0x646464;
+
+		hitboxColor.a = 255;
+		state.SetObjectColor(hitboxColor);
+
+		state.SetAddColor(0);
+		state.SetDynLight(0, 0, 0);
+		state.SetRenderStyle(STYLE_Normal);
+		state.SetTextureMode(TM_NORMAL); //is this needed?
+		SetFog(state, di->Level, di->lightmode, 0, 0, false, &Colormap, true);
+		SetColor(state, di->Level, di->lightmode, 255, 0, true, Colormap, 1.0);
+		state.EnableTexture(false);
+
+		double scales[12][6] = {
+			// bottom
+			{-1, 0, -1, -1, 0,  1},
+			{-1, 0,  1,  1, 0,  1},
+			{ 1, 0,  1,  1, 0, -1},
+			{ 1, 0, -1, -1, 0, -1},
+			// top
+			{-1, 1, -1, -1, 1,  1},
+			{-1, 1,  1,  1, 1,  1},
+			{ 1, 1,  1,  1, 1, -1},
+			{ 1, 1, -1, -1, 1, -1},
+			// vertical
+			{-1, 0, -1, -1, 1, -1},
+			{-1, 0,  1, -1, 1,  1},
+			{ 1, 0,  1,  1, 1,  1},
+			{ 1, 0, -1,  1, 1, -1}
+		                         
+		};
+
+		double ax = actor->X();
+		double ay = actor->Y();
+		double az = actor->Z();
+
+		double ar = actor->radius;
+		double ah = actor->Height;
+		
+		for (int i = 0; i < 12; i++)
+		{
+			auto         vert        = screen->mVertexData->AllocVertices(2);
+			auto         vp          = vert.first;
+			unsigned int vertexindex = vert.second;
+			vp[0].Set(ax + ar * scales[i][0], az + ah * scales[i][1],
+				ay + ar * scales[i][2], 0.0f, 0.0f);
+			vp[1].Set(ax + ar * scales[i][3], az + ah * scales[i][4],
+				ay + ar * scales[i][5], 0.0f, 0.0f);
+			state.Draw(DT_Lines, vertexindex, 2);
+		}
+		
+		double apph = fabs(actor->projectilepassheight);
+		if (apph > 0.0)
+		{
+			int pphscales[2][6] = {
+				{-1,  1},
+                { 1, -1}
+            };
+			for (int i = 0; i < 2; i++)
+			{
+				auto         vert        = screen->mVertexData->AllocVertices(2);
+				auto         vp          = vert.first;
+				unsigned int vertexindex = vert.second;
+				vp[0].Set(ax - ar, az + apph, ay + ar * pphscales[i][0], 0.0f, 0.0f);
+				vp[1].Set(ax + ar, az + apph, ay + ar * pphscales[i][1], 0.0f, 0.0f);
+				state.Draw(DT_Lines, vertexindex, 2);
+			}
+		}
+	// double amsh = actor->MaxStepHeight;
+
+		state.EnableTexture(true);
 	}
 
 	state.SetObjectColor(0xffffffff);
