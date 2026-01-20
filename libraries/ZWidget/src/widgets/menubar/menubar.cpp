@@ -244,16 +244,16 @@ void MenubarItem::OnMouseLeave()
 	SetStyleState("");
 }
 
-double MenubarItem::GetPreferredWidth()
+double MenubarItem::GetPreferredWidth() const
 {
 	Canvas* canvas = GetCanvas();
-	return canvas->measureText(GetFont(), text).width;
+	return canvas->measureText(text).width;
 }
 
 void MenubarItem::OnPaint(Canvas* canvas)
 {
-	double x = (GetWidth() - canvas->measureText(GetFont(), text).width) * 0.5;
-	canvas->drawText(GetFont(), Point(x, 21.0), text, GetStyleColor("color"));
+	double x = (GetWidth() - canvas->measureText(text).width) * 0.5;
+	canvas->drawText(Point(x, 21.0), GetStyleColor("color"), text);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -288,12 +288,12 @@ MenuItemSeparator* Menu::AddSeparator()
 	return sep;
 }
 
-double Menu::GetPreferredWidth()
+double Menu::GetPreferredWidth() const
 {
 	return GridFitSize(200.0);
 }
 
-double Menu::GetPreferredHeight()
+double Menu::GetPreferredHeight() const
 {
 	double h = 0.0;
 	for (Widget* item = FirstChild(); item != nullptr; item = item->NextSibling())

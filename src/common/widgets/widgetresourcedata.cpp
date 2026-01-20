@@ -28,108 +28,69 @@ CUSTOM_CVARD(Int, ui_theme, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme
 	if (self > 2) self = 2;
 }
 
-class ResourceLoaderPK3 : public ResourceLoader
+FResourceFile* WidgetResources;
+
+bool IsZWidgetAvailable()
 {
-private:
-	FResourceFile* WidgetResources;
-
-public:
-	ResourceLoaderPK3(const char* filename)
-	{
-		WidgetResources = FResourceFile::OpenResourceFile(filename);
-		if (!WidgetResources)
-			I_FatalError("Unable to open %s", filename);
-
-		bool use_dark = ui_theme != 2;
-
-		if (ui_theme == 0)
-		{
-			// TODO: detect system theme
-		}
-
-		if (use_dark) // light
-		{
-			// TODO: make a nice theme
-			WidgetTheme::SetTheme(std::make_unique<DarkWidgetTheme>());
-		}
-		else
-		{
-			WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new SimpleTheme{{
-				Colorf::fromRgb(0xeee8d5), // background
-				Colorf::fromRgb(0x000000), // text
-				Colorf::fromRgb(0xfdf6e3), // headers / inputs
-				Colorf::fromRgb(0x000000), // headers / inputs text
-				Colorf::fromRgb(0xd7d2bf), // interactive elements
-				Colorf::fromRgb(0x000000), // interactive elements text
-				Colorf::fromRgb(0xa4c2e9), // hover / highlight
-				Colorf::fromRgb(0x000000), // hover / highlight text
-				Colorf::fromRgb(0x7ca2e9), // click
-				Colorf::fromRgb(0x000000), // click text
-				Colorf::fromRgb(0x586e75), // around elements
-				Colorf::fromRgb(0xbdb8a7)  // between elements
-			}}));
-		}
-	}
-
-	~ResourceLoaderPK3()
-	{
-		delete WidgetResources;
-	}
-
-	std::vector<SingleFontData> LoadFont(const std::string& name) override
-	{
-		std::vector<SingleFontData> returnv;
-		if (!stricmp(name.c_str(), "notosans") || !stricmp(name.c_str(), "system") || !stricmp(name.c_str(), "monospace")) // TODO: add monospace fonts
-		{
-			// to update/add fonts:
-			// tools/download-fonts.sh wadsrc/static widgets/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR'
-			const char* fonts[] = {
-				"widgets/noto/noto-sans.ttf",
-				"widgets/noto/noto-sans-armenian.ttf",
-				"widgets/noto/noto-sans-georgian.ttf",
-				"widgets/noto/noto-sans-jp.ttf",
-				"widgets/noto/noto-sans-kr.ttf"
-			};
-
-			auto count = sizeof(fonts) / sizeof(fonts[0]);
-			returnv.resize(count);
-			for (unsigned i = 0; i < count; i++)
-				returnv[i].fontdata = ReadAllBytes(fonts[i]);
-
-			return returnv;
-		}
-
-		returnv.resize(1);
-		std::string fn = "widgets/font/" + name + ".ttf";
-		returnv[0].fontdata = ReadAllBytes(fn.c_str());
-
-		return returnv;
-	}
-
-	std::vector<uint8_t> ReadAllBytes(const std::string& name) override
-	{
-		if (!WidgetResources)
-			I_FatalError("InitWidgetResources has not been called");
-
-		auto lump = WidgetResources->FindEntry(name.c_str());
-		if (lump == -1)
-			I_FatalError("Unable to find %s", name.c_str());
-
-		auto reader = WidgetResources->GetEntryReader(lump, FileSys::READER_SHARED);
-		std::vector<uint8_t> buffer(reader.GetLength());
-		reader.Read(buffer.data(), buffer.size());
-		return buffer;
-	}
-};
+	return WidgetResources;
+}
 
 void InitWidgetResources(const char* filename)
 {
-	ResourceLoader::Set(std::make_unique<ResourceLoaderPK3>(filename));
+	WidgetResources = FResourceFile::OpenResourceFile(filename);
+	if (!WidgetResources)
+		I_FatalError("Unable to open %s", filename);
+
+	bool use_dark = ui_theme != 2;
+
+	if (ui_theme == 0)
+	{
+		// TODO: detect system theme
+	}
+
+	if (use_dark) // light
+	{
+		// TODO: make a nice theme
+		WidgetTheme::SetTheme(std::make_unique<DarkWidgetTheme>());
+	}
+	else
+	{
+		WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new WidgetTheme{{
+			Colorf::fromRgb(0xeee8d5), // background
+			Colorf::fromRgb(0x000000), // text
+			Colorf::fromRgb(0xfdf6e3), // headers / inputs
+			Colorf::fromRgb(0x000000), // headers / inputs text
+			Colorf::fromRgb(0xd7d2bf), // interactive elements
+			Colorf::fromRgb(0x000000), // interactive elements text
+			Colorf::fromRgb(0xa4c2e9), // hover / highlight
+			Colorf::fromRgb(0x000000), // hover / highlight text
+			Colorf::fromRgb(0x7ca2e9), // click
+			Colorf::fromRgb(0x000000), // click text
+			Colorf::fromRgb(0x586e75), // around elements
+			Colorf::fromRgb(0xbdb8a7)  // between elements
+		}}));
+	}
 }
 
 void CloseWidgetResources()
 {
-	ResourceLoader::Set(nullptr);
+	delete WidgetResources;
+	WidgetResources = nullptr;
+}
+
+static std::vector<uint8_t> LoadFile(const char* name)
+{
+	if (!WidgetResources)
+		I_FatalError("InitWidgetResources has not been called");
+
+	auto lump = WidgetResources->FindEntry(name);
+	if (lump == -1)
+		I_FatalError("Unable to find %s", name);
+
+	auto reader = WidgetResources->GetEntryReader(lump, FileSys::READER_SHARED);
+	std::vector<uint8_t> buffer(reader.GetLength());
+	reader.Read(buffer.data(), buffer.size());
+	return buffer;
 }
 
 // this must be allowed to fail without throwing.
@@ -143,4 +104,40 @@ static std::vector<uint8_t> LoadDiskFile(const char* name)
 		lump.Read(buffer.data(), buffer.size());
 	}
 	return buffer;
+}
+
+// This interface will later require some significant redesign.
+std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
+{
+	std::vector<SingleFontData> returnv;
+	if (!stricmp(name.c_str(), "notosans"))
+	{
+		// to update/add fonts:
+		// tools/download-fonts.sh wadsrc/static widgets/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR'
+		const char* fonts[] = {
+			"widgets/noto/noto-sans.ttf",
+			"widgets/noto/noto-sans-armenian.ttf",
+			"widgets/noto/noto-sans-georgian.ttf",
+			"widgets/noto/noto-sans-jp.ttf",
+			"widgets/noto/noto-sans-kr.ttf"
+		};
+
+		auto count = sizeof(fonts) / sizeof(fonts[0]);
+		returnv.resize(count);
+		for (unsigned i = 0; i < count; i++)
+			returnv[i].fontdata = LoadFile(fonts[i]);
+
+		return returnv;
+	}
+
+	returnv.resize(1);
+	std::string fn = "widgets/font/" + name + ".ttf";
+	returnv[0].fontdata = LoadFile(fn.c_str());
+
+	return returnv;
+}
+
+std::vector<uint8_t> LoadWidgetData(const std::string& name)
+{
+	return LoadFile(name.c_str());
 }

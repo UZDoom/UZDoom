@@ -134,7 +134,9 @@ private:
 
 	bool mouse_moves_left = false;
 	bool cursor_blink_visible = true;
+	unsigned int blink_timer = 0;
 	int clip_start_offset = 0;
+	int clip_end_offset = 0;
 	bool ignore_mouse_events = false;
 
 	struct UndoInfo
@@ -151,6 +153,8 @@ private:
 	} undo_info;
 
 	bool select_all_on_focus_gain = false;
+
+	std::shared_ptr<Font> font = Font::Create("NotoSans", 12.0);
 
 	template<typename T>
 	static T clamp(T val, T minval, T maxval) { return std::max<T>(std::min<T>(val, maxval), minval); }

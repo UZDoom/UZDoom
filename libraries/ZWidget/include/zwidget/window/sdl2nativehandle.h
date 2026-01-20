@@ -1,8 +1,11 @@
 #pragma once
 
+#include <string>
+#include <vector>
+
 struct SDL_Window;
 
-class SDLNativeHandle
+class SDL2NativeHandle
 {
 public:
 	SDL_Window* window = nullptr;

@@ -33,8 +33,8 @@ public:
 	int GetSelectedItem() const { return selectedItem; }
 	void SetSelectedItem(int index);
 
-	double GetPreferredHeight() override;
-	double GetPreferredWidth() override;
+	double GetPreferredHeight() const;
+	double GetPreferredWidth() const;
 
 	std::function<void(int)> OnChanged;
 

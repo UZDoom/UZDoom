@@ -9,32 +9,25 @@
 
 class Widget;
 class Canvas;
-class Font;
-class Image;
 
 class WidgetStyle
 {
 public:
 	WidgetStyle(WidgetStyle* parentStyle = nullptr) : ParentStyle(parentStyle) { }
-
 	virtual ~WidgetStyle() = default;
 	virtual void Paint(Widget* widget, Canvas* canvas, Size size) = 0;
-
-	std::shared_ptr<Font> GetFont(const std::string& state);
 
 	void SetBool(const std::string& state, const std::string& propertyName, bool value);
 	void SetInt(const std::string& state, const std::string& propertyName, int value);
 	void SetDouble(const std::string& state, const std::string& propertyName, double value);
 	void SetString(const std::string& state, const std::string& propertyName, const std::string& value);
 	void SetColor(const std::string& state, const std::string& propertyName, const Colorf& value);
-	void SetImage(const std::string& state, const std::string& propertyName, const std::shared_ptr<Image>& value);
 
 	void SetBool(const std::string& propertyName, bool value) { SetBool(std::string(), propertyName, value); }
 	void SetInt(const std::string& propertyName, int value) { SetInt(std::string(), propertyName, value); }
 	void SetDouble(const std::string& propertyName, double value) { SetDouble(std::string(), propertyName, value); }
 	void SetString(const std::string& propertyName, const std::string& value) { SetString(std::string(), propertyName, value); }
 	void SetColor(const std::string& propertyName, const Colorf& value) { SetColor(std::string(), propertyName, value); }
-	void SetImage(const std::string& propertyName, const std::shared_ptr<Image>& value) { SetImage(std::string(), propertyName, value); }
 
 private:
 	// Note: do not call these directly. Use widget->GetStyleXX instead since a widget may explicitly override a class style
@@ -43,12 +36,10 @@ private:
 	double GetDouble(const std::string& state, const std::string& propertyName) const;
 	std::string GetString(const std::string& state, const std::string& propertyName) const;
 	Colorf GetColor(const std::string& state, const std::string& propertyName) const;
-	std::shared_ptr<Image> GetImage(const std::string& state, const std::string& propertyName) const;
 
 	WidgetStyle* ParentStyle = nullptr;
-	typedef std::variant<bool, int, double, std::string, Colorf, std::shared_ptr<Font>, std::shared_ptr<Image>> PropertyVariant;
+	typedef std::variant<bool, int, double, std::string, Colorf> PropertyVariant;
 	std::unordered_map<std::string, std::unordered_map<std::string, PropertyVariant>> StyleProperties;
-	std::unordered_map<std::string, std::shared_ptr<Font>> Fonts;
 
 	const PropertyVariant* FindProperty(const std::string& state, const std::string& propertyName) const;
 
@@ -64,24 +55,7 @@ public:
 
 class WidgetTheme
 {
-public:
-	virtual ~WidgetTheme() = default;
-	
-	WidgetStyle* RegisterStyle(std::unique_ptr<WidgetStyle> widgetStyle, const std::string& widgetClass);
-	WidgetStyle* GetStyle(const std::string& widgetClass);
-
-	static void SetTheme(std::unique_ptr<WidgetTheme> theme);
-	static WidgetTheme* GetTheme();
-
-private:
-	std::unordered_map<std::string, std::unique_ptr<WidgetStyle>> Styles;
-};
-
-class SimpleTheme : public WidgetTheme
-{
-public:
-	struct ThemeColors
-	{
+	struct SimpleTheme {
 		const Colorf bgMain;   // background
 		const Colorf fgMain;   //
 		const Colorf bgLight;  // headers / inputs
@@ -95,17 +69,28 @@ public:
 		const Colorf border;   // around elements
 		const Colorf divider;  // between elements
 	};
+public:
+	WidgetTheme() {}
+	WidgetTheme(const struct SimpleTheme &theme);
+	virtual ~WidgetTheme() = default;
+	
+	WidgetStyle* RegisterStyle(std::unique_ptr<WidgetStyle> widgetStyle, const std::string& widgetClass);
+	WidgetStyle* GetStyle(const std::string& widgetClass);
 
-	SimpleTheme(const ThemeColors& colors);
+	static void SetTheme(std::unique_ptr<WidgetTheme> theme);
+	static WidgetTheme* GetTheme();
+
+private:
+	std::unordered_map<std::string, std::unique_ptr<WidgetStyle>> Styles;
 };
 
-class DarkWidgetTheme : public SimpleTheme
+class DarkWidgetTheme : public WidgetTheme
 {
 public:
 	DarkWidgetTheme();
 };
 
-class LightWidgetTheme : public SimpleTheme
+class LightWidgetTheme : public WidgetTheme
 {
 public:
 	LightWidgetTheme();

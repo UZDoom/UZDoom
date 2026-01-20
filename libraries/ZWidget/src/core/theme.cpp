@@ -2,7 +2,6 @@
 #include "core/theme.h"
 #include "core/widget.h"
 #include "core/canvas.h"
-#include "core/font.h"
 
 void WidgetStyle::SetBool(const std::string& state, const std::string& propertyName, bool value)
 {
@@ -25,11 +24,6 @@ void WidgetStyle::SetString(const std::string& state, const std::string& propert
 }
 
 void WidgetStyle::SetColor(const std::string& state, const std::string& propertyName, const Colorf& value)
-{
-	StyleProperties[state][propertyName] = value;
-}
-
-void WidgetStyle::SetImage(const std::string& state, const std::string& propertyName, const std::shared_ptr<Image>& value)
 {
 	StyleProperties[state][propertyName] = value;
 }
@@ -65,18 +59,6 @@ const WidgetStyle::PropertyVariant* WidgetStyle::FindProperty(const std::string&
 	return nullptr;
 }
 
-std::shared_ptr<Font> WidgetStyle::GetFont(const std::string& state)
-{
-	auto& font = Fonts[state];
-	if (!font)
-	{
-		std::string fontName = GetString(state, "font-family");
-		double size = GetDouble(state, "font-size");
-		font = Font::Create(fontName, size);
-	}
-	return font;
-}
-
 bool WidgetStyle::GetBool(const std::string& state, const std::string& propertyName) const
 {
 	const PropertyVariant* prop = FindProperty(state, propertyName);
@@ -105,12 +87,6 @@ Colorf WidgetStyle::GetColor(const std::string& state, const std::string& proper
 {
 	const PropertyVariant* prop = FindProperty(state, propertyName);
 	return prop ? std::get<Colorf>(*prop) : Colorf::transparent();
-}
-
-std::shared_ptr<Image> WidgetStyle::GetImage(const std::string& state, const std::string& propertyName) const
-{
-	const PropertyVariant* prop = FindProperty(state, propertyName);
-	return prop ? std::get<std::shared_ptr<Image>>(*prop) : std::shared_ptr<Image>();
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -165,10 +141,9 @@ WidgetTheme* WidgetTheme::GetTheme()
 	return CurrentTheme.get();
 }
 
-/////////////////////////////////////////////////////////////////////////////
-
-SimpleTheme::SimpleTheme(const ThemeColors& theme)
+WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 {
+
 	auto bgMain   = theme.bgMain;   // background
 	auto fgMain   = theme.fgMain;   //
 	auto bgLight  = theme.bgLight;  // headers / inputs
@@ -205,8 +180,7 @@ SimpleTheme::SimpleTheme(const ThemeColors& theme)
 	auto toolbarbutton = RegisterStyle(std::make_unique<BasicWidgetStyle>(widget), "toolbarbutton");
 	auto statusbar = RegisterStyle(std::make_unique<BasicWidgetStyle>(widget), "statusbar");
 
-	widget->SetString("font-family", "system");
-	widget->SetDouble("font-size", 13.0);
+	widget->SetString("font-family", "NotoSans");
 	widget->SetColor("color", fgMain);
 	widget->SetColor("window-background", bgMain);
 	widget->SetColor("window-border", bgMain);
@@ -241,7 +215,6 @@ SimpleTheme::SimpleTheme(const ThemeColors& theme)
 	lineedit->SetColor("selection-color", bgHover);
 	lineedit->SetColor("no-focus-selection-color", bgHover);
 
-	textedit->SetString("font-family", "monospace");
 	textedit->SetDouble("noncontent-left", 8.0);
 	textedit->SetDouble("noncontent-top", 8.0);
 	textedit->SetDouble("noncontent-right", 8.0);
@@ -351,26 +324,24 @@ SimpleTheme::SimpleTheme(const ThemeColors& theme)
 
 /////////////////////////////////////////////////////////////////////////////
 
-DarkWidgetTheme::DarkWidgetTheme() : SimpleTheme({
+DarkWidgetTheme::DarkWidgetTheme(): WidgetTheme({
 	Colorf::fromRgb(0x2A2A2A), // background
 	Colorf::fromRgb(0xE2DFDB), //
 	Colorf::fromRgb(0x212121), // headers / inputs
 	Colorf::fromRgb(0xE2DFDB), //
 	Colorf::fromRgb(0x444444), // interactive elements
 	Colorf::fromRgb(0xFFFFFF), //
-	Colorf::fromRgb(0x003C88), // hover / highlight
+	Colorf::fromRgb(0xC83C00), // hover / highlight
 	Colorf::fromRgb(0xFFFFFF), //
 	Colorf::fromRgb(0xBBBBBB), // click
 	Colorf::fromRgb(0x000000), //
 	Colorf::fromRgb(0x646464), // around elements
 	Colorf::fromRgb(0x555555)  // between elements
-	})
-{
-}
+}) {};
 
 /////////////////////////////////////////////////////////////////////////////
 
-LightWidgetTheme::LightWidgetTheme() : SimpleTheme({
+LightWidgetTheme::LightWidgetTheme(): WidgetTheme({
 	Colorf::fromRgb(0xF0F0F0), // background
 	Colorf::fromRgb(0x191919), //
 	Colorf::fromRgb(0xFAFAFA), // headers / inputs
@@ -383,6 +354,4 @@ LightWidgetTheme::LightWidgetTheme() : SimpleTheme({
 	Colorf::fromRgb(0x000000), //
 	Colorf::fromRgb(0xA0A0A0), // around elements
 	Colorf::fromRgb(0xB9B9B9)  // between elements
-	})
-{
-}
+}) {};

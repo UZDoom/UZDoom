@@ -19,8 +19,8 @@ public:
 	void SetImage(std::shared_ptr<Image> newImage);
 	void SetImageMode(ImageBoxMode mode);
 
-	double GetPreferredWidth() override;
-	double GetPreferredHeight() override;
+	double GetPreferredWidth() const;
+	double GetPreferredHeight() const;
 
 protected:
 	void OnPaint(Canvas* canvas) override;

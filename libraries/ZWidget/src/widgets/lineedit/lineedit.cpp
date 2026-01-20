@@ -87,22 +87,6 @@ int LineEdit::GetCursorPos() const
 	return cursor_pos;
 }
 
-double LineEdit::GetPreferredWidth()
-{
-	Canvas* canvas = GetCanvas();
-	if (!canvas)
-		return 0.0;
-	return canvas->measureText(GetFont(), "X").width * IntrinsicSize;
-}
-
-double LineEdit::GetPreferredHeight()
-{
-	Canvas* canvas = GetCanvas();
-	if (!canvas)
-		return 0.0;
-	return canvas->getFontMetrics(GetFont()).height;
-}
-
 Size LineEdit::GetTextSize()
 {
 	Canvas* canvas = GetCanvas();
@@ -116,7 +100,17 @@ Size LineEdit::GetTextSize(const std::string& str)
 	Canvas* canvas = GetCanvas();
 	if (!canvas)
 		return Size(0.0, 0.0);
-	return canvas->measureText(GetFont(), str).size();
+	return canvas->measureText(str).size();
+}
+
+double LineEdit::GetPreferredContentWidth()
+{
+	return GetTextSize().width;
+}
+
+double LineEdit::GetPreferredContentHeight(double width)
+{
+	return GetTextSize().height;
 }
 
 void LineEdit::SelectAll()
@@ -890,7 +884,7 @@ Rect LineEdit::GetCursorRect()
 		clipped_text = CreatePassword(UTF8Reader::utf8_length(clipped_text));
 	}
 
-	Size text_size_before_cursor = canvas->measureText(GetFont(), clipped_text).size();
+	Size text_size_before_cursor = canvas->measureText(clipped_text).size();
 
 	Rect cursor_rect;
 	cursor_rect.x = text_size_before_cursor.width;
@@ -911,11 +905,11 @@ Rect LineEdit::GetSelectionRect()
 	// text before selection:
 
 	std::string txt_before = GetVisibleTextBeforeSelection();
-	Size text_size_before_selection = canvas->measureText(GetFont(), txt_before).size();
+	Size text_size_before_selection = canvas->measureText(txt_before).size();
 
 	// selection text:
 	std::string txt_selected = GetVisibleSelectedText();
-	Size text_size_selection = canvas->measureText(GetFont(), txt_selected).size();
+	Size text_size_selection = canvas->measureText(txt_selected).size();
 
 	Rect selection_rect;
 	selection_rect.x = text_size_before_selection.width;
@@ -969,7 +963,7 @@ void LineEdit::OnGeometryChanged()
 	if (!canvas)
 		return;
 
-	vertical_text_align = canvas->verticalTextAlign(GetFont());
+	vertical_text_align = canvas->verticalTextAlign();
 
 	clip_start_offset = 0;
 	cursor_pos = 0;
@@ -1091,8 +1085,8 @@ void LineEdit::OnPaint(Canvas* canvas)
 			txt_after = CreatePassword(UTF8Reader::utf8_length(txt_after));
 	}
 
-	Size size_before = canvas->measureText(GetFont(), txt_before).size();
-	Size size_selected = canvas->measureText(GetFont(), txt_selected).size();
+	Size size_before = canvas->measureText(txt_before).size();
+	Size size_selected = canvas->measureText(txt_selected).size();
 
 	if (!txt_selected.empty())
 	{
@@ -1104,15 +1098,15 @@ void LineEdit::OnPaint(Canvas* canvas)
 	// Draw text before selection
 	if (!txt_before.empty())
 	{
-		canvas->drawText(GetFont(), Point(0.0, canvas->verticalTextAlign(GetFont()).baseline), txt_before, GetStyleColor("color"));
+		canvas->drawText(Point(0.0, canvas->verticalTextAlign().baseline), GetStyleColor("color"), txt_before);
 	}
 	if (!txt_selected.empty())
 	{
-		canvas->drawText(GetFont(), Point(size_before.width, canvas->verticalTextAlign(GetFont()).baseline), txt_selected, GetStyleColor("color"));
+		canvas->drawText(Point(size_before.width, canvas->verticalTextAlign().baseline), GetStyleColor("color"), txt_selected);
 	}
 	if (!txt_after.empty())
 	{
-		canvas->drawText(GetFont(), Point(size_before.width + size_selected.width, canvas->verticalTextAlign(GetFont()).baseline), txt_after, GetStyleColor("color"));
+		canvas->drawText(Point(size_before.width + size_selected.width, canvas->verticalTextAlign().baseline), GetStyleColor("color"), txt_after);
 	}
 
 	// draw cursor
@@ -1158,12 +1152,12 @@ std::string LineEdit::CreatePassword(std::string::size_type num_letters) const
 
 Size LineEdit::GetVisualTextSize(Canvas* canvas, int pos, int npos) const
 {
-	return canvas->measureText(GetFont(), password_mode ? CreatePassword(UTF8Reader::utf8_length(text.substr(pos, npos))) : text.substr(pos, npos)).size();
+	return canvas->measureText(password_mode ? CreatePassword(UTF8Reader::utf8_length(text.substr(pos, npos))) : text.substr(pos, npos)).size();
 }
 
 Size LineEdit::GetVisualTextSize(Canvas* canvas) const
 {
-	return canvas->measureText(GetFont(), password_mode ? CreatePassword(UTF8Reader::utf8_length(text)) : text).size();
+	return canvas->measureText(password_mode ? CreatePassword(UTF8Reader::utf8_length(text)) : text).size();
 }
 
 std::string LineEdit::ToFixed(float number, int num_decimal_places)

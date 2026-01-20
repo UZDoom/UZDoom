@@ -28,10 +28,6 @@ WaylandDisplayBackend::WaylandDisplayBackend()
 		if (interface == wayland::data_device_manager_t::interface_name)
 			s_waylandRegistry.bind(name, m_DataDeviceManager, 3);
 		if (interface == wayland::xdg_wm_base_t::interface_name)
-			/* Setting the version to anything higher than 4 will cause an
-			 * "interface 'xdg_toplevel' has no event 3" error.
-			 * Presumably referring to wm_capabilities event.
-			 */
 			s_waylandRegistry.bind(name, m_XDGWMBase, 4);
 		if (interface == wayland::zxdg_output_manager_v1_t::interface_name)
 			s_waylandRegistry.bind(name, m_XDGOutputManager, version);
@@ -70,17 +66,6 @@ WaylandDisplayBackend::WaylandDisplayBackend()
 	if (!m_RelativePointerManager)
 		throw std::runtime_error("WaylandDisplayBackend: relative-pointer-unstable-v1 is required!");
 
-	m_keyboardDelayTimer = ZTimer();
-	m_keyboardRepeatTimer = ZTimer();
-
-	m_keyboardDelayTimer.SetCallback([this] () { OnKeyboardDelayEnd(); });
-	m_keyboardRepeatTimer.SetCallback([this] () { OnKeyboardRepeat(); });
-
-	m_keyboardRepeatTimer.SetRepeating(true);
-
-	m_previousTime = ZTimer::Clock::now();
-	m_currentTime = ZTimer::Clock::now();
-
 	m_waylandOutput.on_mode() = [this] (wayland::output_mode flags, int32_t width, int32_t height, int32_t refresh) {
 		s_ScreenSize = Size(width, height);
 	};
@@ -90,7 +75,8 @@ WaylandDisplayBackend::WaylandDisplayBackend()
 	};
 
 	m_waylandSeat.on_capabilities() = [this] (uint32_t capabilities) {
-		OnCapabilitiesEvent(capabilities);
+		hasKeyboard = capabilities & wayland::seat_capability::keyboard;
+		hasPointer = capabilities & wayland::seat_capability::pointer;
 	};
 
 	m_XDGOutput = m_XDGOutputManager.get_xdg_output(m_waylandOutput);
@@ -172,8 +158,26 @@ WaylandDisplayBackend::WaylandDisplayBackend()
 
 	s_waylandDisplay.roundtrip();
 
+	// To do: this shouldn't really be fatal. The user might have forgotten to plug in their keyboard or mouse.
+	if (!hasKeyboard)
+		throw std::runtime_error("No keyboard detected!");
+	if (!hasPointer)
+		throw std::runtime_error("No pointer device detected!");
+
+	m_waylandKeyboard = m_waylandSeat.get_keyboard();
+	m_waylandPointer = m_waylandSeat.get_pointer();
+	m_RelativePointer = m_RelativePointerManager.get_relative_pointer(m_waylandPointer);
+
+	if (m_CursorShapeManager && m_waylandPointer)
+	{
+		// Opt to Cursor Shape Protocol instead
+		m_CursorShapeDevice = m_CursorShapeManager.get_pointer(m_waylandPointer);
+	}
+
+	ConnectDeviceEvents();
+
 	m_cursorSurface = m_waylandCompositor.create_surface();
-	SetCursor(StandardCursor::arrow, nullptr);
+	SetCursor(StandardCursor::arrow);
 }
 
 WaylandDisplayBackend::~WaylandDisplayBackend()
@@ -185,7 +189,7 @@ WaylandDisplayBackend::~WaylandDisplayBackend()
 		xkb_state_unref(m_KeyboardState);
 }
 
-void WaylandDisplayBackend::ConnectKeyboardEvents()
+void WaylandDisplayBackend::ConnectDeviceEvents()
 {
 	m_KeymapContext = xkb_context_new(XKB_CONTEXT_NO_FLAGS);
 
@@ -256,15 +260,6 @@ void WaylandDisplayBackend::ConnectKeyboardEvents()
 		OnKeyboardCharEvent(buf, state);
 	};
 
-	m_waylandKeyboard.on_repeat_info() = [this] (int32_t rate, int32_t delay) {
-		// rate is characters per second, delay is in milliseconds
-		m_keyboardDelayTimer.SetDuration(ZTimer::Duration(delay));
-		m_keyboardRepeatTimer.SetDuration(ZTimer::Duration(1000.0 / rate));
-	};
-}
-
-void WaylandDisplayBackend::ConnectMouseEvents()
-{
 	m_waylandPointer.on_enter() = [this](uint32_t serial, wayland::surface_t surfaceEntered, double surfaceX, double surfaceY) {
 		// Keep track of the mouse serial for using it in Cursor Shape protocol
 		m_MouseSerial = serial;
@@ -272,7 +267,7 @@ void WaylandDisplayBackend::ConnectMouseEvents()
 		// Find the window to focus on by checking the surface window owns.
 		if (!m_MouseFocusWindow || m_MouseFocusWindow->GetWindowSurface() != surfaceEntered)
 		{
-			for (const auto win: s_Windows)
+			for (auto win: s_Windows)
 			{
 				if (win->GetWindowSurface() == surfaceEntered)
 				{
@@ -359,7 +354,7 @@ void WaylandDisplayBackend::ConnectMouseEvents()
 
 		if (currentPointerEvent.event_mask & POINTER_EVENT_RELATIVE_MOTION)
 		{
-			if (GetMouseLockOwnerWindow() == m_MouseFocusWindow)
+			if (hasMouseLock)
 				OnMouseMoveRawEvent(int(currentPointerEvent.dx_unaccel), int(currentPointerEvent.dy_unaccel));
 		}
 
@@ -401,6 +396,23 @@ void WaylandDisplayBackend::ConnectMouseEvents()
 		// Reset everything once all the events are processed
 		currentPointerEvent = {0};
 	};
+
+	m_keyboardDelayTimer = ZTimer();
+	m_keyboardRepeatTimer = ZTimer();
+
+	m_waylandKeyboard.on_repeat_info() = [this] (int32_t rate, int32_t delay) {
+		// rate is characters per second, delay is in milliseconds
+		m_keyboardDelayTimer.SetDuration(ZTimer::Duration(delay));
+		m_keyboardRepeatTimer.SetDuration(ZTimer::Duration(1000.0 / rate));
+	};
+
+	m_keyboardDelayTimer.SetCallback([this] () { OnKeyboardDelayEnd(); });
+	m_keyboardRepeatTimer.SetCallback([this] () { OnKeyboardRepeat(); });
+
+	m_keyboardRepeatTimer.SetRepeating(true);
+
+	m_previousTime = ZTimer::Clock::now();
+	m_currentTime = ZTimer::Clock::now();
 }
 
 void WaylandDisplayBackend::OnKeyboardKeyEvent(xkb_keysym_t xkbKeySym, wayland::keyboard_key_state state)
@@ -457,11 +469,15 @@ void WaylandDisplayBackend::OnMouseEnterEvent(uint32_t serial)
 {
 	if (!m_CursorShapeDevice)
 	{
-		m_cursorSurface.attach( m_cursorBuffer, 0, 0);
-		m_cursorSurface.damage(0, 0, m_cursorImage.width(), m_cursorImage.height());
+		m_cursorSurface.attach(!hasMouseLock ? m_cursorBuffer : nullptr, 0, 0);
+		if (!hasMouseLock)
+		{
+			m_cursorSurface.damage(0, 0, m_cursorImage.width(), m_cursorImage.height());
+		}
+
 		m_cursorSurface.commit();
 	}
-	m_waylandPointer.set_cursor(serial, m_cursorSurface, 0, 0);
+	m_waylandPointer.set_cursor(serial, !hasMouseLock ? m_cursorSurface : nullptr, 0, 0);
 }
 
 void WaylandDisplayBackend::OnMouseLeaveEvent()
@@ -470,13 +486,18 @@ void WaylandDisplayBackend::OnMouseLeaveEvent()
 	{
 		m_MouseFocusWindow->windowHost->OnWindowMouseLeave();
 		//m_MouseFocusWindow = nullptr; // Borks up the menus
+		ShowCursor(!m_MouseFocusWindow->m_LockedPointer);
 	}
 }
 
 void WaylandDisplayBackend::OnMousePressEvent(InputKey button)
 {
 	if (m_MouseFocusWindow)
+	{
 		m_MouseFocusWindow->windowHost->OnWindowMouseDown(m_MouseFocusWindow->m_SurfaceMousePos, button);
+		ShowCursor(m_MouseFocusWindow->m_LockedPointer);
+	}
+
 }
 
 void WaylandDisplayBackend::OnMouseReleaseEvent(InputKey button)
@@ -506,34 +527,7 @@ void WaylandDisplayBackend::OnMouseWheelEvent(InputKey button)
 		m_MouseFocusWindow->windowHost->OnWindowMouseWheel(m_MouseFocusWindow->m_SurfaceMousePos, button);
 }
 
-void WaylandDisplayBackend::OnCapabilitiesEvent(uint32_t capabilities)
-{
-	hasKeyboard = capabilities & wayland::seat_capability::keyboard;
-	hasPointer = capabilities & wayland::seat_capability::pointer;
-
-	if (hasKeyboard)
-	{
-		m_waylandKeyboard = m_waylandSeat.get_keyboard();
-		ConnectKeyboardEvents();
-	}
-
-	if (hasPointer)
-	{
-		m_waylandPointer = m_waylandSeat.get_pointer();
-
-		m_RelativePointer = m_RelativePointerManager.get_relative_pointer(m_waylandPointer);
-
-		if (m_CursorShapeManager)
-		{
-			// Opt to Cursor Shape Protocol instead
-			m_CursorShapeDevice = m_CursorShapeManager.get_pointer(m_waylandPointer);
-		}
-
-		ConnectMouseEvents();
-	}
-}
-
-void WaylandDisplayBackend::SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom)
+void WaylandDisplayBackend::SetCursor(StandardCursor cursor)
 {
 	if (m_CursorShapeDevice)
 	{
@@ -571,6 +565,7 @@ void WaylandDisplayBackend::OnWindowCreated(WaylandDisplayWindow* window)
 		m_FocusWindow = window;
 		m_MouseFocusWindow = window;
 	}
+
 }
 
 void WaylandDisplayBackend::OnWindowDestroyed(WaylandDisplayWindow* window)
@@ -612,13 +607,13 @@ void WaylandDisplayBackend::ProcessEvents()
 
 void WaylandDisplayBackend::RunLoop()
 {
+	exitRunLoop = false;
+
 	while (!exitRunLoop && !s_Windows.empty())
 	{
 		ProcessEvents();
 		WaitForEvents(GetTimerTimeout());
 	}
-
-	exitRunLoop = false; // So that closing a dialog doesn't close everything else
 }
 
 void WaylandDisplayBackend::WaitForEvents(int timeout)

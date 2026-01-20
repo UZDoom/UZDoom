@@ -27,7 +27,6 @@ class OpenFileDialog;
 class SaveFileDialog;
 class OpenFolderDialog;
 class Image;
-class CustomCursor;
 
 enum class StandardCursor
 {
@@ -53,7 +52,7 @@ enum class InputKey : uint32_t
 	Backspace, Tab, Unknown0A, Unknown0B,
 	Unknown0C, Enter, Unknown0E, Unknown0F,
 	Shift, Ctrl, Alt, Pause,
-	CapsLock, LCommand, RCommand, Unknown17,
+	CapsLock, Unknown15, Unknown16, Unknown17,
 	Unknown18, Unknown19, Unknown1A, Escape,
 	Unknown1C, Unknown1D, Unknown1E, Unknown1F,
 	Space, PageUp, PageDown, End,
@@ -114,156 +113,6 @@ enum class InputKey : uint32_t
 	NoName, PA1, OEMClear
 };
 
-// Raw keyboard code. Same as the DirectInput keycodes
-enum class RawKeycode : uint32_t
-{
-	None = 0x00,
-	Escape = 0x01,
-	_1 = 0x02,
-	_2 = 0x03,
-	_3 = 0x04,
-	_4 = 0x05,
-	_5 = 0x06,
-	_6 = 0x07,
-	_7 = 0x08,
-	_8 = 0x09,
-	_9 = 0x0A,
-	_0 = 0x0B,
-	Minus = 0x0C,
-	Equals = 0x0D,
-	Backspace = 0x0E,
-	Tab = 0x0F,
-	Q = 0x10,
-	W = 0x11,
-	E = 0x12,
-	R = 0x13,
-	T = 0x14,
-	Y = 0x15,
-	U = 0x16,
-	I = 0x17,
-	O = 0x18,
-	P = 0x19,
-	LBracket = 0x1A,
-	RBracket = 0x1B,
-	Return = 0x1C,
-	LControl = 0x1D,
-	A = 0x1E,
-	S = 0x1F,
-	D = 0x20,
-	F = 0x21,
-	G = 0x22,
-	H = 0x23,
-	J = 0x24,
-	K = 0x25,
-	L = 0x26,
-	Semicolon = 0x27,
-	Apostrophe = 0x28,
-	Grave = 0x29,
-	LShift = 0x2A,
-	Backslash = 0x2B,
-	Z = 0x2C,
-	X = 0x2D,
-	C = 0x2E,
-	V = 0x2F,
-	B = 0x30,
-	N = 0x31,
-	M = 0x32,
-	Comma = 0x33,
-	Period = 0x34,
-	Slash = 0x35,
-	RShift = 0x36,
-	NumpadMultiply = 0x37,
-	LAlt = 0x38,
-	Space = 0x39,
-	CapsLock = 0x3A,
-	F1 = 0x3B,
-	F2 = 0x3C,
-	F3 = 0x3D,
-	F4 = 0x3E,
-	F5 = 0x3F,
-	F6 = 0x40,
-	F7 = 0x41,
-	F8 = 0x42,
-	F9 = 0x43,
-	F10 = 0x44,
-	Numlock = 0x45,
-	Scroll = 0x46,
-	Numpad7 = 0x47,
-	Numpad8 = 0x48,
-	Numpad9 = 0x49,
-	NumpadSubstract = 0x4A,
-	Numpad4 = 0x4B,
-	Numpad5 = 0x4C,
-	Numpad6 = 0x4D,
-	NumpadAdd = 0x4E,
-	Numpad1 = 0x4F,
-	Numpad2 = 0x50,
-	Numpad3 = 0x51,
-	Numpad0 = 0x52,
-	NumpadDecimal = 0x53,
-	OEM_102 = 0x56, // <> or \| on RT 102-key keyboard (Non-U.S.)
-	F11 = 0x57,
-	F12 = 0x58,
-	F13 = 0x64,
-	F14 = 0x65,
-	F15 = 0x66,
-	Kana = 0x70,
-	AbntC1 = 0x73,
-	Convert = 0x79,
-	NoConvert = 0x7B,
-	Yen = 0x7D,
-	AbntC2 = 0x7E,
-	NumpadEquals = 0x8D,
-	PrevTrack = 0x90,
-	At = 0x91,
-	Colon = 0x92,
-	Underline = 0x93,
-	Kanji = 0x94,
-	Stop = 0x95,
-	Ax = 0x96,
-	Unlabeled = 0x97,
-	NextTrack = 0x99,
-	NumpadEnter = 0x9C,
-	RControl = 0x9D,
-	Mute = 0xA0,
-	Calculator = 0xA1,
-	PlayPause = 0xA2,
-	MediaStop = 0xA4,
-	VolumeDown = 0xAE,
-	VolumeUp = 0xB0,
-	WebHome = 0xB2,
-	NumpadComma = 0xB3,
-	NumpadDivide = 0xB5,
-	SysRq = 0xB7,
-	RAlt = 0xB8,
-	Pause = 0xC5,
-	Home = 0xC7,
-	Up = 0xC8,
-	PageUp = 0xC9,
-	Left = 0xCB,
-	Right = 0xCD,
-	End = 0xCF,
-	Down = 0xD0,
-	PageDown = 0xD1,
-	Insert = 0xD2,
-	Delete = 0xD3,
-	LCmd = 0xDB,
-	RCmd = 0xDC,
-	Apps = 0xDD,
-	Power = 0xDE,
-	Sleep = 0xDF,
-	Wake = 0xE3,
-	WebSearch = 0xE5,
-	WebFavorites = 0xE6,
-	WebRefresh = 0xE7,
-	WebStop = 0xE8,
-	WebForward = 0xE9,
-	WebBack = 0xEA,
-	MyComputer = 0xEB,
-	Mail = 0xEC,
-	MediaSelect = 0xED
-};
-
 enum class RenderAPI
 {
 	Unspecified,
@@ -288,7 +137,6 @@ public:
 	virtual void OnWindowMouseUp(const Point& pos, InputKey key) = 0;
 	virtual void OnWindowMouseWheel(const Point& pos, InputKey key) = 0;
 	virtual void OnWindowRawMouseMove(int dx, int dy) = 0;
-	virtual void OnWindowRawKey(RawKeycode keycode, bool down) = 0;
 	virtual void OnWindowKeyChar(std::string chars) = 0;
 	virtual void OnWindowKeyDown(InputKey key) = 0;
 	virtual void OnWindowKeyUp(InputKey key) = 0;
@@ -328,8 +176,6 @@ public:
 	virtual void Hide() = 0;
 	virtual void Activate() = 0;
 	virtual void ShowCursor(bool enable) = 0;
-	virtual void LockKeyboard() = 0;
-	virtual void UnlockKeyboard() = 0;
 	virtual void LockCursor() = 0;
 	virtual void UnlockCursor() = 0;
 	virtual void CaptureMouse() = 0;
@@ -337,7 +183,7 @@ public:
 	virtual void Update() = 0;
 	virtual bool GetKeyState(InputKey key) = 0;
 
-	virtual void SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom) = 0;
+	virtual void SetCursor(StandardCursor cursor) = 0;
 
 	virtual Rect GetWindowFrame() const = 0;
 	virtual Size GetClientSize() const = 0;
@@ -371,10 +217,8 @@ public:
 
 	static std::unique_ptr<DisplayBackend> TryCreateWin32();
 	static std::unique_ptr<DisplayBackend> TryCreateSDL2();
-	static std::unique_ptr<DisplayBackend> TryCreateSDL3();
 	static std::unique_ptr<DisplayBackend> TryCreateX11();
 	static std::unique_ptr<DisplayBackend> TryCreateWayland();
-	static std::unique_ptr<DisplayBackend> TryCreateCocoa();
 
 	static std::unique_ptr<DisplayBackend> TryCreateBackend();
 
@@ -382,10 +226,8 @@ public:
 
 	virtual bool IsWin32() { return false; }
 	virtual bool IsSDL2() { return false; }
-	virtual bool IsSDL3() { return false; }
 	virtual bool IsX11() { return false; }
 	virtual bool IsWayland() { return false; }
-	virtual bool IsCocoa() { return false; }
 
 	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI) = 0;
 	virtual void ProcessEvents() = 0;

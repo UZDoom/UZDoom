@@ -875,7 +875,7 @@ void TextEdit::OnGeometryChanged()
 		line.invalidated = true;
 	}
 
-	vertical_text_align = canvas->verticalTextAlign(GetFont());
+	vertical_text_align = canvas->verticalTextAlign();
 
 	clip_start_offset = 0;
 	UpdateVerticalScroll();
@@ -957,8 +957,6 @@ double TextEdit::GetTotalHeight()
 
 void TextEdit::LayoutLines(Canvas* canvas)
 {
-	auto font = GetFont();
-
 	ivec2 sel_start;
 	ivec2 sel_end;
 	if (selection_length > 0)

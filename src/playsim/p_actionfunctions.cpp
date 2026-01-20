@@ -7389,8 +7389,11 @@ DEFINE_ACTION_FUNCTION(AActor, SetBones)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
@@ -7413,8 +7416,11 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesUI)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
@@ -7438,6 +7444,10 @@ DEFINE_ACTION_FUNCTION(AActor, OverwriteBones)
 
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
 
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
+
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
@@ -7459,8 +7469,11 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesRange)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
@@ -7485,8 +7498,11 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesRangeUI)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
@@ -7512,6 +7528,10 @@ DEFINE_ACTION_FUNCTION(AActor, OverwriteBonesRange)
 
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
 
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
+
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
 	int n = std::min(bones->frameData.SSize(), std::min(overrides.SSize(), start + length));
@@ -7532,8 +7552,11 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesMask)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
@@ -7557,8 +7580,11 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesMaskUI)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
@@ -7582,6 +7608,10 @@ DEFINE_ACTION_FUNCTION(AActor, OverwriteBonesMask)
 	PARAM_INT(mode);
 
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 

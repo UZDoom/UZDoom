@@ -32,8 +32,8 @@ public:
 
 	void SetPosition(double pos);
 
-	double GetPreferredWidth() override { return 16.0; }
-	double GetPreferredHeight() override { return 16.0; }
+	double GetPreferredWidth() const { return 16.0; }
+	double GetPreferredHeight() const { return 16.0; }
 
 	std::function<void()> FuncScroll;
 	std::function<void()> FuncScrollMin;

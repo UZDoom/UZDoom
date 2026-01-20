@@ -7,54 +7,6 @@
 #include <memory>
 #include <cstring>
 #include <string>
-#include "core/rect.h"
-
-class TTFDataBuffer
-{
-public:
-	static std::shared_ptr<TTFDataBuffer> create(size_t size);
-	static std::shared_ptr<TTFDataBuffer> create(std::vector<uint8_t> buffer);
-
-	virtual ~TTFDataBuffer() = default;
-	virtual char* data() = 0;
-	virtual const char* data() const = 0;
-	virtual size_t size() const = 0;
-	virtual size_t capacity() const = 0;
-	virtual void setSize(size_t size) = 0;
-	virtual void setCapacity(size_t capacity) = 0;
-
-	template<typename Type> Type* data() { return reinterpret_cast<Type*>(data()); }
-	template<typename Type> const Type* data() const { return reinterpret_cast<const Type*>(data()); }
-};
-
-class TTFDataBufferImpl : public TTFDataBuffer
-{
-public:
-	TTFDataBufferImpl(size_t init_size) { setSize(init_size); }
-	TTFDataBufferImpl(std::vector<uint8_t> buffer) : buffer(std::move(buffer)) { }
-
-	char* data() override { return (char*)buffer.data(); }
-	const char* data() const override { return (const char*)buffer.data(); }
-	size_t size() const override { return buffer.size(); }
-	size_t capacity() const override { return buffer.capacity(); }
-	void setSize(size_t size) override { buffer.resize(size); }
-	void setCapacity(size_t capacity) override { buffer.reserve(capacity); }
-
-private:
-	std::vector<uint8_t> buffer;
-};
-
-inline std::shared_ptr<TTFDataBuffer> TTFDataBuffer::create(size_t size)
-{
-	return std::make_shared<TTFDataBufferImpl>(size);
-}
-
-inline std::shared_ptr<TTFDataBuffer> TTFDataBuffer::create(std::vector<uint8_t> buffer)
-{
-	return std::make_shared<TTFDataBufferImpl>(std::move(buffer));
-}
-
-typedef Point PathPoint;
 
 typedef uint8_t ttf_uint8;
 typedef uint16_t ttf_uint16;
@@ -79,12 +31,6 @@ typedef uint32_t ttf_Offset32; // Long offset to a table, same as uint32, NULL o
 
 typedef uint32_t ttf_Version16Dot16; // Packed 32-bit value with major and minor version numbers
 
-struct CFFObjectData
-{
-	size_t Offset = 0;
-	size_t Size = 0;
-};
-
 class TrueTypeFileReader
 {
 public:
@@ -92,11 +38,7 @@ public:
 	TrueTypeFileReader(const void* data, size_t size) : data(static_cast<const uint8_t*>(data)), size(size) { }
 
 	bool IsEndOfData() const { return pos == size; }
-	size_t Size() const { return size; }
-	void Seek(size_t newpos);
-	size_t Position() const { return pos; }
 
-	void Read(void* output, size_t count);
 	ttf_uint8 ReadUInt8();
 	ttf_uint16 ReadUInt16();
 	ttf_uint24 ReadUInt24();
@@ -115,60 +57,13 @@ public:
 	ttf_Offset32 ReadOffset32();
 	ttf_Version16Dot16 ReadVersion16Dot16();
 
-	// CFF data:
-	uint8_t ReadCard8() { return ReadUInt8(); }
-	uint16_t ReadCard16() { return ReadUInt16(); }
-	uint32_t ReadCard24() { return ReadUInt24(); }
-	uint32_t ReadCard32() { return ReadUInt32(); }
-	std::vector<CFFObjectData> ReadIndex();
-	uint8_t ReadOffsetSize();
-	uint32_t ReadOffset(uint8_t offsetSize);
-	static bool IsOperand(uint8_t b0) { return (b0 >= 28 && b0 <= 30) || (b0 >= 32 && b0 <= 254); }
-	static bool IsOperator(uint8_t b0) { return b0 <= 21; }
-	int ReadOperator(uint8_t b0);
-	double ReadOperand(uint8_t b0);
+	void Seek(size_t newpos);
+	void Read(void* output, size_t count);
 
 private:
 	const uint8_t* data = nullptr;
 	size_t size = 0;
 	size_t pos = 0;
-
-	friend class TrueTypeFileWriter;
-};
-
-class TrueTypeFileWriter
-{
-public:
-	TrueTypeFileWriter();
-
-	void Write(TrueTypeFileReader& src, size_t count);
-	void Write(const void* src, size_t count);
-	void WriteUInt8(ttf_uint8 value);
-	void WriteUInt16(ttf_uint16 value);
-	void WriteUInt24(ttf_uint24 value);
-	void WriteUInt32(ttf_uint32 value);
-	void WriteInt8(ttf_int8 value);
-	void WriteInt16(ttf_int16 value);
-	void WriteInt32(ttf_int32 value);
-	void WriteFixed(ttf_Fixed value);
-	void WriteUFWORD(ttf_UFWORD value);
-	void WriteFWORD(ttf_FWORD value);
-	void WriteF2DOT14(ttf_F2DOT14 value);
-	void WriteLONGDATETIME(ttf_LONGDATETIME value);
-	void WriteTag(ttf_Tag value);
-	void WriteOffset16(ttf_Offset16 value);
-	void WriteOffset24(ttf_Offset24 value);
-	void WriteOffset32(ttf_Offset32 value);
-	void WriteVersion16Dot16(ttf_Version16Dot16 value);
-
-	size_t Position() const { return pos; }
-	void Seek(size_t newpos) { pos = newpos; }
-
-	const std::shared_ptr<TTFDataBuffer>& Data() const { return data; }
-
-private:
-	size_t pos = 0;
-	std::shared_ptr<TTFDataBuffer> data;
 };
 
 struct TTF_TableRecord
@@ -211,18 +106,6 @@ struct TTF_TableDirectory
 			}
 		}
 		throw std::runtime_error(std::string("Could not find required '") + tag + "' table entry");
-	}
-
-	bool TableExists(const char* tag) const
-	{
-		for (const auto& record : tableRecords)
-		{
-			if (memcmp(record.tableTag.data(), tag, 4) == 0)
-			{
-				return true;
-			}
-		}
-		return false;
 	}
 
 	TrueTypeFileReader GetReader(const void* filedata, size_t filesize, const char* tag) const
@@ -539,102 +422,6 @@ struct TTF_SimpleGlyph
 	std::vector<TTF_Point> points;
 };
 
-struct CFFHeader
-{
-	uint8_t major = 0;
-	uint8_t minor = 0;
-	uint8_t headerSize = 0;
-	uint8_t offsetSize = 0;
-};
-
-struct CFFTopDict
-{
-	std::string version;
-	std::string Notice;
-	std::string Copyright;
-	std::string FullName;
-	std::string FamilyName;
-	std::string Weight;
-	bool isFixedPitch = false;
-	double ItalicAngle = 0.0;
-	double UnderlinePosition = -100.0;
-	double UnderlineThickness = 50.0;
-	double PaintType = 0.0;
-	double CharstringType = 0.0; // must be 2 for OpenType fonts
-	std::array<double, 6> FontMatrix = { 0.001, 0.0, 0.0, 0.001, 0.0, 0.0 };
-	double UniqueID = 0.0;
-	std::array<double, 4> FontBBox = { 0.0, 0.0, 0.0, 0.0 };
-	double StrokeWidth = 0.0;
-	std::vector<double> XUID;
-	size_t charset = 0; // charset offset
-	size_t Encoding = 0; // 0 = standard encoding, 1 = expert encoding, otherwise its an encoding offset
-	size_t CharStrings = 0; // CharStrings index offset
-	CFFObjectData PrivateDict;
-	double SyntheticBase = 0.0; // synthetic base font index
-	std::string Postscript;
-	std::string BaseFontName;
-	std::vector<double> BaseFontBlend;
-
-	// CID fonts only:
-	std::string Registry;
-	std::string Ordering;
-	double Supplement = 0.0;
-	double CIDFontVersion = 0.0;
-	double CIDFontRevision = 0.0;
-	double CIDFontType = 0.0;
-	double CIDCount = 8720.0;
-	double UIDBase = 0.0;
-	size_t FDArray = 0; // Font dict index offset
-	size_t FDSelect = 0; // FDSelect offset
-	std::string FontName;
-};
-
-struct CFFPrivateDict
-{
-	std::vector<double> BlueValues;
-	std::vector<double> OtherValues;
-	std::vector<double> FamilyBlues;
-	std::vector<double> FamilyOtherBlues;
-	double BlueScale = 0.039625;
-	double BlueShift = 7.0;
-	double BlueFuzz = 1.0;
-	double StdHW = 0.0;
-	double StdVW = 0.0;
-	std::vector<double> StemSnapH;
-	std::vector<double> StemSnapV;
-	bool ForceBold = false;
-	double LanguageGroup = 0.0;
-	double ExpansionFactor = 0.06;
-	double initialRandomSeed = 0.0;
-	size_t Subrs = 0; // local subroutines offset
-	double defaultWidthX = 0.0;
-	double norminalWidthX = 0.0;
-};
-
-struct TTF_CFF // Compact Font Format
-{
-	TTF_TableRecord Record;
-	CFFHeader Header;
-	std::vector<CFFObjectData> NameIndex;
-	std::vector<CFFObjectData> TopDictIndex;
-	std::vector<CFFObjectData> StringIndex;
-	std::vector<CFFObjectData> GlobalSubroutines;
-
-	// OpenType fonts are only allowed to have one CFF font
-	CFFTopDict TopDict;
-	CFFPrivateDict PrivateDict;
-	std::vector<CFFObjectData> CharStrings; // glyphs
-	std::vector<CFFObjectData> LocalSubroutines;
-
-	void Load(TrueTypeFileReader& reader);
-
-	std::string GetName(TrueTypeFileReader& reader, int index);
-	std::string GetString(TrueTypeFileReader& reader, int index);
-
-	CFFTopDict LoadTopDict(TrueTypeFileReader& reader, int index);
-	CFFPrivateDict LoadPrivateDict(TrueTypeFileReader& reader, CFFObjectData obj);
-};
-
 class TrueTypeGlyph
 {
 public:
@@ -650,49 +437,74 @@ public:
 class TrueTypeTextMetrics
 {
 public:
-	double ascent = 0.0;
-	double descent = 0.0;
+	double ascender = 0.0;
+	double descender = 0.0;
 	double lineGap = 0.0;
-	double capHeight = 0.0;
-	double stemV = 0.0;
-	double italicAngle = 0.0;
-	double defaultWidth = 0.0;
-	struct
+};
+
+class TrueTypeFontFileData
+{
+public:
+	TrueTypeFontFileData(std::vector<uint8_t> data) : dataVector(std::move(data))
 	{
-		double minX = 0.0;
-		double maxX = 0.0;
-		double minY = 0.0;
-		double maxY = 0.0;
-	} bbox;
+		dataPtr = dataVector.data();
+		dataSize = dataVector.size();
+	}
+
+	TrueTypeFontFileData(const void* data, size_t size, bool copyData = true)
+	{
+		dataSize = size;
+		if (copyData)
+		{
+			dataPtr = new uint8_t[size];
+			deleteDataPtr = true;
+			memcpy(const_cast<void*>(dataPtr), data, size);
+		}
+		else
+		{
+			dataPtr = data;
+		}
+	}
+
+	~TrueTypeFontFileData()
+	{
+		if (deleteDataPtr)
+		{
+			delete[](uint8_t*)dataPtr;
+		}
+		dataPtr = nullptr;
+	}
+
+	const void* data() const { return dataPtr; }
+	size_t size() const { return dataSize; }
+
+private:
+	std::vector<uint8_t> dataVector;
+	const void* dataPtr = nullptr;
+	size_t dataSize = 0;
+	bool deleteDataPtr = false;
+
+	TrueTypeFontFileData(const TrueTypeFontFileData&) = delete;
+	TrueTypeFontFileData& operator=(const TrueTypeFontFileData&) = delete;
 };
 
 class TrueTypeFont
 {
 public:
-	TrueTypeFont(std::shared_ptr<TTFDataBuffer> data, int ttcFontIndex = 0);
+	TrueTypeFont(std::shared_ptr<TrueTypeFontFileData> data, int ttcFontIndex = 0);
 
-	static std::vector<TTCFontName> GetFontNames(const std::shared_ptr<TTFDataBuffer>& data);
+	static std::vector<TTCFontName> GetFontNames(const std::shared_ptr<TrueTypeFontFileData>& data);
 
-	TTCFontName GetFontName() const;
 	TrueTypeTextMetrics GetTextMetrics(double height) const;
 	uint32_t GetGlyphIndex(uint32_t codepoint) const;
 	TrueTypeGlyph LoadGlyph(uint32_t glyphIndex, double height) const;
 
-	double GetAdvanceWidth(uint32_t glyphIndex, double height) const;
-
-	const std::shared_ptr<TTFDataBuffer>& GetData() const { return data; }
-
-	std::shared_ptr<TTFDataBuffer> CreatePdfSubsetFont(const std::vector<uint16_t>& glyphs);
-
 private:
-	TrueTypeGlyph LoadTTFGlyph(uint32_t glyphIndex, double height) const;
 	void LoadCharacterMapEncoding(TrueTypeFileReader& reader);
 	void LoadGlyph(TTF_SimpleGlyph& glyph, uint32_t glyphIndex, int compositeDepth = 0) const;
 	static float F2DOT14_ToFloat(ttf_F2DOT14 v);
 
-	TrueTypeGlyph LoadCFFGlyph(uint32_t glyphIndex, double height) const;
-
-	std::shared_ptr<TTFDataBuffer> data;
+	std::shared_ptr<TrueTypeFontFileData> data;
 
 	TTC_Header ttcHeader;
 	TTF_TableDirectory directory;
@@ -709,9 +521,6 @@ private:
 	// TrueType outlines:
 	TTF_TableRecord glyf; // Parsed on a per glyph basis using offsets from other tables
 	TTF_IndexToLocation loca;
-
-	// CFF outlines
-	TTF_CFF cff;
 
 	std::vector<TTF_GlyphRange> Ranges;
 	std::vector<TTF_GlyphRange> ManyToOneRanges;

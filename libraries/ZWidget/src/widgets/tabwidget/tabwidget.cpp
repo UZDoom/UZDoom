@@ -6,8 +6,6 @@
 
 TabWidget::TabWidget(Widget* parent) : Widget(parent)
 {
-	SetStretching(true);
-
 	Bar = new TabBar(this);
 	PageStack = new TabWidgetStack(this);
 
@@ -30,18 +28,6 @@ int TabWidget::AddTab(Widget* page, const std::shared_ptr<Image>& icon, const st
 		PageStack->SetCurrentWidget(page);
 	}
 	return pageIndex;
-}
-
-double TabWidget::GetPreferredHeight()
-{
-	double maxHeight = 0.0;
-
-	for (const auto page: Pages)
-	{
-		maxHeight = std::max(maxHeight, page->GetPreferredHeight());
-	}
-
-	return Bar->GetPreferredHeight() + maxHeight;
 }
 
 void TabWidget::SetTabText(int index, const std::string& text)
@@ -280,7 +266,7 @@ void TabBarTab::SetCurrent(bool value)
 	}
 }
 
-double TabBarTab::GetPreferredWidth()
+double TabBarTab::GetPreferredWidth() const
 {
 	double x = Icon ? 32.0 + 5.0 : 0.0;
 	if (Label) x += Label->GetPreferredWidth();

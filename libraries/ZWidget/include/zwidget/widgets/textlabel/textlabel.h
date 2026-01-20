@@ -21,8 +21,8 @@ public:
 	void SetTextAlignment(TextLabelAlignment alignment);
 	TextLabelAlignment GetTextAlignment() const;
 
-	double GetPreferredWidth() override;
-	double GetPreferredHeight() override;
+	double GetPreferredWidth() const;
+	double GetPreferredHeight() const;
 
 protected:
 	void OnPaint(Canvas* canvas) override;

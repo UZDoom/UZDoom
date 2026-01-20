@@ -26,9 +26,7 @@ jobs:
           sudo apt-get -qq install \
             build-essential        \
             libsdl2-dev            \
-            libsdl2-mixer-dev \
-            libfontconfig-dev \
-            libglib2.0-dev
+            libsdl2-mixer-dev
       - name: Create Build Environment
         run: cmake -E make_directory ${{runner.workspace}}/build
 

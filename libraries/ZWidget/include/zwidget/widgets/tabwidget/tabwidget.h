@@ -30,8 +30,6 @@ public:
 	int GetCurrentIndex() const;
 	Widget* GetCurrentWidget() const;
 
-	double GetPreferredHeight() override;
-
 	int GetPageIndex(Widget* pageWidget) const;
 
 	void SetCurrentIndex(int pageIndex);
@@ -64,7 +62,7 @@ public:
 	int GetCurrentIndex() const;
 	void SetCurrentIndex(int pageIndex);
 
-	double GetPreferredHeight() override { return 30.0; }
+	double GetPreferredHeight() const { return 30.0; }
 
 	std::function<void()> OnCurrentChanged;
 
@@ -96,7 +94,7 @@ public:
 	void SetIcon(const std::shared_ptr<Image>& icon);
 	void SetCurrent(bool value);
 
-	double GetPreferredWidth() override;
+	double GetPreferredWidth() const;
 
 	std::function<void()> OnClick;
 
@@ -112,6 +110,7 @@ private:
 
 	ImageBox* Icon = nullptr;
 	TextLabel* Label = nullptr;
+	bool hot = false;
 };
 
 class TabWidgetStack : public Widget

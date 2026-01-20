@@ -90,7 +90,7 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 	LangList = new ListView(this);
 	try
 	{
-		auto data = ResourceLoader::Get()->ReadAllBytes("menudef.txt");
+		auto data = LoadWidgetData("menudef.txt");
 		FScanner sc;
 		sc.OpenMem("menudef.txt", data);
 		while (sc.GetString())
