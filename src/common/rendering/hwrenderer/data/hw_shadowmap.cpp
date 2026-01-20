@@ -63,14 +63,17 @@ ADD_STAT(shadowmap)
 	return out;
 }
 
-CUSTOM_CVAR(Int, gl_shadowmap_quality, 512, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CUSTOM_CVAR(Int, gl_shadowmap_quality, 1024, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	switch (self)
 	{
-	case 128:
-	case 256:
-	case 512:
-	case 1024:
+	case 2<<6: // 128
+	case 2<<7: // 256
+	case 2<<8: // 512
+	case 2<<9: // 1024
+	case 2<<10: // 2048
+	case 2<<11: // 4096
+	case 2<<12: // 8192
 		break;
 	default:
 		self = 128;

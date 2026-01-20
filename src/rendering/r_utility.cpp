@@ -27,6 +27,7 @@
 
 #include "a_sharedglobal.h"
 #include "actorinlines.h"
+#include "c_dispatch.h"
 #include "d_main.h"
 #include "d_net.h"
 #include "d_player.h"
@@ -344,6 +345,23 @@ CUSTOM_CVAR(Int, r_extralight, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 		self = -64;
 	else if (self > 128)
 		self = 128;
+}
+
+CCMD (bumplight)
+{
+	int step = 16;
+	int min = -64 / step;
+	int max = 128 / step;
+
+	int g = r_extralight/step + 1;
+
+	if (g > max) g = min;
+
+	g *= step;
+
+	r_extralight = g;
+
+	Printf ("Lighting adjustment %d\n", g);
 }
 
 //==========================================================================

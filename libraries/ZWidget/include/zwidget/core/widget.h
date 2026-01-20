@@ -1,18 +1,22 @@
 #pragma once
 
+#include "../window/window.h"
 #include <string>
 #include <memory>
 #include <variant>
 #include <unordered_map>
 #include <unordered_set>
+#include <optional>
 #include "canvas.h"
 #include "rect.h"
 #include "colorf.h"
-#include "../window/window.h"
 
 class Canvas;
 class Timer;
 class Dropdown;
+class Layout;
+class Font;
+class Image;
 
 enum class WidgetType
 {
@@ -35,6 +39,7 @@ public:
 	virtual ~Widget();
 
 	void SetParent(Widget* parent);
+	void SetLayout(Layout* layout);
 	void MoveBefore(Widget* sibling);
 
 	std::string GetWindowTitle() const;
@@ -47,6 +52,9 @@ public:
 	Size GetSize() const;
 	double GetWidth() const { return GetSize().width; }
 	double GetHeight() const { return GetSize().height; }
+
+	virtual double GetPreferredWidth();
+	virtual double GetPreferredHeight();
 
 	// Widget noncontent area
 	void SetNoncontentSizes(double left, double top, double right, double bottom);
@@ -73,6 +81,9 @@ public:
 	void SetFrameGeometry(const Rect& geometry);
 	void SetFrameGeometry(double x, double y, double width, double height) { SetFrameGeometry(Rect::xywh(x, y, width, height)); }
 
+	// Get the UI font for this widget
+	std::shared_ptr<Font> GetFont() const;
+
 	// Style properties
 	void SetStyleClass(const std::string& styleClass);
 	const std::string& GetStyleClass() const { return StyleClass; }
@@ -83,11 +94,13 @@ public:
 	void SetStyleDouble(const std::string& propertyName, double value);
 	void SetStyleString(const std::string& propertyName, const std::string& value);
 	void SetStyleColor(const std::string& propertyName, const Colorf& value);
+	void SetStyleImage(const std::string& propertyName, const std::shared_ptr<Image>& value);
 	bool GetStyleBool(const std::string& propertyName) const;
 	int GetStyleInt(const std::string& propertyName) const;
 	double GetStyleDouble(const std::string& propertyName) const;
 	std::string GetStyleString(const std::string& propertyName) const;
 	Colorf GetStyleColor(const std::string& propertyName) const;
+	std::shared_ptr<Image> GetStyleImage(const std::string& propertyName) const;
 
 	void SetWindowBackground(const Colorf& color);
 	void SetWindowBorderColor(const Colorf& color);
@@ -123,9 +136,22 @@ public:
 	void SetDisabled(bool value) { SetEnabled(!value); }
 	void SetHidden(bool value) { if (value) Hide(); else Show(); }
 
+	bool GetStretching() const { return Stretching; }
+	void SetStretching(const bool value) { Stretching = value; }
+
+	const std::optional<double>& GetFixedWidth() const { return FixedWidth; }
+	const std::optional<double>& GetFixedHeight() const { return FixedHeight; }
+	void SetFixedWidth(double value) { FixedWidth = value; }
+	void SetFixedHeight(double value) { FixedHeight = value; }
+	void SetFixedSize(double width, double height) { FixedWidth = width; FixedHeight = height; }
+	void SetFixedSize(const Size& size) { FixedWidth = size.width; FixedHeight = size.height; }
+
+	void LockKeyboard();
+	void UnlockKeyboard();
 	void LockCursor();
 	void UnlockCursor();
 	void SetCursor(StandardCursor cursor);
+	void SetCursor(std::shared_ptr<CustomCursor> cursor);
 
 	void SetPointerCapture();
 	void ReleasePointerCapture();
@@ -160,6 +186,8 @@ public:
 	Point MapToGlobal(const Point& pos) const;
 	Point MapToParent(const Point& pos) const { return MapTo(Parent(), pos); }
 
+	static Widget* CommonAncestor(Widget* a, Widget* b);
+
 	static Size GetScreenSize();
 
 	void SetCanvas(std::unique_ptr<Canvas> canvas);
@@ -180,6 +208,7 @@ protected:
 	virtual bool OnMouseWheel(const Point& pos, InputKey key) { return false; }
 	virtual void OnMouseMove(const Point& pos) { }
 	virtual void OnMouseLeave() { }
+	virtual void OnRawKey(RawKeycode keycode, bool down) { }
 	virtual void OnRawMouseMove(int dx, int dy) { }
 	virtual void OnKeyChar(std::string chars) { }
 	virtual void OnKeyDown(InputKey key) { }
@@ -192,11 +221,6 @@ protected:
 
 	virtual void Notify(Widget* source, const WidgetEvent type) { };
 
-private:
-	void DetachFromParent();
-
-	void Paint(Canvas* canvas);
-
 	// DisplayWindowHost
 	void OnWindowPaint() override;
 	void OnWindowMouseMove(const Point& pos) override;
@@ -206,6 +230,7 @@ private:
 	void OnWindowMouseUp(const Point& pos, InputKey key) override;
 	void OnWindowMouseWheel(const Point& pos, InputKey key) override;
 	void OnWindowRawMouseMove(int dx, int dy) override;
+	void OnWindowRawKey(RawKeycode keycode, bool down) override;
 	void OnWindowKeyChar(std::string chars) override;
 	void OnWindowKeyDown(InputKey key) override;
 	void OnWindowKeyUp(InputKey key) override;
@@ -214,8 +239,11 @@ private:
 	void OnWindowActivated() override;
 	void OnWindowDeactivated() override;
 	void OnWindowDpiScaleChanged() override;
-
+	
+private:
 	void NotifySubscribers(const WidgetEvent type);
+	void Paint(Canvas* canvas);
+	void DetachFromParent();
 
 	WidgetType Type = {};
 
@@ -231,21 +259,25 @@ private:
 	Rect ContentGeometry = Rect::xywh(0.0, 0.0, 0.0, 0.0);
 
 	Colorf WindowBackground = Colorf::fromRgba8(240, 240, 240);
-
 	std::string WindowTitle;
 	std::vector<std::shared_ptr<Image>> WindowIcon;
 	std::unique_ptr<DisplayWindow> DispWindow;
 	std::unique_ptr<Canvas> DispCanvas;
 	Widget* FocusWidget = nullptr;
-	Widget* CaptureWidget = nullptr;
+	Widget* KeyboardLockWidget = nullptr;
+	Widget* CursorLockWidget = nullptr;
 	Widget* HoverWidget = nullptr;
 	bool HiddenFlag = false;
+	bool Stretching = false; // Should this Widget expand itself to the remaining empty space?
+	std::optional<double> FixedWidth;
+	std::optional<double> FixedHeight;
 
 	StandardCursor CurrentCursor = StandardCursor::arrow;
+	std::shared_ptr<CustomCursor> CurrentCustomCursor;
 
 	std::string StyleClass = "widget";
 	std::string StyleState;
-	typedef std::variant<bool, int, double, std::string, Colorf> PropertyVariant;
+	typedef std::variant<bool, int, double, std::string, Colorf, std::shared_ptr<Image>> PropertyVariant;
 	std::unordered_map<std::string, PropertyVariant> StyleProperties;
 
 	Widget(const Widget&) = delete;
@@ -253,6 +285,8 @@ private:
 
 	std::unordered_set<Widget*> Subscribers;
 	std::unordered_set<Widget*> Subscriptions;
+
+	Layout* m_Layout = nullptr;
 
 	friend class Timer;
 	friend class OpenFileDialog;

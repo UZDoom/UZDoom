@@ -717,7 +717,7 @@ OptionMenu "OtherControlsMenu" protected
 	Control    "$CNTRLMNU_DISPLAY_INC"     , "sizeup"
 	Control    "$CNTRLMNU_DISPLAY_DEC"     , "sizedown"
 	Control    "$CNTRLMNU_TOGGLE_MESSAGES" , "togglemessages"
-	Control    "$CNTRLMNU_ADJUST_GAMMA"    , "bumpgamma"
+	Control    "$CNTRLMNU_ADJUST_LIGHTS"   , "bumplight"
 
 	StaticText ""
 	Control    "$CNTRLMNU_OPEN_MAIN"       , "menu_main"
@@ -1037,11 +1037,9 @@ OptionMenu "ImageAdjustMenu" protected
 	Tooltip "$DSPLYMNU_TOOLTIP_GAMMA"
 	Slider "$DSPLYMNU_BLACKPOINT",	"vid_blackpoint",	0.0,	0.25,	0.01,	2
 	Tooltip "$DSPLYMNU_TOOLTIP_BLACKPOINT"
-	Slider "$DSPLYMNU_WHITEPOINT",	"vid_whitepoint",	0.75,	1.0,	0.01,	2
-	Tooltip "$DSPLYMNU_TOOLTIP_WHITEPOINT"
 	Command "$OPTMNU_RESETALL",		"vid_reset2defaults"
 	Tooltip "$DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
-	Slider "$DSPLYMNU_BRIGHTNESS",	"vid_brightness",	-0.25,	0.25,	0.01,	2
+	Slider "$DSPLYMNU_BRIGHTNESS",	"vid_whitepoint",	-1.0,	1.0,	0.01,	2
 	Tooltip "$DSPLYMNU_TOOLTIP_BRIGHTNESS"
 	Slider "$DSPLYMNU_CONTRAST",	"vid_contrast",		0.5,	2.0,	0.01,	2
 	Tooltip "$DSPLYMNU_TOOLTIP_CONTRAST"
@@ -2806,6 +2804,9 @@ OptionValue ShadowMapQuality
 	256, "256"
 	512, "512"
 	1024, "1024"
+	2048, "2048"
+	4096, "4096"
+	8192, "8192"
 }
 
 OptionValue ShadowMapFilter

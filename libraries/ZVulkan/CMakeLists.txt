@@ -162,6 +162,10 @@ set(VULKAN_INCLUDES
 	include/vulkan/vulkan_xlib_xrandr.h
 )
 
+set(EXAMPLE_SOURCES
+	example/example.cpp
+)
+
 source_group("src" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/.+")
 source_group("src\\glslang" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/.+")
 source_group("src\\glslang\\glslang" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/.+")
@@ -182,6 +186,8 @@ source_group("include" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/z
 source_group("include\\vk_mem_alloc" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/zvulkan/vk_mem_alloc/.+")
 source_group("include\\volk" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/zvulkan/volk/.+")
 
+source_group("example" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/example/.+")
+
 include_directories(include include/zvulkan src)
 
 if(WIN32)
@@ -200,6 +206,13 @@ else()
 	list(APPEND ZVULKAN_SOURCES ${ZVULKAN_UNIX_SOURCES})
 	add_definitions(-DUNIX -D_UNIX)
 	add_link_options(-pthread)
+endif()
+
+option( BUILD_EXAMPLE "Build exmaple" OFF )
+if(BUILD_EXAMPLE)
+	add_executable(zvulkan_example WIN32 MACOSX_BUNDLE ${EXAMPLE_SOURCES})
+	target_link_libraries(zvulkan_example zvulkan)
+	set_target_properties(zvulkan_example PROPERTIES CXX_STANDARD 17)
 endif()
 
 if(MSVC)

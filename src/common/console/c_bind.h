@@ -73,6 +73,7 @@ public:
 		return NULL;
 	}
 
+	const char *GetBind(const char *key);
 };
 
 extern FKeyBindings Bindings;

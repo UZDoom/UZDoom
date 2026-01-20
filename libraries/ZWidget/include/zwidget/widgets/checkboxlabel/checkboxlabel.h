@@ -15,7 +15,8 @@ public:
 	bool GetChecked() const;
 	void Toggle();
 
-	double GetPreferredHeight() const;
+	double GetPreferredWidth() override;
+	double GetPreferredHeight() override;
 	std::function<void(bool)> FuncChanged;
 	void SetRadioStyle(bool on) { radiostyle = on; }
 

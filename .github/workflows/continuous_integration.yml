@@ -47,7 +47,7 @@ jobs:
 
           - name: MacOS LLVM
             os: macos-latest
-            extra_options: -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
+            extra_options: -DENABLE_SDL2=OFF -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
             deps_cmdline: |
               brew install   \
                 dylibbundler \
@@ -64,6 +64,7 @@ jobs:
             extra_options:
             deps_cmdline: |
               sudo apt-get update && sudo apt-get install \
+                libfontconfig-dev \
                 libopenal-dev \
                 waylandpp-dev \
                 libsdl2-dev   \
@@ -77,6 +78,7 @@ jobs:
             extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
             deps_cmdline: |
               sudo apt-get update && sudo apt-get install \
+                libfontconfig-dev \
                 libopenal-dev \
                 waylandpp-dev \
                 libsdl2-dev   \

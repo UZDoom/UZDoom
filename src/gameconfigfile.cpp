@@ -62,27 +62,33 @@ EXTERN_CVAR (Int, gl_texture_hqresizemult)
 EXTERN_CVAR (Int, vid_preferbackend)
 EXTERN_CVAR (Float, vid_scale_custompixelaspect)
 EXTERN_CVAR (Bool, vid_scale_linear)
-EXTERN_CVAR(Float, m_sensitivity_x)
-EXTERN_CVAR(Float, m_sensitivity_y)
-EXTERN_CVAR(Int, adl_volume_model)
-EXTERN_CVAR(Int, adl_chan_alloc)
-EXTERN_CVAR(Bool, adl_auto_arpeggio)
-EXTERN_CVAR(Int, opn_volume_model)
-EXTERN_CVAR(Int, opn_chan_alloc)
-EXTERN_CVAR(Bool, opn_auto_arpeggio)
+EXTERN_CVAR (Float, m_sensitivity_x)
+EXTERN_CVAR (Float, m_sensitivity_y)
+EXTERN_CVAR (Int, adl_volume_model)
+EXTERN_CVAR (Int, adl_chan_alloc)
+EXTERN_CVAR (Bool, adl_auto_arpeggio)
+EXTERN_CVAR (Int, opn_volume_model)
+EXTERN_CVAR (Int, opn_chan_alloc)
+EXTERN_CVAR (Bool, opn_auto_arpeggio)
 EXTERN_CVAR (Int, gl_texture_hqresize_targets)
-EXTERN_CVAR(Int, wipetype)
-EXTERN_CVAR(Bool, i_pauseinbackground)
-EXTERN_CVAR(Bool, i_soundinbackground)
-EXTERN_CVAR(Bool, i_is_new_release)
+EXTERN_CVAR (Int, wipetype)
+EXTERN_CVAR (Bool, i_pauseinbackground)
+EXTERN_CVAR (Bool, i_soundinbackground)
+EXTERN_CVAR (Bool, i_is_new_release)
 
 FARG(config, "Configuration", "Specifies an alternative configuration file to use.", "configfile",
 	"Causes " GAMENAME " to use an alternative configuration file. If configfile does not exist,"
 	" it will be created.");
 
 #ifdef _WIN32
-EXTERN_CVAR(Int, in_mouse)
+EXTERN_CVAR (Int, in_mouse)
 #endif
+
+enum ResetBinds
+{
+	V226GamePad = 1 << 0,
+	V230Gamma = 1 << 1,
+};
 
 static TArray<FString> DefaultSearchPaths;
 
@@ -161,7 +167,7 @@ FGameConfigFile::FGameConfigFile ()
 
 	OkayToWrite = false;	// Do not allow saving of the config before DoKeySetup()
 	bModSetup = false;
-	b226ResetGamepad = false;
+	bResetBindFlags = 0;
 	pathname = GetConfigPath (true);
 	ChangePathName (pathname.GetChars());
 	LoadConfigFile ();
@@ -695,12 +701,13 @@ void FGameConfigFile::DoGlobalSetup ()
 				// We can't handle key config yet, because
 				// the files aren't fully loaded. Just queue
 				// up a flag to do this later.
-				b226ResetGamepad = true;
+				bResetBindFlags |= V226GamePad;
 			}
-			if (last < 229) // UZDoom 5.0
+			if (last < 230) // UZDoom 5.0
 			{
 				// Reset brightness related settings, as the values all mean something different now
 				AddCommandString("vid_reset2defaults");
+				bResetBindFlags |= V230Gamma;
 			}
 		}
 	}
@@ -808,9 +815,9 @@ void FGameConfigFile::DoKeySetup(const char *gamename)
 		}
 	}
 
-	if (b226ResetGamepad == true)
+	if (bResetBindFlags & V226GamePad)
 	{
-		b226ResetGamepad = false;
+		bResetBindFlags -= V226GamePad;
 
 		// Multiple gamepad reworks were done during
 		// this version. There is not any particularly
@@ -834,6 +841,15 @@ void FGameConfigFile::DoKeySetup(const char *gamename)
 		}
 
 		C_SetDefaultBindings(&keys_to_reset);
+	}
+
+	if (bResetBindFlags & V230Gamma)
+	{
+		bResetBindFlags -= V230Gamma;
+
+		// swap binds
+		Bindings.UnbindACommand("bumpgamma");
+		Bindings.DefaultBind("F11", "bumplight");
 	}
 
 	OkayToWrite = true;

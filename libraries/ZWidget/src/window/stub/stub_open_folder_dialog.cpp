@@ -1,7 +1,7 @@
 
 #include "stub_open_folder_dialog.h"
 
-StubOpenFolderDialog::StubOpenFolderDialog(DisplayWindow* owner) : owner(owner)
+StubOpenFolderDialog::StubOpenFolderDialog(DisplayWindow* owner)
 {
 }
 

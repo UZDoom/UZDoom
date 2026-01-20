@@ -6030,7 +6030,7 @@ DEFINE_ACTION_FUNCTION(AActor, GetBoneEulerAngles)
 
 	if(mdl)
 	{
-		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(0, bone_index, with_override));
+		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(mdl, 0, bone_index, with_override));
 	}
 
 
@@ -6049,7 +6049,7 @@ DEFINE_ACTION_FUNCTION(AActor, GetNamedBoneEulerAngles)
 
 	if(mdl)
 	{
-		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(0, bone_index, with_override));
+		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(mdl, 0, bone_index, with_override));
 	}
 
 	ACTION_RETURN_VEC3(DVector3(0,0,0));
@@ -6080,7 +6080,7 @@ DEFINE_ACTION_FUNCTION(AActor, TransformByBone)
 
 	if(mdl)
 	{
-		self->GetBonePosition(0, bone_index, with_override, position, fwd, up);
+		self->GetBonePosition(mdl, 0, bone_index, with_override, position, fwd, up);
 	}
 
 	if(numret > 2)
@@ -6126,7 +6126,7 @@ DEFINE_ACTION_FUNCTION(AActor, TransformByNamedBone)
 
 	if(mdl)
 	{
-		self->GetBonePosition(0, bone_index, with_override, position, fwd, up);
+		self->GetBonePosition(mdl, 0, bone_index, with_override, position, fwd, up);
 	}
 
 	if(numret > 2)
@@ -6335,7 +6335,7 @@ public:
 DEFINE_FIELD(DAnimationLayer, curAnim);
 DEFINE_FIELD(DAnimationLayer, prevAnim);
 
-IMPLEMENT_CLASS(DAnimationLayer, false, false);
+IMPLEMENT_CLASS(DAnimationLayer, false, true);
 IMPLEMENT_POINTERS_START(DAnimationLayer)
 	IMPLEMENT_POINTER(curAnim)
 	IMPLEMENT_POINTER(prevAnim)

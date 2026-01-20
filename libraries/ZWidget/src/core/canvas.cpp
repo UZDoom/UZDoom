@@ -7,11 +7,13 @@
 #include "core/image.h"
 #include "core/truetypefont.h"
 #include "core/pathfill.h"
+#include "core/font_impl.h"
 #include "window/window.h"
 #include <vector>
 #include <unordered_map>
 #include <stdexcept>
 #include <cstring>
+#include <iostream>
 
 #if defined(__SSE2__) || defined(_M_X64)
 #include <immintrin.h>
@@ -79,8 +81,7 @@ public:
 
 CanvasFont::CanvasFont(const std::string& fontname, double height, std::vector<uint8_t> data) : fontname(fontname), height(height)
 {
-	auto tdata = std::make_shared<TrueTypeFontFileData>(std::move(data));
-	ttf = std::make_unique<TrueTypeFont>(tdata);
+	ttf = std::make_unique<TrueTypeFont>(TTFDataBuffer::create(std::move(data)));
 	textmetrics = ttf->GetTextMetrics(height);
 }
 
@@ -151,7 +152,7 @@ CanvasGlyph* CanvasFont::getGlyph(Canvas* canvas, uint32_t utfchar)
 
 CanvasFontGroup::CanvasFontGroup(const std::string& fontname, double height) : height(height)
 {
-	auto fontdata = LoadWidgetFontData(fontname);
+	auto fontdata = ResourceData::LoadFont(fontname);
 	fonts.resize(fontdata.size());
 	for (size_t i = 0; i < fonts.size(); i++)
 	{
@@ -198,7 +199,6 @@ void Canvas::attach(DisplayWindow* newWindow)
 	uiscale = window ? window->GetDpiScale() : 1.0f;
 	uint32_t white = 0xffffffff;
 	whiteTexture = createTexture(1, 1, &white);
-	font = std::make_unique<CanvasFontGroup>("NotoSans", 13.0 * uiscale);
 }
 
 void Canvas::detach()
@@ -272,10 +272,9 @@ void Canvas::drawImage(const std::shared_ptr<Image>& image, const Point& pos)
 {
 	auto& texture = imageTextures[image];
 	if (!texture)
-	{
 		texture = createTexture(image->GetWidth(), image->GetHeight(), image->GetData(), image->GetFormat());
-	}
-	Colorf color(1.0f, 1.0f, 1.0f);
+
+	Colorf color(1.0f, 1.0f, 1.0f, 1.0f);
 	drawTile(texture.get(), (float)((origin.x + pos.x) * uiscale), (float)((origin.y + pos.y) * uiscale), (float)(texture->Width * uiscale), (float)(texture->Height * uiscale), 0.0, 0.0, (float)texture->Width, (float)texture->Height, color);
 }
 
@@ -377,18 +376,20 @@ void Canvas::line(const Point& p0, const Point& p1, const Colorf& color)
 	}
 }
 
-void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& text)
+void Canvas::drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color)
 {
+	CanvasFontGroup* canvasFont = GetFontGroup(font);
+
 	double x = std::round((origin.x + pos.x) * uiscale);
 	double y = std::round((origin.y + pos.y) * uiscale);
 
 	UTF8Reader reader(text.data(), text.size());
 	while (!reader.is_end())
 	{
-		CanvasGlyph* glyph = font->getGlyph(this, reader.character(), language.c_str());
+		CanvasGlyph* glyph = canvasFont->getGlyph(this, reader.character(), language.c_str());
 		if (!glyph || !glyph->texture)
 		{
-			glyph = font->getGlyph(this, 32);
+			glyph = canvasFont->getGlyph(this, 32);
 		}
 
 		if (glyph->texture)
@@ -403,66 +404,89 @@ void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& 
 	}
 }
 
-void Canvas::drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color)
-{
-	drawText(pos, color, text);
-}
-
 void Canvas::drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& pos, const Rect& clipBox, const std::string& text, const Colorf& color)
 {
-	drawText(pos, color, text);
+	drawText(font, pos, text, color);
 }
 
 Rect Canvas::measureText(const std::shared_ptr<Font>& font, const std::string& text)
 {
-	return measureText(text);
-}
-
-Rect Canvas::measureText(const std::string& text)
-{
+	CanvasFontGroup* canvasFont = GetFontGroup(font);
+	const TrueTypeTextMetrics& tm = canvasFont->GetTextMetrics();
+	double lineHeight = tm.ascent + tm.descent + tm.lineGap;
 	double x = 0.0;
-	double y = font->GetTextMetrics().ascender - font->GetTextMetrics().descender;
 
 	UTF8Reader reader(text.data(), text.size());
 	while (!reader.is_end())
 	{
-		CanvasGlyph* glyph = font->getGlyph(this, reader.character(), language.c_str());
+		CanvasGlyph* glyph = canvasFont->getGlyph(this, reader.character(), language.c_str());
 		if (!glyph || !glyph->texture)
 		{
-			glyph = font->getGlyph(this, 32);
+			glyph = canvasFont->getGlyph(this, 32);
 		}
 
 		x += std::round(glyph->metrics.advanceWidth);
 		reader.next();
 	}
 
-	return Rect::xywh(0.0, 0.0, x / uiscale, y / uiscale);
+	return Rect::xywh(0.0, 0.0, x / uiscale, lineHeight / uiscale);
 }
 
 FontMetrics Canvas::getFontMetrics(const std::shared_ptr<Font>& font)
 {
-	VerticalTextPosition vtp = verticalTextAlign();
+	const TrueTypeTextMetrics& tm = GetFontGroup(font)->GetTextMetrics();
 	FontMetrics metrics;
-	metrics.external_leading = vtp.top;
-	metrics.ascent = vtp.baseline - vtp.top;
-	metrics.descent = vtp.bottom - vtp.baseline;
-	metrics.height = metrics.ascent + metrics.descent;
+	metrics.external_leading = tm.lineGap / uiscale;
+	metrics.ascent = tm.ascent / uiscale;
+	metrics.descent = tm.descent / uiscale;
+	metrics.height = (tm.ascent + tm.descent) / uiscale;
 	return metrics;
 }
 
 int Canvas::getCharacterIndex(const std::shared_ptr<Font>& font, const std::string& text, const Point& hitPoint)
 {
-	return 0;
+	CanvasFontGroup* canvasFont = GetFontGroup(font);
+
+	double x = 0.0;
+	UTF8Reader reader(text.data(), text.size());
+	while (!reader.is_end())
+	{
+		CanvasGlyph* glyph = canvasFont->getGlyph(this, reader.character(), language.c_str());
+		if (!glyph || !glyph->texture)
+		{
+			glyph = canvasFont->getGlyph(this, 32);
+		}
+
+		if (hitPoint.x <= (x + glyph->metrics.advanceWidth * 0.5) / uiscale)
+			return (int)reader.position();
+
+		x += std::round(glyph->metrics.advanceWidth);
+		reader.next();
+	}
+	return (int)text.size();
 }
 
-VerticalTextPosition Canvas::verticalTextAlign()
+VerticalTextPosition Canvas::verticalTextAlign(const std::shared_ptr<Font>& font)
 {
+	const TrueTypeTextMetrics& tm = GetFontGroup(font)->GetTextMetrics();
 	VerticalTextPosition align;
 	align.top = 0.0f;
-	auto tm = font->GetTextMetrics();
-	align.baseline = tm.ascender / uiscale;
-	align.bottom = (tm.ascender - tm.descender) / uiscale;
+	align.baseline = (tm.ascent + tm.lineGap * 0.5) / uiscale;
+	align.bottom = (tm.ascent + tm.descent + tm.lineGap) / uiscale;
 	return align;
+}
+
+CanvasFontGroup* Canvas::GetFontGroup(const std::shared_ptr<Font>& font)
+{
+	FontImpl* fontImpl = static_cast<FontImpl*>(const_cast<Font*>(font.get()));
+	if (fontImpl->FontGroup)
+		return fontImpl->FontGroup.get();
+
+	std::shared_ptr<CanvasFontGroup>& group = fontCache[{fontImpl->Name, fontImpl->Height}];
+	if (!group)
+		group = std::make_unique<CanvasFontGroup>(fontImpl->Name, fontImpl->Height * uiscale);
+	fontImpl->FontGroup = group;
+	return group.get();
 }
 
 void Canvas::drawLineUnclipped(const Point& p0, const Point& p1, const Colorf& color)

@@ -30,7 +30,7 @@ f6 quicksave
 f7 menu_endgame
 f8 togglemessages
 f9 quickload
-f11 bumpgamma
+f11 bumplight
 f10 menu_quit
 tab togglemap
 pause pause

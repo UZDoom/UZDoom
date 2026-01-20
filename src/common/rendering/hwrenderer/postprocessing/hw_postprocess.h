@@ -748,15 +748,14 @@ struct PresentUniforms
 {
 	float InvGamma;
 	float Contrast;
-	float Brightness;
 	float Saturation;
 	float BlackPoint;
 	float WhitePoint;
+	float ColorScale;
 	int GrayFormula;
 	int WindowPositionParity; // top-of-window might not be top-of-screen
 	FVector2 Scale;
 	FVector2 Offset;
-	float ColorScale;
 	int HdrMode;
 
 	static std::vector<UniformFieldDesc> Desc()
@@ -765,15 +764,14 @@ struct PresentUniforms
 		{
 			{ "InvGamma", UniformType::Float, offsetof(PresentUniforms, InvGamma) },
 			{ "Contrast", UniformType::Float, offsetof(PresentUniforms, Contrast) },
-			{ "Brightness", UniformType::Float, offsetof(PresentUniforms, Brightness) },
 			{ "Saturation", UniformType::Float, offsetof(PresentUniforms, Saturation) },
 			{ "BlackPoint", UniformType::Float, offsetof(PresentUniforms, BlackPoint) },
 			{ "WhitePoint", UniformType::Float, offsetof(PresentUniforms, WhitePoint) },
+			{ "ColorScale", UniformType::Float, offsetof(PresentUniforms, ColorScale) },
 			{ "GrayFormula", UniformType::Int, offsetof(PresentUniforms, GrayFormula) },
 			{ "WindowPositionParity", UniformType::Int, offsetof(PresentUniforms, WindowPositionParity) },
 			{ "UVScale", UniformType::Vec2, offsetof(PresentUniforms, Scale) },
 			{ "UVOffset", UniformType::Vec2, offsetof(PresentUniforms, Offset) },
-			{ "ColorScale", UniformType::Float, offsetof(PresentUniforms, ColorScale) },
 			{ "HdrMode", UniformType::Int, offsetof(PresentUniforms, HdrMode) }
 		};
 	}

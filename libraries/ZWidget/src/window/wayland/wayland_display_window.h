@@ -100,13 +100,15 @@ public:
 	void Hide() override;
 	void Activate() override;
 	void ShowCursor(bool enable) override;
+	void LockKeyboard() override;
+	void UnlockKeyboard() override;
 	void LockCursor() override;
 	void UnlockCursor() override;
 	void CaptureMouse() override;
 	void ReleaseMouseCapture() override;
 	void Update() override;
 	bool GetKeyState(InputKey key) override;
-	void SetCursor(StandardCursor cursor) override;
+	void SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom) override;
 
 	Rect GetWindowFrame() const override;
 	Size GetClientSize() const override;
@@ -138,7 +140,7 @@ public:
 private:
 	// Event handlers as otherwise linking DisplayWindowHost On...() functions with Wayland events directly crashes the app
 	// Alternatively to avoid crashes one can capture by value ([=]) instead of reference ([&])
-	void OnXDGToplevelConfigureEvent(int32_t width, int32_t height);
+	void OnXDGToplevelConfigureEvent(int32_t width, int32_t height, const std::vector<wayland::xdg_toplevel_state>& states);
 	void OnExportHandleEvent(std::string exportedHandle);
 	void OnExitEvent();
 
