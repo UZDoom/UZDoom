@@ -1,0 +1,21 @@
+// currently I match the fallbacks in themedata.cpp
+
+accent #237887
+
+[light]
+
+main   #f1eee2 #000000
+header #f5f4ef #000000
+button #efe8cd #000000
+hover  #a4c2e9 #000000
+click  #7ca2e9 #000000
+border #586e75 #bdb8a7
+
+[dark]
+
+main   #002033 #ffffff
+header #001017 #ffffff
+button #003747 #ffffff
+hover  #a4c2e9 #000000
+click  #7ca2e9 #000000
+border #536078 #2b3e5b

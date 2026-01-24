@@ -14,15 +14,45 @@
 */
 
 #include <zwidget/core/colorf.h>
+#include <zwidget/core/resourcedata.h>
 
+#include "sc_man.h"
 #include "themedata.h"
 #include "utility/colorspace.h"
+#include "zstring.h"
 
 Colorf Theme::accent;
 ThemeData Theme::dark = {};
 ThemeData Theme::light = {};
 ThemeData* Theme::theme = nullptr;
 Mode Theme::mode;
+
+enum ThemeCommands
+{
+	THEME_LIGHT,
+	THEME_DARK,
+	THEME_ACCENT,
+	THEME_MAIN,
+	THEME_HEADER,
+	THEME_BUTTON,
+	THEME_HOVER,
+	THEME_CLICK,
+	THEME_BORDER,
+};
+
+static const char *ThemeCommandStrings[] =
+{
+	"[light]",
+	"[dark]",
+	"accent",
+	"main",
+	"header",
+	"button",
+	"hover",
+	"click",
+	"border",
+	nullptr
+};
 
 void Theme::initilize(Mode mode)
 {
@@ -60,7 +90,75 @@ void Theme::initilize(Mode mode)
 	t->border.bg = Colorf::fromRgb(0x536078);
 	t->border.fg = Colorf::fromRgb(0x2b3e5b);
 
-	// TODO: load from file
+	auto file = "theme.txt";
+	auto buffer = LoadWidgetData(file);
+	FString str;
+	for (auto c: buffer)
+		str.AppendCharacter(c);
+	FScanner sc;
+	sc.OpenString(file, str);
+
+	auto hex = [](FScanner &sc) {
+		sc.MustGetString();
+		if (sc.String[0] != '#') return -1;
+
+		FString s = sc.String + 1;
+		char ch[3] { 0, 0, 0 };
+		int rgb[3] { 0, 0, 0 }, n, i, j;
+		if (s.Len() == 3) n = 1;
+		else if (s.Len() == 6) n = 2;
+		else return -1;
+
+		for (i = 0; i < 3; i++)
+		{
+			ch[0] = s[i*n];
+			ch[1] = s[i*n+n-1];
+			rgb[i] = std::stoi(ch, 0, 16);
+		}
+		return (rgb[0]<<16)|(rgb[1]<<8)|(rgb[2]<<0);
+	};
+
+	auto pair = [=](FScanner &sc, ColorLayers &layers) {
+		layers.bg = Colorf::fromRgb(hex(sc));
+		layers.fg = Colorf::fromRgb(hex(sc));
+	};
+
+	t = nullptr;
+	while (sc.GetString ())
+	{
+		if (sc.String[0] == '/' && sc.String[1] == '/') continue; // GetString is guaranteed to be at least 1 char + null, right?
+
+		switch (sc.MatchString(ThemeCommandStrings))
+		{
+		case THEME_LIGHT:
+			t = &Theme::light;
+			break;
+		case THEME_DARK:
+			t = &Theme::dark;
+			break;
+		case THEME_ACCENT:
+			Theme::accent = Colorf::fromRgb(hex(sc));
+			break;
+		case THEME_MAIN:
+			if (t) pair(sc, t->main);
+			break;
+		case THEME_HEADER:
+			if (t) pair(sc, t->header);
+			break;
+		case THEME_BUTTON:
+			if (t) pair(sc, t->button);
+			break;
+		case THEME_HOVER:
+			if (t) pair(sc, t->hover);
+			break;
+		case THEME_CLICK:
+			if (t) pair(sc, t->click);
+			break;
+		case THEME_BORDER:
+			if (t) pair(sc, t->border);
+			break;
+		}
+	}
 }
 
 Colorf Theme::mix(const ColorLayers& color, float mix)
