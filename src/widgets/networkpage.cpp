@@ -22,6 +22,7 @@
 #include "c_cvars.h"
 #include "i_net.h"
 #include "i_interface.h"
+#include "widgets/themedata.h"
 #include <zwidget/core/resourcedata.h>
 #include <zwidget/widgets/listview/listview.h>
 #include <zwidget/widgets/textlabel/textlabel.h>
@@ -244,10 +245,9 @@ HostSubPage::HostSubPage(NetworkPage* main, const FStartupSelectionInfo& info) :
 	PortHintLabel = new TextLabel(this);
 	TeamHintLabel = new TextLabel(this);
 
-	// TODO: Themeable de-emphasis
-	// MaxPlayerHintLabel->SetStyleColor("color", Colorf::fromRgba8(160, 160, 160));
-	// PortHintLabel->SetStyleColor("color", Colorf::fromRgba8(160, 160, 160));
-	// TeamHintLabel->SetStyleColor("color", Colorf::fromRgba8(160, 160, 160));
+	MaxPlayerHintLabel->SetStyleColor("color", Theme::getMain(COLOR_MIX));
+	PortHintLabel->SetStyleColor("color", Theme::getMain(COLOR_MIX));
+	TeamHintLabel->SetStyleColor("color", Theme::getMain(COLOR_MIX));
 }
 
 void HostSubPage::SetValues(FStartupSelectionInfo& info) const
@@ -399,9 +399,8 @@ JoinSubPage::JoinSubPage(NetworkPage* main, const FStartupSelectionInfo& info) :
 	AddressPortHintLabel = new TextLabel(this);
 	TeamHintLabel = new TextLabel(this);
 
-	// TODO: Themeable de-emphasis
-	// AddressPortHintLabel->SetStyleColor("color", Colorf::fromRgba8(160, 160, 160));
-	// TeamHintLabel->SetStyleColor("color", Colorf::fromRgba8(160, 160, 160));
+	AddressPortHintLabel->SetStyleColor("color", Theme::getMain(COLOR_MIX));
+	TeamHintLabel->SetStyleColor("color", Theme::getMain(COLOR_MIX));
 }
 
 void JoinSubPage::SetValues(FStartupSelectionInfo& info) const
