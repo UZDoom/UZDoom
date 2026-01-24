@@ -194,7 +194,7 @@ bool CT_Responder (event_t *ev)
 			}
 			else
 			{
-				CT_AddChar (ev->data1);
+				CT_AddChar((uint16_t)ev->data1);
 			}
 			return true;
 		}

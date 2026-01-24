@@ -785,7 +785,7 @@ static bool C_HandleKey (event_t *ev, FCommandBuffer &buffer)
 			}
 		}
 		// Add keypress to command line
-		buffer.AddChar(data1);
+		buffer.AddChar((uint16_t)data1);
 		HistPos = NULL;
 		TabbedLast = false;
 		TabbedList = false;
