@@ -14,7 +14,7 @@ TextEdit::TextEdit(Widget* parent) : Widget(parent)
 	SetStyleClass("textedit");
 
 	selectionBG = GetStyleColor("selection-color");
-	selectionFG = GetStyleColor("color");
+	selectionFG = GetStyleColor("selection-text");
 
 	timer = new Timer(this);
 	timer->FuncExpired = [this]() { OnTimerExpired(); };
