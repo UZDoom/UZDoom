@@ -160,9 +160,6 @@ extern "C" {
 #define UNDNAME_NAME_ONLY (0x1000)
 #define UNDNAME_NO_ARGUMENTS (0x2000)
 #define UNDNAME_NO_SPECIAL_SYMS (0x4000)
-
-#define UNDNAME_NO_ARGUMENTS (0x2000)
-#define UNDNAME_NO_SPECIAL_SYMS (0x4000)
 #endif
 
   DWORD IMAGEAPI WINAPI UnDecorateSymbolName(PCSTR DecoratedName,PSTR UnDecoratedName,DWORD UndecoratedLength,DWORD Flags);
