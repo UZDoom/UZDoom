@@ -34,6 +34,24 @@ Color rgb(ColorP r, ColorP g, ColorP b)
 	return { SRGB, r, g, b };
 }
 
+Color rgb(const Color& c)
+{
+	Color C {c};
+	memcpy(&C, &c, sizeof(c));
+	_2rgb(C);
+	return C;
+}
+
+void _2rgb(Color& c)
+{
+	switch (c.type)
+	{
+	case OKLAB: oklab2rgb(c); break;
+	case OKLCH: oklch2rgb(c); break;
+	case SRGB: break;
+	}
+}
+
 inline ColorP linear(ColorP c) { return c >= 0.04045 ? pow((c + 0.055) / 1.055, 2.4) : c / 12.92; };
 void rgb2oklab(Color& rgb)
 {
@@ -58,6 +76,24 @@ Color oklch(ColorP L, ColorP c, ColorP h)
 	return { OKLCH, L, c, h };
 }
 
+Color oklch(const Color& c)
+{
+	Color C {c};
+	memcpy(&C, &c, sizeof(c));
+	_2oklch(C);
+	return C;
+}
+
+void _2oklch(Color& c)
+{
+	switch (c.type)
+	{
+	case OKLAB: oklab2oklch(c); break;
+	case OKLCH: break;
+	case SRGB: rgb2oklch(c); break;
+	}
+}
+
 void oklch2rgb(Color& lch)
 {
 	oklch2oklab(lch);
@@ -75,6 +111,24 @@ void oklch2oklab(Color& lch)
 Color oklab(ColorP L, ColorP a, ColorP b)
 {
 	return { OKLAB, L, a, b };
+}
+
+Color oklab(const Color& c)
+{
+	Color C {c};
+	memcpy(&C, &c, sizeof(c));
+	_2oklab(C);
+	return C;
+}
+
+void _2oklab(Color& c)
+{
+	switch (c.type)
+	{
+	case OKLAB: break;
+	case OKLCH: oklch2oklab(c); break;
+	case SRGB: rgb2oklab(c); break;
+	}
 }
 
 inline ColorP gamma(ColorP c) { return std::clamp((c >= 0.0031308 ? 1.055 * pow(c, 1 / 2.4) - 0.055 : 12.92 * c), 0.0, 1.0); }
@@ -114,48 +168,32 @@ inline ColorP alerp(ColorP a, ColorP b, float t) {
 	return fmod(a + delta * t + N_360, N_360);
 }
 
-void mix(Color& a, Color& b, ColorP mix)
+Color mix(const Color& a, const Color& b, ColorP mix)
 {
-	assert(a.type == b.type);
+	Color A {a};
+	Color B {b};
+	memcpy(&A, &a, sizeof(a));
+	memcpy(&B, &b, sizeof(b));
 
-	if (mix <= 0) return;
-	if (mix >= 1)
-	{
-		memcpy(&a, &b, sizeof(b));
-		return;
-	}
+	if (mix <= 0) return A;
+	if (mix >= 1) return B;
 
-	ColorSpace type = a.type;
+	ColorSpace type = A.type;
+	_2oklch(A);
+	_2oklch(B);
 
-	switch (type)
-	{
-	case SRGB:
-		rgb2oklch(a);
-		rgb2oklch(b);
-		break;
-	case OKLAB:
-		oklab2oklch(a);
-		oklab2oklch(b);
-		break;
-	case OKLCH:
-		break;
-	};
-
-	a.lch.L = std::lerp(a.lch.L, b.lch.L, mix);
-	a.lch.c = std::lerp(a.lch.c, b.lch.c, mix);
-	a.lch.h = alerp(a.lch.h, b.lch.h, mix);
+	A.lch.L = std::lerp(A.lch.L, B.lch.L, mix);
+	A.lch.c = std::lerp(A.lch.c, B.lch.c, mix);
+	A.lch.h = alerp(A.lch.h, B.lch.h, mix);
 
 	switch (type)
 	{
-	case SRGB:
-		oklch2rgb(a);
-		break;
-	case OKLAB:
-		oklch2oklab(a);
-		break;
-	case OKLCH:
-		break;
+	case SRGB: oklch2rgb(A); break;
+	case OKLAB: oklch2oklab(A); break;
+	case OKLCH: break;
 	};
+
+	return A;
 }
 
 #undef CONVERT

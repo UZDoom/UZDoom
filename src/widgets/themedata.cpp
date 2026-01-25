@@ -156,10 +156,8 @@ Colorf Theme::mix(const ColorLayers& color, float mix)
 {
 	auto a = Color::rgb(color.bg.r, color.bg.g, color.bg.b);
 	auto b = Color::rgb(color.fg.r, color.fg.g, color.fg.b);
-
-	Color::mix(a, b, mix);
-
-	return { a.rgb.r, a.rgb.g, a.rgb.b };
+	auto c = Color::mix(a, b, mix).rgb;
+	return { c.r, c.g, c.b };
 }
 
 Colorf Theme::getAccent() { return { Theme::accent }; }

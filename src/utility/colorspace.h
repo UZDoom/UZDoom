@@ -37,32 +37,44 @@ private:
 	}
 
 	friend Color rgb(ColorP r, ColorP g, ColorP b);
+	friend Color rgb(const Color& c);
+	friend void _2rgb(Color& c);
 	friend void rgb2oklab(Color& c);
 	friend void rgb2oklch(Color& c);
 
 	friend Color oklch(ColorP L, ColorP c, ColorP h);
+	friend Color oklch(const Color& c);
+	friend void _2oklch(Color& c);
 	friend void oklch2rgb(Color& c);
 	friend void oklch2oklab(Color& c);
 
 	friend Color oklab(ColorP L, ColorP a, ColorP b);
+	friend Color oklab(const Color& c);
+	friend void _2oklab(Color& c);
 	friend void oklab2rgb(Color& c);
 	friend void oklab2oklch(Color& c);
 
-	friend void mix(Color& a, Color& b, ColorP mix);
+	friend Color mix(const Color& a, const Color& b, ColorP mix);
 } Color;
 
 Color rgb(ColorP r, ColorP g, ColorP b);
+Color rgb(const Color& c);
+void _2rbg(Color& c);
 void rgb2oklab(Color& c);
 void rgb2oklch(Color& c);
 
 Color oklch(ColorP L, ColorP c, ColorP h);
+Color oklch(const Color& c);
+void _2oklch(Color& c);
 void oklch2rgb(Color& lch);
 void oklch2oklab(Color& lch);
 
 Color oklab(ColorP L, ColorP a, ColorP b);
+Color oklab(const Color& c);
+void _2oklab(Color& c);
 void oklab2rgb(Color& lab);
 void oklab2oklch(Color& lab);
 
-void mix(Color& a, Color& b, ColorP mix);
+Color mix(const Color& a, const Color& b, ColorP mix);
 
 }
