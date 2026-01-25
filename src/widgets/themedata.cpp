@@ -19,7 +19,6 @@
 #include "sc_man.h"
 #include "themedata.h"
 #include "utility/colorspace.h"
-#include "zstring.h"
 
 Colorf Theme::accent;
 ThemeData Theme::dark = {};
@@ -90,32 +89,24 @@ void Theme::initilize(Mode mode)
 	t->border.bg = Colorf::fromRgb(0x536078);
 	t->border.fg = Colorf::fromRgb(0x2b3e5b);
 
+	FScanner sc;
 	auto file = "theme.txt";
 	auto buffer = LoadWidgetData(file);
-	FString str;
-	for (auto c: buffer)
-		str.AppendCharacter(c);
-	FScanner sc;
-	sc.OpenString(file, str);
+	sc.OpenMem(file, buffer);
 
 	auto hex = [](FScanner &sc) {
 		sc.MustGetString();
 		if (sc.String[0] != '#') return -1;
-
-		FString s = sc.String + 1;
-		char ch[3] { 0, 0, 0 };
-		int rgb[3] { 0, 0, 0 }, n, i, j;
-		if (s.Len() == 3) n = 1;
-		else if (s.Len() == 6) n = 2;
-		else return -1;
-
-		for (i = 0; i < 3; i++)
+		char *end;
+		int rgb = std::strtol(sc.String + 1, &end, 16);
+		auto len = end - (sc.String + 1);
+		if (len == 3)
 		{
-			ch[0] = s[i*n];
-			ch[1] = s[i*n+n-1];
-			rgb[i] = std::stoi(ch, 0, 16);
+			rgb = (rgb>>8&0xF)<<16 | (rgb>>4&0xF)<<8 | (rgb>>0&0xF)<<0;
+			rgb |= rgb<<4;
 		}
-		return (rgb[0]<<16)|(rgb[1]<<8)|(rgb[2]<<0);
+		else if (len != 6) rgb = -1;
+		return rgb;
 	};
 
 	auto pair = [=](FScanner &sc, ColorLayers &layers) {
