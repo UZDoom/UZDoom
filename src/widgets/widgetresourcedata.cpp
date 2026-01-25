@@ -102,13 +102,13 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
 	if (!stricmp(name.c_str(), "notosans"))
 	{
 		// to update/add fonts:
-		// tools/download-fonts.sh wadsrc/static widgets/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR'
+		// tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR'
 		const char* fonts[] = {
-			"widgets/noto/noto-sans.ttf",
-			"widgets/noto/noto-sans-armenian.ttf",
-			"widgets/noto/noto-sans-georgian.ttf",
-			"widgets/noto/noto-sans-jp.ttf",
-			"widgets/noto/noto-sans-kr.ttf"
+			"ui/noto/noto-sans.ttf",
+			"ui/noto/noto-sans-armenian.ttf",
+			"ui/noto/noto-sans-georgian.ttf",
+			"ui/noto/noto-sans-jp.ttf",
+			"ui/noto/noto-sans-kr.ttf"
 		};
 
 		auto count = sizeof(fonts) / sizeof(fonts[0]);
@@ -120,7 +120,7 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
 	}
 
 	returnv.resize(1);
-	std::string fn = "widgets/font/" + name + ".ttf";
+	std::string fn = "ui/font/" + name + ".ttf";
 	returnv[0].fontdata = LoadFile(fn.c_str());
 
 	return returnv;

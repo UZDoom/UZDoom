@@ -189,7 +189,7 @@ void LogViewer::SetText(const std::string& text, const std::string& log)
 	lines.push_back(CreateLineLayout({}));
 
 	SpanLayout layout;
-	//layout.AddImage(Image::LoadResource("widgets/erroricon.svg"), -8.0);
+	//layout.AddImage(Image::LoadResource("ui/erroricon.svg"), -8.0);
 	layout.AddText("Execution could not continue.", largefont, Colorf::fromRgba8(255, 170, 170));
 	lines.push_back(layout);
 

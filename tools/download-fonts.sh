@@ -9,7 +9,7 @@
 # download-fonts.sh wad_root font_path font_name ...
 #
 # Example:
-# tools/download-fonts.sh wadsrc/static widgets/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR'
+# tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR'
 
 API='https://gwfh.mranftl.com/api/fonts/%s'
 FALLBACK='https://fonts.google.com/specimen/%s'

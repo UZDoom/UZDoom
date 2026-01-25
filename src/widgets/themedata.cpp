@@ -90,7 +90,7 @@ void Theme::initilize(Mode mode)
 	t->border.fg = Colorf::fromRgb(0x2b3e5b);
 
 	FScanner sc;
-	auto file = "theme.txt";
+	auto file = "ui/theme.txt";
 	auto buffer = LoadWidgetData(file);
 	sc.OpenMem(file, buffer);
 
