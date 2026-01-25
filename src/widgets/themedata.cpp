@@ -16,6 +16,12 @@
 #include <zwidget/core/colorf.h>
 #include <zwidget/core/resourcedata.h>
 
+#include "d_main.h"
+#include "engineerrors.h"
+#include "filesystem.h"
+#include "gameconfigfile.h"
+#include "m_argv.h"
+#include "printf.h"
 #include "sc_man.h"
 #include "themedata.h"
 #include "utility/colorspace.h"
@@ -89,10 +95,7 @@ void Theme::initilize(Mode mode)
 	t->border.bg = Colorf::fromRgb(0x536078);
 	t->border.fg = Colorf::fromRgb(0x2b3e5b);
 
-	FScanner sc;
 	auto file = "ui/theme.txt";
-	auto buffer = LoadWidgetData(file);
-	sc.OpenMem(file, buffer);
 
 	auto hex = [](FScanner &sc) {
 		sc.MustGetString();
@@ -114,41 +117,70 @@ void Theme::initilize(Mode mode)
 		layers.fg = Colorf::fromRgb(hex(sc));
 	};
 
-	t = nullptr;
-	while (sc.GetString ())
-	{
-		if (sc.String[0] == '/' && sc.String[1] == '/') continue; // GetString is guaranteed to be at least 1 char + null, right?
+	auto load = [=](std::vector<uint8_t> buffer) {
+		FScanner sc;
+		sc.OpenMem(file, buffer);
 
-		switch (sc.MatchString(ThemeCommandStrings))
+		ThemeData *t = nullptr;
+
+		while (sc.GetString ())
 		{
-		case THEME_LIGHT:
-			t = &Theme::light;
-			break;
-		case THEME_DARK:
-			t = &Theme::dark;
-			break;
-		case THEME_ACCENT:
-			Theme::accent = Colorf::fromRgb(hex(sc));
-			break;
-		case THEME_MAIN:
-			if (t) pair(sc, t->main);
-			break;
-		case THEME_HEADER:
-			if (t) pair(sc, t->header);
-			break;
-		case THEME_BUTTON:
-			if (t) pair(sc, t->button);
-			break;
-		case THEME_HOVER:
-			if (t) pair(sc, t->hover);
-			break;
-		case THEME_CLICK:
-			if (t) pair(sc, t->click);
-			break;
-		case THEME_BORDER:
-			if (t) pair(sc, t->border);
-			break;
+			if (sc.String[0] == '/' && sc.String[1] == '/') continue; // GetString is guaranteed to be at least 1 char + null, right?
+			auto command = sc.MatchString(ThemeCommandStrings);
+			switch (command)
+			{
+			case -1:
+				DPrintf(DMSG_WARNING, "Unknown theme command");
+				break;
+			case THEME_LIGHT:
+				t = &Theme::light;
+				break;
+			case THEME_DARK:
+				t = &Theme::dark;
+				break;
+			case THEME_ACCENT:
+				Theme::accent = Colorf::fromRgb(hex(sc));
+				break;
+			}
+			if (!t)
+			{
+				DPrintf(DMSG_WARNING, "Theme not selected");
+				continue;
+			}
+			switch (command)
+			{
+			case THEME_MAIN:   pair(sc, t->main);   break;
+			case THEME_HEADER: pair(sc, t->header); break;
+			case THEME_BUTTON: pair(sc, t->button); break;
+			case THEME_HOVER:  pair(sc, t->hover);  break;
+			case THEME_CLICK:  pair(sc, t->click);  break;
+			case THEME_BORDER: pair(sc, t->border); break;
+			}
 		}
+
+		sc.Close();
+	};
+
+	// from uzdoom.pk3
+	load(LoadWidgetData(file));
+
+	// from mods
+	FString *args;
+	int argc = Args->CheckParmList(FArg_file, &args);
+	for (int i = 0; i < argc; ++i)
+	{
+		auto filename = args[i].GetChars();
+		auto resource = FResourceFile::OpenResourceFile(filename);
+		if (!resource) continue;
+		auto lump = resource->FindEntry(file);
+		if (lump != -1)
+		{
+			auto reader = resource->GetEntryReader(lump, FileSys::READER_SHARED);
+			std::vector<uint8_t> buffer(reader.GetLength());
+			reader.Read(buffer.data(), buffer.size());
+			load(buffer);
+		}
+		delete resource;
 	}
 }
 

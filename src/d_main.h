@@ -46,6 +46,7 @@ EXTERN_FARG(loadgame);
 EXTERN_FARG(iwad);
 EXTERN_FARG(xlat);
 EXTERN_FARG(savedir);
+EXTERN_FARG(file);
 
 struct event_t;
 
