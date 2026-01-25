@@ -17,7 +17,6 @@
 #include <zwidget/core/resourcedata.h>
 
 #include "d_main.h"
-#include "engineerrors.h"
 #include "filesystem.h"
 #include "gameconfigfile.h"
 #include "m_argv.h"
