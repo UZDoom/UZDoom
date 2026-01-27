@@ -673,7 +673,7 @@ class Actor : Thinker native
 	}
 
 	// Called after an Actor has been resurrected.
-	virtual void OnRevive() {}
+	version("4.15.1") virtual void OnRevive() {}
 
 	// Called when an actor is to be reflected by a disc of repulsion.
 	// Returns true to continue normal blast processing.

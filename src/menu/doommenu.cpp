@@ -66,6 +66,15 @@ EXTERN_CVAR(Float, vid_blackpoint)
 EXTERN_CVAR(Float, vid_whitepoint)
 EXTERN_CVAR(Int, gl_satformula)
 
+EXTERN_CVAR(Int, m_tooltip_lines)
+EXTERN_CVAR(Float, m_tooltip_speed)
+EXTERN_CVAR(Float, m_tooltip_delay)
+EXTERN_CVAR(Float, m_tooltip_alpha)
+EXTERN_CVAR(Bool, m_tooltip_capwidth)
+EXTERN_CVAR(Bool, m_tooltip_small)
+EXTERN_CVAR(Int, r_extralight)
+EXTERN_CVAR(Float, r_visibility)
+
 CVAR(Bool, m_simpleoptions, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR(Bool, m_simpleoptions_view, true, 0);
 
@@ -615,6 +624,18 @@ CCMD(vid_reset2defaults)
 	vid_blackpoint->ResetToDefault();
 	vid_whitepoint->ResetToDefault();
 	gl_satformula->ResetToDefault();
+}
+
+CCMD(acc_reset2defaults)
+{
+	m_tooltip_lines->ResetToDefault();
+	m_tooltip_speed->ResetToDefault();
+	m_tooltip_delay->ResetToDefault();
+	m_tooltip_alpha->ResetToDefault();
+	m_tooltip_capwidth->ResetToDefault();
+	m_tooltip_small->ResetToDefault();
+	r_extralight->ResetToDefault();
+	r_visibility->ResetToDefault();
 }
 
 CCMD(reset2defaults)
