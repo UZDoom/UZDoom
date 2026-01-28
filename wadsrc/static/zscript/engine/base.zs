@@ -228,6 +228,7 @@ struct _ native unsafe(internal)	// These are the global variables, the struct i
 	native readonly Font bigfont;
 	native readonly Font BigUpper;
 	native readonly Font confont;
+	native readonly Font SymbolsFont;
 	native readonly Font NewConsoleFont;
 	native readonly Font NewSmallFont;
 	native readonly Font AlternativeSmallFont;

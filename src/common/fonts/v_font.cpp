@@ -74,7 +74,7 @@ extern int PrintColors[];
 extern TArray<FBitmap> sheetBitmaps;
 
 // PUBLIC DATA DEFINITIONS -------------------------------------------------
-FFont* SmallFont, * SmallFont2, * BigFont, * BigUpper, * ConFont, * IntermissionFont, * NewConsoleFont, * NewSmallFont, 
+FFont* SmallFont, * SmallFont2, * BigFont, * BigUpper, * ConFont, *SymbolsFont, * IntermissionFont, * NewConsoleFont, * NewSmallFont, 
 	* CurrentConsoleFont, * OriginalSmallFont, * AlternativeSmallFont, * OriginalBigFont, *AlternativeBigFont;
 
 FFont *FFont::FirstFont = nullptr;
@@ -939,6 +939,7 @@ void V_InitFonts()
 	
 	CurrentConsoleFont = NewConsoleFont;
 	ConFont = V_GetFont("ConsoleFont", "CONFONT");
+	SymbolsFont = ConFont; //the symbols font is the ConFont, but by using a different name we can avoid doing font substitution when people are using ConFont to draw symbols (ex: sliders)
 	V_GetFont("IndexFont", "INDEXFON");	// detect potential replacements for this one.
 }
 
