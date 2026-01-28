@@ -372,12 +372,14 @@ void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, 
 			currentDrawString = &outStrings.emplace_back(IntermediateDrawString());
 			currentDrawString->Font = font->GetDynamicFontFallbackForChar32(srcChar);
 			isInFallback            = true;
+			assert(currentDrawString->Font);
 		}
 		else if (isInFallback && font->CanPrint(srcChar))
 		{
 			currentDrawString       = &outStrings.emplace_back(IntermediateDrawString());
 			currentDrawString->Font = font;
 			isInFallback            = false;
+			assert(currentDrawString->Font);
 		}
 		currentDrawString->StringUTF32 += srcChar;
 		currentDrawString->Codepoints.push_back(srcChar);
@@ -584,27 +586,21 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 	double scaley = parms.scaley * parms.patchscaley;
 
 	FString fontName = font->GetName().GetChars();
-	//if the substitution happens here, we might be able to determine the text scale automatically..
-	//then callsites in script don't necessarily have to be different
 	FFont *originalFont = font;
 	FFont *substitutedFont = font;
-	if (fontName.CompareNoCase("TinyFont") == 0)
+	
+	//TODO: if these are slider symbols, do not do the substitution.
+	//TODO: stronger safety needed here; that static_cast might be an attack vector.
 	{
-		substitutedFont = FFont::GetDescriptionFont(font);
+		PClass* pCls = menuDelegate->GetClass();
+		VMFunction* func = PClass::FindFunction(pCls->TypeName, "PickFont");
+		void* ret = CallVM<void*>(func, menuDelegate, (void*)font);
+		substitutedFont = static_cast<FFont*>(ret);
 	}
-	else if (fontName.CompareNoCase("BigUpper") == 0 || fontName.CompareNoCase("BigFont") == 0 ||
-	         fontName.CompareNoCase("TITLEHI") == 0)
-	{
-		substitutedFont = FFont::GetBigTextFont(font);
-	}
-	else if (fontName.CompareNoCase("SmallFont") == 0 || fontName.CompareNoCase("NewSmallFont") == 0)
-	{
-		substitutedFont = FFont::GetSmallTextFont(font);
-	}
+	
 	if (substitutedFont && substitutedFont->IsValidDynamicFont())
 	{
 		// convert string to utf32 for straightforward and debuggable string parsing.
-		
 		std::u32string                      utf32String;
 
 		if constexpr (std::is_same_v<chartype, uint8_t> || std::is_same_v<chartype, char> ||
