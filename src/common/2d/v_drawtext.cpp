@@ -572,6 +572,7 @@ void DrawStaticFontText(F2DDrawer *drawer, FFont *font, int normalcolor, double 
 template<class chartype>
 void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string, DrawParms &parms)
 {
+	extern DObject* menuDelegate;
 	int 		w;
 	const chartype *ch;
 	int 		c;
