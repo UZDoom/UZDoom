@@ -96,21 +96,9 @@ void FNotifyBuffer::AddString(int printlevel, FString source)
 		if (last.Ticker < last.TimeOut)
 		{
 			countedIdentical++;
-			FString combined;
 
-			// Clean up trailing newline
-			FString cleanSource = source;
-			if (cleanSource.Len() > 0)
-			{
-				cleanSource.Truncate(cleanSource.Len() - 1);
-				combined.Format("%s (x%d)", cleanSource.GetChars(), countedIdentical);
-				combined += '\n';
-			}
-
-			// Remove the previous entry to recalculate its size
+			// Remove the previous entry and replace it with the combined one down below
 			Text.Pop();
-
-			source = combined;
 		}
 		else
 		{
@@ -180,20 +168,37 @@ void FNotifyBuffer::Draw()
 				color = PrintColors[notify.PrintLevel];
 
 			int scale = active_con_scaletext(twod, generic_ui);
-			if (!center)
-				DrawText(twod, font, color, 0, line, notify.Text.GetChars(),
-					DTA_VirtualWidth, twod->GetWidth() / scale,
-					DTA_VirtualHeight, twod->GetHeight() / scale,
-					DTA_KeepRatio, true,
-					DTA_Alpha, alpha, TAG_DONE);
-			else
-				DrawText(twod, font, color, (twod->GetWidth() -
-					font->StringWidth (notify.Text) * scale) / 2 / scale,
-					line, notify.Text.GetChars(),
-					DTA_VirtualWidth, twod->GetWidth() / scale,
-					DTA_VirtualHeight, twod->GetHeight() / scale,
-					DTA_KeepRatio, true,
-					DTA_Alpha, alpha, TAG_DONE);
+			FString suffix      = "";
+			int     suffixWidth = 0;
+
+			if (con_stackident && i == Text.Size() - 1 && countedIdentical > 1)
+			{
+				suffix.Format(" (x%d)", countedIdentical);
+				suffixWidth = font->StringWidth(suffix);
+			}
+
+			int textWidth  = font->StringWidth(notify.Text);
+			int totalWidth = textWidth + suffixWidth;
+			int xPos       = 0;
+
+			if (center)
+			{
+				// Calculate center of text + suffix
+				xPos = (twod->GetWidth() / scale - totalWidth) / 2;
+			}
+
+			// Draw the main text
+			DrawText(twod, font, color, xPos, line, notify.Text.GetChars(), DTA_VirtualWidth, twod->GetWidth() / scale,
+			         DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true, DTA_Alpha, alpha, TAG_DONE);
+
+			// Draw the suffix if it exists
+			if (suffixWidth > 0)
+			{
+				DrawText(twod, font, color, xPos + textWidth, line, suffix.GetChars(), DTA_VirtualWidth,
+				         twod->GetWidth() / scale, DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true,
+				         DTA_Alpha, alpha, TAG_DONE);
+			}
+
 			line += lineadv;
 			canskip = false;
 		}
