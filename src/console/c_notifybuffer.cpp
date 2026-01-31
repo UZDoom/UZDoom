@@ -41,8 +41,10 @@ public:
 };
 
 static FNotifyBuffer NotifyStrings;
+static FString       lastNotifyString;
 
 EXTERN_CVAR(Bool, show_messages)
+EXTERN_CVAR(Bool, con_stackident)
 extern bool generic_ui;
 CVAR(Float, con_notifytime, 3.f, CVAR_ARCHIVE)
 CVAR(Bool, con_centernotify, false, CVAR_ARCHIVE)
@@ -54,6 +56,7 @@ CUSTOM_CVAR(Int, con_scaletext, 0, CVAR_ARCHIVE)		// Scale notify text at high r
 }
 
 constexpr int NOTIFYFADETIME = 6;
+int countedIdentical = 0;
 
 CUSTOM_CVAR(Int, con_notifylines, 4, CVAR_GLOBALCONFIG | CVAR_ARCHIVE)
 {
@@ -63,6 +66,10 @@ CUSTOM_CVAR(Int, con_notifylines, 4, CVAR_GLOBALCONFIG | CVAR_ARCHIVE)
 void FNotifyBuffer::Clear()
 {
 	FNotifyBufferBase::Clear();
+
+	countedIdentical = 0;
+	lastNotifyString    = "";
+
 	if (StatusBar == nullptr) return;
 	IFVIRTUALPTR(StatusBar, DBaseStatusBar, FlushNotify)
 	{
@@ -80,6 +87,45 @@ void FNotifyBuffer::AddString(int printlevel, FString source)
 		gamestate == GS_DEMOSCREEN ||
 		con_notifylines == 0)
 		return;
+
+	if (con_stackident && Text.Size() > 0 && source.Compare(lastNotifyString) == 0)
+	{
+		FNotifyText &last = Text.Last();
+
+		// Only stack if the previous message hasn't started fading out yet
+		if (last.Ticker < last.TimeOut)
+		{
+			countedIdentical++;
+			FString combined;
+
+			// Clean up trailing newline
+			FString cleanSource = source;
+			if (cleanSource.Len() > 0)
+			{
+				cleanSource.Truncate(cleanSource.Len() - 1);
+				combined.Format("%s (x%d)", cleanSource.GetChars(), countedIdentical);
+				combined += '\n';
+			}
+
+			// Remove the previous entry to recalculate its size
+			Text.Pop();
+
+			source = combined;
+		}
+		else
+		{
+			// The old message was fading, start a fresh stack
+			lastNotifyString = source;
+			countedIdentical = 1;
+		}
+	}
+	else
+	{
+		// Always Brand new message
+		lastNotifyString = source;
+		countedIdentical = 1;
+	}
+
 
 	// [MK] allow the status bar to take over notify printing
 	if (StatusBar != nullptr)
