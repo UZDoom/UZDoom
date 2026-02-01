@@ -19,8 +19,11 @@
 #include <zwidget/core/theme.h>
 
 #include "c_cvars.h"
+#include "d_main.h"
 #include "filesystem.h"
+#include "m_argv.h"
 #include "printf.h"
+#include "tarray.h"
 #include "widgets/themedata.h"
 
 CUSTOM_CVARD(Int, ui_theme, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
@@ -29,7 +32,7 @@ CUSTOM_CVARD(Int, ui_theme, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme
 	if (self > 2) self = 2;
 }
 
-FResourceFile* WidgetResources;
+TDeletingArray<FResourceFile*>* WidgetResources = nullptr;
 
 bool IsZWidgetAvailable()
 {
@@ -38,9 +41,22 @@ bool IsZWidgetAvailable()
 
 void InitWidgetResources(const char* filename)
 {
-	WidgetResources = FResourceFile::OpenResourceFile(filename);
-	if (!WidgetResources)
-		I_FatalError("Unable to open %s", filename);
+	WidgetResources = new TDeletingArray<FResourceFile*>();
+
+	auto open = [=](const char* filename)
+	{
+		auto file = FResourceFile::OpenResourceFile(filename);
+		if (!file)
+			I_FatalError("Unable to open %s", filename);
+		WidgetResources->Push(file);
+	};
+
+	open(filename);
+
+	FString *args;
+	int argc = Args->CheckParmList(FArg_file, &args);
+	for (int i = 0; i < argc; ++i)
+		open(args[i].GetChars());
 
 	bool use_dark = ui_theme == 1;
 
@@ -64,22 +80,25 @@ void InitWidgetResources(const char* filename)
 void CloseWidgetResources()
 {
 	delete WidgetResources;
-	WidgetResources = nullptr;
 }
 
-static std::vector<uint8_t> LoadFile(const char* name)
+static std::vector<uint8_t> LoadFile(const char* name, bool root)
 {
-	if (!WidgetResources)
+	if (!IsZWidgetAvailable())
 		I_FatalError("InitWidgetResources has not been called");
 
-	auto lump = WidgetResources->FindEntry(name);
-	if (lump == -1)
-		I_FatalError("Unable to find %s", name);
+	auto start = root ? 0: WidgetResources->size() - 1;
+	for (auto i = start; i >= 0; i--)
+	{
+		auto lump = (*WidgetResources)[i]->FindEntry(name);
+		if (lump == -1) continue;
+		auto reader = (*WidgetResources)[i]->GetEntryReader(lump, FileSys::READER_SHARED);
+		std::vector<uint8_t> buffer(reader.GetLength());
+		reader.Read(buffer.data(), buffer.size());
+		return buffer;
+	}
 
-	auto reader = WidgetResources->GetEntryReader(lump, FileSys::READER_SHARED);
-	std::vector<uint8_t> buffer(reader.GetLength());
-	reader.Read(buffer.data(), buffer.size());
-	return buffer;
+	I_FatalError("Unable to find %s", name);
 }
 
 // this must be allowed to fail without throwing.
@@ -96,7 +115,7 @@ static std::vector<uint8_t> LoadDiskFile(const char* name)
 }
 
 // This interface will later require some significant redesign.
-std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
+std::vector<SingleFontData> LoadWidgetFontData(const std::string& name, bool root)
 {
 	std::vector<SingleFontData> returnv;
 	if (!stricmp(name.c_str(), "notosans"))
@@ -114,19 +133,19 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
 		auto count = sizeof(fonts) / sizeof(fonts[0]);
 		returnv.resize(count);
 		for (unsigned i = 0; i < count; i++)
-			returnv[i].fontdata = LoadFile(fonts[i]);
+			returnv[i].fontdata = LoadFile(fonts[i], root);
 
 		return returnv;
 	}
 
 	returnv.resize(1);
 	std::string fn = "ui/font/" + name + ".ttf";
-	returnv[0].fontdata = LoadFile(fn.c_str());
+	returnv[0].fontdata = LoadFile(fn.c_str(), root);
 
 	return returnv;
 }
 
-std::vector<uint8_t> LoadWidgetData(const std::string& name)
+std::vector<uint8_t> LoadWidgetData(const std::string& name, bool root)
 {
-	return LoadFile(name.c_str());
+	return LoadFile(name.c_str(), root);
 }

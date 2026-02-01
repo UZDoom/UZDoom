@@ -16,10 +16,6 @@
 #include <zwidget/core/colorf.h>
 #include <zwidget/core/resourcedata.h>
 
-#include "d_main.h"
-#include "filesystem.h"
-#include "gameconfigfile.h"
-#include "m_argv.h"
 #include "printf.h"
 #include "sc_man.h"
 #include "themedata.h"
@@ -65,34 +61,16 @@ void Theme::initilize(Mode mode)
 	setMode(mode);
 	ThemeData *t;
 
-	// hard-coded nice fallback
-	Theme::accent = Colorf::fromRgb(0x237887);
+	// basic fallback
+	Theme::accent = Colorf::fromRgb(0x7f7f7f);
 	t = &Theme::light;
-	t->main.bg   = Colorf::fromRgb(0xf1eee2);
-	t->main.fg   = Colorf::fromRgb(0x000000);
-	t->header.bg = Colorf::fromRgb(0xf5f4ef);
-	t->header.fg = Colorf::fromRgb(0x000000);
-	t->button.bg = Colorf::fromRgb(0xefe8cd);
-	t->button.fg = Colorf::fromRgb(0x000000);
-	t->hover.bg  = Colorf::fromRgb(0xa4c2e9);
-	t->hover.fg  = Colorf::fromRgb(0x000000);
-	t->click.bg  = Colorf::fromRgb(0x7ca2e9);
-	t->click.fg  = Colorf::fromRgb(0x000000);
-	t->border.bg = Colorf::fromRgb(0x586e75);
-	t->border.fg = Colorf::fromRgb(0xbdb8a7);
+	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Colorf::fromRgb(0xffffff);
+	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Colorf::fromRgb(0x000000);
+	t->border.bg = t->border.fg = Colorf::fromRgb(0x7f7f7f);
 	t = &Theme::dark;
-	t->main.bg   = Colorf::fromRgb(0x002033);
-	t->main.fg   = Colorf::fromRgb(0xffffff);
-	t->header.bg = Colorf::fromRgb(0x001017);
-	t->header.fg = Colorf::fromRgb(0xffffff);
-	t->button.bg = Colorf::fromRgb(0x003747);
-	t->button.fg = Colorf::fromRgb(0xffffff);
-	t->hover.bg  = Colorf::fromRgb(0xa4c2e9);
-	t->hover.fg  = Colorf::fromRgb(0x000000);
-	t->click.bg  = Colorf::fromRgb(0x7ca2e9);
-	t->click.fg  = Colorf::fromRgb(0x000000);
-	t->border.bg = Colorf::fromRgb(0x536078);
-	t->border.fg = Colorf::fromRgb(0x2b3e5b);
+	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Colorf::fromRgb(0x000000);
+	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Colorf::fromRgb(0xffffff);
+	t->border.bg = t->border.fg = Colorf::fromRgb(0x7f7f7f);
 
 	auto file = "ui/theme.txt";
 
@@ -161,26 +139,10 @@ void Theme::initilize(Mode mode)
 	};
 
 	// from uzdoom.pk3
-	load(LoadWidgetData(file));
+	load(LoadWidgetData(file, true));
 
 	// from mods
-	FString *args;
-	int argc = Args->CheckParmList(FArg_file, &args);
-	for (int i = 0; i < argc; ++i)
-	{
-		auto filename = args[i].GetChars();
-		auto resource = FResourceFile::OpenResourceFile(filename);
-		if (!resource) continue;
-		auto lump = resource->FindEntry(file);
-		if (lump != -1)
-		{
-			auto reader = resource->GetEntryReader(lump, FileSys::READER_SHARED);
-			std::vector<uint8_t> buffer(reader.GetLength());
-			reader.Read(buffer.data(), buffer.size());
-			load(buffer);
-		}
-		delete resource;
-	}
+	load(LoadWidgetData(file));
 }
 
 Colorf Theme::mix(const ColorLayers& color, float mix)
