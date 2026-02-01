@@ -593,9 +593,9 @@ void TextEdit::OnVerticalScroll()
 void TextEdit::UpdateVerticalScroll()
 {
 	Rect rect(
-		GetWidth() - 16.0/*vert_scrollbar->GetWidth()*/,
+		GetWidth() - vert_scrollbar->GetPreferredWidth(),
 		0.0,
-		16.0/*vert_scrollbar->GetWidth()*/,
+		vert_scrollbar->GetPreferredWidth(),
 		GetHeight());
 
 	vert_scrollbar->SetFrameGeometry(rect);
@@ -982,7 +982,7 @@ void TextEdit::LayoutLines(Canvas* canvas)
 				line.layout.AddText(line.text, font, textColor);
 			else
 				line.layout.AddText(" ", font, textColor); // Draw one space character to get the correct height
-			line.layout.Layout(canvas, GetWidth());
+			line.layout.Layout(canvas, GetWidth() - vert_scrollbar->GetPreferredWidth());
 			line.box = Rect(draw_pos, line.layout.GetSize());
 			line.invalidated = false;
 		}
