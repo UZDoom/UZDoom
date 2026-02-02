@@ -334,15 +334,14 @@ void SystemBaseFrameBuffer::PositionWindow(bool fullscreen, bool initialcall)
 
 	if (fullscreen)
 	{
-		if (!fsdwmhack)
+		SetWindowPos(mainwindow.GetHandle(), 0, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED);
+		MoveWindow(mainwindow.GetHandle(), monRect.left, monRect.top, monRect.right-monRect.left, monRect.bottom-monRect.top, FALSE);
+		// And now, seriously, it IS in the right place. Promise.
+
+		if (fsdwmhack)
 		{
-			SetWindowPos(mainwindow.GetHandle(), 0, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED);
-			MoveWindow(mainwindow.GetHandle(), monRect.left, monRect.top, monRect.right-monRect.left, monRect.bottom-monRect.top, FALSE);
-			// And now, seriously, it IS in the right place. Promise.
-		}
-		else
-		{
-			SetWindowPos(mainwindow.GetHandle(), HWND_TOP, 0, 0, int(monRect.right - monRect.left), int(monRect.bottom - monRect.top), 0);
+			// this is only a test to make sure the DWM compositor is still working. If this breaks, blame Microsoft.
+			// they break things literally every 2 years, sometimes less.
 			BYTE opacity = vid_fsdwmhackalpha;
 			SetLayeredWindowAttributes(mainwindow.GetHandle(), 0, opacity, LWA_ALPHA);
 		}
