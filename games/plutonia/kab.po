@@ -1,0 +1,139 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-01-23 19:05+0000\n"
+"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Kabyle <https://hosted.weblate.org/projects/doom-engine-games/"
+"the-plutonia-experiment/kab/>\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
+
+msgid "TXT_PLUT_EP"
+msgstr ""
+
+msgid "PHUSTR_1"
+msgstr ""
+
+msgid "PHUSTR_2"
+msgstr ""
+
+msgid "PHUSTR_3"
+msgstr ""
+
+msgid "PHUSTR_4"
+msgstr ""
+
+msgid "PHUSTR_5"
+msgstr ""
+
+msgid "PHUSTR_6"
+msgstr ""
+
+msgid "PHUSTR_7"
+msgstr ""
+
+msgid "PHUSTR_8"
+msgstr ""
+
+msgid "PHUSTR_9"
+msgstr ""
+
+msgid "PHUSTR_10"
+msgstr ""
+
+msgid "PHUSTR_11"
+msgstr ""
+
+msgid "PHUSTR_12"
+msgstr ""
+
+msgid "PHUSTR_13"
+msgstr ""
+
+msgid "PHUSTR_14"
+msgstr ""
+
+msgid "PHUSTR_15"
+msgstr ""
+
+msgid "PHUSTR_16"
+msgstr ""
+
+msgid "PHUSTR_17"
+msgstr ""
+
+msgid "PHUSTR_18"
+msgstr ""
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr ""
+
+msgid "PHUSTR_20"
+msgstr ""
+
+msgid "PHUSTR_21"
+msgstr ""
+
+msgid "PHUSTR_22"
+msgstr ""
+
+msgid "PHUSTR_23"
+msgstr ""
+
+msgid "PHUSTR_24"
+msgstr ""
+
+msgid "PHUSTR_25"
+msgstr ""
+
+msgid "PHUSTR_26"
+msgstr ""
+
+msgid "PHUSTR_27"
+msgstr ""
+
+msgid "PHUSTR_28"
+msgstr ""
+
+msgid "PHUSTR_29"
+msgstr ""
+
+msgid "PHUSTR_30"
+msgstr ""
+
+msgid "PHUSTR_31"
+msgstr ""
+
+msgid "PHUSTR_32"
+msgstr "ASWIR 32: Go 2 It"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""

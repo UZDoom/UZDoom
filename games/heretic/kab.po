@@ -1,0 +1,169 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-01-23 19:05+0000\n"
+"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Kabyle <https://hosted.weblate.org/projects/doom-engine-games/"
+"heretic/kab/>\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
+
+msgid "HHUSTR_E1M1"
+msgstr ""
+
+msgid "HHUSTR_E1M2"
+msgstr ""
+
+msgid "HHUSTR_E1M3"
+msgstr ""
+
+msgid "HHUSTR_E1M4"
+msgstr ""
+
+msgid "HHUSTR_E1M5"
+msgstr ""
+
+msgid "HHUSTR_E1M6"
+msgstr ""
+
+msgid "HHUSTR_E1M7"
+msgstr ""
+
+msgid "HHUSTR_E1M8"
+msgstr ""
+
+msgid "HHUSTR_E1M9"
+msgstr ""
+
+msgid "HHUSTR_E2M1"
+msgstr ""
+
+msgid "HHUSTR_E2M2"
+msgstr ""
+
+msgid "HHUSTR_E2M3"
+msgstr "Iɣzeṛ n tmes"
+
+msgid "HHUSTR_E2M4"
+msgstr ""
+
+msgid "HHUSTR_E2M5"
+msgstr ""
+
+msgid "HHUSTR_E2M6"
+msgstr ""
+
+msgid "HHUSTR_E2M7"
+msgstr ""
+
+msgid "HHUSTR_E2M8"
+msgstr ""
+
+msgid "HHUSTR_E2M9"
+msgstr ""
+
+msgid "HHUSTR_E3M1"
+msgstr ""
+
+msgid "HHUSTR_E3M2"
+msgstr ""
+
+msgid "HHUSTR_E3M3"
+msgstr ""
+
+msgid "HHUSTR_E3M4"
+msgstr ""
+
+msgid "HHUSTR_E3M5"
+msgstr ""
+
+msgid "HHUSTR_E3M6"
+msgstr ""
+
+msgid "HHUSTR_E3M7"
+msgstr ""
+
+msgid "HHUSTR_E3M8"
+msgstr ""
+
+msgid "HHUSTR_E3M9"
+msgstr ""
+
+msgid "HHUSTR_E4M1"
+msgstr ""
+
+msgid "HHUSTR_E4M2"
+msgstr ""
+
+msgid "HHUSTR_E4M3"
+msgstr ""
+
+msgid "HHUSTR_E4M4"
+msgstr ""
+
+msgid "HHUSTR_E4M5"
+msgstr ""
+
+msgid "HHUSTR_E4M6"
+msgstr ""
+
+msgid "HHUSTR_E4M7"
+msgstr ""
+
+msgid "HHUSTR_E4M8"
+msgstr ""
+
+msgid "HHUSTR_E4M9"
+msgstr ""
+
+msgid "HHUSTR_E5M1"
+msgstr ""
+
+msgid "HHUSTR_E5M2"
+msgstr ""
+
+msgid "HHUSTR_E5M3"
+msgstr ""
+
+msgid "HHUSTR_E5M4"
+msgstr ""
+
+msgid "HHUSTR_E5M5"
+msgstr ""
+
+msgid "HHUSTR_E5M6"
+msgstr ""
+
+msgid "HHUSTR_E5M7"
+msgstr ""
+
+msgid "HHUSTR_E5M8"
+msgstr ""
+
+msgid "HHUSTR_E5M9"
+msgstr ""
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
