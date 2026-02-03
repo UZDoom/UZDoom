@@ -22,6 +22,7 @@
 #include <zwidget/widgets/scrollbar/scrollbar.h>
 
 #include "errorwindow.h"
+#include "gstrings.h"
 #include "printf.h"
 #include "utf8.h"
 #include "v_font.h"
@@ -45,25 +46,25 @@ bool ErrorWindow::ExecModal(const std::string& text, const std::string& log, std
 
 ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, WidgetType::Window), minidump(std::move(initminidump))
 {
-	FStringf caption("Fatal Error - " GAMENAME " %s (%s)", GetVersionString(), GetGitTime());
+	FStringf caption("%s - " GAMENAME " %s (%s)", GStrings.GetString("ERROR_FATAL"), GetVersionString(), GetGitTime());
 	SetWindowTitle(caption.GetChars());
 
 	LogView = new LogViewer(this);
 	ClipboardButton = new PushButton(this);
 	ClipboardButton->OnClick = [=]() { OnClipboardButtonClicked(); };
-	ClipboardButton->SetText("Copy to clipboard");
+	ClipboardButton->SetText(GStrings.GetString("ACTION_COPYTOCLIPBOARD"));
 
 	if (minidump.empty())
 	{
 		RestartButton = new PushButton(this);
 		RestartButton->OnClick = [=]() { OnRestartButtonClicked(); };
-		RestartButton->SetText("Restart");
+		RestartButton->SetText(GStrings.GetString("ACTION_RESTART"));
 	}
 	else
 	{
 		SaveReportButton = new PushButton(this);
 		SaveReportButton->OnClick = [=]() { OnSaveReportButtonClicked(); };
-		SaveReportButton->SetText("Save Report");
+		SaveReportButton->SetText(GStrings.GetString("ERRORMNU_SAVE"));
 	}
 
 	LogView->SetFocus();
@@ -110,8 +111,8 @@ void ErrorWindow::OnRestartButtonClicked()
 void ErrorWindow::OnSaveReportButtonClicked()
 {
 	auto dialog = SaveFileDialog::Create(this);
-	dialog->AddFilter("Crash Report Zip Files", "*.zip");
-	dialog->AddFilter("All Files", "*.*");
+	dialog->AddFilter(GStrings.GetString("FILEPICKER_REPORTS"), "*.zip");
+	dialog->AddFilter(GStrings.GetString("FILEPICKER_ANY"), "*.*");
 	dialog->SetFilename("CrashReport.zip");
 	dialog->SetDefaultExtension("zip");
 	if (dialog->Show())
@@ -190,7 +191,7 @@ void LogViewer::SetText(const std::string& text, const std::string& log)
 
 	SpanLayout layout;
 	//layout.AddImage(Image::LoadResource("ui/erroricon.svg"), -8.0);
-	layout.AddText("Execution could not continue.", largefont, Colorf::fromRgba8(255, 170, 170));
+	layout.AddText(GStrings.GetString("ERROR_ABORT"), largefont, Colorf::fromRgba8(255, 170, 170));
 	lines.push_back(layout);
 
 	layout.Clear();
