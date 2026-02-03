@@ -24,12 +24,16 @@
 
 #include <string.h>
 
-#include "stringtable.h"
-#include "cmdlib.h"
+#include "c_cvars.h"
 #include "filesystem.h"
-#include "sc_man.h"
-#include "printf.h"
 #include "i_interface.h"
+#include "name.h"
+#include "printf.h"
+#include "sc_man.h"
+#include "zstring.h"
+#include "stringtable.h"
+
+EXTERN_CVAR(Int, developer);
 
 //==========================================================================
 //
@@ -650,10 +654,22 @@ bool FStringTable::MatchDefaultString(const char *name, const char *content) con
 // not exist, returns the passed name instead.
 //
 //==========================================================================
-
 const char *FStringTable::GetString(const char *name) const
 {
-	const char *str = CheckString(name, nullptr);
+	const char *str = CheckString(name);
+
+	if (developer != 0 && !str)
+	{
+		static TMap<FName, bool> missed;
+
+		FName fname = name;
+		if (!missed.CheckKey(fname))
+		{
+			missed.Insert(fname, true);
+			DPrintf(DMSG_WARNING, "Translation not found '%s'\n", name);
+		}
+	}
+
 	return str ? str : name;
 }
 
