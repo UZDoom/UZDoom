@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-01-27 16:02+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/it/>\n"
 "Language: it\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: it\n"
 
 msgid "PRESSKEY"
@@ -530,6 +530,7 @@ msgstr "Segreto"
 msgid "SCORE_NAME"
 msgstr "Nome"
 
+#, fuzzy
 msgid "SCORE_DELAY"
 msgstr "Ritardo (ms) "
 
@@ -5270,3 +5271,6 @@ msgstr "Contrasto"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Saturazione"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Opzioni Accessibilità"

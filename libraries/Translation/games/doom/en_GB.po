@@ -2,7 +2,100 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-01-28 11:15+0000\n"
+"Last-Translator: babafun <babafun@users.noreply.hosted.weblate.org>\n"
+"Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom/en_GB/>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: eng enc ena enz eni ens enj enb enl ent enw\n"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Command Centre"
+
+msgid "E3TEXT"
+msgstr ""
+"The loathsome spiderdemon that\n"
+"masterminded the invasion of the moon\n"
+"bases and caused so much death has had\n"
+"its arse kicked for all time.\n"
+"\n"
+"A hidden doorway opens and you enter.\n"
+"You've proven too tough for Hell to\n"
+"contain, and now Hell at last plays\n"
+"fair -- for you emerge from the door\n"
+"to see the green fields of Earth!\n"
+"Home at last.\n"
+"\n"
+"You wonder what's been happening on\n"
+"Earth while you were battling evil\n"
+"unleashed. It's good that no Hell-\n"
+"spawn could have come through that\n"
+"door with you ..."
+
+msgid "TXT_D1E1"
+msgstr "Knee-Deep in the Dead"
+
+msgid "TXT_D1E2"
+msgstr "The Shores of Hell"
+
+msgid "TXT_D1E3"
+msgstr "Inferno"
+
+msgid "TXT_D1E4"
+msgstr "Thy Flesh Consumed"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangar"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Nuclear Plant"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Toxin Refinery"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Command Control"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Phobos Lab"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Central Processing"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Computer Station"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Phobos Anomaly"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Military Base"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Sewers"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Deimos Anomaly"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Containment Area"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Refinery"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Deimos Lab"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Halls of the Damned"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Spawning Vats"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Tower of Babel"

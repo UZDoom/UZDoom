@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:49+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
+"PO-Revision-Date: 2026-01-25 23:01+0000\n"
+"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/common/"
 "eo/>\n"
 "Language: eo\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: eo\n"
 
 msgid "PRESSYN"
@@ -496,7 +496,7 @@ msgid "JOYMNU_XINPUT"
 msgstr "Ebligi ludregilojn de XInput"
 
 msgid "JOYMNU_PS2"
-msgstr "Ebligi adaptilojn de PlayStation 2 "
+msgstr "Ebligi adaptilojn de PlayStation 2"
 
 msgid "JOYMNU_NOCON"
 msgstr "Neniu ludregilo detektita"
@@ -758,7 +758,7 @@ msgid "OPTSTR_STEREO"
 msgstr "Stereofonia"
 
 msgid "OPTSTR_PROLOGIC"
-msgstr "Malkodilo de Dolby Pro Logic "
+msgstr "Malkodilo de Dolby Pro Logic"
 
 msgid "OPTSTR_QUAD"
 msgstr "Kvarkanala (\"Quad\")"
@@ -926,10 +926,10 @@ msgid "ADVSNDMNU_VLMODEL"
 msgstr "Modelo de laŭteco"
 
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr ""
+msgstr "Metodo de kanala asigno"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr ""
+msgstr "Aŭtomata arpeĝo"
 
 msgid "ADVSNDMNU_OPNCORES"
 msgstr "Imitil-kerno por OPN2"
@@ -956,7 +956,7 @@ msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "Uzi propran WOPLan memor-bankon"
 
 msgid "ADVSNDMNU_ADLUSEWADBANK"
-msgstr ""
+msgstr "Uzi la GENMIDI-bankon de WAD kiel adaptita banko"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "Dosiero de WOPLa memor-banko"
@@ -1009,7 +1009,7 @@ msgid "OPTVAL_CUBICSLOW"
 msgstr "Kuba (Pli malrapida)"
 
 msgid "OPTVAL_SINC"
-msgstr ""
+msgstr "Sinc funkcio"
 
 msgid "OPTVAL_NOTEONOFFONLY"
 msgstr "Nur (mal)ŝaltataj tonoj"
@@ -1030,7 +1030,7 @@ msgid "OPTVAL_LIBXMP"
 msgstr ""
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Stulta"
 
 msgid "MODMNU_CHIPOMATIC"
 msgstr ""
@@ -1162,13 +1162,13 @@ msgid "ADLCHANALLOC_AUTO"
 msgstr "Aŭtomata"
 
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr ""
+msgstr "Silentigo-prokrasto mezurita"
 
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr ""
+msgstr "Reuzi unuan liberigitan de la sama instrumento"
 
 msgid "ADLCHANALLOC_ANYREL"
-msgstr ""
+msgstr "Reuzi ian unuan liberigitan tonon"
 
 msgid "OPTVAL_UNLIMITED"
 msgstr "Senlima"
@@ -1249,7 +1249,7 @@ msgid "GLPREFMNU_SSAO_PORTALS"
 msgstr "Portaloj kun Media obstrukceco"
 
 msgid "GLPREFMNU_MENUBLUR"
-msgstr "Malklarigo de menuo "
+msgstr "Malklarigo de menuo"
 
 msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
 msgstr "Medimapo sur speguloj"
@@ -1857,7 +1857,6 @@ msgstr ""
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
 # should NOT be listed here!
-#, fuzzy
 msgid "REQUIRED_CHARACTERS"
 msgstr "ĈĜĤĴŜŬ"
 
@@ -2106,3 +2105,39 @@ msgstr "Rapido de rigardo"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr "Analoga flankenmoviĝo-kuro"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Eldonaj notoj"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Pri"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Montri eldonajn notojn"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Montri ĉi tiun paĝon post ĝisdatigoj"
+
+msgid "NOTES_VERSION"
+msgstr "versio"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Nekonata"
+
+msgid "NOTES_RELEASED"
+msgstr "eldonita"
+
+msgid "NOTES_EMPTY"
+msgstr "Neniu priskribo provizita."
+
+msgid "NOTES_DETAILS"
+msgstr "Por pli da detaloj, vidu:"
+
+msgid "NOTES_FAIL"
+msgstr "Ne kapablas sintake analizi eldonajn notojn"
+
+msgid "ACCMNU_TITLE"
+msgstr "Alireblo-agordoj"
+
+msgid "ACCMNU_RESET"
+msgstr "Restarigi alireblo-agordojn"

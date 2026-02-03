@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-12-30 17:00+0000\n"
+"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/cs/>\n"
 "Language: cs\n"
@@ -529,7 +529,7 @@ msgid "SCORE_NAME"
 msgstr "Jméno"
 
 msgid "SCORE_DELAY"
-msgstr "Zpoždění (ms)"
+msgstr "Zpoždění"
 
 msgid "SCORE_FRAGS"
 msgstr "Fragy"
@@ -562,7 +562,7 @@ msgid "TXT_IMTIME"
 msgstr "Čas"
 
 msgid "TXT_IMPAR"
-msgstr ""
+msgstr "Rekord"
 
 msgid "WI_FINISHED"
 msgstr "Dokončeno"

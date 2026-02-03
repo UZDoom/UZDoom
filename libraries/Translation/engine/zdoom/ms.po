@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 19:25+0000\n"
+"PO-Revision-Date: 2026-01-18 09:01+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Malay <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/ms/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid "PRESSKEY"
 msgstr "Tekan mana-mana kekunci."
@@ -86,6 +86,8 @@ msgstr ""
 
 msgid "QUITMSG4"
 msgstr ""
+"Kau nak kata yang kau lagi suka DOS\n"
+"daripada saya, kan?"
 
 msgid "QUITMSG5"
 msgstr ""
@@ -462,7 +464,7 @@ msgid "SCORE_NAME"
 msgstr "Nama"
 
 msgid "SCORE_DELAY"
-msgstr ""
+msgstr "Kelewatan"
 
 msgid "SCORE_FRAGS"
 msgstr "Frag"
@@ -623,10 +625,10 @@ msgid "GOTREDSKUL"
 msgstr ""
 
 msgid "GOTINVUL"
-msgstr ""
+msgstr "Kekebalan!"
 
 msgid "GOTBERSERK"
-msgstr ""
+msgstr "Berserk!"
 
 msgid "GOTINVIS"
 msgstr ""
@@ -761,7 +763,7 @@ msgid "PD_YELLOWS"
 msgstr ""
 
 msgid "CC_ZOMBIE"
-msgstr ""
+msgstr "Zombi"
 
 # a.k.a. (former human) sergeant
 msgid "CC_SHOTGUN"
@@ -772,7 +774,7 @@ msgid "CC_HEAVY"
 msgstr ""
 
 msgid "CC_IMP"
-msgstr ""
+msgstr "Imp"
 
 msgid "CC_DEMON"
 msgstr ""
@@ -781,7 +783,7 @@ msgid "CC_LOST"
 msgstr ""
 
 msgid "CC_CACO"
-msgstr ""
+msgstr "Cacodemon"
 
 msgid "CC_HELL"
 msgstr ""
@@ -799,7 +801,7 @@ msgid "CC_REVEN"
 msgstr ""
 
 msgid "CC_MANCU"
-msgstr ""
+msgstr "Mancubus"
 
 msgid "CC_ARCH"
 msgstr ""
@@ -814,7 +816,7 @@ msgid "CC_HERO"
 msgstr ""
 
 msgid "FN_SHOTGUN"
-msgstr ""
+msgstr "Sarjan"
 
 msgid "FN_HEAVY"
 msgstr ""
@@ -832,7 +834,7 @@ msgid "FN_WOLFSS"
 msgstr ""
 
 msgid "FN_DOG"
-msgstr ""
+msgstr "Anjing"
 
 msgid "TAG_FIST"
 msgstr ""
@@ -841,10 +843,10 @@ msgid "TAG_CHAINSAW"
 msgstr ""
 
 msgid "TAG_PISTOL"
-msgstr ""
+msgstr "Pistol"
 
 msgid "TAG_SHOTGUN"
-msgstr ""
+msgstr "Senapang Patah"
 
 msgid "TAG_SUPERSHOTGUN"
 msgstr ""
@@ -2741,6 +2743,11 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
+"Ini ialah Chex(R) Quest. nantikan\n"
+"\n"
+"tahap-tahap baharu di www.chexquest.com.\n"
+"\n"
+"Tekan mana-mana kekunci."
 
 msgctxt "chex"
 msgid "NETEND"
@@ -3275,13 +3282,13 @@ msgid "CMPTMNU_EXPLODE2"
 msgstr ""
 
 msgid "PLYRMNU_RED"
-msgstr ""
+msgstr "Merah"
 
 msgid "PLYRMNU_GREEN"
-msgstr ""
+msgstr "Hijau"
 
 msgid "PLYRMNU_BLUE"
-msgstr ""
+msgstr "Biru"
 
 msgid "PLYRMNU_PLAYERCLASS"
 msgstr ""
@@ -3455,7 +3462,7 @@ msgid "MAPCOLORMNU_PORTAL"
 msgstr ""
 
 msgid "MSGMNU_TITLE"
-msgstr ""
+msgstr "Mesej"
 
 msgid "MSGMNU_SHOWMESSAGES"
 msgstr ""
@@ -3782,7 +3789,7 @@ msgid "SCALEMNU_OVERRIDE"
 msgstr ""
 
 msgid "SCALEMNU_MESSAGES"
-msgstr ""
+msgstr "Mesej"
 
 msgid "SCALEMNU_CONSOLE"
 msgstr ""
@@ -3957,7 +3964,7 @@ msgid "OPTVAL_ITEMS"
 msgstr ""
 
 msgid "OPTVAL_WEAPONS"
-msgstr ""
+msgstr "Senjata"
 
 msgid "OPTVAL_BOTH"
 msgstr ""
@@ -4915,7 +4922,7 @@ msgid "JOYMNU_THRESHOLD"
 msgstr ""
 
 msgid "OPTVAL_LINEAR"
-msgstr ""
+msgstr "Linear"
 
 msgid "OPTVAL_QUADRATIC"
 msgstr ""
@@ -4931,7 +4938,7 @@ msgid "OPTVAL_TEAMONLYCHAT"
 msgstr ""
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "Global"
 
 # Disables /me functionality in chat when displaying.
 msgid "NETMNU_NOBOLDCHAT"
@@ -5017,7 +5024,7 @@ msgid "HAPMNU_OPT_WORLD"
 msgstr ""
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "Jeda"
 
 msgid "TAG_BACKPACK"
 msgstr ""
@@ -5178,3 +5185,8 @@ msgstr "Baris Petua Alat"
 #, fuzzy
 msgid "ACCMNU_TOOLTIP_SCALE"
 msgstr "Skalakan Petua Alat"
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Menerapkan pelarasan kecerahan linear. Laraskan mengikut citarasa sendiri "
+"atau untuk melihat dalam gelap."

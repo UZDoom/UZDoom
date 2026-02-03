@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-12-24 17:00+0000\n"
+"Last-Translator: Boondorl <boondorl0@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-engine-strings/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -476,6 +476,7 @@ msgstr "Hemmelig"
 msgid "SCORE_NAME"
 msgstr "Navn"
 
+#, fuzzy
 msgid "SCORE_DELAY"
 msgstr "Forsinkelse (ms)"
 

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-01-27 16:02+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/es/>\n"
 "Language: es\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: es\n"
 
 msgid "PRESSKEY"
@@ -520,7 +520,7 @@ msgid "SCORE_BONUS"
 msgstr "Bonificaciones"
 
 msgid "SCORE_COLOR"
-msgstr ""
+msgstr "Color"
 
 msgid "SCORE_SECRET"
 msgstr "Secreto"
@@ -529,7 +529,7 @@ msgid "SCORE_NAME"
 msgstr "Nombre"
 
 msgid "SCORE_DELAY"
-msgstr "Retraso (ms)"
+msgstr "Retraso"
 
 msgid "SCORE_FRAGS"
 msgstr "Bajas"
@@ -544,7 +544,7 @@ msgid "SCORE_MISSED"
 msgstr "Pérdidas"
 
 msgid "SCORE_TOTAL"
-msgstr ""
+msgstr "Total"
 
 msgid "SCORE_LVLTIME"
 msgstr "Tiempo de nivel"
@@ -839,7 +839,7 @@ msgid "CC_HEAVY"
 msgstr "Ametrallador"
 
 msgid "CC_IMP"
-msgstr ""
+msgstr "Diablillo"
 
 msgid "CC_DEMON"
 msgstr "Demonio"
@@ -926,7 +926,7 @@ msgid "TAG_PLASMARIFLE"
 msgstr "Fusil de plasma"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "BFG 9000"
 
 msgid "AMMO_CLIP"
 msgstr "Balas"
@@ -5045,7 +5045,7 @@ msgid "OPTVAL_TEAMONLYCHAT"
 msgstr ""
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "Global"
 
 # Disables /me functionality in chat when displaying.
 msgid "NETMNU_NOBOLDCHAT"

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-01-31 22:45+0000\n"
+"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: chs\n"
 
 msgid "PRESSKEY"
@@ -21,7 +21,7 @@ msgid "SECRETMESSAGE"
 msgstr "你发现了一个秘密！"
 
 msgid "D_DEVSTR"
-msgstr "Useless模式启动。\n"
+msgstr "无用模式启动。\n"
 
 msgid "QUITMSG"
 msgstr ""
@@ -57,14 +57,14 @@ msgstr ""
 
 msgid "NIGHTMARE"
 msgstr ""
-"你真的确定吗？这个难度等级\n"
-"是一点也不公平的哟。\n"
+"你确定吗？这个难度等级\n"
+"一点也不公平。\n"
 "\n"
 "按Y键确认，按N键取消。"
 
 msgid "SWSTRING"
 msgstr ""
-"这是毁灭战士的shareware试玩版本。\n"
+"这是毁灭战士的共享软件版本。\n"
 "\n"
 "你需要购买完整的三部曲。\n"
 "\n"
@@ -78,16 +78,16 @@ msgstr ""
 
 msgid "ENDGAME"
 msgstr ""
-"你真的确定要结束游戏吗？\n"
+"你确定要结束游戏吗？\n"
 "\n"
 "按Y键确认，按N键取消。"
 
 msgid "RAVENQUITMSG"
-msgstr "你真的确定要退出吗？"
+msgstr "你确定要退出吗？"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr "仅在已激活的游戏版本提供"
+msgstr "仅在已激活的游戏版本可用"
 
 msgid "DOSY"
 msgstr "（按下Y键退出）"
@@ -146,8 +146,8 @@ msgstr ""
 
 msgid "QUITMSG11"
 msgstr ""
-"如果我是你的boss\n"
-"现在就给你关死斗里面！"
+"如果我是你的老板，我\n"
+"现在就找你单挑死斗！"
 
 msgid "QUITMSG12"
 msgstr ""
@@ -234,7 +234,7 @@ msgstr ""
 "不会这么快就放弃！"
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr "获得了一个道具"
+msgstr "你获得了一个道具"
 
 msgid "PD_ANY"
 msgstr "需要某个钥匙才能开此门"
@@ -530,7 +530,7 @@ msgid "SCORE_NAME"
 msgstr "名称"
 
 msgid "SCORE_DELAY"
-msgstr "延迟(ms)"
+msgstr "延迟"
 
 msgid "SCORE_FRAGS"
 msgstr "得分"
@@ -2687,14 +2687,17 @@ msgstr "大型Zorcher"
 msgid "TAG_SUPERLARGEZORCHER"
 msgstr "超大Zorcher"
 
+#, fuzzy
 msgid "TAG_RAPIDZORCHER"
-msgstr ""
+msgstr "速射Zorcher"
 
+#, fuzzy
 msgid "TAG_ZORCHPROPULSOR"
-msgstr ""
+msgstr "Zorch推进器"
 
+#, fuzzy
 msgid "TAG_PHASINGZORCHER"
-msgstr ""
+msgstr "相位Zorcher"
 
 msgid "TAG_LAZDEVICE"
 msgstr "LAZ装置"
@@ -2712,19 +2715,20 @@ msgid "OB_CYCLOPTIS"
 msgstr "%o 被一只独眼巨人粘住了。"
 
 msgid "OB_FLEMBRANE"
-msgstr ""
+msgstr "%o被黏液膜击败了。"
 
 msgid "OB_MPSPOON"
 msgstr ""
 
 msgid "OB_MPBOOTSPORK"
-msgstr ""
+msgstr "%o被%k的靴叉勺充分混合了。"
 
 msgid "OB_MPZORCH"
 msgstr ""
 
+#, fuzzy
 msgid "OB_MPMEGAZORCH"
-msgstr ""
+msgstr "%o被%k的mega-zorcher击中了。"
 
 msgid "OB_MPRAPIDZORCH"
 msgstr ""
@@ -2732,8 +2736,9 @@ msgstr ""
 msgid "OB_MPPROPULSOR"
 msgstr ""
 
+#, fuzzy
 msgid "OB_MPP_SPLASH"
-msgstr ""
+msgstr "%o被%k的推进器击中了。"
 
 msgid "OB_MPPHASEZORCH"
 msgstr ""
@@ -2874,20 +2879,22 @@ msgstr "……吃奇克斯(R)！"
 #, fuzzy
 msgctxt "chex"
 msgid "AMMO_CLIP"
-msgstr "迷你Zorch Charge"
+msgstr "迷你Zorch充能"
 
 #, fuzzy
 msgctxt "chex"
 msgid "AMMO_SHELLS"
-msgstr "大型Zorcher Charge"
+msgstr "大型Zorcher充能"
 
+#, fuzzy
 msgctxt "chex"
 msgid "AMMO_ROCKETS"
-msgstr ""
+msgstr "推进器充能"
 
+#, fuzzy
 msgctxt "chex"
 msgid "AMMO_CELLS"
-msgstr ""
+msgstr "相位Zorcher充能"
 
 msgid "MNU_NEWGAME"
 msgstr "新游戏"
@@ -3237,7 +3244,7 @@ msgid "CMPTMNU_ACTORBEHAVIOR"
 msgstr "角色行为"
 
 msgid "CMPTMNU_NOBLOCKFRIENDS"
-msgstr "友军怪物不会被阻挡"
+msgstr "友方怪物不会被阻挡"
 
 msgid "CMPTMNU_LIMITPAIN"
 msgstr "限制痛苦元素招出的丧魂数量"
@@ -3699,10 +3706,10 @@ msgid "SCRBRDMNU_TEAMDEATHMATCH"
 msgstr "团队死斗选项"
 
 msgid "ALTHUDMNU_TITLE"
-msgstr "替换HUD"
+msgstr "可替换式HUD"
 
 msgid "ALTHUDMNU_ENABLE"
-msgstr "启用替换HUD"
+msgstr "启用可替换式HUD"
 
 msgid "ALTHUDMNU_SHOWSECRETS"
 msgstr "显示秘密计数"
@@ -3762,7 +3769,7 @@ msgid "ALTHUDMNU_ARMORGREEN"
 msgstr "护甲在多少以下时显示成绿色"
 
 msgid "ALTHUDMNU_AUTOMAPHUD"
-msgstr "替换地图HUD"
+msgstr "可替换式地图HUD"
 
 msgid "ALTHUDMNU_TITLECOLOR"
 msgstr "地图标题颜色"
@@ -3897,7 +3904,7 @@ msgid "SCALEMNU_HUD"
 msgstr "全屏HUD"
 
 msgid "SCALEMNU_ALTHUD"
-msgstr "替换HUD"
+msgstr "可替换式HUD"
 
 msgid "SCALEMNU_HUDASPECT"
 msgstr "HUD保持纵横比"
@@ -3915,7 +3922,7 @@ msgid "HUDMNU_TITLE"
 msgstr "HUD选项"
 
 msgid "HUDMNU_ALTHUD"
-msgstr "替换HUD"
+msgstr "可替换式HUD"
 
 msgid "HUDMNU_MESSAGE"
 msgstr "消息选项"
@@ -3930,10 +3937,10 @@ msgid "HUDMNU_GROWCROSSHAIR"
 msgstr "拾取物品时准星放大"
 
 msgid "HUDMNU_NAMETAGS"
-msgstr "显示名字标签"
+msgstr "显示名称标签"
 
 msgid "HUDMNU_NAMETAGCOLOR"
-msgstr "名字标签颜色"
+msgstr "名称标签颜色"
 
 msgid "HUDMNU_OLDOUCH"
 msgstr "使用旧的头像方式"
@@ -4267,19 +4274,19 @@ msgid "OPTVAL_INTEGRATED"
 msgstr "节能"
 
 msgid "OPTVAL_VANILLA"
-msgstr "原始版"
+msgstr "原版"
 
 msgid "OPTVAL_VTFZDOOM"
 msgstr "ZDoom(强制)"
 
 msgid "OPTVAL_VTFVANILLA"
-msgstr "原始版(强制)"
+msgstr "原版(强制)"
 
 msgid "OPTVAL_VTAZDOOM"
 msgstr "自动(ZDoom优先)"
 
 msgid "OPTVAL_VTAVANILLA"
-msgstr "自动(原始版优先)"
+msgstr "自动(原版优先)"
 
 msgid "OPTVAL_SMALL"
 msgstr "小"
@@ -4610,7 +4617,7 @@ msgid "TCMNU_MAGFILTER"
 msgstr "放大时用线性过滤"
 
 msgid "TCMNU_MIPMAP"
-msgstr "使用mip映射纹理"
+msgstr "使用mipmap纹理"
 
 msgid "TCMNU_DYNLIGHTS"
 msgstr "动态光源(软件)"
@@ -4697,7 +4704,7 @@ msgid "TXT_SPPLAYERDEAD"
 msgstr "玩家在单人模式下死亡"
 
 msgid "TXT_SAVEFAILED"
-msgstr "存档失败"
+msgstr "保存失败"
 
 msgid "TXT_SCREENSHOTERR"
 msgstr "无法创建截屏。"
@@ -5076,7 +5083,7 @@ msgid "NETMNU_READYPERCENT"
 msgstr "投票跳过的百分比"
 
 msgid "NETMNU_READYCOUNTDOWN"
-msgstr "投屏倒计时(秒)"
+msgstr "投票倒计时(秒)"
 
 # Forces a cool down between chat messages for all players when playing
 # online.
@@ -5197,7 +5204,7 @@ msgid "TAG_BREAKFAST"
 msgstr "超级充能早餐"
 
 msgid "TAG_REPELLENT"
-msgstr ""
+msgstr "黏液防护剂"
 
 msgid "TAG_CHEXARMOR"
 msgstr "奇克斯护甲"
@@ -5331,3 +5338,56 @@ msgstr "对比度"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "饱和度"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "图像校准"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "请在调整前禁用这些。"
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "黑点补偿"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "白点补偿"
+
+msgid "OPTMNU_RESETALL"
+msgstr "全部重置"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "以正常观看的距离，来调整这些滑动条。"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr "放大/超采样可能导致输出不正确。"
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+"补偿你的显示器局限性。调整直到垂直灰色块消失。请勿用此功能让游戏画面更亮，仅"
+"用于确保图像与你的设置相匹配。"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"用于补偿显示器无法正确显示暗像素的情况。调整直至对角线上的白色方块消失。请勿"
+"用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"用于补偿显示器无法正确显示亮像素的情况。调整直至对角线上的黑色方块消失。请勿"
+"用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "将此菜单中的所有选项重置为默认设置。"
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr "应用线性亮度调整。根据个人喜好调整，或在黑暗中查看。"
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"调整相似颜色之间的感知差异。控制图像看起来清晰或模糊的程度。根据个人喜好进行"
+"调整。"
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr "调整颜色的强度，使图像看起来更鲜艳或更柔和。根据个人喜好进行调整。"
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "调整直到看起来像均匀的灰色。"

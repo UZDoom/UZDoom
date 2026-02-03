@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-12-24 17:00+0000\n"
+"Last-Translator: Boondorl <boondorl0@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/tr/>\n"
 "Language: tr\n"
@@ -461,6 +461,7 @@ msgstr "Sır"
 msgid "SCORE_NAME"
 msgstr "İsim"
 
+#, fuzzy
 msgid "SCORE_DELAY"
 msgstr "Gecikme (ms)"
 

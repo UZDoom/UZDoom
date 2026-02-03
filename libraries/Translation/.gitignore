@@ -2,4 +2,6 @@
 .~*
 *.xlsx
 *.kate-swp
-compile.awk~
+*~
+*.csv
+*.pyc

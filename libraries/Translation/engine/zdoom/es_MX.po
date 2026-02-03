@@ -2,85 +2,133 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-01-27 16:02+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/uzdoom/"
+"zdoom-engine-strings/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese esh esi esu\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
+"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese "
+"esh esi esu\n"
 
 msgid "PRESSKEY"
-msgstr ""
+msgstr "Presiona cualquier tecla."
 
 msgid "SECRETMESSAGE"
-msgstr ""
+msgstr "Un secreto es revelado!"
 
 msgid "D_DEVSTR"
-msgstr ""
+msgstr "Modo inútil activado.\n"
 
 msgid "QUITMSG"
 msgstr ""
+"¿Seguro de que quieres\n"
+"cerrar este juego genial?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
 msgid "LOADNET"
 msgstr ""
+"¡No puedes cargar en multijugador!\n"
+"\n"
+"Presiona cualquier tecla."
 
 msgid "QLOADNET"
 msgstr ""
+"¡No puedes cargar rápido en multijugador!\n"
+"\n"
+"Presiona cualquier tecla."
 
 msgid "QSAVESPOT"
 msgstr ""
+"¡No has elegido una ranura para guardar rápido!\n"
+"\n"
+"Presiona cualquier tecla."
 
 msgid "NEWGAME"
 msgstr ""
+"No puedes iniciar una nueva\n"
+"partida en multijugador.\n"
+"\n"
+"Presiona cualquier tecla."
 
 msgid "NIGHTMARE"
 msgstr ""
+"¿Estás seguro? Esta dificultad\n"
+"no tendrá piedad en ti.\n"
+"\n"
+"Presiona Y o N."
 
 msgid "SWSTRING"
 msgstr ""
+"Esta es la versión shareware de Doom.\n"
+"\n"
+"Necesitas ordenar la trilogía entera.\n"
+"\n"
+"Presiona cualquier tecla."
 
 msgid "NETEND"
 msgstr ""
+"No puedes terminar una partida multijugador!\n"
+"\n"
+"Presiona cualquier tecla."
 
 msgid "ENDGAME"
 msgstr ""
+"¿Estás seguro de terminar esta partida?\n"
+"\n"
+"Presiona Y o N."
 
 msgid "RAVENQUITMSG"
-msgstr ""
+msgstr "¿Estás seguro de que quieres irte?"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr ""
+msgstr "Solo disponible en la versión completa"
 
 msgid "DOSY"
-msgstr ""
+msgstr "(Presiona Y para salir)"
 
 msgid "QUITMSG1"
 msgstr ""
+"¡No te vayas, aún quedan demonios\n"
+"por los que exterminar!"
 
 msgid "QUITMSG2"
 msgstr ""
+"¡Larguémonos -- es un mar\n"
+"de sangre aqui!"
 
 msgid "QUITMSG3"
 msgstr ""
+"Yo que tú no me voy.\n"
+"DOS es muchísimo peór."
 
 msgid "QUITMSG4"
 msgstr ""
+"Intentas decir que prefieres DOS\n"
+"antes que a mí, ¿Verdad?"
 
 msgid "QUITMSG5"
 msgstr ""
+"¡Aún no te vayas -- hay un\n"
+"demonio por esa esquina!"
 
 msgid "QUITMSG6"
 msgstr ""
 
 msgid "QUITMSG7"
-msgstr ""
+msgstr "Vete fuera de aqui. No me importa."
 
 # More info here.
 msgid "QUITMSG8"
 msgstr ""
 "Si intentas salir\n"
-"del juego, hay tabla."
+"del juego, hay tabla!"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
@@ -89,6 +137,8 @@ msgstr ""
 
 msgid "QUITMSG10"
 msgstr ""
+"Vete y regresa a tus\n"
+"aburridos programas."
 
 msgid "QUITMSG11"
 msgstr ""
@@ -98,12 +148,16 @@ msgstr ""
 
 msgid "QUITMSG13"
 msgstr ""
+"Vete. Cuando regreses te\n"
+"esperaré con un bate."
 
 msgid "QUITMSG14"
 msgstr ""
 
 msgid "QUITMSG15"
 msgstr ""
+"¿A dónde vas?\n"
+"¿Qué hay de la rebelión?"
 
 msgid "QUITMSG16"
 msgstr ""
@@ -112,6 +166,8 @@ msgstr ""
 
 msgid "QUITMSG17"
 msgstr ""
+"Pero, eres mi esperanza\n"
+"-- ¡Mi única oportunidad!"
 
 msgid "QUITMSG18"
 msgstr ""
@@ -124,12 +180,18 @@ msgstr ""
 
 msgid "QUITMSG21"
 msgstr ""
+"Podrás correr...\n"
+"Pero no esconderte..."
 
 msgid "QUITMSG22"
 msgstr ""
+"¿Eh, qué pasa, mami\n"
+"te llama para cenar?"
 
 msgid "QUITMSG23"
 msgstr ""
+"¡No te vayas, aún quedan\n"
+"flemoids a la deriva!"
 
 msgid "QUITMSG24"
 msgstr ""
@@ -138,33 +200,43 @@ msgstr ""
 
 msgid "QUITMSG25"
 msgstr ""
+"No te vayas.\n"
+"¡Necesitamos tu ayuda!"
 
 msgid "QUITMSG26"
 msgstr ""
+"Espero que tomes el descanso\n"
+"disfrutando de Chex(R) Party Mix."
 
 msgid "QUITMSG27"
 msgstr ""
+"¡No te salgas!\n"
+"¡Necesitamos tu ayuda!"
 
 msgid "QUITMSG28"
 msgstr ""
+"¡No abandones la Federación\n"
+"Intergaláctica de Cereales!"
 
 msgid "QUITMSG29"
 msgstr ""
+"¡El verdadero Guerrero Chex(R)\n"
+"no se rendiría tan rápido!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr ""
 
 msgid "PD_ANY"
-msgstr ""
+msgstr "Cualquiera llave abrirá esta puerta"
 
 msgid "PD_ANYOBJ"
-msgstr ""
+msgstr "Cualquiera llave activará este objeto"
 
 msgid "PD_ALL3"
-msgstr ""
+msgstr "Necesitas las tres llaves para abrir esta puerta"
 
 msgid "PD_ALL3O"
-msgstr ""
+msgstr "Necesitas las tres llaves para activar este objeto"
 
 msgid "PD_ALL6"
 msgstr ""
@@ -478,7 +550,7 @@ msgid "TXT_IMSECRETS"
 msgstr ""
 
 msgid "TXT_IMTIME"
-msgstr ""
+msgstr "Tiempo"
 
 msgid "TXT_IMPAR"
 msgstr ""
@@ -2453,9 +2525,7 @@ msgid "TXT_DESTROYED_CONVERTER"
 msgstr "¡Destruiste el convertidor!"
 
 msgid "TXT_COMPLETED_TRAINING"
-msgstr ""
-"¡Muy bien! Completaste\n"
-"la zona de entrenamiento"
+msgstr "¡Muy bien! Has completado el área de entrenamiento"
 
 msgid "TXT_QUEST_14"
 msgstr "Volaste el cristal"
@@ -2771,7 +2841,7 @@ msgid "MNU_NEWGAME"
 msgstr ""
 
 msgid "MNU_OPTIONS"
-msgstr ""
+msgstr "Opciones"
 
 msgid "MNU_GAMEFILES"
 msgstr ""
@@ -3790,7 +3860,7 @@ msgid "SCALEMNU_ADAPT"
 msgstr ""
 
 msgid "HUDMNU_TITLE"
-msgstr ""
+msgstr "Opciones del HUD"
 
 msgid "HUDMNU_ALTHUD"
 msgstr ""
@@ -3805,7 +3875,7 @@ msgid "HUDMNU_FORCECROSSHAIR"
 msgstr ""
 
 msgid "HUDMNU_GROWCROSSHAIR"
-msgstr "Crecer retícula al obtener obj."
+msgstr "Crecer retícula al recoger objetos"
 
 msgid "HUDMNU_NAMETAGS"
 msgstr ""
@@ -3856,7 +3926,7 @@ msgid "MISCMNU_INTERSCROLL"
 msgstr ""
 
 msgid "NETMNU_TITLE"
-msgstr ""
+msgstr "Opciones De Red"
 
 msgid "NETMNU_LOCALOPTIONS"
 msgstr ""
@@ -3938,7 +4008,7 @@ msgid "OPTVAL_ITEMS"
 msgstr ""
 
 msgid "OPTVAL_WEAPONS"
-msgstr ""
+msgstr "Armas"
 
 msgid "OPTVAL_BOTH"
 msgstr ""
@@ -4585,7 +4655,7 @@ msgid "TXT_BY"
 msgstr ""
 
 msgid "TXT_QUITENDOOM"
-msgstr ""
+msgstr "Presiona cualquier tecla o haz click en la ventana para salir."
 
 msgid "HUDMNU_FLASH"
 msgstr ""
@@ -4997,7 +5067,7 @@ msgid "HAPMNU_OPT_WORLD"
 msgstr ""
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "Pausar"
 
 msgid "TAG_BACKPACK"
 msgstr ""

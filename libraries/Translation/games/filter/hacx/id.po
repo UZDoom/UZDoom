@@ -2,518 +2,586 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-13 12:52+0000\n"
-"Last-Translator: Joel Robert Justiawan "
-"<joelwindows7@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/hacx/"
-"id/>\n"
+"PO-Revision-Date: 2026-01-31 22:46+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-"
+"games/hacx-filter/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 msgid "QUITMSG1"
-msgstr "Monster ini susah amat ya?"
+msgstr "Bug-bug ini terlalu berat buat kamu?"
 
 msgid "QUITMSG"
 msgstr ""
-"Anda yakin untuk\\n"
-"lari dari misimu?"
+"Kamu yakin mau\\n"
+"keluar dari aksi?"
 
 msgid "QUITMSG2"
-msgstr "Mau keluar? Tapi nyebut dirimu sebagai hacker?"
+msgstr "Mau keluar? Dan kamu ngaku hacker?"
 
 msgid "QUITMSG3"
-msgstr "Balik woi sebelum aku kirim virus ke knalpot mu!"
+msgstr "Balik ke sini sebelum aku kirim virus ke knalpotmu!"
 
 msgid "QUITMSG4"
-msgstr "Hacker sejati tidak pernah lari dari misi."
+msgstr "Hacker sejati nggak pernah keluar dari aksi."
 
 msgid "QUITMSG5"
-msgstr "Ayolah! Kau belum lihat bagian terbaiknya!"
+msgstr "Ayo! Kamu belum lihat bagian terbaiknya!"
 
 msgid "QUITMSG6"
-msgstr "Menyerahlah, dan dunia cyber matang sudah!"
+msgstr "Menyerah sekarang, dan dunia maya jadi gosong!"
 
 msgid "QUITMSG7"
-msgstr "GENIE titip salam, kocak!"
+msgstr "GENIE mengirim salam terbaiknya, bajingan!"
 
 msgid "QUITMSG8"
-msgstr "Hmm. Sayang kalau jadi pahlawan, Hacker."
+msgstr "Hmm. Jadi begini jadi pahlawan, Hacker."
 
 msgid "QUITMSG9"
-msgstr "Apa? Kau mau balik ke sangkar mainan?"
+msgstr "Apa? Kamu lebih pilih balik ke penjara?"
 
 msgid "QUITMSG10"
-msgstr "Seharusnya ambil aja pil biru."
+msgstr "Harusnya kamu pilih pil biru."
 
 msgid "QUITMSG11"
-msgstr "Nama gamenya bukan Twitch n' Run!"
+msgstr "Nama permainannya bukan Twitch n' Run!"
 
 msgid "QUITMSG12"
-msgstr "Tidak apa. Menyelamatkan dunia bisa nanti, ya kan?"
+msgstr "Santai. Menyelamatkan dunia bisa nunggu, kan?"
 
 msgid "QUITMSG13"
-msgstr "Sepertinya waktu untuk buat seperti 'net dan berpisah!"
+msgstr "Kayaknya waktunya meniru 'net dan cabut!"
 
 msgid "QUITMSG14"
-msgstr "Jangan pergi dan lupa dengan HacX, sekarang!"
+msgstr "Jangan pergi dan lupa HacX, ya!"
 
 msgid "OB_SUICIDE"
-msgstr "%o menghapus dirinya dari alam semesta."
+msgstr "%o menghapus %hdirinya dari semesta."
 
 msgid "OB_FALLING"
-msgstr "%o membuat kawah segede Kansas."
+msgstr "%o membuat kawah sebesar Kansas."
 
 msgid "OB_CRUSH"
-msgstr "%o berubah jadi pancake manusia."
+msgstr "%o jadi panekuk manusia."
 
 msgid "OB_EXIT"
-msgstr "%o mencoba kabur."
+msgstr "%o mencoba keluar."
 
 msgid "OB_WATER"
-msgstr "%o berenang seperti batu-bata."
+msgstr "%o berenang seperti batu bata."
 
 msgid "OB_SLIME"
-msgstr "%o meledak nuklir."
+msgstr "%o jadi nuklir."
 
 msgid "OB_LAVA"
-msgstr "%o berendam air panas."
+msgstr "%o mandi air panas."
 
 msgid "OB_BARREL"
-msgstr "%o overdosis nitro gliserin."
+msgstr "%o overdosis nitrogliserin."
 
 msgid "OB_SPLASH"
-msgstr "%o pecah berkeping-keping."
+msgstr "%o dikuliti jadi potongan kecil-kecil."
 
 msgid "OB_R_SPLASH"
-msgstr "%o mau melihat isi jeroannya %g luar-dalam."
+msgstr "%o ingin melihat seperti apa %g kalau dibalik dari dalam."
 
 msgid "OB_ROCKET"
-msgstr "%o mau melihat isi jeroannya %g luar-dalam."
+msgstr "%o ingin melihat seperti apa %g kalau dibalik dari dalam."
 
 msgid "OB_KILLEDSELF"
-msgstr "%o menghapus dirinya dari alam semesta."
+msgstr "%o menghapus %hdirinya dari semesta."
 
 msgid "OB_THUG"
-msgstr "%o bukan lagi spesies dominan."
+msgstr "%o bukan lagi spesies yang dominan."
 
 msgid "OB_ANDROID"
-msgstr "%o salah kaprah dengan mesin."
+msgstr "%o colok ke mesin yang salah."
 
 msgid "OB_MONSTRUCT"
-msgstr "%o membuat dirinya kena cyber-tumpang-tendang-bokong."
+msgstr "%o kena tendang bokong ala cyber-jockey yang parah."
 
 msgid "OB_ICE"
-msgstr "%o dibekukan ICE."
+msgstr "%o kena ICEd."
 
 msgid "OB_BUZZER"
-msgstr "%o merasa agak nge-buzz."
+msgstr "%o merasa agak teler."
 
 msgid "OB_STEALTH"
-msgstr "%o mengungkap sesuatu yang mengejutkan."
+msgstr "%o menemukan perkembangan yang cukup mengagetkan."
 
 msgid "OB_DMAN"
-msgstr "%o terhapus dari dunia cyber."
+msgstr "%o dihapus dari dunia maya."
 
 msgid "OB_GLASS"
-msgstr ""
+msgstr "%o membuat %hdirinya berdagu kaca."
 
 msgid "OB_MANIAC"
-msgstr "member kehidupannya %o telah dihentikan."
+msgstr "Keanggotaan seumur hidup %o dihentikan."
 
 msgid "OB_MANIACHIT"
-msgstr "%o mati dengan sebuah metode entahlah akupun tak mengerti."
+msgstr "%o mati dengan cara acak yang tidak bisa kupahami."
 
 msgid "OB_TERMIN"
-msgstr "%o terpanggang si cewek femme fatale."
+msgstr "%o digoreng oleh freak femme fatale."
 
 # This text is not gender neutral, obviously...
 msgid "OB_TERMINHIT"
-msgstr "%o telalu keenakan dengan lawan jenisnya."
+msgstr "%o terlalu dekat dengan lawan jenis."
 
 msgid "OB_REPLI"
-msgstr "%o mengatakan selamat tinggal kepada teman lamanya."
+msgstr "%o mengucapkan selamat tinggal pada teman lama."
 
 msgid "OB_REPLIHIT"
-msgstr "%o tertusuk di belakang oleh teman lamanya."
+msgstr "%o ditusuk dari belakang oleh teman lama."
 
 msgid "OB_PHAGE"
-msgstr "%o terpilih oleh seleksi alam."
+msgstr "%o tersingkir oleh seleksi alam."
 
 msgid "OB_THORN"
-msgstr "%o tak dapat menghindari kematian atas duri."
+msgstr "%o tidak bisa lolos dari kematian berduri."
 
 msgid "OB_SUMATIC"
-msgstr "%o kena jotos sumo di selangkangnya."
+msgstr "%o kena pukulan sumo di selangkangan."
 
 msgid "OB_GENIE"
-msgstr "%o gagal dapat tiga permintaan dari %p."
+msgstr "%o tidak mendapatkan %p tiga permintaan."
 
 msgid "OB_MINE"
-msgstr "%o mencoba elus-elus ranjau."
+msgstr "%o mencoba mengelus ranjau."
 
 msgid "OB_MPKICK"
-msgstr "wajahnya %o ditendang %k ala tendangan-fu Bruce Lee."
+msgstr "%o kena tendangan Bruce Lee fu-kick %k di wajah."
 
 msgid "OB_MPREZNATOR"
-msgstr "%o jatuh tak berdaya melalui pewahyuan mengejutkan %k."
+msgstr "%o hancur gara-gara pengungkapan mengejutkan %k."
 
 msgid "OB_MPXPISTOL"
-msgstr "%o kena dosis-dobel hukumannya %k."
+msgstr "%o kena dobel dosis hukuman %k."
 
 msgid "OB_MPTAZER"
-msgstr ""
+msgstr "%o dimatikan oleh tongkat kejut %k."
 
 msgid "OB_MPCRYOGUN"
-msgstr ""
+msgstr "%o kena amukan dingin membeku %k di muka."
 
 msgid "OB_MPUZI"
-msgstr ""
+msgstr "%o dibolongi penuh lubang oleh %k, ala gangster."
 
 msgid "OB_MPZOOKA"
-msgstr ""
+msgstr "%o menelan bom foton %k."
 
 msgid "OB_MPZ_SPLASH"
-msgstr ""
+msgstr "%o dikurangi jadi tumpukan foton yang rapi oleh %k."
 
 # Physically this is utter nonsense, of course.
 msgid "OB_MPANTIGUN"
-msgstr ""
+msgstr "%o diubah jadi antimateri oleh %k."
 
 msgid "OB_MPNUKE"
-msgstr ""
+msgstr "%o menelan nuklir %k."
 
 msgid "OB_MPNUKESPLASH"
-msgstr ""
+msgstr "%o jadi nuklir akibat aksi penghancuran massal %k."
 
 msgid "OB_MPTELEFRAG"
-msgstr ""
+msgstr "%o dibalik dari dalam oleh %k."
 
 msgid "OB_MONTELEFRAG"
-msgstr ""
+msgstr "Struktur atom %o dibelah."
 
 msgid "OB_DEFAULT"
-msgstr ""
+msgstr "%o mendadak mati."
 
 msgid "GOTNUKER"
-msgstr ""
+msgstr "Kamu mengambil NUKER! Nih, rasain!"
 
 msgid "GOTUZI"
-msgstr ""
+msgstr "Kamu dapat UZI!!"
 
 msgid "GOTREZNATOR"
-msgstr ""
+msgstr "HOIG Reznator - GORENG bokong"
 
 msgid "GOTPHOTONZOOKA"
-msgstr ""
+msgstr "Kamu dapat Photon 'Zooka!"
 
 msgid "GOTBIGSTICK"
-msgstr ""
+msgstr "Kamu bawa Big Stick!"
 
 msgid "GOTTAZER"
-msgstr ""
+msgstr "Kamu dapat Tazer!!"
 
 msgid "GOTCRYOGUN"
-msgstr ""
+msgstr "Kamu mengambil Cryogun! BEKU!"
 
 msgid "GOTROUNDS"
-msgstr ""
+msgstr "Kamu mengambil beberapa peluru!"
 
 msgid "GOTROUNDSCASE"
-msgstr ""
+msgstr "Kamu mengambil sekotak peluru!"
 
 # Was "grap" for some reason.
 msgid "GOTTORPEDO"
-msgstr ""
+msgstr "Kamu mengambil sebuah torpedo!"
 
 msgid "GOTTORPEDOS"
-msgstr ""
+msgstr "Kamu mengambil sekotak torpedo!"
 
 msgid "GOTMOLECULES"
-msgstr ""
+msgstr "Kamu mengambil modul molekul!"
 
 msgid "GOTMOLECULESTANK"
-msgstr ""
+msgstr "Kamu mengambil sebuah tangki penuh molekul!"
 
 msgid "GOTCARTRIDGES"
-msgstr ""
+msgstr "Kamu mengambil beberapa kartrid!"
 
 msgid "GOTCARTRIDGESCASE"
-msgstr ""
+msgstr "Kamu mengambil sekotak kartrid!"
 
 msgid "GOTVALISE"
-msgstr ""
+msgstr "Kamu mengambil sebuah koper berisi barang!"
 
 msgid "GOTFORCEFIELD"
-msgstr ""
+msgstr "Medan Gaya!"
 
 msgid "GOTMICROTEL"
-msgstr ""
+msgstr "007Microtel"
 
 msgid "GOTENKBLIND"
-msgstr ""
+msgstr "Kamu buta EnK!"
 
 msgid "GOTRUBBERBOOTS"
-msgstr ""
+msgstr "Sepatu bot karet Vulcan!"
 
 msgid "GOTSIARRAY"
-msgstr ""
+msgstr "Pemetaan array SI!"
 
 msgid "GOTINFRARED"
-msgstr ""
+msgstr "Visor inframerah!"
 
 msgid "GOTINHALER"
-msgstr ""
+msgstr "Tarik napas dalam, inhaler!"
 
 msgid "GOTHYPONEED"
-msgstr ""
+msgstr "Satu dosis Hydergine dari Hypo menyelamatkanmu!"
 
 msgid "GOTHYPO"
-msgstr ""
+msgstr "Kamu mengambil Hypo!"
 
 msgid "GOTKEYCARD"
-msgstr ""
+msgstr "Kamu menemukan KeyCard!"
 
 msgid "GOTCKEY"
-msgstr ""
+msgstr "Kamu menemukan C-Key!"
 
 msgid "GOTPASSWORD"
-msgstr ""
+msgstr "Kamu menemukan Password!"
 
 msgid "GOTBLUEZKEY"
-msgstr ""
+msgstr "Kamu menemukan Z-Key biru!"
 
 msgid "GOTYELWZKEY"
-msgstr ""
+msgstr "Kamu menemukan Z-Key kuning!"
 
 msgid "GOTREDZKEY"
-msgstr ""
+msgstr "Kamu menemukan Z-Key merah!"
 
 msgid "GOTBODYARMOR"
-msgstr ""
+msgstr "Baju zirah!"
 
 msgid "GOTCENTROPHENOXINE"
-msgstr ""
+msgstr "Centrophenoxine"
 
 msgid "GOTKEVLARVEST"
-msgstr ""
+msgstr "Kamu mengambil rompi Kevlar!"
 
 msgid "GOTSKEVLARVEST"
-msgstr ""
+msgstr "Kamu mengambil rompi Super Kevlar!"
 
 msgid "GOTMICROKIT"
-msgstr ""
+msgstr "Kamu mengambil MicroKit!"
 
 msgid "GOTDAMPENER"
-msgstr ""
+msgstr "Kamu mengambil Dampener!"
 
 msgid "PD_CKEY"
-msgstr ""
+msgstr "Kamu butuh C-Key untuk mengakses item ini!"
 
 msgid "PD_KEYCARD"
-msgstr ""
+msgstr "Kamu butuh KeyCard untuk mengakses item ini!"
 
 msgid "PD_PASSWORD"
-msgstr ""
+msgstr "Kamu butuh Password untuk mengakses item ini!"
 
 msgid "PD_BLUEZKEY"
-msgstr ""
+msgstr "Kamu butuh Z-Key Biru agar ini berfungsi"
 
 msgid "PD_REDZKEY"
-msgstr ""
+msgstr "Kamu butuh Z-Key Merah agar ini berfungsi!"
 
 msgid "PD_YELWZKEY"
-msgstr ""
+msgstr "Kamu butuh Z-Key Kuning agar ini berfungsi!"
 
 msgid "X1TEXT"
 msgstr ""
+"Dua puluh juta dalam emas rasanya nggak sepadan\n"
+"dengan semua kerepotan ini, kan, hacker? Bikin\n"
+"penjara kelihatan kayak piknik sialan!\n"
+"\n"
+"Bio-mutasi yang jelek banget dan sesama\n"
+"Manusia digantung di langit-langit seperti\n"
+"karung makanan.\n"
+"\n"
+"Apaan sih GENIE ini? Kayak bukan\n"
+"komputer yang pernah kamu retas!\n"
+"\n"
+"Kamu lebih baik cari terminal berikutnya, potong\n"
+"tumpangan lewat c-space, cacah bokong mutant,\n"
+"dan cabut dari Dodge!\n"
+"\n"
 
 msgid "X2TEXT"
 msgstr ""
+"Ke mana semua orang?!\n"
+"\n"
+"Paris jadi kota hantu, kecuali kalau kamu anggap\n"
+"serangga mutant itu warga teladan.\n"
+"\n"
+"Kamu kena perlawanan berdarah. Gila, bisa\n"
+"segitunya serangga-serangga ini bertarung! Untung\n"
+"buat kamu mereka nggak terlalu pintar.\n"
+"\n"
+"Tapi kamu sudah dapat sebagian informatika\n"
+"yang subkomite mau. Dan itu menjijikkan!\n"
+"\n"
+"Cairan saraf manusia jadi makanan serangga ini!\n"
+"Nggak heran lingkungan jadi makin sepi. Laporkan\n"
+"ke subkomite. Dan jaga punggungmu...\n"
 
 msgid "X3TEXT"
 msgstr ""
+"Peradaban seperti yang kamu kenal itu nihil!\n"
+"\n"
+"Nggak ada teman, nggak ada keluarga. Nggak ada lagi orang.\n"
+"Bukan orang normal, sih.\n"
+"\n"
+"Cuma satu hal yang tersisa...GENIE!\n"
+"Dan kalau kamu harus pergi sampai ujung\n"
+"semesta, kamu bakal nemuin bokong mutannya!\n"
+"Karena sekarang kamu marah!\n"
+"\n"
+"Dan emasnya? Ah, ini gratis.\n"
+"\n"
+".....(bersambung)....."
 
 msgid "X5TEXT"
 msgstr ""
+"Kamu hidup!\n"
+"\n"
+"Gimana peluangnya, hacker?!\n"
+"Karena isinya penuh serangga.\n"
+"\n"
+"Kamu nggak bisa menghubungi subkomite, artinya\n"
+"mereka sudah disusupi.\n"
+"\n"
+"\n"
+"Kamu... sendirian."
 
 msgid "TXT_HACXMAP01"
-msgstr ""
+msgstr "GenEmp Corp."
 
 msgid "TXT_HACXMAP02"
-msgstr ""
+msgstr "Kota Terowongan"
 
 msgid "TXT_HACXMAP03"
-msgstr ""
+msgstr "Aneks Lava"
 
 msgid "TXT_HACXMAP04"
-msgstr ""
+msgstr "Alcatraz"
 
 msgid "TXT_HACXMAP05"
-msgstr ""
+msgstr "Sirkus Siber"
 
 msgid "TXT_HACXMAP06"
-msgstr ""
+msgstr "Digi-Ota"
 
 msgid "TXT_HACXMAP07"
-msgstr ""
+msgstr "Tembok Besar"
 
 msgid "TXT_HACXMAP08"
-msgstr ""
+msgstr "Taman Kenikmatan"
 
 msgid "TXT_HACXMAP09"
-msgstr ""
+msgstr "Benteng Tersembunyi"
 
 msgid "TXT_HACXMAP10"
-msgstr ""
+msgstr "Mimpi Anarkis"
 
 msgid "TXT_HACXMAP11"
-msgstr ""
+msgstr "Bukan Kami!"
 
 msgid "TXT_HACXMAP12"
-msgstr ""
+msgstr "Rintangan Gothik"
 
 msgid "TXT_HACXMAP13"
-msgstr ""
+msgstr "Selokan"
 
 msgid "TXT_HACXMAP14"
-msgstr ""
+msgstr "Perang Trode"
 
 msgid "TXT_HACXMAP15"
-msgstr ""
+msgstr "Senja Enk"
 
 msgid "TXT_HACXMAP16"
-msgstr ""
+msgstr "Cybex Protean"
 
 msgid "TXT_HACXMAP17"
-msgstr ""
+msgstr "Sungai Darah"
 
 msgid "TXT_HACXMAP18"
-msgstr ""
+msgstr "Bizarro"
 
 msgid "TXT_HACXMAP19"
-msgstr ""
+msgstr "Ruang Perang"
 
 msgid "TXT_HACXMAP20"
-msgstr ""
+msgstr "Peringatan Penyusup!"
 
 msgid "TXT_HACXMAP31"
-msgstr ""
+msgstr "Ruang Pengering"
 
 msgid "STSTR_CLEV"
-msgstr ""
+msgstr "Sekarang Tiba Di...\n"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr ""
+msgstr "...bakal goreng bokongmu!"
 
 # Hacx's content here was totally useless so it got removed. However, this
 # string has to be defined and minimally altered so that the Dehacked
 # replacement is not being triggered.
 msgid "STSTR_BEHOLD"
-msgstr ""
+msgstr "inVuln, Str, Inviso, Rad, Allmap, atau Lite-amp?"
 
 msgid "STSTR_BEHOLDX"
-msgstr ""
+msgstr "Ayo Serius!"
 
 msgid "STSTR_NCON"
-msgstr ""
+msgstr "Mode Cyberslicer AKTIF"
 
 msgid "STSTR_NCOFF"
-msgstr ""
+msgstr "Mode Cyberslicer NONAKTIF"
 
 msgid "STSTR_NOMUS"
-msgstr ""
+msgstr "Pilihan: Mustahil "
 
 # Should probably not be translated...
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "Besarkan Volume\n"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "INIT-Mode Twitch n'Kill"
 
 msgid "STSTR_FAADDED"
-msgstr ""
+msgstr "Baiklah, Hacker."
 
 msgid "STSTR_DQDON"
-msgstr ""
+msgstr "Mode Cyberpotence AKTIF"
 
 msgid "STSTR_DQDOFF"
-msgstr ""
+msgstr "Mode Cyberpotence NONAKTIF"
 
 msgid "AMSTR_FOLLOWON"
-msgstr ""
+msgstr "Pelacakan AKTIF"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr ""
+msgstr "Pelacakan NONAKTIF"
 
 msgid "DOSY"
-msgstr ""
+msgstr "- tekan Y untuk kabur! -"
 
 msgid "ENDGAME"
 msgstr ""
+"Kamu gila atau salah penyesuaian?\n"
+"Gimana? Ya atau Tidak!"
 
 msgid "NIGHTMARE"
 msgstr ""
+"Kamu yakin? Kamu nggak sanggup\n"
+"skill ini, hacker!\n"
+"\n"
+"Tekan Y untuk mati. \n"
 
 # For most languages the original Doom text should suffice.
 msgid "QSPROMPT"
 msgstr ""
+"Timpa quicksave dengan data bernama\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Tekan Y atau N."
 
 msgid "QLPROMPT"
 msgstr ""
+"Mau quickload data bernama\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Tekan Y atau N."
 
 msgid "CC_THUG"
-msgstr ""
+msgstr "Preman"
 
 msgid "CC_ANDROID"
-msgstr ""
+msgstr "Android"
 
 msgid "CC_ICE"
-msgstr ""
+msgstr "ICE"
 
 msgid "CC_BUZZER"
-msgstr ""
+msgstr "Buzzer"
 
 msgid "CC_DMAN"
-msgstr ""
+msgstr "D-Man"
 
 msgid "CC_PHAGE"
-msgstr ""
+msgstr "Phage"
 
 msgid "CC_MONSTRUCT"
-msgstr ""
+msgstr "Monstruct"
 
 msgid "CC_MECH"
-msgstr ""
+msgstr "Mecha Maniac"
 
 msgid "CC_TERMI"
-msgstr ""
+msgstr "Terminatrix"
 
 msgid "CC_THORN"
-msgstr ""
+msgstr "Thorn Thing"
 
 msgid "CC_MAJONG"
-msgstr ""
+msgstr "Majong 7"
 
 msgid "CC_HERO"
-msgstr ""
+msgstr "Dan Evanger"
 
 msgid "SKILL_BABY"
-msgstr ""
+msgstr "Tolong jangan tembak!"
 
 msgid "SKILL_EASY"
-msgstr ""
+msgstr "Aargh, aku butuh darah!"
 
 msgid "SKILL_NORMAL"
-msgstr ""
+msgstr "Ayo kita cabik mereka!"
 
 msgid "SKILL_HARD"
-msgstr ""
+msgstr "Aku abadi!"
 
 msgid "SKILL_NIGHTMARE"
-msgstr ""
+msgstr "Kegilaan!"

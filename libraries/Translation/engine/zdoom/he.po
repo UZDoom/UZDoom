@@ -2,37 +2,49 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-18 09:01+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/uzdoom/zdoom-"
+"engine-strings/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : "
-"((n > 10 && n % 10 == 0) ? 2 : 3));\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.15.2\n"
 
+#, fuzzy
 msgid "PRESSKEY"
-msgstr ""
+msgstr "תלחץ על כל מקש."
 
 msgid "SECRETMESSAGE"
-msgstr ""
+msgstr "נמצא סוד!"
 
 msgid "D_DEVSTR"
-msgstr ""
+msgstr "מצב חסר תועלת פעיל.\n"
 
 msgid "QUITMSG"
 msgstr ""
+"האם אתה בטוח שאתה רוצה\n"
+"לצאת מהמשחק?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
 msgid "LOADNET"
 msgstr ""
+"אתה לא יכול לטעון בזמן משחק על הרשת!\n"
+"\n"
+"תלחץ על מקש."
 
 msgid "QLOADNET"
 msgstr ""
+"אתה לא יכול לעשות quickload בזמן משחק על הרשת!\n"
+"\n"
+"תלחץ על מקש."
 
 msgid "QSAVESPOT"
-msgstr ""
+msgstr "לא בחרת"
 
 msgid "NEWGAME"
 msgstr ""
@@ -476,7 +488,7 @@ msgid "TXT_IMSECRETS"
 msgstr ""
 
 msgid "TXT_IMTIME"
-msgstr ""
+msgstr "זמן"
 
 msgid "TXT_IMPAR"
 msgstr ""
@@ -2760,7 +2772,7 @@ msgid "MNU_NEWGAME"
 msgstr ""
 
 msgid "MNU_OPTIONS"
-msgstr ""
+msgstr "הגדרות"
 
 msgid "MNU_GAMEFILES"
 msgstr ""
@@ -3779,7 +3791,7 @@ msgid "SCALEMNU_ADAPT"
 msgstr ""
 
 msgid "HUDMNU_TITLE"
-msgstr ""
+msgstr "הגדרות HUD"
 
 msgid "HUDMNU_ALTHUD"
 msgstr ""
@@ -3845,7 +3857,7 @@ msgid "MISCMNU_INTERSCROLL"
 msgstr ""
 
 msgid "NETMNU_TITLE"
-msgstr ""
+msgstr "הגדרות רשת"
 
 msgid "NETMNU_LOCALOPTIONS"
 msgstr ""
@@ -3927,7 +3939,7 @@ msgid "OPTVAL_ITEMS"
 msgstr ""
 
 msgid "OPTVAL_WEAPONS"
-msgstr ""
+msgstr "נשקים"
 
 msgid "OPTVAL_BOTH"
 msgstr ""
@@ -4574,7 +4586,7 @@ msgid "TXT_BY"
 msgstr ""
 
 msgid "TXT_QUITENDOOM"
-msgstr ""
+msgstr "תלחץ על כל מקש או על כל מקום על החלונית כדי לצאת."
 
 msgid "HUDMNU_FLASH"
 msgstr ""

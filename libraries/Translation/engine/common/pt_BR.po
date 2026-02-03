@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 17:38+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
+"PO-Revision-Date: 2026-01-25 03:01+0000\n"
+"Last-Translator: Lucas Fortes basilio <lucas11fortes@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "uzdoom/common/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: pt\n"
 
 msgid "PRESSYN"
@@ -834,7 +834,7 @@ msgid "ADVSNDMNU_SAMPLERATE"
 msgstr "Taxa de amostragem"
 
 msgid "ADVSNDMNU_HRTF"
-msgstr ""
+msgstr "HRTF"
 
 msgid "ADVSNDMNU_OPLSYNTHESIS"
 msgstr "Síntese OPL"
@@ -843,7 +843,7 @@ msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Número de chips OPL emulados"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr ""
+msgstr "Ganho"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Lateralidade estéreo completa para MIDI"
@@ -854,14 +854,16 @@ msgstr "Núcleo do emulador de OPL"
 msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "Vozes MIDI"
 
+#, fuzzy
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
-msgstr ""
+msgstr "Global"
 
+#, fuzzy
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Freeverb global"
@@ -878,17 +880,18 @@ msgstr "Reverberação"
 msgid "ADVSNDMNU_REVERB_LEVEL"
 msgstr "Nível de reverberação"
 
+#, fuzzy
 msgid "ADVSNDMNU_CHORUS"
-msgstr ""
+msgstr "Chorus"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_TIMIDITYCONFIG"
 msgstr "Arquivo de configuração do Timidity"
@@ -897,7 +900,7 @@ msgid "ADVSNDMNU_TIMIDITYVOLUME"
 msgstr "Volume relativo"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_WILDMIDICONFIG"
 msgstr "Arquivo de configuração do WildMidi"
@@ -926,11 +929,12 @@ msgstr "Ganho"
 msgid "ADVSNDMNU_VLMODEL"
 msgstr "Modelo de volume"
 
+#, fuzzy
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr ""
+msgstr "Método de alocação de canal"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr ""
+msgstr "Arpeggio automático"
 
 msgid "ADVSNDMNU_OPNCORES"
 msgstr "Núcleo do emulador de OPN2"
@@ -956,8 +960,9 @@ msgstr "Ganho"
 msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "Usar banco WOPL personalizado"
 
+#, fuzzy
 msgid "ADVSNDMNU_ADLUSEWADBANK"
-msgstr ""
+msgstr "Usar o banco GENMIDI do WAD como banco personalizado"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "Banco WOPL"
@@ -968,8 +973,9 @@ msgstr "Usar banco WOPN personalizado"
 msgid "ADVSNDMNU_OPNBANKFILE"
 msgstr "Banco WOPN"
 
+#, fuzzy
 msgid "OPTVAL_ALIASING"
-msgstr ""
+msgstr "Aliasing"
 
 # This setting is duplicated threefold in order to allow for different
 # grammatical gender endings
@@ -1027,47 +1033,59 @@ msgstr "Qualidade"
 msgid "MODMNU_VOLUMERAMPING"
 msgstr "Rampa de volume"
 
+#, fuzzy
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
+#, fuzzy
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
+#, fuzzy
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
+#, fuzzy
 msgid "OPTVAL_MAMEOPL2"
-msgstr ""
+msgstr "MAME OPL2"
 
+#, fuzzy
 msgid "OPTVAL_DOSBOXOPL3"
-msgstr ""
+msgstr "DOSBox OPL3"
 
+#, fuzzy
 msgid "OPTVAL_JAVAOPL3"
-msgstr ""
+msgstr "Java OPL3"
 
+#, fuzzy
 msgid "OPTVAL_ESFMu"
-msgstr ""
+msgstr "ESFMu OPL3"
 
+#, fuzzy
 msgid "OPTVAL_YMFMOPL2"
-msgstr ""
+msgstr "YMFM OPL2"
 
+#, fuzzy
 msgid "OPTVAL_YMFMOPL3"
-msgstr ""
+msgstr "YMFM OPL3"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPL3"
-msgstr ""
+msgstr "Nuked OPL3"
 
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr ""
+msgstr "OPL2-LLE (Extra pesado!)"
 
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr ""
+msgstr "OPL3-LLE (Extra pesado!)"
 
+#, fuzzy
 msgid "OPTVAL_MAMEOPN2"
-msgstr ""
+msgstr "MAME YM2612"
 
+#, fuzzy
 msgid "OPTVAL_NP2OPNA"
-msgstr ""
+msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
 msgstr ""
@@ -2103,7 +2121,43 @@ msgid "JOYMNU_TURNSPEED"
 msgstr ""
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr ""
+msgstr "Sensibilidade do o­lhar­­­­­"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr ""
+msgstr "Corrida com strafe analógico"
+
+msgid "ACCMNU_TITLE"
+msgstr "Opções de Acessibilidade"
+
+msgid "ACCMNU_RESET"
+msgstr "Redefinir opções de acessibilidade"
+
+msgid "NOTES_FAIL"
+msgstr "Não foi possível analisar as notas de lançamento"
+
+msgid "NOTES_VERSION"
+msgstr "Versão"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Desconhecido"
+
+msgid "NOTES_RELEASED"
+msgstr "lançado"
+
+msgid "NOTES_EMPTY"
+msgstr "Nenhuma descrição fornecida."
+
+msgid "NOTES_DETAILS"
+msgstr "Para mais detalhes veja:"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Mostrar esta página após atualizações"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Mostrar notas da versão"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Sobre"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Notas da versão"

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-12-29 00:00+0000\n"
+"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/eo/>\n"
 "Language: eo\n"
@@ -50,7 +50,8 @@ msgstr ""
 
 msgid "NEWGAME"
 msgstr ""
-"Vi ne povas lanĉi novan ludadon dum retludo.\n"
+"Vi ne povas lanĉi novan ludadon\n"
+"dum retludo.\n"
 "\n"
 "Premu klavon."
 
@@ -363,7 +364,7 @@ msgid "TXT_CHEATSOUNDOFF"
 msgstr "Sono-sencimiga reĝimo malŝaltita"
 
 msgid "TXT_CHEATIDDQD"
-msgstr "Provas trompi, ĉu vi? Nun vi mortas! "
+msgstr "Provas trompi, ĉu vi? Nun vi mortas!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Trompanto - vi ne meritas armilojn"
@@ -530,7 +531,7 @@ msgid "SCORE_NAME"
 msgstr "Nomo"
 
 msgid "SCORE_DELAY"
-msgstr "Prokrasto (ms)"
+msgstr "Prokrasto"
 
 msgid "SCORE_FRAGS"
 msgstr "Ludmurdoj"
@@ -927,7 +928,7 @@ msgid "TAG_PLASMARIFLE"
 msgstr "Plasmo-pafilo"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "BFG 9000"
 
 msgid "AMMO_CLIP"
 msgstr "Kugloj"
@@ -1217,7 +1218,7 @@ msgid "FN_CLINK"
 msgstr "Sabrokrifo"
 
 msgid "FN_DSPARIL"
-msgstr ""
+msgstr "D'Sparil"
 
 msgid "FN_HERETICIMP"
 msgstr "Gargojlo"
@@ -1283,7 +1284,7 @@ msgid "OB_DSPARIL1HIT"
 msgstr "%o maĉegiĝis de la serpento de D'Sparil."
 
 msgid "OB_DSPARIL2"
-msgstr "%o ne estis rivalo por D'Sparil. "
+msgstr "%o ne estis rivalo por D'Sparil."
 
 msgid "OB_DSPARIL2HIT"
 msgstr "%o frapiĝis de D'Sparil."
@@ -1472,7 +1473,7 @@ msgid "TXT_ARTIPUZZBOOK1"
 msgstr "Kodekso de Demono"
 
 msgid "TXT_ARTIPUZZBOOK2"
-msgstr ""
+msgstr "Liber Oscura"
 
 msgid "TXT_ARTIPUZZSKULL2"
 msgstr "Flamomasko"
@@ -1607,7 +1608,7 @@ msgid "FN_DRAGON"
 msgstr "Morta viverno"
 
 msgid "FN_KORAX"
-msgstr ""
+msgstr "Korakso"
 
 msgid "FN_FBOSS"
 msgstr "Zedeko"
@@ -1679,7 +1680,7 @@ msgid "TAG_ARTIPOISONBAG1"
 msgstr "Venennub-Flakono"
 
 msgid "TAG_ARTIPOISONBAG2"
-msgstr "Horloĝbomb-Flakono "
+msgstr "Horloĝbomb-Flakono"
 
 msgid "TAG_ARTIPOISONBAG3"
 msgstr "Grenad-Flakono"
@@ -2087,17 +2088,13 @@ msgid "TXT_NEED_PASSCARD"
 msgstr "Vi bezonas central-ŝlosilon"
 
 msgid "TXT_NEED_PASSCARD_DOOR"
-msgstr ""
-"Vi bezonas central-ŝlosilon\n"
-"por malfermi tiun pordon"
+msgstr "Vi bezonas central-ŝlosilon por malfermi tiun pordon"
 
 msgid "TXT_NEED_IDCARD"
 msgstr "Vi bezonas identigil-karton"
 
 msgid "TXT_NEED_PRISONKEY"
-msgstr ""
-"Vi ne havas la ŝlosilon\n"
-"de la malliberejo"
+msgstr "Vi ne havas la ŝlosilon de la malliberejo"
 
 msgid "TXT_NEED_HANDPRINT"
 msgstr "Neregistrita manspuro"
@@ -2109,9 +2106,7 @@ msgid "TXT_NEED_IDBADGE"
 msgstr "Vi bezonas malliberejan insignon"
 
 msgid "TXT_NEED_IDBADGE_DOOR"
-msgstr ""
-"Vi bezonas malliberejan insignon\n"
-"por malfermi ĉi tiun pordon"
+msgstr "Vi bezonas malliberejan insignon por malfermi ĉi tiun pordon"
 
 msgid "TXT_NEED_SILVERKEY"
 msgstr "Vi bezonas la arĝentan ŝlosilon"
@@ -2126,9 +2121,7 @@ msgid "TXT_NEED_BLUECRYSTAL"
 msgstr "Vi bezonas la bluan kristalon"
 
 msgid "TXT_RETAIL_ONLY"
-msgstr ""
-"Ĉi tiu loko estas enirebla nur\n"
-"en la komercaĵa versio de Strife"
+msgstr "Ĉi tiu loko estas enirebla nur en la komercaĵa versio de Strife"
 
 msgid "TXT_DOES_NOT_WORK"
 msgstr "Tio ŝajne ne funkcias"
@@ -2137,9 +2130,7 @@ msgid "TXT_NEED_CHALICE"
 msgstr "Vi bezonas la kalikon!"
 
 msgid "TXT_NEED_OPASS"
-msgstr ""
-"Vi bezonas la paspermeson\n"
-"de la Orakolo!"
+msgstr "Vi bezonas la paspermeson de la Orakolo!"
 
 msgid "TAG_PUNCHDAGGER"
 msgstr "Ponardo"
@@ -2409,10 +2400,10 @@ msgid "TAG_BEGGAR"
 msgstr "Almozulo"
 
 msgid "TAG_MACIL1"
-msgstr ""
+msgstr "Macil"
 
 msgid "TAG_MACIL2"
-msgstr ""
+msgstr "Macil"
 
 msgid "TAG_MEDIC"
 msgstr "Kuracisto"
@@ -2568,14 +2559,10 @@ msgid "TXT_KILLED_LOREMASTER"
 msgstr "Vi mortigis la Folkloriston!"
 
 msgid "TXT_YOUFOOL"
-msgstr ""
-"Stultulo!\n"
-"Vi ekigis la alarmon."
+msgstr "Stultulo! Vi ekigis la alarmon."
 
 msgid "TXT_YOUREDEAD"
-msgstr ""
-"Vi estas mortinta!\n"
-"Vi ekigis la alarmon."
+msgstr "Vi estas mortinta! Vi ekigis la alarmon."
 
 msgid "TXT_HAVEENOUGH"
 msgstr "Vi ŝajnas havi sufiĉe!"
@@ -2723,7 +2710,7 @@ msgid "OB_BIPEDICUS2"
 msgstr "%o estas ŝlimiga de kirasa dupiedmukulo."
 
 msgid "OB_CYCLOPTIS"
-msgstr "%o estas ŝlimiga de ciklopmukulo"
+msgstr "%o estas ŝlimiga de ciklopmukulo."
 
 msgid "OB_FLEMBRANE"
 msgstr "%o estas venkita de La Mukmembrano."
@@ -2829,7 +2816,8 @@ msgstr ""
 
 msgid "CNEWGAME"
 msgstr ""
-"Vi ne povas komencigi novan serĉon dum ret-serĉon.\n"
+"Vi ne povas komencigi novan serĉon\n"
+"dum ret-serĉon.\n"
 "\n"
 "Premu klavon."
 
@@ -3384,7 +3372,7 @@ msgid "CMPTMNU_EXPLODE1"
 msgstr "Neniuj vertikalaj puŝoj de eksplodoj"
 
 msgid "CMPTMNU_EXPLODE2"
-msgstr "Uzi originalan konduton de Doom por eksplodoj "
+msgstr "Uzi originalan konduton de Doom por eksplodoj"
 
 msgid "PLYRMNU_RED"
 msgstr "Ruĝo"
@@ -4075,10 +4063,10 @@ msgid "OPTVAL_BOTH"
 msgstr "Ambaŭ"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Ludanto"
@@ -4213,37 +4201,37 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Nur monstroj"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Maljuna"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (severa)"
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (severa)"
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (severa)"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (severa)"
 
 msgid "OPTVAL_ZDOOM2063"
-msgstr ""
+msgstr "ZDoom 2.0.63"
 
 msgid "OPTVAL_ALLUNACKNOWLEDGED"
 msgstr "Ĉiuj neagnoskitaj"
@@ -4378,10 +4366,10 @@ msgid "C_TEAL"
 msgstr "\\czBluverda"
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
+msgstr "Chex"
 
 msgid "OPTSTR_NOSOUND"
 msgstr "Neniu sono"
@@ -4393,7 +4381,7 @@ msgid "OPTSTR_SPLINE"
 msgstr "Splajno"
 
 msgid "OPTSTR_OPENAL"
-msgstr ""
+msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Aparatara bildigilo"
@@ -4523,7 +4511,7 @@ msgstr "Malhela"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
 msgid "OPTVAL_LEGACY"
-msgstr ""
+msgstr "Doom Legacy"
 
 msgid "OPTVAL_SOFTWARE"
 msgstr "Programa bildigilo"
@@ -4780,7 +4768,7 @@ msgstr "Proporcio"
 # as in "Build engine". This should not be translated unless there is a
 # translated name for the engine
 msgid "OPTVAL_BUILD"
-msgstr ""
+msgstr "Build"
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -5272,4 +5260,140 @@ msgid "DSPLYMNU_CONTRAST"
 msgstr "Kontrasto"
 
 msgid "DSPLYMNU_SATURATION"
-msgstr "Kolorintenseco"
+msgstr "Satureco"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Alireblo-agordoj"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Analoga kuro"
+
+msgid "PICKER_FILELOADING"
+msgstr "Dosiero-ŝargado"
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Ŝpruchelpiloj"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"Ĉi tiu estas ekzempla ŝpruchelpilo.\n"
+"Jen iom da aldona teksto.\n"
+"…\n"
+"Jen tre longa tekstlinio, kiu ŝajnas daŭri senfine sen iam ajn havi ion "
+"interesan por diri, ŝajne nur tiel longa ĉar la programistoj malfacile "
+"klarigas, kion faras opcio."
+
+msgid "OPTMNU_RESETALL"
+msgstr "Restarigi ĉiujn"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Klasika skalado de ZDoom-menuo"
+
+msgid "OPTVAL_STRICT"
+msgstr "Severa"
+
+msgid "OPTVAL_LAX"
+msgstr "Malsevera"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Travidebla"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Adicia"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Vidigo-stilo de eksplodo"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Lumigo"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Ekstra lumigo"
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Radiuso de ludanto-lumo"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Bildo-kalibro"
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Kompenso de nigropunkto"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "Kompenso de blankopunkto"
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Agordu ĉi tiun ĝis ĝi aspektas kiel unuforma griza koloro."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "De normala vido-distanco, agordu ĉi tiujn ŝovilojn."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr "Malreduktado de bildogrando povas rezultigi malĝustan eligon."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Bonvolu malebligi ĝin antaŭ agordado."
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Linioj de ŝpruchelpilo"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Granda ŝpruchelpila teksto"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Limigi larĝecon de ŝpruchelpilo"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Fon-alfao de ŝpruchelpilo"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Rulum-prokrasto de ŝpruchelpilo"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Rulum-rapido de ŝpruchelpilo"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr ""
+"Regas la lumradiusan distancon ĉirkaŭ la ludanto en mapunuoj. Pli grandaj "
+"valoroj briligas the scenon."
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+"Sumo de sektora lumigo aldoni plue de ekzistantaj sektoraj lumniveloj, dum "
+"konservanta la jama lumreĝimo."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+"Kompensas la limigojn de via ekrano. Agordu ĝis la vertikalaj grizaj blokoj "
+"dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur uzi ĝin certigi, ke la "
+"bildo estas kalibrita por via agordaĵo."
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"Kompensas por ekranoj, kiuj ne vidigas helajn bilderojn ĝuste. Agordu ĝis la "
+"diagonalaj nigraj blokoj dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur "
+"uzi ĝin certigi, ke la bildo estas kalibrita por via agordaĵo."
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Kompensas por ekranoj, kiuj ne vidigas malhelajn bilderojn ĝuste. Agordu ĝis "
+"la diagonalaj blankaj blokoj dissolvas. Ne uzu ĉi tiun por briligi la ludon, "
+"nur uzi ĝin certigi, ke la bildo estas kalibrita por via agordaĵo."
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "Restartigas ĉiujn opciojn en ĉi tiu menuo al defaŭltaj agordoj."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Agordas la intensecon de la koloroj, igante la bildon aspekti pli viveca aŭ "
+"pli malforta. Agordu laŭ via prefero."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Agordas la perceptitan diferencon inter similaj koloroj. Regas kiel akra aŭ "
+"pala la bildo aspektas. Agordu laŭ via prefero."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Aplikas linian heleco-ĝustigon. Agordu laŭ via prefero, aŭ por vidi en la "
+"mallumo."

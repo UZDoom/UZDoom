@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-12-30 06:58+0000\n"
+"Last-Translator: Artician <bachmeieraaron@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/de/>\n"
 "Language: de\n"
@@ -18,10 +18,10 @@ msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
 
 msgid "SECRETMESSAGE"
-msgstr "Ein Geheimnis wurde enthüllt!"
+msgstr "Ein Geheimnis ist enthüllt!"
 
 msgid "D_DEVSTR"
-msgstr "Nutzloser Modus EIN.\n"
+msgstr "Nutzloser Modus AN.\n"
 
 msgid "QUITMSG"
 msgstr ""
@@ -109,8 +109,8 @@ msgstr ""
 
 msgid "QUITMSG4"
 msgstr ""
-"Willst du sagen, dass DOS\n"
-"besser ist als ich?"
+"Willst du sagen, dass du DOS\n"
+"mehr magst als ich?"
 
 msgid "QUITMSG5"
 msgstr ""
@@ -532,7 +532,7 @@ msgid "SCORE_NAME"
 msgstr "Name"
 
 msgid "SCORE_DELAY"
-msgstr "Verzögerung (ms)"
+msgstr "Verzögerung"
 
 msgid "SCORE_FRAGS"
 msgstr "Frags"
@@ -675,22 +675,22 @@ msgid "GOTSUPER"
 msgstr "Super-Ladung!"
 
 msgid "GOTBLUECARD"
-msgstr "Blaue Schlüsselkarte genommen."
+msgstr "Blaue Schlüsselkarte aufgehoben."
 
 msgid "GOTYELWCARD"
-msgstr "Gelbe Schlüsselkarte genommen."
+msgstr "Gelbe Schlüsselkarte aufgehoben."
 
 msgid "GOTREDCARD"
-msgstr "Rote Schlüsselkarte genommen."
+msgstr "Rote Schlüsselkarte aufgehoben."
 
 msgid "GOTBLUESKUL"
-msgstr "Blauen Schädel-Schlüssel genommen."
+msgstr "Blauen Schädelschlüssel aufgehoben."
 
 msgid "GOTYELWSKUL"
 msgstr "Geben Schädel-Schlüssel genommen."
 
 msgid "GOTREDSKUL"
-msgstr "Roten Schädel-Schlüssel genommen."
+msgstr "Roten Schädelschlüssel aufgehoben."
 
 msgid "GOTINVUL"
 msgstr "Unverwundbarkeit!"
@@ -705,7 +705,7 @@ msgid "GOTSUIT"
 msgstr "Kontaminationsschutzanzug"
 
 msgid "GOTMAP"
-msgstr "Computerbereichkarte"
+msgstr "Computerbereichskarte"
 
 msgid "GOTVISOR"
 msgstr "Lichtverstärkungsgerät"
@@ -732,10 +732,10 @@ msgid "GOTCELLBOX"
 msgstr "Energiezellenpackung genommen."
 
 msgid "GOTSHELLS"
-msgstr "4 Schrotflintenpatronen genommen."
+msgstr "4 Schrotflintenpatronen aufgehoben."
 
 msgid "GOTSHELLBOX"
-msgstr "Kiste mit Schrotflintenpatronen genommen."
+msgstr "Kiste mit Schrotflintenpatronen aufgehoben."
 
 msgid "GOTBACKPACK"
 msgstr "Rucksack mit Munition genommen!"
@@ -756,10 +756,10 @@ msgid "GOTPLASMA"
 msgstr "Plasma-Gewehr genommen!"
 
 msgid "GOTSHOTGUN"
-msgstr "Schrotflinte genommen!"
+msgstr "Du hast die Schrotflinte bekommen!"
 
 msgid "GOTSHOTGUN2"
-msgstr "Super-Schrotflinte genommen!"
+msgstr "Du hast die Superschrotflinte bekommen!"
 
 msgid "PICKUP_PISTOL_DROPPED"
 msgstr "Pistole genommen."
@@ -804,16 +804,13 @@ msgid "PD_YELLOWCO"
 msgstr "Du brauchst eine gelbe Schlüsselkarte, um dieses Objekt zu aktivieren"
 
 msgid "PD_BLUESO"
-msgstr ""
-"Du brauchst einen blauen Schädel-Schlüssel, um dieses Objekt zu aktivieren"
+msgstr "Du brauchst einen blauen Schädel, um dieses Objekt zu aktivieren"
 
 msgid "PD_REDSO"
-msgstr ""
-"Du brauchst einen roten Schädel-Schlüssel, um dieses Objekt zu aktivieren"
+msgstr "Du brauchst einen roten Schädel, um dieses Objekt zu aktivieren"
 
 msgid "PD_YELLOWSO"
-msgstr ""
-"Du brauchst einen gelben Schädel-Schlüssel, um dieses Objekt zu aktivieren"
+msgstr "Du brauchst einen gelben Schädel, um dieses Objekt zu aktivieren"
 
 msgid "PD_BLUEC"
 msgstr "Du brauchst eine blaue Schlüsselkarte, um diese Tür zu öffnen"
@@ -825,13 +822,13 @@ msgid "PD_YELLOWC"
 msgstr "Du brauchst eine gelbe Schlüsselkarte, um diese Tür zu öffnen"
 
 msgid "PD_BLUES"
-msgstr "Du brauchst einen blauen Schädel-Schlüssel, um diese Tür zu öffnen"
+msgstr "Du brauchst einen blauen Schädel, um diese Tür zu öffnen"
 
 msgid "PD_REDS"
-msgstr "Du brauchst einen roten Schädel-Schlüssel, um diese Tür zu öffnen"
+msgstr "Du brauchst einen roten Schädel, um diese Tür zu öffnen"
 
 msgid "PD_YELLOWS"
-msgstr "Du brauchst einen gelben Schädel-Schlüssel, um diese Tür zu öffnen"
+msgstr "Du brauchst einen gelben Schädel, um diese Tür zu öffnen"
 
 msgid "CC_ZOMBIE"
 msgstr "Zombie"
@@ -878,7 +875,7 @@ msgid "CC_ARCH"
 msgstr "Scheusal"
 
 msgid "CC_SPIDER"
-msgstr "Der Spinnenmeister"
+msgstr "Der Spinnendämon"
 
 msgid "CC_CYBER"
 msgstr "Der Cyberdämon"
@@ -896,7 +893,7 @@ msgid "FN_SPECTRE"
 msgstr "Schemen"
 
 msgid "FN_SPIDER"
-msgstr "Spinnenmeister"
+msgstr "Spinnendämon"
 
 msgid "FN_CYBER"
 msgstr "Cyberdämon"
@@ -920,7 +917,7 @@ msgid "TAG_SHOTGUN"
 msgstr "Schrotflinte"
 
 msgid "TAG_SUPERSHOTGUN"
-msgstr "Super-Schrotflinte"
+msgstr "Superschrotflinte"
 
 msgid "TAG_CHAINGUN"
 msgstr "Maschinengewehr"
@@ -1064,7 +1061,7 @@ msgid "OB_MPSHOTGUN"
 msgstr "%o wurde Opfer von %ks Schrotflinte."
 
 msgid "OB_MPSSHOTGUN"
-msgstr "%o wurde von %ks Super-Schrotflinte zerfetzt."
+msgstr "%o wurde von %ks Superschrotflinte zerfetzt."
 
 msgid "OB_MPCHAINGUN"
 msgstr "%o wurde von %ks Maschinengewehr niedergemäht."
@@ -1202,7 +1199,7 @@ msgid "TXT_WPNGAUNTLETS"
 msgstr "Handschuhe des Zauberers"
 
 msgid "TXT_NEEDBLUEKEY"
-msgstr "Du brauchst einen blauen Schlüssel um diese Tür zu öffnen"
+msgstr "Du brauchst einen blauen Schlüssel, um diese Tür zu öffnen"
 
 msgid "TXT_NEEDGREENKEY"
 msgstr "Du brauchst einen grünen Schlüssel um diese Tür zu öffnen"
@@ -1930,7 +1927,7 @@ msgid "TXT_SCANNER"
 msgstr "Du hast den Scanner genommen."
 
 msgid "TXT_NEEDMAP"
-msgstr "Der Scanner kann ohne Karte nicht funktionieren.\n"
+msgstr "Der Scanner kann ohne Karte nicht funktionieren!\n"
 
 msgid "TXT_PRISONPASS"
 msgstr "Du hast den Gefängnispass genommen."
@@ -1963,10 +1960,10 @@ msgid "TXT_GOVSKEY"
 msgstr "Du hast den Gouverneursschlüssel genommen."
 
 msgid "TXT_PASSCARD"
-msgstr "Du hast die Zugangskarte genommen."
+msgstr "Du hast die Zugangskarte aufgehoben."
 
 msgid "TXT_IDBADGE"
-msgstr "Du hast die Identitätskarte genommen."
+msgstr "Du hast die Identitätskarte aufgehoben."
 
 msgid "TXT_PRISONKEY"
 msgstr "Du hast den Gefängnisschlüssel genommen."
@@ -2008,10 +2005,10 @@ msgid "TXT_BRASSKEY"
 msgstr "Du hast den Messingschlüssel genommen."
 
 msgid "TXT_REDCRYSTAL"
-msgstr "Du hast den roten Kristallschlüssel genommen."
+msgstr "Du hast den roten Kristallschlüssel aufgehoben."
 
 msgid "TXT_BLUECRYSTAL"
-msgstr "Du hast den blauen Kristallschlüssel genommen."
+msgstr "Du hast den blauen Kristallschlüssel aufgehoben."
 
 msgid "TXT_CHAPELKEY"
 msgstr "Du hast den Kapellenschlüssel genommen."
@@ -2603,13 +2600,13 @@ msgid "GOTBREAKFAST"
 msgstr "Überladenes Frühstück!"
 
 msgid "GOTCBLUEKEY"
-msgstr "Du hast einen blauen Schlüssel genommen."
+msgstr "Du hast einen blauen Schlüssel aufgehoben."
 
 msgid "GOTCYELLOWKEY"
-msgstr "Du hast einen gelben Schlüssel genommen."
+msgstr "Gelben Schlüssel aufgehoben."
 
 msgid "GOTCREDKEY"
-msgstr "Du hast einen roten Schlüssel genommen."
+msgstr "Roten Schlüssel aufgehoben."
 
 msgid "GOTFRUIT"
 msgstr "Du hast eine Obstschale genommen."
@@ -3127,7 +3124,7 @@ msgid "GMPLYMNU_ALLOWAUTOMAP"
 msgstr "Automap zulassen"
 
 msgid "GMPLYMNU_AUTOMAPALLIES"
-msgstr "Verbündete zulassen"
+msgstr "Automap-Verbündete"
 
 msgid "GMPLYMNU_ALLOWSPYING"
 msgstr "Spionieren zulassen"
@@ -3175,7 +3172,7 @@ msgid "GMPLYMNU_BARRELSRESPAWN"
 msgstr "Fässer kehren zurück"
 
 msgid "GMPLYMNU_RESPAWNPROTECTION"
-msgstr "Schutz beim Zurückkehren"
+msgstr "Respawn-Schutz"
 
 msgid "GMPLYMNU_LOSEFRAG"
 msgstr "Fragabzug bei Tod"
@@ -3454,10 +3451,10 @@ msgid "CNTRLMNU_OTHER"
 msgstr "Andere"
 
 msgid "CNTRLMNU_COOPSPY"
-msgstr "Coop Spion"
+msgstr "Nächster Koop-Spion"
 
 msgid "CNTRLMNU_POPUPS"
-msgstr "Strife Popups"
+msgstr "Strife-Popup-Bildschirme"
 
 msgid "CNTRLMNU_MISSION"
 msgstr "Missionsziele"
@@ -3466,10 +3463,10 @@ msgid "CNTRLMNU_KEYS"
 msgstr "Schlüsselliste"
 
 msgid "CNTRLMNU_STATS"
-msgstr "Waffen/Munition/Statistik"
+msgstr "Waffen/Munition/Statistiken"
 
 msgid "CNTRLMNU_TOGGLESCOREBOARD"
-msgstr "Punktetafel an/aus"
+msgstr "Scoreboard an/aus"
 
 msgid "MOUSEMNU_LOOKSPRING"
 msgstr "Automatisch zentrieren"
@@ -3487,13 +3484,13 @@ msgid "MAPCOLORMNU_WALLCOLOR"
 msgstr "Einseitige Wände"
 
 msgid "MAPCOLORMNU_FDWALLCOLOR"
-msgstr "Zweiseitige Wände mit unterschiedlicher Bodenhöhe"
+msgstr "Zweiseitige Wände mit unterschiedlichen Böden"
 
 msgid "MAPCOLORMNU_CDWALLCOLOR"
-msgstr "Zweiseitige Wände mit unterschiedlicher Deckenhöhe"
+msgstr "Zweiseitige Wände mit unterschiedlichen Decken"
 
 msgid "MAPCOLORMNU_EFWALLCOLOR"
-msgstr "Zweiseitige Wände mit 3D-Ebenen"
+msgstr "Zweiseitige Wände mit 3D-Böden"
 
 msgid "MAPCOLORMNU_GRIDCOLOR"
 msgstr "Kartengitter"
@@ -3508,19 +3505,19 @@ msgid "MAPCOLORMNU_LOCKEDCOLOR"
 msgstr "Verschlossene Türen"
 
 msgid "MAPCOLORMNU_INTRALEVELCOLOR"
-msgstr "Teleporter"
+msgstr "Teleporter zu der gleichen Karte"
 
 msgid "MAPCOLORMNU_INTERLEVELCOLOR"
-msgstr "Teleporter in ein anderes Level"
+msgstr "Teleporter zu einer anderen Karte"
 
 msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
 msgstr "Geheimer Sektor"
 
 msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
-msgstr "nicht gefundener geheimer Sektor"
+msgstr "Nicht erkundetes Geheimnis"
 
 msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
-msgstr "Spezielle Linien"
+msgstr "Spezielle Triggerlinien"
 
 msgid "MAPCOLORMNU_CHEATMODE"
 msgstr "Cheat-Modus"
@@ -3538,7 +3535,7 @@ msgid "MAPCOLORMNU_MONSTERCOLOR"
 msgstr "Monster"
 
 msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
-msgstr "nicht gezählte Monster"
+msgstr "Nicht gezählte Monster"
 
 msgid "MAPCOLORMNU_FRIENDCOLOR"
 msgstr "Freunde"
@@ -3547,40 +3544,40 @@ msgid "MAPCOLORMNU_ITEMCOLOR"
 msgstr "Gegenstände"
 
 msgid "MAPCOLORMNU_COUNTITEMCOLOR"
-msgstr "gezählte Gegenstände"
+msgstr "Zähle Gegenstände"
 
 msgid "MAPCOLORMNU_OVERLAY"
-msgstr "Überlagerungsmodus"
+msgstr "Overlay-Modus"
 
 msgid "MAPCOLORMNU_OVCHEATMODE"
-msgstr "Überlagerungsmodus Cheats"
+msgstr "Overlay-Cheatmodus"
 
 msgid "MAPCOLORMNU_PORTAL"
-msgstr "Portalüberlagerung"
+msgstr "Portal-Overlay"
 
 msgid "MSGMNU_TITLE"
 msgstr "Nachrichten"
 
 msgid "MSGMNU_SHOWMESSAGES"
-msgstr "Zeige Nachrichten"
+msgstr "Nachrichten anzeigen"
 
 msgid "MSGMNU_SHOWOBITUARIES"
-msgstr "Zeige Todesanzeigen"
+msgstr "Nachrufe anzeigen"
 
 msgid "MSGMNU_SHOWSECRETS"
-msgstr "Zeige Geheimnismeldung"
+msgstr "Geheime Benachrichtigungen anzeigen"
 
 msgid "MSGMNU_MESSAGELEVEL"
 msgstr "Min. Nachrichtenanzeigestufe"
 
 msgid "MSGMNU_MESSAGECOLORS"
-msgstr "Nachrichtenfarben"
+msgstr "Nachrichtfarben"
 
 msgid "MSGMNU_ITEMPICKUP"
-msgstr "Genommene Gegenstände"
+msgstr "Gegenstandsaufhebung"
 
 msgid "MSGMNU_OBITUARIES"
-msgstr "Todesanzeigen"
+msgstr "Nachrufe"
 
 msgid "MSGMNU_CRITICALMESSAGES"
 msgstr "Kritische Nachrichten"
@@ -3595,70 +3592,71 @@ msgid "MSGMNU_CENTEREDMESSAGES"
 msgstr "Zentrierte Nachrichten"
 
 msgid "MSGMNU_SCREENSHOTMESSAGES"
-msgstr "Screnshot-Meldungen"
+msgstr "Screenshot-Nachrichten"
 
 msgid "MSGMNU_LONGSAVEMESSAGES"
-msgstr "Detaillierte Speicher-Meldungen"
+msgstr "Detaillierte Speichernachrichten"
 
 msgid "MSGMNU_DEVELOPER"
-msgstr "Entwickler-Modus"
+msgstr "Entwickler-Meldungsmodus"
 
 msgid "AUTOMAPMNU_COLORSET"
-msgstr "Farbset"
+msgstr "Karten Farbset"
 
 msgid "AUTOMAPMNU_CUSTOMCOLORS"
-msgstr "Erlaube levelspezifische Farben"
+msgstr "Erlaube karten-definierte Farben"
 
 msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
-msgstr "Benutzerdefinierte Farben"
+msgstr "Benutzerdefinierte Farben festlegen"
 
+#, fuzzy
 msgid "AUTOMAPMNU_CONTROLS"
-msgstr "Automapsteuerung einstellen"
+msgstr "Kartensteuerungen anpassen"
 
 msgid "AUTOMAPMNU_OVERLAY"
-msgstr "Überlagere Automap"
+msgstr "Automap überlagern"
 
 msgid "AUTOMAPMNU_TEXTURED"
-msgstr "Texturanzeige"
+msgstr "Texturiertes Display aktivieren"
 
 msgid "AUTOMAPMNU_SHOWITEMS"
-msgstr "Zeige Gegenstandsanzahl"
+msgstr "Gegenstandanzahl anzeigen"
 
 msgid "AUTOMAPMNU_SHOWMONSTERS"
-msgstr "Zeige Monsteranzahl"
+msgstr "Monsteranzahl anzeigen"
 
 msgid "AUTOMAPMNU_SHOWSECRETS"
-msgstr "Zeige Geheimnisanzahl"
+msgstr "Geheimnisanzahl anzeigen"
 
 msgid "AUTOMAPMNU_SHOWTIME"
-msgstr "Zeige vergangene Zeit"
+msgstr "Vergangene Zeit anzeigen"
 
 msgid "AUTOMAPMNU_SHOWTOTALTIME"
-msgstr "Zeige Gesamtzeit"
+msgstr "Gesamtzeit anzeigen"
 
 msgid "AUTOMAPMNU_MAPSECRETS"
-msgstr "Zeige Geheimnisse auf der Karte"
+msgstr "Geheimnisse auf Karte anzeigen"
 
 msgid "AUTOMAPMNU_SHOWMAPLABEL"
-msgstr "Zeige Levellabel"
+msgstr "Levellabel anzeigen"
 
 msgid "AUTOMAPMNU_DRAWMAPBACK"
-msgstr "Zeige Kartenhintergrund"
+msgstr "Kartenhintergrund zeichnen"
 
 msgid "AUTOMAPMNU_SHOWKEYS"
-msgstr "Zeige Schlüssel (Cheat)"
+msgstr "Schlüssel anzeigen (Cheat)"
 
 msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
-msgstr "Zeige Auslöserlinien"
+msgstr "Triggerlinien anzeigen"
 
 msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
-msgstr "Zeige Dinge als Sprites"
+msgstr "Objekte als Sprites anzeigen"
 
 msgid "AUTOMAPMNU_PTOVERLAY"
 msgstr "Überlagere Portale"
 
 msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
-msgstr "Breite des Randes"
+msgstr "Leerraumrand"
 
 msgid "AUTOMAPMNU_MARKFONT"
 msgstr "Zeichensatz für Markierungen"
@@ -3673,16 +3671,16 @@ msgid "MAPCNTRLMNU_CLEARMARK"
 msgstr "Lösche Markierung"
 
 msgid "DSPLYMNU_SCOREBOARD"
-msgstr "Punktetabellenoptionen"
+msgstr "Scoreboard-Optionen"
 
 msgid "SCRBRDMNU_TITLE"
-msgstr "Punktetabellenoptionen"
+msgstr "Scoreboard-Optionen"
 
 msgid "SCRBRDMNU_COOPERATIVE"
 msgstr "Kooperativ-Optionen"
 
 msgid "SCRBRDMNU_ENABLE"
-msgstr "Punktetabelle aktiv"
+msgstr "Scoreboard aktivieren"
 
 msgid "SCRBRDMNU_HEADERCOLOR"
 msgstr "Kopfzeilenfarbe"
@@ -3703,64 +3701,64 @@ msgid "ALTHUDMNU_TITLE"
 msgstr "Alternatives HUD"
 
 msgid "ALTHUDMNU_ENABLE"
-msgstr "Alternatives HUD eingeschaltet"
+msgstr "Alternatives HUD aktivieren"
 
 msgid "ALTHUDMNU_SHOWSECRETS"
-msgstr "Zeige Geheimniszähler"
+msgstr "Geheimnisanzahl anzeigen"
 
 msgid "ALTHUDMNU_SHOWMONSTERS"
-msgstr "Zeige Monsterzähler"
+msgstr "Monsteranzahl anzeigen"
 
 msgid "ALTHUDMNU_SHOWITEMS"
-msgstr "Zeige Gegenstandszähler"
+msgstr "Gegenstandanzahl anzeigen"
 
 msgid "ALTHUDMNU_SHOWSTATS"
-msgstr "Zeige Kondition und Genauigkeit"
+msgstr "Ausdauer und Präzision anzeigen"
 
 msgid "ALTHUDMNU_SHOWBERSERK"
-msgstr "Zeige Berserk"
+msgstr "Berserk anzeigen"
 
 msgid "ALTHUDMNU_SHOWWEAPONS"
-msgstr "Zeige Waffen"
+msgstr "Waffen anzeigen"
 
 msgid "ALTHUDMNU_SHOWAMMO"
-msgstr "Zeige Munition"
+msgstr "Munition anzeigen"
 
 msgid "ALTHUDMNU_SHOWTIME"
-msgstr "Zeige Zeit"
+msgstr "Zeit anzeigen"
 
 msgid "ALTHUDMNU_TIMECOLOR"
 msgstr "Zeit-Farbe"
 
 msgid "ALTHUDMNU_SHOWLAG"
-msgstr "Zeige Netzwerk-Latenz"
+msgstr "Netzwerklatenz anzeigen"
 
 msgid "ALTHUDMNU_AMMOORDER"
 msgstr "Munitionsreihenfolge"
 
 msgid "ALTHUDMNU_AMMORED"
-msgstr "Rot für Munition unter %"
+msgstr "Rote Munitionsanzeige unter %"
 
 msgid "ALTHUDMNU_AMMOYELLOW"
-msgstr "Gelb für Munition unter %"
+msgstr "Gelbe Munitionsanzeige unter %"
 
 msgid "ALTHUDMNU_HEALTHRED"
-msgstr "Rot für Gesundheit unter %"
+msgstr "Rote Gesundheitsanzeige unter %"
 
 msgid "ALTHUDMNU_HEALTHYELLOW"
-msgstr "Gelb für Gesundheit unter %"
+msgstr "Gelbe Gesundheitsanzeige unter %"
 
 msgid "ALTHUDMNU_HEALTHGREEN"
-msgstr "Grün für Gesundheit unter %"
+msgstr "Grüne Gesundheitsanzeige unter %"
 
 msgid "ALTHUDMNU_ARMORRED"
-msgstr "Rot für Panzerung unter %"
+msgstr "Rote Panzerungsanzeige unter %"
 
 msgid "ALTHUDMNU_ARMORYELLOW"
-msgstr "Gelb für Panzerung unter %"
+msgstr "Gelbe Panzerungsanzeige unter %"
 
 msgid "ALTHUDMNU_ARMORGREEN"
-msgstr "Grün für Panzerung unter %"
+msgstr "Grüne Panzerungsanzeige unter %"
 
 msgid "ALTHUDMNU_AUTOMAPHUD"
 msgstr "Alternatives Automap HUD"
@@ -4157,7 +4155,7 @@ msgid "OPTVAL_ONFOROVERLAYONLY"
 msgstr "Nur auf Overlay"
 
 msgid "OPTVAL_OVERLAYNORMAL"
-msgstr "Overlay+Normal"
+msgstr "Overlay + Normal"
 
 msgid "OPTVAL_OVERLAYONLY"
 msgstr "Nur Overlay"
@@ -4172,7 +4170,7 @@ msgid "OPTVAL_ANIMATED"
 msgstr "Animiert"
 
 msgid "OPTVAL_ROTATED"
-msgstr "Rotiert"
+msgstr "Gedreht"
 
 msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
 msgstr "Nur Leveldefinierte Farben"
@@ -4190,10 +4188,10 @@ msgid "OPTVAL_QUADRUPLE"
 msgstr "Vierfach"
 
 msgid "OPTVAL_ITEMPICKUP"
-msgstr "Gegenstand genommen"
+msgstr "Gegenstand aufgehoben"
 
 msgid "OPTVAL_OBITUARIES"
-msgstr "Todesanzeige"
+msgstr "Nachrufe"
 
 msgid "OPTVAL_CRITICALMESSAGES"
 msgstr "Kritische Meldungen"
@@ -4235,7 +4233,7 @@ msgid "OPTVAL_ZDOOM2063"
 msgstr "ZDoom 2.0.63"
 
 msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Alle unbestätigten"
+msgstr "Alle unbestätigt"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Fehler"
@@ -4259,10 +4257,10 @@ msgid "OPTVAL_SWDOOMTC"
 msgstr "True Color SW Renderer"
 
 msgid "OPTVAL_DEDICATED"
-msgstr "Volle Leistung"
+msgstr "Hochleistung"
 
 msgid "OPTVAL_INTEGRATED"
-msgstr "energiesparend"
+msgstr "Energiesparend"
 
 msgid "OPTVAL_VANILLA"
 msgstr "Vanilla"
@@ -4274,10 +4272,10 @@ msgid "OPTVAL_VTFVANILLA"
 msgstr "Vanilla (erzwungen)"
 
 msgid "OPTVAL_VTAZDOOM"
-msgstr "Auto (ZDoom bevorzugt)"
+msgstr "Automatisch (ZDoom bevorzugt)"
 
 msgid "OPTVAL_VTAVANILLA"
-msgstr "Auto (Vanilla bevorzugt)"
+msgstr "Automatisch (Vanilla bevorzugt)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Klein"
@@ -4289,7 +4287,7 @@ msgid "OPTVAL_CONSOLE"
 msgstr "Konsole"
 
 msgid "C_BRICK"
-msgstr "\\caZiegelrot"
+msgstr "\\caZiegel"
 
 msgid "C_TAN"
 msgstr "\\cbHellbraun"
@@ -4439,7 +4437,7 @@ msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Waffenlichtstärke"
 
 msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Lichteffekt auf Spiegeln"
+msgstr "Umgebungskarte auf Spiegeln"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Verbesserter Nachtsichtmodus"
@@ -4623,7 +4621,7 @@ msgid "OS_ALL"
 msgstr "Suche nach allen Begriffen"
 
 msgid "OS_NO_RESULTS"
-msgstr "Keine Resultate."
+msgstr "Keine Ergebnisse gefunden."
 
 msgid "OS_LABEL"
 msgstr "Suche:"
@@ -4709,7 +4707,9 @@ msgid "TXT_BY"
 msgstr "Von %s"
 
 msgid "TXT_QUITENDOOM"
-msgstr "Drücke eine Taste oder klicke mit der Maus ins Fenster zum Beenden."
+msgstr ""
+"Drücke eine beliebige Taste oder klicke irgendwo mit der Maus im Fenster zum "
+"Beenden."
 
 msgid "HUDMNU_FLASH"
 msgstr "Überblendoptionen"
@@ -4752,13 +4752,13 @@ msgstr "Waffenpendeln beim Schießen"
 
 # HUD->Scaling Options
 msgid "SCALEMNU_SCALECLASSIC"
-msgstr "Klassische Skalierung von Texthintergrund und Rahmen"
+msgstr "Unterbrechung und Bildschirmrahmen Klassische Skalierung"
 
 msgid "SCALEMNU_INTER"
-msgstr "Texthintergrund"
+msgstr "Unterbrechung Texthintergrund"
 
 msgid "SCALEMNU_BORDER"
-msgstr "Rahmen"
+msgstr "Bildschirmrahmen"
 
 msgid "SCALEMNU_FACTOR"
 msgstr "Skalierungsfaktor"
@@ -4795,16 +4795,16 @@ msgid "OPTVAL_MODERN"
 msgstr "Modern (WASD)"
 
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Modern (Keypad)"
+msgstr "Modern (Tastatur)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
-msgstr "Strikte KEYKONF Behandlung für Waffen und Spieler"
+msgstr "Strikte KEYKONF-Waffen und -Spieler"
 
 msgid "MISCMNU_WIPERCENT"
-msgstr "Zeige Prozente auf Statistikseite"
+msgstr "Prozente auf Statistikseite benutzen"
 
 msgid "MISCMNU_CLEANSTAT"
-msgstr "Alte ZDoom-Skalierung auf Statistikseite"
+msgstr "Klassische ZDoom-Skalierung auf Statistikseite"
 
 # Called "citizens" according to Doomwiki
 msgid "TAG_STRIFEZOMBIE"
@@ -4830,7 +4830,7 @@ msgid "TAG_SENTINEL"
 msgstr "Wächter"
 
 msgid "TAG_STALKER"
-msgstr "Jäger"
+msgstr "Stalker"
 
 msgid "TAG_BISHOP"
 msgstr "Bischof"
@@ -4842,13 +4842,13 @@ msgid "TAG_PROGRAMMER"
 msgstr "Programmierer"
 
 msgid "TAG_ALIENSPECTRE"
-msgstr "Schemen"
+msgstr "Das Schemen"
 
 msgid "TAG_KNEELINGGUY"
-msgstr "Kniender Typ"
+msgstr "Kniender Kerl"
 
 msgid "GMPLYMNU_MULTIPLAYERTHINGS"
-msgstr "Multispielergegenstände in Coop"
+msgstr "Mehrspielerdinge in Coop spawnen"
 
 msgid "DSPLYMNU_SPRITESHADOW"
 msgstr "Spriteschatten"
@@ -4862,10 +4862,10 @@ msgid "DSPLYMNU_FOV"
 msgstr "Sichtfeld"
 
 msgid "CMPTMNU_NOMBF21"
-msgstr "MBF21 Features deaktivieren"
+msgstr "MBF21-Funktionen deaktivieren"
 
 msgid "ALTHUDMNU_SHOWTIMESTAT"
-msgstr "Zeige Zeit-Widget"
+msgstr "Zeit-Widget anzeigen"
 
 msgid "OPTVAL_MBF21"
 msgstr "MBF21"
@@ -4874,16 +4874,16 @@ msgid "CMPTMNU_VILEGHOSTS"
 msgstr "Zermalmte Monster werden als Geister wiedererweckt"
 
 msgid "MISCMNU_FVIEWBOB"
-msgstr "Waffenpendeln beim Fliegen"
+msgstr "View-Bobbing beim Fliegen"
 
 msgid "OB_DEMON1HIT"
 msgstr "%o wurde von einer Schlange zerfleischt."
 
 msgid "AUTOMAPMNU_LINEANTIALIASING"
-msgstr "Linien glätten"
+msgstr "Antialiasing-Linien"
 
 msgid "GMPLYMNU_NOPLAYERCLIP"
-msgstr "Keine Kollisionen mit anderen Spielern"
+msgstr "Durch andere Spieler bewegen und schießen"
 
 msgid "GMPLYMNU_SHAREKEYS"
 msgstr "Schlüssel mit allen Spielern teilen"
@@ -4896,7 +4896,7 @@ msgstr "Anzeige für Gesundheit und Panzerung tauschen"
 
 # hud_oldscale
 msgid "SCALEMNU_HUD_OLDSCALE"
-msgstr "Klassische HUD-Skalierung"
+msgstr "Klassische HUD-Skalierung benutzen"
 
 # hud_scalefactor
 msgid "SCALEMNU_HUD_SCALEFACTOR"
@@ -4904,22 +4904,21 @@ msgstr "HUD-Skalierungsfaktor"
 
 # Any Actor that only appears in co-op is disabled
 msgid "GMPLYMNU_COOPTHINGS"
-msgstr "Erzeuge Nur-Co-op Dinge in Multiplayer"
+msgstr "Koop-Objekte im Multiplayer spawnen"
 
 # Items that only appear in co-op are disabled
 msgid "GMPLYMNU_COOPITEMS"
-msgstr "Erzeuge Nur-Co-op Gegenstände in Multiplayer"
+msgstr "Koop-Gegenstände im Mehrspieler spawnen"
 
 # Items are picked up client-side rather than fully taken by the client who
 # picked it up
 msgid "GMPLYMNU_LOCALITEMS"
 msgstr ""
-"Spieler nehmen ihre eigene Kopie von Gegenständen im Mehrspielermodus auf"
+"Spieler heben ihre eigene Kopie von Gegenständen im Mehrspielermodus auf"
 
 # Drops from Actors aren't picked up locally
 msgid "GMPLYMNU_NOLOCALDROP"
-msgstr ""
-"Client-seitiges Aufnehmen von fallengelassenen Gegenständen deaktivieren"
+msgstr "Client-seitiges Aufheben von fallengelassenen Gegenständen deaktivieren"
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
@@ -5015,7 +5014,7 @@ msgid "CNTRLMNU_INVENTORY_HOTKEYS"
 msgstr "Inventar Hotkeys"
 
 msgid "JOYMNU_HAPTICS"
-msgstr "Haptische Rückmeldungsstärke"
+msgstr "Haptische Feedbackstärke"
 
 msgid "JOYMNU_CURVE"
 msgstr "Antwortkurve"
@@ -5098,7 +5097,7 @@ msgstr "Haptik-Optionen"
 
 # How the engine should handle haptics in old mods
 msgid "HAPMNU_COMPAT"
-msgstr "Haptische Rückmeldung Kompatibilitätsstufe"
+msgstr "Kompatibilität von haptischem Feedback"
 
 msgid "OPTVAL_MATCH"
 msgstr "Passen"
@@ -5107,7 +5106,7 @@ msgid "OPTVAL_WARN"
 msgstr "Warnen"
 
 msgid "HAPMNU_OPTIONS"
-msgstr "Haptische Rückmeldungsquellen anpassen"
+msgstr "Haptisches Feedback anpassen"
 
 # Rumble when using ui elements
 msgid "HAPMNU_OPT_MENU"
@@ -5213,7 +5212,7 @@ msgid "TAG_SUPERCHEXARMOR"
 msgstr "Super Chex-Rüstung"
 
 msgid "TAG_CHEXMAP"
-msgstr "Computer-Bereichkarte"
+msgstr "Computer-Bereichskarte"
 
 msgid "TAG_SLIMESUIT"
 msgstr "Schleimschutzanzug"
@@ -5251,10 +5250,10 @@ msgid "GMPLYMNU_REMEMBERWEAP"
 msgstr "Merke die Ausgewählte Waffe beim Respawn"
 
 msgid "CNTRLMNU_COOPSPYPREV"
-msgstr "Coop Spy Vorherigen"
+msgstr "Vorheriger Koop-Spion"
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
-msgstr "Lösche Coop Spy"
+msgstr "Lösche Koop-Spion"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Optionen zur Barrierefreiheit"
@@ -5270,3 +5269,6 @@ msgstr "Kontrast"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Sättigung"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Klassische ZDoom-Menüskalierung"

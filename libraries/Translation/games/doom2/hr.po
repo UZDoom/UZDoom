@@ -2,21 +2,214 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 21:24+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/"
-"doom-engine-games/doom-2/hr/>\n"
+"PO-Revision-Date: 2026-01-15 11:01+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-"
+"games/doom-2/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: hr\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15.2\n"
+"HeaderCode: hr\n"
 
 msgid "TXT_D2E1"
 msgstr "Pakao na Zemlji"
 
 msgid "TXT_D2E2"
 msgstr "Nema odmora za žive"
+
+msgid "HUSTR_1"
+msgstr "Razina 1: Ulaz"
+
+msgid "HUSTR_2"
+msgstr "Razina 2: Podzemne dvorane"
+
+msgid "HUSTR_3"
+msgstr "Razina 3: Gantlet"
+
+msgid "HUSTR_4"
+msgstr "Razina 4: Fokus"
+
+msgid "HUSTR_5"
+msgstr "Razina 5: Otpadni tuneli"
+
+msgid "HUSTR_6"
+msgstr "Razina 6: Drobilica"
+
+msgid "HUSTR_7"
+msgstr "Razina 7: Mrtvo jednostavno"
+
+msgid "HUSTR_8"
+msgstr "Razina 8: Tričarije i zamke"
+
+msgid "HUSTR_9"
+msgstr "Razina 9: Jarak"
+
+msgid "HUSTR_10"
+msgstr "Razina 10: Baza za dopunu goriva"
+
+msgid "HUSTR_11"
+msgstr "Razina 11: 'O' razaranja!"
+
+msgid "HUSTR_12"
+msgstr "Razina 12: Tvornica"
+
+msgid "HUSTR_13"
+msgstr "Razina 13: Centar grada"
+
+msgid "HUSTR_14"
+msgstr "Razina 14: Najdublje jazbine"
+
+msgid "HUSTR_15"
+msgstr "Razina 15: Industrijska zona"
+
+msgid "HUSTR_16"
+msgstr "Razina 16: Predgrađa"
+
+msgid "HUSTR_17"
+msgstr "Razina 17: Stambene zgrade"
+
+msgid "HUSTR_18"
+msgstr "Razina 18: Dvorište"
+
+msgid "HUSTR_19"
+msgstr "Razina 19: Citadela"
+
+msgid "HUSTR_20"
+msgstr "Razina 20: Uhvaćeni!"
+
+msgid "HUSTR_21"
+msgstr "Razina 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Razina 22: Katakombe"
+
+msgid "HUSTR_23"
+msgstr "Razina 23: Bačve zabave"
+
+msgid "HUSTR_24"
+msgstr "Razina 24: Jarak"
+
+msgid "HUSTR_25"
+msgstr "Razina 25: Krvopadi"
+
+msgid "HUSTR_26"
+msgstr "Razina 26: Napuštene rudnike"
+
+msgid "HUSTR_27"
+msgstr "Razina 27: Stambeni kompleks čudovišta"
+
+msgid "HUSTR_28"
+msgstr "Razina 28: Duhovni svijet"
+
+msgid "HUSTR_29"
+msgstr "Razina 29: Živi kraj"
+
+msgid "HUSTR_30"
+msgstr "Razina 30: Ikona grijeha"
+
+msgid "HUSTR_31"
+msgstr "Razina 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Razina 32: Grosse"
+
+msgid "HUSTR_31B"
+msgstr "Razina 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Razina 32: Žestok"
+
+msgid "HUSTR_33"
+msgstr "Razina 33: Izdaja"
+
+msgid "NHUSTR_1"
+msgstr "Razina 1: Zemaljska baza"
+
+msgid "NHUSTR_2"
+msgstr "Razina 2: Laboratoriji boli"
+
+msgid "NHUSTR_3"
+msgstr "Razina 3: Kanjon mrtvih"
+
+msgid "NHUSTR_4"
+msgstr "Razina 4: Paklena gora"
+
+msgid "NHUSTR_5"
+msgstr "Razina 5: Vivisekcija"
+
+msgid "NHUSTR_6"
+msgstr "Razina 6: Pakao krvi"
+
+msgid "NHUSTR_7"
+msgstr "Razina 7: Barunov banket"
+
+msgid "NHUSTR_8"
+msgstr "Razina 8: Grobnica zle namjere"
+
+msgid "NHUSTR_9"
+msgstr "Razina 9: Marš demona"
+
+msgid "C1TEXT"
+msgstr ""
+"Duboko ste ušli u zaraženi svemirski terminal. Ali nešto nije u redu. "
+"Čudovišta su sa sobom donijela vlastitu stvarnost, a tehnologija terminala "
+"biva potkopavana njihovom prisutnošću.\n"
+"\n"
+"Pred vama vidite stražarnicu pakla, utvrđenu zonu. Ako je uspijete proći, "
+"možete prodreti u prokleto srce zvjezdane baze i pronaći kontrolnu prekidač "
+"koji drži populaciju Zemlje kao taoca."
+
+msgid "C2TEXT"
+msgstr ""
+"Pobijedili ste! Vaša pobjeda omogućila je čovječanstvu da evakuira Zemlju i "
+"pobjegne od noćne more. Sada ste jedini preživjeli čovjek na licu planeta. "
+"Kanibalske mutacije, mesožderi izvanzemaljci i zli duhovi vaši su jedini "
+"susjedi. Sjedite i čekate smrt, zadovoljni što ste spasili svoju vrstu.\n"
+"\n"
+"Ali onda, Zemaljska kontrola šalje poruku s prostora: \"Senzori su locirali "
+"izvor izvanzemaljske invazije. Ako odete tamo, možda ćete moći spriječiti "
+"njihov ulazak. Izvanzemaljska baza nalazi se u srcu vašeg vlastitog grada, "
+"nedaleko od svemirske luke.\" Polako i bolno ustajete i vraćate se u borbu."
+
+msgid "C3TEXT"
+msgstr ""
+"Ti si u iskvarenom srcu grada, okružen leševima svojih neprijatelja. Ne "
+"vidiš način da uništiš ulaz stvorenja na ovoj strani, pa stisneš zube i "
+"probiješ se kroz njega. Mora da postoji način da ga zatvoriš s druge strane. "
+"Što te briga ako moraš proći kroz pakao da bi ga zatvorio?"
+
+msgid "C4TEXT"
+msgstr ""
+"Stravičan lik najvećeg demona kojeg ste ikad vidjeli urušava se pred vama, "
+"nakon što ispalite svoje rakete u njegov izloženi mozak. Čudovište se "
+"smanjuje i umire, a njegovi se grčeviti udovi razaraju na nebrojene milje "
+"paklene površine. Uspjeli ste. Invasija je gotova.\n"
+"Zemlja je spašena. Pakao je u ruševinama. Sada se pitaš kamo će loši ljudi "
+"ići kad umru. Brišući znoj s čela, započinješ dugi povratak kući. Obnova "
+"Zemlje trebala bi biti puno zabavnija nego što je bilo njezino uništavanje.\n"
+
+msgid "C5TEXT"
+msgstr ""
+"Čestitamo, pronašli ste tajnu razinu! Izgleda da su je izgradili ljudi, a ne "
+"demoni. Pitate se tko će biti zatočnici u ovom kutku pakla."
+
+msgid "C6TEXT"
+msgstr ""
+"Čestitamo, pronašli ste super tajnu razinu! Bolje da ovo brzo pređete!\n"
+
+msgid "NERVETEXT"
+msgstr ""
+"Opet se kuhala nevolja na vašem omiljenom odmorištu... Paklu. Neki "
+"robovraški tikvenjak mislio je da može pretvoriti Pakao u osobni zabavni "
+"park, a Zemlju u blagajnu. Pa, ta polurobotsku nakaznu predstavu nije znao "
+"tko će doći na vašar. Nema ničeg boljeg od strelićane pune paklenih čeda da "
+"ti zakuca srce jače...\n"
+"\n"
+"Sada zidovi demonskog labirinta odjekuju zvukom njegovih metalnih udova koji "
+"udaraju o pod. Njegov smrtni jecaj gurgolji kroz nered koji si ostavio od "
+"njegova lica. Ova vožnja je zatvorena.\n"
+"\n"

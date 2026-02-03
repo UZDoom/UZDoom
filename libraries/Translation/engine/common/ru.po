@@ -2,18 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:40+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/common/ru/"
-">\n"
+"PO-Revision-Date: 2026-01-23 23:01+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/common/"
+"ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural="
-"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
-"1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: ru\n"
 
 msgid "PRESSYN"
@@ -835,7 +834,7 @@ msgid "ADVSNDMNU_SAMPLERATE"
 msgstr "Частота дискретизации"
 
 msgid "ADVSNDMNU_HRTF"
-msgstr ""
+msgstr "Функция моделирования восприятия звука (HRTF)"
 
 msgid "ADVSNDMNU_OPLSYNTHESIS"
 msgstr "Синтез OPL"
@@ -856,13 +855,13 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "MIDI-голоса"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "Синтезатор FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "Общие"
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Ревербератор Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Глобальный Freeverb"
@@ -883,13 +882,13 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr "Хор"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Синтезатор Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_TIMIDITYCONFIG"
 msgstr "Файл конфигурации Timidity"
@@ -898,7 +897,7 @@ msgid "ADVSNDMNU_TIMIDITYVOLUME"
 msgstr "Относительная громкость"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_WILDMIDICONFIG"
 msgstr "Файл конфигурации WildMidi"
@@ -1029,34 +1028,43 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Наращивание громкости"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
+#, fuzzy
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
+#, fuzzy
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
+#, fuzzy
 msgid "OPTVAL_MAMEOPL2"
-msgstr ""
+msgstr "MAME OPL2"
 
+#, fuzzy
 msgid "OPTVAL_DOSBOXOPL3"
-msgstr ""
+msgstr "DOSBox OPL3"
 
+#, fuzzy
 msgid "OPTVAL_JAVAOPL3"
-msgstr ""
+msgstr "Java OPL3"
 
+#, fuzzy
 msgid "OPTVAL_ESFMu"
-msgstr ""
+msgstr "ESFMu OPL3"
 
+#, fuzzy
 msgid "OPTVAL_YMFMOPL2"
-msgstr ""
+msgstr "YMFM OPL2"
 
+#, fuzzy
 msgid "OPTVAL_YMFMOPL3"
-msgstr ""
+msgstr "YMFM OPL3"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPL3"
-msgstr ""
+msgstr "Nuked OPL3"
 
 msgid "OPTVAL_LLENUKEDOPL2"
 msgstr "OPL2-LLE (очень тяжёлый)"
@@ -1064,29 +1072,37 @@ msgstr "OPL2-LLE (очень тяжёлый)"
 msgid "OPTVAL_LLENUKEDOPL3"
 msgstr "OPL3-LLE (очень тяжёлый)"
 
+#, fuzzy
 msgid "OPTVAL_MAMEOPN2"
-msgstr ""
+msgstr "MAME YM2612"
 
+#, fuzzy
 msgid "OPTVAL_NP2OPNA"
-msgstr ""
+msgstr "Neko Project II Kai OPNA"
 
+#, fuzzy
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
+msgstr "MAME YM2608"
 
+#, fuzzy
 msgid "OPTVAL_PMDWINOPNA"
-msgstr ""
+msgstr "PMDWin OPNA"
 
+#, fuzzy
 msgid "OPTVAL_OPALOPL3"
-msgstr ""
+msgstr "Opal OPL3"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPL3174"
-msgstr ""
+msgstr "Nuked OPL3 v1.7.4"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr ""
+msgstr "Nuked OPN2 (YM3438)"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr ""
+msgstr "Nuked OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
 msgstr "OPN2-LLE (YM2612) (очень тяжёлый!)"
@@ -1097,14 +1113,17 @@ msgstr "OPN2-LLE (YM3438) (очень тяжёлый!!)"
 msgid "OPTVAL_OPN2YMF276LLE"
 msgstr "OPN2-LLE (YMF276) (очень тяжёлый!!)"
 
+#, fuzzy
 msgid "OPTVAL_GENSOPN2"
-msgstr ""
+msgstr "GENS YM2612"
 
+#, fuzzy
 msgid "OPTVAL_YMFMOPN2"
-msgstr ""
+msgstr "YMFM OPN2"
 
+#, fuzzy
 msgid "OPTVAL_YMFMOPNA"
-msgstr ""
+msgstr "YMFM OPNA"
 
 msgid "ADLVLMODEL_AUTO"
 msgstr "Авто (настройка из банка)"
@@ -1175,26 +1194,33 @@ msgstr "Использовать любые освободившиеся"
 msgid "OPTVAL_UNLIMITED"
 msgstr "Без ограничений"
 
+#, fuzzy
 msgid "OPTVAL_256K"
-msgstr ""
+msgstr "256K"
 
+#, fuzzy
 msgid "OPTVAL_512K"
-msgstr ""
+msgstr "512K"
 
+#, fuzzy
 msgid "OPTVAL_768K"
-msgstr ""
+msgstr "768K"
 
+#, fuzzy
 msgid "OPTVAL_1024K"
-msgstr ""
+msgstr "1024K"
 
+#, fuzzy
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
+#, fuzzy
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl Dawson"
 
+#, fuzzy
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Палитра игры"
@@ -1298,20 +1324,22 @@ msgstr "Билинейная"
 msgid "OPTVAL_TRILINEAR"
 msgstr "Трилинейная"
 
+#, fuzzy
 msgid "OPTVAL_2X"
-msgstr ""
+msgstr "2x"
 
+#, fuzzy
 msgid "OPTVAL_4X"
-msgstr ""
+msgstr "4x"
 
 msgid "OPTVAL_8X"
-msgstr ""
+msgstr "8x"
 
 msgid "OPTVAL_16X"
-msgstr ""
+msgstr "16x"
 
 msgid "OPTVAL_32X"
-msgstr ""
+msgstr "32x"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Настройки текстур"
@@ -1466,14 +1494,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "Предпочтительный API обработки"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Не различать левую/правую ALT/CTRL/SHIFT"
@@ -1616,8 +1644,9 @@ msgstr "Время Модуляции"
 msgid "REVMNU_MODULATION_DEPTH"
 msgstr "Глубина Модуляции"
 
+#, fuzzy
 msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
+msgstr "Поглощение высокочастотных волн воздухом"
 
 msgid "REVMNU_HF_REFERENCE"
 msgstr "HF Референс"
@@ -1626,7 +1655,7 @@ msgid "REVMNU_LF_REFERENCE"
 msgstr "LF Референс"
 
 msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
+msgstr "Фактор затихания отраженного звука"
 
 msgid "REVMNU_DIFFUSION"
 msgstr "Рассеивание"
@@ -1707,20 +1736,25 @@ msgstr "Для применения этих изменений требуетс
 msgid "VKMNU_DEVICESELECT"
 msgstr "Выбрать устройство Vulkan"
 
+#, fuzzy
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
+#, fuzzy
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
+#, fuzzy
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
+#, fuzzy
 msgid "OPTVAL_HQNXMMX"
-msgstr ""
+msgstr "hqNx MMX"
 
+#, fuzzy
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Старый xBRZ"
@@ -2107,7 +2141,7 @@ msgid "JOYMNU_LOOKSPEED"
 msgstr "Скорость взгляда"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr ""
+msgstr "Стрейфраннинг джойстиком"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "Показывать эту страницу после обновлений"
@@ -2135,3 +2169,9 @@ msgstr "Показать изменения версии"
 
 msgid "PICKER_TAB_RELEASE"
 msgstr "Список изменений"
+
+msgid "NOTES_FAIL"
+msgstr "Невозможно распознать замечания к версии"
+
+msgid "ACCMNU_TITLE"
+msgstr "Настройки Доступности"
