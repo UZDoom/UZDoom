@@ -2,10 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-01-01 01:55+0000\n"
+"Last-Translator: Robin <robinsaviary@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/doom-engine-"
+"games/chex-quest-3-filter/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: es\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 # Flem = phlegm
 msgid "GOTBLUEFLEM"
@@ -93,7 +100,7 @@ msgid "HUSTR_E3M2"
 msgstr "E3M2: Cereales Unidos"
 
 msgid "HUSTR_E3M3"
-msgstr ""
+msgstr "E3M3: Casa Chex"
 
 msgid "HUSTR_E3M4"
 msgstr "E3M4: Parque provincial"
@@ -129,7 +136,7 @@ msgid "CC_CYBER"
 msgstr "Lord Mocofolus"
 
 msgid "CC_HERO"
-msgstr ""
+msgstr "Chex Guerrero"
 
 msgid "PD_BLUEC"
 msgstr ""

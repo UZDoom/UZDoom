@@ -1102,7 +1102,7 @@ void LineEdit::OnPaint(Canvas* canvas)
 	}
 	if (!txt_selected.empty())
 	{
-		canvas->drawText(Point(size_before.width, canvas->verticalTextAlign().baseline), GetStyleColor("color"), txt_selected);
+		canvas->drawText(Point(size_before.width, canvas->verticalTextAlign().baseline), GetStyleColor("selection-text"), txt_selected);
 	}
 	if (!txt_after.empty())
 	{

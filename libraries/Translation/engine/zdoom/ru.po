@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-01-08 02:01+0000\n"
+"Last-Translator: egoranuchin <Egoranuchin@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/ru/>\n"
 "Language: ru\n"
@@ -530,7 +530,7 @@ msgid "SCORE_NAME"
 msgstr "Игрок"
 
 msgid "SCORE_DELAY"
-msgstr "Задержка (мс)"
+msgstr "Задержка"
 
 msgid "SCORE_FRAGS"
 msgstr "Фраги"
@@ -927,7 +927,7 @@ msgid "TAG_PLASMARIFLE"
 msgstr "Плазменная пушка"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "BFG 9000"
 
 msgid "AMMO_CLIP"
 msgstr "Пули"
@@ -4063,11 +4063,13 @@ msgstr "Оружие"
 msgid "OPTVAL_BOTH"
 msgstr "Оба"
 
+#, fuzzy
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
+#, fuzzy
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Игрок"
@@ -4201,14 +4203,16 @@ msgstr "Не по союзникам"
 msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Для монстров"
 
+#, fuzzy
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Старый"
 
+#, fuzzy
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (строгий)"
@@ -4219,20 +4223,23 @@ msgstr "бум"
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (строгий)"
 
+#, fuzzy
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (строгий)"
 
+#, fuzzy
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (строгий)"
 
+#, fuzzy
 msgid "OPTVAL_ZDOOM2063"
-msgstr ""
+msgstr "ZDoom 2.0.63"
 
 msgid "OPTVAL_ALLUNACKNOWLEDGED"
 msgstr "Всё неопознанное"
@@ -4369,8 +4376,9 @@ msgstr "\\czМорской"
 msgid "OPTSTR_HERETIC"
 msgstr "Еретик"
 
+#, fuzzy
 msgid "OPTSTR_CHEX"
-msgstr ""
+msgstr "Chex"
 
 msgid "OPTSTR_NOSOUND"
 msgstr "Без звука"
@@ -4381,8 +4389,9 @@ msgstr "Без сглаживания"
 msgid "OPTSTR_SPLINE"
 msgstr "Сплайн"
 
+#, fuzzy
 msgid "OPTSTR_OPENAL"
-msgstr ""
+msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Обработка с OpenGL"
@@ -4511,8 +4520,9 @@ msgid "OPTVAL_DARK"
 msgstr "Тёмный"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
+#, fuzzy
 msgid "OPTVAL_LEGACY"
-msgstr ""
+msgstr "Doom Legacy"
 
 msgid "OPTVAL_SOFTWARE"
 msgstr "Программный"
@@ -5261,3 +5271,142 @@ msgstr "Контраст"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Насыщенность"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Бег джойстиком"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Линии подсказки"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Скорость прокрутки подсказки"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Задержка прокрутки подсказки"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Прозрачность фона подсказки"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Границы ширины подсказки"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Большой текст подсказки"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"Это пример подсказки.\n"
+"Это сопровождающий текст.\n"
+"…\n"
+"Это очень длинная строка текста, которая, кажется, будет продолжаться все "
+"дальше и дальше, не давая никакой важной информации, только потому, что "
+"разработчику трудно объяснить, что делает эта опция."
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Подсказки"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Дополнительное освещение"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr ""
+"Управляет радиусом дальности света вокруг игрока в единицах карты. Большее "
+"значение сделает сцену ярче."
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+"Дополнительное освещение сектора уровня, добавленное к существующему уровню "
+"освещения сектора, сохраняя действующий режим освещения."
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Радиус освещения игрока"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Освещение"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Стиль отображения взрывов"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Наложение"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Прозрачный"
+
+msgid "OPTVAL_LAX"
+msgstr "Простой"
+
+msgid "OPTVAL_STRICT"
+msgstr "Строгий"
+
+msgid "PICKER_FILELOADING"
+msgstr "Загрузка файла"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Классический масштаб меню из ZDoom"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Калибровка изображения"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "Настройте шкалы внизу с вашего обычного расстояния до экрана."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr ""
+"Увеличение масштаба/суперсэмплинг могут привести к неправильному результату."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Пожалуйста, отключите их перед настройкой."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+"Компенсирует ограничения вашего монитора. Настраивайте до тех пор, пока "
+"вертикальные серые блоки не исчезнут. Не используйте эту функцию для "
+"увеличения яркости игры, только для калибровки изображения под ваши "
+"настройки."
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Компенсация точки черного"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Компенсирует проблемы с мониторами, которые некорректно отображают темные "
+"пиксели. Настраивайте до тех пор, пока диагональные белые блоки не исчезнут. "
+"Не используйте эту функцию для увеличения яркости игры, только для "
+"калибровки изображения под вашу конфигурацию."
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "Компенсация точки белого"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"Компенсирует проблемы с мониторами, которые некорректно отображают яркие "
+"пиксели. Настраивайте до тех пор, пока диагональные черные блоки не "
+"исчезнут. Не используйте эту функцию для увеличения яркости игры, только для "
+"калибровки изображения под вашу конфигурацию."
+
+msgid "OPTMNU_RESETALL"
+msgstr "Сбросить все настройки"
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "Сбросить все настройки в этом меню на значения по умолчанию."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Применяет линейную регулировку яркости. Настройте под свои предпочтения или "
+"для лучшей видимости в темноте."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Регулирует воспринимаемую разницу между похожими цветами. Управляет "
+"резкостью/блеском изображений. Настраивается в соответствии с личным вкусом."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Регулирует интенсивность цветов, делая изображение более ярким или "
+"приглушенным. Настройте по своему вкусу."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr ""
+"Регулируйте настройки до тех пор, пока это изображение не приобретет "
+"однородный серый оттенок."

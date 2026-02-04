@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:37+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/uzdoom/common/es/"
-">\n"
+"PO-Revision-Date: 2026-01-23 19:01+0000\n"
+"Last-Translator: \"Bon N. Martini\" <brunete1012@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/uzdoom/common/"
+"es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: es\n"
 
 msgid "PRESSYN"
@@ -20,7 +20,6 @@ msgstr "Presiona Y(Si) o N(No)."
 msgid "TXT_YES"
 msgstr "Sí"
 
-#, fuzzy
 msgid "TXT_NO"
 msgstr "No"
 
@@ -243,7 +242,7 @@ msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Cambiar controles de acción"
 
 msgid "CNTRLMNU_CHAT"
-msgstr ""
+msgstr "Chatear"
 
 msgid "MNU_MULTIPLAYER"
 msgstr "Multijugador"
@@ -424,7 +423,7 @@ msgid "MOUSEMNU_SHOWBACKBUTTON"
 msgstr "Mostrar botón de retroceso"
 
 msgid "MOUSEMNU_CURSOR"
-msgstr ""
+msgstr "Cursor"
 
 msgid "MOUSEMNU_SENSITIVITY_X"
 msgstr "Sensibilidad horizontal"
@@ -624,7 +623,7 @@ msgid "PLYRMNU_TEAM"
 msgstr "Equipo"
 
 msgid "PLYRMNU_PLAYERCOLOR"
-msgstr ""
+msgstr "Color"
 
 msgid "PLYRMNU_PLAYERGENDER"
 msgstr "Sexo"
@@ -711,25 +710,25 @@ msgid "SNDMNU_MUSENABLED"
 msgstr "Música activada"
 
 msgid "OPTVAL_4000HZ"
-msgstr ""
+msgstr "4000 Hz"
 
 msgid "OPTVAL_8000HZ"
-msgstr ""
+msgstr "8000 Hz"
 
 msgid "OPTVAL_11025HZ"
-msgstr ""
+msgstr "11025 Hz"
 
 msgid "OPTVAL_22050HZ"
-msgstr ""
+msgstr "22050 Hz"
 
 msgid "OPTVAL_32000HZ"
-msgstr ""
+msgstr "32000 Hz"
 
 msgid "OPTVAL_44100HZ"
-msgstr ""
+msgstr "44100 Hz"
 
 msgid "OPTVAL_48000HZ"
-msgstr ""
+msgstr "48000 Hz"
 
 msgid "OPTVAL_64SAMPLES"
 msgstr "64 muestras"
@@ -756,13 +755,13 @@ msgid "OPTSTR_AUTO"
 msgstr "Automático"
 
 msgid "OPTSTR_MONO"
-msgstr ""
+msgstr "Mono"
 
 msgid "OPTSTR_STEREO"
 msgstr "Estéreo"
 
 msgid "OPTSTR_PROLOGIC"
-msgstr ""
+msgstr "Dolby Pro Decodificador Lógico"
 
 msgid "OPTSTR_QUAD"
 msgstr "Cuádruple"
@@ -783,7 +782,7 @@ msgid "OPENALMNU_ENABLEEFX"
 msgstr "Permitir EFX"
 
 msgid "OPENALMNU_RESAMPLER"
-msgstr ""
+msgstr "Remuestrador"
 
 msgid "SNDMNU_SFXVOLUME"
 msgstr "Volumen de sonido"
@@ -828,7 +827,7 @@ msgid "SNDMNU_MIDIPLAYER"
 msgstr "Opciones de reproductor MIDI"
 
 msgid "SNDMNU_MENUSOUND"
-msgstr ""
+msgstr "Sonido en Menús"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Opciones avanzadas de sonido"
@@ -861,7 +860,7 @@ msgid "ADVSNDMNU_FLUIDSYNTH"
 msgstr ""
 
 msgid "ADVSNDMNU_GLOBAL"
-msgstr ""
+msgstr "Global"
 
 msgid "ADVSNDMNU_FREEVERB"
 msgstr ""

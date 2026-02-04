@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen/eo/>\n"
+"PO-Revision-Date: 2025-12-28 21:00+0000\n"
+"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/doom-engine-"
+"games/hexen/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: eo\n"
 
 msgid "TXT_HEXEN_MAP01"
@@ -219,7 +219,7 @@ msgstr ""
 "iliajn sekvajn agojn?"
 
 msgid "TXT_ACS_MAP01_5_THEDO"
-msgstr "La pordo estas ŝlosita."
+msgstr "La pordo estas ŝlosita"
 
 msgid "TXT_ACS_MAP02_9_GREET"
 msgstr "Salutojn, mortemul'."
@@ -228,61 +228,61 @@ msgid "TXT_ACS_MAP02_11_AREYO"
 msgstr "Ĉu vi pretas morti?"
 
 msgid "TXT_ACS_MAP02_20_ADOOR"
-msgstr "Pordo malfermiĝis ĉe la Gardanto de Glacia."
+msgstr "Pordo malfermiĝis ĉe la Gardanto de Glacia"
 
 msgid "TXT_ACS_MAP03_12_THISP"
-msgstr "Ĉi tiu vojo estas barita."
+msgstr "Ĉi tiu vojo estas barita"
 
 msgid "TXT_ACS_MAP04_9_ONEHA"
 msgstr "Unu duono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP04_10_ONTHE"
-msgstr "ĉe la Sep Portaloj."
+msgstr "ĉe la Sep Portaloj"
 
 msgid "TXT_ACS_MAP04_11_ONETH"
 msgstr "Unu triono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP04_12_STAIR"
-msgstr "Ŝtupoj leviĝis ĉe la Sep Portaloj."
+msgstr "Ŝtupoj leviĝis ĉe la Sep Portaloj"
 
 msgid "TXT_ACS_MAP05_6_ONETH"
 msgstr "Unu triono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP05_7_ONTHE"
-msgstr "ĉe la Sep Portaloj."
+msgstr "ĉe la Sep Portaloj"
 
 msgid "TXT_ACS_MAP05_8_STAIR"
-msgstr "Ŝtupoj leviĝis ĉe la Sep Portaloj."
+msgstr "Ŝtupoj leviĝis ĉe la Sep Portaloj"
 
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Vi bezonas trovi alian ŝaltilon..."
 
 msgid "TXT_ACS_MAP05_10_STONE"
-msgstr "Ŝtonoj grincas ĉe la Sep Portaloj."
+msgstr "Ŝtonoj grincas ĉe la Sep Portaloj"
 
 msgid "TXT_ACS_MAP08_6_ONESI"
 msgstr "Unu sesono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP08_7_ONTHE"
-msgstr "en la Ombro-Arbareto."
+msgstr "en la Ombro-Arbareto"
 
 msgid "TXT_ACS_MAP08_10_THEDO"
-msgstr "La pordo estas barita interne."
+msgstr "La pordo estas barita interne"
 
 msgid "TXT_ACS_MAP08_11_YOUHE"
-msgstr "Vi aŭdas pordon malfermiĝantan malproksime."
+msgstr "Vi aŭdas pordon malfermiĝantan malproksime"
 
 msgid "TXT_ACS_MAP09_6_ONESI"
 msgstr "Unu sesono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP09_7_ONTHE"
-msgstr "en la Ombro-Arbareto."
+msgstr "en la Ombro-Arbareto"
 
 msgid "TXT_ACS_MAP10_6_ONESI"
 msgstr "Unu sesono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP10_7_ONTHE"
-msgstr "en la Ombro-Arbareto."
+msgstr "en la Ombro-Arbareto"
 
 msgid "TXT_ACS_MAP11_0_ETTIN"
 msgstr "\\ gigantaĉoj ceteraj"
@@ -291,22 +291,22 @@ msgid "TXT_ACS_MAP11_1_YOUWA"
 msgstr "Vi atendis tro longe, nun vi mortas!"
 
 msgid "TXT_ACS_MAP11_7_ADOOR"
-msgstr "Pordo malfermiĝis ĉe la Forlasita Posteno."
+msgstr "Pordo malfermiĝis ĉe la Forlasita Posteno"
 
 msgid "TXT_ACS_MAP12_9_THISD"
-msgstr "Ĉi tiu pordo ne jam malfermiĝos."
+msgstr "Ĉi tiu pordo ne jam malfermiĝos"
 
 msgid "TXT_ACS_MAP13_11_MYSER"
 msgstr "Miajn servantoj povas flari vian sangon, homo."
 
 msgid "TXT_ACS_MAP21_0_ADOOR"
-msgstr "Pordo malfermiĝis ĉe la Pendigilo."
+msgstr "Pordo malfermiĝis ĉe la Pendigilo"
 
 msgid "TXT_ACS_MAP21_2_THEDO"
-msgstr "La pordo estas barita interne."
+msgstr "La pordo estas barita interne"
 
 msgid "TXT_ACS_MAP22_3_APLAT"
-msgstr "Plataĵo malleviĝis en la turo."
+msgstr "Plataĵo malleviĝis en la turo"
 
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Ludis ĉi tiun ludon vi tro longe, mortemul'..."
@@ -315,7 +315,7 @@ msgid "TXT_ACS_MAP22_29_ITHIN"
 msgstr "Mi kredas, ke mi vin forigos el la tabul'."
 
 msgid "TXT_ACS_MAP23_10_YOUHE"
-msgstr "Vi aŭdas pordon malfermiĝantan superŝtupare."
+msgstr "Vi aŭdas pordon malfermiĝantan superŝtupare"
 
 msgid "TXT_ACS_MAP27_8_WORSH"
 msgstr "Kultu min, tiam mi ankoraŭ eble kompatos."
@@ -327,28 +327,28 @@ msgid "TXT_ACS_MAP28_6_ONENI"
 msgstr "Unu naŭono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP28_7_ONTHE"
-msgstr "en la Monaĥejo."
+msgstr "en la Monaĥejo"
 
 msgid "TXT_ACS_MAP30_6_ONENI"
 msgstr "Unu naŭono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP30_7_ONTHE"
-msgstr "en la Monaĥejo."
+msgstr "en la Monaĥejo"
 
 msgid "TXT_ACS_MAP34_1_ONENI"
 msgstr "Unu naŭono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP34_2_ONTHE"
-msgstr "en la Monaĥejo."
+msgstr "en la Monaĥejo"
 
 msgid "TXT_ACS_MAP35_0_THEPO"
-msgstr "La portalo estas obturita."
+msgstr "La portalo estas obturita"
 
 msgid "TXT_ACS_MAP35_1_CHOOS"
 msgstr "Elektu vian fatalon."
 
 msgid "TXT_ACS_MAP35_3_THEDO"
-msgstr "La pordo estas barita interne."
+msgstr "La pordo estas barita interne"
 
 msgid "TXT_ACS_MAP35_12_AREYO"
 msgstr "Ĉu vi estas sufiĉe forta"

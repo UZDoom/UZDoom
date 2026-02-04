@@ -1,0 +1,316 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP02"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP03"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP04"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP05"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP06"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP13"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP08"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP09"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP10"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP11"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP12"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP27"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP28"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP30"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP31"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP32"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP33"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP34"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP21"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP22"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP23"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP24"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP25"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP26"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP35"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP36"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP37"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP38"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP39"
+msgstr ""
+
+msgid "TXT_HEXEN_MAP40"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+
+# intermission
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr ""

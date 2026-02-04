@@ -2,156 +2,169 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-31 22:46+0000\n"
+"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/chex-quest-3-filter/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: chs\n"
 
 # Flem = phlegm
 msgid "GOTBLUEFLEM"
-msgstr ""
+msgstr "拾取了蓝黏液钥匙。"
 
 msgid "GOTYELLOWFLEM"
-msgstr ""
+msgstr "拾取了黄黏液钥匙。"
 
 msgid "GOTREDFLEM"
-msgstr ""
+msgstr "拾取了红黏液钥匙。"
 
 msgid "GOTGOGGLES"
-msgstr ""
+msgstr "找到了超级护目镜"
 
 msgid "PD_BLUECO"
-msgstr ""
+msgstr "你需要蓝钥匙才能激活此物体"
 
 msgid "PD_REDCO"
-msgstr ""
+msgstr "你需要红钥匙才能激活此物体"
 
 msgid "PD_YELLOWCO"
-msgstr ""
+msgstr "你需要黄钥匙才能激活此物体"
 
 msgid "PD_BLUEFO"
-msgstr ""
+msgstr "你需要蓝黏液钥匙才能激活此物体"
 
 msgid "PD_REDFO"
-msgstr ""
+msgstr "你需要红黏液钥匙才能激活此物体"
 
 msgid "PD_YELLOWFO"
-msgstr ""
+msgstr "你需要黄黏液钥匙才能激活此物体"
 
+#, fuzzy
 msgid "PICKUP_PISTOL_DROPPED"
-msgstr ""
+msgstr "拾取了zorcher。"
 
+#, fuzzy
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "增加了Zorch和钥匙"
 
 msgid "HUSTR_E1M1"
-msgstr ""
+msgstr "E1M1: 着陆区"
 
 msgid "HUSTR_E1M2"
-msgstr ""
+msgstr "E1M2: 储存设施"
 
 msgid "HUSTR_E1M3"
-msgstr ""
+msgstr "E1M3: 实验室"
 
 msgid "HUSTR_E1M4"
-msgstr ""
+msgstr "E1M4: 植物园"
 
 msgid "HUSTR_E1M5"
-msgstr ""
+msgstr "E1M5: 巴佐伊克洞穴"
 
 msgid "HUSTR_E2M1"
-msgstr ""
+msgstr "E2M1: 太空港"
 
 msgid "HUSTR_E2M2"
-msgstr ""
+msgstr "E2M2: 电影院"
 
 msgid "HUSTR_E2M3"
-msgstr ""
+msgstr "E2M3: Chex博物馆"
 
 msgid "HUSTR_E2M4"
-msgstr ""
+msgstr "E2M4: 城市街道"
 
 msgid "HUSTR_E2M5"
-msgstr ""
+msgstr "E2M5: 下水道系统"
 
 msgid "HUSTR_E3M1"
-msgstr ""
+msgstr "E3M1: 中央指挥部"
 
 msgid "HUSTR_E3M2"
-msgstr ""
+msgstr "E3M2: 联合谷物"
 
 msgid "HUSTR_E3M3"
-msgstr ""
+msgstr "E3M3: Chex别墅"
 
 msgid "HUSTR_E3M4"
-msgstr ""
+msgstr "E3M4: 省级公园"
 
 msgid "HUSTR_E3M5"
-msgstr ""
+msgstr "E3M5: 陨石飞船"
 
+#, fuzzy
 msgid "CC_ZOMBIE"
-msgstr ""
+msgstr "普种"
 
+#, fuzzy
 msgid "CC_SHOTGUN"
-msgstr ""
+msgstr "双足种"
 
+#, fuzzy
 msgid "CC_IMP"
-msgstr ""
+msgstr "有盔甲的双足种"
 
+#, fuzzy
 msgid "CC_DEMON"
-msgstr ""
+msgstr "疾行种"
 
 msgid "CC_LOST"
-msgstr ""
+msgstr "黏液地雷"
 
+#, fuzzy
 msgid "CC_CACO"
-msgstr ""
+msgstr "超级独眼种"
 
+#, fuzzy
 msgid "CC_BARON"
-msgstr ""
+msgstr "巨形种"
 
+#, fuzzy
 msgid "CC_SPIDER"
-msgstr ""
+msgstr "黏液怪物"
 
+#, fuzzy
 msgid "CC_CYBER"
-msgstr ""
+msgstr "鼻涕领主"
 
 msgid "CC_HERO"
-msgstr ""
+msgstr "Chex勇士"
 
 msgid "PD_BLUEC"
-msgstr ""
+msgstr "你需要蓝钥匙才能开此门"
 
 msgid "PD_REDC"
-msgstr ""
+msgstr "你需要红钥匙才能开此门"
 
 msgid "PD_YELLOWC"
-msgstr ""
+msgstr "你需要黄钥匙才能开此门"
 
 msgid "PD_BLUEF"
-msgstr ""
+msgstr "你需要蓝黏液钥匙才能开此门"
 
 msgid "PD_REDF"
-msgstr ""
+msgstr "你需要红黏液钥匙才能开此门"
 
 msgid "PD_YELLOWF"
-msgstr ""
+msgstr "你需要黄黏液钥匙才能开此门"
 
 msgid "OB_SLIME"
-msgstr ""
+msgstr "%o沉入黏液中。"
 
 msgid "OB_LAVA"
-msgstr ""
+msgstr "%o沉入黏液中。"
 
 msgid "OB_POWERSTRAND"
-msgstr ""
+msgstr "%o被跨维度黏液击中了！"
 
 msgid "OB_KILLEDSELF"
-msgstr ""
+msgstr "%o被跨维度黏液击中了！"
 
 msgid "OB_STRIDICUS"
 msgstr ""
@@ -162,8 +175,9 @@ msgstr ""
 msgid "OB_SUPERCYCLOPTIS"
 msgstr ""
 
+#, fuzzy
 msgid "OB_MAXIMUS"
-msgstr ""
+msgstr "%o被Maximus击败了。"
 
 msgid "OB_LARVA"
 msgstr ""
@@ -177,38 +191,87 @@ msgstr ""
 msgid "OB_SNOTFOLUS"
 msgstr ""
 
+#, fuzzy
 msgid "OB_MPR_SPLASH"
-msgstr ""
+msgstr "%o被%k的推进器击中了。"
 
 msgid "OB_MPBFG_SPLASH"
 msgstr ""
 
+#, fuzzy
 msgid "E1TEXT"
 msgstr ""
+"在你将那可怕的黏液膜\n"
+"送回它自己的维度后，\n"
+"你释放了俘虏。\n"
+"然而，黏液怪无处不在！\n"
+"你和俘虏们向你的飞船狂奔。\n"
+"黏液怪用黏液糊住了飞船外壳，\n"
+"但你们还是勉强逃入了轨道。\n"
+"在返航途中，你因这次大胆的救援而受到祝贺，\n"
+"但你却发出了警告......\n"
+"黏液怪的威胁远远没有结束。\n"
+"\n"
+"不幸的是，你说对了。\n"
+"因为当你返回家园时，\n"
+"你发现黏液怪已经用某种方法尾随至此。\n"
+"准备游玩Chex任务2：Chex城内的恐惧！"
 
+#, fuzzy
 msgid "E2TEXT"
 msgstr ""
+"你将集结在下水道的\n"
+"残余黏液怪传送走了。\n"
+"Chex城得救了。\n"
+"看起来黏液怪的威胁终于结束了。\n"
+"\n"
+"\n"
+"和平而繁荣的十年过去了。\n"
+"但黏液怪并没有被击败，\n"
+"它们对营养丰富的谷物维度的\n"
+"渴望并没有减弱。\n"
+"它们集结了全部力量，\n"
+"在太空中打开了一道巨大的跨维度裂缝，\n"
+"现在一个巨大的黏液球\n"
+"正笔直地砸向谷物星球！\n"
+"\n"
+"准备游玩\n"
+"Chex 任务3：入侵！"
 
 msgid "E3TEXT"
 msgstr ""
+"随着最后一场爆炸，\n"
+"你将鼻涕领主传送回了它自己的维度！\n"
+"你力挽狂澜，\n"
+"孤身一人挫败了这场入侵！\n"
+"\n"
+"你由衷地希望\n"
+"黏液怪最后吸取了教训，\n"
+"永远不会再次回到\n"
+"谷物维度。\n"
+"\n"
+"\n"
+"\n"
+"但是如果它们没有，你知道，你随时都\n"
+"准备着对付它们！"
 
 msgid "M_EPI1"
-msgstr ""
+msgstr "巴佐伊克星上的救援"
 
 msgid "M_EPI2"
-msgstr ""
+msgstr "Chex城内的恐惧"
 
 msgid "M_EPI3"
-msgstr ""
+msgstr "入侵！"
 
 msgid "TAG_GOGGLES"
-msgstr ""
+msgstr "超级护目镜"
 
 msgid "TAG_BLUEFLEMKEY"
-msgstr ""
+msgstr "蓝黏液钥匙"
 
 msgid "TAG_YELLOWFLEMKEY"
-msgstr ""
+msgstr "黄黏液钥匙"
 
 msgid "TAG_REDFLEMKEY"
-msgstr ""
+msgstr "红黏液钥匙"

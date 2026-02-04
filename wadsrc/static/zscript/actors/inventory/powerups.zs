@@ -851,6 +851,13 @@ class PowerLightAmp : Powerup
 	{
 		Powerup.Duration -120;
 	}
+
+	override void InitEffect()
+	{
+		Super.InitEffect();
+		if (Owner && Owner.player)
+			Owner.player.SetFullbrightMode(FBMODE_DEFAULT);
+	}
 	
 	//===========================================================================
 	//
@@ -885,9 +892,11 @@ class PowerLightAmp : Powerup
 	override void EndEffect ()
 	{
 		Super.EndEffect();
-		if (Owner != NULL && Owner.player != NULL && Owner.player.fixedcolormap < PlayerInfo.NUMCOLORMAPS)
+		if (Owner != NULL && Owner.player != NULL)
 		{
-			Owner.player.fixedlightlevel = -1;
+			Owner.player.SetFullbrightMode(FBMODE_NONE);
+			if (Owner.player.fixedcolormap < PlayerInfo.NUMCOLORMAPS)
+				Owner.player.fixedlightlevel = -1;
 		}
 	}
 	
@@ -902,6 +911,13 @@ class PowerLightAmp : Powerup
 class PowerTorch : PowerLightAmp
 {
 	int NewTorch, NewTorchDelta;
+
+	override void InitEffect()
+	{
+		Super.InitEffect();
+		if (Owner && Owner.player)
+			Owner.player.SetFullbrightMode(FBMODE_TORCH);
+	}
 	
 	override void DoEffect ()
 	{
@@ -942,6 +958,13 @@ class PowerTorch : PowerLightAmp
 				}
 			}
 		}
+	}
+
+	override void EndEffect()
+	{
+		Super.EndEffect();
+		if (Owner && Owner.player)
+			Owner.player.SetFullbrightMode(FBMODE_NONE);
 	}
 	
 }

@@ -2,18 +2,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 20:08+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/"
-"doom-engine-games/doom/hr/>\n"
+"PO-Revision-Date: 2026-01-15 11:01+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-"
+"games/doom/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: hr\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15.2\n"
+"HeaderCode: hr\n"
 
 msgid "TXT_D1E1"
 msgstr "Do koljena u smrti"
@@ -26,3 +26,184 @@ msgstr "Pakao"
 
 msgid "TXT_D1E4"
 msgstr "Tvoje tijelo je konzumirano"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangar"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Nuklearna elektrana"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Rafinerija toksina"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Komanda i kontrola"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratorij Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Središnja obrada"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Računalna stanica"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Fobosova anomalija"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Vojna baza"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Kanalizacija"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Anomalija Deimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Područje obuzde"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Rafinerija"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Deimos Lab"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Zapovjedno središte"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Dvorane osuđenih"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Spremnici za razmnožavanje"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Vrh Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Tvrđava misterija"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Pakleni jarak"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Močvara očaja"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonij"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Kuća boli"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Nečista katedrala"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Mt. Erebus"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Limbo"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dis"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Odgajalište"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Pakao ispod"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Savršena mržnja"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Odrubi zlikovce"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Neprikladno zlo"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Pokajat će se"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Protiv tebe zlokobno"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: I pakao je uslijedio"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: K okrutnima"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Strah"
+
+msgid "E1TEXT"
+msgstr ""
+"Kad pobijediš sve te opakce i očistiš\n"
+"bazu na Mjesecu,trebao bi pobijediti,\n"
+"zar ne? Zar ne? Gdje su tvoja debela\n"
+"nagrada i karta kući? Što je, dovraga,\n"
+"ovo? Ne bi se trebalo ovako završiti!\n"
+"\n"
+"Smrdi na trulo meso, ali izgleda kao\n"
+"izgubljena baza na Deimosu. Izgleda\n"
+"da si zaglavljen na Obalama pakla.\n"
+"Jedini izlaz je kroz.\n"
+"\n"
+"Da biste nastavili\n"
+"DOOM iskustvo, igrajte Obale pakla i\n"
+"njegov nevjerojatan nastavak, Inferno!\n"
+
+msgid "E2TEXT"
+msgstr ""
+"Uspio si! Odvratni kibernetički\n"
+"demonski gospodar koji je vladao \n"
+"zgubljenom bazom na Mjesecu\n"
+"Deimos pobijen je i ti si trijumfirao!\n"
+"Ali... gdje si? Penješ se na rub Mjeseca\n"
+"i gledaš dolje da vidiš strašnu istinu.\n"
+"\n"
+"Deimos lebdi iznad samog Pakla!\n"
+"Nikad nisi čuo da je itko pobjegao iz\n"
+"Pakla, ali natjerat ćeš te gadove da požale\n"
+"što su ikad čuli za tebe! Brzo se spuštaš\n"
+"užetom na površinu Pakla.\n"
+"\n"
+"Sada slijedi završno poglavlje\n"
+"DOOMA! -- Inferno."
+
+msgid "E3TEXT"
+msgstr ""
+"Odvratni pauk-demon koji je osmislio\n"
+"invaziju na mjesečeve baze i prouzročio\n"
+"toliko smrti zauvijek je dobijao batine.\n"
+"\n"
+"Skriveni se otvor vrata otvara i ti ulaziš.\n"
+"Dokazao si da te Pakao ne može zadržati,\n"
+"a sada Pakao napokon igra pošteno -- \n"
+"jer izlaziš iz vrata i vidiš zelena polja Zemlje!\n"
+"Konačno doma.\n"
+"\n"
+"Pitaš se što se događalo na Zemlji dok\n"
+"si se borio protiv oslobođenog zla. Dobro\n"
+"je da nijedno čeljade pakla nije moglo\n"
+"proći kroz ta vrata s tobom..."
+
+msgid "E4TEXT"
+msgstr ""
+"Paukovski um mora da je poslao svoje\n"
+"legije paklenih stvorenja prije tvoje konačne\n"
+"konfrontacije s tom strašnom zvijeri iz pakla.\n"
+"Ali ti si istupio i spustio vječnu prokletiju i\n"
+"patnju na hordu, kao pravi heroj pred\n"
+"nečim tako zlim.\n"
+"\n"
+"Osim toga, netko je morao platiti za ono\n"
+"što se dogodilo Daisy, tvojoj kućnoj zečici.\n"
+"\n"
+"Ali sada vidiš pred sobom još više moguće\n"
+"boli i komadanja dok nacija demona divlja\n"
+"našim gradovima.\n"
+"\n"
+"Sljedeća stanica: Pakao na Zemlji!"

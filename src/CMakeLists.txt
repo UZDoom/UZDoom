@@ -589,7 +589,6 @@ file( GLOB HEADER_FILES
 	common/models/*.h
 	common/textures/*.h
 	common/startscreen/*.h
-	common/widgets/*.h
 	common/textures/hires/hqnx/*.h
 	common/textures/hires/hqnx_asm/*.h
 	common/textures/hires/xbr/*.h
@@ -619,7 +618,7 @@ file( GLOB HEADER_FILES
 	common/scripting/frontend/*.h
 
 	utility/*.h
-	launcher/*.h
+	widgets/*.h
 	scripting/*.h
 	scripting/backend/*.h
 	scripting/decorate/*.h
@@ -980,14 +979,18 @@ set (PCH_SOURCES
 	rendering/swrenderer/textures/warptexture.cpp
 	rendering/swrenderer/textures/swcanvastexture.cpp
 	events.cpp
-	launcher/launcherwindow.cpp
-	launcher/launcherbanner.cpp
-	launcher/launcherbuttonbar.cpp
-	launcher/playgamepage.cpp
-	launcher/settingspage.cpp
-	launcher/networkpage.cpp
-	launcher/releasepage.cpp
-	launcher/aboutpage.cpp
+	widgets/aboutpage.cpp
+	widgets/errorwindow.cpp
+	widgets/launcherbanner.cpp
+	widgets/launcherbuttonbar.cpp
+	widgets/launcherwindow.cpp
+	widgets/netstartwindow.cpp
+	widgets/networkpage.cpp
+	widgets/playgamepage.cpp
+	widgets/releasepage.cpp
+	widgets/settingspage.cpp
+	widgets/themedata.cpp
+	widgets/widgetresourcedata.cpp
 
 	common/audio/sound/i_sound.cpp
 	common/audio/sound/oalsound.cpp
@@ -1012,9 +1015,6 @@ set (PCH_SOURCES
 	common/startscreen/startscreen_strife.cpp
 	common/startscreen/startscreen_generic.cpp
 	common/startscreen/endoom.cpp
-	common/widgets/errorwindow.cpp
-	common/widgets/netstartwindow.cpp
-	common/widgets/widgetresourcedata.cpp
 	common/fonts/singlelumpfont.cpp
 	common/fonts/singlepicfont.cpp
 	common/fonts/specialfont.cpp
@@ -1100,7 +1100,7 @@ set (PCH_SOURCES
 	common/utility/vga2ansi.cpp
 	common/thirdparty/base64.cpp
 	common/thirdparty/md5.cpp
- 	common/thirdparty/superfasthash.cpp
+	common/thirdparty/superfasthash.cpp
 	common/thirdparty/libsmackerdec/src/BitReader.cpp
 	common/thirdparty/libsmackerdec/src/FileStream.cpp
 	common/thirdparty/libsmackerdec/src/HuffmanVLC.cpp
@@ -1212,6 +1212,7 @@ set (PCH_SOURCES
 	common/scripting/dap/Nodes/RegistersScopeStateNode.cpp
 	common/scripting/dap/Nodes/StatePointerNode.cpp
 	common/scripting/dap/Nodes/DummyNode.cpp
+	utility/colorspace.cpp
 	utility/nodebuilder/nodebuild.cpp
 	utility/nodebuilder/nodebuild_classify_nosse2.cpp
 	utility/nodebuilder/nodebuild_events.cpp
@@ -1372,7 +1373,6 @@ include_directories(
 	common/fonts
 	common/objects
 	common/startscreen
-	common/widgets
 	common/rendering
 	common/rendering/hwrenderer/data
 	common/rendering/gl_load
@@ -1615,7 +1615,6 @@ source_group("Common\\File System" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_D
 source_group("Common\\File System\\Include" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/filesystem/include/.+")
 source_group("Common\\File System\\Source" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/filesystem/source/.+")
 source_group("Common\\Startscreen" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/startscreen/.+")
-source_group("Common\\Widgets" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/widgets/.+")
 source_group("Common\\Scripting" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/.+")
 source_group("Common\\Scripting\\Interface" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/interface/.+")
 source_group("Common\\Scripting\\Frontend" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/.+" FILES ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h)
@@ -1659,7 +1658,7 @@ source_group("Utility\\Smackerdec" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_D
 source_group("Utility\\Smackerdec\\Headers" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/include/.+")
 source_group("Utility\\Smackerdec\\Sources" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/src/.+")
 source_group("Statusbar" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/g_statusbar/.+")
-source_group("Launcher" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/launcher/.+")
+source_group("Widgets" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/widgets/.+")
 source_group("Versioning" FILES version.h win32/zdoom.rc)
 source_group("Xlat" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/xlat/.+" FILES ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h)
 source_group("Source Files" FILES ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h common/engine/sc_man_scanner.re)

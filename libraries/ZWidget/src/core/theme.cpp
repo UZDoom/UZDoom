@@ -214,6 +214,8 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	lineedit->SetColor("border-bottom-color", border);
 	lineedit->SetColor("selection-color", bgHover);
 	lineedit->SetColor("no-focus-selection-color", bgHover);
+	lineedit->SetColor("selection-text", fgHover);
+	lineedit->SetColor("no-focus-selection-text", fgHover);
 
 	textedit->SetDouble("noncontent-left", 8.0);
 	textedit->SetDouble("noncontent-top", 8.0);
@@ -226,6 +228,7 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	textedit->SetColor("border-right-color", border);
 	textedit->SetColor("border-bottom-color", border);
 	textedit->SetColor("selection-color", bgHover);
+	textedit->SetColor("selection-text", fgHover);
 
 	listview->SetDouble("noncontent-left", 10.0);
 	listview->SetDouble("noncontent-top", 10.0);
@@ -238,6 +241,7 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	listview->SetColor("border-right-color", border);
 	listview->SetColor("border-bottom-color", border);
 	listview->SetColor("selection-color", bgHover);
+	listview->SetColor("selection-text", fgHover);
 
 	dropdown->SetDouble("noncontent-left", 5.0);
 	dropdown->SetDouble("noncontent-top", 5.0);

@@ -133,6 +133,12 @@ msgstr "Miscellaneous Options"
 msgid "OPTMNU_SOUND"
 msgstr "Sound Options"
 
+msgid "ACCMNU_TITLE"
+msgstr "Accessibility Options"
+
+msgid "ACCMNU_RESET"
+msgstr "Reset Accessibility Options"
+
 msgid "OPTMNU_DISPLAY"
 msgstr "Display Options"
 
@@ -672,6 +678,12 @@ msgstr "Messages"
 
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Center messages"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Message queue size"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Stack repeated messages"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Pulsating message Display"

@@ -321,23 +321,20 @@ int HWDrawInfo::SetFullbrightFlags(player_t *player)
 			FullbrightFlags = Fullbright;
 			if (gl_enhanced_nv_stealth > 2) FullbrightFlags |= StealthVision;
 		}
-		else if (cplayer->fixedlightlevel != -1)
+		else if (cplayer->fixedlightlevel != -1 || cplayer->bForceFullbright)
 		{
-			auto torchtype = PClass::FindActor(NAME_PowerTorch);
-			auto litetype = PClass::FindActor(NAME_PowerLightAmp);
-			for (AActor *in = cplayer->mo->Inventory; in; in = in->Inventory)
+			EFullbrightMode fbmode = cplayer->GetFullbrightMode();
+			if (fbmode != FBMODE_NONE)
 			{
-				// Need special handling for light amplifiers 
-				if (in->IsKindOf(torchtype))
+				FullbrightFlags = Fullbright;
+				if (fbmode == FBMODE_TORCH)
 				{
-					FullbrightFlags = Fullbright;
-					if (gl_enhanced_nv_stealth > 1) FullbrightFlags |= StealthVision;
+					FullbrightFlags |= StealthVision * (gl_enhanced_nv_stealth > 1);
 				}
-				else if (in->IsKindOf(litetype))
+				else
 				{
-					FullbrightFlags = Fullbright;
-					if (gl_enhanced_nightvision) FullbrightFlags |= Nightvision;
-					if (gl_enhanced_nv_stealth > 0) FullbrightFlags |= StealthVision;
+					FullbrightFlags |= Nightvision * (fbmode == FBMODE_NIGHTVISION);
+					FullbrightFlags |= StealthVision * (gl_enhanced_nv_stealth > 0);
 				}
 			}
 		}

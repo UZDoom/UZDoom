@@ -309,7 +309,7 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name)
 	};
 }
 
-std::vector<uint8_t> LoadWidgetData(const std::string& name)
+std::vector<uint8_t> LoadWidgetData(const std::string& name, bool root)
 {
 	return ReadAllBytes(name);
 }

@@ -2,311 +2,329 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-06 10:01+0000\n"
+"Last-Translator: not aname <clay57447@gmail.com>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/uzdoom/common/he/>"
+"\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : "
-"((n > 10 && n % 10 == 0) ? 2 : 3));\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.15.1\n"
 
 msgid "PRESSYN"
-msgstr ""
+msgstr "תלחץ על Y או N."
 
 msgid "TXT_YES"
-msgstr ""
+msgstr "כן"
 
 msgid "TXT_NO"
-msgstr ""
+msgstr "לא"
 
 msgid "SAVEDEAD"
 msgstr ""
+"אתה לא יכול לשמור אם אתה לא משחק!\n"
+"\n"
+"תלחץ על מקש."
 
 msgid "SAFEMESSAGE"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה לעשות את זה?"
 
 msgid "NOTSET"
-msgstr ""
+msgstr "לא נתון"
 
 msgid "QSPROMPT"
 msgstr ""
+"לשמור מעל המשחק שלך בשם\n"
+"\n"
+"'%s'?\n"
+"\n"
+"תלחץ על Y או N."
 
 msgid "QLPROMPT"
 msgstr ""
+"האת אתה רוצה לטעון את המשחק בשם\n"
+"\n"
+"'%s'?\n"
+"\n"
+"תלחץ על Y או N."
 
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
-msgstr ""
+msgstr "%s מרמה"
 
 msgid "MSGOFF"
-msgstr ""
+msgstr "הודעות: כבוי"
 
 msgid "MSGON"
-msgstr ""
+msgstr "הודעות: פעיל"
 
 msgid "TXT_SAY"
-msgstr ""
+msgstr "להגיד:"
 
 msgid "TXT_QUITENDOOM"
-msgstr ""
+msgstr "תלחץ על כל מקש או על כל מקום על החלונית כדי לצאת."
 
 msgid "NEWSAVE"
-msgstr ""
+msgstr "<משחק חדש>"
 
 msgid "GGSAVED"
-msgstr ""
+msgstr "משחק נשמר."
 
 msgid "SAVECOMMENT_TIME"
-msgstr ""
+msgstr "זמן"
 
 msgid "MNU_LOADGAME"
-msgstr ""
+msgstr "טעינת משחק"
 
 msgid "MNU_SAVEGAME"
-msgstr ""
+msgstr "שמירת משחק"
 
 msgid "MNU_NOPICTURE"
-msgstr ""
+msgstr "אין תמונה"
 
 msgid "MNU_DIFFVERSION"
-msgstr ""
+msgstr "גרסה אחרת"
 
 msgid "MNU_NOFILES"
-msgstr ""
+msgstr "אין קבצים"
 
 msgid "MNU_DELETESG"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה למחוק את שמירת המשחק?\n"
 
 msgid "OPTVAL_OFF"
-msgstr ""
+msgstr "כבוי"
 
 msgid "OPTVAL_ON"
-msgstr ""
+msgstr "פעיל"
 
 msgid "OPTVAL_AUTO"
-msgstr ""
+msgstr "אוטומתי"
 
 msgid "OPTMNU_TITLE"
-msgstr ""
+msgstr "הגדרות"
 
 msgid "OPTMNU_CONTROLS"
-msgstr ""
+msgstr "שליטה במשחק"
 
 msgid "OPTMNU_MOUSE"
-msgstr ""
+msgstr "הגדרות עכבר"
 
 msgid "OPTMNU_JOYSTICK"
-msgstr ""
+msgstr "הגדרות שליטה"
 
 msgid "OPTMNU_PLAYER"
-msgstr ""
+msgstr "ארגון שחקן"
 
 msgid "OPTMNU_GAMEPLAY"
-msgstr ""
+msgstr "הגדרות משחק"
 
 msgid "OPTMNU_AUTOMAP"
-msgstr ""
+msgstr "הגדרות מפה אוטומטית"
 
 msgid "OPTMNU_HUD"
-msgstr ""
+msgstr "הגדרות HUD"
 
 msgid "OPTMNU_MISCELLANEOUS"
-msgstr ""
+msgstr "הגדרות אחרות"
 
 msgid "OPTMNU_SOUND"
-msgstr ""
+msgstr "הגדרות צליל"
 
 msgid "OPTMNU_DISPLAY"
-msgstr ""
+msgstr "הגדרות מסך"
 
 msgid "OPTMNU_VIDEO"
-msgstr ""
+msgstr "לבחור מצב וידאו"
 
 msgid "OPTMNU_DEFAULTS"
-msgstr ""
+msgstr "להחזיר לבררת מחדל"
 
 msgid "OPTMNU_RESETTOSAVED"
-msgstr ""
+msgstr "לחזור לשמירה האחרונה"
 
+#, fuzzy
 msgid "OPTMNU_WRITEINI"
-msgstr ""
+msgstr "לשמור הגדרות נוכחות"
 
 msgid "OPTMNU_CONSOLE"
-msgstr ""
+msgstr "להיכנס לקונסולה"
 
 msgid "OPTMNU_NETWORK"
-msgstr ""
+msgstr "הגדרות רשת"
 
 msgid "OPTMNU_REVERB"
 msgstr ""
 
 msgid "CNTRLMNU_SWITCHTEXT1"
-msgstr ""
+msgstr "ENTER כדי לשנות, BACKSPACE כדי למחוק"
 
 msgid "CNTRLMNU_SWITCHTEXT2"
-msgstr ""
+msgstr "תלחץ על מקש חדש בשביל הגדרת שליטה, ESC כדי לבטל"
 
 msgid "CNTRLMNU_CONTROLS"
-msgstr ""
+msgstr "שליטה"
 
 msgid "CNTRLMNU_ATTACK"
-msgstr ""
+msgstr "אש"
 
 msgid "CNTRLMNU_ALTATTACK"
-msgstr ""
+msgstr "אש משני"
 
 msgid "CNTRLMNU_RELOAD"
-msgstr ""
+msgstr "טעינה של נשק"
 
 msgid "CNTRLMNU_USE"
-msgstr ""
+msgstr "להשתמש / לפתוח"
 
 msgid "CNTRLMNU_FORWARD"
-msgstr ""
+msgstr "תזוזה קדימה"
 
 msgid "CNTRLMNU_BACK"
-msgstr ""
+msgstr "תזוזה אחורה"
 
 msgid "CNTRLMNU_MOVELEFT"
-msgstr ""
+msgstr "תזוזה שמאלה"
 
 msgid "CNTRLMNU_MOVERIGHT"
-msgstr ""
+msgstr "תזוזה ימינה"
 
 msgid "CNTRLMNU_TURNLEFT"
-msgstr ""
+msgstr "פניה שמאלה"
 
 msgid "CNTRLMNU_TURNRIGHT"
-msgstr ""
+msgstr "פניה ימינה"
 
 msgid "CNTRLMNU_TURN180"
-msgstr ""
+msgstr "פניה מהירה"
 
 msgid "CNTRLMNU_JUMP"
-msgstr ""
+msgstr "קפיצה"
 
 msgid "CNTRLMNU_CROUCH"
-msgstr ""
+msgstr "להתכופף"
 
 msgid "CNTRLMNU_TOGGLECROUCH"
-msgstr ""
+msgstr "להתכופף/לקום"
 
 msgid "CNTRLMNU_MOUSELOOK"
-msgstr ""
+msgstr "התבוננות עכבר"
 
 # Look doesn't change the aim! It only alters the view pitch
 msgid "CNTRLMNU_LOOKUP"
-msgstr ""
+msgstr "להסתכל למעלה"
 
 msgid "CNTRLMNU_LOOKDOWN"
-msgstr ""
+msgstr "להסתכל למעטה"
 
 msgid "CNTRLMNU_CENTERVIEW"
-msgstr ""
+msgstr "לרכז מבט"
 
 msgid "CNTRLMNU_RUN"
-msgstr ""
+msgstr "לרוץ"
 
 msgid "CNTRLMNU_TOGGLERUN"
-msgstr ""
+msgstr "לרוץ/ללכת"
 
+#, fuzzy
 msgid "CNTRLMNU_STRAFE"
-msgstr ""
+msgstr "תזוזה צידית"
 
 msgid "CNTRLMNU_SCOREBOARD"
-msgstr ""
+msgstr "להראות לוח תוצאות"
 
 msgid "CNTRLMNU_ACTION"
-msgstr ""
+msgstr "פעולה"
 
 msgid "CNTRLMNU_ACTION_TITLE"
-msgstr ""
+msgstr "התאמה אישית של פעולות"
 
 msgid "CNTRLMNU_CHAT"
-msgstr ""
+msgstr "צ'ט"
 
 msgid "MNU_MULTIPLAYER"
 msgstr ""
 
 msgid "CNTRLMNU_SAY"
-msgstr ""
+msgstr "הודעה"
 
 msgid "CNTRLMNU_CHAT_TITLE"
-msgstr ""
+msgstr "התאמה אישית של פעולות הצ'יטים"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
-msgstr ""
+msgstr "התאמה אישית של פעולות נשק"
 
 msgid "CNTRLMNU_INVENTORY_TITLE"
-msgstr ""
+msgstr "התאמה אישית של פעולות מלאי"
 
 msgid "CNTRLMNU_OTHER_TITLE"
-msgstr ""
+msgstr "התאמה אישית של פעולות אחרות"
 
 msgid "CNTRLMNU_WEAPONS"
-msgstr ""
+msgstr "נשקים"
 
 msgid "CNTRLMNU_NEXTWEAPON"
-msgstr ""
+msgstr "נשק הבא"
 
 msgid "CNTRLMNU_PREVIOUSWEAPON"
-msgstr ""
+msgstr "נשק קודם"
 
 # Todo - make game specific
 msgid "CNTRLMNU_SLOT1"
-msgstr ""
+msgstr "נשק 1"
 
 # only show appropriate slots per game
 # 
 msgid "CNTRLMNU_SLOT2"
-msgstr ""
+msgstr "נשק 2"
 
 msgid "CNTRLMNU_SLOT3"
-msgstr ""
+msgstr "נשק 3"
 
 msgid "CNTRLMNU_SLOT4"
-msgstr ""
+msgstr "נשק 4"
 
 msgid "CNTRLMNU_SLOT5"
-msgstr ""
+msgstr "נשק 5"
 
 msgid "CNTRLMNU_SLOT6"
-msgstr ""
+msgstr "נשק 6"
 
 msgid "CNTRLMNU_SLOT7"
-msgstr ""
+msgstr "נשק 7"
 
 msgid "CNTRLMNU_SLOT8"
-msgstr ""
+msgstr "נשק 8"
 
 msgid "CNTRLMNU_SLOT9"
-msgstr ""
+msgstr "נשק 9"
 
 msgid "CNTRLMNU_SLOT0"
-msgstr ""
+msgstr "נשק 10"
 
 msgid "CNTRLMNU_INVENTORY"
-msgstr ""
+msgstr "מלאי"
 
 msgid "CNTRLMNU_USEITEM"
-msgstr ""
+msgstr "להשתמש בפריט"
 
 msgid "CNTRLMNU_USEALLITEMS"
-msgstr ""
+msgstr "להשתמש בכל הפריטים"
 
 msgid "CNTRLMNU_NEXTITEM"
-msgstr ""
+msgstr "פריט הבא"
 
 msgid "CNTRLMNU_PREVIOUSITEM"
-msgstr ""
+msgstr "פריט הקודם"
 
 # most are not used yet but will be
 msgid "MAPCNTRLMNU_TITLE"
-msgstr ""
+msgstr "התאמה אישית של פעולות מפה"
 
 msgid "MAPCNTRLMNU_CONTROLS"
-msgstr ""
+msgstr "פעולות מפה"
 
 msgid "MAPCNTRLMNU_PANLEFT"
 msgstr ""

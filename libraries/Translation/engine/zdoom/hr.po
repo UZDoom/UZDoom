@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-01-03 22:01+0000\n"
+"Last-Translator: Александар Урошевић <alek.sandar0@yandex.com>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/hr/>\n"
 "Language: hr\n"
@@ -24,6 +24,7 @@ msgstr "Tajna je otkrivena!"
 msgid "D_DEVSTR"
 msgstr "Beskorisni način UKLJ.\n"
 
+#, fuzzy
 msgid "QUITMSG"
 msgstr "Jesi li siguran/na kako želiš izaći iz ove sjajne igre?"
 
@@ -482,6 +483,7 @@ msgstr "Tajna"
 msgid "SCORE_NAME"
 msgstr "Ime"
 
+#, fuzzy
 msgid "SCORE_DELAY"
 msgstr "Kašnjenje (ms)"
 

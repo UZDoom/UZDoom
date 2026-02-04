@@ -48,6 +48,8 @@
 #include "p_visualthinker.h"
 #include <memory>
 
+EXTERN_CVAR(Bool, sv_autocompat)
+
 struct FGlobalDLightLists
 {
 	//TODO add TSet and switch from TMap to TSet
@@ -865,6 +867,12 @@ public:
 		if (dmflags & DF_YES_FREELOOK)
 			return true;
 		return !(flags & LEVEL_FREELOOK_NO);
+	}
+
+	bool MissileShouldClip() const
+	{
+		return (i_compatflags & COMPATF_MISSILECLIP) ||
+			(sv_autocompat && (gameinfo.gametype & GAME_DoomChex) && maptype == MAPTYPE_DOOM);
 	}
 
 	node_t		*HeadNode() const

@@ -45,19 +45,6 @@ public:
 	virtual void AppendStatusLine(const char* status) {}
 	virtual void LoadingStatus(const char* message, int colors) {}
 
-	virtual void NetInit(const char* message, bool host) {}
-	virtual void NetMessage(const char* message) {}
-	virtual void NetConnect(int client, const char* name, unsigned flags, int status) {}
-	virtual void NetUpdate(int client, int status) {}
-	virtual void NetDisconnect(int client) {}
-	virtual void NetProgress(int cur, int limit) {}
-	virtual void NetDone() {}
-	virtual void NetClose() {}
-	virtual bool ShouldStartNet() { return false; }
-	virtual int GetNetKickClient() { return -1; }
-	virtual int GetNetBanClient() { return -1; }
-	virtual bool NetLoop(bool (*loopCallback)(void *), void *data) { return false; }
-
 protected:
 	int MaxPos, CurPos, NotchPos;
 };
@@ -69,19 +56,6 @@ public:
 	~FBasicStartupScreen();
 
 	void Progress(int advance = 1) override;
-
-	void NetInit(const char* message, bool host) override;
-	void NetMessage(const char* message) override;
-	void NetConnect(int client, const char* name, unsigned flags, int status) override;
-	void NetUpdate(int client, int status) override;
-	void NetDisconnect(int client) override;
-	void NetProgress(int cur, int limit) override;
-	void NetDone() override;
-	void NetClose() override;
-	bool ShouldStartNet() override;
-	int GetNetKickClient() override;
-	int GetNetBanClient() override;
-	bool NetLoop(bool (*loopCallback)(void*), void* data) override;
 
 protected:
 	int NetMaxPos, NetCurPos;

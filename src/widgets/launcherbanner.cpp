@@ -15,17 +15,19 @@
 **
 */
 
-#include "launcherbanner.h"
-#include "gstrings.h"
-#include "version.h"
+#include <zwidget/core/image.h>
 #include <zwidget/widgets/imagebox/imagebox.h>
 #include <zwidget/widgets/textlabel/textlabel.h>
-#include <zwidget/core/image.h>
+
+#include "launcherbanner.h"
+#include "themedata.h"
 
 LauncherBanner::LauncherBanner(Widget* parent) : Widget(parent)
 {
 	Logo = new ImageBox(this);
-	Logo->SetImage(Image::LoadResource("widgets/banner.png"));
+	auto imgsrc = Theme::getMode() == LIGHT ? "ui/banner-light.png": "ui/banner-dark.png";
+	Logo->SetImage(Image::LoadResource(imgsrc));
+	this->SetStyleColor("background-color", Theme::getHeader(COLOR_BACKGROUND));
 }
 
 double LauncherBanner::GetPreferredHeight() const

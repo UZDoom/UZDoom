@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-12-25 20:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -534,7 +534,7 @@ msgid "SCORE_NAME"
 msgstr "Nome"
 
 msgid "SCORE_DELAY"
-msgstr "Atraso (ms)"
+msgstr "Atraso"
 
 msgid "SCORE_FRAGS"
 msgstr "Abates"
@@ -5048,7 +5048,7 @@ msgid "OPTVAL_TEAMONLYCHAT"
 msgstr "Somente colegas de equipe"
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "Global"
 
 # Disables /me functionality in chat when displaying.
 msgid "NETMNU_NOBOLDCHAT"

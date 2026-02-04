@@ -48,19 +48,6 @@ public:
 	void PrintStr(const char* cp);
 	void GetLog(std::function<bool(const void* data, uint32_t size, uint32_t& written)> writeFile);
 
-	void NetInit(const char* message, bool host);
-	void NetMessage(const char* message);
-	void NetConnect(int client, const char* name, unsigned flags, int status);
-	void NetUpdate(int client, int status);
-	void NetDisconnect(int client);
-	void NetProgress(int cur, int limit);
-	void NetDone();
-	void NetClose();
-	bool ShouldStartNet();
-	int GetNetKickClient();
-	int GetNetBanClient();
-	bool NetLoop(bool (*loopCallback)(void*), void* data);
-
 	void SetWindowTitle(const char* caption);
 
 	HWND GetHandle() { return Window; }

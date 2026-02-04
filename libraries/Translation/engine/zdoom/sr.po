@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-01-03 22:01+0000\n"
+"Last-Translator: Александар Урошевић <alek.sandar0@yandex.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/sr/>\n"
 "Language: sr\n"
@@ -522,6 +522,7 @@ msgstr "Тајна"
 msgid "SCORE_NAME"
 msgstr "Име"
 
+#, fuzzy
 msgid "SCORE_DELAY"
 msgstr "Кашњење (мс)"
 
@@ -989,7 +990,7 @@ msgid "OB_BARONHIT"
 msgstr "%o је поцеп@[adj_2_sr] од стране барон пакла."
 
 msgid "OB_KNIGHTHIT"
-msgstr "Играча %o је унаказио витез пакла."
+msgstr "%o je распорен@[adj_1_sr] од стране витеза пакла."
 
 msgid "OB_ZOMBIE"
 msgstr "%o је убијен@[adj_1_sr] од стране зомбија."
@@ -1019,10 +1020,10 @@ msgid "OB_CACO"
 msgstr "Играча %o је ударио какодемон."
 
 msgid "OB_BARON"
-msgstr "%o је мод@[adj_3_sr] због барона пакла."
+msgstr "%o је испечен@[adj_1_sr] од стране барона пакла."
 
 msgid "OB_KNIGHT"
-msgstr "%o је раширен@[adj_1_sr] због витеза пакла."
+msgstr "%o је спржен@[adj_1_sr] од стране витеза пакла."
 
 msgid "OB_SPIDER"
 msgstr "%o се смрзну@[ao_1_sr] у очарању паук-руководилаца."
@@ -5247,3 +5248,33 @@ msgstr "Контраст"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Сатурација"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Додатно осветљење"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr ""
+"Контролише опсег светла око играча у јединици нивоа. Веће вредности чине "
+"сцену светлијом."
+
+#, fuzzy
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Опсег светла играча"
+
+#, fuzzy
+msgid "ACCMNU_LIGHT"
+msgstr "Осветљење"
+
+#, fuzzy
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Сабрано"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Провидно"
+
+#, fuzzy
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Калибрација слике"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "Подесите ове вредности према очекиваној удаљености гледања."

@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:44+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Esperanto <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen-deathkings/eo/>\n"
+"PO-Revision-Date: 2025-12-28 21:00+0000\n"
+"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/doom-engine-"
+"games/hexen-deathkings/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.15.1\n"
 "HeaderCode: eo\n"
 
 msgid "TXT_HEXDD_MAP41"
@@ -182,49 +182,49 @@ msgid "TXT_ACS_MAP33_7_FORTH"
 msgstr "Pro tio, vi mortos!"
 
 msgid "TXT_ACS_MAP41_6_THEWA"
-msgstr "La akvofalo estas malferma."
+msgstr "La akvofalo estas malferma"
 
 msgid "TXT_ACS_MAP41_7_THEWA"
-msgstr "La akvofalo estas barita."
+msgstr "La akvofalo estas barita"
 
 msgid "TXT_ACS_MAP41_8_ADOOR"
-msgstr "Pordo malfermis en la kapelo."
+msgstr "Pordo malfermis en la kapelo"
 
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "Nun tio estas stranga..."
 
 msgid "TXT_ACS_MAP44_1_THREE"
-msgstr "Nur tri partoj de la puzlo restas."
+msgstr "Nur tri partoj de la puzlo restas"
 
 msgid "TXT_ACS_MAP44_2_TWOMO"
-msgstr "Nur du partoj de la puzlo restas."
+msgstr "Nur du partoj de la puzlo restas"
 
 msgid "TXT_ACS_MAP44_3_ONEMO"
-msgstr "Nur unu parto de la puzlo restas."
+msgstr "Nur unu parto de la puzlo restas"
 
 msgid "TXT_ACS_MAP44_4_THEPU"
-msgstr "La puzlo estas kompleta."
+msgstr "La puzlo estas kompleta"
 
 msgid "TXT_ACS_MAP44_6_YOUHA"
-msgstr "Vi ne kompletis la puzlon."
+msgstr "Vi ne kompletis la puzlon"
 
 msgid "TXT_ACS_MAP44_8_THEFL"
 msgstr "La planko ne estas sendanĝera!"
 
 msgid "TXT_ACS_MAP44_10_ONETH"
-msgstr "Unu triono de la puzlo estas solvita."
+msgstr "Unu triono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP44_11_TWOTH"
-msgstr "Du trionoj de la puzlo estas solvita."
+msgstr "Du trionoj de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP45_1_YOUHE"
-msgstr "Vi aŭdas plataĵon movantan malproksime."
+msgstr "Vi aŭdas plataĵon movantan malproksime"
 
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "Ĝi estas farita..."
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
-msgstr "Vi ne kompletis la puzlon."
+msgstr "Vi ne kompletis la puzlon"
 
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "Mi avertas vin..."
@@ -236,19 +236,19 @@ msgid "TXT_ACS_MAP46_4_ANDST"
 msgstr "Kaj ankaŭ stulta."
 
 msgid "TXT_ACS_MAP46_8_ONEFO"
-msgstr "Unu kvarono de la puzlo estas kompleta."
+msgstr "Unu kvarono de la puzlo estas kompleta"
 
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "Malbona elekto..."
 
 msgid "TXT_ACS_MAP47_2_THESY"
-msgstr "La simboloj ne estas liniiga."
+msgstr "La simboloj ne estas liniiga"
 
 msgid "TXT_ACS_MAP48_2_THEDO"
-msgstr "La pordo ne malfermiĝas."
+msgstr "La pordo ne malfermiĝas ĉi-flanke"
 
 msgid "TXT_ACS_MAP50_1_THEDO"
-msgstr "La pordo estas barita ekstere."
+msgstr "La pordo estas barita ekstere"
 
 msgid "TXT_ACS_MAP51_5_SACRI"
 msgstr "Sakrilegio !"
@@ -260,19 +260,19 @@ msgid "TXT_ACS_MAP51_7_ANDNO"
 msgstr "Kaj nun vi mortas !!!"
 
 msgid "TXT_ACS_MAP51_8_ONETH"
-msgstr "Unu triono de la puzlo estas solvita."
+msgstr "Unu triono de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP51_9_TWOTH"
-msgstr "Du trionoj de la puzlo estas solvita."
+msgstr "Du trionoj de la puzlo estas solvita"
 
 msgid "TXT_ACS_MAP51_10_THECR"
-msgstr "La kripto estas malfermita."
+msgstr "La kripto estas malfermita"
 
 msgid "TXT_ACS_MAP51_11_BEWAR"
-msgstr "Singardu en la tombo de la araneo."
+msgstr "Singardu en la tombo de la araneo"
 
 msgid "TXT_ACS_MAP51_13_YOUHE"
-msgstr "Vi aŭdas plataĵon leviĝantan ekstere."
+msgstr "Vi aŭdas plataĵon leviĝantan ekstere"
 
 msgid "TXT_ACS_MAP51_14_DOYOU"
 msgstr "Ĉu vi sentas vin bonŝanca?"
@@ -314,25 +314,25 @@ msgid "TXT_ACS_MAP52_9_WHODA"
 msgstr "Kiu aŭdacas interrompi nian dormon?"
 
 msgid "TXT_ACS_MAP52_10_THEWA"
-msgstr "La vojo estas malfermita."
+msgstr "La vojo estas malfermita"
 
 msgid "TXT_ACS_MAP53_2_YOUHA"
 msgstr "Vi ankoraŭ havas "
 
 msgid "TXT_ACS_MAP53_3_SWITC"
-msgstr "\\x20ŝaltilojn ceterajn."
+msgstr "\\x20ŝaltilojn ceterajn"
 
 msgid "TXT_ACS_MAP53_4_YOUHA"
 msgstr "Vi nur havas "
 
 msgid "TXT_ACS_MAP53_5_SWITC"
-msgstr "\\x20ŝaltilon ceteran."
+msgstr "\\x20ŝaltilon ceteran"
 
 msgid "TXT_ACS_MAP53_6_THEEX"
 msgstr "La elirejo estas malfermita"
 
 msgid "TXT_ACS_MAP54_1_THEDO"
-msgstr "La pordo ne malfermos de ĉi tio flanko."
+msgstr "La pordo ne malfermos de ĉi tio flanko"
 
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "La pordoj estas malfermitaj..."
@@ -344,37 +344,37 @@ msgid "TXT_ACS_MAP54_9_ADOOR"
 msgstr "Pordo malfermiĝis"
 
 msgid "TXT_ACS_MAP54_10_ONTHE"
-msgstr "en la Kapelo."
+msgstr "en la Kapelo"
 
 msgid "TXT_ACS_MAP54_11_ABRID"
 msgstr "Ponto estis konstruita"
 
 msgid "TXT_ACS_MAP54_12_ONTHE"
-msgstr "en la Buĉejo."
+msgstr "en la Buĉejo"
 
 msgid "TXT_ACS_MAP54_13_ASTAI"
 msgstr "Ŝtuparo estis konstruita"
 
 msgid "TXT_ACS_MAP54_14_ONTHE"
-msgstr "en la Gardisto Ombra."
+msgstr "en la Gardisto Ombra"
 
 msgid "TXT_ACS_MAP54_15_ONEGE"
-msgstr "Dentrado estis metita."
+msgstr "Dentrado estis metita"
 
 msgid "TXT_ACS_MAP54_16_GEARS"
-msgstr "\\x20dentradoj estis metitaj."
+msgstr "\\x20dentradoj estis metitaj"
 
 msgid "TXT_ACS_MAP54_17_ABARR"
 msgstr "Barikado malfermiĝis"
 
 msgid "TXT_ACS_MAP54_18_ONTHE"
-msgstr "En la Kloako."
+msgstr "En la Kloako"
 
 msgid "TXT_ACS_MAP54_20_THEWA"
-msgstr "La vojo reen estas malfermita."
+msgstr "La vojo reen estas malfermita"
 
 msgid "TXT_ACS_MAP55_9_THEDO"
-msgstr "La pordo estas barita interne."
+msgstr "La pordo estas barita interne"
 
 msgid "TXT_ACS_MAP56_0_YOUDA"
 msgstr "Ĉu vi aŭdacas rabi de la tombo"
@@ -389,16 +389,16 @@ msgid "TXT_ACS_MAP59_1_YOUHA"
 msgstr "Vi ankoraŭ havas "
 
 msgid "TXT_ACS_MAP59_2_MORES"
-msgstr "\\x20trovindajn ŝaltilojn."
+msgstr "\\x20trovindajn ŝaltilojn"
 
 msgid "TXT_ACS_MAP59_3_YOUHA"
 msgstr "Vi nur havas "
 
 msgid "TXT_ACS_MAP59_4_SWITC"
-msgstr "\\x20ŝaltilon ceteran."
+msgstr "\\x20ŝaltilon ceteran"
 
 msgid "TXT_ACS_MAP59_5_THEWA"
-msgstr "La vojo al la turo estas malfermita."
+msgstr "La vojo al la turo estas malfermita"
 
 msgid "TXT_ACS_MAP60_3_THEWA"
-msgstr "La vojo estas malfermita."
+msgstr "La vojo estas malfermita"

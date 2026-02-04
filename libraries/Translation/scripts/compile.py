@@ -12,29 +12,49 @@ from pathlib import Path
 SOURCE_LANG = "en_US"
 
 def dump_csv(destination, table):
+	"""Writes the matrix table to a CSV file at the specified destination."""
+
 	with open(destination, mode='w', newline='', encoding='utf-8') as file:
 		csv.writer(file).writerows(table)
 
 def fill_dict(path):
+	"""Parses a .po file into a dictionary of translation data and metadata."""
+
 	po = polib.pofile(path)
 
 	meta = {}
 	data = {}
 
+	# use either `HeaderCode` or `Language` as the language id
 	meta["id"] = po.metadata["HeaderCode"] if "HeaderCode" in po.metadata else po.metadata["Language"]
+	meta["valid"] = True
 
-	for entry in po:
-		data[entry.msgid] = {}
-		if entry.msgstr:
-			data[entry.msgid]["string"] = entry.msgstr
-		if entry.tcomment:
-			data[entry.msgid]["remarks"] = entry.tcomment
-		if entry.msgctxt:
-			data[entry.msgid]["filter"] = entry.msgctxt
+	for e in po:
+		specific_id = e.msgid
+		entry = { "id": e.msgid }
+
+		if e.msgstr:
+			entry["string"] = e.msgstr
+		if e.tcomment:
+			entry["remarks"] = e.tcomment
+		if e.msgctxt:
+			entry["filter"] = e.msgctxt
+			specific_id = f"{specific_id}#{e.msgctxt}"
+
+		if specific_id in data:
+			if meta["valid"]:
+				print(f"in: {path}")
+			meta["valid"] = False
+			print(f"redefining: {entry.msgid}")
+			continue
+
+		data[specific_id] = entry
 
 	return { "data": data, "meta": meta }
 
 def get_po_files(po_paths):
+	"""Validates directories and aggregates parsed data for all language files."""
+
 	failed = False
 
 	languages = {}
@@ -50,6 +70,8 @@ def get_po_files(po_paths):
 			if f.is_file() and str(f).endswith(".po"):
 				po_id = f.parts[-1][0:-3]
 				_po_files[po_id] = fill_dict(f)
+				if not _po_files[po_id]["meta"]["valid"]:
+					failed = True
 				if not po_id in languages:
 					languages[po_id] = _po_files[po_id]["meta"]["id"]
 				if languages[po_id] != _po_files[po_id]["meta"]["id"]:
@@ -74,6 +96,7 @@ def get_po_files(po_paths):
 		}
 
 def build_matrix(languages, po_files):
+	"""Aligns translations from different languages into a keyed matrix for CSV output."""
 
 	matrix = {}
 
@@ -87,7 +110,7 @@ def build_matrix(languages, po_files):
 			v = current["data"][k]
 			_matrix[k] = [
 				v["string"] if "string" in v else "",
-				k,
+				v["id"],
 				v["remarks"] if "remarks" in v else "",
 				v["filter"] if "filter" in v else ""
 			]
@@ -103,6 +126,8 @@ def build_matrix(languages, po_files):
 	return matrix
 
 def main(args):
+	"""loading, matrix building, CSV export"""
+
 	po_files = get_po_files([ Path(f) for f in args[1:-1] ]) if len(args) >= 3 else None
 
 	if po_files is None:

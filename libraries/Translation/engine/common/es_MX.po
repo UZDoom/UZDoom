@@ -2,137 +2,158 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-01-24 23:01+0000\n"
+"Last-Translator: Ret Neychozken <retneychozken@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/uzdoom/"
+"common/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese esh esi esu\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
+"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese "
+"esh esi esu\n"
 
 msgid "PRESSYN"
-msgstr ""
+msgstr "Presiona Y o N."
 
 msgid "TXT_YES"
-msgstr ""
+msgstr "Si"
 
 msgid "TXT_NO"
-msgstr ""
+msgstr "No"
 
 msgid "SAVEDEAD"
 msgstr ""
+"¡No puedes guardar si no estás jugando!\n"
+"\n"
+"Presiona cualquier tecla."
 
 msgid "SAFEMESSAGE"
-msgstr ""
+msgstr "¿Realmente quieres hacer esto?"
 
 msgid "NOTSET"
-msgstr ""
+msgstr "Indefinido"
 
 msgid "QSPROMPT"
 msgstr ""
+"¿Guardar rápido y sobrescribir\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Presiona Y o N."
 
 msgid "QLPROMPT"
 msgstr ""
+"¿Cargar rápido\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Presiona Y o N."
 
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s hace trampa"
 
 msgid "MSGOFF"
-msgstr ""
+msgstr "Mensajes: DESACTIVADOS"
 
 msgid "MSGON"
-msgstr ""
+msgstr "Mensajes: ACTIVADOS"
 
 msgid "TXT_SAY"
-msgstr ""
+msgstr "Decir:"
 
 msgid "TXT_QUITENDOOM"
-msgstr ""
+msgstr "Presiona cualquier tecla o haz click en la ventana para salir."
 
 msgid "NEWSAVE"
-msgstr ""
+msgstr "<Nueva Partida Guardada>"
 
 msgid "GGSAVED"
-msgstr ""
+msgstr "Partida guardada."
 
 msgid "SAVECOMMENT_TIME"
-msgstr ""
+msgstr "Tiempo"
 
 msgid "MNU_LOADGAME"
-msgstr ""
+msgstr "Cargar Partida"
 
 msgid "MNU_SAVEGAME"
-msgstr ""
+msgstr "Guardar Partida"
 
 msgid "MNU_NOPICTURE"
-msgstr ""
+msgstr "Sin Miniatura"
 
 msgid "MNU_DIFFVERSION"
-msgstr ""
+msgstr "Versión Diferente"
 
 msgid "MNU_NOFILES"
-msgstr ""
+msgstr "Sin Archivos"
 
 msgid "MNU_DELETESG"
-msgstr ""
+msgstr "¿Estás seguro de eliminar esta partida guardada?\n"
 
 msgid "OPTVAL_OFF"
-msgstr ""
+msgstr "Desactivado"
 
 msgid "OPTVAL_ON"
-msgstr ""
+msgstr "Activado"
 
 msgid "OPTVAL_AUTO"
-msgstr ""
+msgstr "Automático"
 
 msgid "OPTMNU_TITLE"
-msgstr ""
+msgstr "Opciones"
 
 msgid "OPTMNU_CONTROLS"
-msgstr ""
+msgstr "Personalizar Controles"
 
 msgid "OPTMNU_MOUSE"
-msgstr ""
+msgstr "Opciones Del Ratón"
 
 msgid "OPTMNU_JOYSTICK"
-msgstr ""
+msgstr "Opciones Del Mando"
 
 msgid "OPTMNU_PLAYER"
 msgstr ""
 
 msgid "OPTMNU_GAMEPLAY"
-msgstr ""
+msgstr "Opciones de la Jugabilidad"
 
 msgid "OPTMNU_AUTOMAP"
 msgstr ""
 
 msgid "OPTMNU_HUD"
-msgstr ""
+msgstr "Opciones del HUD"
 
 msgid "OPTMNU_MISCELLANEOUS"
 msgstr ""
 
 msgid "OPTMNU_SOUND"
-msgstr ""
+msgstr "Opciones De Sonido"
 
 msgid "OPTMNU_DISPLAY"
-msgstr ""
+msgstr "Opciones De Visualización"
 
 msgid "OPTMNU_VIDEO"
 msgstr "Modos de video"
 
 msgid "OPTMNU_DEFAULTS"
-msgstr ""
+msgstr "Reiniciar a valores predeterminados"
 
 msgid "OPTMNU_RESETTOSAVED"
 msgstr ""
 
 msgid "OPTMNU_WRITEINI"
-msgstr ""
+msgstr "Guardar ajustes actuales"
 
 msgid "OPTMNU_CONSOLE"
-msgstr ""
+msgstr "Ir a la consola"
 
 msgid "OPTMNU_NETWORK"
-msgstr ""
+msgstr "Opciones De Red"
 
 msgid "OPTMNU_REVERB"
 msgstr ""
@@ -144,19 +165,19 @@ msgid "CNTRLMNU_SWITCHTEXT2"
 msgstr ""
 
 msgid "CNTRLMNU_CONTROLS"
-msgstr ""
+msgstr "Controles"
 
 msgid "CNTRLMNU_ATTACK"
-msgstr ""
+msgstr "Atacar"
 
 msgid "CNTRLMNU_ALTATTACK"
-msgstr ""
+msgstr "Ataque secundario"
 
 msgid "CNTRLMNU_RELOAD"
-msgstr ""
+msgstr "Recargar"
 
 msgid "CNTRLMNU_USE"
-msgstr ""
+msgstr "Usar / Abrir"
 
 msgid "CNTRLMNU_FORWARD"
 msgstr ""
@@ -180,10 +201,10 @@ msgid "CNTRLMNU_TURN180"
 msgstr ""
 
 msgid "CNTRLMNU_JUMP"
-msgstr ""
+msgstr "Saltar"
 
 msgid "CNTRLMNU_CROUCH"
-msgstr ""
+msgstr "Agacharse"
 
 msgid "CNTRLMNU_TOGGLECROUCH"
 msgstr ""
@@ -193,16 +214,16 @@ msgstr ""
 
 # Look doesn't change the aim! It only alters the view pitch
 msgid "CNTRLMNU_LOOKUP"
-msgstr ""
+msgstr "Mirar arriba"
 
 msgid "CNTRLMNU_LOOKDOWN"
-msgstr ""
+msgstr "Mirar abajo"
 
 msgid "CNTRLMNU_CENTERVIEW"
-msgstr ""
+msgstr "Centrar vista"
 
 msgid "CNTRLMNU_RUN"
-msgstr ""
+msgstr "Correr"
 
 msgid "CNTRLMNU_TOGGLERUN"
 msgstr ""
@@ -220,13 +241,13 @@ msgid "CNTRLMNU_ACTION_TITLE"
 msgstr ""
 
 msgid "CNTRLMNU_CHAT"
-msgstr ""
+msgstr "Hablar"
 
 msgid "MNU_MULTIPLAYER"
-msgstr ""
+msgstr "Multijugador"
 
 msgid "CNTRLMNU_SAY"
-msgstr ""
+msgstr "Decir"
 
 msgid "CNTRLMNU_CHAT_TITLE"
 msgstr ""
@@ -241,68 +262,68 @@ msgid "CNTRLMNU_OTHER_TITLE"
 msgstr ""
 
 msgid "CNTRLMNU_WEAPONS"
-msgstr ""
+msgstr "Armas"
 
 msgid "CNTRLMNU_NEXTWEAPON"
-msgstr ""
+msgstr "Arma siguiente"
 
 msgid "CNTRLMNU_PREVIOUSWEAPON"
-msgstr ""
+msgstr "Arma anterior"
 
 # Todo - make game specific
 msgid "CNTRLMNU_SLOT1"
-msgstr ""
+msgstr "Arma 1"
 
 # only show appropriate slots per game
 # 
 msgid "CNTRLMNU_SLOT2"
-msgstr ""
+msgstr "Arma 2"
 
 msgid "CNTRLMNU_SLOT3"
-msgstr ""
+msgstr "Arma 3"
 
 msgid "CNTRLMNU_SLOT4"
-msgstr ""
+msgstr "Arma 4"
 
 msgid "CNTRLMNU_SLOT5"
-msgstr ""
+msgstr "Arma 5"
 
 msgid "CNTRLMNU_SLOT6"
-msgstr ""
+msgstr "Arma 6"
 
 msgid "CNTRLMNU_SLOT7"
-msgstr ""
+msgstr "Arma 7"
 
 msgid "CNTRLMNU_SLOT8"
-msgstr ""
+msgstr "Arma 8"
 
 msgid "CNTRLMNU_SLOT9"
-msgstr ""
+msgstr "Arma 9"
 
 msgid "CNTRLMNU_SLOT0"
-msgstr ""
+msgstr "Arma 10"
 
 msgid "CNTRLMNU_INVENTORY"
-msgstr ""
+msgstr "Inventario"
 
 msgid "CNTRLMNU_USEITEM"
-msgstr ""
+msgstr "Activar objeto"
 
 msgid "CNTRLMNU_USEALLITEMS"
-msgstr ""
+msgstr "Activar todos los objetos"
 
 msgid "CNTRLMNU_NEXTITEM"
-msgstr ""
+msgstr "Objeto siguiente"
 
 msgid "CNTRLMNU_PREVIOUSITEM"
-msgstr ""
+msgstr "Objeto anterior"
 
 # most are not used yet but will be
 msgid "MAPCNTRLMNU_TITLE"
 msgstr ""
 
 msgid "MAPCNTRLMNU_CONTROLS"
-msgstr ""
+msgstr "Controles del Mapa"
 
 msgid "MAPCNTRLMNU_PANLEFT"
 msgstr ""
@@ -317,10 +338,10 @@ msgid "MAPCNTRLMNU_PANDOWN"
 msgstr ""
 
 msgid "MAPCNTRLMNU_ZOOMIN"
-msgstr ""
+msgstr "Acercar"
 
 msgid "MAPCNTRLMNU_ZOOMOUT"
-msgstr ""
+msgstr "Alejar"
 
 msgid "MAPCNTRLMNU_TOGGLEZOOM"
 msgstr ""
@@ -344,13 +365,13 @@ msgid "CNTRLMNU_CHASECAM"
 msgstr ""
 
 msgid "CNTRLMNU_SCREENSHOT"
-msgstr ""
+msgstr "Capturar pantalla"
 
 msgid "CNTRLMNU_CONSOLE"
-msgstr ""
+msgstr "Abrir consola"
 
 msgid "CNTRLMNU_PAUSE"
-msgstr ""
+msgstr "Pausar"
 
 msgid "CNTRLMNU_DISPLAY_INC"
 msgstr ""
@@ -374,13 +395,13 @@ msgid "CNTRLMNU_OPEN_DISPLAY"
 msgstr ""
 
 msgid "CNTRLMNU_QUICKSAVE"
-msgstr ""
+msgstr "Guardar Rápido"
 
 msgid "CNTRLMNU_QUICKLOAD"
-msgstr ""
+msgstr "Cargar Rápido"
 
 msgid "CNTRLMNU_EXIT_TO_MAIN"
-msgstr ""
+msgstr "Salir al Menu Principal"
 
 msgid "CNTRLMNU_TOGGLE_MESSAGES"
 msgstr ""
@@ -401,13 +422,13 @@ msgid "MOUSEMNU_SHOWBACKBUTTON"
 msgstr ""
 
 msgid "MOUSEMNU_CURSOR"
-msgstr ""
+msgstr "Cursor"
 
 msgid "MOUSEMNU_SENSITIVITY_X"
-msgstr ""
+msgstr "Sensibilidad Horizontal"
 
 msgid "MOUSEMNU_SENSITIVITY_Y"
-msgstr ""
+msgstr "Sensibilidad Vertical"
 
 msgid "MOUSEMNU_SMOOTHMOUSE"
 msgstr ""
@@ -570,7 +591,7 @@ msgid "TXT_COLOR_DULLGREEN"
 msgstr ""
 
 msgid "TXT_COLOR_BEIGE"
-msgstr "Beige"
+msgstr "Beis"
 
 msgid "TXT_COLOR_LIGHTGREEN"
 msgstr ""
@@ -1454,7 +1475,7 @@ msgid "OPTVAL_OPENGLES"
 msgstr ""
 
 msgid "MISCMNU_MERGEKEYS"
-msgstr "Combinar Alt/Ctrl/Shift izq. y der."
+msgstr "Combinar Alt/Ctrl/Shift izq. con der."
 
 msgid "MISCMNU_WINFULLSCREENTOGGLE"
 msgstr ""

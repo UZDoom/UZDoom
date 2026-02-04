@@ -65,12 +65,12 @@ By submitting a pull request, you agree to follow these guidelines.
   This can include CC0 (public domain) work.
 - **Ownership**:
   You certify that you created the asset yourself or have the legal right
-  to contribute it under the your chosen license.
+  to contribute it under your chosen license.
 - **Attribution**:
   All contributions must have an easily followed lineage.
   When editing files, no previous attribution will be removed.
 - **Noncommercial Assets**:
-  Assets bound by a noncommercial license, will be placed in wadsrc_extra.
+  Assets bound by a noncommercial license will be placed in wadsrc_extra.
 - **Derived Assets**:
   Derived assets must retain their original license and must only be used
   in the games from which they are originally derived from.
@@ -112,7 +112,7 @@ As LLMs are trained on unknown scraped data, no code generated entirely
 by an LLM may be submitted. AI may be used as a brainstorming or
 debugging aid, but all submitted code must be fundamentally authored
 and understood by the contributor to ensure it meets our quality and
-licensing standards. Code generated through a traditional mechanical
+licensing standards. Code generated through traditional mechanical
 processes is not considered AI generated.
 
 ### Testing

@@ -73,6 +73,8 @@ typedef TArray<std::tuple<PClass*, int, FPlayerColorSet>> ColorSetList;
 extern PainFlashList PainFlashes;
 extern ColorSetList ColorSets;
 
+EXTERN_CVAR(Bool, gl_enhanced_nightvision)
+
 FString GetPrintableDisplayName(PClassActor *cls);
 
 void PlayIdle(AActor *player);
@@ -143,6 +145,15 @@ enum
 	WF_USER2OK			= 1 << 9,
 	WF_USER3OK			= 1 << 10,
 	WF_USER4OK			= 1 << 11,
+};
+
+enum EFullbrightMode
+{
+	FBMODE_NONE,
+	FBMODE_DEFAULT,		// Use player preference for fullbright vs night vision.
+	FBMODE_FULLBRIGHT,
+	FBMODE_NIGHTVISION,
+	FBMODE_TORCH,
 };
 
 // The VM cannot deal with this as an invalid pointer because it performs a read barrier on every object pointer read.
@@ -381,6 +392,8 @@ public:
 	int			extralight = 0;				// so gun flashes light up areas
 	short		fixedcolormap = 0;			// can be set to REDCOLORMAP, etc.
 	short		fixedlightlevel = 0;
+	EFullbrightMode FullbrightMode = FBMODE_NONE;	// Allow manually specifying the fullbright mode.
+	bool		bForceFullbright = false;
 	int			morphTics = 0;				// player is a chicken/pig if > 0
 	PClassActor *MorphedPlayerClass = nullptr;		// [MH] (for SBARINFO) class # for this player instance when morphed
 	int			MorphStyle = 0;				// which effects to apply for this player instance when morphed
@@ -455,6 +468,20 @@ public:
 			crouchviewdelta = 0;
 			viewheight = mo ? mo->FloatVar(NAME_ViewHeight) : 0;
 		}
+	}
+
+	EFullbrightMode GetFullbrightMode() const
+	{
+		EFullbrightMode mode = FullbrightMode;
+		if (mode == FBMODE_DEFAULT)
+			mode = gl_enhanced_nightvision ? FBMODE_NIGHTVISION : FBMODE_FULLBRIGHT;
+		return mode;
+	}
+
+	void SetFullbrightMode(EFullbrightMode mode, bool force)
+	{
+		FullbrightMode = mode;
+		bForceFullbright = force;
 	}
 	
 	int GetSpawnClass();

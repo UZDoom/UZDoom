@@ -1869,6 +1869,7 @@ OptionMenu "CompatibilityOptions" protected
 {
 	Position -35
 	Title "$CMPTMNU_TITLE"
+	Option "$CMPTMNU_AUTO",							"sv_autocompat", "OnOff"
 	Option "$CMPTMNU_MODE",							"compatmode", "CompatModes", "", 1
 	StaticText " "
 	Submenu "$CMPTMNU_ACTORBEHAVIOR",				"CompatActorMenu"

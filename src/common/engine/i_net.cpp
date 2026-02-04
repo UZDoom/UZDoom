@@ -23,50 +23,42 @@
 **
 */
 
-/* [Petteri] Check if compiling for Win32:	*/
-#if defined(__WINDOWS__) || defined(__NT__) || defined(_MSC_VER) || defined(_WIN32)
-#ifndef __WIN32__
-#	define __WIN32__
-#endif
-#endif
-/* Follow #ifdef __WIN32__ marks */
-
 #include <stdlib.h>
 #include <string.h>
 
-/* [Petteri] Use Winsock for Win32: */
-#ifdef __WIN32__
+/* [Petteri] Use Winsock if compiling for Win32: */
+#ifdef _WIN32
 #	define WIN32_LEAN_AND_MEAN
+#	define NOMINMAX
 #	include <windows.h>
 #	include <winsock.h>
 #else
-#	include <sys/socket.h>
-#	include <netinet/in.h>
 #	include <arpa/inet.h>
 #	include <errno.h>
-#	include <unistd.h>
 #	include <netdb.h>
+#	include <netinet/in.h>
 #	include <sys/ioctl.h>
+#	include <sys/socket.h>
+#	include <unistd.h>
 #	ifdef __sun
 #		include <fcntl.h>
 #	endif
 #endif
 
-#include "i_system.h"
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "engineerrors.h"
+#include "i_interface.h"
+#include "i_net.h"
 #include "m_argv.h"
 #include "m_crc32.h"
-#include "st_start.h"
-#include "engineerrors.h"
-#include "cmdlib.h"
-#include "printf.h"
-#include "i_interface.h"
-#include "c_cvars.h"
-#include "i_net.h"
 #include "m_random.h"
+#include "printf.h"
 #include "version.h"
+#include "widgets/netstartwindow.h"
 
 /* [Petteri] Get more portable: */
-#ifndef __WIN32__
+#ifndef _WIN32
 typedef int SOCKET;
 #define SOCKET_ERROR		-1
 #define INVALID_SOCKET		-1
@@ -82,7 +74,7 @@ typedef int SOCKET;
 #define IPPORT_USERRESERVED 5000
 #endif
 
-#ifdef __WIN32__
+#ifdef _WIN32
 # include "common/scripting/dap/GameEventEmit.h"
 typedef int socklen_t;
 const char* neterror(void);
@@ -275,7 +267,7 @@ static void BuildAddress(sockaddr_in& address, const char* addrName)
 
 static void StartNetwork(bool autoPort)
 {
-#ifdef __WIN32__
+#ifdef _WIN32
 	WSADATA data;
 	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()) {
 		if (WSAStartup(0x0101, &data))
@@ -304,7 +296,7 @@ void CloseNetwork()
 		MySocket = INVALID_SOCKET;
 		netgame = false;
 	}
-#ifdef __WIN32__
+#ifdef _WIN32
 	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()){
 		WSACleanup();
 	}
@@ -342,32 +334,36 @@ static void I_NetLog(const char* text, ...)
 // Gracefully closes the net window so that any error messaging can be properly displayed.
 static void I_NetError(const char* error)
 {
-	StartWindow->NetClose();
+	NetStartWindow::NetClose();
 	I_FatalError("%s", error);
 }
 
 static void I_NetInit(const char* msg, bool host)
 {
-	StartWindow->NetInit(msg, host);
+	Printf("NetLobby:: %s\n", msg);
+	NetStartWindow::NetInit(msg, host);
 }
 
 // todo: later these must be dispatched by the main menu, not the start screen.
 // Updates the general status of the lobby.
 static void I_NetMessage(const char* msg)
 {
-	StartWindow->NetMessage(msg);
+	Printf("NetLobby:: %s\n", msg);
+	NetStartWindow::NetMessage(msg);
 }
 
 // Listen for incoming connections while the lobby is active. The main thread needs to be locked up
 // here to prevent the engine from continuing to start the game until everyone is ready.
 static bool I_NetLoop(bool (*loopCallback)(void*), void* data)
 {
-	return StartWindow->NetLoop(loopCallback, data);
+	return NetStartWindow::NetLoop(loopCallback, data);
 }
 
 // A new client has just entered the game, so add them to the player list.
 static void I_NetClientConnected(int client, unsigned int charLimit = 0u)
 {
+	Printf("NetLobby:: Client '%s' connected.\n", Net_GetClientName(client, 0u));
+
 	const char* name = Net_GetClientName(client, charLimit);
 	unsigned int flags = CFL_NONE;
 	if (client == 0)
@@ -375,28 +371,29 @@ static void I_NetClientConnected(int client, unsigned int charLimit = 0u)
 	if (client == consoleplayer)
 		flags |= CFL_CONSOLEPLAYER;
 
-	StartWindow->NetConnect(client, name, flags, Connected[client].Status);
+	NetStartWindow::NetConnect(client, name, flags, Connected[client].Status);
 }
 
 // A client changed ready state.
 static void I_NetClientUpdated(int client)
 {
-	StartWindow->NetUpdate(client, Connected[client].Status);
+	NetStartWindow::NetUpdate(client, Connected[client].Status);
 }
 
 static void I_NetClientDisconnected(int client)
 {
-	StartWindow->NetDisconnect(client);
+	Printf("NetLobby:: Client '%s' disconnected.\n", Net_GetClientName(client, 0u));
+	NetStartWindow::NetDisconnect(client);
 }
 
 static void I_NetUpdatePlayers(int current, int limit)
 {
-	StartWindow->NetProgress(current, limit);
+	NetStartWindow::NetProgress(current, limit);
 }
 
 static bool I_ShouldStartNetGame()
 {
-	return StartWindow->ShouldStartNet();
+	return NetStartWindow::ShouldStartNet();
 }
 
 static void I_GetKickClients(TArray<int>& clients)
@@ -404,7 +401,7 @@ static void I_GetKickClients(TArray<int>& clients)
 	clients.Clear();
 
 	int c = -1;
-	while ((c = StartWindow->GetNetKickClient()) != -1)
+	while ((c = NetStartWindow::GetNetKickClient()) != -1)
 		clients.Push(c);
 }
 
@@ -413,13 +410,13 @@ static void I_GetBanClients(TArray<int>& clients)
 	clients.Clear();
 
 	int c = -1;
-	while ((c = StartWindow->GetNetBanClient()) != -1)
+	while ((c = NetStartWindow::GetNetBanClient()) != -1)
 		clients.Push(c);
 }
 
 void I_NetDone()
 {
-	StartWindow->NetDone();
+	NetStartWindow::NetDone();
 }
 
 void I_ClearClient(size_t client)
@@ -1249,7 +1246,7 @@ bool I_InitNetwork()
 	return true;
 }
 
-#ifdef __WIN32__
+#ifdef _WIN32
 const char* neterror()
 {
 	static char neterr[16];

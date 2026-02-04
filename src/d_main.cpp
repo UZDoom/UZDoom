@@ -52,7 +52,7 @@
 #include "c_dispatch.h"
 #include "cmdlib.h"
 #include "common/scripting/dap/DebugServer.h"
-#include "common/widgets/errorwindow.h"
+#include "widgets/errorwindow.h"
 #include "d_buttons.h"
 #include "d_dehacked.h"
 #include "d_event.h"
@@ -3537,9 +3537,6 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<std::string>& allw
 		exec = NULL;
 	}
 
-	if (!(restart || norun))
-		V_Init2();
-
 	// [RH] Initialize localizable strings.
 	GStrings.LoadStrings(fileSystem, language);
 
@@ -3561,23 +3558,8 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<std::string>& allw
 
 	TexMan.Init();
 
-	if (!(batchrun || norun)) Printf ("V_Init: allocate screen.\n");
-	if (!(restart || norun))
-	{
-		screen->CompileNextShader();
-	}
-	else if(!norun)
-	{
-		// Update screen palette when restarting
-		screen->UpdatePalette();
-	}
-
 	// Base systems have been inited; enable cvar callbacks
 	FBaseCVar::EnableCallbacks ();
-
-	StartScreen = nostartscreen? nullptr : GetGameStartScreen(per_shader_progress > 0 ? max_progress * 10 / 9 : max_progress + 3);
-	setmodeneeded = true;
-	if (StartScreen != nullptr) StartScreen->Render();
 
 	// +compatmode cannot be used on the command line, so use this as a substitute
 	auto compatmodeval = Args->CheckValue(FArg_compatmode);
@@ -3775,6 +3757,45 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<std::string>& allw
 	// [RH] Lock any cvars that should be locked now that we're
 	// about to begin the game.
 	FBaseCVar::EnableNoSet ();
+
+	// [Sal] FIXME: The window used to be created much earlier.
+	// 
+	// This makes more sense for the loading screen, but makes no sense
+	// for the netgame lobby. The lobby creates its own window, and takes
+	// up the main thread. This causes issues that range from annoying
+	// (like a black, uninteractable box in the background when playing
+	// a netgame), to destructive (like the GL context being clobbered
+	// on Linux and causing the game to crash).
+	//
+	// The solution for now is to simply create the window extremely late.
+	// This undoes most of the loading screen code, but improves stability
+	// in every other aspect.
+	// 
+	// Since all of the loading screen code constantly checks for null,
+	// I've left it as is so it can be reused as a reference when it
+	// gets overhauled. There's some potential ways we could re-introduce
+	// the loading screen, but they all will be easier if we move away
+	// from ZWidgets first. (Either introducing a separate loading bar
+	// window, or see if we aren't using initializing OpenGL for the
+	// replacement widget framework, or clean up the code to handle
+	// swapping between multiple GL contexts)
+	if (!(restart || norun))
+		V_Init2();
+
+	if (!(batchrun || norun)) Printf ("V_Init: allocate screen.\n");
+	if (!(restart || norun))
+	{
+		screen->CompileNextShader();
+	}
+	else if(!norun)
+	{
+		// Update screen palette when restarting
+		screen->UpdatePalette();
+	}
+
+	StartScreen = nostartscreen? nullptr : GetGameStartScreen(per_shader_progress > 0 ? max_progress * 10 / 9 : max_progress + 3);
+	setmodeneeded = true;
+	if (StartScreen != nullptr) StartScreen->Render();
 
 	if (norun || batchrun)
 	{

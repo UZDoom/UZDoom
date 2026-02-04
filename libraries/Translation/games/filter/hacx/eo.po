@@ -2,48 +2,40 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-23 14:51+0000\n"
+"PO-Revision-Date: 2025-12-29 01:00+0000\n"
 "Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
-"Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/hacx/eo/"
-">\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/doom-engine-"
+"games/hacx-filter/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: eo\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.1\n"
+"HeaderCode: eo\n"
 
 msgid "QUITMSG1"
 msgstr "Ĉu ĉi tiuj cimoj estas tro forta por vi?"
 
 msgid "QUITMSG"
 msgstr ""
-"Ĉu vi certas, ke vi volas\n"
+"Ĉu vi certas, ke vi volas\\n"
 "malkonektiĝi el la batalo?"
 
 msgid "QUITMSG2"
 msgstr "Vi provas rezigni? Kaj vi nomas vin kodrompisto?"
 
 msgid "QUITMSG3"
-msgstr ""
-"Revenu ĉi tien antaŭ ol mi sendos\n"
-"viruson en vian posttubon!"
+msgstr "Revenu ĉi tien antaŭ ol mi sendos viruson en vian posttubon!"
 
 msgid "QUITMSG4"
-msgstr ""
-"Veraj kodrompistoj\n"
-"neniam fuĝas el batalo."
+msgstr "Veraj kodrompistoj neniam fuĝas el batalo."
 
 msgid "QUITMSG5"
-msgstr ""
-"Nu! Vi ankoraŭ ne vidis\n"
-"la plej bonan parton!"
+msgstr "Nu! Vi ankoraŭ ne vidis la plej bonan parton!"
 
 msgid "QUITMSG6"
-msgstr ""
-"Se vi rezignas nun, tiam\n"
-"Interret-spaco estos detruita!"
+msgstr "Se vi rezignas nun, tiam Interret-spaco estos detruita!"
 
 msgid "QUITMSG7"
 msgstr "ĜINIO sendas plej siajn konsiderojn, fiulo!"
@@ -55,9 +47,7 @@ msgid "QUITMSG9"
 msgstr "Kio? Ĉu vi preferas, ke vi revenu al la plumon?"
 
 msgid "QUITMSG10"
-msgstr ""
-"Vi estus devinta preni\n"
-"la bluan pilolon."
+msgstr "Vi estus devinta preni la bluan pilolon."
 
 msgid "QUITMSG11"
 msgstr "La nomo de la ludo ne estas Tiku kaj Kuru!"
@@ -66,7 +56,7 @@ msgid "QUITMSG12"
 msgstr "Ne zorgu. Savi la mondon povas atendi, ĉu ne?"
 
 msgid "QUITMSG13"
-msgstr "Tempas, ke niaj vojoj agu kiel la reto kaj dividu."
+msgstr "Tempas, ke niaj vojoj agu kiel la reto kaj dividu!"
 
 msgid "QUITMSG14"
 msgstr "Ne iru forgesi HacX nun!"
@@ -87,7 +77,7 @@ msgid "OB_WATER"
 msgstr "%o naĝis kiel briko."
 
 msgid "OB_SLIME"
-msgstr "%o iĝis nuklea"
+msgstr "%o iĝis nuklea."
 
 msgid "OB_LAVA"
 msgstr "%o spertis varman banon."
@@ -117,7 +107,7 @@ msgid "OB_MONSTRUCT"
 msgstr "%o ricevis monstran cybernetik-raydist-postaĵ-piedbaton."
 
 msgid "OB_ICE"
-msgstr "%o iĝis ICE-ita"
+msgstr "%o iĝis ICE-ita."
 
 msgid "OB_BUZZER"
 msgstr "%o sentas sin iomete vibretita."
@@ -132,7 +122,7 @@ msgid "OB_GLASS"
 msgstr "%o donis al si vitran makzelon."
 
 msgid "OB_MANIAC"
-msgstr "La vivo-membrecon de %o estas finigita"
+msgstr "La vivo-membrecon de %o estas finigita."
 
 msgid "OB_MANIACHIT"
 msgstr "%o mortis per iu malcerta maniero, kiun mi ne povas kompreni."
@@ -374,7 +364,7 @@ msgstr ""
 "Homaj neŭraj likvaĵoj nutras la cimojn!\n"
 "Ne mirinde, ke la urbo ŝajnas iĝi iomete\n"
 "neloĝata. Raportu al la kimisiono.\n"
-"Singardu..."
+"Singardu...\n"
 
 msgid "X3TEXT"
 msgstr ""
@@ -421,7 +411,7 @@ msgid "TXT_HACXMAP05"
 msgstr "Cibernetika Cirko"
 
 msgid "TXT_HACXMAP06"
-msgstr ""
+msgstr "Digi-Ota"
 
 msgid "TXT_HACXMAP07"
 msgstr "La Grandega Muro"
@@ -436,7 +426,7 @@ msgid "TXT_HACXMAP10"
 msgstr "Anarkia Sonĝo"
 
 msgid "TXT_HACXMAP11"
-msgstr ""
+msgstr "Notus Us!"
 
 msgid "TXT_HACXMAP12"
 msgstr "Gotika Spaliro"
@@ -457,7 +447,7 @@ msgid "TXT_HACXMAP17"
 msgstr "Rivero de Sango"
 
 msgid "TXT_HACXMAP18"
-msgstr ""
+msgstr "Bizarro"
 
 msgid "TXT_HACXMAP19"
 msgstr "La Militĉambroj"
@@ -469,7 +459,7 @@ msgid "TXT_HACXMAP31"
 msgstr "Ĉambro de Elsekigo"
 
 msgid "STSTR_CLEV"
-msgstr "Nun Ĝisirante..."
+msgstr "Nun Ĝisirante...\n"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
@@ -496,7 +486,7 @@ msgstr "Elekto: Malebla"
 
 # Should probably not be translated...
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "Kreskigu the laŭtecon\n"
 
 msgid "STSTR_KFAADDED"
 msgstr "INIC-Modo de Tiku kaj Buĉu"
@@ -529,7 +519,7 @@ msgstr ""
 "Ĉu vi certas? Vi ne povas stari\n"
 "kontraŭ ĉi tiu malfacileco, kodrompisto!\n"
 "\n"
-"Premu Y por morti."
+"Premu Y por morti. \n"
 
 # For most languages the original Doom text should suffice.
 msgid "QSPROMPT"
@@ -555,7 +545,7 @@ msgid "CC_ANDROID"
 msgstr "Androido"
 
 msgid "CC_ICE"
-msgstr ""
+msgstr "ICE"
 
 msgid "CC_BUZZER"
 msgstr "Zumilo"

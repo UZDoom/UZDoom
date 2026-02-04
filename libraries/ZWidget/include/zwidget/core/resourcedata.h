@@ -10,5 +10,5 @@ struct SingleFontData
 	std::string language;
 };
 
-std::vector<SingleFontData> LoadWidgetFontData(const std::string& name);
-std::vector<uint8_t> LoadWidgetData(const std::string& name);
+std::vector<SingleFontData> LoadWidgetFontData(const std::string& name, bool root = false);
+std::vector<uint8_t> LoadWidgetData(const std::string& name, bool root = false);

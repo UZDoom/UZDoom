@@ -22,17 +22,17 @@
 **
 */
 
+#include <SDL2/SDL.h>
+
 #include <dirent.h>
+#include <fcntl.h>
 #include <fnmatch.h>
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/wait.h>
-#include <unistd.h>
-
-#include <fcntl.h>
-#include <stdarg.h>
 #include <sys/ioctl.h>
+#include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
 
@@ -46,19 +46,15 @@
 #include <termios.h>
 #endif
 
-#include <SDL2/SDL.h>
-
 #include "c_cvars.h"
-#include "cmdlib.h"
 #include "i_interface.h"
-#include "i_sound.h"
-#include "launcherwindow.h"
-#include "m_argv.h"
 #include "palutil.h"
 #include "printf.h"
 #include "st_start.h"
 #include "v_font.h"
-#include "version.h"
+#include "vm.h"
+#include "widgets/errorwindow.h"
+#include "widgets/launcherwindow.h"
 
 #if defined(__APPLE__)
 int I_PickIWad_Cocoa (WadStuff *wads, int numwads, bool showwin, int defaultiwad);
@@ -71,6 +67,8 @@ CVAR(Bool, con_4bitansi, false, CVAR_GLOBALCONFIG|CVAR_ARCHIVE);
 EXTERN_CVAR(Bool, longsavemessages)
 
 extern FStartupScreen *StartWindow;
+
+static TArray<FString> g_AllPrintOutput;
 
 void I_SetIWADInfo()
 {
@@ -94,6 +92,15 @@ extern "C" int I_FileAvailable(const char* filename)
 // I_Error
 //
 
+static bool g_QueueRestart = false;
+
+bool SDL_I_CheckForRestart(void)
+{
+	bool ret = g_QueueRestart;
+	g_QueueRestart = false;
+	return ret;
+}
+
 #ifdef __APPLE__
 void Mac_I_FatalError(const char* errortext);
 #endif
@@ -101,16 +108,31 @@ void Mac_I_FatalError(const char* errortext);
 #ifdef __unix__
 void Unix_I_FatalError(const char* errortext)
 {
-	// Close window or exit fullscreen and release mouse capture
-	SDL_QuitSubSystem(SDL_INIT_VIDEO);
+	if (CVMAbortException::stacktrace.IsNotEmpty())
+	{
+		Printf("%s", CVMAbortException::stacktrace.GetChars());
+	}
 
-	FString title;
-	title << GAMENAME " " << GetVersionString();
+	if (!batchrun)
+	{
+		size_t totalsize = 0;
+		for (const FString& line : g_AllPrintOutput)
+			totalsize += line.Len();
 
-	if (SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, title.GetChars(), errortext, NULL) < 0)
+		std::string alltext;
+		alltext.reserve(totalsize);
+		for (const FString& line : g_AllPrintOutput)
+			alltext.append(line.GetChars(), line.Len());
+
+		g_QueueRestart = ErrorWindow::ExecModal(errortext, alltext);
+	}
+	else
 	{
 		printf("\n%s\n", errortext);
 	}
+
+	// Close window or exit fullscreen and release mouse capture
+	SDL_QuitSubSystem(SDL_INIT_VIDEO);
 }
 #endif
 
@@ -222,6 +244,8 @@ void RedrawProgressBar(int CurPos, int MaxPos)
 
 void I_PrintStr(const char *cp)
 {
+	g_AllPrintOutput.Push(cp);
+
 	const char * srcp = cp;
 	FString printData = "";
 	bool terminal = isatty(STDOUT_FILENO);

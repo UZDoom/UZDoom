@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-17 13:00+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2026-01-25 07:01+0000\n"
+"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.1-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: chs\n"
 
 msgid "PRESSYN"
@@ -77,10 +77,10 @@ msgid "SAVECOMMENT_TIME"
 msgstr "时间"
 
 msgid "MNU_LOADGAME"
-msgstr "加载存档"
+msgstr "加载游戏"
 
 msgid "MNU_SAVEGAME"
-msgstr "保存存档"
+msgstr "保存游戏"
 
 msgid "MNU_NOPICTURE"
 msgstr "无图像"
@@ -818,7 +818,7 @@ msgid "SNDMNU_ADVANCED"
 msgstr "高级选项"
 
 msgid "SNDMNU_MODREPLAYER"
-msgstr "MOD播放选项"
+msgstr "模块播放器选项"
 
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "MIDI播放选项"
@@ -1282,10 +1282,10 @@ msgid "GLTEXMNU_ANISOTROPIC"
 msgstr "各项异性过滤"
 
 msgid "OPTVAL_NONENEARESTMIPMAP"
-msgstr "无(mip映射使用最邻近)"
+msgstr "无(最近mipmap)"
 
 msgid "OPTVAL_NONELINEARMIPMAP"
-msgstr "无(mip映射使用双线性)"
+msgstr "无(线性mipmap)"
 
 msgid "OPTVAL_NONETRILINEAR"
 msgstr "无(三线性)"
@@ -1535,7 +1535,7 @@ msgid "REVMNU_SELECT"
 msgstr "选择环境"
 
 msgid "REVMNU_TEST"
-msgstr "测试回声"
+msgstr "测试环境"
 
 msgid "REVMNU_EDIT"
 msgstr "编辑环境"
@@ -1861,10 +1861,10 @@ msgid "REQUIRED_CHARACTERS"
 msgstr ""
 
 msgid "OPTMNU_FULLOPTIONS"
-msgstr "菜单列出完整选项"
+msgstr "完整选项菜单"
 
 msgid "OPTMNU_SIMPLEON"
-msgstr "菜单列出简要选项"
+msgstr "简要选项菜单"
 
 msgid "OPTMNU_OPENCONFIG"
 msgstr "浏览游戏配置"
@@ -2006,7 +2006,7 @@ msgstr "记住参数"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr "加载支持的WADs"
+msgstr "加载支持的WAD"
 
 msgid "PICKER_TAB_MULTI"
 msgstr "多人游戏"
@@ -2064,7 +2064,7 @@ msgid "PICKER_TEAM"
 msgstr "团队#："
 
 msgid "PICKER_ALTDM"
-msgstr "使用替换的死斗规则"
+msgstr "使用替代死斗规则"
 
 msgid "PICKER_PLAYERS"
 msgstr "最多玩家："
@@ -2135,3 +2135,9 @@ msgstr "关于"
 
 msgid "PICKER_TAB_RELEASE"
 msgstr "发布说明"
+
+msgid "ACCMNU_TITLE"
+msgstr "辅助选项"
+
+msgid "ACCMNU_RESET"
+msgstr "重置辅助选项"

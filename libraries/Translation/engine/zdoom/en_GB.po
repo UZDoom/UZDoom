@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-20 20:24+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2025-12-25 06:00+0000\n"
+"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/en_GB/>\n"
 "Language: en_GB\n"
@@ -530,7 +530,7 @@ msgid "SCORE_NAME"
 msgstr "Name"
 
 msgid "SCORE_DELAY"
-msgstr "Delay (ms)"
+msgstr "Delay"
 
 msgid "SCORE_FRAGS"
 msgstr "Frags"
@@ -739,7 +739,7 @@ msgid "GOTBACKPACK"
 msgstr "Picked up a backpack full of ammo!"
 
 msgid "GOTBFG9000"
-msgstr "You got the BFG9000! Oh, yes."
+msgstr "You've got the BFG9000! Oh, yes."
 
 msgid "GOTCHAINGUN"
 msgstr "You've got the chaingun!"
@@ -2247,7 +2247,7 @@ msgid "TAG_TELEPORTERBEACON"
 msgstr "Teleporter Beacon"
 
 msgid "TAG_METALARMOR"
-msgstr "Metal Armor"
+msgstr "Metal Armour"
 
 msgid "TAG_LEATHER"
 msgstr "Leather Armor"
@@ -3347,7 +3347,7 @@ msgid "CMPTMNU_SILENTINSTANTFLOORS"
 msgstr "Inst. moving floors are not silent"
 
 msgid "CMPTMNU_SECTORSOUNDS"
-msgstr "Sector sounds use center as source"
+msgstr "Sector sounds use centre as source"
 
 msgid "CMPTMNU_SOUNDCUTOFF"
 msgstr "Sounds stop when actor vanishes"
@@ -5332,3 +5332,63 @@ msgstr "Contrast"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Saturation"
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Adjust until this looks like a uniform Grey colour."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Adjusts the intensity of colours, making the image look more vivid or muted. "
+"Adjust to personal taste."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Adjusts perceived difference between similar colours. Controls how sharp/"
+"washed out the images looks. Adjust to personal taste."
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Image Calibration"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "From a normal viewing distance, adjust these sliders."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr "Upscaling/Supersampling may result in incorrect output."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Please disable them before adjusting."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+"Compensates for your monitor's limitations. Adjust until vertical grey "
+"blocks fade. Do not use this to make the game brighter, only to ensure the "
+"image is calibrated for your setup."
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Blackpoint compensation"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Compensates for monitors that fail to display dark pixels correctly. Adjust "
+"until diagonal white blocks fade. Do not use this to make the game brighter, "
+"only to ensure the image is calibrated for your setup."
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "Whitepoint compensation"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"Compensates for monitors that fail to display bright pixels correctly. "
+"Adjust until diagonal black blocks fade. Do not use this to make the game "
+"brighter, only to ensure the image is calibrated for your setup."
+
+msgid "OPTMNU_RESETALL"
+msgstr "Reset All"
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "Resets all options in this menu to default settings."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Applies linear brightness adjustment. Adjust to personal taste, or to see in "
+"the dark."

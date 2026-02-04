@@ -21,24 +21,25 @@
 **
 */
 
-#include "i_mainwindow.h"
-#include "resource.h"
-#include "startupinfo.h"
-#include "gstrings.h"
-#include "palentry.h"
-#include "st_start.h"
-#include "i_input.h"
-#include "version.h"
-#include "utf8.h"
-#include "v_font.h"
-#include "i_net.h"
-#include "engineerrors.h"
-#include "common/widgets/errorwindow.h"
-#include "common/widgets/netstartwindow.h"
+
 #include <richedit.h>
 #include <shellapi.h>
 #include <commctrl.h>
 #include <dwmapi.h>
+
+#include "engineerrors.h"
+#include "gstrings.h"
+#include "i_input.h"
+#include "i_mainwindow.h"
+#include "i_net.h"
+#include "palentry.h"
+#include "resource.h"
+#include "st_start.h"
+#include "startupinfo.h"
+#include "utf8.h"
+#include "v_font.h"
+#include "version.h"
+#include "widgets/errorwindow.h"
 
 #pragma comment(lib, "dwmapi.lib")
 
@@ -138,66 +139,6 @@ void MainWindow::ShowErrorPane(const char* text)
 		alltext.append(line.GetChars(), line.Len());
 
 	restartrequest = ErrorWindow::ExecModal(text, alltext);
-}
-
-void MainWindow::NetInit(const char* message, bool host)
-{
-	NetStartWindow::NetInit(message, host);
-}
-
-void MainWindow::NetMessage(const char* message)
-{
-	NetStartWindow::NetMessage(message);
-}
-
-void MainWindow::NetConnect(int client, const char* name, unsigned flags, int status)
-{
-	NetStartWindow::NetConnect(client, name, flags, status);
-}
-
-void MainWindow::NetUpdate(int client, int status)
-{
-	NetStartWindow::NetUpdate(client, status);
-}
-
-void MainWindow::NetDisconnect(int client)
-{
-	NetStartWindow::NetDisconnect(client);
-}
-
-void MainWindow::NetProgress(int cur, int limit)
-{
-	NetStartWindow::NetProgress(cur, limit);
-}
-
-void MainWindow::NetDone()
-{
-	NetStartWindow::NetDone();
-}
-
-void MainWindow::NetClose()
-{
-	NetStartWindow::NetClose();
-}
-
-bool MainWindow::ShouldStartNet()
-{
-	return NetStartWindow::ShouldStartNet();
-}
-
-int MainWindow::GetNetKickClient()
-{
-	return NetStartWindow::GetNetKickClient();
-}
-
-int MainWindow::GetNetBanClient()
-{
-	return NetStartWindow::GetNetBanClient();
-}
-
-bool MainWindow::NetLoop(bool (*loopCallback)(void*), void* data)
-{
-	return NetStartWindow::NetLoop(loopCallback, data);
 }
 
 bool MainWindow::CheckForRestart()

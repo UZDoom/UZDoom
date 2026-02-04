@@ -1,0 +1,187 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-01-23 19:05+0000\n"
+"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Kabyle <https://hosted.weblate.org/projects/doom-engine-games/"
+"doom-2/kab/>\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
+
+msgid "TXT_D2E1"
+msgstr "Ǧahennama deg lqaɛa"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr ""
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr ""
+
+msgid "HUSTR_2"
+msgstr ""
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr ""
+
+msgid "HUSTR_4"
+msgstr ""
+
+msgid "HUSTR_5"
+msgstr ""
+
+msgid "HUSTR_6"
+msgstr ""
+
+msgid "HUSTR_7"
+msgstr ""
+
+msgid "HUSTR_8"
+msgstr ""
+
+msgid "HUSTR_9"
+msgstr ""
+
+msgid "HUSTR_10"
+msgstr ""
+
+# Alternative title:
+# Circle of Death
+msgid "HUSTR_11"
+msgstr ""
+
+msgid "HUSTR_12"
+msgstr ""
+
+msgid "HUSTR_13"
+msgstr ""
+
+msgid "HUSTR_14"
+msgstr ""
+
+msgid "HUSTR_15"
+msgstr ""
+
+msgid "HUSTR_16"
+msgstr ""
+
+msgid "HUSTR_17"
+msgstr ""
+
+msgid "HUSTR_18"
+msgstr ""
+
+msgid "HUSTR_19"
+msgstr ""
+
+msgid "HUSTR_20"
+msgstr ""
+
+msgid "HUSTR_21"
+msgstr ""
+
+msgid "HUSTR_22"
+msgstr ""
+
+msgid "HUSTR_23"
+msgstr ""
+
+msgid "HUSTR_24"
+msgstr ""
+
+msgid "HUSTR_25"
+msgstr ""
+
+msgid "HUSTR_26"
+msgstr ""
+
+msgid "HUSTR_27"
+msgstr ""
+
+msgid "HUSTR_28"
+msgstr ""
+
+msgid "HUSTR_29"
+msgstr ""
+
+msgid "HUSTR_30"
+msgstr ""
+
+msgid "HUSTR_31"
+msgstr ""
+
+msgid "HUSTR_32"
+msgstr ""
+
+msgid "HUSTR_31B"
+msgstr ""
+
+msgid "HUSTR_32B"
+msgstr ""
+
+msgid "HUSTR_33"
+msgstr ""
+
+msgid "NHUSTR_1"
+msgstr ""
+
+msgid "NHUSTR_2"
+msgstr ""
+
+msgid "NHUSTR_3"
+msgstr ""
+
+msgid "NHUSTR_4"
+msgstr ""
+
+msgid "NHUSTR_5"
+msgstr ""
+
+msgid "NHUSTR_6"
+msgstr ""
+
+msgid "NHUSTR_7"
+msgstr ""
+
+msgid "NHUSTR_8"
+msgstr ""
+
+msgid "NHUSTR_9"
+msgstr ""
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""

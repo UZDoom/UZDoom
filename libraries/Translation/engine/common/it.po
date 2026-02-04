@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:43+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/common/it/"
-">\n"
+"PO-Revision-Date: 2026-01-25 03:01+0000\n"
+"Last-Translator: StarFang208 <polaritymanx@yahoo.it>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/common/"
+"it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 "HeaderCode: it\n"
 
 msgid "PRESSYN"
@@ -241,7 +241,7 @@ msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Personalizza i controlli di azione"
 
 msgid "CNTRLMNU_CHAT"
-msgstr ""
+msgstr "Chat"
 
 msgid "MNU_MULTIPLAYER"
 msgstr "Multigiocatore"
@@ -592,7 +592,7 @@ msgid "TXT_COLOR_DULLGREEN"
 msgstr "Verde pallido"
 
 msgid "TXT_COLOR_BEIGE"
-msgstr ""
+msgstr "Beige"
 
 msgid "TXT_COLOR_LIGHTGREEN"
 msgstr "Verde chiaro"
@@ -709,25 +709,25 @@ msgid "SNDMNU_MUSENABLED"
 msgstr "Abilita la musica"
 
 msgid "OPTVAL_4000HZ"
-msgstr ""
+msgstr "4000 Hz"
 
 msgid "OPTVAL_8000HZ"
-msgstr ""
+msgstr "8000 Hz"
 
 msgid "OPTVAL_11025HZ"
-msgstr ""
+msgstr "11025 Hz"
 
 msgid "OPTVAL_22050HZ"
-msgstr ""
+msgstr "22050 Hz"
 
 msgid "OPTVAL_32000HZ"
-msgstr ""
+msgstr "32000 Hz"
 
 msgid "OPTVAL_44100HZ"
-msgstr ""
+msgstr "44100 Hz"
 
 msgid "OPTVAL_48000HZ"
-msgstr ""
+msgstr "48000 Hz"
 
 msgid "OPTVAL_64SAMPLES"
 msgstr ""
@@ -2108,3 +2108,9 @@ msgstr ""
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr ""
+
+msgid "ACCMNU_TITLE"
+msgstr "Opzioni Accessibilità"
+
+msgid "ACCMNU_RESET"
+msgstr "Ripristina opzioni Accessibilità"
