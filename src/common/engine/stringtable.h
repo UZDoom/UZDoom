@@ -33,6 +33,7 @@
 #include "name.h"
 #include "tarray.h"
 #include "zstring.h"
+#include "m_crc32.h"
 
 struct TableElement
 {
@@ -53,15 +54,23 @@ struct StringMacro
 	FString Replacements[4];
 };
 
+struct LangID
+{
+	FName name;
+	uint32_t original;   // full eitf langtag
+	uint32_t normalized; // all the bits we support (aa-bbbb-cc) a:lang,b:script,c:region
+	uint32_t script;     // only the language and script (aa-bbbb)
+	uint32_t language;   // just the language (aa)
+};
 
 class FStringTable
 {
 public:
 	enum : uint32_t
 	{
-		default_table = MAKE_ID('*', '*', 0, 0),
-		global_table = MAKE_ID('*', 0, 0, 0),
-		override_table = MAKE_ID('*', '*', '*', 0)
+		default_table = CalcCRC32("**"),
+		global_table = CalcCRC32("*"),
+		override_table = CalcCRC32("***")
 	};
 
 	using LangMap = TMap<uint32_t, StringMap>;
@@ -83,7 +92,7 @@ public:
 	const char* GetString(const FString& name) const { return GetString(name.GetChars()); }
 	bool exists(const char *name);
 
-	void InsertString(int filenum, int langid, FName label, const FString& string);
+	void InsertString(int filenum, uint32_t langid, FName label, const FString& string);
 	void SetDefaultGender(int gender) { defaultgender = gender; }
 
 private:
@@ -93,13 +102,17 @@ private:
 	LangMap allStrings;
 	TArray<std::pair<uint32_t, StringMap*>> currentLanguageSet;
 	int defaultgender = 0;
+	TMap<FName, LangID> langMap;
+	TMap<uint32_t, LangID*> langRevMap;
+
+	LangID GetID(FString lang);
 
 	void LoadLanguage (int lumpnum, const char* buffer, size_t size);
 	TArray<TArray<FString>> parseCSV(const char* buffer, size_t size);
 	bool ParseLanguageCSV(int filenum, const char* buffer, size_t size);
 
 	bool readMacros(const char* buffer, size_t size);
-	void DeleteString(int langid, FName label);
+	void DeleteString(uint32_t langid, FName label);
 	void DeleteForLabel(int filenum, FName label);
 
 	static size_t ProcessEscapes (char *str);
