@@ -1319,16 +1319,15 @@ if(EMSCRIPTEN)
 			-sINITIAL_MEMORY=1GB
 			-sALLOW_MEMORY_GROWTH
 			-sMODULARIZE
-			-sEXPORT_ALL
 			-sENVIRONMENT=web
-			-sEXPORTED_RUNTIME_METHODS=callMain,addRunDependency,removeRunDependency
+			-sEXPORTED_RUNTIME_METHODS=callMain,addRunDependency,removeRunDependency,ENV,FS,PATH
 			-lidbfs.js
 			-sEXIT_RUNTIME
 			-sNO_DISABLE_EXCEPTION_CATCHING
 			-sMAX_WEBGL_VERSION=2
 			-sMIN_WEBGL_VERSION=2
 			-sFULL_ES2
-			$<$<NOT:$<BOOL:${DYN_SNDFILE}>>:-L$ENV{EMSDK}/upstream/emscripten/cache/sysroot/lib/ -lFLAC -lvorbis -lvorbisfile -lopus -logg>
+			$<$<NOT:$<BOOL:${DYN_SNDFILE}>>:-L$ENV{EMSDK}/upstream/emscripten/cache/sysroot/lib/ -lFLAC -lvorbis -lvorbisfile -lvorbisenc -lopus -logg>
 			$<$<CONFIG:RELEASE>:-O2 -flto>
 			$<$<CONFIG:DEBUG>:-g -gsource-map -sASSERTIONS=2 --profiling-funcs>
 	)
@@ -1337,6 +1336,18 @@ if(EMSCRIPTEN)
 			--use-port=sdl2
 			$<$<CONFIG:RELEASE>:-O2 -flto>
 			$<$<CONFIG:DEBUG>:-g -gsource-map>
+	)
+
+	#Bundle all resources to uzdoom.data
+	target_link_options(zdoom PRIVATE
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/uzdoom.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/lights.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/brightmaps.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/game_support.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/game_widescreen_gfx.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/fm_banks/GENMIDI.GS.wopl@/uzdoom/fm_banks/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/fm_banks/gs-by-papiezak-and-sneakernets.wopn@/uzdoom/fm_banks/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/soundfonts/uzdoom.sf2@/uzdoom/soundfonts/"
 	)
 endif ()
 
@@ -1461,7 +1472,7 @@ if( NOT WIN32 AND NOT APPLE )
 	endif()
 endif()
 
-add_custom_command(TARGET zdoom POST_BUILD
+add_custom_command(TARGET zdoom PRE_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different
 	${CMAKE_SOURCE_DIR}/soundfont/uzdoom.sf2 $<TARGET_FILE_DIR:zdoom>/soundfonts/uzdoom.sf2
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different
