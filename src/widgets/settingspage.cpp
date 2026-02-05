@@ -107,8 +107,7 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 						FString iso = sc.String;
 						sc.MustGetStringName(",");
 						sc.MustGetString();
-						if(iso.CompareNoCase("auto"))
-							languages.push_back(std::make_pair(iso, FString(sc.String)));
+						languages.push_back(std::make_pair(iso, FString(sc.String)));
 					}
 				}
 			}

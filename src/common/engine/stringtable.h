@@ -48,7 +48,6 @@ public:
 	const char *MatchString(const char *string) const;
 };
 
-
 struct StringMacro
 {
 	FString Replacements[4];
@@ -106,6 +105,7 @@ private:
 	TMap<uint32_t, LangID*> langRevMap;
 
 	LangID GetID(FString lang);
+	FString GetSystemLocale();
 
 	void LoadLanguage (int lumpnum, const char* buffer, size_t size);
 	TArray<TArray<FString>> parseCSV(const char* buffer, size_t size);
