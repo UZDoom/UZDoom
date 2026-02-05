@@ -25,9 +25,12 @@ def fill_dict(path):
 	meta = {}
 	data = {}
 
-	# use either `HeaderCode` or `Language` as the language id
-	meta["id"] = po.metadata["HeaderCode"] if "HeaderCode" in po.metadata else po.metadata["Language"]
+	meta["id"] = po.metadata["Language"]
 	meta["valid"] = True
+
+	# for now uzdoom needs the top left cell to be "default"
+	if meta["id"] == "en_US":
+		meta["id"] = "default"
 
 	for e in po:
 		specific_id = e.msgid
