@@ -45,6 +45,7 @@
 #include "g_levellocals.h"
 #include "gi.h"
 #include "gstrings.h"
+#include "i_net.h"
 #include "intermission/intermission.h"
 #include "m_random.h"
 #include "p_acs.h"
@@ -1020,14 +1021,16 @@ DEFINE_ACTION_FUNCTION_NATIVE(_PlayerInfo, GetNextPlayer, player_t::GetNextPlaye
 
 int player_t::GetNextPlayerNumber(int pNum, bool noBots)
 {
+	int m = MAXPLAYERS;
 	int i = max<int>(pNum + 1, 0);
-	for (; i < MAXPLAYERS; ++i)
+
+	for (; i < m; ++i)
 	{
 		if (playeringame[i] && (!noBots || players[i].Bot == nullptr))
 			break;
 	}
 
-	return i < MAXPLAYERS ? i : -1;
+	return i < m ? i : -1;
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(_PlayerInfo, GetNextPlayerNumber, player_t::GetNextPlayerNumber)

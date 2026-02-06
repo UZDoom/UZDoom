@@ -247,11 +247,17 @@ bool FTeam::IsValid (unsigned int uiTeam)
 
 bool FTeam::ChangeTeam(unsigned int pNum, unsigned int newTeam)
 {
-	if (!multiplayer || !teamplay || pNum >= MAXPLAYERS || !playeringame[pNum] || !FTeam::IsValid(newTeam) || players[pNum].userinfo.GetTeam() == newTeam)
+	if (!multiplayer
+		|| !teamplay
+		|| pNum >= MAXPLAYERS
+		|| !playeringame[pNum]
+		|| !FTeam::IsValid(newTeam)
+		|| static_cast<unsigned>(players[pNum].userinfo.GetTeam()) == newTeam)
 		return false;
 
 	players[pNum].userinfo.TeamChanged(newTeam);
 	R_BuildPlayerTranslation(pNum);
+
 	return true;
 }
 

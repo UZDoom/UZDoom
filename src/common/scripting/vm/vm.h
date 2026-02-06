@@ -727,7 +727,7 @@ typename VMReturnTypeTrait<RetVal>::type VMCallSingle(VMFunction* func, Args... 
 
 		VMValue params[argCount];
 
-		for(int i = 0, j = 0; i < sizeof...(Args); i++)
+		for(unsigned i = 0, j = 0; i < sizeof...(Args); i++)
 		{
 			for(int k = 0; k < arglist[i].count; k++, j++)
 			{
@@ -763,7 +763,7 @@ std::tuple<typename VMReturnTypeTrait<Rets>::type...> VMCallMultiImpl(VMFunction
 
 		VMValue params[argCount];
 
-		for(int i = 0, j = 0; i < sizeof...(Args); i++)
+		for(unsigned i = 0, j = 0; i < sizeof...(Args); i++)
 		{
 			for(int k = 0; k < arglist[i].count; k++, j++)
 			{
