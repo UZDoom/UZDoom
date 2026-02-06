@@ -25,7 +25,7 @@
 #ifndef I_INPUT_H
 #define I_INPUT_H
 
-#include "d_eventbase.h"
+struct event_t;
 
 extern int WaitingForKey;
 

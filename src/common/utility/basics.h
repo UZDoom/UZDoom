@@ -24,6 +24,8 @@
 
 #pragma once
 
+// IWYU pragma: begin_exports
+
 #include <algorithm>
 #include <stddef.h>
 #include <stdint.h>
@@ -32,6 +34,8 @@
 #if defined(_M_X64) || defined(__x86_64__) || defined(__amd64__) || defined(__amd64) || defined(__x86_64__) || defined(__x86_64)
 #include <xmmintrin.h>
 #endif
+
+// IWYU pragma: end_exports
 
 #define MAXWIDTH 12000
 #define MAXHEIGHT 5000

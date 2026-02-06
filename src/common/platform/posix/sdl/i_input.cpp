@@ -23,11 +23,14 @@
 */
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_events.h>
+#include <assert.h>
+#include <ctype.h>
+#include <stdio.h>
 
+#include "basics.h"
 #include "c_buttons.h"
-#include "c_console.h"
 #include "c_cvars.h"
+#include "d_eventbase.h"
 #include "d_gui.h"
 #include "dikeys.h"
 #include "engineerrors.h"
@@ -36,6 +39,7 @@
 #include "keydef.h"
 #include "m_haptics.h"
 #include "m_joy.h"
+#include "tarray.h"
 #include "utf8.h"
 #include "v_video.h"
 #include "version.h"

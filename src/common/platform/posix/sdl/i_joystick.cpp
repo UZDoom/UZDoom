@@ -22,15 +22,18 @@
 */
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_gamecontroller.h>
-#include <cstdint>
-#include <cstdlib>
+#include <cmath>
+#include <stdio.h>
 
 #include "basics.h"
+#include "c_cvars.h"
 #include "cmdlib.h"
 #include "d_eventbase.h"
 #include "i_input.h"
+#include "keydef.h"
 #include "m_joy.h"
+#include "tarray.h"
+#include "zstring.h"
 
 static const EAxisCodes ControllerAxisCodes[][2] =
 {
