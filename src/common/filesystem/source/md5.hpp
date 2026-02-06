@@ -66,6 +66,7 @@
    * efficiently on either one than if ARCH_IS_BIG_ENDIAN is defined.
    */
 
+#include <cstdint>
 #include <stddef.h>
 #include <cstring>
 
@@ -196,7 +197,7 @@ namespace FileSys {
                      * On little-endian machines, we can process properly aligned
                      * data without copying it.
                      */
-                    if (!((data - (md5_byte_t const*)0) & 3)) {
+                    if (!(reinterpret_cast<std::uintptr_t>(data) & 3)) {
                         /* data are properly aligned */
                         X = (md5_word_t const*)data;
                     }
