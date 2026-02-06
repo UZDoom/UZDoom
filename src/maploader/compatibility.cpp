@@ -263,6 +263,7 @@ void ParseCompatibility()
 					case SLOT_COMPAT: flags.Flags1 |= ELevelCompatFlags::FromInt(Options[i].CompatFlags); break;
 					case SLOT_COMPAT2: flags.Flags2 |= ELevelCompatFlags2::FromInt(Options[i].CompatFlags); break;
 					case SLOT_BCOMPAT: flags.BugCompatFlags |= ELevelBugCompatFlags::FromInt(Options[i].CompatFlags); break;
+					case COMPATSLOT_COUNT: /* noop */ break;
 				}
 			}
 			else

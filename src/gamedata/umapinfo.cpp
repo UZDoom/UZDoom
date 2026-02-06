@@ -584,6 +584,9 @@ void CommitUMapinfo(level_info_t *defaultinfo)
 			case PlayerActionOption::DISALLOW:
 				levelinfo->flags |= LEVEL_JUMP_NO;
 				break;
+			case PlayerActionOption::UNSET:
+				// noop
+				break;
 		}
 		switch (map.crouching)
 		{
@@ -593,6 +596,9 @@ void CommitUMapinfo(level_info_t *defaultinfo)
 				break;
 			case PlayerActionOption::DISALLOW:
 				levelinfo->flags |= LEVEL_CROUCH_NO;
+				break;
+			case PlayerActionOption::UNSET:
+				// noop
 				break;
 		}
 		switch (map.freeaim)
@@ -607,6 +613,9 @@ void CommitUMapinfo(level_info_t *defaultinfo)
 			case PlayerActionOption::DISALLOW:
 				levelinfo->flags |= LEVEL_FREELOOK_NO;
 				levelinfo->flags &= ~LEVEL_FREELOOK_YES;
+				break;
+			case PlayerActionOption::UNSET:
+				// noop
 				break;
 		}
 	}
