@@ -26,15 +26,15 @@
 #define VM_H
 
 #include "autosegs.h"
-#include "zstring.h"
-#include "vectors.h"
-#include "quaternion.h"
+#include "basics.h"
 #include "cmdlib.h"
 #include "engineerrors.h"
 #include "memarena.h"
 #include "name.h"
+#include "quaternion.h"
 #include "scopebarrier.h"
-#include <type_traits>
+#include "vectors.h"
+#include "zstring.h"
 
 class DObject;
 union VMOP;

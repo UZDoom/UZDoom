@@ -29,21 +29,18 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include "sc_man.h"
-#include "doomstat.h"
-#include "c_dispatch.h"
-#include "gi.h"
-#include "g_level.h"
-#include "p_lnspec.h"
-#include "p_tags.h"
-#include "filesystem.h"
-#include "textures.h"
-#include "g_levellocals.h"
 #include "actor.h"
-#include "p_setup.h"
-#include "maploader/maploader.h"
-#include "types.h"
 #include "doomdef.h"
+#include "doomstat.h"
+#include "filesystem.h"
+#include "g_levellocals.h"
+#include "gi.h"
+#include "maploader/maploader.h"
+#include "p_lnspec.h"
+#include "p_setup.h"
+#include "p_tags.h"
+#include "sc_man.h"
+#include "textures.h"
 
 // MACROS ------------------------------------------------------------------
 

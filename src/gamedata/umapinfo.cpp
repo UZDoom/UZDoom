@@ -13,18 +13,16 @@
 **
 **---------------------------------------------------------------------------
 **
-** An optional, multi-line description, covering whatever else you need to
-** describe in order for people to contribute to this file
+**
 */
 
 #include <stdlib.h>
 #include <string.h>
-#include "filesystem.h"
-#include "g_level.h"
-#include "r_defs.h"
-#include "p_setup.h"
-#include "gi.h"
+
 #include "cmdlib.h"
+#include "g_mapinfo.h"
+#include "gi.h"
+#include "r_defs.h"
 
 FName MakeEndPic(const char *string);
 

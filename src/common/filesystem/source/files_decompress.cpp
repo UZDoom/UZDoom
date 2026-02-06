@@ -22,21 +22,24 @@
 **
 */
 
-// Caution: LzmaDec also pulls in windows.h!
-#define NOMINMAX
-#include "LzmaDec.h"
-#include "Xz.h"
-// CRC table needs to be generated prior to reading XZ compressed files.
-#include "7zCrc.h"
-#include <miniz.h>
+#include <7zCrc.h> // CRC table needs to be generated prior to reading XZ compressed files.
+#include <7zTypes.h>
+#include <LzmaDec.h>
+#include <Xz.h>
 #include <bzlib.h>
-#include <algorithm>
-#include <stdexcept>
+#include <exception>
+#include <miniz.h>
+#include <stdarg.h>
+#include <string.h>
+#include <utility>
 
-#include "fs_files.h"
-#include "files_internal.h"
+
+#include "basics.h"
 #include "ancientzip.h"
+#include "files_internal.h"
 #include "fs_decompress.h"
+#include "fs_files.h"
+#include "fs_swap.h"
 
 namespace FileSys {
 	using namespace byteswap;

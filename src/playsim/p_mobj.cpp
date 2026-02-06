@@ -34,7 +34,8 @@
 #include "a_morph.h"
 #include "a_sharedglobal.h"
 #include "actorinlines.h"
-#include "b_bot.h"	//Added by MC:
+#include "b_bot.h"
+#include "basics.h"
 #include "c_dispatch.h"
 #include "cmdlib.h"
 #include "d_event.h"
@@ -65,7 +66,7 @@
 #include "r_sky.h"
 #include "r_utility.h"
 #include "sbar.h"
-#include "serialize_obj.h"
+#include "serialize_obj.h" // IWYU pragma: keep
 #include "serializer_doom.h"
 #include "shadowinlines.h"
 #include "teaminfo.h"

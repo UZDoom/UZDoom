@@ -21,17 +21,15 @@
 **
 */
 
-#include "c_buttons.h"
-
-#include "c_dispatch.h"
-#include "printf.h"
-#include "cmdlib.h"
-#include "c_console.h"
-#include "m_joy.h"
+#include "basics.h"
 #include "c_bind.h"
+#include "c_buttons.h"
+#include "c_dispatch.h"
+#include "cmdlib.h"
+#include "m_joy.h"
+#include "printf.h"
 
 ButtonMap buttonMap;
-
 
 //=============================================================================
 //

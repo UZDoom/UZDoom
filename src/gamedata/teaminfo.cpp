@@ -23,16 +23,15 @@
 
 // HEADER FILES ------------------------------------------------------------
 
+#include "basics.h"
 #include "c_dispatch.h"
+#include "d_player.h"
+#include "filesystem.h"
 #include "gi.h"
-
 #include "teaminfo.h"
 #include "texturemanager.h"
 #include "v_font.h"
-#include "v_video.h"
-#include "filesystem.h"
 #include "vm.h"
-#include "d_player.h"
 
 // MACROS ------------------------------------------------------------------
 

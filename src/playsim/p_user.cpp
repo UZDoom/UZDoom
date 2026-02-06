@@ -30,7 +30,8 @@
 
 #include "a_keys.h"
 #include "a_morph.h"
-#include "actorinlines.h"
+#include "actorinlines.h" // IWYU pragma: keep
+#include "basics.h"
 #include "c_dispatch.h"
 #include "cmdlib.h"
 #include "d_event.h"
@@ -58,7 +59,7 @@
 #include "s_music.h"
 #include "s_sound.h"
 #include "sbar.h"
-#include "serialize_obj.h"
+#include "serialize_obj.h" // IWYU pragma: keep
 #include "serializer_doom.h"
 #include "vm.h"
 

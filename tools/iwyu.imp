@@ -1,7 +1,5 @@
 # iwyu mapping file for UZDoom
 # https://github.com/include-what-you-use/include-what-you-use/blob/master/docs/IWYUMappings.md
-# you can make use of this file by adding the following t you cmake:
-# -DCMAKE_CXX_INCLUDE_WHAT_YOU_USE="include-what-you-use;-Xiwyu;--mapping_file=../tools/iwyu.imp"
 
 [
 	# don't include the specific headers, just the superheader

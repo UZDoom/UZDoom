@@ -20,6 +20,7 @@
 #include <zwidget/widgets/pushbutton/pushbutton.h>
 #include <zwidget/widgets/textlabel/textlabel.h>
 
+#include "basics.h"
 #include "gstrings.h"
 #include "netstartwindow.h"
 #include "version.h"
