@@ -175,7 +175,7 @@ const FName * Joy_GuessMapping(const FName identifier)
 		{ &HapticMedium, { "success", "grunt", "land", "pain", "pkup", "pickup", "fist", "weapon",
 			"fire", "shoot", "blast", "attack", "launch", "punch" } },
 		{ &HapticLight, { "push", "menu", "use", "fail", "open", "close", "eject", "reload",
-			"charge", "try", "fart" } },
+			"charge", "try", "fart", "ready" } },
 		{ &HapticNone, { "step", "floor" } },
 	};
 
