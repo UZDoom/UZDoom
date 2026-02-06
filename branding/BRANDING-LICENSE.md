@@ -1,13 +1,29 @@
-Any files not mentioned by this one within this subdirectory are also (c) 2025 by The UZDoom Team.
+# UZDoom Branding
 
-[UZDoom Logo](<https://github.com/UZDoom/UZDoom/tree/trunk/branding/UZDoom.svg>) © 2025 by [The UZDoom Team](<https://github.com/UZDoom>) is licensed under [CC BY-SA 4.0](<https://creativecommons.org/licenses/by-sa/4.0/>)<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+[![CC BY-SA 4.0][badge]][cc-by-sa-4.0]
 
-[UZDoom Logo (Source)](<https://github.com/UZDoom/UZDoom/tree/trunk/branding/UZDoom.ai>) © 2025 by [The UZDoom Team](<https://github.com/UZDoom>) is licensed under [CC BY-SA 4.0](<https://creativecommons.org/licenses/by-sa/4.0/>)<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+All assets below are © 2025 by [The UZDoom Team][uzdoom] and licensed under [CC BY-SA 4.0][cc-by-sa-4.0].
 
-[UZDoom Logo - Flat White on Black Version](<https://github.com/UZDoom/UZDoom/tree/trunk/branding/bootlogo.png>) © 2025 by [The UZDoom Team](<https://github.com/UZDoom>) is licensed under [CC BY-SA 4.0](<https://creativecommons.org/licenses/by-sa/4.0/>)<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+[uzdoom]: https://github.com/UZDoom
+[cc-by-sa-4.0]: https://creativecommons.org/licenses/by-sa/4.0/
+[badge]: https://img.shields.io/badge/License-CC_BY--SA_4.0-05b5da.svg
 
-[UZDoom Logo - Flat White on Blue Version](<https://github.com/UZDoom/UZDoom/tree/trunk/branding/UZDoom App Icon.png>) © 2025 by [The UZDoom Team](<https://github.com/UZDoom>) is licensed under [CC BY-SA 4.0](<https://creativecommons.org/licenses/by-sa/4.0/>)<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+## Main
 
-[UZDoom Banner With Flat Logo and Text](<https://github.com/UZDoom/UZDoom/tree/trunk/branding/banner.png>) © 2025 by [The UZDoom Team](<https://github.com/UZDoom>) is licensed under [CC BY-SA 4.0](<https://creativecommons.org/licenses/by-sa/4.0/>)<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+* [UZDoom Logo - Fancy](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20Fancy.svg)
+* [UZDoom Logo - Icon](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20App.svg)
+* [UZDoom Logo - Pride](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20Pride.svg)
+* [UZDoom Logo - Flat](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20Flat.svg)
 
-Note that these assets and derived versions of them may appear within other folders in this repository and should be assumed to use the same licensing.
+## Source
+
+* [UZDoom Logo - Fancy](https://github.com/UZDoom/UZDoom/blob/trunk/branding/source/UZDOOM%20LOGO%20-%20Icon%20Fancy.ai)
+* [UZDoom Logo - Pride](https://github.com/UZDoom/UZDoom/blob/trunk/branding/source/UZDOOM%20LOGO%20-%20Icon%20Fancy%20(Pride).ai)
+* [UZDoom Logo - Flat](https://github.com/UZDoom/UZDoom/blob/trunk/branding/source/UZDOOM%20LOGO%20-%20Icon.ai)
+* [UZDoom Wordmark - Fancy](https://github.com/UZDoom/UZDoom/blob/trunk/branding/source/UZDOOM%20LOGO%20-%20Text%20Fancy.ai)
+* [UZDoom Wordmark - Flat](https://github.com/UZDoom/UZDoom/blob/trunk/branding/source/UZDOOM%20LOGO%20-%20Text.ai)
+* [UZDoom Subtitle](https:/https://github.com/UZDoom/UZDoom/blob/trunk/branding/source/UZDOOM%20-%20Subtitle.ai)
+
+## Derivatives
+
+Any assets derived from the above files (including those found in other subdirectories) are subject to the same licensing terms.

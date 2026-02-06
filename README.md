@@ -1,6 +1,6 @@
 <div align="center">
 
-[ <img src="branding/UZDoom-BG.svg" alt="UZDoom Icon" style="height: 8em; width: 100%" /> ][repo]
+[ <img src="branding/misc/readme-banner.svg" alt="UZDoom Icon" style="height: 8em; width: 100%" /> ][repo]
 
 </div>
 
