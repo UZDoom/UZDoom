@@ -4912,11 +4912,11 @@ msgstr "Disable client-side pick ups on dropped items"
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
-msgstr "Restart level on Death"
+msgstr "Pistol start on death"
 
 # Resets inventory on every map
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "Pistol Start"
+msgstr "Pistol start every level"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr "Allow creation of zombie players"
