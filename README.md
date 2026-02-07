@@ -63,9 +63,9 @@ You can view the full license text here: <https://www.gnu.org/licenses/>
 
 To build UZDoom from source, please see UZDoom's GitHub [wiki][gh_wiki] for a full list of dependencies and detailed instructions. Build For [Linux][gh_linux] / [Windows][gh_windows] / [MacOS][gh_apple]
 
-[![UZDoom Footer](branding/banner.png)][repo]
-
 <div align="center">
+
+[![UZDoom Footer](branding/misc/banner.png)][repo]
 
 [<img alt="Translation status" style="width: 49%" src="https://hosted.weblate.org/widget/uzdoom/open-graph.png" />][status_trans]
 [<img alt="Translation status" style="width: 49%" src="https://hosted.weblate.org/widget/doom-engine-games/open-graph.png" />][status_trans_games]
