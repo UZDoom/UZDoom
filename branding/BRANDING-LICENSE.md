@@ -14,6 +14,7 @@ All assets below are © 2025 by [The UZDoom Team][uzdoom] and licensed under [CC
 * [UZDoom Logo - Icon](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20App.svg)
 * [UZDoom Logo - Pride](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20Pride.svg)
 * [UZDoom Logo - Flat](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20Flat.svg)
+* [UZDoom Logo - Banner](https://github.com/UZDoom/UZDoom/blob/trunk/branding/UZDoom%20Banner.svg)
 
 ## Source
 

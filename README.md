@@ -65,7 +65,7 @@ To build UZDoom from source, please see UZDoom's GitHub [wiki][gh_wiki] for a fu
 
 <div align="center">
 
-[![UZDoom Footer](branding/misc/banner.png)][repo]
+[ <img src="branding/UZDoom%20Banner.svg" alt="UZDoom Footer" style="height: 8em; width: 100%" /> ][repo]
 
 [<img alt="Translation status" style="width: 49%" src="https://hosted.weblate.org/widget/uzdoom/open-graph.png" />][status_trans]
 [<img alt="Translation status" style="width: 49%" src="https://hosted.weblate.org/widget/doom-engine-games/open-graph.png" />][status_trans_games]
