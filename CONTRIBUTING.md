@@ -54,6 +54,10 @@ We favour contributions that align with our core values:
 - **Stability**:
   Maintaining backwards compatibility.
 
+When contributing text strings, you will need to use Weblate.
+- Engine text: https://hosted.weblate.org/engage/uzdoom/
+- IWAD text: https://hosted.weblate.org/engage/doom-engine-games/
+
 ## Art Contributions
 
 By submitting a pull request, you agree to follow these guidelines.
