@@ -17,33 +17,28 @@
 **
 **---------------------------------------------------------------------------
 **
+** Finally, for odd reasons, the player input is buffered within
+** the player data struct, as commands per game tick.
+**
+** The player data structure depends on a number of other structs:
+** items (internal inventory), animation states (closely tied to
+** the sprites used to represent them, unfortunately).
+**
+** In addition, the player is just a special case of the generic
+** moving object/actor.
 */
 
 #ifndef __D_PLAYER_H__
 #define __D_PLAYER_H__
 
-// Finally, for odd reasons, the player input
-// is buffered within the player data struct,
-// as commands per game tick.
+#include "a_weapons.h"
+#include "actor.h"
+#include "b_bot.h"
+#include "basics.h"
+#include "d_netinf.h"
 #include "d_protocol.h"
 #include "doomstat.h"
-
-#include "a_weapons.h"
-
-#include "d_netinf.h"
-
-// The player data structure depends on a number
-// of other structs: items (internal inventory),
-// animation states (closely tied to the sprites
-// used to represent them, unfortunately).
 #include "p_pspr.h"
-
-// In addition, the player is just a special
-// case of the generic moving object/actor.
-#include "actor.h"
-
-//Added by MC:
-#include "b_bot.h"
 
 class player_t;
 
