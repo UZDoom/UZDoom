@@ -1,24 +1,5 @@
 cmake_minimum_required( VERSION 3.16.0 )
 
-function(extract_version_define output_var define_name capture_pattern)
-    set(strict_regex "^#define ${define_name} ${capture_pattern}$")
-    file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/version.h" match_lines REGEX "${strict_regex}")
-    list(LENGTH match_lines match_count)
-    if(NOT match_count EQUAL 1)
-        message(FATAL_ERROR "Expected exactly one ${define_name}, found ${match_count}")
-    endif()
-    list(GET match_lines 0 match_line)
-    string(REGEX REPLACE "${strict_regex}" "\\1" extracted_value "${match_line}")
-    set(${output_var} "${extracted_value}" PARENT_SCOPE)
-endfunction()
-
-extract_version_define(UZDOOM_VERSION_STRING   "VERSIONSTR"   "\"([^\"]+)\"")
-extract_version_define(UZDOOM_VERSION_MAJOR    "VER_MAJOR"    "([0-9]+)")
-extract_version_define(UZDOOM_VERSION_MINOR    "VER_MINOR"    "([0-9]+)")
-extract_version_define(UZDOOM_VERSION_REVISION "VER_REVISION" "([0-9]+)")
-
-message(STATUS "UZDoom version: ${UZDOOM_VERSION_STRING} (${UZDOOM_VERSION_MAJOR}.${UZDOOM_VERSION_MINOR}.${UZDOOM_VERSION_REVISION})")
-
 include(precompiled_headers)
 
 if( COMMAND cmake_policy )
@@ -1526,10 +1507,17 @@ if( APPLE )
 	set_target_properties(zdoom PROPERTIES
 		LINK_FLAGS "${LINK_FRAMEWORKS}"
 		MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/posix/osx/zdoom-info.plist"
-		MACOSX_BUNDLE_SHORT_VERSION_STRING "${UZDOOM_VERSION_STRING}"
-		MACOSX_BUNDLE_BUNDLE_VERSION "${UZDOOM_VERSION_MAJOR}.${UZDOOM_VERSION_MINOR}.${UZDOOM_VERSION_REVISION}"
 		XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "org.zdoom.UZDoom"
 		XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "" )
+
+	# Update plist bundle version from git describe at build time
+	add_custom_command(TARGET zdoom POST_BUILD
+		COMMAND "${CMAKE_COMMAND}"
+			-DPLIST_FILE="$<TARGET_BUNDLE_DIR:zdoom>/Contents/Info.plist"
+			-P "${CMAKE_CURRENT_SOURCE_DIR}/posix/osx/UpdatePlistVersion.cmake"
+		WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+		COMMENT "Updating bundle version in Info.plist"
+	)
 
 	# Dymanic libraries like libvulkan.dylib or libMoltenVK.dylib will be loaded by dlopen()
 	# if placed in the directory with the main executable
