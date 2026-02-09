@@ -31,6 +31,9 @@
 #include "v_font.h"
 #include "vm.h"
 #include "g_levellocals.h"
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
 
 //===========================================================================
 //
@@ -487,6 +490,9 @@ int P_CheckKeys (AActor *owner, int keynum, bool remote, bool quiet)
 	else
 	{
 		if (lock->check(owner)) return true;
+#ifdef OASIS_STAR_API
+		if (UZDoom_STAR_CheckDoorAccess(owner, keynum, remote ? 1 : 0)) return true;
+#endif
 		if (quiet) return false;
 		failtext = remote? lock->RemoteMsg.GetChars() : lock->Message.GetChars();
 		failsound = &lock->locksound[0];

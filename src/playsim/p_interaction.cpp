@@ -52,6 +52,9 @@
 #include "events.h"
 #include "actorinlines.h"
 #include "d_main.h"
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
 
 static FRandom pr_botrespawn ("BotRespawn");
 static FRandom pr_killmobj ("ActorDie");
@@ -98,7 +101,13 @@ void P_TouchSpecialThing (AActor *special, AActor *toucher)
 		toucher->player->Bot->prev = toucher->player->Bot->dest;
 		toucher->player->Bot->dest = nullptr;
 	}
+#ifdef OASIS_STAR_API
+	int star_key = UZDoom_STAR_PreTouchSpecial(special);
+#endif
 	special->CallTouch (toucher);
+#ifdef OASIS_STAR_API
+	if (star_key) UZDoom_STAR_PostTouchSpecial(star_key);
+#endif
 }
 
 

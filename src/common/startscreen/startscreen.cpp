@@ -38,6 +38,7 @@
 #include "v_draw.h"
 #include "g_input.h"
 #include "texturemanager.h"
+#include "version.h"
 
 // Text mode color values
 enum{
@@ -569,8 +570,16 @@ void FStartScreen::CreateHeader()
 	fcolor.rgbBlue = BPART(GameStartupInfo.FgColor);
 	fcolor.rgbReserved = 255;
 	ClearBlock(HeaderBitmap, bcolor, 0, 0, HeaderBitmap.GetWidth(), HeaderBitmap.GetHeight());
+#ifdef OASIS_STAR_API
+	FString headerTitle = GAMENAME;
+	headerTitle += " ";
+	headerTitle += GetVersionString();
+	int textlen = SizeOfText(headerTitle.GetChars());
+	DrawString(HeaderBitmap, (HeaderBitmap.GetWidth() >> 4) - (textlen >> 1), 0.5, headerTitle.GetChars(), fcolor, bcolor);
+#else
 	int textlen = SizeOfText(GameStartupInfo.Name.GetChars());
 	DrawString(HeaderBitmap, (HeaderBitmap.GetWidth() >> 4) - (textlen >> 1), 0.5, GameStartupInfo.Name.GetChars(), fcolor, bcolor);
+#endif
 	NetBitmap.Create(StartupBitmap.GetWidth() * Scale, 16);
 }
 

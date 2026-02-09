@@ -1271,6 +1271,10 @@ set( GAME_SOURCES
 
 )
 
+if(OASIS_STAR_API)
+	list(APPEND GAME_SOURCES uzdoom_star_integration.cpp)
+endif()
+
 set( GAME_NONPCH_SOURCES ${GAME_SOURCES} )
 list( REMOVE_ITEM GAME_NONPCH_SOURCES ${PCH_SOURCES} )
 
@@ -1302,6 +1306,27 @@ endif()
 
 if(BUILD_FLATPAK)
 	target_compile_definitions(zdoom PRIVATE IS_FLATPAK=1)
+endif()
+
+if(OASIS_STAR_API AND STAR_API_DIR)
+	target_compile_definitions(zdoom PRIVATE OASIS_STAR_API=1)
+	target_include_directories(zdoom PRIVATE ${STAR_API_DIR})
+	if(WIN32)
+		if(STAR_API_LIB_DIR)
+			target_link_directories(zdoom PRIVATE ${STAR_API_LIB_DIR})
+		else()
+			target_link_directories(zdoom PRIVATE ${STAR_API_DIR}/build/Release ${STAR_API_DIR}/build/Debug)
+		endif()
+		target_link_libraries(zdoom star_api winhttp)
+	else()
+		if(STAR_API_LIB_DIR)
+			target_link_directories(zdoom PRIVATE ${STAR_API_LIB_DIR})
+		else()
+			target_link_directories(zdoom PRIVATE ${STAR_API_DIR}/build)
+		endif()
+		target_link_libraries(zdoom star_api)
+	endif()
+	set_source_files_properties(uzdoom_star_integration.cpp PROPERTIES SKIP_PRECOMPILE_HEADERS TRUE)
 endif()
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")

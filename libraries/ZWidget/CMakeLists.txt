@@ -288,7 +288,10 @@ set_target_properties(zwidget PROPERTIES CXX_STANDARD 20)
 target_compile_options(zwidget PRIVATE ${CXX_WARNING_FLAGS})
 
 if(MSVC)
-	set_property(TARGET zwidget PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	# Use dynamic CRT if parent set it (e.g. OASIS_STAR_API build); otherwise static
+	if(NOT CMAKE_MSVC_RUNTIME_LIBRARY MATCHES "DLL")
+		set_property(TARGET zwidget PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	endif()
 endif()
 
 option(ZWIDGET_BUILD_EXAMPLE "Build the zwidget example application" ON)
@@ -330,6 +333,8 @@ if(ZWIDGET_BUILD_EXAMPLE)
 	set_target_properties(zwidget_example PROPERTIES CXX_STANDARD 20)
 
 	if(MSVC)
-		set_property(TARGET zwidget_example PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+		if(NOT CMAKE_MSVC_RUNTIME_LIBRARY MATCHES "DLL")
+			set_property(TARGET zwidget_example PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+		endif()
 	endif()
 endif()

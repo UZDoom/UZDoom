@@ -273,9 +273,16 @@ void I_InitSound ()
 	}
 	if (!GSnd || !GSnd->IsValid ())
 	{
+		#ifndef NO_OPENAL
+		if (!GSnd)
+			Printf (TEXTCOLOR_RED"Sound init failed: OpenAL (soft_oal.dll) not found. Put soft_oal.dll in the game folder or install OpenAL Soft. Using nosound.\n");
+		else
+			Printf (TEXTCOLOR_RED"Sound init failed: OpenAL device could not be opened (see message above). Using nosound.\n");
+		#else
+			Printf (TEXTCOLOR_RED"Sound init failed. Using nosound.\n");
+		#endif
 		I_CloseSound();
 		GSnd = new NullSoundRenderer;
-		Printf (TEXTCOLOR_RED"Sound init failed. Using nosound.\n");
 	}
 	snd_sfxvolume->Callback ();
 }

@@ -228,5 +228,8 @@ target_link_libraries(zvulkan PUBLIC ${ZVULKAN_LIBS})
 set_target_properties(zvulkan PROPERTIES CXX_STANDARD 17)
 
 if(MSVC)
-	set_property(TARGET zvulkan PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	# Use dynamic CRT if parent set it (e.g. OASIS_STAR_API build); otherwise static
+	if(NOT CMAKE_MSVC_RUNTIME_LIBRARY MATCHES "DLL")
+		set_property(TARGET zvulkan PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	endif()
 endif()

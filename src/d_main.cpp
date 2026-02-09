@@ -105,6 +105,9 @@
 #include "st_start.h"
 #include "st_stuff.h"
 #include "startscreen.h"
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
 #include "swrenderer/r_swcolormaps.h"
 #include "teaminfo.h"
 #include "texturemanager.h"
@@ -3987,6 +3990,10 @@ static int D_DoomMain_Internal (void)
 
 	D_DoomInit();
 
+#ifdef OASIS_STAR_API
+	UZDoom_STAR_Init();
+#endif
+
 	// [RH] Make sure zdoom.pk3 is always loaded,
 	// as it contains magic stuff we need.
 	wad = BaseFileSearch(BASEWAD, NULL, true, GameConfig);
@@ -4293,6 +4300,9 @@ void D_Cleanup()
 
 	// clean up game state
 	D_ErrorCleanup ();
+#ifdef OASIS_STAR_API
+	UZDoom_STAR_Cleanup();
+#endif
 	P_Shutdown();
 
 	M_SaveDefaults(NULL);			// save config before the restart

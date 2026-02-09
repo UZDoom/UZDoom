@@ -1190,6 +1190,17 @@ void DBaseStatusBar::DrawTopStuff (EHudState state)
 			DTA_CleanNoMove, true, TAG_DONE);
 	}
 
+#ifdef OASIS_STAR_API
+	{
+		FString verText = GAMENAME;
+		verText += " ";
+		verText += GetVersionString();
+		double x = twod->GetWidth() - SmallFont->StringWidth(verText.GetChars()) * CleanXfac - 4;
+		double y = twod->GetHeight() - SmallFont->GetHeight() * CleanYfac - 2;
+		DrawText(twod, SmallFont, CR_TAN, x, y, verText.GetChars(), DTA_CleanNoMove, true, TAG_DONE);
+	}
+#endif
+
 	if (state != HUD_AltHud)
 	{
 		auto saved = fullscreenOffsets;

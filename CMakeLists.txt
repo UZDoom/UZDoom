@@ -39,6 +39,20 @@ if (VCPKG_TOOLCHAIN)
 	option(OPENAL_SOFT_VCPKG "Use OpenAL from vcpkg" OFF)
 endif()
 
+# OASIS STAR API integration (cross-game keycards, etc.)
+option(OASIS_STAR_API "Enable OASIS STAR API integration" OFF)
+if(OASIS_STAR_API)
+	set(STAR_API_DIR "" CACHE PATH "Path containing star_api.h (e.g. OASIS NativeWrapper)")
+	set(STAR_API_LIB_DIR "" CACHE PATH "Path containing star_api.lib/dll if pre-built (e.g. OASIS Omniverse/Doom); leave empty to use STAR_API_DIR/build/Release")
+	if(NOT STAR_API_DIR)
+		message(STATUS "OASIS_STAR_API is ON: set STAR_API_DIR (and optionally STAR_API_LIB_DIR for pre-built lib)")
+	endif()
+	# Pre-built star_api.lib uses dynamic CRT (MD/MDd). Match it so we don't get LNK2038.
+	if(MSVC)
+		set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+	endif()
+endif()
+
 if (NOT VCPKG_TOOLCHAIN)
 	set(VCPKG_MANIFEST_FEATURES)
 endif()
@@ -279,7 +293,12 @@ endif()
 if( MSVC )
 	# Eliminate unreferenced functions and data
 	# Perform identical COMDAT folding
-	set( REL_LINKER_FLAGS "/opt:ref /opt:icf /nodefaultlib:msvcrt /TSAWARE /LARGEADDRESSAWARE" )
+	# With static CRT (MT), /nodefaultlib:msvcrt avoids pulling CRT DLL; with dynamic CRT (MD, used for OASIS STAR) we must not use it
+	if( OASIS_STAR_API )
+		set( REL_LINKER_FLAGS "/opt:ref /opt:icf /TSAWARE /LARGEADDRESSAWARE" )
+	else()
+		set( REL_LINKER_FLAGS "/opt:ref /opt:icf /nodefaultlib:msvcrt /TSAWARE /LARGEADDRESSAWARE" )
+	endif()
 
 	# String pooling
 	# Function-level linking

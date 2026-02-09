@@ -117,4 +117,8 @@ const int SAVEPICHEIGHT = 162;
 const int VID_MIN_WIDTH = 320;
 const int VID_MIN_HEIGHT = 200;
 
+#ifdef OASIS_STAR_API
+#include "odoom_branding.h"
+#endif
+
 #endif //__VERSION_H__

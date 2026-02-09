@@ -207,5 +207,7 @@ target_link_libraries(webp ${WEBP_LIBS})
 set_target_properties(webp PROPERTIES CXX_STANDARD 17)
 
 if(MSVC)
-	set_property(TARGET webp PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	if(NOT CMAKE_MSVC_RUNTIME_LIBRARY MATCHES "DLL")
+		set_property(TARGET webp PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	endif()
 endif()
