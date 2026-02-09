@@ -1510,12 +1510,12 @@ if( APPLE )
 		XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "org.zdoom.UZDoom"
 		XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "" )
 
-	# Update plist bundle version from git describe at build time
+	# Update plist bundle version from gitinfo.h at build time
 	add_custom_command(TARGET zdoom POST_BUILD
 		COMMAND "${CMAKE_COMMAND}"
+			-DGITINFO_H="${CMAKE_BINARY_DIR}/gitinfo.h"
 			-DPLIST_FILE="$<TARGET_BUNDLE_DIR:zdoom>/Contents/Info.plist"
 			-P "${CMAKE_CURRENT_SOURCE_DIR}/posix/osx/UpdatePlistVersion.cmake"
-		WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 		COMMENT "Updating bundle version in Info.plist"
 	)
 
