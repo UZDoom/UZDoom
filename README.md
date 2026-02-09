@@ -7,6 +7,7 @@
 ## Welcome to UZDoom!
 
 [![Continuous Integration][badge_git]][status_git]
+[![Forked under a][badge_fork]][fork_repo]
 [![Engine Translation status][badge_trans]][status_trans]
 [![Game Translation status][badge_trans_games]][status_trans_games]
 
@@ -85,6 +86,9 @@ To build UZDoom from source, please see UZDoom's GitHub [wiki][gh_wiki] for a fu
 [gh_linux]: https://github.com/UZDoom/UZDoom/wiki/Compilation#linux
 [gh_windows]: https://github.com/UZDoom/UZDoom/wiki/Compilation#windows
 [gh_apple]: https://github.com/UZDoom/UZDoom/wiki/Compilation#macos
+
+[badge_fork]: https://img.shields.io/badge/forked-under_a-2eedfc?labelColor=033f53&logo=git&logoColor=fff
+[fork_repo]: https://github.com/UZDoom/UZDoom/fork
 
 [status_git]: https://github.com/UZDoom/UZDoom/actions/workflows/continuous_integration.yml
 [badge_git]: https://github.com/UZDoom/UZDoom/actions/workflows/continuous_integration.yml/badge.svg
