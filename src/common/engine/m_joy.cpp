@@ -638,24 +638,29 @@ double Joy_ManageThumbstick(
 	double ret_x = *axis_x;
 	double ret_y = *axis_y;
 
-	double x_abs = abs(*axis_x);
-	double y_abs = abs(*axis_y);
-	double magnitude = sqrt((x_abs * x_abs) + (y_abs * y_abs));
+	const double x_abs = abs(ret_x);
+	const double y_abs = abs(ret_y);
 
-	double ret_dist = 0;
-	uint8_t ret_butt = 0;
+	const double magnitude = sqrt((x_abs * x_abs) + (y_abs * y_abs));
 
-	double xy_lerp = 0.5;
-	if (magnitude > 0)
-	{
-		// Later it would be nice to have a single deadzone / threshold / curve setting
-		// for the whole thumbstick instead of awkwardly trying to combine them, but
-		// that requires re-considering how axes are exposed to the rest of the engine.
-		// This will do for now.
-		xy_lerp = abs(cos(atan2(ret_y, ret_x)));
+	if (isnan(magnitude) || magnitude <= 0) {
+		*axis_x = *axis_y = 0;
+		if (buttons) *buttons = 0;
+		return 0;
 	}
 
-	double deadzone = (xy_lerp * deadzone_x) + ((1.0 - xy_lerp) * deadzone_y);
+	double ret_dist = 0;
+	uint8_t ret_buttons = 0;
+
+	// 1 is pure X, 0 is pure Y
+	double x_bias = x_abs / (x_abs + y_abs);
+
+	// Later it would be nice to have a single deadzone / threshold / curve setting
+	// for the whole thumbstick instead of awkwardly trying to combine them, but
+	// that requires re-considering how axes are exposed to the rest of the engine.
+	// This will do for now.
+    const double deadzone = (x_bias * deadzone_x) + ((1.0 - x_bias) * deadzone_y);
+
 	if (magnitude < deadzone)
 	{
 		ret_x = 0;
@@ -665,12 +670,13 @@ double Joy_ManageThumbstick(
 	{
 		// Make the dead zone the new 0.
 		ret_dist = (magnitude - deadzone) / (1.0 - deadzone);
+		if (!isfinite(ret_dist)) ret_dist = 1.0;
 
 		const CubicBezier curve = {{
-			(float)((xy_lerp * curve_x.x1) + ((1.0 - xy_lerp) * curve_y.x1)),
-			(float)((xy_lerp * curve_x.y1) + ((1.0 - xy_lerp) * curve_y.y1)),
-			(float)((xy_lerp * curve_x.x2) + ((1.0 - xy_lerp) * curve_y.x2)),
-			(float)((xy_lerp * curve_x.y2) + ((1.0 - xy_lerp) * curve_y.y2))
+			(float)std::lerp(curve_y.x1, curve_x.x1, x_bias),
+			(float)std::lerp(curve_y.y1, curve_x.y1, x_bias),
+			(float)std::lerp(curve_y.x2, curve_x.x2, x_bias),
+			(float)std::lerp(curve_y.y2, curve_x.y2, x_bias),
 		}};
 
 		ret_dist = Joy_ApplyResponseCurveBezier(curve, ret_dist);
@@ -678,20 +684,17 @@ double Joy_ManageThumbstick(
 		ret_x = (ret_x / magnitude) * ret_dist;
 		ret_y = (ret_y / magnitude) * ret_dist;
 
-		double threshold = (xy_lerp * threshold_x) + ((1.0 - xy_lerp) * threshold_y);
+		const double threshold = (x_bias * threshold_x) + ((1.0 - x_bias) * threshold_y);
 		if (ret_dist >= threshold)
 		{
-			ret_butt = Joy_XYAxesToButtons(ret_x, ret_y);
+			ret_buttons = Joy_XYAxesToButtons(ret_x, ret_y);
 		}
 	}
 
 	*axis_x = ret_x;
 	*axis_y = ret_y;
 
-	if (buttons != NULL)
-	{
-		*buttons = ret_butt;
-	}
+	if (buttons) *buttons = ret_buttons;
 
 	return ret_dist;
 }
