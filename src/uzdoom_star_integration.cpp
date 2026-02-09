@@ -81,7 +81,8 @@ void UZDoom_STAR_Init(void) {
 	/* OASIS / ODOOM welcome splash in console (same style as OQuake) */
 	Printf("\n");
 	Printf("  ================================================\n");
-	Printf("            O A S I S   O D O O M\n");
+	Printf("            O A S I S   O D O O M  " ODOOM_VERSION_STR "\n");
+	Printf("               By NextGen World Ltd\n");
 	Printf("  ================================================\n");
 	Printf("\n");
 	Printf("  " GAMENAME " " ODOOM_VERSION_STR "\n");
