@@ -42,6 +42,7 @@ public:
 
 	void Start();
 	void Exit();
+ void OnEditorButtonClicked();
 	bool IsInMultiplayer() const;
 	bool IsHosting() const;
 	void UpdatePlayButton();

@@ -34,9 +34,11 @@ private:
 	void OnGeometryChanged() override;
 	void OnPlayButtonClicked();
 	void OnExitButtonClicked();
+ void OnEditorButtonClicked();
 
 	LauncherWindow* GetLauncher() const;
 
 	PushButton* PlayButton = nullptr;
 	PushButton* ExitButton = nullptr;
+ PushButton* EditorButton = nullptr;
 };

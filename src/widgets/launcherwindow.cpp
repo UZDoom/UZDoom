@@ -30,6 +30,11 @@
 #include "releasepage.h"
 #include "settingspage.h"
 #include "version.h"
+#ifdef _WIN32
+#define NOMINMAX
+#include <windows.h>
+#include <string>
+#endif
 
 bool LauncherWindow::ExecModal(FStartupSelectionInfo& info)
 {
@@ -116,6 +121,23 @@ void LauncherWindow::Exit()
 {
 	ExecResult = false;
 	DisplayWindow::ExitLoop();
+}
+
+
+void LauncherWindow::OnEditorButtonClicked()
+{
+#ifdef _WIN32
+	wchar_t path[MAX_PATH];
+	if (GetModuleFileNameW(NULL, path, MAX_PATH) == 0) return;
+	std::wstring exePath(path);
+	size_t lastSlash = exePath.find_last_of(L"\\\\/");
+	if (lastSlash == std::wstring::npos) return;
+	std::wstring dir = exePath.substr(0, lastSlash + 1);
+	std::wstring builder = dir + L"Editor\\\\Builder.exe";
+	ShellExecuteW(NULL, L"open", builder.c_str(), NULL, dir.c_str(), SW_SHOW);
+#else
+	(void)0;
+#endif
 }
 
 void LauncherWindow::UpdateLanguage()
