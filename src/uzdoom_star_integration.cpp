@@ -1,19 +1,20 @@
 /**
- * UZDoom - OASIS STAR API Integration Implementation
+ * ODOOM - OASIS STAR API Integration Implementation
  *
- * Build this file as part of UZDoom with STAR_API_DIR pointing to OASIS NativeWrapper.
+ * Build this file as part of ODOOM (UZDoom) with STAR_API_DIR pointing to OASIS NativeWrapper.
  * Keycard pickups are reported to STAR; door/lock checks can use cross-game inventory.
  * In-game console: "star" command for testing (star version, star inventory, star add, etc.).
  */
 
 #include "uzdoom_star_integration.h"
 #include "star_api.h"
+#include "odoom_branding.h"
 
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
 
-/* UZDoom headers for key detection */
+/* ODOOM (UZDoom) headers for key detection */
 #include "gamedata/a_keys.h"
 #include "playsim/actor.h"
 #include "gamedata/info.h"
@@ -76,6 +77,19 @@ void UZDoom_STAR_Init(void) {
 	} else {
 		std::printf("STAR API: No authentication configured. Set STAR_USERNAME/STAR_PASSWORD or STAR_API_KEY/STAR_AVATAR_ID.\n");
 	}
+
+	/* OASIS / ODOOM welcome splash in console (same style as OQuake) */
+	Printf("\n");
+	Printf("  ================================================\n");
+	Printf("            O A S I S   O D O O M\n");
+	Printf("  ================================================\n");
+	Printf("\n");
+	Printf("  " GAMENAME " " ODOOM_VERSION_STR "\n");
+	Printf("  STAR API - Enabling full interoperable games across the OASIS Omniverse!\n");
+	Printf("  Type 'star' in console for STAR commands.\n");
+	Printf("\n");
+	Printf("  Welcome to ODOOM!\n");
+	Printf("\n");
 }
 
 void UZDoom_STAR_Cleanup(void) {
@@ -108,7 +122,7 @@ void UZDoom_STAR_PostTouchSpecial(int keynum) {
 	const char* desc = GetKeycardDescription(keynum);
 	if (!name) return;
 
-	star_api_result_t result = star_api_add_item(name, desc, "UZDoom", "KeyItem");
+	star_api_result_t result = star_api_add_item(name, desc, "ODOOM", "KeyItem");
 	if (result == STAR_API_SUCCESS) {
 		std::printf("STAR API: Added %s to cross-game inventory.\n", name);
 	} else {
@@ -127,19 +141,19 @@ int UZDoom_STAR_CheckDoorAccess(struct AActor* owner, int keynum, int remote) {
 	const char* keyname = GetKeycardName(keynum);
 	if (keyname && star_api_has_item(keyname)) {
 		std::printf("STAR API: Door opened using cross-game keycard: %s\n", keyname);
-		star_api_use_item(keyname, "uzdoom_door");
+		star_api_use_item(keyname, "odoom_door");
 		return 1;
 	}
 
 	/* 2) Check OQuake keys: silver_key -> red (1), gold_key -> blue (2) or yellow (3) */
 	if (keynum == 1 && star_api_has_item(OQUAKE_SILVER_KEY)) {
 		std::printf("STAR API: Door opened using OQuake silver key (red door).\n");
-		star_api_use_item(OQUAKE_SILVER_KEY, "uzdoom_door");
+		star_api_use_item(OQUAKE_SILVER_KEY, "odoom_door");
 		return 1;
 	}
 	if ((keynum == 2 || keynum == 3) && star_api_has_item(OQUAKE_GOLD_KEY)) {
 		std::printf("STAR API: Door opened using OQuake gold key.\n");
-		star_api_use_item(OQUAKE_GOLD_KEY, "uzdoom_door");
+		star_api_use_item(OQUAKE_GOLD_KEY, "odoom_door");
 		return 1;
 	}
 
@@ -156,7 +170,11 @@ static bool StarInitialized(void) {
 CCMD(star)
 {
 	if (argv.argc() < 2) {
-		Printf(TEXTCOLOR_GREEN "STAR API console commands (ODOOM integration):\n");
+		Printf("\n");
+		Printf("  Welcome to ODOOM!\n");
+		Printf("\n");
+		Printf(TEXTCOLOR_GREEN "STAR API console commands (ODOOM):\n");
+		Printf("\n");
 		Printf("  star version        - Show integration and API status\n");
 		Printf("  star status         - Show init state and last error\n");
 		Printf("  star inventory      - List items in STAR inventory\n");
@@ -171,6 +189,7 @@ CCMD(star)
 		Printf("  star pickup keycard <red|blue|yellow|skull> - Add keycard (convenience)\n");
 		Printf("  star beamin   - Log in / authenticate (uses STAR_USERNAME/PASSWORD or API key)\n");
 		Printf("  star beamout  - Log out / disconnect from STAR\n");
+		Printf("\n");
 		return;
 	}
 	const char* sub = argv[1];
@@ -187,7 +206,7 @@ CCMD(star)
 		else if (strcmp(color, "yellow") == 0) { name = "yellow_keycard"; desc = "Yellow Keycard - Opens yellow doors"; }
 		else if (strcmp(color, "skull") == 0)  { name = "skull_key";      desc = "Skull Key - Opens skull-marked doors"; }
 		else { Printf("Unknown keycard: %s. Use red|blue|yellow|skull.\n", color); return; }
-		star_api_result_t r = star_api_add_item(name, desc, "UZDoom", "KeyItem");
+		star_api_result_t r = star_api_add_item(name, desc, "ODOOM", "KeyItem");
 		if (r == STAR_API_SUCCESS) Printf("Added %s to STAR inventory.\n", name);
 		else Printf("Failed: %s\n", star_api_get_last_error());
 		return;
@@ -230,7 +249,7 @@ CCMD(star)
 		const char* name = argv[2];
 		const char* desc = argv.argc() > 3 ? argv[3] : "Added from console";
 		const char* type = argv.argc() > 4 ? argv[4] : "Miscellaneous";
-		star_api_result_t r = star_api_add_item(name, desc, "UZDoom", type);
+		star_api_result_t r = star_api_add_item(name, desc, "ODOOM", type);
 		if (r == STAR_API_SUCCESS) Printf("Added '%s' to STAR inventory.\n", name);
 		else Printf("Failed to add '%s': %s\n", name, star_api_get_last_error());
 		return;
@@ -254,7 +273,7 @@ CCMD(star)
 		}
 		if (strcmp(qsub, "objective") == 0) {
 			if (argv.argc() < 5) { Printf("Usage: star quest objective <quest_id> <objective_id>\n"); return; }
-			star_api_result_t r = star_api_complete_quest_objective(argv[3], argv[4], "UZDoom");
+			star_api_result_t r = star_api_complete_quest_objective(argv[3], argv[4], "ODOOM");
 			Printf(r == STAR_API_SUCCESS ? "Objective completed.\n" : "Failed: %s\n", star_api_get_last_error());
 			return;
 		}
@@ -272,7 +291,7 @@ CCMD(star)
 		const char* name = argv[2];
 		const char* desc = argv.argc() > 3 ? argv[3] : "Boss from UZDoom";
 		char nft_id[64] = {};
-		star_api_result_t r = star_api_create_boss_nft(name, desc, "UZDoom", "{}", nft_id);
+		star_api_result_t r = star_api_create_boss_nft(name, desc, "ODOOM", "{}", nft_id);
 		if (r == STAR_API_SUCCESS) Printf("Boss NFT created. ID: %s\n", nft_id[0] ? nft_id : "(none)");
 		else Printf("Failed: %s\n", star_api_get_last_error());
 		return;

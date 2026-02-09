@@ -1,7 +1,7 @@
 /**
- * UZDoom - OASIS STAR API Integration
+ * ODOOM - OASIS STAR API Integration
  *
- * Provides integration hooks for UZDoom (GZDoom fork) to connect with the
+ * Provides integration hooks for ODOOM (UZDoom-based, GZDoom fork) to connect with the
  * OASIS STAR API for cross-game item sharing (keycards, doors, quests).
  *
  * Integration points:
@@ -27,7 +27,7 @@ void UZDoom_STAR_Cleanup(void);
 
 /**
  * Call before special->CallTouch(toucher). If special is a keycard, returns key number (1-4);
- * otherwise returns 0. Use the return value in UZDoom_STAR_PostTouchSpecial after CallTouch.
+ * otherwise returns 0. Use the return value in UZDoom_STAR_PostTouchSpecial after CallTouch. (Symbol names stay UZDoom_* for engine compatibility.)
  */
 int UZDoom_STAR_PreTouchSpecial(struct AActor* special);
 
