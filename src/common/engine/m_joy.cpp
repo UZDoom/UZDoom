@@ -26,6 +26,7 @@
 
 #include <math.h>
 
+#include "basics.h"
 #include "c_cvars.h"
 #include "c_dispatch.h"
 #include "cmdlib.h"
@@ -35,6 +36,7 @@
 #include "m_joy.h"
 #include "name.h"
 #include "printf.h"
+#include "tarray.h"
 #include "vectors.h"
 #include "zstring.h"
 
@@ -626,9 +628,11 @@ int Joy_XYAxesToButtons(double x, double y)
 // behavior (such as cross shaped deadzones, sluggish input response when
 // pressing diagonally, so on).
 //
+// returns if threshold is crossed
+//
 //===========================================================================
 
-double Joy_ManageThumbstick(
+bool Joy_ManageThumbstick(
 	double *axis_x, double *axis_y,
 	double deadzone_x, double deadzone_y,
 	double threshold_x, double threshold_y,
@@ -646,10 +650,10 @@ double Joy_ManageThumbstick(
 	if (isnan(magnitude) || magnitude <= 0) {
 		*axis_x = *axis_y = 0;
 		if (buttons) *buttons = 0;
-		return 0;
+		return false;
 	}
 
-	double ret_dist = 0;
+	bool ret_value = true;
 	uint8_t ret_buttons = 0;
 
 	// 1 is pure X, 0 is pure Y
@@ -665,12 +669,13 @@ double Joy_ManageThumbstick(
 	{
 		ret_x = 0;
 		ret_y = 0;
+		ret_value = false;
 	}
 	else
 	{
 		// Make the dead zone the new 0.
-		ret_dist = (magnitude - deadzone) / (1.0 - deadzone);
-		if (!isfinite(ret_dist)) ret_dist = 1.0;
+		double scaled = (magnitude - deadzone) / (1.0 - deadzone);
+		if (!isfinite(scaled)) scaled = 1.0;
 
 		const CubicBezier curve = {{
 			(float)std::lerp(curve_y.x1, curve_x.x1, x_bias),
@@ -679,13 +684,13 @@ double Joy_ManageThumbstick(
 			(float)std::lerp(curve_y.y2, curve_x.y2, x_bias),
 		}};
 
-		ret_dist = Joy_ApplyResponseCurveBezier(curve, ret_dist);
+		scaled = Joy_ApplyResponseCurveBezier(curve, scaled);
 
-		ret_x = (ret_x / magnitude) * ret_dist;
-		ret_y = (ret_y / magnitude) * ret_dist;
+		ret_x = (ret_x / magnitude) * scaled;
+		ret_y = (ret_y / magnitude) * scaled;
 
 		const double threshold = (x_bias * threshold_x) + ((1.0 - x_bias) * threshold_y);
-		if (ret_dist >= threshold)
+		if (scaled >= threshold)
 		{
 			ret_buttons = Joy_XYAxesToButtons(ret_x, ret_y);
 		}
@@ -696,8 +701,92 @@ double Joy_ManageThumbstick(
 
 	if (buttons) *buttons = ret_buttons;
 
-	return ret_dist;
+	return ret_value;
 }
+
+#ifdef _DEBUG
+CCMD(debug_joystick_curves)
+{
+	constexpr auto radial_steps = 360;
+	constexpr auto magnitude_steps = 100;
+	constexpr auto deadzone = 0.1;
+	constexpr auto threshold = 0.5;
+
+	auto quad = [](double a) {
+		int q = (int)floor((a + M_PI/8.0) / (M_PI/4.0));
+		return (q + 8) % 8;
+	};
+
+	TArray<FString> failed;
+
+	auto fail = [&failed](int c, double x, double y) { failed.Push(FStringf("c %d x %g y %g", c, x, y)); };
+
+	for (auto c = 0; c < NUM_JOYCURVE; c++)
+	{
+		for (auto a = 0; a < radial_steps; a++)
+		{
+			int lq = -1;
+			double lm = -1;
+
+			for (auto m = 0; m < magnitude_steps; m++)
+			{
+				double a1 = (a*M_PI*2.0)/radial_steps;
+				double m1 = m / (magnitude_steps - 1.0);
+				int q1 = quad(a1);
+
+				double x1 = cos(a1) * m1;
+				double y1 = sin(a1) * m1;
+
+				double x2 = x1, y2 = y1;
+				uint8_t buttons;
+
+				bool crossed = Joy_ManageThumbstick(
+					&x2, &y2,
+					deadzone, deadzone, threshold, threshold,
+					JOYCURVE[c], JOYCURVE[c],
+					&buttons
+				);
+
+				double a2 = atan2(y2, x2);
+				if (a2 < 0) a2 += M_PI * 2;
+				double m2 = sqrt(x2*x2 + y2*y2);
+				int q2 = quad(a2);
+
+				Printf("a %0.2f m %0.2f x %0.2f y %0.2f q %d c %d\n", a1, m1, x1, y1, q1, c);
+
+				if (lq < 0) lq = q1;
+				if (lm < 0) lm = m2;
+
+				if (!crossed)
+				{
+					if (buttons)
+					{
+						Printf("! b %d\n", buttons);
+						fail(c, x1, y1);
+					}
+					continue;
+				}
+
+				Printf(
+					"  x %0.2f y %0.2f q %d\n"
+					"  b %hx a %0.2f m %0.2f\n",
+					x2, y2, q2,
+					buttons, a2, m2
+				);
+
+				bool f = false;
+				if (q2 != lq) { f = true; Printf("! q\n"); };
+				if (m2 < lm) { f = true; Printf("! m\n"); };
+				if (f) fail(c, x1, y1);
+			}
+		}
+	}
+
+	Printf("%s\n", failed.Size() == 0? "ok": "failed:");
+	for (auto f: failed)
+		Printf("! %s\n", f.GetChars());
+}
+#endif
 
 //===========================================================================
 //
