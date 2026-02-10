@@ -102,7 +102,7 @@ class OptionMenuSliderJoyScale : OptionMenuSliderBase
 	{
 		double d = mJoy.GetAxisScale(mAxis);
 		mNeg = d < 0? -1:1;
-		return d;
+		return abs(d);
 	}
 
 	override void SetSliderValue(double val)
