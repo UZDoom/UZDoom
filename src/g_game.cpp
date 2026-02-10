@@ -550,7 +550,6 @@ usercmd_t* G_BaseTiccmd()
 	return &emptycmd;
 }
 
-
 //
 // G_BuildTiccmd
 // Builds a ticcmd from all of the available inputs
@@ -559,15 +558,10 @@ usercmd_t* G_BaseTiccmd()
 //
 void G_BuildTiccmd (usercmd_t *cmd)
 {
-	int 		strafe;
-	int 		speed;
-	int 		forward;
-	int 		side;
-	int			fly;
+	int strafe, speed, forward, side, fly;
+	usercmd_t *base;
 
-	usercmd_t	*base;
-
-	base = G_BaseTiccmd (); 
+	base = G_BaseTiccmd();
 	*cmd = *base;
 
 	// Update axis polling for the button map
@@ -576,103 +570,36 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	strafe = buttonMap.ButtonDown(Button_Strafe);
 	speed = buttonMap.ButtonDown(Button_Speed) ^ (int)cl_run;
 
-	forward = side = fly = 0;
-
-	// [RH] only use two stage accelerative turning on the keyboard
-	//		and not the joystick, since we treat the joystick as
-	//		the analog device it is.
-	if (buttonMap.ButtonDownDigital(Button_Left) || buttonMap.ButtonDownDigital(Button_Right))
-		turnheld += TicDup;
-	else
-		turnheld = 0;
-
-	// let movement keys cancel each other out
-	if (strafe)
-	{
-		if (buttonMap.ButtonDownDigital(Button_Right))
-			side += sidemove[speed];
-		if (buttonMap.ButtonDownDigital(Button_Left))
-			side -= sidemove[speed];
-	}
-	else
-	{
-		int tspeed = speed;
-
-		if (turnheld < SLOWTURNTICS)
-			tspeed += 2;		// slow turn
-		
-		if (buttonMap.ButtonDownDigital(Button_Right))
-		{
-			G_AddViewAngle (*angleturn[tspeed]);
-		}
-		if (buttonMap.ButtonDownDigital(Button_Left))
-		{
-			G_AddViewAngle (-*angleturn[tspeed]);
-		}
-	}
-
-	if (buttonMap.ButtonDownDigital(Button_LookUp))
-	{
-		G_AddViewPitch (lookspeed[speed]);
-	}
-	if (buttonMap.ButtonDownDigital(Button_LookDown))
-	{
-		G_AddViewPitch (-lookspeed[speed]);
-	}
-
-	if (buttonMap.ButtonDownDigital(Button_MoveUp))
-		fly += flyspeed[speed];
-	if (buttonMap.ButtonDownDigital(Button_MoveDown))
-		fly -= flyspeed[speed];
-
-	if (buttonMap.ButtonDown(Button_Klook))
-	{
-		if (buttonMap.ButtonDownDigital(Button_Forward))
-			G_AddViewPitch (lookspeed[speed]);
-		if (buttonMap.ButtonDownDigital(Button_Back))
-			G_AddViewPitch (-lookspeed[speed]);
-	}
-	else
-	{
-		if (buttonMap.ButtonDownDigital(Button_Forward))
-			forward += forwardmove[speed];
-		if (buttonMap.ButtonDownDigital(Button_Back))
-			forward -= forwardmove[speed];
-	}
-
-	if (buttonMap.ButtonDownDigital(Button_MoveRight))
-		side += sidemove[speed];
-	if (buttonMap.ButtonDownDigital(Button_MoveLeft))
-		side -= sidemove[speed];
-
 	// buttons
-	if (buttonMap.ButtonDown(Button_Attack))		cmd->buttons |= BT_ATTACK;
-	if (buttonMap.ButtonDown(Button_AltAttack))		cmd->buttons |= BT_ALTATTACK;
-	if (buttonMap.ButtonDown(Button_Use))			cmd->buttons |= BT_USE;
-	if (buttonMap.ButtonDown(Button_Jump))			cmd->buttons |= BT_JUMP;
-	if (buttonMap.ButtonDown(Button_Crouch))		cmd->buttons |= BT_CROUCH;
-	if (buttonMap.ButtonDown(Button_Zoom))			cmd->buttons |= BT_ZOOM;
-	if (buttonMap.ButtonDown(Button_Reload))		cmd->buttons |= BT_RELOAD;
+	if (buttonMap.ButtonDown(Button_Attack))     cmd->buttons |= BT_ATTACK;
+	if (buttonMap.ButtonDown(Button_AltAttack))  cmd->buttons |= BT_ALTATTACK;
+	if (buttonMap.ButtonDown(Button_Use))        cmd->buttons |= BT_USE;
+	if (buttonMap.ButtonDown(Button_Jump))       cmd->buttons |= BT_JUMP;
+	if (buttonMap.ButtonDown(Button_Crouch))     cmd->buttons |= BT_CROUCH;
+	if (buttonMap.ButtonDown(Button_Zoom))       cmd->buttons |= BT_ZOOM;
+	if (buttonMap.ButtonDown(Button_Reload))     cmd->buttons |= BT_RELOAD;
 
-	if (buttonMap.ButtonDown(Button_User1))			cmd->buttons |= BT_USER1;
-	if (buttonMap.ButtonDown(Button_User2))			cmd->buttons |= BT_USER2;
-	if (buttonMap.ButtonDown(Button_User3))			cmd->buttons |= BT_USER3;
-	if (buttonMap.ButtonDown(Button_User4))			cmd->buttons |= BT_USER4;
+	if (buttonMap.ButtonDown(Button_User1))      cmd->buttons |= BT_USER1;
+	if (buttonMap.ButtonDown(Button_User2))      cmd->buttons |= BT_USER2;
+	if (buttonMap.ButtonDown(Button_User3))      cmd->buttons |= BT_USER3;
+	if (buttonMap.ButtonDown(Button_User4))      cmd->buttons |= BT_USER4;
 
-	if (buttonMap.ButtonDown(Button_Speed))			cmd->buttons |= BT_SPEED;
-	if (buttonMap.ButtonDown(Button_Strafe))		cmd->buttons |= BT_STRAFE;
-	if (buttonMap.ButtonDown(Button_MoveRight))		cmd->buttons |= BT_MOVERIGHT;
-	if (buttonMap.ButtonDown(Button_MoveLeft))		cmd->buttons |= BT_MOVELEFT;
-	if (buttonMap.ButtonDown(Button_LookDown))		cmd->buttons |= BT_LOOKDOWN;
-	if (buttonMap.ButtonDown(Button_LookUp))		cmd->buttons |= BT_LOOKUP;
-	if (buttonMap.ButtonDown(Button_Back))			cmd->buttons |= BT_BACK;
-	if (buttonMap.ButtonDown(Button_Forward))		cmd->buttons |= BT_FORWARD;
-	if (buttonMap.ButtonDown(Button_Right))			cmd->buttons |= BT_RIGHT;
-	if (buttonMap.ButtonDown(Button_Left))			cmd->buttons |= BT_LEFT;
-	if (buttonMap.ButtonDown(Button_MoveDown))		cmd->buttons |= BT_MOVEDOWN;
-	if (buttonMap.ButtonDown(Button_MoveUp))		cmd->buttons |= BT_MOVEUP;
-	if (buttonMap.ButtonDown(Button_ShowScores))	cmd->buttons |= BT_SHOWSCORES;
-	if (speed) cmd->buttons |= BT_RUN;
+	if (buttonMap.ButtonDown(Button_Speed))      cmd->buttons |= BT_SPEED;
+	if (buttonMap.ButtonDown(Button_Strafe))     cmd->buttons |= BT_STRAFE;
+	if (buttonMap.ButtonDown(Button_MoveRight))  cmd->buttons |= BT_MOVERIGHT;
+	if (buttonMap.ButtonDown(Button_MoveLeft))   cmd->buttons |= BT_MOVELEFT;
+	if (buttonMap.ButtonDown(Button_LookDown))   cmd->buttons |= BT_LOOKDOWN;
+	if (buttonMap.ButtonDown(Button_LookUp))     cmd->buttons |= BT_LOOKUP;
+	if (buttonMap.ButtonDown(Button_Back))       cmd->buttons |= BT_BACK;
+	if (buttonMap.ButtonDown(Button_Forward))    cmd->buttons |= BT_FORWARD;
+	if (buttonMap.ButtonDown(Button_Right))      cmd->buttons |= BT_RIGHT;
+	if (buttonMap.ButtonDown(Button_Left))       cmd->buttons |= BT_LEFT;
+	if (buttonMap.ButtonDown(Button_MoveDown))   cmd->buttons |= BT_MOVEDOWN;
+	if (buttonMap.ButtonDown(Button_MoveUp))     cmd->buttons |= BT_MOVEUP;
+	if (buttonMap.ButtonDown(Button_ShowScores)) cmd->buttons |= BT_SHOWSCORES;
+	if (speed)                                   cmd->buttons |= BT_RUN;
+
+	forward = side = fly = 0;
 
 	// Remap some axes depending on button state.
 	float axis_yaw = buttonMap.ButtonAnalog(Button_Left) - buttonMap.ButtonAnalog(Button_Right);
@@ -680,21 +607,6 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	float axis_forward = buttonMap.ButtonAnalog(Button_Forward) - buttonMap.ButtonAnalog(Button_Back);
 	float axis_side = buttonMap.ButtonAnalog(Button_MoveLeft) - buttonMap.ButtonAnalog(Button_MoveRight);
 	float axis_up = buttonMap.ButtonAnalog(Button_MoveUp) - buttonMap.ButtonAnalog(Button_MoveDown);
-
-	if (buttonMap.ButtonDown(Button_Strafe) || (buttonMap.ButtonDown(Button_Mlook) && lookstrafe))
-	{
-		axis_side = axis_yaw;
-		axis_yaw = 0.0f;
-	}
-
-	if (buttonMap.ButtonDown(Button_Mlook))
-	{
-		axis_pitch = axis_forward;
-		axis_forward = 0.0f;
-	}
-
-	auto i_axis_pitch = joyint(axis_pitch * ANALOG_LOOK_BASE * cl_analog_sensitivity_pitch);
-	auto i_axis_yaw = joyint(-ANALOG_LOOK_BASE * cl_analog_sensitivity_yaw * axis_yaw);
 
 	if (cl_analog_straferun)
 	{
@@ -719,12 +631,82 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		axis_side = std::clamp(axis_side * scale, -1.f, 1.f);
 	}
 
-	if (i_axis_pitch) G_AddViewPitch(i_axis_pitch);
-	if (i_axis_yaw) G_AddViewAngle(i_axis_yaw);
+	auto i_axis_side    = joyint(axis_side * sidemove[cl_analog_run | speed]);
+	auto i_axis_forward = joyint(axis_forward * forwardmove[cl_analog_run | speed]);
+	auto i_axis_fly     = joyint(axis_up * 2048);
+	auto i_axis_pitch   = joyint(axis_pitch * ANALOG_LOOK_BASE * cl_analog_sensitivity_pitch);
+	auto i_axis_yaw     = joyint(axis_yaw * -ANALOG_LOOK_BASE * cl_analog_sensitivity_yaw);
 
-	side    -= joyint(axis_side    *    sidemove[cl_analog_run | speed]);
-	forward += joyint(axis_forward * forwardmove[cl_analog_run | speed]);
-	fly += joyint(axis_up * 2048);
+	if (i_axis_side)    { side    -= i_axis_side;       cmd->buttons &= ~(BT_BACK     |BT_FORWARD ); }
+	if (i_axis_forward) { forward += i_axis_forward;    cmd->buttons &= ~(BT_MOVERIGHT|BT_MOVELEFT); }
+	if (i_axis_fly)     { fly     += i_axis_fly;        cmd->buttons &= ~(BT_MOVEDOWN |BT_MOVEUP  ); }
+	if (i_axis_pitch)   { G_AddViewPitch(i_axis_pitch); cmd->buttons &= ~(BT_LOOKDOWN |BT_LOOKUP  ); }
+	if (i_axis_yaw)     { G_AddViewAngle(i_axis_yaw);   cmd->buttons &= ~(BT_RIGHT    |BT_LEFT    ); }
+
+#define HELD(b) static_cast<bool>(cmd->buttons&(b))
+
+	// [RH] only use two stage accelerative turning on the keyboard
+	//		and not the joystick, since we treat the joystick as
+	//		the analog device it is.
+	if (HELD(BT_RIGHT|BT_LEFT)) turnheld += TicDup;
+	else                        turnheld = 0;
+
+	// let movement keys cancel each other out
+	if (strafe)
+	{
+		if (HELD(BT_RIGHT)) side += sidemove[speed];
+		if (HELD(BT_LEFT))  side -= sidemove[speed];
+	}
+	else
+	{
+		int tspeed = speed;
+
+		if (turnheld < SLOWTURNTICS) tspeed += 2; // slow turn
+		
+		if (HELD(BT_RIGHT)) G_AddViewAngle(*angleturn[tspeed]);
+		if (HELD(BT_LEFT))  G_AddViewAngle(-*angleturn[tspeed]);
+	}
+
+	if (HELD(BT_LOOKUP))   G_AddViewPitch(lookspeed[speed]);
+	if (HELD(BT_LOOKDOWN)) G_AddViewPitch(-lookspeed[speed]);
+
+	if (HELD(BT_MOVEUP))   fly += flyspeed[speed];
+	if (HELD(BT_MOVEDOWN)) fly -= flyspeed[speed];
+
+	if (buttonMap.ButtonDown(Button_Klook))
+	{
+		if (HELD(BT_FORWARD)) G_AddViewPitch(lookspeed[speed]);
+		if (HELD(BT_BACK))    G_AddViewPitch(-lookspeed[speed]);
+	}
+	else
+	{
+		if (HELD(BT_FORWARD)) forward += forwardmove[speed];
+		if (HELD(BT_BACK))    forward -= forwardmove[speed];
+	}
+
+	if (HELD(BT_MOVERIGHT)) side += sidemove[speed];
+	if (HELD(BT_MOVELEFT))  side -= sidemove[speed];
+
+	if (HELD(BT_STRAFE) || (lookstrafe && buttonMap.ButtonDown(Button_Mlook)))
+	{
+		axis_side = axis_yaw;
+		axis_yaw = 0.0f;
+	}
+
+	if (buttonMap.ButtonDown(Button_Mlook))
+	{
+		axis_pitch = axis_forward;
+		axis_forward = 0.0f;
+	}
+
+	Printf("%d% 05d %d% 05d %d% 05d %d% 05d %d% 05d\n",
+		HELD(BT_BACK     |BT_FORWARD ), i_axis_side,
+		HELD(BT_MOVERIGHT|BT_MOVELEFT), i_axis_forward,
+		HELD(BT_MOVEDOWN |BT_MOVEUP  ), i_axis_fly,
+		HELD(BT_LOOKDOWN |BT_LOOKUP  ), i_axis_pitch,
+		HELD(BT_RIGHT    |BT_LEFT    ), i_axis_yaw);
+
+#undef HELD
 
 	// Handle mice.
 	if (!buttonMap.ButtonDown(Button_Mlook) && !freelook)
