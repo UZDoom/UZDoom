@@ -649,61 +649,7 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		axis_side = std::clamp(axis_side * scale, -1.f, 1.f);
 	}
 
-	auto i_axis_side    = joyint(axis_side * sidemove[cl_analog_run | speed]);
-	auto i_axis_forward = joyint(axis_forward * forwardmove[cl_analog_run | speed]);
-	auto i_axis_fly     = joyint(axis_up * 2048);
-	auto i_axis_pitch   = joyint(axis_pitch * ANALOG_LOOK_BASE * cl_analog_sensitivity_pitch);
-	auto i_axis_yaw     = joyint(axis_yaw * -ANALOG_LOOK_BASE * cl_analog_sensitivity_yaw);
-
-	if (i_axis_side)    { side    -= i_axis_side;       cmd->buttons &= ~(BT_BACK     |BT_FORWARD ); }
-	if (i_axis_forward) { forward += i_axis_forward;    cmd->buttons &= ~(BT_MOVERIGHT|BT_MOVELEFT); }
-	if (i_axis_fly)     { fly     += i_axis_fly;        cmd->buttons &= ~(BT_MOVEDOWN |BT_MOVEUP  ); }
-	if (i_axis_pitch)   { G_AddViewPitch(i_axis_pitch); cmd->buttons &= ~(BT_LOOKDOWN |BT_LOOKUP  ); }
-	if (i_axis_yaw)     { G_AddViewAngle(i_axis_yaw);   cmd->buttons &= ~(BT_RIGHT    |BT_LEFT    ); }
-
 #define HELD(b) static_cast<bool>(cmd->buttons&(b))
-
-	// [RH] only use two stage accelerative turning on the keyboard
-	//		and not the joystick, since we treat the joystick as
-	//		the analog device it is.
-	if (HELD(BT_RIGHT|BT_LEFT)) turnheld += TicDup;
-	else                        turnheld = 0;
-
-	// let movement keys cancel each other out
-	if (strafe)
-	{
-		if (HELD(BT_RIGHT)) side += sidemove[speed];
-		if (HELD(BT_LEFT))  side -= sidemove[speed];
-	}
-	else
-	{
-		int tspeed = speed;
-
-		if (turnheld < SLOWTURNTICS) tspeed += 2; // slow turn
-		
-		if (HELD(BT_RIGHT)) G_AddViewAngle(*angleturn[tspeed]);
-		if (HELD(BT_LEFT))  G_AddViewAngle(-*angleturn[tspeed]);
-	}
-
-	if (HELD(BT_LOOKUP))   G_AddViewPitch(lookspeed[speed]);
-	if (HELD(BT_LOOKDOWN)) G_AddViewPitch(-lookspeed[speed]);
-
-	if (HELD(BT_MOVEUP))   fly += flyspeed[speed];
-	if (HELD(BT_MOVEDOWN)) fly -= flyspeed[speed];
-
-	if (buttonMap.ButtonDown(Button_Klook))
-	{
-		if (HELD(BT_FORWARD)) G_AddViewPitch(lookspeed[speed]);
-		if (HELD(BT_BACK))    G_AddViewPitch(-lookspeed[speed]);
-	}
-	else
-	{
-		if (HELD(BT_FORWARD)) forward += forwardmove[speed];
-		if (HELD(BT_BACK))    forward -= forwardmove[speed];
-	}
-
-	if (HELD(BT_MOVERIGHT)) side += sidemove[speed];
-	if (HELD(BT_MOVELEFT))  side -= sidemove[speed];
 
 	if (HELD(BT_STRAFE) || (lookstrafe && buttonMap.ButtonDown(Button_Mlook)))
 	{
@@ -715,6 +661,85 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	{
 		axis_pitch = axis_forward;
 		axis_forward = 0.0f;
+	}
+
+	auto i_axis_side    = joyint(axis_side * sidemove[cl_analog_run | speed]);
+	auto i_axis_forward = joyint(axis_forward * forwardmove[cl_analog_run | speed]);
+	auto i_axis_fly     = joyint(axis_up * 2048);
+	auto i_axis_pitch   = joyint(axis_pitch * ANALOG_LOOK_BASE * cl_analog_sensitivity_pitch);
+	auto i_axis_yaw     = joyint(axis_yaw * -ANALOG_LOOK_BASE * cl_analog_sensitivity_yaw);
+
+	// [RH] only use two stage accelerative turning on the keyboard
+	//		and not the joystick, since we treat the joystick as
+	//		the analog device it is. (turnheld)
+	if (i_axis_yaw)
+	{
+		G_AddViewAngle(i_axis_yaw);
+		turnheld = 0;
+	}
+	else if (!HELD(BT_RIGHT|BT_LEFT))
+	{
+		turnheld = 0;
+	}
+	else if (strafe)
+	{
+		turnheld += TicDup;
+		if (HELD(BT_RIGHT)) side += sidemove[speed];
+		if (HELD(BT_LEFT))  side -= sidemove[speed];
+	}
+	else
+	{
+		int tspeed = speed;
+
+		if (turnheld < SLOWTURNTICS) tspeed += 2; // slow turn
+
+		if (HELD(BT_RIGHT)) G_AddViewAngle(*angleturn[tspeed]);
+		if (HELD(BT_LEFT))  G_AddViewAngle(-*angleturn[tspeed]);
+	}
+
+	if (i_axis_pitch)
+	{
+		G_AddViewPitch(i_axis_pitch);
+	}
+	else
+	{
+		if (HELD(BT_LOOKUP))   G_AddViewPitch(lookspeed[speed]);
+		if (HELD(BT_LOOKDOWN)) G_AddViewPitch(-lookspeed[speed]);
+	}
+
+	if (i_axis_fly)
+	{
+		fly += i_axis_fly;
+	}
+	else
+	{
+		if (HELD(BT_MOVEUP))   fly += flyspeed[speed];
+		if (HELD(BT_MOVEDOWN)) fly -= flyspeed[speed];
+	}
+
+	if (i_axis_side)
+	{
+		side -= i_axis_side;
+	}
+	else if (buttonMap.ButtonDown(Button_Klook))
+	{
+		if (HELD(BT_FORWARD)) G_AddViewPitch(lookspeed[speed]);
+		if (HELD(BT_BACK))    G_AddViewPitch(-lookspeed[speed]);
+	}
+	else
+	{
+		if (HELD(BT_FORWARD)) forward += forwardmove[speed];
+		if (HELD(BT_BACK))    forward -= forwardmove[speed];
+	}
+
+	if (i_axis_forward)
+	{
+		forward += i_axis_forward;
+	}
+	else
+	{
+		if (HELD(BT_MOVERIGHT)) side += sidemove[speed];
+		if (HELD(BT_MOVELEFT))  side -= sidemove[speed];
 	}
 
 #undef HELD
