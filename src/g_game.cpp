@@ -824,7 +824,11 @@ ADD_STAT (analog)
 
 	float axis_forward = buttonMap.ButtonAnalog(Button_Forward) - buttonMap.ButtonAnalog(Button_Back);
 	float axis_side = buttonMap.ButtonAnalog(Button_MoveLeft) - buttonMap.ButtonAnalog(Button_MoveRight);
-	out.AppendFormat("[%.3f, %.3f]", axis_forward, axis_side);
+	float axis_up = buttonMap.ButtonAnalog(Button_MoveUp) - buttonMap.ButtonAnalog(Button_MoveDown);
+	float axis_yaw = buttonMap.ButtonAnalog(Button_Left) - buttonMap.ButtonAnalog(Button_Right);
+	float axis_pitch = buttonMap.ButtonAnalog(Button_LookUp) - buttonMap.ButtonAnalog(Button_LookDown);
+
+	out.AppendFormat("[x% .3f y% .3f z% .3f r 0.000 p% .3f y% .3f]", axis_forward, axis_side, axis_up, axis_pitch, axis_yaw);
 
 	return out;
 }
