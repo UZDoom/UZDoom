@@ -18,15 +18,14 @@
 */
 
 #include <memory>
-#include <stddef.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #include "a_dynlight.h"
 #include "a_keys.h"
 #include "a_morph.h"
 #include "am_map.h"
+#include "basics.h"
 #include "c_bind.h"
 #include "c_buttons.h"
 #include "c_console.h"
@@ -550,6 +549,26 @@ usercmd_t* G_BaseTiccmd()
 	return &emptycmd;
 }
 
+static float axis_yaw = 0, axis_pitch = 0, axis_forward = 0, axis_side = 0, axis_up = 0;
+ADD_STAT (analogue)
+{
+	return FStringf(
+		"[x% .3f y% .3f z% .3f r 0.000 p% .3f y% .3f]",
+		axis_forward, axis_side, axis_up, axis_pitch, axis_yaw
+	);
+}
+
+static int strafe = 0, speed = 0, forward = 0, side = 0, fly = 0;
+static uint32_t buttons = 0;
+ADD_STAT (digital)
+{
+	return FStringf(
+		"[ strafe %d speed %d forward %3d side %3d fly %3d button %08b %08b %08b %08b ]",
+		strafe, speed, forward, side, fly,
+		buttons>>24 & 0xff, buttons>>16&0xff, buttons>>8&0xff, buttons>>0&0xff
+	);
+}
+
 //
 // G_BuildTiccmd
 // Builds a ticcmd from all of the available inputs
@@ -558,7 +577,6 @@ usercmd_t* G_BaseTiccmd()
 //
 void G_BuildTiccmd (usercmd_t *cmd)
 {
-	int strafe, speed, forward, side, fly;
 	usercmd_t *base;
 
 	base = G_BaseTiccmd();
@@ -602,11 +620,11 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	forward = side = fly = 0;
 
 	// Remap some axes depending on button state.
-	float axis_yaw = buttonMap.ButtonAnalog(Button_Left) - buttonMap.ButtonAnalog(Button_Right);
-	float axis_pitch = buttonMap.ButtonAnalog(Button_LookUp) - buttonMap.ButtonAnalog(Button_LookDown);
-	float axis_forward = buttonMap.ButtonAnalog(Button_Forward) - buttonMap.ButtonAnalog(Button_Back);
-	float axis_side = buttonMap.ButtonAnalog(Button_MoveLeft) - buttonMap.ButtonAnalog(Button_MoveRight);
-	float axis_up = buttonMap.ButtonAnalog(Button_MoveUp) - buttonMap.ButtonAnalog(Button_MoveDown);
+	axis_yaw = buttonMap.ButtonAnalog(Button_Left) - buttonMap.ButtonAnalog(Button_Right);
+	axis_pitch = buttonMap.ButtonAnalog(Button_LookUp) - buttonMap.ButtonAnalog(Button_LookDown);
+	axis_forward = buttonMap.ButtonAnalog(Button_Forward) - buttonMap.ButtonAnalog(Button_Back);
+	axis_side = buttonMap.ButtonAnalog(Button_MoveLeft) - buttonMap.ButtonAnalog(Button_MoveRight);
+	axis_up = buttonMap.ButtonAnalog(Button_MoveUp) - buttonMap.ButtonAnalog(Button_MoveDown);
 
 	if (cl_analog_straferun)
 	{
@@ -699,13 +717,6 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		axis_forward = 0.0f;
 	}
 
-	Printf("%d% 05d %d% 05d %d% 05d %d% 05d %d% 05d\n",
-		HELD(BT_BACK     |BT_FORWARD ), i_axis_side,
-		HELD(BT_MOVERIGHT|BT_MOVELEFT), i_axis_forward,
-		HELD(BT_MOVEDOWN |BT_MOVEUP  ), i_axis_fly,
-		HELD(BT_LOOKDOWN |BT_LOOKUP  ), i_axis_pitch,
-		HELD(BT_RIGHT    |BT_LEFT    ), i_axis_yaw);
-
 #undef HELD
 
 	// Handle mice.
@@ -795,21 +806,8 @@ void G_BuildTiccmd (usercmd_t *cmd)
 
 	cmd->forwardmove <<= 8;
 	cmd->sidemove <<= 8;
-}
 
-ADD_STAT (analogue)
-{
-	FString out;
-
-	float axis_forward = buttonMap.ButtonAnalog(Button_Forward) - buttonMap.ButtonAnalog(Button_Back);
-	float axis_side = buttonMap.ButtonAnalog(Button_MoveLeft) - buttonMap.ButtonAnalog(Button_MoveRight);
-	float axis_up = buttonMap.ButtonAnalog(Button_MoveUp) - buttonMap.ButtonAnalog(Button_MoveDown);
-	float axis_yaw = buttonMap.ButtonAnalog(Button_Left) - buttonMap.ButtonAnalog(Button_Right);
-	float axis_pitch = buttonMap.ButtonAnalog(Button_LookUp) - buttonMap.ButtonAnalog(Button_LookDown);
-
-	out.AppendFormat("[x% .3f y% .3f z% .3f r 0.000 p% .3f y% .3f]", axis_forward, axis_side, axis_up, axis_pitch, axis_yaw);
-
-	return out;
+	buttons = cmd->buttons;
 }
 
 static int LookAdjust(int look)
