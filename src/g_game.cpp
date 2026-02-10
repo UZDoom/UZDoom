@@ -693,6 +693,9 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		axis_forward = 0.0f;
 	}
 
+	auto i_axis_pitch = joyint(axis_pitch * ANALOG_LOOK_BASE * cl_analog_sensitivity_pitch);
+	auto i_axis_yaw = joyint(-ANALOG_LOOK_BASE * cl_analog_sensitivity_yaw * axis_yaw);
+
 	if (cl_analog_straferun)
 	{
 		// Rescale diagonal analog input from roughly [0.77, 0.77] to [1.0, 1.0],
@@ -716,14 +719,8 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		axis_side = std::clamp(axis_side * scale, -1.f, 1.f);
 	}
 
-	if (axis_pitch != 0)
-	{
-		G_AddViewPitch(joyint(axis_pitch * ANALOG_LOOK_BASE * cl_analog_sensitivity_pitch));
-	}
-	if (axis_yaw != 0)
-	{
-		G_AddViewAngle(joyint(-ANALOG_LOOK_BASE * cl_analog_sensitivity_yaw * axis_yaw));
-	}
+	if (i_axis_pitch) G_AddViewPitch(i_axis_pitch);
+	if (i_axis_yaw) G_AddViewAngle(i_axis_yaw);
 
 	side    -= joyint(axis_side    *    sidemove[cl_analog_run | speed]);
 	forward += joyint(axis_forward * forwardmove[cl_analog_run | speed]);
