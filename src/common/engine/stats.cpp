@@ -22,13 +22,12 @@
 **
 */
 
-#include "stats.h"
-#include "v_draw.h"
-#include "v_text.h"
-#include "v_font.h"
-#include "c_console.h"
+#include "basics.h"
 #include "c_dispatch.h"
 #include "printf.h"
+#include "stats.h"
+#include "v_draw.h"
+#include "v_font.h"
 
 FStat *FStat::FirstStat;
 
@@ -53,12 +52,21 @@ FStat::~FStat ()
 
 FStat *FStat::FindStat (const char *name)
 {
-	FStat *stat = FirstStat;
+	FStat *stat = FirstStat, *partial = nullptr;
+	bool badpartial = false;
+	auto len = strlen(name);
 
 	while (stat && stricmp (name, stat->m_Name))
+	{
+		if (!badpartial && 0 == strncmp(stat->m_Name, name, len))
+		{
+			if (partial) { badpartial = true; partial = nullptr; }
+			else { partial = stat; }
+		}
 		stat = stat->m_Next;
+	}
 
-	return stat;
+	return stat? stat: (badpartial ? nullptr: partial);
 }
 
 void FStat::ToggleStat (const char *name)
@@ -106,7 +114,7 @@ void FStat::PrintStat (F2DDrawer *drawer)
 					// Count number of linefeeds but ignore terminating ones.
 					if (stattext[i] == '\n') y -= fontheight;
 				}
-				DrawText(drawer, NewConsoleFont, CR_GREEN, 5 / textScale, y, stattext.GetChars(),
+				DrawText(drawer, NewConsoleFont, CR_GREEN, 5. / textScale, y, stattext.GetChars(),
 					DTA_VirtualWidth, twod->GetWidth() / textScale,
 					DTA_VirtualHeight, twod->GetHeight() / textScale,
 					DTA_KeepRatio, true, TAG_DONE);

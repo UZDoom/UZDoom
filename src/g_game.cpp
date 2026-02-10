@@ -818,7 +818,7 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	cmd->sidemove <<= 8;
 }
 
-ADD_STAT (analog)
+ADD_STAT (analogue)
 {
 	FString out;
 
