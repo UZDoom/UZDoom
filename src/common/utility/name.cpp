@@ -22,6 +22,7 @@
 */
 
 #include <string.h>
+
 #include "name.h"
 #include "cmdlib.h"
 
@@ -30,7 +31,9 @@
 // CODE --------------------------------------------------------------------
 
 FName::NameManager::NameManager(std::initializer_list<const char*> predefinedNames) {
+	assert(0 == strcmp(PredefinedNames[0], "None") && "'None' must be name 0.");
 	for (const auto& n : predefinedNames) {
+		assert((0 == FindName(PredefinedNames[i], true)) && "Predefined name already inserted");
 		FindName(n, false);
 	}
 }
