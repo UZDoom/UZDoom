@@ -21,35 +21,74 @@
 **
 */
 
+#include <cstdint>
 #include <string.h>
+#include <string_view>
+#include <vector>
 
 #include "name.h"
+#include "m_crc32.h"
 
 #include "absl/strings/ascii.h"
 
 // CODE --------------------------------------------------------------------
 
-FName::NameManager::NameManager(std::initializer_list<const char*> predefinedNames) {
-	assert(0 == strcmp(PredefinedNames[0], "None") && "'None' must be name 0.");
+static constexpr size_t FindDuplicates()
+{
+	auto tolower = [](uint8_t c) -> uint8_t {
+		if (c >= 'A' && c <= 'Z') c += 'a'-'A';
+		return c;
+	};
+
+	size_t i = 0;
+	std::vector<std::pair<uint32_t, size_t>> hashes = {
+		#define xx(n) { CalcCRC32<tolower>(#n), i++ },
+		#define xy(n, s) { CalcCRC32<tolower>(s), i++ },
+		#define xa(a, n)
+		#include "namedef.h"
+		#undef xx
+		#undef xy
+		#undef xa
+	};
+
+	std::sort(hashes.begin(), hashes.end());
+
+	for (size_t i = 1; i < hashes.size(); i++)
+	{
+		auto a = hashes[i], b = hashes[i-1];
+		if (a.first == b.first) return std::max(a.second, b.second);
+	}
+
+	return 0;
+}
+
+template<size_t N>
+FName::NameManager::NameManager(const char* const (&predefinedNames)[N])
+{
 	for (const auto& n : predefinedNames) {
-		assert((0 == FindName(PredefinedNames[i], true)) && "Predefined name already inserted");
 		FindName(n, false);
 	}
 }
 
 FName::NameManager& FName::NameManager::Instance() {
-	static FName::NameManager instance {
+	static constexpr const char* names[] = {
 #define xx(n) #n,
 #define xy(n, s) s,
 #define xa(a, n)
 #include "namedef.h"
 #if __has_include("namedef_custom.h")
-	#include "namedef_custom.h"
+    #include "namedef_custom.h"
 #endif
 #undef xx
 #undef xy
 #undef xa
 	};
+
+	static_assert(std::size(names) > 0, "Name list is empty.");
+	static_assert(0 == NAME_None && std::string_view(names[0]) == "None", "'None' must be name 0.");
+	static_assert(0 == FindDuplicates(), "Duplicate string found in PredefinedNames array.");
+
+	static FName::NameManager instance { names };
 	return instance;
 }
 
