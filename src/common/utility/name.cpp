@@ -24,7 +24,6 @@
 #include <string.h>
 
 #include "name.h"
-#include "cmdlib.h"
 
 #include "absl/strings/ascii.h"
 
@@ -42,12 +41,14 @@ FName::NameManager& FName::NameManager::Instance() {
 	static FName::NameManager instance {
 #define xx(n) #n,
 #define xy(n, s) s,
+#define xa(a, n)
 #include "namedef.h"
 #if __has_include("namedef_custom.h")
 	#include "namedef_custom.h"
 #endif
 #undef xx
 #undef xy
+#undef xa
 	};
 	return instance;
 }
