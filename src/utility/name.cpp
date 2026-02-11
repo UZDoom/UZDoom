@@ -62,23 +62,13 @@ static constexpr size_t FindDuplicates()
 	return 0;
 }
 
-template<size_t N>
-FName::NameManager::NameManager(const char* const (&predefinedNames)[N])
+FName::NameManager& FName::NameManager::Instance()
 {
-	for (const auto& n : predefinedNames) {
-		FindName(n, false);
-	}
-}
-
-FName::NameManager& FName::NameManager::Instance() {
 	static constexpr const char* names[] = {
 #define xx(n) #n,
 #define xy(n, s) s,
 #define xa(a, n)
 #include "namedef.h"
-#if __has_include("namedef_custom.h")
-    #include "namedef_custom.h"
-#endif
 #undef xx
 #undef xy
 #undef xa
@@ -90,6 +80,15 @@ FName::NameManager& FName::NameManager::Instance() {
 
 	static FName::NameManager instance { names };
 	return instance;
+}
+
+template<size_t N>
+FName::NameManager::NameManager(const char* const (&predefinedNames)[N])
+{
+	for (const auto& n : predefinedNames)
+	{
+		FindName(n, false);
+	}
 }
 
 //==========================================================================
