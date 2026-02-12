@@ -38,3 +38,4 @@ class OQSilverKey : DoomKey
 		loop;
 	}
 }
+

@@ -93,7 +93,13 @@ class DoomStatusBar : BaseStatusBar
 		}
 		else
 		{
-			DrawTexture(GetMugShot(5), (143, 168), DI_ITEM_OFFSETS);
+			CVar anorakFaceCVar = CVar.GetCVar('oasis_star_anorak_face');
+			TextureID anorakFaceTex = TexMan.CheckForTexture("OASFACE", TexMan.Type_Any);
+			bool drawAnorakFace = anorakFaceCVar && anorakFaceCVar.GetBool() && anorakFaceTex.IsValid();
+			if (drawAnorakFace)
+				DrawTexture(anorakFaceTex, (143, 168), DI_ITEM_OFFSETS);
+			else
+				DrawTexture(GetMugShot(5), (143, 168), DI_ITEM_OFFSETS);
 		}
 		if (isInventoryBarVisible())
 		{

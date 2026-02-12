@@ -50,6 +50,11 @@ static std::string g_star_effective_username;
 static std::string g_star_effective_password;
 static const int STAR_PICKUP_OQUAKE_GOLD_KEY = 5005;
 static const int STAR_PICKUP_OQUAKE_SILVER_KEY = 5013;
+CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+
+static bool IsMockAnorakCredentials(const std::string& username, const std::string& password) {
+	return username == "anorak" && password == "test!";
+}
 
 static const char* StarAuthSourceLabel(void) {
 	if (!g_star_override_username.empty() || !g_star_override_password.empty() ||
@@ -632,6 +637,20 @@ CCMD(star)
 			if (argv.argc() >= 5) g_star_override_avatar_id = argv[4];
 			StarLogInfo("Using runtime JWT token from console command.");
 		}
+
+		// Temporary local mock path (no STAR API call):
+		// username=anorak password=test! enables custom HUD face.
+		if (IsMockAnorakCredentials(g_star_override_username, g_star_override_password)) {
+			g_star_initialized = true;
+			g_star_logged_runtime_auth_failure = false;
+			g_star_logged_missing_auth_config = false;
+			oasis_star_anorak_face = true;
+			Printf("Beam-in successful (mock). Welcome, anorak.\n");
+			Printf("\n");
+			return;
+		}
+
+		oasis_star_anorak_face = false;
 		StarLogInfo("Beaming in...");
 		if (StarTryInitializeAndAuthenticate(true)) {
 			Printf("Beam-in successful. Cross-game features enabled.\n");
@@ -649,9 +668,12 @@ CCMD(star)
 			Printf("\n");
 			return;
 		}
-		star_api_cleanup();
+		if (g_star_client_ready) {
+			star_api_cleanup();
+		}
 		g_star_client_ready = false;
 		g_star_initialized = false;
+		oasis_star_anorak_face = false;
 		Printf("Beam-out successful. Use 'star beamin' to beam in again.\n");
 		Printf("\n");
 		return;
