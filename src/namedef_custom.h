@@ -18,6 +18,15 @@
 
 // clang-format off
 
+// This is here to make my editor not have a meltdown every time I open this
+// file. Since everywhere this file is included already defines `xx`, this
+// does nothing, but it will give the compiler enough context to be happy.
+#ifndef xx
+#define xx(n)
+#define xy(n,s)
+#define xa(a,n)
+#endif
+
 // ZDoom specific names
 
 xx(Doom)
