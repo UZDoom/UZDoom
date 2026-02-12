@@ -2407,7 +2407,7 @@ static void CheckCmdLine()
 
 	if (devparm)
 	{
-		Printf ("%s", GStrings.GetString("D_DEVSTR"));
+		Printf ("%s\n", GStrings.GetString("D_DEVSTR"));
 	}
 
 	// turbo option  // [RH] (now a cvar)
