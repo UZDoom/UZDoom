@@ -78,6 +78,7 @@ inline void RemapLegacyLanguages(FName &name, FString &lang)
 	{
 		case NAME_Default:  name = NAME_LANG_EN_US;   break;
 		case NAME_LANG_by:  name = NAME_LANG_BE;      break;
+		case NAME_LANG_chi: name = NAME_LANG_ZH_HANT; break;
 		case NAME_LANG_chs: name = NAME_LANG_ZH_HANS; break;
 		case NAME_LANG_cht: name = NAME_LANG_ZH_HANT; break;
 		case NAME_LANG_jp:  name = NAME_LANG_JA;      break;
@@ -85,6 +86,7 @@ inline void RemapLegacyLanguages(FName &name, FString &lang)
 		case NAME_LANG_no:  name = NAME_LANG_NB_NO;   break;
 		case NAME_LANG_pt:  name = NAME_LANG_PT_BR;   break;
 		case NAME_LANG_ptg: name = NAME_LANG_PT;      break;
+		case NAME_LANG_zho: name = NAME_LANG_ZH_HANS; break;
 
 		case NAME_LANG_ena: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_AU;       break;
 		case NAME_LANG_enb: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_BZ;       break;
