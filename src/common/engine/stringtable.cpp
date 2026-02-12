@@ -22,12 +22,7 @@
 **
 */
 
-#include <cstdint>
-#include <cstdio>
-#include <iostream>
-#include <string.h>
-#include <string_view>
-
+#include "basics.h"
 #include "c_cvars.h"
 #include "filesystem.h"
 #include "i_interface.h"
@@ -69,74 +64,80 @@ FString FStringTable::GetSystemLocale()
 
 //==========================================================================
 //
-//
+// Map old semi-made-up language codes to IETF language tags
 //
 //==========================================================================
 
-LangID FStringTable::GetID(FString lang)
+inline void RemapLegacyLanguages(FName &name, FString &lang)
 {
+	FName oldname = name;
 
+	constexpr bool esmx = false; // treat all of these as es_MX, or use more country-specific codes (which I guessed)
+	constexpr bool engb = false; // treat all of these as en_GB, or use more country-specific codes (which I guessed)
+	switch (name.GetIndex())
+	{
+		case NAME_Default:  name = NAME_LANG_EN_US;   break;
+		case NAME_LANG_by:  name = NAME_LANG_BE;      break;
+		case NAME_LANG_chs: name = NAME_LANG_ZH_HANS; break;
+		case NAME_LANG_cht: name = NAME_LANG_ZH_HANT; break;
+		case NAME_LANG_jp:  name = NAME_LANG_JA;      break;
+		case NAME_LANG_nb:  name = NAME_LANG_NB_NO;   break;
+		case NAME_No:  name = NAME_LANG_NB_NO;   break;
+		case NAME_LANG_PT:  name = NAME_LANG_PT_BR;   break;
+		case NAME_LANG_ptg: name = NAME_LANG_PT;      break;
 
-	FName name = lang;
+		case NAME_LANG_ena: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_AU;       break;
+		case NAME_LANG_enb: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_BZ;       break;
+		case NAME_LANG_enc: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_CA;       break;
+		case NAME_LANG_eng: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_GB;       break;
+		case NAME_LANG_eni: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_IN;       break;
+		case NAME_LANG_enj: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_JM;       break;
+		case NAME_LANG_enl: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_IE;       break;
+		case NAME_LANG_ens: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_ZA;       break;
+		case NAME_LANG_ent: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_TT;       break;
+		case NAME_LANG_enw: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_GB_WALES; break;
+		case NAME_LANG_enz: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_NZ;       break;
 
-	static FName systemlocale = NAME_None;
+		case NAME_LANG_esa: name = esmx? NAME_LANG_ES_AR: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esb: name = esmx? NAME_LANG_ES_BO: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esc: name = esmx? NAME_LANG_ES_CO: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esd: name = esmx? NAME_LANG_ES_DO: NAME_LANG_ES_MX; break;
+		case NAME_LANG_ese: name = esmx? NAME_LANG_ES_EC: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esf: name = esmx? NAME_LANG_ES_PH: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esg: name = esmx? NAME_LANG_ES_GT: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esh: name = esmx? NAME_LANG_ES_HN: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esi: name = esmx? NAME_LANG_ES:    NAME_LANG_ES_MX; break;
+		case NAME_LANG_esl: name = esmx? NAME_LANG_ES_CL: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esm: name = esmx? NAME_LANG_ES_MX: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esn: name = esmx? NAME_LANG_ES:    NAME_LANG_ES_MX; break;
+		case NAME_LANG_eso: name = esmx? NAME_LANG_ES_BO: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esr: name = esmx? NAME_LANG_ES_CR: NAME_LANG_ES_MX; break;
+		case NAME_LANG_ess: name = esmx? NAME_LANG_ES_SV: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esu: name = esmx? NAME_LANG_ES_US: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esv: name = esmx? NAME_LANG_ES_VE: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esy: name = esmx? NAME_LANG_ES_PY: NAME_LANG_ES_MX; break;
+		case NAME_LANG_esz: name = esmx? NAME_LANG_ES_BZ: NAME_LANG_ES_MX; break;
+	}
 
-	if (name == NAME_Auto && systemlocale != NAME_None) name = systemlocale;
-	if (name == NAME_Auto) systemlocale = name = lang = GetSystemLocale();
+	if (name != oldname) lang = name.GetChars();
+}
 
-	// should I switch to a map? Or add these the namedef.h? If feels weird to have these very specific values in namedef
-	bool oldmapping = false; // use old generalized alias, or new real alias
-	if (name == "default") { name = lang = "en-US"; }
-	else if (name == "by") { name = lang = "be-Latn"; }
-	else if (name == "chs") { name = lang = "zh-Hans"; }
-	else if (name == "cht") { name = lang = "zh-Hant"; }
-	else if (name == "ena") { name = lang = (oldmapping? "en-GB": "en-AU"); }  // I guessed what the en* ones could be
-	else if (name == "enb") { name = lang = (oldmapping? "en-GB": "en-BZ"); }
-	else if (name == "enc") { name = lang = (oldmapping? "en-GB": "en-CA"); }
-	else if (name == "eng") { name = lang = (oldmapping? "en-GB": "en-GB"); }
-	else if (name == "eni") { name = lang = (oldmapping? "en-GB": "en-IN"); }
-	else if (name == "enj") { name = lang = (oldmapping? "en-GB": "en-JM"); }
-	else if (name == "enl") { name = lang = (oldmapping? "en-GB": "en-IE"); }
-	else if (name == "ens") { name = lang = (oldmapping? "en-GB": "en-ZA"); }
-	else if (name == "ent") { name = lang = (oldmapping? "en-GB": "en-TT"); }
-	else if (name == "enw") { name = lang = (oldmapping? "en-GB": "en-GB-wales"); }
-	else if (name == "enz") { name = lang = (oldmapping? "en-GB": "en-NZ"); }
-	else if (name == "esa") { name = lang = (oldmapping? "es-MX": "es-AR"); }  // I guessed what the es* ones could be
-	else if (name == "esb") { name = lang = (oldmapping? "es-MX": "es-BO"); }
-	else if (name == "esc") { name = lang = (oldmapping? "es-MX": "es-CO"); }
-	else if (name == "esd") { name = lang = (oldmapping? "es-MX": "es-DO"); }
-	else if (name == "ese") { name = lang = (oldmapping? "es-MX": "es-EC"); }
-	else if (name == "esf") { name = lang = (oldmapping? "es-MX": "es-PH"); }
-	else if (name == "esg") { name = lang = (oldmapping? "es-MX": "es-GT"); }
-	else if (name == "esh") { name = lang = (oldmapping? "es-MX": "es-HN"); }
-	else if (name == "esi") { name = lang = (oldmapping? "es-MX": "es"); }
-	else if (name == "esl") { name = lang = (oldmapping? "es-MX": "es-CL"); }
-	else if (name == "esm") { name = lang = (oldmapping? "es-MX": "es-MX"); }
-	else if (name == "esn") { name = lang = (oldmapping? "es-MX": "es"); }
-	else if (name == "eso") { name = lang = (oldmapping? "es-MX": "es-BO"); }
-	else if (name == "esr") { name = lang = (oldmapping? "es-MX": "es-CR"); }
-	else if (name == "ess") { name = lang = (oldmapping? "es-MX": "es-SV"); }
-	else if (name == "esu") { name = lang = (oldmapping? "es-MX": "es-US"); }
-	else if (name == "esv") { name = lang = (oldmapping? "es-MX": "es-VE"); }
-	else if (name == "esy") { name = lang = (oldmapping? "es-MX": "es-PY"); }
-	else if (name == "esz") { name = lang = (oldmapping? "es-MX": "es-BZ"); }
-	else if (name == "jp") { name = lang = "ja"; }
-	else if (name == "nb") { name = lang = "nb-NO"; }
-	else if (name == "no") { name = lang = "nb-NO"; }
-	else if (name == "pt") { name = lang = "pt-BR"; }
-	else if (name == "ptg") { name = lang = "pt"; }
+//==========================================================================
+//
+// Take ietf language tag, and extract all of the relevant bits
+//
+//==========================================================================
 
-	auto idPtr = langMap.CheckKey(name);
-	if (idPtr) return *idPtr;
-
-	lang.ToLower();
+inline void ExtractComponents(FString &str, FString &lang, FString &script, FString &region)
+{
+	str.ToLower();
 	// TODO: we **could** validate here, but I don't think we need to
-	lang.ReplaceChars([](auto c) { return !(('a'<=c&&c<='z')||('0'<=c&&c<='9')); }, ' ');
+	str.ReplaceChars([](auto c) { return !(('a'<=c&&c<='z')||('0'<=c&&c<='9')); }, ' ');
 
-	FString _lang = "*", _script = "*", _region = "*";
+	lang = script = region = "*";
 
 	FScanner sc;
-	sc.OpenString("language", lang);
+	sc.OpenString("language", str);
 
 	enum { LANG, SCRIPT, REGION, DONE };
 
@@ -151,13 +152,13 @@ LangID FStringTable::GetID(FString lang)
 		switch (step)
 		{
 		case LANG:
-			_lang = sc.String;
+			lang = sc.String;
 			step = SCRIPT;
 			break;
 		case SCRIPT:
 			if (sc.StringLen == 4) // script
 			{
-				_script = FStringf("%c%s", sc.String[0]+('A'-'a'),  sc.String+1);
+				script = FStringf("%c%s", sc.String[0]+('A'-'a'),  sc.String+1);
 				step = REGION;
 				break;
 			}
@@ -165,8 +166,8 @@ LangID FStringTable::GetID(FString lang)
 		case REGION:
 			if (sc.StringLen == 2) // region
 			{
-				_region = sc.String;
-				_region.ToUpper();
+				region = sc.String;
+				region.ToUpper();
 				step = DONE;
 			}
 			break;
@@ -174,6 +175,32 @@ LangID FStringTable::GetID(FString lang)
 			break;
 		}
 	}
+
+	sc.Close();
+}
+
+//==========================================================================
+//
+//
+//
+//==========================================================================
+
+LangID FStringTable::GetID(FString lang)
+{
+	FName name = lang;
+
+	static FName systemlocale = NAME_None;
+
+	if (name == NAME_Auto && systemlocale != NAME_None) name = systemlocale;
+	if (name == NAME_Auto) systemlocale = name = lang = GetSystemLocale();
+
+	RemapLegacyLanguages(name, lang);
+
+	auto idPtr = langMap.CheckKey(name);
+	if (idPtr) return *idPtr;
+
+	FString _lang, _script, _region;
+	ExtractComponents(lang, _lang, _script, _region);
 
 	auto normalized = _lang + "-" + _script + "-" + _region;
 	auto script     = _lang + "-" + _script + "-*";
