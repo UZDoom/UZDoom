@@ -31,6 +31,21 @@ endif()
 
 project(UZDoom)
 
+# make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
+option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
+
+if(NOT FORCE_NO_LTO)
+	include(CheckIPOSupported)
+	check_ipo_supported(RESULT ipo_supported OUTPUT ipo_error)
+	if( ipo_supported )
+		message(STATUS "Using LTO on Release and RelWithDebInfo build types")
+		set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE TRUE)
+		set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELWITHDEBINFO TRUE)
+	else()
+		message(STATUS "Not using LTO because unsupported: ${ipo_error}")
+	endif()
+endif()
+
 if (WIN32 AND VCPKG_TOOLCHAIN)
 	option(LIBVPX_VCPKG "Use libvpx from vcpkg" OFF)
 endif()
