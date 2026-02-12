@@ -293,6 +293,12 @@ static const char* GetKeycardDescription(int keynum) {
 }
 
 void UZDoom_STAR_Init(void) {
+	// Safe default bind for ODOOM inventory popup toggle/tab controls.
+	// defaultbind does not override user-customized bindings.
+	C_DoCommand("defaultbind i +user1");
+	C_DoCommand("defaultbind o +user2");
+	C_DoCommand("defaultbind p +user3");
+
 	StarLogInfo("STAR bootstrap: Beaming in...");
 	StarTryInitializeAndAuthenticate(true);
 	Printf(PRINT_NONOTIFY, "STAR: debug=%s auth_source=%s initialized=%s\n",

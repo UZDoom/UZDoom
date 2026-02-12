@@ -95,6 +95,12 @@ class OQArmorMega : BlueArmor
 class OQMonsterDog : Demon
 {
 	Default { Tag "Rottweiler"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -126,6 +132,12 @@ class OQMonsterDog : Demon
 class OQMonsterZombie : ZombieMan
 {
 	Default { Tag "Zombie"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -157,6 +169,12 @@ class OQMonsterZombie : ZombieMan
 class OQMonsterDemon : Demon
 {
 	Default { Tag "Demon"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -188,6 +206,12 @@ class OQMonsterDemon : Demon
 class OQMonsterShambler : BaronOfHell
 {
 	Default { Tag "Shambler"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -223,6 +247,12 @@ class OQMonsterShambler : BaronOfHell
 class OQMonsterGrunt : ZombieMan
 {
 	Default { Tag "Grunt"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -254,6 +284,12 @@ class OQMonsterGrunt : ZombieMan
 class OQMonsterFish : Cacodemon
 {
 	Default { Tag "Fish"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -285,6 +321,12 @@ class OQMonsterFish : Cacodemon
 class OQMonsterOgre : ShotgunGuy
 {
 	Default { Tag "Ogre"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -316,6 +358,12 @@ class OQMonsterOgre : ShotgunGuy
 class OQMonsterEnforcer : ChaingunGuy
 {
 	Default { Tag "Enforcer"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -348,6 +396,12 @@ class OQMonsterEnforcer : ChaingunGuy
 class OQMonsterSpawn : PainElemental
 {
 	Default { Tag "Spawn"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
@@ -379,6 +433,12 @@ class OQMonsterSpawn : PainElemental
 class OQMonsterKnight : HellKnight
 {
 	Default { Tag "Hell Knight"; }
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+		SpriteOffset.X = 0;
+		SpriteOffset.Y = -48;
+	}
 	States
 	{
 	Spawn:
