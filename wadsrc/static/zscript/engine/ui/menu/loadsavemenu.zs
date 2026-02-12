@@ -292,7 +292,14 @@ class LoadSaveMenu : ListMenu
 		if (Selected != -1 && Selected < manager.SavegameCount())
 		{
 			String EndString;
-			EndString = String.Format("%s%s%s%s?\n\n%s", Stringtable.Localize("$MNU_DELETESG"), TEXTCOLOR_WHITE, manager.GetSavegame(Selected).SaveTitle, TEXTCOLOR_NORMAL, Stringtable.Localize("$PRESSYN"));
+			EndString = String.Format(
+				"%s\n%s%s%s?\n\n%s",
+				Stringtable.Localize("$MNU_DELETESG"),
+				TEXTCOLOR_WHITE,
+				manager.GetSavegame(Selected).SaveTitle,
+				TEXTCOLOR_NORMAL,
+				Stringtable.Localize("$PRESSYN")
+			);
 			StartMessage (EndString, 0);
 		}
 	}
