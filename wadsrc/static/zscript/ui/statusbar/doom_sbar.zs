@@ -106,17 +106,40 @@ class DoomStatusBar : BaseStatusBar
 	{
 		bool locks[6];
 		String image;
+		TextureID oqSilverPanelTex = TexMan.CheckForTexture("OQKSI1", TexMan.Type_MiscPatch);
+		TextureID oqGoldPanelTex = TexMan.CheckForTexture("OQKGI1", TexMan.Type_MiscPatch);
+		Vector2 panelSilverSize = (24, 12);
+		Vector2 panelGoldSize = (24, 12);
+		bool hasOQSilver = CPlayer.mo.FindInventory("OQSilverKey") != null;
+		bool hasOQGold = CPlayer.mo.FindInventory("OQGoldKey") != null;
+		if (oqSilverPanelTex.IsValid()) panelSilverSize = TexMan.GetScaledSize(oqSilverPanelTex);
+		if (oqGoldPanelTex.IsValid()) panelGoldSize = TexMan.GetScaledSize(oqGoldPanelTex);
 		for(int i = 0; i < 6; i++) locks[i] = CPlayer.mo.CheckKeys(i + 1, false, true);
 		// key 1
 		if (locks[1] && locks[4]) image = "STKEYS6";
 		else if (locks[1]) image = "STKEYS0";
 		else if (locks[4]) image = "STKEYS3";
+		else image = "";
+		// OQ small key-slot overlay (disabled for now; keep for easy restore):
+		// TextureID doomSlotTex = TexMan.CheckForTexture("STKEYS0", TexMan.Type_MiscPatch);
+		// TextureID oqSilverSlotTex = TexMan.CheckForTexture("OQKSI2", TexMan.Type_MiscPatch);
+		// Vector2 doomSlotKeySize = doomSlotTex.IsValid() ? TexMan.GetScaledSize(doomSlotTex) : (24, 12);
+		// if (hasOQSilver) DrawTexture(oqSilverSlotTex, (239, 173), DI_ITEM_OFFSETS, 1.0, doomSlotKeySize);
+		// else DrawImage(image, (239, 171), DI_ITEM_OFFSETS);
+		// Keep Doom keycard slots reserved for native Doom keys.
 		DrawImage(image, (239, 171), DI_ITEM_OFFSETS);
 		// key 2
 		if (locks[2] && locks[5]) image = "STKEYS7";
 		else if (locks[2]) image = "STKEYS1";
 		else if (locks[5]) image = "STKEYS4";
 		else image = "";
+		// OQ small key-slot overlay (disabled for now; keep for easy restore):
+		// TextureID doomSlotTex = TexMan.CheckForTexture("STKEYS0", TexMan.Type_MiscPatch);
+		// TextureID oqGoldSlotTex = TexMan.CheckForTexture("OQKGI2", TexMan.Type_MiscPatch);
+		// Vector2 doomSlotKeySize = doomSlotTex.IsValid() ? TexMan.GetScaledSize(doomSlotTex) : (24, 12);
+		// if (hasOQGold) DrawTexture(oqGoldSlotTex, (239, 183), DI_ITEM_OFFSETS, 1.0, doomSlotKeySize);
+		// else DrawImage(image, (239, 181), DI_ITEM_OFFSETS);
+		// Keep Doom keycard slots reserved for native Doom keys.
 		DrawImage(image, (239, 181), DI_ITEM_OFFSETS);
 		// key 3
 		if (locks[0] && locks[3]) image = "STKEYS8";
@@ -124,6 +147,12 @@ class DoomStatusBar : BaseStatusBar
 		else if (locks[3]) image = "STKEYS5";
 		else image = "";
 		DrawImage(image, (239, 191), DI_ITEM_OFFSETS);
+
+		// Extra non-Doom key display in the roomier right-side panel.
+		if (hasOQGold)
+			DrawTexture(oqGoldPanelTex, (-panelGoldSize.X - 15, 170), DI_SCREEN_RIGHT_TOP|DI_ITEM_LEFT_TOP);
+		if (hasOQSilver)
+			DrawTexture(oqSilverPanelTex, (-panelSilverSize.X - 15, 184), DI_SCREEN_RIGHT_TOP|DI_ITEM_LEFT_TOP);
 	}
 	
 	protected virtual void DrawBarAmmo()
