@@ -1934,6 +1934,14 @@ FxExpression *FxTypeCast::Resolve(FCompileContext &ctx)
 		delete this;
 		return x;
 	}
+	else if (ValueType == TypeTextureID && basex->IsInteger())
+	{
+		basex->ValueType = TypeTextureID;
+		auto x = basex;
+		basex = nullptr;
+		delete this;
+		return x;
+	}
 	else if (ValueType->isClassPointer())
 	{
 		FxExpression *x = new FxClassTypeCast(static_cast<PClassPointer*>(ValueType), basex, Explicit);
