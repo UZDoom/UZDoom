@@ -78,7 +78,6 @@ inline void RemapLegacyLanguages(FName &name, FString &lang)
 	{
 		case NAME_Default:  name = NAME_LANG_EN_US;   break;
 		case NAME_LANG_by:  name = NAME_LANG_BE;      break;
-		case NAME_LANG_jp:  name = NAME_LANG_JA;      break;
 		case NAME_LANG_nb:  name = NAME_LANG_NB_NO;   break;
 		case NAME_LANG_no:  name = NAME_LANG_NB_NO;   break;
 		case NAME_LANG_pt:  name = NAME_LANG_PT_BR;   break;
@@ -116,14 +115,20 @@ inline void RemapLegacyLanguages(FName &name, FString &lang)
 		case NAME_LANG_esy: name = esmx? NAME_LANG_ES_PY: NAME_LANG_ES_MX; break;
 		case NAME_LANG_esz: name = esmx? NAME_LANG_ES_BZ: NAME_LANG_ES_MX; break;
 
-		case NAME_LANG_chi:   name = NAME_LANG_ZH_HANT; break;
-		case NAME_LANG_chs:   name = NAME_LANG_ZH_HANS; break;
-		case NAME_LANG_cht:   name = NAME_LANG_ZH_HANT; break;
-		case NAME_LANG_zho:   name = NAME_LANG_ZH_HANS; break;
-		case NAME_LANG_ZH_CN: name = NAME_LANG_ZH_HANS; break;
-		case NAME_LANG_ZH_HK: name = NAME_LANG_ZH_HANT; break;
-		case NAME_LANG_ZH_MO: name = NAME_LANG_ZH_HANT; break;
+		case NAME_LANG_jp:
+		case NAME_LANG_JA_JP: name = NAME_LANG_JA; break;
+
+		case NAME_LANG_KO_KP:
+		case NAME_LANG_KO_KR: name = NAME_LANG_KO; break;
+
+		case NAME_LANG_chs:
+		case NAME_LANG_zho:
+		case NAME_LANG_ZH_CN:
 		case NAME_LANG_ZH_SG: name = NAME_LANG_ZH_HANS; break;
+		case NAME_LANG_chi:
+		case NAME_LANG_cht:
+		case NAME_LANG_ZH_HK:
+		case NAME_LANG_ZH_MO:
 		case NAME_LANG_ZH_TW: name = NAME_LANG_ZH_HANT; break;
 	}
 
