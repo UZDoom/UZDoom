@@ -1694,7 +1694,7 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 				IFVIRTUALPTR(tm.thing, AActor, PlayerPushedSomethingMakeRumble)
 				{
 					VMValue params[1] = { thing };
-					VMCall(func, params, 1, nullptr, 0);
+					VMCall(func, params, 2, nullptr, 0);
 				}
 			}
 			else if (thing == players[consoleplayer].mo || thing == players[consoleplayer].camera)
