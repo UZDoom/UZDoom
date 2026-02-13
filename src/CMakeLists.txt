@@ -999,7 +999,6 @@ set (PCH_SOURCES
 	common/2d/wipe.cpp
 	common/thirdparty/animlib.cpp
 	common/thirdparty/gain_analysis.cpp
-	common/thirdparty/sfmt/SFMT.cpp
 	common/startscreen/startscreen.cpp
 	common/startscreen/startscreen_heretic.cpp
 	common/startscreen/startscreen_hexen.cpp
@@ -1650,7 +1649,6 @@ source_group("Common\\Third Party" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_D
 source_group("Common\\Third Party\\Math" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/math/.+")
 source_group("Common\\Third Party\\RapidJSON" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/rapidjson/.+")
 source_group("Common\\Third Party\\RapidXML" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/rapidxml/.+")
-source_group("Common\\Third Party\\SFMT" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/sfmt/.+")
 source_group("Common\\Third Party\\stb" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/stb/.+")
 source_group("Common\\Third Party\\utf8proc" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/utf8proc/.+")
 source_group("Utility" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/utility/.+")

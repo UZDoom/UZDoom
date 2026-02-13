@@ -24,8 +24,8 @@
 ** compatibility that Lee Killough introduced with BOOM. However, none of
 ** the actual code he wrote is left. In contrast to BOOM, each RNG source
 ** in ZDoom is implemented as a separate class instance that provides an
-** interface to the high-quality Mersenne Twister. See
-** <http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/index.html>.
+** interface to the PCG-XSH-RR RNG, a modern high-quality RNG with a small
+** single 64-bit integer state.
 **
 ** As Killough's description from m_random.h is still mostly relevant,
 ** here it is:
@@ -250,12 +250,26 @@ void FRandom::StaticClearRandom ()
 //
 //==========================================================================
 
+inline uint64_t SplitMix64Iteration(uint64_t& state) {
+	state += 0x9e3779b97f4a7c15;
+	uint64_t z = state;
+	z = (z ^ (z >> 30)) * 0xbf58476d1ce4e5b9;
+	z = (z ^ (z >> 27)) * 0x94d049bb133111eb;
+	return z ^ (z >> 31);
+}
+
 void FRandom::Init(uint32_t seed)
 {
 	// [RH] Use the RNG's name's CRC to modify the original seed.
 	// This way, new RNGs can be added later, and it doesn't matter
 	// which order they get initialized in.
-	SFMTObj::Init(NameCRC, seed);
+	uint64_t combinedSeedState = (uint64_t(seed) << 32) + uint64_t(NameCRC);
+	auto initstate = SplitMix64Iteration(combinedSeedState);
+
+	s = 0U;
+	GenRand32();
+	s += initstate;
+	GenRand32();
 }
 
 //==========================================================================
@@ -282,8 +296,7 @@ void FRandom::StaticWriteRNGState (FSerializer &arc)
 				if (arc.BeginObject(nullptr))
 				{
 					arc("crc", rng->NameCRC)
-						("index", rng->idx)
-						.Array("u", rng->sfmt.u, SFMT::N32)
+						.Array("u", rng->s32.data(), rng->s32.size())
 						.EndObject();
 				}
 			}
@@ -307,7 +320,7 @@ void FRandom::StaticReadRNGState(FSerializer &arc)
 
 	arc("rngseed", rngseed);
 
-	// Call StaticClearRandom in order to ensure that SFMT is initialized
+	// Call StaticClearRandom in order to ensure that RNG is initialized
 	FRandom::StaticClearRandom ();
 
 	if (arc.BeginArray("rngs"))
@@ -325,8 +338,7 @@ void FRandom::StaticReadRNGState(FSerializer &arc)
 				{
 					if (rng->NameCRC == crc)
 					{
-						arc("index", rng->idx)
-							.Array("u", rng->sfmt.u, SFMT::N32);
+						arc.Array("u", rng->s32.data(), rng->s32.size());
 						break;
 					}
 				}
@@ -386,12 +398,7 @@ void FRandom::RollbackRNGState(FSerializer& arc)
 	{
 		for (FRandom* rng = FRandom::RNGList; rng != nullptr; rng = rng->Next)
 		{
-			if (arc.BeginObject(nullptr))
-			{
-				arc("index", rng->idx)
-					.Array("u", rng->sfmt.u, SFMT::N32)
-					.EndObject();
-			}
+			arc("s", rng->s);
 		}
 		arc.EndArray();
 	}
@@ -412,8 +419,7 @@ void FRandom::StaticPrintSeeds ()
 
 	while (rng != NULL)
 	{
-		int idx = rng->idx < SFMT::N32 ? rng->idx : 0;
-		Printf ("%s: %08x .. %d\n", rng->Name, rng->sfmt.u[idx], idx);
+		Printf ("%s: 0x%016lx\n", rng->Name, rng->s);
 		rng = rng->Next;
 	}
 }
