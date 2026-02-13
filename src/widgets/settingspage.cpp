@@ -181,7 +181,7 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 
 void SettingsPage::UpdateLanguage()
 {
-	GetCanvas()->setLanguage(languages[LangList->GetSelectedItem()].first.GetChars());
+	GetCanvas()->setLanguage(GStrings.GetLangName().GetChars());
 
 	LangLabel->SetText(GStrings.GetString("OPTMNU_LANGUAGE"));
 	LoadLabel->SetText(GStrings.GetString("PICKER_FILELOADING"));
