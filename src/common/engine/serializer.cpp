@@ -124,6 +124,19 @@ bool FSerializer::OpenWriter(bool pretty, bool predicting)
 	return true;
 }
 
+bool FSerializer::OpenWriter(FWriterBuffer buffer, bool pretty, bool predicting)
+{
+	if (w != nullptr || r != nullptr) return false;
+
+	bPredictionBackup = predicting;
+	mErrors = 0;
+	w = new FWriter(pretty);
+	buffer.buffer.Clear();
+	w->mOutString = std::move(buffer.buffer);
+	BeginObject(nullptr);
+	return true;
+}
+
 //==========================================================================
 //
 //
@@ -137,6 +150,17 @@ bool FSerializer::OpenReader(const char *buffer, size_t length, bool predicting)
 	bPredictionBackup = predicting;
 	mErrors = 0;
 	r = new FReader(buffer, length);
+	return true;
+}
+
+bool FSerializer::OpenReader(FReaderAllocator allocator, const char *buffer, size_t length, bool predicting)
+{
+	if (w != nullptr || r != nullptr) return false;
+
+	bPredictionBackup = predicting;
+	mErrors = 0;
+	allocator.buffer.Clear();
+	r = new FReader(allocator, buffer, length);
 	return true;
 }
 
@@ -166,11 +190,11 @@ bool FSerializer::OpenReader(FCompressedBuffer *input, bool predicting)
 	return true;
 }
 
-//==========================================================================
-//
-//
-//
-//==========================================================================
+FWriterBuffer FSerializer::CloseAndGetBuffer() {
+	auto ret = w->MoveBufferOut();
+	Close();
+	return ret;
+}
 
 void FSerializer::Close()
 {	

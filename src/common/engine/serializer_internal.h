@@ -70,8 +70,10 @@ struct FWriter
 	TArray<DObject *> mDObjects;
 	TMap<DObject *, int> mObjectMap;
 
-	FWriter(bool pretty)
+	FWriter(bool pretty, FWriterBuffer existingBuffer)
 	{
+		existingBuffer.buffer.Clear();
+		mOutString = std::move(existingBuffer.buffer);
 		if (!pretty)
 		{
 			mWriter = new Writer(mOutString);
@@ -81,10 +83,15 @@ struct FWriter
 			mWriter = new PrettyWriter(mOutString);
 		}
 	}
+	FWriter(bool pretty) : FWriter(pretty, FWriterBuffer(rapidjson::StringBuffer {})) {}
 
 	~FWriter()
 	{
 		if (mWriter) delete mWriter;
+	}
+
+	FWriterBuffer MoveBufferOut() {
+		return FWriterBuffer(std::move(mOutString));
 	}
 
 
@@ -187,6 +194,12 @@ struct FReader
 	TArray<DObject *> mDObjects;
 	rapidjson::Value *mKeyValue = nullptr;
 	bool mObjectsRead = false;
+
+	FReader(FReaderAllocator allocator, const char *buffer, size_t length) : mDoc(rapidjson::Document(&allocator.buffer))
+	{
+		mDoc.Parse(buffer, length);
+		mObjects.Push(FJSONObject(&mDoc));
+	}
 
 	FReader(const char *buffer, size_t length)
 	{

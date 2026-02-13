@@ -395,7 +395,12 @@ struct FPredictionData
 	TArray<FActorBackup> RollbackActors = {};
 	TArray<size_t> RollbackPlayers = {};				// Store by index instead of pointer so it'll never be invalid when deserializing.
 	FLevelLocals* RollbackLevel = nullptr;				// Save this for when opening the reader.
-	std::string RollbackData;		// Snapshot of all saved Objects.
+	std::string_view RollbackData;		// Snapshot of all saved Objects.
+	FWriterBuffer RollbackWriterBuffer;
+	char ParseBuffer[262144] = {};
+	FReaderAllocator RollbackReaderAllocator;
+
+	FPredictionData() : RollbackReaderAllocator(ParseBuffer, sizeof(ParseBuffer)) {}
 
 	struct
 	{
@@ -1795,9 +1800,9 @@ void P_PredictClient()
 				fullRollback.Push(a.GetObject<DObject>());
 			for (auto& o : PredictionData.RollbackObjects)
 				fullRollback.Push(o.GetObject<DObject>());
-			PredictionData.RollbackData.assign(writer.GetOutput(nullptr, &PredictionData.RollbackObjectRefs, &fullRollback));
+			PredictionData.RollbackData = writer.GetOutput(nullptr, &PredictionData.RollbackObjectRefs, &fullRollback);
 			PredictionData.RollbackLevel = player->mo->Level;
-			writer.Close();
+			PredictionData.RollbackWriterBuffer = writer.CloseAndGetBuffer();
 
 			for (auto& a : PredictionData.RollbackActors)
 				a.PostBackup();
@@ -1899,7 +1904,7 @@ void P_UnPredictClient()
 	NetworkEntityManager::DisablePrediction();
 
 	FDoomSerializer reader = { PredictionData.RollbackLevel };
-	if (reader.OpenReader(PredictionData.RollbackData.c_str(), PredictionData.RollbackData.size(), true))
+	if (reader.OpenReader(PredictionData.RollbackReaderAllocator, PredictionData.RollbackData.data(), PredictionData.RollbackData.size(), true))
 	{
 		for (auto& a : PredictionData.RollbackActors)
 			a.PreRollback();
