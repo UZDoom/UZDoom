@@ -51,6 +51,7 @@ static std::string g_star_effective_password;
 static const int STAR_PICKUP_OQUAKE_GOLD_KEY = 5005;
 static const int STAR_PICKUP_OQUAKE_SILVER_KEY = 5013;
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, odoom_oq_monster_yoffset, -50, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 static bool IsMockAnorakCredentials(const std::string& username, const std::string& password) {
 	return username == "anorak" && password == "test!";
@@ -603,6 +604,16 @@ CCMD(star)
 	if (strcmp(sub, "beamin") == 0) {
 		Printf("\n");
 		if (StarInitialized()) {
+			if (argv.argc() >= 4 && strcmp(argv[2], "jwt") != 0) {
+				std::string user = argv[2];
+				std::string pass = argv[3];
+				if (IsMockAnorakCredentials(user, pass)) {
+					oasis_star_anorak_face = true;
+					Printf("Beam-in face profile applied (mock anorak).\n");
+					Printf("\n");
+					return;
+				}
+			}
 			Printf("You are already beamed in. Use 'star beamout' first if you want to switch account.\n");
 			Printf("\n");
 			return;

@@ -99,7 +99,7 @@ class OQMonsterDog : Demon
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -136,7 +136,7 @@ class OQMonsterZombie : ZombieMan
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -173,7 +173,7 @@ class OQMonsterDemon : Demon
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -210,7 +210,7 @@ class OQMonsterShambler : BaronOfHell
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -251,7 +251,7 @@ class OQMonsterGrunt : ZombieMan
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -283,12 +283,18 @@ class OQMonsterGrunt : ZombieMan
 
 class OQMonsterFish : Cacodemon
 {
-	Default { Tag "Fish"; }
+	Default
+	{
+		Tag "Fish";
+		-FLOAT;
+		-INFLOAT;
+		-NOGRAVITY;
+	}
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -325,7 +331,7 @@ class OQMonsterOgre : ShotgunGuy
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -362,7 +368,7 @@ class OQMonsterEnforcer : ChaingunGuy
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -395,12 +401,18 @@ class OQMonsterEnforcer : ChaingunGuy
 
 class OQMonsterSpawn : PainElemental
 {
-	Default { Tag "Spawn"; }
+	Default
+	{
+		Tag "Spawn";
+		-FLOAT;
+		-INFLOAT;
+		-NOGRAVITY;
+	}
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
@@ -437,7 +449,7 @@ class OQMonsterKnight : HellKnight
 	{
 		Super.PostBeginPlay();
 		SpriteOffset.X = 0;
-		SpriteOffset.Y = -48;
+		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
 	}
 	States
 	{
