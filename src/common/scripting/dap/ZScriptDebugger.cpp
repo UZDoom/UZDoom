@@ -465,7 +465,7 @@ dap::ResponseOrError<dap::ScopesResponse> ZScriptDebugger::GetScopes(const dap::
 	std::vector<std::shared_ptr<StateNodeBase>> frameScopes;
 	if (request.frameId < 0)
 	{
-		RETURN_DAP_ERROR(StringFormat("Invalid frameId %ld", static_cast<int64_t>(request.frameId)).c_str());
+		RETURN_DAP_ERROR(StringFormat("Invalid frameId %lld", static_cast<int64_t>(request.frameId)).c_str());
 	}
 	auto frameId = static_cast<uint32_t>(request.frameId);
 	if (!m_runtimeState->ResolveChildrenByParentId(frameId, frameScopes))
@@ -504,8 +504,9 @@ dap::ResponseOrError<dap::VariablesResponse> ZScriptDebugger::GetVariables(const
 
 	if (!m_runtimeState->ResolveChildrenByParentId(static_cast<uint32_t>(request.variablesReference), variableNodes, start, maxCount))
 	{
+
 		// Don't log, this happens as a result of a variables request being sent after a step request that invalidates the state
-		return dap::Error(StringFormat("No such variablesReference %ld", static_cast<int64_t>(request.variablesReference)).c_str());
+		return dap::Error(StringFormat("No such variablesReference %lld", static_cast<int64_t>(request.variablesReference)).c_str());
 	}
 	bool only_indexed = request.filter.value("") == "indexed";
 	bool only_named = request.filter.value("") == "named";
@@ -662,11 +663,11 @@ dap::ResponseOrError<dap::EvaluateResponse> ZScriptDebugger::Evaluate(const dap:
 		if( m_runtimeState->ResolveStateById(frameId, _frameNode)){
 			auto frameNode = std::dynamic_pointer_cast<StackFrameStateNode>(_frameNode);
 			if (!frameNode){
-				RETURN_DAP_ERROR(StringFormat("Could not find frameId %ld", frameId).c_str());
+				RETURN_DAP_ERROR(StringFormat("Could not find frameId %lld", frameId).c_str());
 			}
 			auto frameNodePath = m_runtimeState->GetPathById(frameNode->GetId());
 			if(frameNodePath.empty()){
-				RETURN_DAP_ERROR(StringFormat("Could not find frameId %ld", frameId).c_str());
+				RETURN_DAP_ERROR(StringFormat("Could not find frameId %lld", frameId).c_str());
 			}
 			// try locals first
 			std::string localsPath = StringFormat("%s.%s", frameNodePath.c_str(), StackFrameStateNode::LOCAL_SCOPE_NAME);
@@ -695,7 +696,7 @@ dap::ResponseOrError<dap::EvaluateResponse> ZScriptDebugger::Evaluate(const dap:
 			if (localScope){
 				localScope->GetChildNames(localChildrenNames);
 				caseless_path_set localChildrenNamesSet(localChildrenNames.begin(), localChildrenNames.end());
-				
+
 				path = StringFormat("%s.%s", localsPath.c_str(), request.expression.c_str());
 				if(!TryPath(path)){
 					RETURN_DAP_ERROR(StringFormat("Could not serialize variable %s", request.expression.c_str()).c_str());
@@ -789,7 +790,7 @@ dap::ResponseOrError<dap::EvaluateResponse> ZScriptDebugger::Evaluate(const dap:
 		// try a c_var?
 		auto cvar = FindConsoleVariable(cmdstr);
 		if (cvar){
-			
+
 			if (args.size() > 1){
 				if (cmdstr == "vm_debug" || cmdstr == "vm_debug_port"){
 					return dap::Error(StringFormat("Refusing change %s while debugging!", cmdstr.c_str()).c_str());
@@ -814,7 +815,7 @@ dap::ResponseOrError<dap::EvaluateResponse> ZScriptDebugger::Evaluate(const dap:
 				response.indexedVariables = var.indexedVariables;
 				response.presentationHint = var.presentationHint;
 			}
-			
+
 			return response;
 		}
 		return dap::Error(StringFormat("Command %s not found!", request.expression.c_str()).c_str());

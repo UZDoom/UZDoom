@@ -269,7 +269,7 @@ void DebugExecutionManager::HandleException(EVMAbortException reason, const std:
 			event.text = message;
 		}
 		event.reason = "exception";
-		event.description = "Paused on exception: " + (reason < exceptionStringsSize ? std::string(exceptionStrings[(int)reason]) : "Unknown");
+		event.description = "Paused on exception: " + (((size_t)reason < exceptionStringsSize) ? std::string(exceptionStrings[(int)reason]) : "Unknown");
 		event.threadId = 1;
 		m_session->send(event);
 	};
