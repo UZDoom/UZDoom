@@ -94,12 +94,17 @@ class OQArmorMega : BlueArmor
 
 class OQMonsterDog : Demon
 {
-	Default { Tag "Rottweiler"; }
+	Default
+	{
+		Tag "Rottweiler";
+	}
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_dog");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -107,36 +112,53 @@ class OQMonsterDog : Demon
 		OQM1 A 10 A_Look;
 		Loop;
 	See:
-		OQM1 A 4 A_Chase;
+		OQM1 B 4 A_Chase;
+		OQM1 C 4 A_Chase;
+		OQM1 D 4 A_Chase;
+		OQM1 E 4 A_Chase;
 		Loop;
 	Melee:
-		OQM1 A 8 A_FaceTarget;
-		OQM1 A 8 A_SargAttack;
+		OQM1 F 8 A_FaceTarget;
+		OQM1 G 8 A_SargAttack;
+		OQM1 H 8;
 		Goto See;
 	Pain:
-		OQM1 A 3 A_Pain;
+		OQM1 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM1 A 5 A_Scream;
-		OQM1 A 5 A_NoBlocking;
-		OQM1 A -1;
+		OQM1 J 5 A_Scream;
+		OQM1 K 5 A_NoBlocking;
+		OQM1 L 5;
+		OQM1 M 5;
+		OQM1 N -1;
 		Stop;
 	XDeath:
-		OQM1 A 5 A_XScream;
-		OQM1 A 5 A_NoBlocking;
-		OQM1 A -1;
+		OQM1 O 5 A_XScream;
+		OQM1 P 5 A_NoBlocking;
+		OQM1 Q 5;
+		OQM1 R 5;
+		OQM1 S 5;
+		OQM1 T 5;
+		OQM1 U 5;
+		OQM1 V 5;
+		OQM1 W -1;
 		Stop;
 	}
 }
 
 class OQMonsterZombie : ZombieMan
 {
-	Default { Tag "Zombie"; }
+	Default
+	{
+		Tag "Zombie";
+	}
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_zombie");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -144,24 +166,37 @@ class OQMonsterZombie : ZombieMan
 		OQM2 A 10 A_Look;
 		Loop;
 	See:
-		OQM2 A 4 A_Chase;
+		OQM2 B 4 A_Chase;
+		OQM2 C 4 A_Chase;
+		OQM2 D 4 A_Chase;
+		OQM2 E 4 A_Chase;
 		Loop;
 	Missile:
-		OQM2 A 8 A_FaceTarget;
-		OQM2 A 8 A_PosAttack;
+		OQM2 F 8 A_FaceTarget;
+		OQM2 G 8 A_PosAttack;
+		OQM2 H 8;
 		Goto See;
 	Pain:
-		OQM2 A 3 A_Pain;
+		OQM2 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM2 A 5 A_Scream;
-		OQM2 A 5 A_NoBlocking;
-		OQM2 A -1;
+		OQM2 J 0 A_SetRoll(90);
+		OQM2 J 5 A_Scream;
+		OQM2 K 5 A_NoBlocking;
+		OQM2 L 5;
+		OQM2 M 5;
+		OQM2 N -1;
 		Stop;
 	XDeath:
-		OQM2 A 5 A_XScream;
-		OQM2 A 5 A_NoBlocking;
-		OQM2 A -1;
+		OQM2 O 5 A_XScream;
+		OQM2 P 5 A_NoBlocking;
+		OQM2 Q 5;
+		OQM2 R 5;
+		OQM2 S 5;
+		OQM2 T 5;
+		OQM2 U 5;
+		OQM2 V 5;
+		OQM2 W -1;
 		Stop;
 	}
 }
@@ -172,8 +207,10 @@ class OQMonsterDemon : Demon
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_demon");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -181,24 +218,36 @@ class OQMonsterDemon : Demon
 		OQM3 A 10 A_Look;
 		Loop;
 	See:
-		OQM3 A 4 A_Chase;
+		OQM3 B 4 A_Chase;
+		OQM3 C 4 A_Chase;
+		OQM3 D 4 A_Chase;
+		OQM3 E 4 A_Chase;
 		Loop;
 	Melee:
-		OQM3 A 8 A_FaceTarget;
-		OQM3 A 8 A_SargAttack;
+		OQM3 F 8 A_FaceTarget;
+		OQM3 G 8 A_SargAttack;
+		OQM3 H 8;
 		Goto See;
 	Pain:
-		OQM3 A 3 A_Pain;
+		OQM3 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM3 A 5 A_Scream;
-		OQM3 A 5 A_NoBlocking;
-		OQM3 A -1;
+		OQM3 J 5 A_Scream;
+		OQM3 K 5 A_NoBlocking;
+		OQM3 L 5;
+		OQM3 M 5;
+		OQM3 N -1;
 		Stop;
 	XDeath:
-		OQM3 A 5 A_XScream;
-		OQM3 A 5 A_NoBlocking;
-		OQM3 A -1;
+		OQM3 O 5 A_XScream;
+		OQM3 P 5 A_NoBlocking;
+		OQM3 Q 5;
+		OQM3 R 5;
+		OQM3 S 5;
+		OQM3 T 5;
+		OQM3 U 5;
+		OQM3 V 5;
+		OQM3 W -1;
 		Stop;
 	}
 }
@@ -209,8 +258,10 @@ class OQMonsterShambler : BaronOfHell
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_shambler");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -218,40 +269,58 @@ class OQMonsterShambler : BaronOfHell
 		OQM4 A 10 A_Look;
 		Loop;
 	See:
-		OQM4 A 4 A_Chase;
+		OQM4 B 4 A_Chase;
+		OQM4 C 4 A_Chase;
+		OQM4 D 4 A_Chase;
+		OQM4 E 4 A_Chase;
 		Loop;
 	Melee:
-		OQM4 A 8 A_FaceTarget;
-		OQM4 A 8 A_BruisAttack;
+		OQM4 F 8 A_FaceTarget;
+		OQM4 G 8 A_BruisAttack;
+		OQM4 H 8;
 		Goto See;
 	Missile:
-		OQM4 A 8 A_FaceTarget;
-		OQM4 A 8 A_BruisAttack;
+		OQM4 F 8 A_FaceTarget;
+		OQM4 G 8 A_BruisAttack;
+		OQM4 H 8;
 		Goto See;
 	Pain:
-		OQM4 A 3 A_Pain;
+		OQM4 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM4 A 5 A_Scream;
-		OQM4 A 5 A_NoBlocking;
-		OQM4 A -1;
+		OQM4 J 5 A_Scream;
+		OQM4 K 5 A_NoBlocking;
+		OQM4 L 5;
+		OQM4 M 5;
+		OQM4 N -1;
 		Stop;
 	XDeath:
-		OQM4 A 5 A_XScream;
-		OQM4 A 5 A_NoBlocking;
-		OQM4 A -1;
+		OQM4 O 5 A_XScream;
+		OQM4 P 5 A_NoBlocking;
+		OQM4 Q 5;
+		OQM4 R 5;
+		OQM4 S 5;
+		OQM4 T 5;
+		OQM4 U 5;
+		OQM4 V 5;
+		OQM4 W -1;
 		Stop;
 	}
 }
 
 class OQMonsterGrunt : ZombieMan
 {
-	Default { Tag "Grunt"; }
+	Default
+	{
+		Tag "Grunt";
+	}
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_grunt");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -259,24 +328,39 @@ class OQMonsterGrunt : ZombieMan
 		OQM5 A 10 A_Look;
 		Loop;
 	See:
-		OQM5 A 4 A_Chase;
+		OQM5 B 4 A_Chase;
+		OQM5 C 4 A_Chase;
+		OQM5 D 4 A_Chase;
+		OQM5 E 4 A_Chase;
 		Loop;
 	Missile:
-		OQM5 A 8 A_FaceTarget;
-		OQM5 A 8 A_PosAttack;
+		OQM5 F 8 A_FaceTarget;
+		OQM5 G 8 A_PosAttack;
+		OQM5 H 8;
 		Goto See;
 	Pain:
-		OQM5 A 3 A_Pain;
+		OQM5 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM5 A 5 A_Scream;
-		OQM5 A 5 A_NoBlocking;
-		OQM5 A -1;
+		OQM5 J 5 A_Scream;
+		OQM5 K 0 A_NoBlocking;
+		OQM5 K 0 A_Fall();
+		OQM5 K 0 A_SetFloorClip();
+		OQM5 K 5;
+		OQM5 L 5;
+		OQM5 M 5;
+		OQM5 N -1;
 		Stop;
 	XDeath:
-		OQM5 A 5 A_XScream;
-		OQM5 A 5 A_NoBlocking;
-		OQM5 A -1;
+		OQM5 O 5 A_XScream;
+		OQM5 P 5 A_NoBlocking;
+		OQM5 Q 5;
+		OQM5 R 5;
+		OQM5 S 5;
+		OQM5 T 5;
+		OQM5 U 5;
+		OQM5 V 5;
+		OQM5 W -1;
 		Stop;
 	}
 }
@@ -293,8 +377,10 @@ class OQMonsterFish : Cacodemon
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_fish");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -302,24 +388,36 @@ class OQMonsterFish : Cacodemon
 		OQM6 A 10 A_Look;
 		Loop;
 	See:
-		OQM6 A 4 A_Chase;
+		OQM6 B 4 A_Chase;
+		OQM6 C 4 A_Chase;
+		OQM6 D 4 A_Chase;
+		OQM6 E 4 A_Chase;
 		Loop;
 	Missile:
-		OQM6 A 8 A_FaceTarget;
-		OQM6 A 8 A_HeadAttack;
+		OQM6 F 8 A_FaceTarget;
+		OQM6 G 8 A_HeadAttack;
+		OQM6 H 8;
 		Goto See;
 	Pain:
-		OQM6 A 3 A_Pain;
+		OQM6 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM6 A 5 A_Scream;
-		OQM6 A 5 A_NoBlocking;
-		OQM6 A -1;
+		OQM6 J 5 A_Scream;
+		OQM6 K 5 A_NoBlocking;
+		OQM6 L 5;
+		OQM6 M 5;
+		OQM6 N -1;
 		Stop;
 	XDeath:
-		OQM6 A 5 A_XScream;
-		OQM6 A 5 A_NoBlocking;
-		OQM6 A -1;
+		OQM6 O 5 A_XScream;
+		OQM6 P 5 A_NoBlocking;
+		OQM6 Q 5;
+		OQM6 R 5;
+		OQM6 S 5;
+		OQM6 T 5;
+		OQM6 U 5;
+		OQM6 V 5;
+		OQM6 W -1;
 		Stop;
 	}
 }
@@ -330,8 +428,10 @@ class OQMonsterOgre : ShotgunGuy
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_ogre");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -339,24 +439,36 @@ class OQMonsterOgre : ShotgunGuy
 		OQM7 A 10 A_Look;
 		Loop;
 	See:
-		OQM7 A 4 A_Chase;
+		OQM7 B 4 A_Chase;
+		OQM7 C 4 A_Chase;
+		OQM7 D 4 A_Chase;
+		OQM7 E 4 A_Chase;
 		Loop;
 	Missile:
-		OQM7 A 10 A_FaceTarget;
-		OQM7 A 10 A_SPosAttackUseAtkSound;
+		OQM7 F 10 A_FaceTarget;
+		OQM7 G 10 A_SPosAttackUseAtkSound;
+		OQM7 H 8;
 		Goto See;
 	Pain:
-		OQM7 A 3 A_Pain;
+		OQM7 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM7 A 5 A_Scream;
-		OQM7 A 5 A_NoBlocking;
-		OQM7 A -1;
+		OQM7 J 5 A_Scream;
+		OQM7 K 5 A_NoBlocking;
+		OQM7 L 5;
+		OQM7 M 5;
+		OQM7 N -1;
 		Stop;
 	XDeath:
-		OQM7 A 5 A_XScream;
-		OQM7 A 5 A_NoBlocking;
-		OQM7 A -1;
+		OQM7 O 5 A_XScream;
+		OQM7 P 5 A_NoBlocking;
+		OQM7 Q 5;
+		OQM7 R 5;
+		OQM7 S 5;
+		OQM7 T 5;
+		OQM7 U 5;
+		OQM7 V 5;
+		OQM7 W -1;
 		Stop;
 	}
 }
@@ -367,8 +479,10 @@ class OQMonsterEnforcer : ChaingunGuy
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_enforcer");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -376,25 +490,36 @@ class OQMonsterEnforcer : ChaingunGuy
 		OQM8 A 10 A_Look;
 		Loop;
 	See:
-		OQM8 A 4 A_Chase;
+		OQM8 B 4 A_Chase;
+		OQM8 C 4 A_Chase;
+		OQM8 D 4 A_Chase;
+		OQM8 E 4 A_Chase;
 		Loop;
 	Missile:
-		OQM8 A 10 A_FaceTarget;
-		OQM8 A 4 BRIGHT A_CPosAttack;
-		OQM8 A 1 A_CPosRefire;
+		OQM8 F 10 A_FaceTarget;
+		OQM8 G 4 BRIGHT A_CPosAttack;
+		OQM8 H 1 A_CPosRefire;
 		Goto Missile+1;
 	Pain:
-		OQM8 A 3 A_Pain;
+		OQM8 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM8 A 5 A_Scream;
-		OQM8 A 5 A_NoBlocking;
-		OQM8 A -1;
+		OQM8 J 5 A_Scream;
+		OQM8 K 5 A_NoBlocking;
+		OQM8 L 5;
+		OQM8 M 5;
+		OQM8 N -1;
 		Stop;
 	XDeath:
-		OQM8 A 5 A_XScream;
-		OQM8 A 5 A_NoBlocking;
-		OQM8 A -1;
+		OQM8 O 5 A_XScream;
+		OQM8 P 5 A_NoBlocking;
+		OQM8 Q 5;
+		OQM8 R 5;
+		OQM8 S 5;
+		OQM8 T 5;
+		OQM8 U 5;
+		OQM8 V 5;
+		OQM8 W -1;
 		Stop;
 	}
 }
@@ -411,8 +536,10 @@ class OQMonsterSpawn : PainElemental
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_spawn");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -420,36 +547,54 @@ class OQMonsterSpawn : PainElemental
 		OQM9 A 10 A_Look;
 		Loop;
 	See:
-		OQM9 A 4 A_Chase;
+		OQM9 B 4 A_Chase;
+		OQM9 C 4 A_Chase;
+		OQM9 D 4 A_Chase;
+		OQM9 E 4 A_Chase;
 		Loop;
 	Missile:
-		OQM9 A 8 A_FaceTarget;
-		OQM9 A 0 BRIGHT A_PainAttack;
+		OQM9 F 8 A_FaceTarget;
+		OQM9 G 0 BRIGHT A_PainAttack;
+		OQM9 H 8;
 		Goto See;
 	Pain:
-		OQM9 A 3 A_Pain;
+		OQM9 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM9 A 5 A_Scream;
-		OQM9 A 5 A_NoBlocking;
-		OQM9 A -1;
+		OQM9 J 5 A_Scream;
+		OQM9 K 5 A_NoBlocking;
+		OQM9 L 5;
+		OQM9 M 5;
+		OQM9 N -1;
 		Stop;
 	XDeath:
-		OQM9 A 5 A_XScream;
-		OQM9 A 5 A_NoBlocking;
-		OQM9 A -1;
+		OQM9 O 5 A_XScream;
+		OQM9 P 5 A_NoBlocking;
+		OQM9 Q 5;
+		OQM9 R 5;
+		OQM9 S 5;
+		OQM9 T 5;
+		OQM9 U 5;
+		OQM9 V 5;
+		OQM9 W -1;
 		Stop;
 	}
 }
 
 class OQMonsterKnight : HellKnight
 {
-	Default { Tag "Hell Knight"; }
+	Default
+	{
+		Tag "Hell Knight";
+		Health 120;
+	}
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
-		SpriteOffset.X = 0;
-		SpriteOffset.Y = GetCVar("odoom_oq_monster_yoffset");
+		double s = GetCVar("odoom_oq_monster_scale_global") * GetCVar("odoom_oq_monster_scale_knight");
+		if (s < 0.05) s = 0.05;
+		Scale.X = s;
+		Scale.Y = s;
 	}
 	States
 	{
@@ -457,28 +602,42 @@ class OQMonsterKnight : HellKnight
 		OQMA A 10 A_Look;
 		Loop;
 	See:
-		OQMA A 4 A_Chase;
+		OQMA B 4 A_Chase;
+		OQMA C 4 A_Chase;
+		OQMA D 4 A_Chase;
+		OQMA E 4 A_Chase;
 		Loop;
 	Melee:
-		OQMA A 8 A_FaceTarget;
-		OQMA A 8 A_BruisAttack;
+		OQMA F 8 A_FaceTarget;
+		OQMA G 8 A_BruisAttack;
+		OQMA H 8;
 		Goto See;
 	Missile:
-		OQMA A 8 A_FaceTarget;
-		OQMA A 8 A_BruisAttack;
+		OQMA F 10 A_FaceTarget;
+		OQMA G 0 A_CustomMissile("DoomImpBall", 28, 0, 0, CMF_AIMDIRECTION);
+		OQMA G 12;
+		OQMA H 12;
 		Goto See;
 	Pain:
-		OQMA A 3 A_Pain;
+		OQMA I 3 A_Pain;
 		Goto See;
 	Death:
-		OQMA A 5 A_Scream;
-		OQMA A 5 A_NoBlocking;
-		OQMA A -1;
+		OQMA J 5 A_Scream;
+		OQMA K 5 A_NoBlocking;
+		OQMA L 5;
+		OQMA M 5;
+		OQMA N -1;
 		Stop;
 	XDeath:
-		OQMA A 5 A_XScream;
-		OQMA A 5 A_NoBlocking;
-		OQMA A -1;
+		OQMA O 5 A_XScream;
+		OQMA P 5 A_NoBlocking;
+		OQMA Q 5;
+		OQMA R 5;
+		OQMA S 5;
+		OQMA T 5;
+		OQMA U 5;
+		OQMA V 5;
+		OQMA W -1;
 		Stop;
 	}
 }

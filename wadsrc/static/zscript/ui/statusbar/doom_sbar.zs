@@ -83,6 +83,9 @@ class DoomStatusBar : BaseStatusBar
 			DrawImage("STFBANY", (143, 168), DI_ITEM_OFFSETS|DI_TRANSLATABLE);
 		}
 		
+		CVar anorakFaceCVar = CVar.GetCVar('oasis_star_anorak_face');
+		TextureID anorakFaceTex = TexMan.CheckForTexture("OASFACE", TexMan.Type_Any);
+		bool drawAnorakFace = anorakFaceCVar && anorakFaceCVar.GetBool() && anorakFaceTex.IsValid();
 		if (CPlayer.mo.InvSel != null && !Level.NoInventoryBar)
 		{
 			DrawInventoryIcon(CPlayer.mo.InvSel, (160, 198), DI_DIMDEPLETED);
@@ -90,12 +93,13 @@ class DoomStatusBar : BaseStatusBar
 			{
 				DrawString(mAmountFont, FormatNumber(CPlayer.mo.InvSel.Amount), (175, 198-mIndexFont.mFont.GetHeight()), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
 			}
+			if (drawAnorakFace)
+				DrawTexture(anorakFaceTex, (143, 168), DI_ITEM_OFFSETS);
+			else
+				DrawTexture(GetMugShot(5), (143, 168), DI_ITEM_OFFSETS);
 		}
 		else
 		{
-			CVar anorakFaceCVar = CVar.GetCVar('oasis_star_anorak_face');
-			TextureID anorakFaceTex = TexMan.CheckForTexture("OASFACE", TexMan.Type_Any);
-			bool drawAnorakFace = anorakFaceCVar && anorakFaceCVar.GetBool() && anorakFaceTex.IsValid();
 			if (drawAnorakFace)
 				DrawTexture(anorakFaceTex, (143, 168), DI_ITEM_OFFSETS);
 			else

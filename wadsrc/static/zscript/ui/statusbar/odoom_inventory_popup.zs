@@ -10,9 +10,10 @@ class OASISInventoryOverlayHandler : EventHandler
 	const TAB_KEYS = 0;
 	const TAB_POWERUPS = 1;
 	const TAB_WEAPONS = 2;
-	const TAB_ARMOR = 3;
-	const TAB_ITEMS = 4;
-	const TAB_COUNT = 5;
+	const TAB_AMMO = 3;
+	const TAB_ARMOR = 4;
+	const TAB_ITEMS = 5;
+	const TAB_COUNT = 6;
 	const MAX_VISIBLE_ROWS = 7;
 
 	override void OnRegister()
@@ -71,6 +72,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		case TAB_KEYS: return "Keys";
 		case TAB_POWERUPS: return "Powerups";
 		case TAB_WEAPONS: return "Weapons";
+		case TAB_AMMO: return "Ammo";
 		case TAB_ARMOR: return "Armor";
 		default: return "Items";
 		}
@@ -82,6 +84,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		if (tabIndex == TAB_KEYS) return item is "Key";
 		if (tabIndex == TAB_POWERUPS) return item is "Powerup";
 		if (tabIndex == TAB_WEAPONS) return item is "Weapon";
+		if (tabIndex == TAB_AMMO) return item is "Ammo";
 		if (tabIndex == TAB_ARMOR) return item is "Armor";
 		return !(item is "Key") && !(item is "Powerup") && !(item is "Weapon") && !(item is "Armor") && !(item is "Ammo");
 	}
@@ -125,12 +128,27 @@ class OASISInventoryOverlayHandler : EventHandler
 		int headerX = 160 - (f.StringWidth("OASIS Inventory") / 2);
 		screen.DrawText(f, Font.CR_GOLD, headerX, 18, "OASIS Inventory", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
-		// One-row layout with increased spacing between tabs.
-		screen.DrawText(f, activeTab == TAB_KEYS ? Font.CR_GREEN : Font.CR_GRAY, 24, 33, "Keys", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-		screen.DrawText(f, activeTab == TAB_POWERUPS ? Font.CR_GREEN : Font.CR_GRAY, 62, 33, "Powerups", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-		screen.DrawText(f, activeTab == TAB_WEAPONS ? Font.CR_GREEN : Font.CR_GRAY, 136, 33, "Weapons", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-		screen.DrawText(f, activeTab == TAB_ARMOR ? Font.CR_GREEN : Font.CR_GRAY, 204, 33, "Armor", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-		screen.DrawText(f, activeTab == TAB_ITEMS ? Font.CR_GREEN : Font.CR_GRAY, 252, 33, "Items", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		// One-row layout with consistent spacing so tabs do not overlap/squash.
+		int tabGap = 10;
+		int tabX = 8;
+		String tab0 = "Keys";
+		String tab1 = "Powerups";
+		String tab2 = "Weapons";
+		String tab3 = "Ammo";
+		String tab4 = "Armor";
+		String tab5 = "Items";
+		int tab0X = tabX;
+		int tab1X = tab0X + f.StringWidth(tab0) + tabGap;
+		int tab2X = tab1X + f.StringWidth(tab1) + tabGap;
+		int tab3X = tab2X + f.StringWidth(tab2) + tabGap;
+		int tab4X = tab3X + f.StringWidth(tab3) + tabGap;
+		int tab5X = tab4X + f.StringWidth(tab4) + tabGap;
+		screen.DrawText(f, activeTab == TAB_KEYS ? Font.CR_GREEN : Font.CR_GRAY, tab0X, 33, tab0, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, activeTab == TAB_POWERUPS ? Font.CR_GREEN : Font.CR_GRAY, tab1X, 33, tab1, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, activeTab == TAB_WEAPONS ? Font.CR_GREEN : Font.CR_GRAY, tab2X, 33, tab2, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, activeTab == TAB_AMMO ? Font.CR_GREEN : Font.CR_GRAY, tab3X, 33, tab3, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, activeTab == TAB_ARMOR ? Font.CR_GREEN : Font.CR_GRAY, tab4X, 33, tab4, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, activeTab == TAB_ITEMS ? Font.CR_GREEN : Font.CR_GRAY, tab5X, 33, tab5, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
 		screen.DrawText(f, Font.CR_DARKGRAY, 38, 46, "I=Toggle  O/P=Switch Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 

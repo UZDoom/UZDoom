@@ -15,6 +15,8 @@
 #include <cstring>
 #include <cstdarg>
 #include <string>
+#include <algorithm>
+#include <cctype>
 
 /* ODOOM (UZDoom) headers for key detection */
 #include "gamedata/a_keys.h"
@@ -50,11 +52,64 @@ static std::string g_star_effective_username;
 static std::string g_star_effective_password;
 static const int STAR_PICKUP_OQUAKE_GOLD_KEY = 5005;
 static const int STAR_PICKUP_OQUAKE_SILVER_KEY = 5013;
+static const int STAR_PICKUP_GENERIC_ITEM = 9001;
+static std::string g_star_pending_item_name;
+static std::string g_star_pending_item_desc;
+static std::string g_star_pending_item_type;
+static bool g_star_has_pending_item = false;
+static std::string g_star_last_pickup_name;
+static std::string g_star_last_pickup_type;
+static std::string g_star_last_pickup_desc;
+static bool g_star_has_last_pickup = false;
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, odoom_oq_monster_yoffset, -50, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_global, 1.0f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_dog, 0.50f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_zombie, 0.66f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_demon, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_shambler, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_grunt, 0.66f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_fish, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_ogre, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_enforcer, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_spawn, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Float, odoom_oq_monster_scale_knight, 0.66f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+
+static std::string TrimAscii(const std::string& s) {
+	size_t start = 0;
+	while (start < s.size() && std::isspace(static_cast<unsigned char>(s[start]))) start++;
+	size_t end = s.size();
+	while (end > start && std::isspace(static_cast<unsigned char>(s[end - 1]))) end--;
+	return s.substr(start, end - start);
+}
+
+static bool EqualsNoCase(const std::string& a, const std::string& b) {
+	if (a.size() != b.size()) return false;
+	for (size_t i = 0; i < a.size(); i++) {
+		unsigned char ca = static_cast<unsigned char>(a[i]);
+		unsigned char cb = static_cast<unsigned char>(b[i]);
+		if (std::tolower(ca) != std::tolower(cb)) return false;
+	}
+	return true;
+}
+
+static std::string ToStarItemName(const char* className) {
+	if (!className || !className[0]) return "pickup_item";
+	std::string out;
+	out.reserve(std::strlen(className) + 8);
+	for (const char* p = className; *p; ++p) {
+		unsigned char c = static_cast<unsigned char>(*p);
+		if (std::isalnum(c)) out.push_back(static_cast<char>(std::tolower(c)));
+		else out.push_back('_');
+	}
+	while (!out.empty() && out.front() == '_') out.erase(out.begin());
+	while (!out.empty() && out.back() == '_') out.pop_back();
+	if (out.empty()) out = "pickup_item";
+	return out;
+}
 
 static bool IsMockAnorakCredentials(const std::string& username, const std::string& password) {
-	return username == "anorak" && password == "test!";
+	return EqualsNoCase(TrimAscii(username), "anorak") && TrimAscii(password) == "test!";
 }
 
 static const char* StarAuthSourceLabel(void) {
@@ -353,16 +408,37 @@ int UZDoom_STAR_PreTouchSpecial(struct AActor* special) {
 	}
 
 	auto kt = PClass::FindActor(NAME_Key);
-	if (!kt || !special->IsKindOf(kt)) return 0;
+	if (kt && special->IsKindOf(kt)) {
+		AActor* def = GetDefaultByType(special->GetClass());
+		if (!def) return 0;
 
-	AActor* def = GetDefaultByType(special->GetClass());
-	if (!def) return 0;
+		int keynum = def->special1;
+		if (keynum <= 0 || keynum > 4) return 0;
+		StarLogInfo("Pickup detected: Doom key special1=%d.", keynum);
+		return keynum;
+	}
 
-	int keynum = def->special1;
-	if (keynum <= 0 || keynum > 4) return 0;
-	StarLogInfo("Pickup detected: Doom key special1=%d.", keynum);
+	// Generic inventory sync path for non-key pickups (weapons/ammo/armor/items).
+	auto invType = PClass::FindActor(NAME_Inventory);
+	if (invType && special->IsKindOf(invType)) {
+		const char* cls = special->GetClass()->TypeName.GetChars();
+		const char* type = "Item";
+		auto weaponType = PClass::FindActor(NAME_Weapon);
+		auto ammoType = PClass::FindActor(NAME_Ammo);
+		if (weaponType && special->IsKindOf(weaponType)) type = "Weapon";
+		else if (ammoType && special->IsKindOf(ammoType)) type = "Ammo";
+		else if (cls && (strstr(cls, "Armor") || strstr(cls, "armor"))) type = "Armor";
+		else if (cls && (strstr(cls, "Health") || strstr(cls, "health") || strstr(cls, "Medikit") || strstr(cls, "Stimpack"))) type = "Health";
 
-	return keynum;
+		g_star_pending_item_name = ToStarItemName(cls);
+		g_star_pending_item_desc = std::string("Picked up ") + (cls ? cls : "Item");
+		g_star_pending_item_type = type;
+		g_star_has_pending_item = true;
+		StarLogInfo("Pickup detected: %s (type=%s).", cls ? cls : "Inventory", type);
+		return STAR_PICKUP_GENERIC_ITEM;
+	}
+
+	return 0;
 }
 
 void UZDoom_STAR_PostTouchSpecial(int keynum) {
@@ -374,6 +450,7 @@ void UZDoom_STAR_PostTouchSpecial(int keynum) {
 
 	const char* name = nullptr;
 	const char* desc = nullptr;
+	const char* itemType = "KeyItem";
 	if (keynum == STAR_PICKUP_OQUAKE_GOLD_KEY) {
 		name = "gold_key";
 		desc = "Gold key - Opens gold doors in OQuake";
@@ -383,15 +460,29 @@ void UZDoom_STAR_PostTouchSpecial(int keynum) {
 	} else if (keynum >= 1 && keynum <= 4) {
 		name = GetKeycardName(keynum);
 		desc = GetKeycardDescription(keynum);
+	} else if (keynum == STAR_PICKUP_GENERIC_ITEM && g_star_has_pending_item) {
+		name = g_star_pending_item_name.c_str();
+		desc = g_star_pending_item_desc.c_str();
+		itemType = g_star_pending_item_type.empty() ? "Item" : g_star_pending_item_type.c_str();
 	}
 	if (!name || !desc) return;
 
-	StarLogInfo("Calling star_api_add_item(name=%s, game=ODOOM, type=KeyItem)...", name);
-	star_api_result_t result = star_api_add_item(name, desc, "ODOOM", "KeyItem");
+	StarLogInfo("Calling star_api_add_item(name=%s, game=ODOOM, type=%s)...", name, itemType);
+	star_api_result_t result = star_api_add_item(name, desc, "ODOOM", itemType);
 	if (result == STAR_API_SUCCESS) {
 		StarLogInfo("star_api_add_item success: %s added to shared inventory.", name);
+		g_star_last_pickup_name = name;
+		g_star_last_pickup_type = itemType;
+		g_star_last_pickup_desc = desc;
+		g_star_has_last_pickup = true;
 	} else {
 		StarLogError("star_api_add_item failed for %s: %s", name, star_api_get_last_error());
+	}
+	if (keynum == STAR_PICKUP_GENERIC_ITEM) {
+		g_star_has_pending_item = false;
+		g_star_pending_item_name.clear();
+		g_star_pending_item_desc.clear();
+		g_star_pending_item_type.clear();
 	}
 }
 
@@ -437,6 +528,7 @@ CCMD(star)
 		Printf("  star version        - Show integration and API status\n");
 		Printf("  star status         - Show init state and last error\n");
 		Printf("  star inventory      - List items in STAR inventory\n");
+		Printf("  star lastpickup     - Show most recent synced pickup\n");
 		Printf("  star has <item>     - Check if you have an item (e.g. red_keycard)\n");
 		Printf("  star add <item> [desc] [type] - Add item (e.g. star add red_keycard)\n");
 		Printf("  star use <item> [context]     - Use item (e.g. star use red_keycard door)\n");
@@ -536,6 +628,20 @@ CCMD(star)
 		Printf("\n");
 		return;
 	}
+	if (strcmp(sub, "lastpickup") == 0) {
+		Printf("\n");
+		if (!g_star_has_last_pickup) {
+			Printf("No pickup has been synced to STAR yet in this session.\n");
+			Printf("\n");
+			return;
+		}
+		Printf("Last STAR-synced pickup:\n");
+		Printf("  name: %s\n", g_star_last_pickup_name.c_str());
+		Printf("  type: %s\n", g_star_last_pickup_type.c_str());
+		Printf("  desc: %s\n", g_star_last_pickup_desc.c_str());
+		Printf("\n");
+		return;
+	}
 	if (strcmp(sub, "has") == 0) {
 		if (argv.argc() < 3) { Printf("Usage: star has <item_name>\n"); return; }
 		bool has = star_api_has_item(argv[2]);
@@ -603,21 +709,8 @@ CCMD(star)
 	}
 	if (strcmp(sub, "beamin") == 0) {
 		Printf("\n");
-		if (StarInitialized()) {
-			if (argv.argc() >= 4 && strcmp(argv[2], "jwt") != 0) {
-				std::string user = argv[2];
-				std::string pass = argv[3];
-				if (IsMockAnorakCredentials(user, pass)) {
-					oasis_star_anorak_face = true;
-					Printf("Beam-in face profile applied (mock anorak).\n");
-					Printf("\n");
-					return;
-				}
-			}
-			Printf("You are already beamed in. Use 'star beamout' first if you want to switch account.\n");
-			Printf("\n");
-			return;
-		}
+		bool hasRuntimeCredentials = false;
+		bool usingJwt = false;
 		if (argv.argc() == 2) {
 #ifdef _WIN32
 			std::string promptUser;
@@ -628,6 +721,7 @@ CCMD(star)
 				g_star_override_api_key.clear();
 				g_star_override_username = promptUser;
 				g_star_override_password = promptPass;
+				hasRuntimeCredentials = true;
 				StarLogInfo("Using credentials from secure beam-in dialog.");
 			} else {
 				Printf("Beam-in cancelled.\n");
@@ -648,10 +742,12 @@ CCMD(star)
 		if (argv.argc() >= 4 && strcmp(argv[2], "jwt") != 0) {
 			g_star_override_username = argv[2];
 			g_star_override_password = argv[3];
+			hasRuntimeCredentials = true;
 			StarLogInfo("Using runtime credentials from console command.");
 		} else if (argv.argc() >= 4 && strcmp(argv[2], "jwt") == 0) {
 			g_star_override_jwt = argv[3];
 			if (argv.argc() >= 5) g_star_override_avatar_id = argv[4];
+			usingJwt = true;
 			StarLogInfo("Using runtime JWT token from console command.");
 		}
 
@@ -667,7 +763,17 @@ CCMD(star)
 			return;
 		}
 
+		if (StarInitialized() && !hasRuntimeCredentials && !usingJwt) {
+			Printf("You are already beamed in. Use 'star beamout' first if you want to switch account.\n");
+			Printf("\n");
+			return;
+		}
+
 		oasis_star_anorak_face = false;
+		if (hasRuntimeCredentials || usingJwt) {
+			// Force a fresh authentication attempt for account switching.
+			g_star_initialized = false;
+		}
 		StarLogInfo("Beaming in...");
 		if (StarTryInitializeAndAuthenticate(true)) {
 			Printf("Beam-in successful. Cross-game features enabled.\n");
