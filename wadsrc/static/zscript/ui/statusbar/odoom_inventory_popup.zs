@@ -41,12 +41,14 @@ class OASISInventoryOverlayHandler : EventHandler
 
 		if (popupOpen && user2Down && !wasUser2Down)
 		{
-			activeTab = (activeTab + TAB_COUNT - 1) % TAB_COUNT;
+			activeTab--;
+			if (activeTab < 0) activeTab = TAB_COUNT - 1;
 			scrollOffset = 0;
 		}
 		if (popupOpen && user3Down && !wasUser3Down)
 		{
-			activeTab = (activeTab + 1) % TAB_COUNT;
+			activeTab++;
+			if (activeTab >= TAB_COUNT) activeTab = 0;
 			scrollOffset = 0;
 		}
 
@@ -130,7 +132,7 @@ class OASISInventoryOverlayHandler : EventHandler
 
 		// One-row layout with consistent spacing so tabs do not overlap/squash.
 		int tabGap = 10;
-		int tabX = 8;
+		int tabX = 6;
 		String tab0 = "Keys";
 		String tab1 = "Powerups";
 		String tab2 = "Weapons";

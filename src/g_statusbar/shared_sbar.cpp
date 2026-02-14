@@ -431,6 +431,8 @@ void DBaseStatusBar::SetScale ()
 
 	int w = twod->GetWidth();
 	int h = twod->GetHeight();
+	if (w <= 0) w = 1;
+	if (h <= 0) h = 1;
 	if (st_scale < 0 || ForcedScale)
 	{
 		// This is the classic fullscreen scale with aspect ratio compensation.
@@ -525,8 +527,10 @@ void FormatMapName(FLevelLocals *self, int cr, FString *result);
 void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 {
 	auto scalev = GetHUDScale();
-	int vwidth = int(twod->GetWidth() / scalev.X);
-	int vheight = int(twod->GetHeight() / scalev.Y);
+	double safeX = (scalev.X > 0. && scalev.X < 1e9) ? scalev.X : 1.;
+	double safeY = (scalev.Y > 0. && scalev.Y < 1e9) ? scalev.Y : 1.;
+	int vwidth = int(twod->GetWidth() / safeX);
+	int vheight = int(twod->GetHeight() / safeY);
 	
 	auto font = generic_ui ? NewSmallFont : SmallFont;
 	auto font2 = font;
@@ -1100,6 +1104,7 @@ void DBaseStatusBar::DrawLog ()
 	{
 		// This uses the same scaling as regular HUD messages
 		auto scale = active_con_scaletext(twod, generic_ui || log_vgafont);
+		if (scale <= 0) scale = 1;  // avoid integer divide-by-zero
 		hudwidth = twod->GetWidth() / scale;
 		hudheight = twod->GetHeight() / scale;
 		FFont *font = (generic_ui || log_vgafont)? NewSmallFont : SmallFont;
@@ -1196,6 +1201,10 @@ void DBaseStatusBar::DrawTopStuff (EHudState state)
 		double x = twod->GetWidth() - SmallFont->StringWidth(verText.GetChars()) * CleanXfac - 4;
 		double y = twod->GetHeight() - SmallFont->GetHeight() * CleanYfac - 2;
 		DrawText(twod, SmallFont, CR_TAN, x, y, verText.GetChars(), DTA_CleanNoMove, true, TAG_DONE);
+		FBaseCVar *starUserVar = FindCVar("odoom_star_username", nullptr);
+		const char *starUser = (starUserVar && starUserVar->GetRealType() == CVAR_String) ? starUserVar->GetGenericRep(CVAR_String).String : nullptr;
+		FString beamedText = (starUser && *starUser) ? FString("Beamed In: ") + starUser : "Beamed In: None";
+		DrawText(twod, SmallFont, CR_TAN, 4, y, beamedText.GetChars(), DTA_CleanNoMove, true, TAG_DONE);
 	}
 #endif
 

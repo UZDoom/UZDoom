@@ -83,9 +83,6 @@ class DoomStatusBar : BaseStatusBar
 			DrawImage("STFBANY", (143, 168), DI_ITEM_OFFSETS|DI_TRANSLATABLE);
 		}
 		
-		CVar anorakFaceCVar = CVar.GetCVar('oasis_star_anorak_face');
-		TextureID anorakFaceTex = TexMan.CheckForTexture("OASFACE", TexMan.Type_Any);
-		bool drawAnorakFace = anorakFaceCVar && anorakFaceCVar.GetBool() && anorakFaceTex.IsValid();
 		if (CPlayer.mo.InvSel != null && !Level.NoInventoryBar)
 		{
 			DrawInventoryIcon(CPlayer.mo.InvSel, (160, 198), DI_DIMDEPLETED);
@@ -93,13 +90,12 @@ class DoomStatusBar : BaseStatusBar
 			{
 				DrawString(mAmountFont, FormatNumber(CPlayer.mo.InvSel.Amount), (175, 198-mIndexFont.mFont.GetHeight()), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
 			}
-			if (drawAnorakFace)
-				DrawTexture(anorakFaceTex, (143, 168), DI_ITEM_OFFSETS);
-			else
-				DrawTexture(GetMugShot(5), (143, 168), DI_ITEM_OFFSETS);
 		}
 		else
 		{
+			CVar anorakFaceCVar = CVar.GetCVar('oasis_star_anorak_face');
+			TextureID anorakFaceTex = TexMan.CheckForTexture("OASFACE", TexMan.Type_Any);
+			bool drawAnorakFace = anorakFaceCVar && anorakFaceCVar.GetBool() && anorakFaceTex.IsValid();
 			if (drawAnorakFace)
 				DrawTexture(anorakFaceTex, (143, 168), DI_ITEM_OFFSETS);
 			else
@@ -109,7 +105,14 @@ class DoomStatusBar : BaseStatusBar
 		{
 			DrawInventoryBar(diparms, (48, 169), 7, DI_ITEM_LEFT_TOP);
 		}
-		
+		String beamedInText = "Beamed In: None";
+		CVar starUserCVar = CVar.GetCVar('odoom_star_username');
+		if (starUserCVar != null)
+		{
+			String starUser = starUserCVar.GetString();
+			if (starUser.Length() > 0) beamedInText = String.Format("Beamed In: %s", starUser);
+		}
+		DrawString(mHUDFont, beamedInText, (8, 198), DI_NOSHADOW, Font.CR_TAN);
 	}
 	
 	protected virtual void DrawBarKeys()
@@ -238,7 +241,14 @@ class DoomStatusBar : BaseStatusBar
 		{
 			DrawFullscreenKeys();
 		}
-		
+		String beamedInText = "Beamed In: None";
+		CVar starUserCVar = CVar.GetCVar('odoom_star_username');
+		if (starUserCVar != null)
+		{
+			String starUser = starUserCVar.GetString();
+			if (starUser.Length() > 0) beamedInText = String.Format("Beamed In: %s", starUser);
+		}
+		DrawString(mHUDFont, beamedInText, (8, 2), DI_SCREEN_LEFT_BOTTOM, DI_NOSHADOW, Font.CR_TAN);
 		if (isInventoryBarVisible())
 		{
 			DrawInventoryBar(diparms, (0, 0), 7, DI_SCREEN_CENTER_BOTTOM, HX_SHADOW);

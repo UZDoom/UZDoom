@@ -180,9 +180,10 @@ class OQMonsterZombie : ZombieMan
 		OQM2 I 3 A_Pain;
 		Goto See;
 	Death:
-		OQM2 J 0 A_SetRoll(90);
 		OQM2 J 5 A_Scream;
 		OQM2 K 5 A_NoBlocking;
+		OQM2 K 1 A_Fall();
+		OQM2 K 1 A_SetFloorClip();
 		OQM2 L 5;
 		OQM2 M 5;
 		OQM2 N -1;
@@ -343,11 +344,13 @@ class OQMonsterGrunt : ZombieMan
 		Goto See;
 	Death:
 		OQM5 J 5 A_Scream;
-		OQM5 K 0 A_NoBlocking;
-		OQM5 K 0 A_Fall();
-		OQM5 K 0 A_SetFloorClip();
+		OQM5 K 1 A_NoBlocking;
+		OQM5 K 1 A_Fall();
+		OQM5 K 1 A_SetFloorClip();
 		OQM5 K 5;
+		OQM5 L 1 A_SetFloorClip();
 		OQM5 L 5;
+		OQM5 M 1 A_SetFloorClip();
 		OQM5 M 5;
 		OQM5 N -1;
 		Stop;
@@ -614,7 +617,7 @@ class OQMonsterKnight : HellKnight
 		Goto See;
 	Missile:
 		OQMA F 10 A_FaceTarget;
-		OQMA G 0 A_CustomMissile("DoomImpBall", 28, 0, 0, CMF_AIMDIRECTION);
+		OQMA G 1 A_CustomMissile("DoomImpBall", 28, 0, 0, CMF_AIMDIRECTION);
 		OQMA G 12;
 		OQMA H 12;
 		Goto See;
