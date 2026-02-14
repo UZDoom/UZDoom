@@ -1693,7 +1693,7 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 			{
 				IFVIRTUALPTR(tm.thing, AActor, PlayerPushedSomethingMakeRumble)
 				{
-					VMValue params[1] = { thing };
+					VMValue params[2] = { tm.thing, thing };
 					VMCall(func, params, 2, nullptr, 0);
 				}
 			}
