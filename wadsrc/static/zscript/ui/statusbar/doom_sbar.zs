@@ -93,11 +93,11 @@ class DoomStatusBar : BaseStatusBar
 		}
 		else
 		{
-			CVar anorakFaceCVar = CVar.GetCVar('oasis_star_anorak_face');
-			TextureID anorakFaceTex = TexMan.CheckForTexture("OASFACE", TexMan.Type_Any);
-			bool drawAnorakFace = anorakFaceCVar && anorakFaceCVar.GetBool() && anorakFaceTex.IsValid();
-			if (drawAnorakFace)
-				DrawTexture(anorakFaceTex, (143, 168), DI_ITEM_OFFSETS);
+			CVar starUserCVar = CVar.GetCVar('odoom_star_username');
+			TextureID oasFaceTex = TexMan.CheckForTexture("OASFACE", TexMan.Type_Any);
+			bool drawBeamedInFace = oasFaceTex.IsValid() && starUserCVar != null && starUserCVar.GetString().Length() > 0;
+			if (drawBeamedInFace)
+				DrawTexture(oasFaceTex, (143, 168), DI_ITEM_OFFSETS);
 			else
 				DrawTexture(GetMugShot(5), (143, 168), DI_ITEM_OFFSETS);
 		}

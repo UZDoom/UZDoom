@@ -449,6 +449,16 @@ int FMugShot::UpdateState(player_t *player, StateFlags stateflags)
 
 FGameTexture *FMugShot::GetFace(player_t *player, const char *default_face, int accuracy, StateFlags stateflags)
 {
+#ifdef OASIS_STAR_API
+	FBaseCVar *starUserVar = FindCVar("odoom_star_username", nullptr);
+	const char *starUser = (starUserVar && starUserVar->GetRealType() == CVAR_String) ? starUserVar->GetGenericRep(CVAR_String).String : nullptr;
+	if (starUser && *starUser)
+	{
+		FGameTexture *oasFace = TexMan.GetGameTexture(TexMan.CheckForTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins));
+		if (oasFace && oasFace->isValid())
+			return oasFace;
+	}
+#endif
 	int angle = UpdateState(player, stateflags);
 	int level = 0;
 	int max = player->mo->IntVar(NAME_MugShotMaxHealth);

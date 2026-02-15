@@ -1198,9 +1198,9 @@ void DBaseStatusBar::DrawTopStuff (EHudState state)
 #ifdef OASIS_STAR_API
 	{
 		FString verText = GAMENAME " " ODOOM_FULL_VERSION_STR;
-		double x = twod->GetWidth() - SmallFont->StringWidth(verText.GetChars()) * CleanXfac - 4;
-		double y = twod->GetHeight() - SmallFont->GetHeight() * CleanYfac - 2;
-		DrawText(twod, SmallFont, CR_TAN, x, y, verText.GetChars(), DTA_CleanNoMove, true, TAG_DONE);
+		double y = 2;
+		double xVersion = twod->GetWidth() - SmallFont->StringWidth(verText.GetChars()) * CleanXfac - 4;
+		DrawText(twod, SmallFont, CR_TAN, xVersion, y, verText.GetChars(), DTA_CleanNoMove, true, TAG_DONE);
 		FBaseCVar *starUserVar = FindCVar("odoom_star_username", nullptr);
 		const char *starUser = (starUserVar && starUserVar->GetRealType() == CVAR_String) ? starUserVar->GetGenericRep(CVAR_String).String : nullptr;
 		FString beamedText = (starUser && *starUser) ? FString("Beamed In: ") + starUser : "Beamed In: None";

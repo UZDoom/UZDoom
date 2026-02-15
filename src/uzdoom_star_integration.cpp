@@ -806,6 +806,20 @@ CCMD(star)
 		Printf("\n");
 		return;
 	}
+	if (strcmp(sub, "send_avatar") == 0) {
+		if (argv.argc() < 4) { Printf("Usage: star send_avatar <username> <item_class>\n"); return; }
+		const char* username = argv[2];
+		const char* itemClass = argv[3];
+		Printf("Send to avatar: \"%s\" item \"%s\" (STAR send API not yet implemented).\n", username, itemClass);
+		return;
+	}
+	if (strcmp(sub, "send_clan") == 0) {
+		if (argv.argc() < 4) { Printf("Usage: star send_clan <clan_name> <item_class>\n"); return; }
+		const char* clanName = argv[2];
+		const char* itemClass = argv[3];
+		Printf("Send to clan: \"%s\" item \"%s\" (STAR send API not yet implemented).\n", clanName, itemClass);
+		return;
+	}
 	Printf("Unknown STAR subcommand: %s. Type 'star' for list.\n", sub);
 }
 
