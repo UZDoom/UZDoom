@@ -454,8 +454,9 @@ FGameTexture *FMugShot::GetFace(player_t *player, const char *default_face, int 
 	const char *starUser = (starUserVar && starUserVar->GetRealType() == CVAR_String) ? starUserVar->GetGenericRep(CVAR_String).String : nullptr;
 	if (starUser && *starUser)
 	{
-		FGameTexture *oasFace = TexMan.GetGameTexture(TexMan.CheckForTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins));
-		if (oasFace && oasFace->isValid())
+		FGameTexture *oasFace = TexMan.FindGameTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins);
+		if (!oasFace) oasFace = TexMan.GetGameTexture(TexMan.CheckForTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins));
+		if (oasFace)
 			return oasFace;
 	}
 #endif

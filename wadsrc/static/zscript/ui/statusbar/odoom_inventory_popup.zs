@@ -9,8 +9,11 @@ class OASISInventoryOverlayHandler : EventHandler
 	private bool wasUser3Down;
 	private bool wasBackDown;
 	private bool wasForwardDown;
+	private bool wasLookUpDown;
+	private bool wasLookDownDown;
 	private bool wasUseDown;
 	private bool wasUser4Down;
+	private bool wasReloadDown;
 	private int lastUser4Tick;
 
 	const TAB_KEYS = 0;
@@ -40,8 +43,11 @@ class OASISInventoryOverlayHandler : EventHandler
 		bool user3Down = (buttons & BT_USER3) != 0;
 		bool backDown = (buttons & BT_BACK) != 0;
 		bool forwardDown = (buttons & BT_FORWARD) != 0;
+		bool lookUpDown = (buttons & BT_LOOKUP) != 0;
+		bool lookDownDown = (buttons & BT_LOOKDOWN) != 0;
 		bool useDown = (buttons & BT_USE) != 0;
 		bool user4Down = (buttons & BT_USER4) != 0;
+		bool reloadDown = (buttons & BT_RELOAD) != 0;
 
 		if (user1Down && !wasUser1Down)
 		{
@@ -91,7 +97,9 @@ class OASISInventoryOverlayHandler : EventHandler
 			if (selectedAbsolute >= listCount && listCount > 0) selectedAbsolute = listCount - 1;
 			if (selectedAbsolute < 0) selectedAbsolute = 0;
 
-			if (backDown && !wasBackDown)
+			bool selUp = (forwardDown && !wasForwardDown) || (lookUpDown && !wasLookUpDown);
+			bool selDown = (backDown && !wasBackDown) || (lookDownDown && !wasLookDownDown);
+			if (selUp)
 			{
 				selectedAbsolute--;
 				if (selectedAbsolute < 0) selectedAbsolute = 0;
@@ -99,7 +107,7 @@ class OASISInventoryOverlayHandler : EventHandler
 				if (scrollOffset < 0) scrollOffset = 0;
 				if (scrollOffset > maxOffset) scrollOffset = maxOffset;
 			}
-			if (forwardDown && !wasForwardDown)
+			if (selDown)
 			{
 				selectedAbsolute++;
 				if (selectedAbsolute >= listCount) selectedAbsolute = listCount - 1;
@@ -119,19 +127,15 @@ class OASISInventoryOverlayHandler : EventHandler
 				}
 			}
 
-			if (user4Down && !wasUser4Down)
+			if (user4Down && !wasUser4Down && selectedItem != null && selectedItem.Amount > 0)
 			{
-				if (selectedItem != null && selectedItem.Amount > 0)
-				{
-					String itemClass = selectedItem.GetClassName();
-						int maptime = Level.maptime;
-						bool doubleTap = (maptime - lastUser4Tick < 35);
-						lastUser4Tick = maptime;
-					if (doubleTap)
-						Console.Printf("To send to clan, run: star send_clan \"<clan_name>\" \"%s\"\n", itemClass);
-					else
-						Console.Printf("To send to avatar, run: star send_avatar \"<username>\" \"%s\"\n", itemClass);
-				}
+				String itemClass = selectedItem.GetClassName();
+				Console.Printf("To send to avatar, run: star send_avatar \"<username>\" \"%s\"\n", itemClass);
+			}
+			if (reloadDown && !wasReloadDown && selectedItem != null && selectedItem.Amount > 0)
+			{
+				String itemClass = selectedItem.GetClassName();
+				Console.Printf("To send to clan, run: star send_clan \"<clan_name>\" \"%s\"\n", itemClass);
 			}
 		}
 
@@ -140,8 +144,11 @@ class OASISInventoryOverlayHandler : EventHandler
 		wasUser3Down = user3Down;
 		wasBackDown = backDown;
 		wasForwardDown = forwardDown;
+		wasLookUpDown = lookUpDown;
+		wasLookDownDown = lookDownDown;
 		wasUseDown = useDown;
 		wasUser4Down = user4Down;
+		wasReloadDown = reloadDown;
 	}
 
 	private ui int GetClampedOffset(int listCount)
@@ -247,7 +254,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		screen.DrawText(f, activeTab == TAB_ARMOR ? Font.CR_GREEN : Font.CR_GRAY, tab4X, 33, tab4, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 		screen.DrawText(f, activeTab == TAB_ITEMS ? Font.CR_GREEN : Font.CR_GRAY, tab5X, 33, tab5, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
-		screen.DrawText(f, Font.CR_DARKGRAY, 38, 46, "Back/Fwd=Select  Use=Use  User4=Send (2nd=clan)  I=Toggle  O/P=Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, Font.CR_DARKGRAY, 38, 46, "Arrows=Select  E=Use  Z=To Avatar  X=To Clan  I=Toggle  O/P=Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
 		int y = 58;
 		for (int i = 0; i < MAX_VISIBLE_ROWS; i++)
@@ -256,13 +263,6 @@ class OASISInventoryOverlayHandler : EventHandler
 			if (idx >= tabItems.Size()) break;
 
 			bool selected = (i == selectedRow);
-			if (selected)
-			{
-				TextureID hiliteTex = TexMan.CheckForTexture("ConsoleBack", TexMan.Type_Any);
-				if (!hiliteTex.IsValid()) hiliteTex = TexMan.CheckForTexture("STBAR", TexMan.Type_Any);
-				if (hiliteTex.IsValid())
-					screen.DrawTexture(hiliteTex, true, 38, y - 1, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43, DTA_DestWidth, 270, DTA_DestHeight, 14, DTA_Alpha, 0.5);
-			}
 
 			let item = tabItems[idx];
 			TextureID icon = item.Icon;
