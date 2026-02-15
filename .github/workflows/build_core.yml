@@ -177,39 +177,6 @@ jobs:
         path: build/package
         name: ${{ inputs.name }} ${{ inputs.build_type }}
 
-    - name: Rename For Nightly
-      if: github.ref == 'refs/heads/trunk' && inputs.build_type == 'Release'
-      shell: bash
-      run: |
-        newname="${{ runner.os }}-UZDoom-Nightly"
-        if [[ "${{ inputs.name }}" == 'Linux GCC' ]]; then
-            newname="${{ runner.os }}-Legacy-UZDoom-Nightly"
-        fi
-        
-        cd build/package
-        if [[ "${{ runner.os }}" == 'Windows' || "${{ runner.os }}" == 'macOS' ]]; then
-            mv *.zip "${newname}.zip"
-        elif [[ "${{ runner.os }}" == 'Linux' ]]; then
-            mv *.AppImage "${newname}.AppImage"
-        fi
-
-    - name: Upload Nightly
-      uses: softprops/action-gh-release@v2
-      if: github.ref == 'refs/heads/trunk' && inputs.build_type == 'Release'
-      with:
-        name: UZDoom Nightly
-        tag_name: nightly
-        draft: false
-        prerelease: true
-        make_latest: false
-        body: |
-          # These are automatically generated development versions based on latest commit to trunk.
-          ## WARNING: Nightly builds may be unstable and have issues.
-          [Commit:](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
-          ${{ github.event.head_commit.message }}
-        generate_release_notes: false
-        files: build/package/**
-
     - name: List
       if: always()
       shell: bash

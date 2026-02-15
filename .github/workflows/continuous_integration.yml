@@ -140,3 +140,41 @@ jobs:
       matrix:
         config: *common_config
 
+  upload_nightly:
+    runs-on: ubuntu-latest
+    needs: release
+    if: github.ref == 'refs/heads/trunk' && github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: "* Release"
+
+      - name: Rename
+        shell: bash
+        run: |
+          mkdir release
+          mv "artifacts/Windows MSVC Release"/*.zip release/Windows-UZDoom-Nightly.zip
+          mv "artifacts/MacOS LLVM Release"/*.zip release/MacOS-UZDoom-Nightly.zip
+          mv "artifacts/Linux LLVM Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
+          mv "artifacts/Linux GCC Release"/*.AppImage release/Linux-Legacy-UZDoom-Nightly.AppImage
+  
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          name: UZDoom Nightly
+          tag_name: nightly
+          draft: false
+          prerelease: true
+          make_latest: false
+          body: |
+            # These are automatically generated development versions based on latest commit to trunk.
+            ## WARNING: Nightly builds may be unstable and have issues.
+            [Commit:](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
+            ${{ github.event.head_commit.message }}
+          generate_release_notes: false
+          files: release/**
+          
