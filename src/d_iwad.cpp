@@ -870,7 +870,7 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, std::vecto
 	int iwadnum = 1;
 	if (optional_wad && D_AddFile(optwadfiles, optional_wad, true, -1, GameConfig))
 	{
-		iwadnum++;
+		// iwadnum++; // optional_wad is always "game_support.pk3", that should be not counted
 	}
 
 	fileSystem.SetIwadNum(iwadnum);
