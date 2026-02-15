@@ -25,6 +25,7 @@
 #include "vm.h"
 #include "c_dispatch.h"
 #include "c_console.h"
+#include "c_cvars.h"
 #include "m_argv.h"
 #include "printf.h"
 
@@ -75,6 +76,105 @@ CVAR(Float, odoom_oq_monster_scale_enforcer, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCO
 CVAR(Float, odoom_oq_monster_scale_spawn, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Float, odoom_oq_monster_scale_knight, 0.60f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, odoom_star_username, "", 0)
+
+/* Inventory overlay: when open, temporarily clear key bindings (OQuake-style) so arrows/keys only drive the popup.
+ * We read raw key state here and set odoom_key_* CVars so ZScript can drive selection/use/send/tabs. */
+static bool g_odoom_inventory_bindings_captured = false;
+
+/** Return 1 if key is currently down, 0 otherwise. Uses platform API when available. */
+static int ODOOM_GetRawKeyDown(int vk_or_ascii)
+{
+#ifdef _WIN32
+	SHORT s = GetAsyncKeyState(vk_or_ascii);
+	return (s & 0x8000) ? 1 : 0;
+#else
+	(void)vk_or_ascii;
+	return 0;
+#endif
+}
+
+void ODOOM_InventoryInputCaptureFrame(void)
+{
+	FBaseCVar* openVar = FindCVar("odoom_inventory_open", nullptr);
+	const bool open = (openVar && openVar->GetRealType() == CVAR_Int && openVar->GetGenericRep(CVAR_Int).Int != 0);
+
+	if (open && !g_odoom_inventory_bindings_captured)
+	{
+		/* Clear arrow, movement, and inventory key bindings so game doesn't receive them (OQuake-style). */
+		C_DoCommand("bind Up \"\"");
+		C_DoCommand("bind Down \"\"");
+		C_DoCommand("bind Left \"\"");
+		C_DoCommand("bind Right \"\"");
+		C_DoCommand("bind W \"\"");
+		C_DoCommand("bind S \"\"");
+		C_DoCommand("bind A \"\"");
+		C_DoCommand("bind D \"\"");
+		C_DoCommand("bind E \"\"");
+		C_DoCommand("bind Z \"\"");
+		C_DoCommand("bind X \"\"");
+		/* I, O, P cleared so they only affect popup; ZScript will read odoom_key_i/o/p from raw state */
+		C_DoCommand("bind I \"\"");
+		C_DoCommand("bind O \"\"");
+		C_DoCommand("bind P \"\"");
+		g_odoom_inventory_bindings_captured = true;
+	}
+	else if (!open && g_odoom_inventory_bindings_captured)
+	{
+		/* Restore default bindings (user can rebind in options). */
+		C_DoCommand("bind Up \"+forward\"");
+		C_DoCommand("bind Down \"+back\"");
+		C_DoCommand("bind Left \"+left\"");
+		C_DoCommand("bind Right \"+right\"");
+		C_DoCommand("bind W \"+forward\"");
+		C_DoCommand("bind S \"+back\"");
+		C_DoCommand("bind A \"+moveleft\"");
+		C_DoCommand("bind D \"+moveright\"");
+		C_DoCommand("bind E \"+use\"");
+		C_DoCommand("bind Z \"+user4\"");
+		C_DoCommand("bind X \"+reload\"");
+		C_DoCommand("bind I \"+user1\"");
+		C_DoCommand("bind O \"+user2\"");
+		C_DoCommand("bind P \"+user3\"");
+		g_odoom_inventory_bindings_captured = false;
+		/* Clear key CVars so ZScript doesn't see stale state when popup is closed */
+		ODOOM_InventorySetKeyState(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	}
+
+	/* When inventory is open: feed raw key state into CVars so ZScript can drive selection/use/send/tabs (OQuake-style). */
+	if (open)
+	{
+		int up   = ODOOM_GetRawKeyDown(VK_UP);
+		int down = ODOOM_GetRawKeyDown(VK_DOWN);
+		int left = ODOOM_GetRawKeyDown(VK_LEFT);
+		int right= ODOOM_GetRawKeyDown(VK_RIGHT);
+		int use  = ODOOM_GetRawKeyDown('E');
+		int z    = ODOOM_GetRawKeyDown('Z');
+		int x    = ODOOM_GetRawKeyDown('X');
+		int i    = ODOOM_GetRawKeyDown('I');
+		int o    = ODOOM_GetRawKeyDown('O');
+		int p    = ODOOM_GetRawKeyDown('P');
+		ODOOM_InventorySetKeyState(up, down, left, right, use, z, x, i, o, p);
+	}
+}
+
+/** Called from engine input code when building ticcmd: set key state CVars for ZScript. */
+void ODOOM_InventorySetKeyState(int up, int down, int left, int right, int use, int z, int x, int i, int o, int p)
+{
+	UCVarValue val;
+	FBaseCVar* v;
+#define SET_KEY_CVAR(name, vint) do { val.Int = (vint); v = FindCVar(name, nullptr); if (v && v->GetRealType() == CVAR_Int) v->SetGenericRep(val, CVAR_Int); } while(0)
+	SET_KEY_CVAR("odoom_key_up", up);
+	SET_KEY_CVAR("odoom_key_down", down);
+	SET_KEY_CVAR("odoom_key_left", left);
+	SET_KEY_CVAR("odoom_key_right", right);
+	SET_KEY_CVAR("odoom_key_use", use);
+	SET_KEY_CVAR("odoom_key_z", z);
+	SET_KEY_CVAR("odoom_key_x", x);
+	SET_KEY_CVAR("odoom_key_i", i);
+	SET_KEY_CVAR("odoom_key_o", o);
+	SET_KEY_CVAR("odoom_key_p", p);
+#undef SET_KEY_CVAR
+}
 
 static std::string TrimAscii(const std::string& s) {
 	size_t start = 0;

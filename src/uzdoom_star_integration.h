@@ -40,6 +40,12 @@ void UZDoom_STAR_PostTouchSpecial(int keynum);
  */
 int UZDoom_STAR_CheckDoorAccess(struct AActor* owner, int keynum, int remote);
 
+/** Call every frame from status bar (when OASIS_STAR_API): when inventory open, clear key bindings (OQuake-style). */
+void ODOOM_InventoryInputCaptureFrame(void);
+
+/** Call from engine input when building ticcmd: set odoom_key_* CVars from raw key state (for ZScript). */
+void ODOOM_InventorySetKeyState(int up, int down, int left, int right, int use, int z, int x, int i, int o, int p);
+
 #ifdef __cplusplus
 }
 #endif

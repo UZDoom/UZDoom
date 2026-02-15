@@ -54,6 +54,9 @@
 #include "d_event.h"
 #include "d_main.h"
 #include "d_net.h"
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
 #include "d_netinf.h"
 #include "decallib.h"
 #include "doomdef.h"
@@ -1435,6 +1438,9 @@ void D_DoomLoop ()
 
 	for (;;)
 	{
+#ifdef OASIS_STAR_API
+	ODOOM_InventoryInputCaptureFrame();
+#endif
 		try
 		{
 			GStrings.SetDefaultGender(players[consoleplayer].userinfo.GetGender()); // cannot be done when the CVAR changes because we don't know if it's for the consoleplayer.

@@ -1,0 +1,14 @@
+// ODOOM inventory overlay - CVars for ZScript/C++ coordination.
+// When inventory is open, ZScript sets odoom_inventory_open=1 so C++ can
+// temporarily clear key bindings (OQuake-style). Key state CVars are set by C++.
+server int odoom_inventory_open = 0;
+server int odoom_key_up = 0;
+server int odoom_key_down = 0;
+server int odoom_key_left = 0;
+server int odoom_key_right = 0;
+server int odoom_key_use = 0;
+server int odoom_key_z = 0;
+server int odoom_key_x = 0;
+server int odoom_key_i = 0;
+server int odoom_key_o = 0;
+server int odoom_key_p = 0;

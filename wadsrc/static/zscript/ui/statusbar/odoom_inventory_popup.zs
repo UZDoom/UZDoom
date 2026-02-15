@@ -14,6 +14,18 @@ class OASISInventoryOverlayHandler : EventHandler
 	private bool wasUseDown;
 	private bool wasUser4Down;
 	private bool wasReloadDown;
+	private bool wasJumpDown;
+	private bool wasCrouchDown;
+	private bool wasKeyUpDown;
+	private bool wasKeyDownDown;
+	private bool wasKeyLeftDown;
+	private bool wasKeyRightDown;
+	private bool wasKeyUseDown;
+	private bool wasKeyZDown;
+	private bool wasKeyXDown;
+	private bool wasKeyIDown;
+	private bool wasKeyODown;
+	private bool wasKeyPDown;
 
 	const TAB_KEYS = 0;
 	const TAB_POWERUPS = 1;
@@ -36,6 +48,11 @@ class OASISInventoryOverlayHandler : EventHandler
 		let p = players[consoleplayer];
 		if (!p || !p.mo) return;
 
+		// Tell C++ whether inventory is open (so it can clear/restore key bindings, OQuake-style)
+		CVar openVar = CVar.FindCVar("odoom_inventory_open");
+		if (openVar != null)
+			openVar.SetInt(popupOpen ? 1 : 0);
+
 		int buttons = p.cmd.buttons;
 		bool user1Down = (buttons & BT_USER1) != 0;
 		bool user2Down = (buttons & BT_USER2) != 0;
@@ -47,8 +64,46 @@ class OASISInventoryOverlayHandler : EventHandler
 		bool useDown = (buttons & BT_USE) != 0;
 		bool user4Down = (buttons & BT_USER4) != 0;
 		bool reloadDown = (buttons & BT_RELOAD) != 0;
+		bool jumpDown = (buttons & BT_JUMP) != 0;
+		bool crouchDown = (buttons & BT_CROUCH) != 0;
 
-		if (user1Down && !wasUser1Down)
+		// Keys captured by C++ when inventory open (odoom_key_* CVars, 1 = pressed this tic)
+		int keyUp = 0, keyDown = 0, keyLeft = 0, keyRight = 0, keyUse = 0, keyZ = 0, keyX = 0, keyI = 0, keyO = 0, keyP = 0;
+		if (popupOpen) {
+			CVar v;
+			v = CVar.FindCVar("odoom_key_up"); if (v != null) keyUp = v.GetInt();
+			v = CVar.FindCVar("odoom_key_down"); if (v != null) keyDown = v.GetInt();
+			v = CVar.FindCVar("odoom_key_left"); if (v != null) keyLeft = v.GetInt();
+			v = CVar.FindCVar("odoom_key_right"); if (v != null) keyRight = v.GetInt();
+			v = CVar.FindCVar("odoom_key_use"); if (v != null) keyUse = v.GetInt();
+			v = CVar.FindCVar("odoom_key_z"); if (v != null) keyZ = v.GetInt();
+			v = CVar.FindCVar("odoom_key_x"); if (v != null) keyX = v.GetInt();
+			v = CVar.FindCVar("odoom_key_i"); if (v != null) keyI = v.GetInt();
+			v = CVar.FindCVar("odoom_key_o"); if (v != null) keyO = v.GetInt();
+			v = CVar.FindCVar("odoom_key_p"); if (v != null) keyP = v.GetInt();
+		}
+		bool keyUpPressed = (keyUp != 0) && !wasKeyUpDown;
+		bool keyDownPressed = (keyDown != 0) && !wasKeyDownDown;
+		bool keyLeftPressed = (keyLeft != 0) && !wasKeyLeftDown;
+		bool keyRightPressed = (keyRight != 0) && !wasKeyRightDown;
+		bool keyUsePressed = (keyUse != 0) && !wasKeyUseDown;
+		bool keyZPressed = (keyZ != 0) && !wasKeyZDown;
+		bool keyXPressed = (keyX != 0) && !wasKeyXDown;
+		bool keyIPressed = (keyI != 0) && !wasKeyIDown;
+		bool keyOPressed = (keyO != 0) && !wasKeyODown;
+		bool keyPPressed = (keyP != 0) && !wasKeyPDown;
+		wasKeyUpDown = (keyUp != 0);
+		wasKeyDownDown = (keyDown != 0);
+		wasKeyLeftDown = (keyLeft != 0);
+		wasKeyRightDown = (keyRight != 0);
+		wasKeyUseDown = (keyUse != 0);
+		wasKeyZDown = (keyZ != 0);
+		wasKeyXDown = (keyX != 0);
+		wasKeyIDown = (keyI != 0);
+		wasKeyODown = (keyO != 0);
+		wasKeyPDown = (keyP != 0);
+
+		if ((user1Down && !wasUser1Down) || keyIPressed)
 		{
 			popupOpen = !popupOpen;
 			if (popupOpen)
@@ -60,14 +115,14 @@ class OASISInventoryOverlayHandler : EventHandler
 
 		if (popupOpen)
 		{
-			if (user2Down && !wasUser2Down)
+			if ((user2Down && !wasUser2Down) || keyLeftPressed || keyOPressed)
 			{
 				activeTab--;
 				if (activeTab < 0) activeTab = TAB_COUNT - 1;
 				scrollOffset = 0;
 				selectedAbsolute = 0;
 			}
-			if (user3Down && !wasUser3Down)
+			if ((user3Down && !wasUser3Down) || keyRightPressed || keyPPressed)
 			{
 				activeTab++;
 				if (activeTab >= TAB_COUNT) activeTab = 0;
@@ -96,8 +151,9 @@ class OASISInventoryOverlayHandler : EventHandler
 			if (selectedAbsolute >= listCount && listCount > 0) selectedAbsolute = listCount - 1;
 			if (selectedAbsolute < 0) selectedAbsolute = 0;
 
-			bool selUp = (forwardDown && !wasForwardDown) || (lookUpDown && !wasLookUpDown);
-			bool selDown = (backDown && !wasBackDown) || (lookDownDown && !wasLookDownDown);
+			// Selection: arrows only (from captured key CVars). Do not use W/S so they don't move list or player.
+			bool selUp = keyUpPressed || (lookUpDown && !wasLookUpDown) || (jumpDown && !wasJumpDown);
+			bool selDown = keyDownPressed || (lookDownDown && !wasLookDownDown) || (crouchDown && !wasCrouchDown);
 			if (selUp)
 			{
 				selectedAbsolute--;
@@ -116,7 +172,7 @@ class OASISInventoryOverlayHandler : EventHandler
 				if (scrollOffset > maxOffset) scrollOffset = maxOffset;
 			}
 
-			if (useDown && !wasUseDown)
+			if ((useDown && !wasUseDown) || keyUsePressed)
 			{
 				if (selectedItem != null && selectedItem.Amount > 0)
 				{
@@ -126,13 +182,13 @@ class OASISInventoryOverlayHandler : EventHandler
 				}
 			}
 
-			// User4 (bind Z) = Send to Avatar: print command for console. Reload (bind X) = Send to Clan.
-			if (user4Down && !wasUser4Down && selectedItem != null && selectedItem.Amount > 0)
+			// Z = Send to Avatar, X = Send to Clan (button or captured key)
+			if (((user4Down && !wasUser4Down) || keyZPressed) && selectedItem != null && selectedItem.Amount > 0)
 			{
 				String itemClass = selectedItem.GetClassName();
 				Console.Printf("To send to avatar, run in console: star send_avatar \"<username>\" \"%s\"\n", itemClass);
 			}
-			if (reloadDown && !wasReloadDown && selectedItem != null && selectedItem.Amount > 0)
+			if (((reloadDown && !wasReloadDown) || keyXPressed) && selectedItem != null && selectedItem.Amount > 0)
 			{
 				String itemClass = selectedItem.GetClassName();
 				Console.Printf("To send to clan, run in console: star send_clan \"<clan_name>\" \"%s\"\n", itemClass);
@@ -149,6 +205,8 @@ class OASISInventoryOverlayHandler : EventHandler
 		wasUseDown = useDown;
 		wasUser4Down = user4Down;
 		wasReloadDown = reloadDown;
+		wasJumpDown = jumpDown;
+		wasCrouchDown = crouchDown;
 	}
 
 	private ui int GetClampedOffset(int listCount)
@@ -254,7 +312,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		screen.DrawText(f, activeTab == TAB_ARMOR ? Font.CR_GREEN : Font.CR_GRAY, tab4X, 33, tab4, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 		screen.DrawText(f, activeTab == TAB_ITEMS ? Font.CR_GREEN : Font.CR_GRAY, tab5X, 33, tab5, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
-		screen.DrawText(f, Font.CR_DARKGRAY, 6, 46, "W/S=Select  E=Use  I=Toggle  O/P=Tabs  Bind Z/X to User4/Reload for Send", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, Font.CR_DARKGRAY, 2, 46, "Arrows=Select  E=Use  Z/X=Send  I = Close  O/P=Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
 		int y = 58;
 		for (int i = 0; i < MAX_VISIBLE_ROWS; i++)
