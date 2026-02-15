@@ -1,0 +1,48 @@
+name: Nightly Builds
+
+on:
+  workflow_run:
+    workflows: ["Continuous Integration"]
+    branches: [trunk]
+    types:
+      - completed
+
+jobs:
+  upload_nightly:
+    name: Upload Nightly
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      contents: write
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          path: artifacts
+          pattern: "* Release"
+
+      - name: Rename
+        shell: bash
+        run: |
+          mkdir -p release
+          mv "artifacts/Windows MSVC Release"/*.zip release/Windows-UZDoom-Nightly.zip
+          mv "artifacts/MacOS LLVM Release"/*.zip release/MacOS-UZDoom-Nightly.zip
+          mv "artifacts/Linux LLVM Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
+          mv "artifacts/Linux GCC Release"/*.AppImage release/Linux-Legacy-UZDoom-Nightly.AppImage
+
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        with:
+          name: UZDoom Nightly
+          tag_name: nightly
+          draft: false
+          prerelease: true
+          make_latest: false
+          body: |
+            # These are automatically generated development versions based on latest commit to trunk.
+            ## WARNING: Nightly builds may be unstable and have issues.
+            [Commit:](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.event.workflow_run.head_sha }})
+            ${{ github.event.head_commit.message }}
+          generate_release_notes: false
+          files: release/**
