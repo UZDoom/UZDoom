@@ -14,11 +14,13 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: write
+      actions: read
     steps:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
         with:
           run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
           path: artifacts
           pattern: "* Release"
 
@@ -26,10 +28,17 @@ jobs:
         shell: bash
         run: |
           mkdir -p release
-          mv "artifacts/Windows MSVC Release"/*.zip release/Windows-UZDoom-Nightly.zip
-          mv "artifacts/MacOS LLVM Release"/*.zip release/MacOS-UZDoom-Nightly.zip
-          mv "artifacts/Linux LLVM Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
-          mv "artifacts/Linux GCC Release"/*.AppImage release/Linux-Legacy-UZDoom-Nightly.AppImage
+
+          function move() {
+            [ "$#" == 2 ] || return;
+            dir="$(dirname "$1")";
+            [ -d "$dir" ] && [ -f "$1" ] && mv "$1" "$2";
+          }
+
+          move "artifacts/Windows MSVC Release"/*.zip release/Windows-UZDoom-Nightly.zip
+          move "artifacts/MacOS LLVM Release"/*.zip release/MacOS-UZDoom-Nightly.zip
+          move "artifacts/Linux LLVM Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
+          move "artifacts/Linux GCC Release"/*.AppImage release/Linux-Legacy-UZDoom-Nightly.AppImage
 
       - name: Upload
         uses: softprops/action-gh-release@v2
