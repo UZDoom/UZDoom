@@ -38,7 +38,7 @@ class MagePlayer : PlayerPawn
 		Player.JumpZ 9;
 		Player.Viewheight 48;
 		Player.SpawnClass "Mage";
-		Player.DisplayName "Mage";
+		Player.DisplayName "$MNU_MAGE";
 		Player.SoundClass "mage";
 		Player.ScoreIcon "MAGEFACE";
 		Player.InvulnerabilityMode "Reflective";
