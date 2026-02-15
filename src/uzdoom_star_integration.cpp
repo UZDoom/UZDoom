@@ -313,7 +313,12 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			odoom_star_username = g_star_effective_username.c_str();
+			if (!g_star_effective_username.empty())
+				odoom_star_username = g_star_effective_username.c_str();
+			else if (!g_star_effective_avatar_id.empty())
+				odoom_star_username = g_star_effective_avatar_id.c_str();
+			else
+				odoom_star_username = "Avatar";
 			size_t count = list ? list->count : 0;
 			if (list) star_api_free_item_list(list);
 			if (logVerbose) StarLogInfo("Beam-in successful (API key/avatar). Inventory items=%zu. Cross-game features enabled.", count);

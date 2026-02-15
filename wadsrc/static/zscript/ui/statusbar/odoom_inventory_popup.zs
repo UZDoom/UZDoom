@@ -14,7 +14,6 @@ class OASISInventoryOverlayHandler : EventHandler
 	private bool wasUseDown;
 	private bool wasUser4Down;
 	private bool wasReloadDown;
-	private int lastUser4Tick;
 
 	const TAB_KEYS = 0;
 	const TAB_POWERUPS = 1;
@@ -127,15 +126,16 @@ class OASISInventoryOverlayHandler : EventHandler
 				}
 			}
 
+			// User4 (bind Z) = Send to Avatar: print command for console. Reload (bind X) = Send to Clan.
 			if (user4Down && !wasUser4Down && selectedItem != null && selectedItem.Amount > 0)
 			{
 				String itemClass = selectedItem.GetClassName();
-				Console.Printf("To send to avatar, run: star send_avatar \"<username>\" \"%s\"\n", itemClass);
+				Console.Printf("To send to avatar, run in console: star send_avatar \"<username>\" \"%s\"\n", itemClass);
 			}
 			if (reloadDown && !wasReloadDown && selectedItem != null && selectedItem.Amount > 0)
 			{
 				String itemClass = selectedItem.GetClassName();
-				Console.Printf("To send to clan, run: star send_clan \"<clan_name>\" \"%s\"\n", itemClass);
+				Console.Printf("To send to clan, run in console: star send_clan \"<clan_name>\" \"%s\"\n", itemClass);
 			}
 		}
 
@@ -254,7 +254,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		screen.DrawText(f, activeTab == TAB_ARMOR ? Font.CR_GREEN : Font.CR_GRAY, tab4X, 33, tab4, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 		screen.DrawText(f, activeTab == TAB_ITEMS ? Font.CR_GREEN : Font.CR_GRAY, tab5X, 33, tab5, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
-		screen.DrawText(f, Font.CR_DARKGRAY, 38, 46, "Arrows=Select  E=Use  Z=To Avatar  X=To Clan  I=Toggle  O/P=Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, Font.CR_DARKGRAY, 6, 46, "W/S=Select  E=Use  I=Toggle  O/P=Tabs  Bind Z/X to User4/Reload for Send", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
 		int y = 58;
 		for (int i = 0; i < MAX_VISIBLE_ROWS; i++)
@@ -278,5 +278,6 @@ class OASISInventoryOverlayHandler : EventHandler
 
 			y += 16;
 		}
+
 	}
 }
