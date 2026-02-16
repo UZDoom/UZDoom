@@ -107,10 +107,10 @@ void ODOOM_InventoryInputCaptureFrame(void)
 	if (open && !g_odoom_inventory_bindings_captured)
 	{
 		/* Clear arrow, movement, and inventory key bindings so game doesn't receive them (OQuake-style). */
-		C_DoCommand("bind Up \"\"");
-		C_DoCommand("bind Down \"\"");
-		C_DoCommand("bind Left \"\"");
-		C_DoCommand("bind Right \"\"");
+		C_DoCommand("bind uparrow \"\"");
+		C_DoCommand("bind downarrow \"\"");
+		C_DoCommand("bind leftarrow \"\"");
+		C_DoCommand("bind rightarrow \"\"");
 		C_DoCommand("bind W \"\"");
 		C_DoCommand("bind S \"\"");
 		C_DoCommand("bind A \"\"");
@@ -123,17 +123,17 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		C_DoCommand("bind I \"\"");
 		C_DoCommand("bind O \"\"");
 		C_DoCommand("bind P \"\"");
-		C_DoCommand("bind Return \"\"");
-		C_DoCommand("bind KP_Enter \"\"");
+		C_DoCommand("bind enter \"\"");
+		C_DoCommand("bind kpenter \"\"");
 		g_odoom_inventory_bindings_captured = true;
 	}
 	else if (!open && g_odoom_inventory_bindings_captured)
 	{
 		/* Restore default bindings (user can rebind in options). */
-		C_DoCommand("bind Up \"+forward\"");
-		C_DoCommand("bind Down \"+back\"");
-		C_DoCommand("bind Left \"+left\"");
-		C_DoCommand("bind Right \"+right\"");
+		C_DoCommand("bind uparrow \"+forward\"");
+		C_DoCommand("bind downarrow \"+back\"");
+		C_DoCommand("bind leftarrow \"+left\"");
+		C_DoCommand("bind rightarrow \"+right\"");
 		C_DoCommand("bind W \"+forward\"");
 		C_DoCommand("bind S \"+back\"");
 		C_DoCommand("bind A \"+moveleft\"");
@@ -146,8 +146,8 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		C_DoCommand("bind I \"+user1\"");
 		C_DoCommand("bind O \"+user2\"");
 		C_DoCommand("bind P \"+user3\"");
-		C_DoCommand("bind Return \"+use\"");
-		C_DoCommand("bind KP_Enter \"+use\"");
+		C_DoCommand("bind enter \"+use\"");
+		C_DoCommand("bind kpenter \"+use\"");
 		g_odoom_inventory_bindings_captured = false;
 	}
 
@@ -173,7 +173,10 @@ void ODOOM_InventoryInputCaptureFrame(void)
 
 	/* Send popup: text input buffer (OQuake-style) and execute send when ZScript requests */
 	FBaseCVar* sendOpenVar = FindCVar("odoom_send_popup_open", nullptr);
-	const bool sendOpen = (sendOpenVar && sendOpenVar->GetRealType() == CVAR_Int && sendOpenVar->GetGenericRep(CVAR_Int).Int != 0);
+	/* Robust fallback: keep typing capture active while inventory is open. */
+	bool sendOpen = open;
+	if (sendOpenVar && sendOpenVar->GetRealType() == CVAR_Int && sendOpenVar->GetGenericRep(CVAR_Int).Int != 0)
+		sendOpen = true;
 	if (sendOpen && !g_odoom_send_popup_was_open)
 	{
 		g_odoom_send_input_buffer.clear();
@@ -192,26 +195,36 @@ void ODOOM_InventoryInputCaptureFrame(void)
 			int vk = VK_BACK;
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF])
+			{
 				lastChar = 8;
+				if (!g_odoom_send_input_buffer.empty())
+					g_odoom_send_input_buffer.pop_back();
+			}
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
 		if (lastChar == 0) {
 		/* A-Z (lowercase) */
-		for (int vk = 'A'; vk <= 'Z' && lastChar == 0; vk++)
+		for (int vk = 'A'; vk <= 'Z'; vk++)
 		{
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
+			{
 				lastChar = (GetAsyncKeyState(VK_SHIFT) & 0x8000) ? vk : (vk - 'A' + 'a');
+				g_odoom_send_input_buffer += (char)lastChar;
+			}
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
 		}
 		if (lastChar == 0) {
 		/* 0-9 */
-		for (int vk = '0'; vk <= '9' && lastChar == 0; vk++)
+		for (int vk = '0'; vk <= '9'; vk++)
 		{
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
+			{
 				lastChar = vk;
+				g_odoom_send_input_buffer += (char)vk;
+			}
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
 		}
@@ -221,7 +234,10 @@ void ODOOM_InventoryInputCaptureFrame(void)
 			int vk = VK_SPACE;
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
+			{
 				lastChar = ' ';
+				g_odoom_send_input_buffer += ' ';
+			}
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
 		}
@@ -233,19 +249,39 @@ void ODOOM_InventoryInputCaptureFrame(void)
 			int dmin = ODOOM_GetRawKeyDown(vk_minus);
 			int dper = ODOOM_GetRawKeyDown(vk_period);
 			if (dmin && !g_odoom_send_key_was_down[vk_minus & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
+			{
 				lastChar = '-';
+				g_odoom_send_input_buffer += '-';
+			}
 			else if (dper && !g_odoom_send_key_was_down[vk_period & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
+			{
 				lastChar = '.';
+				g_odoom_send_input_buffer += '.';
+			}
 			g_odoom_send_key_was_down[vk_minus & 0xFF] = (dmin != 0);
 			g_odoom_send_key_was_down[vk_period & 0xFF] = (dper != 0);
 		}
 		}
 #endif
+		/* ZScript reads this and appends to its display string (string CVar may not work in all builds) */
 		FBaseCVar* lastCharVar = FindCVar("odoom_send_last_char", nullptr);
 		if (lastCharVar && lastCharVar->GetRealType() == CVAR_Int)
 		{
 			UCVarValue u; u.Int = lastChar;
 			lastCharVar->SetGenericRep(u, CVAR_Int);
+		}
+		/* Also write full line to string CVar for display/send */
+		FBaseCVar* lineVar = FindCVar("odoom_send_input_line", nullptr);
+		if (lineVar && lineVar->GetRealType() == CVAR_String)
+		{
+			static char s_send_line_buf[ODOOM_SEND_INPUT_MAX + 1];
+			size_t len = g_odoom_send_input_buffer.size();
+			if (len > (size_t)ODOOM_SEND_INPUT_MAX) len = (size_t)ODOOM_SEND_INPUT_MAX;
+			std::memcpy(s_send_line_buf, g_odoom_send_input_buffer.c_str(), len);
+			s_send_line_buf[len] = '\0';
+			UCVarValue val;
+			val.String = s_send_line_buf;
+			lineVar->SetGenericRep(val, CVAR_String);
 		}
 	}
 
@@ -519,6 +555,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
+			oasis_star_anorak_face = true; /* Switch to OASIS face when beamed in */
 			odoom_star_username = g_star_effective_username.c_str();
 			if (logVerbose) StarLogInfo("Beam-in successful (SSO). Cross-game features enabled.");
 			return true;
@@ -535,6 +572,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
+			oasis_star_anorak_face = true; /* Switch to OASIS face when beamed in */
 			if (!g_star_effective_username.empty())
 				odoom_star_username = g_star_effective_username.c_str();
 			else if (!g_star_effective_avatar_id.empty())

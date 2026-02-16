@@ -36,7 +36,7 @@ class OASISInventoryOverlayHandler : EventHandler
 	private int sendButtonFocus;  // 0=Send, 1=Cancel
 	private String sendItemClass;
 	private int sendMaxQty;
-	private String sendInputLine;  // name typed in send popup (ZScript-built from odoom_send_last_char); set to "" when opening send popup
+	private String sendInputLine;  // name built from odoom_send_last_char (C++ sets one char per frame)
 
 	const TAB_KEYS = 0;
 	const TAB_POWERUPS = 1;
@@ -216,6 +216,8 @@ class OASISInventoryOverlayHandler : EventHandler
 				sendItemClass = selectedItem.GetClassName();
 				sendMaxQty = selectedItem.Amount;
 				sendInputLine = "";
+				CVar lineVar = CVar.FindCVar("odoom_send_input_line");
+				if (lineVar != null) lineVar.SetString("");
 				CVar cv = CVar.FindCVar("odoom_send_popup_open");
 				if (cv != null) cv.SetInt(1);
 			}
@@ -228,6 +230,8 @@ class OASISInventoryOverlayHandler : EventHandler
 				sendItemClass = selectedItem.GetClassName();
 				sendMaxQty = selectedItem.Amount;
 				sendInputLine = "";
+				CVar lineVar = CVar.FindCVar("odoom_send_input_line");
+				if (lineVar != null) lineVar.SetString("");
 				CVar cv = CVar.FindCVar("odoom_send_popup_open");
 				if (cv != null) cv.SetInt(1);
 			}
@@ -236,7 +240,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		// Send popup handling when open
 		if (sendPopupMode != 0)
 		{
-			// Typing: C++ sets odoom_send_last_char (0=none, 8=backspace, else ASCII)
+			// Build name from C++ odoom_send_last_char (one char per frame; 0=none, 8=backspace)
 			CVar lastCharVar = CVar.FindCVar("odoom_send_last_char");
 			if (lastCharVar != null)
 			{
@@ -249,7 +253,20 @@ class OASISInventoryOverlayHandler : EventHandler
 					oneChar.AppendCharacter(ch);
 					sendInputLine = String.Format("%s%s", sendInputLine, oneChar);
 				}
-				lastCharVar.SetInt(0);
+			}
+			// Also sync from full-line cvar so typing still shows if last-char path is unavailable.
+			CVar lineVarSync = CVar.FindCVar("odoom_send_input_line");
+			if (lineVarSync != null)
+			{
+				String syncLine = lineVarSync.GetString();
+				if (syncLine.Length() > 0 || sendInputLine.Length() == 0)
+					sendInputLine = syncLine;
+			}
+			else
+			{
+				// Fallback for builds missing odoom_send_last_char: read full line from string CVar.
+				CVar lineVar = CVar.FindCVar("odoom_send_input_line");
+				if (lineVar != null) sendInputLine = lineVar.GetString();
 			}
 			if (keyLeftPressed) sendButtonFocus = 0;
 			if (keyRightPressed) sendButtonFocus = 1;
@@ -452,7 +469,7 @@ class OASISInventoryOverlayHandler : EventHandler
 			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 20, String.Format("%s: %s_", label, sendInputLine), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			String qtyText = String.Format("Quantity: %d / %d (Arrows)", sendQuantity, sendMaxQty);
 			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 32, qtyText, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 44, "Left=Send  Right=Cancel  Enter/E=Confirm  I=Cancel", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 44, "Left=Send  Right=Cancel  Enter=Confirm", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			if (sendButtonFocus == 0)
 				screen.DrawText(f, Font.CR_GREEN, popupX + 16, popupY + 60, "[SEND]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			else
