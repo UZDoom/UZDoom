@@ -173,10 +173,10 @@ void ODOOM_InventoryInputCaptureFrame(void)
 
 	/* Send popup: text input buffer (OQuake-style) and execute send when ZScript requests */
 	FBaseCVar* sendOpenVar = FindCVar("odoom_send_popup_open", nullptr);
-	/* Robust fallback: keep typing capture active while inventory is open. */
-	bool sendOpen = open;
-	if (sendOpenVar && sendOpenVar->GetRealType() == CVAR_Int && sendOpenVar->GetGenericRep(CVAR_Int).Int != 0)
-		sendOpen = true;
+	/* Capture typed name only while send popup is open. */
+	bool sendOpen = false;
+	if (sendOpenVar && sendOpenVar->GetRealType() == CVAR_Int)
+		sendOpen = (sendOpenVar->GetGenericRep(CVAR_Int).Int != 0);
 	if (sendOpen && !g_odoom_send_popup_was_open)
 	{
 		g_odoom_send_input_buffer.clear();
@@ -555,7 +555,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = true; /* Switch to OASIS face when beamed in */
+			oasis_star_anorak_face = EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
 			odoom_star_username = g_star_effective_username.c_str();
 			if (logVerbose) StarLogInfo("Beam-in successful (SSO). Cross-game features enabled.");
 			return true;
@@ -572,7 +572,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = true; /* Switch to OASIS face when beamed in */
+			oasis_star_anorak_face = EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
 			if (!g_star_effective_username.empty())
 				odoom_star_username = g_star_effective_username.c_str();
 			else if (!g_star_effective_avatar_id.empty())
@@ -617,6 +617,8 @@ static const char* GetKeycardDescription(int keynum) {
 }
 
 void UZDoom_STAR_Init(void) {
+	/* Always start with default Doom face until explicit beam-in. */
+	oasis_star_anorak_face = false;
 	// Safe default bind for ODOOM inventory popup toggle/tab controls.
 	// defaultbind does not override user-customized bindings.
 	C_DoCommand("defaultbind i +user1");

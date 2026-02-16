@@ -450,9 +450,9 @@ int FMugShot::UpdateState(player_t *player, StateFlags stateflags)
 FGameTexture *FMugShot::GetFace(player_t *player, const char *default_face, int accuracy, StateFlags stateflags)
 {
 #ifdef OASIS_STAR_API
-	FBaseCVar *starUserVar = FindCVar("odoom_star_username", nullptr);
-	const char *starUser = (starUserVar && starUserVar->GetRealType() == CVAR_String) ? starUserVar->GetGenericRep(CVAR_String).String : nullptr;
-	if (starUser && *starUser)
+	FBaseCVar *anorakFaceVar = FindCVar("oasis_star_anorak_face", nullptr);
+	bool anorakFace = (anorakFaceVar && anorakFaceVar->GetRealType() == CVAR_Bool) && (anorakFaceVar->GetGenericRep(CVAR_Bool).Int != 0);
+	if (anorakFace)
 	{
 		FGameTexture *oasFace = TexMan.FindGameTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins);
 		if (!oasFace) oasFace = TexMan.GetGameTexture(TexMan.CheckForTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins));

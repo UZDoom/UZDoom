@@ -7,8 +7,22 @@ server int odoom_key_down = 0;
 server int odoom_key_left = 0;
 server int odoom_key_right = 0;
 server int odoom_key_use = 0;
+server int odoom_key_a = 0;
+server int odoom_key_c = 0;
 server int odoom_key_z = 0;
 server int odoom_key_x = 0;
 server int odoom_key_i = 0;
 server int odoom_key_o = 0;
 server int odoom_key_p = 0;
+server int odoom_key_enter = 0;
+
+// Send popup (OQuake-style): name input buffer and execute
+server int odoom_send_popup_open = 0;
+server string odoom_send_input_line = "";
+server int odoom_send_do_it = 0;
+server string odoom_send_target = "";
+server string odoom_send_item_class = "";
+server int odoom_send_quantity = 1;
+server int odoom_send_to_clan = 0;
+// One character per frame for ZScript to append to name (0=none, 8=backspace, else ASCII)
+server int odoom_send_last_char = 0;
