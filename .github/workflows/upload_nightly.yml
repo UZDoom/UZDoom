@@ -16,6 +16,8 @@ jobs:
       contents: write
       actions: read
     steps:
+      - uses: actions/checkout@v4
+
       - name: Download Artifacts
         uses: actions/download-artifact@v4
         with:
@@ -39,6 +41,13 @@ jobs:
           move "artifacts/MacOS LLVM Release"/*.zip release/MacOS-UZDoom-Nightly.zip
           move "artifacts/Linux LLVM Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
 
+      - name: Update Tag
+        run: |
+          git tag -d nightly || true
+          git push origin :refs/tags/nightly || true
+          git tag nightly
+          git push origin nightly
+
       - name: Upload
         uses: softprops/action-gh-release@v2
         with:
@@ -47,6 +56,8 @@ jobs:
           draft: false
           prerelease: true
           make_latest: false
+          generate_release_notes: false
+          files: release/**
           body: |
             These builds are automatically generated based on the latest commit to trunk.
 
@@ -54,5 +65,3 @@ jobs:
 
             **Commit:** ${{ github.event.workflow_run.head_sha || github.sha }}
             **Message:** ${{ github.event.workflow_run.head_commit.message || github.event.head_commit.message }}
-          generate_release_notes: false
-          files: release/**
