@@ -123,6 +123,8 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		C_DoCommand("bind I \"\"");
 		C_DoCommand("bind O \"\"");
 		C_DoCommand("bind P \"\"");
+		C_DoCommand("bind Return \"\"");
+		C_DoCommand("bind KP_Enter \"\"");
 		g_odoom_inventory_bindings_captured = true;
 	}
 	else if (!open && g_odoom_inventory_bindings_captured)
@@ -144,13 +146,12 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		C_DoCommand("bind I \"+user1\"");
 		C_DoCommand("bind O \"+user2\"");
 		C_DoCommand("bind P \"+user3\"");
+		C_DoCommand("bind Return \"+use\"");
+		C_DoCommand("bind KP_Enter \"+use\"");
 		g_odoom_inventory_bindings_captured = false;
-		/* Clear key CVars so ZScript doesn't see stale state when popup is closed */
-		ODOOM_InventorySetKeyState(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 	}
 
-	/* When inventory is open: feed raw key state into CVars so ZScript can drive selection/use/send/tabs (OQuake-style). */
-	if (open)
+	/* Always feed raw key state into CVars so ZScript can open inventory with I (keyIPressed) when closed and drive popup when open. */
 	{
 		int up   = ODOOM_GetRawKeyDown(VK_UP);
 		int down = ODOOM_GetRawKeyDown(VK_DOWN);
@@ -164,7 +165,10 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		int i    = ODOOM_GetRawKeyDown('I');
 		int o    = ODOOM_GetRawKeyDown('O');
 		int p    = ODOOM_GetRawKeyDown('P');
-		ODOOM_InventorySetKeyState(up, down, left, right, use, a, c, z, x, i, o, p);
+		int enter= ODOOM_GetRawKeyDown(VK_RETURN);
+		/* Merge Enter into use so ZScript sees keyUsePressed for both E and Enter (confirm/close) */
+		use = (use || enter) ? 1 : 0;
+		ODOOM_InventorySetKeyState(up, down, left, right, use, a, c, z, x, i, o, p, enter);
 	}
 
 	/* Send popup: text input buffer (OQuake-style) and execute send when ZScript requests */
@@ -181,65 +185,67 @@ void ODOOM_InventoryInputCaptureFrame(void)
 
 	if (sendOpen)
 	{
+		int lastChar = 0;  /* one newly pressed char per frame for ZScript (0=none, 8=backspace, else ASCII) */
 #ifdef _WIN32
 		/* Backspace */
 		{
 			int vk = VK_BACK;
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF])
-			{
-				if (!g_odoom_send_input_buffer.empty())
-					g_odoom_send_input_buffer.pop_back();
-			}
+				lastChar = 8;
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
+		if (lastChar == 0) {
 		/* A-Z (lowercase) */
-		for (int vk = 'A'; vk <= 'Z'; vk++)
+		for (int vk = 'A'; vk <= 'Z' && lastChar == 0; vk++)
 		{
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
-			{
-				char ch = (char)((GetAsyncKeyState(VK_SHIFT) & 0x8000) ? vk : (vk - 'A' + 'a'));
-				g_odoom_send_input_buffer += ch;
-			}
+				lastChar = (GetAsyncKeyState(VK_SHIFT) & 0x8000) ? vk : (vk - 'A' + 'a');
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
+		}
+		if (lastChar == 0) {
 		/* 0-9 */
-		for (int vk = '0'; vk <= '9'; vk++)
+		for (int vk = '0'; vk <= '9' && lastChar == 0; vk++)
 		{
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
-				g_odoom_send_input_buffer += (char)vk;
+				lastChar = vk;
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
+		}
+		if (lastChar == 0) {
 		/* Space */
 		{
 			int vk = VK_SPACE;
 			int down = ODOOM_GetRawKeyDown(vk);
 			if (down && !g_odoom_send_key_was_down[vk & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
-				g_odoom_send_input_buffer += ' ';
+				lastChar = ' ';
 			g_odoom_send_key_was_down[vk & 0xFF] = (down != 0);
 		}
-		/* - . _ */
+		}
+		if (lastChar == 0) {
+		/* - . */
 		{
 			int vk_minus = VK_OEM_MINUS;
 			int vk_period = VK_OEM_PERIOD;
 			int dmin = ODOOM_GetRawKeyDown(vk_minus);
 			int dper = ODOOM_GetRawKeyDown(vk_period);
 			if (dmin && !g_odoom_send_key_was_down[vk_minus & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
-				g_odoom_send_input_buffer += '-';
-			if (dper && !g_odoom_send_key_was_down[vk_period & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
-				g_odoom_send_input_buffer += '.';
+				lastChar = '-';
+			else if (dper && !g_odoom_send_key_was_down[vk_period & 0xFF] && (int)g_odoom_send_input_buffer.size() < ODOOM_SEND_INPUT_MAX)
+				lastChar = '.';
 			g_odoom_send_key_was_down[vk_minus & 0xFF] = (dmin != 0);
 			g_odoom_send_key_was_down[vk_period & 0xFF] = (dper != 0);
 		}
+		}
 #endif
-		FBaseCVar* lineVar = FindCVar("odoom_send_input_line", nullptr);
-		if (lineVar && lineVar->GetRealType() == CVAR_String)
+		FBaseCVar* lastCharVar = FindCVar("odoom_send_last_char", nullptr);
+		if (lastCharVar && lastCharVar->GetRealType() == CVAR_Int)
 		{
-			UCVarValue val;
-			val.String = g_odoom_send_input_buffer.c_str();
-			lineVar->SetGenericRep(val, CVAR_String);
+			UCVarValue u; u.Int = lastChar;
+			lastCharVar->SetGenericRep(u, CVAR_Int);
 		}
 	}
 
@@ -271,7 +277,7 @@ void ODOOM_InventoryInputCaptureFrame(void)
 }
 
 /** Called from engine input code when building ticcmd: set key state CVars for ZScript. */
-void ODOOM_InventorySetKeyState(int up, int down, int left, int right, int use, int a, int c, int z, int x, int i, int o, int p)
+void ODOOM_InventorySetKeyState(int up, int down, int left, int right, int use, int a, int c, int z, int x, int i, int o, int p, int enter)
 {
 	UCVarValue val;
 	FBaseCVar* v;
@@ -288,6 +294,7 @@ void ODOOM_InventorySetKeyState(int up, int down, int left, int right, int use, 
 	SET_KEY_CVAR("odoom_key_i", i);
 	SET_KEY_CVAR("odoom_key_o", o);
 	SET_KEY_CVAR("odoom_key_p", p);
+	SET_KEY_CVAR("odoom_key_enter", enter);
 #undef SET_KEY_CVAR
 }
 
