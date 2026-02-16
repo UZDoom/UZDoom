@@ -181,6 +181,11 @@ void ODOOM_InventoryInputCaptureFrame(void)
 	{
 		g_odoom_send_input_buffer.clear();
 		for (int i = 0; i < 256; i++) g_odoom_send_key_was_down[i] = false;
+		/* Suppress the opener key so A/C/Z/X don't get typed into name on popup open. */
+		g_odoom_send_key_was_down['A'] = (ODOOM_GetRawKeyDown('A') != 0);
+		g_odoom_send_key_was_down['C'] = (ODOOM_GetRawKeyDown('C') != 0);
+		g_odoom_send_key_was_down['Z'] = (ODOOM_GetRawKeyDown('Z') != 0);
+		g_odoom_send_key_was_down['X'] = (ODOOM_GetRawKeyDown('X') != 0);
 		g_odoom_send_popup_was_open = true;
 	}
 	if (!sendOpen)

@@ -458,6 +458,11 @@ FGameTexture *FMugShot::GetFace(player_t *player, const char *default_face, int 
 		if (!oasFace) oasFace = TexMan.GetGameTexture(TexMan.CheckForTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins));
 		if (oasFace)
 			return oasFace;
+		// Anorak-only fallback if OASFACE isn't loaded.
+		FGameTexture *fallbackFace = TexMan.FindGameTexture("OQKGI0", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins);
+		if (!fallbackFace) fallbackFace = TexMan.GetGameTexture(TexMan.CheckForTexture("OQKGI0", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins));
+		if (fallbackFace)
+			return fallbackFace;
 	}
 #endif
 	int angle = UpdateState(player, stateflags);
