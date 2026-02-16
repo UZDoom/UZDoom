@@ -21,11 +21,20 @@ class OASISInventoryOverlayHandler : EventHandler
 	private bool wasKeyLeftDown;
 	private bool wasKeyRightDown;
 	private bool wasKeyUseDown;
+	private bool wasKeyADown;
+	private bool wasKeyCDown;
 	private bool wasKeyZDown;
 	private bool wasKeyXDown;
 	private bool wasKeyIDown;
 	private bool wasKeyODown;
 	private bool wasKeyPDown;
+
+	// Send popup (OQuake-style)
+	private int sendPopupMode;   // 0=none, 1=avatar, 2=clan
+	private int sendQuantity;
+	private int sendButtonFocus;  // 0=Send, 1=Cancel
+	private String sendItemClass;
+	private int sendMaxQty;
 
 	const TAB_KEYS = 0;
 	const TAB_POWERUPS = 1;
@@ -68,7 +77,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		bool crouchDown = (buttons & BT_CROUCH) != 0;
 
 		// Keys captured by C++ when inventory open (odoom_key_* CVars, 1 = pressed this tic)
-		int keyUp = 0, keyDown = 0, keyLeft = 0, keyRight = 0, keyUse = 0, keyZ = 0, keyX = 0, keyI = 0, keyO = 0, keyP = 0;
+		int keyUp = 0, keyDown = 0, keyLeft = 0, keyRight = 0, keyUse = 0, keyA = 0, keyC = 0, keyZ = 0, keyX = 0, keyI = 0, keyO = 0, keyP = 0;
 		if (popupOpen) {
 			CVar v;
 			v = CVar.FindCVar("odoom_key_up"); if (v != null) keyUp = v.GetInt();
@@ -76,6 +85,8 @@ class OASISInventoryOverlayHandler : EventHandler
 			v = CVar.FindCVar("odoom_key_left"); if (v != null) keyLeft = v.GetInt();
 			v = CVar.FindCVar("odoom_key_right"); if (v != null) keyRight = v.GetInt();
 			v = CVar.FindCVar("odoom_key_use"); if (v != null) keyUse = v.GetInt();
+			v = CVar.FindCVar("odoom_key_a"); if (v != null) keyA = v.GetInt();
+			v = CVar.FindCVar("odoom_key_c"); if (v != null) keyC = v.GetInt();
 			v = CVar.FindCVar("odoom_key_z"); if (v != null) keyZ = v.GetInt();
 			v = CVar.FindCVar("odoom_key_x"); if (v != null) keyX = v.GetInt();
 			v = CVar.FindCVar("odoom_key_i"); if (v != null) keyI = v.GetInt();
@@ -87,6 +98,8 @@ class OASISInventoryOverlayHandler : EventHandler
 		bool keyLeftPressed = (keyLeft != 0) && !wasKeyLeftDown;
 		bool keyRightPressed = (keyRight != 0) && !wasKeyRightDown;
 		bool keyUsePressed = (keyUse != 0) && !wasKeyUseDown;
+		bool keyAPressed = (keyA != 0) && !wasKeyADown;
+		bool keyCPressed = (keyC != 0) && !wasKeyCDown;
 		bool keyZPressed = (keyZ != 0) && !wasKeyZDown;
 		bool keyXPressed = (keyX != 0) && !wasKeyXDown;
 		bool keyIPressed = (keyI != 0) && !wasKeyIDown;
@@ -97,6 +110,8 @@ class OASISInventoryOverlayHandler : EventHandler
 		wasKeyLeftDown = (keyLeft != 0);
 		wasKeyRightDown = (keyRight != 0);
 		wasKeyUseDown = (keyUse != 0);
+		wasKeyADown = (keyA != 0);
+		wasKeyCDown = (keyC != 0);
 		wasKeyZDown = (keyZ != 0);
 		wasKeyXDown = (keyX != 0);
 		wasKeyIDown = (keyI != 0);
@@ -132,6 +147,8 @@ class OASISInventoryOverlayHandler : EventHandler
 
 			int listCount = 0;
 			Inventory selectedItem = null;
+			if (sendPopupMode == 0)
+			{
 			for (let inv = p.mo.Inv; inv != null; inv = inv.Inv)
 			{
 				if (inv.Amount <= 0) continue;
@@ -182,16 +199,61 @@ class OASISInventoryOverlayHandler : EventHandler
 				}
 			}
 
-			// Z = Send to Avatar, X = Send to Clan (button or captured key)
-			if (((user4Down && !wasUser4Down) || keyZPressed) && selectedItem != null && selectedItem.Amount > 0)
+			// A = Send to Avatar, C = Send to Clan - open send popup (OQuake-style)
+			if (keyAPressed && selectedItem != null && selectedItem.Amount > 0)
 			{
-				String itemClass = selectedItem.GetClassName();
-				Console.Printf("To send to avatar, run in console: star send_avatar \"<username>\" \"%s\"\n", itemClass);
+				sendPopupMode = 1;
+				sendQuantity = selectedItem.Amount;
+				if (sendQuantity < 1) sendQuantity = 1;
+				sendButtonFocus = 0;
+				sendItemClass = selectedItem.GetClassName();
+				sendMaxQty = selectedItem.Amount;
+				CVar cv = CVar.FindCVar("odoom_send_popup_open");
+				if (cv != null) cv.SetInt(1);
 			}
-			if (((reloadDown && !wasReloadDown) || keyXPressed) && selectedItem != null && selectedItem.Amount > 0)
+			if (keyCPressed && selectedItem != null && selectedItem.Amount > 0)
 			{
-				String itemClass = selectedItem.GetClassName();
-				Console.Printf("To send to clan, run in console: star send_clan \"<clan_name>\" \"%s\"\n", itemClass);
+				sendPopupMode = 2;
+				sendQuantity = selectedItem.Amount;
+				if (sendQuantity < 1) sendQuantity = 1;
+				sendButtonFocus = 0;
+				sendItemClass = selectedItem.GetClassName();
+				sendMaxQty = selectedItem.Amount;
+				CVar cv = CVar.FindCVar("odoom_send_popup_open");
+				if (cv != null) cv.SetInt(1);
+			}
+			} // sendPopupMode == 0
+
+		// Send popup handling when open
+		if (sendPopupMode != 0)
+		{
+			if (keyLeftPressed) sendButtonFocus = 0;
+			if (keyRightPressed) sendButtonFocus = 1;
+			if (keyUpPressed && sendQuantity < sendMaxQty) sendQuantity++;
+			if (keyDownPressed && sendQuantity > 1) sendQuantity--;
+			if (keyUsePressed)
+			{
+				if (sendButtonFocus == 0)
+				{
+					CVar lineVar = CVar.FindCVar("odoom_send_input_line");
+					String targetName = (lineVar != null) ? lineVar.GetString() : "";
+					if (targetName.Length() > 0)
+					{
+						CVar t = CVar.FindCVar("odoom_send_target");
+						if (t != null) t.SetString(targetName);
+						t = CVar.FindCVar("odoom_send_item_class");
+						if (t != null) t.SetString(sendItemClass);
+						t = CVar.FindCVar("odoom_send_quantity");
+						if (t != null) t.SetInt(sendQuantity);
+						t = CVar.FindCVar("odoom_send_to_clan");
+						if (t != null) t.SetInt(sendPopupMode == 2 ? 1 : 0);
+						t = CVar.FindCVar("odoom_send_do_it");
+						if (t != null) t.SetInt(1);
+					}
+				}
+				sendPopupMode = 0;
+				CVar cv = CVar.FindCVar("odoom_send_popup_open");
+				if (cv != null) cv.SetInt(0);
 			}
 		}
 
@@ -208,6 +270,8 @@ class OASISInventoryOverlayHandler : EventHandler
 		wasJumpDown = jumpDown;
 		wasCrouchDown = crouchDown;
 	}
+
+	} // end WorldTick
 
 	private ui int GetClampedOffset(int listCount)
 	{
@@ -273,6 +337,15 @@ class OASISInventoryOverlayHandler : EventHandler
 		let p = players[consoleplayer];
 		if (!p || !p.mo) return;
 
+		Font f = "SmallFont";
+
+		// When send popup is open, draw only the send popup (no inventory list behind it)
+		if (sendPopupMode != 0)
+		{
+			// Draw send popup only - see below
+		}
+		else
+		{
 		Array<Inventory> tabItems;
 		BuildTabInventory(p.mo, tabItems);
 		int listCount = tabItems.Size();
@@ -285,8 +358,6 @@ class OASISInventoryOverlayHandler : EventHandler
 		if (sel >= listCount && listCount > 0) sel = listCount - 1;
 		if (sel < 0) sel = 0;
 		int selectedRow = sel - drawOffset;
-
-		Font f = "SmallFont";
 
 		int headerX = 160 - (f.StringWidth("OASIS Inventory") / 2);
 		screen.DrawText(f, Font.CR_GOLD, headerX, 18, "OASIS Inventory", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
@@ -312,7 +383,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		screen.DrawText(f, activeTab == TAB_ARMOR ? Font.CR_GREEN : Font.CR_GRAY, tab4X, 33, tab4, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 		screen.DrawText(f, activeTab == TAB_ITEMS ? Font.CR_GREEN : Font.CR_GRAY, tab5X, 33, tab5, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
-		screen.DrawText(f, Font.CR_DARKGRAY, 2, 46, "Arrows=Select  E=Use  Z/X=Send  I = Close  O/P=Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		screen.DrawText(f, Font.CR_DARKGRAY, 2, 46, "Arrows=Select  E=Use  A=Avatar C=Clan  I = Close  O/P=Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
 		int y = 58;
 		for (int i = 0; i < MAX_VISIBLE_ROWS; i++)
@@ -336,6 +407,32 @@ class OASISInventoryOverlayHandler : EventHandler
 
 			y += 16;
 		}
+		}
 
+		// Send popup overlay (OQuake-style)
+		if (sendPopupMode != 0)
+		{
+			String title = (sendPopupMode == 2) ? "SEND TO CLAN" : "SEND TO AVATAR";
+			String label = (sendPopupMode == 2) ? "Clan" : "Username";
+			CVar lineVar = CVar.FindCVar("odoom_send_input_line");
+			String inputLine = (lineVar != null) ? lineVar.GetString() : "";
+			int popupW = 200;
+			int popupH = 88;
+			int popupX = (320 - popupW) / 2;
+			int popupY = (200 - popupH) / 2;
+			screen.DrawText(f, Font.CR_GOLD, popupX + 8, popupY + 4, title, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 20, String.Format("%s: %s_", label, inputLine), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			String qtyText = String.Format("Quantity: %d / %d (Arrows)", sendQuantity, sendMaxQty);
+			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 32, qtyText, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 44, "Left=Send  Right=Cancel  E=Confirm", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			if (sendButtonFocus == 0)
+				screen.DrawText(f, Font.CR_GREEN, popupX + 16, popupY + 60, "[SEND]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			else
+				screen.DrawText(f, Font.CR_GRAY, popupX + 16, popupY + 60, "SEND", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			if (sendButtonFocus == 1)
+				screen.DrawText(f, Font.CR_GREEN, popupX + 80, popupY + 60, "[CANCEL]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			else
+				screen.DrawText(f, Font.CR_GRAY, popupX + 80, popupY + 60, "CANCEL", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+		}
 	}
 }
