@@ -63,6 +63,8 @@ static std::string g_star_last_pickup_type;
 static std::string g_star_last_pickup_desc;
 static bool g_star_has_last_pickup = false;
 static bool g_star_face_suppressed_for_session = false;
+/** Single source of truth for status bar face; only set by star face on/off and beam-in/out. */
+static bool g_star_show_anorak_face = false;
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, oasis_star_beam_face, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, odoom_star_api_url, "https://star-api.oasisplatform.world/api", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
@@ -342,6 +344,11 @@ void ODOOM_InventorySetKeyState(int up, int down, int left, int right, int use, 
 #undef SET_KEY_CVAR
 }
 
+int UZDoom_STAR_GetShowAnorakFace(void)
+{
+	return g_star_show_anorak_face ? 1 : 0;
+}
+
 static std::string TrimAscii(const std::string& s) {
 	size_t start = 0;
 	while (start < s.size() && std::isspace(static_cast<unsigned char>(s[start]))) start++;
@@ -506,15 +513,14 @@ static bool StarShouldUseAnorakFace(void) {
 }
 
 static void StarApplyBeamFacePreference(void) {
-	oasis_star_anorak_face = g_star_initialized && StarShouldUseAnorakFace();
+	g_star_show_anorak_face = g_star_initialized && StarShouldUseAnorakFace();
+	oasis_star_anorak_face = g_star_show_anorak_face;
 }
 
 static bool StarTryInitializeAndAuthenticate(bool verbose) {
 	const bool logVerbose = verbose;
-	if (g_star_initialized) {
-		StarApplyBeamFacePreference();
+	if (g_star_initialized)
 		return true;
-	}
 
 	RefreshStarCliOverridesFromExeArgs();
 
@@ -639,6 +645,7 @@ static const char* GetKeycardDescription(int keynum) {
 
 void UZDoom_STAR_Init(void) {
 	/* Always start with default Doom face until explicit beam-in. */
+	g_star_show_anorak_face = false;
 	oasis_star_anorak_face = false;
 	// Safe default bind for ODOOM inventory popup toggle/tab controls.
 	// defaultbind does not override user-customized bindings.
@@ -912,14 +919,16 @@ CCMD(star)
 		if (strcmp(argv[2], "on") == 0) {
 			oasis_star_beam_face = true;
 			g_star_face_suppressed_for_session = false;
-			StarApplyBeamFacePreference();
+			g_star_show_anorak_face = (g_star_initialized && StarShouldUseAnorakFace());
+			oasis_star_anorak_face = g_star_show_anorak_face;
 			Printf("Beam-in face switch enabled.\n");
 			Printf("\n");
 			return;
 		}
 		if (strcmp(argv[2], "off") == 0) {
 			oasis_star_beam_face = false;
-			StarApplyBeamFacePreference();
+			g_star_show_anorak_face = false;
+			oasis_star_anorak_face = false;
 			Printf("Beam-in face switch disabled.\n");
 			Printf("\n");
 			return;
@@ -1089,6 +1098,7 @@ CCMD(star)
 			odoom_star_username = "anorak";
 			StarApplyBeamFacePreference();
 			if (!applyFaceThisLogin) {
+				g_star_show_anorak_face = false;
 				oasis_star_anorak_face = false;
 			}
 			Printf("Beam-in successful (mock). Welcome, anorak.\n");
@@ -1102,6 +1112,7 @@ CCMD(star)
 			return;
 		}
 
+		g_star_show_anorak_face = false;
 		oasis_star_anorak_face = false;
 		if (hasRuntimeCredentials || usingJwt) {
 			// Force a fresh authentication attempt for account switching.
@@ -1110,6 +1121,7 @@ CCMD(star)
 		StarLogInfo("Beaming in...");
 		if (StarTryInitializeAndAuthenticate(true)) {
 			if (!applyFaceThisLogin) {
+				g_star_show_anorak_face = false;
 				oasis_star_anorak_face = false;
 			}
 			Printf("Beam-in successful. Cross-game features enabled.\n");
@@ -1135,6 +1147,7 @@ CCMD(star)
 		g_star_initialized = false;
 		g_star_face_suppressed_for_session = false;
 		g_star_effective_username.clear();
+		g_star_show_anorak_face = false;
 		oasis_star_anorak_face = false;
 		odoom_star_username = "";
 		Printf("Beam-out successful. Use 'star beamin' to beam in again.\n");

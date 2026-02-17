@@ -28,6 +28,9 @@
 #include "r_utility.h"
 #include "actorinlines.h"
 #include "texturemanager.h"
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
 
 #define ST_RAMPAGEDELAY 		(2*TICRATE)
 #define ST_MUCHPAIN 			20
@@ -450,9 +453,7 @@ int FMugShot::UpdateState(player_t *player, StateFlags stateflags)
 FGameTexture *FMugShot::GetFace(player_t *player, const char *default_face, int accuracy, StateFlags stateflags)
 {
 #ifdef OASIS_STAR_API
-	FBaseCVar *anorakFaceVar = FindCVar("oasis_star_anorak_face", nullptr);
-	bool anorakFace = (anorakFaceVar && anorakFaceVar->GetRealType() == CVAR_Bool) && (anorakFaceVar->GetGenericRep(CVAR_Bool).Int != 0);
-	if (anorakFace)
+	if (UZDoom_STAR_GetShowAnorakFace() != 0)
 	{
 		FGameTexture *oasFace = TexMan.FindGameTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins);
 		if (!oasFace) oasFace = TexMan.GetGameTexture(TexMan.CheckForTexture("OASFACE", ETextureType::Any, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_AllowSkins));
