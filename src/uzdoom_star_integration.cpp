@@ -126,7 +126,7 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		C_DoCommand("bind O \"\"");
 		C_DoCommand("bind P \"\"");
 		C_DoCommand("bind enter \"\"");
-		C_DoCommand("bind kpenter \"\"");
+		C_DoCommand("bind \"KP-Enter\" \"\"");
 		g_odoom_inventory_bindings_captured = true;
 	}
 	else if (!open && g_odoom_inventory_bindings_captured)
@@ -149,7 +149,7 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		C_DoCommand("bind O \"+user2\"");
 		C_DoCommand("bind P \"+user3\"");
 		C_DoCommand("bind enter \"+use\"");
-		C_DoCommand("bind kpenter \"+use\"");
+		C_DoCommand("bind \"KP-Enter\" \"+use\"");
 		g_odoom_inventory_bindings_captured = false;
 	}
 
