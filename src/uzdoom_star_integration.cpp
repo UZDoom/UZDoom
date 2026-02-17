@@ -63,6 +63,8 @@ static std::string g_star_last_pickup_type;
 static std::string g_star_last_pickup_desc;
 static bool g_star_has_last_pickup = false;
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Bool, oasis_star_beam_face, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(String, odoom_star_api_url, "https://star-api.oasisplatform.world/api", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, odoom_oq_monster_yoffset, -50, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Float, odoom_oq_monster_scale_global, 1.0f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Float, odoom_oq_monster_scale_dog, 0.50f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
@@ -525,7 +527,8 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 		!g_star_override_avatar_id.empty() ? g_star_override_avatar_id :
 		(HasValue(env_avatar_id) ? env_avatar_id : "");
 
-	g_star_config.base_url = "https://star-api.oasisplatform.world/api";
+	const char* configuredBaseUrl = odoom_star_api_url;
+	g_star_config.base_url = HasValue(configuredBaseUrl) ? configuredBaseUrl : "https://star-api.oasisplatform.world/api";
 	g_star_config.api_key = g_star_effective_api_key.empty() ? nullptr : g_star_effective_api_key.c_str();
 	g_star_config.avatar_id = g_star_effective_avatar_id.empty() ? nullptr : g_star_effective_avatar_id.c_str();
 	g_star_config.timeout_seconds = 10;
@@ -560,7 +563,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
+			oasis_star_anorak_face = oasis_star_beam_face && EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
 			odoom_star_username = g_star_effective_username.c_str();
 			if (logVerbose) StarLogInfo("Beam-in successful (SSO). Cross-game features enabled.");
 			return true;
@@ -577,7 +580,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
+			oasis_star_anorak_face = oasis_star_beam_face && EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
 			if (!g_star_effective_username.empty())
 				odoom_star_username = g_star_effective_username.c_str();
 			else if (!g_star_effective_avatar_id.empty())
@@ -814,7 +817,8 @@ CCMD(star)
 		Printf("  star deploynft <nft_id> <game> [loc] - Deploy boss NFT\n");
 		Printf("  star pickup keycard <red|blue|yellow|skull> - Add keycard (convenience)\n");
 		Printf("  star debug on|off|status - Toggle STAR debug logging in console\n");
-		Printf("  star beamin [user pass]|[jwt <token> [avatar]] - Beam in/authenticate\n");
+		Printf("  star face on|off|status - Toggle beamed-in face switch (default on)\n");
+		Printf("  star beamin [user pass]|[jwt <token> [avatar]] [-noface] - Beam in/authenticate\n");
 		Printf("  star beamout  - Log out / disconnect from STAR\n");
 		Printf("\n");
 		return;
@@ -881,6 +885,31 @@ CCMD(star)
 			return;
 		}
 		Printf("Unknown debug option: %s. Use on|off|status.\n", argv[2]);
+		Printf("\n");
+		return;
+	}
+	if (strcmp(sub, "face") == 0) {
+		Printf("\n");
+		if (argv.argc() < 3 || strcmp(argv[2], "status") == 0) {
+			Printf("Beam-in face switch is %s\n", oasis_star_beam_face ? "on" : "off");
+			Printf("Usage: star face on|off|status\n");
+			Printf("\n");
+			return;
+		}
+		if (strcmp(argv[2], "on") == 0) {
+			oasis_star_beam_face = true;
+			Printf("Beam-in face switch enabled.\n");
+			Printf("\n");
+			return;
+		}
+		if (strcmp(argv[2], "off") == 0) {
+			oasis_star_beam_face = false;
+			oasis_star_anorak_face = false;
+			Printf("Beam-in face switch disabled.\n");
+			Printf("\n");
+			return;
+		}
+		Printf("Unknown face option: %s. Use on|off|status.\n", argv[2]);
 		Printf("\n");
 		return;
 	}
@@ -986,6 +1015,7 @@ CCMD(star)
 		Printf("\n");
 		bool hasRuntimeCredentials = false;
 		bool usingJwt = false;
+		bool noFaceThisLogin = false;
 		if (argv.argc() == 2) {
 #ifdef _WIN32
 			std::string promptUser;
@@ -1005,8 +1035,8 @@ CCMD(star)
 			}
 #else
 			Printf("Provide credentials to beam in:\n");
-			Printf("  star beamin <username> <password>\n");
-			Printf("  star beamin jwt <token> [avatar_id]\n");
+			Printf("  star beamin <username> <password> [-noface]\n");
+			Printf("  star beamin jwt <token> [avatar_id] [-noface]\n");
 			Printf("\n");
 			return;
 #endif
@@ -1021,10 +1051,17 @@ CCMD(star)
 			StarLogInfo("Using runtime credentials from console command.");
 		} else if (argv.argc() >= 4 && strcmp(argv[2], "jwt") == 0) {
 			g_star_override_jwt = argv[3];
-			if (argv.argc() >= 5) g_star_override_avatar_id = argv[4];
+			if (argv.argc() >= 5 && argv[4][0] != '-') g_star_override_avatar_id = argv[4];
 			usingJwt = true;
 			StarLogInfo("Using runtime JWT token from console command.");
 		}
+		for (int i = 2; i < argv.argc(); i++) {
+			if (ArgEquals(argv[i], "-noface") || ArgEquals(argv[i], "noface")) {
+				noFaceThisLogin = true;
+				break;
+			}
+		}
+		const bool applyFaceThisLogin = oasis_star_beam_face && !noFaceThisLogin;
 
 		// Temporary local mock path (no STAR API call):
 		// username=anorak password=test! enables custom HUD face.
@@ -1032,7 +1069,7 @@ CCMD(star)
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = true;
+			oasis_star_anorak_face = applyFaceThisLogin;
 			odoom_star_username = "anorak";
 			Printf("Beam-in successful (mock). Welcome, anorak.\n");
 			Printf("\n");
@@ -1052,6 +1089,9 @@ CCMD(star)
 		}
 		StarLogInfo("Beaming in...");
 		if (StarTryInitializeAndAuthenticate(true)) {
+			if (!applyFaceThisLogin) {
+				oasis_star_anorak_face = false;
+			}
 			Printf("Beam-in successful. Cross-game features enabled.\n");
 			Printf("\n");
 			return;
