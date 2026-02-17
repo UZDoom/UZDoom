@@ -165,6 +165,21 @@
 #ifdef OASIS_STAR_API
 #include "uzdoom_star_integration.h"
 #endif
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
+#ifdef OASIS_STAR_API
+#include "uzdoom_star_integration.h"
+#endif
 #include "vm.h"
 #include "wi_stuff.h"
 

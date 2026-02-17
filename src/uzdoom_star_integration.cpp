@@ -62,6 +62,7 @@ static std::string g_star_last_pickup_name;
 static std::string g_star_last_pickup_type;
 static std::string g_star_last_pickup_desc;
 static bool g_star_has_last_pickup = false;
+static bool g_star_face_suppressed_for_session = false;
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, oasis_star_beam_face, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, odoom_star_api_url, "https://star-api.oasisplatform.world/api", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
@@ -499,9 +500,21 @@ static bool HasValue(const char* s) {
 	return s && s[0] != '\0';
 }
 
+static bool StarShouldUseAnorakFace(void) {
+	const char* activeName = HasValue(odoom_star_username) ? odoom_star_username : "";
+	return oasis_star_beam_face && !g_star_face_suppressed_for_session && EqualsNoCase(TrimAscii(activeName), "anorak");
+}
+
+static void StarApplyBeamFacePreference(void) {
+	oasis_star_anorak_face = g_star_initialized && StarShouldUseAnorakFace();
+}
+
 static bool StarTryInitializeAndAuthenticate(bool verbose) {
 	const bool logVerbose = verbose;
-	if (g_star_initialized) return true;
+	if (g_star_initialized) {
+		StarApplyBeamFacePreference();
+		return true;
+	}
 
 	RefreshStarCliOverridesFromExeArgs();
 
@@ -563,8 +576,8 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = oasis_star_beam_face && EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
 			odoom_star_username = g_star_effective_username.c_str();
+			StarApplyBeamFacePreference();
 			if (logVerbose) StarLogInfo("Beam-in successful (SSO). Cross-game features enabled.");
 			return true;
 		}
@@ -580,13 +593,13 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = oasis_star_beam_face && EqualsNoCase(TrimAscii(g_star_effective_username), "anorak");
 			if (!g_star_effective_username.empty())
 				odoom_star_username = g_star_effective_username.c_str();
 			else if (!g_star_effective_avatar_id.empty())
 				odoom_star_username = g_star_effective_avatar_id.c_str();
 			else
 				odoom_star_username = "Avatar";
+			StarApplyBeamFacePreference();
 			size_t count = list ? list->count : 0;
 			if (list) star_api_free_item_list(list);
 			if (logVerbose) StarLogInfo("Beam-in successful (API key/avatar). Inventory items=%zu. Cross-game features enabled.", count);
@@ -898,13 +911,15 @@ CCMD(star)
 		}
 		if (strcmp(argv[2], "on") == 0) {
 			oasis_star_beam_face = true;
+			g_star_face_suppressed_for_session = false;
+			StarApplyBeamFacePreference();
 			Printf("Beam-in face switch enabled.\n");
 			Printf("\n");
 			return;
 		}
 		if (strcmp(argv[2], "off") == 0) {
 			oasis_star_beam_face = false;
-			oasis_star_anorak_face = false;
+			StarApplyBeamFacePreference();
 			Printf("Beam-in face switch disabled.\n");
 			Printf("\n");
 			return;
@@ -1062,6 +1077,7 @@ CCMD(star)
 			}
 		}
 		const bool applyFaceThisLogin = oasis_star_beam_face && !noFaceThisLogin;
+		g_star_face_suppressed_for_session = noFaceThisLogin;
 
 		// Temporary local mock path (no STAR API call):
 		// username=anorak password=test! enables custom HUD face.
@@ -1069,8 +1085,12 @@ CCMD(star)
 			g_star_initialized = true;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
-			oasis_star_anorak_face = applyFaceThisLogin;
+			g_star_effective_username = "anorak";
 			odoom_star_username = "anorak";
+			StarApplyBeamFacePreference();
+			if (!applyFaceThisLogin) {
+				oasis_star_anorak_face = false;
+			}
 			Printf("Beam-in successful (mock). Welcome, anorak.\n");
 			Printf("\n");
 			return;
@@ -1096,6 +1116,7 @@ CCMD(star)
 			Printf("\n");
 			return;
 		}
+		g_star_face_suppressed_for_session = false;
 		Printf("Beam-in failed: %s\n", star_api_get_last_error());
 		Printf("\n");
 		return;
@@ -1112,6 +1133,8 @@ CCMD(star)
 		}
 		g_star_client_ready = false;
 		g_star_initialized = false;
+		g_star_face_suppressed_for_session = false;
+		g_star_effective_username.clear();
 		oasis_star_anorak_face = false;
 		odoom_star_username = "";
 		Printf("Beam-out successful. Use 'star beamin' to beam in again.\n");
