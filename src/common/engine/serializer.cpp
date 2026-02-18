@@ -1315,39 +1315,44 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FTextureID &value, FTe
 	{
 		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
-			if (!value.Exists())
-			{
+			if (arc.IsRollback()) {
 				arc.WriteKey(key);
-				arc.w->Null();
-				return arc;
-			}
-			if (value.isNull())
-			{
-				// save 'no texture' in a more space saving way
-				arc.WriteKey(key);
-				arc.w->Int(0);
-				return arc;
-			}
-			FTextureID chk = value;
-			if (chk.GetIndex() >= TexMan.NumTextures()) chk.SetNull();
-			auto pic = TexMan.GetGameTexture(chk);
-			const char *name;
-			auto lump = pic->GetSourceLump();
+				arc.w->Uint64(value.GetIndex());
+			} else {
+				if (!value.Exists())
+				{
+					arc.WriteKey(key);
+					arc.w->Null();
+					return arc;
+				}
+				if (value.isNull())
+				{
+					// save 'no texture' in a more space saving way
+					arc.WriteKey(key);
+					arc.w->Int(0);
+					return arc;
+				}
+				FTextureID chk = value;
+				if (chk.GetIndex() >= TexMan.NumTextures()) chk.SetNull();
+				auto pic = TexMan.GetGameTexture(chk);
+				const char *name;
+				auto lump = pic->GetSourceLump();
 
-			if (TexMan.GetLinkedTexture(lump) == pic)
-			{
-				name = fileSystem.GetFileFullName(lump);
+				if (TexMan.GetLinkedTexture(lump) == pic)
+				{
+					name = fileSystem.GetFileFullName(lump);
+				}
+				else
+				{
+					name = pic->GetName().GetChars();
+				}
+				arc.WriteKey(key);
+				arc.w->StartArray();
+				arc.w->String(name);
+				int ut = static_cast<int>(pic->GetUseType());
+				arc.w->Int(ut);
+				arc.w->EndArray();
 			}
-			else
-			{
-				name = pic->GetName().GetChars();
-			}
-			arc.WriteKey(key);
-			arc.w->StartArray();
-			arc.w->String(name);
-			int ut = static_cast<int>(pic->GetUseType());
-			arc.w->Int(ut);
-			arc.w->EndArray();
 		}
 	}
 	else
@@ -1355,36 +1360,40 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FTextureID &value, FTe
 		auto val = arc.r->FindKey(key);
 		if (val != nullptr)
 		{
-			if (val->IsArray())
-			{
-				const rapidjson::Value &nameval = (*val)[0];
-				const rapidjson::Value &typeval = (*val)[1];
-				assert(nameval.IsString() && typeval.IsInt());
-				if (nameval.IsString() && typeval.IsInt())
+			if (arc.IsRollback()) {
+				value.SetIndex(val->GetInt64());
+			} else {
+				if (val->IsArray())
 				{
-					value = TexMan.GetTextureID(UnicodeToString(nameval.GetString()), static_cast<ETextureType>(typeval.GetInt()));
+					const rapidjson::Value &nameval = (*val)[0];
+					const rapidjson::Value &typeval = (*val)[1];
+					assert(nameval.IsString() && typeval.IsInt());
+					if (nameval.IsString() && typeval.IsInt())
+					{
+						value = TexMan.GetTextureID(UnicodeToString(nameval.GetString()), static_cast<ETextureType>(typeval.GetInt()));
+					}
+					else
+					{
+						Printf(TEXTCOLOR_RED "object does not represent a texture for '%s'\n", key);
+						value.SetNull();
+						arc.mErrors++;
+					}
+				}
+				else if (val->IsNull())
+				{
+					value.SetInvalid();
+				}
+				else if (val->IsInt() && val->GetInt() == 0)
+				{
+					value.SetNull();
 				}
 				else
 				{
+					assert(false && "not a texture");
 					Printf(TEXTCOLOR_RED "object does not represent a texture for '%s'\n", key);
 					value.SetNull();
 					arc.mErrors++;
 				}
-			}
-			else if (val->IsNull())
-			{
-				value.SetInvalid();
-			}
-			else if (val->IsInt() && val->GetInt() == 0)
-			{
-				value.SetNull();
-			}
-			else
-			{
-				assert(false && "not a texture");
-				Printf(TEXTCOLOR_RED "object does not represent a texture for '%s'\n", key);
-				value.SetNull();
-				arc.mErrors++;
 			}
 		}
 	}
@@ -1525,7 +1534,8 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FName &value, FName *d
 		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
-			arc.w->String(value.GetChars());
+			if (arc.IsRollback()) { arc.w->Uint64(value.GetIndex()); }
+			else { arc.w->String(value.GetChars()); }
 		}
 	}
 	else
@@ -1533,16 +1543,20 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FName &value, FName *d
 		auto val = arc.r->FindKey(key);
 		if (val != nullptr)
 		{
-			assert(val->IsString());
-			if (val->IsString())
-			{
-				value = UnicodeToString(val->GetString());
-			}
-			else
-			{
-				Printf(TEXTCOLOR_RED "String expected for '%s'\n", key);
-				arc.mErrors++;
-				value = NAME_None;
+			if (arc.IsRollback()) {
+				value = FName(ENamedName(val->GetInt64()));
+			} else {
+				assert(val->IsString());
+				if (val->IsString())
+				{
+					value = UnicodeToString(val->GetString());
+				}
+				else
+				{
+					Printf(TEXTCOLOR_RED "String expected for '%s'\n", key);
+					arc.mErrors++;
+					value = NAME_None;
+				}
 			}
 		}
 	}
@@ -1569,9 +1583,13 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FSoundID &sid, FSoundI
 		if (!arc.canSkip() || def == nullptr || sid != *def)
 		{
 			arc.WriteKey(key);
-			const char *sn = soundEngine->GetSoundName(sid);
-			if (sn != nullptr) arc.w->String(sn);
-			else arc.w->Null();
+			if (arc.IsRollback()) {
+				arc.w->Uint64(sid.index());
+			} else {
+				const char *sn = soundEngine->GetSoundName(sid);
+				if (sn != nullptr) arc.w->String(sn);
+				else arc.w->Null();
+			}
 		}
 	}
 	else
@@ -1579,20 +1597,24 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FSoundID &sid, FSoundI
 		auto val = arc.r->FindKey(key);
 		if (val != nullptr)
 		{
-			assert(val->IsString() || val->IsNull());
-			if (val->IsString())
-			{
-				sid = S_FindSound(UnicodeToString(val->GetString()));
-			}
-			else if (val->IsNull())
-			{
-				sid = NO_SOUND;
-			}
-			else
-			{
-				Printf(TEXTCOLOR_RED "string type expected for '%s'\n", key);
-				sid = NO_SOUND;
-				arc.mErrors++;
+			if (arc.IsRollback()) {
+				sid = FSoundID::fromInt(val->GetInt64());
+			} else {
+				assert(val->IsString() || val->IsNull());
+				if (val->IsString())
+				{
+					sid = S_FindSound(UnicodeToString(val->GetString()));
+				}
+				else if (val->IsNull())
+				{
+					sid = NO_SOUND;
+				}
+				else
+				{
+					Printf(TEXTCOLOR_RED "string type expected for '%s'\n", key);
+					sid = NO_SOUND;
+					arc.mErrors++;
+				}
 			}
 		}
 	}
