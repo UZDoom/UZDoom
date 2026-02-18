@@ -26,7 +26,6 @@
 #define RAPIDJSON_HAS_CXX11_RVALUE_REFS 1
 #define RAPIDJSON_HAS_CXX11_RANGE_FOR 1
 #define RAPIDJSON_PARSE_DEFAULT_FLAGS kParseFullPrecisionFlag
-#define RAPIDJSON_USE_MEMBERSMAP 1
 
 #include <miniz.h>
 #include "rapidjson/rapidjson.h"
@@ -736,12 +735,12 @@ void FSerializer::ReadObjectsFrom(TArray<TObjPtr<DObject*>>& from)
 			// First iteration: create all the objects but do nothing with them yet.
 			while (BeginObject(nullptr))
 			{
+				FString clsname;	// do not deserialize the class type directly so that we can print appropriate errors.
+				Serialize(*this, "classtype", clsname, nullptr);
 				unsigned i = 0u;
 				Serialize(*this, "rollbackindex", i, nullptr);
 				if (r->mDObjects[i] == nullptr)
 				{
-					FString clsname;	// do not deserialize the class type directly so that we can print appropriate errors.
-					Serialize(*this, "classtype", clsname, nullptr);
 					PClass* cls = PClass::FindClass(clsname);
 					if (cls == nullptr)
 					{
@@ -767,6 +766,8 @@ void FSerializer::ReadObjectsFrom(TArray<TObjPtr<DObject*>>& from)
 				r->mObjects.Last().mIndex = 0;
 				while (BeginObject(nullptr))
 				{
+					FString clsname;	// do not deserialize the class type directly so that we can print appropriate errors.
+					Serialize(*this, "classtype", clsname, nullptr);
 					unsigned i = 0u;
 					Serialize(*this, "rollbackindex", i, nullptr);
 					auto obj = r->mDObjects[i];

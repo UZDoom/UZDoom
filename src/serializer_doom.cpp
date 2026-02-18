@@ -26,7 +26,6 @@
 #define RAPIDJSON_HAS_CXX11_RVALUE_REFS 1
 #define RAPIDJSON_HAS_CXX11_RANGE_FOR 1
 #define RAPIDJSON_PARSE_DEFAULT_FLAGS kParseFullPrecisionFlag
-#define RAPIDJSON_USE_MEMBERSMAP 1
 
 #include <miniz.h>
 #include "rapidjson/rapidjson.h"

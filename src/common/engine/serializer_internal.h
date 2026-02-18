@@ -35,12 +35,16 @@ struct FJSONObject
 {
 	rapidjson::Value* mObject;
 	rapidjson::Value::MemberIterator mIterator;
+	rapidjson::Value::MemberIterator mHopefulIterator;
 	int mIndex;
 
 	FJSONObject(rapidjson::Value* v)
 	{
 		mObject = v;
-		if (v->IsObject()) mIterator = v->MemberBegin();
+		if (v->IsObject()) {
+			mIterator = v->MemberBegin();
+			mHopefulIterator = v->MemberBegin();
+		}
 		else if (v->IsArray())
 		{
 			mIndex = 0;
@@ -205,6 +209,19 @@ struct FReader
 			}
 			else
 			{
+				while (obj.mHopefulIterator != obj.mObject->MemberEnd()) [[likely]] {
+					auto name = std::string_view(obj.mHopefulIterator->name.GetString(), obj.mHopefulIterator->name.GetStringLength());
+					if (key == name) [[likely]] {
+						auto ret = &obj.mHopefulIterator->value;
+						++obj.mHopefulIterator;
+						return ret;
+					}
+					if (name.starts_with("class:")) [[unlikely]] {
+						++obj.mHopefulIterator;
+						continue;
+					}
+					break;
+				}
 				// Find the given key by name;
 				auto it = obj.mObject->FindMember(key);
 				if (it == obj.mObject->MemberEnd()) return nullptr;
