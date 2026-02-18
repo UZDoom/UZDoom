@@ -412,6 +412,11 @@ if (HAVE_VULKAN)
 	add_subdirectory( libraries/ZVulkan )
 endif()
 
+if( MSVC )
+	set(ABSL_MSVC_STATIC_RUNTIME ON)
+endif()
+add_subdirectory( libraries/abseil )
+
 set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 add_subdirectory( libraries/ZWidget )
 
