@@ -18,6 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - id: tag
+        uses: proudust/gh-describe@v2
+        with:
+          exclude: "nightly"
+
       - name: Download Artifacts
         uses: actions/download-artifact@v4
         with:
@@ -63,5 +68,5 @@ jobs:
 
             They are development builds, so they may be unstable and have issues. Please report any problems you find.
 
-            **Commit:** ${{ github.event.workflow_run.head_sha || github.sha }}
+            **Version:** `${{ steps.tag.outputs.describe }}`
             **Message:** ${{ github.event.workflow_run.head_commit.message || github.event.head_commit.message }}
