@@ -35,6 +35,8 @@ jobs:
     - name: Setup
       id: ghd
       uses: proudust/gh-describe@v2
+      with:
+        exclude: "nightly"
 
     - name: Setup
       uses: ilammy/msvc-dev-cmd@v1
