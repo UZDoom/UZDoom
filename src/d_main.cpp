@@ -278,6 +278,9 @@ FARG(nointro, "Loading", "Skips intro video", "",
 FARG(episode, "Loading", "Starts the game on the first map of an episode", "1",
 	"Like -warp, bu starts the game on the first map of the specified episode");
 
+FARG(showlauncher, "Loading", "Forces the startup launcher to show, even if disabled through other means.", "",
+	"Forces the startup launcher to show, even if disabled through other means.");
+
 FARG(version, "Other", "Print version", "",
 	"Print version and exit.");
 FARG_ADVANCED(v, "Other", "",
@@ -2052,7 +2055,7 @@ static FString ParseGameInfo(std::vector<FileSys::ResourceName> &pwads, const ch
 		sc.TokenMustBe(TK_Identifier);
 		FString nextKey = sc.String;
 		sc.MustGetToken('=');
-		if (!nextKey.CompareNoCase("IWAD"))
+		if (!nextKey.CompareNoCase("IWAD") && !Args->CheckParm(FArg_showlauncher))
 		{
 			sc.MustGetString();
 			iwad = sc.String;

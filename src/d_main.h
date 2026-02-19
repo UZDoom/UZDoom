@@ -48,6 +48,7 @@ EXTERN_FARG(iwad);
 EXTERN_FARG(xlat);
 EXTERN_FARG(savedir);
 EXTERN_FARG(file);
+EXTERN_FARG(showlauncher);
 
 struct event_t;
 

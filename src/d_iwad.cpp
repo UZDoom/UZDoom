@@ -846,7 +846,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		info.isNewRelease = (i_display_new_release>1) || i_is_new_release;
 		info.notifyNewRelease = !!i_display_new_release;
 
-		if (I_PickIWad(queryiwad || HoldingQueryKey(queryiwad_key), info))
+		if (I_PickIWad((queryiwad || Args->CheckParm(FArg_showlauncher)) || HoldingQueryKey(queryiwad_key), info))
 		{
 			pick = info.SaveInfo();
 			disableautoload = !!(info.DefaultStartFlags & 1);
