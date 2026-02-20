@@ -1913,7 +1913,7 @@ static void SetViewPos(AActor *self, double x, double y, double z, int flags)
 	if (!self->ViewPos)
 	{
 		auto vp = Create<DViewPosition>();
-		vp->ObjectFlags |= (self->ObjectFlags & (OF_ClientSide | OF_Transient));
+		vp->ObjectFlags |= (self->ObjectFlags & OF_TransferrableFlags);
 
 		self->ViewPos = vp;
 		GC::WriteBarrier(self, vp);

@@ -37,7 +37,7 @@ class FighterPlayer : PlayerPawn
 		Player.JumpZ 9;
 		Player.Viewheight 48;
 		Player.SpawnClass "Fighter";
-		Player.DisplayName "Fighter";
+		Player.DisplayName "$MNU_FIGHTER";
 		Player.SoundClass "fighter";
 		Player.ScoreIcon "FITEFACE";
 		Player.HealRadiusType "Armor";

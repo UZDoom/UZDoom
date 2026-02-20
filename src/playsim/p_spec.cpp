@@ -532,6 +532,7 @@ void P_SectorDamage(FLevelLocals *Level, int tag, int amount, FName type, PClass
 	{
 		AActor *actor, *next;
 		sector_t *sec = &Level->sectors[secnum];
+		sec->LastDamage = sec->Level->maptime;
 
 		// Do for actors in this sector.
 		for (actor = sec->thinglist; actor != NULL; actor = next)
@@ -544,6 +545,7 @@ void P_SectorDamage(FLevelLocals *Level, int tag, int amount, FName type, PClass
 		for (unsigned i = 0; i < sec->e->XFloor.attached.Size(); ++i)
 		{
 			sector_t *sec2 = sec->e->XFloor.attached[i];
+			sec2->LastDamage = sec2->Level->maptime;
 
 			for (actor = sec2->thinglist; actor != NULL; actor = next)
 			{

@@ -63,6 +63,16 @@ void Linux_I_FatalError(const char* errortext);
 
 static void Linux_I_TryRestart(char **argv)
 {
+	// TODO: Check how Flatpak interacts with this, too
+
+	const char *appimage = getenv("APPIMAGE");
+	if (appimage)
+	{
+		int appimage_file = open(appimage, O_RDONLY);
+		fexecve(appimage_file, argv, environ);
+		return;
+	}
+
 	int self_file = open("/proc/self/exe", O_RDONLY);
 	fexecve(self_file, argv, environ);
 }

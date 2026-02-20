@@ -56,6 +56,7 @@
 #include "printf.h"
 #include "version.h"
 #include "widgets/netstartwindow.h"
+#include "filesystem.h"
 
 /* [Petteri] Get more portable: */
 #ifndef _WIN32
@@ -119,8 +120,7 @@ enum ENetConnectType : uint8_t
 	PRE_FULL,				// Sent from host to guest if the lobby is full
 	PRE_IN_PROGRESS,		// Sent from host to guest if the game has already started
 	PRE_WRONG_PASSWORD,		// Sent from host to guest if their provided password was wrong
-	PRE_WRONG_ENGINE,		// Sent from host to guest if their engine version doesn't match the host's
-	PRE_INVALID_FILES,		// Sent from host to guest if their files do not match the host's
+	PRE_VERIFICATION_ERROR,	// Sent from host to guest if something failed during the verification step.
 	PRE_KICKED,				// Sent from host to guest if the host kicked them from the game
 	PRE_BANNED,				// Sent from host to guest if the host banned them from the game
 };
@@ -190,7 +190,7 @@ CUSTOM_CVAR(String, net_password, "", CVAR_IGNORE)
 
 // Game-specific API
 size_t Net_SetEngineInfo(uint8_t*& stream);
-bool Net_VerifyEngine(uint8_t*& stream);
+FVerificationError Net_VerifyEngine(uint8_t*& stream, size_t& offset);
 void Net_SetupUserInfo();
 const char* Net_GetClientName(int client, unsigned int charLimit);
 void Net_SetUserInfo(int client, TArrayView<uint8_t>& stream);
@@ -625,6 +625,47 @@ static void RejectConnection(const sockaddr_in& to, ENetConnectType reason)
 	SendPacket(to);
 }
 
+static void SendVerificationError(const sockaddr_in& to, const FVerificationError& error)
+{
+	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[1] = PRE_VERIFICATION_ERROR;
+	NetBuffer[2] = error.Error;
+	if (error.Error == FVerificationError::VE_ENGINE)
+	{
+		NetBuffer[3] = error.Major;
+		NetBuffer[4] = error.Minor;
+		NetBuffer[5] = error.Revision;
+		NetBuffer[6] = error.NetMajor;
+		NetBuffer[7] = error.NetMinor;
+		NetBuffer[8] = error.NetRevision;
+		NetBufferLength = 9u;
+	}
+	else
+	{
+		const TArray<FString>* ar = nullptr;
+		if (error.Error == FVerificationError::VE_FILE_UNKNOWN)
+			ar = &error.UnknownFiles;
+		else if (error.Error == FVerificationError::VE_FILE_ORDER)
+			ar = &error.ExpectedOrder;
+		else if (error.Error == FVerificationError::VE_FILE_MISSING)
+			ar = &error.MissingFiles;
+
+		NetBuffer[3] = (ar->Size() >> 24);
+		NetBuffer[4] = (ar->Size() >> 16);
+		NetBuffer[5] = (ar->Size() >> 8);
+		NetBuffer[6] = ar->Size();
+		size_t i = 7u;
+		for (auto& file : *ar)
+		{
+			memcpy(&NetBuffer[i], file.GetChars(), file.Len() + 1u);
+			i += file.Len() + 1u;
+		}
+		NetBufferLength = i;
+	}
+
+	SendPacket(to);
+}
+
 static void AddClientConnection(const sockaddr_in& from, int client)
 {
 	Connected[client].Status = CSTAT_CONNECTING;
@@ -744,7 +785,9 @@ static bool Host_CheckForConnections(void* connected)
 				continue;
 
 			uint8_t* engineInfo = &NetBuffer[2];
+			size_t passwordOffset = 0u;
 			size_t banned = 0u;
+			FVerificationError error = {};
 			for (; banned < BannedConnections.Size(); ++banned)
 			{
 				if (BannedConnections[banned].sin_addr.s_addr == from.sin_addr.s_addr)
@@ -755,9 +798,9 @@ static bool Host_CheckForConnections(void* connected)
 			{
 				RejectConnection(from, PRE_BANNED);
 			}
-			else if (!Net_VerifyEngine(engineInfo))
+			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE)
 			{
-				RejectConnection(from, PRE_WRONG_ENGINE);
+				SendVerificationError(from, error);
 			}
 			else if (*connectedPlayers >= MaxClients)
 			{
@@ -767,7 +810,7 @@ static bool Host_CheckForConnections(void* connected)
 			{
 				RejectConnection(from, PRE_IN_PROGRESS);
 			}
-			else if (hasPassword && strcmp(net_password, (const char*)&NetBuffer[5]))
+			else if (hasPassword && strcmp(net_password, (const char*)&NetBuffer[2u + passwordOffset]))
 			{
 				RejectConnection(from, PRE_WRONG_PASSWORD);
 			}
@@ -981,6 +1024,74 @@ static bool HostGame(int arg)
 	return true;
 }
 
+static FString ReadVerificationError(TArrayView<uint8_t> stream)
+{
+	if (stream[0] == FVerificationError::VE_ENGINE)
+	{
+		return FStringf("Engine mismatch: host expected %d.%d.%d, got %d.%d.%d",
+						stream[1], stream[2], stream[3], stream[4], stream[5], stream[6]);
+	}
+
+	TMap<FString, FString> files = {};
+	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	{
+		if (!fileSystem.IsOptionalResource(i))
+		{
+			const FString crc = fileSystem.GetResourceHash(i);
+			FString name = fileSystem.GetResourceFileName(i);
+			FixPathSeperator(name);
+			auto a = name.Split('/', FString::TOK_SKIPEMPTY);
+			files[crc] = a.Last();
+		}
+	}
+
+	const size_t size = (stream[1] << 24) | (stream[2] << 16) | (stream[3] << 8) | stream[4];
+	size_t offset = 5;
+	if (stream[0] == FVerificationError::VE_FILE_UNKNOWN)
+	{
+		FString er = "Host found unknown files:";
+		for (size_t i = 0; i < size; ++i)
+		{
+			const FString crc = (const char *)&stream[offset];
+			offset += crc.Len() + 1u;
+			auto file = files.CheckKey(crc);
+			if (file != nullptr)
+				er.AppendFormat("\n* %s", file->GetChars());
+			else
+				er.AppendFormat("\n* <? Unknown file ?>");
+		}
+		return er;
+	}
+	else if (stream[0] == FVerificationError::VE_FILE_ORDER)
+	{
+		FString er = "Wrong file order. Expected:";
+		for (size_t i = 0; i < size; ++i)
+		{
+			const FString crc = (const char *)&stream[offset];
+			offset += crc.Len() + 1u;
+			auto file = files.CheckKey(crc);
+			if (file != nullptr)
+				er.AppendFormat("\n* %s", file->GetChars());
+			else
+				er.AppendFormat("\n* <? Unknown file ?>");
+		}
+		return er;
+	}
+	else if (stream[0] == FVerificationError::VE_FILE_MISSING)
+	{
+		FString er = "Host was expecting missing files:";
+		for (size_t i = 0; i < size; ++i)
+		{
+			const FString file = (const char *)&stream[offset];
+			er.AppendFormat("\n* %s", file.GetChars());
+			offset += file.Len() + 1u;
+		}
+		return er;
+	}
+
+	return "Unknown error";
+}
+
 static bool Guest_ContactHost(void* unused)
 {
 	// Listen for a reply.
@@ -1021,13 +1132,9 @@ static bool Guest_ContactHost(void* unused)
 		{
 			I_NetError("Invalid password");
 		}
-		else if (NetBuffer[1] == PRE_WRONG_ENGINE)
+		else if (NetBuffer[1] == PRE_VERIFICATION_ERROR)
 		{
-			I_NetError("Engine version does not match the host's engine version");
-		}
-		else if (NetBuffer[1] == PRE_INVALID_FILES)
-		{
-			I_NetError("Files do not match the host's files");
+			I_NetError(ReadVerificationError(TArrayView{ &NetBuffer[2], (unsigned)(NetBufferLength - 2u) }).GetChars());
 		}
 		else if (NetBuffer[1] == PRE_KICKED)
 		{

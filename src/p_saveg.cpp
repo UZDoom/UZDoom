@@ -823,7 +823,7 @@ void FLevelLocals::CopyPlayer(player_t *dst, player_t *src, const char *name)
 	bool attackdown = dst->attackdown;
 	bool usedown = dst->usedown;
 
-	dst->CopyFrom(*src, true);	// To avoid memory leaks at this point the userinfo in src must be empty which is taken care of by the TransferFrom call above.
+	dst->CopyFrom(*src);	// To avoid memory leaks at this point the userinfo in src must be empty which is taken care of by the TransferFrom call above.
 
 	dst->cheats |= chasecam;
 

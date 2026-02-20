@@ -131,7 +131,7 @@ void Joy_GenerateButtonEvents(int oldbuttons, int newbuttons, int numbuttons, co
 double Joy_ApplyResponseCurveBezier(const CubicBezier &curve, double input);
 double Joy_ManageSingleAxis(double axisval, double deadzone, double threshold, const CubicBezier &curve, uint8_t *buttons);
 int Joy_XYAxesToButtons(double x, double y);
-double Joy_ManageThumbstick(double *axis_x, double *axis_y, double deadzone_x, double deadzone_y,
+bool Joy_ManageThumbstick(double *axis_x, double *axis_y, double deadzone_x, double deadzone_y,
 	double threshold_x, double threshold_y, const CubicBezier &curve_x, const CubicBezier &curve_y, uint8_t *buttons);
 
 

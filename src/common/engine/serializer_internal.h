@@ -60,8 +60,7 @@ struct FWriter
 	typedef rapidjson::Writer<rapidjson::StringBuffer, rapidjson::UTF8<> > Writer;
 	typedef rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<> > PrettyWriter;
 
-	Writer *mWriter1;
-	PrettyWriter *mWriter2;
+	Writer *mWriter;
 	TArray<bool> mInObject;
 	rapidjson::StringBuffer mOutString;
 	TArray<DObject *> mDObjects;
@@ -71,20 +70,17 @@ struct FWriter
 	{
 		if (!pretty)
 		{
-			mWriter1 = new Writer(mOutString);
-			mWriter2 = nullptr;
+			mWriter = new Writer(mOutString);
 		}
 		else
 		{
-			mWriter1 = nullptr;
-			mWriter2 = new PrettyWriter(mOutString);
+			mWriter = new PrettyWriter(mOutString);
 		}
 	}
 
 	~FWriter()
 	{
-		if (mWriter1) delete mWriter1;
-		if (mWriter2) delete mWriter2;
+		if (mWriter) delete mWriter;
 	}
 
 
@@ -95,101 +91,81 @@ struct FWriter
 
 	void StartObject()
 	{
-		if (mWriter1) mWriter1->StartObject();
-		else if (mWriter2) mWriter2->StartObject();
+		mWriter->StartObject();
 	}
 
 	void EndObject()
 	{
-		if (mWriter1) mWriter1->EndObject();
-		else if (mWriter2) mWriter2->EndObject();
+		mWriter->EndObject();
 	}
 
 	void StartArray()
 	{
-		if (mWriter1) mWriter1->StartArray();
-		else if (mWriter2) mWriter2->StartArray();
+		mWriter->StartArray();
 	}
 
 	void EndArray()
 	{
-		if (mWriter1) mWriter1->EndArray();
-		else if (mWriter2) mWriter2->EndArray();
+		mWriter->EndArray();
 	}
 
 	void Key(const char *k)
 	{
-		if (mWriter1) mWriter1->Key(k);
-		else if (mWriter2) mWriter2->Key(k);
+		mWriter->Key(k);
 	}
 
 	void Null()
 	{
-		if (mWriter1) mWriter1->Null();
-		else if (mWriter2) mWriter2->Null();
+		mWriter->Null();
 	}
 
-	void StringU(const char *k, bool encode)
+	template<bool encode>
+	void StringU(const char *k)
 	{
-		if (encode) k = StringToUnicode(k);
-		if (mWriter1) mWriter1->String(k);
-		else if (mWriter2) mWriter2->String(k);
+		if constexpr (encode) k = StringToUnicode(k);
+		mWriter->String(k);
 	}
 
 	void String(const char *k)
 	{
 		k = StringToUnicode(k);
-		if (mWriter1) mWriter1->String(k);
-		else if (mWriter2) mWriter2->String(k);
+		mWriter->String(k);
 	}
 
 	void String(const char *k, int size)
 	{
 		k = StringToUnicode(k, size);
-		if (mWriter1) mWriter1->String(k);
-		else if (mWriter2) mWriter2->String(k);
+		mWriter->String(k);
 	}
 
 	void Bool(bool k)
 	{
-		if (mWriter1) mWriter1->Bool(k);
-		else if (mWriter2) mWriter2->Bool(k);
+		mWriter->Bool(k);
 	}
 
 	void Int(int32_t k)
 	{
-		if (mWriter1) mWriter1->Int(k);
-		else if (mWriter2) mWriter2->Int(k);
+		mWriter->Int(k);
 	}
 
 	void Int64(int64_t k)
 	{
-		if (mWriter1) mWriter1->Int64(k);
-		else if (mWriter2) mWriter2->Int64(k);
+		mWriter->Int64(k);
 	}
 
 	void Uint(uint32_t k)
 	{
-		if (mWriter1) mWriter1->Uint(k);
-		else if (mWriter2) mWriter2->Uint(k);
+		mWriter->Uint(k);
 	}
 
 	void Uint64(int64_t k)
 	{
-		if (mWriter1) mWriter1->Uint64(k);
-		else if (mWriter2) mWriter2->Uint64(k);
+		mWriter->Uint64(k);
 	}
 
 	void Double(double k)
 	{
-		if (mWriter1)
-		{
-			mWriter1->Double(k);
-		}
-		else if (mWriter2)
-		{
-			mWriter2->Double(k);
-		}
+		mWriter->Double(k);
 	}
 
 };
@@ -254,7 +230,7 @@ FSerializer &SerializePointer(FSerializer &arc, const char *key, T *&value, T **
 {
 	assert(base != nullptr);
 	assert(count > 0);
-	if (arc.isReading() || !arc.w->inObject() || defval == nullptr || value != *defval)
+	if (!arc.canSkip() || defval == nullptr || value != *defval)
 	{
 		int64_t vv = -1;
 		if (value != nullptr)

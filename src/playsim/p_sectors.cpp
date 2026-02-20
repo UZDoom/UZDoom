@@ -40,6 +40,7 @@
 #include "g_levellocals.h"
 #include "vm.h"
 #include "texturemanager.h"
+#include "i_time.h"
 
 //==========================================================================
 //
@@ -98,23 +99,59 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, NextSpecialSector, P_NextSpecialSector)
 	ACTION_RETURN_POINTER(P_NextSpecialSector(self, type, nogood));
 }
 
-bool sector_t::IsDangerous(const DVector3& pos, double height) const
+static bool IsDamaging(sector_t& sec, int moTID)
 {
-	if (damageamount > 0)
+	static const int DamageTime = GameTicRate * 5;
+	// If damaging was manually done within the past 5 seconds, consider it unsafe. Good for capturing looping
+	// manual damage map scripts.
+	if (sec.damageamount > 0 || (sec.LastDamage >= 0 && sec.Level->maptime - sec.LastDamage <= DamageTime))
 		return true;
 
-	auto cl = dyn_cast<DCeiling>(ceilingdata.Get());
+	// Check for any sector actions that might eventually lead to it dealing damage in some way.
+	// TODO: This needs to verify that 214's passed tag is this sector's. Currently there's no
+	// easy way to get this as sectors can have multiple tags.
+	for (AActor* secAct = sec.SecActTarget; secAct != nullptr; secAct = secAct->tracer)
+	{
+		if ((secAct->special == 73 && secAct->args[0] >= 0)
+			|| (secAct->special == 119 && secAct->args[1] > 0 && (!secAct->args[0] || secAct->args[1] == moTID))
+			|| (secAct->special == 214 && secAct->args[1] > 0))
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+static bool IsCrushing(sector_t& sec)
+{
+	auto cl = dyn_cast<DCeiling>(sec.ceilingdata.Get());
 	if (cl != nullptr && cl->getCrush() > 0)
+		return true;
+
+	auto fl = dyn_cast<DFloor>(sec.floordata.Get());
+	return fl != nullptr && fl->m_Crush > 0;
+}
+
+bool sector_t::IsDangerous(const DVector3& pos, double height, int moTID)
+{
+	if (IsDamaging(*this, moTID) || IsCrushing(*this))
 		return true;
 
 	for (auto rover : e->XFloor.ffloors)
 	{
-		if ((rover->flags & FF_EXISTS) && rover->model->damageamount > 0
+		if (!(rover->flags & FF_EXISTS))
+			continue;
+
+		if (IsDamaging(*rover->model, moTID)
 			&& pos.Z <= rover->top.plane->ZatPoint(pos)
 			&& pos.Z + height >= rover->bottom.plane->ZatPoint(pos))
 		{
 			return true;
 		}
+
+		if ((rover->flags & FF_SOLID) && IsCrushing(*rover->model))
+			return true;
 	}
 
 	return false;

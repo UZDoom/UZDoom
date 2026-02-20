@@ -1867,7 +1867,10 @@ int FLevelLocals::FinishTravel()
 	for (size_t i = 0u; i < MAXPLAYERS; ++i)
 	{
 		if (PlayerInGame(i) && !(Players[i]->mo->ObjectFlags & OF_EuthanizeMe) && toCallBack.Find(Players[i]->mo) < toCallBack.Size())
+		{
+			Players[i]->LastSafePos.Update(*Players[i]->mo, true);
 			Players[i]->mo->SetState(Players[i]->mo->SpawnState);
+		}
 	}
 
 	for (auto th : toCallBack)

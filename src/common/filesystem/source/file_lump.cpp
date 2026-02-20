@@ -40,6 +40,7 @@ static bool OpenLump(FResourceFile* file, LumpFilterInfo*)
 	Entries[0].CompressedSize = Entries[0].Length = file->GetContainerReader()->GetLength();
 	Entries[0].Method = METHOD_STORED;
 	Entries[0].Flags = 0;
+	file->GenerateHash();
 	return true;
 }
 

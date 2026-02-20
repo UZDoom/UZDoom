@@ -234,8 +234,10 @@ void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 	{
 		dolights = false;
 	}
+
+	const bool paused = WorldPaused(false);
 	Level->flags3 &= ~LEVEL3_LIGHTCREATED;
-	Level->LocalWorldTimer += !WorldPaused(false);
+	Level->LocalWorldTimer += !paused;
 	++Level->LocalTimer;
 
 	auto recreateLights = [=]() {
@@ -256,23 +258,26 @@ void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 	};
 
 	// Tick every thinker left from last time
-	for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+	if (!paused)
 	{
-		Thinkers[i].TickThinkers(nullptr);
-	}
-
-	// Keep ticking the fresh thinkers until there are no new ones.
-	do
-	{
-		count = 0;
 		for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
 		{
-			count += FreshThinkers[i].TickThinkers(&Thinkers[i]);
+			Thinkers[i].TickThinkers(nullptr);
 		}
-	} while (count != 0);
+
+		// Keep ticking the fresh thinkers until there are no new ones.
+		do
+		{
+			count = 0;
+			for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+			{
+				count += FreshThinkers[i].TickThinkers(&Thinkers[i]);
+			}
+		} while (count != 0);
+	}
 
 	recreateLights();
-	if (dolights)
+	if (dolights && !paused)
 	{
 		/*if (profilethinkers)
 		{

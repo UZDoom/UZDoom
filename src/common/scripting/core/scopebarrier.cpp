@@ -105,7 +105,7 @@ const char* FScopeBarrier::StringFromSide(int side)
 // this modifies VARF_ flags and sets the side properly.
 int FScopeBarrier::ChangeSideInFlags(int flags, int side)
 {
-	flags &= ~(VARF_UI | VARF_Play | VARF_VirtualScope | VARF_ClearScope);
+	flags &= ~(VARF_UI | VARF_Play | VARF_VirtualScope | VARF_ClearScope | VARF_NoRollback);
 	flags |= FlagsFromSide(side);
 	return flags;
 }

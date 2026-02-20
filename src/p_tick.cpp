@@ -61,10 +61,13 @@ void P_RunClientSideLogic()
 
 	if (gamestate == GS_LEVEL || gamestate == GS_TITLELEVEL)
 	{
-		for (unsigned int i = 0; i < MAXPLAYERS; ++i)
+		if (!WorldPaused(false))
 		{
-			if (playeringame[i] && players[i].inventorytics > 0)
-				--players[i].inventorytics;
+			for (unsigned int i = 0; i < MAXPLAYERS; ++i)
+			{
+				if (playeringame[i] && players[i].inventorytics > 0)
+					--players[i].inventorytics;
+			}
 		}
 
 		for (auto level : AllLevels())

@@ -175,7 +175,7 @@ const FName * Joy_GuessMapping(const FName identifier)
 		{ &HapticMedium, { "success", "grunt", "land", "pain", "pkup", "pickup", "fist", "weapon",
 			"fire", "shoot", "blast", "attack", "launch", "punch" } },
 		{ &HapticLight, { "push", "menu", "use", "fail", "open", "close", "eject", "reload",
-			"charge", "try", "fart" } },
+			"charge", "try", "fart", "ready" } },
 		{ &HapticNone, { "step", "floor" } },
 	};
 
@@ -249,7 +249,7 @@ const FName * Joy_GetMapping(const FName identifier)
 	{
 		if (RumbleMissed.Contains(identifier)) return;
 		RumbleMissed.Push(identifier);
-		Printf(DMSG_WARNING|PRINT_NONOTIFY, "Unknown rumble mapping '%s'\n", identifier.GetChars());
+		Printf(PRINT_HIGH|PRINT_NONOTIFY, "Unknown rumble mapping '%s'\n", identifier.GetChars());
 	};
 
 	if (!mapping && identifier != "")

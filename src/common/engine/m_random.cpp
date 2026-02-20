@@ -378,19 +378,23 @@ FRandom *FRandom::StaticFindRNG (const char *name, bool client)
 	return probe;
 }
 
-void FRandom::SaveRNGState(TArray<FRandom>& backups)
+// Unlike the static read/write functions, this one assumes the RNG list has not been touched at all
+// and so will read/write even 0 NameCRC seeds since it goes in order.
+void FRandom::RollbackRNGState(FSerializer& arc)
 {
-	for (auto cur = RNGList; cur != nullptr; cur = cur->Next)
-		backups.Push(*cur);
-}
-
-void FRandom::RestoreRNGState(TArray<FRandom>& backups)
-{
-	unsigned int i = 0u;
-	for (auto cur = RNGList; cur != nullptr; cur = cur->Next)
-		*cur = backups[i++];
-
-	backups.Clear();
+	if (arc.BeginArray("rngs"))
+	{
+		for (FRandom* rng = FRandom::RNGList; rng != nullptr; rng = rng->Next)
+		{
+			if (arc.BeginObject(nullptr))
+			{
+				arc("index", rng->idx)
+					.Array("u", rng->sfmt.u, SFMT::N32)
+					.EndObject();
+			}
+		}
+		arc.EndArray();
+	}
 }
 
 //==========================================================================

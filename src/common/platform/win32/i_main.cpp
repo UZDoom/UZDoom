@@ -338,7 +338,59 @@ int DoMain (HINSTANCE hInstance)
 		HMODULE hModule = GetModuleHandleW(NULL);
 		WCHAR path[MAX_PATH];
 		GetModuleFileNameW(hModule, path, MAX_PATH);
-		ShellExecuteW(NULL, L"open", path, GetCommandLineW(), NULL, SW_SHOWNORMAL);
+
+		// [Sal] The exe name is an argument, too.
+		// We have to manually skip it when using GetCommandLineW.
+		// (I am making my distaste for this feature known)
+		const WCHAR *cmd_line = GetCommandLineW();
+
+		while (*cmd_line == ' ' || *cmd_line == '\t')
+		{
+			// skip leading whitespace
+			*cmd_line++;
+		}
+
+		if (*cmd_line == '"')
+		{
+			// skip opening quote
+			*cmd_line++;
+
+			// skip until reaching another quote
+			while (*cmd_line)
+			{
+				if (*cmd_line == '"')
+				{
+					// skip the closing quote
+					*cmd_line++;
+					break;
+				}
+
+				*cmd_line++;
+			}
+		}
+		else
+		{
+			// skip until reaching whitespace
+			while (*cmd_line)
+			{
+				if (*cmd_line == ' ' || *cmd_line == '\t')
+				{
+					break;
+				}
+
+				*cmd_line++;
+			}
+		}
+
+		while (*cmd_line == ' ' || *cmd_line == '\t')
+		{
+			// skip EVEN MORE whitespace
+			*cmd_line++;
+		}
+
+		// cmd_line should be at the first real argument now!
+
+		ShellExecuteW(nullptr, L"open", path, cmd_line, nullptr, SW_SHOWNORMAL);
 	}
 
 	DestroyCustomCursor();

@@ -91,6 +91,7 @@ enum
 	ZCC_FuncConstUnsafe		= 1 << 24,
 	ZCC_UnsafeClearScope	= 1 << 25,
 	ZCC_VMInternalStruct	= 1 << 26,
+	ZCC_NoRollback			= 1 << 27,
 };
 
 // Function parameter modifiers

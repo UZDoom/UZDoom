@@ -23,16 +23,15 @@
 
 // HEADER FILES ------------------------------------------------------------
 
+#include "basics.h"
 #include "c_dispatch.h"
+#include "d_player.h"
+#include "filesystem.h"
 #include "gi.h"
-
 #include "teaminfo.h"
 #include "texturemanager.h"
 #include "v_font.h"
-#include "v_video.h"
-#include "filesystem.h"
 #include "vm.h"
-#include "d_player.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -247,11 +246,17 @@ bool FTeam::IsValid (unsigned int uiTeam)
 
 bool FTeam::ChangeTeam(unsigned int pNum, unsigned int newTeam)
 {
-	if (!multiplayer || !teamplay || pNum >= MAXPLAYERS || !playeringame[pNum] || !FTeam::IsValid(newTeam) || players[pNum].userinfo.GetTeam() == newTeam)
+	if (!multiplayer
+		|| !teamplay
+		|| pNum >= MAXPLAYERS
+		|| !playeringame[pNum]
+		|| !FTeam::IsValid(newTeam)
+		|| static_cast<unsigned>(players[pNum].userinfo.GetTeam()) == newTeam)
 		return false;
 
 	players[pNum].userinfo.TeamChanged(newTeam);
 	R_BuildPlayerTranslation(pNum);
+
 	return true;
 }
 

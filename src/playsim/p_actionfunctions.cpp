@@ -1277,7 +1277,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Print)
 	PARAM_FLOAT	(time);
 	PARAM_NAME	(fontname);
 
-	if (text[0] == '$') text = GStrings.GetString(&text[1]);
+	if (!text.IsEmpty() && text[0] == '$') text = GStrings.GetString(&text[1]);
 	if (self->CheckLocalView() ||
 		(self->target != NULL && self->target->CheckLocalView()))
 	{
@@ -1315,7 +1315,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_PrintBold)
 	float saved = con_midtime;
 	FFont *font = NULL;
 	
-	if (text[0] == '$') text = GStrings.GetString(&text[1]);
+	if (!text.IsEmpty() && text[0] == '$') text = GStrings.GetString(&text[1]);
 	if (fontname != NAME_None)
 	{
 		font = V_GetFont(fontname.GetChars());
@@ -5086,7 +5086,7 @@ static void EnsureModelData(AActor * mobj)
 		
 		ptr->flags = (mobj->hasmodel ? MODELDATA_HADMODEL : 0);
 		ptr->modelDef = nullptr;
-		ptr->ObjectFlags |= (mobj->ObjectFlags & (OF_ClientSide | OF_Transient));
+		ptr->ObjectFlags |= (mobj->ObjectFlags & OF_TransferrableFlags);
 		
 		mobj->modelData = ptr;
 		mobj->hasmodel = true;

@@ -13,18 +13,16 @@
 **
 **---------------------------------------------------------------------------
 **
-** An optional, multi-line description, covering whatever else you need to
-** describe in order for people to contribute to this file
+**
 */
 
 #include <stdlib.h>
 #include <string.h>
-#include "filesystem.h"
-#include "g_level.h"
-#include "r_defs.h"
-#include "p_setup.h"
-#include "gi.h"
+
 #include "cmdlib.h"
+#include "g_mapinfo.h"
+#include "gi.h"
+#include "r_defs.h"
 
 FName MakeEndPic(const char *string);
 
@@ -584,6 +582,9 @@ void CommitUMapinfo(level_info_t *defaultinfo)
 			case PlayerActionOption::DISALLOW:
 				levelinfo->flags |= LEVEL_JUMP_NO;
 				break;
+			case PlayerActionOption::UNSET:
+				// noop
+				break;
 		}
 		switch (map.crouching)
 		{
@@ -593,6 +594,9 @@ void CommitUMapinfo(level_info_t *defaultinfo)
 				break;
 			case PlayerActionOption::DISALLOW:
 				levelinfo->flags |= LEVEL_CROUCH_NO;
+				break;
+			case PlayerActionOption::UNSET:
+				// noop
 				break;
 		}
 		switch (map.freeaim)
@@ -607,6 +611,9 @@ void CommitUMapinfo(level_info_t *defaultinfo)
 			case PlayerActionOption::DISALLOW:
 				levelinfo->flags |= LEVEL_FREELOOK_NO;
 				levelinfo->flags &= ~LEVEL_FREELOOK_YES;
+				break;
+			case PlayerActionOption::UNSET:
+				// noop
 				break;
 		}
 	}

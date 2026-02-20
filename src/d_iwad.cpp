@@ -320,9 +320,14 @@ void GetReserved(FileSys::LumpFilterInfo& lfi);
 FIWadManager::FIWadManager(const char *firstfn, const char *optfn)
 {
 	FileSystem check;
-	std::vector<std::string> fns;
-	fns.push_back(firstfn);
-	if (optfn) fns.push_back(optfn);
+	std::vector<FileSys::ResourceName> fns;
+	std::string f = firstfn;
+	fns.push_back({ f, false });
+	if (optfn)
+	{
+		f = optfn;
+		fns.push_back({ f, true });
+	}
 	FileSys::LumpFilterInfo lfi;
 	GetReserved(lfi);
 
@@ -408,7 +413,8 @@ int FIWadManager::CheckIWADInfo(const char* fn)
 	FileSys::LumpFilterInfo lfi;
 	GetReserved(lfi);
 
-	std::vector<std::string> filenames = { fn };
+	std::string f = fn;
+	std::vector<FileSys::ResourceName> filenames = { { f, false } };
 	if (check.InitMultipleFiles(filenames, &lfi, nullptr))
 	{
 		int num = check.CheckNumForName("IWADINFO");
@@ -610,7 +616,7 @@ FString FIWadManager::IWADPathFileSearch(const FString &file)
 	return "";
 }
 
-int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char *iwad, const char *zdoom_wad, const char *optional_wad)
+int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, const char *iwad, const char *zdoom_wad, const char *optional_wad)
 {
 	const char *iwadparm = Args->CheckValue (FArg_iwad);
 	FString custwad;
@@ -840,7 +846,7 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 		info.isNewRelease = (i_display_new_release>1) || i_is_new_release;
 		info.notifyNewRelease = !!i_display_new_release;
 
-		if (I_PickIWad(queryiwad || HoldingQueryKey(queryiwad_key), info))
+		if (I_PickIWad((queryiwad || Args->CheckParm(FArg_showlauncher)) || HoldingQueryKey(queryiwad_key), info))
 		{
 			pick = info.SaveInfo();
 			disableautoload = !!(info.DefaultStartFlags & 1);
@@ -861,7 +867,7 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 
 	// zdoom.pk3 must always be the first file loaded and the IWAD second.
 	wadfiles.clear();
-	D_AddFile (wadfiles, zdoom_wad, true, -1, GameConfig);
+	D_AddFile (wadfiles, zdoom_wad, true, -1, GameConfig, false);
 
 	// [SP] Load non-free assets if available. This must be done before the IWAD.
 	int iwadnum = 1;
@@ -870,17 +876,9 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 		iwadnum++;
 	}
 
-	fileSystem.SetIwadNum(iwadnum);
-	if (picks[pick].mRequiredPath.IsNotEmpty())
-	{
-		D_AddFile (wadfiles, picks[pick].mRequiredPath.GetChars(), true, -1, GameConfig);
-		iwadnum++;
-	}
-	D_AddFile (wadfiles, picks[pick].mFullPath.GetChars(), true, -1, GameConfig);
-	fileSystem.SetMaxIwadNum(iwadnum);
-
 	auto info = mIWadInfos[picks[pick].mInfoIndex];
 
+	// Support WADs also need to be loaded before the IWAD as per the spec.
 	if(info.SupportWAD.IsNotEmpty())
 	{
 		// For net games all wads must be explicitly named to make it easier for the host to know
@@ -892,9 +890,20 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 			if(supportWAD.IsNotEmpty())
 			{
 				D_AddFile(wadfiles, supportWAD.GetChars(), true, -1, GameConfig, true);
+				iwadnum++;
 			}
 		}
 	}
+
+	fileSystem.SetIwadNum(iwadnum);
+	if (picks[pick].mRequiredPath.IsNotEmpty())
+	{
+		D_AddFile (wadfiles, picks[pick].mRequiredPath.GetChars(), true, -1, GameConfig, false);
+		iwadnum++;
+	}
+
+	D_AddFile (wadfiles, picks[pick].mFullPath.GetChars(), true, -1, GameConfig, false);
+	fileSystem.SetMaxIwadNum(iwadnum);
 
 	// Load additional resources from the same directory as the IWAD itself.
 	for (unsigned i=0; i < info.Load.Size(); i++)
@@ -913,12 +922,12 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 				path = FString(picks[pick].mFullPath.GetChars(), lastslash + 1);
 			}
 			path += info.Load[i];
-			D_AddFile(wadfiles, path.GetChars(), true, -1, GameConfig);
+			D_AddFile(wadfiles, path.GetChars(), true, -1, GameConfig, false);
 		}
 		else
 		{
 			auto wad = BaseFileSearch(info.Load[i].GetChars() + 1, NULL, true, GameConfig);
-			if (wad) D_AddFile(wadfiles, wad, true, -1, GameConfig);
+			if (wad) D_AddFile(wadfiles, wad, true, -1, GameConfig, false);
 		}
 
 	}
@@ -932,7 +941,7 @@ int FIWadManager::IdentifyVersion (std::vector<std::string>&wadfiles, const char
 //
 //==========================================================================
 
-const FIWADInfo *FIWadManager::FindIWAD(std::vector<std::string>& wadfiles, const char *iwad, const char *basewad, const char *optionalwad)
+const FIWADInfo *FIWadManager::FindIWAD(std::vector<FileSys::ResourceName>& wadfiles, const char *iwad, const char *basewad, const char *optionalwad)
 {
 	int iwadType = IdentifyVersion(wadfiles, iwad, basewad, optionalwad);
 	if (iwadType == -1) return nullptr;

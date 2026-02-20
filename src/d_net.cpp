@@ -362,6 +362,8 @@ public:
 	}
 } NetEvents;
 
+void P_ClearPredictionData();
+
 void Net_ClearBuffers()
 {
 	CloseNetwork();
@@ -386,7 +388,7 @@ void Net_ClearBuffers()
 			state.Tics[j].Data.SetData(nullptr, 0);
 	}
 
-	bPredictionGuard = false;
+	P_ClearPredictionData();
 	NetBufferLength = 0u;
 	RemoteClient = -1;
 	MaxClients = TicDup = 1u;
@@ -1765,12 +1767,115 @@ size_t Net_SetEngineInfo(uint8_t*& stream)
 	stream[0] = VER_MAJOR % 256;
 	stream[1] = VER_MINOR % 256;
 	stream[2] = VER_REVISION % 256;
-	return 3u;
+
+	// Send over any loaded files to ensure their checksum is correct.
+	size_t numWads = 0u;
+	size_t bufferIndex = 7u;
+	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	{
+		if (fileSystem.IsOptionalResource(i))
+			continue;
+
+		++numWads;
+		const FString crc = fileSystem.GetResourceHash(i);
+		memcpy(&stream[bufferIndex], crc.GetChars(), crc.Len() + 1u);
+		bufferIndex += crc.Len() + 1u;
+	}
+
+	stream[3] = (numWads >> 24);
+	stream[4] = (numWads >> 16);
+	stream[5] = (numWads >> 8);
+	stream[6] = numWads;
+
+	return bufferIndex;
 }
 
-bool Net_VerifyEngine(uint8_t*& stream)
+FVerificationError Net_VerifyEngine(uint8_t*& stream, size_t& offset)
 {
-	return stream[0] == (VER_MAJOR % 256) && stream[1] == (VER_MINOR % 256) && stream[2] == (VER_REVISION % 256);
+	FVerificationError error = {};
+
+	TArray<FString> crcs = {};
+	TArray<FString> names = {};
+	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	{
+		if (!fileSystem.IsOptionalResource(i))
+		{
+			crcs.Push(fileSystem.GetResourceHash(i));
+			names.Push(fileSystem.GetResourceFileName(i));
+		}
+	}
+
+	const size_t numWads = (stream[3] << 24) | (stream[4] << 16) | (stream[5] << 8) | stream[6];
+	if (numWads < crcs.Size())
+		error.Error = FVerificationError::VE_FILE_MISSING;
+	else if (numWads > crcs.Size())
+		error.Error = FVerificationError::VE_FILE_UNKNOWN;
+
+	TArray<size_t> unverified = {};
+	for (size_t i = 0u; i < crcs.Size(); ++i)
+		unverified.Push(i);
+
+	offset = 7u;
+	for (size_t i = 0u; i < numWads; ++i)
+	{
+		const FString netCrc = (const char*)&stream[offset];
+		offset += netCrc.Len() + 1u;
+		if (error.Error == FVerificationError::VE_FILE_UNKNOWN)
+		{
+			if (crcs.Find(netCrc) >= crcs.Size())
+				error.UnknownFiles.Push(netCrc);
+		}
+		else if (crcs[i] != netCrc)
+		{
+			const size_t c = crcs.Find(netCrc);
+			if (c >= crcs.Size())
+			{
+				error.Error = FVerificationError::VE_FILE_UNKNOWN;
+				error.UnknownFiles.Push(netCrc);
+			}
+			else
+			{
+				if (error.Error == FVerificationError::VE_NONE)
+					error.Error = FVerificationError::VE_FILE_ORDER;
+				unverified.Delete(unverified.Find(c));
+			}
+		}
+		else
+		{
+			unverified.Delete(unverified.Find(i));
+		}
+	}
+
+	if (error.Error == FVerificationError::VE_FILE_MISSING)
+	{
+		for (auto i : unverified)
+		{
+			FixPathSeperator(names[i]);
+			auto ar = names[i].Split('/', FString::TOK_SKIPEMPTY);
+			error.MissingFiles.Push(ar.Last());
+		}
+	}
+	else if (error.Error == FVerificationError::VE_FILE_ORDER)
+	{
+		error.ExpectedOrder = crcs;
+		// Remove the core and iwad files.
+		error.ExpectedOrder.Delete(0);
+		error.ExpectedOrder.Delete(0);
+	}
+
+	// Intentionally do this last to avoid messing with the above loop.
+	if (stream[0] != (VER_MAJOR % 256) || stream[1] != (VER_MINOR % 256) || stream[2] != (VER_REVISION % 256))
+	{
+		error.Error = FVerificationError::VE_ENGINE;
+		error.Major = VER_MAJOR % 256;
+		error.Minor = VER_MINOR % 256;
+		error.Revision = VER_REVISION % 256;
+		error.NetMajor = stream[0];
+		error.NetMinor = stream[1];
+		error.NetRevision = stream[2];
+	}
+
+	return error;
 }
 
 void Net_SetupUserInfo()
@@ -2130,6 +2235,21 @@ void TryRunTics()
 			lowestSequence = ClientStates[client].CurrentSequence;
 	}
 
+	// Test player prediction code in singleplayer by pretending there is another player
+	// that is running exactly x ticks behind us, emulating having a specific amount of ping
+	if (cl_debugprediction > 0
+		&& !netgame && !demoplayback) // would probably function, but there's no reason to
+	{
+		if (lowestSequence > cl_debugprediction)
+		{
+			lowestSequence -= cl_debugprediction;
+		}
+		else
+		{
+			lowestSequence = 0;
+		}
+	}
+
 	// If the lowest confirmed tic matches the server gametic or greater, allow the client
 	// to run some of them.
 	const int availableTics = (lowestSequence - gametic / TicDup) + 1;
@@ -2142,18 +2262,6 @@ void TryRunTics()
 		CalculateNetStabilityBuffer(availableTics - totalTics);
 		if (totalTics < availableTics - StabilityBuffer)
 			++runTics;
-	}
-
-	// Test player prediction code in singleplayer
-	// by running the gametic behind the ClientTic
-	if (!netgame && !demoplayback && cl_debugprediction > 0)
-	{
-		int debugTarget = ClientTic - cl_debugprediction;
-		int debugOffset = gametic - debugTarget;
-		if (debugOffset > 0)
-		{
-			runTics = max<int>(runTics - debugOffset, 0);
-		}
 	}
 
 	const int worldTimer = primaryLevel->LocalWorldTimer;
@@ -2177,8 +2285,7 @@ void TryRunTics()
 		if (ClientTic > startCommand)
 		{
 			LagState = LAG_PREDICTING;
-			P_UnPredictPlayer();
-			P_PredictPlayer(&players[consoleplayer]);
+			P_PredictClient();
 		}
 
 		// If we actually did have some tics available, make sure the UI
@@ -2187,7 +2294,10 @@ void TryRunTics()
 			P_RunClientSideLogic();
 
 		if (totalTics > 0)
+		{
 			S_UpdateSounds(players[consoleplayer].camera, primaryLevel->LocalWorldTimer - min<int>(primaryLevel->LocalWorldTimer, worldTimer));
+			NetworkEntityManager::VerifyPredictedEntities();
+		}
 
 		return;
 	}
@@ -2200,7 +2310,7 @@ void TryRunTics()
 	LastGameUpdate = EnterTic;
 
 	// Run the available tics.
-	P_UnPredictPlayer();
+	P_UnPredictClient();
 	while (runTics--)
 	{
 		const bool stabilize = ShouldStabilizeTick();
@@ -2223,7 +2333,7 @@ void TryRunTics()
 			break;
 		}
 	}
-	P_PredictPlayer(&players[consoleplayer]);
+	P_PredictClient();
 
 	// These should use the actual tics since they're not actually tied to the gameplay logic.
 	// Make sure it always comes after so the HUD has the correct game state when updating.
@@ -2233,6 +2343,7 @@ void TryRunTics()
 	// Since the level could get reset mid-tick, make sure the smaller of the two values is used
 	// since it should only go up otherwise.
 	S_UpdateSounds(players[consoleplayer].camera, primaryLevel->LocalWorldTimer - min<int>(primaryLevel->LocalWorldTimer, worldTimer));
+	NetworkEntityManager::VerifyPredictedEntities();
 }
 
 void Net_NewClientTic()

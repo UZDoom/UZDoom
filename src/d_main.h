@@ -26,6 +26,7 @@
 #include "startupinfo.h"
 #include "c_cvars.h"
 #include "v_video.h"
+#include "fs_filesystem.h"
 #include <csignal>
 
 extern bool		advancedemo;
@@ -47,6 +48,7 @@ EXTERN_FARG(iwad);
 EXTERN_FARG(xlat);
 EXTERN_FARG(savedir);
 EXTERN_FARG(file);
+EXTERN_FARG(showlauncher);
 
 struct event_t;
 
@@ -142,7 +144,7 @@ class FIWadManager
 	void ParseIWadInfo(const char *fn, const char *data, int datasize, FIWADInfo *result = nullptr);
 	int ScanIWAD (const char *iwad);
 	int CheckIWADInfo(const char *iwad);
-	int IdentifyVersion (std::vector<std::string>& wadfiles, const char *iwad, const char *zdoom_wad, const char *optional_wad);
+	int IdentifyVersion (std::vector<FileSys::ResourceName>& wadfiles, const char *iwad, const char *zdoom_wad, const char *optional_wad);
 	void CollectSearchPaths();
 	void AddIWADCandidates(const char *dir, bool nosubdir = true);
 	void ValidateIWADs();
@@ -150,7 +152,7 @@ class FIWadManager
 public:
 
 	FIWadManager(const char *fn, const char *fnopt);
-	const FIWADInfo *FindIWAD(std::vector<std::string>& wadfiles, const char *iwad, const char *basewad, const char *optionalwad);
+	const FIWADInfo *FindIWAD(std::vector<FileSys::ResourceName>& wadfiles, const char *iwad, const char *basewad, const char *optionalwad);
 	const FString *GetAutoname(unsigned int num) const
 	{
 		if (num < mIWadInfos.Size()) return &mIWadInfos[num].Autoname;

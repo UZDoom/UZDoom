@@ -179,6 +179,7 @@ std2:
 		'out'						{ RET(ParseVersion >= MakeVersion(1, 0, 0)? TK_Out : TK_Identifier); }
 		'static'					{ RET(TK_Static); }
 		'transient'					{ RET(ParseVersion >= MakeVersion(1, 0, 0)? TK_Transient : TK_Identifier); }
+		'norollback'				{ RET(ParseVersion >= MakeVersion(4, 15, 1)? TK_NoRollback : TK_Identifier); }
 		'final'						{ RET(ParseVersion >= MakeVersion(1, 0, 0)? TK_Final : TK_Identifier); }
 		'extend'					{ RET(ParseVersion >= MakeVersion(1, 0, 0)? TK_Extend : TK_Identifier); }
 		'protected'					{ RET(ParseVersion >= MakeVersion(1, 0, 0)? TK_Protected : TK_Identifier); }

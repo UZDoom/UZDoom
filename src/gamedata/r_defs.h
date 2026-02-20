@@ -757,6 +757,7 @@ struct sector_t
 	int prevsec;						// -1 or number of sector for previous step
 	int nextsec;						// -1 or number of next step sector
 
+	int LastDamage;						// Last time this sector had SectorDamage called on it.
 	FName damagetype;					// [RH] Means-of-death for applied damage
 	int damageamount;					// [RH] Damage to do while standing on floor
 	short damageinterval;				// Interval for damage application
@@ -796,7 +797,7 @@ public:
 	void RemoveForceField();
 	int Index() const { return sectornum; }
 
-	bool IsDangerous(const DVector3& pos, double height) const;
+	bool IsDangerous(const DVector3& pos, double height, int moTID);
 
 	void AdjustFloorClip () const;
 	void SetColor(PalEntry pe, int desat);

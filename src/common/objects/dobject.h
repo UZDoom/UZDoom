@@ -79,6 +79,8 @@ class                                   DPillar;
 
 class PClassActor;
 
+void SetObjectFlagsFromScope(DObject* obj);
+
 #define RUNTIME_CLASS_CASTLESS(cls)	(cls::RegistrationInfo.MyClass)	// Passed a native class name, returns a PClass representing that class
 #define RUNTIME_CLASS(cls)			((typename cls::MetaClass *)RUNTIME_CLASS_CASTLESS(cls))	// Like above, but returns the true type of the meta object
 #define NATIVE_TYPE(object)			(object->StaticType())			// Passed an object, returns the type of the C++ class representing the object
@@ -346,29 +348,14 @@ public:
 	inline bool IsNetworked() const { return (ObjectFlags & OF_Networked); }
 	inline uint32_t GetNetworkID() const { return _networkID; }
 	inline bool IsClientSide() const { return (ObjectFlags & OF_ClientSide); }
+	inline bool IsPredicted() const { return (ObjectFlags & OF_Predicted); }
+	inline void SetPredicted(bool set) { if (set) ObjectFlags |= OF_Predicted; else ObjectFlags &= ~OF_Predicted; }
+	inline bool IsPredicting() const { return (ObjectFlags & OF_Predicting); }
 	void SetNetworkID(const uint32_t id);
 	void ClearNetworkID();
 	void RemoveFromNetwork();
 	virtual void EnableNetworking(const bool enable);
 };
-
-extern bool bPredictionGuard;
-
-// This is the only method aside from calling CreateNew that should be used for creating DObjects
-// to ensure that the Class pointer is always set.
-template<typename T, typename... Args>
-T* Create(Args&&... args)
-{
-	void * mem = M_Calloc(sizeof(T), 1);
-	if (mem)
-	{
-		T *object = new(mem) T(std::forward<Args>(args)...);
-		object->SetClass(RUNTIME_CLASS(T));
-		assert(object->GetClass() != nullptr);	// beware of objects that get created before the type system is up.
-		return object;
-	}
-	return nullptr;
-}
 
 
 // When you write to a pointer to an Object, you must call this for
@@ -478,15 +465,18 @@ inline T *&DObject::PointerVar(FName field)
 }
 
 
-class NetworkEntityManager
+class NetworkEntityManager final
 {
 private:
+	inline static bool s_bClientPredicting = false;
 	inline static TArray<DObject*> s_netEntities = {};
 	inline static TArray<uint32_t> s_openNetIDs = {};
+	inline static TArray<DObject*> s_problemEntities = {};
+	inline static TArray<DObject*> s_predictedEntities = {};
 
 public:
 	NetworkEntityManager() = delete;
-
+	
 	static constexpr uint32_t WorldNetID = 0u;
 	static constexpr uint32_t ClientNetIDStart = 1u;
 	inline static uint32_t NetIDStart;// = MAXPLAYERS + 1u;
@@ -496,6 +486,30 @@ public:
 	static void AddNetworkEntity(DObject* const ent);
 	static void RemoveNetworkEntity(DObject* const ent);
 	static DObject* GetNetworkEntity(const uint32_t id);
+	static void AddPredictedEntity(DObject* ent);
+	static void VerifyPredictedEntities();
+	static void RemovePredictedEntity(DObject* ent);
+	static void EnablePrediction();
+	static void DisablePrediction();
+	static bool IsPredicting();
 };
+
+// This is the only method aside from calling CreateNew that should be used for creating DObjects
+// to ensure that the Class pointer is always set.
+template<typename T, typename... Args>
+T* Create(Args&&... args)
+{
+	void * mem = M_Calloc(sizeof(T), 1);
+	if (mem)
+	{
+		T *object = new(mem) T(std::forward<Args>(args)...);
+		object->SetClass(RUNTIME_CLASS(T));
+		assert(object->GetClass() != nullptr);	// beware of objects that get created before the type system is up.
+		SetObjectFlagsFromScope(object);
+		NetworkEntityManager::AddPredictedEntity(object);
+		return object;
+	}
+	return nullptr;
+}
 
 #endif //__DOBJECT_H__

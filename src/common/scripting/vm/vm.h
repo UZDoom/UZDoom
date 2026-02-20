@@ -26,15 +26,15 @@
 #define VM_H
 
 #include "autosegs.h"
-#include "zstring.h"
-#include "vectors.h"
-#include "quaternion.h"
+#include "basics.h"
 #include "cmdlib.h"
 #include "engineerrors.h"
 #include "memarena.h"
 #include "name.h"
+#include "quaternion.h"
 #include "scopebarrier.h"
-#include <type_traits>
+#include "vectors.h"
+#include "zstring.h"
 
 class DObject;
 union VMOP;
@@ -727,7 +727,7 @@ typename VMReturnTypeTrait<RetVal>::type VMCallSingle(VMFunction* func, Args... 
 
 		VMValue params[argCount];
 
-		for(int i = 0, j = 0; i < sizeof...(Args); i++)
+		for(unsigned i = 0, j = 0; i < sizeof...(Args); i++)
 		{
 			for(int k = 0; k < arglist[i].count; k++, j++)
 			{
@@ -763,7 +763,7 @@ std::tuple<typename VMReturnTypeTrait<Rets>::type...> VMCallMultiImpl(VMFunction
 
 		VMValue params[argCount];
 
-		for(int i = 0, j = 0; i < sizeof...(Args); i++)
+		for(unsigned i = 0, j = 0; i < sizeof...(Args); i++)
 		{
 			for(int k = 0; k < arglist[i].count; k++, j++)
 			{

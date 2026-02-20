@@ -33,6 +33,8 @@
 #include "tarray.h"
 #include "c_commandline.h"
 #include "zstring.h"
+#include "fs_filesystem.h"
+#include <array>
 
 class FConfigFile;
 
@@ -45,7 +47,7 @@ struct FExecList
 
 	void AddCommand(const char *cmd, const char *file = nullptr);
 	void ExecCommands() const;
-	void AddPullins(std::vector<std::string> &wads, FConfigFile *config) const;
+	void AddPullins(std::vector<FileSys::ResourceName> &wads, FConfigFile *config) const;
 };
 
 extern bool ParsingKeyConf, UnsafeExecutionContext;
@@ -98,11 +100,11 @@ public:
 	FConsoleCommand *m_Next, **m_Prev;
 	FString m_Name;
 
-	enum { HASH_SIZE = 251 };	// Is this prime?
+	static constexpr int hash_size = 251;
 
 protected:
 	FConsoleCommand ();
-	bool AddToHash (FConsoleCommand **table);
+	bool AddToHash (std::array<FConsoleCommand*, FConsoleCommand::hash_size>& table);
 
 	CCmdRun m_RunFunc;
 

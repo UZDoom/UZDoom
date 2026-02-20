@@ -43,15 +43,16 @@ void InitWidgetResources(const char* filename)
 {
 	WidgetResources = new TDeletingArray<FResourceFile*>();
 
-	auto open = [=](const char* filename)
+	auto open = [=](const char* filename, bool required = false)
 	{
 		auto file = FResourceFile::OpenResourceFile(filename);
-		if (!file)
+		if (file)
+			WidgetResources->Push(file);
+		else if (required)
 			I_FatalError("Unable to open %s", filename);
-		WidgetResources->Push(file);
 	};
 
-	open(filename);
+	open(filename, true);
 
 	FString *args;
 	int argc = Args->CheckParmList(FArg_file, &args);

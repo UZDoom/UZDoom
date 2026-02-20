@@ -17,33 +17,29 @@
 **
 **---------------------------------------------------------------------------
 **
+** Finally, for odd reasons, the player input is buffered within
+** the player data struct, as commands per game tick.
+**
+** The player data structure depends on a number of other structs:
+** items (internal inventory), animation states (closely tied to
+** the sprites used to represent them, unfortunately).
+**
+** In addition, the player is just a special case of the generic
+** moving object/actor.
 */
 
 #ifndef __D_PLAYER_H__
 #define __D_PLAYER_H__
 
-// Finally, for odd reasons, the player input
-// is buffered within the player data struct,
-// as commands per game tick.
-#include "d_protocol.h"
-#include "doomstat.h"
-
 #include "a_weapons.h"
-
-#include "d_netinf.h"
-
-// The player data structure depends on a number
-// of other structs: items (internal inventory),
-// animation states (closely tied to the sprites
-// used to represent them, unfortunately).
-#include "p_pspr.h"
-
-// In addition, the player is just a special
-// case of the generic moving object/actor.
 #include "actor.h"
-
-//Added by MC:
 #include "b_bot.h"
+#include "basics.h"
+#include "d_netinf.h"
+#include "d_protocol.h"
+#include "doomdef.h"
+#include "doomstat.h"
+#include "p_pspr.h"
 
 class player_t;
 
@@ -197,9 +193,10 @@ struct userinfo_t : TMap<FName,FBaseCVar *>
 		}
 
 		float aim = *static_cast<FFloatCVar *>(*CheckKey(NAME_Autoaim));
-		if (aim > 35 || aim < 0)
+		float bound = (dmflags & DF_NO_FREELOOK)? 35: 70;
+		if (aim > bound || aim < 0)
 		{
-			return 35.;
+			return bound;
 		}
 		else
 		{
@@ -307,6 +304,18 @@ struct userinfo_t : TMap<FName,FBaseCVar *>
 void ReadUserInfo(FSerializer &arc, userinfo_t &info, FString &skin);
 void WriteUserInfo(FSerializer &arc, userinfo_t &info);
 
+struct FSafePosition
+{
+	sector_t* Sector = nullptr;
+	DVector3 Pos = {};
+	double Height = 0.0, MaxStepHeight = 0.0;
+	bool bValidPos = false;
+
+	void Update(AActor& mobj, bool force = false);
+	bool IsSafe(int tid) const;
+	FSerializer& Serialize(FSerializer& arc, const char* name);
+};
+
 //
 // Extended player object info: player_t
 //
@@ -316,7 +325,7 @@ public:
 	player_t() { angleOffsetTargets.Zero(); }
 	~player_t();
 	player_t &operator= (const player_t &p) = delete;
-	void CopyFrom(player_t &src, bool copyPSP);
+	void CopyFrom(player_t &src);
 
 	void Serialize(FSerializer &arc);
 	size_t PropagateMark();
@@ -445,7 +454,7 @@ public:
 	DAngle ConversationNPCAngle = nullAngle;
 	bool ConversationFaceTalker = false;
 
-	DVector3 LastSafePos = {}; // Mark the last known safe location the player was standing.
+	FSafePosition LastSafePos = {}; // Mark the last known safe location the player was standing.
 
 	double GetDeltaViewHeight() const
 	{

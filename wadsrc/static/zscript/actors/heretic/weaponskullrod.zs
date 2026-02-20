@@ -359,7 +359,7 @@ class HornRodFX2 : Actor
 		double newz = mo.CurSector.NextHighestCeilingAt(mo.pos.x, mo.pos.y, mo.pos.z, mo.pos.z, FFCF_NOPORTALS) - mo.height;
 		mo.SetZ(newz);
 
-		if (multiplayer && target.player)
+		if (multiplayer && target && target.player)
 		{
 			mo.A_SetTranslation(translations[target.PlayerNumber()]);
 		}

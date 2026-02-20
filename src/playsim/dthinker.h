@@ -106,6 +106,8 @@ public:
 	
 	void ChangeStatNum (int statnum);
 	inline int GetStatNum() const { return _statNum; }
+	// This is temporary and should only be used with the rollback functionality.
+	inline void RollbackStatNum(int statNum) { _statNum = statNum; }
 
 private:
 	void Remove();

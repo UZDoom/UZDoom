@@ -218,6 +218,7 @@ void VkPostprocess::CopyCurrentToImage(VkTextureImage *dstimage, VkImageLayout f
 
 	auto srcimage = &fb->GetBuffers()->PipelineImage[mCurrentPipelineImage];
 	auto cmdbuffer = fb->GetCommands()->GetDrawCommands();
+	if (srcimage->Image->width != dstimage->Image->width || srcimage->Image->height != dstimage->Image->height) return;
 
 	VkImageTransition()
 	.AddImage(srcimage, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, false)

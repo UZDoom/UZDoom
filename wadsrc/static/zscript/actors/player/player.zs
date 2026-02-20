@@ -48,7 +48,7 @@ class PlayerPawn : Actor
 	int			RunHealth;
 	private int	PlayerFlags;
 	clearscope Inventory	InvFirst;		// first inventory item displayed on inventory bar
-	clearscope Inventory	InvSel;			// selected inventory item
+	norollback clearscope Inventory	InvSel;	// selected inventory item
 	Name 		SoundClass;		// Sound class
 	Name 		Portrait;
 	Name 		Slot[10];

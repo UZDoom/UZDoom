@@ -1136,7 +1136,6 @@ public:
 	void SetDynamicLights();
 
 // info for drawing
-// NOTE: The first member variable *must* be snext.
 	AActor			*snext, **sprev;	// links in sector (if needed)
 	DVector3		__Pos;		// double underscores so that it won't get used by accident. Access to this should be exclusively through the designated access functions.
 

@@ -199,6 +199,7 @@ static void InitTokenMap()
 	TOKENDEF (TK_FlagDef,		ZCC_FLAGDEF);
 	TOKENDEF (TK_Mixin,			ZCC_MIXIN);
 	TOKENDEF (TK_Transient,		ZCC_TRANSIENT);
+	TOKENDEF (TK_NoRollback,	ZCC_NOROLLBACK);
 	TOKENDEF (TK_Enum,			ZCC_ENUM);
 	TOKENDEF2(TK_SByte,			ZCC_SBYTE,		NAME_sByte);
 	TOKENDEF2(TK_Byte,			ZCC_BYTE,		NAME_Byte);

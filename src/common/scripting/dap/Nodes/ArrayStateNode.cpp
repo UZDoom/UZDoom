@@ -58,14 +58,14 @@ static int64_t GetElementCount(const VMValue &value, PType *p_type)
 	{
 		type = type->toPointer()->PointedType;
 	}
-	
+
 	if (type->isDynArray() || type->isStaticArray())
 	{
 		if (!IsVMValueValid(&value))
 		{
 			return 0;
 		}
-		
+
 		// FArray has the same layout as TArray, just return count
 		auto *arr = static_cast<FArray *>(array_head);
 		if (arr->Count == UINT_MAX)
@@ -82,7 +82,7 @@ static int64_t GetElementCount(const VMValue &value, PType *p_type)
 		}
 		return static_cast<PArray *>(type)->ElementCount;
 	}
-	else 
+	else
 	return 0;
 }
 
@@ -119,7 +119,7 @@ bool ArrayStateNode::SerializeToProtocol(dap::Variable &variable)
 	}
 	else
 	{
-		variable.value = StringFormat("%s[%ld]", elementTypeName.c_str(), static_cast<int64_t>(variable.indexedVariables.value(0)));
+		variable.value = StringFormat("%s[%lld]", elementTypeName.c_str(), static_cast<int64_t>(variable.indexedVariables.value(0)));
 		if (m_type->toPointer())
 		{
 			variable.value += StringFormat(" (%p)", m_value.a);
@@ -184,7 +184,7 @@ bool ArrayStateNode::GetChildNode(std::string name, std::shared_ptr<StateNodeBas
 		type = static_cast<PPointer *>(m_type)->PointedType;
 		// array_head = *static_cast<void **>(m_value.a);
 	}
-	
+
 	if (type->isDynArray() || type->isStaticArray())
 	{
 		auto elementType = GetElementType(m_type);

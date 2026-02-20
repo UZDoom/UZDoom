@@ -353,7 +353,7 @@ void PType::StaticInit()
 	TypeVector3->AddField(NAME_Y, TypeFloat64);
 	TypeVector3->AddField(NAME_Z, TypeFloat64);
 	// allow accessing xy as a vector2. This is not supposed to be serialized so it's marked transient
-	TypeVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient, 0));
+	TypeVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeVector3, NAME_Struct);
 	TypeVector3->loadOp = OP_LV3;
 	TypeVector3->storeOp = OP_SV3;
@@ -369,8 +369,8 @@ void PType::StaticInit()
 	TypeVector4->AddField(NAME_Z, TypeFloat64);
 	TypeVector4->AddField(NAME_W, TypeFloat64);
 	// allow accessing xyz as a vector3. This is not supposed to be serialized so it's marked transient
-	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient, 0));
-	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient, 0));
+	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeVector4, NAME_Struct);
 	TypeVector4->loadOp = OP_LV4;
 	TypeVector4->storeOp = OP_SV4;
@@ -399,7 +399,7 @@ void PType::StaticInit()
 	TypeFVector3->AddField(NAME_Y, TypeFloat32);
 	TypeFVector3->AddField(NAME_Z, TypeFloat32);
 	// allow accessing xy as a vector2
-	TypeFVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient, 0));
+	TypeFVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeFVector3, NAME_Struct);
 	TypeFVector3->loadOp = OP_LFV3;
 	TypeFVector3->storeOp = OP_SFV3;
@@ -416,8 +416,8 @@ void PType::StaticInit()
 	TypeFVector4->AddField(NAME_Z, TypeFloat32);
 	TypeFVector4->AddField(NAME_W, TypeFloat32);
 	// allow accessing xyz as a vector3
-	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient, 0));
-	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient, 0));
+	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeFVector4, NAME_Struct);
 	TypeFVector4->loadOp = OP_LFV4;
 	TypeFVector4->storeOp = OP_SFV4;
@@ -435,8 +435,8 @@ void PType::StaticInit()
 	TypeQuaternion->AddField(NAME_Z, TypeFloat64);
 	TypeQuaternion->AddField(NAME_W, TypeFloat64);
 	// allow vector access.
-	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient, 0));
-	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient, 0));
+	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeQuaternion, NAME_Struct);
 	TypeQuaternion->loadOp = OP_LV4;
 	TypeQuaternion->storeOp = OP_SV4;
@@ -452,8 +452,8 @@ void PType::StaticInit()
 	TypeFQuaternion->AddField(NAME_Z, TypeFloat32);
 	TypeFQuaternion->AddField(NAME_W, TypeFloat32);
 	// allow accessing xyz as a vector3
-	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient, 0));
-	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient, 0));
+	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeFQuaternion, NAME_Struct);
 	TypeFQuaternion->loadOp = OP_LFV4;
 	TypeFQuaternion->storeOp = OP_SFV4;

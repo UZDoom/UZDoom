@@ -147,7 +147,7 @@ static int nulPrintf(FSMessageLevel msg, const char* fmt, ...)
 	return 0;
 }
 
-FResourceFile *FResourceFile::DoOpenResourceFile(const char *filename, FileReader &file, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp)
+FResourceFile *FResourceFile::DoOpenResourceFile(const char *filename, FileReader &file, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp, bool optional)
 {
 	if (!file.isOpen()) return nullptr;
 	if (Printf == nullptr) Printf = nulPrintf;
@@ -155,28 +155,35 @@ FResourceFile *FResourceFile::DoOpenResourceFile(const char *filename, FileReade
 	{
 		if (containeronly && func == CheckLump) break;
 		FResourceFile *resfile = func(filename, file, filter, Printf, sp);
-		if (resfile != NULL) return resfile;
+		if (resfile != NULL)
+		{
+			resfile->SetOptional(optional);
+			return resfile;
+		}
 	}
 	return NULL;
 }
 
-FResourceFile *FResourceFile::OpenResourceFile(const char *filename, FileReader &file, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp)
+FResourceFile *FResourceFile::OpenResourceFile(const char *filename, FileReader &file, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp, bool optional)
 {
-	return DoOpenResourceFile(filename, file, containeronly, filter, Printf, sp);
+	return DoOpenResourceFile(filename, file, containeronly, filter, Printf, sp, optional);
 }
 
 
-FResourceFile *FResourceFile::OpenResourceFile(const char *filename, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp)
+FResourceFile *FResourceFile::OpenResourceFile(const char *filename, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp, bool optional)
 {
 	FileReader file;
 	if (!file.OpenFile(filename)) return nullptr;
-	return DoOpenResourceFile(filename, file, containeronly, filter, Printf, sp);
+	return DoOpenResourceFile(filename, file, containeronly, filter, Printf, sp, optional);
 }
 
-FResourceFile *FResourceFile::OpenDirectory(const char *filename, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp)
+FResourceFile *FResourceFile::OpenDirectory(const char *filename, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp, bool optional)
 {
 	if (Printf == nullptr) Printf = nulPrintf;
-	return CheckDir(filename, false, filter, Printf, sp);
+	auto resFile = CheckDir(filename, false, filter, Printf, sp);
+	if (resFile != nullptr)
+		resFile->SetOptional(optional);
+	return resFile;
 }
 
 //==========================================================================

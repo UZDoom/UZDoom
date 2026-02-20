@@ -64,6 +64,26 @@ enum ENetFlags
 	NCMD_LATENCY = 0x01,		// Latency packet, used for measuring RTT.		
 };
 
+struct FVerificationError
+{
+	enum EVerifyError : uint8_t
+	{
+		VE_NONE,
+		VE_ENGINE,
+		VE_FILE_UNKNOWN,
+		VE_FILE_MISSING,
+		VE_FILE_ORDER,
+	};
+
+	EVerifyError Error = VE_NONE;
+	uint8_t Major = 0u, Minor = 0u, Revision = 0u;
+	uint8_t NetMajor = 0u, NetMinor = 0u, NetRevision = 0u;
+	TArray<FString> UnknownFiles = {};
+	TArray<FString> ExpectedOrder = {};
+	// Since the guest didn't load these, we have no checksum to fetch the proper name, so send over our own.
+	TArray<FString> MissingFiles = {};
+};
+
 struct FClientStack : public TArray<int>
 {
 	inline bool InGame(int i) const { return Find(i) < Size(); }

@@ -1301,6 +1301,20 @@ set_source_files_properties( common/engine/sc_man.cpp PROPERTIES OBJECT_DEPENDS 
 set_source_files_properties( ${NOT_COMPILED_SOURCE_FILES} PROPERTIES HEADER_FILE_ONLY TRUE )
 set_source_files_properties( ${GAME_NONPCH_SOURCES} common/textures/hires/hqresize.cpp PROPERTIES SKIP_PRECOMPILE_HEADERS TRUE )
 
+option(ENABLE_IWYU "Enable Include-What-You-Use analysis" ON)
+if (ENABLE_IWYU)
+	find_program(IWYU NAMES include-what-you-use iwyu)
+	if(IWYU)
+		message(STATUS "Using IWYU, found at ${IWYU}")
+		set_target_properties(zdoom PROPERTIES
+			CXX_INCLUDE_WHAT_YOU_USE "${IWYU}"
+			"-Xiwyu" "--mapping_file=${CMAKE_SOURCE_DIR}/tools/iwyu.imp"
+		)
+	else()
+		message(WARNING "IWYU not found.")
+	endif()
+endif()
+
 if(BUILD_FLATPAK)
 	target_compile_definitions(zdoom PRIVATE IS_FLATPAK=1)
 endif()
@@ -1328,18 +1342,19 @@ if(EMSCRIPTEN)
 			-sMIN_WEBGL_VERSION=2
 			-sFULL_ES2
 			$<$<NOT:$<BOOL:${DYN_SNDFILE}>>:-L$ENV{EMSDK}/upstream/emscripten/cache/sysroot/lib/ -lFLAC -lvorbis -lvorbisfile -lvorbisenc -lopus -logg>
-			$<$<CONFIG:RELEASE>:-O2 -flto>
+			$<$<CONFIG:RELEASE>:-O3 -flto>
 			$<$<CONFIG:DEBUG>:-g -gsource-map -sASSERTIONS=2 --profiling-funcs>
 	)
 
 	target_compile_options(zdoom PRIVATE
 			--use-port=sdl2
-			$<$<CONFIG:RELEASE>:-O2 -flto>
+			$<$<CONFIG:RELEASE>:-O3 -flto>
 			$<$<CONFIG:DEBUG>:-g -gsource-map>
 	)
 
 	#Bundle all resources to uzdoom.data
 	target_link_options(zdoom PRIVATE
+			"SHELL:--use-preload-cache"
 			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/uzdoom.pk3@/uzdoom/"
 			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/lights.pk3@/uzdoom/"
 			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/brightmaps.pk3@/uzdoom/"

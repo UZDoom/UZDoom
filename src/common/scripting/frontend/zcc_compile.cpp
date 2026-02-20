@@ -30,6 +30,9 @@
 #include "printf.h"
 #include "symbols.h"
 
+#include <map>
+#include <vector>
+
 FSharedStringArena VMStringConstants;
 
 
@@ -484,6 +487,9 @@ ZCCCompiler::ZCCCompiler(ZCC_AST &ast, DObject *_outer, PSymbolTable &_symbols, 
 		ZCC_TreeNode *node = ast.TopNode;
 		PSymbolTreeNode *tnode = nullptr;
 
+		std::map<int, std::vector<ZCC_Class *>> class_extensions;
+		std::map<int, std::vector<ZCC_Struct *>> struct_extensions;
+
 		// [pbeta] Anything that must be processed before classes, structs, etc. should go here.
 		do
 		{
@@ -498,6 +504,20 @@ ZCCCompiler::ZCCCompiler(ZCC_AST &ast, DObject *_outer, PSymbolTable &_symbols, 
 				}
 				break;
 
+			case AST_Class:
+				if (auto cls = static_cast<ZCC_Class *>(node); cls->Flags == ZCC_Extension)
+				{
+					class_extensions[(int)cls->NodeName].push_back(cls);
+					break;
+				}
+				break;
+			case AST_Struct:
+				if (auto st = static_cast<ZCC_Struct*>(node); st->Flags == ZCC_Extension)
+				{
+					struct_extensions[(int)st->NodeName].push_back(st);
+					break;
+				}
+				break;
 			default:
 				break; // Shut GCC up.
 			}
@@ -517,17 +537,15 @@ ZCCCompiler::ZCCCompiler(ZCC_AST &ast, DObject *_outer, PSymbolTable &_symbols, 
 				break;
 
 			case AST_Class:
-				// a class extension should not check the tree node symbols.
+				// extensions have already been queued
 				if (static_cast<ZCC_Class *>(node)->Flags == ZCC_Extension)
 				{
-					ProcessClass(static_cast<ZCC_Class *>(node), tnode);
 					break;
 				}
 				goto common;
 			case AST_Struct:
-				if (static_cast<ZCC_Class*>(node)->Flags == ZCC_Extension)
+				if (static_cast<ZCC_Struct*>(node)->Flags == ZCC_Extension)
 				{
-					ProcessStruct(static_cast<ZCC_Struct*>(node), tnode, nullptr);
 					break;
 				}
 				goto common;
@@ -547,10 +565,26 @@ ZCCCompiler::ZCCCompiler(ZCC_AST &ast, DObject *_outer, PSymbolTable &_symbols, 
 
 					case AST_Class:
 						ProcessClass(static_cast<ZCC_Class *>(node), tnode);
+
+						if(auto it = class_extensions.find((int)static_cast<ZCC_NamedNode *>(node)->NodeName); it != class_extensions.end())
+						{
+							for(ZCC_Class * ext : it->second)
+							{
+								ProcessClass(ext, tnode);
+							}
+						}
 						break;
 
 					case AST_Struct:
 						ProcessStruct(static_cast<ZCC_Struct *>(node), tnode, nullptr);
+
+						if(auto it = struct_extensions.find((int)static_cast<ZCC_NamedNode *>(node)->NodeName); it != struct_extensions.end())
+						{
+							for(ZCC_Struct * ext : it->second)
+							{
+								ProcessStruct(ext, tnode, nullptr);
+							}
+						}
 						break;
 
 					case AST_ConstantDef:
@@ -1525,21 +1559,25 @@ bool ZCCCompiler::CompileFields(PContainerType *type, TArray<ZCC_VarDeclarator *
 		if (field->Flags & ZCC_ReadOnly) varflags |= VARF_ReadOnly;
 		if (field->Flags & ZCC_Internal) varflags |= VARF_InternalAccess;
 		if (field->Flags & ZCC_Transient) varflags |= VARF_Transient;
+		if (field->Flags & ZCC_NoRollback) varflags |= VARF_NoRollback;
+		const unsigned existingRollback = varflags & VARF_NoRollback;
 		if (mVersion >= MakeVersion(2, 4, 0))
 		{
 			if (type != nullptr)
 			{
 				if (type->ScopeFlags & Scope_UI)
-					varflags |= VARF_UI;
+					varflags |= VARF_UI | VARF_NoRollback;
 				if (type->ScopeFlags & Scope_Play)
 					varflags |= VARF_Play;
 			}
 			if (field->Flags & ZCC_UIFlag)
-				varflags = FScopeBarrier::ChangeSideInFlags(varflags, FScopeBarrier::Side_UI);
+				varflags = FScopeBarrier::ChangeSideInFlags(varflags, FScopeBarrier::Side_UI) | VARF_NoRollback;
 			if (field->Flags & ZCC_Play)
 				varflags = FScopeBarrier::ChangeSideInFlags(varflags, FScopeBarrier::Side_Play);
 			if (field->Flags & (ZCC_ClearScope | ZCC_UnsafeClearScope))
 				varflags = FScopeBarrier::ChangeSideInFlags(varflags, FScopeBarrier::Side_PlainData);
+
+			varflags |= existingRollback;
 		}
 		else
 		{
@@ -1548,7 +1586,7 @@ bool ZCCCompiler::CompileFields(PContainerType *type, TArray<ZCC_VarDeclarator *
 
 		if (field->Flags & ZCC_Native)
 		{
-			varflags |= VARF_Native | VARF_Transient;
+			varflags |= VARF_Native | VARF_Transient | VARF_NoRollback;
 		}
 
 		static int excludescope[] = { ZCC_UIFlag, ZCC_Play, ZCC_ClearScope };
@@ -1565,7 +1603,13 @@ bool ZCCCompiler::CompileFields(PContainerType *type, TArray<ZCC_VarDeclarator *
 		if (fc > 1)
 		{
 			Error(field, "Invalid combination of scope qualifiers %s on field %s", FlagsToString(excludeflags).GetChars(), FName(field->Names->Name).GetChars());
-			varflags &= ~(VARF_UI | VARF_Play); // make plain data
+			varflags &= ~(VARF_UI | VARF_Play | VARF_NoRollback) | existingRollback; // make plain data
+		}
+
+		if (!(varflags & VARF_Native) && (varflags & (VARF_Play | VARF_NoRollback)) == (VARF_Play | VARF_NoRollback))
+		{
+			Error(field, "norollback cannot be used with play-scoped fields");
+			varflags &= ~VARF_NoRollback;
 		}
 
 		if (field->Flags & ZCC_Meta)

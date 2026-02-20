@@ -162,8 +162,7 @@ public:
 	static void StaticReadRNGState (FSerializer &arc);
 	static void StaticWriteRNGState (FSerializer &file);
 	static FRandom *StaticFindRNG(const char *name, bool client);
-	static void SaveRNGState(TArray<FRandom>& backups);
-	static void RestoreRNGState(TArray<FRandom>& backups);
+	static void RollbackRNGState(FSerializer& arc);
 
 #ifndef NDEBUG
 	static void StaticPrintSeeds ();

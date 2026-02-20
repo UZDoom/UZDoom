@@ -20,6 +20,7 @@
 #include <zwidget/widgets/pushbutton/pushbutton.h>
 #include <zwidget/widgets/textlabel/textlabel.h>
 
+#include "basics.h"
 #include "gstrings.h"
 #include "netstartwindow.h"
 #include "version.h"
@@ -105,7 +106,7 @@ void NetStartWindow::NetProgress(int cur, int limit)
 
 	Instance->maxpos = limit;
 	Instance->SetProgress(cur);
-	for (size_t start = Instance->LobbyWindow->GetItemAmount(); start < Instance->maxpos; ++start)
+	for (int start = Instance->LobbyWindow->GetItemAmount(); start < Instance->maxpos; ++start)
 		Instance->LobbyWindow->AddItem(std::to_string(start));
 }
 

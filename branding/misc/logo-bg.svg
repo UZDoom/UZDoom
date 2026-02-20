@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg style="background:radial-gradient(ellipse farthest-corner at center top, #0000 0%, #0000 50%, #1212127f 100%), linear-gradient(to bottom, #323232 0%, #3a3a3a 40%, #121212 100%)" version="1.1" viewBox="0 0 3e3 3e3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style>
+      .cls-1 {
+        fill: #22e2f8;
+      }
+
+      /* Hides the editor-only background in browsers */
+      @supports (display: block) {
+        #FALLBACK_BG {
+          display: none;
+        }
+      }
+
+      .cls-1,
+      .cls-2,
+      .cls-3,
+      .cls-4,
+      .cls-5,
+      .cls-6,
+      .cls-7 {
+        stroke-width: 0px;
+      }
+
+      .cls-1,
+      .cls-3,
+      .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-8 {
+        isolation: isolate;
+        filter: drop-shadow(0px 20px 10px #012c);
+      }
+
+      .cls-9 {
+        opacity: .2;
+      }
+
+      .cls-10 {
+        mix-blend-mode: soft-light;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-6 {
+        fill: #43f4f8;
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-4);
+      }</style>
+  <linearGradient id="linear-gradient" x1="557.34" x2="2442.7" y1="1500" y2="1500" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#1eafc0" offset="0"/>
+   <stop stop-color="#1eafc0" stop-opacity="0" offset=".19"/>
+  </linearGradient>
+  <linearGradient id="linear-gradient-2" x1="448.56" x2="2773" y1="1938.5" y2="1938.5" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#0f7589" offset="0"/>
+   <stop stop-color="#24c7d8" offset=".74"/>
+   <stop stop-color="#2eedfc" offset=".91"/>
+  </linearGradient>
+  <linearGradient id="linear-gradient-3" x1="448.56" x2="2773" y1="1781.4" y2="1781.4" xlink:href="#linear-gradient-2"/>
+  <linearGradient id="linear-gradient-4" x1="1500" x2="1500" y1="2751.1" y2="248.91" gradientUnits="userSpaceOnUse">
+   <stop offset=".12"/>
+   <stop stop-color="#0a0a0a" stop-opacity=".85" offset=".18"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient21" x1="1500" x2="1500" y1="1.4099e-5" y2="3e3" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#323232" offset="0"/>
+   <stop stop-color="#3a3a3a" offset=".50328"/>
+   <stop stop-color="#121212" offset="1"/>
+  </linearGradient>
+  <radialGradient id="radialGradient39" cx="1557.6" cy=".9025" r="1500" gradientTransform="matrix(-.0011234 2.9466 -1.362 -.0005192 1503 -4589.7)" gradientUnits="userSpaceOnUse">
+   <stop stop-opacity="0" offset="0"/>
+   <stop stop-opacity="0" offset=".5845"/>
+   <stop stop-color="#121212" stop-opacity=".49804" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g class="cls-8">
+  <g id="FALLBACK_BG">
+   <!--These are here, just so this image looks correct in an image viewer, too.-->
+   <!--This file is designed for use in a browser only, these are only here because someone was confused why the background was gone in their editor-->
+   <rect width="3e3" height="3e3" fill="url(#linearGradient21)"/>
+   <rect width="3e3" height="3e3" fill="url(#radialGradient39)"/>
+  </g>
+  <g id="MAIN">
+   <path class="cls-1" d="m1500 2751.1-942.65-544.12v-1958.1s715.44 412.98 715.44 412.98v283.95l-257.26-148.89v1014.4l-361.47 264.41 396.68-160.97 449.27 259.34 449.27-259.34 396.68 160.97-361.47-264.41v-1014.4l-257.26 148.89v-283.95l715.44-412.98v1958.1s-942.66 544.12-942.66 544.12m227.3-1682.5 186.84-107.74v850.48l-414.15 239.94-413.97-239.94v-850.48l186.84 107.74v681.85l227.13 130.99 227.31-130.99v-681.85z"/>
+   <g data-name="GRAD 0">
+    <path class="cls-3" d="m1500 2751.1-942.65-544.12v-1958.1s715.44 412.98 715.44 412.98v283.95l-257.26-148.89v1014.4l-361.47 264.41 396.68-160.97 449.27 259.34 449.27-259.34 396.68 160.97-361.47-264.41v-1014.4l-257.26 148.89v-283.95l715.44-412.98v1958.1s-942.66 544.12-942.66 544.12m227.3-1682.5 186.84-107.74v850.48l-414.15 239.94-413.97-239.94v-850.48l186.84 107.74v681.85l227.13 130.99 227.31-130.99v-681.85z"/>
+   </g>
+   <polygon class="cls-2" points="2442.7 248.91 1727.2 661.89 1727.2 945.83 1984.5 796.94 1984.5 1549.4 2442.7 1549.4"/>
+   <path class="cls-2" d="m1015.5 1479.7v-682.79l257.26 148.89v-283.95l-715.44-412.97v878.44c106.01 111.8 277.26 262.35 458.18 352.39z"/>
+   <path class="cls-2" d="m1086 1511.4c62.74 25.01 125.77 41.35 186.84 44.99v-487.74l-186.84-107.74v550.49z"/>
+   <polygon class="cls-2" points="1497.5 2749.6 1500 2751.1 1502.6 2749.6"/>
+   <polygon class="cls-2" points="1914.2 960.9 1727.3 1068.6 1727.3 1549.4 1914.2 1549.4"/>
+   <path class="cls-4" d="m2442.6 2207v-657.62s-458.18 0-458.18 0v262.04l361.47 264.41-396.68-160.97-449.27 259.34-449.27-259.34-396.68 160.97 361.47-264.41v-331.66c-180.92-90.04-352.17-240.59-458.18-352.39v1079.6s940.11 542.65 940.11 542.65h5.09s940.11-542.65 940.11-542.65z"/>
+   <path class="cls-5" d="m1086 1811.4 413.97 239.94 414.15-239.94v-262.04h-186.84v201.14l-227.31 130.99-227.13-130.99v-194.11c-61.07-3.64-124.1-19.98-186.84-44.99v299.99z"/>
+  </g>
+  <g id="OUTLINE">
+   <g class="cls-9">
+    <path class="cls-6" d="m1880.2 1018.8v772.04l-380.14 220.24-379.97-220.24v-772.04l118.84 68.53v681.85l244.14 140.8 16.98 9.79 16.98-9.79 227.31-130.99 17.02-9.81v-681.85l118.84-68.53m34-58.86-186.84 107.74v681.85l-227.31 130.99-227.13-130.99v-681.85l-186.84-107.74v850.48l413.97 239.94 414.15-239.94v-850.48z"/>
+   </g>
+   <g class="cls-9">
+    <path class="cls-6" d="m2408.7 306.79v1771.8s-42.63-31.18-42.63-31.18l-347.55-254.22v-1056.2l-51.03 29.54-206.22 119.36v-205.35l647.44-373.73m-1817.3-0.01 647.44 373.73v205.35l-206.22-119.36-51.03-29.54v1056.2l-347.55 254.22-42.63 31.18v-1771.7m1360.5 1644.8 456.78 185.35v49.41l-908.65 524.49-908.65-524.49v-49.41s75.49-30.63 75.49-30.63l381.29-154.72 434.88 251.04 17 9.81 17-9.81 434.88-251.04m490.76-1703.7-715.44 412.98v283.95l257.26-148.9v1014.4l361.47 264.41-396.68-160.97-449.27 259.34-449.27-259.34-396.68 160.97 361.47-264.41v-1014.4l257.26 148.9v-283.95l-715.44-412.98v1958.1s942.66 544.12 942.66 544.12l942.65-544.12v-1958.1z"/>
+   </g>
+  </g>
+  <g data-name="GRAD 1">
+   <g class="cls-10">
+    <path class="cls-7" d="m1500 2751.1-942.65-544.12v-1958.1s715.44 412.98 715.44 412.98v283.95l-257.26-148.89v1014.4l-361.47 264.41 396.68-160.97 449.27 259.34 449.27-259.34 396.68 160.97-361.47-264.41v-1014.4l-257.26 148.89v-283.95l715.44-412.98v1958.1s-942.66 544.12-942.66 544.12m227.3-1682.5 186.84-107.74v850.48l-414.15 239.94-413.97-239.94v-850.48l186.84 107.74v681.85l227.13 130.99 227.31-130.99v-681.85z"/>
+   </g>
+  </g>
+ </g>
+</svg>
