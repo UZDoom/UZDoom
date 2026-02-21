@@ -1272,7 +1272,8 @@ set( GAME_SOURCES
 )
 
 if(OASIS_STAR_API)
-	list(APPEND GAME_SOURCES uzdoom_star_integration.cpp)
+	list(APPEND GAME_SOURCES uzdoom_star_integration.cpp
+    star_sync.c)
 endif()
 
 set( GAME_NONPCH_SOURCES ${GAME_SOURCES} )
@@ -1326,7 +1327,8 @@ if(OASIS_STAR_API AND STAR_API_DIR)
 		endif()
 		target_link_libraries(zdoom star_api)
 	endif()
-	set_source_files_properties(uzdoom_star_integration.cpp PROPERTIES SKIP_PRECOMPILE_HEADERS TRUE)
+	set_source_files_properties(uzdoom_star_integration.cpp
+    star_sync.c PROPERTIES SKIP_PRECOMPILE_HEADERS TRUE)
 endif()
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")

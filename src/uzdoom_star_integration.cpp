@@ -8,6 +8,7 @@
 
 #include "uzdoom_star_integration.h"
 #include "star_api.h"
+#include "star_sync.h"
 #include "odoom_branding.h"
 
 #include <cstdlib>
@@ -65,6 +66,8 @@ static bool g_star_has_last_pickup = false;
 static bool g_star_face_suppressed_for_session = false;
 /** Single source of truth for status bar face; only set by star face on/off and beam-in/out. */
 static bool g_star_show_anorak_face = false;
+/** True when we started async SSO auth so beamin command can show "Authenticating..." instead of "Beam-in failed". */
+static bool g_star_async_auth_pending = false;
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, oasis_star_beam_face, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, odoom_star_api_url, "https://star-api.oasisplatform.world/api", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
@@ -81,6 +84,17 @@ CVAR(Float, odoom_oq_monster_scale_enforcer, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCO
 CVAR(Float, odoom_oq_monster_scale_spawn, 1.00f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Float, odoom_oq_monster_scale_knight, 0.60f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, odoom_star_username, "", 0)
+CVAR(String, odoom_oasis_api_url, "https://api.oasisplatform.world", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+/* Stack (1) = each pickup adds quantity; Unlock (0) = one per type. Ammo always stacks. Shared with OQuake; sigils are OQuake-only. */
+CVAR(Int, odoom_star_stack_armor, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, odoom_star_stack_weapons, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, odoom_star_stack_powerups, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, odoom_star_stack_keys, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+
+/* Config: ODOOM stores STAR options in the engine config (e.g. gzdoom-<user>.ini in Documents/My Games/GZDoom
+ * or the game folder for portable builds) via CVAR_ARCHIVE. Optionally, oasisstar.json is loaded/saved
+ * when found, for parity with OQuake and cross-game config sharing. */
+static std::string g_odoom_json_config_path;
 
 /* Inventory overlay: when open, temporarily clear key bindings (OQuake-style) so arrows/keys only drive the popup.
  * We read raw key state here and set odoom_key_* CVars so ZScript can drive selection/use/send/tabs. */
@@ -91,6 +105,150 @@ static const int ODOOM_SEND_INPUT_MAX = 64;
 static std::string g_odoom_send_input_buffer;
 static bool g_odoom_send_key_was_down[256];
 static bool g_odoom_send_popup_was_open = false;
+
+static void StarApplyBeamFacePreference(void);
+
+/*-----------------------------------------------------------------------------
+ * OASIS STAR Config - oasisstar.json (parity with OQuake)
+ *-----------------------------------------------------------------------------*/
+static bool ODOOM_FindConfigFile(const char* filename, std::string& out_path) {
+	FILE* test = fopen(filename, "r");
+	if (test) { fclose(test); out_path = filename; return true; }
+	const char* locations[] = { "build/", "../build/", "OASIS Omniverse/ODOOM/build/", nullptr };
+	for (int i = 0; locations[i]; i++) {
+		char buf[512];
+		snprintf(buf, sizeof(buf), "%s%s", locations[i], filename);
+		test = fopen(buf, "r");
+		if (test) { fclose(test); out_path = buf; return true; }
+	}
+#ifdef _WIN32
+	char exe_path[MAX_PATH] = {0};
+	if (GetModuleFileNameA(nullptr, exe_path, sizeof(exe_path))) {
+		std::string exe_dir(exe_path);
+		size_t last = exe_dir.find_last_of("\\/");
+		if (last != std::string::npos) {
+			exe_dir.resize(last);
+			out_path = exe_dir + "\\"; out_path += filename;
+			test = fopen(out_path.c_str(), "r");
+			if (test) { fclose(test); return true; }
+			out_path = exe_dir + "\\build\\"; out_path += filename;
+			test = fopen(out_path.c_str(), "r");
+			if (test) { fclose(test); return true; }
+		}
+	}
+#endif
+	return false;
+}
+
+static bool ODOOM_ExtractJsonValue(const char* json, const char* key, char* value, int maxlen) {
+	char search[128];
+	snprintf(search, sizeof(search), "\"%s\"", key);
+	const char* pos = strstr(json, search);
+	if (!pos) return false;
+	pos += strlen(search);
+	while (*pos && (*pos == ' ' || *pos == ':' || *pos == '\t')) pos++;
+	if (*pos == '"') {
+		pos++;
+		int n = 0;
+		while (*pos && *pos != '"' && *pos != '\n' && *pos != '\r' && n < maxlen - 1) {
+			if (*pos == '\\' && pos[1]) { pos++; if (*pos == 'n') value[n++] = '\n'; else if (*pos == 't') value[n++] = '\t'; else if (*pos == '\\') value[n++] = '\\'; else if (*pos == '"') value[n++] = '"'; else value[n++] = *pos; }
+			else value[n++] = *pos;
+			pos++;
+		}
+		value[n] = '\0';
+		return n > 0;
+	}
+	int n = 0;
+	while (*pos && *pos != ',' && *pos != '}' && *pos != '\n' && *pos != '\r' && *pos != ' ' && n < maxlen - 1)
+		value[n++] = *pos++;
+	value[n] = '\0';
+	return n > 0;
+}
+
+static bool ODOOM_LoadJsonConfig(const char* json_path) {
+	FILE* f = fopen(json_path, "r");
+	if (!f) return false;
+	char json[4096] = {0};
+	size_t len = fread(json, 1, sizeof(json) - 1, f);
+	fclose(f);
+	if (len == 0) return false;
+	json[len] = '\0';
+	bool loaded = false;
+	char value[256];
+	if (ODOOM_ExtractJsonValue(json, "star_api_url", value, (int)sizeof(value))) {
+		odoom_star_api_url = value;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "oasis_api_url", value, (int)sizeof(value))) {
+		odoom_oasis_api_url = value;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "beam_face", value, (int)sizeof(value))) {
+		oasis_star_beam_face = (atoi(value) != 0);
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "stack_armor", value, (int)sizeof(value))) {
+		odoom_star_stack_armor = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "stack_weapons", value, (int)sizeof(value))) {
+		odoom_star_stack_weapons = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "stack_powerups", value, (int)sizeof(value))) {
+		odoom_star_stack_powerups = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "stack_keys", value, (int)sizeof(value))) {
+		odoom_star_stack_keys = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	return loaded;
+}
+
+static bool ODOOM_SaveJsonConfig(const char* json_path) {
+	FILE* f = fopen(json_path, "w");
+	if (!f) return false;
+	const char* star_url = (const char*)odoom_star_api_url;
+	const char* oasis_url = (const char*)odoom_oasis_api_url;
+	fprintf(f, "{\n");
+	fprintf(f, "  \"star_api_url\": \"%s\",\n", star_url ? star_url : "");
+	fprintf(f, "  \"oasis_api_url\": \"%s\",\n", oasis_url ? oasis_url : "");
+	fprintf(f, "  \"beam_face\": %d,\n", oasis_star_beam_face ? 1 : 0);
+	fprintf(f, "  \"stack_armor\": %d,\n", odoom_star_stack_armor ? 1 : 0);
+	fprintf(f, "  \"stack_weapons\": %d,\n", odoom_star_stack_weapons ? 1 : 0);
+	fprintf(f, "  \"stack_powerups\": %d,\n", odoom_star_stack_powerups ? 1 : 0);
+	fprintf(f, "  \"stack_keys\": %d\n", odoom_star_stack_keys ? 1 : 0);
+	fprintf(f, "}\n");
+	fclose(f);
+	return true;
+}
+
+/** Write current STAR cvars to oasisstar.json. Used on exit, star config save, star seturl/setoasisurl, star face. */
+static void ODOOM_SaveStarConfigToFiles(void) {
+	std::string path;
+	if (!g_odoom_json_config_path.empty())
+		path = g_odoom_json_config_path;
+	else if (ODOOM_FindConfigFile("oasisstar.json", path))
+		g_odoom_json_config_path = path;
+	else {
+		/* Prefer exe dir for new file */
+#ifdef _WIN32
+		char exe_path[MAX_PATH] = {0};
+		if (GetModuleFileNameA(nullptr, exe_path, sizeof(exe_path))) {
+			std::string exe_dir(exe_path);
+			size_t last = exe_dir.find_last_of("\\/");
+			if (last != std::string::npos) {
+				exe_dir.resize(last);
+				path = exe_dir + "\\oasisstar.json";
+			}
+		}
+#endif
+		if (path.empty()) path = "oasisstar.json";
+	}
+	if (!path.empty() && ODOOM_SaveJsonConfig(path.c_str()))
+		g_odoom_json_config_path = path;
+}
 
 /** Return 1 if key is currently down, 0 otherwise. Uses platform API when available. */
 static int ODOOM_GetRawKeyDown(int vk_or_ascii)
@@ -104,8 +262,37 @@ static int ODOOM_GetRawKeyDown(int vk_or_ascii)
 #endif
 }
 
+/** Poll async auth result and apply to g_star_initialized / username / avatar_id. Call every frame. */
+static void ODOOM_STAR_PollAsyncAuth(void)
+{
+	if (star_sync_auth_poll() != 1)
+		return;
+	int success = 0;
+	char username_buf[64] = {};
+	char avatar_id_buf[64] = {};
+	char error_buf[256] = {};
+	if (!star_sync_auth_get_result(&success, username_buf, sizeof(username_buf), avatar_id_buf, sizeof(avatar_id_buf), error_buf, sizeof(error_buf)))
+		return;
+	g_star_async_auth_pending = false;
+	if (success) {
+		g_star_initialized = true;
+		g_star_logged_runtime_auth_failure = false;
+		g_star_logged_missing_auth_config = false;
+		g_star_effective_username = username_buf;
+		g_star_effective_avatar_id = avatar_id_buf;
+		g_star_config.avatar_id = g_star_effective_avatar_id.empty() ? nullptr : g_star_effective_avatar_id.c_str();
+		odoom_star_username = g_star_effective_username.c_str();
+		StarApplyBeamFacePreference();
+		Printf(PRINT_NONOTIFY, "Beam-in successful. Cross-game features enabled.\n");
+	} else {
+		Printf(PRINT_NONOTIFY, "Beam-in failed: %s\n", error_buf[0] ? error_buf : star_api_get_last_error());
+	}
+}
+
 void ODOOM_InventoryInputCaptureFrame(void)
 {
+	ODOOM_STAR_PollAsyncAuth();
+
 	FBaseCVar* openVar = FindCVar("odoom_inventory_open", nullptr);
 	const bool open = (openVar && openVar->GetRealType() == CVAR_Int && openVar->GetGenericRep(CVAR_Int).Int != 0);
 
@@ -576,18 +763,14 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 	const char* username = g_star_effective_username.empty() ? nullptr : g_star_effective_username.c_str();
 	const char* password = g_star_effective_password.empty() ? nullptr : g_star_effective_password.c_str();
 	if (HasValue(username) && HasValue(password)) {
-		if (logVerbose) StarLogInfo("Beaming in... authenticating avatar via SSO.");
-		star_api_result_t auth = star_api_authenticate(username, password);
-		if (auth == STAR_API_SUCCESS) {
-			g_star_initialized = true;
-			g_star_logged_runtime_auth_failure = false;
-			g_star_logged_missing_auth_config = false;
-			odoom_star_username = g_star_effective_username.c_str();
-			StarApplyBeamFacePreference();
-			if (logVerbose) StarLogInfo("Beam-in successful (SSO). Cross-game features enabled.");
-			return true;
+		if (star_sync_auth_in_progress()) {
+			if (logVerbose) StarLogInfo("SSO auth already in progress.");
+			return false;
 		}
-		if (logVerbose) StarLogError("Beam-in failed (SSO): %s", star_api_get_last_error());
+		if (logVerbose) StarLogInfo("Beaming in... starting async SSO authentication.");
+		star_sync_auth_start(username, password);
+		g_star_async_auth_pending = true;
+		return false; /* Result will be applied in ODOOM_STAR_PollAsyncAuth. */
 	}
 
 	// API key + avatar mode: verify we can access inventory for this avatar.
@@ -644,6 +827,15 @@ static const char* GetKeycardDescription(int keynum) {
 }
 
 void UZDoom_STAR_Init(void) {
+	star_sync_init();
+	/* Load STAR options from oasisstar.json if present (parity with OQuake). */
+	{
+		std::string path;
+		if (ODOOM_FindConfigFile("oasisstar.json", path) && ODOOM_LoadJsonConfig(path.c_str())) {
+			g_odoom_json_config_path = path;
+			StarLogInfo("Loaded STAR config from: %s", path.c_str());
+		}
+	}
 	/* Always start with default Doom face until explicit beam-in. */
 	g_star_show_anorak_face = false;
 	oasis_star_anorak_face = false;
@@ -676,6 +868,9 @@ void UZDoom_STAR_Init(void) {
 }
 
 void UZDoom_STAR_Cleanup(void) {
+	ODOOM_SaveStarConfigToFiles(); /* persist STAR options to oasisstar.json on exit */
+	star_sync_cleanup();
+	g_star_async_auth_pending = false;
 	if (g_star_client_ready) {
 		star_api_cleanup();
 		g_star_client_ready = false;
@@ -838,6 +1033,12 @@ CCMD(star)
 		Printf("  star pickup keycard <red|blue|yellow|skull> - Add keycard (convenience)\n");
 		Printf("  star debug on|off|status - Toggle STAR debug logging in console\n");
 		Printf("  star face on|off|status - Toggle beamed-in face switch (default on)\n");
+		Printf("  star config        - Show current STAR config (URLs, beam face, stack options)\n");
+		Printf("  star config save   - Write config to oasisstar.json now (also saved on exit)\n");
+		Printf("  star stack <armor|weapons|powerups|keys> <0|1> - Stack (1) or unlock (0) per category\n");
+		Printf("  star seturl <url>       - Set STAR API URL (saved to config)\n");
+		Printf("  star setoasisurl <url>  - Set OASIS API URL (saved to config)\n");
+		Printf("  star reloadconfig  - Reload from oasisstar.json\n");
 		Printf("  star beamin [user pass]|[jwt <token> [avatar]] [-noface] - Beam in/authenticate\n");
 		Printf("  star beamout  - Log out / disconnect from STAR\n");
 		Printf("\n");
@@ -921,6 +1122,7 @@ CCMD(star)
 			g_star_face_suppressed_for_session = false;
 			g_star_show_anorak_face = (g_star_initialized && StarShouldUseAnorakFace());
 			oasis_star_anorak_face = g_star_show_anorak_face;
+			ODOOM_SaveStarConfigToFiles();
 			Printf("Beam-in face switch enabled.\n");
 			Printf("\n");
 			return;
@@ -929,6 +1131,7 @@ CCMD(star)
 			oasis_star_beam_face = false;
 			g_star_show_anorak_face = false;
 			oasis_star_anorak_face = false;
+			ODOOM_SaveStarConfigToFiles();
 			Printf("Beam-in face switch disabled.\n");
 			Printf("\n");
 			return;
@@ -1128,6 +1331,11 @@ CCMD(star)
 			Printf("\n");
 			return;
 		}
+		if (g_star_async_auth_pending) {
+			Printf("Authenticating... Please wait.\n");
+			Printf("\n");
+			return;
+		}
 		g_star_face_suppressed_for_session = false;
 		Printf("Beam-in failed: %s\n", star_api_get_last_error());
 		Printf("\n");
@@ -1145,6 +1353,7 @@ CCMD(star)
 		}
 		g_star_client_ready = false;
 		g_star_initialized = false;
+		g_star_async_auth_pending = false;
 		g_star_face_suppressed_for_session = false;
 		g_star_effective_username.clear();
 		g_star_show_anorak_face = false;
@@ -1152,6 +1361,81 @@ CCMD(star)
 		odoom_star_username = "";
 		Printf("Beam-out successful. Use 'star beamin' to beam in again.\n");
 		Printf("\n");
+		return;
+	}
+	if (strcmp(sub, "config") == 0) {
+		const char* save_arg = (argv.argc() >= 3) ? argv[2] : nullptr;
+		if (save_arg && strcmp(save_arg, "save") == 0) {
+			ODOOM_SaveStarConfigToFiles();
+			Printf("Config saved to oasisstar.json (if path found). Also saved on exit.\n");
+			return;
+		}
+		const char* star_url = (const char*)odoom_star_api_url;
+		const char* oasis_url = (const char*)odoom_oasis_api_url;
+		Printf("\n");
+		Printf("ODOOM STAR Configuration:\n");
+		Printf("  STAR API URL: %s\n", star_url && star_url[0] ? star_url : "(default: https://star-api.oasisplatform.world/api)");
+		Printf("  OASIS API URL: %s\n", oasis_url && oasis_url[0] ? oasis_url : "(default: https://api.oasisplatform.world)");
+		Printf("  Beam face: %s\n", oasis_star_beam_face ? "on" : "off");
+		Printf("  Stack (1) / Unlock (0) - ammo always stacks:\n");
+		Printf("    stack_armor:    %s\n", odoom_star_stack_armor ? "1 (stack)" : "0 (unlock)");
+		Printf("    stack_weapons:  %s\n", odoom_star_stack_weapons ? "1 (stack)" : "0 (unlock)");
+		Printf("    stack_powerups: %s\n", odoom_star_stack_powerups ? "1 (stack)" : "0 (unlock)");
+		Printf("    stack_keys:     %s\n", odoom_star_stack_keys ? "1 (stack)" : "0 (unlock)");
+		Printf("\n");
+		Printf("To set: star seturl <url>   star setoasisurl <url>\n");
+		Printf("        star stack <armor|weapons|powerups|keys> <0|1>\n");
+		Printf("To save now: star config save (also saved on exit)\n");
+		Printf("\n");
+		return;
+	}
+	if (strcmp(sub, "stack") == 0) {
+		if (argv.argc() < 4) {
+			Printf("Usage: star stack <armor|weapons|powerups|keys> <0|1>\n");
+			Printf("  1 = stack (each pickup adds quantity), 0 = unlock (one per type). Ammo always stacks.\n");
+			return;
+		}
+		const char* cat = argv[2];
+		const char* val = argv[3];
+		int on = (val[0] == '1' && val[1] == '\0') ? 1 : 0;
+		if (strcmp(cat, "armor") == 0) { odoom_star_stack_armor = on; }
+		else if (strcmp(cat, "weapons") == 0) { odoom_star_stack_weapons = on; }
+		else if (strcmp(cat, "powerups") == 0) { odoom_star_stack_powerups = on; }
+		else if (strcmp(cat, "keys") == 0) { odoom_star_stack_keys = on; }
+		else {
+			Printf("Unknown category: %s. Use armor|weapons|powerups|keys (sigils are OQuake-only).\n", cat);
+			return;
+		}
+		ODOOM_SaveStarConfigToFiles();
+		Printf("%s set to %s (%s). Config saved.\n", cat, on ? "1" : "0", on ? "stack" : "unlock");
+		return;
+	}
+	if (strcmp(sub, "seturl") == 0) {
+		if (argv.argc() < 3) { Printf("Usage: star seturl <star_api_url>\n"); return; }
+		odoom_star_api_url = argv[2];
+		ODOOM_SaveStarConfigToFiles();
+		Printf("STAR API URL set to: %s. Config saved.\n", argv[2]);
+		return;
+	}
+	if (strcmp(sub, "setoasisurl") == 0) {
+		if (argv.argc() < 3) { Printf("Usage: star setoasisurl <oasis_api_url>\n"); return; }
+		odoom_oasis_api_url = argv[2];
+		ODOOM_SaveStarConfigToFiles();
+		Printf("OASIS API URL set to: %s. Config saved.\n", argv[2]);
+		return;
+	}
+	if (strcmp(sub, "reloadconfig") == 0) {
+		if (!g_odoom_json_config_path.empty() && ODOOM_LoadJsonConfig(g_odoom_json_config_path.c_str())) {
+			Printf("Reloaded config from: %s\n", g_odoom_json_config_path.c_str());
+			return;
+		}
+		std::string path;
+		if (ODOOM_FindConfigFile("oasisstar.json", path) && ODOOM_LoadJsonConfig(path.c_str())) {
+			g_odoom_json_config_path = path;
+			Printf("Reloaded config from: %s\n", path.c_str());
+			return;
+		}
+		Printf("Could not find or load oasisstar.json.\n");
 		return;
 	}
 	if (strcmp(sub, "send_avatar") == 0) {
