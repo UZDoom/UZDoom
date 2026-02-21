@@ -47,6 +47,7 @@ class LostSoul : Actor
 	{
 	Spawn:
 		SKUL AB 10 BRIGHT A_Look;
+		SKUL AB 10 BRIGHT compatChange;
 		Loop;
 	See:
 		SKUL AB 6 BRIGHT A_Chase;
@@ -111,6 +112,12 @@ class BetaSkull : LostSoul
 extend class Actor
 {
 	const DEFSKULLSPEED = 20;
+	
+	void compatChange()
+	{
+		if (Level.compatflags2 & COMPATF2_NOCOUNTLOST) A_ChangeCountFlags (false, FLAG_NO_CHANGE, FLAG_NO_CHANGE);
+		if (Level.compatflags2 & !COMPATF2_NOCOUNTLOST) A_ChangeCountFlags (true, FLAG_NO_CHANGE, FLAG_NO_CHANGE);
+	}
 	
 	void A_SkullAttack(double skullspeed = DEFSKULLSPEED)
 	{
