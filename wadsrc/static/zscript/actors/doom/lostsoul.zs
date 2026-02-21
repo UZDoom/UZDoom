@@ -46,8 +46,8 @@ class LostSoul : Actor
 	States
 	{
 	Spawn:
-		SKUL AB 10 BRIGHT A_Look;
 		SKUL AB 10 BRIGHT compatChange;
+		SKUL AB 10 BRIGHT A_Look;
 		Loop;
 	See:
 		SKUL AB 6 BRIGHT A_Chase;
@@ -77,6 +77,7 @@ class BetaSkull : LostSoul
 	States
 	{
 	Spawn:
+		SKUL A 10 compatChange;
 		SKUL A 10 A_Look;
 		Loop;
 	See:
@@ -116,7 +117,6 @@ extend class Actor
 	void compatChange()
 	{
 		if (Level.compatflags2 & COMPATF2_NOCOUNTLOST) A_ChangeCountFlags (false, FLAG_NO_CHANGE, FLAG_NO_CHANGE);
-		if (Level.compatflags2 & !COMPATF2_NOCOUNTLOST) A_ChangeCountFlags (true, FLAG_NO_CHANGE, FLAG_NO_CHANGE);
 	}
 	
 	void A_SkullAttack(double skullspeed = DEFSKULLSPEED)
