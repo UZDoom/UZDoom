@@ -91,10 +91,14 @@ CVAR(Int, odoom_star_stack_weapons, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, odoom_star_stack_powerups, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, odoom_star_stack_keys, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
-/* Config: ODOOM stores STAR options in the engine config (e.g. gzdoom-<user>.ini in Documents/My Games/GZDoom
- * or the game folder for portable builds) via CVAR_ARCHIVE. Optionally, oasisstar.json is loaded/saved
- * when found, for parity with OQuake and cross-game config sharing. */
+/* Config: ODOOM stores STAR options in the engine config. Typical path: Documents\\My Games\\UZDoom
+ * (or OneDrive\\Documents\\My Games\\UZDoom) - ini file there is written on exit. STAR cvars use
+ * CVAR_ARCHIVE so they should appear in that ini; if not visible, use oasisstar.json (loaded/saved
+ * when found) for parity with OQuake and cross-game config sharing. */
 static std::string g_odoom_json_config_path;
+
+/** When init (e.g. star_api_init) has failed, we skip retrying until user runs beamin again to avoid spamming "couldn't find the host". */
+static bool g_star_init_failed_this_session = false;
 
 /* Inventory overlay: when open, temporarily clear key bindings (OQuake-style) so arrows/keys only drive the popup.
  * We read raw key state here and set odoom_key_* CVars so ZScript can drive selection/use/send/tabs. */
@@ -699,6 +703,14 @@ static bool StarShouldUseAnorakFace(void) {
 	return oasis_star_beam_face && !g_star_face_suppressed_for_session && EqualsNoCase(TrimAscii(activeName), "anorak");
 }
 
+/** True if current user is dellams or anorak (for add, bossnft, deploynft). */
+static bool StarAllowPrivilegedCommands(void) {
+	std::string u = HasValue((const char*)odoom_star_username) ? std::string((const char*)odoom_star_username) : "";
+	if (u.empty() && !g_star_effective_username.empty()) u = g_star_effective_username;
+	u = TrimAscii(u);
+	return EqualsNoCase(u, "dellams") || EqualsNoCase(u, "anorak");
+}
+
 static void StarApplyBeamFacePreference(void) {
 	g_star_show_anorak_face = g_star_initialized && StarShouldUseAnorakFace();
 	oasis_star_anorak_face = g_star_show_anorak_face;
@@ -708,6 +720,12 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 	const bool logVerbose = verbose;
 	if (g_star_initialized)
 		return true;
+	/* Avoid retrying init every touch/door when host is unreachable - only retry when user explicitly runs beamin. */
+	if (!logVerbose && g_star_init_failed_this_session && !g_star_client_ready) {
+		return false;
+	}
+	if (logVerbose)
+		g_star_init_failed_this_session = false;
 
 	RefreshStarCliOverridesFromExeArgs();
 
@@ -753,10 +771,12 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 		if (logVerbose) StarLogInfo("Calling star_api_init...");
 		star_api_result_t init_result = star_api_init(&g_star_config);
 		if (init_result != STAR_API_SUCCESS) {
+			g_star_init_failed_this_session = true;
 			if (logVerbose) StarLogError("star_api_init failed: %s", star_api_get_last_error());
 			return false;
 		}
 		g_star_client_ready = true;
+		g_star_init_failed_this_session = false;
 		if (logVerbose) StarLogInfo("star_api_init succeeded (interop DLL/API ready).");
 	}
 
@@ -780,6 +800,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 		star_api_result_t inv = star_api_get_inventory(&list);
 		if (inv == STAR_API_SUCCESS) {
 			g_star_initialized = true;
+			g_star_init_failed_this_session = false;
 			g_star_logged_runtime_auth_failure = false;
 			g_star_logged_missing_auth_config = false;
 			if (!g_star_effective_username.empty())
@@ -1052,6 +1073,7 @@ CCMD(star)
 			Printf("\n");
 			return;
 		}
+		if (!StarAllowPrivilegedCommands()) { Printf("Only dellams or anorak can use star pickup keycard.\n"); Printf("\n"); return; }
 		const char* color = argv[3];
 		const char* name = nullptr;
 		const char* desc = nullptr;
@@ -1180,6 +1202,7 @@ CCMD(star)
 		return;
 	}
 	if (strcmp(sub, "add") == 0) {
+		if (!StarAllowPrivilegedCommands()) { Printf("Only dellams or anorak can use star add.\n"); return; }
 		if (argv.argc() < 3) { Printf("Usage: star add <item_name> [description] [item_type]\n"); return; }
 		const char* name = argv[2];
 		const char* desc = argv.argc() > 3 ? argv[3] : "Added from console";
@@ -1222,6 +1245,7 @@ CCMD(star)
 		return;
 	}
 	if (strcmp(sub, "bossnft") == 0) {
+		if (!StarAllowPrivilegedCommands()) { Printf("Only dellams or anorak can use star bossnft.\n"); return; }
 		if (argv.argc() < 3) { Printf("Usage: star bossnft <boss_name> [description]\n"); return; }
 		const char* name = argv[2];
 		const char* desc = argv.argc() > 3 ? argv[3] : "Boss from UZDoom";
@@ -1353,6 +1377,7 @@ CCMD(star)
 		}
 		g_star_client_ready = false;
 		g_star_initialized = false;
+		g_star_init_failed_this_session = false;
 		g_star_async_auth_pending = false;
 		g_star_face_suppressed_for_session = false;
 		g_star_effective_username.clear();
