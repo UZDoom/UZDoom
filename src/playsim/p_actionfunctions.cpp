@@ -5204,7 +5204,7 @@ static void SetModelBoneRotationNative(AActor * self, int model_index, int bone_
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5224,7 +5224,7 @@ static void SetModelNamedBoneRotationNative(AActor * self, int model_index, int 
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5278,7 +5278,7 @@ static void SetModelBoneTranslationNative(AActor * self, int model_index, int bo
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5298,7 +5298,7 @@ static void SetModelNamedBoneTranslationNative(AActor * self, int model_index, i
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5350,7 +5350,7 @@ static void SetModelBoneScalingNative(AActor * self, int model_index, int bone_i
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5370,7 +5370,7 @@ static void SetModelNamedBoneScalingNative(AActor * self, int model_index, int b
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5452,9 +5452,11 @@ DEFINE_ACTION_FUNCTION(AActor, GetBoneOffset)
 	{
 		auto &mod = self->modelData->modelBoneOverrides[0][bone_index];
 
-		translation = DVector3(mod.translation.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
-		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), self->Level->totaltime + 1.0));
-		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
+		int tics = self->GetModelTimer() + 1.0;
+
+		translation = DVector3(mod.translation.Get(FVector3(0,0,0), tics));
+		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), tics));
+		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), tics));
 	}
 	
 	if(numret > 2)
@@ -5493,9 +5495,11 @@ DEFINE_ACTION_FUNCTION(AActor, GetNamedBoneOffset)
 	{
 		auto &mod = self->modelData->modelBoneOverrides[0][bone_index];
 
-		translation = DVector3(mod.translation.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
-		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), self->Level->totaltime + 1.0));
-		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
+		int tics = self->GetModelTimer() + 1.0;
+
+		translation = DVector3(mod.translation.Get(FVector3(0,0,0), tics));
+		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), tics));
+		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), tics));
 	}
 
 	if(numret > 2)
@@ -6408,7 +6412,7 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 		return false;
 	}
 
-	double tic = self->Level->totaltime;
+	double tic = self->GetModelTimer();
 	if (!WorldPaused(true) && !self->Level->isFrozen())
 	{
 		tic += ticFrac;
@@ -6576,7 +6580,7 @@ void SetAnimationFrameRateInternal(AActor * self, double framerate, double ticFr
 
 	if(!anims) anims = &self->modelData->anims;
 
-	double tic = self->Level->totaltime;
+	double tic = self->GetModelTimer();
 	if (!WorldPaused(true) && !self->Level->isFrozen())
 	{
 		tic += ticFrac;
@@ -7148,7 +7152,7 @@ DEFINE_ACTION_FUNCTION(AActor, CalculateAnimation)
 
 	AnimInfo nativeAnims = AnimLayerToAnimInfo(layer);
 
-	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->Level->totaltime + 1);
+	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + 1);
 
 	RestoreAnimLayer(layer, nativeAnims);
 
@@ -7167,7 +7171,7 @@ DEFINE_ACTION_FUNCTION(AActor, CalculateAnimationUI)
 
 	AnimInfo nativeAnims = AnimLayerToAnimInfo(layer);
 
-	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->Level->totaltime + I_GetTimeFrac());
+	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + I_GetTimeFrac());
 
 	RestoreAnimLayer(layer, nativeAnims);
 
@@ -7264,7 +7268,7 @@ DEFINE_ACTION_FUNCTION(AActor, FindAnimationFrame)
 	DInterpolatedFrame *frame2 = nullptr;
 	float inter = -1;
 
-	FindAnimationFrameInternal(layer, self->Level->totaltime + 1, frame1, frame2, inter);
+	FindAnimationFrameInternal(layer, self->GetModelTimer() + 1, frame1, frame2, inter);
 
 	if(numret > 2)
 	{
@@ -7293,7 +7297,7 @@ DEFINE_ACTION_FUNCTION(AActor, FindAnimationFrameUI)
 	DInterpolatedFrame *frame2 = nullptr;
 	float inter = -1;
 
-	double tic = self->Level->totaltime;
+	double tic = self->GetModelTimer();
 	if (!WorldPaused(true) && !self->Level->isFrozen())
 	{
 		tic += I_GetTimeFrac();
@@ -7397,7 +7401,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBones)
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + 1.0;
+	double tic = self->GetModelTimer() + 1.0;
 	
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
@@ -7424,7 +7428,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesUI)
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + I_GetTimeFrac();
+	double tic = self->GetModelTimer() + I_GetTimeFrac();
 	
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
@@ -7477,7 +7481,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesRange)
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + 1.0;
+	double tic = self->GetModelTimer() + 1.0;
 
 	int n = std::min(bones->frameData.SSize(), std::min(overrides.SSize(), start + length));
 	for(int i = start; i < n; i++)
@@ -7506,7 +7510,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesRangeUI)
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + I_GetTimeFrac();
+	double tic = self->GetModelTimer() + I_GetTimeFrac();
 
 	int n = std::min(bones->frameData.SSize(), std::min(overrides.SSize(), start + length));
 	for(int i = start; i < n; i++)
@@ -7560,7 +7564,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesMask)
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + 1.0;
+	double tic = self->GetModelTimer() + 1.0;
 
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
@@ -7588,7 +7592,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesMaskUI)
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + I_GetTimeFrac();
+	double tic = self->GetModelTimer() + I_GetTimeFrac();
 
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)

@@ -120,7 +120,7 @@ VSMatrix FSpriteModelFrame::ObjectToWorldMatrix(AActor * actor, float x, float y
 	// [Nash] take SpriteRotation into account
 	angle += actor->SpriteRotation.Degrees();
 
-	double tic = actor->Level->totaltime;
+	double tic = actor->GetModelTimer();
 
 	if (!WorldPaused(true) && !actor->isFrozen())
 	{
@@ -644,7 +644,7 @@ static inline void RenderModelFrame(FModelRenderer *renderer, int i, const FSpri
 
 void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpriteModelFrame *smf, const FState *curState, int curTics, double ticFrac, FTranslationID translation, AActor* actor)
 {
-	double tic = actor->Level->totaltime;
+	double tic = actor->GetModelTimer();
 	if (!WorldPaused(true) && !actor->isFrozen())
 	{
 		tic += ticFrac;

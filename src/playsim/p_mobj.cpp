@@ -4264,6 +4264,18 @@ DEFINE_ACTION_FUNCTION(AActor, CheckPortalTransition)
 	return 0;
 }
 
+int AActor::GetModelTimer()
+{
+	if(IsClientSide())
+	{
+		return Level->LocalWorldTimer;
+	}
+	else
+	{
+		return Level->totaltime;
+	}
+}
+
 void AActor::CalcBones(bool recalc)
 {
 	if(modelData && (!recalc || (modelData->flags & MODELDATA_GET_BONE_INFO_RECALC)) && modelData->flags & MODELDATA_GET_BONE_INFO)
@@ -4275,7 +4287,7 @@ void AActor::CalcBones(bool recalc)
 		if(!smf) return;
 
 		bool is_decoupled = flags9 & MF9_DECOUPLEDANIMATIONS;
-		double tic = Level->totaltime + 1;
+		double tic = GetModelTimer() + 1;
 
 		CalcModelFrameInfo frameinfo = CalcModelFrame(Level, smf, state, tics, modelData, this, is_decoupled, tic, 1.0);
 		
