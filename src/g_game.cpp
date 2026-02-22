@@ -689,6 +689,7 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	}
 	else
 	{
+		turnheld += TicDup;
 		int tspeed = speed;
 
 		if (turnheld < SLOWTURNTICS) tspeed += 2; // slow turn
