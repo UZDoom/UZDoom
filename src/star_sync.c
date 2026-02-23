@@ -217,6 +217,8 @@ static int g_inv_has_result = 0;
 static star_item_list_t* g_inv_list = NULL;
 static star_api_result_t g_inv_result = STAR_API_ERROR_NOT_INITIALIZED;
 static char g_inv_error_msg[INV_ERROR_SIZE] = {0};
+static star_sync_inventory_on_done_fn g_inv_on_done = NULL;
+static void* g_inv_on_done_user = NULL;
 
 #ifdef _WIN32
 static CRITICAL_SECTION g_inv_lock;
@@ -315,18 +317,31 @@ static void* inventory_thread_proc(void* param) {
     g_inv_list = list;
     g_inv_result = result;
     str_copy(g_inv_error_msg, err ? err : "", sizeof(g_inv_error_msg));
+    {
+        star_sync_inventory_on_done_fn cb = g_inv_on_done;
+        void* ud = g_inv_on_done_user;
+        g_inv_on_done = NULL;
+        g_inv_on_done_user = NULL;
 #ifdef _WIN32
-    LeaveCriticalSection(&g_inv_lock);
-    return 0;
+        LeaveCriticalSection(&g_inv_lock);
 #else
-    pthread_mutex_unlock(&g_inv_lock);
-    return NULL;
+        pthread_mutex_unlock(&g_inv_lock);
 #endif
+        if (cb)
+            cb(ud);
+#ifdef _WIN32
+        return 0;
+#else
+        return NULL;
+#endif
+    }
 }
 
 void star_sync_inventory_start(star_sync_local_item_t* local_items,
     int local_count,
-    const char* default_game_source) {
+    const char* default_game_source,
+    star_sync_inventory_on_done_fn on_done,
+    void* on_done_user) {
 #ifdef _WIN32
     EnterCriticalSection(&g_inv_lock);
 #else
@@ -334,9 +349,9 @@ void star_sync_inventory_start(star_sync_local_item_t* local_items,
 #endif
     if (g_inv_in_progress) {
 #ifdef _WIN32
-        LeaveCriticalSection(&g_inv_lock);
+    LeaveCriticalSection(&g_inv_lock);
 #else
-        pthread_mutex_unlock(&g_inv_lock);
+    pthread_mutex_unlock(&g_inv_lock);
 #endif
         return;
     }
@@ -348,6 +363,8 @@ void star_sync_inventory_start(star_sync_local_item_t* local_items,
     g_inv_local_items = local_items;
     g_inv_local_count = local_count < 0 ? 0 : local_count;
     str_copy(g_inv_default_game_source, default_game_source ? default_game_source : "", sizeof(g_inv_default_game_source));
+    g_inv_on_done = on_done;
+    g_inv_on_done_user = on_done_user;
     g_inv_in_progress = 1;
 #ifdef _WIN32
     LeaveCriticalSection(&g_inv_lock);

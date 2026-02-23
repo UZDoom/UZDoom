@@ -26,3 +26,6 @@ server int odoom_send_quantity = 1;
 server int odoom_send_to_clan = 0;
 // One character per frame for ZScript to append to name (0=none, 8=backspace, else ASCII)
 server int odoom_send_last_char = 0;
+
+server int odoom_star_inventory_count = 0;
+server string odoom_star_inventory_list = "";

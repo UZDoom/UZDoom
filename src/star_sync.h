@@ -64,12 +64,19 @@ int star_sync_auth_in_progress(void);
  * Async inventory refresh (optionally sync local items first, then get_inventory)
  * --------------------------------------------------------------------------- */
 
+/** Optional completion callback: invoked from the background thread when sync is done. If non-NULL, game can
+ *  set a flag or enqueue work so the main thread processes the result without polling. Callback may be NULL. */
+typedef void (*star_sync_inventory_on_done_fn)(void* user_data);
+
 /** Start inventory refresh on a background thread. Syncs local_items (has_item/add_item) then get_inventory.
- *  local_items may be NULL (or count 0) to only fetch inventory. synced_flags may be NULL if no local items. */
+ *  local_items may be NULL (or count 0) to only fetch inventory.
+ *  on_done and on_done_user: optional; if on_done is non-NULL, it is called from the worker thread when done (so main thread can avoid polling). Pass NULL, NULL to keep polling. */
 void star_sync_inventory_start(
     star_sync_local_item_t* local_items,
     int local_count,
-    const char* default_game_source
+    const char* default_game_source,
+    star_sync_inventory_on_done_fn on_done,
+    void* on_done_user
 );
 
 /** Returns: 0 = in progress, 1 = finished (call star_sync_inventory_get_result and free the list), -1 = not started / no result */
