@@ -354,6 +354,19 @@ class OASISInventoryOverlayHandler : EventHandler
 		return !(item is "Key") && !(item is "Powerup") && !(item is "Weapon") && !(item is "Armor") && !(item is "Ammo");
 	}
 
+	// STAR item matches tab (same data as "star inventory" command, from odoom_star_inventory_list).
+	private ui bool IsStarItemInTab(String itemType, String itemName, int tabIndex)
+	{
+		String t = itemType;
+		String n = itemName;
+		if (tabIndex == TAB_KEYS) return t.IndexOf("Key") >= 0 || n.IndexOf("key") >= 0;
+		if (tabIndex == TAB_POWERUPS) return t.IndexOf("Powerup") >= 0 || t == "Powerup";
+		if (tabIndex == TAB_WEAPONS) return t.IndexOf("Weapon") >= 0 || t == "Weapon";
+		if (tabIndex == TAB_AMMO) return t.IndexOf("Ammo") >= 0 || t == "Ammo";
+		if (tabIndex == TAB_ARMOR) return t.IndexOf("Armor") >= 0 || t == "Armor";
+		return true; // TAB_ITEMS: everything else
+	}
+
 	private ui void BuildTabInventory(Actor owner, out Array<Inventory> outItems)
 	{
 		outItems.Clear();
@@ -366,6 +379,38 @@ class OASISInventoryOverlayHandler : EventHandler
 				outItems.Push(inv);
 			}
 		}
+	}
+
+	// Parse odoom_star_inventory_list (format "name\tdesc\ttype\tgame\n" per line) and append STAR items for active tab to display list.
+	// Returns number of STAR rows added. Row data appended to starNames, starDescs, starTypes, starGames.
+	private ui int BuildStarItemsForTab(out Array<String> starNames, out Array<String> starDescs, out Array<String> starTypes, out Array<String> starGames)
+	{
+		starNames.Clear();
+		starDescs.Clear();
+		starTypes.Clear();
+		starGames.Clear();
+		CVar listVar = CVar.FindCVar("odoom_star_inventory_list");
+		if (listVar == null) return 0;
+		String listStr = listVar.GetString();
+		if (listStr.Length() == 0) return 0;
+		Array<String> lines;
+		listStr.Split(lines, "\n", false);
+		for (int i = 0; i < lines.Size(); i++)
+		{
+			Array<String> parts;
+			lines[i].Split(parts, "\t", false);
+			if (parts.Size() < 4) continue;
+			String name = parts[0];
+			String desc = parts[1];
+			String typ = parts[2];
+			String game = parts[3];
+			if (!IsStarItemInTab(typ, name, activeTab)) continue;
+			starNames.Push(name);
+			starDescs.Push(desc);
+			starTypes.Push(typ);
+			starGames.Push(game);
+		}
+		return starNames.Size();
 	}
 
 	private ui String ItemDisplayName(Inventory item)

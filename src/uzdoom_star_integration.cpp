@@ -292,7 +292,7 @@ static void ODOOM_StartInventorySyncIfNeeded(void) {
 	}
 	g_odoom_in_flight_count = n;
 	g_odoom_pending_sync_count = 0;
-	star_sync_inventory_start(g_odoom_in_flight_sync, n, "ODOOM");
+	star_sync_inventory_start(g_odoom_in_flight_sync, n, "ODOOM", nullptr, nullptr);
 }
 
 /** Poll async auth result and apply to g_star_initialized / username / avatar_id.
@@ -330,7 +330,7 @@ static void ODOOM_STAR_PollAsyncAuth(void)
 			g_star_client_ready = true;
 		StarApplyBeamFacePreference();
 		if (g_star_client_ready && !star_sync_inventory_in_progress())
-			star_sync_inventory_start(nullptr, 0, "ODOOM");
+			star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
 		Printf(PRINT_NONOTIFY, "Beam-in successful. Cross-game features enabled.\n");
 	} else {
 		Printf(PRINT_NONOTIFY, "Beam-in failed: %s\n", error_buf[0] ? error_buf : star_api_get_last_error());
@@ -929,7 +929,7 @@ void UZDoom_STAR_Init(void) {
 
 	StarLogInfo("STAR bootstrap: Beaming in...");
 	if (StarTryInitializeAndAuthenticate(true) && !star_sync_inventory_in_progress())
-		star_sync_inventory_start(nullptr, 0, "ODOOM");
+		star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
 	Printf(PRINT_NONOTIFY, "STAR: debug=%s auth_source=%s initialized=%s\n",
 		g_star_debug_logging ? "on" : "off",
 		StarAuthSourceLabel(),
@@ -1251,7 +1251,7 @@ CCMD(star)
 			Printf("\n");
 			return;
 		}
-		star_sync_inventory_start(nullptr, 0, "ODOOM");
+		star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
 		Printf("Syncing...\n");
 		Printf("\n");
 		return;
