@@ -35,8 +35,15 @@ class OASISInventoryOverlayHandler : EventHandler
 	private int sendQuantity;
 	private int sendButtonFocus;  // 0=Send, 1=Cancel
 	private String sendItemClass;
+	private String sendItemDisplayLabel;  // e.g. "Silver Key (OQUAKE) x2" - shown above name box
 	private int sendMaxQty;
 	private String sendInputLine;  // name built from odoom_send_last_char (C++ sets one char per frame)
+
+	// Cached list for RenderOverlay (ui cannot call play-context; no array members in this ZScript build)
+	private int cachedStarCount;
+	private String cachedStarListForTab;   // "name\tdesc\tgame\n" per STAR item in current tab
+	private int cachedLocalCount;
+	private String cachedLocalListForTab;  // "displayName\tamount\n" per actor item in current tab
 
 	const TAB_KEYS = 0;
 	const TAB_POWERUPS = 1;
@@ -152,28 +159,86 @@ class OASISInventoryOverlayHandler : EventHandler
 				selectedAbsolute = 0;
 			}
 
-			int listCount = 0;
-			Inventory selectedItem = null;
-			if (sendPopupMode == 0)
+			int starCount = 0;
+			array<String> starNames, starDescs, starTypes, starGames;
+			starCount = BuildStarItemsForTab(starNames, starDescs, starTypes, starGames);
+			array<Inventory> tabItems;
+			BuildTabInventory(p.mo, tabItems);
+
+			// Group STAR by short label (like OQuake): same label = one row, sum count; keep first raw name per group for send
+			array<String> starGroupLabels;
+			array<int> starGroupCounts;
+			array<String> starGroupFirstNames;
+			for (int i = 0; i < starCount; i++)
 			{
-			for (let inv = p.mo.Inv; inv != null; inv = inv.Inv)
-			{
-				if (inv.Amount <= 0) continue;
-				bool inTab = false;
-				if (activeTab == TAB_KEYS && inv is "Key") inTab = true;
-				else if (activeTab == TAB_POWERUPS && inv is "Powerup") inTab = true;
-				else if (activeTab == TAB_WEAPONS && inv is "Weapon") inTab = true;
-				else if (activeTab == TAB_AMMO && inv is "Ammo") inTab = true;
-				else if (activeTab == TAB_ARMOR && inv is "Armor") inTab = true;
-				else if (activeTab == TAB_ITEMS && !(inv is "Key") && !(inv is "Powerup") && !(inv is "Weapon") && !(inv is "Armor") && !(inv is "Ammo")) inTab = true;
-				if (!inTab) continue;
-				if (listCount == selectedAbsolute) selectedItem = inv;
-				listCount++;
+				String label = StarItemShortLabel(starNames[i], starGames[i]);
+				int r = 0;
+				for (r = 0; r < starGroupLabels.Size(); r++)
+					if (starGroupLabels[r] == label) break;
+				if (r >= starGroupLabels.Size())
+				{
+					starGroupLabels.Push(label);
+					starGroupCounts.Push(1);
+					starGroupFirstNames.Push(starNames[i]);
+				}
+				else
+					starGroupCounts[r]++;
 			}
+			int starGroupCount = starGroupLabels.Size();
+			cachedStarCount = starGroupCount;
+			cachedStarListForTab = "";
+			for (int i = 0; i < starGroupCount; i++)
+			{
+				String line = (starGroupCounts[i] > 1) ? String.Format("%s x%d", starGroupLabels[i], starGroupCounts[i]) : starGroupLabels[i];
+				cachedStarListForTab = String.Format("%s%s\n", cachedStarListForTab, line);
+			}
+
+			// Group local items by class name (like OQuake): same item type = one row, sum amounts
+			array<String> localGroupClass;
+			array<String> localGroupDisp;
+			array<int> localGroupAmount;
+			array<int> localGroupRepIdx;
+			for (int i = 0; i < tabItems.Size(); i++)
+			{
+				String cls = tabItems[i].GetClassName();
+				int amt = tabItems[i].Amount;
+				int r = 0;
+				for (r = 0; r < localGroupClass.Size(); r++)
+					if (localGroupClass[r] == cls) break;
+				if (r >= localGroupClass.Size())
+				{
+					localGroupClass.Push(cls);
+					localGroupDisp.Push(GetItemDisplayNamePlay(tabItems[i]));
+					localGroupAmount.Push(amt);
+					localGroupRepIdx.Push(i);
+				}
+				else
+					localGroupAmount[r] += amt;
+			}
+			int localGroupCount = localGroupClass.Size();
+			cachedLocalCount = localGroupCount;
+			cachedLocalListForTab = "";
+			for (int i = 0; i < localGroupCount; i++)
+			{
+				String line = (localGroupAmount[i] > 1) ? String.Format("%s  x%d", localGroupDisp[i], localGroupAmount[i]) : localGroupDisp[i];
+				cachedLocalListForTab = String.Format("%s%s\n", cachedLocalListForTab, line);
+			}
+
+			int listCount = starGroupCount + localGroupCount;
 			int maxOffset = listCount - MAX_VISIBLE_ROWS;
 			if (maxOffset < 0) maxOffset = 0;
 			if (selectedAbsolute >= listCount && listCount > 0) selectedAbsolute = listCount - 1;
 			if (selectedAbsolute < 0) selectedAbsolute = 0;
+			Inventory selectedItem = null;
+			int groupAmountForSend = 0;
+			if (selectedAbsolute >= starGroupCount && selectedAbsolute - starGroupCount < localGroupCount)
+			{
+				int gidx = selectedAbsolute - starGroupCount;
+				selectedItem = tabItems[localGroupRepIdx[gidx]];
+				groupAmountForSend = localGroupAmount[gidx];
+			}
+			if (sendPopupMode == 0)
+			{
 
 			// Selection: arrows only (from captured key CVars). Do not use W/S so they don't move list or player.
 			bool selUp = keyUpPressed || (lookUpDown && !wasLookUpDown) || (jumpDown && !wasJumpDown);
@@ -206,29 +271,53 @@ class OASISInventoryOverlayHandler : EventHandler
 				}
 			}
 
-			// A or Z = Send to Avatar, C or X = Send to Clan - open send popup (OQuake-style)
-			if ((keyAPressed || keyZPressed) && selectedItem != null && selectedItem.Amount > 0)
+			// A or Z = Send to Avatar, C or X = Send to Clan - open send popup for STAR or local items
+			bool canSendStar = (selectedAbsolute < starGroupCount && starGroupCount > 0 && starGroupCounts[selectedAbsolute] > 0);
+			bool canSendLocal = (selectedItem != null && (selectedItem.Amount > 0 || groupAmountForSend > 0));
+			if ((keyAPressed || keyZPressed) && (canSendStar || canSendLocal))
 			{
 				sendPopupMode = 1;
-				sendQuantity = selectedItem.Amount;
-				if (sendQuantity < 1) sendQuantity = 1;
+				if (canSendStar)
+				{
+					sendMaxQty = starGroupCounts[selectedAbsolute];
+					sendItemClass = String.Format("STAR:%s", starGroupFirstNames[selectedAbsolute]);
+					sendItemDisplayLabel = (starGroupCounts[selectedAbsolute] > 1) ? String.Format("%s x%d", starGroupLabels[selectedAbsolute], starGroupCounts[selectedAbsolute]) : starGroupLabels[selectedAbsolute];
+				}
+				else
+				{
+					sendMaxQty = groupAmountForSend > 0 ? groupAmountForSend : selectedItem.Amount;
+					if (sendMaxQty < 1) sendMaxQty = 1;
+					sendItemClass = selectedItem.GetClassName();
+					String dispName = GetItemDisplayNamePlay(selectedItem);
+					sendItemDisplayLabel = (sendMaxQty > 1) ? String.Format("%s x%d", dispName, sendMaxQty) : dispName;
+				}
+				sendQuantity = sendMaxQty;
 				sendButtonFocus = 0;
-				sendItemClass = selectedItem.GetClassName();
-				sendMaxQty = selectedItem.Amount;
 				sendInputLine = "";
 				CVar lineVar = CVar.FindCVar("odoom_send_input_line");
 				if (lineVar != null) lineVar.SetString("");
 				CVar cv = CVar.FindCVar("odoom_send_popup_open");
 				if (cv != null) cv.SetInt(1);
 			}
-			if ((keyCPressed || keyXPressed) && selectedItem != null && selectedItem.Amount > 0)
+			if ((keyCPressed || keyXPressed) && (canSendStar || canSendLocal))
 			{
 				sendPopupMode = 2;
-				sendQuantity = selectedItem.Amount;
-				if (sendQuantity < 1) sendQuantity = 1;
+				if (canSendStar)
+				{
+					sendMaxQty = starGroupCounts[selectedAbsolute];
+					sendItemClass = String.Format("STAR:%s", starGroupFirstNames[selectedAbsolute]);
+					sendItemDisplayLabel = (starGroupCounts[selectedAbsolute] > 1) ? String.Format("%s x%d", starGroupLabels[selectedAbsolute], starGroupCounts[selectedAbsolute]) : starGroupLabels[selectedAbsolute];
+				}
+				else
+				{
+					sendMaxQty = groupAmountForSend > 0 ? groupAmountForSend : selectedItem.Amount;
+					if (sendMaxQty < 1) sendMaxQty = 1;
+					sendItemClass = selectedItem.GetClassName();
+					String dispName = GetItemDisplayNamePlay(selectedItem);
+					sendItemDisplayLabel = (sendMaxQty > 1) ? String.Format("%s x%d", dispName, sendMaxQty) : dispName;
+				}
+				sendQuantity = sendMaxQty;
 				sendButtonFocus = 0;
-				sendItemClass = selectedItem.GetClassName();
-				sendMaxQty = selectedItem.Amount;
 				sendInputLine = "";
 				CVar lineVar = CVar.FindCVar("odoom_send_input_line");
 				if (lineVar != null) lineVar.SetString("");
@@ -343,7 +432,7 @@ class OASISInventoryOverlayHandler : EventHandler
 		}
 	}
 
-	private ui bool IsItemInActiveTab(Inventory item, int tabIndex)
+	private bool IsItemInActiveTab(Inventory item, int tabIndex)
 	{
 		if (item == null || item.Amount <= 0) return false;
 		if (tabIndex == TAB_KEYS) return item is "Key";
@@ -355,7 +444,7 @@ class OASISInventoryOverlayHandler : EventHandler
 	}
 
 	// STAR item matches tab (same data as "star inventory" command, from odoom_star_inventory_list).
-	private ui bool IsStarItemInTab(String itemType, String itemName, int tabIndex)
+	private bool IsStarItemInTab(String itemType, String itemName, int tabIndex)
 	{
 		String t = itemType;
 		String n = itemName;
@@ -364,10 +453,64 @@ class OASISInventoryOverlayHandler : EventHandler
 		if (tabIndex == TAB_WEAPONS) return t.IndexOf("Weapon") >= 0 || t == "Weapon";
 		if (tabIndex == TAB_AMMO) return t.IndexOf("Ammo") >= 0 || t == "Ammo";
 		if (tabIndex == TAB_ARMOR) return t.IndexOf("Armor") >= 0 || t == "Armor";
-		return true; // TAB_ITEMS: everything else
+		// TAB_ITEMS: only items that don't fit Keys, Powerups, Weapons, Ammo, or Armor
+		if (tabIndex == TAB_ITEMS)
+			return (t.IndexOf("Key") < 0 && n.IndexOf("key") < 0) && (t.IndexOf("Powerup") < 0 && t != "Powerup") && (t.IndexOf("Weapon") < 0 && t != "Weapon") && (t.IndexOf("Ammo") < 0 && t != "Ammo") && (t.IndexOf("Armor") < 0 && t != "Armor");
+		return true;
 	}
 
-	private ui void BuildTabInventory(Actor owner, out Array<Inventory> outItems)
+	// Short display label for STAR items (like OQuake): "Shotgun (OQUAKE)" instead of "quake_pickup_weapon_shotgun".
+	private String StarItemShortLabel(String name, String game)
+	{
+		String n = name;
+		String g = (game.Length() > 0) ? game : "STAR";
+		if (g == "QUAKE" || g == "Quake" || g == "quake") g = "OQUAKE";
+		if (n.IndexOf("quake_pickup_shells") >= 0) return String.Format("Shells (%s)", g);
+		if (n.IndexOf("quake_pickup_nails") >= 0) return String.Format("Nails (%s)", g);
+		if (n.IndexOf("quake_pickup_rockets") >= 0) return String.Format("Rockets (%s)", g);
+		if (n.IndexOf("quake_pickup_cells") >= 0) return String.Format("Cells (%s)", g);
+		if (n.IndexOf("quake_pickup_armor_green") >= 0 || n == "quake_armor_green") return String.Format("Green Armor (%s)", g);
+		if (n.IndexOf("quake_pickup_armor_yellow") >= 0 || n == "quake_armor_yellow") return String.Format("Yellow Armor (%s)", g);
+		if (n.IndexOf("quake_pickup_armor_red") >= 0 || n == "quake_armor_red") return String.Format("Red Armor (%s)", g);
+		if (n.IndexOf("quake_pickup_health") >= 0) return String.Format("Health (%s)", g);
+		if (n.IndexOf("quake_pickup_quad") >= 0 || n == "quake_powerup_quad") return String.Format("Quad Damage (%s)", g);
+		if (n.IndexOf("quake_pickup_suit") >= 0 || n == "quake_powerup_suit") return String.Format("Biosuit (%s)", g);
+		if (n.IndexOf("quake_pickup_invisibility") >= 0 || n == "quake_powerup_invisibility") return String.Format("Ring of Shadows (%s)", g);
+		if (n.IndexOf("quake_pickup_invulnerability") >= 0 || n == "quake_powerup_invulnerability") return String.Format("Pentagram of Protection (%s)", g);
+		if (n.IndexOf("quake_pickup_megahealth") >= 0 || n == "quake_powerup_megahealth") return String.Format("Megahealth (%s)", g);
+		if (n.IndexOf("super_shotgun") >= 0) return String.Format("Super Shotgun (%s)", g);
+		if (n.IndexOf("shotgun") >= 0) return String.Format("Shotgun (%s)", g);
+		if (n.IndexOf("super_nailgun") >= 0) return String.Format("Super Nailgun (%s)", g);
+		if (n.IndexOf("nailgun") >= 0) return String.Format("Nailgun (%s)", g);
+		if (n.IndexOf("grenade_launcher") >= 0 || n.IndexOf("grenade") >= 0) return String.Format("Grenade Launcher (%s)", g);
+		if (n.IndexOf("rocket_launcher") >= 0 || n.IndexOf("rocket") >= 0) return String.Format("Rocket Launcher (%s)", g);
+		if (n.IndexOf("super_lightning") >= 0) return String.Format("Super Lightning (%s)", g);
+		if (n.IndexOf("lightning") >= 0) return String.Format("Lightning Gun (%s)", g);
+		if (n.IndexOf("quake_pickup_sigil_1") >= 0 || n == "quake_sigil_1") return String.Format("Sigil Piece 1 (%s)", g);
+		if (n.IndexOf("quake_pickup_sigil_2") >= 0 || n == "quake_sigil_2") return String.Format("Sigil Piece 2 (%s)", g);
+		if (n.IndexOf("quake_pickup_sigil_3") >= 0 || n == "quake_sigil_3") return String.Format("Sigil Piece 3 (%s)", g);
+		if (n.IndexOf("quake_pickup_sigil_4") >= 0 || n == "quake_sigil_4") return String.Format("Sigil Piece 4 (%s)", g);
+		// OQuake keys: silver_key = Silver Key, gold_key = Gold Key (OQUAKE_ITEM_* in OQuake)
+		if (n.IndexOf("silver_key") >= 0 || n.IndexOf("key_silver") >= 0 || n.IndexOf("Silver") >= 0) return String.Format("Silver Key (%s)", g);
+		if (n.IndexOf("gold_key") >= 0 || n.IndexOf("key_gold") >= 0 || n.IndexOf("Gold") >= 0) return String.Format("Gold Key (%s)", g);
+		if (n.IndexOf("red_keycard") >= 0 || n.IndexOf("red_key") >= 0) return String.Format("Red Keycard (%s)", g);
+		if (n.IndexOf("blue_keycard") >= 0 || n.IndexOf("blue_key") >= 0) return String.Format("Blue Keycard (%s)", g);
+		if (n.IndexOf("yellow_keycard") >= 0 || n.IndexOf("yellow_key") >= 0) return String.Format("Yellow Keycard (%s)", g);
+		if (n.IndexOf("keycard") >= 0 || n.IndexOf("key") >= 0) return String.Format("Key (%s)", g);  // generic key (OQuake uses Silver Key / Gold Key)
+		// ODOOM/Doom: clip, bulletbox, shell, etc. (check after Quake rockets/lightning)
+		if (n.IndexOf("Clip") >= 0 || n.IndexOf("clip") >= 0 || n.IndexOf("Bullet") >= 0) return String.Format("Bullets (%s)", g);
+		if (n.IndexOf("Shell") >= 0 || n.IndexOf("shell") >= 0) return String.Format("Shells (%s)", g);
+		if (n.IndexOf("Cell") >= 0 || n.IndexOf("cell") >= 0) return String.Format("Cells (%s)", g);
+		if (n.IndexOf("Armor") >= 0 || n.IndexOf("armor") >= 0) return String.Format("Armor (%s)", g);
+		if (n.IndexOf("Stimpack") >= 0 || n.IndexOf("stimpack") >= 0) return String.Format("Stimpack (%s)", g);
+		if (n.IndexOf("Medikit") >= 0 || n.IndexOf("medikit") >= 0) return String.Format("Medikit (%s)", g);
+		if (n.IndexOf("Backpack") >= 0 || n.IndexOf("backpack") >= 0) return String.Format("Backpack (%s)", g);
+		if (n.IndexOf("Weapon") >= 0 || n.IndexOf("weapon") >= 0) return String.Format("Weapon (%s)", g);
+		if (n.Length() > 24) return String.Format("%s (%s)", n.Left(21), g);
+		return String.Format("%s (%s)", n, g);
+	}
+
+	private void BuildTabInventory(Actor owner, out array<Inventory> outItems)
 	{
 		outItems.Clear();
 		if (owner == null) return;
@@ -383,7 +526,7 @@ class OASISInventoryOverlayHandler : EventHandler
 
 	// Parse odoom_star_inventory_list (format "name\tdesc\ttype\tgame\n" per line) and append STAR items for active tab to display list.
 	// Returns number of STAR rows added. Row data appended to starNames, starDescs, starTypes, starGames.
-	private ui int BuildStarItemsForTab(out Array<String> starNames, out Array<String> starDescs, out Array<String> starTypes, out Array<String> starGames)
+	private int BuildStarItemsForTab(out array<String> starNames, out array<String> starDescs, out array<String> starTypes, out array<String> starGames)
 	{
 		starNames.Clear();
 		starDescs.Clear();
@@ -393,11 +536,11 @@ class OASISInventoryOverlayHandler : EventHandler
 		if (listVar == null) return 0;
 		String listStr = listVar.GetString();
 		if (listStr.Length() == 0) return 0;
-		Array<String> lines;
+		array<String> lines;
 		listStr.Split(lines, "\n", false);
 		for (int i = 0; i < lines.Size(); i++)
 		{
-			Array<String> parts;
+			array<String> parts;
 			lines[i].Split(parts, "\t", false);
 			if (parts.Size() < 4) continue;
 			String name = parts[0];
@@ -411,6 +554,17 @@ class OASISInventoryOverlayHandler : EventHandler
 			starGames.Push(game);
 		}
 		return starNames.Size();
+	}
+
+	// Play-context version for building cachedLocalListForTab in WorldTick
+	private String GetItemDisplayNamePlay(Inventory item)
+	{
+		if (item == null) return "";
+		if (item is "OQGoldKey") return "Golden Key";
+		if (item is "OQSilverKey") return "Silver Key";
+		String tag = item.GetTag("");
+		if (tag.Length() > 0) return tag;
+		return item.GetClassName();
 	}
 
 	private ui String ItemDisplayName(Inventory item)
@@ -438,9 +592,10 @@ class OASISInventoryOverlayHandler : EventHandler
 		}
 		else
 		{
-		Array<Inventory> tabItems;
-		BuildTabInventory(p.mo, tabItems);
-		int listCount = tabItems.Size();
+		// Use cached list from WorldTick (ui cannot call play-context; cache is string-based)
+		int starCount = cachedStarCount;
+		int tabSize = cachedLocalCount;
+		int listCount = starCount + tabSize;
 		int maxOffset = listCount - MAX_VISIBLE_ROWS;
 		if (maxOffset < 0) maxOffset = 0;
 		int drawOffset = scrollOffset;
@@ -477,26 +632,34 @@ class OASISInventoryOverlayHandler : EventHandler
 
 		screen.DrawText(f, Font.CR_DARKGRAY, -16, 46, "Arrows=Select E=Use A=Avatar C=Clan I=Close O/P=Tabs", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 
+		// Parse cache strings into lines for indexing (local arrays only; no array members)
+		array<String> starLines;
+		array<String> localLines;
+		if (cachedStarListForTab.Length() > 0) cachedStarListForTab.Split(starLines, "\n", false);
+		if (cachedLocalListForTab.Length() > 0) cachedLocalListForTab.Split(localLines, "\n", false);
+
 		int y = 58;
 		for (int i = 0; i < MAX_VISIBLE_ROWS; i++)
 		{
 			int idx = drawOffset + i;
-			if (idx >= tabItems.Size()) break;
+			if (idx >= listCount) break;
 
 			bool selected = (i == selectedRow);
 
-			let item = tabItems[idx];
-			TextureID icon = item.Icon;
-			if (icon.IsValid())
+			if (idx < starCount && idx < starLines.Size())
 			{
-				screen.DrawTexture(icon, true, 40, y, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43, DTA_DestWidth, 10, DTA_DestHeight, 10);
+				String line = starLines[idx];
+				screen.DrawText(f, selected ? Font.CR_GOLD : Font.CR_TAN, 54, y + 1, line, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			}
-
-			String itemLabel = ItemDisplayName(item);
-			String itemDesc = itemLabel;
-			if (item.Amount > 1) itemDesc = String.Format("%s  x%d", itemLabel, item.Amount);
-			screen.DrawText(f, selected ? Font.CR_GOLD : Font.CR_UNTRANSLATED, 54, y + 1, itemDesc, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-
+			else
+			{
+				int localIdx = idx - starCount;
+				if (localIdx >= 0 && localIdx < localLines.Size())
+				{
+					String line = localLines[localIdx];
+					screen.DrawText(f, selected ? Font.CR_GOLD : Font.CR_UNTRANSLATED, 54, y + 1, line, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				}
+			}
 			y += 16;
 		}
 		}
@@ -507,22 +670,24 @@ class OASISInventoryOverlayHandler : EventHandler
 			String title = (sendPopupMode == 2) ? "SEND TO CLAN" : "SEND TO AVATAR";
 			String label = (sendPopupMode == 2) ? "Clan" : "Username";
 			int popupW = 200;
-			int popupH = 88;
+			int popupH = 98;
 			int popupX = (320 - popupW) / 2;
 			int popupY = (200 - popupH) / 2;
 			screen.DrawText(f, Font.CR_GOLD, popupX + 8, popupY + 4, title, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 20, String.Format("%s: %s_", label, sendInputLine), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			if (sendItemDisplayLabel.Length() > 0)
+				screen.DrawText(f, Font.CR_WHITE, popupX + 8, popupY + 16, String.Format("Sending: %s", sendItemDisplayLabel), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 26, String.Format("%s: %s_", label, sendInputLine), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			String qtyText = String.Format("Quantity: %d / %d (Arrows)", sendQuantity, sendMaxQty);
-			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 32, qtyText, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 44, "Left=Send  Right=Cancel  Enter=Confirm", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 38, qtyText, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 50, "Left=Send  Right=Cancel  Enter=Confirm", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			if (sendButtonFocus == 0)
-				screen.DrawText(f, Font.CR_GREEN, popupX + 16, popupY + 60, "[SEND]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				screen.DrawText(f, Font.CR_GREEN, popupX + 16, popupY + 66, "[SEND]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			else
-				screen.DrawText(f, Font.CR_GRAY, popupX + 16, popupY + 60, "SEND", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				screen.DrawText(f, Font.CR_GRAY, popupX + 16, popupY + 66, "SEND", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			if (sendButtonFocus == 1)
-				screen.DrawText(f, Font.CR_GREEN, popupX + 80, popupY + 60, "[CANCEL]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				screen.DrawText(f, Font.CR_GREEN, popupX + 80, popupY + 66, "[CANCEL]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 			else
-				screen.DrawText(f, Font.CR_GRAY, popupX + 80, popupY + 60, "CANCEL", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				screen.DrawText(f, Font.CR_GRAY, popupX + 80, popupY + 66, "CANCEL", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
 		}
 	}
 }

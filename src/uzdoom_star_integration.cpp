@@ -1,7 +1,7 @@
 /**
  * ODOOM - OASIS STAR API Integration Implementation
  *
- * Build this file as part of ODOOM (UZDoom) with STAR_API_DIR pointing to OASIS NativeWrapper.
+ * Build this file as part of ODOOM (UZDoom) with STAR API from STARAPIClient (not NativeWrapper).
  * Keycard pickups are reported to STAR; door/lock checks can use cross-game inventory.
  * In-game console: "star" command for testing (star version, star inventory, star add, etc.).
  *
@@ -12,6 +12,13 @@
 
 #include "uzdoom_star_integration.h"
 #include "star_api.h"
+#ifndef STAR_API_HAS_SEND_ITEM
+/* Forward declare send-item API when using an older star_api.h (e.g. in UZDoom tree). Link with updated star_api.lib. */
+extern "C" {
+star_api_result_t star_api_send_item_to_avatar(const char* target_username_or_avatar_id, const char* item_name, int quantity, const char* item_id);
+star_api_result_t star_api_send_item_to_clan(const char* clan_name_or_target, const char* item_name, int quantity, const char* item_id);
+}
+#endif
 #include "star_sync.h"
 #include "odoom_branding.h"
 
@@ -123,6 +130,7 @@ static bool g_odoom_send_key_was_down[256];
 static bool g_odoom_send_popup_was_open = false;
 
 static void StarApplyBeamFacePreference(void);
+static bool StarInitialized(void);
 
 /*-----------------------------------------------------------------------------
  * OASIS STAR Config - oasisstar.json (parity with OQuake)
@@ -278,6 +286,56 @@ static int ODOOM_GetRawKeyDown(int vk_or_ascii)
 #endif
 }
 
+/** Push g_odoom_cached_inventory to CVars so ZScript overlay can display it (same data as "star inventory" command). */
+static void ODOOM_UpdateStarInventoryCVars(void) {
+	static char listBuf[24576];  /* one line per item: name\tdesc\ttype\tgame\n, max 64 items */
+	FBaseCVar* countVar = FindCVar("odoom_star_inventory_count", nullptr);
+	FBaseCVar* listVar = FindCVar("odoom_star_inventory_list", nullptr);
+	if (!countVar || !listVar) return;
+
+	if (!g_odoom_cached_inventory || g_odoom_cached_inventory->count == 0) {
+		UCVarValue u;
+		u.Int = 0;
+		countVar->SetGenericRep(u, CVAR_Int);
+		UCVarValue v;
+		v.String = (char*)("");
+		listVar->SetGenericRep(v, CVAR_String);
+		return;
+	}
+
+	size_t n = g_odoom_cached_inventory->count;
+	if (n > 64) n = 64;
+	size_t off = 0;
+	for (size_t i = 0; i < n && off < sizeof(listBuf) - 320; i++) {
+		const star_item_t* it = &g_odoom_cached_inventory->items[i];
+		char name[256], desc[256], type[64], game[64];
+		auto copySafe = [](char* dst, const char* src, int maxLen) {
+			int j = 0;
+			while (src[j] && j < maxLen - 1) {
+				char c = src[j];
+				if (c == '\t' || c == '\n' || c == '\r') c = ' ';
+				dst[j++] = c;
+			}
+			dst[j] = '\0';
+		};
+		copySafe(name, it->name, 256);
+		copySafe(desc, it->description, 256);
+		copySafe(type, it->item_type, 64);
+		copySafe(game, it->game_source, 64);
+		int wr = snprintf(listBuf + off, (size_t)(sizeof(listBuf) - off), "%s\t%s\t%s\t%s\n", name, desc, type, game);
+		if (wr > 0 && (size_t)wr < sizeof(listBuf) - off) off += (size_t)wr;
+		else break;
+	}
+	listBuf[off] = '\0';
+
+	UCVarValue u;
+	u.Int = (int)n;
+	countVar->SetGenericRep(u, CVAR_Int);
+	UCVarValue v;
+	v.String = listBuf;
+	listVar->SetGenericRep(v, CVAR_String);
+}
+
 /** Start background inventory sync if we have pending items and no sync in progress. */
 static void ODOOM_StartInventorySyncIfNeeded(void) {
 	if (!g_star_initialized || star_sync_inventory_in_progress())
@@ -321,13 +379,7 @@ static void ODOOM_STAR_PollAsyncAuth(void)
 		g_star_effective_avatar_id = avatar_id_buf;
 		g_star_config.avatar_id = g_star_effective_avatar_id.empty() ? nullptr : g_star_effective_avatar_id.c_str();
 		odoom_star_username = g_star_effective_username.c_str();
-		/* Re-init so the STAR API client (NativeWrapper) gets the new avatar_id; otherwise add_item/get_inventory use the old (null) avatar and items don't persist. */
-		if (g_star_client_ready) {
-			star_api_cleanup();
-			g_star_client_ready = false;
-		}
-		if (star_api_init(&g_star_config) == STAR_API_SUCCESS)
-			g_star_client_ready = true;
+		/* Do NOT cleanup+init after auth (same as OQuake). Cleanup+init breaks star add / inventory. */
 		StarApplyBeamFacePreference();
 		if (g_star_client_ready && !star_sync_inventory_in_progress())
 			star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
@@ -351,6 +403,7 @@ void ODOOM_InventoryInputCaptureFrame(void)
 			if (g_odoom_cached_inventory)
 				star_api_free_item_list(g_odoom_cached_inventory);
 			g_odoom_cached_inventory = list;
+			ODOOM_UpdateStarInventoryCVars();  /* so overlay popup shows STAR items (like OQuake) */
 			star_sync_inventory_clear_result();
 		}
 		g_odoom_in_flight_count = 0;
@@ -561,10 +614,32 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		if (qty < 1) qty = 1;
 		if (target && target[0] && itemClass && itemClass[0])
 		{
-			if (toClan)
-				Printf("Send to clan: \"%s\" item \"%s\" x%d (STAR send API not yet implemented).\n", target, itemClass, qty);
+			const char* starItemName = (std::strncmp(itemClass, "STAR:", 5) == 0) ? (itemClass + 5) : nullptr;
+			if (starItemName && starItemName[0])
+			{
+				/* STAR item send: call STAR API send-to-avatar or send-to-clan */
+				if (StarInitialized())
+				{
+					/* ItemId not available from ZScript popup; pass NULL to match by name */
+					star_api_result_t res = toClan
+						? star_api_send_item_to_clan(target, starItemName, qty, nullptr)
+						: star_api_send_item_to_avatar(target, starItemName, qty, nullptr);
+					if (res == STAR_API_SUCCESS)
+						Printf("Sent %s x%d to %s.\n", starItemName, qty, toClan ? "clan" : "avatar");
+					else
+						Printf("Send failed: %s\n", star_api_get_last_error());
+				}
+				else
+					Printf("STAR API not initialized; cannot send item. Beam in first.\n");
+			}
 			else
-				Printf("Send to avatar: \"%s\" item \"%s\" x%d (STAR send API not yet implemented).\n", target, itemClass, qty);
+			{
+				/* Local (Doom) item send */
+				if (toClan)
+					Printf("Send to clan: \"%s\" item \"%s\" x%d (local send not yet implemented).\n", target, itemClass, qty);
+				else
+					Printf("Send to avatar: \"%s\" item \"%s\" x%d (local send not yet implemented).\n", target, itemClass, qty);
+			}
 		}
 		{ UCVarValue u; u.Int = 0; doItVar->SetGenericRep(u, CVAR_Int); }
 		if (sendOpenVar) { UCVarValue u; u.Int = 0; sendOpenVar->SetGenericRep(u, CVAR_Int); }
@@ -955,6 +1030,7 @@ void UZDoom_STAR_Cleanup(void) {
 	if (g_odoom_cached_inventory) {
 		star_api_free_item_list(g_odoom_cached_inventory);
 		g_odoom_cached_inventory = nullptr;
+		ODOOM_UpdateStarInventoryCVars();
 	}
 	star_sync_cleanup();
 	g_star_async_auth_pending = false;
@@ -1247,12 +1323,33 @@ CCMD(star)
 			return;
 		}
 		if (star_sync_inventory_in_progress()) {
-			Printf("Syncing...\n");
+			Printf("Syncing... (run 'star inventory' again in a moment)\n");
 			Printf("\n");
 			return;
 		}
+		/* Poll once in case sync already finished but frame hook never ran (e.g. engine not patched) */
+		if (star_sync_inventory_poll() == 1) {
+			star_item_list_t* list = nullptr;
+			star_api_result_t res = STAR_API_ERROR_API_ERROR;
+			char err_buf[256] = {};
+			if (star_sync_inventory_get_result(&list, &res, err_buf, sizeof(err_buf))) {
+				if (g_odoom_cached_inventory)
+					star_api_free_item_list(g_odoom_cached_inventory);
+				g_odoom_cached_inventory = list;
+				ODOOM_UpdateStarInventoryCVars();
+				star_sync_inventory_clear_result();
+				size_t count = g_odoom_cached_inventory ? g_odoom_cached_inventory->count : 0;
+				if (count == 0) { Printf("Inventory is empty.\n"); Printf("\n"); return; }
+				Printf("STAR inventory (%zu items):\n", count);
+				for (size_t i = 0; i < count; i++) {
+					Printf("  %s - %s (%s, %s)\n", g_odoom_cached_inventory->items[i].name, g_odoom_cached_inventory->items[i].description, g_odoom_cached_inventory->items[i].game_source, g_odoom_cached_inventory->items[i].item_type);
+				}
+				Printf("\n");
+				return;
+			}
+		}
 		star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
-		Printf("Syncing...\n");
+		Printf("Syncing... (run 'star inventory' again in a few seconds)\n");
 		Printf("\n");
 		return;
 	}
