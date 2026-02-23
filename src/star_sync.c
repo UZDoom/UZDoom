@@ -8,6 +8,11 @@
 #include <string.h>
 #include <stdlib.h>
 
+#ifndef STAR_API_HAS_SEND_ITEM
+extern star_api_result_t star_api_send_item_to_avatar(const char*, const char*, int, const char*);
+extern star_api_result_t star_api_send_item_to_clan(const char*, const char*, int, const char*);
+#endif
+
 #ifdef _WIN32
 #include <windows.h>
 #else
@@ -41,6 +46,8 @@ static int  g_auth_success = 0;
 static char g_auth_username_out[AUTH_USERNAME_SIZE];
 static char g_auth_avatar_id_out[AUTH_AVATAR_SIZE];
 static char g_auth_error_msg[AUTH_ERROR_SIZE];
+static star_sync_auth_on_done_fn g_auth_on_done = NULL;
+static void* g_auth_on_done_user = NULL;
 
 #ifdef _WIN32
 static CRITICAL_SECTION g_auth_lock;
@@ -102,7 +109,7 @@ static void* auth_thread_proc(void* param) {
 #endif
 }
 
-void star_sync_auth_start(const char* username, const char* password) {
+void star_sync_auth_start(const char* username, const char* password, star_sync_auth_on_done_fn on_done, void* user_data) {
 #ifdef _WIN32
     EnterCriticalSection(&g_auth_lock);
 #else
@@ -117,6 +124,8 @@ void star_sync_auth_start(const char* username, const char* password) {
         return;
     }
     g_auth_has_result = 0;
+    g_auth_on_done = on_done;
+    g_auth_on_done_user = user_data;
     str_copy(g_auth_username_buf, username ? username : "", sizeof(g_auth_username_buf));
     str_copy(g_auth_password_buf, password ? password : "", sizeof(g_auth_password_buf));
     g_auth_in_progress = 1;
@@ -230,11 +239,194 @@ static pthread_t g_inv_thread = 0;
 
 static int g_sync_initialized = 0;
 
+#ifdef _WIN32
+static CRITICAL_SECTION g_send_lock;
+static HANDLE g_send_thread = NULL;
+#else
+static pthread_mutex_t g_send_lock = PTHREAD_MUTEX_INITIALIZER;
+static pthread_t g_send_thread = 0;
+#endif
+
+#define SEND_TARGET_SIZE 256
+#define SEND_ITEM_NAME_SIZE 256
+#define SEND_ITEM_ID_SIZE 64
+#define SEND_ERROR_SIZE 384
+
+static char g_send_target_buf[SEND_TARGET_SIZE];
+static char g_send_item_name_buf[SEND_ITEM_NAME_SIZE];
+static char g_send_item_id_buf[SEND_ITEM_ID_SIZE];
+static int g_send_quantity = 1;
+static int g_send_to_clan = 0;
+static int g_send_in_progress = 0;
+static int g_send_has_result = 0;
+static int g_send_success = 0;
+static char g_send_error_msg[SEND_ERROR_SIZE] = {0};
+static star_sync_send_item_on_done_fn g_send_on_done = NULL;
+static void* g_send_on_done_user = NULL;
+
+#ifdef _WIN32
+static DWORD WINAPI send_item_thread_proc(LPVOID param) {
+#else
+static void* send_item_thread_proc(void* param) {
+#endif
+    char target[SEND_TARGET_SIZE], item_name[SEND_ITEM_NAME_SIZE], item_id[SEND_ITEM_ID_SIZE];
+    int qty, to_clan;
+    star_api_result_t res = STAR_API_ERROR_NOT_INITIALIZED;
+    const char* err = NULL;
+
+    (void)param;
+#ifdef _WIN32
+    EnterCriticalSection(&g_send_lock);
+#endif
+#ifndef _WIN32
+    pthread_mutex_lock(&g_send_lock);
+#endif
+    str_copy(target, g_send_target_buf, sizeof(target));
+    str_copy(item_name, g_send_item_name_buf, sizeof(item_name));
+    str_copy(item_id, g_send_item_id_buf, sizeof(item_id));
+    qty = g_send_quantity;
+    to_clan = g_send_to_clan;
+#ifdef _WIN32
+    LeaveCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_unlock(&g_send_lock);
+#endif
+
+    if (qty < 1) qty = 1;
+    if (to_clan)
+        res = star_api_send_item_to_clan(target, item_name, qty, item_id[0] ? item_id : NULL);
+    else
+        res = star_api_send_item_to_avatar(target, item_name, qty, item_id[0] ? item_id : NULL);
+
+    if (res != STAR_API_SUCCESS)
+        err = star_api_get_last_error();
+
+#ifdef _WIN32
+    EnterCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_lock(&g_send_lock);
+#endif
+    g_send_in_progress = 0;
+    g_send_has_result = 1;
+    g_send_success = (res == STAR_API_SUCCESS) ? 1 : 0;
+    str_copy(g_send_error_msg, err ? err : "", sizeof(g_send_error_msg));
+#ifdef _WIN32
+    LeaveCriticalSection(&g_send_lock);
+    return 0;
+#else
+    pthread_mutex_unlock(&g_send_lock);
+    return NULL;
+#endif
+}
+
+void star_sync_send_item_start(const char* target, const char* item_name, int quantity, int to_clan, const char* item_id, star_sync_send_item_on_done_fn on_done, void* user_data) {
+#ifdef _WIN32
+    EnterCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_lock(&g_send_lock);
+#endif
+    if (g_send_in_progress) {
+#ifdef _WIN32
+        LeaveCriticalSection(&g_send_lock);
+#else
+        pthread_mutex_unlock(&g_send_lock);
+#endif
+        return;
+    }
+    g_send_has_result = 0;
+    g_send_on_done = on_done;
+    g_send_on_done_user = user_data;
+    str_copy(g_send_target_buf, target ? target : "", sizeof(g_send_target_buf));
+    str_copy(g_send_item_name_buf, item_name ? item_name : "", sizeof(g_send_item_name_buf));
+    str_copy(g_send_item_id_buf, item_id && item_id[0] ? item_id : "", sizeof(g_send_item_id_buf));
+    g_send_quantity = quantity < 1 ? 1 : quantity;
+    g_send_to_clan = to_clan ? 1 : 0;
+    g_send_in_progress = 1;
+#ifdef _WIN32
+    LeaveCriticalSection(&g_send_lock);
+    g_send_thread = CreateThread(NULL, 0, send_item_thread_proc, NULL, 0, NULL);
+#else
+    pthread_mutex_unlock(&g_send_lock);
+    pthread_create(&g_send_thread, NULL, send_item_thread_proc, NULL);
+#endif
+}
+
+int star_sync_send_item_poll(void) {
+#ifdef _WIN32
+    EnterCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_lock(&g_send_lock);
+#endif
+    if (g_send_in_progress) {
+#ifdef _WIN32
+        LeaveCriticalSection(&g_send_lock);
+#else
+        pthread_mutex_unlock(&g_send_lock);
+#endif
+        return 0;
+    }
+    if (g_send_has_result) {
+#ifdef _WIN32
+        LeaveCriticalSection(&g_send_lock);
+#else
+        pthread_mutex_unlock(&g_send_lock);
+#endif
+        return 1;
+    }
+#ifdef _WIN32
+    LeaveCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_unlock(&g_send_lock);
+#endif
+    return -1;
+}
+
+int star_sync_send_item_get_result(int* success_out, char* error_msg_buf, size_t error_msg_size) {
+#ifdef _WIN32
+    EnterCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_lock(&g_send_lock);
+#endif
+    if (!g_send_has_result) {
+#ifdef _WIN32
+        LeaveCriticalSection(&g_send_lock);
+#else
+        pthread_mutex_unlock(&g_send_lock);
+#endif
+        return 0;
+    }
+    if (success_out) *success_out = g_send_success;
+    if (error_msg_buf && error_msg_size) str_copy(error_msg_buf, g_send_error_msg, error_msg_size);
+    g_send_has_result = 0;
+#ifdef _WIN32
+    LeaveCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_unlock(&g_send_lock);
+#endif
+    return 1;
+}
+
+int star_sync_send_item_in_progress(void) {
+#ifdef _WIN32
+    EnterCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_lock(&g_send_lock);
+#endif
+    int in_progress = g_send_in_progress;
+#ifdef _WIN32
+    LeaveCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_unlock(&g_send_lock);
+#endif
+    return in_progress;
+}
+
 void star_sync_init(void) {
     if (g_sync_initialized) return;
 #ifdef _WIN32
     InitializeCriticalSection(&g_auth_lock);
     InitializeCriticalSection(&g_inv_lock);
+    InitializeCriticalSection(&g_send_lock);
 #endif
     g_sync_initialized = 1;
 }
@@ -243,10 +435,77 @@ void star_sync_cleanup(void) {
     if (!g_sync_initialized) return;
     star_sync_inventory_clear_result();
 #ifdef _WIN32
+    DeleteCriticalSection(&g_send_lock);
     DeleteCriticalSection(&g_inv_lock);
     DeleteCriticalSection(&g_auth_lock);
 #endif
     g_sync_initialized = 0;
+}
+
+/** Run pending completion callbacks on the main thread. Call once per frame. */
+void star_sync_pump(void) {
+    star_sync_auth_on_done_fn auth_fn = NULL;
+    void* auth_ud = NULL;
+#ifdef _WIN32
+    EnterCriticalSection(&g_auth_lock);
+#else
+    pthread_mutex_lock(&g_auth_lock);
+#endif
+    if (g_auth_has_result && g_auth_on_done) {
+        auth_fn = g_auth_on_done;
+        auth_ud = g_auth_on_done_user;
+        g_auth_on_done = NULL;
+        g_auth_on_done_user = NULL;
+    }
+#ifdef _WIN32
+    LeaveCriticalSection(&g_auth_lock);
+#else
+    pthread_mutex_unlock(&g_auth_lock);
+#endif
+    if (auth_fn)
+        auth_fn(auth_ud);
+
+    star_sync_inventory_on_done_fn inv_fn = NULL;
+    void* inv_ud = NULL;
+#ifdef _WIN32
+    EnterCriticalSection(&g_inv_lock);
+#else
+    pthread_mutex_lock(&g_inv_lock);
+#endif
+    if (g_inv_has_result && g_inv_on_done) {
+        inv_fn = g_inv_on_done;
+        inv_ud = g_inv_on_done_user;
+        g_inv_on_done = NULL;
+        g_inv_on_done_user = NULL;
+    }
+#ifdef _WIN32
+    LeaveCriticalSection(&g_inv_lock);
+#else
+    pthread_mutex_unlock(&g_inv_lock);
+#endif
+    if (inv_fn)
+        inv_fn(inv_ud);
+
+    star_sync_send_item_on_done_fn send_fn = NULL;
+    void* send_ud = NULL;
+#ifdef _WIN32
+    EnterCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_lock(&g_send_lock);
+#endif
+    if (g_send_has_result && g_send_on_done) {
+        send_fn = g_send_on_done;
+        send_ud = g_send_on_done_user;
+        g_send_on_done = NULL;
+        g_send_on_done_user = NULL;
+    }
+#ifdef _WIN32
+    LeaveCriticalSection(&g_send_lock);
+#else
+    pthread_mutex_unlock(&g_send_lock);
+#endif
+    if (send_fn)
+        send_fn(send_ud);
 }
 
 #ifdef _WIN32
@@ -317,24 +576,14 @@ static void* inventory_thread_proc(void* param) {
     g_inv_list = list;
     g_inv_result = result;
     str_copy(g_inv_error_msg, err ? err : "", sizeof(g_inv_error_msg));
-    {
-        star_sync_inventory_on_done_fn cb = g_inv_on_done;
-        void* ud = g_inv_on_done_user;
-        g_inv_on_done = NULL;
-        g_inv_on_done_user = NULL;
+    /* Callback is invoked from main thread in star_sync_pump(), not from this worker. */
 #ifdef _WIN32
-        LeaveCriticalSection(&g_inv_lock);
+    LeaveCriticalSection(&g_inv_lock);
+    return 0;
 #else
-        pthread_mutex_unlock(&g_inv_lock);
+    pthread_mutex_unlock(&g_inv_lock);
+    return NULL;
 #endif
-        if (cb)
-            cb(ud);
-#ifdef _WIN32
-        return 0;
-#else
-        return NULL;
-#endif
-    }
 }
 
 void star_sync_inventory_start(star_sync_local_item_t* local_items,

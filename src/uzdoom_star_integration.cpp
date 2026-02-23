@@ -29,6 +29,9 @@ star_api_result_t star_api_send_item_to_clan(const char* clan_name_or_target, co
 #include <string>
 #include <algorithm>
 #include <cctype>
+#include <thread>
+#include <mutex>
+#include <atomic>
 
 /* ODOOM (UZDoom) headers for key detection */
 #include "gamedata/a_keys.h"
@@ -77,6 +80,7 @@ static bool g_star_has_last_pickup = false;
 static bool g_star_face_suppressed_for_session = false;
 /** Single source of truth for status bar face; only set by star face on/off and beam-in/out. */
 static bool g_star_show_anorak_face = false;
+
 /** True when we started async SSO auth so beamin command can show "Authenticating..." instead of "Beam-in failed". */
 static bool g_star_async_auth_pending = false;
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
@@ -336,12 +340,15 @@ static void ODOOM_UpdateStarInventoryCVars(void) {
 	listVar->SetGenericRep(v, CVAR_String);
 }
 
+static void ODOOM_OnAuthDone(void* user_data);
+static void ODOOM_OnInventoryDone(void* user_data);
+static void ODOOM_OnSendItemDone(void* user_data);
+
 /** Start background inventory sync if we have pending items and no sync in progress. */
 static void ODOOM_StartInventorySyncIfNeeded(void) {
 	if (!g_star_initialized || star_sync_inventory_in_progress())
 		return;
 	if (g_odoom_pending_sync_count <= 0) return;
-	/* Copy pending to in-flight (sync layer uses the pointer on background thread). */
 	int n = g_odoom_pending_sync_count;
 	if (n > ODOOM_SYNC_PENDING_MAX) n = ODOOM_SYNC_PENDING_MAX;
 	for (int i = 0; i < n; i++) {
@@ -350,20 +357,12 @@ static void ODOOM_StartInventorySyncIfNeeded(void) {
 	}
 	g_odoom_in_flight_count = n;
 	g_odoom_pending_sync_count = 0;
-	star_sync_inventory_start(g_odoom_in_flight_sync, n, "ODOOM", nullptr, nullptr);
+	star_sync_inventory_start(g_odoom_in_flight_sync, n, "ODOOM", ODOOM_OnInventoryDone, nullptr);
 }
 
-/** Poll async auth result and apply to g_star_initialized / username / avatar_id.
- * Throttled when auth is not pending so we don't hit the sync layer every frame (reduces main-thread overhead).
- * star_sync uses background threads for auth and (in OQuake) inventory; direct star_api_* calls run on the calling thread. */
-static void ODOOM_STAR_PollAsyncAuth(void)
-{
-	/* When not pending, only poll every 6th frame (~10 Hz) to reduce overhead; when pending, poll every frame. */
-	static int s_auth_poll_skip = 0;
-	if (!g_star_async_auth_pending && (s_auth_poll_skip++ % 6 != 0))
-		return;
-	if (star_sync_auth_poll() != 1)
-		return;
+/** Called from main thread by star_sync_pump() when auth completes. */
+static void ODOOM_OnAuthDone(void* user_data) {
+	(void)user_data;
 	int success = 0;
 	char username_buf[64] = {};
 	char avatar_id_buf[64] = {};
@@ -379,36 +378,51 @@ static void ODOOM_STAR_PollAsyncAuth(void)
 		g_star_effective_avatar_id = avatar_id_buf;
 		g_star_config.avatar_id = g_star_effective_avatar_id.empty() ? nullptr : g_star_effective_avatar_id.c_str();
 		odoom_star_username = g_star_effective_username.c_str();
-		/* Do NOT cleanup+init after auth (same as OQuake). Cleanup+init breaks star add / inventory. */
 		StarApplyBeamFacePreference();
 		if (g_star_client_ready && !star_sync_inventory_in_progress())
-			star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
+			star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
 		Printf(PRINT_NONOTIFY, "Beam-in successful. Cross-game features enabled.\n");
 	} else {
 		Printf(PRINT_NONOTIFY, "Beam-in failed: %s\n", error_buf[0] ? error_buf : star_api_get_last_error());
 	}
 }
 
+/** Called from main thread by star_sync_pump() when inventory refresh completes. */
+static void ODOOM_OnInventoryDone(void* user_data) {
+	(void)user_data;
+	star_item_list_t* list = nullptr;
+	star_api_result_t res = STAR_API_ERROR_API_ERROR;
+	char err_buf[256] = {};
+	if (!star_sync_inventory_get_result(&list, &res, err_buf, sizeof(err_buf)))
+		return;
+	if (g_odoom_cached_inventory)
+		star_api_free_item_list(g_odoom_cached_inventory);
+	g_odoom_cached_inventory = list;
+	ODOOM_UpdateStarInventoryCVars();
+	star_sync_inventory_clear_result();
+	g_odoom_in_flight_count = 0;
+	ODOOM_StartInventorySyncIfNeeded();
+}
+
+/** Called from main thread by star_sync_pump() when send-item completes (same pattern as Quake). */
+static void ODOOM_OnSendItemDone(void* user_data) {
+	(void)user_data;
+	int success = 0;
+	char err_buf[384] = {};
+	if (!star_sync_send_item_get_result(&success, err_buf, sizeof(err_buf)))
+		return;
+	if (success)
+		Printf(PRINT_NONOTIFY, "Item sent.\n");
+	else
+		Printf(PRINT_NONOTIFY, "Send failed: %s\n", err_buf[0] ? err_buf : "Unknown error");
+	/* Optionally refresh inventory so list updates (like OQuake). */
+	if (g_star_initialized && !star_sync_inventory_in_progress())
+		star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
+}
+
 void ODOOM_InventoryInputCaptureFrame(void)
 {
-	ODOOM_STAR_PollAsyncAuth();
-
-	/* Poll async inventory (background thread); cache result and start next batch if pending. */
-	int inv_poll = star_sync_inventory_poll();
-	if (inv_poll == 1) {
-		star_item_list_t* list = nullptr;
-		star_api_result_t res = STAR_API_ERROR_API_ERROR;
-		char err_buf[256] = {};
-		if (star_sync_inventory_get_result(&list, &res, err_buf, sizeof(err_buf))) {
-			if (g_odoom_cached_inventory)
-				star_api_free_item_list(g_odoom_cached_inventory);
-			g_odoom_cached_inventory = list;
-			ODOOM_UpdateStarInventoryCVars();  /* so overlay popup shows STAR items (like OQuake) */
-			star_sync_inventory_clear_result();
-		}
-		g_odoom_in_flight_count = 0;
-		ODOOM_StartInventorySyncIfNeeded();
-	}
+	star_sync_pump();
 
 	FBaseCVar* openVar = FindCVar("odoom_inventory_open", nullptr);
 	const bool open = (openVar && openVar->GetRealType() == CVAR_Int && openVar->GetGenericRep(CVAR_Int).Int != 0);
@@ -617,17 +631,15 @@ void ODOOM_InventoryInputCaptureFrame(void)
 			const char* starItemName = (std::strncmp(itemClass, "STAR:", 5) == 0) ? (itemClass + 5) : nullptr;
 			if (starItemName && starItemName[0])
 			{
-				/* STAR item send: call STAR API send-to-avatar or send-to-clan */
+				/* STAR item send: use star_sync (background thread + callback via pump, same as Quake). */
 				if (StarInitialized())
 				{
-					/* ItemId not available from ZScript popup; pass NULL to match by name */
-					star_api_result_t res = toClan
-						? star_api_send_item_to_clan(target, starItemName, qty, nullptr)
-						: star_api_send_item_to_avatar(target, starItemName, qty, nullptr);
-					if (res == STAR_API_SUCCESS)
-						Printf("Sent %s x%d to %s.\n", starItemName, qty, toClan ? "clan" : "avatar");
+					if (star_sync_send_item_in_progress())
+						Printf("Send already in progress; try again shortly.\n");
 					else
-						Printf("Send failed: %s\n", star_api_get_last_error());
+					{
+						star_sync_send_item_start(target, starItemName, qty, toClan ? 1 : 0, nullptr, ODOOM_OnSendItemDone, nullptr);
+					}
 				}
 				else
 					Printf("STAR API not initialized; cannot send item. Beam in first.\n");
@@ -891,7 +903,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 	g_star_config.base_url = HasValue(configuredBaseUrl) ? configuredBaseUrl : "https://star-api.oasisplatform.world/api";
 	g_star_config.api_key = g_star_effective_api_key.empty() ? nullptr : g_star_effective_api_key.c_str();
 	g_star_config.avatar_id = g_star_effective_avatar_id.empty() ? nullptr : g_star_effective_avatar_id.c_str();
-	g_star_config.timeout_seconds = 10;
+	g_star_config.timeout_seconds = 30;
 	if (logVerbose) {
 		StarLogInfo(
 			"Init/auth start (base_url=%s, has_api_key=%s, has_avatar_id=%s, has_username=%s, has_password=%s)",
@@ -924,7 +936,7 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 			return false;
 		}
 		if (logVerbose) StarLogInfo("Beaming in... starting async SSO authentication.");
-		star_sync_auth_start(username, password);
+		star_sync_auth_start(username, password, ODOOM_OnAuthDone, nullptr);
 		g_star_async_auth_pending = true;
 		return false; /* Result will be applied in ODOOM_STAR_PollAsyncAuth. */
 	}
@@ -1004,7 +1016,7 @@ void UZDoom_STAR_Init(void) {
 
 	StarLogInfo("STAR bootstrap: Beaming in...");
 	if (StarTryInitializeAndAuthenticate(true) && !star_sync_inventory_in_progress())
-		star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
+		star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
 	Printf(PRINT_NONOTIFY, "STAR: debug=%s auth_source=%s initialized=%s\n",
 		g_star_debug_logging ? "on" : "off",
 		StarAuthSourceLabel(),
@@ -1312,6 +1324,7 @@ CCMD(star)
 	if (strcmp(sub, "inventory") == 0) {
 		Printf("\n");
 		if (!StarInitialized()) { Printf("STAR API not initialized. %s\n", star_api_get_last_error()); Printf("\n"); return; }
+		star_sync_pump();
 		if (g_odoom_cached_inventory) {
 			size_t count = g_odoom_cached_inventory->count;
 			if (count == 0) { Printf("Inventory is empty.\n"); Printf("\n"); return; }
@@ -1327,28 +1340,7 @@ CCMD(star)
 			Printf("\n");
 			return;
 		}
-		/* Poll once in case sync already finished but frame hook never ran (e.g. engine not patched) */
-		if (star_sync_inventory_poll() == 1) {
-			star_item_list_t* list = nullptr;
-			star_api_result_t res = STAR_API_ERROR_API_ERROR;
-			char err_buf[256] = {};
-			if (star_sync_inventory_get_result(&list, &res, err_buf, sizeof(err_buf))) {
-				if (g_odoom_cached_inventory)
-					star_api_free_item_list(g_odoom_cached_inventory);
-				g_odoom_cached_inventory = list;
-				ODOOM_UpdateStarInventoryCVars();
-				star_sync_inventory_clear_result();
-				size_t count = g_odoom_cached_inventory ? g_odoom_cached_inventory->count : 0;
-				if (count == 0) { Printf("Inventory is empty.\n"); Printf("\n"); return; }
-				Printf("STAR inventory (%zu items):\n", count);
-				for (size_t i = 0; i < count; i++) {
-					Printf("  %s - %s (%s, %s)\n", g_odoom_cached_inventory->items[i].name, g_odoom_cached_inventory->items[i].description, g_odoom_cached_inventory->items[i].game_source, g_odoom_cached_inventory->items[i].item_type);
-				}
-				Printf("\n");
-				return;
-			}
-		}
-		star_sync_inventory_start(nullptr, 0, "ODOOM", nullptr, nullptr);
+		star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
 		Printf("Syncing... (run 'star inventory' again in a few seconds)\n");
 		Printf("\n");
 		return;
