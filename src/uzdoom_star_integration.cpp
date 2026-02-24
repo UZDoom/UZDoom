@@ -408,14 +408,42 @@ static void ODOOM_OnInventoryDone(void* user_data) {
 	/* Do NOT chain another inventory sync here; load once after beam-in only. */
 }
 
-/** Refresh overlay from client cache (star_api_get_inventory returns cached list). Call after send so CVars match client cache. */
-static void ODOOM_RefreshInventoryFromClient(void) {
-	star_item_list_t* list = nullptr;
-	if (star_api_get_inventory(&list) != STAR_API_SUCCESS || !list) return;
-	if (g_odoom_cached_inventory)
-		star_api_free_item_list(g_odoom_cached_inventory);
-	g_odoom_cached_inventory = list;
-	ODOOM_UpdateStarInventoryCVars();
+/** Return true if item_name is in the given list (case-insensitive). No API call. */
+static bool ODOOM_HasItemInCachedList(const star_item_list_t* list, const char* item_name) {
+	if (!list || !list->items || !item_name) return false;
+	for (size_t i = 0; i < list->count; i++) {
+#ifdef _WIN32
+		if (_stricmp(list->items[i].name, item_name) == 0) return true;
+#else
+		if (strcasecmp(list->items[i].name, item_name) == 0) return true;
+#endif
+	}
+	return false;
+}
+
+/** Remove up to remove_qty items matching item_name from the list in-place. No API call. */
+static void ODOOM_RemoveFromCachedList(star_item_list_t* list, const char* item_name, int remove_qty) {
+	if (!list || !list->items || !item_name || remove_qty <= 0) return;
+	size_t count = list->count;
+	star_item_t* items = list->items;
+	size_t write = 0;
+	int removed = 0;
+	for (size_t i = 0; i < count; i++) {
+		if (removed < remove_qty &&
+#ifdef _WIN32
+		    _stricmp(items[i].name, item_name) == 0
+#else
+		    strcasecmp(items[i].name, item_name) == 0
+#endif
+		) {
+			removed++;
+			continue;
+		}
+		if (write != i)
+			items[write] = items[i];
+		write++;
+	}
+	list->count = write;
 }
 
 /** Called from main thread by star_sync_pump() when send-item completes (same pattern as Quake). */
@@ -430,9 +458,10 @@ static void ODOOM_OnSendItemDone(void* user_data) {
 		std::strncpy(s_send_status_buf, "Item sent.", sizeof(s_send_status_buf) - 1);
 		s_send_status_buf[sizeof(s_send_status_buf) - 1] = '\0';
 		Printf(PRINT_NONOTIFY, "Item sent.\n");
-		/* Update local cache so UI reflects sent items without hitting the API */
-		/* Client already updated its cache on send success; refresh overlay from client cache. */
-		ODOOM_RefreshInventoryFromClient();
+		/* Update local list in-place (no API call). Client cache already updated in STARAPIClient. */
+		if (g_odoom_cached_inventory && !g_odoom_last_sent_item_name.empty() && g_odoom_last_sent_qty > 0)
+			ODOOM_RemoveFromCachedList(g_odoom_cached_inventory, g_odoom_last_sent_item_name.c_str(), g_odoom_last_sent_qty);
+		ODOOM_UpdateStarInventoryCVars();
 		g_odoom_last_sent_item_name.clear();
 		g_odoom_last_sent_qty = 0;
 	} else {
@@ -449,6 +478,7 @@ static void ODOOM_OnSendItemDone(void* user_data) {
 	/* Do NOT refetch inventory here; we updated the cache above. Keeps API hits to minimum. */
 }
 
+/** Called every frame from the main loop (see apply_odoom_branding.ps1: d_main and g_game). Must run so send/auth/inventory callbacks are invoked. */
 void ODOOM_InventoryInputCaptureFrame(void)
 {
 	star_sync_pump();
@@ -553,7 +583,12 @@ void ODOOM_InventoryInputCaptureFrame(void)
 			s_send_status_buf[0] = '\0';
 			UCVarValue val; val.String = s_send_status_buf;
 			statusVar->SetGenericRep(val, CVAR_String);
-		} else if (star_sync_send_item_in_progress()) {
+		} else {
+			/* Run pump again so send callback is processed as soon as the background thread finishes (keeps UI responsive). */
+			if (star_sync_send_item_in_progress())
+				star_sync_pump();
+		}
+		if (sendOpen && star_sync_send_item_in_progress()) {
 			std::strncpy(s_send_status_buf, "Sending...", sizeof(s_send_status_buf) - 1);
 			s_send_status_buf[sizeof(s_send_status_buf) - 1] = '\0';
 			UCVarValue val; val.String = s_send_status_buf;
@@ -1216,11 +1251,18 @@ int UZDoom_STAR_CheckDoorAccess(struct AActor* owner, int keynum, int remote) {
 	const char* keyname = GetKeycardName(keynum);
 	if (!keyname) return 0;
 
-	/* star_api_has_item / use_item use the client's local cache first; API is only hit when cache is empty. */
-	if (star_api_has_item(keyname)) {
+	/* Only use inventory when we have it locally (from the one load after beam-in). Never call the API from the main thread here – avoids repeated get_inventory and keeps game responsive. */
+	if (!g_odoom_cached_inventory || g_odoom_cached_inventory->count == 0)
+		return 0;
+
+	/* Check local cache only (no API call). */
+	if (ODOOM_HasItemInCachedList(g_odoom_cached_inventory, keyname)) {
 		StarLogInfo("Door access granted via shared inventory key: %s", keyname);
 		bool used = star_api_use_item(keyname, "odoom_door");
-		if (!used) {
+		if (used) {
+			ODOOM_RemoveFromCachedList(g_odoom_cached_inventory, keyname, 1);
+			ODOOM_UpdateStarInventoryCVars();
+		} else {
 			StarLogError("star_api_use_item failed for %s: %s", keyname, star_api_get_last_error());
 		}
 		return 1;
@@ -1410,8 +1452,8 @@ CCMD(star)
 	}
 	if (strcmp(sub, "has") == 0) {
 		if (argv.argc() < 3) { Printf("Usage: star has <item_name>\n"); return; }
-		/* Client uses its local cache first; API only when cache empty. */
-		bool has = star_api_has_item(argv[2]);
+		/* Use local list only (from one load after beam-in). No API call. */
+		bool has = (g_odoom_cached_inventory && ODOOM_HasItemInCachedList(g_odoom_cached_inventory, argv[2]));
 		Printf("Has '%s': %s\n", argv[2], has ? "yes" : "no");
 		return;
 	}
@@ -1438,7 +1480,11 @@ CCMD(star)
 	if (strcmp(sub, "use") == 0) {
 		if (argv.argc() < 3) { Printf("Usage: star use <item_name> [context]\n"); return; }
 		const char* ctx = argv.argc() > 3 ? argv[3] : "console";
-		/* Client uses cache first for has then records use. */
+		/* Must have item in local list; then record use on server (one use_item API call). */
+		if (!g_odoom_cached_inventory || !ODOOM_HasItemInCachedList(g_odoom_cached_inventory, argv[2])) {
+			Printf("Use '%s': no (not in inventory)\n", argv[2]);
+			return;
+		}
 		bool ok = star_api_use_item(argv[2], ctx);
 		Printf("Use '%s' (context %s): %s\n", argv[2], ctx, ok ? "ok" : "failed");
 		if (!ok) Printf("  %s\n", star_api_get_last_error());
