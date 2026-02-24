@@ -36,6 +36,22 @@
 #include "tflags.h"
 #include "vectors.h"
 
+#include "rapidjson/stringbuffer.h"
+
+struct FWriterBuffer {
+	rapidjson::StringBuffer buffer;
+	FWriterBuffer() : buffer(rapidjson::StringBuffer {}) {}
+	FWriterBuffer(rapidjson::StringBuffer buffer) : buffer(std::move(buffer)) {}
+};
+
+struct FReaderAllocator {
+	rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> buffer;
+	FReaderAllocator() : buffer({}) {}
+	FReaderAllocator(char* userBuffer, size_t len) : buffer({ userBuffer, len }) {}
+	FReaderAllocator(rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> buffer) : buffer(std::move(buffer)) {}
+	void Clear() { buffer.Clear(); }
+};
+
 struct FWriter;
 struct FReader;
 class PClass;
@@ -113,9 +129,12 @@ public:
 	bool MarkRollbackObject(DObject* obj);
 	void SetUniqueSoundNames() { soundNamesAreUnique = true; }
 	bool OpenWriter(bool pretty = true, bool predicting = false);
+	bool OpenWriter(FWriterBuffer buffer, bool pretty = true, bool predicting = false);
 	bool OpenReader(const char *buffer, size_t length, bool predicting = false);
+	bool OpenReader(FReaderAllocator allocator, const char *buffer, size_t length, bool predicting = false);
 	bool OpenReader(FileSys::FCompressedBuffer *input, bool predicting = false);
 	void Close();
+	FWriterBuffer CloseAndGetBuffer();
 	void ReadObjectsFrom(TArray<TObjPtr<DObject*>>& from);
 	void ReadObjects(bool hubtravel);
 	bool BeginObject(const char *name);

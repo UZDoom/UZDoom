@@ -395,7 +395,12 @@ struct FPredictionData
 	TArray<FActorBackup> RollbackActors = {};
 	TArray<size_t> RollbackPlayers = {};				// Store by index instead of pointer so it'll never be invalid when deserializing.
 	FLevelLocals* RollbackLevel = nullptr;				// Save this for when opening the reader.
-	FileSys::FCompressedBuffer RollbackData = {};		// Snapshot of all saved Objects.
+	std::string_view RollbackData;		// Snapshot of all saved Objects.
+	FWriterBuffer RollbackWriterBuffer;
+	char ParseBuffer[262144] = {};
+	FReaderAllocator RollbackReaderAllocator;
+
+	FPredictionData() : RollbackReaderAllocator(ParseBuffer, sizeof(ParseBuffer)) {}
 
 	struct
 	{
@@ -416,7 +421,7 @@ struct FPredictionData
 		RollbackActors.Clear();
 		RollbackPlayers.Clear();
 		RollbackLevel = nullptr;
-		RollbackData.Clean();
+		RollbackData = "";
 	}
 
 	void Mark()
@@ -468,7 +473,7 @@ DEFINE_ACTION_FUNCTION(FPlayerClass, CheckSkin)
 //===========================================================================
 
 FString GetPrintableDisplayName(PClassActor *cls)
-{ 
+{
 	// Fixme; This needs a decent way to access the string table without creating a mess.
 	// [RH] ????
 	return cls->GetDisplayName();
@@ -875,8 +880,8 @@ DEFINE_ACTION_FUNCTION(FPlayerClass, GetColorSetName)
 
 static int GetPainFlash(AActor *info, int type)
 {
-	// go backwards through the list and return the first item with a 
-	// matching damage type for an ancestor of our class. 
+	// go backwards through the list and return the first item with a
+	// matching damage type for an ancestor of our class.
 	// This will always return the best fit because any parent class
 	// must be processed before its children.
 	for (int i = PainFlashes.Size() - 1; i >= 0; i--)
@@ -973,7 +978,7 @@ bool player_t::Resurrect()
 	mo->renderflags &= ~RF_INVISIBLE;
 	mo->Height = mo->GetDefault()->Height;
 	mo->radius = mo->GetDefault()->radius;
-	mo->special1 = 0;	// required for the Hexen fighter's fist attack. 
+	mo->special1 = 0;	// required for the Hexen fighter's fist attack.
 								// This gets set by AActor::Die as flag for the wimpy death and must be reset here.
 	mo->SetState(mo->SpawnState);
 	int pnum = mo->Level->PlayerNum(this);
@@ -1173,7 +1178,7 @@ DEFINE_ACTION_FUNCTION(_PlayerInfo, GetStillBob)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -1246,7 +1251,7 @@ void PlayIdle (AActor *player)
 //
 // A_PlayerScream
 //
-// try to find the appropriate death sound and use suitable 
+// try to find the appropriate death sound and use suitable
 // replacements if necessary
 //
 //===========================================================================
@@ -1346,7 +1351,7 @@ void P_CheckPlayerSprite(AActor *actor, int &spritenum, DVector2 &scale)
 	if (player->mo == actor && player->crouchfactor < 0.75)
 	{
 		int crouchsprite = player->mo->IntVar(NAME_crouchsprite);
-		if (spritenum == actor->SpawnState->sprite || spritenum == crouchsprite) 
+		if (spritenum == actor->SpawnState->sprite || spritenum == crouchsprite)
 		{
 			crouchspriteno = crouchsprite;
 		}
@@ -1361,7 +1366,7 @@ void P_CheckPlayerSprite(AActor *actor, int &spritenum, DVector2 &scale)
 			crouchspriteno = -1;
 		}
 
-		if (crouchspriteno > 0) 
+		if (crouchspriteno > 0)
 		{
 			spritenum = crouchspriteno;
 		}
@@ -1395,7 +1400,7 @@ void P_FallingDamage (AActor *actor)
 
 	if (damagestyle == 0)
 		return;
-		
+
 	if (actor->floorsector->Flags & SECF_NOFALLINGDAMAGE)
 		return;
 
@@ -1427,7 +1432,7 @@ void P_FallingDamage (AActor *actor)
 			}
 		}
 		break;
-	
+
 	case DF_FORCE_FALLINGZD:		// ZDoom falling damage
 		if (vel <= 19)
 		{ // Not fast enough to hurt
@@ -1795,9 +1800,9 @@ void P_PredictClient()
 				fullRollback.Push(a.GetObject<DObject>());
 			for (auto& o : PredictionData.RollbackObjects)
 				fullRollback.Push(o.GetObject<DObject>());
-			PredictionData.RollbackData = writer.GetCompressedOutput(&PredictionData.RollbackObjectRefs, &fullRollback);
+			PredictionData.RollbackData = writer.GetOutput(nullptr, &PredictionData.RollbackObjectRefs, &fullRollback);
 			PredictionData.RollbackLevel = player->mo->Level;
-			writer.Close();
+			PredictionData.RollbackWriterBuffer = writer.CloseAndGetBuffer();
 
 			for (auto& a : PredictionData.RollbackActors)
 				a.PostBackup();
@@ -1899,7 +1904,7 @@ void P_UnPredictClient()
 	NetworkEntityManager::DisablePrediction();
 
 	FDoomSerializer reader = { PredictionData.RollbackLevel };
-	if (reader.OpenReader(&PredictionData.RollbackData, true))
+	if (reader.OpenReader(PredictionData.RollbackReaderAllocator, PredictionData.RollbackData.data(), PredictionData.RollbackData.size(), true))
 	{
 		for (auto& a : PredictionData.RollbackActors)
 			a.PreRollback();
