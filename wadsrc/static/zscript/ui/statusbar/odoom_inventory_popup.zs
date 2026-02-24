@@ -368,10 +368,19 @@ class OASISInventoryOverlayHandler : EventHandler
 				CVar cv = CVar.FindCVar("odoom_send_popup_open");
 				if (cv != null) cv.SetInt(0);
 			}
-			// Enter or E = confirm (Send if focus 0, else just close)
+			// Enter or E = confirm (Send if focus 0, else just close). When result is shown, Enter/E/I closes.
 			else if (keyEnterPressed || keyUsePressed)
 			{
-				if (sendButtonFocus == 0)
+				CVar statusCv = CVar.FindCVar("odoom_send_status");
+				String sendStatus = (statusCv != null) ? statusCv.GetString() : "";
+				bool isResult = (sendStatus.Length() > 0 && sendStatus.Compare("Sending...") != 0);
+				if (isResult)
+				{
+					sendPopupMode = 0;
+					CVar cv = CVar.FindCVar("odoom_send_popup_open");
+					if (cv != null) cv.SetInt(0);
+				}
+				else if (sendButtonFocus == 0)
 				{
 					if (sendInputLine.Length() > 0)
 					{
@@ -385,11 +394,21 @@ class OASISInventoryOverlayHandler : EventHandler
 						if (t != null) t.SetInt(sendPopupMode == 2 ? 1 : 0);
 						t = CVar.FindCVar("odoom_send_do_it");
 						if (t != null) t.SetInt(1);
+						// Keep popup open; C++ will set Sending... then Item sent./Send failed (we show and close on key)
+					}
+					else
+					{
+						sendPopupMode = 0;
+						CVar cv = CVar.FindCVar("odoom_send_popup_open");
+						if (cv != null) cv.SetInt(0);
 					}
 				}
-				sendPopupMode = 0;
-				CVar cv = CVar.FindCVar("odoom_send_popup_open");
-				if (cv != null) cv.SetInt(0);
+				else
+				{
+					sendPopupMode = 0;
+					CVar cv = CVar.FindCVar("odoom_send_popup_open");
+					if (cv != null) cv.SetInt(0);
+				}
 			}
 		}
 
@@ -664,9 +683,13 @@ class OASISInventoryOverlayHandler : EventHandler
 		}
 		}
 
-		// Send popup overlay (OQuake-style)
+		// Send popup overlay (OQuake-style): show Sending... / Item sent. / Send failed like Quake
 		if (sendPopupMode != 0)
 		{
+			CVar statusCv = CVar.FindCVar("odoom_send_status");
+			String sendStatus = (statusCv != null) ? statusCv.GetString() : "";
+			bool showingResult = (sendStatus.Length() > 0 && sendStatus.Compare("Sending...") != 0);
+
 			String title = (sendPopupMode == 2) ? "SEND TO CLAN" : "SEND TO AVATAR";
 			String label = (sendPopupMode == 2) ? "Clan" : "Username";
 			int popupW = 200;
@@ -674,20 +697,31 @@ class OASISInventoryOverlayHandler : EventHandler
 			int popupX = (320 - popupW) / 2;
 			int popupY = (200 - popupH) / 2;
 			screen.DrawText(f, Font.CR_GOLD, popupX + 8, popupY + 4, title, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			if (sendItemDisplayLabel.Length() > 0)
-				screen.DrawText(f, Font.CR_WHITE, popupX + 8, popupY + 16, String.Format("Sending: %s", sendItemDisplayLabel), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 26, String.Format("%s: %s_", label, sendInputLine), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			String qtyText = String.Format("Quantity: %d / %d (Arrows)", sendQuantity, sendMaxQty);
-			screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 38, qtyText, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 50, "Left=Send  Right=Cancel  Enter=Confirm", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			if (sendButtonFocus == 0)
-				screen.DrawText(f, Font.CR_GREEN, popupX + 16, popupY + 66, "[SEND]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			if (sendStatus.Compare("Sending...") == 0)
+				screen.DrawText(f, Font.CR_GREEN, popupX + 8, popupY + 16, "Sending...", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			else if (showingResult)
+			{
+				int cr = (sendStatus.IndexOf("Send failed") >= 0) ? Font.CR_RED : Font.CR_GREEN;
+				screen.DrawText(f, cr, popupX + 8, popupY + 16, sendStatus, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 28, "Press Enter or I to close", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			}
 			else
-				screen.DrawText(f, Font.CR_GRAY, popupX + 16, popupY + 66, "SEND", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			if (sendButtonFocus == 1)
-				screen.DrawText(f, Font.CR_GREEN, popupX + 80, popupY + 66, "[CANCEL]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
-			else
-				screen.DrawText(f, Font.CR_GRAY, popupX + 80, popupY + 66, "CANCEL", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			{
+				if (sendItemDisplayLabel.Length() > 0)
+					screen.DrawText(f, Font.CR_WHITE, popupX + 8, popupY + 16, String.Format("Item: %s", sendItemDisplayLabel), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 26, String.Format("%s: %s_", label, sendInputLine), DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				String qtyText = String.Format("Quantity: %d / %d (Arrows)", sendQuantity, sendMaxQty);
+				screen.DrawText(f, Font.CR_UNTRANSLATED, popupX + 8, popupY + 38, qtyText, DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				screen.DrawText(f, Font.CR_DARKGRAY, popupX + 8, popupY + 50, "Left=Send  Right=Cancel  Enter=Confirm", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				if (sendButtonFocus == 0)
+					screen.DrawText(f, Font.CR_GREEN, popupX + 16, popupY + 66, "[SEND]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				else
+					screen.DrawText(f, Font.CR_GRAY, popupX + 16, popupY + 66, "SEND", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				if (sendButtonFocus == 1)
+					screen.DrawText(f, Font.CR_GREEN, popupX + 80, popupY + 66, "[CANCEL]", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+				else
+					screen.DrawText(f, Font.CR_GRAY, popupX + 80, popupY + 66, "CANCEL", DTA_VirtualWidth, 320, DTA_VirtualHeight, 200, DTA_FullscreenScale, FSMode_ScaleToFit43);
+			}
 		}
 	}
 }

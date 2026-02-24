@@ -379,7 +379,8 @@ static void ODOOM_OnAuthDone(void* user_data) {
 		g_star_config.avatar_id = g_star_effective_avatar_id.empty() ? nullptr : g_star_effective_avatar_id.c_str();
 		odoom_star_username = g_star_effective_username.c_str();
 		StarApplyBeamFacePreference();
-		if (g_star_client_ready && !star_sync_inventory_in_progress())
+		/* Start inventory fetch in background so popup has data when opened (same as OQuake). */
+		if (!star_sync_inventory_in_progress())
 			star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
 		Printf(PRINT_NONOTIFY, "Beam-in successful. Cross-game features enabled.\n");
 	} else {
@@ -411,10 +412,20 @@ static void ODOOM_OnSendItemDone(void* user_data) {
 	char err_buf[384] = {};
 	if (!star_sync_send_item_get_result(&success, err_buf, sizeof(err_buf)))
 		return;
-	if (success)
+	static char s_send_status_buf[384];
+	if (success) {
+		std::strncpy(s_send_status_buf, "Item sent.", sizeof(s_send_status_buf) - 1);
+		s_send_status_buf[sizeof(s_send_status_buf) - 1] = '\0';
 		Printf(PRINT_NONOTIFY, "Item sent.\n");
-	else
+	} else {
+		std::snprintf(s_send_status_buf, sizeof(s_send_status_buf), "Send failed: %s", err_buf[0] ? err_buf : "Unknown error");
 		Printf(PRINT_NONOTIFY, "Send failed: %s\n", err_buf[0] ? err_buf : "Unknown error");
+	}
+	FBaseCVar* statusVar = FindCVar("odoom_send_status", nullptr);
+	if (statusVar && statusVar->GetRealType() == CVAR_String) {
+		UCVarValue val; val.String = s_send_status_buf;
+		statusVar->SetGenericRep(val, CVAR_String);
+	}
 	/* Optionally refresh inventory so list updates (like OQuake). */
 	if (g_star_initialized && !star_sync_inventory_in_progress())
 		star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
@@ -511,8 +522,26 @@ void ODOOM_InventoryInputCaptureFrame(void)
 		g_odoom_send_key_was_down['X'] = (ODOOM_GetRawKeyDown('X') != 0);
 		g_odoom_send_popup_was_open = true;
 	}
-	if (!sendOpen)
+	if (!sendOpen) {
 		g_odoom_send_popup_was_open = false;
+		g_odoom_send_input_buffer.clear();
+	}
+
+	/* Send status for ZScript: "Sending...", "Item sent.", or "Send failed: ...". Clear when popup closed. */
+	FBaseCVar* statusVar = FindCVar("odoom_send_status", nullptr);
+	if (statusVar && statusVar->GetRealType() == CVAR_String) {
+		static char s_send_status_buf[384];
+		if (!sendOpen) {
+			s_send_status_buf[0] = '\0';
+			UCVarValue val; val.String = s_send_status_buf;
+			statusVar->SetGenericRep(val, CVAR_String);
+		} else if (star_sync_send_item_in_progress()) {
+			std::strncpy(s_send_status_buf, "Sending...", sizeof(s_send_status_buf) - 1);
+			s_send_status_buf[sizeof(s_send_status_buf) - 1] = '\0';
+			UCVarValue val; val.String = s_send_status_buf;
+			statusVar->SetGenericRep(val, CVAR_String);
+		}
+	}
 
 	if (sendOpen)
 	{
@@ -639,6 +668,13 @@ void ODOOM_InventoryInputCaptureFrame(void)
 					else
 					{
 						star_sync_send_item_start(target, starItemName, qty, toClan ? 1 : 0, nullptr, ODOOM_OnSendItemDone, nullptr);
+						/* Show "Sending..." in popup; keep popup open until callback sets result (ZScript shows status). */
+						FBaseCVar* sv = FindCVar("odoom_send_status", nullptr);
+						if (sv && sv->GetRealType() == CVAR_String) {
+							static const char sending[] = "Sending...";
+							UCVarValue val; val.String = (char*)sending;
+							sv->SetGenericRep(val, CVAR_String);
+						}
 					}
 				}
 				else
@@ -654,9 +690,8 @@ void ODOOM_InventoryInputCaptureFrame(void)
 			}
 		}
 		{ UCVarValue u; u.Int = 0; doItVar->SetGenericRep(u, CVAR_Int); }
-		if (sendOpenVar) { UCVarValue u; u.Int = 0; sendOpenVar->SetGenericRep(u, CVAR_Int); }
+		/* Do not close send popup here; ZScript keeps it open and shows Sending.../result, then user closes. */
 		g_odoom_send_popup_was_open = false;
-		g_odoom_send_input_buffer.clear();
 	}
 }
 
@@ -941,31 +976,23 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 		return false; /* Result will be applied in ODOOM_STAR_PollAsyncAuth. */
 	}
 
-	// API key + avatar mode: verify we can access inventory for this avatar.
+	// API key + avatar mode: accept credentials and start inventory in background (no blocking call).
 	if (HasValue(g_star_config.api_key) && HasValue(g_star_config.avatar_id)) {
-		if (logVerbose) StarLogInfo("Beaming in... verifying API key/avatar via star_api_get_inventory.");
-		star_item_list_t* list = nullptr;
-		star_api_result_t inv = star_api_get_inventory(&list);
-		if (inv == STAR_API_SUCCESS) {
-			g_star_initialized = true;
-			g_star_init_failed_this_session = false;
-			g_star_logged_runtime_auth_failure = false;
-			g_star_logged_missing_auth_config = false;
-			if (!g_star_effective_username.empty())
-				odoom_star_username = g_star_effective_username.c_str();
-			else if (!g_star_effective_avatar_id.empty())
-				odoom_star_username = g_star_effective_avatar_id.c_str();
-			else
-				odoom_star_username = "Avatar";
-			StarApplyBeamFacePreference();
-			size_t count = list ? list->count : 0;
-			if (list) star_api_free_item_list(list);
-			if (logVerbose) StarLogInfo("Beam-in successful (API key/avatar). Inventory items=%zu. Cross-game features enabled.", count);
-			return true;
-		}
-		if (list) star_api_free_item_list(list);
-		if (logVerbose) StarLogError("Beam-in failed (API key/avatar verify): %s", star_api_get_last_error());
-		return false;
+		g_star_initialized = true;
+		g_star_init_failed_this_session = false;
+		g_star_logged_runtime_auth_failure = false;
+		g_star_logged_missing_auth_config = false;
+		if (!g_star_effective_username.empty())
+			odoom_star_username = g_star_effective_username.c_str();
+		else if (!g_star_effective_avatar_id.empty())
+			odoom_star_username = g_star_effective_avatar_id.c_str();
+		else
+			odoom_star_username = "Avatar";
+		StarApplyBeamFacePreference();
+		if (logVerbose) StarLogInfo("Beam-in (API key/avatar). Starting inventory sync in background.");
+		if (!star_sync_inventory_in_progress())
+			star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
+		return true;
 	}
 
 	if (logVerbose && !g_star_logged_missing_auth_config) {
