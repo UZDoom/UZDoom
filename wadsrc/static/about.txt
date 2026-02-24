@@ -1075,6 +1075,12 @@ First release of ODOOM. UZDoom-based port with OASIS STAR API integration for cr
 
 ---
 
+UZDoom version 1.0 (Build 1), released (OASIS build)
+
+First release of ODOOM. UZDoom-based port with OASIS STAR API integration for cross-game features in the OASIS Omniverse. Supports keycard sharing with OQuake, STAR inventory, and interoperable games. By NextGen World Ltd.
+
+---
+
 
 ODOOM 1.0 (Build 1) — First release of ODOOM. UZDoom-based port with OASIS STAR API integration for cross-game features in the OASIS Omniverse. Supports keycard sharing with OQuake, STAR inventory, and interoperable games. By NextGen World Ltd.
 

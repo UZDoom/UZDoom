@@ -133,6 +133,9 @@ static const int ODOOM_SEND_INPUT_MAX = 64;
 static std::string g_odoom_send_input_buffer;
 static bool g_odoom_send_key_was_down[256];
 static bool g_odoom_send_popup_was_open = false;
+/* Last send item name/qty so we can update local cache on success without hitting the API */
+static std::string g_odoom_last_sent_item_name;
+static int g_odoom_last_sent_qty = 0;
 
 static void StarApplyBeamFacePreference(void);
 
@@ -402,7 +405,46 @@ static void ODOOM_OnInventoryDone(void* user_data) {
 	ODOOM_UpdateStarInventoryCVars();
 	star_sync_inventory_clear_result();
 	g_odoom_in_flight_count = 0;
-	ODOOM_StartInventorySyncIfNeeded();
+	/* Do NOT chain another inventory sync here; load once after beam-in only. */
+}
+
+/** Return true if the item exists in the local cached inventory (no API call). Use for door/lock checks to avoid redundant API hits. */
+static bool ODOOM_HasItemInCache(const char* item_name) {
+	if (!item_name || !g_odoom_cached_inventory || !g_odoom_cached_inventory->items) return false;
+	for (size_t i = 0; i < g_odoom_cached_inventory->count; i++) {
+#ifdef _WIN32
+		if (_stricmp(g_odoom_cached_inventory->items[i].name, item_name) == 0) return true;
+#else
+		if (strcasecmp(g_odoom_cached_inventory->items[i].name, item_name) == 0) return true;
+#endif
+	}
+	return false;
+}
+
+/** Remove up to 'remove_qty' items matching 'item_name' from the cached list (in-place). Case-insensitive name match. */
+static void ODOOM_RemoveFromCachedInventory(const char* item_name, int remove_qty) {
+	if (!g_odoom_cached_inventory || !item_name || remove_qty <= 0) return;
+	size_t count = g_odoom_cached_inventory->count;
+	star_item_t* items = g_odoom_cached_inventory->items;
+	if (!items) return;
+	size_t write = 0;
+	int removed = 0;
+	for (size_t i = 0; i < count; i++) {
+		if (removed < remove_qty &&
+#ifdef _WIN32
+		    _stricmp(items[i].name, item_name) == 0
+#else
+		    strcasecmp(items[i].name, item_name) == 0
+#endif
+		) {
+			removed++;
+			continue;
+		}
+		if (write != i)
+			items[write] = items[i];
+		write++;
+	}
+	g_odoom_cached_inventory->count = write;
 }
 
 /** Called from main thread by star_sync_pump() when send-item completes (same pattern as Quake). */
@@ -417,18 +459,25 @@ static void ODOOM_OnSendItemDone(void* user_data) {
 		std::strncpy(s_send_status_buf, "Item sent.", sizeof(s_send_status_buf) - 1);
 		s_send_status_buf[sizeof(s_send_status_buf) - 1] = '\0';
 		Printf(PRINT_NONOTIFY, "Item sent.\n");
+		/* Update local cache so UI reflects sent items without hitting the API */
+		if (!g_odoom_last_sent_item_name.empty() && g_odoom_last_sent_qty > 0) {
+			ODOOM_RemoveFromCachedInventory(g_odoom_last_sent_item_name.c_str(), g_odoom_last_sent_qty);
+			ODOOM_UpdateStarInventoryCVars();
+			g_odoom_last_sent_item_name.clear();
+			g_odoom_last_sent_qty = 0;
+		}
 	} else {
 		std::snprintf(s_send_status_buf, sizeof(s_send_status_buf), "Send failed: %s", err_buf[0] ? err_buf : "Unknown error");
 		Printf(PRINT_NONOTIFY, "Send failed: %s\n", err_buf[0] ? err_buf : "Unknown error");
+		g_odoom_last_sent_item_name.clear();
+		g_odoom_last_sent_qty = 0;
 	}
 	FBaseCVar* statusVar = FindCVar("odoom_send_status", nullptr);
 	if (statusVar && statusVar->GetRealType() == CVAR_String) {
 		UCVarValue val; val.String = s_send_status_buf;
 		statusVar->SetGenericRep(val, CVAR_String);
 	}
-	/* Optionally refresh inventory so list updates (like OQuake). */
-	if (g_star_initialized && !star_sync_inventory_in_progress())
-		star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
+	/* Do NOT refetch inventory here; we updated the cache above. Keeps API hits to minimum. */
 }
 
 void ODOOM_InventoryInputCaptureFrame(void)
@@ -667,6 +716,8 @@ void ODOOM_InventoryInputCaptureFrame(void)
 						Printf("Send already in progress; try again shortly.\n");
 					else
 					{
+						g_odoom_last_sent_item_name = starItemName;
+						g_odoom_last_sent_qty = qty;
 						star_sync_send_item_start(target, starItemName, qty, toClan ? 1 : 0, nullptr, ODOOM_OnSendItemDone, nullptr);
 						/* Show "Sending..." in popup; keep popup open until callback sets result (ZScript shows status). */
 						FBaseCVar* sv = FindCVar("odoom_send_status", nullptr);
@@ -1174,7 +1225,7 @@ void UZDoom_STAR_PostTouchSpecial(int keynum) {
 		g_star_last_pickup_type = itemType;
 		g_star_last_pickup_desc = desc;
 		g_star_has_last_pickup = true;
-		ODOOM_StartInventorySyncIfNeeded();
+		/* Do not start sync on every pickup; inventory loads once after beam-in only. */
 	} else {
 		StarLogError("Pending sync queue full; pickup %s not synced.", name);
 	}
@@ -1193,10 +1244,18 @@ int UZDoom_STAR_CheckDoorAccess(struct AActor* owner, int keynum, int remote) {
 		return 0;
 	}
 
-	/* 1) Check Doom keycard in cross-game inventory */
 	const char* keyname = GetKeycardName(keynum);
-	if (keyname && star_api_has_item(keyname)) {
-		StarLogInfo("Door access granted via shared inventory key: %s", keyname);
+	if (!keyname) return 0;
+
+	/* Prefer local cached inventory (loaded once after beam-in) to avoid API calls on every door touch. */
+	if (ODOOM_HasItemInCache(keyname)) {
+		StarLogInfo("Door access granted via shared inventory key (cache): %s", keyname);
+		return 1;
+	}
+
+	/* Fallback: cache empty or not loaded yet (edge case) – hit API as last resort. */
+	if (star_api_has_item(keyname)) {
+		StarLogInfo("Door access granted via shared inventory key (API): %s", keyname);
 		bool used = star_api_use_item(keyname, "odoom_door");
 		if (!used) {
 			StarLogError("star_api_use_item failed for %s: %s", keyname, star_api_get_last_error());
@@ -1367,8 +1426,8 @@ CCMD(star)
 			Printf("\n");
 			return;
 		}
-		star_sync_inventory_start(nullptr, 0, "ODOOM", ODOOM_OnInventoryDone, nullptr);
-		Printf("Syncing... (run 'star inventory' again in a few seconds)\n");
+		/* Do not start a fetch here; inventory loads once after beam-in only to minimize API hits. */
+		Printf("No inventory loaded. Beam in first.\n");
 		Printf("\n");
 		return;
 	}
@@ -1388,7 +1447,10 @@ CCMD(star)
 	}
 	if (strcmp(sub, "has") == 0) {
 		if (argv.argc() < 3) { Printf("Usage: star has <item_name>\n"); return; }
-		bool has = star_api_has_item(argv[2]);
+		/* Check local cache first (no API hit); fall back to API only if cache not available. */
+		bool has = ODOOM_HasItemInCache(argv[2]);
+		if (!has && (!g_odoom_cached_inventory || g_odoom_cached_inventory->count == 0))
+			has = star_api_has_item(argv[2]);
 		Printf("Has '%s': %s\n", argv[2], has ? "yes" : "no");
 		return;
 	}
@@ -1405,8 +1467,8 @@ CCMD(star)
 			strncpy(p->game_source, "ODOOM", sizeof(p->game_source) - 1); p->game_source[sizeof(p->game_source) - 1] = '\0';
 			strncpy(p->item_type, type, sizeof(p->item_type) - 1); p->item_type[sizeof(p->item_type) - 1] = '\0';
 			p->synced = 0;
-			ODOOM_StartInventorySyncIfNeeded();
-			Printf("Queued '%s' for sync (background). Run 'star inventory' to refresh.\n", name);
+			/* Do not auto-start sync; keep API hits to minimum. */
+			Printf("Queued '%s' for sync. Inventory loads once after beam-in.\n", name);
 		} else {
 			Printf("Sync queue full; try again later.\n");
 		}
@@ -1415,7 +1477,11 @@ CCMD(star)
 	if (strcmp(sub, "use") == 0) {
 		if (argv.argc() < 3) { Printf("Usage: star use <item_name> [context]\n"); return; }
 		const char* ctx = argv.argc() > 3 ? argv[3] : "console";
-		bool ok = star_api_use_item(argv[2], ctx);
+		/* If we have it in cache we know we have it; still call API to record use. Fall back to API has+use if cache empty. */
+		bool have = ODOOM_HasItemInCache(argv[2]);
+		if (!have && (!g_odoom_cached_inventory || g_odoom_cached_inventory->count == 0))
+			have = star_api_has_item(argv[2]);
+		bool ok = have && star_api_use_item(argv[2], ctx);
 		Printf("Use '%s' (context %s): %s\n", argv[2], ctx, ok ? "ok" : "failed");
 		if (!ok) Printf("  %s\n", star_api_get_last_error());
 		return;
