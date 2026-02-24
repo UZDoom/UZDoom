@@ -83,6 +83,7 @@ static bool g_star_show_anorak_face = false;
 
 /** True when we started async SSO auth so beamin command can show "Authenticating..." instead of "Beam-in failed". */
 static bool g_star_async_auth_pending = false;
+static bool StarInitialized(void);
 CVAR(Bool, oasis_star_anorak_face, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, oasis_star_beam_face, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, odoom_star_api_url, "https://star-api.oasisplatform.world/api", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
@@ -134,7 +135,6 @@ static bool g_odoom_send_key_was_down[256];
 static bool g_odoom_send_popup_was_open = false;
 
 static void StarApplyBeamFacePreference(void);
-static bool StarInitialized(void);
 
 /*-----------------------------------------------------------------------------
  * OASIS STAR Config - oasisstar.json (parity with OQuake)
