@@ -106,6 +106,12 @@ CVAR(Int, odoom_star_stack_armor, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, odoom_star_stack_weapons, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, odoom_star_stack_powerups, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, odoom_star_stack_keys, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+/* Mint NFT when collecting: 1 = on, 0 = off. Default provider for minting. */
+CVAR(Int, odoom_star_mint_weapons, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, odoom_star_mint_armor, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, odoom_star_mint_powerups, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, odoom_star_mint_keys, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(String, odoom_star_nft_provider, "SolanaOASIS", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 /* Config: ODOOM stores STAR options in the engine config. Typical path: Documents\\My Games\\UZDoom
  * (or OneDrive\\Documents\\My Games\\UZDoom) - ini file there is written on exit. STAR cvars use
@@ -233,6 +239,26 @@ static bool ODOOM_LoadJsonConfig(const char* json_path) {
 		odoom_star_stack_keys = (atoi(value) != 0) ? 1 : 0;
 		loaded = true;
 	}
+	if (ODOOM_ExtractJsonValue(json, "mint_weapons", value, (int)sizeof(value))) {
+		odoom_star_mint_weapons = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "mint_armor", value, (int)sizeof(value))) {
+		odoom_star_mint_armor = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "mint_powerups", value, (int)sizeof(value))) {
+		odoom_star_mint_powerups = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "mint_keys", value, (int)sizeof(value))) {
+		odoom_star_mint_keys = (atoi(value) != 0) ? 1 : 0;
+		loaded = true;
+	}
+	if (ODOOM_ExtractJsonValue(json, "nft_provider", value, (int)sizeof(value))) {
+		odoom_star_nft_provider = value;
+		loaded = true;
+	}
 	return loaded;
 }
 
@@ -248,7 +274,21 @@ static bool ODOOM_SaveJsonConfig(const char* json_path) {
 	fprintf(f, "  \"stack_armor\": %d,\n", odoom_star_stack_armor ? 1 : 0);
 	fprintf(f, "  \"stack_weapons\": %d,\n", odoom_star_stack_weapons ? 1 : 0);
 	fprintf(f, "  \"stack_powerups\": %d,\n", odoom_star_stack_powerups ? 1 : 0);
-	fprintf(f, "  \"stack_keys\": %d\n", odoom_star_stack_keys ? 1 : 0);
+	fprintf(f, "  \"stack_keys\": %d,\n", odoom_star_stack_keys ? 1 : 0);
+	fprintf(f, "  \"mint_weapons\": %d,\n", odoom_star_mint_weapons ? 1 : 0);
+	fprintf(f, "  \"mint_armor\": %d,\n", odoom_star_mint_armor ? 1 : 0);
+	fprintf(f, "  \"mint_powerups\": %d,\n", odoom_star_mint_powerups ? 1 : 0);
+	fprintf(f, "  \"mint_keys\": %d,\n", odoom_star_mint_keys ? 1 : 0);
+	{
+		const char* prov = (const char*)odoom_star_nft_provider;
+		if (!prov) prov = "";
+		fprintf(f, "  \"nft_provider\": \"");
+		for (; *prov; prov++) {
+			if (*prov == '"' || *prov == '\\') fputc('\\', f);
+			fputc((unsigned char)*prov, f);
+		}
+		fprintf(f, "\"\n");
+	}
 	fprintf(f, "}\n");
 	fclose(f);
 	return true;
@@ -292,7 +332,8 @@ static int ODOOM_GetRawKeyDown(int vk_or_ascii)
 #endif
 }
 
-/** Push inventory list to CVars for ZScript overlay. list may be null (clears overlay). Caller keeps ownership. */
+/** Push inventory list to CVars for ZScript overlay. list may be null (clears overlay). Caller keeps ownership.
+ * Items with nft_id set get "[NFT] " prefix in the name so overlay shows [NFT] and groups by "[NFT] Name" vs "Name". */
 static void ODOOM_PushInventoryToCVars(const star_item_list_t* list) {
 	static char listBuf[24576];
 	FBaseCVar* countVar = FindCVar("odoom_star_inventory_count", nullptr);
@@ -321,8 +362,14 @@ static void ODOOM_PushInventoryToCVars(const star_item_list_t* list) {
 	};
 	for (size_t i = 0; i < n && off < sizeof(listBuf) - 320; i++) {
 		const star_item_t* it = &list->items[i];
-		char name[256], desc[256], type[64], game[64];
-		copySafe(name, it->name, 256);
+		char name[320], desc[256], type[64], game[64];
+		bool isNft = (it->nft_id[0] != '\0');
+		if (isNft) {
+			snprintf(name, sizeof(name), "[NFT] %s", it->name);
+			copySafe(name, name, 320);  /* sanitize tabs/newlines for CVar list */
+		} else {
+			copySafe(name, it->name, 256);
+		}
 		copySafe(desc, it->description, 256);
 		copySafe(type, it->item_type, 64);
 		copySafe(game, it->game_source, 64);
@@ -1173,6 +1220,20 @@ void UZDoom_STAR_PostTouchSpecial(int keynum) {
 	/* Queue for background sync (like OQuake) so main thread doesn't block. */
 	if (g_odoom_pending_sync_count < ODOOM_SYNC_PENDING_MAX) {
 		star_sync_local_item_t* p = &g_odoom_pending_sync[g_odoom_pending_sync_count++];
+		p->nft_id[0] = '\0';
+		/* Mint NFT when enabled for this category; provider from config (default SolanaOASIS). */
+		bool isKey = (keynum >= 1 && keynum <= 4) || keynum == STAR_PICKUP_OQUAKE_GOLD_KEY || keynum == STAR_PICKUP_OQUAKE_SILVER_KEY;
+		bool isWeapon = itemType && (strstr(itemType, "Weapon") != nullptr || strstr(itemType, "weapon") != nullptr);
+		bool isArmor = itemType && (strstr(itemType, "Armor") != nullptr || strstr(itemType, "armor") != nullptr);
+		bool isPowerup = itemType && (strstr(itemType, "owerup") != nullptr || strstr(itemType, "Health") != nullptr);
+		bool doMint = (isKey && odoom_star_mint_keys) || (isWeapon && odoom_star_mint_weapons) || (isArmor && odoom_star_mint_armor) || (isPowerup && odoom_star_mint_powerups);
+		if (doMint) {
+			const char* provider = (const char*)odoom_star_nft_provider;
+			if (!provider || !provider[0]) provider = "SolanaOASIS";
+			star_api_result_t mintRes = star_api_mint_inventory_nft(name, desc, "ODOOM", itemType ? itemType : "Item", provider, p->nft_id);
+			if (mintRes != STAR_API_SUCCESS)
+				StarLogError("Mint NFT for %s failed: %s", name, star_api_get_last_error());
+		}
 		strncpy(p->name, name, sizeof(p->name) - 1); p->name[sizeof(p->name) - 1] = '\0';
 		strncpy(p->description, desc, sizeof(p->description) - 1); p->description[sizeof(p->description) - 1] = '\0';
 		strncpy(p->game_source, "ODOOM", sizeof(p->game_source) - 1); p->game_source[sizeof(p->game_source) - 1] = '\0';
@@ -1250,9 +1311,11 @@ CCMD(star)
 		Printf("  star pickup keycard <red|blue|yellow|skull> - Add keycard (convenience)\n");
 		Printf("  star debug on|off|status - Toggle STAR debug logging in console\n");
 		Printf("  star face on|off|status - Toggle beamed-in face switch (default on)\n");
-		Printf("  star config        - Show current STAR config (URLs, beam face, stack options)\n");
+		Printf("  star config        - Show current STAR config (URLs, beam face, stack, mint NFT, provider)\n");
 		Printf("  star config save   - Write config to oasisstar.json now (also saved on exit)\n");
 		Printf("  star stack <armor|weapons|powerups|keys> <0|1> - Stack (1) or unlock (0) per category\n");
+		Printf("  star mint <armor|weapons|powerups|keys> <0|1> - Mint NFT when collecting (1=on, 0=off)\n");
+		Printf("  star nftprovider <name> - Default NFT mint provider (e.g. SolanaOASIS)\n");
 		Printf("  star seturl <url>       - Set STAR API URL (saved to config)\n");
 		Printf("  star setoasisurl <url>  - Set OASIS API URL (saved to config)\n");
 		Printf("  star reloadconfig  - Reload from oasisstar.json\n");
@@ -1618,11 +1681,51 @@ CCMD(star)
 		Printf("    stack_weapons:  %s\n", odoom_star_stack_weapons ? "1 (stack)" : "0 (unlock)");
 		Printf("    stack_powerups: %s\n", odoom_star_stack_powerups ? "1 (stack)" : "0 (unlock)");
 		Printf("    stack_keys:     %s\n", odoom_star_stack_keys ? "1 (stack)" : "0 (unlock)");
+		Printf("  Mint NFT when collecting (1=on, 0=off):\n");
+		Printf("    mint_weapons:   %s\n", odoom_star_mint_weapons ? "1" : "0");
+		Printf("    mint_armor:    %s\n", odoom_star_mint_armor ? "1" : "0");
+		Printf("    mint_powerups: %s\n", odoom_star_mint_powerups ? "1" : "0");
+		Printf("    mint_keys:     %s\n", odoom_star_mint_keys ? "1" : "0");
+		Printf("  NFT mint provider: %s\n", (const char*)odoom_star_nft_provider && ((const char*)odoom_star_nft_provider)[0] ? (const char*)odoom_star_nft_provider : "SolanaOASIS");
 		Printf("\n");
 		Printf("To set: star seturl <url>   star setoasisurl <url>\n");
 		Printf("        star stack <armor|weapons|powerups|keys> <0|1>\n");
+		Printf("        star mint <armor|weapons|powerups|keys> <0|1>\n");
+		Printf("        star nftprovider <name>  (e.g. SolanaOASIS)\n");
 		Printf("To save now: star config save (also saved on exit)\n");
 		Printf("\n");
+		return;
+	}
+	if (strcmp(sub, "mint") == 0) {
+		if (argv.argc() < 4) {
+			Printf("Usage: star mint <armor|weapons|powerups|keys> <0|1>\n");
+			Printf("  1 = mint NFT when collecting that category, 0 = off. Default provider in star nftprovider.\n");
+			return;
+		}
+		const char* cat = argv[2];
+		const char* val = argv[3];
+		int on = (val[0] == '1' && val[1] == '\0') ? 1 : 0;
+		if (strcmp(cat, "armor") == 0) { odoom_star_mint_armor = on; }
+		else if (strcmp(cat, "weapons") == 0) { odoom_star_mint_weapons = on; }
+		else if (strcmp(cat, "powerups") == 0) { odoom_star_mint_powerups = on; }
+		else if (strcmp(cat, "keys") == 0) { odoom_star_mint_keys = on; }
+		else {
+			Printf("Unknown category: %s. Use armor|weapons|powerups|keys.\n", cat);
+			return;
+		}
+		ODOOM_SaveStarConfigToFiles();
+		Printf("Mint NFT for %s set to %s. Config saved.\n", cat, on ? "on" : "off");
+		return;
+	}
+	if (strcmp(sub, "nftprovider") == 0) {
+		if (argv.argc() < 3) {
+			Printf("Usage: star nftprovider <provider_name>\n");
+			Printf("  Default: SolanaOASIS. Used when minting NFTs for collected items.\n");
+			return;
+		}
+		odoom_star_nft_provider = argv[2];
+		ODOOM_SaveStarConfigToFiles();
+		Printf("NFT mint provider set to: %s. Config saved.\n", argv[2]);
 		return;
 	}
 	if (strcmp(sub, "stack") == 0) {
