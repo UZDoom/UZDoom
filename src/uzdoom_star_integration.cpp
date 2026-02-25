@@ -395,6 +395,7 @@ static void ODOOM_RefreshOverlayFromClient(void) {
 static void ODOOM_OnAuthDone(void* user_data);
 static void ODOOM_OnInventoryDone(void* user_data);
 static void ODOOM_OnSendItemDone(void* user_data);
+static void ODOOM_OnUseItemDone(void* user_data);
 
 /** Start background inventory sync if we have pending items and no sync in progress. */
 static void ODOOM_StartInventorySyncIfNeeded(void) {
@@ -480,6 +481,19 @@ static void ODOOM_OnSendItemDone(void* user_data) {
 		statusVar->SetGenericRep(val, CVAR_String);
 	}
 	/* Do NOT refetch inventory here; we updated the cache above. Keeps API hits to minimum. */
+}
+
+/** Called from main thread by star_sync_pump() when use-item (e.g. door key) completes. */
+static void ODOOM_OnUseItemDone(void* user_data) {
+	(void)user_data;
+	int success = 0;
+	char err_buf[384] = {};
+	if (!star_sync_use_item_get_result(&success, err_buf, sizeof(err_buf)))
+		return;
+	if (success)
+		ODOOM_RefreshOverlayFromClient();
+	else if (err_buf[0])
+		StarLogError("star_api_use_item failed: %s", err_buf);
 }
 
 /** Called every frame from the main loop (see apply_odoom_branding.ps1: d_main and g_game). Must run so send/auth/inventory callbacks are invoked. */
@@ -1243,7 +1257,8 @@ void UZDoom_STAR_PostTouchSpecial(int keynum) {
 		g_star_last_pickup_type = itemType;
 		g_star_last_pickup_desc = desc;
 		g_star_has_last_pickup = true;
-		/* Do not start sync on every pickup; inventory loads once after beam-in only. */
+		/* Start sync in background straight away so add runs on background thread. */
+		ODOOM_StartInventorySyncIfNeeded();
 	} else {
 		StarLogError("Pending sync queue full; pickup %s not synced.", name);
 	}
@@ -1267,11 +1282,8 @@ int UZDoom_STAR_CheckDoorAccess(struct AActor* owner, int keynum, int remote) {
 
 	if (star_api_has_item(keyname)) {
 		StarLogInfo("Door access granted via shared inventory key: %s", keyname);
-		bool used = star_api_use_item(keyname, "odoom_door");
-		if (used)
-			ODOOM_RefreshOverlayFromClient();
-		else
-			StarLogError("star_api_use_item failed for %s: %s", keyname, star_api_get_last_error());
+		/* Use item on API from background thread; overlay refresh in ODOOM_OnUseItemDone. */
+		star_sync_use_item_start(keyname, "odoom_door", ODOOM_OnUseItemDone, nullptr);
 		return 1;
 	}
 
@@ -1341,7 +1353,8 @@ CCMD(star)
 		else if (strcmp(color, "yellow") == 0) { name = "yellow_keycard"; desc = "Yellow Keycard - Opens yellow doors"; }
 		else if (strcmp(color, "skull") == 0)  { name = "skull_key";      desc = "Skull Key - Opens skull-marked doors"; }
 		else { Printf("Unknown keycard: %s. Use red|blue|yellow|skull.\n", color); Printf("\n"); return; }
-		star_api_result_t r = star_api_add_item(name, desc, "ODOOM", "KeyItem");
+		star_api_queue_add_item(name, desc, "ODOOM", "KeyItem", nullptr);
+		star_api_result_t r = star_api_flush_add_item_jobs();
 		if (r == STAR_API_SUCCESS) Printf("Added %s to STAR inventory.\n", name);
 		else Printf("Failed: %s\n", star_api_get_last_error());
 		Printf("\n");
@@ -1479,8 +1492,8 @@ CCMD(star)
 			strncpy(p->game_source, "ODOOM", sizeof(p->game_source) - 1); p->game_source[sizeof(p->game_source) - 1] = '\0';
 			strncpy(p->item_type, type, sizeof(p->item_type) - 1); p->item_type[sizeof(p->item_type) - 1] = '\0';
 			p->synced = 0;
-			/* Do not auto-start sync; keep API hits to minimum. */
-			Printf("Queued '%s' for sync. Inventory loads once after beam-in.\n", name);
+			ODOOM_StartInventorySyncIfNeeded();
+			Printf("Queued '%s' for sync.\n", name);
 		} else {
 			Printf("Sync queue full; try again later.\n");
 		}
@@ -1489,7 +1502,9 @@ CCMD(star)
 	if (strcmp(sub, "use") == 0) {
 		if (argv.argc() < 3) { Printf("Usage: star use <item_name> [context]\n"); return; }
 		const char* ctx = argv.argc() > 3 ? argv[3] : "console";
-		bool ok = star_api_use_item(argv[2], ctx);
+		star_api_queue_use_item(argv[2], ctx);
+		int r = star_api_flush_use_item_jobs();
+		bool ok = (r == STAR_API_SUCCESS);
 		Printf("Use '%s' (context %s): %s\n", argv[2], ctx, ok ? "ok" : "failed");
 		if (!ok) Printf("  %s\n", star_api_get_last_error());
 		return;

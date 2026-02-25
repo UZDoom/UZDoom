@@ -118,7 +118,8 @@ star_api_result_t star_sync_single_item(
     const char* name,
     const char* description,
     const char* game_source,
-    const char* item_type
+    const char* item_type,
+    const char* nft_id  /* NULL or empty for non-NFT items */
 );
 
 /* ---------------------------------------------------------------------------

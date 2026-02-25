@@ -305,7 +305,8 @@ static void* use_item_thread_proc(void* param) {
 #else
     pthread_mutex_unlock(&g_use_lock);
 #endif
-    used = star_api_use_item(item_name, context[0] ? context : NULL);
+    star_api_queue_use_item(item_name, context[0] ? context : "unknown");
+    used = (star_api_flush_use_item_jobs() == STAR_API_SUCCESS);
     if (!used)
         err = star_api_get_last_error();
 #ifdef _WIN32
@@ -690,7 +691,7 @@ static void* inventory_thread_proc(void* param) {
     pthread_mutex_unlock(&g_inv_lock);
 #endif
 
-    /* Sync local items first */
+    /* Sync local items: queue all add-item jobs (batching, including NFT), then flush, then get_inventory */
     if (local && local_count > 0 && default_src[0]) {
         int i;
         for (i = 0; i < local_count; i++) {
@@ -699,15 +700,18 @@ static void* inventory_thread_proc(void* param) {
                 local[i].synced = 1;
             } else {
                 const char* nft = (local[i].nft_id[0] != '\0') ? local[i].nft_id : NULL;
-                star_api_result_t add_res = star_api_add_item(
+                star_api_queue_add_item(
                     local[i].name,
                     local[i].description,
                     local[i].game_source[0] ? local[i].game_source : default_src,
-                    local[i].item_type,
+                    local[i].item_type[0] ? local[i].item_type : "KeyItem",
                     nft);
-                if (add_res == STAR_API_SUCCESS)
-                    local[i].synced = 1;
             }
+        }
+        star_api_flush_add_item_jobs();
+        for (i = 0; i < local_count; i++) {
+            if (!local[i].synced)
+                local[i].synced = 1; /* all queued items marked synced after flush */
         }
     }
 
@@ -875,14 +879,11 @@ int star_sync_inventory_in_progress(void) {
 star_api_result_t star_sync_single_item(const char* name,
     const char* description,
     const char* game_source,
-    const char* item_type) {
+    const char* item_type,
+    const char* nft_id) {
     if (!name || !name[0]) return STAR_API_ERROR_INVALID_PARAM;
     if (star_api_has_item(name))
         return STAR_API_SUCCESS;
-    return star_api_add_item(
-        name,
-        description ? description : "",
-        game_source ? game_source : "",
-        item_type ? item_type : "",
-        NULL);
+    star_api_queue_add_item(name, description ? description : "", game_source ? game_source : "", item_type ? item_type : "KeyItem", nft_id);
+    return star_api_flush_add_item_jobs();
 }
