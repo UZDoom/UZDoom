@@ -397,6 +397,9 @@ static void ODOOM_OnInventoryDone(void* user_data);
 static void ODOOM_OnSendItemDone(void* user_data);
 static void ODOOM_OnUseItemDone(void* user_data);
 
+static void StarLogInfo(const char* fmt, ...);
+static void StarLogError(const char* fmt, ...);
+
 /** Start background inventory sync if we have pending items and no sync in progress. */
 static void ODOOM_StartInventorySyncIfNeeded(void) {
 	if (!g_star_initialized || star_sync_inventory_in_progress())
@@ -813,19 +816,46 @@ static bool EqualsNoCase(const std::string& a, const std::string& b) {
 	return true;
 }
 
+/** Map Doom class name to short display/API name (game shown in brackets in UI). Same pattern as OQuake. */
 static std::string ToStarItemName(const char* className) {
-	if (!className || !className[0]) return "pickup_item";
+	if (!className || !className[0]) return "Item";
+	const char* c = className;
+	/* Ammo */
+	if (strstr(c, "Clip") || strstr(c, "Bullet")) return "Bullets";
+	if (strstr(c, "Shell") && !strstr(c, "Shotgun")) return "Shells";
+	if (strstr(c, "Cell")) return "Cells";
+	if (strstr(c, "Rocket")) return "Rockets";
+	/* Armor */
+	if (strstr(c, "GreenArmor")) return "Green Armor";
+	if (strstr(c, "BlueArmor") || strstr(c, "BlueSphere")) return "Blue Armor";
+	/* Health */
+	if (strstr(c, "Stimpack")) return "Stimpack";
+	if (strstr(c, "Medikit")) return "Medikit";
+	if (strstr(c, "HealthBonus")) return "Health Bonus";
+	if (strstr(c, "SoulSphere")) return "Soul Sphere";
+	if (strstr(c, "Megasphere")) return "Mega Sphere";
+	/* Powerups */
+	if (strstr(c, "InvulnSphere") || strstr(c, "Invulnerability")) return "Invulnerability";
+	if (strstr(c, "Berserk")) return "Berserk";
+	if (strstr(c, "Backpack")) return "Backpack";
+	/* Weapons */
+	if (strstr(c, "Fist")) return "Fist";
+	if (strstr(c, "Pistol")) return "Pistol";
+	if (strstr(c, "Shotgun")) return "Shotgun";
+	if (strstr(c, "Chaingun")) return "Chaingun";
+	if (strstr(c, "RocketLauncher")) return "Rocket Launcher";
+	if (strstr(c, "PlasmaRifle")) return "Plasma Rifle";
+	if (strstr(c, "BFG")) return "BFG9000";
+	if (strstr(c, "Chainsaw")) return "Chainsaw";
+	/* Fallback: title-case style from class name */
 	std::string out;
-	out.reserve(std::strlen(className) + 8);
 	for (const char* p = className; *p; ++p) {
-		unsigned char c = static_cast<unsigned char>(*p);
-		if (std::isalnum(c)) out.push_back(static_cast<char>(std::tolower(c)));
-		else out.push_back('_');
+		unsigned char ch = static_cast<unsigned char>(*p);
+		if (std::isalnum(ch)) out.push_back(static_cast<char>(p == className ? std::toupper(ch) : std::tolower(ch)));
+		else if (ch == '_' || ch == ' ') out.push_back(' ');
 	}
-	while (!out.empty() && out.front() == '_') out.erase(out.begin());
-	while (!out.empty() && out.back() == '_') out.pop_back();
-	if (out.empty()) out = "pickup_item";
-	return out;
+	while (!out.empty() && out.back() == ' ') out.pop_back();
+	return out.empty() ? "Item" : out;
 }
 
 static bool IsMockAnorakCredentials(const std::string& username, const std::string& password) {
@@ -1077,10 +1107,10 @@ static bool StarTryInitializeAndAuthenticate(bool verbose) {
 
 static const char* GetKeycardName(int keynum) {
 	switch (keynum) {
-		case 1: return "red_keycard";
-		case 2: return "blue_keycard";
-		case 3: return "yellow_keycard";
-		case 4: return "skull_key";
+		case 1: return "Red Keycard";
+		case 2: return "Blue Keycard";
+		case 3: return "Yellow Keycard";
+		case 4: return "Skull Key";
 		default: return nullptr;
 	}
 }
@@ -1216,10 +1246,10 @@ void UZDoom_STAR_PostTouchSpecial(int keynum) {
 	const char* desc = nullptr;
 	const char* itemType = "KeyItem";
 	if (keynum == STAR_PICKUP_OQUAKE_GOLD_KEY) {
-		name = "gold_key";
+		name = "Gold Key";
 		desc = "Gold key - Opens gold doors in OQuake";
 	} else if (keynum == STAR_PICKUP_OQUAKE_SILVER_KEY) {
-		name = "silver_key";
+		name = "Silver Key";
 		desc = "Silver key - Opens silver doors in OQuake";
 	} else if (keynum >= 1 && keynum <= 4) {
 		name = GetKeycardName(keynum);
@@ -1312,9 +1342,9 @@ CCMD(star)
 		Printf("  star status         - Show init state and last error\n");
 		Printf("  star inventory      - List items in STAR inventory\n");
 		Printf("  star lastpickup     - Show most recent synced pickup\n");
-		Printf("  star has <item>     - Check if you have an item (e.g. red_keycard)\n");
-		Printf("  star add <item> [desc] [type] - Add item (e.g. star add red_keycard)\n");
-		Printf("  star use <item> [context]     - Use item (e.g. star use red_keycard door)\n");
+		Printf("  star has <item>     - Check if you have an item (e.g. Red Keycard)\n");
+		Printf("  star add <item> [desc] [type] - Add item (e.g. star add Red Keycard)\n");
+		Printf("  star use <item> [context]     - Use item (e.g. star use Red Keycard door)\n");
 		Printf("  star quest start <id>        - Start a quest\n");
 		Printf("  star quest objective <quest> <obj> - Complete quest objective\n");
 		Printf("  star quest complete <id>    - Complete a quest\n");
@@ -1348,12 +1378,12 @@ CCMD(star)
 		const char* color = argv[3];
 		const char* name = nullptr;
 		const char* desc = nullptr;
-		if (strcmp(color, "red") == 0)    { name = "red_keycard";  desc = "Red Keycard - Opens red doors"; }
-		else if (strcmp(color, "blue") == 0)   { name = "blue_keycard";  desc = "Blue Keycard - Opens blue doors"; }
-		else if (strcmp(color, "yellow") == 0) { name = "yellow_keycard"; desc = "Yellow Keycard - Opens yellow doors"; }
-		else if (strcmp(color, "skull") == 0)  { name = "skull_key";      desc = "Skull Key - Opens skull-marked doors"; }
+		if (strcmp(color, "red") == 0)    { name = "Red Keycard";  desc = "Red Keycard - Opens red doors"; }
+		else if (strcmp(color, "blue") == 0)   { name = "Blue Keycard";  desc = "Blue Keycard - Opens blue doors"; }
+		else if (strcmp(color, "yellow") == 0) { name = "Yellow Keycard"; desc = "Yellow Keycard - Opens yellow doors"; }
+		else if (strcmp(color, "skull") == 0)  { name = "Skull Key";      desc = "Skull Key - Opens skull-marked doors"; }
 		else { Printf("Unknown keycard: %s. Use red|blue|yellow|skull.\n", color); Printf("\n"); return; }
-		star_api_queue_add_item(name, desc, "ODOOM", "KeyItem", nullptr);
+		star_api_queue_add_item(name, desc, "ODOOM", "KeyItem", nullptr, 1, 1);
 		star_api_result_t r = star_api_flush_add_item_jobs();
 		if (r == STAR_API_SUCCESS) Printf("Added %s to STAR inventory.\n", name);
 		else Printf("Failed: %s\n", star_api_get_last_error());

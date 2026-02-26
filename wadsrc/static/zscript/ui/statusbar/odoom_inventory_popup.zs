@@ -478,45 +478,13 @@ class OASISInventoryOverlayHandler : EventHandler
 		return true;
 	}
 
-	// Short display label for STAR items (like OQuake): "Shotgun (OQUAKE)" instead of "quake_pickup_weapon_shotgun".
+	// Short display label for STAR items: "Shells (OQUAKE)" – item name (game in brackets). Names are already short (Shells, Shotgun, etc.).
 	private String StarItemShortLabel(String name, String game)
 	{
 		String n = name;
 		String g = (game.Length() > 0) ? game : "STAR";
 		if (g == "QUAKE" || g == "Quake" || g == "quake") g = "OQUAKE";
-		if (n.IndexOf("quake_pickup_shells") >= 0) return String.Format("Shells (%s)", g);
-		if (n.IndexOf("quake_pickup_nails") >= 0) return String.Format("Nails (%s)", g);
-		if (n.IndexOf("quake_pickup_rockets") >= 0) return String.Format("Rockets (%s)", g);
-		if (n.IndexOf("quake_pickup_cells") >= 0) return String.Format("Cells (%s)", g);
-		if (n.IndexOf("quake_pickup_armor_green") >= 0 || n == "quake_armor_green") return String.Format("Green Armor (%s)", g);
-		if (n.IndexOf("quake_pickup_armor_yellow") >= 0 || n == "quake_armor_yellow") return String.Format("Yellow Armor (%s)", g);
-		if (n.IndexOf("quake_pickup_armor_red") >= 0 || n == "quake_armor_red") return String.Format("Red Armor (%s)", g);
-		if (n.IndexOf("quake_pickup_health") >= 0) return String.Format("Health (%s)", g);
-		if (n.IndexOf("quake_pickup_quad") >= 0 || n == "quake_powerup_quad") return String.Format("Quad Damage (%s)", g);
-		if (n.IndexOf("quake_pickup_suit") >= 0 || n == "quake_powerup_suit") return String.Format("Biosuit (%s)", g);
-		if (n.IndexOf("quake_pickup_invisibility") >= 0 || n == "quake_powerup_invisibility") return String.Format("Ring of Shadows (%s)", g);
-		if (n.IndexOf("quake_pickup_invulnerability") >= 0 || n == "quake_powerup_invulnerability") return String.Format("Pentagram of Protection (%s)", g);
-		if (n.IndexOf("quake_pickup_megahealth") >= 0 || n == "quake_powerup_megahealth") return String.Format("Megahealth (%s)", g);
-		if (n.IndexOf("super_shotgun") >= 0) return String.Format("Super Shotgun (%s)", g);
-		if (n.IndexOf("shotgun") >= 0) return String.Format("Shotgun (%s)", g);
-		if (n.IndexOf("super_nailgun") >= 0) return String.Format("Super Nailgun (%s)", g);
-		if (n.IndexOf("nailgun") >= 0) return String.Format("Nailgun (%s)", g);
-		if (n.IndexOf("grenade_launcher") >= 0 || n.IndexOf("grenade") >= 0) return String.Format("Grenade Launcher (%s)", g);
-		if (n.IndexOf("rocket_launcher") >= 0 || n.IndexOf("rocket") >= 0) return String.Format("Rocket Launcher (%s)", g);
-		if (n.IndexOf("super_lightning") >= 0) return String.Format("Super Lightning (%s)", g);
-		if (n.IndexOf("lightning") >= 0) return String.Format("Lightning Gun (%s)", g);
-		if (n.IndexOf("quake_pickup_sigil_1") >= 0 || n == "quake_sigil_1") return String.Format("Sigil Piece 1 (%s)", g);
-		if (n.IndexOf("quake_pickup_sigil_2") >= 0 || n == "quake_sigil_2") return String.Format("Sigil Piece 2 (%s)", g);
-		if (n.IndexOf("quake_pickup_sigil_3") >= 0 || n == "quake_sigil_3") return String.Format("Sigil Piece 3 (%s)", g);
-		if (n.IndexOf("quake_pickup_sigil_4") >= 0 || n == "quake_sigil_4") return String.Format("Sigil Piece 4 (%s)", g);
-		// OQuake keys: silver_key = Silver Key, gold_key = Gold Key (OQUAKE_ITEM_* in OQuake)
-		if (n.IndexOf("silver_key") >= 0 || n.IndexOf("key_silver") >= 0 || n.IndexOf("Silver") >= 0) return String.Format("Silver Key (%s)", g);
-		if (n.IndexOf("gold_key") >= 0 || n.IndexOf("key_gold") >= 0 || n.IndexOf("Gold") >= 0) return String.Format("Gold Key (%s)", g);
-		if (n.IndexOf("red_keycard") >= 0 || n.IndexOf("red_key") >= 0) return String.Format("Red Keycard (%s)", g);
-		if (n.IndexOf("blue_keycard") >= 0 || n.IndexOf("blue_key") >= 0) return String.Format("Blue Keycard (%s)", g);
-		if (n.IndexOf("yellow_keycard") >= 0 || n.IndexOf("yellow_key") >= 0) return String.Format("Yellow Keycard (%s)", g);
-		if (n.IndexOf("keycard") >= 0 || n.IndexOf("key") >= 0) return String.Format("Key (%s)", g);  // generic key (OQuake uses Silver Key / Gold Key)
-		// ODOOM/Doom: clip, bulletbox, shell, etc. (check after Quake rockets/lightning)
+		// ODOOM/Doom-specific mappings
 		if (n.IndexOf("Clip") >= 0 || n.IndexOf("clip") >= 0 || n.IndexOf("Bullet") >= 0) return String.Format("Bullets (%s)", g);
 		if (n.IndexOf("Shell") >= 0 || n.IndexOf("shell") >= 0) return String.Format("Shells (%s)", g);
 		if (n.IndexOf("Cell") >= 0 || n.IndexOf("cell") >= 0) return String.Format("Cells (%s)", g);
@@ -525,6 +493,9 @@ class OASISInventoryOverlayHandler : EventHandler
 		if (n.IndexOf("Medikit") >= 0 || n.IndexOf("medikit") >= 0) return String.Format("Medikit (%s)", g);
 		if (n.IndexOf("Backpack") >= 0 || n.IndexOf("backpack") >= 0) return String.Format("Backpack (%s)", g);
 		if (n.IndexOf("Weapon") >= 0 || n.IndexOf("weapon") >= 0) return String.Format("Weapon (%s)", g);
+		if (n.IndexOf("red_keycard") >= 0 || n.IndexOf("red_key") >= 0) return String.Format("Red Keycard (%s)", g);
+		if (n.IndexOf("blue_keycard") >= 0 || n.IndexOf("blue_key") >= 0) return String.Format("Blue Keycard (%s)", g);
+		if (n.IndexOf("yellow_keycard") >= 0 || n.IndexOf("yellow_key") >= 0) return String.Format("Yellow Keycard (%s)", g);
 		if (n.Length() > 24) return String.Format("%s (%s)", n.Left(21), g);
 		return String.Format("%s (%s)", n, g);
 	}
