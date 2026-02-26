@@ -2778,7 +2778,7 @@ static void SetNetworkOwner(DObject* self, player_t* player)
 		auto actor = dyn_cast<AActor>(self);
 		if (actor->alternative != nullptr && actor->alternative->GetNetworkOwner() == owner)
 			ents.Push(actor->alternative);
-		if (actor->ViewPos != nullptr && actor->ViewPos->GetNetworkID() == owner)
+		if (actor->ViewPos != nullptr && actor->ViewPos->GetNetworkOwner() == owner)
 			ents.Push(actor->ViewPos);
 		if (!actor->IsKindOf(NAME_Inventory) || actor->PointerVar<AActor>(NAME_Owner) == nullptr)
 		{
@@ -2813,6 +2813,25 @@ DEFINE_ACTION_FUNCTION_NATIVE(DObject, SetNetworkOwner, SetNetworkOwner)
 	PARAM_POINTER(player, player_t);
 	SetNetworkOwner(self, player);
 	return 0;
+}
+
+static player_t* GetNetworkOwner(DObject* const self)
+{
+	const uint32_t owner = self->GetNetworkOwner();
+	if (owner == NetworkEntityManager::WorldNetID)
+		return nullptr;
+
+	const unsigned playerNum = NetworkEntityManager::GetPlayerNum(owner);
+	if (playerNum >= MAXPLAYERS)
+		return nullptr;
+
+	return &players[playerNum];
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(DObject, GetNetworkOwner, GetNetworkOwner)
+{
+	PARAM_SELF_PROLOGUE(DObject);
+	ACTION_RETURN_POINTER(GetNetworkOwner(self));
 }
 
 DEFINE_ACTION_FUNCTION(_Screen, GetViewWindow)
