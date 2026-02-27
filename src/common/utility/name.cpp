@@ -23,44 +23,20 @@
 
 #include <string.h>
 #include "name.h"
-#include "superfasthash.h"
 #include "cmdlib.h"
-#include "m_alloc.h"
 
-// MACROS ------------------------------------------------------------------
+#include "absl/strings/ascii.h"
 
-// The number of bytes to allocate to each NameBlock unless somebody is evil
-// and wants a really long name. In that case, it gets its own NameBlock
-// that is just large enough to hold it.
-#define BLOCK_SIZE			4096
+// CODE --------------------------------------------------------------------
 
-// How many entries to grow the NameArray by when it needs to grow.
-#define NAME_GROW_AMOUNT	256
+FName::NameManager::NameManager(std::initializer_list<const char*> predefinedNames) {
+	for (const auto& n : predefinedNames) {
+		FindName(n, false);
+	}
+}
 
-// TYPES -------------------------------------------------------------------
-
-// Name text is stored in a linked list of NameBlock structures. This
-// is really the header for the block, with the remainder of the block
-// being populated by text for names.
-
-struct FName::NameManager::NameBlock
-{
-	size_t NextAlloc;
-	NameBlock *NextBlock;
-};
-
-// PRIVATE FUNCTION PROTOTYPES ---------------------------------------------
-
-// PUBLIC DATA DEFINITIONS -------------------------------------------------
-
-// PRIVATE DATA DEFINITIONS ------------------------------------------------
-
-FName::NameManager FName::NameData;
-bool FName::NameManager::Inited;
-
-// Define the predefined names.
-static const char *PredefinedNames[] =
-{
+FName::NameManager& FName::NameManager::Instance() {
+	static FName::NameManager instance {
 #define xx(n) #n,
 #define xy(n, s) s,
 #include "namedef.h"
@@ -69,9 +45,9 @@ static const char *PredefinedNames[] =
 #endif
 #undef xx
 #undef xy
-};
-
-// CODE --------------------------------------------------------------------
+	};
+	return instance;
+}
 
 //==========================================================================
 //
@@ -85,37 +61,12 @@ static const char *PredefinedNames[] =
 
 int FName::NameManager::FindName (const char *text, bool noCreate)
 {
-	if (!Inited)
-	{
-		InitBuckets ();
-	}
-
 	if (text == NULL)
 	{
 		return 0;
 	}
 
-	unsigned int hash = MakeKey (text);
-	unsigned int bucket = hash % HASH_SIZE;
-	int scanner = Buckets[bucket];
-
-	// See if the name already exists.
-	while (scanner >= 0)
-	{
-		if (NameArray[scanner].Hash == hash && stricmp (NameArray[scanner].Text, text) == 0)
-		{
-			return scanner;
-		}
-		scanner = NameArray[scanner].NextHash;
-	}
-
-	// If we get here, then the name does not exist.
-	if (noCreate)
-	{
-		return 0;
-	}
-
-	return AddName (text, hash, bucket);
+	return FindName(std::string_view(text), noCreate);
 }
 
 //==========================================================================
@@ -127,157 +78,30 @@ int FName::NameManager::FindName (const char *text, bool noCreate)
 
 int FName::NameManager::FindName (const char *text, size_t textLen, bool noCreate)
 {
-	if (!Inited)
-	{
-		InitBuckets ();
-	}
-
 	if (text == NULL)
 	{
 		return 0;
 	}
 
-	unsigned int hash = MakeKey (text, textLen);
-	unsigned int bucket = hash % HASH_SIZE;
-	int scanner = Buckets[bucket];
+	return FindName(std::string_view(text, textLen), noCreate);
+}
 
-	// See if the name already exists.
-	while (scanner >= 0)
-	{
-		if (NameArray[scanner].Hash == hash &&
-			strnicmp (NameArray[scanner].Text, text, textLen) == 0 &&
-			NameArray[scanner].Text[textLen] == '\0')
-		{
-			return scanner;
-		}
-		scanner = NameArray[scanner].NextHash;
+int FName::NameManager::FindName (const std::string_view str, bool noCreate)
+{
+	auto lowered = absl::AsciiStrToLower(str);
+	auto nameIndex = StringToName.find(lowered);
+	if (nameIndex != StringToName.end()) {
+		return nameIndex->second;
 	}
 
-	// If we get here, then the name does not exist.
-	if (noCreate)
-	{
+	if (noCreate) {
 		return 0;
 	}
+	auto num = NumNames;
+	NumNames += 1;
+	auto allocatedString = std::string(str);
+	StringToName.insert({lowered, num});
+	NameToString.push_back(allocatedString);
 
-	return AddName (text, hash, bucket);
-}
-
-//==========================================================================
-//
-// FName :: NameManager :: InitBuckets
-//
-// Sets up the hash table and inserts all the default names into the table.
-//
-//==========================================================================
-
-void FName::NameManager::InitBuckets ()
-{
-	Inited = true;
-	memset (Buckets, -1, sizeof(Buckets));
-
-	// Register built-in names. 'None' must be name 0.
-	for (size_t i = 0; i < countof(PredefinedNames); ++i)
-	{
-		assert((0 == FindName(PredefinedNames[i], true)) && "Predefined name already inserted");
-		FindName (PredefinedNames[i], false);
-	}
-}
-
-//==========================================================================
-//
-// FName :: NameManager :: AddName
-//
-// Adds a new name to the name table.
-//
-//==========================================================================
-
-int FName::NameManager::AddName (const char *text, unsigned int hash, unsigned int bucket)
-{
-	char *textstore;
-	NameBlock *block = Blocks;
-	size_t len = strlen (text) + 1;
-
-	// Get a block large enough for the name. Only the first block in the
-	// list is ever considered for name storage.
-	if (block == NULL || block->NextAlloc + len >= BLOCK_SIZE)
-	{
-		block = AddBlock (len);
-	}
-
-	// Copy the string into the block.
-	textstore = (char *)block + block->NextAlloc;
-	strcpy (textstore, text);
-	block->NextAlloc += len;
-
-	// Add an entry for the name to the NameArray
-	if (NumNames >= MaxNames)
-	{
-		// If no names have been defined yet, make the first allocation
-		// large enough to hold all the predefined names.
-		MaxNames += MaxNames == 0 ? countof(PredefinedNames) + NAME_GROW_AMOUNT : NAME_GROW_AMOUNT;
-
-		NameArray = (NameEntry *)M_Realloc (NameArray, MaxNames * sizeof(NameEntry));
-	}
-
-	NameArray[NumNames].Text = textstore;
-	NameArray[NumNames].Hash = hash;
-	NameArray[NumNames].NextHash = Buckets[bucket];
-	Buckets[bucket] = NumNames;
-
-	return NumNames++;
-}
-
-//==========================================================================
-//
-// FName :: NameManager :: AddBlock
-//
-// Creates a new NameBlock at least large enough to hold the required
-// number of chars.
-//
-//==========================================================================
-
-FName::NameManager::NameBlock *FName::NameManager::AddBlock (size_t len)
-{
-	NameBlock *block;
-
-	len += sizeof(NameBlock);
-	if (len < BLOCK_SIZE)
-	{
-		len = BLOCK_SIZE;
-	}
-	block = (NameBlock *)M_Malloc (len);
-	block->NextAlloc = sizeof(NameBlock);
-	block->NextBlock = Blocks;
-	Blocks = block;
-	return block;
-}
-
-//==========================================================================
-//
-// FName :: NameManager :: ~NameManager
-//
-// Release all the memory used for name bookkeeping.
-//
-//==========================================================================
-
-FName::NameManager::~NameManager()
-{
-	NameBlock *block, *next;
-
-	//C_ClearTabCommands();
-
-	for (block = Blocks; block != NULL; block = next)
-	{
-		next = block->NextBlock;
-		M_Free (block);
-	}
-	Blocks = NULL;
-
-	if (NameArray != NULL)
-	{
-		M_Free (NameArray);
-		NameArray = NULL;
-	}
-	NumNames = MaxNames = 0;
-	memset (Buckets, -1, sizeof(Buckets));
+	return num;
 }

@@ -30,9 +30,6 @@
 #include "g_levellocals.h"
 #include "vm.h"
 
-// simulation recurions maximum
-CVAR(Int, sv_portal_recursions, 4, CVAR_ARCHIVE|CVAR_SERVERINFO)
-
 DEFINE_FIELD(FSectorPortal, mType);
 DEFINE_FIELD(FSectorPortal, mFlags);
 DEFINE_FIELD(FSectorPortal, mPartner);

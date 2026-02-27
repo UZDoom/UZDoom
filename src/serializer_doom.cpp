@@ -26,7 +26,6 @@
 #define RAPIDJSON_HAS_CXX11_RVALUE_REFS 1
 #define RAPIDJSON_HAS_CXX11_RANGE_FOR 1
 #define RAPIDJSON_PARSE_DEFAULT_FLAGS kParseFullPrecisionFlag
-#define RAPIDJSON_USE_MEMBERSMAP 1
 
 #include <miniz.h>
 #include "rapidjson/rapidjson.h"
@@ -560,7 +559,12 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FString *&p
 			}
 			else if (val->IsString())
 			{
-				pstr = AActor::mStringPropertyData.Alloc(UnicodeToString(val->GetString()));
+				auto intermediate = UnicodeToString(val->GetString());
+				if (def != nullptr && std::string_view(intermediate) == std::string_view((*def)->GetChars())) {
+					pstr = *def;
+				} else {
+					pstr = AActor::mStringPropertyData.Alloc(intermediate);
+				}
 			}
 			else
 			{

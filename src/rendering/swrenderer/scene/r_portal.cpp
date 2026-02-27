@@ -65,7 +65,7 @@
 #include "r_memory.h"
 #include "swrenderer/r_renderthread.h"
 
-CVAR(Int, r_portal_recursions, 4, CVAR_ARCHIVE)
+EXTERN_CVAR(Int, r_portal_recursions)
 #if 0
 CVAR(Bool, r_highlight_portals, false, 0)
 #endif

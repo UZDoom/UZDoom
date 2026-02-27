@@ -26,10 +26,8 @@
 #include "flatvertices.h"
 #include "hw_clock.h"
 #include "hw_lighting.h"
+#include "hw_cvars.h"
 #include "texturemanager.h"
-
-EXTERN_CVAR(Int, r_mirror_recursions)
-EXTERN_CVAR(Bool, gl_portals)
 
 void SetPlaneTextureRotation(FRenderState& state, HWSectorPlane* plane, FGameTexture* texture);
 
@@ -495,7 +493,7 @@ int HWLinePortal::ClipPoint(const DVector2 &pos)
 bool HWMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clipper)
 {
 	auto state = mState;
-	if (state->renderdepth > r_mirror_recursions)
+	if (state->renderdepth > r_portal_recursions)
 	{
 		return false;
 	}
@@ -605,7 +603,7 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 {
 	// TODO: Handle recursion more intelligently
 	auto &state = mState;
-	if (state->renderdepth>r_mirror_recursions)
+	if (state->renderdepth>r_portal_recursions)
 	{
 		return false;
 	}
@@ -902,7 +900,7 @@ void HWPlaneMirrorPortal::SetupCoverage(HWDrawInfo *di)
 bool HWPlaneMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clipper)
 {
 	auto state = mState;
-	if (state->renderdepth > r_mirror_recursions)
+	if (state->renderdepth > r_portal_recursions)
 	{
 		return false;
 	}

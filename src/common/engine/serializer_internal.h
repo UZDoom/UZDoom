@@ -35,12 +35,16 @@ struct FJSONObject
 {
 	rapidjson::Value* mObject;
 	rapidjson::Value::MemberIterator mIterator;
+	rapidjson::Value::MemberIterator mHopefulIterator;
 	int mIndex;
 
 	FJSONObject(rapidjson::Value* v)
 	{
 		mObject = v;
-		if (v->IsObject()) mIterator = v->MemberBegin();
+		if (v->IsObject()) {
+			mIterator = v->MemberBegin();
+			mHopefulIterator = v->MemberBegin();
+		}
 		else if (v->IsArray())
 		{
 			mIndex = 0;
@@ -66,8 +70,10 @@ struct FWriter
 	TArray<DObject *> mDObjects;
 	TMap<DObject *, int> mObjectMap;
 
-	FWriter(bool pretty)
+	FWriter(bool pretty, FWriterBuffer existingBuffer)
 	{
+		existingBuffer.buffer.Clear();
+		mOutString = std::move(existingBuffer.buffer);
 		if (!pretty)
 		{
 			mWriter = new Writer(mOutString);
@@ -77,10 +83,15 @@ struct FWriter
 			mWriter = new PrettyWriter(mOutString);
 		}
 	}
+	FWriter(bool pretty) : FWriter(pretty, FWriterBuffer(rapidjson::StringBuffer {})) {}
 
 	~FWriter()
 	{
 		if (mWriter) delete mWriter;
+	}
+
+	FWriterBuffer MoveBufferOut() {
+		return FWriterBuffer(std::move(mOutString));
 	}
 
 
@@ -184,6 +195,12 @@ struct FReader
 	rapidjson::Value *mKeyValue = nullptr;
 	bool mObjectsRead = false;
 
+	FReader(FReaderAllocator allocator, const char *buffer, size_t length) : mDoc(rapidjson::Document(&allocator.buffer))
+	{
+		mDoc.Parse(buffer, length);
+		mObjects.Push(FJSONObject(&mDoc));
+	}
+
 	FReader(const char *buffer, size_t length)
 	{
 		mDoc.Parse(buffer, length);
@@ -205,6 +222,19 @@ struct FReader
 			}
 			else
 			{
+				while (obj.mHopefulIterator != obj.mObject->MemberEnd()) [[likely]] {
+					auto name = std::string_view(obj.mHopefulIterator->name.GetString(), obj.mHopefulIterator->name.GetStringLength());
+					if (key == name) [[likely]] {
+						auto ret = &obj.mHopefulIterator->value;
+						++obj.mHopefulIterator;
+						return ret;
+					}
+					if (name.starts_with("class:")) [[unlikely]] {
+						++obj.mHopefulIterator;
+						continue;
+					}
+					break;
+				}
 				// Find the given key by name;
 				auto it = obj.mObject->FindMember(key);
 				if (it == obj.mObject->MemberEnd()) return nullptr;
