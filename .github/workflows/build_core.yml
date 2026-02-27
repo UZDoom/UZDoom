@@ -31,12 +31,8 @@ jobs:
     steps:
     - name: Setup
       uses: actions/checkout@v4
-
-    - name: Setup
-      id: ghd
-      uses: proudust/gh-describe@v2
       with:
-        exclude: "nightly"
+        fetch-depth: 0
 
     - name: Setup
       uses: ilammy/msvc-dev-cmd@v1
@@ -73,10 +69,12 @@ jobs:
           -G Ninja
 
     - name: Build
+      id: build
       shell: bash
       run: |
-        export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
-        export MAKEFLAGS=--keep-going
+        export GIT_DESCRIBE="$(git describe --tags --exclude nightly)"
+        echo "This will be $GIT_DESCRIBE"
+        echo "version=$GIT_DESCRIBE" >> "$GITHUB_OUTPUT"
         cmake --build build --config ${{ inputs.build_type }}
 
     - name: Package
@@ -86,7 +84,7 @@ jobs:
 
         cd build
         mkdir package
-        packagename="${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.ghd.outputs.describe }}"
+        packagename="${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.build.outputs.version }}"
 
         7z a package/licenses.zip ../docs/licenses/*
 
@@ -179,7 +177,7 @@ jobs:
                 https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
             chmod +x appimage-builder
 
-            export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
+            export GIT_DESCRIBE="${{ steps.build.outputs.version }}"
             ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
             mv *.AppImage "package/${packagename}.AppImage"
 

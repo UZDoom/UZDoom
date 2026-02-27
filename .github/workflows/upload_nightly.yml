@@ -17,11 +17,10 @@ jobs:
       actions: read
     steps:
       - uses: actions/checkout@v4
-
-      - id: tag
-        uses: proudust/gh-describe@v2
         with:
-          exclude: "nightly"
+          fetch-depth: 0
+          sparse-checkout: |
+            README.md
 
       - name: Download Artifacts
         uses: actions/download-artifact@v4
@@ -46,8 +45,10 @@ jobs:
           move "artifacts/MacOS LLVM Release"/*.zip release/MacOS-UZDoom-Nightly.zip
           move "artifacts/Linux LLVM Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
 
-      - name: Update Tag
+      - id: tag
+        name: Update Tag
         run: |
+          echo "describe=$(git describe --tags --exclude nightly)" >> "$GITHUB_OUTPUT"
           git tag -d nightly || true
           git push origin :refs/tags/nightly || true
           git tag nightly
