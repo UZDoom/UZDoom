@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   ci-success:
     needs:
-      - debug
+      - debinfo
       # - extra
     if: always()
     runs-on: ubuntu-latest
@@ -16,12 +16,12 @@ jobs:
           [[ "${{ contains(needs.*.result, 'failure') }}" == "false" ]] || exit 1
           [[ "${{ contains(needs.*.result, 'cancelled') }}" == "false" ]] || exit 1
 
-  debug:
+  debinfo:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
     with:
-      build_type: Debug
+      build_type: RelWithDebInfo
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
@@ -37,13 +37,6 @@ jobs:
             deps_cmdline: |
               choco install \
                 tree
-
-          # - name: Windows LLVM
-          #   os: windows-latest
-          #   extra_options: -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_C_FLAGS="/arch:AVX /clang:-Wno-unused-command-line-argument" -DCMAKE_CXX_FLAGS="/arch:AVX /EHsc /GR /clang:-Wno-c++11-narrowing /clang:-Wno-unused-command-line-argument"
-          #   deps_cmdline: |
-          #     choco install \
-          #       tree
 
           - name: MacOS LLVM
             os: macos-latest
@@ -124,13 +117,13 @@ jobs:
       matrix:
         config: *common_config
 
-  debinfo:
+  debug:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     needs: ci-success
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
     with:
-      build_type: RelWithDebInfo
+      build_type: Debug
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
