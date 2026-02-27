@@ -43,9 +43,23 @@ jobs:
 
     - name: Dependencies
       shell: bash
+      env:
+        DEPS_COMMAND: ${{ inputs.deps_cmdline }}
       run: |
-        if [[ -n "${{ inputs.deps_cmdline }}" ]]; then
-          eval ${{ inputs.deps_cmdline }}
+        function attempt() {
+          local delay=5
+          for i in {1..5}; do
+            # timeout 10m bash -c "$*" && return 0
+            perl -e "alarm 600; exec @ARGV" bash -c "$*" && return 0
+            echo "Attempt $i failed. Retrying in ${delay}s" >&2
+            sleep "${delay}"
+            ((delay*=2))
+          done
+          return 1
+        }
+
+        if [[ -n "$DEPS_COMMAND" ]]; then
+          attempt "$DEPS_COMMAND"
         fi
 
     - name: Configure
