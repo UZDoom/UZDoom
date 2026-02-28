@@ -28,17 +28,28 @@ jobs:
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
     runs-on: ${{ inputs.os }}
+    defaults:
+      run:
+        shell: ${{ contains(inputs.name, 'MinGW') && 'msys2 {0}' || 'bash' }}
+
     steps:
-    - name: Setup
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
-    - name: Setup
+    - name: Setup MSVC
+      if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
       uses: ilammy/msvc-dev-cmd@v1
 
+    - name: Setup MSYS2
+      if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        update: true
+
     - name: Dependencies
-      shell: bash
       env:
         DEPS_COMMAND: ${{ inputs.deps_cmdline }}
       run: |
@@ -59,7 +70,6 @@ jobs:
         fi
 
     - name: Configure
-      shell: bash
       env:
         BUILD_TYPE: ${{ inputs.build_type || 'Release' }}
         BUILD_OPTS: ${{ inputs.build_opts }}
@@ -71,7 +81,6 @@ jobs:
 
     - name: Build
       id: build
-      shell: bash
       run: |
         export GIT_DESCRIBE="$(git describe --tags --exclude nightly)"
         echo "This will be $GIT_DESCRIBE"
@@ -199,4 +208,4 @@ jobs:
       shell: bash
       run: |
         git status
-        tree -pu build
+        tree -pu build || true
