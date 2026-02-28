@@ -23,7 +23,7 @@
 
 #pragma once
 
-#include <string>
+#include <cstdint>
 
 int utf8_encode(int32_t codepoint, uint8_t *buffer, int *size);
 int utf8_decode(const uint8_t *src, int *size);
