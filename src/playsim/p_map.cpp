@@ -1513,7 +1513,7 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 	if (tm.thing->flags & MF_SKULLFLY)
 	{
 		bool res = tm.thing->CallSlam(tm.thing->BlockingMobj.ForceGet());
-		tm.thing->BlockingMobj = NULL;
+		tm.thing->BlockingMobj = nullptr;
 		return res;
 	}
 
@@ -1852,7 +1852,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 		return true;
 
 	// Check things first, possibly picking things up.
-	thing->BlockingMobj = NULL;
+	thing->BlockingMobj = nullptr;
 	thingblocker = NULL;
 	if (thing->player)
 	{ // [RH] Fake taller height to catch stepping up into things.
@@ -1892,7 +1892,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 					{
 						thingblocker = BlockingMobj;
 					}
-					thing->BlockingMobj = NULL;
+					thing->BlockingMobj = nullptr;
 				}
 				else if (thing->player &&
 					thing->Top() - BlockingMobj->Z() <= thing->MaxStepHeight)
@@ -1905,7 +1905,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 					}
 					// Nothing is blocking us, but this actor potentially could
 					// if there is something else to step on.
-					thing->BlockingMobj = NULL;
+					thing->BlockingMobj = nullptr;
 				}
 				else
 				{ // Definitely blocking
@@ -1933,7 +1933,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 	spechit.Clear();
 	portalhit.Clear();
 
-	thing->BlockingMobj = NULL;
+	thing->BlockingMobj = nullptr;
 	thing->Height = realHeight;
 	if (actorsonly || (thing->flags & MF_NOCLIP))
 		return (thing->BlockingMobj = thingblocker) == NULL;
