@@ -56,21 +56,27 @@ if( WIN32 )
 	add_definitions( -D_WIN32 )
 
 	set( PROJECT_LIBRARIES
-		psapi
-		wsock32
-		winmm
-		dinput8
 		Xinput
-		ole32
-		user32
-		gdi32
 		comctl32
 		comdlg32
-		ws2_32
-		setupapi
-		oleaut32
 		dbghelp
-		legacy_stdio_definitions )
+		dinput8
+		dwmapi
+		dxguid
+		gdi32
+		ole32
+		oleaut32
+		psapi
+		setupapi
+		user32
+		winmm
+		ws2_32
+		wsock32
+	)
+
+	if(MSVC)
+		list(APPEND PROJECT_LIBRARIES legacy_stdio_definitions)
+	endif()
 
 	if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 		if( DX_dxguid_LIBRARY )
@@ -1389,7 +1395,7 @@ add_dependencies( zdoom revision_check )
 set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
 set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
 
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+if(NOT MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
 endif()
 
