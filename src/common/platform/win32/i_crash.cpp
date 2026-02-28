@@ -2183,7 +2183,7 @@ static void SaveReport (HANDLE file)
 {
 	OPENFILENAME ofn = {
 #ifdef OPENFILENAME_SIZE_VERSION_400
-		OPENFILENAME_SIZE_VERSION_400
+		(DWORD)OPENFILENAME_SIZE_VERSION_400
 #else
 		sizeof(ofn)
 #endif
