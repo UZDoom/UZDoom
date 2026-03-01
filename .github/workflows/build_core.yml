@@ -13,6 +13,12 @@ on:
       build_opts:
         required: true
         type: string
+      extra_files:
+        required: true
+        type: string
+        # s[n]   = output file
+        # s[n+1] = resource sha256
+        # s[n+2] = resource url
       build_type:
         required: true
         type: string
@@ -52,9 +58,14 @@ jobs:
     - name: Dependencies
       env:
         DEPS_COMMAND: ${{ inputs.deps_cmdline }}
+        EXTRA_FILES: ${{ inputs.extra_files }}
       run: |
+        mkdir build && cd build
+
         function attempt() {
+          echo "$*"
           local delay=5
+          local i
           for i in {1..5}; do
             # timeout 10m bash -c "$*" && return 0
             perl -e "alarm 600; exec @ARGV" bash -c "$*" && return 0
@@ -65,8 +76,20 @@ jobs:
           return 1
         }
 
-        if [[ -n "$DEPS_COMMAND" ]]; then
-          attempt "$DEPS_COMMAND"
+        files=( $EXTRA_FILES )
+        for ((i=2;i<=${#files[@]};i+=3)); do
+          file="${files[i-2]}"
+          hash="${files[i-1]}"
+          addr="${files[i]}"
+          download="curl -fL '${addr}' | tee '${file}' | sha256sum"
+          verify="echo '${hash} ${file}' | sha256sum -c -"
+          attempt "set -o pipefail; { $download ; } && { $verify ; }"
+        done
+
+        command=( $DEPS_COMMAND )
+        command="${command[*]}"
+        if [[ -n "$command" ]]; then
+          attempt "$command"
         fi
 
     - name: Configure
@@ -74,7 +97,6 @@ jobs:
         BUILD_TYPE: ${{ inputs.build_type || 'Release' }}
         BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
-        mkdir build
         cmake -B build -S . \
           -DPK3_QUIET_ZIPDIR=ON -G Ninja \
           -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS
@@ -90,8 +112,6 @@ jobs:
     - name: Package
       shell: bash
       run: |
-        function fetch() { { curl -L "$3" | tee "$1" | sha256sum ; } && { echo "$2 $1" | sha256sum -c - ; } ; }
-
         cd build
         mkdir package
         packagename="${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.build.outputs.version }}"
@@ -100,14 +120,7 @@ jobs:
 
         if [[ "${{ runner.os }}" == 'Windows' ]]; then
 
-            fetch oalsoft.zip \
-                ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6 \
-                https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
             unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
-
-            fetch sndfile.zip \
-                2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f \
-                https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
             unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
 
             mkdir package/soundfonts
@@ -183,11 +196,7 @@ jobs:
 
                 cmake --install . --prefix "$(realpath AppDir)/usr"
 
-                fetch appimage-builder \
-                    4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f \
-                    https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
                 chmod +x appimage-builder
-
                 export GIT_DESCRIBE="${{ steps.build.outputs.version }}"
                 ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
                 mv *.AppImage "package/${packagename}.AppImage"
