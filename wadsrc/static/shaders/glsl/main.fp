@@ -88,7 +88,7 @@ vec3 rgb2hsv(vec3 c)
 
 float grayscale(vec4 color)
 {
-	return dot(color.rgb, vec3(0.3, 0.56, 0.14));
+	return dot(color.rgb, vec3(0.2126, 0.7152, 0.0722));
 }
 
 //===========================================================================
