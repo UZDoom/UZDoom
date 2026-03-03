@@ -21,13 +21,12 @@
 **
 */
 
-#include "i_common.h"
-#include "c_cvars.h"
-#include "i_interface.h"
-
 #include <fnmatch.h>
 #include <sys/sysctl.h>
 
+#include "c_cvars.h"
+#include "i_common.h"
+#include "i_interface.h"
 #include "i_system.h"
 #include "st_console.h"
 #include "v_text.h"
@@ -40,11 +39,11 @@ double PerfToSec, PerfToMillisec;
 void CalculateCPUSpeed()
 {
 	long long frequency;
-	size_t size = sizeof frequency;
+	size_t    size = sizeof frequency;
 
 	if (0 == sysctlbyname("machdep.tsc.frequency", &frequency, &size, nullptr, 0) && 0 != frequency)
 	{
-		PerfToSec = 1.0 / frequency;
+		PerfToSec      = 1.0 / frequency;
 		PerfToMillisec = 1000.0 / frequency;
 
 		if (!batchrun)
@@ -54,21 +53,19 @@ void CalculateCPUSpeed()
 	}
 }
 
-
 void I_SetIWADInfo()
 {
 	FConsoleWindow::GetInstance().SetTitleText();
 }
 
-
-void I_PrintStr(const char* const message)
+void I_PrintStr(const char *const message)
 {
 	FConsoleWindow::GetInstance().AddText(message);
 
 	// Strip out any color escape sequences before writing to output
-	char* const copy = new char[strlen(message) + 1];
-	const char* srcp = message;
-	char* dstp = copy;
+	char *const copy = new char[strlen(message) + 1];
+	const char *srcp = message;
+	char       *dstp = copy;
 
 	while ('\0' != *srcp)
 	{
@@ -106,21 +103,20 @@ void I_PrintStr(const char* const message)
 	fflush(stdout);
 }
 
-
-void Mac_I_FatalError(const char* const message);
+void Mac_I_FatalError(const char *const message);
 
 void I_ShowFatalError(const char *message)
 {
 	Mac_I_FatalError(message);
 }
 
-bool HoldingQueryKey(const char* key)
+bool HoldingQueryKey(const char *key)
 {
 	// TODO: Implement
 	return false;
 }
 
-bool I_PickIWad(bool showwin, FStartupSelectionInfo& info)
+bool I_PickIWad(bool showwin, FStartupSelectionInfo &info)
 {
 	if (!showwin)
 	{
@@ -129,32 +125,26 @@ bool I_PickIWad(bool showwin, FStartupSelectionInfo& info)
 
 	I_SetMainWindowVisible(false);
 
-	extern int I_PickIWad_Cocoa(WadStuff*, int, bool, int);
-	const int result = I_PickIWad_Cocoa(&(*info.Wads)[0], (int)info.Wads->Size(), showwin, info.DefaultIWAD);
+	// TODO: at SOME point, the sdl files were used for mac, too. Let's do that again. There is a bunch of unused mac
+	// code in there
+
+	extern int I_PickIWad_Cocoa(FStartupSelectionInfo & info);
+	auto       result = I_PickIWad_Cocoa(info);
 
 	I_SetMainWindowVisible(true);
 
-	if (result >= 0)
-	{
-		info.DefaultIWAD = result;
-		return true;
-	}
-
-	return false;
+	return result;
 }
 
-
-void I_PutInClipboard(const char* const string)
+void I_PutInClipboard(const char *const string)
 {
-	NSPasteboard* const pasteBoard = [NSPasteboard generalPasteboard];
-	NSString* const stringType = NSStringPboardType;
-	NSArray* const types = [NSArray arrayWithObjects:stringType, nil];
-	NSString* const content = [NSString stringWithUTF8String:string];
+	NSPasteboard *const pasteBoard = [NSPasteboard generalPasteboard];
+	NSString *const     stringType = NSStringPboardType;
+	NSArray *const      types      = [NSArray arrayWithObjects:stringType, nil];
+	NSString *const     content    = [NSString stringWithUTF8String:string];
 
-	[pasteBoard declareTypes:types
-					   owner:nil];
-	[pasteBoard setString:content
-				  forType:stringType];
+	[pasteBoard declareTypes:types owner:nil];
+	[pasteBoard setString:content forType:stringType];
 }
 
 FString I_GetFromClipboard(bool returnNothing)
@@ -164,12 +154,11 @@ FString I_GetFromClipboard(bool returnNothing)
 		return FString();
 	}
 
-	NSPasteboard* const pasteBoard = [NSPasteboard generalPasteboard];
-	NSString* const value = [pasteBoard stringForType:NSStringPboardType];
+	NSPasteboard *const pasteBoard = [NSPasteboard generalPasteboard];
+	NSString *const     value      = [pasteBoard stringForType:NSStringPboardType];
 
 	return FString([value UTF8String]);
 }
-
 
 unsigned int I_MakeRNGSeed()
 {
@@ -182,15 +171,15 @@ FString I_GetCWD()
 	return currentpath.UTF8String;
 }
 
-bool I_ChDir(const char* path)
+bool I_ChDir(const char *path)
 {
 	return [[NSFileManager defaultManager] changeCurrentDirectoryPath:[NSString stringWithUTF8String:path]];
 }
 
-void I_OpenShellFolder(const char* folder)
+void I_OpenShellFolder(const char *folder)
 {
-	NSFileManager *filemgr = [NSFileManager defaultManager];
-	NSString *currentpath = [filemgr currentDirectoryPath];
+	NSFileManager *filemgr     = [NSFileManager defaultManager];
+	NSString      *currentpath = [filemgr currentDirectoryPath];
 
 	[filemgr changeCurrentDirectoryPath:[NSString stringWithUTF8String:folder]];
 	if (longsavemessages)
@@ -198,4 +187,3 @@ void I_OpenShellFolder(const char* folder)
 	std::system("open .");
 	[filemgr changeCurrentDirectoryPath:currentpath];
 }
-
