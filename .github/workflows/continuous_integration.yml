@@ -5,8 +5,8 @@ on: [push, pull_request]
 jobs:
   ci-success:
     needs:
-      - debug
-      # - extra
+      - debinfo
+      - extra
     if: always()
     runs-on: ubuntu-latest
     name: CI Success
@@ -16,39 +16,34 @@ jobs:
           [[ "${{ contains(needs.*.result, 'failure') }}" == "false" ]] || exit 1
           [[ "${{ contains(needs.*.result, 'cancelled') }}" == "false" ]] || exit 1
 
-  debug:
+  debinfo:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
     with:
-      build_type: Debug
+      build_type: RelWithDebInfo
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
-      extra_options: ${{ matrix.config.extra_options }}
     strategy:
       fail-fast: false
       matrix:
         # these are shared between multiple build configs
         config: &common_config
-          - name: Windows MSVC
+          - name: Windows
             os: windows-latest
-            extra_options: -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
-            deps_cmdline: |
+            build_opts: &windows_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
+            build_opts_extra: ""
+            deps_cmdline: &windows_deps |
               choco install \
                 tree
 
-          # - name: Windows LLVM
-          #   os: windows-latest
-          #   extra_options: -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_C_FLAGS="/arch:AVX /clang:-Wno-unused-command-line-argument" -DCMAKE_CXX_FLAGS="/arch:AVX /EHsc /GR /clang:-Wno-c++11-narrowing /clang:-Wno-unused-command-line-argument"
-          #   deps_cmdline: |
-          #     choco install \
-          #       tree
-
-          - name: MacOS LLVM
+          - name: MacOS
             os: macos-latest
-            extra_options: -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
-            deps_cmdline: |
+            build_opts: &mac_opts -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF
+            build_opts_extra: -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
+            deps_cmdline: &mac_deps |
               brew install   \
                 dylibbundler \
                 fluid-synth  \
@@ -59,10 +54,11 @@ jobs:
                 sdl2         \
                 tree
 
-          - name: Linux GCC
+          - name: Linux
             os: ubuntu-latest
-            extra_options:
-            deps_cmdline: |
+            build_opts: &linux_opts
+            build_opts_extra: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+            deps_cmdline: &linux_deps |
               sudo apt-get update && sudo apt-get install \
                 libopenal-dev \
                 waylandpp-dev \
@@ -70,41 +66,86 @@ jobs:
                 libwebp-dev   \
                 libbz2-dev    \
                 libomp-dev    \
-                libvpx-dev
+                libvpx-dev    \
+                libfuse2
 
-          - name: Linux LLVM
+  extra:
+    name: ${{ matrix.config.name }}
+    uses: ./.github/workflows/build_core.yml
+    secrets: inherit
+    with:
+      name: ${{ matrix.config.name }}
+      os: ${{ matrix.config.os }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      build_type: ${{ matrix.config.build_type }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config: # put bespoke configs here
+          - name: Linux GCC # I'm just here to make sure GCC doesn't break
             os: ubuntu-latest
-            extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-            deps_cmdline: |
-              sudo apt-get update && sudo apt-get install \
-                libopenal-dev \
-                waylandpp-dev \
-                libsdl2-dev   \
-                libwebp-dev   \
-                libbz2-dev    \
-                libomp-dev    \
-                libvpx-dev
+            build_opts: *linux_opts
+            build_opts_extra: ""
+            deps_cmdline: *linux_deps
+            build_type: RelWithDebInfo
 
-  # extra:
-  #   name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-  #   needs: debug
-  #   uses: ./.github/workflows/build_core.yml
-  #   secrets: inherit
-  #   with:
-  #     name: ${{ matrix.config.name }}
-  #     os: ${{ matrix.config.os }}
-  #     deps_cmdline: ${{ matrix.config.deps_cmdline }}
-  #     extra_options: ${{ matrix.config.extra_options }}
-  #     build_type: ${{ matrix.config.build_type }}
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       config: # put bespoke configs here
-  #         - name: Dummy
-  #           os:
-  #           extra_options:
-  #           deps_cmdline:
-  #           build_type:
+  optional:
+    name: ${{ matrix.config.name }}
+    uses: ./.github/workflows/build_core.yml
+    secrets: inherit
+    with:
+      name: ${{ matrix.config.name }}
+      os: ${{ matrix.config.os }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      build_type: ${{ matrix.config.build_type }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config: # put bespoke configs here
+          - name: Windows ARM (Testing)
+            os: windows-11-arm
+            build_opts: *windows_opts
+            build_opts_extra: ""
+            deps_cmdline: *windows_deps
+            build_type: RelWithDebInfo
+
+          - name: Windows MinGW GCC
+            os: windows-latest
+            build_opts: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+            build_opts_extra: -DFORCE_NO_LTO=true
+            deps_cmdline: &mingw_deps |
+              pacman -S --noconfirm --needed \
+                mingw-w64-x86_64-openal \
+                mingw-w64-x86_64-libvpx \
+                mingw-w64-x86_64-cmake  \
+                mingw-w64-x86_64-ninja  \
+                mingw-w64-x86_64-bzip2  \
+                mingw-w64-x86_64-clang  \
+                mingw-w64-x86_64-gcc
+            build_type: RelWithDebInfo
+
+          - name: Windows MinGW Clang
+            os: windows-latest
+            build_opts: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+            build_opts_extra: ""
+            deps_cmdline: *mingw_deps
+            build_type: RelWithDebInfo
+
+          - name: Linux ARM (Testing)
+            os: ubuntu-24.04-arm
+            build_opts: *linux_opts
+            build_opts_extra: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+            deps_cmdline: *linux_deps
+            build_type: RelWithDebInfo
+
+          - name: MacOS Intel (Testing)
+            os: macos-26-intel
+            build_opts: *mac_opts
+            build_opts_extra: -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib
+            deps_cmdline: *mac_deps
+            build_type: RelWithDebInfo
 
 # ======================
 
@@ -117,24 +158,24 @@ jobs:
       build_type: Release
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra || '' }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
-      extra_options: ${{ matrix.config.extra_options }}
     strategy:
       fail-fast: false
       matrix:
         config: *common_config
 
-  debinfo:
+  debug:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     needs: ci-success
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
     with:
-      build_type: RelWithDebInfo
+      build_type: Debug
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
-      extra_options: ${{ matrix.config.extra_options }}
     strategy:
       fail-fast: false
       matrix:

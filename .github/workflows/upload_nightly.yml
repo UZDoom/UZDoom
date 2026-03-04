@@ -41,9 +41,9 @@ jobs:
             [ -d "$dir" ] && [ -f "$1" ] && mv "$1" "$2";
           }
 
-          move "artifacts/Windows MSVC Release"/*.zip release/Windows-UZDoom-Nightly.zip
-          move "artifacts/MacOS LLVM Release"/*.zip release/MacOS-UZDoom-Nightly.zip
-          move "artifacts/Linux LLVM Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
+          move "artifacts/Windows Release"/*.zip release/Windows-UZDoom-Nightly.zip
+          move "artifacts/MacOS Release"/*.zip release/MacOS-UZDoom-Nightly.zip
+          move "artifacts/Linux Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
 
       - id: tag
         name: Update Tag

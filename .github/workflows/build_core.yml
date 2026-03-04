@@ -10,7 +10,7 @@ on:
       deps_cmdline:
         required: true
         type: string
-      extra_options:
+      build_opts:
         required: true
         type: string
       build_type:
@@ -28,17 +28,28 @@ jobs:
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
     runs-on: ${{ inputs.os }}
+    defaults:
+      run:
+        shell: ${{ contains(inputs.name, 'MinGW') && 'msys2 {0}' || 'bash' }}
+
     steps:
-    - name: Setup
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
-    - name: Setup
+    - name: Setup MSVC
+      if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
       uses: ilammy/msvc-dev-cmd@v1
 
+    - name: Setup MSYS2
+      if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        update: true
+
     - name: Dependencies
-      shell: bash
       env:
         DEPS_COMMAND: ${{ inputs.deps_cmdline }}
       run: |
@@ -59,18 +70,17 @@ jobs:
         fi
 
     - name: Configure
-      shell: bash
+      env:
+        BUILD_TYPE: ${{ inputs.build_type || 'Release' }}
+        BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
         mkdir build
         cmake -B build -S . \
-          -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} \
-          -DPK3_QUIET_ZIPDIR=ON \
-          ${{ inputs.extra_options }} \
-          -G Ninja
+          -DPK3_QUIET_ZIPDIR=ON -G Ninja \
+          -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS
 
     - name: Build
       id: build
-      shell: bash
       run: |
         export GIT_DESCRIBE="$(git describe --tags --exclude nightly)"
         echo "This will be $GIT_DESCRIBE"
@@ -164,24 +174,26 @@ jobs:
             cd ..
 
         elif [[ "${{ runner.os }}" == 'Linux' ]]; then
-
             ldd ./uzdoom
 
-            mkdir AppDir
-            cmake --install . --prefix "$(realpath AppDir)/usr"
+            if [[ $(uname -m) != "x86_64" ]]; then
+                mv uzdoom *.pk3 package
+            else
+                mkdir AppDir
 
-            sudo apt-get install libfuse2 # renamed to libfuse2t64 in later releases
+                cmake --install . --prefix "$(realpath AppDir)/usr"
 
-            fetch appimage-builder \
-                4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f \
-                https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
-            chmod +x appimage-builder
+                fetch appimage-builder \
+                    4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f \
+                    https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
+                chmod +x appimage-builder
 
-            export GIT_DESCRIBE="${{ steps.build.outputs.version }}"
-            ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
-            mv *.AppImage "package/${packagename}.AppImage"
+                export GIT_DESCRIBE="${{ steps.build.outputs.version }}"
+                ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
+                mv *.AppImage "package/${packagename}.AppImage"
 
-            rm package/licenses.zip
+                rm package/licenses.zip
+            fi
 
         fi
 
@@ -196,4 +208,4 @@ jobs:
       shell: bash
       run: |
         git status
-        tree -pu build
+        tree -pu build || true
