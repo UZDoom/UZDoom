@@ -710,7 +710,7 @@ OptionMenu "OtherControlsMenu" protected
 
 	StaticText ""
 	Control    "$CNTRLMNU_SCREENSHOT"      , "screenshot"
-	Control    "$CNTRLMNU_CONSOLE"         , "toggleconsole"
+	Control    "$OPTMNU_CONSOLE"           , "toggleconsole"
 	Control    "$CNTRLMNU_PAUSE"           , "pause"
 
 	StaticText ""
@@ -1037,7 +1037,7 @@ OptionMenu "ImageAdjustMenu" protected
 	Tooltip "$DSPLYMNU_TOOLTIP_GAMMA"
 	Slider "$DSPLYMNU_BLACKPOINT",	"vid_blackpoint",	0.0,	0.25,	0.01,	2
 	Tooltip "$DSPLYMNU_TOOLTIP_BLACKPOINT"
-	Command "$OPTMNU_RESETALL",		"vid_reset2defaults"
+	Command "$OPTMNU_DEFAULTS",		"vid_reset2defaults"
 	Tooltip "$DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 	Slider "$DSPLYMNU_BRIGHTNESS",	"vid_whitepoint",	-1.0,	1.0,	0.01,	2
 	Tooltip "$DSPLYMNU_TOOLTIP_BRIGHTNESS"
@@ -2419,7 +2419,7 @@ OptionMenu ModReplayerOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
 
 	StaticText ""
-	SafeCommand "$ACCMNU_RESET", "acc_reset2defaults"
+	SafeCommand "$OPTMNU_DEFAULTS", "acc_reset2defaults"
  }
 
 /*=======================================
@@ -2943,7 +2943,7 @@ OptionMenu "ReverbSelect" protected
 OptionMenu "ReverbSettings" protected
 {
 	Title "$REVMNU_EDIT"
-	SafeCommand "$REVMNU_REVERT", "revertenvironment"
+	SafeCommand "$OPTMNU_DEFAULTS", "revertenvironment"
 	StaticText " "
 	SliderReverbEditOption "$REVMNU_Environment_Size", 1, 100, 0.01, 3, 1
 	SliderReverbEditOption "$REVMNU_Environment_Diffusion", 0, 1, 0.01, 3, 2
