@@ -560,7 +560,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FString *&p
 			else if (val->IsString())
 			{
 				auto intermediate = UnicodeToString(val->GetString());
-				if (def != nullptr && std::string_view(intermediate) == std::string_view((*def)->GetChars())) {
+				if (def != nullptr && *def != nullptr && std::string_view(intermediate) == std::string_view((*def)->GetChars())) {
 					pstr = *def;
 				} else {
 					pstr = AActor::mStringPropertyData.Alloc(intermediate);
