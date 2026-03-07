@@ -26,6 +26,7 @@ jobs:
       os: ${{ matrix.config.os }}
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      extra_files: ${{ matrix.config.extra_files }}
     strategy:
       fail-fast: false
       matrix:
@@ -33,41 +34,53 @@ jobs:
         config: &common_config
           - name: Windows
             os: windows-latest
-            build_opts: &windows_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
+            build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
             build_opts_extra: ""
-            deps_cmdline: &windows_deps |
-              choco install \
+            deps_cmdline: &msvc_deps >-
+              choco install
                 tree
+            extra_files: &msvc_x86_files >-
+              oalsoft.zip
+                ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6
+                https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
+              sndfile.zip
+                2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f
+                https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
 
           - name: MacOS
             os: macos-latest
             build_opts: &mac_opts -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF
             build_opts_extra: -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
-            deps_cmdline: &mac_deps |
-              brew install   \
-                dylibbundler \
-                fluid-synth  \
-                openal-soft  \
-                vulkan-volk  \
-                molten-vk    \
-                libvpx       \
-                sdl2         \
+            deps_cmdline: &mac_deps >-
+              brew install
+                dylibbundler
+                fluid-synth
+                openal-soft
+                vulkan-volk
+                molten-vk
+                libvpx
+                sdl2
                 tree
+            extra_files: ""
 
           - name: Linux
             os: ubuntu-latest
             build_opts: &linux_opts
             build_opts_extra: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-            deps_cmdline: &linux_deps |
-              sudo apt-get update && sudo apt-get install \
-                libopenal-dev \
-                waylandpp-dev \
-                libsdl2-dev   \
-                libwebp-dev   \
-                libbz2-dev    \
-                libomp-dev    \
-                libvpx-dev    \
+            deps_cmdline: &linux_deps >-
+              sudo apt-get update && sudo apt-get install
+                libopenal-dev
+                waylandpp-dev
+                libsdl2-dev
+                libwebp-dev
+                libbz2-dev
+                libomp-dev
+                libvpx-dev
                 libfuse2
+            extra_files: &linux_files >-
+              appimage-builder
+                4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f
+                https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
 
   extra:
     name: ${{ matrix.config.name }}
@@ -79,6 +92,7 @@ jobs:
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       build_type: ${{ matrix.config.build_type }}
+      extra_files: ${{ matrix.config.extra_files }}
     strategy:
       fail-fast: false
       matrix:
@@ -88,6 +102,7 @@ jobs:
             build_opts: *linux_opts
             build_opts_extra: ""
             deps_cmdline: *linux_deps
+            extra_files: *linux_files
             build_type: RelWithDebInfo
 
   optional:
@@ -100,15 +115,17 @@ jobs:
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       build_type: ${{ matrix.config.build_type }}
+      extra_files: ${{ matrix.config.extra_files }}
     strategy:
       fail-fast: false
       matrix:
         config: # put bespoke configs here
           - name: Windows ARM (Testing)
             os: windows-11-arm
-            build_opts: *windows_opts
+            build_opts: *msvc_opts
             build_opts_extra: ""
-            deps_cmdline: *windows_deps
+            deps_cmdline: *msvc_deps
+            extra_files: ""
             build_type: RelWithDebInfo
 
           - name: Windows MinGW GCC
@@ -116,14 +133,15 @@ jobs:
             build_opts: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
             build_opts_extra: -DFORCE_NO_LTO=true
             deps_cmdline: &mingw_deps |
-              pacman -S --noconfirm --needed \
-                mingw-w64-x86_64-openal \
-                mingw-w64-x86_64-libvpx \
-                mingw-w64-x86_64-cmake  \
-                mingw-w64-x86_64-ninja  \
-                mingw-w64-x86_64-bzip2  \
-                mingw-w64-x86_64-clang  \
+              pacman -S --noconfirm --needed
+                mingw-w64-x86_64-openal
+                mingw-w64-x86_64-libvpx
+                mingw-w64-x86_64-cmake
+                mingw-w64-x86_64-ninja
+                mingw-w64-x86_64-bzip2
+                mingw-w64-x86_64-clang
                 mingw-w64-x86_64-gcc
+            extra_files: ""
             build_type: RelWithDebInfo
 
           - name: Windows MinGW Clang
@@ -131,6 +149,7 @@ jobs:
             build_opts: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
             build_opts_extra: ""
             deps_cmdline: *mingw_deps
+            extra_files: ""
             build_type: RelWithDebInfo
 
           - name: Linux ARM (Testing)
@@ -138,6 +157,7 @@ jobs:
             build_opts: *linux_opts
             build_opts_extra: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
             deps_cmdline: *linux_deps
+            extra_files: ""
             build_type: RelWithDebInfo
 
           - name: MacOS Intel (Testing)
@@ -145,6 +165,7 @@ jobs:
             build_opts: *mac_opts
             build_opts_extra: -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib
             deps_cmdline: *mac_deps
+            extra_files: ""
             build_type: RelWithDebInfo
 
 # ======================
@@ -158,8 +179,9 @@ jobs:
       build_type: Release
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
-      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra || '' }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      extra_files: ${{ matrix.config.extra_files }}
     strategy:
       fail-fast: false
       matrix:
@@ -176,6 +198,7 @@ jobs:
       os: ${{ matrix.config.os }}
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      extra_files: ${{ matrix.config.extra_files }}
     strategy:
       fail-fast: false
       matrix:

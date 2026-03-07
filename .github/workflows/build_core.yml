@@ -13,6 +13,12 @@ on:
       build_opts:
         required: true
         type: string
+      extra_files:
+        required: true
+        type: string
+        # s[n]   = output file
+        # s[n+1] = resource sha256
+        # s[n+2] = resource url
       build_type:
         required: true
         type: string
@@ -52,9 +58,14 @@ jobs:
     - name: Dependencies
       env:
         DEPS_COMMAND: ${{ inputs.deps_cmdline }}
+        EXTRA_FILES: ${{ inputs.extra_files }}
       run: |
+        mkdir build && cd build
+
         function attempt() {
+          echo "$*"
           local delay=5
+          local i
           for i in {1..5}; do
             # timeout 10m bash -c "$*" && return 0
             perl -e "alarm 600; exec @ARGV" bash -c "$*" && return 0
@@ -65,8 +76,20 @@ jobs:
           return 1
         }
 
-        if [[ -n "$DEPS_COMMAND" ]]; then
-          attempt "$DEPS_COMMAND"
+        files=( $EXTRA_FILES )
+        for ((i=2;i<=${#files[@]};i+=3)); do
+          file="${files[i-2]}"
+          hash="${files[i-1]}"
+          addr="${files[i]}"
+          download="curl -fL '${addr}' | tee '${file}' | sha256sum"
+          verify="echo '${hash} ${file}' | sha256sum -c -"
+          attempt "set -o pipefail; { $download ; } && { $verify ; }"
+        done
+
+        command=( $DEPS_COMMAND )
+        command="${command[*]}"
+        if [[ -n "$command" ]]; then
+          attempt "$command"
         fi
 
     - name: Configure
@@ -74,7 +97,6 @@ jobs:
         BUILD_TYPE: ${{ inputs.build_type || 'Release' }}
         BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
-        mkdir build
         cmake -B build -S . \
           -DPK3_QUIET_ZIPDIR=ON -G Ninja \
           -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS
@@ -88,113 +110,119 @@ jobs:
         cmake --build build --config ${{ inputs.build_type }}
 
     - name: Package
+      id: package
       shell: bash
+      working-directory: build
       run: |
-        function fetch() { { curl -L "$3" | tee "$1" | sha256sum ; } && { echo "$2 $1" | sha256sum -c - ; } ; }
-
-        cd build
         mkdir package
-        packagename="${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.build.outputs.version }}"
-
         7z a package/licenses.zip ../docs/licenses/*
 
-        if [[ "${{ runner.os }}" == 'Windows' ]]; then
+        echo "name=${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.build.outputs.version }}" >> "$GITHUB_OUTPUT"
 
-            fetch oalsoft.zip \
-                ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6 \
-                https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
-            unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
+    - name: Package Windows
+      if: runner.os == 'Windows'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+      run: |
+        if [[ -f oalsoft.zip ]]; then
+          unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
+        fi
+        if [[ -f sndfile.zip ]]; then
+          unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
+        fi
 
-            fetch sndfile.zip \
-                2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f \
-                https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
-            unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
+        mkdir package/soundfonts
+        cp ../soundfont/uzdoom.sf2 package/soundfonts
 
-            mkdir package/soundfonts
-            cp ../soundfont/uzdoom.sf2 package/soundfonts
+        mkdir package/fm_banks
+        cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
 
-            mkdir package/fm_banks
-            cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
+        if [[ -d ${{ inputs.build_type }} ]]; then
+          mv ${{ inputs.build_type }}/* .
+        fi
 
-            if [[ -d ${{ inputs.build_type }} ]]; then
-                mv ${{ inputs.build_type }}/* .
-            fi
+        cp uzdoom.* *.pk3 package
 
-            cp uzdoom.* *.pk3 package
+        cd package
+        7z a -sdel -r "${NAME}.zip" *
+        cd ..
 
-            cd package
-            7z a -sdel -r "${packagename}.zip" *
-            cd ..
+    - name: Package macOS
+      if: runner.os == 'macOS'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+      run: |
+        if [[ ! -d uzdoom.app ]] && [[ -d ${{ inputs.build_type }}/uzdoom.app ]]; then
+          mv ${{ inputs.build_type }}/uzdoom.app uzdoom.app
+        fi
+        mv package/licenses.zip uzdoom.app/Contents/Resources
+        cp *.pk3 uzdoom.app/Contents/MacOS
 
-        elif [[ "${{ runner.os }}" == 'macOS' ]]; then
+        if dsymutil uzdoom.app/Contents/MacOS/uzdoom; then
+          mv uzdoom.app/Contents/MacOS/uzdoom.dSYM uzdoom.app/Contents/Resources/
+        fi
 
-            if [[ ! -d uzdoom.app ]] && [[ -d ${{ inputs.build_type }}/uzdoom.app ]]; then
-                mv ${{ inputs.build_type }}/uzdoom.app uzdoom.app
-            fi
-            mv package/licenses.zip uzdoom.app/Contents/Resources
-            cp *.pk3 uzdoom.app/Contents/MacOS
+        SIGN_ID="-"
+        SIGN_OPTS=""
 
-            if dsymutil uzdoom.app/Contents/MacOS/uzdoom; then
-              mv uzdoom.app/Contents/MacOS/uzdoom.dSYM uzdoom.app/Contents/Resources/
-            fi
+        if [[ -n "${{ secrets.MACOS_CERTIFICATE }}" ]]; then
+          echo "${{ secrets.MACOS_CERTIFICATE }}" | base64 --decode > certificate.p12
+          security create-keychain -p "" build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p "" build.keychain
+          security import certificate.p12 -k build.keychain -P "${{ secrets.MACOS_CERTIFICATE_PASSWORD }}" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
 
-            SIGN_ID="-"
-            SIGN_OPTS=""
+          SIGN_ID="${{ secrets.MACOS_CERTIFICATE_ID }}"
+          SIGN_OPTS="--options=runtime"
+        fi
 
-            if [[ -n "${{ secrets.MACOS_CERTIFICATE }}" ]]; then
-                echo "${{ secrets.MACOS_CERTIFICATE }}" | base64 --decode > certificate.p12
-                security create-keychain -p "" build.keychain
-                security default-keychain -s build.keychain
-                security unlock-keychain -p "" build.keychain
-                security import certificate.p12 -k build.keychain -P "${{ secrets.MACOS_CERTIFICATE_PASSWORD }}" -T /usr/bin/codesign
-                security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
+        dylibbundler -ns -of -cd -b \
+          -x ./uzdoom.app/Contents/MacOS/uzdoom \
+          -d ./uzdoom.app/Contents/Libs \
+          -p @executable_path/../Libs/
 
-                SIGN_ID="${{ secrets.MACOS_CERTIFICATE_ID }}"
-                SIGN_OPTS="--options=runtime"
-            fi
+        xattr -cr uzdoom.app
 
-            dylibbundler -ns -of -cd -b \
-              -x ./uzdoom.app/Contents/MacOS/uzdoom \
-              -d ./uzdoom.app/Contents/Libs \
-              -p @executable_path/../Libs/
+        find uzdoom.app/Contents/Libs -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
+          codesign --remove-signature "$file"
+          codesign --force $SIGN_OPTS -s "$SIGN_ID" "$file"
+        done
 
-            xattr -cr uzdoom.app
+        /usr/bin/codesign --force --deep $SIGN_OPTS -s "$SIGN_ID" uzdoom.app -v
 
-            find uzdoom.app/Contents/Libs -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
-                codesign --remove-signature "$file"
-                codesign --force $SIGN_OPTS -s "$SIGN_ID" "$file"
-            done
+        cp -r uzdoom.app package
 
-            /usr/bin/codesign --force --deep $SIGN_OPTS -s "$SIGN_ID" uzdoom.app -v
+        cd package
+        7z a -sdel -r "${NAME}.zip" *
+        cd ..
 
-            cp -r uzdoom.app package
+    - name: Package Linux
+      if: runner.os == 'Linux'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+        GIT_DESCRIBE: ${{ steps.build.outputs.version }}
+      run: |
+        ldd ./uzdoom
 
-            cd package
-            7z a -sdel -r "${packagename}.zip" *
-            cd ..
+        if [[ $(uname -m) != "x86_64" ]]; then
+          mv uzdoom *.pk3 package
+        else
+          mkdir AppDir
 
-        elif [[ "${{ runner.os }}" == 'Linux' ]]; then
-            ldd ./uzdoom
+          cmake --install . --prefix "$(realpath AppDir)/usr"
 
-            if [[ $(uname -m) != "x86_64" ]]; then
-                mv uzdoom *.pk3 package
-            else
-                mkdir AppDir
+          chmod +x appimage-builder
+          ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
+          mv *.AppImage "package/${NAME}.AppImage"
 
-                cmake --install . --prefix "$(realpath AppDir)/usr"
-
-                fetch appimage-builder \
-                    4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f \
-                    https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
-                chmod +x appimage-builder
-
-                export GIT_DESCRIBE="${{ steps.build.outputs.version }}"
-                ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
-                mv *.AppImage "package/${packagename}.AppImage"
-
-                rm package/licenses.zip
-            fi
-
+          rm package/licenses.zip
         fi
 
     - name: Upload Artifact
