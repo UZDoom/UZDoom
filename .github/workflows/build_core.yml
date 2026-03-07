@@ -64,14 +64,14 @@ jobs:
 
         function attempt() {
           echo "$*"
-          local delay=5
+          local delay=10
           local i
-          for i in {1..5}; do
+          for i in {1..4}; do
             # timeout 10m bash -c "$*" && return 0
             perl -e "alarm 600; exec @ARGV" bash -c "$*" && return 0
             echo "Attempt $i failed. Retrying in ${delay}s" >&2
             sleep "${delay}"
-            ((delay*=2))
+            ((delay*=3))
           done
           return 1
         }
