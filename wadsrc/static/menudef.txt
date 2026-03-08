@@ -2049,7 +2049,8 @@ OptionString Resamplers
 OptionValue MusicModes
 {
 	0,	"$OPTVAL_NORMAL"
-	1,	"$OPTVAL_SUPERSTEREO"
+	1,	"$OPTVAL_DIRECTMIX"
+	2,	"$OPTVAL_SUPERSTEREO"
 }
 
 

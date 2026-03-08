@@ -111,7 +111,8 @@ namespace {
 /* Values used by snd_musicmode. */
 enum MusicMode : int {
     Normal = 0,
-    SuperStereo = 1,
+    DirectMix = 1,
+    SuperStereo = 2,
 };
 
 
@@ -268,6 +269,12 @@ class OpenALSoundStream : public SoundStream
 			    ? AL_SUPER_STEREO_SOFT : AL_NORMAL_SOFT};
 			alSourcei(Source, AL_STEREO_MODE_SOFT, mode);
 			alSourcef(Source, AL_SUPER_STEREO_WIDTH_SOFT, *snd_superstereowidth);
+		}
+		if(Renderer->AL.SOFT_direct_channels_remix)
+		{
+			const ALenum mode{(*snd_musicmode == MusicMode::DirectMix)
+			    ? AL_REMIX_UNMATCHED_SOFT : AL_FALSE};
+			alSourcei(Source, AL_DIRECT_CHANNELS_SOFT, mode);
 		}
 
 		alGenBuffers(BufferCount, Buffers);
@@ -680,6 +687,7 @@ OpenALSoundRenderer::OpenALSoundRenderer()
 	AL.EXT_source_distance_model = !!alIsExtensionPresent("AL_EXT_source_distance_model");
 	AL.EXT_SOURCE_RADIUS = !!alIsExtensionPresent("AL_EXT_SOURCE_RADIUS");
 	AL.SOFT_deferred_updates = !!alIsExtensionPresent("AL_SOFT_deferred_updates");
+	AL.SOFT_direct_channels_remix = !!alIsExtensionPresent("AL_SOFT_direct_channels_remix");
 	AL.SOFT_loop_points = !!alIsExtensionPresent("AL_SOFT_loop_points");
 	AL.SOFT_source_latency = !!alIsExtensionPresent("AL_SOFT_source_latency");
 	AL.SOFT_source_resampler = !!alIsExtensionPresent("AL_SOFT_source_resampler");
@@ -1291,6 +1299,8 @@ FISoundChannel *OpenALSoundRenderer::StartSound(SoundHandle sfx, float vol, floa
 		alSourcef(source, AL_PITCH, pitch);
 	if(AL.SOFT_UHJ)
 		alSourcei(source, AL_STEREO_MODE_SOFT, AL_NORMAL_SOFT);
+	if(AL.SOFT_direct_channels_remix)
+		alSourcei(source, AL_DIRECT_CHANNELS_SOFT, AL_FALSE);
 
 	if(!reuse_chan || reuse_chan->StartTime == 0)
 	{
@@ -1461,6 +1471,8 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 		alSourcef(source, AL_PITCH, pitch);
 	if(AL.SOFT_UHJ)
 		alSourcei(source, AL_STEREO_MODE_SOFT, AL_NORMAL_SOFT);
+	if(AL.SOFT_direct_channels_remix)
+		alSourcei(source, AL_DIRECT_CHANNELS_SOFT, AL_FALSE);
 
 	if(!reuse_chan || reuse_chan->StartTime == 0)
 	{

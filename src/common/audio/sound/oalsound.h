@@ -121,6 +121,7 @@ private:
         bool EXT_source_distance_model : 1;
         bool EXT_SOURCE_RADIUS : 1;
         bool SOFT_deferred_updates : 1;
+        bool SOFT_direct_channels_remix : 1;
         bool SOFT_loop_points : 1;
         bool SOFT_source_latency : 1;
         bool SOFT_source_resampler : 1;
