@@ -50,7 +50,7 @@
 
 class OpenALSoundStream;
 
-class OpenALSoundRenderer : public SoundRenderer
+class OpenALSoundRenderer final : public SoundRenderer
 {
 public:
 	OpenALSoundRenderer();
@@ -58,6 +58,7 @@ public:
 
 	virtual void SetSfxVolume(float volume);
 	virtual void SetMusicVolume(float volume);
+	virtual void UpdateMusicParams();
 	virtual SoundHandle LoadSound(uint8_t *sfxdata, int length, int def_loop_start, int def_loop_end);
 	virtual SoundHandle LoadSoundRaw(uint8_t *sfxdata, int length, int frequency, int channels, int bits, int loopstart, int loopend = -1);
 	virtual void UnloadSound(SoundHandle sfx);
@@ -110,20 +111,21 @@ public:
 
 private:
     struct {
-        bool EXT_EFX;
-        bool EXT_disconnect;
-        bool SOFT_HRTF;
-        bool SOFT_pause_device;
-		bool SOFT_output_limiter;
+        bool EXT_EFX : 1;
+        bool EXT_disconnect : 1;
+        bool SOFT_HRTF : 1;
+        bool SOFT_pause_device : 1;
+        bool SOFT_output_limiter : 1;
     } ALC;
     struct {
-        bool EXT_source_distance_model;
-        bool EXT_SOURCE_RADIUS;
-        bool SOFT_deferred_updates;
-        bool SOFT_loop_points;
-        bool SOFT_source_latency;
-        bool SOFT_source_resampler;
-        bool SOFT_source_spatialize;
+        bool EXT_source_distance_model : 1;
+        bool EXT_SOURCE_RADIUS : 1;
+        bool SOFT_deferred_updates : 1;
+        bool SOFT_loop_points : 1;
+        bool SOFT_source_latency : 1;
+        bool SOFT_source_resampler : 1;
+        bool SOFT_source_spatialize : 1;
+        bool SOFT_UHJ : 1;
     } AL;
 
 	// EFX Extension function pointer variables. Loaded after context creation
