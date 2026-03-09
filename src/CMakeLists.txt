@@ -1426,10 +1426,7 @@ if (WIN32)
 	# nothing
 elseif (APPLE)
 	IF ("${INSTALL_RPATH}" STREQUAL "")
-		set_target_properties(zdoom PROPERTIES
-			INSTALL_RPATH "@executable_path/../Libs"
-			BUILD_WITH_INSTALL_RPATH TRUE
-		)
+		set_target_properties(zdoom PROPERTIES MACOSX_RPATH TRUE)
 	endif()
 else()
 	FILE( WRITE ${CMAKE_CURRENT_BINARY_DIR}/link-make "if [ ! -e ${ZDOOM_OUTPUT_DIR}/${ZDOOM_EXE_NAME} ]; then ln -sf ${CMAKE_CURRENT_BINARY_DIR}/${ZDOOM_EXE_NAME} ${ZDOOM_OUTPUT_DIR}/${ZDOOM_EXE_NAME}; fi" )
