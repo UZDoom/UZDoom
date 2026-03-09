@@ -86,7 +86,13 @@ enum {
 	BACKEND_OPENGLES,
 	NUM_BACKEND,
 
+#if defined(VID_BACKEND)
+	BACKEND_DEFAULT = VID_BACKEND,
+#elif defined(HAVE_VULKAN) and not defined(__APPLE__)
 	BACKEND_DEFAULT = BACKEND_VULKAN,
+#else
+	BACKEND_DEFAULT = BACKEND_OPENGL,
+#endif
 };
 
 CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
@@ -94,6 +100,8 @@ CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALC
 	// [SP] This may seem pointless - but I don't want to implement live switching just
 	// yet - I'm pretty sure it's going to require a lot of reinits and destructions to
 	// do it right without memory leaks
+
+	static_assert(0 <= BACKEND_DEFAULT && BACKEND_DEFAULT < NUM_BACKEND, "default back-end out of range");
 
 	switch(self)
 	{
