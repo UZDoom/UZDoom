@@ -95,7 +95,7 @@ enum {
 #endif
 };
 
-CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
+CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	// [SP] This may seem pointless - but I don't want to implement live switching just
 	// yet - I'm pretty sure it's going to require a lot of reinits and destructions to
@@ -105,10 +105,13 @@ CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALC
 
 	switch(self)
 	{
+	default:
+		if (self < 0) self = NUM_BACKEND-1;
+		else if (self >= NUM_BACKEND) self = 0;
+		else if (prev > self || prev <= 0) self = self-1;
+		else if (prev < self || prev >= NUM_BACKEND-1) self = self+1;
+		return;
 #ifdef HAVE_GLES2
-	case NUM_BACKEND:
-		self = BACKEND_OPENGLES;
-		return; // beware of recursions here. Assigning to 'self' will recursively call this handler again.
 	case BACKEND_OPENGLES:
 		Printf("Selecting OpenGLES 2.0 backend...\n");
 		break;
@@ -118,13 +121,17 @@ CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALC
 		Printf("Selecting Vulkan backend...\n");
 		break;
 #endif
-	default:
+	case BACKEND_OPENGL:
 		Printf("Selecting OpenGL backend...\n");
+		break;
 	}
 
-	Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
+	static bool notice = false;
+	if (notice) Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
+	else notice = true;
 }
 
+// why does this function need to exist? - Marcus
 int V_GetBackend()
 {
 	int v = vid_preferbackend;
