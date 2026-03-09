@@ -25,33 +25,20 @@
 
 #include <stdio.h>
 
-#include "i_system.h"
-#include "c_cvars.h"
-#include "x86.h"
-#include "i_video.h"
-
 #include "c_console.h"
-
-#include "m_argv.h"
-
-#include "v_video.h"
-#include "v_text.h"
-#include "sc_man.h"
-
-#include "filesystem.h"
+#include "c_cvars.h"
 #include "c_dispatch.h"
-#include "cmdlib.h"
-#include "hardware.h"
-#include "m_png.h"
-#include "menu.h"
-#include "vm.h"
-#include "r_videoscale.h"
-#include "i_time.h"
-#include "version.h"
-#include "texturemanager.h"
 #include "i_interface.h"
+#include "i_time.h"
+#include "i_video.h"
+#include "m_argv.h"
+#include "printf.h"
 #include "v_draw.h"
-
+#include "v_font.h"
+#include "v_video.h"
+#include "version.h"
+#include "vm.h"
+#include "x86.h"
 
 EXTERN_CVAR(Int, menu_resolution_custom_width)
 EXTERN_CVAR(Int, menu_resolution_custom_height)
@@ -128,7 +115,6 @@ int V_GetBackend()
 	else if (v < 0 || v > 3) v = 0;
 	return v;
 }
-
 
 CUSTOM_CVAR(Int, uiscale, 0, CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
