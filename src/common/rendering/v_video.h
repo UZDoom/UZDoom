@@ -65,6 +65,21 @@ enum EHWCaps
 	RFL_DEBUG = 128,
 };
 
+enum {
+	BACKEND_OPENGL,
+	BACKEND_VULKAN,
+	BACKEND_OPENGLES,
+	NUM_BACKEND,
+
+#if defined(VID_BACKEND)
+	BACKEND_DEFAULT = VID_BACKEND,
+#elif defined(HAVE_VULKAN) and not defined(__APPLE__)
+	BACKEND_DEFAULT = BACKEND_VULKAN,
+#else
+	BACKEND_DEFAULT = BACKEND_OPENGL,
+#endif
+};
+
 extern int DisplayWidth, DisplayHeight;
 
 void V_UpdateModeSize (int width, int height);
@@ -292,6 +307,7 @@ extern DFrameBuffer *screen;
 #define SCREENHEIGHT (screen->GetHeight ())
 
 EXTERN_CVAR (Float, vid_gamma)
+EXTERN_CVAR (Int, vid_preferbackend)
 
 // Allocates buffer screens, call before R_Init.
 void V_InitScreenSize();
@@ -301,7 +317,6 @@ void V_InitScreen();
 void V_Init2 ();
 
 void V_Shutdown ();
-int V_GetBackend();
 
 inline bool IsRatioWidescreen(int ratio) { return (ratio & 3) != 0; }
 extern bool setsizeneeded, setmodeneeded;

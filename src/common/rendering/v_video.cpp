@@ -80,21 +80,6 @@ CUSTOM_CVAR(Int, vid_maxfps, 500, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	}
 }
 
-enum {
-	BACKEND_OPENGL,
-	BACKEND_VULKAN,
-	BACKEND_OPENGLES,
-	NUM_BACKEND,
-
-#if defined(VID_BACKEND)
-	BACKEND_DEFAULT = VID_BACKEND,
-#elif defined(HAVE_VULKAN) and not defined(__APPLE__)
-	BACKEND_DEFAULT = BACKEND_VULKAN,
-#else
-	BACKEND_DEFAULT = BACKEND_OPENGL,
-#endif
-};
-
 CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	// [SP] This may seem pointless - but I don't want to implement live switching just
@@ -129,15 +114,6 @@ CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALC
 	static bool notice = false;
 	if (notice) Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
 	else notice = true;
-}
-
-// why does this function need to exist? - Marcus
-int V_GetBackend()
-{
-	int v = vid_preferbackend;
-	if (v == NUM_BACKEND) vid_preferbackend = v = BACKEND_OPENGLES;
-	else if (v < 0 || v > NUM_BACKEND) v = BACKEND_OPENGL;
-	return v;
 }
 
 CUSTOM_CVAR(Int, uiscale, 0, CVAR_ARCHIVE | CVAR_NOINITCALL)

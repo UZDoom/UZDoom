@@ -334,7 +334,7 @@ SDLVideo::SDLVideo ()
 	}
 
 #ifdef HAVE_VULKAN
-	Priv::vulkanEnabled = V_GetBackend() == 1;
+	Priv::vulkanEnabled = vid_preferbackend == BACKEND_VULKAN;
 
 	if (Priv::vulkanEnabled)
 	{
@@ -416,7 +416,7 @@ DFrameBuffer *SDLVideo::CreateFrameBuffer ()
 	if (fb == nullptr)
 	{
 #ifdef HAVE_GLES2
-		if (V_GetBackend() != 0)
+		if (vid_preferbackend != BACKEND_OPENGL)
 			fb = new OpenGLESRenderer::OpenGLFrameBuffer(0, vid_fullscreen);
 		else
 #endif
