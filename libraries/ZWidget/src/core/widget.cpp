@@ -6,12 +6,12 @@
 #include <cmath>
 #include <algorithm>
 
-Widget::Widget(Widget* parent, WidgetType type, RenderAPI renderAPI) : Type(type)
+Widget::Widget(Widget* parent, WidgetType type, RenderAPI renderAPI, bool windowResizable) : Type(type)
 {
 	if (type != WidgetType::Child)
 	{
 		Widget* owner = parent ? parent->Window() : nullptr;
-		DispWindow = DisplayWindow::Create(this, type == WidgetType::Popup, owner ? owner->DispWindow.get() : nullptr, renderAPI);
+		DispWindow = DisplayWindow::Create(this, type == WidgetType::Popup, owner ? owner->DispWindow.get() : nullptr, renderAPI, windowResizable);
 		if (renderAPI == RenderAPI::Unspecified || renderAPI == RenderAPI::Bitmap)
 		{
 			DispCanvas = Canvas::create();
@@ -312,7 +312,12 @@ void Widget::Hide()
 
 void Widget::ActivateWindow()
 {
-	if (Type != WidgetType::Child)
+	if(CaptureWidget && CaptureWidget->DispWindow && CaptureWidget != Window())
+	{ // auto-focus on modal windows
+		CaptureWidget->DispWindow->Restore();
+		CaptureWidget->ActivateWindow();
+	}
+	else if (Type != WidgetType::Child)
 	{
 		DispWindow->Activate();
 	}
@@ -513,26 +518,26 @@ void Widget::SetPointerCapture()
 void Widget::ReleasePointerCapture()
 {
 	Widget* w = Window();
-	if (w && w->CaptureWidget != nullptr)
+	if (w && w->CaptureWidget == this)
 	{
 		w->CaptureWidget = nullptr;
 		w->DispWindow->ReleaseMouseCapture();
 	}
 }
 
-void Widget::SetModalCapture()
+void Widget::SetModalCapture(bool rootWindow)
 {
-	Widget* w = Window();
+	Widget* w = Window(rootWindow);
 	if (w && w->CaptureWidget != this)
 	{
 		w->CaptureWidget = this;
 	}
 }
 
-void Widget::ReleaseModalCapture()
+void Widget::ReleaseModalCapture(bool rootWindow)
 {
-	Widget* w = Window();
-	if (w && w->CaptureWidget != nullptr)
+	Widget* w = Window(rootWindow);
+	if (w && w->CaptureWidget == this)
 	{
 		w->CaptureWidget = nullptr;
 	}
@@ -554,9 +559,20 @@ void Widget::SetClipboardText(const std::string& text)
 		w->DispWindow->SetClipboardText(text);
 }
 
-Widget* Widget::Window() const
+Widget* Widget::Window(bool rootWindow) const
 {
-	for (const Widget* w = this; w != nullptr; w = w->Parent())
+	if(rootWindow)
+	{
+		const Widget* w = this;
+
+		while(w->Parent())
+		{
+			w = w->Parent();
+		}
+
+		return (w->DispWindow) ? const_cast<Widget*>(w) : nullptr;
+	}
+	else for (const Widget* w = this; w != nullptr; w = w->Parent())
 	{
 		if (w->DispWindow)
 			return const_cast<Widget*>(w);
@@ -732,6 +748,12 @@ void Widget::OnWindowMouseDown(const Point& pos, InputKey key)
 	if (CaptureWidget)
 	{
 		CaptureWidget->OnMouseDown(CaptureWidget->MapFrom(this, pos), key);
+
+		if(CaptureWidget->DispWindow && CaptureWidget != Window())
+		{ // auto-focus on modal windows
+			CaptureWidget->DispWindow->Restore();
+			CaptureWidget->ActivateWindow();
+		}
 	}
 	else
 	{
@@ -753,6 +775,12 @@ void Widget::OnWindowMouseDoubleclick(const Point& pos, InputKey key)
 	if (CaptureWidget)
 	{
 		CaptureWidget->OnMouseDoubleclick(CaptureWidget->MapFrom(this, pos), key);
+
+		if(CaptureWidget->DispWindow && CaptureWidget != Window())
+		{ // auto-focus on modal windows
+			CaptureWidget->DispWindow->Restore();
+			CaptureWidget->ActivateWindow();
+		}
 	}
 	else
 	{

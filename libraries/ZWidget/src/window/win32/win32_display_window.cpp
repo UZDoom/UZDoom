@@ -77,7 +77,7 @@ static double DelayLoadGetDpiScale(HWND hwnd)
 	}
 }
 
-Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI) : WindowHost(windowHost), PopupWindow(popupWindow)
+Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI, bool resizable) : WindowHost(windowHost), PopupWindow(popupWindow)
 {
 	Windows.push_front(this);
 	WindowsIterator = Windows.begin();
@@ -105,7 +105,7 @@ Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, bool popup
 	else
 	{
 		exstyle = WS_EX_APPWINDOW | WS_EX_DLGMODALFRAME;
-		style = WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX;
+		style = WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | (resizable ? (WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX) : WS_MINIMIZEBOX);
 	}
 	CreateWindowEx(exstyle, L"ZWidgetWindow", L"", style, 0, 0, 100, 100, owner ? owner->WindowHandle.hwnd : 0, 0, GetModuleHandle(0), this);
 }
@@ -269,6 +269,12 @@ void Win32DisplayWindow::SetClientFrame(const Rect& box)
 void Win32DisplayWindow::Show()
 {
 	ShowWindow(WindowHandle.hwnd, PopupWindow ? SW_SHOWNA : SW_SHOW);
+}
+
+
+void Win32DisplayWindow::Restore()
+{
+	ShowWindow(WindowHandle.hwnd, SW_RESTORE);
 }
 
 void Win32DisplayWindow::ShowFullscreen()

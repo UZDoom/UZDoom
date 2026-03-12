@@ -6,9 +6,9 @@ Uint32 SDL2DisplayWindow::PaintEventNumber = 0xffffffff;
 bool SDL2DisplayWindow::ExitRunLoop;
 std::unordered_map<int, SDL2DisplayWindow*> SDL2DisplayWindow::WindowList;
 
-SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale) : WindowHost(windowHost), UIScale(uiscale)
+SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, bool resizable) : WindowHost(windowHost), UIScale(uiscale)
 {
-	unsigned int flags = SDL_WINDOW_HIDDEN | SDL_WINDOW_RESIZABLE /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
+	unsigned int flags = resizable ? (SDL_WINDOW_HIDDEN | SDL_WINDOW_RESIZABLE) : SDL_WINDOW_HIDDEN /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
 	if (renderAPI == RenderAPI::Vulkan)
 		flags |= SDL_WINDOW_VULKAN;
 	else if (renderAPI == RenderAPI::OpenGL)
@@ -112,6 +112,11 @@ void SDL2DisplayWindow::SetClientFrame(const Rect& box)
 void SDL2DisplayWindow::Show()
 {
 	SDL_ShowWindow(Handle.window);
+}
+
+void SDL2DisplayWindow::Restore()
+{
+	SDL_RestoreWindow(Handle.window);
 }
 
 void SDL2DisplayWindow::ShowFullscreen()
