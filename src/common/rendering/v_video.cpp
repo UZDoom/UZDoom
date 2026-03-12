@@ -25,33 +25,20 @@
 
 #include <stdio.h>
 
-#include "i_system.h"
-#include "c_cvars.h"
-#include "x86.h"
-#include "i_video.h"
-
 #include "c_console.h"
-
-#include "m_argv.h"
-
-#include "v_video.h"
-#include "v_text.h"
-#include "sc_man.h"
-
-#include "filesystem.h"
+#include "c_cvars.h"
 #include "c_dispatch.h"
-#include "cmdlib.h"
-#include "hardware.h"
-#include "m_png.h"
-#include "menu.h"
-#include "vm.h"
-#include "r_videoscale.h"
-#include "i_time.h"
-#include "version.h"
-#include "texturemanager.h"
 #include "i_interface.h"
+#include "i_time.h"
+#include "i_video.h"
+#include "m_argv.h"
+#include "printf.h"
 #include "v_draw.h"
-
+#include "v_font.h"
+#include "v_video.h"
+#include "version.h"
+#include "vm.h"
+#include "x86.h"
 
 EXTERN_CVAR(Int, menu_resolution_custom_width)
 EXTERN_CVAR(Int, menu_resolution_custom_height)
@@ -93,42 +80,45 @@ CUSTOM_CVAR(Int, vid_maxfps, 500, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	}
 }
 
-CUSTOM_CVAR(Int, vid_preferbackend, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
+#ifdef __EMSCRIPTEN__
+CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_NOSET); // force gles as only supported renderer
+#else
+CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	// [SP] This may seem pointless - but I don't want to implement live switching just
 	// yet - I'm pretty sure it's going to require a lot of reinits and destructions to
 	// do it right without memory leaks
 
+	static_assert(0 <= BACKEND_DEFAULT && BACKEND_DEFAULT < NUM_BACKEND, "default back-end out of range");
+
 	switch(self)
 	{
+	default:
+		if (self < 0) self = NUM_BACKEND-1;
+		else if (self >= NUM_BACKEND) self = 0;
+		else if (prev > self || prev <= 0) self = self-1;
+		else if (prev < self || prev >= NUM_BACKEND-1) self = self+1;
+		return;
 #ifdef HAVE_GLES2
-	case 3:
-		self = 2;
-		return; // beware of recursions here. Assigning to 'self' will recursively call this handler again.
-	case 2:
+	case BACKEND_OPENGLES:
 		Printf("Selecting OpenGLES 2.0 backend...\n");
 		break;
 #endif
 #ifdef HAVE_VULKAN
-	case 1:
+	case BACKEND_VULKAN:
 		Printf("Selecting Vulkan backend...\n");
 		break;
 #endif
-	default:
+	case BACKEND_OPENGL:
 		Printf("Selecting OpenGL backend...\n");
+		break;
 	}
 
-	Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
+	static bool notice = false;
+	if (notice) Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
+	else notice = true;
 }
-
-int V_GetBackend()
-{
-	int v = vid_preferbackend;
-	if (v == 3) vid_preferbackend = v = 2;
-	else if (v < 0 || v > 3) v = 0;
-	return v;
-}
-
+#endif
 
 CUSTOM_CVAR(Int, uiscale, 0, CVAR_ARCHIVE | CVAR_NOINITCALL)
 {

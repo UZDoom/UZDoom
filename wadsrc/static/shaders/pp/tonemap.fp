@@ -23,7 +23,7 @@ layout(binding=0) uniform sampler2D InputTexture;
 vec3 Linear(vec3 c)
 {
 	c = max(c, vec3(0.0));
-	return pow(c, 2.2);
+	return pow(c, vec3(2.2));
 }
 
 vec3 sRGB(vec3 c)

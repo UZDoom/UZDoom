@@ -6444,6 +6444,8 @@ AActor *FLevelLocals::SpawnPlayer (FPlayerStart *mthing, int playernum, int flag
 	{ // Remove any inventory left from the old actor. Coop handles
 	  // it above, but the other modes don't.
 		DestroyAllInventory(oldactor);
+		// Clean these up as well, otherwise pointer substitution will break a lot of things.
+		oldactor->ClearBehaviors();
 	}
 	// [BC] Handle temporary invulnerability when respawned
 	if (state == PST_REBORN || state == PST_ENTER)

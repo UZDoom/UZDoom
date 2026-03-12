@@ -128,6 +128,9 @@ public:
 	void SetMusicVolume (float volume)
 	{
 	}
+	virtual void UpdateMusicParams()
+	{
+	}
 	SoundHandle LoadSound(uint8_t *sfxdata, int length, int def_loop_start, int def_loop_end)
 	{
 		SoundHandle retval = { NULL };

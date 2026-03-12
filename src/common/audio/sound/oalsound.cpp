@@ -49,6 +49,16 @@ CVAR(Bool, snd_waterreverb, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR (String, snd_aldevice, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (Bool, snd_efx, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (String, snd_alresampler, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CVAR (Int, snd_musicmode, 0, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CUSTOM_CVAR (Float, snd_superstereowidth, 0.45f, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+{
+	if (self > 1.0f)
+		self = 1.0f;
+	else if (!(self >= 0.0f))
+		self = 0.0f;
+	else if(GSnd)
+		GSnd->UpdateMusicParams();
+}
 
 #ifdef _WIN32
 #define OPENALLIB "soft_oal.dll"
@@ -98,6 +108,16 @@ EXTERN_CVAR (Int, snd_hrtf)
 
 #define MAKE_PTRID(x)  ((void*)(uintptr_t)(x))
 #define GET_PTRID(x)  ((uint32_t)(uintptr_t)(x))
+
+namespace {
+
+/* Values used by snd_musicmode. */
+enum MusicMode : int {
+    Normal = 0,
+    DirectMix = 1,
+    SuperStereo = 2,
+};
+
 
 static constexpr uint8_t SampleTypeSize(SampleType stype)
 {
@@ -184,6 +204,8 @@ static ALvoid AL_APIENTRY _wrap_ProcessUpdatesSOFT(void)
 	alcProcessContext(alcGetCurrentContext());
 }
 
+} // namespace
+
 
 class OpenALSoundStream : public SoundStream
 {
@@ -248,6 +270,19 @@ class OpenALSoundStream : public SoundStream
 			alSourcef(Source, AL_SOURCE_RADIUS, 0.f);
 		if(Renderer->AL.SOFT_source_spatialize)
 			alSourcei(Source, AL_SOURCE_SPATIALIZE_SOFT, AL_AUTO_SOFT);
+		if(Renderer->AL.SOFT_UHJ)
+		{
+			const ALenum mode{(*snd_musicmode == MusicMode::SuperStereo)
+			    ? AL_SUPER_STEREO_SOFT : AL_NORMAL_SOFT};
+			alSourcei(Source, AL_STEREO_MODE_SOFT, mode);
+			alSourcef(Source, AL_SUPER_STEREO_WIDTH_SOFT, *snd_superstereowidth);
+		}
+		if(Renderer->AL.SOFT_direct_channels_remix)
+		{
+			const ALenum mode{(*snd_musicmode == MusicMode::DirectMix)
+			    ? AL_REMIX_UNMATCHED_SOFT : AL_FALSE};
+			alSourcei(Source, AL_DIRECT_CHANNELS_SOFT, mode);
+		}
 
 		alGenBuffers(BufferCount, Buffers);
 		return (getALError() == AL_NO_ERROR);
@@ -333,12 +368,14 @@ public:
 	virtual void SetVolume(float vol)
 	{
 		Volume = vol;
-		UpdateVolume();
+		UpdateParams();
 	}
 
-	void UpdateVolume()
+	void UpdateParams()
 	{
 		alSourcef(Source, AL_GAIN, Renderer->MusicVolume*Volume);
+		if(Renderer->AL.SOFT_UHJ)
+			alSourcef(Source, AL_SUPER_STEREO_WIDTH_SOFT, *snd_superstereowidth);
 		getALError();
 	}
 
@@ -658,10 +695,12 @@ OpenALSoundRenderer::OpenALSoundRenderer()
 	AL.EXT_source_distance_model = !!alIsExtensionPresent("AL_EXT_source_distance_model");
 	AL.EXT_SOURCE_RADIUS = !!alIsExtensionPresent("AL_EXT_SOURCE_RADIUS");
 	AL.SOFT_deferred_updates = !!alIsExtensionPresent("AL_SOFT_deferred_updates");
+	AL.SOFT_direct_channels_remix = !!alIsExtensionPresent("AL_SOFT_direct_channels_remix");
 	AL.SOFT_loop_points = !!alIsExtensionPresent("AL_SOFT_loop_points");
 	AL.SOFT_source_latency = !!alIsExtensionPresent("AL_SOFT_source_latency");
 	AL.SOFT_source_resampler = !!alIsExtensionPresent("AL_SOFT_source_resampler");
 	AL.SOFT_source_spatialize = !!alIsExtensionPresent("AL_SOFT_source_spatialize");
+	AL.SOFT_UHJ = !!alIsExtensionPresent("AL_SOFT_UHJ");
 
 	// Speed of sound is in units per second. Presuming we want to simulate a
 	// typical speed of sound of 343.3 meters per second, multiply it by the
@@ -977,8 +1016,13 @@ void OpenALSoundRenderer::SetSfxVolume(float volume)
 void OpenALSoundRenderer::SetMusicVolume(float volume)
 {
 	MusicVolume = volume;
+	UpdateMusicParams();
+}
+
+void OpenALSoundRenderer::UpdateMusicParams()
+{
 	for(uint32_t i = 0;i < Streams.Size();++i)
-		Streams[i]->UpdateVolume();
+		Streams[i]->UpdateParams();
 }
 
 unsigned int OpenALSoundRenderer::GetMSLength(SoundHandle sfx)
@@ -1289,6 +1333,10 @@ FISoundChannel *OpenALSoundRenderer::StartSound(SoundHandle sfx, float vol, floa
 		alSourcef(source, AL_PITCH, pitch * PITCH_MULT);
 	else
 		alSourcef(source, AL_PITCH, pitch);
+	if(AL.SOFT_UHJ)
+		alSourcei(source, AL_STEREO_MODE_SOFT, AL_NORMAL_SOFT);
+	if(AL.SOFT_direct_channels_remix)
+		alSourcei(source, AL_DIRECT_CHANNELS_SOFT, AL_FALSE);
 
 	if(!reuse_chan || reuse_chan->StartTime == 0)
 	{
@@ -1461,6 +1509,10 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 		alSourcef(source, AL_PITCH, pitch * PITCH_MULT);
 	else
 		alSourcef(source, AL_PITCH, pitch);
+	if(AL.SOFT_UHJ)
+		alSourcei(source, AL_STEREO_MODE_SOFT, AL_NORMAL_SOFT);
+	if(AL.SOFT_direct_channels_remix)
+		alSourcei(source, AL_DIRECT_CHANNELS_SOFT, AL_FALSE);
 
 	if(!reuse_chan || reuse_chan->StartTime == 0)
 	{

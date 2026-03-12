@@ -172,21 +172,11 @@ function( add_pk3 PK3_NAME )
 	assort_pk3_source_folder("Source Files" ${ARGN})
 
 	# Phase 4: Create separate copy step, in order to make zdoom depend on pk3s without creating cycle
-	if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
-		set(DEST_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
-	elseif(WIN32)
-		set(DEST_DIR "${PROJECT_BINARY_DIR}/$<CONFIG>")
-	elseif(APPLE)
-		set(DEST_DIR "${PROJECT_BINARY_DIR}/${ZDOOM_EXE_NAME}.app/Contents/Resources")
-	else()
-		set(DEST_DIR "${PROJECT_BINARY_DIR}")
-	endif()
-
 	set(COPY_TARGET_NAME "${PK3_TARGET}_copy")
 	add_custom_target(${COPY_TARGET_NAME} ALL
 		COMMAND ${CMAKE_COMMAND} -E copy_if_different
 			"${ZDOOM_OUTPUT_DIR}/${PK3_NAME}"
-			"${DEST_DIR}/${PK3_NAME}"
+			"${ZDOOM_RESOURCE_DIR}/${PK3_NAME}"
 		DEPENDS ${PK3_TARGET}
 	)
 	add_dependencies(zdoom ${COPY_TARGET_NAME})
@@ -240,6 +230,16 @@ ENDIF()
 
 set( ZDOOM_OUTPUT_DIR ${CMAKE_BINARY_DIR} CACHE PATH "Directory where zdoom.pk3 and the executable will be created." )
 set( ZDOOM_EXE_NAME "uzdoom" CACHE FILEPATH "Name of the executable to create" )
+
+if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
+	set(ZDOOM_RESOURCE_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+elseif(WIN32)
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}/$<CONFIG>")
+elseif(APPLE)
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}/${ZDOOM_EXE_NAME}.app/Contents/Resources")
+else()
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}")
+endif()
 
 # Replacement variables for a possible long list of C/C++ compilers compatible with GCC
 if( "${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_C_COMPILER_ID}" MATCHES "Clang" )

@@ -21,19 +21,17 @@
 **
 */
 
-#include "gl_load.h"
-
 #ifdef HAVE_VULKAN
 #include <zvulkan/vulkanbuilders.h>
 #include <zvulkan/vulkansurface.h>
 #endif
 
-#include "i_common.h"
-
 #include "bitmap.h"
 #include "c_dispatch.h"
 #include "gl_framebuffer.h"
+#include "gl_load.h"
 #include "hardware.h"
+#include "i_common.h"
 #include "i_system.h"
 #include "m_argv.h"
 #include "m_png.h"
@@ -42,13 +40,16 @@
 #include "v_text.h"
 #include "v_video.h"
 #include "version.h"
+
 #ifdef HAVE_GLES2
 #include "gles_framebuffer.h"
 #endif
 
 #ifdef HAVE_VULKAN
 #include "vulkan/system/vk_renderdevice.h"
+#endif
 
+#ifdef HAVE_VULKAN
 bool I_CreateVulkanSurface(VkInstance instance, VkSurfaceKHR *surface);
 #endif
 
@@ -363,7 +364,7 @@ class CocoaVideo : public IVideo
 public:
 	CocoaVideo()
 	{
-		ms_isVulkanEnabled = V_GetBackend() == 1 && NSAppKitVersionNumber >= 1404; // NSAppKitVersionNumber10_11
+		ms_isVulkanEnabled = vid_preferbackend == BACKEND_VULKAN && NSAppKitVersionNumber >= 1404; // NSAppKitVersionNumber10_11
 	}
 
 	~CocoaVideo()
@@ -454,7 +455,7 @@ public:
 		if (fb == nullptr)
 		{
 #ifdef HAVE_GLES2
-			if(V_GetBackend() != 0)
+			if(vid_preferbackend != BACKEND_OPENGL)
 				fb = new OpenGLESRenderer::OpenGLFrameBuffer(0, vid_fullscreen);
 			else
 #endif

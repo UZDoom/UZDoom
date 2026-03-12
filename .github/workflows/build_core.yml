@@ -64,14 +64,14 @@ jobs:
 
         function attempt() {
           echo "$*"
-          local delay=5
+          local delay=10
           local i
-          for i in {1..5}; do
+          for i in {1..4}; do
             # timeout 10m bash -c "$*" && return 0
             perl -e "alarm 600; exec @ARGV" bash -c "$*" && return 0
             echo "Attempt $i failed. Retrying in ${delay}s" >&2
             sleep "${delay}"
-            ((delay*=2))
+            ((delay*=3))
           done
           return 1
         }
@@ -156,11 +156,11 @@ jobs:
       env:
         NAME: ${{ steps.package.outputs.name }}
       run: |
+
         if [[ ! -d uzdoom.app ]] && [[ -d ${{ inputs.build_type }}/uzdoom.app ]]; then
           mv ${{ inputs.build_type }}/uzdoom.app uzdoom.app
         fi
         mv package/licenses.zip uzdoom.app/Contents/Resources
-        cp *.pk3 uzdoom.app/Contents/MacOS
 
         if dsymutil uzdoom.app/Contents/MacOS/uzdoom; then
           mv uzdoom.app/Contents/MacOS/uzdoom.dSYM uzdoom.app/Contents/Resources/
@@ -181,14 +181,16 @@ jobs:
           SIGN_OPTS="--options=runtime"
         fi
 
+        mkdir -p uzdoom.app/Contents/Frameworks
+        cp $(brew --prefix molten-vk)/lib/libMoltenVK.dylib uzdoom.app/Contents/Frameworks/
         dylibbundler -ns -of -cd -b \
           -x ./uzdoom.app/Contents/MacOS/uzdoom \
-          -d ./uzdoom.app/Contents/Libs \
-          -p @executable_path/../Libs/
+          -d ./uzdoom.app/Contents/Frameworks \
+          -p @executable_path/../Frameworks/
 
         xattr -cr uzdoom.app
 
-        find uzdoom.app/Contents/Libs -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
+        find uzdoom.app/Contents/Frameworks -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
           codesign --remove-signature "$file"
           codesign --force $SIGN_OPTS -s "$SIGN_ID" "$file"
         done
