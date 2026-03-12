@@ -1,9 +1,0 @@
-# build artifacts
-/build
-
-# misc cache/backup/swap files
-.cache
-
-# file systems
-.DS_Store
-*~
