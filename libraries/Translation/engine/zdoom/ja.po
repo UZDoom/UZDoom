@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15.1\n"
-"HeaderCode: jp\n"
+"HeaderCode: ja jp\n"
 
 msgid "PRESSKEY"
 msgstr "何かキーを押せ"

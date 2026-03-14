@@ -1,13 +1,32 @@
 #!/usr/bin/env python3
 
 """
-Usage: ./compile.py path_to_po_files path_to_output.csv
+Builds language files
 """
 
 import sys
 import csv
 import polib
+import argparse
 from pathlib import Path
+
+RECIPES = {
+	"ENGINE": [ "engine/common", "engine/zdoom" ],
+	"GAMES": [
+		"games/chex",
+		"games/doom",
+		"games/doom2",
+		"games/heretic",
+		"games/hexen",
+		"games/hexen-deathkings",
+		"games/plutonia",
+		"games/strife",
+		"games/tnt",
+	],
+	"GAMES_CHEX3": [ "games/filter/chex_quest_3" ],
+	"GAMES_HARMONY": [ "games/filter/harmony" ],
+	"GAMES_HACX": [ "games/filter/hacx" ]
+}
 
 SOURCE_LANG = "en_US"
 
@@ -131,10 +150,14 @@ def build_matrix(languages, po_files):
 def main(args):
 	"""loading, matrix building, CSV export"""
 
-	po_files = get_po_files([ Path(f) for f in args[1:-1] ]) if len(args) >= 3 else None
+	root_dir = Path(__file__).parent.parent;
+
+	po_files = RECIPES[args.recipe] if args.recipe in RECIPES else None
+	po_files = po_files and get_po_files([ root_dir / f for f in po_files ])
 
 	if po_files is None:
 		print(__doc__)
+		print(f"Available recipes: { " ".join(RECIPES.keys()) }")
 		exit(1)
 
 	languages = po_files["languages"]
@@ -145,7 +168,15 @@ def main(args):
 
 	table = [ header ] + [ matrix[k] for k in sorted(matrix) ]
 
-	dump_csv(args[-1], table)
+	dump_csv(args.output, table)
 
 if __name__ == "__main__":
-    main(sys.argv)
+	parser = argparse.ArgumentParser(
+		prog=Path(__file__).name,
+		description=__doc__)
+
+	parser.add_argument("--recipe", required=True)
+	parser.add_argument("--output", required=True, type=Path)
+	args = parser.parse_args(sys.argv[1:])
+
+	main(args)

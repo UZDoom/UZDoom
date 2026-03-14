@@ -172,22 +172,16 @@ function( add_pk3 PK3_NAME )
 		COMPONENT "Game resources")
 endfunction()
 
-macro( generate_language_files target destination )
+macro( generate_language_files target destination identifier )
 	# right now, this dumps temp files into the source tree and deletes them after build
 	# This should be re-worked to dump stuff into the build tree instead
 	set(lang_script "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/scripts/compile.py")
 	set(lang_dst "${CMAKE_CURRENT_SOURCE_DIR}/${destination}")
 	set(lang_target "${target}_${destination}")
 
-	set(lang_sources_list "")
-	set(sources ${ARGN})
-	foreach( source_item ${sources} )
-		list(APPEND lang_sources_list "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/${source_item}")
-	endforeach()
-
 	string( REGEX REPLACE "[^a-zA-Z0-9]" "_" lang_target ${lang_target} )
 
-	add_custom_target(${lang_target} COMMAND Python3::Interpreter -B -E -s "${lang_script}" ${lang_sources_list} "${lang_dst}")
+	add_custom_target(${lang_target} COMMAND Python3::Interpreter -B -E -s "${lang_script}" --recipe ${identifier} --output "${lang_dst}")
 	add_dependencies(${target} ${lang_target})
 	add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E remove "${lang_dst}")
 endmacro()
