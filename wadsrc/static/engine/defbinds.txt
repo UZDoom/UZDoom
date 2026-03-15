@@ -7,4 +7,5 @@ d +moveright
 space +jump
 x crouch
 e +use
+r +reload
 mouse2 +altattack
