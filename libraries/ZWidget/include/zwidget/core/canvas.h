@@ -78,6 +78,8 @@ public:
 	void drawImage(const std::shared_ptr<Image>& image, const Point& pos);
 	void drawImage(const std::shared_ptr<Image>& image, const Rect& box);
 
+	void setLanguage(const char* lang) { language = lang; }
+
 protected:
 	virtual std::unique_ptr<CanvasTexture> createTexture(int width, int height, const void* pixels, ImageFormat format = ImageFormat::B8G8R8A8) = 0;
 	virtual void drawLineAntialiased(float x0, float y0, float x1, float y1, Colorf color) = 0;
@@ -101,7 +103,6 @@ protected:
 	std::unique_ptr<CanvasTexture> whiteTexture;
 
 private:
-	void setLanguage(const char* lang) { language = lang; }
 	void drawLineUnclipped(const Point& p0, const Point& p1, const Colorf& color);
 
 	std::unique_ptr<CanvasFontGroup> font;

@@ -7,7 +7,7 @@ class SDL2DisplayBackend : public DisplayBackend
 public:
 	SDL2DisplayBackend();
 
-	std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI) override;
+	std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable) override;
 	void ProcessEvents() override;
 	void RunLoop() override;
 	void ExitLoop() override;

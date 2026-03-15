@@ -40,17 +40,17 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
     - name: Setup MSVC
       if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
-      uses: ilammy/msvc-dev-cmd@v1
+      uses: ilammy/msvc-dev-cmd@v1 # FIXME: update this
 
     - name: Setup MSYS2
       if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
-      uses: msys2/setup-msys2@v2
+      uses: msys2/setup-msys2@v2 # FIXME: update this
       with:
         msystem: MINGW64
         update: true
@@ -228,7 +228,7 @@ jobs:
         fi
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: build/package
         name: ${{ inputs.name }} ${{ inputs.build_type }}
