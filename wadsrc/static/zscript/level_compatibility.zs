@@ -2524,6 +2524,48 @@ class LevelCompatibility : LevelPostProcessor
 				AddSectorTag(378, 27);
 				break;
 			}
+
+			case 'B93D91FC406DD83969F026982480913E': // Hell Revealed MAP18
+			{
+				// Sets the constant teleporting Lost Soul outside the playing area to not count towards kills
+				SetThingFlags(12, GetThingFlags(12) | MTF_NOCOUNT);
+				break;
+			}
+
+			case 'EBD4499FAE0B475A9681874B5692D514': // DODead.wad E1M6
+			{
+				// Fixes missing blue key.
+				SetThingSkills(232, 31);
+				break;
+			}
+
+			case '202902809DC00DABB2EAC0C153A56C44': // WOS.wad MAP02
+			{
+				// Fixes missing texture.
+				SetWallTexture(2596, Line.front, Side.bottom, "STEP2");
+				break;
+			}
+
+			case '0B72F20CD1D21B20AA4C45624CC42B56': // UAC Ultra MAP09 
+			{
+				// Fixes enemy teleports at the end of the map not appearing on HMP or lower, allowing for 100% kills.
+				SetThingSkills(104, 31);
+				SetThingSkills(137, 31);
+				SetThingSkills(202, 31);
+				SetThingSkills(296, 31);
+				SetThingSkills(297, 31);
+				SetThingSkills(366, 31);
+				break;
+			}
+
+			case '9B039C45670583B63193FF908BA39113': // UAC Ultra MAP11
+			{
+				// Fixes missing textures on the final elevator.
+				SetWallTexture(2097, Line.front, Side.bottom, "UACMETL9");
+				SetWallTexture(2151, Line.front, Side.bottom, "UACMETL9");
+				SetWallTexture(2152, Line.front, Side.bottom, "UACMETL9");
+				break;
+			}
 		}
 	}
 }
