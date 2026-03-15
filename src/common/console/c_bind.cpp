@@ -183,23 +183,24 @@ static int GetKeyFromName (const char *name)
 static int GetConfigKeyFromName (const char *key)
 {
 	int keynum = GetKeyFromName(key);
+
 	if (keynum == 0)
 	{
-		if (stricmp (key, "LeftBracket") == 0)
-		{
-			keynum = GetKeyFromName ("[");
-		}
-		else if (stricmp (key, "RightBracket") == 0)
-		{
-			keynum = GetKeyFromName ("]");
-		}
-		else if (stricmp (key, "Equals") == 0)
-		{
-			keynum = GetKeyFromName ("=");
-		}
-		else if (stricmp (key, "KP-Equals") == 0)
-		{
-			keynum = GetKeyFromName ("kp=");
+		static const char* mapping[][2] = {
+			{ "LeftBracket", "["},
+			{ "RightBracket", "]"},
+			{ "Equals", "="},
+			{ "KP-Equals", "kp="},
+			{ "Semicolon", ";"},
+			{ "Colon", ":"},
+		};
+
+		for (auto& [alias, actual]: mapping) {
+			if (stricmp (key, alias) == 0)
+			{
+				keynum = GetKeyFromName (actual);
+				break;
+			}
 		}
 	}
 	return keynum;
