@@ -44,102 +44,95 @@ const char *KeyNames[NUM_KEYS] =
 	// We use the DirectInput codes and assume a qwerty keyboard layout.
 	// See <dinput.h> for the DIK_* codes
 
-	nullptr,	"Escape",	"1",		"2",		"3",		"4",		"5",		"6",		//00
-	"7",		"8",		"9",		"0",		"-",		"=",		"Backspace","Tab",		//08
-	"Q",		"W",		"E",		"R",		"T",		"Y",		"U",		"I",		//10
-	"O",		"P",		"[",		"]",		"Enter",	"Ctrl",		"A",		"S",	//18
-	"D",		"F",		"G",		"H",		"J",		"K",		"L",		";",		//20
-	"'",		"`",		"Shift",	"\\",		"Z",		"X",		"C",		"V",		//28
-	"B",		"N",		"M",		",",		".",		"/",		"RShift",	"KP*",		//30
-	"Alt",		"Space",	"CapsLock",	"F1",		"F2",		"F3",		"F4",		"F5",		//38
-	"F6",		"F7",		"F8",		"F9",		"F10",		"NumLock",	"Scroll",	"KP7",		//40
-	"KP8",		"KP9",		"KP-",		"KP4",		"KP5",		"KP6",		"KP+",		"KP1",		//48
-	"KP2",		"KP3",		"KP0",		"KP.",		nullptr,	nullptr,	"OEM102",	"F11",		//50
-	"F12",		nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//58
-	nullptr,	nullptr,	nullptr,	nullptr,	"F13",		"F14",		"F15",		"F16",		//60
-	"F17",	  "F18",  	"F19",  	"F20",	  "F21",	  "F22",	  "F23",	  "F24",  	//68
-	"Kana",		nullptr,	nullptr,	"Abnt_C1",	nullptr,	nullptr,	nullptr,	nullptr,	//70
-	nullptr,	"Convert",	nullptr,	"NoConvert",nullptr,	"Yen",		"Abnt_C2",	nullptr,	//78
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//80
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	"KP=",		nullptr,	nullptr,	//88
-	"Circumflex","@",		":",		"_",		"Kanji",	"Stop",		"Ax",		"Unlabeled",//90
-	nullptr,	"PrevTrack",nullptr,	nullptr,	"KP-Enter",	"RCtrl",	nullptr,	nullptr,	//98
-	"Mute",		"Calculator","Play",	nullptr,	"Stop",		nullptr,	nullptr,	nullptr,	//A0
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	"VolDown",	nullptr,	//A8
-	"VolUp",	nullptr,	"WebHome",	"KP,",		nullptr,	"KP/",		nullptr,	"SysRq",	//B0
-	"RAlt",		nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//B8
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	"Pause",	nullptr,	"Home",		//C0
-	"UpArrow",	"PgUp",		nullptr,	"LeftArrow",nullptr,	"RightArrow",nullptr,	"End",		//C8
-	"DownArrow","PgDn",		"Ins",		"Del",		nullptr,	nullptr,	nullptr,	nullptr,	//D0
+	nullptr,      "Escape",     "1",        "2",          "3",        "4",           "5",         "6",         //00
+	"7",          "8",          "9",        "0",          "-",        "=",           "Backspace", "Tab",       //08
+	"Q",          "W",          "E",        "R",          "T",        "Y",           "U",         "I",         //10
+	"O",          "P",          "[",        "]",          "Enter",    "Ctrl",        "A",         "S",         //18
+	"D",          "F",          "G",        "H",          "J",        "K",           "L",         ";",         //20
+	"'",          "`",          "Shift",    "\\",         "Z",        "X",           "C",         "V",         //28
+	"B",          "N",          "M",        ",",          ".",        "/",           "RShift",    "KP*",       //30
+	"Alt",        "Space",      "CapsLock", "F1",         "F2",       "F3",          "F4",        "F5",        //38
+	"F6",         "F7",         "F8",       "F9",         "F10",      "NumLock",     "Scroll",    "KP7",       //40
+	"KP8",        "KP9",        "KP-",      "KP4",        "KP5",      "KP6",         "KP+",       "KP1",       //48
+	"KP2",        "KP3",        "KP0",      "KP.",        nullptr,    nullptr,       "OEM102",    "F11",       //50
+	"F12",        nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //58
+	nullptr,      nullptr,      nullptr,    nullptr,      "F13",      "F14",         "F15",       "F16",       //60
+	"F17",        "F18",        "F19",      "F20",        "F21",      "F22",         "F23",       "F24",       //68
+	"Kana",       nullptr,      nullptr,    "Abnt_C1",    nullptr,    nullptr,       nullptr,     nullptr,     //70
+	nullptr,      "Convert",    nullptr,    "NoConvert",  nullptr,    "Yen",         "Abnt_C2",   nullptr,     //78
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //80
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    "KP=",         nullptr,     nullptr,     //88
+	"Circumflex", "@",          ":",        "_",          "Kanji",    "Stop",        "Ax",        "Unlabeled", //90
+	nullptr,      "PrevTrack",  nullptr,    nullptr,      "KP-Enter", "RCtrl",       nullptr,     nullptr,     //98
+	"Mute",       "Calculator", "Play",     nullptr,      "Stop",     nullptr,       nullptr,     nullptr,     //A0
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       "VolDown",   nullptr,     //A8
+	"VolUp",      nullptr,      "WebHome",  "KP,",        nullptr,    "KP/",         nullptr,     "SysRq",     //B0
+	"RAlt",       nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //B8
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    "Pause",       nullptr,     "Home",      //C0
+	"UpArrow",    "PgUp",       nullptr,    "LeftArrow",  nullptr,    "RightArrow",  nullptr,     "End",       //C8
+	"DownArrow",  "PgDn",       "Ins",      "Del",        nullptr,    nullptr,       nullptr,     nullptr,     //D0
 #ifdef __APPLE__
-	nullptr,	nullptr,	nullptr,	"Command",	nullptr,	"Apps",		"Power",	"Sleep",	//D8
+	nullptr,      nullptr,      nullptr,    "Command",    nullptr,    "Apps",        "Power",     "Sleep",     //D8
 #else // !__APPLE__
-	nullptr,	nullptr,	nullptr,	"LWin",		"RWin",		"Apps",		"Power",	"Sleep",	//D8
+	nullptr,      nullptr,      nullptr,    "LWin",       "RWin",     "Apps",        "Power",     "Sleep",     //D8
 #endif // __APPLE__
-	nullptr,	nullptr,	nullptr,	"Wake",		nullptr,	"Search",	"Favorites","Refresh",	//E0
-	"WebStop",	"WebForward","WebBack",	"MyComputer","Mail",	"MediaSelect",nullptr,	nullptr,	//E8
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//F0
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//F8
+	nullptr,      nullptr,      nullptr,    "Wake",       nullptr,    "Search",      "Favorites", "Refresh",   //E0
+	"WebStop",    "WebForward", "WebBack",  "MyComputer", "Mail",     "MediaSelect", nullptr,     nullptr,     //E8
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //F0
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //F8
 
 	// non-keyboard buttons that can be bound
-	"Mouse1",	"Mouse2",	"Mouse3",	"Mouse4",		// 8 mouse buttons
-	"Mouse5",	"Mouse6",	"Mouse7",	"Mouse8",
-
-	"Joy1",		"Joy2",		"Joy3",		"Joy4",			// 128 joystick buttons!
-	"Joy5",		"Joy6",		"Joy7",		"Joy8",
-	"Joy9",		"Joy10",	"Joy11",	"Joy12",
-	"Joy13",	"Joy14",	"Joy15",	"Joy16",
-	"Joy17",	"Joy18",	"Joy19",	"Joy20",
-	"Joy21",	"Joy22",	"Joy23",	"Joy24",
-	"Joy25",	"Joy26",	"Joy27",	"Joy28",
-	"Joy29",	"Joy30",	"Joy31",	"Joy32",
-	"Joy33",	"Joy34",	"Joy35",	"Joy36",
-	"Joy37",	"Joy38",	"Joy39",	"Joy40",
-	"Joy41",	"Joy42",	"Joy43",	"Joy44",
-	"Joy45",	"Joy46",	"Joy47",	"Joy48",
-	"Joy49",	"Joy50",	"Joy51",	"Joy52",
-	"Joy53",	"Joy54",	"Joy55",	"Joy56",
-	"Joy57",	"Joy58",	"Joy59",	"Joy60",
-	"Joy61",	"Joy62",	"Joy63",	"Joy64",
-	"Joy65",	"Joy66",	"Joy67",	"Joy68",
-	"Joy69",	"Joy70",	"Joy71",	"Joy72",
-	"Joy73",	"Joy74",	"Joy75",	"Joy76",
-	"Joy77",	"Joy78",	"Joy79",	"Joy80",
-	"Joy81",	"Joy82",	"Joy83",	"Joy84",
-	"Joy85",	"Joy86",	"Joy87",	"Joy88",
-	"Joy89",	"Joy90",	"Joy91",	"Joy92",
-	"Joy93",	"Joy94",	"Joy95",	"Joy96",
-	"Joy97",	"Joy98",	"Joy99",	"Joy100",
-	"Joy101",	"Joy102",	"Joy103",	"Joy104",
-	"Joy105",	"Joy106",	"Joy107",	"Joy108",
-	"Joy109",	"Joy110",	"Joy111",	"Joy112",
-	"Joy113",	"Joy114",	"Joy115",	"Joy116",
-	"Joy117",	"Joy118",	"Joy119",	"Joy120",
-	"Joy121",	"Joy122",	"Joy123",	"Joy124",
-	"Joy125",	"Joy126",	"Joy127",	"Joy128",
-
-	"POV1Up",	"POV1Right","POV1Down",	"POV1Left",		// First POV hat
-	"POV2Up",	"POV2Right","POV2Down",	"POV2Left",		// Second POV hat
-	"POV3Up",	"POV3Right","POV3Down",	"POV3Left",		// Third POV hat
-	"POV4Up",	"POV4Right","POV4Down",	"POV4Left",		// Fourth POV hat
-
-	"MWheelUp",	"MWheelDown",							// the mouse wheel
-	"MWheelRight", "MWheelLeft",
-
-	"Axis1Plus","Axis1Minus","Axis2Plus","Axis2Minus",	// joystick axes as buttons
-	"Axis3Plus","Axis3Minus","Axis4Plus","Axis4Minus",
-	"Axis5Plus","Axis5Minus","Axis6Plus","Axis6Minus",
-	"Axis7Plus","Axis7Minus","Axis8Plus","Axis8Minus",
-
-	"LStickRight","LStickLeft","LStickDown","LStickUp",			// Gamepad axis-based buttons
-	"RStickRight","RStickLeft","RStickDown","RStickUp",
-
-	"DPadUp","DPadDown","DPadLeft","DPadRight",	// Gamepad buttons
-	"Pad_Start","Pad_Back","LThumb","RThumb",
-	"LShoulder","RShoulder","LTrigger","RTrigger",
-	"Pad_A", "Pad_B", "Pad_X", "Pad_Y",
-	"Paddle_1", "Paddle_2", "Paddle_3", "Paddle_4",
-	"Guide", "Pad_Misc", "Pad_Touchpad"
+	"Mouse1",      "Mouse2",     "Mouse3",       "Mouse4",     // 8 mouse buttons
+	"Mouse5",      "Mouse6",     "Mouse7",       "Mouse8",     //
+	"Joy1",        "Joy2",       "Joy3",         "Joy4",       // 128 joystick buttons!
+	"Joy5",        "Joy6",       "Joy7",         "Joy8",       //
+	"Joy9",        "Joy10",      "Joy11",        "Joy12",      //
+	"Joy13",       "Joy14",      "Joy15",        "Joy16",      //
+	"Joy17",       "Joy18",      "Joy19",        "Joy20",      //
+	"Joy21",       "Joy22",      "Joy23",        "Joy24",      //
+	"Joy25",       "Joy26",      "Joy27",        "Joy28",      //
+	"Joy29",       "Joy30",      "Joy31",        "Joy32",      //
+	"Joy33",       "Joy34",      "Joy35",        "Joy36",      //
+	"Joy37",       "Joy38",      "Joy39",        "Joy40",      //
+	"Joy41",       "Joy42",      "Joy43",        "Joy44",      //
+	"Joy45",       "Joy46",      "Joy47",        "Joy48",      //
+	"Joy49",       "Joy50",      "Joy51",        "Joy52",      //
+	"Joy53",       "Joy54",      "Joy55",        "Joy56",      //
+	"Joy57",       "Joy58",      "Joy59",        "Joy60",      //
+	"Joy61",       "Joy62",      "Joy63",        "Joy64",      //
+	"Joy65",       "Joy66",      "Joy67",        "Joy68",      //
+	"Joy69",       "Joy70",      "Joy71",        "Joy72",      //
+	"Joy73",       "Joy74",      "Joy75",        "Joy76",      //
+	"Joy77",       "Joy78",      "Joy79",        "Joy80",      //
+	"Joy81",       "Joy82",      "Joy83",        "Joy84",      //
+	"Joy85",       "Joy86",      "Joy87",        "Joy88",      //
+	"Joy89",       "Joy90",      "Joy91",        "Joy92",      //
+	"Joy93",       "Joy94",      "Joy95",        "Joy96",      //
+	"Joy97",       "Joy98",      "Joy99",        "Joy100",     //
+	"Joy101",      "Joy102",     "Joy103",       "Joy104",     //
+	"Joy105",      "Joy106",     "Joy107",       "Joy108",     //
+	"Joy109",      "Joy110",     "Joy111",       "Joy112",     //
+	"Joy113",      "Joy114",     "Joy115",       "Joy116",     //
+	"Joy117",      "Joy118",     "Joy119",       "Joy120",     //
+	"Joy121",      "Joy122",     "Joy123",       "Joy124",     //
+	"Joy125",      "Joy126",     "Joy127",       "Joy128",     //
+	"POV1Up",      "POV1Right",  "POV1Down",     "POV1Left",   // First POV hat
+	"POV2Up",      "POV2Right",  "POV2Down",     "POV2Left",   // Second POV hat
+	"POV3Up",      "POV3Right",  "POV3Down",     "POV3Left",   // Third POV hat
+	"POV4Up",      "POV4Right",  "POV4Down",     "POV4Left",   // Fourth POV hat
+	"MWheelUp",    "MWheelDown", "MWheelRight",  "MWheelLeft", // the mouse wheel
+	"Axis1Plus",   "Axis1Minus", "Axis2Plus",    "Axis2Minus", // joystick axiis as buttons
+	"Axis3Plus",   "Axis3Minus", "Axis4Plus",    "Axis4Minus", //
+	"Axis5Plus",   "Axis5Minus", "Axis6Plus",    "Axis6Minus", //
+	"Axis7Plus",   "Axis7Minus", "Axis8Plus",    "Axis8Minus", //
+	"LStickRight", "LStickLeft", "LStickDown",   "LStickUp",   // Gamepad axis-based buttons
+	"RStickRight", "RStickLeft", "RStickDown",   "RStickUp",   //
+	"DPadUp",      "DPadDown",   "DPadLeft",     "DPadRight",  // Gamepad buttons
+	"Pad_Start",   "Pad_Back",   "LThumb",       "RThumb",     //
+	"LShoulder",   "RShoulder",  "LTrigger",     "RTrigger",   //
+	"Pad_A",       "Pad_B",      "Pad_X",        "Pad_Y",      //
+	"Paddle_1",    "Paddle_2",   "Paddle_3",     "Paddle_4",   //
+	"Guide",       "Pad_Misc",   "Pad_Touchpad",               //
 };
 
 FKeyBindings Bindings;
