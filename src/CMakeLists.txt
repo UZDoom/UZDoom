@@ -1310,6 +1310,13 @@ if(BUILD_FLATPAK)
 	target_compile_definitions(zdoom PRIVATE IS_FLATPAK=1)
 endif()
 
+# Set SHARE_DIR to a subdirectory of the cmake install prefix, rather than hardcoding
+if(UNIX AND NOT APPLE)
+  set(SHARE_DIR "\"${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATAROOTDIR}\"")
+  target_compile_definitions(zdoom PRIVATE SHARE_DIR=${SHARE_DIR})
+  message(STATUS "Set SHARE_DIR to ${SHARE_DIR}")
+endif()
+
 if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")
 	# [BL] Solaris requires these to be explicitly linked.
 	set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} nsl socket)
