@@ -1000,6 +1000,17 @@ void GLPPRenderState::CopyToTexture(PPTexture* dst)
 	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+void GLPPRenderState::BindWeaponLayerFB(PPTexture *weapon)
+{
+	PPGLTextureBackend *backend = GetGLTexture(weapon);
+	if (!backend->FB)
+		backend->FB = buffers->CreateFrameBuffer("WeaponLayerFB", backend->Tex);
+	backend->FB.Bind();
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glViewport(screen->mScreenViewport.left, screen->mScreenViewport.top, screen->mScreenViewport.width, screen->mScreenViewport.height);
+}
+
 void GLPPRenderState::PushGroup(const FString &name)
 {
 	FGLDebug::PushGroup(name.GetChars());

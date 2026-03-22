@@ -115,6 +115,7 @@ public:
 	void PopGroup() override;
 	void Draw() override;
 	void CopyToTexture(PPTexture* dst) override;
+	void BindWeaponLayerFB(PPTexture *weapon);
 
 private:
 	PPGLTextureBackend *GetGLTexture(PPTexture *texture);

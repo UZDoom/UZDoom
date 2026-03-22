@@ -945,6 +945,77 @@ void PPCustomShaders::UpdateLastInputTexture(PPRenderState *renderstate)
 	mLastInputTexture->Swap();
 }
 
+bool PPCustomShaders::HasWeaponShaders() const
+{
+	if (!gl_custompost)
+		return false;
+	for (unsigned int i = 0; i < PostProcessShaders.Size(); i++)
+		if (PostProcessShaders[i].Target == FString("weapon") && PostProcessShaders[i].Enabled)
+			return true;
+	return false;
+}
+
+PPTexture *PPCustomShaders::GetWeaponLayerTexture(int width, int height)
+{
+	UpdateWeaponTextures(width, height);
+	return &mWeaponHistory[mWeaponHistoryIndex];
+}
+
+void PPCustomShaders::UpdateWeaponTextures(int width, int height)
+{
+	if (mWeaponTexWidth != width || mWeaponTexHeight != height)
+	{
+		mWeaponTextures[0] = PPTexture(width, height, PixelFormat::Rgba16f);
+		mWeaponTextures[1] = PPTexture(width, height, PixelFormat::Rgba16f);
+		mWeaponHistory[0]  = PPTexture(width, height, PixelFormat::Rgba16f);
+		mWeaponHistory[1]  = PPTexture(width, height, PixelFormat::Rgba16f);
+		mWeaponTexWidth = width;
+		mWeaponTexHeight = height;
+	}
+}
+
+void PPCustomShaders::RunWeapon(PPRenderState *renderstate)
+{
+	if (!gl_custompost)
+		return;
+
+	CreateShaders();
+
+	mWeaponInputPtr = &mWeaponHistory[mWeaponHistoryIndex];
+	mWeaponLastPtr  = &mWeaponHistory[1 - mWeaponHistoryIndex];
+
+	PPTexture *current = mWeaponInputPtr;
+	int pingpong = 0;
+
+	for (auto &shader : mShaders)
+	{
+		if (shader->Desc->Target == FString("weapon") && shader->Desc->Enabled)
+		{
+			shader->RunWithTextures(renderstate, current, &mWeaponTextures[pingpong]);
+			current = &mWeaponTextures[pingpong];
+			pingpong = 1 - pingpong;
+		}
+	}
+
+	// Swap the processed result into the history slot so WeaponLastTexture
+	// next frame holds the shader output rather than the raw weapon render.
+	if (current != &mWeaponHistory[mWeaponHistoryIndex])
+		std::swap(mWeaponHistory[mWeaponHistoryIndex].Backend, current->Backend);
+
+	mWeaponInputPtr = &mWeaponHistory[mWeaponHistoryIndex];
+
+	renderstate->Clear();
+	renderstate->Shader = &mWeaponCompositeShader;
+	renderstate->Viewport = screen->mScreenViewport;
+	renderstate->SetInputCurrent(0, PPFilterMode::Linear);
+	renderstate->SetInputTexture(1, mWeaponInputPtr, PPFilterMode::Linear);
+	renderstate->SetOutputNext();
+	renderstate->SetNoBlend();
+	renderstate->Draw();
+
+	mWeaponHistoryIndex = 1 - mWeaponHistoryIndex;
+}
+
 void PPCustomShaders::CreateShaders()
 {
 	if (mShaders.size() == PostProcessShaders.Size())
@@ -954,13 +1025,14 @@ void PPCustomShaders::CreateShaders()
 
 	for (unsigned int i = 0; i < PostProcessShaders.Size(); i++)
 	{
-		mShaders.push_back(std::make_unique<PPCustomShaderInstance>(&PostProcessShaders[i], &mLastInputTexture));
+		mShaders.push_back(std::make_unique<PPCustomShaderInstance>(&PostProcessShaders[i], &mLastInputTexture, &mWeaponInputPtr, &mWeaponLastPtr));
 	}
 }
 
 /////////////////////////////////////////////////////////////////////////////
 
-PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture) : Desc(desc), LastInputTexture(lastInputTexture)
+PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture, PPTexture **weaponInputTexture, PPTexture **weaponLastTexture)
+	: Desc(desc), LastInputTexture(lastInputTexture), WeaponInputTexture(weaponInputTexture), WeaponLastTexture(weaponLastTexture)
 {
 	// Build an uniform block to be used as input
 	TMap<FString, PostProcessUniformValue>::Iterator it(Desc->Uniforms);
@@ -1008,8 +1080,12 @@ PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::uni
 		pipelineInOut += "out vec4 FragColor;\n";
 	}
 
-	LastInputTextureBinding = binding;
+	LastInputTextureBinding = binding++;
 	uniformTextures.AppendFormat("layout(binding=%d) uniform sampler2D LastInputTexture;\n", LastInputTextureBinding);
+	WeaponInputTextureBinding = binding++;
+	uniformTextures.AppendFormat("layout(binding=%d) uniform sampler2D WeaponTexture;\n", WeaponInputTextureBinding);
+	WeaponLastTextureBinding = binding++;
+	uniformTextures.AppendFormat("layout(binding=%d) uniform sampler2D WeaponLastTexture;\n", WeaponLastTextureBinding);
 
 	FString prolog;
 	prolog += uniformTextures;
@@ -1031,6 +1107,28 @@ void PPCustomShaderInstance::Run(PPRenderState *renderstate)
 	//renderstate->SetDebugName(Desc->ShaderLumpName.GetChars());
 
 	SetTextures(renderstate);
+	SetUniforms(renderstate);
+
+	renderstate->Draw();
+
+	renderstate->PopGroup();
+}
+
+void PPCustomShaderInstance::RunWithTextures(PPRenderState *renderstate, PPTexture *in, PPTexture *out)
+{
+	renderstate->PushGroup(Desc->Name);
+
+	renderstate->Clear();
+	renderstate->Shader = &Shader;
+	renderstate->Viewport = screen->mScreenViewport;
+	renderstate->SetNoBlend();
+	renderstate->SetOutputTexture(out);
+
+	SetTextures(renderstate);
+	// Override WeaponTexture with the ping-pong input so each chained shader
+	// processes the previous shader's output rather than the original render.
+	if (WeaponInputTextureBinding >= 0)
+		renderstate->SetInputTexture(WeaponInputTextureBinding, in, PPFilterMode::Linear);
 	SetUniforms(renderstate);
 
 	renderstate->Draw();
@@ -1087,10 +1185,14 @@ void PPCustomShaderInstance::SetTextures(PPRenderState *renderstate)
 	{
 		auto texture = (*LastInputTexture)->GetRead();
 		if (texture->Backend)
-		{
 			renderstate->SetInputTexture(LastInputTextureBinding, texture, PPFilterMode::Linear, PPWrapMode::Clamp);
-		}
 	}
+
+	if (WeaponInputTexture && *WeaponInputTexture && WeaponInputTextureBinding >= 0 && (*WeaponInputTexture)->Backend)
+		renderstate->SetInputTexture(WeaponInputTextureBinding, *WeaponInputTexture, PPFilterMode::Linear, PPWrapMode::Clamp);
+
+	if (WeaponLastTexture && *WeaponLastTexture && WeaponLastTextureBinding >= 0 && (*WeaponLastTexture)->Backend)
+		renderstate->SetInputTexture(WeaponLastTextureBinding, *WeaponLastTexture, PPFilterMode::Linear, PPWrapMode::Clamp);
 }
 
 void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)

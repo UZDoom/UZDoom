@@ -1524,6 +1524,7 @@ class GLDefsParser
 			if (sc.Compare("beforebloom")) validTarget = true;
 			if (sc.Compare("scene")) validTarget = true;
 			if (sc.Compare("screen")) validTarget = true;
+			if (sc.Compare("weapon")) validTarget = true;
 			if (!validTarget)
 				sc.ScriptError("Invalid target '%s' for postprocess shader",sc.String);
 

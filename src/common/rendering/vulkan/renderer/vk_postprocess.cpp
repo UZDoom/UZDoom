@@ -102,8 +102,47 @@ void VkPostprocess::PostProcessScene(int fixedcm, float flash, const std::functi
 	AutomaticUniformsBuffer->Unmap();
 
 	hw_postprocess.Pass1(&renderstate, fixedcm, sceneWidth, sceneHeight);
-	SetActiveRenderTarget();
-	afterBloomDrawEndScene2D();
+	if (hw_postprocess.customShaders.HasWeaponShaders())
+	{
+		auto buffers = fb->GetBuffers();
+		int bufferWidth = buffers->GetWidth();
+		int bufferHeight = buffers->GetHeight();
+		auto *weaponTex = hw_postprocess.customShaders.GetWeaponLayerTexture(bufferWidth, bufferHeight);
+
+		if (!weaponTex->Backend)
+			weaponTex->Backend = std::make_unique<VkPPTexture>(fb, weaponTex);
+		auto *weaponBackend = static_cast<VkPPTexture*>(weaponTex->Backend.get());
+
+		auto cmdbuffer = fb->GetCommands()->GetDrawCommands();
+		bool undefinedLayout = (weaponBackend->TexImage.Layout == VK_IMAGE_LAYOUT_UNDEFINED);
+		VkImageTransition()
+			.AddImage(&weaponBackend->TexImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, undefinedLayout)
+			.Execute(cmdbuffer);
+
+		VkClearColorValue clearColor = {};
+		VkImageSubresourceRange range = { VK_IMAGE_ASPECT_COLOR_BIT, 0, 1, 0, 1 };
+		cmdbuffer->clearColorImage(weaponBackend->TexImage.Image->image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, &clearColor, 1, &range);
+
+		VkImageTransition()
+			.AddImage(&weaponBackend->TexImage, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, false)
+			.AddImage(&buffers->PipelineDepthStencil, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, false)
+			.Execute(cmdbuffer);
+
+		fb->GetRenderState()->SetRenderTarget(&weaponBackend->TexImage, buffers->PipelineDepthStencil.View.get(), bufferWidth, bufferHeight, VK_FORMAT_R16G16B16A16_SFLOAT, VK_SAMPLE_COUNT_1_BIT);
+		afterBloomDrawEndScene2D();
+
+		fb->GetRenderState()->EndRenderPass();
+		VkImageTransition()
+			.AddImage(&weaponBackend->TexImage, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, false)
+			.Execute(fb->GetCommands()->GetDrawCommands());
+
+		hw_postprocess.customShaders.RunWeapon(&renderstate);
+	}
+	else
+	{
+		SetActiveRenderTarget();
+		afterBloomDrawEndScene2D();
+	}
 	hw_postprocess.Pass2(&renderstate, fixedcm, flash, sceneWidth, sceneHeight);
 }
 

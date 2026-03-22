@@ -68,8 +68,18 @@ void FGLRenderer::PostProcessScene(int fixedcm, float flash, const std::function
 	renderstate.TimeGame = static_cast<float>(primaryLevel->LocalWorldTimer / (double)GameTicRate);
 
 	hw_postprocess.Pass1(&renderstate, fixedcm, sceneWidth, sceneHeight);
-	mBuffers->BindCurrentFB();
-	if (afterBloomDrawEndScene2D) afterBloomDrawEndScene2D();
+	if (hw_postprocess.customShaders.HasWeaponShaders())
+	{
+		auto *weaponTex = hw_postprocess.customShaders.GetWeaponLayerTexture(mBuffers->GetWidth(), mBuffers->GetHeight());
+		renderstate.BindWeaponLayerFB(weaponTex);
+		if (afterBloomDrawEndScene2D) afterBloomDrawEndScene2D();
+		hw_postprocess.customShaders.RunWeapon(&renderstate);
+	}
+	else
+	{
+		mBuffers->BindCurrentFB();
+		if (afterBloomDrawEndScene2D) afterBloomDrawEndScene2D();
+	}
 	hw_postprocess.Pass2(&renderstate, fixedcm, flash, sceneWidth, sceneHeight);
 }
 
