@@ -210,6 +210,17 @@ void VulkanRenderDevice::InitializeState()
 #endif
 }
 
+void VulkanRenderDevice::FlushGameUI()
+{
+	if (!hw_postprocess.customShaders.HasUIShaders()) return;
+	if (!GetPostprocess()->mSceneRenderedThisFrame) return;
+
+	GetPostprocess()->RunUIPostProcess([this]() { ::Draw2D(twod, *mRenderState); twod->Clear(); });
+	mRenderState->EndRenderPass();
+	twod->OnFrameDone();
+	twod->Begin(GetWidth(), GetHeight());
+}
+
 void VulkanRenderDevice::Update()
 {
 	twoD.Reset();
@@ -217,10 +228,16 @@ void VulkanRenderDevice::Update()
 
 	Flush3D.Clock();
 
-	GetPostprocess()->SetActiveRenderTarget();
-
-	Draw2D();
-	twod->Clear();
+	if (hw_postprocess.customShaders.HasUIShaders() && GetPostprocess()->mSceneRenderedThisFrame)
+	{
+		GetPostprocess()->RunUIPostProcess([this]() { ::Draw2D(twod, *mRenderState); twod->Clear(); });
+	}
+	else
+	{
+		GetPostprocess()->SetActiveRenderTarget();
+		Draw2D();
+		twod->Clear();
+	}
 
 	mRenderState->EndRenderPass();
 	mRenderState->EndFrame();

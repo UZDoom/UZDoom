@@ -1373,6 +1373,7 @@ void D_Display ()
 	{
 		if (wipestart != nullptr) wipestart->DecRef();
 		wipestart = nullptr;
+		screen->FlushGameUI();
 		DrawOverlays();
 		End2DAndUpdate ();
 	}

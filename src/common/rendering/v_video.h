@@ -277,6 +277,8 @@ public:
 
 	virtual void Draw2D() {}
 
+	virtual void FlushGameUI() {}
+
 	virtual void SetViewportRects(IntRect *bounds);
 	int ScreenToWindowX(int x);
 	int ScreenToWindowY(int y);

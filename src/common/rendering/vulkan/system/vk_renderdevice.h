@@ -74,6 +74,7 @@ public:
 	bool IsVulkan() override { return true; }
 
 	void Update() override;
+	void FlushGameUI() override;
 
 	void InitializeState() override;
 	bool CompileNextShader() override;

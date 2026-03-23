@@ -1011,6 +1011,17 @@ void GLPPRenderState::BindWeaponLayerFB(PPTexture *weapon)
 	glViewport(screen->mScreenViewport.left, screen->mScreenViewport.top, screen->mScreenViewport.width, screen->mScreenViewport.height);
 }
 
+void GLPPRenderState::BindUILayerFB(PPTexture *ui)
+{
+	PPGLTextureBackend *backend = GetGLTexture(ui);
+	if (!backend->FB)
+		backend->FB = buffers->CreateFrameBuffer("UILayerFB", backend->Tex);
+	backend->FB.Bind();
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glViewport(screen->mScreenViewport.left, screen->mScreenViewport.top, screen->mScreenViewport.width, screen->mScreenViewport.height);
+}
+
 void GLPPRenderState::PushGroup(const FString &name)
 {
 	FGLDebug::PushGroup(name.GetChars());

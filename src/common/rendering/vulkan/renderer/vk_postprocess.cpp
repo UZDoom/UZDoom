@@ -102,7 +102,7 @@ void VkPostprocess::PostProcessScene(int fixedcm, float flash, const std::functi
 	AutomaticUniformsBuffer->Unmap();
 
 	hw_postprocess.Pass1(&renderstate, fixedcm, sceneWidth, sceneHeight);
-	if (hw_postprocess.customShaders.HasWeaponShaders())
+	if (hw_postprocess.customShaders.HasWeaponShaders() || hw_postprocess.customShaders.HasUIShaders())
 	{
 		auto buffers = fb->GetBuffers();
 		int bufferWidth = buffers->GetWidth();
@@ -144,6 +144,49 @@ void VkPostprocess::PostProcessScene(int fixedcm, float flash, const std::functi
 		afterBloomDrawEndScene2D();
 	}
 	hw_postprocess.Pass2(&renderstate, fixedcm, flash, sceneWidth, sceneHeight);
+	mSceneRenderedThisFrame = true;
+}
+
+void VkPostprocess::RunUIPostProcess(const std::function<void()> &draw2D)
+{
+	mSceneRenderedThisFrame = false;
+	auto buffers = fb->GetBuffers();
+	int bufferWidth = buffers->GetWidth();
+	int bufferHeight = buffers->GetHeight();
+	auto *uiTex = hw_postprocess.customShaders.GetUILayerTexture(bufferWidth, bufferHeight);
+
+	if (!uiTex->Backend)
+		uiTex->Backend = std::make_unique<VkPPTexture>(fb, uiTex);
+	auto *uiBackend = static_cast<VkPPTexture*>(uiTex->Backend.get());
+
+	auto cmdbuffer = fb->GetCommands()->GetDrawCommands();
+	bool undefinedLayout = (uiBackend->TexImage.Layout == VK_IMAGE_LAYOUT_UNDEFINED);
+	VkImageTransition()
+		.AddImage(&uiBackend->TexImage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, undefinedLayout)
+		.Execute(cmdbuffer);
+
+	VkClearColorValue clearColor = {};
+	VkImageSubresourceRange range = { VK_IMAGE_ASPECT_COLOR_BIT, 0, 1, 0, 1 };
+	cmdbuffer->clearColorImage(uiBackend->TexImage.Image->image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, &clearColor, 1, &range);
+
+	VkImageTransition()
+		.AddImage(&uiBackend->TexImage, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, false)
+		.Execute(cmdbuffer);
+
+	fb->GetRenderState()->SetRenderTarget(&uiBackend->TexImage, nullptr, bufferWidth, bufferHeight, VK_FORMAT_R16G16B16A16_SFLOAT, VK_SAMPLE_COUNT_1_BIT);
+	draw2D();
+
+	fb->GetRenderState()->EndRenderPass();
+	VkImageTransition()
+		.AddImage(&uiBackend->TexImage, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, false)
+		.Execute(fb->GetCommands()->GetDrawCommands());
+
+	VkPPRenderState renderstate(fb);
+	renderstate.TimeDelta = static_cast<float>(GetDeltaTime());
+	renderstate.Time = static_cast<float>(fb->FrameTime / 1000.0);
+	renderstate.TimeGame = static_cast<float>(primaryLevel->LocalWorldTimer / (double)GameTicRate);
+
+	hw_postprocess.customShaders.RunUI(&renderstate);
 }
 
 void VkPostprocess::BlitSceneToPostprocess()

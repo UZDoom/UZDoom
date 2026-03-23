@@ -830,10 +830,11 @@ private:
 class PPCustomShaderInstance
 {
 public:
-	PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture, PPTexture **weaponInputTexture, PPTexture **weaponLastTexture);
+	PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture, PPTexture **weaponInputTexture, PPTexture **weaponLastTexture, PPTexture **uiInputTexture, PPTexture **uiLastTexture);
 
 	void Run(PPRenderState *renderstate);
 	void RunWithTextures(PPRenderState *renderstate, PPTexture *in, PPTexture *out);
+	void RunWithUITextures(PPRenderState *renderstate, PPTexture *in, PPTexture *out);
 
 	PostProcessShader *Desc = nullptr;
 
@@ -856,6 +857,11 @@ private:
 	int WeaponInputTextureBinding = -1;
 	PPTexture **WeaponLastTexture;
 	int WeaponLastTextureBinding = -1;
+
+	PPTexture **UIInputTexture;
+	int UIInputTextureBinding = -1;
+	PPTexture **UILastTexture;
+	int UILastTextureBinding = -1;
 };
 
 class PPCustomShaders
@@ -868,9 +874,14 @@ public:
 	PPTexture *GetWeaponLayerTexture(int width, int height);
 	void RunWeapon(PPRenderState *renderstate);
 
+	bool HasUIShaders() const;
+	PPTexture *GetUILayerTexture(int width, int height);
+	void RunUI(PPRenderState *renderstate);
+
 private:
 	void CreateShaders();
 	void UpdateWeaponTextures(int width, int height);
+	void UpdateUITextures(int width, int height);
 
 	std::vector<std::unique_ptr<PPCustomShaderInstance>> mShaders;
 	std::unique_ptr<PPPersistentBuffer> mLastInputTexture;
@@ -885,6 +896,15 @@ private:
 	int mWeaponTexWidth = 0;
 	int mWeaponTexHeight = 0;
 	PPShader mWeaponCompositeShader = { "shaders/pp/weaponlayer.fp", "", {} };
+
+	PPTexture mUITextures[2];
+	PPTexture mUIHistory[2];
+	int mUIHistoryIndex = 0;
+	PPTexture *mUIInputPtr = nullptr;
+	PPTexture *mUILastPtr = nullptr;
+	int mUITexWidth = 0;
+	int mUITexHeight = 0;
+	PPShader mUICompositeShader = { "shaders/pp/uilayer.fp", "", {} };
 };
 
 class PPShadowMap
