@@ -517,6 +517,12 @@ void PerformWipe(FTexture* startimg, FTexture* endimg, int wipe_type, bool stops
 	auto starttex = MakeGameTexture(startimg, nullptr, ETextureType::SWCanvas);
 	auto endtex = MakeGameTexture(endimg, nullptr, ETextureType::SWCanvas);
 	auto wiper = Wiper::Create(wipe_type);
+	if (!wiper)
+	{
+		I_FreezeTime(false);
+		GSnd->SetSfxPaused(false, 1);
+		return;
+	}
 	wiper->SetTextures(starttex, endtex);
 
 	wipestart = I_msTime();

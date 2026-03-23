@@ -466,7 +466,10 @@ CUSTOM_CVAR (Int, fraglimit, 0, CVAR_SERVERINFO)
 }
 
 CVAR (Float, timelimit, 0.f, CVAR_SERVERINFO);
-CVAR (Int, wipetype, 1, CVAR_ARCHIVE);
+CUSTOM_CVAR (Int, wipetype, 1, CVAR_ARCHIVE)
+{
+	if (self < wipe_None || self >= wipe_NUMWIPES) self = wipe_Melt;
+}
 CVAR (Int, snd_drawoutput, 0, 0);
 CUSTOM_CVAR (String, vid_cursor, "None", CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
