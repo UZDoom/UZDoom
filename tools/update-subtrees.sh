@@ -20,6 +20,8 @@ pull() {
 
 	[[ -z ${1} ]] || ref=${1}
 	shift
+	[[ -z ${1} ]] || repo=${1}
+	shift
 
 	git -C $GITROOT subtree pull --prefix="${dest}" "${repo}" "${ref}" \
 		--squash --message "Update ${dest} to ${ref}" || exit
