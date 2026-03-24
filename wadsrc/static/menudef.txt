@@ -383,6 +383,7 @@ OptionMenu "OptionsMenu" protected
 	
 	Command "$OPTMNU_CONSOLE",			"menuconsole"
 	Command "$OPTMNU_OPENCONFIG",		"openconfig"
+	Command "$OPTMNU_OPENWADS",			"openwads"
 	Command "$OPTMNU_OPENSCREENSHOTS",	"openscreenshots"
 	Command "$OPTMNU_OPENSAVES",		"opensaves"
 }

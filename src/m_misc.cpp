@@ -307,10 +307,15 @@ UNSAFE_CCMD (writeini)
 	}
 }
 
-CCMD(openconfig)
+void M_OpenConfigDir()
 {
 	M_SaveDefaults(nullptr);
 	I_OpenShellFolder(ExtractFilePath(GameConfig->GetPathName()).GetChars());
+}
+
+CCMD(openconfig)
+{
+	M_OpenConfigDir();
 }
 
 //
@@ -697,3 +702,24 @@ DEFINE_ACTION_FUNCTION_NATIVE(_CVar, SaveConfig, SaveConfig)
 	ACTION_RETURN_INT(M_SaveDefaults(nullptr));
 }
 
+void M_OpenWadDir()
+{
+	size_t dirlen;
+	FString autoname = M_GetAppDataPath(true);
+	dirlen = autoname.Len();
+	if (dirlen > 0)
+	{
+		if (autoname[dirlen-1] != '/' && autoname[dirlen-1] != '\\')
+		{
+			autoname += '/';
+		}
+	}
+	autoname = NicePath(autoname.GetChars());
+	CreatePath(autoname.GetChars());
+	I_OpenShellFolder(autoname.GetChars());
+}
+
+CCMD(openwads)
+{
+	M_OpenWadDir();
+}

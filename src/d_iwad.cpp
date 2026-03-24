@@ -360,7 +360,7 @@ int FIWadManager::ScanIWAD (const char *iwad)
 
 	mLumpsFound.Resize(mIWadInfos.Size());
 
-	auto CheckFileName = [=](const char *name)
+	auto CheckFileName = [=,this](const char *name)
 	{
 		for (unsigned i = 0; i< mIWadInfos.Size(); i++)
 		{
@@ -795,7 +795,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		gamedir = "~/Library/Application Support/" GAMENAMELOWERCASE "/";
 		cfgfile = "~/Library/Preferences/" GAMENAMELOWERCASE ".ini";
 #else
-		auto gd = FStringf("%s/games/" GAMENAMELOWERCASE, GetDataPath());
+		auto gd = M_GetAppDataPath(true);
 		auto cd = FStringf("%s/" GAMENAMELOWERCASE ".ini", GetConfigPath());
 		gd.Substitute("$HOME/", "~/");
 		cd.Substitute("$HOME/", "~/");
