@@ -53,6 +53,7 @@ jobs:
           git push origin :refs/tags/nightly || true
           git tag nightly
           git push origin nightly
+          sleep 10
 
       - name: Upload
         uses: softprops/action-gh-release@v2 # FIXME: update this
@@ -71,3 +72,4 @@ jobs:
 
             **Version:** `${{ steps.tag.outputs.describe }}`
             **Message:** ${{ github.event.workflow_run.head_commit.message || github.event.head_commit.message }}
+            **Workflow:** [Logs](${{ github.event.workflow_run.html_url }}) - [Artifacts](https://nightly.link/?url=${{ github.event.workflow_run.html_url }})
