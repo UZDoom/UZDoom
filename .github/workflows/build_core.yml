@@ -50,7 +50,7 @@ jobs:
 
     - name: Setup MSYS2
       if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
-      uses: msys2/setup-msys2@v2 # FIXME: update this
+      uses: msys2/setup-msys2@v2
       with:
         msystem: MINGW64
         update: true
@@ -62,19 +62,32 @@ jobs:
       run: |
         mkdir build && cd build
 
-        function attempt() {
-          echo "$*"
+        attempt() (
+          set +e
+          local cmd="$*"
           local delay=10
-          local i
+          local timeout_sec=600
           for i in {1..4}; do
-            # timeout 10m bash -c "$*" && return 0
-            perl -e "alarm 600; exec @ARGV" bash -c "$*" && return 0
+            echo "Running: $cmd"
+            bash -c "$cmd" &
+            local cmd_pid=$!
+
+            ( sleep 600 ; kill -9 "$cmd_pid" 2>&1 ; ) &
+            local watchdog_pid=$!
+
+            wait "$cmd_pid" 2>&1
+            local exit_code=$?
+
+            kill "$watchdog_pid" 2>&1
+            wait "$watchdog_pid" 2>&1
+
+            [ $exit_code -eq 0 ] && return 0
             echo "Attempt $i failed. Retrying in ${delay}s" >&2
             sleep "${delay}"
             ((delay*=3))
           done
           return 1
-        }
+        )
 
         files=( $EXTRA_FILES )
         for ((i=2;i<=${#files[@]};i+=3)); do
