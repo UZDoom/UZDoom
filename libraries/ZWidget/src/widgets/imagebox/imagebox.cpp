@@ -5,7 +5,7 @@ ImageBox::ImageBox(Widget* parent) : Widget(parent)
 {
 }
 
-double ImageBox::GetPreferredWidth() const
+double ImageBox::GetPreferredWidth()
 {
 	if (image)
 		return (double)image->GetWidth();
@@ -13,7 +13,7 @@ double ImageBox::GetPreferredWidth() const
 		return 0.0;
 }
 
-double ImageBox::GetPreferredHeight() const
+double ImageBox::GetPreferredHeight()
 {
 	if (image)
 		return (double)image->GetHeight();

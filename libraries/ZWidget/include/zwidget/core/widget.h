@@ -13,6 +13,7 @@
 class Canvas;
 class Timer;
 class Dropdown;
+class PushButton;
 
 enum class WidgetType
 {
@@ -166,6 +167,8 @@ public:
 	void* GetNativeHandle();
 	int GetNativePixelWidth();
 	int GetNativePixelHeight();
+	virtual double GetPreferredWidth();
+	virtual double GetPreferredHeight();
 
 	// Vulkan support:
 	std::vector<std::string> GetVulkanInstanceExtensions() { return Window()->DispWindow->GetVulkanInstanceExtensions(); }
@@ -259,4 +262,5 @@ private:
 	friend class OpenFolderDialog;
 	friend class SaveFileDialog;
 	friend class Dropdown;
+	friend class PushButton;
 };
