@@ -103,12 +103,14 @@ void AboutPage::OnGeometryChanged()
 	double y = 0.0;
 	double w = GetWidth();
 	double h = GetHeight();
+	double tw, th;
 
-	Text->SetFrameGeometry(0.0, y, w, h - Notes->GetPreferredHeight() - 8.0);
-	y += h - Notes->GetPreferredHeight();
+	th = Notes->GetPreferredHeight();
+	tw = Notes->GetPreferredWidth();
+	Text->SetFrameGeometry(0.0, y, w, h - th - 8.0);
+	y += h - th;
 
-	// [Marcus] TODO: add PushButton.GetPreferredWidth()
-	Notes->SetFrameGeometry(round(w/2) - 100.0, y, 200.0, Notes->GetPreferredHeight());
+	Notes->SetFrameGeometry(round((w-tw)/2), y, tw, th);
 	y += h;
 
 	Launcher->UpdatePlayButton();

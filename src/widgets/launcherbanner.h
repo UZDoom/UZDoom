@@ -27,7 +27,7 @@ class LauncherBanner : public Widget
 public:
 	LauncherBanner(Widget* parent);
 
-	double GetPreferredHeight() const;
+	double GetPreferredHeight() override;
 
 private:
 	void OnGeometryChanged() override;

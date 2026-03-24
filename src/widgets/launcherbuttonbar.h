@@ -28,7 +28,7 @@ public:
 	LauncherButtonbar(LauncherWindow* parent);
 	void UpdateLanguage();
 
-	double GetPreferredHeight() const;
+	double GetPreferredHeight() override;
 
 private:
 	void OnGeometryChanged() override;
