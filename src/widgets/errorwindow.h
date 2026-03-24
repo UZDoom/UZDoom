@@ -48,6 +48,8 @@ private:
 	PushButton* ClipboardButton = nullptr;
 	PushButton* RestartButton = nullptr;
 	PushButton* SaveReportButton = nullptr;
+	PushButton* ConfigDirButton = nullptr;
+	PushButton* WadDirButton = nullptr;
 
 	std::vector<uint8_t> minidump;
 	std::string clipboardtext;

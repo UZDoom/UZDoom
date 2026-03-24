@@ -23,6 +23,7 @@
 
 #include "errorwindow.h"
 #include "gstrings.h"
+#include "m_misc.h"
 #include "printf.h"
 #include "utf8.h"
 #include "v_font.h"
@@ -53,6 +54,13 @@ ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, Wi
 	ClipboardButton = new PushButton(this);
 	ClipboardButton->OnClick = [=,this]() { OnClipboardButtonClicked(); };
 	ClipboardButton->SetText(GStrings.GetString("ACTION_COPYTOCLIPBOARD"));
+
+	WadDirButton = new PushButton(this);
+	WadDirButton->OnClick = [=]() { M_OpenWadDir(); };
+	WadDirButton->SetText(GStrings.GetString("ACTION_OPENWADDIR"));
+	ConfigDirButton = new PushButton(this);
+	ConfigDirButton->OnClick = [=]() { M_OpenConfigDir(); };
+	ConfigDirButton->SetText(GStrings.GetString("ACTION_OPENCONFIGDIR"));
 
 	if (minidump.empty())
 	{
@@ -158,11 +166,13 @@ void ErrorWindow::OnGeometryChanged()
 	{
 		if (!button) return;
 		auto w = button->GetPreferredWidth();
-		x -= 20.0 + w;
-		button->SetFrameGeometry(x, y, w, button->GetPreferredHeight());
+		x -= 10.0 + w;
+		button->SetFrameGeometry(x - 10, y, w, button->GetPreferredHeight());
 	};
 	rButton(RestartButton);
 	rButton(SaveReportButton);
+	rButton(ConfigDirButton);
+	rButton(WadDirButton);
 	y -= 20.0;
 
 	LogView->SetFrameGeometry(Rect::xywh(0.0, 0.0, w, y));
