@@ -33,12 +33,19 @@ enum ENamedName
 {
 #define xx(n) NAME_##n,
 #define xy(n, s) NAME_##n,
+#define xa(a, n)
 #include "namedef.h"
-#if __has_include("namedef_custom.h")
-	#include "namedef_custom.h"
-#endif
 #undef xx
 #undef xy
+#undef xa
+
+#define xx(n)
+#define xy(n, s)
+#define xa(a, n) NAME_##a = NAME_##n,
+#include "namedef.h"
+#undef xx
+#undef xy
+#undef xa
 };
 
 class FString;
@@ -103,7 +110,8 @@ protected:
 		int FindName (const char *text, size_t textlen, bool noCreate);
 		int FindName (const std::string_view str, bool noCreate);
 	private:
-		NameManager(std::initializer_list<const char*> predefinedNames);
+		template<size_t N>
+		NameManager(const char* const (&predefinedNames)[N]);
 	};
 };
 

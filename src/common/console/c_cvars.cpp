@@ -162,6 +162,7 @@ FBaseCVar::FBaseCVar (const char *var_name, uint32_t flags, void *callback, cons
 	m_Callback = callback;
 	Flags = 0;
 	VarName = "";
+	VarFName = "";
 	Description = descr;
 
 	FBaseCVar* var = nullptr;
@@ -170,6 +171,7 @@ FBaseCVar::FBaseCVar (const char *var_name, uint32_t flags, void *callback, cons
 		var = FindCVar(var_name, NULL);
 		C_AddTabCommand (var_name);
 		VarName = var_name;
+		VarFName = var_name;
 		cvarMap.Insert(var_name, this);
 	}
 

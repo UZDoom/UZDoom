@@ -39,7 +39,7 @@ BoneBuffer::BoneBuffer(int pipelineNbr) : mPipelineNbr(pipelineNbr)
 	{
 		mBufferType = false;
 		mBlockSize = screen->maxuniformblock / BONE_SIZE;
-		mBlockAlign = screen->uniformblockalignment < 64 ? 1 : screen->uniformblockalignment / BONE_SIZE;
+		mBlockAlign = screen->uniformblockalignment < BONE_SIZE ? 1 : screen->uniformblockalignment / BONE_SIZE;
 		mMaxUploadSize = (mBlockSize - mBlockAlign);
 	}
 

@@ -149,6 +149,8 @@ public:
 	virtual ~FBaseCVar ();
 
 	inline const char *GetName () const { return VarName.GetChars(); }
+	inline size_t GetNameLen () const { return VarName.Len(); }
+	inline FName GetFName () const { return VarFName; }
 	inline uint32_t GetFlags () const { return Flags; }
 
 	void CmdSet (const char *newval);
@@ -237,6 +239,7 @@ protected:
 	static UCVarValue FromString (const char *value, ECVarType type);
 
 	FString VarName;
+	FName VarFName;
 	FString SafeValue;
 	FString Description;
 	FString ToggleMessages[2];

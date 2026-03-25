@@ -267,7 +267,7 @@ private:
 			right += left;
 			bottom += top;
 
-			if (left >= 0 && right < 320 && top >= 0 && bottom < 200)
+			if (left >= 0 && right < backwidth && top >= 0 && bottom < backheight)
 			{
 				DrawTexture(twod, tex, lnodes[n].x, lnodes[n].y, DTA_FullscreenScale, FSMode_ScaleToFit43, DTA_VirtualWidthF, backwidth, DTA_VirtualHeightF, backheight, TAG_DONE);
 				break;

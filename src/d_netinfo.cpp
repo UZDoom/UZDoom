@@ -402,7 +402,7 @@ void D_SetupUserInfo ()
 		if ((cvar->GetFlags() & (CVAR_USERINFO|CVAR_IGNORE)) == CVAR_USERINFO)
 		{
 			FBaseCVar **newcvar;
-			FName cvarname(cvar->GetName());
+			FName cvarname = cvar->GetFName();
 
 			switch (cvarname.GetIndex())
 			{
@@ -443,7 +443,7 @@ void userinfo_t::Reset(int pnum)
 		if ((cvar->GetFlags() & (CVAR_USERINFO|CVAR_IGNORE)) == CVAR_USERINFO)
 		{
 			ECVarType type;
-			FName cvarname(cvar->GetName());
+			FName cvarname = cvar->GetFName();
 			FBaseCVar *newcvar;
 
 			// Some cvars have different types for their shadow copies.
@@ -562,7 +562,7 @@ void D_UserInfoChanged (FBaseCVar *cvar)
 
 	val = cvar->GetGenericRep (CVAR_String);
 	escaped_val = D_EscapeUserInfo(val.String);
-	if (4 + strlen(cvar->GetName()) + escaped_val.Len() > 256)
+	if (4 + cvar->GetNameLen() + escaped_val.Len() > 256)
 		I_Error ("User info descriptor too big");
 
 	mysnprintf (foo, countof(foo), "\\%s\\%s", cvar->GetName(), escaped_val.GetChars());
@@ -659,7 +659,7 @@ bool D_SendServerInfoChange (FBaseCVar *cvar, UCVarValue value, ECVarType type)
 		}
 		size_t namelen;
 
-		namelen = strlen(cvar->GetName());
+		namelen = cvar->GetNameLen();
 
 		Net_WriteInt8(DEM_SINFCHANGED);
 		Net_WriteInt8((uint8_t)(namelen | (type << 6)));
@@ -690,7 +690,7 @@ bool D_SendServerFlagChange (FBaseCVar *cvar, int bitnum, bool set, bool silent)
 			return true;
 		}
 
-		int namelen = (int)strlen(cvar->GetName());
+		int namelen = (int)cvar->GetNameLen();
 
 		Net_WriteInt8(DEM_SINFCHANGEDXOR);
 		Net_WriteInt8((uint8_t)namelen);

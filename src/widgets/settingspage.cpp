@@ -107,8 +107,7 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 						FString iso = sc.String;
 						sc.MustGetStringName(",");
 						sc.MustGetString();
-						if(iso.CompareNoCase("auto"))
-							languages.push_back(std::make_pair(iso, FString(sc.String)));
+						languages.push_back(std::make_pair(iso, FString(sc.String)));
 					}
 				}
 			}
@@ -182,6 +181,8 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 
 void SettingsPage::UpdateLanguage()
 {
+	GetCanvas()->setLanguage(GStrings.GetLangName().GetChars());
+
 	LangLabel->SetText(GStrings.GetString("OPTMNU_LANGUAGE"));
 	LoadLabel->SetText(GStrings.GetString("PICKER_FILELOADING"));
 	GeneralLabel->SetText(GStrings.GetString("PICKER_GENERAL"));
@@ -193,6 +194,13 @@ void SettingsPage::UpdateLanguage()
 	BrightmapsCheckbox->SetText(GStrings.GetString("PICKER_BRIGHTMAPS"));
 	WidescreenCheckbox->SetText(GStrings.GetString("PICKER_WIDESCREEN"));
 	SupportWadsCheckbox->SetText(GStrings.GetString("PICKER_SUPPORTWADS"));
+	{
+		int opts = sizeof(FILELOAD_OPTS) / sizeof(FILELOAD_OPTS[0]);
+		for (int i = 0; i < opts; i++)
+		{
+			LoadList->UpdateItem(GStrings.GetString(FILELOAD_OPTS[i].string), i);
+		}
+	}
 
 #ifdef RENDER_BACKENDS
 	BackendLabel->SetText(GStrings.GetString("PICKER_PREFERBACKEND"));
@@ -206,6 +214,7 @@ void SettingsPage::OnLanguageChanged(int i)
 {
 	GStrings.UpdateLanguage(languages[i].first.GetChars());
 	UpdateLanguage();
+	OnGeometryChanged();
 	Update();
 	Launcher->UpdateLanguage();
 }

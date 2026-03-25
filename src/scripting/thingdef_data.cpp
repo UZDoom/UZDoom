@@ -660,7 +660,7 @@ void InitImports();
 struct UserInfoCVarNamePlayer
 {
 	FBaseCVar** addr;
-	FString name;
+	FName name;
 	int pnum;
 };
 
@@ -871,7 +871,7 @@ void InitThingdef()
 				}
 				else
 				{
-					FString name = self->GetName();
+					FName name = self->GetFName();
 					arc("name", name);
 				}
 
@@ -882,7 +882,7 @@ void InitThingdef()
 		{
 			FBaseCVar ** self = (FBaseCVar**)addr;
 
-			FString name;
+			FName name;
 			arc.BeginObject(key);
 
 			arc("name", name);

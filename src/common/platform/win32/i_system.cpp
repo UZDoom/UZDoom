@@ -65,6 +65,7 @@
 #include "cmdlib.h"
 #include "i_interface.h"
 #include "i_mainwindow.h"
+#include "stringtable.h"
 
 #include "widgets/launcherwindow.h"
 
@@ -823,3 +824,14 @@ void I_OpenShellFolder(const char* infolder)
 	}
 }
 
+FString FStringTable::GetSystemLocale()
+{
+	wchar_t LocaleName[LOCALE_NAME_MAX_LENGTH];
+
+	if (GetUserDefaultLocaleName(LocaleName, LOCALE_NAME_MAX_LENGTH) > 0)
+	{
+		return FString(LocaleName);
+	}
+
+	return "en-US";
+}
