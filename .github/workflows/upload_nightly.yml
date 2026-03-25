@@ -53,10 +53,9 @@ jobs:
           git push origin :refs/tags/nightly || true
           git tag nightly
           git push origin nightly
-          sleep 10
 
       - name: Upload
-        uses: softprops/action-gh-release@v2 # FIXME: update this
+        uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
         with:
           name: UZDoom Nightly
           tag_name: nightly
