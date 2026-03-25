@@ -188,7 +188,7 @@ namespace swrenderer
 		sector_t tempsec;
 		const sector_t* lightsector = Thread->OpaquePass->FakeFlat(frontsector, &tempsec, nullptr, nullptr, nullptr, 0, 0, 0, 0);
 
-		fixed_t alpha = FLOAT2FIXED((float)min(curline->linedef->alpha, 1.));
+		fixed_t alpha = FLOAT2FIXED((float)min(curline->sidedef->HasAlpha() ? curline->sidedef->alpha : curline->linedef->alpha, 1.));
 		bool additive = (curline->linedef->flags & ML_ADDTRANS) != 0;
 
 		RenderWallPart renderWallpart(Thread);

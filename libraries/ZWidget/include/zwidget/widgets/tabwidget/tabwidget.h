@@ -62,7 +62,7 @@ public:
 	int GetCurrentIndex() const;
 	void SetCurrentIndex(int pageIndex);
 
-	double GetPreferredHeight() const { return 30.0; }
+	double GetPreferredHeight() override { return 30.0; }
 
 	std::function<void()> OnCurrentChanged;
 
@@ -94,7 +94,7 @@ public:
 	void SetIcon(const std::shared_ptr<Image>& icon);
 	void SetCurrent(bool value);
 
-	double GetPreferredWidth() const;
+	double GetPreferredWidth() override;
 
 	std::function<void()> OnClick;
 

@@ -42,8 +42,8 @@ static constexpr size_t FindDuplicates()
 
 	size_t i = 0;
 	std::vector<std::pair<uint32_t, size_t>> hashes = {
-		#define xx(n) { CalcCRC32<tolower>(#n), i++ },
-		#define xy(n, s) { CalcCRC32<tolower>(s), i++ },
+		#define xx(n) { CalcCRC32(#n, tolower), i++ },
+		#define xy(n, s) { CalcCRC32(s, tolower), i++ },
 		#define xa(a, n)
 		#include "namedef.h"
 		#undef xx

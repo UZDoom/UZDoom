@@ -23,6 +23,7 @@
 
 #include "errorwindow.h"
 #include "gstrings.h"
+#include "m_misc.h"
 #include "printf.h"
 #include "utf8.h"
 #include "v_font.h"
@@ -51,19 +52,26 @@ ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, Wi
 
 	LogView = new LogViewer(this);
 	ClipboardButton = new PushButton(this);
-	ClipboardButton->OnClick = [=]() { OnClipboardButtonClicked(); };
+	ClipboardButton->OnClick = [=,this]() { OnClipboardButtonClicked(); };
 	ClipboardButton->SetText(GStrings.GetString("ACTION_COPYTOCLIPBOARD"));
+
+	WadDirButton = new PushButton(this);
+	WadDirButton->OnClick = [=]() { M_OpenWadDir(); };
+	WadDirButton->SetText(GStrings.GetString("ACTION_OPENWADDIR"));
+	ConfigDirButton = new PushButton(this);
+	ConfigDirButton->OnClick = [=]() { M_OpenConfigDir(); };
+	ConfigDirButton->SetText(GStrings.GetString("ACTION_OPENCONFIGDIR"));
 
 	if (minidump.empty())
 	{
 		RestartButton = new PushButton(this);
-		RestartButton->OnClick = [=]() { OnRestartButtonClicked(); };
+		RestartButton->OnClick = [=,this]() { OnRestartButtonClicked(); };
 		RestartButton->SetText(GStrings.GetString("ACTION_RESTART"));
 	}
 	else
 	{
 		SaveReportButton = new PushButton(this);
-		SaveReportButton->OnClick = [=]() { OnSaveReportButtonClicked(); };
+		SaveReportButton->OnClick = [=,this]() { OnSaveReportButtonClicked(); };
 		SaveReportButton->SetText(GStrings.GetString("ERRORMNU_SAVE"));
 	}
 
@@ -150,12 +158,21 @@ void ErrorWindow::OnGeometryChanged()
 	double w = GetWidth();
 	double h = GetHeight();
 
-	double y = GetHeight() - 15.0 - ClipboardButton->GetPreferredHeight();
-	ClipboardButton->SetFrameGeometry(20.0, y, 170.0, ClipboardButton->GetPreferredHeight());
-	if (RestartButton)
-		RestartButton->SetFrameGeometry(GetWidth() - 20.0 - 100.0, y, 100.0, RestartButton->GetPreferredHeight());
-	else if (SaveReportButton)
-		SaveReportButton->SetFrameGeometry(GetWidth() - 20.0 - 100.0, y, 100.0, SaveReportButton->GetPreferredHeight());
+	double x = w;
+	double y = h - 15.0 - ClipboardButton->GetPreferredHeight();
+
+	ClipboardButton->SetFrameGeometry(20.0, y, ClipboardButton->GetPreferredWidth(), ClipboardButton->GetPreferredHeight());
+	auto rButton = [&x, y](PushButton *button)
+	{
+		if (!button) return;
+		auto w = button->GetPreferredWidth();
+		x -= 10.0 + w;
+		button->SetFrameGeometry(x - 10, y, w, button->GetPreferredHeight());
+	};
+	rButton(RestartButton);
+	rButton(SaveReportButton);
+	rButton(ConfigDirButton);
+	rButton(WadDirButton);
 	y -= 20.0;
 
 	LogView->SetFrameGeometry(Rect::xywh(0.0, 0.0, w, y));
@@ -168,7 +185,7 @@ LogViewer::LogViewer(Widget* parent) : Widget(parent)
 	SetNoncontentSizes(8.0, 8.0, 3.0, 8.0);
 
 	scrollbar = new Scrollbar(this);
-	scrollbar->FuncScroll = [=]() { OnScrollbarScroll(); };
+	scrollbar->FuncScroll = [=,this]() { OnScrollbarScroll(); };
 }
 
 void LogViewer::SetText(const std::string& text, const std::string& log)

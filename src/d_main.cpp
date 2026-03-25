@@ -470,7 +470,10 @@ CUSTOM_CVAR (Int, fraglimit, 0, CVAR_SERVERINFO)
 }
 
 CVAR (Float, timelimit, 0.f, CVAR_SERVERINFO);
-CVAR (Int, wipetype, 1, CVAR_ARCHIVE);
+CUSTOM_CVAR (Int, wipetype, 1, CVAR_ARCHIVE)
+{
+	if (self < wipe_None || self >= wipe_NUMWIPES) self = wipe_Melt;
+}
 CVAR (Int, snd_drawoutput, 0, 0);
 CUSTOM_CVAR (String, vid_cursor, "None", CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
@@ -2303,7 +2306,7 @@ static void AddAutoloadFiles(const char *autoname, std::vector<FileSys::Resource
 		D_AddDirectory (allwads, file.GetChars(), "*.wad", GameConfig, true);
 
 #ifdef __unix__
-		FString skinDir = FStringf("%s/games/" GAMENAMELOWERCASE "/skins", GetDataPath());
+		FString skinDir = FStringf("%s/skins", M_GetAppDataPath(true).GetChars());
 		file = NicePath(skinDir.GetChars());
 		D_AddDirectory (allwads, file.GetChars(), "*.wad", GameConfig, true);
 #endif

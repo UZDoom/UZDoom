@@ -896,10 +896,19 @@ void InitThingdef()
 			{
 				if(int pnum; arc.ReadOptionalInt("player", pnum))
 				{
-					*self = nullptr;
-					LoadGameUserInfoCVars.Push({self, name, pnum}); // this needs to be done later, since userinfo isn't loaded yet
-					arc.EndObject();
-					return true;
+					if(arc.IsRollback())
+					{
+						*self = GetCVar(pnum, name.GetChars());
+						arc.EndObject();
+						return true;
+					}
+					else
+					{
+						*self = nullptr;
+						LoadGameUserInfoCVars.Push({self, name, pnum}); // this needs to be done later, since userinfo isn't loaded yet
+						arc.EndObject();
+						return true;
+					}
 				}
 			}
 			

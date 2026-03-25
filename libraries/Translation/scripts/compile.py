@@ -157,7 +157,7 @@ def main(args):
 
 	if po_files is None:
 		print(__doc__)
-		print(f"Available recipes: { " ".join(RECIPES.keys()) }")
+		print("Available recipes: " + (" ".join(RECIPES.keys())))
 		exit(1)
 
 	languages = po_files["languages"]

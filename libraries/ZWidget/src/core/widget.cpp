@@ -409,6 +409,16 @@ void Widget::Paint(Canvas* canvas)
 	canvas->popClip();
 }
 
+double Widget::GetPreferredWidth()
+{
+	return GetNoncontentLeft() + GetNoncontentRight();
+}
+
+double Widget::GetPreferredHeight()
+{
+	return GetNoncontentTop() + GetNoncontentBottom();
+}
+
 void Widget::OnPaintFrame(Canvas* canvas)
 {
 	WidgetStyle* style = WidgetTheme::GetTheme()->GetStyle(StyleClass);

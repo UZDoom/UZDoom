@@ -287,10 +287,23 @@ void NetStartWindow::OnGeometryChanged()
 	y = GetHeight() - 15.0 - AbortButton->GetPreferredHeight();
 	if (hosting)
 	{
-		AbortButton->SetFrameGeometry((w + 215.0) * 0.5, y, 100.0, AbortButton->GetPreferredHeight());
-		BanButton->SetFrameGeometry((w + 5.0) * 0.5, y, 100.0, BanButton->GetPreferredHeight());
-		KickButton->SetFrameGeometry((w - 205.0) * 0.5, y, 100.0, KickButton->GetPreferredHeight());
-		ForceStartButton->SetFrameGeometry((w - 415.0) * 0.5, y, 100.0, ForceStartButton->GetPreferredHeight());
+		Widget *bs[] = {AbortButton, BanButton, KickButton, ForceStartButton};
+		const size_t n = sizeof(bs)/sizeof(bs[0]);
+		double ws[n];
+		double hs[n];
+		double pos = 0, padding = 10.0;
+		for (size_t i = 0; i < n; i++)
+		{
+			ws[i] = bs[i]->GetPreferredWidth();
+			hs[i] = bs[i]->GetPreferredHeight();
+			pos += ws[i] + padding;
+		}
+		pos = (w - pos + padding) / 2;
+		for (size_t i = 0; i < n; i++)
+		{
+			bs[i]->SetFrameGeometry(pos, y, ws[i], hs[i]);
+			pos += ws[i] + padding;
+		}
 	}
 	else
 	{

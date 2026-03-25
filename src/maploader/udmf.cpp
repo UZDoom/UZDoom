@@ -1258,6 +1258,7 @@ public:
 		sdt->midtexture = "-";
 		sd->SetTextureXScale(1.);
 		sd->SetTextureYScale(1.);
+		sd->ClearAlpha();
 		sd->UDMFIndex = index;
 
 		sc.MustGetToken('{');
@@ -1373,6 +1374,10 @@ public:
 
 			case NAME_light_bottom:
 				sd->SetLight(CheckInt(key), side_t::bottom);
+				continue;
+
+			case NAME_Alpha:
+				sd->SetAlpha(CheckFloat(key));
 				continue;
 
 			case NAME_lightabsolute_bottom:

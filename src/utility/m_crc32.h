@@ -43,7 +43,8 @@ inline constexpr std::array<uint32_t, 256> generate_crc32_table(uint32_t polynom
 	return table;
 }
 
-inline constexpr auto crc32_table = generate_crc32_table(0xEDB88320);
+/*
+// VS19 doesn't like this
 template <auto Transformer = nullptr>
 inline constexpr uint32_t CalcCRC32(std::string_view data)
 {
@@ -57,6 +58,32 @@ inline constexpr uint32_t CalcCRC32(std::string_view data)
 	}
 	return crc ^ 0xFFFFFFFF;
 }
+*/
+
+inline constexpr auto crc32_table = generate_crc32_table(0xEDB88320);
+inline constexpr uint32_t CalcCRC32(std::string_view data)
+{
+	uint32_t crc = 0xFFFFFFFF;
+	for (uint8_t c : data)
+	{
+		uint8_t v = c;
+		crc = (crc >> 8) ^ crc32_table[(crc ^ v) & 0xFF];
+	}
+	return crc ^ 0xFFFFFFFF;
+}
+
+template<typename F>
+inline constexpr uint32_t CalcCRC32(std::string_view data, F && Transformer)
+{
+	uint32_t crc = 0xFFFFFFFF;
+	for (uint8_t c : data)
+	{
+		uint8_t v = Transformer(c);
+		crc = (crc >> 8) ^ crc32_table[(crc ^ v) & 0xFF];
+	}
+	return crc ^ 0xFFFFFFFF;
+}
+
 inline uint32_t CalcCRC32 (const uint8_t *buf, unsigned int len)
 {
 	return crc32 (0, buf, len);

@@ -114,7 +114,7 @@ static void CollectDefaultSearchPaths()
 #   endif
 
 	bool shareDirChanged = 0 != strcmp(SHARE_DIR, DEFAULT_SHARE_DIR);
-	FString dataDir = GetDataPath();
+	FString dataDir = M_GetAppDataPath(true);
 
 #endif
 

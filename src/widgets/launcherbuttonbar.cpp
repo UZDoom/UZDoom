@@ -42,15 +42,18 @@ void LauncherButtonbar::UpdateLanguage()
 	ExitButton->SetText(GStrings.GetString("PICKER_EXIT"));
 }
 
-double LauncherButtonbar::GetPreferredHeight() const
+double LauncherButtonbar::GetPreferredHeight()
 {
 	return 20.0 + std::max(PlayButton->GetPreferredHeight(), ExitButton->GetPreferredHeight());
 }
 
 void LauncherButtonbar::OnGeometryChanged()
 {
-	PlayButton->SetFrameGeometry(20.0, 10.0, 120.0, PlayButton->GetPreferredHeight());
-	ExitButton->SetFrameGeometry(GetWidth() - 20.0 - 120.0, 10.0, 120.0, PlayButton->GetPreferredHeight());
+	double w, h;
+	h = std::max(PlayButton->GetPreferredHeight(), ExitButton->GetPreferredHeight());
+	w = 10 + std::max(PlayButton->GetPreferredWidth(), ExitButton->GetPreferredWidth());
+	PlayButton->SetFrameGeometry(20.0, 10.0, w, h);
+	ExitButton->SetFrameGeometry(GetWidth() - 20.0 - w, 10.0, w, h);
 }
 
 void LauncherButtonbar::OnPlayButtonClicked()

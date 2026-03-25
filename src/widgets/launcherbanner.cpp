@@ -30,7 +30,7 @@ LauncherBanner::LauncherBanner(Widget* parent) : Widget(parent)
 	this->SetStyleColor("background-color", Theme::getHeader(COLOR_BACKGROUND));
 }
 
-double LauncherBanner::GetPreferredHeight() const
+double LauncherBanner::GetPreferredHeight()
 {
 	return Logo->GetPreferredHeight();
 }
