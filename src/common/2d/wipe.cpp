@@ -510,19 +510,15 @@ void PerformWipe(FTexture* startimg, FTexture* endimg, int wipe_type, bool stops
 	double diff_frac;
 	bool done;
 
-	GSnd->SetSfxPaused(true, 1);
-	I_FreezeTime(true);
 	twod->End();
 	assert(startimg != nullptr && endimg != nullptr);
 	auto starttex = MakeGameTexture(startimg, nullptr, ETextureType::SWCanvas);
 	auto endtex = MakeGameTexture(endimg, nullptr, ETextureType::SWCanvas);
 	auto wiper = Wiper::Create(wipe_type);
 	if (!wiper)
-	{
-		I_FreezeTime(false);
-		GSnd->SetSfxPaused(false, 1);
 		return;
-	}
+	GSnd->SetSfxPaused(true, 1);
+	I_FreezeTime(true);
 	wiper->SetTextures(starttex, endtex);
 
 	wipestart = I_msTime();
