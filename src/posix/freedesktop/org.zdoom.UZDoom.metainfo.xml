@@ -109,7 +109,7 @@
 				<p>Hello all, and welcome to UZDoom's first release! You've no doubt seen our new look courtesy of Cardboard Marty. With 4.14.3 marks the first official release of the port, a smaller update designed to hold the masses over until 5.0. While we wish we could include a bunch of goodies with it, those will still need some time to bake in the oven. Rest assured, 5.0 development is still moving along smoothly and we're now in "fix things" mode. For now, 4.14.3 will contain a bunch of bug fixes and security updates since we're intentionally keeping it smaller in scope.</p>
 				<p>Why 4.14.3? Mainly because it makes things a lot easier to transition over since more stuff than you'd think relies on that version number. Speaking of, if you're coming over from GZDoom, we've got some instructions to let you transfer over your saves and configuration files as smoothly as possible. The source and destination directories depend on whether you're using the Flatpak versions or another version of both GZDoom and UZDoom; the locations UZDoom uses for user data and configuration have changed to be more in line with the FreeDesktop project's specification.</p>
 
-				<p><em>Configuration files</em></p>
+				<p>**Configuration files**</p>
 				<ul>
 					<li>If you're using the Flatpak version of GZDoom, your configuration file is located in <code>~/.var/app/org.zdoom.GZDoom/.config/gzdoom.ini</code></li>
 					<li>For non-Flatpak installations of of GZDoom, your configuration file is located in <code>~/.config/gzdoom.ini</code></li>
@@ -121,7 +121,7 @@
 				</ul>
 				<p>Similarly, any other configuration files you have should also best be moved to this directory.</p>
 
-				<p><em>Save games, WADs, skins etc.</em></p>
+				<p>**Save games, WADs, skins etc.**</p>
 				<ul>
 					<li>If you're using the GZDoom Flatpak, save games, skins, WAD files etc. are stored in <code>~/.var/app/org.zdoom.GZDoom/.config/</code></li>
 					<li>For other installations of GZDoom, this data can be found in <code>~/.config/gzdoom/</code></li>
@@ -132,7 +132,7 @@
 					<li>For other installations of UZDoom, the correct location for this data is <code>~/.local/share/games/uzdoom/</code></li>
 				</ul>
 
-				<p><em>Game cache</em></p>
+				<p>**Game cache**</p>
 				<p>Game cache data will be re-generated if it is missing, but if you want to save a likely minor amount of performance the first time you play a game with UZDoom, or if you want to simply remove your existing GZDoom cache and start fresh:</p>
 				<ul>
 					<li>If you're using the GZDoom Flatpak, the game cache is stored in <code>~/.var/app/org.zdoom.GZDoom/.config/zdoom/cache</code></li>
@@ -144,7 +144,7 @@
 					<li>For other installations of UZDoom, the correct location for this data is <code>~/.cache/uzdoom/</code></li>
 				</ul>
 
-				<p><em>Defaults</em></p>
+				<p>**Defaults**</p>
 				<p>Defaults have long been a contentious issue in the ZDoom community, with some feeling it strays too far from what makes vanilla shine while others enjoy the visual flare compared to classical ports. We can understand both sides of this, and while we want to balance it as best we can, we ultimately felt that having so many extra graphical options on by default was too much. As such, we won't be removing any of these features but instead will be going for an opt-in approach to make it easier to manage for first-time users. We feel these changes can help give better visual cohesion with content designed for vanilla while also balancing the legacy of maps and mods that relied on them. One of UZDoom's biggest strengths, after all, is its ability to play almost anything thrown at it.</p>
 				<p>To go deeper into the why, we'd like to give some core philosophies around our decisions for how we chose defaults:</p>
 				<ul>
@@ -152,9 +152,9 @@
 					<li>Modernization should also be done where reasonable. The reality is that we aren't playing Doom in software on CRTs anymore but with 3D acceleration and modern monitors. This introduces some stark differences, so those should be accounted for as best as possible. For this reason, enhancements that don't take away from the aesthetic like anisotropic filtering and distance-based filtering have been left on to help clean up the image. We also understand we have a legacy of maps designed for GZDoom to account for, and not all user options are controllable by mappers, so certain things like the software light banding have been left off to prevent breaking visual cohesion with these.</li>
 					<li>Getting a more vanilla experience should be made easier. Having to constantly go into the menu or mess with console variables isn't fun, and things should be made more streamlined. For this reason we're starting with a new tweak: the automap now has a Default color mode to automatically match the current game's art style. In the future the Auto modes for ZDoom's translucency will also be enhanced to allow better fine tuning for balancing vanilla visuals with mods expecting transparency. We'll be looking into ways to improve this on the gameplay front as well since ZDoom introduced some differences that we know can break things like combat encounters in unexpected ways. While we have plans to fix up the menu, the best solution is for users to not feel like they need to constantly fall back on it at all.</li>
 				</ul>
-				<p><em>Changes From GZDoom 4.14.2</em></p>
+				<p>**Changes From GZDoom 4.14.2**</p>
 				<ul>
-					<li>Multiple security fixes. <em>This update is being deemed as critical.</em> It's highly recommended to upgrade to it.</li>
+					<li>Multiple security fixes. **This update is being deemed as critical.** It's highly recommended to upgrade to it.</li>
 					<li>Anisotropic filtering is now disabled on Intel GPU devices if the texture filtering mode is set to any of the None options. This is to prevent texture filtering from being forced on when anisotropic filtering is enabled.</li>
 					<li>Added new game-based cursors (courtesy of Nash Muhandes and Xaser). These are much more cursor-y, and very good at pointing and clicking on things.</li>
 					<li>Changed defaults to be more balanced between vanilla and modern.</li>
