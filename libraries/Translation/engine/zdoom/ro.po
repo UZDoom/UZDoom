@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-24 17:00+0000\n"
-"Last-Translator: Boondorl <boondorl0@gmail.com>\n"
+"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/ro/>\n"
 "Language: ro\n"
@@ -12,8 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: ro\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Apasă o tastă."
@@ -22,10 +21,13 @@ msgid "SECRETMESSAGE"
 msgstr "Ai găsit un secret!"
 
 msgid "D_DEVSTR"
-msgstr "Modul inutil ACTIVAT."
+msgstr "Modul inutil: PORNIT"
 
+#, fuzzy
 msgid "QUITMSG"
-msgstr "Ești sigur că vrei să ieși dintr-un joc atât de grozav?"
+msgstr ""
+"Ești sigur că vrei să ieși\n"
+"dintr-un joc atât de grozav?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
@@ -33,27 +35,26 @@ msgid "LOADNET"
 msgstr ""
 "Nu poți face o încărcare în timpul unui joc în rețea!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgid "QLOADNET"
 msgstr ""
-"Nu poți face o încărcare rapidă în timpul unui joc\n"
-"în rețea!\n"
+"Nu poți face o încărcare rapidă în timpul unui joc în rețea!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgid "QSAVESPOT"
 msgstr ""
 "Nu ai ales un slot pentru încărcare rapidă încă!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgid "NEWGAME"
 msgstr ""
 "Nu poți începe un joc nou în timpul unui joc în\n"
 "rețea.\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgid "NIGHTMARE"
 msgstr ""
@@ -68,13 +69,13 @@ msgstr ""
 "\n"
 "Trebuie să comanzi întreaga trilogie.\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgid "NETEND"
 msgstr ""
 "Nu poți încheia brusc o sesiune în rețea!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgid "ENDGAME"
 msgstr ""
@@ -87,16 +88,20 @@ msgstr "Ești sigur că vrei să ieși din joc?"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr "Disponibil doar în versiunea înregistrată."
+msgstr "Disponibil doar în versiunea înregistrată"
 
 msgid "DOSY"
 msgstr "(Apasă Y pentru a ieși)"
 
 msgid "QUITMSG1"
-msgstr "Te rog nu ieși, mai sunt demoni care trebuie prăjiți!"
+msgstr ""
+"Te rog nu ieși, mai sunt\n"
+"demoni care trebuie prăjiți!"
 
 msgid "QUITMSG2"
-msgstr "S-o lăsăm baltă -- se iscă un masacru!"
+msgstr ""
+"S-o lăsăm baltă—\n"
+"se iscă un masacru!"
 
 msgid "QUITMSG3"
 msgstr ""
@@ -109,10 +114,14 @@ msgstr ""
 "decât de mine, așa-i?"
 
 msgid "QUITMSG5"
-msgstr "Nu pleca încă -- e un demon după colț!"
+msgstr ""
+"Nu pleca încă—e un\n"
+"demon după colț!"
 
 msgid "QUITMSG6"
-msgstr "Să știi, data viitoare când treci pe-aici o să te prăjesc!"
+msgstr ""
+"Să știi, data viitoare când treci\n"
+"pe-aici o să te prăjesc."
 
 msgid "QUITMSG7"
 msgstr "Ia hai, pleacă, vezi dacă-mi pasă."
@@ -127,8 +136,9 @@ msgstr ""
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
-"Nu pleca acum, e un monstru interdimensional care\n"
-"te așteaptă la fereastra DOS!"
+"Nu pleca acum, e un monstru\n"
+"interdimensional care te\n"
+"așteaptă la fereastra DOS!"
 
 msgid "QUITMSG10"
 msgstr ""
@@ -145,6 +155,7 @@ msgstr ""
 "Uite, amice, pleci acum și renunți la numărul de\n"
 "cadavre!"
 
+#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
 "Doar pleacă. Când te întorci o să te aștept cu o\n"
@@ -162,27 +173,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Carnagiu întrerupt...\n"
+"Carnagiu întrerupt…\n"
 "Ce mai tachinare!"
 
 msgid "QUITMSG17"
 msgstr ""
 "Dar tu ești speranța\n"
-"-- singura mea șansă!!"
+"—singura mea șansă!!"
 
 msgid "QUITMSG18"
 msgstr "Nimeni n-a scăpat vreodată de Mierla."
 
 msgid "QUITMSG19"
-msgstr "Am crezut că tu ești diferit..."
+msgstr "Am crezut că tu ești diferit…"
 
 msgid "QUITMSG20"
 msgstr "Fie! Omoară și fugi!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Poți să ieși...\n"
-"dar nu te poți ascunde..."
+"Poți să ieși…\n"
+"dar nu te poți ascunde…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -190,10 +201,14 @@ msgstr ""
 "Mami zice că e timpul pentru cină?"
 
 msgid "QUITMSG23"
-msgstr "Nu ieși acum, încă mai sunt flemoizi liberi!"
+msgstr ""
+"Nu ieși acum, încă mai\n"
+"sunt flemoizi liberi!"
 
 msgid "QUITMSG24"
-msgstr "Nu renunța - flemoizii vor avea avantajul!"
+msgstr ""
+"Nu renunța—flemoizii\n"
+"vor avea avantajul!"
 
 msgid "QUITMSG25"
 msgstr ""
@@ -202,8 +217,8 @@ msgstr ""
 
 msgid "QUITMSG26"
 msgstr ""
-"Sper că iei doar o pauză cu un bol de cereale \n"
-"Chex(R)."
+"Sper că iei doar o pauză cu\n"
+"un bol de cereale Chex®."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -211,36 +226,38 @@ msgstr ""
 "Avem nevoie de ajutorul tău!"
 
 msgid "QUITMSG28"
-msgstr "Nu abandona Federația Intergalactică a Cerealelor!"
+msgstr ""
+"Nu abandona\n"
+"Federația Intergalactică a Cerealelor!"
 
 msgid "QUITMSG29"
 msgstr ""
-"Adevăratul Luptător Chex(R) nu s-ar da bătut atât\n"
-"de ușor!"
+"Adevăratul Luptător Chex® nu\n"
+"s-ar da bătut atât de ușor!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr "Ai ridicat un obiect"
 
 msgid "PD_ANY"
-msgstr "Orice cheie va deschide ușa."
+msgstr "Orice cheie va deschide ușa"
 
 msgid "PD_ANYOBJ"
-msgstr "Orice cheie va activa obiectul."
+msgstr "Orice cheie va activa obiectul"
 
 msgid "PD_ALL3"
-msgstr "Ai nevoie de cele trei chei pentru a deschide ușa."
+msgstr "Ai nevoie de cele trei chei pentru a deschide ușa"
 
 msgid "PD_ALL3O"
-msgstr "Ai nevoie de cele trei chei pentru a activa obiectul."
+msgstr "Ai nevoie de cele trei chei pentru a activa obiectul"
 
 msgid "PD_ALL6"
-msgstr "Ai nevoie de cele șase chei pentru a deschide ușa."
+msgstr "Ai nevoie de cele șase chei pentru a deschide ușa"
 
 msgid "PD_ALL6O"
-msgstr "Ai nevoie de cele șase chei pentru a activa obiectul."
+msgstr "Ai nevoie de cele șase chei pentru a activa obiectul"
 
 msgid "PD_ALLKEYS"
-msgstr "Ai nevoie de toate cheile."
+msgstr "Ai nevoie de toate cheile"
 
 msgid "HUSTR_MSGU"
 msgstr "[Mesaj netrimis]"
@@ -258,7 +275,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "Începi să aiurezi"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Ai luat-o pe ulei..."
+msgstr "Ai luat-o pe ulei…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Mesaj Trimis]"
@@ -270,16 +287,16 @@ msgid "STSTR_NOMUS"
 msgstr "Selecție Imposibilă"
 
 msgid "STSTR_DQDON"
-msgstr "Modul Invincibil PORNIT"
+msgstr "Modul Invincibil: PORNIT"
 
 msgid "STSTR_DQDOFF"
-msgstr "Modul Invincibil OPRIT"
+msgstr "Modul Invincibil: OPRIT"
 
 msgid "STSTR_DQD2ON"
-msgstr "Analfabetismul total este PORNIT"
+msgstr "Analfabetismul total este: PORNIT"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Analfabetismul total este OPRIT"
+msgstr "Analfabetismul total este: OPRIT"
 
 msgid "STSTR_KFAADDED"
 msgstr "Muniția pentru fericire a fost reumplută"
@@ -288,16 +305,18 @@ msgid "STSTR_FAADDED"
 msgstr "Muniție reîncărcată (fără chei)"
 
 msgid "STSTR_NCON"
-msgstr "Modul fără Coliziune PORNIT"
+msgstr "Modul fără Coliziune: PORNIT"
 
 msgid "STSTR_NCOFF"
-msgstr "Modul fără Coliziune OPRIT"
+msgstr "Modul fără Coliziune: OPRIT"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Modul fără Coliziune 2 PORNIT"
+msgstr "Modul fără Coliziune 2: PORNIT"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Modul fără Coliziune 2 OPRIT"
+msgstr "Modul fără Coliziune 2: OPRIT"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -306,9 +325,7 @@ msgstr "Modul fără Coliziune 2 OPRIT"
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr ""
-"InVinc, Neb, Invizib, HaComp, sau \n"
-"Ved-Amp"
+msgstr "InVinc, Neb, Invizib, HaComp, sau Ved-Amp"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Abilitate Comutată"
@@ -316,28 +333,28 @@ msgstr "Abilitate Comutată"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "...nu e de rahat - GM"
+msgstr "…nu e de rahat - GM"
 
 msgid "STSTR_CLEV"
-msgstr "Schimbare Hartă..."
+msgstr "Schimbare Hartă…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Modul Buddha PORNIT"
+msgstr "Modul Buddha: PORNIT"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Modul Buddha OPRIT"
+msgstr "Modul Buddha: OPRIT"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Modul Buddha Suprem PORNIT"
+msgstr "Modul Buddha Suprem: PORNIT"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Modul Buddha Suprem OPRIT"
+msgstr "Modul Buddha Suprem: OPRIT"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Putere activată"
+msgstr "Putere: PORNIT"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Putere dezactivată"
+msgstr "Putere: OPRIT"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Sănătate întreagă"
@@ -346,22 +363,22 @@ msgid "TXT_CHEATKEYS"
 msgstr "Toate cheile"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Debug sunet activat"
+msgstr "Debug sunet: PORNIT"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug sunet dezactivat"
+msgstr "Debug sunet: OPRIT"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Încerci să trișezi, ei? Acum mori!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Trișor - Nu meriți arme"
+msgstr "Trișor—Nu meriți arme"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Ticăitoare activată"
+msgstr "Ticăitoare: PORNITE"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticăitoare dezactivată"
+msgstr "Ticăitoare: OPRIT"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Ai ce trebuie"
@@ -373,13 +390,13 @@ msgid "TXT_GOTSTUFF"
 msgstr "Ai tot ce-ți trebuie!"
 
 msgid "TXT_FREEZEON"
-msgstr "Modul înghețat pornit"
+msgstr "Modul înghețat: PORNIT"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Modul înghețat oprit"
+msgstr "Modul înghețat: OPRIT"
 
 msgid "TXT_STRANGE"
-msgstr "Te simți ciudat..."
+msgstr "Te simți ciudat…"
 
 msgid "TXT_STRANGER"
 msgstr "Te simți și mai ciudat."
@@ -388,10 +405,10 @@ msgid "TXT_NOTSTRANGE"
 msgstr "Ți-ai revenit în simțiri."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Bocanci de plumb activați"
+msgstr "Bocanci de plumb: PORNIȚI"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Bocanci de plumb dezactivați"
+msgstr "Bocanci de plumb: OPRIȚI"
 
 msgid "TXT_LIGHTER"
 msgstr "Te simți mai ușor"
@@ -400,10 +417,10 @@ msgid "TXT_GRAVITY"
 msgstr "Gravitația te trage în jos"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Modul Ascuns PORNIT"
+msgstr "Modul Ascuns: PORNIT"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Modul Ascuns OPRIT"
+msgstr "Modul Ascuns: OPRIT"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Tremură de Frică!\""
@@ -412,10 +429,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Gata cu Armura de Căpcăun"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Perspectivă la Persoana a 3-a PORNITĂ"
+msgstr "Perspectivă la Persoana a 3-a: PORNITĂ"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Perspectivă la Persoana a 3-a OPRITĂ"
+msgstr "Perspectivă la Persoana a 3-a: OPRITĂ"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 slab ucis"
@@ -439,25 +456,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "Ce vrei să ucizi în afara jocului?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Proprietăți jucători înghețați DEZACTIVATE"
+msgstr "Proprietăți jucători înghețați: OPRITE"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Mod Urmărire OPRIT"
+msgstr "Mod Urmărire: OPRIT"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Mod Urmărire PORNIT"
+msgstr "Mod Urmărire: PORNIT"
 
 msgid "AMSTR_GRIDON"
-msgstr "Grilă ACTIVATĂ"
+msgstr "Grilă: PORNITĂ"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Grilă DEZACTIVATĂ"
+msgstr "Grilă: OPRITĂ"
 
 msgid "AMSTR_TEXON"
-msgstr "Modul Texturat ACTIVAT"
+msgstr "Modul Texturat: PORNIT"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Modul Netexturat DEZACTIVAT"
+msgstr "Modul Texturat: OPRIT"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Loc Marcat"
@@ -652,9 +669,7 @@ msgid "GOTSTIM"
 msgstr "Ai ridicat un kit de prim-ajutor mic."
 
 msgid "GOTMEDINEED"
-msgstr ""
-"Ai ridicat un kit de prim-ajutor de care CHIAR aveai\n"
-"nevoie!"
+msgstr "Ai ridicat un kit de prim-ajutor de care CHIAR aveai nevoie!"
 
 msgid "GOTMEDIKIT"
 msgstr "Ai ridicat un kit de prim-ajutor."
@@ -804,7 +819,7 @@ msgid "PD_BLUEC"
 msgstr "Ai nevoie de un card albastru pentru a activa ușa"
 
 msgid "PD_REDC"
-msgstr "Ai nevoie de un card galben pentru a activa ușa"
+msgstr "Ai nevoie de un card roșu pentru a activa ușa"
 
 msgid "PD_YELLOWC"
 msgstr "Ai nevoie de un card galben pentru a activa ușa"
@@ -838,6 +853,7 @@ msgstr ""
 msgid "CC_LOST"
 msgstr "Suflet Pierdut"
 
+#, fuzzy
 msgid "CC_CACO"
 msgstr "Cacodemon"
 
@@ -1288,9 +1304,7 @@ msgid "OB_IRONLICH"
 msgstr "%o a fost devastat de cadavrul de fier."
 
 msgid "OB_IRONLICHHIT"
-msgstr ""
-"%o s-a apropiat prea mult de un \n"
-"cadavru de fier."
+msgstr "%o s-a apropiat prea mult de un cadavru de fier."
 
 msgid "OB_BONEKNIGHT"
 msgstr "%o a primit un topor de la războinicul nemort."
@@ -1347,17 +1361,13 @@ msgid "OB_MPPSTAFF"
 msgstr "%o a fost făcut felii de bastonul încărcat al lui %k."
 
 msgid "OB_MPPGAUNTLETS"
-msgstr ""
-"%o a fost stors până la ultima picătură de sânge\n"
-"de mănușile lui %k."
+msgstr "%o a fost stors până la ultima picătură de sânge de mănușile lui %k."
 
 msgid "OB_MPPGOLDWAND"
 msgstr "%o a fost luat cu asalt de togaiul lui %k."
 
 msgid "OB_MPPCROSSBOW"
-msgstr ""
-"%o a fost pus la proțap de arbaleta lui\n"
-"%k."
+msgstr "%o a fost pus la proțap de arbaleta lui %k."
 
 msgid "OB_MPPBLASTER"
 msgstr "%k a fost făcut bucăți de gheara lui %k."
@@ -1846,9 +1856,7 @@ msgid "OB_MPMWEAPLIGHTNING"
 msgstr "%o a avut parte de o revelație șocantă de la %k."
 
 msgid "OB_MPMWEAPBLOODSCOURGE"
-msgstr ""
-"%o a fost ras de pe fața universului de\n"
-"Flagelul lui %k."
+msgstr "%o a fost ras de pe fața universului de Flagelul lui %k."
 
 msgid "TXT_METALARMOR"
 msgstr "Ai ridicat Armura de Metal."
@@ -2067,13 +2075,13 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Ai ridicat sacoșa de muniție."
 
 msgid "MSG_TALISMANRED"
-msgstr "Ai sentimentul că nu trebuia atinsă..."
+msgstr "Ai sentimentul că nu trebuia atinsă…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Orice ar fi, nu are ce căuta în lumea asta..."
+msgstr "Orice ar fi, nu are ce căuta în lumea asta…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Trebuie să fie bun la ceva..."
+msgstr "Trebuie să fie bun la ceva…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Ai super forță!"
@@ -2500,9 +2508,7 @@ msgid "OB_MPPOISONBOLT"
 msgstr "%o a primit o doză letală din furia lui %k."
 
 msgid "OB_MPASSAULTGUN"
-msgstr ""
-"%o a fost umplut de găuri de pușca lui\n"
-"%k."
+msgstr "%o a fost umplut de găuri de pușca lui %k."
 
 msgid "OB_MPMINIMISSILELAUNCHER"
 msgstr "%o a înghițit proiectilul lui %k."
@@ -2559,10 +2565,10 @@ msgid "TXT_KILLED_LOREMASTER"
 msgstr "L-ai omorât pe Maestrul Cunoștințelor!"
 
 msgid "TXT_YOUFOOL"
-msgstr "Nesăbuitule! Ai declanșat alarma!"
+msgstr "Nesăbuitule! Ai declanșat alarma."
 
 msgid "TXT_YOUREDEAD"
-msgstr "Ești mort! Ai declanșat alarma!"
+msgstr "Ești mort! Ai declanșat alarma."
 
 msgid "TXT_HAVEENOUGH"
 msgstr "Pare că ai destule!"
@@ -2571,10 +2577,10 @@ msgid "TXT_GOAWAY"
 msgstr "Pleacă!"
 
 msgid "TXT_COMM0"
-msgstr "Mesaj în recepționare..."
+msgstr "Mesaj în recepționare…"
 
 msgid "TXT_COMM1"
-msgstr "Recepționare mesaj de la BlackBird..."
+msgstr "Recepționare mesaj de la BlackBird…"
 
 msgid "TXT_FINDHELP"
 msgstr "Găsește ajutor"
@@ -2584,10 +2590,10 @@ msgid "TXT_TRADE"
 msgstr "pentru %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Ai ridicat Armura Chex(R)."
+msgstr "Ai ridicat Armura Chex®."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Ai ridicat Super Armura Chex(R)!"
+msgstr "Ai ridicat Super Armura Chex®!"
 
 msgid "GOTWATER"
 msgstr "Ai ridicat un pahar de apă."
@@ -2620,7 +2626,7 @@ msgid "GOTSLIMESUIT"
 msgstr "Ai ridicat un Costum Rezistent la Mâzgă"
 
 msgid "GOTCHEXMAP"
-msgstr "Ai ridicat o Hartă Computerizată a Zonei."
+msgstr "Ai ridicat o Hartă Computerizată a Zonei"
 
 msgid "GOTZORCHRECHARGE"
 msgstr "Ai ridicat o mini încărcătură pentru zorch."
@@ -2638,9 +2644,7 @@ msgid "GOTPHASINGZORCHERRECHARGE"
 msgstr "Ai ridicat o încărcătură fazată pentru zorcher"
 
 msgid "GOTPHASINGZORCHERPACK"
-msgstr ""
-"Ai ridicat un pachet de încărcături fazate pentru \n"
-"zorcher."
+msgstr "Ai ridicat un pachet de încărcături fazate pentru zorcher."
 
 msgid "GOTLARGEZORCHERRECHARGE"
 msgstr "Ai ridicat o încărcătură mare pentru zorcher."
@@ -2774,7 +2778,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Apasă Escape pentru a continua..."
+"Apasă Escape pentru a continua…"
 
 msgid "CE2TEXT"
 msgstr "Ai reușit!"
@@ -2789,7 +2793,7 @@ msgid "CLOADNET"
 msgstr ""
 "Nu poți face o încărcare în timpul unei căutări!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgctxt "chex"
 msgid "QSPROMPT"
@@ -2805,7 +2809,7 @@ msgid "QLOADNET"
 msgstr ""
 "Nu poți faci o încărcare rapidă în timpul unei căutări!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgctxt "chex"
 msgid "QLPROMPT"
@@ -2818,9 +2822,10 @@ msgstr ""
 
 msgid "CNEWGAME"
 msgstr ""
-"Nu poți începe o căutare nouă în timpul unei căutări!\n"
+"Nu poți începe o căutare nouă\n"
+"în timpul unei căutări!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgid "CNIGHTMARE"
 msgstr ""
@@ -2831,18 +2836,18 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"Acesta este Chex(R) Quest, pentru mai multe\n"
+"Acesta este Chex® Quest, pentru mai multe\n"
 "\n"
 "niveluri vizitează www.chexquest.com.\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
 "Nu poți încheia brusc o căutare în rețea!\n"
 "\n"
-"Apasă orice tastă."
+"Apasă o tastă."
 
 msgctxt "chex"
 msgid "ENDGAME"
@@ -2853,11 +2858,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Modul Invincibil ACTIVAT"
+msgstr "Modul Invincibil: PORNIT"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Modul Invincibil DEZACTIVAT"
+msgstr "Modul Invincibil: OPRIT"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2869,7 +2874,7 @@ msgstr "Super Lingură Adăugată"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Mănâncă Chex(R)!"
+msgstr "…Mănâncă Chex®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -3305,7 +3310,7 @@ msgid "CMPTMNU_NOPASSOVER"
 msgstr "Actorii au înălțime infinită"
 
 msgid "CMPTMNU_BOOMSCROLL"
-msgstr "Elementele derulante BOOM sunt aditive"
+msgstr "Elementele derulante Boom sunt aditive"
 
 msgid "CMPTMNU_BADANGLES"
 msgstr "Interzice deplasarea liniară NSEW"
@@ -3352,9 +3357,6 @@ msgstr "Podelele care se mișcă instant nu sunt silențioase"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sunetele sectoarelor au ca sursă centrul"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Sunetele se opresc când actorul sursă dispare"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Procesare originală pentru sursele de sunet"
 
@@ -3374,7 +3376,7 @@ msgid "CMPTMNU_EXPLODE1"
 msgstr "Fără împingere verticală la explozii"
 
 msgid "CMPTMNU_EXPLODE2"
-msgstr "Utilizează comportamentul original la explozii"
+msgstr "Utilizează comportamentul original al exploziilor din Doomie"
 
 msgid "PLYRMNU_RED"
 msgstr "Roșu"
@@ -3826,9 +3828,6 @@ msgstr "Mod efect de strălucire"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Transparență Clasică"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Transparență Suflete Pierdute"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Utilizează contrast fals"
 
@@ -3982,9 +3981,6 @@ msgstr "Setări de Rețea"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Setări Locale"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Anticipare mișcare"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Anticipează acționarea liniilor"
 
@@ -3999,15 +3995,6 @@ msgstr "Setări gazdă"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Ticăituri suplimentare"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Întârzierea echilibrării"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr ""
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Optimizat"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Clasic (Mai rapid)"
@@ -4065,25 +4052,16 @@ msgid "OPTVAL_BOTH"
 msgstr "Ambele"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Jucător"
 
 msgid "OPTVAL_MAP"
 msgstr "Hartă"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Dimensionare la 640x480"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Dublare pixeli"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Împătrire pixeli"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Arma curentă"
@@ -4178,15 +4156,6 @@ msgstr "Doar culori definite de hartă"
 msgid "OPTVAL_NODOORS"
 msgstr "Cu excepția ușilor"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Dublu"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Triplu"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Cvadruplu"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Ridicare Obiecte"
 
@@ -4203,40 +4172,37 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Doar monștrilor"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Vechi"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr ""
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr ""
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr ""
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Toate necunoscute"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Erori"
@@ -4254,16 +4220,10 @@ msgid "OPTVAL_HWPOLY"
 msgstr "Accelerat Hardware"
 
 msgid "OPTVAL_SWDOOM"
-msgstr "Software"
+msgstr "Randare software Doom"
 
 msgid "OPTVAL_SWDOOMTC"
 msgstr "Software Color Complet"
-
-msgid "OPTVAL_DEDICATED"
-msgstr "De înaltă Performanță"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Economie de Energie"
 
 msgid "OPTVAL_VANILLA"
 msgstr "Original"
@@ -4273,12 +4233,6 @@ msgstr "ZDoom (Forțat)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Original (Forțat)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Auto (ZDoom preferat)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Auto (Original preferat)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Mic"
@@ -4368,13 +4322,10 @@ msgid "C_TEAL"
 msgstr "\\czMare"
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Fără Sunet"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Fără interpolare"
@@ -4382,26 +4333,17 @@ msgstr "Fără interpolare"
 msgid "OPTSTR_SPLINE"
 msgstr ""
 
-msgid "OPTSTR_OPENAL"
-msgstr ""
-
 msgid "DSPLYMNU_GLOPT"
-msgstr "Setări Mod OpenGL"
+msgstr "Rendare Hardware"
 
 msgid "DSPLYMNU_SWOPT"
-msgstr "Setări Mod Software"
+msgstr "Rendare Software"
 
 msgid "GLMNU_TITLE"
-msgstr "Setări Rendare OpenGL"
+msgstr "Setări Rendare Hardware"
 
 msgid "GLMNU_DYNLIGHT"
 msgstr "Setări Lumini Dinamice"
-
-msgid "GLMNU_PREFS"
-msgstr "Preferințe"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Tundere margini sprite-uri"
 
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Sortează listele de texturi"
@@ -4411,9 +4353,6 @@ msgstr "Lumini Dinamice"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Lumini Dinamice (Hardware)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Activează definițiile pentru lumini"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Luminile afectează sprite-urile"
@@ -4430,17 +4369,11 @@ msgstr "Calitate umbre"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Filtru umbre"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Mod ceață"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Ceața forțează luminozitate maximă"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Intensitate lumină armă"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Efecte suplimentare pentru oglinzi"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Vedere infraroșie avansată"
@@ -4465,9 +4398,6 @@ msgstr "Sprite-urile privesc înspre cameră"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Stil particule"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Calitate video"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "Mod 3D Stereo VR"
@@ -4518,9 +4448,6 @@ msgstr ""
 msgid "OPTVAL_SOFTWARE"
 msgstr ""
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Optim"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Axa Y"
 
@@ -4532,9 +4459,6 @@ msgstr "Pătrat"
 
 msgid "OPTVAL_ROUND"
 msgstr "Rotund"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Radial"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Puf"
@@ -4599,9 +4523,6 @@ msgstr "Setări Mod Culori Complete"
 msgid "TCMNU_TITLE"
 msgstr "Setări Mod Culori Complete"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Putere Mod Culori Complete"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Filtru liniar la micșorare"
 
@@ -4614,21 +4535,6 @@ msgstr "Aplicați mipmapping"
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Lumini Dinamice (Software)"
 
-msgid "OS_TITLE"
-msgstr "Căutare Setări"
-
-msgid "OS_ANY"
-msgstr "Căutare după orice termen"
-
-msgid "OS_ALL"
-msgstr "Căutare după toți termenii"
-
-msgid "OS_NO_RESULTS"
-msgstr "Niciun rezultat găsit."
-
-msgid "OS_LABEL"
-msgstr "Căutare:"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Afișează mereu cheile"
 
@@ -4640,7 +4546,7 @@ msgid "TXT_JOINED_TEAM"
 msgstr "%s s-a alăturat echipei %t"
 
 msgid "TXT_LONER"
-msgstr "%s este singur acum"
+msgstr "%s este singur acum."
 
 msgid "TXT_LEFTWITHFRAGS"
 msgstr "%s a părăsit jocul cu %d victime"
@@ -4652,7 +4558,7 @@ msgid "TXT_COULDNOTREAD"
 msgstr "Salvarea '%s' nu a putut fi citită."
 
 msgid "TXT_NOINFOJSON"
-msgstr "%s' nu este o salvare validă. Lipsește 'info.json'"
+msgstr "%s' nu este o salvare validă. Lipsește 'info.json'."
 
 msgid "TXT_FAILEDTOREADSG"
 msgstr "Nu s-au putut accesa informațiile din salvarea '%s'."
@@ -4666,7 +4572,7 @@ msgstr "Salvarea '%s' este dintr-un alt motor care are ca bază ZDoom:"
 msgid "TXT_TOOOLDSG"
 msgstr ""
 "Salvarea '%s' este dintr-o versiune mai veche: %d (%e e cea mai veche "
-"suportată)"
+"suportată)."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4676,7 +4582,7 @@ msgstr ""
 msgid "TXT_TOONEWSG"
 msgstr ""
 "Salvarea '%s' e dintr-o versiune mai nouă: %d (%e este cea mai nouă "
-"suportată)"
+"suportată)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Salvării '%s' îi lipsește harta actuală."
@@ -4709,9 +4615,6 @@ msgstr "Captura de ecran nu a putut fi salvată."
 msgid "TXT_BY"
 msgstr "De către %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr "Apasă orice tastă sau dă click oriunde în fereastră pentru a ieși."
-
 msgid "HUDMNU_FLASH"
 msgstr "Setări Amestec Imagine"
 
@@ -4723,9 +4626,6 @@ msgstr "Țintă"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Subtitrări"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Prevenire umbre gri"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Setări Font"
@@ -4767,11 +4667,6 @@ msgstr "Factor de scalare"
 
 msgid "SCALEMNU_RATIO"
 msgstr "Aspect imagine"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr ""
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4870,7 +4765,7 @@ msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr "Afișare ceas"
 
 msgid "CMPTMNU_VILEGHOSTS"
-msgstr "Monștrii striviți sunt readuși la viață ca fantome."
+msgstr "Monștrii striviți sunt readuși la viață ca fantome"
 
 msgid "MISCMNU_FVIEWBOB"
 msgstr "Mișcare cameră în timpul zborului"
@@ -4920,10 +4815,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Dezactivați colectarea din partea clientului a obiectelor lăsate jos"
 
 # Disables autoloading save on death
+#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Repornește nivelul după Moarte"
 
 # Resets inventory on every map
+#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Pistol la început"
 
@@ -5088,9 +4985,6 @@ msgstr "Timpul cronometrului de votare (secunde)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Mod chat lent (secunde)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Activează declanșatoarele haptice"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "Setări sistem haptic"
 
@@ -5205,10 +5099,10 @@ msgid "TAG_REPELLENT"
 msgstr "Repelent de Mucus"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Armură Chex"
+msgstr "Armură Chex®"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Super Armură Chex"
+msgstr "Super Armură Chex®"
 
 msgid "TAG_CHEXMAP"
 msgstr "Hartă Computerizată Zonă"
@@ -5262,3 +5156,15 @@ msgstr "Gamma"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Saturație"
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Fin"
+
+#, fuzzy
+msgid "TAG_MAULER"
+msgstr "Sfâșietor"
+
+#, fuzzy
+msgid "TAG_GLAUNCHER"
+msgstr "Lansator de Grenade"

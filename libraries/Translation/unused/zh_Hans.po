@@ -1,0 +1,347 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 06:01+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/uzdoom/unused/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL模拟器核心"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "补丁设置"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS配置文件"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity配置文件"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "相对音量"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi配置文件"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "调整伽马值"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "聊天"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "自定义聊天控制"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "高级显示选项"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "外观"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "准星比例"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "消息"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "状态栏比例"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "启用高精度纹理"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "纹理已启用"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "平滑鼠标移动"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "消息比例"
+
+msgid "NOTSET"
+msgstr "未设置"
+
+msgid "OPTMNU_INPUT"
+msgstr "输入选项"
+
+msgid "OPTMNU_LIGHT"
+msgstr "光照选项"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "多人游戏选项"
+
+msgid "OPTMNU_SPRITE"
+msgstr "精灵选项"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "系统选项"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Hz"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "地图"
+
+msgid "OPTVAL_HUD"
+msgstr "HUD"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD+地图"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr "PMDWin OPNA"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "缩放(最邻近)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "缩放(线性)"
+
+msgid "PICKER_NETAUTO"
+msgstr "自动(推荐)"
+
+msgid "PICKER_NETMODE"
+msgstr "网络模式："
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "点对点"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "数据包服务器"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "空气吸收HF"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "衰减HF率"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "衰减LF率"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "衰减时间"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "密度"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "传播"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "回声深度"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "回声时间"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "环境传播"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "环境大小"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF参考值"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF参考值"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "调制深度"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "调制时间"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "反射"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "反射延迟"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "反射X定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "反射Y定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "反射Z定位"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "混响"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "混响延迟"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "混响X定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "混响Y定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "混响Z定位"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "房间"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "房间HF"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "房间LF"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "房间滚降因子"
+
+msgid "SNDMNU_BACKEND"
+msgstr "声音后台"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "菜单音效"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "音乐已启用"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "音效已启用"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "启用5:4宽高比"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "宽高比"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "选择Vulkan设备"
+
+msgid "VKMNU_ENABLE"
+msgstr "启用Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "角色消失时停止音效"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"用于补偿显示器无法正确显示亮像素的情况。调整直至对角线上的黑色方块消失。请勿"
+"用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "丧魂透明度"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "白点补偿"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "启用光照定义"
+
+msgid "GLMNU_PREFS"
+msgstr "首选项"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "防止灰色阴影"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "修剪精灵边缘"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "启用触觉触发器"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "移动预测"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "延迟平衡"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "无声音"
+
+msgid "OPTSTR_OPENAL"
+msgstr "OpenAL"
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "所有未确认的"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "高性能"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "双倍"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "节能"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "最佳"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "优化"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "原始"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "双倍像素"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "四倍像素"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "四倍"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "缩放到640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "三倍"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "自动(原版优先)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "自动(ZDoom优先)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "真彩色输出"

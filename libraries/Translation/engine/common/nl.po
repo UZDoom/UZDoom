@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-23 23:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-03-15 00:10+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/common/nl/>"
 "\n"
 "Language: nl\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: nl\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Druk op Y of N."
@@ -31,9 +30,6 @@ msgstr ""
 
 msgid "SAFEMESSAGE"
 msgstr "Wil je dit echt doen?"
-
-msgid "NOTSET"
-msgstr "Niet ingesteld"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -56,10 +52,10 @@ msgid "TXT_X_CHEATS"
 msgstr "%s bedriegt"
 
 msgid "MSGOFF"
-msgstr "Berichten UIT"
+msgstr "Berichten: UIT"
 
 msgid "MSGON"
-msgstr "Berichten AAN"
+msgstr "Berichten: AAN"
 
 msgid "TXT_SAY"
 msgstr "Zeg:"
@@ -147,7 +143,7 @@ msgid "OPTMNU_RESETTOSAVED"
 msgstr "Reset naar laatste opgeslagen"
 
 msgid "OPTMNU_WRITEINI"
-msgstr "Huidige instellingen opslaan "
+msgstr "Huidige instellingen opslaan"
 
 msgid "OPTMNU_CONSOLE"
 msgstr "Ga naar de console"
@@ -159,10 +155,10 @@ msgid "OPTMNU_REVERB"
 msgstr "Reverb-omgeving editor"
 
 msgid "CNTRLMNU_SWITCHTEXT1"
-msgstr "ENTER om te veranderen, BACKSPACE om te wissen."
+msgstr "ENTER om te veranderen, BACKSPACE om te wissen"
 
 msgid "CNTRLMNU_SWITCHTEXT2"
-msgstr "Druk op de nieuwe toets voor controle, ESC om te annuleren."
+msgstr "Druk op de nieuwe toets voor controle, ESC om te annuleren"
 
 msgid "CNTRLMNU_CONTROLS"
 msgstr "Bedieningselementen"
@@ -240,17 +236,11 @@ msgstr "Actie"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Aanpassen van de actiecontroles"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Chat"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "Meerdere spelers"
 
 msgid "CNTRLMNU_SAY"
 msgstr "Zeg"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Chat-controles aanpassen aan uw wensen"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Wapencontroles aanpassen aan uw eigen wensen"
@@ -361,14 +351,12 @@ msgstr "Toggle textuur"
 msgid "CNTRLMNU_AUTOMAP"
 msgstr "Automap aan/uit"
 
+#, fuzzy
 msgid "CNTRLMNU_CHASECAM"
 msgstr "Chasecam"
 
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Schermafdruk"
-
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Open console"
 
 msgid "CNTRLMNU_PAUSE"
 msgstr "Pauze"
@@ -409,9 +397,6 @@ msgstr "Berichten aan/uit"
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Stop het spel"
 
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Gamma aanpassen"
-
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Muis inschakelen"
 
@@ -421,6 +406,7 @@ msgstr "Muis in menu's inschakelen"
 msgid "MOUSEMNU_SHOWBACKBUTTON"
 msgstr "Toon terug knop"
 
+#, fuzzy
 msgid "MOUSEMNU_CURSOR"
 msgstr "Cursor"
 
@@ -510,7 +496,7 @@ msgstr "Controller ondersteuning moet ingeschakeld zijn"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr "om eventuele regelaars te detecteren."
+msgstr "om eventuele regelaars te detecteren"
 
 msgid "JOYMNU_INVALID"
 msgstr "Ongeldige regelaar gespecificeerd voor het menu"
@@ -533,15 +519,18 @@ msgstr "Geen configureerbare assen"
 msgid "OPTVAL_NONE"
 msgstr "Geen"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Draaien"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Omhoog/omlaag zoeken"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "Voorwaarts bewegen"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Strafelen"
 
@@ -592,9 +581,6 @@ msgstr "Saaie groen"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Beige"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Licht groen"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Licht blauw"
@@ -647,6 +633,7 @@ msgstr "Altijd"
 msgid "OPTVAL_NEVER"
 msgstr "Nooit"
 
+#, fuzzy
 msgid "PLYRMNU_AUTOAIM"
 msgstr "Autoaim"
 
@@ -662,23 +649,11 @@ msgstr "Verticale Sync"
 msgid "DSPLYMNU_MODELS"
 msgstr "Modellen"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Dradenkruis schalen"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Statusbalkschaal"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Berichten"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Berichten centreren"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Pulserende berichtendisplay"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Berichtschaal"
 
 msgid "MNU_COLORPICKER"
 msgstr "Selecteer Kleur"
@@ -700,15 +675,6 @@ msgstr "Kaartkleuren aanpassen"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Standaard aangepaste kleuren herstellen"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Geluid actief"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Muziek actief "
-
-msgid "OPTVAL_4000HZ"
-msgstr "4000 Hz"
 
 msgid "OPTVAL_8000HZ"
 msgstr "8000 Hz"
@@ -761,6 +727,7 @@ msgstr "Stereo"
 msgid "OPTSTR_PROLOGIC"
 msgstr "Dolby Pro Logic-decoder"
 
+#, fuzzy
 msgid "OPTSTR_QUAD"
 msgstr "Quad"
 
@@ -779,6 +746,7 @@ msgstr "Afspeelapparaat"
 msgid "OPENALMNU_ENABLEEFX"
 msgstr "EFX inschakelen"
 
+#, fuzzy
 msgid "OPENALMNU_RESAMPLER"
 msgstr "Resampler"
 
@@ -806,9 +774,6 @@ msgstr "Willekeurige plaatsen"
 msgid "SNDMNU_CHANNELS"
 msgstr "Geluidskanalen"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Geluidsarme achterkant"
-
 msgid "SNDMNU_OPENAL"
 msgstr "OpenAL opties"
 
@@ -822,10 +787,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "Module replayer opties"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Midi speler opties"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Geluid in menu's"
+msgstr "MIDI speler opties"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Geavanceerde geluidsopties"
@@ -866,9 +828,6 @@ msgstr "Freeverb"
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Globale Freeverb"
 
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Patchset"
-
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Relatief volume"
 
@@ -890,17 +849,8 @@ msgstr "ADLMidi"
 msgid "ADVSNDMNU_OPNMIDI"
 msgstr "OPNMidi"
 
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Timidity++ configuratiebestand"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Relatief volume"
-
 msgid "ADVSNDMNU_WILDMIDI"
 msgstr "WildMidi"
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "WildMidi configuratiebestand"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Selecteer configuratie"
@@ -908,11 +858,9 @@ msgstr "Selecteer configuratie"
 msgid "ADVSNDMNU_ADVRESAMPLING"
 msgstr "Geavanceerde herbemonstering"
 
+#, fuzzy
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "OPL Bank"
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "OPL Emulator Kern"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Emulator maakt gebruik van PCM Samplerate"
@@ -938,9 +886,6 @@ msgstr "OPN2 Emulatorkern van de OPN2-emulator"
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "GUS-emulatie"
 
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "GUS-configuratiebestand"
-
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "DMXGUS-klonten lezen"
 
@@ -948,7 +893,7 @@ msgid "ADVSNDMNU_GUSMEMSIZE"
 msgstr "GUS-geheugengrootte"
 
 msgid "ADVSNDMNU_OPNNUMCHIPS"
-msgstr "Aantal geëmuleerde OPL chips"
+msgstr "Aantal geëmuleerde OPN chips"
 
 msgid "ADVSNDMNU_OPNGAIN"
 msgstr "Relatief volume"
@@ -1009,6 +954,7 @@ msgstr "Band-beperkt lineair"
 msgid "OPTVAL_CUBICSLOW"
 msgstr "Kubieke (langzamer)"
 
+#, fuzzy
 msgid "OPTVAL_SINC"
 msgstr "Sinc"
 
@@ -1031,7 +977,7 @@ msgid "OPTVAL_LIBXMP"
 msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr "Dom"
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
 msgstr "Chip-o-matic"
@@ -1039,12 +985,15 @@ msgstr "Chip-o-matic"
 msgid "OPTVAL_MAMEOPL2"
 msgstr "MAME OPL2"
 
+#, fuzzy
 msgid "OPTVAL_DOSBOXOPL3"
 msgstr "DOSBox OPL3"
 
+#, fuzzy
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
+#, fuzzy
 msgid "OPTVAL_ESFMu"
 msgstr "ESFMu OPL3"
 
@@ -1054,50 +1003,58 @@ msgstr "YMFM OPL2"
 msgid "OPTVAL_YMFMOPL3"
 msgstr "YMFM OPL3"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPL3"
 msgstr "Nuked OPL3"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
 msgstr "OPL2-LLE (Extra zwaar!)"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
 msgstr "OPL3-LLE (Extra zwaar!)"
 
 msgid "OPTVAL_MAMEOPN2"
-msgstr "MAME YM2612"
+msgstr "MAME OPN2 (YM2612)"
 
+#, fuzzy
 msgid "OPTVAL_NP2OPNA"
 msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
 msgstr "MAME YM2608"
 
-msgid "OPTVAL_PMDWINOPNA"
-msgstr "PMDWin OPNA"
-
+#, fuzzy
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPL3174"
 msgstr "Nuked OPL3 v1.7.4"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
 
+#, fuzzy
 msgid "OPTVAL_NUKEDOPN2YM2612"
 msgstr "Nuked OPN2 (YM2612)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YM2612LLE"
 msgstr "OPN2-LLE (YM2612) (Extra zwaar!)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YM3438LLE"
 msgstr "OPN2-LLE (YM3438) (Extra zwaar!)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YMF276LLE"
 msgstr "OPN2-LLE (YMF276) (Extra zwaar!)"
 
 msgid "OPTVAL_GENSOPN2"
-msgstr "GENS YM2612"
+msgstr "GENS OPN2 (YM2612)"
 
 msgid "OPTVAL_YMFMOPN2"
 msgstr "YMFM OPN2"
@@ -1117,9 +1074,11 @@ msgstr "Algemeen"
 msgid "OPNVLMODEL_GENERIC"
 msgstr "Algemeen"
 
+#, fuzzy
 msgid "ADLVLMODEL_NATIVE"
 msgstr "OPL Native"
 
+#, fuzzy
 msgid "OPNVLMODEL_NATIVE"
 msgstr "OPN Native"
 
@@ -1190,7 +1149,7 @@ msgid "OPTVAL_UNCHARTED2"
 msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr "Hejl Dawson"
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
 msgstr "Reinhard"
@@ -1228,6 +1187,7 @@ msgstr "Effect van de lensvervorming"
 msgid "GLPREFMNU_FXAA"
 msgstr "FXAA-kwaliteit"
 
+#, fuzzy
 msgid "GLPREFMNU_DITHER"
 msgstr "Dither output"
 
@@ -1237,6 +1197,7 @@ msgstr "Tonemap Palet Orde van het Tonemap-palet"
 msgid "GLPREFMNU_PALTONEMAPPOWER"
 msgstr "Tonemap Palet Exponent"
 
+#, fuzzy
 msgid "GLPREFMNU_MULTISAMPLE"
 msgstr "Multisample"
 
@@ -1298,28 +1259,22 @@ msgid "OPTVAL_TRILINEAR"
 msgstr "Trilineair"
 
 msgid "OPTVAL_2X"
-msgstr "2x"
+msgstr "2×"
 
 msgid "OPTVAL_4X"
-msgstr "4x"
+msgstr "4×"
 
 msgid "OPTVAL_8X"
-msgstr "8x"
+msgstr "8×"
 
 msgid "OPTVAL_16X"
-msgstr "16x"
+msgstr "16×"
 
 msgid "OPTVAL_32X"
-msgstr "32x"
+msgstr "32×"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Textuur Opties"
-
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Texturen ingeschakeld"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Hoge-resolutie texturen op"
 
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Textuurschaalmodus"
@@ -1328,7 +1283,7 @@ msgid "GLTEXMNU_HQRESIZEMULT"
 msgstr "Textuurschaalfactor"
 
 msgid "GLTEXMNU_HQRESIZEWARN"
-msgstr "Deze modus vereist %d keer meer videogeheugen."
+msgstr "Deze modus vereist %d keer meer videogeheugen"
 
 msgid "GLTEXMNU_RESIZETEX"
 msgstr "Texturen schalen"
@@ -1348,12 +1303,6 @@ msgstr "Precache GL texturen"
 msgid "VIDMNU_TITLE"
 msgstr "Videomodus"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Geschaald (Dichtstbijzijnd)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Geschaald (Lineair)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "Brievenbus"
 
@@ -1369,17 +1318,11 @@ msgstr "Volledig scherm"
 msgid "VIDMNU_HIDPI"
 msgstr "Retina / HiDPI-ondersteuning"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "Beeldverhouding"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Geforceerde beeldverhouding"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Geforceerde verhoudingsstijl"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Schakel 5:4 beeldverhouding in"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Resolutieschaal"
@@ -1443,9 +1386,11 @@ msgstr "Gebruikergedefinieerd"
 msgid "VIDMNU_MAXFPS"
 msgstr "Max. FPS"
 
+#, fuzzy
 msgid "OPTVAL_60FPS"
 msgstr "60 fps"
 
+#, fuzzy
 msgid "OPTVAL_75FPS"
 msgstr "75 fps"
 
@@ -1455,9 +1400,11 @@ msgstr "90 beelden per seconde"
 msgid "OPTVAL_120FPS"
 msgstr "120 beelden per seconde"
 
+#, fuzzy
 msgid "OPTVAL_144FPS"
 msgstr "144 fps"
 
+#, fuzzy
 msgid "OPTVAL_200FPS"
 msgstr "200 fps"
 
@@ -1501,6 +1448,7 @@ msgstr "Rouleer snelopslag"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Aantal roulerende snelopslagplekken"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Schakel uniforme menuschaling uit"
 
@@ -1544,95 +1492,6 @@ msgstr "Omgeving bewerken"
 msgid "REVMNU_NEW"
 msgstr "Nieuwe omgeving"
 
-msgid "REVMNU_REVERT"
-msgstr "Instellingen terugzetten"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Omgeving Grootte"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Milieuverspreiding"
-
-msgid "REVMNU_ROOM"
-msgstr "Kamer"
-
-msgid "REVMNU_ROOM_HF"
-msgstr "Kamer HF"
-
-msgid "REVMNU_ROOM_LF"
-msgstr "Kamer LF"
-
-msgid "REVMNU_DECAY_TIME"
-msgstr "Vervaldtijd"
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Verval HF-verhouding"
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Verval LF-verhouding"
-
-msgid "REVMNU_REFLECTIONS"
-msgstr "Reflecties"
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Reflecties Vertraging"
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Reflecties Pan X"
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Reflecties Pan Y"
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Reflecties Pan Z"
-
-msgid "REVMNU_REVERB"
-msgstr "Reverb"
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Reverb-vertraging"
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Reverb Pan X"
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Reverb Pan Y"
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Reverb Pan Z"
-
-msgid "REVMNU_ECHO_TIME"
-msgstr "Echotijd"
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Echo-diepte"
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Modulatietijd"
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Modulatie diepte"
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Luchtabsorptie HF"
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF-referentie"
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF-referentie"
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Ruimte-rolloff-factor"
-
-msgid "REVMNU_DIFFUSION"
-msgstr "Diffusie"
-
-msgid "REVMNU_DENSITY"
-msgstr "Dichtheid"
-
 msgid "REVMNU_Reflections_Scale"
 msgstr "Reflectieschaal"
 
@@ -1673,7 +1532,7 @@ msgid "REVMNU_Create"
 msgstr "Aanmaken"
 
 msgid "REVMNU_Save"
-msgstr "Opslaan..."
+msgstr "Opslaan…"
 
 msgid "REVMNU_File_name"
 msgstr "Bestandsnaam"
@@ -1687,9 +1546,6 @@ msgstr "Vulkan-opties (Experimenteel)"
 msgid "VK_TITLE"
 msgstr "Vulkan-opties"
 
-msgid "VKMNU_ENABLE"
-msgstr "Vulkan inschakelen"
-
 msgid "VKMNU_DEVICE"
 msgstr "Vulkan apparaat-ID"
 
@@ -1702,10 +1558,6 @@ msgstr "Waarschuwing: De Vulkan renderer is zeer experimenteel!"
 msgid "VK_RESTART"
 msgstr "Deze opties vereisen een herstart om van kracht te worden."
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Selecteer Vulkan Apparaat"
-
 msgid "OPTVAL_SCALENX"
 msgstr "ScaleNx"
 
@@ -1715,6 +1567,7 @@ msgstr "NormaalNx"
 msgid "OPTVAL_HQNX"
 msgstr "hqNx"
 
+#, fuzzy
 msgid "OPTVAL_HQNXMMX"
 msgstr "hqNx MMX"
 
@@ -1739,121 +1592,10 @@ msgstr "Geen resultaten gevonden."
 msgid "OS_LABEL"
 msgstr "Zoeken:"
 
-msgid "TXT_OBITUARY1"
-msgstr "%k mergelde %o als een vis"
-
-msgid "TXT_OBITUARY2"
-msgstr "%k castreerde %o"
-
-msgid "TXT_OBITUARY3"
-msgstr "%k pureerde %o"
-
-msgid "TXT_OBITUARY4"
-msgstr "%k decimeerde %o"
-
-msgid "TXT_OBITUARY5"
-msgstr "%k vernietigde %o"
-
-msgid "TXT_OBITUARY6"
-msgstr "%k sneed %o in stukjes"
-
-msgid "TXT_OBITUARY7"
-msgstr "%k ontleedde %o"
-
-msgid "TXT_OBITUARY8"
-msgstr "%k plette %o"
-
-msgid "TXT_OBITUARY9"
-msgstr "%k gaf %o anale rechtvaardigheid"
-
-msgid "TXT_OBITUARY10"
-msgstr "%k gaf aNaLe DoLhEiD aan %o"
-
-msgid "TXT_OBITUARY11"
-msgstr "%k doodde %o"
-
-msgid "TXT_OBITUARY12"
-msgstr "%k maakte gehakt van %o"
-
-msgid "TXT_OBITUARY13"
-msgstr "%k slachtte %o af"
-
-msgid "TXT_OBITUARY14"
-msgstr "%k verminkte %o"
-
-msgid "TXT_OBITUARY15"
-msgstr "%k holde %o uit"
-
-msgid "TXT_OBITUARY16"
-msgstr "%k scheurde een opening uit %o"
-
-msgid "TXT_OBITUARY17"
-msgstr "%k slachtte %o"
-
-msgid "TXT_OBITUARY18"
-msgstr "%k vermorzelde %o"
-
-msgid "TXT_OBITUARY19"
-msgstr "%k sodomiseerde %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "%k splette %o"
-
-msgid "TXT_OBITUARY21"
-msgstr "%k plette %o"
-
-msgid "TXT_OBITUARY22"
-msgstr "%k wurgde %o"
-
-msgid "TXT_OBITUARY23"
-msgstr "%k maakte %o koud"
-
-msgid "TXT_OBITUARY24"
-msgstr "%k stopte %o in een lijkzak"
-
-msgid "TXT_OBITUARY25"
-msgstr "%k zond %o naar de hel"
-
-msgid "TXT_OBITUARY26"
-msgstr "%k roosterde %o"
-
-msgid "TXT_OBITUARY27"
-msgstr "%k legde %o om"
-
-msgid "TXT_OBITUARY28"
-msgstr "%k bespoot %o"
-
-msgid "TXT_OBITUARY29"
-msgstr "%k besproeide %o"
-
-msgid "TXT_OBITUARY30"
-msgstr "%k maakte hondenvlees van %o"
-
-msgid "TXT_OBITUARY31"
-msgstr "%k sloeg %o als een hond"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o is uitschot"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o is hamburger"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o onderging scrotumscheiding"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o was vrijwilliger voor bevolkingsbeperking"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o heeft zelfmoord gepleegd"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o ontving de Darwin Award"
-
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr "USE_GENERIC_FONT"
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1885,44 +1627,14 @@ msgstr "Alleen gewijzigd"
 msgid "TXT_UNKNOWN"
 msgstr "Onbekend"
 
-msgid "OPTVAL_HUD"
-msgstr "HUD"
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "Automatische kaart"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "HUD + Automap"
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Dit spel heeft de volgende bestanden nodig"
-
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Multiplayer Opties"
-
-msgid "OPTMNU_INPUT"
-msgstr "In1voeropties"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Systeem Opties"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Licht Opties"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Sprite-opties"
 
 msgid "GLPREFMNU_CORONAS"
 msgstr "Corona's"
 
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Uiterlijk"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Geavanceerde Weergave Opties"
-
 msgid "PICKER_SELECT"
-msgstr "Selecteer welk spel je wilt spelen"
+msgstr "Selecteer welk spel je wilt spelen."
 
 msgid "PICKER_PLAY"
 msgstr "Spel starten"
@@ -1977,6 +1689,7 @@ msgstr "Deze controller inschakelen"
 msgid "CNTRLMNU_OPEN_MAIN"
 msgstr "Hoofdmenu openen"
 
+#, fuzzy
 msgid "MODMNU_REPLAYER"
 msgstr "Module replayer"
 
@@ -2025,21 +1738,6 @@ msgstr "Host"
 msgid "PICKER_JOIN"
 msgstr "Meedoen"
 
-msgid "PICKER_NETMODE"
-msgstr "Netwerkmodus:"
-
-msgid "PICKER_NETAUTO"
-msgstr "Auto (aanbevolen)"
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr "Pakket-server"
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr "Peer-to-peer"
-
 msgid "PICKER_NETRATE"
 msgstr "Pakket Ticrate:"
 
@@ -2054,9 +1752,11 @@ msgstr "Spelmodus:"
 msgid "PICKER_COOP"
 msgstr "Coöperatie"
 
+#, fuzzy
 msgid "PICKER_DM"
 msgstr "Deathmatch"
 
+#, fuzzy
 msgid "PICKER_TDM"
 msgstr "Team Deathmatch"
 
@@ -2088,6 +1788,7 @@ msgstr "255 = Willekeurig"
 msgid "PICKER_IP"
 msgstr "Host-IP:"
 
+#, fuzzy
 msgid "PICKER_TDMLABEL"
 msgstr "Team Deathmatch:"
 
@@ -2095,6 +1796,7 @@ msgstr "Team Deathmatch:"
 msgid "TXT_SAYTEAM"
 msgstr "Zeg (team):"
 
+#, fuzzy
 msgid "MISCMNU_DISCORDRPC"
 msgstr "Discord Rich Presence"
 

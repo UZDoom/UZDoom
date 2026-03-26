@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-18 19:00+0000\n"
-"Last-Translator: \"Başar Köse (Turkish Mauser)\" <memerprime8@gmail.com>\n"
+"PO-Revision-Date: 2026-03-14 22:34+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/common/"
 "tr/>\n"
 "Language: tr\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1-dev\n"
-"HeaderCode: tr\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Y veya N tuşuna basın."
@@ -32,12 +31,9 @@ msgstr ""
 msgid "SAFEMESSAGE"
 msgstr "Bunu gerçekten yapmak istiyor musun?"
 
-msgid "NOTSET"
-msgstr "Ayarlanmamış"
-
 msgid "QSPROMPT"
 msgstr ""
-"%s'\n"
+"'%s'\n"
 "\n"
 "adlı oyununuzun üzerine hızlı kaydetme?\n"
 "\n"
@@ -45,7 +41,7 @@ msgstr ""
 
 msgid "QLPROMPT"
 msgstr ""
-"%s'\n"
+"'%s'\n"
 "\n"
 "adlı oyunu hızlı yüklemek istiyor musunuz?\n"
 "\n"
@@ -94,7 +90,7 @@ msgid "MNU_NOFILES"
 msgstr "Dosya yok"
 
 msgid "MNU_DELETESG"
-msgstr "Gerçekten kayıt oyununu silmek istiyor musunuz?\n"
+msgstr "Gerçekten kayıt oyununu silmek istiyor musunuz?"
 
 msgid "OPTVAL_OFF"
 msgstr "Kapalı"
@@ -215,10 +211,10 @@ msgstr "Fare bakışı"
 
 # Look doesn't change the aim! It only alters the view pitch
 msgid "CNTRLMNU_LOOKUP"
-msgstr "Yukarı bak."
+msgstr "Yukarı bak"
 
 msgid "CNTRLMNU_LOOKDOWN"
-msgstr "Aşağı bak."
+msgstr "Aşağı bak"
 
 msgid "CNTRLMNU_CENTERVIEW"
 msgstr "Merkezden görünüm"
@@ -241,17 +237,11 @@ msgstr "Eylem"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Eylem Kontrollerini Özelleştirme"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Sohbet"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "Çok Oyunculu"
 
 msgid "CNTRLMNU_SAY"
 msgstr "Söyle"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Sohbet Kontrollerini Özelleştirme"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Silah Kontrollerini Özelleştirme"
@@ -368,9 +358,6 @@ msgstr "Takip Kamerası"
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Ekran görüntüsü"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Açık konsol"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "Duraklat"
 
@@ -409,9 +396,6 @@ msgstr "Mesajları Değiştir"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Oyundan Çık"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Gama Ayarlama"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Fareyi etkinleştir"
@@ -531,19 +515,21 @@ msgstr "Ölü bölge"
 msgid "JOYMNU_NOAXES"
 msgstr "Yapılandırılabilir eksen yok"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "Hiçbiri"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Dönüş"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Yukarı/Aşağı Bakmak"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "İleriye Doğru"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Strafing"
 
@@ -594,9 +580,6 @@ msgstr "Zeytin"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Bej"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Açık Yeşil"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Açık Mavi"
@@ -650,7 +633,7 @@ msgid "OPTVAL_NEVER"
 msgstr "Asla"
 
 msgid "PLYRMNU_AUTOAIM"
-msgstr ""
+msgstr "Otomatik nişan"
 
 msgid "PLYRMNU_ALWAYSRUN"
 msgstr "Daima Koş"
@@ -664,23 +647,11 @@ msgstr "Dikey Senkronizasyon"
 msgid "DSPLYMNU_MODELS"
 msgstr "Modeller"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Ölçekli artı işareti"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Durum Çubuğu Ölçeği"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Mesajlar"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Merkez mesajları"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Titreşimli mesaj Ekranı"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Mesaj Ölçeği"
 
 msgid "MNU_COLORPICKER"
 msgstr "Renk Seçiniz"
@@ -703,32 +674,23 @@ msgstr "Harita Renklerini Özelleştirin"
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Varsayılan özel renkleri geri yükleme"
 
-msgid "SNDMNU_SNDENABLED"
-msgstr "Ses etkin"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Müzik etkin"
-
-msgid "OPTVAL_4000HZ"
-msgstr ""
-
 msgid "OPTVAL_8000HZ"
-msgstr ""
+msgstr "8000 Hz"
 
 msgid "OPTVAL_11025HZ"
-msgstr ""
+msgstr "11025 Hz"
 
 msgid "OPTVAL_22050HZ"
-msgstr ""
+msgstr "22050 Hz"
 
 msgid "OPTVAL_32000HZ"
-msgstr ""
+msgstr "32000 Hz"
 
 msgid "OPTVAL_44100HZ"
-msgstr ""
+msgstr "44100 Hz"
 
 msgid "OPTVAL_48000HZ"
-msgstr ""
+msgstr "48000 Hz"
 
 msgid "OPTVAL_64SAMPLES"
 msgstr "64 örnek"
@@ -755,10 +717,10 @@ msgid "OPTSTR_AUTO"
 msgstr "Otomatik"
 
 msgid "OPTSTR_MONO"
-msgstr ""
+msgstr "Mono"
 
 msgid "OPTSTR_STEREO"
-msgstr ""
+msgstr "Stereo"
 
 msgid "OPTSTR_PROLOGIC"
 msgstr "Dolby Pro Logic Dekoder"
@@ -808,9 +770,6 @@ msgstr "Sahaları rastgele ayarlayın"
 msgid "SNDMNU_CHANNELS"
 msgstr "Ses kanalları"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Ses arka ucu"
-
 msgid "SNDMNU_OPENAL"
 msgstr "OpenAL seçenekleri"
 
@@ -824,10 +783,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "Modül yeniden oynatıcı seçenekleri"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Midi oynatıcı seçenekleri"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Menülerde Ses"
+msgstr "MIDI oynatıcı seçenekleri"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Gelişmiş Ses Seçenekleri"
@@ -857,7 +813,7 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "MIDI sesleri"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "Küresel"
@@ -867,9 +823,6 @@ msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Küresel Freeverb"
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Yama seti"
 
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Kazanç"
@@ -884,25 +837,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr "Koro"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Timidity yapılandırma dosyası"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Bağıl hacim"
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "WildMidi yapılandırma dosyası"
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Yapılandırma seçin"
@@ -912,9 +856,6 @@ msgstr "Gelişmiş Yeniden Örnekleme"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr ""
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "OPL Emülatör Çekirdeği"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Emülatörü PCM hızında çalıştırın"
@@ -939,9 +880,6 @@ msgstr "OPN2 Emülatör Çekirdeği"
 
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "GUS Emülasyonu"
-
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "GUS yapılandırma dosyası"
 
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "DMXGUS dosyalarını okuma"
@@ -1030,19 +968,19 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Hacim artırma"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr "Aptal"
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr "Çip makinesi"
+msgstr "Çip-matik"
 
 msgid "OPTVAL_MAMEOPL2"
 msgstr ""
 
 msgid "OPTVAL_DOSBOXOPL3"
-msgstr ""
+msgstr "DOSKutusu OPL3"
 
 msgid "OPTVAL_JAVAOPL3"
 msgstr ""
@@ -1057,11 +995,13 @@ msgid "OPTVAL_YMFMOPL3"
 msgstr ""
 
 msgid "OPTVAL_NUKEDOPL3"
-msgstr "Bombalanmış OPL3"
+msgstr "Nuked OPL3"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
 msgstr "OPL2-LLE (Sisteme ağır!)"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
 msgstr "OPL3-LLE (Sisteme ağır!)"
 
@@ -1074,27 +1014,27 @@ msgstr "Neko Projesi II Kai OPNA"
 msgid "OPTVAL_MAMEOPNA"
 msgstr ""
 
-msgid "OPTVAL_PMDWINOPNA"
-msgstr ""
-
 msgid "OPTVAL_OPALOPL3"
 msgstr ""
 
 msgid "OPTVAL_NUKEDOPL3174"
-msgstr "Bombalanmış OPL3 v1.7.4"
+msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr "Bombalanmış OPN2 (YM3438)"
+msgstr "Nuked OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr "Bombalanmış OPN2 (YM2612)"
+msgstr "Nuked OPN2 (YM2612)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YM2612LLE"
 msgstr "OPN2-LLE (YM2612) (Sisteme ağır!)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YM3438LLE"
 msgstr "OPN2-LLE (YM3438) (Sisteme ağır!)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YMF276LLE"
 msgstr "OPN2-LLE (YMF276) (Sisteme ağır!)"
 
@@ -1189,13 +1129,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Palet"
@@ -1317,12 +1257,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr "Doku Seçenekleri"
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Dokular etkinleştirildi"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Yüksek çözünürlüklü dokuları etkinleştir"
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Yüksek Kalite Yeniden Boyutlandırma modu"
 
@@ -1350,12 +1284,6 @@ msgstr "GL dokularını önceden önbelleğe alma"
 msgid "VIDMNU_TITLE"
 msgstr "Video Modu"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Ölçeklendirilmiş (En Yakın)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Ölçeklendirilmiş (Doğrusal)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "Posta kutusu"
 
@@ -1371,17 +1299,11 @@ msgstr "Tam Ekran"
 msgid "VIDMNU_HIDPI"
 msgstr "Retina/HiDPI desteği"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "En boy oranı"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Kuvvet en-boy oranı"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Zorlanmış oran stili"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "5:4 en boy oranını etkinleştirin"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Çözünürlük ölçeği"
@@ -1467,14 +1389,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "Tercih Edilen Rendering API"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Sol+sağ birleştirme Alt/Ctrl/Shift"
@@ -1503,6 +1425,7 @@ msgstr "Hızlı kaydetme rotasyonu"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Rotasyondaki quicksave sayısı"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Menü Temiz Ölçeklendirmeyi Devre Dışı Bırak"
 
@@ -1546,95 +1469,6 @@ msgstr "Ortamı Düzenle"
 msgid "REVMNU_NEW"
 msgstr "Yeni Çevre"
 
-msgid "REVMNU_REVERT"
-msgstr "Ayarları geri döndür"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Çevre Boyutu"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Çevre Yayılması"
-
-msgid "REVMNU_ROOM"
-msgstr "Oda"
-
-msgid "REVMNU_ROOM_HF"
-msgstr "Oda HF"
-
-msgid "REVMNU_ROOM_LF"
-msgstr "Oda LF"
-
-msgid "REVMNU_DECAY_TIME"
-msgstr "Yokolma zamanı"
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Yokolma HF Oranı"
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Yokolma LF Oranı"
-
-msgid "REVMNU_REFLECTIONS"
-msgstr "Yansımalar"
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Yansıma Gecikmesi"
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "X Ekseninde Yansımanın Yönü"
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Y Ekseninde Yansımanın Yönü"
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Z Ekseninde Yansımanın Yönü"
-
-msgid "REVMNU_REVERB"
-msgstr "Yankı"
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Yankı Gecikmesi"
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "X Ekseninde Yankı Yönü"
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Y Ekseninde Yankı Yönü"
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Z Ekseninde Yankı Yönü"
-
-msgid "REVMNU_ECHO_TIME"
-msgstr "Yankı Zamanı"
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Yankı Derinliği"
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Modulasyon Zamanı"
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Modülasyon Derinliği"
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Hava Emilimi HF"
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF Göndermesi"
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF Göndermesi"
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Oda Rolloff Faktörü"
-
-msgid "REVMNU_DIFFUSION"
-msgstr "Difüzyon"
-
-msgid "REVMNU_DENSITY"
-msgstr "Yoğunluk"
-
 msgid "REVMNU_Reflections_Scale"
 msgstr "Yansıma boyutu"
 
@@ -1675,7 +1509,7 @@ msgid "REVMNU_Create"
 msgstr "Oluştur"
 
 msgid "REVMNU_Save"
-msgstr "Kaydet..."
+msgstr "Kaydet…"
 
 msgid "REVMNU_File_name"
 msgstr "Dosya adı"
@@ -1689,9 +1523,6 @@ msgstr "Vulkan Seçenekleri (Deneysel)"
 msgid "VK_TITLE"
 msgstr "Vulkan Seçenekleri"
 
-msgid "VKMNU_ENABLE"
-msgstr "Vulkan'ı Etkinleştir"
-
 msgid "VKMNU_DEVICE"
 msgstr "Vulkan Cihaz Kimliği"
 
@@ -1704,24 +1535,20 @@ msgstr "Uyarı: Vulkan işleyici son derece deneyseldir!"
 msgid "VK_RESTART"
 msgstr "Bu seçeneklerin etkili olması için yeniden başlatılması gerekecektir."
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Vulkan Aygıtını Seçin"
-
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Eski xBRZ"
@@ -1739,123 +1566,12 @@ msgid "OS_NO_RESULTS"
 msgstr "Sonuç bulunamadı."
 
 msgid "OS_LABEL"
-msgstr "Ara:"
-
-msgid "TXT_OBITUARY1"
-msgstr "%o, %k tarafından balık gibi kemirildi."
-
-msgid "TXT_OBITUARY2"
-msgstr "%o, %k tarafından hadım edildi."
-
-msgid "TXT_OBITUARY3"
-msgstr ""
-
-msgid "TXT_OBITUARY4"
-msgstr "%o, %k tarafından yok edildi."
-
-msgid "TXT_OBITUARY5"
-msgstr ""
-
-msgid "TXT_OBITUARY6"
-msgstr "%o, %k tarafından doğrandı."
-
-msgid "TXT_OBITUARY7"
-msgstr ""
-
-msgid "TXT_OBITUARY8"
-msgstr "%o, %k tarafından dümdüz edildi."
-
-msgid "TXT_OBITUARY9"
-msgstr "%o, %k tarafından dümdüz edildi."
-
-msgid "TXT_OBITUARY10"
-msgstr "%o, %k tarafından dümdüz edildi."
-
-msgid "TXT_OBITUARY11"
-msgstr "%o, %k tarafından öldürüldü."
-
-msgid "TXT_OBITUARY12"
-msgstr "%o, %k tarafından kıyma haline getirildi."
-
-msgid "TXT_OBITUARY13"
-msgstr "%o, %k tarafından katledildi"
-
-msgid "TXT_OBITUARY14"
-msgstr "%o, %k tarafından sakat bırakıldı."
-
-msgid "TXT_OBITUARY15"
-msgstr "%o, %k tarafından öldürüldü."
-
-msgid "TXT_OBITUARY16"
-msgstr "%o, %k tarafından yeni bir delik açıldı."
-
-msgid "TXT_OBITUARY17"
-msgstr "%o, %k tarafından katledildi."
-
-msgid "TXT_OBITUARY18"
-msgstr "%o, %k tarafından ezildi."
-
-msgid "TXT_OBITUARY19"
-msgstr "%o, %k tarafından sodomize edildi."
-
-msgid "TXT_OBITUARY20"
-msgstr "%o, %k tarafından parçalandı."
-
-msgid "TXT_OBITUARY21"
-msgstr "%o, %k tarafından ezildi."
-
-msgid "TXT_OBITUARY22"
-msgstr "%o, %k tarafından boğazlandı."
-
-msgid "TXT_OBITUARY23"
-msgstr "%o, %k tarafından harcandı."
-
-msgid "TXT_OBITUARY24"
-msgstr "%o, %k tarafından öldürüldü."
-
-msgid "TXT_OBITUARY25"
-msgstr "%o, %k tarafından cehenneme gönderildi."
-
-msgid "TXT_OBITUARY26"
-msgstr "%o, %k tarafından öldürüldü."
-
-msgid "TXT_OBITUARY27"
-msgstr "%o, %k tarafından öldürüldü."
-
-msgid "TXT_OBITUARY28"
-msgstr "%o, %k'in hışmına uğradı."
-
-msgid "TXT_OBITUARY29"
-msgstr "%o, %k tarafından püskürtüldü."
-
-msgid "TXT_OBITUARY30"
-msgstr "%o, %k tarafından köpek etine dönüştürüldü."
-
-msgid "TXT_OBITUARY31"
-msgstr "%o, %k tarafından dövüldü."
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o dışkıdır"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o hamburgerdir"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o skrotum ayrılması yaşadı"
-
-msgid "TXT_SELFOBIT4"
-msgstr "Nüfus kontrolü için %o gönüllü oldu"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o intihar etti"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o Darwin Ödülü'nü aldı"
+msgstr "Arama yapın:"
 
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr ""
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1888,44 +1604,14 @@ msgstr "Yalnızca değiştirilmiş"
 msgid "TXT_UNKNOWN"
 msgstr "Bilinmiyor"
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr ""
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr ""
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Bu kayıt oyunu şu dosyalara ihtiyaç duyar"
-
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Çok Oyunculu Seçenekler"
-
-msgid "OPTMNU_INPUT"
-msgstr "Girdi Seçenekleri"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Sistem Seçenekleri"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Işık Seçenekleri"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Sprite Seçenekleri"
 
 msgid "GLPREFMNU_CORONAS"
 msgstr "Koronalar"
 
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Görünüş"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Gelişmiş Görüntüleme Seçenekleri"
-
 msgid "PICKER_SELECT"
-msgstr "Hangi oyunu oynayacağınızı seçin"
+msgstr "Hangi oyunu oynayacağınızı seçin."
 
 msgid "PICKER_PLAY"
 msgstr "Oyunu Başlat"
@@ -1946,7 +1632,7 @@ msgid "PICKER_NOAUTOLOAD"
 msgstr "Otomatik yükleme yok"
 
 msgid "PICKER_DONTASK"
-msgstr "Bir daha sorma."
+msgstr "Bir daha sorma"
 
 msgid "PICKER_LIGHTS"
 msgstr "Işık tanımları"
@@ -2028,21 +1714,6 @@ msgstr ""
 msgid "PICKER_JOIN"
 msgstr ""
 
-msgid "PICKER_NETMODE"
-msgstr ""
-
-msgid "PICKER_NETAUTO"
-msgstr ""
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr ""
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr ""
-
 msgid "PICKER_NETRATE"
 msgstr ""
 
@@ -2109,3 +1780,9 @@ msgstr ""
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr ""
+
+msgid "ACCMNU_TITLE"
+msgstr "Erişebilirlik Seçenekleri"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Mesaj sırası boyutu"

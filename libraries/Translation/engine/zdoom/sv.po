@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-24 17:00+0000\n"
-"Last-Translator: Boondorl <boondorl0@gmail.com>\n"
+"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/sv/>\n"
 "Language: sv\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: sv\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Tryck på en tangent."
@@ -21,52 +20,66 @@ msgid "SECRETMESSAGE"
 msgstr "En hemlighet avslöjas!"
 
 msgid "D_DEVSTR"
-msgstr "Oanvändbart läge på.\n"
+msgstr "Oanvändbart läge: PÅ"
 
+#, fuzzy
 msgid "QUITMSG"
-msgstr "Är du säker på att du vill sluta med detta fantastiska spel?"
+msgstr ""
+"Är du säker på att du vill sluta\n"
+"med detta fantastiska spel?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
 msgid "LOADNET"
 msgstr ""
 "Du kan inte göra lastning när du är i ett nätspel!\n"
+"\n"
 "Tryck på en tangent."
 
 msgid "QLOADNET"
 msgstr ""
 "Du kan inte snabblasta under ett nätspel!\n"
+"\n"
 "Tryck på en tangent."
 
 msgid "QSAVESPOT"
 msgstr ""
 "Du har inte valt en plats för snabbsparning ännu!\n"
+"\n"
 "Tryck på en tangent."
 
 msgid "NEWGAME"
 msgstr ""
-"Du kan inte starta ett nytt spel när du är i ett nätspel. \n"
+"Du kan inte starta ett nytt\n"
+"spel när du är i ett nätspel. \n"
+"\n"
 "Tryck på en tangent."
 
 msgid "NIGHTMARE"
 msgstr ""
 "Är du säker? Den här färdighetsnivån\n"
 "är inte ens tillnärmelsevis rättvis.\n"
+"\n"
 "Tryck på Y eller N."
 
 msgid "SWSTRING"
 msgstr ""
-"Detta är sharewareversionen av Doom. Du måste beställa hela trilogin.\n"
+"Detta är sharewareversionen av Doom.\n"
+"\n"
+"Du måste beställa hela trilogin.\n"
+"\n"
 "Tryck på en tangent."
 
 msgid "NETEND"
 msgstr ""
 "Du kan inte avsluta ett nätspel!\n"
+"\n"
 "Tryck på en tangent."
 
 msgid "ENDGAME"
 msgstr ""
 "Är du säker på att du vill avsluta spelet?\n"
+"\n"
 "Tryck på Y eller N."
 
 msgid "RAVENQUITMSG"
@@ -80,73 +93,106 @@ msgid "DOSY"
 msgstr "(Tryck på Y för att avsluta)"
 
 msgid "QUITMSG1"
-msgstr "Lämna inte spelet, det finns fler demoner att skåla för!"
+msgstr ""
+"Lämna inte spelet, det finns\n"
+"fler demoner att skåla för!"
 
 msgid "QUITMSG2"
-msgstr "Vi sticker - det här håller på att bli ett blodbad!"
+msgstr ""
+"Vi sticker—det här håller\n"
+"på att bli ett blodbad!"
 
 msgid "QUITMSG3"
-msgstr "Jag skulle inte lämna om jag var du. DOS är mycket värre."
+msgstr ""
+"Jag skulle inte lämna om jag var du.\n"
+"DOS är mycket värre."
 
 msgid "QUITMSG4"
-msgstr "Du försöker säga att du gillar DOS bättre än mig, eller hur?"
+msgstr ""
+"Du försöker säga att du gillar DOS\n"
+"bättre än mig, eller hur?"
 
 msgid "QUITMSG5"
-msgstr "Gå inte än -- det finns en demon runt hörnet!"
+msgstr ""
+"Gå inte än—det finns\n"
+"en demon runt hörnet!"
 
 msgid "QUITMSG6"
-msgstr "Nästa gång du kommer hit ska jag skåla för dig."
+msgstr ""
+"Nästa gång du kommer hit\n"
+"ska jag skåla för dig."
 
 msgid "QUITMSG7"
 msgstr "Gå du bara och se om jag bryr mig."
 
 # More info here.
 msgid "QUITMSG8"
-msgstr "Vill du sluta? Då har du förlorat en åttondel!"
+msgstr ""
+"Vill du sluta?\n"
+"Då har du förlorat en åttondel!"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
-"Gå inte nu, det finns en dimensionell shambler som väntar vid DOS-prompten!"
+"Gå inte nu, det finns en\n"
+"dimensionell shambler som\n"
+"väntar vid DOS-prompten!"
 
 msgid "QUITMSG10"
-msgstr "Försvinn härifrån och gå tillbaka till dina tråkiga program."
+msgstr ""
+"Försvinn härifrån och gå\n"
+"tillbaka till dina tråkiga program."
 
 msgid "QUITMSG11"
-msgstr "Om jag var din chef skulle jag döda dig på en minut!"
+msgstr ""
+"Om jag var din chef skulle\n"
+"jag döda dig på en minut!"
 
 msgid "QUITMSG12"
-msgstr "Lyssna, kompis. Om du går nu förlorar du antalet döda!"
+msgstr ""
+"Lyssna, kompis. Om du går\n"
+"nu förlorar du antalet döda!"
 
+#, fuzzy
 msgid "QUITMSG13"
-msgstr "Gå bara. När du kommer tillbaka väntar jag med ett slagträ."
+msgstr ""
+"Gå bara. När du kommer tillbaka\n"
+"väntar jag med ett slagträ."
 
 msgid "QUITMSG14"
-msgstr "Du har tur att jag inte slår dig för att du funderar på att gå."
+msgstr ""
+"Du har tur att jag inte slår dig\n"
+"för att du funderar på att gå."
 
 msgid "QUITMSG15"
-msgstr "Vart är du på väg?! Hur blir det med upproret?"
+msgstr ""
+"Vart är du på väg?!\n"
+"Hur blir det med upproret?"
 
 msgid "QUITMSG16"
-msgstr "Carnage interruptus... Vilket hångel!"
+msgstr ""
+"Carnage interruptus…\n"
+"Vilket hångel!"
 
 msgid "QUITMSG17"
-msgstr "Men du är hoppet - min enda chans!!"
+msgstr ""
+"Men du är hoppet\n"
+"—min enda chans!!"
 
 msgid "QUITMSG18"
 msgstr "Ingen lämnar Blackbird."
 
 msgid "QUITMSG19"
-msgstr "Jag trodde att du var annorlunda..."
+msgstr "Jag trodde att du var annorlunda…"
 
 msgid "QUITMSG20"
 msgstr "Okej! Döda bara och spring!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Du kan sluta... \n"
-"men du kan inte gömma dig..."
+"Du kan sluta…\n"
+"men du kan inte gömma dig…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -154,46 +200,60 @@ msgstr ""
 "Mamma säger att det är dags för middag?"
 
 msgid "QUITMSG23"
-msgstr "Ge inte upp nu, det finns fortfarande flemoider på fri fot!"
+msgstr ""
+"Ge inte upp nu, det finns\n"
+"fortfarande flemoider på fri fot!"
 
 msgid "QUITMSG24"
-msgstr "Ge inte upp - flemoiderna kommer att ta överhanden!"
+msgstr ""
+"Ge inte upp—flemoiderna\n"
+"kommer att ta överhanden!"
 
 msgid "QUITMSG25"
-msgstr "Gå inte nu. Vi behöver din hjälp!"
+msgstr ""
+"Gå inte nu.\n"
+"Vi behöver din hjälp!"
 
 msgid "QUITMSG26"
-msgstr "Jag hoppas att du bara tar en paus för Chex(R) party mix."
+msgstr ""
+"Jag hoppas att du bara tar\n"
+"en paus för Chex® party mix."
 
 msgid "QUITMSG27"
-msgstr "Sluta inte nu! Vi behöver din hjälp!"
+msgstr ""
+"Sluta inte nu!\n"
+"Vi behöver din hjälp!"
 
 msgid "QUITMSG28"
-msgstr "Överge inte Intergalactic Federation of Cereals!"
+msgstr ""
+"Överge inte Intergalactic\n"
+"Federation of Cereals!"
 
 msgid "QUITMSG29"
-msgstr "Den riktiga Chex(R)-krigaren skulle inte ge upp så snabbt!"
+msgstr ""
+"Den riktiga Chex®-krigaren\n"
+"skulle inte ge upp så snabbt!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr "Du har en pickup"
 
 msgid "PD_ANY"
-msgstr "Vilken nyckel som helst kan öppna den här dörren."
+msgstr "Vilken nyckel som helst kan öppna den här dörren"
 
 msgid "PD_ANYOBJ"
 msgstr "Alla nycklar aktiverar det här objektet"
 
 msgid "PD_ALL3"
-msgstr "Du behöver alla tre nycklarna för att öppna den här dörren."
+msgstr "Du behöver alla tre nycklarna för att öppna den här dörren"
 
 msgid "PD_ALL3O"
-msgstr "Du behöver alla tre nycklarna för att aktivera det här föremålet."
+msgstr "Du behöver alla tre nycklarna för att aktivera det här föremålet"
 
 msgid "PD_ALL6"
-msgstr "Du behöver alla sex nycklar för att öppna den här dörren."
+msgstr "Du behöver alla sex nycklar för att öppna den här dörren"
 
 msgid "PD_ALL6O"
-msgstr "Du behöver alla sex nycklar för att aktivera detta objekt."
+msgstr "Du behöver alla sex nycklar för att aktivera detta objekt"
 
 msgid "PD_ALLKEYS"
 msgstr "Du behöver alla nycklar"
@@ -208,13 +268,13 @@ msgid "HUSTR_TALKTOSELF2"
 msgstr "Vem är där?"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr "Du skrämmer dig själv."
+msgstr "Du skrämmer dig själv"
 
 msgid "HUSTR_TALKTOSELF4"
-msgstr "Du börjar rasa."
+msgstr "Du börjar rasa"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Du har förlorat det..."
+msgstr "Du har förlorat det…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Meddelande skickat]"
@@ -226,16 +286,16 @@ msgid "STSTR_NOMUS"
 msgstr "Omöjligt val"
 
 msgid "STSTR_DQDON"
-msgstr "Gradlöshetsläge på"
+msgstr "Gradlöshetsläge: PÅ"
 
 msgid "STSTR_DQDOFF"
-msgstr "Gradlöshetsläge av"
+msgstr "Gradlöshetsläge: AV"
 
 msgid "STSTR_DQD2ON"
-msgstr "Ultimat gradlöshetsläge på"
+msgstr "Ultimat gradlöshetsläge: PÅ"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Ultimat gradlöshetsläge av"
+msgstr "Ultimat gradlöshetsläge: AV"
 
 msgid "STSTR_KFAADDED"
 msgstr "Mycket lycklig ammunition har lagts till"
@@ -244,16 +304,18 @@ msgid "STSTR_FAADDED"
 msgstr "Ammo (inga nycklar) Tillagd"
 
 msgid "STSTR_NCON"
-msgstr "Inget klippningsläge på"
+msgstr "Inget klippningsläge: PÅ"
 
 msgid "STSTR_NCOFF"
-msgstr "Inget klippningsläge av"
+msgstr "Inget klippningsläge: AV"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Inget klippningsläge 2 på"
+msgstr "Inget klippningsläge 2: PÅ"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Inget klippningsläge 2 av"
+msgstr "Inget klippningsläge 2: AV"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -270,28 +332,28 @@ msgstr "Start av strömmen växlade"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... suger inte - GM"
+msgstr "… suger inte - GM"
 
 msgid "STSTR_CLEV"
-msgstr "Ändrad nivå ..."
+msgstr "Ändrad nivå…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Buddha-läge på"
+msgstr "Buddha-läge: PÅ"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Buddha-läge avstängt"
+msgstr "Buddha-läge: AV"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Ultimat Buddha-läge på"
+msgstr "Ultimat Buddha-läge: PÅ"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Ultimat Buddha-läge av"
+msgstr "Ultimat Buddha-läge: AV"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Makt på"
+msgstr "Makt: PÅ"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Makt av"
+msgstr "Makt: AV"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Full hälsa"
@@ -300,22 +362,22 @@ msgid "TXT_CHEATKEYS"
 msgstr "Alla tangenter"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Ljud felsökning på"
+msgstr "Ljud felsökning: PÅ"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Ljud felsökning av"
+msgstr "Ljud felsökning: AV"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Försöker du fuska? Nu dör du!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Fuskare - du förtjänar inte vapen."
+msgstr "Fuskare—du förtjänar inte vapen"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Ticker på"
+msgstr "Ticker: PÅ"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker av"
+msgstr "Ticker: AV"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Du fick det"
@@ -327,13 +389,13 @@ msgid "TXT_GOTSTUFF"
 msgstr "Du har grejerna!"
 
 msgid "TXT_FREEZEON"
-msgstr "Frysningsläge på"
+msgstr "Frysningsläge: PÅ"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Frysningsläge av"
+msgstr "Frysningsläge: AV"
 
 msgid "TXT_STRANGE"
-msgstr "Du känner dig konstig..."
+msgstr "Du känner dig konstig…"
 
 msgid "TXT_STRANGER"
 msgstr "Du känner dig ännu konstigare."
@@ -342,22 +404,22 @@ msgid "TXT_NOTSTRANGE"
 msgstr "Du känner dig som dig själv igen."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Blystövlar på"
+msgstr "Blystövlar: PÅ"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Blykängor av"
+msgstr "Blykängor: AV"
 
 msgid "TXT_LIGHTER"
-msgstr "Du känner dig lättare."
+msgstr "Du känner dig lättare"
 
 msgid "TXT_GRAVITY"
 msgstr "Tyngdkraften tynger ner dig"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Inget mål på"
+msgstr "Inget mål: PÅ"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Inget mål av"
+msgstr "Inget mål: AV"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Skräck skakar av rädsla!\""
@@ -366,10 +428,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Inget mer träsktorns rustning"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "chasecam på"
+msgstr "Chasecam: PÅ"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "chasecam av"
+msgstr "Chasecam: AV"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 skurk dödad"
@@ -395,25 +457,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "Vad vill du döda utanför ett spel?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Frysta spelaregenskaper avstängda"
+msgstr "Frysta spelaregenskaper: AV"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Följningsläget av"
+msgstr "Följningsläget: AV"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Följningsläget på"
+msgstr "Följningsläget: PÅ"
 
 msgid "AMSTR_GRIDON"
-msgstr "Rutnät på"
+msgstr "Rutnät: PÅ"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Rutnät av"
+msgstr "Rutnät: AV"
 
 msgid "AMSTR_TEXON"
-msgstr "Texturläge på"
+msgstr "Texturläge: PÅ"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Texturläge av"
+msgstr "Texturläge: AV"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Markerad punkt"
@@ -431,7 +493,7 @@ msgid "SPREEKILLSELF"
 msgstr "%o såg bra ut tills han tog livet av sig!"
 
 msgid "SPREEOVER"
-msgstr "%os dödskampanj avslutades av %k."
+msgstr "%os dödskampanj avslutades av %k"
 
 msgid "SPREE5"
 msgstr "%k är på en mordresa!"
@@ -517,7 +579,7 @@ msgstr "Ingång till"
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
-msgstr "Ingång till"
+msgstr "Ingång till:"
 
 msgid "AM_MONSTERS"
 msgstr "Monster:"
@@ -719,13 +781,13 @@ msgid "BETA_BONUS4"
 msgstr "Plockade upp en ohelig bibel."
 
 msgid "PD_BLUEO"
-msgstr "Du behöver en blå nyckel för att aktivera det här föremålet."
+msgstr "Du behöver en blå nyckel för att aktivera det här föremålet"
 
 msgid "PD_REDO"
-msgstr "Du behöver en röd nyckel för att aktivera det här föremålet."
+msgstr "Du behöver en röd nyckel för att aktivera det här föremålet"
 
 msgid "PD_YELLOWO"
-msgstr "Du behöver en gul nyckel för att aktivera det här föremålet."
+msgstr "Du behöver en gul nyckel för att aktivera det här föremålet"
 
 msgid "PD_BLUEK"
 msgstr "Du behöver en blå nyckel för att öppna den här dörren"
@@ -734,43 +796,43 @@ msgid "PD_REDK"
 msgstr "Du behöver en röd nyckel för att öppna den här dörren"
 
 msgid "PD_YELLOWK"
-msgstr "Du behöver en gul nyckel för att öppna den här dörren."
+msgstr "Du behöver en gul nyckel för att öppna den här dörren"
 
 msgid "PD_BLUECO"
-msgstr "Du behöver ett blått kort för att aktivera det här objektet."
+msgstr "Du behöver ett blått kort för att aktivera det här objektet"
 
 msgid "PD_REDCO"
-msgstr "Du behöver ett rött kort för att aktivera det här föremålet."
+msgstr "Du behöver ett rött kort för att aktivera det här föremålet"
 
 msgid "PD_YELLOWCO"
-msgstr "Du behöver ett gult kort för att aktivera det här föremålet."
+msgstr "Du behöver ett gult kort för att aktivera det här föremålet"
 
 msgid "PD_BLUESO"
-msgstr "Du behöver en blå skalle för att aktivera det här objektet."
+msgstr "Du behöver en blå skalle för att aktivera det här objektet"
 
 msgid "PD_REDSO"
-msgstr "Du behöver en röd skalle för att aktivera det här föremålet."
+msgstr "Du behöver en röd skalle för att aktivera det här föremålet"
 
 msgid "PD_YELLOWSO"
-msgstr "Du behöver en gul skalle för att aktivera detta föremål."
+msgstr "Du behöver en gul skalle för att aktivera detta föremål"
 
 msgid "PD_BLUEC"
-msgstr "Du behöver ett blått kort för att öppna den här dörren."
+msgstr "Du behöver ett blått kort för att öppna den här dörren"
 
 msgid "PD_REDC"
-msgstr "Du behöver ett rött kort för att öppna den här dörren."
+msgstr "Du behöver ett rött kort för att öppna den här dörren"
 
 msgid "PD_YELLOWC"
-msgstr "Du behöver ett gult kort för att öppna den här dörren."
+msgstr "Du behöver ett gult kort för att öppna den här dörren"
 
 msgid "PD_BLUES"
-msgstr "Du behöver en blå skalle för att öppna den här dörren."
+msgstr "Du behöver en blå skalle för att öppna den här dörren"
 
 msgid "PD_REDS"
-msgstr "Du behöver en röd skalle för att öppna den här dörren."
+msgstr "Du behöver en röd skalle för att öppna den här dörren"
 
 msgid "PD_YELLOWS"
-msgstr "Du behöver en gul skalle för att öppna den här dörren."
+msgstr "Du behöver en gul skalle för att öppna den här dörren"
 
 msgid "CC_ZOMBIE"
 msgstr "Zombie"
@@ -792,6 +854,7 @@ msgstr ""
 msgid "CC_LOST"
 msgstr "Förlorad själ"
 
+#, fuzzy
 msgid "CC_CACO"
 msgstr "Cacodemon"
 
@@ -949,7 +1012,7 @@ msgid "OB_SHOTGUY"
 msgstr "%o blev skjuten av en hagelgevärskille."
 
 msgid "OB_VILE"
-msgstr "%o blev förbränd av en ärkevilde"
+msgstr "%o blev förbränd av en ärkevilde."
 
 msgid "OB_UNDEAD"
 msgstr "%o kunde inte undvika en återfödds eldklot."
@@ -1141,7 +1204,7 @@ msgid "TXT_WPNGAUNTLETS"
 msgstr "Nekromantikerns handskar"
 
 msgid "TXT_NEEDBLUEKEY"
-msgstr "Du behöver en blå nyckel för att öppna den här dörren."
+msgstr "Du behöver en blå nyckel för att öppna den här dörren"
 
 msgid "TXT_NEEDGREENKEY"
 msgstr "Du behöver en grön nyckel för att öppna den här dörren"
@@ -1239,7 +1302,7 @@ msgid "OB_HERETICIMPHIT"
 msgstr "%o blev hackad av en gargoyle."
 
 msgid "OB_IRONLICH"
-msgstr "%o blev förödd av en järnlich"
+msgstr "%o blev förödd av en järnlich."
 
 msgid "OB_IRONLICHHIT"
 msgstr "%o kom nära och personligt med en järnlich."
@@ -1293,7 +1356,7 @@ msgid "OB_MPPHOENIXROD"
 msgstr "%o blev bränd till aska av %ks fenixstav."
 
 msgid "OB_MPMACE"
-msgstr "%o blev utvisad av %ks eldstöt"
+msgstr "%o blev utvisad av %ks eldstöt."
 
 msgid "OB_MPPSTAFF"
 msgstr "%o fick en klapp av %ks laddade stav."
@@ -1488,7 +1551,7 @@ msgid "TXT_BLOODSCOURGE_PIECE"
 msgstr "Segment av Bloodscourge"
 
 msgid "TXT_NEED_KEY_STEEL"
-msgstr "Du behöver stålnyckeln."
+msgstr "Du behöver stålnyckeln"
 
 msgid "TXT_NEED_KEY_CAVE"
 msgstr "Du behöver grottnyckeln"
@@ -1869,7 +1932,7 @@ msgid "TXT_SCANNER"
 msgstr "Du plockade upp skannern."
 
 msgid "TXT_NEEDMAP"
-msgstr "Skannern fungerar inte utan en karta!\n"
+msgstr "Skannern fungerar inte utan en karta!"
 
 msgid "TXT_PRISONPASS"
 msgstr "Du plockade upp fängelsepasset."
@@ -2013,31 +2076,31 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Du plockade upp ammunitionsväskan."
 
 msgid "MSG_TALISMANRED"
-msgstr "Du har en känsla av att den inte fick röras..."
+msgstr "Du har en känsla av att den inte fick röras…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Vad det än är så hör det inte hemma i den här världen..."
+msgstr "Vad det än är så hör det inte hemma i den här världen…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Det måste göra något..."
+msgstr "Det måste göra något…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Du har superstyrka!"
 
 msgid "TXT_NEEDKEY"
-msgstr "Du har inte nyckeln."
+msgstr "Du har inte nyckeln"
 
 msgid "TXT_NEED_PASSCARD"
-msgstr "Du behöver ett passerkort."
+msgstr "Du behöver ett passerkort"
 
 msgid "TXT_NEED_PASSCARD_DOOR"
-msgstr "Du behöver ett passerkort för att öppna den här dörren."
+msgstr "Du behöver ett passerkort för att öppna den här dörren"
 
 msgid "TXT_NEED_IDCARD"
 msgstr "Du behöver ett ID-kort"
 
 msgid "TXT_NEED_PRISONKEY"
-msgstr "Du har inte nyckeln till fängelset."
+msgstr "Du har inte nyckeln till fängelset"
 
 msgid "TXT_NEED_HANDPRINT"
 msgstr "Handavtryck finns inte i registret"
@@ -2049,7 +2112,7 @@ msgid "TXT_NEED_IDBADGE"
 msgstr "Du behöver ett ID-bricka"
 
 msgid "TXT_NEED_IDBADGE_DOOR"
-msgstr "Du behöver en ID-bricka för att öppna den här dörren."
+msgstr "Du behöver en ID-bricka för att öppna den här dörren"
 
 msgid "TXT_NEED_SILVERKEY"
 msgstr "Du behöver silvernyckeln"
@@ -2064,10 +2127,10 @@ msgid "TXT_NEED_BLUECRYSTAL"
 msgstr "Du behöver den blå kristallen"
 
 msgid "TXT_RETAIL_ONLY"
-msgstr "Det här området finns bara i detaljhandelsversionen av Strife."
+msgstr "Det här området finns bara i detaljhandelsversionen av Strife"
 
 msgid "TXT_DOES_NOT_WORK"
-msgstr "Det verkar inte fungera."
+msgstr "Det verkar inte fungera"
 
 msgid "TXT_NEED_CHALICE"
 msgstr "Du behöver kalken!"
@@ -2481,13 +2544,13 @@ msgid "TXT_COMPLETED_TRAINING"
 msgstr "Grattis! Du har avslutat träningsområdet"
 
 msgid "TXT_QUEST_14"
-msgstr "Du har sprängt kristallen."
+msgstr "Du har sprängt kristallen"
 
 msgid "TXT_QUEST_16"
-msgstr "Du har sprängt portarna."
+msgstr "Du har sprängt portarna"
 
 msgid "TXT_QUEST_27"
-msgstr "Du har sprängt datorn."
+msgstr "Du har sprängt datorn"
 
 msgid "TXT_KILLED_BISHOP"
 msgstr "Du har dödat biskopen!"
@@ -2514,10 +2577,10 @@ msgid "TXT_GOAWAY"
 msgstr "Gå härifrån!"
 
 msgid "TXT_COMM0"
-msgstr "Inkommande meddelande..."
+msgstr "Inkommande meddelande…"
 
 msgid "TXT_COMM1"
-msgstr "Inkommande meddelande från BlackBird..."
+msgstr "Inkommande meddelande från BlackBird…"
 
 msgid "TXT_FINDHELP"
 msgstr "Hitta hjälp"
@@ -2527,10 +2590,10 @@ msgid "TXT_TRADE"
 msgstr "för %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Plockade upp Chex(R) rustningen."
+msgstr "Plockade upp Chex® rustningen."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Plockade upp Super Chex(R) rustningen!"
+msgstr "Plockade upp Super Chex® rustningen!"
 
 msgid "GOTWATER"
 msgstr "Plockade upp ett glas vatten."
@@ -2578,7 +2641,7 @@ msgid "GOTPROPULSORPACK"
 msgstr "Plockade upp en zorch propulsor pack."
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "Plockade upp en phasing zorcher-uppladdning."
+msgstr "Plockade upp en phasing zorcher-uppladdning"
 
 msgid "GOTPHASINGZORCHERPACK"
 msgstr "Plockade upp en phasing zorcher pack."
@@ -2715,7 +2778,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Tryck på escape-tangenten för att fortsätta..."
+"Tryck på escape-tangenten för att fortsätta…"
 
 msgid "CE2TEXT"
 msgstr "Du har gjort det!"
@@ -2728,13 +2791,17 @@ msgstr "Fantastiskt"
 
 msgid "CLOADNET"
 msgstr ""
-"Du kan inte göra lastning när du är i ett nätspel!\n"
+"Du kan inte göra snabbladdning när du är i ett nätspel!\n"
+"\n"
 "Tryck på en tangent."
 
 msgctxt "chex"
 msgid "QSPROMPT"
 msgstr ""
-"Snabbt spara över ditt spel som heter %s?\n"
+"Snabbt spara över ditt spel som heter\n"
+"\n"
+"'%s'?\n"
+"\n"
 "Tryck på Y eller N."
 
 msgctxt "chex"
@@ -2747,12 +2814,16 @@ msgstr ""
 msgctxt "chex"
 msgid "QLPROMPT"
 msgstr ""
-"Vill du snabbladda spelet som heter \"%s\"?\n"
+"Vill du snabbladda spelet som heter\n"
+"\n"
+"\"%s\"?\n"
+"\n"
 "Tryck på Y eller N."
 
 msgid "CNEWGAME"
 msgstr ""
-"Du kan inte starta ett nytt spel när du är i ett nätspel.\n"
+"Du kan inte starta ett nytt \n"
+"pel när du är i ett nätspel.\n"
 "\n"
 "Tryck på en tangent."
 
@@ -2765,7 +2836,7 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"Det här är Chex(R) Quest.\n"
+"Det här är Chex® Quest.\n"
 "\n"
 "framtida nivåer på www.chexquest.com.\n"
 "\n"
@@ -2774,22 +2845,24 @@ msgstr ""
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
-"Du kan inte avsluta ett nätspel!\n"
+"Du kan inte avsluta ett nätuppdrag!\n"
+"\n"
 "Tryck på en tangent."
 
 msgctxt "chex"
 msgid "ENDGAME"
 msgstr ""
-"Är du säker på att du vill avsluta spelet?\n"
+"Är du säker på att du vill avsluta uppdraget?\n"
+"\n"
 "Tryck på Y eller N."
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Oövervinnerligt läge på"
+msgstr "Oövervinnerligt läge: PÅ"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Oövervinnerligt läge av"
+msgstr "Oövervinnerligt läge: AV"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2801,7 +2874,7 @@ msgstr "Super Zorch läggs till"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Ät Chex(R)!"
+msgstr "…Ät Chex®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -2854,7 +2927,7 @@ msgid "SKILL_NIGHTMARE"
 msgstr "Mardröm!"
 
 msgid "CSKILL_BABY"
-msgstr "Det är lätt att göra det."
+msgstr "Det är lätt att göra det"
 
 msgid "CSKILL_EASY"
 msgstr "Inte så klibbigt"
@@ -3018,10 +3091,10 @@ msgid "GMPLYMNU_NORESPAWN"
 msgstr "Monstren återuppstår inte"
 
 msgid "GMPLYMNU_ITEMSRESPAWN"
-msgstr "Föremål återuppstår."
+msgstr "Föremål återuppstår"
 
 msgid "GMPLYMNU_SUPERRESPAWN"
-msgstr "Stora powerups återuppstår."
+msgstr "Stora powerups återuppstår"
 
 msgid "GMPLYMNU_FASTMONSTERS"
 msgstr "Snabba monster"
@@ -3189,7 +3262,7 @@ msgid "CMPTMNU_MINOTAUR"
 msgstr "Ingen Minotaur golvlåga flammar i vatten"
 
 msgid "CMPTMNU_NOTOSSDROPS"
-msgstr "Spawner föremål faller på golvet."
+msgstr "Spawner föremål faller på golvet"
 
 msgid "CMPTMNU_DEHACKEDBEHAVIOR"
 msgstr "DehackEd-beteende"
@@ -3234,7 +3307,7 @@ msgid "CMPTMNU_PHYSICSBEHAVIOR"
 msgstr "Fysikbeteende"
 
 msgid "CMPTMNU_NOPASSOVER"
-msgstr "Aktörerna är oändligt höga."
+msgstr "Aktörerna är oändligt höga"
 
 msgid "CMPTMNU_BOOMSCROLL"
 msgstr "Boom scrollers är additiva"
@@ -3249,13 +3322,13 @@ msgid "CMPTMNU_RAVENSCROLL"
 msgstr "Raven-skrollers använder ursprunglig hastighet"
 
 msgid "CMPTMNU_TRACE"
-msgstr "Självbetjäningssektorer blockerar inte skott."
+msgstr "Självbetjäningssektorer blockerar inte skott"
 
 msgid "CMPTMNU_HITSCAN"
 msgstr "Använd Doom-kod för hitscan-kontroller"
 
 msgid "CMPTMNU_MISSILECLIP"
-msgstr "Använd Doom-höjder för missilklippning."
+msgstr "Använd Doom-höjder för missilklippning"
 
 msgid "CMPTMNU_RENDERINGBEHAVIOR"
 msgstr "Beteende vid rendering"
@@ -3264,7 +3337,7 @@ msgid "CMPTMNU_POLYOBJ"
 msgstr "Rita polyobjekt som Hexen"
 
 msgid "CMPTMNU_MASKEDMIDTEX"
-msgstr "Ignorera Y-förskjutningar på maskerade midtexturer."
+msgstr "Ignorera Y-förskjutningar på maskerade midtexturer"
 
 msgid "CMPTMNU_SPRITESORT"
 msgstr "Invertera sprite-sortering"
@@ -3284,14 +3357,11 @@ msgstr "Inst. rörliga golv är inte tysta"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sektorljud använder centrum som källa"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Ljudet upphör när aktören försvinner"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Använd original ljudmålshantering"
 
 msgid "CMPTMNU_TELEPORT"
-msgstr "Skriptbaserade teleporter utlöser inte sektoråtgärder."
+msgstr "Skriptbaserade teleporter utlöser inte sektoråtgärder"
 
 msgid "CMPTMNU_PUSHWINDOW"
 msgstr "Linjer som inte blockerar kan skjutas"
@@ -3758,9 +3828,6 @@ msgstr "Använd fuzz-effekt"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Klassisk genomskinlighet"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Lost Soul-translucens"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Använd falsk kontrast"
 
@@ -3906,16 +3973,13 @@ msgid "MISCMNU_CLEARNODECACHE"
 msgstr "Rensa nodcache"
 
 msgid "MISCMNU_INTERSCROLL"
-msgstr "Tillåt att hoppa över rullgardiner för pauslägen."
+msgstr "Tillåt att hoppa över rullgardiner för pauslägen"
 
 msgid "NETMNU_TITLE"
 msgstr "Nätverksalternativ"
 
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Lokala alternativ"
-
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Förutsägelse av rörelser"
 
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Förutsägelse av linjeåtgärder"
@@ -3931,15 +3995,6 @@ msgstr "Alternativ för värdar"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Extra tics"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Balansering av latenstid"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Ursprunglig"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Optimerad"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Classic (snabbare)"
@@ -3997,25 +4052,16 @@ msgid "OPTVAL_BOTH"
 msgstr "Båda"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Spelare"
 
 msgid "OPTVAL_MAP"
 msgstr "Karta"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Skala till 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Pixel dubbelt så mycket"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Pixel fyrdubbel"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Aktuellt vapen"
@@ -4110,15 +4156,6 @@ msgstr "Endast kartdefinierade färger"
 msgid "OPTVAL_NODOORS"
 msgstr "Alla utom dörrar"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Dubbel"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Tredubbel"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Fyrdubbel"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Hämtning av föremål"
 
@@ -4135,40 +4172,37 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Endast monster"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Gamla"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (strikt)"
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (strikt)"
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (strikt)"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (strikt)"
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr ""
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Alla obeaktade"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Fel"
@@ -4191,12 +4225,6 @@ msgstr "Doom Mjukvarurenderare"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "True Color Mjukvarurenderare"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "Högpresterande"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Energibesparande"
-
 msgid "OPTVAL_VANILLA"
 msgstr ""
 
@@ -4205,12 +4233,6 @@ msgstr "ZDoom (tvingad)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Vanilla (tvingad)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Auto (ZDoom föredraget)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Auto (Vanilla föredraget)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Liten"
@@ -4300,21 +4322,15 @@ msgid "C_TEAL"
 msgstr ""
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Inget ljud"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Ingen interpolering"
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
-
-msgid "OPTSTR_OPENAL"
 msgstr ""
 
 msgid "DSPLYMNU_GLOPT"
@@ -4329,12 +4345,6 @@ msgstr "Alternativ för maskinvarurendering"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Alternativ för dynamiskt ljus"
 
-msgid "GLMNU_PREFS"
-msgstr "Inställningar"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Trimma sprite-kanter"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Sortera ritningslistor efter textur"
 
@@ -4343,9 +4353,6 @@ msgstr "Dynamiska lampor"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dynamiska lampor (maskinvara)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Aktivera ljusdefinitioner"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Ljus påverkar sprites"
@@ -4362,17 +4369,11 @@ msgstr "Skuggmappens kvalitet"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Filter för skuggmappor"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Dimläget"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Dimma tvingar fram full ljusstyrka"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Vapenljusets styrka"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Miljökarta på speglar"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Förbättrat läge för mörkerseende"
@@ -4397,9 +4398,6 @@ msgstr "Sprites vänder sig mot kameran"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Partikelstil"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Renderingskvalitet"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr ""
@@ -4450,9 +4448,6 @@ msgstr ""
 msgid "OPTVAL_SOFTWARE"
 msgstr "Programvara"
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Optimal"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Y-axeln"
 
@@ -4464,9 +4459,6 @@ msgstr "Kvadratisk"
 
 msgid "OPTVAL_ROUND"
 msgstr "Rund"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Radial"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr ""
@@ -4531,9 +4523,6 @@ msgstr "TrueColor-alternativ"
 msgid "TCMNU_TITLE"
 msgstr "TrueColor-alternativ"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Utmatning i äkta färg"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Linjärt filter vid nedskalning"
 
@@ -4546,21 +4535,6 @@ msgstr "Använd mipmappade texturer"
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Dynamiskt ljus (programvara)"
 
-msgid "OS_TITLE"
-msgstr "Alternativ Sök"
-
-msgid "OS_ANY"
-msgstr "Sök efter valfri term"
-
-msgid "OS_ALL"
-msgstr "Sök efter alla termer"
-
-msgid "OS_NO_RESULTS"
-msgstr "Inga resultat hittades."
-
-msgid "OS_LABEL"
-msgstr "Sök:"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Visa alltid nycklar"
 
@@ -4569,7 +4543,7 @@ msgstr "Lagbyte har inaktiverats!"
 
 # %s is the player and gender sensitive
 msgid "TXT_JOINED_TEAM"
-msgstr "%s anslöt sig till %t teamet."
+msgstr "%s anslöt sig till %t teamet"
 
 msgid "TXT_LONER"
 msgstr "%s är nu en ensamvarg."
@@ -4578,7 +4552,7 @@ msgid "TXT_LEFTWITHFRAGS"
 msgstr "%s lämnade spelet med %d frags"
 
 msgid "TXT_LEFTTHEGAME"
-msgstr "%s har lämnat spelet."
+msgstr "%s har lämnat spelet"
 
 msgid "TXT_COULDNOTREAD"
 msgstr "Kunde inte läsa sparspelet \"%s\"."
@@ -4595,6 +4569,7 @@ msgstr "Sparfil \"%s\" är från en inkompatibel version."
 msgid "TXT_OTHERENGINESG"
 msgstr "Sparfil \"%s\" är från en annan ZDoom-baserad motor:"
 
+#, fuzzy
 msgid "TXT_TOOOLDSG"
 msgstr ""
 "Sparfil \"%s\" är från en äldre version: %d (%e är den äldsta versionen som "
@@ -4605,6 +4580,7 @@ msgstr ""
 # — Undead
 # 
 # Ask Randi: The text is old. I won't change it.
+#, fuzzy
 msgid "TXT_TOONEWSG"
 msgstr ""
 "Sparfil \"%s\" är från en nyare version: %d (%e är den högsta versionen som "
@@ -4617,7 +4593,7 @@ msgid "TXT_NOGLOBALSJSON"
 msgstr "%s\" är inte ett giltigt sparfil: Saknar \"globals.json\"."
 
 msgid "TXT_SGINFOERR"
-msgstr "Misslyckades med att få tillgång till information om sparfilet i \"%s\"."
+msgstr "Misslyckades med att få tillgång till information om sparfilet i \"%s\""
 
 msgid "TXT_SAVEPENDING"
 msgstr "Ett sparande av spelet väntar fortfarande."
@@ -4626,13 +4602,13 @@ msgid "TXT_NOTSAVEABLE"
 msgstr "Inte i ett spel som kan sparas."
 
 msgid "TXT_NOTINLEVEL"
-msgstr "Inte i en nivå."
+msgstr "Inte i en nivå"
 
 msgid "TXT_SPPLAYERDEAD"
-msgstr "Spelaren är död i ett enspelarspel."
+msgstr "Spelaren är död i ett enspelarspel"
 
 msgid "TXT_SAVEFAILED"
-msgstr "Spara misslyckades."
+msgstr "Spara misslyckades"
 
 msgid "TXT_SCREENSHOTERR"
 msgstr "Kunde inte skapa en skärmdump."
@@ -4640,10 +4616,6 @@ msgstr "Kunde inte skapa en skärmdump."
 # As in paused by player %s.
 msgid "TXT_BY"
 msgstr "Av %s"
-
-msgid "TXT_QUITENDOOM"
-msgstr ""
-"Tryck på någon tangent eller klicka någonstans i fönstret för att avsluta."
 
 msgid "HUDMNU_FLASH"
 msgstr "Alternativ för skärmblandning"
@@ -4656,9 +4628,6 @@ msgstr "Hårkors"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Undertexter"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Förhindra gråa skuggor"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Typsnittsalternativ"
@@ -4676,7 +4645,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr "Anpassad omvänd karta"
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "Anpassad omvänd färg Mörk\n"
+msgstr "Anpassad omvänd färg Mörk"
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr "Anpassad omvänd färg ljus"
@@ -4699,11 +4668,6 @@ msgstr "Skalningsfaktor"
 
 msgid "SCALEMNU_RATIO"
 msgstr "Bildförhållande"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr ""
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4802,7 +4766,7 @@ msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr "Visa tidswidget"
 
 msgid "CMPTMNU_VILEGHOSTS"
-msgstr "Krossade monster återuppstår som spöken."
+msgstr "Krossade monster återuppstår som spöken"
 
 msgid "MISCMNU_FVIEWBOB"
 msgstr "Visa att det guppar när du flyger"
@@ -4851,10 +4815,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Inaktivera upphämtning av tappade föremål på klientsidan"
 
 # Disables autoloading save on death
+#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Starta om nivån vid död"
 
 # Resets inventory on every map
+#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Starta med pistol"
 
@@ -5017,9 +4983,6 @@ msgstr ""
 # Forces a cool down between chat messages for all players when playing
 # online.
 msgid "NETMNU_CHATSLOMO"
-msgstr ""
-
-msgid "JOYMNU_HAPTRIGGERS"
 msgstr ""
 
 msgid "OPTMNU_HAPTICS"
@@ -5196,3 +5159,11 @@ msgstr "Kontrast"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Mättnad"
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Smidig"
+
+#, fuzzy
+msgid "TAG_GLAUNCHER"
+msgstr "Granatkastare"

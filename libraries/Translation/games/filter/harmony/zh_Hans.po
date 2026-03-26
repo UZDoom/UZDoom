@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 15:48+0000\n"
+"PO-Revision-Date: 2026-02-11 21:50+0000\n"
 "Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/doom-engine-games/harmony-filter/zh_Hans/>\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: chs\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 msgid "NIGHTMARE"
 msgstr "你真认为能接受得了？\\n\\n按“Y”确认，按“N”取消……"
@@ -175,7 +174,7 @@ msgstr ""
 
 # This text is deliberately empty
 msgid "WI_FINISHED"
-msgstr "> WI_ENTERING"
+msgstr ""
 
 # Yellow needs retranslation
 msgid "WI_ENTERING"

@@ -2,17 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:36+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/common/sv/"
-">\n"
+"PO-Revision-Date: 2026-03-14 22:34+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/common/"
+"sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: sv\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Tryck på Y eller N."
@@ -24,22 +23,28 @@ msgid "TXT_NO"
 msgstr "Nej"
 
 msgid "SAVEDEAD"
-msgstr "Du kan inte spara om du inte spelar! Tryck på en tangent."
+msgstr ""
+"Du kan inte spara om du inte spelar!\n"
+"\n"
+"Tryck på en tangent."
 
 msgid "SAFEMESSAGE"
 msgstr "Vill du verkligen göra det här?"
 
-msgid "NOTSET"
-msgstr "Inte inställd"
-
 msgid "QSPROMPT"
 msgstr ""
-"Snabbspara över ditt spel som heter %s?\n"
+"Snabbspara över ditt spel som heter\n"
+"\n"
+"'%s'?\n"
+"\n"
 "Tryck på Y eller N."
 
 msgid "QLPROMPT"
 msgstr ""
-"Vill du snabbladda spelet som heter \"%s\"?\n"
+"Vill du snabbladda spelet som heter\n"
+"\n"
+"'%s'?\n"
+"\n"
 "Tryck på Y eller N."
 
 # This is a gender sensitive message where %s represents the player
@@ -47,10 +52,10 @@ msgid "TXT_X_CHEATS"
 msgstr "%s fuskar"
 
 msgid "MSGOFF"
-msgstr "Meddelanden: Av"
+msgstr "Meddelanden: AV"
 
 msgid "MSGON"
-msgstr "Meddelanden: På"
+msgstr "Meddelanden: PÅ"
 
 msgid "TXT_SAY"
 msgstr "Säg:"
@@ -231,17 +236,11 @@ msgstr "Åtgärd"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Anpassa kontrollerna för åtgärder"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Chatt"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "Flera spelare"
 
 msgid "CNTRLMNU_SAY"
 msgstr "Säg"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Anpassa kontrollerna för chatt"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Anpassa vapenkontroller"
@@ -358,9 +357,6 @@ msgstr ""
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Skärmdump"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Öppna konsolen"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "Pausa"
 
@@ -399,9 +395,6 @@ msgstr "Växla meddelanden"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Avsluta spelet"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Justera Gamma"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Aktivera musen"
@@ -521,19 +514,21 @@ msgstr "Dödzon"
 msgid "JOYMNU_NOAXES"
 msgstr "Inga konfigurerbara axlar"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "Ingen"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Vridning"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Titta uppåt/nedåt"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "Rör sig framåt"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Strafing"
 
@@ -584,9 +579,6 @@ msgstr "Oliv"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Beige"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Ljusgrön"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Ljusblå"
@@ -654,23 +646,11 @@ msgstr "Vertikal synkronisering"
 msgid "DSPLYMNU_MODELS"
 msgstr "Modeller"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Skala hårkorset"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Skala för statusfältet"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Meddelanden"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Centrerade meddelanden"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Pulserande meddelande Visning"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Meddelandeskala"
 
 msgid "MNU_COLORPICKER"
 msgstr "Välj färg"
@@ -692,15 +672,6 @@ msgstr "Anpassa kartans färger"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Återställ anpassade standardfärger"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Ljud aktiverat"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Musik aktiverad"
-
-msgid "OPTVAL_4000HZ"
-msgstr ""
 
 msgid "OPTVAL_8000HZ"
 msgstr ""
@@ -798,9 +769,6 @@ msgstr "Slumpmässiga tonhöjder"
 msgid "SNDMNU_CHANNELS"
 msgstr "Ljudkanaler"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Ljudbakgrund"
-
 msgid "SNDMNU_OPENAL"
 msgstr "OpenAL-alternativ"
 
@@ -814,10 +782,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "Alternativ för modulåterspelare"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Alternativ för Midi-spelare"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Ljud i menyer"
+msgstr "Alternativ för MIDI-spelare"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Avancerade ljudalternativ"
@@ -847,19 +812,16 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "MIDI-stämmor"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr ""
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr ""
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Patch-uppsättning"
 
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Relativ volym"
@@ -874,25 +836,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr ""
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Timidity-konfigurationsfil"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Relativ volym"
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "WildMidi-konfigurationsfil"
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Välj konfiguration"
@@ -902,9 +855,6 @@ msgstr "Avancerad återampling"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "OPL-bank"
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "OPL-emulatorns kärna"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Kör emulatorn med PCM-frekvens"
@@ -929,9 +879,6 @@ msgstr "OPN2-emulatorkärna"
 
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "GUS-emulering"
-
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "GUS-konfigurationsfil"
 
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "Läsa DMXGUS-filer"
@@ -1020,13 +967,13 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Volymrampning"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "OPTVAL_MAMEOPL2"
 msgstr ""
@@ -1062,9 +1009,6 @@ msgid "OPTVAL_NP2OPNA"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
-
-msgid "OPTVAL_PMDWINOPNA"
 msgstr ""
 
 msgid "OPTVAL_OPALOPL3"
@@ -1179,13 +1123,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Palett"
@@ -1260,7 +1204,7 @@ msgid "GLPREFMNU_SECLIGHTMODE"
 msgstr "Sektorljusläge"
 
 msgid "GLPREFMNU_FOGMODE"
-msgstr "Dimläge"
+msgstr "Dimläget"
 
 msgid "OPTVAL_RADIAL"
 msgstr "Radial"
@@ -1307,12 +1251,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr "Alternativ för textur"
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Texturer aktiverade"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Aktivera texturer med högre upplösning"
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Högkvalitativt storleksanpassningsläge"
 
@@ -1340,12 +1278,6 @@ msgstr "Precache GL-texturer"
 msgid "VIDMNU_TITLE"
 msgstr "Videoläge"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Skalad (närmast)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Skalad (linjär)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "Brevlåda"
 
@@ -1361,17 +1293,11 @@ msgstr "Fullskärm"
 msgid "VIDMNU_HIDPI"
 msgstr "Retina/HiDPI-stöd"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "Bildförhållande"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Forcerat bildförhållande"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Stil för tvingat förhållande"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Aktivera bildförhållandet 5:4"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Upplösningsskala"
@@ -1457,14 +1383,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "Företrädesvis API för rendering"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Sammanfoga vänster+höger Alt/Ctrl/Shift"
@@ -1493,6 +1419,7 @@ msgstr "Rotation av snabbregistrering"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Antal quicksaves i rotation"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Inaktivera ren menyskalning"
 
@@ -1536,95 +1463,6 @@ msgstr "Redigera miljön"
 msgid "REVMNU_NEW"
 msgstr "Ny miljö"
 
-msgid "REVMNU_REVERT"
-msgstr "Återkalla inställningar"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Miljö storlek"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Miljö spridning"
-
-msgid "REVMNU_ROOM"
-msgstr ""
-
-msgid "REVMNU_ROOM_HF"
-msgstr ""
-
-msgid "REVMNU_ROOM_LF"
-msgstr ""
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_REVERB"
-msgstr ""
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_DENSITY"
-msgstr ""
-
 msgid "REVMNU_Reflections_Scale"
 msgstr ""
 
@@ -1665,7 +1503,7 @@ msgid "REVMNU_Create"
 msgstr "Skapa"
 
 msgid "REVMNU_Save"
-msgstr "Spara..."
+msgstr "Spara…"
 
 msgid "REVMNU_File_name"
 msgstr "Filnamn"
@@ -1679,9 +1517,6 @@ msgstr "Vulkan-alternativ (experimentellt)"
 msgid "VK_TITLE"
 msgstr "Vulkan-alternativ"
 
-msgid "VKMNU_ENABLE"
-msgstr "Aktivera Vulkan"
-
 msgid "VKMNU_DEVICE"
 msgstr "Vulkan-enhets-ID"
 
@@ -1694,30 +1529,26 @@ msgstr "Varning: Vulkan-renderaren är mycket experimentell!"
 msgid "VK_RESTART"
 msgstr "De här alternativen kräver en omstart för att få effekt."
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Välj Vulkan-enhet"
-
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Gamla xBRZ"
 
 msgid "OS_TITLE"
-msgstr "Sökning av alternativ"
+msgstr "Alternativ Sök"
 
 msgid "OS_ANY"
 msgstr "Sök efter valfri term"
@@ -1731,121 +1562,10 @@ msgstr "Inga resultat hittades."
 msgid "OS_LABEL"
 msgstr "Sök:"
 
-msgid "TXT_OBITUARY1"
-msgstr "%k benade %o som en fisk"
-
-msgid "TXT_OBITUARY2"
-msgstr "%k kastrerade %o"
-
-msgid "TXT_OBITUARY3"
-msgstr "%k gräddade %o"
-
-msgid "TXT_OBITUARY4"
-msgstr "%k decimerade %o"
-
-msgid "TXT_OBITUARY5"
-msgstr "%k förstörde %o"
-
-msgid "TXT_OBITUARY6"
-msgstr "%k skar %o i tärningar"
-
-msgid "TXT_OBITUARY7"
-msgstr "%k tog upp %o i bitar"
-
-msgid "TXT_OBITUARY8"
-msgstr "%k plattade %o"
-
-msgid "TXT_OBITUARY9"
-msgstr "%k gav %o anal rättvisa"
-
-msgid "TXT_OBITUARY10"
-msgstr "%k gav %o anal rättvisa"
-
-msgid "TXT_OBITUARY11"
-msgstr "%k dödade %o"
-
-msgid "TXT_OBITUARY12"
-msgstr "%k gjorde köttfärs av %o"
-
-msgid "TXT_OBITUARY13"
-msgstr "%k massakrerade %o"
-
-msgid "TXT_OBITUARY14"
-msgstr "%k lemlästade %o"
-
-msgid "TXT_OBITUARY15"
-msgstr "%k har gjort %o illa."
-
-msgid "TXT_OBITUARY16"
-msgstr "%k slet upp en ny öppning i %o"
-
-msgid "TXT_OBITUARY17"
-msgstr "%k slaktade %o"
-
-msgid "TXT_OBITUARY18"
-msgstr "%k krossade %o"
-
-msgid "TXT_OBITUARY19"
-msgstr "%k sodomiserade %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "%k sprutade %o."
-
-msgid "TXT_OBITUARY21"
-msgstr "%k krossade %o"
-
-msgid "TXT_OBITUARY22"
-msgstr "%k tog strypgrepp på %o"
-
-msgid "TXT_OBITUARY23"
-msgstr "%k slösade bort %o"
-
-msgid "TXT_OBITUARY24"
-msgstr "%k dödade %o"
-
-msgid "TXT_OBITUARY25"
-msgstr "%k skickade %o till helvetet"
-
-msgid "TXT_OBITUARY26"
-msgstr "%k rostade %o"
-
-msgid "TXT_OBITUARY27"
-msgstr "%k snusade %o"
-
-msgid "TXT_OBITUARY28"
-msgstr "%k sprutade %o"
-
-msgid "TXT_OBITUARY29"
-msgstr "%k sprayade %o"
-
-msgid "TXT_OBITUARY30"
-msgstr "%k gjorde hundkött av %o"
-
-msgid "TXT_OBITUARY31"
-msgstr "%k rostade %o"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o är avföring"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o är hamburgare"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o fick pungen separerad"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o anmälde sig frivilligt till befolkningskontroll"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o har begått självmord"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o fick Darwinpriset"
-
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr ""
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1878,44 +1598,14 @@ msgstr "Endast ändrat"
 msgid "TXT_UNKNOWN"
 msgstr "Okänd"
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr ""
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr ""
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Detta sparande behöver dessa filer"
-
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Alternativ för flera spelare"
-
-msgid "OPTMNU_INPUT"
-msgstr "Inmatningsalternativ"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Systemalternativ"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Alternativ för ljus"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Alternativ för sprite"
 
 msgid "GLPREFMNU_CORONAS"
 msgstr "Koronor"
 
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Utseende"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Avancerade visningsalternativ"
-
 msgid "PICKER_SELECT"
-msgstr "Välj vilket spel du vill spela"
+msgstr "Välj vilket spel du vill spela."
 
 msgid "PICKER_PLAY"
 msgstr "Starta spel"
@@ -2016,21 +1706,6 @@ msgid "PICKER_HOST"
 msgstr ""
 
 msgid "PICKER_JOIN"
-msgstr ""
-
-msgid "PICKER_NETMODE"
-msgstr ""
-
-msgid "PICKER_NETAUTO"
-msgstr ""
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr ""
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
 msgstr ""
 
 msgid "PICKER_NETRATE"

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-25 03:01+0000\n"
-"Last-Translator: StarFang208 <polaritymanx@yahoo.it>\n"
+"PO-Revision-Date: 2026-03-15 00:10+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/common/"
 "it/>\n"
 "Language: it\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: it\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Premi Y oppure N."
@@ -32,12 +31,9 @@ msgstr ""
 msgid "SAFEMESSAGE"
 msgstr "Sei sicuro di volerlo fare?"
 
-msgid "NOTSET"
-msgstr "Non assegnato"
-
 msgid "QSPROMPT"
 msgstr ""
-"Sovrascrivere il salvataggio\n"
+"Salvataggio rapido sul tuo gioco denominato\n"
 "\n"
 "'%s'?\n"
 "\n"
@@ -56,10 +52,10 @@ msgid "TXT_X_CHEATS"
 msgstr "%s imbroglia"
 
 msgid "MSGOFF"
-msgstr "Messaggi DISATTIVATI"
+msgstr "Messaggi: SPENTI"
 
 msgid "MSGON"
-msgstr "Messaggi ATTIVATI"
+msgstr "Messaggi: ATTIVI"
 
 msgid "TXT_SAY"
 msgstr "Parla:"
@@ -93,7 +89,7 @@ msgid "MNU_NOFILES"
 msgstr "Nessun file"
 
 msgid "MNU_DELETESG"
-msgstr "Vuoi veramente cancellare il salvataggio?"
+msgstr "Vuoi davvero eliminare il salvataggio?"
 
 msgid "OPTVAL_OFF"
 msgstr "Disattivo"
@@ -192,7 +188,7 @@ msgid "CNTRLMNU_MOVERIGHT"
 msgstr "Movimento laterale a destra"
 
 msgid "CNTRLMNU_TURNLEFT"
-msgstr "Gira a sinistra\n"
+msgstr "Gira a sinistra"
 
 msgid "CNTRLMNU_TURNRIGHT"
 msgstr "Gira a destra"
@@ -240,17 +236,11 @@ msgstr "Azione"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Personalizza i controlli di azione"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Chat"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "Multigiocatore"
 
 msgid "CNTRLMNU_SAY"
 msgstr "Parla"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Personalizza i controlli della chat"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Personalizza i controlli delle armi"
@@ -367,9 +357,6 @@ msgstr "Telecamera di inseguimento"
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Cattura schermo"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Apri la console"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "Pausa"
 
@@ -408,9 +395,6 @@ msgstr "Toggle messaggi"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Esci dal gioco"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Aggiustamento Gamma"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Attiva il mouse"
@@ -530,19 +514,21 @@ msgstr "Zona cieca"
 msgid "JOYMNU_NOAXES"
 msgstr "Nessun asse configurabile"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "Nessuno"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Rotazione"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Sguardo Sopra/Sotto"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "Movimento in avanti"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Movimento laterale"
 
@@ -593,9 +579,6 @@ msgstr "Verde pallido"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Beige"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Verde chiaro"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Blu chiaro"
@@ -663,23 +646,11 @@ msgstr "Sincronia verticale"
 msgid "DSPLYMNU_MODELS"
 msgstr "Modelli"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Scala del mirino"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Dimensioni Status Bar"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Messaggi"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Messaggi centrati"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Mostra messaggi pulsanti"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Dimensioni Messaggi"
 
 msgid "MNU_COLORPICKER"
 msgstr "Scegli il colore"
@@ -701,15 +672,6 @@ msgstr "Personalizza i colori della mappa"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Reimposta i colori personalizzati al default"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Abilita gli effetti sonori"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Abilita la musica"
-
-msgid "OPTVAL_4000HZ"
-msgstr "4000 Hz"
 
 msgid "OPTVAL_8000HZ"
 msgstr "8000 Hz"
@@ -766,7 +728,7 @@ msgid "OPTSTR_QUAD"
 msgstr ""
 
 msgid "OPTSTR_SURROUND"
-msgstr "Surround"
+msgstr "5 altoparlanti"
 
 msgid "OPTSTR_5POINT1"
 msgstr "Surround 5.1"
@@ -807,9 +769,6 @@ msgstr "Rendi casuale il tono"
 msgid "SNDMNU_CHANNELS"
 msgstr "Numero canali del suono"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Backend suono"
-
 msgid "SNDMNU_OPENAL"
 msgstr "Opzioni OpenAL"
 
@@ -823,10 +782,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "Opzioni Module replayer"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Opzioni Midi player"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Suono nei menù"
+msgstr "Opzioni MIDI player"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Opzioni avanzate dei suoni"
@@ -856,19 +812,16 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "Voci MIDI"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "Globale"
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Freeverb globale"
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr ""
 
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr ""
@@ -883,25 +836,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr ""
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "File configurazione Timidity"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Volume relativo"
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "File WildMidi config"
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Seleziona la configurazione"
@@ -910,9 +854,6 @@ msgid "ADVSNDMNU_ADVRESAMPLING"
 msgstr "Resampling avanzato"
 
 msgid "ADVSNDMNU_OPLBANK"
-msgstr ""
-
-msgid "ADVSNDMNU_ADLOPLCORES"
 msgstr ""
 
 msgid "ADVSNDMNU_RUNPCMRATE"
@@ -938,9 +879,6 @@ msgstr ""
 
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr ""
-
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "File GUS config"
 
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "Leggi i lump DMXGUS"
@@ -1014,7 +952,7 @@ msgid "OPTVAL_SINC"
 msgstr ""
 
 msgid "OPTVAL_NOTEONOFFONLY"
-msgstr "Note solamente ON/OFF"
+msgstr "Nota solo attivazione/disattivazione"
 
 msgid "OPTVAL_FULLRAMPING"
 msgstr "Ramping completo"
@@ -1029,55 +967,54 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Ramping volume"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "OPTVAL_MAMEOPL2"
-msgstr ""
+msgstr "MAME OPL2"
 
 msgid "OPTVAL_DOSBOXOPL3"
-msgstr ""
+msgstr "DOSBox OPL3"
 
 msgid "OPTVAL_JAVAOPL3"
-msgstr ""
+msgstr "Java OPL3"
 
 msgid "OPTVAL_ESFMu"
-msgstr ""
+msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
-msgstr ""
+msgstr "YMFM OPL2"
 
 msgid "OPTVAL_YMFMOPL3"
-msgstr ""
+msgstr "YMFM OPL3"
 
 msgid "OPTVAL_NUKEDOPL3"
-msgstr ""
+msgstr "Nuked OPL3"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr ""
+msgstr "OPL2-LLE (Molto pesante!)"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr ""
+msgstr "OPL3-LLE (Elevato carico CPU)"
 
 msgid "OPTVAL_MAMEOPN2"
-msgstr ""
+msgstr "MAME OPN2 (YM2612)"
 
 msgid "OPTVAL_NP2OPNA"
-msgstr ""
+msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
-
-msgid "OPTVAL_PMDWINOPNA"
-msgstr ""
+msgstr "MAME YM2608"
 
 msgid "OPTVAL_OPALOPL3"
-msgstr ""
+msgstr "Opal OPL3"
 
 msgid "OPTVAL_NUKEDOPL3174"
 msgstr ""
@@ -1188,13 +1125,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Palette"
@@ -1254,7 +1191,7 @@ msgid "GLPREFMNU_MENUBLUR"
 msgstr "Blur del menu"
 
 msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Ambiente mappa sugli specchi"
+msgstr "Ambiente mappa sui riflessi"
 
 msgid "GLPREFMNU_RENDERQUALITY"
 msgstr "Qualità resa grafica"
@@ -1269,7 +1206,7 @@ msgid "GLPREFMNU_SECLIGHTMODE"
 msgstr "Modalità luce di settore"
 
 msgid "GLPREFMNU_FOGMODE"
-msgstr "Effetto nebbia"
+msgstr "Modalità nebbia"
 
 msgid "OPTVAL_RADIAL"
 msgstr "Radiale"
@@ -1316,12 +1253,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr "Opzioni Texture"
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Texture abilitate"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Attiva texture alta qualità"
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Modalità resize alta qualità"
 
@@ -1349,12 +1280,6 @@ msgstr "Precache texture GL"
 msgid "VIDMNU_TITLE"
 msgstr "Modalità video"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Scalato (più vicino)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Scalato (lineare)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "Bande nere"
 
@@ -1370,17 +1295,11 @@ msgstr "Schermata piena"
 msgid "VIDMNU_HIDPI"
 msgstr "Supporto Retina/HiDPi"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "Proporzioni"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Forza le proporzioni video"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Forza lo stile delle proporzioni"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Abilita le proporzioni 5:4"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Scala di risoluzione"
@@ -1466,14 +1385,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "API di rendering preferita"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Unisci sinistra+destra Alt/Control/Maiusc"
@@ -1502,6 +1421,7 @@ msgstr "Rotazione del quicksave"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Numero di quicksave in rotazione"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Disabilita il fattore di scala pulito del menu"
 
@@ -1545,95 +1465,6 @@ msgstr "Modifica ambiente"
 msgid "REVMNU_NEW"
 msgstr "Nuovo ambiente"
 
-msgid "REVMNU_REVERT"
-msgstr "Ripristina le impostazioni"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Dimensioni dell'ambiente"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Diffusione dell'ambiente"
-
-msgid "REVMNU_ROOM"
-msgstr ""
-
-msgid "REVMNU_ROOM_HF"
-msgstr ""
-
-msgid "REVMNU_ROOM_LF"
-msgstr ""
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_REVERB"
-msgstr ""
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_DENSITY"
-msgstr ""
-
 msgid "REVMNU_Reflections_Scale"
 msgstr ""
 
@@ -1674,7 +1505,7 @@ msgid "REVMNU_Create"
 msgstr "Creare"
 
 msgid "REVMNU_Save"
-msgstr "Salvare..."
+msgstr "Salvare…"
 
 msgid "REVMNU_File_name"
 msgstr "Nome del file"
@@ -1688,9 +1519,6 @@ msgstr "Opzioni Vulkan (Sperimentale)"
 msgid "VK_TITLE"
 msgstr "Opzioni Vulkan"
 
-msgid "VKMNU_ENABLE"
-msgstr "Abilita Vulkan"
-
 msgid "VKMNU_DEVICE"
 msgstr "Dispositivo ID Vulkan"
 
@@ -1703,24 +1531,20 @@ msgstr "Attenzione: il motore grafico Vulkan è altamente sperimentale!"
 msgid "VK_RESTART"
 msgstr "Queste opzioni richiedono il riavvio per avere effetto."
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Seleziona il Dispositivo Vulkan"
-
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Vecchio xBRZ"
@@ -1740,121 +1564,10 @@ msgstr "Nessun risultato trovato."
 msgid "OS_LABEL"
 msgstr "Trova:"
 
-msgid "TXT_OBITUARY1"
-msgstr "%k ha dissossato %o come un pesce"
-
-msgid "TXT_OBITUARY2"
-msgstr "%k ha castrato %o"
-
-msgid "TXT_OBITUARY3"
-msgstr "%k ha cremato %o"
-
-msgid "TXT_OBITUARY4"
-msgstr "%k ha decimato %o"
-
-msgid "TXT_OBITUARY5"
-msgstr "%k ha distrutto %o"
-
-msgid "TXT_OBITUARY6"
-msgstr "%k ha tagliato a cubetti %o"
-
-msgid "TXT_OBITUARY7"
-msgstr "%k ha smembrato %o"
-
-msgid "TXT_OBITUARY8"
-msgstr "%k ha schiacciato %o"
-
-msgid "TXT_OBITUARY9"
-msgstr "%k ha dato a %o Giustizia Anale"
-
-msgid "TXT_OBITUARY10"
-msgstr "%k ha dato FoLlIa AnAle a %o"
-
-msgid "TXT_OBITUARY11"
-msgstr "%k ha ucciso %o"
-
-msgid "TXT_OBITUARY12"
-msgstr "%k ha triturato %o"
-
-msgid "TXT_OBITUARY13"
-msgstr "%k ha fatto di %o carne tritata"
-
-msgid "TXT_OBITUARY14"
-msgstr "%k ha massacrato %o"
-
-msgid "TXT_OBITUARY15"
-msgstr "%k ha squartato %o"
-
-msgid "TXT_OBITUARY16"
-msgstr "%k ha aperto a %o un altro orifizio"
-
-msgid "TXT_OBITUARY17"
-msgstr "%k ha macellato %o"
-
-msgid "TXT_OBITUARY18"
-msgstr "%k ha distrutto %o"
-
-msgid "TXT_OBITUARY19"
-msgstr "%k ha sodomizzato %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "%k ha spiaccicato %o"
-
-msgid "TXT_OBITUARY21"
-msgstr "%k ha schiacciato %o"
-
-msgid "TXT_OBITUARY22"
-msgstr "%k ha strozzato %o"
-
-msgid "TXT_OBITUARY23"
-msgstr "%k ha distrutto %o"
-
-msgid "TXT_OBITUARY24"
-msgstr "%k ha mandato %o all'obitorio"
-
-msgid "TXT_OBITUARY25"
-msgstr "%k ha spedito %o all'Inferno"
-
-msgid "TXT_OBITUARY26"
-msgstr "%k ha arrostito %o"
-
-msgid "TXT_OBITUARY27"
-msgstr "%k ha spento %o"
-
-msgid "TXT_OBITUARY28"
-msgstr "%k l'ha fatta sopra %o"
-
-msgid "TXT_OBITUARY29"
-msgstr "%k ha vaporizzato %o"
-
-msgid "TXT_OBITUARY30"
-msgstr "%k ha fatto di %o polpette"
-
-msgid "TXT_OBITUARY31"
-msgstr "%k ha battuto %o come un cane"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o è un escremento"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o è un hamburger"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o ha subito la separazione dello scroto"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o si è offerto per il controllo della popolazione"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o si è suicidato"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o ha ricevuto il Darwin Award"
-
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr ""
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1887,41 +1600,11 @@ msgstr "Solo modificato"
 msgid "TXT_UNKNOWN"
 msgstr "Sconosciuto"
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "Automappa"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "HUD + Automappa"
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Questo salvataggio ha bisogno di questi file"
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Opzioni multigiocatore"
-
-msgid "OPTMNU_INPUT"
-msgstr "Opzioni di ingresso"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Opzioni di sistema"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Opzioni luce"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Opzioni Sprite"
-
 msgid "GLPREFMNU_CORONAS"
 msgstr "Corone"
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Aspetto"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Opzioni di visualizzazione avanzate"
 
 msgid "PICKER_SELECT"
 msgstr "Selezionare il file di gioco da eseguire."
@@ -1980,67 +1663,52 @@ msgid "CNTRLMNU_OPEN_MAIN"
 msgstr "Apri il menu principale"
 
 msgid "MODMNU_REPLAYER"
-msgstr "Module replayer"
+msgstr "Riproduttore di moduli"
 
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
 msgid "JOYMNU_JOYENABLEINBACKGROUND"
-msgstr ""
+msgstr "Consenti input del controller in background"
 
 # Order to sort the list of saved games in the save and load game menu. This
 # used to only be alphabetical.
 msgid "MISCMNU_SAVEORDER"
-msgstr ""
+msgstr "Ordine di posizionamento dei salvataggi"
 
 msgid "OPTVAL_ALPHABETICAL"
-msgstr ""
+msgstr "Alfabetico"
 
 msgid "OPTVAL_LASTSAVEDTIME"
-msgstr ""
+msgstr "Data e ora di ultimo salvataggio"
 
 msgid "PICKER_PLAYHOST"
-msgstr ""
+msgstr "Ospita partita"
 
 msgid "PICKER_PLAYJOIN"
-msgstr ""
+msgstr "Unisciti alla partita"
 
 msgid "PICKER_REMPARM"
-msgstr ""
+msgstr "Ricorda parametri"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr ""
+msgstr "Carica WAD di supporto"
 
 msgid "PICKER_TAB_MULTI"
-msgstr ""
+msgstr "Multigiocatore"
 
 msgid "PICKER_LOADSAVE"
-msgstr ""
+msgstr "Carica file di salvataggio:"
 
 msgid "PICKER_REMSAVE"
-msgstr ""
+msgstr "Ricorda file di salvataggio"
 
 # As in, to host a game.
 msgid "PICKER_HOST"
-msgstr ""
+msgstr "Ospita"
 
 msgid "PICKER_JOIN"
-msgstr ""
-
-msgid "PICKER_NETMODE"
-msgstr ""
-
-msgid "PICKER_NETAUTO"
-msgstr ""
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr ""
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr ""
+msgstr "Unisciti"
 
 msgid "PICKER_NETRATE"
 msgstr ""
@@ -2112,5 +1780,20 @@ msgstr ""
 msgid "ACCMNU_TITLE"
 msgstr "Opzioni Accessibilità"
 
-msgid "ACCMNU_RESET"
-msgstr "Ripristina opzioni Accessibilità"
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Dimensione della coda dei messaggi"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Raggruppa messaggi ripetuti"
+
+msgid "NOTES_DETAILS"
+msgstr "Per maggiori dettagli, vedi:"
+
+msgid "NOTES_EMPTY"
+msgstr "Nessuna descrizione fornita."
+
+msgid "NOTES_FAIL"
+msgstr "Impossibile analizzare le note di rilascio"
+
+msgid "NOTES_RELEASED"
+msgstr "rilasciato"

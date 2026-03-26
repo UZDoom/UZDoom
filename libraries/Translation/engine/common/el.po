@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:49+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
+"PO-Revision-Date: 2026-03-16 23:10+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/uzdoom/common/el/>"
 "\n"
 "Language: el\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: el\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Πάτα Y ή N."
@@ -27,41 +26,42 @@ msgid "SAVEDEAD"
 msgstr ""
 "Δεν μπορείς να αποθηκέυσης αμα δεν παίζεις !\n"
 "\n"
-"Πάτα ενα κουμπί."
+"Πάτα οποιοδήποτε πλήκτρο."
 
 msgid "SAFEMESSAGE"
 msgstr "Θέλετε πραγματικά να το κάνετε αυτό;"
 
-msgid "NOTSET"
-msgstr "Δεν έχει οριστεί"
-
 msgid "QSPROMPT"
 msgstr ""
-"Γρήγορη αποθήκευση πάνω από το παιχνίδι σας με το όνομα '%s';\n"
+"Γρήγορη αποθήκευση πάνω από το παιχνίδι σας με το όνομα\n"
 "\n"
-"Πατήστε Y ή N."
+"'%s';\n"
+"\n"
+"Πάτα Y ή N."
 
 msgid "QLPROMPT"
 msgstr ""
-"Θέλετε να κάνετε γρήγορη φόρτωση του παιχνιδιού με το όνομα '%s';\n"
+"Θέλετε να κάνετε γρήγορη φόρτωση του παιχνιδιού με το όνομα\n"
 "\n"
-"Πατήστε Y ή N."
+"'%s';\n"
+"\n"
+"Πάτα Y ή N."
 
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "@[art_gr] %s απατάει"
 
 msgid "MSGOFF"
-msgstr "Μηνύματα ΚΛΕΙΣΤΑ"
+msgstr "Μηνύματα: ΑΝΕΝΕΡΓΟ"
 
 msgid "MSGON"
-msgstr "Μηνύματα ΑΝΟΙΧΤΑ"
+msgstr "Μηνύματα: ΕΝΕΡΓΑ"
 
 msgid "TXT_SAY"
 msgstr "Πές:"
 
 msgid "TXT_QUITENDOOM"
-msgstr "Πάτα οποιοδήποτε πλήκτρο ή πάτα οπουδήποτε για να κάνεις έξοδο"
+msgstr "Πάτα οποιοδήποτε πλήκτρο ή πάτα οπουδήποτε για να κάνεις έξοδο."
 
 msgid "NEWSAVE"
 msgstr "<Νέο παιχνίδι αποθήκευσης>"
@@ -85,10 +85,10 @@ msgid "MNU_DIFFVERSION"
 msgstr "Διαφορετική έκδοση"
 
 msgid "MNU_NOFILES"
-msgstr "Καθ΄λου αρχεία "
+msgstr "Καθ΄λου αρχεία"
 
 msgid "MNU_DELETESG"
-msgstr "Θέλεις όντος να διαγράξεις το αποθηκευμένο παιχνίδι;\n"
+msgstr "Θέλεις όντος να διαγράξεις το αποθηκευμένο παιχνίδι;"
 
 msgid "OPTVAL_OFF"
 msgstr "ενεργοποιημένη"
@@ -235,17 +235,11 @@ msgstr "Δράσεις"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Προσαρμογή των χειριστηρίων δράσης"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Μίλα"
-
 msgid "MNU_MULTIPLAYER"
 msgstr ""
 
 msgid "CNTRLMNU_SAY"
 msgstr "Πές"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Προσαρμογή ελέγχου συνομιλίας"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Προσαρμογή ελέγχου όπλων"
@@ -362,9 +356,6 @@ msgstr "Κάμερα τρίτου προσώπου"
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Στιγμιότυπο"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Ανοίξτε την κονσόλα"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "Πάυση"
 
@@ -403,9 +394,6 @@ msgstr "Εναλλαγή μηνυμάτων"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Στάματα το παιχνίδι"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Ρύθμιση Γάμμα"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Ενεργοποίηση ποντικιόυ"
@@ -528,6 +516,7 @@ msgstr "Κανένας ρυθμιζόμενος άξονας"
 msgid "OPTVAL_NONE"
 msgstr "Τίποτα"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Στροφή"
 
@@ -537,6 +526,7 @@ msgstr "Κοίταγμα πάνω/κάτω"
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr ""
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Σφυροκόπημα"
 
@@ -587,9 +577,6 @@ msgstr ""
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Μπέζ"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Ανοιχτό Πράσινο"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Γαλάζιο"
@@ -657,23 +644,11 @@ msgstr ""
 msgid "DSPLYMNU_MODELS"
 msgstr "Μοντέλα"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr ""
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr ""
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Μηνύματα"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr ""
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr ""
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Μέγεθος μηνύματον"
 
 msgid "MNU_COLORPICKER"
 msgstr "Επιλογή Χρώματος"
@@ -694,15 +669,6 @@ msgid "MAPCOLORMNU_TITLE"
 msgstr ""
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
-msgstr ""
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Ήχος ενεργοποιημένος"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Μουσική ενεργοποιημένη"
-
-msgid "OPTVAL_4000HZ"
 msgstr ""
 
 msgid "OPTVAL_8000HZ"
@@ -801,9 +767,6 @@ msgstr ""
 msgid "SNDMNU_CHANNELS"
 msgstr "Κανάλια ήχου"
 
-msgid "SNDMNU_BACKEND"
-msgstr ""
-
 msgid "SNDMNU_OPENAL"
 msgstr "OpenAL ρυθμίσεις"
 
@@ -817,9 +780,6 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr ""
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr ""
-
-msgid "SNDMNU_MENUSOUND"
 msgstr ""
 
 msgid "ADVSNDMNU_TITLE"
@@ -850,18 +810,15 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr ""
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr ""
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
-msgstr ""
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
 msgstr ""
 
 msgid "ADVSNDMNU_FLUIDGAIN"
@@ -877,25 +834,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr ""
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr ""
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr ""
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr ""
@@ -904,9 +852,6 @@ msgid "ADVSNDMNU_ADVRESAMPLING"
 msgstr ""
 
 msgid "ADVSNDMNU_OPLBANK"
-msgstr ""
-
-msgid "ADVSNDMNU_ADLOPLCORES"
 msgstr ""
 
 msgid "ADVSNDMNU_RUNPCMRATE"
@@ -922,9 +867,6 @@ msgid "ADVSNDMNU_OPNCORES"
 msgstr ""
 
 msgid "ADVSNDMNU_GUSEMULATION"
-msgstr ""
-
-msgid "ADVSNDMNU_GUSCONFIG"
 msgstr ""
 
 msgid "ADVSNDMNU_DMXGUS"
@@ -1023,13 +965,13 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr ""
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "OPTVAL_MAMEOPL2"
 msgstr ""
@@ -1065,9 +1007,6 @@ msgid "OPTVAL_NP2OPNA"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
-
-msgid "OPTVAL_PMDWINOPNA"
 msgstr ""
 
 msgid "OPTVAL_OPALOPL3"
@@ -1182,13 +1121,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Παλέτα"
@@ -1310,12 +1249,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr ""
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr ""
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr ""
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr ""
 
@@ -1343,12 +1276,6 @@ msgstr ""
 msgid "VIDMNU_TITLE"
 msgstr "Λειτουργία βίντεο"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr ""
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr ""
-
 msgid "OPTVAL_LETTERBOX"
 msgstr ""
 
@@ -1364,16 +1291,10 @@ msgstr "Πλήρης οθόνη"
 msgid "VIDMNU_HIDPI"
 msgstr ""
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr ""
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr ""
 
 msgid "VIDMNU_CROPASPECT"
-msgstr ""
-
-msgid "VIDMNU_5X4ASPECTRATIO"
 msgstr ""
 
 msgid "VIDMNU_SCALEMODE"
@@ -1460,14 +1381,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "Προτιμούμενο Rendering API"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulka"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr ""
@@ -1539,95 +1460,6 @@ msgstr "Επεξεργασία Περιβάλλοντος"
 msgid "REVMNU_NEW"
 msgstr "Νέο Περιβάλλον"
 
-msgid "REVMNU_REVERT"
-msgstr "Επαναφορά Ρυθμίσεων"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Μέγεθος Περιβάλλοντος"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Διάχυση Περιβάλλοντος"
-
-msgid "REVMNU_ROOM"
-msgstr "Δωμάτιο"
-
-msgid "REVMNU_ROOM_HF"
-msgstr "Δωμάτιο HF"
-
-msgid "REVMNU_ROOM_LF"
-msgstr "Δωμάτιο LF"
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS"
-msgstr "Αντανακλάσεις"
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Καθυστέρηση Αντανακλάσεων"
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_REVERB"
-msgstr ""
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_DENSITY"
-msgstr ""
-
 msgid "REVMNU_Reflections_Scale"
 msgstr ""
 
@@ -1668,7 +1500,7 @@ msgid "REVMNU_Create"
 msgstr "Δημιουργία"
 
 msgid "REVMNU_Save"
-msgstr "Αποθήκευση"
+msgstr "Αποθήκευση…"
 
 msgid "REVMNU_File_name"
 msgstr "Όνομα αρχείου"
@@ -1680,41 +1512,34 @@ msgid "DSPLYMNU_VKOPT"
 msgstr "Vulka Ρυθμίσεις (Πειραματικές)"
 
 msgid "VK_TITLE"
-msgstr "Vulkan Ρυθμίσεις"
-
-msgid "VKMNU_ENABLE"
-msgstr "Ενεργοποιηση του Vulkan"
+msgstr "Vulka Ρυθμίσεις"
 
 msgid "VKMNU_DEVICE"
-msgstr "Vulkan ID Συσκευής"
+msgstr "Vulka ID Συσκευής"
 
 msgid "VKMNU_HDR"
 msgstr "Υψηλό Δυναμική Εμβέλεια"
 
 msgid "VK_WARNING"
-msgstr "Προειδοποίηση: Ο Vulkan renderer είναι υψηλά πειραματικός!"
+msgstr "Προειδοποίηση: Ο Vulka renderer είναι υψηλά πειραματικός!"
 
 msgid "VK_RESTART"
-msgstr "Αυτές η ρυθμίσεις θα χρειαστούνε επανεκκίνηση για να ισχύσουν"
-
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Επιλογή Vulkan Συσκευής"
+msgstr "Αυτές η ρυθμίσεις θα χρειαστούνε επανεκκίνηση για να ισχύσουν."
 
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Παλίο xBRZ"
@@ -1729,126 +1554,15 @@ msgid "OS_ALL"
 msgstr "Αναζήτηση για όλες της λέξεις"
 
 msgid "OS_NO_RESULTS"
-msgstr "Δέν βρέθηκαν αποτελέσματα"
+msgstr "Δέν βρέθηκαν αποτελέσματα."
 
 msgid "OS_LABEL"
 msgstr "Αναζήτηση:"
 
-msgid "TXT_OBITUARY1"
-msgstr "Ο/Η %k ξεκοκάλοσε @[pro2_gr] %o σα ψάρι"
-
-msgid "TXT_OBITUARY2"
-msgstr "Ο/Η %k ευνούχισε %o"
-
-msgid "TXT_OBITUARY3"
-msgstr "Ο/Η %k κρέμασε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY4"
-msgstr "Ο/Η %k αποδεκάτισε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY5"
-msgstr "Ο/Η %k κατέστεψε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY6"
-msgstr "Ο/Η %k τεμάχησε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY7"
-msgstr "Ο/Η %k ισοπέδοσε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY8"
-msgstr "Ο/Η %k ησοπέδοσε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY9"
-msgstr "Ο/Η %k γάμησε @[pro2_gr] %o @[pro3_gr] κόλο"
-
-msgid "TXT_OBITUARY10"
-msgstr "Ο/Η %k έσκισε τον κόλο του/της] %o"
-
-msgid "TXT_OBITUARY11"
-msgstr "Ο/Η %k σκότωσε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY12"
-msgstr "Ο/Η %k έφτιαξε κυμά με @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY13"
-msgstr "Ο/Η %k δολοφώνησε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY14"
-msgstr "Ο/Η %k ακρωτηριάσε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY15"
-msgstr "Ο/Η %k δέσμισε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY16"
-msgstr "Ο/Η άνοιξε μια νέα τρύπα @[pro3_gr] %o"
-
-msgid "TXT_OBITUARY17"
-msgstr "Ο/Η %k έσφαξε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY18"
-msgstr "Ο/Η %k τσάκισε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY19"
-msgstr "Ο/Η %k γάμησε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "Ο/Η %k έσκασε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY21"
-msgstr "Ο/Η %k πάτησε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY22"
-msgstr "Ο/Η %k κομμάτιασε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY23"
-msgstr "Ο/Η %k σκότωσε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY24"
-msgstr "Ο/Η %k έχωσε @[pro2_gr] %o στη κάσα του/της"
-
-msgid "TXT_OBITUARY25"
-msgstr "Ο/Η %k έστειλε @[pro2_gr] %o στο δίαολο"
-
-msgid "TXT_OBITUARY26"
-msgstr "Ο/Η %k έψησε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY27"
-msgstr "Ο/Η %k έσβησε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY28"
-msgstr "Ο/Η %k έονιξε @[pro2_gr] %o σε σφαίρες"
-
-msgid "TXT_OBITUARY29"
-msgstr "Ο/Η %k ψέκασε @[pro2_gr] %o"
-
-msgid "TXT_OBITUARY30"
-msgstr "Ο/Η %k γύρισε @[pro2_gr] %o σε κιμά"
-
-msgid "TXT_OBITUARY31"
-msgstr "Ο/Η %k πλάκοσε @[pro2_gr] %o σαν κοπρίτης"
-
-msgid "TXT_SELFOBIT1"
-msgstr "@[art_gr] %o είναι κόπρανα"
-
-msgid "TXT_SELFOBIT2"
-msgstr "@[art_gr] %o είναι χάμπουργκερ"
-
-msgid "TXT_SELFOBIT3"
-msgstr "Οι όρχις @[pro4_gr] %o βγήκανε"
-
-msgid "TXT_SELFOBIT4"
-msgstr "@[art_gr] %o εθελώντησε για έλεγχο του πληθυσμού"
-
-msgid "TXT_SELFOBIT5"
-msgstr "@[art_gr] %o έχει αυτοκτονήση"
-
-msgid "TXT_SELFOBIT6"
-msgstr "@[art_gr] %o κέρδισε το Darwin βραβείο"
-
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr ""
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1881,41 +1595,11 @@ msgstr ""
 msgid "TXT_UNKNOWN"
 msgstr "Άχνωστο"
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr ""
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr ""
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Το αρχείο αποθήκευσης χριάζετε αυτά τα αρχεία"
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr ""
-
-msgid "OPTMNU_INPUT"
-msgstr ""
-
-msgid "OPTMNU_SYSTEM"
-msgstr ""
-
-msgid "OPTMNU_LIGHT"
-msgstr ""
-
-msgid "OPTMNU_SPRITE"
-msgstr ""
-
 msgid "GLPREFMNU_CORONAS"
 msgstr ""
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr ""
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Προηγμένες Ρυθμίσεις Οθόνης"
 
 msgid "PICKER_SELECT"
 msgstr ""
@@ -2019,21 +1703,6 @@ msgid "PICKER_HOST"
 msgstr ""
 
 msgid "PICKER_JOIN"
-msgstr ""
-
-msgid "PICKER_NETMODE"
-msgstr "Λειτουργία Δικτυου:"
-
-msgid "PICKER_NETAUTO"
-msgstr "Αυτόματο (Προτεινόμενο)"
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr "Διακομιστής Πακετων"
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
 msgstr ""
 
 msgid "PICKER_NETRATE"

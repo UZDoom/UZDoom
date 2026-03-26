@@ -12,7 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: cs\n"
 
 msgid "HHUSTR_E1M1"
 msgstr "Přístav"

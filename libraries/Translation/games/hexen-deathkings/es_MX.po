@@ -12,8 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15.1\n"
-"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese "
-"esh esi esu\n"
 
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""

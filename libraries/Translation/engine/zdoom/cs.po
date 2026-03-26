@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-30 17:00+0000\n"
-"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
+"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/cs/>\n"
 "Language: cs\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: cs\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Stiskni klávesu."
@@ -21,7 +20,7 @@ msgid "SECRETMESSAGE"
 msgstr "Nalezl[@ao_cs] jsi skrýš!"
 
 msgid "D_DEVSTR"
-msgstr "Zbytečný režim ZAP.\n"
+msgstr "Zbytečný režim: ZAP"
 
 msgid "QUITMSG"
 msgstr ""
@@ -34,45 +33,47 @@ msgid "LOADNET"
 msgstr ""
 "Během síťové hry nelze načíst hru!\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "QLOADNET"
 msgstr ""
 "Během síťové hry nelze rychle načíst hru!\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "QSAVESPOT"
 msgstr ""
 "Ještě nebyl vybrán slot pro rychlé uložení!\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "NEWGAME"
 msgstr ""
-"Během síťové hry nelze začít novou hru.\n"
+"Během síťové hry nelze\n"
+"začít novou hru.\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "NIGHTMARE"
 msgstr ""
-"Jsi si jist? Tato úroveň obtížnosti není ani trochu fér.\n"
+"Jsi si jist?\n"
+"Tato úroveň obtížnosti není ani trochu fér.\n"
 "\n"
 "Stiskni Y nebo N."
 
 msgid "SWSTRING"
 msgstr ""
-"Toto je shareware verze Dooma.\n"
+"Toto je shareware verze Doomu.\n"
 "\n"
 "Musíš si objednat celou trilogii.\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "NETEND"
 msgstr ""
 "Síťovou hru nelze ukončit!\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "ENDGAME"
 msgstr ""
@@ -97,7 +98,7 @@ msgstr ""
 
 msgid "QUITMSG2"
 msgstr ""
-"Utečme -- začíná\n"
+"Utečme—začíná\n"
 "tu téct krev!"
 
 msgid "QUITMSG3"
@@ -112,7 +113,7 @@ msgstr ""
 
 msgid "QUITMSG5"
 msgstr ""
-"Ještě nechoď -- tam\n"
+"Ještě nechoď—tam\n"
 "za rohem je démon!"
 
 msgid "QUITMSG6"
@@ -121,9 +122,7 @@ msgstr ""
 "dostanu tě."
 
 msgid "QUITMSG7"
-msgstr ""
-"Jen do toho, odejdi; schválně,\n"
-"jestli mi to bude jedno."
+msgstr "Jen do toho, odejdi; schválně, jestli mi to bude jedno."
 
 # More info here.
 msgid "QUITMSG8"
@@ -135,8 +134,9 @@ msgstr ""
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
-"Teď neodcházej, na příkazové řádce\n"
-"číhá dimenzionální Jožin!"
+"Teď neodcházej, na\n"
+"příkazové řádce číhá\n"
+"dimenzionální Jožin!"
 
 msgid "QUITMSG10"
 msgstr ""
@@ -153,6 +153,7 @@ msgstr ""
 "Hele, kámo, když teď odejdeš,\n"
 "přijdeš o svoje skóre!"
 
+#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
 "Jen odejdi. Až se vrátíš,\n"
@@ -170,27 +171,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Masakr přerušus...\n"
+"Masakr přerušus…\n"
 "Takhle mě neškádli!"
 
 msgid "QUITMSG17"
 msgstr ""
 "Ale ty jsi naše naděje\n"
-"-- moje jediná šance!"
+"—moje jediná šance!"
 
 msgid "QUITMSG18"
 msgstr "Nikdo se neobrací zády ke Strace."
 
 msgid "QUITMSG19"
-msgstr "Myslela jsem, že jsi jin@[adj_cs]..."
+msgstr "Myslela jsem, že jsi jin@[adj_cs]…"
 
 msgid "QUITMSG20"
 msgstr "Fajn! Prostě zab a uteč!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Můžeš odejít...\n"
-"ale nemůžeš se skrýt..."
+"Můžeš odejít…\n"
+"ale nemůžeš se skrýt…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -204,7 +205,7 @@ msgstr ""
 
 msgid "QUITMSG24"
 msgstr ""
-"Teď to nevzdávej - slizouni\n"
+"Teď to nevzdávej—slizouni\n"
 "budou mít výhodu!"
 
 msgid "QUITMSG25"
@@ -215,7 +216,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "Doufám, že si jen dáváš\n"
-"pauzu na Chex(R) Party Mix."
+"pauzu na Chex® Party Mix."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -229,7 +230,7 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"Skutečný Chex(R) bojovník\n"
+"Skutečný Chex® bojovník\n"
 "by se tak rychle nevzdal!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
@@ -260,19 +261,19 @@ msgid "HUSTR_MSGU"
 msgstr "[Zpráva neposlána]"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr "Něco si zamumláš pro sebe."
+msgstr "Něco si zamumláš pro sebe"
 
 msgid "HUSTR_TALKTOSELF2"
 msgstr "Kdo je tam?"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr "Vystrašíš se."
+msgstr "Vystrašíš se"
 
 msgid "HUSTR_TALKTOSELF4"
-msgstr "Začneš pařit."
+msgstr "Začneš pařit"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Kleplo ti..."
+msgstr "Kleplo ti…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Zpráva odeslána]"
@@ -284,16 +285,16 @@ msgid "STSTR_NOMUS"
 msgstr "Nemožný výběr"
 
 msgid "STSTR_DQDON"
-msgstr "Nesmrtelnost ZAP"
+msgstr "Nesmrtelnost: ZAP"
 
 msgid "STSTR_DQDOFF"
-msgstr "Nesmrtelnost VYP"
+msgstr "Nesmrtelnost: VYP"
 
 msgid "STSTR_DQD2ON"
-msgstr "Supernesmrtelnost ZAP"
+msgstr "Supernesmrtelnost: ZAP"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Supernesmrtelnost VYP"
+msgstr "Supernesmrtelnost: VYP"
 
 msgid "STSTR_KFAADDED"
 msgstr "Velmi veselá munice přidána"
@@ -302,16 +303,18 @@ msgid "STSTR_FAADDED"
 msgstr "Munice (bez klíčú) přidána"
 
 msgid "STSTR_NCON"
-msgstr "Bezkolizní režim ZAP"
+msgstr "Bezkolizní režim: ZAP"
 
 msgid "STSTR_NCOFF"
-msgstr "Bezkolizní režim VYP"
+msgstr "Bezkolizní režim: VYP"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Bezkolizní režim 2 ZAP"
+msgstr "Bezkolizní režim 2: ZAP"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Bezkolizní režim 2 VYP"
+msgstr "Bezkolizní režim 2: VYP"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -328,28 +331,28 @@ msgstr "Power-up vybrán"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... není cucák - GM"
+msgstr "… není cucák - GM"
 
 msgid "STSTR_CLEV"
-msgstr "Měním level..."
+msgstr "Měním level…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Buddha mód ZAP"
+msgstr "Buddha mód: ZAP"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Buddha mód VYP"
+msgstr "Buddha mód: VYP"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Super Buddha mód ZAP"
+msgstr "Super Buddha mód: ZAP"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Super Buddha mód VYP"
+msgstr "Super Buddha mód: VYP"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Energie ZAP"
+msgstr "Energie: ZAP"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Energie VYP"
+msgstr "Energie: VYP"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Plné zdraví"
@@ -358,22 +361,22 @@ msgid "TXT_CHEATKEYS"
 msgstr "Všechny klíče"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Debug zvuku ZAP"
+msgstr "Debug zvuku: ZAP"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug zvuku VYP"
+msgstr "Debug zvuku: VYP"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Pokoušíš se cheatovat, co? Teď zemřeš!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Podvodníku - nezasloužíš si zbraně"
+msgstr "Podvodníku—nezasloužíš si zbraně"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Počítadlo ZAP"
+msgstr "Počítadlo: ZAP"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Počítadlo VYP"
+msgstr "Počítadlo: VYP"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Máš to mít"
@@ -385,25 +388,25 @@ msgid "TXT_GOTSTUFF"
 msgstr "Dostal jsi věci!"
 
 msgid "TXT_FREEZEON"
-msgstr "Režim zamrznutí ZAP"
+msgstr "Režim zamrznutí: ZAP"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Režim zamrznutí VYP"
+msgstr "Režim zamrznutí: VYP"
 
 msgid "TXT_STRANGE"
-msgstr "Cítíš se divně..."
+msgstr "Cítíš se divně…"
 
 msgid "TXT_STRANGER"
-msgstr "Cítíš se ještě divněji..."
+msgstr "Cítíš se ještě divněji."
 
 msgid "TXT_NOTSTRANGE"
 msgstr "Cítíš se opět jako ty."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Olověné boty ZAP"
+msgstr "Olověné boty: ZAP"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Olověné boty VYP"
+msgstr "Olověné boty: VYP"
 
 msgid "TXT_LIGHTER"
 msgstr "Cítíš se lehčí"
@@ -412,10 +415,10 @@ msgid "TXT_GRAVITY"
 msgstr "Gravitace tě táhne dolů"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Neútočící příšery ZAP"
+msgstr "Neútočící příšery: ZAP"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Neútočící příšery VYP"
+msgstr "Neútočící příšery: VYP"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "„Třeste se strachy!“"
@@ -424,10 +427,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Už žádné zlobří brnění"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Pohled z třetí osoby ZAP"
+msgstr "Pohled z třetí osoby: ZAP"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Pohled z třetí osoby VYP"
+msgstr "Pohled z třetí osoby: VYP"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 zloun zabit"
@@ -451,25 +454,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "Co chceš zabít, když nejsi ve hře?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Vlastnosti držící hráče na místě vypnuty"
+msgstr "Vlastnosti držící hráče na místě: VYP"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Režim sledování VYP"
+msgstr "Režim sledování: VYP"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Režim sledování ZAP"
+msgstr "Režim sledování: ZAP"
 
 msgid "AMSTR_GRIDON"
-msgstr "Mřížka ZAP"
+msgstr "Mřížka: ZAP"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Mrizka VYP"
+msgstr "Mrizka: VYP"
 
 msgid "AMSTR_TEXON"
-msgstr "Texturovaný režim ZAP"
+msgstr "Texturovaný režim: ZAP"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Texturovaný režim VYP"
+msgstr "Texturovaný režim: VYP"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Značka"
@@ -487,7 +490,7 @@ msgid "SPREEKILLSELF"
 msgstr "%o vypadal@[ao_cs] dobře dokud se @[self_cs] nezabil@[ao_cs]!"
 
 msgid "SPREEOVER"
-msgstr "%o@[psn1_cs] vraždící řádění ukončil hráč %k."
+msgstr "%o@[psn1_cs] vraždící řádění ukončil hráč %k"
 
 msgid "SPREE5"
 msgstr "%k začal@[ao_cs] řádit!"
@@ -523,7 +526,7 @@ msgid "SCORE_COLOR"
 msgstr "Barva"
 
 msgid "SCORE_SECRET"
-msgstr "Skrýše"
+msgstr "Skrýš"
 
 msgid "SCORE_NAME"
 msgstr "Jméno"
@@ -629,7 +632,7 @@ msgid "OB_MONTELEFRAG"
 msgstr "%o byl@[ao_cs] telefraggnut@[ao_cs]."
 
 msgid "OB_DEFAULT"
-msgstr "%o zemřel@[ao_cs].\n"
+msgstr "%o zemřel@[ao_cs]."
 
 msgid "OB_MPDEFAULT"
 msgstr "%o byl@[ao_cs] zabit@[ao_cs] hráčem %k."
@@ -663,7 +666,7 @@ msgid "GOTSTIM"
 msgstr "Sebrán stimulant."
 
 msgid "GOTMEDINEED"
-msgstr "Sebrána lékárnička, kterou jsi FAKT potřeboval@[ao_cs]."
+msgstr "Sebrána lékárnička, kterou jsi FAKT potřeboval@[ao_cs]!"
 
 msgid "GOTMEDIKIT"
 msgstr "Sebrána lékárnička."
@@ -738,25 +741,25 @@ msgid "GOTBACKPACK"
 msgstr "Sebrán batoh s haldou munice!"
 
 msgid "GOTBFG9000"
-msgstr "Sebráno BFG9000! Ó, ano!"
+msgstr "Sebráno BFG9000! Ó, ano."
 
 msgid "GOTCHAINGUN"
-msgstr "Sebrán kulomet."
+msgstr "Sebrán kulomet!"
 
 msgid "GOTCHAINSAW"
 msgstr "Motorová pila! Najdi maso!"
 
 msgid "GOTLAUNCHER"
-msgstr "Sebrán raketomet."
+msgstr "Sebrán raketomet!"
 
 msgid "GOTPLASMA"
-msgstr "Sebrána plazmová puška."
+msgstr "Sebrána plazmová puška!"
 
 msgid "GOTSHOTGUN"
-msgstr "Sebrána brokovnice."
+msgstr "Sebrána brokovnice!"
 
 msgid "GOTSHOTGUN2"
-msgstr "Sebrána superbrokovnice."
+msgstr "Sebrána superbrokovnice!"
 
 msgid "PICKUP_PISTOL_DROPPED"
 msgstr "Sebrána pistole."
@@ -774,65 +777,65 @@ msgid "BETA_BONUS4"
 msgstr "Sebrána bezbožná bible."
 
 msgid "PD_BLUEO"
-msgstr "K aktivaci tohoto objektu potřebuješ modrý klíč."
+msgstr "K aktivaci tohoto objektu potřebuješ modrý klíč"
 
 msgid "PD_REDO"
-msgstr "K aktivaci tohoto objektu potřebuješ červený klíč."
+msgstr "K aktivaci tohoto objektu potřebuješ červený klíč"
 
 msgid "PD_YELLOWO"
-msgstr "K aktivaci tohoto objektu potřebuješ žlutý klíč."
+msgstr "K aktivaci tohoto objektu potřebuješ žlutý klíč"
 
 msgid "PD_BLUEK"
-msgstr "K otevření těchto dveří potřebuješ modrý klíč."
+msgstr "K otevření těchto dveří potřebuješ modrý klíč"
 
 msgid "PD_REDK"
-msgstr "K otevření těchto dveří potřebuješ červený klíč."
+msgstr "K otevření těchto dveří potřebuješ červený klíč"
 
 msgid "PD_YELLOWK"
-msgstr "K otevření těchto dveří potřebuješ žlutý klíč."
+msgstr "K otevření těchto dveří potřebuješ žlutý klíč"
 
 msgid "PD_BLUECO"
-msgstr "K aktivaci tohoto objektu potřebuješ modrou kartu."
+msgstr "K aktivaci tohoto objektu potřebuješ modrou kartu"
 
 msgid "PD_REDCO"
-msgstr "K aktivaci tohoto objektu potřebuješ červenou kartu."
+msgstr "K aktivaci tohoto objektu potřebuješ červenou kartu"
 
 msgid "PD_YELLOWCO"
-msgstr "K aktivaci tohoto objektu potřebuješ žlutou kartu."
+msgstr "K aktivaci tohoto objektu potřebuješ žlutou kartu"
 
 msgid "PD_BLUESO"
-msgstr "K aktivaci tohoto objektu potřebuješ modrou lebku."
+msgstr "K aktivaci tohoto objektu potřebuješ modrou lebku"
 
 msgid "PD_REDSO"
-msgstr "K aktivaci tohoto objektu potřebuješ červenou lebku."
+msgstr "K aktivaci tohoto objektu potřebuješ červenou lebku"
 
 msgid "PD_YELLOWSO"
-msgstr "K aktivaci tohoto objektu potřebuješ žlutou lebku."
+msgstr "K aktivaci tohoto objektu potřebuješ žlutou lebku"
 
 msgid "PD_BLUEC"
-msgstr "K otevření těchto dveří potřebuješ modrou kartu."
+msgstr "K otevření těchto dveří potřebuješ modrou kartu"
 
 msgid "PD_REDC"
-msgstr "K otevření těchto dveří potřebuješ červenou kartu."
+msgstr "K otevření těchto dveří potřebuješ červenou kartu"
 
 msgid "PD_YELLOWC"
-msgstr "K otevření těchto dveří potřebuješ žlutou kartu."
+msgstr "K otevření těchto dveří potřebuješ žlutou kartu"
 
 msgid "PD_BLUES"
-msgstr "K otevření těchto dveří potřebuješ modrou lebku."
+msgstr "K otevření těchto dveří potřebuješ modrou lebku"
 
 msgid "PD_REDS"
-msgstr "K otevření těchto dveří potřebuješ červenou lebku."
+msgstr "K otevření těchto dveří potřebuješ červenou lebku"
 
 msgid "PD_YELLOWS"
-msgstr "K otevření těchto dveří potřebuješ žlutou lebku."
+msgstr "K otevření těchto dveří potřebuješ žlutou lebku"
 
 msgid "CC_ZOMBIE"
 msgstr "Zombie"
 
 # a.k.a. (former human) sergeant
 msgid "CC_SHOTGUN"
-msgstr "Seržant"
+msgstr "Brokovničář"
 
 # a.k.a. former commando
 msgid "CC_HEAVY"
@@ -1199,10 +1202,10 @@ msgid "TXT_NEEDBLUEKEY"
 msgstr "K otevření těchto dveří potřebuješ modrý klíč"
 
 msgid "TXT_NEEDGREENKEY"
-msgstr "K otevření těchto dveří potřebuješ červený klíč"
+msgstr "K otevření těchto dveří potřebuješ zelený klíč"
 
 msgid "TXT_NEEDYELLOWKEY"
-msgstr "K otevření těchto dveří potřebuješ žlutý klíč."
+msgstr "K otevření těchto dveří potřebuješ žlutý klíč"
 
 msgid "FN_CHICKEN"
 msgstr "Slepice"
@@ -1887,7 +1890,7 @@ msgid "TXT_SHADOWARMOR"
 msgstr "Sebral@[ao_cs] jsi krycí brnění."
 
 msgid "TXT_ENVSUIT"
-msgstr "Sebral@[ao_cs] jsi ochranný oděv"
+msgstr "Sebral@[ao_cs] jsi ochranný oděv."
 
 msgid "TXT_GUARDUNIFORM"
 msgstr "Sebral@[ao_cs] jsi hlídačovu uniformu."
@@ -2070,61 +2073,61 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Sebral@[ao_cs] jsi brašnu na munici."
 
 msgid "MSG_TALISMANRED"
-msgstr "Máš pocit, že jsi na to sahat neměl@[ao_cs]..."
+msgstr "Máš pocit, že jsi na to sahat neměl@[ao_cs]…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Je jedno, co to je, do tohoto světa to nepatří..."
+msgstr "Je jedno, co to je, do tohoto světa to nepatří…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Něco to dělat musí..."
+msgstr "Něco to dělat musí…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Získal@[ao_cs] jsi super sílu!"
 
 msgid "TXT_NEEDKEY"
-msgstr "Nemáš klíč."
+msgstr "Nemáš klíč"
 
 msgid "TXT_NEED_PASSCARD"
-msgstr "Potřebuješ průkaz."
+msgstr "Potřebuješ průkaz"
 
 msgid "TXT_NEED_PASSCARD_DOOR"
-msgstr "Pro otevření dveří potřebuješ průkaz."
+msgstr "Pro otevření dveří potřebuješ průkaz"
 
 msgid "TXT_NEED_IDCARD"
-msgstr "Potřebuješ identifikační kartu."
+msgstr "Potřebuješ identifikační kartu"
 
 msgid "TXT_NEED_PRISONKEY"
-msgstr "Nemáš klíč do vězení."
+msgstr "Nemáš klíč do vězení"
 
 msgid "TXT_NEED_HANDPRINT"
-msgstr "Otisk ruky není v databázi."
+msgstr "Otisk ruky není v databázi"
 
 msgid "TXT_NEED_GOLDKEY"
-msgstr "Potřebuješ zlatý klíč."
+msgstr "Potřebuješ zlatý klíč"
 
 msgid "TXT_NEED_IDBADGE"
-msgstr "Potřebuješ identifikační odznak."
+msgstr "Potřebuješ identifikační odznak"
 
 msgid "TXT_NEED_IDBADGE_DOOR"
-msgstr "Pro otevření dveří potřebuješ identifikační odznak."
+msgstr "Pro otevření dveří potřebuješ identifikační odznak"
 
 msgid "TXT_NEED_SILVERKEY"
-msgstr "Potřebuješ stříbrný klíč."
+msgstr "Potřebuješ stříbrný klíč"
 
 msgid "TXT_NEED_BRASSKEY"
-msgstr "Potřebuješ mosazný klíč."
+msgstr "Potřebuješ mosazný klíč"
 
 msgid "TXT_NEED_REDCRYSTAL"
-msgstr "Potřebuješ červený krystal."
+msgstr "Potřebuješ červený krystal"
 
 msgid "TXT_NEED_BLUECRYSTAL"
-msgstr "Potřebuješ modrý krystal."
+msgstr "Potřebuješ modrý krystal"
 
 msgid "TXT_RETAIL_ONLY"
-msgstr "Tato oblast je dostupná pouze v registrované verzi."
+msgstr "Tato oblast je dostupná pouze v registrované verzi hry Strifu"
 
 msgid "TXT_DOES_NOT_WORK"
-msgstr "Takhle to nepůjde."
+msgstr "Takhle to nepůjde"
 
 msgid "TXT_NEED_CHALICE"
 msgstr "Potřebuješ kalich!"
@@ -2454,7 +2457,7 @@ msgid "OB_ALIENSPECTRE"
 msgstr "%o byl@[ao_cs] zničen@[ao_cs] přízrakem."
 
 msgid "OB_ENTITY"
-msgstr "%o pocítil@[ao_cs] vztek Jediného Boha"
+msgstr "%o pocítil@[ao_cs] vztek Jediného Boha."
 
 msgid "OB_LOREMASTER"
 msgstr "%o nemohl@[ao_cs] utéct Dějepiscově sevření."
@@ -2559,10 +2562,10 @@ msgid "TXT_KILLED_LOREMASTER"
 msgstr "Zabil@[ao_cs] jsi Dějepisce!"
 
 msgid "TXT_YOUFOOL"
-msgstr "Blázne! Spustil@[ao_cs] jsi alarm!"
+msgstr "Blázne! Spustil@[ao_cs] jsi alarm."
 
 msgid "TXT_YOUREDEAD"
-msgstr "Jsi mrtv@[adj_cs]! Spustil@[ao_cs] jsi alarm!"
+msgstr "Jsi mrtv@[adj_cs]! Spustil@[ao_cs] jsi alarm."
 
 msgid "TXT_HAVEENOUGH"
 msgstr "Ty už máš přece dost!"
@@ -2571,23 +2574,23 @@ msgid "TXT_GOAWAY"
 msgstr "Jdi pryč!"
 
 msgid "TXT_COMM0"
-msgstr "Příchozí zpráva..."
+msgstr "Příchozí zpráva…"
 
 msgid "TXT_COMM1"
-msgstr "Příchozí zpráva od Straky..."
+msgstr "Příchozí zpráva od Straky…"
 
 msgid "TXT_FINDHELP"
-msgstr "Najdi pomoc."
+msgstr "Najdi pomoc"
 
 # As in for %u amount of money.
 msgid "TXT_TRADE"
 msgstr "za %u zlatých"
 
 msgid "GOTCHEXARMOR"
-msgstr "Sebráno Chex(R) brnění."
+msgstr "Sebráno Chex® brnění."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Sebráno Super Chex(R) brnění!"
+msgstr "Sebráno Super Chex® brnění!"
 
 msgid "GOTWATER"
 msgstr "Sebrána sklenice vody."
@@ -2617,10 +2620,10 @@ msgid "GOTVEGETABLES"
 msgstr "Sebrána mísa se zeleninou."
 
 msgid "GOTSLIMESUIT"
-msgstr "Nalezen slizu odolný oblek."
+msgstr "Nalezen slizu odolný oblek"
 
 msgid "GOTCHEXMAP"
-msgstr "Nalezena počítačová mapa oblasti."
+msgstr "Nalezena počítačová mapa oblasti"
 
 msgid "GOTZORCHRECHARGE"
 msgstr "Sebrán minibzukový náboj."
@@ -2635,7 +2638,7 @@ msgid "GOTPROPULSORPACK"
 msgstr "Sebrán balík pro bzukový propulzor."
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "Sebrán náboj pro fázovací bzukr."
+msgstr "Sebrán náboj pro fázovací bzukr"
 
 msgid "GOTPHASINGZORCHERPACK"
 msgstr "Sebrán balík pro fázovací bzukr."
@@ -2650,7 +2653,7 @@ msgid "GOTZORCHPACK"
 msgstr "Sebrán Bzukrbatoh!"
 
 msgid "GOTLAZDEVICE"
-msgstr "Získal@[ao_cs] jsi velkodosahový bzukr! Cooo?"
+msgstr "Získal@[ao_cs] jsi velkodosahový bzukr! Wút!"
 
 msgid "GOTRAPIDZORCHER"
 msgstr "Získal@[ao_cs] jsi rychlobzukr!"
@@ -2771,7 +2774,8 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Pokračuj stisknutím klávesy ESC..."
+"\n"
+"Pokračuj stisknutím klávesy Esc…"
 
 msgid "CE2TEXT"
 msgstr "Dokázal@[ao_cs] jsi to!"
@@ -2786,7 +2790,7 @@ msgid "CLOADNET"
 msgstr ""
 "Nemůžeš použít načtení, když hraješ síťové pátrání!\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgctxt "chex"
 msgid "QSPROMPT"
@@ -2802,7 +2806,7 @@ msgid "QLOADNET"
 msgstr ""
 "Nemůžeš použít rychlé načtení , když hraješ síťové pátrání!\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgctxt "chex"
 msgid "QLPROMPT"
@@ -2815,9 +2819,10 @@ msgstr ""
 
 msgid "CNEWGAME"
 msgstr ""
-"Nemůžeš začít nové pátrání dokud jsi v síťové hře.\n"
+"Nemůžeš začít nové pátrání\n"
+"dokud jsi v síťové hře.\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "CNIGHTMARE"
 msgstr ""
@@ -2828,18 +2833,18 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"Toto je Chex(R) Quest. Najdi\n"
+"Toto je Chex® Quest. Najdi\n"
 "\n"
 "další levely na www.chexquest.com.\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
 "Nemůžeš ukončit síťové pátrání!\n"
 "\n"
-"Stiskni libovolnou klávesu"
+"Stiskni klávesu."
 
 msgctxt "chex"
 msgid "ENDGAME"
@@ -2850,11 +2855,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Režim nezranitelnosti ZAP"
+msgstr "Režim nezranitelnosti: ZAP"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Režim nezranitelnosti VYP"
+msgstr "Režim nezranitelnosti: VYP"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2866,7 +2871,7 @@ msgstr "Superbzukry přidány"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Jez Chex(R)!"
+msgstr "…Jez Chex®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -2949,19 +2954,19 @@ msgid "SSKILL_NIGHTMARE"
 msgstr "Krveřežba"
 
 msgid "MNU_WETNURSE"
-msgstr "Potřěbuješ krmlici?"
+msgstr "Potřěbuješ krmlici"
 
 msgid "MNU_YELLOWBELLIES"
 msgstr "Nemehla, tož jsme my"
 
 msgid "MNU_BRINGEST"
-msgstr "Chtějúci se práti?"
+msgstr "Chtějúci se práti"
 
 msgid "MNU_SMITE"
 msgstr "Ktož jsú boží bojovníci"
 
 msgid "MNU_BLACKPLAGUE"
-msgstr "Jsúci Smrtonošem morovým!"
+msgstr "Jsúci Smrtonošem morovým"
 
 msgid "MNU_SQUIRE"
 msgstr "Panoš"
@@ -3349,9 +3354,6 @@ msgstr "Okamžitě pohybující se podlahy nejsou tiché"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sektorové zvuky používají jeho střed jako zdroj"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Utnout zvuky, když jejich objekt zmizí"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Použít původní chování pro uchování zvukového cíle"
 
@@ -3509,7 +3511,7 @@ msgid "MAPCOLORMNU_INTERLEVELCOLOR"
 msgstr "Teleportér do jiného levelu"
 
 msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
-msgstr "Skrýš"
+msgstr "Tajný sektor"
 
 msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
 msgstr "Neobjevená skrýš"
@@ -3823,9 +3825,6 @@ msgstr "Typ fuzz efektu"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Klasická průhlednost"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Průhlednost Ztracených duší"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Použít falešný kontrast"
 
@@ -3979,9 +3978,6 @@ msgstr "Nastavení sítě"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Lokální nastavení"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Predikce pohybu"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Predikce čárových akcí"
 
@@ -3996,15 +3992,6 @@ msgstr "Nastavení hostitele"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Extra tiky"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Vyrovnání latence"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Původní"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Optimalizovaný"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Klasický (rychlejší)"
@@ -4062,25 +4049,16 @@ msgid "OPTVAL_BOTH"
 msgstr "Obojí"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Hráč"
 
 msgid "OPTVAL_MAP"
 msgstr "Level"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Zvětšit na 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Zdvojení pixelů"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Zčtyřnásobení pixelů"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Současná zbraň"
@@ -4175,15 +4153,6 @@ msgstr "Pouze barvy definované mapou"
 msgid "OPTVAL_NODOORS"
 msgstr "Všechny krom dveří"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Dvojitý"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Trojitý"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Čtveritý"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Sebrání předmětu"
 
@@ -4200,25 +4169,25 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Pouze příšery"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Starý"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (striktní)"
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (striktní)"
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (striktní)"
@@ -4228,9 +4197,6 @@ msgstr "MBF21 (striktní)"
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr ""
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Všechny nepotrvzené"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Chyby"
@@ -4253,12 +4219,6 @@ msgstr "Doom softwarový renderer"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "True color softwarový renderer"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "Vysoký výkon"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Nízká spotřeba"
-
 msgid "OPTVAL_VANILLA"
 msgstr "Původní"
 
@@ -4267,12 +4227,6 @@ msgstr "ZDoom (vynucený)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Původní (vynucený)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Auto (preferován ZDoom)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Auto (preferován původní)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Malé"
@@ -4362,22 +4316,16 @@ msgid "C_TEAL"
 msgstr "\\czModrozelená"
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Bez zvuku"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Bez interpolace"
 
 msgid "OPTSTR_SPLINE"
 msgstr "Křivka"
-
-msgid "OPTSTR_OPENAL"
-msgstr ""
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Hardwarový renderer"
@@ -4391,12 +4339,6 @@ msgstr "Nastavení hardwarového rendereru"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Nastavení dynamických světel"
 
-msgid "GLMNU_PREFS"
-msgstr "Preference"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Oříznout okraje spritů"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Seřadit vykreslování podle textury"
 
@@ -4405,9 +4347,6 @@ msgstr "Dynamická světla"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dynamická světla (hardware)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Povolit definice světel"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Světla ovlivňují sprity"
@@ -4424,17 +4363,11 @@ msgstr "Kvalita map stínů"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Filtrování map stínů"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Režim mlhy"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Mlha vynucuje plný jas"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Intenzita světel zbraní"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Mapa prostředí na zrcadlech"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Vylepšený režim nočního vidění"
@@ -4459,9 +4392,6 @@ msgstr "Sprity čelí kameře"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Styl částic"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Kvalita vykreslování"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr ""
@@ -4512,9 +4442,6 @@ msgstr ""
 msgid "OPTVAL_SOFTWARE"
 msgstr ""
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Optimální"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Po ose Y"
 
@@ -4526,9 +4453,6 @@ msgstr "Čtvercové"
 
 msgid "OPTVAL_ROUND"
 msgstr "Kulaté"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Radiální"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Pixelový fuzz"
@@ -4593,9 +4517,6 @@ msgstr "Nastavení True color"
 msgid "TCMNU_TITLE"
 msgstr "Nastavení True color"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Výstup True color"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Lineární filtrování při zmenšení"
 
@@ -4608,21 +4529,6 @@ msgstr "Použít mipmapy"
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Dynamická světla (software)"
 
-msgid "OS_TITLE"
-msgstr "Vyhledávání možností"
-
-msgid "OS_ANY"
-msgstr "Hledat jakékoli klíčové slovo"
-
-msgid "OS_ALL"
-msgstr "Hledat všechna klíčová slova"
-
-msgid "OS_NO_RESULTS"
-msgstr "Nic nenalezeno."
-
-msgid "OS_LABEL"
-msgstr "Hledat:"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Vždy zobrazit klíče"
 
@@ -4631,7 +4537,7 @@ msgstr "Změna týmu je vypnuta!"
 
 # %s is the player and gender sensitive
 msgid "TXT_JOINED_TEAM"
-msgstr "%s se připojil@[ao_cs] k týmu %t."
+msgstr "%s se připojil@[ao_cs] k týmu %t"
 
 msgid "TXT_LONER"
 msgstr "%s je teď @[self_cs]."
@@ -4659,7 +4565,7 @@ msgstr "Uložená hra '%s' je z jiného enginu založeného na ZDoomu:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Uložená hra '%s' je ze starší verze: %d (%e je nejstarší podporovaná verze)"
+"Uložená hra '%s' je ze starší verze: %d (%e je nejstarší podporovaná verze)."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4668,7 +4574,7 @@ msgstr ""
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Uložená hra '%s' je z novější verze: %d (%e je nejvyšší podporovaná verze)"
+"Uložená hra '%s' je z novější verze: %d (%e je nejvyšší podporovaná verze)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Uložená hra '%s' neobsahuje současný level."
@@ -4677,7 +4583,7 @@ msgid "TXT_NOGLOBALSJSON"
 msgstr "%s' není funkční uloženou hrou: Chybí 'globals.json'."
 
 msgid "TXT_SGINFOERR"
-msgstr "Nepodařilo se načíst informace v uložené hře '%s'."
+msgstr "Nepodařilo se načíst informace v uložené hře '%s'"
 
 msgid "TXT_SAVEPENDING"
 msgstr "Stále se čeká na uložení hry."
@@ -4686,13 +4592,13 @@ msgid "TXT_NOTSAVEABLE"
 msgstr "Nejsi v uložitelné hře."
 
 msgid "TXT_NOTINLEVEL"
-msgstr "Nejsi v levelu."
+msgstr "Nejsi v levelu"
 
 msgid "TXT_SPPLAYERDEAD"
-msgstr "Hráč je mrtvý v singleplayer hře."
+msgstr "Hráč je mrtvý v singleplayer hře"
 
 msgid "TXT_SAVEFAILED"
-msgstr "Uložení se nezdařilo."
+msgstr "Uložení se nezdařilo"
 
 msgid "TXT_SCREENSHOTERR"
 msgstr "Nepodařilo se pořídit snímek obrazovky."
@@ -4700,9 +4606,6 @@ msgstr "Nepodařilo se pořídit snímek obrazovky."
 # As in paused by player %s.
 msgid "TXT_BY"
 msgstr "hráčem %s"
-
-msgid "TXT_QUITENDOOM"
-msgstr "Pro ukončení stiskni libovolnou klávesu, nebo klikni kdekoliv v okně."
 
 msgid "HUDMNU_FLASH"
 msgstr "Barvení obrazovky"
@@ -4715,9 +4618,6 @@ msgstr "Zaměřovač"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Titulky"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Předejít šedým stínům"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Písma"
@@ -4758,11 +4658,6 @@ msgstr "Měřítko"
 
 msgid "SCALEMNU_RATIO"
 msgstr "Poměr stran"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr ""
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4861,7 +4756,7 @@ msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr "Zobrazit widget s časem"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "CMPTMNU_VILEGHOSTS"
 msgstr "Oživovat rozdrcené příšery jako duchy"
@@ -4913,10 +4808,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Zakázat sbírání odhozených předmětů na straně klientů"
 
 # Disables autoloading save on death
+#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Restart po umření"
 
 # Resets inventory on every map
+#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Začít jen s pistolí"
 
@@ -4936,7 +4833,7 @@ msgid "SNDMNU_FOOTSTEPVOLUME"
 msgstr "Hlasitost kroků"
 
 msgid "ID24_GOTINCINERATOR"
-msgstr "Sebrán plamenomet."
+msgstr "Sebrán plamenomet!"
 
 # Also known as Heatwave Generator.
 msgid "ID24_GOTCALAMITYBLADE"
@@ -5081,9 +4978,6 @@ msgstr "Čas k hlasování (vteřiny)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Pomalý režim chatu (vteřiny)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Povolit haptické aktivace"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "Nastavení haptiky"
 
@@ -5198,10 +5092,10 @@ msgid "TAG_REPELLENT"
 msgstr "Repelent proti slizu"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Chex brnění"
+msgstr "Chex® brnění"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Super Chex brnění"
+msgstr "Super Chex® brnění"
 
 msgid "TAG_CHEXMAP"
 msgstr "Počítačová mapa oblasti"
@@ -5258,3 +5152,15 @@ msgstr "Kontrast"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Sytost"
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Vyhlazený"
+
+#, fuzzy
+msgid "TAG_MAULER"
+msgstr "Trhač"
+
+#, fuzzy
+msgid "TAG_GLAUNCHER"
+msgstr "Granátomet"

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-27 16:02+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-03-24 23:09+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-engine-strings/es_MX/>\n"
 "Language: es_MX\n"
@@ -11,9 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese "
-"esh esi esu\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Presiona cualquier tecla."
@@ -22,7 +20,7 @@ msgid "SECRETMESSAGE"
 msgstr "Un secreto es revelado!"
 
 msgid "D_DEVSTR"
-msgstr "Modo inútil activado.\n"
+msgstr "Modo inútil: ACTIVADO"
 
 msgid "QUITMSG"
 msgstr ""
@@ -100,7 +98,7 @@ msgstr ""
 
 msgid "QUITMSG2"
 msgstr ""
-"¡Larguémonos -- es un mar\n"
+"¡Larguémonos—es un mar\n"
 "de sangre aqui!"
 
 msgid "QUITMSG3"
@@ -115,11 +113,13 @@ msgstr ""
 
 msgid "QUITMSG5"
 msgstr ""
-"¡Aún no te vayas -- hay un\n"
+"¡Aún no te vayas—hay un\n"
 "demonio por esa esquina!"
 
 msgid "QUITMSG6"
 msgstr ""
+"La proxima vez que vengas\n"
+"aqui acabaré contigo."
 
 msgid "QUITMSG7"
 msgstr "Vete fuera de aqui. No me importa."
@@ -134,6 +134,9 @@ msgstr ""
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
+"¡No te vayas ahora, hay un\n"
+"shambler dimensional esperando\n"
+"en la línea de comandos de DOS!"
 
 msgid "QUITMSG10"
 msgstr ""
@@ -142,9 +145,13 @@ msgstr ""
 
 msgid "QUITMSG11"
 msgstr ""
+"¡Si fuera tu jefe, te retaría a\n"
+"un deathmatch en un minuto!"
 
 msgid "QUITMSG12"
 msgstr ""
+"Mira, amigo. ¡Te vas ahora y\n"
+"pierdes el recuento de cadáveres!"
 
 msgid "QUITMSG13"
 msgstr ""
@@ -153,6 +160,8 @@ msgstr ""
 
 msgid "QUITMSG14"
 msgstr ""
+"Tienes suerte de que no te\n"
+"golpee por pensar en irte."
 
 msgid "QUITMSG15"
 msgstr ""
@@ -161,27 +170,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Masacre interruptus...\n"
+"Masacre interruptus…\n"
 "¡Qué estafa!"
 
 msgid "QUITMSG17"
 msgstr ""
 "Pero, eres mi esperanza\n"
-"-- ¡Mi única oportunidad!"
+"—¡Mi única oportunidad!"
 
 msgid "QUITMSG18"
-msgstr ""
+msgstr "Nadie abandona a Blackbird."
 
 msgid "QUITMSG19"
-msgstr "Creí que eras diferente..."
+msgstr "Creí que eras diferente…"
 
 msgid "QUITMSG20"
-msgstr ""
+msgstr "¡Bien, solo mata y corre!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Podrás correr...\n"
-"Pero no esconderte..."
+"Podrás correr…\n"
+"Pero no esconderte…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -195,7 +204,7 @@ msgstr ""
 
 msgid "QUITMSG24"
 msgstr ""
-"No te rindas... ¡o los\n"
+"No te rindas… ¡o los\n"
 "flemoides van a tener ventaja!"
 
 msgid "QUITMSG25"
@@ -206,7 +215,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "Espero que tomes el descanso\n"
-"disfrutando de Chex(R) Party Mix."
+"disfrutando de Chex® Party Mix."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -220,11 +229,11 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"¡El verdadero Guerrero Chex(R)\n"
+"¡El verdadero Guerrero Chex®\n"
 "no se rendiría tan rápido!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr ""
+msgstr "Recogiste un objeto"
 
 msgid "PD_ANY"
 msgstr "Cualquiera llave abrirá esta puerta"
@@ -239,70 +248,72 @@ msgid "PD_ALL3O"
 msgstr "Necesitas las tres llaves para activar este objeto"
 
 msgid "PD_ALL6"
-msgstr ""
+msgstr "Necesitas las seis llaves para abrir esta puerta"
 
 msgid "PD_ALL6O"
-msgstr ""
+msgstr "Necesita las seis llaves para activar este objeto"
 
 msgid "PD_ALLKEYS"
-msgstr ""
+msgstr "Necesitas todas las llaves"
 
 msgid "HUSTR_MSGU"
-msgstr ""
+msgstr "[Mensaje no enviado]"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr ""
+msgstr "Murmuras para ti mismo"
 
 msgid "HUSTR_TALKTOSELF2"
-msgstr ""
+msgstr "¿Quién es?"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr ""
+msgstr "Te asustas"
 
 msgid "HUSTR_TALKTOSELF4"
-msgstr ""
+msgstr "Empiezas a delirar"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Te volviste loc@[ao_esp]..."
+msgstr "Te volviste loc@[ao_esp]…"
 
 msgid "HUSTR_MESSAGESENT"
-msgstr ""
+msgstr "[Mensaje Enviado]"
 
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "Cambio de Música"
 
 msgid "STSTR_NOMUS"
-msgstr ""
+msgstr "Selección Imposible"
 
 msgid "STSTR_DQDON"
-msgstr ""
+msgstr "Modo Dios: ACTIVADO"
 
 msgid "STSTR_DQDOFF"
-msgstr ""
+msgstr "Modo Dios: DESACTIVADO"
 
 msgid "STSTR_DQD2ON"
-msgstr ""
+msgstr "Modo Dios Supremo: ACTIVADO"
 
 msgid "STSTR_DQD2OFF"
-msgstr ""
+msgstr "Modo Dios Supremo: DESACTIVADO"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "Munición Alegre Añadida"
 
 msgid "STSTR_FAADDED"
-msgstr ""
+msgstr "Munición (sin llaves) Añadida"
 
 msgid "STSTR_NCON"
-msgstr ""
+msgstr "Modo Noclip: ACTIVADO"
 
 msgid "STSTR_NCOFF"
-msgstr ""
+msgstr "Modo Noclip: DESACTIVADO"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr ""
+msgstr "Modo Noclip 2: ACTIVADO"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr ""
+msgstr "Modo Noclip 2: DESACTIVADO"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -311,54 +322,54 @@ msgstr ""
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr ""
+msgstr "in(V)ulnerar, ber(S)erk, (I)nvisible, (R)adiación, m(A)pa, (L)uz"
 
 msgid "STSTR_BEHOLDX"
-msgstr ""
+msgstr "Power-up Activado"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr ""
+msgstr "… no apesta… - GM"
 
 msgid "STSTR_CLEV"
-msgstr ""
+msgstr "Cambiando de Nivel…"
 
 msgid "TXT_BUDDHAON"
-msgstr ""
+msgstr "Modo Buda: ACTIVADO"
 
 msgid "TXT_BUDDHAOFF"
-msgstr ""
+msgstr "Modo Buda: DESACTIVADO"
 
 msgid "TXT_BUDDHA2ON"
-msgstr ""
+msgstr "Modo Buda Supremo: ACTIVADO"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr ""
+msgstr "Modo Buda Supremo: DESACTIVADO"
 
 msgid "TXT_CHEATPOWERON"
-msgstr ""
+msgstr "Poder: ACTIVADO"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr ""
+msgstr "Poder: DESACTIVADO"
 
 msgid "TXT_CHEATHEALTH"
-msgstr ""
+msgstr "Salud Llena"
 
 msgid "TXT_CHEATKEYS"
-msgstr ""
+msgstr "Todas las llaves"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr ""
+msgstr "Depuración de Sonido: ACTIVADO"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr ""
+msgstr "Depuración de Sonido: DESACTIVADO"
 
 msgid "TXT_CHEATIDDQD"
-msgstr ""
+msgstr "¿Intentando usar trucos? ¡Muere!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr ""
+msgstr "Tramposo—no te mereces las armas"
 
 msgid "TXT_CHEATTICKERON"
 msgstr ""
@@ -367,187 +378,187 @@ msgid "TXT_CHEATTICKEROFF"
 msgstr ""
 
 msgid "TXT_CHEATARTIFACTS3"
-msgstr ""
+msgstr "Lo tienes"
 
 msgid "TXT_MIDASTOUCH"
-msgstr ""
+msgstr "Tienes el Toque de Midas, baby"
 
 msgid "TXT_GOTSTUFF"
-msgstr ""
+msgstr "¡Tienes las cosas!"
 
 msgid "TXT_FREEZEON"
-msgstr ""
+msgstr "Modo suspendido: ACTIVADO"
 
 msgid "TXT_FREEZEOFF"
-msgstr ""
+msgstr "Modo suspendido: DESACTIVADO"
 
 msgid "TXT_STRANGE"
-msgstr ""
+msgstr "Te sientes raro…"
 
 msgid "TXT_STRANGER"
-msgstr ""
+msgstr "Te sientes aún más raro."
 
 msgid "TXT_NOTSTRANGE"
-msgstr ""
+msgstr "Te sientes como tú mismo otra vez."
 
 msgid "TXT_LEADBOOTSON"
-msgstr ""
+msgstr "Botas de Acero: ACTIVADAS"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr ""
+msgstr "Botas de Acero: DESACTIVADAS"
 
 msgid "TXT_LIGHTER"
-msgstr ""
+msgstr "Te sientes liviano"
 
 msgid "TXT_GRAVITY"
-msgstr ""
+msgstr "La gravedad te arrastra"
 
 msgid "TXT_NOTARGET_ON"
-msgstr ""
+msgstr "Ningún Objetivo: ACTIVADO"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr ""
+msgstr "Ningún Objetivo: DESACTIVADO"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "\"¡Tiemblen de miedo!\""
 
 msgid "TXT_ANUBIS_OFF"
-msgstr ""
+msgstr "No más Armadura de Ogro"
 
 msgid "TXT_CHASECAM_ON"
-msgstr ""
+msgstr "Cámara trasera: ACTIVADA"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr ""
+msgstr "Cámara trasera: DESACTIVADA"
 
 msgid "TXT_BADDIE_KILLED"
-msgstr ""
+msgstr "Un malito asesinado"
 
 msgid "TXT_BADDIES_KILLED"
-msgstr ""
+msgstr "%d malitos asesinados"
 
 msgid "TXT_MONSTER_KILLED"
-msgstr ""
+msgstr "Un monstruo asesinado"
 
 msgid "TXT_MONSTERS_KILLED"
-msgstr ""
+msgstr "%d monstruos eliminados"
 
 msgid "TXT_NO_RESURRECT"
-msgstr ""
+msgstr "No se puede resucitar. El jugador ya no está conectado a su cuerpo."
 
 msgid "TXT_ALL_ARTIFACTS"
-msgstr ""
+msgstr "¡Todos los artefactos!"
 
 msgid "TXT_WHAT_KILL"
-msgstr ""
+msgstr "¿Qué quieres matar fuera de un juego?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr ""
+msgstr "Propiedades de jugador congelado: DESACTIVADAS"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr ""
+msgstr "Modo Seguimiento: DESACTIVADO"
 
 msgid "AMSTR_FOLLOWON"
-msgstr ""
+msgstr "Modo Seguimiento: ACTIVADO"
 
 msgid "AMSTR_GRIDON"
-msgstr ""
+msgstr "Cuadrícula: ACTIVADA"
 
 msgid "AMSTR_GRIDOFF"
-msgstr ""
+msgstr "Cuadrícula: DESACTIVADA"
 
 msgid "AMSTR_TEXON"
-msgstr ""
+msgstr "Modo Textura: ACTIVADO"
 
 msgid "AMSTR_TEXOFF"
-msgstr ""
+msgstr "Modo Textura: DESACTIVADO"
 
 msgid "AMSTR_MARKEDSPOT"
-msgstr ""
+msgstr "Punto Marcado"
 
 msgid "AMSTR_MARKSCLEARED"
-msgstr ""
+msgstr "Puntos Borrados"
 
 msgid "TXT_FRAGLIMIT"
-msgstr ""
+msgstr "Límite de Frags alcanzado."
 
 msgid "TXT_TIMELIMIT"
-msgstr ""
+msgstr "Límite de Tiempo alcanzado."
 
 msgid "SPREEKILLSELF"
-msgstr ""
+msgstr "¡%o iba bien hasta que se mató solit@[ao_esp]!"
 
 msgid "SPREEOVER"
-msgstr ""
+msgstr "%k acaba con la racha de %o"
 
 msgid "SPREE5"
-msgstr ""
+msgstr "¡%k lleva una racha de asesinatos!"
 
 msgid "SPREE10"
-msgstr ""
+msgstr "¡%k está alborotado!"
 
 msgid "SPREE15"
-msgstr ""
+msgstr "¡%k está dominando!"
 
 msgid "SPREE20"
-msgstr ""
+msgstr "¡%k es imparable!"
 
 msgid "SPREE25"
-msgstr ""
+msgstr "¡%k es todo un divino!"
 
 msgid "MULTI2"
-msgstr ""
+msgstr "¡Doble kill!"
 
 msgid "MULTI3"
-msgstr ""
+msgstr "¡Multi kill!"
 
 msgid "MULTI4"
-msgstr ""
+msgstr "¡Ultra kill!"
 
 msgid "MULTI5"
-msgstr ""
+msgstr "¡Monster kill!"
 
 msgid "SCORE_BONUS"
-msgstr ""
+msgstr "Extra"
 
 msgid "SCORE_COLOR"
-msgstr ""
+msgstr "Color"
 
 msgid "SCORE_SECRET"
-msgstr ""
+msgstr "Secreto"
 
 msgid "SCORE_NAME"
-msgstr ""
+msgstr "Nombre"
 
 msgid "SCORE_DELAY"
-msgstr ""
+msgstr "Retraso"
 
 msgid "SCORE_FRAGS"
-msgstr ""
+msgstr "Frags"
 
 msgid "SCORE_DEATHS"
-msgstr ""
+msgstr "Muertes"
 
 msgid "SCORE_OTHER"
-msgstr ""
+msgstr "Otro"
 
 msgid "SCORE_MISSED"
-msgstr ""
+msgstr "Fallado"
 
 msgid "SCORE_TOTAL"
-msgstr ""
+msgstr "Total"
 
 msgid "SCORE_LVLTIME"
-msgstr ""
+msgstr "Tiempo de Nivel"
 
 msgid "TXT_IMKILLS"
-msgstr ""
+msgstr "Asesinatos"
 
 msgid "TXT_IMITEMS"
-msgstr ""
+msgstr "Objetos"
 
 msgid "TXT_IMSECRETS"
-msgstr ""
+msgstr "Secretos"
 
 msgid "TXT_IMTIME"
 msgstr "Tiempo"
@@ -556,23 +567,23 @@ msgid "TXT_IMPAR"
 msgstr ""
 
 msgid "WI_FINISHED"
-msgstr ""
+msgstr "Terminado"
 
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "Entrando"
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "Ahora entrando:"
 
 msgid "AM_MONSTERS"
-msgstr ""
+msgstr "Monstruos:"
 
 msgid "AM_SECRETS"
-msgstr ""
+msgstr "Secretos:"
 
 msgid "AM_ITEMS"
-msgstr ""
+msgstr "Objetos:"
 
 msgid "OB_SUICIDE"
 msgstr "%o se suicidó."
@@ -587,7 +598,7 @@ msgid "OB_EXIT"
 msgstr "%o trató de huir."
 
 msgid "OB_WATER"
-msgstr ""
+msgstr "%o no puede nadar."
 
 msgid "OB_SLIME"
 msgstr "%o mutó."
@@ -599,13 +610,13 @@ msgid "OB_BARREL"
 msgstr "%o explotó en mil pedazos."
 
 msgid "OB_SPLASH"
-msgstr ""
+msgstr "%o se paró en el lugar equivocado."
 
 msgid "OB_R_SPLASH"
-msgstr ""
+msgstr "%o debió haber dado un paso atrás."
 
 msgid "OB_ROCKET"
-msgstr ""
+msgstr "%o debió moverse para atrás."
 
 msgid "OB_KILLEDSELF"
 msgstr "%o se mató a sí mism@[ao_esp]."
@@ -614,16 +625,16 @@ msgid "OB_VOODOO"
 msgstr "A %o l@[ao_esp] mató el poder del vudú."
 
 msgid "OB_MPTELEFRAG"
-msgstr "A %o l@[ao_esp] telefragmentó %k."
+msgstr "%o sufrió un telefrag por %k."
 
 msgid "OB_MONTELEFRAG"
-msgstr "A %o l@[ao_esp] telefragmentaron."
+msgstr "%o sufrio un telefrag."
 
 msgid "OB_DEFAULT"
 msgstr "%o murió."
 
 msgid "OB_MPDEFAULT"
-msgstr "A %o l@[ao_esp] mató %k."
+msgstr "%o fue asesinado por %k."
 
 msgid "OB_FRIENDLY1"
 msgstr "%k acribilló a un compañero."
@@ -636,160 +647,160 @@ msgid "OB_FRIENDLY3"
 msgstr "%k marcó una baja para el otro equipo."
 
 msgid "OB_FRIENDLY4"
-msgstr "%k perdió a otro amigo."
+msgstr "%k pierde otro amigo."
 
 msgid "GOTARMOR"
-msgstr ""
+msgstr "Recoges la armadura."
 
 msgid "GOTMEGA"
-msgstr ""
+msgstr "¡Recoges la Mega Armadura!"
 
 msgid "GOTHTHBONUS"
-msgstr ""
+msgstr "Recoges un vial de salud."
 
 msgid "GOTARMBONUS"
-msgstr ""
+msgstr "Recoges un bonus de armadura."
 
 msgid "GOTSTIM"
-msgstr ""
+msgstr "Recoges un stimpack."
 
 msgid "GOTMEDINEED"
-msgstr ""
+msgstr "¡Recoges un botiquín que REALMENTE necesitabas!"
 
 msgid "GOTMEDIKIT"
-msgstr ""
+msgstr "Recoges un botiquín."
 
 msgid "GOTSUPER"
-msgstr ""
+msgstr "¡Supercarga!"
 
 msgid "GOTBLUECARD"
-msgstr ""
+msgstr "Recoges una tarjeta azul."
 
 msgid "GOTYELWCARD"
-msgstr ""
+msgstr "Recoges una tarjeta amarilla."
 
 msgid "GOTREDCARD"
-msgstr ""
+msgstr "Recoges una tarjeta roja."
 
 msgid "GOTBLUESKUL"
-msgstr ""
+msgstr "Recoges una calavera azul."
 
 msgid "GOTYELWSKUL"
-msgstr ""
+msgstr "Recoges una calavera amarilla."
 
 msgid "GOTREDSKUL"
-msgstr ""
+msgstr "Recoges una calavera roja."
 
 msgid "GOTINVUL"
-msgstr ""
+msgstr "¡Invulnerabilidad!"
 
 msgid "GOTBERSERK"
-msgstr ""
+msgstr "¡Berserk!"
 
 msgid "GOTINVIS"
-msgstr ""
+msgstr "Invisibilidad Parcial"
 
 msgid "GOTSUIT"
-msgstr ""
+msgstr "Traje de Protección Radiológica"
 
 msgid "GOTMAP"
-msgstr ""
+msgstr "Mapa Computarizada del Area"
 
 msgid "GOTVISOR"
-msgstr ""
+msgstr "Visor Amplificador de Luz"
 
 msgid "GOTMSPHERE"
-msgstr ""
+msgstr "¡Mega Esfera!"
 
 msgid "GOTCLIP"
-msgstr ""
+msgstr "Recoges un cargador."
 
 msgid "GOTCLIPBOX"
-msgstr ""
+msgstr "Recoges una caja de balas."
 
 msgid "GOTROCKET"
-msgstr ""
+msgstr "Recoges un cohete."
 
 msgid "GOTROCKBOX"
-msgstr ""
+msgstr "Recoges un contenedor de cohetes."
 
 msgid "GOTCELL"
-msgstr ""
+msgstr "Recoges una celda de energía."
 
 msgid "GOTCELLBOX"
-msgstr ""
+msgstr "Recoges un paquete de celdas de energía."
 
 msgid "GOTSHELLS"
-msgstr ""
+msgstr "Recoges 4 cartuchos de escopeta."
 
 msgid "GOTSHELLBOX"
-msgstr ""
+msgstr "Recoges una caja con cartuchos de escopeta."
 
 msgid "GOTBACKPACK"
-msgstr ""
+msgstr "¡Recoges una mochila llena de munición!"
 
 msgid "GOTBFG9000"
-msgstr "¡Encuentras una BFG9000! Genial."
+msgstr "¡Encuentras una BFG9000! Oh yeah."
 
 msgid "GOTCHAINGUN"
-msgstr ""
+msgstr "¡Recoges una ametralladora!"
 
 msgid "GOTCHAINSAW"
-msgstr ""
+msgstr "¡Una motosierra! ¡A carnear!"
 
 msgid "GOTLAUNCHER"
-msgstr ""
+msgstr "¡Obtienes el lanzacohetes!"
 
 msgid "GOTPLASMA"
-msgstr ""
+msgstr "¡Obtienes el rifle de plasma!"
 
 msgid "GOTSHOTGUN"
-msgstr ""
+msgstr "¡Obtienes la escopeta!"
 
 msgid "GOTSHOTGUN2"
-msgstr ""
+msgstr "¡Obtienes la super escopeta!"
 
 msgid "PICKUP_PISTOL_DROPPED"
-msgstr ""
+msgstr "Recoges una pistola."
 
 msgid "BETA_BONUS1"
-msgstr ""
+msgstr "Coges una daga demoníaca."
 
 msgid "BETA_BONUS2"
-msgstr ""
+msgstr "Coges un cofre de calavera."
 
 msgid "BETA_BONUS3"
-msgstr ""
+msgstr "Coges un cetro maligno."
 
 msgid "BETA_BONUS4"
-msgstr ""
+msgstr "Coges una biblia impía."
 
 msgid "PD_BLUEO"
-msgstr ""
+msgstr "Necesitas una llave azul para activar este objeto"
 
 msgid "PD_REDO"
-msgstr ""
+msgstr "Necesitas una llave roja para activar este objeto"
 
 msgid "PD_YELLOWO"
-msgstr ""
+msgstr "Necesitas una llave amarilla para activar este objeto"
 
 msgid "PD_BLUEK"
-msgstr ""
+msgstr "Necesitas una llave azul para abrir esta puerta"
 
 msgid "PD_REDK"
-msgstr ""
+msgstr "Necesitas una llave roja para abrir esta puerta"
 
 msgid "PD_YELLOWK"
-msgstr ""
+msgstr "Necesitas una llave amarilla para abrir esta puerta"
 
 msgid "PD_BLUECO"
-msgstr ""
+msgstr "Necesitas una tarjeta azul para activar este objeto"
 
 msgid "PD_REDCO"
-msgstr ""
+msgstr "Necesitas una tarjeta roja para activar este objeto"
 
 msgid "PD_YELLOWCO"
-msgstr ""
+msgstr "Necesitas una tarjeta amarilla para activar este objeto"
 
 msgid "PD_BLUESO"
 msgstr "Necesitas un cráneo azul para activar este objeto"
@@ -801,13 +812,13 @@ msgid "PD_YELLOWSO"
 msgstr "Necesitas un cráneo amarillo para activar este objeto"
 
 msgid "PD_BLUEC"
-msgstr ""
+msgstr "Necesitas una tarjeta azul para abrir esta puerta"
 
 msgid "PD_REDC"
-msgstr ""
+msgstr "Necesitas una tarjeta roja para abrir esta puerta"
 
 msgid "PD_YELLOWC"
-msgstr ""
+msgstr "Necesitas una tarjeta amarilla para abrir esta puerta"
 
 msgid "PD_BLUES"
 msgstr "Necesitas un cráneo azul para abrir esta puerta"
@@ -819,189 +830,189 @@ msgid "PD_YELLOWS"
 msgstr "Necesitas un cráneo amarillo para abrir esta puerta"
 
 msgid "CC_ZOMBIE"
-msgstr ""
+msgstr "Zombi"
 
 # a.k.a. (former human) sergeant
 msgid "CC_SHOTGUN"
-msgstr ""
+msgstr "El Escopetero"
 
 # a.k.a. former commando
 msgid "CC_HEAVY"
-msgstr ""
+msgstr "El Ametrallador"
 
 msgid "CC_IMP"
-msgstr ""
+msgstr "Diablillo"
 
 msgid "CC_DEMON"
-msgstr ""
+msgstr "Pinky"
 
 msgid "CC_LOST"
-msgstr ""
+msgstr "Alma Perdida"
 
 msgid "CC_CACO"
-msgstr ""
+msgstr "Cacodemonio"
 
 msgid "CC_HELL"
-msgstr ""
+msgstr "Caballero Infernal"
 
 msgid "CC_BARON"
-msgstr ""
+msgstr "Baron del Infierno"
 
 msgid "CC_ARACH"
-msgstr ""
+msgstr "Aracnotrón"
 
 msgid "CC_PAIN"
-msgstr ""
+msgstr "Pain Elemental"
 
 msgid "CC_REVEN"
-msgstr ""
+msgstr "Renacido"
 
 msgid "CC_MANCU"
-msgstr ""
+msgstr "Mancubus"
 
 msgid "CC_ARCH"
-msgstr ""
+msgstr "Arch-Vile"
 
 msgid "CC_SPIDER"
-msgstr ""
+msgstr "La Mente Maestra Araña"
 
 msgid "CC_CYBER"
-msgstr ""
+msgstr "El Ciberdemonio"
 
 msgid "CC_HERO"
-msgstr ""
+msgstr "Nuestro Héroe"
 
 msgid "FN_SHOTGUN"
-msgstr ""
+msgstr "Sargento"
 
 msgid "FN_HEAVY"
-msgstr ""
+msgstr "Ametrallador"
 
 msgid "FN_SPECTRE"
-msgstr ""
+msgstr "Espectro"
 
 msgid "FN_SPIDER"
-msgstr ""
+msgstr "Mente Maestra Araña"
 
 msgid "FN_CYBER"
-msgstr ""
+msgstr "Ciberdemonio"
 
 msgid "FN_WOLFSS"
-msgstr ""
+msgstr "Nazi"
 
 msgid "FN_DOG"
-msgstr ""
+msgstr "Perro"
 
 msgid "TAG_FIST"
-msgstr "Manopla (puño de acero)"
+msgstr "Manopla"
 
 msgid "TAG_CHAINSAW"
-msgstr ""
+msgstr "Motosierra"
 
 msgid "TAG_PISTOL"
-msgstr ""
+msgstr "Pistola"
 
 msgid "TAG_SHOTGUN"
-msgstr ""
+msgstr "Escopeta"
 
 msgid "TAG_SUPERSHOTGUN"
-msgstr ""
+msgstr "Super Escopeta"
 
 msgid "TAG_CHAINGUN"
-msgstr ""
+msgstr "Ametralladora"
 
 msgid "TAG_ROCKETLAUNCHER"
-msgstr ""
+msgstr "Lanzacohetes"
 
 msgid "TAG_PLASMARIFLE"
-msgstr ""
+msgstr "Rifle de Plasma"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "BFG 9000"
 
 msgid "AMMO_CLIP"
-msgstr ""
+msgstr "Balas"
 
 msgid "AMMO_SHELLS"
-msgstr ""
+msgstr "Cartuchos de Escopeta"
 
 msgid "AMMO_ROCKETS"
-msgstr ""
+msgstr "Cohetes"
 
 msgid "AMMO_CELLS"
-msgstr ""
+msgstr "Celdas de Energía"
 
 msgid "OB_STEALTHBABY"
-msgstr "%o creyó haber visto un Aracnotrón."
+msgstr "%o creyó haber visto un aracnotrón."
 
 msgid "OB_STEALTHVILE"
-msgstr "%o creyó haber visto un Arch-Vile."
+msgstr "%o creyó haber visto un archvile."
 
 msgid "OB_STEALTHBARON"
-msgstr "%o creyó haber visto un Barón del Infierno."
+msgstr "%o creyó haber visto un Baron del Infierno."
 
 msgid "OB_STEALTHCACO"
-msgstr "%o creyó haber visto un Cacodemonio."
+msgstr "%o creyó haber visto un cacodemonio."
 
 msgid "OB_STEALTHCHAINGUY"
-msgstr "%o creyó haber visto un Ametrallador."
+msgstr "%o creyó haber visto un ametrallador."
 
 msgid "OB_STEALTHDEMON"
-msgstr "%o creyó haber visto un Demonio."
+msgstr "%o creyó haber visto un Pinky."
 
 msgid "OB_STEALTHKNIGHT"
-msgstr "%o creyó haber visto un Caballero del Infierno."
+msgstr "%o creyó haber visto un Caballero Infernal."
 
 msgid "OB_STEALTHIMP"
-msgstr "%o creyó haber visto un Imp."
+msgstr "%o creyó haber visto un diablillo."
 
 msgid "OB_STEALTHFATSO"
 msgstr "%o creyó haber visto un Mancubus."
 
 msgid "OB_STEALTHUNDEAD"
-msgstr "%o creyó haber visto un Revenant."
+msgstr "%o creyó haber visto un Renacido."
 
 msgid "OB_STEALTHSHOTGUNGUY"
-msgstr "%o creyó haber visto un Sargento."
+msgstr "%o creyó haber visto un sargento."
 
 msgid "OB_STEALTHZOMBIE"
-msgstr "%o creyó haber visto un Zombi."
+msgstr "%o creyó haber visto un zombi."
 
 msgid "OB_UNDEADHIT"
-msgstr "A %o l@[ao_esp] golpeó un Revenant."
+msgstr "%o fue golpeado por un Renacido."
 
 msgid "OB_IMPHIT"
-msgstr "A %o l@[ao_esp] desgarró un Imp."
+msgstr "%o fue desgarrado por un diablillo."
 
 msgid "OB_CACOHIT"
-msgstr "%o se acercó demasiado a un Cacodemonio."
+msgstr "%o se acercó demasiado a un cacodemonio."
 
 msgid "OB_DEMONHIT"
-msgstr "A %o l@[ao_esp] mordió un Demonio."
+msgstr "%o fue mordido por un Pinky."
 
 msgid "OB_SPECTREHIT"
-msgstr "A %o l@[ao_esp] devoró un Espectro."
+msgstr "%o fue devorado por un espectro."
 
 msgid "OB_BARONHIT"
-msgstr "A %o l@[ao_esp] hizo trizas un Barón del Infierno."
+msgstr "%o fue hecho trizas por un Baron del Infierno."
 
 msgid "OB_KNIGHTHIT"
-msgstr "A %o l@[ao_esp] destripó un Caballero del Infierno."
+msgstr "%o fue destripado por un Caballero Infernal."
 
 msgid "OB_ZOMBIE"
-msgstr "A %o l@[ao_esp] mató un Zombi."
+msgstr "%o fue matado por un zombi."
 
 msgid "OB_SHOTGUY"
-msgstr "A %o l@[ao_esp] fusiló un Sargento."
+msgstr "%o fue fusilado por un sargento."
 
 msgid "OB_VILE"
-msgstr "A %o l@[ao_esp] incineró un Arch-Vile."
+msgstr "%o fue incinerado por un archvile."
 
 msgid "OB_UNDEAD"
-msgstr "A %o l@[ao_esp] hizo reventar un Revenant."
+msgstr "%o no logró evitar el cohete del Renacido."
 
 msgid "OB_FATSO"
-msgstr "A %o l@[ao_esp] pulverizó un Mancubus."
+msgstr "%o fue pulverizado por un Mancubus."
 
 msgid "OB_CHAINGUY"
 msgstr "A %o l@[ao_esp] perforó un Ametrallador."
@@ -2498,7 +2509,7 @@ msgid "OB_MPMINIMISSILELAUNCHER"
 msgstr "%o se tragó el misil de %k."
 
 msgid "OB_MPSTRIFEGRENADE"
-msgstr "%o fue invertid@[ao_esp] por la granada HE de %k."
+msgstr "%o fue invertid@[ao_esp] por la granada H-E de %k."
 
 msgid "OB_MPPHOSPHOROUSGRENADE"
 msgstr "%o se bañó en las llamas de fósforo de %k."
@@ -2546,19 +2557,13 @@ msgid "TXT_KILLED_MACIL"
 msgstr "¡Mataste a Macil!"
 
 msgid "TXT_KILLED_LOREMASTER"
-msgstr ""
-"¡Mataste al\n"
-"Maestro del Conocimiento!"
+msgstr "¡Mataste al Maestro del Conocimiento!"
 
 msgid "TXT_YOUFOOL"
-msgstr ""
-"¡Tont@[ao_esp]!\n"
-"Activaste la alarma."
+msgstr "¡Tont@[ao_esp]! Activaste la alarma."
 
 msgid "TXT_YOUREDEAD"
-msgstr ""
-"¡Estás muert@[ao_esp]!\n"
-"Activaste la alarma."
+msgstr "¡Estás muert@[ao_esp]! Activaste la alarma."
 
 msgid "TXT_HAVEENOUGH"
 msgstr ""
@@ -2850,7 +2855,7 @@ msgid "MNU_INFO"
 msgstr ""
 
 msgid "MNU_QUITGAME"
-msgstr ""
+msgstr "Terminar Partida"
 
 # This text is extremely space limited!
 msgid "MNU_CHOOSESKILL"
@@ -3299,9 +3304,6 @@ msgid "CMPTMNU_SILENTINSTANTFLOORS"
 msgstr ""
 
 msgid "CMPTMNU_SECTORSOUNDS"
-msgstr ""
-
-msgid "CMPTMNU_SOUNDCUTOFF"
 msgstr ""
 
 msgid "CMPTMNU_SOUNDTARGET"
@@ -3775,9 +3777,6 @@ msgstr ""
 msgid "DSPLYMNU_OLDTRANS"
 msgstr ""
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr ""
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr ""
 
@@ -3931,9 +3930,6 @@ msgstr "Opciones De Red"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr ""
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr ""
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr ""
 
@@ -3947,15 +3943,6 @@ msgid "NETMNU_HOSTOPTIONS"
 msgstr ""
 
 msgid "NETMNU_EXTRATICS"
-msgstr ""
-
-msgid "NETMNU_TICBALANCE"
-msgstr ""
-
-msgid "OPTVAL_ORIGINAL"
-msgstr ""
-
-msgid "OPTVAL_OPTIMIZED"
 msgstr ""
 
 msgid "OPTVAL_CLASSIC"
@@ -4014,24 +4001,15 @@ msgid "OPTVAL_BOTH"
 msgstr ""
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr ""
 
 msgid "OPTVAL_MAP"
-msgstr ""
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr ""
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr ""
-
-msgid "OPTVAL_PIXELQUADRUPLE"
 msgstr ""
 
 msgid "OPTVAL_CURRENTWEAPON"
@@ -4127,15 +4105,6 @@ msgstr ""
 msgid "OPTVAL_NODOORS"
 msgstr ""
 
-msgid "OPTVAL_DOUBLE"
-msgstr ""
-
-msgid "OPTVAL_TRIPLE"
-msgstr ""
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr ""
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Agarrar objetos"
 
@@ -4152,39 +4121,36 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr ""
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr ""
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr ""
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr ""
 
 msgid "OPTVAL_ZDOOM2063"
-msgstr ""
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
 msgstr ""
 
 msgid "OPTVAL_ERRORS"
@@ -4208,12 +4174,6 @@ msgstr ""
 msgid "OPTVAL_SWDOOMTC"
 msgstr ""
 
-msgid "OPTVAL_DEDICATED"
-msgstr ""
-
-msgid "OPTVAL_INTEGRATED"
-msgstr ""
-
 msgid "OPTVAL_VANILLA"
 msgstr ""
 
@@ -4221,12 +4181,6 @@ msgid "OPTVAL_VTFZDOOM"
 msgstr ""
 
 msgid "OPTVAL_VTFVANILLA"
-msgstr ""
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr ""
-
-msgid "OPTVAL_VTAVANILLA"
 msgstr ""
 
 msgid "OPTVAL_SMALL"
@@ -4317,21 +4271,15 @@ msgid "C_TEAL"
 msgstr ""
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
-
-msgid "OPTSTR_NOSOUND"
-msgstr ""
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr ""
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
-
-msgid "OPTSTR_OPENAL"
 msgstr ""
 
 msgid "DSPLYMNU_GLOPT"
@@ -4346,12 +4294,6 @@ msgstr ""
 msgid "GLMNU_DYNLIGHT"
 msgstr ""
 
-msgid "GLMNU_PREFS"
-msgstr ""
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr ""
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr ""
 
@@ -4359,9 +4301,6 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr ""
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr ""
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
 msgstr ""
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
@@ -4379,16 +4318,10 @@ msgstr ""
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr ""
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr ""
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr ""
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
-msgstr ""
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
 msgstr ""
 
 msgid "GLPREFMNU_ENV"
@@ -4413,9 +4346,6 @@ msgid "GLPREFMNU_SPRBILLFACECAMERA"
 msgstr ""
 
 msgid "GLPREFMNU_PARTICLESTYLE"
-msgstr ""
-
-msgid "GLPREFMNU_RENDERQUALITY"
 msgstr ""
 
 msgid "GLPREFMNU_VRMODE"
@@ -4467,9 +4397,6 @@ msgstr ""
 msgid "OPTVAL_SOFTWARE"
 msgstr ""
 
-msgid "OPTVAL_OPTIMAL"
-msgstr ""
-
 msgid "OPTVAL_YAXIS"
 msgstr ""
 
@@ -4480,9 +4407,6 @@ msgid "OPTVAL_SQUARE"
 msgstr ""
 
 msgid "OPTVAL_ROUND"
-msgstr ""
-
-msgid "OPTVAL_RADIAL"
 msgstr ""
 
 msgid "OPTVAL_PIXELFUZZ"
@@ -4548,9 +4472,6 @@ msgstr ""
 msgid "TCMNU_TITLE"
 msgstr ""
 
-msgid "TCMNU_TRUECOLOR"
-msgstr ""
-
 msgid "TCMNU_MINFILTER"
 msgstr ""
 
@@ -4561,21 +4482,6 @@ msgid "TCMNU_MIPMAP"
 msgstr ""
 
 msgid "TCMNU_DYNLIGHTS"
-msgstr ""
-
-msgid "OS_TITLE"
-msgstr ""
-
-msgid "OS_ANY"
-msgstr ""
-
-msgid "OS_ALL"
-msgstr ""
-
-msgid "OS_NO_RESULTS"
-msgstr ""
-
-msgid "OS_LABEL"
 msgstr ""
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
@@ -4654,9 +4560,6 @@ msgstr ""
 msgid "TXT_BY"
 msgstr ""
 
-msgid "TXT_QUITENDOOM"
-msgstr "Presiona cualquier tecla o haz click en la ventana para salir."
-
 msgid "HUDMNU_FLASH"
 msgstr ""
 
@@ -4667,9 +4570,6 @@ msgid "HUDMNU_CROSSHAIRON"
 msgstr ""
 
 msgid "MSGMNU_SUBTITLES"
-msgstr ""
-
-msgid "GLPREFMNU_PALTONENOGREY"
 msgstr ""
 
 msgid "HUDMNU_FONTOPTIONS"
@@ -4710,11 +4610,6 @@ msgid "SCALEMNU_FACTOR"
 msgstr ""
 
 msgid "SCALEMNU_RATIO"
-msgstr ""
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
 msgstr ""
 
 # sv_alwaystally
@@ -5031,9 +4926,6 @@ msgstr ""
 msgid "NETMNU_CHATSLOMO"
 msgstr ""
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr ""
-
 msgid "OPTMNU_HAPTICS"
 msgstr ""
 
@@ -5196,3 +5088,6 @@ msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Opciones de Accesibilidad"
