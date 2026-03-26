@@ -30,8 +30,10 @@ RECIPES = {
     "GAMES_HARMONY": ["games/filter/harmony"],
     "GAMES_HACX": ["games/filter/hacx"]
 }
+RECIPES["ALL"] = list(sum(RECIPES.values(), []))
 
 SOURCE_LANG = "en_US"
+SOURCE_LANG_ALT = SOURCE_LANG.split("_", maxsplit=1)[0]
 
 # auto-add once a certain portion of strings have been translated
 THRESHOLD = 0.5
@@ -120,7 +122,7 @@ def fill_dict(path):
     meta["valid"] = True
 
     # for now uzdoom needs the top left cell to be "default"
-    if meta["id"] == "en_US":
+    if meta["id"] == SOURCE_LANG or meta["id"] == SOURCE_LANG_ALT:
         meta["id"] = "default"
 
     for e in po:
@@ -139,7 +141,7 @@ def fill_dict(path):
             if meta["valid"]:
                 print(f"in: {path}")
             meta["valid"] = False
-            print(f"redefining: {entry["msgid"]}")
+            print(f"redefining: {entry['msgid']}")
             continue
 
         data[specific_id] = entry
@@ -287,7 +289,7 @@ def main(args):
 
     if po_files is None:
         print(__doc__)
-        print("Available recipes: " + " ".join(RECIPES.keys()))
+        print(f"Available recipes: {' '.join(RECIPES.keys())}")
         sys.exit(1)
 
     languages = po_files["languages"]
@@ -300,6 +302,9 @@ def main(args):
     header = [source_id, "Identifier", "Remarks", "Filter"] + languages
 
     table = [header] + [matrix[k] for k in sorted(matrix)]
+
+    if not KEEP_REMARKS:
+        table = [r[0:2] + r[3:] for r in table]
 
     dump_csv(args.output, table)
 

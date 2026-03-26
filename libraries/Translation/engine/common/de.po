@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-16 09:09+0000\n"
-"Last-Translator: Madoc <madocdoyu@gmail.com>\n"
+"PO-Revision-Date: 2026-03-26 08:10+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/common/de/>"
 "\n"
 "Language: de\n"
@@ -1775,20 +1775,19 @@ msgstr "Analoger Strafe-Run"
 msgid "NOTES_FAIL"
 msgstr "Versionshinweise konnten nicht automatisch verarbeitet werden"
 
-msgid "NOTES_VERSION"
-msgstr "version"
-
 msgid "NOTES_UNKNOWN"
 msgstr "Unbekannt"
 
+#, fuzzy
 msgid "NOTES_RELEASED"
 msgstr "veröffentlicht"
 
 msgid "NOTES_EMPTY"
 msgstr "Keine Beschreibung angegeben."
 
+#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Weitere Details hier:"
+msgstr "Weitere Details hier: %s"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "Diese Seite nach Aktualisierung anzeigen"

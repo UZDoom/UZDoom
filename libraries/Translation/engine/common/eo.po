@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-14 22:34+0000\n"
+"PO-Revision-Date: 2026-03-26 08:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/common/"
 "eo/>\n"
@@ -1784,20 +1784,19 @@ msgstr "Montri eldonajn notojn"
 msgid "PICKER_SHOWTHIS"
 msgstr "Montri ĉi tiun paĝon post ĝisdatigoj"
 
-msgid "NOTES_VERSION"
-msgstr "versio"
-
 msgid "NOTES_UNKNOWN"
 msgstr "Nekonata"
 
+#, fuzzy
 msgid "NOTES_RELEASED"
 msgstr "eldonita"
 
 msgid "NOTES_EMPTY"
 msgstr "Neniu priskribo provizita."
 
+#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Por pli da detaloj, vidu:"
+msgstr "Por pli da detaloj, vidu: %s"
 
 msgid "NOTES_FAIL"
 msgstr "Ne kapablas sintake analizi eldonajn notojn"

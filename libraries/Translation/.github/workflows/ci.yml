@@ -13,28 +13,9 @@ jobs:
       run: |
         sudo apt-get -qq update
         sudo apt-get -qq install gettext
-        pipx --quiet install vermin pylint autopep8
-
-        pyfiles=( scripts/compile.py )
-        pyversion=3.6
-        pyfailed=0
-
-        for pyfile in "${pyfiles[@]}"; do
-          autopep8 --exit-code -aavi "${pyfile}" || ((pyfailed++))
-          vermin --no-parse-comments --pessimistic --violations \
-            --target="${pyversion}-" "${pyfile}" || ((pyfailed++))
-          pylint --py-version="${pyversion}" "${pyfile}" || ((pyfailed++))
-        done
-        [[ $pyfailed == 0 ]]
+        pipx --quiet install vermin pylint autopep8 csvkit
 
         bash scripts/validate.sh
-
-    - name: templates
-      if: always()
-      shell: bash
-      run: |
-        bash scripts/mktemplate.sh
-        git diff
 
   build:
     if: always()
