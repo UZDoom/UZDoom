@@ -33,7 +33,7 @@ struct event_t;
 class FConfigFile;
 class FCommandLine;
 
-void C_NameKeys (char *str, int first, int second);
+void C_NameKeys (char *str, int first, int second, bool colors = false);
 FString C_NameKeys (int *keys, int count, bool colors = false);
 
 class FKeyBindings

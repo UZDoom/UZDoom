@@ -23,7 +23,7 @@
 
 struct KeyBindings native version("2.4")
 {
-	native static String NameKeys(int k1, int k2);
+	native static String NameKeys(int k1, int k2, bool colors = true);
 	native static String NameAllKeys(array<int> list, bool colors = true);
 
 	native int, int GetKeysForCommand(String cmd);
