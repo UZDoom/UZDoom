@@ -1,0 +1,199 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-03-16 23:34+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/glossary/"
+"pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+msgid "ON"
+msgstr "WŁ"
+
+msgid "OFF"
+msgstr "WYŁ"
+
+msgid "MIDI"
+msgstr "MIDI"
+
+msgid "FluidSynth"
+msgstr "FluidSynth"
+
+msgid "Freeverb"
+msgstr "Freeverb"
+
+msgid "ADLMidi"
+msgstr "ADLMidi"
+
+msgid "OPNMidi"
+msgstr "OPNMidi"
+
+msgid "WildMidi"
+msgstr "WildMidi"
+
+msgid "Timidity"
+msgstr "Timidity"
+
+msgid "libXMP"
+msgstr "libXMP"
+
+msgid "Dumb"
+msgstr "Dumb"
+
+msgid "Chip-o-matic"
+msgstr "Chip-o-matic"
+
+msgid "MAME"
+msgstr "MAME"
+
+msgid "OPL2"
+msgstr "OPL2"
+
+msgid "DOSBox"
+msgstr "DOSBox"
+
+msgid "OPL3"
+msgstr "OPL3"
+
+msgid "Java"
+msgstr "Java"
+
+msgid "ESFMu"
+msgstr "ESFMu"
+
+msgid "YMFM"
+msgstr "YMFM"
+
+msgid "Nuked"
+msgstr "Nuked"
+
+msgid "YM2612"
+msgstr "YM2612"
+
+msgid "Neko Project II Kai"
+msgstr "Neko Project II Kai"
+
+msgid "OPNA"
+msgstr "OPNA"
+
+msgid "YM2608"
+msgstr "YM2608"
+
+msgid "Opal"
+msgstr "Opal"
+
+msgid "YM3438"
+msgstr "YM3438"
+
+msgid "OPN2"
+msgstr "OPN2"
+
+msgid "YMF276"
+msgstr "YMF276"
+
+msgid "GENS"
+msgstr "GENS"
+
+msgid "Uncharted 2"
+msgstr "Uncharted 2"
+
+msgid "Reinhard"
+msgstr "Reinhard"
+
+msgid "Hejl-Dawson"
+msgstr "Hejl-Dawson"
+
+msgid "OpenGL"
+msgstr "OpenGL"
+
+msgid "Vulkan"
+msgstr "Vulkan"
+
+msgid "OpenGL ES"
+msgstr "OpenGL ES"
+
+msgid "ScaleNx"
+msgstr "ScaleNx"
+
+msgid "ZDoom"
+msgstr "ZDoom"
+
+msgid "NormalNx"
+msgstr "NormalNx"
+
+msgid "hqNx"
+msgstr "hqNx"
+
+msgid "xBRZ"
+msgstr "xBRZ"
+
+msgid "Doom"
+msgstr "Doom"
+
+msgid "Boom"
+msgstr "Boom"
+
+msgid "Strife"
+msgstr "Strife"
+
+msgid "Hexen"
+msgstr "Hexen"
+
+msgid "Heretic"
+msgstr "Heretic"
+
+msgid "Chex"
+msgstr "Chex"
+
+msgid "Press Y or N"
+msgstr "Wciśnij Y lub N"
+
+msgid "Press a key"
+msgstr "Wciśnij dowolny klawisz"
+
+msgid "WOPN"
+msgstr "WOPN"
+
+msgid "WOPL"
+msgstr "WOPL"
+
+msgctxt "1"
+msgid "ZDoom"
+msgstr "ZDoomie"
+
+msgid "LLE"
+msgstr "LLE"
+
+msgid "DMX"
+msgstr "DMX"
+
+msgid "MMX"
+msgstr "MMX"
+
+msgid "Discord"
+msgstr "Discord"
+
+msgid "MBF"
+msgstr "MBF"
+
+msgid "MBF21"
+msgstr "MBF21"
+
+msgctxt "1"
+msgid "Doom"
+msgstr "Doomie"
+
+msgctxt "1"
+msgid "Hexen"
+msgstr "Hexenie"
+
+msgctxt "2"
+msgid "Doom"
+msgstr "Dooma"

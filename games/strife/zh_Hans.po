@@ -1,0 +1,5693 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 11:52+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/strife/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "区域1：圣所"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "区域2：城镇"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "区域3：前线基地"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "区域4：发电站"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "区域5：监狱"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "区域6：下水道"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "区域7：城堡"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "区域8：会客厅"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "区域9：城堡：程序员的居所"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "区域10：新前线基地"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "区域11：边境地带"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "区域12：祭司的神庙"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "区域13：地下墓穴"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "区域14：矿场"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "区域15：堡垒：行政区"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "区域16：堡垒：主教塔"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "区域17：堡垒：内堡"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "区域18：堡垒：商店"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "区域19：堡垒：安全基地"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "区域20：工厂：接收区"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "区域21：工厂：制造区"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "区域22：工厂：锻造区"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "区域23：教团公共区"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "区域24：工厂：改造教堂"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "区域25：地下墓穴：废墟神庙"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "区域26：训练场"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "区域27：实验室"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "区域28：外星飞船"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "区域29：实体巢穴"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "区域30：废弃前线基地"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "区域31：训练设施"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "区域1：圣所"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "区域2：城镇"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "区域3：移动基地"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "区域35：工厂：生产区"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "区域36：城堡冲突"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "区域37：杀戮场"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "区域38：有序的混沌"
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr ""
+"我不想惹麻烦，离我远点。那个混蛋哈里斯对我做的事已经让我够烦了。他承诺给我钱"
+"，结果我得到的期待却是被那个程序员审问。"
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "你帮我，我就帮你。五枚金币，我就把我知道的全告诉你。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "给你金币。"
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "杀人的时候要悄无声息，否则会触发警报。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "哼，我不会免费告诉你任何事的！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "你身上会不会碰巧还有5金币？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5金币。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "好的，毒箭可以瞬间杀死守卫而且不会触发警报。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "不，先生，我不会免费告诉你任何事了！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "你已经从我这儿榨干所有八卦了！"
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "我能为你做点什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "突击枪"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "给你。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "你现在还买不起那个。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "子弹夹"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "谢谢。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "来吧，10金币。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "弹药箱"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "给你弹药。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "也许下次再说。"
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr "前线终于传来好消息了。马希尔派你来领取奖励和训练，他让我把这些东西交给你。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "谢谢。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "很高兴能帮上忙。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr "好的，这里有几个提示：不要挡着十字军的路：用突击枪短点射可以保持锁定目标。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "就这些了吗？"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "瞧，之后你还会学到更多。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "我想可以把十字军的火焰喷射器改装成人类可用的武器。哦，还有别的需要吗？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "火焰喷射器。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "我知道这很管用！给你，拿去试试看吧！"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "听着，没有合适的零件我什么都做不出来！"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "突击枪"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "好的，给您，先生！"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "显然，你现在还买不起那个。"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "子弹夹"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "谢谢。"
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "来吧，10金币。"
+
+# 〃 (〃)
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "弹药箱"
+
+# 〃 (〃)
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "给你弹药。"
+
+# 〃 (〃)
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "也许下次再说。再见！"
+
+# 〃 (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "现在你有了火焰喷射器，还有别的需要吗？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "突击枪"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "给你。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "你现在还买不起那个。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "子弹夹"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "谢谢。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "来吧，10金币。"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "弹药箱"
+
+# 〃 (〃)
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "给你弹药。"
+
+# 〃 (〃)
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "也许下次再说。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "现在你有了火焰喷射器，还有别的需要吗？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "子弹夹"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "谢谢。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "来吧，10金币。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "弹药箱"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "给你弹药。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "也许下次再说。"
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "磷榴弹"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "谢谢。"
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "你还没有足够的"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "毒箭"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "物超所值！"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "来吧，200金币！"
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr ""
+"我真不敢相信自己被分配到这个任务。他们说有邪恶的东西从下水道大门冒出来……现在"
+"我只能站在这里等它再次出现！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "什么大门？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "下水道溢流大门。"
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "你好，朋友。我能为你做点什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "电击箭"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "你获得了电击箭。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "弹药背包"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "不，你还没有为电击箭准备的其所需物品！"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "不，你还没有为电击箭准备的其所需物品！"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "谢谢。还有别的需要吗？"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "你还买不起那个，祝你愉快。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "我能为你做点什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "电击箭"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "你获得了电击箭。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "弹药背包"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "谢谢，还需要别的吗？"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "你还买不起那个，祝你愉快！"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "欢迎，我能为你展示点什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "防护套装"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "好的，给你了。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "很抱歉，但你还没有足够的钱购买这个。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "皮革护甲"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "给你了。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "也许下次再说？"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "金属护甲"
+
+# 〃
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "愿你穿上它就有好身体。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "等你能负担得起买下这些东西时再来吧，傻瓜！"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "欢迎，我能为你展示点什么？"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "防护套装"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "好的，给你了。"
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "很抱歉，但你还没有足够的钱购买这个。"
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "皮革护甲"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "给你了。"
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "也许下次再说？"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "金属护甲"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "愿你穿上它就有好身体。"
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "等你能负担得起买下这些东西时再来吧，傻瓜！"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "我能如何协助你？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "治疗贴"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "给你治疗贴。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "你需要10金币才够购买这个。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "医疗工具"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "谢谢。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "我希望我能把它们送出去，但它们值25金币。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "野战手术工具"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "给你了，保重。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "嗯，也许你能负担得起一些治疗贴？"
+
+# 〃 (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr ""
+"我希望马希尔知道自己在做什么。如果教团发现我在帮助前线，我就死定了……不过这对"
+"你来说可能无关紧要。前线的医生给了我一个为你升级的芯片，你准备好了吗？ "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "是的，我已经准备好了。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "那么，这不会花太久。好了，已经完成了。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "我能如何协助你？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "治疗贴"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "给你治疗贴。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "你需要10金币才够购买这个。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "医疗工具"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "谢谢。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "我希望我能把它们送出去，但它们值25金币。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "野战手术工具"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "给你了，保重。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "嗯，也许你能负担得起一些治疗贴？"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+"陌生人你好，我之前没见过你。让我给你一条免费建议：如果你是我，会小心行事。教"
+"团不容许自由意志，他们的审判速度很快。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "情报是什么？"
+
+# 〃
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "情报是……下水道里不仅仅是老鼠和机器人。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "现在我能为你做点什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "更多情报。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "总督给我们一个简单的提醒，我们已经不再是自由的人了。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "等你有些金币再来吧。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr "嗯，你一个不想死的人却问这么多问题。确保你别去送死，或者更糟。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "更多情报。"
+
+# 〃
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "教团远不止表面那么简单。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "等你有金币了我们再谈！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr ""
+"好了朋友，知识之泉已经干涸了。我本来就不该告诉你这么多。祝你好运……别再回来了"
+"。"
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr "嘿，我只是在紧急情况下才在这里。如果核心泄漏，我会确保没人能进……或出。"
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "小心脚下，乡巴佬！"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "我们要杀了你！ "
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "天哪，你是谁？这里不该有人闲逛！"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "你那边的，没人被允许进入这里。走开！"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "伊莱尔会给你安排好！"
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr "我其实是个叛军的人才中介。一个像你这样的人如果能结识对的人……肯定能赚大钱。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "我有兴趣。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "管他什么叛军！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "不，这可没有第二次机会了。哦，守卫们，杀了他。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+"选得好。教团在河边的圣所是他们非正式的刑讯室。里面藏着一个金杯。你拿走它就能"
+"获得奖励。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "我该怎么做到？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr "给你一把十字弓，只需直指目标然后——砰。记住，拿上那个精致的杯子，然后去酒馆。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "酷。我会去拿的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "你还在等什么？把那个圣杯给我。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+"嘿，我知道，看起来有点像是个陷阱。我怎么会这样对待一台这么厉害的杀戮机器呢？"
+"拿到了物品吗？太好了！现在准备好了，金币和荣耀就像我承诺的一样。拿着这把钥匙"
+"，总督会奖励你的。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "他最好如此，这可是为了你好！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "什么！我的钱呢？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "快滚开，小子，你烦到我了。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "这可没有第二次机会了。哦，守卫们，杀了他。"
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+"他们先屠杀数千人，现在又想抓所有健康的农民去做不明的“测试”。教团指望我怎么维"
+"持和平？你们到底想要什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "监狱许可证，我们成交吧。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr "我对你印象不错。我有两个不想亲自做的任务，一个是脏活，另一个很血腥。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "叫我清道夫"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "我不介意"
+
+# 〃
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+"我的一个手下在主水管上某个地方偷了电力接口，找到它切断他的供应，我就给你想要"
+"的东西。带点东西作为信物给我。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "我在哪能找到这个接口？"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr "如果我知道的话，现在也不会这么麻烦了。用你的魅力，然后切断他的供应。"
+
+# 〃
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+"告诉你吧，有个叫德尔温的骗子一直在把孩子卖给教团。这种堕落行为我可不能容忍。"
+"不过，得给我分一杯羹。德尔温在仓库工作。杀了他，把他的耳朵给我拿来，我看看能"
+"怎么办。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "我怎么进去？"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr "这把钥匙能带你进发电站。不过再想想，先割下他的耳朵再杀他更好。"
+
+# 〃
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+"哦，我就喜欢纪念品。给你，这个能让你进监狱。去找狱长蒙塔格。之后你做什么我都"
+"不管。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "谢谢。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "给你个提示。当我不再和你说话时，你就离开。"
+
+# 〃
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "你有好消息给我吗？我洗耳恭听。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "事情办成了！"
+
+# 〃
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+"哦，我就喜欢纪念品。给你，这个能让你进监狱。去找狱长蒙塔格。之后你做什么我都"
+"不管。"
+
+# 〃
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "随你便。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr ""
+"原来你就是偷走圣杯的那个蠢货？我要以反叛盗贼的罪名逮捕你……借此提升我在教团中"
+"的地位。被当作无知棋子的感觉如何？我给你个提示，这会很疼的。 "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "真糟糕！"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "对你而言确实很糟。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "哈里斯答应给我钱！"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "那太糟了。你得到的只有死路一条！"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+"在一个小世界里，消息传得很快。我听说你刚清除了路上的一些障碍。干得好。你对更"
+"有利可图的项目感兴趣吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "当然，为什么不呢。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "不了，谢谢。"
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "那就滚开！"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "蠢货！守卫们，把这个爱管闲事的苦力赶走。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr ""
+"很好。我的一些……朋友需要让某人闭嘴。贝尔丁正被教团关在他们的圣所里。有一处很"
+"少使用的入口位于河畔的小码头旁，无人看守。进去，把他干掉，并把他的戒指带回来"
+"作为证明。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "这值得我费力去做吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr ""
+"我保证给你50金币，如果你能不触发镇上所有警报就回来，还有机会赚取远超这个报酬"
+"，而且这里有一个小帮手，应该能帮你一把。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "谢谢，我会需要的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "好。记住，他的沉默就是金。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "我会搞定他。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "任务完成了？你拿到这个叛徒的戒指了吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "他已经死了，我的钱呢？"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "骗子！去把戒指拿来！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+"给你，你赚到了。你杀的那个叛徒正要透露前线的位置，你拯救了生命。你想不想赚得"
+"更多的金币，以及摆脱暴政的未来？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "告诉我更多。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "这不是我的风格。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr ""
+"我与前线领袖马希尔有生意往来。我知道他需要像你这样敏锐的人手，而且他给的报酬"
+"很丰厚。拿着这个回收的通讯器，你会被引向……怎么说呢……机遇。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "谢谢。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "快走吧。你要是还在这儿磨蹭，咱俩都得死。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr "可惜，不过既然你已经认识我朋友了，我就必须杀了你。守卫们，把这个垃圾清出去！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "蠢货。守卫们！把这个爱管闲事的苦力赶走。"
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "走开，小子，赶紧走开。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "你在这儿干什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "嘿，我需要金币！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr "黑鸟把密码告诉你了，是吧？让我把警报关掉。马希尔在一楼。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "谢谢。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "走开，小子，赶紧走开。"
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "你有和总督的预约吗？ "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "当然！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "不，而且我也不需要！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "抱歉！我不是那个意思……请直接上去吧。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "我就知道你会这么说。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "如果你这么着急，就别在我这儿浪费时间了。"
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "放开我，别管一个老头子了。"
+
+# 〃 (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr "你在寻求智慧，孩子？教团规定我们只能问一个问题：“为什么？”"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "电源耦合器在哪？"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "教团的主装置在哪？"
+
+# 〃 (〃)
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "非法接入点在哪？"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr "我会告诉你它在哪儿，但我不知道你会去动谁的耦合器。它就在污水处理厂这里。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "谢谢"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr ""
+"没错，就在污水处理厂这里。但那是属于前线的耦合器。谁跟你说那是教团的，那人在"
+"骗你。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "谢谢"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr "如果你说这是违法的，那我可不想跟你扯上关系。我自己的麻烦已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "谢谢"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "放开我，别管一个老头子了。"
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr ""
+"欢迎来到最后的一线希望。只有我们拥有反抗教团的自由意志。我们有最尖端的科学头"
+"脑和许多能干的人手，但缺乏那个真正……解决问题的人，来给我们带来制胜的关键。帮"
+"帮我们。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "好吧，我接受。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "不了，谢谢！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr "你最好再重新考虑一下，毕竟你已经被全副武装的愤怒反叛军包围了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "好，我加入！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "不了，谢谢。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "那就带着耻辱和羞愧去死吧。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+"很好，黑鸟将继续担任你的向导。她对你颇为青睐。你们必须一起揭开教团及其非人仆"
+"从的秘密。进去并摧毁它们。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "我该从哪里开始？"
+
+# 〃 (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr ""
+"坦白说局势一团糟。你必须完成几项任务，为对教团的更多攻击铺路。我们上次突袭是"
+"个灾难，大部分部队都被俘虏了。我需要你去解救这些战俘。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "我想我能应付。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+"拿着这笔钱去伊莱尔那里，他为我们提供武器。然后这把钥匙能带你见到总督。他是教"
+"团操控的腐败傀儡，但喜欢做交易。想尽办法救出我们的战友。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "交给我吧。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "为了前线和自由而战，出发。"
+
+# 〃 (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+"多亏了你，这些战俘们已经被接回来了。给你些金币，去见医生和武器教练，然后我有"
+"更高的目标要让你完成。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "我会的。接下来做什么？"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+"有一颗水晶驱动着电网，它支撑着教团的护盾。摧毁这颗水晶，你就能撕开教团防御的"
+"巨大缺口。黑鸟会带你去找一个有办法潜入的间谍，祝你好运。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "我们会搞定的。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "为了前线和自由而战，出发。"
+
+# 〃 (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+"你超出了我们的所有预期。因为你的英勇，我们的部队已经开始行动了。我要你们俩加"
+"入突袭，目标明确。干掉那个程序员。是时候揭露我们对教团这一层的发现。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "告诉我，我们掌握了什么。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr "那个程序员的巢穴在城堡里。现在去见医生，拿点弹药，然后去干掉他。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "让我来对付他们！"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "为了前线和自由而战，出发。"
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr "还记得市政厅的样子吗？这是他们为了对付我们不惜手段的一个温和提醒。小心点。"
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "去找马希尔谈谈。他能帮到你们。"
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr "我听说马希尔有个计划要颠覆教团。这计划必须靠谱。再失败一次，我们全都得死。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr "把这些桶里的东西倒进他们的供水系统里，应该能稍微扳回一点局面。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr "所以你是新来的特工？谢谢，没有你我们现在都得死了。"
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+"我正在研究能让我们占优势的东西。它能增强你的耐力，让你精神百倍。我差不多把所"
+"有的漏洞都解决了。我能帮你什么吗？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "给我包扎一下。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "天啊，你伤得真重。我会尽力的。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "耐力植入体？"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "好的，这不会花太久。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "还没完成呢。"
+
+# 〃 (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr "嘿，我正在给你的植入体做升级。还有别的我能帮忙的吗？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "给我包扎一下。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "至少你已经开始行动了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "植入体升级？"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "好事，再安全也不为过。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "我差不多快完成了，但还没完全搞定。"
+
+# 〃 (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr ""
+"好啦，我已经让大部分功能完美运行了。还有几个问题需要解决。你还需要别的什么吗"
+"？ "
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "给我包扎一下。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "你在尝试做什么？跟十字军正面硬刚？"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "植入体升级？"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "这应该能帮到你。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "让我先做些更多的测试。"
+
+# 〃 (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "目前我对植入体能做的就这些了。或许可以治疗一下？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "好。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "天啊，你伤得真重。我会尽力的。"
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "我能为你做些什么吗？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "我的弹药用完了。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "教教我吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "好的，我就给你指点几招。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "你还没准备好。"
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "又来了？你需要什么？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "我的弹药用完了。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "你的弹药已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "教教我吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "好吧，这应该能让你撑一阵子。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "抱歉，不能。我只是在执行马希尔的命令。"
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+"那你是要弹药还是要训练？我迫不及待想拿到我们缴获的新武器了。一点点训练之后就"
+"是大肆的报复。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "我弹药用完了。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "你的弹药已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "教教我吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr "好，把在这里学到的东西用起来，给那些教团蠢货们指条下地狱的路。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "等马希尔说可以的时候再回来。"
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr "我现在已经把能教你的都教给你了。给我点时间来测试一下新武器。除非你没弹药了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "是的，我没弹药了。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "给你。"
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr "别在城镇里乱开枪，会触发警报，他们就会从城堡派守卫过来。 "
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "欢迎，我们总是需要更多帮手。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr ""
+"以前我还在行动时，我们有机会在增援部队到来前检查过一个侍从。听我说，他们不是"
+"人类。"
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr "我们正在尝试寻找城堡大门的机关位置，但到目前为止毫无头绪。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr ""
+"别被抓到。我听说他们关押我们的同胞后会做些可怕的事。他们就这样消失了……无影无"
+"踪。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr "给你个建议，要是你看到教团的铁甲兵，记得往相反方向走。他们行动得迅速且残忍。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "别管我，我是在给马希尔做事。"
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "抱歉，不行。你还没有权限。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "站住！出示你的ID徽章。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "这是我的ID。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "哦，好。那你可以走了，祝你愉快。"
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "德尔温？是的，他在仓库里，但你没经过许可是进不去的。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "我有许可。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "那去吧。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "你知道他在哪儿吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "我不知道谁在哪儿，我只是看守老鼠陷阱的盖子而已。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "你真是烦人。"
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "走开，不然就尝尝金属的味道。"
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "将你的ID通过这里以获得通行权限。"
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "回去干活，快！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "回去干活，快！"
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+"我们已经连续几周昼夜不停地干活了，连休息时间都没有。我想教团正在策划对前线的"
+"镇压突袭。"
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+"哦，该死。是总督派你来的。我本来打算给他分点好处的，真的。好吧，听着。我藏了"
+"一笔钱。只要你装作没看见，这钱就是你的了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "好吧，我会放你走的。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "抱歉，不是针对你自己。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "见鬼，我要是完蛋了，那你也跑不了。守卫们！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "谈个屁生意。来人啊，守卫们，我抓到活的了。"
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr "啊，我从马希尔那儿听说你要来。我有一条通往发电站的路子，不过有点冒险。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "我愿意冒险。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr "好吧，我从一个掉进反应堆冷却池的傻瓜尸体上偷了一张ID——滋啦——当场炸熟了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "一旦进去后我该怎么做？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr ""
+"告诉任何问你的人，说你是来接替克里西先生的工人。这主意虽然蠢，但管用。哦，还"
+"有，你可能得去看一下我们头顶上的储物间。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "唉，希望这张ID管用。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "快滚出去，除非你想横着出去。"
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr "嘿，别管我。如果他们抓到我们在浪费时间，要么被杀，要么得干更多的活。"
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+"压力好大啊，照这个速度，很快就能恢复正常班次了。我们正往城堡输送大量电力，而"
+"且我几乎快录完那些新武器的资料了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "武器？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "你以为呢，我们是积压太多袜子了？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "什么类型的武器？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "你聋了吗？我刚跟你说我有多忙。快回去干活。"
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "你是谁？只有二级许可人员才能进入这个区域。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "我是来顶班的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr ""
+"你总算来了。去核心区找凯特里克聊聊。哦，还有拿好这张门禁卡。别让你第一天就挨"
+"枪子儿，嗯？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "能量水晶在哪？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "如果你不去干活，迟早会被枪毙。快点换上工作服。"
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr ""
+"我不是危言耸听，但要是他们继续这么强行推动能量水晶，它肯定会出现裂痕，然后碎"
+"掉，接着“嘭”！……只是个想法。"
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+"让我把话说清楚。如果这个终端再死机，冷却液水位会下降，我们都得向程序员交代，"
+"如果我们能活下来的话。"
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr ""
+"你！对，就是你。你没有进入这个区域的许可。快把门禁卡交出来，赶紧的。我心情糟"
+"透了！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "给你，这是我的卡。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr "这简直是垃圾！等一下。哦管他呢。守卫们，杀了这个入侵者！"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr "干活、睡觉、受折磨，什么日子啊。说起来，你是那个粗心的坑洞潜水员的替补吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "是啊，迫不及待想开始了。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "是啊，对吧。行了，赶紧去干活。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "水晶在哪？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr "去跟凯特里克谈谈。用开关把通道升起，然后用这张ID乘电梯。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "水晶又在哪？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "这不关你的事，去找凯特里克。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "好的。"
+
+# 〃
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr "如果你想干些无聊的活儿，就盯着那屏幕看一会儿吧，准会让你哭着求饶。"
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+"那个无所不能的程序员对渗透这么警惕，竟把计算机核心锁了起来。我该怎么完成工作"
+"？唯一办法就是自杀式行动。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "自杀式行动？什么鬼？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr "这是必死无疑的办法，但眼下不重要。如果你有意想试，就乘电梯下去吧。"
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "站住。没有狱长或总督的授权，谁也别想通过这里。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "这是我的通行证，让我进去。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "行，但只能跟狱长说话。"
+
+# 〃 (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr "我长得像狱长吗？走开，这里禁止入内。"
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr "教团的怒火会降临在这些仆人身上，直到他们乞求死亡。"
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+"就算莫雷尔给你了通行证我也不看。这是我的监狱，只有我的钥匙才能进出，我可不想"
+"冒任何风险。教团不容许犯错。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "把那该死的钥匙给我！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "除非我死了！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "好主意！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "锁链还是镣铐，我想让你待在这儿。"
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr "我不知道你是怎么突破守卫和狱长的，但希望你喜欢这里的装饰，因为你刚搬进来了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "放了我的同伴，不然就去死！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr "杀了我，你就别想放任何人出去了。我拥有唯一能打开牢房的钥匙。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "你能帮我一把吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "走开，不然就去陪你那些朋友。"
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "别光站那儿，带我们出去吧！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "我想看看天空。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "五英尺乘四英尺，五英尺乘四英尺，五英尺乘四英尺。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "如果教团还在掌权，就别放我出去了。我实在受不了这种恐怖。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr "我不想抱怨，但马希尔终于派人来救我们出去了。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "哪怕是一片面包皮我都愿意换。我饿得要命。"
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"啊，一个需要帮忙的地上人。在这里，你要帮别人的忙才能得到别人的帮助，而我需要"
+"打开城镇的入口，那是通往食物的道路。可教团却把它封锁了，并派人看守。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "大门机关在哪？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "先帮我个忙，不然我啥都不给你。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "你怎么知道门开了？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+"把卫兵制服给我带回来。这样我的鼠帮兄弟就能穿上它，就不会有人再想关上那扇门了"
+"。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "你想要他的制服？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr "开门、带回制服给我，咱们就交易。不然，滚一边去。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "你带来我想要的东西了吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "这身制服怎么样？"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "把制服给我。"
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr ""
+"好的。这里还有额外的东西。我的同伴们从一名倒下的十字军身上撕下这些，它们是火"
+"焰喷射器的一些部件。现在伊莱尔可以为你制作一个。你会玩得很开心。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "大门机关在哪？"
+
+# 〃
+#
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+"你得进入下水道的另一部分。要到达那里，你必须从下水道维护门进入城堡，并排空液"
+"体回收池。池底就是通往下水道的隐藏入口，再往里就是手动的大门控制装置。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "还有别的你能做的吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+"祝你好运。我已经为你打开了几条我们的地道。这应该会让你们的任务更容易些。哦，"
+"十码大小，完美！……但颜色糟糕透顶。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "感谢你的帮助。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "你什么都不给我，你也什么都得不到。"
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "韦兰会拯救我们的。他从未让我们失望过。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "如果你在寻找问题的答案，去找韦兰吧。 "
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "前线万岁？那全是胡说八道。我们都在等死罢了。 "
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "我们通往地上的通道被封锁了，我们连吃的都没有了。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "食物，你有食物吗？求求你帮帮我们。"
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+"这就是我放走囚犯、看守下水道的回报。如果让我找到那个帮他们越狱的人，我非宰了"
+"他不可。"
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr "那些小混蛋已经被我们困住了。再过几天，他们就会饿死自己了。"
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "你的许可在哪？这里不允许未经授权的人员进入。"
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "搞什么鬼？谁打开了大门？拉响警报！！！"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr "还有另一条路通往下水道，打开那个开关然后上去清空回收池。"
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "你到底是怎么回事？如果那个程序员从他的会客厅上来，你就死定了。"
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "嘿，你没获得许可下去那里。"
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr ""
+"程序员？谁告诉你的？这根本没有程序员。这个说法已经流传很久了。别告诉我前线居"
+"然还相信这种胡说八道。蠢货。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "那么，真相到底是什么？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "我告诉你我知道的一切了。你是在浪费时间。"
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "继续战斗吧，我们会胜利的。这一天终将属于我们！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "继续战斗吧，我们会胜利的。这一天终将属于我们！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "继续战斗吧，我们会胜利的。这一天终将属于我们！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "继续战斗吧，我们会胜利的。这一天终将属于我们！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "继续战斗吧，我们会胜利的。这一天终将属于我们！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "继续战斗吧，我们会胜利的。这一天终将属于我们！"
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+"你杀死了所有的守卫。别伤害我。我跟他说过这是个愚蠢的主意。真正的程序员在城堡"
+"里。给你，拿去这把钥匙。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "你就是那个程序员！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr "我看起来像掌握了终极权力吗？教团利用着我们所有人。现在快走吧，我已经死了。"
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "权力就是关键！"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+"很好，你又恢复意识了。当你捡起那个程序员掉落的那件物品时，你释放出一些可怕的"
+"秘密。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "什么样的秘密？ "
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+"我们不知道这把武器从哪来，但我们必须弄清楚。你从教团手里夺走了一件，但我们必"
+"须得到全部五件。我所了解的已达极限，找到祭司并寻求帮助吧。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "我还需要更多的补给。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "给你些金币。去拜访医生和武器训练师，然后出发！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "好的！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "为了前线和自由而战，出发。"
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr "是什么促使你回来的？你受伤了？没时间耽搁了，继续执行你的任务。完成整个魔符。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "祭司说你必须死！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr "我已经发誓追求自由。是祭司持有第三件碎片。那就是你的叛徒。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "那祭司就得死！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "我觉得你才是叛徒！"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "唯一神的灵魂啊，为我复仇吧，把这世界化作尘土。"
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+"你做出了正确的决定。很明显，祭司正被驱使教团的邪恶力量所控制。返回那里并夺取"
+"魔符的第三件碎片。"
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+"我们面临的恐怖似乎永无止境。我们发现教团并非在杀害我们的人民，而是在将他们改"
+"造成生物机械士兵。找到进行这种改造的设施，并永久关闭它。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "这个设施位于何处？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+"我们的一个队长里希特正在公共区的瀑布旁等你。他见过那个设施，可以带你进去。立"
+"刻制止这种暴行。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "他们会为此付出代价！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "为了前线和自由而战，出发。"
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr ""
+"我是唯一神……我需要他的灵魂获得自由，这样我才能离开身体，与他一同飞翔。你无法"
+"想象你拥有了什么……以及你将面对怎样的恐怖……唯一神必须获得自由……他会奖赏我的……"
+"我将成为一体……"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "我要消灭你！"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "很高兴看到你平安归来。你需要什么？ "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "治愈我。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "好吧，我们先帮你处理一下。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "你已经没事了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "有什么新情况吗？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "有，我给你准备了一些新装备。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "还没有，不过我正在努力。"
+
+# 〃 (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+"现在我能为你做些什么？费里斯正在解密一些非常复杂的文件，但这一切都是值得的。"
+"我已经能将部分信息应用到下一版耐力植入体了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "治愈我。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "你应该学会更小心一点。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "它什么时候能准备好？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "现在已经准备好了。这不会花太久。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "很快。"
+
+# 〃 (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr ""
+"我觉得我发现了你的植入体硬件有点小故障。费里斯正在帮我设计一个改造方案，能解"
+"决这个问题，还能稍微提升一点硬件的速度。有什么我能帮你的吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "给我包扎一下。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "好了，大概和新的一样了吧。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "改造？"
+
+# 〃 (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "啊，这下有戏了。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "费里斯一完成我就给你。"
+
+# 〃 (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+"进展如何？天哪，有些新技术简直太神奇了。这对你的植入体应该也有帮助。我有几个"
+"想法正在谋划中，很快就会准备就绪。我能为你做些什么吗，比如治疗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "是的，治愈我。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "好的，给你。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "那项新技术怎么样了？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "告诉我它怎么运作吧。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "我还没设计完呢。"
+
+# 〃 (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+"又来了，你就不会厌倦这种事吗？我有个好消息，费里斯找到了一种方法来提升你的植"
+"入体输出量。他把规格给了我，我正在努力让它与你的生理机能相融合。我正在强行生"
+"长一些组织，这可是全新的东西，希望它能奏效。你需要治疗吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "是的，治愈我。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "完成啦，现在多保重你自己吧。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "什么时候能做好？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "现在。嘿，太棒了，成功了！"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "我还在等待组织完成其生长周期。"
+
+# 〃 (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"好吧，我又恢复到老套路了，我仍在完善你的植入体。你知道吗，马希尔已经批准所有"
+"人都可以使用它们了？不知道吧？这是因为你表现得如此出色。有什么我能帮你的吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "帮我一把吧。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "我能做的只有这些了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "新植入体？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "没错，这是我做的最好的一个。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "抱歉，你只能再等等。"
+
+# 〃 (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+"这就是了，费里斯已经从我们所有的数据中提取出了他能提取的一切，这将是最好的、"
+"也是最后一次植入体升级。看到我最好的作品达到巅峰，会有点伤感。不过，至少剩下"
+"的这帮人能让我忙个不停。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "你能治愈我吗？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "好了，现在你已经完全好了。"
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+"英雄来了。干得漂亮！你需要点什么？现在我们有了城堡里所有的军需品，选择也更丰"
+"富了一些。如果你需要购买弹药，去找贾斯汀，他会帮你搞定的。 "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "我的弹药用完了。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "教教我吧。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "现在，我来教你一些重型武器的技巧。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "你还没准备好。"
+
+# 〃 (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr "战争进展得如何？算了，既然我们还在这儿，那肯定进展顺利。我能为你做些什么吗？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "我的子弹用完了。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "这应该能帮上忙。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "你的弹药已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "教教我吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "来，我给你展示几个行内窍门。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "你还没准备好。"
+
+# 〃 (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr "你是来求教的还是来找弹药的？别以为我已经教完你了，我还有几招没使出来呢。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "现在需要弹药。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "你的弹药已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "教教我吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "是时候上高级课程了。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "你还没准备好。"
+
+# 〃 (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"嗯，这次又是什么事？你从不休息吗？我还挺高兴你还能喘气。我可不想我最喜欢的学"
+"员回来的时候是从尸袋里往外看。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "我还需要更多子弹。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "好了，别浪费了。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "你已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "你能教我什么？"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "别这么不耐烦，你还有进步空间。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "等你准备好了再说。"
+
+# 〃 (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr ""
+"瞧瞧谁回来了，你在想什么？我知道这很难，但我们所有人都很感激你的努力，相信我"
+"。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "我的子弹用完了。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "还有什么新鲜事吗，给你。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "你比我能给的还要多。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "教我你能教的吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "好的，给你一些指点。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "现在还不行。"
+
+# 〃 (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr "你需要什么？我希望你能让教团尝尝到我们多年来一直承受的痛苦。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "一些弹药。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "给你，别浪费了。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "你的弹药已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "教教我吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "再上几课，你就能掌握我能教的全部了。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "你还没准备好。"
+
+# 〃 (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr ""
+"我真不敢相信我们还能在一起，你和我。从开始到现在，我们失去太多人了。我能为你"
+"做些什么，朋友？"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "我的弹药用完了。"
+
+# 〃 (〃)
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "给你，用它们来保持你的健康。"
+
+# 〃 (〃)
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "你已经够多了。"
+
+# 〃 (〃)
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "教教我吧。"
+
+# 〃 (〃)
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "好了，就这样，你学完了。我已经教不了更多了。"
+
+# 〃 (〃)
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "等马希尔告诉你时候到了再回来。"
+
+# 〃 (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr ""
+"我现在能教你的都教给你了。我已经给了你所有应该有的，除非你子弹用完了。那我还"
+"能帮你。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "是的，我没弹药了。"
+
+# 〃 (〃)
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "给你。 "
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+"去看看有什么新东西，传送器信标。当你使用信标时，我们会追踪信号并派去救援。有"
+"什么我能拿给你吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "火箭弹箱"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "给你了。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "你还买不起那个！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "高爆榴弹。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "给你。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "等你有钱了再回来。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "能量罐"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "给你能量罐"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "你的钱还不够买那个。"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "传送器信标"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "随时随地为您提供帮助。"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "抱歉，不搞慈善。"
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr "现在我们真正掌控了城堡，必须格外警惕才能守住它。教团可能正在准备反击。"
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "在外面小心点。"
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "又一次干得漂亮，没有你我们根本做不到。"
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "我是钥匙管理员。"
+
+# 〃 (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "很多人会说这是个吃力不讨好又无足轻重的工作。但事实并非如此……"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "把钥匙给我！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "好，但记住，我是钥匙管理员。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "好吧，伙计，随便你。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "我是钥匙管理员。"
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "叛徒，去死吧！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "叛徒，去死吧！"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr "你是来幸灾乐祸的吗？就算我们被关在这牢笼里，只要我们坚持下去，你们还是输的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "放我们出去！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "别烦我！"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "单纯之人，你寻求的智慧是什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "唯一神的魔符。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+"我感觉到有一件碎片在你体内共鸣。第二件则位于猩红与黑曜石塔的核心位置。在那里"
+"，你需要与主教战斗，他已察觉到你的存在，正等待着你。你可以循着他的力量象征找"
+"到他。将此信物交给钥匙管理员。在你击败那头野兽后，再回来见我。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "我会回来的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr "尽管主教强大，但这次任务微不足道。当你获得下一件碎片时再回来见我。"
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+"你接下来的挑战将考验你的意志。第三件碎片由你自己的领导持有。他与你被派去杀死"
+"的那家伙是同一个人。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "马希尔？叛徒？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr ""
+"你盲目地信任他，每获得一件碎片，他就更进一步接近自己的目标。直面他并决定你的"
+"命运。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "好吧，就是马希尔了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "我不信任的是你。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr "无论你作何选择，你的同类都将在唯一神的意志下灭亡。"
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "等马希尔死了我再回来。"
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "我不能让那件事发生。"
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "时间之河永不停息地向前流淌，而你却停滞不前。"
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr ""
+"你已将体内的毒瘤切除，但你的心脏仍在跳动。接下来你必须找到那个残害并控制你们"
+"人民的外科医生——贤者。阻止他，下一件碎片将属于你。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "我在哪里能找到他？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr "用我刚打开的门后方的传送器去找贤者。当他死后，用同样的装置返回见我。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "我会回来的，带着他的碎片！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "时间之河永不停息地向前流淌，而你却停滞不前。"
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr ""
+"可怜的人，你做到了成千上万人都没能做到的事……你给我带来了魔符的力量、唯一神的"
+"声音。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "我不明白。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+"魔符将打开这道门，释放出净化这个星球的灵魂，让我永生不朽。我会剥夺这个世界的"
+"所有能量，然后去征服新的世界。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "我不能让你这么做。"
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "你要是死了就能做到。"
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+"你是来救我们的吗？因为我表现好，他们把我的植入体取出来了。不过我还是要待在这"
+"儿擦口水。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "是的，我是来救你们的。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "你是认真的？"
+
+# 〃
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr ""
+"我没法救别人，除非你炸掉那个传送器。就在楼上的力场后面。我的工作是检查输送带"
+"确保它们没卡住。现在不用了！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "没错，你得救了！"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "哦，谢谢！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "我们自由了！！我们自由了！！我们自由了！！"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "必须多挖些矿石！"
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "我们自由了！！我们自由了！！我们自由了！！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "必须多挖些矿石！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "我们自由了！！我们自由了！！我们自由了！！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "必须多挖些矿石！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "我们自由了！！我们自由了！！我们自由了！！"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "你在这儿干什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "例行检查。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "好的，继续。"
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "这里没什么可报告的。一切运作正常。要是出了什么问题，我肯定会报告的。"
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "先生，之前有个小故障，不过已经解决了。"
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "走开，不然就尝尝金属的味道。"
+
+# 〃 (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "ID检查。"
+
+# 〃 (〃)
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "在这，我赶时间。"
+
+# 〃 (〃)
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "别再拿你的ID在我面前晃悠了，进去吧。"
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "这儿没什么好看的，走开。"
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "真是个健康的样本。你不需要我的帮助，对吧？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "嗯，需要。是马希尔派我来的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "嘘……别出声，否则我们俩都得死。现在，我能为你做些什么吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "告诉我怎么找到主教。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr ""
+"哦，我就知道你会问我这个。回头看看，那是主教城堡的入口。它被一个力场保护着，"
+"只有官方访客才能关闭，而你不是。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "我必须杀死主教。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"哦，你当然会这么做。首先，冲进安全基地并使用传送器。还有，这可能更合你意——摧"
+"毁中央行政电脑。没有电脑，就没有力场。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "太好了，听起来很容易。"
+
+# 〃
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr "毁掉电脑还有一个好处，那是存放塔楼图纸的地方。你能说，顺手牵羊吗？呵呵！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "还有别的吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr "哦，好吧，听说内堡的仓库收到了一批毛勒，那可是能蒸发一切的武器。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "就这样了吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "你不知道“滚开”这个词的意思吗？"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr "先去找昆西谈谈。除非他允许，否则我不能帮任何人。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "今天我能帮你什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "治疗贴"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "给你治疗贴。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "给你15金币，朋友。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "医疗工具"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "给你医疗工具。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "你资金有点紧张。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "野战手术工具"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "一套野战手术工具，搞定。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "等你有钱了再来！"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "怎么了？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "只是随便看看。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "别挡道。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr "圣骑士们很快就会来取他们的新毛勒。你要是挡道，就死定了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "毛勒？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "圣骑士喜欢用的武器。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+"他们早就进来了。这就是为什么到处都是保安。我上锁时有机会看了他们一眼。在其余"
+"成员来领取武器前，任何人都不得进出那里。"
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "这里是获取中央行政区图纸的地方。"
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr ""
+"这地方由我管理。我的工作是为贤者设计的机器人制造所需原材料。如果你不是因公前"
+"来，恐怕我没时间跟你多说。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "我是因公而来的。"
+
+# 〃 (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+"看来你已经和蒂莫西谈过了。他和我一起努力解开教团的秘密，以免为时已晚，害得我"
+"们所有人遭殃。也许你能帮上忙。我已经打开了生产区的门。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "你知道里面有什么吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr ""
+"那是绝密区域。不仅教团在那里培育某种……生物，我还亲眼见过一件叫作护符的奇怪神"
+"器。任何人都不许靠近它。据说，如果与另外两件同类结合，它就会拥有巨大的力量。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "你是不是想要这个东西？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr ""
+"不！如果你能找到它，就归你所有。也许你能用它来帮助我们摆脱压迫。我祝你好运，"
+"但你进去后需要的可不止是好运……"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "这一切都和过去有关吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr ""
+"你肯定见过附近的其它废墟。似乎坠落在我们星球上的那颗彗星其实是一艘太空船，信"
+"不信由你，它很久以前就起源于这个世界。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "所以那些幽灵、唯一神……"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr ""
+"它们是曾经统治过这个世界、一心想要吞噬其生命的生物。古人设法将它们封印起来，"
+"但为此献出了生命。恐怕我所知道的就这些了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "谢谢……我会尽力的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "一路顺风，朋友。"
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr "如果你有疑问，可以去找铁匠大师。我只是给箱子贴标签的。"
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "公民，你需要什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "弹药箱"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "给你弹药。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "你的钱还不够买那个！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "导弹箱"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "给你，公民。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "85金币，公民！"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "高爆榴弹"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "给你榴弹。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "100金币，朋友。"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "能量罐"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "给你了。"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "那个要135金币，抱歉。"
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "我能帮你什么吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "皮革护甲"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "给你，公民。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "这里没有施舍！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "金属护甲"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "不错的选择，公民。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "你钱不够买这个！"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "防护套装"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "给你了。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "没钱，没装备。"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "想要别的吗？"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "穿过大厅尽头的那扇门。"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "你想玩就得付钱。"
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "你需要什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "皮革护甲"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "给你，公民。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "这里没有施舍！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "金属护甲"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "不错的选择，公民。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "你钱不够买这个！"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "防护套装"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "给你了。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "没钱，没装备。"
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "今天我能帮你什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "治疗贴"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "给你治疗贴。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "给你15金币，朋友。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "医疗工具"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "给你医疗工具。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "你的资金有点紧张。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "野战手术工具"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "一套野战手术工具。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "等你有钱了再来！"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "你好，朋友，你需要什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "情报"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr "我从没见过有人进出那个工厂，力场一直开着。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "没钱，没情报。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "嗯，你想要什么？"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "更多情报。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr "工厂建在彗星撞击点上，我觉得这绝非偶然。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "来吧，只要5金币。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "再次见面，要什么？"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "更多情报。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr "当教团公布其新的恐怖玩意——审判官时，工厂就关闭了。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "请付5金币。"
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "这就是我所知道的全部了。就连酒保也会无话可说，抱歉。"
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "你好。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "你在做什么？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "我在忙，走开！"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "现在，我能帮你什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "暗影护甲？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "啊，能听见，却看不见！"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "离开这吧，等你有钱了再来。"
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+"谢天谢地你可来了。要进入工厂需要一把钥匙。我们偷到了，但我们的特工被困在教团"
+"据点下的地下墓穴网里。我已经派了十名勇士进入那些隧道找他，但没人回来。那里一"
+"定有什么东西！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "有什么？人类还是……？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+"不是。绝对不是。无论它是啥，你都必须打败它才能拿到钥匙。我会打开地下墓穴的入"
+"口。拿到钥匙后，工厂就在矿场旁边。快点，每一秒都很关键。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "非人类的什么东西，嗯？真棒。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "你在浪费时间和生命！快走！"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "我还能帮上什么忙吗？"
+
+# 〃 (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "更多情报。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "去找蒂莫西。我听说他知道一些教团的秘密。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "再付5金币。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "这就是我所知道的全部了。就连酒保也会无话可说，抱歉。"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "你好。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "你在做什么？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "我在忙，走开！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+"如果你有这么多时间浪费，就看看能不能找到蓝色圣杯。我对教团的研究表明，他们把"
+"它藏在工厂制造区的某个地方。这件神器对我而言价值连城，所以把它带给我，我会帮"
+"你一把。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "你找到了蓝色圣杯！好，先把东西给我，我们再交易。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "拿去吧，反正这东西不吉利。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "滚，我留着了。"
+
+# 〃 (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "那我就什么都不给你了。滚开！"
+
+# 〃 (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+"找到锻造厂。我刚给你的信息应该能帮你进入工厂的秘密区域。一名锻造厂工人可以打"
+"开门。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "我在那儿能找到什么？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr "我的研究表明，那里藏着来自远古时代的某种黑暗力量。小心点！"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+"那个蓝色圣杯，你是怎么得到的？我一直在研究教团及其与遥远过去的联系，那件神器"
+"对我有帮助。咱们做个交易吧。把圣杯给我，我会给你一些情报。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "拿去吧，反正这东西不吉利。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "滚，我留着了。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "那我就什么都不给你了。滚开！"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "现在，我能帮你什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "暗影护甲？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "啊，能听见，却看不见！"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "离开这吧，等你有钱了再来。"
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+"谢天谢地你可来了。要进入工厂需要一把钥匙。我们偷到了，但我们的特工被困在教团"
+"据点下的地下墓穴网里。我已经派了十名勇士进入那些隧道找他，但没人回来。那里一"
+"定有什么东西！"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "有什么？人类还是……？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+"不是。绝对不是。无论它是啥，你都必须打败它才能拿到钥匙。我会打开地下墓穴的入"
+"口。拿到钥匙后，工厂就在矿场旁边。快点，每一秒都很关键。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "非人类的什么东西，嗯？真棒。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "你在浪费时间和生命！快走！"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+"主人不喜欢访客。他希望自己的所有工作都不受打扰。我得去储物室拿些新零件。我记"
+"得他说过要一条腿和一只手臂。哦，算了，没时间聊了。在他发现你之前赶紧离开。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "为什么。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "因为，我已经告诉你了，他不喜欢访客！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "你知道吗，你的体型正好适合穿一个侍从的制服。"
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr ""
+"哦不，我不是真正的程序员，他躲起来了。继续穿过守卫训练区，非常难闯。如果你能"
+"活下来，或许可以和他谈谈，或者杀了他。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "你是谁？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "你在这儿闲逛啥也找不到。"
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "滚开，乡巴佬！"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "去死吧，小矮子！"
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "我终于能离开这牢房了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "你在这儿干嘛？"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "我被陷害了。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr "哈里斯说我在密谋杀害总督。我可绝不会伤害任何人。"
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "在外面小心点。"
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr "朋友，如果你帮我，我也帮你。给我5金币，我就告诉你我知道的事情。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "给你金币。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "如果你打人，就不会触发警报。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "我不免费告诉你任何事！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "我已经告诉过你我知道的一切了。"
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "你好，朋友。我能为你做点什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "电击箭"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "一场争吵而已。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "你身无分文！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "子弹夹"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "给你弹药"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "抱歉，不给钱，没子弹。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "弹药箱"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "给你"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "你还没有足够的金币！"
+
+# 〃
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "弹药背包"
+
+# 〃
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "谢谢，还需要别的吗？"
+
+# 〃
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "你还买不起那个，祝你愉快。"
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "欢迎，我能为你展示点什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "防护套装"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "给你了。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "你还没有足够的钱买。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "皮革护甲。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "给你了。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "也许下次再说？"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "金属护甲"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "愿你穿上它就有好身体。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "等你能负担得起再回来吧。"
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "我能如何协助你？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "治疗贴"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "给你治疗贴。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "你需要10金币才够购买这个。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "野战手术工具"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "谢谢。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "我希望我能把它们送出去，但它们值25金币。"
+
+# 〃
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "治疗"
+
+# 〃
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "治好了，保重。"
+
+# 〃
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "嗯，也许你能负担得起一些治疗贴？"
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+"你好，朋友，我以前没见过你。我只能说，如果我是你，会小心点。这里事情很多，最"
+"好别惹麻烦。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "情报"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "下水道里不止有老鼠和机器人。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr "嘿，人总得赚点钱。你觉得这些家伙会多给小费吗？"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr "又回来了啊？好吧，至少你懂得保护好自己。现在我能帮你什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "更多情报"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "总督是教团影响力的一个象征。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "如果你想改变主意，随时回来。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr ""
+"好吧，你都这把年纪了还能问出这么多问题。不过没关系，我宁愿跟你这样的人聊，而"
+"不是这儿的大多数人。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "更多情报。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "教团可远不止在这儿的所作所为。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "如果你想改变主意，随时回来。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr "好了，朋友，知识的源泉已经干涸了。我告诉你的已经够多了。"
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr "你身无分文……可难买新玩具。为我跑个腿就能赚到花不完的钱。我会让你成为富翁。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "我没更好的事要做了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "不了，谢谢。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "没人能从我这儿溜走！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+"选得好。教团在河边的圣所是他们的非正式刑讯室。里面藏着一个金色圣杯。你把它顺"
+"走，到酒馆找我，就能得到报酬。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "我该怎么做到？"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "让我想想。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "抱歉，没有第二次机会了。哦，卫兵，杀了他！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr ""
+"给你一把十字弓，只需直指目标然后——砰！记住，拿上那个精致的杯子，然后到酒馆找"
+"我。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "我会在那儿等你。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr "你还在等什么？别担心，我会清理尸体，只需带给我那个圣杯！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "卫兵！杀了这个叛徒！"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+"嘿，我知道你在想什么，这看起来有点像圈套，我绝不会对这么厉害的杀手这么做，我"
+"发誓。呼，为了一个杯子闹这么多麻烦，真奇怪。现在准备好了，黄金和荣耀，就像我"
+"承诺的那样。拿着这把钥匙，总督本人会奖励你的。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "太棒了，我都等不及了！"
+
+# 〃 (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "没圣杯，没报酬！"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "我会留着圣杯，谢谢。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "留着？没门！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "你在等什么？总督本人会奖励你的。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "叛徒，去死吧！ "
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr ""
+"原来你就是偷走圣杯的那个蠢货？我要以反叛盗贼的罪名逮捕你……借此提升我在教团中"
+"的地位。被当作无知棋子的感觉如何？ "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "真糟糕！"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "对你而言确实很糟。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "哈里斯答应给我钱！"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "那太糟了。你得到的只有死路一条！"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "我们要杀了你！"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "滚出去！"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "我们要杀了你！"
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "滚出去！"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr ""
+"多么完美的地方啊，就在旧城镇大厅下面。教团以为他们已经铲除了我们，但这只是提"
+"醒我们，一旦粗心大意就会有什么后果。 "
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "去找马希尔谈谈，他能帮到你。"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+"我听说马希尔很快又要搞事了。上次的惨败之后，我们需要一次大规模打击。再像那样"
+"来一次我们就撑不下去了。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr "把这些桶里的东西倒进他们的供水系统里，应该能稍微扳回一点局面。 "
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+"我正在研究能让我们占优势的东西。它能增强你的耐力，让你精神百倍。我差不多把所"
+"有的漏洞都解决了。我能帮你什么吗？ "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "给我包扎一下。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "天啊，你伤得真重。我会尽力的。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "耐力植入体？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "好的，这不会花太久。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "还没完成呢。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr "嘿，我正在给你的植入体做升级。还有别的我能帮忙的吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "给我包扎一下。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "至少你还能看到行动。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "植入体升级？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "好事，再安全也不为过。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "我差不多快完成了，但还没完全搞定。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr ""
+"好啦，就是这样。我已经让大部分功能完美运行了。还有几个问题需要解决，你还需要"
+"别的什么吗？ "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "给我包扎一下。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "你在尝试做什么？跟十字军正面硬刚？"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "植入体升级？"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "这应该能帮到你。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "让我先做些更多的测试。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "目前我对植入体能做的就这些了。或许可以治疗一下？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "好。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "天啊，你伤得真重。我会尽力的。"
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "我能为你做些什么吗？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "我的弹药用完了。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "教教我吧。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "好的，我就给你指点几招。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "你还没准备好。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "又来了？你需要什么？"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "我的弹药用完了。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "你的弹药已经够多了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "教教我吧。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "好吧，这应该能让你撑一阵子。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "抱歉，不能。我只是在执行马希尔的命令。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+"那你是要弹药还是要训练？我迫不及待想拿到我们缴获的新武器了。等我处理完他们，"
+"就能开始训练其他人了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "我弹药用完了。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "给你一些弹药，别浪费了。"
+
+# 〃
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "你的弹药已经够多了。"
+
+# 〃
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "教教我吧。"
+
+# 〃
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr "好，把你学到的东西用起来，给那些教团杂种们指条下地狱的路。"
+
+# 〃
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "等马希尔说可以的时候再回来。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr "我现在已经把能教你的都教给你了。给我点时间来测试一下新武器。除非你没弹药了。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "是的，我没弹药了。"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "给你。"
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr "别在城镇里乱开枪，会触发警报，他们就会从城堡派守卫过来。"
+
+# 〃
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "欢迎，我们总是需要更多帮手。"
+
+# 〃
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr ""
+"以前我还在行动时，我们有机会在增援部队到来前检查过一个侍从，他们不是人类，我"
+"告诉你。"
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr "我们正在尝试寻找城堡大门的机关位置，但到目前为止毫无头绪。"
+
+# 〃
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr ""
+"别被抓到。我听说他们关押我们的同胞后会做些可怕的事。他们就这样消失了，连一丝"
+"痕迹都没有。 "
+
+# 〃
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+"给你个建议，要是你看到教团的铁甲兵，赶紧往相反方向跑。我尤其讨厌掠夺者，那些"
+"东西真是他妈的太快了！"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr ""
+"欢迎来到最后的一线希望。只有我们拥有反抗教团的自由意志。我们有最尖端的科学头"
+"脑和许多能干的人手，但缺乏那个真正解决问题的人，来给我们带来制胜的关键。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "我需要做点什么？ "
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr ""
+"帮帮我们。帮我们窃取他们的技术。解救我们的同伴。与这些扭曲的疯子战斗到底。我"
+"请求你为真相冒生命危险。"
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "我与你同在！"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+"很好。黑鸟将继续作为你的向导。她对你颇为青睐。你们必须一起揭开教团及其非人仆"
+"从的秘密。有一种存在潜伏在我们的理解之外，操纵着他们的恐怖。深入其中，将他们"
+"击溃。 "
+
+# 〃
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "让我来对付他们！"
+
+# 〃
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "很有精神。"
+
+# 〃
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "欢迎，朋友！"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "请不要伤害我。"
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "如果你想伤害我，我其实并不值得你费这个劲。"
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "我什么都不知道。"
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "走开，不然我就叫卫兵了！"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr "有时我真希望所有这些叛乱分子能安分守己，别再胡闹了。"
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "就让我一个人待着吧，好吗？"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "我不太确定，但有时候我觉得自己认识一些侍从。"
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "教团把这里的一切都控制得死死的。"
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "这绝不仅仅是一支安保部队。"
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr "我听说教团对前线在这附近的行动非常紧张。"
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "教团绝不会与我们对抗。"
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr "我们就快准备好发动攻击了。马希尔的计划正在逐步落实。"
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "我们都在背后支持你，别担心。"
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "别靠近那些大机器人，它们会把你熔成废铁！"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr "我们的荣耀之日即将到来，反对我们的人将被碾碎！"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "别太安逸了，我们还有很多工作要做。"
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "马希尔说你是新的希望，记住这一点。"
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr "一旦我们将这些骗子铲除，就能重建这个世界，恢复原样。"
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "记住，你不仅仅是在为自己而战，而是为这里和外面的所有人而战。"
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "只要我们中还有一个人站得住，我们就必将胜利。"
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "走开，农民。"
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "遵循真正的信仰，你才会开始明白。"
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "唯有死亡才能让人真正重生。"
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "我对你的胡言乱语毫无兴趣。"
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "如果我想跟你说话，早就告诉你了。"
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "去烦别人吧！"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "走开！"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "要是警报响了，就别挡我们的道！"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "教团将净化世界，引领其进入新时代。"
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "有问题？不，我想没有。"
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "给穷人施舍？"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "你在看什么，地上人？"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "你没有多余的食物，对吧？"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "你们地上人永远无法理解我们。"
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr "哈，那些守卫找不到我们。那些蠢货甚至都不知道我们的存在。"
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr "终有一日，所有不效忠教团的人都将被迫加入我们。"
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "现在就盯着吧，但你知道，终有一天这也会是你自己的模样。"
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "没有什么比一个态度嚣张的地上人更让人讨厌的了！"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "教团会让你们那可悲的前线迅速覆灭。"
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "小心点，地上人。我们清楚我们的敌人！"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "我们是命运之手。触怒我们就是走向湮灭！"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "教团将净化世界，清除弱者与腐败！"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "服从主人们的意志！"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "教团兄弟万岁！"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "自由意志只是束缚软弱者的幻象。"
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "权力是通向荣耀的道路。遵循教团的指令，踏上这条道路！"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "在正义者中占有一席之地，加入我们！"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "教团会保护自己人。"
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "侍从？他们尚未见识教团的全部荣光。"
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr "倘若那可怜躯壳中尚存一丝荣誉，你就会投入教团的怀抱。"
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "再见！"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "谢谢，再见！"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "回头见！"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr ""
+"喂？指挥部，通讯装置刚刚启动……正在接收来自……某人……的影像和声音。嘿，你，马上"
+"离开那里……并放下圣杯！"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr ""
+"听着，这个通讯装置告诉我你是100%的人类。我奉命带你回去，这关乎信任。背叛我，"
+"后果自负。哦，顺便说一下，你可以叫我黑鸟。"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+"听着，这个通讯装置告诉我你是100%的人类。你可能是我们中的一员，也许我们可以尝"
+"试彼此信任。这是一次考验——总督宅邸里有一把火焰喷射器。拿到它，然后我会带你去"
+"见我们。"
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr "前往旧城镇大厅。马希尔挖了一条隧道，让我们的进出能够避开侍从们的监视。"
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr "从左边的门进去，然后是右边的门。守卫的名字叫杰夫。告诉他你需要金子。"
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+"别进城镇大厅。那里不再安全了，我们的伪装已经被揭穿。消灭所有大型机器人——“十字"
+"军”，我会带你去见我们。"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr ""
+"武器店旁边的门会在所有十字军都被消灭后打开。进入储物室后会发现一个传送器，使"
+"用它就能来到我们这里"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr ""
+"武器店旁边的门会在所有十字军都被消灭后打开。进入储物室后会发现一个传送器，使"
+"用它就能来到我们这里。"
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr "尽可能多地消灭大型机器人——十字军。完成后我会带你去找马希尔"
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "通过这扇门，和马希尔谈谈。"
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr ""
+"在主电源上找到电源插头，把它关掉。带回某样东西给总督作为证明。找到麦古芬，跟"
+"他谈谈。"
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr ""
+"在主电源上找到电源插头，把它关掉。带回某样东西给总督作为证明。找到麦古芬，跟"
+"他谈谈。他在污水处理厂附近的“贫民窟”，顺着楼梯往下走。"
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr ""
+"你这个蠢货！你关闭了我们用来隐藏基地位置的干扰电路的电源。现在快去城镇大厅，"
+"干掉搜寻小队！然后回到总督那里，把损坏的耦合器交给他。"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr ""
+"好吧，“不要相信任何人”就是这个游戏的核心规则！我们从总督那里拿到监狱通行证。"
+"把损坏的耦合器带给他。"
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr ""
+"好招数！总督就是个骗子。那就是我们的电源耦合器。我们正用它来隐藏基地位置，不"
+"让教团发现。把这个损坏的耦合器带回给他，然后我们拿到那张通行证。"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr "用狱长的钥匙进入监狱牢房区，并找到释放囚犯的方法。"
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr "找到释放囚犯的方法。想办法开启手部扫描器的开关。"
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr "找到释放囚犯的方法。用法官的手操作手部扫描器开关。"
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr "干得漂亮，朋友！成功释放了囚犯。跳上其中一个传送器，它会把你送回基地。"
+
+msgid "TXT_ILOG22"
+msgstr "摧毁驱动教团护盾的电网能量水晶。去拜访沃纳——我们在发电站仓库招募的间谍。"
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "我们尽情迷失吧，还有更多乐趣等着我们。"
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr ""
+"在指挥部觉得可以安全进攻城堡之前，再进行一次冒险。马希尔安排伊莱尔给你金子和"
+"一些训练。在拜访他之后，去城镇找医生增强体力。"
+
+# 〃
+msgid "TXT_ILOG26"
+msgstr ""
+"拜访伊莱尔和城镇里的医生获取金子与训练，然后找到下水道。沿着总督宅邸对面的河"
+"走。"
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr "我们正在寻找自称鼠王的韦兰。我相信这个称号既形象又生动。"
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr ""
+"把火焰喷射器的零件带给伊莱尔。排空回收池。在底部有一个通往下水道的隐藏入口。"
+"大门控制装置就在那下面的某个地方。毁掉它们。"
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr ""
+"指挥部，他做到了！大门开了。派出突击部队并告知马希尔我们来了！咱们返回前线基"
+"地。"
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr ""
+"加入对城堡的突袭。寻找并消灭那个程序员。对他的位置我们收到的报告相互矛盾：有"
+"人说他在一间电脑房里，另一个说他藏在地下神庙，还有人称他在一条长走廊的尽头。"
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "找到那个程序员并杀了他。"
+
+msgid "TXT_ILOG46"
+msgstr ""
+"寻找祭司询问其它魔符碎片的情况。祭司居住在边境地带，就在城镇外。过河，朝城堡"
+"方向前进，然后从左侧穿过拱门。"
+
+msgid "TXT_ILOG47"
+msgstr "寻找祭司询问其它魔符碎片的情况。祭司的神庙位于边境地带，就在城镇郊区。"
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr ""
+"寻找祭司询问其它魔符碎片的情况。领取奖励后前往医生和武器训练师处恢复生命和接"
+"受训练。祭司的神庙位于边境地带，就在城镇郊区。"
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr ""
+"寻找祭司的神庙并询问关于其它魔符碎片的情况。就是这里。我在记录一切，不是我不"
+"相信你能活下来，而是因为我们不能让教团控制魔符。"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr ""
+"第二件碎片位于猩红与黑曜石塔的核心位置。在那里你会找到主教。主教是教团的军事"
+"领袖。我们干掉他就能获得双重战果。将祭司的信物带给边境地带的钥匙管理员。"
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr "主教肯定戒备森严，要不咱们偷身制服混进去？找到主教。消灭他后返回祭司那里。"
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr ""
+"我刚收到消息，堡垒内有线人。咱们前去医院吧，他在那儿工作。之后找到主教并消灭"
+"他。他一死，就返回祭司那里。"
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr ""
+"别放弃，就是这儿了。直走，跳上传送器前往中央行政区并摧毁电脑核心。这将破坏通"
+"往主教塔入口的力场。他一死，就返回祭司那里。"
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr "非常棒。咱们把它炸了。这样就能解决力场了。咱们先回到内堡，然后去塔楼找主教。"
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr ""
+"好样的，又一件魔符碎片！你看到从主教体内冒出的那个奇怪幽灵了吗？我之前在哪里"
+"见过？咱们回到祭司那里吧。"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr "我收到一份报告，我们在主教附近发现的幽灵能量也出现在祭司那里，咱们得小心。"
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr ""
+"里希特已经接管了我们部队的指挥权。看起来马希尔一直都在欺骗我们。他真正效忠的"
+"是教团。真是条毒蛇。咱们回到祭司那里吧。"
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr ""
+"又一件魔符碎片。我们离自由更近了一步。而你，也离我更近了一步。咱们回到祭司那"
+"里吧！"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr ""
+"你掌握了完整魔符的力量。你觉得咱们去给这事做个了断怎么样。看看这位贤者一直在"
+"保护着什么。"
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr "唉，预言终究是空谈。等等，马希尔在召唤我们返回。我们就完好无损地离开这里吧。"
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr ""
+"工厂就在矿场旁边。里希特应该指的是德宁矿场。德宁矿石具有磁性还易爆，正好可以"
+"用来关闭力场。咱们先从地下墓穴拿钥匙，然后前往矿场采集矿石吧。"
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr ""
+"工厂就在矿场旁边。德宁矿石具有磁性还易爆，正好可以用来关闭力场。咱们先从地下"
+"墓穴拿钥匙，然后下到矿场采集一些矿石吧。这一定是里希特的特工在寻找的废墟，小"
+"心点。"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr ""
+"工厂就在矿场旁边。德宁矿石具有磁性还易爆，正好可以用来关闭力场。朋友，不管我"
+"们在对抗什么，它远不止是教团那么简单。回到公共区后，再前往矿场采集矿石吧。我"
+"们需要矿石。"
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr ""
+"工厂就在矿场旁边。德宁矿石具有磁性还易爆，正好可以用来关闭力场。别放松警惕，"
+"留意矿石的矿脉。"
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr ""
+"别放松警惕，留意矿石的矿脉。这些可怜的灵魂成了无人机，他们的神经功能正被RC植"
+"入体干扰。如果我们摧毁发射器，他们就能获得自由。"
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr ""
+"工厂就在矿场旁边。别放松警惕，留意矿石的矿脉。我的建议是：把矿石扔向力场然后"
+"炸掉它，产生的压缩应该会形成磁性层并关闭这些光。"
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr "现在前往工厂。离开矿场后你不会错过它的。咱们找到那台机器并把它关掉！"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr "我检测到正前方有巨大的神经波扭曲。我想咱们找到了。快进去把它闭掉！"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr ""
+"就在我以为已经见识过一切的时候！他们进去时还是人类，而出来时……我都不敢想。摧"
+"毁这个恐怖的东西！"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr ""
+"马希尔疯了。他故意派200个人去送死。我要复仇！为死去的，也为活死人！咱们回去看"
+"看发生了什么。"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr ""
+"工厂通向一个“实验室”，他们正在接收来自内部的魔符碎片能量信号。回到工厂，这是"
+"我们迈向自由的下一步。"
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "找到主教并消灭他！他一死，就返回祭司那里。"
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr ""
+"贤者的实验室就在刚刚开启的传送门那边。咱们去看看他刚才在说什么。这是我们迈向"
+"自由的下一步。"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr ""
+"快点，咱们得赶紧离开这儿！力场已经关闭了，前往主教塔吧。他一死，就返回祭司那"
+"里。"
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr "寻找河边的圣所。从里面偷走圣杯。交给酒馆里的哈里斯。"
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "寻找总督。跟他谈谈你的报酬。"
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr ""
+"寻找河边的圣所。里面关着一个叫贝尔丁的人。把他干掉，并把他的戒指带回给罗温作"
+"为证据。"
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "找到前线的位置并跟马希尔谈谈。"
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "下楼，找到马希尔并跟他谈谈。"
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr ""
+"拜访伊莱尔，他是城镇里前线的武器供应商。他就在武器店旁边的门后。然后用马希尔"
+"给你的钥匙跟总督谈谈。"
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr "在主电源上找到电源插头，把它关掉。带回某样东西给总督作为证明。"
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr "在发电站的仓库中找到德尔温。杀了他，并将他的耳朵交给莫雷尔。"
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr ""
+"使用莫雷尔给你的通行证进入监狱。一旦进入，与狱长蒙塔格交谈。找到释放囚犯的方"
+"法。"
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr "用狱长的钥匙进入监狱牢房区，并找到释放囚犯的方法。"
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr ""
+"摧毁驱动教团护盾的电网能量水晶。去拜访沃纳——我们在发电站仓库招募的间谍。别忘"
+"了去之前先拜访医生和武器训练师。"
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr ""
+"摧毁驱动教团护盾的电网能量水晶。使用ID进入发电站。你可能想检查一下沃纳上方的"
+"储物室。"
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr "摧毁驱动教团护盾的电网能量水晶。去核心区域跟凯特里克谈谈。"
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr "摧毁能量水晶。去跟凯特里克谈谈，用开关把通道升起，然后用这张ID乘电梯。"
+
+msgid "TXT_ILOG1015"
+msgstr "寻找教团守卫的城镇入口。打开门并将卫兵制服带回给韦兰。"
+
+msgid "TXT_ILOG1016"
+msgstr ""
+"将火焰喷射器零件带给伊莱尔。找到下水道维护门。在城堡内寻找并排空回收池。池底"
+"就是通往下水道的隐藏入口。从那个入口下去，就能找到控制大门的地方。"
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr ""
+"加入对城堡的突袭。寻找并消灭那个程序员。去见医生和武器训练师。把所有能用的都"
+"用上。这将是一场恶战。"
+
+msgid "TXT_ILOG1018"
+msgstr ""
+"使用假程序员给你的钥匙打开通向那个程序员居所的入口。他一定躲藏在什么地方。找"
+"到那个程序员并杀了他。"
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr ""
+"寻找祭司询问其它魔符碎片的情况。领取奖励后，前往医生和武器训练师处恢复生命和"
+"接受训练。"
+
+msgid "TXT_ILOG1020"
+msgstr ""
+"第二件碎片位于猩红与黑曜石塔的核心位置。在那里你必须找到等待着你的主教。将祭"
+"司的信物交给边境地带的钥匙管理员。一旦你消灭了主教，就返回到祭司那里。"
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr ""
+"寻找猩红与黑曜石塔。使用钥匙管理员给你的ID钥匙进入塔内。进入后你必须找到主教"
+"。一旦你消灭了主教，就返回到祭司那里。"
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr ""
+"寻找安全基地，杀出一条血路，然后使用传送器到中央行政区。摧毁中央行政区内的电"
+"脑核心。这将破坏主教塔的力场。一旦主教死了，就返回到祭司那里。"
+
+msgid "TXT_ILOG1023"
+msgstr ""
+"你接下来的挑战将考验你的意志。第三件碎片由你自己的领导持有。他与你被派去杀死"
+"的那家伙是同一个人。直面他并决定你的命运。"
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr ""
+"持有第三件碎片的是祭司。就是你的叛徒。返回到祭司那里，并将他击败。它死了就回"
+"来找我。"
+
+msgid "TXT_ILOG1025"
+msgstr ""
+"你已将体内的毒瘤切除，但你的心脏仍在跳动。接下来你必须找到那个残害并控制你们"
+"人民的外科医生……贤者。阻止他，下一件碎片将属于你。"
+
+msgid "TXT_ILOG1026"
+msgstr ""
+"接下来你必须找到那个残害并控制你们人民的外科医生……贤者。阻止他，下一件碎片将"
+"属于你。使用我为你打开的传送器到达他那里。他死后，用同样的装置回到我这里。"
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr ""
+"你做出了明智的选择。第三件碎片掌握在你自己的领袖手中。摧毁藏在你心中的东西，"
+"然后回到我这里。"
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr ""
+"我们发现教团正在将我们的人民转化成生物机械士兵。找到进行这项实验的设施并永久"
+"关闭它！在瀑布附近的公共区找到里希特，他会告诉你如何阻止这场暴行。"
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr ""
+"想进入工厂，你需要一把钥匙。我们偷了一把，但拿着钥匙的特工在公共区下面的地下"
+"墓穴里失踪了。那里有某种东西正在带走我们的人。不管那是什么，你都必须找到它并"
+"夺回钥匙。拿到钥匙后，工厂就在矿场旁边。"
+
+msgid "TXT_ILOG1101"
+msgstr "在圣所教堂寻找圣杯，然后把它带给酒馆楼上的哈里斯。"
+
+msgid "TXT_ILOG1102"
+msgstr "找到总督宅邸并与总督交谈以领取奖励"
+
+msgid "TXT_ILOG1201"
+msgstr ""
+"恭喜！您已赢得我们的感激。拜访医生和武器训练师，他们会为您接下来的行动做好准"
+"备。您可以在基地内随意走动。"
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "教团军士"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "罗温"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "费里斯"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "监狱守卫"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "贾斯汀"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "马希尔"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "助手"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "钥匙管理员"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "保镖"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "审讯官"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "狱长蒙塔格"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "里希特"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "马希尔的顾问"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "法官沃伦尼克"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "特维克"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "哈里斯"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "工头"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "囚犯"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "萨米斯"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "武器工匠"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "反应堆守卫"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "学徒"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "门卫"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "铁匠大师"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "仓库守卫"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "酒保"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "蒂莫西"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "詹姆斯"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "沃纳"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "内堡守卫"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "无人机"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "前线守卫"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "昆西"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "军士"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "神庙守卫"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "祭司"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "乌莱因"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "前线士兵"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "程序员"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "医生"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "看守"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "凯特里克"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "韦兰"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "顾问"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "杰夫"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "监督"
+
+# Intended to appear in MAP19, but does not spawn.
+#
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "安全专员"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "电脑技术员"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "麦古芬"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "阿里昂"
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "码头工人"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "伊莱尔"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "核心守卫"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "下水道守卫"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "技术员"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "卫兵"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "农民"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "盔甲师"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "贝尔丁"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "杰拉德"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "总督莫雷尔"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "弓箭师"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "德尔温"
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr "彗星毫无征兆地撞击了我们的星球，我们在这记猛烈的重击中失去了天堂般的家园。"
+
+# 〃
+msgid "TXT_SUB_INTRO2"
+msgstr ""
+"撞击释放出一种病毒，它席卷大地，夺去了数百万人的生命。而那些死去的人，反而是"
+"幸运的。"
+
+# 〃
+msgid "TXT_SUB_INTRO3"
+msgstr ""
+"那些未死的人都成了变异的人类。其中一些人变成了狂热信徒，他们在脑海中听到了邪"
+"恶之神的声音，并自称为“教团”。"
+
+# 〃
+msgid "TXT_SUB_INTRO4"
+msgstr ""
+"而我们这些听不到这种声音的人，却饱受折磨，被迫侍奉这些残忍无情的疯子。他们掌"
+"握着远超我们所能抗衡的武器。"
+
+# 〃
+msgid "TXT_SUB_INTRO5"
+msgstr ""
+"他们肆意残害我们的妇女和儿童，迫使我们不得不将她们藏于地下，像野兽一般在无尽"
+"的恐惧中苟延残喘。"
+
+# 〃
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+"然而，不满的低语声此起彼伏。若我们组织起来，能否击败这些主宰者？武器正在被窃"
+"取，士兵正在被秘密训练。一场运动诞生了：诞生于毕生的抗争！"
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr ""
+"注意，前线的所有部队：他做到了！都结束了。黑鸟的士兵杀死了邪恶势力。教团不复"
+"存在了。黑鸟，能听到我说话吗？"
+
+# 〃
+msgid "TXT_SUB_GOOD2"
+msgstr ""
+"我就知道你会赢，我英勇的英雄。所有战斗都已停止。你的胜利将使我们能够研制出疫"
+"苗，清除我们体内的病毒。"
+
+# 〃
+msgid "TXT_SUB_GOOD3"
+msgstr ""
+"你拯救了我们的星球，让我们重获自由。现在我想亲自感谢你……哦，顺便说一句：我叫"
+"肖娜。"
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr "是的，邪恶势力已经消失，但我们的未来充满了不确定性，笼罩在疑云之中。"
+
+# 〃
+msgid "TXT_SUB_SAD2"
+msgstr "想彻底清除我们身上的病毒需要几代人的努力，如果我们能撑那么久的话。"
+
+# 〃
+msgid "TXT_SUB_SAD3"
+msgstr "无论邪恶势力想要什么，它都从我们身上抽走了我们最需要的东西：让我们失去希望。"
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr ""
+"这种有意识的病毒像海啸般袭来，让我们都陷入了疯狂。我们听到了死亡的诱惑之歌，"
+"并随之起舞。"
+
+# 〃
+msgid "TXT_SUB_BAD2"
+msgstr ""
+"这个邪恶势力抽干了我们所有人类的生机，对繁衍后代不屑一顾，反复利用我们的家庭"
+"。"
+
+# 〃
+msgid "TXT_SUB_BAD3"
+msgstr "然后有一天，邪恶势力离开了。它已无物可食，我们彻底灭绝了。"
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr "病毒引发的基因突变不仅扭曲了教团的心理，还导致他们身体的腐朽。"
+
+# 〃
+msgid "TXT_SUB_MAP03_2"
+msgstr "由于无法繁衍后代，教团发现生物机械增强是维持自身力量和数量的唯一途径。"
+
+# 〃
+msgid "TXT_SUB_MAP03_3"
+msgstr ""
+"腐朽已经发展到如此程度，我们面对的大多数士兵已更像是机器而非人类，但我们相信"
+"他们的集体意识由单一源头控制的……"
+
+# 〃
+msgid "TXT_SUB_MAP03_4"
+msgstr ""
+"……那个程序员：控制侍从的AI造物主。消灭那个程序员，我们或许能以一击重创教团的"
+"部队。但要小心：我们有报告称他能瞬间蒸发攻击者。"
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr ""
+"从那个程序员的文件碎片拼凑出的信息表明，教团正崇拜着一件智能武器，他们称之为“"
+"魔符”。"
+
+# 〃
+msgid "TXT_SUB_MAP10_2"
+msgstr ""
+"你拿到并回收的碎片是五件之一。它的力量汲取自使用者自身的生命力。只要你还活着"
+"，就能掌控其力量。"
+
+# 〃
+msgid "TXT_SUB_MAP10_3"
+msgstr ""
+"导致你昏迷的冲击是魔符碎片在自我调适以适应你——你的脉搏和脑波。你可以操控它了"
+"，但代价高昂：它会把你吸干。"
+
+# 〃
+msgid "TXT_SUB_MAP10_4"
+msgstr ""
+"一件碎片便拥有惊人的力量。若集齐五件，将带来毁灭性后果，并赋予使用者对整颗星"
+"球的总控制权。"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr ""
+"听着，这个通讯装置告诉我你是100%的人类。我奉命带你回去，这关乎信任。背叛我，"
+"后果自负。哦，顺便说一下，你可以叫我黑鸟。"
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr ""
+"前往旧城镇大厅。在教团轰炸后，马希尔挖了一条隧道，让我们的进出能够避开侍从们"
+"的监视。"
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr "从左边的门进去，然后是右边的门。守卫的名字叫杰夫。告诉他你需要金子。"
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr "伊莱尔是前线的“协调者”。他藏身于武器店旁那扇无标记的门后。"
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr "记住：用潜行而非武力击杀。这样不会触发警报。"
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr "我所知道的这位总督在两边势力之间周旋。这是他的所谓“宅邸”。"
+
+msgid "TXT_SUB_LOG8"
+msgstr "啧。人类的渣滓确实找到了容身之所。"
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr "称莫雷尔卑鄙是对他的一种赞美。他就是插在棍子上的杂种狗屎。"
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr "我们需要找一个熟悉旧城镇和这个耦合器位置的人。指挥部说：找到麦古芬。 "
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr "他在所谓的“贫民窟”里。沿着污水处理厂旁的步道走，然后下楼梯。"
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr "这个任务你可以慢慢来。我无法从指挥部获得相关情报。"
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr ""
+"你这个蠢货！你关闭了我们用来隐藏基地位置的干扰电路的电源。现在快去城镇大厅，"
+"干掉搜寻小队！"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr ""
+"好吧，“不要相信任何人”就是这个游戏的核心规则！我们从总督那里拿到通行证，释放"
+"那些囚犯。"
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr "好招数！总督是个蹩脚的骗子。那就是我们的电源耦合器。现在咱们去拿那张通行证。"
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr "仓库位于发电站内。咱们速战速决。"
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "我从没想到自己会闯进监狱……"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr "看来天下没有免费的午餐。该上膛了。"
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr "好。你让总督满意了，干掉了狱长……现在看来咱们得动点小手术了。"
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr "哦，你把他的手砍下来了！我还以为你是个……好人。快走吧。"
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr "干得漂亮，我的朋友。跳上其中一个传送器，它会把你送回基地。"
+
+msgid "TXT_SUB_LOG22"
+msgstr "沃纳是我们从发电站仓库里招募来的间谍。"
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr "老大说：当你击碎水晶时要退后，否则你也会最终被烧成炭的。"
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr ""
+"在指挥部觉得可以安全进攻之前，再进行一次冒险。马希尔安排伊莱尔给你金子和一些"
+"训练，并拜访医生增强体力。"
+
+# 〃
+msgid "TXT_SUB_LOG26"
+msgstr ""
+"教团以为自己在城堡中很安全。错了！如果你打开城门，他们就很容易被打败。为此，"
+"你得下到下水道去。沿着河流穿过总督宅邸前进。 "
+
+# 〃
+msgid "TXT_SUB_LOG27"
+msgstr ""
+"好，躲进这里。下水道居民是可怕的变异人，但他们的隧道网络能让他们接触到秘密。"
+"捂住鼻子……咱们要下去了。"
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr "我们正在寻找自称鼠王的韦兰。我相信这个称号既形象又生动。"
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr "哦，真恶心。我甚至不想知道你踩的是什么！"
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr "正是我需要的，更多的棕色黏液！"
+
+msgid "TXT_SUB_LOG31"
+msgstr "嘿，看！我想那就是韦兰想要半开的门！"
+
+msgid "TXT_SUB_LOG32"
+msgstr ""
+"闭上眼睛！我不想看！噢，太迟了……真恶心。那看起来不像人类的身体。教团做了什么"
+"？我得报告给指挥部。"
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr "为什么咱们不能在花田里执行一次任务呢？"
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr "我真不想这么说，但这让我想起了家。我就在离那不远的地下。"
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr "别问我咱们在哪儿。我也迷路了。抱歉。"
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr "那块砖……咱们不是刚经过那块砖吗？不……"
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr "指挥部，他做到了！大门开了。派出突击部队并告知马希尔我们来了！ "
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr ""
+"关于那个程序员的位置，我们收到的报告相互矛盾。有人说他在一间电脑房里，另一个"
+"说他在一座城堡中，还有人提到一条长走廊。抱歉。 "
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr "啊，再次主动出击感觉真好。给他们点颜色，伙计们！"
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr "这看起来不错。电脑……程序员……你觉得呢？"
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr "这一定是那条长走廊。要不就是我的空间感彻底失灵了。"
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr "这里到处都是邪恶神庙的特征。阴森的建筑、巨大的横幅……我说的没错！"
+
+msgid "TXT_SUB_LOG43"
+msgstr "这就是那个无所不能的程序员？不可能！"
+
+msgid "TXT_SUB_LOG44"
+msgstr ""
+"我都不知道该相信什么了。唯一让我联想到“城堡”的就是左边那个巨大的怪物。但我不"
+"知道该怎么进去。 "
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr "当事情变得诡异时，诡异的事物就会开始行动。小心点。"
+
+msgid "TXT_SUB_LOG46"
+msgstr "祭司居住在边境地带，就在城镇外。过河，朝城堡方向前进，然后从左侧穿过拱门。"
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr "祭司是据说对教团持同情态度的高级牧师，他游离于教团之外运作。"
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr "祭司的神庙位于边境地带，处于城镇边缘。"
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr "教团夺走了我们美丽的星球，并将其变成了垃圾场。"
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr ""
+"就是这里。我在记录一切，不是我不相信你能活下来，而是因为我们不能让教团控制魔"
+"符。"
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr "你真勇敢，我的战友。能和你一起冒险我很自豪。"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr "你能暂停一下吗？我有点晕了。"
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr "为什么咱们要在地下待这么久？我已经见识过地下了。"
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "我们真的应该信任一个内心圣所是绿色的人吗？"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr "猩红与黑曜石？他为什么不说红色和黑色。"
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr ""
+"主教是教团的军事领袖。他策划战术、指挥间谍，并负责控制我们。干掉他我们就能两"
+"全其美。"
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr "主教肯定戒备森严，要不咱们偷身制服混进去？"
+
+msgid "TXT_SUB_LOG58"
+msgstr "提醒我一下，要是咱们这次赢了，我会请个装饰工。"
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr "我刚得到的消息，我们在堡垒内有线人了。我们前往他们所谓的医院，他在那里工作。"
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr "拿走计划图并毁掉电脑，明白吗？"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr "好啦，我不是在抱怨，但下次咱们或许可以尝试不会血流成河的方式。"
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr "我们以前也走过无数的走廊，但我发誓，这些墙好像在我们经过时移动了。"
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr "嗯，你得想想。军事领袖就是一堆坏蛋。"
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr "别放弃。就是这儿了。直走。"
+
+msgid "TXT_SUB_LOG65"
+msgstr "下次咱们在加油站停下来问路吧。"
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr "哦不！又是警报声，又是闪光灯，还有恶心的家伙们在追着咱们。"
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "你知道吗，从外面看，这个地方看起来很小。"
+
+msgid "TXT_SUB_LOG68"
+msgstr "我刚检测到一个新敌人。别停下盯着，直接干掉他们。"
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr "我讨厌这些力场。找找关闭开关，肯定就在附近。"
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr "哇，非常震撼。我们炸了它吧！"
+
+msgid "TXT_SUB_LOG71"
+msgstr "跳上传送器，咱们赶紧离开这儿。"
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr "等等，祭司说我们会通过他的力量印记认出他。你在想的跟我一样吗？"
+
+msgid "TXT_SUB_LOG73"
+msgstr "这些家伙的装饰创意不错，可惜他们刚刚砸烂了。"
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr "你看到从主教体内冒出的那个奇怪幽灵了吗？我之前在哪里见过？"
+
+msgid "TXT_SUB_LOG75"
+msgstr "决定时机到了。现在我们手头有两件碎片，可能该返回基地了。你的直觉告诉你什么？"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr "我收到一份报告，我们在主教附近发现的幽灵能量也出现在祭司那里，咱们得小心。"
+
+msgid "TXT_SUB_LOG77"
+msgstr "马希尔？也是这场混乱的一部分？我不知道该作何感想。希望你能做出正确的决定。"
+
+msgid "TXT_SUB_LOG78"
+msgstr ""
+"我该信任为前线冒过生命危险的马希尔，还是那个丑陋的幽灵？我不确定。但我信任你"
+"。"
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr ""
+"里希特已经接管了我们部队的指挥权。看起来马希尔一直都在欺骗我们。他真正效忠的"
+"是教团。真是条毒蛇。"
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr "这入口真是够惊人的。但咱们要找的东西在另一层。往下走。"
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr "真可惜。我们的技术被浪费在折磨上，而不是拯救生命。"
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr "他们简直自大到极点，竟在神庙上挂起巨大的横幅。"
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr "又一件魔符碎片。我们离自由更近了一步。而你，也离我更近了一步。"
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr ""
+"从目前的情况来看，我们需要完整的魔符才能解锁这个玩意。直觉告诉我，这是可望而"
+"不可即的。"
+
+# STRIFE1.WAD: MAP12
+#
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+#
+# OR
+#
+# MAP27
+#
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr "你掌握了完整魔符的力量。你觉得咱们去给这事做个了断怎么样。"
+
+msgid "TXT_SUB_LOG86"
+msgstr "正午时分，我的英雄。准备拥抱荣耀吧。"
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr "唉，预言终究是空谈。等等，马希尔在召唤我们返回。我们就完好无损地离开这里吧。"
+
+msgid "TXT_SUB_LOG88"
+msgstr "抱歉，浑身是血的我现在实在想不出什么俏皮话了。咱们还是回去找马希尔吧。"
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr ""
+"工厂就在矿场旁边。里希特应该指的是德宁矿场。德宁矿石具有磁性还易爆，正好可以"
+"用来关闭力场。"
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr "矿场、地下墓穴、下水道……真是一场糟糕的初次约会！"
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr "真希望里希特能说得再具体点。嗯，咱们试试这边吧。"
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr "我觉得咱们……哦，糟了。我完全不知道咱们在哪儿。"
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr "这肯定是里希特手下在寻找的废墟。哦，小心！十字军！"
+
+msgid "TXT_SUB_LOG94"
+msgstr "啧，它在试图恢复。快点炸掉它，不然我都要吐了！"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr "朋友，不管我们在对抗什么，都不仅仅是教团的事了。去矿场吧！"
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr "别放松警惕，留意矿石的矿脉。"
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr ""
+"这些可怜的灵魂成了无人机，他们的神经功能被RC植入体干扰了。如果我们摧毁发射器"
+"，他们就能获得自由！"
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr "指挥部说发射器被力场保护着。所以一石二鸟，既解放了无人机又能练习使用矿石。"
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr ""
+"我的建议是，把矿石扔向力场然后炸掉它。产生的压缩应该会形成磁性层并关闭这些光"
+"。"
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr "现在前往工厂。离开矿场后你不会错过它的！"
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr "抱歉，英雄，这一切对我来说都是新鲜事。"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr "我检测到正前方有巨大的神经波扭曲。我想咱们找到了。"
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr "就在我以为已经见识过一切的时候！他们进去时还是人类，而出来时……我都不敢想。"
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr ""
+"祭司说得对。马希尔疯了。他故意派200个人去送死。我要复仇——为死去的，也为活死人"
+"！"
+
+msgid "TXT_SUB_LOG105"
+msgstr "马希尔？被感染了还带着一件魔符碎片。这么多年相信他、相信这个事业，结果呢？"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr ""
+"里希特报告说，我们摧毁的工厂通往一个“实验室”，他们从内部检测到魔符能量的信号"
+"。回工厂，这是我们通向自由的下一步。"
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr "谁敢违抗我，闯入我的堡垒？不过是个无用的人类？面对我，去死吧！"
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr "你杀不了我。你只是人类。而我，已经超越了人类。"
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"不死、永生还有更多，远不止如此！这就是我的使命：改造人，半肉半钢，全为唯一神"
+"效力。你不效忠？你便死！\n"
+"这家伙有另一件魔符碎片。"
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr ""
+"哈哈！欢迎。我一直在等这一刻。我一直在等像你这样的傻瓜来给我自由。你的小小星"
+"球归我所有了，你会后悔在这出生的！ "
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"真理只能在普世意志中找到。你将跪拜在真神、唯一光面前。加入我，我会完成魔符"
+"。\n"
+"我受够了这种玄虚的胡言乱语。"
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr ""
+"你……你摧毁了我的教团，撕破了我的诡计，威胁了我数世纪的渴望。但我终将获胜，我"
+"会感染你、扭曲你、让你屈从于我的意志……"
+
+msgid "TXT_SUB_LOG200"
+msgstr "听起来像是份美差，不是吗？"
+
+msgid "TXT_SUB_LOG201"
+msgstr "你已经知道太多了。冰封他，马希尔！"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr "下次，你就会听从我了。"
+
+msgid "TXT_SUB_LOG203"
+msgstr "呃，这些末世后的物价……"
+
+msgid "TXT_SUB_LOG204"
+msgstr "拿那个大的。他不会拦住你的。"
+
+msgid "TXT_SUB_LOG205"
+msgstr "别磨蹭，直走！"
+
+msgid "TXT_SUB_LOG206"
+msgstr "你有没有注意到这些走廊看起来都一个样？"
+
+msgid "TXT_SUB_LOG207"
+msgstr "嘿，有时候我也得猜一猜呢！"
+
+msgid "TXT_SUB_LOG208"
+msgstr "哦，注意警报。"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr "哦，天哪。现在瞧瞧你干的好事！"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr "该死，现在你搞砸了！"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr "快点！咱们赶紧离开这儿。"
+
+msgid "TXT_SUB_LOG212"
+msgstr "噢，你别闹着玩了。"
+
+msgid "TXT_SUB_LOG213"
+msgstr "你得把它们挂到墙上！继续前进！"
+
+msgid "TXT_SUB_LOG214"
+msgstr "嗯，你真是个粗人。"
+
+msgid "TXT_SUB_LOG215"
+msgstr "节奏感不错嘛。"
+
+msgid "TXT_SUB_LOG216"
+msgstr "噢，我喜欢那根嘭嘭响的棍子。"
+
+msgid "TXT_SUB_LOG217"
+msgstr "嗯，我喜欢你走路的样子。"
+
+msgid "TXT_SUB_LOG218"
+msgstr "轰走！他们不是人类！"
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr "哇！黑化侍从！尝到了新的感受……"
+
+msgid "TXT_SUB_LOG220"
+msgstr "再这样下去你会瞎的……但我喜欢。"
+
+msgid "TXT_SUB_LOG221"
+msgstr "看来他们不会再邀请我们回去吃饭了！"
+
+msgid "TXT_SUB_LOG222"
+msgstr "我们要去顶楼。"
+
+msgid "TXT_SUB_LOG223"
+msgstr "等等……这看起来挺有趣。检查一下。"
+
+msgid "TXT_SUB_LOG224"
+msgstr "啧，这家伙让我毛骨悚然。咱们离他远点。"
+
+msgid "TXT_SUB_LOG225"
+msgstr "左！向左转！……哦，另一边的左！"
+
+msgid "TXT_SUB_LOG226"
+msgstr "典型的固执猪头男！……除非你是个女孩。"
+
+msgid "TXT_SUB_LOG227"
+msgstr "强壮、粗暴又沉默。我的理想搭档。"
+
+msgid "TXT_SUB_LOG228"
+msgstr "好吧！我错了！"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr "真可惜我们还没见……面对面。"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr "我曾经梦见了你……太糟糕了。"
+
+msgid "TXT_SUB_LOG231"
+msgstr ""
+"别，别进城镇大厅。那里不再安全了。我们的伪装已经被揭穿。这就是为什么会有金属"
+"碎片如雨点般落下。尽可能多地干掉那些大块头，他们叫“十字军”。完成后，我会带你"
+"去见马希尔。"
+
+msgid "TXT_SUB_LOG232"
+msgstr "干得好，朋友！是时候带你进去了。"
+
+msgid "TXT_SUB_LOG233"
+msgstr ""
+"小心那些十字军。他们是又大又笨重的机器人，凶残至极。我们对他们的武器一无所知"
+"，但很有可能……你不是他们的对手。当心。"
+
+msgid "TXT_SUB_LOG234"
+msgstr ""
+"干得漂亮。你让我觉得很开心。现在，没人看到你的情况下，从右边的门进去，上楼去"
+"见那个人。"
+
+msgid "TXT_SUB_LOG235"
+msgstr "要是让人看见你，我们就要了你的脑袋。"
+
+msgid "TXT_SUB_LOG236"
+msgstr "你这个愚蠢、笨拙、跛脚驼背的白痴！你把我们都暴露了！"
+
+msgid "TXT_SUB_LOG237"
+msgstr ""
+"我真希望能躲在那扇门后等你……但我得待在地下。现在是时候让你见见我们的领袖——马"
+"希尔了。"
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr "肥猪。我对所谓的电源耦合一无所知，所以咱们慢慢来。"
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "听起来像是份美差，不是吗？"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "我会一直陪着你的。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "沃纳是我们从发电站仓库里招募来的间谍。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "确保准备迎接你一生中最激烈的战斗。别吝啬，把所有能用的都用上。"
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "不好意思，我要吐了。"
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "嗯，听起来像武器。我们的火力总是不嫌多。"
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "这听起来太容易了，但咱们试试看吧。"
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "谁在乎呢。反正也没人听那个程序员的。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "哦，庆幸自己躲起来了，懂我的意思吧。"
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "真是个爱抱怨的家伙。希望你之后能杀了他。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "“这片区域禁止入内！”自大的家伙。"
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "真是个好人。"
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "也许是因为你没说个“请”字吧。"
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "每个人都这么依赖别人。\n"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "太好了，现在咱们要给鼠王找东西了。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "我敢打赌这家伙也臭烘烘的。"
+
+# 〃
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "又是下水道……太棒了。不知道下面住着什么。"
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "这里是个死胡同。我们最好继续寻找。"
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "前进吧，我的勇士。咱们让那个丑八怪扭来扭去地求饶。\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr "生物机械？嗯，这就能解释他们似乎有源源不断的兵力了！还有他们那恶劣的态度。\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "混蛋……干掉他！"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "他虽然丑，但看起来似乎站在我们这边。"
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "从最近的情况来看，我想潜行已经行不通了。"
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "嗯，干净利落，妈妈也不用收拾……给我一个，好吗。\n"
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr "你以为我会厌倦杀光所有人这种事？但我知道等这一切结束时，我会想念的。\n"
