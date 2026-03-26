@@ -166,27 +166,29 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 		}
 	}
 
-	return FStringf{
-		GAMENAME " %s %s, %s %s\n\n%s\n%s",
-		GStrings.GetString("NOTES_VERSION"), // "version"
+	FString result;
+	result.AppendFormat(
+		"%s version %s, released %s",
+		GAMENAME,
 		version
 			? version->value()
 			: GStrings.GetString("NOTES_UNKNOWN"), // "Unknown"
-		GStrings.GetString("NOTES_RELEASED"), // "released"
 		date
 			? date->value()
-			: GStrings.GetString("NOTES_UNKNOWN"), // "Unknown"
+			: GStrings.GetString("NOTES_UNKNOWN") // "Unknown"
+	);
+	result.AppendFormat(
+		"\n\n%s",
 		description
 			? text.GetChars()
-			: GStrings.GetString("NOTES_EMPTY"), // "No description provided."
-		url
-			? FStringf(
-				"\n%s %s",
-				GStrings.GetString("NOTES_DETAILS"), // "For more details see:"
-				url->value()
-			).GetChars()
-			: ""
-	};
+			: GStrings.GetString("NOTES_EMPTY") // "No description provided."
+	);
+	if (url)
+	{
+		result.AppendCharacter('\n');
+		result.AppendFormat("For more details see: %s", url->value());
+	}
+	return result;
 }
 
 FString ReleasePage::_BuildReleaseNotes(rapidxml::xml_document<> &doc)
