@@ -17,6 +17,7 @@
 #include <cstring>
 
 #include <rapidxml/rapidxml.hpp>
+#include <string_view>
 #include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
 #include <zwidget/widgets/textedit/textedit.h>
 
@@ -41,6 +42,7 @@ ReleasePage::ReleasePage(LauncherWindow* launcher, const FStartupSelectionInfo& 
 	auto text = GetReleaseNotes();
 
 	Notes->SetText(text.GetChars());
+	Notes->SetReadOnly(true);
 
 	ShowThis->SetChecked(info.notifyNewRelease);
 }
@@ -83,54 +85,86 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 	auto url = release->first_node("url");
 	FString text;
 
-	auto append = [&text](FName type, char * value)
-	{
-		if (type == "p")
-		{
-			text.AppendFormat("%s\n\n", value);
-		}
-		else if (type == "li")
-		{
-			text.AppendFormat(" - %s\n", value);
-		}
-		else if (type == "hr")
-		{
-			text.AppendFormat("---\n");
-		}
-		else
-		{
-			text.AppendFormat("%s", value);
-		}
-	};
+	// https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines#description
+	//
+	// Only the following child tags are supported:
+	// p (paragraph), ol, ul (ordered and unordered list) with li (list items) child tags,
+	// em for italicized emphasis and code for inline code in monospace. **bold** is also
 
-	auto node = description;
-	while (node)
+	auto block = [&text](const char *prefix, rapidxml::xml_node<char> *node)
 	{
-		// Only append the value if it's a data/text node with content
-		if (node->type() == rapidxml::node_data && node->value_size() > 0)
-		{
-			append(node->parent()->name(), node->value());
-		}
+		FString block;
 
-		if (node->first_node())
+		while (node)
 		{
-			node = node->first_node();
-		}
-		else if (node->next_sibling())
-		{
+			rapidxml::xml_node<char> *text = nullptr;
+			const char *l = "", *r = "";
+			if (node->type() == rapidxml::node_element)
+			{
+				auto name = std::string_view(node->name());
+				if (name == "em")
+				{
+					l = r = "*";
+				}
+				else if (name == "code")
+				{
+					l = r = "`";
+				}
+				text = node;
+			}
+			else if (node->type() == rapidxml::node_data)
+			{
+				text = node;
+			}
+			if (text)
+			{
+				block.AppendFormat("%s%s%s", l, node->value(), r);
+			}
 			node = node->next_sibling();
 		}
-		else
-		{
-			while (node->parent() && node->parent() != description && !node->parent()->next_sibling())
-				node = node->parent();
 
-			node = (node->parent() != description)
-				? node->parent()->next_sibling()
-				: nullptr;
+		text.AppendFormat("%s%s\n", prefix, block.GetChars());
+	};
+
+	if (description)
+	{
+		auto blocknode = description->first_node();
+		std::string_view prev = "";
+		while (blocknode)
+		{
+			std::string_view name = blocknode->name();
+			if (prev != "" && (name == "p" || name == prev))
+				text.AppendCharacter('\n');
+			prev = name;
+
+			if (name == "p")
+			{
+				block("", blocknode->first_node());
+			}
+			else if (name == "ul")
+			{
+				auto node = blocknode->first_node();
+				while (node)
+				{
+					block("-  ", node->first_node());
+					node = node->next_sibling();
+				}
+			}
+			else if (name == "ol")
+			{
+				auto count = 0;
+				auto node = blocknode->first_node();
+				while (node)
+				{
+					FString pfx = FStringf("%d. ", ++count);
+					block(pfx.GetChars(), node->first_node());
+					node = node->next_sibling();
+				}
+			}
+
+			blocknode = blocknode->next_sibling();
 		}
 	}
-	text.StripRight();
 
 	return FStringf{
 		GAMENAME " %s %s, %s %s\n\n%s\n%s",
