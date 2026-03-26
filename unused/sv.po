@@ -1,0 +1,345 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 06:01+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/unused/"
+"sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL-emulatorns kärna"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Patch-uppsättning"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS-konfigurationsfil"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity-konfigurationsfil"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relativ volym"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi-konfigurationsfil"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Justera Gamma"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Chatt"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Anpassa kontrollerna för chatt"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Avancerade visningsalternativ"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Utseende"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skala hårkorset"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Meddelanden"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Skala för statusfältet"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Aktivera texturer med högre upplösning"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Texturer aktiverade"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Smidig musrörelse"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Meddelandeskala"
+
+msgid "NOTSET"
+msgstr "Inte inställd"
+
+msgid "OPTMNU_INPUT"
+msgstr "Inmatningsalternativ"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Alternativ för ljus"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Alternativ för flera spelare"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Alternativ för sprite"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Systemalternativ"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr ""
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Skalad (närmast)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Skalad (linjär)"
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Miljö spridning"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Miljö storlek"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflektioner"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Reverb"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Rum"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "SNDMNU_BACKEND"
+msgstr "Ljudbakgrund"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Ljud i menyer"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Musik aktiverad"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Ljud aktiverat"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Aktivera bildförhållandet 5:4"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Bildförhållande"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Välj Vulkan-enhet"
+
+msgid "VKMNU_ENABLE"
+msgstr "Aktivera Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Ljudet upphör när aktören försvinner"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Lost Soul-translucens"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Aktivera ljusdefinitioner"
+
+msgid "GLMNU_PREFS"
+msgstr "Inställningar"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Förhindra gråa skuggor"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Trimma sprite-kanter"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Förutsägelse av rörelser"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Balansering av latenstid"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Inget ljud"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Alla obeaktade"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Högpresterande"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dubbel"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Energibesparande"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optimal"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimerad"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Ursprunglig"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Pixel dubbelt så mycket"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Pixel fyrdubbel"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Fyrdubbel"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Skala till 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Tredubbel"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (Vanilla föredraget)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (ZDoom föredraget)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Utmatning i äkta färg"

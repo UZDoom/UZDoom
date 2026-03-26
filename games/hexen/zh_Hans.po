@@ -1,0 +1,391 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 12:39+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/hexen/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "风选大厅"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "七道传送门"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "冰之守护者"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "火之守护者"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "钢之守护者"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "光明熔炉"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "暗影森林"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "暗渊"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "西瑞斯洞穴"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "荒原"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "圣林"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "柱廊"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "异端神学院"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "龙之教堂"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "狮鹫教堂"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "死风教堂"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "哀歌果园"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "静默食堂"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "狼之教堂"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "遗弃前哨"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "哀伤城堡"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "绞刑架"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "恶臭"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "地牢"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "荒芜花园"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "墓场"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "泽德克之墓"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "梅内尔基尔之墓"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "特拉杜克图斯之墓"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "饲养场"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "黑暗熔炉"
+
+# intermission
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"穿过封锁此地的七道传送门，\n"
+"眼前是一片广袤的荒野。\n"
+"烈火、严寒和钢铁已对你进行了考验，\n"
+"但前方还有更大的挑战。\n"
+"密密麻麻的森林中肯定潜藏着敌意的目光，\n"
+"而越过森林之后，情况会更糟。\n"
+"\n"
+"荒芜的沙漠、阴湿的沼泽\n"
+"和潮湿的洞穴阻挡着你的去路，\n"
+"但你不能让任何东西阻碍你去面对命运，\n"
+"即便你可能会希望有东西能阻挡。\n"
+"\n"
+"而在更远处，远处闪烁着的，\n"
+"是那不断变化的柱廊，\n"
+"似乎在嘲弄着你每一次的努力。"
+
+# intermission
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"你的头脑还在为柱廊内的遭遇而晕头转向，\n"
+"你摇摇晃晃地朝着你所期望的出口走去。\n"
+"周围的事物似乎移动得越来越快，\n"
+"你的视线开始模糊，渐渐暗淡……\n"
+"当世界在你周围崩塌，\n"
+"一道传送门的光芒将你吞没。\n"
+"一道闪光，然后你疲惫地爬起身来。\n"
+"\n"
+"你站在高塔之巅，下方传来受诅咒者的惨叫。\n"
+"你向前迈步，瞬间恶魔的吟唱声令你毛骨悚然。\n"
+"以死亡之神的名义！你这是到了什么地方？\n"
+"以痛苦之神的名义，你又怎样能找到出路？"
+
+# intermission
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"古时最强大的武器和神器\n"
+"都几乎不足以击败异教首领及其爪牙，\n"
+"然而如今他们那污秽的残骸\n"
+"却散落在你的脚下。\n"
+"你积聚起最后的力气，\n"
+"准备进入异教首领内殿中的传送门。\n"
+"\n"
+"在你上方，一座巨大城堡的城墙若隐若现。\n"
+"寂静的塔楼和光秃秃的城墙\n"
+"环绕着一根黑色的石柱，\n"
+"它蹲在城堡的中央，宛如沉思的巨人。\n"
+"火焰与阴影在敞开的窗户后扭动，\n"
+"数十双凶恶的眼睛向下凝视着你。\n"
+"在你的内心深处，敌人正在等待着……"
+
+# intermission
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"“……他将踏上前往冥界的旅程，\n"
+"在那里与黑暗势力交锋，直至绝望之门。\n"
+"但他能否重返光明世界，无人知晓。”\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"该死。"
+
+# intermission
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"伴随着痛苦的尖叫，\n"
+"你被从这个世界强行拽入另一个世界，\n"
+"全身都被神秘的火焰所环绕。\n"
+"当你的视线逐渐清晰，\n"
+"发现自己正站在一个巨大的厅堂里，\n"
+"回荡着幽灵般的回声，\n"
+"充斥着令人不安的阴影。\n"
+"在远处，你能看到一个高台，\n"
+"上面是这个世界唯一的光源。"
+
+# intermission
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"这只能是混沌球，\n"
+"是科拉克斯力量的源泉。\n"
+"有了它，你可以创造世界……\n"
+"也可以毁灭世界。\n"
+"凭借战斗和征服的权利，它归你所有，\n"
+"你战战兢兢地伸手去抓取它。\n"
+"也许，现在，一位新的玩家\n"
+"将加入这场宇宙力量的游戏。\n"
+"就像被升格为王后的棋子，\n"
+"突然间，棋盘的每一个角落\n"
+"似乎都触手可及。"
+
+# intermission
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n但还有比你更强大的玩家们，\n"
+"谁能知晓他们下一步会怎样？"
+
+# script texts
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "门被锁上了"
+
+# script texts
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "欢迎，凡人"
+
+# script texts
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "你准备好赴死了吗？"
+
+# script texts
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "冰之守护者的一道门开了"
+
+# script texts
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "这条路被堵住了"
+
+# script texts
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "谜题的一半已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "位于七道传送门"
+
+# script texts
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "谜题的三分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "七道传送门的楼梯已经升起"
+
+# script texts
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "谜题的三分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "位于七道传送门"
+
+# script texts
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "七道传送门的楼梯已经升起"
+
+# script texts
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "你得再找一个开关……"
+
+# script texts
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "七道传送门的石块在摩擦"
+
+# script texts
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "谜题的六分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "位于暗影森林"
+
+# script texts
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "这道门在里面被闩上了"
+
+# script texts
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "你听到远处有道门开了"
+
+# script texts
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "谜题的六分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "位于暗影森林"
+
+# script texts
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "谜题的六分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "位于暗影森林"
+
+# script texts
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ 双头魔走了"
+
+# script texts
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "你等得太久，现在去死吧！"
+
+# script texts
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "遗弃前哨的一道门开了"
+
+# script texts
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "这道门现在还打不开"
+
+# script texts
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "我的仆人们能闻到你的血，人类"
+
+# script texts
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "绞刑架的一道门开了"
+
+# script texts
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "这道门在里面被闩上了"
+
+# script texts
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "塔内的一个平台降下来了"
+
+# script texts
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "这场游戏你玩得太久了，凡人……"
+
+# script texts
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "我想我该把你从棋盘上移走了"
+
+# script texts
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "你听到楼上有一道门开了"
+
+# script texts
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "臣服于我，或许我还能仁慈一些"
+
+# script texts
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "不过，也可能不会"
+
+# script texts
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "谜题的九分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "位于修道院"
+
+# script texts
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "谜题的九分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "位于修道院"
+
+# script texts
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "谜题的九分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "位于修道院"
+
+# script texts
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "传送门已被封印"
+
+# script texts
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "选择你的命运"
+
+# script texts
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "这道门在里面被闩上了"
+
+# script texts
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "你是否足够强大"
+
+# script texts
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "去面对你自己的主宰？"

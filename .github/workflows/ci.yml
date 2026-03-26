@@ -1,0 +1,82 @@
+name: Continuous Integration
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: validate
+      shell: bash
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get -qq install gettext
+        pipx --quiet install vermin pylint autopep8 csvkit
+
+        bash scripts/validate.sh
+
+  build:
+    if: always()
+    name: ${{ matrix.config.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - name: ENGINE
+          outfile: uzdoom.pk3/language.csv
+        - name: GAMES
+          outfile: game_support.pk3/language.csv
+        - name: GAMES_CHEX3
+          outfile: game_support.pk3/filter/chex.chex3/language.csv
+        - name: GAMES_HARMONY
+          outfile: game_support.pk3/filter/harmony/language.csv
+        - name: GAMES_HACX
+          outfile: game_support.pk3/filter/hacx.hacx1/after_iwad/language.csv
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: build
+      shell: bash
+      run: |
+        outfile=out/${{ matrix.config.outfile }}
+        mkdir -p $(dirname $outfile)
+        python3 -B -E -s scripts/compile.py --recipe ${{ matrix.config.name }} --output $outfile
+
+    - name: upload
+      uses: actions/upload-artifact@v7
+      with:
+        name: temp-${{ matrix.config.name }}
+        path: out
+
+  bundle:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: download
+      uses: actions/download-artifact@v8
+      with:
+        pattern: temp-*
+        path: files
+        merge-multiple: true
+
+    - name: check
+      shell: bash
+      run: |
+        pipx --quiet install csvkit
+
+        find . -type f -exec sh -c 'printf "\n%s\n\n" $1; csvclean -a $1 >/dev/null' _ {} \;
+
+    - name: upload
+      uses: actions/upload-artifact@v7
+      with:
+        name: bundle
+        path: files
+
+    - name: cleanup
+      uses: geekyeggo/delete-artifact@v6
+      with:
+        name: temp-*
