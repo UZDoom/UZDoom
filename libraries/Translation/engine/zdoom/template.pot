@@ -2,16 +2,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:51+0000\n"
-"Last-Translator: Gaerzi <gaerzi@gmail.com>\n"
-"Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/en/>\n"
-"Language: en_US\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: \n"
 
 msgid "PRESSKEY"
 msgstr ""
@@ -20,13 +18,11 @@ msgid "SECRETMESSAGE"
 msgstr ""
 
 msgid "D_DEVSTR"
-msgstr "\n"
+msgstr ""
 
 msgid "QUITMSG"
 msgstr "\n"
 
-# In some languages, it may make more sense to translate “Press a key” as
-# “Press any key.”
 msgid "LOADNET"
 msgstr ""
 "\n"
@@ -102,12 +98,9 @@ msgstr "\n"
 msgid "QUITMSG7"
 msgstr ""
 
-# More info here.
 msgid "QUITMSG8"
 msgstr "\n"
 
-# A “dimensional shambler” is a creature appearing in the works of H. P.
-# Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
 "\n"
@@ -254,20 +247,12 @@ msgstr ""
 msgid "STSTR_NC2OFF"
 msgstr ""
 
-# “inVuln”: Invulnerability sphere
-# “Str”: Berserk
-# “Inviso”: Blur sphere
-# “Rad”: Radiation-shielding suit
-# “Allmap”: Computer area map
-# “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
 msgstr ""
 
 msgid "STSTR_BEHOLDX"
 msgstr ""
 
-# Printed when entering the idchoppers cheat, which gives the player a
-# chainsaw
 msgid "STSTR_CHOPPERS"
 msgstr ""
 
@@ -578,7 +563,6 @@ msgstr ""
 msgid "OB_FRIENDLY1"
 msgstr ""
 
-# English was changed to remove problematic pronoun referencing the killer
 msgid "OB_FRIENDLY2"
 msgstr ""
 
@@ -771,11 +755,9 @@ msgstr ""
 msgid "CC_ZOMBIE"
 msgstr ""
 
-# a.k.a. (former human) sergeant
 msgid "CC_SHOTGUN"
 msgstr ""
 
-# a.k.a. former commando
 msgid "CC_HEAVY"
 msgstr ""
 
@@ -1148,11 +1130,9 @@ msgstr ""
 msgid "FN_CHICKEN"
 msgstr ""
 
-# Wordplay: werewolf
 msgid "FN_BEAST"
 msgstr ""
 
-# Wordplay: sabre-tooth
 msgid "FN_CLINK"
 msgstr ""
 
@@ -1865,7 +1845,7 @@ msgid "TXT_SCANNER"
 msgstr ""
 
 msgid "TXT_NEEDMAP"
-msgstr "\n"
+msgstr ""
 
 msgid "TXT_PRISONPASS"
 msgstr ""
@@ -2074,11 +2054,9 @@ msgstr ""
 msgid "TAG_PUNCHDAGGER"
 msgstr ""
 
-# Crossbow with electric bolts
 msgid "TAG_STRIFECROSSBOW1"
 msgstr ""
 
-# Crossbow with poison bolts
 msgid "TAG_STRIFECROSSBOW2"
 msgstr ""
 
@@ -2097,11 +2075,9 @@ msgstr ""
 msgid "TAG_MAULER2"
 msgstr ""
 
-# High-explosive grenade launcher
 msgid "TAG_GLAUNCHER1"
 msgstr ""
 
-# White phosphorous grenade launcher 
 msgid "TAG_GLAUNCHER2"
 msgstr ""
 
@@ -2225,7 +2201,6 @@ msgstr ""
 msgid "TAG_AMMOSATCHEL"
 msgstr ""
 
-# In-game key list. Use short strings.
 msgid "TAG_BASEKEY"
 msgstr ""
 
@@ -2307,7 +2282,6 @@ msgstr ""
 msgid "TAG_NEWKEY5"
 msgstr ""
 
-# End of key list.
 msgid "TAG_ORACLEPASS"
 msgstr ""
 
@@ -2518,7 +2492,6 @@ msgstr ""
 msgid "TXT_FINDHELP"
 msgstr ""
 
-# As in for %u amount of money.
 msgid "TXT_TRADE"
 msgstr ""
 
@@ -2830,7 +2803,6 @@ msgstr ""
 msgid "MNU_QUITGAME"
 msgstr ""
 
-# This text is extremely space limited!
 msgid "MNU_CHOOSESKILL"
 msgstr ""
 
@@ -3277,9 +3249,6 @@ msgid "CMPTMNU_SILENTINSTANTFLOORS"
 msgstr ""
 
 msgid "CMPTMNU_SECTORSOUNDS"
-msgstr ""
-
-msgid "CMPTMNU_SOUNDCUTOFF"
 msgstr ""
 
 msgid "CMPTMNU_SOUNDTARGET"
@@ -3753,9 +3722,6 @@ msgstr ""
 msgid "DSPLYMNU_OLDTRANS"
 msgstr ""
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr ""
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr ""
 
@@ -3909,9 +3875,6 @@ msgstr ""
 msgid "NETMNU_LOCALOPTIONS"
 msgstr ""
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr ""
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr ""
 
@@ -3925,15 +3888,6 @@ msgid "NETMNU_HOSTOPTIONS"
 msgstr ""
 
 msgid "NETMNU_EXTRATICS"
-msgstr ""
-
-msgid "NETMNU_TICBALANCE"
-msgstr ""
-
-msgid "OPTVAL_ORIGINAL"
-msgstr ""
-
-msgid "OPTVAL_OPTIMIZED"
 msgstr ""
 
 msgid "OPTVAL_CLASSIC"
@@ -3963,10 +3917,6 @@ msgstr ""
 msgid "OPTVAL_CROSSFADE"
 msgstr ""
 
-# This setting is duplicated in order to allow for different grammatical
-# gender endings in the Russian language (and any other language that depends
-# on a grammatical gender system). In English, due to the lack of a
-# grammatical gender system, both option values are the same.
 msgid "OPTVAL_SMOOTH_1"
 msgstr ""
 
@@ -4001,15 +3951,6 @@ msgid "OPTVAL_PLAYER"
 msgstr ""
 
 msgid "OPTVAL_MAP"
-msgstr ""
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr ""
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr ""
-
-msgid "OPTVAL_PIXELQUADRUPLE"
 msgstr ""
 
 msgid "OPTVAL_CURRENTWEAPON"
@@ -4105,15 +4046,6 @@ msgstr ""
 msgid "OPTVAL_NODOORS"
 msgstr ""
 
-msgid "OPTVAL_DOUBLE"
-msgstr ""
-
-msgid "OPTVAL_TRIPLE"
-msgstr ""
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr ""
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr ""
 
@@ -4162,9 +4094,6 @@ msgstr ""
 msgid "OPTVAL_ZDOOM2063"
 msgstr ""
 
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr ""
-
 msgid "OPTVAL_ERRORS"
 msgstr ""
 
@@ -4186,12 +4115,6 @@ msgstr ""
 msgid "OPTVAL_SWDOOMTC"
 msgstr ""
 
-msgid "OPTVAL_DEDICATED"
-msgstr ""
-
-msgid "OPTVAL_INTEGRATED"
-msgstr ""
-
 msgid "OPTVAL_VANILLA"
 msgstr ""
 
@@ -4199,12 +4122,6 @@ msgid "OPTVAL_VTFZDOOM"
 msgstr ""
 
 msgid "OPTVAL_VTFVANILLA"
-msgstr ""
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr ""
-
-msgid "OPTVAL_VTAVANILLA"
 msgstr ""
 
 msgid "OPTVAL_SMALL"
@@ -4300,16 +4217,10 @@ msgstr ""
 msgid "OPTSTR_CHEX"
 msgstr ""
 
-msgid "OPTSTR_NOSOUND"
-msgstr ""
-
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr ""
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
-
-msgid "OPTSTR_OPENAL"
 msgstr ""
 
 msgid "DSPLYMNU_GLOPT"
@@ -4324,12 +4235,6 @@ msgstr ""
 msgid "GLMNU_DYNLIGHT"
 msgstr ""
 
-msgid "GLMNU_PREFS"
-msgstr ""
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr ""
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr ""
 
@@ -4337,9 +4242,6 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr ""
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr ""
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
 msgstr ""
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
@@ -4357,16 +4259,10 @@ msgstr ""
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr ""
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr ""
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr ""
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
-msgstr ""
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
 msgstr ""
 
 msgid "GLPREFMNU_ENV"
@@ -4391,9 +4287,6 @@ msgid "GLPREFMNU_SPRBILLFACECAMERA"
 msgstr ""
 
 msgid "GLPREFMNU_PARTICLESTYLE"
-msgstr ""
-
-msgid "GLPREFMNU_RENDERQUALITY"
 msgstr ""
 
 msgid "GLPREFMNU_VRMODE"
@@ -4438,14 +4331,10 @@ msgstr ""
 msgid "OPTVAL_DARK"
 msgstr ""
 
-# This refers to the Doom Legacy port, not a legacy lighting style!
 msgid "OPTVAL_LEGACY"
 msgstr ""
 
 msgid "OPTVAL_SOFTWARE"
-msgstr ""
-
-msgid "OPTVAL_OPTIMAL"
 msgstr ""
 
 msgid "OPTVAL_YAXIS"
@@ -4458,9 +4347,6 @@ msgid "OPTVAL_SQUARE"
 msgstr ""
 
 msgid "OPTVAL_ROUND"
-msgstr ""
-
-msgid "OPTVAL_RADIAL"
 msgstr ""
 
 msgid "OPTVAL_PIXELFUZZ"
@@ -4526,9 +4412,6 @@ msgstr ""
 msgid "TCMNU_TITLE"
 msgstr ""
 
-msgid "TCMNU_TRUECOLOR"
-msgstr ""
-
 msgid "TCMNU_MINFILTER"
 msgstr ""
 
@@ -4541,28 +4424,12 @@ msgstr ""
 msgid "TCMNU_DYNLIGHTS"
 msgstr ""
 
-msgid "OS_TITLE"
-msgstr ""
-
-msgid "OS_ANY"
-msgstr ""
-
-msgid "OS_ALL"
-msgstr ""
-
-msgid "OS_NO_RESULTS"
-msgstr ""
-
-msgid "OS_LABEL"
-msgstr ""
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr ""
 
 msgid "TXT_NO_TEAM_CHANGE"
 msgstr ""
 
-# %s is the player and gender sensitive
 msgid "TXT_JOINED_TEAM"
 msgstr ""
 
@@ -4593,11 +4460,6 @@ msgstr ""
 msgid "TXT_TOOOLDSG"
 msgstr ""
 
-# Shouldn’t this say “%e is the newest supported”?
-#
-# — Undead
-#
-# Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
 
@@ -4628,11 +4490,7 @@ msgstr ""
 msgid "TXT_SCREENSHOTERR"
 msgstr ""
 
-# As in paused by player %s.
 msgid "TXT_BY"
-msgstr ""
-
-msgid "TXT_QUITENDOOM"
 msgstr ""
 
 msgid "HUDMNU_FLASH"
@@ -4645,9 +4503,6 @@ msgid "HUDMNU_CROSSHAIRON"
 msgstr ""
 
 msgid "MSGMNU_SUBTITLES"
-msgstr ""
-
-msgid "GLPREFMNU_PALTONENOGREY"
 msgstr ""
 
 msgid "HUDMNU_FONTOPTIONS"
@@ -4666,7 +4521,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr ""
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "\n"
+msgstr ""
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr ""
@@ -4674,7 +4529,6 @@ msgstr ""
 msgid "DSPLYMNU_BOBFIRE"
 msgstr ""
 
-# HUD->Scaling Options
 msgid "SCALEMNU_SCALECLASSIC"
 msgstr ""
 
@@ -4690,16 +4544,9 @@ msgstr ""
 msgid "SCALEMNU_RATIO"
 msgstr ""
 
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr ""
-
-# sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
 msgstr ""
 
-# this is '==0'
 msgid "OPTVAL_MODDEFINED"
 msgstr ""
 
@@ -4724,23 +4571,18 @@ msgstr ""
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr ""
 
-msgid "MISCMNU_CLEANMENU\n"
-msgstr ""
-
 msgid "MISCMNU_WIPERCENT"
 msgstr ""
 
 msgid "MISCMNU_CLEANSTAT"
 msgstr ""
 
-# Called "citizens" according to Doomwiki
 msgid "TAG_STRIFEZOMBIE"
 msgstr ""
 
 msgid "TAG_CEILINGTURRET"
 msgstr ""
 
-# Names need to match the obituaries!
 msgid "TAG_CRUSADER"
 msgstr ""
 
@@ -4780,11 +4622,9 @@ msgstr ""
 msgid "DSPLYMNU_SPRITESHADOW"
 msgstr ""
 
-# Will enable sprite shadows for monster and player sprites
 msgid "OPTVAL_SPRSHADALWAYS"
 msgstr ""
 
-# the FOV slider
 msgid "DSPLYMNU_FOV"
 msgstr ""
 
@@ -4818,36 +4658,27 @@ msgstr ""
 msgid "ALTHUDMNU_SWAPHEALTHARMOR"
 msgstr ""
 
-# hud_oldscale
 msgid "SCALEMNU_HUD_OLDSCALE"
 msgstr ""
 
-# hud_scalefactor
 msgid "SCALEMNU_HUD_SCALEFACTOR"
 msgstr ""
 
-# Any Actor that only appears in co-op is disabled
 msgid "GMPLYMNU_COOPTHINGS"
 msgstr ""
 
-# Items that only appear in co-op are disabled
 msgid "GMPLYMNU_COOPITEMS"
 msgstr ""
 
-# Items are picked up client-side rather than fully taken by the client who
-# picked it up
 msgid "GMPLYMNU_LOCALITEMS"
 msgstr ""
 
-# Drops from Actors aren't picked up locally
 msgid "GMPLYMNU_NOLOCALDROP"
 msgstr ""
 
-# Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr ""
 
-# Resets inventory on every map
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr ""
 
@@ -4857,9 +4688,6 @@ msgstr ""
 msgid "CMPTMNU_FDTELEPORT"
 msgstr ""
 
-# Hardware Sprite Clipping mode that gives the illusion of a sprite being in a
-# different position than it really is, allowing it to be rendered under the
-# floor despite clipping
 msgid "OPTVAL_ANAMORPHIC"
 msgstr ""
 
@@ -4869,7 +4697,6 @@ msgstr ""
 msgid "ID24_GOTINCINERATOR"
 msgstr ""
 
-# Also known as Heatwave Generator.
 msgid "ID24_GOTCALAMITYBLADE"
 msgstr ""
 
@@ -4897,7 +4724,6 @@ msgstr ""
 msgid "ID24_CC_BANSHEE"
 msgstr ""
 
-# Also known as Plasmaguy.
 msgid "ID24_CC_SHOCKTROOPER"
 msgstr ""
 
@@ -4931,8 +4757,6 @@ msgstr ""
 msgid "AUTOMAPMNU_SHOWLEVELNAME"
 msgstr ""
 
-# As seen in Options - Customize Controls - Inventory for Heretic, Hexen and
-# Strife
 msgid "CNTRLMNU_INVENTORY_HOTKEYS"
 msgstr ""
 
@@ -4951,7 +4775,6 @@ msgstr ""
 msgid "OPTVAL_QUADRATIC"
 msgstr ""
 
-# The type of chat messages the player wants to be visible to them.
 msgid "NETMNU_CHATTYPE"
 msgstr ""
 
@@ -4964,22 +4787,18 @@ msgstr ""
 msgid "OPTVAL_GLOBALCHAT"
 msgstr ""
 
-# Disables /me functionality in chat when displaying.
 msgid "NETMNU_NOBOLDCHAT"
 msgstr ""
 
-# Turns off the sound that plays when someone receives a message.
 msgid "NETMNU_NOCHATSND"
 msgstr ""
 
-# Tries to make online games less stuttery.
 msgid "NETMNU_BALANCETICS"
 msgstr ""
 
 msgid "NETMNU_LIMITCONVO"
 msgstr ""
 
-# Helps stop things like e.g. door open/close spam when playing online.
 msgid "NETMNU_REPEATCOOLDOWN"
 msgstr ""
 
@@ -4989,7 +4808,6 @@ msgstr ""
 msgid "OPTVAL_HOSTONLY"
 msgstr ""
 
-# Type of vote system to use to bypass intermissions when playing online.
 msgid "NETMNU_READYTYPE"
 msgstr ""
 
@@ -4999,26 +4817,18 @@ msgstr ""
 msgid "OPTVAL_ANYONE"
 msgstr ""
 
-# If this percent of players or more are ready, starts a countdown when in
-# Vote intermission skip mode.
 msgid "NETMNU_READYPERCENT"
 msgstr ""
 
 msgid "NETMNU_READYCOUNTDOWN"
 msgstr ""
 
-# Forces a cool down between chat messages for all players when playing
-# online.
 msgid "NETMNU_CHATSLOMO"
-msgstr ""
-
-msgid "JOYMNU_HAPTRIGGERS"
 msgstr ""
 
 msgid "OPTMNU_HAPTICS"
 msgstr ""
 
-# How the engine should handle haptics in old mods
 msgid "HAPMNU_COMPAT"
 msgstr ""
 
@@ -5031,19 +4841,15 @@ msgstr ""
 msgid "HAPMNU_OPTIONS"
 msgstr ""
 
-# Rumble when using ui elements
 msgid "HAPMNU_OPT_MENU"
 msgstr ""
 
-# Rumble when doing things such as pressing buttons and firing weapon
 msgid "HAPMNU_OPT_ACTION"
 msgstr ""
 
-# Rumble when dying and getting hurt
 msgid "HAPMNU_OPT_DAMAGE"
 msgstr ""
 
-# Rumble from bumping into things, crossing lines, and quakes
 msgid "HAPMNU_OPT_WORLD"
 msgstr ""
 
@@ -5152,14 +4958,9 @@ msgstr ""
 msgid "TAG_CREDKEY"
 msgstr ""
 
-# Option to make the view weapon sprites be lit exactly as the sector's
-# brightness. Without this option, weapon sprites are generally brighter
-# compared to the sector's brightness
 msgid "GLPREFMNU_WPNPURELIGHT"
 msgstr ""
 
-# Mark the player as ready to advance during the intermission in multiplayer
-# games
 msgid "NET_CONTINUE_MKB"
 msgstr ""
 
@@ -5179,4 +4980,206 @@ msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
 
 msgid "OPTMNU_ACCESSIBILITY"
+msgstr ""
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr ""
+
+#, fuzzy
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"\n"
+"\n"
+"\n"
+
+msgid "ACCMNU_TOOLTIP"
+msgstr ""
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr ""
+
+msgid "ACCMNU_LIGHT"
+msgstr ""
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr ""
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr ""
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr ""
+
+msgid "OPTVAL_LAX"
+msgstr ""
+
+msgid "OPTVAL_STRICT"
+msgstr ""
+
+msgid "PICKER_FILELOADING"
+msgstr ""
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr ""
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr ""
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr ""
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr ""
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr ""
+
+msgid "DSPLYMNU_GAMMA"
+msgstr ""
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr ""
+
+msgid "DSPLYMNU_SATURATION"
+msgstr ""
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr ""
+
+msgid "ACTION_RESTART"
+msgstr ""
+
+msgid "ACTION_ABORT"
+msgstr ""
+
+msgid "ACTION_STARTGAME"
+msgstr ""
+
+msgid "ACTION_KICK"
+msgstr ""
+
+msgid "ACTION_BAN"
+msgstr ""
+
+msgid "ERRORMNU_SAVE"
+msgstr ""
+
+msgid "ERROR_FATAL"
+msgstr ""
+
+msgid "ERROR_ABORT"
+msgstr ""
+
+msgid "FILEPICKER_ANY"
+msgstr ""
+
+msgid "FILEPICKER_REPORTS"
+msgstr ""
+
+msgid "HAPMNU_TITLE"
+msgstr ""
+
+msgid "CMPTMNU_AUTO"
+msgstr ""
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr ""
+
+msgid "PICKER_PLAYERCLASS"
+msgstr ""
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr ""
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr ""
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr ""
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr ""
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr ""
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr ""
+
+msgid "LANG_NATIVE"
+msgstr ""
+
+msgid "LANG_ENG"
+msgstr ""
+
+msgid "OPTVAL_SMOOTH"
+msgstr ""
+
+msgid "TAG_MACIL"
+msgstr ""
+
+msgid "TAG_MAULER"
+msgstr ""
+
+msgid "TAG_GLAUNCHER"
+msgstr ""
+
+msgid "ACTION_OPENWADDIR"
+msgstr ""
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr ""
+
+msgid "OPTMNU_OPENWADS"
 msgstr ""

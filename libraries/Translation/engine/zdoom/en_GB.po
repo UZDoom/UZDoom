@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-25 06:00+0000\n"
-"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"PO-Revision-Date: 2026-03-25 23:57+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/en_GB/>\n"
 "Language: en_GB\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: eng enc ena enz eni ens enj enb enl ent enw\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Press a key."
@@ -21,7 +20,7 @@ msgid "SECRETMESSAGE"
 msgstr "A secret is revealed!"
 
 msgid "D_DEVSTR"
-msgstr "Useless mode ON.\n"
+msgstr "Useless mode: ON"
 
 msgid "QUITMSG"
 msgstr ""
@@ -99,7 +98,7 @@ msgstr ""
 
 msgid "QUITMSG2"
 msgstr ""
-"Let's beat it -- this is turning\n"
+"Let's beat it—this is turning\n"
 "into a bloodbath!"
 
 msgid "QUITMSG3"
@@ -114,7 +113,7 @@ msgstr ""
 
 msgid "QUITMSG5"
 msgstr ""
-"Don't leave yet -- there's a\n"
+"Don't leave yet—there's a\n"
 "demon around that corner!"
 
 msgid "QUITMSG6"
@@ -123,7 +122,7 @@ msgstr ""
 "I'm gonna toast ya."
 
 msgid "QUITMSG7"
-msgstr "Go ahead and leave. see if I care."
+msgstr "Go ahead and leave. See if I care."
 
 # More info here.
 msgid "QUITMSG8"
@@ -156,7 +155,7 @@ msgstr ""
 
 msgid "QUITMSG13"
 msgstr ""
-"Just leave. when you come\n"
+"Just leave. When you come\n"
 "back, I'll be waiting with a bat."
 
 msgid "QUITMSG14"
@@ -171,27 +170,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Carnage interruptus...\n"
+"Carnage interruptus…\n"
 "What a tease!"
 
 msgid "QUITMSG17"
 msgstr ""
 "But you're the hope\n"
-"-- my only chance!!"
+"—my only chance!!"
 
 msgid "QUITMSG18"
 msgstr "Nobody walks out on Blackbird."
 
 msgid "QUITMSG19"
-msgstr "I thought you were different..."
+msgstr "I thought you were different…"
 
 msgid "QUITMSG20"
 msgstr "Fine! just kill and run!"
 
 msgid "QUITMSG21"
 msgstr ""
-"You can quit...\n"
-"but you can't hide..."
+"You can quit…\n"
+"but you can't hide…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -205,7 +204,7 @@ msgstr ""
 
 msgid "QUITMSG24"
 msgstr ""
-"Don't give up -- the flemoids will\n"
+"Don't give up—the flemoids will\n"
 "get the upper hand!"
 
 msgid "QUITMSG25"
@@ -216,7 +215,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "I hope you're just taking a\n"
-"break for Chex(R) party mix."
+"break for Chex® party mix."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -230,7 +229,7 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"The real Chex(R) Warrior\n"
+"The real Chex® Warrior\n"
 "wouldn't give up so fast!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
@@ -273,7 +272,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "You start to rave"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "You've lost it..."
+msgstr "You've lost it…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Message Sent]"
@@ -285,16 +284,16 @@ msgid "STSTR_NOMUS"
 msgstr "Impossible Selection"
 
 msgid "STSTR_DQDON"
-msgstr "Degreelessness Mode ON"
+msgstr "Degreelessness Mode: ON"
 
 msgid "STSTR_DQDOFF"
-msgstr "Degreelessness Mode OFF"
+msgstr "Degreelessness Mode: OFF"
 
 msgid "STSTR_DQD2ON"
-msgstr "Ultimate Degreelessness Mode ON"
+msgstr "Ultimate Degreelessness Mode: ON"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Ultimate Degreelessness Mode OFF"
+msgstr "Ultimate Degreelessness Mode: OFF"
 
 msgid "STSTR_KFAADDED"
 msgstr "Very Happy Ammo Added"
@@ -303,16 +302,16 @@ msgid "STSTR_FAADDED"
 msgstr "Ammo (no keys) Added"
 
 msgid "STSTR_NCON"
-msgstr "No Clipping Mode ON"
+msgstr "No Clipping Mode: ON"
 
 msgid "STSTR_NCOFF"
-msgstr "No Clipping Mode OFF"
+msgstr "No Clipping Mode: OFF"
 
 msgid "STSTR_NC2ON"
-msgstr "No Clipping Mode 2 ON"
+msgstr "3D No Clipping Mode: ON"
 
 msgid "STSTR_NC2OFF"
-msgstr "No Clipping Mode 2 OFF"
+msgstr "3D No Clipping Mode: OFF"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -329,28 +328,28 @@ msgstr "Power-up Toggled"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... does not suck - GM"
+msgstr "… doesn't suck - GM"
 
 msgid "STSTR_CLEV"
-msgstr "Changing Level..."
+msgstr "Changing Level…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Buddha mode ON"
+msgstr "Buddha mode: ON"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Buddha mode OFF"
+msgstr "Buddha mode: OFF"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Ultimate Buddha Mode ON"
+msgstr "Ultimate Buddha Mode: ON"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Ultimate Buddha Mode OFF"
+msgstr "Ultimate Buddha Mode: OFF"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Power on"
+msgstr "Power: ON"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Power off"
+msgstr "Power: OFF"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Full health"
@@ -359,22 +358,22 @@ msgid "TXT_CHEATKEYS"
 msgstr "All keys"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Sound debug on"
+msgstr "Sound debug: ON"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Sound debug off"
+msgstr "Sound debug: OFF"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Trying to cheat, eh? Now you die!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Cheater - you don't deserve weapons"
+msgstr "Cheater—you don't deserve weapons"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Ticker on"
+msgstr "Ticker: ON"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker off"
+msgstr "Ticker: OFF"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "You've got it"
@@ -386,13 +385,13 @@ msgid "TXT_GOTSTUFF"
 msgstr "You've got the stuff!"
 
 msgid "TXT_FREEZEON"
-msgstr "Freeze mode on"
+msgstr "Freeze mode: ON"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Freeze mode off"
+msgstr "Freeze mode: OFF"
 
 msgid "TXT_STRANGE"
-msgstr "You feel strange..."
+msgstr "You feel strange…"
 
 msgid "TXT_STRANGER"
 msgstr "You feel even stranger."
@@ -401,10 +400,10 @@ msgid "TXT_NOTSTRANGE"
 msgstr "You feel like yourself again."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Lead boots on"
+msgstr "Lead boots: ON"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Lead boots off"
+msgstr "Lead boots: OFF"
 
 msgid "TXT_LIGHTER"
 msgstr "You feel lighter"
@@ -413,10 +412,10 @@ msgid "TXT_GRAVITY"
 msgstr "Gravity weighs you down"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "No Target ON"
+msgstr "No Target: ON"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "No Target OFF"
+msgstr "No Target: OFF"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Quake with fear!\""
@@ -425,10 +424,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "No more Ogre Armour"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "chasecam ON"
+msgstr "Chase-cam: ON"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "chasecam OFF"
+msgstr "Chase-cam: OFF"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 baddie killed"
@@ -452,25 +451,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "What do you want to kill outside of a game?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Frozen player properties turned off"
+msgstr "Frozen player properties: OFF"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Follow Mode OFF"
+msgstr "Follow Mode: OFF"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Follow Mode ON"
+msgstr "Follow Mode: ON"
 
 msgid "AMSTR_GRIDON"
-msgstr "Grid ON"
+msgstr "Grid: ON"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Grid OFF"
+msgstr "Grid: OFF"
 
 msgid "AMSTR_TEXON"
-msgstr "Texture Mode ON"
+msgstr "Texture Mode: ON"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Texture Mode OFF"
+msgstr "Texture Mode: OFF"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Marked Spot"
@@ -1925,7 +1924,7 @@ msgid "TXT_SCANNER"
 msgstr "You picked up the scanner."
 
 msgid "TXT_NEEDMAP"
-msgstr "The scanner won't work without a map!\n"
+msgstr "The scanner won't work without a map!"
 
 msgid "TXT_PRISONPASS"
 msgstr "You picked up the Prison pass."
@@ -2069,13 +2068,13 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "You picked up the ammo satchel."
 
 msgid "MSG_TALISMANRED"
-msgstr "You have a feeling that it wasn't to be touched..."
+msgstr "You have a feeling that it wasn't to be touched…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Whatever it is, it doesn't belong in this world..."
+msgstr "Whatever it is, it doesn't belong in this world…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "It must do something..."
+msgstr "It must do something…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "You have super strength!"
@@ -2570,10 +2569,10 @@ msgid "TXT_GOAWAY"
 msgstr "Go away!"
 
 msgid "TXT_COMM0"
-msgstr "Incoming Message..."
+msgstr "Incoming Message…"
 
 msgid "TXT_COMM1"
-msgstr "Incoming Message from BlackBird..."
+msgstr "Incoming Message from BlackBird…"
 
 msgid "TXT_FINDHELP"
 msgstr "Find help"
@@ -2583,10 +2582,10 @@ msgid "TXT_TRADE"
 msgstr "for %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Picked up the Chex(R) Armour."
+msgstr "Picked up the Chex® Armour."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Picked up the Super Chex(R) Armour!"
+msgstr "Picked up the Super Chex® Armour!"
 
 msgid "GOTWATER"
 msgstr "Picked up a glass of water."
@@ -2771,7 +2770,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Press the escape key to continue..."
+"Press the escape key to continue…"
 
 msgid "CE2TEXT"
 msgstr "You've done it!"
@@ -2829,7 +2828,7 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"This is Chex(R) Quest. look for\n"
+"This is Chex® Quest. Look for\n"
 "\n"
 "future levels at www.chexquest.com.\n"
 "\n"
@@ -2851,11 +2850,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Invincible Mode ON"
+msgstr "Invincible Mode: ON"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Invincible Mode OFF"
+msgstr "Invincible Mode: OFF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2867,7 +2866,7 @@ msgstr "Super Zorch Added"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Eat Chex(R)!"
+msgstr "…Eat Chex®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -3349,9 +3348,6 @@ msgstr "Inst. moving floors are not silent"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sector sounds use centre as source"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Sounds stop when actor vanishes"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Use original sound target handling"
 
@@ -3823,9 +3819,6 @@ msgstr "Use fuzz effect"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Classic Transparency"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Lost Soul translucency"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Use fake contrast"
 
@@ -3979,9 +3972,6 @@ msgstr "Network Options"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Local options"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Movement prediction"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Predict line actions"
 
@@ -3996,15 +3986,6 @@ msgstr "Host options"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Extra Tics"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Latency balancing"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Original"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Optimised"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Classic (Faster)"
@@ -4072,15 +4053,6 @@ msgstr "Player"
 
 msgid "OPTVAL_MAP"
 msgstr "Map"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Scale to 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Pixel double"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Pixel quadruple"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Current weapon"
@@ -4175,15 +4147,6 @@ msgstr "Map defined colours only"
 msgid "OPTVAL_NODOORS"
 msgstr "All except doors"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Double"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Triple"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Quadruple"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Item Pickup"
 
@@ -4232,9 +4195,6 @@ msgstr "MBF21 (strict)"
 msgid "OPTVAL_ZDOOM2063"
 msgstr "ZDoom 2.0.63"
 
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "All unacknowledged"
-
 msgid "OPTVAL_ERRORS"
 msgstr "Errors"
 
@@ -4256,12 +4216,6 @@ msgstr "Doom Software Renderer"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "True Colour SW Renderer"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "High-Performance"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Power-Saving"
-
 msgid "OPTVAL_VANILLA"
 msgstr "Vanilla"
 
@@ -4270,12 +4224,6 @@ msgstr "ZDoom (Forced)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Vanilla (Forced)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Auto (ZDoom Preferred)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Auto (Vanilla Preferred)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Small"
@@ -4368,19 +4316,13 @@ msgid "OPTSTR_HERETIC"
 msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr "Chex"
-
-msgid "OPTSTR_NOSOUND"
-msgstr "No Sound"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "No interpolation"
 
 msgid "OPTSTR_SPLINE"
 msgstr "Spline"
-
-msgid "OPTSTR_OPENAL"
-msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Hardware Renderer"
@@ -4394,12 +4336,6 @@ msgstr "Hardware Rendering Options"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Dynamic Light Options"
 
-msgid "GLMNU_PREFS"
-msgstr "Preferences"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Trim sprite edges"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Sort draw lists by texture"
 
@@ -4408,9 +4344,6 @@ msgstr "Dynamic Lights"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dynamic Lights (Hardware)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Enable light definitions"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Lights affect sprites"
@@ -4427,17 +4360,11 @@ msgstr "Shadowmap quality"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Shadowmap filter"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Fog mode"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Fog forces fullbright"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Weapon light strength"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Environment map on mirrors"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Enhanced night vision mode"
@@ -4462,9 +4389,6 @@ msgstr "Sprites face camera"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Particle style"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Rendering quality"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "Stereo 3D VR"
@@ -4515,9 +4439,6 @@ msgstr "Doom Legacy"
 msgid "OPTVAL_SOFTWARE"
 msgstr "Software"
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Optimal"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Y Axis"
 
@@ -4529,9 +4450,6 @@ msgstr "Square"
 
 msgid "OPTVAL_ROUND"
 msgstr "Round"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Radial"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Pixel fuzz"
@@ -4596,9 +4514,6 @@ msgstr "TrueColour Options"
 msgid "TCMNU_TITLE"
 msgstr "TrueColour Options"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "True colour output"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Linear filter when downscaling"
 
@@ -4610,21 +4525,6 @@ msgstr "Use mipmapped textures"
 
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Dynamic lights (Software)"
-
-msgid "OS_TITLE"
-msgstr "Option Search"
-
-msgid "OS_ANY"
-msgstr "Search for any term"
-
-msgid "OS_ALL"
-msgstr "Search for all terms"
-
-msgid "OS_NO_RESULTS"
-msgstr "No results found."
-
-msgid "OS_LABEL"
-msgstr "Search:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Always show keys"
@@ -4661,7 +4561,9 @@ msgid "TXT_OTHERENGINESG"
 msgstr "Savegame '%s' is from another ZDoom-based engine:"
 
 msgid "TXT_TOOOLDSG"
-msgstr "Savegame '%s' is from an older version: %d (%e is the oldest supported)"
+msgstr ""
+"Savegame '%s' is from an older version (%d). The oldest supported version is "
+"%e."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4669,7 +4571,9 @@ msgstr "Savegame '%s' is from an older version: %d (%e is the oldest supported)"
 # 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
-msgstr "Savegame '%s' is from a newer version: %d (%e is the highest supported)"
+msgstr ""
+"Savegame '%s' is from a newer version (%d). The highest supported version is "
+"%e."
 
 msgid "TXT_NOMAPSG"
 msgstr "Savegame '%s' is missing the current map."
@@ -4702,9 +4606,6 @@ msgstr "Could not create screenshot."
 msgid "TXT_BY"
 msgstr "By %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr "Press any key or click anywhere in the window to quit."
-
 msgid "HUDMNU_FLASH"
 msgstr "Screen Blend Options"
 
@@ -4716,9 +4617,6 @@ msgstr "Crosshair"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Subtitles"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Prevent grey shadows"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Font Options"
@@ -4736,7 +4634,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr "Custom Inverse Map"
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "Custom Inverse Colour Dark\n"
+msgstr "Custom Inverse Colour Dark"
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr "Custom Inverse Colour Light"
@@ -4759,11 +4657,6 @@ msgstr "Scaling factor"
 
 msgid "SCALEMNU_RATIO"
 msgstr "Aspect ratio"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr "Build"
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4798,7 +4691,7 @@ msgid "MISCMNU_WIPERCENT"
 msgstr "Use percents on summary screen"
 
 msgid "MISCMNU_CLEANSTAT"
-msgstr "Classic ZDoom scaling on summary screen"
+msgstr "Classic ZDoom scaling for summary screen"
 
 # Called "citizens" according to Doomwiki
 msgid "TAG_STRIFEZOMBIE"
@@ -4912,11 +4805,11 @@ msgstr "Disable client-side pick ups on dropped items"
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
-msgstr "Restart level on Death"
+msgstr "Pistol start on death"
 
 # Resets inventory on every map
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "Pistol Start"
+msgstr "Pistol start every map"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr "Allow creation of zombie players"
@@ -5079,9 +4972,6 @@ msgstr "Vote Countdown Time (Seconds)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Chat Slow Mode (Seconds)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Enable Haptic Triggers"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "Haptics options"
 
@@ -5196,10 +5086,10 @@ msgid "TAG_REPELLENT"
 msgstr "Slime Repellent"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Chex Armour"
+msgstr "Chex® Armour"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Super Chex Armour"
+msgstr "Super Chex® Armour"
 
 msgid "TAG_CHEXMAP"
 msgstr "Computer Area Map"
@@ -5318,9 +5208,6 @@ msgstr "Strict"
 msgid "PICKER_FILELOADING"
 msgstr "File Loading"
 
-msgid "MISCMNU_CLEANMENU"
-msgstr "Classic ZDoom menu scaling"
-
 msgid "DSPLYMNU_BRIGHTNESS"
 msgstr "Brightness"
 
@@ -5373,18 +5260,6 @@ msgstr ""
 "until diagonal white blocks fade. Do not use this to make the game brighter, "
 "only to ensure the image is calibrated for your setup."
 
-msgid "DSPLYMNU_WHITEPOINT"
-msgstr "Whitepoint compensation"
-
-msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
-msgstr ""
-"Compensates for monitors that fail to display bright pixels correctly. "
-"Adjust until diagonal black blocks fade. Do not use this to make the game "
-"brighter, only to ensure the image is calibrated for your setup."
-
-msgid "OPTMNU_RESETALL"
-msgstr "Reset All"
-
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "Resets all options in this menu to default settings."
 
@@ -5392,3 +5267,93 @@ msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
 "Applies linear brightness adjustment. Adjust to personal taste, or to see in "
 "the dark."
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Copy to clipboard"
+
+msgid "ACTION_RESTART"
+msgstr "Restart"
+
+msgid "ACTION_ABORT"
+msgstr "Abort"
+
+msgid "ACTION_STARTGAME"
+msgstr "Start Game"
+
+msgid "ACTION_KICK"
+msgstr "Kick"
+
+msgid "ACTION_BAN"
+msgstr "Ban"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Save Report"
+
+msgid "ERROR_FATAL"
+msgstr "Fatal Error"
+
+msgid "ERROR_ABORT"
+msgstr "Execution could not continue."
+
+msgid "FILEPICKER_ANY"
+msgstr "All Files"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "Crash Report Zip Files"
+
+msgid "HAPMNU_TITLE"
+msgstr "Haptic Feedback Options"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Auto-detect compatibility settings"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Powerup tint intensity"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Player Class"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Side-by-side Letterboxed"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Lighting Adjustment"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Super Stereo Width"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Music Mode"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Super Stereo"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Direct Mix"
+
+msgid "LANG_NATIVE"
+msgstr "English (UK)"
+
+msgid "LANG_ENG"
+msgstr "English (UK)"
+
+msgid "OPTVAL_SMOOTH"
+msgstr "Smooth"
+
+msgid "TAG_MACIL"
+msgstr "Macil"
+
+msgid "TAG_MAULER"
+msgstr "Mauler"
+
+msgid "TAG_GLAUNCHER"
+msgstr "Grenade Launcher"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "Browse WADs"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Browse Configs"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "Browse IWAD Folder"

@@ -78,14 +78,12 @@ class ID24Tyrant : Cyberdemon
 // minimum instead of the default 12, so Nightmare
 // sucks a bit less ;)
 
-// (this id24 feature isn't implemented yet!)
-
 class ID24TyrantBoss1 : ID24Tyrant
 {
 	Default
 	{
-		// RespawnTics 2100;
-		// RespawnDice 64;
+		MinRespawnTics 2100;
+		RespawnDice 64;
 	}
 }
 
@@ -93,7 +91,7 @@ class ID24TyrantBoss2 : ID24Tyrant
 {
 	Default
 	{
-		// RespawnTics 2100;
-		// RespawnDice 64;
+		MinRespawnTics 2100;
+		RespawnDice 64;
 	}
 }

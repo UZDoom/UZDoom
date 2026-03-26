@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-29 00:00+0000\n"
-"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
+"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/eo/>\n"
 "Language: eo\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: eo\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Premu klavon."
@@ -21,7 +20,7 @@ msgid "SECRETMESSAGE"
 msgstr "Vi trovis sekretejon!"
 
 msgid "D_DEVSTR"
-msgstr "Senutila reĝimo ŜALTITA."
+msgstr "Senutila reĝimo: ŜALTITA"
 
 msgid "QUITMSG"
 msgstr ""
@@ -135,8 +134,9 @@ msgstr ""
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
-"Ne foriru, dimensia malordo\n"
-"atendas ĉe la DOS-konzolo!"
+"Ne foriru, dimensia\n"
+"malordo atendas ĉe\n"
+"la DOS-konzolo!"
 
 msgid "QUITMSG10"
 msgstr ""
@@ -153,6 +153,7 @@ msgstr ""
 "Rigardu, ulo. Se vi nun foriros,\n"
 "vi rezignos vian mortig-nombron!"
 
+#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
 "Nur foriru. Kiam vi revenos,\n"
@@ -170,31 +171,31 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Buĉado \"interruptus\"...\n"
+"Buĉado \"interruptus\"…\n"
 "Kia inciteto!"
 
 msgid "QUITMSG17"
 msgstr ""
-"Sed vi estas la espero...\n"
-"Mia ununura ŝanco!!"
+"Sed vi estas la espero\n"
+"—Mia ununura ŝanco!!"
 
 msgid "QUITMSG18"
 msgstr "Neniu forlasas Merlon."
 
 msgid "QUITMSG19"
-msgstr "Mi pensis, ke vi estas malsama..."
+msgstr "Mi pensis, ke vi estas malsama…"
 
 msgid "QUITMSG20"
 msgstr "Bone! Nur mortigu kaj fuĝu!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Vi povas foriri...\n"
-"sed ne kaŝi vin..."
+"Vi povas foriri…\n"
+"sed ne kaŝi vin…"
 
 msgid "QUITMSG22"
 msgstr ""
-"Kio!? Kio okazas? Ĉu panjo\n"
+"Kio okazas? Ĉu panjo\n"
 "diris, ke estas tempo manĝi?"
 
 msgid "QUITMSG23"
@@ -215,7 +216,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "Mi esperas, ke vi nur paŭzas\n"
-"por manĝi Chex(R)-festmikson."
+"por manĝi Chex®-festmikson."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -229,7 +230,7 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"La vera Chex(R)-batalisto\n"
+"La vera Chex®-batalisto\n"
 "ne rezignus tiel rapide!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
@@ -272,7 +273,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "Vi komencas frenezi"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Vi freneziĝis..."
+msgstr "Vi freneziĝis…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Mesaĝo sendita]"
@@ -284,16 +285,16 @@ msgid "STSTR_NOMUS"
 msgstr "Malebla Elektaĵo"
 
 msgid "STSTR_DQDON"
-msgstr "Nevundebla Reĝimo ŜALTITA"
+msgstr "Nevundebla Reĝimo: ŜALTITA"
 
 msgid "STSTR_DQDOFF"
-msgstr "Nevundebla Reĝimo MALŜALTITA"
+msgstr "Nevundebla Reĝimo: MALŜALTITA"
 
 msgid "STSTR_DQD2ON"
-msgstr "Pleja Nevundebla Reĝimo ŜALTITA"
+msgstr "Pleja Nevundebla Reĝimo: ŜALTITA"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Pleja Nevundebla Reĝimo MALŜALTITA"
+msgstr "Pleja Nevundebla Reĝimo: MALŜALTITA"
 
 msgid "STSTR_KFAADDED"
 msgstr "Tre Feliĉa Municio Aldonita"
@@ -302,16 +303,18 @@ msgid "STSTR_FAADDED"
 msgstr "Municio (neniuj ŝlosiloj) Aldonita"
 
 msgid "STSTR_NCON"
-msgstr "Reĝimo de Neniu Tondado ŜALTITA"
+msgstr "Reĝimo de Neniu Tondado: ŜALTITA"
 
 msgid "STSTR_NCOFF"
-msgstr "Reĝimo de Neniu Tondado MALŜALTITA"
+msgstr "Reĝimo de Neniu Tondado: MALŜALTITA"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Reĝimo de Neniu Tondado 2 ŜALTITA"
+msgstr "Reĝimo de Neniu Tondado 2: ŜALTITA"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Reĝimo de Neniu Tondado 2 MALŜALTITA"
+msgstr "Reĝimo de Neniu Tondado 2: MALŜALTITA"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -328,28 +331,28 @@ msgstr "Plifortigaĵo Baskuligita"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... ne aĉas - GM"
+msgstr "… ne aĉas - GM"
 
 msgid "STSTR_CLEV"
-msgstr "Ŝanĝante Nivelon..."
+msgstr "Ŝanĝante Nivelon…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Budha reĝimo ŜALTITA"
+msgstr "Budha reĝimo: ŜALTITA"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Budha reĝimo MALŜALTITA"
+msgstr "Budha reĝimo: MALŜALTITA"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Pleja Budha Reĝimo ŜALTITA"
+msgstr "Pleja Budha Reĝimo: ŜALTITA"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Pleja Budha Reĝimo MALŜALTITA"
+msgstr "Pleja Budha Reĝimo: MALŜALTITA"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Povo ŝaltita"
+msgstr "Povo: ŜALTITA"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Povo malŝaltita"
+msgstr "Povo: MALŜALTITA"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Plena sano"
@@ -358,22 +361,22 @@ msgid "TXT_CHEATKEYS"
 msgstr "Ĉiuj ŝlosiloj"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Sono-sencimiga reĝimo ŝaltita"
+msgstr "Sono-sencimiga reĝimo: ŜALTITA"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Sono-sencimiga reĝimo malŝaltita"
+msgstr "Sono-sencimiga reĝimo: MALŜALTITA"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Provas trompi, ĉu vi? Nun vi mortas!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Trompanto - vi ne meritas armilojn"
+msgstr "Trompanto—vi ne meritas armilojn"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Nombrilo ŝaltita"
+msgstr "Nombrilo: ŜALTITA"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Nombrilo malŝaltita"
+msgstr "Nombrilo: MALŜALTITA"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Vi akiris ĝin"
@@ -385,13 +388,13 @@ msgid "TXT_GOTSTUFF"
 msgstr "Vi akiris la aĵojn!"
 
 msgid "TXT_FREEZEON"
-msgstr "Movhalta reĝimo ŝaltita"
+msgstr "Movhalta reĝimo: ŜALTITA"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Movhalta reĝimo malŝaltita"
+msgstr "Movhalta reĝimo: MALŜALTITA"
 
 msgid "TXT_STRANGE"
-msgstr "Vi sentas vin strange..."
+msgstr "Vi sentas vin strange…"
 
 msgid "TXT_STRANGER"
 msgstr "Vi sentas vin eĉ pli strange."
@@ -400,10 +403,10 @@ msgid "TXT_NOTSTRANGE"
 msgstr "Vi denove sentas vin kiel vi mem."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Botoj el plumbo ŝaltita"
+msgstr "Botoj el plumbo: ŜALTITA"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Botoj el plumbo malŝaltita"
+msgstr "Botoj el plumbo: MALŜALTITA"
 
 msgid "TXT_LIGHTER"
 msgstr "Vi sentas vin pli malpeza"
@@ -412,10 +415,10 @@ msgid "TXT_GRAVITY"
 msgstr "Gravito pezigas vin"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Neniu Celo ŜALTITA"
+msgstr "Neniu Celo: ŜALTITA"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Neniu Celo MALŜALTITA"
+msgstr "Neniu Celo: MALŜALTITA"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Tremu pro timo!\""
@@ -424,10 +427,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Ne plu Ogrokiraso"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Ĉaskamerao ŜALTITA"
+msgstr "Ĉaskamerao: ŜALTITA"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Ĉaskamerao MALŜALTITA"
+msgstr "Ĉaskamerao: MALŜALTITA"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 malbonulo mortigita"
@@ -442,9 +445,7 @@ msgid "TXT_MONSTERS_KILLED"
 msgstr "%d monstroj mortigitaj"
 
 msgid "TXT_NO_RESURRECT"
-msgstr ""
-"Nerevivigebla. La ludanto ne plu\n"
-"estas konektita al sia korpo."
+msgstr "Nerevivigebla. La ludanto ne pluestas konektita al sia korpo."
 
 msgid "TXT_ALL_ARTIFACTS"
 msgstr "Ĉiuj Artefaktoj!"
@@ -453,25 +454,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "Kion vi volas mortigi ekster ludo?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Atributoj de movhaltitaj ludantoj malŝaltitaj"
+msgstr "Atributoj de movhaltitaj ludantoj: MALŜALTITA"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Sekvigreĝimo MALŜALTITA"
+msgstr "Sekvigreĝimo: MALŜALTITA"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Sekvigreĝimo ŜALTITA"
+msgstr "Sekvigreĝimo: ŜALTITA"
 
 msgid "AMSTR_GRIDON"
-msgstr "Krado ŜALTITA"
+msgstr "Krado: ŜALTITA"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Krado MALŜALTITA"
+msgstr "Krado: MALŜALTITA"
 
 msgid "AMSTR_TEXON"
-msgstr "Tekstura Reĝimo ŜALTITA"
+msgstr "Tekstura Reĝimo: ŜALTITA"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Tekstura Reĝimo MALŜALTITA"
+msgstr "Tekstura Reĝimo: MALŜALTITA"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Loko Markita"
@@ -1491,7 +1492,7 @@ msgid "TXT_ARTIPUZZGEAR"
 msgstr "Dentrado de Horloĝo"
 
 msgid "TXT_USEPUZZLEFAILED"
-msgstr "Vi ne povas uzi ĉi tion ĉi tie."
+msgstr "Vi ne povas uzi ĉi tion ĉi tie"
 
 msgid "TXT_ARMOR1"
 msgstr "Marŝkiraso"
@@ -1887,7 +1888,7 @@ msgid "TXT_SHADOWARMOR"
 msgstr "Vi trovis ombran armaĵon."
 
 msgid "TXT_ENVSUIT"
-msgstr "Vi trovis medi-ŝirman veston"
+msgstr "Vi trovis medi-ŝirman veston."
 
 msgid "TXT_GUARDUNIFORM"
 msgstr "Vi havas la uniformon de gardisto."
@@ -1989,7 +1990,7 @@ msgid "TXT_SILVERKEY"
 msgstr "Vi havas arĝentan ŝlosilon."
 
 msgid "TXT_ORACLEKEY"
-msgstr "Vi havas ŝlosilon de la Orakolo"
+msgstr "Vi havas ŝlosilon de la Orakolo."
 
 msgid "TXT_MILITARYID"
 msgstr "Vi havas militan identigilon."
@@ -2007,7 +2008,7 @@ msgid "TXT_REDCRYSTAL"
 msgstr "Vi trovis la ruĝkristalan ŝlosilon."
 
 msgid "TXT_BLUECRYSTAL"
-msgstr "Vi trovis la blukristalan ŝlosilon"
+msgstr "Vi trovis la blukristalan ŝlosilon."
 
 msgid "TXT_CHAPELKEY"
 msgstr "Vi trovis la ŝlosilon de la kapelo."
@@ -2070,13 +2071,13 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Vi trovis munici-sakon."
 
 msgid "MSG_TALISMANRED"
-msgstr "Vi sentas, ke vi ne devis tuŝi ĝin..."
+msgstr "Vi sentas, ke vi ne devis tuŝi ĝin…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Tio ajn, kio ĝi estas, ĝi ne apartenas al ĉi tiu mondo..."
+msgstr "Tio ajn, kio ĝi estas, ĝi ne apartenas al ĉi tiu mondo…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Ĝi devas fari ion..."
+msgstr "Ĝi devas fari ion…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Vi havas superan forton!"
@@ -2571,23 +2572,23 @@ msgid "TXT_GOAWAY"
 msgstr "Foriru!"
 
 msgid "TXT_COMM0"
-msgstr "Alvenas mesaĝo..."
+msgstr "Alvenas mesaĝo…"
 
 msgid "TXT_COMM1"
-msgstr "Alvenas mesaĝo de Merlo..."
+msgstr "Alvenas mesaĝo de Merlo…"
 
 msgid "TXT_FINDHELP"
-msgstr "Trovu helpon."
+msgstr "Trovu helpon"
 
 # As in for %u amount of money.
 msgid "TXT_TRADE"
-msgstr "kontraŭ %u da oro."
+msgstr "kontraŭ %u da oro"
 
 msgid "GOTCHEXARMOR"
-msgstr "Prenis la Chex(R)-kirason."
+msgstr "Prenis la Chex®-kirason."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Prenis la superan Chex(R)-kirason!"
+msgstr "Prenis la superan Chex®-kirason!"
 
 msgid "GOTWATER"
 msgstr "Prenis glason de akvo."
@@ -2617,16 +2618,16 @@ msgid "GOTVEGETABLES"
 msgstr "Prenis bovlon de legomoj."
 
 msgid "GOTSLIMESUIT"
-msgstr "Trovis muk-imunan kompleton."
+msgstr "Trovis muk-imunan kompleton"
 
 msgid "GOTCHEXMAP"
-msgstr "Trovis komputilan regionmapon."
+msgstr "Trovis komputilan regionmapon"
 
 msgid "GOTZORCHRECHARGE"
 msgstr "Prenis zorĉreŝargeton."
 
 msgid "GOTMINIZORCHPACK"
-msgstr "Prenis zorĉpaketon"
+msgstr "Prenis zorĉpaketon."
 
 msgid "GOTPROPULSORRECHARGE"
 msgstr "Prenis zorĉpropulsilo-reŝargon."
@@ -2635,7 +2636,7 @@ msgid "GOTPROPULSORPACK"
 msgstr "Prenis zorĉpropulsilo-pakon."
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "Prenis fluktuantzorĉilo-reŝargon."
+msgstr "Prenis fluktuantzorĉilo-reŝargon"
 
 msgid "GOTPHASINGZORCHERPACK"
 msgstr "Prenis fluktuantzorĉilo-pakon."
@@ -2665,7 +2666,7 @@ msgid "GOTPHASINGZORCHER"
 msgstr "Vi prenis la Fluktuantzorĉilon!"
 
 msgid "GOTLARGEZORCHER"
-msgstr "Vi prenis la Grandzorĉilon"
+msgstr "Vi prenis la Grandzorĉilon!"
 
 msgid "GOTSUPERLARGEZORCHER"
 msgstr "Vi prenis la Grandegzorĉilon!"
@@ -2772,7 +2773,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Premu la eskapan klavon por daŭri..."
+"Premu la eskapan klavon por daŭri…"
 
 msgid "CE2TEXT"
 msgstr "Vi sukcesis!"
@@ -2830,7 +2831,7 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"Ĉi tio estas Chex(R) Quest. Serĉu\n"
+"Ĉi tio estas Chex® Quest. Serĉu\n"
 "\n"
 "novajn nivelojn ĉe www.chexquest.com.\n"
 "\n"
@@ -2852,11 +2853,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Nevenkebla-reĝimo ŜALTITA"
+msgstr "Nevenkebla-reĝimo: ŜALTITA"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Nevenkebla-reĝimo MALŜALTITA"
+msgstr "Nevenkebla-reĝimo: MALŜALTITA"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2868,7 +2869,7 @@ msgstr "Supera Zorĉo Aldonita"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Manĝu Chex(R)-on!"
+msgstr "…Manĝu Chex®-on!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -3350,9 +3351,6 @@ msgstr "Tujaj movantaj plankoj ne estas silentaj"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sektorsonoj uzas centron kiel fonto"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Sonoj ĉesas, kiam aktoro malaperas"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Uzi originalan manipuladon por soncelo"
 
@@ -3432,7 +3430,7 @@ msgid "CNTRLMNU_KEYBOARDLOOK"
 msgstr "Klavar-rigardo"
 
 msgid "CNTRLMNU_POPUPS_TITLE"
-msgstr "Ŝprucfenestraĵoj de Strife"
+msgstr "Regiloj pro Ŝprucfenestraĵoj de Strife"
 
 msgid "CNTRLMNU_TEAMSAY"
 msgstr "Teama diro"
@@ -3824,9 +3822,6 @@ msgstr "Uzi barblano-efekton"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Klasika Travidebleco"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Diafaneco de Perdita Animo"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Uzi malveran kontraston"
 
@@ -3980,9 +3975,6 @@ msgstr "Reta Agordoj"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Lokaj agordoj"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Movprognozado"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Prognozi linio-agojn"
 
@@ -3997,15 +3989,6 @@ msgstr "Agordoj de Gastiganto"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Ekstraj Tikoj"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Respondotempo-balancado"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Originala"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Optimumigita"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Klasika (Pli rapide)"
@@ -4073,15 +4056,6 @@ msgstr "Ludanto"
 
 msgid "OPTVAL_MAP"
 msgstr "Mapo"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Skali al 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Bilderon duobligi"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Bilderon kvarobligi"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Nuntempa armilo"
@@ -4176,15 +4150,6 @@ msgstr "Nur mapaj difinitaj koloroj"
 msgid "OPTVAL_NODOORS"
 msgstr "Ĉiom krom pordoj"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Duobligi"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Triobligi"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Kvarobligi"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Objektoprenado"
 
@@ -4233,9 +4198,6 @@ msgstr "MBF21 (severa)"
 msgid "OPTVAL_ZDOOM2063"
 msgstr "ZDoom 2.0.63"
 
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Ĉiuj neagnoskitaj"
-
 msgid "OPTVAL_ERRORS"
 msgstr "Eraroj"
 
@@ -4257,12 +4219,6 @@ msgstr "Programar-bildigilo de Doom"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "Programar-bildigilo kun plenkoloro"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "Alta rendimento"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Energikonservo"
-
 msgid "OPTVAL_VANILLA"
 msgstr "Originala ludversio"
 
@@ -4271,12 +4227,6 @@ msgstr "ZDoom (devigita)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Originala ludversio (devigita)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Aŭtomata (preferata de ZDoom)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Aŭtomata (preferata de la originala)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Malgranda"
@@ -4369,19 +4319,13 @@ msgid "OPTSTR_HERETIC"
 msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr "Chex"
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Neniu sono"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Neniu interpolado"
 
 msgid "OPTSTR_SPLINE"
 msgstr "Splajno"
-
-msgid "OPTSTR_OPENAL"
-msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Aparatara bildigilo"
@@ -4390,16 +4334,10 @@ msgid "DSPLYMNU_SWOPT"
 msgstr "Programara bildigilo"
 
 msgid "GLMNU_TITLE"
-msgstr "Agordoj de OpenGL (aparatara bildigilo)"
+msgstr "Agordoj de aparatara bildigilo"
 
 msgid "GLMNU_DYNLIGHT"
 msgstr "Agordoj de dinamikaj lumoj"
-
-msgid "GLMNU_PREFS"
-msgstr "Preferoj"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Ĉirkaŭtranĉi randojn de mov-rastrumoj"
 
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Ordigi desegnado-listojn laŭ teksturo"
@@ -4409,9 +4347,6 @@ msgstr "Dinamikaj lumoj"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dinamikaj lumoj (Aparataro)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Ŝalti lumdifinojn"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Lumoj efikas mov-rastrumojn"
@@ -4428,17 +4363,11 @@ msgstr "Kvalito de ombro-mapo"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Filtro de ombro-mapo"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Reĝimo de nebulo"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Nebulo devigas plenbrilon"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Lumforteco de armilo"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Medimapo sur speguloj"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Plibonigita reĝimo de noktvido"
@@ -4463,9 +4392,6 @@ msgstr "Mov-rastrumoj ĉiam rigardas vian kameraon"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Partikla stilo"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Kvalito de bildigado"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "Duvida 3D VR"
@@ -4516,9 +4442,6 @@ msgstr "Doom Legacy"
 msgid "OPTVAL_SOFTWARE"
 msgstr "Programa bildigilo"
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Optima"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Y-Akso"
 
@@ -4530,9 +4453,6 @@ msgstr "Kvadrata"
 
 msgid "OPTVAL_ROUND"
 msgstr "Ronda"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Radiusa"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Bildera lanugo"
@@ -4597,9 +4517,6 @@ msgstr "Plenkolora Agordoj"
 msgid "TCMNU_TITLE"
 msgstr "Plenkolora Agordoj"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Plenkolora eligo"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Linia filtro kiam subskali"
 
@@ -4611,21 +4528,6 @@ msgstr "Uzi mipmapajn teksturojn"
 
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Dinamikaj lumoj (Programbildigilo)"
-
-msgid "OS_TITLE"
-msgstr "Agorda Serĉo"
-
-msgid "OS_ANY"
-msgstr "Serĉi por iu ajn termino"
-
-msgid "OS_ALL"
-msgstr "Serĉi por ĉiuj terminoj"
-
-msgid "OS_NO_RESULTS"
-msgstr "Neniuj rezultoj trovitaj."
-
-msgid "OS_LABEL"
-msgstr "Serĉi:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Ĉiam montri ŝlosilojn"
@@ -4664,7 +4566,7 @@ msgstr "Konservita ludado '%s' estas el alia ZDoom-bazita modulo:"
 msgid "TXT_TOOOLDSG"
 msgstr ""
 "Konservita ludado '%s' estas el pli malnova versio: %d (%e estas la plej "
-"malnova subtenata)"
+"malnova subtenata)."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4674,7 +4576,7 @@ msgstr ""
 msgid "TXT_TOONEWSG"
 msgstr ""
 "Konservita ludado '%s' estas el pli nova versio: %d (%e estas la plej nova "
-"subtenata)"
+"subtenata)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Al la konservita ludado '%s' mankas la nuna mapo."
@@ -4707,9 +4609,6 @@ msgstr "Ne povis krei ekrankopion."
 msgid "TXT_BY"
 msgstr "De %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr "Premu ajnan klavon aŭ alklaku ie ajn en la fenestro por forlasi."
-
 msgid "HUDMNU_FLASH"
 msgstr "Ekranmisko-agordoj"
 
@@ -4721,9 +4620,6 @@ msgstr "Reteto"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Subtekstoj"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Preventi grizajn ombrojn"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Tiparo-agordoj"
@@ -4764,11 +4660,6 @@ msgstr "Skalfaktoro"
 
 msgid "SCALEMNU_RATIO"
 msgstr "Proporcio"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr "Build"
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4916,10 +4807,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Malvalidigi klientflankajn prenadojn de faligitaj objektoj"
 
 # Disables autoloading save on death
+#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Rekomenci nivelon post morto"
 
 # Resets inventory on every map
+#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Komenci nivelojn nur kun pistolo"
 
@@ -5084,9 +4977,6 @@ msgstr "Tempo de voĉdono-ĝisnombrado (sekundoj)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Malrapida babilo-reĝimo (sekundoj)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Ŝalti tuŝ-ekagilojn"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "Tuŝo-agordoj"
 
@@ -5200,11 +5090,12 @@ msgstr "Ŝargega matenmanĝo"
 msgid "TAG_REPELLENT"
 msgstr "Muk-forigilo"
 
+#, fuzzy
 msgid "TAG_CHEXARMOR"
-msgstr "Chex(R)-kiraso"
+msgstr "Chex®-kiraso"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Supera Chex(R)-kiraso"
+msgstr "Supera Chex®-kiraso"
 
 msgid "TAG_CHEXMAP"
 msgstr "Komputila regionmapo"
@@ -5283,12 +5174,6 @@ msgstr ""
 "interesan por diri, ŝajne nur tiel longa ĉar la programistoj malfacile "
 "klarigas, kion faras opcio."
 
-msgid "OPTMNU_RESETALL"
-msgstr "Restarigi ĉiujn"
-
-msgid "MISCMNU_CLEANMENU"
-msgstr "Klasika skalado de ZDoom-menuo"
-
 msgid "OPTVAL_STRICT"
 msgstr "Severa"
 
@@ -5318,9 +5203,6 @@ msgstr "Bildo-kalibro"
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Kompenso de nigropunkto"
-
-msgid "DSPLYMNU_WHITEPOINT"
-msgstr "Kompenso de blankopunkto"
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Agordu ĉi tiun ĝis ĝi aspektas kiel unuforma griza koloro."
@@ -5368,12 +5250,6 @@ msgstr ""
 "dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur uzi ĝin certigi, ke la "
 "bildo estas kalibrita por via agordaĵo."
 
-msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
-msgstr ""
-"Kompensas por ekranoj, kiuj ne vidigas helajn bilderojn ĝuste. Agordu ĝis la "
-"diagonalaj nigraj blokoj dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur "
-"uzi ĝin certigi, ke la bildo estas kalibrita por via agordaĵo."
-
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
 "Kompensas por ekranoj, kiuj ne vidigas malhelajn bilderojn ĝuste. Agordu ĝis "
@@ -5397,3 +5273,67 @@ msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
 "Aplikas linian heleco-ĝustigon. Agordu laŭ via prefero, aŭ por vidi en la "
 "mallumo."
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Kopii al tondujo"
+
+msgid "ACTION_RESTART"
+msgstr "Restartigi"
+
+msgid "ACTION_ABORT"
+msgstr "Ĉesigi"
+
+msgid "ACTION_STARTGAME"
+msgstr "Startigi ludon"
+
+msgid "ACTION_KICK"
+msgstr "Forpeli"
+
+msgid "ACTION_BAN"
+msgstr "Forbari"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Konservi raporton"
+
+msgid "ERROR_FATAL"
+msgstr "Neriparebla eraro"
+
+msgid "ERROR_ABORT"
+msgstr "Plenumo ne povis daŭrigi."
+
+msgid "FILEPICKER_ANY"
+msgstr "Ĉiuj dosieroj"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "Zip-dosieroj de prikolapsa raporto"
+
+msgid "HAPMNU_TITLE"
+msgstr "Tuŝ-retrokupladaj agordoj"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Aŭtomate detekti kongruo-agordojn"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Intenseco de plifortigaĵo-nuancon"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Ludanta klaso"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Flankalflanke leterkestita"
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Glata"
+
+#, fuzzy
+msgid "TAG_MACIL"
+msgstr "Macil"
+
+#, fuzzy
+msgid "TAG_MAULER"
+msgstr "Polvigilo"
+
+#, fuzzy
+msgid "TAG_GLAUNCHER"
+msgstr "Grenadĵetilo"

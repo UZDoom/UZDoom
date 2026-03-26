@@ -1,0 +1,349 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:38+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/unused/pl/>"
+"\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Rdzeń Emulatora OPL"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Zestaw łatek"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Plik konfiguracyjny GUS"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Plik konfiguracyjny Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Względna głośność"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Plik konfiguracyjny WildMidi"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Dostosuj Gammę"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Czat"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Ustaw Klawisze Czatu"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Zaawansowane Opcje Wyświetlania"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Wygląd"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skala celownika"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Wiadomości"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Skala paska statusu"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Włącz tekstury wysokiej jakości"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Tekstury włączone"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Gładki ruch myszki"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Skalowanie Wiadomości"
+
+msgid "NOTSET"
+msgstr "Nie ustawiono"
+
+msgid "OPTMNU_INPUT"
+msgstr "Opcje Sterowania"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Opcje Oświetlenia"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Opcje Trybu Wielu Graczy"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Opcje Sprite'ów"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Opcje Systemowe"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Hz"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Automapa"
+
+msgid "OPTVAL_HUD"
+msgstr "HUD"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Automapa"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr "PMDWin OPNA"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Przeskalowany (Najbliższy)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Przeskalowany (Liniowy)"
+
+msgid "PICKER_NETAUTO"
+msgstr "Auto (zalecany)"
+
+msgid "PICKER_NETMODE"
+msgstr "Tryb sieciowy:"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Peer-to-peer"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Serwer Pakietów"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Absorbcja Powietrza (wysokie częstotliwości)"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Wskażnik Rozkładu dla wysokich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Wskaźnik Rozkładu dla niskich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Czas Rozkładu"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Zagęszczenie"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Dyfuzja"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Głębokość Echa"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Czas Echa"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Dyfuzja Środowiska"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Rozmiar Środowiska"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "Odniesienie wysokich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "Odniesienie niskich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Głębokość Modulacji"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Czas Modulacji"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Obicia"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Opóźnienie Odbić"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Odbicia Osi X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Odbicia Osi Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Odbicia Osi Z"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Pogłos"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Opóźnienie Pogłosu"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Pogłos Osi X"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Pogłos Osi Y"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Pogłos Osi Z"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Pokój"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Pokój (wysokie częstotliwości)"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Pokój (niskie częstotliwości)"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Czynnik Zejścia"
+
+msgid "SNDMNU_BACKEND"
+msgstr "System dźwiękowy"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Dźwięk w Menu"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Muzyka włączona"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Dźwięk włączony"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Włącz współczynnik proporcji 5:4"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Rozdzielczość"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Wybierz Urządzenie Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Włącz Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Dźwięki zatrzymują się kiedy aktor znika"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"Kompensuje monitory, które nieprawidłowo wyświetlają jasne piksele. Reguluj, "
+"aż diagonalne czarne bloki znikną. Używaj tego wyłącznie w celu "
+"skalibrowania obrazu dla Twojego sprzętu, nie do rozjaśniania gry."
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Przezroczystość Zagubionych Dusz"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "Kompensacja bieli"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Włącz definicje światła"
+
+msgid "GLMNU_PREFS"
+msgstr "Preferencje"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Zapobiegaj szarym cieniom"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Przycinanie krawędzi sprite'ów"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Aktywuj Sprzężenie Zwrotne Spustów"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Przewidywanie Ruchu"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Balans czasu oczekiwania"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Brak dźwięku"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Wszystkie niepotwierdzone"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Wysoka Wydajność"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Podwójny"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Oszczędzanie Energii"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optymalne"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Zoptymalizowany"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Oryginalny"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Dwukrotnie więcej pikseli"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Czterokrotnie więcej pikseli"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Poczwórny"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Skaluj do 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Potrójny"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automatyczny (Preferowany oryginalny)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automatyczny (Preferowany ZDoom)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Wyjście TrueColor"

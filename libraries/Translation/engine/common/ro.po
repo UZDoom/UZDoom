@@ -2,18 +2,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 17:37+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
+"PO-Revision-Date: 2026-03-16 23:10+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/uzdoom/common/"
 "ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
-"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: ro\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Apasă Y sau N."
@@ -32,9 +31,6 @@ msgstr ""
 
 msgid "SAFEMESSAGE"
 msgstr "Ești sigur că vrei să faci asta?"
-
-msgid "NOTSET"
-msgstr "Nesetat"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -57,16 +53,16 @@ msgid "TXT_X_CHEATS"
 msgstr "%s trișează"
 
 msgid "MSGOFF"
-msgstr "Mesaje OPRITE"
+msgstr "Mesaje: OPRITE"
 
 msgid "MSGON"
-msgstr "Mesaje PORNITE"
+msgstr "Mesaje: PORNITE"
 
 msgid "TXT_SAY"
 msgstr "Vorbește:"
 
 msgid "TXT_QUITENDOOM"
-msgstr "Apasă orice tastă sau apasă click oriunde în fereastră pentru a ieși."
+msgstr "Apasă orice tastă sau dă click oriunde în fereastră pentru a ieși."
 
 msgid "NEWSAVE"
 msgstr "<Salvare Nouă>"
@@ -123,7 +119,7 @@ msgid "OPTMNU_GAMEPLAY"
 msgstr "Setări de Joc"
 
 msgid "OPTMNU_AUTOMAP"
-msgstr "Hartă Computerizată"
+msgstr "Opțiuni Automapă"
 
 msgid "OPTMNU_HUD"
 msgstr "Setări Interfață"
@@ -240,17 +236,11 @@ msgstr "Acțiuni"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Personalizare Schemă de Acțiuni"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Scrie"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "Joc Online"
 
 msgid "CNTRLMNU_SAY"
 msgstr "Vorbește"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Personalizare Control de Scriere"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Personalizare Control de Arme"
@@ -367,9 +357,6 @@ msgstr "Cameră urmăritoare"
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Captură de ecran"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Deschide consola"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "Pauză"
 
@@ -408,9 +395,6 @@ msgstr "Comutator Mesaje"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Ieși din Joc"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Ajustează gamma"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Activare mouse"
@@ -530,19 +514,21 @@ msgstr "Zonă moartă"
 msgid "JOYMNU_NOAXES"
 msgstr "Nicio axă configurabilă"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "Niciuna"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Rotire"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Privire Sus/Jos"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "Deplasare în Față"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Fugă în Diagonală"
 
@@ -593,9 +579,6 @@ msgstr "Măsliniu"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Bej"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Verde Deschis"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Albastru Deschis"
@@ -663,23 +646,11 @@ msgstr "Sincronizare Verticală"
 msgid "DSPLYMNU_MODELS"
 msgstr "Modele"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Scară țintă"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Scară Bară de Stare"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Mesaje"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Centrare mesaje"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Afișare Mesaje Pulsante"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Scară Mesaje"
 
 msgid "MNU_COLORPICKER"
 msgstr "Alege o Culoare"
@@ -701,15 +672,6 @@ msgstr "Personalizare culori hartă"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Revenire la culorile implicite"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Sunet activat"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Muzică activată"
-
-msgid "OPTVAL_4000HZ"
-msgstr ""
 
 msgid "OPTVAL_8000HZ"
 msgstr ""
@@ -807,9 +769,6 @@ msgstr "Ton aleatoriu"
 msgid "SNDMNU_CHANNELS"
 msgstr "Canale audio"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Sistem audio"
-
 msgid "SNDMNU_OPENAL"
 msgstr "Setări OpenAL"
 
@@ -824,9 +783,6 @@ msgstr "Setări de redare a modulelor"
 
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "Setări player MIDI"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Sunet în meniuri"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Setări de sunet avansate"
@@ -843,8 +799,9 @@ msgstr "Sinteză OPL"
 msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Număr de cipuri OPL emulate"
 
+#, fuzzy
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr "Creștere volum"
+msgstr "Gain"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Panoramă stereo pentru MIDI"
@@ -856,19 +813,16 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "Voci MIDI"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "General"
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Freeverb Global"
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Set patch"
 
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Amplificare"
@@ -883,25 +837,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr "Cor"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Fișier configurație Timidity"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Volum relativ"
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "Fișier configurație WildMidi"
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Selectare configurație"
@@ -911,9 +856,6 @@ msgstr "Resempling avansat"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "Bancă OPL"
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "Nucleu de emulare OPL"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Utilizare emulator cu frecvența PCM"
@@ -939,9 +881,6 @@ msgstr "Nucleu de emulare OPN2"
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "Emulare GUS"
 
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "Fișier configurație GUS"
-
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "Citește fișierele DMXGUS"
 
@@ -955,13 +894,13 @@ msgid "ADVSNDMNU_OPNGAIN"
 msgstr "Amplificare"
 
 msgid "ADVSNDMNU_ADLCUSTOMBANK"
-msgstr "Utilizați propria bancă WOPN"
+msgstr "Utilizați propria bancă WOPL"
 
 msgid "ADVSNDMNU_ADLUSEWADBANK"
 msgstr "Folosește GENMIDI de la WAD drept bancă proprie"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
-msgstr "Fișier bancă WOPN"
+msgstr "Fișier bancă WOPL"
 
 msgid "ADVSNDMNU_OPNCUSTOMBANK"
 msgstr "Utilizați propria bancă WOPN"
@@ -1029,13 +968,13 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Creștere volum"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "OPTVAL_MAMEOPL2"
 msgstr ""
@@ -1058,9 +997,11 @@ msgstr ""
 msgid "OPTVAL_NUKEDOPL3"
 msgstr ""
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
 msgstr "Nuked OPL2-LLE (Extra greu!)"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
 msgstr "Nuked OPL3-LLE (Extra greu!)"
 
@@ -1071,9 +1012,6 @@ msgid "OPTVAL_NP2OPNA"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
-
-msgid "OPTVAL_PMDWINOPNA"
 msgstr ""
 
 msgid "OPTVAL_OPALOPL3"
@@ -1188,13 +1126,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Paletă"
@@ -1269,10 +1207,11 @@ msgid "GLPREFMNU_SECLIGHTMODE"
 msgstr "Mod iluminare sectorial"
 
 msgid "GLPREFMNU_FOGMODE"
-msgstr "Modul ceței"
+msgstr "Mod ceață"
 
+#, fuzzy
 msgid "OPTVAL_RADIAL"
-msgstr "Circular"
+msgstr "Radial"
 
 msgid "OPTVAL_STANDARD"
 msgstr ""
@@ -1284,7 +1223,7 @@ msgid "GLTEXMNU_ANISOTROPIC"
 msgstr "Filtrare Anizotropă"
 
 msgid "OPTVAL_NONENEARESTMIPMAP"
-msgstr "Nu (cel mai apropiat nivel MIP)"
+msgstr "Nu (cel mai apropiat nivel mip)"
 
 msgid "OPTVAL_NONELINEARMIPMAP"
 msgstr "Nu (nivel mip liniar)"
@@ -1316,12 +1255,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr "Setări Texturi"
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Texturi activate"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Texturi de înaltă rezoluție"
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Mod de Redimensionare de Înaltă Calitate"
 
@@ -1349,12 +1282,6 @@ msgstr "Preîncărcarcă texturile GL"
 msgid "VIDMNU_TITLE"
 msgstr "Mod Video"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Redimensionat (Cel mai apropiat)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Redimensionat (Liniar)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "Ecran Parțial"
 
@@ -1370,17 +1297,11 @@ msgstr "Ecran Complet"
 msgid "VIDMNU_HIDPI"
 msgstr "Suport Retina/HiDPI"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "Aspect Imagine"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Forțează aspectul imaginii"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Forțează tipul proporțiilor"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Activează formatul 5:4"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Scară rezoluție"
@@ -1466,14 +1387,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "API Video Preferat"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Combină Alt/Ctrl/Shift stânga+dreapta"
@@ -1502,11 +1423,12 @@ msgstr "Rotație salvări automate"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Număr salvări rapide în rotație"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Dezactivează Scara Nouă a Meniurilor"
 
 msgid "MISCMNU_PAUSEINBACKGROUND"
-msgstr "Pauză dacă jocul este minimizat."
+msgstr "Pauză dacă jocul este minimizat"
 
 msgid "HUDMNU_CROSSHAIR"
 msgstr "Țintă implicită"
@@ -1544,95 +1466,6 @@ msgstr "Editează Mediul"
 
 msgid "REVMNU_NEW"
 msgstr "Mediu Nou"
-
-msgid "REVMNU_REVERT"
-msgstr "Revenire la setările anterioare"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr ""
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_ROOM"
-msgstr ""
-
-msgid "REVMNU_ROOM_HF"
-msgstr ""
-
-msgid "REVMNU_ROOM_LF"
-msgstr ""
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_REVERB"
-msgstr ""
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_DENSITY"
-msgstr ""
 
 msgid "REVMNU_Reflections_Scale"
 msgstr ""
@@ -1674,7 +1507,7 @@ msgid "REVMNU_Create"
 msgstr "Creează"
 
 msgid "REVMNU_Save"
-msgstr "Salvează..."
+msgstr "Salvează…"
 
 msgid "REVMNU_File_name"
 msgstr "Nume fișier"
@@ -1688,9 +1521,6 @@ msgstr "Setări Vulkan (În curs de testare)"
 msgid "VK_TITLE"
 msgstr "Setări Vulkan"
 
-msgid "VKMNU_ENABLE"
-msgstr "Activează Modul Video Vulkan"
-
 msgid "VKMNU_DEVICE"
 msgstr "ID Dispozitiv Vulkan"
 
@@ -1701,26 +1531,22 @@ msgid "VK_WARNING"
 msgstr "Atenție: Modul Vulkan este încă în curs de testare!"
 
 msgid "VK_RESTART"
-msgstr "Aceste setări necesită o repornire pentru a putea fi aplicate"
-
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Selectare Dispozitiv Vulkan"
+msgstr "Aceste setări necesită o repornire pentru a putea fi aplicate."
 
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Vechiul xBRZ"
@@ -1738,123 +1564,12 @@ msgid "OS_NO_RESULTS"
 msgstr "Niciun rezultat găsit."
 
 msgid "OS_LABEL"
-msgstr "Caută:"
-
-msgid "TXT_OBITUARY1"
-msgstr "%k l-a dezosat pe %o ca pe un pește"
-
-msgid "TXT_OBITUARY2"
-msgstr "%k l-a castrat pe %o"
-
-msgid "TXT_OBITUARY3"
-msgstr "%k l-a transformat în cremă pe %o"
-
-msgid "TXT_OBITUARY4"
-msgstr "%k l-a decimat pe %o"
-
-msgid "TXT_OBITUARY5"
-msgstr "%k l-a distrus pe %o"
-
-msgid "TXT_OBITUARY6"
-msgstr "%k l-a feliat pe %o"
-
-msgid "TXT_OBITUARY7"
-msgstr "%k l-a eviscerat pe %o"
-
-msgid "TXT_OBITUARY8"
-msgstr "%k l-a făcut plat pe %o"
-
-msgid "TXT_OBITUARY9"
-msgstr "%k i-a făcut jucătorului %o o Justiție Anală"
-
-msgid "TXT_OBITUARY10"
-msgstr "%k i-a dat NeBuNiE AnAlĂ jucătorului %o"
-
-msgid "TXT_OBITUARY11"
-msgstr "%k l-a omorât pe %o"
-
-msgid "TXT_OBITUARY12"
-msgstr "%k a facut tocană din %o"
-
-msgid "TXT_OBITUARY13"
-msgstr "%k a fost masacrat de către %o"
-
-msgid "TXT_OBITUARY14"
-msgstr "%k l-a mutilat pe %o"
-
-msgid "TXT_OBITUARY15"
-msgstr "%k l-a transformat într-un top de hârtie pe %o"
-
-msgid "TXT_OBITUARY16"
-msgstr "%k i-a făcut jucătorului %o un nou orificiu"
-
-msgid "TXT_OBITUARY17"
-msgstr "%k l-a măcelărit pe %o"
-
-msgid "TXT_OBITUARY18"
-msgstr "%k l-a spart pe %o"
-
-msgid "TXT_OBITUARY19"
-msgstr "%k l-a sodomizat pe %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "%k l-a împrăștiat pe %o"
-
-msgid "TXT_OBITUARY21"
-msgstr "%k l-a strivit pe %o"
-
-msgid "TXT_OBITUARY22"
-msgstr "%k l-a strâns de gât pe %o"
-
-msgid "TXT_OBITUARY23"
-msgstr "%k l-a risipit pe %o"
-
-msgid "TXT_OBITUARY24"
-msgstr "%k l-a băgat în sac pe %o"
-
-msgid "TXT_OBITUARY25"
-msgstr "%k l-a trimis pe %o în Infern"
-
-msgid "TXT_OBITUARY26"
-msgstr "%k l-a prăjit pe %o"
-
-msgid "TXT_OBITUARY27"
-msgstr "%k l-a adulmecat pe %o"
-
-msgid "TXT_OBITUARY28"
-msgstr "%k a pus furtunul pe %o"
-
-msgid "TXT_OBITUARY29"
-msgstr "%k l-a pulverizat pe %o"
-
-msgid "TXT_OBITUARY30"
-msgstr "%k l-a transformat pe %o în mâncare de câini"
-
-msgid "TXT_OBITUARY31"
-msgstr "%k îl bate pe %o ca pe jigodie"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o e excrement"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o e hamburger"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o a suferit o separație de șcrot"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o a voluntariat pentru controlul populației"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o s-a sinucis"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o a primit Premiul Darwin"
+msgstr "Căutare:"
 
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr ""
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1887,41 +1602,11 @@ msgstr "Doar modificat"
 msgid "TXT_UNKNOWN"
 msgstr "Necunoscut"
 
-msgid "OPTVAL_HUD"
-msgstr "Interfață"
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "Hartă Computerizată"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "Interfață + Hartă Computerizată"
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Această salvare necesită următoarele fișiere"
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Setări multiplayer"
-
-msgid "OPTMNU_INPUT"
-msgstr "Setări de Intrare"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Setări de Sistem"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Setări de Lumină"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Setări Sprite"
-
 msgid "GLPREFMNU_CORONAS"
 msgstr "Coroane"
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Aspect"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Setări de Afișare Avansate"
 
 msgid "PICKER_SELECT"
 msgstr "Selectați ce joc să rulați."
@@ -2015,7 +1700,7 @@ msgid "PICKER_TAB_MULTI"
 msgstr "Joc Online"
 
 msgid "PICKER_LOADSAVE"
-msgstr "Încarcă Salvarea"
+msgstr "Încarcă Salvarea:"
 
 msgid "PICKER_REMSAVE"
 msgstr "Reține Salvarea"
@@ -2026,21 +1711,6 @@ msgstr "Găzduiește"
 
 msgid "PICKER_JOIN"
 msgstr "Alătură-te"
-
-msgid "PICKER_NETMODE"
-msgstr "Setare modul:"
-
-msgid "PICKER_NETAUTO"
-msgstr "Auto (recomandat)"
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr "Server de Loturi"
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr "De la Persoană-la-Persoană"
 
 msgid "PICKER_NETRATE"
 msgstr "Rată de Timp Pachete:"
@@ -2088,7 +1758,7 @@ msgid "PICKER_TEAMHINT"
 msgstr "255 = Aleatoriu"
 
 msgid "PICKER_IP"
-msgstr "IP Server"
+msgstr "IP Server:"
 
 msgid "PICKER_TDMLABEL"
 msgstr "Deathmatch în Echipă:"

@@ -1,0 +1,182 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-03-16 23:10+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/glossary/"
+"ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+msgid "ON"
+msgstr "켜짐"
+
+msgid "OFF"
+msgstr "끔"
+
+msgid "MIDI"
+msgstr "MIDI"
+
+msgid "FluidSynth"
+msgstr "FluidSynth"
+
+msgid "Freeverb"
+msgstr "프리버브"
+
+msgid "ADLMidi"
+msgstr "ADLMidi"
+
+msgid "OPNMidi"
+msgstr "OPNMidi"
+
+msgid "WildMidi"
+msgstr "WildMidi"
+
+msgid "Timidity"
+msgstr "Timidity"
+
+msgid "libXMP"
+msgstr "libXMP"
+
+msgid "Dumb"
+msgstr "Dumb"
+
+msgid "Chip-o-matic"
+msgstr "칩-오-매틱"
+
+msgid "MAME"
+msgstr "마메"
+
+msgid "OPL2"
+msgstr "OPL2"
+
+msgid "DOSBox"
+msgstr "도스박스"
+
+msgid "OPL3"
+msgstr "OPL3"
+
+msgid "Java"
+msgstr "자바"
+
+msgid "ESFMu"
+msgstr "ESFMu"
+
+msgid "YMFM"
+msgstr "YMFM"
+
+msgid "Nuked"
+msgstr "Nuked"
+
+msgid "YM2612"
+msgstr "YM2612"
+
+msgid "Neko Project II Kai"
+msgstr "Neko Project II Kai"
+
+msgid "OPNA"
+msgstr "OPNA"
+
+msgid "YM2608"
+msgstr "YM2608"
+
+msgid "Opal"
+msgstr "Opal"
+
+msgid "YM3438"
+msgstr "YM3438"
+
+msgid "OPN2"
+msgstr "OPN2"
+
+msgid "YMF276"
+msgstr "YMF276"
+
+msgid "GENS"
+msgstr "GENS"
+
+msgid "Uncharted 2"
+msgstr "Uncharted 2"
+
+msgid "Reinhard"
+msgstr "Reinhard"
+
+msgid "Hejl-Dawson"
+msgstr "Hejl-Dawson"
+
+msgid "OpenGL"
+msgstr "OpenGL"
+
+msgid "Vulkan"
+msgstr "벌칸"
+
+msgid "OpenGL ES"
+msgstr "OpenGL ES"
+
+msgid "ScaleNx"
+msgstr "ScaleNx"
+
+msgid "ZDoom"
+msgstr "Z둠"
+
+msgid "NormalNx"
+msgstr "NormalNx"
+
+msgid "hqNx"
+msgstr "hqNx"
+
+msgid "xBRZ"
+msgstr "xBRZ"
+
+msgid "Doom"
+msgstr "둠"
+
+msgid "Boom"
+msgstr "붐"
+
+msgid "Strife"
+msgstr "스트라이프"
+
+msgid "Hexen"
+msgstr "헥센"
+
+msgid "Heretic"
+msgstr "헤러틱"
+
+msgid "Chex"
+msgstr "첵스"
+
+msgid "Press Y or N"
+msgstr "Y키 또는 N키를 누르시오"
+
+msgid "Press a key"
+msgstr "키를 누르시오"
+
+msgid "WOPN"
+msgstr "WOPN"
+
+msgid "WOPL"
+msgstr "WOPL"
+
+msgid "LLE"
+msgstr "LLE"
+
+msgid "DMX"
+msgstr "DMX"
+
+msgid "MMX"
+msgstr "MMX"
+
+msgid "Discord"
+msgstr "Discord"
+
+msgid "MBF"
+msgstr "마린의 절친한 친구"
+
+msgid "MBF21"
+msgstr "모더의 절친한 친구"

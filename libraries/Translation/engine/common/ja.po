@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:51+0000\n"
+"PO-Revision-Date: 2026-03-14 22:34+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/uzdoom/common/"
 "ja/>\n"
@@ -11,11 +11,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: ja jp\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
-msgstr "YかNで答えろ"
+msgstr "YかNで答えろ。"
 
 msgid "TXT_YES"
 msgstr "はい"
@@ -27,13 +26,10 @@ msgid "SAVEDEAD"
 msgstr ""
 "プレイ中でないとセーブできない!\n"
 "\n"
-"何かキーを押せ"
+"何かキーを押せ。"
 
 msgid "SAFEMESSAGE"
 msgstr "本当に実行するのか?"
-
-msgid "NOTSET"
-msgstr "セットされてない"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -41,7 +37,7 @@ msgstr ""
 "\n"
 "'%s'\n"
 "\n"
-"Y か N で答えろ"
+"YかNで答えろ。"
 
 msgid "QLPROMPT"
 msgstr ""
@@ -49,7 +45,7 @@ msgstr ""
 "\n"
 "'%s'\n"
 "\n"
-"Y か N で答えろ"
+"YかNで答えろ。"
 
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
@@ -74,7 +70,7 @@ msgid "GGSAVED"
 msgstr "セーブ完了。"
 
 msgid "SAVECOMMENT_TIME"
-msgstr "時間\n"
+msgstr "時間"
 
 msgid "MNU_LOADGAME"
 msgstr "ロード"
@@ -86,9 +82,7 @@ msgid "MNU_NOPICTURE"
 msgstr "画像無し"
 
 msgid "MNU_DIFFVERSION"
-msgstr ""
-"別バージョンの\n"
-"データ"
+msgstr "別バージョンの データ"
 
 msgid "MNU_NOFILES"
 msgstr "ファイル無し"
@@ -241,17 +235,11 @@ msgstr "アクション"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "アクション操作設定"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "チャット"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "マルチプレイヤー"
 
 msgid "CNTRLMNU_SAY"
 msgstr "発言"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "チャット操作設定"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "武器操作設定"
@@ -368,9 +356,6 @@ msgstr "背後視点"
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "画面キャプチャ"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "コンソールを開く"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "ポーズ"
 
@@ -381,7 +366,7 @@ msgid "CNTRLMNU_DISPLAY_DEC"
 msgstr "画面サイズを縮小"
 
 msgid "CNTRLMNU_OPEN_HELP"
-msgstr "ヘルプを開く\n"
+msgstr "ヘルプを開く"
 
 msgid "CNTRLMNU_OPEN_SAVE"
 msgstr "セーブメニューを開く"
@@ -409,9 +394,6 @@ msgstr "メッセージ表示の切替"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "ゲームを終了"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "ガンマ値を調整"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "マウスの使用"
@@ -441,7 +423,7 @@ msgid "MOUSEMNU_MOUSELOOKSPEED"
 msgstr "上下視点速度"
 
 msgid "MOUSEMNU_FORWBACKSPEED"
-msgstr "前進/後退速度\n"
+msgstr "前進/後退速度"
 
 msgid "MOUSEMNU_STRAFESPEED"
 msgstr "横移動速度"
@@ -531,19 +513,21 @@ msgstr "デッドゾーン"
 msgid "JOYMNU_NOAXES"
 msgstr "軸構成を無効"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "無し"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "旋回"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "視点上下"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "前進"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "横移動"
 
@@ -594,9 +578,6 @@ msgstr "苔"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "淡"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "葵"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "空"
@@ -664,23 +645,11 @@ msgstr "垂直同期"
 msgid "DSPLYMNU_MODELS"
 msgstr "モデル"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "照準スケール"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "ステータススケール"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "メッセージ類"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "メッセージを中央に"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "取得時等の文を明滅"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "メッセージスケール"
 
 msgid "MNU_COLORPICKER"
 msgstr "色選択"
@@ -702,15 +671,6 @@ msgstr "カスタム色を決める"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "カスタム色を初期化"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "サウンド有効"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "音楽有効"
-
-msgid "OPTVAL_4000HZ"
-msgstr ""
 
 msgid "OPTVAL_8000HZ"
 msgstr ""
@@ -808,9 +768,6 @@ msgstr "ランダマイズ ピッチ"
 msgid "SNDMNU_CHANNELS"
 msgstr "サウンド チャンネル"
 
-msgid "SNDMNU_BACKEND"
-msgstr "サウンド バックエンド"
-
 msgid "SNDMNU_OPENAL"
 msgstr "OpenAL オプション"
 
@@ -824,10 +781,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "モジュールリプレイヤー オプション"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Midi再生のオプション"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "メニューでのサウンド"
+msgstr "MIDI再生のオプション"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "高度なサウンドオプション"
@@ -857,7 +811,7 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "MIDI ボイス"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "グローバル"
@@ -867,9 +821,6 @@ msgstr "フリーバーブ"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "グローバル フリーバーブ"
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "パッチ セット"
 
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "ゲイン"
@@ -884,25 +835,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr "コーラス"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Timidity コンフィグファイル"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "相対音量"
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "WildMidi コンフィグファイル"
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "構成選択"
@@ -912,9 +854,6 @@ msgstr "高度なリサンプリング"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr ""
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "OPL エミュレートコア"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "PCMレートでエミュレート実行"
@@ -939,9 +878,6 @@ msgstr "OPN2 エミュレート コア"
 
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "GUS エミュレーション"
-
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "GUS コンフィグファイル"
 
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "DMXGUS ランプを読む"
@@ -1030,10 +966,10 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "音量ランピング"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
 msgstr "チップ オー マチック"
@@ -1072,9 +1008,6 @@ msgid "OPTVAL_NP2OPNA"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
-
-msgid "OPTVAL_PMDWINOPNA"
 msgstr ""
 
 msgid "OPTVAL_OPALOPL3"
@@ -1189,13 +1122,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "パレット"
@@ -1317,12 +1250,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr "テクスチャー オプション"
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "テクスチャー有効"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "ハイレゾ テクスチャー有効"
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "高品質リサイズ モード"
 
@@ -1330,7 +1257,7 @@ msgid "GLTEXMNU_HQRESIZEMULT"
 msgstr "高品質リサイズ乗数"
 
 msgid "GLTEXMNU_HQRESIZEWARN"
-msgstr "このモードでは %d 倍以上のビデオメモリが必要です!"
+msgstr "このモードでは %d 倍以上のビデオメモリが必要です"
 
 msgid "GLTEXMNU_RESIZETEX"
 msgstr "テクスチャー類のリサイズ"
@@ -1350,12 +1277,6 @@ msgstr "プリキャッシュGLテクスチャー"
 msgid "VIDMNU_TITLE"
 msgstr "ビデオ調整"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "スケーリング (最寄り)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "スケーリング (リニア)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "レターボックス"
 
@@ -1371,17 +1292,11 @@ msgstr "全画面"
 msgid "VIDMNU_HIDPI"
 msgstr "Retina/HiDPI サポート"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "アスペクト比"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "アスペクト比に従う"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "比率の形式"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "5:4アスペクト比を可能にする"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "画面スケール"
@@ -1467,20 +1382,22 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "優先レンダリングAPI"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
+#, fuzzy
 msgid "MISCMNU_MERGEKEYS"
-msgstr "左と右のALT/CTRL/SHIFTキーを統合"
+msgstr "左と右のAlt/Ctrl/Shiftキーを統合"
 
+#, fuzzy
 msgid "MISCMNU_WINFULLSCREENTOGGLE"
-msgstr "ALTとENTERで全画面に切り替え"
+msgstr "AltとEnterで全画面に切り替え"
 
 msgid "MISCMNU_MACFULLSCREENTOGGLE"
 msgstr "Ctrl + Fキーで全画面表示"
@@ -1503,6 +1420,7 @@ msgstr "クイックセーブ間隔"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "間隔クイックセーブの数"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "メニュー画面を伸縮させない"
 
@@ -1546,95 +1464,6 @@ msgstr "反響編集"
 msgid "REVMNU_NEW"
 msgstr "新規反響設定"
 
-msgid "REVMNU_REVERT"
-msgstr "設定を戻す"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "反響サイズ"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "反響伝播"
-
-msgid "REVMNU_ROOM"
-msgstr ""
-
-msgid "REVMNU_ROOM_HF"
-msgstr ""
-
-msgid "REVMNU_ROOM_LF"
-msgstr ""
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Decay HF比率"
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Decay LF比率"
-
-msgid "REVMNU_REFLECTIONS"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Reflections X定位"
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Reflections Y定位"
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Reflections Z定位"
-
-msgid "REVMNU_REVERB"
-msgstr ""
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Reverb X定位"
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Reverb Y定位"
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Reverb Z定位"
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF参照値"
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF参照値"
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_DENSITY"
-msgstr "密度"
-
 msgid "REVMNU_Reflections_Scale"
 msgstr "Reflections音階"
 
@@ -1675,7 +1504,7 @@ msgid "REVMNU_Create"
 msgstr "作成"
 
 msgid "REVMNU_Save"
-msgstr "セーブする..."
+msgstr "セーブする…"
 
 msgid "REVMNU_File_name"
 msgstr "ファイル名"
@@ -1689,9 +1518,6 @@ msgstr "Vulkan機能オプション(実験的)"
 msgid "VK_TITLE"
 msgstr "Vulkan機能オプション"
 
-msgid "VKMNU_ENABLE"
-msgstr "Vulkanを有効化"
-
 msgid "VKMNU_DEVICE"
 msgstr "Vulkanデバイス ID"
 
@@ -1704,24 +1530,20 @@ msgstr "警告：Vulkanレンダラーは実験段階です!"
 msgid "VK_RESTART"
 msgstr "これらのオプションを有効にするには再起動が必要です。"
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Vulkanデバイスの選択"
-
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "旧xBRZ"
@@ -1740,117 +1562,6 @@ msgstr "見つかりませんでした。"
 
 msgid "OS_LABEL"
 msgstr "検索:"
-
-msgid "TXT_OBITUARY1"
-msgstr "%k は %o の骨を魚のように引っこ抜いた。"
-
-msgid "TXT_OBITUARY2"
-msgstr "%k は %o を去勢した。"
-
-msgid "TXT_OBITUARY3"
-msgstr "%k は %o に反吐ブチ撒けさせた。"
-
-msgid "TXT_OBITUARY4"
-msgstr "%k は %o の居場所を間引いた。"
-
-msgid "TXT_OBITUARY5"
-msgstr "%k は %o を完全に破壊した。"
-
-msgid "TXT_OBITUARY6"
-msgstr "%k は %o を賽の目に切った。"
-
-msgid "TXT_OBITUARY7"
-msgstr "%k は %o の臓物を引きずり出した。"
-
-msgid "TXT_OBITUARY8"
-msgstr "%k は %o をぶっ潰した。"
-
-msgid "TXT_OBITUARY9"
-msgstr "%k は %o のケツにぶち込んだ。"
-
-msgid "TXT_OBITUARY10"
-msgstr "%k は %o のケツをガバガバにした。"
-
-msgid "TXT_OBITUARY11"
-msgstr "%k は %o をブッ殺した。"
-
-msgid "TXT_OBITUARY12"
-msgstr "%k は %o をミンチにした。"
-
-msgid "TXT_OBITUARY13"
-msgstr "%k は %o を虐殺した。"
-
-msgid "TXT_OBITUARY14"
-msgstr "%k は %o をバラバラ死体にした。"
-
-msgid "TXT_OBITUARY15"
-msgstr "%k は %o の穴を大きく広げた。"
-
-msgid "TXT_OBITUARY16"
-msgstr "%k は %o を切り裂いて新しい穴を作ってあげた。"
-
-msgid "TXT_OBITUARY17"
-msgstr "%k は %o を屠殺した。"
-
-msgid "TXT_OBITUARY18"
-msgstr "%k は %o をぶっ飛ばした。"
-
-msgid "TXT_OBITUARY19"
-msgstr "%o は %k にカマを掘られた。 "
-
-msgid "TXT_OBITUARY20"
-msgstr "%k は %o にばら撒かれた。"
-
-msgid "TXT_OBITUARY21"
-msgstr "%k は %o に潰された。"
-
-msgid "TXT_OBITUARY22"
-msgstr "%k は %o に絞られた。"
-
-msgid "TXT_OBITUARY23"
-msgstr "%k は %o に消された。"
-
-msgid "TXT_OBITUARY24"
-msgstr "%k は %o を死体袋にした。"
-
-msgid "TXT_OBITUARY25"
-msgstr "%k は %o を地獄に送った。"
-
-msgid "TXT_OBITUARY26"
-msgstr "%k は %o を焼却した。"
-
-msgid "TXT_OBITUARY27"
-msgstr "%k は %o を処刑した。"
-
-msgid "TXT_OBITUARY28"
-msgstr "%k は %o にぶっかけた。"
-
-msgid "TXT_OBITUARY29"
-msgstr "%k は %o を撒き散らした。"
-
-msgid "TXT_OBITUARY30"
-msgstr "%k は %o を犬の餌にした。"
-
-msgid "TXT_OBITUARY31"
-msgstr "%k は %o を狂犬の様に扱った。"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o はもはや排泄物のようだ。"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o はハンバーガーになった。"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o の陰嚢は剥離していた。"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o は人口削減政策の実験台に志願した。"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o は勝手にくたばった。"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o にはダーウィン賞が授与された。"
 
 # This is not a text to be translated but an engine switch for complex
 # languages.
@@ -1887,41 +1598,11 @@ msgstr "モディファイのみ"
 msgid "TXT_UNKNOWN"
 msgstr "不明"
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "オートマップ"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "HUD+オートマップ"
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "このセーブデータには 必要なファイルがある"
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "マルチプレイ オプション"
-
-msgid "OPTMNU_INPUT"
-msgstr "入力オプション"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "システムオプション"
-
-msgid "OPTMNU_LIGHT"
-msgstr "光源オプション"
-
-msgid "OPTMNU_SPRITE"
-msgstr "スプライトオプション"
-
 msgid "GLPREFMNU_CORONAS"
 msgstr "光冠"
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "アピアランス"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "高度なディスプレイオプション"
 
 msgid "PICKER_SELECT"
 msgstr "実行するゲームファイルを選択します。"
@@ -1956,8 +1637,9 @@ msgstr "ブライトマップ"
 msgid "PICKER_WIDESCREEN"
 msgstr "ワイドスクリーン"
 
+#, fuzzy
 msgid "PICKER_ADDPARM"
-msgstr "追加パラメータ"
+msgstr "追加パラメータ:"
 
 msgid "PICKER_WELCOME"
 msgstr "ようこそ: %s!"
@@ -1984,8 +1666,9 @@ msgstr "モジュール リプレイヤー"
 
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
+#, fuzzy
 msgid "JOYMNU_JOYENABLEINBACKGROUND"
-msgstr "GZD外の時にコントローラー入力を許可"
+msgstr "ゲーム外でコントローラー入力を許可する"
 
 # Order to sort the list of saved games in the save and load game menu. This
 # used to only be alphabetical.
@@ -2027,23 +1710,8 @@ msgstr "ホスト"
 msgid "PICKER_JOIN"
 msgstr "参加"
 
-msgid "PICKER_NETMODE"
-msgstr "ネットワークモード"
-
-msgid "PICKER_NETAUTO"
-msgstr "自動 (推奨)"
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr "パケットサーバー"
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr "P2P (直接通信)"
-
 msgid "PICKER_NETRATE"
-msgstr "パケットTicレート"
+msgstr "パケットTicレート:"
 
 # Sends out duplicate copies of packets to help with spotty connections e.g.
 # wifi.
@@ -2098,7 +1766,7 @@ msgid "TXT_SAYTEAM"
 msgstr "発言 (チーム):"
 
 msgid "MISCMNU_DISCORDRPC"
-msgstr "Discordに情報を表示 (DRP)"
+msgstr "Discordに情報を表示"
 
 msgid "JOYMNU_TURNSPEED"
 msgstr "旋回速度"

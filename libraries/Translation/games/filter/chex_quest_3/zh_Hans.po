@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-31 22:46+0000\n"
+"PO-Revision-Date: 2026-02-16 03:12+0000\n"
 "Last-Translator: yhmtxt <yhmtxt@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/doom-engine-games/chex-quest-3-filter/zh_Hans/>\n"
@@ -12,7 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: chs\n"
 
 # Flem = phlegm
 msgid "GOTBLUEFLEM"
@@ -98,38 +97,30 @@ msgstr "E3M4: 省级公园"
 msgid "HUSTR_E3M5"
 msgstr "E3M5: 陨石飞船"
 
-#, fuzzy
 msgid "CC_ZOMBIE"
-msgstr "普种"
+msgstr "常见型"
 
-#, fuzzy
 msgid "CC_SHOTGUN"
-msgstr "双足种"
+msgstr "双足型"
 
-#, fuzzy
 msgid "CC_IMP"
-msgstr "有盔甲的双足种"
+msgstr "披甲双足型"
 
-#, fuzzy
 msgid "CC_DEMON"
-msgstr "疾行种"
+msgstr "阔步型"
 
 msgid "CC_LOST"
 msgstr "黏液地雷"
 
-#, fuzzy
 msgid "CC_CACO"
-msgstr "超级独眼种"
+msgstr "超级独眼型"
 
-#, fuzzy
 msgid "CC_BARON"
-msgstr "巨形种"
+msgstr "极巨型"
 
-#, fuzzy
 msgid "CC_SPIDER"
 msgstr "黏液怪物"
 
-#, fuzzy
 msgid "CC_CYBER"
 msgstr "鼻涕领主"
 
@@ -167,29 +158,28 @@ msgid "OB_KILLEDSELF"
 msgstr "%o被跨维度黏液击中了！"
 
 msgid "OB_STRIDICUS"
-msgstr ""
+msgstr "%o被阔步型黏液怪喷满了鼻涕。"
 
 msgid "OB_FLEMMINE"
-msgstr ""
+msgstr "%o被黏液地雷黏住了。"
 
 msgid "OB_SUPERCYCLOPTIS"
-msgstr ""
+msgstr "%o被超级独眼型黏液怪喷满了黏液。"
 
-#, fuzzy
 msgid "OB_MAXIMUS"
-msgstr "%o被Maximus击败了。"
+msgstr "%o被极巨型黏液怪击败了。"
 
 msgid "OB_LARVA"
-msgstr ""
+msgstr "%o被黏液怪幼体吐满了黏液。"
 
 msgid "OB_QUADRUMPUS"
-msgstr ""
+msgstr "%o被四臂型黏液怪喷满了黏液。"
 
 msgid "OB_FLEMBOMINATION"
-msgstr ""
+msgstr "%o被黏液怪物击败了。"
 
 msgid "OB_SNOTFOLUS"
-msgstr ""
+msgstr "%o被鼻涕领主击败了。"
 
 #, fuzzy
 msgid "OB_MPR_SPLASH"
@@ -215,14 +205,14 @@ msgstr ""
 "不幸的是，你说对了。\n"
 "因为当你返回家园时，\n"
 "你发现黏液怪已经用某种方法尾随至此。\n"
-"准备游玩Chex任务2：Chex城内的恐惧！"
+"准备游玩Chex任务2：Chex市内的恐惧！"
 
 #, fuzzy
 msgid "E2TEXT"
 msgstr ""
 "你将集结在下水道的\n"
 "残余黏液怪传送走了。\n"
-"Chex城得救了。\n"
+"Chex市得救了。\n"
 "看起来黏液怪的威胁终于结束了。\n"
 "\n"
 "\n"
@@ -236,8 +226,9 @@ msgstr ""
 "正笔直地砸向谷物星球！\n"
 "\n"
 "准备游玩\n"
-"Chex 任务3：入侵！"
+"Chex任务3：入侵！"
 
+#, fuzzy
 msgid "E3TEXT"
 msgstr ""
 "随着最后一场爆炸，\n"
@@ -259,7 +250,7 @@ msgid "M_EPI1"
 msgstr "巴佐伊克星上的救援"
 
 msgid "M_EPI2"
-msgstr "Chex城内的恐惧"
+msgstr "Chex市内的恐惧"
 
 msgid "M_EPI3"
 msgstr "入侵！"

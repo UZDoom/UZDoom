@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-31 02:00+0000\n"
-"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"PO-Revision-Date: 2026-03-21 03:02+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "doom-engine-games/hexen-deathkings/en_GB/>\n"
 "Language: en_GB\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: eng enc ena enz eni ens enj enb enl ent enw\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "TXT_HEXDD_MAP53"
 msgstr "Armoury"
@@ -39,3 +38,118 @@ msgstr ""
 "\n"
 "\n"
 "doesn't it?"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Ruined Village"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Blight"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Sump"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Catacomb"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Badlands"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Brackenwood"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Pyre"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Constable's Gate"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Treasury"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Market Place"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Ordeal"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Nave"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Chantry"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Abattoir"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Dark Watch"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Cloaca"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Ice Hold"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Dark Citadel"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Transit"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Over'n Under"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Deathfog"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Castle of Pain"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Sewer Pit"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "The Rose"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Surely the souls of the damned inhabit\n"
+"this world, for nothing fair or good\n"
+"could survive here for long.\n"
+"\n"
+"But what has passed before can only\n"
+"be a pale shadow of what bars your\n"
+"passage now: the dark citadel itself.\n"
+"\n"
+"The grim bulk of the cathedral blocks\n"
+"all but fragmentary glimpses of the\n"
+"citadel proper, but what can be seen\n"
+"speaks in sibilant whispers of cold,\n"
+"lingering death...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...for the fortunate."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Once again you find yourself in the\n"
+"great hall of the chaos sphere, as\n"
+"if no time had passed from when\n"
+"last you moved among these shadows.\n"
+"\n"
+"But something is eerily different,\n"
+"a silence where once had been soft\n"
+"whispers, a sense of being watched\n"
+"by hidden eyes...\n"
+"\n"
+"...eyes which shield a malefic\n"
+"intent."
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "The door is barred from the inside"

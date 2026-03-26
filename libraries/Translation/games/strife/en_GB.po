@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-30 18:28+0000\n"
-"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"PO-Revision-Date: 2026-02-21 00:26+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "doom-engine-games/strife/en_GB/>\n"
 "Language: en_GB\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: eng enc ena enz eni ens enj enb enl ent enw\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 
 msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
 msgstr "Leather armour"
@@ -66,7 +65,7 @@ msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
 msgstr "Shadow armour?"
 
 msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
-msgstr "Leather armour"
+msgstr "Leather armour."
 
 msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
 msgstr "Metal armour"
@@ -138,7 +137,7 @@ msgstr ""
 "descriptive as well as colourful."
 
 msgid "TXT_ILOG1102"
-msgstr ""
+msgstr "Find the Governor's mansion and talk to the Governor to get your reward"
 
 msgid "TXT_SUB_INTRO6"
 msgstr ""
@@ -161,3 +160,108 @@ msgid "TXT_SUB_LOG23"
 msgstr ""
 "Word from the boss is stand back when you whack the crystal, or else you'll "
 "end up mesquite-flavoured too."
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "AREA 1: Sanctuary"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "AREA 2: Town"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "AREA 3: Front Base"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "AREA 4: Power Station"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "AREA 5: Prison"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "AREA 6: Sewers"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "AREA 7: Castle"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "AREA 8: Audience Chamber"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "AREA 9: Castle: Programmer's Keep"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "AREA 10: New Front Base"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "AREA 11: Borderlands"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "AREA 12: The Temple of the Oracle"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "AREA 13: Catacombs"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "AREA 14: Mines"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "AREA 15: Fortress: Administration"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "AREA 16: Fortress: Bishop's Tower"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "AREA 17: Fortress: The Bailey"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "AREA 18: Fortress: Stores"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "AREA 19: Fortress: Security Complex"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "AREA 20: Factory: Receiving"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "AREA 21: Factory: Manufacturing"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "AREA 22: Factory: Forge"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "AREA 23: Order Commons"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "AREA 24: Factory: Conversion Chapel"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "AREA 25: Catacombs: Ruined Temple"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "AREA 26: Proving Grounds"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "AREA 27: The Lab"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "AREA 28: Alien Ship"
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Pass your ID through here for access."
+
+msgid "TXT_ILOG14"
+msgstr ""
+"OK, \"Trust no one\" is the name of the game! Let's get that prison pass "
+"from the Governor. Take the broken coupling to him."
+
+msgid "TXT_ILOG1009"
+msgstr ""
+"Use the pass Mourel gave you to get into the prison. Once inside, talk to "
+"Warden Montag. Find a way to free the prisoners."
+
+msgid "TXT_SUB_LOG14"
+msgstr ""
+"OK, \"Trust no one\" is the name of the game! Let's get that pass from the "
+"Governor and free those prisoners."
+
+msgid "TXT_SUB_LOG36"
+msgstr "That brick... Didn't we pass that brick? No..."

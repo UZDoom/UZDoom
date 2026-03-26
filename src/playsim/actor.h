@@ -1376,6 +1376,9 @@ public:
 	int RipLevelMin;
 	int RipLevelMax;
 
+	int MinRespawnTics; // id24 Minimal Nightmare respawn time
+	int RespawnDice; // id24
+
 	int ConversationRoot;				// THe root of the current dialogue
 	FStrifeDialogueNode* Conversation;	// [RH] The dialogue to show when this actor is "used."
 

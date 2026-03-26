@@ -2,16 +2,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:36+0000\n"
-"Last-Translator: Маркич <zurovmark61@gmail.com>\n"
-"Language-Team: English <https://hosted.weblate.org/projects/uzdoom/common/en/"
-">\n"
-"Language: en_US\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: \n"
 
 msgid "PRESSYN"
 msgstr ""
@@ -30,9 +28,6 @@ msgstr ""
 msgid "SAFEMESSAGE"
 msgstr ""
 
-msgid "NOTSET"
-msgstr ""
-
 msgid "QSPROMPT"
 msgstr ""
 "\n"
@@ -47,7 +42,6 @@ msgstr ""
 "\n"
 "\n"
 
-# This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr ""
 
@@ -88,7 +82,7 @@ msgid "MNU_NOFILES"
 msgstr ""
 
 msgid "MNU_DELETESG"
-msgstr "\n"
+msgstr ""
 
 msgid "OPTVAL_OFF"
 msgstr ""
@@ -127,6 +121,9 @@ msgid "OPTMNU_MISCELLANEOUS"
 msgstr ""
 
 msgid "OPTMNU_SOUND"
+msgstr ""
+
+msgid "ACCMNU_TITLE"
 msgstr ""
 
 msgid "OPTMNU_DISPLAY"
@@ -207,7 +204,6 @@ msgstr ""
 msgid "CNTRLMNU_MOUSELOOK"
 msgstr ""
 
-# Look doesn't change the aim! It only alters the view pitch
 msgid "CNTRLMNU_LOOKUP"
 msgstr ""
 
@@ -235,16 +231,10 @@ msgstr ""
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr ""
 
-msgid "CNTRLMNU_CHAT"
-msgstr ""
-
 msgid "MNU_MULTIPLAYER"
 msgstr ""
 
 msgid "CNTRLMNU_SAY"
-msgstr ""
-
-msgid "CNTRLMNU_CHAT_TITLE"
 msgstr ""
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
@@ -265,12 +255,9 @@ msgstr ""
 msgid "CNTRLMNU_PREVIOUSWEAPON"
 msgstr ""
 
-# Todo - make game specific
 msgid "CNTRLMNU_SLOT1"
 msgstr ""
 
-# only show appropriate slots per game
-#
 msgid "CNTRLMNU_SLOT2"
 msgstr ""
 
@@ -313,7 +300,6 @@ msgstr ""
 msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr ""
 
-# most are not used yet but will be
 msgid "MAPCNTRLMNU_TITLE"
 msgstr ""
 
@@ -362,9 +348,6 @@ msgstr ""
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr ""
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr ""
-
 msgid "CNTRLMNU_PAUSE"
 msgstr ""
 
@@ -402,9 +385,6 @@ msgid "CNTRLMNU_TOGGLE_MESSAGES"
 msgstr ""
 
 msgid "CNTRLMNU_MENU_QUIT"
-msgstr ""
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
 msgstr ""
 
 msgid "MOUSEMNU_ENABLEMOUSE"
@@ -503,7 +483,6 @@ msgstr ""
 msgid "JOYMNU_DISABLED1"
 msgstr ""
 
-# Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
 msgstr ""
 
@@ -588,9 +567,6 @@ msgstr ""
 msgid "TXT_COLOR_BEIGE"
 msgstr ""
 
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr ""
-
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr ""
 
@@ -657,34 +633,16 @@ msgstr ""
 msgid "DSPLYMNU_MODELS"
 msgstr ""
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr ""
-
-msgid "DSPLYMNU_BRIGHTNESS"
-msgstr ""
-
-msgid "DSPLYMNU_GAMMA"
-msgstr ""
-
-msgid "DSPLYMNU_CONTRAST"
-msgstr ""
-
-msgid "DSPLYMNU_SATURATION"
-msgstr ""
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr ""
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr ""
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr ""
 
-msgid "MSGMNU_PULSEMESSAGES"
+msgid "MSGMNU_MESSAGEQUEUE"
 msgstr ""
 
-msgid "MSGMNU_MESSAGESCALE"
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr ""
+
+msgid "MSGMNU_PULSEMESSAGES"
 msgstr ""
 
 msgid "MNU_COLORPICKER"
@@ -706,15 +664,6 @@ msgid "MAPCOLORMNU_TITLE"
 msgstr ""
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
-msgstr ""
-
-msgid "SNDMNU_SNDENABLED"
-msgstr ""
-
-msgid "SNDMNU_MUSENABLED"
-msgstr ""
-
-msgid "OPTVAL_4000HZ"
 msgstr ""
 
 msgid "OPTVAL_8000HZ"
@@ -813,9 +762,6 @@ msgstr ""
 msgid "SNDMNU_CHANNELS"
 msgstr ""
 
-msgid "SNDMNU_BACKEND"
-msgstr ""
-
 msgid "SNDMNU_OPENAL"
 msgstr ""
 
@@ -829,9 +775,6 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr ""
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr ""
-
-msgid "SNDMNU_MENUSOUND"
 msgstr ""
 
 msgid "ADVSNDMNU_TITLE"
@@ -873,9 +816,6 @@ msgstr ""
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr ""
 
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr ""
-
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr ""
 
@@ -897,16 +837,7 @@ msgstr ""
 msgid "ADVSNDMNU_OPNMIDI"
 msgstr ""
 
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr ""
-
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
 msgstr ""
 
 msgid "ADVSNDMNU_SELCONFIG"
@@ -916,9 +847,6 @@ msgid "ADVSNDMNU_ADVRESAMPLING"
 msgstr ""
 
 msgid "ADVSNDMNU_OPLBANK"
-msgstr ""
-
-msgid "ADVSNDMNU_ADLOPLCORES"
 msgstr ""
 
 msgid "ADVSNDMNU_RUNPCMRATE"
@@ -943,9 +871,6 @@ msgid "ADVSNDMNU_OPNCORES"
 msgstr ""
 
 msgid "ADVSNDMNU_GUSEMULATION"
-msgstr ""
-
-msgid "ADVSNDMNU_GUSCONFIG"
 msgstr ""
 
 msgid "ADVSNDMNU_DMXGUS"
@@ -978,8 +903,6 @@ msgstr ""
 msgid "OPTVAL_ALIASING"
 msgstr ""
 
-# This setting is duplicated threefold in order to allow for different
-# grammatical gender endings
 msgid "OPTVAL_LINEAR_1"
 msgstr ""
 
@@ -1077,9 +1000,6 @@ msgid "OPTVAL_NP2OPNA"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
-
-msgid "OPTVAL_PMDWINOPNA"
 msgstr ""
 
 msgid "OPTVAL_OPALOPL3"
@@ -1322,12 +1242,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr ""
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr ""
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr ""
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr ""
 
@@ -1355,12 +1269,6 @@ msgstr ""
 msgid "VIDMNU_TITLE"
 msgstr ""
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr ""
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr ""
-
 msgid "OPTVAL_LETTERBOX"
 msgstr ""
 
@@ -1376,16 +1284,10 @@ msgstr ""
 msgid "VIDMNU_HIDPI"
 msgstr ""
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr ""
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr ""
 
 msgid "VIDMNU_CROPASPECT"
-msgstr ""
-
-msgid "VIDMNU_5X4ASPECTRATIO"
 msgstr ""
 
 msgid "VIDMNU_SCALEMODE"
@@ -1439,8 +1341,6 @@ msgstr ""
 msgid "OPTVAL_NORMAL"
 msgstr ""
 
-# This describes vid_scalemode 1, which represents the lowest possible scaling
-# to fill the allocated screen area
 msgid "OPTVAL_LOWEST"
 msgstr ""
 
@@ -1477,7 +1377,6 @@ msgstr ""
 msgid "OPTVAL_VULKAN"
 msgstr ""
 
-# Rendering backend
 msgid "OPTVAL_OPENGLES"
 msgstr ""
 
@@ -1526,7 +1425,6 @@ msgstr ""
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr ""
 
-# copied from elsewhere
 msgid "OPTVAL_YES_STANDARD"
 msgstr ""
 
@@ -1549,95 +1447,6 @@ msgid "REVMNU_EDIT"
 msgstr ""
 
 msgid "REVMNU_NEW"
-msgstr ""
-
-msgid "REVMNU_REVERT"
-msgstr ""
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr ""
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_ROOM"
-msgstr ""
-
-msgid "REVMNU_ROOM_HF"
-msgstr ""
-
-msgid "REVMNU_ROOM_LF"
-msgstr ""
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_REVERB"
-msgstr ""
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_DENSITY"
 msgstr ""
 
 msgid "REVMNU_Reflections_Scale"
@@ -1694,9 +1503,6 @@ msgstr ""
 msgid "VK_TITLE"
 msgstr ""
 
-msgid "VKMNU_ENABLE"
-msgstr ""
-
 msgid "VKMNU_DEVICE"
 msgstr ""
 
@@ -1707,10 +1513,6 @@ msgid "VK_WARNING"
 msgstr ""
 
 msgid "VK_RESTART"
-msgstr ""
-
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
 msgstr ""
 
 msgid "OPTVAL_SCALENX"
@@ -1746,125 +1548,9 @@ msgstr ""
 msgid "OS_LABEL"
 msgstr ""
 
-msgid "TXT_OBITUARY1"
-msgstr ""
-
-msgid "TXT_OBITUARY2"
-msgstr ""
-
-msgid "TXT_OBITUARY3"
-msgstr ""
-
-msgid "TXT_OBITUARY4"
-msgstr ""
-
-msgid "TXT_OBITUARY5"
-msgstr ""
-
-msgid "TXT_OBITUARY6"
-msgstr ""
-
-msgid "TXT_OBITUARY7"
-msgstr ""
-
-msgid "TXT_OBITUARY8"
-msgstr ""
-
-msgid "TXT_OBITUARY9"
-msgstr ""
-
-msgid "TXT_OBITUARY10"
-msgstr ""
-
-msgid "TXT_OBITUARY11"
-msgstr ""
-
-msgid "TXT_OBITUARY12"
-msgstr ""
-
-msgid "TXT_OBITUARY13"
-msgstr ""
-
-msgid "TXT_OBITUARY14"
-msgstr ""
-
-msgid "TXT_OBITUARY15"
-msgstr ""
-
-msgid "TXT_OBITUARY16"
-msgstr ""
-
-msgid "TXT_OBITUARY17"
-msgstr ""
-
-msgid "TXT_OBITUARY18"
-msgstr ""
-
-msgid "TXT_OBITUARY19"
-msgstr ""
-
-msgid "TXT_OBITUARY20"
-msgstr ""
-
-msgid "TXT_OBITUARY21"
-msgstr ""
-
-msgid "TXT_OBITUARY22"
-msgstr ""
-
-msgid "TXT_OBITUARY23"
-msgstr ""
-
-msgid "TXT_OBITUARY24"
-msgstr ""
-
-msgid "TXT_OBITUARY25"
-msgstr ""
-
-msgid "TXT_OBITUARY26"
-msgstr ""
-
-msgid "TXT_OBITUARY27"
-msgstr ""
-
-msgid "TXT_OBITUARY28"
-msgstr ""
-
-msgid "TXT_OBITUARY29"
-msgstr ""
-
-msgid "TXT_OBITUARY30"
-msgstr ""
-
-msgid "TXT_OBITUARY31"
-msgstr ""
-
-msgid "TXT_SELFOBIT1"
-msgstr ""
-
-msgid "TXT_SELFOBIT2"
-msgstr ""
-
-msgid "TXT_SELFOBIT3"
-msgstr ""
-
-msgid "TXT_SELFOBIT4"
-msgstr ""
-
-msgid "TXT_SELFOBIT5"
-msgstr ""
-
-msgid "TXT_SELFOBIT6"
-msgstr ""
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
 msgid "USE_GENERIC_FONT"
 msgstr ""
 
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
 msgid "REQUIRED_CHARACTERS"
 msgstr ""
 
@@ -1892,40 +1578,10 @@ msgstr ""
 msgid "TXT_UNKNOWN"
 msgstr ""
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr ""
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr ""
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr ""
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr ""
-
-msgid "OPTMNU_INPUT"
-msgstr ""
-
-msgid "OPTMNU_SYSTEM"
-msgstr ""
-
-msgid "OPTMNU_LIGHT"
-msgstr ""
-
-msgid "OPTMNU_SPRITE"
-msgstr ""
-
 msgid "GLPREFMNU_CORONAS"
-msgstr ""
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr ""
-
-msgid "DSPLYMNU_ADVANCED"
 msgstr ""
 
 msgid "PICKER_SELECT"
@@ -1976,8 +1632,6 @@ msgstr ""
 msgid "PICKER_TAB_PLAY"
 msgstr ""
 
-# Option to enable or disable individual controllers/joysticks when
-# configuring it in the Controller Options menu
 msgid "JOYMNU_JOYENABLE"
 msgstr ""
 
@@ -1987,13 +1641,9 @@ msgstr ""
 msgid "MODMNU_REPLAYER"
 msgstr ""
 
-# This is enabled per-controller, it means to enable "this" controller in the
-# background when GZDoom is not in focus.
 msgid "JOYMNU_JOYENABLEINBACKGROUND"
 msgstr ""
 
-# Order to sort the list of saved games in the save and load game menu. This
-# used to only be alphabetical.
 msgid "MISCMNU_SAVEORDER"
 msgstr ""
 
@@ -2012,7 +1662,6 @@ msgstr ""
 msgid "PICKER_REMPARM"
 msgstr ""
 
-# For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
 msgstr ""
 
@@ -2025,33 +1674,15 @@ msgstr ""
 msgid "PICKER_REMSAVE"
 msgstr ""
 
-# As in, to host a game.
 msgid "PICKER_HOST"
 msgstr ""
 
 msgid "PICKER_JOIN"
 msgstr ""
 
-msgid "PICKER_NETMODE"
-msgstr ""
-
-msgid "PICKER_NETAUTO"
-msgstr ""
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr ""
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr ""
-
 msgid "PICKER_NETRATE"
 msgstr ""
 
-# Sends out duplicate copies of packets to help with spotty connections e.g.
-# wifi.
 msgid "PICKER_NETBACKUP"
 msgstr ""
 
@@ -2067,7 +1698,6 @@ msgstr ""
 msgid "PICKER_TDM"
 msgstr ""
 
-# Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
 msgstr ""
 
@@ -2080,15 +1710,12 @@ msgstr ""
 msgid "PICKER_PORT"
 msgstr ""
 
-# Max number of players.
 msgid "PICKER_PLAYERHINT"
 msgstr ""
 
-# GZDoom's default port.
 msgid "PICKER_PORTHINT"
 msgstr ""
 
-# Team 255 randomizes which team the player gets put on.
 msgid "PICKER_TEAMHINT"
 msgstr ""
 
@@ -2098,7 +1725,6 @@ msgstr ""
 msgid "PICKER_TDMLABEL"
 msgstr ""
 
-# Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
 msgstr ""
 

@@ -6,8 +6,7 @@ if ! command -v msgfilter &> /dev/null; then
     exit 1
 fi
 
-# Find all 'en_US.po' files recursively
-find . -type f -name "en_US.po" | while read -r po_file; do
+mktemplate() {
     dir_path=$(dirname "$po_file")
     pot_file="$dir_path/template.pot"
 
@@ -21,5 +20,34 @@ find . -type f -name "en_US.po" | while read -r po_file; do
          msgfilter --keep-header -i "$po_file" -o "$pot_file" sed -e 's/.*//'
     fi
 
-    sed -i '/^"HeaderCode: /d' "$pot_file"
+    sed -i '1,/^$/ {
+        s/^\("[^:]*: \).*/\1\\n"/
+        s/^"[^:]*"$/""/
+        /^""$/d
+        /^"X-.*: /d
+        s/^\("Project-Id-Version:\).*"/\1 1.0\\n"/
+        s/^\("MIME-Version:\).*"/\1 1.0\\n"/
+        s/^\("Content-Transfer-Encoding:\).*"/\1 8bit\\n"/
+        s/^\("Content-Type:\).*"/\1 text\/plain; charset=utf-8\\n"/
+    }' "$pot_file"
+}
+
+# Find all 'en_US.po' (or equiv.) files recursively
+order=( 'en_US' 'en' 'en_GB' )
+
+find . -type f -name "*.po" -exec dirname {} \; | sort -u \
+| while read -r po_dir; do
+    po_files=( "$po_dir"/en*.po )
+    [[ ${#po_files[@]} > 0 ]] || continue
+
+    po_file="${po_files[0]}"
+    [[ -f "$po_file" ]] || continue
+
+    for name in "${order[@]}"; do
+        if [[ -f "$po_dir/$name.po" ]]; then
+            po_file="$po_dir/$name.po"
+            break
+        fi
+    done
+    mktemplate "$po_file"
 done

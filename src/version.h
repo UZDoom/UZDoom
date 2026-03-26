@@ -99,8 +99,7 @@ const char *GetVersionString();
 #define GAMENAMELOWERCASE "uzdoom"
 #define APPID "org.zdoom.UZDoom"
 #define QUERYIWADDEFAULT true
-#define FORUM_URL "http://forum.zdoom.org/"
-#define BUGS_FORUM_URL	"http://forum.zdoom.org/viewforum.php?f=2"
+#define BUGS_URL "https://github.com/UZDoom/UZDoom/issues"
 // For QUERYIWADDEFAULT: Set to 'true' to always show dialog box on startup by default, 'false' to disable.
 // Should set to 'false' for standalone games, and set to 'true' for regular source port forks that are meant to run any game.
 

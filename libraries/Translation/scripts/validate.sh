@@ -45,6 +45,72 @@ do
 	fi
 done < <(find . -type f -name "*.po")
 
+function duplicates() {
+	filename="$1"; shift
+
+	delim=';'
+
+	declare -A strings
+
+	maxkeylen=0
+
+	for folder in "$@"
+	do
+		while IFS= read -r file
+		do
+			while read -r key
+			do
+				if [ -z "${strings[$key]}" ]
+				then
+					strings[$key]="${file}"
+				else
+					len=${#key}
+					(( len > maxkeylen )) && maxkeylen=$len
+					strings[$key]="${strings[$key]}${delim}${file}"
+				fi
+			done < <(sed -E '/^msgctxt/{N;s/^msgctxt "(.+)"\nmsgid "(.+)"/msgid "\1.\2"/}' "$file" | sed -En 's/^msgid "(.+)"$/\1/p')
+		done < <(find "$folder" -type f -name "$filename")
+	done
+
+	dupes=0
+	lines=()
+	((maxkeylen++))
+
+	for key in "${!strings[@]}"
+	do
+		value="${strings[$key]}"
+		delims="${value//[^$delim]}"
+		count=$((${#delims} + 1))
+		if [ $count -gt 1 ]
+		then
+			IFS="$delim" read -ra files <<< "$value"
+			for i in "${!files[@]}"
+			do
+				files[$i]="'${files[$i]%$filename}'"
+			done
+			lines+=( "$(printf "%-${maxkeylen}s" "$key:") ${files[*]}")
+			(( count > dupes )) && dupes=$count
+		fi
+	done
+
+	if [ "${#lines[@]}" -gt 0 ]
+	then
+		echo "Duplicate keys in [ $@ ]"
+		for line in "${lines[@]}"
+		do
+			echo -e "${line}"
+		done
+	fi
+
+	return $dupes
+}
+echo
+
+duplicates en_US.po games engine
+duplicates en_US.po engine
+count=$?
+((error_count+=$count))
+
 if [ "$error_count" -gt 0 ]
 then
 	echo ""

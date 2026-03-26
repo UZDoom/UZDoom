@@ -2078,6 +2078,8 @@ DEFINE_FIELD(AActor, PoisonDamageTypeReceived)
 DEFINE_FIELD(AActor, PoisonDurationReceived)
 DEFINE_FIELD(AActor, PoisonPeriodReceived)
 DEFINE_FIELD(AActor, Poisoner)
+DEFINE_FIELD(AActor, MinRespawnTics)
+DEFINE_FIELD(AActor, RespawnDice)
 DEFINE_FIELD_NAMED(AActor, Inventory, Inv)		// clashes with type 'Inventory'.
 DEFINE_FIELD(AActor, smokecounter)
 DEFINE_FIELD(AActor, FriendPlayer)
