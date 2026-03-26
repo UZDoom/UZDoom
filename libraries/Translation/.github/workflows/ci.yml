@@ -6,13 +6,27 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: validate
       shell: bash
       run: |
         sudo apt-get -qq update
         sudo apt-get -qq install gettext
+        pipx --quiet install vermin pylint autopep8
+
+        pyfiles=( scripts/compile.py )
+        pyversion=3.6
+        pyfailed=0
+
+        for pyfile in "${pyfiles[@]}"; do
+          autopep8 --exit-code -aavi "${pyfile}" || ((pyfailed++))
+          vermin --no-parse-comments --pessimistic --violations \
+            --target="${pyversion}-" "${pyfile}" || ((pyfailed++))
+          pylint --py-version="${pyversion}" "${pyfile}" || ((pyfailed++))
+        done
+        [[ $pyfailed == 0 ]]
+
         bash scripts/validate.sh
 
     - name: templates
@@ -30,42 +44,29 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        - name: support
-          outfile: game_support.pk3/language.csv
-          infiles: games/doom games/doom2 games/chex games/heretic games/hexen games/hexen-deathkings games/plutonia games/tnt games/strife
-
-        - name: filter-chex3
-          outfile: game_support.pk3/filter/chex.chex3/language.csv
-          infiles: games/filter/chex_quest_3
-
-        - name: filter-harmony
-          outfile: game_support.pk3/filter/harmony/language.csv
-          infiles: games/filter/harmony
-
-        - name: filter-hacx
-          outfile: game_support.pk3/filter/hacx.hacx1/after_iwad/language.csv
-          infiles: games/filter/hacx
-
-        - name: engine-common
-          outfile: uzdoom.pk3/language.0
-          infiles: engine/common
-
-        - name: engine-zdoom
+        - name: ENGINE
           outfile: uzdoom.pk3/language.csv
-          infiles: engine/zdoom
+        - name: GAMES
+          outfile: game_support.pk3/language.csv
+        - name: GAMES_CHEX3
+          outfile: game_support.pk3/filter/chex.chex3/language.csv
+        - name: GAMES_HARMONY
+          outfile: game_support.pk3/filter/harmony/language.csv
+        - name: GAMES_HACX
+          outfile: game_support.pk3/filter/hacx.hacx1/after_iwad/language.csv
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: build
       shell: bash
       run: |
         outfile=out/${{ matrix.config.outfile }}
         mkdir -p $(dirname $outfile)
-        python3 -B -E -s scripts/compile.py ${{ matrix.config.infiles }} $outfile
+        python3 -B -E -s scripts/compile.py --recipe ${{ matrix.config.name }} --output $outfile
 
     - name: upload
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: temp-${{ matrix.config.name }}
         path: out
@@ -75,7 +76,7 @@ jobs:
     needs: build
     steps:
     - name: download
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         pattern: temp-*
         path: files
@@ -89,12 +90,12 @@ jobs:
         find . -type f -exec sh -c 'printf "\n%s\n\n" $1; csvclean -a $1 >/dev/null' _ {} \;
 
     - name: upload
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: bundle
         path: files
 
     - name: cleanup
-      uses: geekyeggo/delete-artifact@v5
+      uses: geekyeggo/delete-artifact@v6
       with:
         name: temp-*

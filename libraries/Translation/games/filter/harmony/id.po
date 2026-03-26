@@ -2,22 +2,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-12 12:48+0000\n"
-"Last-Translator: Joel Robert Justiawan "
-"<joelwindows7@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/"
-"harmony/id/>\n"
+"PO-Revision-Date: 2026-03-09 15:09+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-"
+"games/harmony-filter/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "NIGHTMARE"
 msgstr ""
-"Emangnya kau bisa menghadapi itu?\\n"
-"\\n"
+"Emangnya kamu bisa menghadapi itu?\\n\\n"
 "tekan 'Y' atau 'N'..."
 
 msgid "AMSTR_MARKEDSPOT"
@@ -48,7 +46,7 @@ msgid "GOTMEGA"
 msgstr "Dapat Combat Armor."
 
 msgid "GOTMSPHERE"
-msgstr ""
+msgstr "Superhealth"
 
 msgid "GOTBLUECARD"
 msgstr "Dapat keycard HIJAU."
@@ -69,13 +67,13 @@ msgid "GOTREDSKUL"
 msgstr "Dapat kunci UNGU."
 
 msgid "GOTSTIM"
-msgstr ""
+msgstr "Jamur penyembuh"
 
 msgid "GOTMEDIKIT"
 msgstr "Mendapatkan: kit medis."
 
 msgid "GOTMEDINEED"
-msgstr "Mendapatkan: kit medis yang Anda SANGAT butuh."
+msgstr "Mendapatkan: kit medis yang kamu SANGAT butuhkan."
 
 msgid "GOTMAP"
 msgstr "Peta"
@@ -90,73 +88,91 @@ msgid "GOTROCKBOX"
 msgstr "Mendapatkan: Granat."
 
 msgid "GOTSHELLBOX"
-msgstr ""
+msgstr "Diperoleh: sekotak peluru shotgun."
 
 msgid "GOTBACKPACK"
-msgstr ""
+msgstr "Diperoleh: ransel amunisi."
 
 msgid "GOTBFG9000"
-msgstr ""
+msgstr "Diperoleh: Granat."
 
 msgid "GOTCHAINGUN"
-msgstr ""
+msgstr "Diperoleh: Minigun."
 
 msgid "GOTLAUNCHER"
-msgstr ""
+msgstr "Diperoleh: Peluncur granat."
 
 msgid "GOTPLASMA"
-msgstr ""
+msgstr "Pelempar entropi!"
 
 msgid "GOTSHOTGUN"
-msgstr ""
+msgstr "Diperoleh: Shotgun."
 
 msgid "STSTR_DQDON"
-msgstr ""
+msgstr "Mode Dewa AKTIF"
 
 msgid "STSTR_DQDOFF"
-msgstr ""
+msgstr "Mode Dewa NONAKTIF"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "Semua senjata/ amunisi/ kunci"
 
 msgid "STSTR_FAADDED"
-msgstr ""
+msgstr "Semua senjata dan amunisi"
 
 msgid "TXT_HARMMAP01"
-msgstr ""
+msgstr "Penculikan"
 
 msgid "TXT_HARMMAP02"
-msgstr ""
+msgstr "Jalan Kehancuran"
 
 msgid "TXT_HARMMAP03"
-msgstr ""
+msgstr "Suasana Owt"
 
 msgid "TXT_HARMMAP04"
-msgstr ""
+msgstr "Megalapolis"
 
 msgid "TXT_HARMMAP05"
-msgstr ""
+msgstr "Rumah Sakit"
 
 msgid "TXT_HARMMAP06"
-msgstr ""
+msgstr "Pabrik Senjata"
 
 msgid "TXT_HARMMAP07"
-msgstr ""
+msgstr "Lab Bawah Air"
 
 msgid "TXT_HARMMAP08"
-msgstr ""
+msgstr "Landasan Udara Satu"
 
 msgid "TXT_HARMMAP09"
-msgstr ""
+msgstr "Pangkalan Peluncuran"
 
 msgid "TXT_HARMMAP10"
-msgstr ""
+msgstr "Zona Radioaktif"
 
 msgid "TXT_HARMMAP11"
-msgstr ""
+msgstr "Echidna"
 
 msgid "CLUSTEREXIT1"
 msgstr ""
+"Perutmu terasa mual...\n"
+"Menatap wajah sang ratu mutan... \n"
+"Makhluk itu... Yang dulu adalah... \n"
+"Temanmu... Amira!\n"
+"\n"
+"Monster-monster itu pasti telah menemukan cara untuk\n"
+"memutasinya dan mengubahnya menjadi\n"
+"makhluk mengerikan ini untuk melahirkan keturunan mereka.\n"
+"\n"
+"-huh-\n"
+"\n"
+"Kau menenangkan dirimu... \n"
+"Mereka akan membayar karena membuatmu membunuh\n"
+"temanmu...\n"
+"\n"
+"\"Neraka tak memiliki amarah sebesar wanita yang tersakiti!\"\n"
+"\n"
+"     = T A M A T ="
 
 # This text is deliberately empty
 msgid "WI_FINISHED"
@@ -164,25 +180,25 @@ msgstr ""
 
 # Yellow needs retranslation
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "Memuat"
 
 msgid "SKILL_BABY"
-msgstr ""
+msgstr "Sangat Mudah"
 
 msgid "SKILL_EASY"
-msgstr ""
+msgstr "Mudah"
 
 msgid "SKILL_NORMAL"
-msgstr ""
+msgstr "Sedang"
 
 msgid "SKILL_HARD"
-msgstr ""
+msgstr "Sulit"
 
 msgid "SKILL_NIGHTMARE"
-msgstr ""
+msgstr "Sangat Sulit"
 
 msgid "HARMQUITMSG"
-msgstr ""
+msgstr "Terima kasih telah bermain"
 
 msgid "TXT_D2E1"
-msgstr ""
+msgstr "Harmoni"

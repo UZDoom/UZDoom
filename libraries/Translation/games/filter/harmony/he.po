@@ -2,6 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-12 19:09+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: he\n"

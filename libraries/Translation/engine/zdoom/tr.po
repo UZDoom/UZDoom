@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-24 17:00+0000\n"
-"Last-Translator: Boondorl <boondorl0@gmail.com>\n"
+"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/tr/>\n"
 "Language: tr\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: tr\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Bir tuşa bas."
@@ -21,48 +20,66 @@ msgid "SECRETMESSAGE"
 msgstr "Bir sır açığa çıkıyor!"
 
 msgid "D_DEVSTR"
-msgstr "Yararsız mod AÇIK.\n"
+msgstr "Yararsız mod: AÇIK"
 
 msgid "QUITMSG"
-msgstr "Bu harika oyunu bırakmak istediğine emin misin?"
+msgstr ""
+"Bu harika oyunu bırakmak\n"
+"istediğine emin misin?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
 msgid "LOADNET"
-msgstr "Bir ağ oyunundayken yükleme yapamazsınız! Bir tuşa basın."
+msgstr ""
+"Bir ağ oyunundayken yükleme yapamazsınız!\n"
+"\n"
+"Bir tuşa bas."
 
 msgid "QLOADNET"
 msgstr ""
 "Bir ağ oyunu sırasında hızlı yükleme yapamazsınız!\n"
-"Bir tuşa basın."
+"\n"
+"Bir tuşa bas."
 
 msgid "QSAVESPOT"
 msgstr ""
 "Henüz bir hızlı kaydetme yuvası seçmediniz!\n"
-"Bir tuşa basın."
+"\n"
+"Bir tuşa bas."
 
 msgid "NEWGAME"
 msgstr ""
-"Bir ağ oyunundayken yeni bir oyun başlatamazsınız.\n"
-"Bir tuşa basın."
+"Bir ağ oyunundayken yeni\n"
+"bir oyun başlatamazsınız.\n"
+"\n"
+"Bir tuşa bas."
 
 msgid "NIGHTMARE"
 msgstr ""
 "Emin misiniz? Bu beceri seviyesi\n"
 "hiç adil değil.\n"
 "\n"
-"Y veya N'ye basın."
+"Y veya N tuşuna basın."
 
 msgid "SWSTRING"
 msgstr ""
-"Bu Doom'un shareware versiyonu. Tüm üçlemeyi sipariş etmeniz gerekiyor. Bir "
-"tuşa bas."
+"Bu Doom'un shareware versiyonu.\n"
+"\n"
+"Tüm üçlemeyi sipariş etmeniz gerekiyor.\n"
+"\n"
+"Bir tuşa bas."
 
 msgid "NETEND"
-msgstr "Net oyununu bitiremezsin! Bir tuşa basın."
+msgstr ""
+"Net oyununu bitiremezsin!\n"
+"\n"
+"Bir tuşa bas."
 
 msgid "ENDGAME"
-msgstr "Oyunu bitirmek istediğinizden emin misiniz? Y veya N'ye basın."
+msgstr ""
+"Oyunu bitirmek istediğinizden emin misiniz?\n"
+"\n"
+"Y veya N tuşuna basın."
 
 msgid "RAVENQUITMSG"
 msgstr "Çıkmak istediğinizden emin misiniz?"
@@ -75,95 +92,146 @@ msgid "DOSY"
 msgstr "(Çıkmak için Y'ye basın)"
 
 msgid "QUITMSG1"
-msgstr "Lütfen gitmeyin, kadeh kaldıracak daha çok iblis var!"
+msgstr ""
+"Lütfen gitmeyin, kadeh\n"
+"kaldıracak daha çok iblis var!"
 
 msgid "QUITMSG2"
-msgstr "Hadi gidelim, ortalık kan gölüne dönüyor!"
+msgstr ""
+"Hadi gidelim, ortalık\n"
+"kan gölüne dönüyor!"
 
 msgid "QUITMSG3"
-msgstr "Yerinde olsam gitmezdim. DOS çok daha kötü."
+msgstr ""
+"Yerinde olsam gitmezdim.\n"
+"DOS çok daha kötü."
 
 msgid "QUITMSG4"
-msgstr "DOS'u benden daha çok sevdiğini söylemeye çalışıyorsun, değil mi?"
+msgstr ""
+"DOS'u benden daha çok sevdiğini\n"
+"söylemeye çalışıyorsun, değil mi?"
 
 msgid "QUITMSG5"
-msgstr "Hemen gitme, şu köşede bir iblis var!"
+msgstr ""
+"Hemen gitme,\n"
+"şu köşede bir iblis var!"
 
 msgid "QUITMSG6"
 msgstr ""
-"Biliyor musun, bir dahaki sefere buraya geldiğinde seni tost yapacağım."
+"Biliyor musun, bir dahaki sefere buraya\n"
+"geldiğinde seni tost yapacağım."
 
 msgid "QUITMSG7"
-msgstr "Devam et ve git. Bakalım umurumda olacak mı?"
+msgstr "Devam et ve git. Çok da umurumdaydı."
 
 # More info here.
 msgid "QUITMSG8"
-msgstr "Bırakmak mı istiyorsun? O zaman sekizde birini kaybettin!"
+msgstr ""
+"Bırakmak mı istiyorsun?\n"
+"O zaman sekizde birini kaybettin!"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
 msgid "QUITMSG9"
-msgstr "Şimdi gitme, DOS komut isteminde bekleyen boyutsal bir shambler var!"
+msgstr ""
+"Şimdi gitme, DOS komut\n"
+"isteminde bekleyen\n"
+"boyutsal bir shambler var!"
 
 msgid "QUITMSG10"
-msgstr "Git buradan ve sıkıcı programlarına geri dön."
+msgstr ""
+"Git buradan ve sıkıcı\n"
+"programlarına geri dön."
 
 msgid "QUITMSG11"
-msgstr "Patronun olsaydım, seni bir dakika içinde öldürürdüm!"
+msgstr ""
+"Patronun olsaydım, seni\n"
+"bir dakika içinde öldürürdüm!"
 
 msgid "QUITMSG12"
-msgstr "Bak, dostum. Şimdi gidersen ceset sayını kaybedersin!"
+msgstr ""
+"Bak, dostum. Şimdi gidersen\n"
+"ceset sayını kaybedersin!"
 
+#, fuzzy
 msgid "QUITMSG13"
-msgstr "Sadece git. Geri döndüğünde bir sopayla bekliyor olacağım."
+msgstr ""
+"Sadece git. Geri döndüğünde\n"
+"bir sopayla bekliyor olacağım."
 
 msgid "QUITMSG14"
-msgstr "Gitmeyi düşündüğün için seni tokatlamadığım için şanslısın."
+msgstr ""
+"Gitmeyi düşündüğün için seni\n"
+"tokatlamadığım için şanslısın."
 
 msgid "QUITMSG15"
-msgstr "Nereye gidiyorsun?! İsyan ne olacak?"
+msgstr ""
+"Nereye gidiyorsun?!\n"
+"İsyan ne olacak?"
 
 msgid "QUITMSG16"
-msgstr "Katliam kesintisi. Ne alay ama!"
+msgstr ""
+"Katliam kesintisi…\n"
+"Ne alay ama!"
 
 msgid "QUITMSG17"
-msgstr "Ama sen umudumsun, tek şansımsın!"
+msgstr ""
+"Ama sen umudumsun,\n"
+"tek şansımsın!"
 
 msgid "QUITMSG18"
 msgstr "Kimse Karatavuk'ü bırakıp gidemez."
 
 msgid "QUITMSG19"
-msgstr "Senin farklı olduğunu sanıyordum."
+msgstr "Senin farklı olduğunu sanıyordum…"
 
 msgid "QUITMSG20"
 msgstr "İyi! Sadece öldür ve kaç!"
 
 msgid "QUITMSG21"
-msgstr "Bırakabilirsin... ama saklanamazsın..."
+msgstr ""
+"Bırakabilirsin…\n"
+"ama saklanamazsın…"
 
 msgid "QUITMSG22"
-msgstr "Ne oldu? Annem yemek vakti mi dedi?"
+msgstr ""
+"Ne oldu?\n"
+"Annem yemek vakti mi dedi?"
 
 msgid "QUITMSG23"
-msgstr "Şimdi pes etme, hala serbest flemoidler var!"
+msgstr ""
+"Şimdi pes etme, hala\n"
+"serbest flemoidler var!"
 
 msgid "QUITMSG24"
-msgstr "Sakın pes etme, flemoidler üstünlüğü ele geçirecek!"
+msgstr ""
+"Sakın pes etme, flemoidler\n"
+"üstünlüğü ele geçirecek!"
 
 msgid "QUITMSG25"
-msgstr "Şimdi gitmeyin. Yardımınıza ihtiyacımız var!"
+msgstr ""
+"Şimdi gitmeyin.\n"
+"Yardımınıza ihtiyacımız var!"
 
 msgid "QUITMSG26"
-msgstr "Umarım Chex(R) parti karışımı için ara vermişsinizdir."
+msgstr ""
+"Umarım Chex® parti\n"
+"karışımı için ara vermişsinizdir."
 
 msgid "QUITMSG27"
-msgstr "Şimdi bırakmayın! Yardımınıza ihtiyacımız var!"
+msgstr ""
+"Şimdi bırakmayın!\n"
+"Yardımınıza ihtiyacımız var!"
 
 msgid "QUITMSG28"
-msgstr "Galaksilerarası Tahıl Federasyonu'nu terk etmeyin!"
+msgstr ""
+"Galaksilerarası Tahıl Federasyonu'nu\n"
+"terk etmeyin!"
 
 msgid "QUITMSG29"
-msgstr "Gerçek Chex(R) Savaşçısı bu kadar çabuk pes etmez!"
+msgstr ""
+"Gerçek Chex® Savaşçısı\n"
+"bu kadar çabuk pes etmez!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr "Bir pikabın var"
@@ -199,13 +267,13 @@ msgid "HUSTR_TALKTOSELF2"
 msgstr "Kim var orada?"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr "Kendini korkutuyorsun."
+msgstr "Kendini korkutuyorsun"
 
 msgid "HUSTR_TALKTOSELF4"
 msgstr "Çıldırmaya başlıyorsun"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Kaybettin..."
+msgstr "Kaybettin…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Mesaj Gönderildi]"
@@ -217,16 +285,16 @@ msgid "STSTR_NOMUS"
 msgstr "İmkansız Seçim"
 
 msgid "STSTR_DQDON"
-msgstr "Dokunulmazlık Modu AÇIK"
+msgstr "Dokunulmazlık Modu: AÇIK"
 
 msgid "STSTR_DQDOFF"
-msgstr "Dokunulmazlık Modu KAPALI"
+msgstr "Dokunulmazlık Modu: KAPALI"
 
 msgid "STSTR_DQD2ON"
-msgstr "Nihai Dokunulmazlık Modu AÇIK"
+msgstr "Nihai Dokunulmazlık Modu: AÇIK"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Nihai Dokunulmazlık Modu KAPALI"
+msgstr "Nihai Dokunulmazlık Modu: KAPALI"
 
 msgid "STSTR_KFAADDED"
 msgstr "Çok Mutlu Cephane Eklendi"
@@ -235,16 +303,18 @@ msgid "STSTR_FAADDED"
 msgstr "Cephane (anahtar yok) Eklendi"
 
 msgid "STSTR_NCON"
-msgstr "Klipsleme Yok Modu AÇIK"
+msgstr "Klipsleme Yok Modu: AÇIK"
 
 msgid "STSTR_NCOFF"
-msgstr "Klipsleme Yok Modu KAPALI"
+msgstr "Klipsleme Yok Modu: KAPALI"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Klipsleme Yok Modu 2 AÇIK"
+msgstr "Klipsleme Yok Modu 2: AÇIK"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Klipsleme Yok Modu 2 KAPALI"
+msgstr "Klipsleme Yok Modu 2: KAPALI"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -253,7 +323,7 @@ msgstr "Klipsleme Yok Modu 2 KAPALI"
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr ""
+msgstr "ölmszV, güçS, görnmzİ, Radyas, haritA yada gece-görüşL"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Güç Açma Değiştirildi"
@@ -261,28 +331,28 @@ msgstr "Güç Açma Değiştirildi"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... berbat değil - GM"
+msgstr "… berbat değil - GM"
 
 msgid "STSTR_CLEV"
-msgstr "Seviye Değiştirme..."
+msgstr "Seviye Değiştiriliyor…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Buda modu AÇIK"
+msgstr "Buda modu: AÇIK"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Buda modu KAPALI"
+msgstr "Buda modu: KAPALI"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Nihai Buda Modu AÇIK"
+msgstr "Nihai Buda Modu: AÇIK"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Nihai Buda Modu KAPALI"
+msgstr "Nihai Buda Modu: KAPALI"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Güç açık"
+msgstr "Güç: AÇIK"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Güç kapalı"
+msgstr "Güç: KAPALI"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Tam sağlık"
@@ -291,25 +361,25 @@ msgid "TXT_CHEATKEYS"
 msgstr "Tüm anahtarlar"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Ses hata ayıklama açık"
+msgstr "Ses hata ayıklama: AÇIK"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Ses hata ayıklama kapalı"
+msgstr "Ses hata ayıklama: KAPALI"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Hile yapmaya çalışıyorsun, ha? Şimdi öleceksin!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Hileci, silahları hak etmiyorsun."
+msgstr "Hileci, silahları hak etmiyorsun"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Ticker açık"
+msgstr "Ticker: AÇIK"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker kapalı"
+msgstr "Ticker: KAPALI"
 
 msgid "TXT_CHEATARTIFACTS3"
-msgstr "Tamamdır."
+msgstr "Tamamdır"
 
 msgid "TXT_MIDASTOUCH"
 msgstr "Sende Midas Dokunuşu var, bebeğim"
@@ -318,13 +388,13 @@ msgid "TXT_GOTSTUFF"
 msgstr "Mal sende!"
 
 msgid "TXT_FREEZEON"
-msgstr "Dondurma modu açık"
+msgstr "Dondurma modu: AÇIK"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Dondurma modu kapalı"
+msgstr "Dondurma modu: KAPALI"
 
 msgid "TXT_STRANGE"
-msgstr "Garip hissediyorsun."
+msgstr "Garip hissediyorsun…"
 
 msgid "TXT_STRANGER"
 msgstr "Daha da garip hissediyorsun."
@@ -333,10 +403,10 @@ msgid "TXT_NOTSTRANGE"
 msgstr "Tekrar kendin gibi hissediyorsun."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Kurşun çizmeler"
+msgstr "Kurşun çizmeler: AÇIK"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Kurşun çizmeler kapalı"
+msgstr "Kurşun çizmeler: KAPALI"
 
 msgid "TXT_LIGHTER"
 msgstr "Daha hafif hissediyorsun"
@@ -345,10 +415,10 @@ msgid "TXT_GRAVITY"
 msgstr "Yerçekimi seni ağırlaştırır"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Hedef Yok AÇIK"
+msgstr "Hedef Yok: AÇIK"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Hedef Yok KAPALI"
+msgstr "Hedef Yok: KAPALI"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Korkudan titre!\""
@@ -357,10 +427,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Artık Ogre Zırhı yok"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Chasecam AÇIK"
+msgstr "Chasecam: AÇIK"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Chasecam KAPALI"
+msgstr "Chasecam: KAPALI"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 kötü öldürüldü"
@@ -384,25 +454,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "Oyun dışında ne öldürmek istiyorsun?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Dondurulmuş oyuncu özellikleri kapatıldı"
+msgstr "Dondurulmuş oyuncu özellikleri: KAPALI"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Takip Modu KAPALI"
+msgstr "Takip Modu: KAPALI"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Takip Modu AÇIK"
+msgstr "Takip Modu: AÇIK"
 
 msgid "AMSTR_GRIDON"
-msgstr "Izgara AÇIK"
+msgstr "Izgara: AÇIK"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Izgara KAPALI"
+msgstr "Izgara: KAPALI"
 
 msgid "AMSTR_TEXON"
-msgstr "Doku Modu AÇIK"
+msgstr "Doku Modu: AÇIK"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Doku Modu KAPALI"
+msgstr "Doku Modu: KAPALI"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "İşaretli Nokta"
@@ -420,7 +490,7 @@ msgid "SPREEKILLSELF"
 msgstr "%o kendini öldürene kadar iyi görünüyordu!"
 
 msgid "SPREEOVER"
-msgstr "%o onu öldürene kadar %k iyi görünüyordu."
+msgstr "%o onu öldürene kadar %k iyi görünüyordu"
 
 msgid "SPREE5"
 msgstr "%k bir ölüm çılgınlığında!"
@@ -461,9 +531,8 @@ msgstr "Sır"
 msgid "SCORE_NAME"
 msgstr "İsim"
 
-#, fuzzy
 msgid "SCORE_DELAY"
-msgstr "Gecikme (ms)"
+msgstr "Gecikme"
 
 msgid "SCORE_FRAGS"
 msgstr "Öldürme"
@@ -496,7 +565,7 @@ msgid "TXT_IMTIME"
 msgstr "Zaman"
 
 msgid "TXT_IMPAR"
-msgstr ""
+msgstr "Standart"
 
 msgid "WI_FINISHED"
 msgstr "Bitti"
@@ -565,6 +634,7 @@ msgstr "%o telefragged edildi."
 msgid "OB_DEFAULT"
 msgstr "%o öldü."
 
+#, fuzzy
 msgid "OB_MPDEFAULT"
 msgstr "%o, %k tarafından öldürüldü."
 
@@ -573,7 +643,7 @@ msgstr "%k bir takım arkadaşını biçti."
 
 # English was changed to remove problematic pronoun referencing the killer
 msgid "OB_FRIENDLY2"
-msgstr "%k net göremiyor"
+msgstr "%k net göremiyor."
 
 msgid "OB_FRIENDLY3"
 msgstr "%k diğer takım için bir parça aldı."
@@ -627,7 +697,7 @@ msgid "GOTINVUL"
 msgstr "Dokunulmazlık!"
 
 msgid "GOTBERSERK"
-msgstr ""
+msgstr "Herşeyi yumruklamak istiyorsun!"
 
 msgid "GOTINVIS"
 msgstr "Kısmi Görünmezlik"
@@ -717,10 +787,10 @@ msgid "PD_YELLOWO"
 msgstr "Bu nesneyi etkinleştirmek için sarı bir anahtara ihtiyacınız var"
 
 msgid "PD_BLUEK"
-msgstr "Bu kapıyı açmak için mavi bir anahtara ihtiyacın var."
+msgstr "Bu kapıyı açmak için mavi bir anahtara ihtiyacın var"
 
 msgid "PD_REDK"
-msgstr "Bu kapıyı açmak için kırmızı bir anahtara ihtiyacın var."
+msgstr "Bu kapıyı açmak için kırmızı bir anahtara ihtiyacın var"
 
 msgid "PD_YELLOWK"
 msgstr "Bu kapıyı açmak için sarı bir anahtara ihtiyacınız var"
@@ -747,19 +817,19 @@ msgid "PD_BLUEC"
 msgstr "Bu kapıyı açmak için mavi bir karta ihtiyacınız var"
 
 msgid "PD_REDC"
-msgstr "Bu kapıyı açmak için kırmızı bir karta ihtiyacınız var."
+msgstr "Bu kapıyı açmak için kırmızı bir karta ihtiyacınız var"
 
 msgid "PD_YELLOWC"
 msgstr "Bu kapıyı açmak için sarı bir karta ihtiyacınız var"
 
 msgid "PD_BLUES"
-msgstr "Bu kapıyı açmak için mavi bir kafatasına ihtiyacın var."
+msgstr "Bu kapıyı açmak için mavi bir kafatasına ihtiyacın var"
 
 msgid "PD_REDS"
-msgstr "Bu kapıyı açmak için kırmızı bir kafatasına ihtiyacın var."
+msgstr "Bu kapıyı açmak için kırmızı bir kafatasına ihtiyacın var"
 
 msgid "PD_YELLOWS"
-msgstr "Bu kapıyı açmak için sarı bir kafatasına ihtiyacın var."
+msgstr "Bu kapıyı açmak için sarı bir kafatasına ihtiyacın var"
 
 msgid "CC_ZOMBIE"
 msgstr "Zombi"
@@ -781,6 +851,7 @@ msgstr "İblis"
 msgid "CC_LOST"
 msgstr "Kayıp Ruh"
 
+#, fuzzy
 msgid "CC_CACO"
 msgstr "Cacodemon"
 
@@ -797,7 +868,7 @@ msgid "CC_PAIN"
 msgstr "Acı Elementi"
 
 msgid "CC_REVEN"
-msgstr ""
+msgstr "Hortlamış"
 
 msgid "CC_MANCU"
 msgstr "İğrenç Kütle"
@@ -830,7 +901,7 @@ msgid "FN_CYBER"
 msgstr "Siber İblis"
 
 msgid "FN_WOLFSS"
-msgstr "SS Askeri"
+msgstr "S.S. Askeri"
 
 msgid "FN_DOG"
 msgstr "Köpek"
@@ -860,7 +931,7 @@ msgid "TAG_PLASMARIFLE"
 msgstr "Plazma Tüfeği"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "ABT 9000"
 
 msgid "AMMO_CLIP"
 msgstr "Kurşunlar"
@@ -983,40 +1054,40 @@ msgid "OB_MPFIST"
 msgstr "%o, %k tarafından öldürüldü."
 
 msgid "OB_MPCHAINSAW"
-msgstr "%o, %k tarafından biçildi"
+msgstr "%o, %k tarafından biçildi."
 
 msgid "OB_MPPISTOL"
-msgstr "%o, %k tarafından gıdıklandı"
+msgstr "%o, %k tarafından gıdıklandı."
 
 msgid "OB_MPSHOTGUN"
-msgstr "%o, %k tarafından patlatıldı"
+msgstr "%o, %k tarafından patlatıldı."
 
 msgid "OB_MPSSHOTGUN"
-msgstr "%o, %k tarafından sıçratıldı"
+msgstr "%o, %k tarafından sıçratıldı."
 
 msgid "OB_MPCHAINGUN"
-msgstr "%o, %k tarafından biçildi"
+msgstr "%o, %k tarafından biçildi."
 
 msgid "OB_MPROCKET"
-msgstr "%o, %k tarafından sıçratıldı"
+msgstr "%o, %k tarafından sıçratıldı."
 
 msgid "OB_MPR_SPLASH"
-msgstr "%o, %k tarafından sıçratıldı"
+msgstr "%o, %k tarafından sıçratıldı."
 
 msgid "OB_MPPLASMARIFLE"
-msgstr "%o, %k tarafından eritildi"
+msgstr "%o, %k tarafından eritildi."
 
 msgid "OB_MPBFG_BOOM"
-msgstr "%o, %k tarafından parçalandı"
+msgstr "%o, %k tarafından parçalandı."
 
 msgid "OB_MPBFG_SPLASH"
-msgstr "%o, %k tarafından parçalandı"
+msgstr "%o, %k tarafından parçalandı."
 
 msgid "OB_RAILGUN"
 msgstr "%o %k tarafından kovuldu."
 
 msgid "OB_MPBFG_MBF"
-msgstr "%o %k tarafından yakıldı"
+msgstr "%o %k tarafından yakıldı."
 
 msgid "TXT_GOTBLUEKEY"
 msgstr "Mavi Anahtar"
@@ -1130,10 +1201,10 @@ msgid "TXT_WPNGAUNTLETS"
 msgstr "Ölü Çağıranın Eldivenleri"
 
 msgid "TXT_NEEDBLUEKEY"
-msgstr "Bu kapıyı açmak için mavi bir anahtara ihtiyacın var."
+msgstr "Bu kapıyı açmak için mavi bir anahtara ihtiyacın var"
 
 msgid "TXT_NEEDGREENKEY"
-msgstr "Bu kapıyı açmak için yeşil bir anahtara ihtiyacın var."
+msgstr "Bu kapıyı açmak için yeşil bir anahtara ihtiyacın var"
 
 msgid "TXT_NEEDYELLOWKEY"
 msgstr "Bu kapıyı açmak için sarı bir anahtara ihtiyacınız var"
@@ -1150,10 +1221,10 @@ msgid "FN_CLINK"
 msgstr "Kılıçpençe"
 
 msgid "FN_DSPARIL"
-msgstr ""
+msgstr "D'Sparil"
 
 msgid "FN_HERETICIMP"
-msgstr ""
+msgstr "Çörten"
 
 msgid "FN_IRONLICH"
 msgstr "Demir Ceset"
@@ -1165,10 +1236,11 @@ msgid "FN_MINOTAUR"
 msgstr "Maulotor"
 
 msgid "FN_MUMMY"
-msgstr ""
+msgstr "Golem"
 
+#, fuzzy
 msgid "FN_MUMMYLEADER"
-msgstr ""
+msgstr "Nitrogolem"
 
 msgid "FN_SNAKE"
 msgstr ""
@@ -1489,7 +1561,7 @@ msgid "TXT_NEED_KEY_FIRE"
 msgstr "Ateş Anahtarına ihtiyacın var"
 
 msgid "TXT_NEED_KEY_EMERALD"
-msgstr "Zümrüt Anahtarı'na ihtiyacın var."
+msgstr "Zümrüt Anahtarı'na ihtiyacın var"
 
 msgid "TXT_NEED_KEY_DUNGEON"
 msgstr "Zindan Anahtarına ihtiyacın var"
@@ -1498,13 +1570,13 @@ msgid "TXT_NEED_KEY_SILVER"
 msgstr "Gümüş Anahtara ihtiyacın var"
 
 msgid "TXT_NEED_KEY_RUSTED"
-msgstr "Paslı Anahtar'a ihtiyacın var."
+msgstr "Paslı Anahtar'a ihtiyacın var"
 
 msgid "TXT_NEED_KEY_HORN"
 msgstr "Korna Anahtarına ihtiyacınız var"
 
 msgid "TXT_NEED_KEY_SWAMP"
-msgstr "Bataklık Anahtarına ihtiyacın var."
+msgstr "Bataklık Anahtarına ihtiyacın var"
 
 msgid "TXT_NEED_KEY_CASTLE"
 msgstr "Kale Anahtarına ihtiyacın var"
@@ -1858,7 +1930,7 @@ msgid "TXT_SCANNER"
 msgstr "Tarayıcıyı aldın."
 
 msgid "TXT_NEEDMAP"
-msgstr "Tarayıcı harita olmadan çalışmaz!\n"
+msgstr "Tarayıcı harita olmadan çalışmaz!"
 
 msgid "TXT_PRISONPASS"
 msgstr "Hapishane kartını aldın."
@@ -2002,19 +2074,19 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Cephane çantasını aldın."
 
 msgid "MSG_TALISMANRED"
-msgstr "İçinizde dokunulmaması gerektiğine dair bir his var."
+msgstr "İçinizde dokunulmaması gerektiğine dair bir his var…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "O her neyse, bu dünyaya ait değil."
+msgstr "O her neyse, bu dünyaya ait değil…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Bir şey yapmalı."
+msgstr "Bir şey yapmalı…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Süper gücün var!"
 
 msgid "TXT_NEEDKEY"
-msgstr "Anahtar sende değil."
+msgstr "Anahtar sende değil"
 
 msgid "TXT_NEED_PASSCARD"
 msgstr "Bir erişim kartına ihtiyacınız var"
@@ -2026,7 +2098,7 @@ msgid "TXT_NEED_IDCARD"
 msgstr "Bir kimlik kartına ihtiyacınız var"
 
 msgid "TXT_NEED_PRISONKEY"
-msgstr "Hapishanenin anahtarı sende değil."
+msgstr "Hapishanenin anahtarı sende değil"
 
 msgid "TXT_NEED_HANDPRINT"
 msgstr "El izi dosyada yok"
@@ -2047,16 +2119,16 @@ msgid "TXT_NEED_BRASSKEY"
 msgstr "Pirinç Anahtara ihtiyacın var"
 
 msgid "TXT_NEED_REDCRYSTAL"
-msgstr "Kırmızı Kristal'e ihtiyacın var."
+msgstr "Kırmızı Kristal'e ihtiyacın var"
 
 msgid "TXT_NEED_BLUECRYSTAL"
-msgstr "Mavi Kristal'e ihtiyacın var."
+msgstr "Mavi Kristal'e ihtiyacın var"
 
 msgid "TXT_RETAIL_ONLY"
 msgstr "Bu alan yalnızca Strife'ın perakende sürümünde mevcuttur"
 
 msgid "TXT_DOES_NOT_WORK"
-msgstr "Bu işe yaramıyor gibi görünüyor."
+msgstr "Bu işe yaramıyor gibi görünüyor"
 
 msgid "TXT_NEED_CHALICE"
 msgstr "Kadehe ihtiyacın var!"
@@ -2470,13 +2542,13 @@ msgid "TXT_COMPLETED_TRAINING"
 msgstr "Tebrikler! Eğitim alanını tamamladınız"
 
 msgid "TXT_QUEST_14"
-msgstr "Kristali havaya uçurdun."
+msgstr "Kristali havaya uçurdun"
 
 msgid "TXT_QUEST_16"
-msgstr "Kapıları havaya uçurdun."
+msgstr "Kapıları havaya uçurdun"
 
 msgid "TXT_QUEST_27"
-msgstr "Bilgisayarı havaya uçurdun."
+msgstr "Bilgisayarı havaya uçurdun"
 
 msgid "TXT_KILLED_BISHOP"
 msgstr "Piskoposu öldürdün!"
@@ -2503,10 +2575,10 @@ msgid "TXT_GOAWAY"
 msgstr "Git başımdan!"
 
 msgid "TXT_COMM0"
-msgstr "Gelen Mesaj..."
+msgstr "Gelen Mesaj…"
 
 msgid "TXT_COMM1"
-msgstr "Gelen Mesaj..."
+msgstr "Gelen Mesaj…"
 
 msgid "TXT_FINDHELP"
 msgstr "Yardım bul"
@@ -2516,10 +2588,10 @@ msgid "TXT_TRADE"
 msgstr "için %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Chex(R) Zırhı'nı aldım."
+msgstr "Chex® Zırhı'nı aldım."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Süper Chex(R) Zırhı'nı aldı!"
+msgstr "Süper Chex® Zırhı'nı aldı!"
 
 msgid "GOTWATER"
 msgstr "Bir bardak su aldım."
@@ -2704,7 +2776,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Devam etmek için kaçış tuşuna basın..."
+"Devam etmek için kaçış tuşuna basın…"
 
 msgid "CE2TEXT"
 msgstr "Başardınız!"
@@ -2719,29 +2791,30 @@ msgid "CLOADNET"
 msgstr ""
 "Bir ağ görevindeyken yükleme yapamazsınız!\n"
 "\n"
-"Bir tuşa basın."
+"Bir tuşa bas."
 
 msgctxt "chex"
 msgid "QSPROMPT"
 msgstr ""
-"%s'\n"
+"'%s'\n"
 "\n"
-"adlı oyununuzun üzerine hızlı kaydetme?\n"
+"adlı görevinizin üzerine hızlı kaydetme?\n"
 "\n"
 "Y veya N tuşuna basın."
 
 msgctxt "chex"
 msgid "QLOADNET"
 msgstr ""
-"Bir ağ oyunu sırasında hızlı yükleme yapamazsınız!\n"
-"Bir tuşa basın."
+"Bir ağ görevi sırasında hızlı yükleme yapamazsınız!\n"
+"\n"
+"Bir tuşa bas."
 
 msgctxt "chex"
 msgid "QLPROMPT"
 msgstr ""
-"%s'\n"
+"'%s'\n"
 "\n"
-"adlı oyunu hızlı yüklemek istiyor musunuz?\n"
+"adlı görevi hızlı yüklemek istiyor musunuz?\n"
 "\n"
 "Y veya N tuşuna basın."
 
@@ -2750,7 +2823,7 @@ msgstr ""
 "Yeni bir görev başlatamazsınız\n"
 "bir ağ görevindeyken.\n"
 "\n"
-"Bir tuşa basın."
+"Bir tuşa bas."
 
 msgid "CNIGHTMARE"
 msgstr ""
@@ -2761,18 +2834,18 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"Bu Chex(R) Görevi.\n"
+"Bu Chex® Görevi.\n"
 "\n"
 "www.chexquest.com adresinde gelecekteki seviyeler.\n"
 "\n"
-"Bir tuşa basın."
+"Bir tuşa bas."
 
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
 "Bir netquest'i sonlandıramazsınız!\n"
 "\n"
-"Bir tuşa basın."
+"Bir tuşa bas."
 
 msgctxt "chex"
 msgid "ENDGAME"
@@ -2783,11 +2856,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Yenilmez Mod AÇIK"
+msgstr "Yenilmez Mod: AÇIK"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Yenilmez Modu KAPALI"
+msgstr "Yenilmez Modu: KAPALI"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2799,7 +2872,7 @@ msgstr "Süper Zorch Eklendi"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Chex(R) yiyin!"
+msgstr "…Chex® yiyin!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -2852,7 +2925,7 @@ msgid "SKILL_NIGHTMARE"
 msgstr "Kabus!"
 
 msgid "CSKILL_BABY"
-msgstr "Sakin ol."
+msgstr "Sakin ol"
 
 msgid "CSKILL_EASY"
 msgstr "Çok yapışkan değil"
@@ -2882,7 +2955,7 @@ msgid "SSKILL_NIGHTMARE"
 msgstr "Kan banyosu"
 
 msgid "MNU_WETNURSE"
-msgstr "Islak bir hemşireye ihtiyacın var."
+msgstr "Islak bir hemşireye ihtiyacın var"
 
 msgid "MNU_YELLOWBELLIES"
 msgstr "Birleşik Korkak Kediler"
@@ -3235,7 +3308,7 @@ msgid "CMPTMNU_NOPASSOVER"
 msgstr "Aktörler sonsuz uzunlukta"
 
 msgid "CMPTMNU_BOOMSCROLL"
-msgstr "Bom kaydırıcıları katkı maddelidir"
+msgstr "Boom kaydırıcıları katkı maddelidir"
 
 msgid "CMPTMNU_BADANGLES"
 msgstr "Düz seyahat edemez KGDB"
@@ -3247,7 +3320,7 @@ msgid "CMPTMNU_RAVENSCROLL"
 msgstr "Kuzgun kaydırıcılar orijinal hızı kullanır"
 
 msgid "CMPTMNU_TRACE"
-msgstr "Kendi kendine hakemlik yapan sektörler atışları engellemez."
+msgstr "Kendi kendine hakemlik yapan sektörler atışları engellemez"
 
 msgid "CMPTMNU_HITSCAN"
 msgstr "Hitscan kontrolleri için Doom kodunu kullanın"
@@ -3281,9 +3354,6 @@ msgstr "Inst. hareketli zeminler sessiz değildir"
 
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sektör sesleri kaynak olarak merkezi kullanır"
-
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Aktör ortadan kaybolduğunda sesler kesilir"
 
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Orijinal ses hedefi kullanımını kullanın"
@@ -3756,9 +3826,6 @@ msgstr "Fuzz efekti kullanın"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Klasik Şeffaflık"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Kayıp Ruh yarı saydamlığı"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Sahte kontrast kullanın"
 
@@ -3912,9 +3979,6 @@ msgstr "Ağ Seçenekleri"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Yerel seçenekler"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Hareket tahmini"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Hat eylemlerini tahmin edin"
 
@@ -3929,15 +3993,6 @@ msgstr "Ev sahibi seçenekleri"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Ekstra Tikler"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Gecikme dengeleme"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Orijinal"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Optimize Edilmiş"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Klasik (Daha Hızlı)"
@@ -3995,25 +4050,16 @@ msgid "OPTVAL_BOTH"
 msgstr "Her ikisi de"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Oyuncu"
 
 msgid "OPTVAL_MAP"
 msgstr "Harita"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "640x400'e ölçeklendirin"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Piksel çift"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Piksel dörtlü"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Mevcut silah"
@@ -4108,15 +4154,6 @@ msgstr "Yalnızca harita tanımlı renkler"
 msgid "OPTVAL_NODOORS"
 msgstr "Kapılar hariç hepsi"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Çift"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Üçlü"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Dörtlü"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Bir eşyayı almak"
 
@@ -4133,40 +4170,37 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Sadece canavarlar"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Eski"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (katı)"
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (katı)"
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (katı)"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (katı)"
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr ""
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Tüm onaylanmamış"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Hatalar"
@@ -4189,12 +4223,6 @@ msgstr "Doom Yazılım Oluşturucu"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "Gerçek Renk SW Oluşturucu"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "Yüksek Performans"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Güç Tasarrufu"
-
 msgid "OPTVAL_VANILLA"
 msgstr "Vanilya"
 
@@ -4203,12 +4231,6 @@ msgstr "ZDoom (Zorla)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Vanilya (Zorlanmış)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Otomatik (ZDoom Tercih Edilir)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Otomatik (Vanilya Tercihli)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Küçük"
@@ -4298,21 +4320,15 @@ msgid "C_TEAL"
 msgstr "\\czDeniz mavisi"
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Ses Yok"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Enterpolasyon yok"
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
-
-msgid "OPTSTR_OPENAL"
 msgstr ""
 
 msgid "DSPLYMNU_GLOPT"
@@ -4327,12 +4343,6 @@ msgstr "Donanım Oluşturma Seçenekleri"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Dinamik Işık Seçenekleri"
 
-msgid "GLMNU_PREFS"
-msgstr "Tercihler"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Sprite kenarlarını kırpma"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Çizim listelerini dokuya göre sıralama"
 
@@ -4341,9 +4351,6 @@ msgstr "Dinamik Işıklar"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dinamik Işıklar (Donanım)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Işık tanımlarını etkinleştirin"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Işıklar sprite'ları etkiler"
@@ -4360,17 +4367,11 @@ msgstr "Gölge haritası kalitesi"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Gölge haritası filtresi"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Sis modu"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Sis fullbright'ı zorlar"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Silah ışık gücü"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Aynalar üzerinde çevre haritası"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Geliştirilmiş gece görüş modu"
@@ -4395,9 +4396,6 @@ msgstr "Sprite'lar kamerayla yüzleşir"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Parçacık stili"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Render kalitesi"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr ""
@@ -4448,9 +4446,6 @@ msgstr ""
 msgid "OPTVAL_SOFTWARE"
 msgstr "Yazılım"
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Optimal"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Y Ekseni"
 
@@ -4462,9 +4457,6 @@ msgstr "Kare"
 
 msgid "OPTVAL_ROUND"
 msgstr "Yuvarlak"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Radyal"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Piksel fuzz"
@@ -4529,9 +4521,6 @@ msgstr "TrueColor Seçenekleri"
 msgid "TCMNU_TITLE"
 msgstr "TrueColor Seçenekleri"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Gerçek renk çıkışı"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Küçültme sırasında doğrusal filtre"
 
@@ -4543,21 +4532,6 @@ msgstr "Eşlenmiş dokular kullanın"
 
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Dinamik ışıklar (Yazılım)"
-
-msgid "OS_TITLE"
-msgstr "Seçenek Arama"
-
-msgid "OS_ANY"
-msgstr "Herhangi bir terim için arama yapın"
-
-msgid "OS_ALL"
-msgstr "Tüm terimler için arama yapın"
-
-msgid "OS_NO_RESULTS"
-msgstr "Sonuç bulunamadı."
-
-msgid "OS_LABEL"
-msgstr "Arama yapın:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Her zaman anahtarları göster"
@@ -4595,7 +4569,7 @@ msgstr "%s' kayıt oyunu başka bir ZDoom tabanlı motordan:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"%s' kayıt oyunu daha eski bir sürümden: %d (%e desteklenen en eski sürümdür)"
+"%s' kayıt oyunu daha eski bir sürümden: %d (%e desteklenen en eski sürümdür)."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4605,7 +4579,7 @@ msgstr ""
 msgid "TXT_TOONEWSG"
 msgstr ""
 "%s' kayıt oyunu daha yeni bir sürümden: %d (%e desteklenen en yüksek "
-"sürümdür)"
+"sürümdür)."
 
 msgid "TXT_NOMAPSG"
 msgstr "%s' kayıt oyununda geçerli harita eksik."
@@ -4638,11 +4612,6 @@ msgstr "Ekran görüntüsü oluşturulamadı."
 msgid "TXT_BY"
 msgstr "Tarafından %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr ""
-"Çıkmak için herhangi bir tuşa basın veya pencerede herhangi bir yere "
-"tıklayın."
-
 msgid "HUDMNU_FLASH"
 msgstr "Ekran Karışım Seçenekleri"
 
@@ -4654,9 +4623,6 @@ msgstr ""
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Altyazılar"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Gri gölgeleri önleyin"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Yazı Tipi Seçenekleri"
@@ -4674,7 +4640,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr "Özel Ters Harita"
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "Özel Ters Renk Koyu\n"
+msgstr "Özel Ters Renk Koyu"
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr "Özel Ters Renkli Işık"
@@ -4697,11 +4663,6 @@ msgstr "Ölçekleme faktörü"
 
 msgid "SCALEMNU_RATIO"
 msgstr "En boy oranı"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr ""
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4849,10 +4810,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Düşen öğeleri istemci tarafında almayı devre dışı bırakma"
 
 # Disables autoloading save on death
+#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Ölüm halinde seviyeyi yeniden başlat"
 
 # Resets inventory on every map
+#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Tabanca ile başlayın"
 
@@ -5015,9 +4978,6 @@ msgstr ""
 # Forces a cool down between chat messages for all players when playing
 # online.
 msgid "NETMNU_CHATSLOMO"
-msgstr ""
-
-msgid "JOYMNU_HAPTRIGGERS"
 msgstr ""
 
 msgid "OPTMNU_HAPTICS"
@@ -5194,3 +5154,22 @@ msgstr "Kontrast"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Doygunluk"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Erişebilirlik Seçenekleri"
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Pürüzsüz"
+
+#, fuzzy
+msgid "TAG_MACIL"
+msgstr "Macil"
+
+#, fuzzy
+msgid "TAG_MAULER"
+msgstr "Parçalayıcı"
+
+#, fuzzy
+msgid "TAG_GLAUNCHER"
+msgstr "El Bombası Fırlatıcı"

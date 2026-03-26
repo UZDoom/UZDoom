@@ -2,14 +2,403 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-15 17:53+0000\n"
-"Last-Translator: Joel Robert Justiawan "
-"<joelwindows7@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-game-strings/id/>\n"
+"PO-Revision-Date: 2026-03-09 15:09+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-"
+"games/hexen-deathkings/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Desa yang Hancur"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Wabah"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Saluran Pembuangan"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Katakombe"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Tanah Tandus"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Hutan Bracken"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Tumpukan Api"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Gerbang Constable"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Perbendaharaan"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Pasar"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Ujian"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Gudang Senjata"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Nave"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Kapel"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Rumah Jagal"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Penjaga Kegelapan"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Kloaka"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Benteng Es"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Benteng Kegelapan"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Transit"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Atas & Bawah"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Kabut Kematian"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Kastil Kesengsaraan"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Lubang Selokan"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Si Mawar"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Mengusap tangan gemetar di wajahmu\n"
+"yang berdarah, kamu mencoba menjernihkan\n"
+"pikiranmu untuk apa yang menanti di depan...\n"
+"\n"
+"...dan melupakan apa yang tertinggal di belakang.\n"
+"\n"
+"Di kejauhan, tembok-tembok kokoh\n"
+"sebuah kompleks kastil besar seolah\n"
+"merobek langit di atasnya, dan bau busuk\n"
+"menguar dari makam-makam yang dinodai\n"
+"oleh tak terhitung orang mati.\n"
+"\n"
+"Dengan hati-hati menghitung sisa-sisa\n"
+"artefakmu yang tinggal sedikit, kamu mencoba\n"
+"meyakinkan dirimu bahwa itu akan\n"
+"cukup. lagipula, harus cukup\n"
+"bukan?\n"
+"\n"
+"\n"
+"bukan?"
+
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Pasti jiwa-jiwa terkutuk yang menghuni\n"
+"dunia ini, karena tak ada yang indah atau baik\n"
+"yang bisa bertahan lama di sini.\n"
+"\n"
+"Namun apa yang telah berlalu hanyalah\n"
+"bayangan pucat dari apa yang menghadang\n"
+"perjalananmu sekarang: benteng kegelapan itu sendiri.\n"
+"\n"
+"Sosok muram katedral menghalangi\n"
+"semua kecuali sekilas pandang dari\n"
+"benteng yang sebenarnya, namun apa yang terlihat\n"
+"berbisik lirih tentang kematian yang\n"
+"dingin dan perlahan...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...bagi yang beruntung."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Sekali lagi kamu mendapati dirimu di\n"
+"aula besar lingkaran kekacauan, seolah\n"
+"tidak ada waktu yang berlalu sejak\n"
+"terakhir kali kamu melangkah di antara bayangan-bayangan ini.\n"
+"\n"
+"Namun ada sesuatu yang terasa aneh berbeda,\n"
+"keheningan di mana dulunya ada bisikan-bisikan lembut,\n"
+"sebuah perasaan diawasi\n"
+"oleh mata-mata tersembunyi...\n"
+"\n"
+"...mata-mata yang menyembunyikan\n"
+"niat jahat."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Pernah sekali sebelumnya kamu menggenggam lingkaran\n"
+"kekacauan itu, memegangnya dalam tangan yang gemetar.\n"
+"kini tanganmu gemetar dengan\n"
+"sesuatu yang lebih dari sekadar keserakahan, dan\n"
+"rasa ngeri berpadu dengan hasrat akan\n"
+"kekuasaan.\n"
+"\n"
+"Jika bahkan kekuatan lingkaran itu sendiri\n"
+"tidak cukup untuk melindungimu dari\n"
+"kekuatan kegelapan, mungkin lebih baik\n"
+"dibiarkan tak tersentuh, janjinya\n"
+"dibiarkan tak terpenuhi.\n"
+"\n"
+"\n"
+"\n"
+"Tapi bagaimanapun, kamu tidak pernah jadi orang yang\n"
+"mundur dari sebuah tantangan..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n...dan pemain-pemain lain menanti.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Kau berani bertarung di ruang persiapan?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Karena itu, kamu harus mati!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Air terjun terbuka"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Air terjun terblokir"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Sebuah pintu telah terbuka di kapel"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Ini aneh sekali..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Tiga bagian teka-teki lagi tersisa"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Dua bagian teka-teki lagi tersisa"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Satu bagian teka-teki lagi tersisa"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Teka-teki telah selesai"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Kamu belum menyelesaikan teka-teki"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Lantainya tidak aman!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Sepertiga teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Dua pertiga teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Kamu mendengar sebuah platform bergerak di kejauhan"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Sudah selesai..."
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Kamu belum menyelesaikan teka-teki"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Aku memperingatkanmu..."
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Keras kepala, ya?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Dan bodoh pula"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Seperempat teka-teki ini telah selesai"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Pilihan yang buruk..."
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Simbol-simbolnya tidak sejajar"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Pintu tidak bisa dibuka dari sisi ini"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Pintu dipalang dari luar"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Penistaan!"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Kamu telah menodai makam Eric!!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Dan sekarang kamu mati!!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Sepertiga teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Dua pertiga teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Krypta terbuka"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Waspadai makam laba-laba"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Kamu mendengar sebuah platform naik di luar"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Apakah kamu merasa beruntung?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Tebakanmu salah!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Tebakan yang bagus"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Bisakah kamu mengerjakan semua scripting untuk level-ku?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Jangan sentuh gloppy-ku"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Kasih aku sedikit sayang, nak"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Duh-uhhh..."
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Film dalam sejam?"
+
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Aku bahkan tidak dapat nisanku sendiri - cf"
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Jangan ada darah yang tertumpah"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Jangan ada tangan yang terangkat dalam amarah"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Siapa yang berani mengganggu tidur kami?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Jalannya terbuka"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Kamu punya "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20sakelar tersisa"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Kamu hanya punya "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20sakelar tersisa"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Jalan keluar terbuka"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Pintu-pintu tidak bisa dibuka dari sisi ini"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Pintu-pintunya terbuka..."
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...jika kamu sudah siap"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Sebuah pintu telah terbuka"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "di Kapel"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Sebuah jembatan telah dibangun"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "di Rumah Jagal"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Sebuah tangga telah dibangun"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "di Penjaga Kegelapan"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Satu roda gigi telah dipasang"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20roda gigi telah dipasang"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Sebuah barikade telah terbuka"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "Di Kloaka"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Jalan kembali terbuka"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Pintu dipalang dari dalam"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Kamu berani menjarah makam"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "sang algojo?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Bersiaplah untuk mati"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Kamu punya "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20sakelar lagi yang harus ditemukan"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Kamu hanya punya "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20sakelar tersisa"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Jalan menuju menara terbuka"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Jalannya terbuka"

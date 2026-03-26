@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-25 20:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: pt\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Aperte uma tecla."
@@ -21,7 +20,7 @@ msgid "SECRETMESSAGE"
 msgstr "Segredo revelado!"
 
 msgid "D_DEVSTR"
-msgstr "Modo inútil ATIVADO.\n"
+msgstr "Modo inútil: ATIVADO"
 
 msgid "QUITMSG"
 msgstr ""
@@ -64,7 +63,7 @@ msgstr ""
 
 msgid "SWSTRING"
 msgstr ""
-"Esta é a versão shareware de DOOM.\n"
+"Esta é a versão shareware de Doom.\n"
 "\n"
 "Você precisa obter a trilogia completa.\n"
 "\n"
@@ -99,7 +98,7 @@ msgstr ""
 
 msgid "QUITMSG2"
 msgstr ""
-"Vamos embora — isso tá virando \n"
+"Vamos embora—isso tá virando \n"
 "um banho de sangue!"
 
 msgid "QUITMSG3"
@@ -154,6 +153,7 @@ msgstr ""
 "Olha, se você sair agora, vai perder\n"
 "a sua contagem de vítimas!"
 
+#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
 "Sai daqui. Quando você voltar,\n"
@@ -171,27 +171,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Massacre interrompido...\n"
+"Massacre interrompido…\n"
 "Que provocante!"
 
 msgid "QUITMSG17"
 msgstr ""
 "Mas você é a esperança\n"
-"— minha única chance!"
+"—minha única chance!"
 
 msgid "QUITMSG18"
 msgstr "Ninguém vira as costas para a Blackbird."
 
 msgid "QUITMSG19"
-msgstr "Eu achei que você era diferente..."
+msgstr "Eu achei que você era diferente…"
 
 msgid "QUITMSG20"
 msgstr "Ótimo! Mate e fuja!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Você pode sair...\n"
-"mas não pode se esconder..."
+"Você pode sair…\n"
+"mas não pode se esconder…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -216,7 +216,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "Tomara que só esteja fazendo uma\n"
-"pausa pra um Chex(R) Party Mix."
+"pausa pra um Chex® Party Mix."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -230,7 +230,7 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"O verdadeiro Guerreiro Chex(R)\n"
+"O verdadeiro Guerreiro Chex®\n"
 "não desistiria tão rapido!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
@@ -261,7 +261,7 @@ msgid "HUSTR_MSGU"
 msgstr "[Mensagem não enviada]"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr "Você resmunga para si mesm@[ao_ptb]..."
+msgstr "Você resmunga para si mesm@[ao_ptb]"
 
 msgid "HUSTR_TALKTOSELF2"
 msgstr "Quem está aí?"
@@ -273,7 +273,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "Você começa a delirar"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Você enlouqueceu..."
+msgstr "Você enlouqueceu…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Mensagem enviada]"
@@ -285,16 +285,16 @@ msgid "STSTR_NOMUS"
 msgstr "Seleção impossível"
 
 msgid "STSTR_DQDON"
-msgstr "Modo invencível ATIVADO"
+msgstr "Modo invencível: ATIVADO"
 
 msgid "STSTR_DQDOFF"
-msgstr "Modo invencível DESATIVADO"
+msgstr "Modo invencível: DESATIVADO"
 
 msgid "STSTR_DQD2ON"
-msgstr "Modo invencível supremo ATIVADO"
+msgstr "Modo invencível supremo: ATIVADO"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Modo invencível supremo DESATIVADO"
+msgstr "Modo invencível supremo: DESATIVADO"
 
 msgid "STSTR_KFAADDED"
 msgstr "Equipamento completo"
@@ -303,16 +303,18 @@ msgid "STSTR_FAADDED"
 msgstr "Equipamento completo (sem chaves)"
 
 msgid "STSTR_NCON"
-msgstr "Modo sem colisão ATIVADO"
+msgstr "Modo sem colisão: ATIVADO"
 
 msgid "STSTR_NCOFF"
-msgstr "Modo sem colisão DESATIVADO"
+msgstr "Modo sem colisão: DESATIVADO"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Modo sem colisão 2 ATIVADO"
+msgstr "Modo sem colisão 2: ATIVADO"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Modo sem colisão 2 DESATIVADO"
+msgstr "Modo sem colisão 2: DESATIVADO"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -331,28 +333,28 @@ msgstr "Potencializador ativado"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... não tá ruim — GM"
+msgstr "… não tá ruim — GM"
 
 msgid "STSTR_CLEV"
-msgstr "Trocando de fase..."
+msgstr "Trocando de fase…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Modo Buda ATIVADO"
+msgstr "Modo Buda: ATIVADO"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Modo Buda DESATIVADO"
+msgstr "Modo Buda: DESATIVADO"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Modo Buda supremo ATIVADO"
+msgstr "Modo Buda supremo: ATIVADO"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Modo Buda supremo DESATIVADO"
+msgstr "Modo Buda supremo: DESATIVADO"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Poder ativado"
+msgstr "Poder: ATIVADO"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Poder desativado"
+msgstr "Poder: DESATIVADO"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Saúde completa"
@@ -361,10 +363,10 @@ msgid "TXT_CHEATKEYS"
 msgstr "Todas as chaves"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Depuração de som ativada"
+msgstr "Depuração de som: ATIVADA"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Depuração de som desativada"
+msgstr "Depuração de som: DESATIVADA"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Tentando trapacear, né? Morra!"
@@ -373,10 +375,10 @@ msgid "TXT_CHEATIDKFA"
 msgstr "Trapaceiros não merecem armas"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Contador ativado"
+msgstr "Contador: ATIVADO"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Contador desativado"
+msgstr "Contador: DESATIVADO"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Concedido"
@@ -388,13 +390,13 @@ msgid "TXT_GOTSTUFF"
 msgstr "Você ganhou muitas coisas!"
 
 msgid "TXT_FREEZEON"
-msgstr "Modo congelado ativado"
+msgstr "Modo congelado: ATIVADO"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Modo congelado desativado"
+msgstr "Modo congelado: DESATIVADO"
 
 msgid "TXT_STRANGE"
-msgstr "Você está com uma sensação estranha..."
+msgstr "Você está com uma sensação estranha…"
 
 msgid "TXT_STRANGER"
 msgstr "Você está com uma sensação mais estranha ainda."
@@ -403,10 +405,10 @@ msgid "TXT_NOTSTRANGE"
 msgstr "Você se sente normal novamente."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Botas de chumbo ativadas"
+msgstr "Botas de chumbo: ATIVADAS"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Botas de chumbo desativadas"
+msgstr "Botas de chumbo: DESATIVADAS"
 
 msgid "TXT_LIGHTER"
 msgstr "Você se sente mais leve"
@@ -415,10 +417,10 @@ msgid "TXT_GRAVITY"
 msgstr "A gravidade volta a funcionar normalmente"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Sem alvos ATIVADO"
+msgstr "Sem alvos: ATIVADO"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Sem alvos DESATIVADO"
+msgstr "Sem alvos: DESATIVADO"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Trema de medo!\""
@@ -427,10 +429,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Chega de Armadura de Ogro"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Câmera em terceira pessoa ATIVADA"
+msgstr "Câmera em terceira pessoa: ATIVADA"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Câmera em terceira pessoa DESATIVADA"
+msgstr "Câmera em terceira pessoa: DESATIVADA"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 inimigo morto"
@@ -446,8 +448,7 @@ msgstr "%d monstros mortos"
 
 msgid "TXT_NO_RESURRECT"
 msgstr ""
-"Impossível ressuscitar. O jogador não \n"
-"está mais ligado ao próprio corpo."
+"Impossível ressuscitar. O jogador não está mais ligado ao próprio corpo."
 
 msgid "TXT_ALL_ARTIFACTS"
 msgstr "Todos os artefatos!"
@@ -456,25 +457,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "O que você gostaria de matar fora de um jogo?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Propriedades de jogador congelado desativadas"
+msgstr "Propriedades de jogador congelado: DESATIVADAS"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Modo de seguimento DESATIVADO"
+msgstr "Modo de seguimento: DESATIVADO"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Modo de seguimento ATIVADO"
+msgstr "Modo de seguimento: ATIVADO"
 
 msgid "AMSTR_GRIDON"
-msgstr "Grade ATIVADA"
+msgstr "Grade: ATIVADA"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Grade DESATIVADA"
+msgstr "Grade: DESATIVADA"
 
 msgid "AMSTR_TEXON"
-msgstr "Modo de textura ATIVADO"
+msgstr "Modo de textura: ATIVADO"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Modo de textura DESATIVADO"
+msgstr "Modo de textura: DESATIVADO"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Posição marcada"
@@ -668,9 +669,7 @@ msgid "GOTSTIM"
 msgstr "Pegou um estimulante."
 
 msgid "GOTMEDINEED"
-msgstr ""
-"Pegou um kit médico\n"
-"que você REALMENTE precisava!"
+msgstr "Pegou um kit médico que você REALMENTE precisava!"
 
 msgid "GOTMEDIKIT"
 msgstr "Pegou um kit médico."
@@ -745,7 +744,7 @@ msgid "GOTBACKPACK"
 msgstr "Pegou uma mochila cheia de munição!"
 
 msgid "GOTBFG9000"
-msgstr "Você pegou a BFG! Ah, que delícia!"
+msgstr "Você pegou a BFG! Ah, que delícia."
 
 msgid "GOTCHAINGUN"
 msgstr "Você pegou a metralhadora!"
@@ -1083,7 +1082,7 @@ msgid "OB_MPBFG_BOOM"
 msgstr "%k vaporizou %o com sua BFG."
 
 msgid "OB_MPBFG_SPLASH"
-msgstr "%o não conseguiu se esconder da BFG de %k"
+msgstr "%o não conseguiu se esconder da BFG de %k."
 
 msgid "OB_RAILGUN"
 msgstr "%k acertou %o com seu canhão elétrico."
@@ -1313,10 +1312,10 @@ msgid "OB_BONEKNIGHTHIT"
 msgstr "%o foi picotad@[ao_ptb] por um guerreiro morto-vivo."
 
 msgid "OB_MINOTAUR"
-msgstr "%o foi incinerad@[ao_ptb] por um Marretauro"
+msgstr "%o foi incinerad@[ao_ptb] por um Marretauro."
 
 msgid "OB_MINOTAURHIT"
-msgstr "%o foi esmagad@[ao_ptb] por um Marretauro"
+msgstr "%o foi esmagad@[ao_ptb] por um Marretauro."
 
 msgid "OB_MUMMY"
 msgstr "%o foi esmagad@[ao_ptb] por um golem."
@@ -1799,7 +1798,7 @@ msgid "OB_WRAITHHIT"
 msgstr "%o teve sua vida roubada por um Fantasma."
 
 msgid "OB_DRAGON"
-msgstr "%o foi incinerad@[ao_ptb] por uma Serpe da Morte"
+msgstr "%o foi incinerad@[ao_ptb] por uma Serpe da Morte."
 
 msgid "OB_KORAX"
 msgstr "%o foi eliminad@[ao_ptb] do tabuleiro por Korax."
@@ -1838,7 +1837,7 @@ msgid "OB_MPCWEAPSTAFFM"
 msgstr "%o foi mordid@[ao_ptb] pelo Cetro da Serpente de %k."
 
 msgid "OB_MPCWEAPSTAFFR"
-msgstr "%o se engasgou com o Cetro da Serpente de %k"
+msgstr "%o se engasgou com o Cetro da Serpente de %k."
 
 msgid "OB_MPCWEAPFLAME"
 msgstr "%o foi incendiad@[ao_ptb] pelas chamas de %k."
@@ -1932,7 +1931,7 @@ msgid "TXT_SCANNER"
 msgstr "Você pegou o scanner."
 
 msgid "TXT_NEEDMAP"
-msgstr "O scanner não funciona sem um mapa!\n"
+msgstr "O scanner não funciona sem um mapa!"
 
 msgid "TXT_PRISONPASS"
 msgstr "Você pegou o passe da Prisão."
@@ -2076,13 +2075,13 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Você pegou a mochila de munição."
 
 msgid "MSG_TALISMANRED"
-msgstr "Você tem um pressentimento de que isso não devia ser tocado..."
+msgstr "Você tem um pressentimento de que isso não devia ser tocado…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Seja o que for, isso não pertence a este mundo..."
+msgstr "Seja o que for, isso não pertence a este mundo…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Deveria fazer alguma coisa..."
+msgstr "Deveria fazer alguma coisa…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Você tem a super força!"
@@ -2577,10 +2576,10 @@ msgid "TXT_GOAWAY"
 msgstr "Vá embora!"
 
 msgid "TXT_COMM0"
-msgstr "Recebendo Mensagem..."
+msgstr "Recebendo Mensagem…"
 
 msgid "TXT_COMM1"
-msgstr "Recebendo Mensagem de BlackBird..."
+msgstr "Recebendo Mensagem de BlackBird…"
 
 msgid "TXT_FINDHELP"
 msgstr "Procure ajuda"
@@ -2590,10 +2589,10 @@ msgid "TXT_TRADE"
 msgstr "por %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Pegou uma Armadura Chex(R)."
+msgstr "Pegou uma Armadura Chex®."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Pegou uma Super Armadura Chex(R)!"
+msgstr "Pegou uma Super Armadura Chex®!"
 
 msgid "GOTWATER"
 msgstr "Pegou um copo d'água."
@@ -2641,7 +2640,7 @@ msgid "GOTPROPULSORPACK"
 msgstr "Pegou um pacote de recargas para propulsor de zorch."
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "Pegou recarga para zorcher fásico."
+msgstr "Pegou recarga para zorcher fásico"
 
 msgid "GOTPHASINGZORCHERPACK"
 msgstr "Pegou um pacote de recargas para zorcher fásico."
@@ -2778,7 +2777,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Aperte a tecla ESC para continuar..."
+"Aperte a tecla Esc para continuar…"
 
 msgid "CE2TEXT"
 msgstr "Você conseguiu!"
@@ -2793,7 +2792,7 @@ msgid "CLOADNET"
 msgstr ""
 "Não é possível carregar durante uma aventura em rede!\n"
 "\n"
-"Aperte alguma tecla."
+"Aperte uma tecla."
 
 msgctxt "chex"
 msgid "QSPROMPT"
@@ -2807,9 +2806,9 @@ msgstr ""
 msgctxt "chex"
 msgid "QLOADNET"
 msgstr ""
-"Não é possível carregar durante uma aventura em rede!\n"
+"Não é possível fazer carregamento rápido durante uma aventura em rede!\n"
 "\n"
-"Aperte alguma tecla."
+"Aperte uma tecla."
 
 msgctxt "chex"
 msgid "QLPROMPT"
@@ -2822,31 +2821,32 @@ msgstr ""
 
 msgid "CNEWGAME"
 msgstr ""
-"Não é possível iniciar uma nova aventura durante uma aventura em rede.\n"
+"Não é possível iniciar uma nova aventura\n"
+"durante uma aventura em rede.\n"
 "\n"
-"Aperte alguma tecla."
+"Aperte uma tecla."
 
 msgid "CNIGHTMARE"
 msgstr ""
 "Cuidado, isto vai ser difícil.\n"
 "Deseja continuar?\n"
 "\n"
-"Press Y or N."
+"Aperte Y ou N."
 
 msgid "CSWSTRING"
 msgstr ""
-"Este é o Chex(R) Quest. Procure por\n"
+"Este é o Chex® Quest. Procure por\n"
 "\n"
 "novas fases em www.chexquest.com.\n"
 "\n"
-"Aperte alguma tecla."
+"Aperte uma tecla."
 
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
 "Você não pode terminar uma aventura em rede!\n"
 "\n"
-"Aperte alguma tecla."
+"Aperte uma tecla."
 
 msgctxt "chex"
 msgid "ENDGAME"
@@ -2857,11 +2857,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Modo invencível ATIVADO"
+msgstr "Modo invencível: ATIVADO"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Modo invencível DESATIVADO"
+msgstr "Modo invencível: DESATIVADO"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2873,7 +2873,7 @@ msgstr "Super Zorch adicionado"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... coma Chex(R)!"
+msgstr "…coma Chex®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -3356,9 +3356,6 @@ msgstr "Pisos que se deslocam instantâneamente emitem som"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sons de setor são emitidos a partir do centro"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Som para quando o ator desaparece"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Usar método original de destino de som"
 
@@ -3624,7 +3621,7 @@ msgid "AUTOMAPMNU_TEXTURED"
 msgstr "Habilitar automapa texturizado"
 
 msgid "AUTOMAPMNU_SHOWITEMS"
-msgstr "Exibir contagem de itens"
+msgstr "Exibir contagens de itens"
 
 msgid "AUTOMAPMNU_SHOWMONSTERS"
 msgstr "Exibir contagem de monstros"
@@ -3830,9 +3827,6 @@ msgstr "Usar efeito difuso"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Transparência clássica"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Translucência da Alma Perdida"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Usar contraste falso"
 
@@ -3986,9 +3980,6 @@ msgstr "Opções de Rede"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Opções locais"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Previsão de movimento"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Prever ações de linha"
 
@@ -4003,15 +3994,6 @@ msgstr "Opções de host"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Tics extras"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Equilíbrio de latência"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr ""
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Otimizado"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Clássico (Mais rápido)"
@@ -4069,25 +4051,16 @@ msgid "OPTVAL_BOTH"
 msgstr "Ambos"
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr "Jogador"
 
 msgid "OPTVAL_MAP"
 msgstr "Mapa"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Escalar para 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Pixel duplo"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Pixel quádruplo"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Arma atual"
@@ -4182,15 +4155,6 @@ msgstr "Cores definidas por mapa apenas"
 msgid "OPTVAL_NODOORS"
 msgstr "Tudo exceto portas"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Dobro"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Triplo"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Quádruplo"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Coleta de Item"
 
@@ -4207,40 +4171,37 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr "Somente monstros"
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr "Antigo"
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (estritamente)"
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr "Boom (estritamente)"
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (estritamente)"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (estritamente)"
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr ""
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Todos não reconhecidos"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Erros"
@@ -4263,12 +4224,6 @@ msgstr "Renderizador Software do Doom"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "Renderizador Software True Color"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "Alta-Performance"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Economia de Energia"
-
 msgid "OPTVAL_VANILLA"
 msgstr ""
 
@@ -4277,12 +4232,6 @@ msgstr "ZDoom (Forçar)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Vanilla (Forçar)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Automático (De preferência ZDoom)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Automático (De preferência Vanilla)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Pequeno"
@@ -4372,21 +4321,15 @@ msgid "C_TEAL"
 msgstr "\\czturquesa"
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Sem som"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Sem interpolação"
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
-
-msgid "OPTSTR_OPENAL"
 msgstr ""
 
 msgid "DSPLYMNU_GLOPT"
@@ -4401,12 +4344,6 @@ msgstr "Opções de Renderização por Hardware"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Opções de Luz Dinâmica"
 
-msgid "GLMNU_PREFS"
-msgstr "Preferências"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Cortar bordas de sprites"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Organizar listas de renderização por textura"
 
@@ -4415,9 +4352,6 @@ msgstr "Luzes dinâmicas"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Luzes dinâmicas (Hardware)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Habilitar definições de luz"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Luzes afetam sprites"
@@ -4434,17 +4368,11 @@ msgstr "Qualidade de shadowmap"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Filtro de shadowmap"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Modo de neblina"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Neblina força brilho máximo"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Intensidade de luz da arma"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Mapa de ambiente em espelhos"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Modo de visão noturna avançada"
@@ -4469,9 +4397,6 @@ msgstr "Sprites de frente para a câmera"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Tipo de partícula"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Qualidade de renderização"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "3D Estéreo (VR)"
@@ -4522,9 +4447,6 @@ msgstr ""
 msgid "OPTVAL_SOFTWARE"
 msgstr ""
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Otimizado"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Eixo Y"
 
@@ -4536,9 +4458,6 @@ msgstr "Quadrado"
 
 msgid "OPTVAL_ROUND"
 msgstr "Redondo"
-
-msgid "OPTVAL_RADIAL"
-msgstr ""
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Difuso pixelado"
@@ -4603,9 +4522,6 @@ msgstr "Opções de TrueColor"
 msgid "TCMNU_TITLE"
 msgstr "Opções de TrueColor"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Saída de true color"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Filtro linear ao reduzir"
 
@@ -4617,21 +4533,6 @@ msgstr "Usar texturas com mipmapping"
 
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Luzes Dinâmicas (Software)"
-
-msgid "OS_TITLE"
-msgstr "Buscar opção"
-
-msgid "OS_ANY"
-msgstr "Buscar por qualquer termo"
-
-msgid "OS_ALL"
-msgstr "Buscar por todos os termos"
-
-msgid "OS_NO_RESULTS"
-msgstr "Nenhum resultado encontrado."
-
-msgid "OS_LABEL"
-msgstr "Busca:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Sempre mostrar chaves"
@@ -4656,9 +4557,7 @@ msgid "TXT_COULDNOTREAD"
 msgstr "Não foi possível ler o jogo salvo \"%s\"."
 
 msgid "TXT_NOINFOJSON"
-msgstr ""
-"\"%s\" não é um jogo salvo válido: Está faltando\n"
-"\"info.json\"."
+msgstr "\"%s\" não é um jogo salvo válido: Está faltando \"info.json\"."
 
 msgid "TXT_FAILEDTOREADSG"
 msgstr "Não foi possível acessar a informação do jogo salvo em \"%s\"."
@@ -4672,7 +4571,7 @@ msgstr "O jogo salvo \"%s\" é de outra engine baseada em ZDoom:"
 msgid "TXT_TOOOLDSG"
 msgstr ""
 "O jogo salvo \"%s\" é de uma versão mais antiga: %d (%e sendo a mais antiga "
-"suportada)"
+"suportada)."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4682,18 +4581,16 @@ msgstr ""
 msgid "TXT_TOONEWSG"
 msgstr ""
 "O jogo salvo \"%s\" é de uma versão mais nova: %d (%e sendo a mais recente "
-"suportada)"
+"suportada)."
 
 msgid "TXT_NOMAPSG"
 msgstr "O jogo salvo \"%s\" não possui o mapa atual."
 
 msgid "TXT_NOGLOBALSJSON"
-msgstr ""
-"\"%s\" não é um jogo salvo válido: Está faltando\n"
-"\"globals.json\"."
+msgstr "\"%s\" não é um jogo salvo válido: Está faltando \"globals.json\"."
 
 msgid "TXT_SGINFOERR"
-msgstr "Não foi possível acessar a informação do jogo salvo em \"%s\"."
+msgstr "Não foi possível acessar a informação do jogo salvo em \"%s\""
 
 msgid "TXT_SAVEPENDING"
 msgstr "Jogo salvo ainda pendente."
@@ -4702,10 +4599,10 @@ msgid "TXT_NOTSAVEABLE"
 msgstr "Não está em uma partida salvável."
 
 msgid "TXT_NOTINLEVEL"
-msgstr "Não está em uma fase."
+msgstr "Não está em uma fase"
 
 msgid "TXT_SPPLAYERDEAD"
-msgstr "Jogador está morto em partida single player."
+msgstr "Jogador está morto em partida single player"
 
 msgid "TXT_SAVEFAILED"
 msgstr "Falha ao salvar"
@@ -4716,10 +4613,6 @@ msgstr "Não foi possível capturar a tela."
 # As in paused by player %s.
 msgid "TXT_BY"
 msgstr "Por %s"
-
-msgid "TXT_QUITENDOOM"
-msgstr ""
-"Aperte qualquer tecla ou clique em qualquer lugar na janela para sair."
 
 msgid "HUDMNU_FLASH"
 msgstr "Opções de mescla de tela"
@@ -4732,9 +4625,6 @@ msgstr "Mira"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Legendas"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Prevenir sombras cinzentas"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Opções de Fonte"
@@ -4775,11 +4665,6 @@ msgstr "Fator de escala"
 
 msgid "SCALEMNU_RATIO"
 msgstr "Proporção de tela"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr ""
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4930,10 +4815,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Jogadores não podem pegar itens largados"
 
 # Disables autoloading save on death
+#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Reiniciar fase após morte"
 
 # Resets inventory on every map
+#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Iniciar com a pistola"
 
@@ -5098,9 +4985,6 @@ msgstr "Contagem regressiva (segundos)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Modo lento de chat (segundos)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Ativar gatilhos táteis"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "Opções de resposta tátil"
 
@@ -5215,10 +5099,10 @@ msgid "TAG_REPELLENT"
 msgstr "Repelente de Gosma"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Armadura Chex"
+msgstr "Armadura Chex®"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Super Armadura Chex"
+msgstr "Super Armadura Chex®"
 
 msgid "TAG_CHEXMAP"
 msgstr "Mapa Computadorizado"
@@ -5278,3 +5162,15 @@ msgstr "Contraste"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Saturação"
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Suavizado"
+
+#, fuzzy
+msgid "TAG_MAULER"
+msgstr "Desintegrador"
+
+#, fuzzy
+msgid "TAG_GLAUNCHER"
+msgstr "Lança-granadas"

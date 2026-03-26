@@ -11,8 +11,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: esm esn esg esc esa esd esv eso esr ess esf esl esy esz esb ese "
-"esh esi esu\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 # Flem = phlegm

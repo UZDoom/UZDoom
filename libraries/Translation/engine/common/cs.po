@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-30 17:00+0000\n"
-"Last-Translator: Šimon Větrovec <commonissuedemon@gmail.com>\n"
+"PO-Revision-Date: 2026-03-16 23:09+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/common/cs/>"
 "\n"
 "Language: cs\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: cs\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Stiskni Y nebo N."
@@ -27,13 +26,10 @@ msgid "SAVEDEAD"
 msgstr ""
 "Mimo hru nelze ukládat!\n"
 "\n"
-"Stiskni libovolnou klávesu."
+"Stiskni klávesu."
 
 msgid "SAFEMESSAGE"
 msgstr "Vážně to chceš udělat?"
-
-msgid "NOTSET"
-msgstr "Není nastavené"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -56,10 +52,10 @@ msgid "TXT_X_CHEATS"
 msgstr "%s podvádí"
 
 msgid "MSGOFF"
-msgstr "Oznámení ZAP."
+msgstr "Oznámení: VYP"
 
 msgid "MSGON"
-msgstr "Oznámení VYP."
+msgstr "Oznámení: ZAP"
 
 msgid "TXT_SAY"
 msgstr "Říct:"
@@ -92,7 +88,7 @@ msgid "MNU_NOFILES"
 msgstr "Žádné soubory"
 
 msgid "MNU_DELETESG"
-msgstr "Opravdu chcete smazat tuto uloženou hru?\n"
+msgstr "Opravdu chcete smazat tuto uloženou hru?"
 
 msgid "OPTVAL_OFF"
 msgstr "Vyp."
@@ -107,7 +103,7 @@ msgid "OPTMNU_TITLE"
 msgstr "Možnosti"
 
 msgid "OPTMNU_CONTROLS"
-msgstr "Ovládání"
+msgstr "Nastavení ovládání"
 
 msgid "OPTMNU_MOUSE"
 msgstr "Myš"
@@ -116,7 +112,7 @@ msgid "OPTMNU_JOYSTICK"
 msgstr "Ovladač"
 
 msgid "OPTMNU_PLAYER"
-msgstr "Hráč"
+msgstr "Nastavení hráče"
 
 msgid "OPTMNU_GAMEPLAY"
 msgstr "Herní mechaniky"
@@ -128,10 +124,10 @@ msgid "OPTMNU_HUD"
 msgstr "Rozhraní a HUD"
 
 msgid "OPTMNU_MISCELLANEOUS"
-msgstr "Ostatní"
+msgstr "Ostatní nastavení"
 
 msgid "OPTMNU_SOUND"
-msgstr "Zvuk"
+msgstr "Nastavení zvuku"
 
 msgid "OPTMNU_DISPLAY"
 msgstr "Grafika"
@@ -239,17 +235,11 @@ msgstr "Akce"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Nastavení ovládání akcí"
 
-msgid "CNTRLMNU_CHAT"
-msgstr ""
-
 msgid "MNU_MULTIPLAYER"
 msgstr ""
 
 msgid "CNTRLMNU_SAY"
 msgstr "Říct"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Nastavení ovládání chatu"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Nastavení ovládání zbraní"
@@ -343,19 +333,19 @@ msgid "MAPCNTRLMNU_ZOOMOUT"
 msgstr "Oddálit"
 
 msgid "MAPCNTRLMNU_TOGGLEZOOM"
-msgstr "Přiblížení vyp./zap."
+msgstr "Přiblížení vyp/zap"
 
 msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
-msgstr "Sledování hráče vyp./zap."
+msgstr "Sledování hráče vyp/zap"
 
 msgid "MAPCNTRLMNU_TOGGLEGRID"
-msgstr "Mřížka vyp./zap."
+msgstr "Mřížka vyp/zap"
 
 msgid "MAPCNTRLMNU_ROTATE"
-msgstr "Otáčení vyp./zap."
+msgstr "Otáčení vyp/zap"
 
 msgid "MAPCNTRLMNU_TOGGLETEXTURE"
-msgstr "Textury vyp./zap."
+msgstr "Textury vyp/zap"
 
 msgid "CNTRLMNU_AUTOMAP"
 msgstr "Otevřít/zavřít automapu"
@@ -365,9 +355,6 @@ msgstr "Kamera z třetí osoby"
 
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Pořídit snímek obrazovky"
-
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Otevřít konzoli"
 
 msgid "CNTRLMNU_PAUSE"
 msgstr "Pauza"
@@ -407,9 +394,6 @@ msgstr "Povolit/skrýt oznámení"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Ukončit hru"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Nastavit gamu"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Povolit myš"
@@ -499,7 +483,7 @@ msgid "JOYMNU_PS2"
 msgstr "Povolit ovladače PlayStation 2"
 
 msgid "JOYMNU_NOCON"
-msgstr "Nenalezeny žádné ovladače."
+msgstr "Nenalezeny žádné ovladače"
 
 msgid "JOYMNU_CONFIG"
 msgstr "Nastavit ovladače:"
@@ -509,7 +493,7 @@ msgstr "Pro nalezení ovladačů musí"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr "být zapnuta jejich podpora."
+msgstr "být zapnuta jejich podpora"
 
 msgid "JOYMNU_INVALID"
 msgstr "Vybrán nesprávný ovladač pro nabídky"
@@ -529,19 +513,21 @@ msgstr "Mrtvá zóna"
 msgid "JOYMNU_NOAXES"
 msgstr "Žádné nastavitelné osy"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "Žádný"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Otáčení"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Dívání se nahoru/dolů"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "Pohyb vpřed"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Pohyb do stran"
 
@@ -592,9 +578,6 @@ msgstr "Bledě zelená"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Béžová"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Světle zelená"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Světle modrá"
@@ -662,23 +645,11 @@ msgstr "Vertikální synchronizace"
 msgid "DSPLYMNU_MODELS"
 msgstr "Modely"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Velikost zaměřovače"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Velikost stavového panelu"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Oznámení"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Oznámení na střed"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Pulzující oznámení"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Velikost oznámení"
 
 msgid "MNU_COLORPICKER"
 msgstr "Výběr barvy"
@@ -700,15 +671,6 @@ msgstr "Nastavení barev mapy"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Obnovit původní vlastní barvy"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Zvuk zapnut"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Hudba zapnuta"
-
-msgid "OPTVAL_4000HZ"
-msgstr ""
 
 msgid "OPTVAL_8000HZ"
 msgstr ""
@@ -806,9 +768,6 @@ msgstr "Náhodné výšky tónu"
 msgid "SNDMNU_CHANNELS"
 msgstr "Počet zvukových kanálů"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Zvukový systém"
-
 msgid "SNDMNU_OPENAL"
 msgstr "Nastavení OpenAL"
 
@@ -823,9 +782,6 @@ msgstr "Nastavení přehrávače modulů"
 
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "Nastavení MIDI přehrávače"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Zvuk v menu"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Pokročilá nastavení zvuku"
@@ -855,19 +811,16 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "Počet MIDI hlasů"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "Globální"
 
 msgid "ADVSNDMNU_FREEVERB"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Globální Freeverb"
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Nástrojová sada"
 
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Zesílení"
@@ -882,25 +835,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr ""
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Konfigurační soubor Timidity"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Relativní hlasitost"
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "Konfigurační soubor WildMidi"
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Vybrat konfiguraci"
@@ -910,9 +854,6 @@ msgstr "Pokročilé převzorkování"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "OPL sada"
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "Emulační jádro OPL"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Emulátor používá PCM vzorkovací frekvenci"
@@ -937,9 +878,6 @@ msgstr "Emulační jádro OPN2"
 
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "Emulace GUS"
-
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "Konfigurační soubor GUS"
 
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "Načíst DMXGUS soubory"
@@ -1028,13 +966,13 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "Křivka hlasitosti"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "OPTVAL_MAMEOPL2"
 msgstr ""
@@ -1057,11 +995,13 @@ msgstr ""
 msgid "OPTVAL_NUKEDOPL3"
 msgstr ""
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr "Nuked OP2-LLE (náročné na výkon!)"
+msgstr "Nuked OPL2-LLE (náročné na výkon!)"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr "Nuked OP3-LLE (náročné na výkon!)"
+msgstr "Nuked OPL3-LLE (náročné na výkon!)"
 
 msgid "OPTVAL_MAMEOPN2"
 msgstr ""
@@ -1070,9 +1010,6 @@ msgid "OPTVAL_NP2OPNA"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
-
-msgid "OPTVAL_PMDWINOPNA"
 msgstr ""
 
 msgid "OPTVAL_OPALOPL3"
@@ -1187,13 +1124,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "Paleta"
@@ -1315,12 +1252,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr "Nastavení textur"
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Povolit textury"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Povolit textury ve vysokém rozlišení"
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Režim zvětšovače textur"
 
@@ -1348,12 +1279,6 @@ msgstr "Přednačíst GL textury do cache"
 msgid "VIDMNU_TITLE"
 msgstr "Režim displeje"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Škálován (nejbližší)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Škálován (lineární)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr ""
 
@@ -1369,17 +1294,11 @@ msgstr "Přes celou obrazovku"
 msgid "VIDMNU_HIDPI"
 msgstr "Podpora Retiny/HiDPI"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "Poměr stran"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Vynutit poměr stran"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Vynucený poměr stran"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Povolit poměr stran 5:4"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Škálování rozlišení"
@@ -1465,14 +1384,14 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "Upřednostňované renderovací API"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "Vulkanu"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Kombinovat pravý a levý Alt/Ctrl/Shift"
@@ -1501,6 +1420,7 @@ msgstr "Rotace rychle uložených her"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Počet rychle uložených her v rotaci"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Zakázat čisté škálování nabídek"
 
@@ -1544,95 +1464,6 @@ msgstr "Upravit prostředí"
 msgid "REVMNU_NEW"
 msgstr "Nové prostředí"
 
-msgid "REVMNU_REVERT"
-msgstr "Obnovit nastavení"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr ""
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_ROOM"
-msgstr ""
-
-msgid "REVMNU_ROOM_HF"
-msgstr ""
-
-msgid "REVMNU_ROOM_LF"
-msgstr ""
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_REVERB"
-msgstr ""
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_DENSITY"
-msgstr ""
-
 msgid "REVMNU_Reflections_Scale"
 msgstr ""
 
@@ -1673,7 +1504,7 @@ msgid "REVMNU_Create"
 msgstr "Vytvořit"
 
 msgid "REVMNU_Save"
-msgstr "Uložit..."
+msgstr "Uložit…"
 
 msgid "REVMNU_File_name"
 msgstr "Název souboru"
@@ -1687,9 +1518,6 @@ msgstr "Nastavení Vulkanu (Experimentální)"
 msgid "VK_TITLE"
 msgstr "Nastavení Vulkanu"
 
-msgid "VKMNU_ENABLE"
-msgstr "Povolit Vulkan"
-
 msgid "VKMNU_DEVICE"
 msgstr "ID zařízení Vulkanu"
 
@@ -1697,29 +1525,25 @@ msgid "VKMNU_HDR"
 msgstr "Vysoký dynamický rozsah (HDR)"
 
 msgid "VK_WARNING"
-msgstr "Varování: Vulkan renderer je velmi experimentální!"
+msgstr "Varování: Vulkanu renderer je velmi experimentální!"
 
 msgid "VK_RESTART"
 msgstr "Tato nastavení vyžadují restart hry."
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Vybrat zařízení Vulkanu"
-
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "xBRZ (starší)"
@@ -1739,121 +1563,10 @@ msgstr "Nic nenalezeno."
 msgid "OS_LABEL"
 msgstr "Hledat:"
 
-msgid "TXT_OBITUARY1"
-msgstr "%o byl@[ao_cs] vykoštěn@[ao_cs] jako ryba hráčem %k"
-
-msgid "TXT_OBITUARY2"
-msgstr "%o byl@[ao_cs] vykastrován@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY3"
-msgstr "%o byl@[ao_cs] rozšlehán@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY4"
-msgstr "%o byl@[ao_cs] zdecimován@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY5"
-msgstr "%o byl@[ao_cs] zničen@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY6"
-msgstr "%o byl@[ao_cs] nakrájen@[ao_cs] na kostičky hráčem %k"
-
-msgid "TXT_OBITUARY7"
-msgstr "%o byl@[ao_cs] vykuchán@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY8"
-msgstr "%o byl@[ao_cs] zplacatěn@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY9"
-msgstr "%o utržil@[ao_cs] anální spravedlnost od hráče %k"
-
-msgid "TXT_OBITUARY10"
-msgstr "%o utrpěl@[ao_cs] AnÁlNí ŠíLeNsTvÍ od hráče %k"
-
-msgid "TXT_OBITUARY11"
-msgstr "%o byl@[ao_cs] zabit@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY12"
-msgstr "%o byl@[ao_cs] namelen@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY13"
-msgstr "%o byl@[ao_cs] zmasakrován@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY14"
-msgstr "%o byl@[ao_cs] zmrzačen@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY15"
-msgstr "%o byl@[ao_cs] proděravěn@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY16"
-msgstr "%o má novou díru od hráče %k"
-
-msgid "TXT_OBITUARY17"
-msgstr "%o byl@[ao_cs] zavražděn@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY18"
-msgstr "%o byl@[ao_cs] zmlácen@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY19"
-msgstr "Hráč %k se dopustil sodomie na hráči %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "%o byl@[ao_cs] rozplesknut@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY21"
-msgstr "%o byl@[ao_cs] rozmáčknut@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY22"
-msgstr "%o byl@[ao_cs] zaškrcen@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY23"
-msgstr "%o byl@[ao_cs] zničen@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY24"
-msgstr "Hráč %k narval %o@[psn1_cs] tělo do pytle"
-
-msgid "TXT_OBITUARY25"
-msgstr "%o byl@[ao_cs] poslán@[ao_cs] do pekla hráčem %k"
-
-msgid "TXT_OBITUARY26"
-msgstr "%o byl@[ao_cs] upečen@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY27"
-msgstr "%o byl@[ao_cs] rozsápán@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY28"
-msgstr "%o byl@[ao_cs] odstříknut@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY29"
-msgstr "%o byl@[ao_cs] postříkán@[ao_cs] hráčem %k"
-
-msgid "TXT_OBITUARY30"
-msgstr "%o byl@[ao_cs] hozen@[ao_cs] psům hráčem %k"
-
-msgid "TXT_OBITUARY31"
-msgstr "%o byl@[ao_cs] zmlácen@[ao_cs] jako pes hráčem %k"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o je exkrement"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o je hamburger"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o prodělal@[ao_cs] separaci šourku"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o se zúčastnil@[ao_cs] čistky obyvatelstva"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o spáchal@[ao_cs] sebevraždu"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o dostal@[ao_cs] Darwinovu cenu"
-
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr ""
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1886,41 +1599,11 @@ msgstr "Pouze upravené"
 msgid "TXT_UNKNOWN"
 msgstr "Neznámé"
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "Automapa"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "HUD + Automapa"
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Uložená hra potřebuje tyto soubory"
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Multiplayer"
-
-msgid "OPTMNU_INPUT"
-msgstr "Vstupní zařízení"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Systém"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Osvětlení"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Sprity"
-
 msgid "GLPREFMNU_CORONAS"
 msgstr "Záře"
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Vzhled"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Grafika (pokročilé)"
 
 msgid "PICKER_SELECT"
 msgstr "Vyberte, jaký herní soubor spustit."
@@ -2026,21 +1709,6 @@ msgstr "Hostovat"
 msgid "PICKER_JOIN"
 msgstr "Připojit se"
 
-msgid "PICKER_NETMODE"
-msgstr "Síťový režim"
-
-msgid "PICKER_NETAUTO"
-msgstr "Automatický (doporučeno)"
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr "Paketový server"
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr ""
-
 msgid "PICKER_NETRATE"
 msgstr "Frekvence paketů:"
 
@@ -2072,7 +1740,7 @@ msgid "PICKER_PLAYERS"
 msgstr "Maximální počet hráčů:"
 
 msgid "PICKER_PORT"
-msgstr "Port hostitele"
+msgstr "Port hostitele:"
 
 # Max number of players.
 msgid "PICKER_PLAYERHINT"
@@ -2087,7 +1755,7 @@ msgid "PICKER_TEAMHINT"
 msgstr "255 = náhodný"
 
 msgid "PICKER_IP"
-msgstr "IP hostitele"
+msgstr "IP hostitele:"
 
 msgid "PICKER_TDMLABEL"
 msgstr "Týmový deathmatch:"

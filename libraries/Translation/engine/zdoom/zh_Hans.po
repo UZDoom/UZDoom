@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-31 22:45+0000\n"
-"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
+"PO-Revision-Date: 2026-03-26 03:27+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,8 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: chs\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -21,7 +20,7 @@ msgid "SECRETMESSAGE"
 msgstr "你发现了一个秘密！"
 
 msgid "D_DEVSTR"
-msgstr "无用模式启动。\n"
+msgstr "无用模式：开"
 
 msgid "QUITMSG"
 msgstr ""
@@ -64,7 +63,7 @@ msgstr ""
 
 msgid "SWSTRING"
 msgstr ""
-"这是毁灭战士的共享软件版本。\n"
+"这是Doom的共享软件版本。\n"
 "\n"
 "你需要购买完整的三部曲。\n"
 "\n"
@@ -216,7 +215,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "我希望你只是在吃\n"
-"奇克斯(R)派对组合休息一下。"
+"奇克斯®派对组合休息一下。"
 
 msgid "QUITMSG27"
 msgstr ""
@@ -230,7 +229,7 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"真正的奇克斯(R)战士\n"
+"真正的奇克斯®战士\n"
 "不会这么快就放弃！"
 
 msgid "TXT_DEFAULTPICKUPMSG"
@@ -309,10 +308,10 @@ msgid "STSTR_NCOFF"
 msgstr "穿墙模式：关"
 
 msgid "STSTR_NC2ON"
-msgstr "穿墙模式2：开"
+msgstr "3D穿墙模式：开"
 
 msgid "STSTR_NC2OFF"
-msgstr "穿墙模式2：关"
+msgstr "3D穿墙模式：关"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -329,7 +328,7 @@ msgstr "能量提升已切换"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "……不恶心 - GM"
+msgstr "……没那么烂 - GM"
 
 msgid "STSTR_CLEV"
 msgstr "更换关卡……"
@@ -347,10 +346,10 @@ msgid "TXT_BUDDHA2OFF"
 msgstr "终极佛陀模式：关"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "电源：开"
+msgstr "力量：开"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "电源：关"
+msgstr "力量：关"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "生命全满"
@@ -452,7 +451,7 @@ msgid "TXT_WHAT_KILL"
 msgstr "游戏之外你想杀些什么？"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "关闭玩家属性冻结"
+msgstr "冻结玩家属性：关"
 
 msgid "AMSTR_FOLLOWOFF"
 msgstr "跟随模式：关"
@@ -1925,7 +1924,7 @@ msgid "TXT_SCANNER"
 msgstr "你拾取了扫描器。"
 
 msgid "TXT_NEEDMAP"
-msgstr "没有地图扫描器无法工作！\n"
+msgstr "没有地图扫描器无法工作！"
 
 msgid "TXT_PRISONPASS"
 msgstr "你拾取了监狱许可证。"
@@ -2583,16 +2582,16 @@ msgid "TXT_TRADE"
 msgstr "%u 金币"
 
 msgid "GOTCHEXARMOR"
-msgstr "拾取了奇克斯(R)护甲。"
+msgstr "拾取了奇克斯®护甲。"
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "拾取了超级奇克斯(R)护甲！"
+msgstr "拾取了超级奇克斯®护甲！"
 
 msgid "GOTWATER"
 msgstr "拾取了一杯水。"
 
 msgid "GOTREPELLENT"
-msgstr "拾取了slime repellent."
+msgstr "拾取了黏液防护剂。"
 
 msgid "GOTBREAKFAST"
 msgstr "超级充能早餐！"
@@ -2622,25 +2621,25 @@ msgid "GOTCHEXMAP"
 msgstr "发现了一张电子区域地图"
 
 msgid "GOTZORCHRECHARGE"
-msgstr "拾取了一个迷你zorch recharge."
+msgstr "拾取了一个迷你zorch充能。"
 
 msgid "GOTMINIZORCHPACK"
 msgstr "拾取了一个迷你zorch包."
 
 msgid "GOTPROPULSORRECHARGE"
-msgstr "拾取了一个zorch propulsor recharge."
+msgstr "拾取了一个zorch推进器充能。"
 
 msgid "GOTPROPULSORPACK"
-msgstr "拾取了一个zorch propulsor包."
+msgstr "拾取了一个zorch推进器包。"
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "拾取了一个phasing zorcher recharge"
+msgstr "拾取了一个相位zorcher充能"
 
 msgid "GOTPHASINGZORCHERPACK"
-msgstr "拾取了一个phasing zorcher包."
+msgstr "拾取了一个相位zorcher包。"
 
 msgid "GOTLARGEZORCHERRECHARGE"
-msgstr "拾取了一个大型zorcher recharge."
+msgstr "拾取了一个大型zorcher充能。"
 
 msgid "GOTLARGEZORCHERPACK"
 msgstr "拾取了一个大型zorcher包."
@@ -2649,19 +2648,19 @@ msgid "GOTZORCHPACK"
 msgstr "拾取了一个Zorchpak!"
 
 msgid "GOTLAZDEVICE"
-msgstr "你得到了the LAZ装置！Woot!"
+msgstr "你得到了LAZ装置！好耶！"
 
 msgid "GOTRAPIDZORCHER"
-msgstr "你得到了the Rapid Zorcher!"
+msgstr "你得到了速射Zorcher！"
 
 msgid "GOTSUPERBOOTSPORK"
-msgstr "你得到了超级Bootspork!"
+msgstr "你得到了超级靴叉勺！"
 
 msgid "GOTZORCHPROPULSOR"
-msgstr "你得到了the Zorch Propulsor!"
+msgstr "你得到了Zorch推进器！"
 
 msgid "GOTPHASINGZORCHER"
-msgstr "你得到了the Phasing Zorcher!"
+msgstr "你得到了相位Zorcher！"
 
 msgid "GOTLARGEZORCHER"
 msgstr "你得到了大型Zorcher!"
@@ -2676,7 +2675,7 @@ msgid "TAG_SPOON"
 msgstr "勺子"
 
 msgid "TAG_SPORK"
-msgstr "超级Bootspork"
+msgstr "超级靴叉勺"
 
 msgid "TAG_MINIZORCHER"
 msgstr "迷你Zorcher"
@@ -2687,7 +2686,6 @@ msgstr "大型Zorcher"
 msgid "TAG_SUPERLARGEZORCHER"
 msgstr "超大Zorcher"
 
-#, fuzzy
 msgid "TAG_RAPIDZORCHER"
 msgstr "速射Zorcher"
 
@@ -2703,45 +2701,43 @@ msgid "TAG_LAZDEVICE"
 msgstr "LAZ装置"
 
 msgid "OB_COMMONUS"
-msgstr "%o 被a flemoid粘住了。"
+msgstr "%o 被黏液怪粘住了。"
 
 msgid "OB_BIPEDICUS"
-msgstr "%o 被a bipedicus粘住了。"
+msgstr "%o 被双足型黏液怪粘住了。"
 
 msgid "OB_BIPEDICUS2"
-msgstr "%o 被an armored bipedicus粘住了。"
+msgstr "%o 被披甲双足型黏液怪粘住了。"
 
 msgid "OB_CYCLOPTIS"
-msgstr "%o 被一只独眼巨人粘住了。"
+msgstr "%o 被独眼型黏液怪粘住了。"
 
 msgid "OB_FLEMBRANE"
-msgstr "%o被黏液膜击败了。"
+msgstr "%o 被黏液膜击败了。"
 
 msgid "OB_MPSPOON"
-msgstr ""
+msgstr "%o 被 %k 喂的饭撑死了。"
 
 msgid "OB_MPBOOTSPORK"
-msgstr "%o被%k的靴叉勺充分混合了。"
+msgstr "%o 被 %k 的靴叉勺搅成了渣。"
 
 msgid "OB_MPZORCH"
-msgstr ""
+msgstr "%o被%k用Zorcher传送走了。"
 
-#, fuzzy
 msgid "OB_MPMEGAZORCH"
-msgstr "%o被%k的mega-zorcher击中了。"
+msgstr "%o 被 %k 的巨型zorcher击中了。"
 
 msgid "OB_MPRAPIDZORCH"
-msgstr ""
+msgstr "%o被%k用速射Zorcher传送走了。"
 
 msgid "OB_MPPROPULSOR"
-msgstr ""
+msgstr "%o被%k用Zorch推进器炸进异次元了。"
 
-#, fuzzy
 msgid "OB_MPP_SPLASH"
-msgstr "%o被%k的推进器击中了。"
+msgstr "%o 被 %k 的推进器击中了。"
 
 msgid "OB_MPPHASEZORCH"
-msgstr ""
+msgstr "%o被%k用相位Zorcher传送了。"
 
 msgid "OB_MPLAZ_BOOM"
 msgstr "%o fell prey to %k's LAZ装置。"
@@ -2834,7 +2830,7 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"这是奇克斯(R)任务。寻找更多关卡\n"
+"这是奇克斯®任务。寻找更多关卡\n"
 "\n"
 "请访问www.chexquest.com。\n"
 "\n"
@@ -2856,11 +2852,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "无敌模式开启"
+msgstr "无敌模式：开"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "无敌模式关闭"
+msgstr "无敌模式：关"
 
 #, fuzzy
 msgctxt "chex"
@@ -2874,7 +2870,7 @@ msgstr "增加了超级Zorch"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "……吃奇克斯(R)！"
+msgstr "……吃奇克斯®！"
 
 #, fuzzy
 msgctxt "chex"
@@ -3145,7 +3141,7 @@ msgid "GMPLYMNU_DONTCHECKAMMO"
 msgstr "武器切换时检查武器弹药"
 
 msgid "GMPLYMNU_KILLBOSSSPAWNS"
-msgstr "罪恶圣像(最终BOSS)死亡时杀死其刷出来的怪物"
+msgstr "罪恶圣像(最终Boss)死亡时杀死其刷出来的怪物"
 
 msgid "GMPLYMNU_NOCOUNTENDMONSTER"
 msgstr "(关底)最终区域的怪物数也计入击杀"
@@ -3283,25 +3279,25 @@ msgid "CMPTMNU_USEBLOCKING"
 msgstr "所有特殊线都能阻止<use>"
 
 msgid "CMPTMNU_ANYBOSSDEATH"
-msgstr "允许所有关卡特殊的BOSS死法"
+msgstr "允许所有关卡特殊的Boss死法"
 
 msgid "CMPTMNU_NODOORLIGHT"
 msgstr "禁用BOOM门光效"
 
 msgid "CMPTMNU_LIGHT"
-msgstr "像DOOM那样寻找临近区域的光照"
+msgstr "像Doom那样寻找临近区域的光照"
 
 msgid "CMPTMNU_SHORTTEX"
-msgstr "像DOOM那样寻找最短纹理"
+msgstr "像Doom那样寻找最短纹理"
 
 msgid "CMPTMNU_STAIRS"
 msgstr "使用带bug的楼梯生成"
 
 msgid "CMPTMNU_FLOORMOVE"
-msgstr "使用DOOM的地面移动算法"
+msgstr "使用Doom的地面移动算法"
 
 msgid "CMPTMNU_POINTONLINE"
-msgstr "使用DOOM的判断点在线上算法"
+msgstr "使用Doom的判断点在线上算法"
 
 msgid "CMPTMNU_MULTIEXIT"
 msgstr "可以多次触发关卡出口"
@@ -3313,7 +3309,7 @@ msgid "CMPTMNU_NOPASSOVER"
 msgstr "角色都是无限高度"
 
 msgid "CMPTMNU_BOOMSCROLL"
-msgstr "BOOM型的地面滚动是叠加的"
+msgstr "Boom型的地面滚动是叠加的"
 
 msgid "CMPTMNU_BADANGLES"
 msgstr "不允许沿NSEW方向的直线走法"
@@ -3328,10 +3324,10 @@ msgid "CMPTMNU_TRACE"
 msgstr "自我参照的区域不会阻挡射击"
 
 msgid "CMPTMNU_HITSCAN"
-msgstr "使用DOOM代码做瞬间击中判定检测"
+msgstr "使用Doom代码做瞬间击中判定检测"
 
 msgid "CMPTMNU_MISSILECLIP"
-msgstr "使用DOOM高度做炮弹碰撞判定"
+msgstr "使用Doom高度做炮弹碰撞判定"
 
 msgid "CMPTMNU_RENDERINGBEHAVIOR"
 msgstr "渲染行为"
@@ -3360,9 +3356,6 @@ msgstr "会瞬移的地板不再静音"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "区域音效用中心位置作为声源"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "角色消失时停止音效"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "使用原版的声音目标处理方式"
 
@@ -3382,7 +3375,7 @@ msgid "CMPTMNU_EXPLODE1"
 msgstr "爆炸不会有垂直方向的冲击"
 
 msgid "CMPTMNU_EXPLODE2"
-msgstr "使用原始DOOM的爆炸行为"
+msgstr "使用原始Doom的爆炸行为"
 
 msgid "PLYRMNU_RED"
 msgstr "红色"
@@ -3834,9 +3827,6 @@ msgstr "使用模糊效果"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "经典透明度"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "丧魂透明度"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "使用虚假对比度"
 
@@ -3990,9 +3980,6 @@ msgstr "网络选项"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "本地选项"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "移动预测"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "预测线动作"
 
@@ -4007,15 +3994,6 @@ msgstr "主机选项"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "预备秒数"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "延迟平衡"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "原始"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "优化"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "经典(更快)"
@@ -4083,15 +4061,6 @@ msgstr "玩家"
 
 msgid "OPTVAL_MAP"
 msgstr "地图"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "缩放到640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "双倍像素"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "四倍像素"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "当前武器"
@@ -4186,15 +4155,6 @@ msgstr "仅映射指定的颜色"
 msgid "OPTVAL_NODOORS"
 msgstr "除了门以外"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "双倍"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "三倍"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "四倍"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "物品拾取"
 
@@ -4243,9 +4203,6 @@ msgstr "MBF21(严格)"
 msgid "OPTVAL_ZDOOM2063"
 msgstr "ZDoom 2.0.63"
 
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "所有未确认的"
-
 msgid "OPTVAL_ERRORS"
 msgstr "错误"
 
@@ -4267,12 +4224,6 @@ msgstr "Doom软件渲染器"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "真彩色软件渲染器"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "高性能"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "节能"
-
 msgid "OPTVAL_VANILLA"
 msgstr "原版"
 
@@ -4281,12 +4232,6 @@ msgstr "ZDoom(强制)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "原版(强制)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "自动(ZDoom优先)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "自动(原版优先)"
 
 msgid "OPTVAL_SMALL"
 msgstr "小"
@@ -4379,19 +4324,13 @@ msgid "OPTSTR_HERETIC"
 msgstr "《异教徒》"
 
 msgid "OPTSTR_CHEX"
-msgstr "《奇克斯》"
-
-msgid "OPTSTR_NOSOUND"
-msgstr "无声音"
+msgstr "《奇克斯®》"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "无插值"
 
 msgid "OPTSTR_SPLINE"
 msgstr "样条函数"
-
-msgid "OPTSTR_OPENAL"
-msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "硬件渲染器"
@@ -4405,12 +4344,6 @@ msgstr "硬件渲染选项"
 msgid "GLMNU_DYNLIGHT"
 msgstr "动态光源选项"
 
-msgid "GLMNU_PREFS"
-msgstr "偏好选项"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "修剪精灵边缘"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "根据纹理排序绘制列表"
 
@@ -4419,9 +4352,6 @@ msgstr "动态光源"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "动态光源(硬件)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "启用光照定义"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "光源影响精灵"
@@ -4438,17 +4368,11 @@ msgstr "阴影贴图质量"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "阴影贴图过滤器"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "雾效模式"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "雾效强制使用全亮度"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "武器光照强度"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "镜面使用环境映射"
 
 msgid "GLPREFMNU_ENV"
 msgstr "增强夜视模式"
@@ -4473,9 +4397,6 @@ msgstr "精灵面部相机"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "粒子样式"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "渲染质量"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "立体3D VR"
@@ -4526,9 +4447,6 @@ msgstr "Doom遗产"
 msgid "OPTVAL_SOFTWARE"
 msgstr "软件"
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "最佳"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Y轴"
 
@@ -4540,9 +4458,6 @@ msgstr "方形"
 
 msgid "OPTVAL_ROUND"
 msgstr "圆形"
-
-msgid "OPTVAL_RADIAL"
-msgstr "放射"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "像素模糊"
@@ -4607,9 +4522,6 @@ msgstr "真彩色选项"
 msgid "TCMNU_TITLE"
 msgstr "真彩色选项"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "真彩色输出"
-
 msgid "TCMNU_MINFILTER"
 msgstr "缩小时用线性过滤"
 
@@ -4621,21 +4533,6 @@ msgstr "使用mipmap纹理"
 
 msgid "TCMNU_DYNLIGHTS"
 msgstr "动态光源(软件)"
-
-msgid "OS_TITLE"
-msgstr "选项搜索"
-
-msgid "OS_ANY"
-msgstr "搜索任意条目"
-
-msgid "OS_ALL"
-msgstr "搜索全部条目"
-
-msgid "OS_NO_RESULTS"
-msgstr "无搜索结果。"
-
-msgid "OS_LABEL"
-msgstr "搜索："
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "总是显示钥匙"
@@ -4672,7 +4569,7 @@ msgid "TXT_OTHERENGINESG"
 msgstr "存档“%s”来自另一种基于ZDoom的引擎："
 
 msgid "TXT_TOOOLDSG"
-msgstr "存档“%s”来自旧版本：%d (最低支持到 %e)"
+msgstr "存档“%s”来自旧版本(%d)。支持的最低版本是%e。"
 
 # Shouldn’t this say “%e is the newest supported”?
 #
@@ -4680,7 +4577,7 @@ msgstr "存档“%s”来自旧版本：%d (最低支持到 %e)"
 #
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
-msgstr "存档“%s”来自新版本：%d (最高支持到 %e)"
+msgstr "存档“%s”来自新版本(%d)。支持的最高版本是%e。"
 
 msgid "TXT_NOMAPSG"
 msgstr "存档“%s”的当前地图找不到了。"
@@ -4713,9 +4610,6 @@ msgstr "无法创建截屏。"
 msgid "TXT_BY"
 msgstr "被 %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr "按任意键或点击窗口内任意位置来退出。"
-
 msgid "HUDMNU_FLASH"
 msgstr "画面混合选项"
 
@@ -4727,9 +4621,6 @@ msgstr "准星"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "字幕"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "防止灰色阴影"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "字体选项"
@@ -4747,7 +4638,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr "自定义反色地图"
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "自定义反色 深色\n"
+msgstr "自定义反色 深色"
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr "自定义反色 亮色"
@@ -4770,11 +4661,6 @@ msgstr "缩放因子"
 
 msgid "SCALEMNU_RATIO"
 msgstr "宽高比"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr "Build"
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4923,11 +4809,11 @@ msgstr "禁用客户端侧拾取丢弃的物品"
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
-msgstr "死亡时重新开始关卡"
+msgstr "死亡时以手枪开局"
 
 # Resets inventory on every map
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "以手枪开局"
+msgstr "每张地图以手枪开局"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr "允许创建僵尸玩家"
@@ -5090,9 +4976,6 @@ msgstr "投票倒计时(秒)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "聊天缓动模式(秒)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "启用触觉触发器"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "触觉选项"
 
@@ -5207,10 +5090,10 @@ msgid "TAG_REPELLENT"
 msgstr "黏液防护剂"
 
 msgid "TAG_CHEXARMOR"
-msgstr "奇克斯护甲"
+msgstr "奇克斯®护甲"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "超级奇克斯护甲"
+msgstr "超级奇克斯®护甲"
 
 msgid "TAG_CHEXMAP"
 msgstr "电子区域地图"
@@ -5276,9 +5159,6 @@ msgstr "严格"
 
 msgid "PICKER_FILELOADING"
 msgstr "文件加载"
-
-msgid "MISCMNU_CLEANMENU"
-msgstr "经典ZDoom的菜单缩放"
 
 msgid "OPTVAL_LAX"
 msgstr "宽松"
@@ -5348,12 +5228,6 @@ msgstr "请在调整前禁用这些。"
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "黑点补偿"
 
-msgid "DSPLYMNU_WHITEPOINT"
-msgstr "白点补偿"
-
-msgid "OPTMNU_RESETALL"
-msgstr "全部重置"
-
 msgid "DSPLYMNU_IMAGEADJUST_TOP1"
 msgstr "以正常观看的距离，来调整这些滑动条。"
 
@@ -5368,11 +5242,6 @@ msgstr ""
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
 "用于补偿显示器无法正确显示暗像素的情况。调整直至对角线上的白色方块消失。请勿"
-"用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
-
-msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
-msgstr ""
-"用于补偿显示器无法正确显示亮像素的情况。调整直至对角线上的黑色方块消失。请勿"
 "用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
@@ -5391,3 +5260,93 @@ msgstr "调整颜色的强度，使图像看起来更鲜艳或更柔和。根据
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "调整直到看起来像均匀的灰色。"
+
+msgid "CMPTMNU_AUTO"
+msgstr "自动检测兼容性设置"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "崩溃报告Zip文件"
+
+msgid "FILEPICKER_ANY"
+msgstr "全部文件"
+
+msgid "ERROR_FATAL"
+msgstr "严重错误"
+
+msgid "ERRORMNU_SAVE"
+msgstr "保存报告"
+
+msgid "ACTION_BAN"
+msgstr "封禁"
+
+msgid "ACTION_STARTGAME"
+msgstr "开始游戏"
+
+msgid "ACTION_RESTART"
+msgstr "重启"
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "复制到剪贴板"
+
+msgid "ACTION_ABORT"
+msgstr "中止"
+
+msgid "ACTION_KICK"
+msgstr "踢出"
+
+msgid "ERROR_ABORT"
+msgstr "无法继续执行。"
+
+msgid "HAPMNU_TITLE"
+msgstr "触觉反馈选项"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "提升色调强度"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "玩家类别"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "并排信箱模式"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "直接混合"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "超级立体声"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "音乐模式"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "超级立体声展宽"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "光照调整"
+
+msgid "LANG_NATIVE"
+msgstr "简体中文"
+
+msgid "OPTVAL_SMOOTH"
+msgstr "平滑"
+
+msgid "TAG_MACIL"
+msgstr "马希尔"
+
+msgid "TAG_MAULER"
+msgstr "毛勒"
+
+msgid "TAG_GLAUNCHER"
+msgstr "榴弹发射器"
+
+msgid "LANG_ENG"
+msgstr "Simplified Chinese"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "浏览WAD"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "浏览配置"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "浏览IWAD文件夹"

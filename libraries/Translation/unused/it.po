@@ -1,0 +1,345 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:38+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/unused/"
+"it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr ""
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr ""
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "File GUS config"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "File configurazione Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Volume relativo"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "File WildMidi config"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Aggiustamento Gamma"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Chat"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Personalizza i controlli della chat"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Opzioni di visualizzazione avanzate"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Aspetto"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Fattore di scala del mirino"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Messaggi"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Dimensioni Status Bar"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Attiva texture alta qualità"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Texture abilitate"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Movimento del mouse liscio"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Dimensioni Messaggi"
+
+msgid "NOTSET"
+msgstr "Non assegnato"
+
+msgid "OPTMNU_INPUT"
+msgstr "Opzioni di ingresso"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Opzioni luce"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Opzioni multigiocatore"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Opzioni Sprite"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Opzioni di sistema"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Hz"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Automappa"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Automappa"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr "PMDWin OPNA"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Scalato (più vicino)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Scalato (lineare)"
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Densità"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Diffusione dell'ambiente"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Dimensioni dell'ambiente"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Riflessioni"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Riverbero"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "La camera"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "SNDMNU_BACKEND"
+msgstr "Backend suono"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Suono nei menù"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Abilita la musica"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Abilita gli effetti sonori"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Abilita le proporzioni 5:4"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Proporzioni"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Seleziona il Dispositivo Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Abilita Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "I suoni si fermano quando gli attori svaniscono"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Trasparenza anima errante"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Abilita le definizioni GLDEFS"
+
+msgid "GLMNU_PREFS"
+msgstr "Preferenze"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Prevenire le ombre grigie"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Taglia gli spigoli agli sprite"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Predizione movimenti"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Bilanciamento latenza"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Nessun suono"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Tutti non riconosciuti"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Prestazioni massime"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Doppio"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Risparmio energetico"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Ottimale"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Ottimizzato"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Originale"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Pixel doppi"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Pixel quadrupli"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Quadruplo"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Scala a 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Triplo"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automatico (Vanilla preferito)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automatico (ZDoom preferito)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Output true color"

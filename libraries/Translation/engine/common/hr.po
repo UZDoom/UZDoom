@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-23 23:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-03-16 23:10+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/common/"
 "hr/>\n"
 "Language: hr\n"
@@ -12,8 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: hr\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Pritisni Y ili N."
@@ -32,9 +31,6 @@ msgstr ""
 
 msgid "SAFEMESSAGE"
 msgstr "Želiš li ovo stvarno učiniti?"
-
-msgid "NOTSET"
-msgstr "Nije postavljeno"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -57,16 +53,16 @@ msgid "TXT_X_CHEATS"
 msgstr "%s vara"
 
 msgid "MSGOFF"
-msgstr "Poruke: ISKLJ."
+msgstr "Poruke: ISKLJ"
 
 msgid "MSGON"
-msgstr "Poruke: UKLJ."
+msgstr "Poruke: UKLJ"
 
 msgid "TXT_SAY"
 msgstr "Reci:"
 
 msgid "TXT_QUITENDOOM"
-msgstr "Pritisni bilo koju tipku ili klikni bilo gdje na prozoru da izađeš."
+msgstr "Pritisnite bilo koju tipku ili kliknite bilo gdje u prozoru za izlaz."
 
 msgid "NEWSAVE"
 msgstr "<Nova spremljena igra>"
@@ -93,7 +89,7 @@ msgid "MNU_NOFILES"
 msgstr "Nema datoteka"
 
 msgid "MNU_DELETESG"
-msgstr "Želite li zaista izbrisati spremljenu igru?\n"
+msgstr "Želite li zaista izbrisati spremljenu igru?"
 
 msgid "OPTVAL_OFF"
 msgstr "Isklj."
@@ -240,17 +236,11 @@ msgstr "Radnja"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Prilagodi kontrole radnje"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Čavrljanje"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "Više igrača"
 
 msgid "CNTRLMNU_SAY"
 msgstr "Reci"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Prilagodi kontrole čavrljanja"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Prilagodi kontrole oružja"
@@ -367,9 +357,6 @@ msgstr "Prateća kamera"
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Snimka zaslona"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Otvori konzolu"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "Pauza"
 
@@ -408,9 +395,6 @@ msgstr "Prekidač poruka"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Izađi iz igre"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Prilagodi gamu"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Omogući miš"
@@ -533,15 +517,18 @@ msgstr "Nema konfigurabilnih osi"
 msgid "OPTVAL_NONE"
 msgstr "Nema"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "Okretanje"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Gledanje gore/dolje"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "Kretanje naprijed"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "Kretanje u stranu"
 
@@ -592,9 +579,6 @@ msgstr "Maslinasta"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Bež"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Svijetlozelena"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Svijetloplava"
@@ -662,23 +646,11 @@ msgstr "Vertikalna sinkronizacija"
 msgid "DSPLYMNU_MODELS"
 msgstr "Modeli"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Skaliraj ciljnik"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Skaliraj statusnu traku"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Poruke"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Centriraj poruke"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Prikaz pulsirajućih poruka"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Skaliraj poruka"
 
 msgid "MNU_COLORPICKER"
 msgstr "Odaberi boju"
@@ -700,15 +672,6 @@ msgstr "Prilagodi boje mape"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Vrati prilagođene boje na zadane"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Zvuk omogućen"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Glazba omogućena"
-
-msgid "OPTVAL_4000HZ"
-msgstr "4000 Hz"
 
 msgid "OPTVAL_8000HZ"
 msgstr "8000 Hz"
@@ -806,9 +769,6 @@ msgstr "Nasumična visina tonova"
 msgid "SNDMNU_CHANNELS"
 msgstr "Zvučni kanali"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Zvučna pozadina"
-
 msgid "SNDMNU_OPENAL"
 msgstr "Postavke OpenAL-a"
 
@@ -822,10 +782,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "Postavke repriziranja modula"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Postavke Midi reproduktora"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Zvukovi u izborniku"
+msgstr "Postavke MIDI reproduktora"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Napredne postavke zvuka"
@@ -866,9 +823,6 @@ msgstr "Freeverb"
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Globalni Freeverb"
 
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Set zakrpa"
-
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Jačina"
 
@@ -890,17 +844,8 @@ msgstr "ADLMidi"
 msgid "ADVSNDMNU_OPNMIDI"
 msgstr "OPNMidi"
 
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Konfiguracijska datoteka za Timidity"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Relativna glasnoća"
-
 msgid "ADVSNDMNU_WILDMIDI"
 msgstr "WildMidi"
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "Konfiguracijska datoteka za WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Odabir konfiguracije"
@@ -910,9 +855,6 @@ msgstr "Napredno uzorkovanje"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "OPL banka"
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "Jezgra OPL emulatora"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Pokreni emulator brzinom PCM-a"
@@ -938,9 +880,6 @@ msgstr "Jezgra OPN2 emulatora"
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "GUS emulacija"
 
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "Konfiguracijska datoteka za GUS"
-
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "Čitaj grudice DMXGUS-a"
 
@@ -963,10 +902,10 @@ msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "WOPL bankovna datoteka"
 
 msgid "ADVSNDMNU_OPNCUSTOMBANK"
-msgstr "Upotrijebi prilagođenu WOPL banku"
+msgstr "Upotrijebi prilagođenu WOPN banku"
 
 msgid "ADVSNDMNU_OPNBANKFILE"
-msgstr "WOPL bankovna datoteka"
+msgstr "WOPN bankovna datoteka"
 
 msgid "OPTVAL_ALIASING"
 msgstr "Alijaziranje"
@@ -1031,7 +970,7 @@ msgid "OPTVAL_LIBXMP"
 msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr "Glup"
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
 msgstr "Chip-o-matic"
@@ -1055,25 +994,24 @@ msgid "OPTVAL_YMFMOPL3"
 msgstr "YMFM OPL3"
 
 msgid "OPTVAL_NUKEDOPL3"
-msgstr "Nuklearni napad na OPL3"
+msgstr "Nuked OPL3"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
 msgstr "OPL2-LLE (Izuzetno teški!)"
 
+#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
 msgstr "OPL3-LLE (Izuzetno teški!)"
 
 msgid "OPTVAL_MAMEOPN2"
-msgstr "MAME YM2612"
+msgstr "MAME OPN2 (YM2612)"
 
 msgid "OPTVAL_NP2OPNA"
 msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
 msgstr "MAME YM2608"
-
-msgid "OPTVAL_PMDWINOPNA"
-msgstr "PMDWin OPNA"
 
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
@@ -1082,22 +1020,25 @@ msgid "OPTVAL_NUKEDOPL3174"
 msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr "Nuklearni napad na OPN2 (YM3438)"
+msgstr "Nuked OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr "Nuklearni napad na OPN2 (YM2612)"
+msgstr "Nuked OPN2 (YM2612)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YM2612LLE"
 msgstr "OPN2-LLE (YM2612) (Izuzetno težak!)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YM3438LLE"
 msgstr "OPN2-LLE (YM3438) (Izuzetno težak!)"
 
+#, fuzzy
 msgid "OPTVAL_OPN2YMF276LLE"
 msgstr "OPN2-LLE (YMF276) (Izuzetno težak!)"
 
 msgid "OPTVAL_GENSOPN2"
-msgstr "GENS YM2612"
+msgstr "GENS OPN2 (YM2612)"
 
 msgid "OPTVAL_YMFMOPN2"
 msgstr "YMFM OPN2"
@@ -1136,7 +1077,7 @@ msgid "OPNVLMODEL_APOGEE"
 msgstr "Kao u Apogee Sound Systemu"
 
 msgid "OPNVLMODEL_WIN9X"
-msgstr "Poput WIN9X"
+msgstr "Poput Win9X"
 
 msgid "ADLVLMODEL_WIN9X"
 msgstr "Poput WIN9X (SB-16)"
@@ -1190,7 +1131,7 @@ msgid "OPTVAL_UNCHARTED2"
 msgstr "Neistraženo 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr "Hejl Dawson"
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
 msgstr "Reinhard"
@@ -1253,7 +1194,7 @@ msgid "GLPREFMNU_MENUBLUR"
 msgstr "Zamućenje izbornika"
 
 msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Karta okruženja na zrcalima"
+msgstr "Karta okoliša na ogledalima"
 
 msgid "GLPREFMNU_RENDERQUALITY"
 msgstr "Kvaliteta renderiranja"
@@ -1268,7 +1209,7 @@ msgid "GLPREFMNU_SECLIGHTMODE"
 msgstr "Način sektorskog svjetla"
 
 msgid "GLPREFMNU_FOGMODE"
-msgstr "Način magle"
+msgstr "Način rada za maglu"
 
 msgid "OPTVAL_RADIAL"
 msgstr "Radijalno"
@@ -1298,28 +1239,22 @@ msgid "OPTVAL_TRILINEAR"
 msgstr "Trilinearno"
 
 msgid "OPTVAL_2X"
-msgstr "2x"
+msgstr "2×"
 
 msgid "OPTVAL_4X"
-msgstr "4x"
+msgstr "4×"
 
 msgid "OPTVAL_8X"
-msgstr "8x"
+msgstr "8×"
 
 msgid "OPTVAL_16X"
-msgstr "16x"
+msgstr "16×"
 
 msgid "OPTVAL_32X"
-msgstr "32x"
+msgstr "32×"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Postavke tekstura"
-
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Teksture su omogućene"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Omogući teksture visoke rezolucije"
 
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Način promjene veličine visoke kvalitete"
@@ -1348,12 +1283,6 @@ msgstr "Predmemoriranje GL tekstura"
 msgid "VIDMNU_TITLE"
 msgstr "Video način"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Skaliran (najbliži)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Skaliran (linearni)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "Crni rubovi"
 
@@ -1369,17 +1298,11 @@ msgstr "Puni zaslon"
 msgid "VIDMNU_HIDPI"
 msgstr "Podrška za Retinu/HiDPI"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "Omjer slike"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Forsiraj omjer slike"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Stil forsiranog omjera"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Omogući omjer slike 5:4"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Skaliranje rezolucije"
@@ -1468,7 +1391,7 @@ msgid "OPTVAL_OPENGL"
 msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr "Vulkan"
+msgstr "Vulkana"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
@@ -1501,6 +1424,7 @@ msgstr "Brzo spremanje u rotaciji"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Broj brzih spremanja u rotaciji"
 
+#, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Onemogući čisto skaliranje izbornika"
 
@@ -1544,95 +1468,6 @@ msgstr "Uredi okoliš"
 msgid "REVMNU_NEW"
 msgstr "Novi okoliš"
 
-msgid "REVMNU_REVERT"
-msgstr "Povrati postavke"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Veličina okoliša"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Difuzija okoliša"
-
-msgid "REVMNU_ROOM"
-msgstr "Soba"
-
-msgid "REVMNU_ROOM_HF"
-msgstr "Soba visoke frekvencije"
-
-msgid "REVMNU_ROOM_LF"
-msgstr "Soba niske frekvencije"
-
-msgid "REVMNU_DECAY_TIME"
-msgstr "Vrijeme raspadanja"
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Omjer raspadanja visoke frekvencije"
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Omjer raspadanja niske frekvencije"
-
-msgid "REVMNU_REFLECTIONS"
-msgstr "Odrazi"
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Kašnjenje odraza"
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Kretanje odraza X"
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Kretanje odraza Y"
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Kretanje odraza Z"
-
-msgid "REVMNU_REVERB"
-msgstr "Odjekivanje"
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Kašnjenje odjekivanja"
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Kretanje odjekivanja X"
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Kretanje odjekivanja Y"
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Kretanje odjekivanja Z"
-
-msgid "REVMNU_ECHO_TIME"
-msgstr "Vrijeme jeke"
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Dubina jeke"
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Vrijeme modulacije"
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Dubina modulacije"
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Apsorpcija zraka visoke frekvencije"
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr "Referenca visoke frekvencije"
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr "Referenca niske frekvencije"
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Faktor opadanja prostorije"
-
-msgid "REVMNU_DIFFUSION"
-msgstr "Difuzija okoliša"
-
-msgid "REVMNU_DENSITY"
-msgstr "Gustoća"
-
 msgid "REVMNU_Reflections_Scale"
 msgstr "Skaliranje odraza"
 
@@ -1673,7 +1508,7 @@ msgid "REVMNU_Create"
 msgstr "Stvori"
 
 msgid "REVMNU_Save"
-msgstr "Spremi..."
+msgstr "Spremi…"
 
 msgid "REVMNU_File_name"
 msgstr "Naziv datoteke"
@@ -1687,25 +1522,18 @@ msgstr "Postavke Vulkana (eksperimentalno)"
 msgid "VK_TITLE"
 msgstr "Postavke Vulkana"
 
-msgid "VKMNU_ENABLE"
-msgstr "Omogući Vulkan"
-
 msgid "VKMNU_DEVICE"
-msgstr "ID uređaja Vulkan"
+msgstr "ID uređaja Vulkana"
 
 msgid "VKMNU_HDR"
 msgstr "Visoki dinamički raspon (HDR)"
 
 msgid "VK_WARNING"
-msgstr "Upozorenje: Vulkan renderer je jako eksperimentalan!"
+msgstr "Upozorenje: Vulkana renderer je jako eksperimentalan!"
 
 msgid "VK_RESTART"
 msgstr ""
 "Ove postavke će zahtijevati ponovno pokretanje kako bi stupile na snagu."
-
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Odaberi uređaj Vulkana"
 
 msgid "OPTVAL_SCALENX"
 msgstr "ScaleNx"
@@ -1726,135 +1554,24 @@ msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Stari xBRZ"
 
 msgid "OS_TITLE"
-msgstr "Traženje postavke"
+msgstr "Pretraživanje opcija"
 
 msgid "OS_ANY"
-msgstr "Potraži bilo koji pojam"
+msgstr "Pretražite bilo koji pojam"
 
 msgid "OS_ALL"
-msgstr "Potraži sve pojmove"
+msgstr "Pretraži sve pojmove"
 
 msgid "OS_NO_RESULTS"
-msgstr "Nema rezultata."
+msgstr "Nisu pronađeni rezultati."
 
 msgid "OS_LABEL"
-msgstr "Traži:"
-
-msgid "TXT_OBITUARY1"
-msgstr "%k otkošćuje %o kao ribu"
-
-msgid "TXT_OBITUARY2"
-msgstr "%k kastrira %o"
-
-msgid "TXT_OBITUARY3"
-msgstr "%k kremira %o"
-
-msgid "TXT_OBITUARY4"
-msgstr "%k desetkuje %o"
-
-msgid "TXT_OBITUARY5"
-msgstr "%k uništava %o"
-
-msgid "TXT_OBITUARY6"
-msgstr "%k sjecka %o na kockice"
-
-msgid "TXT_OBITUARY7"
-msgstr "%k vadi utrobu iz %o"
-
-msgid "TXT_OBITUARY8"
-msgstr "%k spljošćuje %o"
-
-msgid "TXT_OBITUARY9"
-msgstr "%k pruža analnu pravdu %o"
-
-msgid "TXT_OBITUARY10"
-msgstr "%k pruža AnAlNo LuDiLo prema %o"
-
-msgid "TXT_OBITUARY11"
-msgstr "%k ubija %o"
-
-msgid "TXT_OBITUARY12"
-msgstr "%k pravi mljeveno meso od %o"
-
-msgid "TXT_OBITUARY13"
-msgstr "%k masakrira %o"
-
-msgid "TXT_OBITUARY14"
-msgstr "%k sakati %o"
-
-msgid "TXT_OBITUARY15"
-msgstr "%k razvlači %o"
-
-msgid "TXT_OBITUARY16"
-msgstr "%k pravi novi otvor na %o"
-
-msgid "TXT_OBITUARY17"
-msgstr "%k kolje %o"
-
-msgid "TXT_OBITUARY18"
-msgstr "%k smrskava %o"
-
-msgid "TXT_OBITUARY19"
-msgstr "%k sodomizira %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "%k raspršuje %o"
-
-msgid "TXT_OBITUARY21"
-msgstr "%k gnječi %o"
-
-msgid "TXT_OBITUARY22"
-msgstr "%k guši %o"
-
-msgid "TXT_OBITUARY23"
-msgstr "%k iscrpljuje %o"
-
-msgid "TXT_OBITUARY24"
-msgstr "%k stavlja %o u mrtvačku vreću"
-
-msgid "TXT_OBITUARY25"
-msgstr "%k šalje %o u Pakao"
-
-msgid "TXT_OBITUARY26"
-msgstr "% prži %o"
-
-msgid "TXT_OBITUARY27"
-msgstr "%k gasi %o"
-
-msgid "TXT_OBITUARY28"
-msgstr "%k prska %o crijevom"
-
-msgid "TXT_OBITUARY29"
-msgstr "%k raspršiva %o"
-
-msgid "TXT_OBITUARY30"
-msgstr "%k pravi meso za pse od %o"
-
-msgid "TXT_OBITUARY31"
-msgstr "%k tuče %o kao nitkova"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o je izmet"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o je hamburger"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o trpi odvajanje skrotuma"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o volontira za kontrolu populacije"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o čini samoubojstvo"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o prima Darwinovu nagradu"
+msgstr "Pretraži:"
 
 # This is not a text to be translated but an engine switch for complex
 # languages.
 msgid "USE_GENERIC_FONT"
-msgstr "USE_GENERIC_FONT"
+msgstr "0"
 
 # This should list all uppercase characters that are REQUIRED for proper
 # language display. If it is acceptable that accents get omitted a character
@@ -1886,41 +1603,11 @@ msgstr "Samo modificirano"
 msgid "TXT_UNKNOWN"
 msgstr "Nepoznato"
 
-msgid "OPTVAL_HUD"
-msgstr "Sučelje"
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "Autokarta"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "Sučelje + Autokarta"
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Za ovu spremljenu igru potrebne su ove datoteke"
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Postavke za više igrača"
-
-msgid "OPTMNU_INPUT"
-msgstr "Postavke unosa"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Postavke sustava"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Postavke svjetla"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Postavke spriteova"
-
 msgid "GLPREFMNU_CORONAS"
 msgstr "Korone"
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Izgled"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Napredne postavke zaslona"
 
 msgid "PICKER_SELECT"
 msgstr "Odaberi koju igru želiš pokrenuti."
@@ -2025,21 +1712,6 @@ msgstr "Poslužitelj"
 
 msgid "PICKER_JOIN"
 msgstr "Pridruži"
-
-msgid "PICKER_NETMODE"
-msgstr "Način rada u mreži:"
-
-msgid "PICKER_NETAUTO"
-msgstr "Automatski (preporučeno)"
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr "Paketni poslužitelj"
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr "Ravnopravno Povezivanje"
 
 msgid "PICKER_NETRATE"
 msgstr "Paket Tikrat:"

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-03 22:01+0000\n"
-"Last-Translator: Александар Урошевић <alek.sandar0@yandex.com>\n"
+"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/sr/>\n"
 "Language: sr\n"
@@ -12,8 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: sr\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Притисните било који тастер."
@@ -22,10 +21,13 @@ msgid "SECRETMESSAGE"
 msgstr "Откривена тајна!"
 
 msgid "D_DEVSTR"
-msgstr "Програмерски режим УКЉ.\n"
+msgstr "Програмерски режим: УКЉ"
 
+#, fuzzy
 msgid "QUITMSG"
-msgstr "Желиш ли заиста да изађеш из ове чудесне игре?"
+msgstr ""
+"Желиш ли заиста да изађеш\n"
+"из ове чудесне игре?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
@@ -33,26 +35,26 @@ msgid "LOADNET"
 msgstr ""
 "Не можете да учитате чување током мрежне игре!\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgid "QLOADNET"
 msgstr ""
 "Не можете да учитате брзо чување током мрежне игре!\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgid "QSAVESPOT"
 msgstr ""
 "Нисте још изабрали слот за брзо чување!\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgid "NEWGAME"
 msgstr ""
 "Не можете да започнете\n"
 "нову игру током мрежне игре.\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgid "NIGHTMARE"
 msgstr ""
@@ -61,8 +63,14 @@ msgstr ""
 "\n"
 "Притисните Y или N."
 
+#, fuzzy
 msgid "SWSTRING"
-msgstr "Доступно само у регистрованој верзији"
+msgstr ""
+"Доступно само у регистрованој верзији\n"
+"\n"
+"\n"
+"\n"
+"Притисните било који тастер."
 
 msgid "NETEND"
 msgstr ""
@@ -108,7 +116,7 @@ msgstr ""
 
 msgid "QUITMSG5"
 msgstr ""
-"Немој да одеш --\n"
+"Немој да одеш—\n"
 "иза угла има још један демон!"
 
 msgid "QUITMSG6"
@@ -148,9 +156,10 @@ msgstr ""
 "Чуј, ортак. Одеш ли,\n"
 "изгубићеш свој број убистава!"
 
+#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
-"Иди, иди... али када се вратиш,\n"
+"Иди, иди… али када се вратиш,\n"
 "чекаћу те са палицом."
 
 msgid "QUITMSG14"
@@ -165,27 +174,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Покољ се прекида...\n"
+"Покољ се прекида…\n"
 "на најзанимљивијем месту!"
 
 msgid "QUITMSG17"
 msgstr ""
-"Али на тебе је сва нада --\n"
-"ти си моја једина шанса!"
+"Али на тебе је сва нада\n"
+"—ти си моја једина шанса!"
 
 msgid "QUITMSG18"
 msgstr "Нико још није побегао од Црне птице."
 
 msgid "QUITMSG19"
-msgstr "О теби сам мислила другачије..."
+msgstr "О теби сам мислила другачије…"
 
 msgid "QUITMSG20"
 msgstr "Добро! Само убијај и бежи!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Можеш да одеш...\n"
-"али не можеш да се кријеш..."
+"Можеш да одеш…\n"
+"али не можеш да се кријеш…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -193,11 +202,13 @@ msgstr ""
 "Мама те зове на вечеру?"
 
 msgid "QUITMSG23"
-msgstr "Не одустај сада, још увек има флемоида на слободи!"
+msgstr ""
+"Не одустај сада, још увек\n"
+"има флемоида на слободи!"
 
 msgid "QUITMSG24"
 msgstr ""
-"Немој да одустајеш --\n"
+"Немој да одустајеш—\n"
 "љигавци ће добити предност!"
 
 msgid "QUITMSG25"
@@ -208,7 +219,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "Надам се да само паузираш\n"
-"за Chex житарице."
+"за Чекс® житарице."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -222,7 +233,7 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"Прави Чекс ратници не\n"
+"Прави Чекс® ратници не\n"
 "би одустали тако лако!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
@@ -265,7 +276,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "Брбљате"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Лудите..."
+msgstr "Лудите…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Порука послата]"
@@ -274,19 +285,19 @@ msgid "STSTR_MUS"
 msgstr "Промена музике"
 
 msgid "STSTR_NOMUS"
-msgstr "НЕМОГУЋИ ИЗБОР"
+msgstr "Немогући Избор"
 
 msgid "STSTR_DQDON"
-msgstr "Нерањивост УКЉУЧЕНА"
+msgstr "Нерањивост: УКЉ"
 
 msgid "STSTR_DQDOFF"
-msgstr "Нерањивост ИСКЉУЧЕНА"
+msgstr "Нерањивост: ИСКЉ"
 
 msgid "STSTR_DQD2ON"
-msgstr "Ултимативна нерањивост УКЉУЧЕНА"
+msgstr "Ултимативна нерањивост: УКЉ"
 
 msgid "STSTR_DQD2OFF"
-msgstr "Ултимативна нерањивост ИСКЉУЧЕНА"
+msgstr "Ултимативна нерањивост: ИСКЉ"
 
 msgid "STSTR_KFAADDED"
 msgstr "Веома Срећна Муниција Додана"
@@ -295,16 +306,18 @@ msgid "STSTR_FAADDED"
 msgstr "Муниција (без кључева) Додана"
 
 msgid "STSTR_NCON"
-msgstr "Пролажење кроз зидове УКЉУЧЕНО"
+msgstr "Пролажење кроз зидове: УКЉ"
 
 msgid "STSTR_NCOFF"
-msgstr "Пролажење кроз зидове ИСКЉУЧЕНО"
+msgstr "Пролажење кроз зидове: ИСКЉ"
 
+#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Секундарни режим пролажења кроз зидове УКЉУЧЕНО"
+msgstr "Секундарни режим пролажења кроз зидове: УКЉ"
 
+#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Секундарни режим пролажења кроз зидове ИСКЉУЧЕНО"
+msgstr "Секундарни режим пролажења кроз зидове: ИСКЉ"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -321,28 +334,28 @@ msgstr "Супер моћи заглављене"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... Једи Чекс(Р)!"
+msgstr "… Једи Чекс(Р)"
 
 msgid "STSTR_CLEV"
-msgstr "Мењам ниво..."
+msgstr "Мењам ниво…"
 
 msgid "TXT_BUDDHAON"
-msgstr "Буда Мод УКЉУЧЕН"
+msgstr "Буда Мод: УКЉ"
 
 msgid "TXT_BUDDHAOFF"
-msgstr "Буда Мод ИСКЉУЧЕН"
+msgstr "Буда Мод: ИСКЉ"
 
 msgid "TXT_BUDDHA2ON"
-msgstr "Ултимативни Буда Мод УКЉУЧЕН"
+msgstr "Ултимативни Буда Мод: УКЉ"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr "Ултимативни Буда Мод ИСКЉУЧЕН"
+msgstr "Ултимативни Буда Мод: ИСКЉ"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Моћ УКЉУЧЕНА"
+msgstr "Моћ: УКЉ"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Моћ ИСКЉУЧЕНА"
+msgstr "Моћ: ИСКЉ"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Здравље напуњено"
@@ -351,22 +364,22 @@ msgid "TXT_CHEATKEYS"
 msgstr "Сви кључеви"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Дебаговање звука УКЉУЧЕНО"
+msgstr "Дебаговање звука: УКЉ"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Дебаговање звука ИСКЉУЧЕНО"
+msgstr "Дебаговање звука: ИСКЉ"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Покушаваш да вараш, ех? Сада умиреш!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Варалице - ти не заслужујеш оружје"
+msgstr "Варалице—ти не заслужујеш оружје"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Бројач укључен"
+msgstr "Бројач: УКЉ"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Бројач искључен"
+msgstr "Бројач: ИСКЉ"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Уреду"
@@ -378,13 +391,13 @@ msgid "TXT_GOTSTUFF"
 msgstr "Покупили сте ствари!"
 
 msgid "TXT_FREEZEON"
-msgstr "Мод замрзавања УКЉУЧЕН"
+msgstr "Мод замрзавања: УКЉ"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Мод замрзавања ИСКЉУЧЕН"
+msgstr "Мод замрзавања: ИСКЉ"
 
 msgid "TXT_STRANGE"
-msgstr "Осећате се чудно..."
+msgstr "Осећате се чудно…"
 
 msgid "TXT_STRANGER"
 msgstr "Осећате се врло чудно."
@@ -393,10 +406,10 @@ msgid "TXT_NOTSTRANGE"
 msgstr "Поново се осећате као ви."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Оловне чизме УКЉУЧЕНЕ"
+msgstr "Оловне чизме: УКЉ"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Оловне чизме ИСКЉУЧЕНЕ"
+msgstr "Оловне чизме: ИСКЉ"
 
 msgid "TXT_LIGHTER"
 msgstr "Осећате лакоћу"
@@ -405,10 +418,10 @@ msgid "TXT_GRAVITY"
 msgstr "Гравитација те оптерећује"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Нема мете УКЉУЧЕНО"
+msgstr "Нема мете: УКЉ"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Нема мете ИСКЉУЧЕНО"
+msgstr "Нема мете: ИСКЉ"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "„Дрхтите у страху!“"
@@ -417,10 +430,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "Нема више бауков оклоп"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Пратећа камера УКЉ."
+msgstr "Пратећа камера: УКЉ"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Пратећа камера ИСКЉ."
+msgstr "Пратећа камера: ИСКЉ"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "Један зликовац убијен"
@@ -444,25 +457,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "Шта желите да убијете ван игре?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Смрзнути играчи искључени"
+msgstr "Смрзнути играчи: ИСКЉ"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Праћење ИСКЉУЧЕНО"
+msgstr "Праћење: ИСКЉ"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Праћење УКЉУЧЕНО"
+msgstr "Праћење: УКЉ"
 
 msgid "AMSTR_GRIDON"
-msgstr "Мрежа УКЉУЧЕНА"
+msgstr "Мрежа: УКЉ"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Мрежа ИСКЉУЧЕНА"
+msgstr "Мрежа: ИСКЉ"
 
 msgid "AMSTR_TEXON"
-msgstr "Текстуре УКЉУЧЕНЕ"
+msgstr "Текстуре: УКЉ"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Текстуре ИСКЉУЧЕНЕ"
+msgstr "Текстуре: ИСКЉ"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Означено место"
@@ -563,7 +576,7 @@ msgid "WI_FINISHED"
 msgstr "Ниво завршен"
 
 msgid "WI_ENTERING"
-msgstr "Сада улазимо у:"
+msgstr "Сада улазимо у"
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
@@ -1920,7 +1933,7 @@ msgid "TXT_SCANNER"
 msgstr "Покупили сте скенер."
 
 msgid "TXT_NEEDMAP"
-msgstr "Скенер неће радити без мапе!\n"
+msgstr "Скенер неће радити без мапе!"
 
 msgid "TXT_PRISONPASS"
 msgstr "Покупили сте затворску пропусницу."
@@ -2064,13 +2077,13 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Покупили сте торбицу муниције."
 
 msgid "MSG_TALISMANRED"
-msgstr "Имаш осећај да није требало бити дирано..."
+msgstr "Имаш осећај да није требало бити дирано…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Шта год да је, не припада овом свету..."
+msgstr "Шта год да је, не припада овом свету…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Мора урадити нешто..."
+msgstr "Мора урадити нешто…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Имаш супер снагу!"
@@ -2115,7 +2128,7 @@ msgid "TXT_NEED_BLUECRYSTAL"
 msgstr "Треба ти плави кристал"
 
 msgid "TXT_RETAIL_ONLY"
-msgstr "Ова област је само доступна у пуној верзији Strife-а"
+msgstr "Ова област је само доступна у пуној верзији Сукоб-а"
 
 msgid "TXT_DOES_NOT_WORK"
 msgstr "То изгледа да не ради"
@@ -2565,10 +2578,10 @@ msgid "TXT_GOAWAY"
 msgstr "Одлази!"
 
 msgid "TXT_COMM0"
-msgstr "Наилази порука..."
+msgstr "Наилази порука…"
 
 msgid "TXT_COMM1"
-msgstr "Наилази порука од Црне птице...."
+msgstr "Наилази порука од Црне птице…"
 
 msgid "TXT_FINDHELP"
 msgstr "Нађи помоћ"
@@ -2578,10 +2591,10 @@ msgid "TXT_TRADE"
 msgstr "за %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Покупили сте Чех оклоп."
+msgstr "Покупили сте Чекс® оклоп."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Покупили сте Супер Чех Оклоп!"
+msgstr "Покупили сте Супер Чекс® Оклоп!"
 
 msgid "GOTWATER"
 msgstr "Покупили сте чашу воде."
@@ -2766,7 +2779,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Притисни ESC да наставиш..."
+"Притисни Esc да наставиш…"
 
 msgid "CE2TEXT"
 msgstr "Урадио си то!"
@@ -2781,67 +2794,76 @@ msgid "CLOADNET"
 msgstr ""
 "Не можете учитати док сте у мрежној потрази!\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgctxt "chex"
 msgid "QSPROMPT"
-msgstr "Брзо-сачувајте преко ваше потраге назване '%s'? Притисните Y или N."
+msgstr ""
+"Брзо-сачувајте преко ваше потраге назване\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Притисните Y или N."
 
 msgctxt "chex"
 msgid "QLOADNET"
 msgstr ""
 "Не можете брзо-учитати док сте у мрежној потрази!\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgctxt "chex"
 msgid "QLPROMPT"
 msgstr ""
-"Да ли желиш да брзо-учиташ потрагу названу '%s'?\n"
+"Да ли желиш да брзо-учиташ потрагу названу\n"
+"\n"
+"'%s'?\n"
 "\n"
 "Притисните Y или N."
 
 msgid "CNEWGAME"
 msgstr ""
-"Не можете почети нову потрагу док сте у мрежној потрази.\n"
+"Не можете почети нову потрагу\n"
+"док сте у мрежној потрази.\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgid "CNIGHTMARE"
 msgstr ""
-"Пажљиво, ово је ће бити тешко. Да ли желиш да наставиш?\n"
+"Пажљиво, ово је ће бити тешко.\n"
+"Да ли желиш да наставиш?\n"
 "\n"
 "Притисните Y или N."
 
 msgid "CSWSTRING"
 msgstr ""
-"Ово је Chex Quest. Тражите нове\n"
+"Ово је Чекс® Quest. Тражите нове\n"
 "\n"
 "нивое на www.chexquest.com.\n"
 "\n"
-"Притисните Y или N."
+"Притисните било који тастер."
 
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
 "Не можете завршити мрежну потрагу!\n"
 "\n"
-"Притисните тастер."
+"Притисните било који тастер."
 
 msgctxt "chex"
 msgid "ENDGAME"
 msgstr ""
 "Да ли си сигуран да желиш да завршиш трагање?\n"
 "\n"
-"Притисни Y или N."
+"Притисните Y или N."
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Неуништив УКЉУЧЕН"
+msgstr "Неуништив: УКЉ"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Неуништив ИСКЉУЧЕН"
+msgstr "Неуништив: ИСКЉ"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2853,7 +2875,7 @@ msgstr "Супер зорч додат"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Једи Chex(R)!"
+msgstr "…Једи Чекс®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -3011,7 +3033,7 @@ msgid "MNU_RANDOM"
 msgstr "Насумично"
 
 msgid "MNU_EPISODE"
-msgstr "Изаберите кампању"
+msgstr "Изаберите кампању?"
 
 msgctxt "strife"
 msgid "MNU_EPISODE"
@@ -3261,7 +3283,7 @@ msgid "CMPTMNU_ANYBOSSDEATH"
 msgstr "Било који случај A_BossDeath активира special на нивоу"
 
 msgid "CMPTMNU_NODOORLIGHT"
-msgstr "Онемогући светлосни ефекат из BOOM-а на вратима"
+msgstr "Онемогући светлосни ефекат из Бум-а на вратима"
 
 msgid "CMPTMNU_LIGHT"
 msgstr "Нађи суседно светло као у Doom-у"
@@ -3288,7 +3310,7 @@ msgid "CMPTMNU_NOPASSOVER"
 msgstr "Глумци су бесконачно велики"
 
 msgid "CMPTMNU_BOOMSCROLL"
-msgstr "Boom скролери су додаци"
+msgstr "Бум скролери су додаци"
 
 msgid "CMPTMNU_BADANGLES"
 msgstr "Немогуће путовати право на NSEW"
@@ -3312,7 +3334,7 @@ msgid "CMPTMNU_RENDERINGBEHAVIOR"
 msgstr "Понашање рендовања"
 
 msgid "CMPTMNU_POLYOBJ"
-msgstr "Цртај поли-објекте као Hexen"
+msgstr "Цртај поли-објекте као Хексен"
 
 msgid "CMPTMNU_MASKEDMIDTEX"
 msgstr "Игнориши Y нагиб на маскиране средње текстуре"
@@ -3335,9 +3357,6 @@ msgstr "Инстантно покрећући нивои нису тихи"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Секторски звукови су центрисани"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Звукови престају кад глумац нестане"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Користи оригинални звук руковања метом"
 
@@ -3351,7 +3370,7 @@ msgid "CMPTMNU_CHECKSWITCHRANGE"
 msgstr "Омогући баговано CheckSwitchRange понашање"
 
 msgid "CMPTMNU_RAILINGHACK"
-msgstr "Омогући непоправљену ограду у Strife-у"
+msgstr "Омогући непоправљену ограду у Сукоб-у"
 
 msgid "CMPTMNU_EXPLODE1"
 msgstr "Нема вертикалног гурања од експлозија"
@@ -3417,7 +3436,7 @@ msgid "CNTRLMNU_KEYBOARDLOOK"
 msgstr "Гледај тастатуром"
 
 msgid "CNTRLMNU_POPUPS_TITLE"
-msgstr "Искакајући прикази контроле у Strife-у"
+msgstr "Искакајући прикази контроле у Сукоб-у"
 
 msgid "CNTRLMNU_TEAMSAY"
 msgstr "Пиши тиму"
@@ -3438,7 +3457,7 @@ msgid "CNTRLMNU_COOPSPY"
 msgstr "Поглед од другог играча"
 
 msgid "CNTRLMNU_POPUPS"
-msgstr "Информација у Strife-у"
+msgstr "Информација у Сукоб-у"
 
 msgid "CNTRLMNU_MISSION"
 msgstr "Циљ мисије"
@@ -3809,9 +3828,6 @@ msgstr "Користи шумни ефект"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Класична транспарентност"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Транспарентност изгубљених душа"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Користи фејк-контраст"
 
@@ -3921,7 +3937,7 @@ msgid "HUDMNU_OLDOUCH"
 msgstr "Стара формула за приказ лика"
 
 msgid "HUDMNU_HEXENFLASHES"
-msgstr "Треперење оружја у Hexen-у"
+msgstr "Треперење оружја у Хексен-у"
 
 msgid "HUDMNU_POISONFLASHES"
 msgstr "Треперење током тровања"
@@ -3965,9 +3981,6 @@ msgstr "Мрежна подешавања"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Локална подешавања"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Предвиђање покрета"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Предвиђање линијске радње"
 
@@ -3982,15 +3995,6 @@ msgstr "Подешавања домаћина"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Додатни тикови"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Балансирање кашњења"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Оригинално"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Оптимизовано"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Класични (бржи)"
@@ -4059,15 +4063,6 @@ msgstr "Играч"
 msgid "OPTVAL_MAP"
 msgstr "Мапа"
 
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Скалирај на 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Дупли пиксел"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Четвороструки пиксел"
-
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Тренутно оружје"
 
@@ -4126,7 +4121,7 @@ msgid "OPTVAL_TRADITIONALDOOM"
 msgstr "Традиционални Doom"
 
 msgid "OPTVAL_TRADITIONALSTRIFE"
-msgstr "Традиционални Strife"
+msgstr "Традиционални Сукоб"
 
 msgid "OPTVAL_TRADITIONALRAVEN"
 msgstr "Традиционални Raven"
@@ -4161,15 +4156,6 @@ msgstr "Само дефинисане мапом боје"
 msgid "OPTVAL_NODOORS"
 msgstr "Све осим врата"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Дупло"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Тродупло"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Четвороструко"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Подигнут предмет"
 
@@ -4192,7 +4178,7 @@ msgid "OPTVAL_OLD"
 msgstr "Стар"
 
 msgid "OPTVAL_DOOM"
-msgstr "Пропаст"
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr "Doom (строг)"
@@ -4201,7 +4187,7 @@ msgid "OPTVAL_BOOM"
 msgstr "Бум"
 
 msgid "OPTVAL_BOOMSTRICT"
-msgstr "Boom (строг)"
+msgstr "Бум (строг)"
 
 msgid "OPTVAL_MBF"
 msgstr "МБФ"
@@ -4213,13 +4199,10 @@ msgid "OPTVAL_MBF21"
 msgstr "МБФ21"
 
 msgid "OPTVAL_MBF21STRICT"
-msgstr "MBF21 (строг)"
+msgstr "МБФ21 (строг)"
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr "ЗДум 2.0.63"
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Све неусвојено"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Грешка"
@@ -4242,26 +4225,14 @@ msgstr "Doom софтверски рендерер"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "SW рендерер праве боје"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "Високо-перформанси"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Енергетско-штедљиви"
-
 msgid "OPTVAL_VANILLA"
 msgstr "Ванила"
 
 msgid "OPTVAL_VTFZDOOM"
-msgstr "ZDoom (присиљен)"
+msgstr "ЗДум (присиљен)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Ванила (присиљен)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Аутоматски (ZDoom преферијални)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Аутоматски (ванила преферијални)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Мало"
@@ -4354,19 +4325,13 @@ msgid "OPTSTR_HERETIC"
 msgstr "Јеретик"
 
 msgid "OPTSTR_CHEX"
-msgstr "Чекс"
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Без-звучни"
+msgstr "Чекс®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Нема уметања"
 
 msgid "OPTSTR_SPLINE"
 msgstr "Сплајн"
-
-msgid "OPTSTR_OPENAL"
-msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Хардвер рендерер"
@@ -4380,12 +4345,6 @@ msgstr "Опција хардвер рендера"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Подешавања динамичког осветљења"
 
-msgid "GLMNU_PREFS"
-msgstr "Преференција"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Подсећи ивице спрајтова"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Сортирано цртај листе од текстуре"
 
@@ -4394,9 +4353,6 @@ msgstr "Динамичко осветљење"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Динамичко осветљење (хардвер)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Омогући светлосне дефиниције"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Светло утиче на спрајтове"
@@ -4413,17 +4369,11 @@ msgstr "Мапа сенки квалитет"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Мапа сенки филтер"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Магла мод"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Магла присиљава пуну светлост"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Блага снага оружја"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Околинска мапа на прозорима"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Побољшана ноћна визија мод"
@@ -4448,9 +4398,6 @@ msgstr "Спрајт камера фаце"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Честице стајл"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Квалитет рендовања"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "Стереотоно 3D VR"
@@ -4501,9 +4448,6 @@ msgstr "Doom Наслеђено издање"
 msgid "OPTVAL_SOFTWARE"
 msgstr "Софтвер"
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Оптимал"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Y оса"
 
@@ -4515,9 +4459,6 @@ msgstr "Квадрат"
 
 msgid "OPTVAL_ROUND"
 msgstr "Круг"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Радијално"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Пикселизовани фаз"
@@ -4582,9 +4523,6 @@ msgstr "Подешавања правих боја"
 msgid "TCMNU_TITLE"
 msgstr "Подешавања правих боја"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Излаз правих боја"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Линеарни филтер током смањења"
 
@@ -4596,21 +4534,6 @@ msgstr "Користи мипмаповане текстуре"
 
 msgid "TCMNU_DYNLIGHTS"
 msgstr "Динамичко осветљење (софтвер)"
-
-msgid "OS_TITLE"
-msgstr "Претрага"
-
-msgid "OS_ANY"
-msgstr "Тражи било коју од речи"
-
-msgid "OS_ALL"
-msgstr "Тражи све речи"
-
-msgid "OS_NO_RESULTS"
-msgstr "Нема резултата."
-
-msgid "OS_LABEL"
-msgstr "Претрага:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Увек приказуј кључеве"
@@ -4644,11 +4567,11 @@ msgid "TXT_INCOMPATIBLESG"
 msgstr "Сачувана игра %s је из инкомпетабилне верзије."
 
 msgid "TXT_OTHERENGINESG"
-msgstr "Сачувана игра %s је из други ZDoom-базиран енџин:"
+msgstr "Сачувана игра %s је из други ЗДум-базиран енџин:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Сачувана игра „%s“ је из старије верзије: %d (%e је најстарија подржана)"
+"Сачувана игра „%s“ је из старије верзије: %d (%e је најстарија подржана)."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4656,8 +4579,7 @@ msgstr ""
 # 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
-msgstr ""
-"Сачувана игра „%s“ је из новије верзије: %d (%e је најновија подржана)"
+msgstr "Сачувана игра „%s“ је из новије верзије: %d (%e је најновија подржана)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Сачувана игри „%s“ недостаје тренутна мапа."
@@ -4690,10 +4612,6 @@ msgstr "Није успело направити снимак екрана."
 msgid "TXT_BY"
 msgstr "Од %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr ""
-"Притисните било који тастер или кликните било где на екрану да одустанете."
-
 msgid "HUDMNU_FLASH"
 msgstr "Подешавања блед екрана"
 
@@ -4705,9 +4623,6 @@ msgstr "Нишан"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Титлови"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Онемогући сиве сенке"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Подешавања фонта"
@@ -4725,7 +4640,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr "Прилагођена обрнута мапа"
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "Прилагођена инверзна боја тамна\n"
+msgstr "Прилагођена инверзна боја тамна"
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr "Прилагођено инверзно светло у боји"
@@ -4749,11 +4664,6 @@ msgstr "Фактор за скалирање"
 msgid "SCALEMNU_RATIO"
 msgstr "Однос ширине и висине"
 
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr "Build"
-
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
 msgstr "Прикажи екран за израчунавање на излазу из нивоа"
@@ -4772,7 +4682,7 @@ msgid "CNTRLMNU_LAYOUT"
 msgstr "Жељени распоред тастатуре"
 
 msgid "OPTVAL_CLASSICZ"
-msgstr "Цлассиц ЗДоом"
+msgstr "Цлассиц ЗДум"
 
 msgid "OPTVAL_MODERN"
 msgstr "Модерно (WASD)"
@@ -4787,7 +4697,7 @@ msgid "MISCMNU_WIPERCENT"
 msgstr "Користите проценте на екрану резимеа"
 
 msgid "MISCMNU_CLEANSTAT"
-msgstr "Класично ZDoom скалирање на екрану сажетка"
+msgstr "Класично ЗДум скалирање на екрану сажетка"
 
 # Called "citizens" according to Doomwiki
 msgid "TAG_STRIFEZOMBIE"
@@ -4845,7 +4755,7 @@ msgid "DSPLYMNU_FOV"
 msgstr "Видно поље"
 
 msgid "CMPTMNU_NOMBF21"
-msgstr "Онемогућите функције MBF21"
+msgstr "Онемогућите функције МБФ21"
 
 msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr "Прикажи виџет времена"
@@ -4900,10 +4810,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Онемогући преузимање остављених предмета са стране клијента"
 
 # Disables autoloading save on death
+#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Поново покрените ниво након смрти"
 
 # Resets inventory on every map
+#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
 msgstr "Старт пиштоља"
 
@@ -5068,9 +4980,6 @@ msgstr "Време одбројавања гласова (секунде)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Спори режим ћаскања (секунде)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Омогући хаптичке окидаче"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "Хаптичке опције"
 
@@ -5185,10 +5094,10 @@ msgid "TAG_REPELLENT"
 msgstr "Средство против слузи"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Чекс Армор"
+msgstr "Чекс® Армор"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Супер Чекс оклоп"
+msgstr "Супер Чекс® оклоп"
 
 msgid "TAG_CHEXMAP"
 msgstr "Мапа рачунарског подручја"
@@ -5278,3 +5187,19 @@ msgstr "Калибрација слике"
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP1"
 msgstr "Подесите ове вредности према очекиваној удаљености гледања."
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Глатко"
+
+#, fuzzy
+msgid "TAG_MACIL"
+msgstr "Мејсил"
+
+#, fuzzy
+msgid "TAG_MAULER"
+msgstr "Маулер"
+
+#, fuzzy
+msgid "TAG_GLAUNCHER"
+msgstr "Бацач граната"

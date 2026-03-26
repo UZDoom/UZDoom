@@ -1,0 +1,182 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-03-14 20:03+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/uzdoom/glossary/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+msgid "ON"
+msgstr "开"
+
+msgid "OFF"
+msgstr "关"
+
+msgid "MIDI"
+msgstr "MIDI"
+
+msgid "FluidSynth"
+msgstr "FluidSynth"
+
+msgid "Freeverb"
+msgstr "Freeverb"
+
+msgid "ADLMidi"
+msgstr "ADLMidi"
+
+msgid "OPNMidi"
+msgstr "OPNMidi"
+
+msgid "WildMidi"
+msgstr "WildMidi"
+
+msgid "Timidity"
+msgstr "Timidity"
+
+msgid "libXMP"
+msgstr "libXMP"
+
+msgid "Dumb"
+msgstr "Dumb"
+
+msgid "Chip-o-matic"
+msgstr "芯片自动化"
+
+msgid "MAME"
+msgstr "MAME"
+
+msgid "OPL2"
+msgstr "OPL2"
+
+msgid "DOSBox"
+msgstr "DOSBox"
+
+msgid "OPL3"
+msgstr "OPL3"
+
+msgid "Java"
+msgstr "Java"
+
+msgid "ESFMu"
+msgstr "ESFMu"
+
+msgid "YMFM"
+msgstr "YMFM"
+
+msgid "Nuked"
+msgstr "Nuked"
+
+msgid "YM2612"
+msgstr "YM2612"
+
+msgid "Neko Project II Kai"
+msgstr "Neko Project II Kai"
+
+msgid "OPNA"
+msgstr "OPNA"
+
+msgid "YM2608"
+msgstr "YM2608"
+
+msgid "Opal"
+msgstr "Opal"
+
+msgid "YM3438"
+msgstr "YM3438"
+
+msgid "OPN2"
+msgstr "OPN2"
+
+msgid "YMF276"
+msgstr "YMF276"
+
+msgid "GENS"
+msgstr "GENS"
+
+msgid "Uncharted 2"
+msgstr "Uncharted 2"
+
+msgid "Reinhard"
+msgstr "Reinhard"
+
+msgid "Hejl-Dawson"
+msgstr "Hejl-Dawson"
+
+msgid "OpenGL"
+msgstr "OpenGL"
+
+msgid "Vulkan"
+msgstr "Vulkan"
+
+msgid "OpenGL ES"
+msgstr "OpenGL ES"
+
+msgid "ScaleNx"
+msgstr "ScaleNx"
+
+msgid "ZDoom"
+msgstr "ZDoom"
+
+msgid "NormalNx"
+msgstr "NormalNx"
+
+msgid "hqNx"
+msgstr "hqNx"
+
+msgid "xBRZ"
+msgstr "xBRZ"
+
+msgid "Doom"
+msgstr "Doom"
+
+msgid "Boom"
+msgstr "Boom"
+
+msgid "Strife"
+msgstr "抗争"
+
+msgid "Hexen"
+msgstr "毁灭巫师"
+
+msgid "Heretic"
+msgstr "异教徒"
+
+msgid "Chex"
+msgstr "奇克斯"
+
+msgid "Press Y or N"
+msgstr "按Y键确认，按N键取消"
+
+msgid "Press a key"
+msgstr "按下任意键"
+
+msgid "WOPN"
+msgstr "WOPN"
+
+msgid "WOPL"
+msgstr "WOPL"
+
+msgid "LLE"
+msgstr "LLE"
+
+msgid "DMX"
+msgstr "DMX"
+
+msgid "MMX"
+msgstr "MMX"
+
+msgid "Discord"
+msgstr "Discord"
+
+msgid "MBF"
+msgstr "MBF"
+
+msgid "MBF21"
+msgstr "MBF21"

@@ -2,17 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-11 22:25+0000\n"
+"PO-Revision-Date: 2026-03-16 23:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/common/ko/>"
 "\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: ko\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSYN"
 msgstr "Y키 또는 N키를 누르시오."
@@ -31,9 +30,6 @@ msgstr ""
 
 msgid "SAFEMESSAGE"
 msgstr "정말로 정하시겠습니까?"
-
-msgid "NOTSET"
-msgstr "정하지 않음"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -56,10 +52,10 @@ msgid "TXT_X_CHEATS"
 msgstr "%s 이(가) 치트를 사용 함"
 
 msgid "MSGOFF"
-msgstr "메시지 끔"
+msgstr "메시지: 끔"
 
 msgid "MSGON"
-msgstr "메시지 켬"
+msgstr "메시지: 켜짐"
 
 msgid "TXT_SAY"
 msgstr ""
@@ -239,17 +235,11 @@ msgstr "동작"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "사용자 지정 동작 컨트롤"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "채팅"
-
 msgid "MNU_MULTIPLAYER"
-msgstr ""
+msgstr "멀티플레이어"
 
 msgid "CNTRLMNU_SAY"
 msgstr "채팅하기"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "사용자 지정 채팅 컨트롤"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "사용자 지정 무기 컨트롤"
@@ -366,9 +356,6 @@ msgstr "3인칭 카메라"
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "스크린샷"
 
-msgid "CNTRLMNU_CONSOLE"
-msgstr "콘솔 열기"
-
 msgid "CNTRLMNU_PAUSE"
 msgstr "일시정지"
 
@@ -407,9 +394,6 @@ msgstr "메시지 토글"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "게임 종료"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "감마 조정"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "마우스 사용"
@@ -509,10 +493,10 @@ msgstr "감지하려면 컨트롤러 지원을"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr "활성화 해야합니다."
+msgstr "활성화 해야합니다"
 
 msgid "JOYMNU_INVALID"
-msgstr "메뉴에 특정된 컨트롤러가 아닙니다."
+msgstr "메뉴에 특정된 컨트롤러가 아닙니다"
 
 msgid "JOYMNU_OVRSENS"
 msgstr "전체 민감도"
@@ -527,21 +511,23 @@ msgid "JOYMNU_DEADZONE"
 msgstr "불감대"
 
 msgid "JOYMNU_NOAXES"
-msgstr "설정할 방향키가 없습니다."
+msgstr "설정할 방향키가 없습니다"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
 msgstr "없음"
 
+#, fuzzy
 msgid "OPTVAL_TURNING"
 msgstr "회전"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "위/아래로 보기"
 
+#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
 msgstr "앞으로 전진"
 
+#, fuzzy
 msgid "OPTVAL_STRAFING"
 msgstr "양옆으로 이동"
 
@@ -592,9 +578,6 @@ msgstr "암녹색"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "담갈색"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "옅은 녹색"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "옅은 청색"
@@ -662,22 +645,10 @@ msgstr "수직 동기화"
 msgid "DSPLYMNU_MODELS"
 msgstr "모델"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "조준점 크기"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr ""
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "메시지"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "메시지 중간에 위치"
 
 msgid "MSGMNU_PULSEMESSAGES"
-msgstr ""
-
-msgid "MSGMNU_MESSAGESCALE"
 msgstr ""
 
 msgid "MNU_COLORPICKER"
@@ -701,32 +672,23 @@ msgstr "미니맵 색상 설정"
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "기본 색상으로 복구"
 
-msgid "SNDMNU_SNDENABLED"
-msgstr ""
-
-msgid "SNDMNU_MUSENABLED"
-msgstr ""
-
-msgid "OPTVAL_4000HZ"
-msgstr ""
-
 msgid "OPTVAL_8000HZ"
 msgstr ""
 
 msgid "OPTVAL_11025HZ"
-msgstr ""
+msgstr "11025 Hz"
 
 msgid "OPTVAL_22050HZ"
-msgstr ""
+msgstr "22050 Hz"
 
 msgid "OPTVAL_32000HZ"
-msgstr ""
+msgstr "32000 Hz"
 
 msgid "OPTVAL_44100HZ"
-msgstr ""
+msgstr "44100 Hz"
 
 msgid "OPTVAL_48000HZ"
-msgstr ""
+msgstr "48000 Hz"
 
 msgid "OPTVAL_64SAMPLES"
 msgstr "64 샘플"
@@ -806,9 +768,6 @@ msgstr "음높이 무작위화"
 msgid "SNDMNU_CHANNELS"
 msgstr "음향 채널"
 
-msgid "SNDMNU_BACKEND"
-msgstr "음향 말미"
-
 msgid "SNDMNU_OPENAL"
 msgstr "오픈에이엘 설정"
 
@@ -823,9 +782,6 @@ msgstr "모듈 재생 설정"
 
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "MIDI 플레이어 설정"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr ""
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "고급 음향 설정"
@@ -855,7 +811,7 @@ msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "MIDI 최대 음색 양"
 
 msgid "ADVSNDMNU_FLUIDSYNTH"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "ADVSNDMNU_GLOBAL"
 msgstr "전반적"
@@ -865,9 +821,6 @@ msgstr "프리버브"
 
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "전반적 프리버브"
-
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "패치 세트"
 
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "쌓기"
@@ -882,25 +835,16 @@ msgid "ADVSNDMNU_CHORUS"
 msgstr "코러스"
 
 msgid "ADVSNDMNU_TIMIDITY"
-msgstr ""
+msgstr "Timidity++"
 
 msgid "ADVSNDMNU_ADLMIDI"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "ADVSNDMNU_OPNMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Timidity 코딩 파일"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "비교적인 볼륨"
+msgstr "OPNMidi"
 
 msgid "ADVSNDMNU_WILDMIDI"
-msgstr ""
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "WildMidi 코딩 파일"
+msgstr "WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "설정을 고르시오"
@@ -910,9 +854,6 @@ msgstr "향상된 리샘플링"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "OPL 뱅크"
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "OPL 에뮬레이터 코어"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "PCM 속도로 에뮬레이터 실행"
@@ -937,9 +878,6 @@ msgstr "OPN2 에뮬레이터 코어"
 
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "GUS 에뮬레이션"
-
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "GUS 코딩 파일"
 
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "DMXGUS 럼프 읽기"
@@ -1028,10 +966,10 @@ msgid "MODMNU_VOLUMERAMPING"
 msgstr "볼륨 램핑"
 
 msgid "OPTVAL_LIBXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "OPTVAL_DUMB"
-msgstr ""
+msgstr "Dumb"
 
 msgid "MODMNU_CHIPOMATIC"
 msgstr "칩-오-매틱"
@@ -1064,16 +1002,13 @@ msgid "OPTVAL_LLENUKEDOPL3"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPN2"
-msgstr "마메 YM2612"
+msgstr "마메 OPN2 (YM2612)"
 
 msgid "OPTVAL_NP2OPNA"
 msgstr ""
 
 msgid "OPTVAL_MAMEOPNA"
 msgstr "마메 YM2608"
-
-msgid "OPTVAL_PMDWINOPNA"
-msgstr ""
 
 msgid "OPTVAL_OPALOPL3"
 msgstr ""
@@ -1187,13 +1122,13 @@ msgid "OPTVAL_1024K"
 msgstr ""
 
 msgid "OPTVAL_UNCHARTED2"
-msgstr ""
+msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "OPTVAL_PALETTE"
 msgstr "팔레트"
@@ -1315,12 +1250,6 @@ msgstr ""
 msgid "GLTEXMNU_TITLE"
 msgstr "텍스쳐 설정"
 
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "텍스쳐 사용"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "고해상도 텍스쳐 사용"
-
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "고퀄리티 리사이즈 모드"
 
@@ -1328,7 +1257,7 @@ msgid "GLTEXMNU_HQRESIZEMULT"
 msgstr "고퀄리티 리사이징 승수"
 
 msgid "GLTEXMNU_HQRESIZEWARN"
-msgstr "이 설정은 비디오 메모리의 %d 배가 더 필요합니다."
+msgstr "이 설정은 비디오 메모리의 %d 배가 더 필요합니다"
 
 msgid "GLTEXMNU_RESIZETEX"
 msgstr "텍스쳐 리사이징"
@@ -1348,12 +1277,6 @@ msgstr "지엘 텍스쳐 미리 캐싱함"
 msgid "VIDMNU_TITLE"
 msgstr "화면 설정"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "확대 (가깝게)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "확대 (선형 식)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "레터박스"
 
@@ -1369,17 +1292,11 @@ msgstr "전체화면"
 msgid "VIDMNU_HIDPI"
 msgstr "망막/하이DPI 활성화"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "종횡비"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "강제 종횡비"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "강제 비율 스타일"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "5:4 비율 사용"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "해상도 크기"
@@ -1465,20 +1382,20 @@ msgid "VIDMNU_PREFERBACKEND"
 msgstr "기본적인 API 랜더링"
 
 msgid "OPTVAL_OPENGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr ""
+msgstr "벌칸"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
-msgstr "양쪽 ALT/CTRL/SHIFT키 합병"
+msgstr "양쪽 Alt/Ctrl/Shift키 합병"
 
 msgid "MISCMNU_WINFULLSCREENTOGGLE"
-msgstr "ALT+ENTER키로 전체화면 조정"
+msgstr "Alt+Enter키로 전체화면 조정"
 
 msgid "MISCMNU_MACFULLSCREENTOGGLE"
 msgstr "COMMAND+F키로 전체화면 조정"
@@ -1544,95 +1461,6 @@ msgstr "환경 편집"
 msgid "REVMNU_NEW"
 msgstr "새로운 환경 생성"
 
-msgid "REVMNU_REVERT"
-msgstr "설정 되돌리기"
-
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "공간 크기"
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "공간 잔향 확산"
-
-msgid "REVMNU_ROOM"
-msgstr "룸 효과"
-
-msgid "REVMNU_ROOM_HF"
-msgstr "룸 효과 HF"
-
-msgid "REVMNU_ROOM_LF"
-msgstr "룸 효과 LF"
-
-msgid "REVMNU_DECAY_TIME"
-msgstr "잔향 감쇠 시간"
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "잔향 감쇠 HF 비율"
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "잔향 감쇠 LF 비율"
-
-msgid "REVMNU_REFLECTIONS"
-msgstr "룸 반사"
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "룸 반사 딜레이 시간"
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "X축 룸 반사"
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Y축 룸 반사"
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Z축 룸 반사"
-
-msgid "REVMNU_REVERB"
-msgstr "리버브"
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr "리버브 지연"
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "X축 리버브"
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Y축 리버브"
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Z축 리버브"
-
-msgid "REVMNU_ECHO_TIME"
-msgstr "에코 시간"
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "에코 깊이"
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr "전조 시간"
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "전조 깊이"
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "대기 흡수 HF"
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF 참조치"
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF 참조치"
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "룸 감쇠 양"
-
-msgid "REVMNU_DIFFUSION"
-msgstr "잔향 확산"
-
-msgid "REVMNU_DENSITY"
-msgstr "잔향 밀도"
-
 msgid "REVMNU_Reflections_Scale"
 msgstr "룸 반사 음계"
 
@@ -1673,7 +1501,7 @@ msgid "REVMNU_Create"
 msgstr "생성"
 
 msgid "REVMNU_Save"
-msgstr "저장 하기..."
+msgstr "저장 하기…"
 
 msgid "REVMNU_File_name"
 msgstr "파일 이름"
@@ -1687,9 +1515,6 @@ msgstr "벌칸 설정(실험적)"
 msgid "VK_TITLE"
 msgstr "벌칸 설정"
 
-msgid "VKMNU_ENABLE"
-msgstr "벌칸 렌더러 사용"
-
 msgid "VKMNU_DEVICE"
 msgstr "벌칸 장치 아이디"
 
@@ -1702,24 +1527,20 @@ msgstr "경고: 벌칸 렌더러는 매우 실험적입니다!"
 msgid "VK_RESTART"
 msgstr "이 설정을 적용하려면 게임을 재시작해야 합니다."
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "벌칸 장치를 고르시오"
-
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
 msgstr ""
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "구형 xBRZ"
@@ -1738,117 +1559,6 @@ msgstr "검색 결과 없음."
 
 msgid "OS_LABEL"
 msgstr "검색:"
-
-msgid "TXT_OBITUARY1"
-msgstr "%k 은(는) %o 의 뼈를 발랐다."
-
-msgid "TXT_OBITUARY2"
-msgstr "%k 은(는) %o 을(를) 거세시켰다."
-
-msgid "TXT_OBITUARY3"
-msgstr "%k 은(는) %o 을(를) 양념시켰다."
-
-msgid "TXT_OBITUARY4"
-msgstr "%k 은(는) %o 을(를) 망가뜨렸다."
-
-msgid "TXT_OBITUARY5"
-msgstr "%k 은(는) %o 을(를) 파괴했다."
-
-msgid "TXT_OBITUARY6"
-msgstr "%k 은(는) %o 을(를) 잘게 잘게 썰었다."
-
-msgid "TXT_OBITUARY7"
-msgstr "%k 은(는) %o 의 내장을 도려냈다."
-
-msgid "TXT_OBITUARY8"
-msgstr "%k 은(는) %o 의 코를 납작하게 만들었다."
-
-msgid "TXT_OBITUARY9"
-msgstr "%k 은(는) %o 에게 홍콩행을 보냈다."
-
-msgid "TXT_OBITUARY10"
-msgstr "%o 은(는) %k 의 찰진 맛을 보았다."
-
-msgid "TXT_OBITUARY11"
-msgstr "%k 은(는) %o 을(를) 죽였다."
-
-msgid "TXT_OBITUARY12"
-msgstr "%o 은(는) %k 에 의해 분쇄됐다."
-
-msgid "TXT_OBITUARY13"
-msgstr "%k 은(는) %o 을(를) 참살했다."
-
-msgid "TXT_OBITUARY14"
-msgstr "%k 은(는) %o 의 팔다리를 절단했다."
-
-msgid "TXT_OBITUARY15"
-msgstr "%k 은(는) %o 을(를) 크게 혼냈다."
-
-msgid "TXT_OBITUARY16"
-msgstr "%k 은(는) %o 을(를) 죽여 뜯어서 작품을 만들었다."
-
-msgid "TXT_OBITUARY17"
-msgstr "%o 은(는) %k 에 의해 도살당했다."
-
-msgid "TXT_OBITUARY18"
-msgstr "%k 은(는) %o 을(를) 내팽개쳤다."
-
-msgid "TXT_OBITUARY19"
-msgstr "%o 은(는) %k 을(를) 위해 등을 보였다."
-
-msgid "TXT_OBITUARY20"
-msgstr "%k 은(는) %o 을(를) 박살냈다."
-
-msgid "TXT_OBITUARY21"
-msgstr "%k 은(는) %o 을(를) 짓이겼다."
-
-msgid "TXT_OBITUARY22"
-msgstr "%k 은(는) %o 을(를) 목 졸라 죽였다."
-
-msgid "TXT_OBITUARY23"
-msgstr "%k 은(는) %o 을(를) 쓰레기처럼 내다 버렸다."
-
-msgid "TXT_OBITUARY24"
-msgstr "%k 은(는) %o 의 장례식을 치렀다."
-
-msgid "TXT_OBITUARY25"
-msgstr "%o 은(는) %k 덕에 지옥으로 돌아갔다."
-
-msgid "TXT_OBITUARY26"
-msgstr "%o 은(는) %k 덕에 맛있게 구워졌다."
-
-msgid "TXT_OBITUARY27"
-msgstr "%o 은(는) %k 에 의해 짓눌려졌다."
-
-msgid "TXT_OBITUARY28"
-msgstr "%k 은(는) %o 을(를) 패배로 씻겼다."
-
-msgid "TXT_OBITUARY29"
-msgstr "%o 의 피는 %k 의 물감으로 쓰였다."
-
-msgid "TXT_OBITUARY30"
-msgstr "%k 은(는) %o 로 개밥을 만들었다."
-
-msgid "TXT_OBITUARY31"
-msgstr "%o 은(는) %k 에게 똥개처럼 맞았다."
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o 은(는) 배설물이 되었다."
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o 은(는) 고기 반죽이 되었다."
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o 은(는) 고자가 되었다."
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o 은(는) 자연에 의해 낙태 당했다."
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o 은(는) 한심하게 자살했다."
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o 은(는) 다윈상을 받을 자격이 있다."
 
 # This is not a text to be translated but an engine switch for complex
 # languages.
@@ -1885,41 +1595,11 @@ msgstr "수정된 것만"
 msgid "TXT_UNKNOWN"
 msgstr "알 수 없음"
 
-msgid "OPTVAL_HUD"
-msgstr ""
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "오토맵"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "HUD + 오토맵"
-
 msgid "TXT_SAVEGAMENEEDS"
-msgstr "이 저장 된 게임은 해당 파일이 필요합니다."
-
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "멀티플레이어 옵션"
-
-msgid "OPTMNU_INPUT"
-msgstr "입력 옵션"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "시스템 옵션"
-
-msgid "OPTMNU_LIGHT"
-msgstr "조명 옵션"
-
-msgid "OPTMNU_SPRITE"
-msgstr "스프라이트 옵션"
+msgstr "이 저장 된 게임은 해당 파일이 필요합니다"
 
 msgid "GLPREFMNU_CORONAS"
 msgstr "코로나"
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "외형"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "고급 디스플레이 옵션"
 
 msgid "PICKER_SELECT"
 msgstr "실행할 게임 파일을 선택합니다."
@@ -1955,7 +1635,7 @@ msgid "PICKER_WIDESCREEN"
 msgstr "와이드스크린"
 
 msgid "PICKER_ADDPARM"
-msgstr "환영합니다: %s!"
+msgstr "환영합니다:"
 
 msgid "PICKER_WELCOME"
 msgstr "에 오신 것을 환영합니다!"
@@ -2025,21 +1705,6 @@ msgstr ""
 msgid "PICKER_JOIN"
 msgstr ""
 
-msgid "PICKER_NETMODE"
-msgstr ""
-
-msgid "PICKER_NETAUTO"
-msgstr ""
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-msgid "PICKER_NETSERVER"
-msgstr ""
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr ""
-
 msgid "PICKER_NETRATE"
 msgstr ""
 
@@ -2106,3 +1771,6 @@ msgstr ""
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr ""
+
+msgid "ACCMNU_TITLE"
+msgstr "접근성 설정"

@@ -12,7 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: ptg\n"
 
 msgid "HUSTR_1"
 msgstr "Nível 1: Entrada"
