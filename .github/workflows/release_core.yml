@@ -1,0 +1,93 @@
+on:
+  workflow_call:
+    inputs:
+      title:
+        required: true
+        type: string
+      run-id:
+        required: true
+        type: string
+      run-url:
+        required: true
+        type: string
+      branch:
+        required: true
+        type: string
+      tag-name:
+        required: true
+        type: string
+      message:
+        required: true
+        type: string
+
+jobs:
+  upload_release:
+    name: Upload Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.branch }}
+          fetch-depth: 0
+          sparse-checkout: |
+            README.md
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v8
+        with:
+          run-id: ${{ inputs.run-id }}
+          github-token: ${{ github.token }}
+          path: artifacts
+          pattern: "* Release"
+
+      - name: Rename
+        shell: bash
+        run: |
+          mkdir -p release
+
+          function move() {
+            [ "$#" == 2 ] || return;
+            dir="$(dirname "$1")";
+            [ -d "$dir" ] && [ -f "$1" ] && mv "$1" "$2";
+          }
+
+          move "artifacts/Windows Release"/*.zip release/Windows-UZDoom-${{ inputs.title }}.zip
+          move "artifacts/MacOS Release"/*.zip release/MacOS-UZDoom-${{ inputs.title }}.zip
+          move "artifacts/Linux Release"/*.AppImage release/Linux-UZDoom-${{ inputs.title }}.AppImage
+
+      - id: tag
+        name: Update Tag
+        run: |
+          echo "describe=$(git describe --tags --exclude x-*)" >> "$GITHUB_OUTPUT"
+          {
+            echo 'message<<EOF'
+            git log --format=%B -n 1
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+
+          git tag -d ${{ inputs.tag-name }} || true
+          git push origin :refs/tags/${{ inputs.tag-name }} || true
+          git tag ${{ inputs.tag-name }}
+          git push origin ${{ inputs.tag-name }}
+
+      - name: Upload
+        uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
+        with:
+          name: UZDoom ${{ inputs.title }}
+          tag_name: ${{ inputs.tag-name }}
+          draft: false
+          prerelease: true
+          make_latest: false
+          generate_release_notes: false
+          files: release/**
+          body: |
+            These builds are automatically generated based on the latest commit to `${{ inputs.branch }}`.
+
+            ${{ inputs.message }}
+
+            **Version:** `${{ steps.tag.outputs.describe }}`
+            **Message:** ${{ steps.tag.outputs.message }}
+            **Workflow:** [Logs](${{ inputs.run-url }}) - [Artifacts](https://nightly.link/?url=${{ inputs.run-url }})
