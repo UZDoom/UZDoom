@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-24 23:09+0000\n"
+"PO-Revision-Date: 2026-03-26 08:10+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/common/"
 "id/>\n"
@@ -1793,20 +1793,19 @@ msgstr "Tumpuk pesan berulang"
 msgid "NOTES_FAIL"
 msgstr "Tidak dapat membaca catatan rilis"
 
-msgid "NOTES_VERSION"
-msgstr "versi"
-
 msgid "NOTES_UNKNOWN"
 msgstr "Tidak diketahui"
 
+#, fuzzy
 msgid "NOTES_RELEASED"
 msgstr "dirilis"
 
 msgid "NOTES_EMPTY"
 msgstr "Tidak ada deskripsi yang diberikan."
 
+#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Untuk detail lebih lanjut lihat:"
+msgstr "Untuk detail lebih lanjut lihat: %s"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "Tampilkan halaman ini setelah pembaruan"

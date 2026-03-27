@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-18 03:02+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-03-26 10:12+0000\n"
+"Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/hu/>\n"
 "Language: hu\n"
@@ -153,10 +153,9 @@ msgstr ""
 "Nézd, haver. Ha most kilépsz,\n"
 "feladod a pontjaidat!"
 
-#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
-"Menj csak. amikor visszajössz \n"
+"Menj csak. Amikor visszajössz,\n"
 "várni foglak egy ütővel."
 
 msgid "QUITMSG14"
@@ -5339,18 +5338,29 @@ msgstr ""
 msgid "OPTVAL_SBSLETTERBOX"
 msgstr "Egymás melletti, letterbox-olt"
 
-#, fuzzy
 msgid "OPTVAL_SMOOTH"
 msgstr "Simítás"
 
-#, fuzzy
 msgid "TAG_MACIL"
 msgstr "Macil"
 
-#, fuzzy
 msgid "TAG_MAULER"
 msgstr "Marcangoló"
 
-#, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Gránátvető"
+
+msgid "LANG_NATIVE"
+msgstr "English (US)"
+
+msgid "LANG_ENG"
+msgstr "Angol (Egyesült Államok)"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "Böngészés a WAD-ok között"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Böngészés a beállítások között"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "Böngészés az IWAD mappában"

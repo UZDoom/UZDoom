@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-18 03:02+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-03-26 16:16+0000\n"
+"Last-Translator: Pathos <michalkar102@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/pl/>\n"
 "Language: pl\n"
@@ -154,10 +154,9 @@ msgstr ""
 "Popatrz, stary. Odejdziesz teraz\n"
 "i stracisz swoją liczbę ofiar!"
 
-#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
-"Tylko odejdź. Kiedy wrócisz,\n"
+"Tylko wyjdź. Kiedy wrócisz,\n"
 "będę czekał z kijem."
 
 msgid "QUITMSG14"
@@ -2763,7 +2762,7 @@ msgid "CHUSTR_E1M3"
 msgstr "E1M3: Laboratorium Eksperymentalne"
 
 msgid "CHUSTR_E1M4"
-msgstr ""
+msgstr "E1M4: Drzewozbiór"
 
 msgid "CHUSTR_E1M5"
 msgstr "E1M5: Jaskinie Bazoik"

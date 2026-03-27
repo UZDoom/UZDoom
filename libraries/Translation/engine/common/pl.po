@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-15 00:09+0000\n"
+"PO-Revision-Date: 2026-03-26 08:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/common/pl/>"
 "\n"
@@ -1785,8 +1785,9 @@ msgstr "Nieznane"
 msgid "NOTES_EMPTY"
 msgstr "Brak podanego opisu."
 
+#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Po więcej szczegółów zobacz:"
+msgstr "Po więcej szczegółów zobacz: %s"
 
 msgid "PICKER_SHOWNOTES"
 msgstr "Pokaż listę zmian"
@@ -1794,6 +1795,7 @@ msgstr "Pokaż listę zmian"
 msgid "PICKER_TAB_RELEASE"
 msgstr "Lista Zmian"
 
+#, fuzzy
 msgid "NOTES_RELEASED"
 msgstr "Wydane"
 
@@ -1802,9 +1804,6 @@ msgstr "Pokaż tę stronę po aktualizacji"
 
 msgid "PICKER_TAB_ABOUT"
 msgstr "O"
-
-msgid "NOTES_VERSION"
-msgstr "wersja"
 
 msgid "NOTES_FAIL"
 msgstr "Błąd wczytywania listy zmian"

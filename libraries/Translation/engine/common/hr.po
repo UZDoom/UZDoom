@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-16 23:10+0000\n"
+"PO-Revision-Date: 2026-03-26 08:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/common/"
 "hr/>\n"
@@ -1783,20 +1783,19 @@ msgstr "Analogni strejf trk"
 msgid "NOTES_FAIL"
 msgstr "Nije moguće obraditi bilješke o izdanju"
 
-msgid "NOTES_VERSION"
-msgstr "verzija"
-
 msgid "NOTES_UNKNOWN"
 msgstr "Nepoznato"
 
+#, fuzzy
 msgid "NOTES_RELEASED"
 msgstr "objavljeno"
 
 msgid "NOTES_EMPTY"
 msgstr "Nije naveden opis."
 
+#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Za više detalja pogledajte:"
+msgstr "Za više detalja pogledajte: %s"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "Prikažite ovu stranicu nakon ažuriranja"

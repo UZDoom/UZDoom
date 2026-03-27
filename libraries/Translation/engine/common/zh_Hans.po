@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-15 03:49+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2026-03-26 12:09+0000\n"
+"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -121,7 +121,7 @@ msgid "OPTMNU_AUTOMAP"
 msgstr "地图选项"
 
 msgid "OPTMNU_HUD"
-msgstr "界面选项"
+msgstr "HUD选项"
 
 msgid "OPTMNU_MISCELLANEOUS"
 msgstr "其它选项"
@@ -1772,20 +1772,17 @@ msgstr "模拟平移跑"
 msgid "NOTES_FAIL"
 msgstr "无法匹配发布说明"
 
-msgid "NOTES_VERSION"
-msgstr "版本"
-
 msgid "NOTES_UNKNOWN"
 msgstr "未知"
 
 msgid "NOTES_RELEASED"
-msgstr "已发布"
+msgstr "%s 版本 %s，发布于 %s"
 
 msgid "NOTES_EMPTY"
 msgstr "未提供描述。"
 
 msgid "NOTES_DETAILS"
-msgstr "更多细节查看："
+msgstr "更多细节请查看：%s"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "更新后展示此页"

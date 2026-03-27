@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-15 00:10+0000\n"
+"PO-Revision-Date: 2026-03-26 08:10+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/common/nl/>"
 "\n"
@@ -1812,20 +1812,19 @@ msgstr "Analoge strafe run"
 msgid "NOTES_FAIL"
 msgstr "Kan uitgaveopmerkingen niet parseren"
 
-msgid "NOTES_VERSION"
-msgstr "versie"
-
 msgid "NOTES_UNKNOWN"
 msgstr "Onbekend"
 
+#, fuzzy
 msgid "NOTES_RELEASED"
 msgstr "uitgebracht"
 
 msgid "NOTES_EMPTY"
 msgstr "Geen beschrijving beschikbaar."
 
+#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Voor meer informatie zie:"
+msgstr "Voor meer informatie zie: %s"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "Deze pagina weergeven na updates"

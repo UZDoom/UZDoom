@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-14 22:34+0000\n"
+"PO-Revision-Date: 2026-03-26 08:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/common/"
 "uk/>\n"
@@ -1809,20 +1809,19 @@ msgstr "Об'єднати повторювані повідомлення"
 msgid "NOTES_FAIL"
 msgstr "Не вдалося проаналізувати нотатки до випуску"
 
-msgid "NOTES_VERSION"
-msgstr "версія"
-
 msgid "NOTES_UNKNOWN"
 msgstr "Невідомо"
 
+#, fuzzy
 msgid "NOTES_RELEASED"
 msgstr "випущено"
 
 msgid "NOTES_EMPTY"
 msgstr "Опис не надано."
 
+#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Для отримання додаткової інформації див.:"
+msgstr "Для отримання додаткової інформації див.: %s"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "Показувати цю сторінку після оновлень"

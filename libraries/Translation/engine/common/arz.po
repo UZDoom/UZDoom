@@ -1735,9 +1735,6 @@ msgstr ""
 msgid "NOTES_FAIL"
 msgstr ""
 
-msgid "NOTES_VERSION"
-msgstr ""
-
 msgid "NOTES_UNKNOWN"
 msgstr ""
 

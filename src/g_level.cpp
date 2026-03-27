@@ -1866,7 +1866,7 @@ int FLevelLocals::FinishTravel()
 	// Some ZScript will be called here so we have to do this last.
 	for (size_t i = 0u; i < MAXPLAYERS; ++i)
 	{
-		if (PlayerInGame(i) && !(Players[i]->mo->ObjectFlags & OF_EuthanizeMe) && toCallBack.Find(Players[i]->mo) < toCallBack.Size())
+		if (PlayerInGame(i) && Players[i]->mo != nullptr && !(Players[i]->mo->ObjectFlags & OF_EuthanizeMe) && toCallBack.Find(Players[i]->mo) < toCallBack.Size())
 		{
 			Players[i]->LastSafePos.Update(*Players[i]->mo, true);
 			Players[i]->mo->SetState(Players[i]->mo->SpawnState);
