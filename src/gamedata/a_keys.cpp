@@ -113,6 +113,10 @@ struct Lock
 
 	bool check(AActor * owner)
 	{
+		// Check if it's a Voodoo doll, if so, grabs the actual player.
+		if (owner->player != nullptr && owner->player->mo != nullptr && owner->player->mo != owner)
+			owner = owner->player->mo;
+
 		// An empty key list means that any key will do
 		if (!keylist.Size())
 		{
