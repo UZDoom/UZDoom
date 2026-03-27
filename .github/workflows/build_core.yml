@@ -117,7 +117,7 @@ jobs:
     - name: Build
       id: build
       run: |
-        export GIT_DESCRIBE="$(git describe --tags --exclude nightly)"
+        export GIT_DESCRIBE="$(git describe --tags --exclude x-*)"
         echo "This will be $GIT_DESCRIBE"
         echo "version=$GIT_DESCRIBE" >> "$GITHUB_OUTPUT"
         cmake --build build --config ${{ inputs.build_type }}

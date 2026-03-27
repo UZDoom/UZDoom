@@ -42,7 +42,7 @@ function(query_repo_info)
 	elseif(is_git EQUAL "0")
 		# from git
 		execute_process(
-			COMMAND git describe --tags --dirty=-m --exclude nightly
+			COMMAND git describe --tags --dirty=-m --exclude x-*
 			RESULT_VARIABLE Error
 			OUTPUT_VARIABLE Temp
 			ERROR_QUIET
