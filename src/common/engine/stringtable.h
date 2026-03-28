@@ -54,10 +54,10 @@ struct StringMacro
 struct LangID
 {
 	FName name;
-	uint32_t original;   // full eitf langtag
 	uint32_t normalized; // all the bits we support (aa-bbbb-cc) a:lang,b:script,c:region
 	uint32_t script;     // only the language and script (aa-bbbb)
 	uint32_t language;   // just the language (aa)
+	uint32_t fallback;   // alternate base language
 };
 
 class FStringTable
@@ -65,9 +65,9 @@ class FStringTable
 public:
 	enum : uint32_t
 	{
-		default_table = CalcCRC32("**"),
+		default_table = CalcCRC32("en-*-*"),
 		global_table = CalcCRC32("*"),
-		override_table = CalcCRC32("***")
+		override_table = CalcCRC32("**")
 	};
 
 	using LangMap = TMap<uint32_t, StringMap>;

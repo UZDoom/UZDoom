@@ -22,6 +22,8 @@
 **
 */
 
+#include <algorithm>
+
 #include "basics.h"
 #include "c_cvars.h"
 #include "filesystem.h"
@@ -69,76 +71,108 @@ FString FStringTable::GetSystemLocale()
 //
 //==========================================================================
 
-inline void RemapLegacyLanguages(FName &name, FString &lang)
+inline bool RemapLegacyLanguages(FName &name, FString &lang)
 {
 	FName oldname = name;
 
-	constexpr bool esmx = false; // treat all of these as es_MX, or use more country-specific codes (which I guessed)
-	constexpr bool engb = false; // treat all of these as en_GB, or use more country-specific codes (which I guessed)
 	switch (name.GetIndex())
 	{
-		case NAME_Default:  name = NAME_LANG_EN_US;   break;
-		case NAME_LANG_by:  name = NAME_LANG_BE;      break;
-		case NAME_LANG_nb:  name = NAME_LANG_NB_NO;   break;
-		case NAME_LANG_no:  name = NAME_LANG_NB_NO;   break;
-		case NAME_LANG_pt:  name = NAME_LANG_PT_BR;   break;
-		case NAME_LANG_ptg: name = NAME_LANG_PT;      break;
-
-		case NAME_LANG_ena: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_AU;       break;
-		case NAME_LANG_enb: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_BZ;       break;
-		case NAME_LANG_enc: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_CA;       break;
-		case NAME_LANG_eng: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_GB;       break;
-		case NAME_LANG_eni: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_IN;       break;
-		case NAME_LANG_enj: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_JM;       break;
-		case NAME_LANG_enl: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_IE;       break;
-		case NAME_LANG_ens: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_ZA;       break;
-		case NAME_LANG_ent: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_TT;       break;
-		case NAME_LANG_enw: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_GB_WALES; break;
-		case NAME_LANG_enz: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_NZ;       break;
-
-		case NAME_LANG_esa: name = esmx? NAME_LANG_ES_AR: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esb: name = esmx? NAME_LANG_ES_BO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esc: name = esmx? NAME_LANG_ES_CO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esd: name = esmx? NAME_LANG_ES_DO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_ese: name = esmx? NAME_LANG_ES_EC: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esf: name = esmx? NAME_LANG_ES_PH: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esg: name = esmx? NAME_LANG_ES_GT: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esh: name = esmx? NAME_LANG_ES_HN: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esi: name = esmx? NAME_LANG_ES:    NAME_LANG_ES_MX; break;
-		case NAME_LANG_esl: name = esmx? NAME_LANG_ES_CL: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esm: name = esmx? NAME_LANG_ES_MX: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esn: name = esmx? NAME_LANG_ES:    NAME_LANG_ES_MX; break;
-		case NAME_LANG_eso: name = esmx? NAME_LANG_ES_BO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esr: name = esmx? NAME_LANG_ES_CR: NAME_LANG_ES_MX; break;
-		case NAME_LANG_ess: name = esmx? NAME_LANG_ES_SV: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esu: name = esmx? NAME_LANG_ES_US: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esv: name = esmx? NAME_LANG_ES_VE: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esy: name = esmx? NAME_LANG_ES_PY: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esz: name = esmx? NAME_LANG_ES_BZ: NAME_LANG_ES_MX; break;
-
-		case NAME_LANG_jp:
-		case NAME_LANG_JA_JP: name = NAME_LANG_JA; break;
-
-		case NAME_LANG_KO_KP:
-		case NAME_LANG_KO_KR: name = NAME_LANG_KO; break;
-
-		case NAME_LANG_chs:
-		case NAME_LANG_zho:
-		case NAME_LANG_ZH_CN:
-		case NAME_LANG_ZH_SG: name = NAME_LANG_ZH_HANS; break;
-		case NAME_LANG_chi:
-		case NAME_LANG_cht:
-		case NAME_LANG_ZH_HK:
-		case NAME_LANG_ZH_MO:
-		case NAME_LANG_ZH_TW: name = NAME_LANG_ZH_HANT; break;
+		case NAME_LANG_by:  name = NAME_LANG_BE;       break;
+		case NAME_LANG_chi: name = NAME_LANG_ZH_HANT;  break;
+		case NAME_LANG_chs: name = NAME_LANG_ZH_HANS;  break;
+		case NAME_LANG_cht: name = NAME_LANG_ZH_HANT;  break;
+		case NAME_LANG_ena: name = NAME_LANG_EN_AU;    break;
+		case NAME_LANG_enb: name = NAME_LANG_EN_BZ;    break;
+		case NAME_LANG_enc: name = NAME_LANG_EN_CA;    break;
+		case NAME_LANG_eng: name = NAME_LANG_EN_GB;    break;
+		case NAME_LANG_eni: name = NAME_LANG_EN_IN;    break;
+		case NAME_LANG_enj: name = NAME_LANG_EN_JM;    break;
+		case NAME_LANG_enl: name = NAME_LANG_EN_IE;    break;
+		case NAME_LANG_ens: name = NAME_LANG_EN_ZA;    break;
+		case NAME_LANG_ent: name = NAME_LANG_EN_TT;    break;
+		case NAME_LANG_enw: name = NAME_LANG_EN_WALES; break; // TODO: support Unicode Locale Extensions
+		case NAME_LANG_enz: name = NAME_LANG_EN_NZ;    break;
+		case NAME_LANG_esa: name = NAME_LANG_ES_AR;    break;
+		case NAME_LANG_esb: name = NAME_LANG_ES_BO;    break;
+		case NAME_LANG_esc: name = NAME_LANG_ES_CO;    break;
+		case NAME_LANG_esd: name = NAME_LANG_ES_DO;    break;
+		case NAME_LANG_ese: name = NAME_LANG_ES_EC;    break;
+		case NAME_LANG_esf: name = NAME_LANG_ES_PH;    break;
+		case NAME_LANG_esg: name = NAME_LANG_ES_GT;    break;
+		case NAME_LANG_esh: name = NAME_LANG_ES_HN;    break;
+		case NAME_LANG_esi: name = NAME_LANG_ES;       break;
+		case NAME_LANG_esl: name = NAME_LANG_ES_CL;    break;
+		case NAME_LANG_esm: name = NAME_LANG_ES_MX;    break;
+		case NAME_LANG_esn: name = NAME_LANG_ES;       break;
+		case NAME_LANG_eso: name = NAME_LANG_ES_BO;    break;
+		case NAME_LANG_esr: name = NAME_LANG_ES_CR;    break;
+		case NAME_LANG_ess: name = NAME_LANG_ES_SV;    break;
+		case NAME_LANG_esu: name = NAME_LANG_ES_US;    break;
+		case NAME_LANG_esv: name = NAME_LANG_ES_VE;    break;
+		case NAME_LANG_esy: name = NAME_LANG_ES_PY;    break;
+		case NAME_LANG_esz: name = NAME_LANG_ES_BZ;    break;
+		case NAME_LANG_jp:  name = NAME_LANG_JA;       break;
+		case NAME_LANG_nb:  name = NAME_LANG_NB_NO;    break;
+		case NAME_LANG_no:  name = NAME_LANG_NB_NO;    break;
+		case NAME_LANG_ptg: name = NAME_LANG_PT;       break;
+		case NAME_LANG_zho: name = NAME_LANG_ZH_HANS;  break;
 	}
 
-	if (name != oldname) lang = name.GetChars();
+	bool updated = name != oldname;
+	if (updated) lang = name.GetChars();
+	return updated;
+}
+
+//==========================================================================
+//
+// Map languages to other languages
+//
+// Used too get the proper fallback of a language, if the region inherits
+// from another region (or script) instead the base ISO 639 language code
+// of the tag
+//
+//==========================================================================
+
+inline FName GetFallback(FName name)
+{
+	// `K` must always be a normalized IETF BCP 47 triplet (lang-script-region). Use * for any omitted section
+	// `aa-BB` -> `aa-*-BB`, `aa-Cccc` -> `aa-Cccc-*`
+	static struct { FName K; FName V; } mappings[] = {
+		{"en-*-AU", "en-GB"},
+		{"en-*-CA", "en-GB"},
+		{"en-*-SD", "en-GB"}, // TODO: support Subdivision
+		{"zh-*-CN", "zh-Hans-CN"},
+		{"zh-*-HK", "zh-Hans-HK"},
+		{"zh-*-MO", "zh-Hant-MO"},
+		{"zh-*-SG", "zh-Hans-SG"},
+		{"zh-*-TW", "zh-Hant-TW"},
+	};
+
+	constexpr size_t count = sizeof(mappings)/sizeof(mappings[0]);
+	static bool sorted = false;
+	if (!sorted)
+	{
+		std::sort(mappings, mappings+count, [](auto A, auto B) { return A.K < B.K; });
+		sorted = true;
+	}
+
+	int lo = 0, hi = count - 1, mid;
+	while (lo <= hi)
+	{
+		mid = lo + (hi - lo) / 2;
+		if (mappings[mid].K == name) return mappings[mid].V;
+		if (mappings[mid].K < name) lo = mid + 1;
+		else hi = mid - 1;
+	}
+
+	return name;
 }
 
 //==========================================================================
 //
 // Take ietf language tag, and extract all of the relevant bits
+//
+// TODO: support extensions (see: English from Wales)
 //
 //==========================================================================
 
@@ -206,17 +240,15 @@ LangID FStringTable::GetID(FString lang)
 
 	if (debug_languages) diagnostics.AppendFormat("lang: %s", lang.GetChars());
 
-	static FName systemlocale = NAME_None;
-
 	if (name == NAME_Auto)
 	{
-		systemlocale = name = lang = GetSystemLocale();
+		name = lang = GetSystemLocale();
+		if (debug_languages) diagnostics.AppendFormat("(%s)", lang.GetChars());
 	}
 
+	if (RemapLegacyLanguages(name, lang) && debug_languages)
 	{
-		auto prev = name;
-		RemapLegacyLanguages(name, lang);
-		if (debug_languages && prev != name) diagnostics.AppendFormat(", mapped: %s", lang.GetChars());
+		diagnostics.AppendFormat(", mapped: %s", lang.GetChars());
 	}
 
 	auto idPtr = langMap.CheckKey(name);
@@ -233,12 +265,21 @@ LangID FStringTable::GetID(FString lang)
 	auto script     = _lang + "-" + _script + "-*";
 	auto language   = _lang + "-*-*";
 
+	auto fallback_name = GetFallback(name);
+	auto fallback = normalized;
+	if (fallback_name != name)
+	{
+		fallback = fallback_name.GetChars();
+		ExtractComponents(fallback, _lang, _script, _region);
+		fallback = _lang + "-" + _script + "-" + _region;
+	}
+
 	LangID id = {
 		name,
-		CalcCRC32(lang.GetChars()),
 		CalcCRC32(normalized.GetChars()),
 		CalcCRC32(script.GetChars()),
-		CalcCRC32(language.GetChars())
+		CalcCRC32(language.GetChars()),
+		CalcCRC32(fallback.GetChars()),
 	};
 	auto ptr = &langMap.Insert(name, id);
 	langRevMap.Insert(ptr->normalized, ptr);
@@ -252,6 +293,9 @@ LangID FStringTable::GetID(FString lang)
 			ptr->normalized
 		);
 	}
+
+	if (ptr->normalized != ptr->fallback && debug_languages)
+		diagnostics.AppendFormat(" '%s'?", fallback.GetChars());
 
 	if (ptr->normalized != ptr->script)
 	{
@@ -457,13 +501,10 @@ bool FStringTable::ParseLanguageCSV(int filenum, const char* buffer, size_t size
 				{
 					if (lang.CompareNoCase("default") == 0)
 					{
-						langrows.Push(std::make_pair(column, default_table));
+						lang = "en-US";
 						hasDefaultEntry = true;
 					}
-					else
-					{
-						langrows.Push(std::make_pair(column, GetID(lang).normalized));
-					}
+					langrows.Push(std::make_pair(column, GetID(lang).normalized));
 				}
 			}
 		}
@@ -726,6 +767,16 @@ void FStringTable::UpdateLanguage(const char *language)
 	checkone('R', LanguageID.normalized);
 	checkone('S', LanguageID.script);
 	checkone('L', LanguageID.language);
+	if (LanguageID.fallback != LanguageID.normalized)
+	{
+		auto fallback = langRevMap.CheckKey(LanguageID.fallback);
+		if (fallback)
+		{
+			checkone('r', (*fallback)->normalized);
+			checkone('s', (*fallback)->script);
+			checkone('l', (*fallback)->language);
+		}
+	}
 	checkone('D', default_table);
 	if (debug_languages) Printf("Strings %s:%s\n", language, diagnostics.GetChars());
 }
