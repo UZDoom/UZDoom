@@ -2546,6 +2546,7 @@ OptionMenu ModReplayerOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	Option "$ACCMNU_TOOLTIP_SCALE", "m_tooltip_small", "OffOn"
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
+	Submenu "$HUDMNU_FONTOPTIONS",			"FontOptions"
 	
 	StaticText ""
 	StaticText "$ACCMNU_LIGHT"
@@ -2553,9 +2554,6 @@ OptionMenu ModReplayerOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_EXTRA"
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
-
-	StaticText ""
-	Submenu "$HUDMNU_FONTOPTIONS",			"FontOptions"
 	
 	StaticText ""
 	SafeCommand "$OPTMNU_DEFAULTS", "acc_reset2defaults"
