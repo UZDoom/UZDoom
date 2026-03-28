@@ -253,21 +253,27 @@ LangID FStringTable::GetID(FString lang)
 		);
 	}
 
-	auto fallback = langRevMap.CheckKey(ptr->script);
-	if (debug_languages) diagnostics.AppendFormat(", %s", script.GetChars());
-	if (!fallback || ((*fallback)->script != (*fallback)->normalized))
+	if (ptr->normalized != ptr->script)
 	{
-		auto ptr = &langMap.Insert(script, id);
-		langRevMap.Insert(ptr->script, ptr);
-		if (debug_languages) diagnostics.AppendFormat(" (%c-%x)", ptr->script == ptr->language? 'L': 'S', ptr->script);
+		auto fallback = langRevMap.CheckKey(ptr->script);
+		if (debug_languages) diagnostics.AppendFormat(", %s", script.GetChars());
+		if (!fallback)
+		{
+			auto ptr = &langMap.Insert(script, id);
+			langRevMap.Insert(ptr->script, ptr);
+			diagnostics.AppendFormat(" (%c-%x)", ptr->script == ptr->language? 'L': 'S', ptr->script);
+		}
 	}
-	fallback = langRevMap.CheckKey(ptr->language);
-	if (debug_languages) diagnostics.AppendFormat(", %s", language.GetChars());
-	if (!fallback || ((*fallback)->script != (*fallback)->normalized))
+	if (ptr->normalized != ptr->language)
 	{
-		auto ptr = &langMap.Insert(language, id);
-		langRevMap.Insert(ptr->language, ptr);
-		if (debug_languages) diagnostics.AppendFormat(" (L-%x)", ptr->language);
+		auto fallback = langRevMap.CheckKey(ptr->language);
+		if (debug_languages) diagnostics.AppendFormat(", %s", language.GetChars());
+		if (!fallback)
+		{
+			auto ptr = &langMap.Insert(language, id);
+			langRevMap.Insert(ptr->language, ptr);
+			if (debug_languages) diagnostics.AppendFormat(" (L-%x)", ptr->language);
+		}
 	}
 
 	if (debug_languages) Printf("%s\n", diagnostics.GetChars());
@@ -575,7 +581,7 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 				// such a lump.
 				if (!sc.isText())
 				{
-					if (!errordone) Printf("Skipping binary 'LANGUAGE' lump.\n"); 
+					if (!errordone) Printf("Skipping binary 'LANGUAGE' lump.\n");
 					errordone = true;
 					return;
 				}
@@ -635,7 +641,7 @@ void FStringTable::DeleteString(uint32_t langid, FName label)
 //==========================================================================
 //
 // This deletes all older entries for a given label. This gets called
-// when a string in the default table gets updated. 
+// when a string in the default table gets updated.
 //
 //==========================================================================
 
@@ -939,5 +945,3 @@ const char *StringMap::MatchString (const char *string) const
 }
 
 FStringTable GStrings;
-
-
