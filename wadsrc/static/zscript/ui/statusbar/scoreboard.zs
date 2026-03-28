@@ -131,7 +131,7 @@ extend class BaseStatusBar
 	version("4.15.1") virtual void InitScoreboard()
 	{
 		ScoreboardFont = Font.GetSmallTextFont(NewSmallFont);
-		BigScoreboardFont = BigFont;
+		BigScoreboardFont = Font.GetBigTextFont(BigFont);
 	}
 
     version("4.15.1") virtual bool DrawScoreboard(double ticFrac)
