@@ -75,6 +75,7 @@ EXTERN_CVAR (Int, wipetype)
 EXTERN_CVAR (Bool, i_pauseinbackground)
 EXTERN_CVAR (Bool, i_soundinbackground)
 EXTERN_CVAR (Bool, i_is_new_release)
+EXTERN_CVAR (String, language)
 
 FARG(config, "Configuration", "Specifies an alternative configuration file to use.", "configfile",
 	"Causes " GAMENAME " to use an alternative configuration file. If configfile does not exist,"
@@ -708,6 +709,10 @@ void FGameConfigFile::DoGlobalSetup ()
 				// Reset brightness related settings, as the values all mean something different now
 				AddCommandString("vid_reset2defaults");
 				bResetBindFlags |= V230Gamma;
+			}
+			if (last < 231) // UZDoom 5.0
+			{
+				language = "auto";
 			}
 		}
 	}
