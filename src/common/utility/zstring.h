@@ -365,6 +365,8 @@ public:
 	void Split(TArray<FString>& tokens, const FString &delimiter, EmptyTokenType keepEmpty = TOK_KEEPEMPTY) const;
 	void Split(TArray<FString>& tokens, const char *delimiter, EmptyTokenType keepEmpty = TOK_KEEPEMPTY) const;
 
+	static FString RemoveColorTags(const FString &srcString);
+
 protected:
 	const FStringData *Data() const { return (FStringData *)Chars - 1; }
 	FStringData *Data() { return (FStringData *)Chars - 1; }
@@ -375,7 +377,8 @@ protected:
 		Chars = &NullString.Nothing[0];
 	}
 
-	void AttachToOther (const FString &other);
+	void    AttachToOther(const FString &other);
+	
 	void AllocBuffer (size_t len);
 	void ReallocBuffer (size_t newlen);
 

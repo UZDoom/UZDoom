@@ -2148,6 +2148,129 @@ OptionMenu FontOptions protected
 	Title "$HUDMNU_FONTOPTIONS"
 	Option "$FONTMNU_LOG",					"log_vgafont", "YesNo"
 	Option "$FONTMNU_DLG",					"dlg_vgafont", "YesNo"
+	StaticText ""
+	Option "$FONTMNU_SUPERSAMPLE_SCALE",	"font_supersamplescale", "FontSuperSampleOptions"
+	Tooltip "$FONTMNU_SUPERSAMPLE_SCALE_TOOLTIP"
+	StaticText ""
+	StaticText "$FONTMNU_USER_FONT_CHOICES"
+	Option "$FONTMNU_SMALL_TEXT_FONT",				"fontchoice_smalltext", "DynamicFontOptions"
+	Tooltip "$FONTMNU_SMALL_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_TITLE_FONT",				"fontchoice_title", "DynamicFontOptions"
+	Tooltip "$FONTMNU_TITLE_FONT_TOOLTIP"
+	Option "$FONTMNU_DESCRIPTION_FONT",				"fontchoice_description", "DynamicFontOptions"
+	Tooltip "$FONTMNU_DESCRIPTION_FONT_TOOLTIP"
+	Option "$FONTMNU_CONSOLE_FONT",				"fontchoice_console", "ConsoleFontOptions"
+	Tooltip "$FONTMNU_CONSOLE_FONT_TOOLTIP"
+	Option "$FONTMNU_BIG_TEXT_FONT",				"fontchoice_bigtext", "DynamicFontOptions"
+	Tooltip "$FONTMNU_BIG_TEXT_FONT_TOOLTIP"
+	StaticText ""
+	Option "$FONTMNU_SMALL_TEXT_FONT_JP",				"fontchoice_smalltextJP", "DynamicFontOptionsJP"
+	Tooltip "$FONTMNU_SMALL_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_BIG_TEXT_FONT_JP",				"fontchoice_bigtextJP", "DynamicFontOptionsJP"
+	Tooltip "$FONTMNU_BIG_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_TITLE_FONT_JP",				"fontchoice_titleJP", "DynamicFontOptionsJP"
+	Tooltip "$FONTMNU_TITLE_FONT_TOOLTIP"
+	Option "$FONTMNU_DESCRIPTION_FONT_JP",				"fontchoice_descriptionJP", "DynamicFontOptionsJP"
+	Tooltip "$FONTMNU_DESCRIPTION_FONT_TOOLTIP"
+	StaticText ""
+	Option "$FONTMNU_SMALL_TEXT_FONT_KO",				"fontchoice_smalltextKO", "DynamicFontOptionsKO"
+	Tooltip "$FONTMNU_SMALL_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_BIG_TEXT_FONT_KO",				"fontchoice_bigtextKO", "DynamicFontOptionsKO"
+	Tooltip "$FONTMNU_BIG_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_TITLE_FONT_KO",				"fontchoice_titleKO", "DynamicFontOptionsKO"
+	Tooltip "$FONTMNU_TITLE_FONT_TOOLTIP"
+	Option "$FONTMNU_DESCRIPTION_FONT_KO",				"fontchoice_descriptionKO", "DynamicFontOptionsKO"
+	Tooltip "$FONTMNU_DESCRIPTION_FONT_TOOLTIP"
+	StaticText ""
+	Option "$FONTMNU_SMALL_TEXT_FONT_CYR",				"fontchoice_smalltextCYR", "DynamicFontOptionsCYR"
+	Tooltip "$FONTMNU_SMALL_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_BIG_TEXT_FONT_CYR",				"fontchoice_bigtextCYR", "DynamicFontOptionsCYR"
+	Tooltip "$FONTMNU_BIG_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_TITLE_FONT_CYR",				"fontchoice_titleCYR", "DynamicFontOptionsCYR"
+	Tooltip "$FONTMNU_TITLE_FONT_TOOLTIP"
+	Option "$FONTMNU_DESCRIPTION_FONT_CYR",				"fontchoice_descriptionCYR", "DynamicFontOptionsCYR"
+	Tooltip "$FONTMNU_DESCRIPTION_FONT_TOOLTIP"
+	StaticText ""
+	StaticText "$FONTMNU_OVERRIDES"
+	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE",			"fontoverride_NewSmallFont", "DynamicFontOptions"
+	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
+	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE_JP",		"fontoverride_NewSmallFontJP", "DynamicFontOptionsJP"
+	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
+	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE_KO",		"fontoverride_NewSmallFontKR", "DynamicFontOptionsKO"
+	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
+	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE_CYR",		"fontoverride_NewSmallFontCYR", "DynamicFontOptionsCYR"
+	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
+	StaticText ""
+	StaticText "$FONTMNU_FALLBACKS"
+	Option "$FONTMNU_FALLBACK",			"fontoverride_Fallback", "DynamicFontFallbackOptions"
+	Option "$FONTMNU_FALLBACK_JP",			"fontoverride_FallbackJP", "DynamicFontFallbackOptionsJP"
+	Option "$FONTMNU_FALLBACK_KO",			"fontoverride_FallbackKR", "DynamicFontFallbackOptionsKR"
+	Option "$FONTMNU_FALLBACK_CYR",			"fontoverride_FallbackCYR", "DynamicFontFallbackOptionsCYR"
+}
+
+OptionString DynamicFontOptions
+{
+	"FO_DEFAULT", "Default"
+	"PLEXSANS", "IBM Plex Sans"
+	"PLEXSERI", "IBM Plex Serif"
+	"HACK-BOL", "Hack Bold"
+	"LEXICAUL", "Lexica Ultralegible Bold"
+}
+
+OptionString DynamicFontFallbackOptions
+{
+	"IBMPLEXS", "IBM Plex Sans"
+	"HACK-BOL", "Hack Bold"
+}
+
+OptionString DynamicFontFallbackOptionsJP
+{
+	"IBMPLEXJ", "IBM Plex Sans JP"
+	"KOSUGIMA",	"Kosugi Maru"
+}
+
+OptionString DynamicFontFallbackOptionsKR
+{
+	"IBMPLEXK", "IBM Plex Sans KR"
+}
+
+OptionString DynamicFontFallbackOptionsCYR
+{
+	"HACK-BOL", "Hack Bold"
+}
+
+//specific language fallbacks are defined here since you 100% need a font that actually has the required glyphs.
+OptionString DynamicFontOptionsJP
+{
+	"FO_DEFAULT", "Don't override"
+	"IBMPLEXJ", "IBM Plex Sans JP"
+	"KOSUGIMA",	"Kosugi Maru"
+}
+
+OptionString DynamicFontOptionsKO
+{
+	"FO_DEFAULT", "Don't override"
+	"IBMPLEXK", "IBM Plex Sans KR"
+}
+
+OptionString DynamicFontOptionsCYR
+{
+	"FO_DEFAULT", "Don't override"
+	"HACK-BOL", "Hack Bold"
+}
+
+OptionString ConsoleFontOptions
+{
+	"FO_DEFAULT", "Don't override"
+	"HACK-BOL", "Hack Bold"
+}
+
+OptionValue  FontSuperSampleOptions
+{
+	1, "1x"
+	2, "2x"
+	3, "3x"
+	4, "4x"
 }
 
 //-------------------------------------------------------------------------------------------
@@ -2922,6 +3045,7 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	Option "$ACCMNU_TOOLTIP_SCALE", "m_tooltip_small", "OffOn"
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
+	Submenu "$HUDMNU_FONTOPTIONS",			"FontOptions"
 
 	StaticText ""
 	StaticText "$ACCMNU_LIGHT"

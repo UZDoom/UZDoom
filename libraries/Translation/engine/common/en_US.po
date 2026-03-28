@@ -2169,3 +2169,111 @@ msgstr "About"
 #, fuzzy
 msgid "PICKER_TAB_RELEASE"
 msgstr "Release Notes"
+
+msgid "FONTMNU_SUPERSAMPLE_SCALE"
+msgstr "Font atlas size multiplier"
+
+msgid "FONTMNU_SUPERSAMPLE_SCALE_TOOLTIP"
+msgstr "How big to generate our font atlases. Each increase uses substantially more memory. Requires restart."
+
+msgid "FONTMNU_USER_FONT_CHOICES"
+msgstr "USER FONT PREFERENCES"
+
+msgid "FONTMNU_SMALL_TEXT_FONT"
+msgstr "Small Text Font choice: "
+
+msgid "FONTMNU_SMALL_TEXT_FONT_TOOLTIP"
+msgstr "Choose a font to use for standard small text. This is frequently used in list menus."
+
+msgid "FONTMNU_TITLE_FONT"
+msgstr "Title Font choice: "
+
+msgid "FONTMNU_TITLE_FONT_TOOLTIP"
+msgstr "Choose a font to use for menu titles."
+
+msgid "FONTMNU_DESCRIPTION_FONT"
+msgstr "Description Font choice: "
+
+msgid "FONTMNU_DESCRIPTION_FONT_TOOLTIP"
+msgstr "Choose a font to use for text descriptions. Used by tooltips, for example."
+
+msgid "FONTMNU_CONSOLE_FONT"
+msgstr "Console Font choice: "
+
+msgid "FONTMNU_CONSOLE_TOOLTIP"
+msgstr "Choose a font to use for the command console. Also often used for misc small text or numbers."
+
+msgid "FONTMNU_BIG_TEXT_FONT"
+msgstr "Big Text Font choice: "
+
+msgid "FONTMNU_BIG_TEXT_FONT_TOOLTIP"
+msgstr "Choose a font to use for big text, such as main menu items."
+
+msgid "FONTMNU_SMALL_TEXT_FONT_JP"
+msgstr "Small Text Font choice (Japanese): "
+
+msgid "FONTMNU_BIG_TEXT_FONT_JP"
+msgstr "Big Text Font choice (Japanese): "
+
+msgid "FONTMNU_TITLE_FONT_JP"
+msgstr "Title Font choice (Japanese): "
+
+msgid "FONTMNU_DESCRIPTION_FONT_JP"
+msgstr "Description Font choice (Japanese): "
+
+msgid "FONTMNU_SMALL_TEXT_FONT_KO"
+msgstr "Small Text Font choice (Korean): "
+
+msgid "FONTMNU_BIG_TEXT_FONT_KO"
+msgstr "Big Text Font choice (Korean): "
+
+msgid "FONTMNU_TITLE_FONT_KO"
+msgstr "Title Font choice (Korean): "
+
+msgid "FONTMNU_DESCRIPTION_FONT_KO"
+msgstr "Description Font choice (Korean): "
+
+msgid "FONTMNU_SMALL_TEXT_FONT_CYR"
+msgstr "Small Text Font choice (Cyrillic): "
+
+msgid "FONTMNU_BIG_TEXT_FONT_CYR"
+msgstr "Big Text Font choice (Cyrillic): "
+
+msgid "FONTMNU_TITLE_FONT_CYR"
+msgstr "Title Font choice (Cyrillic): "
+
+msgid "FONTMNU_DESCRIPTION_FONT_CYR"
+msgstr "Description Font choice (Cyrillic): "
+
+msgid "FONTMNU_OVERRIDES"
+msgstr "OVERRIDES (ADVANCED)"
+
+msgid "FONTMNU_NEWSMALLFONT_OVERRIDE"
+msgstr "NewSmallFont override: "
+
+msgid "FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
+msgstr "Override NewSmallFont directly. Used for mods or other systems that have not updated to newer font API."
+
+msgid "FONTMNU_NEWSMALLFONT_OVERRIDE_JP"
+msgstr "NewSmallFont override (Japanese): "
+
+msgid "FONTMNU_NEWSMALLFONT_OVERRIDE_KO"
+msgstr "NewSmallFont override (Korean): "
+
+msgid "FONTMNU_NEWSMALLFONT_OVERRIDE_CYR"
+msgstr "NewSmallFont override (Cyrillic): "
+
+msgid "FONTMNU_FALLBACKS"
+msgstr "FALLBACKS (ADVANCED)"
+
+msgid "FONTMNU_FALLBACK"
+msgstr "Fallback Font choice: "
+
+msgid "FONTMNU_FALLBACK_JP"
+msgstr "Fallback Font choice (Japanese): "
+
+msgid "FONTMNU_FALLBACK_KO"
+msgstr "Fallback Font choice (Korean): "
+
+msgid "FONTMNU_FALLBACK_CYR"
+msgstr "Fallback Font choice (Cyrillic): "

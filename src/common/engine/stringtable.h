@@ -105,8 +105,9 @@ public:
 		});
 	};
 
-private:
+	[[nodiscard]] FString GetActiveLanguage() const { return activeLanguage; }
 
+private:
 	FString activeLanguage;
 	StringMacroMap allMacros;
 	LangMap allStrings;

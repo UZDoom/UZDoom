@@ -255,7 +255,7 @@ void DIntermissionScreen::Drawer ()
 		if (CheckOverlay(i))
 			DrawTexture(twod, mOverlays[i].mPic, false, mOverlays[i].x, mOverlays[i].y, DTA_320x200, true, TAG_DONE);
 	}
-	FFont* font = generic_ui ? NewSmallFont : SmallFont;
+	FFont* font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 	DrawFullscreenSubtitle(font, mSubtitle.GetChars());
 }
 
@@ -422,7 +422,7 @@ void DIntermissionScreenText::Init(FIntermissionAction *desc, bool first)
 
 		mTextX *= 2;
 		mTextY *= 2;
-		int width = NewSmallFont->StringWidth(mText);
+		int width = FFont::GetSmallTextFont(NewSmallFont)->StringWidth(mText);
 		if (usesDefault && mTextX + width > 640 - mTextX)
 		{
 			mTextX = (640 - width) / 2;
@@ -463,7 +463,7 @@ void DIntermissionScreenText::Drawer ()
 		// Count number of rows in this text. Since it does not word-wrap, we just count
 		// line feed characters.
 		int numrows;
-		auto font = generic_ui ? NewSmallFont : SmallFont;
+		auto font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		auto fontscale = max(generic_ui ? min(twod->GetWidth() / 640, twod->GetHeight() / 400) : min(twod->GetWidth() / 400, twod->GetHeight() / 250), 1);
 		int cleanwidth = twod->GetWidth() / fontscale;
 		int cleanheight = twod->GetHeight() / fontscale;
@@ -512,8 +512,35 @@ void DIntermissionScreenText::Drawer ()
 		// draw some of the text onto the screen
 		count = (mTicker - mTextDelay) / mTextSpeed;
 
-		for ( ; count > 0 ; count-- )
+		
+		if (font->IsValidDynamicFont())
 		{
+			std::string        str = mText.GetChars();
+			Trex::ShapedGlyphs glyphs =
+				font->GetDynamicTextShaper()->ShapeUtf8(std::span<const char>(str.cbegin(), str.cend()));
+			TArray<FString> lines;
+			mText.Split(lines, '\n', FString::TOK_SKIPEMPTY);
+			int countAtEndOfLine = 0;
+			for (auto l : lines)
+			{
+				if (count > countAtEndOfLine)
+				{
+					FString subStr = l.Left((count - countAtEndOfLine));
+					DrawText(twod, font, CR_UNTRANSLATED, cx / fontscale, cy / fontscale, subStr.GetChars(),
+					         DTA_KeepRatio, true, DTA_VirtualWidth, cleanwidth, DTA_VirtualHeight, cleanheight,
+					         TAG_DONE);
+					countAtEndOfLine += l.Len();
+					cy += rowheight;
+				}
+			}
+		}
+		else
+		{
+			for (; count > 0; count--)
+			{
+
+				
+			// old-style bitmap char-by-char
 			c = GetCharFromString(ch);
 			if (!c)
 				break;
@@ -530,9 +557,15 @@ void DIntermissionScreenText::Drawer ()
 			if (cx + w > twod->GetWidth())
 				continue;
 
-			DrawChar(twod, font, mTextColor, cx/fontscale, cy/fontscale, c, DTA_KeepRatio, true, DTA_VirtualWidth, cleanwidth, DTA_VirtualHeight, cleanheight, TAG_DONE);
+			{
+				DrawChar(twod, font, mTextColor, cx / fontscale, cy / fontscale, c, DTA_KeepRatio, true,
+				         DTA_VirtualWidth, cleanwidth, DTA_VirtualHeight, cleanheight, TAG_DONE);
+			}
+
 			cx += w;
+			}
 		}
+		
 	}
 }
 
@@ -715,7 +748,7 @@ void DIntermissionScreenCast::Drawer ()
 	const char *name = mName;
 	if (name != NULL)
 	{
-		auto font = generic_ui ? NewSmallFont : SmallFont;
+		auto font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		if (*name == '$') name = GStrings.GetString(name+1);
 		DrawText(twod, font, CR_UNTRANSLATED,
 			(twod->GetWidth() - font->StringWidth (name) * CleanXfac)/2,

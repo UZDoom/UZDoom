@@ -130,7 +130,7 @@ void FNotifyBuffer::AddString(int printlevel, FString source)
 	}
 
 	int width = DisplayWidth / active_con_scaletext(twod, generic_ui);
-	FFont *font = generic_ui ? NewSmallFont : AlternativeSmallFont;
+	FFont *font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : AlternativeSmallFont);
 	FNotifyBufferBase::AddString(printlevel & PRINT_TYPES, font, source, width, con_notifytime, con_notifylines);
 }
 
@@ -140,7 +140,7 @@ void FNotifyBuffer::Draw()
 	int line, lineadv, color, j;
 	bool canskip;
 	
-	FFont* font = generic_ui ? NewSmallFont : AlternativeSmallFont;
+	FFont* font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : AlternativeSmallFont);
 
 	line = Top + font->GetDisplacement();
 	canskip = true;
@@ -199,7 +199,7 @@ void FNotifyBuffer::Draw()
 				         twod->GetWidth() / scale, DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true,
 				         DTA_Alpha, alpha, TAG_DONE);
 			}
-
+			
 			line += lineadv;
 			canskip = false;
 		}

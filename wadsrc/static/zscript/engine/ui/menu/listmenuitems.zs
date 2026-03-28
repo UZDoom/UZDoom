@@ -27,6 +27,7 @@ class ListMenuItem : MenuItemBase
 	{
 		int w = desc ? desc.DisplayWidth() : ListMenuDescriptor.CleanScale;
 		int h = desc ? desc.DisplayHeight() : -1;
+		fnt = Font.GetSmallTextFont(fnt);
 		if (w == ListMenuDescriptor.CleanScale)
 		{
 			screen.DrawText(fnt, color, x, y, text, ontop? DTA_CleanTop : DTA_Clean, true);
@@ -115,7 +116,7 @@ class ListMenuItemStaticPatch : ListMenuItem
 		}
 		else
 		{
-			let font = generic_ui ? NewSmallFont : mFont;
+			let font = Font.GetSmallTextFont(generic_ui ? NewSmallFont : mFont);
 			if (mCentered) x -= font.StringWidth(mSubstitute) / 2;
 			DrawText(desc, font, mColor, x, abs(mYpos), mSubstitute, mYpos < 0);
 		}
@@ -165,7 +166,7 @@ class ListMenuItemStaticText : ListMenuItem
 	{
 		if (mText.Length() != 0)
 		{
-			let font = generic_ui? NewSmallFont : mFont;
+			let font = menuDelegate.PickFont(generic_ui? NewSmallFont : mFont);
 
 			String text = Stringtable.Localize(mText);
 
@@ -262,7 +263,7 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 	{
 		Super.Init(desc.mXpos, desc.mYpos, desc.mLinespacing, child, param);
 		mText = text;
-		mFont = desc.mFont;
+		mFont = Font.GetSmallTextFont(desc.mFont);
 		mColor = desc.mFontColor;
 		mColorSelected = desc.mFontcolor2;
 		mHotkey = hotkey.GetNextCodePoint(0);
@@ -288,6 +289,23 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 			x -= font.StringWidth(mText) / 2;
 		}
 		DrawText(desc, font, selected ? mColorSelected : mColor, x, mYpos, mText);
+	}
+
+	override void DrawSelector(double xofs, double yofs, TextureID tex, ListMenuDescriptor desc)
+	{
+		if (tex.isNull())
+		{
+			if ((Menu.MenuTime() % 8) < 6)
+			{
+				DrawText(desc, ConFont, OptionMenuSettings.mFontColorSelection, mXpos + xofs, mYpos + yofs + 8, "\xd");
+			}
+		}
+		else
+		{
+			let font = menuDelegate.PickFont(mFont);
+			yofs += float(font.GetHeight()) * 0.33;
+			DrawTexture(desc, tex, mXpos + xofs, mYpos + yofs);
+		}
 	}
 
 	override int GetWidth()
@@ -353,7 +371,7 @@ class ListMenuItemCaptionItem : ListMenuItem
 
 	override void Draw(bool selected, ListMenuDescriptor desc)
 	{
-		let font = menuDelegate.PickFont(desc.mFont);
+		let font = Font.GetTitleFont(menuDelegate.PickFont(desc.mFont));
 		if (font && mText.Length() > 0)
 		{
 			menuDelegate.DrawCaption(mText, font, 0, true);

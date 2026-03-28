@@ -37,7 +37,7 @@ class CoopStatusScreen : StatusScreen
 		CurState = StatCount;
 		acceleratestage = 0;
 		ng_state = 1;
-		displayFont = NewSmallFont;
+		displayFont = Font.GetSmallTextFont(NewSmallFont);
 		FontScale = max(screen.GetHeight() / 400, 1);
 		RowHeight = int(max((displayFont.GetHeight() + 1) * FontScale, 1));
 
