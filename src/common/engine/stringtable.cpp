@@ -34,6 +34,7 @@
 #include "zstring.h"
 
 EXTERN_CVAR(Int, developer);
+CVAR(Bool, debug_languages, false, CVAR_GLOBALCONFIG | CVAR_ARCHIVE);
 
 //==========================================================================
 //
@@ -201,16 +202,29 @@ inline void ExtractComponents(FString &str, FString &lang, FString &script, FStr
 LangID FStringTable::GetID(FString lang)
 {
 	FName name = lang;
+	FString diagnostics;
+
+	if (debug_languages) diagnostics.AppendFormat("lang: %s", lang.GetChars());
 
 	static FName systemlocale = NAME_None;
 
-	if (name == NAME_Auto && systemlocale != NAME_None) name = systemlocale;
-	if (name == NAME_Auto) systemlocale = name = lang = GetSystemLocale();
+	if (name == NAME_Auto)
+	{
+		systemlocale = name = lang = GetSystemLocale();
+	}
 
-	RemapLegacyLanguages(name, lang);
+	{
+		auto prev = name;
+		RemapLegacyLanguages(name, lang);
+		if (debug_languages && prev != name) diagnostics.AppendFormat(", mapped: %s", lang.GetChars());
+	}
 
 	auto idPtr = langMap.CheckKey(name);
-	if (idPtr) return *idPtr;
+	if (idPtr)
+	{
+		if (debug_languages) Printf("%s.\n", diagnostics.GetChars());
+		return *idPtr;
+	}
 
 	FString _lang, _script, _region;
 	ExtractComponents(lang, _lang, _script, _region);
@@ -229,18 +243,34 @@ LangID FStringTable::GetID(FString lang)
 	auto ptr = &langMap.Insert(name, id);
 	langRevMap.Insert(ptr->normalized, ptr);
 
+	if (debug_languages)
+	{
+		diagnostics.AppendFormat(
+			" inserted: %s (%c-%x)",
+			normalized.GetChars(),
+			ptr->normalized == ptr->language? 'L': ptr->normalized == ptr->script? 'S': 'R',
+			ptr->normalized
+		);
+	}
+
 	auto fallback = langRevMap.CheckKey(ptr->script);
+	if (debug_languages) diagnostics.AppendFormat(", %s", script.GetChars());
 	if (!fallback || ((*fallback)->script != (*fallback)->normalized))
 	{
 		auto ptr = &langMap.Insert(script, id);
 		langRevMap.Insert(ptr->script, ptr);
+		if (debug_languages) diagnostics.AppendFormat(" (%c-%x)", ptr->script == ptr->language? 'L': 'S', ptr->script);
 	}
 	fallback = langRevMap.CheckKey(ptr->language);
-	if (!fallback || ((*fallback)->language != (*fallback)->normalized))
+	if (debug_languages) diagnostics.AppendFormat(", %s", language.GetChars());
+	if (!fallback || ((*fallback)->script != (*fallback)->normalized))
 	{
 		auto ptr = &langMap.Insert(language, id);
 		langRevMap.Insert(ptr->language, ptr);
+		if (debug_languages) diagnostics.AppendFormat(" (L-%x)", ptr->language);
 	}
+
+	if (debug_languages) Printf("%s\n", diagnostics.GetChars());
 
 	return id;
 }
@@ -674,19 +704,24 @@ void FStringTable::UpdateLanguage(const char *language)
 
 	currentLanguageSet.Clear();
 
-	auto checkone = [&](uint32_t lang_id)
+	FString diagnostics = "";
+	auto checkone = [&](char id, uint32_t lang_id)
 	{
 		auto list = allStrings.CheckKey(lang_id);
-		if (list && currentLanguageSet.FindEx([&](const auto &element) { return element.first == lang_id; }) == currentLanguageSet.Size())
+		if (!list) return;
+		auto find = [&](const auto &element) {return element.first == lang_id; };
+		if (currentLanguageSet.FindEx(find) == currentLanguageSet.Size())
 			currentLanguageSet.Push(std::make_pair(lang_id, list));
+		if (debug_languages) diagnostics.AppendFormat(" %c-%x", id, lang_id);
 	};
 
-	checkone(override_table);
-	checkone(global_table);
-	checkone(LanguageID.normalized);
-	checkone(LanguageID.script);
-	checkone(LanguageID.language);
-	checkone(default_table);
+	checkone('O', override_table);
+	checkone('G', global_table);
+	checkone('R', LanguageID.normalized);
+	checkone('S', LanguageID.script);
+	checkone('L', LanguageID.language);
+	checkone('D', default_table);
+	if (debug_languages) Printf("Strings %s:%s\n", language, diagnostics.GetChars());
 }
 
 //==========================================================================
