@@ -925,6 +925,7 @@ void V_InitFonts()
 	auto lump = fileSystem.CheckNumForFullName("newconsolefont.hex", 0);	// This is always loaded from gzdoom.pk3 to prevent overriding it with incomplete replacements.
 	if (lump == -1) I_FatalError("newconsolefont.hex not found");	// This font is needed - do not start up without it.
 	NewConsoleFont = CreateHexLumpFont("NewConsoleFont", lump);
+	
 	NewSmallFont = CreateHexLumpFont2("NewSmallFont", lump);
 	auto newSmallFontPreOverride = NewSmallFont;
 	
@@ -939,7 +940,15 @@ void V_InitFonts()
 	
 	CurrentConsoleFont = NewConsoleFont;
 	ConFont = V_GetFont("ConsoleFont", "CONFONT");
-	SymbolsFont = ConFont; //the symbols font is the ConFont, but by using a different name we can avoid doing font substitution when people are using ConFont to draw symbols (ex: sliders)
+
+	// the symbols font is a copy of the ConFont, but by using a different name we can avoid doing
+	// font substitution when people are using ConFont to draw symbols (ex: sliders)
+	SymbolsFont = new FFont(-1);
+	FFont *fixupNext = SymbolsFont->Next;
+	SymbolsFont           = new FFont{*ConFont};
+	SymbolsFont->Next = fixupNext;
+	SymbolsFont->FontName = "SymbolsFont";
+
 	V_GetFont("IndexFont", "INDEXFON");	// detect potential replacements for this one.
 }
 
