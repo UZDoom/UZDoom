@@ -3053,7 +3053,7 @@ OptionString "LanguageOptions"
 	"sr", "Српски (Serbian)"
 	"tr", "Türkçe (Turkish)"
 	"zh-Hans", "简体中文 (Simplified Chinese)"
-	"zh-Hant", "繁体中文 (Traditional Chinese)"
+//	"zh-Hant", "繁体中文 (Traditional Chinese)"
 }
 
 /*=======================================
