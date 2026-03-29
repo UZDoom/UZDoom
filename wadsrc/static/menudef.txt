@@ -2101,6 +2101,7 @@ OptionMenu SoundOptions protected
 	Slider "$SNDMNU_MENUVOLUME",        "snd_menuvolume",      0, 1, 0.05, 2
 	StaticText " "
 	Submenu "$SNDMNU_MIDIDEVICE",       "MidiDevicesMenu"
+	Submenu "$SNDMNU_MIDIPLAYER",       "MidiPlayerOptions"
 	StaticText " "
 	Slider "$SNDMNU_CHANNELS",          "snd_channels",        64, 256, 8, 0
 	Option "$SNDMNU_BACKGROUND",        "i_soundinbackground", "OnOff"
@@ -2109,7 +2110,6 @@ OptionMenu SoundOptions protected
 	Option "$ADVSNDMNU_SAMPLERATE",     "snd_samplerate",      "SampleRates"
 	Option "$ADVSNDMNU_HRTF",           "snd_hrtf",            "AutoOffOn"
 	StaticText " "
-	Submenu "$SNDMNU_MIDIPLAYER",       "MidiPlayerOptions"
 	ifoption(openal)
 	{
 		Submenu "$SNDMNU_OPENAL",       "OpenALSoundItems"
@@ -2227,13 +2227,7 @@ OptionMenu MidiPlayerOptions protected
 {
 	Title "$SNDMNU_MIDIPLAYER"
 
-	Submenu "$ADVSNDMNU_FLUIDSYNTH",   "FluidsynthOptions", 0, 1
-	Submenu "$ADVSNDMNU_TIMIDITY",     "TimidityOptions",   0, 1
-	Submenu "$ADVSNDMNU_GUSEMULATION", "GUSOptions",        0, 1
-	Submenu "$ADVSNDMNU_WILDMIDI",     "WildMidiOptions",   0, 1
-	Submenu "$ADVSNDMNU_OPLSYNTHESIS", "OPLOptions",        0, 1
-	Submenu "$ADVSNDMNU_ADLMIDI",      "ADLOptions",        0, 1
-	Submenu "$ADVSNDMNU_OPNMIDI",      "OPNOptions",        0, 1
+	StaticText "$SNDMNU_NOMIDIOPTIONS"
 }
 
 OptionMenu FluidsynthOptions protected

@@ -788,6 +788,15 @@ xx(HexenDefaultPlayerclassMenu)
 xx(ReadthisMenu)
 xx(PlayerMenu)
 
+xx(MidiPlayerOptions)
+xx(FluidsynthOptions)
+xx(TimidityOptions)
+xx(GUSOptions)
+xx(WildMidiOptions)
+xx(OPLOptions)
+xx(ADLOptions)
+xx(OPNOptions)
+
 // more stuff
 xx(Behavior)
 xx(BehaviorIterator)
