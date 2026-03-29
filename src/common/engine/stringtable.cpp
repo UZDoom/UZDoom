@@ -69,6 +69,9 @@ FString FStringTable::GetSystemLocale()
 //
 // Map old semi-made-up language codes to IETF language tags
 //
+// https://zdoom.org/w/index.php?title=LANGUAGE#Language_codes
+// https://docs.google.com/spreadsheets/d/1pvwXEgytkor9SClCiDn4j5AH7FedyXS-ocCbsuQIXDU
+//
 //==========================================================================
 
 inline bool RemapLegacyLanguages(FName &name, FString &lang)
@@ -77,45 +80,66 @@ inline bool RemapLegacyLanguages(FName &name, FString &lang)
 
 	switch (name.GetIndex())
 	{
-		case NAME_LANG_by:  name = NAME_LANG_BE;       break;
-		case NAME_LANG_chi: name = NAME_LANG_ZH_HANT;  break;
-		case NAME_LANG_chs: name = NAME_LANG_ZH_HANS;  break;
-		case NAME_LANG_cht: name = NAME_LANG_ZH_HANT;  break;
-		case NAME_LANG_ena: name = NAME_LANG_EN_AU;    break;
-		case NAME_LANG_enb: name = NAME_LANG_EN_BZ;    break;
-		case NAME_LANG_enc: name = NAME_LANG_EN_CA;    break;
-		case NAME_LANG_eng: name = NAME_LANG_EN_GB;    break;
-		case NAME_LANG_eni: name = NAME_LANG_EN_IN;    break;
-		case NAME_LANG_enj: name = NAME_LANG_EN_JM;    break;
-		case NAME_LANG_enl: name = NAME_LANG_EN_IE;    break;
-		case NAME_LANG_ens: name = NAME_LANG_EN_ZA;    break;
-		case NAME_LANG_ent: name = NAME_LANG_EN_TT;    break;
-		case NAME_LANG_enw: name = NAME_LANG_EN_WALES; break; // TODO: support Unicode Locale Extensions
-		case NAME_LANG_enz: name = NAME_LANG_EN_NZ;    break;
-		case NAME_LANG_esa: name = NAME_LANG_ES_AR;    break;
-		case NAME_LANG_esb: name = NAME_LANG_ES_BO;    break;
-		case NAME_LANG_esc: name = NAME_LANG_ES_CO;    break;
-		case NAME_LANG_esd: name = NAME_LANG_ES_DO;    break;
-		case NAME_LANG_ese: name = NAME_LANG_ES_EC;    break;
-		case NAME_LANG_esf: name = NAME_LANG_ES_PH;    break;
-		case NAME_LANG_esg: name = NAME_LANG_ES_GT;    break;
-		case NAME_LANG_esh: name = NAME_LANG_ES_HN;    break;
-		case NAME_LANG_esi: name = NAME_LANG_ES;       break;
-		case NAME_LANG_esl: name = NAME_LANG_ES_CL;    break;
-		case NAME_LANG_esm: name = NAME_LANG_ES_MX;    break;
-		case NAME_LANG_esn: name = NAME_LANG_ES;       break;
-		case NAME_LANG_eso: name = NAME_LANG_ES_BO;    break;
-		case NAME_LANG_esr: name = NAME_LANG_ES_CR;    break;
-		case NAME_LANG_ess: name = NAME_LANG_ES_SV;    break;
-		case NAME_LANG_esu: name = NAME_LANG_ES_US;    break;
-		case NAME_LANG_esv: name = NAME_LANG_ES_VE;    break;
-		case NAME_LANG_esy: name = NAME_LANG_ES_PY;    break;
-		case NAME_LANG_esz: name = NAME_LANG_ES_BZ;    break;
-		case NAME_LANG_jp:  name = NAME_LANG_JA;       break;
-		case NAME_LANG_nb:  name = NAME_LANG_NB_NO;    break;
-		case NAME_LANG_no:  name = NAME_LANG_NB_NO;    break;
-		case NAME_LANG_ptg: name = NAME_LANG_PT;       break;
-		case NAME_LANG_zho: name = NAME_LANG_ZH_HANS;  break;
+		case NAME_LANG_by:
+			name = "be";
+			break;
+		case NAME_LANG_ena:
+		case NAME_LANG_enb:
+		case NAME_LANG_enc:
+		case NAME_LANG_eng:
+		case NAME_LANG_eni:
+		case NAME_LANG_enj:
+		case NAME_LANG_enl:
+		case NAME_LANG_ens:
+		case NAME_LANG_ent:
+		case NAME_LANG_enw:
+		case NAME_LANG_enz:
+			name = "en-GB";
+			break;
+		case NAME_Default:
+		case NAME_LANG_enu:
+			name = "en-US";
+			break;
+		case NAME_LANG_esa:
+		case NAME_LANG_esb:
+		case NAME_LANG_esc:
+		case NAME_LANG_esd:
+		case NAME_LANG_ese:
+		case NAME_LANG_esf:
+		case NAME_LANG_esg:
+		case NAME_LANG_esh:
+		case NAME_LANG_esi:
+		case NAME_LANG_esl:
+		case NAME_LANG_esm:
+		case NAME_LANG_esn:
+		case NAME_LANG_eso:
+		case NAME_LANG_esr:
+		case NAME_LANG_ess:
+		case NAME_LANG_esu:
+		case NAME_LANG_esv:
+		case NAME_LANG_esy:
+		case NAME_LANG_esz:
+			name = "es-MX";
+			break;
+		case NAME_LANG_ja:
+		case NAME_LANG_jp:
+			name = "ja-JP";
+			break;
+		case NAME_LANG_nb:
+		case NAME_LANG_no:
+			name = "nb-NO";
+			break;
+		case NAME_LANG_ptg:
+			name = "pt";
+			break;
+		case NAME_LANG_chi:
+		case NAME_LANG_cht:
+			name = "zh-Hant";
+			break;
+		case NAME_LANG_chs:
+		case NAME_LANG_zho:
+			name = "zh-Hans";
+			break;
 	}
 
 	bool updated = name != oldname;
