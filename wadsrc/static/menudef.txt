@@ -125,7 +125,7 @@ LISTMENU "MainMenuTextOnly"
 		StaticPatch 84, 2, "M_STRIFE"
 		Position 97, 45
 	}
-	
+
 	TextItem "$MNU_NEWGAME", "n", "PlayerclassMenu"
 	TextItem "$MNU_OPTIONS", "o", "OptionsMenu"
 	TextItem "$MNU_LOADGAME", "l", "LoadGameMenu"
@@ -380,7 +380,7 @@ OptionMenu "OptionsMenu" protected
 	SafeCommand	"$OPTMNU_DEFAULTS",		"reset2defaults"
 	SafeCommand	"$OPTMNU_RESETTOSAVED",	"reset2saved"
 	SafeCommand	"$OPTMNU_WRITEINI",		"writeini"
-	
+
 	Command "$OPTMNU_CONSOLE",			"menuconsole"
 	Command "$OPTMNU_OPENCONFIG",		"openconfig"
 	Command "$OPTMNU_OPENWADS",			"openwads"
@@ -1187,6 +1187,7 @@ OptionMenu "ScalingOptions" protected
 	Slider "$SCALEMNU_FACTOR",					"classic_scaling_factor", 1.0, 3.0, 0.2, 1
 	Slider "$SCALEMNU_RATIO",					"classic_scaling_pixelaspect", 1.0, 1.2, 0.2, 1
 }
+
 //-------------------------------------------------------------------------------------------
 //
 // Alternative HUD
@@ -1385,7 +1386,7 @@ OptionMenu "MiscOptions" protected
 
 	StaticText " "
 	Option "$MISCMNU_DISCORDRPC",				"i_discordrpc",	"OnOff"
-	
+
 }
 
 //-------------------------------------------------------------------------------------------
@@ -1725,11 +1726,11 @@ OptionMenu FontOptions protected
 	Option "$FONTMNU_DLG",					"dlg_vgafont", "YesNo"
 }
 
-/*=======================================
- *
- * Gameplay Options (dmflags) Menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Gameplay Options (dmflags) Menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionValue  SmartAim
 {
@@ -1848,11 +1849,11 @@ OptionMenu CoopOptions protected
 	Class "GameplayMenu"
 }
 
-/*=======================================
- *
- * Compatibility Options Menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Compatibility Options Menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionValue CompatModes
 {
@@ -1971,30 +1972,30 @@ OptionMenu "CompatSoundMenu" protected
 	Class "CompatibilityMenu"
 }
 
-/*=======================================
- *
- * Sound Options Menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Sound Options Menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionValue SampleRates
 {
-	0,		"$OPTVAL_DEFAULT"
-	8000,	"$OPTVAL_8000HZ"
-	11025,	"$OPTVAL_11025HZ"
-	22050,	"$OPTVAL_22050HZ"
-	32000,	"$OPTVAL_32000HZ"
-	44100,	"$OPTVAL_44100HZ"
-	48000,	"$OPTVAL_48000HZ"
+	0,     "$OPTVAL_DEFAULT"
+	8000,  "$OPTVAL_8000HZ"
+	11025, "$OPTVAL_11025HZ"
+	22050, "$OPTVAL_22050HZ"
+	32000, "$OPTVAL_32000HZ"
+	44100, "$OPTVAL_44100HZ"
+	48000, "$OPTVAL_48000HZ"
 }
 
 OptionValue BufferSizes
 {
-	   0, "$OPTVAL_DEFAULT"
-	  64, "$OPTVAL_64SAMPLES"
-	 128, "$OPTVAL_128SAMPLES"
-	 256, "$OPTVAL_256SAMPLES"
-	 512, "$OPTVAL_512SAMPLES"
+	0,    "$OPTVAL_DEFAULT"
+	64,   "$OPTVAL_64SAMPLES"
+	128,  "$OPTVAL_128SAMPLES"
+	256,  "$OPTVAL_256SAMPLES"
+	512,  "$OPTVAL_512SAMPLES"
 	1024, "$OPTVAL_1024SAMPLES"
 	2048, "$OPTVAL_2048SAMPLES"
 	4096, "$OPTVAL_4096SAMPLES"
@@ -2002,18 +2003,18 @@ OptionValue BufferSizes
 
 OptionValue BufferCounts
 {
-	   0, "$OPTVAL_DEFAULT"
-	   2, "2"
-	   3, "3"
-	   4, "4"
-	   5, "5"
-	   6, "6"
-	   7, "7"
-	   8, "8"
-	   9, "9"
-	  10, "10"
-	  11, "11"
-	  12, "12"
+	0,  "$OPTVAL_DEFAULT"
+	2,  "2"
+	3,  "3"
+	4,  "4"
+	5,  "5"
+	6,  "6"
+	7,  "7"
+	8,  "8"
+	9,  "9"
+	10, "10"
+	11, "11"
+	12, "12"
 }
 
 OptionString ALDevices
@@ -2028,82 +2029,47 @@ OptionString ALResamplers
 
 OptionString SpeakerModes
 {
-	"Auto",		"$OPTSTR_AUTO"
-	"Mono",		"$OPTSTR_MONO"
-	"Stereo",	"$OPTSTR_STEREO"
-	"Prologic",	"$OPTSTR_PROLOGIC"
-	"Quad",		"$OPTSTR_QUAD"
-	"Surround",	"$OPTSTR_SURROUND"
-	"5.1",		"$OPTSTR_5POINT1"
-	"7.1",		"$OPTSTR_7POINT1"
+	"Auto",     "$OPTSTR_AUTO"
+	"Mono",     "$OPTSTR_MONO"
+	"Stereo",   "$OPTSTR_STEREO"
+	"Prologic", "$OPTSTR_PROLOGIC"
+	"Quad",     "$OPTSTR_QUAD"
+	"Surround", "$OPTSTR_SURROUND"
+	"5.1",      "$OPTSTR_5POINT1"
+	"7.1",      "$OPTSTR_7POINT1"
 }
 
 OptionString Resamplers
 {
-	"NoInterp",		"$OPTSTR_NOINTERPOLATION"
-	"Linear",		"$OPTVAL_LINEAR_1"
-	"Cubic",		"$OPTVAL_CUBIC"
-	"Spline",		"$OPTSTR_SPLINE"
+	"NoInterp", "$OPTSTR_NOINTERPOLATION"
+	"Linear",   "$OPTVAL_LINEAR_1"
+	"Cubic",    "$OPTVAL_CUBIC"
+	"Spline",   "$OPTSTR_SPLINE"
 }
-
 
 OptionValue MusicModes
 {
-	0,	"$OPTVAL_NORMAL"
-	1,	"$OPTVAL_DIRECTMIX"
-	2,	"$OPTVAL_SUPERSTEREO"
+	0, "$OPTVAL_NORMAL"
+	1, "$OPTVAL_DIRECTMIX"
+	2, "$OPTVAL_SUPERSTEREO"
 }
-
 
 OptionMenu OpenALSoundItems protected
 {
 	Title "$OPENALMNU_TITLE"
-	Option "$OPENALMNU_PLAYBACKDEVICE",		"snd_aldevice",		"ALDevices"
-	Option "$OPENALMNU_ENABLEEFX",			"snd_efx",			"OnOff"
-	Option "$OPENALMNU_RESAMPLER",			"snd_alresampler",	"ALResamplers"
+
+	Option "$OPENALMNU_PLAYBACKDEVICE",   "snd_aldevice",         "ALDevices"
+	Option "$OPENALMNU_ENABLEEFX",        "snd_efx",              "OnOff"
+	Option "$OPENALMNU_RESAMPLER",        "snd_alresampler",      "ALResamplers"
 	StaticText " "
-	Option "$OPENALMNU_MUSICMODE",			"snd_musicmode",	"MusicModes"
-	Slider "$OPENALMNU_SUPERSTEREOWIDTH",	"snd_superstereowidth", 0, 1, 0.05, 2
+	Option "$OPENALMNU_MUSICMODE",        "snd_musicmode",        "MusicModes"
+	Slider "$OPENALMNU_SUPERSTEREOWIDTH", "snd_superstereowidth", 0, 1, 0.05, 2
 }
 
 OptionValue MidiDevices
 {
 	// No longer in use but kept around in case some mods use it.
-	// filled in by the sound code
 }
-
-OptionMenu SoundOptions protected
-{
-	Title "$SNDMNU_TITLE"
-	Slider "$MODMNU_MASTERVOLUME",		"snd_mastervolume", 0, 1, 0.05, 2
-	StaticText " "
-	Slider "$SNDMNU_SFXVOLUME",			"snd_sfxvolume", 0, 1, 0.05, 2
-	Slider "$SNDMNU_MUSICVOLUME",		"snd_musicvolume", 0, 1, 0.05, 2
-	Slider "$SNDMNU_FOOTSTEPVOLUME",	"snd_footstepvolume", 0, 1, 0.05, 2
-	StaticText " "
-	Slider "$SNDMNU_MENUVOLUME",		"snd_menuvolume", 0, 1, 0.05, 2
-	StaticText " "
-	Submenu "$SNDMNU_MIDIDEVICE",		"MidiDevicesMenu"
-	StaticText " "
-	Option "$SNDMNU_UNDERWATERREVERB",	"snd_waterreverb", "OnOff"
-	Option "$SNDMNU_RANDOMIZEPITCHES",	"snd_pitched", "OnOff"
-	Slider "$SNDMNU_CHANNELS",			"snd_channels", 64, 256, 8, 0
-	StaticText " "
-	Submenu "$SNDMNU_ADVANCED",			"AdvSoundOptions"
-	Submenu "$OPTMNU_REVERB",			"ReverbEdit"
-}
-
-OptionMenu MidiDevicesMenu protected
-{
-	title "$SNDMNU_MIDIDEVICE"
-	// filled in by the sound code
-}
-
-/*=======================================
- *
- * Advanced Sound Options Menu
- *
- *=======================================*/
 
 OptionValue GusMemory
 {
@@ -2122,26 +2088,41 @@ OptionValue OplCores
 	3, "$OPTVAL_NUKEDOPL3"
 }
 
-OptionMenu AdvSoundOptions protected
+OptionMenu SoundOptions protected
 {
-	Title "$ADVSNDMNU_TITLE"
-	Option "$ADVSNDMNU_SAMPLERATE",			"snd_samplerate", "SampleRates"
-	Option "$ADVSNDMNU_HRTF",				"snd_hrtf", "AutoOffOn"
-	StaticText " "
-	Option "$SNDMNU_BACKGROUND",			"i_soundinbackground", "OnOff"
-	StaticText " "
+	Title "$SNDMNU_TITLE"
 
+	Slider "$MODMNU_MASTERVOLUME",      "snd_mastervolume",    0, 1, 0.05, 2
+	StaticText " "
+	Slider "$SNDMNU_SFXVOLUME",         "snd_sfxvolume",       0, 1, 0.05, 2
+	Slider "$SNDMNU_MUSICVOLUME",       "snd_musicvolume",     0, 1, 0.05, 2
+	Slider "$SNDMNU_FOOTSTEPVOLUME",    "snd_footstepvolume",  0, 1, 0.05, 2
+	StaticText " "
+	Slider "$SNDMNU_MENUVOLUME",        "snd_menuvolume",      0, 1, 0.05, 2
+	StaticText " "
+	Submenu "$SNDMNU_MIDIDEVICE",       "MidiDevicesMenu"
+	StaticText " "
+	Slider "$SNDMNU_CHANNELS",          "snd_channels",        64, 256, 8, 0
+	Option "$SNDMNU_BACKGROUND",        "i_soundinbackground", "OnOff"
+	Option "$SNDMNU_UNDERWATERREVERB",  "snd_waterreverb",     "OnOff"
+	Option "$SNDMNU_RANDOMIZEPITCHES",  "snd_pitched",         "OnOff"
+	Option "$ADVSNDMNU_SAMPLERATE",     "snd_samplerate",      "SampleRates"
+	Option "$ADVSNDMNU_HRTF",           "snd_hrtf",            "AutoOffOn"
+	StaticText " "
+	Submenu "$SNDMNU_MIDIPLAYER",       "MidiPlayerOptions"
 	ifoption(openal)
 	{
-	StaticText " "
-		Submenu "$SNDMNU_OPENAL",		"OpenALSoundItems"
+		Submenu "$SNDMNU_OPENAL",       "OpenALSoundItems"
 	}
+	Submenu "$SNDMNU_MODREPLAYER",      "ModReplayerOptions"
+	Submenu "$OPTMNU_REVERB",           "ReverbEdit"
+	StaticText " "
+	Command "$SNDMNU_RESTART",          "snd_reset"
+}
 
-	StaticText " "
-	Submenu "$SNDMNU_MIDIPLAYER",		"MidiPlayerOptions"
-	Submenu "$SNDMNU_MODREPLAYER",		"ModReplayerOptions"
-	StaticText " "
-	Command "$SNDMNU_RESTART",			"snd_reset"
+OptionMenu MidiDevicesMenu protected
+{
+	title "$SNDMNU_MIDIDEVICE"
 }
 
 OptionMenu GusConfigMenu protected
@@ -2179,20 +2160,20 @@ OptionMenu OPNMIDICustomBanksMenu protected
 	Title "$ADVSNDMNU_OPNBANKFILE"
 }
 
-/*=======================================
- *
- * Module Replayer Options Menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Module Replayer Options Menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionValue ModQuality
 {
 	0.0, "$OPTVAL_ALIASING"
 	1.0, "$OPTVAL_LINEAR_1"
 	2.0, "$OPTVAL_CUBIC"
-	3.0, "$OPTVAL_BLEP"		// Band-limited step
+	3.0, "$OPTVAL_BLEP" // Band-limited step
 	4.0, "$OPTVAL_LINEARSLOW"
-	5.0, "$OPTVAL_BLAM"		// Band-limited linear
+	5.0, "$OPTVAL_BLAM" // Band-limited linear
 	6.0, "$OPTVAL_CUBICSLOW"
 	7.0, "$OPTVAL_SINC"
 }
@@ -2213,203 +2194,302 @@ OptionValue ModReplayers
 OptionMenu ModReplayerOptions protected
 {
 	Title "$MODMNU_TITLE"
-	Option "$MODMNU_REPLAYER",				"mod_preferred_player", "ModReplayers"
-	Slider "$MODMNU_MASTERVOLUME",			"mod_dumb_mastervolume", 0.25, 4, 0.1, 1
-	Option "$ADVSNDMNU_SAMPLERATE",			"mod_samplerate", "SampleRates"
-	Option "$MODMNU_QUALITY",				"mod_interp", "ModQuality"
-	Option "$MODMNU_VOLUMERAMPING",			"mod_volramp", "ModVolumeRamps"
+
+	Option "$MODMNU_REPLAYER",      "mod_preferred_player",  "ModReplayers"
+	Slider "$MODMNU_MASTERVOLUME",  "mod_dumb_mastervolume", 0.25, 4, 0.1, 1
+	Option "$ADVSNDMNU_SAMPLERATE", "mod_samplerate",        "SampleRates"
+	Option "$MODMNU_QUALITY",       "mod_interp",            "ModQuality"
+	Option "$MODMNU_VOLUMERAMPING", "mod_volramp",           "ModVolumeRamps"
 	StaticText " "
-	Option "$MODMNU_CHIPOMATIC",			"mod_autochip", "OnOff"
+	Option "$MODMNU_CHIPOMATIC",    "mod_autochip",          "OnOff"
+
 	// TODO if the menu system is ever rewritten: Provide a decent
 	// mechanism to edit the chip-o-matic settings like you can with
 	// the foo_dumb preferences in foobar2000.
 }
 
-/*=======================================
- *
- * MIDI player
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// MIDI player
+//
+//-------------------------------------------------------------------------------------------
 
- OptionValue TimidityReverb
- {
+OptionValue TimidityReverb
+{
 	0, "$OPTVAL_OFF"
 	1, "$OPTVAL_STANDARD"
 	2, "$ADVSNDMNU_GLOBAL"
 	3, "$ADVSNDMNU_FREEVERB"
 	4, "$ADVSNDMNU_GLOBAL_FREEVERB"
- }
+}
 
-  OptionMenu MidiPlayerOptions protected
- {
+OptionMenu MidiPlayerOptions protected
+{
 	Title "$SNDMNU_MIDIPLAYER"
-	Submenu "$ADVSNDMNU_FLUIDSYNTH", "FluidsynthOptions", 0, 1
-	Submenu "$ADVSNDMNU_TIMIDITY", "TimidityOptions", 0, 1
-	Submenu "$ADVSNDMNU_GUSEMULATION", "GUSOptions", 0, 1
-	Submenu "$ADVSNDMNU_WILDMIDI", "WildMidiOptions", 0, 1
-	Submenu "$ADVSNDMNU_OPLSYNTHESIS", "OPLOptions", 0, 1
-	Submenu "$ADVSNDMNU_ADLMIDI", "ADLOptions", 0, 1
-	Submenu "$ADVSNDMNU_OPNMIDI", "OPNOptions", 0, 1
- }
 
- OptionMenu FluidsynthOptions protected
- {
+	Submenu "$ADVSNDMNU_FLUIDSYNTH",   "FluidsynthOptions", 0, 1
+	Submenu "$ADVSNDMNU_TIMIDITY",     "TimidityOptions",   0, 1
+	Submenu "$ADVSNDMNU_GUSEMULATION", "GUSOptions",        0, 1
+	Submenu "$ADVSNDMNU_WILDMIDI",     "WildMidiOptions",   0, 1
+	Submenu "$ADVSNDMNU_OPLSYNTHESIS", "OPLOptions",        0, 1
+	Submenu "$ADVSNDMNU_ADLMIDI",      "ADLOptions",        0, 1
+	Submenu "$ADVSNDMNU_OPNMIDI",      "OPNOptions",        0, 1
+}
+
+OptionMenu FluidsynthOptions protected
+{
 	Title "$ADVSNDMNU_FLUIDSYNTH"
-	LabeledSubMenu "$ADVSNDMNU_SELCONFIG",		"fluid_patchset", "FluidPatchsetMenu"
-	Slider "$ADVSNDMNU_FLUIDGAIN",			"fluid_gain", 0, 10, 0.5, 1
-	Option "$ADVSNDMNU_REVERB", 			"fluid_reverb", "OnOff"
-	Option "$ADVSNDMNU_CHORUS", 			"fluid_chorus", "OnOff"
-	Slider "$ADVSNDMNU_MIDIVOICES", 		"fluid_voices", 16, 4096, 16, 0
-	// other CVARs need to be revieved for usefulness
- }
 
- OptionMenu TimidityOptions protected
- {
+	LabeledSubMenu "$ADVSNDMNU_SELCONFIG", "fluid_patchset", "FluidPatchsetMenu"
+	Slider "$ADVSNDMNU_FLUIDGAIN",         "fluid_gain",     0, 10, 0.5, 1
+	Option "$ADVSNDMNU_REVERB",            "fluid_reverb",   "OnOff"
+	Option "$ADVSNDMNU_CHORUS",            "fluid_chorus",   "OnOff"
+	Slider "$ADVSNDMNU_MIDIVOICES",        "fluid_voices",   16, 4096, 16, 0
+
+	// other CVARs need to be revieved for usefulness
+}
+
+OptionMenu TimidityOptions protected
+{
 	Title "$ADVSNDMNU_TIMIDITY"
-	LabeledSubMenu "$ADVSNDMNU_SELCONFIG",		"timidity_config", "TimidityConfigMenu"
-	Option "$ADVSNDMNU_REVERB", 			"timidity_reverb", "TimidityReverb"
-	Slider "$ADVSNDMNU_REVERB_LEVEL", 		"timidity_reverb_level", 0, 127, 1, 0
-	Option "$ADVSNDMNU_CHORUS", 			"timidity_chorus", "OnOff"
+
+	LabeledSubMenu "$ADVSNDMNU_SELCONFIG", "timidity_config",       "TimidityConfigMenu"
+	Option "$ADVSNDMNU_REVERB",            "timidity_reverb",       "TimidityReverb"
+	Slider "$ADVSNDMNU_REVERB_LEVEL",      "timidity_reverb_level", 0, 127, 1, 0
+	Option "$ADVSNDMNU_CHORUS",            "timidity_chorus",       "OnOff"
+
 	// other CVARs need to be revieved for usefulness
- }
+}
 
- OptionMenu GUSOptions protected
- {
+OptionMenu GUSOptions protected
+{
 	Title "$ADVSNDMNU_GUSEMULATION"
-	LabeledSubMenu "$ADVSNDMNU_SELCONFIG",		"midi_config", "GusConfigMenu"
-	Slider "$ADVSNDMNU_MIDIVOICES",			"midi_voices", 16, 256, 4, 0
-	Option "$ADVSNDMNU_DMXGUS", 			"midi_dmxgus", "OnOff"
-	Option "$ADVSNDMNU_GUSMEMSIZE", 		"gus_memsize", "GusMemory"
- }
 
-  OptionMenu WildMidiOptions protected
- {
+	LabeledSubMenu "$ADVSNDMNU_SELCONFIG", "midi_config", "GusConfigMenu"
+	Slider "$ADVSNDMNU_MIDIVOICES",        "midi_voices", 16, 256, 4, 0
+	Option "$ADVSNDMNU_DMXGUS",            "midi_dmxgus", "OnOff"
+	Option "$ADVSNDMNU_GUSMEMSIZE",        "gus_memsize", "GusMemory"
+}
+
+OptionMenu WildMidiOptions protected
+{
 	Title "$ADVSNDMNU_WILDMIDI"
-	LabeledSubMenu "$ADVSNDMNU_SELCONFIG",		"wildmidi_config", "WildMidiConfigMenu"
-	Option "$ADVSNDMNU_REVERB", 			"wildmidi_reverb", "OnOff"
-	Option "$ADVSNDMNU_ADVRESAMPLING",		"wildmidi_enhanced_resampling", "OnOff"
- }
 
- OptionMenu OPLOptions protected
- {
- 	Title "$ADVSNDMNU_OPLSYNTHESIS"
-	Option "$ADVSNDMNU_OPLCORES", 			"opl_core", "OplCores"
-	Slider "$ADVSNDMNU_OPLNUMCHIPS", 		"opl_numchips", 1, 8, 1, 0
-	Slider "$ADVSNDMNU_OPLGAIN",		 	"opl_gain", 0, 10, 0.1, 1
-	Option "$ADVSNDMNU_OPLFULLPAN",			"opl_fullpan", "OnOff"
- }
+	LabeledSubMenu "$ADVSNDMNU_SELCONFIG", "wildmidi_config",              "WildMidiConfigMenu"
+	Option "$ADVSNDMNU_REVERB",            "wildmidi_reverb",              "OnOff"
+	Option "$ADVSNDMNU_ADVRESAMPLING",     "wildmidi_enhanced_resampling", "OnOff"
+}
 
- OptionValue AdlVolumeModels
- {
-	0, "$ADLVLMODEL_AUTO"
-	1, "$ADLVLMODEL_GENERIC"
-	2, "$ADLVLMODEL_NATIVE"
-	3, "$ADLVLMODEL_DMX"
-	4, "$ADLVLMODEL_APOGEE"
-	5, "$ADLVLMODEL_WIN9X"
-	6, "$ADLVLMODEL_DMX_FIXED"
-	7, "$ADLVLMODEL_APOGEE_FIXED"
-	8, "$ADLVLMODEL_AIL"
-	9, "$ADLVLMODEL_WIN9XGENERIC"
+OptionMenu OPLOptions protected
+{
+	Title "$ADVSNDMNU_OPLSYNTHESIS"
+
+	Option "$ADVSNDMNU_OPLCORES",    "opl_core",     "OplCores"
+	Slider "$ADVSNDMNU_OPLNUMCHIPS", "opl_numchips", 1, 8, 1, 0
+	Slider "$ADVSNDMNU_OPLGAIN",     "opl_gain",     0, 10, 0.1, 1
+	Option "$ADVSNDMNU_OPLFULLPAN",  "opl_fullpan",  "OnOff"
+}
+
+OptionValue AdlVolumeModels
+{
+	0,  "$ADLVLMODEL_AUTO"
+	1,  "$ADLVLMODEL_GENERIC"
+	2,  "$ADLVLMODEL_NATIVE"
+	3,  "$ADLVLMODEL_DMX"
+	4,  "$ADLVLMODEL_APOGEE"
+	5,  "$ADLVLMODEL_WIN9X"
+	6,  "$ADLVLMODEL_DMX_FIXED"
+	7,  "$ADLVLMODEL_APOGEE_FIXED"
+	8,  "$ADLVLMODEL_AIL"
+	9,  "$ADLVLMODEL_WIN9XGENERIC"
 	10, "$ADLVLMODEL_HMI"
 	11, "$ADLVLMODEL_HMIOLD"
- }
+}
 
- OptionValue OpnVolumeModels
- {
+OptionValue OpnVolumeModels
+{
 	0, "$OPNVLMODEL_AUTO"
 	1, "$OPNVLMODEL_GENERIC"
 	2, "$OPNVLMODEL_NATIVE"
 	3, "$OPNVLMODEL_DMX"
 	4, "$OPNVLMODEL_APOGEE"
 	5, "$OPNVLMODEL_WIN9X"
- }
+}
 
- OptionValue AdlChanAllocs
- {
+OptionValue AdlChanAllocs
+{
 	-1, "$ADLCHANALLOC_AUTO"
-	0, "$ADLCHANALLOC_OFFDELAY"
-	1, "$ADLCHANALLOC_SAMEINST"
-	2, "$ADLCHANALLOC_ANYREL"
- }
+	0,  "$ADLCHANALLOC_OFFDELAY"
+	1,  "$ADLCHANALLOC_SAMEINST"
+	2,  "$ADLCHANALLOC_ANYREL"
+}
 
- OptionValue ADLOplCores
- {
-	0, "$OPTVAL_NUKEDOPL3"
-	1, "$OPTVAL_NUKEDOPL3174"
-	2, "$OPTVAL_DOSBOXOPL3"
-	3, "$OPTVAL_OPALOPL3"
-	4, "$OPTVAL_JAVAOPL3"
-	5, "$OPTVAL_ESFMu"
-	6, "$OPTVAL_MAMEOPL2"
-	7, "$OPTVAL_YMFMOPL2"
-	8, "$OPTVAL_YMFMOPL3"
-	9, "$OPTVAL_LLENUKEDOPL2"
+OptionValue ADLOplCores
+{
+	0,  "$OPTVAL_NUKEDOPL3"
+	1,  "$OPTVAL_NUKEDOPL3174"
+	2,  "$OPTVAL_DOSBOXOPL3"
+	3,  "$OPTVAL_OPALOPL3"
+	4,  "$OPTVAL_JAVAOPL3"
+	5,  "$OPTVAL_ESFMu"
+	6,  "$OPTVAL_MAMEOPL2"
+	7,  "$OPTVAL_YMFMOPL2"
+	8,  "$OPTVAL_YMFMOPL3"
+	9,  "$OPTVAL_LLENUKEDOPL2"
 	10, "$OPTVAL_LLENUKEDOPL3"
- }
+}
 
- OptionValue OpnCores
- {
-	0, "$OPTVAL_MAMEOPN2"
-	1, "$OPTVAL_NUKEDOPN2YM3438"
-	2, "$OPTVAL_GENSOPN2"
-	3, "$OPTVAL_YMFMOPN2"
-	4, "$OPTVAL_NP2OPNA"
-	5, "$OPTVAL_MAMEOPNA"
-	6, "$OPTVAL_YMFMOPNA"
+OptionValue OpnCores
+{
+	0,  "$OPTVAL_MAMEOPN2"
+	1,  "$OPTVAL_NUKEDOPN2YM3438"
+	2,  "$OPTVAL_GENSOPN2"
+	3,  "$OPTVAL_YMFMOPN2"
+	4,  "$OPTVAL_NP2OPNA"
+	5,  "$OPTVAL_MAMEOPNA"
+	6,  "$OPTVAL_YMFMOPNA"
 	// 7'th is a VGM Dumper, it should NEVER been used during normal runtime
-	8, "$OPTVAL_NUKEDOPN2YM2612"
-	9, "$OPTVAL_OPN2YM2612LLE"
+	8,  "$OPTVAL_NUKEDOPN2YM2612"
+	9,  "$OPTVAL_OPN2YM2612LLE"
 	// 10'th is the OPNA-LLE which wasn't included with the build due to impossibility to run in real-time
 	11, "$OPTVAL_OPN2YM3438LLE"
 	12, "$OPTVAL_OPN2YMF276LLE"
- }
+}
 
- OptionMenu ADLOptions protected
- {
+OptionMenu ADLOptions protected
+{
 	Title "$ADVSNDMNU_ADLMIDI"
-	Slider "$ADVSNDMNU_ADLGAIN",		 "adl_gain", 0, 10, 0.1, 1
-	Option "$ADVSNDMNU_OPLCORES",		 "adl_emulator_id", "ADLOplCores"
-	Option "$ADVSNDMNU_RUNPCMRATE",		 "adl_run_at_pcm_rate", "OnOff"
-	Slider "$ADVSNDMNU_ADLNUMCHIPS", 	 "adl_chips_count", 1, 32, 1, 0
-	Option "$ADVSNDMNU_OPLFULLPAN", 	 "adl_fullpan", "OnOff"
-	Option "$ADVSNDMNU_VLMODEL",		 "adl_volume_model", "AdlVolumeModels"
-	Option "$ADVSNDMNU_CHANALLOC",		 "adl_chan_alloc", "AdlChanAllocs"
-	Option "$ADVSNDMNU_AUTOARPEGGIO", 	 "adl_auto_arpeggio", "OnOff"
-	StaticText ""
-	LabeledSubmenu "$ADVSNDMNU_OPLBANK", "adl_bank", "ADLBankMenu"
-	StaticText ""
-	Option "$ADVSNDMNU_ADLCUSTOMBANK", 	 "adl_use_custom_bank", "OnOff"
-	Option "$ADVSNDMNU_ADLUSEWADBANK", 	 "adl_use_genmidi", "OnOff"
-	LabeledSubmenu "$ADVSNDMNU_OPLBANKFILE", "adl_custom_bank", "ADLMIDICustomBanksMenu"
- }
 
- OptionMenu OPNOptions protected
- {
-	Title "$ADVSNDMNU_OPNMIDI"
-	Slider "$ADVSNDMNU_OPNGAIN",		 "opn_gain", 0, 10, 0.1, 1
-	Option "$ADVSNDMNU_OPNCORES",		 "opn_emulator_id", "OpnCores"
-	Option "$ADVSNDMNU_RUNPCMRATE",		 "opn_run_at_pcm_rate", "OnOff"
-	Slider "$ADVSNDMNU_OPNNUMCHIPS", 	 "opn_chips_count", 1, 32, 1, 0
-	Option "$ADVSNDMNU_OPLFULLPAN", 	 "opn_fullpan", "OnOff"
-	Option "$ADVSNDMNU_VLMODEL",		 "opn_volume_model", "OpnVolumeModels"
-	Option "$ADVSNDMNU_CHANALLOC",		 "opn_chan_alloc", "AdlChanAllocs"
-	Option "$ADVSNDMNU_AUTOARPEGGIO", 	 "opn_auto_arpeggio", "OnOff"
+	Slider "$ADVSNDMNU_ADLGAIN",             "adl_gain",            0, 10, 0.1, 1
+	Option "$ADVSNDMNU_OPLCORES",            "adl_emulator_id",     "ADLOplCores"
+	Option "$ADVSNDMNU_RUNPCMRATE",          "adl_run_at_pcm_rate", "OnOff"
+	Slider "$ADVSNDMNU_ADLNUMCHIPS",         "adl_chips_count",     1, 32, 1, 0
+	Option "$ADVSNDMNU_OPLFULLPAN",          "adl_fullpan",         "OnOff"
+	Option "$ADVSNDMNU_VLMODEL",             "adl_volume_model",    "AdlVolumeModels"
+	Option "$ADVSNDMNU_CHANALLOC",           "adl_chan_alloc",      "AdlChanAllocs"
+	Option "$ADVSNDMNU_AUTOARPEGGIO",        "adl_auto_arpeggio",   "OnOff"
 	StaticText ""
-	Option "$ADVSNDMNU_OPNCUSTOMBANK", 	 "opn_use_custom_bank", "OnOff"
-	LabeledSubmenu "$ADVSNDMNU_OPNBANKFILE", "opn_custom_bank", "OPNMIDICustomBanksMenu"
- }
- 
- /*=======================================
- *
- * Accessibility Menu
- *
- *=======================================*/
- 
- OptionMenu AccessibilityOptions protected
- {
+	LabeledSubmenu "$ADVSNDMNU_OPLBANK",     "adl_bank",            "ADLBankMenu"
+	StaticText ""
+	Option "$ADVSNDMNU_ADLCUSTOMBANK",       "adl_use_custom_bank", "OnOff"
+	Option "$ADVSNDMNU_ADLUSEWADBANK",       "adl_use_genmidi",     "OnOff"
+	LabeledSubmenu "$ADVSNDMNU_OPLBANKFILE", "adl_custom_bank",     "ADLMIDICustomBanksMenu"
+}
+
+OptionMenu OPNOptions protected
+{
+	Title "$ADVSNDMNU_OPNMIDI"
+
+	Slider "$ADVSNDMNU_OPNGAIN",             "opn_gain",            0, 10, 0.1, 1
+	Option "$ADVSNDMNU_OPNCORES",            "opn_emulator_id",     "OpnCores"
+	Option "$ADVSNDMNU_RUNPCMRATE",          "opn_run_at_pcm_rate", "OnOff"
+	Slider "$ADVSNDMNU_OPNNUMCHIPS",         "opn_chips_count",     1, 32, 1, 0
+	Option "$ADVSNDMNU_OPLFULLPAN",          "opn_fullpan",         "OnOff"
+	Option "$ADVSNDMNU_VLMODEL",             "opn_volume_model",    "OpnVolumeModels"
+	Option "$ADVSNDMNU_CHANALLOC",           "opn_chan_alloc",      "AdlChanAllocs"
+	Option "$ADVSNDMNU_AUTOARPEGGIO",        "opn_auto_arpeggio",   "OnOff"
+	StaticText ""
+	Option "$ADVSNDMNU_OPNCUSTOMBANK",       "opn_use_custom_bank", "OnOff"
+	LabeledSubmenu "$ADVSNDMNU_OPNBANKFILE", "opn_custom_bank",     "OPNMIDICustomBanksMenu"
+}
+
+OptionMenu "ReverbEdit" protected
+{
+	Class "ReverbEdit"
+	Title "$OPTMNU_REVERB"
+	StaticTextSwitchable 	"", "", "EvironmentName", 1
+	StaticTextSwitchable 	"", "", "EvironmentID"
+	StaticText " "
+	Submenu "$REVMNU_SELECT", "ReverbSelect"
+	Option "$REVMNU_TEST", "eaxedit_test", OnOff
+	StaticText " "
+	Submenu "$REVMNU_NEW", "ReverbNew"
+	Submenu "$REVMNU_SAVE", "ReverbSave"
+	Submenu "$REVMNU_EDIT", "ReverbSettings"
+}
+
+OptionMenu "ReverbSelect" protected
+{
+	Class "ReverbSelect"
+	Title "$REVMNU_SELECT"
+	// filled in by code
+}
+
+OptionMenu "ReverbSettings" protected
+{
+	Title "$REVMNU_EDIT"
+	SafeCommand "$OPTMNU_DEFAULTS", "revertenvironment"
+	StaticText " "
+	SliderReverbEditOption "$REVMNU_Environment_Size", 1, 100, 0.01, 3, 1
+	SliderReverbEditOption "$REVMNU_Environment_Diffusion", 0, 1, 0.01, 3, 2
+	SliderReverbEditOption "$REVMNU_Room", -10000, 0, 1, 0, 3
+	SliderReverbEditOption "$REVMNU_Room_HF", -10000, 0, 1, 0, 4
+	SliderReverbEditOption "$REVMNU_Room_LF", -10000, 0, 1, 0, 5
+	SliderReverbEditOption "$REVMNU_Decay_Time", 1, 200, 0.01, 3, 6
+	SliderReverbEditOption "$REVMNU_Decay_HF_Ratio", 1, 20, 0.01, 3, 7
+	SliderReverbEditOption "$REVMNU_Decay_LF_Ratio", 1, 20, 0.01, 3, 8
+	SliderReverbEditOption "$REVMNU_Reflections", -10000, 1000, 1, 0, 9
+	SliderReverbEditOption "$REVMNU_Reflections_Delay", 0, 0.3, 1, 3, 10
+	SliderReverbEditOption "$REVMNU_Reflections_Pan_X", -2000, 2000, 1, 3, 11
+	SliderReverbEditOption "$REVMNU_Reflections_Pan_Y", -2000, 2000, 1, 3, 12
+	SliderReverbEditOption "$REVMNU_Reflections_Pan_Z", -2000, 2000, 1, 3, 13
+	SliderReverbEditOption "$REVMNU_Reverb", -10000, 2000, 1, 0, 14
+	SliderReverbEditOption "$REVMNU_Reverb_Delay", 0, 0.1, 0.01, 3, 15
+	SliderReverbEditOption "$REVMNU_Reverb_Pan_X", -2000, 2000, 1, 3, 16
+	SliderReverbEditOption "$REVMNU_Reverb_Pan_Y", -2000, 2000, 1, 3, 17
+	SliderReverbEditOption "$REVMNU_Reverb_Pan_Z", -2000, 2000, 1, 3, 18
+	SliderReverbEditOption "$REVMNU_Echo_Time", 0.075, 0.25, 0.005, 3, 19
+	SliderReverbEditOption "$REVMNU_Echo_Depth", 0, 1, 0.01, 3, 20
+	SliderReverbEditOption "$REVMNU_Modulation_Time", 0.04, 4, 0.01, 3, 21
+	SliderReverbEditOption "$REVMNU_Modulation_Depth",0, 1, 0.01, 3, 22
+	SliderReverbEditOption "$REVMNU_Air_Absorption_HF", -100, 0, 0.01, 3, 23
+	SliderReverbEditOption "$REVMNU_HF_Reference", 10000, 200000, 1, 3, 24
+	SliderReverbEditOption "$REVMNU_LF_Reference",20, 10000, 0.1, 3, 25
+	SliderReverbEditOption "$REVMNU_Room_Rolloff_Factor",0, 10, 0.01, 3, 26
+	SliderReverbEditOption "$REVMNU_Diffusion",0, 100, 0.01, 3, 27
+	SliderReverbEditOption "$REVMNU_Density",0, 100, 0.01, 3, 28
+	StaticText " "
+	ReverbOption "$REVMNU_Reflections_Scale", 29, OnOff
+	ReverbOption "$REVMNU_Reflections_Delay_Scale", 30, OnOff
+	ReverbOption "$REVMNU_Decay_Time_Scale", 31, OnOff
+	ReverbOption "$REVMNU_Decay_HF_Limit", 32, OnOff
+	ReverbOption "$REVMNU_Reverb_Scale", 33, OnOff
+	ReverbOption "$REVMNU_Reverb_Delay_Scale", 34, OnOff
+	ReverbOption "$REVMNU_Echo_Time_Scale", 35, OnOff
+	ReverbOption "$REVMNU_Modulation_Time_Scale", 36, OnOff
+}
+
+OptionMenu "ReverbNew" protected
+{
+	Title "$REVMNU_NEW"
+	ReverbSelect "$REVMNU_Based_on", "ReverbSelect"
+	TextField "$REVMNU_Name", "reverbedit_name"
+	NumberField "$REVMNU_ID_1", "reverbedit_id1", 0, 255
+	NumberField "$REVMNU_ID_2", "reverbedit_id2", 0, 255
+	Command "$REVMNU_Create", "createenvironment", 0, 1
+}
+
+OptionMenu "ReverbSave" protected
+{
+	Class "ReverbSave"
+	Title "$REVMNU_SAVE"
+	Command "$REVMNU_Save", "savereverbs"
+	TextField "$REVMNU_File_name", "reverbsavename"
+	StaticText ""
+	StaticText "$REVMNU_Environments_to_save"
+	// Rest is filled in by code.
+}
+
+//-------------------------------------------------------------------------------------------
+//
+// Accessibility Menu
+//
+//-------------------------------------------------------------------------------------------
+
+OptionMenu AccessibilityOptions protected
+{
 	Title "$ACCMNU_TITLE"
-	
+
 	StaticText "$ACCMNU_TOOLTIP"
 	Slider "$ACCMNU_TOOLTIP_LINES", "m_tooltip_lines", 1, 4, 1, 0
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
@@ -2423,7 +2503,7 @@ OptionMenu ModReplayerOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	Option "$ACCMNU_TOOLTIP_SCALE", "m_tooltip_small", "OffOn"
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	
+
 	StaticText ""
 	StaticText "$ACCMNU_LIGHT"
 	Slider "$ACCMNU_LIGHT_EXTRA", "r_extralight", -64, 128, 1, 0
@@ -2433,13 +2513,13 @@ OptionMenu ModReplayerOptions protected
 
 	StaticText ""
 	SafeCommand "$OPTMNU_DEFAULTS", "acc_reset2defaults"
- }
+}
 
-/*=======================================
- *
- * Change Renderer Menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Change Renderer Menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionValue "RenderMode"
 {
@@ -2448,11 +2528,11 @@ OptionValue "RenderMode"
 	4,  "$OPTVAL_HWPOLY"
 }
 
-/*=======================================
- *
- * Video mode menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Video mode menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionValue ForceRatios
 {
@@ -2527,7 +2607,7 @@ OptionMenu VideoModeMenu protected
 	Option "$DSPLYMNU_VSYNC",					"vid_vsync", "OnOff"
 	Slider "$VIDMNU_MAXFPS",					"vid_maxfps", 35, 500, 1
 	Option "$DSPLYMNU_CAPFPS",					"cl_capfps", "OffOn"
-	
+
 	StaticText ""
 	StaticText "$VIDMNU_CUSTOMRES"
 	TextField "$VIDMNU_CUSTOMX", menu_resolution_custom_width
@@ -2576,11 +2656,11 @@ OptionMenu CustomResolutionMenu protected
 	Command "2560x1080", "menu_resolution_set_custom 2560 1080"
 }
 
-/*=======================================
- *
- * Network options menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Network options menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionMenu NetworkOptions protected
 {
@@ -2750,33 +2830,33 @@ OptionValue "Particles"
 
 OptionValue "HqResizeModes"
 {
-   0, "$OPTVAL_OFF"
-   1, "$OPTVAL_SCALENX"
-   2, "$OPTVAL_HQNX"
-   3, "$OPTVAL_HQNXMMX"
-   4, "$OPTVAL_NXBRZ"
-   5, "$OPTVAL_OLD_NXBRZ"
-   6, "$OPTVAL_NORMALNX"
+0, "$OPTVAL_OFF"
+1, "$OPTVAL_SCALENX"
+2, "$OPTVAL_HQNX"
+3, "$OPTVAL_HQNXMMX"
+4, "$OPTVAL_NXBRZ"
+5, "$OPTVAL_OLD_NXBRZ"
+6, "$OPTVAL_NORMALNX"
 }
 
 OptionValue "HqResizeMultipliers"
 {
-   1, "$OPTVAL_OFF"
-   2, "2x"
-   3, "3x"
-   4, "4x"
-   5, "5x"
-   6, "6x"
+1, "$OPTVAL_OFF"
+2, "2x"
+3, "3x"
+4, "4x"
+5, "5x"
+6, "6x"
 }
 
 OptionValue "HqResizeModesNoMMX"
 {
-   0, "$OPTVAL_OFF"
-   1, "$OPTVAL_SCALENX"
-   2, "$OPTVAL_HQNX"
-   4, "$OPTVAL_NXBRZ"
-   5, "$OPTVAL_OLD_NXBRZ"
-   6, "$OPTVAL_NORMALNX"
+0, "$OPTVAL_OFF"
+1, "$OPTVAL_SCALENX"
+2, "$OPTVAL_HQNX"
+4, "$OPTVAL_NXBRZ"
+5, "$OPTVAL_OLD_NXBRZ"
+6, "$OPTVAL_NORMALNX"
 }
 
 OptionValue "FogMode"
@@ -2931,98 +3011,11 @@ OptionMenu "PostProcessMenu" protected
 	Option "$GLPREFMNU_PALTONEMAPORDER",		gl_paltonemap_reverselookup,	"LookupOrder"
 }
 
-OptionMenu "ReverbEdit" protected
-{
-	Class "ReverbEdit"
-	Title "$OPTMNU_REVERB"
-	StaticTextSwitchable 	"", "", "EvironmentName", 1
-	StaticTextSwitchable 	"", "", "EvironmentID"
-	StaticText " "
-	Submenu "$REVMNU_SELECT", "ReverbSelect"
-	Option "$REVMNU_TEST", "eaxedit_test", OnOff
-	StaticText " "
-	Submenu "$REVMNU_NEW", "ReverbNew"
-	Submenu "$REVMNU_SAVE", "ReverbSave"
-	Submenu "$REVMNU_EDIT", "ReverbSettings"
-}
-
-OptionMenu "ReverbSelect" protected
-{
-	Class "ReverbSelect"
-	Title "$REVMNU_SELECT"
-	// filled in by code
-}
-
-OptionMenu "ReverbSettings" protected
-{
-	Title "$REVMNU_EDIT"
-	SafeCommand "$OPTMNU_DEFAULTS", "revertenvironment"
-	StaticText " "
-	SliderReverbEditOption "$REVMNU_Environment_Size", 1, 100, 0.01, 3, 1
-	SliderReverbEditOption "$REVMNU_Environment_Diffusion", 0, 1, 0.01, 3, 2
-	SliderReverbEditOption "$REVMNU_Room", -10000, 0, 1, 0, 3
-	SliderReverbEditOption "$REVMNU_Room_HF", -10000, 0, 1, 0, 4
-	SliderReverbEditOption "$REVMNU_Room_LF", -10000, 0, 1, 0, 5
-	SliderReverbEditOption "$REVMNU_Decay_Time", 1, 200, 0.01, 3, 6
-	SliderReverbEditOption "$REVMNU_Decay_HF_Ratio", 1, 20, 0.01, 3, 7
-	SliderReverbEditOption "$REVMNU_Decay_LF_Ratio", 1, 20, 0.01, 3, 8
-	SliderReverbEditOption "$REVMNU_Reflections", -10000, 1000, 1, 0, 9
-	SliderReverbEditOption "$REVMNU_Reflections_Delay", 0, 0.3, 1, 3, 10
-	SliderReverbEditOption "$REVMNU_Reflections_Pan_X", -2000, 2000, 1, 3, 11
-	SliderReverbEditOption "$REVMNU_Reflections_Pan_Y", -2000, 2000, 1, 3, 12
-	SliderReverbEditOption "$REVMNU_Reflections_Pan_Z", -2000, 2000, 1, 3, 13
-	SliderReverbEditOption "$REVMNU_Reverb", -10000, 2000, 1, 0, 14
-	SliderReverbEditOption "$REVMNU_Reverb_Delay", 0, 0.1, 0.01, 3, 15
-	SliderReverbEditOption "$REVMNU_Reverb_Pan_X", -2000, 2000, 1, 3, 16
-	SliderReverbEditOption "$REVMNU_Reverb_Pan_Y", -2000, 2000, 1, 3, 17
-	SliderReverbEditOption "$REVMNU_Reverb_Pan_Z", -2000, 2000, 1, 3, 18
-	SliderReverbEditOption "$REVMNU_Echo_Time", 0.075, 0.25, 0.005, 3, 19
-	SliderReverbEditOption "$REVMNU_Echo_Depth", 0, 1, 0.01, 3, 20
-	SliderReverbEditOption "$REVMNU_Modulation_Time", 0.04, 4, 0.01, 3, 21
-	SliderReverbEditOption "$REVMNU_Modulation_Depth",0, 1, 0.01, 3, 22
-	SliderReverbEditOption "$REVMNU_Air_Absorption_HF", -100, 0, 0.01, 3, 23
-	SliderReverbEditOption "$REVMNU_HF_Reference", 10000, 200000, 1, 3, 24
-	SliderReverbEditOption "$REVMNU_LF_Reference",20, 10000, 0.1, 3, 25
-	SliderReverbEditOption "$REVMNU_Room_Rolloff_Factor",0, 10, 0.01, 3, 26
-	SliderReverbEditOption "$REVMNU_Diffusion",0, 100, 0.01, 3, 27
-	SliderReverbEditOption "$REVMNU_Density",0, 100, 0.01, 3, 28
-	StaticText " "
-	ReverbOption "$REVMNU_Reflections_Scale", 29, OnOff
-	ReverbOption "$REVMNU_Reflections_Delay_Scale", 30, OnOff
-	ReverbOption "$REVMNU_Decay_Time_Scale", 31, OnOff
-	ReverbOption "$REVMNU_Decay_HF_Limit", 32, OnOff
-	ReverbOption "$REVMNU_Reverb_Scale", 33, OnOff
-	ReverbOption "$REVMNU_Reverb_Delay_Scale", 34, OnOff
-	ReverbOption "$REVMNU_Echo_Time_Scale", 35, OnOff
-	ReverbOption "$REVMNU_Modulation_Time_Scale", 36, OnOff
-}
-
-OptionMenu "ReverbNew" protected
-{
-	Title "$REVMNU_NEW"
-	ReverbSelect "$REVMNU_Based_on", "ReverbSelect"
-	TextField "$REVMNU_Name", "reverbedit_name"
-	NumberField "$REVMNU_ID_1", "reverbedit_id1", 0, 255
-	NumberField "$REVMNU_ID_2", "reverbedit_id2", 0, 255
-	Command "$REVMNU_Create", "createenvironment", 0, 1
-}
-
-OptionMenu "ReverbSave" protected
-{
-	Class "ReverbSave"
-	Title "$REVMNU_SAVE"
-	Command "$REVMNU_Save", "savereverbs"
-	TextField "$REVMNU_File_name", "reverbsavename"
-	StaticText ""
-	StaticText "$REVMNU_Environments_to_save"
-	// Rest is filled in by code.
-}
-
-/*=======================================
- *
- * Language menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Language menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionString "LanguageOptions"
 {
@@ -3056,11 +3049,11 @@ OptionString "LanguageOptions"
 //	"zh-Hant", "繁体中文 (Traditional Chinese)"
 }
 
-/*=======================================
- *
- * Option Search menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Option Search menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionMenu "os_Menu"
 {
@@ -3074,11 +3067,11 @@ OptionValue "os_isanyof_values"
 	1, "$OS_ANY"
 }
 
-/*=======================================
- *
- * Vulkan Menu
- *
- *=======================================*/
+//-------------------------------------------------------------------------------------------
+//
+// Vulkan Menu
+//
+//-------------------------------------------------------------------------------------------
 
 OptionMenu "vkoptions"
 {
