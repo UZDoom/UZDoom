@@ -22,6 +22,8 @@
 **
 */
 
+#include <algorithm>
+
 #include "basics.h"
 #include "c_cvars.h"
 #include "filesystem.h"
@@ -34,6 +36,7 @@
 #include "zstring.h"
 
 EXTERN_CVAR(Int, developer);
+CVAR(Bool, debug_languages, false, CVAR_GLOBALCONFIG | CVAR_ARCHIVE);
 
 //==========================================================================
 //
@@ -66,78 +69,134 @@ FString FStringTable::GetSystemLocale()
 //
 // Map old semi-made-up language codes to IETF language tags
 //
+// https://zdoom.org/w/index.php?title=LANGUAGE#Language_codes
+// https://docs.google.com/spreadsheets/d/1pvwXEgytkor9SClCiDn4j5AH7FedyXS-ocCbsuQIXDU
+//
 //==========================================================================
 
-inline void RemapLegacyLanguages(FName &name, FString &lang)
+inline bool RemapLegacyLanguages(FName &name, FString &lang)
 {
 	FName oldname = name;
 
-	constexpr bool esmx = false; // treat all of these as es_MX, or use more country-specific codes (which I guessed)
-	constexpr bool engb = false; // treat all of these as en_GB, or use more country-specific codes (which I guessed)
 	switch (name.GetIndex())
 	{
-		case NAME_Default:  name = NAME_LANG_EN_US;   break;
-		case NAME_LANG_by:  name = NAME_LANG_BE;      break;
-		case NAME_LANG_nb:  name = NAME_LANG_NB_NO;   break;
-		case NAME_LANG_no:  name = NAME_LANG_NB_NO;   break;
-		case NAME_LANG_pt:  name = NAME_LANG_PT_BR;   break;
-		case NAME_LANG_ptg: name = NAME_LANG_PT;      break;
-
-		case NAME_LANG_ena: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_AU;       break;
-		case NAME_LANG_enb: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_BZ;       break;
-		case NAME_LANG_enc: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_CA;       break;
-		case NAME_LANG_eng: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_GB;       break;
-		case NAME_LANG_eni: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_IN;       break;
-		case NAME_LANG_enj: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_JM;       break;
-		case NAME_LANG_enl: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_IE;       break;
-		case NAME_LANG_ens: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_ZA;       break;
-		case NAME_LANG_ent: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_TT;       break;
-		case NAME_LANG_enw: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_GB_WALES; break;
-		case NAME_LANG_enz: name = engb? NAME_LANG_EN_GB: NAME_LANG_EN_NZ;       break;
-
-		case NAME_LANG_esa: name = esmx? NAME_LANG_ES_AR: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esb: name = esmx? NAME_LANG_ES_BO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esc: name = esmx? NAME_LANG_ES_CO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esd: name = esmx? NAME_LANG_ES_DO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_ese: name = esmx? NAME_LANG_ES_EC: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esf: name = esmx? NAME_LANG_ES_PH: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esg: name = esmx? NAME_LANG_ES_GT: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esh: name = esmx? NAME_LANG_ES_HN: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esi: name = esmx? NAME_LANG_ES:    NAME_LANG_ES_MX; break;
-		case NAME_LANG_esl: name = esmx? NAME_LANG_ES_CL: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esm: name = esmx? NAME_LANG_ES_MX: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esn: name = esmx? NAME_LANG_ES:    NAME_LANG_ES_MX; break;
-		case NAME_LANG_eso: name = esmx? NAME_LANG_ES_BO: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esr: name = esmx? NAME_LANG_ES_CR: NAME_LANG_ES_MX; break;
-		case NAME_LANG_ess: name = esmx? NAME_LANG_ES_SV: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esu: name = esmx? NAME_LANG_ES_US: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esv: name = esmx? NAME_LANG_ES_VE: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esy: name = esmx? NAME_LANG_ES_PY: NAME_LANG_ES_MX; break;
-		case NAME_LANG_esz: name = esmx? NAME_LANG_ES_BZ: NAME_LANG_ES_MX; break;
-
+		case NAME_LANG_by:
+			name = "be";
+			break;
+		case NAME_LANG_ena:
+		case NAME_LANG_enb:
+		case NAME_LANG_enc:
+		case NAME_LANG_eng:
+		case NAME_LANG_eni:
+		case NAME_LANG_enj:
+		case NAME_LANG_enl:
+		case NAME_LANG_ens:
+		case NAME_LANG_ent:
+		case NAME_LANG_enw:
+		case NAME_LANG_enz:
+			name = "en-GB";
+			break;
+		case NAME_Default:
+		case NAME_LANG_enu:
+			name = "en-US";
+			break;
+		case NAME_LANG_esa:
+		case NAME_LANG_esb:
+		case NAME_LANG_esc:
+		case NAME_LANG_esd:
+		case NAME_LANG_ese:
+		case NAME_LANG_esf:
+		case NAME_LANG_esg:
+		case NAME_LANG_esh:
+		case NAME_LANG_esi:
+		case NAME_LANG_esl:
+		case NAME_LANG_esm:
+		case NAME_LANG_esn:
+		case NAME_LANG_eso:
+		case NAME_LANG_esr:
+		case NAME_LANG_ess:
+		case NAME_LANG_esu:
+		case NAME_LANG_esv:
+		case NAME_LANG_esy:
+		case NAME_LANG_esz:
+			name = "es-MX";
+			break;
+		case NAME_LANG_ja:
 		case NAME_LANG_jp:
-		case NAME_LANG_JA_JP: name = NAME_LANG_JA; break;
-
-		case NAME_LANG_KO_KP:
-		case NAME_LANG_KO_KR: name = NAME_LANG_KO; break;
-
-		case NAME_LANG_chs:
-		case NAME_LANG_zho:
-		case NAME_LANG_ZH_CN:
-		case NAME_LANG_ZH_SG: name = NAME_LANG_ZH_HANS; break;
+			name = "ja-JP";
+			break;
+		case NAME_LANG_nb:
+		case NAME_LANG_no:
+			name = "nb-NO";
+			break;
+		case NAME_LANG_ptg:
+			name = "pt";
+			break;
 		case NAME_LANG_chi:
 		case NAME_LANG_cht:
-		case NAME_LANG_ZH_HK:
-		case NAME_LANG_ZH_MO:
-		case NAME_LANG_ZH_TW: name = NAME_LANG_ZH_HANT; break;
+			name = "zh-Hant";
+			break;
+		case NAME_LANG_chs:
+		case NAME_LANG_zho:
+			name = "zh-Hans";
+			break;
 	}
 
-	if (name != oldname) lang = name.GetChars();
+	bool updated = name != oldname;
+	if (updated) lang = name.GetChars();
+	return updated;
+}
+
+//==========================================================================
+//
+// Map languages to other languages
+//
+// Used too get the proper fallback of a language, if the region inherits
+// from another region (or script) instead the base ISO 639 language code
+// of the tag
+//
+//==========================================================================
+
+inline FName GetFallback(FName name)
+{
+	// `K` must always be a normalized IETF BCP 47 triplet (lang-script-region). Use * for any omitted section
+	// `aa-BB` -> `aa-*-BB`, `aa-Cccc` -> `aa-Cccc-*`
+	static struct { FName K; FName V; } mappings[] = {
+		{"en-*-AU", "en-GB"},
+		{"en-*-CA", "en-GB"},
+		{"en-*-SD", "en-GB"}, // TODO: support Subdivision
+		{"zh-*-CN", "zh-Hans-CN"},
+		{"zh-*-HK", "zh-Hans-HK"},
+		{"zh-*-MO", "zh-Hant-MO"},
+		{"zh-*-SG", "zh-Hans-SG"},
+		{"zh-*-TW", "zh-Hant-TW"},
+	};
+
+	constexpr size_t count = sizeof(mappings)/sizeof(mappings[0]);
+	static bool sorted = false;
+	if (!sorted)
+	{
+		std::sort(mappings, mappings+count, [](auto A, auto B) { return A.K < B.K; });
+		sorted = true;
+	}
+
+	int lo = 0, hi = count - 1, mid;
+	while (lo <= hi)
+	{
+		mid = lo + (hi - lo) / 2;
+		if (mappings[mid].K == name) return mappings[mid].V;
+		if (mappings[mid].K < name) lo = mid + 1;
+		else hi = mid - 1;
+	}
+
+	return NAME_None;
 }
 
 //==========================================================================
 //
 // Take ietf language tag, and extract all of the relevant bits
+//
+// TODO: support extensions (see: English from Wales)
 //
 //==========================================================================
 
@@ -201,16 +260,27 @@ inline void ExtractComponents(FString &str, FString &lang, FString &script, FStr
 LangID FStringTable::GetID(FString lang)
 {
 	FName name = lang;
+	FString diagnostics;
 
-	static FName systemlocale = NAME_None;
+	if (debug_languages) diagnostics.AppendFormat("lang: %s", lang.GetChars());
 
-	if (name == NAME_Auto && systemlocale != NAME_None) name = systemlocale;
-	if (name == NAME_Auto) systemlocale = name = lang = GetSystemLocale();
+	if (name == NAME_Auto)
+	{
+		name = lang = GetSystemLocale();
+		if (debug_languages) diagnostics.AppendFormat("(%s)", lang.GetChars());
+	}
 
-	RemapLegacyLanguages(name, lang);
+	if (RemapLegacyLanguages(name, lang) && debug_languages)
+	{
+		diagnostics.AppendFormat(", mapped: %s", lang.GetChars());
+	}
 
-	auto idPtr = langMap.CheckKey(name);
-	if (idPtr) return *idPtr;
+	auto ptr = langMap.CheckKey(name);
+	if (ptr)
+	{
+		if (debug_languages) Printf("%s.\n", diagnostics.GetChars());
+		return *ptr;
+	}
 
 	FString _lang, _script, _region;
 	ExtractComponents(lang, _lang, _script, _region);
@@ -219,28 +289,60 @@ LangID FStringTable::GetID(FString lang)
 	auto script     = _lang + "-" + _script + "-*";
 	auto language   = _lang + "-*-*";
 
+	ptr = langMap.CheckKey(normalized);
+	if (ptr)
+	{
+		if (debug_languages) Printf("%s.\n", diagnostics.GetChars());
+		return *ptr;
+	}
+
 	LangID id = {
-		name,
-		CalcCRC32(lang.GetChars()),
+		normalized,
+		GetFallback(normalized),
 		CalcCRC32(normalized.GetChars()),
 		CalcCRC32(script.GetChars()),
-		CalcCRC32(language.GetChars())
+		CalcCRC32(language.GetChars()),
 	};
-	auto ptr = &langMap.Insert(name, id);
+	if (name != normalized) langMap.Insert(normalized, id);
+	ptr = &langMap.Insert(normalized, id);
 	langRevMap.Insert(ptr->normalized, ptr);
 
-	auto fallback = langRevMap.CheckKey(ptr->script);
-	if (!fallback || ((*fallback)->script != (*fallback)->normalized))
+	if (debug_languages)
 	{
-		auto ptr = &langMap.Insert(script, id);
-		langRevMap.Insert(ptr->script, ptr);
+		diagnostics.AppendFormat(
+			" inserted: %s (%c-%x)",
+			normalized.GetChars(),
+			ptr->normalized == ptr->language? 'L': ptr->normalized == ptr->script? 'S': 'R',
+			ptr->normalized
+		);
+
+		if (ptr->fallback != NAME_None) diagnostics.AppendFormat(" '%s'?", ptr->fallback.GetChars());
 	}
-	fallback = langRevMap.CheckKey(ptr->language);
-	if (!fallback || ((*fallback)->language != (*fallback)->normalized))
+
+	if (ptr->normalized != ptr->script)
 	{
-		auto ptr = &langMap.Insert(language, id);
-		langRevMap.Insert(ptr->language, ptr);
+		auto fallback = langRevMap.CheckKey(ptr->script);
+		if (debug_languages) diagnostics.AppendFormat(", %s", script.GetChars());
+		if (!fallback)
+		{
+			auto ptr = &langMap.Insert(script, id);
+			langRevMap.Insert(ptr->script, ptr);
+			diagnostics.AppendFormat(" (%c-%x)", ptr->script == ptr->language? 'L': 'S', ptr->script);
+		}
 	}
+	if (ptr->normalized != ptr->language)
+	{
+		auto fallback = langRevMap.CheckKey(ptr->language);
+		if (debug_languages) diagnostics.AppendFormat(", %s", language.GetChars());
+		if (!fallback)
+		{
+			auto ptr = &langMap.Insert(language, id);
+			langRevMap.Insert(ptr->language, ptr);
+			if (debug_languages) diagnostics.AppendFormat(" (L-%x)", ptr->language);
+		}
+	}
+
+	if (debug_languages) Printf("%s\n", diagnostics.GetChars());
 
 	return id;
 }
@@ -421,13 +523,10 @@ bool FStringTable::ParseLanguageCSV(int filenum, const char* buffer, size_t size
 				{
 					if (lang.CompareNoCase("default") == 0)
 					{
-						langrows.Push(std::make_pair(column, default_table));
+						lang = "en-US";
 						hasDefaultEntry = true;
 					}
-					else
-					{
-						langrows.Push(std::make_pair(column, GetID(lang).normalized));
-					}
+					langrows.Push(std::make_pair(column, GetID(lang).normalized));
 				}
 			}
 		}
@@ -517,20 +616,21 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 					sc.MustGetString ();
 					continue;
 				}
+				auto id = GetID(sc.String);
 				if (len == 1 && sc.String[0] == '*')
 				{
 					activeMaps.Clear();
 					activeMaps.Push(global_table);
 				}
-				else if (len == 7 && stricmp (sc.String, "default") == 0)
+				else if (id.normalized == default_table)
 				{
 					activeMaps.Clear();
-					activeMaps.Push(default_table);
+					activeMaps.Push(id.normalized);
 					hasDefaultEntry = true;
 				}
 				else if (activeMaps.Size() != 1 || (activeMaps[0] != default_table && activeMaps[0] != global_table))
 				{
-					activeMaps.Push(GetID(sc.String).normalized);
+					activeMaps.Push(id.normalized);
 				}
 
 				sc.MustGetString ();
@@ -545,7 +645,7 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 				// such a lump.
 				if (!sc.isText())
 				{
-					if (!errordone) Printf("Skipping binary 'LANGUAGE' lump.\n"); 
+					if (!errordone) Printf("Skipping binary 'LANGUAGE' lump.\n");
 					errordone = true;
 					return;
 				}
@@ -605,7 +705,7 @@ void FStringTable::DeleteString(uint32_t langid, FName label)
 //==========================================================================
 //
 // This deletes all older entries for a given label. This gets called
-// when a string in the default table gets updated. 
+// when a string in the default table gets updated.
 //
 //==========================================================================
 
@@ -671,22 +771,40 @@ void FStringTable::UpdateLanguage(const char *language)
 
 	auto LanguageID = ((langlen < 2) ? GetID("default"): GetID(language));
 	langName = LanguageID.name;
+	auto FallbackID = (LanguageID.fallback==NAME_None)? (LangID{NAME_None}): GetID(LanguageID.fallback.GetChars());
+	auto fallback = FallbackID.name;
 
 	currentLanguageSet.Clear();
 
-	auto checkone = [&](uint32_t lang_id)
-	{
-		auto list = allStrings.CheckKey(lang_id);
-		if (list && currentLanguageSet.FindEx([&](const auto &element) { return element.first == lang_id; }) == currentLanguageSet.Size())
-			currentLanguageSet.Push(std::make_pair(lang_id, list));
+	struct { char k; uint32_t v; } order[] = {
+		{'O', override_table},
+		{'G', global_table},
+		{'R', LanguageID.normalized},
+		{'r', FallbackID.name == NAME_None? NAME_None: FallbackID.normalized},
+		{'S', LanguageID.script},
+		{'s', FallbackID.name == NAME_None? NAME_None: FallbackID.script},
+		{'L', LanguageID.language},
+		{'l', FallbackID.name == NAME_None? NAME_None: FallbackID.language},
+		{'D', default_table},
 	};
+	int count = sizeof(order) / sizeof(order[0]);
 
-	checkone(override_table);
-	checkone(global_table);
-	checkone(LanguageID.normalized);
-	checkone(LanguageID.script);
-	checkone(LanguageID.language);
-	checkone(default_table);
+	FString diagnostics = "";
+	for (int i = 0; i < count; i++)
+	{
+		auto id = order[i].k;
+		auto lang = order[i].v;
+		for (int j = i-1; j >= 0; j--)
+		{
+			if (order[j].v == lang) { lang = NAME_None; break; }
+		}
+		if (lang == NAME_None) continue;
+		auto list = allStrings.CheckKey(lang);
+		if (!list) continue;
+		currentLanguageSet.Push(std::make_pair(lang, list));
+		if (debug_languages) diagnostics.AppendFormat(" %c-%x", id, lang);
+	}
+	if (debug_languages) Printf("Strings %s:%s\n", language, diagnostics.GetChars());
 }
 
 //==========================================================================
@@ -787,12 +905,14 @@ const char *FStringTable::CheckString(const char *name, uint32_t *langtable, int
 	if (gender == -1) gender = defaultgender;
 	if (gender < 0 || gender > 3) gender = 0;
 	FName nm(name, true);
+	// Printf("%s\n", nm.GetChars());
 	if (nm != NAME_None)
 	{
 		TableElement* bestItem = nullptr;
 		for (auto map : currentLanguageSet)
 		{
 			auto item = map.second->CheckKey(nm);
+			// Printf("%s\n", nm.GetChars());
 			if (item)
 			{
 				if (bestItem && bestItem->filenum > item->filenum)
@@ -904,5 +1024,3 @@ const char *StringMap::MatchString (const char *string) const
 }
 
 FStringTable GStrings;
-
-

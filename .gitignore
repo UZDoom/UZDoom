@@ -20,6 +20,7 @@ wadsrc*/**/language.0
 .vscode
 .cache
 *.kate-swp
+.kate*
 *.geany
 
 # private dev files

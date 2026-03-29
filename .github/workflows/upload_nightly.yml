@@ -3,72 +3,34 @@ name: Nightly Builds
 on:
   workflow_run:
     workflows: ["Continuous Integration"]
-    branches: [trunk]
-    types:
-      - completed
+    branches: [trunk, experimental]
+    types: [completed]
 
 jobs:
-  upload_nightly:
-    name: Upload Nightly
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+  preview:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'trunk' }}
+    uses: ./.github/workflows/release_core.yml
     permissions:
       contents: write
       actions: read
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-          sparse-checkout: |
-            README.md
+    with:
+      title: Preview
+      run-id: ${{ github.event.workflow_run.id }}
+      run-url: ${{ github.event.workflow_run.html_url }}
+      branch: ${{ github.event.workflow_run.head_branch }}
+      tag-name: x-preview
+      message: They are development builds, so they may be unstable and have issues. Please report any problems you find.
 
-      - name: Download Artifacts
-        uses: actions/download-artifact@v8
-        with:
-          run-id: ${{ github.event.workflow_run.id }}
-          github-token: ${{ github.token }}
-          path: artifacts
-          pattern: "* Release"
-
-      - name: Rename
-        shell: bash
-        run: |
-          mkdir -p release
-
-          function move() {
-            [ "$#" == 2 ] || return;
-            dir="$(dirname "$1")";
-            [ -d "$dir" ] && [ -f "$1" ] && mv "$1" "$2";
-          }
-
-          move "artifacts/Windows Release"/*.zip release/Windows-UZDoom-Nightly.zip
-          move "artifacts/MacOS Release"/*.zip release/MacOS-UZDoom-Nightly.zip
-          move "artifacts/Linux Release"/*.AppImage release/Linux-UZDoom-Nightly.AppImage
-
-      - id: tag
-        name: Update Tag
-        run: |
-          echo "describe=$(git describe --tags --exclude nightly)" >> "$GITHUB_OUTPUT"
-          git tag -d nightly || true
-          git push origin :refs/tags/nightly || true
-          git tag nightly
-          git push origin nightly
-
-      - name: Upload
-        uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
-        with:
-          name: UZDoom Nightly
-          tag_name: nightly
-          draft: false
-          prerelease: true
-          make_latest: false
-          generate_release_notes: false
-          files: release/**
-          body: |
-            These builds are automatically generated based on the latest commit to trunk.
-
-            They are development builds, so they may be unstable and have issues. Please report any problems you find.
-
-            **Version:** `${{ steps.tag.outputs.describe }}`
-            **Message:** ${{ github.event.workflow_run.head_commit.message || github.event.head_commit.message }}
-            **Workflow:** [Logs](${{ github.event.workflow_run.html_url }}) - [Artifacts](https://nightly.link/?url=${{ github.event.workflow_run.html_url }})
+  experimental:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'experimental' }}
+    uses: ./.github/workflows/release_core.yml
+    permissions:
+      contents: write
+      actions: read
+    with:
+      title: Experimental
+      run-id: ${{ github.event.workflow_run.id }}
+      run-url: ${{ github.event.workflow_run.html_url }}
+      branch: ${{ github.event.workflow_run.head_branch }}
+      tag-name: x-testing
+      message: ⚠️ They are experimental development builds, specifically to test upcoming features. **Use at your own risk**.

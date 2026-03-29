@@ -1,8 +1,9 @@
 [default]
 
+// TODO: move these to the language db (or remove this file)
+
 // The contents of this file are not supposed to be translated!!!
 // These strings are needed in the string table only so that they can be replaced by Dehacked.
-
 
 // Music names for Doom. 
 // Note that these names are not prefixed with 'd_' because that's how Dehacked patches expect them.
