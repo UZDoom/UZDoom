@@ -80,6 +80,8 @@ CUSTOM_CVAR(Int, vid_maxfps, 500, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	}
 }
 
+CVAR(Bool, vid_shadersupport, true, CVAR_SYSTEM_ONLY);
+
 CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	// [SP] This may seem pointless - but I don't want to implement live switching just
@@ -110,6 +112,8 @@ CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALC
 		Printf("Selecting OpenGL backend...\n");
 		break;
 	}
+
+	vid_shadersupport = self != BACKEND_OPENGLES;
 
 	static bool notice = false;
 	if (notice) Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
