@@ -51,6 +51,7 @@ class OptionMenuItem : MenuItemBase
 		mCentered = center;
 		mGrayCheck = graycheck;
 		mGrayCheckVal = graycheckVal;
+
 		switch (graycheckMode)
 		{
 		case 'Gray':    mGrayCheckMode = Gray;     break;
@@ -58,11 +59,11 @@ class OptionMenuItem : MenuItemBase
 		case 'GrayInv': mGrayCheckMode = Gray|Inv; break;
 		case 'HideInv': mGrayCheckMode = Hide|Inv; break;
 		default:
+			if (mGrayCheck == null) break;
 			ThrowAbortException(
 				"Unknown graycheckMode '%s'. Expected Gray|Hide|GrayInv|HideInv",
 				graycheckMode
 			);
-			break;
 		}
 	}
 
@@ -145,9 +146,17 @@ class OptionMenuItem : MenuItemBase
 class OptionMenuItemSubmenu : OptionMenuItem
 {
 	int mParam;
-	OptionMenuItemSubmenu Init(String label, Name command, int param = 0, bool centered = false)
+	OptionMenuItemSubmenu Init(
+		String label,
+		Name command,
+		int param = 0,
+		bool centered = false,
+		CVar graycheck = null,
+		int graycheckVal = 0,
+		name graycheckMode = 'Hide'
+	)
 	{
-		Super.init(label, command, centered);
+		Super.init(label, command, centered, graycheck, graycheckVal, graycheckMode);
 		mParam = param;
 		return self;
 	}
@@ -179,9 +188,17 @@ class OptionMenuItemSubmenu : OptionMenuItem
 class OptionMenuItemLabeledSubmenu : OptionMenuItemSubmenu
 {
 	CVar mLabelCVar;
-	OptionMenuItemSubmenu Init(String label, CVar labelcvar, Name command, int param = 0)
+	OptionMenuItemSubmenu Init(
+		String label,
+		CVar labelcvar,
+		Name command,
+		int param = 0,
+		CVar graycheck = null,
+		int graycheckVal = 0,
+		name graycheckMode = 'Hide'
+	)
 	{
-		Super.init(label, command, false);
+		Super.init(label, command, param, false, graycheck, graycheckVal, graycheckMode);
 		mLabelCVar = labelcvar;
 		return self;
 	}
@@ -209,9 +226,17 @@ class OptionMenuItemCommand : OptionMenuItemSubmenu
 	bool mCloseOnSelect;
 	private bool mUnsafe;
 
-	OptionMenuItemCommand Init(String label, Name command, bool centered = false, bool closeonselect = false)
+	OptionMenuItemCommand Init(
+		String label,
+		Name command,
+		bool centered = false,
+		bool closeonselect = false,
+		CVar graycheck = null,
+		int graycheckVal = 0,
+		name graycheckMode = 'Hide'
+	)
 	{
-		Super.Init(label, command, 0, centered);
+		Super.Init(label, command, 0, centered, graycheck, graycheckVal, graycheckMode);
 		ccmd = command;
 		mCloseOnSelect = closeonselect;
 		mUnsafe = true;
@@ -254,10 +279,16 @@ class OptionMenuItemSafeCommand : OptionMenuItemCommand
 {
 	String mPrompt;
 
-
-	OptionMenuItemSafeCommand Init(String label, Name command, String prompt = "")
+	OptionMenuItemSafeCommand Init(
+		String label,
+		Name command,
+		String prompt = "",
+		CVar graycheck = null,
+		int graycheckVal = 0,
+		name graycheckMode = 'Gray'
+	)
 	{
-		Super.Init(label, command);
+		Super.Init(label, command, false, false, graycheck, graycheckVal, graycheckMode);
 		mPrompt = prompt;
 		return self;
 	}
@@ -685,9 +716,15 @@ class OptionMenuItemStaticText : OptionMenuItem
 	int mColor;
 
 	// this function is only for use from MENUDEF, it needs to do some strange things with the color for backwards compatibility.
-	OptionMenuItemStaticText Init(String label, int cr = -1)
+	OptionMenuItemStaticText Init(
+		String label,
+		int cr = -1,
+		CVar graycheck = null,
+		int graycheckVal = 0,
+		name graycheckMode = 'Hide'
+	)
 	{
-		Super.Init(label, 'None', true);
+		Super.Init(label, 'None', true, graycheck, graycheckVal, graycheckMode);
 		mColor = OptionMenuSettings.mFontColor;
 		if ((cr & 0xffff0000) == 0x12340000) mColor = cr & 0xffff;
 		else if (cr > 0) mColor = OptionMenuSettings.mFontColorHeader;
@@ -727,9 +764,17 @@ class OptionMenuItemStaticTextSwitchable : OptionMenuItem
 	int mCurrent;
 
 	// this function is only for use from MENUDEF, it needs to do some strange things with the color for backwards compatibility.
-	OptionMenuItemStaticTextSwitchable Init(String label, String label2, Name command, int cr = -1)
+	OptionMenuItemStaticTextSwitchable Init(
+		String label,
+		String label2,
+		Name command,
+		int cr = -1,
+		CVar graycheck = null,
+		int graycheckVal = 0,
+		name graycheckMode = 'Hide'
+	)
 	{
-		Super.Init(label, command, true);
+		Super.Init(label, command, true, graycheck, graycheckVal, graycheckMode);
 		mAltText = label2;
 		mCurrent = 0;
 

@@ -1315,4 +1315,10 @@ xa(LANG_no, No)
 xy(LANG_ptg, "ptg")
 xy(LANG_zho, "zho")
 
+// for menu GrayCheckMode
+xx(Gray)
+xx(Hide)
+xx(GrayInv)
+xx(HideInv)
+
 // clang-format on
