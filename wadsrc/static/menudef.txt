@@ -882,19 +882,6 @@ OptionMenu "JoystickConfigMenu" protected
 //
 //-------------------------------------------------------------------------------------------
 
-OptionValue BlendMethods
-{
-	0.0, "$OPTVAL_CLASSIC"
-	1.0, "$OPTVAL_PRECISE"
-}
-
-OptionValue SkyModes
-{
-	0.0, "$OPTVAL_NORMAL"
-	1.0, "$OPTVAL_STRETCH"
-	2.0, "$OPTVAL_CAPPED"
-}
-
 OptionValue RocketTrailTypes
 {
 	0.0, "$OPTVAL_OFF"
@@ -931,13 +918,6 @@ OptionValue Wipes
 	3.0, "$OPTVAL_CROSSFADE"
 }
 
-OptionValue Endoom
-{
-	0.0, "$OPTVAL_OFF"
-	1.0, "$OPTVAL_ON"
-	2.0, "$OPTVAL_ONLYMODIFIED"
-}
-
 OptionValue Contrast
 {
 	0.0, "$OPTVAL_OFF"
@@ -959,70 +939,76 @@ OptionValue VanillaTrans
 	2.0, "$OPTVAL_AUTO"
 }
 
-OptionValue PreferBackend
+OptionMenu "VideoOptions" protected
 {
-	0, "$OPTVAL_OPENGL"
-	1, "$OPTVAL_VULKAN"
-	2, "$OPTVAL_OPENGLES"
+	Title "$DSPLYMNU_TITLE"
+
+	Submenu "$DSPLYMNU_GLOPT",                 OpenGLOptions
+	Submenu "$DSPLYMNU_SWOPT",                 SWROptions
+	Submenu "$DSPLYMNU_IMAGEADJUST",           ImageAdjustMenu
+	StaticText " "
+	Submenu "$DSPLYMNU_VKOPT",                 VKOptions
+	Submenu "$GLMNU_TEXOPT",                   GLTextureGLOptions
+	Submenu "$GLMNU_DYNLIGHT",                 GLLightOptions
+	StaticText " "
+	Slider "$DSPLYMNU_SCREENSIZE",             screenblocks,           3.0, 12.0, 1.0, 0
+	StaticText " "
+	Slider "$DSPLYMNU_FOV",                    fov,                    75.0, 120.0, 0.1, 1
+	StaticText " "
+	Option "$DSPLYMNU_SPRITESHADOW",           r_actorspriteshadow,    SpriteShadowModes
+	Option "$DSPLYMNU_CUSTOMINVERTMAP",        cl_customizeinvulmap,   OnOff
+	ColorPicker "$DSPLYMNU_CUSTOMINVERTC1",    cl_custominvulmapcolor1
+	ColorPicker "$DSPLYMNU_CUSTOMINVERTC2",    cl_custominvulmapcolor2
+	Option "$DSPLYMNU_WIPETYPE",               wipetype,               Wipes
+	Option "$DSPLYMNU_DRAWFUZZ",               r_drawfuzz,             Fuzziness
+	Option "$DSPLYMNU_OLDTRANS",               r_vanillatrans,         VanillaTrans
+	Option "$DSPLYMNU_FAKECONTRAST",           r_fakecontrast,         Contrast
+	Option "$DSPLYMNU_ROCKETTRAILS",           cl_rockettrails,        RocketTrailTypes
+	Option "$DSPLYMNU_ROCKETEXPSTYLE",         addrocketexplosion,     RocketExplosionStyles
+	Option "$DSPLYMNU_BLOODTYPE",              cl_bloodtype,           BloodTypes
+	Option "$DSPLYMNU_PUFFTYPE",               cl_pufftype,            PuffTypes
+	Slider "$DSPLYMNU_MAXPARTICLES",           r_maxparticles,         100, 10000, 100, 0
+	Slider "$DSPLYMNU_MAXDECALS",              cl_maxdecals,           0, 10000, 100, 0
+	Option "$DSPLYMNU_PLAYERSPRITES",          r_drawplayersprites,    OnOff
+	Option "$DSPLYMNU_DEATHCAM",               r_deathcamera,          OnOff
+	Option "$DSPLYMNU_TELEZOOM",               telezoom,               OnOff
+	Slider "$DSPLYMNU_QUAKEINTENSITY",         r_quakeintensity,       0.0, 1.0, 0.05, 2
+	Option "$DSPLYMNU_NOMONSTERINTERPOLATION", nomonsterinterpolation, NoYes
 }
 
-OptionMenu "TrueColorOptions" protected
+OptionValue BlendMethods
 {
-	Title "$TCMNU_TITLE"
-	StaticText " "
-	Option "$TCMNU_MINFILTER",				"r_minfilter", "OnOff"
-	Option "$TCMNU_MAGFILTER",				"r_magfilter", "OnOff"
-	Option "$TCMNU_MIPMAP",					"r_mipmap", "OnOff"
+	0.0, "$OPTVAL_CLASSIC"
+	1.0, "$OPTVAL_PRECISE"
+}
+
+OptionValue SkyModes
+{
+	0.0, "$OPTVAL_NORMAL"
+	1.0, "$OPTVAL_STRETCH"
+	2.0, "$OPTVAL_CAPPED"
 }
 
 OptionMenu "SWROptions" protected
 {
 	Title "$DSPLYMNU_SWOPT"
-	Submenu "$DSPLYMNU_TCOPT",			"TrueColorOptions"
-	Option "$DSPLYMNU_BLENDMETHOD",				"r_blendmethod", "BlendMethods"
+	Submenu "$DSPLYMNU_TCOPT",        TrueColorOptions
+	Option "$DSPLYMNU_BLENDMETHOD",   r_blendmethod,                 BlendMethods
 	StaticText " "
-	Option "$DSPLYMNU_SKYMODE",					"r_skymode", "SkyModes"
-	Option "$DSPLYMNU_LINEARSKY",				"r_linearsky", "OnOff"
-	Option "$DSPLYMNU_GZDFULLBRIGHT",			"r_fullbrightignoresectorcolor", "OnOff"
-	Option "$DSPLYMNU_SCALEFUZZ",				"r_fuzzscale", "OnOff"
-	Option "$DSPLYMNU_MODELS",					"r_models", "OnOff"
+	Option "$DSPLYMNU_SKYMODE",       r_skymode,                     SkyModes
+	Option "$DSPLYMNU_LINEARSKY",     r_linearsky,                   OnOff
+	Option "$DSPLYMNU_GZDFULLBRIGHT", r_fullbrightignoresectorcolor, OnOff
+	Option "$DSPLYMNU_SCALEFUZZ",     r_fuzzscale,                   OnOff
+	Option "$DSPLYMNU_MODELS",        r_models,                      OnOff
 }
 
-OptionMenu "VideoOptions" protected
+OptionMenu "TrueColorOptions" protected
 {
-	Title "$DSPLYMNU_TITLE"
-
-	Submenu "$DSPLYMNU_GLOPT", 			"OpenGLOptions"
-	Submenu "$DSPLYMNU_SWOPT", 			"SWROptions"
-	Submenu "$DSPLYMNU_IMAGEADJUST",	"ImageAdjustMenu"
-	StaticText " "
-	Submenu "$DSPLYMNU_VKOPT",			"VKOptions"
-	Submenu "$GLMNU_TEXOPT", 			"GLTextureGLOptions"
-	Submenu "$GLMNU_DYNLIGHT",			"GLLightOptions"
-	StaticText " "
-	Slider "$DSPLYMNU_SCREENSIZE",				"screenblocks", 				3.0, 12.0, 1.0, 0
-	StaticText " "
-	Slider "$DSPLYMNU_FOV",						"fov",							75.0, 120.0, 0.1, 1
-	StaticText " "
-	Option "$DSPLYMNU_SPRITESHADOW",			"r_actorspriteshadow", "SpriteShadowModes"
-	Option "$DSPLYMNU_CUSTOMINVERTMAP",			"cl_customizeinvulmap", "OnOff"
-	ColorPicker "$DSPLYMNU_CUSTOMINVERTC1",		"cl_custominvulmapcolor1"
-	ColorPicker "$DSPLYMNU_CUSTOMINVERTC2",		"cl_custominvulmapcolor2"
-	Option "$DSPLYMNU_WIPETYPE",				"wipetype", "Wipes"
-	Option "$DSPLYMNU_DRAWFUZZ",				"r_drawfuzz", "Fuzziness"
-	Option "$DSPLYMNU_OLDTRANS",				"r_vanillatrans", "VanillaTrans"
-	Option "$DSPLYMNU_FAKECONTRAST",			"r_fakecontrast", "Contrast"
-	Option "$DSPLYMNU_ROCKETTRAILS",			"cl_rockettrails", "RocketTrailTypes"
-	Option "$DSPLYMNU_ROCKETEXPSTYLE",			"addrocketexplosion", "RocketExplosionStyles"
-	Option "$DSPLYMNU_BLOODTYPE",				"cl_bloodtype", "BloodTypes"
-	Option "$DSPLYMNU_PUFFTYPE",				"cl_pufftype", "PuffTypes"
-	Slider "$DSPLYMNU_MAXPARTICLES",			"r_maxparticles", 100, 10000, 100, 0
-	Slider "$DSPLYMNU_MAXDECALS",				"cl_maxdecals", 0, 10000, 100, 0
-	Option "$DSPLYMNU_PLAYERSPRITES",			"r_drawplayersprites", "OnOff"
-	Option "$DSPLYMNU_DEATHCAM",				"r_deathcamera", "OnOff"
-	Option "$DSPLYMNU_TELEZOOM",				"telezoom", "OnOff"
-	Slider "$DSPLYMNU_QUAKEINTENSITY",			"r_quakeintensity", 0.0, 1.0, 0.05, 2
-	Option "$DSPLYMNU_NOMONSTERINTERPOLATION",	"nomonsterinterpolation", "NoYes"
+	Title "$TCMNU_TITLE"
+	StaticText ""
+	Option "$TCMNU_MINFILTER", r_minfilter, OnOff
+	Option "$TCMNU_MAGFILTER", r_magfilter, OnOff
+	Option "$TCMNU_MIPMAP",    r_mipmap,    OnOff
 }
 
 OptionMenu "ImageAdjustMenu" protected
@@ -1030,24 +1016,450 @@ OptionMenu "ImageAdjustMenu" protected
 	Title "$DSPLYMNU_IMAGEADJUST"
 	Class "VideoOptions"
 
-	StaticText "$DSPLYMNU_IMAGEADJUST_TOP1", "Cyan"
-	StaticText "$DSPLYMNU_IMAGEADJUST_TOP2", "Cyan"
-	StaticText "$DSPLYMNU_IMAGEADJUST_TOP3", "Cyan"
+	StaticText "$DSPLYMNU_IMAGEADJUST_TOP1",   Cyan
+	StaticText "$DSPLYMNU_IMAGEADJUST_TOP2",   Cyan
+	StaticText "$DSPLYMNU_IMAGEADJUST_TOP3",   Cyan
 	StaticText ""
-	Slider "$DSPLYMNU_GAMMA",		"vid_fixgamma",		-1.0,	1.0,	0.01,	2
+	Slider "$DSPLYMNU_GAMMA",                  vid_fixgamma,      -1.0, 1.0, 0.01, 2
 	Tooltip "$DSPLYMNU_TOOLTIP_GAMMA"
-	Slider "$DSPLYMNU_BLACKPOINT",	"vid_blackpoint",	0.0,	0.25,	0.01,	2
+	Slider "$DSPLYMNU_BLACKPOINT",             vid_blackpoint,    0.0, 0.25, 0.01, 2
 	Tooltip "$DSPLYMNU_TOOLTIP_BLACKPOINT"
-	Command "$OPTMNU_DEFAULTS",		"vid_reset2defaults"
+	Command "$OPTMNU_DEFAULTS",                vid_reset2defaults
 	Tooltip "$DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
-	Slider "$DSPLYMNU_BRIGHTNESS",	"vid_whitepoint",	-1.0,	1.0,	0.01,	2
+	Slider "$DSPLYMNU_BRIGHTNESS",             vid_whitepoint,    -1.0, 1.0, 0.01, 2
 	Tooltip "$DSPLYMNU_TOOLTIP_BRIGHTNESS"
-	Slider "$DSPLYMNU_CONTRAST",	"vid_contrast",		0.5,	2.0,	0.01,	2
+	Slider "$DSPLYMNU_CONTRAST",               vid_contrast,      0.5, 2.0, 0.01, 2
 	Tooltip "$DSPLYMNU_TOOLTIP_CONTRAST"
-	Slider "$DSPLYMNU_SATURATION",	"vid_saturation",	-1.0,	2.0,	0.01,	2
+	Slider "$DSPLYMNU_SATURATION",             vid_saturation,    -1.0, 2.0, 0.01, 2
 	Tooltip "$DSPLYMNU_TOOLTIP_SATURATION"
 	StaticText ""
-	StaticText "$DSPLYMNU_IMAGEADJUST_BOTTOM", "Cyan"
+	StaticText "$DSPLYMNU_IMAGEADJUST_BOTTOM", Cyan
+}
+
+OptionValue "RenderMode"
+{
+	0, "$OPTVAL_SWDOOM"
+	1, "$OPTVAL_SWDOOMTC"
+	4, "$OPTVAL_HWPOLY"
+}
+
+OptionValue ForceRatios
+{
+	0.0, "$OPTVAL_OFF"
+	3.0, "4:3"
+	1.0, "16:9"
+	5.0, "17:10"
+	2.0, "16:10"
+	4.0, "5:4"
+	6.0, "21:9"
+}
+
+OptionValue Ratios
+{
+	0.0, "4:3"
+	4.0, "5:4"
+	1.0, "16:9"
+	2.0, "16:10"
+	3.0, "17:10"
+	6.0, "21:9"
+	-1,  "$OPTVAL_ALL"
+}
+
+OptionValue ScaleModes
+{
+	0, "$OPTVAL_NORMAL"
+	6, "320x200"
+	2, "640x400"
+	3, "960x600"
+	4, "1280x800"
+	5, "$OPTVAL_CUSTOM"
+	1, "$OPTVAL_LOWEST"
+}
+
+OptionValue CropAspect
+{
+	0, "$OPTVAL_STRETCH"
+	1, "$OPTVAL_LETTERBOX"
+}
+
+OptionValue MaxFps
+{
+	0,   "$OPTVAL_UNLIMITED"
+	60,  "$OPTVAL_60FPS"
+	75,  "$OPTVAL_75FPS"
+	90,  "$OPTVAL_90FPS"
+	120, "$OPTVAL_120FPS"
+	144, "$OPTVAL_144FPS"
+	200, "$OPTVAL_200FPS"
+}
+
+OptionValue PreferBackend
+{
+	0, "$OPTVAL_OPENGL"
+	1, "$OPTVAL_VULKAN"
+	2, "$OPTVAL_OPENGLES"
+}
+
+OptionMenu VideoModeMenu protected
+{
+	Title "$VIDMNU_TITLE"
+
+	Option "$VIDMNU_PREFERBACKEND",  vid_preferbackend, PreferBackend
+	StaticText " "
+	IfOption(SWRender) {
+		Option "$VIDMNU_RENDERMODE", vid_rendermode,    RenderMode
+	}
+	Option "$VIDMNU_FULLSCREEN",     vid_fullscreen,    YesNo
+	IfOption(Mac) {
+		Option "$VIDMNU_HIDPI",      vid_hidpi,         YesNo
+	}
+	Option "$VIDMNU_FORCEASPECT",    vid_aspect,        ForceRatios
+	Option "$VIDMNU_CROPASPECT",     vid_cropaspect,    CropAspect
+	Option "$VIDMNU_SCALEMODE",      vid_scalemode,     ScaleModes
+	Slider "$VIDMNU_SCALEFACTOR",    vid_scalefactor,   0.25, 2.0, 0.25, 2
+	StaticText " "
+	Option "$DSPLYMNU_VSYNC",        vid_vsync,         OnOff
+	Slider "$VIDMNU_MAXFPS",         vid_maxfps,        35, 500, 1
+	Option "$DSPLYMNU_CAPFPS",       cl_capfps,         OffOn
+	StaticText ""
+	StaticText "$VIDMNU_CUSTOMRES"
+	TextField "$VIDMNU_CUSTOMX",     menu_resolution_custom_width
+	TextField "$VIDMNU_CUSTOMY",     menu_resolution_custom_height
+	Option "$VIDMNU_USELINEAR",      vid_scale_linear,  YesNo
+	StaticText ""
+	Command "$VIDMNU_APPLYW",        "menu_resolution_commit_changes 0"
+	Command "$VIDMNU_APPLYFS",       "menu_resolution_commit_changes 1"
+	StaticText ""
+
+	SubMenu "$VIDMNU_RESPRESET", CustomResolutionMenu
+}
+
+OptionMenu CustomResolutionMenu protected
+{
+	Title "$VIDMNU_RESPRESETTTL"
+
+	StaticText "$VIDMNU_RESPRESETHEAD"
+	StaticText ""
+	StaticText "$VIDMNU_ASPECT43"
+	Command           "640x480", "menu_resolution_set_custom 640 480"
+	Command          "1024x768", "menu_resolution_set_custom 1024 768"
+	Command          "1280x960", "menu_resolution_set_custom 1280 960"
+	Command         "1600x1200", "menu_resolution_set_custom 1600 1200"
+	StaticText ""
+	StaticText "$VIDMNU_ASPECT54"
+	Command         "1280x1024", "menu_resolution_set_custom 1280 1024"
+	StaticText ""
+	StaticText "$VIDMNU_ASPECT169"
+	Command           "960x540", "menu_resolution_set_custom 960 540"
+	Command  "(720p)  1280x720", "menu_resolution_set_custom 1280 720"
+	Command          "1366x768", "menu_resolution_set_custom 1366 768"
+	Command "(1080p) 1920x1080", "menu_resolution_set_custom 1920 1080"
+	Command "(1440p) 2560x1440", "menu_resolution_set_custom 2560 1440"
+	Command    "(4K) 3840x2160", "menu_resolution_set_custom 3840 2160"
+	StaticText ""
+	StaticText "$VIDMNU_ASPECT1610"
+	Command   "960x600",         "menu_resolution_set_custom 960 600"
+	Command  "1280x800",         "menu_resolution_set_custom 1280 800"
+	Command  "1440x900",         "menu_resolution_set_custom 1440 900"
+	Command "1680x1050",         "menu_resolution_set_custom 1680 1050"
+	Command "1920x1200",         "menu_resolution_set_custom 1920 1200"
+	StaticText ""
+	StaticText "$VIDMNU_ASPECT219"
+	Command  "1920x810",         "menu_resolution_set_custom 1920 810"
+	Command "2560x1080",         "menu_resolution_set_custom 2560 1080"
+}
+
+OptionValue "FilterModes"
+{
+	0, "$OPTVAL_NONE"
+	1, "$OPTVAL_NONENEARESTMIPMAP"
+	5, "$OPTVAL_NONELINEARMIPMAP"
+	6, "$OPTVAL_NONETRILINEAR"
+	2, "$OPTVAL_LINEAR_2"
+	3, "$OPTVAL_BILINEAR"
+	4, "$OPTVAL_TRILINEAR"
+}
+
+OptionValue "TonemapModes"
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_UNCHARTED2"
+	2, "$OPTVAL_HEJLDAWSON"
+	3, "$OPTVAL_REINHARD"
+	5, "$OPTVAL_PALETTE"
+}
+
+OptionValue "SSAOModes"
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_LOW"
+	2, "$OPTVAL_MEDIUM"
+	3, "$OPTVAL_HIGH"
+}
+
+OptionValue "FXAAQuality"
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_LOW"
+	2, "$OPTVAL_MEDIUM"
+	3, "$OPTVAL_HIGH"
+	4, "$OPTVAL_EXTREME"
+}
+
+OptionValue "Anisotropy"
+{
+	1,  "$OPTVAL_OFF"
+	2,  "$OPTVAL_2X"
+	4,  "$OPTVAL_4X"
+	8,  "$OPTVAL_8X"
+	16, "$OPTVAL_16X"
+}
+
+OptionValue "Multisample"
+{
+	1,  "$OPTVAL_OFF"
+	2,  "$OPTVAL_2X"
+	4,  "$OPTVAL_4X"
+	8,  "$OPTVAL_8X"
+	16, "$OPTVAL_16X"
+	32, "$OPTVAL_32X"
+}
+
+OptionValue "Colormaps"
+{
+	0, "$OPTVAL_USEASPALETTE"
+	1, "$OPTVAL_BLEND"
+}
+
+OptionValue "LightingModes"
+{
+	0, "$OPTVAL_CLASSIC"
+	1, "$OPTVAL_SOFTWARE"
+	2, "$OPTVAL_VANILLA"
+}
+
+OptionValue "Precision"
+{
+	0, "$OPTVAL_SPEED"
+	1, "$OPTVAL_QUALITY"
+}
+
+OptionValue "DitherModes"
+{
+	0,  "$OPTVAL_OFF"
+	-1, "$OPTVAL_ON"
+	6,  "6 BPC"
+	8,  "8 BPC"
+	10, "10 BPC"
+	12, "12 BPC"
+}
+
+OptionValue "BillboardModes"
+{
+	0, "$OPTVAL_YAXIS"
+	1, "$OPTVAL_XYAXIS"
+}
+
+OptionValue "Particles"
+{
+	0, "$OPTVAL_SQUARE"
+	1, "$OPTVAL_ROUND"
+	2, "$OPTVAL_SMOOTH_2"
+}
+
+OptionValue "HqResizeModes"
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_SCALENX"
+	2, "$OPTVAL_HQNX"
+	3, "$OPTVAL_HQNXMMX"
+	4, "$OPTVAL_NXBRZ"
+	5, "$OPTVAL_OLD_NXBRZ"
+	6, "$OPTVAL_NORMALNX"
+}
+
+OptionValue "HqResizeMultipliers"
+{
+	1, "$OPTVAL_OFF"
+	2, "2x"
+	3, "3x"
+	4, "4x"
+	5, "5x"
+	6, "6x"
+}
+
+OptionValue "HqResizeModesNoMMX"
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_SCALENX"
+	2, "$OPTVAL_HQNX"
+	4, "$OPTVAL_NXBRZ"
+	5, "$OPTVAL_OLD_NXBRZ"
+	6, "$OPTVAL_NORMALNX"
+}
+
+OptionValue "FogMode"
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_STANDARD"
+	2, "$OPTVAL_RADIAL"
+}
+
+OptionValue "FuzzStyle"
+{
+	0, "$OPTVAL_SHADOW"
+	1, "$OPTVAL_PIXELFUZZ"
+	2, "$OPTVAL_SMOOTHFUZZ"
+	3, "$OPTVAL_SWIRLYFUZZ"
+	4, "$OPTVAL_TRANSLUCENTFUZZ"
+	6, "$OPTVAL_NOISE"
+	7, "$OPTVAL_SMOOTHNOISE"
+	8, "$OPTVAL_SOFTWARE"
+//	5, "$OPTVAL_JAGGEDFUZZ" I can't see any difference between this and 4 so it's disabled for now.
+}
+
+OptionValue VRMode
+{
+	0,  "$OPTVAL_NORMAL"
+	1,  "$OPTVAL_GREENMAGENTA"
+	2,  "$OPTVAL_REDCYAN"
+	9,  "$OPTVAL_AMBERBLUE"
+	3,  "$OPTVAL_SBSFULL"
+	4,  "$OPTVAL_SBSNARROW"
+	8,  "$OPTVAL_SBSLETTERBOX"
+	11, "$OPTVAL_TOPBOTTOM"
+	12, "$OPTVAL_ROWINTERLEAVED"
+	13, "$OPTVAL_COLUMNINTERLEAVED"
+	14, "$OPTVAL_CHECKERBOARD"
+	5,  "$OPTVAL_LEFTEYE"
+	6,  "$OPTVAL_RIGHTEYE"
+	7,  "$OPTVAL_QUADBUFFERED"
+}
+
+OptionValue ShadowMapQuality
+{
+	128,  "128"
+	256,  "256"
+	512,  "512"
+	1024, "1024"
+	2048, "2048"
+	4096, "4096"
+	8192, "8192"
+}
+
+OptionValue ShadowMapFilter
+{
+	0, "$OPTVAL_NEAREST"
+	1, "$OPTVAL_PCF_LOW"
+	2, "$OPTVAL_PCF_MEDIUM"
+	3, "$OPTVAL_PCF_HIGH"
+}
+
+OptionMenu "GLTextureGLOptions" protected
+{
+	Title "$GLTEXMNU_TITLE"
+
+	Option "$GLTEXMNU_TEXFILTER",    gl_texture_filter,             FilterModes
+	Option "$GLTEXMNU_ANISOTROPIC",  gl_texture_filter_anisotropic, Anisotropy
+	ifOption(MMX) {
+		Option "$GLTEXMNU_HQRESIZE", gl_texture_hqresizemode,       HqResizeModes
+	} else {
+		Option "$GLTEXMNU_HQRESIZE", gl_texture_hqresizemode,       HqResizeModesNoMMX
+	}
+	Option "$GLTEXMNU_HQRESIZEMULT", gl_texture_hqresizemult,       HqResizeMultipliers
+	StaticText "!HQRESIZE_WARNING!"
+	Option "$GLTEXMNU_RESIZETEX",    gl_texture_hqresize_textures,  OnOff
+	Option "$GLTEXMNU_RESIZESPR",    gl_texture_hqresize_sprites,   OnOff
+	Option "$GLTEXMNU_RESIZEFNT",    gl_texture_hqresize_fonts,     OnOff
+	Option "$GLTEXMNU_RESIZESKN",    gl_texture_hqresize_skins,     OnOff
+	Option "$GLTEXMNU_PRECACHETEX",  gl_precache,                   YesNo
+	Option "$GLTEXMNU_SORTDRAWLIST", gl_sort_textures,              YesNo
+	Class "GLTextureGLOptions"
+}
+
+OptionMenu "GLLightOptions" protected
+{
+	Title "$GLLIGHTMNU_TITLE"
+
+	Option "$TCMNU_DYNLIGHTS",                  r_dynlights,          OnOff
+	Option "$GLLIGHTMNU_LIGHTSENABLED",         gl_lights,            OnOff
+	Option "$GLLIGHTMNU_LIGHTSPRITES",          gl_light_sprites,     YesNo
+	Option "$GLLIGHTMNU_LIGHTPARTICLES",        gl_light_particles,   YesNo
+	Option "$GLLIGHTMNU_LIGHTSHADOWMAP",        gl_light_shadowmap,   YesNo
+	Option "$GLLIGHTMNU_LIGHTSHADOWMAPQUALITY", gl_shadowmap_quality, ShadowMapQuality
+	Option "$GLLIGHTMNU_LIGHTSHADOWMAPFILTER",  gl_shadowmap_filter,  ShadowMapFilter
+}
+
+OptionMenu "OpenGLOptions" protected
+{
+	Title "$GLMNU_TITLE"
+	Submenu "$GLPREFMNU_VRMODE",                VR3DMenu
+	Submenu "$GLMNU_POSTPROCESS",               PostProcessMenu
+	StaticText " "
+	Option "$GLPREFMNU_SECLIGHTMODE",           gl_lightmode,              LightingModes
+	Option "$GLPREFMNU_SWLMBANDED",             gl_bandedswlight,          OnOff
+	Option "$GLPREFMNU_FOGMODE",                gl_fogmode,                FogMode
+	Option "$GLPREFMNU_FOGFORCEFULLBRIGHT",     gl_brightfog,              YesNo
+	Slider "$GLPREFMNU_WPNLIGHTSTR",            gl_weaponlight,            0,32, 2
+	Option "$GLPREFMNU_WPNPURELIGHT",           gl_weapon_purelightlevel,  OnOff
+	Option "$GLPREFMNU_ENVIRONMENTMAPMIRROR",   gl_mirror_envmap,          OnOff
+	Option "$GLPREFMNU_ENV",                    gl_enhanced_nightvision,   OnOff
+	Option "$GLPREFMNU_ENVSTEALTH",             gl_enhanced_nv_stealth,    EnhancedStealth
+	Option "$GLPREFMNU_SPRCLIP",                gl_spriteclip,             SpriteclipModes
+	Option "$GLPREFMNU_SPRBLEND",               gl_sprite_blend,           OnOff
+	Option "$GLPREFMNU_FUZZSTYLE",              gl_fuzztype,               FuzzStyle
+	Option "$GLPREFMNU_SPRBILLBOARD",           gl_billboard_mode,         BillboardModes
+	Option "$GLPREFMNU_SPRBILLFACECAMERA",      gl_billboard_faces_camera, OnOff
+	Option "$GLPREFMNU_SPRBILLFACECAMERAFORCE", hw_force_cambbpref,        OnOff
+	Option "$GLPREFMNU_PARTICLESTYLE",          gl_particles_style,        Particles
+	Option "$GLPREFMNU_RENDERQUALITY",          gl_seamless,               Precision
+//	Option "$GLPREFMNU_CORONAS",                gl_coronas,                OnOff
+	StaticText " "
+	Slider "$GLPREFMNU_MENUBLUR",               gl_menu_blur,              0, 5.0, 0.5, 2
+	StaticText " "
+	Option "$GLPREFMNU_MULTISAMPLE",            gl_multisample,            Multisample
+}
+
+OptionMenu "VR3DMenu" protected
+{
+	Title "$GLPREFMNU_VRMODE"
+	Option "$GLMNU_3DMODE",               vr_mode,                VRMode
+	IfOption(Windows) {
+		Option "$GLPREFMNU_VRQUADSTEREO", vr_enable_quadbuffered, OnOff
+	}
+	Slider "$GLPREFMNU_VRIPD",            vr_ipd,                 0.041, 0.073, 0.001, 3
+	Slider "$GLPREFMNU_VRSCREENDIST",     vr_screendist,          0.2, 10.0, 0.1, 1
+}
+
+OptionMenu "PostProcessMenu" protected
+{
+	Title "$GLMNU_POSTPROCESS"
+	Option "$GLPREFMNU_BLOOM",           gl_bloom,                    OnOff
+	Option "$GLPREFMNU_LENS",            gl_lens,                     OnOff
+	Option "$GLPREFMNU_SSAO",            gl_ssao,                     SSAOModes
+	Slider "$GLPREFMNU_SSAO_PORTALS",    gl_ssao_portals,             0.0, 4.0, 1.0, 0
+	Option "$GLPREFMNU_FXAA",            gl_fxaa,                     FXAAQuality
+	Option "$GLPREFMNU_DITHER",          gl_dither_bpc,               DitherModes
+	Option "$GLPREFMNU_TONEMAP",         gl_tonemap,                  TonemapModes
+	StaticText " "
+	Slider "$GLPREFMNU_PALTONEMAPPOWER", gl_paltonemap_powtable,      0.2, 3.0, 0.1, 1
+	Option "$GLPREFMNU_PALTONEMAPORDER", gl_paltonemap_reverselookup, LookupOrder
+}
+
+OptionMenu "vkoptions"
+{
+	Title "$VK_TITLE"
+	StaticText "$VK_RESTART"
+	StaticText ""
+	TextField "$VKMNU_DEVICE", vk_device
+	Option "$VKMNU_HDR",       vk_hdr, OnOff
+}
+
+OptionValue "SpriteShadowModes"
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_DEFAULT"
+	2, "$OPTVAL_SPRSHADALWAYS"
 }
 
 //-------------------------------------------------------------------------------------------
@@ -1331,6 +1743,13 @@ OptionValue SaveOrder
 {
 	0,	"$OPTVAL_ALPHABETICAL"
 	1,	"$OPTVAL_LASTSAVEDTIME"
+}
+
+OptionValue Endoom
+{
+	0.0, "$OPTVAL_OFF"
+	1.0, "$OPTVAL_ON"
+	2.0, "$OPTVAL_ONLYMODIFIED"
 }
 
 OptionMenu "MiscOptions" protected
@@ -2511,147 +2930,6 @@ OptionMenu AccessibilityOptions protected
 
 //-------------------------------------------------------------------------------------------
 //
-// Change Renderer Menu
-//
-//-------------------------------------------------------------------------------------------
-
-OptionValue "RenderMode"
-{
-	0, "$OPTVAL_SWDOOM"
-	1, "$OPTVAL_SWDOOMTC"
-	4,  "$OPTVAL_HWPOLY"
-}
-
-//-------------------------------------------------------------------------------------------
-//
-// Video mode menu
-//
-//-------------------------------------------------------------------------------------------
-
-OptionValue ForceRatios
-{
-	0.0, "$OPTVAL_OFF"
-	3.0, "4:3"
-	1.0, "16:9"
-	5.0, "17:10"
-	2.0, "16:10"
-	4.0, "5:4"
-	6.0, "21:9"
-}
-OptionValue Ratios
-{
-	0.0, "4:3"
-	4.0, "5:4"
-	1.0, "16:9"
-	2.0, "16:10"
-	3.0, "17:10"
-	6.0, "21:9"
-	 -1, "$OPTVAL_ALL"
-}
-OptionValue ScaleModes
-{
-	0, "$OPTVAL_NORMAL"
-	6, "320x200"
-	2, "640x400"
-	3, "960x600"
-	4, "1280x800"
-	5, "$OPTVAL_CUSTOM"
-	1, "$OPTVAL_LOWEST"
-}
-OptionValue CropAspect
-{
-	0, "$OPTVAL_STRETCH"
-	1, "$OPTVAL_LETTERBOX"
-}
-
-OptionValue MaxFps
-{
-	0, "$OPTVAL_UNLIMITED"
-	60, "$OPTVAL_60FPS"
-	75, "$OPTVAL_75FPS"
-	90, "$OPTVAL_90FPS"
-	120, "$OPTVAL_120FPS"
-	144, "$OPTVAL_144FPS"
-	200, "$OPTVAL_200FPS"
-}
-
-OptionMenu VideoModeMenu protected
-{
-	Title "$VIDMNU_TITLE"
-
-	Option "$VIDMNU_PREFERBACKEND",		"vid_preferbackend", "PreferBackend"
-	StaticText " "
-	IfOption(SWRender)
-	{
-		Option "$VIDMNU_RENDERMODE",		"vid_rendermode", "RenderMode"
-	}
-	Option "$VIDMNU_FULLSCREEN",		"vid_fullscreen", "YesNo"
-
-	IfOption(Mac)
-	{
-		Option "$VIDMNU_HIDPI",			"vid_hidpi", "YesNo"
-	}
-
-	Option "$VIDMNU_FORCEASPECT",		"vid_aspect", "ForceRatios"
-	Option "$VIDMNU_CROPASPECT",		"vid_cropaspect", "CropAspect"
-	Option "$VIDMNU_SCALEMODE",			"vid_scalemode", "ScaleModes"
-	Slider "$VIDMNU_SCALEFACTOR",		"vid_scalefactor", 0.25, 2.0, 0.25, 2
-
-	StaticText " "
-	Option "$DSPLYMNU_VSYNC",					"vid_vsync", "OnOff"
-	Slider "$VIDMNU_MAXFPS",					"vid_maxfps", 35, 500, 1
-	Option "$DSPLYMNU_CAPFPS",					"cl_capfps", "OffOn"
-
-	StaticText ""
-	StaticText "$VIDMNU_CUSTOMRES"
-	TextField "$VIDMNU_CUSTOMX", menu_resolution_custom_width
-	TextField "$VIDMNU_CUSTOMY", menu_resolution_custom_height
-	Option "$VIDMNU_USELINEAR", "vid_scale_linear", "YesNo"
-	StaticText ""
-	Command "$VIDMNU_APPLYW", "menu_resolution_commit_changes 0"
-	Command "$VIDMNU_APPLYFS", "menu_resolution_commit_changes 1"
-	StaticText ""
-
-	SubMenu "$VIDMNU_RESPRESET", CustomResolutionMenu
-}
-
-OptionMenu CustomResolutionMenu protected
-{
-	Title "$VIDMNU_RESPRESETTTL"
-
-	StaticText "$VIDMNU_RESPRESETHEAD"
-	StaticText ""
-	StaticText "$VIDMNU_ASPECT43"
-	Command "640x480", "menu_resolution_set_custom 640 480"
-	Command "1024x768", "menu_resolution_set_custom 1024 768"
-	Command "1280x960", "menu_resolution_set_custom 1280 960"
-	Command "1600x1200", "menu_resolution_set_custom 1600 1200"
-	StaticText ""
-	StaticText "$VIDMNU_ASPECT54"
-	Command "1280x1024", "menu_resolution_set_custom 1280 1024"
-	StaticText ""
-	StaticText "$VIDMNU_ASPECT169"
-	Command "960x540", "menu_resolution_set_custom 960 540"
-	Command "(720p HD)   1280x720", "menu_resolution_set_custom 1280 720"
-	Command "1366x768", "menu_resolution_set_custom 1366 768"
-	Command "(1080p HD) 1920x1080", "menu_resolution_set_custom 1920 1080"
-	Command "(1440p HD) 2560x1440", "menu_resolution_set_custom 2560 1440"
-	Command "(4K UHD) 3840x2160", "menu_resolution_set_custom 3840 2160"
-	StaticText ""
-	StaticText "$VIDMNU_ASPECT1610"
-	Command "960x600", "menu_resolution_set_custom 960 600"
-	Command "1280x800", "menu_resolution_set_custom 1280 800"
-	Command "1440x900", "menu_resolution_set_custom 1440 900"
-	Command "1680x1050", "menu_resolution_set_custom 1680 1050"
-	Command "1920x1200", "menu_resolution_set_custom 1920 1200"
-	StaticText ""
-	StaticText "$VIDMNU_ASPECT219"
-	Command "1920x810", "menu_resolution_set_custom 1920 810"
-	Command "2560x1080", "menu_resolution_set_custom 2560 1080"
-}
-
-//-------------------------------------------------------------------------------------------
-//
 // Network options menu
 //
 //-------------------------------------------------------------------------------------------
@@ -2724,287 +3002,6 @@ OptionValue "EnhancedStealth"
 	3, "$OPTVAL_ANYFIXEDCOLORMAP"
 }
 
-OptionValue "FilterModes"
-{
-	0, "$OPTVAL_NONE"
-	1, "$OPTVAL_NONENEARESTMIPMAP"
-	5, "$OPTVAL_NONELINEARMIPMAP"
-	6, "$OPTVAL_NONETRILINEAR"
-	2, "$OPTVAL_LINEAR_2"
-	3, "$OPTVAL_BILINEAR"
-	4, "$OPTVAL_TRILINEAR"
-}
-
-OptionValue "TonemapModes"
-{
-	0, "$OPTVAL_OFF"
-	1, "$OPTVAL_UNCHARTED2"
-	2, "$OPTVAL_HEJLDAWSON"
-	3, "$OPTVAL_REINHARD"
-	5, "$OPTVAL_PALETTE"
-}
-
-OptionValue "SSAOModes"
-{
-	0, "$OPTVAL_OFF"
-	1, "$OPTVAL_LOW"
-	2, "$OPTVAL_MEDIUM"
-	3, "$OPTVAL_HIGH"
-}
-
-OptionValue "FXAAQuality"
-{
-	0, "$OPTVAL_OFF"
-	1, "$OPTVAL_LOW"
-	2, "$OPTVAL_MEDIUM"
-	3, "$OPTVAL_HIGH"
-	4, "$OPTVAL_EXTREME"
-}
-
-OptionValue "Anisotropy"
-{
-	1, "$OPTVAL_OFF"
-	2, "$OPTVAL_2X"
-	4, "$OPTVAL_4X"
-	8, "$OPTVAL_8X"
-	16, "$OPTVAL_16X"
-}
-
-OptionValue "Multisample"
-{
-	1, "$OPTVAL_OFF"
-	2, "$OPTVAL_2X"
-	4, "$OPTVAL_4X"
-	8, "$OPTVAL_8X"
-	16, "$OPTVAL_16X"
-	32, "$OPTVAL_32X"
-}
-
-OptionValue "Colormaps"
-{
-	0, "$OPTVAL_USEASPALETTE"
-	1, "$OPTVAL_BLEND"
-}
-
-OptionValue "LightingModes"
-{
-	0, "$OPTVAL_CLASSIC"
-	1, "$OPTVAL_SOFTWARE"
-	2, "$OPTVAL_VANILLA"
-}
-
-OptionValue "Precision"
-{
-	0, "$OPTVAL_SPEED"
-	1, "$OPTVAL_QUALITY"
-}
-
-OptionValue "DitherModes"
-{
-	0, "$OPTVAL_OFF"
-	-1, "$OPTVAL_ON"
-	6, "6 BPC"
-	8, "8 BPC"
-	10, "10 BPC"
-	12, "12 BPC"
-}
-
-OptionValue "BillboardModes"
-{
-	0, "$OPTVAL_YAXIS"
-	1, "$OPTVAL_XYAXIS"
-}
-
-OptionValue "Particles"
-{
-	0, "$OPTVAL_SQUARE"
-	1, "$OPTVAL_ROUND"
-	2, "$OPTVAL_SMOOTH_2"
-}
-
-OptionValue "HqResizeModes"
-{
-0, "$OPTVAL_OFF"
-1, "$OPTVAL_SCALENX"
-2, "$OPTVAL_HQNX"
-3, "$OPTVAL_HQNXMMX"
-4, "$OPTVAL_NXBRZ"
-5, "$OPTVAL_OLD_NXBRZ"
-6, "$OPTVAL_NORMALNX"
-}
-
-OptionValue "HqResizeMultipliers"
-{
-1, "$OPTVAL_OFF"
-2, "2x"
-3, "3x"
-4, "4x"
-5, "5x"
-6, "6x"
-}
-
-OptionValue "HqResizeModesNoMMX"
-{
-0, "$OPTVAL_OFF"
-1, "$OPTVAL_SCALENX"
-2, "$OPTVAL_HQNX"
-4, "$OPTVAL_NXBRZ"
-5, "$OPTVAL_OLD_NXBRZ"
-6, "$OPTVAL_NORMALNX"
-}
-
-OptionValue "FogMode"
-{
-	0, "$OPTVAL_OFF"
-	1, "$OPTVAL_STANDARD"
-	2, "$OPTVAL_RADIAL"
-}
-
-OptionValue "FuzzStyle"
-{
-	0, "$OPTVAL_SHADOW"
-	1, "$OPTVAL_PIXELFUZZ"
-	2, "$OPTVAL_SMOOTHFUZZ"
-	3, "$OPTVAL_SWIRLYFUZZ"
-	4, "$OPTVAL_TRANSLUCENTFUZZ"
-	6, "$OPTVAL_NOISE"
-	7, "$OPTVAL_SMOOTHNOISE"
-	8, "$OPTVAL_SOFTWARE"
-	//5, "$OPTVAL_JAGGEDFUZZ" I can't see any difference between this and 4 so it's disabled for now.
-}
-
-OptionValue VRMode
-{
-	0, "$OPTVAL_NORMAL"
-	1, "$OPTVAL_GREENMAGENTA"
-	2, "$OPTVAL_REDCYAN"
-	9, "$OPTVAL_AMBERBLUE"
-	3, "$OPTVAL_SBSFULL"
-	4, "$OPTVAL_SBSNARROW"
-	8, "$OPTVAL_SBSLETTERBOX"
-	11, "$OPTVAL_TOPBOTTOM"
-	12, "$OPTVAL_ROWINTERLEAVED"
-	13, "$OPTVAL_COLUMNINTERLEAVED"
-	14, "$OPTVAL_CHECKERBOARD"
-	5, "$OPTVAL_LEFTEYE"
-	6, "$OPTVAL_RIGHTEYE"
-	7, "$OPTVAL_QUADBUFFERED"
-}
-
-OptionValue ShadowMapQuality
-{
-	128, "128"
-	256, "256"
-	512, "512"
-	1024, "1024"
-	2048, "2048"
-	4096, "4096"
-	8192, "8192"
-}
-
-OptionValue ShadowMapFilter
-{
-	0, "$OPTVAL_NEAREST"
-	1, "$OPTVAL_PCF_LOW"
-	2, "$OPTVAL_PCF_MEDIUM"
-	3, "$OPTVAL_PCF_HIGH"
-}
-
-OptionMenu "GLTextureGLOptions" protected
-{
-	Title "$GLTEXMNU_TITLE"
-	Option "$GLTEXMNU_TEXFILTER",		gl_texture_filter,				"FilterModes"
-	Option "$GLTEXMNU_ANISOTROPIC",		gl_texture_filter_anisotropic,	"Anisotropy"
-
-	ifOption(MMX)
-	{
-		Option "$GLTEXMNU_HQRESIZE",		gl_texture_hqresizemode,		"HqResizeModes"
-	}
-	else
-	{
-		Option "$GLTEXMNU_HQRESIZE",		gl_texture_hqresizemode,		"HqResizeModesNoMMX"
-	}
-	Option "$GLTEXMNU_HQRESIZEMULT",	gl_texture_hqresizemult,		"HqResizeMultipliers"
-	StaticText "!HQRESIZE_WARNING!"
-
-	Option "$GLTEXMNU_RESIZETEX",		gl_texture_hqresize_textures,	"OnOff"
-	Option "$GLTEXMNU_RESIZESPR",		gl_texture_hqresize_sprites,	"OnOff"
-	Option "$GLTEXMNU_RESIZEFNT",		gl_texture_hqresize_fonts,		"OnOff"
-	Option "$GLTEXMNU_RESIZESKN",		gl_texture_hqresize_skins,		"OnOff"
-	Option "$GLTEXMNU_PRECACHETEX",		gl_precache,					"YesNo"
-	Option "$GLTEXMNU_SORTDRAWLIST", 	gl_sort_textures,				"YesNo"
-	Class "GLTextureGLOptions"
-}
-
-OptionMenu "GLLightOptions" protected
-{
-	Title "$GLLIGHTMNU_TITLE"
-	Option "$TCMNU_DYNLIGHTS",					"r_dynlights", "OnOff"
-	Option "$GLLIGHTMNU_LIGHTSENABLED",			gl_lights,				"OnOff"
-	Option "$GLLIGHTMNU_LIGHTSPRITES",			gl_light_sprites,		"YesNo"
-	Option "$GLLIGHTMNU_LIGHTPARTICLES",		gl_light_particles,		"YesNo"
-	Option "$GLLIGHTMNU_LIGHTSHADOWMAP",		gl_light_shadowmap,		"YesNo"
-	Option "$GLLIGHTMNU_LIGHTSHADOWMAPQUALITY", gl_shadowmap_quality,	"ShadowMapQuality"
-	Option "$GLLIGHTMNU_LIGHTSHADOWMAPFILTER", 	gl_shadowmap_filter,	"ShadowMapFilter"
-}
-
-OptionMenu "OpenGLOptions" protected
-{
-	Title "$GLMNU_TITLE"
-	Submenu "$GLPREFMNU_VRMODE",				"VR3DMenu"
-	Submenu "$GLMNU_POSTPROCESS",				"PostProcessMenu"
-	StaticText " "
-	Option "$GLPREFMNU_SECLIGHTMODE",			gl_lightmode,					"LightingModes"
-	Option "$GLPREFMNU_SWLMBANDED",				gl_bandedswlight,				"OnOff"
-	Option "$GLPREFMNU_FOGMODE",				gl_fogmode,						"FogMode"
-	Option "$GLPREFMNU_FOGFORCEFULLBRIGHT",		gl_brightfog,					"YesNo"
-	Slider "$GLPREFMNU_WPNLIGHTSTR",			gl_weaponlight,					0,32, 2
-	Option "$GLPREFMNU_WPNPURELIGHT",			gl_weapon_purelightlevel,		"OnOff"
-	Option "$GLPREFMNU_ENVIRONMENTMAPMIRROR",	gl_mirror_envmap,				"OnOff"
-	Option "$GLPREFMNU_ENV",					gl_enhanced_nightvision,		"OnOff"
-	Option "$GLPREFMNU_ENVSTEALTH",				gl_enhanced_nv_stealth,			"EnhancedStealth"
-	Option "$GLPREFMNU_SPRCLIP",				gl_spriteclip,					"SpriteclipModes"
-	Option "$GLPREFMNU_SPRBLEND",				gl_sprite_blend,				"OnOff"
-	Option "$GLPREFMNU_FUZZSTYLE",				gl_fuzztype,					"FuzzStyle"
-	Option "$GLPREFMNU_SPRBILLBOARD",			gl_billboard_mode,				"BillboardModes"
-	Option "$GLPREFMNU_SPRBILLFACECAMERA",		gl_billboard_faces_camera,		"OnOff"
-	Option "$GLPREFMNU_SPRBILLFACECAMERAFORCE",	hw_force_cambbpref,				"OnOff"
-	Option "$GLPREFMNU_PARTICLESTYLE",			gl_particles_style,				"Particles"
-	Option "$GLPREFMNU_RENDERQUALITY",			gl_seamless,					"Precision"
-	//Option "$GLPREFMNU_CORONAS",				gl_coronas,						"OnOff"
-	StaticText " "
-	Slider "$GLPREFMNU_MENUBLUR",				gl_menu_blur, 0, 5.0, 0.5, 2
-	StaticText " "
-	Option "$GLPREFMNU_MULTISAMPLE", 			gl_multisample,					"Multisample"
-}
-
-OptionMenu "VR3DMenu" protected
-{
-	Title "$GLPREFMNU_VRMODE"
-	Option "$GLMNU_3DMODE",					vr_mode, 						"VRMode"
-	IfOption(Windows)
-	{
-		Option "$GLPREFMNU_VRQUADSTEREO",			vr_enable_quadbuffered,			"OnOff"
-	}
-	Slider "$GLPREFMNU_VRIPD",					vr_ipd,							0.041, 0.073, 0.001, 3
-	Slider "$GLPREFMNU_VRSCREENDIST",			vr_screendist,					0.2, 10.0, 0.1, 1
-}
-
-OptionMenu "PostProcessMenu" protected
-{
-	Title "$GLMNU_POSTPROCESS"
-	Option "$GLPREFMNU_BLOOM",		 			gl_bloom,						"OnOff"
-	Option "$GLPREFMNU_LENS",		 			gl_lens,						"OnOff"
-	Option "$GLPREFMNU_SSAO",		 			gl_ssao,						"SSAOModes"
-	Slider "$GLPREFMNU_SSAO_PORTALS",			gl_ssao_portals,				0.0, 4.0, 1.0, 0
-	Option "$GLPREFMNU_FXAA",		 			gl_fxaa,						"FXAAQuality"
-	Option "$GLPREFMNU_DITHER",		 			gl_dither_bpc,					"DitherModes"
-	Option "$GLPREFMNU_TONEMAP", 				gl_tonemap,						"TonemapModes"
-	StaticText " "
-	Slider "$GLPREFMNU_PALTONEMAPPOWER",		gl_paltonemap_powtable,			0.2, 3.0, 0.1, 1
-	Option "$GLPREFMNU_PALTONEMAPORDER",		gl_paltonemap_reverselookup,	"LookupOrder"
-}
-
 //-------------------------------------------------------------------------------------------
 //
 // Language menu
@@ -3059,27 +3056,4 @@ OptionValue "os_isanyof_values"
 {
 	0, "$OS_ALL"
 	1, "$OS_ANY"
-}
-
-//-------------------------------------------------------------------------------------------
-//
-// Vulkan Menu
-//
-//-------------------------------------------------------------------------------------------
-
-OptionMenu "vkoptions"
-{
-	Title "$VK_TITLE"
-	//StaticText "$VK_WARNING"
-	StaticText "$VK_RESTART"
-	StaticText ""
-	TextField "$VKMNU_DEVICE",			vk_device
-	Option "$VKMNU_HDR",				"vk_hdr", "OnOff"
-}
-
-OptionValue "SpriteShadowModes"
-{
-	0, "$OPTVAL_OFF"
-	1, "$OPTVAL_DEFAULT"
-	2, "$OPTVAL_SPRSHADALWAYS"
 }
