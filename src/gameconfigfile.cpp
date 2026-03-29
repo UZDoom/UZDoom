@@ -115,7 +115,7 @@ static void CollectDefaultSearchPaths()
 #   endif
 
 	bool shareDirChanged = 0 != strcmp(SHARE_DIR, DEFAULT_SHARE_DIR);
-	FString dataDir = M_GetAppDataPath(true);
+	FString dataDir = GetDataPath();
 
 #endif
 
@@ -139,6 +139,7 @@ static void CollectDefaultSearchPaths()
 		"/doom"
 	};
 
+	DefaultSearchPaths.Push("$PROGDIR");
 	for (unsigned int i = 0; i < std::size(GameDirs); i++)
 	{
 		DefaultSearchPaths.Push(dataDir + GameDirs[i]);
