@@ -945,9 +945,9 @@ OptionMenu "VideoOptions" protected
 
 	Submenu "$DSPLYMNU_GLOPT",                 OpenGLOptions
 	Submenu "$DSPLYMNU_SWOPT",                 SWROptions
-	Submenu "$DSPLYMNU_IMAGEADJUST",           ImageAdjustMenu
+	Submenu "$DSPLYMNU_IMAGEADJUST",           ImageAdjustMenu,       0, false, vid_shadersupport
 	StaticText " "
-	Submenu "$DSPLYMNU_VKOPT",                 VKOptions
+	Submenu "$DSPLYMNU_VKOPT",                 VKOptions,             0, false, vid_preferbackend, 1, HideInv
 	Submenu "$GLMNU_TEXOPT",                   GLTextureGLOptions
 	Submenu "$GLMNU_DYNLIGHT",                 GLLightOptions
 	StaticText " "
@@ -1393,8 +1393,8 @@ OptionMenu "GLLightOptions" protected
 OptionMenu "OpenGLOptions" protected
 {
 	Title "$GLMNU_TITLE"
-	Submenu "$GLPREFMNU_VRMODE",                VR3DMenu
-	Submenu "$GLMNU_POSTPROCESS",               PostProcessMenu
+	Submenu "$GLPREFMNU_VRMODE",                VR3DMenu,                  0, false, vid_preferbackend, 0, HideInv
+	Submenu "$GLMNU_POSTPROCESS",               PostProcessMenu,           0, false, vid_shadersupport
 	StaticText " "
 	Option "$GLPREFMNU_SECLIGHTMODE",           gl_lightmode,              LightingModes
 	Option "$GLPREFMNU_SWLMBANDED",             gl_bandedswlight,          OnOff
@@ -1415,8 +1415,8 @@ OptionMenu "OpenGLOptions" protected
 	Option "$GLPREFMNU_RENDERQUALITY",          gl_seamless,               Precision
 //	Option "$GLPREFMNU_CORONAS",                gl_coronas,                OnOff
 	StaticText " "
-	Slider "$GLPREFMNU_MENUBLUR",               gl_menu_blur,              0, 5.0, 0.5, 2
-	StaticText " "
+	Slider "$GLPREFMNU_MENUBLUR",               gl_menu_blur,              0, 5.0, 0.5, 2, vid_shadersupport, 0, Hide
+	StaticText " ",                                                        -1, vid_shadersupport
 	Option "$GLPREFMNU_MULTISAMPLE",            gl_multisample,            Multisample
 }
 
