@@ -24,32 +24,28 @@
 
 #include <assert.h>
 
-
 #include "base_sbar.h"
-#include "printf.h"
-#include "v_draw.h"
-#include "cmdlib.h"
-#include "texturemanager.h"
 #include "c_cvars.h"
-#include "v_font.h"
-#include "utf8.h"
-#include "v_text.h"
-#include "vm.h"
+#include "cmdlib.h"
 #include "i_interface.h"
 #include "r_videoscale.h"
+#include "texturemanager.h"
+#include "utf8.h"
+#include "v_draw.h"
+#include "v_font.h"
+#include "v_text.h"
+#include "vm.h"
 
 FGameTexture* CrosshairImage;
 static int CrosshairNum;
 
-
 IMPLEMENT_CLASS(DStatusBarCore, false, false)
 IMPLEMENT_CLASS(DHUDFont, false, false);
 
-
 CVAR(Color, crosshaircolor, 0xff0000, CVAR_ARCHIVE);
-CVAR(Int, crosshairhealth, 2, CVAR_ARCHIVE);
-CVARD(Float, crosshairscale, 0.2, CVAR_ARCHIVE, "changes the size of the crosshair");
-CVAR(Bool, crosshairgrow, false, CVAR_ARCHIVE);
+CVARD(Int, crosshairhealth, 2, CVAR_ARCHIVE, "0: basic, 1: red-green, 2: blue-green-yellow-red");
+CVARD(Float, crosshairscale, 1.0, CVAR_ARCHIVE, "changes the size of the crosshair");
+CVARD(Bool, crosshairgrow, false, CVAR_ARCHIVE, "grow crosshair upon pickup");
 
 CUSTOM_CVARD(Float, hud_scalefactor, 1.f, CVAR_ARCHIVE, "changes the hud scale")
 {
@@ -62,7 +58,6 @@ CUSTOM_CVARD(Bool, hud_aspectscale, true, CVAR_ARCHIVE, "enables aspect ratio co
 {
 	if (sysCallbacks.HudScaleChanged) sysCallbacks.HudScaleChanged();
 }
-
 
 void ST_LoadCrosshair(int num, bool alwaysload)
 {
@@ -107,7 +102,6 @@ void ST_UnloadCrosshair()
 	CrosshairNum = 0;
 }
 
-
 //---------------------------------------------------------------------------
 //
 // DrawCrosshair
@@ -126,22 +120,14 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		return;
 	}
 
-	if (crosshairscale > 0.0f)
-	{
-		size = twod->GetHeight() * crosshairscale * 0.005;
-	}
-	else
-	{
-		size = 1.;
-	}
+	int mult = max(twod->Height/720, 1); // 1080p: 1, 1440p: 2, 4K: 3
 
-	if (crosshairgrow)
-	{
-		size *= scale;
-	}
+	size = ((crosshairscale > 0.0f)? crosshairscale: 1.0) * mult;
 
-	w = int(CrosshairImage->GetDisplayWidth() * size);
-	h = int(CrosshairImage->GetDisplayHeight() * size);
+	if (crosshairgrow) size *= scale;
+
+	w = round(CrosshairImage->GetDisplayWidth() * size);
+	h = round(CrosshairImage->GetDisplayHeight() * size);
 
 	if (crosshairhealth == 1)
 	{
