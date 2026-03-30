@@ -947,6 +947,7 @@ void V_InitFonts()
 	FFont *fixupNext = SymbolsFont->Next;
 	SymbolsFont           = new FFont{*ConFont};
 	SymbolsFont->Next = fixupNext;
+	FFont::FirstFont      = SymbolsFont;
 	SymbolsFont->FontName = "SymbolsFont";
 
 	V_GetFont("IndexFont", "INDEXFON");	// detect potential replacements for this one.
