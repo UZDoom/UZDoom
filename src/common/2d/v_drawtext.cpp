@@ -432,7 +432,7 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 
 			//classic doom fonts don't really have descenders or ascenders. As a result, let's nudge the
 			//vertical coords up by the descender to better match the intent of how they were placed.
-			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender * scaleAdjust;
+			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender * scaleAdjust * shrinkScale;
 
 			const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
 			const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
