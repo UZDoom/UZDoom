@@ -1128,7 +1128,7 @@ SoundHandle OpenALSoundRenderer::LoadSoundRaw(uint8_t *sfxdata, int length, int 
 	{
 		static bool warned = false;
 		if(!warned)
-			Printf(DMSG_WARNING, "Loop points not supported!\n");
+			DPrintf(DMSG_WARNING, "Loop points not supported!\n");
 		warned = true;
 	}
 

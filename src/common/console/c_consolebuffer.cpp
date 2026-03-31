@@ -57,7 +57,7 @@ FConsoleBuffer::FConsoleBuffer()
 //
 //==========================================================================
 
-void FConsoleBuffer::AddText(int printlevel, const char *text)
+void FConsoleBuffer::AddText(PrintFlag printlevel, const char *text)
 {
 	FString build = TEXTCOLOR_TAN;
 
@@ -70,14 +70,14 @@ void FConsoleBuffer::AddText(int printlevel, const char *text)
 	else if (mAddType == APPENDLINE)
 	{
 		mConsoleText.Pop(build);
-		printlevel = -1;
+		printlevel = (PrintFlag)-1;
 		mLastLineNeedsUpdate = true;
 	}
 
 	if (printlevel >= 0 && printlevel != PRINT_HIGH)
 	{
 		if (printlevel == 200) build = TEXTCOLOR_GREEN;
-		else if (printlevel < PRINTLEVELS) build.Format("%c%c", TEXTCOLOR_ESCAPE, PrintColors[printlevel]+'A');
+		else if (printlevel < static_cast<PrintFlag>(PRINTLEVELS)) build.Format("%c%c", TEXTCOLOR_ESCAPE, PrintColors[printlevel]+'A');
 	}
 
 	size_t textsize = strlen(text);

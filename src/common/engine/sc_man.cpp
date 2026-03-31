@@ -1298,7 +1298,7 @@ void FScriptPosition::Message (int severity, const char *message, ...) const
 	}
 	const char *type = "";
 	const char *color;
-	int level = PRINT_HIGH;
+	PrintFlag level = PRINT_HIGH;
 
 	switch (severity)
 	{

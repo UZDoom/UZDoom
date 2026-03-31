@@ -1465,7 +1465,7 @@ void D_DoomLoopIteration(void* lasttic_)
 	{
 		if (error.GetMessage ())
 		{
-			Printf (PRINT_NONOTIFY | PRINT_BOLD, "\n%s\n", error.GetMessage());
+			Printf (static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "\n%s\n", error.GetMessage());
 		}
 		D_ErrorCleanup ();
 	}
@@ -1473,14 +1473,14 @@ void D_DoomLoopIteration(void* lasttic_)
 	{
 		if (error.what())
 		{
-			Printf(PRINT_NONOTIFY | PRINT_BOLD, "\n%s\n", error.what());
+			Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "\n%s\n", error.what());
 		}
 		D_ErrorCleanup();
 	}
 	catch (CVMAbortException &error)
 	{
 		error.MaybePrintMessage();
-		Printf(PRINT_NONOTIFY | PRINT_BOLD, "%s", error.stacktrace.GetChars());
+		Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "%s", error.stacktrace.GetChars());
 		D_ErrorCleanup();
 	}
 }
@@ -4477,7 +4477,7 @@ CCMD(fs_dir)
 		auto fnid = fileSystem.GetResourceId(i);
 		auto length = fileSystem.FileLength(i);
 		bool hidden = fileSystem.FindFile(fn1) != i;
-		Printf(PRINT_HIGH | PRINT_NONOTIFY, "%s%-64s %-15s (%5d) %10ld %s %s\n", hidden ? TEXTCOLOR_RED : TEXTCOLOR_UNTRANSLATED, fn1, fns, fnid, length, container, hidden ? "(h)" : "");
+		Printf(PRINT_NONOTIFY, "%s%-64s %-15s (%5d) %10ld %s %s\n", hidden ? TEXTCOLOR_RED : TEXTCOLOR_UNTRANSLATED, fn1, fns, fnid, length, container, hidden ? "(h)" : "");
 	}
 }
 

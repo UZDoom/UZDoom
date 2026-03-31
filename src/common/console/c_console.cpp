@@ -363,7 +363,7 @@ static void setmsgcolor (int index, int color)
 }
 
 
-void AddToConsole (int printlevel, const char *text)
+void AddToConsole (PrintFlag printlevel, const char *text)
 {
 	conbuffer->AddText(printlevel, MakeUTF8(text));
 }
@@ -408,13 +408,13 @@ void WriteLineToLog(FILE *LogFile, const char *outline)
 
 extern bool gameisdead;
 
-int PrintString (int iprintlevel, const char *outline)
+int PrintString (PrintFlag iprintlevel, const char *outline)
 {
 	if (gameisdead)
 		return 0;
 
 	if (!conbuffer) return 0;	// when called too early
-	int printlevel = iprintlevel & PRINT_TYPES;
+	PrintFlag printlevel = static_cast<PrintFlag>(iprintlevel & PRINT_TYPES);
 	if (*outline == '\0')
 	{
 		return 0;
@@ -451,14 +451,14 @@ int PrintString (int iprintlevel, const char *outline)
 	return 0;	// Don't waste time on calculating this if nothing at all was printed...
 }
 
-int VPrintf (int printlevel, const char *format, va_list parms)
+int VPrintf (PrintFlag printlevel, const char *format, va_list parms)
 {
 	FString outline;
 	outline.VFormat (format, parms);
 	return PrintString (printlevel, outline.GetChars());
 }
 
-int Printf (int printlevel, const char *format, ...)
+int Printf (PrintFlag printlevel, const char *format, ...)
 {
 	va_list argptr;
 	int count;
@@ -482,22 +482,27 @@ int Printf (const char *format, ...)
 	return count;
 }
 
-int DPrintf (int level, const char *format, ...)
+inline int _DPrintf(DPrintLevel level, PrintFlag printlevel, const char *format, va_list argptr)
+{
+	return (developer >= level)? VPrintf(printlevel, format, argptr): 0;
+}
+
+int DPrintf (DPrintLevel level, PrintFlag printlevel, const char *format, ...)
 {
 	va_list argptr;
-	int count;
+	va_start(argptr, format);
+	int count = _DPrintf(level, printlevel, format, argptr);
+	va_end(argptr);
+	return count;
+}
 
-	if (developer >= level)
-	{
-		va_start (argptr, format);
-		count = VPrintf (PRINT_HIGH, format, argptr);
-		va_end (argptr);
-		return count;
-	}
-	else
-	{
-		return 0;
-	}
+int DPrintf(DPrintLevel level, const char *format, ...)
+{
+	va_list argptr;
+	va_start(argptr, format);
+	int count = _DPrintf(level, PRINT_HIGH, format, argptr);
+	va_end(argptr);
+	return count;
 }
 
 void C_FlushDisplay ()
@@ -961,7 +966,7 @@ static bool C_HandleKey (event_t *ev, FCommandBuffer &buffer)
 			FString bufferText = buffer.GetText();
 
 			bufferText.StripLeftRight();
-			Printf(127, TEXTCOLOR_WHITE "]%s\n", bufferText.GetChars());
+			Printf(static_cast<PrintFlag>(127), TEXTCOLOR_WHITE "]%s\n", bufferText.GetChars()); // FIXME: wtf is 127 here?
 
 			if (bufferText.Len() == 0)
 			{

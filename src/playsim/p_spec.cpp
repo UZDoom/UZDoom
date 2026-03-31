@@ -610,7 +610,7 @@ void P_GiveSecret(FLevelLocals *Level, AActor *actor, bool printmessage, bool pl
 				C_MidPrint(nullptr, GStrings.CheckString("SECRETMESSAGE"));
 				if (showsecretsector && sectornum >= 0) 
 				{
-					Printf(PRINT_HIGH | PRINT_NONOTIFY, "Secret found in sector %d\n", sectornum);
+					Printf(PRINT_NONOTIFY, "Secret found in sector %d\n", sectornum);
 				}
 			}
 			if (playsound)

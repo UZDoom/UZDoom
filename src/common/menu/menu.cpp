@@ -993,7 +993,7 @@ void M_Init (void)
 	{
 		menuDelegate = nullptr;
 		err.MaybePrintMessage();
-		Printf(PRINT_NONOTIFY | PRINT_BOLD, "%s", err.stacktrace.GetChars());
+		Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "%s", err.stacktrace.GetChars());
 		I_FatalError("Failed to initialize menus");
 	}
 	catch (...)

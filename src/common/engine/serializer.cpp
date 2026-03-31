@@ -806,7 +806,7 @@ void FSerializer::ReadObjectsFrom(TArray<TObjPtr<DObject*>>& from)
 						{
 							r->mObjects.Clamp(size);	// close all inner objects.
 							// In case something in here throws an error, let's continue and deal with it later.
-							Printf(PRINT_NONOTIFY | PRINT_BOLD, TEXTCOLOR_RED "'%s'\n while restoring %s\n", err.GetMessage(), obj != nullptr ? obj->GetClass()->TypeName.GetChars() : "invalid object");
+							Printf(static_cast<PrintFlag>(PRINT_NONOTIFY|PRINT_BOLD), TEXTCOLOR_RED "'%s'\n while restoring %s\n", err.GetMessage(), obj != nullptr ? obj->GetClass()->TypeName.GetChars() : "invalid object");
 							++mErrors;
 						}
 					}
@@ -900,7 +900,7 @@ void FSerializer::ReadObjects(bool hubtravel)
 							{
 								r->mObjects.Clamp(size);	// close all inner objects.
 								// In case something in here throws an error, let's continue and deal with it later.
-								Printf(PRINT_NONOTIFY | PRINT_BOLD, TEXTCOLOR_RED "'%s'\n while restoring %s\n", err.GetMessage(), obj ? obj->GetClass()->TypeName.GetChars() : "invalid object");
+								Printf(static_cast<PrintFlag>(PRINT_NONOTIFY|PRINT_BOLD), TEXTCOLOR_RED "'%s'\n while restoring %s\n", err.GetMessage(), obj ? obj->GetClass()->TypeName.GetChars() : "invalid object");
 								mErrors++;
 							}
 						}

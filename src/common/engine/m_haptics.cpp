@@ -249,7 +249,7 @@ const FName * Joy_GetMapping(const FName identifier)
 	{
 		if (RumbleMissed.Contains(identifier)) return;
 		RumbleMissed.Push(identifier);
-		Printf(PRINT_HIGH|PRINT_NONOTIFY, "Unknown rumble mapping '%s'\n", identifier.GetChars());
+		Printf(PRINT_NONOTIFY, "Unknown rumble mapping '%s'\n", identifier.GetChars());
 	};
 
 	if (!mapping && identifier != "")
@@ -299,7 +299,7 @@ const struct Haptics * Joy_GetRumble(FName identifier)
 	if (!rumble && !RumbleMissed.Contains(identifier))
 	{
 		RumbleMissed.Push(identifier);
-		Printf(DMSG_ERROR, TEXTCOLOR_RED "Rumble mapping not found! '%s'\n", identifier.GetChars());
+		Printf(PRINT_MEDIUM, TEXTCOLOR_RED "Rumble mapping not found! '%s'\n", identifier.GetChars());
 		return nullptr;
 	}
 
@@ -397,7 +397,7 @@ void Joy_ReadyRumbleMapping()
 			auto predefined = RumbleDefinition.CheckKey(pair->Key);
 			if (predefined)
 			{
-				Printf(DMSG_ERROR, TEXTCOLOR_RED "Rumble alias trying to redefine mapping! '%s'\n", pair->Key.GetChars());
+				Printf(PRINT_MEDIUM, TEXTCOLOR_RED "Rumble alias trying to redefine mapping! '%s'\n", pair->Key.GetChars());
 				continue;
 			}
 
@@ -414,7 +414,7 @@ void Joy_ReadyRumbleMapping()
 			FString list = "[";
 			while (it.NextPair(pair))
 				list.AppendFormat(" '%s'->'%s'", pair->Key.GetChars(), pair->Value.GetChars());
-			Printf(DMSG_ERROR, TEXTCOLOR_RED "Circular rumble alias found! (%d) %s ]\n", RumbleAlias.CountUsed(), list.GetChars());
+			Printf(PRINT_MEDIUM, TEXTCOLOR_RED "Circular rumble alias found! (%d) %s ]\n", RumbleAlias.CountUsed(), list.GetChars());
 			break;
 		}
 

@@ -24,6 +24,7 @@
 
 #include <new>
 #include "dobject.h"
+#include "printf.h"
 #include "v_text.h"
 #include "stats.h"
 #include "c_dispatch.h"
@@ -827,7 +828,7 @@ void CVMAbortException::MaybePrintMessage()
 	auto m = GetMessage();
 	if (m != nullptr)
 	{
-		Printf(PRINT_NONOTIFY | PRINT_BOLD, TEXTCOLOR_RED "%s\n", m);
+		Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), TEXTCOLOR_RED "%s\n", m);
 		SetMessage("");
 	}
 }

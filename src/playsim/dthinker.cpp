@@ -22,6 +22,7 @@
 */
 
 #include "dthinker.h"
+#include "printf.h"
 #include "stats.h"
 #include "p_local.h"
 #include "serializer_doom.h"
@@ -608,7 +609,7 @@ bool FThinkerList::DoDestroyThinkers()
 			{
 				Printf("VM exception in DestroyThinkers:\n");
 				exception.MaybePrintMessage();
-				Printf(PRINT_NONOTIFY | PRINT_BOLD, "%s", exception.stacktrace.GetChars());
+				Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "%s", exception.stacktrace.GetChars());
 				// forcibly delete this. Cleanup may be incomplete, though.
 				node->ObjectFlags |= OF_YesReallyDelete;
 				delete node;
@@ -616,7 +617,7 @@ bool FThinkerList::DoDestroyThinkers()
 			}
 			catch (CRecoverableError &exception)
 			{
-				Printf(PRINT_NONOTIFY | PRINT_BOLD, "Error in DestroyThinkers: %s\n", exception.GetMessage());
+				Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "Error in DestroyThinkers: %s\n", exception.GetMessage());
 				// forcibly delete this. Cleanup may be incomplete, though.
 				node->ObjectFlags |= OF_YesReallyDelete;
 				delete node;

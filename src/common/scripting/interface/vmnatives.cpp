@@ -1187,7 +1187,7 @@ DEFINE_ACTION_FUNCTION(_Console, PrintfEx)
 
 	FString s = FStringFormat(VM_ARGS_NAMES,1);
 
-	Printf(printlevel,"%s\n", s.GetChars());
+	Printf(static_cast<PrintFlag>(printlevel),"%s\n", s.GetChars());
 	return 0;
 }
 
@@ -1198,7 +1198,7 @@ DEFINE_ACTION_FUNCTION(_Console, DebugPrintf)
 	PARAM_VA_POINTER(va_reginfo);
 
 	FString s = FStringFormat(VM_ARGS_NAMES, 1);
-	DPrintf(debugLevel, "%s\n", s.GetChars());
+	DPrintf(static_cast<DPrintLevel>(debugLevel), "%s\n", s.GetChars());
 	return 0;
 }
 

@@ -37,6 +37,7 @@
 
 EXTERN_CVAR(Int, developer);
 CVAR(Bool, debug_languages, false, CVAR_GLOBALCONFIG | CVAR_ARCHIVE);
+CVAR(Int, language_debug_maxlen, 64, 0);
 
 //==========================================================================
 //
@@ -905,14 +906,12 @@ const char *FStringTable::CheckString(const char *name, uint32_t *langtable, int
 	if (gender == -1) gender = defaultgender;
 	if (gender < 0 || gender > 3) gender = 0;
 	FName nm(name, true);
-	// Printf("%s\n", nm.GetChars());
 	if (nm != NAME_None)
 	{
 		TableElement* bestItem = nullptr;
 		for (auto map : currentLanguageSet)
 		{
 			auto item = map.second->CheckKey(nm);
-			// Printf("%s\n", nm.GetChars());
 			if (item)
 			{
 				if (bestItem && bestItem->filenum > item->filenum)
@@ -986,13 +985,44 @@ const char *FStringTable::GetString(const char *name) const
 
 	if (developer != 0 && !str)
 	{
-		static TMap<FName, bool> missed;
+		static TMap<uint32_t, bool> missed;
 
-		FName fname = name;
-		if (!missed.CheckKey(fname))
+		FString str{name};
+		size_t len = str.Len();
+		bool truncated = str.Len() > static_cast<size_t>(language_debug_maxlen);
+		if (truncated)
 		{
-			missed.Insert(fname, true);
-			DPrintf(DMSG_WARNING, "Translation not found '%s'\n", name);
+			str.Truncate(language_debug_maxlen);
+			str.AppendFormat("...");
+		}
+
+		uint32_t hash = CalcCRC32(str.GetChars());
+		if (!missed.CheckKey(hash))
+		{
+			missed.Insert(hash, true);
+
+			FString message = "Translation not found ";
+			if (truncated) message.AppendFormat("(truncated) ");
+			message.AppendCharacter('\'');
+			static const char chars[][2] {
+				{ '\a', 'a' }, { '\b', 'b' }, { '\t', 't' },
+				{ '\n', 'n' }, { '\f', 'f' }, { '\r', 'r' },
+			};
+			for (size_t i = 0; i < str.Len(); i++)
+			{
+				auto c = str[i];
+				for (auto ch : chars)
+				{
+					if (c != ch[0]) continue;
+					c = ch[1];
+					message.AppendCharacter('\\');
+					break;
+				}
+				message.AppendCharacter(c);
+			}
+			message.AppendCharacter('\'');
+
+			DPrintf(DMSG_WARNING, "%s\n", message.GetChars());
 		}
 	}
 
