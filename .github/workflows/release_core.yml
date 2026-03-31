@@ -13,15 +13,16 @@ on:
       branch:
         required: true
         type: string
+      label-name:
+        required: false
+        type: string
+        default: ''
       tag-name:
         required: true
         type: string
       message:
         required: true
         type: string
-      is_experimental:
-        required: true
-        type: boolean
 
 jobs:
   upload_release:
@@ -31,20 +32,18 @@ jobs:
       contents: write
       actions: read
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v6
         with:
-          ref: ${{ inputs.branch }}
           fetch-depth: 0
-          sparse-checkout: |
-            README.md
 
-      - uses: actions/checkout@v6
-        if: ${{ inputs.is_experimental }}
-        with:
-          ref: trunk
-          fetch-depth: 0
-          sparse-checkout: |
-            README.md
+      - name: Update Tag
+        run: |
+          git checkout ${{ inputs.branch }}
+          git tag -d ${{ inputs.tag-name }} || true
+          git push origin :refs/tags/${{ inputs.tag-name }} || true
+          git tag ${{ inputs.tag-name }}
+          git push origin ${{ inputs.tag-name }}
 
       - name: Download Artifacts
         uses: actions/download-artifact@v8
@@ -69,43 +68,45 @@ jobs:
           move "artifacts/MacOS Release"/*.zip release/MacOS-UZDoom-${{ inputs.title }}.zip
           move "artifacts/Linux Release"/*.AppImage release/Linux-UZDoom-${{ inputs.title }}.AppImage
 
-      - id: tag
-        name: Update Tag
+      - id: notes
+        name: Generate Notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ inputs.branch }}
+          MESSAGE: ${{ inputs.message }}
+          RUN: ${{ inputs.run-url }}
+          LABEL: ${{ inputs.label-name }}
         run: |
-          echo "describe=$(git describe --tags --exclude x-*)" >> "$GITHUB_OUTPUT"
+          version=$(git describe --tags --exclude x-*)
+          commit=$(git log --format=%B -n 1 | head -1)
+          base=""
+          if [ ${BRANCH} != 'trunk' ]; then
+               base=$(git merge-base trunk ${BRANCH})
+          fi
+          prs=""
+          if [ -n "${LABEL}" ]; then
+              prs=$(gh pr list --json url,title --jq '[.[] | "[\(.title)](\(.url))"] | join(" - ")' || true)
+          fi
+
           {
-            echo 'message<<EOF'
-            git log --format=%B -n 1
-            echo 'EOF'
+              echo 'message<<EOF'
+              printf 'These builds are automatically generated based on the latest commit to `%s`.\n' "${BRANCH}"
+              printf '\n'
+              printf '%s\n' "${MESSAGE}"
+              printf '\n'
+              printf '**Version:** `%s`\n' "${version}"
+              if [ -n "${base}" ]; then
+                  printf '**Base:** %s\n' "${base}"
+              fi
+              printf '**Message:** %s\n' "${commit}"
+              printf '**Workflow:** [Logs](%s) - [Artifacts](%s)\n' "${RUN}" "https://nightly.link/?url=${RUN}"
+              if [ -n "${prs}" ]; then
+                  printf '**Pull Requests being tested**: %s\n' "$prs"
+              fi
+              echo 'EOF'
           } >> $GITHUB_OUTPUT
-
-          git tag -d ${{ inputs.tag-name }} || true
-          git push origin :refs/tags/${{ inputs.tag-name }} || true
-          git tag ${{ inputs.tag-name }}
-          git push origin ${{ inputs.tag-name }}
-
-      - id: base
-        name: Find Base Commit
-        if: ${{ inputs.is_experimental }}
-        run: |
-          echo "base=$(git merge-base trunk ${{ inputs.branch }})" >> "$GITHUB_OUTPUT"
-          {
-            echo 'message<<EOF'
-            git log --format=%B -n 1 $(git merge-base trunk ${{ inputs.branch }})
-            echo 'EOF'
-          } >> $GITHUB_OUTPUT
-
-      - id: list_prs
-        name: List Experimental PRs
-        if: ${{ inputs.is_experimental }}
-        uses: buildsville/list-pull-requests@v1.0.1
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          labels: '["experimental"]'
-          skip_hour: 0
 
       - name: Upload
-        if: ${{ !inputs.is_experimental }}
         uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
         with:
           name: UZDoom ${{ inputs.title }}
@@ -115,35 +116,4 @@ jobs:
           make_latest: false
           generate_release_notes: false
           files: release/**
-          body: |
-            These builds are automatically generated based on the latest commit to `${{ inputs.branch }}`.
-
-            ${{ inputs.message }}
-
-            **Version:** `${{ steps.tag.outputs.describe }}`
-            **Message:** ${{ steps.tag.outputs.message }}
-            **Workflow:** [Logs](${{ inputs.run-url }}) - [Artifacts](https://nightly.link/?url=${{ inputs.run-url }})
-
-      - name: Upload Experimental
-        if: ${{ inputs.is_experimental }}
-        uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
-        with:
-          name: UZDoom ${{ inputs.title }}
-          tag_name: ${{ inputs.tag-name }}
-          draft: false
-          prerelease: true
-          make_latest: false
-          generate_release_notes: false
-          files: release/**
-          body: |
-            These builds are automatically generated based on the latest commit to `${{ inputs.branch }}`.
-
-            ${{ inputs.message }}
-
-            **Version:** `${{ steps.tag.outputs.describe }}`
-            **Message:** ${{ steps.tag.outputs.message }}
-            **Base Commit:** `${{ steps.base.outputs.base }}`
-            **Base Commit Message:** ${{ steps.base.outputs.message }}
-            **Workflow:** [Logs](${{ inputs.run-url }}) - [Artifacts](https://nightly.link/?url=${{ inputs.run-url }})
-            ### **Pull Requests Currently in Experimental:**
-            ${{ steps.list_prs.outputs.pulls }}
+          body: ${{ steps.notes.outputs.message }}

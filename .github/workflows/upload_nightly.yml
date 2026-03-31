@@ -20,7 +20,6 @@ jobs:
       branch: ${{ github.event.workflow_run.head_branch }}
       tag-name: x-preview
       message: They are development builds, so they may be unstable and have issues. Please report any problems you find.
-      is_experimental: false
 
   experimental:
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'experimental' }}
@@ -35,4 +34,4 @@ jobs:
       branch: ${{ github.event.workflow_run.head_branch }}
       tag-name: x-testing
       message: ⚠️ They are experimental development builds, specifically to test upcoming features. **Use at your own risk**.
-      is_experimental: true
+      label-name: experimental
