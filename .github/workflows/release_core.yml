@@ -19,6 +19,9 @@ on:
       message:
         required: true
         type: string
+      is_experimental:
+        required: true
+        type: boolean
 
 jobs:
   upload_release:
@@ -31,6 +34,14 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: ${{ inputs.branch }}
+          fetch-depth: 0
+          sparse-checkout: |
+            README.md
+
+      - uses: actions/checkout@v6
+        if: ${{ inputs.is_experimental }}
+        with:
+          ref: trunk
           fetch-depth: 0
           sparse-checkout: |
             README.md
@@ -73,7 +84,28 @@ jobs:
           git tag ${{ inputs.tag-name }}
           git push origin ${{ inputs.tag-name }}
 
+      - id: base
+        name: Find Base Commit
+        if: ${{ inputs.is_experimental }}
+        run: |
+          echo "base=$(git merge-base trunk ${{ inputs.branch }})" >> "$GITHUB_OUTPUT"
+          {
+            echo 'message<<EOF'
+            git log --format=%B -n 1 $(git merge-base trunk ${{ inputs.branch }})
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+
+      - id: list_prs
+        name: List Experimental PRs
+        if: ${{ inputs.is_experimental }}
+        uses: buildsville/list-pull-requests@v1.0.1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          labels: '["experimental"]'
+          skip_hour: 0
+
       - name: Upload
+        if: ${{ !inputs.is_experimental }}
         uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
         with:
           name: UZDoom ${{ inputs.title }}
@@ -91,3 +123,27 @@ jobs:
             **Version:** `${{ steps.tag.outputs.describe }}`
             **Message:** ${{ steps.tag.outputs.message }}
             **Workflow:** [Logs](${{ inputs.run-url }}) - [Artifacts](https://nightly.link/?url=${{ inputs.run-url }})
+
+      - name: Upload Experimental
+        if: ${{ inputs.is_experimental }}
+        uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
+        with:
+          name: UZDoom ${{ inputs.title }}
+          tag_name: ${{ inputs.tag-name }}
+          draft: false
+          prerelease: true
+          make_latest: false
+          generate_release_notes: false
+          files: release/**
+          body: |
+            These builds are automatically generated based on the latest commit to `${{ inputs.branch }}`.
+
+            ${{ inputs.message }}
+
+            **Version:** `${{ steps.tag.outputs.describe }}`
+            **Message:** ${{ steps.tag.outputs.message }}
+            **Base Commit:** `${{ steps.base.outputs.base }}`
+            **Base Commit Message:** ${{ steps.base.outputs.message }}
+            **Workflow:** [Logs](${{ inputs.run-url }}) - [Artifacts](https://nightly.link/?url=${{ inputs.run-url }})
+            ### **Pull Requests Currently in Experimental:**
+            ${{ steps.list_prs.outputs.pulls }}

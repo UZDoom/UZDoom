@@ -355,13 +355,13 @@ bool M_IsAnimated();
 
 
 struct IJoystickConfig;
-DMenuItemBase * CreateOptionMenuItemStaticText(const char *name, int v = -1);
-DMenuItemBase * CreateOptionMenuItemSubmenu(const char *label, FName cmd, int center);
+DMenuItemBase * CreateOptionMenuItemStaticText(const char *name, int v = -1, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
+DMenuItemBase * CreateOptionMenuItemSubmenu(const char *label, FName cmd, int center, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
 DMenuItemBase * CreateOptionMenuItemControl(const char *label, FName cmd, FKeyBindings *bindings);
 DMenuItemBase * CreateOptionMenuItemJoyConfigMenu(const char *label, IJoystickConfig *joy);
 DMenuItemBase * CreateListMenuItemPatch(double x, double y, int height, int hotkey, FTextureID tex, FName command, int param);
 DMenuItemBase * CreateListMenuItemText(double x, double y, int height, int hotkey, const char *text, FFont *font, PalEntry color1, PalEntry color2, FName command, int param);
-DMenuItemBase * CreateOptionMenuItemCommand(const char *label, FName cmd, bool centered = false);
+DMenuItemBase * CreateOptionMenuItemCommand(const char *label, FName cmd, bool centered = false, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
 DMenuItemBase* CreateListMenuItemStaticText(double x, double y, const char* text, FFont* font, PalEntry color, bool centered = false);
 
 void UpdateVRModes(bool considerQuadBuffered=true);

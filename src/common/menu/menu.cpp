@@ -32,6 +32,7 @@
 #include "configfile.h"
 #include "gstrings.h"
 #include "menu.h"
+#include "name.h"
 #include "vm.h"
 #include "v_video.h"
 #include "i_system.h"
@@ -1156,12 +1157,18 @@ DEFINE_FIELD(DImageScrollerDescriptor, virtHeight)
 
 struct IJoystickConfig;
 // These functions are used by dynamic menu creation.
-DMenuItemBase * CreateOptionMenuItemStaticText(const char *name, int v)
+DMenuItemBase * CreateOptionMenuItemStaticText(
+	const char *name,
+	int v,
+	FIntCVar *greycheck,
+	int greycheckVal,
+	FName greycheckMode
+)
 {
 	auto c = PClass::FindClass("OptionMenuItemStaticText");
 	auto p = c->CreateNew();
 	FString namestr = name;
-	VMValue params[] = { p, &namestr, v };
+	VMValue params[] = { p, &namestr, v, greycheck, greycheckVal, greycheckMode.GetIndex() };
 	auto f = dyn_cast<PFunction>(c->FindSymbol("Init", false));
 	VMCall(f->Variants[0].Implementation, params, countof(params), nullptr, 0);
 	return (DMenuItemBase*)p;
@@ -1178,12 +1185,19 @@ DMenuItemBase * CreateOptionMenuItemJoyConfigMenu(const char *label, IJoystickCo
 	return (DMenuItemBase*)p;
 }
 
-DMenuItemBase * CreateOptionMenuItemSubmenu(const char *label, FName cmd, int center)
+DMenuItemBase * CreateOptionMenuItemSubmenu(
+	const char *label,
+	FName cmd,
+	int center,
+	FIntCVar *greycheck,
+	int greycheckVal,
+	FName greycheckMode
+)
 {
 	auto c = PClass::FindClass("OptionMenuItemSubmenu");
 	auto p = c->CreateNew();
 	FString namestr = label;
-	VMValue params[] = { p, &namestr, cmd.GetIndex(), center, false };
+	VMValue params[] = { p, &namestr, cmd.GetIndex(), 0, center, greycheck, greycheckVal, greycheckMode.GetIndex() };
 	auto f = dyn_cast<PFunction>(c->FindSymbol("Init", false));
 	VMCall(f->Variants[0].Implementation, params, countof(params), nullptr, 0);
 	return (DMenuItemBase*)p;
@@ -1200,12 +1214,19 @@ DMenuItemBase * CreateOptionMenuItemControl(const char *label, FName cmd, FKeyBi
 	return (DMenuItemBase*)p;
 }
 
-DMenuItemBase * CreateOptionMenuItemCommand(const char *label, FName cmd, bool centered)
+DMenuItemBase * CreateOptionMenuItemCommand(
+	const char *label,
+	FName cmd,
+	bool centered,
+	FIntCVar *greycheck,
+	int greycheckVal,
+	FName greycheckMode
+)
 {
 	auto c = PClass::FindClass("OptionMenuItemCommand");
 	auto p = c->CreateNew();
 	FString namestr = label;
-	VMValue params[] = { p, &namestr, cmd.GetIndex(), centered, false };
+	VMValue params[] = { p, &namestr, cmd.GetIndex(), centered, false, greycheck, greycheckVal, greycheckMode.GetIndex() };
 	auto f = dyn_cast<PFunction>(c->FindSymbol("Init", false));
 	VMCall(f->Variants[0].Implementation, params, countof(params), nullptr, 0);
 	auto unsafe = dyn_cast<PField>(c->FindSymbol("mUnsafe", false));
