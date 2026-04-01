@@ -1487,6 +1487,12 @@ if ( NOT ZMUSIC_SYSTEM_INSTALL AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARE
 	add_dependencies(zdoom zmusic)
 endif()
 
+if( WIN32 )
+	set( INSTALL_PATH . CACHE STRING "Directory where the executable will be placed during install." )
+else()
+	set( INSTALL_PATH bin CACHE STRING "Directory where the executable will be placed during install." )
+endif()
+
 if( MINGW )
 	# POST_BUILD: copy known runtime DLLs next to the exe so the game can be
 	# run directly from the build directory without installing.
@@ -1624,11 +1630,6 @@ if ( NOT ZMUSIC_SYSTEM_INSTALL )
 	endif()
 endif()
 
-if( WIN32 )
-	set( INSTALL_PATH . CACHE STRING "Directory where the executable will be placed during install." )
-else()
-	set( INSTALL_PATH bin CACHE STRING "Directory where the executable will be placed during install." )
-endif()
 install(TARGETS zdoom
 		DESTINATION ${INSTALL_PATH}
 		COMPONENT "Game executable")
