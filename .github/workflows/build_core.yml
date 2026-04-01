@@ -49,11 +49,11 @@ jobs:
         fetch-depth: 0
 
     - name: Setup MSVC
-      if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW') && !contains(inputs.name, 'UCRT64')
+      if: (runner.os == 'Windows') && !contains(inputs.name, 'MinGW') && !contains(inputs.name, 'UCRT64')
       uses: ilammy/msvc-dev-cmd@v1 # FIXME: update this
 
     - name: Setup MSYS2
-      if: runner.os == 'Windows' && (contains(inputs.name, 'MinGW') || contains(inputs.name, 'UCRT64'))
+      if: (runner.os == 'Windows') && (contains(inputs.name, 'MinGW') || contains(inputs.name, 'UCRT64'))
       uses: msys2/setup-msys2@v2
       with:
         msystem: ${{ inputs.msys2_system }}
