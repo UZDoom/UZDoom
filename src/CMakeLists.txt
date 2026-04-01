@@ -1516,6 +1516,7 @@ if( MINGW )
 	# INSTALL: automatically bundle all transitive runtime DLLs from the MSYS2
 	# toolchain directory, excluding Windows system DLLs.
 	install( CODE "
+		cmake_policy( SET CMP0207 NEW )
 		file( GET_RUNTIME_DEPENDENCIES
 			EXECUTABLES \"\${CMAKE_INSTALL_PREFIX}/${INSTALL_PATH}/uzdoom.exe\"
 			RESOLVED_DEPENDENCIES_VAR   _r_deps
@@ -1540,9 +1541,16 @@ if( WIN32 )
 else()
 	set( INSTALL_SOUNDFONT_PATH share/games/${ZDOOM_EXE_NAME} CACHE STRING "Directory where soundfonts and WOPL/WOPN banks will be placed during install." )
 endif()
-install(DIRECTORY "${PROJECT_BINARY_DIR}/soundfonts" "${PROJECT_BINARY_DIR}/fm_banks"
-		DESTINATION ${INSTALL_SOUNDFONT_PATH}
-		COMPONENT "Soundfont resources")
+# Use TARGET_FILE_DIR so the correct config subdir (e.g. Debug/) is resolved
+# at install time rather than hardcoding PROJECT_BINARY_DIR.
+install(CODE "
+	foreach( _res_dir soundfonts fm_banks )
+		if( EXISTS \"\$<TARGET_FILE_DIR:zdoom>/\${_res_dir}\" )
+			file( INSTALL DESTINATION \"\${CMAKE_INSTALL_PREFIX}/${INSTALL_SOUNDFONT_PATH}\"
+				TYPE DIRECTORY FILES \"\$<TARGET_FILE_DIR:zdoom>/\${_res_dir}\" )
+		endif()
+	endforeach()
+" COMPONENT "Soundfont resources")
 
 # Install Linux desktop launcher, icon and metadata
 if( UNIX AND NOT APPLE )
