@@ -22,6 +22,10 @@ on:
       build_type:
         required: true
         type: string
+      msys2_system:
+        required: false
+        type: string
+        default: MINGW64
     secrets:
       MACOS_CERTIFICATE:
         required: false
@@ -36,7 +40,7 @@ jobs:
     runs-on: ${{ inputs.os }}
     defaults:
       run:
-        shell: ${{ contains(inputs.name, 'MinGW') && 'msys2 {0}' || 'bash' }}
+        shell: ${{ (contains(inputs.name, 'MinGW') || contains(inputs.name, 'UCRT')) && 'msys2 {0}' || 'bash' }}
 
     steps:
     - name: Checkout
@@ -49,10 +53,10 @@ jobs:
       uses: ilammy/msvc-dev-cmd@v1 # FIXME: update this
 
     - name: Setup MSYS2
-      if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
+      if: runner.os == 'Windows' && (contains(inputs.name, 'MinGW') || contains(inputs.name, 'UCRT'))
       uses: msys2/setup-msys2@v2
       with:
-        msystem: MINGW64
+        msystem: ${{ inputs.msys2_system }}
         update: true
 
     - name: Dependencies

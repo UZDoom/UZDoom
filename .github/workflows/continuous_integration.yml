@@ -93,6 +93,7 @@ jobs:
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       build_type: ${{ matrix.config.build_type }}
       extra_files: ${{ matrix.config.extra_files }}
+      msys2_system: ${{ matrix.config.msys2_system || 'MINGW64' }}
     strategy:
       fail-fast: false
       matrix:
@@ -118,6 +119,23 @@ jobs:
                 mingw-w64-x86_64-bzip2
                 mingw-w64-x86_64-clang
                 mingw-w64-x86_64-gcc
+            extra_files: ""
+            build_type: RelWithDebInfo
+
+          - name: Windows UCRT64 GCC
+            os: windows-latest
+            build_opts: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+            build_opts_extra: -DFORCE_NO_LTO=true
+            msys2_system: UCRT64
+            deps_cmdline: |
+              pacman -S --noconfirm --needed
+                mingw-w64-ucrt-x86_64-openal
+                mingw-w64-ucrt-x86_64-libvpx
+                mingw-w64-ucrt-x86_64-cmake
+                mingw-w64-ucrt-x86_64-ninja
+                mingw-w64-ucrt-x86_64-bzip2
+                mingw-w64-ucrt-x86_64-clang
+                mingw-w64-ucrt-x86_64-gcc
             extra_files: ""
             build_type: RelWithDebInfo
 
