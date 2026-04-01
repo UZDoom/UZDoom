@@ -6571,14 +6571,14 @@ void SetAnimationFrameRateInternal(AActor * self, double framerate, double ticFr
 
 	EnsureModelData(self);
 
-	if(self->modelData->anims.curAnim.flags & MODELANIM_NONE) return;
+	if(!anims) anims = &self->modelData->anims;
+
+	if(anims->curAnim.flags & MODELANIM_NONE) return;
 
 	if(framerate < 0)
 	{
 		ThrowAbortException(X_OTHER, "Cannot set negative framerate");
 	}
-
-	if(!anims) anims = &self->modelData->anims;
 
 	double tic = self->GetModelTimer();
 	if (!WorldPaused(true) && !self->Level->isFrozen())
