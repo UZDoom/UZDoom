@@ -175,12 +175,9 @@ if( NOT NO_OPENAL )
 			# whereas MSVC builds ship soft_oal.dll. Add a fallback DLL name so
 			# the runtime loader tries both.
 			add_definitions( -DOPENAL_DLL_FALLBACK="libopenal.dll" )
-			# Find the DLL next to the compiler and bundle it automatically.
+			# Resolve the MSYS2 bin directory from the compiler path so we can
+			# locate and bundle runtime DLLs later.
 			get_filename_component( MINGW_BIN_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY )
-			find_file( OPENAL_DLL NAMES libopenal.dll soft_oal.dll
-				PATHS "${MINGW_BIN_DIR}"
-				NO_DEFAULT_PATH
-			)
 		endif()
 	endif()
 endif()
@@ -1490,13 +1487,45 @@ if ( NOT ZMUSIC_SYSTEM_INSTALL AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARE
 	add_dependencies(zdoom zmusic)
 endif()
 
-if( MINGW AND OPENAL_DLL )
-	add_custom_command( TARGET zdoom POST_BUILD
-		COMMAND ${CMAKE_COMMAND} -E copy_if_different
-			"${OPENAL_DLL}" "$<TARGET_FILE_DIR:zdoom>/libopenal.dll"
-		COMMENT "Copying OpenAL DLL..."
+if( MINGW )
+	# POST_BUILD: copy known runtime DLLs next to the exe so the game can be
+	# run directly from the build directory without installing.
+	set( _mingw_runtime_dlls
+		libopenal.dll
+		libsndfile-1.dll
+		libmpg123-0.dll
+		libgcc_s_seh-1.dll
+		libstdc++-6.dll
+		libwinpthread-1.dll
 	)
-	install( FILES "${OPENAL_DLL}" RENAME "libopenal.dll" DESTINATION ${INSTALL_PATH} )
+	foreach( _dll_name ${_mingw_runtime_dlls} )
+		find_file( _dll_path "${_dll_name}" PATHS "${MINGW_BIN_DIR}" NO_DEFAULT_PATH )
+		if( _dll_path )
+			add_custom_command( TARGET zdoom POST_BUILD
+				COMMAND ${CMAKE_COMMAND} -E copy_if_different
+					"${_dll_path}" "$<TARGET_FILE_DIR:zdoom>/${_dll_name}"
+				COMMENT "Copying ${_dll_name}..."
+			)
+		endif()
+		unset( _dll_path CACHE )
+	endforeach()
+
+	# INSTALL: automatically bundle all transitive runtime DLLs from the MSYS2
+	# toolchain directory, excluding Windows system DLLs.
+	install( CODE "
+		file( GET_RUNTIME_DEPENDENCIES
+			EXECUTABLES \"\${CMAKE_INSTALL_PREFIX}/${INSTALL_PATH}/uzdoom.exe\"
+			RESOLVED_DEPENDENCIES_VAR   _r_deps
+			UNRESOLVED_DEPENDENCIES_VAR _u_deps
+			DIRECTORIES \"${MINGW_BIN_DIR}\"
+			PRE_EXCLUDE_REGEXES  [[api-ms-.*]] [[ext-ms-.*]]
+			POST_EXCLUDE_REGEXES [[.*/[Ss]ystem32/.*\\.dll]] [[.*/[Ss]ys[Ww][Oo][Ww]64/.*\\.dll]]
+		)
+		foreach( _file \${_r_deps} )
+			file( INSTALL DESTINATION \"\${CMAKE_INSTALL_PREFIX}/${INSTALL_PATH}\"
+				TYPE SHARED_LIBRARY FOLLOW_SYMLINK_CHAIN FILES \"\${_file}\" )
+		endforeach()
+	" )
 endif()
 
 if (VCPKG_TOOLCHAIN)
