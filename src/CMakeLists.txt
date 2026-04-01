@@ -1494,6 +1494,8 @@ if( MINGW )
 		libopenal.dll
 		libsndfile-1.dll
 		libmpg123-0.dll
+		libbz2-1.dll
+		libvpx-1.dll
 		libgcc_s_seh-1.dll
 		libstdc++-6.dll
 		libwinpthread-1.dll
@@ -1506,6 +1508,7 @@ if( MINGW )
 					"${_dll_path}" "$<TARGET_FILE_DIR:zdoom>/${_dll_name}"
 				COMMENT "Copying ${_dll_name}..."
 			)
+			install( FILES "${_dll_path}" DESTINATION ${INSTALL_PATH} )
 		endif()
 		unset( _dll_path CACHE )
 	endforeach()
