@@ -10,6 +10,9 @@ on:
       run-url:
         required: true
         type: string
+      commit:
+        required: true
+        type: string
       branch:
         required: true
         type: string
@@ -39,10 +42,9 @@ jobs:
 
       - name: Update Tag
         run: |
-          git checkout ${{ inputs.branch }}
           git tag -d ${{ inputs.tag-name }} || true
           git push origin :refs/tags/${{ inputs.tag-name }} || true
-          git tag ${{ inputs.tag-name }}
+          git tag ${{ inputs.tag-name }} ${{ inputs.commit }}
           git push origin ${{ inputs.tag-name }}
 
       - name: Download Artifacts
@@ -72,20 +74,21 @@ jobs:
         name: Generate Notes
         env:
           GH_TOKEN: ${{ github.token }}
+          COMMIT: ${{ inputs.commit }}
           BRANCH: ${{ inputs.branch }}
           MESSAGE: ${{ inputs.message }}
           RUN: ${{ inputs.run-url }}
           LABEL: ${{ inputs.label-name }}
         run: |
-          version=$(git describe --tags --exclude x-*)
-          commit=$(git log --format=%B -n 1 | head -1)
-          base=""
+          version=$(git describe --tags --exclude x-\* ${COMMIT})
+          commit=$(git log --format=%s -n 1 ${COMMIT})
           if [ ${BRANCH} != 'trunk' ]; then
-               base=$(git merge-base trunk ${BRANCH})
+               base=$(git merge-base origin/trunk ${COMMIT})
+               basetext=$(git log --format=%s -n 1 ${base})
+               base=$(git describe --tags --exclude x-\* ${base})
           fi
-          prs=""
           if [ -n "${LABEL}" ]; then
-              prs=$(gh pr list --json url,title --jq '[.[] | "[\(.title)](\(.url))"] | join(" - ")' || true)
+              prs=$(gh pr list --json url,title --label "${LABEL}" --jq '[.[] | "[\(.title)](\(.url))"] | join(" - ")' || true)
           fi
 
           {
@@ -95,13 +98,14 @@ jobs:
               printf '%s\n' "${MESSAGE}"
               printf '\n'
               printf '**Version:** `%s`\n' "${version}"
-              if [ -n "${base}" ]; then
-                  printf '**Base:** %s\n' "${base}"
-              fi
               printf '**Message:** %s\n' "${commit}"
+              if [ -n "${base}" ]; then
+                  printf '**Base:** `%s`\n' "${base}"
+                  printf '**Base message:** %s\n' "${basetext}"
+              fi
               printf '**Workflow:** [Logs](%s) - [Artifacts](%s)\n' "${RUN}" "https://nightly.link/?url=${RUN}"
               if [ -n "${prs}" ]; then
-                  printf '**Pull Requests being tested**: %s\n' "$prs"
+                  printf '**Pull requests being tested**: %s\n' "$prs"
               fi
               echo 'EOF'
           } >> $GITHUB_OUTPUT
