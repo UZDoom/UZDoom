@@ -73,6 +73,11 @@ CUSTOM_CVAR (Float, snd_superstereowidth, 0.45f, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 #else // !__APPLE__
 #define OPENALLIB1 NicePath("$PROGDIR/" OPENALLIB).GetChars()
 #define OPENALLIB2 OPENALLIB
+#ifdef OPENAL_DLL_FALLBACK
+// MSYS2 (MinGW64/UCRT64) installs OpenAL Soft as libopenal.dll rather than soft_oal.dll
+#define OPENALLIB3 NicePath("$PROGDIR/" OPENAL_DLL_FALLBACK).GetChars()
+#define OPENALLIB4 OPENAL_DLL_FALLBACK
+#endif
 #endif
 
 bool IsOpenALPresent()
@@ -88,7 +93,11 @@ bool IsOpenALPresent()
 	if (!done)
 	{
 		done = true;
+#ifdef OPENALLIB3
+		cached_result = OpenALModule.Load({OPENALLIB1, OPENALLIB2, OPENALLIB3, OPENALLIB4});
+#else
 		cached_result = OpenALModule.Load({OPENALLIB1, OPENALLIB2});
+#endif
 	}
 	return cached_result;
 #endif

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)",
+      "Bash(xargs git:*)",
+      "Bash(dir \"D:\\\\PRIVATE_PROJECTS\\\\UZDoom\")",
+      "Bash(C:/msys64/ucrt64/bin/cmake.exe --build \"D:\\\\PRIVATE_PROJECTS\\\\UZDoom\\\\build\" --config Debug)",
+      "Bash(C:/msys64/ucrt64/bin/ninja.exe -C \"D:\\\\PRIVATE_PROJECTS\\\\UZDoom\\\\build\")",
+      "Bash(C:/msys64/ucrt64/bin/ninja.exe -C \"D:\\\\PRIVATE_PROJECTS\\\\UZDoom\\\\build\" src/CMakeFiles/zdoom.dir/common/platform/win32/i_mouse.cpp.obj)",
+      "Bash(C:/msys64/ucrt64/bin/ninja.exe -C \"D:\\\\PRIVATE_PROJECTS\\\\UZDoom\\\\build\" -j1)",
+      "Bash(\"C:/msys64/ucrt64/bin/c++.exe\" -std=c++20 -g -D_DEBUG -D_WIN32 -D_WIN32_WINNT=0x0600 -x c++-header -c \"src/CMakeFiles/zdoom.dir/cmake_pch.hxx.cxx\")",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(\"C:/msys64/ucrt64/bin/c++.exe\" -std=c++20 -g -D_WIN32 -D_WIN32_WINNT=0x0600 -ID:/PRIVATE_PROJECTS/UZDoom/src -ID:/PRIVATE_PROJECTS/UZDoom/build/src -ID:/PRIVATE_PROJECTS/UZDoom/build -ID:/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -ID:/PRIVATE_PROJECTS/UZDoom/src/common/platform/win32 -include \"D:/PRIVATE_PROJECTS/UZDoom/build/src/CMakeFiles/zdoom.dir/cmake_pch.hxx\" -x c++-header \"D:/PRIVATE_PROJECTS/UZDoom/build/src/CMakeFiles/zdoom.dir/cmake_pch.hxx.cxx\")",
+      "Bash(\"C:/msys64/ucrt64/bin/c++.exe\" -std=c++20 -g -D_WIN32 -D_WIN32_WINNT=0x0600 -ID:/PRIVATE_PROJECTS/UZDoom/src -ID:/PRIVATE_PROJECTS/UZDoom/build -ID:/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -ID:/PRIVATE_PROJECTS/UZDoom/src/common/platform/win32 -x c++-header \"D:/PRIVATE_PROJECTS/UZDoom/src/g_pch.h\" -o /dev/null)",
+      "Bash(cmd /c \"C:\\\\msys64\\\\ucrt64\\\\bin\\\\c++.exe -std=c++20 -D_WIN32 -D_WIN32_WINNT=0x0600 -ID:/PRIVATE_PROJECTS/UZDoom/src -ID:/PRIVATE_PROJECTS/UZDoom/build -ID:/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -x c++-header D:/PRIVATE_PROJECTS/UZDoom/src/g_pch.h -o NUL 2>&1\")",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" -c \"C:/msys64/ucrt64/bin/c++.exe -std=c++20 -D_WIN32 -D_WIN32_WINNT=0x0600 -ID:/PRIVATE_PROJECTS/UZDoom/src -ID:/PRIVATE_PROJECTS/UZDoom/build -ID:/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -x c++-header D:/PRIVATE_PROJECTS/UZDoom/src/g_pch.h -o /dev/null\")",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" -c \"C:/msys64/ucrt64/bin/c++.exe -std=c++20 -D_WIN32 -D_WIN32_WINNT=0x0600 -ID:/PRIVATE_PROJECTS/UZDoom/src -ID:/PRIVATE_PROJECTS/UZDoom/build -ID:/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -x c++-header D:/PRIVATE_PROJECTS/UZDoom/src/g_pch.h -o /dev/null 2>&1\")",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" -c \"C:/msys64/ucrt64/bin/c++.exe -std=c++20 -D_WIN32 -D_WIN32_WINNT=0x0600 -ID:/PRIVATE_PROJECTS/UZDoom/src -ID:/PRIVATE_PROJECTS/UZDoom/build -ID:/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -x c++-header D:/PRIVATE_PROJECTS/UZDoom/src/g_pch.h -o /tmp/pch_test.gch 2>&1\")",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" --login -c \"c++ -std=c++20 -D_WIN32 -D_WIN32_WINNT=0x0600 -I/d/PRIVATE_PROJECTS/UZDoom/src -I/d/PRIVATE_PROJECTS/UZDoom/build -I/d/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -x c++-header /d/PRIVATE_PROJECTS/UZDoom/src/g_pch.h -o /tmp/pch_test.gch 2>&1\")",
+      "Bash(\"C:/msys64/usr/bin/bash.exe\" --login -c \"export PATH=/ucrt64/bin:$PATH && c++ -std=c++20 -D_WIN32 -D_WIN32_WINNT=0x0600 -I/d/PRIVATE_PROJECTS/UZDoom/src -I/d/PRIVATE_PROJECTS/UZDoom/build -I/d/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -x c++-header /d/PRIVATE_PROJECTS/UZDoom/src/g_pch.h -o /tmp/pch_test.gch 2>&1\")",
+      "Bash(C:/msys64/ucrt64/bin/c++.exe -std=c++20 -D_WIN32 -D_WIN32_WINNT=0x0600 -ID:/PRIVATE_PROJECTS/UZDoom/src -ID:/PRIVATE_PROJECTS/UZDoom/build -ID:/PRIVATE_PROJECTS/UZDoom/libraries/ZMusic/include -x c++-header D:/PRIVATE_PROJECTS/UZDoom/src/g_pch.h -oD:/PRIVATE_PROJECTS/UZDoom/build/pch_test.gch)",
+      "Bash(PATH=\"C:/msys64/ucrt64/bin:C:/msys64/usr/bin:$PATH\" \"C:/msys64/ucrt64/bin/c++.exe\" \"D:/PRIVATE_PROJECTS/UZDoom/build/test_empty.cpp\" -o \"D:/PRIVATE_PROJECTS/UZDoom/build/test_empty.exe\")",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(\"D:/PRIVATE_PROJECTS/UZDoom/build/out.txt\")"
+    ]
+  }
+}

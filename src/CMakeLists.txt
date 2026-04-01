@@ -170,6 +170,18 @@ if( NOT NO_OPENAL )
 		endif()
 	else()
 		add_definitions( -DDYN_OPENAL )
+		if( MINGW )
+			# MSYS2 (MinGW64 and UCRT64) installs OpenAL Soft as libopenal.dll,
+			# whereas MSVC builds ship soft_oal.dll. Add a fallback DLL name so
+			# the runtime loader tries both.
+			add_definitions( -DOPENAL_DLL_FALLBACK="libopenal.dll" )
+			# Find the DLL next to the compiler and bundle it automatically.
+			get_filename_component( MINGW_BIN_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY )
+			find_file( OPENAL_DLL NAMES libopenal.dll soft_oal.dll
+				PATHS "${MINGW_BIN_DIR}"
+				NO_DEFAULT_PATH
+			)
+		endif()
 	endif()
 endif()
 
@@ -1476,6 +1488,15 @@ if ( NOT ZMUSIC_SYSTEM_INSTALL AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARE
 			WORKING_DIRECTORY $<TARGET_FILE_DIR:zdoom>)
 	endif()
 	add_dependencies(zdoom zmusic)
+endif()
+
+if( MINGW AND OPENAL_DLL )
+	add_custom_command( TARGET zdoom POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different
+			"${OPENAL_DLL}" "$<TARGET_FILE_DIR:zdoom>/libopenal.dll"
+		COMMENT "Copying OpenAL DLL..."
+	)
+	install( FILES "${OPENAL_DLL}" RENAME "libopenal.dll" DESTINATION ${INSTALL_PATH} )
 endif()
 
 if (VCPKG_TOOLCHAIN)
