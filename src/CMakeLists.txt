@@ -1490,25 +1490,29 @@ endif()
 if( MINGW )
 	# POST_BUILD: copy known runtime DLLs next to the exe so the game can be
 	# run directly from the build directory without installing.
+	# Format: "install_name|search_name1|search_name2|..."
 	set( _mingw_runtime_dlls
-		libopenal.dll
-		libsndfile-1.dll
-		libmpg123-0.dll
-		libbz2-1.dll
-		libvpx-1.dll
-		libgcc_s_seh-1.dll
-		libstdc++-6.dll
-		libwinpthread-1.dll
+		"libopenal.dll|libopenal.dll|libopenal-1.dll"
+		"libsndfile-1.dll|libsndfile-1.dll"
+		"libmpg123-0.dll|libmpg123-0.dll"
+		"libbz2-1.dll|libbz2-1.dll"
+		"libvpx-1.dll|libvpx-1.dll"
+		"libgcc_s_seh-1.dll|libgcc_s_seh-1.dll"
+		"libstdc++-6.dll|libstdc++-6.dll"
+		"libwinpthread-1.dll|libwinpthread-1.dll"
 	)
-	foreach( _dll_name ${_mingw_runtime_dlls} )
-		find_file( _dll_path "${_dll_name}" PATHS "${MINGW_BIN_DIR}" NO_DEFAULT_PATH )
+	foreach( _entry ${_mingw_runtime_dlls} )
+		string( REPLACE "|" ";" _parts "${_entry}" )
+		list( GET _parts 0 _install_name )
+		list( REMOVE_AT _parts 0 )
+		find_file( _dll_path NAMES ${_parts} PATHS "${MINGW_BIN_DIR}" NO_DEFAULT_PATH )
 		if( _dll_path )
 			add_custom_command( TARGET zdoom POST_BUILD
 				COMMAND ${CMAKE_COMMAND} -E copy_if_different
-					"${_dll_path}" "$<TARGET_FILE_DIR:zdoom>/${_dll_name}"
-				COMMENT "Copying ${_dll_name}..."
+					"${_dll_path}" "$<TARGET_FILE_DIR:zdoom>/${_install_name}"
+				COMMENT "Copying ${_install_name}..."
 			)
-			install( FILES "${_dll_path}" DESTINATION ${INSTALL_PATH} )
+			install( FILES "${_dll_path}" RENAME "${_install_name}" DESTINATION ${INSTALL_PATH} )
 		endif()
 		unset( _dll_path CACHE )
 	endforeach()
