@@ -127,8 +127,8 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name, bool roo
 			// fonts with specific languages list here for high priority
 			{ "ui/noto/noto-sans-jp.ttf", "ja" },
 			{ "ui/noto/noto-sans-kr.ttf", "ko" },
-			{ "ui/noto/noto-sans-sc.ttf", "zh-Hans" },
-			// "ui/noto/noto-sans-tc.ttf", "zh-Hant" },
+			{ "ui/noto/noto-sans-sc.ttf", "zh_Hans" },
+			// "ui/noto/noto-sans-tc.ttf", "zh_Hant" },
 
 			// generic fonts
 			{ "ui/noto/noto-sans.ttf", ""},

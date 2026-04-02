@@ -47,6 +47,8 @@ bool ErrorWindow::ExecModal(const std::string& text, const std::string& log, std
 
 ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, WidgetType::Window), minidump(std::move(initminidump))
 {
+	GetCanvas()->setLanguage(GStrings.GetLangName().GetChars());
+
 	FStringf caption("%s - " GAMENAME " %s (%s)", GStrings.GetString("ERROR_FATAL"), GetVersionString(), GetGitTime());
 	SetWindowTitle(caption.GetChars());
 

@@ -167,7 +167,7 @@ inline FName GetFallback(FName name)
 		{"en-*-CA", "en-GB"},
 		{"en-*-SD", "en-GB"}, // TODO: support Subdivision
 		{"zh-*-CN", "zh-Hans-CN"},
-		{"zh-*-HK", "zh-Hans-HK"},
+		{"zh-*-HK", "zh-Hant-HK"},
 		{"zh-*-MO", "zh-Hant-MO"},
 		{"zh-*-SG", "zh-Hans-SG"},
 		{"zh-*-TW", "zh-Hant-TW"},
@@ -527,7 +527,9 @@ bool FStringTable::ParseLanguageCSV(int filenum, const char* buffer, size_t size
 						lang = "en-US";
 						hasDefaultEntry = true;
 					}
-					langrows.Push(std::make_pair(column, GetID(lang).normalized));
+					auto langid = GetID(lang).normalized;
+					langrows.Push(std::make_pair(column, langid));
+					InsertString(filenum, langid, "LANG", lang); // for retrieving language name from langid
 				}
 			}
 		}
@@ -771,7 +773,6 @@ void FStringTable::UpdateLanguage(const char *language)
 	size_t langlen = strlen(language);
 
 	auto LanguageID = ((langlen < 2) ? GetID("default"): GetID(language));
-	langName = LanguageID.name;
 	auto FallbackID = (LanguageID.fallback==NAME_None)? (LangID{NAME_None}): GetID(LanguageID.fallback.GetChars());
 	auto fallback = FallbackID.name;
 
@@ -805,6 +806,7 @@ void FStringTable::UpdateLanguage(const char *language)
 		currentLanguageSet.Push(std::make_pair(lang, list));
 		if (debug_languages) diagnostics.AppendFormat(" %c-%x", id, lang);
 	}
+	langName = CheckString("LANG");
 	if (debug_languages) Printf("Strings %s:%s\n", language, diagnostics.GetChars());
 }
 
