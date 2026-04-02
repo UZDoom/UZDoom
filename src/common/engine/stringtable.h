@@ -101,7 +101,7 @@ private:
 	TArray<std::pair<uint32_t, StringMap*>> currentLanguageSet;
 	int defaultgender = 0;
 	TMap<FName, LangID> langMap;
-	TMap<uint32_t, LangID*> langRevMap;
+	TMap<uint32_t, FName> langRevMap;
 	FName langName;
 
 	LangID GetID(FString lang);

@@ -276,11 +276,13 @@ LangID FStringTable::GetID(FString lang)
 		diagnostics.AppendFormat(", mapped: %s", lang.GetChars());
 	}
 
-	auto ptr = langMap.CheckKey(name);
-	if (ptr)
 	{
-		if (debug_languages) Printf("%s.\n", diagnostics.GetChars());
-		return *ptr;
+		auto ptr = langMap.CheckKey(name);
+		if (ptr)
+		{
+			if (debug_languages) Printf("%s.\n", diagnostics.GetChars());
+			return *ptr;
+		}
 	}
 
 	FString _lang, _script, _region;
@@ -290,11 +292,13 @@ LangID FStringTable::GetID(FString lang)
 	auto script     = _lang + "-" + _script + "-*";
 	auto language   = _lang + "-*-*";
 
-	ptr = langMap.CheckKey(normalized);
-	if (ptr)
 	{
-		if (debug_languages) Printf("%s.\n", diagnostics.GetChars());
-		return *ptr;
+		auto ptr = langMap.CheckKey(normalized);
+		if (ptr)
+		{
+			if (debug_languages) Printf("%s.\n", diagnostics.GetChars());
+			return *ptr;
+		}
 	}
 
 	LangID id = {
@@ -304,42 +308,42 @@ LangID FStringTable::GetID(FString lang)
 		CalcCRC32(script.GetChars()),
 		CalcCRC32(language.GetChars()),
 	};
-	if (name != normalized) langMap.Insert(normalized, id);
-	ptr = &langMap.Insert(normalized, id);
-	langRevMap.Insert(ptr->normalized, ptr);
+	if (name != normalized) langMap.Insert(name, id);
+	langMap.Insert(normalized, id);
+	langRevMap.Insert(id.normalized, normalized);
 
 	if (debug_languages)
 	{
 		diagnostics.AppendFormat(
 			" inserted: %s (%c-%x)",
 			normalized.GetChars(),
-			ptr->normalized == ptr->language? 'L': ptr->normalized == ptr->script? 'S': 'R',
-			ptr->normalized
+			id.normalized == id.language? 'L': id.normalized == id.script? 'S': 'R',
+			id.normalized
 		);
 
-		if (ptr->fallback != NAME_None) diagnostics.AppendFormat(" '%s'?", ptr->fallback.GetChars());
+		if (id.fallback != NAME_None) diagnostics.AppendFormat(" '%s'?", id.fallback.GetChars());
 	}
 
-	if (ptr->normalized != ptr->script)
+	if (id.normalized != id.script)
 	{
-		auto fallback = langRevMap.CheckKey(ptr->script);
+		auto fallback = langRevMap.CheckKey(id.script);
 		if (debug_languages) diagnostics.AppendFormat(", %s", script.GetChars());
 		if (!fallback)
 		{
-			auto ptr = &langMap.Insert(script, id);
-			langRevMap.Insert(ptr->script, ptr);
-			diagnostics.AppendFormat(" (%c-%x)", ptr->script == ptr->language? 'L': 'S', ptr->script);
+			langMap.Insert(script, id);
+			langRevMap.Insert(id.script, script);
+			diagnostics.AppendFormat(" (%c-%x)", id.script == id.language? 'L': 'S', id.script);
 		}
 	}
-	if (ptr->normalized != ptr->language)
+	if (id.normalized != id.language)
 	{
-		auto fallback = langRevMap.CheckKey(ptr->language);
+		auto fallback = langRevMap.CheckKey(id.language);
 		if (debug_languages) diagnostics.AppendFormat(", %s", language.GetChars());
 		if (!fallback)
 		{
-			auto ptr = &langMap.Insert(language, id);
-			langRevMap.Insert(ptr->language, ptr);
-			if (debug_languages) diagnostics.AppendFormat(" (L-%x)", ptr->language);
+			langMap.Insert(language, id);
+			langRevMap.Insert(id.language, script);
+			if (debug_languages) diagnostics.AppendFormat(" (L-%x)", id.language);
 		}
 	}
 
@@ -379,13 +383,11 @@ void FStringTable::LoadStrings (FileSys::FileSystem& fileSystem, const char *lan
 	allMacros.Clear();
 }
 
-
 //==========================================================================
 //
 // This was tailored to parse CSV as exported by Google Docs.
 //
 //==========================================================================
-
 
 TArray<TArray<FString>> FStringTable::parseCSV(const char* buffer, size_t size)
 {
@@ -979,6 +981,7 @@ bool FStringTable::MatchDefaultString(const char *name, const char *content) con
 // not exist, returns the passed name instead.
 //
 //==========================================================================
+
 const char *FStringTable::GetString(const char *name) const
 {
 	const char *str = CheckString(name);
@@ -1028,7 +1031,6 @@ const char *FStringTable::GetString(const char *name) const
 
 	return str ? str : name;
 }
-
 
 //==========================================================================
 //
