@@ -3,7 +3,7 @@
 ** Provides a WinMM implementation of a MIDI output device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -518,7 +518,7 @@ int WinMIDIDevice::PrepareHeader(MidiHeader *header)
 	syshdr->dwBufferLength = header->dwBufferLength;
 	syshdr->dwBytesRecorded = header->dwBytesRecorded;
 	// this device does not use the lpNext pointer to link MIDI events so use it to point to the system data structure.
-	header->lpNext = (MidiHeader*)syshdr;	
+	header->lpNext = (MidiHeader*)syshdr;
 	return midiOutPrepareHeader((HMIDIOUT)MidiOut, syshdr, sizeof(MIDIHDR));
 }
 

@@ -3,7 +3,7 @@
 ** Provides access to libOPNMIDI as a generic MIDI device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -65,7 +65,7 @@ protected:
 	void HandleEvent(int status, int parm1, int parm2) override;
 	void HandleLongEvent(const uint8_t *data, int len) override;
 	void ComputeOutput(float *buffer, int len) override;
-	
+
 private:
 	int LoadCustomBank(const OpnConfig *config);
 	void LoadDefaultBank();
@@ -396,7 +396,7 @@ MIDIDevice *CreateOPNMIDIDevice(const char *Args)
 	{
 		const char* info;
 		if (musicCallbacks.PathForSoundfont)
-		{ 
+		{
 			info = musicCallbacks.PathForSoundfont(bank, SF_WOPN);
 		}
 		else

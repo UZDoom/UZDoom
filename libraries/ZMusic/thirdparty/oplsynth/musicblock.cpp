@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright 2002-2016 Randy Heit
+// Copyright 2002-2016 Marisa Heit
 // Copyright 2005-2014 Simon Howard 
 // Copyright 2017 Christoph Oelckers
 //

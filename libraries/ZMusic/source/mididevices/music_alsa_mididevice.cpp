@@ -2,7 +2,7 @@
 ** Provides an ALSA implementation of a MIDI output device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008-2010 Randy Heit
+** Copyright 2008-2010 Marisa Heit
 ** Copyright 2020 Petr Mrazek
 ** All rights reserved.
 **

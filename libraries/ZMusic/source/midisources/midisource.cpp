@@ -3,7 +3,7 @@
  ** Implements base class for the different MIDI formats
  **
  **---------------------------------------------------------------------------
- ** Copyright 2008-2016 Randy Heit
+ ** Copyright 2008-2016 Marisa Heit
  ** Copyright 2017-2018 Christoph Oelckers
  ** All rights reserved.
  **
@@ -130,12 +130,12 @@ std::vector<uint16_t> MIDISource::PrecacheData()
 	uint8_t found_instruments[256] = { 0, };
 	uint8_t found_banks[256] = { 0, };
 	bool multiple_banks = false;
-	
+
 	LoopLimit = 1;
 	DoRestart();
 	found_banks[0] = true;		// Bank 0 is always used.
 	found_banks[128] = true;
-	
+
 	// Simulate playback to pick out used instruments.
 	while (!CheckDone())
 	{
@@ -148,7 +148,7 @@ std::vector<uint16_t> MIDISource::PrecacheData()
 				int channel = (event[2] & 0x0f);
 				int data1 = (event[2] >> 8) & 0x7f;
 				int data2 = (event[2] >> 16) & 0x7f;
-				
+
 				if (channel != 9 && command == (MIDI_PRGMCHANGE & 0x70))
 				{
 					found_instruments[data1] = true;
@@ -187,10 +187,10 @@ std::vector<uint16_t> MIDISource::PrecacheData()
 		}
 	}
 	DoRestart();
-	
+
 	// Now pack everything into a contiguous region for the PrecacheInstruments call().
 	std::vector<uint16_t> packed;
-	
+
 	for (int i = 0; i < 256; ++i)
 	{
 		if (found_instruments[i])
@@ -252,13 +252,13 @@ bool MIDISource::SetMIDISubsong(int subsong)
 static void WriteVarLen (std::vector<uint8_t> &file, uint32_t value)
 {
 	uint32_t buffer = value & 0x7F;
-	
+
 	while ( (value >>= 7) )
 	{
 		buffer <<= 8;
 		buffer |= (value & 0x7F) | 0x80;
 	}
-	
+
 	for (;;)
 	{
 		file.push_back(uint8_t(buffer));
@@ -300,13 +300,13 @@ void MIDISource::CreateSMF(std::vector<uint8_t> &file, int looplimit)
 	uint32_t Events[2][MAX_MIDI_EVENTS*3];
 	uint32_t delay = 0;
 	uint8_t running_status = 255;
-	
+
 	// Always create songs aimed at GM devices.
 	CheckCaps(MIDIDEV_MIDIPORT);
 	LoopLimit = looplimit <= 0 ? EXPORT_LOOP_LIMIT : looplimit;
 	DoRestart();
 	StartPlayback(false, LoopLimit);
-	
+
 	file.resize(sizeof(StaticMIDIhead));
 	memcpy(file.data(), StaticMIDIhead, sizeof(StaticMIDIhead));
 	file[12] = Division >> 8;
@@ -314,7 +314,7 @@ void MIDISource::CreateSMF(std::vector<uint8_t> &file, int looplimit)
 	file[26] = InitialTempo >> 16;
 	file[27] = InitialTempo >> 8;
 	file[28] = InitialTempo;
-	
+
 	while (!CheckDone())
 	{
 		uint32_t *event_end = MakeEvents(Events[0], &Events[0][MAX_MIDI_EVENTS*3], 1000000*600);
@@ -386,20 +386,20 @@ void MIDISource::CreateSMF(std::vector<uint8_t> &file, int looplimit)
 			}
 		}
 	}
-	
+
 	// End track
 	WriteVarLen(file, delay);
 	file.push_back(MIDI_META);
 	file.push_back(MIDI_META_EOT);
 	file.push_back(0);
-	
+
 	// Fill in track length
 	uint32_t len = (uint32_t)file.size() - 22;
 	file[18] = uint8_t(len >> 24);
 	file[19] = uint8_t(len >> 16);
 	file[20] = uint8_t(len >> 8);
 	file[21] = uint8_t(len & 255);
-	
+
 	LoopLimit = 0;
 }
 
@@ -427,7 +427,7 @@ DLL_EXPORT EMIDIType ZMusic_IdentifyMIDIType(uint32_t *id, int size)
 		return MIDI_MUS;
 	}
 	// Check for HMI format
-	else 
+	else
 	if (id[0] == MAKE_ID('H','M','I','-') &&
 		id[1] == MAKE_ID('M','I','D','I') &&
 		id[2] == MAKE_ID('S','O','N','G'))
@@ -496,7 +496,7 @@ DLL_EXPORT ZMusic_MidiSource ZMusic_CreateMIDISource(const uint8_t *data, size_t
 		case MIDI_XMI:
 			source = new XMISong(data, length);
 			break;
-		
+
 		case MIDI_MIDS:
 			source = new MIDSSong(data, length);
 			break;

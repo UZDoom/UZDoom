@@ -3,7 +3,7 @@
 ** Provides access to WildMidi as a generic MIDI device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2015 Randy Heit
+** Copyright 2015 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

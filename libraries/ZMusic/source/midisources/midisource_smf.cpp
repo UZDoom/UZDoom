@@ -3,7 +3,7 @@
 ** Code to let ZDoom play SMF MIDI music through the MIDI streaming API.
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2008 Randy Heit
+** Copyright 1998-2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

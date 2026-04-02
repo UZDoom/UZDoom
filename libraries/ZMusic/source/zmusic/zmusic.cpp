@@ -3,7 +3,7 @@
  ** Plays music
  **
  **---------------------------------------------------------------------------
- ** Copyright 1998-2016 Randy Heit
+ ** Copyright 1998-2016 Marisa Heit
  ** Copyright 2005-2019 Christoph Oelckers
  ** All rights reserved.
  **
@@ -84,7 +84,7 @@ static bool ungzip(uint8_t *data, int complen, std::vector<uint8_t> &newdata)
 	unsigned isize;
 	z_stream stream;
 	int err;
-	
+
 	// Find start of compressed data stream
 	if (flags & GZIP_FEXTRA)
 	{
@@ -112,18 +112,18 @@ static bool ungzip(uint8_t *data, int complen, std::vector<uint8_t> &newdata)
 	{
 		return false;
 	}
-	
+
 	// Decompress
 	isize = LittleLong(*(uint32_t *)(data + complen - 4));
 	newdata.resize(isize);
-	
+
 	stream.next_in = (Bytef *)compstart;
 	stream.avail_in = (uInt)(max - compstart);
 	stream.next_out = &newdata[0];
 	stream.avail_out = isize;
 	stream.zalloc = (alloc_func)0;
 	stream.zfree = (free_func)0;
-	
+
 	err = inflateInit2(&stream, -MAX_WBITS);
 	if (err != Z_OK)
 	{
@@ -156,7 +156,7 @@ static  MusInfo *ZMusic_OpenSongInternal (MusicIO::FileInterface *reader, EMidiD
 	StreamSource *streamsource = nullptr;
 	const char *fmt;
 	uint32_t id[32/4];
-	
+
 	if(reader->read(id, 32) != 32 || reader->seek(-32, SEEK_CUR) != 0)
 	{
 		SetError("Unable to read header");
@@ -184,15 +184,15 @@ static  MusInfo *ZMusic_OpenSongInternal (MusicIO::FileInterface *reader, EMidiD
 													 });
 			reader->close();
 			reader = zreader;
-			
-			
+
+
 			if (reader->read(id, 32) != 32 || reader->seek(-32, SEEK_CUR) != 0)
 			{
 				reader->close();
 				return nullptr;
 			}
 		}
-		
+
 		EMIDIType miditype = ZMusic_IdentifyMIDIType(id, sizeof(id));
 		if (miditype != MIDI_NOTMIDI)
 		{
@@ -221,17 +221,17 @@ static  MusInfo *ZMusic_OpenSongInternal (MusicIO::FileInterface *reader, EMidiD
 			if (device == MDEV_STANDARD)
 				device = MDEV_SNDSYS;
 #endif
-			
+
 			info = CreateMIDIStreamer(source, device, Args? Args : "");
 		}
-		
+
 		// Check for CDDA "format"
 		else if ((id[0] == MAKE_ID('R', 'I', 'F', 'F') && id[2] == MAKE_ID('C', 'D', 'D', 'A')))
 		{
 			// This is a CDDA file
 			info = CDDA_OpenSong(reader);
 		}
-		
+
 		// Check for various raw OPL formats
 		else
 		{
@@ -244,7 +244,7 @@ static  MusInfo *ZMusic_OpenSongInternal (MusicIO::FileInterface *reader, EMidiD
 				streamsource = OPL_OpenSong(reader, &oplConfig);
 
 			}
-			else 
+			else
 #endif
 				if ((id[0] == MAKE_ID('R', 'I', 'F', 'F') && id[2] == MAKE_ID('C', 'D', 'X', 'A')))
 			{
@@ -309,13 +309,13 @@ static  MusInfo *ZMusic_OpenSongInternal (MusicIO::FileInterface *reader, EMidiD
 				streamsource = SndFile_OpenSong(reader);		// this only takes over the reader if it succeeds. We need to look out for this.
 				if (streamsource != nullptr) reader = nullptr;
 			}
-			
+
 			if (streamsource)
 			{
 				info = OpenStreamSong(streamsource);
 			}
 		}
-		
+
 		if (!info)
 		{
 			// File could not be identified as music.
@@ -323,7 +323,7 @@ static  MusInfo *ZMusic_OpenSongInternal (MusicIO::FileInterface *reader, EMidiD
 			SetError("Unable to identify as music");
 			return nullptr;
 		}
-		
+
 		if (info && !info->IsValid())
 		{
 			delete info;
@@ -388,14 +388,14 @@ DLL_EXPORT ZMusic_MusicStream ZMusic_OpenSong(ZMusicCustomReader* reader, EMidiD
 DLL_EXPORT MusInfo *ZMusic_OpenCDSong (int track, int id)
 {
 	MusInfo *info = CD_OpenSong (track, id);
-	
+
 	if (info && !info->IsValid ())
 	{
 		delete info;
 		info = nullptr;
 		SetError("Unable to open CD Audio");
 	}
-	
+
 	return info;
 }
 

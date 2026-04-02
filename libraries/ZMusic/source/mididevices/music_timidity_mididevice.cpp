@@ -3,7 +3,7 @@
 ** Provides access to TiMidity as a generic MIDI device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -76,14 +76,14 @@ class TimidityMIDIDevice : public SoftSynthMIDIDevice
 public:
 	TimidityMIDIDevice(int samplerate);
 	~TimidityMIDIDevice();
-	
+
 	int OpenRenderer() override;
 	void PrecacheInstruments(const uint16_t *instruments, int count) override;
 	int GetDeviceType() const override { return MDEV_GUS; }
-	
+
 protected:
 	Timidity::Renderer *Renderer;
-	
+
 	void HandleEvent(int status, int parm1, int parm2) override;
 	void HandleLongEvent(const uint8_t *data, int len) override;
 	void ComputeOutput(float *buffer, int len) override;
@@ -109,7 +109,7 @@ void TimidityMIDIDevice::LoadInstruments()
 		}
 		// Load DMXGUS lump and patches from gus_patchdir
 		if (gusConfig.gus_patchdir.length() != 0) gusConfig.reader->add_search_path(gusConfig.gus_patchdir.c_str());
-		
+
 		gusConfig.instruments.reset(new Timidity::Instruments(gusConfig.reader));
 		gusConfig.loadedConfig = gusConfig.readerName;
 	}
@@ -135,7 +135,7 @@ void TimidityMIDIDevice::LoadInstruments()
 	{
 		bool err = gusConfig.instruments->LoadConfig() < 0;
 		gusConfig.reader = nullptr;
-		
+
 		if (err)
 		{
 			gusConfig.instruments.reset();

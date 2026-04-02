@@ -3,7 +3,7 @@
 ** Provides an emulated OPL implementation of a MIDI output device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
