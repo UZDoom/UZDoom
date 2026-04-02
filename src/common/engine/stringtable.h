@@ -92,6 +92,7 @@ public:
 	void InsertString(int filenum, uint32_t langid, FName label, const FString& string);
 	void SetDefaultGender(int gender) { defaultgender = gender; }
 	FName GetLangName() const { return langName; }
+	FName GetLangScript() const { return langScript; }
 
 private:
 
@@ -102,7 +103,7 @@ private:
 	int defaultgender = 0;
 	TMap<FName, LangID> langMap;
 	TMap<uint32_t, FName> langRevMap;
-	FName langName;
+	FName langName, langScript;
 
 	LangID GetID(FString lang);
 	FString GetSystemLocale();
