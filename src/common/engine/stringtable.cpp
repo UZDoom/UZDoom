@@ -167,7 +167,7 @@ inline FName GetFallback(FName name)
 		{"en-*-CA", "en-GB"},
 		{"en-*-SD", "en-GB"}, // TODO: support Subdivision
 		{"zh-*-CN", "zh-Hans-CN"},
-		{"zh-*-HK", "zh-Hans-HK"},
+		{"zh-*-HK", "zh-Hant-HK"},
 		{"zh-*-MO", "zh-Hant-MO"},
 		{"zh-*-SG", "zh-Hans-SG"},
 		{"zh-*-TW", "zh-Hant-TW"},
