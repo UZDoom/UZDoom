@@ -45,6 +45,11 @@
 #include "midiconfig.h"
 #include "mididevices/music_alsa_state.h"
 
+#ifdef __APPLE__
+#include <CoreMIDI/CoreMIDI.h>
+#include <CoreFoundation/CoreFoundation.h>
+#endif
+
 #ifdef HAVE_TIMIDITY
 #include "timidity/timidity.h"
 #include "timiditypp/timidity.h"
@@ -164,6 +169,7 @@ DLL_EXPORT void ZMusic_SetDmxGus(const void* data, unsigned len)
 #endif
 }
 
+// FIXME: This function is unused, is it worth keeping?
 int ZMusic_EnumerateMidiDevices()
 {
 #ifdef HAVE_SYSTEM_MIDI
@@ -243,6 +249,29 @@ struct MidiDeviceList
 				ZMusicMidiOutDevice mdev = { outbuf, int(id), caps.wTechnology };
 				devices.push_back(mdev);
 			}
+		}
+#elif __APPLE__
+		CFStringRef cfName;
+		char string_buffer[128];
+		auto destCount = MIDIGetNumberOfDestinations();
+		for (int i = 0; i < destCount; i++)
+		{
+			auto endpoint = MIDIGetDestination(i);
+			if (!endpoint)
+			{
+				continue;
+			}
+			cfName = nullptr;
+			MIDIObjectGetStringProperty(endpoint, kMIDIPropertyName, &cfName);
+			if (!CFStringGetCString(cfName, string_buffer, sizeof(string_buffer), kCFStringEncodingUTF8))
+			{
+				strcpy(string_buffer, "CoreMidi device");
+			}
+			if (cfName != nullptr)
+			{
+				CFRelease(cfName);
+			}
+			devices.push_back({ strdup(string_buffer), i, MIDIDEV_MAPPER });
 		}
 #endif
 #endif

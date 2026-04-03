@@ -4,7 +4,7 @@
 ** Based on the Foobar2000 component foo_dumb, version 0.9.8.4.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

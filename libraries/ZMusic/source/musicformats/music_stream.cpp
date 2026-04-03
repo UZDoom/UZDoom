@@ -3,7 +3,7 @@
 ** Plays a streaming song from a StreamSource 
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** Copyright 2019 Christoph Oelckers
 ** All rights reserved.
 **

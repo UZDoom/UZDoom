@@ -3,7 +3,7 @@
 ** Provides access to WildMidi as a generic MIDI device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2015 Randy Heit
+** Copyright 2015 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -246,7 +246,24 @@ bool WildMidi_SetupConfig(const char* args)
 	MusicIO::SoundFontReaderInterface* reader = MusicIO::ClientOpenSoundFont(args, SF_GUS);
 	if (!reader && MusicIO::fileExists(args))
 	{
-		reader = new MusicIO::FileSystemSoundFontReader(args, true);
+		auto f = MusicIO::utf8_fopen(args, "rb");
+		if (f)
+		{
+			char test[12] = {};
+			fread(test, 1, 12, f);
+			fclose(f);
+			// Also try zipped GUS patch sets.
+			if (memcmp(test, "PK\3\4", 4) == 0)
+			{
+				auto zreader = new MusicIO::ZipPatReader(args);
+				if (zreader->isValid())	// must check if it worked.
+					reader = zreader;
+				else
+					delete zreader;
+			}
+		}
+		if (reader == nullptr)
+			reader = new MusicIO::FileSystemSoundFontReader(args, true);
 	}
 
 	if (reader == nullptr)
