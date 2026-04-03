@@ -22,7 +22,7 @@
 **
 */
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <assert.h>
 #include <ctype.h>
 #include <stdio.h>
@@ -66,15 +66,15 @@ static const SDL_Keycode DIKToKeySym[256] =
 	SDLK_3,        SDLK_4,            SDLK_5,            SDLK_6,
 	SDLK_7,        SDLK_8,            SDLK_9,            SDLK_0,
 	SDLK_MINUS,    SDLK_EQUALS,       SDLK_BACKSPACE,    SDLK_TAB,
-	SDLK_q,        SDLK_w,            SDLK_e,            SDLK_r,
-	SDLK_t,        SDLK_y,            SDLK_u,            SDLK_i,
-	SDLK_o,        SDLK_p,            SDLK_LEFTBRACKET,  SDLK_RIGHTBRACKET,
-	SDLK_RETURN,   SDLK_LCTRL,        SDLK_a,            SDLK_s,
-	SDLK_d,        SDLK_f,            SDLK_g,            SDLK_h,
-	SDLK_j,        SDLK_k,            SDLK_l,            SDLK_SEMICOLON,
-	SDLK_QUOTE,    SDLK_BACKQUOTE,    SDLK_LSHIFT,       SDLK_BACKSLASH,
-	SDLK_z,        SDLK_x,            SDLK_c,            SDLK_v,
-	SDLK_b,        SDLK_n,            SDLK_m,            SDLK_COMMA,
+	SDLK_Q,        SDLK_W,            SDLK_E,            SDLK_R,
+	SDLK_T,        SDLK_Y,            SDLK_U,            SDLK_I,
+	SDLK_O,        SDLK_P,            SDLK_LEFTBRACKET,  SDLK_RIGHTBRACKET,
+	SDLK_RETURN,   SDLK_LCTRL,        SDLK_A,            SDLK_S,
+	SDLK_D,        SDLK_F,            SDLK_G,            SDLK_H,
+	SDLK_J,        SDLK_K,            SDLK_L,            SDLK_SEMICOLON,
+	SDLK_APOSTROPHE,    SDLK_GRAVE,    SDLK_LSHIFT,       SDLK_BACKSLASH,
+	SDLK_Z,        SDLK_X,            SDLK_C,            SDLK_V,
+	SDLK_B,        SDLK_N,            SDLK_M,            SDLK_COMMA,
 	SDLK_PERIOD,   SDLK_SLASH,        SDLK_RSHIFT,       SDLK_KP_MULTIPLY,
 	SDLK_LALT,     SDLK_SPACE,        SDLK_CAPSLOCK,     SDLK_F1,
 	SDLK_F2,       SDLK_F3,           SDLK_F4,           SDLK_F5,
@@ -120,8 +120,8 @@ static const SDL_Keycode DIKToKeySym[256] =
 	SDLK_RGUI,     SDLK_MENU,         SDLK_POWER,        SDLK_SLEEP,
 	SDLK_UNKNOWN,  SDLK_UNKNOWN,      SDLK_UNKNOWN,      SDLK_UNKNOWN,
 	SDLK_UNKNOWN,  SDLK_AC_SEARCH,    SDLK_AC_BOOKMARKS, SDLK_AC_REFRESH,
-	SDLK_AC_STOP,  SDLK_AC_FORWARD,   SDLK_AC_BACK,      SDLK_COMPUTER,
-	SDLK_MAIL,     SDLK_MEDIASELECT,  SDLK_UNKNOWN,      SDLK_UNKNOWN,
+	SDLK_AC_STOP,  SDLK_AC_FORWARD,   SDLK_AC_BACK,      SDLK_UNKNOWN,
+	SDLK_UNKNOWN,     SDLK_MEDIA_SELECT,  SDLK_UNKNOWN,      SDLK_UNKNOWN,
 	SDLK_UNKNOWN,  SDLK_UNKNOWN,      SDLK_UNKNOWN,      SDLK_UNKNOWN,
 	SDLK_UNKNOWN,  SDLK_UNKNOWN,      SDLK_UNKNOWN,      SDLK_UNKNOWN,
 	SDLK_UNKNOWN,  SDLK_UNKNOWN,      SDLK_UNKNOWN,      SDLK_UNKNOWN,
@@ -188,8 +188,8 @@ static const SDL_Scancode DIKToKeyScan[256] =
 	SDL_SCANCODE_RGUI,       SDL_SCANCODE_MENU,         SDL_SCANCODE_POWER,        SDL_SCANCODE_SLEEP,
 	SDL_SCANCODE_UNKNOWN,    SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,
 	SDL_SCANCODE_UNKNOWN,    SDL_SCANCODE_AC_SEARCH,    SDL_SCANCODE_AC_BOOKMARKS, SDL_SCANCODE_AC_REFRESH,
-	SDL_SCANCODE_AC_STOP,    SDL_SCANCODE_AC_FORWARD,   SDL_SCANCODE_AC_BACK,      SDL_SCANCODE_COMPUTER,
-	SDL_SCANCODE_MAIL,       SDL_SCANCODE_MEDIASELECT,  SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,
+	SDL_SCANCODE_AC_STOP,    SDL_SCANCODE_AC_FORWARD,   SDL_SCANCODE_AC_BACK,      SDL_SCANCODE_UNKNOWN,
+	SDL_SCANCODE_UNKNOWN,       SDL_SCANCODE_MEDIA_SELECT,  SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,
 	SDL_SCANCODE_UNKNOWN,    SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,
 	SDL_SCANCODE_UNKNOWN,    SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,
 	SDL_SCANCODE_UNKNOWN,    SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,      SDL_SCANCODE_UNKNOWN,
@@ -246,24 +246,27 @@ void I_SetMouseCapture()
 {
 	// Clear out any mouse movement.
 	SDL_GetRelativeMouseState (NULL, NULL);
-	SDL_CaptureMouse (SDL_TRUE);
+	SDL_CaptureMouse (true);
 }
 
 void I_ReleaseMouseCapture()
 {
-	SDL_CaptureMouse (SDL_FALSE);
+	SDL_CaptureMouse (false);
 }
 
 static void MouseRead ()
 {
 	int x, y;
+	float fx, fy;
 
 	if (NativeMouse)
 	{
 		return;
 	}
 
-	SDL_GetRelativeMouseState (&x, &y);
+	SDL_GetRelativeMouseState (&fx, &fy);
+	x = fx;
+	y = fy;
 
 	if (joykey_stop_conflict > 0) return;
 
@@ -272,6 +275,7 @@ static void MouseRead ()
 
 static void I_CheckNativeMouse ()
 {
+	static SDL_Window *window;
 	bool focus = SDL_GetKeyboardFocus() != NULL;
 
 	bool captureModeInGame = sysCallbacks.CaptureModeInGame && sysCallbacks.CaptureModeInGame();
@@ -283,12 +287,13 @@ static void I_CheckNativeMouse ()
 	if (wantNative != NativeMouse)
 	{
 		NativeMouse = wantNative;
-		SDL_ShowCursor (wantNative);
 		if (wantNative) {
-			SDL_SetRelativeMouseMode (SDL_FALSE);
+			SDL_ShowCursor ();
+			SDL_SetWindowRelativeMouseMode (window, false);
 		} else {
+			SDL_HideCursor ();
 			SDL_GetRelativeMouseState (NULL, NULL);
-			SDL_SetRelativeMouseMode (SDL_TRUE);
+			SDL_SetWindowRelativeMouseMode (window, true);
 		}
 	}
 }
@@ -330,12 +335,12 @@ void MessagePump (const SDL_Event &sev)
 
 			switch (sev.type)
 			{
-				case SDL_KEYDOWN:
+				case SDL_EVENT_KEY_DOWN:
 					seenKeyEvent = true;
 					if (!window) window = SDL_GetWindowFromID(sev.key.windowID);
 					break;
-				case SDL_JOYBUTTONDOWN:
-				case SDL_CONTROLLERBUTTONDOWN:
+				case SDL_EVENT_JOYSTICK_BUTTON_DOWN:
+				case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
 					seenJoyEvent = true;
 					break;
 			}
@@ -365,20 +370,15 @@ void MessagePump (const SDL_Event &sev)
 
 	switch (sev.type)
 	{
-	case SDL_QUIT:
+	case SDL_EVENT_QUIT:
 		throw CExitEvent(0);
 
-	case SDL_WINDOWEVENT:
-		extern void ProcessSDLWindowEvent(const SDL_WindowEvent &);
-		ProcessSDLWindowEvent(sev.window);
-		break;
-
-	case SDL_MOUSEBUTTONDOWN:
-	case SDL_MOUSEBUTTONUP:
-		if (joykey_stop_conflict > 0 && sev.type == SDL_MOUSEBUTTONDOWN) break;
+	case SDL_EVENT_MOUSE_BUTTON_DOWN:
+	case SDL_EVENT_MOUSE_BUTTON_UP:
+		if (joykey_stop_conflict > 0 && sev.type == SDL_EVENT_MOUSE_BUTTON_DOWN) break;
 		if (!GUICapture)
 		{
-			event.type = sev.type == SDL_MOUSEBUTTONDOWN ? EV_KeyDown : EV_KeyUp;
+			event.type = sev.type == SDL_EVENT_MOUSE_BUTTON_DOWN ? EV_KeyDown : EV_KeyUp;
 
 			switch (sev.button.button)
 			{
@@ -391,7 +391,7 @@ void MessagePump (const SDL_Event &sev)
 			case 7:		event.data1 = KEY_MOUSE7;		break;
 			case 8:		event.data1 = KEY_MOUSE8;		break;
 			default:	printf("SDL mouse button %s %d\n",
-				sev.type == SDL_MOUSEBUTTONDOWN ? "down" : "up", sev.button.button);	break;
+				sev.type == SDL_EVENT_MOUSE_BUTTON_DOWN ? "down" : "up", sev.button.button);	break;
 			}
 
 			if (event.data1 != 0)
@@ -402,7 +402,10 @@ void MessagePump (const SDL_Event &sev)
 		else if ((sev.button.button >= SDL_BUTTON_LEFT && sev.button.button <= SDL_BUTTON_X2))
 		{
 			int x, y;
-			SDL_GetMouseState(&x, &y);
+			float fx, fy;
+			SDL_GetMouseState(&fx, &fy);
+			x = fx;
+			y = fy;
 
 			event.type = EV_GUI_Event;
 			event.data1 = x;
@@ -410,7 +413,7 @@ void MessagePump (const SDL_Event &sev)
 
 			screen->ScaleCoordsFromWindow(event.data1, event.data2);
 
-			if (sev.type == SDL_MOUSEBUTTONDOWN)
+			if (sev.type == SDL_EVENT_MOUSE_BUTTON_DOWN)
 			{
 				switch(sev.button.button)
 				{
@@ -436,15 +439,15 @@ void MessagePump (const SDL_Event &sev)
 			}
 
 			SDL_Keymod kmod = SDL_GetModState();
-			event.data3 = ((kmod & KMOD_SHIFT) ? GKM_SHIFT : 0) |
-				((kmod & KMOD_CTRL) ? GKM_CTRL : 0) |
-				((kmod & KMOD_ALT) ? GKM_ALT : 0);
+			event.data3 = ((kmod & SDL_KMOD_SHIFT) ? GKM_SHIFT : 0) |
+				((kmod & SDL_KMOD_CTRL) ? GKM_CTRL : 0) |
+				((kmod & SDL_KMOD_ALT) ? GKM_ALT : 0);
 
 			D_PostEvent(&event);
 		}
 		break;
 
-	case SDL_MOUSEMOTION:
+	case SDL_EVENT_MOUSE_MOTION:
 		if (joykey_stop_conflict > 0) break;
 		if (GUICapture)
 		{
@@ -457,15 +460,15 @@ void MessagePump (const SDL_Event &sev)
 			event.subtype = EV_GUI_MouseMove;
 
 			SDL_Keymod kmod = SDL_GetModState();
-			event.data3 = ((kmod & KMOD_SHIFT) ? GKM_SHIFT : 0) |
-			              ((kmod & KMOD_CTRL) ? GKM_CTRL : 0) |
-			              ((kmod & KMOD_ALT) ? GKM_ALT : 0);
+			event.data3 = ((kmod & SDL_KMOD_SHIFT) ? GKM_SHIFT : 0) |
+			              ((kmod & SDL_KMOD_CTRL) ? GKM_CTRL : 0) |
+			              ((kmod & SDL_KMOD_ALT) ? GKM_ALT : 0);
 
 			D_PostEvent(&event);
 		}
 		break;
 
-	case SDL_MOUSEWHEEL:
+	case SDL_EVENT_MOUSE_WHEEL:
 		if (joykey_stop_conflict > 0) break;
 		if (GUICapture)
 		{
@@ -477,9 +480,9 @@ void MessagePump (const SDL_Event &sev)
 				event.subtype = sev.wheel.y > 0 ? EV_GUI_WheelUp : EV_GUI_WheelDown;
 
 			SDL_Keymod kmod = SDL_GetModState();
-			event.data3 = ((kmod & KMOD_SHIFT) ? GKM_SHIFT : 0) |
-				((kmod & KMOD_CTRL) ? GKM_CTRL : 0) |
-				((kmod & KMOD_ALT) ? GKM_ALT : 0);
+			event.data3 = ((kmod & SDL_KMOD_SHIFT) ? GKM_SHIFT : 0) |
+				((kmod & SDL_KMOD_CTRL) ? GKM_CTRL : 0) |
+				((kmod & SDL_KMOD_ALT) ? GKM_ALT : 0);
 
 			D_PostEvent (&event);
 		}
@@ -498,9 +501,9 @@ void MessagePump (const SDL_Event &sev)
 		}
 		break;
 
-	case SDL_KEYDOWN:
-	case SDL_KEYUP:
-		if (joykey_stop_conflict > 0 && sev.type == SDL_KEYDOWN) break;
+	case SDL_EVENT_KEY_DOWN:
+	case SDL_EVENT_KEY_UP:
+		if (joykey_stop_conflict > 0 && sev.type == SDL_EVENT_KEY_DOWN) break;
 		if (!GUICapture)
 		{
 			if (sev.key.repeat)
@@ -508,45 +511,45 @@ void MessagePump (const SDL_Event &sev)
 				break;
 			}
 
-			event.type = sev.type == SDL_KEYDOWN ? EV_KeyDown : EV_KeyUp;
+			event.type = sev.type == SDL_EVENT_KEY_DOWN ? EV_KeyDown : EV_KeyUp;
 
 			// Try to look up our key mapped key for conversion to DirectInput.
 			// If that fails, then we'll do a lookup against the scan code,
 			// which may not return the right key, but at least the key should
 			// work in the game.
-			if (const uint8_t *dik = KeySymToDIK.CheckKey (sev.key.keysym.sym))
+			if (const uint8_t *dik = KeySymToDIK.CheckKey (sev.key.key))
 				event.data1 = *dik;
-			else if (const uint8_t *dik = KeyScanToDIK.CheckKey (sev.key.keysym.scancode))
+			else if (const uint8_t *dik = KeyScanToDIK.CheckKey (sev.key.scancode))
 				event.data1 = *dik;
 
 			if (event.data1)
 			{
-				if (sev.key.keysym.sym < 256)
+				if (sev.key.key < 256)
 				{
-					event.data2 = sev.key.keysym.sym;
+					event.data2 = sev.key.key;
 				}
 				SDL_Keymod kmod = SDL_GetModState();
-				event.data3 = ((kmod & KMOD_SHIFT) ? GKM_SHIFT : 0) |
-					((kmod & KMOD_CTRL) ? GKM_CTRL : 0) |
-					((kmod & KMOD_ALT) ? GKM_ALT : 0);
+				event.data3 = ((kmod & SDL_KMOD_SHIFT) ? GKM_SHIFT : 0) |
+					((kmod & SDL_KMOD_CTRL) ? GKM_CTRL : 0) |
+					((kmod & SDL_KMOD_ALT) ? GKM_ALT : 0);
 				D_PostEvent (&event);
 			}
 		}
 		else
 		{
 			event.type = EV_GUI_Event;
-			event.subtype = sev.type == SDL_KEYDOWN ? EV_GUI_KeyDown : EV_GUI_KeyUp;
+			event.subtype = sev.type == SDL_EVENT_KEY_DOWN ? EV_GUI_KeyDown : EV_GUI_KeyUp;
 			SDL_Keymod kmod = SDL_GetModState();
-			event.data3 = ((kmod & KMOD_SHIFT) ? GKM_SHIFT : 0) |
-				((kmod & KMOD_CTRL) ? GKM_CTRL : 0) |
-				((kmod & KMOD_ALT) ? GKM_ALT : 0);
+			event.data3 = ((kmod & SDL_KMOD_SHIFT) ? GKM_SHIFT : 0) |
+				((kmod & SDL_KMOD_CTRL) ? GKM_CTRL : 0) |
+				((kmod & SDL_KMOD_ALT) ? GKM_ALT : 0);
 
 			if (event.subtype == EV_GUI_KeyDown && sev.key.repeat)
 			{
 				event.subtype = EV_GUI_KeyRepeat;
 			}
 
-			switch (sev.key.keysym.sym)
+			switch (sev.key.key)
 			{
 			case SDLK_KP_ENTER:	event.data1 = GK_RETURN;	break;
 			case SDLK_PAGEUP:	event.data1 = GK_PGUP;		break;
@@ -572,9 +575,9 @@ void MessagePump (const SDL_Event &sev)
 			case SDLK_F11:		event.data1 = GK_F11;		break;
 			case SDLK_F12:		event.data1 = GK_F12;		break;
 			default:
-				if (sev.key.keysym.sym < 256)
+				if (sev.key.key < 256)
 				{
-					event.data1 = sev.key.keysym.sym;
+					event.data1 = sev.key.key;
 				}
 				break;
 			}
@@ -586,8 +589,8 @@ void MessagePump (const SDL_Event &sev)
 		}
 		break;
 
-	case SDL_TEXTINPUT:
-		if (joykey_stop_conflict > 0 && sev.type == SDL_TEXTINPUT) break;
+	case SDL_EVENT_TEXT_INPUT:
+		if (joykey_stop_conflict > 0 && sev.type == SDL_EVENT_TEXT_INPUT) break;
 		if (GUICapture)
 		{
 			int size;
@@ -598,72 +601,77 @@ void MessagePump (const SDL_Event &sev)
 				event.type = EV_GUI_Event;
 				event.subtype = EV_GUI_Char;
 				event.data1 = (int16_t)unichar;
-				event.data2 = !!(SDL_GetModState() & KMOD_ALT);
+				event.data2 = !!(SDL_GetModState() & SDL_KMOD_ALT);
 				D_PostEvent (&event);
 			}
 		}
 		break;
 
-	case SDL_JOYBUTTONDOWN:
-	case SDL_JOYBUTTONUP:
-		if (SDL_GameControllerFromInstanceID(sev.jdevice.which))
+	case SDL_EVENT_JOYSTICK_BUTTON_DOWN:
+	case SDL_EVENT_JOYSTICK_BUTTON_UP:
+		if (SDL_GetGamepadFromID(sev.jdevice.which))
 			break; // let SDL_CONTROLLERBUTTON* handle this
-		event.type = sev.type == SDL_JOYBUTTONDOWN ? EV_KeyDown : EV_KeyUp;
+		event.type = sev.type == SDL_EVENT_JOYSTICK_BUTTON_DOWN ? EV_KeyDown : EV_KeyUp;
 		event.data1 = KEY_FIRSTJOYBUTTON + sev.jbutton.button;
 		if(event.data1 != 0)
 			I_JoyConsumeEvent(sev.jdevice.which, &event);
 		break;
 
-	case SDL_CONTROLLERBUTTONDOWN:
-	case SDL_CONTROLLERBUTTONUP:
-		event.type = sev.type == SDL_CONTROLLERBUTTONDOWN ? EV_KeyDown : EV_KeyUp;
-		switch (sev.cbutton.button)
+	case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
+	case SDL_EVENT_GAMEPAD_BUTTON_UP:
+		event.type = sev.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN ? EV_KeyDown : EV_KeyUp;
+		switch (sev.gbutton.button)
 		{
-			case SDL_CONTROLLER_BUTTON_A:             event.data1 = KEY_PAD_A;          break;
-			case SDL_CONTROLLER_BUTTON_B:             event.data1 = KEY_PAD_B;          break;
-			case SDL_CONTROLLER_BUTTON_X:             event.data1 = KEY_PAD_X;          break;
-			case SDL_CONTROLLER_BUTTON_Y:             event.data1 = KEY_PAD_Y;          break;
-			case SDL_CONTROLLER_BUTTON_BACK:          event.data1 = KEY_PAD_BACK;       break;
-			case SDL_CONTROLLER_BUTTON_GUIDE:         event.data1 = KEY_PAD_GUIDE;      break;
-			case SDL_CONTROLLER_BUTTON_START:         event.data1 = KEY_PAD_START;      break;
-			case SDL_CONTROLLER_BUTTON_LEFTSTICK:     event.data1 = KEY_PAD_LTHUMB;     break;
-			case SDL_CONTROLLER_BUTTON_RIGHTSTICK:    event.data1 = KEY_PAD_RTHUMB;     break;
-			case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:  event.data1 = KEY_PAD_LSHOULDER;  break;
-			case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER: event.data1 = KEY_PAD_RSHOULDER;  break;
-			case SDL_CONTROLLER_BUTTON_DPAD_UP:       event.data1 = KEY_PAD_DPAD_UP;    break;
-			case SDL_CONTROLLER_BUTTON_DPAD_DOWN:     event.data1 = KEY_PAD_DPAD_DOWN;  break;
-			case SDL_CONTROLLER_BUTTON_DPAD_LEFT:     event.data1 = KEY_PAD_DPAD_LEFT;  break;
-			case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:    event.data1 = KEY_PAD_DPAD_RIGHT; break;
-			case SDL_CONTROLLER_BUTTON_MISC1:         event.data1 = KEY_PAD_MISC1;      break;
-			case SDL_CONTROLLER_BUTTON_PADDLE1:       event.data1 = KEY_PAD_PADDLE1;    break;
-			case SDL_CONTROLLER_BUTTON_PADDLE2:       event.data1 = KEY_PAD_PADDLE2;    break;
-			case SDL_CONTROLLER_BUTTON_PADDLE3:       event.data1 = KEY_PAD_PADDLE3;    break;
-			case SDL_CONTROLLER_BUTTON_PADDLE4:       event.data1 = KEY_PAD_PADDLE4;    break;
-			case SDL_CONTROLLER_BUTTON_TOUCHPAD:      event.data1 = KEY_PAD_TOUCHPAD;   break;
+			case SDL_GAMEPAD_BUTTON_SOUTH:             event.data1 = KEY_PAD_A;          break;
+			case SDL_GAMEPAD_BUTTON_EAST:             event.data1 = KEY_PAD_B;          break;
+			case SDL_GAMEPAD_BUTTON_WEST:             event.data1 = KEY_PAD_X;          break;
+			case SDL_GAMEPAD_BUTTON_NORTH:             event.data1 = KEY_PAD_Y;          break;
+			case SDL_GAMEPAD_BUTTON_BACK:          event.data1 = KEY_PAD_BACK;       break;
+			case SDL_GAMEPAD_BUTTON_GUIDE:         event.data1 = KEY_PAD_GUIDE;      break;
+			case SDL_GAMEPAD_BUTTON_START:         event.data1 = KEY_PAD_START;      break;
+			case SDL_GAMEPAD_BUTTON_LEFT_STICK:     event.data1 = KEY_PAD_LTHUMB;     break;
+			case SDL_GAMEPAD_BUTTON_RIGHT_STICK:    event.data1 = KEY_PAD_RTHUMB;     break;
+			case SDL_GAMEPAD_BUTTON_LEFT_SHOULDER:  event.data1 = KEY_PAD_LSHOULDER;  break;
+			case SDL_GAMEPAD_BUTTON_RIGHT_SHOULDER: event.data1 = KEY_PAD_RSHOULDER;  break;
+			case SDL_GAMEPAD_BUTTON_DPAD_UP:       event.data1 = KEY_PAD_DPAD_UP;    break;
+			case SDL_GAMEPAD_BUTTON_DPAD_DOWN:     event.data1 = KEY_PAD_DPAD_DOWN;  break;
+			case SDL_GAMEPAD_BUTTON_DPAD_LEFT:     event.data1 = KEY_PAD_DPAD_LEFT;  break;
+			case SDL_GAMEPAD_BUTTON_DPAD_RIGHT:    event.data1 = KEY_PAD_DPAD_RIGHT; break;
+			case SDL_GAMEPAD_BUTTON_MISC1:         event.data1 = KEY_PAD_MISC1;      break;
+			case SDL_GAMEPAD_BUTTON_RIGHT_PADDLE1:       event.data1 = KEY_PAD_PADDLE1;    break;
+			case SDL_GAMEPAD_BUTTON_LEFT_PADDLE1:       event.data1 = KEY_PAD_PADDLE2;    break;
+			case SDL_GAMEPAD_BUTTON_RIGHT_PADDLE2:       event.data1 = KEY_PAD_PADDLE3;    break;
+			case SDL_GAMEPAD_BUTTON_LEFT_PADDLE2:       event.data1 = KEY_PAD_PADDLE4;    break;
+			case SDL_GAMEPAD_BUTTON_TOUCHPAD:      event.data1 = KEY_PAD_TOUCHPAD;   break;
 			default:                                  event.data1 = 0;
 		}
 		if(event.data1 != 0)
-			I_JoyConsumeEvent(sev.cbutton.which, &event);
+			I_JoyConsumeEvent(sev.gbutton.which, &event);
 		break;
 
-	case SDL_JOYDEVICEADDED:
-	case SDL_CONTROLLERDEVICEADDED:
-		if (sev.type == SDL_JOYDEVICEADDED && SDL_IsGameController(sev.jdevice.which)) // DeviceIndex Here
+	case SDL_EVENT_JOYSTICK_ADDED:
+	case SDL_EVENT_GAMEPAD_ADDED:
+		if (sev.type == SDL_EVENT_JOYSTICK_ADDED && SDL_IsGamepad(sev.jdevice.which)) // DeviceIndex Here
 			break; // skip double event
 		I_UpdateDeviceList();
 		event.type = EV_DeviceChange;
 		D_PostEvent (&event);
 		break;
 
-	case SDL_JOYDEVICEREMOVED:
-	case SDL_CONTROLLERDEVICEREMOVED:
-	case SDL_CONTROLLERDEVICEREMAPPED:
-		if (sev.type == SDL_JOYDEVICEREMOVED && SDL_GameControllerFromInstanceID(sev.jdevice.which))
+	case SDL_EVENT_JOYSTICK_REMOVED:
+	case SDL_EVENT_GAMEPAD_REMOVED:
+	case SDL_EVENT_GAMEPAD_REMAPPED:
+		if (sev.type == SDL_EVENT_JOYSTICK_REMOVED && SDL_GetGamepadFromID(sev.jdevice.which))
 			break; // skip double event
 		I_UpdateDeviceList();
 		event.type = EV_DeviceChange;
 		D_PostEvent (&event);
 		break;
+	default:
+		if (sev.type >= SDL_EVENT_WINDOW_FIRST && sev.type <= SDL_EVENT_WINDOW_LAST) {
+			extern void ProcessSDLWindowEvent(const SDL_WindowEvent &);
+			ProcessSDLWindowEvent(sev.window);
+		}
 	}
 }
 

@@ -24,10 +24,10 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 
 #ifdef HAVE_VULKAN
-#include <SDL2/SDL_vulkan.h>
+#include <SDL3/SDL_vulkan.h>
 #include <zvulkan/vulkanbuilders.h>
 #include <zvulkan/vulkandevice.h>
 #include <zvulkan/vulkaninstance.h>
@@ -93,9 +93,9 @@ CCMD(vid_list_sdl_render_drivers)
 {
 	for (int i = 0; i < SDL_GetNumRenderDrivers(); ++i)
 	{
-		SDL_RendererInfo info;
-		if (SDL_GetRenderDriverInfo(i, &info) == 0)
-			Printf("%s\n", info.name);
+		const char *name = SDL_GetRenderDriver(i);
+		if (name != NULL)
+			Printf("%s\n", name);
 	}
 }
 
@@ -112,7 +112,7 @@ namespace Priv
 
 	void updateDisplayInfo()
 	{
-		Priv::numberOfDisplays = SDL_GetNumVideoDisplays();
+		SDL_DisplayID *displays = SDL_GetDisplays(&Priv::numberOfDisplays);
 		if (Priv::numberOfDisplays <= 0) {
 			Printf("%sWrong number of displays detected.\n", TEXTCOLOR_BOLD);
 			return;
@@ -125,7 +125,7 @@ namespace Priv
 		Priv::displayBounds = (SDL_Rect*) calloc(Priv::numberOfDisplays, sizeof(SDL_Rect));
 
 		for (int i=0; i < Priv::numberOfDisplays; i++) {
-			if (0 != SDL_GetDisplayBounds(i, &Priv::displayBounds[i])) {
+			if (0 != SDL_GetDisplayBounds(displays[i], &Priv::displayBounds[i])) {
 				Printf("%sError getting display %d size: %s\n", TEXTCOLOR_BOLD, i, SDL_GetError());
 				if (i == 0) {
 					free(Priv::displayBounds);
@@ -135,6 +135,7 @@ namespace Priv
 				return;
 			}
 		}
+		SDL_free(displays);
 	}
 
 	void CreateWindow(uint32_t extraFlags)
@@ -153,26 +154,24 @@ namespace Priv
 			win_h = bounds->h * 8 / 10;
 		}
 
-		int xWindowPos = (win_x <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(vid_adapter) : win_x;
-		int yWindowPos = (win_y <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(vid_adapter) : win_y;
+		SDL_DisplayID *displays = SDL_GetDisplays(NULL); 
+
+		int xWindowPos = (win_x <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(displays[vid_adapter]) : win_x;
+		int yWindowPos = (win_y <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(displays[vid_adapter]) : win_y;
 		Printf("Creating window [%dx%d] on adapter %d\n", (*win_w), (*win_h), (*vid_adapter));
 		
 		FString caption;
 		caption.Format(GAMENAME " %s (%s)", GetVersionString(), GetGitTime());
 
 		const uint32_t windowFlags = (win_maximized ? SDL_WINDOW_MAXIMIZED : 0) | SDL_WINDOW_RESIZABLE | extraFlags;
-		Priv::window = SDL_CreateWindow(caption.GetChars(), xWindowPos, yWindowPos, win_w, win_h, windowFlags);
+		Priv::window = SDL_CreateWindow(caption.GetChars(), win_w, win_h, windowFlags);
 
 		if (Priv::window != nullptr)
 		{
-			SDL_version sdlver;
-			SDL_GetVersion(&sdlver);
-			// Enforce minimum size limit
 			SDL_SetWindowMinimumSize(Priv::window, VID_MIN_WIDTH, VID_MIN_HEIGHT);
-			// Tell SDL to start sending text input on Wayland if it's on affected versions.
-			if (strncasecmp(SDL_GetCurrentVideoDriver(), "wayland", 7) == 0 && sdlver.major == 2 && sdlver.minor == 0 && sdlver.patch < 18)
-				SDL_StartTextInput();
 		}
+
+		SDL_free(displays);
 	}
 
 	void DestroyWindow()
@@ -241,7 +240,7 @@ CUSTOM_CVAR(Int, vid_adapter, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITC
 		win_x = -1;
 		win_y = -1;
 
-		if ((SDL_GetWindowFlags(Priv::window) & SDL_WINDOW_FULLSCREEN_DESKTOP) != 0) {
+		if ((SDL_GetWindowFlags(Priv::window) & SDL_WINDOW_FULLSCREEN) != 0) {
 
 			// TODO This not works. For some reason keeps stuck on the previus screen
 			/*
@@ -268,8 +267,8 @@ CUSTOM_CVAR(Int, vid_adapter, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITC
 			SDL_SetWindowPosition(Priv::window, SDL_WINDOWPOS_CENTERED_DISPLAY(display), SDL_WINDOWPOS_CENTERED_DISPLAY(display));
 		}
 
-    display = SDL_GetWindowDisplayIndex(Priv::window);
-    if (display >= 0) {
+    display = SDL_GetDisplayForWindow(Priv::window);
+    if (display > 0) {
 			Printf("New display is %d\n", display );
 		} else {
 			Printf("A problem occured trying to change of display %s\n", SDL_GetError());
@@ -300,28 +299,32 @@ void I_GetVulkanDrawableSize(int *width, int *height)
 {
 	assert(Priv::vulkanEnabled);
 	assert(Priv::window != nullptr);
-	SDL_Vulkan_GetDrawableSize(Priv::window, width, height);
+	SDL_GetWindowSizeInPixels(Priv::window, width, height);
 }
 
 bool I_GetVulkanPlatformExtensions(unsigned int *count, const char **names)
 {
 	assert(Priv::vulkanEnabled);
 	assert(Priv::window != nullptr);
-	return SDL_Vulkan_GetInstanceExtensions(Priv::window, count, names) == SDL_TRUE;
+	const char* const* names_ = SDL_Vulkan_GetInstanceExtensions(count);
+	for (unsigned int i = 0; i < *count; i++) {
+		names[i] = names_[i];
+	}
+	return names_ != nullptr;
 }
 
 bool I_CreateVulkanSurface(VkInstance instance, VkSurfaceKHR *surface)
 {
 	assert(Priv::vulkanEnabled);
 	assert(Priv::window != nullptr);
-	return SDL_Vulkan_CreateSurface(Priv::window, instance, surface) == SDL_TRUE;
+	return SDL_Vulkan_CreateSurface(Priv::window, instance, NULL, surface);
 }
 #endif
 
 
 SDLVideo::SDLVideo ()
 {
-	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+	if (!SDL_Init(SDL_INIT_VIDEO))
 	{
 		fprintf(stderr, "Video initialization failed: %s\n", SDL_GetError());
 		return;
@@ -338,7 +341,7 @@ SDLVideo::SDLVideo ()
 
 	if (Priv::vulkanEnabled)
 	{
-		Priv::CreateWindow(SDL_WINDOW_VULKAN | SDL_WINDOW_HIDDEN | (vid_fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0));
+		Priv::CreateWindow(SDL_WINDOW_VULKAN | SDL_WINDOW_HIDDEN | (vid_fullscreen ? SDL_WINDOW_FULLSCREEN : 0));
 
 		if (Priv::window == nullptr)
 		{
@@ -447,7 +450,7 @@ int SystemBaseFrameBuffer::GetClientWidth()
 
 #ifdef HAVE_VULKAN
 	assert(Priv::vulkanEnabled);
-	SDL_Vulkan_GetDrawableSize(Priv::window, &width, nullptr);
+	SDL_GetWindowSizeInPixels(Priv::window, &width, nullptr);
 #endif
 
 	return width;
@@ -459,7 +462,7 @@ int SystemBaseFrameBuffer::GetClientHeight()
 
 #ifdef HAVE_VULKAN
 	assert(Priv::vulkanEnabled);
-	SDL_Vulkan_GetDrawableSize(Priv::window, nullptr, &height);
+	SDL_GetWindowSizeInPixels(Priv::window, nullptr, &height);
 #endif
 
 	return height;
@@ -467,13 +470,13 @@ int SystemBaseFrameBuffer::GetClientHeight()
 
 bool SystemBaseFrameBuffer::IsFullscreen ()
 {
-	return (SDL_GetWindowFlags(Priv::window) & SDL_WINDOW_FULLSCREEN_DESKTOP) != 0;
+	return (SDL_GetWindowFlags(Priv::window) & SDL_WINDOW_FULLSCREEN) != 0;
 }
 
 void SystemBaseFrameBuffer::ToggleFullscreen(bool yes)
 {
 	SDL_ShowWindow(Priv::window);
-	SDL_SetWindowFullscreen(Priv::window, yes ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0);
+	SDL_SetWindowFullscreen(Priv::window, yes ? SDL_WINDOW_FULLSCREEN : 0);
 	if ( !yes )
 	{
 		if ( !Priv::fullscreenSwitch )
@@ -553,7 +556,7 @@ SystemGLFrameBuffer::SystemGLFrameBuffer(void *hMonitor, bool fullscreen)
 	for ( ; glvers[glveridx][0] > 0; ++glveridx)
 	{
 		Priv::SetupPixelFormat(0, glvers[glveridx]);
-		Priv::CreateWindow(SDL_WINDOW_OPENGL | SDL_WINDOW_HIDDEN | (fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0));
+		Priv::CreateWindow(SDL_WINDOW_OPENGL | SDL_WINDOW_HIDDEN | (fullscreen ? SDL_WINDOW_FULLSCREEN : 0));
 
 		if (Priv::window == nullptr)
 		{
@@ -582,7 +585,7 @@ SystemGLFrameBuffer::~SystemGLFrameBuffer ()
 	{
 		if (GLContext)
 		{
-			SDL_GL_DeleteContext(GLContext);
+			SDL_GL_DestroyContext(GLContext);
 		}
 
 		Priv::DestroyWindow();
@@ -592,14 +595,14 @@ SystemGLFrameBuffer::~SystemGLFrameBuffer ()
 int SystemGLFrameBuffer::GetClientWidth()
 {
 	int width = 0;
-	SDL_GL_GetDrawableSize(Priv::window, &width, nullptr);
+	SDL_GetWindowSizeInPixels(Priv::window, &width, nullptr);
 	return width;
 }
 
 int SystemGLFrameBuffer::GetClientHeight()
 {
 	int height = 0;
-	SDL_GL_GetDrawableSize(Priv::window, nullptr, &height);
+	SDL_GetWindowSizeInPixels(Priv::window, nullptr, &height);
 	return height;
 }
 
@@ -611,7 +614,7 @@ void SystemGLFrameBuffer::SetVSync( bool vsync )
 #else
 	if (vsync)
 	{
-		if (SDL_GL_SetSwapInterval(-1) == -1)
+		if (!SDL_GL_SetSwapInterval(-1))
 			SDL_GL_SetSwapInterval(1);
 	}
 	else
@@ -629,21 +632,21 @@ void SystemGLFrameBuffer::SwapBuffers()
 
 void ProcessSDLWindowEvent(const SDL_WindowEvent &event)
 {
-	switch (event.event)
+	switch (event.type)
 	{
 	extern bool AppActive;
 
-	case SDL_WINDOWEVENT_FOCUS_GAINED:
+	case SDL_EVENT_WINDOW_FOCUS_GAINED:
 		S_SetSoundPaused(1);
 		AppActive = true;
 		break;
 
-	case SDL_WINDOWEVENT_FOCUS_LOST:
+	case SDL_EVENT_WINDOW_FOCUS_LOST:
 		S_SetSoundPaused(0);
 		AppActive = false;
 		break;
 
-	case SDL_WINDOWEVENT_MOVED:
+	case SDL_EVENT_WINDOW_MOVED:
 		if (!vid_fullscreen)
 		{
 			int top = 0, left = 0;
@@ -653,7 +656,7 @@ void ProcessSDLWindowEvent(const SDL_WindowEvent &event)
 		}
 		break;
 
-	case SDL_WINDOWEVENT_RESIZED:
+	case SDL_EVENT_WINDOW_RESIZED:
 		if (!vid_fullscreen && !Priv::fullscreenSwitch)
 		{
 			win_w = event.data1;
@@ -661,12 +664,14 @@ void ProcessSDLWindowEvent(const SDL_WindowEvent &event)
 		}
 		break;
 
-	case SDL_WINDOWEVENT_MAXIMIZED:
+	case SDL_EVENT_WINDOW_MAXIMIZED:
 		win_maximized = true;
 		break;
 
-	case SDL_WINDOWEVENT_RESTORED:
+	case SDL_EVENT_WINDOW_RESTORED:
 		win_maximized = false;
+		break;
+		default:
 		break;
 	}
 }

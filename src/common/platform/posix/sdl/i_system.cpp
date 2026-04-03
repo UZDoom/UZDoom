@@ -22,7 +22,7 @@
 **
 */
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 
 #include <dirent.h>
 #include <fcntl.h>
@@ -315,8 +315,6 @@ bool HoldingQueryKey(const char* key)
 
 	auto window = SDL_CreateWindow(
 		"HoldingQueryKey",
-		SDL_WINDOWPOS_UNDEFINED,
-		SDL_WINDOWPOS_UNDEFINED,
 		1, 1,
 		SDL_WINDOW_HIDDEN
 	);

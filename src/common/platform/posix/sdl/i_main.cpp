@@ -24,7 +24,7 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <csignal>
 #include <fcntl.h>
 #include <locale.h>
@@ -97,7 +97,7 @@ void SignalHandler(int signal);
 
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
 
-extern const char * const BACKEND = "SDL2";
+extern const char * const BACKEND = "SDL3";
 
 // PUBLIC DATA DEFINITIONS -------------------------------------------------
 FString sys_ostype;
@@ -196,7 +196,7 @@ int main (int argc, char **argv)
 
 	setlocale (LC_ALL, "C");
 
-	if (SDL_Init (0) < 0)
+	if (!SDL_Init (0))
 	{
 		fprintf (stderr, "Could not initialize SDL:\n%s\n", SDL_GetError());
 		return -1;

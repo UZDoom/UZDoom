@@ -23,7 +23,7 @@
 
 #include <string.h>
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 
 #include "bitmap.h"
 #include "textures.h"
@@ -42,9 +42,9 @@ bool I_SetCursor(FGameTexture *cursorpic)
 			return false;
 		}
 
-		SDL_ShowCursor(SDL_DISABLE);
+		SDL_HideCursor();
 		if (cursorSurface == NULL)
-			cursorSurface = SDL_CreateRGBSurface (0, 32, 32, 32, MAKEARGB(0,255,0,0), MAKEARGB(0,0,255,0), MAKEARGB(0,0,0,255), MAKEARGB(255,0,0,0));
+			cursorSurface = SDL_CreateSurface (32, 32, SDL_GetPixelFormatForMasks(32, MAKEARGB(0,255,0,0), MAKEARGB(0,0,255,0), MAKEARGB(0,0,0,255), MAKEARGB(255,0,0,0)));
 
 		SDL_LockSurface(cursorSurface);
 		uint8_t buffer[32*32*4];
@@ -55,22 +55,22 @@ bool I_SetCursor(FGameTexture *cursorpic)
 		SDL_UnlockSurface(cursorSurface);
 
 		if (cursor)
-			SDL_FreeCursor (cursor);
+			SDL_DestroyCursor (cursor);
 		cursor = SDL_CreateColorCursor (cursorSurface, 0, 0);
 		SDL_SetCursor (cursor);
-		SDL_ShowCursor(SDL_ENABLE);
+		SDL_ShowCursor();
 	}
 	else
 	{
 		if (cursor)
 		{
 			SDL_SetCursor (NULL);
-			SDL_FreeCursor (cursor);
+			SDL_DestroyCursor (cursor);
 			cursor = NULL;
 		}
 		if (cursorSurface != NULL)
 		{
-			SDL_FreeSurface(cursorSurface);
+			SDL_DestroySurface(cursorSurface);
 			cursorSurface = NULL;
 		}
 	}
