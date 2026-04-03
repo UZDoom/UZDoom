@@ -21,6 +21,8 @@
 #include "themedata.h"
 #include "utility/colorspace.h"
 
+extern std::vector<uint8_t> LoadWidgetData(const std::string& name, bool root);
+
 Colorf Theme::accent;
 ThemeData Theme::dark = {};
 ThemeData Theme::light = {};
@@ -142,7 +144,7 @@ void Theme::initilize(Mode mode)
 	load(LoadWidgetData(file, true));
 
 	// from mods
-	load(LoadWidgetData(file));
+	load(LoadWidgetData(file, false));
 }
 
 Colorf Theme::mix(const ColorLayers& color, float mix)

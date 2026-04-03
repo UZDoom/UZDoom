@@ -4211,7 +4211,7 @@ int GameMain()
 	// On other platforms, use SDL until the other backends are more mature.
 	auto zwidget = DisplayBackend::TryCreateWin32();
 	if (!zwidget)
-		zwidget = DisplayBackend::TryCreateSDL2();
+		zwidget = DisplayBackend::TryCreateSDL3();
 	if (!zwidget)
     {
 		fprintf(stderr, "Unable to create init zwidget\n");

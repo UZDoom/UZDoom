@@ -125,7 +125,7 @@ namespace Priv
 		Priv::displayBounds = (SDL_Rect*) calloc(Priv::numberOfDisplays, sizeof(SDL_Rect));
 
 		for (int i=0; i < Priv::numberOfDisplays; i++) {
-			if (0 != SDL_GetDisplayBounds(displays[i], &Priv::displayBounds[i])) {
+			if (!SDL_GetDisplayBounds(displays[i], &Priv::displayBounds[i])) {
 				Printf("%sError getting display %d size: %s\n", TEXTCOLOR_BOLD, i, SDL_GetError());
 				if (i == 0) {
 					free(Priv::displayBounds);
