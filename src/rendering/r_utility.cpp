@@ -912,7 +912,7 @@ static double QuakePower(double factor, double intensity, double offset)
 	}
 	else
 	{
-		randumb = pr_torchflicker.GenRand_Real2() * (intensity * 2) - intensity;
+		randumb = pr_torchflicker.RandomFloat() * (intensity * 2) - intensity;
 	}
 	return factor * (offset + randumb);
 }

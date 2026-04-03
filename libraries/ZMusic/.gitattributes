@@ -1,0 +1,28 @@
+*		text=auto eol=lf
+
+*.h		text
+*.c		text
+*.cc		text
+*.cpp		text
+*.mm		text
+*.lemon		text
+*.y		text
+*.re		text
+*.i		text
+*.asm		text
+*.S		text
+
+*.vcproj	text
+*.sln		text
+*.bat		text
+*.rc		text
+
+*.txt		text
+language.*	text
+
+*.png		binary
+*.imgz		binary
+*.lmp		binary
+*.flac		binary
+*.dat		binary
+*.ico		binary

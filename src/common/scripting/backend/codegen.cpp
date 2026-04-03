@@ -6447,14 +6447,7 @@ FxFRandom::FxFRandom(FRandom *r, FxExpression *mi, FxExpression *ma, const FScri
 
 static double NativeFRandom(FRandom *rng, double min, double max)
 {
-	int random = (*rng)(0x40000000);
-	double frandom = random / double(0x40000000);
-
-	if (max < min)
-	{
-		std::swap(max, min);
-	}
-	return frandom * (max - min) + min;
+	return rng->RandomFloat(min, max);
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(DObject, BuiltinFRandom, NativeFRandom)

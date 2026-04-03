@@ -231,6 +231,7 @@ int main (int argc, char **argv)
 		I_TryRestart(argv);
 	}
 
+	SDL_SetRelativeMouseMode(SDL_FALSE);
 	SDL_Quit();
 
 	return result;

@@ -881,6 +881,14 @@ sightcounts[0]++;
 		}
 	}
 
+	// Return true if the actor is calling CheckSight
+	// on themselves and they can see themselves
+	if (t1 == t2)
+	{
+		res = true;
+		goto done;
+	}
+	
 	// killough 4/19/98: make fake floors and ceilings block monster view
 
 	if (!(flags & SF_IGNOREWATERBOUNDARY))

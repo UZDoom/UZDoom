@@ -2,7 +2,7 @@
 ** opl_mus_player.cpp
 **
 **---------------------------------------------------------------------------
-** Copyright 1999-2016 Randy Heit
+** Copyright 1999-2016 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

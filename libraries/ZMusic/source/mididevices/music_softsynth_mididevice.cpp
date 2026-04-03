@@ -3,7 +3,7 @@
 ** Common base class for software synthesis MIDI devices.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008-2010 Randy Heit
+** Copyright 2008-2010 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

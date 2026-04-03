@@ -2983,6 +2983,10 @@ void G_DoPlayDemo (void)
 			I_Error("Unable to read demo '%s'", defdemoname.GetChars());
 		}
 	}
+	if (demobuffer.Size() < 4)
+	{ // Empty demo lump; return
+		return;
+	}
 	demo_p = TArrayView(demobuffer.Data(), demobuffer.Size());
 
 	if (singledemo) Printf ("Playing demo %s\n", defdemoname.GetChars());
@@ -2994,17 +2998,13 @@ void G_DoPlayDemo (void)
 		const char *eek = "Cannot play non-" GAMENAME " demos.\n";
 
 		C_ForgetCVars();
-		demobuffer.Reset();
+		demobuffer.Resize(0);
 		demo_p = NULL;
 		if (singledemo)
 		{
 			I_Error ("%s", eek);
 		}
-		else
-		{
-			//Printf (PRINT_BOLD, "%s", eek);
-			gameaction = ga_nothing;
-		}
+		gameaction = ga_nothing;
 	}
 	else if (G_ProcessIFFDemo (mapname))
 	{

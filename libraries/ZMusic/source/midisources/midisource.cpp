@@ -3,7 +3,7 @@
  ** Implements base class for the different MIDI formats
  **
  **---------------------------------------------------------------------------
- ** Copyright 2008-2016 Randy Heit
+ ** Copyright 2008-2016 Marisa Heit
  ** Copyright 2017-2018 Christoph Oelckers
  ** All rights reserved.
  **

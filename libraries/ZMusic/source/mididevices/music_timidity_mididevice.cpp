@@ -3,7 +3,7 @@
 ** Provides access to TiMidity as a generic MIDI device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -272,6 +272,15 @@ bool GUS_SetupConfig(const char* args)
 			// If the passed file is an SF2 sound font we need to use the special reader that fakes a config for it.
 			if (memcmp(test, "RIFF", 4) == 0 && memcmp(test + 8, "sfbk", 4) == 0)
 				reader = new MusicIO::SF2Reader(args);
+			// Also try zipped GUS patch sets.
+			else if (memcmp(test, "PK\3\4", 4) == 0)
+			{
+				auto zreader = new MusicIO::ZipPatReader(args);
+				if (zreader->isValid())	// must check if it worked.
+					reader = zreader;
+				else
+					delete zreader;
+			}
 		}
 		if (!reader) reader = new MusicIO::FileSystemSoundFontReader(args, true);
 	}
