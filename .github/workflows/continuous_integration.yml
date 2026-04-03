@@ -4,153 +4,94 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
+    name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: false
       matrix:
         config:
-        - name: Windows MSVC
+        - name: Visual Studio - Release
           os: windows-latest
-          deps_cmdline: choco install tree
           build_type: Release
 
-        - name: Windows MSVC
+        - name: Visual Studio - Debug
           os: windows-latest
-          deps_cmdline: choco install tree
           build_type: Debug
 
-        - name: MacOS LLVM
+        - name: macOS Clang - Dynamic Deps
           os: macos-latest
-          extra_options: -DDYN_OPENAL=OFF
-          deps_cmdline: brew install tree gawk sdl2 libvpx molten-vk vulkan-volk
           build_type: Release
 
-        - name: MacOS LLVM
+        - name: macOS Clang - Static Deps
           os: macos-latest
-          extra_options: -DDYN_OPENAL=OFF
-          deps_cmdline: brew install tree gawk sdl2 libvpx molten-vk vulkan-volk
-          build_type: Debug
-
-        - name: Linux GCC
-          os: ubuntu-latest
-          deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
           build_type: Release
+          cmake_options: -DDYN_FLUIDSYNTH=OFF -DDYN_MPG123=OFF -DDYN_SNDFILE=OFF
+          deps_cmd: brew install libsndfile mpg123
 
-        - name: Linux GCC
+        - name: Linux GCC - Dynamic Deps
           os: ubuntu-latest
-          deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
-          build_type: Debug
-
-        - name: Linux LLVM
-          os: ubuntu-latest
-          extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-          deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
           build_type: Release
+          deps_cmd: sudo apt update && sudo apt install libglib2.0-dev
 
-        - name: Linux LLVM
+        - name: Linux GCC - Static Deps
           os: ubuntu-latest
-          extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-          deps_cmdline: sudo apt-get update && sudo apt-get install libsdl2-dev libvpx-dev libwebp-dev waylandpp-dev libbz2-dev libomp-dev libopenal-dev
-          build_type: Debug
+          build_type: Release
+          cmake_options: -DDYN_FLUIDSYNTH=OFF -DDYN_MPG123=OFF -DDYN_SNDFILE=OFF
+          deps_cmd: sudo apt update && sudo apt install libasound2-dev libglib2.0-dev libmpg123-dev libsndfile1-dev
+          
+        - name: Linux Clang - Dynamic Deps
+          os: ubuntu-latest
+          build_type: Release
+          cmake_options: -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++
+          deps_cmd: sudo apt update && sudo apt install libglib2.0-dev
+          
+        - name: Linux Clang - Static Deps
+          os: ubuntu-latest
+          build_type: Release
+          cmake_options: -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DDYN_FLUIDSYNTH=OFF -DDYN_MPG123=OFF -DDYN_SNDFILE=OFF
+          deps_cmd: sudo apt update && sudo apt install libasound2-dev libglib2.0-dev libmpg123-dev libsndfile1-dev
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Dependencies
+    - name: Install Dependencies
       shell: bash
       run: |
-        if [[ -n "${{ matrix.config.deps_cmdline }}" ]]; then
-          eval ${{ matrix.config.deps_cmdline }}
-        fi
-
-    - name: Git describe
-      id: ghd
-      uses: proudust/gh-describe@v2
+        ${{ matrix.config.deps_cmd }}
 
     - name: Configure
       shell: bash
       run: |
-        mkdir build
-        cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} -DPK3_QUIET_ZIPDIR=ON ${{ matrix.config.extra_options }} .
+        cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.config.build_type }} -DCMAKE_INSTALL_PREFIX=./build_install ${{ matrix.config.cmake_options }} .
 
     - name: Build
       shell: bash
       run: |
-        export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
         export MAKEFLAGS=--keep-going
-        cmake --build build --config ${{ matrix.config.build_type }} --parallel 4
+        cmake --build build --target install --config ${{ matrix.config.build_type }} --parallel 3
 
-    - name: Package
+    - name: Test
       shell: bash
       run: |
-        function fetch() { { curl -L "$3" | tee "$1" | sha1sum ; } && { echo "$2 $1" | sha1sum -c - ; } ; }
-
+        cd samples/list_midi_devices
+        mkdir build
         cd build
-        mkdir package
-
-        7z a package/licenses.zip ../docs/licenses/*
-
+        declare -x PREFIX=`pwd`/../../../build_install
+        cmake -DCMAKE_PREFIX_PATH=${PREFIX} ${{ matrix.config.cmake_options }} ..
+        cmake --build . --config ${{ matrix.config.build_type }}
+        if [[ "${{ runner.os }}" == 'macOS' ]]; then
+          declare -x DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:${PREFIX}
+        fi
         if [[ "${{ runner.os }}" == 'Windows' ]]; then
-
-            fetch oalsoft.zip \
-                7a9871038cb8eb954b4f723c9f86b248f914fc59 \
-                https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
-            unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
-
-            fetch sndfile.zip \
-                610569766aa1c138044a30af43db6ec6195ed164 \
-                https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
-            unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
-
-            mkdir package/soundfonts
-            cp ../soundfont/uzdoom.sf2 package/soundfonts
-
-            mkdir package/fm_banks
-            cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
-
-            cp ${{ matrix.config.build_type }}/uzdoom.exe ${{ matrix.config.build_type }}/*.pk3 package
-
-        elif [[ "${{ runner.os }}" == 'macOS' ]]; then
-
-            if [[ ! -d uzdoom.app ]] && [[ -d ${{ matrix.config.build_type }}/uzdoom.app ]]; then
-                mv ${{ matrix.config.build_type }}/uzdoom.app uzdoom.app
-            fi
-            mv package/licenses.zip uzdoom.app
-            # copy fm_banks + soundfonts ?
-            cp -r uzdoom.app package
-
-        elif [[ "${{ runner.os }}" == 'Linux' ]]; then
-
-            ldd ./uzdoom
-
-            mkdir AppDir
-            cmake --install . --prefix "$(realpath AppDir)/usr"
-
-            sudo apt-get install libfuse2 # renamed to libfuse2t64 in later releases
-
-            fetch appimage-builder \
-                6f83a789f6c47a745b97d1b0b3f1df2e7eea7a09 \
-                https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
-            chmod +x appimage-builder
-
-            export GIT_DESCRIBE="${{ steps.ghd.outputs.describe }}"
-            ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
-            cp *.AppImage package
-
-            rm package/licenses.zip
-
+          cp ${PREFIX}/bin/zmusic.dll ${{ matrix.config.build_type }}
+          ${{ matrix.config.build_type }}/list_midi_devices.exe
+        else
+          ./list_midi_devices
         fi
 
-    - name: Upload
+    - name: Upload Install Directory
+      if: false  # Remove this line to upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        path: build/package
-        name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-
-    - name: List
-      if: always()
-      shell: bash
-      run: |
-        git status
-        tree -pu build
+        name: ${{ matrix.config.name }}
+        path: build_install

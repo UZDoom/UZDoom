@@ -1,47 +1,30 @@
 {
     "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
-    "builtin-baseline": "0659bf17507c88f2da8cb196303a5b6fd862f817",
+    "builtin-baseline": "65c013b9667ff1f58fb8724209227e5a2e761043",
+    "name": "zmusic",
+    "description": "GZDoom's music system as a standalone library",
     "features":
     {
-        "vcpkg-libvpx":
+        "vcpkg-libsndfile":
         {
-            "description": "Use libvpx provided by vcpkg on Windows",
-            "dependencies": [
+            "description": "Use libsndfile provided by vcpkg.",
+            "dependencies":
+            [
                 {
-                    "name": "libvpx",
+                    "name": "libsndfile",
                     "default-features": false,
-                    "platform": "(!windows & static) | (windows & static & staticcrt)"
-                }
-            ]
-        },
-        "vcpkg-openal-soft":
-        {
-            "description": "Use openal-soft provided by vcpkg.",
-            "dependencies": [
-                {
-                    "name": "openal-soft",
-                    "default-features": false,
-                    "platform": "(!windows & static) | (windows & static & staticcrt)"
+                    "features": [ "mpeg", "external-libs" ]
                 }
             ]
         }
     },
     "dependencies": [
         {
-            "name": "bzip2",
-            "platform": "(!windows & static) | (windows & static & staticcrt)"
+            "name": "alsa",
+            "platform": "linux"
         },
         {
-            "name": "libvpx",
-            "platform": "!windows & static"
-        },
-	{
-            "name": "gtk3",
-            "platform": "!windows & !osx & static"
-	},
-	{
-            "name": "glib",
-            "platform": "!windows & !osx & static"
-	}
+            "name": "zlib"
+        }
     ]
 }

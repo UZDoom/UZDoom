@@ -1,13 +1,7 @@
 # build artifacts
 /build*
-/wadsrc/*.pk3
-.flatpak-builder/
-*.AppImage
-*.flatpak
-flatpak/
-uzdoom-crash.log
-fmodapi*linux/
-gitinfo.h
+*.user*
+.DS_Store
 
 # editor/tooling/os files
 *~
@@ -19,23 +13,3 @@ gitinfo.h
 .cache
 *.kate-swp
 *.geany
-
-# private dev files
-*.user
-*.local
-*.log
-
-# other / unknown
-*.ncb
-*.suo
-*.pdb
-*.ilk
-*.aps
-/wadsrc_wad
-/release_gcc
-/DOOMSTATS.TXT
-/disasm.txt
-/llvm
-/src/gl/unused
-/mapfiles_release/*.map
-.cache/

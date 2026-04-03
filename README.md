@@ -1,36 +1,16 @@
-# Welcome to UZDoom!
+# ZMusic
+UZDoom's music system as a standalone library
 
-[![Continuous Integration](https://github.com/UZDoom/UZDoom/actions/workflows/continuous_integration.yml/badge.svg)](https://github.com/UZDoom/UZDoom/actions/workflows/continuous_integration.yml)
-[![Translation status](https://hosted.weblate.org/widget/uzdoom/svg-badge.svg)](https://hosted.weblate.org/engage/uzdoom/)
+Welcome! This repository is a library for use with the projects [UZDoom](https://github.com/UZDoom/UZDoom).
 
-## UZDoom is a modder-friendly OpenGL and Vulkan source port based on the DOOM engine
+Compile instructions are pretty simple for most systems.
 
-Copyright (c) 1998-2025 ZDoom + GZDoom + UZDoom teams, and contributors
+```
+git clone https://github.com/UZDoom/ZMusic.git
+mkdir ZMusic/build
+cd ZMusic/build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+cmake --build .
+```
 
-Doom Source (c) 1997 id Software, Raven Software, and contributors
-
-Please see license files for individual contributor licenses
-
-Special thanks to Coraline of the EDGE team for allowing us to use her [README.md](https://github.com/3dfxdev/EDGE/blob/master/README.md) as a template for this one.
-
-### Source code licensed under the GPL v3
-##### https://www.gnu.org/licenses/quick-guide-gplv3.en.html
----
-
-## How to build UZDoom
-
-To build UZDoom, please see UZDoom's Github [wiki](https://github.com/UZDoom/UZDoom/wiki/) for full list.
-
-Build For [Linux](https://github.com/UZDoom/UZDoom/wiki/Compilation#linux).
-
-Build For [MacOS](https://github.com/UZDoom/UZDoom/wiki/Compilation#macos).
-
-Build For [Windows](https://github.com/UZDoom/UZDoom/wiki/Compilation#windows).
-
-# Resources
-- https://zdoom.org/ - Home Page
-- https://forum.zdoom.org/ - Forum
-- https://zdoom.org/wiki/ - Wiki
-- https://dsc.gg/zdoom - Discord Server
-
-[![Translation status](https://hosted.weblate.org/widget/uzdoom/open-graph.png)](https://hosted.weblate.org/engage/uzdoom/)
+On Unix/Linux you may also supply `sudo make install` in the build folder to push the compiled library directly into the file system so that it can be found by the previously mentioned projects.
