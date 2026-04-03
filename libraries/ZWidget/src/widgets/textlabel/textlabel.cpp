@@ -36,7 +36,7 @@ TextLabelAlignment TextLabel::GetTextAlignment() const
 double TextLabel::GetPreferredWidth()
 {
 	Canvas* canvas = GetCanvas();
-	return canvas->measureText(text).width;
+	return canvas->measureText(GetFont(), text).width + 1.0;
 }
 
 double TextLabel::GetPreferredHeight()
@@ -49,12 +49,13 @@ void TextLabel::OnPaint(Canvas* canvas)
 	double x = 0.0;
 	if (textAlignment == TextLabelAlignment::Center)
 	{
-		x = (GetWidth() - canvas->measureText(text).width) * 0.5;
+		x = (GetWidth() - canvas->measureText(GetFont(), text).width) * 0.5;
 	}
 	else if (textAlignment == TextLabelAlignment::Right)
 	{
-		x = GetWidth() - canvas->measureText(text).width;
+		x = GetWidth() - canvas->measureText(GetFont(), text).width;
 	}
 
-	canvas->drawText(Point(x, GetHeight() - 5.0), GetStyleColor("color"), text);
+	FontMetrics metrics = canvas->getFontMetrics(GetFont());
+	canvas->drawText(GetFont(), Point(x, (GetHeight() - metrics.height) * 0.5 + metrics.ascent), text, GetStyleColor("color"));
 }

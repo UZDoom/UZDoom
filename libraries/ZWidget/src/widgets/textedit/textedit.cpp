@@ -14,7 +14,7 @@ TextEdit::TextEdit(Widget* parent) : Widget(parent)
 	SetStyleClass("textedit");
 
 	selectionBG = GetStyleColor("selection-color");
-	selectionFG = GetStyleColor("selection-text");
+	selectionFG = GetStyleColor("color");
 
 	timer = new Timer(this);
 	timer->FuncExpired = [this]() { OnTimerExpired(); };
@@ -593,9 +593,9 @@ void TextEdit::OnVerticalScroll()
 void TextEdit::UpdateVerticalScroll()
 {
 	Rect rect(
-		GetWidth() - vert_scrollbar->GetPreferredWidth(),
+		GetWidth() - 16.0/*vert_scrollbar->GetWidth()*/,
 		0.0,
-		vert_scrollbar->GetPreferredWidth(),
+		16.0/*vert_scrollbar->GetWidth()*/,
 		GetHeight());
 
 	vert_scrollbar->SetFrameGeometry(rect);
@@ -875,7 +875,7 @@ void TextEdit::OnGeometryChanged()
 		line.invalidated = true;
 	}
 
-	vertical_text_align = canvas->verticalTextAlign();
+	vertical_text_align = canvas->verticalTextAlign(GetFont());
 
 	clip_start_offset = 0;
 	UpdateVerticalScroll();
@@ -957,6 +957,8 @@ double TextEdit::GetTotalHeight()
 
 void TextEdit::LayoutLines(Canvas* canvas)
 {
+	auto font = GetFont();
+
 	ivec2 sel_start;
 	ivec2 sel_end;
 	if (selection_length > 0)
@@ -982,7 +984,7 @@ void TextEdit::LayoutLines(Canvas* canvas)
 				line.layout.AddText(line.text, font, textColor);
 			else
 				line.layout.AddText(" ", font, textColor); // Draw one space character to get the correct height
-			line.layout.Layout(canvas, GetWidth() - vert_scrollbar->GetPreferredWidth());
+			line.layout.Layout(canvas, GetWidth());
 			line.box = Rect(draw_pos, line.layout.GetSize());
 			line.invalidated = false;
 		}

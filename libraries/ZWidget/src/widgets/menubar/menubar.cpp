@@ -247,13 +247,13 @@ void MenubarItem::OnMouseLeave()
 double MenubarItem::GetPreferredWidth()
 {
 	Canvas* canvas = GetCanvas();
-	return canvas->measureText(text).width;
+	return canvas->measureText(GetFont(), text).width;
 }
 
 void MenubarItem::OnPaint(Canvas* canvas)
 {
-	double x = (GetWidth() - canvas->measureText(text).width) * 0.5;
-	canvas->drawText(Point(x, 21.0), GetStyleColor("color"), text);
+	double x = (GetWidth() - canvas->measureText(GetFont(), text).width) * 0.5;
+	canvas->drawText(GetFont(), Point(x, 21.0), text, GetStyleColor("color"));
 }
 
 /////////////////////////////////////////////////////////////////////////////

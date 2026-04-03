@@ -18,7 +18,7 @@ std::vector<std::string> DBusOpenFileDialog::Filenames() const
 
 void DBusOpenFileDialog::SetMultiSelect(bool multiselect)
 {
-	this->multiSelect = multiSelect;
+	this->multiSelect = multiselect;
 }
 
 void DBusOpenFileDialog::SetFilename(const std::string &filename)

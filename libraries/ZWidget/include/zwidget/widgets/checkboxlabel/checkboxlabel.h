@@ -15,6 +15,7 @@ public:
 	bool GetChecked() const;
 	void Toggle();
 
+	double GetPreferredWidth() override;
 	double GetPreferredHeight() override;
 	std::function<void(bool)> FuncChanged;
 	void SetRadioStyle(bool on) { radiostyle = on; }
@@ -27,6 +28,8 @@ protected:
 	void OnKeyUp(InputKey key) override;
 
 private:
+	Size GetCheckboxSize();
+
 	std::string text;
 	bool checked = false;
 	bool radiostyle = false;

@@ -1,3 +1,2 @@
-# [ZWidget](https://github.com/UZDoom/ZWidget)
-
+# ZWidget
 A framework for building user interface applications

@@ -3,9 +3,11 @@
 #include <memory>
 #include <string>
 #include <unordered_map>
+#include <vector>
+#include <map>
+#include <cmath>
 #include "image.h"
 #include "rect.h"
-#include <vector>
 
 class Font;
 class Point;
@@ -65,18 +67,16 @@ public:
 	void fillRect(const Rect& box, const Colorf& color);
 	void line(const Point& p0, const Point& p1, const Colorf& color);
 
-	void drawText(const Point& pos, const Colorf& color, const std::string& text);
-	Rect measureText(const std::string& text);
-	VerticalTextPosition verticalTextAlign();
-
 	void drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color);
 	void drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& pos, const Rect& clipBox, const std::string& text, const Colorf& color);
 	Rect measureText(const std::shared_ptr<Font>& font, const std::string& text);
+	VerticalTextPosition verticalTextAlign(const std::shared_ptr<Font>& font);
 	FontMetrics getFontMetrics(const std::shared_ptr<Font>& font);
 	int getCharacterIndex(const std::shared_ptr<Font>& font, const std::string& text, const Point& hitPoint);
 
 	void drawImage(const std::shared_ptr<Image>& image, const Point& pos);
 	void drawImage(const std::shared_ptr<Image>& image, const Rect& box);
+	void drawImage(const std::shared_ptr<Image>& image, const Rect& src, const Rect& dest);
 
 	void setLanguage(const char* lang) { language = lang; }
 
@@ -92,20 +92,24 @@ protected:
 	int getClipMaxX() const;
 	int getClipMaxY() const;
 
+	float gridFit(double v) { return (float)std::round(v * uiscale); }
+
 	template<typename T>
 	static T clamp(T val, T minval, T maxval) { return std::max<T>(std::min<T>(val, maxval), minval); }
 
 	DisplayWindow* window = nullptr;
 	int width = 0;
 	int height = 0;
-	double uiscale = 1.0f;
+	double uiscale = 1.0;
 
 	std::unique_ptr<CanvasTexture> whiteTexture;
 
 private:
 	void drawLineUnclipped(const Point& p0, const Point& p1, const Colorf& color);
 
-	std::unique_ptr<CanvasFontGroup> font;
+	CanvasFontGroup* GetFontGroup(const std::shared_ptr<Font>& font);
+
+	std::map<std::pair<std::string, double>, std::shared_ptr<CanvasFontGroup>> fontCache;
 
 	Point origin;
 	std::vector<Rect> clipStack;

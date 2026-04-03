@@ -12,12 +12,12 @@ public:
 	void SetText(const std::string& value);
 	const std::string& GetText() const;
 
+	double GetPreferredWidth() override;
+	double GetPreferredHeight() override;
+
 	void Click();
 
 	std::function<void()> OnClick;
-
-	double GetPreferredWidth() override;
-	double GetPreferredHeight() override;
 
 protected:
 	void OnPaint(Canvas* canvas) override;

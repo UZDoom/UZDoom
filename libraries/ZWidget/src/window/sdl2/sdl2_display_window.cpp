@@ -1,14 +1,16 @@
 #include "sdl2_display_window.h"
 #include <stdexcept>
+#include <vector>
+#include <string>
 #include <SDL2/SDL_vulkan.h>
 
 Uint32 SDL2DisplayWindow::PaintEventNumber = 0xffffffff;
 bool SDL2DisplayWindow::ExitRunLoop;
 std::unordered_map<int, SDL2DisplayWindow*> SDL2DisplayWindow::WindowList;
 
-SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, bool resizable) : WindowHost(windowHost), UIScale(uiscale)
+SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, WidgetType type, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale) : WindowHost(windowHost), UIScale(uiscale)
 {
-	unsigned int flags = resizable ? (SDL_WINDOW_HIDDEN | SDL_WINDOW_RESIZABLE) : SDL_WINDOW_HIDDEN /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
+	unsigned int flags = SDL_WINDOW_HIDDEN | SDL_WINDOW_RESIZABLE /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
 	if (renderAPI == RenderAPI::Vulkan)
 		flags |= SDL_WINDOW_VULKAN;
 	else if (renderAPI == RenderAPI::OpenGL)
@@ -17,7 +19,7 @@ SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWi
 	else if (renderAPI == RenderAPI::Metal)
 		flags |= SDL_WINDOW_METAL;
 #endif
-	if (popupWindow)
+	if (type == WidgetType::Popup)
 		flags |= SDL_WINDOW_BORDERLESS;
 
 	if (renderAPI == RenderAPI::Vulkan || renderAPI == RenderAPI::OpenGL || renderAPI == RenderAPI::Metal)
@@ -88,13 +90,6 @@ void SDL2DisplayWindow::SetWindowIcon(const std::vector<std::shared_ptr<Image>>&
 	// To do: when this is upgraded to SDL3, call SDL_AddSurfaceAlternateImage for all the images
 }
 
-void SDL2DisplayWindow::SetWindowFrame(const Rect& box)
-{
-	// SDL2 doesn't really seem to have an API for this.
-	// The docs aren't clear what you're setting when calling SDL_SetWindowSize.
-	SetClientFrame(box);
-}
-
 void SDL2DisplayWindow::SetClientFrame(const Rect& box)
 {
 	// Is there a way to set both in one call?
@@ -112,11 +107,6 @@ void SDL2DisplayWindow::SetClientFrame(const Rect& box)
 void SDL2DisplayWindow::Show()
 {
 	SDL_ShowWindow(Handle.window);
-}
-
-void SDL2DisplayWindow::Restore()
-{
-	SDL_RestoreWindow(Handle.window);
 }
 
 void SDL2DisplayWindow::ShowFullscreen()
@@ -165,6 +155,16 @@ void SDL2DisplayWindow::ShowCursor(bool enable)
 	SDL_ShowCursor(enable);
 }
 
+void SDL2DisplayWindow::LockKeyboard()
+{
+	// Enables raw keyboard scancode events (OnRawKeyboard should be called for keyboard input)
+}
+
+void SDL2DisplayWindow::UnlockKeyboard()
+{
+	// Disable raw keyboard scancode events (OnKeyDown/OnKeyUp/OnKeyChar should be called for keyboard input)
+}
+
 void SDL2DisplayWindow::LockCursor()
 {
 	if (!CursorLocked)
@@ -191,7 +191,7 @@ void SDL2DisplayWindow::ReleaseMouseCapture()
 {
 }
 
-void SDL2DisplayWindow::SetCursor(StandardCursor cursor)
+void SDL2DisplayWindow::SetCursor(StandardCursor cursor, std::shared_ptr<CustomCursor> custom)
 {
 }
 
@@ -213,7 +213,7 @@ bool SDL2DisplayWindow::GetKeyState(InputKey key)
 	return (index < numkeys) ? state[index] != 0 : false;
 }
 
-Rect SDL2DisplayWindow::GetWindowFrame() const
+Rect SDL2DisplayWindow::GetClientFrame() const
 {
 	int x = 0;
 	int y = 0;
