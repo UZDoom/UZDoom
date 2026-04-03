@@ -169,14 +169,17 @@ const FName * Joy_GuessMapping(const FName identifier)
 
 	struct MapSet { const FName * mapping; const TArray<FString> tokens; };
 	static struct MapSet mappings[] = {
-		{ &HapticNone, { "ricochet", "casing" } },
-		{ &HapticIntense, { "quake", "death", "gibbed" } },
-		{ &HapticHeavy, { "teleport", "activate", "secret" } },
-		{ &HapticMedium, { "success", "grunt", "land", "pain", "pkup", "pickup", "fist", "weapon",
-			"fire", "shoot", "blast", "attack", "launch", "punch" } },
-		{ &HapticLight, { "push", "menu", "use", "fail", "open", "close", "eject", "reload",
-			"charge", "try", "fart", "ready" } },
-		{ &HapticNone, { "step", "floor" } },
+		{ &HapticNone, { "ricochet", "casing", "bounce", } },
+		{ &HapticLight, { "small", "soft" } },
+		{ &HapticMedium, { "medium", } },
+		{ &HapticHeavy, { "loud", "heavy", "big" } },
+		{ &HapticIntense, { "quake", "death", "gibbed", "intense" } },
+		{ &HapticHeavy, { "teleport", "activate", "secret", } },
+		{ &HapticMedium, { "success", "grunt", "land", "pain", "pkup", "pickup", "fist", "weapon", "fire", "shoot",
+			"blast", "attack", "launch", "punch", "boom", "select", "wall", "hit", "xplode" } },
+		{ &HapticLight, { "push", "menu", "use", "fail", "open", "close", "eject", "load", "charge", "try", "fart",
+			"ready", "raise", "swing", "cock", "pump", "throw", "mask", "drink", "start", } },
+		{ &HapticNone, { "step", "floor", "stop", "loop", } },
 	};
 
 	for (auto mapping: mappings)
