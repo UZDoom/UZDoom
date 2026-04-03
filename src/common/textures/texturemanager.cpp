@@ -22,25 +22,24 @@
 **
 */
 
-#include "filesystem.h"
-#include "printf.h"
-#include "c_cvars.h"
-
-#include "gstrings.h"
-#include "textures.h"
-#include "texturemanager.h"
-#include "c_dispatch.h"
-#include "sc_man.h"
-#include "image.h"
-#include "vectors.h"
 #include "animtexture.h"
-#include "formats/multipatchtexture.h"
 #include "basics.h"
+#include "c_cvars.h"
+#include "c_dispatch.h"
 #include "cmdlib.h"
+#include "filesystem.h"
+#include "formats/multipatchtexture.h"
+#include "gstrings.h"
+#include "image.h"
+#include "printf.h"
+#include "sc_man.h"
+#include "stringtable.h"
+#include "texturemanager.h"
+#include "textures.h"
+#include "vectors.h"
 
 using namespace FileSys;
 FTextureManager TexMan;
-
 
 //==========================================================================
 //
@@ -378,7 +377,7 @@ bool FTextureManager::OkForLocalization(FTextureID texnum, const char *substitut
 	if (locmode == 4) return false;
 
 	// Mode 2 and 3 must reject any text replacement from the default language tables.
-	if ((langtable & MAKE_ID(255,0,0,0)) == MAKE_ID('*', 0, 0, 0)) return true;	// Do not substitute if the string comes from the default table.
+	if (langtable == FStringTable::default_table) return true;	// Do not substitute if the string comes from the default table.
 	if (locmode == 2) return false;
 
 	// Mode 3 must also reject substitutions for non-IWAD content.
