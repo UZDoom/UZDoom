@@ -191,8 +191,8 @@ void DOptionMenuDescriptor::Reset()
 	mScrollTop = 0;
 	mIndent = 0;
 	mDontDim = 0;
-	mFont = FFont::GetSmallTextFont(BigUpper);
-	mTooltipFont = FFont::GetDescriptionFont(NewConsoleFont);
+	mFont        = BigUpper;
+	mTooltipFont = NewConsoleFont;
 }
 
 void M_MarkMenus()

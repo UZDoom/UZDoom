@@ -111,6 +111,7 @@ LISTMENU "MainMenu"
 
 LISTMENU "MainMenuTextOnly"
 {
+	Font "BigFont"
 	IfGame(Doom, Chex)
 	{
 		StaticPatch 94, 2, "M_DOOM"
