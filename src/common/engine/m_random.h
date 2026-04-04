@@ -26,13 +26,17 @@
 #define __M_RANDOM__
 
 #include <stdio.h>
+#include <array>
 #include "basics.h"
 #include "tarray.h"
-#include "sfmt/SFMTObj.h"
 
 class FSerializer;
 
-class FRandom : public SFMTObj
+static inline uint64_t rotl(const uint64_t x, int k) {
+	return (x << k) | (x >> (64 - k));
+}
+
+class FRandom
 {
 public:
 	FRandom() : FRandom(false) {}
@@ -41,7 +45,24 @@ public:
 
 	int Seed() const
 	{
-		return sfmt.u[0] + idx;
+		return s32[0] ^ s32[1];
+	}
+
+	union {
+		std::array<uint32_t, 2> s32;
+		uint64_t s;
+	};
+
+	uint64_t GenRand64() {
+		return (uint64_t(GenRand32()) << 32) + uint64_t(GenRand32());
+	}
+
+	uint32_t GenRand32() {
+		uint64_t oldstate = s;
+		s = oldstate * 6364136223846793005ULL + 0xda3e39cb94b95bdbULL;
+		uint32_t xorshifted = ((oldstate >> 18u) ^ oldstate) >> 27u;
+		uint32_t rot = oldstate >> 59u;
+		return (xorshifted >> rot) | (xorshifted << ((-rot) & 31));
 	}
 
 	// Returns a random number in the range [0,255]
@@ -50,12 +71,16 @@ public:
 		return GenRand32() & 255;
 	}
 
-	// Returns a random number in the range [0,mod)
-	int operator() (int mod)
+	// Returns a random number in the range [0,bound)
+	int operator() (int bound)
 	{
-		return (0 == mod)
-			? 0
-			: (GenRand32() % mod);
+		uint32_t threshold = -bound % bound;
+
+		for (;;) {
+			uint32_t r = GenRand32();
+			if (r >= threshold)
+				return r % bound;
+		}
 	}
 
 	// Returns rand# - rand#
@@ -82,80 +107,17 @@ public:
 		return operator()();
 	}
 
+	double RandomFloat() {
+		return GenRand32() * ldexp(1, -32);
+	}
+
+	double RandomFloat(double r0, double r1) {
+		auto t = RandomFloat();
+		auto ret = r0 * (1.0 - t) + r1 * t;
+		return ret;
+	}
+
 	void Init(uint32_t seed);
-
-	/* These real versions are due to Isaku Wada */
-	/** generates a random number on [0,1]-real-interval */
-	static inline double ToReal1(uint32_t v)
-	{
-		return v * (1.0/4294967295.0); 
-		/* divided by 2^32-1 */ 
-	}
-
-	/** generates a random number on [0,1]-real-interval */
-	inline double GenRand_Real1()
-	{
-		return ToReal1(GenRand32());
-	}
-
-	/** generates a random number on [0,1)-real-interval */
-	static inline double ToReal2(uint32_t v)
-	{
-		return v * (1.0/4294967296.0); 
-		/* divided by 2^32 */
-	}
-
-	/** generates a random number on [0,1)-real-interval */
-	inline double GenRand_Real2()
-	{
-		return ToReal2(GenRand32());
-	}
-
-	/** generates a random number on (0,1)-real-interval */
-	static inline double ToReal3(uint32_t v)
-	{
-		return (((double)v) + 0.5)*(1.0/4294967296.0); 
-		/* divided by 2^32 */
-	}
-
-	/** generates a random number on (0,1)-real-interval */
-	inline double GenRand_Real3(void)
-	{
-		return ToReal3(GenRand32());
-	}
-	/** These real versions are due to Isaku Wada */
-
-	/** generates a random number on [0,1) with 53-bit resolution*/
-	static inline double ToRes53(uint64_t v) 
-	{ 
-		return v * (1.0/18446744073709551616.0L);
-	}
-
-	/** generates a random number on [0,1) with 53-bit resolution from two
-	 * 32 bit integers */
-	static inline double ToRes53Mix(uint32_t x, uint32_t y) 
-	{ 
-		return ToRes53(x | ((uint64_t)y << 32));
-	}
-
-	/** generates a random number on [0,1) with 53-bit resolution
-	 */
-	inline double GenRand_Res53(void) 
-	{ 
-		return ToRes53(GenRand64());
-	} 
-
-	/** generates a random number on [0,1) with 53-bit resolution
-		using 32bit integer.
-	 */
-	inline double GenRand_Res53_Mix() 
-	{ 
-		uint32_t x, y;
-
-		x = GenRand32();
-		y = GenRand32();
-		return ToRes53Mix(x, y);
-	}
 
 	// Static interface
 	static void StaticClearRandom ();

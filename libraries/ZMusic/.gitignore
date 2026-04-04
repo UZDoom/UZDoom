@@ -1,2 +1,15 @@
+# build artifacts
 /build*
 *.user*
+.DS_Store
+
+# editor/tooling/os files
+*~
+.gdb_history
+.DS_Store
+.vs
+.idea
+.vscode
+.cache
+*.kate-swp
+*.geany

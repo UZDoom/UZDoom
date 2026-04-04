@@ -28,6 +28,7 @@
 #include <cstdint>
 #include <vector>
 #include <string>
+#include "file_zip.h"
 
 #if defined _WIN32 && !defined _WINDOWS_	// only define this if windows.h is not included.
 	// I'd rather not include Windows.h for just this. This header is not supposed to pollute everything it touches.
@@ -380,6 +381,76 @@ public:
 			return new MemoryReader((uint8_t*)mMainConfigForSF2.c_str(), (long)mMainConfigForSF2.length());
 		}
 		else return FileSystemSoundFontReader::open_file(fn);
+	}
+};
+
+class ZipPatReader : public FileSystemSoundFontReader
+{
+
+	ZipFile::FZipFile* zip = nullptr;
+public:
+	ZipPatReader(const char* filename)
+		: FileSystemSoundFontReader("timidity.cfg")
+	{
+		FILE* f = utf8_fopen(filename, "rb");
+		if (!f) return;
+		zip = ZipFile::Open(f);
+		if (zip)
+		{
+			if (ZipFile::FindEntry(zip, "timidity.cfg") < 0)
+			{
+				ZipFile::Close(zip);
+				zip = nullptr;	// file does not contain what we need.
+			}
+		}
+	}
+
+	~ZipPatReader()
+	{
+		if (zip) ZipFile::Close(zip);
+	}
+
+	bool isValid() const
+	{
+		return zip != nullptr;
+	}
+
+	struct FileInterface* open_file(const char* fn) override
+	{
+		std::string fullname;
+		int entry = -1;
+		if (!fn) 
+		{
+			fullname = mBaseFile;
+			entry = ZipFile::FindEntry(zip, fullname.c_str());
+			if (entry < 0)
+			{
+				return nullptr;
+			}
+		}
+		else
+		{
+			if (!IsAbsPath(fn))
+			{
+				for(int i = (int)mPaths.size()-1; i>=0; i--)
+				{
+					fullname = mPaths[i] + fn;
+					entry = ZipFile::FindEntry(zip, fullname.c_str());
+					if (entry >= 0) break;
+				}
+			}
+			if (entry < 0) return nullptr;
+		}
+		return new VectorReader([&](std::vector<uint8_t>& array)
+			{
+				auto bufsize = ZipFile::Length(zip, entry);
+				array.resize(bufsize);
+				if (ZipFile::Read(zip, entry, (void*)array.data(), bufsize) < bufsize)
+				{
+					array.clear();
+				}
+			});
+
 	}
 };
 

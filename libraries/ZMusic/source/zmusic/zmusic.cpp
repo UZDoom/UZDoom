@@ -3,7 +3,7 @@
  ** Plays music
  **
  **---------------------------------------------------------------------------
- ** Copyright 1998-2016 Randy Heit
+ ** Copyright 1998-2016 Marisa Heit
  ** Copyright 2005-2019 Christoph Oelckers
  ** All rights reserved.
  **

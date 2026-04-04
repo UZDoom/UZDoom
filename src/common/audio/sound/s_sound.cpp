@@ -371,7 +371,7 @@ static float CalcPitch(int pitchmask, float defpitch, float defpitchmax)
 	{
 		if (defpitchmax > 0.0 && defpitch != defpitchmax)
 		{
-			defpitch = (float)pr_soundpitch.GenRand_Real1() * (defpitchmax - defpitch) + defpitch;
+			defpitch = (float)pr_soundpitch.RandomFloat() * (defpitchmax - defpitch) + defpitch;
 		}
 		return defpitch;
 	}
