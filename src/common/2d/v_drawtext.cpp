@@ -446,7 +446,7 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 			atlasFragmentDrawParms.color.a = 255;
 
 			// TODO: cvar
-			const bool drawDropShadow = true;
+			const bool drawDropShadow = substitutedFont != SymbolsFont;
 			if (drawDropShadow)
 			{
 				DrawParms shadowAtlasFragmentDrawParms = atlasFragmentDrawParms;
@@ -592,6 +592,7 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 	
 	//TODO: if these are slider symbols, do not do the substitution.
 	//TODO: stronger safety needed here; that static_cast might be an attack vector.
+	if (font != SymbolsFont)
 	{
 		PClass* pCls = menuDelegate->GetClass();
 		VMFunction* func = PClass::FindFunction(pCls->TypeName, "PickFont");
