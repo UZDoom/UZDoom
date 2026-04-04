@@ -67,6 +67,7 @@ jobs:
           }
 
           move "artifacts/Windows Release"/*.zip release/Windows-UZDoom-${{ inputs.title }}.zip
+          move "artifacts/Windows UCRT64 GCC Release"/*.zip release/Windows-UCRT64-UZDoom-${{ inputs.title }}.zip
           move "artifacts/MacOS Release"/*.zip release/MacOS-UZDoom-${{ inputs.title }}.zip
           move "artifacts/Linux Release"/*.AppImage release/Linux-UZDoom-${{ inputs.title }}.AppImage
 
