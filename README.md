@@ -4,6 +4,9 @@
 
 </div>
 
+## UZDoom for MSYS2 UCRT64 build
+* build a standalone application ready to run on windows with msys2/ucrt64
+
 ## Welcome to UZDoom!
 
 [![Continuous Integration][badge_git]][status_git]
