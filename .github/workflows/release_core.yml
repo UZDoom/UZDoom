@@ -80,12 +80,12 @@ jobs:
           RUN: ${{ inputs.run-url }}
           LABEL: ${{ inputs.label-name }}
         run: |
-          version=$(git describe --tags --exclude x-\* ${COMMIT})
+          version=$(git describe --tags --exclude x-\* --always ${COMMIT})
           commit=$(git log --format=%s -n 1 ${COMMIT})
           if [ ${BRANCH} != 'trunk' ]; then
                base=$(git merge-base origin/trunk ${COMMIT})
                basetext=$(git log --format=%s -n 1 ${base})
-               base=$(git describe --tags --exclude x-\* ${base})
+               base=$(git describe --tags --exclude x-\* --always ${base})
           fi
           if [ -n "${LABEL}" ]; then
               prs=$(gh pr list --json url,title --label "${LABEL}" --jq '[.[] | "[\(.title)](\(.url))"] | join(" - ")' || true)
