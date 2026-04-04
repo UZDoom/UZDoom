@@ -22,21 +22,14 @@
 **
 */
 
-#include <stdlib.h>
-#include <stdarg.h>
-#include <ctype.h>
-#include <wctype.h>
-
-#include "v_text.h"
-#include "v_font.h"
-#include "utf8.h"
-
-#include "filesystem.h"
-
-#include "gstrings.h"
-#include "vm.h"
-#include "serializer.h"
 #include "c_cvars.h"
+#include "gstrings.h"
+#include "printf.h"
+#include "serializer.h"
+#include "utf8.h"
+#include "v_font.h"
+#include "v_text.h"
+#include "vm.h"
 
 //==========================================================================
 //

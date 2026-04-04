@@ -24,16 +24,14 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <limits>
-
-#include "dobject.h"
-#include "serializer.h"
 #include "autosegs.h"
-#include "v_text.h"
 #include "c_cvars.h"
-#include "vm.h"
+#include "dobject.h"
+#include "printf.h"
+#include "serializer.h"
 #include "symbols.h"
 #include "types.h"
+#include "vm.h"
 
 // MACROS ------------------------------------------------------------------
 
