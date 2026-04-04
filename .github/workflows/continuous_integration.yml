@@ -206,6 +206,28 @@ jobs:
       matrix:
         config: *common_config
 
+  release-ucrt64:
+    name: Windows UCRT64 GCC Release
+    needs: ci-success
+    uses: ./.github/workflows/build_core.yml
+    secrets: inherit
+    with:
+      build_type: Release
+      name: Windows UCRT64 GCC
+      os: windows-latest
+      build_opts: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DFORCE_NO_LTO=true
+      deps_cmdline: |
+        pacman -S --noconfirm --needed
+          mingw-w64-ucrt-x86_64-openal
+          mingw-w64-ucrt-x86_64-libvpx
+          mingw-w64-ucrt-x86_64-cmake
+          mingw-w64-ucrt-x86_64-ninja
+          mingw-w64-ucrt-x86_64-bzip2
+          mingw-w64-ucrt-x86_64-clang
+          mingw-w64-ucrt-x86_64-gcc
+      extra_files: ""
+      msys2_system: UCRT64
+
   debug:
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     needs: ci-success
