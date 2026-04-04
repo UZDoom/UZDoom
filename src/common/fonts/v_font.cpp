@@ -165,7 +165,7 @@ FFont *V_GetFont(const char *name, const char *fontlumpname)
 //
 //==========================================================================
 
-CVAR(Int, font_supersamplescale, 1, CVAR_ARCHIVE);
+CVAR(Int, font_supersamplescale, 2, CVAR_ARCHIVE);
 
 FFont *FontFromTTF(const FileSys::FolderEntry &f)
 {
