@@ -181,7 +181,7 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 		const bool bIsUnicode = TrexFont.face->charmap->encoding & FT_ENCODING_UNICODE;
 		if (!bIsUnicode)
 		{
-			throw std::runtime_error("only unicode dynamic fonts are supported.");
+			throw std::runtime_error("If using a dynamic font, only unicode ttf non-variable fonts are supported.");
 		}
 
 		//scale the line height based on the deviation from latin
