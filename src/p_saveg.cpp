@@ -1054,14 +1054,6 @@ void FLevelLocals::Serialize(FSerializer &arc, bool hubload)
 		automap->UpdateShowAllLines();
 
 	}
-
-	// [XA] savegame compatibility patches
-	if (SaveVersion <= SAVEVER_PATCH_BLOCKRENDER)
-	{
-		UpdateSidedefRenderFlags();
-	}
-
-
 	// clean up the static data we allocated
 	StaticClearSerializeTranslationsData();
 
