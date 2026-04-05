@@ -67,7 +67,7 @@ jobs:
           }
 
           move "artifacts/Windows Release"/*.zip release/Windows-UZDoom-${{ inputs.title }}.zip
-          move "artifacts/MacOS Release"/*.zip release/MacOS-UZDoom-${{ inputs.title }}.zip
+          move "artifacts/MacOS Release"/*.dmg release/MacOS-UZDoom-${{ inputs.title }}.dmg
           move "artifacts/Linux Release"/*.AppImage release/Linux-UZDoom-${{ inputs.title }}.AppImage
 
       - id: notes
