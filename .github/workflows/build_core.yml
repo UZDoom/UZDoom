@@ -172,10 +172,13 @@ jobs:
         if [[ ! -d uzdoom.app ]] && [[ -d ${{ inputs.build_type }}/uzdoom.app ]]; then
           mv ${{ inputs.build_type }}/uzdoom.app uzdoom.app
         fi
-        mv package/licenses.zip uzdoom.app/Contents/Resources
 
-        if dsymutil uzdoom.app/Contents/MacOS/uzdoom; then
-          mv uzdoom.app/Contents/MacOS/uzdoom.dSYM uzdoom.app/Contents/Resources/
+        app=UZDoom.app
+        mv uzdoom.app ${app}
+        mv package/licenses.zip ${app}/Contents/Resources
+
+        if dsymutil ${app}/Contents/MacOS/uzdoom; then
+          mv ${app}/Contents/MacOS/uzdoom.dSYM ${app}/Contents/Resources/
         fi
 
         SIGN_ID="-"
@@ -193,26 +196,28 @@ jobs:
           SIGN_OPTS="--options=runtime"
         fi
 
-        mkdir -p uzdoom.app/Contents/Frameworks
-        cp $(brew --prefix molten-vk)/lib/libMoltenVK.dylib uzdoom.app/Contents/Frameworks/
+        mkdir -p ${app}/Contents/Frameworks
+        cp $(brew --prefix molten-vk)/lib/libMoltenVK.dylib ${app}/Contents/Frameworks/
         dylibbundler -ns -of -cd -b \
-          -x ./uzdoom.app/Contents/MacOS/uzdoom \
-          -d ./uzdoom.app/Contents/Frameworks \
+          -x ./${app}/Contents/MacOS/uzdoom \
+          -d ./${app}/Contents/Frameworks \
           -p @executable_path/../Frameworks/
 
-        xattr -cr uzdoom.app
+        xattr -cr ${app}
 
-        find uzdoom.app/Contents/Frameworks -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
+        find ${app}/Contents/Frameworks -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
           codesign --remove-signature "$file"
           codesign --force $SIGN_OPTS -s "$SIGN_ID" "$file"
         done
 
-        /usr/bin/codesign --force --deep $SIGN_OPTS -s "$SIGN_ID" uzdoom.app -v
+        /usr/bin/codesign --force --deep $SIGN_OPTS -s "$SIGN_ID" ${app} -v
+
         $(brew --prefix python)/bin/python3 -m venv venv
         source venv/bin/activate
         pip install dmgbuild
-        dmgbuild -s ../tools/dmgbuild-settings.py -D app=uzdoom.app "UZDoom" UZDoom.dmg
+        dmgbuild -s ../tools/dmgbuild-settings.py -D app=${app} "UZDoom" UZDoom.dmg
         mv UZDoom.dmg package
+
         cd ..
 
     - name: Package Linux
