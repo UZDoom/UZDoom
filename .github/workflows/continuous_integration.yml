@@ -161,13 +161,13 @@ jobs:
             extra_files: ""
             build_type: RelWithDebInfo
 
-          - name: MacOS Intel (Testing)
-            os: macos-26-intel
-            build_opts: *mac_opts
-            build_opts_extra: -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib
-            deps_cmdline: *mac_deps
-            extra_files: ""
-            build_type: RelWithDebInfo
+          # - name: MacOS Intel (Testing)
+          #   os: macos-26-intel
+          #   build_opts: *mac_opts
+          #   build_opts_extra: -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib
+          #   deps_cmdline: *mac_deps
+          #   extra_files: ""
+          #   build_type: RelWithDebInfo
 
 # ======================
 
