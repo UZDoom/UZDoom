@@ -262,6 +262,7 @@ void UpdateGenericUI(bool cvar)
 {
 	auto switchstr = GStrings.CheckString("USE_GENERIC_FONT");
 	generic_ui = (cvar || (switchstr && strtoll(switchstr, nullptr, 0)));
+	AlternativeSmallFont = AlternativeBigFont = NewSmallFont;
 	if (!generic_ui)
 	{
 		// Use the mod's SmallFont if it is complete.

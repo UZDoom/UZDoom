@@ -1140,20 +1140,16 @@ void FTextureManager::AddLocalizedVariants()
 			continue;
 		}
 
-		tokens[1].ToLower();
 		auto langids = tokens[1].Split("-", FString::TOK_SKIPEMPTY);
 		for (auto &lang : langids)
 		{
-			if (lang.Len() < 2 || 3 < lang.Len())
-			{
-				Printf("Invalid language ID in texture %s\n", entry.name);
-				continue;
-			}
+			auto t1 = tex.GetIndex(), t2 = origTex.GetIndex();
 
-			uint32_t langid = MAKE_ID(lang[0], lang[1], lang[2], 0);
-			uint64_t comboid = (uint64_t(langid) << 32) | origTex.GetIndex();
-			LocalizedTextures.Insert(comboid, tex.GetIndex());
-			Textures[origTex.GetIndex()].Flags |= TEXFLAG_HASLOCALIZATION;
+			GStrings.ForEachLangID([this, t1, t2](FName name, uint32_t lang, char set) {
+				if (set == 'O' || set == 'G' || set == 'D') return;
+				LocalizedTextures.Insert((uint64_t(lang) << 32) | t1, t2);
+				Textures[t2].Flags |= TEXFLAG_HASLOCALIZATION;
+			}, lang.GetChars());
 		}
 	}
 }
@@ -1364,17 +1360,13 @@ EXTERN_CVAR(String, language)
 
 int FTextureManager::ResolveLocalizedTexture(int tex)
 {
-	size_t langlen = strlen(language);
-	int lang = (langlen < 2 || langlen > 3) ?
-		MAKE_ID('e', 'n', 'u', '\0') :
-		MAKE_ID(language[0], language[1], language[2], '\0');
-
-	uint64_t index = (uint64_t(lang) << 32) + tex;
-	if (auto pTex = LocalizedTextures.CheckKey(index)) return *pTex;
-	index = (uint64_t(lang & MAKE_ID(255, 255, 0, 0)) << 32) + tex;
-	if (auto pTex = LocalizedTextures.CheckKey(index)) return *pTex;
-
-	return tex;
+	int *pTex = nullptr;
+	GStrings.ForEachLangID([this, tex, &pTex](FName name, uint32_t lang, char set) {
+		if (pTex) return;
+		if (set == 'O' || set == 'G' || set == 'D') return;
+		pTex = LocalizedTextures.CheckKey((uint64_t(lang) << 32) | tex);
+	}, *language);
+	return pTex? *pTex: tex;
 }
 
 //===========================================================================

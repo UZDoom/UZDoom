@@ -762,6 +762,59 @@ void FStringTable::InsertString(int filenum, uint32_t langid, FName label, const
 
 //==========================================================================
 //
+// For every language in the lookup chain, run the function
+//
+// `name` is a bcp 47 triplet
+// `lang` is the internal language ID
+// `set`  is one of O/G/R/r/S/s/L/l/D
+//   O: overrides
+//   G: globals
+//   R: region,   r: fallback region
+//   S: script,   s: fallback script,
+//   L: language, l: fallback language
+//   D: default
+//
+//==========================================================================
+
+void FStringTable::ForEachLangID(LangID language, std::function<void(FName name, uint32_t lang, char set)> callback)
+{
+	auto fallback = (language.fallback==NAME_None)? (LangID{NAME_None}): GetID(language.fallback.GetChars());
+
+	struct { char k; bool n; uint32_t v; } order[] = {
+		{'O', false, override_table},
+		{'G', false, global_table},
+		{'R', true,  language.normalized},
+		{'r', true,  fallback.name == NAME_None? NAME_None: fallback.normalized},
+		{'S', true,  language.script},
+		{'s', true,  fallback.name == NAME_None? NAME_None: fallback.script},
+		{'L', true,  language.language},
+		{'l', true,  fallback.name == NAME_None? NAME_None: fallback.language},
+		{'D', true,  default_table},
+	};
+	int count = sizeof(order) / sizeof(order[0]);
+
+	for (int i = 0; i < count; i++)
+	{
+		auto set_id = order[i].k;
+		auto lang_id = order[i].v;
+		for (int j = i-1; j >= 0; j--)
+		{
+			if (order[j].v == lang_id) { lang_id = NAME_None; break; }
+		}
+		if (lang_id == NAME_None) continue;
+		FName lang = NAME_None;
+		if (order[i].n) // not override or global
+		{
+			lang = *langRevMap.CheckKey(lang_id);
+			assert(lang.IsValidName());
+			if (lang == NAME_None) continue;
+		}
+		callback(lang, lang_id, set_id);
+	}
+}
+
+//==========================================================================
+//
 //
 //
 //==========================================================================
@@ -773,50 +826,31 @@ void FStringTable::UpdateLanguage(const char *language)
 	size_t langlen = strlen(language);
 
 	auto LanguageID = ((langlen < 2) ? GetID("default"): GetID(language));
-	auto FallbackID = (LanguageID.fallback==NAME_None)? (LangID{NAME_None}): GetID(LanguageID.fallback.GetChars());
-	auto fallback = FallbackID.name;
 
 	langName = langScript = NAME_None;
 	currentLanguageSet.Clear();
 
-	struct { char k; bool l; uint32_t v; } order[] = {
-		{'O', false, override_table},
-		{'G', false, global_table},
-		{'R', true, LanguageID.normalized},
-		{'r', true, FallbackID.name == NAME_None? NAME_None: FallbackID.normalized},
-		{'S', true, LanguageID.script},
-		{'s', true, FallbackID.name == NAME_None? NAME_None: FallbackID.script},
-		{'L', true, LanguageID.language},
-		{'l', true, FallbackID.name == NAME_None? NAME_None: FallbackID.language},
-		{'D', true, default_table},
-	};
-	int count = sizeof(order) / sizeof(order[0]);
-
 	FString diagnostics = "";
-	for (int i = 0; i < count; i++)
+	ForEachLangID(LanguageID, [this, &diagnostics](FName name, uint32_t lang, char set)
 	{
-		auto set_id = order[i].k;
-		auto lang_id = order[i].v;
-		for (int j = i-1; j >= 0; j--)
+		auto list = allStrings.CheckKey(lang);
+		if (!list) return;
+		if (name != NAME_None && (langName == NAME_None || langScript == NAME_None))
 		{
-			if (order[j].v == lang_id) { lang_id = NAME_None; break; }
-		}
-		if (lang_id == NAME_None) continue;
-		auto list = allStrings.CheckKey(lang_id);
-		if (!list) continue;
-		if (order[i].l && (langName == NAME_None || langScript == NAME_None))
-		{
-			auto lang = *langRevMap.CheckKey(lang_id);
-			assert(lang.IsValidName());
-			auto script_id = langMap.CheckKey(lang)->script;
-			auto script = *langRevMap.CheckKey(script_id);
+			void *ptr;
+			ptr = langMap.CheckKey(name);
+			assert(ptr != nullptr);
+			auto script_id = static_cast<LangID*>(ptr)->script;
+			ptr = langRevMap.CheckKey(script_id);
+			assert(ptr != nullptr);
+			FName script = *static_cast<FName*>(ptr);
 			assert(script.IsValidName());
-			if (langName == NAME_None) langName = lang;
+			if (langName == NAME_None) langName = name;
 			if (langScript == NAME_None) langScript = script;
 		}
-		currentLanguageSet.Push(std::make_pair(lang_id, list));
-		if (debug_languages) diagnostics.AppendFormat(" %c-%x", set_id, lang_id);
-	}
+		currentLanguageSet.Push(std::make_pair(lang, list));
+		if (debug_languages) diagnostics.AppendFormat(" %c-%x", set, lang);
+	});
 	if (debug_languages) Printf("Strings %s: %s (%s) %s \n", language, langName.GetChars(), langScript.GetChars(), diagnostics.GetChars());
 }
 
