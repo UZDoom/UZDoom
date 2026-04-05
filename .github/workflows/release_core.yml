@@ -56,7 +56,6 @@ jobs:
           pattern: "* Release"
 
       - name: Rename
-        shell: bash
         run: |
           mkdir -p release
 
@@ -81,7 +80,10 @@ jobs:
           LABEL: ${{ inputs.label-name }}
         run: |
           version=$(git describe --tags --exclude x-\* ${COMMIT})
+          tag=$(git describe --tags --abbrev=0 --exclude x-\* ${COMMIT})
+          distance=$(git rev-list "${tag}..${COMMIT}" --count)
           commit=$(git log --format=%s -n 1 ${COMMIT})
+          timestamp=$(date -uIseconds)
           if [ ${BRANCH} != 'trunk' ]; then
                base=$(git merge-base origin/trunk ${COMMIT})
                basetext=$(git log --format=%s -n 1 ${base})
@@ -109,6 +111,24 @@ jobs:
               fi
               echo 'EOF'
           } >> $GITHUB_OUTPUT
+
+          checksums=$(cd release && sha256sum * | jq -Rn 'reduce (inputs | capture("(?<hash>\\w+)\\s+(?<file>.*)")) as $item ({}; .[$item.file] = $item.hash)')
+          sizes=$(cd release && du -k * | jq -Rn 'reduce (inputs | capture("(?<size>\\d+)\\s+(?<file>.*)")) as $item ({}; .[$item.file] = $item.size)')
+          assets=$(jq -n --argjson c "${checksums}" --argjson s "${sizes}" '$s | with_entries(.key as $f | .value = {size: .value, sha256: $c[$f]})')
+
+          jq -n '{ commit: $ARGS.named }'      \
+            --arg version  "${version}"        \
+            --arg distance "${distance}"       \
+            --arg message  "${commit}"         \
+            --arg commit   "${COMMIT}"         \
+            --arg branch   "${BRANCH}"         \
+            --arg parent   "${tag}"            \
+          | jq '. + { workflow: $ARGS.named }' \
+            --arg     run       "${RUN}"       \
+            --arg     timestamp "${timestamp}" \
+          | jq '. + { assets: $assets }'       \
+            --argjson assets    "${assets}"    \
+          > release/_release.json
 
       - name: Upload
         uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
