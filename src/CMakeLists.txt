@@ -325,7 +325,7 @@ option(BUILD_FLATPAK "Enable Flatpak-specific build options" OFF)
 # Update gitinfo.h
 
 add_custom_target( revision_check ALL
-	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/tools/updaterevision/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
+	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/cmake/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
 	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 )
 
@@ -1074,7 +1074,6 @@ set (PCH_SOURCES
 	common/cutscenes/screenjob.cpp
 	common/utility/engineerrors.cpp
 
-	common/utility/gitinfo.cpp
 	common/utility/m_alloc.cpp
 	common/utility/utf8.cpp
 	common/utility/palette.cpp

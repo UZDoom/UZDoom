@@ -22,27 +22,43 @@ function(query_repo_info)
 		OUTPUT_QUIET
 	)
 
+	set(Description "unknown")
 	set(Tag "unknown")
-	string(TIMESTAMP Timestamp "%Y-%m-%d %H:%M:%S %z")
+	set(Distance -1)
 	set(Hash "0000000")
+	string(TIMESTAMP Timestamp "%Y-%m-%d %H:%M:%S %z")
 
 	if(DEFINED ENV{GIT_DESCRIBE})
 		# from env
-		set(Tag "$ENV{GIT_DESCRIBE}")
+		set(Description "$ENV{GIT_DESCRIBE}")
 
 		if (is_git EQUAL "0")
 			message(STATUS "Version tag overridden by GIT_DESCRIBE env var")
 		endif()
 
 		# Extract hash from "...-gabcdef"
-		string(REGEX MATCH "-g([0-9a-fA-F]+)" match_result "${Tag}")
+		string(REGEX MATCH "-g([0-9a-fA-F]+)" match_result "${Description}")
 		if(match_result)
 			set(Hash "${CMAKE_MATCH_1}")
 		endif()
 	elseif(is_git EQUAL "0")
 		# from git
 		execute_process(
-			COMMAND git describe --tags --dirty=-m --exclude x-*
+			COMMAND git describe --tags --dirty=-m --exclude x-* --always
+			RESULT_VARIABLE Error
+			OUTPUT_VARIABLE Temp
+			ERROR_QUIET
+			OUTPUT_STRIP_TRAILING_WHITESPACE
+		)
+
+		if(NOT "${Error}" STREQUAL "0")
+			message(STATUS "No git tags found! Using fallback '${Description}'")
+		else()
+			set(Description "${Temp}")
+		endif()
+
+		execute_process(
+			COMMAND git describe --tags --abbrev=0 --exclude x-* --always
 			RESULT_VARIABLE Error
 			OUTPUT_VARIABLE Temp
 			ERROR_QUIET
@@ -53,10 +69,20 @@ function(query_repo_info)
 			message(STATUS "No git tags found! Using fallback '${Tag}'")
 		else()
 			set(Tag "${Temp}")
+			execute_process(
+				COMMAND git rev-list "${Tag}..HEAD" --count
+				RESULT_VARIABLE Error
+				OUTPUT_VARIABLE Temp
+				ERROR_QUIET
+				OUTPUT_STRIP_TRAILING_WHITESPACE
+			)
+			if("${Error}" STREQUAL "0")
+				set(Distance "${Temp}")
+			endif()
 		endif()
 
 		execute_process(
-			COMMAND git log -1 "--format=%ai;%H"
+			COMMAND git log -1 "--format=%aI;%H"
 			RESULT_VARIABLE Error
 			OUTPUT_VARIABLE Temp
 			ERROR_QUIET
@@ -75,9 +101,11 @@ function(query_repo_info)
 		message(STATUS "Not a git repo! Set version tag by setting GIT_DESCRIBE env var")
 	endif()
 
+	ret_var(Description)
 	ret_var(Tag)
-	ret_var(Timestamp)
+	ret_var(Distance)
 	ret_var(Hash)
+	ret_var(Timestamp)
 endfunction()
 
 function(main)
