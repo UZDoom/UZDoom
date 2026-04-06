@@ -690,7 +690,7 @@ void DStatusBarCore::DrawRotated(FGameTexture* tex, double x, double y, int flag
 
 void DStatusBarCore::DrawString(FFont* font, const FString& cstring, double x, double y, int flags, double Alpha, int translation, int spacing, EMonospacing monospacing, int shadowX, int shadowY, double scaleX, double scaleY, FTranslationID pt, int style)
 {
-	bool monospaced = monospacing != EMonospacing::Off && !font->IsValidDynamicFont();
+	bool monospaced = monospacing != EMonospacing::Off;
 	double dx = 0;
 	int spacingparm = monospaced ? -spacing : spacing;
 
@@ -740,7 +740,7 @@ void DStatusBarCore::DrawString(FFont* font, const FString& cstring, double x, d
 		Scale = { 1.,1. };
 	}
 
-	if (font->IsValidDynamicFont())
+	if (font->IsValidDynamicFont() || font->CanBeSubstitutedWithDynamic())
 	{
 		double rx, ry, rw, rh;
 		rx = x + drawOffset.X;

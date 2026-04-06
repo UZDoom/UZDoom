@@ -164,6 +164,10 @@ FGameTexture * BuildTextTexture(FFont *font, const char *string, int textcolor)
 //
 //==========================================================================
 
+// fwd declare
+void DrawDynamicFontText(F2DDrawer *drawer, FFont *originalFont, FFont *substitutedFont, int normalcolor, double x,
+                         double y, std::u32string utf32String, DrawParms &parms);
+
 void DrawChar(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double y, int character, int tag_first, ...)
 {
 	if (font == NULL)
@@ -175,7 +179,49 @@ void DrawChar(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double 
 	FGameTexture* pic;
 	int dummy;
 
-	if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
+	if (FFont *const substitutedFont = FFont::GetDynamicSubstitutionForStaticFont(font))
+	{
+		pic = substitutedFont->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		Va_List   tags;
+		va_start(tags.list, tag_first);
+		bool res = ParseDrawTextureTags(drawer, pic, x, y, tag_first, tags, &parms, DrawTexture_Normal);
+		va_end(tags.list);
+		if (!res)
+		{
+			return;
+		}
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = substitutedFont->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, substitutedFont, normalcolor, x, y, u32str, parms);
+	}
+	else if (font->IsValidDynamicFont())
+	{
+		pic = font->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		Va_List   tags;
+		va_start(tags.list, tag_first);
+		bool res = ParseDrawTextureTags(drawer, pic, x, y, tag_first, tags, &parms, DrawTexture_Normal);
+		va_end(tags.list);
+		if (!res)
+		{
+			return;
+		}
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = font->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, font, normalcolor, x, y, u32str, parms);
+	}
+	else if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
 	{
 		DrawParms parms;
 		Va_List tags;
@@ -205,7 +251,42 @@ void DrawChar(F2DDrawer *drawer,  FFont *font, int normalcolor, double x, double
 	FGameTexture *pic;
 	int dummy;
 
-	if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
+	if (FFont *const substitutedFont = FFont::GetDynamicSubstitutionForStaticFont(font))
+	{
+		pic = substitutedFont->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		Va_List   tags;
+		uint32_t  tag = ListGetInt(args);
+		bool      res = ParseDrawTextureTags(drawer, pic, x, y, tag, args, &parms, DrawTexture_Normal);
+		if (!res)
+			return;
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = substitutedFont->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, substitutedFont, normalcolor, x, y, u32str, parms);
+	}
+	else if (font->IsValidDynamicFont())
+	{
+		pic = font->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		uint32_t  tag = ListGetInt(args);
+		bool      res = ParseDrawTextureTags(drawer, pic, x, y, tag, args, &parms, DrawTexture_Normal);
+		if (!res)
+			return;
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = font->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, font, normalcolor, x, y, u32str, parms);
+	}
+	else if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
 	{
 		DrawParms parms;
 		uint32_t tag = ListGetInt(args);
@@ -428,7 +509,7 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 			const double             cx           = (cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX));
 			const double             heightAdjust = (1.0 / s.Font->GetInvSupersampleScale());
 			double             cy =
-				(cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) + g.yOffset - g.info.bearingY));
+				(cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) - g.yOffset - g.info.bearingY));
 
 			//classic doom fonts don't really have descenders or ascenders. As a result, let's nudge the
 			//vertical coords up by the descender to better match the intent of how they were placed.
@@ -439,6 +520,10 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 			const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
 			const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
 			SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
+
+			//const double charHeightScale = (double)g.info.height / (double)substitutedFont->GetHeight();
+			//const double charWidthScale = g.info.width / (double)originalFont->GetWidth();
+
 			atlasFragmentDrawParms.style = trexTextRenderStyle;
 			atlasFragmentDrawParms.destwidth *= (shrinkScale*scaleAdjust);
 			atlasFragmentDrawParms.destheight *= (shrinkScale*scaleAdjust);
@@ -570,62 +655,45 @@ void DrawStaticFontText(F2DDrawer *drawer, FFont *font, int normalcolor, double 
 }
 
 template<class chartype>
+std::u32string ConvertStringToUTF32(const chartype *string)
+{
+	// convert string to utf32 for straightforward and debuggable string parsing.
+	std::u32string utf32String;
+
+	if constexpr (std::is_same_v<chartype, uint8_t> || std::is_same_v<chartype, char> ||
+	              std::is_same_v<chartype, char8_t>)
+	{
+		utf32String.resize(
+			simdutf::utf32_length_from_utf8((const char *)string, std::char_traits<chartype>::length(string)), '\0');
+		simdutf::convert_utf8_to_utf32((const char *)string, std::char_traits<chartype>::length(string),
+		                               utf32String.data());
+	}
+	else if constexpr (std::is_same_v<chartype, char16_t>)
+	{
+		utf32String.resize(
+			simdutf::utf32_length_from_utf16((const char16_t *)string, std::char_traits<chartype>::length(string)),
+			'\0');
+		simdutf::convert_utf16_to_utf32(string, std::char_traits<chartype>::length(string), utf32String);
+	}
+	else if constexpr (std::is_same_v<chartype, char32_t>)
+	{
+		utf32String = string;
+	}
+	assert(simdutf::validate_utf32(utf32String.c_str(), utf32String.length()));
+	return utf32String;
+}
+
+template<class chartype>
 void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string, DrawParms &parms)
 {
-	extern DObject* menuDelegate;
-	int 		w;
-	const chartype *ch;
-	int 		c;
-	double 		cx;
-	double 		cy;
-	int			boldcolor;
-	FTranslationID			trans = INVALID_TRANSLATION;
-	int			kerning;
-	FGameTexture *pic;
-
-	double scalex = parms.scalex * parms.patchscalex;
-	double scaley = parms.scaley * parms.patchscaley;
-
-	FString fontName = font->GetName().GetChars();
-	FFont *originalFont = font;
-	FFont *substitutedFont = font;
-	
-	//TODO: if these are slider symbols, do not do the substitution.
-	//TODO: stronger safety needed here; that static_cast might be an attack vector.
-	if (font != SymbolsFont)
+	if (font->IsValidDynamicFont())
 	{
-		PClass* pCls = menuDelegate->GetClass();
-		VMFunction* func = PClass::FindFunction(pCls->TypeName, "PickFont");
-		void* ret = CallVM<void*>(func, menuDelegate, (void*)font);
-		substitutedFont = static_cast<FFont*>(ret);
+		auto utf32String = ConvertStringToUTF32(string);
+		DrawDynamicFontText(drawer, font, font, normalcolor, x, y, utf32String, parms);
 	}
-	
-	if (substitutedFont && substitutedFont->IsValidDynamicFont())
+	else if (FFont* const substitutedFont = FFont::GetDynamicSubstitutionForStaticFont(font))
 	{
-		// convert string to utf32 for straightforward and debuggable string parsing.
-		std::u32string                      utf32String;
-
-		if constexpr (std::is_same_v<chartype, uint8_t> || std::is_same_v<chartype, char> ||
-		              std::is_same_v<chartype, char8_t>)
-		{
-			utf32String.resize(
-				simdutf::utf32_length_from_utf8((const char *)string, std::char_traits<chartype>::length(string)),
-				'\0');
-			simdutf::convert_utf8_to_utf32((const char *)string, std::char_traits<chartype>::length(string),
-			                               utf32String.data());
-		}
-		else if constexpr (std::is_same_v<chartype, char16_t>)
-		{
-			utf32String.resize(
-				simdutf::utf32_length_from_utf16((const char16_t *)string, std::char_traits<chartype>::length(string)),
-				'\0');
-			simdutf::convert_utf16_to_utf32(string, std::char_traits<chartype>::length(string), utf32String);
-		}
-		else if constexpr (std::is_same_v<chartype, char32_t>)
-		{
-			utf32String = string;
-		}
-		assert(simdutf::validate_utf32(utf32String.c_str(), utf32String.length()));
+		auto utf32String = ConvertStringToUTF32(string);
 		DrawDynamicFontText(drawer, font, substitutedFont, normalcolor, x, y, utf32String, parms);
 	}
 	else

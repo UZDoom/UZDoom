@@ -769,6 +769,8 @@ xx(ModReplayerOptions)
 xx(VideoOptions)
 xx(JoystickConfigMenu)
 xx(VideoModeMenu)
+xx(AdvancedFontMenu)
+xx(AdvancedFontMenuRemapChoiceMenu)
 
 // end sequences
 xx(Inter_Chess)

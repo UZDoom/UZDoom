@@ -2192,21 +2192,34 @@ OptionMenu FontOptions protected
 	Option "$FONTMNU_DESCRIPTION_FONT_CYR",				"fontchoice_descriptionCYR", "DynamicFontOptionsCYR"
 	Tooltip "$FONTMNU_DESCRIPTION_FONT_TOOLTIP"
 	StaticText ""
-	StaticText "$FONTMNU_OVERRIDES"
-	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE",			"fontoverride_NewSmallFont", "DynamicFontOptions"
-	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
-	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE_JP",		"fontoverride_NewSmallFontJP", "DynamicFontOptionsJP"
-	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
-	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE_KO",		"fontoverride_NewSmallFontKR", "DynamicFontOptionsKO"
-	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
-	Option "$FONTMNU_NEWSMALLFONT_OVERRIDE_CYR",		"fontoverride_NewSmallFontCYR", "DynamicFontOptionsCYR"
-	Tooltip "$FONTMNU_NEWSMALLFONT_OVERRIDE_TOOLTIP"
+	Option "$FONTMNU_SMALL_TEXT_FONT_SC",				"fontchoice_smalltextSC", "DynamicFontOptionsSC"
+	Tooltip "$FONTMNU_SMALL_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_BIG_TEXT_FONT_SC",				"fontchoice_bigtextSC", "DynamicFontOptionsSC"
+	Tooltip "$FONTMNU_BIG_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_TITLE_FONT_SC",				"fontchoice_titleSC", "DynamicFontOptionsSC"
+	Tooltip "$FONTMNU_TITLE_FONT_TOOLTIP"
+	Option "$FONTMNU_DESCRIPTION_FONT_SC",				"fontchoice_descriptionSC", "DynamicFontOptionsSC"
+	Tooltip "$FONTMNU_DESCRIPTION_FONT_TOOLTIP"
+	StaticText ""
+	Option "$FONTMNU_SMALL_TEXT_FONT_TH",				"fontchoice_smalltextTH", "DynamicFontOptionsTH"
+	Tooltip "$FONTMNU_SMALL_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_BIG_TEXT_FONT_TH",				"fontchoice_bigtextTH", "DynamicFontOptionsTH"
+	Tooltip "$FONTMNU_BIG_TEXT_FONT_TOOLTIP"
+	Option "$FONTMNU_TITLE_FONT_TH",				"fontchoice_titleTH", "DynamicFontOptionsTH"
+	Tooltip "$FONTMNU_TITLE_FONT_TOOLTIP"
+	Option "$FONTMNU_DESCRIPTION_FONT_TH",				"fontchoice_descriptionTH", "DynamicFontOptionsTH"
+	Tooltip "$FONTMNU_DESCRIPTION_FONT_TOOLTIP"
+	StaticText ""
+	Submenu "$FONTMNU_ADVANCEDMENU",	 "AdvancedFontOptions"
+	Tooltip "Directly remap original fonts to counterparts. Used for mod compatibility. Options take effect regardless of language."
 	StaticText ""
 	StaticText "$FONTMNU_FALLBACKS"
 	Option "$FONTMNU_FALLBACK",			"fontoverride_Fallback", "DynamicFontFallbackOptions"
 	Option "$FONTMNU_FALLBACK_JP",			"fontoverride_FallbackJP", "DynamicFontFallbackOptionsJP"
 	Option "$FONTMNU_FALLBACK_KO",			"fontoverride_FallbackKR", "DynamicFontFallbackOptionsKR"
 	Option "$FONTMNU_FALLBACK_CYR",			"fontoverride_FallbackCYR", "DynamicFontFallbackOptionsCYR"
+	Option "$FONTMNU_FALLBACK_SC",			"fontoverride_FallbackSC", "DynamicFontFallbackOptionsSC"
+	Option "$FONTMNU_FALLBACK_TH",			"fontoverride_FallbackTH", "DynamicFontFallbackOptionsTH"
 }
 
 OptionString DynamicFontOptions
@@ -2240,6 +2253,16 @@ OptionString DynamicFontFallbackOptionsCYR
 	"HACK-BOL", "Hack Bold"
 }
 
+OptionString DynamicFontFallbackOptionsSC
+{
+	"ZCOOLQin", "ZCOOL QingKe HaungYou"
+}
+
+OptionString DynamicFontFallbackOptionsTH
+{
+	"CHAKRA_P", "Chakra Petch SemiBold"
+}
+
 //specific language fallbacks are defined here since you 100% need a font that actually has the required glyphs.
 OptionString DynamicFontOptionsJP
 {
@@ -2260,6 +2283,18 @@ OptionString DynamicFontOptionsCYR
 	"HACK-BOL", "Hack Bold"
 }
 
+OptionString DynamicFontOptionsSC
+{
+	"FO_DEFAULT", "Don't override"
+	"ZCOOLQin", "ZCOOL QingKe HaungYou"
+}
+
+OptionString DynamicFontOptionsTH
+{
+	"FO_DEFAULT", "Don't override"
+	"CHAKRA_P", "Chakra Petch SemiBold"
+}
+
 OptionString ConsoleFontOptions
 {
 	"FO_DEFAULT", "Don't override"
@@ -2272,6 +2307,22 @@ OptionValue  FontSuperSampleOptions
 	2, "2x"
 	3, "3x"
 	4, "4x"
+}
+
+OptionMenu AdvancedFontOptions protected
+{
+	Title "$HUDMNU_FONTOPTIONS"
+	//filled in dynamically
+	Class "AdvancedFontMenu"
+}
+
+OptionMenu AdvancedFontOptionsRemapChoiceMenu protected
+{
+	Title "REMAP FONT TO..."
+	//dynamically lists out all the fonts that could be used as a remap,
+	//and runs a command to set them
+	//this command updates the global remappings, and then sets a cvar that saves them as a list
+	Class "AdvancedFontMenuRemapChoiceMenu"
 }
 
 //-------------------------------------------------------------------------------------------

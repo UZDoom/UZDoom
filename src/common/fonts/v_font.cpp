@@ -951,6 +951,8 @@ void V_InitFonts()
 	SymbolsFont->FontName = "SymbolsFont";
 
 	V_GetFont("IndexFont", "INDEXFON");	// detect potential replacements for this one.
+
+	FFont::UpdateAdvFontMappingTables();
 }
 
 void V_LoadTranslations()

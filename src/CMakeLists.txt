@@ -1125,6 +1125,7 @@ set (PCH_SOURCES
 	common/menu/messagebox.cpp
 	common/menu/optionmenu.cpp
 	common/menu/resolutionmenu.cpp
+	common/menu/advancedfontmenu.cpp
 	common/menu/menudef.cpp
 	common/menu/savegamemanager.cpp
 	common/statusbar/base_sbar.cpp

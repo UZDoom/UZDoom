@@ -60,9 +60,11 @@ void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 
 		if (cursor)
 		{
-			std::u32string subStr   = Text.substr(StartPos);
+			std::u32string subStr   = Text.substr(CursorPosCells - StartPosCells);
 			auto    strWidth = ourConsoleFont->StringWidthUTF32(subStr);
-			DrawText(twod, ourConsoleFont, CR_YELLOW, x + strWidth + ourConsoleFont->GetCharWidth(0x1c),
+			auto           fullStrWidth      = ourConsoleFont->StringWidthUTF32(Text);
+			auto           remainingStrWidth = fullStrWidth - strWidth;
+			DrawText(twod, ourConsoleFont, CR_YELLOW, x + remainingStrWidth + ourConsoleFont->GetCharWidth(0x1c),
 			         y, "█", DTA_VirtualWidth, twod->GetWidth() / scale, DTA_VirtualHeight,
 			         twod->GetHeight() / scale, DTA_KeepRatio, true, TAG_DONE);
 		}

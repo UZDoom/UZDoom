@@ -31,7 +31,6 @@
 #include "palettecontainer.h"
 #include "Trex/Atlas.hpp"
 #include "Trex/TextShaper.hpp"
-#include <optional>
 
 class FGameTexture;
 struct FRemapTable;
@@ -103,7 +102,9 @@ public:
 		Dynamic
 	};
 
-	FFont (const char *fontname, const char *nametemplate, const char *filetemplate, int first, int count, int base, int fdlump, int spacewidth=-1, bool notranslate = false, bool iwadonly = false, bool doomtemplate = false, GlyphSet *baseGlpyphs = nullptr);
+	FFont(const char *fontname, const char *nametemplate, const char *filetemplate, int first, int count, int base,
+	      int fdlump, int spacewidth = -1, bool notranslate = false, bool iwadonly = false, bool doomtemplate = false,
+	      GlyphSet *baseGlpyphs = nullptr);
 	FFont(int lump, FName nm = NAME_None);
 	explicit FFont(const char *fontname, Trex::Atlas* fontAtlas, const int supersampleScale);
 	virtual ~FFont ();
@@ -120,16 +121,31 @@ public:
 	int GetMaxAscender(const FString &text) const { return GetMaxAscender((uint8_t*)text.GetChars()); }
 	virtual void LoadTranslations();
 	FName GetName() const { return FontName; }
+	[[nodiscard]] bool CanBeSubstitutedWithDynamic() const noexcept;
 
 	static FFont *FindFont(FName fontname);
 
-	//standard font choices
+	static void UpdateAdvFontMappingTables();
+	static FFont *GetDynamicSubstitutionForStaticFont(FFont *const fontToSub);
+	static void   MakeFontChoiceCVARs();
+
+	// standard font choices
 	//TODO: this seems not super extensible - what if mods want to add semantic font choices?
 	static FFont *GetSmallTextFont(FFont* fallbackIfNoUserChoice);
 	static FFont *GetTitleFont(FFont* fallbackIfNoUserChoice);
 	static FFont *GetDescriptionFont(FFont* fallbackIfNoUserChoice);
 	static FFont *GetConsoleFont(FFont* fallbackIfNoUserChoice);
 	static FFont *GetBigTextFont(FFont* fallbackIfNoUserChoice);
+
+	static const FFont* GetFontListHead()
+	{
+		return FirstFont;
+	}
+
+	const FFont* GetNextFont() const
+	{
+		return Next;
+	}
 
 	// Return width of string in pixels (unscaled)
 	int StringWidth (const uint8_t *str, int spacing = 0) const;
@@ -216,6 +232,11 @@ public:
 		Lump = other.Lump;
 	}
 
+	static inline std::vector<const FFont *> &GetRemappableFonts()
+	{
+		return RemappableFonts;
+	}
+
 protected:
 
 	void FixXMoves();
@@ -260,6 +281,8 @@ protected:
 
 	friend void V_ClearFonts();
 	friend void V_InitFonts();
+
+	static inline std::vector<const FFont *>     RemappableFonts;
 };
 
 void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, const FFont *font, int normalcolor,

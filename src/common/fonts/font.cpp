@@ -53,6 +53,9 @@
 #include "c_cvars.h"
 #include "simdutf.h"
 #include <string>
+#include "menu.h"
+#include "vm.h"
+#include "c_dispatch.h"
 
 TArray<FBitmap> sheetBitmaps;
 
@@ -60,6 +63,8 @@ CVAR(String, fontoverride_Fallback, "HACK-BOL", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackJP, "IBMPLEXJ", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackKR, "IBMPLEXK", CVAR_ARCHIVE);
 CVAR(String, fontoverride_FallbackCYR, "HACK-BOL", CVAR_ARCHIVE);
+CVAR(String, fontoverride_FallbackSC, "ZCOOLQin", CVAR_ARCHIVE);
+CVAR(String, fontoverride_FallbackTH, "CHAKRA_P", CVAR_ARCHIVE);
 
 void SetFontChoice_SmallText(const char *newFont);
 CUSTOM_CVAR(String, fontchoice_smalltext, "FO_DEFAULT", CVAR_ARCHIVE)
@@ -106,30 +111,50 @@ CVAR(String, fontchoice_bigtextCYR, "FO_DEFAULT", CVAR_ARCHIVE);
 CVAR(String, fontchoice_titleCYR, "FO_DEFAULT", CVAR_ARCHIVE);
 CVAR(String, fontchoice_descriptionCYR, "FO_DEFAULT", CVAR_ARCHIVE);
 
-//actually overriding the font directly will become a last resort option
-//if you are having mod compatibility issues.
-void SetNewSmallFontOverride(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFont, "FO_DEFAULT", CVAR_ARCHIVE)
+CVAR(String, fontchoice_smalltextSC, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextSC, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleSC, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionSC, "FO_DEFAULT", CVAR_ARCHIVE);
+
+CVAR(String, fontchoice_smalltextTH, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_bigtextTH, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_titleTH, "FO_DEFAULT", CVAR_ARCHIVE);
+CVAR(String, fontchoice_descriptionTH, "FO_DEFAULT", CVAR_ARCHIVE);
+
+void FindOrCreateFontChoiceCVAR(FString varName)
 {
-	SetNewSmallFontOverride(self);
+	FBaseCVar *var            = nullptr;
+	var                       = FindCVar(varName.GetChars(), nullptr);
+	if (var == nullptr)
+	{
+		var = new FStringCVar(varName.GetChars(), nullptr, CVAR_AUTO | CVAR_ARCHIVE | cvar_defflags);
+		var->CmdSet("FO-DEFAULT");
+	}
 }
 
-void SetNewSmallFontOverrideJP(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFontJP, "FO_DEFAULT", CVAR_ARCHIVE)
+void FFont::MakeFontChoiceCVARs()
 {
-	SetNewSmallFontOverrideJP(self);
-}
+	FFont::UpdateAdvFontMappingTables();
+	auto&langMap = GStrings.GetLangMap();
+	for (const auto& [l, id] : langMap)
+	{
+		if (id.name.IsValidName())
+		{
+			FString      langNameString = FString(id.name.GetChars());
+			FindOrCreateFontChoiceCVAR("fontfallback_" + langNameString);	
+			FindOrCreateFontChoiceCVAR("fontchoice_smalltext_" + langNameString);	
+			FindOrCreateFontChoiceCVAR("fontchoice_bigtext_" + langNameString);	
+			FindOrCreateFontChoiceCVAR("fontchoice_title_" + langNameString);	
+			FindOrCreateFontChoiceCVAR("fontchoice_description_" + langNameString);
 
-void SetNewSmallFontOverrideKR(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFontKR, "FO_DEFAULT", CVAR_ARCHIVE)
-{
-	SetNewSmallFontOverrideKR(self);
-}
-
-void SetNewSmallFontOverrideCYR(const char *newFont);
-CUSTOM_CVAR(String, fontoverride_NewSmallFontCYR, "FO_DEFAULT", CVAR_ARCHIVE)
-{
-	SetNewSmallFontOverrideCYR(self);
+			auto staticFonts = FFont::GetRemappableFonts();
+			for (auto f : staticFonts)
+			{
+				FString fontName = f->GetName().GetChars();
+				FindOrCreateFontChoiceCVAR("fontchoice_" + fontName + "_" + langNameString);
+			}
+		}
+	}
 }
 
 //==========================================================================
@@ -663,6 +688,15 @@ FFont *FindDynamicFallbackFontForLanguage(const char *lang)
 	{
 		return V_GetFont(*fontoverride_FallbackCYR);
 	}
+	else if (language.CompareNoCase("zh-Hans") == 0)
+	{
+		return V_GetFont(*fontoverride_FallbackSC);
+	}
+	else if (language.CompareNoCase("th") == 0)
+	{
+		return V_GetFont(*fontoverride_FallbackTH);
+	}
+
 	return V_GetFont(*fontoverride_Fallback);
 }
 
@@ -688,89 +722,100 @@ void SetFontChoice_Console(const char *newFont)
 
 void SetFontChoice_BigText(const char *newFont)
 {
-	//
+	//main menu needs to be rebuilt if this changes
+
 }
 
-void SetNewSmallFontOverride(const char* newFont)
+void FFont::UpdateAdvFontMappingTables()
 {
-	if (strcmp(newFont, "FO_DEFAULT") == 0)
+	RemappableFonts.clear();
+	for (const FFont *currentFont = FFont::GetFontListHead(); currentFont; currentFont = currentFont->GetNextFont())
 	{
-		NewSmallFont = V_GetFont("NewSmallFont");
-	}
-	else
-	{
-		NewSmallFont = V_GetFont(newFont);
-		if (!NewSmallFont)
+		if (currentFont->CanBeSubstitutedWithDynamic())
 		{
-			NewSmallFont = FindDynamicFallbackFontForLanguage("en");
+			RemappableFonts.push_back(currentFont);
 		}
 	}
 }
 
-void SetNewSmallFontOverrideJP(const char *newFont)
+FFont *FFont::GetDynamicSubstitutionForStaticFont(FFont *const fontToSub)
 {
-	if (strcmp(newFont, "FO_DEFAULT") == 0)
+	if (fontToSub != SymbolsFont)
 	{
-		NewSmallFont = V_GetFont("NewSmallFont");
-	}
-	else
-	{
-		NewSmallFont = V_GetFont(newFont);
-		if (!NewSmallFont)
-		{
-			NewSmallFont = FindDynamicFallbackFontForLanguage("jp");
-		}
-	}	
-}
+		FFont *foundDynamicRemap = nullptr;
+		const FName subbedFontName = fontToSub->GetName();
+		const FString subbedFontNameString = subbedFontName.GetChars();
 
-void SetNewSmallFontOverrideKR(const char *newFont)
-{
-	if (strcmp(newFont, "FO_DEFAULT") == 0)
-	{
-		NewSmallFont = V_GetFont("NewSmallFont");
-	}
-	else
-	{
-		NewSmallFont = V_GetFont(newFont);
-		if (!NewSmallFont)
+		const FString langIDString = GStrings.GetActiveLangID().name.GetChars();
+		const FString cvarName     = "fontchoice_" + subbedFontNameString + "_" + langIDString;
+		if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 		{
-			NewSmallFont = FindDynamicFallbackFontForLanguage("ko");
+			foundDynamicRemap = V_GetFont(*cv);
 		}
-	}
-}
-
-void SetNewSmallFontOverrideCYR(const char *newFont)
-{
-	if (strcmp(newFont, "FO_DEFAULT") == 0)
-	{
-		NewSmallFont = V_GetFont("NewSmallFont");
-	}
-	else
-	{
-		NewSmallFont = V_GetFont(newFont);
-		if (!NewSmallFont)
+		
+		if (foundDynamicRemap)
 		{
-			NewSmallFont = FindDynamicFallbackFontForLanguage("ru");
+			return foundDynamicRemap;
+		}
+		else
+		{
+			//call MenuDelegate.PickFont() in script
+			//TODO: safety?
+			const PClass     *const pCls = menuDelegate->GetClass();
+			VMFunction *const func = PClass::FindFunction(pCls->TypeName, "PickFont");
+			void       *const ret  = CallVM<void *>(func, menuDelegate, (void *)fontToSub);
+			FFont* foundFont = static_cast<FFont *>(ret);
+			if (foundFont->IsValidDynamicFont())
+			{
+				return foundFont;
+			}
+			else
+			{
+				return nullptr;
+			}
 		}
 	}
+	return nullptr;
 }
 
-FFont *FFont::GetSmallTextFont(FFont* fallbackIfNoUserChoice)
+FFont *FFont::GetSmallTextFont(FFont* const fallbackIfNoUserChoice)
 {
-	FFont *userFont = V_GetFont(*fontchoice_smalltext);
-	FString lang     = GStrings.GetActiveLanguage();
+	FFont  *userFont = nullptr;
+	const FString lang     = GStrings.GetActiveLanguage();
 
-	if (lang.CompareNoCase("jp") == 0)
+	const FString langIDString = GStrings.GetActiveLangID().name.GetChars();
+	const FString cvarName     = "fontchoice_smalltext_" + langIDString;
+	if (FStringCVar* cv = dynamic_cast<FStringCVar*>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*fontchoice_smalltextJP);
+		userFont = V_GetFont(*cv);
 	}
-	else if (lang.CompareNoCase("ko") == 0)
+
+	if (!userFont)
 	{
-		userFont = V_GetFont(*fontchoice_smalltextKO);
-	}
-	else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
-	{
-		userFont = V_GetFont(*fontchoice_smalltextCYR);
+		if (lang.CompareNoCase("jp") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_smalltextJP);
+		}
+		else if (lang.CompareNoCase("ko") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_smalltextKO);
+		}
+		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_smalltextCYR);
+		}
+		else if (lang.CompareNoCase("zh-Hans") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_smalltextSC);
+		}
+		else if (lang.CompareNoCase("th") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_smalltextTH);
+		}
+		else
+		{
+			userFont = V_GetFont(*fontchoice_smalltext);
+		}
 	}
 
 	if (userFont)
@@ -780,22 +825,44 @@ FFont *FFont::GetSmallTextFont(FFont* fallbackIfNoUserChoice)
 	return fallbackIfNoUserChoice;
 }
 
-FFont *FFont::GetTitleFont(FFont *fallbackIfNoUserChoice)
+FFont *FFont::GetTitleFont(FFont *const fallbackIfNoUserChoice)
 {
-	FFont *userFont = V_GetFont(*fontchoice_title);
-	FString lang = GStrings.GetActiveLanguage();
+	FFont *userFont = nullptr;
+	const FString lang = GStrings.GetActiveLanguage();
 
-	if (lang.CompareNoCase("jp") == 0)
+	const FString langIDString = GStrings.GetActiveLangID().name.GetChars();
+	const FString cvarName     = "fontchoice_title_" + langIDString;
+	if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*fontchoice_titleJP);
+		userFont = V_GetFont(*cv);
 	}
-	else if (lang.CompareNoCase("ko") == 0)
+
+	if (!userFont)
 	{
-		userFont = V_GetFont(*fontchoice_titleKO);
-	}
-	else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
-	{
-		userFont = V_GetFont(*fontchoice_smalltextCYR);
+		if (lang.CompareNoCase("jp") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_titleJP);
+		}
+		else if (lang.CompareNoCase("ko") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_titleKO);
+		}
+		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_titleCYR);
+		}
+		else if (lang.CompareNoCase("zh-Hans") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_titleSC);
+		}
+		else if (lang.CompareNoCase("th") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_titleTH);
+		}
+		else
+		{
+			userFont = V_GetFont(*fontchoice_title);
+		}
 	}
 
 	if (userFont)
@@ -805,22 +872,44 @@ FFont *FFont::GetTitleFont(FFont *fallbackIfNoUserChoice)
 	return fallbackIfNoUserChoice;
 }
 
-FFont *FFont::GetDescriptionFont(FFont *fallbackIfNoUserChoice)
+FFont *FFont::GetDescriptionFont(FFont *const fallbackIfNoUserChoice)
 {
-	FFont *userFont = V_GetFont(*fontchoice_description);
-	FString lang     = GStrings.GetActiveLanguage();
+	FFont *userFont = nullptr;
+	const FString lang     = GStrings.GetActiveLanguage();
 
-	if (lang.CompareNoCase("jp") == 0)
+	const FString langIDString = GStrings.GetActiveLangID().name.GetChars();
+	const FString cvarName     = "fontchoice_description_" + langIDString;
+	if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*fontchoice_descriptionJP);
+		userFont = V_GetFont(*cv);
 	}
-	else if (lang.CompareNoCase("ko") == 0)
+
+	if (!userFont)
 	{
-		userFont = V_GetFont(*fontchoice_descriptionKO);
-	}
-	else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
-	{
-		userFont = V_GetFont(*fontchoice_smalltextCYR);
+		if (lang.CompareNoCase("jp") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_descriptionJP);
+		}
+		else if (lang.CompareNoCase("ko") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_descriptionKO);
+		}
+		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_descriptionCYR);
+		}
+		else if (lang.CompareNoCase("zh-Hans") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_descriptionSC);
+		}
+		else if (lang.CompareNoCase("th") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_descriptionTH);
+		}
+		else
+		{
+			userFont = V_GetFont(*fontchoice_description);
+		}
 	}
 
 	if (userFont)
@@ -830,9 +919,9 @@ FFont *FFont::GetDescriptionFont(FFont *fallbackIfNoUserChoice)
 	return fallbackIfNoUserChoice;
 }
 
-FFont *FFont::GetConsoleFont(FFont *fallbackIfNoUserChoice)
+FFont *FFont::GetConsoleFont(FFont *const fallbackIfNoUserChoice)
 {
-	FFont *userFont = V_GetFont(*fontchoice_console);
+	FFont *const userFont = V_GetFont(*fontchoice_console);
 	if (userFont)
 	{
 		return userFont;
@@ -840,23 +929,46 @@ FFont *FFont::GetConsoleFont(FFont *fallbackIfNoUserChoice)
 	return fallbackIfNoUserChoice;
 }
 
-FFont *FFont::GetBigTextFont(FFont *fallbackIfNoUserChoice)
+FFont *FFont::GetBigTextFont(FFont *const fallbackIfNoUserChoice)
 {
-	FFont *userFont = V_GetFont(*fontchoice_bigtext);
-	FString lang     = GStrings.GetActiveLanguage();
+	FFont  *userFont = nullptr;
+	const FString lang     = GStrings.GetActiveLanguage();
 
-	if (lang.CompareNoCase("jp") == 0)
+	const FString langIDString = GStrings.GetActiveLangID().name.GetChars();
+	const FString cvarName     = "fontchoice_bigtext_" + langIDString;
+	if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*fontchoice_bigtextJP);
+		userFont = V_GetFont(*cv);
 	}
-	else if (lang.CompareNoCase("ko") == 0)
+
+	if (!userFont)
 	{
-		userFont = V_GetFont(*fontchoice_bigtextKO);
+		if (lang.CompareNoCase("jp") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_bigtextJP);
+		}
+		else if (lang.CompareNoCase("ko") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_bigtextKO);
+		}
+		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_bigtextCYR);
+		}
+		else if (lang.CompareNoCase("zh-Hans") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_bigtextSC);
+		}
+		else if (lang.CompareNoCase("th") == 0)
+		{
+			userFont = V_GetFont(*fontchoice_bigtextTH);
+		}
+		else
+		{
+			userFont = V_GetFont(*fontchoice_bigtext);
+		}
 	}
-	else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
-	{
-		userFont = V_GetFont(*fontchoice_bigtextCYR);
-	}
+
 	if (userFont)
 	{
 		return userFont;
@@ -1158,12 +1270,18 @@ FGameTexture *FFont::GetChar (int code, int translation, int *const width) const
 
 int FFont::GetCharWidth (int code) const
 {
-	code = GetCharCode(code, true);
+	//dynamic (ttf) fonts in uzdoom do not use the Chars array, instead unicode codepoints are already tracked
+	//by some of the dependencies.
 	if (IsValidDynamicFont())
 	{
 		return DynamicFontAtlas->GetGlyphs().GetGlyphByCodepoint(code).width  * InvSupersampleFactor;
 	}
-	if (code >= 0) return Chars[code - FirstChar].XMove;
+	else
+	{
+		code = GetCharCode(code, true);
+		if (code >= 0)
+			return Chars[code - FirstChar].XMove;
+	}
 	return SpaceWidth;
 }
 
@@ -1337,7 +1455,7 @@ int FFont::StringWidthUTF32(const std::u32string_view string) const
 		float totalWidth = 0.0f;
 		for (auto &s : drawStrings)
 		{
-			totalWidth += Trex::TextShaper::Measure(s.TrexGlyphs).width * (float)InvSupersampleFactor;
+			totalWidth += Trex::TextShaper::Measure(s.TrexGlyphs).xAdvance * (float)InvSupersampleFactor;
 		}
 		return std::ceil(totalWidth);
 	}
@@ -1427,6 +1545,11 @@ void FFont::LoadTranslations()
 		if (i == CR_UNTRANSLATED) Translations[i] = NO_TRANSLATION;
  		else Translations[i] = MakeLuminosityTranslation(i*2 + TranslationType, minlum, maxlum);
 	}
+}
+
+bool FFont::CanBeSubstitutedWithDynamic() const noexcept
+{
+	return !IsValidDynamicFont() && (Chars.size() > 1 || LastChar - FirstChar > 1) && this != SymbolsFont;
 }
 
 //==========================================================================
