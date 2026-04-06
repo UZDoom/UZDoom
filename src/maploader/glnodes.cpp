@@ -21,6 +21,8 @@
 **
 */
 
+#include "printf.h"
+#include "zstring.h"
 #include <math.h>
 
 #ifndef _WIN32
@@ -993,18 +995,21 @@ bool MapLoader::CheckNodes(MapData * map, bool rebuilt, int buildtime)
 
 typedef TArray<uint8_t> MemFile;
 
-
 static FString CreateCacheName(MapData *map, bool create)
 {
-	FString path = M_GetCachePath(create);
-	FString lumpname = fileSystem.GetFileFullPath(map->lumpnum).c_str();
-	auto separator = lumpname.IndexOf(':');
-	path << '/' << lumpname.Left(separator);
-	if (create) CreatePath(path.GetChars());
-
-	lumpname.ReplaceChars('/', '%');
-	lumpname.ReplaceChars(':', '$');
-	path << '/' << lumpname.Right((ptrdiff_t)lumpname.Len() - separator - 1) << ".gzc";
+	FString path = M_GetCachePath(create, "nodes");
+	const char bytes = 16;
+	uint8_t md5[bytes];
+	map->GetChecksum(md5);
+	static const char hex[] = "0123456789ABCDEF";
+	char buffer[2*bytes+1] = {'\0'};
+	for (int i = 0; i < bytes; i++)
+	{
+		buffer[i*2  ] = hex[md5[i]>>4  ];
+		buffer[i*2+1] = hex[md5[i]&0x0F];
+	}
+	path << '/' << buffer << ".znodes";
+	Printf("%s\n", path.GetChars());
 	return path;
 }
 
@@ -1196,7 +1201,7 @@ bool MapLoader::CheckCachedNodes(MapData *map)
 UNSAFE_CCMD(clearnodecache)
 {
 	FileSys::FileList list;
-	FString path = M_GetCachePath(false);
+	FString path = M_GetCachePath(false, "nodes");
 	path += "/";
 
 	if (!FileSys::ScanDirectory(list, path.GetChars(), "*", false))

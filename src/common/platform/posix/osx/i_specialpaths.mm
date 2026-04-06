@@ -53,6 +53,11 @@ FString M_GetMacAppSupportPath(const bool create)
 	return GetSpecialPath(NSApplicationSupportDirectory, create);
 }
 
+FString M_GetMacAppCachePath(const bool create)
+{
+	return GetSpecialPath(NSCachesDirectory, create);
+}
+
 void M_GetMacSearchDirectories(FString& user_docs, FString& user_app_support, FString& local_app_support)
 {
 	FString path = GetSpecialPath(NSDocumentDirectory);
@@ -106,16 +111,16 @@ FString M_GetAppDataPath(bool create)
 //
 //===========================================================================
 
-FString M_GetCachePath(bool create)
+FString M_GetCachePath(bool create, FString ns)
 {
-	FString path = M_GetMacAppSupportPath(create);
+	FString path = M_GetMacAppCachePath(create);
 
 	if (path.IsEmpty())
 	{
 		path = progdir;
 	}
 
-	path += "/zdoom/cache";
+	path += "/doom/" + ns;
 	if (create) CreatePath(path.GetChars());
 	return path;
 }

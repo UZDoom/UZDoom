@@ -36,6 +36,7 @@
 #include "gstrings.h"
 #include "i_mainwindow.h"
 #include "engineerrors.h"
+#include "zstring.h"
 
 
 static int isportable = -1;
@@ -149,13 +150,13 @@ FString M_GetAppDataPath(bool create)
 //
 //===========================================================================
 
-FString M_GetCachePath(bool create)
+FString M_GetCachePath(bool create, FString ns)
 {
 	FString path = GetKnownFolder(CSIDL_LOCAL_APPDATA, FOLDERID_LocalAppData, create);
 
 	// Don't use GAME_DIR and such so that ZDoom and its child ports can
 	// share the node cache.
-	path += "/zdoom/cache";
+	path += "/doom/" + ns;
 	if (create)
 	{
 		CreatePath(path.GetChars());
