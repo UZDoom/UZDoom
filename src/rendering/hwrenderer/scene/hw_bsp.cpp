@@ -337,7 +337,11 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 
 	uint8_t ispoly = uint8_t(seg->sidedef->Flags & WALLF_POLYOBJ);
 
-	if (!seg->backsector)
+	// [XA] NOTE: ideally it'd be nice to collapse these checks into one,
+	// but it's possible to add & remove WALLF_BLOCKRENDERING via zscript
+	// so auto-setting it on 1s lines may result in a crash if someone
+	// later tries to remove the flag from a line.
+	if (!seg->backsector || (seg->sidedef->Flags & WALLF_BLOCKRENDERING))
 	{
 		if(!doOob)
 			if (!(seg->sidedef->Flags & WALLF_DITHERTRANS_MID)) clipper.SafeAddClipRange(startAngle, endAngle);
