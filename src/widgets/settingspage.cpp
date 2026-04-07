@@ -141,7 +141,7 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 	{
 		LoadLabel = new TextLabel(this);
 		LoadList = new Dropdown(this);
-		LoadList->SetMaxDisplayItems(2);
+		LoadList->SetMaxDisplayItems(4);
 		LoadList->SetDropdownDirection(false);
 		int opts = sizeof(FILELOAD_OPTS)/sizeof(FILELOAD_OPTS[0]), selected = opts-1;
 		for (int i = 0; i < opts; i++)
