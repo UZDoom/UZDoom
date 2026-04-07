@@ -238,6 +238,7 @@ enum ELevelCompatFlag2 : uint32_t
 	COMPATF2_FDTELEPORT		= 1 << 16,	// Emulate Final Doom's teleporter z glitch.
 	COMPATF2_NOACSARGCHECK	= 1 << 17,	// Disable arg count checking for ACS
 	COMPATF2_NOVDOLLLOCKMSG = 1 << 18,	// Voodoo dolls no longer trigger lock messages
+	COMPATF2_NOCOUNTLOST    = 1 << 19,  // Lost souls no longer count towards total monster count in a map
 };
 using ELevelCompatFlags2 = TFlags<ELevelCompatFlag2>;
 DEFINE_TFLAGS_OPERATORS(ELevelCompatFlags2)
