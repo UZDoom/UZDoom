@@ -14,13 +14,14 @@ public:
 	void Stop();
 
 	std::function<void()> FuncExpired;
+	
+	void SetTimerId(void* id) { TimerId = id; }
+	void* GetTimerId() const { return TimerId; }
 
 private:
 	Widget* OwnerObj = nullptr;
 	Timer* PrevTimerObj = nullptr;
 	Timer* NextTimerObj = nullptr;
 
-	void* TimerId = nullptr;
-
-	friend class Widget;
-};
+	    void* TimerId = nullptr;
+	};

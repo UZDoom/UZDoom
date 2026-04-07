@@ -76,7 +76,7 @@ void SpanLayout::DrawLayout(Canvas* canvas)
 				{
 					double cursor_x = x + segment.x_position + canvas->measureText(segment.font, text.substr(segment.start, segment.end - segment.start)).width;
 					double cursor_width = 1;
-					canvas->fillRect(Rect::ltrb(cursor_x, y + line.ascender - segment.ascender, cursor_width, y + line.ascender + segment.descender), cursor_color);
+					canvas->fillRect(Rect::ltrb(cursor_x, y + line.ascender - segment.ascender, cursor_x + cursor_width, y + line.ascender + segment.descender), cursor_color);
 				}
 			}
 		}

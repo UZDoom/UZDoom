@@ -22,21 +22,21 @@ const std::string& PushButton::GetText() const
 
 double PushButton::GetPreferredWidth()
 {
-	Widget* w = Window();
-	if (!w->DispCanvas) return Widget::GetPreferredWidth();
-	Rect box = w->DispCanvas->measureText(text);
-	return box.width + Widget::GetPreferredWidth();
+	const auto canvas = GetCanvas();
+	return std::max(100.0, canvas->measureText(GetFont(), text).width);
 }
 
 double PushButton::GetPreferredHeight()
 {
-	return 20 + Widget::GetPreferredHeight();
+	const auto canvas = GetCanvas();
+	return std::max(20.0, canvas->measureText(GetFont(), text).height);
 }
 
 void PushButton::OnPaint(Canvas* canvas)
 {
-	Rect box = canvas->measureText(text);
-	canvas->drawText(Point((GetWidth() - box.width) * 0.5, GetHeight() - 5.0), GetStyleColor("color"), text);
+	FontMetrics metrics = canvas->getFontMetrics(GetFont());
+	Rect box = canvas->measureText(GetFont(), text);
+	canvas->drawText(GetFont(), Point((GetWidth() - box.width) * 0.5, (GetHeight() - metrics.height) * 0.5 + metrics.ascent), text, GetStyleColor("color"));
 }
 
 void PushButton::OnMouseMove(const Point& pos)

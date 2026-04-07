@@ -32,6 +32,8 @@
 #include <zwidget/widgets/textlabel/textlabel.h>
 #include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
 
+extern std::vector<uint8_t> LoadWidgetData(const std::string& name, bool root);
+
 static constexpr struct { const char* string; int flag; } FILELOAD_OPTS[] = {
 	{"OPTVAL_LAX", REQUIRE_NONE},
 	{"OPTVAL_DEFAULT", REQUIRE_DEFAULT},

@@ -17,5 +17,5 @@ Statusbar::~Statusbar()
 
 void Statusbar::OnPaint(Canvas* canvas)
 {
-	canvas->drawText(Point(16.0, 21.0), Colorf::fromRgba8(226, 223, 219), "Command:");
+	canvas->drawText(GetFont(), Point(16.0, 21.0), "Command:", Colorf::fromRgba8(226, 223, 219));
 }

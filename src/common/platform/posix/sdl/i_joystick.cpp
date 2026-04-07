@@ -21,7 +21,7 @@
 **
 */
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <cmath>
 #include <stdio.h>
 
@@ -55,16 +55,16 @@ class SDLInputJoystick: public IJoystickConfig
 public:
 	SDLInputJoystick(int DeviceIndex) :
 	DeviceIndex(DeviceIndex),
-	InstanceID(SDL_JoystickGetDeviceInstanceID(DeviceIndex)),
+	InstanceID(DeviceIndex),
 	Multiplier(JOYSENSITIVITY_DEFAULT),
 	Enabled(true),
 	Haptics(0),
 	HapticsStrength(JOYHAPSTRENGTH_DEFAULT),
 	SettingsChanged(false)
 	{
-		if (SDL_IsGameController(DeviceIndex))
+		if (SDL_IsGamepad(DeviceIndex))
 		{
-			Mapping = SDL_GameControllerOpen(DeviceIndex);
+			Mapping = SDL_OpenGamepad(DeviceIndex);
 			Device = NULL;
 
 			DefaultAxes = DefaultControllerAxes;
@@ -72,16 +72,19 @@ public:
 
 			if(Mapping != NULL)
 			{
-				NumAxes = SDL_CONTROLLER_AXIS_MAX;
+				NumAxes = SDL_GAMEPAD_AXIS_COUNT;
 				NumHats = 0;
-				Haptics = SDL_GameControllerHasRumble(Mapping) | SDL_GameControllerHasRumbleTriggers(Mapping) << 1;
+				SDL_PropertiesID props = SDL_GetGamepadProperties(Mapping);
+				bool has_rumble = SDL_GetBooleanProperty(props, SDL_PROP_GAMEPAD_CAP_RUMBLE_BOOLEAN, false);
+				bool has_rumble_triggers = SDL_GetBooleanProperty(props, SDL_PROP_GAMEPAD_CAP_TRIGGER_RUMBLE_BOOLEAN, false);
+				Haptics = has_rumble | has_rumble_triggers << 1;
 
 				SetDefaultConfig();
 			}
 		}
 		else
 		{
-			Device = SDL_JoystickOpen(DeviceIndex);
+			Device = SDL_OpenJoystick(DeviceIndex);
 			Mapping = NULL;
 
 			DefaultAxes = DefaultJoystickAxes;
@@ -89,8 +92,8 @@ public:
 
 			if(Device != NULL)
 			{
-				NumAxes = SDL_JoystickNumAxes(Device);
-				NumHats = SDL_JoystickNumHats(Device);
+				NumAxes = SDL_GetNumJoystickAxes(Device);
+				NumHats = SDL_GetNumJoystickHats(Device);
 
 				SetDefaultConfig();
 			}
@@ -102,9 +105,9 @@ public:
 		if(IsValid() && SettingsChanged)
 			M_SaveJoystickConfig(this);
 		if (Mapping)
-			SDL_GameControllerClose(Mapping);
+			SDL_CloseGamepad(Mapping);
 		if (Device)
-			SDL_JoystickClose(Device);
+			SDL_CloseJoystick(Device);
 	}
 
 	bool IsValid() const
@@ -115,8 +118,8 @@ public:
 	FString GetName()
 	{
 		return (Mapping)
-			? SDL_GameControllerName(Mapping)
-			: SDL_JoystickName(Device);
+			? SDL_GetGamepadName(Mapping)
+			: SDL_GetJoystickName(Device);
 	}
 	float GetSensitivity()
 	{
@@ -251,7 +254,7 @@ public:
 
 		if (Haptics & HAPTICS)
 		{
-			SDL_GameControllerRumble(
+			SDL_RumbleGamepad(
 				Mapping,
 				static_cast<uint16_t> (0xffff * clamp(high_freq*HapticsStrength, 0.f, 1.f)),
 				static_cast<uint16_t> (0xffff * clamp(low_freq*HapticsStrength, 0.f, 1.f)),
@@ -260,7 +263,7 @@ public:
 
 		if (Haptics & HAPTICS_TRIGGERS)
 		{
-			SDL_GameControllerRumbleTriggers(
+			SDL_RumbleGamepadTriggers(
 				Mapping,
 				static_cast<uint16_t> (0xffff * clamp(left_trig*HapticsStrength, 0.f, 1.f)),
 				static_cast<uint16_t> (0xffff * clamp(right_trig*HapticsStrength, 0.f, 1.f)),
@@ -282,12 +285,12 @@ public:
 		{
 			if (Mapping) {
 				switch(i) {
-					case SDL_CONTROLLER_AXIS_LEFTX: Axes[i].Name = "Left Stick X"; break;
-					case SDL_CONTROLLER_AXIS_LEFTY: Axes[i].Name = "Left Stick Y"; break;
-					case SDL_CONTROLLER_AXIS_RIGHTX: Axes[i].Name = "Right Stick X"; break;
-					case SDL_CONTROLLER_AXIS_RIGHTY: Axes[i].Name = "Right Stick Y"; break;
-					case SDL_CONTROLLER_AXIS_TRIGGERLEFT: Axes[i].Name = "Left Trigger"; break;
-					case SDL_CONTROLLER_AXIS_TRIGGERRIGHT: Axes[i].Name = "Right Trigger"; break;
+					case SDL_GAMEPAD_AXIS_LEFTX: Axes[i].Name = "Left Stick X"; break;
+					case SDL_GAMEPAD_AXIS_LEFTY: Axes[i].Name = "Left Stick Y"; break;
+					case SDL_GAMEPAD_AXIS_RIGHTX: Axes[i].Name = "Right Stick X"; break;
+					case SDL_GAMEPAD_AXIS_RIGHTY: Axes[i].Name = "Right Stick Y"; break;
+					case SDL_GAMEPAD_AXIS_LEFT_TRIGGER: Axes[i].Name = "Left Trigger"; break;
+					case SDL_GAMEPAD_AXIS_RIGHT_TRIGGER: Axes[i].Name = "Right Trigger"; break;
 					default: Axes[i].Name.Format("Axis %d", i+1); break;
 				}
 			} else {
@@ -354,7 +357,7 @@ public:
 
 			if (Mapping)
 			{
-				if (i < SDL_CONTROLLER_AXIS_MAX)
+				if (i < SDL_GAMEPAD_AXIS_COUNT)
 				{
 					axis_code_pos = ControllerAxisCodes[i][0];
 					axis_code_neg = ControllerAxisCodes[i][1];
@@ -393,8 +396,8 @@ public:
 		uint8_t buttonstate;
 		double axisval1, axisval2;
 
-		axisval1 = SDL_GameControllerGetAxis(Mapping, static_cast<SDL_GameControllerAxis>(index1)) / 32767.0;
-		axisval2 = SDL_GameControllerGetAxis(Mapping, static_cast<SDL_GameControllerAxis>(index2)) / 32767.0;
+		axisval1 = SDL_GetGamepadAxis(Mapping, static_cast<SDL_GamepadAxis>(index1)) / 32767.0;
+		axisval2 = SDL_GetGamepadAxis(Mapping, static_cast<SDL_GamepadAxis>(index2)) / 32767.0;
 
 		Joy_ManageThumbstick(
 			&axisval1, &axisval2,
@@ -419,7 +422,7 @@ public:
 		uint8_t buttonstate;
 		double axisval;
 
-		axisval = SDL_GameControllerGetAxis(Mapping, static_cast<SDL_GameControllerAxis>(index)) / 32767.0;
+		axisval = SDL_GetGamepadAxis(Mapping, static_cast<SDL_GamepadAxis>(index)) / 32767.0;
 		axisval = Joy_ManageSingleAxis(
 			axisval,
 			axis.DeadZone, axis.DigitalThreshold, axis.ResponseCurve,
@@ -434,10 +437,10 @@ public:
 	void ProcessGameControllerAxes()
 	{
 		// Refactored to match more closely with XInput / raw PS2 on Windows
-		ProcessGameControllerThumbstick(SDL_CONTROLLER_AXIS_LEFTX, SDL_CONTROLLER_AXIS_LEFTY, KEY_PAD_LTHUMB_RIGHT);
-		ProcessGameControllerThumbstick(SDL_CONTROLLER_AXIS_RIGHTX, SDL_CONTROLLER_AXIS_RIGHTY, KEY_PAD_RTHUMB_RIGHT);
-		ProcessGameControllerTrigger(SDL_CONTROLLER_AXIS_TRIGGERLEFT, KEY_PAD_LTRIGGER);
-		ProcessGameControllerTrigger(SDL_CONTROLLER_AXIS_TRIGGERRIGHT, KEY_PAD_RTRIGGER);
+		ProcessGameControllerThumbstick(SDL_GAMEPAD_AXIS_LEFTX, SDL_GAMEPAD_AXIS_LEFTY, KEY_PAD_LTHUMB_RIGHT);
+		ProcessGameControllerThumbstick(SDL_GAMEPAD_AXIS_RIGHTX, SDL_GAMEPAD_AXIS_RIGHTY, KEY_PAD_RTHUMB_RIGHT);
+		ProcessGameControllerTrigger(SDL_GAMEPAD_AXIS_LEFT_TRIGGER, KEY_PAD_LTRIGGER);
+		ProcessGameControllerTrigger(SDL_GAMEPAD_AXIS_RIGHT_TRIGGER, KEY_PAD_RTRIGGER);
 	}
 
 	void ProcessOldJoystickAxes()
@@ -453,7 +456,7 @@ public:
 				AxisInfo &info = Axes[i];
 				double axisval;
 
-				axisval = SDL_JoystickGetAxis(Device, i) / 32767.0;
+				axisval = SDL_GetJoystickAxis(Device, i) / 32767.0;
 
 				info.Value = Joy_ManageSingleAxis(
 					axisval,
@@ -472,8 +475,8 @@ public:
 				AxisInfo &info_y = Axes[i];
 				double axisval_x, axisval_y;
 
-				axisval_x = SDL_JoystickGetAxis(Device, i - 1) / 32767.0;
-				axisval_y = SDL_JoystickGetAxis(Device,     i) / 32767.0;
+				axisval_x = SDL_GetJoystickAxis(Device, i - 1) / 32767.0;
+				axisval_y = SDL_GetJoystickAxis(Device,     i) / 32767.0;
 				Joy_ManageThumbstick(
 					&axisval_x, &axisval_y,
 					info_x.DeadZone, info_y.DeadZone,
@@ -499,7 +502,7 @@ public:
 			AxisInfo &x = Axes[NumAxes + i*2];
 			AxisInfo &y = Axes[NumAxes + i*2 + 1];
 
-			buttonstate = SDL_JoystickGetHat(Device, i);
+			buttonstate = SDL_GetJoystickHat(Device, i);
 
 			// If we're going to assume that we can pass SDL's value into
 			// Joy_GenerateButtonEvents then we might as well assume the format here.
@@ -565,7 +568,7 @@ protected:
 	int					DeviceIndex;
 	int					InstanceID;
 	SDL_Joystick		*Device;
-	SDL_GameController	*Mapping;
+	SDL_Gamepad	*Mapping;
 
 	float				Multiplier;
 	bool				Enabled;
@@ -609,7 +612,10 @@ public:
 	void UpdateDeviceList()
 	{
 		Joysticks.DeleteAndClear();
-		for(int i = 0; i < SDL_NumJoysticks(); i++)
+		int num;
+		SDL_JoystickID* joysticks = SDL_GetJoysticks(&num);
+		SDL_free(joysticks);
+		for(int i = 0; i < num; i++)
 		{
 			SDLInputJoystick *device = new SDLInputJoystick(i);
 			if(device->IsValid())
@@ -671,7 +677,7 @@ static SDLInputJoystickManager *JoystickManager;
 void I_StartupJoysticks()
 {
 #ifndef NO_SDL_JOYSTICK
-	if(SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_HAPTIC | SDL_INIT_GAMECONTROLLER) >= 0)
+	if(SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_HAPTIC | SDL_INIT_GAMEPAD))
 		JoystickManager = new SDLInputJoystickManager();
 #endif
 }
@@ -680,7 +686,7 @@ void I_ShutdownInput()
 	if(JoystickManager)
 	{
 		delete JoystickManager;
-		SDL_QuitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER);
+		SDL_QuitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMEPAD);
 	}
 }
 

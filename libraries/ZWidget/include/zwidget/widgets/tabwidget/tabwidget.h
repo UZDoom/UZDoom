@@ -30,6 +30,8 @@ public:
 	int GetCurrentIndex() const;
 	Widget* GetCurrentWidget() const;
 
+	double GetPreferredHeight() override;
+
 	int GetPageIndex(Widget* pageWidget) const;
 
 	void SetCurrentIndex(int pageIndex);
@@ -110,7 +112,6 @@ private:
 
 	ImageBox* Icon = nullptr;
 	TextLabel* Label = nullptr;
-	bool hot = false;
 };
 
 class TabWidgetStack : public Widget

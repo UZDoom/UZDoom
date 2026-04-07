@@ -1,7 +1,7 @@
 #pragma once
 
 #define NOMINMAX
-#define WIN32_MEAN_AND_LEAN
+#define WIN32_LEAN_AND_MEAN
 #ifndef WINVER
 #define WINVER 0x0605
 #endif

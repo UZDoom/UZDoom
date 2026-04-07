@@ -39,8 +39,76 @@ bool IsZWidgetAvailable()
 	return WidgetResources;
 }
 
+class WidgetResourceLoader : public ResourceLoader
+{
+public:
+	std::vector<SingleFontData> LoadFont(const std::string& name) override
+	{
+		std::vector<SingleFontData> returnv;
+		if (name == "system" || name == "monospace")
+		{
+			SingleFontData fontdata;
+			fontdata.fontdata = ReadAllBytes("ui/noto/noto-sans.ttf");
+			return { std::move(fontdata) };
+		}
+	if (!stricmp(name.c_str(), "notosans"))
+	{
+		// to update/add fonts:
+		// tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR' 'Noto Sans SC' # 'Noto Sans TC'
+		struct { const char *file; const char *lang; } fonts[] = {
+			// fonts with specific languages list here for high priority
+			{ "ui/noto/noto-sans-jp.ttf", "ja" },
+			{ "ui/noto/noto-sans-kr.ttf", "ko" },
+			{ "ui/noto/noto-sans-sc.ttf", "zh-Hans" },
+			// "ui/noto/noto-sans-tc.ttf", "zh-Hant" },
+
+			// generic fonts
+			{ "ui/noto/noto-sans.ttf", ""},
+			{ "ui/noto/noto-sans-armenian.ttf", ""},
+			{ "ui/noto/noto-sans-georgian.ttf", ""},
+		};
+
+		auto count = sizeof(fonts) / sizeof(fonts[0]);
+		returnv.resize(count);
+		for (unsigned i = 0; i < count; i++)
+		{
+			returnv[i].fontdata = ReadAllBytes(fonts[i].file);
+			returnv[i].language = fonts[i].lang;
+		}
+		return returnv;
+	}
+
+	returnv.resize(1);
+	std::string fn = "ui/font/" + name + ".ttf";
+	returnv[0].fontdata = ReadAllBytes(fn.c_str());
+
+	return returnv;
+	}
+	
+	std::vector<uint8_t> ReadAllBytes(const std::string& name) override
+	{
+		if (!IsZWidgetAvailable())
+		I_FatalError("InitWidgetResources has not been called");
+
+		auto start = WidgetResources->size() - 1;
+		for (int i = start; i >= 0; i--)
+		{
+			auto lump = (*WidgetResources)[i]->FindEntry(name.c_str());
+			if (lump == -1) continue;
+			auto reader = (*WidgetResources)[i]->GetEntryReader(lump, FileSys::READER_SHARED);
+			std::vector<uint8_t> buffer(reader.GetLength());
+			reader.Read(buffer.data(), buffer.size());
+			return buffer;
+		}
+
+		I_FatalError("Unable to find %s", name.c_str());
+	}
+};
+
 void InitWidgetResources(const char* filename)
 {
+	ResourceLoader::Set(std::make_unique<WidgetResourceLoader>());
+
 	WidgetResources = new TDeletingArray<FResourceFile*>();
 
 	auto open = [=](const char* filename, bool required = false)
@@ -68,7 +136,7 @@ void InitWidgetResources(const char* filename)
 
 	Theme::initilize(use_dark? DARK: LIGHT);
 
-	WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new WidgetTheme{{
+	WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new SimpleTheme{{
 		Theme::getMain  (COLOR_BACKGROUND), Theme::getMain  (COLOR_TEXT),
 		Theme::getHeader(COLOR_BACKGROUND), Theme::getHeader(COLOR_TEXT),
 		Theme::getButton(COLOR_BACKGROUND), Theme::getButton(COLOR_TEXT),
@@ -81,25 +149,6 @@ void InitWidgetResources(const char* filename)
 void CloseWidgetResources()
 {
 	delete WidgetResources;
-}
-
-static std::vector<uint8_t> LoadFile(const char* name, bool root)
-{
-	if (!IsZWidgetAvailable())
-		I_FatalError("InitWidgetResources has not been called");
-
-	auto start = root ? 0: WidgetResources->size() - 1;
-	for (auto i = start; i >= 0; i--)
-	{
-		auto lump = (*WidgetResources)[i]->FindEntry(name);
-		if (lump == -1) continue;
-		auto reader = (*WidgetResources)[i]->GetEntryReader(lump, FileSys::READER_SHARED);
-		std::vector<uint8_t> buffer(reader.GetLength());
-		reader.Read(buffer.data(), buffer.size());
-		return buffer;
-	}
-
-	I_FatalError("Unable to find %s", name);
 }
 
 // this must be allowed to fail without throwing.
@@ -115,45 +164,7 @@ static std::vector<uint8_t> LoadDiskFile(const char* name)
 	return buffer;
 }
 
-// This interface will later require some significant redesign.
-std::vector<SingleFontData> LoadWidgetFontData(const std::string& name, bool root)
-{
-	std::vector<SingleFontData> returnv;
-	if (!stricmp(name.c_str(), "notosans"))
-	{
-		// to update/add fonts:
-		// tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR' 'Noto Sans SC' # 'Noto Sans TC'
-		struct { const char *file; const char *lang; } fonts[] = {
-			// fonts with specific languages list here for high priority
-			{ "ui/noto/noto-sans-jp.ttf", "ja" },
-			{ "ui/noto/noto-sans-kr.ttf", "ko" },
-			{ "ui/noto/noto-sans-sc.ttf", "zh-Hans" },
-			// "ui/noto/noto-sans-tc.ttf", "zh-Hant" },
-
-			// generic fonts
-			{ "ui/noto/noto-sans.ttf", ""},
-			{ "ui/noto/noto-sans-armenian.ttf", ""},
-			{ "ui/noto/noto-sans-georgian.ttf", ""},
-		};
-
-		auto count = sizeof(fonts) / sizeof(fonts[0]);
-		returnv.resize(count);
-		for (unsigned i = 0; i < count; i++)
-		{
-			returnv[i].fontdata = LoadFile(fonts[i].file, root);
-			returnv[i].language = fonts[i].lang;
-		}
-		return returnv;
-	}
-
-	returnv.resize(1);
-	std::string fn = "ui/font/" + name + ".ttf";
-	returnv[0].fontdata = LoadFile(fn.c_str(), root);
-
-	return returnv;
-}
-
 std::vector<uint8_t> LoadWidgetData(const std::string& name, bool root)
 {
-	return LoadFile(name.c_str(), root);
+	return ResourceLoader::Get()->ReadAllBytes(name);
 }

@@ -138,10 +138,8 @@ else()
 
 	# Non-Windows version also needs SDL except native OS X backend
 	if( NOT APPLE OR NOT OSX_COCOA_BACKEND )
-		find_package( SDL2 REQUIRED )
-		include_directories( SYSTEM "${SDL2_INCLUDE_DIR}" )
-		link_directories(${SDL2_LINK_DIR})
-		set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} "${SDL2_LIBRARY}" )
+		find_package( SDL3 REQUIRED )
+		set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} SDL3::SDL3 )
 	endif()
 
 endif()

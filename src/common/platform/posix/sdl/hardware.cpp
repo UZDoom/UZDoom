@@ -22,7 +22,7 @@
 **
 */
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <signal.h>
 
 #include "c_console.h"
@@ -58,7 +58,7 @@ void I_InitGraphics ()
 #endif // __APPLE__
 	SDL_SetHint(SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS, "0");
 
-	if (SDL_InitSubSystem (SDL_INIT_VIDEO) < 0)
+	if (!SDL_InitSubSystem (SDL_INIT_VIDEO))
 	{
 		I_FatalError ("Could not initialize SDL video:\n%s\n", SDL_GetError());
 		return;

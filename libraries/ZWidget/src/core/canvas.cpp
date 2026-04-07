@@ -7,11 +7,13 @@
 #include "core/image.h"
 #include "core/truetypefont.h"
 #include "core/pathfill.h"
+#include "core/font_impl.h"
 #include "window/window.h"
 #include <vector>
 #include <unordered_map>
 #include <stdexcept>
 #include <cstring>
+#include <iostream>
 
 #if defined(__SSE2__) || defined(_M_X64)
 #include <immintrin.h>
@@ -79,8 +81,7 @@ public:
 
 CanvasFont::CanvasFont(const std::string& fontname, double height, std::vector<uint8_t> data) : fontname(fontname), height(height)
 {
-	auto tdata = std::make_shared<TrueTypeFontFileData>(std::move(data));
-	ttf = std::make_unique<TrueTypeFont>(tdata);
+	ttf = std::make_unique<TrueTypeFont>(TTFDataBuffer::create(std::move(data)));
 	textmetrics = ttf->GetTextMetrics(height);
 }
 
@@ -151,7 +152,7 @@ CanvasGlyph* CanvasFont::getGlyph(Canvas* canvas, uint32_t utfchar)
 
 CanvasFontGroup::CanvasFontGroup(const std::string& fontname, double height) : height(height)
 {
-	auto fontdata = LoadWidgetFontData(fontname);
+	auto fontdata = ResourceData::LoadFont(fontname);
 	fonts.resize(fontdata.size());
 	for (size_t i = 0; i < fonts.size(); i++)
 	{
@@ -198,7 +199,6 @@ void Canvas::attach(DisplayWindow* newWindow)
 	uiscale = window ? window->GetDpiScale() : 1.0f;
 	uint32_t white = 0xffffffff;
 	whiteTexture = createTexture(1, 1, &white);
-	font = std::make_unique<CanvasFontGroup>("NotoSans", 13.0 * uiscale);
 }
 
 void Canvas::detach()
@@ -265,29 +265,37 @@ void Canvas::popClip()
 
 void Canvas::fillRect(const Rect& box, const Colorf& color)
 {
-	fillTile((float)((origin.x + box.x) * uiscale), (float)((origin.y + box.y) * uiscale), (float)(box.width * uiscale), (float)(box.height * uiscale), color);
+	fillTile(gridFit(origin.x + box.x), gridFit(origin.y + box.y), gridFit(box.width), gridFit(box.height), color);
 }
 
 void Canvas::drawImage(const std::shared_ptr<Image>& image, const Point& pos)
 {
 	auto& texture = imageTextures[image];
 	if (!texture)
-	{
 		texture = createTexture(image->GetWidth(), image->GetHeight(), image->GetData(), image->GetFormat());
-	}
-	Colorf color(1.0f, 1.0f, 1.0f);
-	drawTile(texture.get(), (float)((origin.x + pos.x) * uiscale), (float)((origin.y + pos.y) * uiscale), (float)(texture->Width * uiscale), (float)(texture->Height * uiscale), 0.0, 0.0, (float)texture->Width, (float)texture->Height, color);
+
+	Colorf color(1.0f, 1.0f, 1.0f, 1.0f);
+	drawTile(texture.get(), gridFit(origin.x + pos.x), gridFit(origin.y + pos.y), gridFit(texture->Width), gridFit(texture->Height), 0.0, 0.0, (float)texture->Width, (float)texture->Height, color);
 }
 
 void Canvas::drawImage(const std::shared_ptr<Image>& image, const Rect& box)
 {
 	auto& texture = imageTextures[image];
 	if (!texture)
-	{
 		texture = createTexture(image->GetWidth(), image->GetHeight(), image->GetData(), image->GetFormat());
-	}
+
 	Colorf color(1.0f, 1.0f, 1.0f);
-	drawTile(texture.get(), (float)((origin.x + box.x) * uiscale), (float)((origin.y + box.y) * uiscale), (float)(box.width * uiscale), (float)(box.height * uiscale), 0.0, 0.0, (float)texture->Width, (float)texture->Height, color);
+	drawTile(texture.get(), gridFit(origin.x + box.x), gridFit(origin.y + box.y), gridFit(box.width), gridFit(box.height), 0.0, 0.0, (float)texture->Width, (float)texture->Height, color);
+}
+
+void Canvas::drawImage(const std::shared_ptr<Image>& image, const Rect& src, const Rect& dest)
+{
+	auto& texture = imageTextures[image];
+	if (!texture)
+		texture = createTexture(image->GetWidth(), image->GetHeight(), image->GetData(), image->GetFormat());
+
+	Colorf color(1.0f, 1.0f, 1.0f);
+	drawTile(texture.get(), gridFit(origin.x + dest.x), gridFit(origin.y + dest.y), gridFit(dest.width), gridFit(dest.height), (float)src.x, (float)src.y, (float)src.width, (float)src.height, color);
 }
 
 void Canvas::line(const Point& p0, const Point& p1, const Colorf& color)
@@ -377,107 +385,129 @@ void Canvas::line(const Point& p0, const Point& p1, const Colorf& color)
 	}
 }
 
-void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& text)
+void Canvas::drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color)
 {
-	double x = std::round((origin.x + pos.x) * uiscale);
-	double y = std::round((origin.y + pos.y) * uiscale);
+	CanvasFontGroup* canvasFont = GetFontGroup(font);
+
+	double x = gridFit(origin.x + pos.x);
+	double y = gridFit(origin.y + pos.y);
 
 	UTF8Reader reader(text.data(), text.size());
 	while (!reader.is_end())
 	{
-		CanvasGlyph* glyph = font->getGlyph(this, reader.character(), language.c_str());
+		CanvasGlyph* glyph = canvasFont->getGlyph(this, reader.character(), language.c_str());
 		if (!glyph || !glyph->texture)
 		{
-			glyph = font->getGlyph(this, 32);
+			glyph = canvasFont->getGlyph(this, 32);
 		}
 
 		if (glyph->texture)
 		{
 			double gx = std::round(x + glyph->metrics.leftSideBearing);
 			double gy = std::round(y + glyph->metrics.yOffset);
-			drawGlyph(glyph->texture.get(), (float)std::round(gx), (float)std::round(gy), (float)glyph->uvwidth, (float)glyph->uvheight, (float)glyph->u, (float)glyph->v, (float)glyph->uvwidth, (float)glyph->uvheight, color);
+			drawGlyph(glyph->texture.get(), (float)gx, (float)gy, (float)glyph->uvwidth, (float)glyph->uvheight, (float)glyph->u, (float)glyph->v, (float)glyph->uvwidth, (float)glyph->uvheight, color);
 		}
 
 		x += std::round(glyph->metrics.advanceWidth);
 		reader.next();
 	}
-}
-
-void Canvas::drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color)
-{
-	drawText(pos, color, text);
 }
 
 void Canvas::drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& pos, const Rect& clipBox, const std::string& text, const Colorf& color)
 {
-	drawText(pos, color, text);
+	drawText(font, pos, text, color);
 }
 
 Rect Canvas::measureText(const std::shared_ptr<Font>& font, const std::string& text)
 {
-	return measureText(text);
-}
-
-Rect Canvas::measureText(const std::string& text)
-{
+	CanvasFontGroup* canvasFont = GetFontGroup(font);
+	const TrueTypeTextMetrics& tm = canvasFont->GetTextMetrics();
+	double lineHeight = tm.ascent + tm.descent + tm.lineGap;
 	double x = 0.0;
-	double y = font->GetTextMetrics().ascender - font->GetTextMetrics().descender;
 
 	UTF8Reader reader(text.data(), text.size());
 	while (!reader.is_end())
 	{
-		CanvasGlyph* glyph = font->getGlyph(this, reader.character(), language.c_str());
+		CanvasGlyph* glyph = canvasFont->getGlyph(this, reader.character(), language.c_str());
 		if (!glyph || !glyph->texture)
 		{
-			glyph = font->getGlyph(this, 32);
+			glyph = canvasFont->getGlyph(this, 32);
 		}
 
 		x += std::round(glyph->metrics.advanceWidth);
 		reader.next();
 	}
 
-	return Rect::xywh(0.0, 0.0, x / uiscale, y / uiscale);
+	return Rect::xywh(0.0, 0.0, x / uiscale, lineHeight / uiscale);
 }
 
 FontMetrics Canvas::getFontMetrics(const std::shared_ptr<Font>& font)
 {
-	VerticalTextPosition vtp = verticalTextAlign();
+	const TrueTypeTextMetrics& tm = GetFontGroup(font)->GetTextMetrics();
 	FontMetrics metrics;
-	metrics.external_leading = vtp.top;
-	metrics.ascent = vtp.baseline - vtp.top;
-	metrics.descent = vtp.bottom - vtp.baseline;
-	metrics.height = metrics.ascent + metrics.descent;
+	metrics.external_leading = tm.lineGap / uiscale;
+	metrics.ascent = tm.ascent / uiscale;
+	metrics.descent = tm.descent / uiscale;
+	metrics.height = (tm.ascent + tm.descent) / uiscale;
 	return metrics;
 }
 
 int Canvas::getCharacterIndex(const std::shared_ptr<Font>& font, const std::string& text, const Point& hitPoint)
 {
-	return 0;
+	CanvasFontGroup* canvasFont = GetFontGroup(font);
+
+	double x = 0.0;
+	UTF8Reader reader(text.data(), text.size());
+	while (!reader.is_end())
+	{
+		CanvasGlyph* glyph = canvasFont->getGlyph(this, reader.character(), language.c_str());
+		if (!glyph || !glyph->texture)
+		{
+			glyph = canvasFont->getGlyph(this, 32);
+		}
+
+		if (hitPoint.x <= (x + glyph->metrics.advanceWidth * 0.5) / uiscale)
+			return (int)reader.position();
+
+		x += std::round(glyph->metrics.advanceWidth);
+		reader.next();
+	}
+	return (int)text.size();
 }
 
-VerticalTextPosition Canvas::verticalTextAlign()
+VerticalTextPosition Canvas::verticalTextAlign(const std::shared_ptr<Font>& font)
 {
+	const TrueTypeTextMetrics& tm = GetFontGroup(font)->GetTextMetrics();
 	VerticalTextPosition align;
 	align.top = 0.0f;
-	auto tm = font->GetTextMetrics();
-	align.baseline = tm.ascender / uiscale;
-	align.bottom = (tm.ascender - tm.descender) / uiscale;
+	align.baseline = (tm.ascent + tm.lineGap * 0.5) / uiscale;
+	align.bottom = (tm.ascent + tm.descent + tm.lineGap) / uiscale;
 	return align;
+}
+
+CanvasFontGroup* Canvas::GetFontGroup(const std::shared_ptr<Font>& font)
+{
+	FontImpl* fontImpl = static_cast<FontImpl*>(const_cast<Font*>(font.get()));
+
+	std::shared_ptr<CanvasFontGroup>& group = fontCache[{fontImpl->Name, fontImpl->Height}];
+	if (!group)
+		group = std::make_unique<CanvasFontGroup>(fontImpl->Name, std::round(fontImpl->Height * uiscale));
+	return group.get();
 }
 
 void Canvas::drawLineUnclipped(const Point& p0, const Point& p1, const Colorf& color)
 {
 	if (p0.x == p1.x)
 	{
-		fillTile((float)((p0.x - 0.5) * uiscale), (float)(p0.y * uiscale), (float)uiscale, (float)((p1.y - p0.y) * uiscale), color);
+		fillTile(gridFit(p0.x - 0.5), gridFit(p0.y), (float)uiscale, gridFit(p1.y - p0.y), color);
 	}
 	else if (p0.y == p1.y)
 	{
-		fillTile((float)(p0.x * uiscale), (float)((p0.y - 0.5) * uiscale), (float)((p1.x - p0.x) * uiscale), (float)uiscale, color);
+		fillTile(gridFit(p0.x), gridFit(p0.y - 0.5), gridFit(p1.x - p0.x), (float)uiscale, color);
 	}
 	else
 	{
-		drawLineAntialiased((float)(p0.x * uiscale), (float)(p0.y * uiscale), (float)(p1.x * uiscale), (float)(p1.y * uiscale), color);
+		drawLineAntialiased(gridFit(p0.x), gridFit(p0.y), gridFit(p1.x), gridFit(p1.y), color);
 	}
 }
 
@@ -770,6 +800,191 @@ void BitmapCanvas::fillTile(float left, float top, float width, float height, Co
 	}
 }
 
+#if 1 // drawTile linear filtered
+
+void BitmapCanvas::drawTile(CanvasTexture* tex, float left, float top, float width, float height, float u, float v, float uvwidth, float uvheight, Colorf color)
+{
+	if (width <= 0.0f || height <= 0.0f || color.a <= 0.0f)
+		return;
+
+	auto texture = static_cast<BitmapTexture*>(tex);
+	int swidth = texture->Width;
+	int sheight = texture->Height;
+	const uint32_t* src = texture->Data.data();
+
+	int dwidth = this->width;
+	uint32_t* dest = this->pixels.data();
+
+	int x0 = (int)left;
+	int x1 = (int)(left + width);
+	int y0 = (int)top;
+	int y1 = (int)(top + height);
+
+	x0 = std::max(x0, getClipMinX());
+	y0 = std::max(y0, getClipMinY());
+	x1 = std::min(x1, getClipMaxX());
+	y1 = std::min(y1, getClipMaxY());
+	if (x1 <= x0 || y1 <= y0)
+		return;
+
+	uint32_t cred = (int32_t)clamp(color.r * 256.0f, 0.0f, 256.0f);
+	uint32_t cgreen = (int32_t)clamp(color.g * 256.0f, 0.0f, 256.0f);
+	uint32_t cblue = (int32_t)clamp(color.b * 256.0f, 0.0f, 256.0f);
+	uint32_t calpha = (int32_t)clamp(color.a * 256.0f, 0.0f, 256.0f);
+#ifdef USE_SSE2
+	__m128i cargb = _mm_set_epi16(calpha, cred, cgreen, cblue, calpha, cred, cgreen, cblue);
+#endif
+
+	float uscale = uvwidth / width;
+	float vscale = uvheight / height;
+
+	for (int y = y0; y < y1; y++)
+	{
+		float vpix = v + vscale * (y - top);
+		float vfrac = vpix - (int)vpix;
+		int sy0 = (int)vpix;
+		int sy1 = sy0 + 1;
+		sy0 = sy0 < sheight ? sy0 : sheight - 1;
+		sy1 = sy1 < sheight ? sy1 : sheight - 1;
+
+		const uint32_t* sline0 = src + sy0 * swidth;
+		const uint32_t* sline1 = src + sy1 * swidth;
+		uint32_t* dline = dest + y * dwidth;
+
+		uint32_t ty = (int)(vfrac * 128.0f);
+		uint32_t invty = 128 - ty;
+#ifdef USE_SSE2
+		__m128i tyy = _mm_set_epi16(invty, invty, ty, ty, invty, invty, ty, ty);
+#endif
+
+		int x = x0;
+
+#ifdef USE_SSE2
+		int ssex1 = x0 + (((x1 - x0) >> 1) << 1);
+		while (x < ssex1)
+		{
+			float upix0 = u + uscale * (x - left);
+			float upix1 = u + uscale * (x + 1.0f - left);
+			float ufrac0 = upix0 - (int)upix0;
+			float ufrac1 = upix1 - (int)upix1;
+			int sx0[2] = { (int)upix0, (int)upix1 };
+			int sx1[2] = { sx0[0] + 1, sx0[1] + 1 };
+			sx0[0] = sx0[0] < swidth ? sx0[0] : swidth - 1;
+			sx0[1] = sx0[1] < swidth ? sx0[1] : swidth - 1;
+			sx1[0] = sx1[0] < swidth ? sx1[0] : swidth - 1;
+			sx1[1] = sx1[1] < swidth ? sx1[1] : swidth - 1;
+
+			// Linear filter sample:
+			uint32_t tx0 = (int)(ufrac0 * 128.0f);
+			uint32_t tx1 = (int)(ufrac1 * 128.0f);
+			uint32_t invtx0 = 128 - tx0;
+			uint32_t invtx1 = 128 - tx1;
+			__m128i txx = _mm_srli_epi16(_mm_add_epi16(_mm_mullo_epi16(_mm_set_epi16(invtx1, tx1, invtx1, tx1, invtx0, tx0, invtx0, tx0), tyy), _mm_set1_epi16(63)), 7);
+			__m128i t00 = _mm_shufflehi_epi16(_mm_shufflelo_epi16(txx, _MM_SHUFFLE(3, 3, 3, 3)), _MM_SHUFFLE(3, 3, 3, 3));
+			__m128i spixel00 = _mm_mullo_epi16(t00, _mm_unpacklo_epi8(_mm_set_epi32(0, 0, sline0[sx0[1]], sline0[sx0[0]]), _mm_setzero_si128()));
+			__m128i t10 = _mm_shufflehi_epi16(_mm_shufflelo_epi16(txx, _MM_SHUFFLE(2, 2, 2, 2)), _MM_SHUFFLE(2, 2, 2, 2));
+			__m128i spixel10 = _mm_mullo_epi16(t10, _mm_unpacklo_epi8(_mm_set_epi32(0, 0, sline0[sx1[1]], sline0[sx1[0]]), _mm_setzero_si128()));
+			__m128i t01 = _mm_shufflehi_epi16(_mm_shufflelo_epi16(txx, _MM_SHUFFLE(1, 1, 1, 1)), _MM_SHUFFLE(1, 1, 1, 1));
+			__m128i spixel01 = _mm_mullo_epi16(t01, _mm_unpacklo_epi8(_mm_set_epi32(0, 0, sline1[sx0[1]], sline1[sx0[0]]), _mm_setzero_si128()));
+			__m128i t11 = _mm_shufflehi_epi16(_mm_shufflelo_epi16(txx, _MM_SHUFFLE(0, 0, 0, 0)), _MM_SHUFFLE(0, 0, 0, 0));
+			__m128i spixel11 = _mm_mullo_epi16(t11, _mm_unpacklo_epi8(_mm_set_epi32(0, 0, sline1[sx1[1]], sline1[sx1[0]]), _mm_setzero_si128()));
+			__m128i spixel = _mm_srli_epi16(_mm_add_epi16(_mm_add_epi16(_mm_add_epi16(_mm_add_epi16(spixel00, spixel10), spixel01), spixel11), _mm_set1_epi16(63)), 7);
+
+			// Pixel shade
+			spixel = _mm_srli_epi16(_mm_add_epi16(_mm_mullo_epi16(spixel, cargb), _mm_set1_epi16(127)), 8);
+
+			// Rescale from [0,255] to [0,256]
+			__m128i sa = _mm_shufflehi_epi16(_mm_shufflelo_epi16(spixel, _MM_SHUFFLE(3, 3, 3, 3)), _MM_SHUFFLE(3, 3, 3, 3));
+			sa = _mm_add_epi16(sa, _mm_srli_epi16(sa, 7));
+			__m128i sinva = _mm_sub_epi16(_mm_set1_epi16(256), sa);
+
+			__m128i dpixel = _mm_loadl_epi64((const __m128i*)(dline + x));
+			dpixel = _mm_unpacklo_epi8(dpixel, _mm_setzero_si128());
+
+			// dest.rgba = color.rgba * src.rgba * src.a + dest.rgba * (1-src.a)
+			__m128i result = _mm_srli_epi16(_mm_add_epi16(_mm_add_epi16(_mm_mullo_epi16(spixel, sa), _mm_mullo_epi16(dpixel, sinva)), _mm_set1_epi16(127)), 8);
+			_mm_storel_epi64((__m128i*)(dline + x), _mm_packus_epi16(result, _mm_setzero_si128()));
+			x += 2;
+		}
+#endif
+
+		while (x < x1)
+		{
+			float upix = u + uscale * (x - left);
+			float ufrac = upix - (int)upix;
+			int sx0 = (int)upix;
+			int sx1 = sx0 + 1;
+			sx0 = sx0 < swidth ? sx0 : swidth - 1;
+			sx1 = sx1 < swidth ? sx1 : swidth - 1;
+
+			// Linear filter sample:
+			uint32_t spixel00 = sline0[sx0];
+			uint32_t spixel10 = sline0[sx1];
+			uint32_t spixel01 = sline1[sx0];
+			uint32_t spixel11 = sline1[sx1];
+
+			uint32_t salpha00 = spixel00 >> 24;
+			uint32_t sred00 = (spixel00 >> 16) & 0xff;
+			uint32_t sgreen00 = (spixel00 >> 8) & 0xff;
+			uint32_t sblue00 = spixel00 & 0xff;
+
+			uint32_t salpha10 = spixel10 >> 24;
+			uint32_t sred10 = (spixel10 >> 16) & 0xff;
+			uint32_t sgreen10 = (spixel10 >> 8) & 0xff;
+			uint32_t sblue10 = spixel10 & 0xff;
+
+			uint32_t salpha01 = spixel01 >> 24;
+			uint32_t sred01 = (spixel01 >> 16) & 0xff;
+			uint32_t sgreen01 = (spixel01 >> 8) & 0xff;
+			uint32_t sblue01 = spixel01 & 0xff;
+
+			uint32_t salpha11 = spixel11 >> 24;
+			uint32_t sred11 = (spixel11 >> 16) & 0xff;
+			uint32_t sgreen11 = (spixel11 >> 8) & 0xff;
+			uint32_t sblue11 = spixel11 & 0xff;
+
+			uint32_t tx = (int)(ufrac * 128.0f);
+			uint32_t invtx = 128 - tx;
+
+			uint32_t t00 = (invtx * invty + 63) >> 7;
+			uint32_t t10 = (tx * invty + 63) >> 7;
+			uint32_t t01 = (invtx * ty + 63) >> 7;
+			uint32_t t11 = (tx * ty + 63) >> 7;
+
+			uint32_t salpha = (t00 * salpha00 + t10 * salpha10 + t01 * salpha01 + t11 * salpha11 + 63) >> 7;
+			uint32_t sred = (t00 * sred00 + t10 * sred10 + t01 * sred01 + t11 * sred11 + 63) >> 7;
+			uint32_t sgreen = (t00 * sgreen00 + t10 * sgreen10 + t01 * sgreen01 + t11 * sgreen11 + 63) >> 7;
+			uint32_t sblue = (t00 * sblue00 + t10 * sblue10 + t01 * sblue01 + t11 * sblue11 + 63) >> 7;
+
+			// Pixel shade
+			sred = (cred * sred + 127) >> 8;
+			sgreen = (cgreen * sgreen + 127) >> 8;
+			sblue = (cblue * sblue + 127) >> 8;
+			salpha = (calpha * salpha + 127) >> 8;
+
+			// Rescale from [0,255] to [0,256]
+			uint32_t sa = salpha + (salpha >> 7);
+			uint32_t sinva = 256 - sa;
+
+			// Load dest pixel
+			uint32_t dpixel = dline[x];
+			uint32_t dalpha = dpixel >> 24;
+			uint32_t dred = (dpixel >> 16) & 0xff;
+			uint32_t dgreen = (dpixel >> 8) & 0xff;
+			uint32_t dblue = dpixel & 0xff;
+
+			// dest.rgba = color.rgba * src.rgba * src.a + dest.rgba * (1-src.a)
+			uint32_t a = (salpha * sa + dalpha * sinva + 127) >> 8;
+			uint32_t r = (sred * sa + dred * sinva + 127) >> 8;
+			uint32_t g = (sgreen * sa + dgreen * sinva + 127) >> 8;
+			uint32_t b = (sblue * sa + dblue * sinva + 127) >> 8;
+			dline[x] = (a << 24) | (r << 16) | (g << 8) | b;
+			x++;
+		}
+	}
+}
+
+#else // drawTile nearest version:
 void BitmapCanvas::drawTile(CanvasTexture* tex, float left, float top, float width, float height, float u, float v, float uvwidth, float uvheight, Colorf color)
 {
 	if (width <= 0.0f || height <= 0.0f || color.a <= 0.0f)
@@ -876,6 +1091,7 @@ void BitmapCanvas::drawTile(CanvasTexture* tex, float left, float top, float wid
 		}
 	}
 }
+#endif
 
 void BitmapCanvas::drawGlyph(CanvasTexture* tex, float left, float top, float width, float height, float u, float v, float uvwidth, float uvheight, Colorf color)
 {

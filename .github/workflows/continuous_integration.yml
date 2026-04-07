@@ -59,7 +59,7 @@ jobs:
                 vulkan-volk
                 molten-vk
                 libvpx
-                sdl2
+                sdl3
                 tree
             extra_files: ""
 
@@ -71,7 +71,7 @@ jobs:
               sudo apt-get update && sudo apt-get install
                 libopenal-dev
                 waylandpp-dev
-                libsdl2-dev
+                libsdl3-dev
                 libwebp-dev
                 libbz2-dev
                 libomp-dev
