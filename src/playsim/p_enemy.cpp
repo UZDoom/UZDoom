@@ -1313,8 +1313,17 @@ bool isTargetablePlayer(AActor *actor, player_t *player, INTBOOL allaround, void
 	// the player then, eh?
 	if (!(actor->flags6 & MF6_SEEINVISIBLE))
 	{
-		if ((player->mo->flags & MF_SHADOW && !(actor->Level->i_compatflags & COMPATF_INVISIBILITY)) ||
-			player->mo->flags3 & MF3_GHOST)
+		// Raven-specific SHADOW behavior, so always apply sneak to it.
+		bool shouldSneak = (player->mo->flags3 & MF3_GHOST);
+		if (!shouldSneak)
+		{
+			// In Raven's games there was no GHOST flag and SHADOW was used directly instead, so always treat its sneak
+			// behavior the same in them.
+			shouldSneak = (player->mo->flags & MF_SHADOW)
+							&& ((gameinfo.gametype & GAME_Raven) || (actor->Level->i_compatflags2 & COMPATF2_ZDOOMSHADOW))
+							&& !(actor->Level->i_compatflags & COMPATF_INVISIBILITY);
+		}
+		if (shouldSneak)
 		{
 			if (player->mo->Distance2D(actor) > 128 && player->mo->Vel.XY().LengthSquared() < 5 * 5)
 			{ // Player is sneaking - can't detect
