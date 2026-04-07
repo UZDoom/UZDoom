@@ -335,6 +335,19 @@ bool TextEdit::OnMouseUp(const Point& pos, InputKey key)
 	return true;
 }
 
+bool TextEdit::OnMouseWheel(const Point &pos, InputKey key)
+{
+	if (key == InputKey::MouseWheelUp)
+	{
+		vert_scrollbar->SetPosition(vert_scrollbar->GetPosition() - 1);
+	}
+	else if (key == InputKey::MouseWheelDown)
+	{
+		vert_scrollbar->SetPosition(vert_scrollbar->GetPosition() + 1);
+	}
+	return true;
+}
+
 void TextEdit::OnKeyChar(std::string chars)
 {
 	if (!readonly && !chars.empty() && !(chars[0] >= 0 && chars[0] < 32))
