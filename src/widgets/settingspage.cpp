@@ -308,4 +308,6 @@ void SettingsPage::OnGeometryChanged()
 	y += LoadList->GetHeight();
 
 	Launcher->UpdatePlayButton();
+
+	LangList->ScrollToItem(LangList->GetSelectedItem());
 }
