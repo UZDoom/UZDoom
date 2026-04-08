@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-26 10:12+0000\n"
+"PO-Revision-Date: 2026-04-01 15:09+0000\n"
 "Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/hu/>\n"
@@ -1596,7 +1596,7 @@ msgid "FN_BISHOP"
 msgstr "Érsek"
 
 msgid "FN_ICEGUY"
-msgstr "Wendigo"
+msgstr "Wendigó"
 
 msgid "FN_SERPENT"
 msgstr "Orvhalász"
@@ -1614,7 +1614,7 @@ msgid "FN_FBOSS"
 msgstr "Zedek"
 
 msgid "FN_MBOSS"
-msgstr "Menelkir"
+msgstr "Menelkír"
 
 msgid "FN_CBOSS"
 msgstr "Traduktusz"
@@ -1641,7 +1641,7 @@ msgid "TAG_CWEAPWRAITHVERGE"
 msgstr "Lidércvég"
 
 msgid "TAG_FWEAPFIST"
-msgstr "Tűskés Páncélkesztyűk"
+msgstr "Tüskés Páncélkesztyűk"
 
 msgid "TAG_FWEAPAXE"
 msgstr "Timon Baltája"
@@ -4681,10 +4681,10 @@ msgid "OPTVAL_CLASSICZ"
 msgstr "Klasszikus ZDoom"
 
 msgid "OPTVAL_MODERN"
-msgstr "Modern (WASD)"
+msgstr "Új (WASD)"
 
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Modern (numpad)"
+msgstr "Új (Nyilak)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Szigorú KEYCONF a Fegyverek/Játékosok esetében"
@@ -5364,3 +5364,6 @@ msgstr "Böngészés a beállítások között"
 
 msgid "OPTMNU_OPENWADS"
 msgstr "Böngészés az IWAD mappában"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "Midi eszköz nem biztosít beállításokat."

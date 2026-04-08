@@ -20,51 +20,39 @@
 **
 */
 
+#include <cinttypes>
+
+#include <zvulkan/vulkanbuilders.h>
+#include <zvulkan/vulkancompatibledevice.h>
 #include <zvulkan/vulkanobjects.h>
+#include <zvulkan/vulkansurface.h>
 
-#include <inttypes.h>
-
-#include "v_video.h"
-#include "m_png.h"
-
-#include "r_videoscale.h"
-#include "i_time.h"
-#include "v_text.h"
-#include "version.h"
-#include "v_draw.h"
-
+#include "c_dispatch.h"
+#include "flatvertices.h"
+#include "hw_bonebuffer.h"
 #include "hw_clock.h"
-#include "hw_vrmodes.h"
-#include "hw_cvars.h"
+#include "hw_lightbuffer.h"
 #include "hw_skydome.h"
 #include "hwrenderer/data/hw_viewpointbuffer.h"
-#include "flatvertices.h"
-#include "hwrenderer/data/shaderuniforms.h"
-#include "hw_lightbuffer.h"
-#include "hw_bonebuffer.h"
-
+#include "m_png.h"
+#include "printf.h"
+#include "v_draw.h"
+#include "v_video.h"
+#include "version.h"
 #include "vk_renderdevice.h"
-#include "vk_hwbuffer.h"
-#include "vulkan/renderer/vk_renderstate.h"
-#include "vulkan/renderer/vk_renderpass.h"
 #include "vulkan/renderer/vk_descriptorset.h"
-#include "vulkan/renderer/vk_streambuffer.h"
 #include "vulkan/renderer/vk_postprocess.h"
 #include "vulkan/renderer/vk_raytrace.h"
+#include "vulkan/renderer/vk_renderpass.h"
+#include "vulkan/renderer/vk_renderstate.h"
 #include "vulkan/shaders/vk_shader.h"
+#include "vulkan/system/vk_buffer.h"
+#include "vulkan/system/vk_commandbuffer.h"
+#include "vulkan/textures/vk_framebuffer.h"
+#include "vulkan/textures/vk_hwtexture.h"
 #include "vulkan/textures/vk_renderbuffers.h"
 #include "vulkan/textures/vk_samplers.h"
-#include "vulkan/textures/vk_hwtexture.h"
 #include "vulkan/textures/vk_texture.h"
-#include "vulkan/textures/vk_framebuffer.h"
-#include <zvulkan/vulkanswapchain.h>
-#include <zvulkan/vulkanbuilders.h>
-#include <zvulkan/vulkansurface.h>
-#include <zvulkan/vulkancompatibledevice.h>
-#include "vulkan/system/vk_commandbuffer.h"
-#include "vulkan/system/vk_buffer.h"
-#include "engineerrors.h"
-#include "c_dispatch.h"
 
 FString JitCaptureStackTrace(int framesToSkip, bool includeNativeFrames, int maxFrames = -1);
 

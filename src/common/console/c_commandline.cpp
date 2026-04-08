@@ -24,14 +24,13 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 #include "c_commandline.h"
 #include "c_cvars.h"
-#include "v_text.h"
+#include "printf.h"
 
 // ParseCommandLine
 //

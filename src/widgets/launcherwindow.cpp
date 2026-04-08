@@ -134,6 +134,8 @@ void LauncherWindow::UpdateLanguage()
 		Release->UpdateLanguage();
 	}
 	Buttonbar->UpdateLanguage();
+
+	OnGeometryChanged();
 }
 
 void LauncherWindow::OnClose()

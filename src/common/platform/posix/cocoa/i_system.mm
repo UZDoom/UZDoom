@@ -28,6 +28,7 @@
 #include "i_common.h"
 #include "i_interface.h"
 #include "i_system.h"
+#include "printf.h"
 #include "st_console.h"
 #include "v_text.h"
 

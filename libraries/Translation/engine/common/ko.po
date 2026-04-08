@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-16 23:09+0000\n"
+"PO-Revision-Date: 2026-03-31 03:10+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/common/ko/>"
 "\n"
@@ -780,6 +780,7 @@ msgstr "고급 설정"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "모듈 재생 설정"
 
+#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "MIDI 플레이어 설정"
 

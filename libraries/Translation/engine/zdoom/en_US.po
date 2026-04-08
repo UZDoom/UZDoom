@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-17 02:16+0000\n"
+"PO-Revision-Date: 2026-04-02 03:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/en/>\n"
@@ -82,12 +82,10 @@ msgstr ""
 msgid "RAVENQUITMSG"
 msgstr "Are you sure you want to quit?"
 
-#, fuzzy
 msgctxt "heretic"
 msgid "SWSTRING"
 msgstr "Only available in the registered version"
 
-#, fuzzy
 msgid "DOSY"
 msgstr "(Press Y to quit)"
 
@@ -229,7 +227,6 @@ msgstr ""
 "The real Chex® Warrior\n"
 "wouldn't give up so fast!"
 
-#, fuzzy
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr "You got a pickup"
 
@@ -6763,3 +6760,9 @@ msgstr "Browse Configs"
 #, fuzzy
 msgid "OPTMNU_OPENWADS"
 msgstr "Browse IWAD Folder"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "Midi device does not expose any options."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Emulate Mikoportals"

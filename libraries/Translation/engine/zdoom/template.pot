@@ -5183,3 +5183,9 @@ msgstr ""
 
 msgid "OPTMNU_OPENWADS"
 msgstr ""
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr ""
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr ""

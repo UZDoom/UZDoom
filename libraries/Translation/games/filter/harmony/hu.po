@@ -2,19 +2,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: none\n"
-"PO-Revision-Date: 2026-02-12 19:09+0000\n"
+"PO-Revision-Date: 2026-04-02 21:09+0000\n"
+"Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/doom-engine-"
+"games/harmony-filter/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "NIGHTMARE"
-msgstr "Biztos vagy abban hogy megbírkózol vele?\\n\\nnyomj 'Y'-t vagy 'N'-t"
+msgstr ""
+"Biztos vagy abban hogy megbírkózol vele?\\n\\n"
+"nyomj 'Y'-t vagy 'N'-t..."
 
 msgid "AMSTR_MARKEDSPOT"
-msgstr "Hely megjelölve."
+msgstr "Hely megjelölve"
 
 msgid "PD_BLUEO"
 msgstr "ZÖLD kulcskártya szükséges"
@@ -35,10 +40,10 @@ msgid "PD_REDK"
 msgstr "LILA kulcs szükséges"
 
 msgid "GOTARMOR"
-msgstr "Vért felvéve"
+msgstr "Vért felvéve."
 
 msgid "GOTMEGA"
-msgstr "Harci vért felvéve"
+msgstr "Harci vért felvéve."
 
 msgid "GOTMSPHERE"
 msgstr "Szuperéleterő"
@@ -65,10 +70,10 @@ msgid "GOTSTIM"
 msgstr "Gyógyító gomba"
 
 msgid "GOTMEDIKIT"
-msgstr "Megszerezve: orvosi csomag"
+msgstr "Megszerezve: orvosi csomag."
 
 msgid "GOTMEDINEED"
-msgstr "Megszerezve: már NAGYON hiányzott orvosi csomag"
+msgstr "Megszerezve: már NAGYON hiányzott orvosi csomag."
 
 msgid "GOTMAP"
 msgstr "Térkép"
@@ -83,10 +88,10 @@ msgid "GOTROCKBOX"
 msgstr "Megszerezve: Gránátok."
 
 msgid "GOTSHELLBOX"
-msgstr "Megszerezve: doboznyi puska sörét"
+msgstr "Megszerezve: doboznyi puska sörét."
 
 msgid "GOTBACKPACK"
-msgstr "Megszerezve: lőszeres hátizsák"
+msgstr "Megszerezve: lőszeres hátizsák."
 
 msgid "GOTBFG9000"
 msgstr "Megszerezve: Gránát."
@@ -95,13 +100,13 @@ msgid "GOTCHAINGUN"
 msgstr "Megszerezve: Gépfegyver."
 
 msgid "GOTLAUNCHER"
-msgstr "Megszerezve: Gránátvető"
+msgstr "Megszerezve: Gránátvető."
 
 msgid "GOTPLASMA"
 msgstr "Entrópiavető!"
 
 msgid "GOTSHOTGUN"
-msgstr "Megszerezve: Sörétes puska"
+msgstr "Megszerezve: Sörétes puska."
 
 msgid "STSTR_DQDON"
 msgstr "Isten mód BE"

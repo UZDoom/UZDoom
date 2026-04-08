@@ -515,7 +515,7 @@ class OptionMenuItemJoyConfigMenu : OptionMenuItemSubmenu
 				opt.mItems.Push(it);
 			}
 
-			it = new("OptionMenuJoyReset").Init("$JOYMNU_RESETALL", joy);
+			it = new("OptionMenuJoyReset").Init("$OPTMNU_DEFAULTS", joy);
 			opt.mItems.Push(it);
 
 			it = new("OptionMenuItemStaticText").Init(" ", false);
@@ -539,13 +539,13 @@ class OptionMenuItemJoyConfigMenu : OptionMenuItemSubmenu
 					opt.mItems.Push(it);
 					it = new("OptionMenuItemJoyCurve").Init("$JOYMNU_CURVE", i, "JoyAxisCurveNames", false, joy);
 					opt.mItems.Push(it);
-					it = new("OptionMenuSliderJoyCurve").Init("$JOYMNU_CURVE_X1", i, 0, 0.9, 0.05, 3, joy, 0);
+					it = new("OptionMenuSliderJoyCurve").Init("X1", i, 0, 0.9, 0.05, 3, joy, 0);
 					opt.mItems.Push(it);
-					it = new("OptionMenuSliderJoyCurve").Init("$JOYMNU_CURVE_Y1", i, 0, 0.9, 0.05, 3, joy, 1);
+					it = new("OptionMenuSliderJoyCurve").Init("Y1", i, 0, 0.9, 0.05, 3, joy, 1);
 					opt.mItems.Push(it);
-					it = new("OptionMenuSliderJoyCurve").Init("$JOYMNU_CURVE_X2", i, 0, 0.9, 0.05, 3, joy, 2);
+					it = new("OptionMenuSliderJoyCurve").Init("X2", i, 0, 0.9, 0.05, 3, joy, 2);
 					opt.mItems.Push(it);
-					it = new("OptionMenuSliderJoyCurve").Init("$JOYMNU_CURVE_Y2", i, 0, 0.9, 0.05, 3, joy, 3);
+					it = new("OptionMenuSliderJoyCurve").Init("Y2", i, 0, 0.9, 0.05, 3, joy, 3);
 					opt.mItems.Push(it);
 					it = new("OptionMenuSliderJoyDeadZone").Init("$JOYMNU_DEADZONE", i, 0, 0.9, 0.05, 3, joy);
 					opt.mItems.Push(it);

@@ -78,6 +78,7 @@
 #define WATER_SINK_SMALL_FACTOR	0.25
 #define WATER_SINK_SPEED		0.5
 #define WATER_JUMP_SPEED		3.5
+#define Z_UNDERFLOW             -32768.0
 
 // EXTERNAL FUNCTION PROTOTYPES --------------------------------------------
 
@@ -2950,6 +2951,12 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 
 	mo->AddZ(mo->Vel.Z);
 
+	if (mo->Level->i_compatflags2 & COMPATF2_EMULATEMIKOPORTALS && mo->Z() < Z_UNDERFLOW)
+	{
+		mo->SetZ(mo->ceilingz);
+		mo->Prev.Z = mo->Z();
+	}
+
 	mo->CallFallAndSink(grav, oldfloorz);
 
 	// Hexen compatibility handling for floatbobbing. Ugh...
@@ -3014,11 +3021,12 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 		mo->Vel.Z *= friction;
 	}
 
-//
-// clip movement
-//
+	//
+	// clip movement
+	//
 	if (mo->Z() <= mo->floorz)
-	{	// Hit the floor
+	{
+		// Hit the floor
 		if ((!mo->player || !(mo->player->cheats & CF_PREDICTING)) &&
 			mo->Sector->SecActTarget != NULL &&
 			mo->Sector->floorplane.ZatPoint(mo) == mo->floorz)
@@ -4959,6 +4967,7 @@ void AActor::Tick ()
 			}
 
 		}
+
 		if (Vel.Z != 0 || BlockingMobj.ForceGet() || Z() != floorz)
 		{	// Handle Z velocity and gravity
 			if (((flags2 & MF2_PASSMOBJ) || (flags & MF_SPECIAL)) && !(Level->i_compatflags & COMPATF_NO_PASSMOBJ))

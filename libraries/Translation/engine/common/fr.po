@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-15 00:10+0000\n"
+"PO-Revision-Date: 2026-03-31 03:10+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/uzdoom/common/fr/>"
 "\n"
@@ -97,7 +97,7 @@ msgid "OPTVAL_ON"
 msgstr "Activé"
 
 msgid "OPTVAL_AUTO"
-msgstr ""
+msgstr "Automatique"
 
 msgid "OPTMNU_TITLE"
 msgstr "Options"
@@ -780,6 +780,7 @@ msgstr "Options avancées"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Options lecteur de module"
 
+#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "Option lecteur MIDI"
 

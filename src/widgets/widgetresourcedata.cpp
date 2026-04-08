@@ -125,10 +125,10 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name, bool roo
 		// tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR' 'Noto Sans SC' # 'Noto Sans TC'
 		struct { const char *file; const char *lang; } fonts[] = {
 			// fonts with specific languages list here for high priority
-			{ "ui/noto/noto-sans-jp.ttf", "ja" },
-			{ "ui/noto/noto-sans-kr.ttf", "ko" },
-			{ "ui/noto/noto-sans-sc.ttf", "zh-Hans" },
-			// "ui/noto/noto-sans-tc.ttf", "zh-Hant" },
+			{ "ui/noto/noto-sans-jp.ttf", "ja-*-*" },
+			{ "ui/noto/noto-sans-kr.ttf", "ko-*-*" },
+			{ "ui/noto/noto-sans-sc.ttf", "zh-Hans-*" },
+			// "ui/noto/noto-sans-tc.ttf", "zh-Hant-*" },
 
 			// generic fonts
 			{ "ui/noto/noto-sans.ttf", ""},

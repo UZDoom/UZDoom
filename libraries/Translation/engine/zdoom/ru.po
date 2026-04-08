@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-22 19:09+0000\n"
+"PO-Revision-Date: 2026-04-06 14:09+0000\n"
 "Last-Translator: Никита Скатьков <nikita.ska4oK@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/ru/>\n"
@@ -3007,7 +3007,6 @@ msgstr "Колдун"
 msgid "MNU_WARLOCK"
 msgstr "Чернокнижник"
 
-#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Архимаг"
 
@@ -4196,7 +4195,6 @@ msgstr "MBF21"
 msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (строгий)"
 
-#, fuzzy
 msgid "OPTVAL_ZDOOM2063"
 msgstr "ZDoom 2.0.63"
 
@@ -4438,7 +4436,6 @@ msgid "OPTVAL_DARK"
 msgstr "Тёмный"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
-#, fuzzy
 msgid "OPTVAL_LEGACY"
 msgstr "Doom Legacy"
 
@@ -4566,18 +4563,16 @@ msgstr "Сохранение «%s» из несовместимой версии
 msgid "TXT_OTHERENGINESG"
 msgstr "Сохранение «%s» из другого, основанного на ZDoom, движка:"
 
-#, fuzzy
 msgid "TXT_TOOOLDSG"
-msgstr "Сохранение «%s» из старой версии: %d (%e — последняя совместимая)."
+msgstr "Сохранение «%s» из старой версии (%d). %e — последняя совместимая."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
 # — Undead
 # 
 # Ask Randi: The text is old. I won't change it.
-#, fuzzy
 msgid "TXT_TOONEWSG"
-msgstr "Сохранение «%s» из новой версии: %d (%e — последняя совместимая)."
+msgstr "Сохранение «%s» из новой версии (%d). %e — последняя совместимая."
 
 msgid "TXT_NOMAPSG"
 msgstr "В сохранении «%s» отсутствует текущая карта."
@@ -4812,9 +4807,8 @@ msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Пистолет после смерти"
 
 # Resets inventory on every map
-#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "Пистолет в начале"
+msgstr "Пистолет в начале на каждой карте"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr "Разрешить создание игроков-зомби"
@@ -5278,13 +5272,11 @@ msgstr ""
 "Регулируйте настройки до тех пор, пока это изображение не приобретет "
 "однородный серый оттенок."
 
-#, fuzzy
 msgid "OPENALMNU_SUPERSTEREOWIDTH"
-msgstr "Широкое Супер Стерео"
+msgstr "Длина суперстерео"
 
-#, fuzzy
 msgid "OPENALMNU_MUSICMODE"
-msgstr "Режим Музыки"
+msgstr "Режим музыки"
 
 msgid "ACTION_COPYTOCLIPBOARD"
 msgstr "Копировать в буфер обмена"
@@ -5325,13 +5317,11 @@ msgstr "Интенсивность оттенков бонусов"
 msgid "PICKER_PLAYERCLASS"
 msgstr "Класс игрока"
 
-#, fuzzy
 msgid "OPTVAL_DIRECTMIX"
-msgstr "Прямой"
+msgstr "Прямое смешивание"
 
-#, fuzzy
 msgid "OPTVAL_SUPERSTEREO"
-msgstr "Супер Стерео"
+msgstr "Суперстерео"
 
 msgid "ERROR_ABORT"
 msgstr "Запуск не удался."
@@ -5339,18 +5329,38 @@ msgstr "Запуск не удался."
 msgid "CNTRLMNU_ADJUST_LIGHTS"
 msgstr "Регулировка освещения"
 
-#, fuzzy
 msgid "OPTVAL_SMOOTH"
-msgstr "Плавный"
+msgstr "Плавная"
 
-#, fuzzy
 msgid "TAG_MACIL"
 msgstr "Мэйсил"
 
-#, fuzzy
 msgid "TAG_MAULER"
 msgstr "Истязатель"
 
-#, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Гранатомёт"
+
+msgid "ERROR_FATAL"
+msgstr "Критическая ошибка"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Бок о бок, экранное каше"
+
+msgid "LANG_NATIVE"
+msgstr "Русский"
+
+msgid "LANG_ENG"
+msgstr "Russian"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "Обзор WAD-файлов"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Обзор конфигураций"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "Обзор папки IWAD"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "MIDI-устройство не предоставляет никаких настроек."
