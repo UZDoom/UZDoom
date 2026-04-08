@@ -21,10 +21,10 @@
 **
 */
 
-#include "widgets/launcherwindow.h"
+#include "launcher/starter.h"
 
 // TODO: get rid of this
 int I_PickIWad_Cocoa(FStartupSelectionInfo &info)
 {
-	return LauncherWindow::ExecModal(info);
+	return Starter::ExecModal(info);
 }

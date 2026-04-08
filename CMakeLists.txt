@@ -367,7 +367,7 @@ else()
 	if( APPLE )
 		list(PREPEND CMAKE_PREFIX_PATH "/opt/local")    # port
 		list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew") # brew
-		set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13")
+		set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15")
 		if( CMAKE_CXX_COMPILER_ID STREQUAL "GNU" )
 			# If we're compiling with a custom GCC on the Mac (which we know since g++-4.2 doesn't support C++11) statically link libgcc.
 			set( ALL_C_FLAGS "-static-libgcc" )
@@ -410,6 +410,10 @@ if( MSVC )
 	set(ABSL_MSVC_STATIC_RUNTIME ON)
 endif()
 add_subdirectory( libraries/abseil )
+
+set(NFD_OVERRIDE_RECENT_WITH_DEFAULT ON)
+set(NFD_PORTAL ON)
+add_subdirectory( libraries/nativefiledialog-extended )
 
 set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 add_subdirectory( libraries/ZWidget )

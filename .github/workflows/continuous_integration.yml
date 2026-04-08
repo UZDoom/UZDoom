@@ -35,7 +35,7 @@ jobs:
           - name: Windows
             os: windows-latest
             build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
-            build_opts_extra: ""
+            build_opts_extra: "-DSDL2_LIBRARY=sdl2/lib/x64/SDL2 -DSDL2_INCLUDE_DIR=build/sdl2/include"
             deps_cmdline: &msvc_deps >-
               choco install
                 tree
@@ -46,6 +46,9 @@ jobs:
               sndfile.zip
                 2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f
                 https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
+              sdl2.zip
+                af347939395a58b365846aaea27391e69f9ec9d4dd650d6ac40802159b418a6e
+                https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-VC.zip
 
           - name: MacOS
             os: macos-latest
@@ -77,6 +80,8 @@ jobs:
                 libomp-dev
                 libvpx-dev
                 libfuse2
+                libgtk-3-dev
+                libglib2.0-dev
             extra_files: &linux_files >-
               appimage-builder
                 4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f

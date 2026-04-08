@@ -1,0 +1,71 @@
+.templates_sha: &template_sha d11c0dd4c1c9a69c14b4af9b50cdd12b89d24672
+
+include:
+  - project: 'freedesktop/ci-templates'
+    ref: *template_sha
+    file: '/templates/debian.yml'
+  - project: 'freedesktop/ci-templates'
+    ref: *template_sha
+    file: '/templates/ci-fairy.yml'
+
+stages:
+  - review
+  - containers-build
+  - test
+
+variables:
+  FDO_UPSTREAM_REPO: wayland/wayland-protocols
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+.debian:
+  variables:
+    FDO_DISTRIBUTION_VERSION: trixie
+    FDO_DISTRIBUTION_PACKAGES: 'build-essential pkg-config meson git ca-certificates libffi-dev libexpat1-dev libxml2-dev'
+    FDO_DISTRIBUTION_TAG: '2025-11-15.0'
+    FDO_DISTRIBUTION_EXEC: 'env FDO_CI_CONCURRENT=${FDO_CI_CONCURRENT} ./.gitlab-ci/debian-install.sh'
+
+check-commit:
+  extends:
+    - .fdo.ci-fairy
+  stage: review
+  script:
+    - ci-fairy check-commits --signed-off-by --junit-xml=results.xml
+  variables:
+    GIT_DEPTH: 100
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: always
+    - when: never
+  artifacts:
+    reports:
+      junit: results.xml
+
+container_build:
+  extends:
+    - .debian
+    - .fdo.container-build@debian
+  stage: containers-build
+  variables:
+    GIT_STRATEGY: none
+
+test-meson:
+  stage: test
+  extends:
+    - .debian
+    - .fdo.distribution-image@debian
+  script:
+    - meson build
+    - ninja -C build
+    - meson test -C build
+    - ninja -C build install
+  artifacts:
+    name: wayland-protocols-$CI_COMMIT_SHA
+    when: always
+    paths:
+    - $CI_PROJECT_DIR/build/meson-logs

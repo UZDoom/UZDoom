@@ -53,7 +53,7 @@ class Profile
 
 	std::string hostPort        = "5029";
 	int      hostMaxPlayers  = 8;
-	std::string hostTickRate    = "25Hz";
+	std::string hostTickRate    = "35Hz";
 	std::string hostGamemode    = "Cooperative";
 	std::string hostNetworkMode = "Packet Server";
 	std::string joinAddress{};

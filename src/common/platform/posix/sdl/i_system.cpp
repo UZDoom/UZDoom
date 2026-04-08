@@ -53,8 +53,8 @@
 #include "st_start.h"
 #include "v_font.h"
 #include "vm.h"
-#include "widgets/errorwindow.h"
-#include "widgets/launcherwindow.h"
+#include "launcher/errorwindow.h"
+#include "launcher/starter.h"
 
 #if defined(__APPLE__)
 int I_PickIWad_Cocoa (WadStuff *wads, int numwads, bool showwin, int defaultiwad);
@@ -124,7 +124,7 @@ void Unix_I_FatalError(const char* errortext)
 		for (const FString& line : g_AllPrintOutput)
 			alltext.append(line.GetChars(), line.Len());
 
-		g_QueueRestart = ErrorWindow::ExecModal(errortext, alltext);
+		g_QueueRestart = ErrorWindow::ExecModal(errortext, alltext, {});
 	}
 	else
 	{
@@ -350,7 +350,7 @@ bool I_PickIWad (bool showwin, FStartupSelectionInfo& info)
 	}
 	return false;
 #else
-	return LauncherWindow::ExecModal(info);
+	return Starter::ExecModal(info);
 #endif
 }
 

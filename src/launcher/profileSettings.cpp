@@ -213,7 +213,7 @@ void ProfileSettings::Draw(bool *p_open, Profile *currEdit, const std::string &p
 
 		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.8f, 0.5f, 0.0f, 1.0f));
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1.0f, 0.6f, 0.1f, 1.0f));
-		if (ImGui::Button("Export Profile..."))
+		if (ImGui::Button(GStrings.GetString("PROFSET_EXPPROF")))
 		{
 			nfdchar_t      *outPath       = nullptr;
 			nfdfilteritem_t filterItem[1] = {
@@ -839,10 +839,10 @@ void ProfileSettings::DrawLaunchTab(Profile *currEdit)
 			ImGui::Text("%s", GStrings.GetString("PROFSET_LAUNCH_HOTICK"));
 			ImGui::TableNextColumn();
 			ImGui::SetNextItemWidth(-FLT_MIN);
-			const char *ticks[]      = {"25Hz", "17.5Hz", "11.6Hz"};
-			const char *tickLabels[] = {GStrings.GetString("PROFSET_LAUNCH_TICK25"),
-			                            GStrings.GetString("PROFSET_LAUNCH_TICK175"),
-			                            GStrings.GetString("PROFSET_LAUNCH_TICK116")};
+			const char *ticks[]      = {"35Hz", "17.5Hz", "11.6Hz"};
+			const char *tickLabels[] = {GStrings.GetString("PROFSET_LAUNCH_TICK35"),
+			                            GStrings.GetString("PROFSET_LAUNCH_TICK17_5"),
+			                            GStrings.GetString("PROFSET_LAUNCH_TICK11_6")};
 			int         tickIdx      = 0;
 			for (int i = 0; i < 3; ++i)
 				if (currEdit->hostTickRate == ticks[i])
@@ -1079,16 +1079,6 @@ void ProfileSettings::DrawFlagEditorModal(Profile *currEdit)
 		}
 
 		ImGui::SameLine();
-
-		float rightAlignX = ImGui::GetWindowWidth() - 120.0f - ImGui::GetStyle().WindowPadding.x;
-		ImGui::SetCursorPosX(rightAlignX);
-
-		ImGui::SetCursorPosX((ImGui::GetWindowSize().x - btnWidth) * 0.5f);
-		if (ImGui::Button("Cancel", ImVec2(btnWidth, 0)))
-		{
-			ImGui::CloseCurrentPopup();
-		}
-
 		ImGui::EndPopup();
 	}
 }

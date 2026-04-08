@@ -13,7 +13,7 @@
 **
 */
 
-#include "netstartwindow.h"
+#include "launcher/netstartwindow.h"
 #include "gstrings.h"
 #include "version.h"
 
