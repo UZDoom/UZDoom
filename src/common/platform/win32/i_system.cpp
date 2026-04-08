@@ -67,7 +67,7 @@
 #include "i_mainwindow.h"
 #include "stringtable.h"
 
-#include "widgets/launcherwindow.h"
+#include "launcher/starter.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -355,7 +355,7 @@ bool I_PickIWad(bool showwin, FStartupSelectionInfo& info)
 {
 	if (showwin)
 	{
-		return LauncherWindow::ExecModal(info);
+		return Starter::ExecModal(info);
 	}
 	return true;
 }

@@ -1,0 +1,11 @@
+---
+BasedOnStyle: Chromium
+IndentWidth: 4
+BinPackArguments: false
+ColumnLimit: 100
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: true
+---
+Language: Cpp
+---
+Language: ObjC

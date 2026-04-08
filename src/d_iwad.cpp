@@ -634,6 +634,23 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	}
 	unsigned numFoundWads = mFoundWads.Size();
 
+	TArray<WadStuff>      wads;
+	FStartupSelectionInfo info2 = FStartupSelectionInfo(wads, *Args, 0);
+
+	if (!iwadparm) // only show if no argument was given
+	{
+		// we hook the launcher in here and set launch accordingly to the profile
+
+		if (I_PickIWad(queryiwad || HoldingQueryKey(queryiwad_key), info2))
+		{
+			return -1; // UI was closed
+		}
+		else
+		{
+			return -1; // UI was closed
+		}
+	}
+
 	if (iwadparm)
 	{
 		const char* const extensions[] = { ".wad", ".pk3", ".iwad", ".ipk3", ".ipk7" };

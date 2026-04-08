@@ -19,12 +19,6 @@
 #include "i_interface.h"
 #include "launcherMainWindow.h"
 
-#include "widgets/noto-sans-armenian.h"
-#include "widgets/noto-sans-georgian.h"
-#include "widgets/noto-sans-jp.h"
-#include "widgets/noto-sans-kr.h"
-#include "widgets/noto-sans.h"
-
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -40,8 +34,8 @@ static LauncherMainWindow *MainWindow = nullptr;
 // Encapsulated SDL State for the Launcher Window
 static Starter::ImGuiContextState LauncherContext;
 
-// This is called from outside to kickstart the launcher ui and logics
-bool ImGuiKickStarter(const FStartupSelectionInfo &info)
+// This is called from outside to start the launcher ui and logics
+bool Starter::ExecModal(const FStartupSelectionInfo &info)
 {
 
 	if (!Starter::Init())
@@ -152,6 +146,7 @@ Starter::ImGuiContextState Starter::SetupContext(const char *title, int width, i
 	float baseFontSize   = FONT_SIZE;
 	float scaledFontSize = baseFontSize * state.scale;
 
+	/*
 	io.Fonts->AddFontFromMemoryCompressedTTF(notosans_compressed_data, notosans_compressed_size, scaledFontSize,
 	                                         &config);
 	config.MergeMode = true;
@@ -165,6 +160,9 @@ Starter::ImGuiContextState Starter::SetupContext(const char *title, int width, i
 	                                         scaledFontSize, &config);
 	io.Fonts->AddFontFromMemoryCompressedTTF(notosansjp_compressed_data, notosansjp_compressed_size, scaledFontSize,
 	                                         &config);
+
+
+	*/
 
 	ImGui::StyleColorsDark();
 

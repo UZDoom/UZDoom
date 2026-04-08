@@ -61,6 +61,9 @@ class Starter
 	// callback for other UIs to piggyback off the main loop, e.g. error and netstart windows
 	using RenderCallback = std::function<void(bool &done)>;
 	static void RunImGuiLoop(ImGuiContextState &context, const RenderCallback &renderCallback);
+
+	// start here
+	static bool ExecModal(const FStartupSelectionInfo &info);
+
 };
 
-bool ImGuiKickStarter(const FStartupSelectionInfo &info);
