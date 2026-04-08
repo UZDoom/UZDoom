@@ -22,7 +22,7 @@
 **
 */
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <assert.h>
 #include <ctype.h>
 #include <stdio.h>
