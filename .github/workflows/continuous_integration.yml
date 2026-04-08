@@ -113,7 +113,7 @@ jobs:
           - name: Windows MinGW GCC
             os: windows-latest
             build_opts: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
-            build_opts_extra: -DFORCE_NO_LTO=true
+            build_opts_extra: -DFORCE_NO_LTO=true -DSDL2_LIBRARY=sdl2/lib/x64/SDL2 -DSDL2_INCLUDE_DIR=build/sdl2/include
             deps_cmdline: &mingw_deps |
               pacman -S --noconfirm --needed
                 mingw-w64-x86_64-openal

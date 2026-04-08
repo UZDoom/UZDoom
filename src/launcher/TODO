@@ -1,1 +1,2 @@
-- Change IWAD selector into a dropdown, derived from the added total IWADS
+- Let Launcher use packaged uzdoom.pk3 fonts
+- add autodetection for IWADs
