@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-18 03:02+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-03-31 03:10+0000\n"
+"Last-Translator: RageSpark <bgamer332ofc@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Weblate 5.17-dev\n"
 
 msgid "PRESSKEY"
-msgstr "Aperte uma tecla."
+msgstr "Pressione qualquer tecla."
 
 msgid "SECRETMESSAGE"
 msgstr "Segredo revelado!"
@@ -153,7 +153,6 @@ msgstr ""
 "Olha, se você sair agora, vai perder\n"
 "a sua contagem de vítimas!"
 
-#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
 "Sai daqui. Quando você voltar,\n"
@@ -308,13 +307,11 @@ msgstr "Modo sem colisão: ATIVADO"
 msgid "STSTR_NCOFF"
 msgstr "Modo sem colisão: DESATIVADO"
 
-#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Modo sem colisão 2: ATIVADO"
+msgstr "Modo sem colisão 3D: ATIVADO"
 
-#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Modo sem colisão 2: DESATIVADO"
+msgstr "Modo sem colisão 3D: DESATIVADO"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -1279,7 +1276,7 @@ msgid "OB_BEAST"
 msgstr "%o foi carbonizad@[ao_ptb] por um homem-dragão."
 
 msgid "OB_CLINK"
-msgstr "Um Unhas-de-sabre cortou %o."
+msgstr "%o foi cortad@[ao_ptb] por um Unhas-de-sabre."
 
 msgid "OB_DSPARIL1"
 msgstr "%o foi escaldad@[ao_ptb] pela serpente de D'Sparil."
@@ -5174,3 +5171,102 @@ msgstr "Desintegrador"
 #, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Lança-granadas"
+
+msgid "ACTION_STARTGAME"
+msgstr "Começar Jogo"
+
+msgid "ACTION_KICK"
+msgstr "Expulsar"
+
+msgid "ACTION_BAN"
+msgstr "Banir"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Salvar Relatório"
+
+msgid "ERROR_FATAL"
+msgstr "Erro Fatal"
+
+msgid "ERROR_ABORT"
+msgstr "Execução não pôde continuar."
+
+msgid "FILEPICKER_ANY"
+msgstr "Todos os Arquivos"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "Relatórios em Arquivos Zip"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Detecção automática de configurações de compatibilidade"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Classe do Jogador"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "Pasta de IWADs"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Pasta de Configurações"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "Pasta de WADs"
+
+msgid "ACTION_RESTART"
+msgstr "Reiniciar"
+
+msgid "ACTION_ABORT"
+msgstr "Abortar"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"Este é um tooltip de exemplo.\n"
+"Aqui está um texto complementar.\n"
+"...\n"
+"Aqui está uma linha de texto bem longa que parece só continuar sem nunca ter "
+"algo de interessante para falar, aparentemente sendo longo só porque os "
+"desenvolvedores não conseguem explicar o que uma opção faz."
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Iluminação extra"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Aditivo"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Transparente"
+
+msgid "OPTVAL_LAX"
+msgstr "Relaxado"
+
+msgid "OPTVAL_STRICT"
+msgstr "Estrito"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Calibração de Imagem"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Ajuste de Iluminação"
+
+msgid "LANG_ENG"
+msgstr "Portuguese (Brazil)"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "De uma distância normal, ajuste as opções abaixo."
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Copiar"
+
+msgid "HAPMNU_TITLE"
+msgstr "Opções de Vibração"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Estilo Visual da Explosão"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Iluminação"
+
+msgid "LANG_NATIVE"
+msgstr "Português (Brasil)"

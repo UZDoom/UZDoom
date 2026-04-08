@@ -28,23 +28,19 @@
 #endif
 
 #include <miniz.h>
-
 #include <zmusic.h>
-#include "filesystem.h"
-#include "c_dispatch.h"
 
-#include "stats.h"
-#include "cmdlib.h"
 #include "c_cvars.h"
-#include "c_console.h"
-#include "v_text.h"
+#include "c_dispatch.h"
+#include "cmdlib.h"
+#include "filesystem.h"
 #include "i_sound.h"
 #include "i_soundfont.h"
+#include "printf.h"
 #include "s_music.h"
-#include "filereadermusicinterface.h"
+#include "stats.h"
 
 using namespace FileSys;
-
 
 void I_InitSoundFonts();
 

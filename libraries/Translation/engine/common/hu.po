@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-26 10:12+0000\n"
+"PO-Revision-Date: 2026-04-01 15:09+0000\n"
 "Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/common/"
 "hu/>\n"
@@ -778,7 +778,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "Modul lejátszó beállításai"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "MIDI lejátszó beállításai"
+msgstr "MIDI eszköz beállításai"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Haladó hangbeállítások"

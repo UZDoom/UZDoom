@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-18 01:09+0000\n"
+"PO-Revision-Date: 2026-04-02 21:09+0000\n"
 "Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/doom-engine-"
 "games/strife/hu/>\n"
@@ -1061,7 +1061,7 @@ msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
 msgstr "Mit akartál tenni? Nekimenni egymagad egy keresztesnek?"
 
 msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
-msgstr "Implantátum fejlesztés?"
+msgstr "Implantátum fejlesztés?."
 
 msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
 msgstr "Ez szerintem megteszi."
@@ -1312,9 +1312,9 @@ msgstr "Én vagyok a helyettes."
 
 msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
 msgstr ""
-"Már ideje volt. Menj és beszélj Kettickkel a magban. Ja, és vidd magaddal "
-"ezt a mágneskártyát. Gondolom nem akarod magadat agyonlövetni az első "
-"napodon."
+"Már ideje volt, hogy megjelenj. Menj és beszélj Ketrick-kel a magban. Ja, és "
+"vidd magaddal ezt a mágneskártyát. Gondolom nem akarod magadat agyonlövetni "
+"az első napodon, nemde?"
 
 msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
 msgstr "Hol van az erőkristály?"
@@ -2325,9 +2325,8 @@ msgstr "Remek, ez könnyűnek hangzik."
 
 msgid "TXT_DLG_SCRIPT17_D12128_THERE"
 msgstr ""
-"Van amúgy egy előnye a számítógép szobának, ott tartják ugyanis a torony "
-"terveit ott tárolják. Mi lenne mondjuk ha véletlen magaddal hoznád őket? heh "
-"heh!"
+"Okos ötlet szétrombolni a számítógépet, hiszen a torony terveit ott "
+"tárolják. Mondhatni, kiverheted a biztosítékot? Heh heh!"
 
 msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
 msgstr "Valami más még?"
@@ -2432,7 +2431,7 @@ msgstr ""
 "lehet, aki egyesíti még két másik darabbal."
 
 msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
-msgstr "Gondolom kell neked az a tárgy."
+msgstr "Gondolom kell neked az a tárgy, igaz?"
 
 msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
 msgstr ""
@@ -2807,7 +2806,7 @@ msgstr ""
 "elmennék, mielőtt megtalál."
 
 msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
-msgstr "Miért tennék olyat?"
+msgstr "Miért tennék olyat."
 
 msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
 msgstr "Most mondtam, hogy nem szereti a látogatókat!"
@@ -4375,7 +4374,7 @@ msgid "TXT_SUB_LOG30"
 msgstr "Pont ez hiányzott. Még több barna trutymák."
 
 msgid "TXT_SUB_LOG31"
-msgstr "Nézz oda! Azt hiszem ez az az ajtó amit félig ki akar nyitni Weran."
+msgstr "Nézz oda! Azt hiszem ez az a kapu, amit félig ki akar nyitni Weran!"
 
 msgid "TXT_SUB_LOG32"
 msgstr ""
@@ -4422,7 +4421,7 @@ msgstr ""
 "lobogó... amondó vagyok megleltük."
 
 msgid "TXT_SUB_LOG43"
-msgstr "Ez a hírhedt Progamozó? Nincs az az isten!"
+msgstr "Ez a hírhedt Programozó? Lehetetlen!"
 
 msgid "TXT_SUB_LOG44"
 msgstr ""
@@ -4480,8 +4479,8 @@ msgstr ""
 
 msgid "TXT_SUB_LOG57"
 msgstr ""
-"A Püspök elég izmos védelmet élvez, érdemes lesz lopnunk egy uniformist a "
-"beilleszkedés jegyében."
+"A Püspök elég izmos védelmet élvez, nem lenne-e érdemes lesz lopnunk egy "
+"egyenruhát a beilleszkedés jegyében?"
 
 msgid "TXT_SUB_LOG58"
 msgstr "Emlékeztess rá, hogy ha túlvagyunk ezen hívjak egy szobafestőt."
@@ -4912,7 +4911,7 @@ msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
 msgstr "Le merném fogadni, hogy ez a pacák is büdös."
 
 msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
-msgstr "Még több kanális... kiváló. Mi lakhat odalent?"
+msgstr "Még több kanális... Kiváló. Kíváncsi vagyok, mi élhet odalent."
 
 msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
 msgstr "Zsákutca. Folytatnunk kell a keresést."
@@ -4941,3 +4940,30 @@ msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
 msgstr ""
 "Azt hinné az ember, hogy belefáradok ebbe a gyilkolászósdiba, de tudom hogy "
 "hiányozni fog ha mind ennek vége.\n"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "Férisz"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "Jusztin"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "Maszil"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "Richter"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "Herrisz"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "Szammisz"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Timóteus"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "Jakab"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "Kvinszi"

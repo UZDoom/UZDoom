@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-15 00:10+0000\n"
+"PO-Revision-Date: 2026-03-31 03:10+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/common/"
 "fi/>\n"
@@ -783,6 +783,7 @@ msgstr "Edistyneet asetukset"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Moduulisoitinasetukset"
 
+#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "MIDI-soitinasetukset"
 

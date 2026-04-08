@@ -21,16 +21,16 @@
 **
 */
 
-#include "dobject.h"
-#include "sc_man.h"
-#include "filesystem.h"
 #include "cmdlib.h"
+#include "dobject.h"
+#include "filesystem.h"
 #include "m_argv.h"
-#include "v_text.h"
+#include "printf.h"
+#include "sc_man.h"
 #include "version.h"
 #include "zcc_parser.h"
-#include "zcc_compile.h"
 
+#include "zcc_compile.h" // IWYU pragma: keep
 
 TArray<FString> Includes;
 TArray<FScriptPosition> IncludeLocs;

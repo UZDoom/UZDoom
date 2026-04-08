@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-26 03:27+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2026-04-05 18:09+0000\n"
+"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -2722,7 +2722,7 @@ msgid "OB_MPBOOTSPORK"
 msgstr "%o 被 %k 的靴叉勺搅成了渣。"
 
 msgid "OB_MPZORCH"
-msgstr "%o被%k用Zorcher传送走了。"
+msgstr "%o 被 % k 用Zorcher传送走了。"
 
 msgid "OB_MPMEGAZORCH"
 msgstr "%o 被 %k 的巨型zorcher击中了。"
@@ -2740,11 +2740,11 @@ msgid "OB_MPPHASEZORCH"
 msgstr "%o被%k用相位Zorcher传送了。"
 
 msgid "OB_MPLAZ_BOOM"
-msgstr "%o fell prey to %k's LAZ装置。"
+msgstr "%o成为%k的LAZ装置的猎物。"
 
 msgctxt "chex"
 msgid "OB_MPBFG_SPLASH"
-msgstr ""
+msgstr "%o 被 %k 给 LAZ 了。"
 
 msgid "CHUSTR_E1M1"
 msgstr "E1M1: 着陆区"
@@ -5350,3 +5350,6 @@ msgstr "浏览配置"
 
 msgid "OPTMNU_OPENWADS"
 msgstr "浏览IWAD文件夹"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "Midi设备没有提供任何选项。"

@@ -100,7 +100,7 @@ static FString CreateProgramCacheName(bool create)
 {
 	FString path = M_GetCachePath(create);
 	if (create) CreatePath(path.GetChars());
-	path << "/shadercache.zdsc";
+	path << "/glshadercache";
 	return path;
 }
 

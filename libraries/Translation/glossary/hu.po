@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-26 10:12+0000\n"
+"PO-Revision-Date: 2026-04-03 01:11+0000\n"
 "Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/"
 "glossary/hu/>\n"
@@ -184,11 +184,24 @@ msgstr "MBF21"
 msgid "Vassago"
 msgstr "Vassago"
 
-msgid "Modern"
-msgstr "Modern"
-
-msgid "WASD"
-msgstr "WASD"
-
 msgid "Korax"
-msgstr ""
+msgstr "Korax"
+
+msgid "Ettin"
+msgstr "Ettin"
+
+msgid "Zedek"
+msgstr "Zedek"
+
+msgid "Macil"
+msgstr "Macil"
+
+msgid "Banshee"
+msgstr "Banshee"
+
+msgctxt "Jargon."
+msgid "Locus Requiescat"
+msgstr "Locus Requiescat"
+
+msgid "Richter"
+msgstr "Richter"

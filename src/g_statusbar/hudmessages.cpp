@@ -21,24 +21,24 @@
 **
 */
 
-
-#include "doomdef.h"
-#include "sbar.h"
-#include "c_cvars.h"
-#include "v_video.h"
-#include "cmdlib.h"
-#include "serializer_doom.h"
-#include "serialize_obj.h"
-#include "doomstat.h"
-#include "vm.h"
 #include "c_console.h"
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "doomdef.h"
+#include "doomstat.h"
+#include "printf.h"
+#include "sbar.h"
 #include "v_draw.h"
+#include "v_video.h"
+#include "vm.h"
+
+#include "serialize_obj.h" // IWYU pragma: keep
+#include "serializer_doom.h" // IWYU pragma: keep
 
 IMPLEMENT_CLASS(DHUDMessageBase, false, true)
 IMPLEMENT_POINTERS_START(DHUDMessageBase)
 IMPLEMENT_POINTER(Next)
 IMPLEMENT_POINTERS_END
-
 
 IMPLEMENT_CLASS(DHUDMessage, false, false)
 

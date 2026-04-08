@@ -92,6 +92,18 @@ public:
 	void InsertString(int filenum, uint32_t langid, FName label, const FString& string);
 	void SetDefaultGender(int gender) { defaultgender = gender; }
 	FName GetLangName() const { return langName; }
+	FName GetLangScript() const { return langScript; }
+	LangID GetID(FString lang);
+
+	void ForEachLangID(std::function<void(FName, uint32_t, char)> callback, const char *language)
+	{
+		if (!language) language = langName.GetChars();
+		size_t langlen = strlen(language);
+		auto LanguageID = ((langlen < 2) ? GetID("default"): GetID(language));
+		ForEachLangID(LanguageID, [&callback](FName name, uint32_t lang, char set) {
+			if (name != NAME_None) callback(name, lang, set);
+		});
+	};
 
 private:
 
@@ -101,10 +113,11 @@ private:
 	TArray<std::pair<uint32_t, StringMap*>> currentLanguageSet;
 	int defaultgender = 0;
 	TMap<FName, LangID> langMap;
-	TMap<uint32_t, LangID*> langRevMap;
-	FName langName;
+	TMap<uint32_t, FName> langRevMap;
+	FName langName, langScript;
 
-	LangID GetID(FString lang);
+	void ForEachLangID(LangID, std::function<void(FName, uint32_t, char)>);
+
 	FString GetSystemLocale();
 
 	void LoadLanguage (int lumpnum, const char* buffer, size_t size);

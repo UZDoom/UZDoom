@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-16 07:08+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-03-31 03:09+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/he/>\n"
 "Language: he\n"
@@ -27,7 +27,7 @@ msgstr "מצב חסר תועלת: פעיל"
 msgid "QUITMSG"
 msgstr ""
 "האם אתה בטוח שאתה רוצה\n"
-"לצאת מהמשחק?"
+"לצאת מהמשחק הנהדר הזה?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
@@ -51,28 +51,47 @@ msgstr ""
 
 msgid "NEWGAME"
 msgstr ""
+"אתה לא יכול להתחיל משחק חדש\n"
+"בזמן שאתה במשחק על הרשת.\n"
+"\n"
+"תלחץ על כל מקש."
 
 msgid "NIGHTMARE"
 msgstr ""
+"אתה בטוח? רמת הקושי הזאת\n"
+"אפילו לא קרובה ללהיות הוגנת.\n"
+"\n"
+"תלחץ על Y או N."
 
 msgid "SWSTRING"
 msgstr ""
+"זו הגרסה השיתופית של .Doom\n"
+"\n"
+"אתה צריך להזמין את כל הטרילוגיה.\n"
+"\n"
+"תלחץ על כל מקש."
 
 msgid "NETEND"
 msgstr ""
+"אתה לא יכול לסיים משחק רשת!\n"
+"\n"
+"תלחץ על כל מקש."
 
 msgid "ENDGAME"
 msgstr ""
+"אתה בטוח שאתה רוצה לסיים את המשחק?\n"
+"\n"
+"תלחץ על Y או N."
 
 msgid "RAVENQUITMSG"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה לצאת מהמשחק?"
 
 msgctxt "heretic"
 msgid "SWSTRING"
 msgstr ""
 
 msgid "DOSY"
-msgstr ""
+msgstr "(לחץ Y בשביל לצאת)"
 
 msgid "QUITMSG1"
 msgstr ""
@@ -82,9 +101,13 @@ msgstr ""
 
 msgid "QUITMSG3"
 msgstr ""
+"אני לא הייתי יוצא במקומך.\n"
+"DOS הרבה יותר נורא."
 
 msgid "QUITMSG4"
 msgstr ""
+"אתה מנסה לומר שאתה מעדיף DOS\n"
+"יותר ממני, נכון?"
 
 msgid "QUITMSG5"
 msgstr ""
@@ -93,7 +116,7 @@ msgid "QUITMSG6"
 msgstr ""
 
 msgid "QUITMSG7"
-msgstr ""
+msgstr "קדימה, תחפף מפה! תראה אם אכפת לי."
 
 # More info here.
 msgid "QUITMSG8"
@@ -168,7 +191,7 @@ msgid "TXT_DEFAULTPICKUPMSG"
 msgstr ""
 
 msgid "PD_ANY"
-msgstr ""
+msgstr "כל מפתח יפתח את הדלת הזאת"
 
 msgid "PD_ANYOBJ"
 msgstr ""
@@ -195,25 +218,25 @@ msgid "HUSTR_TALKTOSELF1"
 msgstr ""
 
 msgid "HUSTR_TALKTOSELF2"
-msgstr ""
+msgstr "מי שם?"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr ""
+msgstr "אתה מפחיד את עצמך"
 
 msgid "HUSTR_TALKTOSELF4"
 msgstr ""
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr ""
+msgstr "איבדת את זה…"
 
 msgid "HUSTR_MESSAGESENT"
-msgstr ""
+msgstr "[הודעה נשלחה]"
 
 msgid "STSTR_MUS"
 msgstr ""
 
 msgid "STSTR_NOMUS"
-msgstr ""
+msgstr "בחירה בלתי אפשרית"
 
 msgid "STSTR_DQDON"
 msgstr ""
@@ -278,16 +301,16 @@ msgid "TXT_BUDDHA2OFF"
 msgstr ""
 
 msgid "TXT_CHEATPOWERON"
-msgstr ""
+msgstr "כוח: פעיל"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr ""
+msgstr "כוח: כבוי"
 
 msgid "TXT_CHEATHEALTH"
 msgstr ""
 
 msgid "TXT_CHEATKEYS"
-msgstr ""
+msgstr "כל המפתחות"
 
 msgid "TXT_CHEATSOUNDON"
 msgstr ""
@@ -299,7 +322,7 @@ msgid "TXT_CHEATIDDQD"
 msgstr ""
 
 msgid "TXT_CHEATIDKFA"
-msgstr ""
+msgstr "רמאי—לא מגיע לך נשקים"
 
 msgid "TXT_CHEATTICKERON"
 msgstr ""
@@ -317,19 +340,19 @@ msgid "TXT_GOTSTUFF"
 msgstr ""
 
 msgid "TXT_FREEZEON"
-msgstr ""
+msgstr "מצב קפאון: פעיל"
 
 msgid "TXT_FREEZEOFF"
-msgstr ""
+msgstr "מצב קפאון: כבוי"
 
 msgid "TXT_STRANGE"
-msgstr ""
+msgstr "אתה מרגיש מוזר…"
 
 msgid "TXT_STRANGER"
-msgstr ""
+msgstr "אתה מרגיש מוזר אפילו יותר."
 
 msgid "TXT_NOTSTRANGE"
-msgstr ""
+msgstr "אתה מרגיש כמו עצמך שוב."
 
 msgid "TXT_LEADBOOTSON"
 msgstr ""
@@ -338,10 +361,10 @@ msgid "TXT_LEADBOOTSOFF"
 msgstr ""
 
 msgid "TXT_LIGHTER"
-msgstr ""
+msgstr "אתה מרגיש קל יותר"
 
 msgid "TXT_GRAVITY"
-msgstr ""
+msgstr "כוח הכבידה מושך אותך מטה"
 
 msgid "TXT_NOTARGET_ON"
 msgstr ""
@@ -3257,13 +3280,13 @@ msgid "CMPTMNU_EXPLODE2"
 msgstr ""
 
 msgid "PLYRMNU_RED"
-msgstr ""
+msgstr "אדום"
 
 msgid "PLYRMNU_GREEN"
-msgstr ""
+msgstr "ירוק"
 
 msgid "PLYRMNU_BLUE"
-msgstr ""
+msgstr "כחול"
 
 msgid "PLYRMNU_PLAYERCLASS"
 msgstr ""
@@ -3302,13 +3325,13 @@ msgid "CNTRLMNU_USER4"
 msgstr ""
 
 msgid "CNTRLMNU_MOVEUP"
-msgstr ""
+msgstr "תעופה / שחיה למעלה"
 
 msgid "CNTRLMNU_MOVEDOWN"
-msgstr ""
+msgstr "תעופה / שחיה למטה"
 
 msgid "CNTRLMNU_LAND"
-msgstr ""
+msgstr "להפסיק לעוף"
 
 msgid "CNTRLMNU_KEYBOARDLOOK"
 msgstr ""
@@ -3329,7 +3352,7 @@ msgid "CNTRLMNU_DROPWEAPON"
 msgstr ""
 
 msgid "CNTRLMNU_OTHER"
-msgstr ""
+msgstr "אחר"
 
 msgid "CNTRLMNU_COOPSPY"
 msgstr ""
@@ -3359,7 +3382,7 @@ msgid "MAPCOLORMNU_BACKCOLOR"
 msgstr ""
 
 msgid "MAPCOLORMNU_YOURCOLOR"
-msgstr ""
+msgstr "אתה"
 
 msgid "MAPCOLORMNU_WALLCOLOR"
 msgstr ""
@@ -3377,13 +3400,13 @@ msgid "MAPCOLORMNU_GRIDCOLOR"
 msgstr ""
 
 msgid "MAPCOLORMNU_XHAIRCOLOR"
-msgstr ""
+msgstr "נקודת אמצע"
 
 msgid "MAPCOLORMNU_NOTSEENCOLOR"
 msgstr ""
 
 msgid "MAPCOLORMNU_LOCKEDCOLOR"
-msgstr ""
+msgstr "דלתות נעולות"
 
 msgid "MAPCOLORMNU_INTRALEVELCOLOR"
 msgstr ""
@@ -3413,13 +3436,13 @@ msgid "MAPCOLORMNU_THINGCOLOR"
 msgstr ""
 
 msgid "MAPCOLORMNU_MONSTERCOLOR"
-msgstr ""
+msgstr "מפלצות"
 
 msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
 msgstr ""
 
 msgid "MAPCOLORMNU_FRIENDCOLOR"
-msgstr ""
+msgstr "חברים"
 
 msgid "MAPCOLORMNU_ITEMCOLOR"
 msgstr ""
@@ -3437,7 +3460,7 @@ msgid "MAPCOLORMNU_PORTAL"
 msgstr ""
 
 msgid "MSGMNU_TITLE"
-msgstr ""
+msgstr "הודאות"
 
 msgid "MSGMNU_SHOWMESSAGES"
 msgstr ""
@@ -5017,3 +5040,6 @@ msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "הגדרות נגישות"

@@ -65,12 +65,17 @@ for pyfile in "${pyfiles[@]}"; do
 done
 
 ###
-phase test compile
+phase check templates
 ###
 
 dirty=$(git status --porcelain)
 bash ./scripts/mktemplate.sh || ((error_count++))
 [[ -z "$dirty" ]] && { [[ -z "$(git status --porcelain)" ]] || ((error_count++)) ; }
+
+###
+phase test compile
+###
+
 scripts/compile.py --recipe ALL --output out.csv || ((error_count++))
 t1=$(mktemp)
 csvclean -a out.csv >$t1 || ((error_count++))

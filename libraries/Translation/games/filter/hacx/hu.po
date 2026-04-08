@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-18 01:09+0000\n"
+"PO-Revision-Date: 2026-04-02 21:09+0000\n"
 "Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/doom-engine-"
 "games/hacx-filter/hu/>\n"
@@ -17,13 +17,15 @@ msgid "QUITMSG1"
 msgstr "Túl erősek neked a bogarak is?"
 
 msgid "QUITMSG"
-msgstr "Biztos vagy benne, hogy kihúzod a kábelt?"
+msgstr ""
+"Biztos vagy benne, hogy\\n"
+"kihúzod a kábelt?"
 
 msgid "QUITMSG2"
 msgstr "Próbálasz kilépni? És még te nevezed magad hekkernek?"
 
 msgid "QUITMSG3"
-msgstr "Gyere csak vissza, mielőtt feldugok neked egy vírust."
+msgstr "Gyere csak vissza, mielőtt feldugok neked egy vírust!"
 
 msgid "QUITMSG4"
 msgstr "Az igazi hekkerek sosem húzzák ki a kábelt."
@@ -32,7 +34,7 @@ msgid "QUITMSG5"
 msgstr "Nemár! Még nem is láttad a legjobb részt!"
 
 msgid "QUITMSG6"
-msgstr "Ha most feladod, akkor a cyberspacenek lőttek."
+msgstr "Ha most feladod, akkor a cyberspacenek lőttek!"
 
 msgid "QUITMSG7"
 msgstr "GENIE üdvözletét küldi, te mocsok!"
@@ -47,28 +49,28 @@ msgid "QUITMSG10"
 msgstr "Inkább a kék pirulát kellett volna választanod."
 
 msgid "QUITMSG11"
-msgstr "A játék neve nem Twitch n' Megfutamodás."
+msgstr "A játék neve nem Twitch n' Megfutamodás!"
 
 msgid "QUITMSG12"
 msgstr "Semmi pánik. A világmegmentés várhat, nemde?"
 
 msgid "QUITMSG13"
-msgstr "Kettéváglak mint a netsplit a kapcsolatot."
+msgstr "Kettéváglak mint a netsplit a kapcsolatot!"
 
 msgid "QUITMSG14"
 msgstr "Ha elkalandozol, ne feletkezz meg a HacX-ről!"
 
 msgid "OB_SUICIDE"
-msgstr "%o kitörölte magát az univerzumból"
+msgstr "%o kitörölte magát az univerzumból."
 
 msgid "OB_FALLING"
 msgstr "%o egy Kansas méretű krátert hagyott maga után."
 
 msgid "OB_CRUSH"
-msgstr "%o palacsintává lapult"
+msgstr "%o emberi palacsintává lapult."
 
 msgid "OB_EXIT"
-msgstr "%o ki akarta húzni a kábelét"
+msgstr "%o ki akarta húzni a kábelét."
 
 msgid "OB_WATER"
 msgstr "%o úgy úszik mint egy tégla."
@@ -92,7 +94,7 @@ msgid "OB_ROCKET"
 msgstr "%o meg akarta tudni %g hogy néz ki belülről."
 
 msgid "OB_KILLEDSELF"
-msgstr "%o kitörölte magát az univerzumból"
+msgstr "%o kitörölte magát az univerzumból."
 
 msgid "OB_THUG"
 msgstr "Már nem %o a csúcsragadozó."
@@ -248,7 +250,7 @@ msgid "GOTFORCEFIELD"
 msgstr "Erőtér!"
 
 msgid "GOTMICROTEL"
-msgstr ""
+msgstr "007Mikrotel"
 
 msgid "GOTENKBLIND"
 msgstr "EnK védett lettél!"
@@ -293,7 +295,7 @@ msgid "GOTBODYARMOR"
 msgstr "Testpáncél!"
 
 msgid "GOTCENTROPHENOXINE"
-msgstr ""
+msgstr "Centrophenixine"
 
 msgid "GOTKEVLARVEST"
 msgstr "Felkapsz egy Golyóálló Mellényt!"
@@ -327,25 +329,40 @@ msgstr "Egy Sárga Z-Kulcs szükséges a hozzáféréshez!"
 
 msgid "X1TEXT"
 msgstr ""
-"Húsz milka nem ér meg ennyi bosszankodás, ugye hekker? A cella ehhez képest egy francos piknik!\n"
+"Húsz milka nem ér meg ennyi\n"
+"bosszankodás, ugye hekker? A cella\n"
+"ehhez képest egy francos piknik!\n"
 "\n"
-"Baromi ocsmány bio-mutációk és embertársaid úgy lógnak le a mennyezetről, mintha csak a hentesnél lennénk.\n"
+"Baromi ocsmány bio-mutációk és embertársaid\n"
+"úgy lógnak le a mennyezetről, mintha csak\n"
+"a hentesnél lennénk.\n"
 "\n"
-"Mi az ördög ez a GENIE? Semmilyen más számítógépre nem hasonlít amit hekkelni próbáltál!\n"
+"Mi az ördög ez a GENIE? Semmilyen más\n"
+"számítógépre nem hasonlít amit hekkelni próbáltál!\n"
 "\n"
-"Jobban jársz ha megkeresed a következő terminált, végig rombolsz a kibertéren mutánsokat gázolva, és minél előbb itt hagyod Dodge-ot!"
+"Jobban jársz ha megkeresed a következő terminált,\n"
+"végig rombolsz a kibertéren mutánsokat\n"
+"gázolva, és minél előbb itt hagyod Dodge-ot!\n"
+"\n"
 
 msgid "X2TEXT"
 msgstr ""
 "Hol vannak az emberek?\n"
 "\n"
-"Párizs egy szellemváros, kivétel ha a mutáns óriás bogarakat nem vesszük számba mint mintapolgár.\n"
+"Párizs egy szellemváros, kivétel ha a mutáns\n"
+"óriás bogarakat nem vesszük számba mint mintapolgár.\n"
 "\n"
-"Komoly ellenállásba ütköztél. Ezek a bogarak aztán tudnak harcolni! Szerencsédre nem a legélesebb kések a fiókban.\n"
+"Komoly ellenállásba ütköztél. Ezek a\n"
+"bogarak aztán tudnak harcolni! Szerencsédre\n"
+"nem a legélesebb kések a fiókban.\n"
 "\n"
-"Szerencsére meg sikerült kerítened az információkat, amit az albizottság akart...és igen piszkos!\n"
+"Szerencsére meg sikerült kerítened az információkat\n"
+"amit az albizottság akart...és igen piszkos!\n"
 "\n"
-"Kiszívják ezek a dögök az emberek gerincvelejét! Nem is csoda, hogy a szomszédság igen megritkult. Jelezz vissza az albizottságnak, és vigyázz magadra..."
+"Kiszívják ezek a dögök az emberek gerincvelejét!\n"
+"Nem is csoda, hogy a szomszédság igen megritkult.\n"
+"Jelezz vissza az albizottságnak, és\n"
+"vigyázz magadra...\n"
 
 msgid "X3TEXT"
 msgstr ""
@@ -370,7 +387,7 @@ msgstr ""
 "Már...csak Te maradtál."
 
 msgid "TXT_HACXMAP01"
-msgstr ""
+msgstr "GenEmp Kft."
 
 msgid "TXT_HACXMAP02"
 msgstr "Kanális Község"
@@ -385,7 +402,7 @@ msgid "TXT_HACXMAP05"
 msgstr "Kiber Cirkusz"
 
 msgid "TXT_HACXMAP06"
-msgstr ""
+msgstr "Digitális-Ota"
 
 msgid "TXT_HACXMAP07"
 msgstr "A Nagy Fal"
@@ -400,7 +417,7 @@ msgid "TXT_HACXMAP10"
 msgstr "Anarchista Álom"
 
 msgid "TXT_HACXMAP11"
-msgstr ""
+msgstr "Megláss minket!"
 
 msgid "TXT_HACXMAP12"
 msgstr "Gótikus Vesszőfutás"
@@ -415,13 +432,13 @@ msgid "TXT_HACXMAP15"
 msgstr "Enk Alkonya"
 
 msgid "TXT_HACXMAP16"
-msgstr ""
+msgstr "Proteáni Cybex"
 
 msgid "TXT_HACXMAP17"
 msgstr "Vérfolyó"
 
 msgid "TXT_HACXMAP18"
-msgstr ""
+msgstr "Bizárró"
 
 msgid "TXT_HACXMAP19"
 msgstr "Háborús Terem"
@@ -433,7 +450,7 @@ msgid "TXT_HACXMAP31"
 msgstr "Szárító Szoba"
 
 msgid "STSTR_CLEV"
-msgstr "Következő állomás..."
+msgstr "Következő állomás...\n"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
@@ -445,7 +462,7 @@ msgstr "...indulhat a sütögetés!"
 # replacement is not being triggered.
 msgid "STSTR_BEHOLD"
 msgstr ""
-"Sérthet (V), Berz (S), Láthat(i), Sugár(R), Térkép(A), vagy Fény Sisak(L)"
+"Sérthet (V), Berz (S), Láthat(i), Sugár(R), Térkép(A), vagy Fény Sisak(L)?"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Ennek fele sem Tréfa!"
@@ -461,7 +478,7 @@ msgstr "Lehetetlen Kiválasztás "
 
 # Should probably not be translated...
 msgid "STSTR_MUS"
-msgstr "Csavard Fel a Szőnyeget"
+msgstr "Csavard Fel a Szőnyeget\n"
 
 msgid "STSTR_KFAADDED"
 msgstr "Twitch n'Kill Mód Betöltése"
@@ -486,13 +503,15 @@ msgstr "- nyomj Y-t a nyúlcipő felhúzáshoz -"
 
 msgid "ENDGAME"
 msgstr ""
-"Őrült vagy, vagy csak simán rosszul vagy összerakva? Nos? Igen vagy Nem!"
+"Őrült vagy, vagy csak simán rosszul vagy összerakva?\n"
+"Nos? Igen vagy Nem!"
 
 msgid "NIGHTMARE"
 msgstr ""
-"Biztos vagy benne? Nem hinném hogy elbírsz ezzel a fokozattal hekker.\n"
+"Biztos vagy benne? Nem hinném,\n"
+"hogy elbírsz ezzel a fokozattal hekker.\n"
 "\n"
-"Nyomj Y-t a halálhoz."
+"Nyomj Y-t a halálhoz. \n"
 
 # For most languages the original Doom text should suffice.
 msgid "QSPROMPT"
@@ -515,16 +534,16 @@ msgid "CC_THUG"
 msgstr "Bandatag"
 
 msgid "CC_ANDROID"
-msgstr ""
+msgstr "Android"
 
 msgid "CC_ICE"
-msgstr ""
+msgstr "Jég"
 
 msgid "CC_BUZZER"
 msgstr "Sokkoló"
 
 msgid "CC_DMAN"
-msgstr ""
+msgstr "D-Ember"
 
 msgid "CC_PHAGE"
 msgstr "Fekély"
@@ -536,13 +555,13 @@ msgid "CC_MECH"
 msgstr "Mecha Megszállott"
 
 msgid "CC_TERMI"
-msgstr ""
+msgstr "Terminátrix"
 
 msgid "CC_THORN"
 msgstr "Tövis Úrnő"
 
 msgid "CC_MAJONG"
-msgstr ""
+msgstr "Madzsong 7"
 
 msgid "CC_HERO"
 msgstr ""

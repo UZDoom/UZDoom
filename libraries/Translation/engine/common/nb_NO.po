@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-14 22:34+0000\n"
+"PO-Revision-Date: 2026-03-31 03:10+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/uzdoom/"
 "common/nb_NO/>\n"
@@ -783,6 +783,7 @@ msgstr "Avanserte alternativer"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Alternativer for modulavspiller"
 
+#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "Alternativer for MIDI-spiller"
 

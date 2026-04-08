@@ -131,15 +131,16 @@ FString M_GetAppDataPath(bool create)
 //
 // M_GetCachePath														Unix
 //
-// Returns the path for cache GL nodes.
+// Returns the path for cache
 //
 //===========================================================================
 
-FString M_GetCachePath(bool create)
+FString M_GetCachePath(bool create, FString ns)
 {
-	static FString path = FStringf("%s/" GAMENAMELOWERCASE, GetCachePath());
-	path = NicePath(path.GetChars());
+	FString path = GetCachePath();
 
+	path += "/doom/" + ns;
+	path = NicePath(path.GetChars());
 	if (create)
 	{
 		CreatePath(path.GetChars());

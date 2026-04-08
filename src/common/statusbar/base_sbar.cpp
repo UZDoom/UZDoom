@@ -22,12 +22,13 @@
 **
 */
 
-#include <assert.h>
+#include <cassert>
 
 #include "base_sbar.h"
 #include "c_cvars.h"
 #include "cmdlib.h"
 #include "i_interface.h"
+#include "printf.h"
 #include "r_videoscale.h"
 #include "texturemanager.h"
 #include "utf8.h"

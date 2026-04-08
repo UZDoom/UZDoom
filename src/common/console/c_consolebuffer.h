@@ -23,11 +23,12 @@
 
 #pragma once
 
-#include <limits.h>
-#include <stdio.h>
-#include "zstring.h"
+#include <cstdio>
+
+#include "printf.h"
 #include "tarray.h"
 #include "v_text.h"
+#include "zstring.h"
 
 enum EAddType
 {

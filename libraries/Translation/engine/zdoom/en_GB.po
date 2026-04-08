@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-25 23:57+0000\n"
+"PO-Revision-Date: 2026-04-02 03:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/en_GB/>\n"
@@ -5357,3 +5357,6 @@ msgstr "Browse Configs"
 
 msgid "OPTMNU_OPENWADS"
 msgstr "Browse IWAD Folder"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "Midi device does not expose any options."

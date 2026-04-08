@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-26 08:09+0000\n"
+"PO-Revision-Date: 2026-04-02 03:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/common/"
 "en/>\n"
@@ -65,106 +65,84 @@ msgstr "Press any key or click anywhere in the window to quit."
 msgid "NEWSAVE"
 msgstr "<New Save Game>"
 
-#, fuzzy
 msgid "GGSAVED"
 msgstr "Game saved."
 
 msgid "SAVECOMMENT_TIME"
 msgstr "Time"
 
-#, fuzzy
 msgid "MNU_LOADGAME"
 msgstr "Load Game"
 
-#, fuzzy
 msgid "MNU_SAVEGAME"
 msgstr "Save Game"
 
-#, fuzzy
 msgid "MNU_NOPICTURE"
 msgstr "No Picture"
 
-#, fuzzy
 msgid "MNU_DIFFVERSION"
 msgstr "Different Version"
 
-#, fuzzy
 msgid "MNU_NOFILES"
 msgstr "No files"
 
-#, fuzzy
 msgid "MNU_DELETESG"
 msgstr "Do you really want to delete the savegame?"
 
-#, fuzzy
 msgid "OPTVAL_OFF"
 msgstr "Off"
 
-#, fuzzy
 msgid "OPTVAL_ON"
 msgstr "On"
 
-#, fuzzy
 msgid "OPTVAL_AUTO"
 msgstr "Auto"
 
 msgid "OPTMNU_TITLE"
 msgstr "Options"
 
-#, fuzzy
 msgid "OPTMNU_CONTROLS"
 msgstr "Customize Controls"
 
-#, fuzzy
 msgid "OPTMNU_MOUSE"
 msgstr "Mouse Options"
 
-#, fuzzy
 msgid "OPTMNU_JOYSTICK"
 msgstr "Controller Options"
 
-#, fuzzy
 msgid "OPTMNU_PLAYER"
 msgstr "Player Setup"
 
-#, fuzzy
 msgid "OPTMNU_GAMEPLAY"
 msgstr "Gameplay Options"
 
-#, fuzzy
 msgid "OPTMNU_AUTOMAP"
 msgstr "Automap Options"
 
 msgid "OPTMNU_HUD"
 msgstr "HUD Options"
 
-#, fuzzy
 msgid "OPTMNU_MISCELLANEOUS"
 msgstr "Miscellaneous Options"
 
-#, fuzzy
 msgid "OPTMNU_SOUND"
 msgstr "Sound Options"
 
 msgid "ACCMNU_TITLE"
 msgstr "Accessibility Options"
 
-#, fuzzy
 msgid "OPTMNU_DISPLAY"
 msgstr "Display Options"
 
-#, fuzzy
 msgid "OPTMNU_VIDEO"
 msgstr "Set video mode"
 
 msgid "OPTMNU_DEFAULTS"
 msgstr "Reset to defaults"
 
-#, fuzzy
 msgid "OPTMNU_RESETTOSAVED"
 msgstr "Reset to last saved"
 
-#, fuzzy
 msgid "OPTMNU_WRITEINI"
 msgstr "Save current settings"
 
@@ -174,15 +152,12 @@ msgstr "Go to console"
 msgid "OPTMNU_NETWORK"
 msgstr "Network Options"
 
-#, fuzzy
 msgid "OPTMNU_REVERB"
 msgstr "Reverb environment editor"
 
-#, fuzzy
 msgid "CNTRLMNU_SWITCHTEXT1"
 msgstr "ENTER to change, BACKSPACE to clear"
 
-#, fuzzy
 msgid "CNTRLMNU_SWITCHTEXT2"
 msgstr "Press new key for control, ESC to cancel"
 
@@ -991,9 +966,8 @@ msgstr "Advanced options"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Module replayer options"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "MIDI player options"
+msgstr "MIDI device options"
 
 #, fuzzy
 msgid "ADVSNDMNU_TITLE"

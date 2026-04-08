@@ -22,22 +22,17 @@
 **
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
-#include "oalsound.h"
-
-#include "i_module.h"
-#include "cmdlib.h"
-
-#include "c_dispatch.h"
-#include "i_music.h"
-#include "m_argv.h"
-#include "v_text.h"
-#include "c_cvars.h"
-#include "stats.h"
 #include <zmusic.h>
 
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "i_module.h"
+#include "m_argv.h"
+#include "oalsound.h"
+#include "printf.h"
 
 EXTERN_CVAR (Float, snd_sfxvolume)
 EXTERN_CVAR(Float, snd_musicvolume)

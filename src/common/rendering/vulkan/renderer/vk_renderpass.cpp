@@ -41,7 +41,7 @@ VkRenderPassManager::VkRenderPassManager(VulkanRenderDevice* fb) : fb(fb)
 {
 	FString path = M_GetCachePath(true);
 	CreatePath(path.GetChars());
-	CacheFilename = path + "/pipelinecache.zdpc";
+	CacheFilename = path + "/vulkanpipelinecache";
 
 	PipelineCacheBuilder builder;
 	builder.DebugName("PipelineCache");
