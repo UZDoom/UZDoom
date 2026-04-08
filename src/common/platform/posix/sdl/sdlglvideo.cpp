@@ -24,7 +24,7 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #ifdef HAVE_VULKAN
 #include <SDL2/SDL_vulkan.h>

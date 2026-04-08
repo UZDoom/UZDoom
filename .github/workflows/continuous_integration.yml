@@ -35,7 +35,7 @@ jobs:
           - name: Windows
             os: windows-latest
             build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
-            build_opts_extra: "-DSDL2_LIBRARY=sdl2/lib/x64/SDL2 -DSDL2_INCLUDE_DIR=build/sdl2/include"
+            build_opts_extra: &msvc_opts_extra -DSDL2_LIBRARY=sdl2/lib/x64/SDL2 -DSDL2_INCLUDE_DIR=build/sdl2/include
             deps_cmdline: &msvc_deps >-
               choco install
                 tree
@@ -113,7 +113,7 @@ jobs:
           - name: Windows MinGW GCC
             os: windows-latest
             build_opts: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
-            build_opts_extra: -DFORCE_NO_LTO=true -DSDL2_LIBRARY=sdl2/lib/x64/SDL2 -DSDL2_INCLUDE_DIR=build/sdl2/include
+            build_opts_extra: -DFORCE_NO_LTO=true
             deps_cmdline: &mingw_deps |
               pacman -S --noconfirm --needed
                 mingw-w64-x86_64-openal
@@ -123,6 +123,7 @@ jobs:
                 mingw-w64-x86_64-bzip2
                 mingw-w64-x86_64-clang
                 mingw-w64-x86_64-gcc
+                mingw-w64-x86_64-SDL2
             extra_files: ""
             build_type: RelWithDebInfo
 
@@ -145,9 +146,9 @@ jobs:
           - name: Windows ARM (Testing)
             os: windows-11-arm
             build_opts: *msvc_opts
-            build_opts_extra: ""
+            build_opts_extra: *msvc_opts_extra
             deps_cmdline: *msvc_deps
-            extra_files: ""
+            extra_files: *msvc_x86_files
             build_type: RelWithDebInfo
 
           - name: Windows MinGW Clang

@@ -98,6 +98,12 @@ jobs:
           verify="echo '${hash} ${file}' | sha256sum -c -"
           attempt "set -o pipefail; { $download ; } && { $verify ; }"
         done
+        
+        # needed for SDL2 windows
+        if [[ -f sdl2.zip ]]; then
+          unzip -q sdl2.zip
+          mv SDL2-* sdl2
+        fi
 
         command=( $DEPS_COMMAND )
         command="${command[*]}"
@@ -144,6 +150,9 @@ jobs:
         fi
         if [[ -f sndfile.zip ]]; then
           unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
+        fi
+        if [[ -f sdl2.zip ]]; then
+          unzip -j sdl2.zip "SDL2-*/lib/x64/SDL2.dll" -d package
         fi
 
         mkdir package/soundfonts

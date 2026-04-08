@@ -23,7 +23,7 @@
 
 #include <string.h>
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #include "bitmap.h"
 #include "textures.h"
