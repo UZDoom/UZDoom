@@ -60,7 +60,6 @@ PlayGamePage::PlayGamePage(LauncherWindow* launcher, const FStartupSelectionInfo
 	if (info.DefaultIWAD >= 0 && info.DefaultIWAD < info.Wads->SSize())
 	{
 		GamesList->SetSelectedItem(info.DefaultIWAD);
-		GamesList->ScrollToItem(info.DefaultIWAD);
 	}
 
 	GamesList->OnActivated = [=]() { OnGamesListActivated(); };
@@ -126,4 +125,6 @@ void PlayGamePage::OnGeometryChanged()
 	GamesList->SetFrameGeometry(0.0, listViewTop, GetWidth(), std::max(y - listViewTop, 0.0));
 
 	Launcher->UpdatePlayButton();
+
+	GamesList->ScrollToItem(GamesList->GetSelectedItem());
 }
