@@ -169,7 +169,7 @@ FBaseCVar::FBaseCVar (const char *var_name, uint32_t flags, void *callback, cons
 	if (var_name)
 	{
 		var = FindCVar(var_name, NULL);
-		C_AddTabCommand (var_name);
+		if (!(flags & CVAR_HIDDEN)) C_AddTabCommand (var_name);
 		VarName = var_name;
 		VarFName = var_name;
 		cvarMap.Insert(var_name, this);

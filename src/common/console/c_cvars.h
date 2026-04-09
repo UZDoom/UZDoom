@@ -68,6 +68,7 @@ enum
 	CVAR_ZS_CUSTOM_CLONE	= 1 << 20, // Clone of a Custom ZScript CVar
 	
 	CVAR_SYSTEM_ONLY		= 1 << 21, // System-related cvar that should only ever be changed by the user
+	CVAR_HIDDEN				= 1 << 22, // Don't show in console tab complete
 };
 
 enum ECVarType
