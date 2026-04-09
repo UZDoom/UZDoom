@@ -81,6 +81,7 @@ public:
 	TArray<HWWall> lines;
 	BoundingRect boundingBox;
 	int planesused = 0;
+	float zshift = 0.1; 	// HWPlaneMirrorPortal::DrawPortalStencil() z-fights with flats unless zshift >= 0.1
 	HWFlat flat;
 
     HWPortal(FPortalSceneState *s, bool local = false) : mState(s), boundingBox(false)
