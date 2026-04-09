@@ -1473,6 +1473,7 @@ OptionValue CrosshairHealthTypes
 	0.0, "$TXT_NO"
 	1.0, "$OPTVAL_YES_STANDARD"
 	2.0, "$OPTVAL_YES_ENHANCED"
+	3.0, "$OPTVAL_INVERTED"
 }
 
 OptionValue DisplayTagsTypes

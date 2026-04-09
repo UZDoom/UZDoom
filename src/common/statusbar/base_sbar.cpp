@@ -44,7 +44,7 @@ IMPLEMENT_CLASS(DStatusBarCore, false, false)
 IMPLEMENT_CLASS(DHUDFont, false, false);
 
 CVAR(Color, crosshaircolor, 0xff0000, CVAR_ARCHIVE);
-CVARD(Int, crosshairhealth, 2, CVAR_ARCHIVE, "0: basic, 1: red-green, 2: blue-green-yellow-red");
+CVARD(Int, crosshairhealth, 2, CVAR_ARCHIVE, "0: basic, 1: red-green, 2: blue-green-yellow-red, 3: inverted");
 CVARD(Float, crosshairscale, 1.0, CVAR_ARCHIVE, "changes the size of the crosshair");
 CVARD(Bool, crosshairgrow, false, CVAR_ARCHIVE, "grow crosshair upon pickup");
 
@@ -130,7 +130,14 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 	w = round(CrosshairImage->GetDisplayWidth() * size);
 	h = round(CrosshairImage->GetDisplayHeight() * size);
 
-	if (crosshairhealth == 1)
+	FRenderStyle style {{ STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha | STYLEF_ColorIsFixed }};
+
+	if (crosshairhealth == 3)
+	{
+		style = {{ STYLEOP_Add, STYLEALPHA_InvDstCol, STYLEALPHA_InvSrcCol, STYLEF_RedIsAlpha }};
+		color = 0xffffff;
+	}
+	else if (crosshairhealth == 1)
 	{
 		// "Standard" crosshair health (green-red)
 		int health = phealth;
@@ -186,6 +193,7 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		DTA_DestHeight, h,
 		DTA_Rotate, angle.Degrees(),
 		DTA_AlphaChannel, true,
+		DTA_RenderStyle, style,
 		DTA_FillColor, color & 0xFFFFFF,
 		TAG_DONE);
 }
