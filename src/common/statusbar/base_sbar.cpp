@@ -26,6 +26,7 @@
 
 #include "base_sbar.h"
 #include "c_cvars.h"
+#include "colorspace.h"
 #include "cmdlib.h"
 #include "i_interface.h"
 #include "printf.h"
@@ -43,8 +44,22 @@ static int CrosshairNum;
 IMPLEMENT_CLASS(DStatusBarCore, false, false)
 IMPLEMENT_CLASS(DHUDFont, false, false);
 
-CVAR(Color, crosshaircolor, 0xff0000, CVAR_ARCHIVE);
-CVARD(Int, crosshairhealth, 2, CVAR_ARCHIVE, "0: basic, 1: red-green, 2: blue-green-yellow-red, 3: inverted");
+CVAR(Color, crosshaircolor,     0xff0000, CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorFull, 0x00ff00, CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorMax,  0x7f7fff, CVAR_ARCHIVE);
+CVAR(Bool, crosshairshowshealth, false, CVAR_HIDDEN);
+CVAR(Bool, crosshairhascolor, false, CVAR_HIDDEN);
+CUSTOM_CVARD(Int, crosshaircolors, 2, CVAR_ARCHIVE, "0: basic, 1: show health, 2: show health bonus, 3: inverted")
+{
+	switch (self)
+	{
+		case 0: crosshairshowshealth = false; crosshairhascolor = true;  break;
+		case 1:
+		case 2: crosshairshowshealth = true;  crosshairhascolor = true;  break;
+		case 3: crosshairshowshealth = false; crosshairhascolor = false; break;
+		default: self = 2;
+	}
+};
 CVARD(Float, crosshairscale, 1.0, CVAR_ARCHIVE, "changes the size of the crosshair");
 CVARD(Bool, crosshairgrow, false, CVAR_ARCHIVE, "grow crosshair upon pickup");
 
@@ -111,6 +126,7 @@ void ST_UnloadCrosshair()
 
 void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngle angle)
 {
+	FRenderStyle style {{ STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha | STYLEF_ColorIsFixed }};
 	uint32_t color;
 	double size;
 	int w, h;
@@ -130,61 +146,46 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 	w = round(CrosshairImage->GetDisplayWidth() * size);
 	h = round(CrosshairImage->GetDisplayHeight() * size);
 
-	FRenderStyle style {{ STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha | STYLEF_ColorIsFixed }};
-
-	if (crosshairhealth == 3)
+	if (crosshaircolors == 0)
+	{
+		color = crosshaircolor;
+	}
+	else if (crosshaircolors == 3)
 	{
 		style = {{ STYLEOP_Add, STYLEALPHA_InvDstCol, STYLEALPHA_InvSrcCol, STYLEF_RedIsAlpha }};
 		color = 0xffffff;
 	}
-	else if (crosshairhealth == 1)
-	{
-		// "Standard" crosshair health (green-red)
-		int health = phealth;
-
-		if (health >= 85)
-		{
-			color = 0x00ff00;
-		}
-		else
-		{
-			int red, green;
-			health -= 25;
-			if (health < 0)
-			{
-				health = 0;
-			}
-			if (health < 30)
-			{
-				red = 255;
-				green = health * 255 / 30;
-			}
-			else
-			{
-				red = (60 - health) * 255 / 30;
-				green = 255;
-			}
-			color = (red << 16) | (green << 8);
-		}
-	}
-	else if (crosshairhealth == 2)
-	{
-		// "Enhanced" crosshair health (blue-green-yellow-red)
-		int health = clamp(phealth, 0, 200);
-		float rr, gg, bb;
-
-		float saturation = health < 150 ? 1.f : 1.f - (health - 150) / 100.f;
-
-		HSVtoRGB(&rr, &gg, &bb, health * 1.2f, saturation, 1);
-		int red = int(rr * 255);
-		int green = int(gg * 255);
-		int blue = int(bb * 255);
-
-		color = (red << 16) | (green << 8) | blue;
-	}
 	else
 	{
-		color = crosshaircolor;
+		static int lastHealth = -1;
+		static int lastColor = -1;
+		int health = clamp(phealth, 0, (crosshaircolors == 1)? 100: 200);
+
+		if (health != lastHealth)
+		{
+			int hi = crosshaircolorFull, lo = crosshaircolor;
+			float mix = 1.0;
+
+			if (health > 100)
+			{
+				lo = hi;
+				hi = crosshaircolorMax;
+				mix = (health-100)/100.0;
+			}
+			else if (health <= 85)
+			{
+				mix = health/85.0;
+			}
+
+			auto a = Color::rgb((lo>>16&0xff)/255., (lo>>8&0xff)/255., (lo&0xff)/255.);
+			auto b = Color::rgb((hi>>16&0xff)/255., (hi>>8&0xff)/255., (hi&0xff)/255.);
+			auto c = Color::mix(a, b, mix);
+
+			lastHealth = health;
+			lastColor = (int)(c.rgb.r*255)<<16 | (int)(c.rgb.g*255)<<8 | (int)(c.rgb.b*255);
+		}
+
+		color = lastColor;
 	}
 
 	DrawTexture(twod, CrosshairImage,
@@ -197,7 +198,6 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		DTA_FillColor, color & 0xFFFFFF,
 		TAG_DONE);
 }
-
 
 //---------------------------------------------------------------------------
 //

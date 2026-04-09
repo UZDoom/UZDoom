@@ -1534,32 +1534,35 @@ OptionValue ZDoomStrife
 OptionMenu "HUDOptions" protected
 {
 	Title "$HUDMNU_TITLE"
-	Submenu "$HUDMNU_SCALEOPT",				"ScalingOptions"
-	Submenu "$HUDMNU_ALTHUD",				"AltHudOptions"
-	Submenu "$HUDMNU_MESSAGE", 				"MessageOptions"
-	Submenu "$HUDMNU_FLASH", 				"FlashOptions"
-	Submenu "$DSPLYMNU_SCOREBOARD", 		"ScoreboardOptions"
-	Submenu "$HUDMNU_FONTOPTIONS",			"FontOptions"
+
+	Submenu "$HUDMNU_SCALEOPT",               "ScalingOptions"
+	Submenu "$HUDMNU_ALTHUD",                 "AltHudOptions"
+	Submenu "$HUDMNU_MESSAGE",                "MessageOptions"
+	Submenu "$HUDMNU_FLASH",                  "FlashOptions"
+	Submenu "$DSPLYMNU_SCOREBOARD",           "ScoreboardOptions"
+	Submenu "$HUDMNU_FONTOPTIONS",            "FontOptions"
 	StaticText " "
-	Option "$HUDMNU_CROSSHAIRON",			"crosshairon", "OnOff"
-	Option "$HUDMNU_CROSSHAIR",				"crosshair", "Crosshairs"
-	Option "$HUDMNU_FORCECROSSHAIR",		"crosshairforce", "OnOff"
-	Option "$HUDMNU_GROWCROSSHAIR",			"crosshairgrow", "OnOff"
-	ColorPicker "$HUDMNU_CROSSHAIRCOLOR", 	"crosshaircolor"
-	Option "$HUDMNU_CROSSHAIRHEALTH",		"crosshairhealth", "CrosshairHealthTypes"
-	Slider "$HUDMNU_CROSSHAIRSCALE",		"crosshairscale", 0.1, 10.0, 0.1, 1
+	Option "$HUDMNU_CROSSHAIRON",             "crosshairon", "OnOff"
+	Option "$HUDMNU_CROSSHAIR",               "crosshair", "Crosshairs"
+	Option "$HUDMNU_FORCECROSSHAIR",          "crosshairforce", "OnOff"
+	Option "$HUDMNU_GROWCROSSHAIR",           "crosshairgrow", "OnOff"
+	ColorPicker "$HUDMNU_CROSSHAIRCOLOR",     "crosshaircolor", crosshairhascolor
+	ColorPicker "$HUDMNU_CROSSHAIRCOLORFULL", "crosshaircolorFull", crosshairshowshealth
+	ColorPicker "$HUDMNU_CROSSHAIRCOLORMAX",  "crosshaircolorMax", crosshairshowshealth
+	Option "$HUDMNU_CROSSHAIRCOLORS",         "crosshaircolors", "CrosshairHealthTypes"
+	Slider "$HUDMNU_CROSSHAIRSCALE",          "crosshairscale", 0.1, 10.0, 0.1, 1
 	StaticText " "
-	Option "$HUDMNU_NAMETAGS",				"displaynametags", "DisplayTagsTypes"
-	Option "$HUDMNU_NAMETAGCOLOR",			"nametagcolor", "TextColors", "displaynametags"
-	Option "$HUDMNU_OLDOUCH",				"st_oldouch", "OnOff"
+	Option "$HUDMNU_NAMETAGS",                "displaynametags", "DisplayTagsTypes"
+	Option "$HUDMNU_NAMETAGCOLOR",            "nametagcolor", "TextColors", "displaynametags"
+	Option "$HUDMNU_OLDOUCH",                 "st_oldouch", "OnOff"
 	StaticText " "
-	Slider "$DSPLYMNU_MOVEBOB",				"movebob", 0, 1.0, 0.05, 2
-	Slider "$DSPLYMNU_STILLBOB",			"stillbob", 0, 1.0, 0.05, 2
-	Slider "$DSPLYMNU_BOBSPEED",			"wbobspeed", 0, 2.0, 0.1
-	Slider "$DSPLYMNU_BOBFIRE",				"wbobfire", 0, 1.0, 0.1
+	Slider "$DSPLYMNU_MOVEBOB",               "movebob", 0, 1.0, 0.05, 2
+	Slider "$DSPLYMNU_STILLBOB",              "stillbob", 0, 1.0, 0.05, 2
+	Slider "$DSPLYMNU_BOBSPEED",              "wbobspeed", 0, 2.0, 0.1
+	Slider "$DSPLYMNU_BOBFIRE",               "wbobfire", 0, 1.0, 0.1
 	StaticText " "
-	Slider "$DSPLYMNU_MENUDIM",					"dimamount", 0, 1.0, 0.05, 2
-	ColorPicker "$DSPLYMNU_DIMCOLOR",			"dimcolor"
+	Slider "$DSPLYMNU_MENUDIM",               "dimamount", 0, 1.0, 0.05, 2
+	ColorPicker "$DSPLYMNU_DIMCOLOR",         "dimcolor"
 
 }
 
