@@ -205,7 +205,7 @@ void ProfileSettings::Draw(bool *p_open, Profile *currEdit, const std::string &p
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1.0f, 0.3f, 0.3f, 1.0f));
 		if (ImGui::Button(GStrings.GetString("PROFSET_DELPROF")))
 		{
-			ImGui::OpenPopup("Delete Confirmation");
+			ImGui::OpenPopup(GStrings.GetString("PROFSET_DEL_CONF"));
 		}
 		ImGui::PopStyleColor(2);
 
@@ -247,14 +247,14 @@ void ProfileSettings::Draw(bool *p_open, Profile *currEdit, const std::string &p
 			ImGui::CloseCurrentPopup(); // Tell ImGui to close the modal stack
 		}
 
-		// TODO add translation here
-		if (ImGui::BeginPopupModal("Delete Confirmation", NULL,
+		if (ImGui::BeginPopupModal(GStrings.GetString("PROFSET_DEL_CONF"), NULL,
 		                           ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoMove))
 		{
 			ImGui::Text("%s", GStrings.GetString("PROFSET_DELMSG"));
 			ImGui::Spacing();
 
-			if (ImGui::Button("Yes", ImVec2(120, 0)))
+			if (ImGui::Button(GStrings.GetString("LAUNCHER_BUTTON_YES"),
+			                  ImVec2(1.3f * ImGui::CalcTextSize(GStrings.GetString("LAUNCHER_BUTTON_YES")).x, 0)))
 			{
 				std::filesystem::path fileP(profilePath);
 				std::filesystem::path dirToWipe = fileP.parent_path();
@@ -267,7 +267,8 @@ void ProfileSettings::Draw(bool *p_open, Profile *currEdit, const std::string &p
 			}
 			ImGui::SetItemDefaultFocus();
 			ImGui::SameLine();
-			if (ImGui::Button("No", ImVec2(120, 0)))
+			if (ImGui::Button(GStrings.GetString("LAUNCHER_BUTTON_NO"),
+			                  ImVec2(1.3f * ImGui::CalcTextSize(GStrings.GetString("LAUNCHER_BUTTON_NO")).x, 0)))
 			{
 				ImGui::CloseCurrentPopup();
 			}
@@ -1042,7 +1043,7 @@ void ProfileSettings::DrawFlagEditorModal(Profile *currEdit)
 
 		// Raw Integer Textboxes updating the bits bidirectionally
 
-		float btnWidth = ImGui::GetFontSize() * 8.0f;
+		float btnWidth = 1.3f * ImGui::CalcTextSize(GStrings.GetString("LAUNCHER_BUTTON_OK")).x;
 
 		const char *const compatLabels[] = {"compatflags:", "compatflags2:", ""};
 		const char *const dmLabels[]     = {"dmflags:", "dmflags2:", "dmflags3:"};
@@ -1060,7 +1061,7 @@ void ProfileSettings::DrawFlagEditorModal(Profile *currEdit)
 		ImGui::Separator();
 
 		ImGui::SetCursorPosX((ImGui::GetWindowSize().x - btnWidth) * 0.5f);
-		if (ImGui::Button("OK", ImVec2(btnWidth, 0)))
+		if (ImGui::Button(GStrings.GetString("LAUNCHER_BUTTON_OK"), ImVec2(btnWidth, 0)))
 		{
 			// Apply temp array back to profile
 			if (isGameplayFlags)

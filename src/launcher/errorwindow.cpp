@@ -121,7 +121,7 @@ bool ErrorWindow::ExecModal(const std::string &text, const std::string &log, std
 		                         ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoScrollbar |
 		                         ImGuiWindowFlags_NoScrollWithMouse;
 
-		ImGui::Begin("[X] Fatal Error - Execution aborted!", nullptr, flags);
+		ImGui::Begin(GStrings.GetString("CRASHREPORT_FATAL"), nullptr, flags);
 
 		ImGuiStyle &style = ImGui::GetStyle();
 
