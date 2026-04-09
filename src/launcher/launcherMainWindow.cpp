@@ -252,9 +252,9 @@ void LauncherMainWindow::DrawPopUp()
 		ImGui::Spacing();
 
 		// Center the OK button
-		float btnWidth = ImGui::GetFontSize() * 8.0f;
+		float btnWidth = 1.3f * ImGui::CalcTextSize(GStrings.GetString("LAUNCHER_BUTTON_OK")).x;
 		ImGui::SetCursorPosX((ImGui::GetWindowSize().x - btnWidth) * 0.5f);
-		if (ImGui::Button("OK", ImVec2(btnWidth, 0)))
+		if (ImGui::Button(GStrings.GetString("LAUNCHER_BUTTON_OK"), ImVec2(btnWidth, 0)))
 		{
 			ImGui::CloseCurrentPopup();
 		}
@@ -265,77 +265,102 @@ void LauncherMainWindow::DrawPopUp()
 
 void LauncherMainWindow::Draw()
 {
-	// Check if background thread signaled a refresh (e.g., game closed and we are coming back to launcher)
-	if (needsRefresh && !showSettingsModal)
-	{
-		RefreshList();
-		needsRefresh.store(false);
-	}
+    // Check if background thread signaled a refresh (e.g., game closed and we are coming back to launcher)
+    if (needsRefresh && !showSettingsModal)
+    {
+        RefreshList();
+        needsRefresh.store(false);
+    }
 
-	// Main Window
-	ImGuiIO &io = ImGui::GetIO();
-	ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f));
-	ImGui::SetNextWindowSize(io.DisplaySize);
+    // Main Window
+    ImGuiIO &io = ImGui::GetIO();
+    ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f));
+    ImGui::SetNextWindowSize(io.DisplaySize);
 
-	ImGuiWindowFlags windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove |
-	                               ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_MenuBar;
+    ImGuiWindowFlags windowFlags = ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoMove |
+                                   ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_MenuBar;
 
-	if (ImGui::Begin("UZDoom Launcher", nullptr, windowFlags))
-	{
-		DrawMenuBar();
+    if (ImGui::Begin("UZDoom Launcher", nullptr, windowFlags))
+    {
+        DrawMenuBar();
 
-		// Split the layout in 2 (profile list + description on the left, buttons on the right)
-		ImGui::Columns(2, "MainColumns", false);
-		ImGui::SetColumnWidth(0, ImGui::GetWindowWidth() - (ImGui::GetFontSize() * 10.0f));
+        // Calculate the max string width for the right panel buttons before setting up columns
+        float maxBtnWidth = 0.0f;
+        const char* strings[] = {
+            GStrings.GetString("LAUNCHER_PROFBUTTON_START"),
+            GStrings.GetString("LAUNCHER_PROFBUTTON_JOIN"),
+            GStrings.GetString("LAUNCHER_PROFBUTTON_HOST"),
+            GStrings.GetString("LAUNCHER_PROFBUTTON_SETTING"),
+            GStrings.GetString("LAUNCHER_PROFBUTTON_MVUP"),
+            GStrings.GetString("LAUNCHER_PROFBUTTON_MVDOWN"),
+            GStrings.GetString("LAUNCHER_PROFBUTTON_REFRESH"),
+            GStrings.GetString("LAUNCHER_PROFBUTTON_CLONE"),
+            GStrings.GetString("LAUNCHER_AVAIL_STATUS")
+        };
 
-		// Top-Left: Profile List
-		float reserveHeight = ImGui::GetTextLineHeightWithSpacing() * 10.0f;
-		ImGui::BeginChild("ProfileListChild", ImVec2(0, -reserveHeight), true);
-		DrawProfileList();
-		ImGui::EndChild();
+        for (const char* str : strings)
+        {
+			float width = ImGui::CalcTextSize(str).x;
+            if (width > maxBtnWidth) maxBtnWidth = width;
+        }
 
-		// Bottom-Left: Description Box
-		ImGui::BeginChild("DescriptionBoxChild", ImVec2(0, 0), true, ImGuiWindowFlags_HorizontalScrollbar);
-		DrawDescriptionBox();
-		ImGui::EndChild();
+        // Add padding for the button frame and a little extra margin for the column
+        float buttonWidth = maxBtnWidth + (ImGui::GetStyle().FramePadding.x * 5.0f);
+        float rightColWidth = buttonWidth + (ImGui::GetStyle().WindowPadding.x * 2.0f);
 
-		ImGui::NextColumn();
+        // Split the layout in 2 (profile list + description on the left, buttons on the right)
+        ImGui::Columns(2, "MainColumns", false);
+        ImGui::SetColumnWidth(0, ImGui::GetWindowWidth() - rightColWidth);
 
-		// Right side: Buttons
-		ImGui::BeginChild("ButtonsChild", ImVec2(0, 0));
-		DrawButtons();
-		ImGui::EndChild();
+        // Top-Left: Profile List
+        float reserveHeight = ImGui::GetTextLineHeightWithSpacing() * 10.0f;
+        ImGui::BeginChild("ProfileListChild", ImVec2(0, -reserveHeight), true);
+        DrawProfileList();
+        ImGui::EndChild();
 
-		ImGui::Columns(1);
-	}
-	ImGui::End();
+        // Bottom-Left: Description Box
+        ImGui::BeginChild("DescriptionBoxChild", ImVec2(0, 0), true, ImGuiWindowFlags_HorizontalScrollbar);
+        DrawDescriptionBox();
+        ImGui::EndChild();
 
-	// Render the linked ImGui Modals now
-	About::DrawReleaseNotesDialog(&showAboutNotes, langVar);
-	About::DrawCreditsDialog(&showAboutCredits, langVar);
+        ImGui::NextColumn();
 
-	DrawPopUp(); // Draw the import status popup if triggered
+        // Right side: Buttons
+        ImGui::BeginChild("ButtonsChild", ImVec2(0, 0));
+        DrawButtons();
+        ImGui::EndChild();
 
-	if (showSettingsModal && selectedProfileIdx >= 0 && selectedProfileIdx < cachedProfiles.size())
-	{
-		bool wasOpen = showSettingsModal;
+        ImGui::Columns(1);
+    }
 
-		settingsModal.Draw(&showSettingsModal, &cachedProfiles[selectedProfileIdx], profilePaths[selectedProfileIdx]);
+    ImGui::End();
 
-		// If the modal was just closed
-		if (wasOpen && !showSettingsModal)
-		{
-			// Check if it was deleted inside the profile settings modal
-			if (!std::filesystem::exists(profilePaths[selectedProfileIdx]))
-			{
-				profilePaths.erase(profilePaths.begin() + selectedProfileIdx);
-				selectedProfileIdx = -1;
-				SaveConfig();
-			}
+    // Render the linked ImGui Modals now
+    About::DrawReleaseNotesDialog(&showAboutNotes, langVar);
+    About::DrawCreditsDialog(&showAboutCredits, langVar);
 
-			RefreshList();
-		}
-	}
+    DrawPopUp(); // Draw the import status popup if triggered
+
+    if (showSettingsModal && selectedProfileIdx >= 0 && selectedProfileIdx < cachedProfiles.size())
+    {
+        bool wasOpen = showSettingsModal;
+
+        settingsModal.Draw(&showSettingsModal, &cachedProfiles[selectedProfileIdx], profilePaths[selectedProfileIdx]);
+
+        // If the modal was just closed
+        if (wasOpen && !showSettingsModal)
+        {
+            // Check if it was deleted inside the profile settings modal
+            if (!std::filesystem::exists(profilePaths[selectedProfileIdx]))
+            {
+                profilePaths.erase(profilePaths.begin() + selectedProfileIdx);
+                selectedProfileIdx = -1;
+                SaveConfig();
+            }
+
+            RefreshList();
+        }
+    }
 }
 
 // draws the top menu bar with File, Preferences, and About
@@ -589,7 +614,7 @@ void LauncherMainWindow::DrawDescriptionBox()
 
 void LauncherMainWindow::DrawButtons()
 {
-	ImVec2 btnSize(-FLT_MIN, ImGui::GetFrameHeight() * 1.2f);
+	ImVec2 btnSize(-1.0f, ImGui::GetFrameHeight() * 1.2f);
 	bool   hasSelection = (selectedProfileIdx != -1);
 
 	// when launched, disable all buttons
@@ -644,14 +669,18 @@ void LauncherMainWindow::DrawButtons()
 	ImGui::SetCursorPosY(ImGui::GetWindowHeight() - ImGui::GetTextLineHeightWithSpacing());
 	std::string baseStr = GStrings.GetString("LAUNCHER_AVAIL_STATUS");
 
-	//because dynamic number
+	// because dynamic number
 	char buffer[256];
 	snprintf(buffer, sizeof(buffer), baseStr.c_str(), cachedProfiles.size());
 
 	std::string statusText = buffer;
-	float textWidth  = ImGui::CalcTextSize(statusText.c_str()).x;
-	ImGui::SetCursorPosX((ImGui::GetWindowWidth() - textWidth) * 0.5f);
-	ImGui::TextDisabled(statusText.c_str());
+	float       textWidth  = ImGui::CalcTextSize(statusText.c_str()).x;
+
+	// Calculate cursor position and safeguard against negative values
+	float cursorX = (ImGui::GetWindowWidth() - textWidth) * 0.5f;
+	ImGui::SetCursorPosX(cursorX > 0.0f ? cursorX : 0.0f);
+
+	ImGui::TextDisabled("%s", statusText.c_str());
 }
 
 // when user presses UP or DOWN button, adjust selected entry in table

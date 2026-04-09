@@ -333,7 +333,7 @@ bool NetStartWindow::NetLoop(bool (*timer_callback)(void *), void *userdata)
 		}
 		else
 		{
-			float btnWidth = 100.0f;
+			float btnWidth = 1.2f * ImGui::CalcTextSize(GStrings.GetString("NETMENU_BTN_ABORT")).x;
 			ImGui::SetCursorPosX((windowWidth - btnWidth) * 0.5f);
 			if (ImGui::Button(GStrings.GetString("NETMENU_BTN_ABORT"), ImVec2(btnWidth, 0)))
 			{
