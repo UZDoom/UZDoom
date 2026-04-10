@@ -1551,6 +1551,7 @@ OptionMenu "HUDOptions" protected
 	ColorPicker "$HUDMNU_CROSSHAIRCOLORMAX",  "crosshaircolorMax", crosshairshowshealth
 	Option "$HUDMNU_CROSSHAIRCOLORS",         "crosshaircolors", "CrosshairHealthTypes"
 	Slider "$HUDMNU_CROSSHAIRSCALE",          "crosshairscale", 0.1, 10.0, 0.1, 1
+	Slider "$HUDMNU_CROSSHAIRYOFFSET",        "crosshair_offset_y", -0.5, 0.5, 0.01, 2
 	StaticText " "
 	Option "$HUDMNU_NAMETAGS",                "displaynametags", "DisplayTagsTypes"
 	Option "$HUDMNU_NAMETAGCOLOR",            "nametagcolor", "TextColors", "displaynametags"
