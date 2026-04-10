@@ -18,6 +18,11 @@
 #include <zwidget/core/resourcedata.h>
 #include <zwidget/core/theme.h>
 
+#ifdef _WIN32
+#include <windows.h>
+#undef COLOR_BACKGROUND // resolve the conflict with themedata.h
+#endif
+
 #include "c_cvars.h"
 #include "d_main.h"
 #include "filesystem.h"
@@ -26,7 +31,7 @@
 #include "tarray.h"
 #include "widgets/themedata.h"
 
-CUSTOM_CVARD(Int, ui_theme, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
+CUSTOM_CVARD(Int, ui_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
 {
 	if (self < 0) self = 0;
 	if (self > 2) self = 2;
@@ -63,7 +68,15 @@ void InitWidgetResources(const char* filename)
 
 	if (ui_theme == 0)
 	{
+#ifdef _WIN32
+		DWORD use_light = 1; // default theme
+		DWORD cb_data = sizeof(use_light);
+		RegGetValueW(HKEY_CURRENT_USER, L"Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+		             L"AppsUseLightTheme", RRF_RT_REG_DWORD, nullptr, &use_light, &cb_data);
+		use_dark = use_light == 0;
+#else
 		// TODO: detect system theme
+#endif
 	}
 
 	Theme::initilize(use_dark? DARK: LIGHT);

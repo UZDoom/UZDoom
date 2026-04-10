@@ -57,6 +57,7 @@ if( WIN32 )
 
 	set( PROJECT_LIBRARIES
 		Xinput
+		advapi32
 		comctl32
 		comdlg32
 		dbghelp
