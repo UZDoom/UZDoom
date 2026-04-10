@@ -231,6 +231,7 @@ void About::DrawReleaseNotesDialog(bool *p_open, const std::string &lang)
 		ImGui::EndChild();
 
 		// Center and draw the checkbox
+		ImGui::Spacing();
 		const char *checkboxLabel = GStrings.GetString("LAUNCHER_SHOW_ONUPDATED");
  		float checkboxWidth =
 			ImGui::GetFrameHeight() + ImGui::GetStyle().ItemInnerSpacing.x + ImGui::CalcTextSize(checkboxLabel).x;

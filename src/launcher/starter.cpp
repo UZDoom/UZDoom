@@ -51,6 +51,66 @@ bool Starter::ExecModal(const FStartupSelectionInfo &info)
 	return true;
 }
 
+// Helper to extract a file from a .PK3 into a byte vector
+std::vector<unsigned char> ExtractFontFromPK3(const char *pk3Path, const char *internalPath)
+{
+	std::vector<unsigned char> buffer;
+
+	// Open the PK3 file
+	std::ifstream file(pk3Path, std::ios::binary | std::ios::ate);
+	if (!file.is_open())
+	{
+		std::cerr << "Failed to open PK3 file on disk: " << pk3Path << std::endl;
+		return buffer;
+	}
+
+	// Get file size
+	std::streamsize size = file.tellg();
+	file.seekg(0, std::ios::beg);
+
+	std::vector<unsigned char> pk3Data(size);
+	if (!file.read(reinterpret_cast<char *>(pk3Data.data()), size))
+	{
+		std::cerr << "Failed to read PK3 file data: " << pk3Path << std::endl;
+		return buffer;
+	}
+
+	mz_zip_archive zip_archive;
+	memset(&zip_archive, 0, sizeof(zip_archive));
+
+	if (!mz_zip_reader_init_mem(&zip_archive, pk3Data.data(), pk3Data.size(), 0))
+	{
+		std::cerr << "miniz failed to parse PK3 memory buffer." << std::endl;
+		return buffer;
+	}
+
+	int file_index = mz_zip_reader_locate_file(&zip_archive, internalPath, nullptr, 0);
+	if (file_index < 0)
+	{
+		std::cerr << "File not found inside PK3: " << internalPath << std::endl;
+		mz_zip_reader_end(&zip_archive);
+		return buffer;
+	}
+
+	// Extract the uncompressed font bytes to the heap
+	size_t uncomp_size = 0;
+	void  *p           = mz_zip_reader_extract_to_heap(&zip_archive, file_index, &uncomp_size, 0);
+
+	if (p)
+	{
+		buffer.assign((unsigned char *)p, (unsigned char *)p + uncomp_size);
+		mz_free(p); // Free the memory miniz allocated internally
+	}
+	else
+	{
+		std::cerr << "miniz failed to extract file: " << internalPath << std::endl;
+	}
+
+	// Cleanup
+	mz_zip_reader_end(&zip_archive);
+	return buffer;
+}
+
 // use this to establish the SDL and ImGui context for the launcher, error and netstart windows
 Starter::ImGuiContextState Starter::SetupContext(const char *title, int width, int height, Uint32 sdl_init_flags)
 {
@@ -146,23 +206,43 @@ Starter::ImGuiContextState Starter::SetupContext(const char *title, int width, i
 	float baseFontSize   = FONT_SIZE;
 	float scaledFontSize = baseFontSize * state.scale;
 
-	/*
-	io.Fonts->AddFontFromMemoryCompressedTTF(notosans_compressed_data, notosans_compressed_size, scaledFontSize,
-	                                         &config);
+	std::string pk3Path = "uzdoom.pk3";
+
+	std::vector<unsigned char> baseFontData = ExtractFontFromPK3(pk3Path.c_str(), "ui/noto/noto-sans.ttf");
+	if (!baseFontData.empty())
+	{
+		// load base font from memory directly into DearImGui
+		void *imguiBaseData = ImGui::MemAlloc(baseFontData.size());
+		memcpy(imguiBaseData, baseFontData.data(), baseFontData.size());
+		io.Fonts->AddFontFromMemoryTTF(imguiBaseData, baseFontData.size(), scaledFontSize, &config);
+	}
+	else
+	{
+		io.Fonts->AddFontDefault(); // Fallback if PK3 reading fails
+	}
+
+	// Merge remaining fonts together to DearImGui
 	config.MergeMode = true;
 
-	// Add additional fonts for CJK and more characters, merging them with the default font
-	io.Fonts->AddFontFromMemoryCompressedTTF(notosanskr_compressed_data, notosanskr_compressed_size, scaledFontSize,
-	                                         &config);
-	io.Fonts->AddFontFromMemoryCompressedTTF(notosansarmenian_compressed_data, notosansarmenian_compressed_size,
-	                                         scaledFontSize, &config);
-	io.Fonts->AddFontFromMemoryCompressedTTF(notosansgeorgian_compressed_data, notosansgeorgian_compressed_size,
-	                                         scaledFontSize, &config);
-	io.Fonts->AddFontFromMemoryCompressedTTF(notosansjp_compressed_data, notosansjp_compressed_size, scaledFontSize,
-	                                         &config);
+	const char *extraFonts[] = {"ui/noto/noto-sans-kr.ttf",
+	                            "ui/noto/noto-sans-armenian.ttf",
+	                            "ui/noto/noto-sans-georgian.ttf",
+	                            "ui/noto/noto-sans-jp.ttf",
+	                            "ui/noto/noto-sans-sc.ttf"};
 
+	for (const auto &font : extraFonts)
+	{
+		std::vector<unsigned char> extraData = ExtractFontFromPK3(pk3Path.c_str(), font);
+		if (!extraData.empty())
+		{
+			void *imguiExtraData = ImGui::MemAlloc(extraData.size());
+			memcpy(imguiExtraData, extraData.data(), extraData.size());
 
-	*/
+			io.Fonts->AddFontFromMemoryTTF(
+				imguiExtraData, extraData.size(), scaledFontSize, &config
+			);
+		}
+	}
 
 	ImGui::StyleColorsDark();
 

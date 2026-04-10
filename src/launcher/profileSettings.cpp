@@ -676,11 +676,11 @@ void ProfileSettings::DrawLaunchTab(Profile *currEdit)
 		{
 			ImGui::TableNextRow();
 			ImGui::TableNextColumn();
-			ImGui::Checkbox(GStrings.GetString("PROFSET_LAUNCH_FMONSTER"), &currEdit->difficultyFastMonsters);
+			ImGui::Checkbox(GStrings.GetString("PROFSET_FMONSTER"), &currEdit->difficultyFastMonsters);
 			ImGui::TableNextColumn();
-			ImGui::Checkbox(GStrings.GetString("PROFSET_LAUNCH_RMONSTER"), &currEdit->difficultyRespawnMonsters);
+			ImGui::Checkbox(GStrings.GetString("PROFSET_RMONSTER"), &currEdit->difficultyRespawnMonsters);
 			ImGui::TableNextColumn();
-			ImGui::Checkbox(GStrings.GetString("PROFSET_LAUNCH_NMONSTER"), &currEdit->difficultyNoMonsters);
+			ImGui::Checkbox(GStrings.GetString("PROFSET_NMONSTER"), &currEdit->difficultyNoMonsters);
 			ImGui::EndTable();
 		}
 
