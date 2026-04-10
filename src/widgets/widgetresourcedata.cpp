@@ -18,16 +18,12 @@
 #include <zwidget/core/resourcedata.h>
 #include <zwidget/core/theme.h>
 
-#ifdef _WIN32
-#include <windows.h>
-#undef COLOR_BACKGROUND // resolve the conflict with themedata.h
-#endif
-
 #include "c_cvars.h"
 #include "d_main.h"
 #include "filesystem.h"
 #include "m_argv.h"
 #include "printf.h"
+#include "system_theme.h"
 #include "tarray.h"
 #include "widgets/themedata.h"
 
@@ -68,15 +64,8 @@ void InitWidgetResources(const char* filename)
 
 	if (ui_theme == 0)
 	{
-#ifdef _WIN32
-		DWORD use_light = 1; // default theme
-		DWORD cb_data = sizeof(use_light);
-		RegGetValueW(HKEY_CURRENT_USER, L"Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
-		             L"AppsUseLightTheme", RRF_RT_REG_DWORD, nullptr, &use_light, &cb_data);
-		use_dark = use_light == 0;
-#else
-		// TODO: detect system theme
-#endif
+		auto theme = GetSystemTheme() & ColorScheme;
+		if (theme == Dark) use_dark = true;
 	}
 
 	Theme::initilize(use_dark? DARK: LIGHT);
