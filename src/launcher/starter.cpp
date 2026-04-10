@@ -206,7 +206,24 @@ Starter::ImGuiContextState Starter::SetupContext(const char *title, int width, i
 	float baseFontSize   = FONT_SIZE;
 	float scaledFontSize = baseFontSize * state.scale;
 
-	std::string pk3Path = "uzdoom.pk3";
+	// Dynamically locate uzdoom.pk3 based on .app (mac) or .appimage (linux)
+	std::string pk3Path     = "uzdoom.pk3";
+	char *sdlBasePath = SDL_GetBasePath();
+
+	if (sdlBasePath)
+	{
+		std::filesystem::path basePath(sdlBasePath);
+		SDL_free(sdlBasePath);
+
+#if defined(__APPLE__)
+		pk3Path = (basePath / "uzdoom.pk3").string();
+
+#elif defined(__linux__)
+		pk3Path = (basePath / ".." / "usr" / "share" / "games" / "uzdoom" / "uzdoom.pk3").string();
+#else
+		pk3Path = (basePath / "uzdoom.pk3").string();
+#endif
+	}
 
 	std::vector<unsigned char> baseFontData = ExtractFontFromPK3(pk3Path.c_str(), "ui/noto/noto-sans.ttf");
 	if (!baseFontData.empty())
