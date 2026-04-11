@@ -28,6 +28,8 @@
 #elif defined(__linux__)
 #include <array>
 #include <string>
+#elif defined(__APPLE__)
+#include <CoreFoundation/CoreFoundation.h>
 #endif
 
 #include "system_theme.h"
@@ -127,9 +129,32 @@ InterfaceTheme GetSystemTheme()
 	auto contrast = gdbus_read("contrast");
 	if (contrast.find("uint32 1") != std::string::npos) result = static_cast<InterfaceTheme>(result | HighContrast);
 
+#elif defined(__APPLE__)
+
+	auto test = []<typename T>(CFTypeID type, CFPropertyListRef ref, auto &&pret)
+	{
+		bool res = false;
+		if (ref)
+		{
+			res = CFGetTypeID(ref) == type && pret(static_cast<T>(ref));
+			CFRelease(ref);
+		}
+		return res;
+	};
+
+	if (test.template operator()<CFStringRef>(CFStringGetTypeID(),
+		CFPreferencesCopyAppValue(CFSTR("AppleInterfaceStyle"), kCFPreferencesAnyApplication),
+		[](CFStringRef r) { return CFStringCompare(r, CFSTR("Dark"), 0) == kCFCompareEqualTo; }
+	)) result = Dark;
+
+	if (test.template operator()<CFBooleanRef>(CFBooleanGetTypeID(),
+		CFPreferencesCopyValue(CFSTR("increaseContrast"), CFSTR("com.apple.universalaccess"), kCFPreferencesCurrentUser, kCFPreferencesAnyHost),
+		[](CFBooleanRef r) { return CFBooleanGetValue(r); }
+	)) result = static_cast<InterfaceTheme>(result | HighContrast);
+
 #else
 
-	// TODO: macos, haiku
+	// TODO: haiku
 
 #endif
 
