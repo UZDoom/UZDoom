@@ -251,7 +251,7 @@ static const char *ConfigKeyName(int keynum)
 //
 //=============================================================================
 
-void C_NameKeys (char *str, int first, int second)
+void C_NameKeys (char *str, int first, int second, bool colors)
 {
 	int c = 0;
 
@@ -262,7 +262,7 @@ void C_NameKeys (char *str, int first, int second)
 		c++;
 		strcpy (str, KeyName (first));
 		if (second)
-			strcat (str, TEXTCOLOR_BLACK ", " TEXTCOLOR_NORMAL);
+			strcat (str, colors ? TEXTCOLOR_BLACK ", " TEXTCOLOR_NORMAL : ", ");
 	}
 
 	if (second)
