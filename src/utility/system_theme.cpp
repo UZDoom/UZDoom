@@ -110,7 +110,13 @@ InterfaceTheme GetSystemTheme()
 		result = use_light == 0? Dark: Light;
 	}
 
-	// TODO: grab contrast
+	HIGHCONTRASTW hc = {0};
+	hc.cbSize = sizeof(HIGHCONTRASTW);
+	if (SystemParametersInfoW(SPI_GETHIGHCONTRAST, 0, &hc, 0))
+	{
+		if (hc.dwFlags & HCF_HIGHCONTRASTON)
+			result = static_cast<InterfaceTheme>(result | HighContrast);
+	}
 
 #elif defined(__linux__)
 
