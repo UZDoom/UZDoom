@@ -23,10 +23,11 @@
 #include "filesystem.h"
 #include "m_argv.h"
 #include "printf.h"
+#include "system_theme.h"
 #include "tarray.h"
 #include "widgets/themedata.h"
 
-CUSTOM_CVARD(Int, ui_theme, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
+CUSTOM_CVARD(Int, ui_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
 {
 	if (self < 0) self = 0;
 	if (self > 2) self = 2;
@@ -63,7 +64,8 @@ void InitWidgetResources(const char* filename)
 
 	if (ui_theme == 0)
 	{
-		// TODO: detect system theme
+		auto theme = GetSystemTheme() & ColorScheme;
+		if (theme == Dark) use_dark = true;
 	}
 
 	Theme::initilize(use_dark? DARK: LIGHT);

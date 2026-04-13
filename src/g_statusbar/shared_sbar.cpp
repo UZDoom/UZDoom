@@ -24,37 +24,31 @@
 
 #include <assert.h>
 
-
-#include "sbar.h"
 #include "c_cvars.h"
 #include "c_dispatch.h"
-#include "c_console.h"
-#include "v_video.h"
-#include "filesystem.h"
-#include "s_sound.h"
-#include "gi.h"
-#include "doomstat.h"
-#include "g_level.h"
+#include "cmdlib.h"
 #include "d_net.h"
 #include "d_player.h"
-#include "serializer.h"
-#include "serialize_obj.h"
-#include "r_utility.h"
-#include "cmdlib.h"
-#include "g_levellocals.h"
-#include "vm.h"
-#include "p_acs.h"
-#include "sbarinfo.h"
-#include "gstrings.h"
+#include "doomstat.h"
 #include "events.h"
+#include "filesystem.h"
 #include "g_game.h"
-#include "utf8.h"
+#include "g_levellocals.h"
+#include "gi.h"
+#include "gstrings.h"
+#include "p_acs.h"
+#include "r_utility.h"
+#include "s_sound.h"
+#include "sbar.h"
+#include "sbarinfo.h"
+#include "serialize_obj.h" // IWYU pragma: keep
+#include "serializer.h"
 #include "texturemanager.h"
-#include "v_palette.h"
 #include "v_draw.h"
-#include "m_fixed.h"
-
-#include "../version.h"
+#include "v_palette.h"
+#include "v_video.h"
+#include "version.h"
+#include "vm.h"
 
 #define XHAIRSHRINKSIZE		(1./18)
 #define XHAIRPICKUPSIZE		(2+XHAIRSHRINKSIZE)
@@ -79,8 +73,10 @@ EXTERN_CVAR(Bool, inter_subtitles)
 EXTERN_CVAR(Bool, ui_screenborder_classic_scaling)
 
 CVAR(Int, hud_scale, -1, CVAR_ARCHIVE);
-CVAR(Bool, log_vgafont, false, CVAR_ARCHIVE)
-CVAR(Bool, hud_oldscale, true, CVAR_ARCHIVE)
+CVAR(Bool, log_vgafont, false, CVAR_ARCHIVE);
+CVAR(Bool, hud_oldscale, true, CVAR_ARCHIVE);
+CVAR(Float, crosshair_offset_x, 0., CVAR_ARCHIVE);
+CVAR(Float, crosshair_offset_y, 0., CVAR_ARCHIVE);
 
 DBaseStatusBar *StatusBar;
 
@@ -1020,7 +1016,9 @@ void DBaseStatusBar::DrawCrosshair (double ticFrac)
 	int health = Scale(CPlayer->health, 100, CPlayer->mo->GetDefault()->health);
 
 	const double size = PrevCrosshairSize * (1.0 - ticFrac) + CrosshairSize * ticFrac;
-	ST_DrawCrosshair(health, viewwidth / 2 + viewwindowx, viewheight / 2 + viewwindowy, size);
+	const double x = viewwindowx + (0.5+crosshair_offset_x/2)*viewwidth;
+	const double y = viewwindowy + (0.5-crosshair_offset_y/2)*viewheight;
+	ST_DrawCrosshair(health, x, y, size);
 }
 
 static void DrawCrosshair(DBaseStatusBar* self, double ticFrac)
