@@ -1,499 +1,237 @@
-cmake_minimum_required( VERSION 3.16 )
+cmake_minimum_required(VERSION 3.24)
 
-if( COMMAND cmake_policy )
-	if( POLICY CMP0011 )
-		cmake_policy( SET CMP0011 NEW )
-	endif()
-	if( POLICY CMP0054 )
-		cmake_policy( SET CMP0054 NEW )
-	endif()
-	if ( POLICY CMP0067 )
-		cmake_policy( SET CMP0067 NEW )
-	endif()
-	if ( POLICY CMP0091 )
-		cmake_policy( SET CMP0091 NEW )
-		set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+project(zvulkan)
+
+option( VULKAN_USE_XLIB "Use Vulkan xlib (X11) WSI integration" ON )
+option( VULKAN_USE_WAYLAND "Use Vulkan Wayland WSI integration" OFF )
+
+if ( VULKAN_USE_XLIB )
+	add_definitions( -DVULKAN_USE_XLIB=1 )
+else()
+	if (VULKAN_USE_WAYLAND)
+		add_definitions( -DVULKAN_USE_WAYLAND=1 )
 	endif()
 endif()
 
-if (LIBVPX_VCPKG)
-	list(APPEND VCPKG_MANIFEST_FEATURES "vcpkg-libvpx")
-endif()
+set(ZVULKAN_SOURCES
+	src/vulkanbuilders.cpp
+	src/vulkandevice.cpp
+	src/vulkaninstance.cpp
+	src/vulkansurface.cpp
+	src/vulkanswapchain.cpp
+	src/vk_mem_alloc/vk_mem_alloc.cpp
+	src/vk_mem_alloc/vk_mem_alloc.natvis
+	src/volk/volk.c
+	src/glslang/glslang/MachineIndependent/SymbolTable.h
+	src/glslang/glslang/MachineIndependent/propagateNoContraction.cpp
+	src/glslang/glslang/MachineIndependent/PoolAlloc.cpp
+	src/glslang/glslang/MachineIndependent/Intermediate.cpp
+	src/glslang/glslang/MachineIndependent/gl_types.h
+	src/glslang/glslang/MachineIndependent/parseVersions.h
+	src/glslang/glslang/MachineIndependent/attribute.cpp
+	src/glslang/glslang/MachineIndependent/Scan.cpp
+	src/glslang/glslang/MachineIndependent/iomapper.h
+	src/glslang/glslang/MachineIndependent/ParseHelper.h
+	src/glslang/glslang/MachineIndependent/glslang_tab.cpp.h
+	src/glslang/glslang/MachineIndependent/SymbolTable.cpp
+	src/glslang/glslang/MachineIndependent/RemoveTree.cpp
+	src/glslang/glslang/MachineIndependent/Versions.h
+	src/glslang/glslang/MachineIndependent/reflection.cpp
+	src/glslang/glslang/MachineIndependent/LiveTraverser.h
+	src/glslang/glslang/MachineIndependent/iomapper.cpp
+	src/glslang/glslang/MachineIndependent/intermOut.cpp
+	src/glslang/glslang/MachineIndependent/Versions.cpp
+	src/glslang/glslang/MachineIndependent/Initialize.h
+	src/glslang/glslang/MachineIndependent/linkValidate.cpp
+	src/glslang/glslang/MachineIndependent/InfoSink.cpp
+	src/glslang/glslang/MachineIndependent/Constant.cpp
+	src/glslang/glslang/MachineIndependent/IntermTraverse.cpp
+	src/glslang/glslang/MachineIndependent/propagateNoContraction.h
+	src/glslang/glslang/MachineIndependent/glslang_tab.cpp
+	src/glslang/glslang/MachineIndependent/ShaderLang.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/Pp.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/PpTokens.h
+	src/glslang/glslang/MachineIndependent/preprocessor/PpAtom.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/PpContext.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/PpTokens.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/PpScanner.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/PpContext.h
+	src/glslang/glslang/MachineIndependent/attribute.h
+	src/glslang/glslang/MachineIndependent/localintermediate.h
+	src/glslang/glslang/MachineIndependent/parseConst.cpp
+	src/glslang/glslang/MachineIndependent/Initialize.cpp
+	src/glslang/glslang/MachineIndependent/limits.cpp
+	src/glslang/glslang/MachineIndependent/ParseContextBase.cpp
+	src/glslang/glslang/MachineIndependent/RemoveTree.h
+	src/glslang/glslang/MachineIndependent/ParseHelper.cpp
+	src/glslang/glslang/MachineIndependent/Scan.h
+	src/glslang/glslang/MachineIndependent/reflection.h
+	src/glslang/glslang/MachineIndependent/ScanContext.h
+	src/glslang/glslang/MachineIndependent/SpirvIntrinsics.cpp
+	src/glslang/glslang/OSDependent/osinclude.h
+	src/glslang/glslang/GenericCodeGen/Link.cpp
+	src/glslang/glslang/GenericCodeGen/CodeGen.cpp
+	src/glslang/glslang/Public/ShaderLang.h
+	src/glslang/glslang/Include/ConstantUnion.h
+	src/glslang/glslang/Include/InitializeGlobals.h
+	src/glslang/glslang/Include/Common.h
+	src/glslang/glslang/Include/PoolAlloc.h
+	src/glslang/glslang/Include/arrays.h
+	src/glslang/glslang/Include/ShHandle.h
+	src/glslang/glslang/Include/InfoSink.h
+	src/glslang/glslang/Include/ResourceLimits.h
+	src/glslang/glslang/Include/Types.h
+	src/glslang/glslang/Include/BaseTypes.h
+	src/glslang/glslang/Include/intermediate.h
+	src/glslang/glslang/Include/SpirvIntrinsics.h
+	src/glslang/glslang/Include/build_info.h
+	src/glslang/glslang/OSDependent/osinclude.h
+	src/glslang/spirv/Logger.h
+	src/glslang/spirv/GlslangToSpv.cpp
+	src/glslang/spirv/SPVRemapper.h
+	src/glslang/spirv/GLSL.ext.EXT.h
+	src/glslang/spirv/hex_float.h
+	src/glslang/spirv/doc.cpp
+	src/glslang/spirv/disassemble.cpp
+	src/glslang/spirv/SpvPostProcess.cpp
+	src/glslang/spirv/bitutils.h
+	src/glslang/spirv/InReadableOrder.cpp
+	src/glslang/spirv/GLSL.ext.AMD.h
+	src/glslang/spirv/GLSL.ext.NV.h
+	src/glslang/spirv/SPVRemapper.cpp
+	src/glslang/spirv/SpvBuilder.h
+	src/glslang/spirv/GLSL.ext.KHR.h
+	src/glslang/spirv/disassemble.h
+	src/glslang/spirv/SpvBuilder.cpp
+	src/glslang/spirv/GlslangToSpv.h
+	src/glslang/spirv/doc.h
+	src/glslang/spirv/SpvTools.cpp
+	src/glslang/spirv/spvIR.h
+	src/glslang/spirv/Logger.cpp
+	src/glslang/spirv/SpvTools.h
+	src/glslang/spirv/GLSL.std.450.h
+	src/glslang/spirv/NonSemanticDebugPrintf.h
+	src/glslang/OGLCompilersDLL/InitializeDll.cpp
+	src/glslang/OGLCompilersDLL/InitializeDll.h
+)
 
-if (OPENAL_SOFT_VCPKG)
-	list(APPEND VCPKG_MANIFEST_FEATURES "vcpkg-openal-soft")
-endif()
+set(ZVULKAN_INCLUDES
+	include/zvulkan/vulkanbuilders.h
+	include/zvulkan/vulkancompatibledevice.h
+	include/zvulkan/vulkandevice.h
+	include/zvulkan/vulkaninstance.h
+	include/zvulkan/vulkanobjects.h
+	include/zvulkan/vulkansurface.h
+	include/zvulkan/vulkanswapchain.h
+	include/zvulkan/volk/volk.h
+	include/zvulkan/vk_mem_alloc/vk_mem_alloc.h
+)
 
-if (CMAKE_SYSTEM_NAME STREQUAL "Windows" OR (NOT CMAKE_SYSTEM_NAME AND CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows"))
-	# Force static triplet on Windows
-	set(VCPKG_TARGET_TRIPLET "x64-windows-static")
-endif()
+set(ZVULKAN_WIN32_SOURCES
+	src/glslang/glslang/OSDependent/Windows/ossource.cpp
+)
 
-project(UZDoom)
+set(ZVULKAN_UNIX_SOURCES
+	src/glslang/glslang/OSDependent/Unix/ossource.cpp
+)
 
-if (WIN32 AND VCPKG_TOOLCHAIN)
-	option(LIBVPX_VCPKG "Use libvpx from vcpkg" OFF)
-endif()
+set(VULKAN_INCLUDES
+	include/vulkan/vk_enum_string_helper.h
+	include/vulkan/vk_icd.h
+	include/vulkan/vk_layer.h
+	include/vulkan/vk_layer_dispatch_table.h
+	include/vulkan/vk_platform.h
+	include/vulkan/vk_sdk_platform.h
+	include/vulkan/vulkan.h
+	include/vulkan/vulkan_android.h
+	include/vulkan/vulkan_beta.h
+	include/vulkan/vulkan_core.h
+	include/vulkan/vulkan_directfb.h
+	include/vulkan/vulkan_fuchsia.h
+	include/vulkan/vulkan_ggp.h
+	include/vulkan/vulkan_ios.h
+	include/vulkan/vulkan_macos.h
+	include/vulkan/vulkan_metal.h
+	include/vulkan/vulkan_mir.h
+	include/vulkan/vulkan_screen.h
+	include/vulkan/vulkan_vi.h
+	include/vulkan/vulkan_wayland.h
+	include/vulkan/vulkan_win32.h
+	include/vulkan/vulkan_xcb.h
+	include/vulkan/vulkan_xlib.h
+	include/vulkan/vulkan_xlib_xrandr.h
+)
 
-if (VCPKG_TOOLCHAIN)
-	option(OPENAL_SOFT_VCPKG "Use OpenAL from vcpkg" OFF)
-endif()
+set(EXAMPLE_SOURCES
+	example/example.cpp
+)
 
-if (NOT VCPKG_TOOLCHAIN)
-	set(VCPKG_MANIFEST_FEATURES)
-endif()
+source_group("src" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/.+")
+source_group("src\\glslang" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/.+")
+source_group("src\\glslang\\glslang" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/.+")
+source_group("src\\glslang\\glslang\\GenericCodeGen" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/GenericCodeGen/.+")
+source_group("src\\glslang\\glslang\\Include" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/Include/.+")
+source_group("src\\glslang\\glslang\\MachineIndependent" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/MachineIndependent/.+")
+source_group("src\\glslang\\glslang\\MachineIndependent\\preprocessor" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/MachineIndependent/preprocessor/.+")
+source_group("src\\glslang\\glslang\\OSDependent" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/OSDependent/.+")
+source_group("src\\glslang\\glslang\\OSDependent\\Unix" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/OSDependent/Unix/.+")
+source_group("src\\glslang\\glslang\\OSDependent\\Web" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/OSDependent/Web/.+")
+source_group("src\\glslang\\glslang\\OSDependent\\Windows" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/OSDependent/Windows/.+")
+source_group("src\\glslang\\glslang\\Public" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/Public/.+")
+source_group("src\\glslang\\OGLCompilersDLL" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/OGLCompilersDLL/.+")
+source_group("src\\glslang\\spirv" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/spirv/.+")
+source_group("src\\vk_mem_alloc" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/vk_mem_alloc/.+")
+source_group("src\\volk" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/volk/.+")
+source_group("include" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/zvulkan/.+")
+source_group("include\\vk_mem_alloc" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/zvulkan/vk_mem_alloc/.+")
+source_group("include\\volk" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/zvulkan/volk/.+")
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+source_group("example" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/example/.+")
 
-find_package(Threads REQUIRED)
-find_package(Python3 3.6 REQUIRED)
+include_directories(include include/zvulkan src)
 
-list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
-include( FindPackageHandleStandardArgs )
-
-# Support cross compiling
-option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
-if( FORCE_CROSSCOMPILE )
-	set( CMAKE_CROSSCOMPILING TRUE )
-endif()
-
-if(CMAKE_CROSSCOMPILING)
-	set(IMPORT_EXECUTABLES "IMPORTFILE-NOTFOUND" CACHE FILEPATH "Export file from native build.")
-	include(${IMPORT_EXECUTABLES})
-endif()
-
-# Recursive function to place PK3 archive source files into a hierarchy of source file in the IDE
-function( assort_pk3_source_folder FOLDER_NAME PK3_DIR )
-	# Assort source files into folders in the IDE
-	file(GLOB PK3_SRCS ${PK3_DIR}/*) # Create list of all files in this folder
-	foreach(PK3_SRC ${PK3_SRCS})
-		# If there are subfolders, recurse into them
-		if(IS_DIRECTORY ${PK3_SRC})
-			get_filename_component(DIRNAME ${PK3_SRC} NAME)
-			# Exclude folder from list of source files
-			list(REMOVE_ITEM PK3_SRCS ${PK3_SRC})
-			# Recurse deeper into the filesystem folder tree
-			assort_pk3_source_folder( ${FOLDER_NAME}\\${DIRNAME} ${PK3_SRC} )
-		endif()
-		# Assign IDE group for current top-level source files
-		source_group(${FOLDER_NAME} FILES ${PK3_SRCS})
-	endforeach()
-endfunction()
-
-option( PK3_QUIET_ZIPDIR "Do not list files processed by zipdir" NO )
-if( PK3_QUIET_ZIPDIR )
-	set( PK3_ZIPDIR_OPTIONS "-q" )
-endif()
-
-# Simplify pk3 building, add_pk3(filename srcdirectory)
-function( add_pk3 PK3_NAME PK3_DIR )
-	# Generate target name. Just use "pk3" for main pk3 target.
-	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
-
-	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-		COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
-		DEPENDS zipdir )
-
-	# Create a list of source files for this PK3, for use in the IDE
-	# Phase 1: Create a list of all source files for this PK3 archive, except
-	#  for a couple of strife image file names that confuse CMake.
-	file(GLOB_RECURSE PK3_SRCS ${PK3_DIR}/*)
-	# Exclude from the source list some files with brackets in the
-	# file names here, because they confuse CMake.
-	# This only affects the list of source files shown in the IDE.
-	# It does not actually remove the files from the PK3 archive.
-	# First replace that toxic bracket character with something we can handle
-	string(REPLACE "[" confusing_bracket PK3_SRCS "${PK3_SRCS}")
-	string(REPLACE "]" confusing_bracket PK3_SRCS "${PK3_SRCS}")
-	foreach(PK3_SRC ${PK3_SRCS}) # All source files at all levels
-		# Exclude those quarantined source file source file names that once had a bracket
-		if(${PK3_SRC} MATCHES confusing_bracket)
-			# message(STATUS "Ignoring PK3 file name containing brackets "${PK3_SRC})
-			list(REMOVE_ITEM PK3_SRCS ${PK3_SRC})
-		endif()
-	endforeach()
-
-	# Phase 2: Create the PK3 build rule, including the source file list for the IDE
-	# Touch the zipdir executable here so that the pk3s are forced to
-	# rebuild each time since their dependency has "changed."
-	add_custom_target( ${PK3_TARGET} ALL
-		COMMAND ${CMAKE_COMMAND} -E touch $<TARGET_FILE:zipdir>
-		DEPENDS ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-		SOURCES ${PK3_SRCS})
-
-	# Phase 3: Assign source files to a nice folder structure in the IDE
-	assort_pk3_source_folder("Source Files" ${PK3_DIR})
-
-	# Phase 4: Create separate copy step, in order to make zdoom depend on pk3s without creating cycle
-	if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
-		set(DEST_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
-	elseif(WIN32)
-		set(DEST_DIR "${PROJECT_BINARY_DIR}/$<CONFIG>")
-	elseif(APPLE)
-		set(DEST_DIR "${PROJECT_BINARY_DIR}/${ZDOOM_EXE_NAME}.app/Contents/Resources")
+if(WIN32)
+	list(APPEND ZVULKAN_SOURCES ${ZVULKAN_WIN32_SOURCES})
+	add_definitions(-DUNICODE -D_UNICODE)
+else()
+	if(APPLE)
+		find_package(Vulkan REQUIRED COMPONENTS MoltenVK)
+		list(APPEND ZVULKAN_LIBS Vulkan::Vulkan)
+	elseif(NOT HAIKU AND NOT CMAKE_SYSTEM_NAME MATCHES "FreeBSD|NetBSD|OpenBSD|DragonFly")
+		list(APPEND ZVULKAN_LIBS ${CMAKE_DL_LIBS} -ldl)
 	else()
-		set(DEST_DIR "${PROJECT_BINARY_DIR}")
+		list(APPEND ZVULKAN_LIBS ${CMAKE_DL_LIBS})
 	endif()
 
-	set(COPY_TARGET_NAME "${PK3_TARGET}_copy")
-	add_custom_target(${COPY_TARGET_NAME} ALL
-		COMMAND ${CMAKE_COMMAND} -E copy_if_different
-			"${ZDOOM_OUTPUT_DIR}/${PK3_NAME}"
-			"${DEST_DIR}/${PK3_NAME}"
-		DEPENDS ${PK3_TARGET}
-	)
-	add_dependencies(zdoom ${COPY_TARGET_NAME})
-
-	# Phase 5: Add the resulting PK3 to the install target.
-	if( WIN32 )
-		set( INSTALL_PK3_PATH . CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
-	else()
-		set( INSTALL_PK3_PATH share/games/${ZDOOM_EXE_NAME} CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
-	endif()
-	install(FILES "${PROJECT_BINARY_DIR}/${PK3_NAME}"
-		DESTINATION ${INSTALL_PK3_PATH}
-		COMPONENT "Game resources")
-endfunction()
-
-macro( generate_language_files target destination )
-	# right now, this dumps temp files into the source tree and deletes them after build
-	# This should be re-worked to dump stuff into the build tree instead
-	set(lang_script "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/scripts/compile.py")
-	set(lang_dst "${CMAKE_CURRENT_SOURCE_DIR}/${destination}")
-	set(lang_target "${target}_${destination}")
-
-	set(lang_sources_list "")
-	set(sources ${ARGN})
-	foreach( source_item ${sources} )
-		list(APPEND lang_sources_list "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/${source_item}")
-	endforeach()
-
-	string( REGEX REPLACE "[^a-zA-Z0-9]" "_" lang_target ${lang_target} )
-
-	add_custom_target(${lang_target} COMMAND Python3::Interpreter -B -E -s "${lang_script}" ${lang_sources_list} "${lang_dst}")
-	add_dependencies(${target} ${lang_target})
-	add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E remove "${lang_dst}")
-endmacro()
-
-# Macro for building libraries without debugging information
-macro( make_release_only )
-	set( CMAKE_C_FLAGS_MINSIZEREL ${CMAKE_C_FLAGS_RELEASE} )
-	set( CMAKE_C_FLAGS_RELWITHDEBINFO ${CMAKE_C_FLAGS_RELEASE} )
-	string( REPLACE "/MT " "/MTd " CMAKE_C_FLAGS_DEBUG ${CMAKE_C_FLAGS_RELEASE} )
-	set( CMAKE_CXX_FLAGS_MINSIZEREL ${CMAKE_CXX_FLAGS_RELEASE} )
-	set( CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELEASE} )
-	string( REPLACE "/MT " "/MTd " CMAKE_CXX_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_RELEASE} )
-endmacro()
-
-IF( NOT CMAKE_BUILD_TYPE )
-	SET( CMAKE_BUILD_TYPE Debug CACHE STRING
-		"Choose the type of build, options are: Debug Release RelWithDebInfo MinSizeRel."
-		FORCE )
-ENDIF()
-
-set( ZDOOM_OUTPUT_DIR ${CMAKE_BINARY_DIR} CACHE PATH "Directory where zdoom.pk3 and the executable will be created." )
-set( ZDOOM_EXE_NAME "uzdoom" CACHE FILEPATH "Name of the executable to create" )
-
-# Replacement variables for a possible long list of C/C++ compilers compatible with GCC
-if( "${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_C_COMPILER_ID}" MATCHES "Clang" )
-	set( ZD_CMAKE_COMPILER_IS_GNUC_COMPATIBLE TRUE )
-else()
-	set( ZD_CMAKE_COMPILER_IS_GNUC_COMPATIBLE FALSE )
+	list(APPEND ZVULKAN_SOURCES ${ZVULKAN_UNIX_SOURCES})
+	add_definitions(-DUNIX -D_UNIX)
+	add_link_options(-pthread)
 endif()
 
-if( "${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang" )
-	set( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE TRUE )
-else()
-	set( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE FALSE )
+if(MSVC)
+	# Use all cores for compilation
+	set(CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}")
+
+	# Ignore warnings in third party code
+	#set_source_files_properties(${ZVULKAN_SOURCES} PROPERTIES COMPILE_FLAGS "/wd4244 /wd4267 /wd4005 /wd4018 -D_CRT_SECURE_NO_WARNINGS")
 endif()
 
-if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
-	set( PROFILE 0 CACHE BOOL "Enable profiling with gprof for Debug and RelWithDebInfo build types." )
+add_library(zvulkan STATIC ${ZVULKAN_SOURCES} ${ZVULKAN_INCLUDES} ${VULKAN_INCLUDES})
+target_link_libraries(zvulkan PUBLIC ${ZVULKAN_LIBS})
+set_target_properties(zvulkan PROPERTIES CXX_STANDARD 17)
+
+if(MSVC)
+	set_property(TARGET zvulkan PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
 
-# Fast math flags, required by some subprojects
-set( ZD_FASTMATH_FLAG "" )
-if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
-	set( ZD_FASTMATH_FLAG "-ffast-math -ffp-contract=fast" )
-elseif( MSVC )
-	set( ZD_FASTMATH_FLAG "/fp:fast" )
+option( BUILD_EXAMPLE "Build exmaple" OFF )
+if(BUILD_EXAMPLE)
+	add_executable(zvulkan_example WIN32 MACOSX_BUNDLE ${EXAMPLE_SOURCES})
+	target_link_libraries(zvulkan_example zvulkan)
+	set_target_properties(zvulkan_example PROPERTIES CXX_STANDARD 17)
+
+  if(MSVC)
+	  set_property(TARGET zvulkan_example PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+  endif()
 endif()
 
-macro( use_fast_math )
-	set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${ZD_FASTMATH_FLAG}" )
-	set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ZD_FASTMATH_FLAG}" )
-endmacro()
-
-
-include( CheckFunctionExists )
-
-macro( gz_require_stricmp )
-	CHECK_FUNCTION_EXISTS( stricmp STRICMP_EXISTS )
-	if( NOT STRICMP_EXISTS )
-		add_definitions( -Dstricmp=strcasecmp )
-	endif()
-endmacro()
-
-macro( gz_require_strnicmp )
-	CHECK_FUNCTION_EXISTS( strnicmp STRNICMP_EXISTS )
-	if( NOT STRNICMP_EXISTS )
-		add_definitions( -Dstrnicmp=strncasecmp )
-	endif()
-endmacro()
-
-option( NO_OPENAL "Disable OpenAL sound support" OFF )
-
-find_package( BZip2 )
-find_package( VPX )
-if (NOT FORCE_INTERNAL_CPPDAP)
-	find_package( cppdap CONFIG )
-endif()
-if (NOT FORCE_INTERNAL_ZMUSIC)
-	find_package( ZMusic )
-endif()
-
-include( TargetArch )
-
-target_architecture(TARGET_ARCHITECTURE)
-
-if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
-	set( HAVE_VM_JIT ON )
-endif()
-
-option (HAVE_VULKAN "Enable Vulkan support" ON)
-if( APPLE )
-	option (HAVE_GLES2 "Enable GLES2 support" OFF)
-else()
-	option (HAVE_GLES2 "Enable GLES2 support" ON)
-endif()
-
-# no, we're not using external asmjit for now, we made too many modifications to our's.
-# if the asmjit author uses our changes then we'll update this.
-
-#if( ${HAVE_VM_JIT} )
-#	find_package( asmjit )
-#endif()
-
-if( MSVC )
-	# Eliminate unreferenced functions and data
-	# Perform identical COMDAT folding
-	set( REL_LINKER_FLAGS "/opt:ref /opt:icf /nodefaultlib:msvcrt /TSAWARE /LARGEADDRESSAWARE" )
-
-	# String pooling
-	# Function-level linking
-	# Disable run-time type information
-	set( ALL_C_FLAGS "/GF /Gy /permissive- /utf-8" )
-
-	if ( HAVE_VULKAN )
-		set( ALL_C_FLAGS "${ALL_C_FLAGS} /DHAVE_VULKAN" )
-	endif()
-
-	if ( HAVE_GLES2 )
-		set( ALL_C_FLAGS "${ALL_C_FLAGS} /DHAVE_GLES2" )
-	endif()
-
-	# Use SSE 2 as minimum always as the true color drawers needs it for __vectorcall
-	#set( ALL_C_FLAGS "${ALL_C_FLAGS} /arch:SSE2") # This is already the default
-
-
-
-	# Avoid CRT DLL dependancies in release builds, optionally generate assembly output for checking crash locations.
-	option( ZDOOM_GENERATE_ASM "Generate assembly output." OFF )
-	if( ZDOOM_GENERATE_ASM )
-		set( REL_C_FLAGS "/Oy /Oi /FAcs /GS-" )
-	else()
-		set( REL_C_FLAGS "/Oy /Oi /GS-" )
-	endif()
-
-
-	# Debug allocations in debug builds
-	set( DEB_C_FLAGS "/D _CRTDBG_MAP_ALLOC" )
-
-	# Disable warnings for unsecure CRT functions from VC8+
-	set( ALL_C_FLAGS "${ALL_C_FLAGS} /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /D_CRT_NONSTDC_NO_WARNINGS" )
-
-	string(REPLACE "/Ob1 " "/Ob2 " CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELWITHDEBINFO} )
-else()
-	set( REL_LINKER_FLAGS "" )
-	set( ALL_C_FLAGS "-ffp-contract=off" )
-
-	if ( HAVE_VULKAN )
-		set( ALL_C_FLAGS "${ALL_C_FLAGS} -DHAVE_VULKAN" )
-	endif()
-
-	if ( HAVE_GLES2 )
-		set( ALL_C_FLAGS "${ALL_C_FLAGS} -DHAVE_GLES2" )
-	endif()
-
-	if ( UNIX )
-		include(CheckSymbolExists)
-		check_symbol_exists( "fts_set" "sys/types.h;sys/stat.h;fts.h" HAVE_FTS )
-		if ( NOT HAVE_FTS )
-			include ( FindPkgConfig )
-			pkg_check_modules( MUSL_FTS musl-fts )
-			if ( MUSL_FTS_FOUND )
-				list(JOIN MUSL_FTS_LDFLAGS " " MUSL_FTS_LDFLAGS_JOINED)
-				set ( ALL_C_FLAGS "${ALL_C_FLAGS} ${MUSL_FTS_LDFLAGS_JOINED}" )
-			else ( MUSL_FTS_FOUND )
-				message (ERROR "fts_* functions not found in the system" )
-			endif ( MUSL_FTS_FOUND )
-		endif ( NOT HAVE_FTS )
-	endif ( UNIX )
-
-	set( REL_C_FLAGS "" )
-	set( DEB_C_FLAGS "" )
-
-	if( APPLE )
-		list(PREPEND CMAKE_PREFIX_PATH "/opt/local")    # port
-		list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew") # brew
-		set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13")
-		if( CMAKE_CXX_COMPILER_ID STREQUAL "GNU" )
-			# If we're compiling with a custom GCC on the Mac (which we know since g++-4.2 doesn't support C++11) statically link libgcc.
-			set( ALL_C_FLAGS "-static-libgcc" )
-		endif()
-	elseif( NOT MINGW AND NOT HAIKU AND NOT "${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS" )
-		# Generic GCC/Clang requires position independent executable to be enabled explicitly
-		set( ALL_C_FLAGS "${ALL_C_FLAGS} -fPIE" )
-		set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pie" )
-	endif( APPLE )
-endif()
-
-set( CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} ${REL_LINKER_FLAGS}" )
-set( CMAKE_EXE_LINKER_FLAGS_MINSIZEREL "${CMAKE_EXE_LINKER_FLAGS_MINSIZEREL} ${REL_LINKER_FLAGS}" )
-set( CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO "${CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO} ${REL_LINKER_FLAGS}" )
-
-set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${ALL_C_FLAGS}" )
-set( CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${REL_C_FLAGS}" )
-set( CMAKE_C_FLAGS_MINSIZEREL "${CMAKE_C_FLAGS_MINSIZEREL} ${REL_C_FLAGS}" )
-set( CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" )
-set( CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${DEB_C_FLAGS} -D_DEBUG" )
-
-set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ALL_C_FLAGS}" )
-set( CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${REL_C_FLAGS}" )
-set( CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL} ${REL_C_FLAGS}" )
-set( CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" )
-set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${DEB_C_FLAGS} -D_DEBUG" )
-
-option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
-option(FORCE_INTERNAL_ZMUSIC "Use internal zmusic" ON)
-option(FORCE_INTERNAL_ASMJIT "Use internal asmjit" ON)
-option(FORCE_INTERNAL_CPPDAP "Use internal cppdap" ON)
-
-mark_as_advanced( FORCE_INTERNAL_ASMJIT )
-
-if (HAVE_VULKAN)
-	add_subdirectory( libraries/ZVulkan )
-endif()
-
-set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
-add_subdirectory( libraries/ZWidget )
-
-add_subdirectory( libraries/webp )
-
-add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
-set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
-set( DRPC_LIBRARIES discord-rpc )
-set( DRPC_LIBRARY discord-rpc )
-
-if( HAVE_VM_JIT AND UNIX )
-	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )
-	if( NOT HAVE_BACKTRACE )
-		set( CMAKE_REQUIRED_FLAGS "-lexecinfo" )
-		check_symbol_exists( "backtrace" "execinfo.h" HAVE_LIBEXECINFO )
-		if( HAVE_LIBEXECINFO )
-			set( ALL_C_FLAGS "${ALL_C_FLAGS} -lexecinfo" )
-		else( HAVE_LIBEXECINFO )
-			set( HAVE_VM_JIT NO )
-		endif( HAVE_LIBEXECINFO )
-		set( CMAKE_REQUIRED_FLAGS )
-	endif( NOT HAVE_BACKTRACE )
-endif( HAVE_VM_JIT AND UNIX )
-
-if( ${HAVE_VM_JIT} )
-	if( ASMJIT_FOUND AND NOT FORCE_INTERNAL_ASMJIT )
-		message( STATUS "Using system asmjit, includes found at ${ASMJIT_INCLUDE_DIR}" )
-	else()
-		message( STATUS "Using internal asmjit" )
-		set( SKIP_INSTALL_ALL TRUE ) # Avoid installing asmjit alongside zdoom
-		add_subdirectory( libraries/asmjit )
-		set( ASMJIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries/asmjit )
-		set( ASMJIT_LIBRARIES asmjit )
-		set( ASMJIT_LIBRARY asmjit )
-	endif()
-endif()
-
-if( BZIP2_FOUND AND NOT FORCE_INTERNAL_BZIP2 )
-	message( STATUS "Using system bzip2 library, includes found at ${BZIP2_INCLUDE_DIR}" )
-else()
-	message( STATUS "Using internal bzip2 library" )
-	add_subdirectory( libraries/bzip2 )
-	set( BZIP2_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/bzip2" )
-	set( BZIP2_LIBRARIES bz2 )
-	set( BZIP2_LIBRARY bz2 )
-endif()
-
-if ( CPPDAP_FOUND AND NOT FORCE_INTERNAL_CPPDAP )
-	message( STATUS "Using system cppdap library, includes found at ${CPPDAP_INCLUDE_DIR}" )
-else()
-	message( STATUS "Using internal cppdap library" )
-	add_subdirectory( libraries/cppdap )
-	set( CPPDAP_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/cppdap" )
-	set( CPPDAP_LIBRARIES cppdap )
-	set( CPPDAP_LIBRARY cppdap )
-	set( CPPDAP_FOUND TRUE )
-endif()
-
-# ZMUSIC
-if( ZMUSIC_FOUND AND NOT FORCE_INTERNAL_ZMUSIC )
-	message( STATUS "Using system zmusic library, includes found at ${ZMUSIC_INCLUDE_DIR}" )
-	set( ZMUSIC_SYSTEM_INSTALL TRUE )
-else()
-	message( STATUS "Using internal zmusic library" )
-	set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
-	add_subdirectory( libraries/ZMusic )
-	set( ZMUSIC_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/zmusic" )
-	set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
-	set( ZMUSIC_LIBRARIES zmusic )
-	set( ZMUSIC_FOUND TRUE )
-endif()
-
-set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
-
-if( NOT CMAKE_CROSSCOMPILING )
-	if( NOT CROSS_EXPORTS )
-		set( CROSS_EXPORTS "" )
-	endif()
-endif()
-
-# Install the entire docs directory in the distributed zip package
-if( WIN32 )
-	set( INSTALL_DOCS_PATH docs CACHE STRING "Directory where the documentation will be placed during install." )
-else()
-	set( INSTALL_DOCS_PATH share/doc/${ZDOOM_EXE_NAME} CACHE STRING "Directory where the zdoom documentation will be placed during install." )
-endif()
-install(DIRECTORY docs/
-		DESTINATION ${INSTALL_DOCS_PATH}
-		COMPONENT "Documentation")
-
-option( DYN_OPENAL "Dynamically load OpenAL" ON )
-
-add_subdirectory( src )
-add_subdirectory( libraries/lzma )
-add_subdirectory( tools )
-add_subdirectory( wadsrc )
-add_subdirectory( wadsrc_bm )
-add_subdirectory( wadsrc_lights )
-add_subdirectory( wadsrc_extra )
-add_subdirectory( wadsrc_widepix )
-
-if( ZMUSIC_SYSTEM_INSTALL )
-	# Internal ZMusic library provides miniz target, miniz.h file in partuclar
-	# It's not the case with system-wide ZMusic installation
-	add_subdirectory( libraries/miniz )
-endif()
-
-if( NOT CMAKE_CROSSCOMPILING )
-	export(TARGETS ${CROSS_EXPORTS} FILE "${CMAKE_BINARY_DIR}/ImportExecutables.cmake" )
-endif()
