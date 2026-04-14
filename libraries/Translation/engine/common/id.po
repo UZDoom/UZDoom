@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:10+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/common/"
 "id/>\n"
@@ -308,6 +308,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Item sebelumnya"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Sesuaikan Kontrol Peta"
 
@@ -1436,9 +1437,6 @@ msgstr "Bidikan bawaan"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Warna bidikan"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Bidikan menampilkan kesehatan"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Skala bidikan"

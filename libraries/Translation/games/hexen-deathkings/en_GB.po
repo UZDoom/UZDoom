@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-21 03:02+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-04-08 14:09+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "doom-engine-games/hexen-deathkings/en_GB/>\n"
 "Language: en_GB\n"
@@ -153,3 +153,52 @@ msgstr ""
 
 msgid "TXT_ACS_MAP55_9_THEDO"
 msgstr "The door is barred from the inside"
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Once before you grasped the chaos\n"
+"sphere, held it within trembling\n"
+"hands. Now your hands tremble with\n"
+"something more than avarice, and\n"
+"dread meshes with the hunger for\n"
+"power.\n"
+"\n"
+"If even the power of the sphere is\n"
+"not enough to protect you from the\n"
+"forces of darkness, perhaps it is\n"
+"better left untouched, its promise\n"
+"left unkept.\n"
+"\n"
+"\n"
+"\n"
+"But then, you never were one to\n"
+"back down from a challenge..."
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n...and other players await.\n"
+"\n"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "You dare battle in the ready room?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "For that, you shall die!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "The waterfall is open"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "The waterfall is blocked"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "A door has opened in the chapel"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Now that's odd..."
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Three more parts of the puzzle remain"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Two more parts of the puzzle remain"

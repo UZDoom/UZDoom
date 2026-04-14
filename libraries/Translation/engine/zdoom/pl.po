@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-26 16:16+0000\n"
-"Last-Translator: Pathos <michalkar102@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-04-13 18:01+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/pl/>\n"
 "Language: pl\n"
@@ -4687,6 +4687,7 @@ msgstr "Klasyczny ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Współczesny (WSAD)"
 
+#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
 msgstr "Współczesny (klawiatura numeryczna)"
 

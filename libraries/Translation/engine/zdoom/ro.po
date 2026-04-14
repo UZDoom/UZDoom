@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/ro/>\n"
@@ -4691,6 +4691,7 @@ msgstr "ZDoom Clasic"
 msgid "OPTVAL_MODERN"
 msgstr "Modernă (WASD)"
 
+#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
 msgstr "Modernă (Tastatură)"
 

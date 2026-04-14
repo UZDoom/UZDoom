@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-02 03:09+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/en/>\n"
@@ -230,31 +230,24 @@ msgstr ""
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr "You got a pickup"
 
-#, fuzzy
 msgid "PD_ANY"
 msgstr "Any key will open this door"
 
-#, fuzzy
 msgid "PD_ANYOBJ"
 msgstr "Any key will activate this object"
 
-#, fuzzy
 msgid "PD_ALL3"
 msgstr "You need all three keys to open this door"
 
-#, fuzzy
 msgid "PD_ALL3O"
 msgstr "You need all three keys to activate this object"
 
-#, fuzzy
 msgid "PD_ALL6"
 msgstr "You need all six keys to open this door"
 
-#, fuzzy
 msgid "PD_ALL6O"
 msgstr "You need all six keys to activate this object"
 
-#, fuzzy
 msgid "PD_ALLKEYS"
 msgstr "You need all the keys"
 
@@ -1376,7 +1369,6 @@ msgstr "Silver Shield"
 msgid "TXT_ITEMSHIELD2"
 msgstr "Enchanted Shield"
 
-#, fuzzy
 msgid "TXT_ITEMSUPERMAP"
 msgstr "Map Scroll"
 
@@ -4536,7 +4528,6 @@ msgstr "Allow map defined colors"
 msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
 msgstr "Set custom colors"
 
-#, fuzzy
 msgid "AUTOMAPMNU_CONTROLS"
 msgstr "Customize map controls"
 
@@ -5930,9 +5921,8 @@ msgstr "Classic ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Modern (WASD)"
 
-#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Modern (Keypad)"
+msgstr "Modern (Left-Handed / Numpad)"
 
 #, fuzzy
 msgid "MISCMNU_SETSLOTSTRICT"
@@ -6762,7 +6752,19 @@ msgid "OPTMNU_OPENWADS"
 msgstr "Browse IWAD Folder"
 
 msgid "SNDMNU_NOMIDIOPTIONS"
-msgstr "Midi device does not expose any options."
+msgstr "MIDI device does not expose any options."
 
 msgid "CMPTMNU_EMULATEMIKOPORTALS"
 msgstr "Emulate Mikoportals"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Crosshair color at full health"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Crosshair color at max health"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Dynamic crosshair colors"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Crosshair vertical offset"

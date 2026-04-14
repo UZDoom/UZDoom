@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-06 14:09+0000\n"
-"Last-Translator: Никита Скатьков <nikita.ska4oK@gmail.com>\n"
+"PO-Revision-Date: 2026-04-14 14:09+0000\n"
+"Last-Translator: Blueberry <igory.ygr200@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/ru/>\n"
 "Language: ru\n"
@@ -4680,6 +4680,7 @@ msgstr "Классическая ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Современная (ЦФЫВ)"
 
+#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
 msgstr "Современная (цифр. клавиатура)"
 
@@ -5362,5 +5363,21 @@ msgstr "Обзор конфигураций"
 msgid "OPTMNU_OPENWADS"
 msgstr "Обзор папки IWAD"
 
+#, fuzzy
 msgid "SNDMNU_NOMIDIOPTIONS"
 msgstr "MIDI-устройство не предоставляет никаких настроек."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Эмулировать Микопорталы"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Цвет прицела при полном запасе здоровья"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Цвет прицела при максимальном запасе здоровье"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Динамические цвета прицела"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Смещение прицела по вертикали"
