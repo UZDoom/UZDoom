@@ -1238,6 +1238,24 @@ set(IMGUI_SOURCES
 	"../libraries/DearImGui/backends/imgui_impl_opengl3_loader.h"
 )
 
+# dearImGui core and backend
+# the core files, always needed
+file(GLOB IMGUI_CORE_SOURCES
+    "../libraries/DearImGui/*.h"
+    "../libraries/DearImGui/*.cpp"
+)
+
+# this is the backend and needs to be set accordingly (e.g SDL2 + OPENGL3)
+set(IMGUI_SOURCES
+    ${IMGUI_CORE_SOURCES}
+    "../libraries/DearImGui/backends/imgui_impl_sdl2.h"
+    "../libraries/DearImGui/backends/imgui_impl_sdl2.cpp"
+
+	"../libraries/DearImGui/backends/imgui_impl_opengl3.h"
+	"../libraries/DearImGui/backends/imgui_impl_opengl3.cpp"
+	"../libraries/DearImGui/backends/imgui_impl_opengl3_loader.h"
+)
+
 if( ZMUSIC_SYSTEM_INSTALL OR NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS)
 	set ( PCH_SOURCES ${PCH_SOURCES} common/utility/i_module.cpp )
 endif()
