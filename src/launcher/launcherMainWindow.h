@@ -233,4 +233,6 @@ class LauncherMainWindow
 	void ImportProfileFromZip(const std::string &zipPath);
 	void OpenInstallDirectory();
 	void FinalizeProfileAddition(const std::string &jsonPath, bool immediateRefresh);
+
+	void AutoDetectIWADs();
 };

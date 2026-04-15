@@ -99,6 +99,78 @@ LauncherMainWindow::LauncherMainWindow()
 	UpdateLanguage();
 	ApplyTheme();
 	RefreshList();
+	AutoDetectIWADs();
+}
+
+// Auto detect IWADS in EXEC_DIR and import them if not already exist
+void LauncherMainWindow::AutoDetectIWADs()
+{
+	// Known standard ZDoom-supported IWADs (https://zdoom.org/w/index.php?title=IWAD)
+	std::vector<std::string> knownIWADs = {
+		"action2.wad",   "bfgdoom.wad",   "bfgdoom2.wad",    "blasphem.wad",      "blasphemer.wad", "chex.wad",
+		"chex3.wad",     "delaweare.wad", "doom.wad",        "doom1.wad",         "doom2.wad",      "doom2bfg.wad",
+		"doom2f.wad",    "doom2kex.wad",  "doom2unity.wad",  "doom2xbox",         "doombfg.wad",    "doomkex.wad",
+		"doomu.wad",     "doomunity.wad", "doomxbox",        "freedm.wad",        "freedoom.wad",   "freedoom1.wad",
+		"freedoom2.wad", "freedoomu.wad", "hacx.wad",        "hacx2.wad",         "harm1.wad",      "harmony.wad",
+		"heretic.wad",   "heretic1.wad",  "hereticsr.wad",   "hexdd.wad",         "hexdemo.wad",    "hexen.wad",
+		"hexendemo.wad", "plutonia.wad",  "plutoniakex.wad", "plutoniaunity.wad", "rotwb.wad",      "square1.pk3",
+		"strife.wad",    "strife0.wad",   "strife1.wad",     "sve.wad",           "tnt.wad",        "tntkex.wad",
+		"tntunity.wad"
+	};
+
+	bool            addedNew = false;
+	std::error_code ec;
+
+	if (!std::filesystem::exists(EXEC_DIR, ec) || !std::filesystem::is_directory(EXEC_DIR, ec))
+		return;
+
+	// Scan the execution directory
+	for (const auto &entry : std::filesystem::directory_iterator(EXEC_DIR, ec))
+	{
+		if (!entry.is_regular_file(ec))
+			continue;
+
+		// Extract filename and check it against list
+		std::string filename = entry.path().filename().string();
+		std::transform(filename.begin(), filename.end(), filename.begin(), ::tolower);
+
+		if (std::find(knownIWADs.begin(), knownIWADs.end(), filename) != knownIWADs.end())
+		{
+			bool alreadyExists = false;
+
+			// we check in PROFILE_DIR the filename inside existing profiles to avoid creating duplicate imports.
+			for (const auto &profile : cachedProfiles)
+			{
+				if (!profile.iwadFilePath.empty())
+				{
+					std::string profFilename = std::filesystem::path(profile.iwadFilePath).filename().string();
+					std::transform(profFilename.begin(), profFilename.end(), profFilename.begin(), ::tolower);
+
+					if (profFilename == filename)
+					{
+						alreadyExists = true;
+						break;
+					}
+				}
+			}
+
+			// If no profile claims this IWAD, automatically import it
+			if (!alreadyExists)
+			{
+				importStatus status = Loader::ProcessWad(entry.path());
+				if (status == IMPORT_IWAD_SUCCESS || status == IMPORT_PWAD_SUCCESS)
+				{
+					addedNew = true;
+				}
+			}
+		}
+	}
+
+	// Reload the profile list if we imported
+	if (addedNew)
+	{
+		RefreshList();
+	}
 }
 
 void LauncherMainWindow::SaveConfig()
