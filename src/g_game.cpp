@@ -1222,6 +1222,8 @@ void G_Ticker ()
 {
 	gamestate_t oldgamestate;
 
+	C_TickQueuedInputs();
+
 	// do player reborns if needed
 	// TODO: These should really be moved to queues.
 	for (unsigned int i = 0; i < MAXPLAYERS; ++i)
