@@ -21,33 +21,30 @@
 **
 */
 
-#include "printf.h"
-#include "zstring.h"
-#include <math.h>
+#include <cmath>
+#include <miniz.h>
 
 #ifndef _WIN32
 #include <unistd.h>
 #endif
 
-#include <miniz.h>
-
-#include "m_argv.h"
+#include "basics.h"
 #include "c_dispatch.h"
-#include "m_swap.h"
-#include "filesystem.h"
-#include "p_local.h"
-#include "nodebuild.h"
-#include "doomstat.h"
-#include "engineerrors.h"
-#include "p_setup.h"
-#include "version.h"
-#include "md5.h"
-#include "m_misc.h"
 #include "cmdlib.h"
-#include "g_levellocals.h"
-#include "i_time.h"
-#include "maploader.h"
+#include "engineerrors.h"
+#include "filesystem.h"
 #include "fs_findfile.h"
+#include "g_levellocals.h"
+#include "i_specialpaths.h"
+#include "i_time.h"
+#include "m_swap.h"
+#include "maploader.h"
+#include "nodebuild.h"
+#include "p_local.h"
+#include "p_setup.h"
+#include "printf.h"
+#include "version.h"
+#include "zstring.h"
 
 EXTERN_CVAR(Bool, gl_cachenodes)
 EXTERN_CVAR(Float, gl_cachetime)
@@ -381,7 +378,6 @@ bool MapLoader::LoadGLSegs(FileReader &lump)
 				ldef = &Level->lines[lineidx];
 				segs[i].linedef = ldef;
 	
-					
 				auto side=LittleShort(ml->side);
 				if (side > 1)
 					return false;
@@ -1009,7 +1005,6 @@ static FString CreateCacheName(MapData *map, bool create)
 		buffer[i*2+1] = hex[md5[i]&0x0F];
 	}
 	path << '/' << buffer << ".znodes";
-	Printf("%s\n", path.GetChars());
 	return path;
 }
 

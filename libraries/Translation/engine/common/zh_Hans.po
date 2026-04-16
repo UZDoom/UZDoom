@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:10+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -308,6 +308,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "上一件物品"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "自定义地图控制"
 
@@ -1426,9 +1427,6 @@ msgstr "默认准星"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "准星颜色"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "准星显示生命值"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "准星比例"

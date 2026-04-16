@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:10+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/uzdoom/common/"
 "be/>\n"
@@ -309,6 +309,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Папярэдні прадмет"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Клавішы кіравання аўтакартай"
 
@@ -1433,9 +1434,6 @@ msgstr "Прыцэл па змаўчанні"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Колер прыцэла"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Прыцэл адлюстроўвае здароўе"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Памер прыцэла"

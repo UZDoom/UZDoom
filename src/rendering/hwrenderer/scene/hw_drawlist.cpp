@@ -15,19 +15,17 @@
 **
 */
 
+#include "actor.h"
+#include "flatvertices.h"
+#include "g_levellocals.h"
+#include "hw_clock.h"
+#include "hw_drawinfo.h"
+#include "hw_renderstate.h"
+#include "hw_walldispatcher.h"
+#include "hwrenderer/scene/hw_drawlist.h"
+#include "hwrenderer/scene/hw_drawstructs.h"
 #include "r_sky.h"
 #include "r_utility.h"
-#include "doomstat.h"
-#include "actor.h"
-#include "g_levellocals.h"
-#include "hwrenderer/scene/hw_drawstructs.h"
-#include "hwrenderer/scene/hw_drawlist.h"
-#include "flatvertices.h"
-#include "hw_clock.h"
-#include "hw_renderstate.h"
-#include "hw_drawinfo.h"
-#include "hw_fakeflat.h"
-#include "hw_walldispatcher.h"
 
 FMemArena RenderDataAllocator(1024*1024);	// Use large blocks to reduce allocation time.
 
@@ -609,7 +607,7 @@ SortNode * HWDrawList::SortSpriteList(SortNode * head)
 
 	sortspritelist.Clear();
 	for(count=0,n=head;n;n=n->next) sortspritelist.Push(n);
-	std::stable_sort(sortspritelist.begin(), sortspritelist.end(), [=](SortNode *a, SortNode *b)
+	std::stable_sort(sortspritelist.begin(), sortspritelist.end(), [this](SortNode *a, SortNode *b)
 	{
 		return CompareSprites(a, b) < 0;
 	});

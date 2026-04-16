@@ -80,7 +80,7 @@ protected:
 	snd_midi_event_t* Coder = nullptr;
 	uint32_t Position = 0;
 	uint32_t PositionOffset;
-	uint32_t CurrentEventTickDelta;
+	uint32_t PulledEventTickDelta;
 
 	const static int IntendedPortId = 0;
 	bool Connected = false;
@@ -313,7 +313,7 @@ bool AlsaMIDIDevice::PullEvent()
 	}
 
 	uint32_t* event = (uint32_t*)(Events->lpData + Position);
-	CurrentEventTickDelta = event[0]; // First 4 bytes of event
+	PulledEventTickDelta = event[0]; // First 4 bytes of event
 
 	// Get event size to advance Position
 	if (event[2] < 0x80000000) // Short message (event[2] is the combined status/data bytes)
@@ -392,12 +392,12 @@ void AlsaMIDIDevice::PlayerLoop()
 		}
 
 		// Figure out if we should sleep (the event is too far in the future for us to care), and for how long
-		int current_event_tick = buffered_ticks + CurrentEventTickDelta;
+		int pulled_event_tick = buffered_ticks + PulledEventTickDelta;
 		snd_seq_get_queue_status(sequencer.handle, QueueId, status);
 		int queue_tick = snd_seq_queue_status_get_tick_time(status);
-		int ticks_until_current_ev = current_event_tick - queue_tick;
-		auto time_until_current_ev = std::chrono::microseconds(ticks_until_current_ev * Tempo / Division);
-		auto schedule_time = time_until_current_ev - buffer_step;
+		int ticks_until_pulled_ev = pulled_event_tick - queue_tick;
+		auto time_until_pulled_ev = std::chrono::microseconds(ticks_until_pulled_ev * Tempo / Division);
+		auto schedule_time = time_until_pulled_ev - buffer_step;
 		if (schedule_time >= buffer_step)
 		{
 			if (ExitCond.wait_for(lock, schedule_time) == std::cv_status::no_timeout)
@@ -405,15 +405,15 @@ void AlsaMIDIDevice::PlayerLoop()
 				continue;
 			}
 		}
-		if (ticks_until_current_ev < 0)
+		if (ticks_until_pulled_ev < 0)
 		{	// Can be triggered on playback start.
 			// Message shouldn't be shown by default like other midi backends here.
-			ZMusic_Printf(ZMUSIC_MSG_NOTIFY, "Alsa sequencer underrun: %d ticks!\n", ticks_until_current_ev);
+			ZMusic_Printf(ZMUSIC_MSG_NOTIFY, "Alsa sequencer underrun: %d ticks!\n", ticks_until_pulled_ev);
 		}
 
 		// We found an event worthy of sending to the sequencer
-		HandleEvent(Event, current_event_tick);
-		buffered_ticks = current_event_tick;
+		HandleEvent(Event, pulled_event_tick);
+		buffered_ticks = pulled_event_tick;
 		Position += PositionOffset;
 	}
 

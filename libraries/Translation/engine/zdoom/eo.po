@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-18 03:02+0000\n"
+"PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/eo/>\n"
@@ -4684,6 +4684,7 @@ msgstr "Klasika ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Moderna (WASD)"
 
+#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
 msgstr "Moderna (Cifera klavaro)"
 
@@ -5337,3 +5338,22 @@ msgstr "Polvigilo"
 #, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Grenadĵetilo"
+
+#, fuzzy
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "MIDI-aparato ne videbligas iujn ajn opciojn."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Imiti mikoportalojn"
+
+#, fuzzy
+msgid "ACTION_OPENWADDIR"
+msgstr "Foliumi WAD-ojn"
+
+#, fuzzy
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Foliumi agordajn dosierojn"
+
+#, fuzzy
+msgid "OPTMNU_OPENWADS"
+msgstr "Foliumi IWAD-dosierujon"

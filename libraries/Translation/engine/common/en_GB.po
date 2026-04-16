@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-02 03:09+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "uzdoom/common/en_GB/>\n"
@@ -308,6 +308,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Previous item"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Customise Map Controls"
 
@@ -1426,9 +1427,6 @@ msgstr "Default Crosshair"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Crosshair colour"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Crosshair shows health"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Scale crosshair"

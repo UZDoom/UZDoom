@@ -92,17 +92,16 @@ protected:
 		uint32_t tempo;
 		uint8_t* data;
 	};
-	struct CurrentEvent
+	struct PulledEvent
 	{
 		EventType EventType;
 		EventMsg EventMsg;
 		uint32_t length;
 	};
-	CurrentEvent CurrentEvent;
+	PulledEvent PulledEvent;
 	std::array<uint8_t, 3> ShortMsgBuffer;
 	void PrepareTempo(uint32_t tempo);
 	void PrepareMidiMsg(uint8_t* msg, uint32_t length);
-	void HandleCurrentEvent();
 	void SendMIDIData(const uint8_t* data, size_t length, MIDITimeStamp timestamp);
 
 	// Threading
@@ -121,7 +120,7 @@ protected:
 	MidiHeader* Events; // Linked list of MIDI headers
 	uint32_t Position; // Current position in the MidiHeader buffer
 	uint32_t PositionOffset;
-	uint32_t CurrentEventTickDelta;
+	uint32_t PulledEventTickDelta;
 
 	// Thread functions
 	static void PlayerThreadProc(CoreMIDIDevice* device);
@@ -514,9 +513,9 @@ void CoreMIDIDevice::PrecacheInstruments(const uint16_t* instruments, int count)
 
 //==========================================================================
 //
-// CoreMIDIDevice :: PlayTick
+// CoreMIDIDevice :: PullEvent
 //
-// Plays all events up to the current tick.
+// Pulls next event from MidiHeader buffer
 //
 //==========================================================================
 
@@ -549,7 +548,7 @@ bool CoreMIDIDevice::PullEvent()
 	}
 
 	uint32_t* event = (uint32_t*)(Events->lpData + Position);
-	CurrentEventTickDelta = event[0]; // First 4 bytes of event
+	PulledEventTickDelta = event[0]; // First 4 bytes of event
 
 	// Get event size to advance Position
 	if (event[2] < 0x80000000) // Short message (event[2] is the combined status/data bytes)
@@ -606,11 +605,10 @@ bool CoreMIDIDevice::PullEvent()
 		break;
 	}
 	default:
-		CurrentEvent.EventType = NoEvent;
+		PulledEvent.EventType = NoEvent;
 	}
 
-	// Indicate that an event was processed and potentially more are available in the current tick.
-	// The PlayerLoop will decide when to call PlayTick again.
+	// Indicate that an event was processed.
 	return true;
 }
 
@@ -654,10 +652,10 @@ void CoreMIDIDevice::PlayerLoop()
 		}
 
 		// CoreAudio and CoreMidi work in nano seconds so multiply by 1000.
-		MIDITimeStamp current_ev_timestamp = buffer_timestamp + CurrentEventTickDelta * Tempo / Division * 1000;
+		MIDITimeStamp pulled_ev_timestamp = buffer_timestamp + PulledEventTickDelta * Tempo / Division * 1000;
 
-		auto time_until_current_ev = std::chrono::nanoseconds(current_ev_timestamp - AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()));
-		auto schedule_time = time_until_current_ev - buffer_step;
+		auto time_until_pulled_ev = std::chrono::nanoseconds(pulled_ev_timestamp - AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()));
+		auto schedule_time = time_until_pulled_ev - buffer_step;
 		if (schedule_time >= buffer_step)
 		{    // Try to keep buffered events under 2x buffer_step
 			if (ExitCond.wait_for(lock, schedule_time) == std::cv_status::no_timeout)
@@ -665,26 +663,26 @@ void CoreMIDIDevice::PlayerLoop()
 				continue;
 			}
 		}
-		if (time_until_current_ev < std::chrono::nanoseconds::zero())
+		if (time_until_pulled_ev < std::chrono::nanoseconds::zero())
 		{	// Can be triggered on playback start.
 			// Message shouldn't be shown by default like other midi backends here.
-			ZMusic_Printf(ZMUSIC_MSG_NOTIFY, "CoreMidi backend underrun by %d nanoseconds!\n", time_until_current_ev.count());
+			ZMusic_Printf(ZMUSIC_MSG_NOTIFY, "CoreMidi backend underrun by %d nanoseconds!\n", time_until_pulled_ev.count());
 		}
 
-		// Handle CurrentEvent
-		switch (CurrentEvent.EventType)
+		// Handle PulledEvent
+		switch (PulledEvent.EventType)
 		{
 		case TempoEv:
-			Tempo = CurrentEvent.EventMsg.tempo;
+			Tempo = PulledEvent.EventMsg.tempo;
 			break;
 		case MidiMsgEv:
-			SendMIDIData(CurrentEvent.EventMsg.data, CurrentEvent.length, AudioConvertNanosToHostTime(current_ev_timestamp));
+			SendMIDIData(PulledEvent.EventMsg.data, PulledEvent.length, AudioConvertNanosToHostTime(pulled_ev_timestamp));
 			break;
 		case NoEvent:
 		default:
 			;
 		}
-		buffer_timestamp = current_ev_timestamp;
+		buffer_timestamp = pulled_ev_timestamp;
 		Position += PositionOffset;
 	}
 }
@@ -699,14 +697,14 @@ void CoreMIDIDevice::PlayerLoop()
 
 void CoreMIDIDevice::PrepareTempo(const uint32_t tempo)
 {
-	CurrentEvent.EventType = TempoEv;
-	CurrentEvent.EventMsg.tempo = tempo;
+	PulledEvent.EventType = TempoEv;
+	PulledEvent.EventMsg.tempo = tempo;
 }
 void CoreMIDIDevice::PrepareMidiMsg(uint8_t* msg, uint32_t length)
 {
-	CurrentEvent.EventType = MidiMsgEv;
-	CurrentEvent.EventMsg.data = msg;
-	CurrentEvent.length = length;
+	PulledEvent.EventType = MidiMsgEv;
+	PulledEvent.EventMsg.data = msg;
+	PulledEvent.length = length;
 }
 
 //==========================================================================

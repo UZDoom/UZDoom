@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-06 14:09+0000\n"
-"Last-Translator: Никита Скатьков <nikita.ska4oK@gmail.com>\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/common/"
 "ru/>\n"
 "Language: ru\n"
@@ -309,6 +309,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Предыдущий предмет"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Клавиши управления автокартой"
 
@@ -778,7 +779,6 @@ msgstr "Расширенные настройки"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Параметры воспроизведения модулей"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "Настройки MIDI-устройства"
 
@@ -1428,9 +1428,6 @@ msgstr "Прицел по умолчанию"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Цвет прицела"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Прицел отображает здоровье"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Размер прицела"

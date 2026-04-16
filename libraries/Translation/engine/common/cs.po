@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:09+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/common/cs/>"
 "\n"
@@ -308,6 +308,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Předchozí předmět"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Nastavení ovládání mapy"
 
@@ -1433,9 +1434,6 @@ msgstr "Výchozí zaměřovač"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Barva zaměřovače"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Zaměřovač zobrazuje zdraví"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Velikost zaměřovače"

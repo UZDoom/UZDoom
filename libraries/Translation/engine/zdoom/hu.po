@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-01 15:09+0000\n"
-"Last-Translator: Andras Varro <varro.andras20@gmail.com>\n"
+"PO-Revision-Date: 2026-04-13 18:01+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/hu/>\n"
 "Language: hu\n"
@@ -4683,6 +4683,7 @@ msgstr "Klasszikus ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Új (WASD)"
 
+#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
 msgstr "Új (Nyilak)"
 
@@ -5365,5 +5366,6 @@ msgstr "Böngészés a beállítások között"
 msgid "OPTMNU_OPENWADS"
 msgstr "Böngészés az IWAD mappában"
 
+#, fuzzy
 msgid "SNDMNU_NOMIDIOPTIONS"
 msgstr "Midi eszköz nem biztosít beállításokat."

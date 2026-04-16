@@ -5189,3 +5189,15 @@ msgstr ""
 
 msgid "CMPTMNU_EMULATEMIKOPORTALS"
 msgstr ""
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr ""
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr ""
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr ""
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr ""

@@ -23,28 +23,22 @@
 **
 */
 
-
-#include "doomstat.h"
-#include "info.h"
-#include "c_dispatch.h"
-#include "d_net.h"
-#include "v_text.h"
-
-#include "gi.h"
 #include "actor.h"
-#include "r_state.h"
-#include "p_local.h"
-#include "stats.h"
-#include "thingdef.h"
-#include "d_player.h"
+#include "c_dispatch.h"
+#include "d_main.h"
+#include "d_net.h"
+#include "doomstat.h"
 #include "events.h"
-#include "types.h"
 #include "filesystem.h"
 #include "g_levellocals.h"
+#include "gi.h"
+#include "info.h"
+#include "p_local.h"
+#include "r_state.h"
+#include "stats.h"
 #include "texturemanager.h"
-#include "d_main.h"
-#include "maps.h"
-#include "p_visualthinker.h"
+#include "thingdef.h"
+#include "types.h"
 
 extern void LoadActors ();
 extern void InitBotStuff();
@@ -118,7 +112,7 @@ void FState::SetAction(const char *name)
 
 void FState::CheckCallerType(AActor *self, AActor *stateowner)
 {
-	auto CheckType = [=](AActor *check, PType *requiredType)
+	auto CheckType = [this](AActor *check, PType *requiredType)
 	{
 		// This should really never happen. Any valid action function must have actor pointers here.
 		if (!requiredType->isObjectPointer())

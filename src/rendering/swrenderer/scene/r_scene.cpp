@@ -17,45 +17,23 @@
 **
 */
 
-#include <stdlib.h>
-#include <float.h>
-
-
-#include "v_draw.h"
-#include "filesystem.h"
-#include "doomdef.h"
-#include "doomstat.h"
-#include "r_sky.h"
-#include "stats.h"
-#include "v_video.h"
-#include "a_sharedglobal.h"
-#include "c_console.h"
 #include "c_dispatch.h"
-#include "cmdlib.h"
+#include "basics.h"
 #include "d_net.h"
-#include "g_level.h"
+#include "doomstat.h"
 #include "p_effect.h"
-#include "po_man.h"
-#include "st_stuff.h"
-#include "r_data/r_interpolate.h"
-#include "swrenderer/scene/r_scene.h"
-#include "swrenderer/scene/r_light.h"
-#include "swrenderer/scene/r_3dfloors.h"
-#include "swrenderer/scene/r_opaque_pass.h"
-#include "swrenderer/scene/r_translucent_pass.h"
-#include "swrenderer/scene/r_portal.h"
-#include "swrenderer/segments/r_clipsegment.h"
-#include "swrenderer/segments/r_drawsegment.h"
-#include "swrenderer/segments/r_portalsegment.h"
-#include "swrenderer/plane/r_visibleplanelist.h"
-#include "swrenderer/viewport/r_viewport.h"
-#include "swrenderer/drawers/r_draw.h"
-#include "swrenderer/drawers/r_draw_rgba.h"
 #include "r_thread.h"
-#include "r_memory.h"
-#include "swrenderer/r_renderthread.h"
-#include "swrenderer/things/r_playersprite.h"
-#include <chrono>
+#include "stats.h"
+#include "swrenderer/scene/r_3dfloors.h"
+#include "swrenderer/scene/r_light.h"
+#include "swrenderer/scene/r_portal.h"
+#include "swrenderer/scene/r_scene.h"
+#include "swrenderer/scene/r_translucent_pass.h"
+#include "swrenderer/segments/r_clipsegment.h"
+#include "swrenderer/segments/r_portalsegment.h"
+#include "swrenderer/viewport/r_viewport.h"
+#include "v_draw.h"
+#include "v_video.h"
 
 EXTERN_CVAR(Int, r_clearbuffer)
 EXTERN_CVAR(Int, r_debug_draw)
@@ -298,7 +276,7 @@ namespace swrenderer
 			std::unique_ptr<RenderThread> thread(new RenderThread(this, false));
 			auto renderthread = thread.get();
 			int start_run_id = run_id;
-			thread->thread = std::thread([=]()
+			thread->thread = std::thread([=,this]()
 			{
 				int last_run_id = start_run_id;
 				while (true)

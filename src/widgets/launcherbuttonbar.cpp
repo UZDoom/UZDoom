@@ -15,18 +15,19 @@
 **
 */
 
+#include <zwidget/widgets/pushbutton/pushbutton.h>
+
+#include "gstrings.h"
 #include "launcherbuttonbar.h"
 #include "launcherwindow.h"
-#include "gstrings.h"
-#include <zwidget/widgets/pushbutton/pushbutton.h>
 
 LauncherButtonbar::LauncherButtonbar(LauncherWindow* parent) : Widget(parent)
 {
 	PlayButton = new PushButton(this);
 	ExitButton = new PushButton(this);
 
-	PlayButton->OnClick = [=]() { OnPlayButtonClicked(); };
-	ExitButton->OnClick = [=]() { OnExitButtonClicked(); };
+	PlayButton->OnClick = [this]() { OnPlayButtonClicked(); };
+	ExitButton->OnClick = [this]() { OnExitButtonClicked(); };
 }
 
 void LauncherButtonbar::UpdateLanguage()

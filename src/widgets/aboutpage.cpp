@@ -75,7 +75,7 @@ AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info
 	Text->SetReadOnly(true);
 	Notes->SetText(GStrings.GetString("PICKER_SHOWNOTES"));
 
-	Notes->OnClick = [=]()
+	Notes->OnClick = [=,this]()
 	{
 		if (!Launcher->Release)
 		{

@@ -15,22 +15,20 @@
 **
 */
 
-#include "settingspage.h"
-#include "findfile.h"
-#include "launcherwindow.h"
+#include <zwidget/core/resourcedata.h>
+#include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
+#include <zwidget/widgets/dropdown/dropdown.h>
+#include <zwidget/widgets/listview/listview.h>
+#include <zwidget/widgets/textlabel/textlabel.h>
+
 #include "findfile.h"
 #include "gameconfigfile.h"
 #include "gstrings.h"
 #include "i_interface.h"
 #include "i_system.h"
-#include "v_video.h"
+#include "launcherwindow.h"
 #include "sc_man.h"
-
-#include <zwidget/core/resourcedata.h>
-#include <zwidget/widgets/listview/listview.h>
-#include <zwidget/widgets/dropdown/dropdown.h>
-#include <zwidget/widgets/textlabel/textlabel.h>
-#include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
+#include "settingspage.h"
 
 static constexpr struct { const char* string; int flag; } FILELOAD_OPTS[] = {
 	{"OPTVAL_LAX", REQUIRE_NONE},
@@ -125,7 +123,7 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 			LangList->SetSelectedItem(i);
 		++i;
 	}
-	LangList->OnChanged = [=](int i) { OnLanguageChanged(i); };
+	LangList->OnChanged = [this](int i) { OnLanguageChanged(i); };
 
 	ExtraWadFlags = 0;
 

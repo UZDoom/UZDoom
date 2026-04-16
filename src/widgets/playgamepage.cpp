@@ -15,15 +15,16 @@
 **
 */
 
-#include "playgamepage.h"
-#include "launcherwindow.h"
-#include "i_interface.h"
-#include "gstrings.h"
-#include "version.h"
-#include <zwidget/widgets/textlabel/textlabel.h>
-#include <zwidget/widgets/listview/listview.h>
-#include <zwidget/widgets/lineedit/lineedit.h>
 #include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
+#include <zwidget/widgets/lineedit/lineedit.h>
+#include <zwidget/widgets/listview/listview.h>
+#include <zwidget/widgets/textlabel/textlabel.h>
+
+#include "gstrings.h"
+#include "i_interface.h"
+#include "launcherwindow.h"
+#include "playgamepage.h"
+#include "version.h"
 
 PlayGamePage::PlayGamePage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
@@ -62,7 +63,7 @@ PlayGamePage::PlayGamePage(LauncherWindow* launcher, const FStartupSelectionInfo
 		GamesList->SetSelectedItem(info.DefaultIWAD);
 	}
 
-	GamesList->OnActivated = [=]() { OnGamesListActivated(); };
+	GamesList->OnActivated = [this]() { OnGamesListActivated(); };
 }
 
 void PlayGamePage::SetValues(FStartupSelectionInfo& info) const

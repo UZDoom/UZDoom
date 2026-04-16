@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:10+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/common/"
 "sv/>\n"
@@ -309,6 +309,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Föregående objekt"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Anpassa kartkontroller"
 
@@ -1432,9 +1433,6 @@ msgstr "Standardkorshår"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Färg på hårkorset"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Hårkorset visar hälsa"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Skala hårkorset"
