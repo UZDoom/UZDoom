@@ -1419,9 +1419,6 @@ msgstr ""
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr ""
 
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr ""
-
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr ""
 

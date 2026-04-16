@@ -13,7 +13,7 @@ jobs:
       run: |
         sudo apt-get -qq update
         sudo apt-get -qq install gettext
-        pipx --quiet install vermin pylint autopep8 csvkit
+        pipx install --quiet vermin pylint autopep8 csvkit
 
         bash scripts/validate.sh
 
@@ -66,7 +66,7 @@ jobs:
     - name: check
       shell: bash
       run: |
-        pipx --quiet install csvkit
+        pipx install --quiet csvkit
 
         find . -type f -exec sh -c 'printf "\n%s\n\n" $1; csvclean -a $1 >/dev/null' _ {} \;
 

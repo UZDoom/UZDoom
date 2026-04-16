@@ -1427,9 +1427,6 @@ msgstr ""
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr ""
 
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Mostra vida na mira"
-
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr ""
 

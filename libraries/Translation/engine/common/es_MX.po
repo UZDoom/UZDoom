@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-24 23:09+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/uzdoom/"
 "common/es_MX/>\n"
@@ -308,6 +308,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Objeto anterior"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Personalizar los Controles del Mapa"
 
@@ -1425,9 +1426,6 @@ msgid "HUDMNU_CROSSHAIR"
 msgstr ""
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
-msgstr ""
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
 msgstr ""
 
 msgid "HUDMNU_CROSSHAIRSCALE"

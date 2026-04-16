@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-02 03:09+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/common/"
 "en/>\n"
@@ -161,203 +161,156 @@ msgstr "ENTER to change, BACKSPACE to clear"
 msgid "CNTRLMNU_SWITCHTEXT2"
 msgstr "Press new key for control, ESC to cancel"
 
-#, fuzzy
 msgid "CNTRLMNU_CONTROLS"
 msgstr "Controls"
 
-#, fuzzy
 msgid "CNTRLMNU_ATTACK"
 msgstr "Fire"
 
-#, fuzzy
 msgid "CNTRLMNU_ALTATTACK"
 msgstr "Secondary Fire"
 
-#, fuzzy
 msgid "CNTRLMNU_RELOAD"
 msgstr "Weapon Reload"
 
-#, fuzzy
 msgid "CNTRLMNU_USE"
 msgstr "Use / Open"
 
 msgid "CNTRLMNU_FORWARD"
 msgstr "Move forward"
 
-#, fuzzy
 msgid "CNTRLMNU_BACK"
 msgstr "Move backward"
 
-#, fuzzy
 msgid "CNTRLMNU_MOVELEFT"
 msgstr "Strafe left"
 
-#, fuzzy
 msgid "CNTRLMNU_MOVERIGHT"
 msgstr "Strafe right"
 
-#, fuzzy
 msgid "CNTRLMNU_TURNLEFT"
 msgstr "Turn left"
 
-#, fuzzy
 msgid "CNTRLMNU_TURNRIGHT"
 msgstr "Turn right"
 
-#, fuzzy
 msgid "CNTRLMNU_TURN180"
 msgstr "Quick Turn"
 
-#, fuzzy
 msgid "CNTRLMNU_JUMP"
 msgstr "Jump"
 
-#, fuzzy
 msgid "CNTRLMNU_CROUCH"
 msgstr "Crouch"
 
-#, fuzzy
 msgid "CNTRLMNU_TOGGLECROUCH"
 msgstr "Crouch Toggle"
 
 msgid "CNTRLMNU_MOUSELOOK"
 msgstr "Mouse look"
 
-#, fuzzy
 msgid "CNTRLMNU_LOOKUP"
 msgstr "Look up"
 
-#, fuzzy
 msgid "CNTRLMNU_LOOKDOWN"
 msgstr "Look down"
 
-#, fuzzy
 msgid "CNTRLMNU_CENTERVIEW"
 msgstr "Center view"
 
-#, fuzzy
 msgid "CNTRLMNU_RUN"
 msgstr "Run"
 
-#, fuzzy
 msgid "CNTRLMNU_TOGGLERUN"
 msgstr "Toggle Run"
 
 msgid "CNTRLMNU_STRAFE"
 msgstr "Strafe"
 
-#, fuzzy
 msgid "CNTRLMNU_SCOREBOARD"
 msgstr "Show Scoreboard"
 
-#, fuzzy
 msgid "CNTRLMNU_ACTION"
 msgstr "Action"
 
-#, fuzzy
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Customize Action Controls"
 
-#, fuzzy
 msgid "MNU_MULTIPLAYER"
 msgstr "Multiplayer"
 
-#, fuzzy
 msgid "CNTRLMNU_SAY"
 msgstr "Say"
 
-#, fuzzy
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Customize Weapon Controls"
 
-#, fuzzy
 msgid "CNTRLMNU_INVENTORY_TITLE"
 msgstr "Customize Inventory Controls"
 
-#, fuzzy
 msgid "CNTRLMNU_OTHER_TITLE"
 msgstr "Customize Other Controls"
 
 msgid "CNTRLMNU_WEAPONS"
 msgstr "Weapons"
 
-#, fuzzy
 msgid "CNTRLMNU_NEXTWEAPON"
 msgstr "Next weapon"
 
-#, fuzzy
 msgid "CNTRLMNU_PREVIOUSWEAPON"
 msgstr "Previous weapon"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT1"
 msgstr "Weapon 1"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT2"
 msgstr "Weapon 2"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT3"
 msgstr "Weapon 3"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT4"
 msgstr "Weapon 4"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT5"
 msgstr "Weapon 5"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT6"
 msgstr "Weapon 6"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT7"
 msgstr "Weapon 7"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT8"
 msgstr "Weapon 8"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT9"
 msgstr "Weapon 9"
 
-#, fuzzy
 msgid "CNTRLMNU_SLOT0"
 msgstr "Weapon 10"
 
-#, fuzzy
 msgid "CNTRLMNU_INVENTORY"
 msgstr "Inventory"
 
-#, fuzzy
 msgid "CNTRLMNU_USEITEM"
 msgstr "Activate item"
 
-#, fuzzy
 msgid "CNTRLMNU_USEALLITEMS"
 msgstr "Activate all items"
 
-#, fuzzy
 msgid "CNTRLMNU_NEXTITEM"
 msgstr "Next item"
 
-#, fuzzy
 msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Previous item"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Customize Map Controls"
+msgstr "Map Controls"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Map Controls"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_PANLEFT"
 msgstr "Pan left"
 
@@ -365,23 +318,18 @@ msgstr "Pan left"
 msgid "MAPCNTRLMNU_PANRIGHT"
 msgstr "Pan right"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_PANUP"
 msgstr "Pan up"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_PANDOWN"
 msgstr "Pan down"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_ZOOMIN"
 msgstr "Zoom in"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_ZOOMOUT"
 msgstr "Zoom out"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_TOGGLEZOOM"
 msgstr "Toggle zoom"
 
@@ -1774,10 +1722,6 @@ msgstr "Default Crosshair"
 #, fuzzy
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Crosshair color"
-
-#, fuzzy
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Crosshair shows health"
 
 #, fuzzy
 msgid "HUDMNU_CROSSHAIRSCALE"

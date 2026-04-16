@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-05 18:09+0000\n"
-"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
+"PO-Revision-Date: 2026-04-14 10:09+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -4686,7 +4686,7 @@ msgid "OPTVAL_MODERN"
 msgstr "现代(WASD)"
 
 msgid "OPTVAL_MODERNLEFT"
-msgstr "现代(小键盘)"
+msgstr "现代(左手模式/小键盘)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "严格的KEYCONF武器/玩家"
@@ -5352,4 +5352,19 @@ msgid "OPTMNU_OPENWADS"
 msgstr "浏览IWAD文件夹"
 
 msgid "SNDMNU_NOMIDIOPTIONS"
-msgstr "Midi设备没有提供任何选项。"
+msgstr "MIDI设备没有提供任何选项。"
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "模仿Miko传送门"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "准星垂直偏移"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "动态准星颜色"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "最大生命时准星颜色"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "满生命时准星颜色"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-29 17:49+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/uzdoom/common/he/>"
 "\n"
@@ -311,6 +311,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "פריט הקודם"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "התאמה אישית של פעולות מפה"
 
@@ -541,13 +542,13 @@ msgid "OPTVAL_NOTINVERTED"
 msgstr ""
 
 msgid "TXT_COLOR_BLUE"
-msgstr ""
+msgstr "כחול"
 
 msgid "TXT_COLOR_RED"
-msgstr ""
+msgstr "אדום"
 
 msgid "TXT_COLOR_GREEN"
-msgstr ""
+msgstr "ירוק"
 
 msgid "TXT_COLOR_GRAY"
 msgstr ""
@@ -1428,9 +1429,6 @@ msgid "HUDMNU_CROSSHAIR"
 msgstr ""
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
-msgstr ""
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
 msgstr ""
 
 msgid "HUDMNU_CROSSHAIRSCALE"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:10+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/common/"
 "eo/>\n"
@@ -308,6 +308,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Antaŭa aĵo"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Adapti regilojn de mapo"
 
@@ -780,9 +781,8 @@ msgstr "Altnivelaj agordoj"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Agordo por legilo de moduloj"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Agordoj por legilo de MIDI"
+msgstr "Agordoj por MIDI-aparato"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Altnivelaj agordoj de sono"
@@ -1431,9 +1431,6 @@ msgstr "Defaŭlta reteto"
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Retetokoloro"
 
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Reteto montras sanon"
-
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Skali reteton"
 
@@ -1538,7 +1535,7 @@ msgid "OPTVAL_HQNX"
 msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
-msgstr ""
+msgstr "hqNx MMX"
 
 msgid "OPTVAL_NXBRZ"
 msgstr "xBRZ"
@@ -1547,7 +1544,7 @@ msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Malnova xBRZ"
 
 msgid "OS_TITLE"
-msgstr "Agorda Serĉo"
+msgstr "Agorda serĉo"
 
 msgid "OS_ANY"
 msgstr "Serĉi por iu ajn termino"
@@ -1788,9 +1785,8 @@ msgstr "Montri ĉi tiun paĝon post ĝisdatigoj"
 msgid "NOTES_UNKNOWN"
 msgstr "Nekonata"
 
-#, fuzzy
 msgid "NOTES_RELEASED"
-msgstr "eldonita"
+msgstr "%s versio %s, eldonita %s"
 
 msgid "NOTES_EMPTY"
 msgstr "Neniu priskribo provizita."

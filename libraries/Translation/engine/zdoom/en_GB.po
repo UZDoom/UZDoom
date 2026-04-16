@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-02 03:09+0000\n"
+"PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "uzdoom/zdoom-engine-strings/en_GB/>\n"
@@ -4682,7 +4682,7 @@ msgid "OPTVAL_MODERN"
 msgstr "Modern (WASD)"
 
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Modern (Keypad)"
+msgstr "Modern (Left-Handed / Numpad)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strict KEYCONF Weapons/Players"
@@ -5359,4 +5359,19 @@ msgid "OPTMNU_OPENWADS"
 msgstr "Browse IWAD Folder"
 
 msgid "SNDMNU_NOMIDIOPTIONS"
-msgstr "Midi device does not expose any options."
+msgstr "MIDI device does not expose any options."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Emulate Mikoportals"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Crosshair colour at full health"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Crosshair colour at max health"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Dynamic crosshair colours"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Crosshair vertical offset"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:10+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/common/nl/>"
 "\n"
@@ -309,6 +309,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Vorige item"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Kaartcontroles aanpassen"
 
@@ -1461,9 +1462,6 @@ msgstr "Standaard dradenkruis"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Dradenkruis kleur"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Dradenkruis toont gezondheid"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Dradenkruis schalen"

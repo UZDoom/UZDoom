@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:09+0000\n"
-"Last-Translator: RageSpark <bgamer332ofc@gmail.com>\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "uzdoom/common/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -309,6 +309,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Item anterior"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Peronalizar comandos do mapa"
 
@@ -1444,9 +1445,6 @@ msgstr "Mira padrão"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Cor da mira"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Exibir saúde na mira"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Redimensionar mira"

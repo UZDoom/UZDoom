@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-31 03:10+0000\n"
+"PO-Revision-Date: 2026-04-14 22:06+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/uzdoom/"
 "common/nb_NO/>\n"
@@ -311,6 +311,7 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Forrige element"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
 msgstr "Tilpass kartkontroller"
 
@@ -1434,9 +1435,6 @@ msgstr "Standard trådkors"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Farge på trådkors"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Trådkorset viser helse"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Skalere trådkors"
