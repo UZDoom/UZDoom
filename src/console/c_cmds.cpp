@@ -21,45 +21,35 @@
 **
 */
 
-#include <math.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <errno.h>
-
-#include "version.h"
-#include "c_console.h"
+#include "basics.h"
 #include "c_dispatch.h"
-
-#include "i_system.h"
-#include "engineerrors.h"
+#include "c_functions.h"
+#include "cmdlib.h"
+#include "d_main.h"
+#include "d_net.h"
+#include "d_player.h"
 #include "doomstat.h"
-#include "gstrings.h"
-#include "s_sound.h"
+#include "engineerrors.h"
+#include "filesystem.h"
 #include "g_game.h"
 #include "g_level.h"
-#include "filesystem.h"
-#include "gi.h"
-#include "r_defs.h"
-#include "d_player.h"
-#include "p_local.h"
-#include "r_sky.h"
-#include "p_setup.h"
-#include "cmdlib.h"
-#include "d_net.h"
-#include "v_text.h"
-#include "p_lnspec.h"
-#include "r_utility.h"
-#include "c_functions.h"
 #include "g_levellocals.h"
-#include "v_video.h"
-#include "md5.h"
-#include "findfile.h"
-#include "i_music.h"
+#include "gi.h"
+#include "gstrings.h"
+#include "i_system.h"
+#include "p_lnspec.h"
+#include "p_local.h"
+#include "p_setup.h"
+#include "r_defs.h"
+#include "r_sky.h"
+#include "r_utility.h"
 #include "s_music.h"
+#include "s_sound.h"
+#include "savegamemanager.h"
 #include "texturemanager.h"
 #include "v_draw.h"
-#include "d_main.h"
-#include "savegamemanager.h"
+#include "v_text.h"
+#include "v_video.h"
 
 extern FILE *Logfile;
 extern bool insave;
@@ -71,7 +61,6 @@ CVAR (Int, cl_blockcheats, 0, 0)
 CVARD(Bool, show_messages, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "enable/disable showing messages")
 CVAR(Bool, con_stackident, true, CVAR_ARCHIVE)
 CVAR(Bool, show_obituaries, true, CVAR_ARCHIVE)
-
 
 bool CheckCheatmode (bool printmsg, bool sponly)
 {
@@ -911,9 +900,22 @@ CCMD(countitemsnum) // [SP] # of counted items
 //-----------------------------------------------------------------------------
 CCMD(changesky)
 {
-	const char *sky1name;
+	const char *sky1name = "";
+	if (argv.argc() < 2)
+	{
+		auto sky = (primaryLevel && primaryLevel->skytexture1.isValid())
+			? TexMan.GetGameTexture(primaryLevel->skytexture1)
+			: nullptr;
+		if (sky) sky1name = sky->GetName().GetChars();
+		Printf("Current sky: %s\n", sky1name);
+		return;
+	}
 
-	if (netgame || argv.argc()<2) return;
+	if (netgame)
+	{
+		Printf("changesky: Not available in a netgame\n");
+		return;
+	}
 
 	// This only alters the primary level's sky setting. For testing out a sky that is sufficient.
 	sky1name = argv[1];
