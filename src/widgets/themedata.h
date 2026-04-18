@@ -50,7 +50,7 @@ private:
 	static Colorf mix(const ColorLayers& color, float mix);
 
 public:
-	static void initilize(Mode mode);
+	static void initilize(Mode mode, bool contrast);
 
 	static Mode getMode() { return Theme::mode; }
 	static void setMode(Mode mode)

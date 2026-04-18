@@ -60,15 +60,10 @@ void InitWidgetResources(const char* filename)
 	for (int i = 0; i < argc; ++i)
 		open(args[i].GetChars());
 
-	bool use_dark = ui_theme == 1;
+	auto theme = GetSystemTheme();
+	auto use_dark = ui_theme == 1 || (ui_theme == 0 && (theme & Dark));
 
-	if (ui_theme == 0)
-	{
-		auto theme = GetSystemTheme() & ColorScheme;
-		if (theme == Dark) use_dark = true;
-	}
-
-	Theme::initilize(use_dark? DARK: LIGHT);
+	Theme::initilize(use_dark? DARK: LIGHT, theme & HighContrast);
 
 	WidgetTheme::SetTheme(std::unique_ptr<WidgetTheme>(new WidgetTheme{{
 		Theme::getMain  (COLOR_BACKGROUND), Theme::getMain  (COLOR_TEXT),
