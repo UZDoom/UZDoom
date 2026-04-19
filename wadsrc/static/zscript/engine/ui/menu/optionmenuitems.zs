@@ -836,11 +836,20 @@ class OptionMenuItemStaticTextSwitchable : OptionMenuItem
 
 class OptionMenuSliderBase : OptionMenuItem
 {
+	CONST HELD_RESET_TICS = 6;
+
 	// command is a CVAR
 	double mMin, mMax, mStep;
 	int mShowValue;
 	int mDrawX;
 	int mSliderShort;
+	double mDisplayScale;
+	String mValueSuffix;
+
+	protected int mHeldTics;
+	protected int mHeldTimer;
+	protected int mHeldDir;
+	protected TextEnterMenu mEnter;
 
 	protected void Init(
 		String label,
@@ -851,7 +860,9 @@ class OptionMenuSliderBase : OptionMenuItem
 		Name command = 'none',
 		CVar graycheck = null,
 		int graycheckVal = 0,
-		name graycheckMode = 'Gray'
+		name graycheckMode = 'Gray',
+		double displayScale = 1.0,
+		String valuesuffix = ""
 	)
 	{
 		Super.Init(label, command, false, graycheck, graycheckVal, graycheckMode);
@@ -861,6 +872,16 @@ class OptionMenuSliderBase : OptionMenuItem
 		mShowValue = showval;
 		mDrawX = 0;
 		mSliderShort = 0;
+		mDisplayScale = displayScale;
+		mValueSuffix = valuesuffix;
+
+		mHeldTics = mHeldTimer = mHeldDir = 0;
+		mEnter = null;
+
+		if (mDisplayScale <= 0)
+		{
+			mDisplayScale = 1.0;
+		}
 	}
 
 	virtual double GetSliderValue()
@@ -868,13 +889,185 @@ class OptionMenuSliderBase : OptionMenuItem
 		return 0;
 	}
 
+	protected String GetSliderValueText(double val)
+	{
+		if (mShowValue < 0)
+		{
+			return "";
+		}
+
+		if (mEnter != null)
+		{
+			return mEnter.GetText()..Menu.OptionFont().GetCursor();
+		}
+
+		return FormatSliderValue(val);
+	}
+
 	virtual void SetSliderValue(double val)
 	{
 	}
 
-	override bool Selectable(void)
+	override bool Selectable()
 	{
 		return !IsGrayed();
+	}
+
+	protected virtual bool CanInputSliderValue()
+	{
+		return mShowValue >= 0;
+	}
+
+	protected virtual String FormatSliderValue(double val)
+	{
+		int fracdigits = mShowValue;
+		if (fracdigits < 0)
+		{
+			fracdigits = 0;
+		}
+
+		String format = String.Format("%%.%df", fracdigits);
+		String valueStr = String.Format(format, val * mDisplayScale)..mValueSuffix;
+		return valueStr;
+	}
+
+	protected virtual double ParseSliderValue(String text, double fallback)
+	{
+		if (text == "")
+		{
+			return fallback;
+		}
+
+		return text.ToDouble() / mDisplayScale;
+	}
+
+	protected virtual double GetHoldStepSize(int heldTics)
+	{
+		if (heldTics <= 9 || mStep <= 0)
+		{
+			return mStep;
+		}
+
+		double range = mMax - mMin;
+		if (range <= 0)
+		{
+			return mStep;
+		}
+
+		double rangePercent = heldTics > 17 ? 0.05 : 0.02;
+		double delta = range * rangePercent;
+
+		int steps = max(1, int(ceil(delta / mStep)));
+		return steps * mStep;
+	}
+
+	protected double ClampSliderValue(double val)
+	{
+		if (val ~== 0)
+		{
+			val = 0;
+		}
+		return clamp(val, mMin, mMax);
+	}
+
+	protected double SlideValue(double val, int dir)
+	{
+		if (mHeldDir != dir)
+		{
+			mHeldDir = dir;
+			mHeldTics = 0;
+		}
+
+		mHeldTimer = HELD_RESET_TICS;
+		++mHeldTics;
+
+		return ClampSliderValue(val + dir * GetHoldStepSize(mHeldTics));
+	}
+
+	protected void StartSliderValueInput(bool fromcontroller)
+	{
+		if (!CanInputSliderValue())
+		{
+			return;
+		}
+
+		ResetHoldState();
+		Menu.MenuSound("menu/choose");
+
+		mEnter = TextEnterMenu.OpenTextEnter
+		(
+			Menu.GetCurrentMenu(),
+			Menu.OptionFont(),
+			"",
+			-1,
+			fromcontroller
+		);
+		mEnter.ActivateMenu();
+	}
+
+	protected void EndSliderValueInput(bool accepted)
+	{
+		if (mEnter == null)
+		{
+			return;
+		}
+
+		if (accepted)
+		{
+			String text = mEnter.GetText();
+			if (text != "")
+			{
+				double val = ParseSliderValue(text, GetSliderValue());
+				SetSliderValue(ClampSliderValue(val));
+				Menu.MenuSound("menu/change");
+			}
+		}
+
+		mEnter = null;
+		ResetHoldState();
+	}	
+
+	protected String FitEnteredSliderValueText(String text, int maxWidth)
+	{
+		if (maxWidth <= 0)
+		{
+			return "";
+		}
+
+		if (Menu.OptionWidth(text, false) * CleanXfac_1 <= maxWidth)
+		{
+			return text;
+		}
+
+		if (mEnter != null)
+		{
+			String truncated = text;
+			while (truncated.Length() > 0 && Menu.OptionWidth(truncated, false) * CleanXfac_1 > maxWidth)
+			{
+				let [chr, next] = truncated.GetNextCodePoint(0);
+				truncated = truncated.Mid(next);
+			}
+			return truncated;
+		}
+
+		return text;
+	}
+
+	protected void ResetHoldState()
+	{
+		mHeldTics = mHeldTimer = mHeldDir = 0;
+	}
+
+	override void Ticker()
+	{
+		if (mHeldTimer > 0)
+		{
+			--mHeldTimer;
+		}
+		else
+		{
+			ResetHoldState();
+		}
 	}
 
 	//=============================================================================
@@ -891,23 +1084,31 @@ class OptionMenuSliderBase : OptionMenuItem
 
 	protected void DrawSlider (int x, int y, double min, double max, double cur, int fracdigits, int indent, bool grayed = false)
 	{
-		String formater = String.format("%%.%df", fracdigits);	// The format function cannot do the '%.*f' syntax.
 		String textbuf;
-		double range;
-		int maxlen = 0;
-		int right = x + (12*16 + 4) * CleanXfac_1;	// length of slider. This uses the old ConFont and
-		int cy = y + CleanYFac;
-
-		range = max - min;
+		int textWidth;
+		
 		double ccur = clamp(cur, min, max) - min;
+		double range = max - min;
+		if (range <= 0)
+		{
+			range = 1;
+		}
+
+		int right = x + (12*16 + 4) * CleanXfac_1;	// length of slider. This uses the old ConFont and 
+		int cy = y + CleanYFac;
 
 		if (fracdigits >= 0)
 		{
-			textbuf = String.format(formater, max);
-			maxlen = Menu.OptionWidth(textbuf) * CleanXfac_1;
+			String minbuf = FormatSliderValue(min);
+			String maxbuf = FormatSliderValue(max);
+			textbuf = GetSliderValueText(cur);
+
+			int minWidth = Menu.OptionWidth(minbuf, false) * CleanXfac_1;
+			int maxWidth = Menu.OptionWidth(maxbuf, false) * CleanXfac_1;
+			textWidth = max(minWidth, maxWidth);
 		}
 
-		mSliderShort = right + maxlen > screen.GetWidth();
+		mSliderShort = right + textWidth > screen.GetWidth();
 
 		if (!mSliderShort)
 		{
@@ -922,10 +1123,10 @@ class OptionMenuSliderBase : OptionMenuItem
 			right -= 5*8*CleanXfac;
 		}
 
-		if (fracdigits >= 0 && right + maxlen <= screen.GetWidth())
+		if (fracdigits >= 0 && right + textWidth <= screen.GetWidth())
 		{
-			textbuf = String.format(formater, cur);
-			drawText(right, y, Font.CR_DARKGRAY, textbuf, grayed);
+			int maxWidth = screen.GetWidth() - right - 4;
+			drawText(right, y, Font.CR_DARKGRAY, FitEnteredSliderValueText(textbuf, maxWidth), grayed);
 		}
 	}
 
@@ -933,31 +1134,46 @@ class OptionMenuSliderBase : OptionMenuItem
 	//=============================================================================
 	override int Draw(OptionMenuDescriptor desc, int y, int indent, bool selected)
 	{
-		drawLabel(indent, y, selected? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColor, IsGrayed());
+		drawLabel(indent, y, selected ? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColor, IsGrayed());
 		mDrawX = indent + CursorSpace();
-		DrawSlider (mDrawX, y, mMin, mMax, GetSliderValue(), mShowValue, indent, IsGrayed());
+		DrawSlider(mDrawX, y, mMin, mMax, GetSliderValue(), mShowValue, indent, IsGrayed());
 		return indent;
 	}
 
 	//=============================================================================
 	override bool MenuEvent (int mkey, bool fromcontroller)
 	{
-		double value = GetSliderValue();
+		switch (mkey)
+		{
+			case Menu.MKEY_Enter:
+				if (CanInputSliderValue())
+				{
+					StartSliderValueInput(fromcontroller);
+					return true;
+				}
+				return OptionMenuItem.MenuEvent(mkey, fromcontroller);
 
-		if (mkey == Menu.MKEY_Left)
-		{
-			value -= mStep;
+			case Menu.MKEY_Input:
+				EndSliderValueInput(true);
+				return true;
+
+			case Menu.MKEY_Abort:
+				EndSliderValueInput(false);
+				return true;
+
+			case Menu.MKEY_Left:
+				SetSliderValue(SlideValue(GetSliderValue(), -1));
+				break;
+
+			case Menu.MKEY_Right:
+				SetSliderValue(SlideValue(GetSliderValue(), 1));
+				break;
+
+			default:
+				ResetHoldState();
+				return OptionMenuItem.MenuEvent(mkey, fromcontroller);
 		}
-		else if (mkey == Menu.MKEY_Right)
-		{
-			value += mStep;
-		}
-		else
-		{
-			return OptionMenuItem.MenuEvent(mkey, fromcontroller);
-		}
-		if (value ~== 0) value = 0;	// This is to prevent formatting anomalies with very small values
-		SetSliderValue(clamp(value, mMin, mMax));
+
 		Menu.MenuSound("menu/change");
 		return true;
 	}
@@ -984,6 +1200,8 @@ class OptionMenuSliderBase : OptionMenuItem
 
 		x = clamp(x, slide_left, slide_right);
 		double v = mMin + ((x - slide_left) * (mMax - mMin)) / (slide_right - slide_left);
+		v = ClampSliderValue(v);
+
 		if (v != GetSliderValue())
 		{
 			SetSliderValue(v);
@@ -993,6 +1211,8 @@ class OptionMenuSliderBase : OptionMenuItem
 		{
 			lm.SetFocus(self);
 		}
+
+		ResetHoldState();
 		return true;
 	}
 
@@ -1018,12 +1238,14 @@ class OptionMenuItemSlider : OptionMenuSliderBase
 		int showval = 1,
 		CVar graycheck = null,
 		int graycheckVal = 0,
-		name graycheckMode = 'Gray'
+		name graycheckMode = 'Gray',
+		double displayScale = 1.0,
+		String valuesuffix = ""
 	)
 	{
-		Super.Init(label, min, max, step, showval, command, graycheck, graycheckVal, graycheckMode);
-		mCVar =CVar.FindCVar(command);
-		scale = 10 ** mShowValue;
+		Super.Init(label, min, max, step, showval, command, graycheck, graycheckVal, graycheckMode, displayScale, valuesuffix);
+		mCVar = CVar.FindCVar(command);
+		scale = (10 ** mShowValue) * displayScale;
 		return self;
 	}
 
@@ -1033,10 +1255,7 @@ class OptionMenuItemSlider : OptionMenuSliderBase
 		{
 			return round(mCVar.GetFloat()*scale)/scale;
 		}
-		else
-		{
-			return 0;
-		}
+		return 0;
 	}
 
 	override void SetSliderValue(double val)

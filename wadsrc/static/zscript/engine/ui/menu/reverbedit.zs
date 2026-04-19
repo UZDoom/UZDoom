@@ -47,7 +47,7 @@ class ReverbEdit : OptionMenu
 
 		[env, id] = GetSelectedEnvironment();
 
-		let li = GetItem('EvironmentName');
+		let li = GetItem('EnvironmentName');
 		if (li != NULL)
 		{
 			if (id != -1)
@@ -60,7 +60,7 @@ class ReverbEdit : OptionMenu
 				li.SetValue(0, 0);
 			}
 		}
-		li = GetItem('EvironmentID');
+		li = GetItem('EnvironmentID');
 		if (li != NULL)
 		{
 			if (id != -1)
@@ -204,17 +204,13 @@ class OptionMenuItemReverbOption : OptionMenuItemOptionBase
 class OptionMenuItemSliderReverbEditOption : OptionMenuSliderBase
 {
 	int mValIndex;
-	String mEditValue;
-	TextEnterMenu mEnter;
 
-	OptionMenuItemSliderReverbEditOption Init(String label, double min, double max, double step, int showval, int valindex)
+	OptionMenuItemSliderReverbEditOption Init(String label, double min, double max, double step, int showval, int valindex, double displayScale = 1.0, String valuesuffix = "")
 	{
-		Super.Init(label, min, max, step, showval);
+		Super.Init(label, min, max, step, showval, displayScale: displayScale, valuesuffix: valuesuffix);
 		mValIndex = valindex;
-		mEnter = null;
 		return self;
 	}
-
 
 	override double GetSliderValue()
 	{
@@ -226,56 +222,8 @@ class OptionMenuItemSliderReverbEditOption : OptionMenuSliderBase
 		ReverbEdit.SetValue(mValIndex, val);
 	}
 
-	override bool Selectable()
+	override bool IsGrayed(void)
 	{
-		return !ReverbEdit.GrayCheck();
+		return ReverbEdit.GrayCheck();
 	}
-
-	virtual String Represent()
-	{
-		return mEnter.GetText() .. Menu.OptionFont().GetCursor();
-	}
-
-	//=============================================================================
-	override int Draw(OptionMenuDescriptor desc, int y, int indent, bool selected)
-	{
-		drawLabel(indent, y, selected ? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColor, ReverbEdit.GrayCheck());
-
-		mDrawX = indent + CursorSpace();
-		if (mEnter)
-		{
-			drawText(mDrawX, y, OptionMenuSettings.mFontColorValue, Represent());
-		}
-		else
-		{
-			DrawSlider (mDrawX, y, mMin, mMax, GetSliderValue(), mShowValue, indent);
-		}
-		return indent;
-	}
-
-	override bool MenuEvent (int mkey, bool fromcontroller)
-	{
-		if (mkey == Menu.MKEY_Enter)
-		{
-			Menu.MenuSound("menu/choose");
-			mEnter = TextEnterMenu.OpenTextEnter(Menu.GetCurrentMenu(), Menu.OptionFont(), String.Format("%.3f", GetSliderValue()), -1, fromcontroller);
-			mEnter.ActivateMenu();
-			return true;
-		}
-		else if (mkey == Menu.MKEY_Input)
-		{
-			String val = mEnter.GetText();
-			SetSliderValue(val.toDouble());
-			mEnter = null;
-			return true;
-		}
-		else if (mkey == Menu.MKEY_Abort)
-		{
-			mEnter = null;
-			return true;
-		}
-
-		return Super.MenuEvent(mkey, fromcontroller);
-	}
-
 }
