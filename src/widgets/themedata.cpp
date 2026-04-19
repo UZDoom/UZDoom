@@ -54,23 +54,25 @@ static const char *ThemeCommandStrings[] =
 	nullptr
 };
 
-void Theme::initilize(Mode mode)
+void Theme::initilize(Mode mode, bool contrast)
 {
 	if (Theme::theme) return;
 
 	setMode(mode);
 	ThemeData *t;
 
+	auto simple = [](ThemeData &t, uint32_t b1, uint32_t f1, uint32_t b2, uint32_t f2)
+	{
+		t.main.bg = t.header.bg = t.button.bg = Colorf::fromRgb(b1);
+		t.main.fg = t.header.fg = t.button.fg = Colorf::fromRgb(f1);
+		t.hover.fg = t.click.fg = t.border.bg = Colorf::fromRgb(f2);
+		t.hover.bg = t.click.bg = t.border.fg = Colorf::fromRgb(b2);
+	};
+
 	// basic fallback
 	Theme::accent = Colorf::fromRgb(0x7f7f7f);
-	t = &Theme::light;
-	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Colorf::fromRgb(0xffffff);
-	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Colorf::fromRgb(0x000000);
-	t->border.bg = t->border.fg = Colorf::fromRgb(0x7f7f7f);
-	t = &Theme::dark;
-	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Colorf::fromRgb(0x000000);
-	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Colorf::fromRgb(0xffffff);
-	t->border.bg = t->border.fg = Colorf::fromRgb(0x7f7f7f);
+	simple(Theme::light, 0xffffff, 0x000000, 0xffff00, 0x000000);
+	simple(Theme::dark,  0x000000, 0xffffff, 0x0000ff, 0xffffff);
 
 	auto file = "ui/theme.txt";
 
@@ -124,6 +126,7 @@ void Theme::initilize(Mode mode)
 				DPrintf(DMSG_WARNING, "Theme not selected");
 				continue;
 			}
+			if (contrast) continue;
 			switch (command)
 			{
 			case THEME_MAIN:   pair(sc, t->main);   break;
