@@ -24,7 +24,7 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <csignal>
 #include <fcntl.h>
 #include <locale.h>

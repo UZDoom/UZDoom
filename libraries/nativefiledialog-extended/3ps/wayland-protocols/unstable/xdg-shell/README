@@ -1,0 +1,9 @@
+xdg shell protocol
+
+Maintainers:
+Jasper St. Pierre <jstpierre@mecheye.net>
+
+Disclaimer: This protocol extension has been superseded by the copy in stable/.
+The stable version has made backwards-incompatible changes relative to this
+version. This version is deprecated and only retained for backwards
+compatibility.

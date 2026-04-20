@@ -73,6 +73,7 @@ if( WIN32 )
 		winmm
 		ws2_32
 		wsock32
+		opengl32
 	)
 
 	if(MSVC)
@@ -137,15 +138,19 @@ else()
 		add_definitions( -DDYN_GTK=0 )
 	endif()
 
-	# Non-Windows version also needs SDL except native OS X backend
-	if( NOT APPLE OR NOT OSX_COCOA_BACKEND )
-		find_package( SDL2 REQUIRED )
-		include_directories( SYSTEM "${SDL2_INCLUDE_DIR}" )
-		link_directories(${SDL2_LINK_DIR})
-		set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} "${SDL2_LIBRARY}" )
-	endif()
-
 endif()
+
+# SDL2 and OpenGL is always needed for launcher
+find_package( SDL2 REQUIRED )
+if ( MSVC )
+	include_directories( SYSTEM "${SDL2_INCLUDE_DIR}" )
+else()
+	include_directories( SYSTEM "${SDL2_INCLUDE_DIR}/SDL2" )
+endif()
+	
+link_directories(${SDL2_LINK_DIR})
+set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} "${SDL2_LIBRARY}" )
+find_package(OpenGL REQUIRED)
 
 if( NOT NO_OPENAL )
 	if ( "vcpkg-openal-soft" IN_LIST VCPKG_MANIFEST_FEATURES )
@@ -611,6 +616,7 @@ file( GLOB HEADER_FILES
 
 	utility/*.h
 	widgets/*.h
+	launcher/*.h
 	scripting/*.h
 	scripting/backend/*.h
 	scripting/decorate/*.h
@@ -972,18 +978,18 @@ set (PCH_SOURCES
 	rendering/swrenderer/textures/warptexture.cpp
 	rendering/swrenderer/textures/swcanvastexture.cpp
 	events.cpp
-	widgets/aboutpage.cpp
-	widgets/errorwindow.cpp
-	widgets/launcherbanner.cpp
-	widgets/launcherbuttonbar.cpp
-	widgets/launcherwindow.cpp
-	widgets/netstartwindow.cpp
-	widgets/networkpage.cpp
-	widgets/playgamepage.cpp
-	widgets/releasepage.cpp
-	widgets/settingspage.cpp
+
 	widgets/themedata.cpp
 	widgets/widgetresourcedata.cpp
+	
+	launcher/loader.cpp
+	launcher/profile.cpp
+	launcher/starter.cpp
+	launcher/about.cpp
+	launcher/profileSettings.cpp
+	launcher/errorwindow.cpp
+	launcher/netstartwindow.cpp
+	launcher/launcherMainWindow.cpp
 
 	common/audio/sound/i_sound.cpp
 	common/audio/sound/oalsound.cpp
@@ -1214,6 +1220,42 @@ set (PCH_SOURCES
 	utility/system_theme.cpp
 )
 
+# dearImGui core and backend
+# the core files, always needed
+file(GLOB IMGUI_CORE_SOURCES
+    "../libraries/DearImGui/*.h"
+    "../libraries/DearImGui/*.cpp"
+)
+
+# this is the backend and needs to be set accordingly (e.g SDL2 + OPENGL3)
+set(IMGUI_SOURCES
+    ${IMGUI_CORE_SOURCES}
+    "../libraries/DearImGui/backends/imgui_impl_sdl2.h"
+    "../libraries/DearImGui/backends/imgui_impl_sdl2.cpp"
+
+	"../libraries/DearImGui/backends/imgui_impl_opengl3.h"
+	"../libraries/DearImGui/backends/imgui_impl_opengl3.cpp"
+	"../libraries/DearImGui/backends/imgui_impl_opengl3_loader.h"
+)
+
+# dearImGui core and backend
+# the core files, always needed
+file(GLOB IMGUI_CORE_SOURCES
+    "../libraries/DearImGui/*.h"
+    "../libraries/DearImGui/*.cpp"
+)
+
+# this is the backend and needs to be set accordingly (e.g SDL2 + OPENGL3)
+set(IMGUI_SOURCES
+    ${IMGUI_CORE_SOURCES}
+    "../libraries/DearImGui/backends/imgui_impl_sdl2.h"
+    "../libraries/DearImGui/backends/imgui_impl_sdl2.cpp"
+
+	"../libraries/DearImGui/backends/imgui_impl_opengl3.h"
+	"../libraries/DearImGui/backends/imgui_impl_opengl3.cpp"
+	"../libraries/DearImGui/backends/imgui_impl_opengl3_loader.h"
+)
+
 if( ZMUSIC_SYSTEM_INSTALL OR NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS)
 	set ( PCH_SOURCES ${PCH_SOURCES} common/utility/i_module.cpp )
 endif()
@@ -1284,6 +1326,8 @@ list( REMOVE_ITEM GAME_NONPCH_SOURCES ${PCH_SOURCES} )
 
 add_executable( zdoom WIN32 MACOSX_BUNDLE ${GAME_SOURCES} )
 
+target_sources( zdoom PRIVATE ${IMGUI_SOURCES} )
+
 target_include_directories( zdoom PRIVATE ${CMAKE_BINARY_DIR} )
 
 target_precompile_headers( zdoom PRIVATE g_pch.h )
@@ -1324,7 +1368,7 @@ if( UNIX )
 	endif()
 endif()
 
-target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash)
+target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash OpenGL::GL nfd)
 include_directories(
 	BEFORE
 	.
@@ -1385,6 +1429,9 @@ include_directories(
 	scripting/zscript
 	rendering
 	launcher
+	../libraries/DearImGui
+	../libraries/DearImGui/backends
+	../libraries/cppdap/third_party/json/include
 	../libraries/ZVulkan/include
 	../libraries/ZWidget/include
 	../libraries/webp/include
@@ -1659,6 +1706,7 @@ source_group("Utility\\Smackerdec" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_D
 source_group("Utility\\Smackerdec\\Headers" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/include/.+")
 source_group("Utility\\Smackerdec\\Sources" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/src/.+")
 source_group("Statusbar" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/g_statusbar/.+")
+source_group("Launcher" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/launcher/.+")
 source_group("Widgets" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/widgets/.+")
 source_group("Versioning" FILES version.h win32/zdoom.rc)
 source_group("Xlat" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/xlat/.+" FILES ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h)
