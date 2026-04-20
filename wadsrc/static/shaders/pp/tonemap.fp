@@ -1,3 +1,19 @@
+/*
+** tonemap.fp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016 Magnus Norddahl
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 layout(location=0) in vec2 TexCoord;
 layout(location=0) out vec4 FragColor;
@@ -6,16 +22,14 @@ layout(binding=0) uniform sampler2D InputTexture;
 
 vec3 Linear(vec3 c)
 {
-	//c = max(c, vec3(0.0));
-	//return pow(c, 2.2);
-	return c * c; // cheaper, but assuming gamma of 2.0 instead of 2.2
+	c = max(c, vec3(0.0));
+	return pow(c, vec3(2.2));
 }
 
 vec3 sRGB(vec3 c)
 {
 	c = max(c, vec3(0.0));
-	//return pow(c, vec3(1.0 / 2.2));
-	return sqrt(c); // cheaper, but assuming gamma of 2.0 instead of 2.2
+	return pow(c, vec3(1.0 / 2.2));
 }
 
 #if defined(LINEAR)

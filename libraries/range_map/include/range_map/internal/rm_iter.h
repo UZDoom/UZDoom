@@ -6,6 +6,7 @@
 #include "rm_node.h"
 
 #include <iterator>
+#include <memory>
 
 namespace beneficii {
 
@@ -13,18 +14,20 @@ namespace beneficii {
     template<class _range_map>
     class _rm_iter_base {
         
-        typedef _rm_iter_base<_range_map> _myt;
+        typedef _rm_iter_base _myt;
         
         protected:    
     
         typedef std::bidirectional_iterator_tag iterator_category;
         typedef _range_node<typename _range_map::key_type,
             typename _range_map::mapped_type> _node_type;
-        typedef typename _range_map::allocator_type _alloc_type;
-        typedef typename _alloc_type::template rebind<_node_type>::other _node_allocator;
-        typedef typename _node_allocator::pointer _nodeptr;
-        typedef typename _range_map::value_type value_type;
-        typedef typename _range_map::difference_type difference_type;
+        typedef _range_map::allocator_type _alloc_type;
+
+        using _node_allocator = std::allocator_traits<_alloc_type>::template rebind_alloc<_node_type>;
+        typedef std::allocator_traits<_node_allocator>::pointer _nodeptr;
+
+        typedef _range_map::value_type value_type;
+        typedef _range_map::difference_type difference_type;
     
         _rm_iter_base()
         : _node(nullptr), _is_rgt_pt(false) {}
@@ -40,7 +43,7 @@ namespace beneficii {
             _is_rgt_pt = _right->_is_rgt_pt;
         }
         
-        bool _do_equal(const _myt* _right) {
+        bool _do_equal(const _myt* _right) const {
             return _node == _right->_node && _is_rgt_pt == _right->_is_rgt_pt;
         }
         
@@ -55,16 +58,16 @@ template<class _range_map>
 class _rm_iterator : public _rm_iter_base<_range_map> {
     
     typedef _rm_iter_base<_range_map> _base;
-    typedef _rm_iterator<_range_map> _myt;
+    typedef _rm_iterator _myt;
     typedef _rm_const_iterator<_range_map> _ott;
-    typedef typename _base::_node_type _node_type;
-    typedef typename _base::_nodeptr _nodeptr;
+    typedef _base::_node_type _node_type;
+    typedef _base::_nodeptr _nodeptr;
     
 public:
     
-    typedef typename _base::iterator_category iterator_category;
-    typedef typename _base::value_type value_type;
-    typedef typename _base::difference_type difference_type;
+    typedef _base::iterator_category iterator_category;
+    typedef _base::value_type value_type;
+    typedef _base::difference_type difference_type;
     typedef value_type* pointer;
     typedef value_type& reference;
     
@@ -74,24 +77,24 @@ public:
     
     _rm_iterator(const _myt& _right) 
     : _rm_iter_base<_range_map>(_right) {}
-    _myt operator=(const _myt& _right) {
+    _myt& operator=(const _myt& _right) {
         if(this != &_right) {
             this->_do_assign(&_right);
         }
         return *this;
     }
     
-    bool operator==(const _myt& _right) {
+    bool operator==(const _myt& _right) const {
         return this->_do_equal(&_right);
     }
-    bool operator!=(const _myt& _right) {
+    bool operator!=(const _myt& _right) const {
         return !operator==(_right);
     }
     
-     bool operator==(const _ott& _right) {
+     bool operator==(const _ott& _right) const {
         return this->_do_equal(&_right);
     }
-    bool operator!=(const _ott& _right) {
+    bool operator!=(const _ott& _right) const {
         return !operator==(_right);
     }
     
@@ -102,7 +105,7 @@ public:
         return this->_is_rgt_pt ? &this->_node->_end : &this->_node->_start;
     }
     
-    _myt operator++() {
+    _myt& operator++() {
         this->_is_rgt_pt = _node_type::_next(&this->_node, this->_is_rgt_pt);
         return *this;
     }
@@ -112,7 +115,7 @@ public:
         return _ret;
     }
     
-    _myt operator--() {
+    _myt& operator--() {
         this->_is_rgt_pt = _node_type::_prev(&this->_node, this->_is_rgt_pt);
         return *this;
     }
@@ -127,17 +130,17 @@ template<class _range_map>
 class _rm_const_iterator : public _rm_iter_base<_range_map> {
     
     typedef _rm_iter_base<_range_map> _base;
-    typedef _rm_const_iterator<_range_map> _myt;
+    typedef _rm_const_iterator _myt;
     typedef _rm_iterator<_range_map> _ott;
     
-    typedef typename _base::_node_type _node_type;
-    typedef typename _base::_nodeptr _nodeptr;
+    typedef _base::_node_type _node_type;
+    typedef _base::_nodeptr _nodeptr;
     
 public:
     
-    typedef typename _base::iterator_category iterator_category;
-    typedef typename _base::value_type value_type;
-    typedef typename _base::difference_type difference_type;
+    typedef _base::iterator_category iterator_category;
+    typedef _base::value_type value_type;
+    typedef _base::difference_type difference_type;
     typedef const value_type* pointer;
     typedef const value_type& reference;
     
@@ -147,7 +150,7 @@ public:
     
     _rm_const_iterator(const _myt& _right) 
     : _rm_iter_base<_range_map>(_right) {}
-    _myt operator=(const _myt& _right) {
+    _myt& operator=(const _myt& _right) {
         if(this != &_right) {
             this->_do_assign(&_right);
         }
@@ -156,22 +159,22 @@ public:
     
     _rm_const_iterator(const _ott& _right) 
     : _rm_iter_base<_range_map>(_right) {}
-    _myt operator=(const _ott& _right) {
+    _myt& operator=(const _ott& _right) {
         this->_do_assign(&_right);
         return *this;
     }
     
-    bool operator==(const _myt& _right) {
+    bool operator==(const _myt& _right) const {
         return this->_do_equal(&_right);
     }
-    bool operator!=(const _myt& _right) {
+    bool operator!=(const _myt& _right) const {
         return !operator==(_right);
     }
     
-     bool operator==(const _ott& _right) {
+     bool operator==(const _ott& _right) const {
         return this->_do_equal(&_right);
     }
-    bool operator!=(const _ott& _right) {
+    bool operator!=(const _ott& _right) const {
         return !operator==(_right);
     }
     
@@ -182,7 +185,7 @@ public:
         return this->_is_rgt_pt ? &this->_node->_end : &this->_node->_start;
     }
     
-    _myt operator++() {
+    _myt& operator++() {
         this->_is_rgt_pt = _node_type::_next(&this->_node, this->_is_rgt_pt);
         return *this;
     }
@@ -192,7 +195,7 @@ public:
         return _ret;
     }
     
-    _myt operator--() {
+    _myt& operator--() {
         this->_is_rgt_pt = _node_type::_prev(&this->_node, this->_is_rgt_pt);
         return *this;
     }

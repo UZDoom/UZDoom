@@ -1,50 +1,37 @@
 /*
 ** types.cpp
+**
 ** Implements the VM type hierarchy
 **
 **---------------------------------------------------------------------------
-** Copyright 2008-2016 Randy Heit
-** Copyright 2016-2017 Cheistoph Oelckers
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 2008-2016 Marisa Heit
+** Copyright 2016-2017 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
-#include <cinttypes>
-
-#include "vmintern.h"
-#include "s_soundinternal.h"
-#include "types.h"
-#include "printf.h"
-#include "textureid.h"
+#include "filesystem.h"
+#include "i_interface.h"
 #include "maps.h"
 #include "palettecontainer.h"
+#include "printf.h"
+#include "s_soundinternal.h"
+#include "textureid.h"
 #include "texturemanager.h"
-#include "i_interface.h"
-
+#include "types.h"
+#include "vmintern.h"
 
 FTypeTable TypeTable;
 
@@ -366,7 +353,7 @@ void PType::StaticInit()
 	TypeVector3->AddField(NAME_Y, TypeFloat64);
 	TypeVector3->AddField(NAME_Z, TypeFloat64);
 	// allow accessing xy as a vector2. This is not supposed to be serialized so it's marked transient
-	TypeVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient, 0));
+	TypeVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeVector3, NAME_Struct);
 	TypeVector3->loadOp = OP_LV3;
 	TypeVector3->storeOp = OP_SV3;
@@ -382,8 +369,8 @@ void PType::StaticInit()
 	TypeVector4->AddField(NAME_Z, TypeFloat64);
 	TypeVector4->AddField(NAME_W, TypeFloat64);
 	// allow accessing xyz as a vector3. This is not supposed to be serialized so it's marked transient
-	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient, 0));
-	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient, 0));
+	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeVector4, NAME_Struct);
 	TypeVector4->loadOp = OP_LV4;
 	TypeVector4->storeOp = OP_SV4;
@@ -412,7 +399,7 @@ void PType::StaticInit()
 	TypeFVector3->AddField(NAME_Y, TypeFloat32);
 	TypeFVector3->AddField(NAME_Z, TypeFloat32);
 	// allow accessing xy as a vector2
-	TypeFVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient, 0));
+	TypeFVector3->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeFVector3, NAME_Struct);
 	TypeFVector3->loadOp = OP_LFV3;
 	TypeFVector3->storeOp = OP_SFV3;
@@ -429,8 +416,8 @@ void PType::StaticInit()
 	TypeFVector4->AddField(NAME_Z, TypeFloat32);
 	TypeFVector4->AddField(NAME_W, TypeFloat32);
 	// allow accessing xyz as a vector3
-	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient, 0));
-	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient, 0));
+	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeFVector4->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeFVector4, NAME_Struct);
 	TypeFVector4->loadOp = OP_LFV4;
 	TypeFVector4->storeOp = OP_SFV4;
@@ -448,8 +435,8 @@ void PType::StaticInit()
 	TypeQuaternion->AddField(NAME_Z, TypeFloat64);
 	TypeQuaternion->AddField(NAME_W, TypeFloat64);
 	// allow vector access.
-	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient, 0));
-	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient, 0));
+	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeQuaternion, NAME_Struct);
 	TypeQuaternion->loadOp = OP_LV4;
 	TypeQuaternion->storeOp = OP_SV4;
@@ -465,8 +452,8 @@ void PType::StaticInit()
 	TypeFQuaternion->AddField(NAME_Z, TypeFloat32);
 	TypeFQuaternion->AddField(NAME_W, TypeFloat32);
 	// allow accessing xyz as a vector3
-	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient, 0));
-	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient, 0));
+	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XYZ, TypeFVector3, VARF_Transient | VARF_NoRollback, 0));
+	TypeFQuaternion->Symbols.AddSymbol(Create<PField>(NAME_XY, TypeFVector2, VARF_Transient | VARF_NoRollback, 0));
 	TypeTable.AddType(TypeFQuaternion, NAME_Struct);
 	TypeFQuaternion->loadOp = OP_LFV4;
 	TypeFQuaternion->storeOp = OP_SFV4;

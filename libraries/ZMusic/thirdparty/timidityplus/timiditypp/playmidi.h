@@ -576,6 +576,30 @@ private:
 	/* Ring voice id for each notes.  This ID enables duplicated note. */
 	uint8_t vidq_head[128 * MAX_CHANNELS], vidq_tail[128 * MAX_CHANNELS];
 
+	// these were formerly static in set_user_temper_entry
+	int ute_tp;		/* temperament program number */
+	int ute_ll;		/* number of formula */
+	int ute_fh, ute_fl;	/* applying pitch bit mask (forward) */
+	int ute_bh, ute_bl;	/* applying pitch bit mask (backward) */
+	int ute_aa, ute_bb;	/* fraction (aa/bb) */
+	int ute_cc, ute_dd;	/* power (cc/dd)^(ee/ff) */
+	int ute_ee, ute_ff;
+	int ute_ifmax, ute_ibmax, ute_count;
+	double ute_rf[11], ute_rb[11];
+
+	// these were formerly static in set_single_note_tuning
+	int snt_tp;	/* tuning program number */
+	int snt_kn;	/* MIDI key number */
+	int snt_st;	/* the nearest equal-tempered semitone */
+
+	// This was formerly SysexConvert but needs to be more persistent.
+	constexpr static int midi_port_number = 0;
+	uint8_t rhythm_part[2];	/* for GS */
+	uint8_t drum_setup_xg[16];	/* for XG */
+	uint8_t xg_reverb_type_msb, xg_reverb_type_lsb;
+	uint8_t xg_chorus_type_msb, xg_chorus_type_lsb;
+
+
 	int MIDI_EVENT_NOTE(MidiEvent *ep)
 	{
 		return (ISDRUMCHANNEL((ep)->channel) ? (ep)->a : (((int)(ep)->a + note_key_offset + channel[ep->channel].key_shift) & 0x7f));
@@ -692,6 +716,8 @@ private:
 	int32_t get_rx_drum(struct DrumParts *, int32_t);
 	int convert_midi_control_change(int chn, int type, int val, MidiEvent *ev_ret);
 
+	int parse_sysex_event_multi(const uint8_t *val, int32_t len, MidiEvent *evm, Instruments *instruments);
+	int parse_sysex_event(const uint8_t *val, int32_t len, MidiEvent *ev, Instruments *instruments);
 
 public:
 	Player(Instruments *);
@@ -727,16 +753,6 @@ public:
 	void send_long_event(const uint8_t *sysexbuffer, int exlen);
 };
 
-class SysexConvert
-{
-	const int midi_port_number = 0;
-	uint8_t rhythm_part[2] = { 0,0 };	/* for GS */
-	uint8_t drum_setup_xg[16] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };	/* for XG */
-
-public:
-	int parse_sysex_event_multi(const uint8_t *val, int32_t len, MidiEvent *evm, Instruments *instruments);
-	int parse_sysex_event(const uint8_t *val, int32_t len, MidiEvent *ev, Instruments *instruments);
-};
 
 void free_gauss_table(void);
 void set_playback_rate(int freq);

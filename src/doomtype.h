@@ -1,11 +1,20 @@
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//              Simple basic typedefs, isolated here to make it easier
-//               separating modules.
-//        
-//-----------------------------------------------------------------------------
-
+/*
+** doomtype.h
+**
+** Simple basic typedefs, isolated here to make it easier separating modules.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2008-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #ifndef __DOOMTYPE__
 #define __DOOMTYPE__

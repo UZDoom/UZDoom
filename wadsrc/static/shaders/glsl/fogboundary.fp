@@ -1,3 +1,20 @@
+/*
+** fogboundary.fp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2013-2016 Christoph Oelckers
+** Copyright 2019-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 layout(location=2) in vec4 pixelpos;
 layout(location=0) out vec4 FragColor;
 #ifdef GBUFFER_PASS

@@ -1,51 +1,40 @@
 /*
 ** i_soundfont.cpp
+**
 ** The sound font manager for the MIDI synths
 **
 **---------------------------------------------------------------------------
-** Copyright 2018 Christoph Oelckers
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 2009-2018 Christoph Oelckers
+** Copyright 2018-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
-#include <ctype.h>
 #include <assert.h>
-#include "i_soundfont.h"
-#include "i_soundinternal.h"
-#include "cmdlib.h"
-#include "i_system.h"
-#include "filereadermusicinterface.h"
 #include <zmusic.h>
+
+#include "cmdlib.h"
+#include "configfile.h"
+#include "filereadermusicinterface.h"
 #include "fs_filesystem.h"
-#include "version.h"
 #include "fs_findfile.h"
 #include "i_interface.h"
-#include "configfile.h"
+#include "i_soundfont.h"
 #include "printf.h"
+#include "version.h"
+
+#define SF_LOG(type, path) DPrintf(DMSG_SPAMMY, "SF." type ": %s\n", path);
 
 //==========================================================================
 //
@@ -338,7 +327,11 @@ void FSoundFontManager::ProcessOneFile(const char* fn)
 	for (auto &sfi : soundfonts)
 	{
 		// We already got a soundfont with this name. Do not add again.
-		if (!sfi.mName.CompareNoCase(fb)) return;
+		if (sfi.mName.CompareNoCase(fb) == 0)
+		{
+			SF_LOG("s", fn);
+			return;
+		}
 	}
 
 	FileReader fr;
@@ -349,21 +342,25 @@ void FSoundFontManager::ProcessOneFile(const char* fn)
 		fr.Read(head, 16);
 		if (!memcmp(head, "RIFF", 4) && !memcmp(head+8, "sfbkLIST", 8))
 		{
+			SF_LOG("riff", fn);
 			FSoundFontInfo sft = { fb, fbe, fn, SF_SF2 };
 			soundfonts.Push(sft);
 		}
 		if (!memcmp(head, "WOPL3-BANK\0", 11))
 		{
+			SF_LOG("wopl", fn);
 			FSoundFontInfo sft = { fb, fbe, fn, SF_WOPL };
 			soundfonts.Push(sft);
 		}
 		if (!memcmp(head, "WOPN2-BANK\0", 11) || !memcmp(head, "WOPN2-B2NK\0", 11))
 		{
+			SF_LOG("wopn", fn);
 			FSoundFontInfo sft = { fb, fbe, fn, SF_WOPN };
 			soundfonts.Push(sft);
 		}
 		else if (!memcmp(head, "PK", 2))
 		{
+			SF_LOG("zip", fn);
 			auto zip = FResourceFile::OpenResourceFile(fn, true);
 			if (zip != nullptr)
 			{
@@ -401,6 +398,8 @@ void FSoundFontManager::CollectSoundfonts()
 		{
 			if (stricmp (key, "Path") == 0)
 			{
+				SF_LOG("d", value);
+
 				FileSys::FileList list;
 
 				FString dir;
@@ -532,4 +531,4 @@ void I_InitSoundFonts()
 	sfmanager.CollectSoundfonts();
 }
 
-
+#undef SF_LOG

@@ -1,16 +1,24 @@
+/*
+** shadowinlines.h
+**
+** Handling of MF_SHADOW related code for attack and aiming functions.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2023-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 #include "actor.h"
 #include "r_defs.h"
 #include "m_random.h"
-
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//		Handling of MF_SHADOW related code for attack and aiming functions.
-//
-//-----------------------------------------------------------------------------
-
 
 // RNG VARIABLES ------------------------------------------------
 extern FRandom pr_spawnmissile;

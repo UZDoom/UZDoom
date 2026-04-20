@@ -1,53 +1,45 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1994-1996 Raven Software
-// Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-
+/*
+** d_player.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Finally, for odd reasons, the player input is buffered within
+** the player data struct, as commands per game tick.
+**
+** The player data structure depends on a number of other structs:
+** items (internal inventory), animation states (closely tied to
+** the sprites used to represent them, unfortunately).
+**
+** In addition, the player is just a special case of the generic
+** moving object/actor.
+*/
 
 #ifndef __D_PLAYER_H__
 #define __D_PLAYER_H__
 
-// Finally, for odd reasons, the player input
-// is buffered within the player data struct,
-// as commands per game tick.
-#include "d_protocol.h"
-#include "doomstat.h"
-
 #include "a_weapons.h"
-
-#include "d_netinf.h"
-
-// The player data structure depends on a number
-// of other structs: items (internal inventory),
-// animation states (closely tied to the sprites
-// used to represent them, unfortunately).
-#include "p_pspr.h"
-
-// In addition, the player is just a special
-// case of the generic moving object/actor.
 #include "actor.h"
-
-//Added by MC:
 #include "b_bot.h"
+#include "basics.h"
+#include "d_netinf.h"
+#include "d_protocol.h"
+#include "doomdef.h"
+#include "doomstat.h"
+#include "p_pspr.h"
 
 class player_t;
 
@@ -76,6 +68,8 @@ typedef TArray<std::tuple<PClass*, int, FPlayerColorSet>> ColorSetList;
 
 extern PainFlashList PainFlashes;
 extern ColorSetList ColorSets;
+
+EXTERN_CVAR(Bool, gl_enhanced_nightvision)
 
 FString GetPrintableDisplayName(PClassActor *cls);
 
@@ -149,6 +143,15 @@ enum
 	WF_USER4OK			= 1 << 11,
 };
 
+enum EFullbrightMode
+{
+	FBMODE_NONE,
+	FBMODE_DEFAULT,		// Use player preference for fullbright vs night vision.
+	FBMODE_FULLBRIGHT,
+	FBMODE_NIGHTVISION,
+	FBMODE_TORCH,
+};
+
 // The VM cannot deal with this as an invalid pointer because it performs a read barrier on every object pointer read.
 // This doesn't have to point to a valid weapon, though, because WP_NOCHANGE is never dereferenced, but it must point to a valid object
 // and the class descriptor just works fine for that.
@@ -190,9 +193,10 @@ struct userinfo_t : TMap<FName,FBaseCVar *>
 		}
 
 		float aim = *static_cast<FFloatCVar *>(*CheckKey(NAME_Autoaim));
-		if (aim > 35 || aim < 0)
+		float bound = (dmflags & DF_NO_FREELOOK)? 35: 70;
+		if (aim > bound || aim < 0)
 		{
-			return 35.;
+			return bound;
 		}
 		else
 		{
@@ -300,6 +304,18 @@ struct userinfo_t : TMap<FName,FBaseCVar *>
 void ReadUserInfo(FSerializer &arc, userinfo_t &info, FString &skin);
 void WriteUserInfo(FSerializer &arc, userinfo_t &info);
 
+struct FSafePosition
+{
+	sector_t* Sector = nullptr;
+	DVector3 Pos = {};
+	double Height = 0.0, MaxStepHeight = 0.0;
+	bool bValidPos = false;
+
+	void Update(AActor& mobj, bool force = false);
+	bool IsSafe(int tid) const;
+	FSerializer& Serialize(FSerializer& arc, const char* name);
+};
+
 //
 // Extended player object info: player_t
 //
@@ -309,7 +325,7 @@ public:
 	player_t() { angleOffsetTargets.Zero(); }
 	~player_t();
 	player_t &operator= (const player_t &p) = delete;
-	void CopyFrom(player_t &src, bool copyPSP);
+	void CopyFrom(player_t &src);
 
 	void Serialize(FSerializer &arc);
 	size_t PropagateMark();
@@ -385,6 +401,8 @@ public:
 	int			extralight = 0;				// so gun flashes light up areas
 	short		fixedcolormap = 0;			// can be set to REDCOLORMAP, etc.
 	short		fixedlightlevel = 0;
+	EFullbrightMode FullbrightMode = FBMODE_NONE;	// Allow manually specifying the fullbright mode.
+	bool		bForceFullbright = false;
 	int			morphTics = 0;				// player is a chicken/pig if > 0
 	PClassActor *MorphedPlayerClass = nullptr;		// [MH] (for SBARINFO) class # for this player instance when morphed
 	int			MorphStyle = 0;				// which effects to apply for this player instance when morphed
@@ -436,7 +454,7 @@ public:
 	DAngle ConversationNPCAngle = nullAngle;
 	bool ConversationFaceTalker = false;
 
-	DVector3 LastSafePos = {}; // Mark the last known safe location the player was standing.
+	FSafePosition LastSafePos = {}; // Mark the last known safe location the player was standing.
 
 	double GetDeltaViewHeight() const
 	{
@@ -459,6 +477,20 @@ public:
 			crouchviewdelta = 0;
 			viewheight = mo ? mo->FloatVar(NAME_ViewHeight) : 0;
 		}
+	}
+
+	EFullbrightMode GetFullbrightMode() const
+	{
+		EFullbrightMode mode = FullbrightMode;
+		if (mode == FBMODE_DEFAULT)
+			mode = gl_enhanced_nightvision ? FBMODE_NIGHTVISION : FBMODE_FULLBRIGHT;
+		return mode;
+	}
+
+	void SetFullbrightMode(EFullbrightMode mode, bool force)
+	{
+		FullbrightMode = mode;
+		bForceFullbright = force;
 	}
 	
 	int GetSpawnClass();

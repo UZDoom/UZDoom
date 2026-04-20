@@ -1,22 +1,23 @@
 /*
-**  Postprocessing framework
-**  Copyright (c) 2016-2020 Magnus Norddahl
+** gl_postprocess.cpp
 **
-**  This software is provided 'as-is', without any express or implied
-**  warranty.  In no event will the authors be held liable for any damages
-**  arising from the use of this software.
+** Postprocessing framework
 **
-**  Permission is granted to anyone to use this software for any purpose,
-**  including commercial applications, and to alter it and redistribute it
-**  freely, subject to the following restrictions:
+**---------------------------------------------------------------------------
 **
-**  1. The origin of this software must not be misrepresented; you must not
-**     claim that you wrote the original software. If you use this software
-**     in a product, an acknowledgment in the product documentation would be
-**     appreciated but is not required.
-**  2. Altered source versions must be plainly marked as such, and must not be
-**     misrepresented as being the original software.
-**  3. This notice may not be removed or altered from any source distribution.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2020 Magnus Norddahl
+**
+** SPDX-License-Identifier: Zlib
+**
+**---------------------------------------------------------------------------
+**
 */
 
 #include "gl_system.h"
@@ -36,6 +37,9 @@
 
 #include "hw_vrmodes.h"
 #include "v_draw.h"
+
+#include "i_time.h"
+#include "g_levellocals.h"
 
 extern bool vid_hdr_active;
 
@@ -58,6 +62,10 @@ void FGLRenderer::PostProcessScene(int fixedcm, float flash, const std::function
 	int sceneHeight = mBuffers->GetSceneHeight();
 
 	GLPPRenderState renderstate(mBuffers);
+
+	renderstate.TimeDelta = static_cast<float>(GetDeltaTime());
+	renderstate.Time = static_cast<float>(screen->FrameTime / 1000.0);
+	renderstate.TimeGame = static_cast<float>(primaryLevel->LocalWorldTimer / (double)GameTicRate);
 
 	hw_postprocess.Pass1(&renderstate, fixedcm, sceneWidth, sceneHeight);
 	mBuffers->BindCurrentFB();
@@ -193,15 +201,17 @@ void FGLRenderer::DrawPresentTexture(const IntRect &box, bool applyGamma)
 	{
 		mPresentShader->Uniforms->InvGamma = 1.0f;
 		mPresentShader->Uniforms->Contrast = 1.0f;
-		mPresentShader->Uniforms->Brightness = 0.0f;
 		mPresentShader->Uniforms->Saturation = 1.0f;
+		mPresentShader->Uniforms->BlackPoint = 0.0f;
+		mPresentShader->Uniforms->WhitePoint = 1.0f;
 	}
 	else
 	{
 		mPresentShader->Uniforms->InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		mPresentShader->Uniforms->Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
-		mPresentShader->Uniforms->Brightness = clamp<float>(vid_brightness, -0.8f, 0.8f);
 		mPresentShader->Uniforms->Saturation = clamp<float>(vid_saturation, -15.0f, 15.f);
+		mPresentShader->Uniforms->BlackPoint = clamp<float>(vid_i_blackpoint, 0.f, 1.f);
+		mPresentShader->Uniforms->WhitePoint = clamp<float>(vid_i_whitepoint, 0.f, 5.f);
 		mPresentShader->Uniforms->GrayFormula = static_cast<int>(gl_satformula);
 	}
 	if (vid_hdr_active && framebuffer->IsFullscreen())

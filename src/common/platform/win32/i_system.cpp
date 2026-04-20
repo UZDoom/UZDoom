@@ -1,46 +1,24 @@
 /*
 ** i_system.cpp
+**
 ** Timers, pre-console output, IWAD selection, and misc system routines.
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2009 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2007-2012 Skulltag Development Team
 ** Copyright 2007-2016 Zandronum Development Team
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
-** 4. Redistributions in any form must be accompanied by information on how to
-**    obtain complete source code for the software and any accompanying software
-**    that uses the software. The source code must either be included in the
-**    distribution or be available for no more than the cost of distribution plus
-**    a nominal fee, and must be freely redistributable under reasonable
-**    conditions. For an executable file, complete source code means the source
-**    code for all modules it contains. It does not include source code for
-**    modules or files that typically accompany the major components of the
-**    operating system on which the executable file runs.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: LicenseRef-Almost-Sleepycat
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -87,8 +65,9 @@
 #include "cmdlib.h"
 #include "i_interface.h"
 #include "i_mainwindow.h"
+#include "stringtable.h"
 
-#include "launcherwindow.h"
+#include "widgets/launcherwindow.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -845,3 +824,14 @@ void I_OpenShellFolder(const char* infolder)
 	}
 }
 
+FString FStringTable::GetSystemLocale()
+{
+	wchar_t LocaleName[LOCALE_NAME_MAX_LENGTH];
+
+	if (GetUserDefaultLocaleName(LocaleName, LOCALE_NAME_MAX_LENGTH) > 0)
+	{
+		return FString(LocaleName);
+	}
+
+	return "en-US";
+}

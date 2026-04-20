@@ -1,35 +1,23 @@
 /*
+** base_sysfb.cpp
+**
 **
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2003-2005 Tim Stump
 ** Copyright 2005-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -64,6 +52,19 @@ EXTERN_CVAR(Int, vid_defheight)
 
 FARG(0, "Debug", "Resets window position.", "",
 	"Resets the window position to the top-left corner of the screen.");
+
+CUSTOM_CVAR(Bool, vid_fsdwmhack, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
+{
+	setmodeneeded = true;
+}
+CUSTOM_CVAR(Int, vid_fsdwmhackalpha, 255, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self < 0)
+		self = 0;
+	else if (self > 255)
+		self = 255;
+}
+
 
 //==========================================================================
 //
@@ -311,8 +312,17 @@ void SystemBaseFrameBuffer::PositionWindow(bool fullscreen, bool initialcall)
 	style = WS_VISIBLE | WS_CLIPSIBLINGS;
 	exStyle = 0;
 
+	bool fsdwmhack = vid_fsdwmhack;
 	if (fullscreen)
-		style |= WS_POPUP;
+	{
+		if (!fsdwmhack)
+			style |= WS_POPUP;
+		else
+		{
+			style = WS_VISIBLE | WS_OVERLAPPED;
+			exStyle = WS_EX_LAYERED;
+		}
+	}
 	else
 	{
 		style |= WS_OVERLAPPEDWINDOW;
@@ -326,8 +336,15 @@ void SystemBaseFrameBuffer::PositionWindow(bool fullscreen, bool initialcall)
 	{
 		SetWindowPos(mainwindow.GetHandle(), 0, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED);
 		MoveWindow(mainwindow.GetHandle(), monRect.left, monRect.top, monRect.right-monRect.left, monRect.bottom-monRect.top, FALSE);
-
 		// And now, seriously, it IS in the right place. Promise.
+
+		if (fsdwmhack)
+		{
+			// this is only a test to make sure the DWM compositor is still working. If this breaks, blame Microsoft.
+			// they break things literally every 2 years, sometimes less.
+			BYTE opacity = vid_fsdwmhackalpha;
+			SetLayeredWindowAttributes(mainwindow.GetHandle(), 0, opacity, LWA_ALPHA);
+		}
 	}
 	else
 	{

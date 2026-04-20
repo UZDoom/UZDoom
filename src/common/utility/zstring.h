@@ -1,46 +1,39 @@
-#pragma once
 /*
 ** zstring.h
 **
+**
+**
 **---------------------------------------------------------------------------
-** Copyright 2005-2007 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 2005-2016 Marisa Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
+#pragma once
 
-#include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
 #include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 #include <string>
+
+#ifdef _WIN32
+#include <utf8.h>
+#endif
+
 #include "tarray.h"
-#include "utf8.h"
-#include "filesystem.h"
 
 #ifdef __GNUC__
 #define PRINTFISH(x) __attribute__((format(printf, 2, x)))
@@ -118,6 +111,9 @@ enum ELumpNum
 {
 };
 
+void ThrowStringBoundsException(int64_t index, size_t len);
+void ThrowStringBoundsException(uint64_t index, size_t len);
+
 class FString
 {
 public:
@@ -132,6 +128,7 @@ public:
 	FString (char oneChar);
 	FString(const TArray<char> & source) : FString(source.Data(), source.Size()) {}
 	FString(const TArray<uint8_t> & source) : FString((char*)source.Data(), source.Size()) {}
+
 	// This is intentionally #ifdef'd. The only code which needs this is parts of the Windows backend that receive Unicode text from the system.
 #ifdef _WIN32
 	explicit FString(const wchar_t *copyStr);
@@ -168,18 +165,40 @@ public:
 
 	TArrayView<uint8_t> GetTArrayView();
 
-	const char &operator[] (int index) const { return Chars[index]; }
+	const char &operator[] (int index) const
+	{
+		assert(index >= 0);
+		if(index < 0 || (unsigned)index >= Len()) ThrowStringBoundsException((int64_t)index, Len());
+		return Chars[index];
+	}
 #if defined(_WIN32) && !defined(_WIN64) && defined(_MSC_VER)
 	// Compiling 32-bit Windows source with MSVC: size_t is typedefed to an
 	// unsigned int with the 64-bit portability warning attribute, so the
 	// prototype cannot substitute unsigned int for size_t, or you get
 	// spurious warnings.
-	const char &operator[] (size_t index) const { return Chars[index]; }
+	const char &operator[] (size_t index) const
+	{
+		if(index >= Len()) ThrowStringBoundsException((uint64_t)index, Len());
+		return Chars[index];
+	}
 #else
-	const char &operator[] (unsigned int index) const { return Chars[index]; }
+	const char &operator[] (unsigned int index) const
+	{
+		if(index >= Len()) ThrowStringBoundsException((uint64_t)index, Len());
+		return Chars[index];
+	}
 #endif
-	const char &operator[] (unsigned long index) const { return Chars[index]; }
-	const char &operator[] (unsigned long long index) const { return Chars[index]; }
+	const char &operator[] (unsigned long index) const
+	{
+		if(index >= Len()) ThrowStringBoundsException((uint64_t)index, Len());
+		return Chars[index];
+	}
+
+	const char &operator[] (unsigned long long index) const
+	{
+		if(index >= Len()) ThrowStringBoundsException((uint64_t)index, Len());
+		return Chars[index];
+	}
 
 	FString &operator = (const FString &other);
 	FString &operator = (FString &&other) noexcept;

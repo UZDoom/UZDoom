@@ -1,27 +1,17 @@
-// 
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2000-2018 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
 /*
-** gl_drawinfo.cpp
+** hw_drawinfo.cpp
+**
 ** Basic scene draw info management class
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2000-2018 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
 **
 */
 
@@ -320,7 +310,7 @@ int HWDrawInfo::SetFullbrightFlags(player_t *player)
 		int cm = CM_DEFAULT;
 		if (cplayer->extralight == INT_MIN)
 		{
-			cm = CM_FIRSTSPECIALCOLORMAP + REALINVERSECOLORMAP;
+			cm = static_cast<int>(CM_FIRSTSPECIALCOLORMAP) + static_cast<int>(REALINVERSECOLORMAP);
 			Viewpoint.extralight = 0;
 			FullbrightFlags = Fullbright;
 			// This does never set stealth vision.
@@ -331,23 +321,20 @@ int HWDrawInfo::SetFullbrightFlags(player_t *player)
 			FullbrightFlags = Fullbright;
 			if (gl_enhanced_nv_stealth > 2) FullbrightFlags |= StealthVision;
 		}
-		else if (cplayer->fixedlightlevel != -1)
+		else if (cplayer->fixedlightlevel != -1 || cplayer->bForceFullbright)
 		{
-			auto torchtype = PClass::FindActor(NAME_PowerTorch);
-			auto litetype = PClass::FindActor(NAME_PowerLightAmp);
-			for (AActor *in = cplayer->mo->Inventory; in; in = in->Inventory)
+			EFullbrightMode fbmode = cplayer->GetFullbrightMode();
+			if (fbmode != FBMODE_NONE)
 			{
-				// Need special handling for light amplifiers 
-				if (in->IsKindOf(torchtype))
+				FullbrightFlags = Fullbright;
+				if (fbmode == FBMODE_TORCH)
 				{
-					FullbrightFlags = Fullbright;
-					if (gl_enhanced_nv_stealth > 1) FullbrightFlags |= StealthVision;
+					FullbrightFlags |= StealthVision * (gl_enhanced_nv_stealth > 1);
 				}
-				else if (in->IsKindOf(litetype))
+				else
 				{
-					FullbrightFlags = Fullbright;
-					if (gl_enhanced_nightvision) FullbrightFlags |= Nightvision;
-					if (gl_enhanced_nv_stealth > 0) FullbrightFlags |= StealthVision;
+					FullbrightFlags |= Nightvision * (fbmode == FBMODE_NIGHTVISION);
+					FullbrightFlags |= StealthVision * (gl_enhanced_nv_stealth > 0);
 				}
 			}
 		}

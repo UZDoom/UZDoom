@@ -1,3 +1,22 @@
+/*
+** powerups.zs
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 class PowerupGiver : Inventory
 {
 	
@@ -767,7 +786,7 @@ class PowerIronFeet : Powerup
 		Powerup.Mode "Normal";
 	}
 	
-	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags)
+	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (damageType == 'Drowning')
 		{
@@ -801,7 +820,7 @@ class PowerMask : PowerIronFeet
 		Inventory.Icon "I_MASK";
 	}
 	
-	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags)
+	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (damageType == 'Fire' || damageType == 'Drowning')
 		{
@@ -831,6 +850,13 @@ class PowerLightAmp : Powerup
 	Default
 	{
 		Powerup.Duration -120;
+	}
+
+	override void InitEffect()
+	{
+		Super.InitEffect();
+		if (Owner && Owner.player)
+			Owner.player.SetFullbrightMode(FBMODE_DEFAULT);
 	}
 	
 	//===========================================================================
@@ -866,9 +892,11 @@ class PowerLightAmp : Powerup
 	override void EndEffect ()
 	{
 		Super.EndEffect();
-		if (Owner != NULL && Owner.player != NULL && Owner.player.fixedcolormap < PlayerInfo.NUMCOLORMAPS)
+		if (Owner != NULL && Owner.player != NULL)
 		{
-			Owner.player.fixedlightlevel = -1;
+			Owner.player.SetFullbrightMode(FBMODE_NONE);
+			if (Owner.player.fixedcolormap < PlayerInfo.NUMCOLORMAPS)
+				Owner.player.fixedlightlevel = -1;
 		}
 	}
 	
@@ -883,6 +911,13 @@ class PowerLightAmp : Powerup
 class PowerTorch : PowerLightAmp
 {
 	int NewTorch, NewTorchDelta;
+
+	override void InitEffect()
+	{
+		Super.InitEffect();
+		if (Owner && Owner.player)
+			Owner.player.SetFullbrightMode(FBMODE_TORCH);
+	}
 	
 	override void DoEffect ()
 	{
@@ -923,6 +958,13 @@ class PowerTorch : PowerLightAmp
 				}
 			}
 		}
+	}
+
+	override void EndEffect()
+	{
+		Super.EndEffect();
+		if (Owner && Owner.player)
+			Owner.player.SetFullbrightMode(FBMODE_NONE);
 	}
 	
 }
@@ -1662,7 +1704,7 @@ class PowerDamage : Powerup
 	//
 	//===========================================================================
 
-	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags)
+	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (!passive && damage > 0)
 		{
@@ -1756,7 +1798,7 @@ class PowerProtection : Powerup
 	//
 	//===========================================================================
 
-	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags)
+	override void ModifyDamage(int damage, Name damageType, out int newdamage, bool passive, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (passive && damage > 0)
 		{

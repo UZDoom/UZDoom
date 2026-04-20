@@ -1,3 +1,19 @@
+/*
+** models_iqm.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2014-2016 Christoph Oelckers
+** Copyright 2022-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include "filesystem.h"
 #include "cmdlib.h"
@@ -682,104 +698,131 @@ ModelAnimFramePrecalculatedIQM IQMModel::CalculateFrameIQM(int frame1, int frame
 	return out;
 }
 
-const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time)
+template<bool useIn, bool useOut>
+const TArray<VSMatrix>* IQMModel::CalculateBonesIQMSpecialized(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time)
 {
 	const TArray<TRS>& animationFrames = animationData ? *animationData : TRSData;
 
 	TArray<VSMatrix>* outMatrix = out ? &out->positions_with_override : &boneData;
 
 	int numbones = Joints.SSize();
+
+	if (numbones <= 0 || animationFrames.Size() == 0) return nullptr;
+
 	outMatrix->Resize(numbones);
 
-	if(out)
+	assert(useOut == !!out);
+	assert(useIn == !!in);
+
+	if constexpr(useOut)
 	{
 		out->bones.Resize(numbones);
 		out->bones_with_override.Resize(numbones);
 		out->positions.Resize(numbones);
 	}
 
-	if(in && in->size() != Joints.Size()) in = nullptr;
+	frame1 = clamp(frame1, 0, (animationFrames.SSize() - 1) / numbones);
+	frame2 = clamp(frame2, 0, (animationFrames.SSize() - 1) / numbones);
 
-	if (numbones > 0 && animationFrames.Size() > 0)
+	unsigned int offset1 = frame1 * numbones;
+	unsigned int offset2 = frame2 * numbones;
+
+	unsigned int offset1_1 = frame1_prev * numbones;
+	unsigned int offset2_1 = frame2_prev * numbones;
+
+	float invt = 1.0f - inter;
+	float invt1 = 1.0f - inter1_prev;
+	float invt2 = 1.0f - inter2_prev;
+
+	constexpr const float swapYZ[16]
 	{
+		1.0f, 0.0f, 0.0f, 0.0f,
+		0.0f, 0.0f, 1.0f, 0.0f,
+		0.0f, 1.0f, 0.0f, 0.0f,
+		0.0f, 0.0f, 0.0f, 1.0f
+	};
 
-		frame1 = clamp(frame1, 0, (animationFrames.SSize() - 1) / numbones);
-		frame2 = clamp(frame2, 0, (animationFrames.SSize() - 1) / numbones);
+	for (int i = 0; i < numbones; i++)
+	{
+		TRS prev;
 
-		unsigned int offset1 = frame1 * numbones;
-		unsigned int offset2 = frame2 * numbones;
-
-		unsigned int offset1_1 = frame1_prev * numbones;
-		unsigned int offset2_1 = frame2_prev * numbones;
-
-		float invt = 1.0f - inter;
-		float invt1 = 1.0f - inter1_prev;
-		float invt2 = 1.0f - inter2_prev;
-
-		constexpr const float swapYZ[16]
+		if(precalculated)
 		{
-			1.0f, 0.0f, 0.0f, 0.0f,
-			0.0f, 0.0f, 1.0f, 0.0f,
-			0.0f, 1.0f, 0.0f, 0.0f,
-			0.0f, 0.0f, 0.0f, 1.0f
-		};
-
-		for (int i = 0; i < numbones; i++)
+			prev = precalculated->precalcBones[i];
+		}
+		else
 		{
-			TRS prev;
-
-			if(precalculated)
+			if(frame1 >= 0 && (frame1_prev >= 0 || inter1_prev < 0))
 			{
-				prev = precalculated->precalcBones[i];
+				prev = inter1_prev <= 0 ? animationFrames[offset1 + i] : InterpolateBone(animationFrames[offset1_1 + i], animationFrames[offset1 + i], inter1_prev, invt1);
 			}
-			else
-			{
-				if(frame1 >= 0 && (frame1_prev >= 0 || inter1_prev < 0))
-				{
-					prev = inter1_prev <= 0 ? animationFrames[offset1 + i] : InterpolateBone(animationFrames[offset1_1 + i], animationFrames[offset1 + i], inter1_prev, invt1);
-				}
-			}
+		}
 
-			TRS next;
+		TRS next;
 
-			if(frame2 >= 0 && (frame2_prev >= 0 || inter2_prev < 0))
-			{
-				next = inter2_prev <= 0 ? animationFrames[offset2 + i] : InterpolateBone(animationFrames[offset2_1 + i], animationFrames[offset2 + i], inter2_prev, invt2);
-			}
+		if(frame2 >= 0 && (frame2_prev >= 0 || inter2_prev < 0))
+		{
+			next = inter2_prev <= 0 ? animationFrames[offset2 + i] : InterpolateBone(animationFrames[offset2_1 + i], animationFrames[offset2 + i], inter2_prev, invt2);
+		}
 
-			TRS bone;
+		TRS bone;
 
-			if(frame1 >= 0 || inter < 0)
-			{
-				bone = inter < 0 ? animationFrames[offset1 + i] : InterpolateBone(prev, next , inter, invt);
-			}
+		if(frame1 >= 0 || inter < 0)
+		{
+			bone = inter < 0 ? animationFrames[offset1 + i] : InterpolateBone(prev, next , inter, invt);
+		}
 
-			if(out)
-			{
-				out->bones[i] = bone;
+		if constexpr(useOut)
+		{
+			out->bones[i] = bone;
 
-				if(in)
-				{
-					(*in)[i].Modify(bone, time);
-				}
-				
-				out->bones_with_override[i] = bone;
-			}
-			else if(in)
+			if constexpr(useIn)
 			{
 				(*in)[i].Modify(bone, time);
 			}
 
+			out->bones_with_override[i] = bone;
+		}
+		else if constexpr(useIn)
+		{
+			(*in)[i].Modify(bone, time);
+		}
+
+		VSMatrix m;
+		m.loadIdentity();
+		m.translate(bone.translation.X, bone.translation.Y, bone.translation.Z);
+		m.multQuaternion(bone.rotation);
+		m.scale(bone.scaling.X, bone.scaling.Y, bone.scaling.Z);
+
+		VSMatrix& result = (*outMatrix)[i];
+		if (Joints[i].Parent >= 0)
+		{
+			result = (*outMatrix)[Joints[i].Parent];
+			result.multMatrix(swapYZ);
+			result.multMatrix(baseframe[Joints[i].Parent]);
+			result.multMatrix(m);
+			result.multMatrix(inversebaseframe[i]);
+		}
+		else
+		{
+			result.loadMatrix(swapYZ);
+			result.multMatrix(m);
+			result.multMatrix(inversebaseframe[i]);
+		}
+		result.multMatrix(swapYZ);
+
+		if constexpr(useOut)
+		{
 			VSMatrix m;
 			m.loadIdentity();
-			m.translate(bone.translation.X, bone.translation.Y, bone.translation.Z);
-			m.multQuaternion(bone.rotation);
-			m.scale(bone.scaling.X, bone.scaling.Y, bone.scaling.Z);
+			m.translate(out->bones[i].translation.X, out->bones[i].translation.Y, out->bones[i].translation.Z);
+			m.multQuaternion(out->bones[i].rotation);
+			m.scale(out->bones[i].scaling.X, out->bones[i].scaling.Y, out->bones[i].scaling.Z);
 
-			VSMatrix& result = (*outMatrix)[i];
+			VSMatrix& result = out->positions[i];
 			if (Joints[i].Parent >= 0)
 			{
-				result = (*outMatrix)[Joints[i].Parent];
+				result = out->positions[Joints[i].Parent];
 				result.multMatrix(swapYZ);
 				result.multMatrix(baseframe[Joints[i].Parent]);
 				result.multMatrix(m);
@@ -792,19 +835,79 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, floa
 				result.multMatrix(inversebaseframe[i]);
 			}
 			result.multMatrix(swapYZ);
+		}
+	}
 
-			if(out)
+	return outMatrix;
+}
+
+const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, float inter, int frame1_prev, float inter1_prev, int frame2_prev, float inter2_prev, const ModelAnimFramePrecalculatedIQM* precalculated, const TArray<TRS>* animationData, TArray<BoneOverride> *in, BoneInfo *out, double time)
+{
+	if(in && in->size() != Joints.Size()) in = nullptr;
+
+	if(in && out)
+	{
+		return CalculateBonesIQMSpecialized<true, true>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
+	else if(in)
+	{
+		return CalculateBonesIQMSpecialized<true, false>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
+	else if(out)
+	{
+		return CalculateBonesIQMSpecialized<false, true>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
+	else
+	{
+		return CalculateBonesIQMSpecialized<false, false>(frame1, frame2, inter, frame1_prev, inter1_prev, frame2_prev, inter2_prev, precalculated, animationData, in, out, time);
+	}
+}
+
+const TArray<VSMatrix>* IQMModel::CalculateBonesOnlyOffsets(TArray<BoneOverride> *in, BoneInfo *out, double time)
+{
+	int numbones = Joints.SSize();
+
+	if(numbones <= 0) return nullptr;
+
+	constexpr const float swapYZ[16]
+	{
+		1.0f, 0.0f, 0.0f, 0.0f,
+		0.0f, 0.0f, 1.0f, 0.0f,
+		0.0f, 1.0f, 0.0f, 0.0f,
+		0.0f, 0.0f, 0.0f, 1.0f
+	};
+	
+	if(in)
+	{
+		if(out)
+		{
+			out->bones.Resize(numbones);
+			out->bones_with_override.Resize(numbones);
+			out->positions.Resize(numbones);
+			out->positions_with_override.Resize(numbones);
+
+			for (int i = 0; i < numbones; i++)
 			{
+				TRS bone;
+
+				out->bones[i] = {};
+
+				(*in)[i].Modify(bone, time);
+
+				out->bones_with_override[i] = bone;
+
+				out->positions[i].loadIdentity();
+				
 				VSMatrix m;
 				m.loadIdentity();
-				m.translate(out->bones[i].translation.X, out->bones[i].translation.Y, out->bones[i].translation.Z);
-				m.multQuaternion(out->bones[i].rotation);
-				m.scale(out->bones[i].scaling.X, out->bones[i].scaling.Y, out->bones[i].scaling.Z);
+				m.translate(bone.translation.X, bone.translation.Y, bone.translation.Z);
+				m.multQuaternion(bone.rotation);
+				m.scale(bone.scaling.X, bone.scaling.Y, bone.scaling.Z);
 
-				VSMatrix& result = out->positions[i];
+				VSMatrix& result = out->positions_with_override[i];
 				if (Joints[i].Parent >= 0)
 				{
-					result = out->positions[Joints[i].Parent];
+					result = out->positions_with_override[Joints[i].Parent];
 					result.multMatrix(swapYZ);
 					result.multMatrix(baseframe[Joints[i].Parent]);
 					result.multMatrix(m);
@@ -819,8 +922,68 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQM(int frame1, int frame2, floa
 				result.multMatrix(swapYZ);
 			}
 		}
+		else
+		{
+			boneData.Resize(numbones);
 
-		return &boneData;
+			for (int i = 0; i < numbones; i++)
+			{
+				TRS bone;
+
+				(*in)[i].Modify(bone, time);
+
+				VSMatrix m;
+				m.loadIdentity();
+				m.translate(bone.translation.X, bone.translation.Y, bone.translation.Z);
+				m.multQuaternion(bone.rotation);
+				m.scale(bone.scaling.X, bone.scaling.Y, bone.scaling.Z);
+
+				VSMatrix& result = boneData[i];
+				if (Joints[i].Parent >= 0)
+				{
+					result = boneData[Joints[i].Parent];
+					result.multMatrix(swapYZ);
+					result.multMatrix(baseframe[Joints[i].Parent]);
+					result.multMatrix(m);
+					result.multMatrix(inversebaseframe[i]);
+				}
+				else
+				{
+					result.loadMatrix(swapYZ);
+					result.multMatrix(m);
+					result.multMatrix(inversebaseframe[i]);
+				}
+				result.multMatrix(swapYZ);
+			}
+		}
 	}
-	return nullptr;
+	else
+	{
+		if(out)
+		{
+			out->bones.Resize(numbones);
+			out->bones_with_override.Resize(numbones);
+			out->positions.Resize(numbones);
+			out->positions_with_override.Resize(numbones);
+
+			for (int i = 0; i < numbones; i++)
+			{
+				out->bones[i] = {};
+				out->bones_with_override[i] = {};
+				out->positions[i].loadIdentity();
+				out->positions_with_override[i].loadIdentity();
+			}
+		}
+		else
+		{
+			boneData.Resize(numbones);
+
+			for (int i = 0; i < numbones; i++)
+			{
+				boneData[i].loadIdentity();
+			}
+		}
+	}
+
+	return &boneData;
 }

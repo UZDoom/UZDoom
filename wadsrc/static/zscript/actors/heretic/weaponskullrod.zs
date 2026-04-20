@@ -1,3 +1,23 @@
+/*
+** weaponskullrod.zs
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 // Skull (Horn) Rod ---------------------------------------------------------
 
 class SkullRod : HereticWeapon
@@ -339,7 +359,7 @@ class HornRodFX2 : Actor
 		double newz = mo.CurSector.NextHighestCeilingAt(mo.pos.x, mo.pos.y, mo.pos.z, mo.pos.z, FFCF_NOPORTALS) - mo.height;
 		mo.SetZ(newz);
 
-		if (multiplayer && target.player)
+		if (multiplayer && target && target.player)
 		{
 			mo.A_SetTranslation(translations[target.PlayerNumber()]);
 		}

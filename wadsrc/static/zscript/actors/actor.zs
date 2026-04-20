@@ -1,34 +1,23 @@
 /*
 ** actor.zs
 **
+**
+**
 **---------------------------------------------------------------------------
 **
-** Copyright 2010-2017 Christoph Oelckers
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2017 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
 **
 **---------------------------------------------------------------------------
 **
@@ -324,6 +313,9 @@ class Actor : Thinker native
 	native int PoisonDurationReceived;
 	native int PoisonPeriodReceived;
 	native Actor Poisoner;
+	native int MinRespawnTics;
+	native int RespawnDice;
+
 	native Inventory Inv;
 	native uint8 smokecounter;
 	native uint8 FriendPlayer;
@@ -481,6 +473,8 @@ class Actor : Thinker native
 	property ShadowPenaltyFactor: ShadowPenaltyFactor;
 	property AutomapOffsets : AutomapOffsets;
 	property LandingSpeed: LandingSpeed;
+	property MinRespawnTics: MinRespawnTics;
+	property RespawnDice: RespawnDice;
 
 	// need some definition work first
 	//FRenderStyle RenderStyle;
@@ -572,6 +566,8 @@ class Actor : Thinker native
 		RenderRequired 0;
 		FriendlySeeBlocks 10; // 10 (blocks) * 128 (one map unit block)
 		LandingSpeed -8; // landing speed from a jump with normal gravity (squats the player's view)
+		MinRespawnTics 0; //0 is default value defined in SKILLP_Respawn, negative is seconds
+		RespawnDice 4;
 	}
 
 	// Functions
@@ -620,8 +616,8 @@ class Actor : Thinker native
 	virtual native void BeginPlay();
 	virtual native void Activate(Actor activator);
 	virtual native void Deactivate(Actor activator);
-	virtual native int DoSpecialDamage (Actor target, int damage, Name damagetype);
-	virtual native int TakeSpecialDamage (Actor inflictor, Actor source, int damage, Name damagetype);
+	virtual native int DoSpecialDamage (Actor target, int damage, Name damagetype, int flags = 0, double angle = 0);
+	virtual native int TakeSpecialDamage (Actor inflictor, Actor source, int damage, Name damagetype, int flags = 0, double angle = 0);
 	virtual native void Die(Actor source, Actor inflictor, int dmgflags = 0, Name MeansOfDeath = 'none');
 	virtual native bool Slam(Actor victim);
 	virtual void Touch(Actor toucher) {}
@@ -684,7 +680,7 @@ class Actor : Thinker native
 	}
 
 	// Called after an Actor has been resurrected.
-	virtual void OnRevive() {}
+	version("4.15.1") virtual void OnRevive() {}
 
 	// Called when an actor is to be reflected by a disc of repulsion.
 	// Returns true to continue normal blast processing.
@@ -888,7 +884,7 @@ class Actor : Thinker native
 	native void SpawnTeleportFog(Vector3 pos, bool beforeTele, bool setTarget);
 	native Actor RoughMonsterSearch(int distance, bool onlyseekable = false, bool frontonly = false, double fov = 0);
 	native clearscope int ApplyDamageFactor(Name damagetype, int damage);
-	native int GetModifiedDamage(Name damagetype, int damage, bool passive, Actor inflictor = null, Actor source = null, int flags = 0);
+	native int GetModifiedDamage(Name damagetype, int damage, bool passive, Actor inflictor = null, Actor source = null, int flags = 0, double angle = 0.);
 	native bool CheckBossDeath();
 	native bool CheckFov(Actor target, double fov);
 
@@ -1768,7 +1764,7 @@ class Actor : Thinker native
 				A_StartSound("*grunt", CHAN_VOICE, CHANF_NORUMBLE);
 				grunted = true;
 			}
-			bool isliquid = (pos.Z <= floorz) && HitFloor ();
+			bool isliquid = (pos.Z <= floorz) && GetFloorTerrain().IsLiquid;
 			if (onmobj != NULL || !isliquid)
 			{
 				if (!grunted)
@@ -1823,7 +1819,7 @@ class Actor : Thinker native
 	{
 		if (!CVar.GetCVar("haptics_do_world").GetBool()) return;
 
-		bool isliquid = (pos.Z <= floorz) && HitFloor ();
+		bool isliquid = (pos.Z <= floorz) && GetFloorTerrain().IsLiquid;
 		if (onmobj != NULL || !isliquid)
 		{
 			Haptics.Rumble("*land");

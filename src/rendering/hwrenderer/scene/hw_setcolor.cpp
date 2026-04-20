@@ -1,27 +1,17 @@
-// 
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2000-2018 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
 /*
-** hw_renderstate.cpp
+** hw_setcolor.cpp
+**
 ** hardware independent part of render state.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2000-2018 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
 **
 */
 
@@ -62,9 +52,11 @@ void SetColor(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, in
 //
 //==========================================================================
 
+EXTERN_CVAR(Float, r_visibility)
+
 void SetShaderLight(FRenderState &state, FLevelLocals* Level, float level, float olight)
 {
-	const float MAXDIST = 256.f;
+	const float MAXDIST = (256.f) * (r_visibility / 8.0f);
 	const float THRESHOLD = 96.f;
 	const float FACTOR = 0.75f;
 

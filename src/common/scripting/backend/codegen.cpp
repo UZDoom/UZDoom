@@ -4,49 +4,33 @@
 ** Compiler backend / code generation for ZScript and DECORATE
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2008-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
-#include <stdlib.h>
+#include "basics.h"
 #include "cmdlib.h"
 #include "codegen.h"
-#include "sc_man.h"
-#include "v_text.h"
 #include "filesystem.h"
-#include "v_video.h"
-#include "utf8.h"
-#include "texturemanager.h"
 #include "m_random.h"
-#include "v_font.h"
 #include "palettecontainer.h"
-
+#include "printf.h"
+#include "sc_man.h"
+#include "texturemanager.h"
+#include "v_font.h"
 
 extern FRandom pr_exrandom;
 FMemArena FxAlloc(65536);
@@ -1942,6 +1926,14 @@ FxExpression *FxTypeCast::Resolve(FCompileContext &ctx)
 	else if (ValueType == TypeSpriteID && basex->IsInteger())
 	{
 		basex->ValueType = TypeSpriteID;
+		auto x = basex;
+		basex = nullptr;
+		delete this;
+		return x;
+	}
+	else if (ValueType == TypeTextureID && basex->IsInteger())
+	{
+		basex->ValueType = TypeTextureID;
 		auto x = basex;
 		basex = nullptr;
 		delete this;
@@ -6452,14 +6444,7 @@ FxFRandom::FxFRandom(FRandom *r, FxExpression *mi, FxExpression *ma, const FScri
 
 static double NativeFRandom(FRandom *rng, double min, double max)
 {
-	int random = (*rng)(0x40000000);
-	double frandom = random / double(0x40000000);
-
-	if (max < min)
-	{
-		std::swap(max, min);
-	}
-	return frandom * (max - min) + min;
+	return rng->RandomFloat(min, max);
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(DObject, BuiltinFRandom, NativeFRandom)
@@ -8572,13 +8557,30 @@ FxExpression *FxFunctionCall::Resolve(FCompileContext& ctx)
 		}
 	}
 
-	for (size_t i = 0; i < countof(FxFlops); ++i)
+	// [RaveYard] resolve expression ahead to differentiate between `floor(object)` and `floor(numeric)`
+	bool singleParamIsObject = false;
+	if (ArgList.size() == 1)
 	{
-		if (MethodName == FxFlops[i].Name)
+		ArgList[0] = ArgList[0]->Resolve(ctx);
+		if (ArgList[0] == nullptr)
 		{
-			FxExpression *x = new FxFlopFunctionCall(i, ArgList, ScriptPosition);
 			delete this;
-			return x->Resolve(ctx);
+			return nullptr;
+		}
+
+		singleParamIsObject = ArgList[0]->IsObject();
+	}
+
+	if (!singleParamIsObject)
+	{
+		for (size_t i = 0; i < countof(FxFlops); ++i)
+		{
+			if (MethodName == FxFlops[i].Name)
+			{
+				FxExpression *x = new FxFlopFunctionCall(i, ArgList, ScriptPosition);
+				delete this;
+				return x->Resolve(ctx);
+			}
 		}
 	}
 

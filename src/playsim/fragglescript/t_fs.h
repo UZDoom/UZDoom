@@ -1,8 +1,22 @@
+/*
+** t_fs.h
+**
+** global FS interface
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2005-2017 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #ifndef T_FS_H
 #define T_FS_H
-
-// global FS interface
 
 struct MapData;
 class AActor;

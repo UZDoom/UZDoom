@@ -1,56 +1,47 @@
 /*
 ** gameconfigfile.cpp
+**
 ** An .ini parser specifically for zdoom.ini
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2008 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2007-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OFf
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
 #include <stdio.h>
 
-#include "gameconfigfile.h"
+#include "c_bind.h"
 #include "c_cvars.h"
 #include "c_dispatch.h"
-#include "c_bind.h"
-#include "m_argv.h"
 #include "cmdlib.h"
-#include "version.h"
-#include "m_misc.h"
-#include "v_font.h"
-#include "a_pickups.h"
-#include "doomstat.h"
-#include "gi.h"
 #include "d_main.h"
-#include "v_video.h"
+#include "doomstat.h"
+#include "gameconfigfile.h"
+#include "gi.h"
+#include "i_specialpaths.h"
+#include "m_argv.h"
 #include "m_joy.h"
+#include "m_misc.h"
+#include "printf.h"
+#include "v_font.h"
+#include "v_video.h"
+#include "version.h"
+#include "zstring.h"
+
 #if !defined _MSC_VER && !defined __APPLE__
 #include "i_system.h"  // for SHARE_DIR
 #endif // !_MSC_VER && !__APPLE__
@@ -71,38 +62,114 @@ EXTERN_CVAR (Int, gl_texture_hqresizemult)
 EXTERN_CVAR (Int, vid_preferbackend)
 EXTERN_CVAR (Float, vid_scale_custompixelaspect)
 EXTERN_CVAR (Bool, vid_scale_linear)
-EXTERN_CVAR(Float, m_sensitivity_x)
-EXTERN_CVAR(Float, m_sensitivity_y)
-EXTERN_CVAR(Int, adl_volume_model)
-EXTERN_CVAR(Int, adl_chan_alloc)
-EXTERN_CVAR(Bool, adl_auto_arpeggio)
-EXTERN_CVAR(Int, opn_volume_model)
-EXTERN_CVAR(Int, opn_chan_alloc)
-EXTERN_CVAR(Bool, opn_auto_arpeggio)
+EXTERN_CVAR (Float, m_sensitivity_x)
+EXTERN_CVAR (Float, m_sensitivity_y)
+EXTERN_CVAR (Int, adl_volume_model)
+EXTERN_CVAR (Int, adl_chan_alloc)
+EXTERN_CVAR (Bool, adl_auto_arpeggio)
+EXTERN_CVAR (Int, opn_volume_model)
+EXTERN_CVAR (Int, opn_chan_alloc)
+EXTERN_CVAR (Bool, opn_auto_arpeggio)
 EXTERN_CVAR (Int, gl_texture_hqresize_targets)
-EXTERN_CVAR(Int, wipetype)
-EXTERN_CVAR(Bool, i_pauseinbackground)
-EXTERN_CVAR(Bool, i_soundinbackground)
+EXTERN_CVAR (Int, wipetype)
+EXTERN_CVAR (Bool, i_pauseinbackground)
+EXTERN_CVAR (Bool, i_soundinbackground)
+EXTERN_CVAR (Bool, i_is_new_release)
+EXTERN_CVAR (String, language)
 
 FARG(config, "Configuration", "Specifies an alternative configuration file to use.", "configfile",
 	"Causes " GAMENAME " to use an alternative configuration file. If configfile does not exist,"
 	" it will be created.");
 
 #ifdef _WIN32
-EXTERN_CVAR(Int, in_mouse)
+EXTERN_CVAR (Int, in_mouse)
 #endif
 
-FGameConfigFile::FGameConfigFile ()
+enum ResetBinds
 {
+	V226GamePad = 1 << 0,
+	V230Gamma = 1 << 1,
+};
+
+static TArray<FString> DefaultSearchPaths;
+
+static void CollectDefaultSearchPaths()
+{
+	if (DefaultSearchPaths.Size() > 0)
+	{
+		// already done
+		return;
+	}
+
 #ifdef __APPLE__
 	FString user_docs, user_app_support, local_app_support;
 	M_GetMacSearchDirectories(user_docs, user_app_support, local_app_support);
 #endif
 
+#if defined(__HAIKU__) || ( defined(__unix__) && !defined(__APPLE__) )
+
+#   ifdef __HAIKU__
+#       define DEFAULT_SHARE_DIR "/boot/system/data"
+#   else
+#       define DEFAULT_SHARE_DIR "/usr/local/share"
+#   endif
+
+	bool shareDirChanged = 0 != strcmp(SHARE_DIR, DEFAULT_SHARE_DIR);
+	FString dataDir = GetDataPath();
+
+#endif
+
+#ifdef __APPLE__
+
+	DefaultSearchPaths.Push(user_docs);
+	DefaultSearchPaths.Push(user_app_support);
+	DefaultSearchPaths.Push(local_app_support);
+	DefaultSearchPaths.Push("$PROGDIR");
+
+#elif !defined(__unix__) && !defined(__HAIKU__)
+
+	DefaultSearchPaths.Push("$HOME");
+	DefaultSearchPaths.Push("$PROGDIR");
+
+#else
+
+	static FString GameDirs[] = {
+		"/games/" GAMENAMELOWERCASE,
+		"/games/doom",
+		"/doom"
+	};
+
+	DefaultSearchPaths.Push("$PROGDIR");
+	for (unsigned int i = 0; i < std::size(GameDirs); i++)
+	{
+		DefaultSearchPaths.Push(dataDir + GameDirs[i]);
+		DefaultSearchPaths.Push(SHARE_DIR + GameDirs[i]);
+
+		if (shareDirChanged)
+		{
+			DefaultSearchPaths.Push(DEFAULT_SHARE_DIR + GameDirs[i]);
+		}
+
+#	ifdef __HAIKU__
+		DefaultSearchPaths.Push("$HOME/config/data" + GameDirs[i]);
+#	else
+		DefaultSearchPaths.Push("/usr/share" + GameDirs[i]);
+#	endif
+	}
+#endif
+
+#ifdef DEFAULT_SHARE_DIR
+#   undef DEFAULT_SHARE_DIR
+#endif
+}
+
+FGameConfigFile::FGameConfigFile ()
+{
 	FString pathname;
 
 	OkayToWrite = false;	// Do not allow saving of the config before DoKeySetup()
 	bModSetup = false;
+	bResetBindFlags = 0;
 	pathname = GetConfigPath (true);
 	ChangePathName (pathname.GetChars());
 	LoadConfigFile ();
@@ -113,96 +180,84 @@ FGameConfigFile::FGameConfigFile ()
 	pathname = GetConfigPath (false);
 	ChangePathName (pathname.GetChars());
 
+	CollectDefaultSearchPaths();
+
+	// LASTRUN < 227: convert GZDoom ini's by ensuring all
+	// system paths have the corresponding UZDoom version
+	// already present
+	double last = 0;
+	if (SetSection ("LastRun"))
+	{
+		const char *lastver = GetValueForKey ("Version");
+		if (lastver != NULL)
+		{
+			last = atof(lastver);
+		}
+	}
+
+	if (last < 227)
+	{
+		if (SetSection("IWADSearch.Directories"))
+		{
+			for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+			{
+				EnsureValueForKey ("Path", DefaultSearchPaths[i].GetChars());
+			}
+		}
+
+		if (SetSection("FileSearch.Directories"))
+		{
+			for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+			{
+				EnsureValueForKey ("Path", DefaultSearchPaths[i].GetChars());
+			}
+		}
+
+		if (SetSection("SoundfontSearch.Directories"))
+		{
+			for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+			{
+				EnsureValueForKey ("Path", (DefaultSearchPaths[i] + "/soundfonts").GetChars());
+				EnsureValueForKey ("Path", (DefaultSearchPaths[i] + "/fm_banks").GetChars());
+			}
+		}
+	}
+
 	// Set default IWAD search paths if none present
 	if (!SetSection ("IWADSearch.Directories"))
 	{
 		SetSection ("IWADSearch.Directories", true);
 		SetValueForKey ("Path", ".", true);
 		SetValueForKey ("Path", "$DOOMWADDIR", true);
-#ifdef __APPLE__
-		SetValueForKey ("Path", user_docs.GetChars(), true);
-		SetValueForKey ("Path", user_app_support.GetChars(), true);
-		SetValueForKey ("Path", "$PROGDIR", true);
-		SetValueForKey ("Path", local_app_support.GetChars(), true);
-#elif !defined(__unix__)
-		SetValueForKey ("Path", "$HOME", true);
-		SetValueForKey ("Path", "$PROGDIR", true);
-#else
-		SetValueForKey ("Path", "$HOME/" GAME_DIR, true);
-		SetValueForKey ("Path", "$HOME/.local/share/games/doom", true);
-		// Arch Linux likes them in /usr/share/doom
-		// Debian likes them in /usr/share/games/doom
-		// I assume other distributions don't do anything radically different
-		SetValueForKey ("Path", "/usr/local/share/doom", true);
-		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
-		SetValueForKey ("Path", "/usr/share/doom", true);
-		SetValueForKey ("Path", "/usr/share/games/doom", true);
-		SetValueForKey ("Path", SHARE_DIR "/doom", true);
-		SetValueForKey ("Path", SHARE_DIR "/games/doom", true);
-
-#endif
+		SetValueForKey ("PathList", "$DOOMWADPATH", true);
+		for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+		{
+			SetValueForKey ("Path", DefaultSearchPaths[i].GetChars(), true);
+		}
 	}
 
 	// Set default search paths if none present
 	if (!SetSection ("FileSearch.Directories"))
 	{
 		SetSection ("FileSearch.Directories", true);
-#ifdef __APPLE__
-		SetValueForKey ("Path", user_docs.GetChars(), true);
-		SetValueForKey ("Path", user_app_support.GetChars(), true);
-		SetValueForKey ("Path", "$PROGDIR", true);
-		SetValueForKey ("Path", local_app_support.GetChars(), true);
-#elif !defined(__unix__)
-		SetValueForKey ("Path", "$PROGDIR", true);
-#else
-		SetValueForKey ("Path", "$HOME/" GAME_DIR, true);
-		SetValueForKey ("Path", "$HOME/.local/share/games/doom", true);
-		SetValueForKey ("Path", SHARE_DIR, true);
-		SetValueForKey ("Path", SHARE_DIR "/doom", true);
-		SetValueForKey ("Path", SHARE_DIR "/games/doom", true);
-		SetValueForKey ("Path", "/usr/local/share/doom", true);
-		SetValueForKey ("Path", "/usr/local/share/games/doom", true);
-		SetValueForKey ("Path", "/usr/share/doom", true);
-		SetValueForKey ("Path", "/usr/share/games/doom", true);
-#endif
 		SetValueForKey ("Path", "$DOOMWADDIR", true);
+		SetValueForKey ("PathList", "$DOOMWADPATH", true);
+		for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+		{
+			SetValueForKey ("Path", DefaultSearchPaths[i].GetChars(), true);
+		}
 	}
 
 	// Set default search paths if none present
 	if (!SetSection("SoundfontSearch.Directories"))
 	{
 		SetSection("SoundfontSearch.Directories", true);
-#ifdef __APPLE__
-		SetValueForKey("Path", (user_docs + "/soundfonts").GetChars(), true);
-		SetValueForKey("Path", (user_docs + "/fm_banks").GetChars(), true);
-		SetValueForKey("Path", (user_app_support + "/soundfonts").GetChars(), true);
-		SetValueForKey("Path", (user_app_support + "/fm_banks").GetChars(), true);
-		SetValueForKey("Path", "$PROGDIR/soundfonts", true);
-		SetValueForKey("Path", "$PROGDIR/fm_banks", true);
-		SetValueForKey("Path", (local_app_support + "/soundfonts").GetChars(), true);
-		SetValueForKey("Path", (local_app_support + "/fm_banks").GetChars(), true);
-#elif !defined(__unix__)
-		SetValueForKey("Path", "$PROGDIR/soundfonts", true);
-		SetValueForKey("Path", "$PROGDIR/fm_banks", true);
-#else
-		SetValueForKey("Path", "$HOME/" GAME_DIR "/soundfonts", true);
-		SetValueForKey("Path", "$HOME/" GAME_DIR "/fm_banks", true);
-		SetValueForKey("Path", "$HOME/.local/share/games/doom/soundfonts", true);
-		SetValueForKey("Path", "$HOME/.local/share/games/doom/fm_banks", true);
-		SetValueForKey("Path", "/usr/local/share/doom/soundfonts", true);
-		SetValueForKey("Path", "/usr/local/share/doom/fm_banks", true);
-		SetValueForKey("Path", "/usr/local/share/games/doom/soundfonts", true);
-		SetValueForKey("Path", "/usr/local/share/games/doom/fm_banks", true);
-		SetValueForKey("Path", "/usr/share/doom/soundfonts", true);
-		SetValueForKey("Path", "/usr/share/doom/fm_banks", true);
-		SetValueForKey("Path", "/usr/share/games/doom/soundfonts", true);
-		SetValueForKey("Path", "/usr/share/games/doom/fm_banks", true);
-		SetValueForKey("Path", SHARE_DIR "/doom/soundfonts", true);
-		SetValueForKey("Path", SHARE_DIR "/doom/fm_banks", true);
-		SetValueForKey("Path", SHARE_DIR "/games/doom/soundfonts", true);
-		SetValueForKey("Path", SHARE_DIR "/games/doom/fm_banks", true);
-		SetValueForKey("Path", "/usr/share/soundfonts", true);
-#endif
+
+		for (unsigned int i = 0; i < DefaultSearchPaths.Size(); i++)
+		{
+			SetValueForKey ("Path", (DefaultSearchPaths[i] + "/soundfonts").GetChars(), true);
+			SetValueForKey ("Path", (DefaultSearchPaths[i] + "/fm_banks").GetChars(), true);
+		}
 	}
 
 	// Add some self-documentation.
@@ -328,17 +383,18 @@ void FGameConfigFile::DoGlobalSetup ()
 	}
 	if (SetSection ("LastRun"))
 	{
+		const char *lastRelease = GetValueForKey ("Release");
+		i_is_new_release = !lastRelease || strcmp(VERSIONSTR, lastRelease) != 0;
+
 		const char *lastver = GetValueForKey ("Version");
 		if (lastver != NULL)
 		{
+			FBaseCVar *var;
 			double last = atof (lastver);
 			if (last < 207)
 			{ // Now that snd_midiprecache works again, you probably don't want it on.
-				FBaseCVar *precache = FindCVar ("snd_midiprecache", NULL);
-				if (precache != NULL)
-				{
-					precache->ResetToDefault();
-				}
+				var = FindCVar ("snd_midiprecache", NULL);
+				if (var != NULL) var->ResetToDefault();
 			}
 			if (last < 208)
 			{ // Weapon sections are no longer used, so tidy up the config by deleting them.
@@ -350,7 +406,7 @@ void FGameConfigFile::DoGlobalSetup ()
 				while (more)
 				{
 					name = GetCurrentSection();
-					if (name != NULL && 
+					if (name != NULL &&
 						(namelen = strlen(name)) > 12 &&
 						strcmp(name + namelen - 12, ".WeaponSlots") == 0)
 					{
@@ -365,11 +421,8 @@ void FGameConfigFile::DoGlobalSetup ()
 			if (last < 209)
 			{
 				// menu dimming is now a gameinfo option so switch user override off
-				FBaseCVar *dim = FindCVar ("dimamount", NULL);
-				if (dim != NULL)
-				{
-					dim->ResetToDefault ();
-				}
+				var = FindCVar ("dimamount", NULL);
+				if (var != NULL) var->ResetToDefault ();
 			}
 			if (last < 210)
 			{
@@ -382,7 +435,7 @@ void FGameConfigFile::DoGlobalSetup ()
 			}
 			if (last < 213)
 			{
-				auto var = FindCVar("snd_channels", NULL);
+				var = FindCVar("snd_channels", NULL);
 				if (var != NULL)
 				{
 					// old settings were default 32, minimum 8, new settings are default 128, minimum 64.
@@ -392,7 +445,7 @@ void FGameConfigFile::DoGlobalSetup ()
 			}
 			if (last < 214)
 			{
-				FBaseCVar *var = FindCVar("hud_scale", NULL);
+				var = FindCVar("hud_scale", NULL);
 				if (var != NULL) var->ResetToDefault();
 				var = FindCVar("st_scale", NULL);
 				if (var != NULL) var->ResetToDefault();
@@ -408,12 +461,12 @@ void FGameConfigFile::DoGlobalSetup ()
 			if (last < 215)
 			{
 				// Previously a true/false boolean. Now an on/off/auto tri-state with auto as the default.
-				FBaseCVar *var = FindCVar("snd_hrtf", NULL);
+				var = FindCVar("snd_hrtf", NULL);
 				if (var != NULL) var->ResetToDefault();
 			}
 			if (last < 216)
 			{
-				FBaseCVar *var = FindCVar("gl_texture_hqresize", NULL);
+				var = FindCVar("gl_texture_hqresize", NULL);
 				if (var != NULL)
 				{
 					auto v = var->GetGenericRep(CVAR_Int);
@@ -500,11 +553,10 @@ void FGameConfigFile::DoGlobalSetup ()
 			}
 			if (last < 217)
 			{
-				auto var = FindCVar("vid_scalemode", NULL);
-				UCVarValue newvalue;
+				var = FindCVar("vid_scalemode", NULL);
 				if (var != NULL)
 				{
-					UCVarValue v = var->GetGenericRep(CVAR_Int);
+					UCVarValue v = var->GetGenericRep(CVAR_Int), newvalue;
 					if (v.Int == 3) // 640x400
 					{
 						newvalue.Int = 2;
@@ -521,7 +573,7 @@ void FGameConfigFile::DoGlobalSetup ()
 			{
 				// 2019-12-06 - polybackend merge
 				// migrate vid_enablevulkan to vid_preferbackend
-				auto var = FindCVar("vid_enablevulkan", NULL);
+				var = FindCVar("vid_enablevulkan", NULL);
 				if (var != NULL)
 				{
 					UCVarValue v = var->GetGenericRep(CVAR_Int);
@@ -538,10 +590,9 @@ void FGameConfigFile::DoGlobalSetup ()
 						vid_scale_custompixelaspect = 1.0f;
 				}
 				var = FindCVar("vid_scalemode", NULL);
-				UCVarValue newvalue;
 				if (var != NULL)
 				{
-					UCVarValue v = var->GetGenericRep(CVAR_Int);
+					UCVarValue v = var->GetGenericRep(CVAR_Int), newvalue;
 					switch (v.Int)
 					{
 					case 1:
@@ -560,7 +611,7 @@ void FGameConfigFile::DoGlobalSetup ()
 			}
 			if (last < 220)
 			{
-				auto var = FindCVar("Gamma", NULL);
+				var = FindCVar("Gamma", NULL);
 				if (var != NULL)
 				{
 					UCVarValue v = var->GetGenericRep(CVAR_Float);
@@ -581,7 +632,7 @@ void FGameConfigFile::DoGlobalSetup ()
 #else
 				double xfact = in_mouse == 1? 1.5 : 4, yfact = 1;
 #endif
-				auto var = FindCVar("m_noprescale", NULL);
+				var = FindCVar("m_noprescale", NULL);
 				if (var != NULL)
 				{
 					UCVarValue v = var->GetGenericRep(CVAR_Bool);
@@ -613,7 +664,7 @@ void FGameConfigFile::DoGlobalSetup ()
 			}
 			if (last < 222)
 			{
-				auto var = FindCVar("mod_dumb_mastervolume", NULL);
+				var = FindCVar("mod_dumb_mastervolume", NULL);
 				if (var != NULL)
 				{
 					UCVarValue v = var->GetGenericRep(CVAR_Float);
@@ -628,7 +679,8 @@ void FGameConfigFile::DoGlobalSetup ()
 			}
 			if (last < 224)
 			{
-				if (const auto var = FindCVar("m_sensitivity_x", NULL))
+				var = FindCVar("m_sensitivity_x", NULL);
+				if (var != NULL)
 				{
 					UCVarValue v = var->GetGenericRep(CVAR_Float);
 					v.Float *= 0.5f;
@@ -637,19 +689,31 @@ void FGameConfigFile::DoGlobalSetup ()
 			}
 			if (last < 225)
 			{
-				if (const auto var = FindCVar("gl_lightmode", NULL))
+				var = FindCVar("gl_lightmode", NULL);
+				if (var != NULL)
 				{
 					UCVarValue v = var->GetGenericRep(CVAR_Int);
 					v.Int = v.Int == 16 ? 2 : v.Int == 8 ? 1 : 0;
 					var->SetGenericRep(v, CVAR_Int);
 				}
 			}
-			if (last < 226)
+			if (last < 226 // GZDoom 4.14.2
+				|| last == 228) // UZDoom 4.14.3 (227 was used in a bunch of 5.0 dev builds)
 			{
 				// We can't handle key config yet, because
 				// the files aren't fully loaded. Just queue
 				// up a flag to do this later.
-				b226ResetGamepad = true;
+				bResetBindFlags |= V226GamePad;
+			}
+			if (last < 230) // UZDoom 5.0
+			{
+				// Reset brightness related settings, as the values all mean something different now
+				AddCommandString("vid_reset2defaults");
+				bResetBindFlags |= V230Gamma;
+			}
+			if (last < 231) // UZDoom 5.0
+			{
+				language = "auto";
 			}
 		}
 	}
@@ -663,7 +727,7 @@ void FGameConfigFile::DoGameSetup (const char *gamename)
 	sublen = countof(section) - 1 - mysnprintf (section, countof(section), "%s.", gamename);
 	subsection = section + countof(section) - sublen - 1;
 	section[countof(section) - 1] = '\0';
-	
+
 	strncpy (subsection, "UnknownConsoleVariables", sublen);
 	if (SetSection (section))
 	{
@@ -757,9 +821,9 @@ void FGameConfigFile::DoKeySetup(const char *gamename)
 		}
 	}
 
-	if (b226ResetGamepad == true)
+	if (bResetBindFlags & V226GamePad)
 	{
-		b226ResetGamepad = false;
+		bResetBindFlags -= V226GamePad;
 
 		// Multiple gamepad reworks were done during
 		// this version. There is not any particularly
@@ -783,6 +847,15 @@ void FGameConfigFile::DoKeySetup(const char *gamename)
 		}
 
 		C_SetDefaultBindings(&keys_to_reset);
+	}
+
+	if (bResetBindFlags & V230Gamma)
+	{
+		bResetBindFlags -= V230Gamma;
+
+		// swap binds
+		Bindings.UnbindACommand("bumpgamma");
+		Bindings.DefaultBind("F11", "bumplight");
 	}
 
 	OkayToWrite = true;
@@ -935,6 +1008,7 @@ void FGameConfigFile::ArchiveGlobalData ()
 	SetSection ("LastRun", true);
 	ClearCurrentSection ();
 	SetValueForKey ("Version", LASTRUNVERSION);
+	SetValueForKey ("Release", VERSIONSTR);
 
 	SetSection ("GlobalSettings", true);
 	ClearCurrentSection ();

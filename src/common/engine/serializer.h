@@ -1,17 +1,56 @@
+/*
+** serializer.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef __SERIALIZER_H
 #define __SERIALIZER_H
 
 #include <stdint.h>
 #include <type_traits>
+
+#include "bonecomponents.h"
+#include "dictionary.h"
+#include "fs_decompress.h"
+#include "name.h"
+#include "palentry.h"
 #include "tarray.h"
 #include "tflags.h"
 #include "vectors.h"
-#include "palentry.h"
-#include "name.h"
-#include "dictionary.h"
-#include "bonecomponents.h"
 
-extern bool save_full;
+#include "rapidjson/stringbuffer.h"
+
+struct FWriterBuffer {
+	rapidjson::StringBuffer buffer;
+	FWriterBuffer() : buffer(rapidjson::StringBuffer {}) {}
+	FWriterBuffer(rapidjson::StringBuffer buffer) : buffer(std::move(buffer)) {}
+};
+
+struct FReaderAllocator {
+	rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> buffer;
+	FReaderAllocator() : buffer({}) {}
+	FReaderAllocator(char* userBuffer, size_t len) : buffer({ userBuffer, len }) {}
+	FReaderAllocator(rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> buffer) : buffer(std::move(buffer)) {}
+	void Clear() { buffer.Clear(); }
+};
 
 struct FWriter;
 struct FReader;
@@ -66,7 +105,7 @@ struct FunctionPointerValue
 
 class FSerializer
 {
-
+	bool bPredictionBackup = false; // This serializer is currently storing rollback data and not save data.
 public:
 	FWriter *w = nullptr;
 	FReader *r = nullptr;
@@ -75,6 +114,7 @@ public:
 	unsigned ArraySize();
 	void WriteKey(const char *key);
 	void WriteObjects();
+	void WriteObjectsTo(TArray<TObjPtr<DObject*>>& to, TArray<DObject*>* fullSerialize = nullptr);
 
 private:
 	virtual void CloseReaderCustom() {}
@@ -85,11 +125,17 @@ public:
 		mErrors = 0;	// The destructor may not throw an exception so silence the error checker.
 		Close();
 	}
+	inline bool IsRollback() const { return bPredictionBackup; }
+	bool MarkRollbackObject(DObject* obj);
 	void SetUniqueSoundNames() { soundNamesAreUnique = true; }
-	bool OpenWriter(bool pretty = true);
-	bool OpenReader(const char *buffer, size_t length);
-	bool OpenReader(FileSys::FCompressedBuffer *input);
+	bool OpenWriter(bool pretty = true, bool predicting = false);
+	bool OpenWriter(FWriterBuffer buffer, bool pretty = true, bool predicting = false);
+	bool OpenReader(const char *buffer, size_t length, bool predicting = false);
+	bool OpenReader(FReaderAllocator allocator, const char *buffer, size_t length, bool predicting = false);
+	bool OpenReader(FileSys::FCompressedBuffer *input, bool predicting = false);
 	void Close();
+	FWriterBuffer CloseAndGetBuffer();
+	void ReadObjectsFrom(TArray<TObjPtr<DObject*>>& from);
 	void ReadObjects(bool hubtravel);
 	bool BeginObject(const char *name);
 	void EndObject();
@@ -100,8 +146,8 @@ public:
 	void EndArray();
 	unsigned GetSize(const char *group);
 	const char *GetKey();
-	const char *GetOutput(unsigned *len = nullptr);
-	FileSys::FCompressedBuffer GetCompressedOutput();
+	const char *GetOutput(unsigned *len = nullptr, TArray<TObjPtr<DObject*>>* objs = nullptr, TArray<DObject*>* fullSerialize = nullptr);
+	FileSys::FCompressedBuffer GetCompressedOutput(TArray<TObjPtr<DObject*>>* objs = nullptr, TArray<DObject*>* fullSerialize = nullptr);
 	// The sprite serializer is a special case because it is needed by the VM to handle its 'spriteid' type.
 	virtual FSerializer &Sprite(const char *key, int32_t &spritenum, int32_t *def);
 	// This is only needed by the type system.
@@ -127,6 +173,7 @@ public:
 	}
 
 	bool canSkip() const;
+	bool canWrite(DObject* obj) const;
 
 	template<class T>
 	FSerializer &operator()(const char *key, T &obj)
@@ -137,19 +184,19 @@ public:
 	template<class T>
 	FSerializer &operator()(const char *key, T &obj, T &def)
 	{
-		return Serialize(*this, key, obj, save_full? nullptr : &def);
+		return Serialize(*this, key, obj, &def);
 	}
 
 	template<class T>
 	FSerializer& operator()(const char* key, T& obj, T* def)
 	{
-		return Serialize(*this, key, obj, !def || save_full ? nullptr : def);
+		return Serialize(*this, key, obj, !def ? nullptr : def);
 	}
 
 	template<class T>
 	FSerializer &Array(const char *key, T *obj, int count, bool fullcompare = false)
 	{
-		if (!save_full && fullcompare && isWriting() && nullcmp(obj, count * sizeof(T)))
+		if (!IsRollback() && fullcompare && isWriting() && nullcmp(obj, count * sizeof(T)))
 		{
 			return *this;
 		}
@@ -173,7 +220,7 @@ public:
 	template<class T>
 	FSerializer &Array(const char *key, T *obj, T *def, int count, bool fullcompare = false)
 	{
-		if (!save_full && fullcompare && isWriting() && key != nullptr && def != nullptr && !memcmp(obj, def, count * sizeof(T)))
+		if (!IsRollback() && fullcompare && isWriting() && key != nullptr && def != nullptr && !memcmp(obj, def, count * sizeof(T)))
 		{
 			return *this;
 		}

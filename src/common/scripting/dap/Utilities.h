@@ -1,3 +1,25 @@
+/*
+** Utilities.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2025 nikitalita
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: MIT
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 #include <map>
@@ -122,25 +144,25 @@ template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void LogInternal(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NODAPEVENT | PRINT_NONOTIFY, "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(static_cast<PrintFlag>(PRINT_NODAPEVENT | PRINT_NONOTIFY), "%s\n", StringFormat(fmt, args...).c_str());
 }
 template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void LogInternalError(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NODAPEVENT | PRINT_NONOTIFY, TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(static_cast<PrintFlag>(PRINT_NODAPEVENT | PRINT_NONOTIFY), TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
 }
 template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void Log(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NONOTIFY, "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(PRINT_NONOTIFY, "%s\n", StringFormat(fmt, args...).c_str());
 }
 template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void LogError(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NONOTIFY, TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(PRINT_NONOTIFY, TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
 }
 
 #if defined(__GNUC__) || defined(__clang__)

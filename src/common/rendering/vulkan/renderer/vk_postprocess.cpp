@@ -1,22 +1,22 @@
 /*
-**  Vulkan backend
-**  Copyright (c) 2016-2020 Magnus Norddahl
+** vk_postprocess.cpp
 **
-**  This software is provided 'as-is', without any express or implied
-**  warranty.  In no event will the authors be held liable for any damages
-**  arising from the use of this software.
+** Vulkan backend
 **
-**  Permission is granted to anyone to use this software for any purpose,
-**  including commercial applications, and to alter it and redistribute it
-**  freely, subject to the following restrictions:
+**---------------------------------------------------------------------------
 **
-**  1. The origin of this software must not be misrepresented; you must not
-**     claim that you wrote the original software. If you use this software
-**     in a product, an acknowledgment in the product documentation would be
-**     appreciated but is not required.
-**  2. Altered source versions must be plainly marked as such, and must not be
-**     misrepresented as being the original software.
-**  3. This notice may not be removed or altered from any source distribution.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2020 Magnus Norddahl
+**
+** SPDX-License-Identifier: Zlib
+**
+**---------------------------------------------------------------------------
 **
 */
 
@@ -42,10 +42,19 @@
 #include "flatvertices.h"
 #include "r_videoscale.h"
 
+#include "i_time.h"
+#include "g_levellocals.h"
+
 EXTERN_CVAR(Int, gl_dither_bpc)
 
 VkPostprocess::VkPostprocess(VulkanRenderDevice* fb) : fb(fb)
 {
+	// Create buffer for automatic uniforms (12 bytes: 3 floats)
+	AutomaticUniformsBuffer = BufferBuilder()
+	.Size(16)  // 16 bytes (pad to alignment)
+	.Usage(VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VMA_MEMORY_USAGE_CPU_TO_GPU)
+	.DebugName("AutomaticUniformsBuffer")
+	.Create(fb->device.get());
 }
 
 VkPostprocess::~VkPostprocess()
@@ -70,6 +79,27 @@ void VkPostprocess::PostProcessScene(int fixedcm, float flash, const std::functi
 	int sceneHeight = fb->GetBuffers()->GetSceneHeight();
 
 	VkPPRenderState renderstate(fb);
+
+	renderstate.TimeDelta = static_cast<float>(GetDeltaTime());
+	renderstate.Time = static_cast<float>(fb->FrameTime / 1000.0);
+	renderstate.TimeGame = static_cast<float>(primaryLevel->LocalWorldTimer / (double)GameTicRate);
+
+	// Upload automatic uniforms to buffer
+	struct AutomaticUniforms {
+		float InputTimeDelta;
+		float InputTime;
+		float InputTimeGame;
+		float padding;  // Align to 16 bytes
+	} autoUniforms;
+
+	autoUniforms.InputTimeDelta = renderstate.TimeDelta;
+	autoUniforms.InputTime = renderstate.Time;
+	autoUniforms.InputTimeGame = renderstate.TimeGame;
+	autoUniforms.padding = 0.0f;
+
+	void* data = AutomaticUniformsBuffer->Map(0, sizeof(autoUniforms));
+	memcpy(data, &autoUniforms, sizeof(autoUniforms));
+	AutomaticUniformsBuffer->Unmap();
 
 	hw_postprocess.Pass1(&renderstate, fixedcm, sceneWidth, sceneHeight);
 	SetActiveRenderTarget();
@@ -182,6 +212,40 @@ void VkPostprocess::BlitCurrentToImage(VkTextureImage *dstimage, VkImageLayout f
 		.Execute(cmdbuffer);
 }
 
+void VkPostprocess::CopyCurrentToImage(VkTextureImage *dstimage, VkImageLayout finallayout)
+{
+	fb->GetRenderState()->EndRenderPass();
+
+	auto srcimage = &fb->GetBuffers()->PipelineImage[mCurrentPipelineImage];
+	auto cmdbuffer = fb->GetCommands()->GetDrawCommands();
+	if (srcimage->Image->width != dstimage->Image->width || srcimage->Image->height != dstimage->Image->height) return;
+
+	VkImageTransition()
+	.AddImage(srcimage, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, false)
+	.AddImage(dstimage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, true)
+	.Execute(cmdbuffer);
+
+	VkImageCopy region = {};
+	region.srcSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	region.srcSubresource.layerCount = 1;
+	region.dstSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	region.dstSubresource.layerCount = 1;
+	region.extent.width = srcimage->Image->width;
+	region.extent.height = srcimage->Image->height;
+	region.extent.depth = 1;
+
+	cmdbuffer->copyImage(
+		srcimage->Image->image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL,
+		dstimage->Image->image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+		1, &region
+	);
+
+	VkImageTransition()
+	.AddImage(srcimage, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, false)
+	.AddImage(dstimage, finallayout, false)
+	.Execute(cmdbuffer);
+}
+
 void VkPostprocess::DrawPresentTexture(const IntRect &box, bool applyGamma, bool screenshot)
 {
 	VkPPRenderState renderstate(fb);
@@ -194,17 +258,20 @@ void VkPostprocess::DrawPresentTexture(const IntRect &box, bool applyGamma, bool
 	{
 		uniforms.InvGamma = 1.0f;
 		uniforms.Contrast = 1.0f;
-		uniforms.Brightness = 0.0f;
 		uniforms.Saturation = 1.0f;
+		uniforms.BlackPoint = 0.0f;
+		uniforms.WhitePoint = 1.0f;
 	}
 	else
 	{
 		uniforms.InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		uniforms.Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
-		uniforms.Brightness = clamp<float>(vid_brightness, -0.8f, 0.8f);
 		uniforms.Saturation = clamp<float>(vid_saturation, -15.0f, 15.f);
+		uniforms.BlackPoint = clamp<float>(vid_i_blackpoint, 0.f, 1.f);
+		uniforms.WhitePoint = clamp<float>(vid_i_whitepoint, 0.f, 5.f);
 		uniforms.GrayFormula = static_cast<int>(gl_satformula);
 	}
+
 	uniforms.ColorScale = (gl_dither_bpc == -1) ? 255.0f : (float)((1 << gl_dither_bpc) - 1);
 
 	if (screenshot)

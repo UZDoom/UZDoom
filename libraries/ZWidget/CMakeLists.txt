@@ -7,14 +7,6 @@ if (UNIX AND NOT APPLE)
 	if (!DBUS_FOUND)
 		pkg_check_modules(DBUS REQUIRED dbus) # Fedora Linux looks for dbus instead
 	endif()
-	pkg_check_modules(WAYLANDPP
-		wayland-client
-		wayland-client++
-		wayland-client-extra++
-		wayland-client-unstable++
-		wayland-cursor++
-		xkbcommon>=0.5.0
-	)
 endif()
 
 # SDL2 finding stuff
@@ -99,8 +91,6 @@ set(ZWIDGET_INCLUDES
 	include/zwidget/widgets/listview/listview.h
 	include/zwidget/widgets/tabwidget/tabwidget.h
 	include/zwidget/window/window.h
-	include/zwidget/window/x11nativehandle.h
-	include/zwidget/window/waylandnativehandle.h
 	include/zwidget/window/win32nativehandle.h
 	include/zwidget/window/sdl2nativehandle.h
 	include/zwidget/systemdialogs/open_folder_dialog.h
@@ -141,28 +131,6 @@ set(ZWIDGET_SDL2_SOURCES
 	src/window/sdl2/sdl2_display_window.h
 )
 
-set(ZWIDGET_X11_SOURCES
-	src/window/x11/x11_display_backend.cpp
-	src/window/x11/x11_display_backend.h
-	src/window/x11/x11_display_window.cpp
-	src/window/x11/x11_display_window.h
-	src/window/x11/x11_connection.cpp
-	src/window/x11/x11_connection.h
-)
-
-set(ZWIDGET_WAYLAND_SOURCES
-	src/window/wayland/wayland_display_backend.cpp
-	src/window/wayland/wayland_display_backend.h
-	src/window/wayland/wayland_display_window.cpp
-	src/window/wayland/wayland_display_window.h
-	src/window/wayland/wl_fractional_scaling_protocol.cpp
-	src/window/wayland/wl_fractional_scaling_protocol.hpp
-	src/window/wayland/wl_cursor_shape.cpp
-	src/window/wayland/wl_cursor_shape.hpp
-	src/window/wayland/wl_xdg_toplevel_icon.cpp
-	src/window/wayland/wl_xdg_toplevel_icon.hpp
-)
-
 source_group("src" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/.+")
 source_group("src\\core" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/core/.+")
 source_group("src\\core\\picopng" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/core/picopng/.+")
@@ -186,8 +154,6 @@ source_group("src\\window" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/w
 source_group("src\\window\\stub" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/window/stub/.+")
 source_group("src\\window\\win32" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/window/win32/.+")
 source_group("src\\window\\sdl2" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/window/sdl2/.+")
-source_group("src\\window\\x11" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/window/x11/.+")
-source_group("src\\window\\wayland" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/window/wayland/.+")
 source_group("src\\window\\dbus" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/window/dbus/.+")
 source_group("src\\systemdialogs" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/systemdialogs/.+")
 source_group("include" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/zwidget/.+")
@@ -240,9 +206,7 @@ elseif(APPLE)
 	set(ZWIDGET_DEFINES -DUNIX -D_UNIX)
 	set(ZWIDGET_LINK_OPTIONS -pthread)
 else()
-	set(ZWIDGET_SOURCES ${ZWIDGET_SOURCES} ${ZWIDGET_X11_SOURCES})
-	set(ZWIDGET_LIBS ${CMAKE_DL_LIBS} -lX11 -lXi)
-	set(ZWIDGET_DEFINES -DUNIX -D_UNIX -DUSE_X11)
+	set(ZWIDGET_DEFINES -DUNIX -D_UNIX)
 	set(ZWIDGET_LINK_OPTIONS -pthread)
 	if (DBUS_FOUND)
 		include_directories("/usr/lib64/dbus-1.0/include") # Bazzite (and probably Fedora 42) keeps the platform-specific dbus headers in this folder
@@ -250,12 +214,6 @@ else()
 		set(ZWIDGET_INCLUDE_DIRS ${ZWIDGET_INCLUDE_DIRS} ${DBUS_INCLUDE_DIRS})
 		set(ZWIDGET_LIBS ${ZWIDGET_LIBS} ${DBUS_LDFLAGS})
 		set(ZWIDGET_DEFINES ${ZWIDGET_DEFINES} -DUSE_DBUS)
-	endif()
-	if (WAYLANDPP_FOUND)
-		set(ZWIDGET_SOURCES ${ZWIDGET_SOURCES} ${ZWIDGET_WAYLAND_SOURCES})
-		set(ZWIDGET_INCLUDE_DIRS ${ZWIDGET_INCLUDE_DIRS} ${WAYLANDPP_INCLUDE_DIRS})
-		set(ZWIDGET_LIBS ${ZWIDGET_LIBS} ${WAYLANDPP_LDFLAGS})
-		set(ZWIDGET_DEFINES ${ZWIDGET_DEFINES} -DUSE_WAYLAND)
 	endif()
 endif()
 

@@ -150,7 +150,7 @@ public:
 class DisplayWindow
 {
 public:
-	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI);
+	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable);
 
 	static void ProcessEvents();
 	static void RunLoop();
@@ -168,6 +168,7 @@ public:
 	virtual void SetWindowFrame(const Rect& box) = 0;
 	virtual void SetClientFrame(const Rect& box) = 0;
 	virtual void Show() = 0;
+	virtual void Restore() = 0;
 	virtual void ShowFullscreen() = 0;
 	virtual void ShowMaximized() = 0;
 	virtual void ShowMinimized() = 0;
@@ -217,8 +218,6 @@ public:
 
 	static std::unique_ptr<DisplayBackend> TryCreateWin32();
 	static std::unique_ptr<DisplayBackend> TryCreateSDL2();
-	static std::unique_ptr<DisplayBackend> TryCreateX11();
-	static std::unique_ptr<DisplayBackend> TryCreateWayland();
 
 	static std::unique_ptr<DisplayBackend> TryCreateBackend();
 
@@ -226,10 +225,8 @@ public:
 
 	virtual bool IsWin32() { return false; }
 	virtual bool IsSDL2() { return false; }
-	virtual bool IsX11() { return false; }
-	virtual bool IsWayland() { return false; }
 
-	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI) = 0;
+	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable) = 0;
 	virtual void ProcessEvents() = 0;
 	virtual void RunLoop() = 0;
 	virtual void ExitLoop() = 0;

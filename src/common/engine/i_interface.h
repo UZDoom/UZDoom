@@ -1,3 +1,19 @@
+/*
+** i_interface.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2020-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 #include "zstring.h"
@@ -52,6 +68,7 @@ struct SystemCallbacks
 	FConfigFile* (*GetConfig)();
 	bool (*WantEscape)();
 	FTranslationID(*RemapTranslation)(FTranslationID trans);
+	bool (*DisableAnisotropicFiltering)();
 };
 
 extern SystemCallbacks sysCallbacks;
@@ -71,6 +88,7 @@ struct FStartupSelectionInfo
 	int DefaultIWAD = 0;
 	FString DefaultArgs = {};
 	bool bSaveArgs = true;
+	bool isNewRelease = true;
 
 	// Settings
 	int DefaultStartFlags = 0;
@@ -78,6 +96,8 @@ struct FStartupSelectionInfo
 	FString DefaultLanguage = "auto";
 	int DefaultBackend = 1;
 	bool DefaultFullscreen = true;
+	int DefaultFileLoadBehaviour = 0;
+	bool notifyNewRelease = true;
 
 	// Net game info
 	int DefaultNetIWAD = 0;
@@ -94,7 +114,6 @@ struct FStartupSelectionInfo
 	int DefaultNetHostPort = 0;
 	int DefaultNetTicDup = 0;
 	bool DefaultNetExtraTic = false;
-	int DefaultNetMode = 0;
 	int DefaultNetGameMode = 0;
 	bool DefaultNetAltDM = false;
 

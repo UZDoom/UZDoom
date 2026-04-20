@@ -1,3 +1,21 @@
+/*
+** statscreen_coop.zs
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 class CoopStatusScreen : StatusScreen
 {
@@ -301,7 +319,7 @@ class CoopStatusScreen : StatusScreen
 			if (ScreenJobRunner.IsPlayerReady(i)) // Bots are automatically assumed ready, to prevent confusion
 				screen.DrawTexture(readyico, true, x - (readysize.Y * CleanXfac), y, DTA_CleanNoMove, true);
 
-			Color thiscolor = GetRowColor(player, i == consoleplayer);
+			int thiscolor = GetRowColor(player, i == consoleplayer);
 			if (player.mo.ScoreIcon.isValid())
 			{
 				screen.DrawTexture(player.mo.ScoreIcon, true, icon_x, y, DTA_CleanNoMove, true);

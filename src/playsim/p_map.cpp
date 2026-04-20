@@ -1,59 +1,26 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1994-1996 Raven Software
-// Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2017 Christoph Oelckers
-// Copyright 2017-2025 GZDoom Maintainers and Contributors
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//		Movement, collision handling.
-//		Shooting and aiming.
-//
-//-----------------------------------------------------------------------------
-
-/* For code that originates from ZDoom the following applies:
+/*
+** p_map.cpp
+**
+** Movement, collision handling; Shooting and aiming.
 **
 **---------------------------------------------------------------------------
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2017 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** For code that originates from ZDoom the following applies:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -98,6 +65,7 @@
 CVAR(Bool, cl_bloodsplats, true, CVAR_ARCHIVE)
 CVAR(Int, sv_smartaim, 0, CVAR_ARCHIVE | CVAR_SERVERINFO)
 CVAR(Bool, cl_doautoaim, false, CVAR_ARCHIVE)
+CVAR(Bool, sv_autocompat, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_SERVERINFO)
 
 static void CheckForPushSpecial(line_t *line, int side, AActor *mobj, DVector2 * posforwindowcheck = NULL);
 static void SpawnShootDecal(AActor *t1, AActor *defaults, const FTraceResults &trace);
@@ -1545,7 +1513,7 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 	if (tm.thing->flags & MF_SKULLFLY)
 	{
 		bool res = tm.thing->CallSlam(tm.thing->BlockingMobj.ForceGet());
-		tm.thing->BlockingMobj = NULL;
+		tm.thing->BlockingMobj = nullptr;
 		return res;
 	}
 
@@ -1616,7 +1584,7 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 		{
 			clipheight = thing->projectilepassheight;
 		}
-		else if (thing->projectilepassheight < 0 && (thing->Level->i_compatflags & COMPATF_MISSILECLIP))
+		else if (thing->projectilepassheight < 0 && thing->Level->MissileShouldClip())
 		{
 			clipheight = -thing->projectilepassheight;
 		}
@@ -1725,8 +1693,8 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 			{
 				IFVIRTUALPTR(tm.thing, AActor, PlayerPushedSomethingMakeRumble)
 				{
-					VMValue params[1] = { thing };
-					VMCall(func, params, 1, nullptr, 0);
+					VMValue params[2] = { tm.thing, thing };
+					VMCall(func, params, 2, nullptr, 0);
 				}
 			}
 			else if (thing == players[consoleplayer].mo || thing == players[consoleplayer].camera)
@@ -1884,7 +1852,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 		return true;
 
 	// Check things first, possibly picking things up.
-	thing->BlockingMobj = NULL;
+	thing->BlockingMobj = nullptr;
 	thingblocker = NULL;
 	if (thing->player)
 	{ // [RH] Fake taller height to catch stepping up into things.
@@ -1924,7 +1892,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 					{
 						thingblocker = BlockingMobj;
 					}
-					thing->BlockingMobj = NULL;
+					thing->BlockingMobj = nullptr;
 				}
 				else if (thing->player &&
 					thing->Top() - BlockingMobj->Z() <= thing->MaxStepHeight)
@@ -1937,7 +1905,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 					}
 					// Nothing is blocking us, but this actor potentially could
 					// if there is something else to step on.
-					thing->BlockingMobj = NULL;
+					thing->BlockingMobj = nullptr;
 				}
 				else
 				{ // Definitely blocking
@@ -1965,7 +1933,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 	spechit.Clear();
 	portalhit.Clear();
 
-	thing->BlockingMobj = NULL;
+	thing->BlockingMobj = nullptr;
 	thing->Height = realHeight;
 	if (actorsonly || (thing->flags & MF_NOCLIP))
 		return (thing->BlockingMobj = thingblocker) == NULL;
@@ -2203,7 +2171,7 @@ int P_TestMobjZ(AActor *actor, bool quick, AActor **pOnmobj)
 			{
 				clipheight = thing->projectilepassheight;
 			}
-			else if (thing->projectilepassheight < 0 && (thing->Level->i_compatflags & COMPATF_MISSILECLIP))
+			else if (thing->projectilepassheight < 0 && thing->Level->MissileShouldClip())
 			{
 				clipheight = -thing->projectilepassheight;
 			}
@@ -4578,7 +4546,8 @@ DAngle P_AimLineAttack(AActor *t1, DAngle angle, double distance, FTranslatedLin
 				// vrange of 0 degrees, because then toppitch and bottompitch will
 				// be equal, and PTR_AimTraverse will never find anything to shoot at
 				// if it crosses a line.
-				vrange = DAngle::fromDeg(clamp(t1->player->userinfo.GetAimDist(), 0.5, 35.));
+				double bound = (dmflags & DF_NO_FREELOOK)? 35: 70;
+				vrange = DAngle::fromDeg(clamp(t1->player->userinfo.GetAimDist(), 0.5, bound));
 			}
 		}
 	}
@@ -6324,7 +6293,7 @@ int P_RadiusAttack(AActor *bombspot, AActor *bombsource, int bombdamage, double 
 			!(flags & RADF_OLDRADIUSDAMAGE) && !(thing->Level->i_compatflags2 & COMPATF2_EXPLODE2)))
 		{
 			double points = GetRadiusDamage(false, bombspot, thing, bombdamage, bombdistance, fulldamagedistance, bombsource == thing,!!(flags & RADF_CIRCULAR));
-			double check = int(points) * bombdamage;
+			double check = double(int(points)) * bombdamage;
 			// points and bombdamage should be the same sign (the double cast of 'points' is needed to prevent overflows and incorrect values slipping through.)
 			if ((check > 0 || (check == 0 && bombspot->flags7 & MF7_FORCEZERORADIUSDMG)) && P_CheckSight(thing, bombspot, SF_IGNOREVISIBILITY | SF_IGNOREWATERBOUNDARY))
 			{ // OK to damage; target is in direct path

@@ -1,35 +1,24 @@
 /*
 ** filesystem.cpp
 **
+**
+**
 **---------------------------------------------------------------------------
-** Copyright 1998-2009 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2005-2020 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
-**
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 **---------------------------------------------------------------------------
 **
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
 **
 */
 
@@ -234,11 +223,12 @@ void FileSystem::DeleteAll ()
 
 bool FileSystem::InitSingleFile(const char* filename, FileSystemMessageFunc Printf)
 {
-	std::vector<std::string> filenames = { filename };
+	std::string f = filename;
+	std::vector<ResourceName> filenames = { { f, false } };
 	return InitMultipleFiles(filenames, nullptr, Printf);
 }
 
-bool FileSystem::InitMultipleFiles (std::vector<std::string>& filenames, LumpFilterInfo* filter, FileSystemMessageFunc Printf, bool allowduplicates)
+bool FileSystem::InitMultipleFiles (std::vector<ResourceName>& filenames, LumpFilterInfo* filter, FileSystemMessageFunc Printf, bool allowduplicates)
 {
 	int numfiles;
 
@@ -258,7 +248,7 @@ bool FileSystem::InitMultipleFiles (std::vector<std::string>& filenames, LumpFil
 		{
 			for (size_t j=i+1;j<filenames.size(); j++)
 			{
-				if (filenames[i] == filenames[j])
+				if (filenames[i].Name == filenames[j].Name)
 				{
 					filenames.erase(filenames.begin() + j);
 					j--;
@@ -269,7 +259,7 @@ bool FileSystem::InitMultipleFiles (std::vector<std::string>& filenames, LumpFil
 
 	for(size_t i=0;i<filenames.size(); i++)
 	{
-		AddFile(filenames[i].c_str(), nullptr, filter, Printf);
+		AddFile(filenames[i].Name.c_str(), nullptr, filter, Printf, filenames[i].bOptional);
 
 		if (i == (unsigned)MaxIwadIndex) MoveLumpsInFolder("after_iwad/");
 		std::string path = "filter/%s";
@@ -327,7 +317,7 @@ int FileSystem::AddFromBuffer(const char* name, char* data, int size, int id, in
 // [RH] Removed reload hack
 //==========================================================================
 
-void FileSystem::AddFile (const char *filename, FileReader *filer, LumpFilterInfo* filter, FileSystemMessageFunc Printf)
+void FileSystem::AddFile (const char *filename, FileReader *filer, LumpFilterInfo* filter, FileSystemMessageFunc Printf, bool optional)
 {
 	int startlump;
 	bool isdir = false;
@@ -367,9 +357,9 @@ void FileSystem::AddFile (const char *filename, FileReader *filer, LumpFilterInf
 
 
 	if (!isdir)
-		resfile = FResourceFile::OpenResourceFile(filename, filereader, false, filter, Printf, stringpool);
+		resfile = FResourceFile::OpenResourceFile(filename, filereader, false, filter, Printf, stringpool, optional);
 	else
-		resfile = FResourceFile::OpenDirectory(filename, filter, Printf, stringpool);
+		resfile = FResourceFile::OpenDirectory(filename, filter, Printf, stringpool, optional);
 
 	if (resfile != NULL)
 	{
@@ -396,7 +386,7 @@ void FileSystem::AddFile (const char *filename, FileReader *filer, LumpFilterInf
 				path += ':';
 				path += resfile->getName(i);
 				auto embedded = resfile->GetEntryReader(i, READER_CACHED);
-				AddFile(path.c_str(), &embedded, filter, Printf);
+				AddFile(path.c_str(), &embedded, filter, Printf, optional);
 			}
 		}
 
@@ -1157,6 +1147,20 @@ const char *FileSystem::GetResourceType(int lump) const
 		if (strchr(p, '/')) return "";	// the '.' is part of a directory.
 		return p + 1;
 	}
+}
+
+//==========================================================================
+//
+// GetResourceHash
+//
+//==========================================================================
+
+const char* FileSystem::GetResourceHash(int wadNum) const
+{
+	if ((size_t)wadNum >= Files.size())
+		return nullptr;
+
+	return Files[wadNum]->GetHash();
 }
 
 //==========================================================================

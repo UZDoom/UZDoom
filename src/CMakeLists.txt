@@ -56,21 +56,28 @@ if( WIN32 )
 	add_definitions( -D_WIN32 )
 
 	set( PROJECT_LIBRARIES
-		psapi
-		wsock32
-		winmm
-		dinput8
 		Xinput
-		ole32
-		user32
-		gdi32
+		advapi32
 		comctl32
 		comdlg32
-		ws2_32
-		setupapi
-		oleaut32
 		dbghelp
-		legacy_stdio_definitions )
+		dinput8
+		dwmapi
+		dxguid
+		gdi32
+		ole32
+		oleaut32
+		psapi
+		setupapi
+		user32
+		winmm
+		ws2_32
+		wsock32
+	)
+
+	if(MSVC)
+		list(APPEND PROJECT_LIBRARIES legacy_stdio_definitions)
+	endif()
 
 	if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 		if( DX_dxguid_LIBRARY )
@@ -189,7 +196,9 @@ endif()
 
 # Set up flags for MSVC
 if (MSVC)
-	set( CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}" )
+	if (NOT CMAKE_GENERATOR MATCHES "Ninja")
+		set( CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}" )
+	endif()
 endif (MSVC)
 
 # Set up flags for GCC
@@ -317,7 +326,7 @@ option(BUILD_FLATPAK "Enable Flatpak-specific build options" OFF)
 # Update gitinfo.h
 
 add_custom_target( revision_check ALL
-	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/tools/updaterevision/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
+	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/cmake/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
 	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 )
 
@@ -572,12 +581,12 @@ file( GLOB HEADER_FILES
 	common/models/*.h
 	common/textures/*.h
 	common/startscreen/*.h
-	common/widgets/*.h
 	common/textures/hires/hqnx/*.h
 	common/textures/hires/hqnx_asm/*.h
 	common/textures/hires/xbr/*.h
 	common/thirdparty/*.h
 	common/thirdparty/rapidjson/*.h
+	common/thirdparty/rapidxml/*.hpp
 	common/thirdparty/math/*h
 	common/thirdparty/libsmackerdec/include/*.h
 	common/thirdparty/utf8proc/*.h
@@ -601,7 +610,7 @@ file( GLOB HEADER_FILES
 	common/scripting/frontend/*.h
 
 	utility/*.h
-	launcher/*.h
+	widgets/*.h
 	scripting/*.h
 	scripting/backend/*.h
 	scripting/decorate/*.h
@@ -796,6 +805,7 @@ set (PCH_SOURCES
 	d_net.cpp
 	d_netinfo.cpp
 	d_protocol.cpp
+	d_steam.cpp
 	doomstat.cpp
 	g_cvars.cpp
 	g_dumpinfo.cpp
@@ -845,6 +855,7 @@ set (PCH_SOURCES
 	gamedata/umapinfo.cpp
 	gamedata/d_dehacked.cpp
 	gamedata/g_doomedmap.cpp
+	gamedata/doomfont.cpp
 	gamedata/info.cpp
 	gamedata/keysections.cpp
 	gamedata/p_terrain.cpp
@@ -961,12 +972,18 @@ set (PCH_SOURCES
 	rendering/swrenderer/textures/warptexture.cpp
 	rendering/swrenderer/textures/swcanvastexture.cpp
 	events.cpp
-	launcher/launcherwindow.cpp
-	launcher/launcherbanner.cpp
-	launcher/launcherbuttonbar.cpp
-	launcher/playgamepage.cpp
-	launcher/settingspage.cpp
-	launcher/networkpage.cpp
+	widgets/aboutpage.cpp
+	widgets/errorwindow.cpp
+	widgets/launcherbanner.cpp
+	widgets/launcherbuttonbar.cpp
+	widgets/launcherwindow.cpp
+	widgets/netstartwindow.cpp
+	widgets/networkpage.cpp
+	widgets/playgamepage.cpp
+	widgets/releasepage.cpp
+	widgets/settingspage.cpp
+	widgets/themedata.cpp
+	widgets/widgetresourcedata.cpp
 
 	common/audio/sound/i_sound.cpp
 	common/audio/sound/oalsound.cpp
@@ -984,16 +1001,12 @@ set (PCH_SOURCES
 	common/2d/wipe.cpp
 	common/thirdparty/animlib.cpp
 	common/thirdparty/gain_analysis.cpp
-	common/thirdparty/sfmt/SFMT.cpp
 	common/startscreen/startscreen.cpp
 	common/startscreen/startscreen_heretic.cpp
 	common/startscreen/startscreen_hexen.cpp
 	common/startscreen/startscreen_strife.cpp
 	common/startscreen/startscreen_generic.cpp
 	common/startscreen/endoom.cpp
-	common/widgets/errorwindow.cpp
-	common/widgets/netstartwindow.cpp
-	common/widgets/widgetresourcedata.cpp
 	common/fonts/singlelumpfont.cpp
 	common/fonts/singlepicfont.cpp
 	common/fonts/specialfont.cpp
@@ -1063,7 +1076,6 @@ set (PCH_SOURCES
 	common/cutscenes/screenjob.cpp
 	common/utility/engineerrors.cpp
 
-	common/utility/gitinfo.cpp
 	common/utility/m_alloc.cpp
 	common/utility/utf8.cpp
 	common/utility/palette.cpp
@@ -1073,13 +1085,12 @@ set (PCH_SOURCES
 	common/utility/i_time.cpp
 	common/utility/m_argv.cpp
 	common/utility/s_playlist.cpp
-	common/utility/name.cpp
 	common/utility/r_memory.cpp
 	common/utility/writezip.cpp
 	common/utility/vga2ansi.cpp
 	common/thirdparty/base64.cpp
 	common/thirdparty/md5.cpp
- 	common/thirdparty/superfasthash.cpp
+	common/thirdparty/superfasthash.cpp
 	common/thirdparty/libsmackerdec/src/BitReader.cpp
 	common/thirdparty/libsmackerdec/src/FileStream.cpp
 	common/thirdparty/libsmackerdec/src/HuffmanVLC.cpp
@@ -1191,12 +1202,16 @@ set (PCH_SOURCES
 	common/scripting/dap/Nodes/RegistersScopeStateNode.cpp
 	common/scripting/dap/Nodes/StatePointerNode.cpp
 	common/scripting/dap/Nodes/DummyNode.cpp
+
+	utility/colorspace.cpp
+	utility/name.cpp
 	utility/nodebuilder/nodebuild.cpp
 	utility/nodebuilder/nodebuild_classify_nosse2.cpp
 	utility/nodebuilder/nodebuild_events.cpp
 	utility/nodebuilder/nodebuild_extract.cpp
 	utility/nodebuilder/nodebuild_gl.cpp
 	utility/nodebuilder/nodebuild_utility.cpp
+	utility/system_theme.cpp
 )
 
 if( ZMUSIC_SYSTEM_INSTALL OR NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS)
@@ -1279,6 +1294,20 @@ set_source_files_properties( common/engine/sc_man.cpp PROPERTIES OBJECT_DEPENDS 
 set_source_files_properties( ${NOT_COMPILED_SOURCE_FILES} PROPERTIES HEADER_FILE_ONLY TRUE )
 set_source_files_properties( ${GAME_NONPCH_SOURCES} common/textures/hires/hqresize.cpp PROPERTIES SKIP_PRECOMPILE_HEADERS TRUE )
 
+option(ENABLE_IWYU "Enable Include-What-You-Use analysis" ON)
+if (ENABLE_IWYU)
+	find_program(IWYU NAMES include-what-you-use iwyu)
+	if(IWYU)
+		message(STATUS "Using IWYU, found at ${IWYU}")
+		set_target_properties(zdoom PROPERTIES
+			CXX_INCLUDE_WHAT_YOU_USE "${IWYU}"
+			"-Xiwyu" "--mapping_file=${CMAKE_SOURCE_DIR}/tools/iwyu.imp"
+		)
+	else()
+		message(WARNING "IWYU not found.")
+	endif()
+endif()
+
 if(BUILD_FLATPAK)
 	target_compile_definitions(zdoom PRIVATE IS_FLATPAK=1)
 endif()
@@ -1295,7 +1324,7 @@ if( UNIX )
 	endif()
 endif()
 
-target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} )
+target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash)
 include_directories(
 	BEFORE
 	.
@@ -1321,7 +1350,6 @@ include_directories(
 	common/fonts
 	common/objects
 	common/startscreen
-	common/widgets
 	common/rendering
 	common/rendering/hwrenderer/data
 	common/rendering/gl_load
@@ -1366,23 +1394,11 @@ include_directories(
 
 add_dependencies( zdoom revision_check )
 
-# Due to some quirks, we need to do this in this order
-if( NOT ZDOOM_OUTPUT_OLDSTYLE )
-	# RUNTIME_OUTPUT_DIRECTORY does not exist in CMake 2.4.
-	# Linux distributions are slow to adopt 2.6. :(
-	set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
-	set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
-else()
-	set_target_properties( zdoom PROPERTIES
-		RUNTIME_OUTPUT_NAME ${ZDOOM_EXE_NAME}
-		RUNTIME_OUTPUT_DIRECTORY_RELEASE ${ZDOOM_OUTPUT_DIR}
-		RUNTIME_OUTPUT_NAME_DEBUG ${ZDOOM_EXE_NAME}d
-		RUNTIME_OUTPUT_DIRECTORY_DEBUG ${ZDOOM_OUTPUT_DIR}
-		RUNTIME_OUTPUT_NAME_MINSIZEREL ${ZDOOM_EXE_NAME}msr
-		RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${ZDOOM_OUTPUT_DIR}
-		RUNTIME_OUTPUT_NAME_RELWITHDEBINFO ${ZDOOM_EXE_NAME}rd
-		RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${ZDOOM_OUTPUT_DIR}
-	)
+set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
+set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
+
+if(NOT MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
 endif()
 
 if( MSVC )
@@ -1408,7 +1424,13 @@ if( MSVC )
 
 endif()
 
-if( NOT WIN32 AND NOT APPLE )
+if (WIN32)
+	# nothing
+elseif (APPLE)
+	IF ("${INSTALL_RPATH}" STREQUAL "")
+		set_target_properties(zdoom PROPERTIES MACOSX_RPATH TRUE)
+	endif()
+else()
 	FILE( WRITE ${CMAKE_CURRENT_BINARY_DIR}/link-make "if [ ! -e ${ZDOOM_OUTPUT_DIR}/${ZDOOM_EXE_NAME} ]; then ln -sf ${CMAKE_CURRENT_BINARY_DIR}/${ZDOOM_EXE_NAME} ${ZDOOM_OUTPUT_DIR}/${ZDOOM_EXE_NAME}; fi" )
 	add_custom_command( TARGET zdoom POST_BUILD
 		COMMAND chmod +x ${CMAKE_CURRENT_BINARY_DIR}/link-make
@@ -1423,12 +1445,22 @@ if( NOT WIN32 AND NOT APPLE )
 endif()
 
 add_custom_command(TARGET zdoom POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E make_directory "${ZDOOM_RESOURCE_DIR}/soundfonts"
+	COMMAND ${CMAKE_COMMAND} -E make_directory "${ZDOOM_RESOURCE_DIR}/fm_banks"
+
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different
-	${CMAKE_SOURCE_DIR}/soundfont/uzdoom.sf2 $<TARGET_FILE_DIR:zdoom>/soundfonts/uzdoom.sf2
+		"${CMAKE_SOURCE_DIR}/soundfont/uzdoom.sf2"
+		"${ZDOOM_RESOURCE_DIR}/soundfonts/uzdoom.sf2"
+
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different
-	${CMAKE_SOURCE_DIR}/fm_banks/GENMIDI.GS.wopl $<TARGET_FILE_DIR:zdoom>/fm_banks/GENMIDI.GS.wopl
+		"${CMAKE_SOURCE_DIR}/fm_banks/GENMIDI.GS.wopl"
+		"${ZDOOM_RESOURCE_DIR}/fm_banks/GENMIDI.GS.wopl"
+
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different
-	${CMAKE_SOURCE_DIR}/fm_banks/gs-by-papiezak-and-sneakernets.wopn $<TARGET_FILE_DIR:zdoom>/fm_banks/gs-by-papiezak-and-sneakernets.wopn
+		"${CMAKE_SOURCE_DIR}/fm_banks/gs-by-papiezak-and-sneakernets.wopn"
+		"${ZDOOM_RESOURCE_DIR}/fm_banks/gs-by-papiezak-and-sneakernets.wopn"
+
+	VERBATIM
 )
 
 if ( NOT ZMUSIC_SYSTEM_INSTALL AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS))
@@ -1454,7 +1486,7 @@ endif()
 if( WIN32 )
 	set( INSTALL_SOUNDFONT_PATH . CACHE STRING "Directory where soundfonts and WOPL/WOPN banks will be placed during install." )
 else()
-	set( INSTALL_SOUNDFONT_PATH share/games/doom CACHE STRING "Directory where soundfonts and WOPL/WOPN banks will be placed during install." )
+	set( INSTALL_SOUNDFONT_PATH share/games/${ZDOOM_EXE_NAME} CACHE STRING "Directory where soundfonts and WOPL/WOPN banks will be placed during install." )
 endif()
 install(DIRECTORY "${PROJECT_BINARY_DIR}/soundfonts" "${PROJECT_BINARY_DIR}/fm_banks"
 		DESTINATION ${INSTALL_SOUNDFONT_PATH}
@@ -1501,6 +1533,15 @@ if( APPLE )
 		MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/posix/osx/zdoom-info.plist"
 		XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "org.zdoom.UZDoom"
 		XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "" )
+
+	# Update plist bundle version from gitinfo.h at build time
+	add_custom_command(TARGET zdoom POST_BUILD
+		COMMAND "${CMAKE_COMMAND}"
+			-DGITINFO_H="${CMAKE_BINARY_DIR}/gitinfo.h"
+			-DPLIST_FILE="$<TARGET_BUNDLE_DIR:zdoom>/Contents/Info.plist"
+			-P "${CMAKE_CURRENT_SOURCE_DIR}/posix/osx/UpdatePlistVersion.cmake"
+		COMMENT "Updating bundle version in Info.plist"
+	)
 
 	# Dymanic libraries like libvulkan.dylib or libMoltenVK.dylib will be loaded by dlopen()
 	# if placed in the directory with the main executable
@@ -1576,7 +1617,6 @@ source_group("Common\\File System" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_D
 source_group("Common\\File System\\Include" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/filesystem/include/.+")
 source_group("Common\\File System\\Source" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/filesystem/source/.+")
 source_group("Common\\Startscreen" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/startscreen/.+")
-source_group("Common\\Widgets" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/widgets/.+")
 source_group("Common\\Scripting" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/.+")
 source_group("Common\\Scripting\\Interface" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/interface/.+")
 source_group("Common\\Scripting\\Frontend" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/.+" FILES ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h)
@@ -1610,7 +1650,7 @@ source_group("Common\\Textures\\Formats" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SO
 source_group("Common\\Third Party" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/.+")
 source_group("Common\\Third Party\\Math" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/math/.+")
 source_group("Common\\Third Party\\RapidJSON" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/rapidjson/.+")
-source_group("Common\\Third Party\\SFMT" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/sfmt/.+")
+source_group("Common\\Third Party\\RapidXML" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/rapidxml/.+")
 source_group("Common\\Third Party\\stb" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/stb/.+")
 source_group("Common\\Third Party\\utf8proc" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/common/thirdparty/utf8proc/.+")
 source_group("Utility" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/utility/.+")
@@ -1619,7 +1659,7 @@ source_group("Utility\\Smackerdec" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_D
 source_group("Utility\\Smackerdec\\Headers" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/include/.+")
 source_group("Utility\\Smackerdec\\Sources" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/src/.+")
 source_group("Statusbar" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/g_statusbar/.+")
-source_group("Launcher" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/launcher/.+")
+source_group("Widgets" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/widgets/.+")
 source_group("Versioning" FILES version.h win32/zdoom.rc)
 source_group("Xlat" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/xlat/.+" FILES ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h)
 source_group("Source Files" FILES ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h common/engine/sc_man_scanner.re)

@@ -1,3 +1,20 @@
+/*
+** hw_walldispatcher.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2023 Christoph Oelckers
+** Copyright 2023-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 struct HWMissing

@@ -1,32 +1,46 @@
 /*
-	Original Lens Distortion Algorithm from SSontech
-	http://www.ssontech.com/content/lensalg.htm
-
-	If (u,v) are the coordinates of a feature in the undistorted perfect
-	image plane, then (u', v') are the coordinates of the feature on the
-	distorted image plate, ie the scanned or captured image from the
-	camera. The distortion occurs radially away from the image center,
-	with correction for the image aspect ratio (image_aspect = physical
-	image width/height), as follows:
-
-	r2 = image_aspect*image_aspect*u*u + v*v
-	f = 1 + r2*(k + kcube*sqrt(r2))
-	u' = f*u
-	v' = f*v
-
-	The constant k is the distortion coefficient that appears on the lens
-	panel and through Sizzle. It is generally a small positive or negative
-	number under 1%. The constant kcube is the cubic distortion value found
-	on the image preprocessor's lens panel: it can be used to undistort or
-	redistort images, but it does not affect or get computed by the solver.
-	When no cubic distortion is needed, neither is the square root, saving
-	time.
-
-	Chromatic Aberration example,
-	using red distord channel with green and blue undistord channel:
-
-	k = vec3(-0.15, 0.0, 0.0);
-	kcube = vec3(0.15, 0.0, 0.0);
+** lensdistortion.fp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016 Magnus Norddahl
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Original Lens Distortion Algorithm from SSontech
+** http://www.ssontech.com/content/lensalg.htm
+**
+** If (u,v) are the coordinates of a feature in the undistorted perfect
+** image plane, then (u', v') are the coordinates of the feature on the
+** distorted image plate, ie the scanned or captured image from the
+** camera. The distortion occurs radially away from the image center,
+** with correction for the image aspect ratio (image_aspect = physical
+** image width/height), as follows:
+**
+** r2 = image_aspect*image_aspect*u*u + v*v
+** f = 1 + r2*(k + kcube*sqrt(r2))
+** u' = f*u
+** v' = f*v
+**
+** The constant k is the distortion coefficient that appears on the lens
+** panel and through Sizzle. It is generally a small positive or negative
+** number under 1%. The constant kcube is the cubic distortion value found
+** on the image preprocessor's lens panel: it can be used to undistort or
+** redistort images, but it does not affect or get computed by the solver.
+** When no cubic distortion is needed, neither is the square root, saving
+** time.
+**
+** Chromatic Aberration example,
+** using red distord channel with green and blue undistord channel:
+**
+** k = vec3(-0.15, 0.0, 0.0);
+** kcube = vec3(0.15, 0.0, 0.0);
 */
 
 layout(location=0) in vec2 TexCoord;

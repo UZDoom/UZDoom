@@ -1,24 +1,19 @@
-// 
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2014-2016 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 2 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
+/*
+** hw_bonebuffer.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2014-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include "hw_bonebuffer.h"
 #include "hw_dynlightdata.h"
@@ -44,7 +39,7 @@ BoneBuffer::BoneBuffer(int pipelineNbr) : mPipelineNbr(pipelineNbr)
 	{
 		mBufferType = false;
 		mBlockSize = screen->maxuniformblock / BONE_SIZE;
-		mBlockAlign = screen->uniformblockalignment < 64 ? 1 : screen->uniformblockalignment / BONE_SIZE;
+		mBlockAlign = screen->uniformblockalignment < BONE_SIZE ? 1 : screen->uniformblockalignment / BONE_SIZE;
 		mMaxUploadSize = (mBlockSize - mBlockAlign);
 	}
 

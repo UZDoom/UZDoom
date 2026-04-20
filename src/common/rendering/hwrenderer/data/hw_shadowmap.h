@@ -1,3 +1,19 @@
+/*
+** hw_shadowmap.h
+**
+** 1D dynamic shadow maps (API independent part)
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2017 Magnus Norddahl
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #pragma once
 

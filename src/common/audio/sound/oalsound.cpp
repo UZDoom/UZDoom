@@ -1,33 +1,23 @@
 /*
 ** oalsound.cpp
+**
 ** System interface for sound; uses OpenAL
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2008-2010 Chris Robinson
-** All rights reserved.
+** Copyright 2010-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -36,14 +26,10 @@
 #include <chrono>
 
 #include "c_cvars.h"
-
-#include "oalsound.h"
-#include "c_dispatch.h"
-#include "v_text.h"
-#include "i_module.h"
 #include "cmdlib.h"
-#include "m_fixed.h"
-
+#include "i_module.h"
+#include "oalsound.h"
+#include "printf.h"
 
 const char *GetSampleTypeName(SampleType type);
 const char *GetChannelConfigName(ChannelConfig chan);
@@ -60,9 +46,19 @@ CVAR(Bool, snd_waterreverb, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR (String, snd_aldevice, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (Bool, snd_efx, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (String, snd_alresampler, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CVAR (Int, snd_musicmode, 0, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CUSTOM_CVAR (Float, snd_superstereowidth, 0.45f, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+{
+	if (self > 1.0f)
+		self = 1.0f;
+	else if (!(self >= 0.0f))
+		self = 0.0f;
+	else if(GSnd)
+		GSnd->UpdateMusicParams();
+}
 
 #ifdef _WIN32
-#define OPENALLIB "openal32.dll"
+#define OPENALLIB "soft_oal.dll"
 #elif defined(__OpenBSD__)
 #define OPENALLIB "libopenal.so"
 #else
@@ -98,23 +94,26 @@ bool IsOpenALPresent()
 #endif
 }
 
-
-
-
 ReverbContainer *ForcedEnvironment;
 
-
 #ifndef NO_OPENAL
-
 
 EXTERN_CVAR (Int, snd_channels)
 EXTERN_CVAR (Int, snd_samplerate)
 EXTERN_CVAR (Bool, snd_waterreverb)
 EXTERN_CVAR (Int, snd_hrtf)
 
-
 #define MAKE_PTRID(x)  ((void*)(uintptr_t)(x))
 #define GET_PTRID(x)  ((uint32_t)(uintptr_t)(x))
+
+namespace {
+
+/* Values used by snd_musicmode. */
+enum MusicMode : int {
+    Normal = 0,
+    DirectMix = 1,
+    SuperStereo = 2,
+};
 
 
 static constexpr uint8_t SampleTypeSize(SampleType stype)
@@ -202,6 +201,8 @@ static ALvoid AL_APIENTRY _wrap_ProcessUpdatesSOFT(void)
 	alcProcessContext(alcGetCurrentContext());
 }
 
+} // namespace
+
 
 class OpenALSoundStream : public SoundStream
 {
@@ -262,6 +263,19 @@ class OpenALSoundStream : public SoundStream
 			alSourcef(Source, AL_SOURCE_RADIUS, 0.f);
 		if(Renderer->AL.SOFT_source_spatialize)
 			alSourcei(Source, AL_SOURCE_SPATIALIZE_SOFT, AL_AUTO_SOFT);
+		if(Renderer->AL.SOFT_UHJ)
+		{
+			const ALenum mode{(*snd_musicmode == MusicMode::SuperStereo)
+			    ? AL_SUPER_STEREO_SOFT : AL_NORMAL_SOFT};
+			alSourcei(Source, AL_STEREO_MODE_SOFT, mode);
+			alSourcef(Source, AL_SUPER_STEREO_WIDTH_SOFT, *snd_superstereowidth);
+		}
+		if(Renderer->AL.SOFT_direct_channels_remix)
+		{
+			const ALenum mode{(*snd_musicmode == MusicMode::DirectMix)
+			    ? AL_REMIX_UNMATCHED_SOFT : AL_FALSE};
+			alSourcei(Source, AL_DIRECT_CHANNELS_SOFT, mode);
+		}
 
 		alGenBuffers(BufferCount, Buffers);
 		return (getALError() == AL_NO_ERROR);
@@ -347,12 +361,14 @@ public:
 	virtual void SetVolume(float vol)
 	{
 		Volume = vol;
-		UpdateVolume();
+		UpdateParams();
 	}
 
-	void UpdateVolume()
+	void UpdateParams()
 	{
 		alSourcef(Source, AL_GAIN, Renderer->MusicVolume*Volume);
+		if(Renderer->AL.SOFT_UHJ)
+			alSourcef(Source, AL_SUPER_STEREO_WIDTH_SOFT, *snd_superstereowidth);
 		getALError();
 	}
 
@@ -563,7 +579,7 @@ ALCdevice *OpenALSoundRenderer::InitDevice()
 	}
 	else
 	{
-		Printf(TEXTCOLOR_ORANGE"Failed to load openal32.dll\n");
+		Printf(TEXTCOLOR_ORANGE"Failed to load soft_oal.dll\n");
 	}
 	return device;
 }
@@ -671,10 +687,12 @@ OpenALSoundRenderer::OpenALSoundRenderer()
 	AL.EXT_source_distance_model = !!alIsExtensionPresent("AL_EXT_source_distance_model");
 	AL.EXT_SOURCE_RADIUS = !!alIsExtensionPresent("AL_EXT_SOURCE_RADIUS");
 	AL.SOFT_deferred_updates = !!alIsExtensionPresent("AL_SOFT_deferred_updates");
+	AL.SOFT_direct_channels_remix = !!alIsExtensionPresent("AL_SOFT_direct_channels_remix");
 	AL.SOFT_loop_points = !!alIsExtensionPresent("AL_SOFT_loop_points");
 	AL.SOFT_source_latency = !!alIsExtensionPresent("AL_SOFT_source_latency");
 	AL.SOFT_source_resampler = !!alIsExtensionPresent("AL_SOFT_source_resampler");
 	AL.SOFT_source_spatialize = !!alIsExtensionPresent("AL_SOFT_source_spatialize");
+	AL.SOFT_UHJ = !!alIsExtensionPresent("AL_SOFT_UHJ");
 
 	// Speed of sound is in units per second. Presuming we want to simulate a
 	// typical speed of sound of 343.3 meters per second, multiply it by the
@@ -986,8 +1004,13 @@ void OpenALSoundRenderer::SetSfxVolume(float volume)
 void OpenALSoundRenderer::SetMusicVolume(float volume)
 {
 	MusicVolume = volume;
+	UpdateMusicParams();
+}
+
+void OpenALSoundRenderer::UpdateMusicParams()
+{
 	for(uint32_t i = 0;i < Streams.Size();++i)
-		Streams[i]->UpdateVolume();
+		Streams[i]->UpdateParams();
 }
 
 unsigned int OpenALSoundRenderer::GetMSLength(SoundHandle sfx)
@@ -1093,7 +1116,7 @@ SoundHandle OpenALSoundRenderer::LoadSoundRaw(uint8_t *sfxdata, int length, int 
 	{
 		static bool warned = false;
 		if(!warned)
-			Printf(DMSG_WARNING, "Loop points not supported!\n");
+			DPrintf(DMSG_WARNING, "Loop points not supported!\n");
 		warned = true;
 	}
 
@@ -1274,6 +1297,10 @@ FISoundChannel *OpenALSoundRenderer::StartSound(SoundHandle sfx, float vol, floa
 		alSourcef(source, AL_PITCH, pitch * PITCH_MULT);
 	else
 		alSourcef(source, AL_PITCH, pitch);
+	if(AL.SOFT_UHJ)
+		alSourcei(source, AL_STEREO_MODE_SOFT, AL_NORMAL_SOFT);
+	if(AL.SOFT_direct_channels_remix)
+		alSourcei(source, AL_DIRECT_CHANNELS_SOFT, AL_FALSE);
 
 	if(!reuse_chan || reuse_chan->StartTime == 0)
 	{
@@ -1442,6 +1469,10 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 		alSourcef(source, AL_PITCH, pitch * PITCH_MULT);
 	else
 		alSourcef(source, AL_PITCH, pitch);
+	if(AL.SOFT_UHJ)
+		alSourcei(source, AL_STEREO_MODE_SOFT, AL_NORMAL_SOFT);
+	if(AL.SOFT_direct_channels_remix)
+		alSourcei(source, AL_DIRECT_CHANNELS_SOFT, AL_FALSE);
 
 	if(!reuse_chan || reuse_chan->StartTime == 0)
 	{

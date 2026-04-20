@@ -1,44 +1,34 @@
 /*
- ** i_system.mm
- **
- **---------------------------------------------------------------------------
- ** Copyright 2012-2018 Alexey Lysiuk
- ** All rights reserved.
- **
- ** Redistribution and use in source and binary forms, with or without
- ** modification, are permitted provided that the following conditions
- ** are met:
- **
- ** 1. Redistributions of source code must retain the above copyright
- **    notice, this list of conditions and the following disclaimer.
- ** 2. Redistributions in binary form must reproduce the above copyright
- **    notice, this list of conditions and the following disclaimer in the
- **    documentation and/or other materials provided with the distribution.
- ** 3. The name of the author may not be used to endorse or promote products
- **    derived from this software without specific prior written permission.
- **
- ** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
- ** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- ** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- ** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
- ** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- ** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- ** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- **---------------------------------------------------------------------------
- **
- */
-
-#include "i_common.h"
-#include "c_cvars.h"
-#include "i_interface.h"
+** i_system.mm
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2012-2018 Alexey Lysiuk
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include <fnmatch.h>
 #include <sys/sysctl.h>
 
+#include "c_cvars.h"
+#include "i_common.h"
+#include "i_interface.h"
 #include "i_system.h"
+#include "printf.h"
 #include "st_console.h"
 #include "v_text.h"
 
@@ -50,11 +40,11 @@ double PerfToSec, PerfToMillisec;
 void CalculateCPUSpeed()
 {
 	long long frequency;
-	size_t size = sizeof frequency;
+	size_t    size = sizeof frequency;
 
 	if (0 == sysctlbyname("machdep.tsc.frequency", &frequency, &size, nullptr, 0) && 0 != frequency)
 	{
-		PerfToSec = 1.0 / frequency;
+		PerfToSec      = 1.0 / frequency;
 		PerfToMillisec = 1000.0 / frequency;
 
 		if (!batchrun)
@@ -64,21 +54,19 @@ void CalculateCPUSpeed()
 	}
 }
 
-
 void I_SetIWADInfo()
 {
 	FConsoleWindow::GetInstance().SetTitleText();
 }
 
-
-void I_PrintStr(const char* const message)
+void I_PrintStr(const char *const message)
 {
 	FConsoleWindow::GetInstance().AddText(message);
 
 	// Strip out any color escape sequences before writing to output
-	char* const copy = new char[strlen(message) + 1];
-	const char* srcp = message;
-	char* dstp = copy;
+	char *const copy = new char[strlen(message) + 1];
+	const char *srcp = message;
+	char       *dstp = copy;
 
 	while ('\0' != *srcp)
 	{
@@ -116,21 +104,20 @@ void I_PrintStr(const char* const message)
 	fflush(stdout);
 }
 
-
-void Mac_I_FatalError(const char* const message);
+void Mac_I_FatalError(const char *const message);
 
 void I_ShowFatalError(const char *message)
 {
 	Mac_I_FatalError(message);
 }
 
-bool HoldingQueryKey(const char* key)
+bool HoldingQueryKey(const char *key)
 {
 	// TODO: Implement
 	return false;
 }
 
-bool I_PickIWad(bool showwin, FStartupSelectionInfo& info)
+bool I_PickIWad(bool showwin, FStartupSelectionInfo &info)
 {
 	if (!showwin)
 	{
@@ -139,32 +126,26 @@ bool I_PickIWad(bool showwin, FStartupSelectionInfo& info)
 
 	I_SetMainWindowVisible(false);
 
-	extern int I_PickIWad_Cocoa(WadStuff*, int, bool, int);
-	const int result = I_PickIWad_Cocoa(&(*info.Wads)[0], (int)info.Wads->Size(), showwin, info.DefaultIWAD);
+	// TODO: at SOME point, the sdl files were used for mac, too. Let's do that again. There is a bunch of unused mac
+	// code in there
+
+	extern int I_PickIWad_Cocoa(FStartupSelectionInfo & info);
+	auto       result = I_PickIWad_Cocoa(info);
 
 	I_SetMainWindowVisible(true);
 
-	if (result >= 0)
-	{
-		info.DefaultIWAD = result;
-		return true;
-	}
-
-	return false;
+	return result;
 }
 
-
-void I_PutInClipboard(const char* const string)
+void I_PutInClipboard(const char *const string)
 {
-	NSPasteboard* const pasteBoard = [NSPasteboard generalPasteboard];
-	NSString* const stringType = NSStringPboardType;
-	NSArray* const types = [NSArray arrayWithObjects:stringType, nil];
-	NSString* const content = [NSString stringWithUTF8String:string];
+	NSPasteboard *const pasteBoard = [NSPasteboard generalPasteboard];
+	NSString *const     stringType = NSStringPboardType;
+	NSArray *const      types      = [NSArray arrayWithObjects:stringType, nil];
+	NSString *const     content    = [NSString stringWithUTF8String:string];
 
-	[pasteBoard declareTypes:types
-					   owner:nil];
-	[pasteBoard setString:content
-				  forType:stringType];
+	[pasteBoard declareTypes:types owner:nil];
+	[pasteBoard setString:content forType:stringType];
 }
 
 FString I_GetFromClipboard(bool returnNothing)
@@ -174,12 +155,11 @@ FString I_GetFromClipboard(bool returnNothing)
 		return FString();
 	}
 
-	NSPasteboard* const pasteBoard = [NSPasteboard generalPasteboard];
-	NSString* const value = [pasteBoard stringForType:NSStringPboardType];
+	NSPasteboard *const pasteBoard = [NSPasteboard generalPasteboard];
+	NSString *const     value      = [pasteBoard stringForType:NSStringPboardType];
 
 	return FString([value UTF8String]);
 }
-
 
 unsigned int I_MakeRNGSeed()
 {
@@ -192,15 +172,15 @@ FString I_GetCWD()
 	return currentpath.UTF8String;
 }
 
-bool I_ChDir(const char* path)
+bool I_ChDir(const char *path)
 {
 	return [[NSFileManager defaultManager] changeCurrentDirectoryPath:[NSString stringWithUTF8String:path]];
 }
 
-void I_OpenShellFolder(const char* folder)
+void I_OpenShellFolder(const char *folder)
 {
-	NSFileManager *filemgr = [NSFileManager defaultManager];
-	NSString *currentpath = [filemgr currentDirectoryPath];
+	NSFileManager *filemgr     = [NSFileManager defaultManager];
+	NSString      *currentpath = [filemgr currentDirectoryPath];
 
 	[filemgr changeCurrentDirectoryPath:[NSString stringWithUTF8String:folder]];
 	if (longsavemessages)
@@ -208,4 +188,3 @@ void I_OpenShellFolder(const char* folder)
 	std::system("open .");
 	[filemgr changeCurrentDirectoryPath:currentpath];
 }
-

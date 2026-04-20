@@ -1,27 +1,23 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1994-1996 Raven Software
-// Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-// Copyright 2016 Leonard2
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
+/*
+** p_pspr.cpp
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2016 Leonard2
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 // HEADER FILES ------------------------------------------------------------
 
@@ -640,58 +636,72 @@ void P_BringUpWeapon (player_t *player)
 //
 // [XA] Added new bob styles and exposed bob properties. Thanks, Ryan Cordell!
 // [SP] Added new user option for bob speed
+// 
+// Previously this was called from the renderer but accidentally left in the
+// play scope, making it possible to modify the world from it and breaking
+// the prediction. It's now been moved to the player thinking so it can be
+// called across all players to help prevent desyncs, but requires a bit of a
+// gross render hack to determine which one to call. Unfortunately there isn't
+// a good way to fix this, so for now this will have to do.
 //
 //============================================================================
 
-void P_BobWeapon (player_t *player, float *x, float *y, double ticfrac)
+EPSPBobType BobType = PSPB_None;
+FPlayerBob PlayerBob[MAXPLAYERS] = {};
+
+void P_BobWeapon(player_t* player)
 {
+	auto& bob = PlayerBob[player - players];
 	IFVIRTUALPTRNAME(player->mo, NAME_PlayerPawn, BobWeapon)
 	{
-		DVector2 result = CallVM<DVector2>(func, player->mo, ticfrac);
-		
+		bob.UpdateInterpolation(true);
+
+		DVector2 result = CallVM<DVector2>(func, player->mo, 1.0);
+
 		auto inv = player->mo->Inventory.Get();
-		while(inv != nullptr && !(inv->ObjectFlags & OF_EuthanizeMe)) // same loop as ModifyDamage, except it actually checks if it's overriden before calling
+		while (inv != nullptr && !(inv->ObjectFlags & OF_EuthanizeMe)) // same loop as ModifyDamage, except it actually checks if it's overriden before calling
 		{
 			auto nextinv = inv->Inventory.Get();
 			IFOVERRIDENVIRTUALPTRNAME(inv, NAME_Inventory, ModifyBob)
 			{
-				DVector2 r2 = CallVM<DVector2>(func, inv, result, ticfrac);
+				DVector2 r2 = CallVM<DVector2>(func, inv, result, 1.0);
 				result = r2;
 			}
 			inv = nextinv;
 		}
 
-		*x = (float)result.X;
-		*y = (float)result.Y;
+		bob.SetBob2D(player->BobTimer, FVector2(result));
 		return;
 	}
-	*x = *y = 0;
+	bob.ResetInterpolation();
 }
 
-void P_BobWeapon3D (player_t *player, FVector3 *translation, FVector3 *rotation, double ticfrac)
+void P_BobWeapon3D(player_t* player)
 {
+	auto& bob = PlayerBob[player - players];
 	IFVIRTUALPTRNAME(player->mo, NAME_PlayerPawn, BobWeapon3D)
 	{
-		auto [t, r] = CallVM<DVector3, DVector3>(func, player->mo, ticfrac);
+		bob.UpdateInterpolation(false);
+
+		auto [t, r] = CallVM<DVector3, DVector3>(func, player->mo, 1.0);
 
 		auto inv = player->mo->Inventory.Get();
-		while(inv != nullptr && !(inv->ObjectFlags & OF_EuthanizeMe))
+		while (inv != nullptr && !(inv->ObjectFlags & OF_EuthanizeMe))
 		{
 			auto nextinv = inv->Inventory.Get();
 			IFOVERRIDENVIRTUALPTRNAME(inv, NAME_Inventory, ModifyBob3D)
 			{
-				auto [t2, r2] = CallVM<DVector3, DVector3>(func, inv, t, r, ticfrac);
+				auto [t2, r2] = CallVM<DVector3, DVector3>(func, inv, t, r, 1.0);
 				t = t2;
 				r = r2;
 			}
 			inv = nextinv;
 		}
 
-		*translation = FVector3(t);
-		*rotation = FVector3(r);
+		bob.SetBob3D(player->BobTimer, FVector3(t), FVector3(r));
 		return;
 	}
-	*translation = *rotation = {};
+	bob.ResetInterpolation();
 }
 
 //---------------------------------------------------------------------------

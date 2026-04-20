@@ -1,27 +1,17 @@
-// 
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2000-2016 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
 /*
-** gl_flat.cpp
+** hw_flats.cpp
+**
 ** Flat processing
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2000-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
 **
 */
 
@@ -321,7 +311,6 @@ void HWFlat::DrawFlat(HWDrawInfo *di, FRenderState &state, bool translucent)
 	int rel = getExtraLight();
 
 	state.SetNormal(plane.plane.Normal().X, plane.plane.Normal().Z, plane.plane.Normal().Y);
-	double zshift = (plane.plane.Normal().Z > 0.0 ? 0.1f : -0.1f); // The HWPlaneMirrorPortal::DrawPortalStencil() z-fights with flats
 
 	SetColor(state, di->Level, di->lightmode, lightlevel, rel, di->isFullbrightScene(), Colormap, alpha);
 	SetFog(state, di->Level, di->lightmode, lightlevel, rel, di->isFullbrightScene(), &Colormap, false);
@@ -372,11 +361,7 @@ void HWFlat::DrawFlat(HWDrawInfo *di, FRenderState &state, bool translucent)
 			else state.AlphaFunc(Alpha_GEqual, 0.f);
 			state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1);
 			SetPlaneTextureRotation(state, &plane, texture);
-			di->VPUniforms.mViewMatrix.translate(0.0, zshift, 0.0);
-			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
 			DrawSubsectors(di, state);
-			di->VPUniforms.mViewMatrix.translate(0.0, -zshift, 0.0);
-			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
 			state.EnableTextureMatrix(false);
 		}
 		state.SetRenderStyle(DefaultRenderStyle());
@@ -470,7 +455,7 @@ void HWFlat::SetFrom3DFloor(F3DFloor *rover, bool top, bool underside)
 
 	// FF_FOG requires an inverted logic where to get the light from
 	lightlist_t *light = P_GetPlaneLight(sector, plane.plane, underside);
-	lightlevel = hw_ClampLight(*light->p_lightlevel);
+	lightlevel = RescaleLightLevel(*light->p_lightlevel);
 
 	if (rover->flags & FF_FOG)
 	{
@@ -536,7 +521,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 
 		srf |= SSRF_RENDERFLOOR;
 
-		lightlevel = hw_ClampLight(frontsector->GetFloorLight());
+		lightlevel = RescaleLightLevel(frontsector->GetFloorLight());
 		Colormap = frontsector->Colormap;
 		FlatColor = frontsector->SpecialColors[sector_t::floor];
 		AddColor = frontsector->AdditiveColors[sector_t::floor];
@@ -571,7 +556,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 				if ((!(sector->GetFlags(sector_t::floor)&PLANEF_ABSLIGHTING) || light->lightsource == NULL)
 					&& (light->p_lightlevel != &frontsector->lightlevel))
 				{
-					lightlevel = hw_ClampLight(*light->p_lightlevel);
+					lightlevel = RescaleLightLevel(*light->p_lightlevel);
 				}
 
 				CopyFrom3DLight(Colormap, light);
@@ -594,7 +579,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 
 		srf |= SSRF_RENDERCEILING;
 
-		lightlevel = hw_ClampLight(frontsector->GetCeilingLight());
+		lightlevel = RescaleLightLevel(frontsector->GetCeilingLight());
 		Colormap = frontsector->Colormap;
 		FlatColor = frontsector->SpecialColors[sector_t::ceiling];
 		AddColor = frontsector->AdditiveColors[sector_t::ceiling];
@@ -628,7 +613,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 				if ((!(sector->GetFlags(sector_t::ceiling)&PLANEF_ABSLIGHTING))
 					&& (light->p_lightlevel != &frontsector->lightlevel))
 				{
-					lightlevel = hw_ClampLight(*light->p_lightlevel);
+					lightlevel = RescaleLightLevel(*light->p_lightlevel);
 				}
 				CopyFrom3DLight(Colormap, light);
 			}
@@ -720,7 +705,7 @@ void HWFlat::ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which)
 
 							if (rover->flags&FF_FIX)
 							{
-								lightlevel = hw_ClampLight(rover->model->lightlevel);
+								lightlevel = RescaleLightLevel(rover->model->lightlevel);
 								Colormap = rover->GetColormap();
 							}
 

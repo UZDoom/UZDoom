@@ -1,3 +1,28 @@
+/*
+** menuitembase.zs
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 //=============================================================================
 //
 // base class for menu items
@@ -38,7 +63,8 @@ class MenuItemBase : Object native ui version("2.4")
 	virtual int GetIndent() { return 0; }
 	virtual int Draw(OptionMenuDescriptor desc, int y, int indent, bool selected) { return indent; }
 
-	string GetTooltip() const { return mTooltip; }
+	version("4.15.1") string GetTooltip() const { return mTooltip; }
+	version("4.15.1") void SetTooltip(string tooltip) { mTooltip = tooltip; }
 	void OffsetPositionY(double ydelta) { mYpos += ydelta; }
 	double GetY() { return mYpos; }
 	double GetX() { return mXpos; }

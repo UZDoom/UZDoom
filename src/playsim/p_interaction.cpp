@@ -1,32 +1,22 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1994-1996 Raven Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//		Handling interactions (i.e., collisions).
-//
-//-----------------------------------------------------------------------------
-
-
-
+/*
+** p_interaction.cpp
+**
+** Handling interactions (i.e., collisions).
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 // Data.
 #include "doomdef.h"
@@ -1215,7 +1205,7 @@ static int DamageMobj (AActor *target, AActor *inflictor, AActor *source, int da
 					}
 				}
 
-				damage = inflictor->CallDoSpecialDamage(target, damage, mod);
+				damage = inflictor->CallDoSpecialDamage(target, damage, mod, flags, angle);
 				if (damage < 0)
 				{
 					return -1;
@@ -1231,13 +1221,13 @@ static int DamageMobj (AActor *target, AActor *inflictor, AActor *source, int da
 				// Handle active damage modifiers (e.g. PowerDamage)
 				if (damage > 0 && !(flags & DMG_NO_ENHANCE))
 				{
-					damage = source->GetModifiedDamage(mod, damage, false, inflictor, target, flags);
+					damage = source->GetModifiedDamage(mod, damage, false, inflictor, target, flags, angle);
 				}
 			}
 			// Handle passive damage modifiers (e.g. PowerProtection), provided they are not afflicted with protection penetrating powers.
 			if (damage > 0 && !(flags & DMG_NO_PROTECT))
 			{
-				damage = target->GetModifiedDamage(mod, damage, true, inflictor, source, flags);
+				damage = target->GetModifiedDamage(mod, damage, true, inflictor, source, flags, angle);
 			}
 			if (damage > 0 && !(flags & DMG_NO_FACTOR))
 			{
@@ -1246,7 +1236,7 @@ static int DamageMobj (AActor *target, AActor *inflictor, AActor *source, int da
 
 			if (damage >= 0)
 			{
-				damage = target->CallTakeSpecialDamage(inflictor, source, damage, mod);
+				damage = target->CallTakeSpecialDamage(inflictor, source, damage, mod, flags, angle);
 			}
 
 			// '<0' is handled below. This only handles the case where damage gets reduced to 0.
@@ -1374,7 +1364,7 @@ static int DamageMobj (AActor *target, AActor *inflictor, AActor *source, int da
 				int newdam = damage;
 				if (damage > 0)
 				{
-					newdam = player->mo->AbsorbDamage(damage, mod, inflictor, source, flags);
+					newdam = player->mo->AbsorbDamage(damage, mod, inflictor, source, flags, angle);
 				}
 				if (!telefragDamage || (player->mo->flags7 & MF7_LAXTELEFRAGDMG)) //rawdamage is never modified.
 				{
@@ -1455,7 +1445,7 @@ static int DamageMobj (AActor *target, AActor *inflictor, AActor *source, int da
 		if (!(flags & (DMG_NO_ARMOR|DMG_FORCED)) && target->Inventory != NULL && damage > 0)
 		{
 			int newdam = damage;
-			newdam = target->AbsorbDamage(damage, mod, inflictor, source, flags);
+			newdam = target->AbsorbDamage(damage, mod, inflictor, source, flags, angle);
 			damage = newdam;
 			if (damage <= 0)
 			{
@@ -1848,7 +1838,7 @@ void P_PoisonDamage (player_t *player, AActor *source, int damage, bool playPain
 	// Take half damage in trainer mode
 	damage = int(damage * G_SkillProperty(SKILLP_DamageFactor) * sv_damagefactorplayer);
 	// Handle passive damage modifiers (e.g. PowerProtection)
-	damage = target->GetModifiedDamage(player->poisontype, damage, true, nullptr, source);
+	damage = target->GetModifiedDamage(player->poisontype, damage, true, nullptr, source, 0, nullAngle);
 	// Modify with damage factors
 	damage = target->ApplyDamageFactor(player->poisontype, damage);
 

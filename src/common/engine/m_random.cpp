@@ -1,41 +1,31 @@
 /*
 ** m_random.cpp
+**
 ** Random number generators
 **
 **---------------------------------------------------------------------------
-** Copyright 2002-2009 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 2002-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 ** This file employs the techniques for improving demo sync and backward
 ** compatibility that Lee Killough introduced with BOOM. However, none of
 ** the actual code he wrote is left. In contrast to BOOM, each RNG source
 ** in ZDoom is implemented as a separate class instance that provides an
-** interface to the high-quality Mersenne Twister. See
-** <http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/index.html>.
+** interface to the PCG-XSH-RR RNG, a modern high-quality RNG with a small
+** single 64-bit integer state.
 **
 ** As Killough's description from m_random.h is still mostly relevant,
 ** here it is:
@@ -260,12 +250,26 @@ void FRandom::StaticClearRandom ()
 //
 //==========================================================================
 
+inline uint64_t SplitMix64Iteration(uint64_t& state) {
+	state += 0x9e3779b97f4a7c15;
+	uint64_t z = state;
+	z = (z ^ (z >> 30)) * 0xbf58476d1ce4e5b9;
+	z = (z ^ (z >> 27)) * 0x94d049bb133111eb;
+	return z ^ (z >> 31);
+}
+
 void FRandom::Init(uint32_t seed)
 {
 	// [RH] Use the RNG's name's CRC to modify the original seed.
 	// This way, new RNGs can be added later, and it doesn't matter
 	// which order they get initialized in.
-	SFMTObj::Init(NameCRC, seed);
+	uint64_t combinedSeedState = (uint64_t(seed) << 32) + uint64_t(NameCRC);
+	auto initstate = SplitMix64Iteration(combinedSeedState);
+
+	s = 0U;
+	GenRand32();
+	s += initstate;
+	GenRand32();
 }
 
 //==========================================================================
@@ -292,8 +296,7 @@ void FRandom::StaticWriteRNGState (FSerializer &arc)
 				if (arc.BeginObject(nullptr))
 				{
 					arc("crc", rng->NameCRC)
-						("index", rng->idx)
-						.Array("u", rng->sfmt.u, SFMT::N32)
+						.Array("u", rng->s32.data(), rng->s32.size())
 						.EndObject();
 				}
 			}
@@ -317,7 +320,7 @@ void FRandom::StaticReadRNGState(FSerializer &arc)
 
 	arc("rngseed", rngseed);
 
-	// Call StaticClearRandom in order to ensure that SFMT is initialized
+	// Call StaticClearRandom in order to ensure that RNG is initialized
 	FRandom::StaticClearRandom ();
 
 	if (arc.BeginArray("rngs"))
@@ -335,8 +338,7 @@ void FRandom::StaticReadRNGState(FSerializer &arc)
 				{
 					if (rng->NameCRC == crc)
 					{
-						arc("index", rng->idx)
-							.Array("u", rng->sfmt.u, SFMT::N32);
+						arc.Array("u", rng->s32.data(), rng->s32.size());
 						break;
 					}
 				}
@@ -388,19 +390,18 @@ FRandom *FRandom::StaticFindRNG (const char *name, bool client)
 	return probe;
 }
 
-void FRandom::SaveRNGState(TArray<FRandom>& backups)
+// Unlike the static read/write functions, this one assumes the RNG list has not been touched at all
+// and so will read/write even 0 NameCRC seeds since it goes in order.
+void FRandom::RollbackRNGState(FSerializer& arc)
 {
-	for (auto cur = RNGList; cur != nullptr; cur = cur->Next)
-		backups.Push(*cur);
-}
-
-void FRandom::RestoreRNGState(TArray<FRandom>& backups)
-{
-	unsigned int i = 0u;
-	for (auto cur = RNGList; cur != nullptr; cur = cur->Next)
-		*cur = backups[i++];
-
-	backups.Clear();
+	if (arc.BeginArray("rngs"))
+	{
+		for (FRandom* rng = FRandom::RNGList; rng != nullptr; rng = rng->Next)
+		{
+			arc("s", rng->s);
+		}
+		arc.EndArray();
+	}
 }
 
 //==========================================================================
@@ -418,8 +419,7 @@ void FRandom::StaticPrintSeeds ()
 
 	while (rng != NULL)
 	{
-		int idx = rng->idx < SFMT::N32 ? rng->idx : 0;
-		Printf ("%s: %08x .. %d\n", rng->Name, rng->sfmt.u[idx], idx);
+		Printf ("%s: 0x%016lx\n", rng->Name, rng->s);
 		rng = rng->Next;
 	}
 }

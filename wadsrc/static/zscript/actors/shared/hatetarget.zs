@@ -1,4 +1,21 @@
-
+/*
+** hatetarget.zs
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 // Hate Target --------------------------------------------------------------
 
@@ -34,7 +51,7 @@ class HateTarget : Actor
 		}
 	}
 
-	override int TakeSpecialDamage(Actor inflictor, Actor source, int damage, Name damagetype)
+	override int TakeSpecialDamage(Actor inflictor, Actor source, int damage, Name damagetype, int flags, double angle)
 	{
 		if (special2 != 0)
 		{

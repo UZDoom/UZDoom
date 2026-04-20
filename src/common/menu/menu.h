@@ -1,8 +1,29 @@
+/*
+** menu.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2009-2016 Marisa Heit
+** Copyright 2010-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef __M_MENU_MENU_H__
 #define __M_MENU_MENU_H__
-
-
-
 
 #include "dobject.h"
 #include "c_cvars.h"
@@ -143,7 +164,7 @@ public:
 
 class DImageScrollerDescriptor : public DMenuDescriptor
 {
-	DECLARE_CLASS(DOptionMenuDescriptor, DMenuDescriptor)
+	DECLARE_CLASS(DImageScrollerDescriptor, DMenuDescriptor)
 public:
 	FTextureID textBackground;
 	PalEntry textBackgroundBrightness;
@@ -334,13 +355,13 @@ bool M_IsAnimated();
 
 
 struct IJoystickConfig;
-DMenuItemBase * CreateOptionMenuItemStaticText(const char *name, int v = -1);
-DMenuItemBase * CreateOptionMenuItemSubmenu(const char *label, FName cmd, int center);
+DMenuItemBase * CreateOptionMenuItemStaticText(const char *name, int v = -1, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
+DMenuItemBase * CreateOptionMenuItemSubmenu(const char *label, FName cmd, int center, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
 DMenuItemBase * CreateOptionMenuItemControl(const char *label, FName cmd, FKeyBindings *bindings);
 DMenuItemBase * CreateOptionMenuItemJoyConfigMenu(const char *label, IJoystickConfig *joy);
 DMenuItemBase * CreateListMenuItemPatch(double x, double y, int height, int hotkey, FTextureID tex, FName command, int param);
 DMenuItemBase * CreateListMenuItemText(double x, double y, int height, int hotkey, const char *text, FFont *font, PalEntry color1, PalEntry color2, FName command, int param);
-DMenuItemBase * CreateOptionMenuItemCommand(const char *label, FName cmd, bool centered = false);
+DMenuItemBase * CreateOptionMenuItemCommand(const char *label, FName cmd, bool centered = false, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
 DMenuItemBase* CreateListMenuItemStaticText(double x, double y, const char* text, FFont* font, PalEntry color, bool centered = false);
 
 void UpdateVRModes(bool considerQuadBuffered=true);

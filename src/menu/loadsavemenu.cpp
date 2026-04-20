@@ -1,34 +1,23 @@
 /*
 ** loadsavemenu.cpp
+**
 ** The load game and save game menus
 **
 **---------------------------------------------------------------------------
-** Copyright 2001-2010 Randy Heit
+**
+** Copyright 2001-2016 Marisa Heit
 ** Copyright 2010-2020 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -59,6 +48,81 @@ EXTERN_CVAR(Int, save_sort_order)
 // Find savegames and read their titles
 //
 //=============================================================================
+
+bool CheckGZDoomSaveCompat(FString &engine, FString &software)
+{
+	if(software.IndexOf("GZDoom g") == 0)
+	{
+		if(software.Len() < 11) return false; // GZDoom g????????
+
+		// GZDoom g4
+		int v0 = software[8] - '0';
+
+		//GZDoom g4.
+		// minsavever is 4556, so gzdoom 4.0.0, don't allow gzdoom g3.x, g5.x or g4x.y
+		if(v0 != 4 || software[9] != '.')
+		{
+			return false;
+		}
+
+		//GZDoom g4.#
+		int v1 = software[10] - '0';
+
+		if(software[11] >= '0' && software[11] <= '9')
+		{
+			//GZDoom g4.##
+			v1 = (v1 * 10) + (software[11] - '0');
+		}
+
+		if(v1 > 14)
+		{
+			return false; // GZDoom 4.15+, don't allow save import
+		}
+
+		if(v1 == 14)
+		{
+			if(software.Len() > 13)
+			{
+				//GZDoom g4.14.#
+				int v2 = software[13] - '0';
+				if(software.Len() > 14 && software[14] >= '0' && software[14] <= '9')
+				{
+					//GZDoom g4.14.##, don't allow
+					return false;
+				}
+				else if(v2 > 2)
+				{
+					//GZDoom g4.14.3+, don't allow
+					return false;
+				}
+				/*
+				else
+				{
+					//GZDoom g4.14.0 / GZDoom g4.14.1 / GZDoom g4.14.2, allow
+				}
+				*/
+			}
+			/*
+			else
+			{
+				//GZDoom g4.14.0, allow
+			}
+			*/
+		}
+		/*
+		else
+		{
+		//GZDoom g4.0.0 - GZDoom g4.13.2, allow
+		}
+		*/
+	}
+	else
+	{
+		return false;
+	}
+
+	return true;
+}
 
 void FSavegameManager::ReadSaveStrings()
 {
@@ -104,8 +168,26 @@ void FSavegameManager::ReadSaveStrings()
 						FString creationtime = arc.GetString("Creation Time");
 						FString uuid = arc.GetString("GameUUID");
 
+						TArray<FString> allowLoadIn;
 
-						if (engine.Compare(GAMESIG) != 0 || savever > SAVEVER)
+						if(arc.HasKey("AllowLoadIn"))
+						{
+							arc("AllowLoadIn", allowLoadIn);
+						}
+
+						#if LOAD_GZDOOM_4142_SAVES
+						FString software = arc.GetString("Software");
+
+						if(engine.Compare("GZDOOM") == 0)
+						{
+							if(!CheckGZDoomSaveCompat(engine, software))
+							{
+								continue;
+							}
+						}
+						else
+						#endif
+						if ((engine.CompareNoCase(GAMESIG) != 0 && allowLoadIn.FindNoCase(GAMESIG) == allowLoadIn.Size()) || savever > SAVEVER)
 						{
 							// different engine or newer version:
 							// not our business. Leave it alone.

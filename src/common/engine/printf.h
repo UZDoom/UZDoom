@@ -1,3 +1,27 @@
+/*
+** printf.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2006-2016 Marisa Heit
+** Copyright 2010-2016 Christoph Oelckers
+** Copyright 2020-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 #include <stdarg.h>
 
@@ -51,7 +75,7 @@ extern "C" int myvsnprintf(char* buffer, size_t count, const char* format, va_li
 #define TEXTCOLOR_TEAMCHAT		"\034!"
 
 // game print flags
-enum
+enum PrintFlag
 {
 	PRINT_LOW,		// pickup messages
 	PRINT_MEDIUM,	// death messages
@@ -65,9 +89,12 @@ enum
 	PRINT_NOLOG = 2048,		// Flag - do not print to log file
 	PRINT_NOTIFY = 4096,	// Flag - add to game-native notify display - messages without this only go to the generic notification buffer.
 	PRINT_NODAPEVENT = 8192, // Flag - do not emit the message as DAP debugger output.
+	PRINT_NOCONSOLE = 16384,// Flag - Don't add to console
+
+	PRINT_NOLOGCONSOLE = PRINT_NOLOG|PRINT_NOCONSOLE,
 };
 
-enum
+enum DPrintLevel
 {
 	DMSG_OFF,		// no developer messages.
 	DMSG_ERROR,		// general notification messages
@@ -76,18 +103,18 @@ enum
 	DMSG_SPAMMY,	// for those who want to see everything, regardless of its usefulness.
 };
 
-
 [[noreturn]] void I_Error(const char *fmt, ...) ATTRIBUTE((format(printf,1,2)));
 [[noreturn]] void I_FatalError(const char* fmt, ...) ATTRIBUTE((format(printf, 1, 2)));
 
 // This really could need some cleanup - the main problem is that it'd create
 // lots of potential for merge conflicts.
 
-int PrintString (int iprintlevel, const char *outline);
-int VPrintf(int printlevel, const char* format, va_list parms);
-int Printf (int printlevel, const char *format, ...) ATTRIBUTE((format(printf,2,3)));
+int PrintString (PrintFlag iprintlevel, const char *outline);
+int VPrintf(PrintFlag printlevel, const char* format, va_list parms);
+int Printf (PrintFlag printlevel, const char *format, ...) ATTRIBUTE((format(printf,2,3)));
 int Printf (const char *format, ...) ATTRIBUTE((format(printf,1,2)));
-int DPrintf (int level, const char *format, ...) ATTRIBUTE((format(printf,2,3)));
+int DPrintf (DPrintLevel level, PrintFlag printlevel, const char *format, ...) ATTRIBUTE((format(printf,3,4)));
+int DPrintf (DPrintLevel level, const char *format, ...) ATTRIBUTE((format(printf,2,3)));
 
 void I_DebugPrint(const char* cp);
 void I_DebugPrintf(const char* fmt, ...);	// Prints to the debugger's log.

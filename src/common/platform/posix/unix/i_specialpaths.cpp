@@ -1,94 +1,99 @@
 /*
 ** i_specialpaths.cpp
+**
 ** Gets special system folders where data should be stored. (Unix version)
 **
 **---------------------------------------------------------------------------
-** Copyright 2013-2016 Randy Heit
+**
+** Copyright 2013-2016 Marisa Heit
 ** Copyright 2016 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
 #include <sys/stat.h>
 #include <sys/types.h>
-#include "i_system.h"
-#include "cmdlib.h"
-#include "printf.h"
-#include "engineerrors.h"
 
-#include "version.h"	// for GAMENAME
+#include "cmdlib.h"
+#include "engineerrors.h"
+#include "printf.h"
+#include "version.h"
+#include "zstring.h"
 
 extern bool netgame;
 
+#ifdef __APPLE
+#define DEFGETPATH(name, var, fallback) \
+	const char * Get##name##Path()      \
+	{                                   \
+		return fallback;                \
+	}
+#else
+#define DEFGETPATH(name, var, fallback) \
+	const char * Get##name##Path()      \
+	{                                   \
+		static const char *path;        \
+		static bool tested;             \
+		if (!tested)                    \
+		{                               \
+			path = getenv(var);         \
+			tested = true;              \
+			if (!path) path = fallback; \
+		}                               \
+		return path;                    \
+	}
+#endif
+#ifdef __HAIKU__
+DEFGETPATH(Config, "XDG_CONFIG_HOME", "$HOME/config/settings");
+DEFGETPATH(Cache, "XDG_CACHE_HOME", "$HOME/config/cache");
+DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/config/non-packaged/data");
+#else
+DEFGETPATH(Config, "XDG_CONFIG_HOME", "$HOME/.config");
+DEFGETPATH(Cache, "XDG_CACHE_HOME", "$HOME/.cache");
+DEFGETPATH(Data, "XDG_DATA_HOME", "$HOME/.local/share");
+DEFGETPATH(Pictures, "XDG_PICTURES_DIR", "$HOME/Pictures");
+#endif
+#undef DEFGETPATH
 
 FString GetUserFile (const char *file)
 {
-	FString path;
 	struct stat info;
 
-	path = NicePath("$HOME/" GAME_DIR "/");
+	FString path = FStringf("%s/" GAMENAMELOWERCASE "/", GetConfigPath());
+	path = NicePath(path.GetChars());
 
 	if (stat (path.GetChars(), &info) == -1)
 	{
 		struct stat extrainfo;
 
 		// Sanity check for $HOME/.config
-		FString configPath = NicePath("$HOME/.config/");
+		FString configPath = NicePath(GetConfigPath());
 		if (stat (configPath.GetChars(), &extrainfo) == -1)
 		{
 			if (mkdir (configPath.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
 			{
-				I_FatalError ("Failed to create $HOME/.config directory:\n%s", strerror(errno));
+				I_FatalError ("Failed to create %s directory:\n%s", GetConfigPath(), strerror(errno));
 			}
 		}
 		else if (!S_ISDIR(extrainfo.st_mode))
 		{
-			I_FatalError ("$HOME/.config must be a directory");
+			I_FatalError ("%s must be a directory", GetConfigPath());
 		}
 
-		// This can be removed after a release or two
-		// Transfer the old zdoom directory to the new location
-		bool moved = false;
-		FString oldpath = NicePath("$HOME/." GAMENAMELOWERCASE "/");
-		if (stat (oldpath.GetChars(), &extrainfo) != -1)
+		if (mkdir (path.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
 		{
-			if (rename(oldpath.GetChars(), path.GetChars()) == -1)
-			{
-				I_Error ("Failed to move old " GAMENAMELOWERCASE " directory (%s) to new location (%s).",
-					oldpath.GetChars(), path.GetChars());
-			}
-			else
-				moved = true;
-		}
-
-		if (!moved && mkdir (path.GetChars(), S_IRUSR | S_IWUSR | S_IXUSR) == -1)
-		{
-			I_FatalError ("Failed to create %s directory:\n%s",
-				path.GetChars(), strerror (errno));
+			I_FatalError ("Failed to create %s directory:\n%s", path.GetChars(), strerror (errno));
 		}
 	}
 	else
@@ -112,9 +117,9 @@ FString GetUserFile (const char *file)
 
 FString M_GetAppDataPath(bool create)
 {
-	// Don't use GAME_DIR and such so that ZDoom and its child ports can
-	// share the node cache.
-	FString path = NicePath("$HOME/.config/" GAMENAMELOWERCASE);
+	static FString path = FStringf("%s/games/" GAMENAMELOWERCASE, GetDataPath());
+	path = NicePath(path.GetChars());
+
 	if (create)
 	{
 		CreatePath(path.GetChars());
@@ -126,15 +131,16 @@ FString M_GetAppDataPath(bool create)
 //
 // M_GetCachePath														Unix
 //
-// Returns the path for cache GL nodes.
+// Returns the path for cache
 //
 //===========================================================================
 
-FString M_GetCachePath(bool create)
+FString M_GetCachePath(bool create, FString ns)
 {
-	// Don't use GAME_DIR and such so that ZDoom and its child ports can
-	// share the node cache.
-	FString path = NicePath("$HOME/.config/zdoom/cache");
+	FString path = GetCachePath();
+
+	path += "/doom/" + ns;
+	path = NicePath(path.GetChars());
 	if (create)
 	{
 		CreatePath(path.GetChars());
@@ -172,6 +178,24 @@ FString M_GetConfigPath(bool for_reading)
 
 //===========================================================================
 //
+// M_GetDocumentsPath												Unix
+//
+// Returns the path to the default documents directory.
+//
+//===========================================================================
+
+FString M_GetDocumentsPath()
+{
+#ifdef __HAIKU__
+	return FStringf("%s/" GAMENAMELOWERCASE "/", GetConfigPath());
+#else
+	return M_GetAppDataPath(false) + "/";
+#endif
+}
+
+
+//===========================================================================
+//
 // M_GetScreenshotsPath													Unix
 //
 // Returns the path to the default screenshots directory.
@@ -180,7 +204,13 @@ FString M_GetConfigPath(bool for_reading)
 
 FString M_GetScreenshotsPath()
 {
-	return NicePath("$HOME/" GAME_DIR "/screenshots/");
+#ifdef __HAIKU__
+	static FString path = M_GetDocumentsPath() + "screenshots";
+#else
+	static FString path = FStringf("%s/Screenshots/" GAMENAME, GetPicturesPath());
+#endif
+	path = NicePath(path.GetChars());
+	return path;
 }
 
 //===========================================================================
@@ -193,23 +223,10 @@ FString M_GetScreenshotsPath()
 
 FString M_GetSavegamesPath()
 {
-	FString pName = "$HOME/" GAME_DIR "/savegames/";
 	if (netgame)
-		pName << "netgame/";
-	return NicePath(pName.GetChars());
-}
-
-//===========================================================================
-//
-// M_GetDocumentsPath												Unix
-//
-// Returns the path to the default documents directory.
-//
-//===========================================================================
-
-FString M_GetDocumentsPath()
-{
-	return NicePath("$HOME/" GAME_DIR "/");
+		return M_GetDocumentsPath() + "savegames/netgame/";
+	else
+		return M_GetDocumentsPath() + "savegames/";
 }
 
 //===========================================================================
@@ -240,6 +257,6 @@ FString M_GetNormalizedPath(const char* path)
 	if (!actualpath) // error ?
 		return nullptr;
 	FString fullpath = actualpath;
+	// free(actualpath); // this needs to be freed, I think
 	return fullpath;
 }
-

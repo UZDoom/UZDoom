@@ -1,3 +1,28 @@
+/*
+** i_system.h
+**
+** Timers, pre-console output, IWAD selection, and misc system routines.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2007-2012 Skulltag Development Team
+** Copyright 2007-2016 Zandronum Development Team
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: LicenseRef-Almost-Sleepycat
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef __I_SYSTEM__
 #define __I_SYSTEM__
 
@@ -45,7 +70,7 @@ bool I_WriteIniFailed (const char* filename);
 
 // [RH] Checks the registry for Steam's install path, so we can scan its
 // directories for IWADs if the user purchased any through Steam.
-TArray<FString> I_GetSteamPath();
+FString I_GetSteamPath();
 
 // [GZ] Same deal for GOG paths
 TArray<FString> I_GetGogPaths();

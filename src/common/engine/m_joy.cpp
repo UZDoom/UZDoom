@@ -5,33 +5,18 @@
 **
 **---------------------------------------------------------------------------
 **
-** Copyright 2005-2016 Randy Heit
+** Copyright 2005-2016 Marisa Heit
+** Copyright 2007-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
 **
 **---------------------------------------------------------------------------
 **
@@ -41,6 +26,7 @@
 
 #include <math.h>
 
+#include "basics.h"
 #include "c_cvars.h"
 #include "c_dispatch.h"
 #include "cmdlib.h"
@@ -50,6 +36,7 @@
 #include "m_joy.h"
 #include "name.h"
 #include "printf.h"
+#include "tarray.h"
 #include "vectors.h"
 #include "zstring.h"
 
@@ -641,9 +628,11 @@ int Joy_XYAxesToButtons(double x, double y)
 // behavior (such as cross shaped deadzones, sluggish input response when
 // pressing diagonally, so on).
 //
+// returns if threshold is crossed
+//
 //===========================================================================
 
-double Joy_ManageThumbstick(
+bool Joy_ManageThumbstick(
 	double *axis_x, double *axis_y,
 	double deadzone_x, double deadzone_y,
 	double threshold_x, double threshold_y,
@@ -653,63 +642,151 @@ double Joy_ManageThumbstick(
 	double ret_x = *axis_x;
 	double ret_y = *axis_y;
 
-	double x_abs = abs(*axis_x);
-	double y_abs = abs(*axis_y);
-	double magnitude = sqrt((x_abs * x_abs) + (y_abs * y_abs));
+	const double x_abs = abs(ret_x);
+	const double y_abs = abs(ret_y);
 
-	double ret_dist = 0;
-	uint8_t ret_butt = 0;
+	const double magnitude = sqrt((x_abs * x_abs) + (y_abs * y_abs));
 
-	double xy_lerp = 0.5;
-	if (magnitude > 0)
-	{
-		// Later it would be nice to have a single deadzone / threshold / curve setting
-		// for the whole thumbstick instead of awkwardly trying to combine them, but
-		// that requires re-considering how axes are exposed to the rest of the engine.
-		// This will do for now.
-		xy_lerp = abs(cos(atan2(ret_y, ret_x)));
+	if (isnan(magnitude) || magnitude <= 0) {
+		*axis_x = *axis_y = 0;
+		if (buttons) *buttons = 0;
+		return false;
 	}
 
-	double deadzone = (xy_lerp * deadzone_x) + ((1.0 - xy_lerp) * deadzone_y);
+	bool ret_value = true;
+	uint8_t ret_buttons = 0;
+
+	// 1 is pure X, 0 is pure Y
+	double x_bias = x_abs / (x_abs + y_abs);
+
+	// Later it would be nice to have a single deadzone / threshold / curve setting
+	// for the whole thumbstick instead of awkwardly trying to combine them, but
+	// that requires re-considering how axes are exposed to the rest of the engine.
+	// This will do for now.
+    const double deadzone = (x_bias * deadzone_x) + ((1.0 - x_bias) * deadzone_y);
+
 	if (magnitude < deadzone)
 	{
 		ret_x = 0;
 		ret_y = 0;
+		ret_value = false;
 	}
 	else
 	{
 		// Make the dead zone the new 0.
-		ret_dist = (magnitude - deadzone) / (1.0 - deadzone);
+		double scaled = (magnitude - deadzone) / (1.0 - deadzone);
+		if (!isfinite(scaled)) scaled = 1.0;
 
 		const CubicBezier curve = {{
-			(float)((xy_lerp * curve_x.x1) + ((1.0 - xy_lerp) * curve_y.x1)),
-			(float)((xy_lerp * curve_x.y1) + ((1.0 - xy_lerp) * curve_y.y1)),
-			(float)((xy_lerp * curve_x.x2) + ((1.0 - xy_lerp) * curve_y.x2)),
-			(float)((xy_lerp * curve_x.y2) + ((1.0 - xy_lerp) * curve_y.y2))
+			(float)std::lerp((double) curve_y.x1, (double) curve_x.x1, x_bias),
+			(float)std::lerp((double) curve_y.y1, (double) curve_x.y1, x_bias),
+			(float)std::lerp((double) curve_y.x2, (double) curve_x.x2, x_bias),
+			(float)std::lerp((double) curve_y.y2, (double) curve_x.y2, x_bias),
 		}};
 
-		ret_dist = Joy_ApplyResponseCurveBezier(curve, ret_dist);
+		scaled = Joy_ApplyResponseCurveBezier(curve, scaled);
 
-		ret_x = (ret_x / magnitude) * ret_dist;
-		ret_y = (ret_y / magnitude) * ret_dist;
+		ret_x = (ret_x / magnitude) * scaled;
+		ret_y = (ret_y / magnitude) * scaled;
 
-		double threshold = (xy_lerp * threshold_x) + ((1.0 - xy_lerp) * threshold_y);
-		if (ret_dist >= threshold)
+		const double threshold = (x_bias * threshold_x) + ((1.0 - x_bias) * threshold_y);
+		if (scaled >= threshold)
 		{
-			ret_butt = Joy_XYAxesToButtons(ret_x, ret_y);
+			ret_buttons = Joy_XYAxesToButtons(ret_x, ret_y);
 		}
 	}
 
 	*axis_x = ret_x;
 	*axis_y = ret_y;
 
-	if (buttons != NULL)
+	if (buttons) *buttons = ret_buttons;
+
+	return ret_value;
+}
+
+#ifdef _DEBUG
+CCMD(debug_joystick_curves)
+{
+	constexpr auto radial_steps = 360;
+	constexpr auto magnitude_steps = 100;
+	constexpr auto deadzone = 0.1;
+	constexpr auto threshold = 0.5;
+
+	auto quad = [](double a) {
+		int q = (int)floor((a + M_PI/8.0) / (M_PI/4.0));
+		return (q + 8) % 8;
+	};
+
+	TArray<FString> failed;
+
+	auto fail = [&failed](int c, double x, double y) { failed.Push(FStringf("c %d x %g y %g", c, x, y)); };
+
+	for (auto c = 0; c < NUM_JOYCURVE; c++)
 	{
-		*buttons = ret_butt;
+		for (auto a = 0; a < radial_steps; a++)
+		{
+			int lq = -1;
+			double lm = -1;
+
+			for (auto m = 0; m < magnitude_steps; m++)
+			{
+				double a1 = (a*M_PI*2.0)/radial_steps;
+				double m1 = m / (magnitude_steps - 1.0);
+				int q1 = quad(a1);
+
+				double x1 = cos(a1) * m1;
+				double y1 = sin(a1) * m1;
+
+				double x2 = x1, y2 = y1;
+				uint8_t buttons;
+
+				bool crossed = Joy_ManageThumbstick(
+					&x2, &y2,
+					deadzone, deadzone, threshold, threshold,
+					JOYCURVE[c], JOYCURVE[c],
+					&buttons
+				);
+
+				double a2 = atan2(y2, x2);
+				if (a2 < 0) a2 += M_PI * 2;
+				double m2 = sqrt(x2*x2 + y2*y2);
+				int q2 = quad(a2);
+
+				Printf("a %0.2f m %0.2f x %0.2f y %0.2f q %d c %d\n", a1, m1, x1, y1, q1, c);
+
+				if (lq < 0) lq = q1;
+				if (lm < 0) lm = m2;
+
+				if (!crossed)
+				{
+					if (buttons)
+					{
+						Printf("! b %d\n", buttons);
+						fail(c, x1, y1);
+					}
+					continue;
+				}
+
+				Printf(
+					"  x %0.2f y %0.2f q %d\n"
+					"  b %hx a %0.2f m %0.2f\n",
+					x2, y2, q2,
+					buttons, a2, m2
+				);
+
+				bool f = false;
+				if (q2 != lq) { f = true; Printf("! q\n"); };
+				if (m2 < lm) { f = true; Printf("! m\n"); };
+				if (f) fail(c, x1, y1);
+			}
+		}
 	}
 
-	return ret_dist;
+	Printf("%s\n", failed.Size() == 0? "ok": "failed:");
+	for (auto f: failed)
+		Printf("! %s\n", f.GetChars());
 }
+#endif
 
 //===========================================================================
 //

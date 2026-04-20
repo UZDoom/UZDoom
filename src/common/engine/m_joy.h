@@ -1,3 +1,27 @@
+/*
+** m_joy.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2005-2016 Marisa Heit
+** Copyright 2007-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef M_JOY_H
 #define M_JOY_H
 
@@ -107,7 +131,7 @@ void Joy_GenerateButtonEvents(int oldbuttons, int newbuttons, int numbuttons, co
 double Joy_ApplyResponseCurveBezier(const CubicBezier &curve, double input);
 double Joy_ManageSingleAxis(double axisval, double deadzone, double threshold, const CubicBezier &curve, uint8_t *buttons);
 int Joy_XYAxesToButtons(double x, double y);
-double Joy_ManageThumbstick(double *axis_x, double *axis_y, double deadzone_x, double deadzone_y,
+bool Joy_ManageThumbstick(double *axis_x, double *axis_y, double deadzone_x, double deadzone_y,
 	double threshold_x, double threshold_y, const CubicBezier &curve_x, const CubicBezier &curve_y, uint8_t *buttons);
 
 

@@ -1,22 +1,22 @@
-/*****************************************************************************
- * Copyright (C) 1993-2024 id Software LLC, a ZeniMax Media company.
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- ****************************************************************************/
-
-/*****************************************************************************
- * id1 - decohack - tyrant
- ****************************************************************************/
-
-//converted from DECOHACK
+/*
+** id24tyrant.zs
+**
+** id1 - tyrant
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-2024 id Software LLC, a ZeniMax Media company.
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** converted from DECOHACK
+*/
 
 class ID24Tyrant : Cyberdemon
 {
@@ -78,14 +78,12 @@ class ID24Tyrant : Cyberdemon
 // minimum instead of the default 12, so Nightmare
 // sucks a bit less ;)
 
-// (this id24 feature isn't implemented yet!)
-
 class ID24TyrantBoss1 : ID24Tyrant
 {
 	Default
 	{
-		// RespawnTics 2100;
-		// RespawnDice 64;
+		MinRespawnTics 2100;
+		RespawnDice 64;
 	}
 }
 
@@ -93,7 +91,7 @@ class ID24TyrantBoss2 : ID24Tyrant
 {
 	Default
 	{
-		// RespawnTics 2100;
-		// RespawnDice 64;
+		MinRespawnTics 2100;
+		RespawnDice 64;
 	}
 }

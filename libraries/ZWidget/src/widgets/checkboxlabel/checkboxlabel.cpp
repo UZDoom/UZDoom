@@ -34,7 +34,7 @@ bool CheckboxLabel::GetChecked() const
 	return checked;
 }
 
-double CheckboxLabel::GetPreferredHeight() const
+double CheckboxLabel::GetPreferredHeight()
 {
 	return 20.0;
 }

@@ -1565,7 +1565,6 @@ int Instruments::set_default_instrument(char *name)
 {
 	Instrument *ip;
 	int i;
-	static char *last_name;
 
 	if (name == NULL)
 	{

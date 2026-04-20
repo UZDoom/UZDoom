@@ -1,46 +1,47 @@
 name: Bug Report
-description: File a Bug report
-title: '[BUG] '
+description: File a bug report for this project.
 labels: bug/bugfix
 type: bug
-#assignees: 'anonymous@temp'
 
 body:
   - type: markdown
     attributes:
       value: |
-        ## Please fill out forms as cleanly as possible.
-        #### Make sure that you have
-        * properly edited & filled in the title of this bug report
+        ## Please fill out this form as clearly as possible.
+        #### Make sure that you have:
+        * Properly described the bug in your title.
+        * Given accurate software and hardware specifications where applicable.
+        * Given a concise explanation of the bug alongside any steps to reproduce it.
+        * Included any relevant logs and configuration files.
   - type: input
     id: version
     attributes:
-      label: UZDoom version
+      label: UZDoom Version
       description: |
         What version are you using?
         Run `uzdoom --version` or check in the console in game.
-        Make sure to update to latest [release](https://github.com/UZDoom/UZDoom/releases) version and test again before continuing.
-      placeholder: "ex: UZDoom 4.0.0, Git version, Branch, other"
+        Make sure to update to the latest [release](https://github.com/UZDoom/UZDoom/releases) version and test again before continuing.
+      placeholder: "UZDoom 4.0.0, git version, branch name, etc."
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: gameid
     attributes:
-      label: Which game are you running with UZDoom?
+      label: Game
+      description: Which game does your bug apply to?
       multiple: false
       options:
+        - All
         - Doom
-        - Doom 2
         - Heretic
         - Hexen
         - Strife
-        - Other
-    validations:
-      required: false
+      default: 0
   - type: dropdown
     id: OS
     attributes:
-      label: What Operating System are you using?
+      label: Operating System
+      description: What operating system are you using?
       multiple: false
       options:
         - Windows 11
@@ -49,73 +50,65 @@ body:
         - Linux x86_64
         - Linux ARM
         - Other
-    validations:
-      required: false
+      default: 0
   - type: input
     id: os_detail
     attributes:
-      label: Please describe your specific OS version
-      description: Other details
-      placeholder: "Windows 11 Home/Pro/Server/etc, Mac OSX version, Debian 10/11/etc, Ubuntu 18/20/etc, Arch, etc."
+      label: OS Version
+      description: What is your specific operating system version?
+      placeholder: "Windows 11 Home/Pro/Server, Mac OSX version, Debian 10/11, Ubuntu 18/20, Arch, etc."
     validations:
       required: false
   - type: input
     id: hardware
     attributes:
-      label: Relevant hardware info
-      description: Hardware
-      placeholder: "CPU, GPU, device brand/model: e.g. Intel, AMD, Nvidia, etc"
+      label: Hardware
+      description: What hardware does your computer have?
+      placeholder: "CPU, GPU, device brand/model: Intel, AMD, Nvidia, etc"
     validations:
       required: false
   - type: checkboxes
     id: checked
     attributes:
-      label: Have you checked that no other similar issue already exists?
-      description: Searched issues before creating report?
+      label: Duplicate Confirmation
+      description: Have you checked that no other similar issue already exists?
       options:
-        - label: I have searched and not found similar issues.
+        - label: I have searched and not found a similar issue.
           required: true
   - type: textarea
     id: description
     attributes:
-      label: A clear and concise description of what the bug is.
-      description: Describe what happens, what software were you running? _Include a small mod demonstrating the bug, or a screenshot if possible_
-      placeholder: "How & When does this occur?"
+      label: Bug Description
+      description: Describe what happens when the bug occurs e.g. if the game crashes, unexpected behaviors, etc. _Include a screenshot if possible._
+      placeholder: "The game crashes when..."
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce the behaviour.
-      description: How can we reproduce this?
-      placeholder: "Explain how to reproduce"
-      value: |
-        Explain how to reproduce
-        1. 
-        2.
-        3.
+      label: Replication
+      description: What are the steps to reproduce this bug? _Include a small mod demonstrating the bug if possible._
+      placeholder: "1. Start by..."
     validations:
       required: false
   - type: textarea
     id: config_file
     attributes:
-      label: Your configuration
+      label: Configuration
       description: |
-        Share the config file(s) you've been using to run the program. (`uzdoom.ini`) 
-        Please avoid pasting the full config, _use attachments or links_ in a [Gist](https://gist.github.com/)
-      placeholder: "example: cl_autorun=true"
+        Share the config file(s) you've been using to run the program (`uzdoom.ini`).
+        Please avoid pasting the full config, _use attachments or links_ in a [Gist](https://gist.github.com/).
+      placeholder: "Example: cl_autorun=true"
       render: ini # syntax highlighting
     validations:
       required: false
   - type: textarea
     id: log
     attributes:
-      label: Provide a Log
-      description: Please avoid pasting the full log, _use attachments or links_ in a [Gist](https://gist.github.com/)
-      placeholder: "Copy & paste error log section or provide link"
+      label: Log
+      description: |
+        Share the relevant log(s) here that were related to the bug.
+        Please avoid pasting the full log, _use attachments or links_ in a [Gist](https://gist.github.com/).
+      placeholder: "Copy and paste your error log section or provide a link."
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: |
-        * Make sure you have properly filled in the title of this bug report

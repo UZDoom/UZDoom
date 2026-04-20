@@ -1,0 +1,7 @@
+# iwyu mapping file for UZDoom
+# https://github.com/include-what-you-use/include-what-you-use/blob/master/docs/IWYUMappings.md
+
+[
+	# don't include the specific headers, just the superheader
+	{ "include": ["@<SDL2/SDL_.*.h>", "private", "<SDL2/SDL.h>", "public"] },
+]

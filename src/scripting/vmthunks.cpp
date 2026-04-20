@@ -1,32 +1,26 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 2016-2018 Christoph Oelckers
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// VM thunks for internal functions.
-//
-// Important note about this file: Since everything in here is supposed to be called
-// from JIT-compiled VM code it needs to be very careful about calling conventions.
-// As a result none of the integer sized struct types may be used as function
-// arguments, because current C++ calling conventions require them to be passed
-// by reference. The JIT code, however will pass them by value so any direct native function
-// taking such an argument needs to receive it as a naked int.
-//
-//-----------------------------------------------------------------------------
+/*
+** vmthunks.cpp
+**
+** VM thunks for internal functions.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2018 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Important note about this file:
+** Since everything in here is supposed to be called from JIT-compiled VM code,
+** it needs to be very careful about calling conventions. As a result none of
+** the integer sized struct types may be used as function arguments, because
+** current C++ calling conventions require them to be passed by reference.
+** The JIT code, however will pass them by value so any direct native function
+** taking such an argument needs to receive it as a naked int.
+*/
 
 #include <time.h>
 #include "vm.h"
@@ -1765,6 +1759,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
 	 PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
 	 PARAM_INT(skymist);
 	 PARAM_BOOL(usemist);
+	 PARAM_FLOAT(skymistyscale);
 	 self->skymisttexture = FSetTextureID(skymist);
 	 if (usemist)
 	 {
@@ -1774,6 +1769,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
 	 {
 		 self->flags3 &= ~LEVEL3_SKYMIST;
 	 }
+	 self->skymistyscale = clamp(skymistyscale, 0.002, 544.0);
 	 InitSkyMap(self);
 	 return 0;
  }
@@ -2673,7 +2669,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(FLevelLocals, setFrozen, setFrozen)
 	return 0;
 }
 
-static DThinker* CreateThinker(FLevelLocals* self, PClass* type, int statnum, bool clientSide)
+static DThinker* CreateThinker(FLevelLocals* self, PClass* type, int statnum)
 {
 	if (type->IsDescendantOf(NAME_Actor))
 	{
@@ -2686,7 +2682,7 @@ static DThinker* CreateThinker(FLevelLocals* self, PClass* type, int statnum, bo
 		return nullptr;
 	}
 
-	return clientSide ? self->CreateClientSideThinker(type, statnum) : self->CreateThinker(type, statnum);
+	return self->CreateThinker(type, statnum);
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(FLevelLocals, CreateThinker, CreateThinker)
@@ -2694,9 +2690,33 @@ DEFINE_ACTION_FUNCTION_NATIVE(FLevelLocals, CreateThinker, CreateThinker)
 	PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
 	PARAM_POINTER_NOT_NULL(type, PClass);
 	PARAM_INT(statnum);
-	PARAM_BOOL(clientSide);
 
-	ACTION_RETURN_OBJECT(CreateThinker(self, type, statnum, clientSide));
+	ACTION_RETURN_OBJECT(CreateThinker(self, type, statnum));
+}
+
+static DThinker* CreateClientSideThinker(FLevelLocals* self, PClass* type, int statnum)
+{
+	if (type->IsDescendantOf(NAME_Actor))
+	{
+		ThrowAbortException(X_OTHER, "Actors cannot be created from this function");
+		return nullptr;
+	}
+	else if (type->IsDescendantOf(NAME_VisualThinker))
+	{
+		ThrowAbortException(X_OTHER, "VisualThinkers cannot be created from this function");
+		return nullptr;
+	}
+
+	return self->CreateClientSideThinker(type, statnum);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FLevelLocals, CreateClientSideThinker, CreateClientSideThinker)
+{
+	PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
+	PARAM_POINTER_NOT_NULL(type, PClass);
+	PARAM_INT(statnum);
+
+	ACTION_RETURN_OBJECT(CreateClientSideThinker(self, type, statnum));
 }
 
 //=====================================================================================
@@ -2891,6 +2911,7 @@ DEFINE_FIELD_X(LevelInfo, level_info_t, musicorder)
 DEFINE_FIELD_X(LevelInfo, level_info_t, skyspeed1)
 DEFINE_FIELD_X(LevelInfo, level_info_t, skyspeed2)
 DEFINE_FIELD_X(LevelInfo, level_info_t, skymistspeed)
+DEFINE_FIELD_X(LevelInfo, level_info_t, skymistyscale)
 DEFINE_FIELD_X(LevelInfo, level_info_t, cdtrack)
 DEFINE_FIELD_X(LevelInfo, level_info_t, gravity)
 DEFINE_FIELD_X(LevelInfo, level_info_t, aircontrol)
@@ -2940,6 +2961,7 @@ DEFINE_FIELD(FLevelLocals, skymisttexture)
 DEFINE_FIELD(FLevelLocals, skyspeed1)
 DEFINE_FIELD(FLevelLocals, skyspeed2)
 DEFINE_FIELD(FLevelLocals, skymistspeed)
+DEFINE_FIELD(FLevelLocals, skymistyscale)
 DEFINE_FIELD(FLevelLocals, total_secrets)
 DEFINE_FIELD(FLevelLocals, found_secrets)
 DEFINE_FIELD(FLevelLocals, total_items)
@@ -3078,6 +3100,8 @@ DEFINE_FIELD(DBaseStatusBar, CPlayer);
 DEFINE_FIELD(DBaseStatusBar, ShowLog);
 DEFINE_FIELD(DBaseStatusBar, artiflashTick);
 DEFINE_FIELD(DBaseStatusBar, itemflashFade);
+DEFINE_FIELD(DBaseStatusBar, ScoreboardFont);
+DEFINE_FIELD(DBaseStatusBar, BigScoreboardFont);
 
 
 DEFINE_GLOBAL(StatusBar);

@@ -1,63 +1,39 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2016 Magnus Norddahl
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
+/*
+** r_scene.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2016 Magnus Norddahl
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
-#include <stdlib.h>
-#include <float.h>
-
-
-#include "v_draw.h"
-#include "filesystem.h"
-#include "doomdef.h"
-#include "doomstat.h"
-#include "r_sky.h"
-#include "stats.h"
-#include "v_video.h"
-#include "a_sharedglobal.h"
-#include "c_console.h"
 #include "c_dispatch.h"
-#include "cmdlib.h"
+#include "basics.h"
 #include "d_net.h"
-#include "g_level.h"
+#include "doomstat.h"
 #include "p_effect.h"
-#include "po_man.h"
-#include "st_stuff.h"
-#include "r_data/r_interpolate.h"
-#include "swrenderer/scene/r_scene.h"
-#include "swrenderer/scene/r_light.h"
-#include "swrenderer/scene/r_3dfloors.h"
-#include "swrenderer/scene/r_opaque_pass.h"
-#include "swrenderer/scene/r_translucent_pass.h"
-#include "swrenderer/scene/r_portal.h"
-#include "swrenderer/segments/r_clipsegment.h"
-#include "swrenderer/segments/r_drawsegment.h"
-#include "swrenderer/segments/r_portalsegment.h"
-#include "swrenderer/plane/r_visibleplanelist.h"
-#include "swrenderer/viewport/r_viewport.h"
-#include "swrenderer/drawers/r_draw.h"
-#include "swrenderer/drawers/r_draw_rgba.h"
 #include "r_thread.h"
-#include "r_memory.h"
-#include "swrenderer/r_renderthread.h"
-#include "swrenderer/things/r_playersprite.h"
-#include <chrono>
+#include "stats.h"
+#include "swrenderer/scene/r_3dfloors.h"
+#include "swrenderer/scene/r_light.h"
+#include "swrenderer/scene/r_portal.h"
+#include "swrenderer/scene/r_scene.h"
+#include "swrenderer/scene/r_translucent_pass.h"
+#include "swrenderer/segments/r_clipsegment.h"
+#include "swrenderer/segments/r_portalsegment.h"
+#include "swrenderer/viewport/r_viewport.h"
+#include "v_draw.h"
+#include "v_video.h"
 
 EXTERN_CVAR(Int, r_clearbuffer)
 EXTERN_CVAR(Int, r_debug_draw)
@@ -300,7 +276,7 @@ namespace swrenderer
 			std::unique_ptr<RenderThread> thread(new RenderThread(this, false));
 			auto renderthread = thread.get();
 			int start_run_id = run_id;
-			thread->thread = std::thread([=]()
+			thread->thread = std::thread([=,this]()
 			{
 				int last_run_id = start_run_id;
 				while (true)

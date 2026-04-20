@@ -9,6 +9,7 @@
 #include <initializer_list>
 #include <memory>
 #include <utility>
+#include <iterator>
 
 namespace beneficii {
     
@@ -19,8 +20,8 @@ namespace beneficii {
             
             typedef range_map<_kty, _ty, _compare, _alloc_type> _myt;
             typedef _range_node<_kty, _ty> _node;
-            typedef typename _alloc_type::template rebind<_node>::other _node_allocator;
-            typedef typename _node_allocator::pointer _nodeptr;
+            typedef std::allocator_traits<_alloc_type>::template rebind_alloc<_node> _node_allocator;
+            typedef std::allocator_traits<_node_allocator>::pointer _nodeptr;
         
         public:
             
@@ -29,9 +30,9 @@ namespace beneficii {
             typedef _compare key_compare;
             typedef _alloc_type allocator_type;
             typedef range_map_item<_kty, _ty> range_type;
-            typedef typename _node::_point value_type;
-            typedef typename allocator_type::size_type size_type;
-            typedef typename allocator_type::difference_type difference_type;
+            typedef _node::_point value_type;
+            typedef allocator_type::size_type size_type;
+            typedef allocator_type::difference_type difference_type;
             typedef value_type* pointer;
             typedef const value_type* const_pointer;
             typedef value_type& reference;
@@ -65,7 +66,7 @@ namespace beneficii {
             //COMP = comparator object
             //ALLOC = allocator object
             range_map(const key_compare& _comp, allocator_type _alloc) : _comp(_comp),
-                    _alloc(_node_allocator(_alloc)), _root(new _nodeptr(nullptr), _cur_size(0)) {}
+                    _alloc(_node_allocator(_alloc)), _root(new _nodeptr(nullptr)), _cur_size(0) {}
             
             //copy constructor
             //RGT = container to be copied
@@ -634,7 +635,7 @@ namespace beneficii {
             
             // for internal use, to construct/destroy a range
             allocator_type& _range_alloc() {
-                return *(allocator_type*)(&_alloc);
+                return *reinterpret_cast<allocator_type *>(&_alloc);
             }
             
             // creates node, setting up everything except range
@@ -653,8 +654,8 @@ namespace beneficii {
                     //in the next couple functions.
                     _reset_node(_ret);
                     _ret->_subtree = nullptr;
-                    _ret->_end = (void*) _alloc.address(*_ret);
-                    _ret->_start = (void*) _alloc.address(*_ret);
+                    _ret->_end = static_cast<void *>(std::addressof(*_ret));
+                    _ret->_start = static_cast<void *>(std::addressof(*_ret));
                 }
                 return _ret;
             }
@@ -665,7 +666,7 @@ namespace beneficii {
             // uses pointer to range_type object, not node object, to construct
             // the range in the right place in memory.
             void _construct_range(_nodeptr _n, const range_type& _arg) {
-                _range_alloc().construct(&_n->_range, _arg);
+                std::allocator_traits<allocator_type>::construct(_range_alloc(), &_n->_range, _arg);
             }
             
             // constructs range in node by any other set of arguments (incl. move construct)
@@ -675,7 +676,7 @@ namespace beneficii {
             // the range in the right place in memory.
             template<class ..._args> 
             void _construct_range(_nodeptr _n, _args&&... _arg) {
-                _range_alloc().construct(&_n->_range, std::forward<_args>(_arg)...);
+                std::allocator_traits<allocator_type>::construct(_range_alloc(), &_n->_range, std::forward<_args>(_arg)...);
             }
             
             // copies container range by range
@@ -709,7 +710,7 @@ namespace beneficii {
             // destroys the range_type object in the node object and deallocates
             // the node object's memory
             void _delete_node(_nodeptr _n) {
-                _range_alloc().destroy(&_n->_range);
+                std::allocator_traits<allocator_type>::destroy(_range_alloc(), &_n->_range);
                 _alloc.deallocate(_n, 1);
             }
             

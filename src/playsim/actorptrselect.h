@@ -1,3 +1,26 @@
+/*
+** actorptrselect.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2011 FDARI
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 //==========================================================================
@@ -51,6 +74,13 @@ enum AAPTR
 
 };
 
+enum EPTRClientSideState
+{
+	CSPTR_IGNORE = -1,
+	CSPTR_SERVER,
+	CSPTR_CLIENTSIDE,
+};
+
 /*
 	COPY_AAPTR
 
@@ -66,7 +96,7 @@ enum AAPTR
 
 struct FLevelLocals;
 AActor *COPY_AAPTR(AActor *origin, int selector);
-AActor *COPY_AAPTREX(FLevelLocals *Level, AActor *origin, int selector);
+AActor *COPY_AAPTREX(FLevelLocals *Level, AActor *origin, int selector, EPTRClientSideState clientSide);
 enum PTROP
 {
 	PTROP_UNSAFETARGET = 1,

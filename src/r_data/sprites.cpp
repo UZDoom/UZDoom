@@ -1,24 +1,21 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2005-2016 Christoph Oelckers
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
+/*
+** sprites.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2005-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 
 #include "doomtype.h"
@@ -417,10 +414,11 @@ void R_InitSpriteDefs ()
 			auto tex = TexMan.GetGameTexture(hash);
 			if (TEX_DWNAME(tex) == intname)
 			{
-				bool res = R_InstallSpriteLump (FTextureID(hash), tex->GetName()[4] - 'A', tex->GetName()[5], false, sprtemp, maxframe);
+				if(tex->GetName().Len() < 5) I_Error("Sprite name incomplete");
+				bool res = R_InstallSpriteLump (FTextureID(hash), tex->GetName()[4] - 'A', tex->GetName().Len() >= 6 ? tex->GetName()[5] : 0, false, sprtemp, maxframe);
 
-				if (tex->GetName()[6] && res)
-					R_InstallSpriteLump (FTextureID(hash), tex->GetName()[6] - 'A', tex->GetName()[7], true, sprtemp, maxframe);
+				if (tex->GetName().Len() >= 7 && tex->GetName()[6] && res)
+					R_InstallSpriteLump (FTextureID(hash), tex->GetName()[6] - 'A', tex->GetName().Len() >= 8 ? tex->GetName()[7] : 0, true, sprtemp, maxframe);
 			}
 			hash = hashes[hash].Next;
 		}

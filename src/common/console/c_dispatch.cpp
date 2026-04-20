@@ -1,33 +1,23 @@
 /*
 ** c_dispatch.cpp
+**
 ** Functions for executing console commands and aliases
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2007 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -51,6 +41,7 @@
 #include "c_buttons.h"
 #include "findfile.h"
 #include "gstrings.h"
+#include <array>
 
 // MACROS ------------------------------------------------------------------
 
@@ -161,7 +152,7 @@ void C_ClearDelayedCommands()
 
 // PRIVATE FUNCTION PROTOTYPES ---------------------------------------------
 
-static FConsoleCommand *FindNameInHashTable (FConsoleCommand **table, const char *name, size_t namelen);
+static FConsoleCommand *FindNameInHashTable (std::array<FConsoleCommand*, FConsoleCommand::hash_size>& table, const char *name, size_t namelen);
 static FConsoleCommand *ScanChainForName (FConsoleCommand *start, const char *name, size_t namelen, FConsoleCommand **prev);
 
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
@@ -170,7 +161,7 @@ static FConsoleCommand *ScanChainForName (FConsoleCommand *start, const char *na
 bool ParsingKeyConf, UnsafeExecutionContext;
 FString StoredWarp;
 
-FConsoleCommand* Commands[FConsoleCommand::HASH_SIZE];
+std::array<FConsoleCommand*, FConsoleCommand::hash_size> Commands;
 
 
 // PRIVATE DATA DEFINITIONS ------------------------------------------------
@@ -419,7 +410,7 @@ static FConsoleCommand *ScanChainForName (FConsoleCommand *start, const char *na
 		comp = start->m_Name.CompareNoCase(name, namelen);
 		if (comp > 0)
 			return NULL;
-		else if (comp == 0 && start->m_Name[namelen] == 0)
+		else if (comp == 0 && (start->m_Name.Len() == namelen || start->m_Name[namelen] == 0))
 			return start;
 
 		*prev = start;
@@ -428,20 +419,20 @@ static FConsoleCommand *ScanChainForName (FConsoleCommand *start, const char *na
 	return NULL;
 }
 
-static FConsoleCommand *FindNameInHashTable (FConsoleCommand **table, const char *name, size_t namelen)
+static FConsoleCommand *FindNameInHashTable (std::array<FConsoleCommand*, FConsoleCommand::hash_size>& table, const char *name, size_t namelen)
 {
 	FConsoleCommand *dummy;
 
-	return ScanChainForName (table[MakeKey (name, namelen) % FConsoleCommand::HASH_SIZE], name, namelen, &dummy);
+	return ScanChainForName (table[MakeKey (name, namelen) % FConsoleCommand::hash_size], name, namelen, &dummy);
 }
 
-bool FConsoleCommand::AddToHash (FConsoleCommand **table)
+bool FConsoleCommand::AddToHash (std::array<FConsoleCommand*, FConsoleCommand::hash_size>& table)
 {
 	unsigned int key;
 	FConsoleCommand *insert, **bucket;
 
 	key = MakeKey (m_Name.GetChars());
-	bucket = &table[key % HASH_SIZE];
+	bucket = &table[key % hash_size];
 
 	if (ScanChainForName (*bucket, m_Name.GetChars(), m_Name.Len(), &insert))
 	{
@@ -680,12 +671,12 @@ FString SubstituteAliasParams (FString &command, FCommandLine &args)
 	return buf;
 }
 
-static int DumpHash (FConsoleCommand **table, bool aliases, const char *pattern=NULL)
+static int DumpHash (std::array<FConsoleCommand*, FConsoleCommand::hash_size>& table, bool aliases, const char *pattern=NULL)
 {
 	int bucket, count;
 	FConsoleCommand *cmd;
 
-	for (bucket = count = 0; bucket < FConsoleCommand::HASH_SIZE; bucket++)
+	for (bucket = count = 0; bucket < FConsoleCommand::hash_size; bucket++)
 	{
 		cmd = table[bucket];
 		while (cmd)
@@ -738,7 +729,7 @@ void C_ArchiveAliases (FConfigFile *f)
 	int bucket;
 	FConsoleCommand *alias;
 
-	for (bucket = 0; bucket < FConsoleCommand::HASH_SIZE; bucket++)
+	for (bucket = 0; bucket < FConsoleCommand::hash_size; bucket++)
 	{
 		alias = Commands[bucket];
 		while (alias)
@@ -755,7 +746,7 @@ void C_ClearAliases ()
 	int bucket;
 	FConsoleCommand *alias;
 
-	for (bucket = 0; bucket < FConsoleCommand::HASH_SIZE; bucket++)
+	for (bucket = 0; bucket < FConsoleCommand::hash_size; bucket++)
 	{
 		alias = Commands[bucket];
 		while (alias)
@@ -779,7 +770,7 @@ void C_SetAlias (const char *name, const char *cmd)
 {
 	FConsoleCommand *prev, *alias, **chain;
 
-	chain = &Commands[MakeKey (name) % FConsoleCommand::HASH_SIZE];
+	chain = &Commands[MakeKey (name) % FConsoleCommand::hash_size];
 	alias = ScanChainForName (*chain, name, strlen (name), &prev);
 	if (alias != NULL)
 	{
@@ -804,7 +795,7 @@ CCMD (alias)
 	}
 	else
 	{
-		chain = &Commands[MakeKey (argv[1]) % FConsoleCommand::HASH_SIZE];
+		chain = &Commands[MakeKey (argv[1]) % FConsoleCommand::hash_size];
 
 		if (argv.argc() == 2)
 		{ // Remove the alias
@@ -894,7 +885,7 @@ FExecList *C_ParseCmdLineParams(FExecList *exec)
 			}
 
 			cmdString = BuildString (cmdlen, Args->GetArgList (argstart));
-			if (!cmdString.IsEmpty())
+			if (cmdString.Len() > 1)
 			{
 				if (exec == NULL)
 				{
@@ -1019,11 +1010,11 @@ void FExecList::ExecCommands() const
 	}
 }
 
-void FExecList::AddPullins(std::vector<std::string>& wads, FConfigFile *config) const
+void FExecList::AddPullins(std::vector<FileSys::ResourceName>& wads, FConfigFile *config) const
 {
 	for (unsigned i = 0; i < Pullins.Size(); ++i)
 	{
-		D_AddFile(wads, Pullins[i].GetChars(), true, -1, config);
+		D_AddFile(wads, Pullins[i].GetChars(), true, -1, config, false);
 	}
 }
 

@@ -1,22 +1,23 @@
 /*
-**  Postprocessing framework
-**  Copyright (c) 2016-2020 Magnus Norddahl
+** hw_postprocess.cpp
 **
-**  This software is provided 'as-is', without any express or implied
-**  warranty.  In no event will the authors be held liable for any damages
-**  arising from the use of this software.
+** Postprocessing framework
 **
-**  Permission is granted to anyone to use this software for any purpose,
-**  including commercial applications, and to alter it and redistribute it
-**  freely, subject to the following restrictions:
+**---------------------------------------------------------------------------
 **
-**  1. The origin of this software must not be misrepresented; you must not
-**     claim that you wrote the original software. If you use this software
-**     in a product, an acknowledgment in the product documentation would be
-**     appreciated but is not required.
-**  2. Altered source versions must be plainly marked as such, and must not be
-**     misrepresented as being the original software.
-**  3. This notice may not be removed or altered from any source distribution.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2020 Magnus Norddahl
+**
+** SPDX-License-Identifier: Zlib
+**
+**---------------------------------------------------------------------------
+**
 */
 
 #include "v_video.h"
@@ -906,6 +907,15 @@ void PPCustomShaders::Run(PPRenderState *renderstate, FString target)
 
 	CreateShaders();
 
+	int width = renderstate->Viewport.width;
+	int height = renderstate->Viewport.height;
+
+	if (width > 0 && height > 0 && width <= 16384 && height <= 16384)
+	{
+		mLastWidth = width;
+		mLastHeight = height;
+	}
+
 	for (auto &shader : mShaders)
 	{
 		if (shader->Desc->Target == target && shader->Desc->Enabled)
@@ -913,6 +923,26 @@ void PPCustomShaders::Run(PPRenderState *renderstate, FString target)
 			shader->Run(renderstate);
 		}
 	}
+}
+
+void PPCustomShaders::UpdateLastInputTexture(PPRenderState *renderstate)
+{
+	int width = renderstate->Viewport.width;
+	int height = renderstate->Viewport.height;
+
+	if (width <= 0 || height <= 0 || width > 16384 || height > 16384)
+		return;
+
+	if (!mLastInputTexture ||
+		mLastInputTexture->GetRead()->Width != width ||
+		mLastInputTexture->GetRead()->Height != height)
+	{
+		mLastInputTexture = std::make_unique<PPPersistentBuffer>(width, height, PixelFormat::Rgba16f);
+	}
+
+	renderstate->CopyToTexture(mLastInputTexture->GetWrite());
+
+	mLastInputTexture->Swap();
 }
 
 void PPCustomShaders::CreateShaders()
@@ -924,13 +954,13 @@ void PPCustomShaders::CreateShaders()
 
 	for (unsigned int i = 0; i < PostProcessShaders.Size(); i++)
 	{
-		mShaders.push_back(std::make_unique<PPCustomShaderInstance>(&PostProcessShaders[i]));
+		mShaders.push_back(std::make_unique<PPCustomShaderInstance>(&PostProcessShaders[i], &mLastInputTexture));
 	}
 }
 
 /////////////////////////////////////////////////////////////////////////////
 
-PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc) : Desc(desc)
+PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture) : Desc(desc), LastInputTexture(lastInputTexture)
 {
 	// Build an uniform block to be used as input
 	TMap<FString, PostProcessUniformValue>::Iterator it(Desc->Uniforms);
@@ -978,9 +1008,13 @@ PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc) : Desc(d
 		pipelineInOut += "out vec4 FragColor;\n";
 	}
 
+	LastInputTextureBinding = binding;
+	uniformTextures.AppendFormat("layout(binding=%d) uniform sampler2D LastInputTexture;\n", LastInputTextureBinding);
+
 	FString prolog;
 	prolog += uniformTextures;
 	prolog += pipelineInOut;
+	// Note: Automatic uniforms (InputTimeDelta, InputTime, InputTimeGame) are added by backends
 
 	Shader = PPShader(Desc->ShaderLumpName, prolog, Fields);
 }
@@ -1048,6 +1082,15 @@ void PPCustomShaderInstance::SetTextures(PPRenderState *renderstate)
 			textureIndex++;
 		}
 	}
+
+	if (LastInputTexture && *LastInputTexture && LastInputTextureBinding >= 0)
+	{
+		auto texture = (*LastInputTexture)->GetRead();
+		if (texture->Backend)
+		{
+			renderstate->SetInputTexture(LastInputTextureBinding, texture, PPFilterMode::Linear, PPWrapMode::Clamp);
+		}
+	}
 }
 
 void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
@@ -1099,6 +1142,30 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 		}
 	}
 
+	auto timeDeltaOffset = FieldOffset.find("InputTimeDelta");
+	if (timeDeltaOffset != FieldOffset.end())
+	{
+		if (uniforms.Size() < timeDeltaOffset->second + sizeof(float))
+			uniforms.Resize(timeDeltaOffset->second + sizeof(float));
+		memcpy(&uniforms[timeDeltaOffset->second], &renderstate->TimeDelta, sizeof(float));
+	}
+
+	auto timeOffset = FieldOffset.find("InputTime");
+	if (timeOffset != FieldOffset.end())
+	{
+		if (uniforms.Size() < timeOffset->second + sizeof(float))
+			uniforms.Resize(timeOffset->second + sizeof(float));
+		memcpy(&uniforms[timeOffset->second], &renderstate->Time, sizeof(float));
+	}
+
+	auto timeGameOffset = FieldOffset.find("InputTimeGame");
+	if (timeGameOffset != FieldOffset.end())
+	{
+		if (uniforms.Size() < timeGameOffset->second + sizeof(float))
+			uniforms.Resize(timeGameOffset->second + sizeof(float));
+		memcpy(&uniforms[timeGameOffset->second], &renderstate->TimeGame, sizeof(float));
+	}
+
 	renderstate->Uniforms.Data = uniforms;
 }
 
@@ -1139,5 +1206,8 @@ void Postprocess::Pass2(PPRenderState* state, int fixedcm, float flash, int scen
 	colormap.Render(state, fixedcm, flash);
 	lens.Render(state);
 	fxaa.Render(state);
+
 	customShaders.Run(state, "scene");
+
+	customShaders.UpdateLastInputTexture(state);
 }

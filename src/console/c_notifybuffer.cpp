@@ -1,46 +1,36 @@
 /*
 ** c_notifybuffer.cpp
+**
 ** Implements the buffer for the notification message
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2005-2020 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
 #include "c_console.h"
-#include "vm.h"
-#include "gamestate.h"
 #include "c_cvars.h"
+#include "c_notifybufferbase.h"
+#include "gamestate.h"
+#include "i_time.h"
+#include "printf.h"
 #include "sbar.h"
 #include "v_video.h"
-#include "i_time.h"
-#include "c_notifybufferbase.h"
+#include "vm.h"
 
 struct FNotifyBuffer : public FNotifyBufferBase
 {
@@ -52,8 +42,10 @@ public:
 };
 
 static FNotifyBuffer NotifyStrings;
+static FString       lastNotifyString;
 
 EXTERN_CVAR(Bool, show_messages)
+EXTERN_CVAR(Bool, con_stackident)
 extern bool generic_ui;
 CVAR(Float, con_notifytime, 3.f, CVAR_ARCHIVE)
 CVAR(Bool, con_centernotify, false, CVAR_ARCHIVE)
@@ -65,6 +57,7 @@ CUSTOM_CVAR(Int, con_scaletext, 0, CVAR_ARCHIVE)		// Scale notify text at high r
 }
 
 constexpr int NOTIFYFADETIME = 6;
+int countedIdentical = 0;
 
 CUSTOM_CVAR(Int, con_notifylines, 4, CVAR_GLOBALCONFIG | CVAR_ARCHIVE)
 {
@@ -74,6 +67,10 @@ CUSTOM_CVAR(Int, con_notifylines, 4, CVAR_GLOBALCONFIG | CVAR_ARCHIVE)
 void FNotifyBuffer::Clear()
 {
 	FNotifyBufferBase::Clear();
+
+	countedIdentical = 0;
+	lastNotifyString    = "";
+
 	if (StatusBar == nullptr) return;
 	IFVIRTUALPTR(StatusBar, DBaseStatusBar, FlushNotify)
 	{
@@ -91,6 +88,33 @@ void FNotifyBuffer::AddString(int printlevel, FString source)
 		gamestate == GS_DEMOSCREEN ||
 		con_notifylines == 0)
 		return;
+
+	if (con_stackident && Text.Size() > 0 && source.Compare(lastNotifyString) == 0)
+	{
+		FNotifyText &last = Text.Last();
+
+		// Only stack if the previous message hasn't started fading out yet
+		if (last.Ticker < last.TimeOut)
+		{
+			countedIdentical++;
+
+			// Remove the previous entry and replace it with the combined one down below
+			Text.Pop();
+		}
+		else
+		{
+			// The old message was fading, start a fresh stack
+			lastNotifyString = source;
+			countedIdentical = 1;
+		}
+	}
+	else
+	{
+		// Always Brand new message
+		lastNotifyString = source;
+		countedIdentical = 1;
+	}
+
 
 	// [MK] allow the status bar to take over notify printing
 	if (StatusBar != nullptr)
@@ -145,20 +169,37 @@ void FNotifyBuffer::Draw()
 				color = PrintColors[notify.PrintLevel];
 
 			int scale = active_con_scaletext(twod, generic_ui);
-			if (!center)
-				DrawText(twod, font, color, 0, line, notify.Text.GetChars(),
-					DTA_VirtualWidth, twod->GetWidth() / scale,
-					DTA_VirtualHeight, twod->GetHeight() / scale,
-					DTA_KeepRatio, true,
-					DTA_Alpha, alpha, TAG_DONE);
-			else
-				DrawText(twod, font, color, (twod->GetWidth() -
-					font->StringWidth (notify.Text) * scale) / 2 / scale,
-					line, notify.Text.GetChars(),
-					DTA_VirtualWidth, twod->GetWidth() / scale,
-					DTA_VirtualHeight, twod->GetHeight() / scale,
-					DTA_KeepRatio, true,
-					DTA_Alpha, alpha, TAG_DONE);
+			FString suffix      = "";
+			int     suffixWidth = 0;
+
+			if (con_stackident && i == Text.Size() - 1 && countedIdentical > 1)
+			{
+				suffix.Format(" (x%d)", countedIdentical);
+				suffixWidth = font->StringWidth(suffix);
+			}
+
+			int textWidth  = font->StringWidth(notify.Text);
+			int totalWidth = textWidth + suffixWidth;
+			int xPos       = 0;
+
+			if (center)
+			{
+				// Calculate center of text + suffix
+				xPos = (twod->GetWidth() / scale - totalWidth) / 2;
+			}
+
+			// Draw the main text
+			DrawText(twod, font, color, xPos, line, notify.Text.GetChars(), DTA_VirtualWidth, twod->GetWidth() / scale,
+			         DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true, DTA_Alpha, alpha, TAG_DONE);
+
+			// Draw the suffix if it exists
+			if (suffixWidth > 0)
+			{
+				DrawText(twod, font, color, xPos + textWidth, line, suffix.GetChars(), DTA_VirtualWidth,
+				         twod->GetWidth() / scale, DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true,
+				         DTA_Alpha, alpha, TAG_DONE);
+			}
+
 			line += lineadv;
 			canskip = false;
 		}

@@ -1,30 +1,21 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-// Copyright 2017-2025 GZDoom Maintainers and Contributors
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//		System specific interface stuff.
-//
-//-----------------------------------------------------------------------------
-
+/*
+** d_main.h
+**
+** System specific interface stuff.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #ifndef __D_MAIN__
 #define __D_MAIN__
@@ -34,6 +25,8 @@
 #include "m_argv.h"
 #include "startupinfo.h"
 #include "c_cvars.h"
+#include "v_video.h"
+#include "fs_filesystem.h"
 #include <csignal>
 
 extern bool		advancedemo;
@@ -54,6 +47,8 @@ EXTERN_FARG(loadgame);
 EXTERN_FARG(iwad);
 EXTERN_FARG(xlat);
 EXTERN_FARG(savedir);
+EXTERN_FARG(file);
+EXTERN_FARG(showlauncher);
 
 struct event_t;
 
@@ -149,7 +144,7 @@ class FIWadManager
 	void ParseIWadInfo(const char *fn, const char *data, int datasize, FIWADInfo *result = nullptr);
 	int ScanIWAD (const char *iwad);
 	int CheckIWADInfo(const char *iwad);
-	int IdentifyVersion (std::vector<std::string>& wadfiles, const char *iwad, const char *zdoom_wad, const char *optional_wad);
+	int IdentifyVersion (std::vector<FileSys::ResourceName>& wadfiles, const char *iwad, const char *zdoom_wad, const char *optional_wad);
 	void CollectSearchPaths();
 	void AddIWADCandidates(const char *dir, bool nosubdir = true);
 	void ValidateIWADs();
@@ -157,7 +152,7 @@ class FIWadManager
 public:
 
 	FIWadManager(const char *fn, const char *fnopt);
-	const FIWADInfo *FindIWAD(std::vector<std::string>& wadfiles, const char *iwad, const char *basewad, const char *optionalwad);
+	const FIWADInfo *FindIWAD(std::vector<FileSys::ResourceName>& wadfiles, const char *iwad, const char *basewad, const char *optionalwad);
 	const FString *GetAutoname(unsigned int num) const
 	{
 		if (num < mIWadInfos.Size()) return &mIWadInfos[num].Autoname;
@@ -172,6 +167,7 @@ public:
 
 };
 
+EXTERN_CVAR(Int, gl_texture_filter)
 #ifndef NO_SWRENDERER
 EXTERN_CVAR(Int, vid_rendermode)
 #else
@@ -181,6 +177,14 @@ constexpr int vid_rendermode = 4;
 inline bool V_IsHardwareRenderer()
 {
 	return vid_rendermode == 4;
+}
+
+// Unfortunately Intel forces on filtering if mipmapping is enabled, so None modes of filtering
+// need to outright disable it.
+inline bool V_DisableIntelMipmap()
+{
+	constexpr char Intel[] = "Intel";
+	return !stricmp(screen->vendorstring, Intel) && (gl_texture_filter == 1 || gl_texture_filter == 5 || gl_texture_filter == 6);
 }
 
 inline bool V_IsTrueColor()

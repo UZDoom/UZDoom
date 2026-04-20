@@ -1,3 +1,24 @@
+/*
+** vk_postprocess.h
+**
+** Vulkan backend
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2020 Magnus Norddahl
+**
+** SPDX-License-Identifier: Zlib
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #pragma once
 
@@ -36,9 +57,12 @@ public:
 
 	void BlitSceneToPostprocess();
 	void BlitCurrentToImage(VkTextureImage *image, VkImageLayout finallayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+	void CopyCurrentToImage(VkTextureImage *image, VkImageLayout finallayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 	void DrawPresentTexture(const IntRect &box, bool applyGamma, bool screenshot);
 
 	int GetCurrentPipelineImage() const { return mCurrentPipelineImage; }
+
+	VulkanBuffer* GetAutomaticUniformsBuffer() { return AutomaticUniformsBuffer.get(); }
 
 private:
 	void NextEye(int eyeCount);
@@ -46,6 +70,8 @@ private:
 	VulkanRenderDevice* fb = nullptr;
 
 	int mCurrentPipelineImage = 0;
+
+	std::unique_ptr<VulkanBuffer> AutomaticUniformsBuffer;
 
 	friend class VkPPRenderState;
 };

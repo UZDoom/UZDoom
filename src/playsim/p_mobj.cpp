@@ -1,58 +1,26 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1994-1996 Raven Software
-// Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2017 Christoph Oelckers
-// Copyright 2017-2025 GZDoom Maintainers and Contributors
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//		Moving object handling. Spawn functions.
-//
-//-----------------------------------------------------------------------------
-
-/* For code that originates from ZDoom the following applies:
+/*
+** p_mobj.cpp
+**
+** Moving object handling. Spawn functions.
 **
 **---------------------------------------------------------------------------
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2017 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** For code that originates from ZDoom the following applies:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -66,7 +34,8 @@
 #include "a_morph.h"
 #include "a_sharedglobal.h"
 #include "actorinlines.h"
-#include "b_bot.h"	//Added by MC:
+#include "b_bot.h"
+#include "basics.h"
 #include "c_dispatch.h"
 #include "cmdlib.h"
 #include "d_event.h"
@@ -97,7 +66,7 @@
 #include "r_sky.h"
 #include "r_utility.h"
 #include "sbar.h"
-#include "serialize_obj.h"
+#include "serialize_obj.h" // IWYU pragma: keep
 #include "serializer_doom.h"
 #include "shadowinlines.h"
 #include "teaminfo.h"
@@ -109,6 +78,7 @@
 #define WATER_SINK_SMALL_FACTOR	0.25
 #define WATER_SINK_SPEED		0.5
 #define WATER_JUMP_SPEED		3.5
+#define Z_UNDERFLOW             -32768.0
 
 // EXTERNAL FUNCTION PROTOTYPES --------------------------------------------
 
@@ -161,7 +131,7 @@ CUSTOM_CVAR (Float, sv_gravity, 800.f, CVAR_SERVERINFO|CVAR_NOSAVE|CVAR_NOINITCA
 }
 
 CVAR (Bool, cl_missiledecals, true, CVAR_ARCHIVE)
-CVAR (Bool, addrocketexplosion, false, CVAR_ARCHIVE)
+CVAR (Bool, addrocketexplosion, true, CVAR_ARCHIVE)
 CVAR (Int, cl_pufftype, 0, CVAR_ARCHIVE);
 CVAR (Int, cl_bloodtype, 0, CVAR_ARCHIVE);
 
@@ -424,22 +394,26 @@ void AActor::Serialize(FSerializer &arc)
 		A("SpriteOffset", SpriteOffset)
 		("viewpos", ViewPos)
 		A("lightlevel", LightLevel)
-		A("userlights", UserLights)
 		A("WorldOffset", WorldOffset)
 		("modelData", modelData)
 		A("LandingSpeed", LandingSpeed)
-
 		("unmorphtime", UnmorphTime)
 		("morphflags", MorphFlags)
 		("premorphproperties", PremorphProperties)
 		("morphexitflash", MorphExitFlash)
 		("damagesource", damagesource)
 		("behaviors", Behaviors)
-		A("decalgenerator", DecalGenerator);
+		A("decalgenerator", DecalGenerator)
+		A("minrespawntics", MinRespawnTics)
+		A("respawndice", RespawnDice);
 
 		SerializeTerrain(arc, "floorterrain", floorterrain, &def->floorterrain);
 		SerializeArgs(arc, "args", args, def->args, special);
 
+		if (!arc.IsRollback())
+		{
+			arc("userlights", UserLights, def->UserLights);
+		}
 }
 
 #undef A
@@ -541,7 +515,7 @@ DBehavior* AActor::AddBehavior(PClass& type)
 			return nullptr;
 
 		b->Owner = this;
-		b->ObjectFlags |= (ObjectFlags & (OF_ClientSide | OF_Transient));
+		b->ObjectFlags |= (ObjectFlags & OF_TransferrableFlags);
 
 		Behaviors[type.TypeName] = b;
 		Level->AddActorBehavior(*b);
@@ -1372,7 +1346,7 @@ DEFINE_ACTION_FUNCTION(AActor, CheckLocalView)
 
 void AActor::DisableLocalRendering(const unsigned int pNum, const bool disable)
 {
-	if (pNum == consoleplayer)
+	if (pNum == static_cast<unsigned>(consoleplayer))
 		NoLocalRender = disable;
 }
 
@@ -2977,6 +2951,12 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 
 	mo->AddZ(mo->Vel.Z);
 
+	if (mo->Level->i_compatflags2 & COMPATF2_EMULATEMIKOPORTALS && mo->Z() < Z_UNDERFLOW)
+	{
+		mo->SetZ(mo->ceilingz);
+		mo->Prev.Z = mo->Z();
+	}
+
 	mo->CallFallAndSink(grav, oldfloorz);
 
 	// Hexen compatibility handling for floatbobbing. Ugh...
@@ -3041,11 +3021,12 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 		mo->Vel.Z *= friction;
 	}
 
-//
-// clip movement
-//
+	//
+	// clip movement
+	//
 	if (mo->Z() <= mo->floorz)
-	{	// Hit the floor
+	{
+		// Hit the floor
 		if ((!mo->player || !(mo->player->cheats & CF_PREDICTING)) &&
 			mo->Sector->SecActTarget != NULL &&
 			mo->Sector->floorplane.ZatPoint(mo) == mo->floorz)
@@ -3901,7 +3882,7 @@ bool AActor::AdjustReflectionAngle (AActor *thing, DAngle &angle)
 	return false;
 }
 
-int AActor::AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *source, int flags)
+int AActor::AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *source, int flags, DAngle angle)
 {
 	AActor *next;
 	for (AActor *item = Inventory; item != nullptr; item = next)
@@ -3910,8 +3891,8 @@ int AActor::AbsorbDamage(int damage, FName dmgtype, AActor *inflictor, AActor *s
 		next = item->Inventory;
 		IFVIRTUALPTRNAME(item, NAME_Inventory, AbsorbDamage)
 		{
-			VMValue params[7] = { item, damage, dmgtype.GetIndex(), &damage, inflictor, source, flags };
-			VMCall(func, params, 7, nullptr, 0);
+			VMValue params[8] = { item, damage, dmgtype.GetIndex(), &damage, inflictor, source, flags, angle.Degrees() };
+			VMCall(func, params, 8, nullptr, 0);
 		}
 	}
 	return damage;
@@ -4293,6 +4274,18 @@ DEFINE_ACTION_FUNCTION(AActor, CheckPortalTransition)
 	return 0;
 }
 
+int AActor::GetModelTimer()
+{
+	if(IsClientSide())
+	{
+		return Level->LocalWorldTimer;
+	}
+	else
+	{
+		return Level->totaltime;
+	}
+}
+
 void AActor::CalcBones(bool recalc)
 {
 	if(modelData && (!recalc || (modelData->flags & MODELDATA_GET_BONE_INFO_RECALC)) && modelData->flags & MODELDATA_GET_BONE_INFO)
@@ -4304,7 +4297,7 @@ void AActor::CalcBones(bool recalc)
 		if(!smf) return;
 
 		bool is_decoupled = flags9 & MF9_DECOUPLEDANIMATIONS;
-		double tic = Level->totaltime + 1;
+		double tic = GetModelTimer() + 1;
 
 		CalcModelFrameInfo frameinfo = CalcModelFrame(Level, smf, state, tics, modelData, this, is_decoupled, tic, 1.0);
 		
@@ -4360,7 +4353,7 @@ void AActor::GetBoneMatrix(int model_index, int bone_index, bool with_override, 
 	}
 }
 
-DVector3 AActor::GetBoneEulerAngles(int model_index, int bone_index, bool with_override)
+DVector3 AActor::GetBoneEulerAngles(FModel * mdl, int model_index, int bone_index, bool with_override)
 {
 	if(modelData && (modelData->flags & MODELDATA_GET_BONE_INFO) && model_index >= 0 && bone_index >= 0 && modelData->modelBoneInfo.SSize() > model_index && modelData->modelBoneInfo[model_index].positions.SSize() > bone_index)
 	{
@@ -4370,7 +4363,10 @@ DVector3 AActor::GetBoneEulerAngles(int model_index, int bone_index, bool with_o
 
 		FVector3 objPos = FVector3(Pos() + WorldOffset);
 
-		VSMatrix boneMatrix = (with_override ? modelData->modelBoneInfo[model_index].positions_with_override : modelData->modelBoneInfo[model_index].positions)[bone_index];
+		VSMatrix boneRotMatrix = (with_override ? modelData->modelBoneInfo[model_index].positions_with_override : modelData->modelBoneInfo[model_index].positions)[bone_index];
+
+		FQuaternion baseRot = mdl->GetJointRotation(bone_index);
+		boneRotMatrix.multQuaternion(baseRot);
 		VSMatrix worldMatrix = smf->ObjectToWorldMatrix(this, objPos.X, objPos.Y, objPos.Z, 1.0);
 
 		FVector4 oldFwd(1.0, 0.0, 0.0, 0.0);
@@ -4378,8 +4374,8 @@ DVector3 AActor::GetBoneEulerAngles(int model_index, int bone_index, bool with_o
 		FVector4 oldUp(0.0, 1.0, 0.0, 0.0);
 		FVector4 newUp;
 
-		boneMatrix.multMatrixPoint(&oldFwd.X, &newFwd.X);
-		boneMatrix.multMatrixPoint(&oldUp.X, &newUp.X);
+		boneRotMatrix.multMatrixPoint(&oldFwd.X, &newFwd.X);
+		boneRotMatrix.multMatrixPoint(&oldUp.X, &newUp.X);
 
 		oldFwd = FVector4(FVector3(newFwd.X, newFwd.Y, newFwd.Z).Unit(), 0.0);
 		oldUp = FVector4(FVector3(newUp.X, newUp.Y, newUp.Z).Unit(), 0.0);
@@ -4440,7 +4436,7 @@ DVector3 AActor::GetBoneEulerAngles(int model_index, int bone_index, bool with_o
 	return DVector3(0,0,0);
 }
 
-void AActor::GetBonePosition(int model_index, int bone_index, bool with_override, DVector3 &pos, DVector3 &fwd, DVector3 &up)
+void AActor::GetBonePosition(FModel * mdl, int model_index, int bone_index, bool with_override, DVector3 &pos, DVector3 &fwd, DVector3 &up)
 {
 	if(modelData && (modelData->flags & MODELDATA_GET_BONE_INFO) && model_index >= 0 && bone_index >= 0 && modelData->modelBoneInfo.SSize() > model_index && modelData->modelBoneInfo[model_index].positions.SSize() > bone_index)
 	{
@@ -4451,6 +4447,11 @@ void AActor::GetBonePosition(int model_index, int bone_index, bool with_override
 		FVector3 objPos = FVector3(Pos() + WorldOffset);
 
 		VSMatrix boneMatrix = (with_override ? modelData->modelBoneInfo[model_index].positions_with_override : modelData->modelBoneInfo[model_index].positions)[bone_index];
+		VSMatrix boneRotMatrix = boneMatrix;
+
+		FQuaternion baseRot = mdl->GetJointRotation(bone_index);
+		boneRotMatrix.multQuaternion(baseRot);
+
 		VSMatrix worldMatrix = smf->ObjectToWorldMatrix(this, objPos.X, objPos.Y, objPos.Z, 1.0);
 
 		FVector4 oldPos(pos.X, pos.Z, pos.Y, 1.0);
@@ -4461,8 +4462,8 @@ void AActor::GetBonePosition(int model_index, int bone_index, bool with_override
 		FVector4 newUp;
 
 		boneMatrix.multMatrixPoint(&oldPos.X, &newPos.X);
-		boneMatrix.multMatrixPoint(&oldFwd.X, &newFwd.X);
-		boneMatrix.multMatrixPoint(&oldUp.X, &newUp.X);
+		boneRotMatrix.multMatrixPoint(&oldFwd.X, &newFwd.X);
+		boneRotMatrix.multMatrixPoint(&oldUp.X, &newUp.X);
 
 		oldPos = FVector4(FVector3(newPos.X, newPos.Y, newPos.Z) / newPos.W, 1.0);
 		oldFwd = FVector4(FVector3(newFwd.X, newFwd.Y, newFwd.Z).Unit(), 0.0);
@@ -4966,6 +4967,7 @@ void AActor::Tick ()
 			}
 
 		}
+
 		if (Vel.Z != 0 || BlockingMobj.ForceGet() || Z() != floorz)
 		{	// Handle Z velocity and gravity
 			if (((flags2 & MF2_PASSMOBJ) || (flags & MF_SPECIAL)) && !(Level->i_compatflags & COMPATF_NO_PASSMOBJ))
@@ -5071,6 +5073,26 @@ void AActor::Tick ()
 		}
 	}
 
+	if (Sector->Flags & SECF_KILLMONSTERS && Z() == floorz && player == nullptr && (flags & MF_SHOOTABLE) &&
+	    !(flags & MF_FLOAT))
+	{
+		P_DamageMobj(this, nullptr, nullptr, TELEFRAG_DAMAGE, NAME_InstantDeath);
+		// must have been removed
+		if (ObjectFlags & OF_EuthanizeMe)
+			return;
+	}
+	//[inkoalawetrust] Genericized level damage handling that makes sector, 3D floor, and TERRAIN flat damage affect
+	//monsters and other NPCs too.
+	P_ActorOnSpecial3DFloor(
+		this); // 3D floors must be checked separately to see if their control sector allows non-player damage
+	if (checkForSpecialSector(this, Sector))
+	{
+		P_ActorInSpecialSector(this, Sector);
+		if (!isAbove(Sector->floorplane.ZatPoint(this)) ||
+		    waterlevel) // Actor must be touching the floor for TERRAIN flats.
+			P_ActorOnSpecialFlat(this, P_GetThingFloorType(this));
+	}
+
 	assert (state != NULL);
 	if (state == NULL)
 	{
@@ -5081,22 +5103,6 @@ void AActor::Tick ()
 		return; // freed itself
 
 	UpdateRenderSectorList();
-
-	if (Sector->Flags & SECF_KILLMONSTERS && Z() == floorz &&
-		player == nullptr && (flags & MF_SHOOTABLE) && !(flags & MF_FLOAT))
-	{
-		P_DamageMobj(this, nullptr, nullptr, TELEFRAG_DAMAGE, NAME_InstantDeath);
-		// must have been removed
-		if (ObjectFlags & OF_EuthanizeMe) return;
-	}
-	//[inkoalawetrust] Genericized level damage handling that makes sector, 3D floor, and TERRAIN flat damage affect monsters and other NPCs too.
-	P_ActorOnSpecial3DFloor(this); //3D floors must be checked separately to see if their control sector allows non-player damage
-	if (checkForSpecialSector(this,Sector))
-	{
-		P_ActorInSpecialSector(this,Sector);
-		if (!isAbove(Sector->floorplane.ZatPoint(this)) || waterlevel) // Actor must be touching the floor for TERRAIN flats.
-			P_ActorOnSpecialFlat(this, P_GetThingFloorType(this));
-	}
 
 	if (tics != -1)
 	{
@@ -5118,6 +5124,12 @@ void AActor::Tick ()
 	if (tics == -1 || state->GetCanRaise())
 	{
 		int respawn_monsters = G_SkillProperty(SKILLP_Respawn);
+
+		if (MinRespawnTics > 0)
+			respawn_monsters = MinRespawnTics;
+		else if (MinRespawnTics < 0)
+			respawn_monsters = -MinRespawnTics * TICRATE;
+
 		// check for nightmare respawn
 		if (!(flags5 & MF5_ALWAYSRESPAWN))
 		{
@@ -5137,7 +5149,7 @@ void AActor::Tick ()
 		if (Level->time & 31)
 			return;
 
-		if (pr_nightmarerespawn() > 4)
+		if (pr_nightmarerespawn() > RespawnDice)
 			return;
 
 		P_NightmareRespawn (this);
@@ -5600,7 +5612,7 @@ AActor *AActor::StaticSpawn(FLevelLocals *Level, PClassActor *type, const DVecto
 
 	AActor *actor;
 
-	if (GetDefaultByType(type)->ObjectFlags & OF_ClientSide)
+	if (GetDefaultByType(type)->IsClientSide())
 	{
 		actor = static_cast<AActor*>(Level->CreateClientSideThinker(type));
 	}
@@ -5627,7 +5639,7 @@ DEFINE_ACTION_FUNCTION(AActor, Spawn)
 
 static AActor* SpawnClientSide(PClassActor* type, double x, double y, double z, int flags)
 {
-	if (!(GetDefaultByType(type)->ObjectFlags & OF_ClientSide))
+	if (!GetDefaultByType(type)->IsClientSide())
 	{
 		ThrowAbortException(X_OTHER, "Tried to spawn a non-clientside Actor from a clientside spawn function.");
 		return nullptr;
@@ -6294,9 +6306,10 @@ AActor *FLevelLocals::SpawnPlayer (FPlayerStart *mthing, int playernum, int flag
 		&& p->mo != nullptr && p->playerstate == PST_REBORN
 		&& gameaction != ga_worlddone
 		&& !(p->mo->Sector->Flags & SECF_NORESPAWN)
-		&& p->LastDamageType != NAME_Suicide)
+		&& p->LastDamageType != NAME_Suicide
+		&& p->LastSafePos.IsSafe(p->mo->tid))
 	{
-		spawn = p->LastSafePos;
+		spawn = p->LastSafePos.Pos;
 		SpawnAngle = p->mo->Angles.Yaw;
 	}
 	else
@@ -6448,6 +6461,8 @@ AActor *FLevelLocals::SpawnPlayer (FPlayerStart *mthing, int playernum, int flag
 	{ // Remove any inventory left from the old actor. Coop handles
 	  // it above, but the other modes don't.
 		DestroyAllInventory(oldactor);
+		// Clean these up as well, otherwise pointer substitution will break a lot of things.
+		oldactor->ClearBehaviors();
 	}
 	// [BC] Handle temporary invulnerability when respawned
 	if (state == PST_REBORN || state == PST_ENTER)
@@ -7440,30 +7455,39 @@ foundone:
 	{
 		if (smallsplash && splash->SmallSplash)
 		{
-			mo = Spawn(sec->Level, splash->SmallSplash, pos, ALLOW_REPLACE);
-			mo->target = thing;
-			if (mo) mo->Floorclip += splash->SmallSplashClip;
+			if (!thing->IsClientSide() || GetDefaultByType(splash->SmallSplash)->IsClientSide())
+			{
+				mo = Spawn(sec->Level, splash->SmallSplash, pos, ALLOW_REPLACE);
+				mo->target = thing;
+				if (mo) mo->Floorclip += splash->SmallSplashClip;
+			}
 		}
 		else
 		{
 			if (splash->SplashChunk)
 			{
-				mo = Spawn(sec->Level, splash->SplashChunk, pos, ALLOW_REPLACE);
-				mo->target = thing;
-				if (splash->ChunkXVelShift != 255)
+				if (!thing->IsClientSide() || GetDefaultByType(splash->SplashChunk)->IsClientSide())
 				{
-					mo->Vel.X = (pr_chunk.Random2() << splash->ChunkXVelShift) / 65536.;
+					mo = Spawn(sec->Level, splash->SplashChunk, pos, ALLOW_REPLACE);
+					mo->target = thing;
+					if (splash->ChunkXVelShift != 255)
+					{
+						mo->Vel.X = (pr_chunk.Random2() << splash->ChunkXVelShift) / 65536.;
+					}
+					if (splash->ChunkYVelShift != 255)
+					{
+						mo->Vel.Y = (pr_chunk.Random2() << splash->ChunkYVelShift) / 65536.;
+					}
+					mo->Vel.Z = splash->ChunkBaseZVel + (pr_chunk() << splash->ChunkZVelShift) / 65536.;
 				}
-				if (splash->ChunkYVelShift != 255)
-				{
-					mo->Vel.Y = (pr_chunk.Random2() << splash->ChunkYVelShift) / 65536.;
-				}
-				mo->Vel.Z = splash->ChunkBaseZVel + (pr_chunk() << splash->ChunkZVelShift) / 65536.;
 			}
 			if (splash->SplashBase)
 			{
-				mo = Spawn(sec->Level, splash->SplashBase, pos, ALLOW_REPLACE);
-				mo->target = thing;
+				if (!thing->IsClientSide() || GetDefaultByType(splash->SplashBase)->IsClientSide())
+				{
+					mo = Spawn(sec->Level, splash->SplashBase, pos, ALLOW_REPLACE);
+					mo->target = thing;
+				}
 			}
 			if (thing->player && !splash->NoAlert && alert)
 			{
@@ -7511,8 +7535,6 @@ DEFINE_ACTION_FUNCTION(AActor, HitWater)
 
 bool P_HitFloor (AActor *thing)
 {
-	const msecnode_t *m;
-
 	// killough 11/98: touchy objects explode on impact
 	// Allow very short drops to be safe, so that a touchy can be summoned without exploding.
 	if (thing->flags6 & MF6_TOUCHY && ((thing->flags6 & MF6_ARMED) || thing->IsSentient()) && thing->Vel.Z < -5)
@@ -7524,34 +7546,68 @@ bool P_HitFloor (AActor *thing)
 
 	// don't splash if landing on the edge above water/lava/etc....
 	DVector3 pos;
-	for (m = thing->touching_sectorlist; m; m = m->m_tnext)
+	sector_t* sec = nullptr;
+	if (thing->IsClientSide())
 	{
-		pos = thing->PosRelative(m->m_sector);
-		if (thing->Z() == m->m_sector->floorplane.ZatPoint(pos))
+		if (thing->Sector != nullptr)
 		{
-			break;
-		}
-
-		// Check 3D floors
-		for(unsigned int i=0;i<m->m_sector->e->XFloor.ffloors.Size();i++)
-		{		
-			F3DFloor * rover = m->m_sector->e->XFloor.ffloors[i];
-			if (!(rover->flags & FF_EXISTS)) continue;
-			if (rover->flags & (FF_SOLID|FF_SWIMMABLE))
+			sec = thing->Sector;
+			pos = thing->Pos();
+			if (thing->Z() != sec->floorplane.ZatPoint(pos))
 			{
-				if (rover->top.plane->ZatPoint(pos) == thing->Z())
+				// Check 3D floors
+				for (unsigned int i = 0; i < sec->e->XFloor.ffloors.Size(); i++)
 				{
-					return P_HitWater (thing, m->m_sector, pos);
+					F3DFloor* rover = sec->e->XFloor.ffloors[i];
+					if (!(rover->flags & FF_EXISTS)) continue;
+					if (rover->flags & (FF_SOLID | FF_SWIMMABLE))
+					{
+						if (rover->top.plane->ZatPoint(pos) == thing->Z())
+						{
+							return P_HitWater(thing, sec, pos);
+						}
+					}
 				}
+				sec = nullptr;
 			}
 		}
 	}
-	if (m == NULL || m->m_sector->GetHeightSec() != NULL)
-	{ 
+	else
+	{
+		const msecnode_t* m;
+		for (m = thing->touching_sectorlist; m != nullptr; m = m->m_tnext)
+		{
+			sec = m->m_sector;
+			pos = thing->PosRelative(sec);
+			if (thing->Z() == sec->floorplane.ZatPoint(pos))
+			{
+				break;
+			}
+
+			// Check 3D floors
+			for (unsigned int i = 0; i < sec->e->XFloor.ffloors.Size(); i++)
+			{
+				F3DFloor* rover = sec->e->XFloor.ffloors[i];
+				if (!(rover->flags & FF_EXISTS)) continue;
+				if (rover->flags & (FF_SOLID | FF_SWIMMABLE))
+				{
+					if (rover->top.plane->ZatPoint(pos) == thing->Z())
+					{
+						return P_HitWater(thing, sec, pos);
+					}
+				}
+			}
+		}
+		if (m == nullptr)
+			sec = nullptr;
+	}
+
+	if (sec == nullptr || sec->GetHeightSec() != nullptr)
+	{
 		return false;
 	}
 
-	return P_HitWater (thing, m->m_sector, pos);
+	return P_HitWater (thing, sec, pos);
 }
 
 DEFINE_ACTION_FUNCTION(AActor, HitFloor)
@@ -8015,6 +8071,9 @@ AActor *P_SpawnPlayerMissile (AActor *source, double x, double y, double z,
 							  PClassActor *type, DAngle angle, FTranslatedLineTarget *pLineTarget, AActor **pMissileActor,
 							  bool nofreeaim, bool noautoaim, int aimflags)
 {
+	if (pMissileActor != nullptr)
+		*pMissileActor = nullptr;
+
 	if (source == nullptr || type == nullptr)
 	{
 		return nullptr;
@@ -8291,19 +8350,22 @@ DEFINE_ACTION_FUNCTION(AActor, DoSpecialDamage)
 	PARAM_OBJECT_NOT_NULL(target, AActor);
 	PARAM_INT(damage);
 	PARAM_NAME(damagetype);
+	PARAM_INT(flags); //[MC] Only needed for Super.DoSpecialDamage() calls to maintain consistency for all parameters
+	PARAM_ANGLE(angle);
+
 	ACTION_RETURN_INT(self->DoSpecialDamage(target, damage, damagetype));
 }
 
-int AActor::CallDoSpecialDamage(AActor *target, int damage, FName damagetype)
+int AActor::CallDoSpecialDamage(AActor *target, int damage, FName damagetype, int flags, DAngle angle)
 {
 	IFVIRTUAL(AActor, DoSpecialDamage)
 	{
 		// Without the type cast this picks the 'void *' assignment...
-		VMValue params[4] = { (DObject*)this, (DObject*)target, damage, damagetype.GetIndex() };
+		VMValue params[6] = {(DObject *)this, (DObject *)target, damage, damagetype.GetIndex(), flags, angle.Degrees() };
 		VMReturn ret;
 		int retval;
 		ret.IntAt(&retval);
-		VMCall(func, params, 4, &ret, 1);
+		VMCall(func, params, 6, &ret, 1);
 		return retval;
 	}
 	else return DoSpecialDamage(target, damage, damagetype);
@@ -8357,18 +8419,21 @@ DEFINE_ACTION_FUNCTION(AActor, TakeSpecialDamage)
 	PARAM_OBJECT(source, AActor);
 	PARAM_INT(damage);
 	PARAM_NAME(damagetype);
+	PARAM_INT(flags); //[MC] Only needed for Super.TakeSpecialDamage() calls to maintain consistency for all parameters
+	PARAM_ANGLE(angle);
+
 	ACTION_RETURN_INT(self->TakeSpecialDamage(inflictor, source, damage, damagetype));
 }
 
-int AActor::CallTakeSpecialDamage(AActor *inflictor, AActor *source, int damage, FName damagetype)
+int AActor::CallTakeSpecialDamage(AActor *inflictor, AActor *source, int damage, FName damagetype, int flags, DAngle angle)
 {
 	IFVIRTUAL(AActor, TakeSpecialDamage)
 	{
-		VMValue params[5] = { (DObject*)this, inflictor, source, damage, damagetype.GetIndex() };
+		VMValue params[7] = { (DObject*)this, inflictor, source, damage, damagetype.GetIndex(), flags, angle.Degrees() };
 		VMReturn ret;
 		int retval;
 		ret.IntAt(&retval);
-		VMCall(func, params, 5, &ret, 1);
+		VMCall(func, params, 7, &ret, 1);
 		return retval;
 	}
 	else return TakeSpecialDamage(inflictor, source, damage, damagetype);
@@ -8615,7 +8680,7 @@ void AActor::ClearCounters()
 	}
 }
 
-int AActor::GetModifiedDamage(FName damagetype, int damage, bool passive, AActor *inflictor, AActor *source, int flags)
+int AActor::GetModifiedDamage(FName damagetype, int damage, bool passive, AActor *inflictor, AActor *source, int flags, DAngle angle)
 {
 	auto inv = Inventory;
 	while (inv != nullptr && !(inv->ObjectFlags & OF_EuthanizeMe))
@@ -8623,8 +8688,8 @@ int AActor::GetModifiedDamage(FName damagetype, int damage, bool passive, AActor
 		auto nextinv = inv->Inventory;
 		IFVIRTUALPTRNAME(inv, NAME_Inventory, ModifyDamage)
 		{
-			VMValue params[8] = { (DObject*)inv, damage, damagetype.GetIndex(), &damage, passive, inflictor, source, flags };
-			VMCall(func, params, 8, nullptr, 0);
+			VMValue params[9] = { (DObject*)inv, damage, damagetype.GetIndex(), &damage, passive, inflictor, source, flags, angle.Degrees() };
+			VMCall(func, params, 9, nullptr, 0);
 		}
 		inv = nextinv;
 	}

@@ -1,9 +1,21 @@
+/*
+** hw_drawstructs.h
+**
+** One wall segment in the draw list
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2018-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
-//==========================================================================
-//
-// One wall segment in the draw list
-//
-//==========================================================================
+
 #include "r_defs.h"
 #include "renderstyle.h"
 #include "textures.h"

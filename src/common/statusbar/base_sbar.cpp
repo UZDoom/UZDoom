@@ -1,66 +1,67 @@
 /*
 ** base_sbar.cpp
+**
 ** Base status bar implementation
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2016 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2017-2020 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
-#include <assert.h>
-
+#include <cassert>
 
 #include "base_sbar.h"
-#include "printf.h"
-#include "v_draw.h"
-#include "cmdlib.h"
-#include "texturemanager.h"
 #include "c_cvars.h"
-#include "v_font.h"
+#include "colorspace.h"
+#include "cmdlib.h"
+#include "i_interface.h"
+#include "printf.h"
+#include "r_videoscale.h"
+#include "texturemanager.h"
 #include "utf8.h"
+#include "v_draw.h"
+#include "v_font.h"
 #include "v_text.h"
 #include "vm.h"
-#include "i_interface.h"
-#include "r_videoscale.h"
 
 FGameTexture* CrosshairImage;
 static int CrosshairNum;
 
-
 IMPLEMENT_CLASS(DStatusBarCore, false, false)
 IMPLEMENT_CLASS(DHUDFont, false, false);
 
-
-CVAR(Color, crosshaircolor, 0xff0000, CVAR_ARCHIVE);
-CVAR(Int, crosshairhealth, 2, CVAR_ARCHIVE);
-CVARD(Float, crosshairscale, 0.5, CVAR_ARCHIVE, "changes the size of the crosshair");
-CVAR(Bool, crosshairgrow, false, CVAR_ARCHIVE);
+CVAR(Color, crosshaircolor,     0xff0000, CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorFull, 0x00ff00, CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorMax,  0x7f7fff, CVAR_ARCHIVE);
+CVAR(Bool, crosshairshowshealth, false, CVAR_HIDDEN);
+CVAR(Bool, crosshairhascolor, false, CVAR_HIDDEN);
+CUSTOM_CVARD(Int, crosshaircolors, 2, CVAR_ARCHIVE, "0: basic, 1: show health, 2: show health bonus, 3: inverted")
+{
+	switch (self)
+	{
+		case 0: crosshairshowshealth = false; crosshairhascolor = true;  break;
+		case 1:
+		case 2: crosshairshowshealth = true;  crosshairhascolor = true;  break;
+		case 3: crosshairshowshealth = false; crosshairhascolor = false; break;
+		default: self = 2;
+	}
+};
+CVARD(Float, crosshairscale, 1.0, CVAR_ARCHIVE, "changes the size of the crosshair");
+CVARD(Bool, crosshairgrow, false, CVAR_ARCHIVE, "grow crosshair upon pickup");
 
 CUSTOM_CVARD(Float, hud_scalefactor, 1.f, CVAR_ARCHIVE, "changes the hud scale")
 {
@@ -73,7 +74,6 @@ CUSTOM_CVARD(Bool, hud_aspectscale, true, CVAR_ARCHIVE, "enables aspect ratio co
 {
 	if (sysCallbacks.HudScaleChanged) sysCallbacks.HudScaleChanged();
 }
-
 
 void ST_LoadCrosshair(int num, bool alwaysload)
 {
@@ -118,7 +118,6 @@ void ST_UnloadCrosshair()
 	CrosshairNum = 0;
 }
 
-
 //---------------------------------------------------------------------------
 //
 // DrawCrosshair
@@ -127,6 +126,7 @@ void ST_UnloadCrosshair()
 
 void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngle angle)
 {
+	FRenderStyle style {{ STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha | STYLEF_ColorIsFixed }};
 	uint32_t color;
 	double size;
 	int w, h;
@@ -137,71 +137,55 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		return;
 	}
 
-	if (crosshairscale > 0.0f)
-	{
-		size = twod->GetHeight() * crosshairscale * 0.005;
-	}
-	else
-	{
-		size = 1.;
-	}
+	int mult = max(twod->Height/720, 1); // 1080p: 1, 1440p: 2, 4K: 3
 
-	if (crosshairgrow)
-	{
-		size *= scale;
-	}
+	size = ((crosshairscale > 0.0f)? crosshairscale: 1.0) * mult;
 
-	w = int(CrosshairImage->GetDisplayWidth() * size);
-	h = int(CrosshairImage->GetDisplayHeight() * size);
+	if (crosshairgrow) size *= scale;
 
-	if (crosshairhealth == 1)
-	{
-		// "Standard" crosshair health (green-red)
-		int health = phealth;
+	w = round(CrosshairImage->GetDisplayWidth() * size);
+	h = round(CrosshairImage->GetDisplayHeight() * size);
 
-		if (health >= 85)
-		{
-			color = 0x00ff00;
-		}
-		else
-		{
-			int red, green;
-			health -= 25;
-			if (health < 0)
-			{
-				health = 0;
-			}
-			if (health < 30)
-			{
-				red = 255;
-				green = health * 255 / 30;
-			}
-			else
-			{
-				red = (60 - health) * 255 / 30;
-				green = 255;
-			}
-			color = (red << 16) | (green << 8);
-		}
-	}
-	else if (crosshairhealth == 2)
-	{
-		// "Enhanced" crosshair health (blue-green-yellow-red)
-		int health = clamp(phealth, 0, 200);
-		float rr, gg, bb;
-
-		float saturation = health < 150 ? 1.f : 1.f - (health - 150) / 100.f;
-
-		HSVtoRGB(&rr, &gg, &bb, health * 1.2f, saturation, 1);
-		int red = int(rr * 255);
-		int green = int(gg * 255);
-		int blue = int(bb * 255);
-
-		color = (red << 16) | (green << 8) | blue;
-	}
-	else
+	if (crosshaircolors == 0)
 	{
 		color = crosshaircolor;
+	}
+	else if (crosshaircolors == 3)
+	{
+		style = {{ STYLEOP_Add, STYLEALPHA_InvDstCol, STYLEALPHA_InvSrcCol, STYLEF_RedIsAlpha }};
+		color = 0xffffff;
+	}
+	else
+	{
+		static int lastHealth = -1;
+		static int lastColor = -1;
+		int health = clamp(phealth, 0, (crosshaircolors == 1)? 100: 200);
+
+		if (health != lastHealth)
+		{
+			int hi = crosshaircolorFull, lo = crosshaircolor;
+			float mix = 1.0;
+
+			if (health > 100)
+			{
+				lo = hi;
+				hi = crosshaircolorMax;
+				mix = (health-100)/100.0;
+			}
+			else if (health <= 85)
+			{
+				mix = health/85.0;
+			}
+
+			auto a = Color::rgb((lo>>16&0xff)/255., (lo>>8&0xff)/255., (lo&0xff)/255.);
+			auto b = Color::rgb((hi>>16&0xff)/255., (hi>>8&0xff)/255., (hi&0xff)/255.);
+			auto c = Color::mix(a, b, mix);
+
+			lastHealth = health;
+			lastColor = (int)(c.rgb.r*255)<<16 | (int)(c.rgb.g*255)<<8 | (int)(c.rgb.b*255);
+		}
+
+		color = lastColor;
 	}
 
 	DrawTexture(twod, CrosshairImage,
@@ -210,10 +194,10 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		DTA_DestHeight, h,
 		DTA_Rotate, angle.Degrees(),
 		DTA_AlphaChannel, true,
+		DTA_RenderStyle, style,
 		DTA_FillColor, color & 0xFFFFFF,
 		TAG_DONE);
 }
-
 
 //---------------------------------------------------------------------------
 //

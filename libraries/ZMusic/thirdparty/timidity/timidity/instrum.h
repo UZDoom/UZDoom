@@ -172,6 +172,7 @@ public:
 	ToneBank* drumset[MAXBANK] = {};
 	FontFile* Fonts = nullptr;
 	std::string def_instr_name;
+	int rcf_count = 0;
 
 	Instruments(MusicIO::SoundFontReaderInterface* reader);
 	~Instruments();

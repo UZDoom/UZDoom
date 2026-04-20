@@ -1,39 +1,23 @@
 /*
-** thingdef_codeptr.cpp
+** p_actionfunctions.cpp
 **
 ** Code pointers for Actor definitions
 **
 **---------------------------------------------------------------------------
-** Copyright 2002-2006 Christoph Oelckers
-** Copyright 2004-2006 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2004-2016 Marisa Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
-** 4. When not used as part of ZDoom or a ZDoom derivative, this code will be
-**    covered by the terms of the GNU General Public License as published by
-**    the Free Software Foundation; either version 2 of the License, or (at
-**    your option) any later version.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: LicenseRef-ZDoom-Conditional
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -1293,7 +1277,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Print)
 	PARAM_FLOAT	(time);
 	PARAM_NAME	(fontname);
 
-	if (text[0] == '$') text = GStrings.GetString(&text[1]);
+	if (!text.IsEmpty() && text[0] == '$') text = GStrings.GetString(&text[1]);
 	if (self->CheckLocalView() ||
 		(self->target != NULL && self->target->CheckLocalView()))
 	{
@@ -1331,7 +1315,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_PrintBold)
 	float saved = con_midtime;
 	FFont *font = NULL;
 	
-	if (text[0] == '$') text = GStrings.GetString(&text[1]);
+	if (!text.IsEmpty() && text[0] == '$') text = GStrings.GetString(&text[1]);
 	if (fontname != NAME_None)
 	{
 		font = V_GetFont(fontname.GetChars());
@@ -3607,7 +3591,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Warp)
 
 	if ((flags & WARPF_USETID))
 	{
-		reference = self->Level->SingleActorFromTID(destination_selector, self);
+		reference = self->Level->SingleActorFromTID(destination_selector, self->IsClientSide(), self);
 	}
 	else
 	{
@@ -5102,6 +5086,7 @@ static void EnsureModelData(AActor * mobj)
 		
 		ptr->flags = (mobj->hasmodel ? MODELDATA_HADMODEL : 0);
 		ptr->modelDef = nullptr;
+		ptr->ObjectFlags |= (mobj->ObjectFlags & OF_TransferrableFlags);
 		
 		mobj->modelData = ptr;
 		mobj->hasmodel = true;
@@ -5219,7 +5204,7 @@ static void SetModelBoneRotationNative(AActor * self, int model_index, int bone_
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5239,7 +5224,7 @@ static void SetModelNamedBoneRotationNative(AActor * self, int model_index, int 
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].rotation.Set(FQuaternion(rot_x, rot_y, rot_z, rot_w), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5293,7 +5278,7 @@ static void SetModelBoneTranslationNative(AActor * self, int model_index, int bo
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5313,7 +5298,7 @@ static void SetModelNamedBoneTranslationNative(AActor * self, int model_index, i
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].translation.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5365,7 +5350,7 @@ static void SetModelBoneScalingNative(AActor * self, int model_index, int bone_i
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5385,7 +5370,7 @@ static void SetModelNamedBoneScalingNative(AActor * self, int model_index, int b
 
 	if(!mdl) return;
 
-	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->Level->totaltime + ticFrac, interpolation_duration, mode);
+	self->modelData->modelBoneOverrides[model_index][bone_index].scaling.Set(FVector3(rot_x, rot_y, rot_z), self->GetModelTimer() + ticFrac, interpolation_duration, mode);
 
 	self->CalcBones(true);
 }
@@ -5467,9 +5452,11 @@ DEFINE_ACTION_FUNCTION(AActor, GetBoneOffset)
 	{
 		auto &mod = self->modelData->modelBoneOverrides[0][bone_index];
 
-		translation = DVector3(mod.translation.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
-		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), self->Level->totaltime + 1.0));
-		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
+		int tics = self->GetModelTimer() + 1.0;
+
+		translation = DVector3(mod.translation.Get(FVector3(0,0,0), tics));
+		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), tics));
+		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), tics));
 	}
 	
 	if(numret > 2)
@@ -5508,9 +5495,11 @@ DEFINE_ACTION_FUNCTION(AActor, GetNamedBoneOffset)
 	{
 		auto &mod = self->modelData->modelBoneOverrides[0][bone_index];
 
-		translation = DVector3(mod.translation.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
-		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), self->Level->totaltime + 1.0));
-		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), self->Level->totaltime + 1.0));
+		int tics = self->GetModelTimer() + 1.0;
+
+		translation = DVector3(mod.translation.Get(FVector3(0,0,0), tics));
+		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), tics));
+		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), tics));
 	}
 
 	if(numret > 2)
@@ -6045,7 +6034,7 @@ DEFINE_ACTION_FUNCTION(AActor, GetBoneEulerAngles)
 
 	if(mdl)
 	{
-		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(0, bone_index, with_override));
+		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(mdl, 0, bone_index, with_override));
 	}
 
 
@@ -6064,7 +6053,7 @@ DEFINE_ACTION_FUNCTION(AActor, GetNamedBoneEulerAngles)
 
 	if(mdl)
 	{
-		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(0, bone_index, with_override));
+		ACTION_RETURN_VEC3(self->GetBoneEulerAngles(mdl, 0, bone_index, with_override));
 	}
 
 	ACTION_RETURN_VEC3(DVector3(0,0,0));
@@ -6095,7 +6084,7 @@ DEFINE_ACTION_FUNCTION(AActor, TransformByBone)
 
 	if(mdl)
 	{
-		self->GetBonePosition(0, bone_index, with_override, position, fwd, up);
+		self->GetBonePosition(mdl, 0, bone_index, with_override, position, fwd, up);
 	}
 
 	if(numret > 2)
@@ -6141,7 +6130,7 @@ DEFINE_ACTION_FUNCTION(AActor, TransformByNamedBone)
 
 	if(mdl)
 	{
-		self->GetBonePosition(0, bone_index, with_override, position, fwd, up);
+		self->GetBonePosition(mdl, 0, bone_index, with_override, position, fwd, up);
 	}
 
 	if(numret > 2)
@@ -6350,7 +6339,7 @@ public:
 DEFINE_FIELD(DAnimationLayer, curAnim);
 DEFINE_FIELD(DAnimationLayer, prevAnim);
 
-IMPLEMENT_CLASS(DAnimationLayer, false, false);
+IMPLEMENT_CLASS(DAnimationLayer, false, true);
 IMPLEMENT_POINTERS_START(DAnimationLayer)
 	IMPLEMENT_POINTER(curAnim)
 	IMPLEMENT_POINTER(prevAnim)
@@ -6423,8 +6412,8 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 		return false;
 	}
 
-	double tic = self->Level->totaltime;
-	if (!WorldPaused() && !self->Level->isFrozen())
+	double tic = self->GetModelTimer();
+	if (!WorldPaused(true) && !self->Level->isFrozen())
 	{
 		tic += ticFrac;
 	}
@@ -6582,17 +6571,17 @@ void SetAnimationFrameRateInternal(AActor * self, double framerate, double ticFr
 
 	EnsureModelData(self);
 
-	if(self->modelData->anims.curAnim.flags & MODELANIM_NONE) return;
+	if(!anims) anims = &self->modelData->anims;
+
+	if(anims->curAnim.flags & MODELANIM_NONE) return;
 
 	if(framerate < 0)
 	{
 		ThrowAbortException(X_OTHER, "Cannot set negative framerate");
 	}
 
-	if(!anims) anims = &self->modelData->anims;
-
-	double tic = self->Level->totaltime;
-	if (!WorldPaused() && !self->Level->isFrozen())
+	double tic = self->GetModelTimer();
+	if (!WorldPaused(true) && !self->Level->isFrozen())
 	{
 		tic += ticFrac;
 	}
@@ -7163,7 +7152,7 @@ DEFINE_ACTION_FUNCTION(AActor, CalculateAnimation)
 
 	AnimInfo nativeAnims = AnimLayerToAnimInfo(layer);
 
-	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->Level->totaltime + 1);
+	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + 1);
 
 	RestoreAnimLayer(layer, nativeAnims);
 
@@ -7182,7 +7171,7 @@ DEFINE_ACTION_FUNCTION(AActor, CalculateAnimationUI)
 
 	AnimInfo nativeAnims = AnimLayerToAnimInfo(layer);
 
-	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->Level->totaltime + I_GetTimeFrac());
+	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + I_GetTimeFrac());
 
 	RestoreAnimLayer(layer, nativeAnims);
 
@@ -7279,7 +7268,7 @@ DEFINE_ACTION_FUNCTION(AActor, FindAnimationFrame)
 	DInterpolatedFrame *frame2 = nullptr;
 	float inter = -1;
 
-	FindAnimationFrameInternal(layer, self->Level->totaltime + 1, frame1, frame2, inter);
+	FindAnimationFrameInternal(layer, self->GetModelTimer() + 1, frame1, frame2, inter);
 
 	if(numret > 2)
 	{
@@ -7308,8 +7297,8 @@ DEFINE_ACTION_FUNCTION(AActor, FindAnimationFrameUI)
 	DInterpolatedFrame *frame2 = nullptr;
 	float inter = -1;
 
-	double tic = self->Level->totaltime;
-	if (!WorldPaused() && !self->Level->isFrozen())
+	double tic = self->GetModelTimer();
+	if (!WorldPaused(true) && !self->Level->isFrozen())
 	{
 		tic += I_GetTimeFrac();
 	}
@@ -7404,12 +7393,15 @@ DEFINE_ACTION_FUNCTION(AActor, SetBones)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + 1.0;
+	double tic = self->GetModelTimer() + 1.0;
 	
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
@@ -7428,12 +7420,15 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesUI)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + I_GetTimeFrac();
+	double tic = self->GetModelTimer() + I_GetTimeFrac();
 	
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
@@ -7452,6 +7447,10 @@ DEFINE_ACTION_FUNCTION(AActor, OverwriteBones)
 	PARAM_INT(mode);
 
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
@@ -7474,12 +7473,15 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesRange)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + 1.0;
+	double tic = self->GetModelTimer() + 1.0;
 
 	int n = std::min(bones->frameData.SSize(), std::min(overrides.SSize(), start + length));
 	for(int i = start; i < n; i++)
@@ -7500,12 +7502,15 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesRangeUI)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + I_GetTimeFrac();
+	double tic = self->GetModelTimer() + I_GetTimeFrac();
 
 	int n = std::min(bones->frameData.SSize(), std::min(overrides.SSize(), start + length));
 	for(int i = start; i < n; i++)
@@ -7527,6 +7532,10 @@ DEFINE_ACTION_FUNCTION(AActor, OverwriteBonesRange)
 
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
 
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
+
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
 	int n = std::min(bones->frameData.SSize(), std::min(overrides.SSize(), start + length));
@@ -7547,12 +7556,15 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesMask)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + 1.0;
+	double tic = self->GetModelTimer() + 1.0;
 
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
@@ -7572,12 +7584,15 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesMaskUI)
 	PARAM_INT(mode);
 	PARAM_FLOAT(interplen);
 
-
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
-	double tic = self->Level->totaltime + I_GetTimeFrac();
+	double tic = self->GetModelTimer() + I_GetTimeFrac();
 
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
@@ -7597,6 +7612,10 @@ DEFINE_ACTION_FUNCTION(AActor, OverwriteBonesMask)
 	PARAM_INT(mode);
 
 	FModel * mdl = SetGetBoneShared<true, true>(self, 0);
+
+	if(self->modelData->modelBoneOverrides.SSize() <= 0) self->modelData->modelBoneOverrides.Resize(1);
+
+	self->modelData->modelBoneOverrides[0].Resize(mdl->NumJoints());
 
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 

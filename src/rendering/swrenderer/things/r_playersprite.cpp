@@ -1,23 +1,21 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2016 Magnus Norddahl
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
+/*
+** r_playersprite.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2016 Magnus Norddahl
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -154,7 +152,10 @@ namespace swrenderer
 
 			viewport->CenterY = viewheight / 2;
 
-			P_BobWeapon(viewport->viewpoint.camera->player, &bobx, &boby, Net_ModifyFrac(viewport->viewpoint.TicFrac));
+			BobType = PSPB_2D;
+			FVector2 interp = PlayerBob[Thread->Viewport->viewpoint.camera->player - players].Interpolate2D(Net_ModifyFrac(viewport->viewpoint.TicFrac));
+			bobx = interp.X;
+			boby = interp.Y;
 
 			// Interpolate the main weapon layer once so as to be able to add it to other layers.
 			if ((weapon = viewport->viewpoint.camera->player->FindPSprite(PSP_WEAPON)) != nullptr)
@@ -210,7 +211,7 @@ namespace swrenderer
 		uint16_t				flip;
 		FGameTexture*			tex;
 		bool				noaccel;
-		double				alpha = owner->Alpha;
+		double				alpha = owner->InterpolatedAlpha(ticfrac);
 
 		// decide which patch to use
 		if ((unsigned)pspr->GetSprite() >= (unsigned)sprites.Size())
@@ -333,7 +334,7 @@ namespace swrenderer
 		if (pspr->GetID() < PSP_TARGETCENTER)
 		{
 			// [MC] Set the render style 
-			auto rs = pspr->GetRenderStyle(owner->RenderStyle, owner->Alpha);
+			auto rs = pspr->GetRenderStyle(owner->RenderStyle, alpha);
 			vis.RenderStyle = rs.first;
 			vis.Alpha = rs.second;
 

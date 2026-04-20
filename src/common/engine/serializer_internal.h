@@ -1,3 +1,26 @@
+/*
+** serializer_internal.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 const char* UnicodeToString(const char* cc);
 const char* StringToUnicode(const char* cc, int size = -1);
@@ -12,12 +35,16 @@ struct FJSONObject
 {
 	rapidjson::Value* mObject;
 	rapidjson::Value::MemberIterator mIterator;
+	rapidjson::Value::MemberIterator mHopefulIterator;
 	int mIndex;
 
 	FJSONObject(rapidjson::Value* v)
 	{
 		mObject = v;
-		if (v->IsObject()) mIterator = v->MemberBegin();
+		if (v->IsObject()) {
+			mIterator = v->MemberBegin();
+			mHopefulIterator = v->MemberBegin();
+		}
 		else if (v->IsArray())
 		{
 			mIndex = 0;
@@ -37,31 +64,34 @@ struct FWriter
 	typedef rapidjson::Writer<rapidjson::StringBuffer, rapidjson::UTF8<> > Writer;
 	typedef rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<> > PrettyWriter;
 
-	Writer *mWriter1;
-	PrettyWriter *mWriter2;
+	Writer *mWriter;
 	TArray<bool> mInObject;
 	rapidjson::StringBuffer mOutString;
 	TArray<DObject *> mDObjects;
 	TMap<DObject *, int> mObjectMap;
 
-	FWriter(bool pretty)
+	FWriter(bool pretty, FWriterBuffer existingBuffer)
 	{
+		existingBuffer.buffer.Clear();
+		mOutString = std::move(existingBuffer.buffer);
 		if (!pretty)
 		{
-			mWriter1 = new Writer(mOutString);
-			mWriter2 = nullptr;
+			mWriter = new Writer(mOutString);
 		}
 		else
 		{
-			mWriter1 = nullptr;
-			mWriter2 = new PrettyWriter(mOutString);
+			mWriter = new PrettyWriter(mOutString);
 		}
 	}
+	FWriter(bool pretty) : FWriter(pretty, FWriterBuffer(rapidjson::StringBuffer {})) {}
 
 	~FWriter()
 	{
-		if (mWriter1) delete mWriter1;
-		if (mWriter2) delete mWriter2;
+		if (mWriter) delete mWriter;
+	}
+
+	FWriterBuffer MoveBufferOut() {
+		return FWriterBuffer(std::move(mOutString));
 	}
 
 
@@ -72,101 +102,81 @@ struct FWriter
 
 	void StartObject()
 	{
-		if (mWriter1) mWriter1->StartObject();
-		else if (mWriter2) mWriter2->StartObject();
+		mWriter->StartObject();
 	}
 
 	void EndObject()
 	{
-		if (mWriter1) mWriter1->EndObject();
-		else if (mWriter2) mWriter2->EndObject();
+		mWriter->EndObject();
 	}
 
 	void StartArray()
 	{
-		if (mWriter1) mWriter1->StartArray();
-		else if (mWriter2) mWriter2->StartArray();
+		mWriter->StartArray();
 	}
 
 	void EndArray()
 	{
-		if (mWriter1) mWriter1->EndArray();
-		else if (mWriter2) mWriter2->EndArray();
+		mWriter->EndArray();
 	}
 
 	void Key(const char *k)
 	{
-		if (mWriter1) mWriter1->Key(k);
-		else if (mWriter2) mWriter2->Key(k);
+		mWriter->Key(k);
 	}
 
 	void Null()
 	{
-		if (mWriter1) mWriter1->Null();
-		else if (mWriter2) mWriter2->Null();
+		mWriter->Null();
 	}
 
-	void StringU(const char *k, bool encode)
+	template<bool encode>
+	void StringU(const char *k)
 	{
-		if (encode) k = StringToUnicode(k);
-		if (mWriter1) mWriter1->String(k);
-		else if (mWriter2) mWriter2->String(k);
+		if constexpr (encode) k = StringToUnicode(k);
+		mWriter->String(k);
 	}
 
 	void String(const char *k)
 	{
 		k = StringToUnicode(k);
-		if (mWriter1) mWriter1->String(k);
-		else if (mWriter2) mWriter2->String(k);
+		mWriter->String(k);
 	}
 
 	void String(const char *k, int size)
 	{
 		k = StringToUnicode(k, size);
-		if (mWriter1) mWriter1->String(k);
-		else if (mWriter2) mWriter2->String(k);
+		mWriter->String(k);
 	}
 
 	void Bool(bool k)
 	{
-		if (mWriter1) mWriter1->Bool(k);
-		else if (mWriter2) mWriter2->Bool(k);
+		mWriter->Bool(k);
 	}
 
 	void Int(int32_t k)
 	{
-		if (mWriter1) mWriter1->Int(k);
-		else if (mWriter2) mWriter2->Int(k);
+		mWriter->Int(k);
 	}
 
 	void Int64(int64_t k)
 	{
-		if (mWriter1) mWriter1->Int64(k);
-		else if (mWriter2) mWriter2->Int64(k);
+		mWriter->Int64(k);
 	}
 
 	void Uint(uint32_t k)
 	{
-		if (mWriter1) mWriter1->Uint(k);
-		else if (mWriter2) mWriter2->Uint(k);
+		mWriter->Uint(k);
 	}
 
 	void Uint64(int64_t k)
 	{
-		if (mWriter1) mWriter1->Uint64(k);
-		else if (mWriter2) mWriter2->Uint64(k);
+		mWriter->Uint64(k);
 	}
 
 	void Double(double k)
 	{
-		if (mWriter1)
-		{
-			mWriter1->Double(k);
-		}
-		else if (mWriter2)
-		{
-			mWriter2->Double(k);
-		}
+		mWriter->Double(k);
 	}
 
 };
@@ -184,6 +194,12 @@ struct FReader
 	TArray<DObject *> mDObjects;
 	rapidjson::Value *mKeyValue = nullptr;
 	bool mObjectsRead = false;
+
+	FReader(FReaderAllocator allocator, const char *buffer, size_t length) : mDoc(rapidjson::Document(&allocator.buffer))
+	{
+		mDoc.Parse(buffer, length);
+		mObjects.Push(FJSONObject(&mDoc));
+	}
 
 	FReader(const char *buffer, size_t length)
 	{
@@ -206,6 +222,19 @@ struct FReader
 			}
 			else
 			{
+				while (obj.mHopefulIterator != obj.mObject->MemberEnd()) [[likely]] {
+					auto name = std::string_view(obj.mHopefulIterator->name.GetString(), obj.mHopefulIterator->name.GetStringLength());
+					if (key == name) [[likely]] {
+						auto ret = &obj.mHopefulIterator->value;
+						++obj.mHopefulIterator;
+						return ret;
+					}
+					if (name.starts_with("class:")) [[unlikely]] {
+						++obj.mHopefulIterator;
+						continue;
+					}
+					break;
+				}
 				// Find the given key by name;
 				auto it = obj.mObject->FindMember(key);
 				if (it == obj.mObject->MemberEnd()) return nullptr;
@@ -231,7 +260,7 @@ FSerializer &SerializePointer(FSerializer &arc, const char *key, T *&value, T **
 {
 	assert(base != nullptr);
 	assert(count > 0);
-	if (arc.isReading() || !arc.w->inObject() || defval == nullptr || value != *defval)
+	if (!arc.canSkip() || defval == nullptr || value != *defval)
 	{
 		int64_t vv = -1;
 		if (value != nullptr)

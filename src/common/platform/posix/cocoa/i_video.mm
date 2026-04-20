@@ -1,50 +1,37 @@
 /*
- ** i_video.mm
- **
- **---------------------------------------------------------------------------
- ** Copyright 2012-2018 Alexey Lysiuk
- ** Copyright 2017-2025 GZDoom Maintainers and Contributors
- ** All rights reserved.
- **
- ** Redistribution and use in source and binary forms, with or without
- ** modification, are permitted provided that the following conditions
- ** are met:
- **
- ** 1. Redistributions of source code must retain the above copyright
- **    notice, this list of conditions and the following disclaimer.
- ** 2. Redistributions in binary form must reproduce the above copyright
- **    notice, this list of conditions and the following disclaimer in the
- **    documentation and/or other materials provided with the distribution.
- ** 3. The name of the author may not be used to endorse or promote products
- **    derived from this software without specific prior written permission.
- **
- ** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
- ** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- ** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- ** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
- ** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- ** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- ** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- ** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- ** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- ** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- **---------------------------------------------------------------------------
- **
- */
-
-#include "gl_load.h"
+** i_video.mm
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2012-2018 Alexey Lysiuk
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #ifdef HAVE_VULKAN
 #include <zvulkan/vulkanbuilders.h>
 #include <zvulkan/vulkansurface.h>
 #endif
 
-#include "i_common.h"
-
 #include "bitmap.h"
 #include "c_dispatch.h"
 #include "gl_framebuffer.h"
+#include "gl_load.h"
 #include "hardware.h"
+#include "i_common.h"
 #include "i_system.h"
 #include "m_argv.h"
 #include "m_png.h"
@@ -53,13 +40,16 @@
 #include "v_text.h"
 #include "v_video.h"
 #include "version.h"
+
 #ifdef HAVE_GLES2
 #include "gles_framebuffer.h"
 #endif
 
 #ifdef HAVE_VULKAN
 #include "vulkan/system/vk_renderdevice.h"
+#endif
 
+#ifdef HAVE_VULKAN
 bool I_CreateVulkanSurface(VkInstance instance, VkSurfaceKHR *surface);
 #endif
 
@@ -374,7 +364,7 @@ class CocoaVideo : public IVideo
 public:
 	CocoaVideo()
 	{
-		ms_isVulkanEnabled = V_GetBackend() == 1 && NSAppKitVersionNumber >= 1404; // NSAppKitVersionNumber10_11
+		ms_isVulkanEnabled = vid_preferbackend == BACKEND_VULKAN && NSAppKitVersionNumber >= 1404; // NSAppKitVersionNumber10_11
 	}
 
 	~CocoaVideo()
@@ -465,7 +455,7 @@ public:
 		if (fb == nullptr)
 		{
 #ifdef HAVE_GLES2
-			if(V_GetBackend() != 0)
+			if(vid_preferbackend != BACKEND_OPENGL)
 				fb = new OpenGLESRenderer::OpenGLFrameBuffer(0, vid_fullscreen);
 			else
 #endif

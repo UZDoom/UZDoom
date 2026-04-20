@@ -10,7 +10,7 @@
 class Win32DisplayWindow : public DisplayWindow
 {
 public:
-	Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI);
+	Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI, bool resizable);
 	~Win32DisplayWindow();
 
 	void SetWindowTitle(const std::string& text) override;
@@ -18,6 +18,7 @@ public:
 	void SetWindowFrame(const Rect& box) override;
 	void SetClientFrame(const Rect& box) override;
 	void Show() override;
+	void Restore() override;
 	void ShowFullscreen() override;
 	void ShowMaximized() override;
 	void ShowMinimized() override;

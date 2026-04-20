@@ -1,3 +1,22 @@
+/*
+** visualthinker.zs
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 Class VisualThinker : Thinker native
 {
 	native Vector3			Pos,
@@ -37,11 +56,11 @@ Class VisualThinker : Thinker native
 	native protected void UpdateSpriteInfo(); // needs to be called every time the texture is updated if the thinker uses SPF_LOCAL_ANIM and is set to a non-ticking statnum (or if Tick is overriden and doesn't call Super.Tick())
 
 	static VisualThinker Spawn(Class<VisualThinker> type, TextureID tex, Vector3 pos, Vector3 vel = (0,0,0), double alpha = 1.0, int flags = 0,
-						  double roll = 0.0, Vector2 scale = (1,1), Vector2 offset = (0,0), int style = STYLE_Normal, TranslationID trans = 0, int VisualThinkerFlags = 0, bool clientSide = false)
+						  double roll = 0.0, Vector2 scale = (1,1), Vector2 offset = (0,0), int style = STYLE_Normal, TranslationID trans = 0, int VisualThinkerFlags = 0)
 	{
 		if (!Level)	return null;
 
-		let p = level.SpawnVisualThinker(type, clientSide);
+		let p = level.SpawnVisualThinker(type);
 		if (p)
 		{
 			p.Texture = tex;

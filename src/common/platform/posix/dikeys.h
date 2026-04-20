@@ -1,10 +1,33 @@
-// ZDoom bases its keycodes on DirectInput's scan codes
-// Why? Because it was Win32-only before porting to anything else,
-// so this made sense. AFAIK, it's primarily used under Win32 now,
-// so it still makes sense.
-//
-// Actually, these key codes may only be used for key bindings now,
-// in which case they're not really necessary--if we tweaked c_bind.cpp.
+/*
+** dikeys.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2013-2016 Marisa Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+** ZDoom bases its keycodes on DirectInput's scan codes
+** Why? Because it was Win32-only before porting to anything else,
+** so this made sense. AFAIK, it's primarily used under Win32 now,
+** so it still makes sense.
+**
+** Actually, these key codes may only be used for key bindings now,
+** in which case they're not really necessary--if we tweaked c_bind.cpp.
+*/
+
 
 enum
 {

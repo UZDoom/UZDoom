@@ -1,34 +1,21 @@
 /*
 ** statscreen.zs
 **
+**
+**
 **---------------------------------------------------------------------------
 **
 ** Copyright 2010-2017 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
 **
 **---------------------------------------------------------------------------
 **
@@ -1005,40 +992,49 @@ class StatusScreen : ScreenJob abstract version("2.5")
 	protected virtual void updateStats() {}
 	protected virtual void drawStats() {}
 
+	// TODO: Eventually this should only be here for backwards compatibility as the scoreboard
+	// has now been entirely rewritten and no longer uses this function.
 	static int, int, int GetPlayerWidths()
 	{
-		int maxNameWidth;
+		if (!StatusBar.ScoreboardFont)
+			return 0, 0, 0;
+
+		int maxNameWidth = StatusBar.ScoreboardFont.StringWidth("Name");
 		int maxScoreWidth;
 		int maxIconHeight;
 
-		StatusBar.Scoreboard_GetPlayerWidths(maxNameWidth, maxScoreWidth, maxIconHeight);
+		for (int i = 0; i < MAXPLAYERS; ++i)
+		{
+			if (!playeringame[i])
+				continue;
+
+			int width = StatusBar.ScoreboardFont.StringWidth(players[i].GetUserName(16u));
+			if (width > maxNameWidth)
+				maxNameWidth = width;
+
+			TextureID icon = players[i].mo.ScoreIcon;
+			if (icon.isValid())
+			{
+				width = int(screen.GetTextureWidth(icon) - screen.GetTextureLeftOffset(icon) + 2.5);
+				if (width > maxScoreWidth)
+					maxScoreWidth = width;
+
+				int height = int(screen.GetTextureHeight(icon) - screen.GetTextureTopOffset(icon) + 0.5);
+				if (height > maxIconHeight)
+					maxIconHeight = height;
+			}
+		}
 
 		return maxNameWidth, maxScoreWidth, maxIconHeight;
 	}
 
-	static Color GetRowColor(PlayerInfo player, bool highlight)
+	static int GetRowColor(PlayerInfo player, bool highlight)
 	{
-		return StatusBar.Scoreboard_GetRowColor(player, highlight);
+		return StatusBar.GetScoreboardTextColor(player);
 	}
 
 	static void GetSortedPlayers(in out Array<int> sorted, bool teamplay)
 	{
-		sorted.clear();
-		for(int i = 0; i < MAXPLAYERS; i++)
-		{
-			if(playeringame[i])
-			{
-				sorted.Push(i);
-			}
-		}
-
-		if(teamplay)
-		{
-			StatusBar.Scoreboard_SortPlayers(sorted, BaseStatusBar.Scoreboard_CompareByTeams);
-		}
-		else
-		{
-			StatusBar.Scoreboard_SortPlayers(sorted, BaseStatusBar.Scoreboard_CompareByPoints);
-		}
+		StatusBar.SortScoreboardPlayers(sorted, BaseStatusBar.ComparePlayerPoints);
 	}
 }

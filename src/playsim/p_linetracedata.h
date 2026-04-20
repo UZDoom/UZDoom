@@ -1,11 +1,22 @@
+/*
+** p_linetracedata.h
+**
+** Structure for passing detailed results of LineTrace to ZScript
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2018-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef P_LTRACEDATA_H
 #define P_LTRACEDATA_H
 
-//============================================================================
-//
-// Structure for passing detailed results of LineTrace to ZScript
-//
-//============================================================================
 struct FLineTraceData
 {
 	AActor *HitActor;

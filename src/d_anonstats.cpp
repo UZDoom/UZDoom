@@ -1,3 +1,19 @@
+/*
+** d_anonstats.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2018-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #define NO_SEND_STATS
 #ifdef NO_SEND_STATS
 

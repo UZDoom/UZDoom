@@ -1,30 +1,23 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-// Copyright 2017-2025 GZDoom Maintainers and Contributors
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//	Internally used data structures for virtually everything,
-//	 key definitions, lots of other stuff.
-//
-//-----------------------------------------------------------------------------
+/*
+** doomdef.h
+**
+** Internally used data structures
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Internally used data structures for virtually everything,
+** key definitions, lots of other stuff.
+*/
 
 #ifndef __DOOMDEF_H__
 #define __DOOMDEF_H__
@@ -186,41 +179,46 @@ enum : unsigned
 };
 
 // [RH] Compatibility flags.
-enum : unsigned int
+enum ELevelCompatFlag : uint32_t
 {
-	COMPATF_SHORTTEX		= 1 << 0,	// Use Doom's shortest texture around behavior?
-	COMPATF_STAIRINDEX		= 1 << 1,	// Don't fix loop index for stair building?
-	COMPATF_LIMITPAIN		= 1 << 2,	// Pain elemental is limited to 20 lost souls?
-	COMPATF_SILENTPICKUP	= 1 << 3,	// Pickups are only heard locally?
-	COMPATF_NO_PASSMOBJ		= 1 << 4,	// Pretend every actor is infinitely tall?
-	COMPATF_MAGICSILENCE	= 1 << 5,	// Limit actors to one sound at a time?
-	COMPATF_WALLRUN			= 1 << 6,	// Enable buggier wall clipping so players can wallrun?
-	COMPATF_NOTOSSDROPS		= 1 << 7,	// Spawn dropped items directly on the floor?
-	COMPATF_USEBLOCKING		= 1 << 8,	// Any special line can block a use line
-	COMPATF_NODOORLIGHT		= 1 << 9,	// Don't do the BOOM local door light effect
-	COMPATF_RAVENSCROLL		= 1 << 10,	// Raven's scrollers use their original carrying speed
-	COMPATF_SOUNDTARGET		= 1 << 11,	// Use sector based sound target code.
-	COMPATF_DEHHEALTH		= 1 << 12,	// Limit deh.MaxHealth to the health bonus (as in Doom2.exe)
-	COMPATF_TRACE			= 1 << 13,	// Trace ignores lines with the same sector on both sides
-	COMPATF_DROPOFF			= 1 << 14,	// Monsters cannot move when hanging over a dropoff
-	COMPATF_BOOMSCROLL		= 1 << 15,	// Scrolling sectors are additive like in Boom
-	COMPATF_INVISIBILITY	= 1 << 16,	// Monsters can see semi-invisible players
-	COMPATF_SILENT_INSTANT_FLOORS = 1<<17,	// Instantly moving floors are not silent
-	COMPATF_SECTORSOUNDS	= 1 << 18,	// Sector sounds use original method for sound origin.
-	COMPATF_MISSILECLIP		= 1 << 19,	// Use original Doom heights for clipping against projectiles
-	COMPATF_CROSSDROPOFF	= 1 << 20,	// monsters can't be pushed over dropoffs
-	COMPATF_ANYBOSSDEATH	= 1 << 21,	// [GZ] Any monster which calls BOSSDEATH counts for level specials
-	COMPATF_MINOTAUR		= 1 << 22,	// Minotaur's floor flame is exploded immediately when feet are clipped
-	COMPATF_MUSHROOM		= 1 << 23,	// Force original velocity calculations for A_Mushroom in Dehacked mods.
-	COMPATF_MBFMONSTERMOVE	= 1 << 24,	// Monsters are affected by friction and pushers/pullers.
-	COMPATF_VILEGHOSTS		= 1 << 25,	// Crushed monsters are resurrected as ghosts.
-	COMPATF_NOBLOCKFRIENDS	= 1 << 26,	// Friendly monsters aren't blocked by monster-blocking lines.
-	COMPATF_SPRITESORT		= 1 << 27,	// Invert sprite sorting order for sprites of equal distance
-	COMPATF_HITSCAN			= 1 << 28,	// Hitscans use original blockmap and hit check code.
-	COMPATF_LIGHT			= 1 << 29,	// Find neighboring light level like Doom
-	COMPATF_POLYOBJ			= 1 << 30,	// Draw polyobjects the old fashioned way
-	COMPATF_MASKEDMIDTEX	= 1u << 31,	// Ignore compositing when drawing masked midtextures
+	COMPATF_SHORTTEX = 1 << 0,	// Use Doom's shortest texture around behavior?
+	COMPATF_STAIRINDEX = 1 << 1,	// Don't fix loop index for stair building?
+	COMPATF_LIMITPAIN = 1 << 2,	// Pain elemental is limited to 20 lost souls?
+	COMPATF_SILENTPICKUP = 1 << 3,	// Pickups are only heard locally?
+	COMPATF_NO_PASSMOBJ = 1 << 4,	// Pretend every actor is infinitely tall?
+	COMPATF_MAGICSILENCE = 1 << 5,	// Limit actors to one sound at a time?
+	COMPATF_WALLRUN = 1 << 6,	// Enable buggier wall clipping so players can wallrun?
+	COMPATF_NOTOSSDROPS = 1 << 7,	// Spawn dropped items directly on the floor?
+	COMPATF_USEBLOCKING = 1 << 8,	// Any special line can block a use line
+	COMPATF_NODOORLIGHT = 1 << 9,	// Don't do the BOOM local door light effect
+	COMPATF_RAVENSCROLL = 1 << 10,	// Raven's scrollers use their original carrying speed
+	COMPATF_SOUNDTARGET = 1 << 11,	// Use sector based sound target code.
+	COMPATF_DEHHEALTH = 1 << 12,	// Limit deh.MaxHealth to the health bonus (as in Doom2.exe)
+	COMPATF_TRACE = 1 << 13,	// Trace ignores lines with the same sector on both sides
+	COMPATF_DROPOFF = 1 << 14,	// Monsters cannot move when hanging over a dropoff
+	COMPATF_BOOMSCROLL = 1 << 15,	// Scrolling sectors are additive like in Boom
+	COMPATF_INVISIBILITY = 1 << 16,	// Monsters can see semi-invisible players
+	COMPATF_SILENT_INSTANT_FLOORS = 1 << 17,	// Instantly moving floors are not silent
+	COMPATF_SECTORSOUNDS = 1 << 18,	// Sector sounds use original method for sound origin.
+	COMPATF_MISSILECLIP = 1 << 19,	// Use original Doom heights for clipping against projectiles
+	COMPATF_CROSSDROPOFF = 1 << 20,	// monsters can't be pushed over dropoffs
+	COMPATF_ANYBOSSDEATH = 1 << 21,	// [GZ] Any monster which calls BOSSDEATH counts for level specials
+	COMPATF_MINOTAUR = 1 << 22,	// Minotaur's floor flame is exploded immediately when feet are clipped
+	COMPATF_MUSHROOM = 1 << 23,	// Force original velocity calculations for A_Mushroom in Dehacked mods.
+	COMPATF_MBFMONSTERMOVE = 1 << 24,	// Monsters are affected by friction and pushers/pullers.
+	COMPATF_VILEGHOSTS = 1 << 25,	// Crushed monsters are resurrected as ghosts.
+	COMPATF_NOBLOCKFRIENDS = 1 << 26,	// Friendly monsters aren't blocked by monster-blocking lines.
+	COMPATF_SPRITESORT = 1 << 27,	// Invert sprite sorting order for sprites of equal distance
+	COMPATF_HITSCAN = 1 << 28,	// Hitscans use original blockmap and hit check code.
+	COMPATF_LIGHT = 1 << 29,	// Find neighboring light level like Doom
+	COMPATF_POLYOBJ = 1 << 30,	// Draw polyobjects the old fashioned way
+	COMPATF_MASKEDMIDTEX = 1u << 31,	// Ignore compositing when drawing masked midtextures
+};
+using ELevelCompatFlags = TFlags<ELevelCompatFlag>;
+DEFINE_TFLAGS_OPERATORS(ELevelCompatFlags);
 
+enum ELevelCompatFlag2 : uint32_t
+{
 	COMPATF2_BADANGLES		= 1 << 0,	// It is impossible to face directly NSEW.
 	COMPATF2_FLOORMOVE		= 1 << 1,	// Use the same floor motion behavior as Doom.
 	COMPATF2_SOUNDCUTOFF	= 1 << 2,	// Cut off sounds when an actor vanishes instead of making it owner-less
@@ -240,11 +238,14 @@ enum : unsigned int
 	COMPATF2_FDTELEPORT		= 1 << 16,	// Emulate Final Doom's teleporter z glitch.
 	COMPATF2_NOACSARGCHECK	= 1 << 17,	// Disable arg count checking for ACS
 	COMPATF2_NOVDOLLLOCKMSG = 1 << 18,	// Voodoo dolls no longer trigger lock messages
+	COMPATF2_EMULATEMIKOPORTALS = 1 << 19, // Emulate Mikoportals Z Underflow
 };
+using ELevelCompatFlags2 = TFlags<ELevelCompatFlag2>;
+DEFINE_TFLAGS_OPERATORS(ELevelCompatFlags2)
 
 // Emulate old bugs for select maps. These are not exposed by a cvar
 // or mapinfo because we do not want new maps to use these bugs.
-enum
+enum ELevelBugCompatFlag : uint32_t
 {
 	BCOMPATF_SETSLOPEOVERFLOW	= 1 << 0,	// SetSlope things can overflow
 	BCOMPATF_RESETPLAYERSPEED	= 1 << 1,	// Set player speed to 1.0 when changing maps
@@ -258,7 +259,8 @@ enum
 	BCOMPATF_NOSECTIONMERGE		= 1 << 11,	// (for IWAD maps) keep separate sections for sectors with intra-sector linedefs. 
 	BCOMPATF_NOMIRRORS			= 1 << 12,	// disable mirrors, for maps that have broken setups.
 };
-
+using ELevelBugCompatFlags = TFlags<ELevelBugCompatFlag>;
+DEFINE_TFLAGS_OPERATORS(ELevelBugCompatFlags)
 // phares 3/20/98:
 //
 // Player friction is variable, based on controlling

@@ -20,7 +20,7 @@ jobs:
     outputs:
       json_refs: ${{ steps.generate-matrix.outputs.json_refs }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Generate Matrix
@@ -51,13 +51,13 @@ jobs:
       - name: Display zscdoc version
         run: |
           zscdoc --version
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ref: ${{ matrix.ref_info.ref }}
       - name: Document ref
         run: |
           zscdoc -f ./wadsrc/static -o ./output --delete-without-confirm --base-url "/UZDoom/docs/<version>" --target-version '${{ matrix.ref_info.url_part }}' --versions '${{ needs.build_matrix.outputs.json_refs }}' --canonical-domain "https://${{ github.repository_owner }}.github.io"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.ref_info.url_part }}
           path: output
@@ -72,7 +72,7 @@ jobs:
       - build_matrix
       - build
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - uses: actions/configure-pages@v5

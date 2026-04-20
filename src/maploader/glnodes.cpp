@@ -1,61 +1,50 @@
 /*
-** gl_nodes.cpp
+** glnodes.cpp
+**
+**
 **
 **---------------------------------------------------------------------------
-** Copyright 2005-2010 Christoph Oelckers
+**
+** Copyright 2005-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
-#include <math.h>
+
+#include <cmath>
+#include <miniz.h>
 
 #ifndef _WIN32
 #include <unistd.h>
 #endif
 
-#include <miniz.h>
-
-#include "m_argv.h"
+#include "basics.h"
 #include "c_dispatch.h"
-#include "m_swap.h"
-#include "filesystem.h"
-#include "p_local.h"
-#include "nodebuild.h"
-#include "doomstat.h"
-#include "engineerrors.h"
-#include "p_setup.h"
-#include "version.h"
-#include "md5.h"
-#include "m_misc.h"
 #include "cmdlib.h"
-#include "g_levellocals.h"
-#include "i_time.h"
-#include "maploader.h"
+#include "engineerrors.h"
+#include "filesystem.h"
 #include "fs_findfile.h"
+#include "g_levellocals.h"
+#include "i_specialpaths.h"
+#include "i_time.h"
+#include "m_swap.h"
+#include "maploader.h"
+#include "nodebuild.h"
+#include "p_local.h"
+#include "p_setup.h"
+#include "printf.h"
+#include "version.h"
+#include "zstring.h"
 
 EXTERN_CVAR(Bool, gl_cachenodes)
 EXTERN_CVAR(Float, gl_cachetime)
@@ -389,7 +378,6 @@ bool MapLoader::LoadGLSegs(FileReader &lump)
 				ldef = &Level->lines[lineidx];
 				segs[i].linedef = ldef;
 	
-					
 				auto side=LittleShort(ml->side);
 				if (side > 1)
 					return false;
@@ -1003,18 +991,20 @@ bool MapLoader::CheckNodes(MapData * map, bool rebuilt, int buildtime)
 
 typedef TArray<uint8_t> MemFile;
 
-
 static FString CreateCacheName(MapData *map, bool create)
 {
-	FString path = M_GetCachePath(create);
-	FString lumpname = fileSystem.GetFileFullPath(map->lumpnum).c_str();
-	auto separator = lumpname.IndexOf(':');
-	path << '/' << lumpname.Left(separator);
-	if (create) CreatePath(path.GetChars());
-
-	lumpname.ReplaceChars('/', '%');
-	lumpname.ReplaceChars(':', '$');
-	path << '/' << lumpname.Right((ptrdiff_t)lumpname.Len() - separator - 1) << ".gzc";
+	FString path = M_GetCachePath(create, "nodes");
+	const char bytes = 16;
+	uint8_t md5[bytes];
+	map->GetChecksum(md5);
+	static const char hex[] = "0123456789ABCDEF";
+	char buffer[2*bytes+1] = {'\0'};
+	for (int i = 0; i < bytes; i++)
+	{
+		buffer[i*2  ] = hex[md5[i]>>4  ];
+		buffer[i*2+1] = hex[md5[i]&0x0F];
+	}
+	path << '/' << buffer << ".znodes";
 	return path;
 }
 
@@ -1206,7 +1196,7 @@ bool MapLoader::CheckCachedNodes(MapData *map)
 UNSAFE_CCMD(clearnodecache)
 {
 	FileSys::FileList list;
-	FString path = M_GetCachePath(false);
+	FString path = M_GetCachePath(false, "nodes");
 	path += "/";
 
 	if (!FileSys::ScanDirectory(list, path.GetChars(), "*", false))

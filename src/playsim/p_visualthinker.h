@@ -1,14 +1,29 @@
+/*
+** p_visualthinker.h
+**
+** VisualThinkers
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2023-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** by Major Cooke
+** Credit to phantombeta, Jay & RaveYard for aid
+*/
+
 #pragma once
 
 #include "palettecontainer.h"
 #include "hwrenderer/scene/hw_drawstructs.h"
 
-
 //===========================================================================
-// 
-// VisualThinkers
-// by Major Cooke
-// Credit to phantombeta, RicardoLuis0 & RaveYard for aid
+//
+//
 // 
 //===========================================================================
 

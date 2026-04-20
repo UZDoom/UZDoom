@@ -1,27 +1,17 @@
-// 
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2004-2018 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
 /*
 ** hw_portal.cpp
-**   portal maintenance classes for skyboxes, horizons etc. (API independent parts)
+**
+** portal maintenance classes for skyboxes, horizons etc. (API independent parts)
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2004-2018 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
 **
 */
 
@@ -36,10 +26,9 @@
 #include "flatvertices.h"
 #include "hw_clock.h"
 #include "hw_lighting.h"
+#include "hw_cvars.h"
 #include "texturemanager.h"
-
-EXTERN_CVAR(Int, r_mirror_recursions)
-EXTERN_CVAR(Bool, gl_portals)
+#include "hw_viewpointbuffer.h"
 
 void SetPlaneTextureRotation(FRenderState& state, HWSectorPlane* plane, FGameTexture* texture);
 
@@ -134,7 +123,7 @@ bool FPortalSceneState::RenderFirstSkyPortal(int recursion, HWDrawInfo *outer_di
 	for (int i = portals.Size() - 1; i >= 0; --i)
 	{
 		auto p = portals[i];
-		if (p->lines.Size() > 0 && p->IsSky())
+		if (p->lines.Size() > 0 && p->IsSky(outer_di))
 		{
 			// Cannot clear the depth buffer inside a portal recursion
 			if (recursion && p->NeedDepthBuffer()) continue;
@@ -163,7 +152,11 @@ bool FPortalSceneState::RenderFirstSkyPortal(int recursion, HWDrawInfo *outer_di
 			tempmatrix = outer_di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
 			outer_di->VPUniforms.mProjectionMatrix = outer_di->ProjectionMatrix2;
 		}
+		outer_di->VPUniforms.mThickFogDistance /= 16.0; // Skyviewpoint sectors are scaled up by 16x
+		outer_di->VPUniforms.mThickFogMultiplier *= 16.0; // Skyviewpoint sectors are scaled up by 16x
 		RenderPortal(best, state, usestencil, outer_di);
+		outer_di->VPUniforms.mThickFogDistance *= 16.0; // Revert back
+		outer_di->VPUniforms.mThickFogMultiplier /= 16.0; // Revert back
 		if (usestencil && ((strcmp(best->GetName(), "Sky") == 0) || (strcmp(best->GetName(), "Skybox") == 0)))
 			outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
 		delete best;
@@ -262,6 +255,12 @@ void HWPortal::SetupStencil(HWDrawInfo *di, FRenderState &state, bool usestencil
 	
 	if (usestencil)
 	{
+		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
+		{
+			di->VPUniforms.mViewMatrix.translate(0.0, -zshift * GetMirrorSide(), 0.0);
+			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
+		}
+
 		// Create stencil
 		state.SetStencil(0, SOP_Increment);	// create stencil, increment stencil of valid pixels
 		state.SetColorMask(false);
@@ -306,6 +305,11 @@ void HWPortal::SetupStencil(HWDrawInfo *di, FRenderState &state, bool usestencil
 		}
 		screen->stencilValue++;
 		
+		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
+		{
+			di->VPUniforms.mViewMatrix.translate(0.0, zshift * GetMirrorSide(), 0.0);
+			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
+		}
 		
 	}
 	else
@@ -340,6 +344,12 @@ void HWPortal::RemoveStencil(HWDrawInfo *di, FRenderState &state, bool usestenci
 	if (usestencil)
 	{
 		
+		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
+		{
+			di->VPUniforms.mViewMatrix.translate(0.0, -zshift * GetMirrorSide(), 0.0);
+			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
+		}
+
 		state.SetColorMask(false);						// no graphics
 		state.SetEffect(EFF_NONE);
 		state.ResetColor();
@@ -372,6 +382,11 @@ void HWPortal::RemoveStencil(HWDrawInfo *di, FRenderState &state, bool usestenci
 		
 		// restore old stencil op.
 		state.SetStencil(0, SOP_Keep);
+		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
+		{
+			di->VPUniforms.mViewMatrix.translate(0.0, zshift * GetMirrorSide(), 0.0);
+			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
+		}
 	}
 	else
 	{
@@ -501,14 +516,18 @@ int HWLinePortal::ClipPoint(const DVector2 &pos)
 bool HWMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clipper)
 {
 	auto state = mState;
-	if (state->renderdepth > r_mirror_recursions)
+	if (state->renderdepth > r_portal_recursions)
 	{
 		return false;
 	}
 
 	auto &vp = di->Viewpoint;
 	state->vpIsAllowedOoB = vp.bDoOob;
-	di->UpdateCurrentMapSection();
+	// di->UpdateCurrentMapSection();
+	if (linedef->sidedef[0] && linedef->sidedef[0]->numsegs > 0)
+	{
+		di->CurrentMapSections.Set(linedef->sidedef[0]->segs[0]->Subsector->mapsection); // This makes line mirrors work when viewed through portals
+	}
 
 	di->mClipPortal = this;
 	DAngle StartAngle = vp.Angles.Yaw;
@@ -607,7 +626,7 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 {
 	// TODO: Handle recursion more intelligently
 	auto &state = mState;
-	if (state->renderdepth>r_mirror_recursions)
+	if (state->renderdepth>r_portal_recursions)
 	{
 		return false;
 	}
@@ -716,6 +735,7 @@ bool HWSkyboxPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 	vp.ViewActor = origin;
 
 	di->SetupView(rstate, vp.Pos.X, vp.Pos.Y, vp.Pos.Z, !!(state->MirrorFlag & 1), !!(state->PlaneMirrorFlag & 1));
+	vp.OffPos = vp.Pos; // Do this after di->SetupView()
 	di->SetViewArea();
 	ClearClipper(di, clipper);
 	di->UpdateCurrentMapSection();
@@ -787,6 +807,11 @@ void HWSectorStackPortal::SetupCoverage(HWDrawInfo *di)
 		}
 	}
 	SetCoverage(di, di->Level->HeadNode());
+}
+
+bool HWSectorStackPortal::IsSky(HWDrawInfo *di)
+{
+	return di->Level->thickfogdistance <= 0.0; // although this isn't a real sky it can be handled as one. Unless thickfog is active. That requires depth buffer.
 }
 
 //-----------------------------------------------------------------------------
@@ -884,10 +909,21 @@ const char *HWSectorStackPortal::GetName() { return "Sectorstack"; }
 //
 //-----------------------------------------------------------------------------
 
+void HWPlaneMirrorPortal::SetupCoverage(HWDrawInfo *di)
+{
+	for (unsigned int i = 0; i < lines.Size(); i++)
+	{
+		subsector_t *sub = lines[i].sub;
+		di->CurrentMapSections.Set(sub->mapsection);
+		di->ss_renderflags[sub->Index()] |= SSRF_SEEN;
+	}
+	SetCoverage(di, di->Level->HeadNode());
+}
+
 bool HWPlaneMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clipper)
 {
 	auto state = mState;
-	if (state->renderdepth > r_mirror_recursions)
+	if (state->renderdepth > r_portal_recursions)
 	{
 		return false;
 	}
@@ -903,14 +939,15 @@ bool HWPlaneMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *c
 
 	double planez = origin->ZatPoint(vp.Pos);
 	vp.Pos.Z = 2 * planez - vp.Pos.Z;
+	vp.OffPos.Z = 2 * planez - vp.OffPos.Z;
+	vp.ViewVector3D.Z = - vp.ViewVector3D.Z;
 	vp.ViewActor = nullptr;
 	state->PlaneMirrorMode = origin->fC() < 0 ? -1 : 1;
 
 	state->PlaneMirrorFlag++;
 	di->SetClipHeight(planez, state->PlaneMirrorMode < 0 ? -1.f : 1.f);
 	di->SetupView(rstate, vp.Pos.X, vp.Pos.Y, vp.Pos.Z, !!(state->MirrorFlag & 1), !!(state->PlaneMirrorFlag & 1));
-	vp.ViewVector3D.Z = - vp.ViewVector3D.Z;
-	vp.OffPos.Z = 2 * planez - vp.OffPos.Z;
+	SetupCoverage(di);
 	ClearClipper(di, clipper);
 
 	di->UpdateCurrentMapSection();
@@ -932,6 +969,28 @@ void HWPlaneMirrorPortal::DrawPortalStencil(FRenderState &state, int pass)
 
 			state.SetNormal(flat.plane.plane.Normal().X, flat.plane.plane.Normal().Z, flat.plane.plane.Normal().Y);
 			state.DrawIndexed(DT_Triangles, flat.iboindex + flat.section->vertexindex, flat.section->vertexcount, i == 0);
+		}
+		// Cannot combine these two for loops because of the DrawIndexed() vs Draw() calls interleaving
+		for (unsigned int i = 0; i < lines.Size(); i++)
+		{
+			flat.section = lines[i].sub->section;
+			flat.iboindex = lines[i].sub->sector->iboindex[isceiling ? sector_t::ceiling : sector_t::floor];
+			flat.plane.GetFromSector(lines[i].sub->sector, isceiling ? sector_t::ceiling : sector_t::floor);
+			screen->mVertexData->Map();
+			auto verts = screen->mVertexData->AllocVertices(5);
+			auto ptr = verts.first;
+			ptr[0].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p),
+					   lines[i].vertexes[0]->p.Y, 0, 0);
+			ptr[1].Set(lines[i].vertexes[1]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[1]->p),
+					   lines[i].vertexes[1]->p.Y, 0, 0);
+			ptr[2].Set(lines[i].vertexes[1]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[1]->p) + zshift*GetMirrorSide(),
+					   lines[i].vertexes[1]->p.Y, 0, 0);
+			ptr[3].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p) + zshift*GetMirrorSide(),
+					   lines[i].vertexes[0]->p.Y, 0, 0);
+			ptr[4].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p),
+					   lines[i].vertexes[0]->p.Y, 0, 0);
+			screen->mVertexData->Unmap();
+			state.Draw(DT_TriangleStrip, verts.second, 5, screen->IsVulkan());
 		}
 	}
 	else
@@ -1117,7 +1176,7 @@ void HWEEHorizonPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 	{
 		HWHorizonInfo horz;
 		horz.plane.GetFromSector(sector, sector_t::ceiling);
-		horz.lightlevel = hw_ClampLight(sector->GetCeilingLight());
+		horz.lightlevel = RescaleLightLevel(sector->GetCeilingLight());
 		horz.colormap = sector->Colormap;
 		horz.specialcolor = 0xffffffff;
 		if (portal->mType == PORTS_PLANE)
@@ -1131,7 +1190,7 @@ void HWEEHorizonPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 	{
 		HWHorizonInfo horz;
 		horz.plane.GetFromSector(sector, sector_t::floor);
-		horz.lightlevel = hw_ClampLight(sector->GetFloorLight());
+		horz.lightlevel = RescaleLightLevel(sector->GetFloorLight());
 		horz.colormap = sector->Colormap;
 		horz.specialcolor = 0xffffffff;
 		if (portal->mType == PORTS_PLANE)

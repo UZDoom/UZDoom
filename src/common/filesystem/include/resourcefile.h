@@ -1,8 +1,31 @@
-
+/*
+** resourcefile.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2005-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #ifndef __RESFILE_H
 #define __RESFILE_H
 
+#include <assert.h>
 #include <limits.h>
 #include <vector>
 #include <string>
@@ -116,7 +139,7 @@ public:
 	FResourceFile(const char* filename, FileReader& r, StringPool* sp);
 	const char* NormalizeFileName(const char* fn, int fallbackcp = 0);
 	FResourceEntry* AllocateEntries(int count);
-	void GenerateHash();
+	void GenerateHash(bool no_reader = false);
 	void PostProcessArchive(LumpFilterInfo* filter);
 protected:
 	FileReader Reader;
@@ -124,7 +147,9 @@ protected:
 	FResourceEntry* Entries = nullptr;
 	uint32_t NumLumps;
 	char Hash[48];
+	bool HashGenerated;
 	StringPool* stringpool;
+	bool bOptional;
 
 	// for archives that can contain directories
 	virtual void SetEntryAddress(uint32_t entry)
@@ -141,19 +166,24 @@ private:
 	bool FindPrefixRange(const char* filter, uint32_t max, uint32_t &start, uint32_t &end);
 	void JunkLeftoverFilters(uint32_t max);
 	void FindCommonFolder(LumpFilterInfo* filter);
-	static FResourceFile *DoOpenResourceFile(const char *filename, FileReader &file, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp);
+	void SetOptional(bool optional) { bOptional = optional; }
+	static FResourceFile *DoOpenResourceFile(const char *filename, FileReader &file, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp, bool optional);
 
 public:
-	static FResourceFile *OpenResourceFile(const char *filename, FileReader &file, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr);
-	static FResourceFile *OpenResourceFile(const char *filename, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr);
-	static FResourceFile *OpenDirectory(const char *filename, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr);
+	static FResourceFile *OpenResourceFile(const char *filename, FileReader &file, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr, bool optional = false);
+	static FResourceFile *OpenResourceFile(const char *filename, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr, bool optional = false);
+	static FResourceFile *OpenDirectory(const char *filename, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr, bool optional = false);
 	virtual ~FResourceFile();
-    // If this FResourceFile represents a directory, the Reader object is not usable so don't return it.
+	// If this FResourceFile represents a directory, the Reader object is not usable so don't return it.
 	FileReader *GetContainerReader() { return Reader.isOpen()? &Reader : nullptr; }
 	const char* GetFileName() const { return FileName; }
 	uint32_t GetFirstEntry() const { return FirstLump; }
 	void SetFirstLump(uint32_t f) { FirstLump = f; }
-	const char* GetHash() const { return Hash; }
+	const char* GetHash() const
+	{
+		assert(HashGenerated == true);
+		return Hash;
+	}
 
 	int EntryCount() const { return NumLumps; }
 	uint32_t EntryCountU() const { return NumLumps; }
@@ -168,10 +198,10 @@ public:
 		return (entry < NumLumps) ? Entries[entry].Position : 0;
 	}
 
-  size_t GetEntryHash(uint32_t entry)
-  {
-    return (entry < NumLumps) ? Entries[entry].CRC32 : 0;
-  }
+	size_t GetEntryHash(uint32_t entry)
+	{
+		return (entry < NumLumps) ? Entries[entry].CRC32 : 0;
+	}
 
 	// default is the safest reader type.
 	virtual FileReader GetEntryReader(uint32_t entry, int readertype = READER_NEW, int flags = READERFLAG_SEEKABLE);
@@ -199,6 +229,8 @@ public:
 	virtual FileData Read(uint32_t entry);
 
 	virtual FCompressedBuffer GetRawData(uint32_t entry);
+
+	bool IsOptional() const { return bOptional; }
 
 	FileReader Destroy()
 	{

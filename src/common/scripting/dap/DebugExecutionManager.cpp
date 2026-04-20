@@ -1,3 +1,25 @@
+/*
+** DebugExecutionManager.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2025 nikitalita
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: MIT
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #include "DebugExecutionManager.h"
 #include <thread>
 // #include "Window.h"
@@ -247,7 +269,7 @@ void DebugExecutionManager::HandleException(EVMAbortException reason, const std:
 			event.text = message;
 		}
 		event.reason = "exception";
-		event.description = "Paused on exception: " + (reason < exceptionStringsSize ? std::string(exceptionStrings[(int)reason]) : "Unknown");
+		event.description = "Paused on exception: " + (((size_t)reason < exceptionStringsSize) ? std::string(exceptionStrings[(int)reason]) : "Unknown");
 		event.threadId = 1;
 		m_session->send(event);
 	};

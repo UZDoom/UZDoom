@@ -1,5 +1,25 @@
-// Licensed to the Public Domain by Rachael Alexandersion (c) 2021
-// This file is nothing more than a stub. Please replace with a proper copyright notice if this function is implemented for ARM. Or just use the regular i_crash.cpp
+/*
+** i_crash_arm.cpp
+**
+** Gathers exception information when the program crashes.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2021 Rachael Alexanderson
+** Copyright 2021-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** Public Domain by Rachael Alexanderson
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 void DisplayCrashLog()
 {

@@ -1,3 +1,22 @@
+/*
+** constants.zs
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 // for flag changer functions.
 const FLAG_NO_CHANGE = -1;
 const MAXPLAYERS = 64;
@@ -728,6 +747,7 @@ enum EParticleFlags
 	SPF_ALLOWSHADERS			= 1 << 15,
 	SPF_FADE_IN_OUT				= 1 << 16,
 	SPF_FADE_IN_HOLD_OUT		= 1 << 17,
+	SPF_NODYNAMICLIGHTING		= 1 << 18,
 
 	SPF_RELATIVE				= SPF_RELPOS|SPF_RELVEL|SPF_RELACCEL|SPF_RELANG
 };

@@ -1,33 +1,23 @@
 /*
 ** i_crash.cpp
+**
 ** Gathers exception information when the program crashes.
 **
 **---------------------------------------------------------------------------
-** Copyright 2002-2006 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 2002-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.s
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -1798,7 +1788,7 @@ static INT_PTR CALLBACK OverviewDlgProc (HWND hDlg, UINT message, WPARAM wParam,
 		SetWindowTextW(edit, L"Please tell us about this problem.\n"
 			"The information will NOT be sent to Microsoft.\n\n"
 			"An error report has been created that you can submit to help improve " GAMENAME ". "
-			"You can either save it to disk and make a report in the bugs forum at " FORUM_URL ", "
+			"You can either save it to disk and make a report in the issue tracker at " BUGS_URL ", "
 			"or you can send it directly without letting other people know about it.");
 		SendMessageW(edit, EM_SETSEL, 0, 81);
 		SendMessageW(edit, EM_SETCHARFORMAT, SCF_SELECTION, (LPARAM)&charFormat);
@@ -1824,7 +1814,7 @@ static INT_PTR CALLBACK OverviewDlgProc (HWND hDlg, UINT message, WPARAM wParam,
 		{
 			if (link->msg == WM_LBUTTONDOWN)
 			{
-				ShellExecuteA (NULL, "open", BUGS_FORUM_URL, NULL, NULL, 0);
+				ShellExecuteA (NULL, "open", BUGS_URL, NULL, NULL, 0);
 				SetWindowLongPtrW (hDlg, DWLP_MSGRESULT, 1);
 				return TRUE;
 			}
@@ -2193,7 +2183,7 @@ static void SaveReport (HANDLE file)
 {
 	OPENFILENAME ofn = {
 #ifdef OPENFILENAME_SIZE_VERSION_400
-		OPENFILENAME_SIZE_VERSION_400
+		(DWORD)OPENFILENAME_SIZE_VERSION_400
 #else
 		sizeof(ofn)
 #endif

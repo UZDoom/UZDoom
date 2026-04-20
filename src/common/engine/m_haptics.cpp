@@ -6,20 +6,9 @@
 **---------------------------------------------------------------------------
 **
 ** Copyright 2025 Marcus Minhorst
-** Copyright 2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** This program is free software; you can redistribute it and/or
-** modify it under the terms of the GNU General Public License
-** as published by the Free Software Foundation; either version 2
-** of the License, or (at your option) any later version.
-**
-** This program is distributed in the hope that it will be useful,
-** but WITHOUT ANY WARRANTY; without even the implied warranty of
-** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-** GNU General Public License for more details.
-**
-** You should have received a copy of the GNU General Public License
-** along with this program; if not, see https://www.gnu.org/licenses/
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
 **---------------------------------------------------------------------------
 **
@@ -180,14 +169,17 @@ const FName * Joy_GuessMapping(const FName identifier)
 
 	struct MapSet { const FName * mapping; const TArray<FString> tokens; };
 	static struct MapSet mappings[] = {
-		{ &HapticNone, { "ricochet", "casing" } },
-		{ &HapticIntense, { "quake", "death", "gibbed" } },
-		{ &HapticHeavy, { "teleport", "activate", "secret" } },
-		{ &HapticMedium, { "success", "grunt", "land", "pain", "pkup", "pickup", "fist", "weapon",
-			"fire", "shoot", "blast", "attack", "launch", "punch" } },
-		{ &HapticLight, { "push", "menu", "use", "fail", "open", "close", "eject", "reload",
-			"charge", "try" } },
-		{ &HapticNone, { "step", "floor" } },
+		{ &HapticNone, { "ricochet", "casing", "bounce", } },
+		{ &HapticLight, { "small", "soft" } },
+		{ &HapticMedium, { "medium", } },
+		{ &HapticHeavy, { "loud", "heavy", "big" } },
+		{ &HapticIntense, { "quake", "death", "gibbed", "intense" } },
+		{ &HapticHeavy, { "teleport", "activate", "secret", } },
+		{ &HapticMedium, { "success", "grunt", "land", "pain", "pkup", "pickup", "fist", "weapon", "fire", "shoot",
+			"blast", "attack", "launch", "punch", "boom", "select", "wall", "hit", "xplode" } },
+		{ &HapticLight, { "push", "menu", "use", "fail", "open", "close", "eject", "load", "charge", "try", "fart",
+			"ready", "raise", "swing", "cock", "pump", "throw", "mask", "drink", "start", } },
+		{ &HapticNone, { "step", "floor", "stop", "loop", } },
 	};
 
 	for (auto mapping: mappings)
@@ -260,7 +252,7 @@ const FName * Joy_GetMapping(const FName identifier)
 	{
 		if (RumbleMissed.Contains(identifier)) return;
 		RumbleMissed.Push(identifier);
-		Printf(DMSG_WARNING|PRINT_NONOTIFY, "Unknown rumble mapping '%s'\n", identifier.GetChars());
+		DPrintf(DMSG_WARNING, PRINT_NONOTIFY, "Unknown rumble mapping '%s'\n", identifier.GetChars());
 	};
 
 	if (!mapping && identifier != "")
@@ -310,7 +302,7 @@ const struct Haptics * Joy_GetRumble(FName identifier)
 	if (!rumble && !RumbleMissed.Contains(identifier))
 	{
 		RumbleMissed.Push(identifier);
-		Printf(DMSG_ERROR, TEXTCOLOR_RED "Rumble mapping not found! '%s'\n", identifier.GetChars());
+		DPrintf(DMSG_ERROR, TEXTCOLOR_RED "Rumble mapping not found! '%s'\n", identifier.GetChars());
 		return nullptr;
 	}
 
@@ -329,8 +321,8 @@ void Joy_AddRumbleType(const FName identifier, const struct Haptics data)
 {
 	if (haptics_debug)
 	{
-		if (data.ticks == 0) Printf("rumble disabled %s\n", identifier.GetChars());
-		else                 Printf("rumble add %s T%d H%.1g L%.1g\n", identifier.GetChars(), data.ticks, data.high_frequency, data.low_frequency);
+		if (data.ticks == 0) DPrintf(DMSG_NOTIFY, "rumble disabled %s\n", identifier.GetChars());
+		else                 DPrintf(DMSG_NOTIFY, "rumble add %s T%d H%.1g L%.1g\n", identifier.GetChars(), data.ticks, data.high_frequency, data.low_frequency);
 	}
 	RumbleDefinition.Insert(identifier, data);
 }
@@ -346,7 +338,7 @@ void Joy_AddRumbleType(const FName identifier, const struct Haptics data)
 
 void Joy_AddRumbleAlias(const FName alias, const FName actual)
 {
-	if (haptics_debug) Printf("rumble alias %s -> %s\n", alias.GetChars(), actual.GetChars());
+	if (haptics_debug) DPrintf(DMSG_NOTIFY, "rumble alias %s -> %s\n", alias.GetChars(), actual.GetChars());
 	RumbleAlias.Insert(alias, actual);
 }
 
@@ -360,7 +352,7 @@ void Joy_AddRumbleAlias(const FName alias, const FName actual)
 
 void Joy_MapRumbleType(const FName sound, const FName identifier)
 {
-	if (haptics_debug) Printf("rumble map %s -> %s\n", sound.GetChars(), identifier.GetChars());
+	if (haptics_debug) DPrintf(DMSG_NOTIFY, "rumble map %s -> %s\n", sound.GetChars(), identifier.GetChars());
 	RumbleMapping.Insert(sound, identifier);
 }
 
@@ -374,7 +366,7 @@ void Joy_MapRumbleType(const FName sound, const FName identifier)
 
 void Joy_ResetRumbleMapping()
 {
-	if (haptics_debug) Printf("rumble reset\n");
+	if (haptics_debug) DPrintf(DMSG_NOTIFY, "rumble reset\n");
 	RumbleMapping.Clear();
 	RumbleAlias.Clear();
 	RumbleMissed.Clear();
@@ -396,7 +388,7 @@ void Joy_ResetRumbleMapping()
 
 void Joy_ReadyRumbleMapping()
 {
-	if (haptics_debug) Printf("rumble ready\n");
+	if (haptics_debug) DPrintf(DMSG_NOTIFY, "rumble ready\n");
 	TArray<FName> found;
 	TMapIterator<FName, FName> it(RumbleAlias);
 	TMap<FName, FName>::Pair* pair;
@@ -408,7 +400,7 @@ void Joy_ReadyRumbleMapping()
 			auto predefined = RumbleDefinition.CheckKey(pair->Key);
 			if (predefined)
 			{
-				Printf(DMSG_ERROR, TEXTCOLOR_RED "Rumble alias trying to redefine mapping! '%s'\n", pair->Key.GetChars());
+				DPrintf(DMSG_ERROR, TEXTCOLOR_RED "Rumble alias trying to redefine mapping! '%s'\n", pair->Key.GetChars());
 				continue;
 			}
 
@@ -425,7 +417,7 @@ void Joy_ReadyRumbleMapping()
 			FString list = "[";
 			while (it.NextPair(pair))
 				list.AppendFormat(" '%s'->'%s'", pair->Key.GetChars(), pair->Value.GetChars());
-			Printf(DMSG_ERROR, TEXTCOLOR_RED "Circular rumble alias found! (%d) %s ]\n", RumbleAlias.CountUsed(), list.GetChars());
+			DPrintf(DMSG_ERROR, TEXTCOLOR_RED "Circular rumble alias found! (%d) %s ]\n", RumbleAlias.CountUsed(), list.GetChars());
 			break;
 		}
 
@@ -731,7 +723,6 @@ DEFINE_ACTION_FUNCTION_NATIVE(DHaptics, RumbleDirect, _RumbleDirect)
 	return 0;
 }
 
-
 //==========================================================================
 //
 // RumblePrint
@@ -757,7 +748,7 @@ void RumblePrint(const FName identifier, const FName * mapping, const struct Hap
 		{	color = TEXTCOLOR_CYAN; text.AppendFormat(" T%d H%.1g L%.1g A%.1g",
 			rumble->ticks, rumble->high_frequency, rumble->low_frequency, attenuation); }
 	}
-	Printf("%s%s\n", color, text.GetChars());
+	DPrintf(DMSG_NOTIFY, "%s%s\n", color, text.GetChars());
 }
 
 //==========================================================================

@@ -1,34 +1,23 @@
 /*
 ** symbols.cpp
+**
 ** Implements the symbol types and symbol table
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2016 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2006-2017 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -368,7 +357,7 @@ PField *PSymbolTable::AddField(FName name, PType *type, uint32_t flags, unsigned
 
 PField *PSymbolTable::AddNativeField(FName name, PType *type, size_t address, uint32_t flags, int bitvalue, int fileno)
 {
-	PField *field = Create<PField>(name, type, flags | VARF_Native | VARF_Transient, address, bitvalue);
+	PField *field = Create<PField>(name, type, flags | VARF_Native | VARF_Transient | VARF_NoRollback, address, bitvalue);
 
 	field->mDefFileNo = fileno;
 
@@ -394,8 +383,19 @@ void PSymbolTable::WriteFields(FSerializer &ar, const void *addr, const void *de
 	while (it.NextPair(pair))
 	{
 		const PField *field = dyn_cast<PField>(pair->Value);
+		if (field == nullptr)
+			continue;
+
 		// Skip fields without or with native serialization
-		if (field && !(field->Flags & (VARF_Transient | VARF_Meta | VARF_Static)))
+		bool canWrite = !(field->Flags & (VARF_Meta | VARF_Static));
+		if (canWrite)
+		{
+			if (ar.IsRollback())
+				canWrite = !(field->Flags & VARF_NoRollback);
+			else
+				canWrite = !(field->Flags & VARF_Transient);
+		}
+		if (canWrite)
 		{
 			// todo: handle defaults in WriteValue
 			//auto defp = def == nullptr ? nullptr : (const uint8_t *)def + field->Offset;
@@ -431,7 +431,17 @@ bool PSymbolTable::ReadFields(FSerializer &ar, void *addr, const char *TypeName)
 			DPrintf(DMSG_ERROR, "Symbol %s in %s is not a field\n",
 				label, TypeName);
 		}
-		else if ((static_cast<const PField *>(sym)->Flags & (VARF_Transient | VARF_Meta)))
+		else if (static_cast<const PField*>(sym)->Flags & VARF_Meta)
+		{
+			DPrintf(DMSG_ERROR, "Symbol %s in %s is not a serializable field\n",
+				label, TypeName);
+		}
+		else if (ar.IsRollback() && (static_cast<const PField*>(sym)->Flags & VARF_NoRollback))
+		{
+			DPrintf(DMSG_ERROR, "Symbol %s in %s is not a backed up field\n",
+				label, TypeName);
+		}
+		else if (!ar.IsRollback() && (static_cast<const PField*>(sym)->Flags & VARF_Transient))
 		{
 			DPrintf(DMSG_ERROR, "Symbol %s in %s is not a serializable field\n",
 				label, TypeName);

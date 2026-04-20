@@ -1,24 +1,19 @@
-//
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2005-2016 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
+/*
+** models.h
+**
+** General model handling code
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2005-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #ifndef __GL_MODELS_H_
 #define __GL_MODELS_H_
@@ -55,11 +50,12 @@ enum
 	MDL_BADROTATION					= 1<<7,
 	MDL_DONTCULLBACKFACES			= 1<<8,
 	MDL_USEROTATIONCENTER			= 1<<9,
-	MDL_NOPERPIXELLIGHTING			= 1<<10, // forces a model to not use per-pixel lighting. useful for voxel-converted-to-model objects.
+	MDL_NOPERPIXELLIGHTING			= 1<<10,	// forces a model to not use per-pixel lighting. useful for voxel-converted-to-model objects.
 	MDL_SCALEWEAPONFOV				= 1<<11,	// scale weapon view model with higher user FOVs
 	MDL_MODELSAREATTACHMENTS		= 1<<12,	// any model index after 0 is treated as an attachment, and therefore will use the bone results of index 0
 	MDL_CORRECTPIXELSTRETCH			= 1<<13,	// ensure model does not distort with pixel stretch when pitch/roll is applied
 	MDL_FORCECULLBACKFACES			= 1<<14,
+	MDL_FIXROTATING					= 1<<15,
 };
 
 FSpriteModelFrame * FindModelFrame(AActor * thing, int sprite, int frame, bool dropped);

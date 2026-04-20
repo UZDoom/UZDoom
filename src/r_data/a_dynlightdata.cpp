@@ -1,34 +1,23 @@
 /*
-** _gl_dynlight.cpp
+** a_dynlightdata.cpp
+**
 ** Light definitions for actors.
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2003 Timothy Stump
-** Copyright 2005 Christoph Oelckers
-** All rights reserved.
+** Copyright 2005-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -133,15 +122,17 @@ void FLightDefaults::ApplyProperties(FDynamicLight * light) const
 	{
 		light->pSpotInnerAngle = &m_spotInnerAngle;
 		light->pSpotOuterAngle = &m_spotOuterAngle;
-		if (m_explicitPitch) light->pPitch = &m_pitch;
-		else light->pPitch = &light->target->Angles.Pitch;
+		light->explicitpitch   = m_explicitPitch;
+		light->Yaw             = light->target->Angles.Yaw;
+		if (m_explicitPitch) light->Pitch = m_pitch;
+		else light->Pitch = light->target->Angles.Pitch;
 	}
 	light->m_tickCount = 0;
 	if (m_type == PulseLight)
 	{
 		float pulseTime = float(m_Param / TICRATE);
 
-		light->m_lastUpdate = light->Level->maptime;
+		light->m_lastUpdate = light->GetTimer();
 		if (m_swapped) light->m_cycler.SetParams(float(m_Args[LIGHT_SECONDARY_INTENSITY]), float(m_Args[LIGHT_INTENSITY]), pulseTime, oldtype == PulseLight);
 		else light->m_cycler.SetParams(float(m_Args[LIGHT_INTENSITY]), float(m_Args[LIGHT_SECONDARY_INTENSITY]), pulseTime, oldtype == PulseLight);
 		light->m_cycler.ShouldCycle(true);

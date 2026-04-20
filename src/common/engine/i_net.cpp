@@ -1,91 +1,65 @@
-// Emacs style mode select	 -*- C++ -*- 
-//-----------------------------------------------------------------------------
-//
-// $Id: i_net.c,v 1.2 1997/12/29 19:50:54 pekangas Exp $
-//
-// Copyright 1993-1996 by id Software, Inc.
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-// Copyright 2017-2025 GZDoom Maintainers and Contributors
-// Copyright 2025 UZDoom Maintainers and Contributors
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 2 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//
-//
-// Alternatively the following applies:
-//
-// This source is available for distribution and/or modification
-// only under the terms of the DOOM Source Code License as
-// published by id Software. All rights reserved.
-//
-// The source is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
-// for more details.
-//
-//
-// DESCRIPTION:
-//		Low-level networking code. Uses BSD sockets for UDP networking.
-//
-//-----------------------------------------------------------------------------
-
-
-/* [Petteri] Check if compiling for Win32:	*/
-#if defined(__WINDOWS__) || defined(__NT__) || defined(_MSC_VER) || defined(_WIN32)
-#ifndef __WIN32__
-#	define __WIN32__
-#endif
-#endif
-/* Follow #ifdef __WIN32__ marks */
+/*
+** i_net.cpp
+**
+** Low-level networking code. Uses BSD sockets for UDP networking.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 by id Software, Inc.
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2009-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: LicenseRef-Doom-Source-License
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include <stdlib.h>
 #include <string.h>
 
-/* [Petteri] Use Winsock for Win32: */
-#ifdef __WIN32__
+/* [Petteri] Use Winsock if compiling for Win32: */
+#ifdef _WIN32
 #	define WIN32_LEAN_AND_MEAN
+#	define NOMINMAX
 #	include <windows.h>
 #	include <winsock.h>
 #else
-#	include <sys/socket.h>
-#	include <netinet/in.h>
 #	include <arpa/inet.h>
 #	include <errno.h>
-#	include <unistd.h>
 #	include <netdb.h>
+#	include <netinet/in.h>
 #	include <sys/ioctl.h>
+#	include <sys/socket.h>
+#	include <unistd.h>
 #	ifdef __sun
 #		include <fcntl.h>
 #	endif
 #endif
 
-#include "i_system.h"
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "engineerrors.h"
+#include "i_interface.h"
+#include "i_net.h"
 #include "m_argv.h"
 #include "m_crc32.h"
-#include "st_start.h"
-#include "engineerrors.h"
-#include "cmdlib.h"
-#include "printf.h"
-#include "i_interface.h"
-#include "c_cvars.h"
-#include "i_net.h"
 #include "m_random.h"
+#include "printf.h"
 #include "version.h"
+#include "widgets/netstartwindow.h"
+#include "filesystem.h"
 
 /* [Petteri] Get more portable: */
-#ifndef __WIN32__
+#ifndef _WIN32
 typedef int SOCKET;
 #define SOCKET_ERROR		-1
 #define INVALID_SOCKET		-1
@@ -101,7 +75,7 @@ typedef int SOCKET;
 #define IPPORT_USERRESERVED 5000
 #endif
 
-#ifdef __WIN32__
+#ifdef _WIN32
 # include "common/scripting/dap/GameEventEmit.h"
 typedef int socklen_t;
 const char* neterror(void);
@@ -122,9 +96,6 @@ FARG(dup, "Multiplayer", "Send less player movement commands over the network.",
 FARG(port, "Multiplayer", "Specifies an alternative IP port for a network game.", "x",
 	"Specifies an alternate IP port for this machine to use during a network game. By default,"
 	" port 5029 is used.");
-FARG(netmode, "Multiplayer", "Changes the network mode", "0|1",
-	"Changes the network mode the game uses (Peer-to-Peer or Packet Server). More information on"
-	" each mode can be found on the Multiplayer page.");
 FARG(password, "", "", "",
 	"");
 
@@ -136,12 +107,12 @@ constexpr size_t MaxPasswordSize = 256u;
 
 enum ENetConnectType : uint8_t
 {
-	PRE_HEARTBEAT,			// Host and guests are keep each other's connections alive
+	PRE_HEARTBEAT,			// Clients are keeping each other's connections alive
 	PRE_CONNECT,			// Sent from guest to host for initial connection
 	PRE_CONNECT_ACK,		// Sent from host to guest to confirm they've been connected
 	PRE_DISCONNECT,			// Sent from host to guest when another guest leaves
-	PRE_USER_INFO,			// Host and guests are sending each other user infos
-	PRE_USER_INFO_ACK,		// Host and guests are confirming sent user infos
+	PRE_USER_INFO,			// Clients are sending each other user infos
+	PRE_USER_INFO_ACK,		// Clients are confirming sent user infos
 	PRE_GAME_INFO,			// Sent from host to guest containing general game info
 	PRE_GAME_INFO_ACK,		// Sent from guest to host confirming game info was gotten
 	PRE_GO,					// Sent from host to guest telling them to start the game
@@ -149,9 +120,8 @@ enum ENetConnectType : uint8_t
 	PRE_FULL,				// Sent from host to guest if the lobby is full
 	PRE_IN_PROGRESS,		// Sent from host to guest if the game has already started
 	PRE_WRONG_PASSWORD,		// Sent from host to guest if their provided password was wrong
-	PRE_WRONG_ENGINE,		// Sent from host to guest if their engine version doesn't match the host's
-	PRE_INVALID_FILES,		// Sent from host to guest if their files do not match the host's
-	PRE_KICKED,				// Sent from hsot to guest if the host kicked them from the game
+	PRE_VERIFICATION_ERROR,	// Sent from host to guest if something failed during the verification step.
+	PRE_KICKED,				// Sent from host to guest if the host kicked them from the game
 	PRE_BANNED,				// Sent from host to guest if the host banned them from the game
 };
 
@@ -190,7 +160,6 @@ struct FConnection
 
 bool netgame = false;
 bool multiplayer = false;
-ENetMode NetMode = NET_PeerToPeer;
 int consoleplayer = 0;
 int Net_Arbitrator = 0;
 FClientStack NetworkClients = {};
@@ -221,7 +190,7 @@ CUSTOM_CVAR(String, net_password, "", CVAR_IGNORE)
 
 // Game-specific API
 size_t Net_SetEngineInfo(uint8_t*& stream);
-bool Net_VerifyEngine(uint8_t*& stream);
+FVerificationError Net_VerifyEngine(uint8_t*& stream, size_t& offset);
 void Net_SetupUserInfo();
 const char* Net_GetClientName(int client, unsigned int charLimit);
 void Net_SetUserInfo(int client, TArrayView<uint8_t>& stream);
@@ -270,9 +239,9 @@ static void BuildAddress(sockaddr_in& address, const char* addrName)
 	}
 
 	bool isNamed = false;
-	char c = 0;
-	for (size_t curChar = 0u; (c = target[curChar]); ++curChar)
+	for (size_t curChar = 0u; curChar < target.Len(); ++curChar)
 	{
+		char c = target[curChar];
 		if ((c < '0' || c > '9') && c != '.')
 		{
 			isNamed = true;
@@ -298,7 +267,7 @@ static void BuildAddress(sockaddr_in& address, const char* addrName)
 
 static void StartNetwork(bool autoPort)
 {
-#ifdef __WIN32__
+#ifdef _WIN32
 	WSADATA data;
 	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()) {
 		if (WSAStartup(0x0101, &data))
@@ -327,64 +296,11 @@ void CloseNetwork()
 		MySocket = INVALID_SOCKET;
 		netgame = false;
 	}
-#ifdef __WIN32__
+#ifdef _WIN32
 	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()){
 		WSACleanup();
 	}
 #endif
-}
-
-static int PrivateNetOf(const in_addr& in)
-{
-	int addr = ntohl(in.s_addr);
-	if ((addr & 0xFFFF0000) == 0xC0A80000)		// 192.168.0.0
-	{
-		return 0xC0A80000;
-	}
-	else if ((addr & 0xFFFF0000) >= 0xAC100000 && (addr & 0xFFFF0000) <= 0xAC1F0000)	// 172.16.0.0 - 172.31.0.0
-	{
-		return 0xAC100000;
-	}
-	else if ((addr & 0xFF000000) == 0x0A000000)		// 10.0.0.0
-	{
-		return 0x0A000000;
-	}
-	else if ((addr & 0xFF000000) == 0x7F000000)		// 127.0.0.0 (localhost)
-	{
-		return 0x7F000000;
-	}
-	// Not a private IP
-	return 0;
-}
-
-// The best I can really do here is check if the others are on the same
-// private network, since that means we (probably) are too.
-static bool ClientsOnSameNetwork()
-{
-	int start = 1;
-	for (; start < MaxClients; ++start)
-	{
-		if (Connected[start].Status != CSTAT_NONE)
-			break;
-	}
-
-	if (start >= MaxClients)
-		return false;
-
-	const int firstClient = PrivateNetOf(Connected[start].Address.sin_addr);
-	if (!firstClient)
-		return false;
-
-	for (int i = 1; i < MaxClients; ++i)
-	{
-		if (i == start)
-			continue;
-
-		if (Connected[i].Status == CSTAT_NONE || PrivateNetOf(Connected[i].Address.sin_addr) != firstClient)
-			return false;
-	}
-
-	return true;
 }
 
 static void GenerateGameID()
@@ -418,32 +334,36 @@ static void I_NetLog(const char* text, ...)
 // Gracefully closes the net window so that any error messaging can be properly displayed.
 static void I_NetError(const char* error)
 {
-	StartWindow->NetClose();
+	NetStartWindow::NetClose();
 	I_FatalError("%s", error);
 }
 
 static void I_NetInit(const char* msg, bool host)
 {
-	StartWindow->NetInit(msg, host);
+	Printf("NetLobby:: %s\n", msg);
+	NetStartWindow::NetInit(msg, host);
 }
 
 // todo: later these must be dispatched by the main menu, not the start screen.
 // Updates the general status of the lobby.
 static void I_NetMessage(const char* msg)
 {
-	StartWindow->NetMessage(msg);
+	Printf("NetLobby:: %s\n", msg);
+	NetStartWindow::NetMessage(msg);
 }
 
 // Listen for incoming connections while the lobby is active. The main thread needs to be locked up
 // here to prevent the engine from continuing to start the game until everyone is ready.
 static bool I_NetLoop(bool (*loopCallback)(void*), void* data)
 {
-	return StartWindow->NetLoop(loopCallback, data);
+	return NetStartWindow::NetLoop(loopCallback, data);
 }
 
 // A new client has just entered the game, so add them to the player list.
 static void I_NetClientConnected(int client, unsigned int charLimit = 0u)
 {
+	Printf("NetLobby:: Client '%s' connected.\n", Net_GetClientName(client, 0u));
+
 	const char* name = Net_GetClientName(client, charLimit);
 	unsigned int flags = CFL_NONE;
 	if (client == 0)
@@ -451,28 +371,29 @@ static void I_NetClientConnected(int client, unsigned int charLimit = 0u)
 	if (client == consoleplayer)
 		flags |= CFL_CONSOLEPLAYER;
 
-	StartWindow->NetConnect(client, name, flags, Connected[client].Status);
+	NetStartWindow::NetConnect(client, name, flags, Connected[client].Status);
 }
 
 // A client changed ready state.
 static void I_NetClientUpdated(int client)
 {
-	StartWindow->NetUpdate(client, Connected[client].Status);
+	NetStartWindow::NetUpdate(client, Connected[client].Status);
 }
 
 static void I_NetClientDisconnected(int client)
 {
-	StartWindow->NetDisconnect(client);
+	Printf("NetLobby:: Client '%s' disconnected.\n", Net_GetClientName(client, 0u));
+	NetStartWindow::NetDisconnect(client);
 }
 
 static void I_NetUpdatePlayers(int current, int limit)
 {
-	StartWindow->NetProgress(current, limit);
+	NetStartWindow::NetProgress(current, limit);
 }
 
 static bool I_ShouldStartNetGame()
 {
-	return StartWindow->ShouldStartNet();
+	return NetStartWindow::ShouldStartNet();
 }
 
 static void I_GetKickClients(TArray<int>& clients)
@@ -480,7 +401,7 @@ static void I_GetKickClients(TArray<int>& clients)
 	clients.Clear();
 
 	int c = -1;
-	while ((c = StartWindow->GetNetKickClient()) != -1)
+	while ((c = NetStartWindow::GetNetKickClient()) != -1)
 		clients.Push(c);
 }
 
@@ -489,13 +410,13 @@ static void I_GetBanClients(TArray<int>& clients)
 	clients.Clear();
 
 	int c = -1;
-	while ((c = StartWindow->GetNetBanClient()) != -1)
+	while ((c = NetStartWindow::GetNetBanClient()) != -1)
 		clients.Push(c);
 }
 
 void I_NetDone()
 {
-	StartWindow->NetDone();
+	NetStartWindow::NetDone();
 }
 
 void I_ClearClient(size_t client)
@@ -581,10 +502,9 @@ static void GetPacket(sockaddr_in* const from = nullptr)
 			}
 			else
 			{
-				// The remote node aborted unexpectedly, so pretend it sent an exit packet. If in packet server
-				// mode and it was the host, just consider the game too bricked to continue since the host has
-				// to determine the new host properly.
-				if (NetMode == NET_PacketServer && client == Net_Arbitrator)
+				// The remote node aborted unexpectedly, so pretend it sent an exit packet. If it was the host,
+				// just consider the game too bricked to continue since the host has to determine the new host properly.
+				if (client == Net_Arbitrator)
 					I_NetError("Host unexpectedly disconnected");
 
 				NetBuffer[0] = NCMD_EXIT;
@@ -705,6 +625,47 @@ static void RejectConnection(const sockaddr_in& to, ENetConnectType reason)
 	SendPacket(to);
 }
 
+static void SendVerificationError(const sockaddr_in& to, const FVerificationError& error)
+{
+	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[1] = PRE_VERIFICATION_ERROR;
+	NetBuffer[2] = error.Error;
+	if (error.Error == FVerificationError::VE_ENGINE)
+	{
+		NetBuffer[3] = error.Major;
+		NetBuffer[4] = error.Minor;
+		NetBuffer[5] = error.Revision;
+		NetBuffer[6] = error.NetMajor;
+		NetBuffer[7] = error.NetMinor;
+		NetBuffer[8] = error.NetRevision;
+		NetBufferLength = 9u;
+	}
+	else
+	{
+		const TArray<FString>* ar = nullptr;
+		if (error.Error == FVerificationError::VE_FILE_UNKNOWN)
+			ar = &error.UnknownFiles;
+		else if (error.Error == FVerificationError::VE_FILE_ORDER)
+			ar = &error.ExpectedOrder;
+		else if (error.Error == FVerificationError::VE_FILE_MISSING)
+			ar = &error.MissingFiles;
+
+		NetBuffer[3] = (ar->Size() >> 24);
+		NetBuffer[4] = (ar->Size() >> 16);
+		NetBuffer[5] = (ar->Size() >> 8);
+		NetBuffer[6] = ar->Size();
+		size_t i = 7u;
+		for (auto& file : *ar)
+		{
+			memcpy(&NetBuffer[i], file.GetChars(), file.Len() + 1u);
+			i += file.Len() + 1u;
+		}
+		NetBufferLength = i;
+	}
+
+	SendPacket(to);
+}
+
 static void AddClientConnection(const sockaddr_in& from, int client)
 {
 	Connected[client].Status = CSTAT_CONNECTING;
@@ -757,8 +718,7 @@ void HandleIncomingConnection()
 	{
 		NetBuffer[0] = NCMD_SETUP;
 		NetBuffer[1] = PRE_GO;
-		NetBuffer[2] = NetMode;
-		NetBufferLength = 3u;
+		NetBufferLength = 2u;
 		SendPacket(Connected[RemoteClient].Address);
 	}
 }
@@ -825,7 +785,9 @@ static bool Host_CheckForConnections(void* connected)
 				continue;
 
 			uint8_t* engineInfo = &NetBuffer[2];
+			size_t passwordOffset = 0u;
 			size_t banned = 0u;
+			FVerificationError error = {};
 			for (; banned < BannedConnections.Size(); ++banned)
 			{
 				if (BannedConnections[banned].sin_addr.s_addr == from.sin_addr.s_addr)
@@ -836,9 +798,9 @@ static bool Host_CheckForConnections(void* connected)
 			{
 				RejectConnection(from, PRE_BANNED);
 			}
-			else if (!Net_VerifyEngine(engineInfo))
+			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE)
 			{
-				RejectConnection(from, PRE_WRONG_ENGINE);
+				SendVerificationError(from, error);
 			}
 			else if (*connectedPlayers >= MaxClients)
 			{
@@ -848,7 +810,7 @@ static bool Host_CheckForConnections(void* connected)
 			{
 				RejectConnection(from, PRE_IN_PROGRESS);
 			}
-			else if (hasPassword && strcmp(net_password, (const char*)&NetBuffer[5]))
+			else if (hasPassword && strcmp(net_password, (const char*)&NetBuffer[2u + passwordOffset]))
 			{
 				RejectConnection(from, PRE_WRONG_PASSWORD);
 			}
@@ -977,7 +939,6 @@ static bool Host_CheckForConnections(void* connected)
 	return ready && (*connectedPlayers >= MaxClients || forceStarting);
 }
 
-// Boon TODO: Add cool down between sends
 static void SendAbort()
 {
 	NetBuffer[0] = NCMD_EXIT;
@@ -997,7 +958,7 @@ static void SendAbort()
 	}
 }
 
-static bool HostGame(int arg, bool forcedNetMode)
+static bool HostGame(int arg)
 {
 	if (arg >= Args->NumArgs() || !(MaxClients = atoi(Args->GetArg(arg))))
 	{	// No player count specified, assume 2
@@ -1047,29 +1008,88 @@ static bool HostGame(int arg, bool forcedNetMode)
 		return true;
 	}
 
-	if (!forcedNetMode)
-	{
-		if (MaxClients < 3)
-			NetMode = NET_PeerToPeer;
-		else if (!ClientsOnSameNetwork())
-			NetMode = NET_PacketServer;
-	}
-
 	I_NetLog("Go");
 
 	NetBuffer[0] = NCMD_SETUP;
 	NetBuffer[1] = PRE_GO;
-	NetBuffer[2] = NetMode;
-	NetBufferLength = 3u;
+	NetBufferLength = 2u;
 	for (size_t client = 1u; client < (size_t)MaxClients; ++client)
 	{
 		if (Connected[client].Status != CSTAT_NONE)
 			SendPacket(Connected[client].Address);
 	}
 
-	I_NetLog("Total players: %u", connectedPlayers);
+	I_NetLog("Total players: %d", connectedPlayers);
 
 	return true;
+}
+
+static FString ReadVerificationError(TArrayView<uint8_t> stream)
+{
+	if (stream[0] == FVerificationError::VE_ENGINE)
+	{
+		return FStringf("Engine mismatch: host expected %d.%d.%d, got %d.%d.%d",
+						stream[1], stream[2], stream[3], stream[4], stream[5], stream[6]);
+	}
+
+	TMap<FString, FString> files = {};
+	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	{
+		if (!fileSystem.IsOptionalResource(i))
+		{
+			const FString crc = fileSystem.GetResourceHash(i);
+			FString name = fileSystem.GetResourceFileName(i);
+			FixPathSeperator(name);
+			auto a = name.Split('/', FString::TOK_SKIPEMPTY);
+			files[crc] = a.Last();
+		}
+	}
+
+	const size_t size = (stream[1] << 24) | (stream[2] << 16) | (stream[3] << 8) | stream[4];
+	size_t offset = 5;
+	if (stream[0] == FVerificationError::VE_FILE_UNKNOWN)
+	{
+		FString er = "Host found unknown files:";
+		for (size_t i = 0; i < size; ++i)
+		{
+			const FString crc = (const char *)&stream[offset];
+			offset += crc.Len() + 1u;
+			auto file = files.CheckKey(crc);
+			if (file != nullptr)
+				er.AppendFormat("\n* %s", file->GetChars());
+			else
+				er.AppendFormat("\n* <? Unknown file ?>");
+		}
+		return er;
+	}
+	else if (stream[0] == FVerificationError::VE_FILE_ORDER)
+	{
+		FString er = "Wrong file order. Expected:";
+		for (size_t i = 0; i < size; ++i)
+		{
+			const FString crc = (const char *)&stream[offset];
+			offset += crc.Len() + 1u;
+			auto file = files.CheckKey(crc);
+			if (file != nullptr)
+				er.AppendFormat("\n* %s", file->GetChars());
+			else
+				er.AppendFormat("\n* <? Unknown file ?>");
+		}
+		return er;
+	}
+	else if (stream[0] == FVerificationError::VE_FILE_MISSING)
+	{
+		FString er = "Host was expecting missing files:";
+		for (size_t i = 0; i < size; ++i)
+		{
+			const FString file = (const char *)&stream[offset];
+			er.AppendFormat("\n* %s", file.GetChars());
+			offset += file.Len() + 1u;
+		}
+		return er;
+	}
+
+	return "Unknown error";
 }
 
 static bool Guest_ContactHost(void* unused)
@@ -1112,13 +1132,9 @@ static bool Guest_ContactHost(void* unused)
 		{
 			I_NetError("Invalid password");
 		}
-		else if (NetBuffer[1] == PRE_WRONG_ENGINE)
+		else if (NetBuffer[1] == PRE_VERIFICATION_ERROR)
 		{
-			I_NetError("Engine version does not match the host's engine version");
-		}
-		else if (NetBuffer[1] == PRE_INVALID_FILES)
-		{
-			I_NetError("Files do not match the host's files");
+			I_NetError(ReadVerificationError(TArrayView{ &NetBuffer[2], (unsigned)(NetBufferLength - 2u) }).GetChars());
 		}
 		else if (NetBuffer[1] == PRE_KICKED)
 		{
@@ -1212,7 +1228,6 @@ static bool Guest_ContactHost(void* unused)
 		}
 		else if (NetBuffer[1] == PRE_GO)
 		{
-			NetMode = static_cast<ENetMode>(NetBuffer[2]);
 			I_NetMessage("Starting game");
 			I_NetLog("Received GO");
 			return true;
@@ -1294,8 +1309,6 @@ static bool JoinGame(int arg)
 //
 // I_InitNetwork
 //
-// Returns true if packet server mode might be a good idea.
-//
 bool I_InitNetwork()
 {
 	// set up for network
@@ -1310,10 +1323,6 @@ bool I_InitNetwork()
 		Printf("Using alternate port %d\n", GamePort);
 	}
 
-	v = Args->CheckValue(FArg_netmode);
-	if (v != nullptr)
-		NetMode = atoi(v) ? NET_PacketServer : NET_PeerToPeer;
-
 	net_password = Args->CheckValue(FArg_password);
 
 	// parse network game options,
@@ -1322,7 +1331,7 @@ bool I_InitNetwork()
 	int arg = -1;
 	if ((arg = Args->CheckParm(FArg_host)))
 	{
-		if (!HostGame(arg + 1, v != nullptr))
+		if (!HostGame(arg + 1))
 			return false;
 	}
 	else if ((arg = Args->CheckParm(FArg_join)))
@@ -1344,7 +1353,7 @@ bool I_InitNetwork()
 	return true;
 }
 
-#ifdef __WIN32__
+#ifdef _WIN32
 const char* neterror()
 {
 	static char neterr[16];

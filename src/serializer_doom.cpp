@@ -1,33 +1,22 @@
 /*
-** serializer.cpp
+** serializer_doom.cpp
+**
 ** Savegame wrapper around RapidJSON
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2016 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -90,7 +79,7 @@ FSerializer &SerializeArgs(FSerializer& arc, const char *key, int *args, int *de
 	if (arc.isWriting())
 	{
 		auto &w = arc.w;
-		if (w->inObject() && defargs != nullptr && !memcmp(args, defargs, 5 * sizeof(int)))
+		if (arc.canSkip() && defargs != nullptr && !memcmp(args, defargs, 5 * sizeof(int)))
 		{
 			return arc;
 		}
@@ -157,7 +146,7 @@ FSerializer &SerializeArgs(FSerializer& arc, const char *key, int *args, int *de
 
 FSerializer &SerializeTerrain(FSerializer &arc, const char *key, int &terrain, int *def)
 {
-	if (arc.isWriting() && def != nullptr && terrain == *def)
+	if (arc.canSkip() && def != nullptr && terrain == *def)
 	{
 		return arc;
 	}
@@ -180,7 +169,7 @@ FSerializer &FDoomSerializer::Sprite(const char *key, int32_t &spritenum, int32_
 {
 	if (isWriting())
 	{
-		if (w->inObject() && def != nullptr && *def == spritenum) return *this;
+		if (canSkip() && def != nullptr && *def == spritenum) return *this;
 		WriteKey(key);
 		w->String(sprites[spritenum].name, 4);
 	}
@@ -309,7 +298,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, PClassActor
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || clst != *def)
+		if (!arc.canSkip() || def == nullptr || clst != *def)
 		{
 			arc.WriteKey(key);
 			if (clst == nullptr)
@@ -359,7 +348,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FState *&state, FState
 	if (retcode) *retcode = false;
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || state != *def)
+		if (!arc.canSkip() || def == nullptr || state != *def)
 		{
 			if (retcode) *retcode = true;
 			arc.WriteKey(key);
@@ -454,7 +443,7 @@ template<> FSerializer& Serialize(FSerializer& arc, const char* key, FDecalBase*
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || decal != *def)
+		if (!arc.canSkip() || def == nullptr || decal != *def)
 		{
 			arc.WriteKey(key);
 			if (decal == nullptr)
@@ -489,7 +478,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FStrifeDial
 	auto doomarc = static_cast<FDoomSerializer*>(&arc);
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || node != *def)
+		if (!arc.canSkip() || def == nullptr || node != *def)
 		{
 			arc.WriteKey(key);
 			if (node == nullptr)
@@ -545,7 +534,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FString *&p
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || pstr != *def)
+		if (!arc.canSkip() || def == nullptr || pstr != *def)
 		{
 			arc.WriteKey(key);
 			if (pstr == nullptr)
@@ -570,7 +559,12 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FString *&p
 			}
 			else if (val->IsString())
 			{
-				pstr = AActor::mStringPropertyData.Alloc(UnicodeToString(val->GetString()));
+				auto intermediate = UnicodeToString(val->GetString());
+				if (def != nullptr && *def != nullptr && std::string_view(intermediate) == std::string_view((*def)->GetChars())) {
+					pstr = *def;
+				} else {
+					pstr = AActor::mStringPropertyData.Alloc(intermediate);
+				}
 			}
 			else
 			{
@@ -594,7 +588,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, char *&pstr
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || strcmp(pstr, *def))
+		if (!arc.canSkip() || def == nullptr || strcmp(pstr, *def))
 		{
 			arc.WriteKey(key);
 			if (pstr == nullptr)
@@ -651,7 +645,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FLevelLocal
 	auto doomarc = static_cast<FDoomSerializer*>(&arc);
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || lev == nullptr)
+		if (!arc.canSkip() || lev == nullptr)
 		{
 			arc.WriteKey(key);
 			if (lev == nullptr)
@@ -665,10 +659,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FLevelLocal
 				{
 					I_Error("Attempt to serialize invalid level reference");
 				}
-				if (!arc.w->inObject())
-				{
-					arc.w->Bool(true);	// In the unlikely case this is used in an array, write a filler.
-				}
+				arc.w->Bool(true);
 			}
 		}
 	}

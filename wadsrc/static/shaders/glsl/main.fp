@@ -1,4 +1,19 @@
-
+/*
+** main.fp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2013-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 layout(location = 0) in vec4 vTexCoord;
 layout(location = 1) in vec4 vColor;
@@ -73,7 +88,7 @@ vec3 rgb2hsv(vec3 c)
 
 float grayscale(vec4 color)
 {
-	return dot(color.rgb, vec3(0.3, 0.56, 0.14));
+	return dot(color.rgb, vec3(0.2126, 0.7152, 0.0722));
 }
 
 //===========================================================================

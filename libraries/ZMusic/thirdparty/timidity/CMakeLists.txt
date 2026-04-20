@@ -17,7 +17,7 @@ target_include_directories(timidity INTERFACE ${CMAKE_CURRENT_SOURCE_DIR} PRIVAT
 
 set_target_properties(timidity
 PROPERTIES
-	CXX_STANDARD 11
+	CXX_STANDARD 17
 	CXX_STANDARD_REQUIRED ON
 )
 

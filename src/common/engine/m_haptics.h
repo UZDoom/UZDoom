@@ -1,3 +1,19 @@
+/*
+** m_haptics.h
+**
+** Haptic feedback implementation
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2025 Marcus Minhorst
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef M_HAPTICS_H
 #define M_HAPTICS_H
 

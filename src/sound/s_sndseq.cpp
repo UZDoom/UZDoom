@@ -1,24 +1,21 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1994-1996 Raven Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
+/*
+** s_sndseq.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1994-1996 Raven Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include <string.h>
 
@@ -305,6 +302,7 @@ DSeqNode::DSeqNode ()
 : m_SequenceChoices(0)
 {
 	m_Next = m_Prev = m_ChildSeqNode = m_ParentSeqNode = nullptr;
+	m_IsLooping = false;
 }
 
 void DSeqNode::Serialize(FSerializer &arc)
@@ -318,6 +316,7 @@ void DSeqNode::Serialize(FSerializer &arc)
 	float atten = ATTN_NORM;
 	int seqnum;
 	unsigned int numchoices;
+	bool looping = false;
 
 	// copy these to local variables so that the actual serialization code does not need to be duplicated for saving and loading.
 	if (arc.isWriting())
@@ -329,6 +328,7 @@ void DSeqNode::Serialize(FSerializer &arc)
 		id = m_CurrentSoundID;
 		seqName = Sequences[m_Sequence]->SeqName;
 		numchoices = m_SequenceChoices.Size();
+		looping = m_IsLooping;
 	}
 	Super::Serialize(arc);
 
@@ -344,7 +344,8 @@ void DSeqNode::Serialize(FSerializer &arc)
 		("id", id)
 		("seqname", seqName)
 		("numchoices", numchoices)
-		("level", Level);
+		("level", Level)
+		("looping", looping);
 
 	// The way this is saved makes it hard to encapsulate so just do it the hard way...
 	if (arc.isWriting())
@@ -372,6 +373,7 @@ void DSeqNode::Serialize(FSerializer &arc)
 		}
 
 		ChangeData (seqOffset, delayTics, volume, id);
+		m_IsLooping = looping;
 
 		m_SequenceChoices.Resize(numchoices);
 		if (numchoices > 0 && arc.BeginArray("choices"))
@@ -802,7 +804,7 @@ static void AddSequence (int curseq, FName seqname, FName slot, int stopsound, c
 }
 
 DSeqNode::DSeqNode (FLevelLocals *l, int sequence, int modenum)
-: m_CurrentSoundID(NO_SOUND), m_ModeNum(modenum), m_SequenceChoices(0)
+	: m_CurrentSoundID(NO_SOUND), m_ModeNum(modenum), m_IsLooping(false), m_SequenceChoices(0)
 {
 	Level = l;
 	ActivateSequence (sequence);
@@ -831,6 +833,7 @@ void DSeqNode::ActivateSequence (int sequence)
 	m_CurrentSoundID = NO_SOUND;
 	m_Volume = 1;			// Start at max volume...
 	m_Atten = ATTN_IDLE;	// ...and idle attenuation
+	m_IsLooping = false;
 }
 
 DSeqActorNode::DSeqActorNode(AActor* actor, int sequence, int modenum)
@@ -1167,7 +1170,7 @@ bool SN_IsMakingLoopingSound (sector_t *sector)
 		DSeqNode *next = node->NextSequence();
 		if (node->Source() == (void *)sector)
 		{
-			return !!(static_cast<DSeqSectorNode *>(node)->Channel & CHANF_LOOP);
+			return node->IsLoopingSound();
 		}
 		node = next;
 	}
@@ -1202,6 +1205,7 @@ void DSeqNode::Tick ()
 			break;
 
 		case SS_CMD_PLAY:
+			m_IsLooping = false;
 			if (!IsPlaying())
 			{
 				m_CurrentSoundID = FSoundID::fromInt(GetData(*m_SequencePtr));
@@ -1223,6 +1227,7 @@ void DSeqNode::Tick ()
 			break;
 
 		case SS_CMD_PLAYREPEAT:
+			m_IsLooping = true;
 			if (!IsPlaying())
 			{
 				// Does not advance sequencePtr, so it will repeat as necessary.
@@ -1232,6 +1237,7 @@ void DSeqNode::Tick ()
 			return;
 
 		case SS_CMD_PLAYLOOP:
+			m_IsLooping = false;
 			// Like SS_CMD_PLAYREPEAT, sequencePtr is not advanced, so this
 			// command will repeat until the sequence is stopped.
 			m_CurrentSoundID = FSoundID::fromInt(GetData(m_SequencePtr[0]));
@@ -1300,6 +1306,7 @@ void DSeqNode::Tick ()
 			break;
 
 		case SS_CMD_STOPSOUND:
+			m_IsLooping = false;
 			// Wait until something else stops the sequence
 			return;
 
@@ -1493,6 +1500,14 @@ void DSeqNode::ChangeData (int seqOffset, int delayTics, float volume, FSoundID 
 	m_Volume = volume;
 	m_SequencePtr += seqOffset;
 	m_CurrentSoundID = currentSoundID;
+	if (m_SequencePtr != nullptr)
+	{
+		m_IsLooping = (GetCommand(*m_SequencePtr) == SS_CMD_PLAYREPEAT);
+	}
+	else
+	{
+		m_IsLooping = false;
+	}
 }
 
 //==========================================================================

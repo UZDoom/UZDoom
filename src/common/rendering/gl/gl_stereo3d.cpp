@@ -1,37 +1,24 @@
 /*
-** gl_stereo.cpp
+** gl_stereo3d.cpp
+**
 ** Stereoscopic 3D API
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2015 Christopher Bruns
 ** Copyright 2016-2021 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
-**
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 **---------------------------------------------------------------------------
 **
-** 
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
 **
 */
 
@@ -48,8 +35,9 @@
 
 
 EXTERN_CVAR(Int, vr_mode)
+EXTERN_CVAR(Float, vid_i_whitepoint)
+EXTERN_CVAR(Float, vid_i_blackpoint)
 EXTERN_CVAR(Float, vid_saturation)
-EXTERN_CVAR(Float, vid_brightness)
 EXTERN_CVAR(Float, vid_contrast)
 EXTERN_CVAR(Int, gl_satformula)
 EXTERN_CVAR(Int, gl_dither_bpc)
@@ -229,17 +217,20 @@ void FGLRenderer::prepareInterleavedPresent(FPresentShaderBase& shader)
 	{
 		shader.Uniforms->InvGamma = 1.0f;
 		shader.Uniforms->Contrast = 1.0f;
-		shader.Uniforms->Brightness = 0.0f;
 		shader.Uniforms->Saturation = 1.0f;
+		shader.Uniforms->BlackPoint = 0.0f;
+		shader.Uniforms->WhitePoint = 1.0f;
 	}
 	else
 	{
 		shader.Uniforms->InvGamma = 1.0f / clamp<float>(vid_gamma, 0.1f, 4.f);
 		shader.Uniforms->Contrast = clamp<float>(vid_contrast, 0.1f, 3.f);
-		shader.Uniforms->Brightness = clamp<float>(vid_brightness, -0.8f, 0.8f);
 		shader.Uniforms->Saturation = clamp<float>(vid_saturation, -15.0f, 15.0f);
+		shader.Uniforms->BlackPoint = clamp<float>(vid_i_blackpoint, 0.f, 1.f);
+		shader.Uniforms->WhitePoint = clamp<float>(vid_i_whitepoint, 0.f, 5.f);
 		shader.Uniforms->GrayFormula = static_cast<int>(gl_satformula);
 	}
+
 	shader.Uniforms->HdrMode = 0;
 	shader.Uniforms->ColorScale = (gl_dither_bpc == -1) ? 255.0f : (float)((1 << gl_dither_bpc) - 1);
 	shader.Uniforms->Scale = {
@@ -248,6 +239,7 @@ void FGLRenderer::prepareInterleavedPresent(FPresentShaderBase& shader)
 	};
 	shader.Uniforms->Offset = { 0.0f, 0.0f };
 	shader.Uniforms.SetData();
+
 	static_cast<GLDataBuffer*>(shader.Uniforms.GetBuffer())->BindBase();
 }
 

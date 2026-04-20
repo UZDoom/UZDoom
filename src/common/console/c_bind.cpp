@@ -1,39 +1,30 @@
 /*
 ** c_bind.cpp
+**
 ** Functions for using and maintaining key bindings
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
 #include <stdint.h>
 
+#include "doomdef.h"
 #include "cmdlib.h"
 #include "keydef.h"
 #include "c_commandline.h"
@@ -54,110 +45,184 @@ const char *KeyNames[NUM_KEYS] =
 	// We use the DirectInput codes and assume a qwerty keyboard layout.
 	// See <dinput.h> for the DIK_* codes
 
-	nullptr,	"Escape",	"1",		"2",		"3",		"4",		"5",		"6",		//00
-	"7",		"8",		"9",		"0",		"-",		"=",		"Backspace","Tab",		//08
-	"Q",		"W",		"E",		"R",		"T",		"Y",		"U",		"I",		//10
-	"O",		"P",		"[",		"]",		"Enter",	"Ctrl",		"A",		"S",	//18
-	"D",		"F",		"G",		"H",		"J",		"K",		"L",		";",		//20
-	"'",		"`",		"Shift",	"\\",		"Z",		"X",		"C",		"V",		//28
-	"B",		"N",		"M",		",",		".",		"/",		"RShift",	"KP*",		//30
-	"Alt",		"Space",	"CapsLock",	"F1",		"F2",		"F3",		"F4",		"F5",		//38
-	"F6",		"F7",		"F8",		"F9",		"F10",		"NumLock",	"Scroll",	"KP7",		//40
-	"KP8",		"KP9",		"KP-",		"KP4",		"KP5",		"KP6",		"KP+",		"KP1",		//48
-	"KP2",		"KP3",		"KP0",		"KP.",		nullptr,	nullptr,	"OEM102",	"F11",		//50
-	"F12",		nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//58
-	nullptr,	nullptr,	nullptr,	nullptr,	"F13",		"F14",		"F15",		"F16",		//60
-	"F17",	  "F18",  	"F19",  	"F20",	  "F21",	  "F22",	  "F23",	  "F24",  	//68
-	"Kana",		nullptr,	nullptr,	"Abnt_C1",	nullptr,	nullptr,	nullptr,	nullptr,	//70
-	nullptr,	"Convert",	nullptr,	"NoConvert",nullptr,	"Yen",		"Abnt_C2",	nullptr,	//78
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//80
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	"KP=",		nullptr,	nullptr,	//88
-	"Circumflex","@",		":",		"_",		"Kanji",	"Stop",		"Ax",		"Unlabeled",//90
-	nullptr,	"PrevTrack",nullptr,	nullptr,	"KP-Enter",	"RCtrl",	nullptr,	nullptr,	//98
-	"Mute",		"Calculator","Play",	nullptr,	"Stop",		nullptr,	nullptr,	nullptr,	//A0
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	"VolDown",	nullptr,	//A8
-	"VolUp",	nullptr,	"WebHome",	"KP,",		nullptr,	"KP/",		nullptr,	"SysRq",	//B0
-	"RAlt",		nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//B8
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	"Pause",	nullptr,	"Home",		//C0
-	"UpArrow",	"PgUp",		nullptr,	"LeftArrow",nullptr,	"RightArrow",nullptr,	"End",		//C8
-	"DownArrow","PgDn",		"Ins",		"Del",		nullptr,	nullptr,	nullptr,	nullptr,	//D0
+	nullptr,      "Escape",     "1",        "2",          "3",        "4",           "5",         "6",         //00
+	"7",          "8",          "9",        "0",          "-",        "=",           "Backspace", "Tab",       //08
+	"Q",          "W",          "E",        "R",          "T",        "Y",           "U",         "I",         //10
+	"O",          "P",          "[",        "]",          "Enter",    "Ctrl",        "A",         "S",         //18
+	"D",          "F",          "G",        "H",          "J",        "K",           "L",         ";",         //20
+	"'",          "`",          "Shift",    "\\",         "Z",        "X",           "C",         "V",         //28
+	"B",          "N",          "M",        ",",          ".",        "/",           "RShift",    "KP*",       //30
+	"Alt",        "Space",      "CapsLock", "F1",         "F2",       "F3",          "F4",        "F5",        //38
+	"F6",         "F7",         "F8",       "F9",         "F10",      "NumLock",     "Scroll",    "KP7",       //40
+	"KP8",        "KP9",        "KP-",      "KP4",        "KP5",      "KP6",         "KP+",       "KP1",       //48
+	"KP2",        "KP3",        "KP0",      "KP.",        nullptr,    nullptr,       "OEM102",    "F11",       //50
+	"F12",        nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //58
+	nullptr,      nullptr,      nullptr,    nullptr,      "F13",      "F14",         "F15",       "F16",       //60
+	"F17",        "F18",        "F19",      "F20",        "F21",      "F22",         "F23",       "F24",       //68
+	"Kana",       nullptr,      nullptr,    "Abnt_C1",    nullptr,    nullptr,       nullptr,     nullptr,     //70
+	nullptr,      "Convert",    nullptr,    "NoConvert",  nullptr,    "Yen",         "Abnt_C2",   nullptr,     //78
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //80
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    "KP=",         nullptr,     nullptr,     //88
+	"Circumflex", "@",          ":",        "_",          "Kanji",    "Stop",        "Ax",        "Unlabeled", //90
+	nullptr,      "PrevTrack",  nullptr,    nullptr,      "KP-Enter", "RCtrl",       nullptr,     nullptr,     //98
+	"Mute",       "Calculator", "Play",     nullptr,      "Stop",     nullptr,       nullptr,     nullptr,     //A0
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       "VolDown",   nullptr,     //A8
+	"VolUp",      nullptr,      "WebHome",  "KP,",        nullptr,    "KP/",         nullptr,     "SysRq",     //B0
+	"RAlt",       nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //B8
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    "Pause",       nullptr,     "Home",      //C0
+	"UpArrow",    "PgUp",       nullptr,    "LeftArrow",  nullptr,    "RightArrow",  nullptr,     "End",       //C8
+	"DownArrow",  "PgDn",       "Ins",      "Del",        nullptr,    nullptr,       nullptr,     nullptr,     //D0
 #ifdef __APPLE__
-	nullptr,	nullptr,	nullptr,	"Command",	nullptr,	"Apps",		"Power",	"Sleep",	//D8
+	nullptr,      nullptr,      nullptr,    "Command",    nullptr,    "Apps",        "Power",     "Sleep",     //D8
 #else // !__APPLE__
-	nullptr,	nullptr,	nullptr,	"LWin",		"RWin",		"Apps",		"Power",	"Sleep",	//D8
+	nullptr,      nullptr,      nullptr,    "LWin",       "RWin",     "Apps",        "Power",     "Sleep",     //D8
 #endif // __APPLE__
-	nullptr,	nullptr,	nullptr,	"Wake",		nullptr,	"Search",	"Favorites","Refresh",	//E0
-	"WebStop",	"WebForward","WebBack",	"MyComputer","Mail",	"MediaSelect",nullptr,	nullptr,	//E8
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//F0
-	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	nullptr,	//F8
+	nullptr,      nullptr,      nullptr,    "Wake",       nullptr,    "Search",      "Favorites", "Refresh",   //E0
+	"WebStop",    "WebForward", "WebBack",  "MyComputer", "Mail",     "MediaSelect", nullptr,     nullptr,     //E8
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //F0
+	nullptr,      nullptr,      nullptr,    nullptr,      nullptr,    nullptr,       nullptr,     nullptr,     //F8
 
 	// non-keyboard buttons that can be bound
-	"Mouse1",	"Mouse2",	"Mouse3",	"Mouse4",		// 8 mouse buttons
-	"Mouse5",	"Mouse6",	"Mouse7",	"Mouse8",
-
-	"Joy1",		"Joy2",		"Joy3",		"Joy4",			// 128 joystick buttons!
-	"Joy5",		"Joy6",		"Joy7",		"Joy8",
-	"Joy9",		"Joy10",	"Joy11",	"Joy12",
-	"Joy13",	"Joy14",	"Joy15",	"Joy16",
-	"Joy17",	"Joy18",	"Joy19",	"Joy20",
-	"Joy21",	"Joy22",	"Joy23",	"Joy24",
-	"Joy25",	"Joy26",	"Joy27",	"Joy28",
-	"Joy29",	"Joy30",	"Joy31",	"Joy32",
-	"Joy33",	"Joy34",	"Joy35",	"Joy36",
-	"Joy37",	"Joy38",	"Joy39",	"Joy40",
-	"Joy41",	"Joy42",	"Joy43",	"Joy44",
-	"Joy45",	"Joy46",	"Joy47",	"Joy48",
-	"Joy49",	"Joy50",	"Joy51",	"Joy52",
-	"Joy53",	"Joy54",	"Joy55",	"Joy56",
-	"Joy57",	"Joy58",	"Joy59",	"Joy60",
-	"Joy61",	"Joy62",	"Joy63",	"Joy64",
-	"Joy65",	"Joy66",	"Joy67",	"Joy68",
-	"Joy69",	"Joy70",	"Joy71",	"Joy72",
-	"Joy73",	"Joy74",	"Joy75",	"Joy76",
-	"Joy77",	"Joy78",	"Joy79",	"Joy80",
-	"Joy81",	"Joy82",	"Joy83",	"Joy84",
-	"Joy85",	"Joy86",	"Joy87",	"Joy88",
-	"Joy89",	"Joy90",	"Joy91",	"Joy92",
-	"Joy93",	"Joy94",	"Joy95",	"Joy96",
-	"Joy97",	"Joy98",	"Joy99",	"Joy100",
-	"Joy101",	"Joy102",	"Joy103",	"Joy104",
-	"Joy105",	"Joy106",	"Joy107",	"Joy108",
-	"Joy109",	"Joy110",	"Joy111",	"Joy112",
-	"Joy113",	"Joy114",	"Joy115",	"Joy116",
-	"Joy117",	"Joy118",	"Joy119",	"Joy120",
-	"Joy121",	"Joy122",	"Joy123",	"Joy124",
-	"Joy125",	"Joy126",	"Joy127",	"Joy128",
-
-	"POV1Up",	"POV1Right","POV1Down",	"POV1Left",		// First POV hat
-	"POV2Up",	"POV2Right","POV2Down",	"POV2Left",		// Second POV hat
-	"POV3Up",	"POV3Right","POV3Down",	"POV3Left",		// Third POV hat
-	"POV4Up",	"POV4Right","POV4Down",	"POV4Left",		// Fourth POV hat
-
-	"MWheelUp",	"MWheelDown",							// the mouse wheel
-	"MWheelRight", "MWheelLeft",
-
-	"Axis1Plus","Axis1Minus","Axis2Plus","Axis2Minus",	// joystick axes as buttons
-	"Axis3Plus","Axis3Minus","Axis4Plus","Axis4Minus",
-	"Axis5Plus","Axis5Minus","Axis6Plus","Axis6Minus",
-	"Axis7Plus","Axis7Minus","Axis8Plus","Axis8Minus",
-
-	"LStickRight","LStickLeft","LStickDown","LStickUp",			// Gamepad axis-based buttons
-	"RStickRight","RStickLeft","RStickDown","RStickUp",
-
-	"DPadUp","DPadDown","DPadLeft","DPadRight",	// Gamepad buttons
-	"Pad_Start","Pad_Back","LThumb","RThumb",
-	"LShoulder","RShoulder","LTrigger","RTrigger",
-	"Pad_A", "Pad_B", "Pad_X", "Pad_Y",
-	"Paddle_1", "Paddle_2", "Paddle_3", "Paddle_4",
-	"Guide", "Pad_Misc", "Pad_Touchpad"
+	"Mouse1",      "Mouse2",     "Mouse3",       "Mouse4",     // 8 mouse buttons
+	"Mouse5",      "Mouse6",     "Mouse7",       "Mouse8",     //
+	"Joy1",        "Joy2",       "Joy3",         "Joy4",       // 128 joystick buttons!
+	"Joy5",        "Joy6",       "Joy7",         "Joy8",       //
+	"Joy9",        "Joy10",      "Joy11",        "Joy12",      //
+	"Joy13",       "Joy14",      "Joy15",        "Joy16",      //
+	"Joy17",       "Joy18",      "Joy19",        "Joy20",      //
+	"Joy21",       "Joy22",      "Joy23",        "Joy24",      //
+	"Joy25",       "Joy26",      "Joy27",        "Joy28",      //
+	"Joy29",       "Joy30",      "Joy31",        "Joy32",      //
+	"Joy33",       "Joy34",      "Joy35",        "Joy36",      //
+	"Joy37",       "Joy38",      "Joy39",        "Joy40",      //
+	"Joy41",       "Joy42",      "Joy43",        "Joy44",      //
+	"Joy45",       "Joy46",      "Joy47",        "Joy48",      //
+	"Joy49",       "Joy50",      "Joy51",        "Joy52",      //
+	"Joy53",       "Joy54",      "Joy55",        "Joy56",      //
+	"Joy57",       "Joy58",      "Joy59",        "Joy60",      //
+	"Joy61",       "Joy62",      "Joy63",        "Joy64",      //
+	"Joy65",       "Joy66",      "Joy67",        "Joy68",      //
+	"Joy69",       "Joy70",      "Joy71",        "Joy72",      //
+	"Joy73",       "Joy74",      "Joy75",        "Joy76",      //
+	"Joy77",       "Joy78",      "Joy79",        "Joy80",      //
+	"Joy81",       "Joy82",      "Joy83",        "Joy84",      //
+	"Joy85",       "Joy86",      "Joy87",        "Joy88",      //
+	"Joy89",       "Joy90",      "Joy91",        "Joy92",      //
+	"Joy93",       "Joy94",      "Joy95",        "Joy96",      //
+	"Joy97",       "Joy98",      "Joy99",        "Joy100",     //
+	"Joy101",      "Joy102",     "Joy103",       "Joy104",     //
+	"Joy105",      "Joy106",     "Joy107",       "Joy108",     //
+	"Joy109",      "Joy110",     "Joy111",       "Joy112",     //
+	"Joy113",      "Joy114",     "Joy115",       "Joy116",     //
+	"Joy117",      "Joy118",     "Joy119",       "Joy120",     //
+	"Joy121",      "Joy122",     "Joy123",       "Joy124",     //
+	"Joy125",      "Joy126",     "Joy127",       "Joy128",     //
+	"POV1Up",      "POV1Right",  "POV1Down",     "POV1Left",   // First POV hat
+	"POV2Up",      "POV2Right",  "POV2Down",     "POV2Left",   // Second POV hat
+	"POV3Up",      "POV3Right",  "POV3Down",     "POV3Left",   // Third POV hat
+	"POV4Up",      "POV4Right",  "POV4Down",     "POV4Left",   // Fourth POV hat
+	"MWheelUp",    "MWheelDown", "MWheelRight",  "MWheelLeft", // the mouse wheel
+	"Axis1Plus",   "Axis1Minus", "Axis2Plus",    "Axis2Minus", // joystick axiis as buttons
+	"Axis3Plus",   "Axis3Minus", "Axis4Plus",    "Axis4Minus", //
+	"Axis5Plus",   "Axis5Minus", "Axis6Plus",    "Axis6Minus", //
+	"Axis7Plus",   "Axis7Minus", "Axis8Plus",    "Axis8Minus", //
+	"LStickRight", "LStickLeft", "LStickDown",   "LStickUp",   // Gamepad axis-based buttons
+	"RStickRight", "RStickLeft", "RStickDown",   "RStickUp",   //
+	"DPadUp",      "DPadDown",   "DPadLeft",     "DPadRight",  // Gamepad buttons
+	"Pad_Start",   "Pad_Back",   "LThumb",       "RThumb",     //
+	"LShoulder",   "RShoulder",  "LTrigger",     "RTrigger",   //
+	"Pad_A",       "Pad_B",      "Pad_X",        "Pad_Y",      //
+	"Paddle_1",    "Paddle_2",   "Paddle_3",     "Paddle_4",   //
+	"Guide",       "Pad_Misc",   "Pad_Touchpad",               //
 };
+
+CVAR(Int, cl_doubleclickthreshold, 250, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 FKeyBindings Bindings;
 FKeyBindings DoubleBindings;
 FKeyBindings AutomapBindings;
 
-static unsigned int DClickTime[NUM_KEYS];
-static FixedBitArray<NUM_KEYS> DClicked;
+static unsigned int DoubleClickDeadline[NUM_KEYS];
+static FixedBitArray<NUM_KEYS> DoubleClickedKeys;
+
+static FixedBitArray<NUM_KEYS> QueuedPresses;
+static FixedBitArray<NUM_KEYS> QueuedPressReleases;
+static const FKeyBindings *QueuedBindings[NUM_KEYS];
+
+static FixedBitArray<NUM_KEYS> DelayedReleases;
+static unsigned int DelayedReleaseTime[NUM_KEYS];
+static FString DelayedReleaseBindings[NUM_KEYS];
+
+static constexpr unsigned int SYNTHETIC_RELEASE_DELAY = 1000 / TICRATE;
+
+static void ClearQueuedPress(unsigned int key)
+{
+	QueuedPresses.Clear(key);
+	QueuedPressReleases.Clear(key);
+	QueuedBindings[key] = nullptr;
+	DoubleClickDeadline[key] = 0;
+}
+
+static bool ExecBinding(FString binding, unsigned int key, bool keyup, bool isDoubleClick)
+{
+	if (binding.IsEmpty() || (keyup && binding[0] != '+'))
+	{
+		return false;
+	}
+
+	char *copy = binding.LockBuffer();
+	if (keyup)
+	{
+		copy[0] = '-';
+	}
+	AddCommandString(copy, isDoubleClick ? key | KEY_DBLCLICKED : key);
+
+	return true;
+}
+
+void C_TickQueuedInputs()
+{
+	unsigned int nowtime = (unsigned)I_msTime();
+
+	// Flush and execute delayed synthetic releases
+	for (unsigned int key = 0; key < NUM_KEYS; ++key)
+	{
+		if (!DelayedReleases[key] || int(DelayedReleaseTime[key] - nowtime) > 0)
+		{
+			continue;
+		}
+
+		FString binding = DelayedReleaseBindings[key];
+		DelayedReleases.Clear(key);
+		DelayedReleaseTime[key] = 0;
+		DelayedReleaseBindings[key] = "";
+
+		ExecBinding(binding, key, true, false);
+	}
+
+	// Flush and execute queued presses with expired double-click deadlines
+	for (unsigned int key = 0; key < NUM_KEYS; ++key)
+	{
+		if (!QueuedPresses[key] || int(DoubleClickDeadline[key] - nowtime) > 0)
+		{
+			continue;
+		}
+
+		FString binding = QueuedBindings[key] != nullptr ? QueuedBindings[key]->GetBinding(key) : Bindings.GetBinding(key);
+		bool queueSyntheticRelease = QueuedPressReleases[key] && binding.Len() > 0 && binding[0] == '+';
+
+		ClearQueuedPress(key);
+		ExecBinding(binding, key, false, false);
+
+		// Queue a delayed synthetic release for already released "+ commands"
+		if (queueSyntheticRelease)
+		{
+			DelayedReleases.Set(key);
+			DelayedReleaseTime[key] = nowtime + SYNTHETIC_RELEASE_DELAY;
+			DelayedReleaseBindings[key] = binding;
+		}
+	}
+}
 
 //=============================================================================
 //
@@ -193,23 +258,24 @@ static int GetKeyFromName (const char *name)
 static int GetConfigKeyFromName (const char *key)
 {
 	int keynum = GetKeyFromName(key);
+
 	if (keynum == 0)
 	{
-		if (stricmp (key, "LeftBracket") == 0)
-		{
-			keynum = GetKeyFromName ("[");
-		}
-		else if (stricmp (key, "RightBracket") == 0)
-		{
-			keynum = GetKeyFromName ("]");
-		}
-		else if (stricmp (key, "Equals") == 0)
-		{
-			keynum = GetKeyFromName ("=");
-		}
-		else if (stricmp (key, "KP-Equals") == 0)
-		{
-			keynum = GetKeyFromName ("kp=");
+		static const char* mapping[][2] = {
+			{ "LeftBracket", "["},
+			{ "RightBracket", "]"},
+			{ "Equals", "="},
+			{ "KP-Equals", "kp="},
+			{ "Semicolon", ";"},
+			{ "Colon", ":"},
+		};
+
+		for (auto& [alias, actual]: mapping) {
+			if (stricmp (key, alias) == 0)
+			{
+				keynum = GetKeyFromName (actual);
+				break;
+			}
 		}
 	}
 	return keynum;
@@ -261,7 +327,7 @@ static const char *ConfigKeyName(int keynum)
 //
 //=============================================================================
 
-void C_NameKeys (char *str, int first, int second)
+void C_NameKeys (char *str, int first, int second, bool colors)
 {
 	int c = 0;
 
@@ -272,7 +338,7 @@ void C_NameKeys (char *str, int first, int second)
 		c++;
 		strcpy (str, KeyName (first));
 		if (second)
-			strcat (str, TEXTCOLOR_BLACK ", " TEXTCOLOR_NORMAL);
+			strcat (str, colors ? TEXTCOLOR_BLACK ", " TEXTCOLOR_NORMAL : ", ");
 	}
 
 	if (second)
@@ -493,6 +559,17 @@ int FKeyBindings::GetKeysForCommand (const char *cmd, int *first, int *second)
 
 //=============================================================================
 //
+// Returns bind from key name, or NULL if unbound
+//
+//=============================================================================
+
+const char *FKeyBindings::GetBind (const char *key)
+{
+	return GetBind(GetKeyFromName(key));
+}
+
+//=============================================================================
+//
 //
 //
 //=============================================================================
@@ -534,7 +611,7 @@ void FKeyBindings::UnbindACommand (const char *str)
 
 //=============================================================================
 //
-//
+// Bind a command to a key if the neither the key or command are already bound
 //
 //=============================================================================
 
@@ -548,12 +625,14 @@ void FKeyBindings::DefaultBind(const char *keyname, const char *cmd)
 	}
 	if (!Binds[key].IsEmpty())
 	{ // This key is already bound.
+		Printf ("Key already bound to \"%s\"\n", Binds[key].GetChars());
 		return;
 	}
 	for (int i = 0; i < NUM_KEYS; ++i)
 	{
 		if (!Binds[i].IsEmpty() && stricmp (Binds[i].GetChars(), cmd) == 0)
 		{ // This command is already bound to a key.
+			Printf ("Command already bound to \"%d\"\n", i);
 			return;
 		}
 	}
@@ -839,72 +918,88 @@ CCMD(binddefaults)
 //
 //=============================================================================
 
-bool C_DoKey (event_t *ev, FKeyBindings *binds, FKeyBindings *doublebinds)
+bool C_DoKey(event_t *ev, FKeyBindings *binds, FKeyBindings *doublebinds)
 {
-	FString binding;
-	bool dclick;
-	unsigned int nowtime;
-
-	if (ev->type != EV_KeyDown && ev->type != EV_KeyUp)
-		return false;
-
-	if ((unsigned int)ev->data1 >= NUM_KEYS)
-		return false;
-
-	dclick = false;
-
-	nowtime = (unsigned)I_msTime();
-	if (doublebinds != nullptr && int(DClickTime[ev->data1] - nowtime) > 0 && ev->type == EV_KeyDown)
+	if ((ev->type != EV_KeyDown && ev->type != EV_KeyUp) || (unsigned int)ev->data1 >= NUM_KEYS)
 	{
-		// Key pressed for a double click
-		binding = doublebinds->GetBinding(ev->data1);
-		DClicked.Set(ev->data1);
-		dclick = true;
+		return false;
+	}
+
+	const unsigned int key = (unsigned int)ev->data1;
+	const bool isKeyUp = ev->type == EV_KeyUp;
+
+	// Clean up queued input state
+	C_TickQueuedInputs();
+
+	// Ignore non-keyboard input if chat is active
+	if (chatmodeon != 0 && key >= 256)
+	{
+		return false;
+	}
+	
+	FString binding;
+	const bool hasDoubleBind = doublebinds != nullptr && doublebinds->GetBind(key) != nullptr;
+	const bool hasQueuedPress = QueuedPresses[key] && QueuedBindings[key] == binds;
+
+	bool isDoubleClick = false;
+	const unsigned int nowtime = (unsigned)I_msTime();
+
+	if (!isKeyUp)
+	{
+		if (!hasDoubleBind)
+		{
+			binding = binds->GetBinding(key);
+		}
+		else if (hasQueuedPress && int(DoubleClickDeadline[key] - nowtime) > 0)
+		{
+			// Second press within the double-click window, use the double-binding
+			binding = doublebinds->GetBinding(key);
+			ClearQueuedPress(key);
+			DoubleClickedKeys.Set(key);
+			isDoubleClick = true;
+		}
+		else
+		{
+			// Key has a double-binding. Queue and delay the press to allow for a double-click
+			QueuedPresses.Set(key);
+			QueuedPressReleases.Clear(key);
+			QueuedBindings[key] = binds;
+			DoubleClickDeadline[key] = nowtime + cl_doubleclickthreshold;
+			return true;
+		}
 	}
 	else
 	{
-		if (ev->type == EV_KeyDown)
-		{ // Key pressed for a normal press
-			binding = binds->GetBinding(ev->data1);
-			if (doublebinds != nullptr) DClickTime[ev->data1] = nowtime + 571;
+		if (hasDoubleBind && DoubleClickedKeys[key])
+		{
+			// Double-click binding released
+			binding = doublebinds->GetBinding(key);
+			DoubleClickedKeys.Clear(key);
+			isDoubleClick = true;
 		}
-		else if (doublebinds != nullptr && DClicked[ev->data1])
-		{ // Key released from a double click
-			binding = doublebinds->GetBinding(ev->data1);
-			DClicked.Clear(ev->data1);
-			DClickTime[ev->data1] = 0;
-			dclick = true;
+		else if (hasQueuedPress)
+		{
+			// Mark the queued press for a synthetic release
+			QueuedPressReleases.Set(key);
+			return true;
 		}
 		else
-		{ // Key released from a normal press
-			binding = binds->GetBinding(ev->data1);
+		{
+			binding = binds->GetBinding(key);
 		}
 	}
 
-
+	// Empty double-binding. Fall back to the normal binding
 	if (binding.IsEmpty())
 	{
-		binding = binds->GetBinding(ev->data1);
-		dclick = false;
+		binding = binds->GetBinding(key);
+		isDoubleClick = false;
 	}
 
-	if (ev->type == EV_KeyUp && binding[0] != '+')
+	if (isKeyUp && (binding.Len() == 0 || binding[0] != '+'))
 	{
 		return false;
 	}
 
-	if (!binding.IsEmpty() && (chatmodeon == 0 || ev->data1 < 256))
-	{
-		char *copy = binding.LockBuffer();
-
-		if (ev->type == EV_KeyUp)
-		{
-			copy[0] = '-';
-		}
-
-		AddCommandString (copy, dclick ? ev->data1 | KEY_DBLCLICKED : ev->data1);
-		return true;
-	}
-	return false;
+	return ExecBinding(binding, key, isKeyUp, isDoubleClick);
 }
-

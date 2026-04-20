@@ -3,7 +3,7 @@
 ** Implements base class for MIDI and MUS streaming.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -284,6 +284,8 @@ MIDIDevice *MIDIStreamer::CreateMIDIDevice(EMidiDevice devtype, int samplerate)
 				dev = CreateWinMIDIDevice(std::max(0, miscConfig.snd_mididevice));
 #elif __linux__
                 dev = CreateAlsaMIDIDevice(std::max(0, miscConfig.snd_mididevice));
+#elif __APPLE__
+				dev = CreateCoreMIDIDevice(std::max(0, miscConfig.snd_mididevice));
 #endif
 				break;
 #endif

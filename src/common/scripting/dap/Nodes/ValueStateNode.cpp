@@ -1,3 +1,25 @@
+/*
+** ValueStateNode.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2025 nikitalita
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: MIT
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #include "common/scripting/dap/GameInterfaces.h"
 #include "common/scripting/dap/Utilities.h"
 #include "ValueStateNode.h"
@@ -121,9 +143,9 @@ dap::Variable ValueStateNode::ToVariable(const VMValue &m_variable, PType *m_typ
 	{ // explicitly not TYPE_IntNotInt
 		int64_t val = TruncateVMValue(&m_variable, basic_type).i;
 		if (basic_type == BASIC_uint32 || basic_type == BASIC_uint16 || basic_type == BASIC_uint8){
-			variable.value = StringFormat("%lu", val);
+			variable.value = StringFormat("%llu", static_cast<uint64_t>(val));
 		} else {
-			variable.value = StringFormat("%ld", val);
+			variable.value = StringFormat("%lld", val);
 		}
 	}
 	else if (m_type->isFloat())

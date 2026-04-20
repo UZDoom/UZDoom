@@ -1,8 +1,37 @@
+/*
+** x86.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2005-2016 Marisa Heit
+** Copyright 2005-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef X86_H
 #define X86_H
 
 #include "basics.h"
 #include "zstring.h"
+
+#ifdef __cpp_lib_hardware_interference_size
+#include "version"
+#include <new>
+#endif
 
 struct CPUInfo	// 92 bytes
 {
@@ -223,6 +252,11 @@ struct CPUInfo	// 92 bytes
 		};
 		uint32_t AMD_DataL1Info;
 	};
+#ifdef __cpp_lib_hardware_interference_size
+	static inline constexpr size_t AssumedDefaultCacheLineSizeBytes = std::hardware_destructive_interference_size;
+#else
+	static inline constexpr size_t AssumedDefaultCacheLineSizeBytes = 64;
+#endif
 };
 
 

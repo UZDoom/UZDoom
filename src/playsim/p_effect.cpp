@@ -1,35 +1,22 @@
 /*
 ** p_effect.cpp
+**
 ** Particle effects
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** Copyright 2025 UZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 ** If particles used real sprites instead of blocks, they could be much
@@ -60,7 +47,7 @@
 #pragma warning(disable: 6011) // dereference null pointer in thinker iterator
 #endif
 
-CVAR (Int, cl_rockettrails, 1, CVAR_ARCHIVE);
+CVAR (Int, cl_rockettrails, 0, CVAR_ARCHIVE);
 CVAR (Bool, r_rail_smartspiral, false, CVAR_ARCHIVE);
 CVAR (Int, r_rail_spiralsparsity, 1, CVAR_ARCHIVE);
 CVAR (Int, r_rail_trailsparsity, 1, CVAR_ARCHIVE);
@@ -400,7 +387,7 @@ void P_SpawnParticle(FLevelLocals *Level, const DVector3 &pos, const DVector3 &v
 		particle->flags = flags;
 		if(flags & SPF_LOCAL_ANIM)
 		{
-			TexAnim.InitStandaloneAnimation(particle->animData, texture, Level->maptime);
+			TexAnim.InitStandaloneAnimation(particle->animData, texture, Level->LocalWorldTimer);
 		}
 	}
 }
@@ -1096,9 +1083,14 @@ DVisualThinker* DVisualThinker::NewVisualThinker(FLevelLocals* Level, PClass* ty
 	return zs;
 }
 
-static DVisualThinker* SpawnVisualThinker(FLevelLocals* Level, PClass* type, bool clientSide)
+static DVisualThinker* SpawnVisualThinker(FLevelLocals* Level, PClass* type)
 {
-	return DVisualThinker::NewVisualThinker(Level, type, clientSide);
+	return DVisualThinker::NewVisualThinker(Level, type, false);
+}
+
+static DVisualThinker* SpawnClientSideVisualThinker(FLevelLocals* Level, PClass* type)
+{
+	return DVisualThinker::NewVisualThinker(Level, type, true);
 }
 
 void DVisualThinker::UpdateSector(subsector_t * newSubsector)
@@ -1132,8 +1124,15 @@ DEFINE_ACTION_FUNCTION_NATIVE(FLevelLocals, SpawnVisualThinker, SpawnVisualThink
 {
 	PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
 	PARAM_CLASS_NOT_NULL(type, DVisualThinker);
-	PARAM_BOOL(clientSide);
-	DVisualThinker* zs = SpawnVisualThinker(self, type, clientSide);
+	DVisualThinker* zs = SpawnVisualThinker(self, type);
+	ACTION_RETURN_OBJECT(zs);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FLevelLocals, SpawnClientSideVisualThinker, SpawnClientSideVisualThinker)
+{
+	PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
+	PARAM_CLASS_NOT_NULL(type, DVisualThinker);
+	DVisualThinker* zs = SpawnClientSideVisualThinker(self, type);
 	ACTION_RETURN_OBJECT(zs);
 }
 
@@ -1144,7 +1143,7 @@ void DVisualThinker::UpdateSpriteInfo()
 	if ((PT.flags & SPF_LOCAL_ANIM) && PT.texture != AnimatedTexture)
 	{
 		AnimatedTexture = PT.texture;
-		TexAnim.InitStandaloneAnimation(PT.animData, PT.texture, Level->maptime);
+		TexAnim.InitStandaloneAnimation(PT.animData, PT.texture, Level->LocalWorldTimer);
 	}
 }
 

@@ -1,32 +1,23 @@
 /*
 ** dobject.h
 **
+**
+**
 **---------------------------------------------------------------------------
-** Copyright 1998-2008 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -42,6 +33,7 @@
 #include "palentry.h"
 #include "textureid.h"
 #include "autosegs.h"
+#include <new>
 
 class PClass;
 class PType;
@@ -87,6 +79,8 @@ class                                   DPillar;
 
 class PClassActor;
 
+void SetObjectFlagsFromScope(DObject* obj);
+
 #define RUNTIME_CLASS_CASTLESS(cls)	(cls::RegistrationInfo.MyClass)	// Passed a native class name, returns a PClass representing that class
 #define RUNTIME_CLASS(cls)			((typename cls::MetaClass *)RUNTIME_CLASS_CASTLESS(cls))	// Like above, but returns the true type of the meta object
 #define NATIVE_TYPE(object)			(object->StaticType())			// Passed an object, returns the type of the C++ class representing the object
@@ -109,8 +103,6 @@ struct ClassReg : FAutoSegEntry<ClassReg>
 	PClass *RegisterClass();
 	void SetupClass(PClass *cls);
 };
-
-enum EInPlace { EC_InPlace };
 
 #define DECLARE_ABSTRACT_CLASS(cls,parent) \
 public: \
@@ -166,7 +158,7 @@ public: \
 #define _X_FIELDS_true(cls)			nullptr
 #define _X_FIELDS_false(cls)		nullptr
 #define _X_CONSTRUCTOR_true(cls)
-#define _X_CONSTRUCTOR_false(cls)	void cls::InPlaceConstructor(void *mem) { new((EInPlace *)mem) cls; }
+#define _X_CONSTRUCTOR_false(cls)	void cls::InPlaceConstructor(void *mem) { new(mem) cls; }
 #define _X_ABSTRACT_true(cls)		nullptr
 #define _X_ABSTRACT_false(cls)		cls::InPlaceConstructor
 #define _X_VMEXPORT_true(cls)		nullptr
@@ -257,26 +249,35 @@ public:
 		Class = inClass;
 	}
 
-private:
-	struct nonew
-	{
-	};
-
-	void *operator new(size_t len, nonew&)
-	{
-		return M_Calloc(len, 1);
-	}
 public:
 
-	void operator delete (void *mem, nonew&)
-	{
-		M_Free(mem);
-	}
+	// [Jay] DObject-based classes should not be new'd other than placement
+	void* operator new(size_t) = delete;
+	void* operator new[](size_t) = delete;
+	void* operator new(size_t, std::align_val_t) = delete;
+	void* operator new[](size_t, std::align_val_t) = delete;
 
-	void operator delete (void *mem)
-	{
-		M_Free(mem);
-	}
+	/*
+	// [Jay] DObject-based classes should never use delete - they should be deleted by calling Delete() and leaving the ultimate deletion to the GC
+	// [Jay] THIS BREAKS BECAUSE OF VIRTUAL DESTRUCTORS - TODO remove virtual destructors from DObject
+
+	void operator delete(void *mem) = delete;
+	void operator delete[](void *mem) = delete;
+	void operator delete(void *mem, std::size_t) = delete;
+	void operator delete[](void *mem, std::size_t) = delete;
+	void operator delete(void *mem, std::align_val_t) = delete;
+	void operator delete[](void *mem, std::align_val_t) = delete;
+	void operator delete(void *mem, std::size_t, std::align_val_t) = delete;
+	void operator delete[](void *mem, std::size_t, std::align_val_t) = delete;
+	*/
+	void operator delete(void *mem) {};
+
+	// [Jay] placement new, plus matching delete to stop the compiler from complaining
+	void* operator new(size_t, void* p) { return p; }
+	void* operator new[](size_t, void* p) { return p; }
+	void operator delete(void *mem, void* p) {};
+	void operator delete[](void *mem, void* p) {};
+
 
 	// GC fiddling
 
@@ -333,17 +334,6 @@ public:
 	virtual size_t PropagateMark();
 
 protected:
-	// This form of placement new and delete is for use *only* by PClass's
-	// CreateNew() method. Do not use them for some other purpose.
-	void *operator new(size_t, EInPlace *mem)
-	{
-		return (void *)mem;
-	}
-
-	void operator delete (void *mem, EInPlace *)
-	{
-		M_Free (mem);
-	}
 
 	template<typename T, typename... Args>
 		friend T* Create(Args&&... args);
@@ -358,28 +348,14 @@ public:
 	inline bool IsNetworked() const { return (ObjectFlags & OF_Networked); }
 	inline uint32_t GetNetworkID() const { return _networkID; }
 	inline bool IsClientSide() const { return (ObjectFlags & OF_ClientSide); }
+	inline bool IsPredicted() const { return (ObjectFlags & OF_Predicted); }
+	inline void SetPredicted(bool set) { if (set) ObjectFlags |= OF_Predicted; else ObjectFlags &= ~OF_Predicted; }
+	inline bool IsPredicting() const { return (ObjectFlags & OF_Predicting); }
 	void SetNetworkID(const uint32_t id);
 	void ClearNetworkID();
 	void RemoveFromNetwork();
 	virtual void EnableNetworking(const bool enable);
 };
-
-extern bool bPredictionGuard;
-
-// This is the only method aside from calling CreateNew that should be used for creating DObjects
-// to ensure that the Class pointer is always set.
-template<typename T, typename... Args>
-T* Create(Args&&... args)
-{
-	DObject::nonew nono;
-	T *object = new(nono) T(std::forward<Args>(args)...);
-	if (object != nullptr)
-	{
-		object->SetClass(RUNTIME_CLASS(T));
-		assert(object->GetClass() != nullptr);	// beware of objects that get created before the type system is up.
-	}
-	return object;
-}
 
 
 // When you write to a pointer to an Object, you must call this for
@@ -489,15 +465,18 @@ inline T *&DObject::PointerVar(FName field)
 }
 
 
-class NetworkEntityManager
+class NetworkEntityManager final
 {
 private:
+	inline static bool s_bClientPredicting = false;
 	inline static TArray<DObject*> s_netEntities = {};
 	inline static TArray<uint32_t> s_openNetIDs = {};
+	inline static TArray<DObject*> s_problemEntities = {};
+	inline static TArray<DObject*> s_predictedEntities = {};
 
 public:
 	NetworkEntityManager() = delete;
-
+	
 	static constexpr uint32_t WorldNetID = 0u;
 	static constexpr uint32_t ClientNetIDStart = 1u;
 	inline static uint32_t NetIDStart;// = MAXPLAYERS + 1u;
@@ -507,6 +486,30 @@ public:
 	static void AddNetworkEntity(DObject* const ent);
 	static void RemoveNetworkEntity(DObject* const ent);
 	static DObject* GetNetworkEntity(const uint32_t id);
+	static void AddPredictedEntity(DObject* ent);
+	static void VerifyPredictedEntities();
+	static void RemovePredictedEntity(DObject* ent);
+	static void EnablePrediction();
+	static void DisablePrediction();
+	static bool IsPredicting();
 };
+
+// This is the only method aside from calling CreateNew that should be used for creating DObjects
+// to ensure that the Class pointer is always set.
+template<typename T, typename... Args>
+T* Create(Args&&... args)
+{
+	void * mem = M_Calloc(sizeof(T), 1);
+	if (mem)
+	{
+		T *object = new(mem) T(std::forward<Args>(args)...);
+		object->SetClass(RUNTIME_CLASS(T));
+		assert(object->GetClass() != nullptr);	// beware of objects that get created before the type system is up.
+		SetObjectFlagsFromScope(object);
+		NetworkEntityManager::AddPredictedEntity(object);
+		return object;
+	}
+	return nullptr;
+}
 
 #endif //__DOBJECT_H__

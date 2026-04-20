@@ -1,3 +1,24 @@
+/*
+** gl_renderbuffers.h
+**
+** Postprocessing framework
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2020 Magnus Norddahl
+**
+** SPDX-License-Identifier: Zlib
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #pragma once
 
@@ -31,6 +52,7 @@ private:
 
 	friend class FGLRenderBuffers;
 	friend class PPGLTextureBackend;
+	friend class GLPPRenderState;
 };
 
 class PPGLFrameBuffer
@@ -48,6 +70,7 @@ private:
 
 	friend class FGLRenderBuffers;
 	friend class PPGLTextureBackend;
+	friend class GLPPRenderState;
 };
 
 class PPGLRenderBuffer
@@ -91,6 +114,7 @@ public:
 	void PushGroup(const FString &name) override;
 	void PopGroup() override;
 	void Draw() override;
+	void CopyToTexture(PPTexture* dst) override;
 
 private:
 	PPGLTextureBackend *GetGLTexture(PPTexture *texture);

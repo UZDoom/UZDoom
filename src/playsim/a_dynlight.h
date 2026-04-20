@@ -1,3 +1,21 @@
+/*
+** a_dynlight.h
+**
+** Implements actors representing dynamic lights (hardware independent)
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2003 Timothy Stump
+** Copyright 2004-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 #include "c_cvars.h"
 #include "actor.h"
@@ -224,6 +242,7 @@ struct FDynamicLight
 	int GetIntensity() const { return pArgs[LIGHT_INTENSITY]; }
 	int GetSecondaryIntensity() const { return pArgs[LIGHT_SECONDARY_INTENSITY]; }
 	double GetLightDefIntensity() const { return lightDefIntensity; }
+	int GetTimer() const { return Level->LocalWorldTimer; }
 
 	bool IsSubtractive() const { return !!((*pLightFlags) & LF_SUBTRACTIVE); }
 	bool IsAdditive() const { return !!((*pLightFlags) & LF_ADDITIVE); }
@@ -262,7 +281,6 @@ public:
 	// To avoid having to copy these around every tic, these are pointers to the source data.
 	const DAngle *pSpotInnerAngle;
 	const DAngle *pSpotOuterAngle;
-	const DAngle *pPitch;	// This is to handle pitch overrides through GLDEFS, it can either point to the target's pitch or the light definition.
 	const int *pArgs;
 	const LightFlags *pLightFlags;
 
@@ -271,6 +289,7 @@ public:
 	sector_t *Sector;
 	FLevelLocals *Level;
 	TObjPtr<AActor *> target;
+	DAngle            Yaw, Pitch;
 
 	float radius;			// The maximum size the light can be with its current settings.
 	float m_currentRadius;	// The current light size.

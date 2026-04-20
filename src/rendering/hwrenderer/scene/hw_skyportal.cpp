@@ -1,24 +1,19 @@
-// 
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2003-2016 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
+/*
+** hw_skyportal.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2003-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 #include "doomtype.h"
 #include "g_level.h"
@@ -90,7 +85,10 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 
 		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2])
 		{
-			vertexBuffer->RenderDome(state, origin->texture[2], origin->x_offset[2], 0.f, false, FSkyVertexBuffer::SKYMODE_FOGLAYER, !!(di->Level->flags & LEVEL_FORCETILEDSKY), 0, 0, FadeColor);
+			float misth = origin->texture[2]->GetDisplayHeight();
+			float myscale = di->Level->hw_skymistyscale;
+			float myoffset = (myscale - 1.0)*0.857*misth; // [DVR] Why so many magic numbers when it comes to sky??
+			vertexBuffer->RenderDome(state, origin->texture[2], origin->x_offset[2], myoffset, false, FSkyVertexBuffer::SKYMODE_FOGLAYER, !!(di->Level->flags & LEVEL_FORCETILEDSKY), 0, (myscale == 0.0 ? 0 : 240.0/misth/myscale), FadeColor);
 		}
 		else if (!di->isFullbrightScene())
 		{

@@ -2,7 +2,7 @@
 ** music_cd.cpp
 **
 **---------------------------------------------------------------------------
-** Copyright 1999-2003 Randy Heit
+** Copyright 1999-2003 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

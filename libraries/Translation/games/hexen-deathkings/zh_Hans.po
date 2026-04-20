@@ -1,0 +1,471 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 15:48+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/hexen-deathkings/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "废墟村落"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "疫病"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "污水坑"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "地下墓穴"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "荒地"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "蕨木林"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "火葬场"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "警卫之门"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "宝库"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "集市"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "安息之地"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "试炼"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "武器库"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "中殿"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "圣堂"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "屠宰场"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "暗哨"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "阴沟"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "冰堡"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "黑暗城堡"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "中途"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "天与地"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "死雾"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "痛苦城堡"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "下水道坑"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "玫瑰"
+
+# intermission
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"你用颤抖的手抹去脸上流淌的鲜血，\n"
+"努力让自己清醒，去面对前方的一切……\n"
+"\n"
+"……并忘掉身后的一切。\n"
+"\n"
+"远处，一座宏伟城堡的高墙似乎刺破了苍穹，\n"
+"无数死者遭亵渎的坟墓散发出阵阵腐臭。\n"
+"\n"
+"你仔细清点着所剩无几的神器，\n"
+"试图说服自己这些已经足够了。\n"
+"毕竟，它们必须足够，不是吗？\n"
+"\n"
+"\n"
+"难道不是吗？"
+
+# intermission
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"毫无疑问，这世上定有被诅咒的灵魂，\n"
+"因为任何美好善良的事物都无法在此长久存续。\n"
+"\n"
+"然而过往的一切，\n"
+"都只是如今阻碍你前行的苍白虚影：\n"
+"那座黑暗城堡本身。\n"
+"\n"
+"那座阴森大教堂的庞大身躯\n"
+"几乎完全遮住了城堡的主体，\n"
+"只能让人瞥见些许残影，但即便如此，\n"
+"所见之处也仿佛在用嘶嘶的低语诉说着\n"
+"冰冷、持久的死亡……\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"……为幸运儿准备的。"
+
+# intermission
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"你又一次置身于混沌球的宏伟殿堂之内，\n"
+"仿佛自上次在这片阴影中穿行以来，\n"
+"时间未曾流逝。\n"
+"\n"
+"但有些东西却诡异得变了样，\n"
+"曾经轻柔的低语声如今却是一片死寂，\n"
+"仿佛有双隐藏的眼睛在暗中窥视着……\n"
+"\n"
+"……那双眼睛里藏着邪恶的意图。"
+
+# intermission
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"曾经你紧握着混沌球，双手因贪婪而颤抖。\n"
+"如今你的双手因恐惧\n"
+"与对权力的渴望交织而战栗。\n"
+"\n"
+"倘若连这球的力量都不足以护你周全，\n"
+"抵御黑暗势力，或许还是让它保持原样，\n"
+"不兑现其承诺为好。\n"
+"\n"
+"\n"
+"\n"
+"但话说回来，你从来都不是那种\n"
+"面对挑战会退缩的人……"
+
+# intermission
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n……还有其他玩家在等待。\n"
+"\n"
+
+# script texts
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "你胆敢在准备室里战斗？"
+
+# script texts
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "为此，你必死无疑！"
+
+# script texts
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "瀑布打开了"
+
+# script texts
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "瀑布被堵住了"
+
+# script texts
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "教堂里的一道门开了"
+
+# script texts
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "这可真奇怪……"
+
+# script texts
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "还有三道谜题未完成"
+
+# script texts
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "还有两道谜题未完成"
+
+# script texts
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "还有一道谜题未完成"
+
+# script texts
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "谜题解开了"
+
+# script texts
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "你尚未完成谜题"
+
+# script texts
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "此地板不安全！"
+
+# script texts
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "谜题的三分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "谜题的三分之二已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "你听到远处有平台在移动"
+
+# script texts
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "完成了……"
+
+# script texts
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "你尚未完成谜题"
+
+# script texts
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "我警告你……"
+
+# script texts
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "你真固执，不是吗？"
+
+# script texts
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "还很愚蠢"
+
+# script texts
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "谜题的四分之一已被完成"
+
+# script texts
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "糟糕的选择……"
+
+# script texts
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "符号未对齐"
+
+# script texts
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "这道门从这边打不开"
+
+# script texts
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "这道门从外面被闩上了"
+
+# script texts
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "亵渎！"
+
+# script texts
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "你亵渎了埃里克的坟墓！！"
+
+# script texts
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "现在你死定了！！！"
+
+# script texts
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "谜题的三分之一已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "谜题的三分之二已被解开"
+
+# script texts
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "地穴打开了"
+
+# script texts
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "小心蜘蛛的坟墓"
+
+# script texts
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "你听到外面有平台在上升"
+
+# script texts
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "你觉得幸运吗？"
+
+# script texts
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "你猜错了！"
+
+# script texts
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "猜得不错"
+
+# script texts
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "你能为我的关卡编写所有脚本吗？"
+
+# script texts
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "别碰我黏糊糊的"
+
+# script texts
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "斩首剑？！？！？"
+
+# script texts
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "亲我一下，宝贝"
+
+# script texts
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "呃呃……"
+
+# script texts
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "一小时后拍电影？"
+
+# script texts
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "我甚至连自己的墓碑都没有 - cf"
+
+# script texts
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "不要流血"
+
+# script texts
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "切勿在愤怒中举起手"
+
+# script texts
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "谁敢惊扰我们的安眠？"
+
+# script texts
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "此路已敞开"
+
+# script texts
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "你还剩 "
+
+# script texts
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20个开关"
+
+# script texts
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "你只剩 "
+
+# script texts
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20个开关了"
+
+# script texts
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "出口已开启"
+
+# script texts
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "这些门无法从这边打开"
+
+# script texts
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "这些门已敞开……"
+
+# script texts
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "……只要你准备好"
+
+# script texts
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "一道门开了"
+
+# script texts
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "位于圣堂"
+
+# script texts
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "一座桥已架好"
+
+# script texts
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "位于屠宰场"
+
+# script texts
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "一座楼梯已建好"
+
+# script texts
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "位于暗哨"
+
+# script texts
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "一个齿轮已安置"
+
+# script texts
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20个齿轮已安置"
+
+# script texts
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "一个路障已开放"
+
+# script texts
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "位于阴沟"
+
+# script texts
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "回去的路已开放"
+
+# script texts
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "这道门在里面被闩上了"
+
+# script texts
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "你胆敢盗"
+
+# script texts
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "行刑者的墓？"
+
+# script texts
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "准备死吧"
+
+# script texts
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "你还剩 "
+
+# script texts
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20个开关要找"
+
+# script texts
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "你只剩 "
+
+# script texts
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20个开关了"
+
+# script texts
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "通往高塔的路已开放"
+
+# script texts
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "此路已敞开"

@@ -4,35 +4,22 @@
 ** VM exports for engine backend classes
 **
 **---------------------------------------------------------------------------
+**
 ** Copyright 2005-2020 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
-**
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 **---------------------------------------------------------------------------
 **
+** Code written prior to 2026 is also licensed under:
 **
-*/ 
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 
 #include "texturemanager.h"
@@ -382,7 +369,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(DStatusBarCore, BeginHUD, BeginHUD)
 
 //=====================================================================================
 //
-// 
+//
 //
 //=====================================================================================
 
@@ -670,7 +657,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetBottomAlignOffset, GetBottomAlignOffset)
 
 static int StringWidth(FFont *font, const FString &str, int localize)
 {
-	const char *txt = (localize && str[0] == '$') ? GStrings.GetString(&str[1]) : str.GetChars();
+	const char *txt = (localize && str.Len() >= 2 && str[0] == '$') ? GStrings.GetString(str.GetChars() + 1) : str.GetChars();
 	return font->StringWidth(txt);
 }
 
@@ -684,7 +671,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, StringWidth, StringWidth)
 
 static int GetMaxAscender(FFont* font, const FString& str, int localize)
 {
-	const char* txt = (localize && str[0] == '$') ? GStrings.GetString(&str[1]) : str.GetChars();
+	const char *txt = (localize && str.Len() >= 2 && str[0] == '$') ? GStrings.GetString(str.GetChars() + 1) : str.GetChars();
 	return font->GetMaxAscender(txt);
 }
 
@@ -698,7 +685,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetMaxAscender, GetMaxAscender)
 
 static int CanPrint(FFont *font, const FString &str, int localize)
 {
-	const char *txt = (localize && str[0] == '$') ? GStrings.GetString(&str[1]) : str.GetChars();
+	const char *txt = (localize && str.Len() >= 2 && str[0] == '$') ? GStrings.GetString(str.GetChars() + 1) : str.GetChars();
 	return font->CanPrint(txt);
 }
 
@@ -964,7 +951,7 @@ DEFINE_ACTION_FUNCTION(_CVar, SetInt)
 	{
 		auto realCVar = (FBaseCVar*)(self->GetExtraDataPointer());
 		assert(realCVar->GetFlags() & CVAR_ZS_CUSTOM);
-		
+
 		v = realCVar->GenericZSCVarCallback(v, CVAR_Int);
 		self->SetGenericRep(v, realCVar->GetRealType());
 
@@ -1102,8 +1089,9 @@ DEFINE_ACTION_FUNCTION(FKeyBindings, NameKeys)
 	PARAM_PROLOGUE;
 	PARAM_INT(k1);
 	PARAM_INT(k2);
+	PARAM_BOOL(colors);
 	char buffer[120];
-	C_NameKeys(buffer, k1, k2);
+	C_NameKeys(buffer, k1, k2, colors);
 	ACTION_RETURN_STRING(buffer);
 }
 
@@ -1200,7 +1188,7 @@ DEFINE_ACTION_FUNCTION(_Console, PrintfEx)
 
 	FString s = FStringFormat(VM_ARGS_NAMES,1);
 
-	Printf(printlevel,"%s\n", s.GetChars());
+	Printf(static_cast<PrintFlag>(printlevel),"%s\n", s.GetChars());
 	return 0;
 }
 
@@ -1211,7 +1199,7 @@ DEFINE_ACTION_FUNCTION(_Console, DebugPrintf)
 	PARAM_VA_POINTER(va_reginfo);
 
 	FString s = FStringFormat(VM_ARGS_NAMES, 1);
-	DPrintf(debugLevel, "%s\n", s.GetChars());
+	DPrintf(static_cast<DPrintLevel>(debugLevel), "%s\n", s.GetChars());
 	return 0;
 }
 

@@ -1,3 +1,22 @@
+/*
+** s_sndseq.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1994-1996 Raven Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef __S_SNDSEQ_H__
 #define __S_SNDSEQ_H__
 
@@ -39,6 +58,7 @@ public:
 	void AddChoice (int seqnum, seqtype_t type);
 	int GetModeNum() const { return m_ModeNum; }
 	FName GetSequenceName() const;
+	bool IsLoopingSound() const { return m_IsLooping; }
 
 	virtual void MakeSound (int loop, FSoundID id) {}
 	virtual void *Source () { return NULL; }
@@ -61,6 +81,7 @@ protected:
 	float m_Volume;
 	float m_Atten;
 	int m_ModeNum;
+	bool m_IsLooping;
 
 	FLevelLocals *Level;
 	TArray<int> m_SequenceChoices;

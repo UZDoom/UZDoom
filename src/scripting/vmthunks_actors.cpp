@@ -1,32 +1,26 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 2016-2018 Christoph Oelckers
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// VM thunks for internal functions of actor classes
-//
-// Important note about this file: Since everything in here is supposed to be called
-// from JIT-compiled VM code it needs to be very careful about calling conventions.
-// As a result none of the integer sized struct types may be used as function
-// arguments, because current C++ calling conventions require them to be passed
-// by reference. The JIT code, however will pass them by value so any direct native function
-// taking such an argument needs to receive it as a naked int.
-//
-//-----------------------------------------------------------------------------
+/*
+** vmthunks_actors.cpp
+**
+** VM thunks for internal functions of actor classes
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2018 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Important note about this file:
+** Since everything in here is supposed to be called from JIT-compiled VM code,
+** it needs to be very careful about calling conventions. As a result none of
+** the integer sized struct types may be used as function arguments, because
+** current C++ calling conventions require them to be passed by reference.
+** The JIT code, however will pass them by value so any direct native function
+** taking such an argument needs to receive it as a naked int.
+*/
 
 #include "vm.h"
 #include "r_defs.h"
@@ -902,9 +896,9 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, ClearCounters, ClearCounters)
 	return 0;
 }
 
-static int GetModifiedDamage(AActor *self, int type, int damage, bool passive, AActor *inflictor, AActor *source, int flags)
+static int GetModifiedDamage(AActor *self, int type, int damage, bool passive, AActor *inflictor, AActor *source, int flags, double ang)
 {
-	return self->GetModifiedDamage(ENamedName(type), damage, passive, inflictor, source, flags);
+	return self->GetModifiedDamage(ENamedName(type), damage, passive, inflictor, source, flags, DAngle::fromDeg(ang));
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(AActor, GetModifiedDamage, GetModifiedDamage)
@@ -916,7 +910,8 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, GetModifiedDamage, GetModifiedDamage)
 	PARAM_OBJECT(inflictor, AActor);
 	PARAM_OBJECT(source, AActor);
 	PARAM_INT(flags);
-	ACTION_RETURN_INT(self->GetModifiedDamage(type, damage, passive, inflictor, source, flags));
+	PARAM_ANGLE(ang);
+	ACTION_RETURN_INT(self->GetModifiedDamage(type, damage, passive, inflictor, source, flags, ang));
 }
 
 static int ApplyDamageFactor(AActor *self, int type, int damage)
@@ -1917,7 +1912,11 @@ static void SetViewPos(AActor *self, double x, double y, double z, int flags)
 {
 	if (!self->ViewPos)
 	{
-		self->ViewPos = Create<DViewPosition>();
+		auto vp = Create<DViewPosition>();
+		vp->ObjectFlags |= (self->ObjectFlags & OF_TransferrableFlags);
+
+		self->ViewPos = vp;
+		GC::WriteBarrier(self, vp);
 	}
 
 	DVector3 pos = { x,y,z };
@@ -2079,6 +2078,8 @@ DEFINE_FIELD(AActor, PoisonDamageTypeReceived)
 DEFINE_FIELD(AActor, PoisonDurationReceived)
 DEFINE_FIELD(AActor, PoisonPeriodReceived)
 DEFINE_FIELD(AActor, Poisoner)
+DEFINE_FIELD(AActor, MinRespawnTics)
+DEFINE_FIELD(AActor, RespawnDice)
 DEFINE_FIELD_NAMED(AActor, Inventory, Inv)		// clashes with type 'Inventory'.
 DEFINE_FIELD(AActor, smokecounter)
 DEFINE_FIELD(AActor, FriendPlayer)

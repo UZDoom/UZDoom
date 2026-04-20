@@ -1,22 +1,23 @@
 /*
-**  Postprocessing framework
-**  Copyright (c) 2016-2020 Magnus Norddahl
+** gl_renderbuffers.cpp
 **
-**  This software is provided 'as-is', without any express or implied
-**  warranty.  In no event will the authors be held liable for any damages
-**  arising from the use of this software.
+** Postprocessing framework
 **
-**  Permission is granted to anyone to use this software for any purpose,
-**  including commercial applications, and to alter it and redistribute it
-**  freely, subject to the following restrictions:
+**---------------------------------------------------------------------------
 **
-**  1. The origin of this software must not be misrepresented; you must not
-**     claim that you wrote the original software. If you use this software
-**     in a product, an acknowledgment in the product documentation would be
-**     appreciated but is not required.
-**  2. Altered source versions must be plainly marked as such, and must not be
-**     misrepresented as being the original software.
-**  3. This notice may not be removed or altered from any source distribution.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2020 Magnus Norddahl
+**
+** SPDX-License-Identifier: Zlib
+**
+**---------------------------------------------------------------------------
+**
 */
 
 #include "gl_system.h"
@@ -830,18 +831,20 @@ FShaderProgram *GLPPRenderState::GetGLShader(PPShader *shader)
 	if (!shader->Backend)
 	{
 		auto glshader = std::make_unique<FShaderProgram>();
-
 		FString prolog;
 		if (!shader->Uniforms.empty())
 			prolog = UniformBlockDecl::Create("Uniforms", shader->Uniforms, POSTPROCESS_BINDINGPOINT);
 		prolog += shader->Defines;
+
+		prolog += "uniform float InputTimeDelta;\n";
+		prolog += "uniform float InputTime;\n";
+		prolog += "uniform float InputTimeGame;\n";
 
 		glshader->Compile(FShaderProgram::Vertex, shader->VertexShader.GetChars(), "", shader->Version);
 		glshader->Compile(FShaderProgram::Fragment, shader->FragmentShader.GetChars(), prolog.GetChars(), shader->Version);
 		glshader->Link(shader->FragmentShader.GetChars());
 		if (!shader->Uniforms.empty())
 			glshader->SetUniformBufferLocation(POSTPROCESS_BINDINGPOINT, "Uniforms");
-
 		shader->Backend = std::move(glshader);
 	}
 	return static_cast<FShaderProgram*>(shader->Backend.get());
@@ -959,6 +962,19 @@ void GLPPRenderState::Draw()
 	// Set shader
 	shader->Bind();
 
+	GLuint program = shader->Handle();
+	GLint timeDeltaLoc = glGetUniformLocation(program, "InputTimeDelta");
+	if (timeDeltaLoc != -1)
+		glUniform1f(timeDeltaLoc, TimeDelta);
+
+	GLint timeLoc = glGetUniformLocation(program, "InputTime");
+	if (timeLoc != -1)
+		glUniform1f(timeLoc, Time);
+
+	GLint timeGameLoc = glGetUniformLocation(program, "InputTimeGame");
+	if (timeGameLoc != -1)
+		glUniform1f(timeGameLoc, TimeGame);
+
 	// Draw the screen quad
 	GLRenderer->RenderScreenQuad();
 
@@ -967,6 +983,21 @@ void GLPPRenderState::Draw()
 		buffers->NextTexture();
 
 	glViewport(screen->mScreenViewport.left, screen->mScreenViewport.top, screen->mScreenViewport.width, screen->mScreenViewport.height);
+}
+
+void GLPPRenderState::CopyToTexture(PPTexture* dst)
+{
+	PPGLTextureBackend* backend = GetGLTexture(dst);
+	GLuint dstTexture = backend->Tex.handle;
+
+	GLuint srcFB = buffers->mPipelineFB[buffers->mCurrentPipelineTexture].handle;
+	glBindFramebuffer(GL_READ_FRAMEBUFFER, srcFB);
+
+	glBindTexture(GL_TEXTURE_2D, dstTexture);
+
+	glCopyTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 0, 0, dst->Width, dst->Height);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 void GLPPRenderState::PushGroup(const FString &name)

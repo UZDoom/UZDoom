@@ -1,34 +1,23 @@
 /*
 ** compatibility.cpp
+**
 ** Handles compatibility flags for maps that are unlikely to be updated.
 **
 **---------------------------------------------------------------------------
-** Copyright 2009 Randy Heit
+**
+** Copyright 2009-2016 Marisa Heit
 ** Copyright 2009-2018 Christoph Oelckers
- All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 ** This file is for maps that have been rendered broken by bug fixes or other
@@ -40,20 +29,18 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include "sc_man.h"
-#include "doomstat.h"
-#include "c_dispatch.h"
-#include "gi.h"
-#include "g_level.h"
-#include "p_lnspec.h"
-#include "p_tags.h"
-#include "filesystem.h"
-#include "textures.h"
-#include "g_levellocals.h"
 #include "actor.h"
-#include "p_setup.h"
+#include "doomdef.h"
+#include "doomstat.h"
+#include "filesystem.h"
+#include "g_levellocals.h"
+#include "gi.h"
 #include "maploader/maploader.h"
-#include "types.h"
+#include "p_lnspec.h"
+#include "p_setup.h"
+#include "p_tags.h"
+#include "sc_man.h"
+#include "textures.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -68,7 +55,9 @@ union FMD5Holder
 
 struct FCompatValues
 {
-	int CompatFlags[3];
+	ELevelCompatFlags Flags1;
+	ELevelCompatFlags2 Flags2;
+	ELevelBugCompatFlags BugCompatFlags;
 	unsigned int ExtCommandIndex;
 };
 
@@ -94,11 +83,12 @@ struct FCompatOption
 	int WhichSlot;
 };
 
-enum
+enum ECompatSlot
 {
 	SLOT_COMPAT,
 	SLOT_COMPAT2,
-	SLOT_BCOMPAT
+	SLOT_BCOMPAT,
+	COMPATSLOT_COUNT
 };
 
 // EXTERNAL FUNCTION PROTOTYPES --------------------------------------------
@@ -176,6 +166,8 @@ static FCompatOption Options[] =
 	{ "fdteleport",				COMPATF2_FDTELEPORT, SLOT_COMPAT2 },
 	{ "noacsargcheck",			COMPATF2_NOACSARGCHECK, SLOT_COMPAT2 },
 	{ "novdolllockmsg",			COMPATF2_NOVDOLLLOCKMSG, SLOT_COMPAT2 },
+	{ "emulatemikoportals",		COMPATF2_EMULATEMIKOPORTALS, SLOT_COMPAT2 },
+
 	{ NULL, 0, 0 }
 };
 
@@ -255,13 +247,23 @@ void ParseCompatibility()
 			md5array.Push(md5);
 			sc.MustGetString();
 		} while (!sc.Compare("{"));
-		memset(flags.CompatFlags, 0, sizeof(flags.CompatFlags));
+		
+		flags.Flags1 = 0;
+		flags.Flags2 = 0;
+		flags.BugCompatFlags = 0;
 		flags.ExtCommandIndex = ~0u;
+
 		while (sc.GetString())
 		{
 			if ((i = sc.MatchString(&Options[0].Name, sizeof(*Options))) >= 0)
 			{
-				flags.CompatFlags[Options[i].WhichSlot] |= Options[i].CompatFlags;
+				switch (ECompatSlot(Options[i].WhichSlot))
+				{
+					case SLOT_COMPAT: flags.Flags1 |= ELevelCompatFlags::FromInt(Options[i].CompatFlags); break;
+					case SLOT_COMPAT2: flags.Flags2 |= ELevelCompatFlags2::FromInt(Options[i].CompatFlags); break;
+					case SLOT_BCOMPAT: flags.BugCompatFlags |= ELevelBugCompatFlags::FromInt(Options[i].CompatFlags); break;
+					case COMPATSLOT_COUNT: /* noop */ break;
+				}
 			}
 			else
 			{
@@ -302,7 +304,7 @@ FName MapLoader::CheckCompatibility(MapData *map)
 	{
 		if ((gameinfo.flags & GI_COMPATSHORTTEX) && Level->maptype == MAPTYPE_DOOM)
 		{
-			Level->ii_compatflags = COMPATF_SHORTTEX | COMPATF_LIGHT;
+			Level->ii_compatflags = (COMPATF_SHORTTEX | COMPATF_LIGHT);
 			if (gameinfo.flags & GI_COMPATSTAIRS) Level->ii_compatflags |= COMPATF_STAIRINDEX;
 		}
 		if (gameinfo.flags & GI_NOSECTIONMERGE)
@@ -328,7 +330,7 @@ FName MapLoader::CheckCompatibility(MapData *map)
 		if (flags != NULL)
 		{
 			Printf(", cflags = %08x, cflags2 = %08x, bflags = %08x\n",
-				flags->CompatFlags[SLOT_COMPAT], flags->CompatFlags[SLOT_COMPAT2], flags->CompatFlags[SLOT_BCOMPAT]);
+				flags->Flags1, flags->Flags2, flags->BugCompatFlags);
 		}
 		else
 		{
@@ -338,9 +340,9 @@ FName MapLoader::CheckCompatibility(MapData *map)
 
 	if (flags != NULL)
 	{
-		Level->ii_compatflags |= flags->CompatFlags[SLOT_COMPAT];
-		Level->ii_compatflags2 |= flags->CompatFlags[SLOT_COMPAT2];
-		Level->ib_compatflags |= flags->CompatFlags[SLOT_BCOMPAT];
+		Level->ii_compatflags |= flags->Flags1;
+		Level->ii_compatflags2 |= flags->Flags2;
+		Level->ib_compatflags |= flags->BugCompatFlags;
 	}
 
 	// Reset i_compatflags

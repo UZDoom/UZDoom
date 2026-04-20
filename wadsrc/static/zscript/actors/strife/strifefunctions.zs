@@ -1,4 +1,22 @@
-// common Strife action functions that are used by multiple different actors
+/*
+** strifefunctions.zs
+**
+** common Strife action functions that are used by multiple different actors
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Rogue Entertainment
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2006-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
 
 extend class Actor
 {
@@ -54,21 +72,24 @@ extend class Actor
 	//
 	//==========================================================================
 
-	void A_TossGib()
+	Actor A_TossGib(class<Actor> gibtype = null, double zOfs = 24.0)
 	{
-		class <Actor> gibtype;
-		if (bNoBlood) gibtype = "Junk";
-		else gibtype = "Meat";
-		Actor gib = Spawn (gibtype, pos + (0,0,24), ALLOW_REPLACE);
+		if (!gibtype)
+		{
+			if (bNoBlood) gibtype = "Junk";
+			else gibtype = "Meat";
+		}
+		Actor gib = Spawn (gibtype, pos.PlusZ(zOfs), ALLOW_REPLACE);
 
 		if (gib == null)
 		{
-			return;
+			return null;
 		}
 
 		gib.Angle = random[GibTosser]() * (360 / 256.);
 		gib.VelFromAngle(random[GibTosser](0, 15));
 		gib.Vel.Z = random[GibTosser](0, 15);
+		return gib;
 	}
 
 	//==========================================================================

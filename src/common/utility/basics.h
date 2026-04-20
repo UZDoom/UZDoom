@@ -1,8 +1,43 @@
+/*
+** basics.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2008-2016 Marisa Heit
+** Copyright 2008-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
-#include <stddef.h>
-#include <stdint.h>
+// IWYU pragma: begin_exports
+
 #include <algorithm>
+#include <cassert>
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <type_traits>
+
+#if defined(_M_X64) || defined(__x86_64__) || defined(__amd64__) || defined(__amd64) || defined(__x86_64__) || defined(__x86_64)
+#include <xmmintrin.h>
+#endif
+
+// IWYU pragma: end_exports
 
 #define MAXWIDTH 12000
 #define MAXHEIGHT 5000
@@ -64,14 +99,20 @@ using BITFIELD = uint32_t;
 #undef M_PI
 #endif
 
-const double M_PI = 3.14159265358979323846;	// matches value in gcc v2 math.h
+constexpr double M_PI = 3.14159265358979323846;	// matches value in gcc v2 math.h
 
 using std::min;
 using std::max;
-//using std::clamp;
 
 template<typename T>
 T clamp(T val, T minval, T maxval)
 {
     return std::max<T>(std::min<T>(val, maxval), minval);
+}
+
+static inline void PrefetchL3(const void* Address)
+{
+#if defined(_M_X64) || defined(__x86_64__) || defined(__amd64__) || defined(__amd64) || defined(__x86_64__) || defined(__x86_64)
+    _mm_prefetch(static_cast<const char*>(Address), _MM_HINT_T1);
+#endif
 }

@@ -1,3 +1,26 @@
+/*
+** p_tags.h
+**
+** everything to do with tags and their management
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2015-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef P_TAGS_H
 #define P_TAGS_H 1
 

@@ -1,0 +1,259 @@
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+      os:
+        required: true
+        type: string
+      deps_cmdline:
+        required: true
+        type: string
+      build_opts:
+        required: true
+        type: string
+      extra_files:
+        required: true
+        type: string
+        # s[n]   = output file
+        # s[n+1] = resource sha256
+        # s[n+2] = resource url
+      build_type:
+        required: true
+        type: string
+    secrets:
+      MACOS_CERTIFICATE:
+        required: false
+      MACOS_CERTIFICATE_PASSWORD:
+        required: false
+      MACOS_CERTIFICATE_ID:
+        required: false
+
+jobs:
+  run_build:
+    name: ${{ inputs.name }} ${{ inputs.build_type }}
+    runs-on: ${{ inputs.os }}
+    defaults:
+      run:
+        shell: ${{ contains(inputs.name, 'MinGW') && 'msys2 {0}' || 'bash' }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+
+    - name: Setup MSVC
+      if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
+      uses: ilammy/msvc-dev-cmd@v1 # FIXME: update this
+
+    - name: Setup MSYS2
+      if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        update: true
+
+    - name: Dependencies
+      env:
+        DEPS_COMMAND: ${{ inputs.deps_cmdline }}
+        EXTRA_FILES: ${{ inputs.extra_files }}
+      run: |
+        mkdir build && cd build
+
+        attempt() (
+          set +e
+          local cmd="$*"
+          local delay=10
+          local timeout_sec=600
+          for i in {1..4}; do
+            echo "Running: $cmd"
+            bash -c "$cmd" &
+            local cmd_pid=$!
+
+            ( sleep 600 ; kill -9 "$cmd_pid" 2>&1 ; ) &
+            local watchdog_pid=$!
+
+            wait "$cmd_pid" 2>&1
+            local exit_code=$?
+
+            kill "$watchdog_pid" 2>&1
+            wait "$watchdog_pid" 2>&1
+
+            [ $exit_code -eq 0 ] && return 0
+            echo "Attempt $i failed. Retrying in ${delay}s" >&2
+            sleep "${delay}"
+            ((delay*=3))
+          done
+          return 1
+        )
+
+        files=( $EXTRA_FILES )
+        for ((i=2;i<=${#files[@]};i+=3)); do
+          file="${files[i-2]}"
+          hash="${files[i-1]}"
+          addr="${files[i]}"
+          download="curl -fL '${addr}' | tee '${file}' | sha256sum"
+          verify="echo '${hash} ${file}' | sha256sum -c -"
+          attempt "set -o pipefail; { $download ; } && { $verify ; }"
+        done
+
+        command=( $DEPS_COMMAND )
+        command="${command[*]}"
+        if [[ -n "$command" ]]; then
+          attempt "$command"
+        fi
+
+    - name: Configure
+      env:
+        BUILD_TYPE: ${{ inputs.build_type || 'Release' }}
+        BUILD_OPTS: ${{ inputs.build_opts }}
+      run: |
+        cmake -B build -S . \
+          -DPK3_QUIET_ZIPDIR=ON -G Ninja \
+          -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS
+
+    - name: Build
+      id: build
+      run: |
+        export GIT_DESCRIBE="$(git describe --tags --exclude x-*)"
+        echo "This will be $GIT_DESCRIBE"
+        echo "version=$GIT_DESCRIBE" >> "$GITHUB_OUTPUT"
+        cmake --build build --config ${{ inputs.build_type }}
+
+    - name: Package
+      id: package
+      shell: bash
+      working-directory: build
+      run: |
+        mkdir package
+        7z a package/licenses.zip ../docs/licenses/*
+
+        echo "name=${{ runner.os }}-${{ runner.arch }}"-UZDoom-"${{ steps.build.outputs.version }}" >> "$GITHUB_OUTPUT"
+
+    - name: Package Windows
+      if: runner.os == 'Windows'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+      run: |
+        if [[ -f oalsoft.zip ]]; then
+          unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
+        fi
+        if [[ -f sndfile.zip ]]; then
+          unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
+        fi
+
+        mkdir package/soundfonts
+        cp ../soundfont/uzdoom.sf2 package/soundfonts
+
+        mkdir package/fm_banks
+        cp ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
+
+        if [[ -d ${{ inputs.build_type }} ]]; then
+          mv ${{ inputs.build_type }}/* .
+        fi
+
+        cp uzdoom.* *.pk3 package
+
+        cd package
+        7z a -sdel -r "${NAME}.zip" *
+        cd ..
+
+    - name: Package macOS
+      if: runner.os == 'macOS'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+      run: |
+        if [[ ! -d uzdoom.app ]] && [[ -d ${{ inputs.build_type }}/uzdoom.app ]]; then
+          mv ${{ inputs.build_type }}/uzdoom.app uzdoom.app
+        fi
+
+        app=UZDoom.app
+        mv uzdoom.app ${app}
+        mv package/licenses.zip ${app}/Contents/Resources
+
+        if dsymutil ${app}/Contents/MacOS/uzdoom; then
+          mv ${app}/Contents/MacOS/uzdoom.dSYM ${app}/Contents/Resources/
+        fi
+
+        SIGN_ID="-"
+        SIGN_OPTS=""
+
+        if [[ -n "${{ secrets.MACOS_CERTIFICATE }}" ]]; then
+          echo "${{ secrets.MACOS_CERTIFICATE }}" | base64 --decode > certificate.p12
+          security create-keychain -p "" build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p "" build.keychain
+          security import certificate.p12 -k build.keychain -P "${{ secrets.MACOS_CERTIFICATE_PASSWORD }}" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
+
+          SIGN_ID="${{ secrets.MACOS_CERTIFICATE_ID }}"
+          SIGN_OPTS="--options=runtime"
+        fi
+
+        mkdir -p ${app}/Contents/Frameworks
+        cp $(brew --prefix molten-vk)/lib/libMoltenVK.dylib ${app}/Contents/Frameworks/
+        dylibbundler -ns -of -cd -b \
+          -x ./${app}/Contents/MacOS/uzdoom \
+          -d ./${app}/Contents/Frameworks \
+          -p @executable_path/../Frameworks/
+
+        xattr -cr ${app}
+
+        find ${app}/Contents/Frameworks -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
+          codesign --remove-signature "$file"
+          codesign --force $SIGN_OPTS -s "$SIGN_ID" "$file"
+        done
+
+        /usr/bin/codesign --force --deep $SIGN_OPTS -s "$SIGN_ID" ${app} -v
+
+        $(brew --prefix python)/bin/python3 -m venv venv
+        source venv/bin/activate
+        pip install dmgbuild
+        dmgbuild -s ../tools/dmgbuild-settings.py -D app=${app} "UZDoom" UZDoom.dmg
+        mv UZDoom.dmg package
+
+        cd ..
+
+    - name: Package Linux
+      if: runner.os == 'Linux'
+      shell: bash
+      working-directory: build
+      env:
+        NAME: ${{ steps.package.outputs.name }}
+        GIT_DESCRIBE: ${{ steps.build.outputs.version }}
+      run: |
+        ldd ./uzdoom
+
+        if [[ $(uname -m) != "x86_64" ]]; then
+          mv uzdoom *.pk3 package
+        else
+          mkdir AppDir
+
+          cmake --install . --prefix "$(realpath AppDir)/usr"
+
+          chmod +x appimage-builder
+          ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
+          mv *.AppImage "package/${NAME}.AppImage"
+
+          rm package/licenses.zip
+        fi
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v7
+      with:
+        path: build/package
+        name: ${{ inputs.name }} ${{ inputs.build_type }}
+
+    - name: List
+      if: always()
+      shell: bash
+      run: |
+        git status
+        tree -pu build || true
+

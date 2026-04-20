@@ -1,6 +1,32 @@
+/*
+** vmops.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2009-2016 Marisa Heit
+** Copyright 2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef xx
 #define xx(op, name, mode, alt, kreg, ktype) OP_##op,
 #endif
+
+// clang-format off
 
 // first row is the opcode
 // second row is the disassembly name
@@ -294,3 +320,5 @@ xx(EQA_K,		beq,	CPRK,		EQA_R,	4, REGT_POINTER)
 xx(NULLCHECK, nullcheck, RP,	NOP, 0, 0) // EmitNullPointerThrow(pA)
 
 #undef xx
+
+// clang-format on

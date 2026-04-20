@@ -1,3 +1,25 @@
+/*
+** hw_postprocess_cvars.h
+**
+** Postprocessing framework
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016-2020 Magnus Norddahl
+**
+** SPDX-License-Identifier: Zlib
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 #include "c_cvars.h"
@@ -47,8 +69,8 @@ EXTERN_CVAR(Float, gl_ssao_exponent)
 EXTERN_CVAR(Float, gl_paltonemap_powtable)
 EXTERN_CVAR(Bool, gl_paltonemap_reverselookup)
 EXTERN_CVAR(Float, gl_menu_blur)
-EXTERN_CVAR(Float, vid_brightness)
 EXTERN_CVAR(Float, vid_contrast)
 EXTERN_CVAR(Float, vid_saturation)
+EXTERN_CVAR(Float, vid_i_blackpoint)
+EXTERN_CVAR(Float, vid_i_whitepoint)
 EXTERN_CVAR(Int, gl_satformula)
-

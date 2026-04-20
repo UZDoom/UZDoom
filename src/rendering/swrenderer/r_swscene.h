@@ -1,4 +1,20 @@
-#pragma once
+/*
+** r_swscene.h
+**
+** render the software scene through the hardware rendering backend
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2004-2018 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 #include "r_defs.h"

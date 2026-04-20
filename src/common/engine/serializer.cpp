@@ -1,33 +1,23 @@
 /*
 ** serializer.cpp
+**
 ** Savegame wrapper around RapidJSON
 **
 **---------------------------------------------------------------------------
+**
+** Copyright 2009-2016 Marisa Heit
 ** Copyright 2016 Christoph Oelckers
-** All rights reserved.
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -61,7 +51,6 @@
 using namespace FileSys;
 
 extern DObject *WP_NOCHANGE;
-bool save_full = false;	// for testing. Should be removed afterward.
 
 #include "serializer_internal.h"
 
@@ -124,12 +113,26 @@ const char *UnicodeToString(const char *cc)
 //
 //==========================================================================
 
-bool FSerializer::OpenWriter(bool pretty)
+bool FSerializer::OpenWriter(bool pretty, bool predicting)
 {
 	if (w != nullptr || r != nullptr) return false;
 
+	bPredictionBackup = predicting;
 	mErrors = 0;
 	w = new FWriter(pretty);
+	BeginObject(nullptr);
+	return true;
+}
+
+bool FSerializer::OpenWriter(FWriterBuffer buffer, bool pretty, bool predicting)
+{
+	if (w != nullptr || r != nullptr) return false;
+
+	bPredictionBackup = predicting;
+	mErrors = 0;
+	w = new FWriter(pretty);
+	buffer.buffer.Clear();
+	w->mOutString = std::move(buffer.buffer);
 	BeginObject(nullptr);
 	return true;
 }
@@ -140,12 +143,24 @@ bool FSerializer::OpenWriter(bool pretty)
 //
 //==========================================================================
 
-bool FSerializer::OpenReader(const char *buffer, size_t length)
+bool FSerializer::OpenReader(const char *buffer, size_t length, bool predicting)
 {
 	if (w != nullptr || r != nullptr) return false;
 
+	bPredictionBackup = predicting;
 	mErrors = 0;
 	r = new FReader(buffer, length);
+	return true;
+}
+
+bool FSerializer::OpenReader(FReaderAllocator allocator, const char *buffer, size_t length, bool predicting)
+{
+	if (w != nullptr || r != nullptr) return false;
+
+	bPredictionBackup = predicting;
+	mErrors = 0;
+	allocator.buffer.Clear();
+	r = new FReader(allocator, buffer, length);
 	return true;
 }
 
@@ -155,11 +170,12 @@ bool FSerializer::OpenReader(const char *buffer, size_t length)
 //
 //==========================================================================
 
-bool FSerializer::OpenReader(FCompressedBuffer *input)
+bool FSerializer::OpenReader(FCompressedBuffer *input, bool predicting)
 {
 	if (input->mSize <= 0 || input->mBuffer == nullptr) return false;
 	if (w != nullptr || r != nullptr) return false;
 
+	bPredictionBackup = predicting;
 	mErrors = 0;
 	if (input->mMethod == METHOD_STORED)
 	{
@@ -174,11 +190,11 @@ bool FSerializer::OpenReader(FCompressedBuffer *input)
 	return true;
 }
 
-//==========================================================================
-//
-//
-//
-//==========================================================================
+FWriterBuffer FSerializer::CloseAndGetBuffer() {
+	auto ret = w->MoveBufferOut();
+	Close();
+	return ret;
+}
 
 void FSerializer::Close()
 {	
@@ -230,7 +246,35 @@ unsigned FSerializer::ArraySize()
 
 bool FSerializer::canSkip() const
 {
-	return isWriting() && w->inObject();
+	return !IsRollback() && isWriting() && w->inObject();
+}
+
+//==========================================================================
+//
+//
+//
+//==========================================================================
+
+bool FSerializer::canWrite(DObject* obj) const
+{
+	return (!IsRollback() && !(obj->ObjectFlags & OF_Transient))
+			|| (IsRollback() && !(obj->ObjectFlags & OF_NoRollback));
+}
+
+//==========================================================================
+//
+//
+//
+//==========================================================================
+
+bool FSerializer::MarkRollbackObject(DObject* obj)
+{
+	if (!isWriting() || !IsRollback() || obj == nullptr || (obj->ObjectFlags & OF_EuthanizeMe) || !canWrite(obj))
+		return false;
+	// This case should also return true in case something from earlier has already marked it.
+	if (w->mObjectMap.CheckKey(obj) == nullptr)
+		w->mObjectMap[obj] = w->mDObjects.Push(obj);
+	return true;
 }
 
 //==========================================================================
@@ -497,7 +541,7 @@ FSerializer &FSerializer::Sprite(const char *key, int32_t &spritenum, int32_t *d
 {
 	if (isWriting())
 	{
-		if (w->inObject() && def != nullptr && *def == spritenum) return *this;
+		if (canSkip() && def != nullptr && *def == spritenum) return *this;
 		WriteKey(key);
 		w->Int(spritenum);
 	}
@@ -569,7 +613,7 @@ FSerializer &FSerializer::AddString(const char *key, const char *charptr)
 	if (isWriting())
 	{
 		WriteKey(key);
-		w->StringU(MakeUTF8(charptr), false);
+		w->StringU<false>(MakeUTF8(charptr));
 	}
 	return *this;
 }
@@ -635,6 +679,41 @@ const char *FSerializer::GetKey()
 //
 //==========================================================================
 
+void FSerializer::WriteObjectsTo(TArray<TObjPtr<DObject*>>& to, TArray<DObject*>* fullSerialize)
+{
+	if (isWriting() && w->mDObjects.Size())
+	{
+		BeginArray("objects");
+		// we cannot use the C++11 shorthand syntax here because the array may grow while being processed.
+		for (unsigned i = 0u; i < w->mDObjects.Size(); ++i)
+		{
+			// Don't check writeability here since NoRollback objects need to be preserved if stored
+			// in a field that doesn't have the same flag.
+			const unsigned r = to.Push(MakeObjPtr<DObject*>(w->mDObjects[i]));
+			if (fullSerialize == nullptr)
+				continue;
+
+			// Make sure to only serialize Objects that are actually backed up. Everything else is just to
+			// correctly map out the pointers.
+			auto obj = w->mDObjects[i];
+			if (fullSerialize->Find(obj) >= fullSerialize->Size())
+				continue;
+
+			BeginObject(nullptr);
+			w->Key("classtype");
+			w->String(obj->GetClass()->TypeName.GetChars());
+			w->Key("rollbackindex");
+			w->Uint64(r);
+
+			obj->SerializeUserVars(*this);
+			obj->Serialize(*this);
+			obj->CheckIfSerialized();
+			EndObject();
+		}
+		EndArray();
+	}
+}
+
 void FSerializer::WriteObjects()
 {
 	if (isWriting() && w->mDObjects.Size())
@@ -645,7 +724,7 @@ void FSerializer::WriteObjects()
 		{
 			auto obj = w->mDObjects[i];
 
-			if(obj->ObjectFlags & OF_Transient) continue;
+			if(!canWrite(obj)) continue;
 
 			BeginObject(nullptr);
 			w->Key("classtype");
@@ -662,9 +741,101 @@ void FSerializer::WriteObjects()
 
 //==========================================================================
 //
-// Writes out all collected objects
+// Reads in data to recreate all Objects
 //
 //==========================================================================
+
+void FSerializer::ReadObjectsFrom(TArray<TObjPtr<DObject*>>& from)
+{
+	bool hadErrors = false;
+	if (isReading() && BeginArray("objects"))
+	{
+		try
+		{
+			r->mDObjects.Resize(from.Size());
+			for (unsigned i = 0u; i < from.Size(); ++i)
+				r->mDObjects[i] = from[i];
+
+			// First iteration: create all the objects but do nothing with them yet.
+			while (BeginObject(nullptr))
+			{
+				FString clsname;	// do not deserialize the class type directly so that we can print appropriate errors.
+				Serialize(*this, "classtype", clsname, nullptr);
+				unsigned i = 0u;
+				Serialize(*this, "rollbackindex", i, nullptr);
+				if (r->mDObjects[i] == nullptr)
+				{
+					PClass* cls = PClass::FindClass(clsname);
+					if (cls == nullptr)
+					{
+						Printf(TEXTCOLOR_RED "Unknown object class '%s' in rollback\n", clsname.GetChars());
+						hadErrors = true;
+						r->mDObjects[i] = RUNTIME_CLASS(DObject)->CreateNew();	// make sure we got at least a valid pointer for the duration of the loading process.
+						r->mDObjects[i]->Destroy();								// but we do not want to keep this around, so destroy it right away.
+					}
+					else
+					{
+						r->mDObjects[i] = cls->CreateNew();
+					}
+				}
+				EndObject();
+			}
+
+			// Now that everything has been created and we can retrieve the pointers we can deserialize it.
+			r->mObjectsRead = true;
+			if (!hadErrors)
+			{
+				// Reset to start;
+				unsigned size = r->mObjects.Size();
+				r->mObjects.Last().mIndex = 0;
+				while (BeginObject(nullptr))
+				{
+					FString clsname;	// do not deserialize the class type directly so that we can print appropriate errors.
+					Serialize(*this, "classtype", clsname, nullptr);
+					unsigned i = 0u;
+					Serialize(*this, "rollbackindex", i, nullptr);
+					auto obj = r->mDObjects[i];
+					if (obj != nullptr)
+					{
+						try
+						{
+							obj->SerializeUserVars(*this);
+							obj->Serialize(*this);
+						}
+						catch (CRecoverableError &err)
+						{
+							r->mObjects.Clamp(size);	// close all inner objects.
+							// In case something in here throws an error, let's continue and deal with it later.
+							Printf(static_cast<PrintFlag>(PRINT_NONOTIFY|PRINT_BOLD), TEXTCOLOR_RED "'%s'\n while restoring %s\n", err.GetMessage(), obj != nullptr ? obj->GetClass()->TypeName.GetChars() : "invalid object");
+							++mErrors;
+						}
+					}
+					EndObject();
+				}
+			}
+			EndArray();
+
+			if (hadErrors)
+			{
+				Printf(TEXTCOLOR_RED "Failed to restore all objects in rollback\n");
+				++mErrors;
+				++mObjectErrors;
+			}
+		}
+		catch(...)
+		{
+			// nuke all objects we created here.
+			for (auto obj : r->mDObjects)
+			{
+				if (obj != nullptr && !(obj->ObjectFlags & OF_EuthanizeMe))
+					obj->Destroy();
+			}
+			r->mDObjects.Clear();
+			// make sure this flag gets unset, even if something in here throws an error.
+			throw;
+		}
+	}
+}
 
 void FSerializer::ReadObjects(bool hubtravel)
 {
@@ -729,7 +900,7 @@ void FSerializer::ReadObjects(bool hubtravel)
 							{
 								r->mObjects.Clamp(size);	// close all inner objects.
 								// In case something in here throws an error, let's continue and deal with it later.
-								Printf(PRINT_NONOTIFY | PRINT_BOLD, TEXTCOLOR_RED "'%s'\n while restoring %s\n", err.GetMessage(), obj ? obj->GetClass()->TypeName.GetChars() : "invalid object");
+								Printf(static_cast<PrintFlag>(PRINT_NONOTIFY|PRINT_BOLD), TEXTCOLOR_RED "'%s'\n while restoring %s\n", err.GetMessage(), obj ? obj->GetClass()->TypeName.GetChars() : "invalid object");
 								mErrors++;
 							}
 						}
@@ -767,10 +938,13 @@ void FSerializer::ReadObjects(bool hubtravel)
 //
 //==========================================================================
 
-const char *FSerializer::GetOutput(unsigned *len)
+const char *FSerializer::GetOutput(unsigned *len, TArray<TObjPtr<DObject*>>* objs, TArray<DObject*>* fullSerialize)
 {
 	if (isReading()) return nullptr;
-	WriteObjects();
+	if (objs != nullptr)
+		WriteObjectsTo(*objs, fullSerialize);
+	else
+		WriteObjects();
 	EndObject();
 	if (len != nullptr)
 	{
@@ -785,11 +959,14 @@ const char *FSerializer::GetOutput(unsigned *len)
 //
 //==========================================================================
 
-FCompressedBuffer FSerializer::GetCompressedOutput()
+FCompressedBuffer FSerializer::GetCompressedOutput(TArray<TObjPtr<DObject*>>* objs, TArray<DObject*>* fullSerialize)
 {
 	if (isReading()) return{ 0,0,0,0,0,nullptr };
 	FCompressedBuffer buff;
-	WriteObjects();
+	if (objs != nullptr)
+		WriteObjectsTo(*objs, fullSerialize);
+	else
+		WriteObjects();
 	EndObject();
 	buff.filename = nullptr;
 	buff.mSize = (unsigned)w->mOutString.GetSize();
@@ -875,7 +1052,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, bool &value, bool *def
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
 			arc.w->Bool(value);
@@ -911,7 +1088,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, int64_t &value, int64_
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
 			arc.w->Int64(value);
@@ -947,7 +1124,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, uint64_t &value, uint6
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
 			arc.w->Uint64(value);
@@ -984,7 +1161,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, int32_t &value, int32_
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
 			arc.w->Int(value);
@@ -1020,7 +1197,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, uint32_t &value, uint3
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
 			arc.w->Uint(value);
@@ -1109,7 +1286,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, double &value, double 
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
 			arc.w->Double(value);
@@ -1160,41 +1337,46 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FTextureID &value, FTe
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
-			if (!value.Exists())
-			{
+			if (arc.IsRollback()) {
 				arc.WriteKey(key);
-				arc.w->Null();
-				return arc;
-			}
-			if (value.isNull())
-			{
-				// save 'no texture' in a more space saving way
-				arc.WriteKey(key);
-				arc.w->Int(0);
-				return arc;
-			}
-			FTextureID chk = value;
-			if (chk.GetIndex() >= TexMan.NumTextures()) chk.SetNull();
-			auto pic = TexMan.GetGameTexture(chk);
-			const char *name;
-			auto lump = pic->GetSourceLump();
+				arc.w->Uint64(value.GetIndex());
+			} else {
+				if (!value.Exists())
+				{
+					arc.WriteKey(key);
+					arc.w->Null();
+					return arc;
+				}
+				if (value.isNull())
+				{
+					// save 'no texture' in a more space saving way
+					arc.WriteKey(key);
+					arc.w->Int(0);
+					return arc;
+				}
+				FTextureID chk = value;
+				if (chk.GetIndex() >= TexMan.NumTextures()) chk.SetNull();
+				auto pic = TexMan.GetGameTexture(chk);
+				const char *name;
+				auto lump = pic->GetSourceLump();
 
-			if (TexMan.GetLinkedTexture(lump) == pic)
-			{
-				name = fileSystem.GetFileFullName(lump);
+				if (TexMan.GetLinkedTexture(lump) == pic)
+				{
+					name = fileSystem.GetFileFullName(lump);
+				}
+				else
+				{
+					name = pic->GetName().GetChars();
+				}
+				arc.WriteKey(key);
+				arc.w->StartArray();
+				arc.w->String(name);
+				int ut = static_cast<int>(pic->GetUseType());
+				arc.w->Int(ut);
+				arc.w->EndArray();
 			}
-			else
-			{
-				name = pic->GetName().GetChars();
-			}
-			arc.WriteKey(key);
-			arc.w->StartArray();
-			arc.w->String(name);
-			int ut = static_cast<int>(pic->GetUseType());
-			arc.w->Int(ut);
-			arc.w->EndArray();
 		}
 	}
 	else
@@ -1202,36 +1384,40 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FTextureID &value, FTe
 		auto val = arc.r->FindKey(key);
 		if (val != nullptr)
 		{
-			if (val->IsArray())
-			{
-				const rapidjson::Value &nameval = (*val)[0];
-				const rapidjson::Value &typeval = (*val)[1];
-				assert(nameval.IsString() && typeval.IsInt());
-				if (nameval.IsString() && typeval.IsInt())
+			if (arc.IsRollback()) {
+				value.SetIndex(val->GetUint64());
+			} else {
+				if (val->IsArray())
 				{
-					value = TexMan.GetTextureID(UnicodeToString(nameval.GetString()), static_cast<ETextureType>(typeval.GetInt()));
+					const rapidjson::Value &nameval = (*val)[0];
+					const rapidjson::Value &typeval = (*val)[1];
+					assert(nameval.IsString() && typeval.IsInt());
+					if (nameval.IsString() && typeval.IsInt())
+					{
+						value = TexMan.GetTextureID(UnicodeToString(nameval.GetString()), static_cast<ETextureType>(typeval.GetInt()));
+					}
+					else
+					{
+						Printf(TEXTCOLOR_RED "object does not represent a texture for '%s'\n", key);
+						value.SetNull();
+						arc.mErrors++;
+					}
+				}
+				else if (val->IsNull())
+				{
+					value.SetInvalid();
+				}
+				else if (val->IsInt() && val->GetInt() == 0)
+				{
+					value.SetNull();
 				}
 				else
 				{
+					assert(false && "not a texture");
 					Printf(TEXTCOLOR_RED "object does not represent a texture for '%s'\n", key);
 					value.SetNull();
 					arc.mErrors++;
 				}
-			}
-			else if (val->IsNull())
-			{
-				value.SetInvalid();
-			}
-			else if (val->IsInt() && val->GetInt() == 0)
-			{
-				value.SetNull();
-			}
-			else
-			{
-				assert(false && "not a texture");
-				Printf(TEXTCOLOR_RED "object does not represent a texture for '%s'\n", key);
-				value.SetNull();
-				arc.mErrors++;
 			}
 		}
 	}
@@ -1272,7 +1458,8 @@ FSerializer &Serialize(FSerializer &arc, const char *key, DObject *&value, DObje
 	if (retcode) *retcode = true;
 	if (arc.isWriting())
 	{
-		if (value != nullptr && !(value->ObjectFlags & (OF_EuthanizeMe | OF_Transient)))
+		if (value != nullptr && !(value->ObjectFlags & OF_EuthanizeMe)
+			&& (arc.IsRollback() || !(value->ObjectFlags & OF_Transient))) // If we're rolling back, something always needs to be written.
 		{
 			int ndx;
 			if (value == WP_NOCHANGE)
@@ -1293,6 +1480,11 @@ FSerializer &Serialize(FSerializer &arc, const char *key, DObject *&value, DObje
 				}
 			}
 			Serialize(arc, key, ndx, nullptr);
+		}
+		else if (arc.w->inObject() && arc.IsRollback())
+		{
+			arc.w->Key(key);
+			arc.w->Null();
 		}
 		else if (!arc.w->inObject())
 		{
@@ -1363,10 +1555,11 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FName &value, FName *d
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
-			arc.w->String(value.GetChars());
+			if (arc.IsRollback()) { arc.w->Uint64(value.GetIndex()); }
+			else { arc.w->String(value.GetChars()); }
 		}
 	}
 	else
@@ -1374,16 +1567,20 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FName &value, FName *d
 		auto val = arc.r->FindKey(key);
 		if (val != nullptr)
 		{
-			assert(val->IsString());
-			if (val->IsString())
-			{
-				value = UnicodeToString(val->GetString());
-			}
-			else
-			{
-				Printf(TEXTCOLOR_RED "String expected for '%s'\n", key);
-				arc.mErrors++;
-				value = NAME_None;
+			if (arc.IsRollback()) {
+				value = FName(ENamedName(val->GetInt64()));
+			} else {
+				assert(val->IsString());
+				if (val->IsString())
+				{
+					value = UnicodeToString(val->GetString());
+				}
+				else
+				{
+					Printf(TEXTCOLOR_RED "String expected for '%s'\n", key);
+					arc.mErrors++;
+					value = NAME_None;
+				}
 			}
 		}
 	}
@@ -1407,12 +1604,16 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FSoundID &sid, FSoundI
 	}
 	else if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || sid != *def)
+		if (!arc.canSkip() || def == nullptr || sid != *def)
 		{
 			arc.WriteKey(key);
-			const char *sn = soundEngine->GetSoundName(sid);
-			if (sn != nullptr) arc.w->String(sn);
-			else arc.w->Null();
+			if (arc.IsRollback()) {
+				arc.w->Uint64(sid.index());
+			} else {
+				const char *sn = soundEngine->GetSoundName(sid);
+				if (sn != nullptr) arc.w->String(sn);
+				else arc.w->Null();
+			}
 		}
 	}
 	else
@@ -1420,20 +1621,24 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FSoundID &sid, FSoundI
 		auto val = arc.r->FindKey(key);
 		if (val != nullptr)
 		{
-			assert(val->IsString() || val->IsNull());
-			if (val->IsString())
-			{
-				sid = S_FindSound(UnicodeToString(val->GetString()));
-			}
-			else if (val->IsNull())
-			{
-				sid = NO_SOUND;
-			}
-			else
-			{
-				Printf(TEXTCOLOR_RED "string type expected for '%s'\n", key);
-				sid = NO_SOUND;
-				arc.mErrors++;
+			if (arc.IsRollback()) {
+				sid = FSoundID::fromInt(val->GetInt64());
+			} else {
+				assert(val->IsString() || val->IsNull());
+				if (val->IsString())
+				{
+					sid = S_FindSound(UnicodeToString(val->GetString()));
+				}
+				else if (val->IsNull())
+				{
+					sid = NO_SOUND;
+				}
+				else
+				{
+					Printf(TEXTCOLOR_RED "string type expected for '%s'\n", key);
+					sid = NO_SOUND;
+					arc.mErrors++;
+				}
 			}
 		}
 	}
@@ -1451,7 +1656,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, PClass *&cl
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || clst != *def)
+		if (!arc.canSkip() || def == nullptr || clst != *def)
 		{
 			arc.WriteKey(key);
 			if (clst == nullptr)
@@ -1499,7 +1704,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FString &pstr, FString
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || def == nullptr || pstr.Compare(*def) != 0)
+		if (!arc.canSkip() || def == nullptr || pstr.Compare(*def) != 0)
 		{
 			arc.WriteKey(key);
 			arc.w->String(pstr.GetChars());
@@ -1673,7 +1878,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, NumericValue &value, N
 {
 	if (arc.isWriting())
 	{
-		if (!arc.w->inObject() || defval == nullptr || value != *defval)
+		if (!arc.canSkip() || defval == nullptr || value != *defval)
 		{
 			arc.WriteKey(key);
 			switch (value.type)

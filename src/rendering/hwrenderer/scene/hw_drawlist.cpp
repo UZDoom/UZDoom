@@ -1,43 +1,31 @@
-// 
-//---------------------------------------------------------------------------
-//
-// Copyright(C) 2002-2016 Christoph Oelckers
-// All rights reserved.
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//--------------------------------------------------------------------------
-//
 /*
 ** hw_drawlist.cpp
+**
 ** The main container type for draw items.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
 **
 */
 
+#include "actor.h"
+#include "flatvertices.h"
+#include "g_levellocals.h"
+#include "hw_clock.h"
+#include "hw_drawinfo.h"
+#include "hw_renderstate.h"
+#include "hw_walldispatcher.h"
+#include "hwrenderer/scene/hw_drawlist.h"
+#include "hwrenderer/scene/hw_drawstructs.h"
 #include "r_sky.h"
 #include "r_utility.h"
-#include "doomstat.h"
-#include "actor.h"
-#include "g_levellocals.h"
-#include "hwrenderer/scene/hw_drawstructs.h"
-#include "hwrenderer/scene/hw_drawlist.h"
-#include "flatvertices.h"
-#include "hw_clock.h"
-#include "hw_renderstate.h"
-#include "hw_drawinfo.h"
-#include "hw_fakeflat.h"
-#include "hw_walldispatcher.h"
 
 FMemArena RenderDataAllocator(1024*1024);	// Use large blocks to reduce allocation time.
 
@@ -619,7 +607,7 @@ SortNode * HWDrawList::SortSpriteList(SortNode * head)
 
 	sortspritelist.Clear();
 	for(count=0,n=head;n;n=n->next) sortspritelist.Push(n);
-	std::stable_sort(sortspritelist.begin(), sortspritelist.end(), [=](SortNode *a, SortNode *b)
+	std::stable_sort(sortspritelist.begin(), sortspritelist.end(), [this](SortNode *a, SortNode *b)
 	{
 		return CompareSprites(a, b) < 0;
 	});
@@ -729,7 +717,7 @@ void HWDrawList::SortWalls()
 {
 	if (drawitems.Size() > 1)
 	{
-		std::sort(drawitems.begin(), drawitems.end(), [=](const HWDrawItem &a, const HWDrawItem &b) -> bool
+		std::sort(drawitems.begin(), drawitems.end(), [this](const HWDrawItem &a, const HWDrawItem &b) -> bool
 		{
 			HWWall * w1 = walls[a.index];
 			HWWall * w2 = walls[b.index];
@@ -745,7 +733,7 @@ void HWDrawList::SortFlats()
 {
 	if (drawitems.Size() > 1)
 	{
-		std::sort(drawitems.begin(), drawitems.end(), [=](const HWDrawItem &a, const HWDrawItem &b)
+		std::sort(drawitems.begin(), drawitems.end(), [this](const HWDrawItem &a, const HWDrawItem &b)
 		{
 			HWFlat * w1 = flats[a.index];
 			HWFlat* w2 = flats[b.index];

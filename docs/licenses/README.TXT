@@ -25,5 +25,5 @@ otherwise.
 
 Please note that the content of brightmaps.pk3, game_support.pk3 and game_widescreen_gfx.pk3
 is based on copyrighted game content and subject to some restrictions.
-Please see the license notes in the respective files/subfolders.
-
+Please see the license notes in the respective files/subfolders. Perform
+the build with -DBUILD_NONFREE=no to omit the copyrighted content.

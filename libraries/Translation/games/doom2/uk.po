@@ -1,0 +1,70 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-30 21:19+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
+"doom-engine-games/doom-2/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "TXT_D2E1"
+msgstr "Пекло на Землі"
+
+msgid "TXT_D2E2"
+msgstr "Живим спокою не буде"
+
+msgid "HUSTR_1"
+msgstr "Рівень 1: Вхід"
+
+msgid "HUSTR_2"
+msgstr "Рівень 2: Підземні холи"
+
+msgid "HUSTR_3"
+msgstr "Рівень 3: Прорив"
+
+msgid "HUSTR_4"
+msgstr "Рівень 4: Фокусування"
+
+msgid "HUSTR_5"
+msgstr "Рівень 5: Тунелі для відходів"
+
+msgid "HUSTR_6"
+msgstr "Рівень 6: Прес"
+
+msgid "HUSTR_7"
+msgstr "Рівень 7: До смерті просто"
+
+msgid "HUSTR_8"
+msgstr "Рівень 8: Хитрощі та пастки"
+
+msgid "HUSTR_9"
+msgstr "Рівень 9: Яма"
+
+msgid "HUSTR_10"
+msgstr "Рівень 10: База дозаправки"
+
+msgid "HUSTR_11"
+msgstr "Рівень 11: 'O' руйнування!"
+
+msgid "HUSTR_12"
+msgstr "Рівень 12: Фабрика"
+
+msgid "HUSTR_13"
+msgstr "Рівень 13: Середмістя"
+
+msgid "HUSTR_14"
+msgstr "Рівень 14: Лігва в глибочіні"
+
+msgid "HUSTR_15"
+msgstr "Рівень 15: Промислова зона"
+
+msgid "HUSTR_16"
+msgstr "Рівень 16: Передмістя"

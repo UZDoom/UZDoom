@@ -1,38 +1,28 @@
 /*
 ** dthinker.cpp
+**
 ** Implements the base class for almost anything in a level that might think
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
 #include "dthinker.h"
+#include "printf.h"
 #include "stats.h"
 #include "p_local.h"
 #include "serializer_doom.h"
@@ -45,6 +35,7 @@
 #include "v_video.h"
 #include "g_cvars.h"
 #include "d_main.h"
+#include "r_utility.h"
 
 #include "p_visualthinker.h"
 
@@ -110,37 +101,6 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 
 	ThinkCycles.Clock();
 
-	bool dolights;
-	if ((gl_lights && vid_rendermode == 4) || (r_dynlights && vid_rendermode != 4))
-	{
-		dolights = true;// Level->lights || (Level->flags3 & LEVEL3_LIGHTCREATED);
-	}
-	else
-	{
-		dolights = false;
-	}
-	Level->flags3 &= ~LEVEL3_LIGHTCREATED;
-
-
-	auto recreateLights = [=]() {
-		auto it = Level->GetThinkerIterator<AActor>();
-
-		// Set dynamic lights at the end of the tick, so that this catches all changes being made through the last frame.
-		while (auto ac = it.Next())
-		{
-			if (ac->flags8 & MF8_RECREATELIGHTS)
-			{
-				ac->flags8 &= ~MF8_RECREATELIGHTS;
-				if (dolights) ac->SetDynamicLights();
-			}
-			// This was merged from P_RunEffects to eliminate the costly duplicate ThinkerIterator loop.
-			if ((ac->effects || ac->fountaincolor) && ac->ShouldRenderLocally() && !Level->isFrozen())
-			{
-				P_RunEffect(ac, ac->effects);
-			}
-		}
-	};
-
 	if (!profilethinkers)
 	{
 		// Tick every thinker left from last time
@@ -158,17 +118,6 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 				count += FreshThinkers[i].TickThinkers(&Thinkers[i]);
 			}
 		} while (count != 0);
-
-		recreateLights();
-		if (dolights)
-		{
-			for (auto light = Level->lights; light;)
-			{
-				auto next = light->next;
-				light->Tick();
-				light = next;
-			}
-		}
 	}
 	else
 	{
@@ -188,23 +137,6 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 				count += FreshThinkers[i].ProfileThinkers(&Thinkers[i]);
 			}
 		} while (count != 0);
-
-		recreateLights();
-		if (dolights)
-		{
-			// Also profile the internal dynamic lights, even though they are not implemented as thinkers.
-			auto &prof = Profiles[NAME_InternalDynamicLight];
-			prof.timer.Clock();
-			for (auto light = Level->lights; light;)
-			{
-				prof.numcalls++;
-				auto next = light->next;
-				light->Tick();
-				light = next;
-			}
-			prof.timer.Unclock();
-		}
-
 
 		struct SortedProfileInfo
 		{
@@ -275,6 +207,21 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 //
 //==========================================================================
 
+static void RecreateDynamicLights(AActor* mobj, bool dolights, bool frozen)
+{
+	if (mobj->flags8 & MF8_RECREATELIGHTS)
+	{
+		mobj->flags8 &= ~MF8_RECREATELIGHTS;
+		if (dolights)
+			mobj->SetDynamicLights();
+	}
+	// This was merged from P_RunEffects to eliminate the costly duplicate ThinkerIterator loop.
+	if ((mobj->effects || mobj->fountaincolor) && mobj->ShouldRenderLocally() && !frozen)
+	{
+		P_RunEffect(mobj, mobj->effects);
+	}
+}
+
 void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 {
 	int i, count;
@@ -289,42 +236,74 @@ void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 		dolights = false;
 	}
 
-	auto recreateLights = [=]() {
-		auto it = Level->GetClientSideThinkerIterator<AActor>();
+	const bool paused = WorldPaused(false);
+	Level->flags3 &= ~LEVEL3_LIGHTCREATED;
+	Level->LocalWorldTimer += !paused;
+	++Level->LocalTimer;
 
-		// Set dynamic lights at the end of the tick, so that this catches all changes being made through the last frame.
+	auto recreateLights = [=]() {
+		// Set dynamic lights at the end of the tick, so that this catches all changes being made through the last
+		// frame.
+		const bool frozen = Level->isFrozen();
+		auto it = Level->GetThinkerIterator<AActor>();
 		while (auto ac = it.Next())
 		{
-			if (ac->flags8 & MF8_RECREATELIGHTS)
-			{
-				ac->flags8 &= ~MF8_RECREATELIGHTS;
-				if (dolights) ac->SetDynamicLights();
-			}
-			// This was merged from P_RunEffects to eliminate the costly duplicate ThinkerIterator loop.
-			if ((ac->effects || ac->fountaincolor) && ac->ShouldRenderLocally() && !Level->isFrozen())
-			{
-				P_RunEffect(ac, ac->effects);
-			}
+			RecreateDynamicLights(ac, dolights, frozen);
+		}
+
+		it = Level->GetClientSideThinkerIterator<AActor>();
+		while (auto ac = it.Next())
+		{
+			RecreateDynamicLights(ac, dolights, frozen);
 		}
 	};
 
 	// Tick every thinker left from last time
-	for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+	if (!paused)
 	{
-		Thinkers[i].TickThinkers(nullptr);
-	}
-
-	// Keep ticking the fresh thinkers until there are no new ones.
-	do
-	{
-		count = 0;
 		for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
 		{
-			count += FreshThinkers[i].TickThinkers(&Thinkers[i]);
+			Thinkers[i].TickThinkers(nullptr);
 		}
-	} while (count != 0);
+
+		// Keep ticking the fresh thinkers until there are no new ones.
+		do
+		{
+			count = 0;
+			for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+			{
+				count += FreshThinkers[i].TickThinkers(&Thinkers[i]);
+			}
+		} while (count != 0);
+	}
 
 	recreateLights();
+	if (dolights && !paused)
+	{
+		/*if (profilethinkers)
+		{
+			// Also profile the internal dynamic lights, even though they are not implemented as thinkers.
+			auto &prof = Profiles[NAME_InternalDynamicLight];
+			prof.timer.Clock();
+			for (auto light = Level->lights; light;)
+			{
+				prof.numcalls++;
+				auto next = light->next;
+				light->Tick();
+				light = next;
+			}
+			prof.timer.Unclock();
+		}
+		else
+		{*/
+			for (auto light = Level->lights; light;)
+			{
+				auto next = light->next;
+				light->Tick();
+				light = next;
+			}
+		//}
+	}
 }
 
 //==========================================================================
@@ -630,7 +609,7 @@ bool FThinkerList::DoDestroyThinkers()
 			{
 				Printf("VM exception in DestroyThinkers:\n");
 				exception.MaybePrintMessage();
-				Printf(PRINT_NONOTIFY | PRINT_BOLD, "%s", exception.stacktrace.GetChars());
+				Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "%s", exception.stacktrace.GetChars());
 				// forcibly delete this. Cleanup may be incomplete, though.
 				node->ObjectFlags |= OF_YesReallyDelete;
 				delete node;
@@ -638,7 +617,7 @@ bool FThinkerList::DoDestroyThinkers()
 			}
 			catch (CRecoverableError &exception)
 			{
-				Printf(PRINT_NONOTIFY | PRINT_BOLD, "Error in DestroyThinkers: %s\n", exception.GetMessage());
+				Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "Error in DestroyThinkers: %s\n", exception.GetMessage());
 				// forcibly delete this. Cleanup may be incomplete, though.
 				node->ObjectFlags |= OF_YesReallyDelete;
 				delete node;

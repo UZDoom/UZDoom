@@ -1,3 +1,22 @@
+/*
+** a_pusher.h
+**
+** Initializes and implements BOOM linedef triggers for Wind/Current
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1998-1998 Chi Hoang, Lee Killough, Jim Flynn, Rand Phares, Ty Halderman
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 
 // phares 3/20/98: added new model of Pushers for push/pull effects

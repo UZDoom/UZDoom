@@ -1,33 +1,23 @@
 /*
 ** dobject.cpp
+**
 ** Implements the base class DObject, which most other classes derive from
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2010-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -219,7 +209,7 @@ CCMD (dumpclasses)
 
 void DObject::InPlaceConstructor (void *mem)
 {
-	new ((EInPlace *)mem) DObject;
+	new (mem) DObject;
 }
 
 DObject::DObject ()
@@ -332,13 +322,9 @@ void DObject::Destroy ()
 	GC::WriteBarrier(this);
 }
 
-// This will be here until prediction can be reworked.
-// TODO: Fix prediction by serializing instead of using this terrible memcpy method.
-bool bPredictionGuard = false;
-
 static void NativeDestroy(DObject* self)
 {
-	if (bPredictionGuard && !(self->ObjectFlags & OF_ClientSide) && ((self->ObjectFlags & OF_Networked) || self->IsKindOf(NAME_Thinker)))
+	if (NetworkEntityManager::IsPredicting() && !self->IsClientSide() && !self->IsPredicted())
 		DPrintf(DMSG_WARNING, TEXTCOLOR_RED "Destroyed non-client-side Object %s while predicting\n", self->GetClass()->TypeName.GetChars());
 	if (!(self->ObjectFlags & OF_EuthanizeMe))
 		self->Destroy();
@@ -647,10 +633,12 @@ void DObject::Serialize(FSerializer &arc)
 	SerializeFlag("networked", OF_Networked);
 	SerializeFlag("clientside", OF_ClientSide);
 	SerializeFlag("travelling", OF_Travelling);
+	SerializeFlag("transient", OF_Transient);	// This is needed for rollbacks.
+	SerializeFlag("norollback", OF_NoRollback);
 		
 	ObjectFlags |= OF_SerialSuccess;
 
-	if (arc.isReading() && (ObjectFlags & OF_Networked))
+	if (arc.isReading() && (ObjectFlags & OF_Networked) && !arc.IsRollback())
 	{
 		ClearNetworkID();
 		EnableNetworking(true);
@@ -742,7 +730,7 @@ void NetworkEntityManager::SetClientNetworkEntity(DObject* mo, const unsigned in
 
 void NetworkEntityManager::AddNetworkEntity(DObject* const ent)
 {
-	if (ent->IsNetworked() || ent->IsClientSide())
+	if (IsPredicting() || ent->IsNetworked() || ent->IsClientSide() || ent->IsPredicted())
 		return;
 
 	// Slot 0 is reserved for the world.
@@ -764,7 +752,7 @@ void NetworkEntityManager::AddNetworkEntity(DObject* const ent)
 
 void NetworkEntityManager::RemoveNetworkEntity(DObject* const ent)
 {
-	if (!ent->IsNetworked())
+	if (IsPredicting() || !ent->IsNetworked())
 		return;
 
 	const uint32_t id = ent->GetNetworkID();
@@ -784,6 +772,72 @@ DObject* NetworkEntityManager::GetNetworkEntity(const uint32_t id)
 		return nullptr;
 
 	return s_netEntities[id];
+}
+
+void NetworkEntityManager::AddPredictedEntity(DObject* ent)
+{
+	if (IsPredicting() && !ent->IsClientSide() && !ent->IsPredicted())
+		s_problemEntities.Push(ent);
+}
+
+void NetworkEntityManager::VerifyPredictedEntities()
+{
+	for (auto e : s_problemEntities)
+	{
+		if (e->ObjectFlags & (OF_EuthanizeMe | OF_Sentinel | OF_ClientSide))
+			continue;
+
+		DPrintf(DMSG_WARNING, TEXTCOLOR_RED "Spawned non-client-side Object %s while predicting\n", e->GetClass()->TypeName.GetChars());
+		e->SetPredicted(true);
+		s_predictedEntities.Push(e);
+	}
+
+	s_problemEntities.Clear();
+}
+
+void NetworkEntityManager::RemovePredictedEntity(DObject* ent)
+{
+	if (IsPredicting())
+	{
+		if (ent->IsPredicted())
+		{
+			ent->SetPredicted(false);
+			s_predictedEntities.Delete(s_predictedEntities.Find(ent));
+		}
+		else if (!ent->IsClientSide())
+		{
+			s_problemEntities.Delete(s_problemEntities.Find(ent));
+		}
+	}
+}
+
+void NetworkEntityManager::EnablePrediction()
+{
+	s_bClientPredicting = true;
+}
+
+void NetworkEntityManager::DisablePrediction()
+{
+	VerifyPredictedEntities();
+	while (s_predictedEntities.Size())
+	{
+		TArray<DObject*> ents = {};
+		ents.Swap(s_predictedEntities);
+		for (auto ent : ents)
+		{
+			if (!(ent->ObjectFlags & OF_EuthanizeMe))
+				ent->Destroy();
+		}
+
+		VerifyPredictedEntities();
+	}
+
+	s_bClientPredicting = false;
+}
+
+bool NetworkEntityManager::IsPredicting()
+{
+	return s_bClientPredicting;
 }
 
 //==========================================================================
@@ -818,6 +872,7 @@ void DObject::EnableNetworking(const bool enable)
 void DObject::RemoveFromNetwork()
 {
 	NetworkEntityManager::RemoveNetworkEntity(this);
+	NetworkEntityManager::RemovePredictedEntity(this);
 }
 
 static unsigned int GetNetworkID(DObject* const self)

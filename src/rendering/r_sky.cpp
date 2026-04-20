@@ -1,34 +1,26 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1994-1996 Raven Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//	Sky rendering. The DOOM sky is a texture map like any
-//	wall, wrapping around. 1024 columns equal 360 degrees.
-//	The default sky map is 256 columns and repeats 4 times
-//	on a 320 screen.
-//	
-//
-//-----------------------------------------------------------------------------
-
+/*
+** r_sky.cpp
+**
+** Sky rendering.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** The DOOM sky is a texture map like any
+** wall, wrapping around. 1024 columns equal 360 degrees.
+** The default sky map is 256 columns and repeats 4 times
+** on a 320 screen.
+*/
 
 // Needed for FRACUNIT.
 #include "m_fixed.h"
@@ -135,19 +127,22 @@ void R_InitSkyMap()
 //
 //==========================================================================
 
-void R_UpdateSky (uint64_t mstime)
+void R_UpdateSky(double ticFrac)
 {
-	double ms = (double)mstime * FRACUNIT;
 	for(auto Level : AllLevels())
 	{
+		double mstime = ((Level->LocalWorldTimer + ticFrac) * 1000.0) / TICRATE;
+		double ms     = mstime * FRACUNIT;
+
 		// Scroll the sky
 		Level->sky1pos = ms * Level->skyspeed1;
 		Level->sky2pos = ms * Level->skyspeed2;
 
 		// The hardware renderer uses a different value range and clamps it to a single rotation
-		Level->hw_sky1pos = (float)(fmod((double(mstime) * Level->skyspeed1), 1024.) * (90. / 256.));
-		Level->hw_sky2pos = (float)(fmod((double(mstime) * Level->skyspeed2), 1024.) * (90. / 256.));
-		Level->hw_skymistpos = (float)(fmod((double(mstime) * Level->skymistspeed), 1024.) * (90. / 256.));
+		Level->hw_sky1pos = (float)(fmod((mstime * Level->skyspeed1), 1024.) * (90. / 256.));
+		Level->hw_sky2pos = (float)(fmod((mstime * Level->skyspeed2), 1024.) * (90. / 256.));
+		Level->hw_skymistpos = (float)(fmod((mstime * Level->skymistspeed), 1024.) * (90. / 256.));
+		Level->hw_skymistyscale += ticFrac * (Level->skymistyscale - Level->hw_skymistyscale);
 	}
 }
 

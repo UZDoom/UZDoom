@@ -3,7 +3,7 @@
 ** Provides access to FluidSynth as a generic MIDI device.
 **
 **---------------------------------------------------------------------------
-** Copyright 2010 Randy Heit
+** Copyright 2010 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

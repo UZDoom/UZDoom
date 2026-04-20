@@ -1,32 +1,24 @@
-//-----------------------------------------------------------------------------
-//
-// Copyright 1993-1996 id Software
-// Copyright 1994-1996 Raven Software
-// Copyright 1999-2016 Randy Heit
-// Copyright 2002-2016 Christoph Oelckers
-// Copyright 2017-2025 GZDoom Maintainers and Contributors
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/
-//
-//-----------------------------------------------------------------------------
-//
-// DESCRIPTION:
-//		Rendering main loop and setup functions,
-//		 utility functions (BSP, geometry, trigonometry).
-//		See tables.c, too.
-//
-//-----------------------------------------------------------------------------
+/*
+** r_utility.cpp
+**
+** Rendering main loop and setup/utility functions
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 id Software
+** Copyright 1994-1996 Raven Software
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2002-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Rendering main loop and setup functions, utility functions
+** (BSP, geometry, trigonometry). See tables.c, too.
+*/
 
 // HEADER FILES ------------------------------------------------------------
 
@@ -35,6 +27,7 @@
 
 #include "a_sharedglobal.h"
 #include "actorinlines.h"
+#include "c_dispatch.h"
 #include "d_main.h"
 #include "d_net.h"
 #include "d_player.h"
@@ -59,6 +52,7 @@
 #include "v_draw.h"
 #include "v_video.h"
 #include "vm.h"
+#include "a_dynlight.h"
 
 const float MY_SQRT2    = float(1.41421356237309504880); // sqrt(2)
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
@@ -189,6 +183,12 @@ DAngle viewpitch;
 DEFINE_GLOBAL(LocalViewPitch);
 
 // CODE --------------------------------------------------------------------
+
+static bool UseChaseCam(const player_t& player)
+{
+	return gamestate == GS_LEVEL &&
+	       ((player.cheats & CF_CHASECAM) || (r_deathcamera && player.playerstate == PST_DEAD));
+}
 
 //==========================================================================
 //
@@ -321,19 +321,47 @@ double R_ClampVisibility(double vis)
 	return clamp(vis, -204.7, 204.7);	// (205 and larger do not work in 5:4 aspect ratio)
 }
 
-CUSTOM_CVAR(Float, r_visibility, 8.0f, CVAR_NOINITCALL)
+CUSTOM_CVAR(Float, r_visibility, 8.0f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
-	if (netgame && self != 8.0f)
-	{
-		Printf("Visibility cannot be changed in net games.\n");
-		self = 8.0f;
-	}
-	else
-	{
-		float clampValue = (float)R_ClampVisibility(self);
-		if (self != clampValue)
-			self = clampValue;
-	}
+	if (self < 0.0f)
+		self = 0.0f;
+	else if (self > 16.0f)
+		self = 16.0f;
+}
+
+//==========================================================================
+//
+// r_extralight
+//
+// Amount of sector lighting to add on top of existing sector light levels.
+// This is just an additional amount to add so that the existing lighting mode
+// is preserved.
+//
+//==========================================================================
+
+CUSTOM_CVAR(Int, r_extralight, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self < -64)
+		self = -64;
+	else if (self > 128)
+		self = 128;
+}
+
+CCMD (bumplight)
+{
+	int step = 16;
+	int min = -64 / step;
+	int max = 128 / step;
+
+	int g = r_extralight/step + 1;
+
+	if (g > max) g = min;
+
+	g *= step;
+
+	r_extralight = g;
+
+	Printf ("Lighting adjustment %d\n", g);
 }
 
 //==========================================================================
@@ -615,7 +643,7 @@ void R_InterpolateView(FRenderViewpoint& viewPoint, const player_t* const player
 
 	const DViewPosition* const vPos = iView->ViewActor->ViewPos;
 	if (vPos != nullptr && !(vPos->Flags & VPSF_ABSOLUTEPOS)
-		&& (player == nullptr || gamestate == GS_TITLELEVEL || (!(player->cheats & CF_CHASECAM) && (!r_deathcamera || !(iView->ViewActor->flags6 & MF6_KILLED)))))
+		&& (player == nullptr || !UseChaseCam(*player)))
 	{
 		DVector3 vOfs = {};
 		if (player == nullptr || !(player->cheats & CF_NOVIEWPOSINTERP))
@@ -884,7 +912,7 @@ static double QuakePower(double factor, double intensity, double offset)
 	}
 	else
 	{
-		randumb = pr_torchflicker.GenRand_Real2() * (intensity * 2) - intensity;
+		randumb = pr_torchflicker.RandomFloat() * (intensity * 2) - intensity;
 	}
 	return factor * (offset + randumb);
 }
@@ -1005,8 +1033,7 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		viewPoint.showviewer = false;
 		viewPoint.bForceNoViewer = matchPlayer;
 
-		if (player != nullptr && gamestate != GS_TITLELEVEL
-			&& ((player->cheats & CF_CHASECAM) || (r_deathcamera && (viewPoint.camera->flags6 & MF6_KILLED))))
+		if (player != nullptr && UseChaseCam(*player))
 		{
 			// The cam Actor should probably be visible in third person.
 			viewPoint.showviewer = true;
@@ -1095,6 +1122,17 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 	}
 
 	R_InterpolateView(viewPoint, player, viewPoint.TicFrac, iView);
+
+	// Update any spotlights to offset the camera's actual angle.
+	for (auto l : viewPoint.camera->AttachedLights)
+	{
+		if (l->IsSpot() && l->IsActive())
+		{
+			l->Yaw = viewPoint.Angles.Yaw;
+			if (!l->explicitpitch)
+				l->Pitch = viewPoint.Angles.Pitch;
+		}
+	}
 
 	viewPoint.SetViewAngle(viewWindow);
 

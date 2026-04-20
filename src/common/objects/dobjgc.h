@@ -1,3 +1,27 @@
+/*
+** dobjgc.h
+**
+** The garbage collector. Based largely on Lua's.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2008-2022 Marisa Heit
+** Copyright 2011-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #pragma once
 #include <stdint.h>
 #include "tarray.h"
@@ -29,6 +53,12 @@ enum EObjectFlags
 	OF_Networked		= 1 << 14,		// Object has a unique network identifier that makes it synchronizable between all clients.
 	OF_ClientSide		= 1 << 15,		// Object is owned by a specific client rather than the server
 	OF_Travelling		= 1 << 16,		// Object is currently moving from one level to another
+	OF_NoRollback		= 1 << 17,		// Object should not be backed up while predicting.
+	OF_Predicted		= 1 << 18,		// Server object that's being allowed to exist as a dummy for prediction on the client's end.
+	OF_Predicting		= 1 << 19,		// Server object owned by the client is currently predicting.
+
+	// List of flags that can be shared between Objects.
+	OF_TransferrableFlags = OF_Transient | OF_ClientSide | OF_NoRollback,
 };
 
 template<class T> class TObjPtr;

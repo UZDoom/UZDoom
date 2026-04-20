@@ -1,51 +1,37 @@
 /*
 ** dobjtype.cpp
+**
 ** Implements the type information class
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2016 Randy Heit
+**
+** Copyright 1998-2016 Marisa Heit
 ** Copyright 2005-2016 Christoph Oelckers
 ** Copyright 2017-2025 GZDoom Maintainers and Contributors
-** All rights reserved.
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+**---------------------------------------------------------------------------
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <limits>
-
-#include "dobject.h"
-#include "serializer.h"
 #include "autosegs.h"
-#include "v_text.h"
 #include "c_cvars.h"
-#include "vm.h"
+#include "dobject.h"
+#include "printf.h"
+#include "serializer.h"
 #include "symbols.h"
 #include "types.h"
+#include "vm.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -83,6 +69,24 @@ DEFINE_GLOBAL(WP_NOCHANGE);
 // A harmless non-nullptr FlatPointer for classes without pointers.
 static const std::pair<size_t,PType *> TheEnd = {~(size_t)0 , nullptr};
 
+void SetObjectFlagsFromScope(DObject* obj)
+{
+	const PClass* cls = obj->GetClass();
+	if (cls->VMType != nullptr)
+	{
+		const int side = FScopeBarrier::SideFromObjectFlags(cls->VMType->ScopeFlags);
+		if (side == FScopeBarrier::Side_PlainData)
+			obj->ObjectFlags |= OF_ClientSide;
+		else if (side == FScopeBarrier::Side_UI)
+			obj->ObjectFlags |= OF_ClientSide | OF_NoRollback;
+	}
+	else
+	{
+		// For anything without a scope, just assume it's data scoped.
+		obj->ObjectFlags |= OF_ClientSide;
+	}
+}
+
 //==========================================================================
 //
 // PClass :: WriteValue
@@ -100,7 +104,15 @@ static void RecurseWriteFields(const PClass *type, FSerializer &ar, const void *
 		// Don't write this part if it has no non-transient variables
 		for (unsigned i = 0; i < type->Fields.Size(); ++i)
 		{
-			if (!(type->Fields[i]->Flags & (VARF_Transient|VARF_Meta)))
+			bool canWrite = !(type->Fields[i]->Flags & VARF_Meta);
+			if (canWrite)
+			{
+				if (ar.IsRollback())
+					canWrite = !(type->Fields[i]->Flags & VARF_NoRollback);
+				else
+					canWrite = !(type->Fields[i]->Flags & VARF_Transient);
+			}
+			if (canWrite)
 			{
 				// Tag this section with the class it came from in case
 				// a more-derived class has variables that shadow a less-
@@ -144,6 +156,17 @@ bool PClass::ReadAllFields(FSerializer &ar, void *addr) const
 		Printf(TEXTCOLOR_RED "trying to read user variables but got a non-object (first key is '%s')\n", key);
 		ar.mErrors++;
 		return false;
+	}
+	if (ar.IsRollback())
+	{
+		key = ar.GetKey();
+		if (strcmp(key, "rollbackindex"))
+		{
+			// An Object that wasn't rolled back properly found its way into the list.
+			Printf(TEXTCOLOR_RED "trying to read user variables but got a non-rollback object (second key is '%s')\n", key);
+			ar.mErrors++;
+			return false;
+		}
 	}
 	while ((key = ar.GetKey()))
 	{
@@ -441,10 +464,12 @@ DObject *PClass::CreateNew()
 	ConstructNative (mem);
 
 	if (Defaults != nullptr)
-		((DObject *)mem)->ObjectFlags |= ((DObject *)Defaults)->ObjectFlags & (OF_Transient | OF_ClientSide);
+		((DObject *)mem)->ObjectFlags |= ((DObject *)Defaults)->ObjectFlags & OF_TransferrableFlags;
 
 	((DObject *)mem)->SetClass (const_cast<PClass *>(this));
 	InitializeSpecials(mem, Defaults, &PClass::SpecialInits);
+	SetObjectFlagsFromScope((DObject *)mem);
+	NetworkEntityManager::AddPredictedEntity((DObject *)mem);
 	return (DObject *)mem;
 }
 

@@ -1,34 +1,23 @@
 /*
-** g_level.cpp
+** g_mapinfo.cpp
+**
 ** Parses MAPINFO
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
-** Copyright 2009 Christoph Oelckers
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2009-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -142,7 +131,8 @@ static level_info_t *FindLevelByWarpTrans (int num)
 
 bool CheckWarpTransMap (FString &mapname, bool substitute)
 {
-	if (mapname[0] == '&' && (mapname[1] & 0xDF) == 'W' &&
+	if (mapname.Len() > 4 &&
+		mapname[0] == '&' && (mapname[1] & 0xDF) == 'W' &&
 		(mapname[2] & 0xDF) == 'T' && mapname[3] == '@')
 	{
 		level_info_t *lev = FindLevelByWarpTrans (atoi (&mapname[4]));
@@ -151,7 +141,7 @@ bool CheckWarpTransMap (FString &mapname, bool substitute)
 			mapname = lev->MapName;
 			return true;
 		}
-		else if (substitute)
+		else if (substitute && mapname.Len() > 5)
 		{
 			char a = mapname[4], b = mapname[5];
 			mapname = "MAP";
@@ -281,6 +271,7 @@ void level_info_t::Reset()
 	Snapshot = { 0,0,0,0,0,nullptr };
 	deferred.Clear();
 	skyspeed1 = skyspeed2 = skymistspeed = 0.f;
+	skymistyscale = 1.f;
 	fadeto = 0;
 	outsidefog = 0xff000000;
 	cdtrack = 0;
@@ -289,8 +280,10 @@ void level_info_t::Reset()
 	aircontrol = 0.f;
 	WarpTrans = 0;
 	airsupply = 20;
-	compatflags = compatflags2 = 0;
-	compatmask = compatmask2 = 0;
+	compatflags = 0;
+	compatflags2 = 0;
+	compatmask = 0;
+	compatmask2 = 0;
 	Translator = "";
 	RedirectType = NAME_None;
 	RedirectMapName = "";
@@ -1116,6 +1109,13 @@ DEFINE_MAP_OPTION(skymist, true)
 		}
 		info->skymistspeed = float(parse.sc.Float * (TICRATE / 1000.));
 	}
+}
+
+DEFINE_MAP_OPTION(skymistyscale, false)
+{
+	parse.ParseAssign();
+	parse.sc.MustGetFloat();
+	info->skymistyscale = clamp(parse.sc.Float, 0.002, 544.0);
 }
 
 // Vavoom compatibility
@@ -1944,6 +1944,7 @@ MapFlagHandlers[] =
 	{ "compat_voodoozombies",			MITYPE_COMPATFLAG, 0, COMPATF2_VOODOO_ZOMBIES },
 	{ "compat_noacsargcheck",			MITYPE_COMPATFLAG, 0, COMPATF2_NOACSARGCHECK },
 	{ "compat_novdolllockmsg",			MITYPE_COMPATFLAG, 0, COMPATF2_NOVDOLLLOCKMSG },
+	{ "compat_emulatemikoportals",		MITYPE_COMPATFLAG, 0, COMPATF2_EMULATEMIKOPORTALS },
 
 	{ "cd_start_track",					MITYPE_EATNEXT,	0, 0 },
 	{ "cd_end1_track",					MITYPE_EATNEXT,	0, 0 },
@@ -2052,10 +2053,10 @@ void FMapInfoParser::ParseMapDefinition(level_info_t &info)
 				break;
 
 			case MITYPE_CLRCOMPATFLAG:
-				info.compatflags &= ~handler->data1;
-				info.compatflags2 &= ~handler->data2;
-				info.compatmask |= handler->data1;
-				info.compatmask2 |= handler->data2;
+				info.compatflags &= ~ELevelCompatFlags::FromInt(handler->data1);
+				info.compatflags2 &= ~ELevelCompatFlags2::FromInt(handler->data2);
+				info.compatmask |= ELevelCompatFlags::FromInt(handler->data1);
+				info.compatmask2 |= ELevelCompatFlags2::FromInt(handler->data2);
 				break;
 
 			case MITYPE_COMPATFLAG:
@@ -2076,16 +2077,16 @@ void FMapInfoParser::ParseMapDefinition(level_info_t &info)
 
 				if (set)
 				{
-					info.compatflags |= handler->data1;
-					info.compatflags2 |= handler->data2;
+					info.compatflags |= ELevelCompatFlags::FromInt(handler->data1);
+					info.compatflags2 |= ELevelCompatFlags2::FromInt(handler->data2);
 				}
 				else
 				{
-					info.compatflags &= ~handler->data1;
-					info.compatflags2 &= ~handler->data2;
+					info.compatflags &= ~ELevelCompatFlags::FromInt(handler->data1);
+					info.compatflags2 &= ~ELevelCompatFlags2::FromInt(handler->data2);
 				}
-				info.compatmask |= handler->data1;
-				info.compatmask2 |= handler->data2;
+				info.compatmask |= ELevelCompatFlags::FromInt(handler->data1);
+				info.compatmask2 |= ELevelCompatFlags2::FromInt(handler->data2);
 			}
 			break;
 
@@ -2688,7 +2689,8 @@ void G_ParseMapInfo(FString basemapinfo)
 	level_info_t gamedefaults;
 	TArray<FString> secretMaps;
 
-	int flags1 = 0, flags2 = 0;
+	ELevelCompatFlags flags1 = 0;
+	ELevelCompatFlags2 flags2 = 0;
 	if (gameinfo.gametype == GAME_Doom)
 	{
 		int comp = fileSystem.CheckNumForName("COMPLVL");

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" viewBox="0 0 3e3 3e3" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <title>UZDoom Logo - App Icon</title>
+  <style type="text/css">
+    .st0 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+    }
+  </style>
+  <rect width="3e3" height="3e3" fill="#237887" />
+  <path id="XMLID_25_" class="st0" d="m1500 2657.3-872-503.29v-1811.2l661.74 382.02v262.61l-238-137.73v938.32l-334.39 244.57 366.95-148.92 415.6 239.85 415.6-239.85 366.95 148.92-334.39-244.57v-938.32l-238 137.73v-262.61l661.74-382.02v1811.2l-871.81 503.29m210.25-1556.3 172.79-99.622v786.71l-383.04 221.91-382.95-221.91v-786.71l172.79 99.622v630.66l210.07 121.18 210.25-121.18v-630.66z" fill="#fff" stroke-width="0" />
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Cardboard Marty</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:date>2025</dc:date>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>UZDoom</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:title>UZDoom Logo - App Icon</dc:title>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

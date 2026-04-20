@@ -26,7 +26,7 @@ target_include_directories(timidityplus INTERFACE ${CMAKE_CURRENT_SOURCE_DIR} PR
 
 set_target_properties(timidityplus
 PROPERTIES
-	CXX_STANDARD 11
+	CXX_STANDARD 17
 	CXX_STANDARD_REQUIRED ON
 )
 

@@ -1,3 +1,28 @@
+/*
+** i_net.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 1993-1996 by id Software, Inc.
+** Copyright 1999-2016 Marisa Heit
+** Copyright 2009-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: LicenseRef-Doom-Source-License
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #ifndef __I_NET_H__
 #define __I_NET_H__
 
@@ -33,16 +58,30 @@ enum ENetFlags
 	NCMD_RETRANSMIT = 0x40,		// 
 	NCMD_SETUP = 0x20,		// Guest is letting the host know who it is
 	NCMD_LEVELREADY = 0x10,		// After loading a level, guests send this over to the host who then sends it back after all are received
-	NCMD_QUITTERS = 0x08,		// Client is getting info about one or more players quitting (packet server only)
+	NCMD_QUITTERS = 0x08,		// Client is getting info about one or more players quitting
 	NCMD_COMPRESSED = 0x04,		// Remainder of packet is compressed
 	NCMD_LATENCYACK = 0x02,		// A latency packet was just read, so let the sender know.
 	NCMD_LATENCY = 0x01,		// Latency packet, used for measuring RTT.		
 };
 
-enum ENetMode
+struct FVerificationError
 {
-	NET_PeerToPeer,
-	NET_PacketServer
+	enum EVerifyError : uint8_t
+	{
+		VE_NONE,
+		VE_ENGINE,
+		VE_FILE_UNKNOWN,
+		VE_FILE_MISSING,
+		VE_FILE_ORDER,
+	};
+
+	EVerifyError Error = VE_NONE;
+	uint8_t Major = 0u, Minor = 0u, Revision = 0u;
+	uint8_t NetMajor = 0u, NetMinor = 0u, NetRevision = 0u;
+	TArray<FString> UnknownFiles = {};
+	TArray<FString> ExpectedOrder = {};
+	// Since the guest didn't load these, we have no checksum to fetch the proper name, so send over our own.
+	TArray<FString> MissingFiles = {};
 };
 
 struct FClientStack : public TArray<int>
@@ -65,7 +104,6 @@ extern bool netgame, multiplayer;
 extern int consoleplayer;
 extern int Net_Arbitrator;
 extern FClientStack NetworkClients;
-extern ENetMode NetMode;
 extern uint8_t NetBuffer[MAX_MSGLEN];
 extern size_t NetBufferLength;
 extern uint8_t TicDup;

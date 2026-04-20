@@ -1,52 +1,40 @@
 /*
 ** v_video.h
 **
+**
+**
 **---------------------------------------------------------------------------
-** Copyright 1998-2008 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2007-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
 
-#ifndef __V_VIDEO_H__
-#define __V_VIDEO_H__
+#pragma once
 
 #include <functional>
-#include "basics.h"
-#include "vectors.h"
-#include "m_png.h"
-#include "renderstyle.h"
-#include "c_cvars.h"
-#include "v_2ddrawer.h"
-#include "intrect.h"
-#include "hw_shadowmap.h"
-#include "hw_levelmesh.h"
-#include "buffers.h"
-#include "files.h"
 
+#include "basics.h"
+#include "buffers.h"
+#include "c_cvars.h"
+#include "hw_levelmesh.h"
+#include "hw_shadowmap.h"
+#include "intrect.h"
+#include "m_png.h"
+#include "v_2ddrawer.h"
+#include "vectors.h"
 
 struct FPortalSceneState;
 class FSkyVertexBuffer;
@@ -77,6 +65,20 @@ enum EHWCaps
 	RFL_DEBUG = 128,
 };
 
+enum {
+	BACKEND_OPENGL,
+	BACKEND_VULKAN,
+	BACKEND_OPENGLES,
+	NUM_BACKEND,
+
+#if defined(VID_BACKEND)
+	BACKEND_DEFAULT = VID_BACKEND,
+#elif defined(HAVE_VULKAN) and not defined(__APPLE__)
+	BACKEND_DEFAULT = BACKEND_VULKAN,
+#else
+	BACKEND_DEFAULT = BACKEND_OPENGL,
+#endif
+};
 
 extern int DisplayWidth, DisplayHeight;
 
@@ -298,7 +300,6 @@ private:
 	bool isIn2D = false;
 };
 
-
 // This is the screen updated by I_FinishUpdate.
 extern DFrameBuffer *screen;
 
@@ -306,7 +307,7 @@ extern DFrameBuffer *screen;
 #define SCREENHEIGHT (screen->GetHeight ())
 
 EXTERN_CVAR (Float, vid_gamma)
-
+EXTERN_CVAR (Int, vid_preferbackend)
 
 // Allocates buffer screens, call before R_Init.
 void V_InitScreenSize();
@@ -316,10 +317,6 @@ void V_InitScreen();
 void V_Init2 ();
 
 void V_Shutdown ();
-int V_GetBackend();
 
 inline bool IsRatioWidescreen(int ratio) { return (ratio & 3) != 0; }
 extern bool setsizeneeded, setmodeneeded;
-
-
-#endif // __V_VIDEO_H__

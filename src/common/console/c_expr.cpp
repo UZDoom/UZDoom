@@ -1,33 +1,22 @@
 /*
 ** c_expr.cpp
+**
 ** Console commands dealing with mathematical expressions
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
-** All rights reserved.
 **
-** Redistribution and use in source and binary forms, with or without
-** modification, are permitted provided that the following conditions
-** are met:
+** Copyright 1998-2016 Marisa Heit
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
 **
-** 1. Redistributions of source code must retain the above copyright
-**    notice, this list of conditions and the following disclaimer.
-** 2. Redistributions in binary form must reproduce the above copyright
-**    notice, this list of conditions and the following disclaimer in the
-**    documentation and/or other materials provided with the distribution.
-** 3. The name of the author may not be used to endorse or promote products
-**    derived from this software without specific prior written permission.
+** SPDX-License-Identifier: GPL-3.0-or-later
 **
-** THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
-** IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
-** OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-** IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
-** INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-** THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
 **---------------------------------------------------------------------------
 **
 */
@@ -82,7 +71,7 @@ bool IsFloat (const char *str);
 
 // PRIVATE FUNCTION PROTOTYPES ---------------------------------------------
 
-static FProduction *ParseExpression (FCommandLine &argv, int &parsept);
+static FProduction *ParseExpression (FCommandLine &argv, int &parsept, bool nostring = false);
 static const char *CIsNum (const char *str);
 static FStringProd *NewStringProd (const char *str);
 static FStringProd *NewStringProd (size_t len);
@@ -158,7 +147,7 @@ static FProducer Producers[] =
 //
 //==========================================================================
 
-static FProduction *ParseExpression (FCommandLine &argv, int &parsept)
+static FProduction *ParseExpression (FCommandLine &argv, int &parsept, bool nostring)
 {
 	if (parsept >= argv.argc())
 		return NULL;
@@ -184,13 +173,13 @@ static FProduction *ParseExpression (FCommandLine &argv, int &parsept)
 		{
 			if (strcmp (Producers[i].Token, token) == 0)
 			{
-				prod1 = ParseExpression (argv, parsept);
-				prod2 = ParseExpression (argv, parsept);
+				prod1 = ParseExpression (argv, parsept, nostring);
+				prod2 = ParseExpression (argv, parsept, nostring);
 				if (prod1 == NULL || prod2 == NULL)
 				{
 					goto missing;
 				}
-				if (Producers[i].StringProducer == NULL)
+				if (Producers[i].StringProducer == NULL || nostring)
 				{
 					DoubleCoerce (prod1, prod2);
 				}
@@ -215,7 +204,7 @@ static FProduction *ParseExpression (FCommandLine &argv, int &parsept)
 		}
 		if (strcmp ("!", token) == 0)
 		{
-			prod1 = ParseExpression (argv, parsept);
+			prod1 = ParseExpression (argv, parsept, nostring);
 			if (prod1 == NULL)
 			{
 				goto missing;
@@ -307,6 +296,20 @@ static const char *CIsNum (const char *str)
 
 static FStringProd *NewStringProd (const char *str)
 {
+	if(str[0] == '$' && str[1] != '\0')
+	{
+		FBaseCVar *var = FindCVar (str, NULL);
+		if (var == NULL)
+		{
+			str = str + 1;
+			Printf ("Unknown variable %s\n", str);
+		}
+		else
+		{
+			str = var->GetGenericRep(CVAR_String).String;
+		}
+
+	}
 	FStringProd *prod = (FStringProd *)M_Malloc (sizeof(FStringProd)+strlen(str));
 	prod->Type = PROD_String;
 	strcpy (prod->Value, str);
@@ -753,6 +756,45 @@ CCMD (test)
 
 //==========================================================================
 //
+// CCMD repeat
+//
+// If <expr> is one or more, repeat <cmd>, <expr> times.
+// 
+//==========================================================================
+
+CCMD (repeat)
+{
+	int parsept = 1;
+	FProduction *prod = ParseExpression (argv, parsept, true);
+
+	if (prod == NULL || parsept >= argv.argc())
+	{
+		Printf ("Usage: repeat <expr> <cmd>\n");
+	}
+	else
+	{
+		if (prod->Type == PROD_String)
+		{
+			prod = StringToDouble (prod);
+		}
+
+		if (static_cast<FDoubleProd *>(prod)->Value >= 1.0)
+		{
+			int n = (int)static_cast<FDoubleProd *>(prod)->Value;
+			for(int i = 0; i < n; i++)
+			{
+				AddCommandString (argv[parsept]);
+			}
+		}
+	}
+	if (prod != NULL)
+	{
+		M_Free (prod);
+	}
+}
+
+//==========================================================================
+//
 // CCMD eval
 //
 // Evaluates an expression and either prints it to the console or stores
@@ -766,6 +808,58 @@ CCMD (eval)
 	{
 		int parsept = 1;
 		FProduction *prod = ParseExpression (argv, parsept);
+
+		if (prod != NULL)
+		{
+			if (parsept < argv.argc())
+			{
+				FBaseCVar *var = FindCVar (argv[parsept], NULL);
+				if (var == NULL)
+				{
+					Printf ("Unknown variable %s\n", argv[parsept]);
+				}
+				else
+				{
+					UCVarValue val;
+
+					if (prod->Type == PROD_Double)
+					{
+						val.Float = (float)static_cast<FDoubleProd *>(prod)->Value;
+						var->SetGenericRep (val, CVAR_Float);
+					}
+					else
+					{
+						val.String = static_cast<FStringProd *>(prod)->Value;
+						var->SetGenericRep (val, CVAR_String);
+					}
+				}
+			}
+			else
+			{
+				if (prod->Type == PROD_Double)
+				{
+					Printf ("%g\n", static_cast<FDoubleProd *>(prod)->Value);
+				}
+				else
+				{
+					Printf ("%s\n", static_cast<FStringProd *>(prod)->Value);
+				}
+			}
+			M_Free (prod);
+			return;
+		}
+	}
+
+	Printf ("Usage: eval <expression> [variable]\n");
+}
+
+
+CCMD (numeval)
+{
+	if (argv.argc() >= 2)
+	{
+		int parsept = 1;
+		FProduction *prod = ParseExpression (argv, parsept, true);
 
 		if (prod != NULL)
 		{

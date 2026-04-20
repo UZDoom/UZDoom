@@ -1,3 +1,29 @@
+/*
+** sc_man_tokens.h
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2010-2016 Marisa Heit
+** Copyright 2015-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** Code written prior to 2026 is also licensed under:
+**
+** SPDX-License-Identifier: BSD-3-Clause
+**
+**---------------------------------------------------------------------------
+**
+*/
+
+// clang-format off
+
 xx(TK_Identifier,			"identifier")
 xx(TK_StringConst,			"string constant")
 xx(TK_NameConst,			"name constant")
@@ -96,6 +122,7 @@ xx(TK_Ref,					"'ref'")
 xx(TK_Event,				"'event'")
 xx(TK_Static,				"'static'")
 xx(TK_Transient,			"'transient'")
+xx(TK_NoRollback,			"'norollback'")
 xx(TK_Volatile,				"'volatile'")
 xx(TK_Final,				"'final'")
 xx(TK_Throws,				"'throws'")
@@ -157,3 +184,5 @@ xx(TK_Bright,				"'bright'")
 xx(TK_Let,					"'let'")
 xx(TK_StaticConst,			"'static const'")
 #undef xx
+
+// clang-format on

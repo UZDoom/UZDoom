@@ -1,22 +1,36 @@
+/*
+** matrix.h
+**
+** Simplified version of VSMatrix that has been adjusted for GZDoom's needs.
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2014-2016 Christoph Oelckers
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+** This file was originally derived from Very Simple Math Library,
+** which was licensed under the GNU Lesser General Public License 3.
+**
+** Copyright 2013 Lighthouse3D
+**
+** All subsequent changes and the integrated work as a whole are licensed
+** under the GNU General Public License as stated above.
+**
+**---------------------------------------------------------------------------
+**
+** Full documentation at
+** http://www.lighthouse3d.com/very-simple-libs
+**
+** This class aims at easing geometric transforms, camera
+** placement and projection definition for programmers
+** working with OpenGL core versions.
+*/
 
-// Matrix class based on code from VSML:
-
-/** ----------------------------------------------------------
- * \class VSMathLib
- *
- * Lighthouse3D
- *
- * VSMathLib - Very Simple Matrix Library
- *
- * Full documentation at 
- * http://www.lighthouse3d.com/very-simple-libs
- *
- * This class aims at easing geometric transforms, camera
- * placement and projection definition for programmers
- * working with OpenGL core versions.
- *
- *
- ---------------------------------------------------------------*/
 #ifndef __VSMatrix__
 #define __VSMatrix__
 

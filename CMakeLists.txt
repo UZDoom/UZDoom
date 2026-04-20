@@ -16,38 +16,29 @@ if( COMMAND cmake_policy )
 	endif()
 endif()
 
-if (LIBVPX_VCPKG)
-	list(APPEND VCPKG_MANIFEST_FEATURES "vcpkg-libvpx")
-endif()
-
-if (OPENAL_SOFT_VCPKG)
-	list(APPEND VCPKG_MANIFEST_FEATURES "vcpkg-openal-soft")
-endif()
-
-if (CMAKE_SYSTEM_NAME STREQUAL "Windows" OR (NOT CMAKE_SYSTEM_NAME AND CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows"))
-	# Force static triplet on Windows
-	set(VCPKG_TARGET_TRIPLET "x64-windows-static")
-endif()
-
 project(UZDoom)
 
-if (WIN32 AND VCPKG_TOOLCHAIN)
-	option(LIBVPX_VCPKG "Use libvpx from vcpkg" OFF)
+# make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
+option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
+
+if(NOT FORCE_NO_LTO)
+	include(CheckIPOSupported)
+	check_ipo_supported(RESULT ipo_supported OUTPUT ipo_error)
+	if( ipo_supported )
+		message(STATUS "Using LTO on Release and RelWithDebInfo build types")
+		set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE TRUE)
+		set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELWITHDEBINFO TRUE)
+	else()
+		message(STATUS "Not using LTO because unsupported: ${ipo_error}")
+	endif()
 endif()
 
-if (VCPKG_TOOLCHAIN)
-	option(OPENAL_SOFT_VCPKG "Use OpenAL from vcpkg" OFF)
-endif()
-
-if (NOT VCPKG_TOOLCHAIN)
-	set(VCPKG_MANIFEST_FEATURES)
-endif()
-
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF) 
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(Threads REQUIRED)
+find_package(Python3 3.6 REQUIRED)
 
 list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
 include( FindPackageHandleStandardArgs )
@@ -64,9 +55,14 @@ if(CMAKE_CROSSCOMPILING)
 endif()
 
 # Recursive function to place PK3 archive source files into a hierarchy of source file in the IDE
-function( assort_pk3_source_folder FOLDER_NAME PK3_DIR )
+function( assort_pk3_source_folder FOLDER_NAME )
 	# Assort source files into folders in the IDE
-	file(GLOB PK3_SRCS ${PK3_DIR}/*) # Create list of all files in this folder
+	# Create wildcard patterns for all directories
+	set(PK3_PATTERNS)
+	foreach(PK3_DIR ${ARGN})
+		list(APPEND PK3_PATTERNS "${PK3_DIR}/*")
+	endforeach()
+	file(GLOB PK3_SRCS ${PK3_PATTERNS}) # Create list of all files in these folders
 	foreach(PK3_SRC ${PK3_SRCS})
 		# If there are subfolders, recurse into them
 		if(IS_DIRECTORY ${PK3_SRC})
@@ -86,25 +82,24 @@ if( PK3_QUIET_ZIPDIR )
 	set( PK3_ZIPDIR_OPTIONS "-q" )
 endif()
 
-# Simplify pk3 building, add_pk3(filename srcdirectory)
-function( add_pk3 PK3_NAME PK3_DIR )
+# Simplify pk3 building, add_pk3(filename srcdirectory [srcdirectory2 ...])
+function( add_pk3 PK3_NAME )
 	# Generate target name. Just use "pk3" for main pk3 target.
 	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
 
-	if( NOT ZDOOM_OUTPUT_OLDSTYLE )
-		add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-			COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
-			COMMAND ${CMAKE_COMMAND} -E copy_if_different ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} $<TARGET_FILE_DIR:zdoom>/${PK3_NAME}
-			DEPENDS zipdir )
-	else()
-		add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-			COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${PK3_DIR}
-			DEPENDS zipdir )
-	endif()
+	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
+		COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
+		DEPENDS zipdir )
+
 	# Create a list of source files for this PK3, for use in the IDE
 	# Phase 1: Create a list of all source files for this PK3 archive, except
 	#  for a couple of strife image file names that confuse CMake.
-	file(GLOB_RECURSE PK3_SRCS ${PK3_DIR}/*)
+	# Create wildcard patterns for all directories
+	set(PK3_PATTERNS)
+	foreach(PK3_DIR ${ARGN})
+		list(APPEND PK3_PATTERNS "${PK3_DIR}/*")
+	endforeach()
+	file(GLOB_RECURSE PK3_SRCS ${PK3_PATTERNS})
 	# Exclude from the source list some files with brackets in the
 	# file names here, because they confuse CMake.
 	# This only affects the list of source files shown in the IDE.
@@ -119,6 +114,7 @@ function( add_pk3 PK3_NAME PK3_DIR )
 			list(REMOVE_ITEM PK3_SRCS ${PK3_SRC})
 		endif()
 	endforeach()
+
 	# Phase 2: Create the PK3 build rule, including the source file list for the IDE
 	# Touch the zipdir executable here so that the pk3s are forced to
 	# rebuild each time since their dependency has "changed."
@@ -126,18 +122,44 @@ function( add_pk3 PK3_NAME PK3_DIR )
 		COMMAND ${CMAKE_COMMAND} -E touch $<TARGET_FILE:zipdir>
 		DEPENDS ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
 		SOURCES ${PK3_SRCS})
+
 	# Phase 3: Assign source files to a nice folder structure in the IDE
-	assort_pk3_source_folder("Source Files" ${PK3_DIR})
-	# Phase 4: Add the resulting PK3 to the install target.
+	assort_pk3_source_folder("Source Files" ${ARGN})
+
+	# Phase 4: Create separate copy step, in order to make zdoom depend on pk3s without creating cycle
+	set(COPY_TARGET_NAME "${PK3_TARGET}_copy")
+	add_custom_target(${COPY_TARGET_NAME} ALL
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different
+			"${ZDOOM_OUTPUT_DIR}/${PK3_NAME}"
+			"${ZDOOM_RESOURCE_DIR}/${PK3_NAME}"
+		DEPENDS ${PK3_TARGET}
+	)
+	add_dependencies(zdoom ${COPY_TARGET_NAME})
+
+	# Phase 5: Add the resulting PK3 to the install target.
 	if( WIN32 )
 		set( INSTALL_PK3_PATH . CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
 	else()
-		set( INSTALL_PK3_PATH share/games/doom CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
+		set( INSTALL_PK3_PATH share/games/${ZDOOM_EXE_NAME} CACHE STRING "Directory where zdoom.pk3 will be placed during install." )
 	endif()
 	install(FILES "${PROJECT_BINARY_DIR}/${PK3_NAME}"
-			DESTINATION ${INSTALL_PK3_PATH}
-			COMPONENT "Game resources")
+		DESTINATION ${INSTALL_PK3_PATH}
+		COMPONENT "Game resources")
 endfunction()
+
+macro( generate_language_files target destination identifier )
+	# right now, this dumps temp files into the source tree and deletes them after build
+	# This should be re-worked to dump stuff into the build tree instead
+	set(lang_script "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/scripts/compile.py")
+	set(lang_dst "${CMAKE_CURRENT_SOURCE_DIR}/${destination}")
+	set(lang_target "${target}_${destination}")
+
+	string( REGEX REPLACE "[^a-zA-Z0-9]" "_" lang_target ${lang_target} )
+
+	add_custom_target(${lang_target} COMMAND Python3::Interpreter -B -E -s "${lang_script}" --recipe ${identifier} --output "${lang_dst}")
+	add_dependencies(${target} ${lang_target})
+	add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E remove "${lang_dst}")
+endmacro()
 
 # Macro for building libraries without debugging information
 macro( make_release_only )
@@ -157,12 +179,15 @@ ENDIF()
 
 set( ZDOOM_OUTPUT_DIR ${CMAKE_BINARY_DIR} CACHE PATH "Directory where zdoom.pk3 and the executable will be created." )
 set( ZDOOM_EXE_NAME "uzdoom" CACHE FILEPATH "Name of the executable to create" )
-if( MSVC )
-	# Allow the user to use ZDOOM_OUTPUT_DIR as a single release point.
-	# Use zdoom, zdoomd, zdoom64, and zdoomd64 for the binary names
-	option( ZDOOM_OUTPUT_OLDSTYLE "Don't use Release/Debug directories." OFF )
+
+if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
+	set(ZDOOM_RESOURCE_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+elseif(WIN32)
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}/$<CONFIG>")
+elseif(APPLE)
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}/${ZDOOM_EXE_NAME}.app/Contents/Resources")
 else()
-	set( ZDOOM_OUTPUT_OLDSTYLE OFF )
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}")
 endif()
 
 # Replacement variables for a possible long list of C/C++ compilers compatible with GCC
@@ -219,9 +244,6 @@ find_package( VPX )
 if (NOT FORCE_INTERNAL_CPPDAP)
 	find_package( cppdap CONFIG )
 endif()
-if (NOT FORCE_INTERNAL_ZMUSIC)
-	find_package( ZMusic )
-endif()
 
 include( TargetArch )
 
@@ -237,13 +259,6 @@ if( APPLE )
 else()
 	option (HAVE_GLES2 "Enable GLES2 support" ON)
 endif()
-
-# no, we're not using external asmjit for now, we made too many modifications to our's.
-# if the asmjit author uses our changes then we'll update this.
-
-#if( ${HAVE_VM_JIT} )
-#	find_package( asmjit )
-#endif()
 
 if( MSVC )
 	# Eliminate unreferenced functions and data
@@ -303,7 +318,8 @@ else()
 			include ( FindPkgConfig )
 			pkg_check_modules( MUSL_FTS musl-fts )
 			if ( MUSL_FTS_FOUND )
-				set ( ALL_C_FLAGS "${ALL_C_FLAGS} ${MUSL_FTS_LDFLAGS}" )
+				list(JOIN MUSL_FTS_LDFLAGS " " MUSL_FTS_LDFLAGS_JOINED)
+				set ( ALL_C_FLAGS "${ALL_C_FLAGS} ${MUSL_FTS_LDFLAGS_JOINED}" )
 			else ( MUSL_FTS_FOUND )
 				message (ERROR "fts_* functions not found in the system" )
 			endif ( MUSL_FTS_FOUND )
@@ -345,15 +361,16 @@ set( CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${REL_C_F
 set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${DEB_C_FLAGS} -D_DEBUG" )
 
 option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
-option(FORCE_INTERNAL_ZMUSIC "Use internal zmusic")
-option(FORCE_INTERNAL_ASMJIT "Use internal asmjit" ON)
 option(FORCE_INTERNAL_CPPDAP "Use internal cppdap" ON)
-
-mark_as_advanced( FORCE_INTERNAL_ASMJIT )
 
 if (HAVE_VULKAN)
 	add_subdirectory( libraries/ZVulkan )
 endif()
+
+if( MSVC )
+	set(ABSL_MSVC_STATIC_RUNTIME ON)
+endif()
+add_subdirectory( libraries/abseil )
 
 set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 add_subdirectory( libraries/ZWidget )
@@ -380,16 +397,10 @@ if( HAVE_VM_JIT AND UNIX )
 endif( HAVE_VM_JIT AND UNIX )
 
 if( ${HAVE_VM_JIT} )
-	if( ASMJIT_FOUND AND NOT FORCE_INTERNAL_ASMJIT )
-		message( STATUS "Using system asmjit, includes found at ${ASMJIT_INCLUDE_DIR}" )
-	else()
-		message( STATUS "Using internal asmjit" )
-		set( SKIP_INSTALL_ALL TRUE ) # Avoid installing asmjit alongside zdoom
-		add_subdirectory( libraries/asmjit )
-		set( ASMJIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries/asmjit )
-		set( ASMJIT_LIBRARIES asmjit )
-		set( ASMJIT_LIBRARY asmjit )
-	endif()
+	set( SKIP_INSTALL_ALL TRUE ) # Avoid installing asmjit alongside zdoom
+	add_subdirectory( libraries/asmjit )
+	set( ASMJIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries/asmjit )
+	set( ASMJIT_LIBRARIES asmjit )
 endif()
 
 if( BZIP2_FOUND AND NOT FORCE_INTERNAL_BZIP2 )
@@ -414,17 +425,11 @@ else()
 endif()
 
 # ZMUSIC
-if( ZMUSIC_FOUND AND NOT FORCE_INTERNAL_ZMUSIC )
-	message( STATUS "Using system zmusic library, includes found at ${ZMUSIC_INCLUDE_DIR}" )
-	set( ZMUSIC_SYSTEM_INSTALL TRUE )
-else()
-	message( STATUS "Using internal zmusic library" )
-	add_subdirectory( libraries/ZMusic )
-	set( ZMUSIC_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/zmusic" )
-	set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
-	set( ZMUSIC_LIBRARIES zmusic )
-	set( ZMUSIC_FOUND TRUE )
-endif()
+set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
+add_subdirectory( libraries/ZMusic )
+set( ZMUSIC_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/zmusic" )
+set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
+set( ZMUSIC_LIBRARIES zmusic )
 
 set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
 
@@ -445,7 +450,9 @@ install(DIRECTORY docs/
 		COMPONENT "Documentation")
 
 option( DYN_OPENAL "Dynamically load OpenAL" ON )
+option( BUILD_NONFREE "Build non-free assets used by commercial games" ON )
 
+add_subdirectory( src )
 add_subdirectory( libraries/lzma )
 add_subdirectory( tools )
 add_subdirectory( wadsrc )
@@ -453,7 +460,6 @@ add_subdirectory( wadsrc_bm )
 add_subdirectory( wadsrc_lights )
 add_subdirectory( wadsrc_extra )
 add_subdirectory( wadsrc_widepix )
-add_subdirectory( src )
 
 if( ZMUSIC_SYSTEM_INSTALL )
 	# Internal ZMusic library provides miniz target, miniz.h file in partuclar

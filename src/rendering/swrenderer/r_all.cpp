@@ -1,3 +1,19 @@
+/*
+** r_all.cpp
+**
+** Just a bunch of imports
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
 #include "textures/r_swtexture.h"
 #include "r_renderthread.cpp"
 #include "r_swrenderer.cpp"
