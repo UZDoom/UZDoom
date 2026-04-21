@@ -467,38 +467,27 @@ VerticalTextPosition Canvas::verticalTextAlign()
 
 void Canvas::drawLineUnclipped(const Point& p0, const Point& p1, const Colorf& color)
 {
-	if (p0.x == p1.x)
-	{
-		fillTile((float)((p0.x - 0.5) * uiscale), (float)(p0.y * uiscale), (float)uiscale, (float)((p1.y - p0.y) * uiscale), color);
-	}
-	else if (p0.y == p1.y)
-	{
-		fillTile((float)(p0.x * uiscale), (float)((p0.y - 0.5) * uiscale), (float)((p1.x - p0.x) * uiscale), (float)uiscale, color);
-	}
-	else
-	{
-		drawLineAntialiased((float)(p0.x * uiscale), (float)(p0.y * uiscale), (float)(p1.x * uiscale), (float)(p1.y * uiscale), color);
-	}
+	drawLineAntialiased((float)(p0.x * uiscale), (float)(p0.y * uiscale), (float)(p1.x * uiscale), (float)(p1.y * uiscale), color);
 }
 
 int Canvas::getClipMinX() const
 {
-	return clipStack.empty() ? 0 : (int)std::round(std::max(clipStack.back().x * uiscale, 0.0));
+	return clipStack.empty() ? 0 : (int)std::floor(std::max(clipStack.back().x * uiscale, 0.0));
 }
 
 int Canvas::getClipMinY() const
 {
-	return clipStack.empty() ? 0 : (int)std::round(std::max(clipStack.back().y * uiscale, 0.0));
+	return clipStack.empty() ? 0 : (int)std::floor(std::max(clipStack.back().y * uiscale, 0.0));
 }
 
 int Canvas::getClipMaxX() const
 {
-	return clipStack.empty() ? width : (int)std::round(std::min((clipStack.back().x + clipStack.back().width) * uiscale, (double)width));
+	return clipStack.empty() ? width : (int)std::ceil(std::min((clipStack.back().x + clipStack.back().width) * uiscale, (double)width));
 }
 
 int Canvas::getClipMaxY() const
 {
-	return clipStack.empty() ? height : (int)std::round(std::min((clipStack.back().y + clipStack.back().height) * uiscale, (double)height));
+	return clipStack.empty() ? height : (int)std::ceil(std::min((clipStack.back().y + clipStack.back().height) * uiscale, (double)height));
 }
 
 /////////////////////////////////////////////////////////////////////////////
