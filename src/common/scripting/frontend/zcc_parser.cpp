@@ -1441,6 +1441,20 @@ ZCC_TreeNode *TreeNodeDeepCopy_Internal(ZCC_AST *ast, ZCC_TreeNode *orig, bool c
 
 		break;
 	}
+
+	case AST_ExplicitCast:
+	{
+		TreeNodeDeepCopy_Start(ExplicitCast);
+
+		// ZCC_Expression
+		copy->Operation = origCasted->Operation;
+		copy->Type = origCasted->Type;
+		// ZCC_ExplicitCast
+		copy->ClassName = origCasted->ClassName;
+		copy->Parameters = static_cast<ZCC_FuncParm *>(TreeNodeDeepCopy_Internal(ast, origCasted->Parameters, true, copiedNodesList));
+
+		break;
+	}
 	
 	case AST_FunctionPtrCast:
 	{

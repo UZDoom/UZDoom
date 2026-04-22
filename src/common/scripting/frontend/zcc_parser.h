@@ -175,6 +175,7 @@ enum EZCCTreeNodeType
 	AST_TwoArgIterationStmt,
 	AST_ThreeArgIterationStmt,
 	AST_TypedIterationStmt,
+	AST_ExplicitCast,
 
 	NUM_AST_NODE_TYPES
 };
@@ -470,6 +471,12 @@ struct ZCC_ExprFuncCall : ZCC_Expression
 };
 
 struct ZCC_ClassCast : ZCC_Expression
+{
+	ENamedName ClassName;
+	ZCC_FuncParm *Parameters;
+};
+
+struct ZCC_ExplicitCast : ZCC_Expression
 {
 	ENamedName ClassName;
 	ZCC_FuncParm *Parameters;

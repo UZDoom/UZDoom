@@ -1534,6 +1534,7 @@ primary(X) ::= primary(A) LPAREN func_expr_list(B) RPAREN. [DOT]		// Function ca
 	expr->Parameters = B;
 	X = expr;
 }
+
 primary(X) ::= LPAREN CLASS LT IDENTIFIER(A) GT RPAREN LPAREN func_expr_list(B) RPAREN. [DOT]		// class type cast
 {
 	NEW_AST_NODE(ClassCast, expr, A);
@@ -1542,6 +1543,16 @@ primary(X) ::= LPAREN CLASS LT IDENTIFIER(A) GT RPAREN LPAREN func_expr_list(B) 
 	expr->Parameters = B;
 	X = expr;
 }
+
+primary(X) ::= LPAREN LT IDENTIFIER(A) GT RPAREN LPAREN func_expr_list(B) RPAREN. [DOT]		// explicit type cast
+{
+	NEW_AST_NODE(ExplicitCast, expr, A);
+	expr->Operation = PEX_ExplicitCast;
+	expr->ClassName = ENamedName(A.Int);
+	expr->Parameters = B;
+	X = expr;
+}
+
 
 primary(X) ::= LPAREN func_ptr_type(A) GT RPAREN LPAREN expr(B) RPAREN. [DOT]		// function pointer type cast
 {

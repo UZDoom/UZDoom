@@ -3161,6 +3161,23 @@ FxExpression *ZCCCompiler::ConvertNode(ZCC_TreeNode *ast, bool substitute)
 		return new FxClassPtrCast(cls, ConvertNode(cc->Parameters));
 	}
 
+	case AST_ExplicitCast:
+	{
+		auto cc = static_cast<ZCC_ExplicitCast *>(ast);
+		if (cc->Parameters == nullptr || cc->Parameters->SiblingNext != cc->Parameters)
+		{
+			Error(cc, "Explicit type cast requires exactly one parameter");
+			return new FxNop(*ast);	// return something so that the compiler can continue.
+		}
+		auto cls = PClass::FindClass(cc->ClassName);
+		if (cls == nullptr || cls->VMType == nullptr)
+		{
+			Error(cc, "Unknown class %s", FName(cc->ClassName).GetChars());
+			return new FxNop(*ast);	// return something so that the compiler can continue.
+		}
+		return new FxDynamicCast(cls, ConvertNode(cc->Parameters));
+	}
+
 	case AST_FunctionPtrCast:
 	{
 		auto cast = static_cast<ZCC_FunctionPtrCast *>(ast);
