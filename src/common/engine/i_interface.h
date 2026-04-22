@@ -98,6 +98,8 @@ struct FStartupSelectionInfo
 	bool DefaultFullscreen = true;
 	int DefaultFileLoadBehaviour = 0;
 	bool notifyNewRelease = true;
+	FName prideColors = {};
+	float prideMix = 0;
 
 	// Net game info
 	int DefaultNetIWAD = 0;

@@ -34,6 +34,23 @@ Color rgb(ColorP r, ColorP g, ColorP b)
 	return { SRGB, r, g, b };
 }
 
+Color rgb(uint32_t rgb24)
+{
+	ColorP r = ((rgb24>>16)&0xff)/255.0;
+	ColorP g = ((rgb24>>8 )&0xff)/255.0;
+	ColorP b = ((rgb24    )&0xff)/255.0;
+	return rgb(r, g, b);
+}
+
+uint32_t rgb24(const Color& c)
+{
+	Color C {c};
+	memcpy(&C, &c, sizeof(c));
+	_2rgb(C);
+	uint8_t r = C.rgb.r*255, g = C.rgb.g*255, b = C.rgb.b*255;
+	return r<<16 | g<<8 | b;
+};
+
 Color rgb(const Color& c)
 {
 	Color C {c};

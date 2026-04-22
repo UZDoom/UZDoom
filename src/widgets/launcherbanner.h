@@ -19,18 +19,25 @@
 
 #include <zwidget/core/widget.h>
 
+#include <memory>
+#include <vector>
+
+#include "name.h"
+
 class ImageBox;
 class TextLabel;
 
 class LauncherBanner : public Widget
 {
 public:
-	LauncherBanner(Widget* parent);
+	LauncherBanner(Widget* parent, FName colors, float mix);
 
 	double GetPreferredHeight() override;
 
 private:
 	void OnGeometryChanged() override;
+
+	std::vector<std::tuple<std::unique_ptr<Widget>,std::unique_ptr<Widget>>> stripes;
 
 	ImageBox* Logo = nullptr;
 };

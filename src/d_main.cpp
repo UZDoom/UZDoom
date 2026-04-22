@@ -278,7 +278,7 @@ FARG(nointro, "Loading", "Skips intro video", "",
 FARG(episode, "Loading", "Starts the game on the first map of an episode", "1",
 	"Like -warp, bu starts the game on the first map of the specified episode");
 
-FARG(showlauncher, "Loading", "Forces the startup launcher to show, even if disabled through other means.", "",
+FARG(showlauncher, "Launcher", "Forces the startup launcher to show, even if disabled through other means.", "",
 	"Forces the startup launcher to show, even if disabled through other means.");
 
 FARG(version, "Other", "Print version", "",

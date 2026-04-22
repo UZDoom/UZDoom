@@ -50,7 +50,7 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info) : Widget(nullptr, Wi
 {
 	SetWindowTitle(GAMENAME);
 
-	Banner = new LauncherBanner(this);
+	Banner = new LauncherBanner(this, info.prideColors, info.prideMix);
 	Pages = new TabWidget(this);
 	Buttonbar = new LauncherButtonbar(this);
 
