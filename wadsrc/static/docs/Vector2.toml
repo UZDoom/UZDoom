@@ -1,16 +1,29 @@
 name = "Vector2"
 doc = """
-A builtin type representing 2D coordinates, either as a point or as a vector.
+A built-in type representing 2D coordinates, either as a point or as a vector.
 """
 
 [[member]]
 def = """
-    /// The x coordinate.
+    /// The X coordinate.
     double x;
 """
 
 [[member]]
 def = """
-    /// The y coordinate.
+    /// The Y coordinate.
     double y;
+"""
+
+[[function]]
+def = """
+    /// Returns the length (magnitude) of the vector.
+    double Length() const;
+"""
+
+[[function]]
+def = """
+    /// Returns a normalized vector. Equivalent to `vec /
+    /// vec.Length()`.
+    Vector2 Unit() const;
 """

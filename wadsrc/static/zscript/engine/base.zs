@@ -931,9 +931,14 @@ struct Wads	// todo: make FileSystem an alias to 'Wads'
 	native static string GetLumpFullPath(int lump);
 }
 
+/// Identifies whether to keep or skip empty tokens.
+///
+/// Used by [`String.Split`].
 enum EmptyTokenType
 {
+	/// Skips empty tokens.
 	TOK_SKIPEMPTY = 0,
+	/// Keeps empty tokens.
 	TOK_KEEPEMPTY = 1,
 }
 
@@ -941,51 +946,112 @@ enum EmptyTokenType
 // All of these methods are available on strings
 struct StringStruct native unsafe(internal)
 {
+	/// Creates a string using a format string and any amount of arguments.
 	native static vararg String Format(String fmt, ...);
+	/// Creates and appends a string using a format string and any
+	/// amount of arguments.
 	native vararg void AppendFormat(String fmt, ...);
 	// native int Length();  // Intrinsic
 	// native bool operator==(String other); // Equality comparison
 	// native bool operator~==(String other);  // Case-insensitive equality comparison
 	// native String operator..(String other);  // Concatenate with another String
+	/// Replaces all instances of `pattern` with `replacement` in-place.
 	native void Replace(String pattern, String replacement);
+	/// Returns the first `len` bytes as a new string.
 	native String Left(int len) const;
+	/// Returns `len` bytes starting at `pos` as a new string.
 	native String Mid(int pos = 0, int len = 2147483647) const;
+	/// Truncates the string to `newlen` bytes in-place.
 	native void Truncate(int newlen);
+	/// Removes `remlen` bytes starting at `index` in-place.
 	native void Remove(int index, int remlen);
+	/// Returns the byte at `pos` as a new string. Use [`Left`] or
+	/// [`Mid`] instead.
 	deprecated("4.1", "use Left() or Mid() instead") native String CharAt(int pos) const;
+	/// Deprecated alias of [`ByteAt`]. Use it instead.
 	deprecated("4.1", "use ByteAt() instead") native int CharCodeAt(int pos) const;
+	/// Returns the byte at `pos` as an integer.
 	native int ByteAt(int pos) const;
+	/// Returns a new string which replaces escape sequences with
+	/// their respective escaped characters.
 	native String Filter();
+	/// Returns the first index of `substr` starting from the left at
+	/// `startIndex`.
 	native int IndexOf(String substr, int startIndex = 0) const;
 	deprecated("3.5.1", "use RightIndexOf() instead") native int LastIndexOf(String substr, int endIndex = 2147483647) const;
+	/// Returns the first index of `substr` starting from the right at
+	/// `endIndex`.
 	native int RightIndexOf(String substr, int endIndex = 2147483647) const;
+	/// Makes all bytes uppercase in-place. Does not account for
+	/// codepoints. Use [`MakeUpper`] instead.
 	deprecated("4.1", "use MakeUpper() instead") native void ToUpper();
+	/// Makes all bytes lowercase in-place. Does not account for
+	/// codepoints. Use [`MakeLower`] instead.
 	deprecated("4.1", "use MakeLower() instead") native void ToLower();
+	/// Returns a new string where all codepoints are uppercase.
 	native String MakeUpper() const;
+	/// Returns a new string where all codepoints are lowercase.
 	native String MakeLower() const;
+	/// Returns the uppercase version of `ch`.
 	native static int CharUpper(int ch);
+	/// Returns the lowercase version of `ch`.
 	native static int CharLower(int ch);
 
+	/// Returns `true` if the string matches the pattern `[whitespace]
+	/// [sign] [0 [{ x | X }]] digits [whitespace]`.
 	native bool IsInt() const;
+	/// Returns `true` if the string matches the pattern `[whitespace]
+	/// [sign] {digits | [digits] . digits} [{d | D | e | E} [sign] digits]
+	/// [whitespace]`.
 	native bool IsDouble() const;
+	/// Interprets the string as a base-`base` integer, guessing the
+	/// base if it is 0.
 	native int ToInt(int base = 0) const;
+	/// Interprets the string as a double precision floating point
+	/// number.
 	native double ToDouble() const;
 
+	/// Splits the string by each `delimiter` into `tokens`.
+	/// `keepEmpty` describes whether the function should keep or
+	/// discard empty strings found while splitting.
 	native void Split(out Array<String> tokens, String delimiter, EmptyTokenType keepEmpty = TOK_KEEPEMPTY) const;
+	/// Appends the codepoint `c` to the end of the string in-place.
 	native void AppendCharacter(int c);
+	/// Removes the last codepoint of the string in-place.
 	native void DeleteLastCharacter();
+	/// Returns the number of codepoints in this string.
 	native int CodePointCount() const;
+	/// Returns the next codepoint from the byte `position` onwards, and the
+	/// byte position of the next codepoint.
 	native int, int GetNextCodePoint(int position) const;
+	/// Alias for [`Replace`].
 	native void Substitute(String str, String replace);
+	/// Strips any byte in `junk` from the left side of the string
+	/// in-place. If `junk` is empty, strips any ASCII whitespace
+	/// character.
 	native void StripLeft(String junk = "");
+	/// Strips any byte in `junk` from the right side of the string
+	/// in-place. If `junk` is empty, strips any ASCII whitespace
+	/// character.
 	native void StripRight(String junk = "");
+	/// Strips any byte in `junk` from the left and right sides of the
+	/// string in-place. If `junk` is empty, strips any ASCII
+	/// whitespace character.
 	native void StripLeftRight(String junk = "");
 
-	native int Compare(String other) const; // strcmp
-	native int CompareNoCase(String other) const; // stricmp
+	/// Compares this string with `other`. Returns lexicographic order,
+	/// i.e. zero for no difference, negative for if this is before
+	/// `other`, positive if it is after.
+	native int Compare(String other) const;
+	/// Compares this string with `other`, ignoring case. Returns
+	/// lexicographic order, i.e. zero for no difference, negative for
+	/// if this is before `other`, positive if it is after.
+	native int CompareNoCase(String other) const;
 
-	native bool IsEmpty() const; // strcmp
-	native bool IsNotEmpty() const; // stricmp
+	/// Returns `true` if [`Length`] is 0.
+	native bool IsEmpty() const;
+	/// Returns `true` if [`Length`] is not 0.
+	native bool IsNotEmpty() const;
 }
 
 struct Translation version("2.4")
