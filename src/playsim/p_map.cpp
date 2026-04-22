@@ -1804,11 +1804,11 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 
 		F3DFloor*  rover;
 		double thingtop = thing->Height > 0 ? thing->Top() : thing->Z() + 1;
-
+		const bool missile = (thing->flags & MF_MISSILE) || (thing->BounceFlags & BOUNCE_MBF);
 		for (unsigned i = 0; i<newsec->e->XFloor.ffloors.Size(); i++)
 		{
 			rover = newsec->e->XFloor.ffloors[i];
-			if (!(rover->flags & FF_SOLID) || !(rover->flags & FF_EXISTS)) continue;
+			if (!(rover->flags & FF_SOLID) || !(rover->flags & FF_EXISTS) || (missile && (rover->flags & FF_SHOOTTHROUGH))) continue;
 
 			double ff_bottom = rover->bottom.plane->ZatPoint(pos);
 			double ff_top = rover->top.plane->ZatPoint(pos);

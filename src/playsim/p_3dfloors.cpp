@@ -687,7 +687,8 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 			
 			highestfloorpic.SetInvalid();
 			lowestceilingpic.SetInvalid();
-			
+
+			const bool missile = (thing->flags & MF_MISSILE) || (thing->BounceFlags & BOUNCE_MBF);
 			for(int j=0;j<2;j++)
 			{
 				for(unsigned i=0;i<xf[j]->ffloors.Size();i++)
@@ -695,7 +696,7 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 					F3DFloor *rover = xf[j]->ffloors[i];
 
 					if (!(rover->flags & FF_EXISTS)) continue;
-					if (!(rover->flags & FF_SOLID)) continue;
+					if (!(rover->flags & FF_SOLID) || (missile && (rover->flags & FF_SHOOTTHROUGH))) continue;
 					
 					double ff_bottom=rover->bottom.plane->ZatPoint(x, y);
 					double ff_top=rover->top.plane->ZatPoint(x, y);
