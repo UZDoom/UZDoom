@@ -720,7 +720,7 @@ void PPAmbientOcclusion::UpdateTextures(int width, int height)
 
 void PPAmbientOcclusion::Render(PPRenderState *renderstate, float m5, int sceneWidth, int sceneHeight)
 {
-	if (gl_ssao == 0 || sceneWidth == 0 || sceneHeight == 0)
+	if (gl_ssao == 0 || sceneWidth == 0 || sceneHeight == 0 || level_noAmbientOcclusion)
 	{
 		return;
 	}

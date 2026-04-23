@@ -706,6 +706,7 @@ class PPAmbientOcclusion
 public:
 	PPAmbientOcclusion();
 	void Render(PPRenderState *renderstate, float m5, int sceneWidth, int sceneHeight);
+	void SetNoAmbientOcclusion() { level_noAmbientOcclusion = true; }
 
 private:
 	void CreateShaders();
@@ -726,6 +727,8 @@ private:
 	int LastQuality = -1;
 	int LastWidth = 0;
 	int LastHeight = 0;
+
+	bool level_noAmbientOcclusion = false;
 
 	PPShader LinearDepth;
 	PPShader LinearDepthMS;
@@ -897,6 +900,7 @@ public:
 
 
 	void SetTonemapMode(ETonemapMode tm) { tonemap.SetTonemapMode(tm); }
+	void SetNoAmbientOcclusion() { ssao.SetNoAmbientOcclusion(); }
 	void Pass1(PPRenderState *state, int fixedcm, int sceneWidth, int sceneHeight);
 	void Pass2(PPRenderState* state, int fixedcm, float flash, int sceneWidth, int sceneHeight);
 };

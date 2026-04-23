@@ -315,6 +315,11 @@ sector_t* RenderView(player_t* player)
 	screen->mVertexData->Reset();
 	hw_postprocess.SetTonemapMode(level.info ? level.info->tonemap : ETonemapMode::None);
 
+	if (level.flags3 & LEVEL3_NOAMBIENTOCCLUSION)
+	{
+		hw_postprocess.SetNoAmbientOcclusion();
+	}
+
 	sector_t* retsec;
 	if (!V_IsHardwareRenderer())
 	{

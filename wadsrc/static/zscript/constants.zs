@@ -1450,6 +1450,7 @@ enum ELevelFlags
 	LEVEL3_NOFOGOFWAR			= 0x00100000,	// disables effect of r_radarclipper CVAR on this map
 	LEVEL3_SECRET				= 0x00200000,	// level is a secret level
 	LEVEL3_SKYMIST				= 0x00400000,   // level skyfog uses the skymist texture
+	LEVEL3_NOAMBIENTOCCLUSION	= 0x00800000,   // disables ambient occlusion on this map
 };
 
 // [RH] Compatibility flags.
