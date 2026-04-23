@@ -111,6 +111,10 @@ static void zmusic_printfunc(int severity, const char* msg)
 	}
 	else if (severity >= ZMUSIC_MSG_NOTIFY)
 	{
+		Printf("%s\n", msg);
+	}
+	else if (severity >= ZMUSIC_MSG_DEBUG)
+	{
 		DPrintf(DMSG_SPAMMY, "%s\n", msg);
 	}
 }
