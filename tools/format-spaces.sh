@@ -35,10 +35,13 @@ while IFS= read -r -d '' file; do
 	[[ "$file" == tools/lemon/* ]] && continue
 	[[ "$file" == */thirdparty/* ]] && continue
 
+	filename="${file##*/}"
+	[[ "$filename" == *?.* ]] && extension="${filename##*.}" || extension=""
+	extension="${extension,,}"
+	data=$(cat "$file")
+
 	((tested++))
 	failed=
-
-	data=$(cat "$file")
 
 	[[ -n "$verbose" ]] && printf "Testing EOF newline: %s\n" "$file"
 	end=$(tail -c 2 "$file" | od -An -tx1)
@@ -61,6 +64,56 @@ while IFS= read -r -d '' file; do
 		failed=1
 		printf "Trailing spaces: %s\n" "$file" >&2
 		[[ -n "$dry" ]] || data=$(sed 's/[[:blank:]]*$//' <<<"$data")
+	fi
+
+	tabs=
+	indent=
+	case "$extension" in
+		c|cpp|h|mm|hpp|zs|fp|re|lemon|y|cmake|xml)
+			tabs=true
+		;;
+		*)
+			case "$filename" in
+				CMakeLists.txt|*defs.*|*def.*)
+					tabs=true
+				;;
+			esac
+		;;
+	esac
+	if [ -z "$tabs" ]; then
+		[[ -n "$verbose" ]] && printf "Skipping leading spaces: %s\n" "$file"
+	else
+		[[ -n "$verbose" ]] && printf "Leading spaces: %s\n" "$file"
+		if grep -q "^    " <<<"$data"; then
+			failed=1
+			printf "Leading spaces: %s\n" "$file" >&2
+			indent=1
+		fi
+	fi
+
+	[[ -n "$verbose" ]] && printf "Inconsistent indentation: %s\n" "$file"
+	if grep -q "^    " <<<"$data" && grep -q "^	" <<<"$data"; then
+		failed=1
+		printf "Inconsistent indentation: %s\n" "$file" >&2
+		indent=1
+	fi
+
+	if [[ -n "$indent" ]]; then
+		space=$(grep -P "^ +" -o <<<"$data")
+		tabs=$(grep -P "^	" -o <<<"$data" | wc -l)
+		width=4
+		if [[ -n "$space" ]] && [[ $(wc -l <<<"$space") > $tabs ]]; then
+			# guess intended indentation by counting the most common difference between indentation levels
+			width=$(awk 'NR%2==1 { last_len=length($0); next }
+			{
+			  diff = length($0) - last_len;
+			  diff = (diff < 0 ? -diff : diff);
+			  if (diff != 0) { print diff }
+			}' <<<"$space" | sort -n | uniq -c | sort -rn | head -n 1 | awk '{print $2}')
+			[[ $width != 2 ]] && [[ $width != 4 ]] && [[ $width != 8 ]] && width=4
+		fi
+
+		[[ -n "$dry" ]] || data=$(printf "%s" "$data" | unexpand -t $width --first-only)
 	fi
 
 	if [[ -n "$failed" ]]; then
