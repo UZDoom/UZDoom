@@ -205,9 +205,9 @@ class OptionMenuItemSliderReverbEditOption : OptionMenuSliderBase
 {
 	int mValIndex;
 
-	OptionMenuItemSliderReverbEditOption Init(String label, double min, double max, double step, int showval, int valindex, double displayScale = 1.0, String valuesuffix = "")
+	OptionMenuItemSliderReverbEditOption Init(String label, double min, double max, double step, int showval, int valindex, double displayScale = 1.0, String valueFormat = "")
 	{
-		Super.Init(label, min, max, step, showval, displayScale: displayScale, valuesuffix: valuesuffix);
+		Super.Init(label, min, max, step, showval, displayScale: displayScale, valueFormat: valueFormat);
 		mValIndex = valindex;
 		return self;
 	}

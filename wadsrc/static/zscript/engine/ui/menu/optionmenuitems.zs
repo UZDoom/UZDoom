@@ -844,7 +844,7 @@ class OptionMenuSliderBase : OptionMenuItem
 	int mDrawX;
 	int mSliderShort;
 	double mDisplayScale;
-	String mValueSuffix;
+	String mValueFormat;
 
 	protected int mHeldTics;
 	protected int mHeldTimer;
@@ -862,7 +862,7 @@ class OptionMenuSliderBase : OptionMenuItem
 		int graycheckVal = 0,
 		name graycheckMode = 'Gray',
 		double displayScale = 1.0,
-		String valuesuffix = ""
+		String valueFormat = ""
 	)
 	{
 		Super.Init(label, command, false, graycheck, graycheckVal, graycheckMode);
@@ -873,7 +873,7 @@ class OptionMenuSliderBase : OptionMenuItem
 		mDrawX = 0;
 		mSliderShort = 0;
 		mDisplayScale = displayScale;
-		mValueSuffix = valuesuffix;
+		mValueFormat = valueFormat;
 
 		mHeldTics = mHeldTimer = mHeldDir = 0;
 		mEnter = null;
@@ -926,9 +926,15 @@ class OptionMenuSliderBase : OptionMenuItem
 			fracdigits = 0;
 		}
 
-		String format = String.Format("%%.%df", fracdigits);
-		String valueStr = String.Format(format, val * mDisplayScale)..mValueSuffix;
-		return valueStr;
+		String numFormat = String.Format("%%.%df", fracdigits);
+		String numStr = String.Format(numFormat, val * mDisplayScale);
+
+		if (mValueFormat == "")
+		{
+			return numStr;
+		}
+
+		return String.Format(StringTable.Localize(mValueFormat), numStr);
 	}
 
 	protected virtual double ParseSliderValue(String text, double fallback)
@@ -1240,10 +1246,10 @@ class OptionMenuItemSlider : OptionMenuSliderBase
 		int graycheckVal = 0,
 		name graycheckMode = 'Gray',
 		double displayScale = 1.0,
-		String valuesuffix = ""
+		String valueFormat = ""
 	)
 	{
-		Super.Init(label, min, max, step, showval, command, graycheck, graycheckVal, graycheckMode, displayScale, valuesuffix);
+		Super.Init(label, min, max, step, showval, command, graycheck, graycheckVal, graycheckMode, displayScale, valueFormat);
 		mCVar = CVar.FindCVar(command);
 		scale = (10 ** mShowValue) * displayScale;
 		return self;
