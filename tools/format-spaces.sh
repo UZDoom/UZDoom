@@ -52,8 +52,15 @@ while IFS= read -r -d '' file; do
 	line_endings=$(file "$file")
 	if grep -q $'\r' <<<"$data"; then
 		failed=1
-		printf "CRLF: %s\n" "$file"
+		printf "CRLF: %s\n" "$file" >&2
 		[[ -n "$dry" ]] || data="${data//$'\r'/}"
+	fi
+
+	[[ -n "$verbose" ]] && printf "Trailing spaces: %s\n" "$file"
+	if grep -q "[[:blank:]]$" <<<"$data"; then
+		failed=1
+		printf "Trailing spaces: %s\n" "$file" >&2
+		[[ -n "$dry" ]] || data=$(sed 's/[[:blank:]]*$//' <<<"$data")
 	fi
 
 	if [[ -n "$failed" ]]; then
