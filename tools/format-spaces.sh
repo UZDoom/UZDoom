@@ -38,16 +38,27 @@ while IFS= read -r -d '' file; do
 	((tested++))
 	failed=
 
+	data=$(cat "$file")
+
 	[[ -n "$verbose" ]] && printf "Testing EOF newline: %s\n" "$file"
 	end=$(tail -c 2 "$file" | od -An -tx1)
 	if [[ "$end" == *" 0a 0a"* ]] || [[ "$end" != *" 0a"* ]]; then
 		failed=1
 		printf "EOF newline: %s\n" "$file" >&2
-		[[ -n "$dry" ]] || { printf "%s\n" "$(cat "$file")" > "$file" ; }
+		# this will get automagically handled later lol
+	fi
+
+	[[ -n "$verbose" ]] && printf "Testing CRLF: %s\n" "$file"
+	line_endings=$(file "$file")
+	if grep -q $'\r' <<<"$data"; then
+		failed=1
+		printf "CRLF: %s\n" "$file"
+		[[ -n "$dry" ]] || data="${data//$'\r'/}"
 	fi
 
 	if [[ -n "$failed" ]]; then
 		((formatted++))
+		[[ -n "$dry" ]] || { printf "%s\n" "$data" > "$file" ; }
 		[[ -n "$failfast" ]] && exit 1
 	fi
 done < <(git ls-files -z)
