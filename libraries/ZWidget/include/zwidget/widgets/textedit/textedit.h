@@ -61,6 +61,7 @@ protected:
 	void OnKeyChar(std::string chars) override;
 	void OnKeyDown(InputKey key) override;
 	void OnKeyUp(InputKey key) override;
+	bool OnMouseWheel(const Point& pos, InputKey key) override;
 	void OnGeometryChanged() override;
 	void OnEnableChanged() override;
 	void OnSetFocus() override;

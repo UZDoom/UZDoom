@@ -24,6 +24,7 @@
 
 #include <stdint.h>
 
+#include "doomdef.h"
 #include "cmdlib.h"
 #include "keydef.h"
 #include "c_commandline.h"
@@ -135,12 +136,93 @@ const char *KeyNames[NUM_KEYS] =
 	"Guide",       "Pad_Misc",   "Pad_Touchpad",               //
 };
 
+CVAR(Int, cl_doubleclickthreshold, 250, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+
 FKeyBindings Bindings;
 FKeyBindings DoubleBindings;
 FKeyBindings AutomapBindings;
 
-static unsigned int DClickTime[NUM_KEYS];
-static FixedBitArray<NUM_KEYS> DClicked;
+static unsigned int DoubleClickDeadline[NUM_KEYS];
+static FixedBitArray<NUM_KEYS> DoubleClickedKeys;
+
+static FixedBitArray<NUM_KEYS> QueuedPresses;
+static FixedBitArray<NUM_KEYS> QueuedPressReleases;
+static const FKeyBindings *QueuedBindings[NUM_KEYS];
+
+static FixedBitArray<NUM_KEYS> DelayedReleases;
+static unsigned int DelayedReleaseTime[NUM_KEYS];
+static FString DelayedReleaseBindings[NUM_KEYS];
+
+static constexpr unsigned int SYNTHETIC_RELEASE_DELAY = 1000 / TICRATE;
+
+static void ClearQueuedPress(unsigned int key)
+{
+	QueuedPresses.Clear(key);
+	QueuedPressReleases.Clear(key);
+	QueuedBindings[key] = nullptr;
+	DoubleClickDeadline[key] = 0;
+}
+
+static bool ExecBinding(FString binding, unsigned int key, bool keyup, bool isDoubleClick)
+{
+	if (binding.IsEmpty() || (keyup && binding[0] != '+'))
+	{
+		return false;
+	}
+
+	char *copy = binding.LockBuffer();
+	if (keyup)
+	{
+		copy[0] = '-';
+	}
+	AddCommandString(copy, isDoubleClick ? key | KEY_DBLCLICKED : key);
+
+	return true;
+}
+
+void C_TickQueuedInputs()
+{
+	unsigned int nowtime = (unsigned)I_msTime();
+
+	// Flush and execute delayed synthetic releases
+	for (unsigned int key = 0; key < NUM_KEYS; ++key)
+	{
+		if (!DelayedReleases[key] || int(DelayedReleaseTime[key] - nowtime) > 0)
+		{
+			continue;
+		}
+
+		FString binding = DelayedReleaseBindings[key];
+		DelayedReleases.Clear(key);
+		DelayedReleaseTime[key] = 0;
+		DelayedReleaseBindings[key] = "";
+
+		ExecBinding(binding, key, true, false);
+	}
+
+	// Flush and execute queued presses with expired double-click deadlines
+	for (unsigned int key = 0; key < NUM_KEYS; ++key)
+	{
+		if (!QueuedPresses[key] || int(DoubleClickDeadline[key] - nowtime) > 0)
+		{
+			continue;
+		}
+
+		FString binding = QueuedBindings[key] != nullptr ? QueuedBindings[key]->GetBinding(key) : Bindings.GetBinding(key);
+		bool queueSyntheticRelease = QueuedPressReleases[key] && binding.Len() > 0 && binding[0] == '+';
+
+		ClearQueuedPress(key);
+		ExecBinding(binding, key, false, false);
+
+		// Queue a delayed synthetic release for already released "+ commands"
+		if (queueSyntheticRelease)
+		{
+			DelayedReleases.Set(key);
+			DelayedReleaseTime[key] = nowtime + SYNTHETIC_RELEASE_DELAY;
+			DelayedReleaseBindings[key] = binding;
+		}
+	}
+}
 
 //=============================================================================
 //
@@ -836,72 +918,88 @@ CCMD(binddefaults)
 //
 //=============================================================================
 
-bool C_DoKey (event_t *ev, FKeyBindings *binds, FKeyBindings *doublebinds)
+bool C_DoKey(event_t *ev, FKeyBindings *binds, FKeyBindings *doublebinds)
 {
-	FString binding;
-	bool dclick;
-	unsigned int nowtime;
-
-	if (ev->type != EV_KeyDown && ev->type != EV_KeyUp)
-		return false;
-
-	if ((unsigned int)ev->data1 >= NUM_KEYS)
-		return false;
-
-	dclick = false;
-
-	nowtime = (unsigned)I_msTime();
-	if (doublebinds != nullptr && int(DClickTime[ev->data1] - nowtime) > 0 && ev->type == EV_KeyDown)
+	if ((ev->type != EV_KeyDown && ev->type != EV_KeyUp) || (unsigned int)ev->data1 >= NUM_KEYS)
 	{
-		// Key pressed for a double click
-		binding = doublebinds->GetBinding(ev->data1);
-		DClicked.Set(ev->data1);
-		dclick = true;
+		return false;
+	}
+
+	const unsigned int key = (unsigned int)ev->data1;
+	const bool isKeyUp = ev->type == EV_KeyUp;
+
+	// Clean up queued input state
+	C_TickQueuedInputs();
+
+	// Ignore non-keyboard input if chat is active
+	if (chatmodeon != 0 && key >= 256)
+	{
+		return false;
+	}
+	
+	FString binding;
+	const bool hasDoubleBind = doublebinds != nullptr && doublebinds->GetBind(key) != nullptr;
+	const bool hasQueuedPress = QueuedPresses[key] && QueuedBindings[key] == binds;
+
+	bool isDoubleClick = false;
+	const unsigned int nowtime = (unsigned)I_msTime();
+
+	if (!isKeyUp)
+	{
+		if (!hasDoubleBind)
+		{
+			binding = binds->GetBinding(key);
+		}
+		else if (hasQueuedPress && int(DoubleClickDeadline[key] - nowtime) > 0)
+		{
+			// Second press within the double-click window, use the double-binding
+			binding = doublebinds->GetBinding(key);
+			ClearQueuedPress(key);
+			DoubleClickedKeys.Set(key);
+			isDoubleClick = true;
+		}
+		else
+		{
+			// Key has a double-binding. Queue and delay the press to allow for a double-click
+			QueuedPresses.Set(key);
+			QueuedPressReleases.Clear(key);
+			QueuedBindings[key] = binds;
+			DoubleClickDeadline[key] = nowtime + cl_doubleclickthreshold;
+			return true;
+		}
 	}
 	else
 	{
-		if (ev->type == EV_KeyDown)
-		{ // Key pressed for a normal press
-			binding = binds->GetBinding(ev->data1);
-			if (doublebinds != nullptr) DClickTime[ev->data1] = nowtime + 571;
+		if (hasDoubleBind && DoubleClickedKeys[key])
+		{
+			// Double-click binding released
+			binding = doublebinds->GetBinding(key);
+			DoubleClickedKeys.Clear(key);
+			isDoubleClick = true;
 		}
-		else if (doublebinds != nullptr && DClicked[ev->data1])
-		{ // Key released from a double click
-			binding = doublebinds->GetBinding(ev->data1);
-			DClicked.Clear(ev->data1);
-			DClickTime[ev->data1] = 0;
-			dclick = true;
+		else if (hasQueuedPress)
+		{
+			// Mark the queued press for a synthetic release
+			QueuedPressReleases.Set(key);
+			return true;
 		}
 		else
-		{ // Key released from a normal press
-			binding = binds->GetBinding(ev->data1);
+		{
+			binding = binds->GetBinding(key);
 		}
 	}
 
-
+	// Empty double-binding. Fall back to the normal binding
 	if (binding.IsEmpty())
 	{
-		binding = binds->GetBinding(ev->data1);
-		dclick = false;
+		binding = binds->GetBinding(key);
+		isDoubleClick = false;
 	}
 
-	if (ev->type == EV_KeyUp && (binding.Len() == 0 || binding[0] != '+'))
+	if (isKeyUp && (binding.Len() == 0 || binding[0] != '+'))
 	{
 		return false;
 	}
 
-	if (!binding.IsEmpty() && (chatmodeon == 0 || ev->data1 < 256))
-	{
-		char *copy = binding.LockBuffer();
-
-		if (ev->type == EV_KeyUp)
-		{
-			copy[0] = '-';
-		}
-
-		AddCommandString (copy, dclick ? ev->data1 | KEY_DBLCLICKED : ev->data1);
-		return true;
-	}
-	return false;
+	return ExecBinding(binding, key, isKeyUp, isDoubleClick);
 }
-

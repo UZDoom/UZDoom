@@ -266,8 +266,6 @@ void OpenGLFrameBuffer::Swap()
 
 		mVertexData->NextPipelineBuffer();
 		mVertexData->WaitSync();
-
-		RenderState()->SetVertexBuffer(screen->mVertexData); // Needed for Raze because it does not reset it
 	}
 	Finish.Unclock();
 	camtexcount = 0;

@@ -2929,6 +2929,8 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_EXTRA"
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
+	Slider "$ACCMNU_DOUBLECLICK_THRESHOLD", "cl_doubleclickthreshold", 100, 1000, 50, 0
+	Tooltip "$ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 
 	StaticText ""
 	SafeCommand "$OPTMNU_DEFAULTS", "acc_reset2defaults"

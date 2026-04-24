@@ -489,6 +489,7 @@ class MaceSpawner : SpecialSpot
 	{
 		+NOSECTOR
 		+NOBLOCKMAP
+		+WEAPONSPAWN
 	}
 
 	States

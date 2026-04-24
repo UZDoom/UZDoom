@@ -69,6 +69,7 @@ public:
 	void OnMouseMotion(const SDL_MouseMotionEvent& event);
 	void OnJoyButtonUp(const SDL_ControllerButtonEvent& event);
 	void OnJoyButtonDown(const SDL_ControllerButtonEvent& event);
+	void OnFileDrop(const SDL_DropEvent& event);
 	void OnPaintEvent();
 	static void OnTimerEvent(const SDL_UserEvent& event);
 

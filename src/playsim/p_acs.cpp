@@ -534,6 +534,7 @@
 extern int Net_Arbitrator;
 
 FRandom pr_acs ("ACS");
+FCRandom pr_csacs("CSACS");
 
 // I imagine this much stack space is probably overkill, but it could
 // potentially get used with recursive functions.
@@ -3632,7 +3633,7 @@ int DLevelScript::Random (int min, int max)
 		std::swap (max, min);
 	}
 
-	return min + pr_acs(max - min + 1);
+	return min + (bClientSide ? pr_csacs(max - min + 1) : pr_acs(max - min + 1));
 }
 
 int DLevelScript::ThingCount (int type, int stringid, int tid, int tag)

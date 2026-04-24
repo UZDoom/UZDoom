@@ -96,6 +96,17 @@ void PlayGamePage::OnSetFocus()
 	GamesList->SetFocus();
 }
 
+bool PlayGamePage::OnFileDrop(std::string path)
+{
+	auto text = ParametersEdit->GetText();
+	if (!text.empty()) text += " ";
+	text += "-file '";
+	text += path;
+	text += "'";
+	ParametersEdit->SetText(text);
+	return true;
+}
+
 void PlayGamePage::OnGeometryChanged()
 {
 	double y = 10.0;

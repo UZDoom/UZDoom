@@ -365,8 +365,8 @@ DEFINE_ACTION_FUNCTION(DReverbEdit, FillSelectMenu)
 			if (func != nullptr)
 			{
 				DMenuItemBase *item = (DMenuItemBase*)cls->CreateNew();
-				VMValue params[] = { item, &text, FName(cmd).GetIndex(), false, true };
-				VMCall(func->Variants[0].Implementation, params, 5, nullptr, 0);
+				VMValue params[] = { item, &text, FName(cmd).GetIndex(), false, true, (FIntCVar*)nullptr, 0, FName("Hide").GetIndex() };
+				VMCall(func->Variants[0].Implementation, params, 8, nullptr, 0);
 				desc->mItems.Push((DMenuItemBase*)item);
 			}
 		}

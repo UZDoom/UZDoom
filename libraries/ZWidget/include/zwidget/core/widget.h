@@ -217,6 +217,7 @@ private:
 	void OnWindowActivated() override;
 	void OnWindowDeactivated() override;
 	void OnWindowDpiScaleChanged() override;
+	bool OnFileDrop(std::string path) override;
 
 	void NotifySubscribers(const WidgetEvent type);
 

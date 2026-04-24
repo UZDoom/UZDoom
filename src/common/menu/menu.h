@@ -356,7 +356,7 @@ bool M_IsAnimated();
 
 struct IJoystickConfig;
 DMenuItemBase * CreateOptionMenuItemStaticText(const char *name, int v = -1, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
-DMenuItemBase * CreateOptionMenuItemSubmenu(const char *label, FName cmd, int center, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
+DMenuItemBase * CreateOptionMenuItemSubmenu(const char *label, FName cmd, int param, FIntCVar *greycheck = nullptr, int greycheckVal = 0, FName greycheckMode = NAME_Hide);
 DMenuItemBase * CreateOptionMenuItemControl(const char *label, FName cmd, FKeyBindings *bindings);
 DMenuItemBase * CreateOptionMenuItemJoyConfigMenu(const char *label, IJoystickConfig *joy);
 DMenuItemBase * CreateListMenuItemPatch(double x, double y, int height, int hotkey, FTextureID tex, FName command, int param);

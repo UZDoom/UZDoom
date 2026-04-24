@@ -1188,7 +1188,7 @@ DMenuItemBase * CreateOptionMenuItemJoyConfigMenu(const char *label, IJoystickCo
 DMenuItemBase * CreateOptionMenuItemSubmenu(
 	const char *label,
 	FName cmd,
-	int center,
+	int param,
 	FIntCVar *greycheck,
 	int greycheckVal,
 	FName greycheckMode
@@ -1197,7 +1197,7 @@ DMenuItemBase * CreateOptionMenuItemSubmenu(
 	auto c = PClass::FindClass("OptionMenuItemSubmenu");
 	auto p = c->CreateNew();
 	FString namestr = label;
-	VMValue params[] = { p, &namestr, cmd.GetIndex(), 0, center, greycheck, greycheckVal, greycheckMode.GetIndex() };
+	VMValue params[] = { p, &namestr, cmd.GetIndex(), param, false, greycheck, greycheckVal, greycheckMode.GetIndex() };
 	auto f = dyn_cast<PFunction>(c->FindSymbol("Init", false));
 	VMCall(f->Variants[0].Implementation, params, countof(params), nullptr, 0);
 	return (DMenuItemBase*)p;

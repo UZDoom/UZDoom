@@ -551,6 +551,19 @@ void TextEdit::OnKeyUp(InputKey key)
 {
 }
 
+bool TextEdit::OnMouseWheel(const Point& pos, InputKey key)
+{
+	if (key == InputKey::MouseWheelUp)
+	{
+		vert_scrollbar->SetPosition(vert_scrollbar->GetPosition() - 1);
+	}
+	else if (key == InputKey::MouseWheelDown)
+	{
+		vert_scrollbar->SetPosition(vert_scrollbar->GetPosition() + 1);
+	}
+	return true;
+}
+
 void TextEdit::OnSetFocus()
 {
 	if (!readonly)

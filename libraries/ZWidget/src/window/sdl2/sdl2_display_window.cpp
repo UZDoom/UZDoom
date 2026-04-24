@@ -1,4 +1,5 @@
 #include "sdl2_display_window.h"
+#include <SDL2/SDL_events.h>
 #include <stdexcept>
 #include <SDL2/SDL_vulkan.h>
 
@@ -209,8 +210,14 @@ bool SDL2DisplayWindow::GetKeyState(InputKey key)
 	const Uint8* state = SDL_GetKeyboardState(&numkeys);
 	if (!state) return false;
 
-	SDL_Scancode index = InputKeyToScancode(key);
-	return (index < numkeys) ? state[index] != 0 : false;
+	auto test = [numkeys, state](InputKey key) {
+		SDL_Scancode index = InputKeyToScancode(key);
+		return (index < numkeys) ? state[index] != 0 : false;
+	};
+
+	if (key == InputKey::Ctrl) return test(key) || test(InputKey::LControl) || test(InputKey::RControl);
+	if (key == InputKey::Shift) return test(key) || test(InputKey::LShift) || test(InputKey::RShift);
+	return test(key);
 }
 
 Rect SDL2DisplayWindow::GetWindowFrame() const
@@ -435,6 +442,7 @@ SDL2DisplayWindow* SDL2DisplayWindow::FindEventWindow(const SDL_Event& event)
 	case SDL_MOUSEBUTTONDOWN:      windowID = event.button.windowID; break;
 	case SDL_MOUSEWHEEL:           windowID = event.wheel.windowID;  break;
 	case SDL_MOUSEMOTION:          windowID = event.motion.windowID; break;
+	case SDL_DROPFILE:             windowID = event.drop.windowID;   break;
 	case SDL_CONTROLLERBUTTONUP:   break; // use last event
 	case SDL_CONTROLLERBUTTONDOWN: break; // use last event
 	default:
@@ -481,6 +489,7 @@ void SDL2DisplayWindow::DispatchEvent(const SDL_Event& event)
 	case SDL_MOUSEBUTTONDOWN:      window->OnMouseButtonDown(event.button);  break;
 	case SDL_MOUSEWHEEL:           window->OnMouseWheel     (event.wheel);   break;
 	case SDL_MOUSEMOTION:          window->OnMouseMotion    (event.motion);  break;
+	case SDL_DROPFILE:             window->OnFileDrop       (event.drop);    break;
 	case SDL_CONTROLLERBUTTONUP:   window->OnJoyButtonUp    (event.cbutton); break;
 	case SDL_CONTROLLERBUTTONDOWN: window->OnJoyButtonDown  (event.cbutton); break;
 	default:
@@ -551,6 +560,14 @@ void SDL2DisplayWindow::OnKeyUp(const SDL_KeyboardEvent& event)
 void SDL2DisplayWindow::OnKeyDown(const SDL_KeyboardEvent& event)
 {
 	WindowHost->OnWindowKeyDown(ScancodeToInputKey(event.keysym.scancode));
+}
+
+void SDL2DisplayWindow::OnFileDrop(const SDL_DropEvent& event)
+{
+	if (event.file == nullptr) return;
+	std::string file{event.file};
+	WindowHost->OnFileDrop(file);
+	SDL_free(event.file);
 }
 
 InputKey SDL2DisplayWindow::GetMouseButtonKey(const SDL_MouseButtonEvent& event)

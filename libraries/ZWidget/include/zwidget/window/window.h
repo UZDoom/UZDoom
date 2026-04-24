@@ -145,6 +145,7 @@ public:
 	virtual void OnWindowActivated() = 0;
 	virtual void OnWindowDeactivated() = 0;
 	virtual void OnWindowDpiScaleChanged() = 0;
+	virtual bool OnFileDrop(std::string path) = 0;
 };
 
 class DisplayWindow

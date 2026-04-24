@@ -73,6 +73,8 @@ void InitWidgetResources(const char* filename)
 		Theme::getClick (COLOR_BACKGROUND), Theme::getClick (COLOR_TEXT),
 		Theme::getBorder(COLOR_LIGHT),      Theme::getBorder(COLOR_HEAVY),
 	}}));
+
+	WidgetTheme::GetTheme()->GetStyle("lineedit")->SetDouble("noncontent-top", 6.0); // applicable to noto family fonts
 }
 
 void CloseWidgetResources()
