@@ -194,7 +194,7 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		DTA_DestHeight, h,
 		DTA_Rotate, angle.Degrees(),
 		DTA_AlphaChannel, true,
-		DTA_RenderStyle, style,
+		DTA_RenderStyle, style.AsDWORD,
 		DTA_FillColor, color & 0xFFFFFF,
 		TAG_DONE);
 }
