@@ -6223,11 +6223,7 @@ FxExpression *FxRandom::Resolve(FCompileContext &ctx)
 
 static int NativeRandom(FRandom *rng, int min, int max)
 {
-	if (max < min)
-	{
-		std::swap(max, min);
-	}
-	return (*rng)(max - min + 1) + min;
+	return rng->GenRand32MinMaxInclusive(min, max);
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(DObject, BuiltinRandom, NativeRandom)
