@@ -3,11 +3,14 @@
 usage() {
 	echo "Usage: $0 [-c] [-d] [-f] [-v]"
 	echo
-	echo "-c: check"
-	echo "-d: dry run"
-	echo "-f: fail fast"
-	echo "-v: verbose"
-	exit 1
+	echo "  -c: check"
+	echo "  -d: dry run"
+	echo "  -f: fail fast"
+	echo "  -v: verbose"
+	echo
+	echo "set any of the following env vars to disable that specific check:"
+	printf "  %s\n" NO_TEST_EOF NO_TEST_CRLF NO_TEST_TRAILING NO_TEST_LEADING NO_TEST_INCONSISTENT
+	exit $1
 }
 
 while getopts "cdfvh" opt; do
@@ -16,7 +19,8 @@ while getopts "cdfvh" opt; do
 		d) dry=true ;;
 		f) failfast=true ;;
 		v) verbose=true ;;
-		*) usage ;;
+		h) usage 0 ;;
+		*) usage 1 ;;
 	esac
 done
 
@@ -34,6 +38,7 @@ while IFS= read -r -d '' file; do
 	[[ "$file" == tools/re2c/* ]] && continue
 	[[ "$file" == tools/lemon/* ]] && continue
 	[[ "$file" == */thirdparty/* ]] && continue
+	[[ "$file" == *.dat ]] && continue
 
 	filename="${file##*/}"
 	[[ "$filename" == *?.* ]] && extension="${filename##*.}" || extension=""
@@ -43,27 +48,33 @@ while IFS= read -r -d '' file; do
 	((tested++))
 	failed=
 
-	[[ -n "$verbose" ]] && printf "Testing EOF newline: %s\n" "$file"
-	end=$(tail -c 2 "$file" | od -An -tx1)
-	if [[ "$end" == *" 0a 0a"* ]] || [[ "$end" != *" 0a"* ]]; then
-		failed=1
-		printf "EOF newline: %s\n" "$file" >&2
-		# this will get automagically handled later lol
+	if [[ -z "$NO_TEST_EOF" ]]; then
+		[[ -n "$verbose" ]] && printf "Testing EOF newline: %s\n" "$file"
+		end=$(tail -c 2 "$file" | od -An -tx1)
+		if [[ "$end" == *" 0a 0a"* ]] || [[ "$end" != *" 0a"* ]]; then
+			failed=1
+			printf "EOF newline: %s\n" "$file" >&2
+			# this will get automagically handled later lol
+		fi
 	fi
 
-	[[ -n "$verbose" ]] && printf "Testing CRLF: %s\n" "$file"
-	line_endings=$(file "$file")
-	if grep -q $'\r' <<<"$data"; then
-		failed=1
-		printf "CRLF: %s\n" "$file" >&2
-		[[ -n "$dry" ]] || data="${data//$'\r'/}"
+	if [[ -z "$NO_TEST_CRLF" ]]; then
+		[[ -n "$verbose" ]] && printf "Testing CRLF: %s\n" "$file"
+		line_endings=$(file "$file")
+		if grep -q $'\r' <<<"$data"; then
+			failed=1
+			printf "CRLF: %s\n" "$file" >&2
+			[[ -n "$dry" ]] || data="${data//$'\r'/}"
+		fi
 	fi
 
-	[[ -n "$verbose" ]] && printf "Trailing spaces: %s\n" "$file"
-	if grep -q "[[:blank:]]$" <<<"$data"; then
-		failed=1
-		printf "Trailing spaces: %s\n" "$file" >&2
-		[[ -n "$dry" ]] || data=$(sed 's/[[:blank:]]*$//' <<<"$data")
+	if [[ -z "$NO_TEST_TRAILING" ]]; then
+		[[ -n "$verbose" ]] && printf "Trailing spaces: %s\n" "$file"
+		if grep -q "[[:blank:]]$" <<<"$data"; then
+			failed=1
+			printf "Trailing spaces: %s\n" "$file" >&2
+			[[ -n "$dry" ]] || data=$(sed 's/[[:blank:]]*$//' <<<"$data")
+		fi
 	fi
 
 	tabs=
@@ -80,22 +91,27 @@ while IFS= read -r -d '' file; do
 			esac
 		;;
 	esac
-	if [ -z "$tabs" ]; then
-		[[ -n "$verbose" ]] && printf "Skipping leading spaces: %s\n" "$file"
-	else
-		[[ -n "$verbose" ]] && printf "Leading spaces: %s\n" "$file"
-		if grep -q "^    " <<<"$data"; then
-			failed=1
-			printf "Leading spaces: %s\n" "$file" >&2
-			indent=1
+
+	if [[ -z "$NO_TEST_LEADING" ]]; then
+		if [ -z "$tabs" ]; then
+			[[ -n "$verbose" ]] && printf "Skipping leading spaces: %s\n" "$file"
+		else
+			[[ -n "$verbose" ]] && printf "Testing Leading spaces: %s\n" "$file"
+			if grep -q "^    " <<<"$data"; then
+				failed=1
+				printf "Leading spaces: %s\n" "$file" >&2
+				indent=1
+			fi
 		fi
 	fi
 
-	[[ -n "$verbose" ]] && printf "Inconsistent indentation: %s\n" "$file"
-	if grep -q "^    " <<<"$data" && grep -q "^	" <<<"$data"; then
-		failed=1
-		printf "Inconsistent indentation: %s\n" "$file" >&2
-		indent=1
+	if [[ -z "$NO_TEST_INCONSISTENT" ]]; then
+		[[ -n "$verbose" ]] && printf "Testing Inconsistent indentation: %s\n" "$file"
+		if grep -q "^    " <<<"$data" && grep -q "^	" <<<"$data"; then
+			failed=1
+			printf "Inconsistent indentation: %s\n" "$file" >&2
+			indent=1
+		fi
 	fi
 
 	if [[ -n "$indent" ]]; then
@@ -123,7 +139,8 @@ while IFS= read -r -d '' file; do
 	fi
 done < <(git ls-files -z)
 
-printf "Checked: %d\nFormatted: %d\n" "$tested" "$formatted"
+printf "Checked: %d\n" $tested
+printf "Formatted: %d\n" "$formatted"
 
 if [[ -n "$check" ]] && [[ $formatted != 0 ]]; then
 	exit 1
