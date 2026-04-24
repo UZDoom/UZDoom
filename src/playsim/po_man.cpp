@@ -37,6 +37,7 @@
 #include "g_levellocals.h"
 #include "actorinlines.h"
 #include "v_text.h"
+#include "vm.h"
 
 // TYPES -------------------------------------------------------------------
 
@@ -58,6 +59,8 @@ public:
 	void Construct(FPolyObj *polyNum);
 	void Serialize(FSerializer &arc);
 	void Tick ();
+	DVector2 GetSpeedV() const { return m_Speedv; }
+	DAngle GetAngle() const { return m_Angle; }
 protected:
 	DAngle m_Angle;
 	DVector2 m_Speedv;
@@ -72,6 +75,8 @@ public:
 	void Construct(FPolyObj *polyNum);
 	void Serialize(FSerializer &arc);
 	void Tick();
+	DVector2 GetSpeed() const { return m_Speedv; }
+	DVector2 GetTarget() const { return m_Target; }
 protected:
 	DVector2 m_Speedv;
 	DVector2 m_Target;
@@ -87,6 +92,12 @@ public:
 	void Construct(FPolyObj *polyNum, podoortype_t type);
 	void Serialize(FSerializer &arc);
 	void Tick ();
+	DAngle GetDirection() const { return m_Direction; }
+	double GetTotalDist() const { return m_TotalDist; }
+	int GetTics() const { return m_Tics; }
+	int GetWaitTics() const { return m_WaitTics; }
+	podoortype_t GetType() const { return m_Type; }
+	bool IsClose() const { return m_Close; }
 protected:
 	DAngle m_Direction;
 	double m_TotalDist;
@@ -134,7 +145,7 @@ static FPolyNode *FreePolyNodes;
 
 //==========================================================================
 //
-//
+// Generic polyobject action
 //
 //==========================================================================
 
@@ -192,9 +203,27 @@ void DPolyAction::StopInterpolation ()
 	}
 }
 
+DEFINE_ACTION_FUNCTION(DPolyAction, GetSpeed)
+{
+	PARAM_SELF_PROLOGUE(DPolyAction);
+	ACTION_RETURN_FLOAT(self->GetSpeed());
+}
+
+DEFINE_ACTION_FUNCTION(DPolyAction, GetDistance)
+{
+	PARAM_SELF_PROLOGUE(DPolyAction);
+	ACTION_RETURN_FLOAT(self->GetDistance());
+}
+
+DEFINE_ACTION_FUNCTION(DPolyAction, GetPolyObj)
+{
+	PARAM_SELF_PROLOGUE(DPolyAction);
+	ACTION_RETURN_POINTER(self->GetPolyObj());
+}
+
 //==========================================================================
 //
-//
+// Rotating polyobject
 //
 //==========================================================================
 
@@ -207,7 +236,7 @@ void DRotatePoly::Construct(FPolyObj *polyNum)
 
 //==========================================================================
 //
-//
+// Moving polyobject
 //
 //==========================================================================
 
@@ -227,10 +256,22 @@ void DMovePoly::Construct(FPolyObj *polyNum)
 	m_Speedv = { 0,0 };
 }
 
+DEFINE_ACTION_FUNCTION(DMovePoly, GetSpeedV)
+{
+	PARAM_SELF_PROLOGUE(DMovePoly);
+	ACTION_RETURN_VEC2(self->GetSpeedV());
+}
+
+DEFINE_ACTION_FUNCTION(DMovePoly, GetAngle)
+{
+	PARAM_SELF_PROLOGUE(DMovePoly);
+	ACTION_RETURN_FLOAT(self->GetAngle().Degrees());
+}
+
 //==========================================================================
 //
 //
-//
+//	Moving polyobject to a specific point
 //
 //==========================================================================
 
@@ -249,9 +290,21 @@ void DMovePolyTo::Construct(FPolyObj *polyNum)
 	m_Speedv = m_Target = { 0,0 };
 }
 
+DEFINE_ACTION_FUNCTION(DMovePolyTo, GetSpeed)
+{
+	PARAM_SELF_PROLOGUE(DMovePolyTo);
+	ACTION_RETURN_VEC2(self->GetSpeed());
+}
+
+DEFINE_ACTION_FUNCTION(DMovePolyTo, GetTarget)
+{
+	PARAM_SELF_PROLOGUE(DMovePolyTo);
+	ACTION_RETURN_VEC2(self->GetTarget());
+}
+
 //==========================================================================
 //
-//
+// Polyobject doors
 //
 //==========================================================================
 
@@ -277,6 +330,42 @@ void DPolyDoor::Construct (FPolyObj * polyNum, podoortype_t type)
 	m_Tics = 0;
 	m_WaitTics = 0;
 	m_Close = false;
+}
+
+DEFINE_ACTION_FUNCTION(DPolyDoor, GetDirection)
+{
+	PARAM_SELF_PROLOGUE(DPolyDoor);
+	ACTION_RETURN_FLOAT(self->GetDirection().Degrees());
+}
+
+DEFINE_ACTION_FUNCTION(DPolyDoor, GetTotalDist)
+{
+	PARAM_SELF_PROLOGUE(DPolyDoor);
+	ACTION_RETURN_FLOAT(self->GetTotalDist());
+}
+
+DEFINE_ACTION_FUNCTION(DPolyDoor, GetTics)
+{
+	PARAM_SELF_PROLOGUE(DPolyDoor);
+	ACTION_RETURN_INT(self->GetTics());
+}
+
+DEFINE_ACTION_FUNCTION(DPolyDoor, GetWaitTics)
+{
+	PARAM_SELF_PROLOGUE(DPolyDoor);
+	ACTION_RETURN_INT(self->GetWaitTics());
+}
+
+DEFINE_ACTION_FUNCTION(DPolyDoor, GetType)
+{
+	PARAM_SELF_PROLOGUE(DPolyDoor);
+	ACTION_RETURN_INT(self->GetType());
+}
+
+DEFINE_ACTION_FUNCTION(DPolyDoor, IsClose)
+{
+	PARAM_SELF_PROLOGUE(DPolyDoor);
+	ACTION_RETURN_BOOL(self->IsClose());
 }
 
 // ===== Polyobj Event Code =====
