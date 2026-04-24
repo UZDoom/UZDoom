@@ -135,58 +135,58 @@ bool DBot::Move (usercmd_t *cmd)
 
 bool DBot::TryWalk (usercmd_t *cmd)
 {
-    if (!Move (cmd))
-        return false;
+	if (!Move (cmd))
+		return false;
 
-    player->mo->movecount = pr_bottrywalk() & 60;
-    return true;
+	player->mo->movecount = pr_bottrywalk() & 60;
+	return true;
 }
 
 void DBot::NewChaseDir (usercmd_t *cmd)
 {
-    dirtype_t   d[3];
+	dirtype_t   d[3];
 
-    int         tdir;
-    dirtype_t   olddir;
+	int         tdir;
+	dirtype_t   olddir;
 
-    dirtype_t   turnaround;
+	dirtype_t   turnaround;
 
-    if (!dest)
+	if (!dest)
 	{
 #ifndef BOT_RELEASE_COMPILE
-        Printf ("Bot tried move without destination\n");
+		Printf ("Bot tried move without destination\n");
 #endif
 		return;
 	}
 
-    olddir = (dirtype_t)player->mo->movedir;
-    turnaround = opposite[olddir];
+	olddir = (dirtype_t)player->mo->movedir;
+	turnaround = opposite[olddir];
 
 	DVector2 delta = player->mo->Vec2To(dest);
 
-    if (delta.X > 10)
-        d[1] = DI_EAST;
-    else if (delta.X < -10)
-        d[1] = DI_WEST;
-    else
-        d[1] = DI_NODIR;
+	if (delta.X > 10)
+		d[1] = DI_EAST;
+	else if (delta.X < -10)
+		d[1] = DI_WEST;
+	else
+		d[1] = DI_NODIR;
 
-    if (delta.Y < -10)
-        d[2] = DI_SOUTH;
-    else if (delta.Y > 10)
-        d[2] = DI_NORTH;
-    else
-        d[2] = DI_NODIR;
+	if (delta.Y < -10)
+		d[2] = DI_SOUTH;
+	else if (delta.Y > 10)
+		d[2] = DI_NORTH;
+	else
+		d[2] = DI_NODIR;
 
-    // try direct route
-    if (d[1] != DI_NODIR && d[2] != DI_NODIR)
-    {
+	// try direct route
+	if (d[1] != DI_NODIR && d[2] != DI_NODIR)
+	{
 		player->mo->movedir = diags[((delta.Y < 0) << 1) + (delta.X > 0)];
-        if (player->mo->movedir != turnaround && TryWalk(cmd))
-            return;
-    }
+		if (player->mo->movedir != turnaround && TryWalk(cmd))
+			return;
+	}
 
-    // try other directions
+	// try other directions
 	if (pr_botnewchasedir() > 200
 		|| fabs(delta.Y) > fabs(delta.X))
 	{
@@ -195,76 +195,76 @@ void DBot::NewChaseDir (usercmd_t *cmd)
 		d[2] = (dirtype_t)tdir;
 	}
 
-    if (d[1]==turnaround)
-        d[1]=DI_NODIR;
-    if (d[2]==turnaround)
-        d[2]=DI_NODIR;
+	if (d[1]==turnaround)
+		d[1]=DI_NODIR;
+	if (d[2]==turnaround)
+		d[2]=DI_NODIR;
 
-    if (d[1]!=DI_NODIR)
-    {
-        player->mo->movedir = d[1];
-        if (TryWalk (cmd))
-            return;
-    }
+	if (d[1]!=DI_NODIR)
+	{
+		player->mo->movedir = d[1];
+		if (TryWalk (cmd))
+			return;
+	}
 
-    if (d[2]!=DI_NODIR)
-    {
-        player->mo->movedir = d[2];
+	if (d[2]!=DI_NODIR)
+	{
+		player->mo->movedir = d[2];
 
-        if (TryWalk(cmd))
-            return;
-    }
+		if (TryWalk(cmd))
+			return;
+	}
 
-    // there is no direct path to the player,
-    // so pick another direction.
-    if (olddir!=DI_NODIR)
-    {
-        player->mo->movedir = olddir;
+	// there is no direct path to the player,
+	// so pick another direction.
+	if (olddir!=DI_NODIR)
+	{
+		player->mo->movedir = olddir;
 
-        if (TryWalk(cmd))
-            return;
-    }
+		if (TryWalk(cmd))
+			return;
+	}
 
-    // randomly determine direction of search
-    if (pr_botnewchasedir()&1)
-    {
-        for ( tdir=DI_EAST;
-              tdir<=DI_SOUTHEAST;
-              tdir++ )
-        {
-            if (tdir!=turnaround)
-            {
-                player->mo->movedir = tdir;
+	// randomly determine direction of search
+	if (pr_botnewchasedir()&1)
+	{
+		for ( tdir=DI_EAST;
+			  tdir<=DI_SOUTHEAST;
+			  tdir++ )
+		{
+			if (tdir!=turnaround)
+			{
+				player->mo->movedir = tdir;
 
-                if (TryWalk(cmd))
-                    return;
-            }
-        }
-    }
-    else
-    {
-        for ( tdir=DI_SOUTHEAST;
-              tdir != (DI_EAST-1);
-              tdir-- )
-        {
-            if (tdir!=turnaround)
-            {
-                player->mo->movedir = tdir;
+				if (TryWalk(cmd))
+					return;
+			}
+		}
+	}
+	else
+	{
+		for ( tdir=DI_SOUTHEAST;
+			  tdir != (DI_EAST-1);
+			  tdir-- )
+		{
+			if (tdir!=turnaround)
+			{
+				player->mo->movedir = tdir;
 
-                if (TryWalk(cmd))
-                    return;
-            }
-        }
-    }
+				if (TryWalk(cmd))
+					return;
+			}
+		}
+	}
 
-    if (turnaround !=  DI_NODIR)
-    {
-        player->mo->movedir = turnaround;
-        if (TryWalk(cmd))
-            return;
-    }
+	if (turnaround !=  DI_NODIR)
+	{
+		player->mo->movedir = turnaround;
+		if (TryWalk(cmd))
+			return;
+	}
 
-    player->mo->movedir = DI_NODIR;  // can not move
+	player->mo->movedir = DI_NODIR;  // can not move
 }
 
 
@@ -278,13 +278,13 @@ bool FCajunMaster::CleanAhead (AActor *thing, double x, double y, usercmd_t *cmd
 {
 	FCheckPosition tm;
 
-    if (!SafeCheckPosition (thing, x, y, tm))
-        return false;           // solid wall or thing
+	if (!SafeCheckPosition (thing, x, y, tm))
+		return false;           // solid wall or thing
 
-    if (!(thing->flags & MF_NOCLIP) )
-    {
-        if (tm.ceilingz - tm.floorz < thing->Height)
-            return false;       // doesn't fit
+	if (!(thing->flags & MF_NOCLIP) )
+	{
+		if (tm.ceilingz - tm.floorz < thing->Height)
+			return false;       // doesn't fit
 
 		double maxmove = MAXMOVEHEIGHT;
 		if (!(thing->flags&MF_MISSILE))
@@ -297,17 +297,17 @@ bool FCajunMaster::CleanAhead (AActor *thing, double x, double y, usercmd_t *cmd
 				cmd->buttons |= BT_JUMP;
 
 
-	        if ( !(thing->flags & MF_TELEPORT) &&
-	             tm.ceilingz < thing->Top())
-	            return false;       // mobj must lower itself to fit
+			if ( !(thing->flags & MF_TELEPORT) &&
+				 tm.ceilingz < thing->Top())
+				return false;       // mobj must lower itself to fit
 
-	        // jump out of water
+			// jump out of water
 //	        if((thing->eflags & (MF_UNDERWATER|MF_TOUCHWATER))==(MF_UNDERWATER|MF_TOUCHWATER))
 //	            maxstep=37;
 
-	        if ( !(thing->flags & MF_TELEPORT) &&
-	             (tm.floorz - thing->Z() > thing->MaxStepHeight) )
-	            return false;       // too big a step up
+			if ( !(thing->flags & MF_TELEPORT) &&
+				 (tm.floorz - thing->Z() > thing->MaxStepHeight) )
+				return false;       // too big a step up
 
 
 			if ( !(thing->flags&(MF_DROPOFF|MF_FLOAT))
@@ -315,8 +315,8 @@ bool FCajunMaster::CleanAhead (AActor *thing, double x, double y, usercmd_t *cmd
 				return false;       // don't stand over a dropoff
 
 		}
-    }
-    return true;
+	}
+	return true;
 }
 
 #define OKAYRANGE (5) //counts *2, when angle is in range, turning is not executed.
@@ -325,7 +325,7 @@ bool FCajunMaster::CleanAhead (AActor *thing, double x, double y, usercmd_t *cmd
 
 void DBot::TurnToAng ()
 {
-    double maxturn = MAXTURN;
+	double maxturn = MAXTURN;
 
 	if (player->ReadyWeapon != NULL)
 	{

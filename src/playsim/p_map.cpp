@@ -95,8 +95,8 @@ EXTERN_CVAR(Bool, haptics_do_menus)
 static int P_ShouldPassThroughPlayer(AActor *self, AActor *other)
 {
   return (dmflags3 & DF3_NO_PLAYER_CLIP) &&
-          other->player && other->player->mo == other &&
-          self->IsFriend(other);
+		  other->player && other->player->mo == other &&
+		  self->IsFriend(other);
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(AActor, ShouldPassThroughPlayer, P_ShouldPassThroughPlayer)
@@ -169,7 +169,7 @@ void P_CollidedWith(AActor* const collider, AActor* const collidee)
 }
 
 //==========================================================================
-// 
+//
 // CanCrossLine
 //
 // Checks if an actor can cross a line after all checks are processed.
@@ -384,7 +384,7 @@ void P_FindFloorCeiling(AActor *actor, int flags)
 	FMultiBlockLinesIterator mit(grouplist, actor);
 	FMultiBlockLinesIterator::CheckResult cres;
 
-	// if we already have a valid floor/ceiling sector within the current sector, 
+	// if we already have a valid floor/ceiling sector within the current sector,
 	// we do not need to iterate through plane portals to find a floor or ceiling.
 	if (actor->floorsector == actor->Sector) mit.StopDown();
 	if (actor->ceilingsector == actor->Sector) mit.StopUp();
@@ -426,7 +426,7 @@ CCMD(ffcf)
 //==========================================================================
 //
 // TELEPORT MOVE
-// 
+//
 
 //
 // P_TeleportMove
@@ -440,7 +440,7 @@ CCMD(ffcf)
 //
 //==========================================================================
 
-bool	P_TeleportMove(AActor* thing, const DVector3 &pos, bool telefrag, bool modifyactor) 
+bool	P_TeleportMove(AActor* thing, const DVector3 &pos, bool telefrag, bool modifyactor)
 {
 	FCheckPosition tmf;
 	sector_t *oldsec = thing->Sector;
@@ -785,7 +785,7 @@ double P_GetMoveFactor(const AActor *mo, double *frictionp)
 //==========================================================================
 //
 // Checks if the line intersects with the actor
-// returns 
+// returns
 // - 1 when above/below
 // - 0 when intersecting
 // - -1 when outside the portal
@@ -1004,7 +1004,7 @@ bool PIT_CheckLine(FMultiBlockLinesIterator &mit, FMultiBlockLinesIterator::Chec
 	{
 		if (wasfit)
 			tm.thing->BlockingLine = ld;
-		
+
 		return false;
 	}
 	// If the floor planes on both sides match we should recalculate open.bottom at the actual position we are checking
@@ -1105,14 +1105,14 @@ bool PIT_CheckLine(FMultiBlockLinesIterator &mit, FMultiBlockLinesIterator::Chec
 //
 // PIT_CheckPortal
 // This checks the destination side of a non-static line portal
-// We cannot run a full P_CheckPosition there because it'd set 
+// We cannot run a full P_CheckPosition there because it'd set
 // multiple fields to values that can cause problems in other
 // parts of the code
-// 
+//
 // What this does is starting a separate BlockLinesIterator
 // and only taking the absolutely necessary information
 // (i.e. floor and ceiling height plus terrain)
-// 
+//
 //
 //==========================================================================
 
@@ -1146,7 +1146,7 @@ static bool PIT_CheckPortal(FMultiBlockLinesIterator &mit, FMultiBlockLinesItera
 		if (!inRange(pbox, ld) || BoxOnLineSide(pbox, ld) != -1)
 			continue;
 
-		if (ld->backsector == NULL) 
+		if (ld->backsector == NULL)
 			continue;
 
 		DVector2 ref = FindRefPoint(ld, cres.Position.XY());
@@ -1265,7 +1265,7 @@ static bool CanAttackHurt(AActor *victim, AActor *shooter)
 		}
 		else if (infight == 0)
 		{
-			//  0: Monsters cannot hurt same species except 
+			//  0: Monsters cannot hurt same species except
 			//     cases where they are clearly supposed to do that
 			if (victim->IsFriend(shooter))
 			{
@@ -1469,7 +1469,7 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 	// Call the script callback. This must be done before any other checks that perform some actual action or may already return a 'block'.
 	// The checks here are to do this only for conditions that would later result in an action, calling this for everything would be too much of a drag if
 	// too many scripted overrides were being used, as PIT_CheckThing is even called for touching all the monster corpses lying around.
-	if (((thing->flags & MF_SOLID) || (thing->flags6 & (MF6_TOUCHY | MF6_BUMPSPECIAL))) && 
+	if (((thing->flags & MF_SOLID) || (thing->flags6 & (MF6_TOUCHY | MF6_BUMPSPECIAL))) &&
 		((tm.thing->flags & (MF_SOLID|MF_MISSILE)) || (tm.thing->flags2 & MF2_BLASTED) || (tm.thing->flags6 & MF6_BLOCKEDBYSOLIDACTORS) || (tm.thing->BounceFlags & BOUNCE_MBF)))
 	{
 		if (!P_CanCollideWith(tm.thing, thing)) return true;
@@ -1608,7 +1608,7 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 		// MBF bouncer might have a non-0 damage value, but they must not deal damage on impact either.
 		if ((tm.thing->BounceFlags & BOUNCE_Actors) && (tm.thing->IsZeroDamage() || !(tm.thing->flags & MF_MISSILE)))
 		{
-			return (((tm.thing->target == thing && !(tm.thing->flags8 & MF8_HITOWNER)) || !(thing->flags & MF_SOLID)) && 
+			return (((tm.thing->target == thing && !(tm.thing->flags8 & MF8_HITOWNER)) || !(thing->flags & MF_SOLID)) &&
 				(tm.thing->SpecialMissileHit(thing) != 0));
 		}
 
@@ -1745,7 +1745,7 @@ MOVEMENT CLIPPING
 // P_CheckPosition
 // This is purely informative, nothing is modified
 // (except things picked up and missile damage applied).
-// 
+//
 // in:
 //	a AActor (can be valid or invalid)
 //	a position to be checked
@@ -1957,7 +1957,7 @@ bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, boo
 			if (port != NULL && port->mFlags & PORTF_PASSABLE && port->mType != PORTT_LINKED)
 			{
 				// Checking the other side of the portal completely is too costly,
-				// but checking the portal's destination line is necessary to 
+				// but checking the portal's destination line is necessary to
 				// retrieve the proper sector heights on the other side.
 				if (PIT_CheckPortal(it, lcres, it.Box(), tm))
 				{
@@ -2549,7 +2549,7 @@ bool P_TryMove(AActor *thing, const DVector2 &pos,
 		oldAboveFakeCeiling = eyez > oldsec->heightsec->ceilingplane.ZatPoint(thing);
 	}
 
-	// Borrowed from MBF: 
+	// Borrowed from MBF:
 	if (thing->BounceFlags & BOUNCE_MBF &&  // killough 8/13/98
 		!(thing->flags & (MF_MISSILE | MF_NOGRAVITY)) &&
 		!thing->IsSentient() && tm.floorz - thing->Z() > 16)
@@ -2614,7 +2614,7 @@ bool P_TryMove(AActor *thing, const DVector2 &pos,
 				DVector3 pos(tm.pos.XY(), thing->Z());
 				DVector3 oldthingpos = thing->Pos();
 				DVector2 thingpos = oldthingpos.XY();
-				
+
 				P_TranslatePortalXY(ld, pos.X, pos.Y);
 				P_TranslatePortalXY(ld, thingpos.X, thingpos.Y);
 				P_TranslatePortalZ(ld, pos.Z);
@@ -3055,7 +3055,7 @@ void FSlide::HitSlideLine(line_t* ld)
 
 	// prevents sudden path reversal due to rounding error |	// phares
 	moveangle += DAngle::fromDeg(3600/65536.*65536.);		// Boom added 10 to the angle here.
-	
+
 	deltaangle = ::deltaangle(lineangle, moveangle);								//   V
 	movelen = tmmove.Length();
 	if (icyfloor && (deltaangle > DAngle::fromDeg(45)) && (deltaangle < DAngle::fromDeg(135)))
@@ -3067,9 +3067,9 @@ void FSlide::HitSlideLine(line_t* ld)
 			S_Sound(slidemo, CHAN_VOICE, 0, "*grunt", 1, ATTN_IDLE); // oooff!
 		}
 		tmmove = moveangle.ToVector(movelen);
-	}	
+	}
 	else
-	{	
+	{
 		// The compatibility option that used to be here had to be removed because
 		// with floating point math it was no longer possible to reproduce.
 
@@ -3439,7 +3439,7 @@ const secplane_t * P_CheckSlopeWalk(AActor *actor, DVector2 &move)
 		else if (t > 0)
 		{ // Desired location is in front of (above) the plane
 			if (actor->isAtZ(planezhere))	// it is very important not to be too precise here.
-			{ 
+			{
 				// Actor's current spot is on/in the plane, so walk down it
 				// Same principle as walking up, except reversed
 				dest += plane->Normal().XY() * t;
@@ -3690,8 +3690,8 @@ bool P_BounceActor(AActor *mo, AActor *BlockingMobj, bool ontop)
 	//Don't go through all of this if the actor is reflective and wants things to pass through them.
 	if (BlockingMobj && ((BlockingMobj->flags2 & MF2_REFLECTIVE) && (BlockingMobj->flags7 & MF7_THRUREFLECT)))	return true;
 	if (mo && BlockingMobj && ((mo->BounceFlags & BOUNCE_AllActors)
-		|| ((mo->flags & MF_MISSILE) && (!(mo->flags2 & MF2_RIP) 
-		|| (BlockingMobj->flags5 & MF5_DONTRIP) 
+		|| ((mo->flags & MF_MISSILE) && (!(mo->flags2 & MF2_RIP)
+		|| (BlockingMobj->flags5 & MF5_DONTRIP)
 		|| ((mo->flags6 & MF6_NOBOSSRIP) && (BlockingMobj->flags2 & MF2_BOSS))) && (BlockingMobj->flags2 & MF2_REFLECTIVE))
 		|| ((BlockingMobj->player == NULL) && (!(BlockingMobj->flags3 & MF3_ISMONSTER)))))
 	{
@@ -3778,7 +3778,7 @@ bool P_BounceActor(AActor *mo, AActor *BlockingMobj, bool ontop)
 			FName names[] = { NAME_Bounce, NAME_Actor, NAME_Creature };
 			FState *bouncestate;
 			int count = 2;
- 			if ((BlockingMobj->flags & MF_SHOOTABLE) && !(BlockingMobj->flags & MF_NOBLOOD))
+			if ((BlockingMobj->flags & MF_SHOOTABLE) && !(BlockingMobj->flags & MF_NOBLOOD))
 			{
 				count = 3;
 			}
@@ -3826,7 +3826,7 @@ bool P_ReflectOffActor(AActor* mo, AActor* blocking)
 			mo->Vel.Z *= -0.5;
 		}
 	}
-	
+
 	if (mo->flags2 & MF2_SEEKERMISSILE)
 		mo->tracer = mo->target;
 
@@ -4127,7 +4127,7 @@ struct aim_t
 
 	//============================================================================
 	//
-	// Finds where the trace exits an actor to check for hits from above/below 
+	// Finds where the trace exits an actor to check for hits from above/below
 	//
 	//============================================================================
 
@@ -4239,7 +4239,7 @@ struct aim_t
 
 		if (aimdebug)
 			Printf("Start AimTraverse, start = %f,%f,%f, vect = %f,%f\n", startpos.X, startpos.Y, startpos.Z, aimtrace.X, aimtrace.Y);
-		
+
 		while ((in = it.Next()))
 		{
 			line_t* 			li;
@@ -4278,7 +4278,7 @@ struct aim_t
 
 				if (open.range <= 0 || open.bottom >= open.top)
 					return;
-					
+
 				dist = attackrange * in->frac;
 
 				if (open.bottom != LINEOPEN_MIN)
@@ -4615,7 +4615,7 @@ static ETraceStatus CheckForActor(FTraceResults &res, void *userdata)
 	Origin *data = (Origin *)userdata;
 
 	// Skip actors if the puff has:
-	// 1. THRUACTORS 
+	// 1. THRUACTORS
 	// 2. SPECTRAL (unless the puff has SPECTRAL)
 	// 3. MTHRUSPECIES on puff and the shooter has same species as the hit actor
 	// 4. THRUSPECIES on puff and the puff has same species as the hit actor
@@ -4623,7 +4623,7 @@ static ETraceStatus CheckForActor(FTraceResults &res, void *userdata)
 	// 6. Matching ThruBits
 	// 7. A player caller with no player clip enabled
 
-	if ((data->ThruActors) || 
+	if ((data->ThruActors) ||
 		(!(data->Spectral) && res.Actor->flags4 & MF4_SPECTRAL) ||
 		(data->MThruSpecies && res.Actor->GetSpecies() == data->Caller->GetSpecies()) ||
 		(data->ThruSpecies && res.Actor->GetSpecies() == data->PuffSpecies) ||
@@ -4646,7 +4646,7 @@ static ETraceStatus CheckForActor(FTraceResults &res, void *userdata)
 //==========================================================================
 
 AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
-	DAngle pitch, int damage, FName damageType, PClassActor *pufftype, int flags, FTranslatedLineTarget*victim, int *actualdamage, 
+	DAngle pitch, int damage, FName damageType, PClassActor *pufftype, int flags, FTranslatedLineTarget*victim, int *actualdamage,
 	double sz, double offsetforward, double offsetside)
 {
 	if (t1->Level->localEventManager->WorldHitscanPreFired(t1, angle, distance, pitch, damage, damageType, pufftype, flags, sz, offsetforward, offsetside))
@@ -4697,12 +4697,12 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 
 	// We need to check the defaults of the replacement here
 	AActor *puffDefaults = GetDefaultByType(pufftype->GetReplacement(t1->Level));
-	
+
 	TData.hitGhosts = (t1->player != NULL &&
 		t1->player->ReadyWeapon != NULL &&
 		(t1->player->ReadyWeapon->flags2 & MF2_THRUGHOST)) ||
 		(puffDefaults && (puffDefaults->flags2 & MF2_THRUGHOST));
-	
+
 	spawnSky = (puffDefaults && (puffDefaults->flags3 & MF3_SKYEXPLODE));
 	TData.MThruSpecies = (puffDefaults && (puffDefaults->flags6 & MF6_MTHRUSPECIES));
 	TData.PuffSpecies = NAME_None;
@@ -4715,7 +4715,7 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 	{
 		TData.ThruSpecies = (puffDefaults && (puffDefaults->flags6 & MF6_THRUSPECIES));
 		TData.ThruActors = (puffDefaults && (puffDefaults->flags2 & MF2_THRUACTORS));
-		
+
 		// [MC] Because this is a one-hit trace event, we need to spawn the puff, get the species
 		// and destroy it. Assume there is no species unless tempuff isn't NULL. We cannot get
 		// a proper species the same way as puffDefaults flags it appears...
@@ -4781,7 +4781,7 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 	}
 
 	// Perform the trace.
-	if (!Trace(tempos, t1->Sector, direction, distance, MF_SHOOTABLE, 
+	if (!Trace(tempos, t1->Sector, direction, distance, MF_SHOOTABLE,
 		ML_BLOCKEVERYTHING | ML_BLOCKHITSCAN, t1, trace, tflags, CheckForActor, &TData))
 	{ // hit nothing
 		if (!nointeract && puffDefaults && puffDefaults->ActiveSound.isvalid())
@@ -4891,7 +4891,7 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 				if (!(trace.Actor->flags & MF_NOBLOOD))
 					puffFlags |= PF_HITTHINGBLEED;
 
-				// We must pass the unreplaced puff type here 
+				// We must pass the unreplaced puff type here
 				puff = P_SpawnPuff(t1, pufftype, bleedpos, trace.SrcAngleFromTarget, trace.SrcAngleFromTarget - DAngle::fromDeg(90), 2, puffFlags | PF_HITTHING, trace.Actor);
 			}
 			if (victim != NULL)
@@ -4925,10 +4925,10 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 				{
 					dmgflags |= DMG_NO_ARMOR;
 				}
-				
+
 				if (puff == NULL)
 				{
-					// Since the puff is the damage inflictor we need it here 
+					// Since the puff is the damage inflictor we need it here
 					// regardless of whether it is displayed or not.
 					puff = P_SpawnPuff(t1, pufftype, bleedpos, nullAngle, nullAngle, 2, puffFlags | PF_HITTHING | PF_TEMPORARY);
 					killPuff = true;
@@ -4954,7 +4954,7 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 					P_TraceBleed(newdam > 0 ? newdam : damage, trace.HitPos, trace.Actor, trace.SrcAngleFromTarget, pitch);
 				}
 			}
-			
+
 		}
 		if (trace.Crossed3DWater || trace.CrossedWater)
 		{
@@ -4978,7 +4978,7 @@ AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
 }
 
 AActor *P_LineAttack(AActor *t1, DAngle angle, double distance,
-	DAngle pitch, int damage, FName damageType, FName pufftype, int flags, FTranslatedLineTarget *victim, int *actualdamage, 
+	DAngle pitch, int damage, FName damageType, FName pufftype, int flags, FTranslatedLineTarget *victim, int *actualdamage,
 	double sz, double offsetforward, double offsetside)
 {
 	PClassActor *type = PClass::FindActor(pufftype);
@@ -5133,7 +5133,7 @@ int P_LineTrace(AActor *t1, DAngle angle, double distance,
 //
 //==========================================================================
 
-AActor *P_LinePickActor(AActor *t1, DAngle angle, double distance, DAngle pitch, ActorFlags actorMask, uint32_t wallMask) 
+AActor *P_LinePickActor(AActor *t1, DAngle angle, double distance, DAngle pitch, ActorFlags actorMask, uint32_t wallMask)
 {
 	DVector3 direction;
 	double shootz;
@@ -5144,14 +5144,14 @@ AActor *P_LinePickActor(AActor *t1, DAngle angle, double distance, DAngle pitch,
 
 	FTraceResults trace;
 	Origin TData;
-	
+
 	TData.Caller = t1;
 	TData.hitGhosts = true;
 	TData.MThruSpecies = false;
 	TData.ThruActors = false;
 	TData.ThruSpecies = false;
 	TData.PuffSpecies = NAME_None;
-	
+
 	if (Trace(t1->PosAtZ(shootz), t1->Sector, direction, distance,
 		actorMask, wallMask, t1, trace, TRACE_NoSky | TRACE_PortalRestrict, CheckForActor, &TData))
 	{
@@ -5410,7 +5410,7 @@ static ETraceStatus ProcessRailHit(FTraceResults &res, void *userdata)
 	{
 		data->count++;
 	}
-	return (data->StopAtOne || (data->limit && (data->count >= data->limit)) || (res.Actor->flags8 & MF8_STOPRAILS)) 
+	return (data->StopAtOne || (data->limit && (data->count >= data->limit)) || (res.Actor->flags8 & MF8_STOPRAILS))
 			? TRACE_Stop : TRACE_Continue;
 }
 
@@ -5476,8 +5476,8 @@ void P_RailAttack(FRailParams *p)
 
 	rail_data.StopAtInvul = (puffDefaults->flags3 & MF3_FOILINVUL) ? false : true;
 	rail_data.MThruSpecies = ((puffDefaults->flags6 & MF6_MTHRUSPECIES)) ? true : false;
-	
-	// Prevent mod breakage as somewhere, someone is relying on these to spawn on an actor 
+
+	// Prevent mod breakage as somewhere, someone is relying on these to spawn on an actor
 	// and move through them...
 	if ((puffDefaults->flags7 & MF7_ALLOWTHRUFLAGS))
 	{
@@ -5495,7 +5495,7 @@ void P_RailAttack(FRailParams *p)
 	}
 	// used as damage inflictor
 	AActor *thepuff = NULL;
-	
+
 	if (puffclass != NULL) thepuff = Spawn(source->Level, puffclass, source->Pos(), ALLOW_REPLACE);
 		rail_data.PuffSpecies = (thepuff != NULL) ? thepuff->GetSpecies() : NAME_None;
 
@@ -5510,7 +5510,7 @@ void P_RailAttack(FRailParams *p)
 
 	// Hurt anything the trace hit
 	unsigned int i;
-	
+
 	for (i = 0; i < rail_data.RailHits.Size(); i++)
 	{
 		bool spawnpuff;
@@ -6047,10 +6047,10 @@ CUSTOM_CVAR(Float, splashfactor, 1.f, CVAR_SERVERINFO)
 //==========================================================================
 //
 // P_GetRadiusDamage
-// 
+//
 // Part of P_RadiusAttack, separated so the GetRadiusAttack function can
 // exist without needing to maintain more than one function.
-// 
+//
 // Used by anything without OLDRADIUSDMG flag
 //==========================================================================
 
@@ -6131,11 +6131,11 @@ static double GetRadiusDamage(bool fromaction, AActor *bombspot, AActor *thing, 
 //==========================================================================
 //
 // P_GetOldRadiusDamage
-// 
+//
 // Part of P_RadiusAttack, separated so the GetRadiusAttack function can
 // exist without needing to maintain more than one function.
-// 
-// Used by barrels (OLDRADIUSDMG flag). Returns calculated damage 
+//
+// Used by barrels (OLDRADIUSDMG flag). Returns calculated damage
 // based on XY distance.
 //==========================================================================
 
@@ -6259,7 +6259,7 @@ int P_RadiusAttack(AActor *bombspot, AActor *bombsource, int bombdamage, double 
 		auto sourcegroup = bombspot->GetClass()->ActorInfo()->splash_group;
 		if (targetgroup != 0 && targetgroup == sourcegroup) continue;
 
-		// a much needed option: monsters that fire explosive projectiles cannot 
+		// a much needed option: monsters that fire explosive projectiles cannot
 		// be hurt by projectiles fired by a monster of the same type.
 		// Controlled by the DONTHARMCLASS and DONTHARMSPECIES flags.
 		if ((bombsource && !thing->player) // code common to both checks
@@ -6289,7 +6289,7 @@ int P_RadiusAttack(AActor *bombspot, AActor *bombsource, int bombdamage, double 
 		// them far too "active." BossBrains also use the old code
 		// because some user levels require they have a height of 16,
 		// which can make them near impossible to hit with the new code.
-		if ((flags & RADF_NODAMAGE) || (!((bombspot->flags5 | thing->flags5) & MF5_OLDRADIUSDMG) && 
+		if ((flags & RADF_NODAMAGE) || (!((bombspot->flags5 | thing->flags5) & MF5_OLDRADIUSDMG) &&
 			!(flags & RADF_OLDRADIUSDAMAGE) && !(thing->Level->i_compatflags2 & COMPATF2_EXPLODE2)))
 		{
 			double points = GetRadiusDamage(false, bombspot, thing, bombdamage, bombdistance, fulldamagedistance, bombsource == thing,!!(flags & RADF_CIRCULAR));
@@ -6366,7 +6366,7 @@ int P_RadiusAttack(AActor *bombspot, AActor *bombsource, int bombdamage, double 
 											{
 												vz *= 0.8;
 											}
-										
+
 											thing->Vel.Z += vz;	// this really doesn't work well
 										}
 									}
@@ -6527,7 +6527,7 @@ void P_FindAboveIntersectors(AActor *actor)
 		if (!((thing->flags2 | actor->flags2) & MF2_PASSMOBJ) && !((thing->flags3 | actor->flags3) & MF3_ISMONSTER))
 		{
 			// Don't bother if both things don't have MF2_PASSMOBJ set and aren't monsters.
-			// These things would always block each other which in nearly every situation is 
+			// These things would always block each other which in nearly every situation is
 			// not what is wanted here.
 			continue;
 		}
@@ -6583,7 +6583,7 @@ void P_FindBelowIntersectors(AActor *actor)
 		if (!((thing->flags2 | actor->flags2) & MF2_PASSMOBJ) && !((thing->flags3 | actor->flags3) & MF3_ISMONSTER))
 		{
 			// Don't bother if both things don't have MF2_PASSMOBJ set and aren't monsters.
-			// These things would always block each other which in nearly every situation is 
+			// These things would always block each other which in nearly every situation is
 			// not what is wanted here.
 			continue;
 		}
@@ -6616,7 +6616,7 @@ void P_DoCrunch(AActor *thing, FChangePosition *cpos)
 			if (!(thing->flags&MF_NOBLOOD))
 			{
 				PClassActor *bloodcls = thing->GetBloodType();
-				
+
 				P_TraceBleed (newdam > 0 ? newdam : cpos->crushchange, thing);
 				if (bloodcls != NULL)
 				{
@@ -7096,7 +7096,7 @@ bool P_ChangeSector(sector_t *sector, int crunch, double amt, int floorOrCeil, b
 
 	case 2:
 		// 3dmidtex
-		// This must check both floor and ceiling 
+		// This must check both floor and ceiling
 		iterator = (amt < 0) ? PIT_FloorDrop : PIT_FloorRaise;
 		iterator2 = (amt < 0) ? PIT_CeilingLower : PIT_CeilingRaise;
 		cpos.movemidtex = true;

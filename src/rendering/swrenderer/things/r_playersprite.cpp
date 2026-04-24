@@ -94,7 +94,7 @@ namespace swrenderer
 			(players[consoleplayer].cheats & CF_CHASECAM) ||
 			(r_deathcamera && Thread->Viewport->viewpoint.camera->health <= 0))
 			return;
-		
+
 		FDynamicColormap *basecolormap;
 		CameraLight *cameraLight = CameraLight::Instance();
 		auto nc = !!(Thread->Viewport->Level()->flags3 & LEVEL3_NOCOLOREDSPRITELIGHTING);
@@ -145,7 +145,7 @@ namespace swrenderer
 		if (Thread->Viewport->viewpoint.camera->player != NULL)
 		{
 			auto viewport = Thread->Viewport.get();
-			
+
 			double centerhack = viewport->CenterY;
 			double wx, wy;
 			float bobx, boby;
@@ -255,7 +255,7 @@ namespace swrenderer
 			sx += wx;
 			sy += wy;
 		}
-		
+
 		auto viewport = Thread->Viewport.get();
 
 		double pspritexscale = viewport->viewwindow.centerxwide / 160.0;
@@ -333,7 +333,7 @@ namespace swrenderer
 		FDynamicColormap *colormap_to_use = nullptr;
 		if (pspr->GetID() < PSP_TARGETCENTER)
 		{
-			// [MC] Set the render style 
+			// [MC] Set the render style
 			auto rs = pspr->GetRenderStyle(owner->RenderStyle, alpha);
 			vis.RenderStyle = rs.first;
 			vis.Alpha = rs.second;
@@ -367,9 +367,9 @@ namespace swrenderer
 				visstyle.Alpha = vis.Alpha;
 				visstyle.RenderStyle = STYLE_Count;
 				visstyle.Invert = false;
-				
+
 				Thread->Viewport->viewpoint.camera->Inventory->AlterWeaponSprite(&visstyle);
-				
+
 				if (!(pspr->Flags & PSPF_FORCEALPHA)) vis.Alpha = visstyle.Alpha;
 
 				if (visstyle.RenderStyle != STYLE_Count && !(pspr->Flags & PSPF_FORCESTYLE))
@@ -445,7 +445,7 @@ namespace swrenderer
 				{
 					accelSprite.special = CameraLight::Instance()->ShaderColormap();
 				}
-				else 
+				else
 				{
 					accelSprite.overlay = colormap_to_use->Fade;
 					accelSprite.overlay.a = uint8_t(vis.Light.ColormapNum * 255 / NUMCOLORMAPS);

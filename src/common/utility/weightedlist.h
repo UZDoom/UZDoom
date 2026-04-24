@@ -68,7 +68,7 @@ class TWeightedList
 		TWeightedList &operator= (const TWeightedList &) { return *this; }
 };
 
-template<class T> 
+template<class T>
 void TWeightedList<T>::AddEntry (T value, uint16_t weight)
 {
 	if (weight == 0)

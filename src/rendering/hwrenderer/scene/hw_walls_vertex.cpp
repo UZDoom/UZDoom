@@ -255,7 +255,7 @@ void HWWall::CountRightEdge(unsigned &ptr)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -286,4 +286,3 @@ void HWWall::MakeVertices(bool nosplit)
 		vertcount = CreateVertices(ret.first, split);
 	}
 }
-

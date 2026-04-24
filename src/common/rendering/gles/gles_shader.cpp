@@ -267,7 +267,7 @@ bool FShader::Load(const char * name, const char * vert_prog_lump_, const char *
 		uniform	vec4 uClipLine;
 
 		uniform	float uGlobVis;			// uGlobVis = R_GetGlobVis(r_visibility) / 32.0
-		uniform	int uPalLightLevels;	
+		uniform	int uPalLightLevels;
 		uniform	int uViewHeight;		// Software fuzz scaling
 		uniform	float uClipHeight;
 		uniform	float uClipHeightDirection;

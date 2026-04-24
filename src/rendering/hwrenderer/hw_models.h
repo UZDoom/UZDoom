@@ -54,4 +54,3 @@ public:
 	void SetupFrame(FModel *model, unsigned int frame1, unsigned int frame2, unsigned int size, int boneStartIndex) override;
 
 };
-

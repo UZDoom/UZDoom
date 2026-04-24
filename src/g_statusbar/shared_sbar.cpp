@@ -433,8 +433,8 @@ void DBaseStatusBar::SetScale ()
 		int sby = VerticalResolution - RelTop;
 		float aspect = ActiveRatio(w, h);
 		if (!AspectTallerThanWide(aspect))
-		{ 
-			// Wider or equal than 4:3 
+		{
+			// Wider or equal than 4:3
 			SBarTop = Scale(sby, h, VerticalResolution);
 			double width4_3 = w * 1.333 / aspect;
 			ST_X = int((w - width4_3) / 2);
@@ -523,7 +523,7 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	auto scalev = GetHUDScale();
 	int vwidth = int(twod->GetWidth() / scalev.X);
 	int vheight = int(twod->GetHeight() / scalev.Y);
-	
+
 	auto font = generic_ui ? NewSmallFont : SmallFont;
 	auto font2 = font;
 	auto fheight = font->GetHeight();
@@ -901,7 +901,7 @@ void DBaseStatusBar::RefreshViewBorder ()
 		DrawBorder(twod, tex, 0, viewwindowy, viewwindowx, viewheight + viewwindowy);
 		DrawBorder(twod, tex, viewwindowx + viewwidth, viewwindowy, Width, viewheight + viewwindowy);
 		DrawBorder(twod, tex, 0, viewwindowy + viewheight, Width, StatusBar->GetTopOfStatusbar());
-		
+
 		V_DrawFrame(twod, viewwindowx, viewwindowy, viewwidth, viewheight, ui_screenborder_classic_scaling);
 	}
 }
@@ -919,7 +919,7 @@ void DBaseStatusBar::RefreshBackground () const
 	float ratio = ActiveRatio (twod->GetWidth(), twod->GetHeight());
 	x = ST_X;
 	y = SBarTop;
-	
+
 	if (x == 0 && y == twod->GetHeight()) return;
 
 	auto tex = GetBorderTexture(primaryLevel);
@@ -1123,7 +1123,7 @@ void DBaseStatusBar::DrawLog ()
 			if (y<0) y=0;
 			w=600;
 		}
-		Dim(twod, 0, 0.5f, Scale(x, twod->GetWidth(), hudwidth), Scale(y, twod->GetHeight(), hudheight), 
+		Dim(twod, 0, 0.5f, Scale(x, twod->GetWidth(), hudwidth), Scale(y, twod->GetHeight(), hudheight),
 							 Scale(w, twod->GetWidth(), hudwidth), Scale(height, twod->GetHeight(), hudheight));
 		x+=20;
 		y+=10;
@@ -1471,4 +1471,3 @@ int GetInventoryIcon(AActor *item, uint32_t flags, int *applyscale)
 	}
 	return picnum.GetIndex();
 }
-

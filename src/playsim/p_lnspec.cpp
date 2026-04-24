@@ -49,13 +49,13 @@
 
 // Remaps EE sector change types to Generic_Floor values. According to the Eternity Wiki:
 /*
-    0 : No texture or type change. ( = 0)
-    1 : Copy texture, zero type; trigger model. ( = 1)
-    2 : Copy texture, zero type; numeric model. ( = 1+4)
-    3 : Copy texture, preserve type; trigger model. ( = 3)
-    4 : Copy texture, preserve type; numeric model. ( = 3+4)
-    5 : Copy texture and type; trigger model.  ( = 2)
-    6 : Copy texture and type; numeric model.  ( = 2+4)
+	0 : No texture or type change. ( = 0)
+	1 : Copy texture, zero type; trigger model. ( = 1)
+	2 : Copy texture, zero type; numeric model. ( = 1+4)
+	3 : Copy texture, preserve type; trigger model. ( = 3)
+	4 : Copy texture, preserve type; numeric model. ( = 3+4)
+	5 : Copy texture and type; trigger model.  ( = 2)
+	6 : Copy texture and type; numeric model.  ( = 2+4)
 */
 static const uint8_t ChangeMap[8] = { 0, 1, 5, 3, 7, 2, 6, 0 };
 
@@ -563,7 +563,7 @@ FUNC(LS_Generic_Floor)
 
 	return Level->EV_DoFloor (type, ln, arg0, SPEED(arg1), arg2,
 					   (arg4 & 16) ? 20 : -1, arg4 & 7, true);
-					   
+
 }
 
 FUNC(LS_Floor_Stop)
@@ -1394,7 +1394,7 @@ FUNC(LS_HealThing)
 	return it ? true : false;
 }
 
-// So that things activated/deactivated by ACS or DECORATE *and* by 
+// So that things activated/deactivated by ACS or DECORATE *and* by
 // the BUMPSPECIAL or USESPECIAL flags work correctly both ways.
 void DoActivateThing(AActor * thing, AActor * activator)
 {
@@ -1456,7 +1456,7 @@ FUNC(LS_Thing_Deactivate)
 		AActor *actor;
 		auto iterator = Level->GetActorIterator(arg0);
 		int count = 0;
-	
+
 		actor = iterator.Next ();
 		while (actor)
 		{
@@ -1467,7 +1467,7 @@ FUNC(LS_Thing_Deactivate)
 			actor = temp;
 			count++;
 		}
-	
+
 		return count != 0;
 	}
 	else if (it != NULL)
@@ -1515,7 +1515,7 @@ FUNC(LS_Thing_Destroy)
 	else if (arg0 == 0)
 	{
 		auto iterator = Level->GetThinkerIterator<AActor>();
-		
+
 		actor = iterator.Next ();
 		while (actor)
 		{
@@ -1691,7 +1691,7 @@ FUNC(LS_Thing_Hate)
 						hatee == hater ||					// can't hate self
 						!(hatee->flags & MF_SHOOTABLE) ||	// can't hate nonshootable things
 						hatee->health <= 0 ||				// can't hate dead things
-						(hatee->flags2 & MF2_DORMANT));	
+						(hatee->flags2 & MF2_DORMANT));
 			}
 
 			if (hatee != NULL && hatee != hater && (arg2 == 0 || (hater->goal != NULL && hater->target != hater->goal)))
@@ -2036,7 +2036,7 @@ FUNC(LS_FloorAndCeiling_LowerRaise)
 	bool res = Level->EV_DoCeiling (DCeiling::ceilRaiseToHighest, ln, arg0, SPEED(arg2), 0, 0, 0, 0, 0);
 	// The switch based Boom equivalents of FloorandCeiling_LowerRaise do incorrect checks
 	// which cause the floor only to move when the ceiling fails to do so.
-	// To avoid problems with maps that have incorrect args this only uses a 
+	// To avoid problems with maps that have incorrect args this only uses a
 	// more or less unintuitive value for the fourth arg to trigger Boom's broken behavior
 	if (arg3 != 1998 || !res)	// (1998 for the year in which Boom was released... :P)
 	{
@@ -2721,47 +2721,47 @@ FUNC(LS_Line_SetTextureScale)
 FUNC(LS_Line_SetBlocking)
 // Line_SetBlocking (id, setflags, clearflags)
 {
-    struct FlagTransEntry
-    {
-        int fieldIndex, bitmask;
-    };
+	struct FlagTransEntry
+	{
+		int fieldIndex, bitmask;
+	};
 
-    static const FlagTransEntry flagtrans[] =
-    {
-        {0, ML_BLOCKING},
-        {0, ML_BLOCKMONSTERS},
-        {0, ML_BLOCK_PLAYERS},
-        {0, ML_BLOCK_FLOATERS},
-        {0, ML_BLOCKPROJECTILE},
-        {0, ML_BLOCKEVERYTHING},
-        {0, ML_RAILING},
-        {0, ML_BLOCKUSE},
-        {0, ML_BLOCKSIGHT},
-        {0, ML_BLOCKHITSCAN},
-        {0, ML_SOUNDBLOCK},
-        {1, ML2_BLOCKLANDMONSTERS},
-        {-1, -1},
-    };
+	static const FlagTransEntry flagtrans[] =
+	{
+		{0, ML_BLOCKING},
+		{0, ML_BLOCKMONSTERS},
+		{0, ML_BLOCK_PLAYERS},
+		{0, ML_BLOCK_FLOATERS},
+		{0, ML_BLOCKPROJECTILE},
+		{0, ML_BLOCKEVERYTHING},
+		{0, ML_RAILING},
+		{0, ML_BLOCKUSE},
+		{0, ML_BLOCKSIGHT},
+		{0, ML_BLOCKHITSCAN},
+		{0, ML_SOUNDBLOCK},
+		{1, ML2_BLOCKLANDMONSTERS},
+		{-1, -1},
+	};
 
-    if (arg0 == 0) return false;
+	if (arg0 == 0) return false;
 
-    int setflags[2] = {};
-    int clearflags[2] = {};
+	int setflags[2] = {};
+	int clearflags[2] = {};
 
-    for (int i = 0; flagtrans[i].bitmask != -1; i++, arg1 >>= 1, arg2 >>= 1)
-    {
-        if (arg1 & 1) setflags[flagtrans[i].fieldIndex] |= flagtrans[i].bitmask;
-        if (arg2 & 1) clearflags[flagtrans[i].fieldIndex] |= flagtrans[i].bitmask;
-    }
+	for (int i = 0; flagtrans[i].bitmask != -1; i++, arg1 >>= 1, arg2 >>= 1)
+	{
+		if (arg1 & 1) setflags[flagtrans[i].fieldIndex] |= flagtrans[i].bitmask;
+		if (arg2 & 1) clearflags[flagtrans[i].fieldIndex] |= flagtrans[i].bitmask;
+	}
 
-    auto itr = Level->GetLineIdIterator(arg0);
-    int line;
-    while ((line = itr.Next()) >= 0)
-    {
-        Level->lines[line].flags = (Level->lines[line].flags & ~clearflags[0]) | setflags[0];
-        Level->lines[line].flags2 = (Level->lines[line].flags2 & ~clearflags[1]) | setflags[1];
-    }
-    return true;
+	auto itr = Level->GetLineIdIterator(arg0);
+	int line;
+	while ((line = itr.Next()) >= 0)
+	{
+		Level->lines[line].flags = (Level->lines[line].flags & ~clearflags[0]) | setflags[0];
+		Level->lines[line].flags2 = (Level->lines[line].flags2 & ~clearflags[1]) | setflags[1];
+	}
+	return true;
 }
 
 FUNC(LS_Line_SetAutomapFlags)
@@ -2952,7 +2952,7 @@ FUNC(LS_SetPlayerProperty)
 				if (power != 4)
 				{
 					auto item = it->GiveInventoryType(PClass::FindActor(powers[power]));
-					if (item != NULL && power == 0 && arg1 == 1) 
+					if (item != NULL && power == 0 && arg1 == 1)
 					{
 						item->ColorVar(NAME_BlendColor) = MakeSpecialColormap(INVERSECOLORMAP);
 					}
@@ -3217,7 +3217,7 @@ FUNC(LS_SendToCommunicator)
 
 	if (it != NULL && it->player != NULL && it->FindInventory(NAME_Communicator))
 	{
-		char name[32];									   
+		char name[32];
 		mysnprintf (name, countof(name), "svox/voc%d", arg0);
 
 		if (!arg3)
@@ -3371,7 +3371,7 @@ FUNC(LS_StartConversation)
 	{
 		return false;
 	}
-	
+
 	// Only living players are allowed to start conversations
 	if (it == NULL || it->player == NULL || it->player->mo != it || it->health<=0)
 	{

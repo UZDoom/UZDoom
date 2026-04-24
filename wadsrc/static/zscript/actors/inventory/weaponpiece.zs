@@ -26,7 +26,7 @@ class WeaponHolder : Inventory
 {
 	int PieceMask;
 	Class<Weapon> PieceWeapon;
-	
+
 	Default
 	{
 		+NOBLOCKMAP
@@ -41,11 +41,11 @@ class WeaponPiece : Inventory
 	{
 		+WEAPONSPAWN;
 	}
-	
+
 	int PieceValue;
 	Class<Weapon> WeaponClass;
 	Weapon FullWeapon;
-	
+
 	property number: PieceValue;
 	property weapon: WeaponClass;
 
@@ -55,7 +55,7 @@ class WeaponPiece : Inventory
 		class<Weapon> type = WeaponClass ? (class<Weapon>)(GetReplacement(WeaponClass)) : null;
 		return type ? type : WeaponClass;
 	}
-	
+
 	//==========================================================================
 	//
 	// TryPickupWeaponPiece
@@ -111,7 +111,7 @@ class WeaponPiece : Inventory
 			if (hold != null)
 			{
 				// Intentionally check against the unreplaced class
-				if (hold.PieceWeapon == WeaponClass) 
+				if (hold.PieceWeapon == WeaponClass)
 				{
 					break;
 				}
@@ -129,10 +129,10 @@ class WeaponPiece : Inventory
 
 		int pieceval = 1 << (PieceValue - 1);
 		if (shouldStay)
-		{ 
+		{
 			// Cooperative net-game
 			if (hold.PieceMask & pieceval)
-			{ 
+			{
 				// Already has the piece
 				return false;
 			}
@@ -143,9 +143,9 @@ class WeaponPiece : Inventory
 		{ // Deathmatch or singleplayer game
 			gaveAmmo = toucher.GiveAmmo (Defaults.AmmoType1, Defaults.AmmoGive1) +
 						toucher.GiveAmmo (Defaults.AmmoType2, Defaults.AmmoGive2);
-			
+
 			if (hold.PieceMask & pieceval)
-			{ 
+			{
 				// Already has the piece, check if mana needed
 				if (!gaveAmmo) return false;
 				GoAwayAndDie();
@@ -161,7 +161,7 @@ class WeaponPiece : Inventory
 			if (!toucher.FindInventory (type))
 			{
 				FullWeapon= Weapon(Spawn(type));
-				
+
 				// The weapon itself should not give more ammo to the player.
 				FullWeapon.AmmoGive1 = 0;
 				FullWeapon.AmmoGive2 = 0;
@@ -198,7 +198,7 @@ class WeaponPiece : Inventory
 
 	override String PickupMessage ()
 	{
-		if (FullWeapon) 
+		if (FullWeapon)
 		{
 			return FullWeapon.PickupMessage();
 		}

@@ -102,7 +102,7 @@ static uint8_t *GetBlendMap(PalEntry blend, uint8_t *blendwork)
 		{
 			return DesaturateColormap[blend - BLEND_DESATURATE1];
 		}
-		else 
+		else
 		{
 			blendwork[0]=0;
 			if (blend.a == 255)
@@ -136,7 +136,7 @@ static uint8_t *GetBlendMap(PalEntry blend, uint8_t *blendwork)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -220,7 +220,7 @@ PalettedPixels FMultiPatchTexture::CreatePalettedPixels(int conversion, int fram
 	}
 
 	if (!buildrgb)
-	{	
+	{
 		for (int i = 0; i < NumParts; ++i)
 		{
 			uint8_t *trans = Parts[i].Translation? Parts[i].Translation->Remap : nullptr;
@@ -343,5 +343,3 @@ void FMultiPatchTexture::CollectForPrecache(PrecacheInfo &info, bool requiretrue
 		Parts[i].Image->CollectForPrecache(info, requiretruecolor);
 	}
 }
-
-

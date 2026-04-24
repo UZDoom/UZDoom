@@ -53,7 +53,7 @@ namespace swrenderer
 	RenderViewport::RenderViewport()
 	{
 	}
-	
+
 	RenderViewport::~RenderViewport()
 	{
 	}

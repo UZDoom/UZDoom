@@ -875,7 +875,7 @@ CUSTOM_CVAR(Int, compatmode, 0, CVAR_ARCHIVE|CVAR_NOINITCALL)
 			COMPATF_NOTOSSDROPS | COMPATF_MUSHROOM | COMPATF_NO_PASSMOBJ | COMPATF_BOOMSCROLL | COMPATF_WALLRUN |
 			COMPATF_TRACE | COMPATF_HITSCAN | COMPATF_MISSILECLIP | COMPATF_CROSSDROPOFF | COMPATF_MASKEDMIDTEX | COMPATF_SOUNDTARGET;
 		w = COMPATF2_POINTONLINE | COMPATF2_EXPLODE1 | COMPATF2_EXPLODE2 | COMPATF2_AVOID_HAZARDS |
-		    COMPATF2_STAYONLIFT | COMPATF2_EMULATEMIKOPORTALS;
+			COMPATF2_STAYONLIFT | COMPATF2_EMULATEMIKOPORTALS;
 		break;
 	}
 	compatflags = v;
@@ -1113,7 +1113,7 @@ void D_Display ()
 
 	if (nodrawers || screen == NULL)
 		return; 				// for comparative timing / profiling
-	
+
 	if (!AppActive && !setmodeneeded && !vid_activeinbackground)
 	{
 		return;
@@ -1131,7 +1131,7 @@ void D_Display ()
 		players[consoleplayer].camera = players[consoleplayer].mo;
 	}
 
-    auto &vp = r_viewpoint;
+	auto &vp = r_viewpoint;
 	if (viewactive)
 	{
 		DAngle fov = DAngle::fromDeg(90.);
@@ -2054,7 +2054,7 @@ static FString ParseGameInfo(std::vector<FileSys::ResourceName> &pwads, const ch
 
 	const char *lastSlash = strrchr (fn, '/');
 	if (lastSlash == NULL)
-	    lastSlash = strrchr (fn, ':');
+		lastSlash = strrchr (fn, ':');
 
 	sc.OpenMem("GAMEINFO", data, size);
 	while(sc.GetToken())
@@ -2516,7 +2516,7 @@ static void CheckDefaultSkill()
 
 static void NewFailure ()
 {
-    I_FatalError ("Failed to allocate memory from system heap");
+	I_FatalError ("Failed to allocate memory from system heap");
 }
 
 //==========================================================================
@@ -3769,7 +3769,7 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 	FBaseCVar::EnableNoSet ();
 
 	// [Sal] FIXME: The window used to be created much earlier.
-	// 
+	//
 	// This makes more sense for the loading screen, but makes no sense
 	// for the netgame lobby. The lobby creates its own window, and takes
 	// up the main thread. This causes issues that range from annoying
@@ -3780,7 +3780,7 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 	// The solution for now is to simply create the window extremely late.
 	// This undoes most of the loading screen code, but improves stability
 	// in every other aspect.
-	// 
+	//
 	// Since all of the loading screen code constantly checks for null,
 	// I've left it as is so it can be reused as a reference when it
 	// gets overhauled. There's some potential ways we could re-introduce
@@ -4219,10 +4219,10 @@ int GameMain()
 	if (!zwidget)
 		zwidget = DisplayBackend::TryCreateSDL2();
 	if (!zwidget)
-    {
+	{
 		fprintf(stderr, "Unable to create init zwidget\n");
 		return -1;
-    }
+	}
 	DisplayBackend::Set(std::move(zwidget));
 
 	int ret = 0;

@@ -89,7 +89,7 @@ static const char* dsda_ReadOption(char* buf, size_t size, options_lump_t* lump)
 	if (lump->length <= 0)
 		return nullptr;
 
-	while (size > 1 && *lump->data && lump->length) 
+	while (size > 1 && *lump->data && lump->length)
 	{
 		size--;
 		lump->length--;
@@ -117,7 +117,7 @@ static struct dsda_options dsda_LumpOptions(int lumpnum)
 	auto data = fileSystem.ReadFile(lumpnum);
 	lump.data = (char*)data.GetMem();
 
-	while (dsda_ReadOption(buf, OPTIONS_LINE_LENGTH, &lump)) 
+	while (dsda_ReadOption(buf, OPTIONS_LINE_LENGTH, &lump))
 	{
 		if (buf[0] == '#')
 			continue;
@@ -128,9 +128,9 @@ static struct dsda_options dsda_LumpOptions(int lumpnum)
 		if (count != 2)
 			continue;
 
-		for (option = option_list; option->value; option++) 
+		for (option = option_list; option->value; option++)
 		{
-			if (!strncmp(key, option->key, OPTIONS_LINE_LENGTH)) 
+			if (!strncmp(key, option->key, OPTIONS_LINE_LENGTH))
 			{
 				mbf_options.*option->value = clamp(option->min, option->max, value);
 
@@ -144,7 +144,7 @@ static struct dsda_options dsda_LumpOptions(int lumpnum)
 }
 
 
-void parseOptions() 
+void parseOptions()
 {
 	int lumpnum = fileSystem.FindFile("OPTIONS");
 
@@ -201,4 +201,3 @@ void parseOptions()
 
 	}
 }
-

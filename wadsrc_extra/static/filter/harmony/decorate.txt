@@ -32,7 +32,7 @@ actor HarmonyPlayer : PlayerPawn
 			PLAY G 4 A_Pain
 			goto Spawn
 		Missile:
-			PLAY E 12 
+			PLAY E 12
 			goto Spawn
 		Melee:
 			PLAY F 6 bright
@@ -103,7 +103,7 @@ actor Beastling replaces ZombieMan
 			stop
 		Raise:
 			SARG NMLKJI 5
-			Goto See			
+			Goto See
 	}
 }
 
@@ -280,7 +280,7 @@ actor GuidedChaos replaces RevenantTracer
 	damage 10
 	deathsound "skeleton/active"
 	PROJECTILE
-	+SEEKERMISSILE 
+	+SEEKERMISSILE
 	+RANDOMIZE
 	seesound "skeleton/attack"
 	renderstyle Add
@@ -1275,7 +1275,7 @@ actor HarmonyBackpack : Backpack replaces Backpack
 }
 
 // The player should start with the hand grenades weapon, but no ammo.
-// TimeBombWeapon is used as the pickup which should only be picked up once 
+// TimeBombWeapon is used as the pickup which should only be picked up once
 // in multi player.
 actor HandGrenades : TimeBombWeapon
 {

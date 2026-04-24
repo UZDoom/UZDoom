@@ -64,13 +64,13 @@ class Fatso : Actor
 		FATT J 3;
 		FATT J 3 A_Pain;
 		Goto See;
-    Death:
+	Death:
 		FATT K 6;
 		FATT L 6 A_Scream;
 		FATT M 6 A_NoBlocking;
 		FATT NOPQRS 6;
 		FATT T -1 A_BossDeath;
-	    Stop;
+		Stop;
 	 Raise:
 		FATT R 5;
 		FATT QPONMLK 5;
@@ -124,7 +124,7 @@ class FatShot : Actor
 extend class Actor
 {
 	const FATSPREAD = 90./8;
-	
+
 	void A_FatRaise()
 	{
 		A_FaceTarget();
@@ -136,7 +136,7 @@ extend class Actor
 	// firing three missiles in three different directions?
 	// Doesn't look like it.
 	//
-	
+
 	void A_FatAttack1(class<Actor> spawntype = "FatShot")
 	{
 		if (target)
@@ -153,7 +153,7 @@ extend class Actor
 			}
 		}
 	}
-	
+
 	void A_FatAttack2(class<Actor> spawntype = "FatShot")
 	{
 		if (target)
@@ -170,7 +170,7 @@ extend class Actor
 			}
 		}
 	}
-	
+
 	void A_FatAttack3(class<Actor> spawntype = "FatShot")
 	{
 		if (target)
@@ -190,12 +190,12 @@ extend class Actor
 			}
 		}
 	}
-	
+
 	//
 	// killough 9/98: a mushroom explosion effect, sorta :)
 	// Original idea: Linguica
 	//
-	
+
 	void A_Mushroom(class<Actor> spawntype = "FatShot", int numspawns = 0, int flags = 0, double vrange = 4.0, double hrange = 0.5)
 	{
 		int i, j;
@@ -212,7 +212,7 @@ extend class Actor
 		if (aimtarget == null) return;
 		Actor owner = (flags & MSF_DontHurt) ? target : self;
 		aimtarget.Height = Height;
-		
+
 		bool shootmode = ((flags & MSF_Classic) || // Flag explicitly set, or no flags and compat options
 					(flags == 0 && CurState.bDehacked && (Level.compatflags & COMPATF_MUSHROOM)));
 
@@ -239,6 +239,5 @@ extend class Actor
 		}
 		aimtarget.Destroy();
 	}
-	
-}
 
+}

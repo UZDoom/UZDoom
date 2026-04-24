@@ -92,7 +92,7 @@ namespace
 	{
 		return (uint32_t)((float)inheight * v_MinimumToFill(inwidth, inheight));
 	}
-	
+
 	float v_MinimumToFill2(uint32_t inwidth, uint32_t inheight)
 	{
 		// sx = screen x dimension, sy = same for y
@@ -118,7 +118,7 @@ namespace
 	{
 		return (uint32_t)((float)inheight * v_MinimumToFill2(inwidth, inheight));
 	}
-	
+
 	inline void refresh_minimums()
 	{
 		// specialUI is tracking a state where high-res console fonts are actually required, and
@@ -292,32 +292,32 @@ CCMD (vid_scaletoheight)
 
 inline bool atob(const char* I)
 {
-    if (stricmp (I, "true") == 0 || stricmp (I, "1") == 0)
-        return true;
-    return false;
+	if (stricmp (I, "true") == 0 || stricmp (I, "1") == 0)
+		return true;
+	return false;
 }
 
 CCMD (vid_setscale)
 {
-    if (argv.argc() > 2)
-    {
-        vid_scale_customwidth = atoi(argv[1]);
-        vid_scale_customheight = atoi(argv[2]);
-        if (argv.argc() > 3)
-        {
-            vid_scale_linear = atob(argv[3]);
-            if (argv.argc() > 4)
-            {
-                vid_scale_custompixelaspect = (float)atof(argv[4]);
-            }
-        }
-        vid_scalemode = 5;
+	if (argv.argc() > 2)
+	{
+		vid_scale_customwidth = atoi(argv[1]);
+		vid_scale_customheight = atoi(argv[2]);
+		if (argv.argc() > 3)
+		{
+			vid_scale_linear = atob(argv[3]);
+			if (argv.argc() > 4)
+			{
+				vid_scale_custompixelaspect = (float)atof(argv[4]);
+			}
+		}
+		vid_scalemode = 5;
 	vid_scalefactor = 1.0;
-    }
-    else
-    {
-        Printf("Usage: vid_setscale <x> <y> [bool linear] [float pixel-shape]\nThis command will create a custom viewport scaling mode.\n");
-    }
+	}
+	else
+	{
+		Printf("Usage: vid_setscale <x> <y> [bool linear] [float pixel-shape]\nThis command will create a custom viewport scaling mode.\n");
+	}
 }
 
 CCMD (vid_scaletolowest)

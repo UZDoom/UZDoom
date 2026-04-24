@@ -41,7 +41,7 @@ class ArtiTeleport : Inventory
 		ATLP ABCB 4;
 		Loop;
 	}
-	
+
 	override bool Use(bool pickup)
 	{
 		Vector3 dest;
@@ -70,7 +70,5 @@ class ArtiTeleport : Inventory
 
 		return true;
 	}
-	
+
 }
-
-

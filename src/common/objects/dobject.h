@@ -476,7 +476,7 @@ private:
 
 public:
 	NetworkEntityManager() = delete;
-	
+
 	static constexpr uint32_t WorldNetID = 0u;
 	static constexpr uint32_t ClientNetIDStart = 1u;
 	inline static uint32_t NetIDStart;// = MAXPLAYERS + 1u;

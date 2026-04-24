@@ -253,7 +253,7 @@ int P_CheckMeleeRange (AActor* actor, double range)
 	AActor *pl = actor->target;
 
 	double dist;
-	
+
 	if (!pl)
 		return false;
 
@@ -282,11 +282,11 @@ int P_CheckMeleeRange (AActor* actor, double range)
 	// killough 7/18/98: friendly monsters don't attack other friends
 	if (actor->IsFriend(pl))
 		return false;
-		
+
 	if (!P_CheckSight (actor, pl, 0))
 		return false;
-														
-	return true;				
+
+	return true;
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(AActor, CheckMeleeRange, P_CheckMeleeRange)
@@ -305,12 +305,12 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, CheckMeleeRange, P_CheckMeleeRange)
 static int P_CheckMissileRange (AActor *actor)
 {
 	double dist;
-		
+
 	if ((actor->Sector->Flags & SECF_NOATTACK)) return false;
 
 	if (!P_CheckSight (actor, actor->target, SF_SEEPASTBLOCKEVERYTHING))
 		return false;
-		
+
 	if (actor->flags & MF_JUSTHIT)
 	{
 		// the target just hit the enemy, so fight back!
@@ -331,7 +331,7 @@ static int P_CheckMissileRange (AActor *actor)
 			return !(actor->target->flags & MF_JUSTHIT) && pr_defect() >128;
 		}
 	}
-		
+
 	if (actor->reactiontime)
 		return false;	// do not attack yet
 
@@ -339,14 +339,14 @@ static int P_CheckMissileRange (AActor *actor)
 	// monsters or players (except when attacked, and then only once)
 	if (actor->IsFriend(actor->target))
 		return false;
-			
+
 	if (actor->flags & MF_FRIENDLY && P_HitFriend(actor))
 		return false;
 
 	// OPTIMIZE: get this from a global checksight
 	// [RH] What?
 	dist = actor->Distance2D (actor->target) - 64;
-	
+
 	if (actor->MeleeState == NULL)
 		dist -= 128;	// no melee attack, so fire more
 
@@ -418,7 +418,7 @@ static bool P_IsOnLift(const AActor* actor)
 
 	// Check to see if it's in a sector which can be activated as a lift.
 	// This is a bit more restrictive than MBF as it only considers repeatable lifts moving from A->B->A and stop.
-	// Other types of movement are not easy to detect with the more complex map setup 
+	// Other types of movement are not easy to detect with the more complex map setup
 	// and also do not really make sense in this context unless they are actually active
 	return !!(sec->MoreFlags & SECMF_LIFT);
 }
@@ -547,7 +547,7 @@ static int P_Move (AActor *actor)
 	int steps = 1;
 
 	if (maxmove > 0)
-	{ 
+	{
 		const double xspeed = fabs (deltax);
 		const double yspeed = fabs (deltay);
 
@@ -691,7 +691,7 @@ static int P_Move (AActor *actor)
 
 		spechit_t spec;
 		int good = 0;
-		
+
 		if (!(actor->flags6 & MF6_NOTRIGGER))
 		{
 			while (spechit.Pop (spec))
@@ -711,7 +711,7 @@ static int P_Move (AActor *actor)
 	{
 		actor->flags &= ~MF_INFLOAT;
 	}
-	return true; 
+	return true;
 }
 
 //
@@ -812,7 +812,7 @@ void P_DoNewChaseDir (AActor *actor, double deltax, double deltay)
 	else if (deltay>10)
 		d[1] = DI_NORTH;
 	else
-		d[1] = DI_NODIR; 
+		d[1] = DI_NODIR;
 
 	// try direct route
 	if (d[0] != DI_NODIR && d[1] != DI_NODIR)
@@ -839,7 +839,7 @@ void P_DoNewChaseDir (AActor *actor, double deltax, double deltay)
 		if (d[1] == turnaround)
 			d[1] = DI_NODIR;
 	}
-		
+
 	if (d[0] != DI_NODIR && attempts[d[0]] == false)
 	{
 		actor->movedir = d[0];
@@ -872,7 +872,7 @@ void P_DoNewChaseDir (AActor *actor, double deltax, double deltay)
 	}
 
 	// randomly determine direction of search
-	if (pr_newchasedir() & 1)	
+	if (pr_newchasedir() & 1)
 	{
 		for (tdir = DI_EAST; tdir <= DI_SOUTHEAST; tdir++)
 		{
@@ -946,7 +946,7 @@ void P_NewChaseDir(AActor * actor)
 
 		if (!(actor->flags6 & MF6_NOFEAR))
 		{
-			if ((actor->target->player != NULL && (actor->target->player->cheats & CF_FRIGHTENING)) || 
+			if ((actor->target->player != NULL && (actor->target->player->cheats & CF_FRIGHTENING)) ||
 				(actor->flags4 & MF4_FRIGHTENED) ||
 				(actor->target->flags8 & MF8_FRIGHTENING))
 			{
@@ -961,10 +961,10 @@ void P_NewChaseDir(AActor * actor)
 		P_RandomChaseDir(actor);
 		return;
 	}
-	
+
 	// Try to move away from a dropoff
-	if (actor->floorz - actor->dropoffz > actor->MaxDropOffHeight && 
-		actor->Z() <= actor->floorz && !(actor->flags & MF_DROPOFF) && 
+	if (actor->floorz - actor->dropoffz > actor->MaxDropOffHeight &&
+		actor->Z() <= actor->floorz && !(actor->flags & MF_DROPOFF) &&
 		!(actor->flags2 & MF2_ONMOBJ) &&
 		!(actor->flags & MF_FLOAT) && !(actor->Level->i_compatflags & COMPATF_DROPOFF))
 	{
@@ -979,14 +979,14 @@ void P_NewChaseDir(AActor * actor)
 			if (line->backsector  && // Ignore one-sided linedefs
 				inRange(box, line) &&
 				BoxOnLineSide(box, line) == -1)
-		    {
+			{
 				double front = line->frontsector->floorplane.ZatPoint(actor->PosRelative(line));
 				double back  = line->backsector->floorplane.ZatPoint(actor->PosRelative(line));
 				DAngle angle;
-		
+
 				// The monster must contact one of the two floors,
 				// and the other must be a tall dropoff.
-				
+
 				if (back == actor->Z() && front < actor->Z() - actor->MaxDropOffHeight)
 				{
 					angle = line->Delta().Angle();   // front side dropoff
@@ -996,7 +996,7 @@ void P_NewChaseDir(AActor * actor)
 					angle = line->Delta().Angle() + DAngle::fromDeg(180.); // back side dropoff
 				}
 				else continue;
-		
+
 				// Move away from dropoff at a standard speed.
 				// Multiple contacted linedefs are cumulative (e.g. hanging over corner)
 				deltax -= 32 * angle.Sin();
@@ -1004,7 +1004,7 @@ void P_NewChaseDir(AActor * actor)
 			}
 		}
 
-		if (deltax != 0 || deltay != 0) 
+		if (deltax != 0 || deltay != 0)
 		{
 			// [Graf Zahl] I have changed P_TryMove to only apply this logic when
 			// being called from here. AVOIDINGDROPOFF activates the code that
@@ -1016,8 +1016,8 @@ void P_NewChaseDir(AActor * actor)
 			actor->flags5|=MF5_AVOIDINGDROPOFF;
 			P_DoNewChaseDir(actor, deltax, deltay);
 			actor->flags5&=~MF5_AVOIDINGDROPOFF;
-		
-			// If moving away from dropoff, set movecount to 1 so that 
+
+			// If moving away from dropoff, set movecount to 1 so that
 			// small steps are taken to get monster away from dropoff.
 			actor->movecount = 1;
 			return;
@@ -1031,8 +1031,8 @@ void P_NewChaseDir(AActor * actor)
 	// MBF code for friends. Cannot be done in ZDoom but left here as a reminder for later implementation.
 
 	if (actor->flags & target->flags & MF_FRIEND &&
-	    distfriend > dist && 
-	    !P_IsOnLift(target) && !P_IsUnderDamage(actor))
+		distfriend > dist &&
+		!P_IsOnLift(target) && !P_IsUnderDamage(actor))
 	  deltax = -deltax, deltay = -deltay;
 	else
 #endif
@@ -1041,7 +1041,7 @@ void P_NewChaseDir(AActor * actor)
 	// Todo: implement the movement logic
 	AActor *target = actor->target;
 	if (target->health > 0 && !actor->IsFriend(target) && target != actor->goal)
-    {   // Live enemy target
+	{   // Live enemy target
 
 		if ((actor->flags3 & MF3_AVOIDMELEE) || (actor->Level->flags3 & LEVEL3_AVOIDMELEE))
 		{
@@ -1062,7 +1062,7 @@ void P_NewChaseDir(AActor * actor)
 				actor->strafecount = pr_enemystrafe() & 15;
 				delta = -delta;
 			}
-	    }
+		}
 	}
 
 	P_DoNewChaseDir(actor, delta.X, delta.Y);
@@ -1150,7 +1150,7 @@ void P_RandomChaseDir (AActor *actor)
 					d[1] = DI_NODIR;
 				if (d[2] == turnaround)
 					d[2] = DI_NODIR;
-					
+
 				if (d[1] != DI_NODIR)
 				{
 					actor->movedir = d[1];
@@ -1386,7 +1386,7 @@ bool ValidEnemyInBlock(AActor* lookee, AActor* other, void* lookparams)
 	// [MBF] If the monster is already engaged in a one-on-one attack
 	// with a healthy friend, don't attack around 60% the time.
 
-	// [GrafZahl] This prevents friendlies from attacking all the same 
+	// [GrafZahl] This prevents friendlies from attacking all the same
 	// target.
 
 	if (keepChecking)
@@ -1514,12 +1514,12 @@ AActor *LookForTIDInBlock (AActor *lookee, int index, void *extparams)
 	FBlockNode *block;
 	AActor *link;
 	AActor *other;
-	
+
 	for (block = lookee->Level->blockmap.blocklinks[index]; block != NULL; block = block->NextActor)
 	{
 		link = block->Me;
 
-        if (!(link->flags & MF_SHOOTABLE))
+		if (!(link->flags & MF_SHOOTABLE))
 			continue;			// not shootable (observer or dead)
 
 		if (link == lookee)
@@ -1633,7 +1633,7 @@ int P_LookForTID (AActor *actor, INTBOOL allaround, FLookExParams *params)
 			if (!P_IsVisible (actor, other, !!allaround, params))
 				continue;			// out of sight
 		}
-		
+
 		// [RH] Need to be sure the reactiontime is 0 if the monster is
 		//		leaving its goal to go after something else.
 		if (actor->goal && actor->target == actor->goal)
@@ -1683,7 +1683,7 @@ AActor *LookForEnemiesInBlock (AActor *lookee, int index, void *extparam)
 {
 	FBlockNode *block;
 	FLookExParams *params = (FLookExParams *)extparam;
-	
+
 	for (block = lookee->Level->blockmap.blocklinks[index]; block != NULL; block = block->NextActor)
 	{
 		if (!ValidEnemyInBlock(lookee, block->Me, params))
@@ -1840,7 +1840,7 @@ int P_LookForPlayers (AActor *actor, INTBOOL allaround, FLookExParams *params)
 	{
 		pnum = actor->LastLookPlayerNumber;
 	}
-		
+
 	for (;;)
 	{
 		// [ED850] Each and every player should only ever be checked once.
@@ -1889,7 +1889,7 @@ int P_LookForPlayers (AActor *actor, INTBOOL allaround, FLookExParams *params)
 
 		if (!isTargetablePlayer(actor, player, allaround, params))
 			continue;
-		
+
 		// [RH] Need to be sure the reactiontime is 0 if the monster is
 		//		leaving its goal to go after a player.
 		if (actor->goal && actor->target == actor->goal)
@@ -1919,7 +1919,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Look)
 		return 0;
 
 	// [RH] Set goal now if appropriate
-	if (self->special == Thing_SetGoal && self->args[0] == 0) 
+	if (self->special == Thing_SetGoal && self->args[0] == 0)
 	{
 		auto iterator = self->Level->GetActorIterator(NAME_PatrolPoint, self->args[1]);
 		self->special = 0;
@@ -1937,7 +1937,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Look)
 	}
 	else
 	{
-		targ = (self->Level->i_compatflags & COMPATF_SOUNDTARGET || self->flags & MF_NOSECTOR)? 
+		targ = (self->Level->i_compatflags & COMPATF_SOUNDTARGET || self->flags & MF_NOSECTOR)?
 			self->Sector->SoundTarget : self->LastHeard;
 
 		// [RH] If the soundtarget is dead, don't chase it
@@ -1990,10 +1990,10 @@ DEFINE_ACTION_FUNCTION(AActor, A_Look)
 				goto seeyou;
 		}
 	}
-	
+
 	if (!P_LookForPlayers (self, self->flags4 & MF4_LOOKALLAROUND, NULL))
 		return 0;
-				
+
 	// go into chase state
   seeyou:
 	// [RH] Don't start chasing after a goal if it isn't time yet.
@@ -2031,12 +2031,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_Look)
 DEFINE_ACTION_FUNCTION(AActor, A_LookEx)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_INT	(flags)			
-	PARAM_FLOAT	(minseedist)	
-	PARAM_FLOAT	(maxseedist)	
-	PARAM_FLOAT (maxheardist)	
-	PARAM_ANGLE (fov)			
-	PARAM_STATE	(seestate)		
+	PARAM_INT	(flags)
+	PARAM_FLOAT	(minseedist)
+	PARAM_FLOAT	(maxseedist)
+	PARAM_FLOAT (maxheardist)
+	PARAM_ANGLE (fov)
+	PARAM_STATE	(seestate)
 
 	AActor *targ = NULL; // Shuts up gcc
 	double dist;
@@ -2047,7 +2047,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_LookEx)
 		return 0;
 
 	// [RH] Set goal now if appropriate
-	if (self->special == Thing_SetGoal && self->args[0] == 0) 
+	if (self->special == Thing_SetGoal && self->args[0] == 0)
 	{
 		auto iterator = self->Level->GetActorIterator(NAME_PatrolPoint, self->args[1]);
 		self->special = 0;
@@ -2090,12 +2090,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_LookEx)
 					}
 				}
 			}
-        }
-        
-        if (targ && targ->player && (targ->player->cheats & CF_NOTARGET))
-        {
-            return 0;
-        }
+		}
+
+		if (targ && targ->player && (targ->player->cheats & CF_NOTARGET))
+		{
+			return 0;
+		}
 	}
 
 	// [RH] Andy Baker's stealth monsters
@@ -2119,33 +2119,33 @@ DEFINE_ACTION_FUNCTION(AActor, A_LookEx)
 				}
 
 				// Let the self wander around aimlessly looking for a fight
-                if (!(self->flags7 & MF7_INCHASE))
-                {
-                    if (seestate)
-                    {
-                        self->SetState (seestate);
-                    }
-                    else
-                    {
-                        if (self->SeeState != NULL)
-                        {
-                            self->SetState (self->SeeState);
-                        }
-                        else
-                        {
-                            A_Wander(self);
-                        }
-                    }
-                }
+				if (!(self->flags7 & MF7_INCHASE))
+				{
+					if (seestate)
+					{
+						self->SetState (seestate);
+					}
+					else
+					{
+						if (self->SeeState != NULL)
+						{
+							self->SetState (self->SeeState);
+						}
+						else
+						{
+							A_Wander(self);
+						}
+					}
+				}
 			}
 		}
 		else
 		{
 			self->target = targ; //We already have a target?
-            
-            // [KS] The target can become ourselves in rare circumstances (like
-            // if we committed suicide), so if that's the case, just ignore it.
-            if (self->target == self) self->target = nullptr;
+
+			// [KS] The target can become ourselves in rare circumstances (like
+			// if we committed suicide), so if that's the case, just ignore it.
+			if (self->target == self) self->target = nullptr;
 
 			if (self->target != NULL)
 			{
@@ -2174,7 +2174,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_LookEx)
 	{
 		return 0;
 	}
-				
+
 	// go into chase state
   seeyou:
 	// [RH] Don't start chasing after a goal if it isn't time yet.
@@ -2197,17 +2197,17 @@ DEFINE_ACTION_FUNCTION(AActor, A_LookEx)
 
 	if (self->target && !(self->flags7 & MF7_INCHASE))
 	{
-        if (!(flags & LOF_NOJUMP))
-        {
-            if (seestate)
-            {
-                self->SetState (seestate);
-            }
-            else
-            {
-                self->SetState (self->SeeState);
-            }
-        }
+		if (!(flags & LOF_NOJUMP))
+		{
+			if (seestate)
+			{
+				self->SetState (seestate);
+			}
+			else
+			{
+				self->SetState (self->SeeState);
+			}
+		}
 	}
 	return 0;
 }
@@ -2469,7 +2469,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 				actor->FriendPlayer != player->attacker->FriendPlayer))
 			{
 				actor->target = player->attacker;
-			} 
+			}
 		}
 	}
 	if (!actor->target || !(actor->target->flags & MF_SHOOTABLE))
@@ -2507,7 +2507,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 			}
 		}
 	}
-	
+
 	// do not attack twice in a row
 	if (actor->flags & MF_JUSTATTACKED)
 	{
@@ -2524,7 +2524,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 		actor->flags7 &= ~MF7_INCHASE;
 		return;
 	}
-	
+
 	// [RH] Don't attack if just moving toward goal
 	if (actor->target == actor->goal || (actor->flags5&MF5_CHASEGOAL && actor->goal != NULL))
 	{
@@ -2622,7 +2622,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 			actor->flags7 &= ~MF7_INCHASE;
 			return;
 		}
-		
+
 		// check for missile attack
 		if (missilestate)
 		{
@@ -2630,10 +2630,10 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 			{
 				goto nomissile;
 			}
-			
+
 			if (!P_CheckMissileRange (actor))
 				goto nomissile;
-			
+
 			actor->SetState (missilestate);
 			actor->flags |= MF_JUSTATTACKED;
 			actor->flags4 |= MF4_INCOMBAT;
@@ -2674,7 +2674,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 
 	if (actor->strafecount)
 		actor->strafecount--;
-	
+
 	// class bosses don't do this when strafing
 	if ((!fastchase || !actor->FastChaseStrafeCount) && !dontmove)
 	{
@@ -2688,7 +2688,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 		{
 			P_NewChaseDir(actor);
 		}
-		// if the move was illegal, reset it 
+		// if the move was illegal, reset it
 		// (copied from A_SerpentChase - it applies to everything with CANTLEAVEFLOORPIC!)
 		if (actor->flags2&MF2_CANTLEAVEFLOORPIC && actor->floorpic != oldFloor )
 		{
@@ -2706,7 +2706,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 		}
 	}
 	else if (dontmove && actor->movecount > 0) actor->movecount--;
-	
+
 	// make active sound
 	if (playactive && pr_chase() < 3)
 	{
@@ -2722,7 +2722,7 @@ void A_DoChase (AActor *actor, bool fastchase, FState *meleestate, FState *missi
 //
 // Checks if an actor can resurrect with another one, calling virtual script
 // functions to check.
-// 
+//
 //==========================================================================
 
 // [MC] Code is almost a duplicate of CanCollideWith but with changes to
@@ -2781,7 +2781,7 @@ bool P_CheckForResurrection(AActor* self, bool usevilestates, FState* state = nu
 {
 	const AActor *info;
 	AActor *temp;
-		
+
 	if (self->movedir != DI_NODIR)
 	{
 		const double absSpeed = fabs (self->Speed);
@@ -3035,13 +3035,13 @@ void A_Face(AActor *self, AActor *other, DAngle max_turn, DAngle max_pitch, DAng
 	if (max_pitch <= DAngle::fromDeg(180.))
 	{
 		DVector2 dist = self->Vec2To(other);
-		
+
 		// Positioning ala missile spawning, 32 units above foot level
 		double source_z = self->Z() + 32 + self->GetBobOffset();
 		double target_z = other->Z() + 32 + other->GetBobOffset();
 
 		// If the target z is above the target's head, reposition to the middle of
-		// its body.		
+		// its body.
 		if (target_z >= other->Top())
 		{
 			target_z = other->Center();
@@ -3051,10 +3051,10 @@ void A_Face(AActor *self, AActor *other, DAngle max_turn, DAngle max_pitch, DAng
 			source_z = self->Center();
 		}
 
-		//Note there is no +32 on purpose. This is for customization sake. 
+		//Note there is no +32 on purpose. This is for customization sake.
 		//If one doesn't want this behavior, just don't use FAF_BOTTOM.
 		if (flags & FAF_BOTTOM)
-			target_z = other->Z() + other->GetBobOffset(); 
+			target_z = other->Z() + other->GetBobOffset();
 		if (flags & FAF_MIDDLE)
 			target_z = other->Center() + other->GetBobOffset();
 		if (flags & FAF_TOP)
@@ -3066,7 +3066,7 @@ void A_Face(AActor *self, AActor *other, DAngle max_turn, DAngle max_pitch, DAng
 		double ddist = g_sqrt(dist.X*dist.X + dist.Y*dist.Y + dist_z*dist_z);
 
 		DAngle other_pitch = -DAngle::fromRad(g_asin(dist_z / ddist)).Normalized180();
-		
+
 		if (max_pitch != nullAngle)
 		{
 			if (self->Angles.Pitch > other_pitch)
@@ -3087,7 +3087,7 @@ void A_Face(AActor *self, AActor *other, DAngle max_turn, DAngle max_pitch, DAng
 		self->Angles.Pitch += pitch_offset;
 		A_Face_ShadowHandling(self, other, max_pitch, other_pitch, true);
 	}
-	
+
 
 	A_Face_ShadowHandling(self,other,max_turn,other_angle,false);
 }
@@ -3122,7 +3122,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_MonsterRail)
 	}
 
 	self->flags &= ~MF_AMBUSH;
-		
+
 	self->Angles.Yaw = self->AngleTo(self->target);
 
 	self->Angles.Pitch = P_AimLineAttack (self, self->Angles.Yaw, MISSILERANGE, &t, DAngle::fromDeg(60.), 0, self->target);
@@ -3229,10 +3229,10 @@ int CheckBossDeath (AActor *actor)
 	for (i = 0; i < MAXPLAYERS; i++)
 		if (actor->Level->PlayerInGame(i) && actor->Level->Players[i]->health > 0)
 			break;
-	
+
 	if (i == MAXPLAYERS)
 		return false; // no one left alive, so do not end game
-	
+
 	// Make sure all bosses are dead
 	auto iterator = actor->Level->GetThinkerIterator<AActor>();
 	AActor *other;
@@ -3254,7 +3254,7 @@ int CheckBossDeath (AActor *actor)
 		  // [RH] Frozen bosses don't count as dead until they shatter
 			return false;
 		}
-		
+
 	}
 	// The boss death is good
 	return true;
@@ -3272,10 +3272,10 @@ void A_BossDeath(AActor *self)
 	auto replacee = self->GetClass()->GetReplacee(self->Level);
 	FName type = replacee->TypeName;
 	int flags8 = self->flags8;
-	
+
 	if (type != mytype) flags8 |= ((AActor*)replacee->Defaults)->flags8;
-	
-	
+
+
 	// Do generic special death actions first
 	bool checked = false;
 	auto Level = self->Level;
@@ -3354,9 +3354,9 @@ void A_BossDeath(AActor *self)
 		// samereplacement will only be considered if both Fatso and Arachnotron are flagged as MAP07 bosses and the current monster maps to one of them.
 		PClassActor * fatso = PClass::FindActor(NAME_Fatso);
 		PClassActor * arachnotron = PClass::FindActor(NAME_Arachnotron);
-		bool samereplacement = (type == NAME_Fatso || type == NAME_Arachnotron) && 
-			fatso && arachnotron && 
-			(GetDefaultByType(fatso)->flags8 & MF8_MAP07BOSS1) && 
+		bool samereplacement = (type == NAME_Fatso || type == NAME_Arachnotron) &&
+			fatso && arachnotron &&
+			(GetDefaultByType(fatso)->flags8 & MF8_MAP07BOSS1) &&
 			(GetDefaultByType(arachnotron)->flags8 & MF8_MAP07BOSS2) &&
 			fatso->GetReplacement(Level) == arachnotron->GetReplacement(Level);
 
@@ -3364,7 +3364,7 @@ void A_BossDeath(AActor *self)
 		{
 			Level->EV_DoFloor (DFloor::floorLowerToLowest, NULL, 666, 1., 0, -1, 0, false);
 		}
-		
+
 		if ((flags8 & MF8_MAP07BOSS2) || samereplacement)
 		{
 			Level->EV_DoFloor (DFloor::floorRaiseByTexture, NULL, 667, 1., 0, -1, 0, false);
@@ -3378,11 +3378,11 @@ void A_BossDeath(AActor *self)
 		case LEVEL_SPECLOWERFLOOR:
 			Level->EV_DoFloor (DFloor::floorLowerToLowest, NULL, 666, 1., 0, -1, 0, false);
 			return;
-		
+
 		case LEVEL_SPECLOWERFLOORTOHIGHEST:
 			Level->EV_DoFloor (DFloor::floorLowerToHighest, NULL, 666, 1., 0, -1, 0, false);
 			return;
-		
+
 		case LEVEL_SPECOPENDOOR:
 			Level->EV_DoDoor (DDoor::doorOpen, NULL, NULL, 666, 8., 0, 0, 0);
 			return;

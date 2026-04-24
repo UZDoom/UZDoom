@@ -41,7 +41,7 @@ void G_DeferedInitNew (FNewGameStartup *gs);
 
 bool CreateCutscene(struct CutsceneDef* cs, DObject* runner, level_info_t* map);
 
-enum 
+enum
 {
 	CHANGELEVEL_KEEPFACING = 1,
 	CHANGELEVEL_RESETINVENTORY = 2,

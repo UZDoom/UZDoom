@@ -125,7 +125,7 @@ class ScriptUtil play
 			activator.ClearInventory();
 		}
 	}
-	
+
 	//==========================================================================
 	//
 	//
@@ -223,7 +223,7 @@ class ScriptUtil play
 			Console.Printf ("Unknown actor type: %s\n", type.GetClassName());
 		}
 	}
-	
+
 
 	//==========================================================================
 	//
@@ -236,12 +236,12 @@ class ScriptUtil play
 		if (activator == null) return 0;
 		let ammotype = (class<Ammo>)(type);
 		if (ammotype == null) return 0;
-		
+
 		if (newmaxamount != int.min)
 		{
 			let iammo = Ammo(activator.FindInventory(ammotype));
 			if(newmaxamount < 0) newmaxamount = 0;
-			if (!iammo) 
+			if (!iammo)
 			{
 				activator.GiveAmmo(ammotype, 1);
 				iammo = Ammo(activator.FindInventory(ammotype));
@@ -280,7 +280,7 @@ class ScriptUtil play
 		if (activator == null) return 0;
 		let ammotype = (class<Ammo>)(type);
 		if (ammotype == null) return 0;
-		
+
 		if (newamount != int.min)
 		{
 			let iammo = activator.FindInventory(ammotype);
@@ -291,6 +291,6 @@ class ScriptUtil play
 		let iammo = activator.FindInventory(ammotype);
 		if (iammo) return iammo.Amount;
 		else return 0;
-	}	
-	
+	}
+
 }

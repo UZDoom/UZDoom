@@ -93,7 +93,7 @@ class Wraith : Actor
 		WRT2 I 1 A_FreezeDeathChunks;
 		Wait;
 	}
-	
+
 	//============================================================================
 	//
 	// A_WraithInit
@@ -255,8 +255,8 @@ class WraithBuried : Wraith
 		+INVISIBLE
 		PainChance 0;
 	}
-	
-	
+
+
 	States
 	{
 	Spawn:
@@ -270,7 +270,7 @@ class WraithBuried : Wraith
 	Chase:
 		Goto Super::See;
 	}
-	
+
 	//============================================================================
 	//
 	// A_WraithRaiseInit
@@ -310,7 +310,7 @@ class WraithBuried : Wraith
 		SpawnDirt (radius);
 	}
 
-	
+
 }
 
 // Wraith FX 1 --------------------------------------------------------------
@@ -347,7 +347,7 @@ class WraithFX1 : Actor
 		WRBL I 3 Bright;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_WraithFX2 - spawns sparkle tail of missile
@@ -376,7 +376,7 @@ class WraithFX1 : Actor
 		}
 	}
 
-	
+
 }
 
 // Wraith FX 2 --------------------------------------------------------------

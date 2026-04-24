@@ -665,7 +665,7 @@ void FStartScreen::Render(bool force)
 			screen->ToggleFullscreen(vid_fullscreen);
 			V_OutputResized(screen->GetWidth(), screen->GetHeight());
 		}
-		
+
 		screen->FrameTime = nowtime;
 		screen->BeginFrame();
 		twod->ClearClipRect();
@@ -753,4 +753,3 @@ void ibm437_to_utf8(char* result, char in)
 {
 	unicode_to_utf8(result, IBM437ToUnicode[(unsigned char)in]);
 }
-

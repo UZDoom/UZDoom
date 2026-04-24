@@ -203,7 +203,7 @@ static WeaponPosition3D GetWeaponPosition3D(player_t *player, double ticFrac)
 			w.wx = (float)(w.weapon->oldx + (w.weapon->x - w.weapon->oldx) * frac);
 			w.wy = (float)(w.weapon->oldy + (w.weapon->y - w.weapon->oldy) * frac);
 		}
-		
+
 		auto weaponActor = w.weapon->GetCaller();
 
 		if (weaponActor && weaponActor->IsKindOf(NAME_Weapon))
@@ -594,7 +594,7 @@ bool HUDSprite::GetWeaponRect(HWDrawInfo *di, DPSprite *psp, float sx, float sy,
 		FAngle rot = FAngle::fromDeg(float((flip) ? -psp->rotation.Degrees() : psp->rotation.Degrees()));
 		const float cosang = rot.Cos();
 		const float sinang = rot.Sin();
-		
+
 		float xcenter, ycenter;
 		const float width = x2 - x1;
 		const float height = y2 - y1;
@@ -638,8 +638,8 @@ bool HUDSprite::GetWeaponRect(HWDrawInfo *di, DPSprite *psp, float sx, float sy,
 
 		Vert.v[i] = t;
 	}
-	
-	// [MC] If this is absolutely necessary, uncomment it. It just checks if all the vertices 
+
+	// [MC] If this is absolutely necessary, uncomment it. It just checks if all the vertices
 	// are all off screen either to the right or left, but is it honestly needed?
 	/*
 	if ((
@@ -675,7 +675,7 @@ void HWDrawInfo::PreparePlayerSprites2D(sector_t * viewsector, area_t in_area)
 	static PClass * wpCls = PClass::FindClass("Weapon");
 	static unsigned ModifyBobLayerVIndex = GetVirtualIndex(wpCls, "ModifyBobLayer");
 	static VMFunction * ModifyBobLayerOrigFunc = wpCls->Virtuals.Size() > ModifyBobLayerVIndex ? wpCls->Virtuals[ModifyBobLayerVIndex] : nullptr;
-	
+
 	AActor * playermo = players[consoleplayer].camera;
 	player_t * player = playermo->player;
 
@@ -706,7 +706,7 @@ void HWDrawInfo::PreparePlayerSprites2D(sector_t * viewsector, area_t in_area)
 	for (DPSprite *psp = player->psprites; psp != nullptr && psp->GetID() < PSP_TARGETCENTER; psp = psp->GetNext())
 	{
 		if (!psp->GetState()) continue;
-		
+
 		FSpriteModelFrame *smf = FindModelFrame(psp->Caller, psp->GetSprite(), psp->GetFrame(), false);
 
 		// This is an 'either-or' proposition. This maybe needs some work to allow overlays with weapon models but as originally implemented this just won't work.
@@ -751,13 +751,13 @@ void HWDrawInfo::PreparePlayerSprites2D(sector_t * viewsector, area_t in_area)
 void HWDrawInfo::PreparePlayerSprites3D(sector_t * viewsector, area_t in_area)
 {
 	static PClass * wpCls = PClass::FindClass("Weapon");
-	
+
 	static unsigned ModifyBobLayer3DVIndex = GetVirtualIndex(wpCls, "ModifyBobLayer3D");
 	static unsigned ModifyBobPivotLayer3DVIndex = GetVirtualIndex(wpCls, "ModifyBobPivotLayer3D");
 
 	static VMFunction * ModifyBobLayer3DOrigFunc = wpCls->Virtuals.Size() > ModifyBobLayer3DVIndex ? wpCls->Virtuals[ModifyBobLayer3DVIndex] : nullptr;
 	static VMFunction * ModifyBobPivotLayer3DOrigFunc = wpCls->Virtuals.Size() > ModifyBobPivotLayer3DVIndex ? wpCls->Virtuals[ModifyBobPivotLayer3DVIndex] : nullptr;
-	
+
 	AActor * playermo = players[consoleplayer].camera;
 	player_t * player = playermo->player;
 
@@ -807,7 +807,7 @@ void HWDrawInfo::PreparePlayerSprites3D(sector_t * viewsector, area_t in_area)
 		if(ModifyBobLayer3D && (psp->Flags & PSPF_ADDBOB))
 		{
 			DVector3 t, r;
-			
+
 			VMReturn returns[2];
 
 			returns[0].Vec3At(&t);
@@ -852,7 +852,7 @@ void HWDrawInfo::PreparePlayerSprites3D(sector_t * viewsector, area_t in_area)
 			}
 		}
 
-		// [BB] In the HUD model step we just render the model and break out. 
+		// [BB] In the HUD model step we just render the model and break out.
 		hudsprite.mx = spos.X;
 		hudsprite.my = spos.Y;
 
@@ -866,8 +866,8 @@ void HWDrawInfo::PreparePlayerSprites(sector_t * viewsector, area_t in_area)
 
 	AActor * playermo = players[consoleplayer].camera;
 	player_t * player = playermo->player;
-	
-    const auto &vp = Viewpoint;
+
+	const auto &vp = Viewpoint;
 
 	AActor *camera = vp.camera;
 
@@ -880,7 +880,7 @@ void HWDrawInfo::PreparePlayerSprites(sector_t * viewsector, area_t in_area)
 		return;
 
 	const bool hudModelStep = IsHUDModelForPlayerAvailable(camera->player);
-	
+
 	if(hudModelStep)
 	{
 		PreparePlayerSprites3D(viewsector,in_area);
@@ -932,7 +932,7 @@ void HWDrawInfo::PrepareTargeterSprites(double ticfrac)
 		if (psp->GetState() != nullptr && (psp->GetID() != PSP_TARGETCENTER || CrosshairImage == nullptr))
 		{
 			hudsprite.weapon = psp;
-			
+
 			if (hudsprite.GetWeaponRect(this, psp, psp->x, psp->y, player, Net_ModifyObjectFrac(psp, ticfrac)))
 			{
 				hudsprites.Push(hudsprite);
@@ -940,4 +940,3 @@ void HWDrawInfo::PrepareTargeterSprites(double ticfrac)
 		}
 	}
 }
-

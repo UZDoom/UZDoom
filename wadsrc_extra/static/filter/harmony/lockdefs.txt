@@ -132,11 +132,11 @@ Lock 229 Doom
 
 Lock 101 Doom
 {
-	GreenKeycard 
+	GreenKeycard
 	GreenPPKey
-	YellowKeycard 
+	YellowKeycard
 	YellowPPKey
-	PurpleKeycard 
+	PurpleKeycard
 	PurplePPKey
 	Message "$PD_ALL6"
 	RemoteMessage "$PD_ALL6O"

@@ -113,7 +113,7 @@ class PlasmaBall1 : PlasmaBall
 		Stop;
 	}
 }
-	
+
 class PlasmaBall2 : PlasmaBall1
 {
 	States
@@ -154,15 +154,15 @@ extend class StateProvider
 		{
 			if (!weap.DepleteAmmo (weap.bAltFire, true))
 				return;
-			
+
 			State flash = weap.FindState('Flash');
 			if (flash != null)
 			{
 				player.SetSafeFlash(weap, flash, random[FirePlasma](0, 1));
 			}
-			
+
 		}
-		
+
 		SpawnPlayerMissile ("PlasmaBall");
 	}
 }

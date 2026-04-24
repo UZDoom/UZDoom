@@ -270,7 +270,7 @@ class DIntermissionScreenText : public DIntermissionScreen
 	int mTextLen;
 	EColorRange mTextColor;
 	bool usesDefault;
-	
+
 	void MeasureText(bool posisfixed);
 	FString RemoveLineFeeds(const char *text);
 
@@ -362,8 +362,8 @@ DIntermissionController* F_StartIntermission(FIntermissionDescriptor *desc, int 
 DIntermissionController* F_StartIntermission(FName desc, int state);
 
 // Create an intermission from old cluster data
-DIntermissionController* F_StartFinale (const char *music, int musicorder, int cdtrack, unsigned int cdid, const char *flat, 
-					const char *text, INTBOOL textInLump, INTBOOL finalePic, INTBOOL lookupText, 
+DIntermissionController* F_StartFinale (const char *music, int musicorder, int cdtrack, unsigned int cdid, const char *flat,
+					const char *text, INTBOOL textInLump, INTBOOL finalePic, INTBOOL lookupText,
 					bool ending, FName endsequence = NAME_None);
 
 

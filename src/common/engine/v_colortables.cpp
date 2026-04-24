@@ -89,4 +89,3 @@ void BuildTransTable (const PalEntry *palette)
 									  ((((255-palette[y].b)*x)>>4)<<10)) & 0x3feffbff;
 		}
 }
-

@@ -229,7 +229,7 @@ namespace swrenderer
 		{
 			// Masked textures and planes need the view coordinates restored for proper positioning.
 			viewposStack.Pop(Thread->Viewport->viewpoint.Pos);
-			
+
 			Thread->Viewport->SetupPolyViewport(Thread);
 			Thread->TranslucentPass->Render();
 
@@ -239,7 +239,7 @@ namespace swrenderer
 			{
 				pl->Render(Thread, pl->Alpha, pl->Additive, true);
 			}
-			
+
 			Thread->SpriteList->PopPortal();
 			drawseglist->PopPortal();
 		}
@@ -279,7 +279,7 @@ namespace swrenderer
 	{
 		auto viewport = Thread->Viewport.get();
 		auto &viewpoint = viewport->viewpoint;
-		
+
 		// [ZZ] check depth. fill portal with black if it's exceeding the visual recursion limit, and continue like nothing happened.
 		if (depth >= r_portal_recursions)
 		{
@@ -328,7 +328,7 @@ namespace swrenderer
 		DVector3 startpos = viewpoint.Pos;
 		DVector3 savedpath[2] = { viewpoint.Path[0], viewpoint.Path[1] };
 		ActorRenderFlags savedvisibility = viewpoint.camera ? viewpoint.camera->renderflags & RF_MAYBEINVISIBLE : ActorRenderFlags::FromInt(0);
-		
+
 		viewpoint.camera->renderflags &= ~RF_MAYBEINVISIBLE;
 
 		CurrentPortalUniq++;
@@ -517,7 +517,7 @@ namespace swrenderer
 		}
 	}
 #endif
-	
+
 	void RenderPortal::CopyStackedViewParameters()
 	{
 		stacked_viewpos = Thread->Viewport->viewpoint.Pos;
@@ -525,7 +525,7 @@ namespace swrenderer
 		stacked_extralight = Thread->Viewport->viewpoint.extralight;
 		stacked_visibility = Thread->Light->GetVisibility();
 	}
-	
+
 	void RenderPortal::SetMainPortal()
 	{
 		WindowLeft = Thread->X1;

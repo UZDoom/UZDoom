@@ -27,7 +27,7 @@
 #include "xs_Float.h"
 
 //===========================================================================
-// 
+//
 //	Quick'n dirty image rescaling.
 //
 // This will only be used when the source texture is larger than
@@ -122,4 +122,3 @@ void IHardwareTexture::Resize(int swidth, int sheight, int width, int height, un
 		}
 	}
 }
-

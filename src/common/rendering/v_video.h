@@ -182,7 +182,7 @@ public:
 	}
 
 	// SSBOs have quite worse performance for read only data, so keep this around only as long as Vulkan has not been adapted yet.
-	bool useSSBO() 
+	bool useSSBO()
 	{
 		return IsVulkan();
 	}
@@ -238,7 +238,7 @@ public:
 
 	virtual void InitLightmap(int LMTextureSize, int LMTextureCount, TArray<uint16_t>& LMTextureData) {}
 
-    // Interface to hardware rendering resources
+	// Interface to hardware rendering resources
 	virtual IVertexBuffer *CreateVertexBuffer() { return nullptr; }
 	virtual IIndexBuffer *CreateIndexBuffer() { return nullptr; }
 	virtual IDataBuffer *CreateDataBuffer(int bindingpoint, bool ssbo, bool needsresize) { return nullptr; }

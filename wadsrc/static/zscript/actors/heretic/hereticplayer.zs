@@ -108,7 +108,7 @@ class HereticPlayer : PlayerPawn
 		FDTH R 4 BRIGHT;
 		ACLO E 35 A_CheckPlayerDone;
 		Wait;
-	AltSkinDeath:	
+	AltSkinDeath:
 		PLAY H 10;
 		PLAY I 10 A_PlayerScream;
 		PLAY J 10 A_NoBlocking;
@@ -123,7 +123,7 @@ class HereticPlayer : PlayerPawn
 		PLAY W -1;
 		Stop;
 	}
-}				
+}
 
 // The player's skull -------------------------------------------------------
 
@@ -152,4 +152,3 @@ class BloodySkull : PlayerChunk
 		Wait;
 	}
 }
-

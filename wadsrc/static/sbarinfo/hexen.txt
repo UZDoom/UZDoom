@@ -1,7 +1,7 @@
 /*******************************************************************************
  *                        DEFAULT HEXEN STATUS BAR
  *******************************************************************************
- * If you wish to include this file into a custom status bar please use the 
+ * If you wish to include this file into a custom status bar please use the
  * following command:
  *
  *     base Hexen;

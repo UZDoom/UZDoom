@@ -309,7 +309,7 @@ int FLevelLocals::TranslateSectorSpecial (int special)
 			mask |= newmask;
 		}
 	}
-	
+
 	if ((unsigned)special < translator->SectorTranslations.Size())
 	{
 		if (!translator->SectorTranslations[special].bitmask_allowed && mask)

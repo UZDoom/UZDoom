@@ -331,7 +331,7 @@ int FMugShot::UpdateState(player_t *player, StateFlags stateflags)
 		bEvilGrin = false;
 
 		bool ouch = (!st_oldouch && FaceHealthLast - FaceHealthNow > ST_MUCHPAIN) || (st_oldouch && FaceHealthNow - FaceHealthLast > ST_MUCHPAIN);
-		if (player->damagecount && 
+		if (player->damagecount &&
 			// Now go in if pain is disabled but we think ouch will be shown (and ouch is not disabled!)
 			(!(stateflags & DISABLEPAIN) || (((FaceHealthLast != -1 && ouch) || bOuchActive) && !(stateflags & DISABLEOUCH))))
 		{

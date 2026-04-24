@@ -29,7 +29,7 @@ class PunchDagger : StrifeWeapon
 		Obituary "$OB_MPPUNCHDAGGER";
 		Tag "$TAG_PUNCHDAGGER";
 	}
-	
+
 	States
 	{
 	Ready:
@@ -60,7 +60,7 @@ class PunchDagger : StrifeWeapon
 	{
 		FTranslatedLineTarget t;
 		int damage;
-		
+
 		if (FindInventory("SVETalismanPowerup"))
 		{
 			damage = 1000;
@@ -93,4 +93,4 @@ class PunchDagger : StrifeWeapon
 			A_StartSound ("misc/swish", CHAN_WEAPON);
 		}
 	}
-}	
+}

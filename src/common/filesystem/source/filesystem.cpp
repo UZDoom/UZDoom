@@ -38,7 +38,7 @@
 #include "fs_stringpool.h"
 
 namespace FileSys {
-	
+
 // MACROS ------------------------------------------------------------------
 
 #define NULL_INDEX		(0xffffffff)
@@ -63,7 +63,7 @@ static uint32_t MakeHash(const char* str, size_t length = SIZE_MAX)
 	return hash;
 }
 
-static void md5Hash(FileReader& reader, uint8_t* digest) 
+static void md5Hash(FileReader& reader, uint8_t* digest)
 {
 	using namespace md5;
 
@@ -363,7 +363,7 @@ void FileSystem::AddFile (const char *filename, FileReader *filer, LumpFilterInf
 
 	if (resfile != NULL)
 	{
-		if (Printf) 
+		if (Printf)
 			Printf(FSMessageLevel::Message, "adding %s, %d lumps\n", filename, resfile->EntryCount());
 
 		uint32_t lumpstart = (uint32_t)FileInfo.size();
@@ -481,7 +481,7 @@ int FileSystem::CheckNumForName (const char *name, int space) const
 			// from a Zip return that. WADs don't know these namespaces and single lumps must
 			// work as well.
 			auto lflags = lump.resfile->GetEntryFlags(lump.resindex);
-			if (space > ns_specialzipdirectory && lump.Namespace == ns_global && 
+			if (space > ns_specialzipdirectory && lump.Namespace == ns_global &&
 				!((lflags ^lump.flags) & RESFF_FULLPATH)) break;
 		}
 		i = NextLumpIndex[i];
@@ -568,10 +568,10 @@ int FileSystem::CheckNumForFullName (const char *name, bool trynormal, int names
 	{
 		if (strnicmp(name, FileInfo[i].LongName, len)) continue;
 		if (FileInfo[i].LongName[len] == 0) break;	// this is a full match
-		if (ignoreext && FileInfo[i].LongName[len] == '.') 
+		if (ignoreext && FileInfo[i].LongName[len] == '.')
 		{
 			// is this the last '.' in the last path element, indicating that the remaining part of the name is only an extension?
-			if (strpbrk(FileInfo[i].LongName + len + 1, "./") == nullptr) break;	
+			if (strpbrk(FileInfo[i].LongName + len + 1, "./") == nullptr) break;
 		}
 	}
 
@@ -595,7 +595,7 @@ int FileSystem::CheckNumForFullName (const char *name, int rfnum) const
 
 	i = FirstLumpIndex_FullName[MakeHash (name) % NumEntries];
 
-	while (i != NULL_INDEX && 
+	while (i != NULL_INDEX &&
 		(stricmp(name, FileInfo[i].LongName) || FileInfo[i].rfnum != rfnum))
 	{
 		i = NextLumpIndex_FullName[i];
@@ -744,7 +744,7 @@ uint32_t FileSystem::FileHash (int lump) const
 {
   if ((size_t)lump >= NumEntries)
   {
-    return -1;
+	return -1;
   }
   const auto &lump_p = FileInfo[lump];
   return lump_p.resfile->GetEntryHash(lump_p.resindex);
@@ -752,7 +752,7 @@ uint32_t FileSystem::FileHash (int lump) const
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1179,7 +1179,7 @@ int FileSystem::GetFileContainer (int lump) const
 //==========================================================================
 //
 // GetFilesInFolder
-// 
+//
 // Gets all lumps within a single folder in the hierarchy.
 // If 'atomic' is set, it treats folders as atomic, i.e. only the
 // content of the last found resource file having the given folder name gets used.
@@ -1195,7 +1195,7 @@ static int folderentrycmp(const void *a, const void *b)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1469,14 +1469,14 @@ bool FileSystem::CreatePathlessCopy(const char *name, int id, int /*flags*/)
 
 extern "C" {
 __declspec(dllimport) unsigned long __stdcall FormatMessageA(
-    unsigned long dwFlags,
-    const void *lpSource,
-    unsigned long dwMessageId,
-    unsigned long dwLanguageId,
-    char **lpBuffer,
-    unsigned long nSize,
-    va_list *Arguments
-    );
+	unsigned long dwFlags,
+	const void *lpSource,
+	unsigned long dwMessageId,
+	unsigned long dwLanguageId,
+	char **lpBuffer,
+	unsigned long nSize,
+	va_list *Arguments
+	);
 __declspec(dllimport) void * __stdcall LocalFree (void *);
 __declspec(dllimport) unsigned long __stdcall GetLastError ();
 }
@@ -1484,15 +1484,15 @@ __declspec(dllimport) unsigned long __stdcall GetLastError ();
 static void PrintLastError (FileSystemMessageFunc Printf)
 {
 	char *lpMsgBuf;
-	FormatMessageA(0x1300 /*FORMAT_MESSAGE_ALLOCATE_BUFFER | 
-							FORMAT_MESSAGE_FROM_SYSTEM | 
+	FormatMessageA(0x1300 /*FORMAT_MESSAGE_ALLOCATE_BUFFER |
+							FORMAT_MESSAGE_FROM_SYSTEM |
 							FORMAT_MESSAGE_IGNORE_INSERTS*/,
 		NULL,
 		GetLastError(),
 		1 << 10 /*MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT)*/, // Default language
 		&lpMsgBuf,
 		0,
-		NULL 
+		NULL
 	);
 	Printf (FSMessageLevel::Error, "  %s\n", lpMsgBuf);
 	// Free the buffer.

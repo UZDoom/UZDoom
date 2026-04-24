@@ -144,7 +144,7 @@ FTexture *DFrameBuffer::WipeStartScreen()
 
 FTexture *DFrameBuffer::WipeEndScreen()
 {
-    return nullptr;
+	return nullptr;
 }
 
 //==========================================================================
@@ -214,7 +214,7 @@ void DFrameBuffer::SetViewportRects(IntRect *bounds)
 }
 
 //===========================================================================
-// 
+//
 // Calculates the OpenGL window coordinates for a zdoom screen position
 //
 //===========================================================================
@@ -309,4 +309,3 @@ DEFINE_ACTION_FUNCTION(_Screen, PaletteColor)
 	else index = GPalette.BaseColors[index];
 	ACTION_RETURN_INT(index);
 }
-

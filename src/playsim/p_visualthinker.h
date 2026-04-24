@@ -24,7 +24,7 @@
 //===========================================================================
 //
 //
-// 
+//
 //===========================================================================
 
 enum EVisualThinkerFlags
@@ -36,9 +36,9 @@ enum EVisualThinkerFlags
 	VTF_DontInterpolate	= 1 << 4, // disable all interpolation
 	VTF_AddLightLevel	= 1 << 5, // adds sector light level to 'LightLevel'
 
-	VTF_ParticleDefault = 0x40, 
-	VTF_ParticleSquare = 0x80, 
-	VTF_ParticleRound = 0xC0, 
+	VTF_ParticleDefault = 0x40,
+	VTF_ParticleSquare = 0x80,
+	VTF_ParticleRound = 0xC0,
 	VTF_ParticleSmooth = 0x100,
 	VTF_IsParticle = 0x1C0,			// Renders as a particle instead
 };

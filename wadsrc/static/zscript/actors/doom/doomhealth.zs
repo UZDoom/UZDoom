@@ -64,7 +64,7 @@ class HealthBonus : Health
 	}
 
 }
-	
+
 // Stimpack -----------------------------------------------------------------
 
 class Stimpack : Health

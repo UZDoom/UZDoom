@@ -455,7 +455,7 @@ namespace swrenderer
 		{
 			alpha = clamp<fixed_t>(alpha, 0, OPAQUE);
 		}
-		
+
 		SetTranslationMap(nullptr);
 		if (translation != NO_TRANSLATION)
 		{

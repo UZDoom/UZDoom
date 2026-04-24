@@ -2102,7 +2102,7 @@ static void DoCast(const VMRegisters &reg, const VMFrame *f, int a, int b, int c
 		ASSERTS(a); ASSERTA(b);
 		if (reg.a[b] == nullptr) reg.s[a] = "null";
 		else reg.s[a].Format("%p", reg.a[b]);
-		break; 
+		break;
 	}
 
 	case CAST_S2I:
@@ -2124,7 +2124,7 @@ static void DoCast(const VMRegisters &reg, const VMFrame *f, int a, int b, int c
 		ASSERTS(a); ASSERTD(b);
 		FName name = FName(ENamedName(reg.d[b]));
 		reg.s[a] = name.IsValidName() ? name.GetChars() : "";
-		break; 
+		break;
 	}
 
 	case CAST_S2Co:

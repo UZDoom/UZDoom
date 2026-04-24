@@ -38,17 +38,17 @@
 #include "ancientzip.h"
 
 namespace FileSys {
-	
+
 /****************************************************************
-    Bit-I/O variables and routines/macros
+	Bit-I/O variables and routines/macros
 
-    These routines work in the bit level because the target
-    environment does not have a barrel shifter. Trying to
-    handle several bits at once would've only made the code
-    slower.
+	These routines work in the bit level because the target
+	environment does not have a barrel shifter. Trying to
+	handle several bits at once would've only made the code
+	slower.
 
-    If the environment supports multi-bit shifts, you should
-    write these routines again (see e.g. the GZIP sources).
+	If the environment supports multi-bit shifts, you should
+	write these routines again (see e.g. the GZIP sources).
 
 	[RH] Since the target environment is not a C64, I did as
 	suggested and rewrote these using zlib as a reference.
@@ -72,30 +72,30 @@ namespace FileSys {
 
 /* Get a byte of input into the bit accumulator. */
 #define PULLBYTE() \
-    do { \
-        unsigned char next; \
+	do { \
+		unsigned char next; \
 		READBYTE(next); \
-        Hold += (unsigned int)(next) << Bits; \
-        Bits += 8; \
-    } while (0)
+		Hold += (unsigned int)(next) << Bits; \
+		Bits += 8; \
+	} while (0)
 
 /* Assure that there are at least n bits in the bit accumulator. */
 #define NEEDBITS(n) \
-    do { \
-        while (Bits < (unsigned)(n)) \
-            PULLBYTE(); \
-    } while (0)
+	do { \
+		while (Bits < (unsigned)(n)) \
+			PULLBYTE(); \
+	} while (0)
 
 /* Return the low n bits of the bit accumulator (n < 16) */
 #define BITS(n) \
-    ((unsigned)Hold & ((1U << (n)) - 1))
+	((unsigned)Hold & ((1U << (n)) - 1))
 
 /* Remove n bits from the bit accumulator */
 #define DROPBITS(n) \
-    do { \
-        Hold >>= (n); \
-        Bits -= (unsigned)(n); \
-    } while (0)
+	do { \
+		Hold >>= (n); \
+		Bits -= (unsigned)(n); \
+	} while (0)
 
 #define READBITS(c, a) \
 	do { \

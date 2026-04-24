@@ -35,7 +35,7 @@ EXTERN_CVAR(Int, gl_texture_hqresize_targets)
 FWarpTexture::FWarpTexture (FGameTexture *source, int warptype)
 	: FSoftwareTexture (source)
 {
-	if (warptype == 2) SetupMultipliers(256, 128); 
+	if (warptype == 2) SetupMultipliers(256, 128);
 	SetupMultipliers(128, 128); // [mxd]
 	bWarped = warptype;
 }

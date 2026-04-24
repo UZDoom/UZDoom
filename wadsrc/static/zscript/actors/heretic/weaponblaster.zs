@@ -58,7 +58,7 @@ class Blaster : HereticWeapon
 		BLSR A 0 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FireBlasterPL1
@@ -146,10 +146,10 @@ class BlasterFX1 : FastProjectile
 		FX18 CDEFG 4 BRIGHT;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//----------------------------------------------------------------------------
 
@@ -244,7 +244,7 @@ class Ripper : Actor
 		FX18 OPQRS 4 BRIGHT;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor target, int damage, Name damagetype)
 	{
 		if (target is "Ironlich")
@@ -257,7 +257,7 @@ class Ripper : Actor
 		}
 		return damage;
 	}
-	
+
 }
 
 // Blaster Puff -------------------------------------------------------------
@@ -285,4 +285,3 @@ class BlasterPuff : Actor
 		Stop;
 	}
 }
-

@@ -77,7 +77,7 @@ bool AreCompatiblePointerTypes(PType* dest, PType* source, bool forcompare = fal
 //
 //==========================================================================
 
-FCompileContext::FCompileContext(PNamespace *cg, PFunction *fnc, PPrototype *ret, bool fromdecorate, int stateindex, int statecount, int lump, const VersionInfo &ver) 
+FCompileContext::FCompileContext(PNamespace *cg, PFunction *fnc, PPrototype *ret, bool fromdecorate, int stateindex, int statecount, int lump, const VersionInfo &ver)
 	: ReturnProto(ret), Function(fnc), Class(nullptr), FromDecorate(fromdecorate), StateIndex(stateindex), StateCount(statecount), Lump(lump), CurGlobals(cg), Version(ver)
 {
 	if (Version >= MakeVersion(2, 3))
@@ -92,7 +92,7 @@ FCompileContext::FCompileContext(PNamespace *cg, PFunction *fnc, PPrototype *ret
 	if (fnc != nullptr) Class = fnc->OwningClass;
 }
 
-FCompileContext::FCompileContext(PNamespace *cg, PContainerType *cls, bool fromdecorate, const VersionInfo& info) 
+FCompileContext::FCompileContext(PNamespace *cg, PContainerType *cls, bool fromdecorate, const VersionInfo& info)
 	: ReturnProto(nullptr), Function(nullptr), Class(cls), FromDecorate(fromdecorate), StateIndex(-1), StateCount(0), Lump(-1), CurGlobals(cg), Version(info)
 {
 }
@@ -809,7 +809,7 @@ ExpEmit FxVectorValue::Emit(VMFunctionBuilder *build)
 			if (nextRegNum != val[elementIndex].RegNum)
 			{
 				emitRegMove(regsToPush, reg, lastElementIndex);
-				
+
 				reg += regsToPush;
 				regsToPush = regCount;
 				nextRegNum = val[elementIndex].RegNum + val[elementIndex].RegCount;
@@ -936,7 +936,7 @@ FxExpression *FxBoolCast::Resolve(FCompileContext &ctx)
 ExpEmit FxBoolCast::Emit(VMFunctionBuilder *build)
 {
 	ExpEmit from = basex->Emit(build);
-	
+
 	if(from.Konst && from.RegType == REGT_INT)
 	{ // this is needed here because the int const assign optimization returns a constant
 		ExpEmit to;
@@ -945,7 +945,7 @@ ExpEmit FxBoolCast::Emit(VMFunctionBuilder *build)
 		to.RegNum = build->GetConstantInt(!!build->FindConstantInt(from.RegNum));
 		return to;
 	}
-	
+
 
 	assert(!from.Konst);
 	assert(basex->ValueType->GetRegType() == REGT_INT || basex->ValueType->GetRegType() == REGT_FLOAT || basex->ValueType->GetRegType() == REGT_POINTER);
@@ -1015,7 +1015,7 @@ FxExpression *FxIntCast::Resolve(FCompileContext &ctx)
 	{
 		if (basex->ValueType == TypeTranslationID)
 		{
-			// translation IDs must be entirely incompatible with ints, not even allowing an explicit conversion, 
+			// translation IDs must be entirely incompatible with ints, not even allowing an explicit conversion,
 			// but since the type was only introduced in version 4.12, older ZScript versions must allow this conversion.
 			if (ctx.Version < MakeVersion(4, 12, 0))
 			{
@@ -1038,7 +1038,7 @@ FxExpression *FxIntCast::Resolve(FCompileContext &ctx)
 		{
 			// Ugh. This should abort, but too many mods fell into this logic hole somewhere, so this serious error needs to be reduced to a warning. :(
 			// At least in ZScript, MSG_OPTERROR always means to report an error, not a warning so the problem only exists in DECORATE.
-			if (!basex->isConstant())	
+			if (!basex->isConstant())
 				ScriptPosition.Message(MSG_OPTERROR, "Numeric type expected, got a %s", basex->ValueType->DescriptiveName());
 			else ScriptPosition.Message(MSG_OPTERROR, "Numeric type expected, got \"%s\"", static_cast<FxConstant*>(basex)->GetValue().GetName().GetChars());
 			FxExpression * x = new FxConstant(0, ScriptPosition);
@@ -1160,7 +1160,7 @@ FxExpression *FxFloatCast::Resolve(FCompileContext &ctx)
 		{
 			// Ugh. This should abort, but too many mods fell into this logic hole somewhere, so this seroious error needs to be reduced to a warning. :(
 			// At least in ZScript, MSG_OPTERROR always means to report an error, not a warning so the problem only exists in DECORATE.
-			if (!basex->isConstant()) 
+			if (!basex->isConstant())
 				ScriptPosition.Message(MSG_OPTERROR, "Numeric type expected, got a %s", basex->ValueType->DescriptiveName());
 			else ScriptPosition.Message(MSG_OPTERROR, "Numeric type expected, got \"%s\"", static_cast<FxConstant*>(basex)->GetValue().GetName().GetChars());
 			FxExpression *x = new FxConstant(0.0, ScriptPosition);
@@ -1998,7 +1998,7 @@ FxExpression *FxTypeCast::Resolve(FCompileContext &ctx)
 		delete this;
 		return x;
 	}
-	// todo: pointers to class objects. 
+	// todo: pointers to class objects.
 	// All other types are only compatible to themselves and have already been handled above by the equality check.
 	// Anything that falls through here is not compatible and must print an error.
 
@@ -2248,7 +2248,7 @@ FxExpression *FxUnaryNotBitwise::Resolve(FCompileContext& ctx)
 		// DECORATE allows floats here so cast them to int.
 		Operand = new FxIntCast(Operand, true);
 		Operand = Operand->Resolve(ctx);
-		if (Operand == nullptr) 
+		if (Operand == nullptr)
 		{
 			delete this;
 			return nullptr;
@@ -2366,7 +2366,7 @@ ExpEmit FxUnaryNotBoolean::Emit(VMFunctionBuilder *build)
 	assert(Operand->ValueType == TypeBool);
 	assert(ValueType == TypeBool || IsInteger());	// this may have been changed by an int cast.
 	ExpEmit from = Operand->Emit(build);
-	
+
 	if(from.Konst && from.RegType == REGT_INT)
 	{ // this is needed here because the int const assign optimization returns a constant
 		ExpEmit to;
@@ -3366,7 +3366,7 @@ goon:
 			double v1 = static_cast<FxConstant *>(left)->GetValue().GetFloat();
 			double v2 = static_cast<FxConstant *>(right)->GetValue().GetFloat();
 
-			v =	Operator == '+'? v1 + v2 : 
+			v =	Operator == '+'? v1 + v2 :
 				Operator == '-'? v1 - v2 : 0;
 
 			FxExpression *e = new FxConstant(v, ScriptPosition);
@@ -3379,7 +3379,7 @@ goon:
 			int v1 = static_cast<FxConstant *>(left)->GetValue().GetInt();
 			int v2 = static_cast<FxConstant *>(right)->GetValue().GetInt();
 
-			v =	Operator == '+'? v1 + v2 : 
+			v =	Operator == '+'? v1 + v2 :
 				Operator == '-'? v1 - v2 : 0;
 
 			FxExpression *e = new FxConstant(v, ScriptPosition);
@@ -3628,8 +3628,8 @@ FxExpression *FxMulDiv::Resolve(FCompileContext& ctx)
 				return nullptr;
 			}
 
-			v =	Operator == '*'? v1 * v2 : 
-				Operator == '/'? v1 / v2 : 
+			v =	Operator == '*'? v1 * v2 :
+				Operator == '/'? v1 / v2 :
 				Operator == '%'? fmod(v1, v2) : 0;
 
 			FxExpression *e = new FxConstant(v, ScriptPosition);
@@ -3649,8 +3649,8 @@ FxExpression *FxMulDiv::Resolve(FCompileContext& ctx)
 				return nullptr;
 			}
 
-			v =	Operator == '*'? v1 * v2 : 
-				Operator == '/'? v1 / v2 : 
+			v =	Operator == '*'? v1 * v2 :
+				Operator == '/'? v1 / v2 :
 				Operator == '%'? v1 % v2 : 0;
 
 			FxExpression *e = new FxConstant(v, ScriptPosition);
@@ -4013,21 +4013,21 @@ FxExpression *FxCompareRel::Resolve(FCompileContext& ctx)
 		{
 			double v1 = static_cast<FxConstant *>(left)->GetValue().GetFloat();
 			double v2 = static_cast<FxConstant *>(right)->GetValue().GetFloat();
-			v =	Operator == '<'? v1 < v2 : 
-				Operator == '>'? v1 > v2 : 
-				Operator == TK_Geq? v1 >= v2 : 
+			v =	Operator == '<'? v1 < v2 :
+				Operator == '>'? v1 > v2 :
+				Operator == TK_Geq? v1 >= v2 :
 				Operator == TK_Leq? v1 <= v2 : 0;
 		}
 		else if (ValueType == TypeUInt32)
 		{
 			int v1 = static_cast<FxConstant *>(left)->GetValue().GetUInt();
 			int v2 = static_cast<FxConstant *>(right)->GetValue().GetUInt();
-			v =	Operator == '<'? v1 < v2 : 
-				Operator == '>'? v1 > v2 : 
-				Operator == TK_Geq? v1 >= v2 : 
+			v =	Operator == '<'? v1 < v2 :
+				Operator == '>'? v1 > v2 :
+				Operator == TK_Geq? v1 >= v2 :
 				Operator == TK_Leq? v1 <= v2 : 0;
 		}
-		else 
+		else
 		{
 			int v1 = static_cast<FxConstant *>(left)->GetValue().GetInt();
 			int v2 = static_cast<FxConstant *>(right)->GetValue().GetInt();
@@ -4527,8 +4527,8 @@ FxExpression *FxBitOp::Resolve(FCompileContext& ctx)
 		int v2 = static_cast<FxConstant *>(right)->GetValue().GetInt();
 
 		FxExpression *e = new FxConstant(
-			Operator == '&'? v1 & v2 : 
-			Operator == '|'? v1 | v2 : 
+			Operator == '&'? v1 & v2 :
+			Operator == '|'? v1 | v2 :
 			Operator == '^'? v1 ^ v2 : 0, ScriptPosition);
 
 		delete this;
@@ -5302,7 +5302,7 @@ FxExpression *FxDynamicCast::Resolve(FCompileContext& ctx)
 {
 	CHECKRESOLVED();
 	SAFE_RESOLVE(expr, ctx);
-	bool constflag = expr->ValueType->isPointer() && expr->ValueType->toPointer()->IsConst;	
+	bool constflag = expr->ValueType->isPointer() && expr->ValueType->toPointer()->IsConst;
 	expr = new FxTypeCast(expr, NewPointer(RUNTIME_CLASS(DObject), constflag), true, true);
 	expr = expr->Resolve(ctx);
 	if (expr == nullptr)
@@ -6809,7 +6809,7 @@ FxExpression *FxIdentifier::Resolve(FCompileContext& ctx)
 					const bool internal = fileSystem.GetFileContainer(ctx.Lump) == 0;
 					const FString &deprecationMessage = vsym->DeprecationMessage;
 
-					ScriptPosition.Message(internal ? MSG_DEBUGMSG : MSG_WARNING, 
+					ScriptPosition.Message(internal ? MSG_DEBUGMSG : MSG_WARNING,
 						"%sAccessing deprecated global variable %s - deprecated since %d.%d.%d%s%s", internal ? TEXTCOLOR_BLUE : "",
 						sym->SymbolName.GetChars(), vsym->mVersion.major, vsym->mVersion.minor, vsym->mVersion.revision,
 						deprecationMessage.IsEmpty() ? "" : ", ", deprecationMessage.GetChars());
@@ -6908,7 +6908,7 @@ FxExpression *FxIdentifier::ResolveMember(FCompileContext &ctx, PContainerType *
 
 			// We have 4 cases to consider here:
 			// 1. The symbol is a static/meta member which is always accessible.
-			// 2. This is a static function 
+			// 2. This is a static function
 			// 3. This is an action function with a restricted self pointer
 			// 4. This is a normal member or unrestricted action function.
 			if ((vsym->Flags & VARF_Private) && symtbl != &classctx->Symbols)
@@ -7014,7 +7014,7 @@ FxExpression *FxMemberIdentifier::Resolve(FCompileContext& ctx)
 	if (Object->ExprType == EFX_Identifier)
 	{
 		auto id = static_cast<FxIdentifier *>(Object)->Identifier;
-		// If the left side is a class name for a static member function call it needs to be resolved manually 
+		// If the left side is a class name for a static member function call it needs to be resolved manually
 		// because the resulting value type would cause problems in nearly every other place where identifiers are being used.
 		ccls = FindContainerType(id, ctx);
 		if (ccls != nullptr)
@@ -7026,7 +7026,7 @@ FxExpression *FxMemberIdentifier::Resolve(FCompileContext& ctx)
 			PType *type;
 			// Another special case to deal with here is constants assigned to non-struct types. The code below cannot deal with them so it needs to be done here explicitly.
 			// Thanks to the messed up search logic of the type system, which doesn't allow any search by type name for the basic types at all,
-			// we have to do this manually, though and check for all types that may have values attached explicitly. 
+			// we have to do this manually, though and check for all types that may have values attached explicitly.
 			// (What's the point of attached fields to types if you cannot even search for the types...???)
 			switch (id.GetIndex())
 			{
@@ -7288,7 +7288,7 @@ FxExpression *FxSelf::Resolve(FCompileContext& ctx)
 	}
 	ValueType = NewPointer(ctx.Function->Variants[0].SelfClass);
 	return this;
-}  
+}
 
 //==========================================================================
 //
@@ -7945,7 +7945,7 @@ FxExpression *FxArrayElement::Resolve(FCompileContext &ctx)
 		// DECORATE allows floats here so cast them to int.
 		index = new FxIntCast(index, ctx.FromDecorate);
 		index = index->Resolve(ctx);
-		if (index == nullptr) 
+		if (index == nullptr)
 		{
 			delete this;
 			return nullptr;
@@ -8077,7 +8077,7 @@ ExpEmit FxArrayElement::Emit(VMFunctionBuilder *build)
 	if (SizeAddr != ~0u)
 	{
 		bool ismeta = Array->ExprType == EFX_ClassMember && static_cast<FxClassMember*>(Array)->membervar->Flags & VARF_Meta;
-		
+
 		auto f = Create<PField>(NAME_None, TypeUInt32, ismeta? VARF_Meta : 0, SizeAddr);
 		auto arraymemberbase = static_cast<FxMemberBase *>(Array);
 
@@ -8141,11 +8141,11 @@ ExpEmit FxArrayElement::Emit(VMFunctionBuilder *build)
 			arrayvar.Free(build);
 		}
 		else
-		{   
+		{
 			// [Jay0]
 			// now only runs for global variables and stack variables, so the double-emit is """fine"""
 			// TODO replace this entirely with something better still
-			
+
 			ExpEmit arrayvar = Array->Emit(build);
 
 			start = ExpEmit(build, REGT_POINTER);
@@ -8630,7 +8630,7 @@ FxExpression *FxFunctionCall::Resolve(FCompileContext& ctx)
 	case NAME_TranslationID:
 		if (CheckArgSize(MethodName, ArgList, 1, 1, ScriptPosition))
 		{
-			PType *type = 
+			PType *type =
 				MethodName == NAME_Bool ? TypeBool :
 				MethodName == NAME_Int ? TypeSInt32 :
 				MethodName == NAME_uInt ? TypeUInt32 :
@@ -8893,7 +8893,7 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 	if (Self->ExprType == EFX_Identifier)
 	{
 		auto id = static_cast<FxIdentifier *>(Self)->Identifier;
-		// If the left side is a class name for a static member function call it needs to be resolved manually 
+		// If the left side is a class name for a static member function call it needs to be resolved manually
 		// because the resulting value type would cause problems in nearly every other place where identifiers are being used.
 		// [ZZ] substitute ccls for String internal type.
 		if (id == NAME_String) ccls = TypeStringStruct;
@@ -8945,7 +8945,7 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 	if (Self->ValueType->isRealPointer())
 	{
 		auto pointedType = Self->ValueType->toPointer()->PointedType;
-		
+
 		if(pointedType && pointedType->isStruct() && Self->ValueType->toPointer()->IsConst && ctx.Version >= MakeVersion(4, 12))
 		{
 			isreadonly = true;
@@ -9326,14 +9326,14 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 		auto mapValueType = m->ValueType;
 
 		bool isObjMap = mapValueType->isObjectPointer();
-		
+
 		if (PFunction **Override; (Override = m->FnOverrides.CheckKey(MethodName)))
 		{
 			afd_override = *Override;
 		}
-		
+
 		// Adapted from DynArray codegen
-		
+
 		int idx = 0;
 		for (auto &a : ArgList)
 		{
@@ -9408,7 +9408,7 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 				}
 			}
 			idx++;
-			
+
 		}
 	}
 	else if(Self->IsMapIterator())
@@ -9744,7 +9744,7 @@ FxVMFunctionCall::~FxVMFunctionCall()
 
 PPrototype *FxVMFunctionCall::ReturnProto()
 {
-	if (hasStringArgs) 
+	if (hasStringArgs)
 		return FxExpression::ReturnProto();
 
 	return Function->Variants[0].Proto;
@@ -9776,7 +9776,7 @@ bool FxVMFunctionCall::CheckAccessibility(const VersionInfo &ver)
 			const FString &deprecationMessage = Function->Variants[0].DeprecationMessage;
 
 			ScriptPosition.Message(internal ? MSG_DEBUGMSG : MSG_WARNING,
-				"Accessing deprecated function %s - deprecated since %d.%d.%d%s%s", Function->SymbolName.GetChars(), Function->mVersion.major, Function->mVersion.minor, Function->mVersion.revision, 
+				"Accessing deprecated function %s - deprecated since %d.%d.%d%s%s", Function->SymbolName.GetChars(), Function->mVersion.major, Function->mVersion.minor, Function->mVersion.revision,
 				deprecationMessage.IsEmpty() ? "" : ", ", deprecationMessage.GetChars());
 		}
 	}
@@ -9913,7 +9913,7 @@ FxExpression *FxVMFunctionCall::Resolve(FCompileContext& ctx)
 										ScriptPosition.Message(MSG_ERROR, "Named argument %s comes before current position in argument list.", name.GetChars());
 									}
 
-									// i don't think this needs any further optimization? 
+									// i don't think this needs any further optimization?
 									//			O(N^2) complexity technically but N isn't likely to be large,
 									//			and the check itself is just an int comparison, so it should be fine
 									index = j;
@@ -10019,7 +10019,7 @@ FxExpression *FxVMFunctionCall::Resolve(FCompileContext& ctx)
 					{
 						ArgList[i] = new FxConstant(ntype, (*defaults)[defaults_index], ScriptPosition);
 					}
-					else 
+					else
 					{
 						// Vectors need special treatment because they are not normal constants
 						FxConstant *cs[4] = { nullptr };
@@ -10466,7 +10466,7 @@ ExpEmit FxVectorBuiltin::Emit(VMFunctionBuilder *build)
 	ExpEmit to(build, ValueType->GetRegType(), ValueType->GetRegCount());
 	ExpEmit op = Self->Emit(build);
 
-	const int vecSize = (Self->ValueType == TypeVector2 || Self->ValueType == TypeFVector2) ? 2 
+	const int vecSize = (Self->ValueType == TypeVector2 || Self->ValueType == TypeFVector2) ? 2
 		: (Self->ValueType == TypeVector3 || Self->ValueType == TypeFVector3) ? 3 : 4;
 
 	if (Function == NAME_Length)
@@ -10997,7 +10997,7 @@ ExpEmit FxCompoundStatement::Emit(VMFunctionBuilder *build)
 // FxCompoundStatement :: FindLocalVariable
 //
 // Looks for a variable name in any of the containing compound statements
-// This does a simple linear search on each block's variables. 
+// This does a simple linear search on each block's variables.
 // The lists here normally don't get large enough to justify something more complex.
 //
 //==========================================================================
@@ -11031,7 +11031,7 @@ FxLocalVariableDeclaration *FxCompoundStatement::FindLocalVariable(FName name, F
 //
 // FxCompoundStatement :: CheckLocalVariable
 //
-// Checks if the current block already contains a local variable 
+// Checks if the current block already contains a local variable
 // of the given name.
 //
 //==========================================================================
@@ -11188,7 +11188,7 @@ ExpEmit FxSwitchStatement::Emit(VMFunctionBuilder *build)
 	assert(Condition != nullptr);
 	ExpEmit emit = Condition->Emit(build);
 	assert(emit.RegType == REGT_INT);
-	// todo: 
+	// todo:
 	// - sort jump table by value.
 	// - optimize the switch dispatcher to run in native code instead of executing each single branch instruction on its own.
 	// e.g.: build->Emit(OP_SWITCH, emit.RegNum, build->GetConstantInt(CaseAddresses.Size());
@@ -11927,7 +11927,7 @@ FxExpression *FxTwoArgForEachLoop::Resolve(FCompileContext &ctx)
 		auto k = new FxLocalVariableDeclaration(keyType, keyVarName, nullptr, 0, ScriptPosition);
 		block->Add(k);
 	}
-	
+
 
 	if(MapExpr->ValueType->isMapIterator())
 	{
@@ -12461,7 +12461,7 @@ FxExpression *FxClassTypeCast::Resolve(FCompileContext &ctx)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -12587,7 +12587,7 @@ FxExpression *FxClassPtrCast::Resolve(FCompileContext &ctx)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -12737,7 +12737,7 @@ static bool AreCompatibleFnPtrs(PFunctionPointer * to, PFunctionPointer * from)
 	PPrototype * toProto = (PPrototype *)to->PointedType;
 	PPrototype * fromProto = (PPrototype *)from->PointedType;
 	return
-    (	FScopeBarrier::CheckSidesForFunctionPointer(from->Scope, to->Scope)
+	(	FScopeBarrier::CheckSidesForFunctionPointer(from->Scope, to->Scope)
 		/*
 	 && toProto->ArgumentTypes == fromProto->ArgumentTypes
 	 && toProto->ReturnTypes == fromProto->ReturnTypes
@@ -12792,7 +12792,7 @@ FxExpression *FxFunctionPtrCast::Resolve(FCompileContext &ctx)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 

@@ -147,7 +147,7 @@ void D_GrabCVarDefaults()
 					val.String = const_cast<char*>(sc.String);
 					var->SetGenericRepDefault(val, CVAR_String);
 				}
-				else 
+				else
 				{
 					sc.ScriptMessage("Cannot set cvar default for non-config cvar '%s'", sc.String);
 					sc.MustGetString(); // to ignore the value of the cvar
@@ -161,4 +161,3 @@ void D_GrabCVarDefaults()
 		}
 	}
 }
-

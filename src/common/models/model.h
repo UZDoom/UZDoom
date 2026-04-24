@@ -152,7 +152,7 @@ public:
 
 	FString mFileName;
 	std::pair<FString, FString> mFilePath;
-	
+
 	FSpriteModelFrame *baseFrame;
 private:
 	IModelVertexBuffer *mVBuf[NumModelRendererTypes];
@@ -160,4 +160,3 @@ private:
 
 int ModelFrameHash(FSpriteModelFrame* smf);
 unsigned FindModel(const char* path, const char* modelfile, bool silent = false);
-

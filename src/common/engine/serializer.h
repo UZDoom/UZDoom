@@ -378,7 +378,7 @@ FSerializer& Serialize(FSerializer& arc, const char* key, TPointer<T>& value, TP
 }
 
 
-template<int size> 
+template<int size>
 FSerializer& Serialize(FSerializer& arc, const char* key, FixedBitArray<size>& value, FixedBitArray<size>* def)
 {
 	return arc.SerializeMemory(key, value.Storage(), value.StorageSize());

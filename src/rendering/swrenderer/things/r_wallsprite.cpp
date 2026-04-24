@@ -93,7 +93,7 @@ namespace swrenderer
 		// Is it off-screen?
 		if (wallc.Init(thread, left, right))
 			return;
-			
+
 		RenderPortal *renderportal = thread->Portal.get();
 
 		if (wallc.sx1 >= renderportal->WindowRight || wallc.sx2 <= renderportal->WindowLeft)

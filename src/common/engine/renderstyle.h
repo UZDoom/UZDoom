@@ -85,7 +85,7 @@ enum ERenderOp
 	STYLEOP_FuzzOrRevSub,	// Draw fuzzy or reverse subtract, based on user preference
 
 	// special styles
-	STYLEOP_Shadow,			
+	STYLEOP_Shadow,
 };
 
 enum ERenderAlpha
@@ -174,4 +174,3 @@ inline FRenderStyle &FRenderStyle::operator= (ERenderStyle legacy)
 	*this = LegacyRenderStyles[legacy];
 	return *this;
 }
-

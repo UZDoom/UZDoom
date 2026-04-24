@@ -48,7 +48,7 @@ void MapLoader::SlopeLineToPoint (int lineid, const DVector3 &pos, bool slopeCei
 		const line_t *line = &Level->lines[linenum];
 		sector_t *sec;
 		secplane_t *plane;
-		
+
 		if (P_PointOnLineSidePrecise (pos, line) == 0)
 		{
 			sec = line->frontsector;
@@ -205,7 +205,7 @@ void MapLoader::VavoomSlope(sector_t * sec, int id, const DVector3 &pos, int whi
 			v1[0] = pos.X - l->v2->fX();
 			v1[1] = pos.Y - l->v2->fY();
 			v1[2] = pos.Z - srcheight;
-			
+
 			v2[0] = pos.X - l->v1->fX();
 			v2[1] = pos.Y - l->v1->fY();
 			v2[2] = pos.Z - srcheight;
@@ -231,7 +231,7 @@ void MapLoader::VavoomSlope(sector_t * sec, int id, const DVector3 &pos, int whi
 		}
 	}
 }
-				   
+
 //==========================================================================
 //
 //	P_SetSlopesFromVertexHeights
@@ -399,9 +399,9 @@ void MapLoader::SpawnSlopeMakers (FMapThing *firstmt, FMapThing *lastmt, const i
 			{ // SetFloorSlope and SetCeilingSlope
 				SetSlope (refplane, ceiling, mt->angle, mt->args[0], pos);
 			}
-			else 
+			else
 			{ // VavoomFloor and VavoomCeiling (these do not perform any sector height adjustment - z is absolute)
-				VavoomSlope(sec, mt->thingid, mt->pos, ceiling); 
+				VavoomSlope(sec, mt->thingid, mt->pos, ceiling);
 			}
 			mt->EdNum = 0;
 		}
@@ -560,7 +560,7 @@ void MapLoader::CopySlopes()
 			for (int s = 0; s < (line.backsector ? 4 : 2); s++)
 			{
 				if (line.args[s])
-					CopyPlane(line.args[s], 
+					CopyPlane(line.args[s],
 					(s & 2 ? line.backsector : line.frontsector), s & 1);
 			}
 

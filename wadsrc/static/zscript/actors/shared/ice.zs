@@ -38,7 +38,7 @@ class IceChunk : Actor
 		+NOBLOCKMAP
 		+MOVEWITHSECTOR
 	}
-	
+
 	void A_IceSetTics ()
 	{
 		tics = random[IceTics](70, 133);
@@ -208,6 +208,6 @@ extend class Actor
 		A_SetTranslation('Ice');
 		A_FreezeDeath();
 	}
-	
+
 
 }

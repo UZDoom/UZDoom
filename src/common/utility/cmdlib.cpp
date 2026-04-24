@@ -571,7 +571,7 @@ void CreatePath(const char *fn)
 {
 	char c = fn[strlen(fn)-1];
 
-	if (c != '\\' && c != '/') 
+	if (c != '\\' && c != '/')
 	{
 		FString name(fn);
 		name += '/';
@@ -970,12 +970,12 @@ FString NicePath(const char *path)
 
 bool IsAbsPath(const char *name)
 {
-    if (IsSeperator(name[0])) return true;
+	if (IsSeperator(name[0])) return true;
 #ifdef _WIN32
-    /* [A-Za-z]: (for Windows) */
-    if (isalpha((uint8_t)name[0]) && name[1] == ':')    return true;
+	/* [A-Za-z]: (for Windows) */
+	if (isalpha((uint8_t)name[0]) && name[1] == ':')    return true;
 #endif /* _WIN32 */
-    return 0;
+	return 0;
 }
 
 //==========================================================================

@@ -216,7 +216,7 @@ class ListMenuItemSelectable : ListMenuItem
 	}
 
 	override bool CheckHotkey(int c)
-	{ 
+	{
 		return c > 0 && c == mHotkey;
 	}
 
@@ -283,7 +283,7 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 	{
 		let font = menuDelegate.PickFont(mFont);
 		double x = mXpos;
-		if (desc.mCenterText) 
+		if (desc.mCenterText)
 		{
 			x -= font.StringWidth(mText) / 2;
 		}
@@ -293,7 +293,7 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 	override int GetWidth()
 	{
 		let font = menuDelegate.PickFont(mFont);
-		return max(1, font.StringWidth(StringTable.Localize(mText))); 
+		return max(1, font.StringWidth(StringTable.Localize(mText)));
 	}
 }
 
@@ -360,4 +360,3 @@ class ListMenuItemCaptionItem : ListMenuItem
 		}
 	}
 }
-

@@ -52,7 +52,7 @@ class Programmer : Actor
 		Obituary "$OB_PROGRAMMER";
 		DropItem "Sigil1";
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -95,7 +95,7 @@ class Programmer : Actor
 		PRGR X -1 Bright A_ProgrammerDeath;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_ProgrammerMelee
@@ -158,7 +158,7 @@ class Programmer : Actor
 		// the sky change scripts are now done as special actions in MAPINFO
 		A_BossDeath();
 	}
-	
+
 	//============================================================================
 	//
 	// A_SpotLightning
@@ -178,7 +178,7 @@ class Programmer : Actor
 			spot.tracer = target;
 		}
 	}
-	
+
 }
 
 
@@ -212,7 +212,7 @@ class ProgLevelEnder : Inventory
 	{
 		+INVENTORY.UNDROPPABLE
 	}
-	
+
 
 	//============================================================================
 	//

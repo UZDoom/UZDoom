@@ -268,4 +268,3 @@ class Peasant22 : Peasant
 		Translation 6;
 	}
 }
-

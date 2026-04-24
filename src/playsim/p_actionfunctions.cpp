@@ -131,7 +131,7 @@ static int CallStateChain (AActor *self, AActor *actor, FState *state)
 			// we don't care about), we pretend they return true,
 			// thanks to the values set just above.
 
-			if (proto->ReturnTypes.Size() >= 2 && 
+			if (proto->ReturnTypes.Size() >= 2 &&
 				proto->ReturnTypes[0] == TypeState &&
 				(proto->ReturnTypes[1] == TypeSInt32 || proto->ReturnTypes[0] == TypeUInt32 || proto->ReturnTypes[1] == TypeBool))
 			{ // Function returns a state and an int or bool
@@ -154,7 +154,7 @@ static int CallStateChain (AActor *self, AActor *actor, FState *state)
 
 			try
 			{
-                state->CheckCallerType(actor, self);
+				state->CheckCallerType(actor, self);
 
 				if (state->ActionFunc->DefaultArgs.Size() > 0)
 				{
@@ -203,11 +203,11 @@ static int CallStateChain (AActor *self, AActor *actor, FState *state)
 		counter++;
 		if (counter >= 10000)	break;
 
-		if (nextstate == NULL) 
+		if (nextstate == NULL)
 		{
 			nextstate = state->GetNextState();
 
-			if (state == nextstate) 
+			if (state == nextstate)
 			{ // Abort immediately if the state jumps to itself!
 				result = false;
 				break;
@@ -231,7 +231,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(ACustomInventory, CallStateChain, CallStateChain)
 //
 // GetZAt
 //
-// NON-ACTION function to get the floor or ceiling z at (x, y) with 
+// NON-ACTION function to get the floor or ceiling z at (x, y) with
 // relativity being an option.
 //==========================================================================
 enum GZFlags
@@ -654,7 +654,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_CopyFriendliness)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT	(ptr_source);
-	
+
 	if (self->player != NULL)
 	{
 		return 0;
@@ -771,7 +771,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_BulletAttack)
 	PARAM_SELF_PROLOGUE(AActor);
 
 	int i;
-		
+
 	if (!self->target) return 0;
 
 	A_FaceTarget (self);
@@ -780,12 +780,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_BulletAttack)
 
 	S_Sound (self, CHAN_WEAPON, 0, self->AttackSound, 1, ATTN_NORM);
 	for (i = self->GetMissileDamage (0, 1); i > 0; --i)
-    {
+	{
 		DAngle angle = self->Angles.Yaw + DAngle::fromDeg(pr_cabullet.Random2() * (5.625 / 256.));
 		int damage = ((pr_cabullet()%5)+1)*3;
 		P_LineAttack(self, angle, MISSILERANGE, slope, damage,
 			NAME_Hitscan, NAME_BulletPuff);
-    }
+	}
 	return 0;
 }
 
@@ -915,7 +915,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnProjectile)
 
 	if (ref != NULL || aimmode == 2)
 	{
-		if (ti) 
+		if (ti)
 		{
 			DAngle angle = self->Angles.Yaw - DAngle::fromDeg(90.);
 			double x = Spawnofs_xy * angle.Cos();
@@ -950,7 +950,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnProjectile)
 			if (missile != NULL)
 			{
 				// Use the actual velocity instead of the missile's Speed property
-				// so that this can handle missiles with a high vertical velocity 
+				// so that this can handle missiles with a high vertical velocity
 				// component properly.
 
 				double missilespeed;
@@ -993,22 +993,22 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnProjectile)
 
 				missile->Angles.Yaw = (CMF_ABSOLUTEANGLE & flags) ? Angle : missile->Angles.Yaw + Angle;
 				missile->VelFromAngle(missilespeed);
-	
+
 				// handle projectile shooting projectiles - track the
 				// links back to a real owner
-                if (self->isMissile(!!(flags & CMF_TRACKOWNER)))
-                {
-                	AActor *owner = self ;//->target;
-                	while (owner->isMissile(!!(flags & CMF_TRACKOWNER)) && owner->target)
+				if (self->isMissile(!!(flags & CMF_TRACKOWNER)))
+				{
+					AActor *owner = self ;//->target;
+					while (owner->isMissile(!!(flags & CMF_TRACKOWNER)) && owner->target)
 						owner = owner->target;
-                	targ = owner;
-                	missile->target = owner;
+					targ = owner;
+					missile->target = owner;
 					// automatic handling of seeker missiles
 					if (self->flags2 & missile->flags2 & MF2_SEEKERMISSILE)
 					{
 						missile->tracer = self->tracer;
 					}
-                }
+				}
 				else if (missile->flags2 & MF2_SEEKERMISSILE)
 				{
 					// automatic handling of seeker missiles
@@ -1058,7 +1058,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_CustomMeleeAttack)
 
 	if (!self->target)
 		return 0;
-				
+
 	A_FaceTarget (self);
 	if (P_CheckMeleeRange(self))
 	{
@@ -1093,7 +1093,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_CustomComboAttack)
 
 	if (!self->target)
 		return 0;
-				
+
 	A_FaceTarget (self);
 	if (P_CheckMeleeRange(self))
 	{
@@ -1105,7 +1105,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_CustomComboAttack)
 		if (bleed)
 			P_TraceBleed (newdam > 0 ? newdam : damage, self->target, self);
 	}
-	else if (ti) 
+	else if (ti)
 	{
 		// This seemingly senseless code is needed for proper aiming.
 		double add = spawnheight + self->GetBobOffset() - 32;
@@ -1143,23 +1143,23 @@ DEFINE_ACTION_FUNCTION(AActor, A_CustomRailgun)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT		(damage);
-	PARAM_INT	(spawnofs_xy)		
-	PARAM_COLOR	(color1)			
-	PARAM_COLOR	(color2)			
-	PARAM_INT	(flags)				
-	PARAM_INT	(aim)				
-	PARAM_FLOAT	(maxdiff)			
-	PARAM_CLASS	(pufftype, AActor)	
-	PARAM_ANGLE	(spread_xy)			
-	PARAM_ANGLE	(spread_z)			
-	PARAM_FLOAT	(range)				
-	PARAM_INT	(duration)			
-	PARAM_FLOAT	(sparsity)			
-	PARAM_FLOAT	(driftspeed)		
+	PARAM_INT	(spawnofs_xy)
+	PARAM_COLOR	(color1)
+	PARAM_COLOR	(color2)
+	PARAM_INT	(flags)
+	PARAM_INT	(aim)
+	PARAM_FLOAT	(maxdiff)
+	PARAM_CLASS	(pufftype, AActor)
+	PARAM_ANGLE	(spread_xy)
+	PARAM_ANGLE	(spread_z)
+	PARAM_FLOAT	(range)
+	PARAM_INT	(duration)
+	PARAM_FLOAT	(sparsity)
+	PARAM_FLOAT	(driftspeed)
 	PARAM_CLASS	(spawnclass, AActor)
-	PARAM_FLOAT	(spawnofs_z)		
-	PARAM_INT	(SpiralOffset)		
-	PARAM_INT	(limit)				
+	PARAM_FLOAT	(spawnofs_z)
+	PARAM_INT	(SpiralOffset)
+	PARAM_INT	(limit)
 	PARAM_FLOAT	(veleffect)
 
 	if (range == 0) range = 8192.;
@@ -1283,7 +1283,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Print)
 	{
 		float saved = con_midtime;
 		FFont *font = NULL;
-		
+
 		if (fontname != NAME_None)
 		{
 			font = V_GetFont(fontname.GetChars());
@@ -1314,7 +1314,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_PrintBold)
 
 	float saved = con_midtime;
 	FFont *font = NULL;
-	
+
 	if (!text.IsEmpty() && text[0] == '$') text = GStrings.GetString(&text[1]);
 	if (fontname != NAME_None)
 	{
@@ -1552,8 +1552,8 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnDebris)
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_CLASS		(debris, AActor);
 	PARAM_BOOL	(transfer_translation)
-	PARAM_FLOAT	(mult_h)				
-	PARAM_FLOAT	(mult_v)				
+	PARAM_FLOAT	(mult_h)
+	PARAM_FLOAT	(mult_v)
 	int i;
 	AActor *mo;
 
@@ -1563,7 +1563,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnDebris)
 	// only positive values make sense here
 	if (mult_v <= 0) mult_v = 1;
 	if (mult_h <= 0) mult_h = 1;
-	
+
 	for (i = 0; i < GetDefaultByType(debris)->health; i++)
 	{
 		double xo = (pr_spawndebris() - 128) / 16.;
@@ -1598,22 +1598,22 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnParticle)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_COLOR		(color);
-	PARAM_INT	(flags)		
-	PARAM_INT	(lifetime)	
-	PARAM_FLOAT	(size)		
-	PARAM_ANGLE	(angle)		
-	PARAM_FLOAT	(xoff)		
-	PARAM_FLOAT	(yoff)		
-	PARAM_FLOAT	(zoff)		
-	PARAM_FLOAT	(xvel)		
-	PARAM_FLOAT	(yvel)		
-	PARAM_FLOAT	(zvel)		
-	PARAM_FLOAT	(accelx)	
-	PARAM_FLOAT	(accely)	
-	PARAM_FLOAT	(accelz)	
+	PARAM_INT	(flags)
+	PARAM_INT	(lifetime)
+	PARAM_FLOAT	(size)
+	PARAM_ANGLE	(angle)
+	PARAM_FLOAT	(xoff)
+	PARAM_FLOAT	(yoff)
+	PARAM_FLOAT	(zoff)
+	PARAM_FLOAT	(xvel)
+	PARAM_FLOAT	(yvel)
+	PARAM_FLOAT	(zvel)
+	PARAM_FLOAT	(accelx)
+	PARAM_FLOAT	(accely)
+	PARAM_FLOAT	(accelz)
 	PARAM_FLOAT	(startalpha)
-	PARAM_FLOAT	(fadestep)	
-	PARAM_FLOAT (sizestep)	
+	PARAM_FLOAT	(fadestep)
+	PARAM_FLOAT (sizestep)
 
 	startalpha = clamp(startalpha, 0., 1.);
 	if (fadestep > 0) fadestep = clamp(fadestep, 0., 1.);
@@ -1655,24 +1655,24 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnParticleEx)
 	PARAM_COLOR		(color);
 	PARAM_INT   (i_texid)
 	PARAM_INT   (style)
-	PARAM_INT	(flags)		
-	PARAM_INT	(lifetime)	
-	PARAM_FLOAT	(size)		
-	PARAM_ANGLE	(angle)		
-	PARAM_FLOAT	(xoff)		
-	PARAM_FLOAT	(yoff)		
-	PARAM_FLOAT	(zoff)		
-	PARAM_FLOAT	(xvel)		
-	PARAM_FLOAT	(yvel)		
-	PARAM_FLOAT	(zvel)		
-	PARAM_FLOAT	(accelx)	
-	PARAM_FLOAT	(accely)	
-	PARAM_FLOAT	(accelz)	
+	PARAM_INT	(flags)
+	PARAM_INT	(lifetime)
+	PARAM_FLOAT	(size)
+	PARAM_ANGLE	(angle)
+	PARAM_FLOAT	(xoff)
+	PARAM_FLOAT	(yoff)
+	PARAM_FLOAT	(zoff)
+	PARAM_FLOAT	(xvel)
+	PARAM_FLOAT	(yvel)
+	PARAM_FLOAT	(zvel)
+	PARAM_FLOAT	(accelx)
+	PARAM_FLOAT	(accely)
+	PARAM_FLOAT	(accelz)
 	PARAM_FLOAT	(startalpha)
-	PARAM_FLOAT	(fadestep)	
-	PARAM_FLOAT (sizestep)	
-	PARAM_FLOAT	(startroll)	
-	PARAM_FLOAT	(rollvel)	
+	PARAM_FLOAT	(fadestep)
+	PARAM_FLOAT (sizestep)
+	PARAM_FLOAT	(startroll)
+	PARAM_FLOAT	(rollvel)
 	PARAM_FLOAT	(rollacc)
 	PARAM_FLOAT (fadeoutstep)
 
@@ -1706,10 +1706,10 @@ DEFINE_ACTION_FUNCTION(AActor, A_SpawnParticleEx)
 			acc.X = accelx * c + accely * s;
 			acc.Y = accelx * s - accely * c;
 		}
-		
+
 		FTextureID texid;
 		texid.SetIndex(i_texid);
-		
+
 		if(style < 0 || style >= STYLE_Count)
 		{
 			style = STYLE_None;
@@ -2105,7 +2105,7 @@ DEFINE_ACTION_FUNCTION(AActor, PlayerSkinCheck)
 //==========================================================================
 //
 // A_CheckLOF (state jump, int flags = CRF_AIM_VERT|CRF_AIM_HOR,
-//    fixed range = 0, angle angle = 0, angle pitch = 0, 
+//    fixed range = 0, angle angle = 0, angle pitch = 0,
 //    fixed offsetheight = 32, fixed offsetwidth = 0,
 //	  int ptr_target = AAPTR_DEFAULT (target) )
 //
@@ -2134,7 +2134,7 @@ enum CLOF_flags
 
 	CLOFF_MUSTBEGHOST =			0x00004000,
 	CLOFF_IGNOREGHOST =			0x00008000,
-	
+
 	CLOFF_MUSTBESOLID =			0x00010000,
 	CLOFF_BEYONDTARGET =		0x00020000,
 
@@ -2243,15 +2243,15 @@ DEFINE_ACTION_FUNCTION(AActor, CheckLOF)
 	DVector3 vel;
 
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_INT	(flags)			
-	PARAM_FLOAT	(range)			
-	PARAM_FLOAT	(minrange)		
-	PARAM_ANGLE	(angle)			
-	PARAM_ANGLE	(pitch)			
-	PARAM_FLOAT	(offsetheight)	
-	PARAM_FLOAT	(offsetwidth)	
-	PARAM_INT	(ptr_target)	
-	PARAM_FLOAT	(offsetforward)	
+	PARAM_INT	(flags)
+	PARAM_FLOAT	(range)
+	PARAM_FLOAT	(minrange)
+	PARAM_ANGLE	(angle)
+	PARAM_ANGLE	(pitch)
+	PARAM_FLOAT	(offsetheight)
+	PARAM_FLOAT	(offsetwidth)
+	PARAM_INT	(ptr_target)
+	PARAM_FLOAT	(offsetforward)
 
 	DAngle ang;
 
@@ -2274,7 +2274,7 @@ DEFINE_ACTION_FUNCTION(AActor, CheckLOF)
 		offsetforward *= self->radius;
 		offsetwidth *= self->radius;
 }
-		
+
 	pos = self->PosPlusZ(offsetheight - self->Floorclip);
 
 		if (!(flags & CLOFF_FROMBASE))
@@ -2300,12 +2300,12 @@ DEFINE_ACTION_FUNCTION(AActor, CheckLOF)
 				ang = self->Angles.Yaw;
 			}
 			else ang = self->AngleTo (target);
-				
+
 			angle += ang;
 
 			double s = ang.Sin();
 			double c = ang.Cos();
-				
+
 			DVector2 xy = self->Vec2Offset(offsetforward * c + offsetwidth * s, offsetforward * s - offsetwidth * c);
 
 			pos.X = xy.X;
@@ -2426,9 +2426,9 @@ enum JLOS_flags
 DEFINE_ACTION_FUNCTION(AActor, CheckIfTargetInLOS)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_ANGLE	(fov)		
-	PARAM_INT	(flags)		
-	PARAM_FLOAT	(dist_max)	
+	PARAM_ANGLE	(fov)
+	PARAM_INT	(flags)
+	PARAM_FLOAT	(dist_max)
 	PARAM_FLOAT	(dist_close)
 
 	AActor *target, *viewport;
@@ -2469,7 +2469,7 @@ DEFINE_ACTION_FUNCTION(AActor, CheckIfTargetInLOS)
 	{
 		// Does the player aim at something that can be shot?
 		P_AimLineAttack(self, self->Angles.Yaw, MISSILERANGE, &t, DAngle::fromDeg((flags & JLOSF_NOAUTOAIM) ? 0.5 : 0.), ALF_PORTALRESTRICT);
-		
+
 		if (!t.linetarget)
 		{
 			ACTION_RETURN_BOOL(false);
@@ -2563,9 +2563,9 @@ DEFINE_ACTION_FUNCTION(AActor, CheckIfTargetInLOS)
 DEFINE_ACTION_FUNCTION(AActor, CheckIfInTargetLOS)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_ANGLE	(fov)		
-	PARAM_INT	(flags)		
-	PARAM_FLOAT	(dist_max)	
+	PARAM_ANGLE	(fov)
+	PARAM_INT	(flags)
+	PARAM_FLOAT	(dist_max)
 	PARAM_FLOAT	(dist_close)
 
 	AActor *target;
@@ -3106,7 +3106,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_SetUserArrayFloat)
 //
 // Attempts to teleport to a targettype at least mindist away and at most
 // maxdist away (0 means unlimited). If successful, spawn a fogtype at old
-// location and place calling actor in teleportstate. 
+// location and place calling actor in teleportstate.
 //
 //===========================================================================
 enum T_Flags
@@ -3130,13 +3130,13 @@ DSpotState *GetSpotState(FLevelLocals *self, int create);
 DEFINE_ACTION_FUNCTION(AActor, A_Teleport)
 {
 	PARAM_ACTION_PROLOGUE(AActor);
-	PARAM_STATE_ACTION	(teleport_state)			
-	PARAM_CLASS		(target_type, AActor)	
-	PARAM_CLASS		(fog_type, AActor)			
-	PARAM_INT		(flags)						
-	PARAM_FLOAT		(mindist)					
-	PARAM_FLOAT		(maxdist)					
-	PARAM_INT		(ptr)						
+	PARAM_STATE_ACTION	(teleport_state)
+	PARAM_CLASS		(target_type, AActor)
+	PARAM_CLASS		(fog_type, AActor)
+	PARAM_INT		(flags)
+	PARAM_FLOAT		(mindist)
+	PARAM_FLOAT		(maxdist)
+	PARAM_INT		(ptr)
 
 	AActor *ref = COPY_AAPTR(self, ptr);
 
@@ -3239,7 +3239,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Teleport)
 		//If a fog type is defined in the parameter, or the user wants to use the actor's predefined fogs,
 		//and if there's no desire to be fogless, spawn a fog based upon settings.
 		if (fog_type || (flags & TF_USEACTORFOG))
-		{ 
+		{
 			if (!(flags & TF_NOSRCFOG))
 			{
 				if (flags & TF_USEACTORFOG)
@@ -3263,7 +3263,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_Teleport)
 				}
 			}
 		}
-		
+
 		ref->SetZ((flags & TF_USESPOTZ) ? spot->Z() : ref->floorz, false);
 
 		if (!(flags & TF_KEEPANGLE))
@@ -3345,7 +3345,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_QuakeEx)
 	PARAM_FLOAT(damageMultiplier);
 	PARAM_FLOAT(thrustMultiplier);
 	PARAM_INT(damage);
-	P_StartQuakeXYZ(self->Level, self, 0, intensityX, intensityY, intensityZ, duration, damrad, tremrad, sound, flags, mulWaveX, mulWaveY, mulWaveZ, falloff, highpoint, 
+	P_StartQuakeXYZ(self->Level, self, 0, intensityX, intensityY, intensityZ, duration, damrad, tremrad, sound, flags, mulWaveX, mulWaveY, mulWaveZ, falloff, highpoint,
 		rollIntensity, rollWave, damageMultiplier, thrustMultiplier, damage);
 	return 0;
 }
@@ -3436,8 +3436,8 @@ DEFINE_ACTION_FUNCTION(AActor, A_LineEffect)
 		{
 			oldjunk.tag = tag;								// Sector tag for linedef
 			self->Level->TranslateLineDef(&junk, &oldjunk);			// Turn into native type
-			res = !!P_ExecuteSpecial(self->Level, junk.special, NULL, self, false, junk.args[0], 
-				junk.args[1], junk.args[2], junk.args[3], junk.args[4]); 
+			res = !!P_ExecuteSpecial(self->Level, junk.special, NULL, self, false, junk.args[0],
+				junk.args[1], junk.args[2], junk.args[3], junk.args[4]);
 			if (res && !(junk.flags & ML_REPEAT_SPECIAL))	// If only once,
 				self->flags6 |= MF6_LINEDONE;				// no more for this thing
 		}
@@ -3459,15 +3459,15 @@ enum WolfAttackFlags
 DEFINE_ACTION_FUNCTION(AActor, A_WolfAttack)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_INT	(flags)				
-	PARAM_SOUND	(sound)				
-	PARAM_FLOAT	(snipe)				
-	PARAM_INT	(maxdamage)			
-	PARAM_INT	(blocksize)			
-	PARAM_INT	(pointblank)		
-	PARAM_INT	(longrange)			
-	PARAM_FLOAT	(runspeed)			
-	PARAM_CLASS	(pufftype, AActor)	
+	PARAM_INT	(flags)
+	PARAM_SOUND	(sound)
+	PARAM_FLOAT	(snipe)
+	PARAM_INT	(maxdamage)
+	PARAM_INT	(blocksize)
+	PARAM_INT	(pointblank)
+	PARAM_INT	(longrange)
+	PARAM_FLOAT	(runspeed)
+	PARAM_CLASS	(pufftype, AActor)
 
 	if (!self->target)
 		return 0;
@@ -3520,7 +3520,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_WolfAttack)
 		if (dist >= longrange)
 			damage >>= 1;
 		FName mod = NAME_None;
-		bool spawnblood = !((self->target->flags & MF_NOBLOOD) 
+		bool spawnblood = !((self->target->flags & MF_NOBLOOD)
 			|| (self->target->flags2 & (MF2_INVULNERABLE|MF2_DORMANT)));
 		if (flags & WAF_USEPUFF && pufftype)
 		{
@@ -3529,7 +3529,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_WolfAttack)
 
 			if (dpuff->flags2 & MF2_THRUGHOST && self->target->flags3 & MF3_GHOST)
 				damage = 0;
-			
+
 			if ((0 && dpuff->flags3 & MF3_PUFFONACTORS) || !spawnblood)
 			{
 				spawnblood = false;
@@ -3565,16 +3565,16 @@ DEFINE_ACTION_FUNCTION(AActor, A_Warp)
 {
 	PARAM_ACTION_PROLOGUE(AActor);
 	PARAM_INT(destination_selector);
-	PARAM_FLOAT(xofs)				
-	PARAM_FLOAT(yofs)				
-	PARAM_FLOAT(zofs)				
-	PARAM_ANGLE(angle)				
-	PARAM_INT(flags)				
-	PARAM_STATE_ACTION(success_state)		
-	PARAM_FLOAT(heightoffset)		
-	PARAM_FLOAT(radiusoffset)		
-	PARAM_ANGLE(pitch)				
-	
+	PARAM_FLOAT(xofs)
+	PARAM_FLOAT(yofs)
+	PARAM_FLOAT(zofs)
+	PARAM_ANGLE(angle)
+	PARAM_INT(flags)
+	PARAM_STATE_ACTION(success_state)
+	PARAM_FLOAT(heightoffset)
+	PARAM_FLOAT(radiusoffset)
+	PARAM_ANGLE(pitch)
+
 	AActor *reference;
 
 	// A_Teleport and A_Warp were the only codepointers that can state jump
@@ -3673,7 +3673,7 @@ enum RadiusGiveFlags
 						RGF_MONSTERS |
 						RGF_OBJECTS |
 						RGF_VOODOO |
-						RGF_CORPSES | 
+						RGF_CORPSES |
 						RGF_KILLED |
 						RGF_MISSILES |
 						RGF_ITEMS,
@@ -3681,7 +3681,7 @@ enum RadiusGiveFlags
 
 static bool DoRadiusGive(AActor *self, AActor *thing, PClassActor *item, int amount, double distance, int flags, PClassActor *filter, FName species, double mindist)
 {
-	
+
 	bool doPass = false;
 	// Always allow self to give, no matter what other flags are specified. Otherwise, not at all.
 	if (thing == self)
@@ -3899,8 +3899,8 @@ DEFINE_ACTION_FUNCTION(AActor, A_SetTics)
 // Filter: Specified actor is the only type allowed to be affected.
 // Species: Specified species is the only type allowed to be affected.
 //
-// Examples: 
-// A_Damage(20,"Normal",DMSS_FOILINVUL,0,"DemonicSpecies") <--Only actors 
+// Examples:
+// A_Damage(20,"Normal",DMSS_FOILINVUL,0,"DemonicSpecies") <--Only actors
 //	with a species "DemonicSpecies" will be affected. Use 0 to not filter by actor.
 //
 //===========================================================================
@@ -3938,7 +3938,7 @@ static void DoDamage(AActor *dmgtarget, AActor *inflictor, AActor *source, int a
 			amount += dmgtarget->health;
 		if (flags & DMSS_NOPROTECT) //Ignore PowerProtection.
 			dmgFlags |= DMG_NO_PROTECT;
-	
+
 		if (amount > 0)
 		{ //Should wind up passing them through just fine.
 			if (inflictor && (flags & DMSS_INFLICTORDMGTYPE))
@@ -3963,12 +3963,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_DamageSelf)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT		(amount);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -3986,12 +3986,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_DamageTarget)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT		(amount);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4010,12 +4010,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_DamageTracer)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT		(amount);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4034,12 +4034,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_DamageMaster)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT		(amount);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4058,12 +4058,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_DamageChildren)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT		(amount);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4088,12 +4088,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_DamageSiblings)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT		(amount);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4141,14 +4141,14 @@ static void DoKill(AActor *killtarget, AActor *inflictor, AActor *source, FName 
 			dmgFlags |= DMG_FOILINVUL;
 		if (flags & KILS_FOILBUDDHA)
 			dmgFlags |= DMG_FOILBUDDHA;
-	
+
 		if ((killtarget->flags & MF_MISSILE) && (flags & KILS_KILLMISSILES))
 		{
 			//[MC] Now that missiles can set masters, lets put in a check to properly destroy projectiles. BUT FIRST! New feature~!
 			//Check to see if it's invulnerable. Disregarded if foilinvul is on, but never works on a missile with NODAMAGE
 			//since that's the whole point of it.
 			if ((!(killtarget->flags2 & MF2_INVULNERABLE) || (flags & KILS_FOILINVUL)) &&
-				(!(killtarget->flags7 & MF7_BUDDHA) || (flags & KILS_FOILBUDDHA)) && 
+				(!(killtarget->flags7 & MF7_BUDDHA) || (flags & KILS_FOILBUDDHA)) &&
 				!(killtarget->flags5 & MF5_NODAMAGE))
 			{
 				P_ExplodeMissile(killtarget, NULL, NULL);
@@ -4170,12 +4170,12 @@ static void DoKill(AActor *killtarget, AActor *inflictor, AActor *source, FName 
 DEFINE_ACTION_FUNCTION(AActor, A_KillTarget)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4193,12 +4193,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_KillTarget)
 DEFINE_ACTION_FUNCTION(AActor, A_KillTracer)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4216,14 +4216,14 @@ DEFINE_ACTION_FUNCTION(AActor, A_KillTracer)
 DEFINE_ACTION_FUNCTION(AActor, A_KillMaster)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
-	AActor *source = COPY_AAPTR(self, src); 
+	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
 
 	if (self->master != NULL)
@@ -4239,12 +4239,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_KillMaster)
 DEFINE_ACTION_FUNCTION(AActor, A_KillChildren)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4254,7 +4254,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_KillChildren)
 
 	while ( (mo = it.Next()) )
 	{
-		if (mo->master == self) 
+		if (mo->master == self)
 		{
 			DoKill(mo, inflictor, source, damagetype, flags, filter, species);
 		}
@@ -4270,12 +4270,12 @@ DEFINE_ACTION_FUNCTION(AActor, A_KillChildren)
 DEFINE_ACTION_FUNCTION(AActor, A_KillSiblings)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_NAME	(damagetype)	
-	PARAM_INT	(flags)			
+	PARAM_NAME	(damagetype)
+	PARAM_INT	(flags)
 	PARAM_CLASS	(filter, AActor)
-	PARAM_NAME	(species)		
-	PARAM_INT	(src)			
-	PARAM_INT	(inflict)		
+	PARAM_NAME	(species)
+	PARAM_INT	(src)
+	PARAM_INT	(inflict)
 
 	AActor *source = COPY_AAPTR(self, src);
 	AActor *inflictor = COPY_AAPTR(self, inflict);
@@ -4288,7 +4288,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_KillSiblings)
 		while ( (mo = it.Next()) )
 		{
 			if (mo->master == self->master && mo != self)
-			{ 
+			{
 				DoKill(mo, inflictor, source, damagetype, flags, filter, species);
 			}
 		}
@@ -4494,7 +4494,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_SetTeleFog)
 //
 // A_SwapTeleFog
 //
-// Switches the source and dest telefogs around. 
+// Switches the source and dest telefogs around.
 //===========================================================================
 
 DEFINE_ACTION_FUNCTION(AActor, A_SwapTeleFog)
@@ -4639,7 +4639,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_SetChaseThreshold)
 //
 // A_CheckProximity(jump, classname, distance, count, flags, ptr)
 //
-// Checks to see if a certain actor class is close to the 
+// Checks to see if a certain actor class is close to the
 // actor/pointer within distance, in numbers.
 //==========================================================================
 DEFINE_ACTION_FUNCTION(AActor, CheckProximity)
@@ -4678,16 +4678,16 @@ enum CBF
 DEFINE_ACTION_FUNCTION(AActor, CheckBlock)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_INT(flags)	
-	PARAM_INT(ptr)		
-	PARAM_FLOAT(xofs)	
-	PARAM_FLOAT(yofs)	
-	PARAM_FLOAT(zofs)	
-	PARAM_ANGLE(angle)	
+	PARAM_INT(flags)
+	PARAM_INT(ptr)
+	PARAM_FLOAT(xofs)
+	PARAM_FLOAT(yofs)
+	PARAM_FLOAT(zofs)
+	PARAM_ANGLE(angle)
 
 	AActor *mobj = COPY_AAPTR(self, ptr);
 
-	//Needs at least one state jump to work. 
+	//Needs at least one state jump to work.
 	if (!mobj)
 	{
 		ACTION_RETURN_BOOL(false);
@@ -4711,7 +4711,7 @@ DEFINE_ACTION_FUNCTION(AActor, CheckBlock)
 		double c = angle.Cos();
 		pos = mobj->Vec3Offset(xofs * c + yofs * s, xofs * s - yofs * c, zofs);
 	}
-	
+
 	// Next, try checking the position based on the sensitivity desired.
 	// If checking for dropoffs, set the z so we can have maximum flexibility.
 	// Otherwise, set origin and set it back after testing.
@@ -4737,7 +4737,7 @@ DEFINE_ACTION_FUNCTION(AActor, CheckBlock)
 		checker = P_TestMobjLocation(mobj);
 		mobj->SetOrigin(oldpos, true);
 	}
-	
+
 	if (checker)
 	{
 		ACTION_RETURN_BOOL(false);
@@ -4758,7 +4758,7 @@ DEFINE_ACTION_FUNCTION(AActor, CheckBlock)
 	//[MC] I don't know why I let myself be persuaded not to include a flag.
 	//If an actor is loaded with pointers, they don't really have any options to spare.
 	//Also, fail if a dropoff or a step is too great to pass over when checking for dropoffs.
-	
+
 	ACTION_RETURN_BOOL((!(flags & CBF_NOACTORS) && blocking != nullptr) || (!(flags & CBF_NOLINES) && mobj->BlockingLine != NULL) ||
 		((flags & CBF_DROPOFF) && !checker));
 }
@@ -4778,11 +4778,11 @@ enum FMDFlags
 DEFINE_ACTION_FUNCTION(AActor, A_FaceMovementDirection)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_ANGLE(offset)		
-	PARAM_ANGLE(anglelimit)	
-	PARAM_ANGLE(pitchlimit)	
-	PARAM_INT(flags)		
-	PARAM_INT(ptr)			
+	PARAM_ANGLE(offset)
+	PARAM_ANGLE(anglelimit)
+	PARAM_ANGLE(pitchlimit)
+	PARAM_INT(flags)
+	PARAM_INT(ptr)
 
 	AActor *mobj = COPY_AAPTR(self, ptr);
 
@@ -4883,7 +4883,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_CopySpriteFrame)
 	{
 		ACTION_RETURN_BOOL(false);
 	}
-	
+
 	if (!(flags & CPSF_NOSPRITE))	copyto->sprite = copyfrom->sprite;
 	if (!(flags & CPSF_NOFRAME))	copyto->frame = copyfrom->frame;
 	ACTION_RETURN_BOOL(true);
@@ -4911,8 +4911,8 @@ DEFINE_ACTION_FUNCTION(AActor, A_SetVisibleRotation)
 	PARAM_FANGLE(angleend)
 	PARAM_FANGLE(pitchstart)
 	PARAM_FANGLE(pitchend)
-	PARAM_INT(flags)		
-	PARAM_INT(ptr)			
+	PARAM_INT(flags)
+	PARAM_INT(ptr)
 
 	AActor *mobj = COPY_AAPTR(self, ptr);
 
@@ -4920,7 +4920,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_SetVisibleRotation)
 	{
 		ACTION_RETURN_BOOL(false);
 	}
-		
+
 	if (!(flags & VRF_NOANGLESTART))
 	{
 		mobj->VisibleStartAngle = anglestart;
@@ -5083,11 +5083,11 @@ static void EnsureModelData(AActor * mobj)
 	if (mobj->modelData == nullptr)
 	{
 		auto ptr = Create<DActorModelData>();
-		
+
 		ptr->flags = (mobj->hasmodel ? MODELDATA_HADMODEL : 0);
 		ptr->modelDef = nullptr;
 		ptr->ObjectFlags |= (mobj->ObjectFlags & OF_TransferrableFlags);
-		
+
 		mobj->modelData = ptr;
 		mobj->hasmodel = true;
 		GC::WriteBarrier(mobj, ptr);
@@ -5120,7 +5120,7 @@ FModel * SetGetBoneShared(AActor * self, int model_index)
 	{
 		ThrowAbortException(X_OTHER, isSet ? "Cannot set bone offset for non-decoupled actors" : (isOffset ? "Cannot get bone for non-decoupled actors" : "Cannot get bone offset for non-decoupled actors"));
 	}
-	
+
 	auto smf_class = (self->modelData && self->modelData->modelDef) ? self->modelData->modelDef : self->GetClass();
 
 	if(!BaseSpriteModelFrames.CheckKey(smf_class))
@@ -5129,7 +5129,7 @@ FModel * SetGetBoneShared(AActor * self, int model_index)
 	}
 
 	EnsureModelData(self);
-	
+
 	if(self->modelData->models.SSize() > model_index && self->modelData->models[model_index].modelID >= 0 && self->modelData->models[model_index].modelID < Models.SSize())
 	{
 		return Models[self->modelData->models[model_index].modelID];
@@ -5178,7 +5178,7 @@ FModel * SetBoneOffsetShared(AActor * self, int model_index, int &bone_index, FN
 	{
 		ThrowAbortException(X_OTHER, "Invalid mode for setbone");
 	}
-	
+
 	return SetGetBoneSharedIndex<true, true>(self, model_index, bone_index, bone_name);
 }
 
@@ -5193,9 +5193,9 @@ FModel * GetBoneShared(AActor * self, int model_index, int &bone_index, FName * 
 }
 
 //================================================
-// 
+//
 // SetBoneRotation
-// 
+//
 //================================================
 
 static void SetModelBoneRotationNative(AActor * self, int model_index, int bone_index, double rot_x, double rot_y, double rot_z, double rot_w, int mode, double interpolation_duration, double ticFrac)
@@ -5267,9 +5267,9 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetNamedBoneRotation, SetNamedBoneRotation
 }
 
 //================================================
-// 
+//
 // SetBoneTranslation
-// 
+//
 //================================================
 
 static void SetModelBoneTranslationNative(AActor * self, int model_index, int bone_index, double rot_x, double rot_y, double rot_z, int mode, double interpolation_duration, double ticFrac)
@@ -5339,9 +5339,9 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetNamedBoneTranslation, SetNamedBoneTrans
 }
 
 //================================================
-// 
+//
 // SetBoneScaling
-// 
+//
 //================================================
 
 static void SetModelBoneScalingNative(AActor * self, int model_index, int bone_index, double rot_x, double rot_y, double rot_z, int mode, double interpolation_duration, double ticFrac)
@@ -5412,9 +5412,9 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetNamedBoneScaling, SetNamedBoneScalingNa
 
 
 //================================================
-// 
+//
 // ClearBoneOffsets
-// 
+//
 //================================================
 
 static void ClearBoneOffsetsNative(AActor * self)
@@ -5432,9 +5432,9 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, ClearBoneOffsets, ClearBoneOffsetsNative)
 }
 
 //================================================
-// 
+//
 // GetBoneOffset
-// 
+//
 //================================================
 
 DEFINE_ACTION_FUNCTION(AActor, GetBoneOffset)
@@ -5458,18 +5458,18 @@ DEFINE_ACTION_FUNCTION(AActor, GetBoneOffset)
 		rotation = DVector4(mod.rotation.Get(FQuaternion(0,0,0,1), tics));
 		scaling = DVector3(mod.scaling.Get(FVector3(0,0,0), tics));
 	}
-	
+
 	if(numret > 2)
 	{
 		ret[2].SetVector(scaling);
 		numret = 3;
 	}
-	
+
 	if(numret > 1)
 	{
 		ret[1].SetVector(translation);
 	}
-	
+
 	if(numret > 0)
 	{
 		ret[0].SetVector4(rotation);
@@ -5523,9 +5523,9 @@ DEFINE_ACTION_FUNCTION(AActor, GetNamedBoneOffset)
 
 
 //================================================
-// 
+//
 // Bone Info Getters
-// 
+//
 //================================================
 
 static void GetRootBonesNative(AActor * self, TArray<int> *out)
@@ -5596,7 +5596,7 @@ static int GetNamedBoneParentNative(AActor * self, int boneName_i)
 	int bone_index;
 
 	FModel * mdl = GetBoneShared(self, 0, bone_index, &bone_name);
-	
+
 	return mdl->GetJointParent(bone_index);
 }
 
@@ -5757,9 +5757,9 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, GetBoneCount, GetBoneCountNative)
 }
 
 //================================================
-// 
+//
 // Bone Pose Getters
-// 
+//
 //================================================
 
 static int GetAnimStartFrameNative(AActor * self, int  animName_i)
@@ -5934,9 +5934,9 @@ DEFINE_ACTION_FUNCTION(AActor, GetNamedBoneBaseRotation)
 }
 
 //================================================
-// 
+//
 // Bone TRS Getters
-// 
+//
 //================================================
 
 DEFINE_ACTION_FUNCTION(AActor, GetBoneTRS)
@@ -6152,9 +6152,9 @@ DEFINE_ACTION_FUNCTION(AActor, TransformByNamedBone)
 }
 
 //================================================
-// 
+//
 // Bone Matrix Getters
-// 
+//
 //================================================
 
 DEFINE_ACTION_FUNCTION(AActor, GetBoneMatrixRaw)
@@ -6511,7 +6511,7 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 					*prevAnimOld = std::move(std::get<ModelAnimFramePrecalculatedIQM>(anims->prevAnim).precalcBones);
 				}
 
-				anims->prevAnim = ModelAnimFrameInterp{}; 
+				anims->prevAnim = ModelAnimFrameInterp{};
 
 				calcFrame(anims->curAnim, tic, std::get<ModelAnimFrameInterp>(anims->prevAnim));
 			}
@@ -6648,7 +6648,7 @@ void ClearModelFlag(AActor * self, int flag, int iqmFlag)
 	{
 		self->modelData->flags &= ~iqmFlag;
 	}
-	
+
 }
 
 void ResetModelFlags(AActor * self, int resetModel, int resetIqm)
@@ -6756,7 +6756,7 @@ void ChangeModelNative(
 			}
 			surfaceSkins.Push(skindata);
 			mobj->modelData->models.Push({queryModel, std::move(surfaceSkins)});
-			
+
 			mobj->modelData->modelFrameGenerators.Push(generatorindex);
 		}
 		else
@@ -6764,7 +6764,7 @@ void ChangeModelNative(
 			mobj->modelData->models.Push({queryModel, {}});
 			mobj->modelData->modelFrameGenerators.Push(generatorindex);
 		}
-		
+
 		if(queryModel != -1 && mobj->modelData->modelBoneOverrides.Size() > modelindex)
 		{
 			mobj->modelData->modelBoneOverrides[modelindex].Clear();
@@ -6791,7 +6791,7 @@ void ChangeModelNative(
 		if(queryModel != -1)
 		{
 			mobj->modelData->models[modelindex].modelID = queryModel;
-			
+
 			if(mobj->modelData->modelBoneOverrides.Size() > modelindex)
 			{
 				mobj->modelData->modelBoneOverrides[modelindex].Clear();
@@ -6857,7 +6857,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, A_ChangeModel, ChangeModelNative)
 	PARAM_INT(animationindex);
 	PARAM_STRING_VAL(animationpath);
 	PARAM_NAME(animation);
-	
+
 	ChangeModelNative(self,stateowner,stateinfo,modeldef.GetIndex(),modelindex,modelpath,model.GetIndex(),skinindex,skinpath,skin.GetIndex(),flags,generatorindex,animationindex,animationpath,animation.GetIndex());
 
 	return 0;
@@ -6873,7 +6873,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetAnimation, SetAnimationNative)
 	PARAM_INT(endFrame);
 	PARAM_INT(interpolateTics);
 	PARAM_INT(flags);
-	
+
 	SetAnimationInternal(self, animName, framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, 1);
 
 	return 0;
@@ -6889,7 +6889,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetAnimationUI, SetAnimationUINative)
 	PARAM_INT(endFrame);
 	PARAM_INT(interpolateTics);
 	PARAM_INT(flags);
-	
+
 	SetAnimationInternal(self, animName, framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, I_GetTimeFrac());
 
 	return 0;
@@ -7402,7 +7402,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBones)
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
 	double tic = self->GetModelTimer() + 1.0;
-	
+
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
 	{
@@ -7429,7 +7429,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetBonesUI)
 	TArray<BoneOverride> &overrides = self->modelData->modelBoneOverrides[0];
 
 	double tic = self->GetModelTimer() + I_GetTimeFrac();
-	
+
 	int n = std::min(bones->frameData.SSize(), overrides.SSize());
 	for(int i = 0; i < n; i++)
 	{
@@ -7665,13 +7665,13 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, ResetModelFlags, ResetModelFlags)
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_BOOL(resetModel);
 	PARAM_BOOL(resetIqm);
-	
+
 	ResetModelFlags(self, resetModel, resetIqm);
 
 	return 0;
 }
 
-// This needs to account for the fact that internally renderstyles are stored as a series of operations, 
+// This needs to account for the fact that internally renderstyles are stored as a series of operations,
 // but the script side only cares about symbolic constants.
 DEFINE_ACTION_FUNCTION(AActor, GetRenderStyle)
 {

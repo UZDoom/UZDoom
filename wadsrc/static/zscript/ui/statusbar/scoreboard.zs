@@ -28,11 +28,11 @@ extend class BaseStatusBar
 
 	native static bool IsScoreboardOpen();
 
-    static clearscope int ComparePlayerPoints(int playerA, int playerB)
-    {
-	    // Compare first by frags, then by name.
-	    PlayerInfo p1 = Players[playerA];
-	    PlayerInfo p2 = Players[playerB];
+	static clearscope int ComparePlayerPoints(int playerA, int playerB)
+	{
+		// Compare first by frags, then by name.
+		PlayerInfo p1 = Players[playerA];
+		PlayerInfo p2 = Players[playerB];
 
 		int diff;
 		if (deathmatch)
@@ -53,11 +53,11 @@ extend class BaseStatusBar
 		if (!diff)
 			diff = playerB - playerA;
 
-	    return diff;
-    }
+		return diff;
+	}
 
-    void SortScoreboardPlayers(out Array<int> sorted, Function<clearscope int(int, int)> compareFunc)
-    {
+	void SortScoreboardPlayers(out Array<int> sorted, Function<clearscope int(int, int)> compareFunc)
+	{
 		sorted.Clear();
 
 		int pNum = -1;
@@ -76,7 +76,7 @@ extend class BaseStatusBar
 			if (i >= sorted.Size())
 				sorted.Push(pNum);
 		}
-    }
+	}
 
 	void DrawScoreboardText(Font fnt, int col, double x, double y, String text, double xOfs = 0.0, double yOfs = 0.0)
 	{
@@ -117,7 +117,7 @@ extend class BaseStatusBar
 			TextureID icon = player.Mo.ScoreIcon;
 			if (!icon.IsValid())
 				continue;
-			
+
 			let [width, height] = TexMan.GetSize(icon);
 			if (width > maxWidth)
 				maxWidth = width;
@@ -134,38 +134,38 @@ extend class BaseStatusBar
 		BigScoreboardFont = BigFont;
 	}
 
-    version("4.15.1") virtual bool DrawScoreboard(double ticFrac)
-    {
+	version("4.15.1") virtual bool DrawScoreboard(double ticFrac)
+	{
 		if (!ScoreboardFont || GameState != GS_LEVEL || !CPlayer
 			|| (CPlayer.PlayerState != PST_DEAD && !IsScoreboardOpen()))
 		{
 			return false;
 		}
 
-	    if (deathmatch)
-	    {
-		    if (teamplay)
-		    {
-			    if(!sb_teamdeathmatch_enable)
-				    return false;
-		    }
-		    else if (!sb_deathmatch_enable)
-		    {
-			    return false;
-		    }
-	    }
-	    else if (!multiplayer || !sb_cooperative_enable)
-	    {
-		    return false;
-	    }
+		if (deathmatch)
+		{
+			if (teamplay)
+			{
+				if(!sb_teamdeathmatch_enable)
+					return false;
+			}
+			else if (!sb_deathmatch_enable)
+			{
+				return false;
+			}
+		}
+		else if (!multiplayer || !sb_cooperative_enable)
+		{
+			return false;
+		}
 
 		DrawRemainingTime(ticFrac);
-        
-        Array<int> sortedPlayers;
+
+		Array<int> sortedPlayers;
 		SortScoreboardPlayers(sortedPlayers, ComparePlayerPoints);
 		DrawPlayerScores(sortedPlayers, ticFrac);
 		return true;
-    }
+	}
 
 	version("4.15.1") virtual void DrawRemainingTime(double ticFrac)
 	{
@@ -178,7 +178,7 @@ extend class BaseStatusBar
 		int minutes = timeLeft / (GameTicRate * 60);
 		timeleft -= minutes * GameTicRate * 60;
 		int seconds = timeLeft / GameTicRate;
-		
+
 		String timer;
 		if (timelimit >= 60.0)
 			timer = String.Format("%2d:%02d:%02d", hours, minutes, seconds);
@@ -187,7 +187,7 @@ extend class BaseStatusBar
 
 		DrawScoreboardText(ScoreboardFont, Font.CR_WHITE, Screen.GetWidth() / 2, GetTopOfStatusBar() - 5 * CleanYFac_1, timer, -0.5, -1.0);
 	}
-	
+
 	version("4.15.1") virtual void DrawPlayerScores(Array<int> sortedPlayers, double ticFrac)
 	{
 		int col = sb_cooperative_headingcolor;
@@ -311,7 +311,7 @@ extend class BaseStatusBar
 					continue;
 
 				int xPos = x + baseOfs + xOfs + columnWidth * column;
-				
+
 				TextureID icon = Teams[t].GetLogo();
 				if (icon.IsValid())
 				{

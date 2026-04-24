@@ -39,7 +39,7 @@ EXTERN_CVAR(Int, vk_device)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -47,7 +47,7 @@ class Win32VulkanVideo : public Win32BaseVideo
 {
 	std::shared_ptr<VulkanSurface> surface;
 public:
-	Win32VulkanVideo() 
+	Win32VulkanVideo()
 	{
 		unsigned int count = 64;
 		const char* names[64];

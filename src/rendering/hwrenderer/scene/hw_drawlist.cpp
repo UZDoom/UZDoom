@@ -182,7 +182,7 @@ void HWDrawList::MakeSortList()
 //==========================================================================
 SortNode * HWDrawList::FindSortPlane(SortNode * head)
 {
-	while (head->next && drawitems[head->itemindex].rendertype!=DrawType_FLAT) 
+	while (head->next && drawitems[head->itemindex].rendertype!=DrawType_FLAT)
 		head=head->next;
 	if (drawitems[head->itemindex].rendertype==DrawType_FLAT) return head;
 	return NULL;
@@ -243,11 +243,11 @@ void HWDrawList::SortPlaneIntoPlane(SortNode * head,SortNode * sort)
 	HWFlat * fh= flats[drawitems[head->itemindex].index];
 	HWFlat * fs= flats[drawitems[sort->itemindex].index];
 
-	if (fh->z==fs->z) 
+	if (fh->z==fs->z)
 		head->AddToEqual(sort);
-	else if ( (fh->z<fs->z && fh->ceiling) || (fh->z>fs->z && !fh->ceiling)) 
+	else if ( (fh->z<fs->z && fh->ceiling) || (fh->z>fs->z && !fh->ceiling))
 		head->AddToLeft(sort);
-	else 
+	else
 		head->AddToRight(sort);
 }
 
@@ -395,26 +395,26 @@ void HWDrawList::SortWallIntoWall(HWDrawInfo *di, SortNode * head,SortNode * sor
 	float v1=wh->PointOnSide(ws->glseg.x1,ws->glseg.y1);
 	float v2=wh->PointOnSide(ws->glseg.x2,ws->glseg.y2);
 
-	if (fabs(v1)<MIN_EQ && fabs(v2)<MIN_EQ) 
+	if (fabs(v1)<MIN_EQ && fabs(v2)<MIN_EQ)
 	{
-		if (ws->type==RENDERWALL_FOGBOUNDARY && wh->type!=RENDERWALL_FOGBOUNDARY) 
+		if (ws->type==RENDERWALL_FOGBOUNDARY && wh->type!=RENDERWALL_FOGBOUNDARY)
 		{
 			head->AddToRight(sort);
 		}
-		else if (ws->type!=RENDERWALL_FOGBOUNDARY && wh->type==RENDERWALL_FOGBOUNDARY) 
+		else if (ws->type!=RENDERWALL_FOGBOUNDARY && wh->type==RENDERWALL_FOGBOUNDARY)
 		{
 			head->AddToLeft(sort);
 		}
-		else 
+		else
 		{
 			head->AddToEqual(sort);
 		}
 	}
-	else if (v1<MIN_EQ && v2<MIN_EQ) 
+	else if (v1<MIN_EQ && v2<MIN_EQ)
 	{
 		head->AddToLeft(sort);
 	}
-	else if (v1>-MIN_EQ && v2>-MIN_EQ) 
+	else if (v1>-MIN_EQ && v2>-MIN_EQ)
 	{
 		head->AddToRight(sort);
 	}
@@ -463,7 +463,7 @@ void HWDrawList::SortWallIntoWall(HWDrawInfo *di, SortNode * head,SortNode * sor
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 EXTERN_CVAR(Int, gl_billboard_mode)
@@ -488,22 +488,22 @@ void HWDrawList::SortSpriteIntoWall(HWDrawInfo *di, SortNode * head,SortNode * s
 	float v1 = wh->PointOnSide(ss->x1, ss->y1);
 	float v2 = wh->PointOnSide(ss->x2, ss->y2);
 
-	if (fabs(v1)<MIN_EQ && fabs(v2)<MIN_EQ) 
+	if (fabs(v1)<MIN_EQ && fabs(v2)<MIN_EQ)
 	{
-		if (wh->type==RENDERWALL_FOGBOUNDARY) 
+		if (wh->type==RENDERWALL_FOGBOUNDARY)
 		{
 			head->AddToLeft(sort);
 		}
-		else 
+		else
 		{
 			head->AddToEqual(sort);
 		}
 	}
-	else if (v1<MIN_EQ && v2<MIN_EQ) 
+	else if (v1<MIN_EQ && v2<MIN_EQ)
 	{
 		head->AddToLeft(sort);
 	}
-	else if (v1>-MIN_EQ && v2>-MIN_EQ) 
+	else if (v1>-MIN_EQ && v2>-MIN_EQ)
 	{
 		head->AddToRight(sort);
 	}
@@ -684,7 +684,7 @@ SortNode * HWDrawList::DoSort(HWDrawInfo *di, SortNode * head)
 				node=next;
 			}
 		}
-		else 
+		else
 		{
 			return SortSpriteList(head);
 		}
@@ -702,7 +702,7 @@ SortNode * HWDrawList::DoSort(HWDrawInfo *di, SortNode * head)
 void HWDrawList::Sort(HWDrawInfo *di)
 {
 	reverseSort = !!(di->Level->i_compatflags & COMPATF_SPRITESORT);
-    SortZ = di->Viewpoint.Pos.Z;
+	SortZ = di->Viewpoint.Pos.Z;
 	MakeSortList();
 	sorted = DoSort(di, SortNodes[SortNodeStart]);
 }
@@ -774,7 +774,7 @@ HWFlat *HWDrawList::NewFlat()
 //
 //==========================================================================
 HWSprite *HWDrawList::NewSprite()
-{	
+{
 	auto sprite = (HWSprite*)RenderDataAllocator.Alloc(sizeof(HWSprite));
 	drawitems.Push(HWDrawItem(DrawType_SPRITE, sprites.Push(sprite)));
 	return sprite;
@@ -946,4 +946,3 @@ void HWDrawList::DrawSorted(HWDrawInfo *di, FRenderState &state)
 	state.EnableClipDistance(2, false);
 	state.ClearClipSplit();
 }
-

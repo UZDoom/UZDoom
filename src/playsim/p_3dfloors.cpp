@@ -100,7 +100,7 @@ void P_Add3DFloor(sector_t* sec, sector_t* sec2, line_t* master, int flags, int 
 		for(i = 0; i < sec2->e->XFloor.attached.Size(); i++) if(sec2->e->XFloor.attached[i] == sec) return;
 		sec2->e->XFloor.attached.Push(sec);
 	}
-	
+
 	//Add the floor
 	ffloor = new F3DFloor;
 	ffloor->top.copied = ffloor->bottom.copied = false;
@@ -114,13 +114,13 @@ void P_Add3DFloor(sector_t* sec, sector_t* sec2, line_t* master, int flags, int 
 		ffloor->bottom.texture = &sec2->planes[sector_t::floor].Texture;
 		ffloor->bottom.isceiling = sector_t::floor;
 	}
-	else 
+	else
 	{
 		ffloor->bottom.plane = &sec2->ceilingplane;
 		ffloor->bottom.texture = &sec2->planes[sector_t::ceiling].Texture;
 		ffloor->bottom.isceiling = sector_t::ceiling;
 	}
-	
+
 	if (!(flags&FF_FIX))
 	{
 		ffloor->top.plane = &sec2->ceilingplane;
@@ -165,7 +165,7 @@ void P_Add3DFloor(sector_t* sec, sector_t* sec2, line_t* master, int flags, int 
 		ffloor->flags &= ~FF_ADDITIVETRANS;
 	}
 
-	if(flags & FF_THISINSIDE) 
+	if(flags & FF_THISINSIDE)
 	{
 		// switch the planes
 		std::swap(ffloor->top, ffloor->bottom);
@@ -197,14 +197,14 @@ void P_ActorOnSpecial3DFloor(AActor* victim)
 		if (!(rover->flags & FF_EXISTS)) continue;
 		if (rover->flags & FF_FIX) continue;
 		if (!checkForSpecialSector(victim, rover->model)) continue;
-		
+
 		// Check the 3D floor's type...
 		if(rover->flags & FF_SOLID)
 		{
 			// Player must be on top of the floor to be affected...
 			if (victim->Z() != rover->top.plane->ZatPoint(victim)) continue;
 		}
-		else 
+		else
 		{
 			//Water and DEATH FOG!!! heh
 			if ((rover->flags & FF_NODAMAGE) ||
@@ -239,7 +239,7 @@ bool P_CheckFor3DFloorHit(AActor * mo, double z, bool trigger)
 
 		if(rover->flags & FF_SOLID && rover->model->SecActTarget)
 		{
-			if (fabs(z - rover->top.plane->ZatPoint(mo)) < EQUAL_EPSILON) 
+			if (fabs(z - rover->top.plane->ZatPoint(mo)) < EQUAL_EPSILON)
 			{
 				mo->BlockingFloor = rover->model;
 				mo->Blocking3DFloor = rover->model;
@@ -283,7 +283,7 @@ bool P_CheckFor3DCeilingHit(AActor * mo, double z, bool trigger)
 //
 // P_Recalculate3DFloors
 //
-// This function sorts the ffloors by height and creates the lightlists 
+// This function sorts the ffloors by height and creates the lightlists
 // that the given sector uses to light floors/ceilings/walls according to the 3D floors.
 //
 //==========================================================================
@@ -475,7 +475,7 @@ void P_Recalculate3DFloors(sector_t * sector)
 
 			if ( !(rover->flags & FF_EXISTS) || rover->flags & FF_NOSHADE )
 				continue;
-				
+
 			double ff_top=rover->top.plane->ZatPoint(sector->centerspot);
 			if (ff_top < minheight) break;	// reached the floor
 			if (ff_top < maxheight)
@@ -641,11 +641,11 @@ lightlist_t * P_GetPlaneLight(sector_t * sector, secplane_t * plane, bool unders
 
 	double planeheight=plane->ZatPoint(sector->centerspot);
 	if(underside) planeheight-= EQUAL_EPSILON;
-	
+
 	for(i = 1; i < lightlist.Size(); i++)
-		if (lightlist[i].plane.ZatPoint(sector->centerspot) <= planeheight) 
+		if (lightlist[i].plane.ZatPoint(sector->centerspot) <= planeheight)
 			return &lightlist[i - 1];
-		
+
 	return &lightlist[lightlist.Size() - 1];
 }
 
@@ -655,16 +655,16 @@ lightlist_t * P_GetPlaneLight(sector_t * sector, secplane_t * plane, bool unders
 //
 //==========================================================================
 
-void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *linedef, 
+void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *linedef,
 	double x, double y, bool restrict)
 {
-    if(thing)
-    {
+	if(thing)
+	{
 		double thingbot, thingtop;
-		
+
 		thingbot = thing->Z();
 		thingtop = thing->Top();
-		
+
 
 		extsector_t::xfloor *xf[2] = {&linedef->frontsector->e->XFloor, &linedef->backsector->e->XFloor};
 
@@ -674,7 +674,7 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 			double    lowestceiling = open.top;
 			double    highestfloor = open.bottom;
 			double    lowestfloor[2] = {
-				linedef->frontsector->floorplane.ZatPoint(x, y), 
+				linedef->frontsector->floorplane.ZatPoint(x, y),
 				linedef->backsector->floorplane.ZatPoint(x, y) };
 			bool lowestfloorset[2] = { false, false };
 			FTextureID highestfloorpic;
@@ -684,10 +684,10 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 			secplane_t *highestfloorplanes[2] = { &open.frontfloorplane, &open.backfloorplane };
 			F3DFloor *lowestceilingffloor = nullptr;
 			F3DFloor *highestfloorffloor = nullptr;
-			
+
 			highestfloorpic.SetInvalid();
 			lowestceilingpic.SetInvalid();
-			
+
 			for(int j=0;j<2;j++)
 			{
 				for(unsigned i=0;i<xf[j]->ffloors.Size();i++)
@@ -696,21 +696,21 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 
 					if (!(rover->flags & FF_EXISTS)) continue;
 					if (!(rover->flags & FF_SOLID)) continue;
-					
+
 					double ff_bottom=rover->bottom.plane->ZatPoint(x, y);
 					double ff_top=rover->top.plane->ZatPoint(x, y);
-					
+
 					double delta1 = fabs(thingbot - ((ff_bottom + ff_top) / 2));
 					double delta2 = fabs(thingtop - ((ff_bottom + ff_top) / 2));
-					
-					if(ff_bottom < lowestceiling && delta1 > delta2) 
+
+					if(ff_bottom < lowestceiling && delta1 > delta2)
 					{
 						lowestceiling = ff_bottom;
 						lowestceilingpic = *rover->bottom.texture;
 						lowestceilingsec = j == 0 ? linedef->frontsector : linedef->backsector;
 						lowestceilingffloor = rover;
 					}
-					
+
 					if(delta1 <= delta2 && (!restrict || thing->Z() >= ff_top))
 					{
 						if (ff_top > highestfloor)
@@ -733,7 +733,7 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 					}
 				}
 			}
-			
+
 			if(highestfloor > open.bottom)
 			{
 				open.bottom = highestfloor;
@@ -753,7 +753,7 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 				if (open.backfloorplane.fC() < 0) open.backfloorplane.FlipVert();
 			}
 
-			if(lowestceiling < open.top) 
+			if(lowestceiling < open.top)
 			{
 				open.top = lowestceiling;
 				open.ceilingpic = lowestceilingpic;
@@ -769,7 +769,7 @@ void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *li
 			double low2 = (open.lowfloorthroughportal & 2) ? open.lowfloor : lowestfloor[1];
 			open.lowfloor = min(low1, low2);
 		}
-    }
+	}
 }
 
 
@@ -852,4 +852,3 @@ int	P_Find3DFloor(sector_t * sec, const DVector3 &pos, bool above, bool floor, d
 	// Failsafe
 	return -1;
 }
-

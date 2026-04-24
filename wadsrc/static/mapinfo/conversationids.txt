@@ -330,5 +330,5 @@ conversationids
 	349 = SVETalismanGreen
 	350 = SVETalismanBlue
 	351 = SVEOpenDoor225
-	
+
 }

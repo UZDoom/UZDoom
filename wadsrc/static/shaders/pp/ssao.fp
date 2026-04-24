@@ -36,7 +36,7 @@ layout(binding=2) uniform sampler2D RandomTexture;
 vec3 FetchViewPos(vec2 uv)
 {
 	float z = texture(DepthTexture, uv).x;
-    return vec3((UVToViewA * uv + UVToViewB) * z, z);
+	return vec3((UVToViewA * uv + UVToViewB) * z, z);
 }
 
 #if defined(MULTISAMPLE)
@@ -74,18 +74,18 @@ vec3 FetchNormal(vec2 uv)
 // Compute normalized 2D direction
 vec2 RotateDirection(vec2 dir, vec2 cossin)
 {
-    return vec2(dir.x * cossin.x - dir.y * cossin.y, dir.x * cossin.y + dir.y * cossin.x);
+	return vec2(dir.x * cossin.x - dir.y * cossin.y, dir.x * cossin.y + dir.y * cossin.x);
 }
 
 vec4 GetJitter()
 {
 #if !defined(USE_RANDOM_TEXTURE)
-    return vec4(1,0,1,1);
+	return vec4(1,0,1,1);
 	//vec3 rand = noise3(TexCoord.x + TexCoord.y);
 	//float angle = 2.0 * PI * rand.x / NUM_DIRECTIONS;
 	//return vec4(cos(angle), sin(angle), rand.y, rand.z);
 #else
-    return texture(RandomTexture, gl_FragCoord.xy / RANDOM_TEXTURE_WIDTH);
+	return texture(RandomTexture, gl_FragCoord.xy / RANDOM_TEXTURE_WIDTH);
 #endif
 }
 
@@ -101,7 +101,7 @@ float ComputeSampleAO(vec3 kernelPos, vec3 normal, vec3 samplePos)
 // Calculates the total ambient occlusion for the entire fragment
 float ComputeAO(vec3 viewPosition, vec3 viewNormal)
 {
-    vec4 rand = GetJitter();
+	vec4 rand = GetJitter();
 
 	float radiusPixels = RadiusToScreen / viewPosition.z;
 	float stepSizePixels = radiusPixels / (NUM_STEPS + 1.0);
@@ -109,29 +109,29 @@ float ComputeAO(vec3 viewPosition, vec3 viewNormal)
 	const float directionAngleStep = 2.0 * PI / NUM_DIRECTIONS;
 	float ao = 0.0;
 
-    for (float directionIndex = 0.0; directionIndex < NUM_DIRECTIONS; ++directionIndex)
-    {
-        float angle = directionAngleStep * directionIndex;
+	for (float directionIndex = 0.0; directionIndex < NUM_DIRECTIONS; ++directionIndex)
+	{
+		float angle = directionAngleStep * directionIndex;
 
-        vec2 direction = RotateDirection(vec2(cos(angle), sin(angle)), rand.xy);
-        float rayPixels = (rand.z * stepSizePixels + 1.0);
+		vec2 direction = RotateDirection(vec2(cos(angle), sin(angle)), rand.xy);
+		float rayPixels = (rand.z * stepSizePixels + 1.0);
 
-        for (float StepIndex = 0.0; StepIndex < NUM_STEPS; ++StepIndex)
-        {
-            vec2 sampleUV = round(rayPixels * direction) * InvFullResolution + TexCoord;
-            vec3 samplePos = FetchViewPos(sampleUV);
-            ao += ComputeSampleAO(viewPosition, viewNormal, samplePos);
-            rayPixels += stepSizePixels;
-        }
-    }
+		for (float StepIndex = 0.0; StepIndex < NUM_STEPS; ++StepIndex)
+		{
+			vec2 sampleUV = round(rayPixels * direction) * InvFullResolution + TexCoord;
+			vec3 samplePos = FetchViewPos(sampleUV);
+			ao += ComputeSampleAO(viewPosition, viewNormal, samplePos);
+			rayPixels += stepSizePixels;
+		}
+	}
 
-    ao *= AOMultiplier / (NUM_DIRECTIONS * NUM_STEPS);
-    return clamp(1.0 - ao * 2.0, 0.0, 1.0);
+	ao *= AOMultiplier / (NUM_DIRECTIONS * NUM_STEPS);
+	return clamp(1.0 - ao * 2.0, 0.0, 1.0);
 }
 
 void main()
 {
-    vec3 viewPosition = FetchViewPos(TexCoord);
+	vec3 viewPosition = FetchViewPos(TexCoord);
 	vec3 viewNormal = FetchNormal(TexCoord);
 	float occlusion = viewNormal != vec3(0.0) ? ComputeAO(viewPosition, viewNormal) * AOStrength + (1.0 - AOStrength) : 1.0;
 

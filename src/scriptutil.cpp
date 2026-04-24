@@ -41,13 +41,13 @@ void ScriptUtil::BuildParameters(va_list ap)
 			case Int:
 				parameters.Push(VMValue(va_arg(ap, int)));
 				break;
-				
+
 			case Pointer:
 			case Class:		// this is just a pointer.
 			case String:	// must be passed by reference to a persistent location!
 				parameters.Push(VMValue(va_arg(ap, void*)));
 				break;
-				
+
 			case Float:
 				parameters.Push(VMValue(va_arg(ap, double)));
 				break;
@@ -62,7 +62,7 @@ void ScriptUtil::RunFunction(FName functionname, unsigned paramstart, VMReturn &
 	if (!check)
 	{
 		func = PClass::FindFunction(NAME_ScriptUtil, functionname);
-		if (func == nullptr) 
+		if (func == nullptr)
 		{
 			I_Error("Call to undefined function ScriptUtil.%s", functionname.GetChars());
 		}

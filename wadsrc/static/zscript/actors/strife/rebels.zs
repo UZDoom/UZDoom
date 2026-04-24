@@ -153,7 +153,7 @@ class TeleporterBeacon : Inventory
 		BEAC A 1 A_FadeOut(0.015);
 		Loop;
 	}
-	
+
 	// Teleporter Beacon --------------------------------------------------------
 
 	override bool Use (bool pickup)

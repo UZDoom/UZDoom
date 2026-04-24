@@ -32,7 +32,7 @@
 #include "engineerrors.h"
 
 namespace FileSys {
-	
+
 #ifdef _WIN32
 std::wstring toWide(const char* str);
 #endif

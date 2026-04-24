@@ -122,7 +122,7 @@ namespace swrenderer
 					return;
 			}
 		}
-		
+
 
 		// [RH] Flip for mirrors
 		auto renderportal = thread->Portal.get();
@@ -230,7 +230,7 @@ namespace swrenderer
 							float distance = sqrt(LdotL);
 							float attenuation = 1.0f - distance / radius;
 							if (attenuation > 0.0f)
-							{						
+							{
 								float red = light->GetRed() * (1.0f / 255.0f);
 								float green = light->GetGreen() * (1.0f / 255.0f);
 								float blue = light->GetBlue() * (1.0f / 255.0f);
@@ -242,7 +242,7 @@ namespace swrenderer
 									green = (bright - lg) * -1;
 									blue = (bright - lb) * -1;
 								}*/
-							
+
 								lit_red += red * attenuation;
 								lit_green += green * attenuation;
 								lit_blue += blue * attenuation;

@@ -342,7 +342,7 @@ public:
 	uint32_t		original_oldbuttons = 0;
 
 	userinfo_t	userinfo;				// [RH] who is this?
-	
+
 	PClassActor *cls = nullptr;				// class of associated PlayerPawn
 
 	float		DesiredFOV = 0;				// desired field of vision
@@ -492,7 +492,7 @@ public:
 		FullbrightMode = mode;
 		bForceFullbright = force;
 	}
-	
+
 	int GetSpawnClass();
 
 	// PSprite layers

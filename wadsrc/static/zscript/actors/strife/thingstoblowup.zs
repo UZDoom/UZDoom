@@ -27,7 +27,7 @@ extend class Actor
 		double yo = random[Bang4Cloud](0, 3) * (10. / 64);
 		Spawn("Bang4Cloud", Vec3Offset(xo, yo, 0.), ALLOW_REPLACE);
 	}
-	
+
 	void A_GiveQuestItem(int questitem)
 	{
 		// Give one of these quest items to every player in the game
@@ -55,7 +55,7 @@ extend class Actor
 			Console.MidPrint (null, msg);
 		}
 	}
-	
+
 }
 
 // A Cloud used for various explosions --------------------------------------
@@ -205,7 +205,7 @@ class PowerCrystal : Actor
 		BOOM VWXY 3 Bright;
 		Stop;
 	}
-	
+
 	// PowerCrystal -------------------------------------------------------------------
 
 	void A_ExtraLightOff()
@@ -234,7 +234,7 @@ class PowerCrystal : Actor
 		sec.lightlevel = 0;
 		// Do this right with proper checks instead of just hacking the floor height.
 		level.CreateFloor(sec, Floor.floorLowerToLowest, null, 65536.);
-		
+
 
 		for (int i = 0; i < 8; ++i)
 		{
@@ -249,5 +249,5 @@ class PowerCrystal : Actor
 			}
 		}
 	}
-	
+
 }

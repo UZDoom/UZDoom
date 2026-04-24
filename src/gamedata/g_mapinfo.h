@@ -189,7 +189,7 @@ enum ELevelFlags : unsigned int
 	LEVEL_CHANGEMAPCHEAT		= 0x40000000,	// Don't display cluster messages
 	LEVEL_VISITED				= 0x80000000,	// Used for intermission map
 
-	// The flags uint64_t is now split into 2 DWORDs 
+	// The flags uint64_t is now split into 2 DWORDs
 	LEVEL2_RANDOMPLAYERSTARTS	= 0x00000001,	// Select single player starts randomnly (no voodoo dolls)
 	LEVEL2_ALLMAP				= 0x00000002,	// The player picked up a map on this level
 
@@ -206,7 +206,7 @@ enum ELevelFlags : unsigned int
 	LEVEL2_CLIPMIDTEX			= 0x00000200,
 	LEVEL2_WRAPMIDTEX			= 0x00000400,
 
-	LEVEL2_CHECKSWITCHRANGE		= 0x00000800,	
+	LEVEL2_CHECKSWITCHRANGE		= 0x00000800,
 
 	LEVEL2_PAUSE_MUSIC_IN_MENUS	= 0x00001000,
 	LEVEL2_TOTALINFIGHTING		= 0x00002000,
@@ -234,7 +234,7 @@ enum ELevelFlags : unsigned int
 	LEVEL2_ENDGAME				= 0x20000000,	// This is an epilogue level that cannot be quit.
 	LEVEL2_NOAUTOSAVEHINT		= 0x40000000,	// tell the game that an autosave for this level does not need to be kept
 	LEVEL2_FORGETSTATE			= 0x80000000,	// forget this map's state in a hub
-	
+
 	// More flags!
 	LEVEL3_FORCEFAKECONTRAST	= 0x00000001,	// forces fake contrast even with fog enabled
 	LEVEL3_REMOVEITEMS			= 0x00000002,	// kills all INVBAR items on map change.
@@ -312,7 +312,7 @@ struct level_info_t
 {
 	int			levelnum;
 	int			id24_levelnum;
-	
+
 	FString		MapName;
 	FString		NextMap;
 	FString		NextSecretMap;
@@ -404,7 +404,7 @@ struct level_info_t
 	TArray<FSoundID> PrecacheSounds;
 	TArray<FString> PrecacheTextures;
 	TArray<FName> PrecacheClasses;
-	
+
 	TArray<FString> EventHandlers;
 
 	ELightMode	lightmode;
@@ -419,13 +419,13 @@ struct level_info_t
 	bool		fs_nocheckposition;
 	ELightBlendMode lightblendmode;
 	ETonemapMode tonemap;
-	
+
 	CutsceneDef intro, outro;
 
 
-	level_info_t() 
-	{ 
-		Reset(); 
+	level_info_t()
+	{
+		Reset();
 	}
 	~level_info_t()
 	{

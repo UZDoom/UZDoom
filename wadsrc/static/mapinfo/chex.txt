@@ -87,32 +87,32 @@ gamedefaults
 
 DoomEdNums
 {
-     5 = ChexBlueCard
-     6 = ChexYellowCard
-     8 = Zorchpack
-     9 = FlemoidusBipedicus
-    13 = ChexRedCard
-    17 = PhasingZorchPack
-    25 = ChexTallFlower2
-    28 = ChexTallFlower
-    30 = ChexCavernStalagmite
-    31 = ChexSubmergedPlant
-    32 = ChexCavernColumn
-    33 = ChexMineCart
-    34 = ChexChemicalFlask
-    35 = ChexGasTank
-    37 = ChexFlagOnPole
-    41 = ChexChemicalBurner
-    43 = ChexOrangeTree
-    44 = ChexSlimeFountain
-    45 = ChexCivilian1
-    47 = ChexAppleTree
-    48 = ChexSpaceship
-    54 = ChexBananaTree
-    55 = ChexLightColumn
-    56 = ChexCivilian2
-    57 = ChexCivilian3
-    82 = SuperLargeZorcher
+	 5 = ChexBlueCard
+	 6 = ChexYellowCard
+	 8 = Zorchpack
+	 9 = FlemoidusBipedicus
+	13 = ChexRedCard
+	17 = PhasingZorchPack
+	25 = ChexTallFlower2
+	28 = ChexTallFlower
+	30 = ChexCavernStalagmite
+	31 = ChexSubmergedPlant
+	32 = ChexCavernColumn
+	33 = ChexMineCart
+	34 = ChexChemicalFlask
+	35 = ChexGasTank
+	37 = ChexFlagOnPole
+	41 = ChexChemicalBurner
+	43 = ChexOrangeTree
+	44 = ChexSlimeFountain
+	45 = ChexCivilian1
+	47 = ChexAppleTree
+	48 = ChexSpaceship
+	54 = ChexBananaTree
+	55 = ChexLightColumn
+	56 = ChexCivilian2
+	57 = ChexCivilian3
+	82 = SuperLargeZorcher
   2001 = LargeZorcher
   2002 = RapidZorcher
   2003 = ZorchPropulsor
@@ -295,4 +295,3 @@ cluster 4
 	flat = "MFLR8_3"
 	exittext = lookup, "CE4TEXT"
 }
-

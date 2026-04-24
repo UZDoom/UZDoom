@@ -27,7 +27,7 @@ struct FLightNode;
 namespace swrenderer
 {
 	class RenderThread;
-	
+
 	class SpanDrawerArgs : public DrawerArgs
 	{
 	public:

@@ -48,17 +48,17 @@ class CommandDrawImage : public SBarInfoCommandFlowControl
 				return;
 
 			int w = maxwidth, h = maxheight;
-			
+
 			// We must calculate this per frame in order to prevent glitches with cl_capfps true.
 			double frameAlpha = block->Alpha() * alpha;
-			
+
 			if(flags & DI_DRAWINBOX)
 			{
 				double scale1, scale2;
 				scale1 = scale2 = 1.0f;
 				double texwidth = (int) (texture->GetDisplayWidth()*spawnScaleX);
 				double texheight = (int) (texture->GetDisplayHeight()*spawnScaleY);
-				
+
 				if (w != -1 && (w<texwidth || (flags & DI_FORCESCALE)))
 				{
 					scale1 = w/texwidth;
@@ -67,14 +67,14 @@ class CommandDrawImage : public SBarInfoCommandFlowControl
 				{
 					scale2 = h/texheight;
 				}
-				
+
 				if (flags & DI_FORCESCALE)
 				{
 					if (w == -1 || (h != -1 && scale2<scale1))
 						scale1=scale2;
 				}
 				else if (scale2<scale1) scale1=scale2;
-				
+
 				w=(int)(texwidth*scale1);
 				h=(int)(texheight*scale1);
 			}
@@ -232,7 +232,7 @@ class CommandDrawImage : public SBarInfoCommandFlowControl
 			else if(type == AMMO1)
 			{
 				auto ammo = statusBar->ammo1;
-				if(ammo != NULL) 
+				if(ammo != NULL)
 					GetIcon(ammo);
 			}
 			else if(type == AMMO2)
@@ -262,7 +262,7 @@ class CommandDrawImage : public SBarInfoCommandFlowControl
 			else if(type == HEXENARMOR_ARMOR || type == HEXENARMOR_SHIELD || type == HEXENARMOR_HELM || type == HEXENARMOR_AMULET)
 			{
 				int armorType = type - HEXENARMOR_ARMOR;
-			
+
 				auto harmor = statusBar->CPlayer->mo->FindInventory(NAME_HexenArmor, true);
 				if (harmor != NULL)
 				{
@@ -284,7 +284,7 @@ class CommandDrawImage : public SBarInfoCommandFlowControl
 				texture = TexMan.GetGameTexture(statusBar->CPlayer->mo->PointerVar<AActor>(NAME_InvSel)->TextureIDVar(NAME_Icon), true);
 			else if(image >= 0)
 				texture = statusBar->Images[image];
-			
+
 			if (flags & DI_ALTERNATEONFAIL)
 			{
 				SetTruth(texture == NULL || !texture->isValid(), block, statusBar);
@@ -296,16 +296,16 @@ class CommandDrawImage : public SBarInfoCommandFlowControl
 			int apply;
 			FTextureID icon = FSetTextureID(GetInventoryIcon(item, flags, &apply));
 			applyscale = !!apply;
-			
+
 			if (applyscale)
 			{
 				spawnScaleX = item->Scale.X;
 				spawnScaleY = item->Scale.Y;
 			}
-			
+
 			texture = TexMan.GetGameTexture(icon, true);
 		}
-		
+
 		enum ImageType
 		{
 			PLAYERICON,
@@ -902,7 +902,7 @@ class CommandDrawString : public SBarInfoCommand
 					break;
 				case TIME:
 				{
-					int sec = Tics2Seconds(primaryLevel->time); 
+					int sec = Tics2Seconds(primaryLevel->time);
 					str.Format("%02d:%02d:%02d", sec / 3600, (sec % 3600) / 60, sec % 60);
 					break;
 				}
@@ -1165,7 +1165,7 @@ class CommandDrawNumber : public CommandDrawString
 
 						if (!parenthesized || !sc.CheckToken(TK_StringConst))
 							sc.MustGetToken(TK_Identifier);
-						
+
 						cvarName = sc.String;
 
 						// We have a name, but make sure it exists. If not, send notification so modders
@@ -1185,7 +1185,7 @@ class CommandDrawNumber : public CommandDrawString
 						{
 							sc.ScriptMessage("CVar '%s' does not exist", cvarName.GetChars());
 						}
-						
+
 						if (parenthesized) sc.MustGetToken(')');
 					}
 				}
@@ -1503,7 +1503,7 @@ class CommandDrawNumber : public CommandDrawString
 				str = "";
 				return;
 			}
-		
+
 			translation = normalTranslation;
 			if(lowValue != -1 && drawValue <= lowValue) //low
 				translation = lowTranslation;
@@ -1644,7 +1644,7 @@ class CommandDrawMugShot : public SBarInfoCommand
 				if (!sc.CheckToken('|'))
 					sc.MustGetToken(',');
 			}
-		
+
 			GetCoordinates(sc, fullScreenOffsets, x, y);
 			sc.MustGetToken(';');
 		}
@@ -2099,11 +2099,11 @@ class CommandDrawInventoryBar : public SBarInfoCommand
 		void	Draw(const SBarInfoMainBlock *block, const DSBarInfo *statusBar)
 		{
 			int spacing = GetCounterSpacing(statusBar);
-		
+
 			double bgalpha = block->Alpha();
 			if(translucent)
 				bgalpha *= HX_SHADOW;
-		
+
 			AActor *item;
 			unsigned int i = 0;
 			auto &InvFirst = statusBar->CPlayer->mo->PointerVar<AActor>(NAME_InvFirst);
@@ -2117,7 +2117,7 @@ class CommandDrawInventoryBar : public SBarInfoCommand
 					SBarInfoCoordinate ry = y + (vertical ? i*spacing : 0);
 					if(!noArtibox)
 						statusBar->DrawGraphic(statusBar->Images[statusBar->invBarOffset + imgARTIBOX], rx, ry, block->XOffset(), block->YOffset(), bgalpha, block->FullScreenOffsets());
-		
+
 					if(style != STYLE_Strife) //Strife draws the cursor before the icons
 						statusBar->DrawGraphic(TexMan.GetGameTexture(item->TextureIDVar(NAME_Icon), true), rx - (style == STYLE_HexenStrict ? 2 : 0), ry - (style == STYLE_HexenStrict ? 1 : 0), block->XOffset(), block->YOffset(), block->Alpha(), block->FullScreenOffsets(), false, item->IntVar(NAME_Amount) <= 0);
 					if(item == statusBar->CPlayer->mo->PointerVar<AActor>(NAME_InvSel))
@@ -2143,7 +2143,7 @@ class CommandDrawInventoryBar : public SBarInfoCommand
 				}
 				for (; i < size && !noArtibox; ++i)
 					statusBar->DrawGraphic(statusBar->Images[statusBar->invBarOffset + imgARTIBOX], x + (!vertical ? (i*spacing) : 0), y + (vertical ? (i*spacing) : 0), block->XOffset(), block->YOffset(), bgalpha, block->FullScreenOffsets());
-		
+
 				// Is there something to the left?
 				if (!noArrows && InvFirst && PrevInv(statusBar->CPlayer->mo->PointerVar<AActor>(NAME_InvFirst)))
 				{
@@ -2175,7 +2175,7 @@ class CommandDrawInventoryBar : public SBarInfoCommand
 				style = STYLE_Strife;
 			else
 				sc.ScriptError("Unknown style '%s'.", sc.String);
-		
+
 			sc.MustGetToken(',');
 			while(sc.CheckToken(TK_Identifier))
 			{
@@ -2220,7 +2220,7 @@ class CommandDrawInventoryBar : public SBarInfoCommand
 				sc.ScriptError("Unknown font '%s'.", sc.String);
 				font = SmallFont;
 			}
-		
+
 			sc.MustGetToken(',');
 			GetCoordinates(sc, fullScreenOffsets, x, y);
 			counterX = x + 26;
@@ -2272,11 +2272,11 @@ class CommandDrawInventoryBar : public SBarInfoCommand
 				int spacing = GetCounterSpacing(statusBar);
 
 				counters = new CommandDrawNumber*[size];
-		
+
 				for(unsigned int i = 0;i < size;i++)
 				{
 					counters[i] = new CommandDrawNumber(script);
-		
+
 					counters[i]->startX = counterX + (!vertical ? spacing*i : 0);
 					counters[i]->y = counterY + (vertical ? spacing*i : 0);
 					counters[i]->normalTranslation = translation;
@@ -2290,7 +2290,7 @@ class CommandDrawInventoryBar : public SBarInfoCommand
 					counters[i]->shadowY = shadowY;
 				}
 			}
-		
+
 			for(unsigned int i = 0;i < size;i++)
 				counters[i]->Tick(block, statusBar, hudChanged);
 		}
@@ -2367,7 +2367,7 @@ class CommandDrawKeyBar : public SBarInfoCommand
 						statusBar->DrawGraphic(tex, x+rowOffset, y+slotOffset, block->XOffset(), block->YOffset(), block->Alpha(), block->FullScreenOffsets());
 						rowWidth = rowIconSize == -1 ? (int)tex->GetDisplayWidth()+2 : rowIconSize;
 					}
-		
+
 					// If cmd.special is -1 then the slot size is auto detected
 					if(iconSize == -1)
 					{
@@ -2378,7 +2378,7 @@ class CommandDrawKeyBar : public SBarInfoCommand
 					}
 					else
 						slotOffset += (reverse ? -iconSize : iconSize);
-		
+
 					if(rowSize > 0 && (i % rowSize == rowSize-1))
 					{
 						if(reverseRows)
@@ -2389,7 +2389,7 @@ class CommandDrawKeyBar : public SBarInfoCommand
 						slotOffset = 0;
 					}
 				}
-		
+
 				item = item->Inventory;
 				if(item == NULL)
 					return;
@@ -2479,7 +2479,7 @@ class CommandDrawBar : public SBarInfoCommand
 			if(foreground == -1 || statusBar->Images[foreground] == NULL)
 				return; //don't draw anything.
 			assert(statusBar->Images[foreground] != NULL);
-			
+
 			FGameTexture *fg = statusBar->Images[foreground];
 			FGameTexture *bg = (background != -1) ? statusBar->Images[background] : NULL;
 
@@ -2499,10 +2499,10 @@ class CommandDrawBar : public SBarInfoCommand
 				else
 					statusBar->DrawGraphic(fg, this->x, this->y, block->XOffset(), block->YOffset(), block->Alpha(), block->FullScreenOffsets(), false, false, 0, false, -1, -1, nulclip, true);
 			}
-		
+
 			// {cx, cy, cr, cb}
 			double Clip[4] = {0, 0, 0, 0};
-		
+
 			double sizeOfImage = (horizontal ? fg->GetDisplayWidth()-border*2 : fg->GetDisplayHeight()-border*2);
 			Clip[(!horizontal)|((horizontal ? !reverse : reverse)<<1)] = sizeOfImage - sizeOfImage *value;
 			// Draw background
@@ -2510,7 +2510,7 @@ class CommandDrawBar : public SBarInfoCommand
 			{
 				for(unsigned int i = 0;i < 4;i++)
 					Clip[i] += border;
-		
+
 				if (bg != NULL && bg->GetDisplayWidth() == fg->GetDisplayWidth() && bg->GetDisplayHeight() == fg->GetDisplayHeight())
 					statusBar->DrawGraphic(bg, this->x, this->y, block->XOffset(), block->YOffset(), block->Alpha(), block->FullScreenOffsets(), false, false, 0, false, -1, -1, Clip);
 				else
@@ -2630,7 +2630,7 @@ class CommandDrawBar : public SBarInfoCommand
 					reverse = !reverse;
 			}
 			sc.MustGetToken(';');
-		
+
 			if(type == HEALTH)
 				interpolationSpeed = script->interpolateHealth ? script->interpolationSpeed : interpolationSpeed;
 			else if(type == ARMOR)
@@ -2650,7 +2650,7 @@ class CommandDrawBar : public SBarInfoCommand
 					value = statusBar->CPlayer->mo->health;
 					if(value < 0) //health shouldn't display negatives
 						value = 0;
-		
+
 					if(data.useMaximumConstant)
 						max = data.value;
 					else if(data.inventoryItem != NULL)
@@ -2900,7 +2900,7 @@ class CommandIsSelected : public SBarInfoNegatableFlowControl
 					sc.ScriptMessage("'%s' is not a type of weapon.", sc.String);
 					weapon[i] = PClass::FindClass(NAME_Weapon);
 				}
-		
+
 				if(sc.CheckToken(','))
 				{
 					if(!sc.CheckToken(TK_StringConst))
@@ -2964,7 +2964,7 @@ class CommandPlayerClass : public SBarInfoCommandFlowControl
 
 			if(statusBar->CPlayer->cls == NULL)
 				return; //No class so we can not continue
-		
+
 			PClass *spawnClass = statusBar->CPlayer->cls;
 			for(unsigned int i = 0;i < classes.Size();i++)
 			{
@@ -3018,7 +3018,7 @@ class CommandPlayerType : public SBarInfoCommandFlowControl
 
 			if(statusBar->CPlayer->cls == NULL)
 				return; //No class so we can not continue
-		
+
 			for(unsigned int i = 0;i < classes.Size();i++)
 			{
 				if (statusBar->CPlayer->cls->IsDescendantOf(classes[i]))
@@ -3101,7 +3101,7 @@ class CommandDrawGem : public SBarInfoCommand
 			FGameTexture *gemImg = statusBar->Images[gem];
 			if(chainImg == NULL)
 				return;
-		
+
 			SBarInfoCoordinate drawY = y;
 			if(wiggle && drawValue != goalValue) // Should only wiggle when the value doesn't equal what is being drawn.
 				drawY += chainWiggle;
@@ -3156,7 +3156,7 @@ class CommandDrawGem : public SBarInfoCommand
 			sc.MustGetToken(',');
 			GetCoordinates(sc, fullScreenOffsets, x, y);
 			sc.MustGetToken(';');
-		
+
 			if(!armor)
 				interpolationSpeed = script->interpolateHealth ? script->interpolationSpeed : interpolationSpeed;
 			else
@@ -3178,9 +3178,9 @@ class CommandDrawGem : public SBarInfoCommand
 			}
 			else
 				goalValue = 0;
-		
+
 			goalValue = reverse ? 100 - goalValue : goalValue;
-		
+
 			if(interpolationSpeed != 0 && (!hudChanged || primaryLevel->time == 1)) // At the start force an animation
 			{
 				if(goalValue < drawValue)
@@ -3190,7 +3190,7 @@ class CommandDrawGem : public SBarInfoCommand
 			}
 			else
 				drawValue = goalValue;
-		
+
 			if(wiggle && primaryLevel->time & 1)
 				chainWiggle = pr_chainwiggle() & 1;
 		}
@@ -3240,7 +3240,7 @@ class CommandWeaponAmmo : public SBarInfoNegatableFlowControl
 					sc.ScriptMessage("'%s' is not a type of ammo.", sc.String);
 					ammo[i] = PClass::FindActor(NAME_Ammo);
 				}
-		
+
 				if(sc.CheckToken(TK_OrOr))
 				{
 					conditionAnd = false;
@@ -3323,13 +3323,13 @@ class CommandInInventory : public SBarInfoNegatableFlowControl
 					sc.ScriptMessage("'%s' is not a type of inventory item.", sc.String);
 					item[i] = PClass::FindActor(NAME_Inventory);
 				}
-		
+
 				if (sc.CheckToken(','))
 				{
 					sc.MustGetNumber();
 					Amount[i] = sc.Number;
 				}
-		
+
 				if(sc.CheckToken(TK_OrOr))
 				{
 					conditionAnd = false;
@@ -3612,5 +3612,3 @@ SBarInfoCommand *SBarInfoCommandFlowControl::NextCommand(FScanner &sc)
 	sc.MustGetToken('}');
 	return NULL;
 }
-
-

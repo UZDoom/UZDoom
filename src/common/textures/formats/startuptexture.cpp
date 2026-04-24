@@ -150,7 +150,7 @@ FStartupTexture::FStartupTexture (int lumpnum)
 	Width = 640;
 	Height = 480;
 	bUseGamePalette = false;
-	
+
 	auto lump =  fileSystem.ReadFile (SourceLump);
 	auto source = lump.bytes();
 

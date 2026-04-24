@@ -113,8 +113,8 @@ protected:
 	DMDLoD			lods[MAX_LODS];
 
 public:
-	FDMDModel() 
-	{ 
+	FDMDModel()
+	{
 		mLumpNum = -1;
 		frames = NULL;
 		skins = NULL;
@@ -150,5 +150,3 @@ public:
 	virtual void LoadGeometry();
 
 };
-
-

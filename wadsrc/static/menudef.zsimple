@@ -18,7 +18,7 @@ OptionMenu "OptionsMenuSimple" protected
 	Submenu "$OPTMNU_DISPLAY",			"VideoOptionsSimple"
 	Submenu "$HUDMNU_SCALEOPT",			"ScalingOptionsSimple"
 	StaticText " "
-	Submenu "$OPTMNU_MISCELLANEOUS",	"MiscOptionsSimple"	
+	Submenu "$OPTMNU_MISCELLANEOUS",	"MiscOptionsSimple"
 	StaticText " "
 	Submenu "$OPTMNU_FULLOPTIONS", "OptionsMenuFull"
 	StaticText " "

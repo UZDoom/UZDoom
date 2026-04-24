@@ -76,11 +76,11 @@ static const struct ColorList {
 	{&grey3,	50,  50,  50 },
 	{&grey4,	210, 210, 210},
 	{&grey5,	128, 128, 128},
-	{&red,		255, 0,   0  },  
-	{&green,	0,   200, 0  },  
+	{&red,		255, 0,   0  },
+	{&green,	0,   200, 0  },
 	{&blue,		0,   0,   255},
-	{&yellow,	255, 255, 0  },  
-	{&black,	0,   0,   0  },  
+	{&yellow,	255, 255, 0  },
+	{&black,	0,   0,   0  },
 	{&red1,		255, 127, 127},
 	{&green1,	127, 255, 127},
 	{&blue1,	127, 127, 255},
@@ -135,7 +135,7 @@ static particle_t *NewParticle (FLevelLocals *Level, bool replace = false)
 		if (!replace) return nullptr;
 		FreeParticle(Level, &Level->Particles[Level->OldestParticle]);
 	}
-	
+
 	// Array isn't full.
 	uint32_t current = Level->ActiveParticles;
 	auto result = &Level->Particles[Level->InactiveParticles];
@@ -215,7 +215,7 @@ void P_FindParticleSubsectors (FLevelLocals *Level)
 		sp->PT.subsector->sprites.Push(sp);
 		sp = sp->GetNext();
 	}
-	// End VisualThinker hitching. Now onto the particles. 
+	// End VisualThinker hitching. Now onto the particles.
 	if (Level->ParticlesInSubsec.Size() < Level->subsectors.Size())
 	{
 		Level->ParticlesInSubsec.Reserve (Level->subsectors.Size() - Level->ParticlesInSubsec.Size());
@@ -292,7 +292,7 @@ void P_ThinkParticles (FLevelLocals *Level)
 			prev = particle;
 			continue;
 		}
-		
+
 		particle->alpha -= particle->fadestep;
 		if (	(!!(particle->flags & SPF_FADE_IN_OUT) && particle->alpha >= 1.0)
 			 || (!!(particle->flags & SPF_FADE_IN_HOLD_OUT) && (particle->ttl * fabs(particle->fadeoutstep)) <= std::min(1.0f, fabs(particle->alpha)))
@@ -325,7 +325,7 @@ void P_ThinkParticles (FLevelLocals *Level)
 			particle->Roll += particle->RollVel;
 			particle->RollVel += particle->RollAcc;
 		}
-		
+
 		particle->subsector = Level->PointInRenderSubsector(particle->Pos);
 		sector_t *s = particle->subsector->sector;
 		// Handle crossing a sector portal.
@@ -522,7 +522,7 @@ void P_RunEffect (AActor *actor, int effects)
 	{
 		// Particle fountain
 
-		static const int *fountainColors[16] = 
+		static const int *fountainColors[16] =
 			{ &black,	&black,
 			  &red,		&red1,
 			  &green,	&green1,
@@ -643,7 +643,7 @@ void P_DrawSplash2 (FLevelLocals *Level, int count, const DVector3 &pos, DAngle 
 		p->color = M_Random() & 0x80 ? color1 : color2;
 		p->Vel.Z = M_Random() * zvel;
 		p->Acc.Z = -1 / 22.f;
-		if (kind) 
+		if (kind)
 		{
 			an = angle + DAngle::fromDeg((M_Random() - 128) * (180 / 256.));
 			p->Vel.X = M_Random() * an.Cos() / 2048.;
@@ -737,17 +737,17 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 			if (player)
 			{
 				FSoundID sound;
-				
+
 				// Allow other sounds than 'weapons/railgf'!
 				if (!source->player) sound = source->AttackSound;
 				else if (source->player->ReadyWeapon) sound = source->player->ReadyWeapon->AttackSound;
 				else sound = NO_SOUND;
 				if (!sound.isvalid()) sound = S_FindSound("weapons/railgf");
-				
+
 				// The railgun's sound is special. It gets played from the
 				// point on the slug's trail that is closest to the hearing player.
 				AActor *mo = player->camera;
-				
+
 				if (fabs(mo->X() - trail[0].start.X) < 20 && fabs(mo->Y() - trail[0].start.Y) < 20)
 				{ // This player (probably) fired the railgun
 					S_Sound (mo, CHAN_WEAPON, 0, sound, 1, ATTN_NORM);
@@ -777,7 +777,7 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 		int spiral_steps = (int)(steps * r_rail_spiralsparsity / sparsity);
 		segment = 0;
 		lencount = trail[0].length;
-		
+
 		color1 = color1 == 0 ? -1 : ParticleColor(color1);
 		pos = trail[0].start;
 		deg = DAngle::fromDeg(SpiralOffset);
@@ -819,7 +819,7 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 				else
 					p->color = rblue4;
 			}
-			else 
+			else
 			{
 				p->color = color1;
 			}
@@ -897,7 +897,7 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 				else
 					p->color = grey1;
 			}
-			else 
+			else
 			{
 				p->color = color2;
 			}
@@ -943,7 +943,7 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 					diff.Y = clamp<double>(diff.Y + ((rnd & 16) ? 1 : -1), -maxdiff, maxdiff);
 				if (rnd & 4)
 					diff.Z = clamp<double>(diff.Z + ((rnd & 32) ? 1 : -1), -maxdiff, maxdiff);
-			}			
+			}
 			AActor *thing = Spawn (source->Level, spawnclass, pos + diff, ALLOW_REPLACE);
 			if (thing)
 			{
@@ -998,11 +998,11 @@ void P_DisconnectEffect (AActor *actor)
 }
 
 //===========================================================================
-// 
+//
 // ZScript Sprite (DVisualThinker)
 // Concept by Major Cooke
 // Most code borrowed by Actor and particles above
-// 
+//
 //===========================================================================
 
 void DVisualThinker::Construct()
@@ -1180,7 +1180,7 @@ void DVisualThinker::Tick()
 	{	// needed here because it won't retroactively update like actors do.
 		PT.subsector = Level->PointInRenderSubsector(PT.Pos);
 		cursector = PT.subsector->sector;
-		UpdateSpriteInfo(); 
+		UpdateSpriteInfo();
 		return;
 	}
 	Prev = PT.Pos;
@@ -1209,7 +1209,7 @@ void DVisualThinker::Tick()
 			ss = Level->PointInRenderSubsector(PT.Pos);
 		}
 	}
-    
+
 	UpdateSector(ss);
 	UpdateSpriteInfo();
 }
@@ -1396,10 +1396,10 @@ void DVisualThinker::Serialize(FSerializer& arc)
 		("animData", PT.animData)
 		("flags", PT.flags)
 		("visualThinkerFlags", flags);
-    
-    if(arc.isReading())
-    {
-        UpdateSector();
+
+	if(arc.isReading())
+	{
+		UpdateSector();
 		_prev = _next = nullptr;
 		if (Level->VisualThinkerHead != nullptr)
 		{
@@ -1407,7 +1407,7 @@ void DVisualThinker::Serialize(FSerializer& arc)
 			_next = Level->VisualThinkerHead;
 		}
 		Level->VisualThinkerHead = this;
-    }
+	}
 }
 
 IMPLEMENT_CLASS(DVisualThinker, false, false);

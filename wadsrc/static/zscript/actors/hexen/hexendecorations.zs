@@ -33,7 +33,7 @@ class ZWingedStatue : Actor
 		Stop;
 	}
 }
-	
+
 class ZRock1 : Actor
 {
 	Default
@@ -1723,4 +1723,3 @@ class TeleSmoke : Actor
 		Loop;
 	}
 }
-

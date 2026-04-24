@@ -58,10 +58,10 @@ struct FTraceInfo
 	int ptflags;
 
 	// These are required for 3D-floor checking
-	// to create a fake sector with a floor 
+	// to create a fake sector with a floor
 	// or ceiling plane coming from a 3D-floor
-	sector_t DummySector[2];	
-	int sectorsel;		
+	sector_t DummySector[2];
+	int sectorsel;
 
 	void Setup3DFloors();
 	bool LineCheck(intercept_t *in, double dist, DVector3 hit, bool special3dpass);
@@ -187,7 +187,7 @@ bool Trace(const DVector3 &start, sector_t *sector, const DVector3 &direction, d
 	}
 
 	if (reslt)
-	{ 
+	{
 		return flags ? EditTraceResult(flags, res) : true;
 	}
 	else
@@ -511,7 +511,7 @@ bool FTraceInfo::LineCheck(intercept_t *in, double dist, DVector3 hit, bool spec
 								bf = ff_top - EQUAL_EPSILON;
 							}
 						}
-						
+
 						// above
 						if (bf < ff_top)
 						{
@@ -658,7 +658,7 @@ cont:
 	}
 }
 
-	
+
 //==========================================================================
 //
 //
@@ -809,7 +809,7 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 		double dist = MaxDist * in->frac;
 		DVector3 hit = Start + Vec * dist;
 
-		// Crossed a floor portal? 
+		// Crossed a floor portal?
 		if (Vec.Z < 0 && !CurSector->PortalBlocksMovement(sector_t::floor))
 		{
 			// calculate position where the portal is crossed

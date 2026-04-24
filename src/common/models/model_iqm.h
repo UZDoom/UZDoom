@@ -169,7 +169,7 @@ private:
 	TArray<IQMTriangle> Triangles;
 	TArray<IQMAdjacency> Adjacency;
 	TArray<IQMJoint> Joints;
-	
+
 	TArray<int> RootJoints;
 
 	TArray<IQMPose> Poses;

@@ -404,7 +404,7 @@ void FMultipatchTextureBuilder::AddTexturesLumps(int lump1, int lump2, int patch
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -545,7 +545,7 @@ void FMultipatchTextureBuilder::ParsePatch(FScanner &sc, BuildInfo &info, TexPar
 					sc.MustGetStringName(",");
 					sc.MustGetNumber();
 					b = sc.Number;
-					//sc.MustGetStringName(","); This was never supposed to be here. 
+					//sc.MustGetStringName(","); This was never supposed to be here.
 					part.Blend = MAKERGB(r, g, b);
 				}
 				// Blend.a may never be 0 here.

@@ -296,4 +296,3 @@ FSerializer &SerializePointer(FSerializer &arc, const char *key, T *&value, T **
 	}
 	return SerializePointer(arc, key, value, defval, array.Data(), array.Size());
 }
-

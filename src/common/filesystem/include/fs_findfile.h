@@ -29,7 +29,7 @@
 #include <string>
 
 namespace FileSys {
-	
+
 struct FileListEntry
 {
 	std::string FileName;		// file name only

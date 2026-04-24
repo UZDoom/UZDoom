@@ -153,7 +153,7 @@ void DBot::ThinkForMove (usercmd_t *cmd)
 				  is (Invulnerability) ||
 				  is (Invisibility) ||
 				  is (Megasphere)
-				 ) || 
+				 ) ||
 				 dist < (GETINCOMBAT/4) ||
 				 (GetBotInfo(player->ReadyWeapon).MoveCombatDist == 0)
 				)
@@ -296,7 +296,7 @@ void DBot::ThinkForMove (usercmd_t *cmd)
 				}
 				else if ((playeringame[(r&(MAXPLAYERS-1))]) && players[(r&(MAXPLAYERS-1))].mo->health > 0)
 				{
-					dest = players[(r&(MAXPLAYERS-1))].mo; 
+					dest = players[(r&(MAXPLAYERS-1))].mo;
 				}
 			}
 

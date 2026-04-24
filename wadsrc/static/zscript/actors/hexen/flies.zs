@@ -26,14 +26,14 @@ class LittleFly : Actor
 	{
 		+NOBLOCKMAP +NOGRAVITY
 		+CANPASS
-		
+
 		Speed 6;
 		Radius 5;
 		Height 5;
 		Mass 2;
 		ActiveSound "FlyBuzz";
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -43,7 +43,7 @@ class LittleFly : Actor
 		AFLY ABCD 3 A_FlyBuzz;
 		Loop;
 	}
-	
+
 	//===========================================================================
 	//
 	// FindCorpse

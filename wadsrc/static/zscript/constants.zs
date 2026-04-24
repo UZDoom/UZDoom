@@ -213,7 +213,7 @@ enum EChangeVelocityFlags
 
 // Flags for A_WeaponReady
 enum EWeaponReadyFlags
-{ 
+{
 	WRF_NOBOB = 1,
 	WRF_NOSWITCH = 2,
 	WRF_NOPRIMARY = 4,
@@ -424,7 +424,7 @@ enum EActivationFlags
 	THINGSPEC_Activate			= 1<<8,		// The thing is activated when triggered
 	THINGSPEC_Deactivate		= 1<<9,		// The thing is deactivated when triggered
 	THINGSPEC_Switch			= 1<<10,	// The thing is alternatively activated and deactivated when triggered
-	
+
 	// Shorter aliases for same
 	AF_Default = 0,
 	AF_ThingActs = 1,
@@ -438,7 +438,7 @@ enum EActivationFlags
 	AF_Activate			= 1<<8,		// The thing is activated when triggered
 	AF_Deactivate		= 1<<9,		// The thing is deactivated when triggered
 	AF_Switch			= 1<<10,	// The thing is alternatively activated and deactivated when triggered
-	
+
 };
 
 // [MC] Flags for SetViewPos.
@@ -506,10 +506,10 @@ enum EPointerFlags
 	AAPTR_TARGET = 0x2,
 	AAPTR_MASTER = 0x4,
 	AAPTR_TRACER = 0x8,
-	
+
 	AAPTR_PLAYER_GETTARGET = 0x10,
 	AAPTR_PLAYER_GETCONVERSATION = 0x20,
-	
+
 	AAPTR_PLAYER1 = 0x40,
 	AAPTR_PLAYER2 = 0x80,
 	AAPTR_PLAYER3 = 0x100,
@@ -596,7 +596,7 @@ enum ELOFFlags
 
 	CLOFF_MUSTBEGHOST =			0x4000,
 	CLOFF_IGNOREGHOST =			0x8000,
-	
+
 	CLOFF_MUSTBESOLID =			0x10000,
 	CLOFF_BEYONDTARGET =		0x20000,
 
@@ -851,8 +851,8 @@ enum EButtons
 {
 	BT_ATTACK		= 1<<0,	// Press "Fire".
 	BT_USE			= 1<<1,	// Use button, to open doors, activate switches.
-    BT_JUMP			= 1<<2,
-    BT_CROUCH		= 1<<3,
+	BT_JUMP			= 1<<2,
+	BT_CROUCH		= 1<<3,
 	BT_TURN180		= 1<<4,
 	BT_ALTATTACK	= 1<<5,	// Press your other "Fire".
 	BT_RELOAD		= 1<<6,	// [XA] Reload key. Causes state jump in A_WeaponReady.
@@ -929,7 +929,7 @@ struct FTranslatedLineTarget
 	double angleFromSource;
 	double attackAngleFromSource;
 	bool unlinked;	// found by a trace that went through an unlinked portal.
-	
+
 	native void TraceBleed(int damage, Actor missile);
 }
 
@@ -1218,7 +1218,7 @@ enum EPlayerCheats
 	CF_BUDDHA			= 1 << 27,		// [SP] Buddha mode - take damage, but don't die
 	CF_NOCLIP2			= 1 << 30,		// [RH] More Quake-like noclip
 
-	// These flags no longer exist, but keep the names for some stray mod that might have used them. 
+	// These flags no longer exist, but keep the names for some stray mod that might have used them.
 	CF_DRAIN			= 0,
 	CF_HIGHJUMP			= 0,
 	CF_REFLECTION		= 0,
@@ -1269,7 +1269,7 @@ enum SPAC
 	SPAC_Use = 1<<1,		// when player uses line
 	SPAC_MCross = 1<<2,		// when monster crosses line
 	SPAC_Impact = 1<<3,		// when projectile hits line
-	SPAC_Push = 1<<4,		// when player pushes line	
+	SPAC_Push = 1<<4,		// when player pushes line
 	SPAC_PCross = 1<<5,		// when projectile crosses line
 	SPAC_UseThrough = 1<<6,	// when player uses line (doesn't block)
 	// SPAC_PTOUCH is mapped to SPAC_PCross|SPAC_Impact
@@ -1380,7 +1380,7 @@ enum ELevelFlags
 	LEVEL_CHANGEMAPCHEAT		= 0x40000000,	// Don't display cluster messages
 	LEVEL_VISITED				= 0x80000000,	// Used for intermission map
 
-	// The flags uint64_t is now split into 2 DWORDs 
+	// The flags uint64_t is now split into 2 DWORDs
 	LEVEL2_RANDOMPLAYERSTARTS	= 0x00000001,	// Select single player starts randomnly (no voodoo dolls)
 	LEVEL2_ALLMAP				= 0x00000002,	// The player picked up a map on this level
 
@@ -1397,7 +1397,7 @@ enum ELevelFlags
 	LEVEL2_CLIPMIDTEX			= 0x00000200,
 	LEVEL2_WRAPMIDTEX			= 0x00000400,
 
-	LEVEL2_CHECKSWITCHRANGE		= 0x00000800,	
+	LEVEL2_CHECKSWITCHRANGE		= 0x00000800,
 
 	LEVEL2_PAUSE_MUSIC_IN_MENUS	= 0x00001000,
 	LEVEL2_TOTALINFIGHTING		= 0x00002000,
@@ -1425,7 +1425,7 @@ enum ELevelFlags
 	LEVEL2_ENDGAME				= 0x20000000,	// This is an epilogue level that cannot be quit.
 	LEVEL2_NOAUTOSAVEHINT		= 0x40000000,	// tell the game that an autosave for this level does not need to be kept
 	LEVEL2_FORGETSTATE			= 0x80000000,	// forget this map's state in a hub
-	
+
 	// More flags!
 	LEVEL3_FORCEFAKECONTRAST	= 0x00000001,	// forces fake contrast even with fog enabled
 	LEVEL3_REMOVEITEMS			= 0x00000002,	// kills all INVBAR items on map change.
@@ -1565,9 +1565,9 @@ enum EVisualThinkerFlags
 	VTF_DontInterpolate	= 1 << 4, // disable all interpolation
 	VTF_AddLightLevel	= 1 << 5, // adds sector light level to 'LightLevel'
 
-	VTF_ParticleDefault = 0x40, 
-	VTF_ParticleSquare	= 0x80, 
-	VTF_ParticleRound	= 0xC0, 
+	VTF_ParticleDefault = 0x40,
+	VTF_ParticleSquare	= 0x80,
+	VTF_ParticleRound	= 0xC0,
 	VTF_ParticleSmooth	= 0x100,
 	VTF_IsParticle		= 0x1C0
 };
@@ -1592,4 +1592,3 @@ enum EIQMFlags
 	IQM_GET_BONE_INFO  =		1 << 2,
 	IQM_GET_BONE_INFO_RECALC  =	1 << 3, // RECALCULATE BONE INFO INSTANTLY WHEN STATE/ANIMATION CHANGES, MIGHT GET EXPENSIVE
 };
-

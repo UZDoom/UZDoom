@@ -37,7 +37,7 @@ namespace swrenderer
 		bool Clip(int x1, int x2, bool solid, VisibleSegmentRenderer *visitor);
 		bool Check(int first, int last);
 		bool IsVisible(int x1, int x2);
-		
+
 	private:
 		struct cliprange_t
 		{

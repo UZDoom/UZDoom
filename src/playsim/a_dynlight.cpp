@@ -253,7 +253,7 @@ void FDynamicLight::Tick()
 	{
 		const int timer = GetTimer();
 		float diff = (timer - m_lastUpdate) / (float)TICRATE;
-		
+
 		m_lastUpdate = timer;
 		m_cycler.Update(diff);
 		m_currentRadius = float(m_cycler.GetVal());
@@ -271,7 +271,7 @@ void FDynamicLight::Tick()
 	{
 		int flickerRange = GetSecondaryIntensity() - GetIntensity();
 		float amt = randLight() / 255.f;
-		
+
 		if (m_tickCount > specialf1)
 		{
 			m_tickCount = 0;
@@ -289,7 +289,7 @@ void FDynamicLight::Tick()
 	{
 		int rnd = randLight();
 		float pct = specialf1/360.f;
-		
+
 		m_currentRadius = m_Radius[rnd >= pct * 255];
 		break;
 	}
@@ -298,9 +298,9 @@ void FDynamicLight::Tick()
 	{
 		int flickerRange = GetSecondaryIntensity() - GetIntensity();
 		float amt = randLight() / 255.f;
-		
+
 		m_tickCount++;
-		
+
 		if (m_tickCount > specialf1)
 		{
 			m_currentRadius = GetIntensity() + (amt * flickerRange);
@@ -314,12 +314,12 @@ void FDynamicLight::Tick()
 	{
 		float intensity;
 		float scale = GetIntensity() / 8.f;
-		
+
 		if (scale == 0.f) scale = 1.f;
-		
+
 		intensity = Sector? Sector->lightlevel * scale : 0;
 		intensity = clamp<float>(intensity, 0.f, 255.f);
-		
+
 		m_currentRadius = intensity;
 		break;
 	}
@@ -642,12 +642,12 @@ void FDynamicLight::LinkLight()
 //==========================================================================
 void FDynamicLight::UnlinkLight()
 {
-	
+
 	for(int i = 0; i < touchlists.wall_tlist.SSize(); i++)
 	{
 		auto sidedef = touchlists.wall_tlist[i];
 		if (!sidedef) continue;
-		
+
 		if(Level->lightlists.wall_dlist.SSize() > sidedef->Index())
 		{
 			Level->lightlists.wall_dlist[sidedef->Index()].Remove(this);
@@ -683,7 +683,7 @@ void AActor::AttachLight(unsigned int count, const FLightDefaults *lightdef)
 
 	FDynamicLight *light;
 
-	if (count < AttachedLights.Size()) 
+	if (count < AttachedLights.Size())
 	{
 		light = AttachedLights[count];
 		assert(light != nullptr);
@@ -789,7 +789,7 @@ int AttachLightDef(AActor *self, int _lightid, int _lightname)
 
 	FName lightid = FName(ENamedName(_lightid));
 	FName lightname = FName(ENamedName(_lightname));
-	
+
 	// Todo: Optimize. This may be too slow.
 	auto lightdef = LightDefaults.FindEx([=](const auto &a) {
 		return a->GetName() == lightname;
@@ -917,7 +917,7 @@ void FLevelLocals::DeleteAllAttachedLights()
 	auto it = GetThinkerIterator<AActor>();
 	AActor * a;
 
-	while ((a=it.Next())) 
+	while ((a=it.Next()))
 	{
 		a->DeleteAttachedLights();
 	}
@@ -934,7 +934,7 @@ void FLevelLocals::RecreateAllAttachedLights()
 	auto it = GetThinkerIterator<AActor>();
 	AActor * a;
 
-	while ((a=it.Next())) 
+	while ((a=it.Next()))
 	{
 		if (!a->IsKindOf(NAME_DynamicLight))
 		{

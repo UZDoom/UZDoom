@@ -263,4 +263,3 @@ int DoomLevelAABBTree::GenerateTreeNode(int *lines, int num_lines, const FVector
 	nodes.Push(AABBTreeNode(aabb_min, aabb_max, left_index, right_index));
 	return (int)nodes.Size() - 1;
 }
-

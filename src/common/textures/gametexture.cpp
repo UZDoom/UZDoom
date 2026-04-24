@@ -70,7 +70,7 @@ void FGameTexture::Setup(FTexture *wrap)
 	}
 	else
 	{
-		LeftOffset[0] = LeftOffset[1] = 
+		LeftOffset[0] = LeftOffset[1] =
 		TopOffset[0] = TopOffset[1] = 0;
 
 	}
@@ -203,7 +203,7 @@ void FGameTexture::AddAutoMaterials()
 }
 
 //===========================================================================
-// 
+//
 // Checks if the texture has a default brightmap and creates it if so
 //
 //===========================================================================
@@ -281,7 +281,7 @@ int FGameTexture::GetAreas(FloatRect** pAreas) const
 }
 
 //===========================================================================
-// 
+//
 // Checks if a sprite may be expanded with an empty frame
 //
 //===========================================================================
@@ -312,7 +312,7 @@ bool FGameTexture::ShouldExpandSprite()
 }
 
 //===========================================================================
-// 
+//
 // Sets up the sprite positioning data for this texture
 //
 //===========================================================================
@@ -447,7 +447,7 @@ CUSTOM_CVAR(Int, r_spriteadjust, 2, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -532,4 +532,3 @@ void FTexCoordInfo::GetFromTexture(FGameTexture *tex, float x, float y, bool for
 	mWorldPanning = tex->useWorldPanning() || forceworldpanning;
 	mWidth = tex->GetTexelWidth();
 }
-

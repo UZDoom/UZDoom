@@ -175,7 +175,7 @@ static int FindWadClusterInfo (int cluster)
 	for (unsigned int i = 0; i < wadclusterinfos.Size(); i++)
 		if (wadclusterinfos[i].cluster == cluster)
 			return i;
-		
+
 	return -1;
 }
 
@@ -475,7 +475,7 @@ void FMapInfoParser::ParseOpenBrace()
 	{
 	default:
 		format_type = sc.CheckString("{") ? FMT_New : FMT_Old;
-		if (format_type == FMT_New) 
+		if (format_type == FMT_New)
 			sc.SetCMode(true);
 		break;
 
@@ -558,7 +558,7 @@ void FMapInfoParser::ParseComma()
 
 bool FMapInfoParser::CheckNumber()
 {
-	if (format_type == FMT_New) 
+	if (format_type == FMT_New)
 	{
 		if (sc.CheckString(","))
 		{
@@ -577,7 +577,7 @@ bool FMapInfoParser::CheckNumber()
 
 bool FMapInfoParser::CheckFloat()
 {
-	if (format_type == FMT_New) 
+	if (format_type == FMT_New)
 	{
 		if (sc.CheckString(","))
 		{
@@ -1770,7 +1770,7 @@ DEFINE_MAP_OPTION(outro, true)
 
 //==========================================================================
 //
-// All flag based map options 
+// All flag based map options
 //
 //==========================================================================
 
@@ -1880,7 +1880,7 @@ MapFlagHandlers[] =
 	{ "unfreezesingleplayerconversations",MITYPE_SETFLAG2,	LEVEL2_CONV_SINGLE_UNFREEZE, 0 },
 	{ "spawnwithweaponraised",			MITYPE_SETFLAG2,	LEVEL2_PRERAISEWEAPON, 0 },
 	{ "needclustertext",				MITYPE_SETFLAG2,	LEVEL2_NEEDCLUSTERTEXT, 0 },
-	{ "noclustertext",					MITYPE_SETFLAG2,	LEVEL2_NOCLUSTERTEXT, 0 },	// Normally there shouldn't be a need to explicitly set this 
+	{ "noclustertext",					MITYPE_SETFLAG2,	LEVEL2_NOCLUSTERTEXT, 0 },	// Normally there shouldn't be a need to explicitly set this
 	{ "forcefakecontrast",				MITYPE_SETFLAG3,	LEVEL3_FORCEFAKECONTRAST, 0 },
 	{ "nolightfade",					MITYPE_SETFLAG3,	LEVEL3_NOLIGHTFADE, 0 },
 	{ "nocoloredspritelighting",		MITYPE_SETFLAG3,	LEVEL3_NOCOLOREDSPRITELIGHTING, 0 },
@@ -2112,10 +2112,10 @@ void FMapInfoParser::ParseMapDefinition(level_info_t &info)
 					success = true;
 					return false;  // break
 				}
-				
+
 				return true;  // continue
 			});
-			
+
 			if (!success)
 			{
 				if (!ParseCloseBrace())
@@ -2195,7 +2195,7 @@ level_info_t *FMapInfoParser::ParseMapHeader(level_info_t &defaultinfo)
 			format_type = FMT_Old;
 		}
 	}
-	else 
+	else
 	{
 		sc.MustGetString();
 		mapname = sc.String;
@@ -2540,7 +2540,7 @@ void FMapInfoParser::ParseMapInfo (int lump, level_info_t &gamedefaults, level_i
 			}
 			SetLevelNum (levelinfo, levelinfo->levelnum);	// Wipe out matching levelnums from other maps.
 		}
-		// clusterdef is the old keyword but the new format has enough 
+		// clusterdef is the old keyword but the new format has enough
 		// structuring that 'cluster' can be handled, too. The old format does not.
 		else if (sc.Compare("clusterdef") || (format_type != FMT_Old && sc.Compare("cluster")))
 		{
@@ -2828,7 +2828,7 @@ void G_ParseMapInfo(FString basemapinfo)
 void G_AddBoomHelpScreens()
 {
 	// Now add Boom's dynamic help screens to the infopages array if it got marked accordingly.
-	// Doing this manually via config files would be a bit inconvenient for 100 file names, 
+	// Doing this manually via config files would be a bit inconvenient for 100 file names,
 	// so use a "*" entry in the list of help screens to insert these.
 	for (unsigned i = 0; i < gameinfo.infoPages.Size(); i++)
 	{
@@ -2849,7 +2849,7 @@ void G_AddBoomHelpScreens()
 			break;
 		}
 	}
-	
+
 
 }
 

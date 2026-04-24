@@ -51,7 +51,7 @@ EXTERN_CVAR(Bool, mus_usereplaygain)
 
 #define FORWARD_STRING_CVAR(key) \
 	auto ret = ChangeMusicSetting(zmusic_##key, mus_playing.handle,*self); \
-	if (ret) S_MIDIDeviceChanged(-1); 
+	if (ret) S_MIDIDeviceChanged(-1);
 
 #ifndef ZMUSIC_LITE
 CUSTOM_CVAR(Int, adl_chips_count, 6, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_VIRTUAL)
@@ -573,4 +573,3 @@ CUSTOM_CVAR(Float, mod_dumb_mastervolume, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG 
 		ChangeMusicSetting(zmusic_mod_dumb_mastervolume, mus_playing.handle, 0.5f, &newval);
 	}
 }
-

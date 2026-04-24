@@ -208,7 +208,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(DShape2D, PushTriangle, Shape2D_PushTriangle)
 //
 //==========================================================================
 
-int F2DDrawer::AddCommand(RenderCommand *data) 
+int F2DDrawer::AddCommand(RenderCommand *data)
 {
 	data->mScreenFade = screenFade;
 	if (mData.Size() > 0 && data->isCompatible(mData.Last()))
@@ -376,7 +376,7 @@ bool F2DDrawer::SetStyle(FGameTexture *tex, DrawParms &parms, PalEntry &vertexco
 		else if (quad.mDrawMode == TM_INVERSE) quad.mDrawMode = TM_INVERTOPAQUE;
 	}
 	quad.mRenderStyle = parms.style;	// this  contains the blend mode and blend equation settings.
-    if (parms.burn) quad.mFlags |= DTF_Burn;
+	if (parms.burn) quad.mFlags |= DTF_Burn;
 	return true;
 }
 
@@ -719,7 +719,7 @@ void F2DDrawer::AddPoly(FGameTexture *texture, FVector2 *points, int npoints,
 	poly.mFlags |= DTF_Wrap;
 	poly.mDesaturate = colormap.Desaturation;
 
-	PalEntry color0; 
+	PalEntry color0;
 	double invfade = 1. - fadelevel;
 
 	color0.r = uint8_t(colormap.LightColor.r * invfade);
@@ -987,8 +987,8 @@ void F2DDrawer::AddFlatFill(int left, int top, int right, int bottom, FGameTextu
 
 
 //===========================================================================
-// 
-// 
+//
+//
 //
 //===========================================================================
 

@@ -176,7 +176,7 @@ bool ZCCDoomCompiler::CompileFlagDefs(PClass *type, TArray<ZCC_FlagDef *> &Prope
 				}
 			}
 			else field = nullptr;
-			
+
 			FName name = FName(p->NodeName);
 
 			if(isActor)
@@ -184,7 +184,7 @@ bool ZCCDoomCompiler::CompileFlagDefs(PClass *type, TArray<ZCC_FlagDef *> &Prope
 				FString qualifiedname;
 				// Store the full qualified name and prepend some 'garbage' to the name so that no conflicts with other symbol types can happen.
 				// All these will be removed from the symbol table after the compiler finishes to free up the allocated space.
-				
+
 				for (int i = 0; i < 2; i++)
 				{
 					if (i == 0) qualifiedname.Format("@flagdef@%s", name.GetChars());
@@ -203,7 +203,7 @@ bool ZCCDoomCompiler::CompileFlagDefs(PClass *type, TArray<ZCC_FlagDef *> &Prope
 
 			if (field != nullptr)
 				type->VMType->AddNativeField(FStringf("b%s", name.GetChars()), TypeSInt32, field->Offset, 0, 1 << p->BitValue);
-		} 
+		}
 	}
 	return true;
 }
@@ -800,7 +800,7 @@ void ZCCDoomCompiler::ProcessDefaultFlag(PClassActor *cls, ZCC_FlagStmt *flg)
 	{
 		if ((fd->varflags & VARF_Deprecated) && fd->deprecationVersion <= this->mVersion)
 		{
-			Warn(flg, "Deprecated flag '%s%s%s' used, deprecated since %d.%d.%d", n1, n2 ? "." : "", n2 ? n2 : "", 
+			Warn(flg, "Deprecated flag '%s%s%s' used, deprecated since %d.%d.%d", n1, n2 ? "." : "", n2 ? n2 : "",
 				fd->deprecationVersion.major, fd->deprecationVersion.minor, fd->deprecationVersion.revision);
 		}
 		if (fd->structoffset == -1)
@@ -979,7 +979,7 @@ FxExpression *ZCCDoomCompiler::SetupActionFunction(PClass *cls, ZCC_TreeNode *af
 						{
 							Error(af, "%s is declared private and not accessible", FName(id->Identifier).GetChars());
 						}
-						
+
 						return new FxVMFunctionCall(new FxSelf(*af), afd, argumentlist, *af, false);
 					}
 					else
@@ -1013,7 +1013,7 @@ void ZCCDoomCompiler::CompileStates()
 {
 	for (auto c : Classes)
 	{
-		
+
 		if (!c->ClassType()->IsDescendantOf(RUNTIME_CLASS(AActor)))
 		{
 			if (c->States.Size()) Error(c->cls, "%s: States can only be defined for actors.", c->Type()->TypeName.GetChars());
@@ -1268,12 +1268,12 @@ int ZCCDoomCompiler::CheckActionKeyword(ZCC_FuncDeclarator* f, uint32_t &varflag
 	else
 	{
 		return 1;
-	}	
+	}
 }
 
 //==========================================================================
 //
-// AActor needs the actor info manually added to its meta data 
+// AActor needs the actor info manually added to its meta data
 // before adding any scripted fields.
 //
 //==========================================================================
@@ -1283,9 +1283,8 @@ bool ZCCDoomCompiler::PrepareMetaData(PClass *type)
 	if (type->TypeName == NAME_Actor)
 	{
 		assert(type->MetaSize == 0);
-		AddActorInfo(type);	
+		AddActorInfo(type);
 		return true;
 	}
 	return false;
 }
-

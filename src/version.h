@@ -80,7 +80,7 @@
 #define ALLOWLOADIN "LZDOOM"
 
 #ifndef LOAD_GZDOOM_4142_SAVES
-    #define LOAD_GZDOOM_4142_SAVES 1
+	#define LOAD_GZDOOM_4142_SAVES 1
 #endif
 
 #define BASEWAD "uzdoom.pk3"

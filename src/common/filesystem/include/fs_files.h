@@ -35,7 +35,7 @@
 #include "fs_swap.h"
 
 namespace FileSys {
-	
+
 class FileSystemException : public std::exception
 {
 protected:
@@ -210,7 +210,7 @@ public:
 		return *this;
 	}
 
-	// This is for wrapping the actual reader for custom access where a managed FileReader won't work. 
+	// This is for wrapping the actual reader for custom access where a managed FileReader won't work.
 	FileReaderInterface* GetInterface()
 	{
 		auto i = mReader;

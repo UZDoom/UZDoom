@@ -177,9 +177,9 @@ void LogError(const char *fmt, Args... args)
 	return dap::Error(message);
 
 #define RETURN_COND_DAP_ERROR(cond, message) \
-  if (cond) { \
-    RETURN_DAP_ERROR(message); \
-  }
+	if (cond) { \
+		RETURN_DAP_ERROR(message); \
+	}
 
 template <typename T> T ByteSwap(T val)
 {

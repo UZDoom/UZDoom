@@ -118,7 +118,7 @@ static void ParseVavoomSkybox()
 		sc.MustGetStringName("{");
 		while (!sc.CheckString("}"))
 		{
-			if (facecount<6) 
+			if (facecount<6)
 			{
 				sc.MustGetStringName("{");
 				sc.MustGetStringName("map");
@@ -374,7 +374,7 @@ class GLDefsParser
 		}
 	}
 
-	
+
 	//==========================================================================
 	//
 	//
@@ -1064,7 +1064,7 @@ class GLDefsParser
 			sc.ScriptError("Expected '{'.\n");
 		}
 	}
-	
+
 
 	//-----------------------------------------------------------------------------
 	//
@@ -1088,7 +1088,7 @@ class GLDefsParser
 		while (!sc.CheckString("}"))
 		{
 			sc.MustGetString();
-			if (facecount<6) 
+			if (facecount<6)
 			{
 				sb->faces[facecount] = TexMan.GetGameTexture(TexMan.GetTextureID(sc.String, ETextureType::Wall, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_Overridable));
 			}
@@ -1103,7 +1103,7 @@ class GLDefsParser
 	}
 
 	//===========================================================================
-	// 
+	//
 	//	Reads glow definitions from GLDEFS
 	//
 	//===========================================================================
@@ -1226,7 +1226,7 @@ class GLDefsParser
 
 				bmtex = TexMan.FindGameTexture(sc.String, ETextureType::Any, FTextureManager::TEXMAN_TryAny);
 
-				if (bmtex == NULL) 
+				if (bmtex == NULL)
 					Printf("Brightmap '%s' not found in texture '%s'\n", sc.String, tex? tex->GetName().GetChars() : "(null)");
 			}
 		}
@@ -1250,7 +1250,7 @@ class GLDefsParser
 		if (bmtex != NULL)
 		{
 			tex->SetBrightmap(bmtex);
-		}	
+		}
 		tex->SetDisableFullbright(disable_fullbright);
 	}
 
@@ -1912,7 +1912,7 @@ class GLDefsParser
 						!usershaders[i].defines.Compare(desc.defines))
 					{
 						SetShaderIndex(tex, i + FIRST_USER_SHADER);
-						tex->SetShaderLayers(mlay);		
+						tex->SetShaderLayers(mlay);
 						return;
 					}
 				}
@@ -1983,7 +1983,7 @@ class GLDefsParser
 			TexMan.RemoveTextureManipulation(cname);
 		}
 	}
-	
+
 
 public:
 	//==========================================================================
@@ -2085,7 +2085,7 @@ public:
 			}
 		}
 	}
-	
+
 	GLDefsParser(int lumpnum, TArray<FLightAssociation> &la)
 	 : sc(lumpnum), workingLump(lumpnum), LightAssociations(la)
 	{

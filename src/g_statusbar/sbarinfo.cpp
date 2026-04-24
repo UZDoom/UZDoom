@@ -62,7 +62,7 @@ static double nulclip[] = { 0,0,0,0 };
 ////////////////////////////////////////////////////////////////////////////////
 
 /**
- * This class is used to help prevent errors that may occur from adding or 
+ * This class is used to help prevent errors that may occur from adding or
  * subtracting from coordinates.
  *
  * In order to provide the maximum flexibility, coordinates are packed into
@@ -145,7 +145,7 @@ class SBarInfoCommand
 				relCenter = false;
 				if(i > 0)
 					sc.MustGetToken(',');
-			
+
 				// [-]INT center
 				negative = sc.CheckToken('-');
 				sc.MustGetToken(TK_IntConst);
@@ -1087,7 +1087,7 @@ public:
 				SBarInfoMainBlock *inventoryBar = state == HUD_StatusBar ? script->huds[STBAR_INVENTORY] : script->huds[STBAR_INVENTORYFULLSCREEN];
 				if(inventoryBar != lastInventoryBar)
 					inventoryBar->Tick(NULL, this, true);
-		
+
 				// No overlay?  Lets cancel it.
 				if(inventoryBar->NumCommands() == 0)
 					CPlayer->inventorytics = 0;
@@ -1205,7 +1205,7 @@ public:
 		{
 			if (forceWidth < 0)	dx -= (texture->GetDisplayWidth()/2.0)-texture->GetDisplayLeftOffset();
 			else	dx -= forceWidth*(0.5-(texture->GetDisplayLeftOffset()/texture->GetDisplayWidth()));
-			
+
 			if (forceHeight < 0)	dy -= (texture->GetDisplayHeight()/2.0)-texture->GetDisplayTopOffset();
 			else	dy -= forceHeight*(0.5-(texture->GetDisplayTopOffset()/texture->GetDisplayHeight()));
 		}
@@ -1638,4 +1638,3 @@ DBaseStatusBar *CreateCustomStatusBar(int scriptno)
 
 	return sbar;
 }
-

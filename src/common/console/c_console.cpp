@@ -63,7 +63,7 @@ namespace Console::Defaults
 	static inline constexpr uint8_t scroll_up = 1;
 	static inline constexpr uint8_t scroll_down = 2;
 	static inline constexpr uint8_t scroll_no = 0;
-	
+
 	static inline constexpr uint8_t min_con_lines_for_cursor = 20;
 	static inline constexpr uint8_t min_con_lines_for_text = 12;
 	static inline constexpr uint64_t ms_between_cursor_ticks = 500;

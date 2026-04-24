@@ -101,7 +101,7 @@ struct XlatParseContext : public FParseContext
 		static const char *tokens[] =
 		{
 			"arg2", "arg3", "arg4", "arg5", "bitmask", "clear",
-			"define", "enum", "flags", "include", "lineflag", "lineid", 
+			"define", "enum", "flags", "include", "lineflag", "lineid",
 			"maxlinespecial", "nobitmask", "sector", "tag"
 		};
 		static const short types[] =
@@ -165,5 +165,3 @@ FTranslator *P_LoadTranslator(const char *lumpname)
 	}
 	return translator;
 }
-
-

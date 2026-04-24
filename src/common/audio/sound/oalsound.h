@@ -110,24 +110,24 @@ public:
 	virtual FString GatherStats();
 
 private:
-    struct {
-        bool EXT_EFX : 1;
-        bool EXT_disconnect : 1;
-        bool SOFT_HRTF : 1;
-        bool SOFT_pause_device : 1;
-        bool SOFT_output_limiter : 1;
-    } ALC;
-    struct {
-        bool EXT_source_distance_model : 1;
-        bool EXT_SOURCE_RADIUS : 1;
-        bool SOFT_deferred_updates : 1;
-        bool SOFT_direct_channels_remix : 1;
-        bool SOFT_loop_points : 1;
-        bool SOFT_source_latency : 1;
-        bool SOFT_source_resampler : 1;
-        bool SOFT_source_spatialize : 1;
-        bool SOFT_UHJ : 1;
-    } AL;
+	struct {
+		bool EXT_EFX : 1;
+		bool EXT_disconnect : 1;
+		bool SOFT_HRTF : 1;
+		bool SOFT_pause_device : 1;
+		bool SOFT_output_limiter : 1;
+	} ALC;
+	struct {
+		bool EXT_source_distance_model : 1;
+		bool EXT_SOURCE_RADIUS : 1;
+		bool SOFT_deferred_updates : 1;
+		bool SOFT_direct_channels_remix : 1;
+		bool SOFT_loop_points : 1;
+		bool SOFT_source_latency : 1;
+		bool SOFT_source_resampler : 1;
+		bool SOFT_source_spatialize : 1;
+		bool SOFT_UHJ : 1;
+	} AL;
 
 	// EFX Extension function pointer variables. Loaded after context creation
 	// if EFX is supported. These pointers may be context- or device-dependant,
@@ -169,28 +169,28 @@ private:
 	LPALGETAUXILIARYEFFECTSLOTF alGetAuxiliaryEffectSlotf;
 	LPALGETAUXILIARYEFFECTSLOTFV alGetAuxiliaryEffectSlotfv;
 
-    ALvoid (AL_APIENTRY*alDeferUpdatesSOFT)(void);
-    ALvoid (AL_APIENTRY*alProcessUpdatesSOFT)(void);
+	ALvoid (AL_APIENTRY*alDeferUpdatesSOFT)(void);
+	ALvoid (AL_APIENTRY*alProcessUpdatesSOFT)(void);
 
-    LPALGETSTRINGISOFT alGetStringiSOFT;
+	LPALGETSTRINGISOFT alGetStringiSOFT;
 
-    LPALGETSOURCEI64VSOFT alGetSourcei64vSOFT;
+	LPALGETSOURCEI64VSOFT alGetSourcei64vSOFT;
 
-    void (ALC_APIENTRY*alcDevicePauseSOFT)(ALCdevice *device);
-    void (ALC_APIENTRY*alcDeviceResumeSOFT)(ALCdevice *device);
+	void (ALC_APIENTRY*alcDevicePauseSOFT)(ALCdevice *device);
+	void (ALC_APIENTRY*alcDeviceResumeSOFT)(ALCdevice *device);
 
-    void BackgroundProc();
-    void AddStream(OpenALSoundStream *stream);
-    void RemoveStream(OpenALSoundStream *stream);
+	void BackgroundProc();
+	void AddStream(OpenALSoundStream *stream);
+	void RemoveStream(OpenALSoundStream *stream);
 
 	void LoadReverb(const ReverbContainer *env);
 	void PurgeStoppedSources();
 	static FSoundChan *FindLowestChannel();
 
-    std::thread StreamThread;
-    std::mutex StreamLock;
-    std::condition_variable StreamWake;
-    std::atomic<bool> QuitThread;
+	std::thread StreamThread;
+	std::mutex StreamLock;
+	std::condition_variable StreamWake;
+	std::atomic<bool> QuitThread;
 
 	ALCdevice *Device;
 	ALCcontext *Context;
@@ -208,16 +208,16 @@ private:
 
 	const ReverbContainer *PrevEnvironment;
 
-    typedef TMap<uint16_t,ALuint> EffectMap;
-    typedef TMapIterator<uint16_t,ALuint> EffectMapIter;
-    ALuint EnvSlot;
-    ALuint EnvFilters[2];
-    EffectMap EnvEffects;
+	typedef TMap<uint16_t,ALuint> EffectMap;
+	typedef TMapIterator<uint16_t,ALuint> EffectMapIter;
+	ALuint EnvSlot;
+	ALuint EnvFilters[2];
+	EffectMap EnvEffects;
 
-    bool WasInWater;
+	bool WasInWater;
 
-    TArray<OpenALSoundStream*> Streams;
-    friend class OpenALSoundStream;
+	TArray<OpenALSoundStream*> Streams;
+	friend class OpenALSoundStream;
 
 	ALCdevice *InitDevice();
 };

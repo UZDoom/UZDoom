@@ -83,8 +83,8 @@ sector_t *SWSceneDrawer::RenderView(player_t *player)
 		auto GetSystemTexture = [&]() { return fbtex->GetTexture()->GetHardwareTexture(0, 0); };
 
 		if (fbtex == nullptr || GetSystemTexture() == nullptr ||
-			fbtex->GetTexelWidth() != screen->GetWidth() || 
-			fbtex->GetTexelHeight() != screen->GetHeight() || 
+			fbtex->GetTexelWidth() != screen->GetWidth() ||
+			fbtex->GetTexelHeight() != screen->GetHeight() ||
 			(V_IsTrueColor() ? 1:0) != static_cast<FWrapperTexture*>(fbtex->GetTexture())->GetColorFormat())
 		{
 			// This manually constructs its own material here.

@@ -85,7 +85,7 @@ class Wizard : Actor
 		WZRD M -1 A_SetFloorClip;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_GhostOff
@@ -149,7 +149,7 @@ class Wizard : Actor
 			SpawnMissileAngle("WizardFX1", mo.Angle + 45. / 8, mo.Vel.Z);
 		}
 	}
-	
+
 }
 
 // Projectile --------------------------------------------------------
@@ -180,5 +180,3 @@ class WizardFX1 : Actor
 		Stop;
 	}
 }
-
-

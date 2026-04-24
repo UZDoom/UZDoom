@@ -50,4 +50,3 @@ class FSavegameManager : public FSavegameManagerBase
 };
 
 extern FSavegameManager savegameManager;
-

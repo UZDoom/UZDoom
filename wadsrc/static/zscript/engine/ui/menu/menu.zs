@@ -330,7 +330,7 @@ class Menu : Object native ui version("2.4")
 		{
 			body.SetArea(xPad, h - textHeight - yPad * 3, w - xPad * 2, textHeight + yPad * 2);
 		}
-		
+
 		if (text)
 			text.SetArea(body.x + xPad, body.y + yPad, body.width - xPad * 2, body.height - yPad * 2);
 	}
@@ -400,7 +400,7 @@ class Menu : Object native ui version("2.4")
 
 		let [cx, cy, cw, ch] = Screen.GetClipRect();
 		Screen.SetClipRect(text.x, text.y, text.width, text.height);
-		
+
 		int height = mTooltipFont.GetHeight() * textYScale;
 		int curY = text.y - int(mTooltipScrollOffset * height);
 		for (int i; i < bl.Count(); ++i)

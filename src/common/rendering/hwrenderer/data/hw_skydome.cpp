@@ -543,4 +543,3 @@ void FSkyVertexBuffer::RenderBox(FRenderState& state, FSkyBox* tex, float x_offs
 	state.EnableModelMatrix(false);
 	state.SetObjectColor(0xffffffff);
 }
-

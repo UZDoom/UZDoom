@@ -100,7 +100,7 @@ namespace swrenderer
 
 		bool markfloor; // False if the back side is the same plane.
 		bool markceiling;
-		
+
 		FSoftwareTexture* mTopTexture;
 		FSoftwareTexture* mMiddleTexture;
 		FSoftwareTexture* mBottomTexture;

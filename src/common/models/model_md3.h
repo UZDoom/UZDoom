@@ -89,4 +89,3 @@ public:
 	void BuildVertexBuffer(FModelRenderer *renderer);
 	virtual void AddSkins(uint8_t *hitlist, const FTextureID* surfaceskinids) override;
 };
-

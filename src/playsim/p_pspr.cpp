@@ -186,7 +186,7 @@ DPSprite::DPSprite(player_t *owner, AActor *caller, int id)
 		Coord[i] = DVector2(0, 0);
 		Prev.v[i] = Vert.v[i] = FVector2(0,0);
 	}
-	
+
 	alpha = 1;
 	Renderstyle = STYLE_Normal;
 
@@ -313,7 +313,7 @@ DPSprite *player_t::GetPSprite(PSPLayers layer)
 	}
 
 	if (newcaller == nullptr || layer == PSP_CALLERID) return nullptr; // Error case was not handled properly. This function cannot give a guarantee to always succeed!
-	
+
 	DPSprite *pspr = FindPSprite(layer);
 	if (pspr == nullptr)
 	{
@@ -568,7 +568,7 @@ void DPSprite::SetState(FState *newstate, bool pending)
 			if (newstate->ActionFunc != nullptr && newstate->ActionFunc->Unsafe)
 			{
 				// If an unsafe function (i.e. one that accesses user variables) is being detected, print a warning once and remove the bogus function. We may not call it because that would inevitably crash.
-				Printf(TEXTCOLOR_RED "Unsafe state call in state %sd to %s which accesses user variables. The action function has been removed from this state\n", 
+				Printf(TEXTCOLOR_RED "Unsafe state call in state %sd to %s which accesses user variables. The action function has been removed from this state\n",
 					FState::StaticGetStateName(newstate).GetChars(), newstate->ActionFunc->PrintableName);
 				newstate->ActionFunc = nullptr;
 			}
@@ -636,7 +636,7 @@ void P_BringUpWeapon (player_t *player)
 //
 // [XA] Added new bob styles and exposed bob properties. Thanks, Ryan Cordell!
 // [SP] Added new user option for bob speed
-// 
+//
 // Previously this was called from the renderer but accidentally left in the
 // play scope, making it possible to modify the world from it and breaking
 // the prediction. It's now been moved to the player thinking so it can be
@@ -813,7 +813,7 @@ DEFINE_ACTION_FUNCTION(AActor, A_OverlayScale)
 	PARAM_FLOAT(wx)
 	PARAM_FLOAT(wy)
 	PARAM_INT(flags)
-	
+
 	if (!ACTION_CALL_FROM_PSPRITE() || ((flags & WOF_KEEPX) && (flags & WOF_KEEPY)))
 		return 0;
 
@@ -925,7 +925,7 @@ void A_OverlayOffset(AActor *self, int layer, double wx, double wy, int flags)
 
 		if (!(flags & WOF_KEEPX))		psp->x = (flags & WOF_ADD) ? psp->x + wx : wx;
 		if (!(flags & WOF_KEEPY))		psp->y = (flags & WOF_ADD) ? psp->y + wy : wy;
-		
+
 		if (!(flags & (WOF_ADD | WOF_INTERPOLATE)))
 			psp->ResetInterpolation();
 	}
@@ -935,8 +935,8 @@ DEFINE_ACTION_FUNCTION(AActor, A_OverlayOffset)
 {
 	PARAM_ACTION_PROLOGUE(AActor);
 	PARAM_INT(layer)
-	PARAM_FLOAT(wx)	
-	PARAM_FLOAT(wy)	
+	PARAM_FLOAT(wx)
+	PARAM_FLOAT(wy)
 	PARAM_INT(flags)
 	A_OverlayOffset(self, ((layer != 0) ? layer : stateinfo->mPSPIndex), wx, wy, flags);
 	return 0;
@@ -945,8 +945,8 @@ DEFINE_ACTION_FUNCTION(AActor, A_OverlayOffset)
 DEFINE_ACTION_FUNCTION(AActor, A_WeaponOffset)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	PARAM_FLOAT(wx)	
-	PARAM_FLOAT(wy)	
+	PARAM_FLOAT(wx)
+	PARAM_FLOAT(wy)
 	PARAM_INT(flags)
 	A_OverlayOffset(self, PSP_WEAPON, wx, wy, flags);
 	return 0;
@@ -1075,7 +1075,7 @@ DEFINE_ACTION_FUNCTION(AActor, OverlayX)
 	if (ACTION_CALL_FROM_PSPRITE())
 	{
 		double res = GetOverlayPosition(self, ((layer != 0) ? layer : stateinfo->mPSPIndex), false);
-		ACTION_RETURN_FLOAT(res);	
+		ACTION_RETURN_FLOAT(res);
 	}
 	ACTION_RETURN_FLOAT(0.);
 }
@@ -1398,7 +1398,7 @@ void P_SetSafeFlash(AActor *weapon, player_t *player, FState *flashstate, int in
 			// try again with parent class
 			cls = static_cast<PClassActor *>(cls->ParentClass);
 		}
-		
+
 		// if we get here the target state doesn't belong to any class in the inheritance chain.
 		// This can happen with Dehacked if the flash states are remapped.
 		// In this case we should check the Dehacked state map to get the proper state.

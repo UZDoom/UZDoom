@@ -84,4 +84,3 @@ void main()
 	color = Dither(color);
 	FragColor = color;
 }
-

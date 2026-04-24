@@ -34,4 +34,3 @@ class CrystalVial : Health
 		Loop;
 	}
 }
-

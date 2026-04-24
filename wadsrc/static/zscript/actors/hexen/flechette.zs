@@ -38,7 +38,7 @@ class PoisonBag : Actor
 		PSBG C 1 A_PoisonBagInit;
 		Stop;
 	}
-	
+
 	//===========================================================================
 	//
 	// A_PoisonBagInit
@@ -132,7 +132,7 @@ class ThrowingBomb : Actor
 		CFCF Z 3 Bright;
 		Stop;
 	}
-	
+
 	//===========================================================================
 	//
 	// A_CheckThrowBomb
@@ -166,7 +166,7 @@ class ThrowingBomb : Actor
 		}
 		A_CheckThrowBomb();
 	}
-	
+
 }
 
 // Poison Bag Artifact (Flechette) ------------------------------------------
@@ -191,7 +191,7 @@ class ArtiPoisonBag : Inventory
 		PSBG A -1;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// AArtiPoisonBag :: BeginPlay
@@ -295,7 +295,7 @@ class ArtiPoisonBag1 : ArtiPoisonBag
 		Inventory.Icon "ARTIPSB1";
 		Tag "$TAG_ARTIPOISONBAG1";
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		Actor mo = Spawn("PoisonBag", Owner.Vec3Offset(
@@ -309,7 +309,7 @@ class ArtiPoisonBag1 : ArtiPoisonBag
 		}
 		return false;
 	}
-	
+
 }
 
 // Poison Bag 2 (The Mage's) ------------------------------------------------
@@ -321,7 +321,7 @@ class ArtiPoisonBag2 : ArtiPoisonBag
 		Inventory.Icon "ARTIPSB2";
 		Tag "$TAG_ARTIPOISONBAG2";
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		Actor mo = Spawn("FireBomb", Owner.Vec3Offset(
@@ -335,7 +335,7 @@ class ArtiPoisonBag2 : ArtiPoisonBag
 		}
 		return false;
 	}
-	
+
 }
 
 // Poison Bag 3 (The Fighter's) ---------------------------------------------
@@ -347,7 +347,7 @@ class ArtiPoisonBag3 : ArtiPoisonBag
 		Inventory.Icon "ARTIPSB3";
 		Tag "$TAG_ARTIPOISONBAG3";
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		Actor mo = Spawn("ThrowingBomb", Owner.Pos + (0,0,35. - Owner.Floorclip + (Owner.player? Owner.player.crouchoffset : 0)), ALLOW_REPLACE);
@@ -384,8 +384,8 @@ class ArtiPoisonBag3 : ArtiPoisonBag
 		}
 		return false;
 	}
-	
-	
+
+
 }
 
 // Poison Bag 4 (Custom Giver) ----------------------------------------------
@@ -396,7 +396,7 @@ class ArtiPoisonBagGiver : ArtiPoisonBag
 	{
 		Inventory.Icon "ARTIPSB4";
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		Class<Actor> missiletype = MissileName;
@@ -412,7 +412,7 @@ class ArtiPoisonBagGiver : ArtiPoisonBag
 		}
 		return false;
 	}
-	
+
 }
 
 // Poison Bag 5 (Custom Thrower) --------------------------------------------
@@ -423,7 +423,7 @@ class ArtiPoisonBagShooter : ArtiPoisonBag
 	{
 		Inventory.Icon "ARTIPSB5";
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		Class<Actor> missiletype = MissileName;
@@ -442,7 +442,7 @@ class ArtiPoisonBagShooter : ArtiPoisonBag
 		}
 		return false;
 	}
-	
+
 }
 
 // Poison Cloud -------------------------------------------------------------
@@ -477,10 +477,10 @@ class PoisonCloud : Actor
 		PSBG FD 6;
 		Stop;
 	}
-	
+
 	//===========================================================================
 	//
-	// 
+	//
 	//
 	//===========================================================================
 
@@ -490,10 +490,10 @@ class PoisonCloud : Actor
 		special1 = random[PoisonCloud](24, 31);
 		special2 = 0;
 	}
-	
+
 	//===========================================================================
 	//
-	// 
+	//
 	//
 	//===========================================================================
 
@@ -503,7 +503,7 @@ class PoisonCloud : Actor
 		{
 			bool mate = (target != null && victim.player != target.player && victim.IsTeammate (target));
 			bool dopoison;
-			
+
 			if (!mate)
 			{
 				dopoison = victim.player.poisoncount < 4;
@@ -532,7 +532,7 @@ class PoisonCloud : Actor
 					if (victim.player.PoisonPlayer (self, self.target, 50))
 						victim.A_StartSound ("*poison", CHAN_VOICE);
 				}
-			}	
+			}
 			return -1;
 		}
 		else if (!victim.bIsMonster)
@@ -541,7 +541,7 @@ class PoisonCloud : Actor
 		}
 		return damage;
 	}
-	
+
 	//===========================================================================
 	//
 	// A_PoisonBagCheck
@@ -606,7 +606,7 @@ class ZPoisonShroom : PoisonBag
 		SHRM F -1;
 		Stop;
 	}
-	
+
 	//===========================================================================
 	//
 	// A_PoisonShroom
@@ -618,4 +618,3 @@ class ZPoisonShroom : PoisonBag
 		tics = 128 + (random[PoisonShroom]() << 1);
 	}
 }
-

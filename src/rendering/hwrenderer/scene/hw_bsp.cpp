@@ -72,7 +72,7 @@ struct RenderJob
 		PortalJob,
 		TerminateJob	// inserted when all work is done so that the worker can return.
 	};
-	
+
 	int type;
 	subsector_t *sub;
 	seg_t *seg;
@@ -98,7 +98,7 @@ public:
 		if (readindex < writeindex) return &pool[readindex++];
 		return nullptr;
 	}
-	
+
 	void ReleaseAll()
 	{
 		readindex = 0;
@@ -237,7 +237,7 @@ void HWDrawInfo::UnclipSubsector(subsector_t *sub)
 		angle_t endAngle = clipper.GetClipAngle(seg->v1);
 
 		// Back side, i.e. backface culling	- read: endAngle >= startAngle!
-		if (startAngle-endAngle >= ANGLE_180)  
+		if (startAngle-endAngle >= ANGLE_180)
 		{
 			clipper.SafeRemoveClipRange(startAngle, endAngle);
 			clipper.SetBlocked(false);
@@ -300,7 +300,7 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 	}
 
 	// Back side, i.e. backface culling	- read: endAngle >= startAngle!
-	if (startAngle-endAngle<ANGLE_180)  
+	if (startAngle-endAngle<ANGLE_180)
 	{
 		return;
 	}
@@ -347,7 +347,7 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 			if (!seg->linedef->isVisualPortal())
 			{
 				auto tex = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::mid), true);
-				if (!tex || !tex->isValid()) 
+				if (!tex || !tex->isValid())
 				{
 					// nothing to do here!
 					seg->linedef->validcount=validcount;
@@ -370,7 +370,7 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 			}
 		}
 	}
-	else 
+	else
 	{
 		// Backsector for polyobj segs is always the containing sector itself
 		backsector = currentsector;
@@ -378,7 +378,7 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 
 	seg->linedef->flags |= ML_MAPPED;
 
-	if (ispoly || seg->linedef->validcount!=validcount) 
+	if (ispoly || seg->linedef->validcount!=validcount)
 	{
 		if (!ispoly) seg->linedef->validcount=validcount;
 
@@ -512,7 +512,7 @@ void HWDrawInfo::AddLines(subsector_t * sub, sector_t * sector)
 			{
 				if (!(sub->flags & SSECMF_DRAWN)) AddLine (seg, mClipPortal != nullptr);
 			}
-			else if (!(seg->sidedef->Flags & WALLF_POLYOBJ)) 
+			else if (!(seg->sidedef->Flags & WALLF_POLYOBJ))
 			{
 				AddLine (seg, mClipPortal != nullptr);
 			}
@@ -604,7 +604,7 @@ void HWDrawInfo::RenderThings(subsector_t * sub, sector_t * sector)
 			sprite.Process(this, thing, sector, in_area, false);
 		}
 	}
-	
+
 	for (msecnode_t *node = sec->sectorportal_thinglist; node; node = node->m_snext)
 	{
 		AActor *thing = node->m_thing;
@@ -682,7 +682,7 @@ void HWDrawInfo::DoSubsector(subsector_t * sub)
 	const bool doOob = Viewpoint.bDoOob;
 	sector_t * sector;
 	sector_t * fakesector;
-	
+
 #ifdef _DEBUG
 	if (sub->sector->sectornum==931)
 	{
@@ -855,7 +855,7 @@ void HWDrawInfo::DoSubsector(subsector_t * sub)
 	if (gl_render_flats)
 	{
 		// Subsectors with only 2 lines cannot have any area
-		if (sub->numlines>2 || (sub->hacked&1)) 
+		if (sub->numlines>2 || (sub->hacked&1))
 		{
 			// Exclude the case when it tries to render a sector with a heightsec
 			// but undetermined heightsec state. This can only happen if the
@@ -890,7 +890,7 @@ void HWDrawInfo::DoSubsector(subsector_t * sub)
 					}
 				}
 				// mark subsector as processed - but mark for rendering only if it has an actual area.
-				ss_renderflags[sub->Index()] = 
+				ss_renderflags[sub->Index()] =
 					(sub->numlines > 2) ? SSRF_PROCESSED|SSRF_RENDERALL : SSRF_PROCESSED;
 				if (sub->hacked & 1) AddHackedSubsector(sub);
 

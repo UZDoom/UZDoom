@@ -568,4 +568,3 @@ void I_StartupKeyboard()
 		delete Keyboard;
 	}
 }
-

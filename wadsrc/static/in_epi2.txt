@@ -3,7 +3,7 @@ Screensize 320 200
 Splat wisplat
 Pointer wiurh0 wiurh1
 
-// IfEntering and IfLeaving are mutually exclusive so these have to be defined twice! 
+// IfEntering and IfLeaving are mutually exclusive so these have to be defined twice!
 
 IfLeaving E2M1 Pic 128 136 WIA10000
 IfLeaving E2M2 Pic 128 136 WIA10100
@@ -32,7 +32,7 @@ IfEntering E2M9 Animation 192 144 11 ONCE
 	WIA10702
 }
 
-      
+
 Spots
 {
 	E2M1 254 25

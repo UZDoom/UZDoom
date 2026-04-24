@@ -1002,7 +1002,7 @@ PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::uni
 		pipelineInOut += "layout(location=0) in vec2 TexCoord;\n";
 		pipelineInOut += "layout(location=0) out vec4 FragColor;\n";
 	}
-	else 
+	else
 	{
 		pipelineInOut += "in vec2 TexCoord;\n";
 		pipelineInOut += "out vec4 FragColor;\n";

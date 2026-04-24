@@ -1,37 +1,37 @@
 flickerlight2 ZOMBIEATK
 {
-    color 1.0 0.8 0.2
-    size 72
-    secondarySize 84
-    interval 1
-    offset 0 40 0
+	color 1.0 0.8 0.2
+	size 72
+	secondarySize 84
+	interval 1
+	offset 0 40 0
 	attenuate 1
 }
 
 flickerlight ROCKET_X1
 {
-    color 1.0 0.7 0.5
-    size 96
-    secondarySize 108
-    chance 0.3
+	color 1.0 0.7 0.5
+	size 96
+	secondarySize 108
+	chance 0.3
 	attenuate 1
 }
 
 flickerlight ROCKET_X2
 {
-    color 0.5 0.3 0.2
-    size 120
-    secondarySize 132
-    chance 0.3
+	color 0.5 0.3 0.2
+	size 120
+	secondarySize 132
+	chance 0.3
 	attenuate 1
 }
 
 flickerlight ROCKET_X3
 {
-    color 0.3 0.1 0.1
-    size 144
-    secondarySize 156
-    chance 0.3
+	color 0.3 0.1 0.1
+	size 144
+	secondarySize 156
+	chance 0.3
 	attenuate 1
 }
 
@@ -214,7 +214,7 @@ object TimeBomb
 
 object PhageNeutron
 {
- 	frame TROO { Light Purple	}
+	frame TROO { Light Purple	}
 	frame APBX { Light Purple_X1 }
 	frame APBX { Light Purple_X1 }
 	frame APBX { Light Purple_X2 }
@@ -265,4 +265,3 @@ object CrateExplosion
 	frame BAL2D { Light Rocket_X2 }
 	frame BAL2E { Light Rocket_X3 }
 }
-

@@ -430,7 +430,7 @@ inline bool LineIsFunctionDeclaration(const std::string &line, const std::string
 // find the LINE that the function declaration starts on, lines starting at 1
 int PexCache::FindFunctionDeclaration(const std::shared_ptr<Binary> &source, const VMScriptFunction *func, int start_line_from_1)
 {
-	
+
 	std::string source_code;
 	if (!GetOrCacheSource(source, source_code))
 	{
@@ -516,7 +516,7 @@ std::vector<dap::Module> PexCache::GetModules()
 		module.name = name;
 		module.path = path;
 		modules.push_back(module);
-	}		
+	}
 	return modules;
 }
 

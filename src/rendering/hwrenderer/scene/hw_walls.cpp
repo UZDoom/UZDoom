@@ -112,7 +112,7 @@ void HWWall::RenderWall(FRenderState &state, int textured)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -136,7 +136,7 @@ void HWWall::RenderFogBoundary(HWWallDispatcher*di, FRenderState &state)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::RenderMirrorSurface(HWWallDispatcher*di, FRenderState &state)
@@ -179,7 +179,7 @@ void HWWall::RenderMirrorSurface(HWWallDispatcher*di, FRenderState &state)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -330,7 +330,7 @@ void HWWall::RenderTexturedWall(HWWallDispatcher*di, FRenderState &state, int rf
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -357,7 +357,7 @@ void HWWall::RenderTranslucentWall(HWWallDispatcher*di, FRenderState &state)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::DrawWall(HWWallDispatcher*di, FRenderState &state, bool translucent)
@@ -478,7 +478,7 @@ void HWWall::SetupLights(HWDrawInfo*di, FDynLightData &lightdata)
 							if (tcs[i].v>1) outcnt[3]++;
 
 						}
-						if (outcnt[0]!=4 && outcnt[1]!=4 && outcnt[2]!=4 && outcnt[3]!=4) 
+						if (outcnt[0]!=4 && outcnt[1]!=4 && outcnt[2]!=4 && outcnt[3]!=4)
 						{
 							draw_dlight += GetLight(lightdata, seg->frontsector->PortalGroup, p, node->lightsource, true);
 						}
@@ -541,7 +541,7 @@ void HWWall::SetupLights(HWDrawInfo*di, FDynLightData &lightdata)
 							if (tcs[i].v>1) outcnt[3]++;
 
 						}
-						if (outcnt[0]!=4 && outcnt[1]!=4 && outcnt[2]!=4 && outcnt[3]!=4) 
+						if (outcnt[0]!=4 && outcnt[1]!=4 && outcnt[2]!=4 && outcnt[3]!=4)
 						{
 							draw_dlight += GetLight(lightdata, seg->frontsector->PortalGroup, p, node->lightsource, true);
 						}
@@ -556,7 +556,7 @@ void HWWall::SetupLights(HWDrawInfo*di, FDynLightData &lightdata)
 
 
 const char HWWall::passflag[] = {
-	0,		//RENDERWALL_NONE,             
+	0,		//RENDERWALL_NONE,
 	1,		//RENDERWALL_TOP,              // unmasked
 	1,		//RENDERWALL_M1S,              // unmasked
 	2,		//RENDERWALL_M2S,              // depends on render and texture settings
@@ -570,7 +570,7 @@ const char HWWall::passflag[] = {
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::PutWall(HWWallDispatcher *di, bool translucent)
@@ -641,14 +641,14 @@ void HWWall::PutWall(HWWallDispatcher *di, bool translucent)
 
 	lightlist = nullptr;
 	// make sure that following parts of the same linedef do not get this one's vertex and lighting info.
-	vertcount = 0;	
+	vertcount = 0;
 	dynlightindex = -1;
 	flags &= ~HWF_TRANSLUCENT;
 }
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -920,13 +920,13 @@ void HWWall::SplitWall(HWWallDispatcher *di, sector_t * frontsector, bool transl
 	{
 		for(i=0;i<lightlist.Size()-1;i++)
 		{
-			if (i<lightlist.Size()-1) 
+			if (i<lightlist.Size()-1)
 			{
 				secplane_t &p = lightlist[i+1].plane;
 				maplightbottomleft = p.ZatPoint(glseg.x1,glseg.y1);
 				maplightbottomright= p.ZatPoint(glseg.x2,glseg.y2);
 			}
-			else 
+			else
 			{
 				maplightbottomright = maplightbottomleft = -32000;
 			}
@@ -974,17 +974,17 @@ void HWWall::SplitWall(HWWallDispatcher *di, sector_t * frontsector, bool transl
 				flags |= HWF_NOSPLITUPPER;
 				ztop[0]=copyWall1.zbottom[0]=maplightbottomleft;
 				ztop[1]=copyWall1.zbottom[1]=maplightbottomright;
-				tcs[UPLFT].v=copyWall1.tcs[LOLFT].v=copyWall1.tcs[UPLFT].v+ 
+				tcs[UPLFT].v=copyWall1.tcs[LOLFT].v=copyWall1.tcs[UPLFT].v+
 					(maplightbottomleft-copyWall1.ztop[0])*(copyWall1.tcs[LOLFT].v-copyWall1.tcs[UPLFT].v)/(zbottom[0]-copyWall1.ztop[0]);
-				tcs[UPRGT].v=copyWall1.tcs[LORGT].v=copyWall1.tcs[UPRGT].v+ 
+				tcs[UPRGT].v=copyWall1.tcs[LORGT].v=copyWall1.tcs[UPRGT].v+
 					(maplightbottomright-copyWall1.ztop[1])*(copyWall1.tcs[LORGT].v-copyWall1.tcs[UPRGT].v)/(zbottom[1]-copyWall1.ztop[1]);
-				lightuv[UPLFT].v=copyWall1.lightuv[LOLFT].v=copyWall1.lightuv[UPLFT].v+ 
+				lightuv[UPLFT].v=copyWall1.lightuv[LOLFT].v=copyWall1.lightuv[UPLFT].v+
 					(maplightbottomleft-copyWall1.ztop[0])*(copyWall1.lightuv[LOLFT].v-copyWall1.lightuv[UPLFT].v)/(zbottom[0]-copyWall1.ztop[0]);
-				lightuv[UPRGT].v=copyWall1.lightuv[LORGT].v=copyWall1.lightuv[UPRGT].v+ 
+				lightuv[UPRGT].v=copyWall1.lightuv[LORGT].v=copyWall1.lightuv[UPRGT].v+
 					(maplightbottomright-copyWall1.ztop[1])*(copyWall1.lightuv[LORGT].v-copyWall1.lightuv[UPRGT].v)/(zbottom[1]-copyWall1.ztop[1]);
 				copyWall1.Put3DWall(di, &lightlist[i], translucent);
 			}
-			if (ztop[0]==zbottom[0] && ztop[1]==zbottom[1]) 
+			if (ztop[0]==zbottom[0] && ztop[1]==zbottom[1])
 			{
 				//::SplitWall.Unclock();
 				goto out;
@@ -1005,7 +1005,7 @@ out:
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 bool HWWall::DoHorizon(HWWallDispatcher *di, seg_t * seg,sector_t * fs, vertex_t * v1,vertex_t * v2)
@@ -1092,7 +1092,7 @@ static float ZeroLightmapUVs[8] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 bool HWWall::SetWallCoordinates(seg_t * seg, FTexCoordInfo *tci, float texturetop,
@@ -1102,7 +1102,7 @@ bool HWWall::SetWallCoordinates(seg_t * seg, FTexCoordInfo *tci, float textureto
 	//
 	// set up texture coordinate stuff
 	//
-	// 
+	//
 	float l_ul;
 	float texlength;
 
@@ -1379,7 +1379,7 @@ void HWWall::DoTexture(HWWallDispatcher *di, int _type,seg_t * seg, int peg,
 	float floatceilingref = ceilingrefheight + tci.RowOffset(seg->sidedef->GetTextureYOffset(texpos));
 	if (peg) floatceilingref += tci.mRenderHeight - flh - v_offset;
 
-	if (!SetWallCoordinates(seg, &tci, floatceilingref, topleft, topright, bottomleft, bottomright, 
+	if (!SetWallCoordinates(seg, &tci, floatceilingref, topleft, topright, bottomleft, bottomright,
 							seg->sidedef->GetTextureXOffset(texpos), skew)) return;
 
 	if (seg->linedef->special == Line_Mirror && _type == RENDERWALL_M1S && gl_mirrors && !(di->Level->ib_compatflags & BCOMPATF_NOMIRRORS))
@@ -1404,7 +1404,7 @@ void HWWall::DoTexture(HWWallDispatcher *di, int _type,seg_t * seg, int peg,
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1413,7 +1413,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 						  sector_t * realfront, sector_t * realback,
 						  float fch1, float fch2, float ffh1, float ffh2,
 						  float bch1, float bch2, float bfh1, float bfh2, float zalign, float skew)
-								
+
 {
 	FTexCoordInfo tci;
 	float topleft,bottomleft,topright,bottomright;
@@ -1483,8 +1483,8 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 				topright = max(bch2,fch2);
 			}
 		}
-		else if ((bch1>fch1 || bch2>fch2) && 
-				 (seg->frontsector->GetTexture(sector_t::ceiling)!=skyflatnum || seg->backsector->GetTexture(sector_t::ceiling)==skyflatnum)) 
+		else if ((bch1>fch1 || bch2>fch2) &&
+				 (seg->frontsector->GetTexture(sector_t::ceiling)!=skyflatnum || seg->backsector->GetTexture(sector_t::ceiling)==skyflatnum))
 				 // (!((bch1<=fch1 && bch2<=fch2) || (bch1>=fch1 && bch2>=fch2)))
 		{
 			// Use the higher plane and let the geometry clip the extruding part
@@ -1497,7 +1497,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 			topleft = min(bch1,fch1);
 			topright = min(bch2,fch2);
 		}
-		
+
 		//
 		//
 		// Set up the bottom
@@ -1523,7 +1523,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 			bottomleft = max(bfh1,ffh1);
 			bottomright = max(bfh2,ffh2);
 		}
-		
+
 		//
 		//
 		// if we don't need a fog sheet let's clip away some unnecessary parts of the polygon
@@ -1559,7 +1559,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 	//
 	// set up texture coordinate stuff
 	//
-	// 
+	//
 	float t_ofs = seg->sidedef->GetTextureXOffset(side_t::mid);
 
 	if (texture)
@@ -1585,7 +1585,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 
 		float textureoffset = tci.TextureOffset(t_ofs);
 		int righttex = int(textureoffset) + seg->sidedef->TexelLength;
-		
+
 		if ((textureoffset == 0 && righttex <= tci.mRenderWidth) ||
 			(textureoffset >= 0 && righttex == tci.mRenderWidth))
 		{
@@ -1617,7 +1617,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 	//
 	// draw fog sheet if required
 	//
-	// 
+	//
 	if (drawfogboundary)
 	{
 		flags |= HWF_NOSPLITUPPER|HWF_NOSPLITLOWER;
@@ -1625,7 +1625,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 		auto savetex = texture;
 		texture = NULL;
 		PutWall(di, true);
-		if (!savetex) 
+		if (!savetex)
 		{
 			flags &= ~(HWF_NOSPLITUPPER|HWF_NOSPLITLOWER);
 			return;
@@ -1639,7 +1639,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 	//
 	// set up alpha blending
 	//
-	// 
+	//
 	bool sideHasAlpha = seg->sidedef->HasAlpha();
 	if (sideHasAlpha || seg->linedef->alpha != 0)
 	{
@@ -1743,7 +1743,7 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::BuildFFBlock(HWWallDispatcher *di, seg_t * seg, F3DFloor * rover, int roverIndex,
@@ -1790,7 +1790,7 @@ void HWWall::BuildFFBlock(HWWallDispatcher *di, seg_t * seg, F3DFloor * rover, i
 		if (rover->flags&FF_UPPERTEXTURE)
 		{
 			texture = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::top), true);
-			if (!texture || !texture->isValid()) return; 
+			if (!texture || !texture->isValid()) return;
 			GetTexCoordInfo(texture, &tci, seg->sidedef, side_t::top);
 		}
 		else if (rover->flags&FF_LOWERTEXTURE)
@@ -1885,7 +1885,7 @@ void HWWall::BuildFFBlock(HWWallDispatcher *di, seg_t * seg, F3DFloor * rover, i
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1897,7 +1897,7 @@ __forceinline void HWWall::GetPlanePos(F3DFloor::planeref *planeref, float &left
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::InverseFloors(HWWallDispatcher *di, seg_t * seg, sector_t * frontsector,
@@ -1948,7 +1948,7 @@ void HWWall::InverseFloors(HWWallDispatcher *di, seg_t * seg, sector_t * frontse
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::ClipFFloors(HWWallDispatcher *di, seg_t * seg, F3DFloor * ffloor, int ffloorIndex, sector_t * frontsector,
@@ -2022,7 +2022,7 @@ done:
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::DoFFloorBlocks(HWWallDispatcher *di, seg_t * seg, sector_t * frontsector, sector_t * backsector,
@@ -2131,7 +2131,7 @@ CVAR(Int, bottomskew, 0, 0)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, sector_t * backsector)
@@ -2287,7 +2287,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 			{
 				int skewflag = seg->sidedef->textures[side_t::mid].skew;
 				if (skewflag == 0) skewflag = midskew;
-				float skew = 
+				float skew =
 					skewflag == side_t::skew_front_ceiling ? fch2 - fch1 :
 					skewflag == side_t::skew_front_floor ? ffh2 - ffh1 : 0.;
 				DoTexture(di, RENDERWALL_M1S, seg, (seg->linedef->flags & ML_DONTPEGBOTTOM) > 0,
@@ -2563,7 +2563,7 @@ void HWWall::Process(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, s
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 void HWWall::ProcessLowerMiniseg(HWWallDispatcher *di, seg_t *seg, sector_t * frontsector, sector_t * backsector)

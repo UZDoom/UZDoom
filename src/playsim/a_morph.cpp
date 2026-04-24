@@ -44,5 +44,3 @@ bool P_UnmorphActor(AActor *activator, AActor *morphed, int flags, bool force)
 	}
 	return false;
 }
-
-

@@ -41,7 +41,7 @@ extend class PlayerPawn
 			item = next;
 		}
 	}
-	
+
 	//===========================================================================
 	//
 	// EndAllPowerupEffects
@@ -62,7 +62,7 @@ extend class PlayerPawn
 			item = next;
 		}
 	}
-	
+
 	//===========================================================================
 	//
 	//
@@ -77,7 +77,7 @@ extend class PlayerPawn
 			psp.y = WEAPONTOP;
 			player.ReadyWeapon.ResetPSprite(psp);
 		}
-		
+
 		class<Weapon> morphWeapCls = MorphWeapon;
 		if (!morphWeapCls)
 		{
@@ -144,7 +144,7 @@ extend class PlayerPawn
 		{
 			if (morphed)
 				morphed.Destroy();
-				
+
 			return false;
 		}
 
@@ -168,12 +168,12 @@ extend class PlayerPawn
 			morphed.ChangeTid(TID);
 			ChangeTid(0);
 		}
-		
+
 		// special2 is no longer used here since Actors now have a proper field for it.
 		morphed.PremorphProperties = (bSolid * MPROP_SOLID) | (bShootable * MPROP_SHOOTABLE)
 										| (bNoBlockmap * MPROP_NO_BLOCKMAP) | (bNoSector * MPROP_NO_SECTOR)
 										| (bNoInteraction * MPROP_NO_INTERACTION) | (bInvisible * MPROP_INVIS);
-		
+
 		morphed.bShadow |= bShadow;
 		morphed.bNoGravity |= bNoGravity;
 		morphed.bFly |= bFly;
@@ -229,7 +229,7 @@ extend class PlayerPawn
 
 		return true;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// FUNC UndoPlayerMorph

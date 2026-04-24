@@ -120,7 +120,7 @@ linetype_exp(Z) ::= expr(A).
 
 linetype_declaration ::= linetype_exp(linetype) EQUALS expr(flags) COMMA expr(special) LPAREN special_args(arg) RPAREN.
 {
-	static_cast<XlatParseContext *>(context)->Translator->SimpleLineTranslations.SetVal(linetype, 
+	static_cast<XlatParseContext *>(context)->Translator->SimpleLineTranslations.SetVal(linetype,
 		FLineTrans(special&0xffff, flags+arg.addflags, arg.args[0], arg.args[1], arg.args[2], arg.args[3], arg.args[4]));
 	static_cast<XlatParseContext *>(context)->DefiningLineType = -1;
 }
@@ -164,7 +164,7 @@ special_arg(Z) ::= exp_with_tag(A).
 		int val;
 		const int *endpt;
 		int *xnode;
-		
+
 		state.linetype = static_cast<XlatParseContext *>(context)->DefiningLineType;
 		state.tag = 0;
 		state.bIsConstant = true;
@@ -264,7 +264,7 @@ boom_declaration ::= LBRACKET expr(special) RBRACKET LPAREN expr(firsttype) COMM
 		static_cast<XlatParseContext *>(context)->Translator->Boomish[static_cast<XlatParseContext *>(context)->Translator->NumBoomish].FirstLinetype = firsttype;
 		static_cast<XlatParseContext *>(context)->Translator->Boomish[static_cast<XlatParseContext *>(context)->Translator->NumBoomish].LastLinetype = lasttype;
 		static_cast<XlatParseContext *>(context)->Translator->Boomish[static_cast<XlatParseContext *>(context)->Translator->NumBoomish].NewSpecial = special;
-		
+
 		for (i = 0, probe = stores; probe != NULL; i++)
 		{
 			MoreLines *next = probe->next;

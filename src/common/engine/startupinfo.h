@@ -50,5 +50,4 @@ struct FStartupInfo
 };
 
 
-extern FStartupInfo GameStartupInfo;	
-
+extern FStartupInfo GameStartupInfo;

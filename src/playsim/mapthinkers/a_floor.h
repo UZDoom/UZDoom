@@ -193,4 +193,3 @@ enum EChange
 	trigChangeOnly,
 	numChangeOnly,
 };
-

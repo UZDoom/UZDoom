@@ -74,7 +74,7 @@ class Sentinel : Actor
 		SEWR J 5;
 		Stop;
 	}
-	
+
 	void A_SentinelAttack ()
 	{
 		// [BB] Without a target the P_SpawnMissileZAimed call will crash.
@@ -101,7 +101,7 @@ class Sentinel : Actor
 		}
 	}
 
-	
+
 }
 
 // Sentinel FX 1 ------------------------------------------------------------

@@ -150,7 +150,7 @@ void SetImplicitArgs(TArray<PType *> *args, TArray<uint32_t> *argflags, TArray<F
 	if (funcflags & VARF_Method)
 	{
 		// implied self pointer
-		if (args != nullptr)		args->Push(NewPointer(cls, !!(funcflags & VARF_ReadOnly))); 
+		if (args != nullptr)		args->Push(NewPointer(cls, !!(funcflags & VARF_ReadOnly)));
 		if (argflags != nullptr)	argflags->Push(VARF_Implicit | VARF_ReadOnly);
 		if (argnames != nullptr)	argnames->Push(NAME_self);
 	}
@@ -204,7 +204,7 @@ PFunction *CreateAnonymousFunction(PContainerType *containingclass, PType *retur
 	// Functions that only get flagged for actors do not need the additional two context parameters.
 	int fflags = (flags& (SUF_OVERLAY | SUF_WEAPON | SUF_ITEM)) ? VARF_Action | VARF_Method : VARF_Method;
 
-	// [ZZ] give anonymous functions the scope of their class 
+	// [ZZ] give anonymous functions the scope of their class
 	//      (just give them VARF_Play, whatever)
 	fflags |= VARF_Play;
 
@@ -521,7 +521,7 @@ void LoadActors()
 
 		if (ti->bDecorateClass && ti->IsDescendantOf(NAME_StateProvider))
 		{
-			// either a DECORATE based weapon or CustomInventory. 
+			// either a DECORATE based weapon or CustomInventory.
 			// These are subject to relaxed rules for user variables in states.
 			// Although there is a runtime check for bogus states, let's do a quick analysis if any of the known entry points
 			// hits an unsafe state. If we can find something here it can be handled wuth a compile error rather than a runtime error.

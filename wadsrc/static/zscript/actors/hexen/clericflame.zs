@@ -61,7 +61,7 @@ class CWeapFlame : ClericWeapon
 		CFLM G 2;
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// A_CFlameAttack
@@ -170,7 +170,7 @@ class CircleFlame : Actor
 {
 	const FLAMESPEED = 0.45;
 	const FLAMEROTSPEED = 2.;
-	
+
 	Default
 	{
 		Radius 6;
@@ -209,7 +209,7 @@ class CircleFlame : Actor
 		CFCF TUVWXYZ 3 Bright;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_CFlameRotate
@@ -263,7 +263,7 @@ class CFlameMissile : FastProjectile
 		CFFX M 3 Bright;
 		Stop;
 	}
-	
+
 	override void BeginPlay ()
 	{
 		special1 = 2;
@@ -286,7 +286,7 @@ class CFlameMissile : FastProjectile
 			}
 		}
 	}
-	
+
 	//============================================================================
 	//
 	// A_CFlamePuff

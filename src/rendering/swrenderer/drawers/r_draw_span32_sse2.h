@@ -78,12 +78,12 @@ namespace swrenderer
 			texdata.ystep = args.TextureVStep();
 			texdata.xfrac = args.TextureUPos();
 			texdata.yfrac = args.TextureVPos();
-			
+
 			texdata.source = (const uint32_t*)args.TexturePixels();
-			
+
 			double lod = args.TextureLOD();
 			bool mipmapped = args.MipmappedTexture();
-			
+
 			bool magnifying = lod < 0.0;
 			if (r_mipmap && mipmapped)
 			{
@@ -105,7 +105,7 @@ namespace swrenderer
 
 			bool is_nearest_filter = (magnifying && !r_magfilter) || (!magnifying && !r_minfilter);
 			bool is_64x64 = texdata.width == 64 && texdata.height == 64;
-			
+
 			auto shade_constants = args.ColormapConstants();
 			if (shade_constants.simple_shade)
 			{
@@ -206,7 +206,7 @@ namespace swrenderer
 				{
 					bgcolor = _mm_setzero_si128();
 				}
-						
+
 				unsigned int ifgcolor[2];
 				ifgcolor[0] = Sample<FilterModeT, TextureSizeT>(texdata.width, texdata.height, texdata.xone, texdata.yone, texdata.xstep, texdata.ystep, texdata.xfrac, texdata.yfrac, texdata.source);
 				texdata.xfrac += texdata.xstep;

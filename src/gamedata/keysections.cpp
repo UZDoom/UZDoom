@@ -241,7 +241,7 @@ void ClearIWADPlayerClasses (PClassActor *ti)
 CCMD(clearplayerclasses)
 {
 	if (ParsingKeyConf)
-	{	
+	{
 		// Only clear the playerclasses first if setslotstrict is true
 		// If not, we'll only remove the IWAD playerclasses
 		if(setslotstrict)
@@ -275,8 +275,8 @@ CCMD(addplayerclass)
 
 			newclass.Type = ti;
 			newclass.Flags = 0;
-			
-			// If this class was already added, don't add it again			
+
+			// If this class was already added, don't add it again
 			for(unsigned i = 0; i < PlayerClasses.Size(); i++)
 			{
 				if(PlayerClasses[i].Type == ti)
@@ -284,7 +284,7 @@ CCMD(addplayerclass)
 					return;
 				}
 			}
-			
+
 
 			int arg = 2;
 			while (arg < argv.argc())
@@ -304,4 +304,3 @@ CCMD(addplayerclass)
 		}
 	}
 }
-

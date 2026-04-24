@@ -319,7 +319,7 @@ public:
 	{
 		return D;
 	}
-	
+
 	bool isSlope() const
 	{
 		return !normal.XY().isZero();
@@ -507,7 +507,7 @@ enum
 	SECF_NORESPAWN		= 8,	// players can not respawn in this sector
 	SECF_FRICTION		= 16,	// sector has friction enabled
 	SECF_PUSH			= 32,	// pushers enabled
-	SECF_SILENTMOVE		= 64,	// Sector movement makes mo sound (Eternity got this so this may be useful for an extended cross-port standard.) 
+	SECF_SILENTMOVE		= 64,	// Sector movement makes mo sound (Eternity got this so this may be useful for an extended cross-port standard.)
 	SECF_DMGTERRAINFX	= 128,	// spawns terrain splash when inflicting damage
 	SECF_ENDGODMODE		= 256,	// getting damaged by this sector ends god mode
 	SECF_ENDLEVEL		= 512,	// ends level when health goes below 10
@@ -932,7 +932,7 @@ public:
 		planes[pos].Flags |= Or;
 	}
 
-	int GetPlaneLight(int pos) const 
+	int GetPlaneLight(int pos) const
 	{
 		return planes[pos].Light;
 	}
@@ -1317,7 +1317,7 @@ struct side_t
 	{
 		textures[which].xOffset = offset;;
 	}
-	
+
 	void SetTextureXOffset(double offset)
 	{
 		textures[top].xOffset =
@@ -1626,7 +1626,7 @@ struct seg_t
 {
 	vertex_t*	v1;
 	vertex_t*	v2;
-	
+
 	side_t* 	sidedef;
 	line_t* 	linedef;
 
@@ -1641,7 +1641,7 @@ struct seg_t
 	int				segnum;
 
 	int Index() const { return segnum; }
-	
+
 	FLevelLocals *GetLevel() const
 	{
 		return frontsector->Level;
@@ -1701,7 +1701,7 @@ struct subsector_t
 };
 
 
-	
+
 
 //
 // BSP node.
@@ -1859,7 +1859,7 @@ inline void sector_t::SetColor(PalEntry pe, int desat) { ::SetColor(this, pe, de
 inline void sector_t::SetFade(PalEntry pe) { ::SetFade(this, pe); }
 inline int sector_t::GetFloorLight() const { return ::GetFloorLight(this); }
 inline int sector_t::GetCeilingLight() const { return ::GetCeilingLight(this); }
-inline int sector_t::GetSpriteLight() const 
+inline int sector_t::GetSpriteLight() const
 {
 	return GetTexture(ceiling) == skyflatnum ? GetCeilingLight() : GetFloorLight();
 }

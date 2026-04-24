@@ -351,26 +351,26 @@ struct AMColor
 //=============================================================================
 
 static const char *ColorNames[] = {
-		"Background", 
-		"YourColor", 
-		"WallColor", 
+		"Background",
+		"YourColor",
+		"WallColor",
 		"TwoSidedWallColor",
-		"FloorDiffWallColor", 
-		"CeilingDiffWallColor", 
-		"ExtraFloorWallColor", 
+		"FloorDiffWallColor",
+		"CeilingDiffWallColor",
+		"ExtraFloorWallColor",
 		"ThingColor",
-		"ThingColor_Item", 
-		"ThingColor_CountItem", 
-		"ThingColor_Monster", 
-		"ThingColor_NocountMonster", 
+		"ThingColor_Item",
+		"ThingColor_CountItem",
+		"ThingColor_Monster",
+		"ThingColor_NocountMonster",
 		"ThingColor_Friend",
-		"SpecialWallColor", 
-		"SecretWallColor", 
-		"GridColor", 
+		"SpecialWallColor",
+		"SecretWallColor",
+		"GridColor",
 		"XHairColor",
 		"NotSeenColor",
 		"LockedColor",
-		"IntraTeleportColor", 
+		"IntraTeleportColor",
 		"InterTeleportColor",
 		"SecretSectorColor",
 		"UnexploredSecretColor",
@@ -383,26 +383,26 @@ struct AMColorset
 {
 	enum
 	{
-		Background, 
-		YourColor, 
-		WallColor, 
+		Background,
+		YourColor,
+		WallColor,
 		TSWallColor,
-		FDWallColor, 
-		CDWallColor, 
-		EFWallColor, 
+		FDWallColor,
+		CDWallColor,
+		EFWallColor,
 		ThingColor,
-		ThingColor_Item, 
-		ThingColor_CountItem, 
-		ThingColor_Monster, 
-		ThingColor_NocountMonster, 
+		ThingColor_Item,
+		ThingColor_CountItem,
+		ThingColor_Monster,
+		ThingColor_NocountMonster,
 		ThingColor_Friend,
-		SpecialWallColor, 
-		SecretWallColor, 
-		GridColor, 
+		SpecialWallColor,
+		SecretWallColor,
+		GridColor,
 		XHairColor,
 		NotSeenColor,
 		LockedColor,
-		IntraTeleportColor, 
+		IntraTeleportColor,
 		InterTeleportColor,
 		SecretSectorColor,
 		UnexploredSecretColor,
@@ -698,7 +698,7 @@ static void AM_initColors(bool overlayed)
 	{
 		AMColors = AMMod;
 	}
-	else 
+	else
 	{
 		int set = am_colorset;
 		if (set == -1)
@@ -783,13 +783,13 @@ void FMapInfoParser::ParseAMColors(bool overlay)
 		}
 		else if (nextKey.CompareNoCase("showlocks") == 0)
 		{
-			if(sc.CheckToken(TK_False)) 
-				cset.displayLocks = false; 
-			else 
-			{ 
-				sc.MustGetToken(TK_True); 
-				cset.displayLocks = true; 
-			} 
+			if(sc.CheckToken(TK_False))
+				cset.displayLocks = false;
+			else
+			{
+				sc.MustGetToken(TK_True);
+				cset.displayLocks = true;
+			}
 		}
 		else
 		{
@@ -803,7 +803,7 @@ void FMapInfoParser::ParseAMColors(bool overlay)
 					FString colorName = V_GetColorStringByName(color.GetChars());
 					if(!colorName.IsEmpty()) color = colorName;
 					int colorval = V_GetColorFromString(color.GetChars());
-					cset.c[i].FromRGB(RPART(colorval), GPART(colorval), BPART(colorval)); 
+					cset.c[i].FromRGB(RPART(colorval), GPART(colorval), BPART(colorval));
 					colorset = true;
 					break;
 				}
@@ -998,7 +998,7 @@ class DAutomap :public DAutomapBase
 		return int(MTOF((x)-m_x)/* - f_x*/);
 	}
 
-	int CYMTOF(double y) 
+	int CYMTOF(double y)
 	{
 		return int(f_h - MTOF((y)-m_y)/* + f_y*/);
 	}
@@ -1127,12 +1127,12 @@ void DAutomap::restoreScaleAndLoc ()
 	{
 		m_x = old_m_x;
 		m_y = old_m_y;
-    }
+	}
 	else
 	{
 		m_x = players[consoleplayer].camera->X() - m_w/2;
 		m_y = players[consoleplayer].camera->Y() - m_h/2;
-    }
+	}
 	m_x2 = m_x + m_w;
 	m_y2 = m_y + m_h;
 
@@ -1173,20 +1173,20 @@ void DAutomap::findMinMaxBoundaries ()
 {
 	min_x = min_y = FLT_MAX;
 	max_x = max_y = FIXED_MIN;
-  
+
 	for (auto &vert : Level->vertexes)
 	{
 		if (vert.fX() < min_x)
 			min_x = vert.fX();
 		else if (vert.fX() > max_x)
 			max_x = vert.fX();
-    
+
 		if (vert.fY() < min_y)
 			min_y = vert.fY();
 		else if (vert.fY() > max_y)
 			max_y = vert.fY();
 	}
-  
+
 	max_w = max_x - min_x;
 	max_h = max_y - min_y;
 
@@ -1226,7 +1226,7 @@ void DAutomap::ClipRotatedExtents (double pivotx, double pivoty)
 			m_x = max_x - m_w/2;
 		else if (m_x + m_w/2 < min_x)
 			m_x = min_x - m_w/2;
-	  
+
 		if (m_y + m_h/2 > max_y)
 			m_y = max_y - m_h/2;
 		else if (m_y + m_h/2 < min_y)
@@ -1288,7 +1288,7 @@ void DAutomap::changeWindowLoc ()
 
 	double oldmx = m_x, oldmy = m_y;
 	double incx, incy, oincx, oincy;
-	
+
 	incx = m_paninc.x;
 	incy = m_paninc.y;
 
@@ -1443,11 +1443,11 @@ void DAutomap::NewUIScale()
 void DAutomap::NewResolution()
 {
 	double oldmin = min_scale_mtof;
-	
-	if ( oldmin == 0 ) 
+
+	if ( oldmin == 0 )
 	{
 		return; // [SP] Not in a game, exit!
-	}	
+	}
 	calcMinMaxMtoF();
 	scale_mtof = scale_mtof * min_scale_mtof / oldmin;
 	scale_ftom = 1 / scale_mtof;
@@ -1714,7 +1714,7 @@ bool DAutomap::clipMline (mline_t *ml, fline_t *fl)
 			outside = outcode1;
 		else
 			outside = outcode2;
-	
+
 		// clip to each side
 		if (outside & TOP)
 		{
@@ -1755,7 +1755,7 @@ bool DAutomap::clipMline (mline_t *ml, fline_t *fl)
 			fl->b = tmp;
 			DOOUTCODE(outcode2, fl->b.x, fl->b.y);
 		}
-	
+
 		if (outcode1 & outcode2)
 			return false; // trivially outside
 	}
@@ -1928,7 +1928,7 @@ sector_t * AM_FakeFlat(AActor *viewer, sector_t * sec, sector_t * dest)
 	if (sec->GetHeightSec() == nullptr) return sec;
 
 	DVector3 pos = viewer->InterpolatedPosition(r_viewpoint.TicFrac);
-	
+
 	if (viewer->player)
 	{
 		pos.Z = viewer->player->viewz;
@@ -2231,7 +2231,7 @@ void DAutomap::drawSubsectors()
 
 			// Use an equation similar to player sprites to determine shade
 
-			// Convert a light level into an unbounded colormap index (shade). 
+			// Convert a light level into an unbounded colormap index (shade).
 			// Why the +12? I wish I knew, but experimentation indicates it
 			// is necessary in order to best reproduce Doom's original lighting.
 			double fadelevel;
@@ -2414,7 +2414,7 @@ bool AM_Check3DFloors(line_t *line)
 			if (rover2->flags & FF_THISINSIDE) continue;	// only relevant for software rendering.
 			if (!(rover2->flags & FF_EXISTS)) continue;
 			if (rover2->alpha == 0) continue;
-			if (rover->model == rover2->model && rover->flags == rover2->flags) 
+			if (rover->model == rover2->model && rover->flags == rover2->flags)
 			{
 				found = true;
 				break;
@@ -2597,7 +2597,7 @@ void DAutomap::drawWalls (bool allmap)
 		for (auto &line : Level->lines)
 		{
 			int pg;
-			
+
 			if (line.sidedef[0]->Flags & WALLF_POLYOBJ)
 			{
 				// For polyobjects we must test the surrounding sector to get the proper group.
@@ -2866,7 +2866,7 @@ void DAutomap::drawPlayers ()
 		{
 			angle = players[consoleplayer].mo->InterpolatedAngles(r_viewpoint.TicFrac).Yaw;
 		}
-		
+
 		if (am_cheat != 0 && CheatMapArrow.Size() > 0)
 		{
 			arrow = &CheatMapArrow[0];
@@ -2894,7 +2894,7 @@ void DAutomap::drawPlayers ()
 		// We don't always want to show allies on the automap.
 		if (dmflags2 & DF2_NO_AUTOMAP_ALLIES && (int)i != consoleplayer)
 			continue;
-		
+
 		if (deathmatch && !demoplayback &&
 			!p->mo->IsTeammate (players[consoleplayer].mo) &&
 			p != players[consoleplayer].camera->player)
@@ -2933,7 +2933,7 @@ void DAutomap::drawPlayers ()
 
 			drawLineCharacter(&MapArrow[0], MapArrow.Size(), 0, angle, color, pt.x, pt.y);
 		}
-    }
+	}
 }
 
 //=============================================================================
@@ -3024,7 +3024,7 @@ void DAutomap::drawThings ()
 						const size_t spriteIndex = sprite.spriteframes + (show > 1 ? t->frame : 0);
 
 						frame = &SpriteFrames[spriteIndex];
-						DAngle angle = DAngle::fromDeg(270.) - t->InterpolatedAngles(r_viewpoint.TicFrac).Yaw - t->SpriteRotation; 
+						DAngle angle = DAngle::fromDeg(270.) - t->InterpolatedAngles(r_viewpoint.TicFrac).Yaw - t->SpriteRotation;
 						if (frame->Texture[0] != frame->Texture[1]) angle += DAngle::fromDeg(180. / 16);
 						if (am_rotate == 1 || (am_rotate == 2 && viewactive))
 						{
@@ -3352,7 +3352,7 @@ void DAutomap::Drawer (int bottom)
 
 		clearFB(AMColors[AMColors.Background]);
 	}
-	else 
+	else
 	{
 		f_x = viewwindowx;
 		f_y = viewwindowy;
@@ -3364,7 +3364,7 @@ void DAutomap::Drawer (int bottom)
 	if (am_textured && !viewactive)
 		drawSubsectors();
 
-	if (am_showgrid)	
+	if (am_showgrid)
 		drawGrid(AMColors.GridColor);
 
 	drawWalls(allmap);

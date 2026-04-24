@@ -71,7 +71,7 @@ class FTagManager
 	}
 
 
-    FTagManager(FLevelLocals *l) : Level(l) {}
+	FTagManager(FLevelLocals *l) : Level(l) {}
 	void Clear()
 	{
 		allTags.Clear();

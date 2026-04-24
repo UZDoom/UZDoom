@@ -209,7 +209,7 @@ static void SetupDMXGUS()
 
 void I_InitMusic(int musicstate)
 {
-    I_InitSoundFonts();
+	I_InitSoundFonts();
 
 	snd_musicvolume->Callback ();
 	mus_enabled->Callback();
@@ -239,7 +239,7 @@ void I_InitMusic(int musicstate)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -269,7 +269,7 @@ void I_SetMusicVolume (double factor)
 
 CCMD(testmusicvol)
 {
-	if (argv.argc() > 1) 
+	if (argv.argc() > 1)
 	{
 		I_SetRelativeVolume((float)strtod(argv[1], nullptr));
 	}
@@ -373,7 +373,7 @@ UNSAFE_CCMD (writewave)
 			}
 		}
 #endif
-		// We must stop the currently playing music to avoid interference between two synths. 
+		// We must stop the currently playing music to avoid interference between two synths.
 		auto savedsong = mus_playing;
 		S_StopMusic(true);
 		if (dev == MDEV_DEFAULT && snd_mididevice >= 0) dev = MDEV_FLUIDSYNTH;	// The Windows system synth cannot dump a wave.

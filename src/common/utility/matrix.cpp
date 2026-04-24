@@ -39,15 +39,15 @@
 #pragma warning(disable : 4244)     // truncate from double to float
 #endif
 
-static inline FLOATTYPE 
-DegToRad(FLOATTYPE degrees) 
-{ 
+static inline FLOATTYPE
+DegToRad(FLOATTYPE degrees)
+{
 	return (FLOATTYPE)(degrees * (pi::pif() / 180.0f));
 };
 
 // sets the square matrix mat to the identity matrix,
 // size refers to the number of rows (or columns)
-void 
+void
 VSMatrix::setIdentityMatrix( FLOATTYPE *mat, int size) {
 
 	// fill matrix with 0s
@@ -62,7 +62,7 @@ VSMatrix::setIdentityMatrix( FLOATTYPE *mat, int size) {
 
 
 // gl LoadIdentity implementation
-void 
+void
 VSMatrix::loadIdentity()
 {
 	// fill matrix with 0s
@@ -76,20 +76,20 @@ VSMatrix::loadIdentity()
 
 
 // gl MultMatrix implementation
-void 
+void
 VSMatrix::multMatrix(const FLOATTYPE *aMatrix)
 {
 
 	FLOATTYPE res[16];
 
-	for (int i = 0; i < 4; ++i) 
+	for (int i = 0; i < 4; ++i)
 	{
-		for (int j = 0; j < 4; ++j) 
+		for (int j = 0; j < 4; ++j)
 		{
 			res[j*4 + i] = 0.0f;
-			for (int k = 0; k < 4; ++k) 
+			for (int k = 0; k < 4; ++k)
 			{
-				res[j*4 + i] += mMatrix[k*4 + i] * aMatrix[j*4 + k]; 
+				res[j*4 + i] += mMatrix[k*4 + i] * aMatrix[j*4 + k];
 			}
 		}
 	}
@@ -104,14 +104,14 @@ VSMatrix::multMatrix(const float *aMatrix)
 
 	FLOATTYPE res[16];
 
-	for (int i = 0; i < 4; ++i) 
+	for (int i = 0; i < 4; ++i)
 	{
-		for (int j = 0; j < 4; ++j) 
+		for (int j = 0; j < 4; ++j)
 		{
 			res[j * 4 + i] = 0.0f;
-			for (int k = 0; k < 4; ++k) 
+			for (int k = 0; k < 4; ++k)
 			{
-				res[j*4 + i] += mMatrix[k*4 + i] * aMatrix[j*4 + k]; 
+				res[j*4 + i] += mMatrix[k*4 + i] * aMatrix[j*4 + k];
 			}
 		}
 	}
@@ -153,7 +153,7 @@ void VSMatrix::multQuaternion(const TQuaternion<FLOATTYPE>& q)
 
 
 // gl LoadMatrix implementation
-void 
+void
 VSMatrix::loadMatrix(const FLOATTYPE *aMatrix)
 {
 	memcpy(mMatrix, aMatrix, 16 * sizeof(FLOATTYPE));
@@ -161,7 +161,7 @@ VSMatrix::loadMatrix(const FLOATTYPE *aMatrix)
 
 #ifdef USE_DOUBLE
 // gl LoadMatrix implementation
-void 
+void
 VSMatrix::loadMatrix(const float *aMatrix)
 {
 	for (int i = 0; i < 16; ++i)
@@ -173,8 +173,8 @@ VSMatrix::loadMatrix(const float *aMatrix)
 
 
 // gl Translate implementation
-void 
-VSMatrix::translate(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z) 
+void
+VSMatrix::translate(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 {
 	mMatrix[12] = mMatrix[0] * x + mMatrix[4] * y + mMatrix[8] * z + mMatrix[12];
 	mMatrix[13] = mMatrix[1] * x + mMatrix[5] * y + mMatrix[9] * z + mMatrix[13];
@@ -206,8 +206,8 @@ void VSMatrix::transpose()
 }
 
 // gl Scale implementation
-void 
-VSMatrix::scale(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z) 
+void
+VSMatrix::scale(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 {
 	mMatrix[0] *= x;   mMatrix[1] *= x;   mMatrix[2] *= x;   mMatrix[3] *= x;
 	mMatrix[4] *= y;   mMatrix[5] *= y;   mMatrix[6] *= y;   mMatrix[7] *= y;
@@ -216,7 +216,7 @@ VSMatrix::scale(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 
 
 // gl Rotate implementation
-void 
+void
 VSMatrix::rotate(FLOATTYPE angle, FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 {
 	FLOATTYPE mat[16];
@@ -234,8 +234,8 @@ VSMatrix::rotate(FLOATTYPE angle, FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 	FLOATTYPE y2 = v[1]*v[1];
 	FLOATTYPE z2 = v[2]*v[2];
 
-//	mat[0] = x2 + (y2 + z2) * co; 
-	mat[0] = co + x2 * (1 - co);// + (y2 + z2) * co; 
+//	mat[0] = x2 + (y2 + z2) * co;
+	mat[0] = co + x2 * (1 - co);// + (y2 + z2) * co;
 	mat[4] = v[0] * v[1] * (1 - co) - v[2] * si;
 	mat[8] = v[0] * v[2] * (1 - co) + v[1] * si;
 	mat[12]= 0.0f;
@@ -262,7 +262,7 @@ VSMatrix::rotate(FLOATTYPE angle, FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 
 
 // gluLookAt implementation
-void 
+void
 VSMatrix::lookAt(FLOATTYPE xPos, FLOATTYPE yPos, FLOATTYPE zPos,
 					FLOATTYPE xLook, FLOATTYPE yLook, FLOATTYPE zLook,
 					FLOATTYPE xUp, FLOATTYPE yUp, FLOATTYPE zUp)
@@ -315,7 +315,7 @@ VSMatrix::lookAt(FLOATTYPE xPos, FLOATTYPE yPos, FLOATTYPE zPos,
 
 
 // gluPerspective implementation
-void 
+void
 VSMatrix::perspective(FLOATTYPE fov, FLOATTYPE ratio, FLOATTYPE nearp, FLOATTYPE farp)
 {
 	FLOATTYPE f = 1.0f / tan (fov * (pi::pif() / 360.0f));
@@ -331,15 +331,15 @@ VSMatrix::perspective(FLOATTYPE fov, FLOATTYPE ratio, FLOATTYPE nearp, FLOATTYPE
 
 
 // gl Ortho implementation
-void 
-VSMatrix::ortho(FLOATTYPE left, FLOATTYPE right, 
-			FLOATTYPE bottom, FLOATTYPE top, 
+void
+VSMatrix::ortho(FLOATTYPE left, FLOATTYPE right,
+			FLOATTYPE bottom, FLOATTYPE top,
 			FLOATTYPE nearp, FLOATTYPE farp)
 {
 	loadIdentity();
 
 	mMatrix[0 * 4 + 0] = 2 / (right - left);
-	mMatrix[1 * 4 + 1] = 2 / (top - bottom);	
+	mMatrix[1 * 4 + 1] = 2 / (top - bottom);
 	mMatrix[2 * 4 + 2] = -2 / (farp - nearp);
 	mMatrix[3 * 4 + 0] = -(right + left) / (right - left);
 	mMatrix[3 * 4 + 1] = -(top + bottom) / (top - bottom);
@@ -348,9 +348,9 @@ VSMatrix::ortho(FLOATTYPE left, FLOATTYPE right,
 
 
 // gl Frustum implementation
-void 
-VSMatrix::frustum(FLOATTYPE left, FLOATTYPE right, 
-			FLOATTYPE bottom, FLOATTYPE top, 
+void
+VSMatrix::frustum(FLOATTYPE left, FLOATTYPE right,
+			FLOATTYPE bottom, FLOATTYPE top,
 			FLOATTYPE nearp, FLOATTYPE farp)
 {
 	FLOATTYPE m[16];
@@ -381,7 +381,7 @@ VSMatrix::get(MatrixTypes aType)
 
 
 /* -----------------------------------------------------
-             SEND MATRICES TO OPENGL
+			 SEND MATRICES TO OPENGL
 ------------------------------------------------------*/
 
 // -----------------------------------------------------
@@ -391,10 +391,10 @@ VSMatrix::get(MatrixTypes aType)
 
 // Compute res = M * point
 void
-VSMatrix::multMatrixPoint(const FLOATTYPE *point, FLOATTYPE *res) 
+VSMatrix::multMatrixPoint(const FLOATTYPE *point, FLOATTYPE *res)
 {
 
-	for (int i = 0; i < 4; ++i) 
+	for (int i = 0; i < 4; ++i)
 	{
 
 		res[i] = 0.0f;
@@ -402,12 +402,12 @@ VSMatrix::multMatrixPoint(const FLOATTYPE *point, FLOATTYPE *res)
 		for (int j = 0; j < 4; j++) {
 
 			res[i] += point[j] * mMatrix[j*4 + i];
-		} 
+		}
 	}
 }
 
 // res = a cross b;
-void 
+void
 VSMatrix::crossProduct(const FLOATTYPE *a, const FLOATTYPE *b, FLOATTYPE *res) {
 
 	res[0] = a[1] * b[2]  -  b[1] * a[2];
@@ -427,7 +427,7 @@ VSMatrix::dotProduct(const FLOATTYPE *a, const FLOATTYPE *b) {
 
 
 // Normalize a vec3
-void 
+void
 VSMatrix::normalize(FLOATTYPE *a) {
 
 	FLOATTYPE mag = sqrt(a[0] * a[0]  +  a[1] * a[1]  +  a[2] * a[2]);
@@ -470,7 +470,7 @@ VSMatrix::length(const FLOATTYPE *a) {
 
 // computes the derived normal matrix for the view matrix
 void
-VSMatrix::computeNormalMatrix(const FLOATTYPE *aMatrix) 
+VSMatrix::computeNormalMatrix(const FLOATTYPE *aMatrix)
 {
 
 	double mMat3x3[9];
@@ -516,20 +516,20 @@ VSMatrix::computeNormalMatrix(const FLOATTYPE *aMatrix)
 
 
 // aux function resMat = resMat * aMatrix
-void 
+void
 VSMatrix::multMatrix(FLOATTYPE *resMat, const FLOATTYPE *aMatrix)
 {
 
 	FLOATTYPE res[16];
 
-	for (int i = 0; i < 4; ++i) 
+	for (int i = 0; i < 4; ++i)
 	{
-		for (int j = 0; j < 4; ++j) 
+		for (int j = 0; j < 4; ++j)
 		{
 			res[j*4 + i] = 0.0f;
-			for (int k = 0; k < 4; ++k) 
+			for (int k = 0; k < 4; ++k)
 			{
-				res[j*4 + i] += resMat[k*4 + i] * aMatrix[j*4 + k]; 
+				res[j*4 + i] += resMat[k*4 + i] * aMatrix[j*4 + k];
 			}
 		}
 	}

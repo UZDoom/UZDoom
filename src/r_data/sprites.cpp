@@ -131,8 +131,8 @@ static bool R_InstallSpriteLump (FTextureID lump, unsigned frame, char rot, bool
 	if (rotation == 0)
 	{
 		// the lump should be used for all rotations
-        // false=0, true=1, but array initialised to -1
-        // allows doom to have a "no value set yet" boolean value!
+		// false=0, true=1, but array initialised to -1
+		// allows doom to have a "no value set yet" boolean value!
 		int r;
 
 		for (r = 14; r >= 0; r -= 2)
@@ -212,7 +212,7 @@ void R_InstallSprite (int num, spriteframewithrotate *sprtemp, int &maxframe)
 			// no rotations were found for that frame at all
 			//I_FatalError ("R_InstallSprite: No patches found for %s frame %c", sprites[num].name, frame+'A');
 			break;
-			
+
 		case 0:
 			// only the first rotation is needed
 			for (rot = 1; rot < 16; ++rot)
@@ -225,7 +225,7 @@ void R_InstallSprite (int num, spriteframewithrotate *sprtemp, int &maxframe)
 				sprtemp[frame].Flip = 0xFFFF;
 			}
 			break;
-					
+
 		case 1:
 			// must have all 8 frame pairs
 			for (rot = 0; rot < 8; ++rot)
@@ -267,7 +267,7 @@ void R_InstallSprite (int num, spriteframewithrotate *sprtemp, int &maxframe)
 			sprtemp[frame].rotate = 0;
 		}
 	}
-	
+
 	// allocate space for the frames present and copy sprtemp to it
 	sprites[num].numframes = maxframe;
 	sprites[num].spriteframes = uint16_t(framestart = SpriteFrames.Reserve (maxframe));
@@ -298,7 +298,7 @@ void R_InstallSprite (int num, spriteframewithrotate *sprtemp, int &maxframe)
 //	(4 chars exactly) to be used.
 // Builds the sprite rotation matrices to account
 //	for horizontally flipped sprites.
-// Will report an error if the lumps are inconsistant. 
+// Will report an error if the lumps are inconsistant.
 // Only called at startup.
 //
 // Sprite lump names are 4 characters for the actor,
@@ -309,7 +309,7 @@ void R_InstallSprite (int num, spriteframewithrotate *sprtemp, int &maxframe)
 //
 #define TEX_DWNAME(tex) MAKE_ID(tex->GetName()[0], tex->GetName()[1], tex->GetName()[2], tex->GetName()[3])
 
-void R_InitSpriteDefs () 
+void R_InitSpriteDefs ()
 {
 	struct Hasher
 	{
@@ -403,7 +403,7 @@ void R_InitSpriteDefs ()
 			sprtemp[j].Flip = 0;
 			sprtemp[j].Voxel = NULL;
 		}
-				
+
 		int maxframe = -1;
 		intname = sprites[i].dwName;
 
@@ -454,7 +454,7 @@ void R_InitSpriteDefs ()
 			}
 			hash = vh->Next;
 		}
-		
+
 		R_InstallSprite ((int)i, sprtemp, maxframe);
 	}
 }
@@ -946,7 +946,7 @@ static void R_CreateSkinTranslation (const char *palname)
 {
 	auto lump =  fileSystem.ReadFile (palname);
 	auto otherPal = lump.bytes();
- 
+
 	for (int i = 0; i < 256; ++i)
 	{
 		OtherGameSkinRemap[i] = ColorMatcher.Pick (otherPal[0], otherPal[1], otherPal[2]);

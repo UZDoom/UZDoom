@@ -52,13 +52,13 @@ extend class StateProvider
 		{
 			if (!weap.DepleteAmmo (weap.bAltFire, true))
 				return;
-			
+
 			State flash = weap.FindState('Flash');
 			if (flash != null)
 			{
 				player.SetSafeFlash(weap, flash, random[FireRail](0, 1));
 			}
-			
+
 		}
 
 		int damage = deathmatch ? 100 : 150;
@@ -75,7 +75,7 @@ extend class StateProvider
 		A_FireRailgun(offset_xy: 10);
 	}
 
-	action void A_RailWait() 
+	action void A_RailWait()
 	{
 		// only here to satisfy old Dehacked patches.
 	}

@@ -597,7 +597,7 @@ CUSTOM_CVAR(Bool, disablecrashlog, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 int wmain()
 {
-    return wWinMain(GetModuleHandle(0), 0, GetCommandLineW(), SW_SHOW);
+	return wWinMain(GetModuleHandle(0), 0, GetCommandLineW(), SW_SHOW);
 }
 
 int WINAPI wWinMain (HINSTANCE hInstance, HINSTANCE nothing, LPWSTR cmdline, int nCmdShow)

@@ -153,7 +153,7 @@ static int	CommandsAhead = 0;		// If too far ahead of the host, slow down to rem
 static int	SkipCommandTimer = 0;	// Tracker for when to check for skipping commands. ~0.5 seconds in a row of being ahead will start skipping.
 static int	SkipCommandAmount = 0;	// Amount of commands to skip. Try and batch skip them all at once since we won't be able to get an update until the full RTT.
 
-void D_ProcessEvents(void); 
+void D_ProcessEvents(void);
 void G_BuildTiccmd(usercmd_t *cmd);
 void D_DoAdvanceDemo(void);
 
@@ -285,7 +285,7 @@ public:
 			return;
 
 		Streams[CurrentClientTic % BACKUPTICS].Used = CurrentSize;
-		
+
 		CurrentClientTic = tic;
 		CurrentStream = Streams[tic % BACKUPTICS].Stream;
 		CurrentSize = 0;
@@ -409,7 +409,7 @@ void Net_ClearBuffers()
 	CurStabilityTic = 0u;
 	memset(StabilityTics, 0, sizeof(StabilityTics));
 	NetEvents.ResetStream();
-	
+
 	CutsceneReady = 0u;
 	CutsceneCountdown = 0;
 	bCommandsReset = false;
@@ -553,7 +553,7 @@ void Net_ResetCommands(bool midTic)
 		ClientTic = gametic = tic * TicDup;
 		--tic;
 	}
-	
+
 	for (auto client : NetworkClients)
 	{
 		auto& state = ClientStates[client];
@@ -563,7 +563,7 @@ void Net_ResetCommands(bool midTic)
 		state.SequenceAck = min<int>(state.SequenceAck, tic);
 		if (state.ResendSequenceFrom >= tic)
 			state.ResendSequenceFrom = -1;
-		
+
 		// Make sure not to run its current command either.
 		auto& curTic = state.Tics[tic % BACKUPTICS];
 		const int running = (curTic.Command.buttons & BT_RUN); // This isn't delta'd so needs to be kept.
@@ -951,7 +951,7 @@ static void GetPackets()
 				clientState.StabilityBuffer = NetBuffer[curByte];
 		}
 		++curByte;
-		
+
 		for (int p = 0; p < playerCount; ++p)
 		{
 			const int pNum = NetBuffer[curByte++];
@@ -1026,7 +1026,7 @@ static void GetPackets()
 					continue;
 
 				// Skipped a command. Packet likely got corrupted while being put back together, so have
-				// the client send over the properly ordered commands. 
+				// the client send over the properly ordered commands.
 				if (seq > pState.CurrentSequence + 1 || data[i] == nullptr)
 				{
 					clientState.Flags |= CF_MISSING_SEQ;
@@ -1376,7 +1376,7 @@ void NetUpdate(int tics)
 
 		LevelStartDelay = max<int>(LevelStartDelay - tics, 0);
 	}
-		
+
 	bool netGood = Net_UpdateStatus();
 	const int startTic = ClientTic;
 	tics = min<int>(tics, MAXSENDTICS * TicDup);
@@ -1402,7 +1402,7 @@ void NetUpdate(int tics)
 			--SkipCommandAmount;
 			continue;
 		}
-		
+
 		G_BuildTiccmd(&LocalCmds[ClientTic++ % LOCALCMDTICS]);
 		if (TicDup == 1)
 		{
@@ -1957,7 +1957,7 @@ bool D_CheckNetGame()
 	{
 		Printf("Player %d of %d\n", consoleplayer + 1, MaxClients);
 	}
-	
+
 	return true;
 }
 
@@ -2082,7 +2082,7 @@ ADD_STAT(network)
 			out.AppendFormat("\t(MISS CON)");
 
 		out.AppendFormat("\n");
-		
+
 		out.AppendFormat("\tAck: %06d\tConsistency: %06d", state.SequenceAck, state.ConsistencyAck);
 		if (client != Net_Arbitrator)
 			out.AppendFormat("\tAvg latency: %03ums", min<unsigned int>(state.AverageLatency, 999u));
@@ -2196,7 +2196,7 @@ void TryRunTics()
 		ToggleFullscreen = false;
 		AddCommandString("toggle vid_fullscreen");
 	}
-	
+
 	bool doWait = (cl_capfps || pauseext || (!netgame && r_NoInterpolate && !M_IsAnimated()));
 	if (vid_dontdowait && (vid_maxfps > 0 || vid_vsync))
 		doWait = false;
@@ -2432,7 +2432,7 @@ void FDynamicBuffer::SetData(const uint8_t *data, int len)
 		m_Len = len;
 		memcpy(m_Data, data, len);
 	}
-	else 
+	else
 	{
 		m_Len = 0;
 	}
@@ -2470,7 +2470,7 @@ static int RemoveClass(FLevelLocals *Level, const PClass *cls)
 			if (!actor->IsMapActor())
 				continue;
 
-			removecount++; 
+			removecount++;
 			actor->ClearCounters();
 			actor->Destroy();
 		}
@@ -3168,7 +3168,7 @@ void Net_DoCommand(int cmd, TArrayView<uint8_t>& stream, int player)
 	case DEM_USEFLECHETTE:
 		UseFlechette(player);
 		break;
-		
+
 	default:
 		I_Error("Unknown net command: %d", cmd);
 		break;
@@ -3361,7 +3361,7 @@ int Net_GetLatency(int* localDelay, int* arbitratorDelay)
 		severity = 2;
 	else if (gameDelayMs >= 80)
 		severity = 1;
-	
+
 	*localDelay = gameDelayMs;
 	*arbitratorDelay = ClientStates[consoleplayer].AverageLatency;
 	return severity;

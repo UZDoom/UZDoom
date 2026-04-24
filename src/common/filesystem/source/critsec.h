@@ -39,7 +39,7 @@ public:
 	{
 		c = CreateCriticalSection();
 	}
-	
+
 	~FCriticalSection()
 	{
 		DeleteCriticalSection(c);
@@ -49,7 +49,7 @@ public:
 	{
 		EnterCriticalSection(c);
 	}
-	
+
 	void unlock()
 	{
 		LeaveCriticalSection(c);

@@ -169,7 +169,7 @@ namespace swrenderer
 
 		drawerargs.SetTextureVStep(distance * ystepscale / tex->GetHeight());
 		drawerargs.SetTextureVPos((distance * curyfrac + pviewy) / tex->GetHeight());
-		
+
 		if (viewport->RenderTarget->IsBgra())
 		{
 			double distance2 = viewport->PlaneDepth(y + 1, planeheight);
@@ -270,7 +270,7 @@ namespace swrenderer
 	}
 
 	/////////////////////////////////////////////////////////////////////////
-	
+
 	RenderColoredPlane::RenderColoredPlane(RenderThread *thread)
 	{
 		Thread = thread;

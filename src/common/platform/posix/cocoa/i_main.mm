@@ -169,7 +169,7 @@ FString I_DetectOS()
 
 	const char* const architecture =
 #ifdef __x86_64__
-		"64-bit Intel";	
+		"64-bit Intel";
 #elif defined __aarch64__
 		"64-bit ARM";
 #else

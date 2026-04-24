@@ -237,7 +237,7 @@ struct TVector2
 	{
 		return X*X + Y*Y;
 	}
-	
+
 	double Sum() const
 	{
 		return abs(X) + abs(Y);
@@ -366,7 +366,7 @@ struct TVector3
 	}
 
 	TVector3 (const TRotator<vec_t> &rot);
-	
+
 	template<typename U>
 	constexpr explicit operator TVector3<U> () const noexcept {
 		return TVector3<U>(static_cast<U>(X), static_cast<U>(Y), static_cast<U>(Z));
@@ -582,7 +582,7 @@ struct TVector3
 				right = { 1.f, 0.f, 0.f };
 			}
 			// Unconditional to ease static analysis
-			else // major == 2 && n[2] <= 0.0f		
+			else // major == 2 && n[2] <= 0.0f
 			{
 				right = { -1.f, 0.f, 0.f };
 			}
@@ -619,7 +619,7 @@ struct TVector3
 	{
 		return X*X + Y*Y + Z*Z;
 	}
-	
+
 	double Sum() const
 	{
 		return abs(X) + abs(Y) + abs(Z);
@@ -932,12 +932,12 @@ struct TVector4
 	{
 		return X*X + Y*Y + Z*Z + W*W;
 	}
-	
+
 	double Sum() const
 	{
 		return abs(X) + abs(Y) + abs(Z) + abs(W);
 	}
-	
+
 
 	// Return a unit vector facing the same direction as this one
 	TVector4 Unit() const
@@ -970,7 +970,7 @@ struct TVector4
 		return *this;
 	}
 
-	TVector4 Resized(double len) const 
+	TVector4 Resized(double len) const
 	{
 		double vlen = Length();
 		if (vlen != 0.)
@@ -1256,7 +1256,7 @@ private:
 public:
 
 	constexpr vec_t& Degrees__() { return Degrees_; }
-	
+
 	static constexpr TAngle fromDeg(float deg)
 	{
 		return TAngle(deg);

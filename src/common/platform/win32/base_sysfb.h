@@ -39,7 +39,7 @@ class SystemBaseFrameBuffer : public DFrameBuffer
 public:
 	SystemBaseFrameBuffer();
 	// Actually, hMonitor is a HMONITOR, but it's passed as a void * as there
-    // look to be some cross-platform bits in the way.
+	// look to be some cross-platform bits in the way.
 	SystemBaseFrameBuffer(void *hMonitor, bool fullscreen);
 	virtual ~SystemBaseFrameBuffer();
 

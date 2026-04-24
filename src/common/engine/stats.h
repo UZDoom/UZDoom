@@ -263,7 +263,7 @@ public:
 	static bool active;
 	void Clock()
 	{
-		if (active) cycle_t::Clock();		
+		if (active) cycle_t::Clock();
 	}
 
 	void Unclock()

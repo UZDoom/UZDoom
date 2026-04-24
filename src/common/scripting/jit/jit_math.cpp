@@ -1672,7 +1672,7 @@ void JitCompiler::EmitMULQV3_RR()
 	auto stack = GetTemporaryVectorStackStorage();
 	auto tmp = newTempIntPtr();
 	cc.lea(tmp, stack);
-	
+
 	auto call = CreateCall<void, void*, double, double, double, double, double, double, double>(FuncMULQV3);
 	call->setArg(0, tmp);
 	call->setArg(1, regF[B + 0]);

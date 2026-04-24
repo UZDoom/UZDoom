@@ -939,7 +939,7 @@ struct AFuncDesc : FAutoSegEntry<AFuncDesc>
 	: FAutoSegEntry(AutoSegs::ActionFunctons, this), ClassName(cn), FuncName(fn), Function(f), VMPointer(vm), DirectNative(dn) {}
 
 	AFuncDesc(const char * cn, const char * fn, actionf_p f, VMNativeFunction **vm) : AFuncDesc(cn, fn, f, vm, {}) {}
-	
+
 };
 
 // Macros to handle action functions. These are here so that I don't have to

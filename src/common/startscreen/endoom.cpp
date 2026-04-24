@@ -107,7 +107,7 @@ FEndoomScreen::FEndoomScreen(int loading_lump)
 	ClearBlock(StartupBitmap, {0, 0, 0, 255}, 0, 25*16, 640, 16);
 	DrawString(StartupBitmap, 0, 25, GStrings.GetString("TXT_QUITENDOOM"), { 128, 128, 128 ,255}, { 0, 0, 0, 255});
 	lastUpdateTime = I_msTime();
-	
+
 	// Does this screen need blinking?
 	for (int i = 0; i < 80*25; ++i)
 	{
@@ -148,7 +148,7 @@ int RunEndoom()
 	}
 
 	int endoom_lump = fileSystem.CheckNumForFullName (endoomName.GetChars(), true);
-	
+
 	if (endoom_lump < 0 || fileSystem.FileLength (endoom_lump) != 4000)
 	{
 		return 0;
@@ -159,7 +159,7 @@ int RunEndoom()
 		// showendoom==2 means to show only lumps from PWADs.
 		return 0;
 	}
-	
+
 	S_StopMusic(true);
 	auto endoom = new FEndoomScreen(endoom_lump);
 	endoom->Render(true);
@@ -202,7 +202,7 @@ void ConsoleEndoom()
 	uint8_t buffer[4000];
 
 	int endoom_lump = fileSystem.CheckNumForFullName (endoomName.GetChars(), true);
-	
+
 	if (endoom_lump < 0 || fileSystem.FileLength (endoom_lump) != 4000)
 	{
 		return;

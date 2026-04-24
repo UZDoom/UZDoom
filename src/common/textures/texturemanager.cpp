@@ -297,7 +297,7 @@ int FTextureManager::ListTextures (const char *name, TArray<FTextureID> &list, b
 		{
 			auto texUseType = tex->GetUseType();
 			// NULL textures must be ignored.
-			if (texUseType!=ETextureType::Null) 
+			if (texUseType!=ETextureType::Null)
 			{
 				unsigned int j = list.Size();
 				if (!listall)
@@ -789,7 +789,7 @@ void FTextureManager::ParseTextureDef(int lump, FMultipatchTextureBuilder &build
 						newtex->SetDisplaySize((float)width, (float)height);
 
 						FTextureID oldtex = TexMan.CheckForTexture(src.GetChars(), ETextureType::MiscPatch);
-						if (oldtex.isValid()) 
+						if (oldtex.isValid())
 						{
 							ReplaceTexture(oldtex, newtex, true);
 							newtex->SetUseType(ETextureType::Override);
@@ -797,7 +797,7 @@ void FTextureManager::ParseTextureDef(int lump, FMultipatchTextureBuilder &build
 						else AddGameTexture(newtex);
 					}
 				}
-			}				
+			}
 			//else Printf("Unable to define hires texture '%s'\n", tex->Name);
 		}
 		else if (sc.Compare("notrim"))
@@ -981,7 +981,7 @@ void FTextureManager::AddTexturesForWad(int wadnum, FMultipatchTextureBuilder &b
 			if (fileSystem.CheckNumForName(Name, ns_graphics) != i)
 			{
 				if (iwad)
-				{ 
+				{
 					// We need to make an exception for font characters of the SmallFont coming from the IWAD to be able to construct the original font.
 					if (strncmp(Name, "STCFN", 5) != 0 && strncmp(Name, "FONTA", 5) != 0) continue;
 					force = true;
@@ -1016,7 +1016,7 @@ void FTextureManager::AddTexturesForWad(int wadnum, FMultipatchTextureBuilder &b
 		// Unfortunately we have to look at everything that comes through here...
 		auto out = MakeGameTexture(CreateTextureFromLump(i), Name, skin ? ETextureType::SkinGraphic : ETextureType::MiscPatch);
 
-		if (out != NULL) 
+		if (out != NULL)
 		{
 			AddGameTexture (out);
 		}
@@ -1061,8 +1061,8 @@ void FTextureManager::SortTexturesByType(int start, int end)
 	Translation.Resize(start);
 
 	static ETextureType texturetypes[] = {
-		ETextureType::Sprite, ETextureType::Null, ETextureType::FirstDefined, 
-		ETextureType::WallPatch, ETextureType::Wall, ETextureType::Flat, 
+		ETextureType::Sprite, ETextureType::Null, ETextureType::FirstDefined,
+		ETextureType::WallPatch, ETextureType::Wall, ETextureType::Flat,
 		ETextureType::Override, ETextureType::MiscPatch, ETextureType::SkinGraphic
 	};
 
@@ -1166,7 +1166,7 @@ void FTextureManager::Init()
 {
 	DeleteAll();
 
-	// Add all the static content 
+	// Add all the static content
 	auto nulltex = MakeGameTexture(new FImageTexture(CreateEmptyTexture()), nullptr, ETextureType::Null);
 	AddGameTexture(nulltex);
 
@@ -1273,7 +1273,7 @@ void FTextureManager::InitPalettedVersions()
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1431,7 +1431,7 @@ int FTextureManager::CountTexturesX ()
 
 		// Only count the patches if the PNAMES come from the current file
 		// Otherwise they have already been counted.
-		if (fileSystem.GetFileContainer(pnames) == wadnum) 
+		if (fileSystem.GetFileContainer(pnames) == wadnum)
 		{
 			count += CountLumpTextures (pnames);
 		}
@@ -1457,7 +1457,7 @@ int FTextureManager::CountLumpTextures (int lumpnum)
 {
 	if (lumpnum >= 0)
 	{
-		auto file = fileSystem.OpenFileReader (lumpnum); 
+		auto file = fileSystem.OpenFileReader (lumpnum);
 		uint32_t numtex = file.ReadUInt32();
 
 		return int(numtex) >= 0 ? numtex : 0;

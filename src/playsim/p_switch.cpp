@@ -72,7 +72,7 @@ static bool P_StartButton (side_t *side, int Where, FSwitchDef *Switch, const DV
 {
 	DActiveButton *button;
 	auto iterator = side->GetLevel()->GetThinkerIterator<DActiveButton>();
-	
+
 	// See if button is already pressed
 	while ( (button = iterator.Next ()) )
 	{
@@ -90,7 +90,7 @@ static bool P_StartButton (side_t *side, int Where, FSwitchDef *Switch, const DV
 //==========================================================================
 //
 // Checks whether a switch is reachable
-// This is optional because old maps can rely on being able to 
+// This is optional because old maps can rely on being able to
 // use non-reachable switches.
 //
 //==========================================================================
@@ -294,7 +294,7 @@ bool P_ChangeSwitchTexture (side_t *side, int useAgain, uint8_t special, bool *q
 	{
 		playsound = P_StartButton (side, texture, Switch, pt, !!useAgain);
 	}
-	else 
+	else
 	{
 		playsound = true;
 	}
@@ -450,4 +450,3 @@ bool DActiveButton::AdvanceFrame ()
 	}
 	return ret;
 }
-

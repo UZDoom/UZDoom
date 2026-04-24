@@ -33,7 +33,7 @@ class ReadThisMenu : GenericMenu
 	//
 	//
 	//=============================================================================
-	
+
 	override void Init(Menu parent)
 	{
 		Super.Init(parent);
@@ -46,14 +46,14 @@ class ReadThisMenu : GenericMenu
 	{
 		double alpha;
 		TextureID tex, prevpic;
-		
+
 		// Did the mapper choose a custom help page via MAPINFO?
 		if (Level.F1Pic.Length() != 0)
 		{
 			tex = TexMan.CheckForTexture(Level.F1Pic, TexMan.Type_MiscPatch);
 			mScreen = 1;
 		}
-		
+
 		if (!tex.IsValid())
 		{
 			tex = TexMan.CheckForTexture(gameinfo.infoPages[mScreen - 1], TexMan.Type_MiscPatch);

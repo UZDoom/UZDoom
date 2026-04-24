@@ -63,11 +63,11 @@ str MusicNames[34] =
 script << 0 >> (int type, int tag)
 {
 	int i;
-	
+
 	switch (type)
 	{
 	// WALK TRIGGERS
-	
+
 	case 230:
 		i = GetLineRowOffset() & 31;
 		if (i == 0) break;
@@ -77,7 +77,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 227:
 		i = GetLineRowOffset() & 31;
 		if (i == 0) break;
@@ -87,7 +87,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 228:
 		if (CheckInventory ("QuestItem24"))
 		{
@@ -102,7 +102,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 196:
 		if (GetSigilPieces() > 1)
 		{
@@ -110,7 +110,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 197:
 		if (GetSigilPieces() > 1)
 		{
@@ -118,7 +118,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 212:
 		if (CheckInventory ("FlameThrower"))
 		{
@@ -136,7 +136,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 11:
 		if (tag == 0)
 		{
@@ -169,7 +169,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 188:
 		if (CheckInventory ("QuestItem16") || gametype() == GAME_NET_DEATHMATCH)
 		{
@@ -177,7 +177,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 200:
 		if (CheckInventory ("Sigil"))
 		{
@@ -194,7 +194,7 @@ script << 0 >> (int type, int tag)
 			clearlinespecial ();
 		}
 		break;
-		
+
 	case 204:
 	case 203:
 		if (tag >= 0 && tag <= 33)
@@ -205,7 +205,7 @@ script << 0 >> (int type, int tag)
 
 
 	// WALK RETRIGGERS
-	
+
 	case 216:
 		i = GetLineRowOffset() & 31;
 		if (i == 0) break;
@@ -236,21 +236,21 @@ script << 0 >> (int type, int tag)
 			NoiseAlert (0, 0);
 		}
 		break;
-		
+
 	case 198:
 		if (!CheckInventory ("OfficersUniform"))
 		{
 			NoiseAlert (0, 0);
 		}
 		break;
-		
+
 	case 208:
 		if (CheckInventory ("FlameThrower"))
 		{
 			NoiseAlert (0, 0);
 		}
 		break;
-		
+
 	case 206:
 		if (CheckInventory ("OfferingChalice"))
 		{
@@ -277,7 +277,7 @@ script << 0 >> (int type, int tag)
 			SetResultValue (Door_Raise (0, VDOORSPEED, VDOORWAIT, tag));
 		}
 		break;
-		
+
 	case 232:
 		if (!CheckInventory ("QuestItem18") && gametype() != GAME_NET_DEATHMATCH)
 		{
@@ -295,7 +295,7 @@ script << 0 >> (int type, int tag)
 	case 181:
 		SetResultValue (Floor_RaiseByValueTxTy (tag, 8, 512));
 		break;
-		
+
 	case 194:
 		if (Door_Open (tag, VDOORSPEED))
 		{
@@ -307,7 +307,7 @@ script << 0 >> (int type, int tag)
 			SetResultValue (0);
 		}
 		break;
-		
+
 	case 199:
 		if (Ceiling_LowerAndCrush (tag, 8, 10))
 		{
@@ -321,7 +321,7 @@ script << 0 >> (int type, int tag)
 			SetResultValue (0);
 		}
 		break;
-		
+
 	case 209:
 		if (CheckInventory ("OfferingChalice"))
 		{
@@ -334,12 +334,12 @@ script << 0 >> (int type, int tag)
 			SetResultValue (0);
 		}
 		break;
-		
+
 	case 219:
 	case 220:
 		SetResultValue (Floor_LowerToHighest (tag, 8, 128));
 		break;
-		
+
 	case 226:
 		if (Floor_LowerToHighest (tag, 8, 128))
 		{
@@ -352,19 +352,19 @@ script << 0 >> (int type, int tag)
 			SetResultValue (0);
 		}
 		break;
-		
+
 	case 154:
 		SetResultValue (Plat_DownWaitUpStayLip (tag, 32, 105, 0));
 		break;
-		
+
 	case 177:
 		SetResultValue (Plat_DownWaitUpStayLip (tag, 32, 105, 0));
 		break;
-		
+
 	case 214:	// This only needs to be ACS for the long delay
 		SetResultValue (Plat_DownWaitUpStayLip (tag, 8, 1050, 0, 1));
 		break;
-	
+
 	case 235:
 		if (GetSigilPieces() < 5)
 		{
@@ -384,13 +384,13 @@ script << 0 >> (int type, int tag)
 			SendToCommunicator (70, 0, 0, 0);
 		}
 		break;
-	
+
 	case 183:
 		i = Door_Open (tag, VDOORSPEED/2);
 		i = i | Floor_LowerToHighest (tag, VDOORSPEED/2, 128);
 		SetResultValue (i);
 		break;
-	
+
 	case 229:
 		SetResultValue (0);
 		if (GetSigilPieces() == 5)
@@ -398,7 +398,7 @@ script << 0 >> (int type, int tag)
 			SetResultValue (Door_Animated (tag, 4, 105));
 		}
 		break;
-	
+
 	case 234:
 		if (CheckInventory ("QuestItem3") || gametype() == GAME_NET_DEATHMATCH)
 		{
@@ -409,7 +409,7 @@ script << 0 >> (int type, int tag)
 			SetResultValue (Door_LockedRaise (0, 0, 0, 102));
 		}
 		break;
-		
+
 	case 256:
 		// Not a line type, but used by the Programmer death script.
 		ChangeSky ("SKYMNT01", "SKYMNT01");

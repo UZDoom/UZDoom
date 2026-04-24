@@ -84,15 +84,15 @@ public:
 	float zshift = 0.1; 	// HWPlaneMirrorPortal::DrawPortalStencil() z-fights with flats unless zshift >= 0.1
 	HWFlat flat;
 
-    HWPortal(FPortalSceneState *s, bool local = false) : mState(s), boundingBox(false)
-    {
-    }
-    virtual ~HWPortal() {}
+	HWPortal(FPortalSceneState *s, bool local = false) : mState(s), boundingBox(false)
+	{
+	}
+	virtual ~HWPortal() {}
 	virtual int GetMirrorSide() const { return 0; };
-    virtual int ClipSeg(seg_t *seg, const DVector3 &viewpos) { return PClip_Inside; }
-    virtual int ClipSubsector(subsector_t *sub) { return PClip_Inside; }
-    virtual int ClipPoint(const DVector2 &pos) { return PClip_Inside; }
-    virtual linebase_t *ClipLine() { return nullptr; }
+	virtual int ClipSeg(seg_t *seg, const DVector3 &viewpos) { return PClip_Inside; }
+	virtual int ClipSubsector(subsector_t *sub) { return PClip_Inside; }
+	virtual int ClipPoint(const DVector2 &pos) { return PClip_Inside; }
+	virtual linebase_t *ClipLine() { return nullptr; }
 	virtual void * GetSource() const = 0;	// GetSource MUST be implemented!
 	virtual const char *GetName() = 0;
 	virtual bool AllowSSAO() { return true; }
@@ -154,14 +154,14 @@ struct FPortalSceneState
 
 extern FPortalSceneState portalState;
 
-    
+
 class HWScenePortalBase : public HWPortal
 {
 protected:
-    HWScenePortalBase(FPortalSceneState *state) : HWPortal(state, false)
-    {
-        
-    }
+	HWScenePortalBase(FPortalSceneState *state) : HWPortal(state, false)
+	{
+
+	}
 public:
 	void ClearClipper(HWDrawInfo *di, Clipper *clipper);
 	virtual bool NeedDepthBuffer() { return true; }
@@ -349,7 +349,7 @@ protected:
 	virtual const char *GetName();
 
 public:
-	
+
 	HWHorizonPortal(FPortalSceneState *state, HWHorizonInfo * pt, FRenderViewpoint &vp, bool local = false);
 };
 

@@ -34,7 +34,7 @@ class Chainsaw : Weapon
 		Inventory.PickupMessage "$GOTCHAINSAW";
 		Obituary "$OB_MPCHAINSAW";
 		Tag "$TAG_CHAINSAW";
-		+WEAPON.MELEEWEAPON		
+		+WEAPON.MELEEWEAPON
 		+WEAPON.NOAUTOSWITCHTO
 	}
 	States
@@ -57,7 +57,7 @@ class Chainsaw : Weapon
 		Stop;
 	}
 }
-	
+
 
 extend class StateProvider
 {
@@ -161,7 +161,7 @@ extend class StateProvider
 		}
 
 		A_StartSound (hitsound, CHAN_WEAPON);
-			
+
 		// turn to face target
 		if (!(flags & SF_NOTURN))
 		{

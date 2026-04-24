@@ -116,7 +116,7 @@ class FWeapHammer : FighterWeapon
 		if (player.ReadyWeapon == null ||
 			!player.ReadyWeapon.CheckAmmo (player.ReadyWeapon.bAltFire ?
 				Weapon.AltFire : Weapon.PrimaryFire, false, true))
-		{ 
+		{
 			weaponspecial = false;
 		}
 	}
@@ -144,7 +144,7 @@ class FWeapHammer : FighterWeapon
 			if (!weapon.DepleteAmmo (weapon.bAltFire, false))
 				return;
 		}
-		Actor mo = SpawnPlayerMissile ("HammerMissile"); 
+		Actor mo = SpawnPlayerMissile ("HammerMissile");
 		if (mo)
 		{
 			mo.special1 = 0;

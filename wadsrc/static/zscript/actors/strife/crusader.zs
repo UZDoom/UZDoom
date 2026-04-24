@@ -80,7 +80,7 @@ class Crusader : Actor
 		ROB2 P -1 A_CrusaderDeath;
 		Stop;
 	}
-	
+
 // Crusader -----------------------------------------------------------------
 
 	private bool CrusaderCheckRange ()
@@ -219,4 +219,3 @@ class DeadCrusader : Actor
 		Stop;
 	}
 }
-

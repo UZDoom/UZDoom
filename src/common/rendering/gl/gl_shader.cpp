@@ -247,7 +247,7 @@ FString ProcessShaderError(const char * shaderError, TArray<FString> &filenames_
 			else if((state == READING_LINE_COLON && err[cur] == ':') || (state == READING_LINE_PARENTHESES && err[cur] == ')'))
 			{
 				FString line_num_str = err.Mid(state_start, cur - state_start);
-				
+
 				if(state == READING_LINE_PARENTHESES)
 				{
 					cur+= 3; // skip ") :"
@@ -259,7 +259,7 @@ FString ProcessShaderError(const char * shaderError, TArray<FString> &filenames_
 
 				int64_t old_len = cur - line_start;
 				FString new_err = "File '" + filenames_for_error[lump_num - 1] + "', Line " + line_num_str + ": ";
-				
+
 				int64_t diff = new_err.Len() - old_len;
 
 				err = err.Left(line_start) + new_err + err.Mid(line_start + old_len);
@@ -312,12 +312,12 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 			vec4 uClipLine;
 
 			float uGlobVis;			// uGlobVis = R_GetGlobVis(r_visibility) / 32.0
-			int uPalLightLevels;	
+			int uPalLightLevels;
 			int uViewHeight;		// Software fuzz scaling
 			float uClipHeight;
 			float uClipHeightDirection;
 			int uShadowmapFilter;
-			
+
 			int uLightBlendMode;
 
 			float uThickFogDistance;
@@ -477,7 +477,7 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 
 	if ((gl.flags & RFL_SHADER_STORAGE_BUFFER) && screen->allowSSBO())
 		vp_comb << "#version 430 core\n#define SUPPORTS_SHADOWMAPS\n";
-	else 
+	else
 		vp_comb << "#version 330 core\n";
 
 	bool lightbuffertype = screen->mLights->GetBufferType();
@@ -963,7 +963,7 @@ bool FShaderCollection::CompileNextShader()
 		{
 			mCompileIndex = 0;
 			mCompileState++;
-			
+
 		}
 	}
 	else if (mCompileState == 1)

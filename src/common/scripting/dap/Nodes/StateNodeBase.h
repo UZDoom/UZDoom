@@ -69,7 +69,7 @@ class StateNodeNamedVariable : public StateNodeBase, public IProtocolVariableSer
 	void SetName(const std::string &name) override;
 	void SetEvalName(const std::string &evalName) override;
 	void SetVariableName(dap::Variable &variable);
-	
+
 };
 
 class IProtocolScopeSerializable

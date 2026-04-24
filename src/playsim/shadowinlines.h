@@ -104,9 +104,9 @@ inline AActor* CheckForShadows(AActor* self, AActor* other, DVector3 pos, double
 
 inline AActor* PerformShadowChecks(AActor* self, AActor* other, DVector3 pos, double& penaltyFactor)
 {
-    if (other != nullptr) penaltyFactor = other->ShadowPenaltyFactor; //Use target penalty factor by default.
-    else penaltyFactor = 1.0;
-    return AffectedByShadows(self) ? CheckForShadows(self, other, pos, penaltyFactor) : nullptr;
+	if (other != nullptr) penaltyFactor = other->ShadowPenaltyFactor; //Use target penalty factor by default.
+	else penaltyFactor = 1.0;
+	return AffectedByShadows(self) ? CheckForShadows(self, other, pos, penaltyFactor) : nullptr;
 }
 
 //==========================================================================
@@ -184,7 +184,7 @@ inline void A_MonsterRail_ShadowHandling(AActor* self)
 {
 	double penaltyFactor;
 	double shootZ = self->Center() - self->FloatSpeed - self->Floorclip; // The formula P_RailAttack uses, minus offset_z since A_MonsterRail doesn't use it.
-	
+
 	if (PerformShadowChecks(self, self->target, self->PosAtZ(shootZ), penaltyFactor))
 	{
 		self->Angles.Yaw += DAngle::fromDeg(pr_railface.Random2() * 45. / 256) * self->ShadowAimFactor * penaltyFactor;
@@ -201,7 +201,7 @@ inline void A_CustomRailgun_ShadowHandling(AActor* self, double spawnofs_xy, dou
 	// [inkoalawetrust] The exact formula P_RailAttack uses to determine where the railgun trace should spawn from.
 	DVector2 shootXY = (self->Vec2Angle(spawnofs_xy, (self->Angles.Yaw + spread_xy) - DAngle::fromDeg(90.)));
 	double shootZ = self->Center() - self->FloatSpeed + spawnofs_z - self->Floorclip;
-	if (flags & 16) shootZ += self->AttackOffset(); //16 is RGF_CENTERZ 
+	if (flags & 16) shootZ += self->AttackOffset(); //16 is RGF_CENTERZ
 	DVector3 checkPos;
 	checkPos.X = shootXY.X;
 	checkPos.Y = shootXY.Y;

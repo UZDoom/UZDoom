@@ -11,4 +11,3 @@ which I created for that: https://github.com/Wohlstand/OPN2BankEditor
 ==============================================================================
 
 Vitaliy Novichkov "Wohlstand", 2017-2018
-

@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/flathub/flatpak-builder-lint:latest
-    name: Lint FreeDesktop metadata 
+    name: Lint FreeDesktop metadata
     steps:
       - uses: actions/checkout@v6
         with:
