@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 usage() {
-	echo "Usage: $0 [-c] [-d] [-f] [-g] [-v]"
+	echo "Usage: $0 [-c] [-d] [-f] [-g] [-v] [files...]"
 	echo
 	echo "  -c: check"
 	echo "  -d: dry run"
@@ -9,12 +9,14 @@ usage() {
 	echo "  -g: check files edited in last commit"
 	echo "  -v: verbose"
 	echo
+	echo "  Files can also be manually specified"
+	echo
 	echo "set any of the following env vars to disable that specific check:"
 	printf "  %s\n" NO_TEST_EOF NO_TEST_CRLF NO_TEST_TRAILING NO_TEST_LEADING NO_TEST_INCONSISTENT
 	exit $1
 }
 
-while getopts "cdfgvh" opt; do
+while getopts ":cdfgvh" opt; do
 	case "$opt" in
 		c) check=true ;;
 		d) dry=true ;;
@@ -22,16 +24,34 @@ while getopts "cdfgvh" opt; do
 		g) gitchanges=true ;;
 		v) verbose=true ;;
 		h) usage 0 ;;
-		*) usage 1 ;;
+		\?) echo "Error: Invalid option -$OPTARG" >&2; usage ;;
+		:)  echo "Error: Option -$OPTARG requires an argument" >&2; usage ;;
 	esac
 done
+shift $((OPTIND - 1))
 
-cd "$(git rev-parse --show-toplevel)" || exit
+function get_files() {
+	if [[ "$#" > 0 ]]; then
+		printf "%s\0" "$@"
+		return
+	fi
 
+	dir=$(git rev-parse --show-toplevel) && cd "$dir" || return
+
+	if [ -n "$gitchanges" ]; then
+		git diff --name-only HEAD^..HEAD -z
+	else
+		git ls-files -z
+	fi
+}
+
+total=0
 tested=0
 formatted=0
 
 while IFS= read -r -d '' file; do
+	((total++))
+
 	grep -qI . "$file" || continue # skip binary files
 
 	# skip specific paths / files
@@ -139,9 +159,10 @@ while IFS= read -r -d '' file; do
 		[[ -n "$dry" ]] || { printf "%s\n" "$data" > "$file" ; }
 		[[ -n "$failfast" ]] && exit 1
 	fi
-done < <( [ -n "$gitchanges" ] && git diff --name-only HEAD^..HEAD -z || git ls-files -z )
+done < <(get_files "$@")
 
 printf "Checked: %d\n" $tested
+printf "Skipped: %d\n" $(( total - tested ))
 printf "Formatted: %d\n" "$formatted"
 
 if [[ -n "$check" ]] && [[ $formatted != 0 ]]; then
