@@ -124,7 +124,7 @@ static PClassActor* FindInfoName(int index, bool mustexist = false)
 	{
 		FStringf name("~Dsdhacked~%d", index);
 		auto cls = PClass::FindActor(name);
-		if (!mustexist)
+		if (!cls && !mustexist)
 		{
 			cls = static_cast<PClassActor*>(RUNTIME_CLASS(AActor)->CreateDerivedClass(name.GetChars(), (unsigned)sizeof(AActor)));
 			NewClassType(cls, -1);	// This needs a VM type to work as intended.
