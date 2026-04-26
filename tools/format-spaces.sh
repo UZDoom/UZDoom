@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 usage() {
-	echo "Usage: $0 [-c] [-d] [-f] [-v]"
+	echo "Usage: $0 [-c] [-d] [-f] [-g] [-v]"
 	echo
 	echo "  -c: check"
 	echo "  -d: dry run"
 	echo "  -f: fail fast"
+	echo "  -g: check files edited in last commit"
 	echo "  -v: verbose"
 	echo
 	echo "set any of the following env vars to disable that specific check:"
@@ -13,11 +14,12 @@ usage() {
 	exit $1
 }
 
-while getopts "cdfvh" opt; do
+while getopts "cdfgvh" opt; do
 	case "$opt" in
 		c) check=true ;;
 		d) dry=true ;;
 		f) failfast=true ;;
+		g) gitchanges=true ;;
 		v) verbose=true ;;
 		h) usage 0 ;;
 		*) usage 1 ;;
@@ -137,7 +139,7 @@ while IFS= read -r -d '' file; do
 		[[ -n "$dry" ]] || { printf "%s\n" "$data" > "$file" ; }
 		[[ -n "$failfast" ]] && exit 1
 	fi
-done < <(git ls-files -z)
+done < <( [ -n "$gitchanges" ] && git diff --name-only HEAD^..HEAD -z || git ls-files -z )
 
 printf "Checked: %d\n" $tested
 printf "Formatted: %d\n" "$formatted"
