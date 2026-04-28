@@ -1808,8 +1808,8 @@ OptionMenu "MiscOptions" protected
 	StaticText " "
 	Option "$MISCMNU_ALWAYSTALLY",				"sv_alwaystally", "AlwaysTally"
 
-	StaticText " "
-	Option "$MISCMNU_DISCORDRPC",				"i_discordrpc",	"OnOff"
+	//StaticText " "
+	//Option "$MISCMNU_DISCORDRPC",				"i_discordrpc",	"OnOff"
 
 }
 

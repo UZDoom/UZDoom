@@ -33,7 +33,7 @@ struct FStartupInfo
 	FString Song;
 	FString con;
 	FString def;
-	FString DiscordAppId = nullptr;
+	//FString DiscordAppId = nullptr;
 	FString SteamAppId = nullptr;
 	int Type;
 	int LoadLights = -1;

@@ -18,6 +18,8 @@ endif()
 
 project(UZDoom)
 
+set(ABSL_BUILD_TESTING OFF) # don't build/run abseil tests
+
 # make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
 option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
 
@@ -376,11 +378,6 @@ set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 add_subdirectory( libraries/ZWidget )
 
 add_subdirectory( libraries/webp )
-
-add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
-set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
-set( DRPC_LIBRARIES discord-rpc )
-set( DRPC_LIBRARY discord-rpc )
 
 if( HAVE_VM_JIT AND UNIX )
 	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )
