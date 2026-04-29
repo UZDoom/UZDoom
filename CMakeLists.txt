@@ -300,6 +300,10 @@ if( MSVC )
 	# Disable warnings for unsecure CRT functions from VC8+
 	set( ALL_C_FLAGS "${ALL_C_FLAGS} /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /D_CRT_NONSTDC_NO_WARNINGS" )
 
+	if( WITH_ASAN )
+		set( ALL_C_FLAGS "${ALL_C_FLAGS} /fsanitize=address" )
+	endif()
+
 	string(REPLACE "/Ob1 " "/Ob2 " CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELWITHDEBINFO} )
 else()
 	set( REL_LINKER_FLAGS "" )
