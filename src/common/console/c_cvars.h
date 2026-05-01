@@ -66,7 +66,7 @@ enum
 	CVAR_CONFIG_ONLY		= 1 << 18, // do not save var to savegame and do not send it across network.
 	CVAR_ZS_CUSTOM			= 1 << 19, // Custom CVar backed by a ZScript class
 	CVAR_ZS_CUSTOM_CLONE	= 1 << 20, // Clone of a Custom ZScript CVar
-	
+
 	CVAR_SYSTEM_ONLY		= 1 << 21, // System-related cvar that should only ever be changed by the user
 	CVAR_HIDDEN				= 1 << 22, // Don't show in console tab complete
 };
@@ -620,7 +620,7 @@ class FBoolCVarRef
 public:
 	int operator= (const FBoolCVarRef&) = delete;
 	int operator= (FBoolCVarRef&&) = delete;
-	
+
 	inline bool operator= (bool val) { *ref = val; return val; }
 	inline operator bool () const { return **ref; }
 	inline bool operator *() const { return **ref; }
@@ -632,7 +632,7 @@ class FIntCVarRef
 {
 	FIntCVar* ref;
 public:
-	
+
 	int operator= (const FIntCVarRef&) = delete;
 	int operator= (FIntCVarRef&&) = delete;
 
@@ -650,7 +650,7 @@ class FFloatCVarRef
 public:
 	int operator= (const FFloatCVarRef&) = delete;
 	int operator= (FFloatCVarRef&&) = delete;
-	
+
 	float operator= (float val) { *ref = val; return val; }
 	inline operator float () const { return **ref; }
 	inline float operator *() const { return **ref; }
@@ -664,7 +664,7 @@ class FStringCVarRef
 public:
 	int operator= (const FStringCVarRef&) = delete;
 	int operator= (FStringCVarRef&&) = delete;
-	
+
 	const char* operator= (const char* val) { *ref = val; return val; }
 	inline operator const char* () const { return **ref; }
 	inline const char* operator *() const { return **ref; }
@@ -678,7 +678,7 @@ class FColorCVarRef
 public:
 	int operator= (const FColorCVarRef&) = delete;
 	int operator= (FColorCVarRef&&) = delete;
-	
+
 	//uint32_t operator= (uint32_t val) { *ref = val; return val; }
 	inline operator uint32_t () const { return **ref; }
 	inline uint32_t operator *() const { return **ref; }

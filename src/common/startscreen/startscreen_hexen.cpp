@@ -163,7 +163,7 @@ void FHexenStartScreen::DoNetProgress(int count)
 	int x, y;
 
 	FStartScreen::NetProgress(count);
-	
+
 	if (NetMaxPos != 0 && NetCurPos > oldpos)
 	{
 		int numnotches = (4 * 8) / NetNotchBits.GetWidth();

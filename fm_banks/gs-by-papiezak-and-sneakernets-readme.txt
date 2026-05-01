@@ -22,4 +22,3 @@ I chose the name "DMX" not because it works with DMX, but that it will
 descriptive, but names aren't everything.
 
 Watch this space.
-

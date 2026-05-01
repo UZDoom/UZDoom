@@ -94,8 +94,8 @@ class Inquisitor : Actor
 		RBB3 E -1;
 		Stop;
 	}
-	
-	
+
+
 	// Inquisitor ---------------------------------------------------------------
 
 	void A_InquisitorWalk ()
@@ -199,7 +199,7 @@ class Inquisitor : Actor
 		}
 	}
 
-	
+
 }
 
 // Inquisitor Shot ----------------------------------------------------------
@@ -263,6 +263,3 @@ class InquisitorArm : Actor
 		Stop;
 	}
 }
-
-
-

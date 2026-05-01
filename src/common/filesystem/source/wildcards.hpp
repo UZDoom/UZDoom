@@ -5,12 +5,12 @@
 // (See accompanying file LICENSE_1_0.txt or copy at
 // http://www.boost.org/LICENSE_1_0.txt)
 #ifndef WILDCARDS_HPP
-#define WILDCARDS_HPP 
+#define WILDCARDS_HPP
 #define WILDCARDS_VERSION_MAJOR 1
 #define WILDCARDS_VERSION_MINOR 5
 #define WILDCARDS_VERSION_PATCH 0
 #ifndef WILDCARDS_CARDS_HPP
-#define WILDCARDS_CARDS_HPP 
+#define WILDCARDS_CARDS_HPP
 #include <utility>
 namespace wildcards
 {
@@ -238,14 +238,14 @@ std::forward<T>(ao), std::forward<T>(ac), std::forward<T>(ar)};
 }
 #endif
 #ifndef WILDCARDS_MATCH_HPP
-#define WILDCARDS_MATCH_HPP 
+#define WILDCARDS_MATCH_HPP
 #include <stdexcept>
 #include <type_traits>
 #include <utility>
 #ifndef CONFIG_HPP
-#define CONFIG_HPP 
+#define CONFIG_HPP
 #ifndef QUICKCPPLIB_HAS_FEATURE_H
-#define QUICKCPPLIB_HAS_FEATURE_H 
+#define QUICKCPPLIB_HAS_FEATURE_H
 #if __cplusplus >= 201103L
 #if !defined(__cpp_alias_templates)
 #define __cpp_alias_templates 190000
@@ -565,7 +565,7 @@ std::forward<T>(ao), std::forward<T>(ac), std::forward<T>(ar)};
 #if cfg_HAS_CONSTEXPR14
 #define cfg_constexpr14 constexpr
 #else
-#define cfg_constexpr14 
+#define cfg_constexpr14
 #endif
 #if cfg_HAS_CONSTEXPR14 && defined(__clang__)
 #define cfg_HAS_FULL_FEATURED_CONSTEXPR14 1
@@ -574,7 +574,7 @@ std::forward<T>(ao), std::forward<T>(ac), std::forward<T>(ar)};
 #endif
 #endif
 #ifndef CX_FUNCTIONAL_HPP
-#define CX_FUNCTIONAL_HPP 
+#define CX_FUNCTIONAL_HPP
 #include <utility>
 namespace cx
 {
@@ -617,7 +617,7 @@ return std::forward<T>(lhs) == std::forward<U>(rhs);
 }
 #endif
 #ifndef CX_ITERATOR_HPP
-#define CX_ITERATOR_HPP 
+#define CX_ITERATOR_HPP
 #include <cstddef>
 #include <initializer_list>
 namespace cx
@@ -710,7 +710,7 @@ return cx::end(c);
 }
 #endif
 #ifndef WILDCARDS_UTILITY_HPP
-#define WILDCARDS_UTILITY_HPP 
+#define WILDCARDS_UTILITY_HPP
 #include <type_traits>
 #include <utility>
 namespace wildcards
@@ -1627,16 +1627,16 @@ cards<container_item_t<Pattern>>(), equal_to);
 }
 #endif
 #ifndef WILDCARDS_MATCHER_HPP
-#define WILDCARDS_MATCHER_HPP 
+#define WILDCARDS_MATCHER_HPP
 #include <cstddef>
 #include <type_traits>
 #include <utility>
 #ifndef CX_STRING_VIEW_HPP
-#define CX_STRING_VIEW_HPP 
+#define CX_STRING_VIEW_HPP
 #include <cstddef>
 #include <ostream>
 #ifndef CX_ALGORITHM_HPP
-#define CX_ALGORITHM_HPP 
+#define CX_ALGORITHM_HPP
 namespace cx
 {
 template <typename Iterator1, typename Iterator2>

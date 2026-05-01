@@ -46,7 +46,7 @@
 #endif
 
 namespace FileSys {
-	
+
 enum
 {
 	ZPATH_MAX = 260

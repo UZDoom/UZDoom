@@ -89,7 +89,7 @@ class Stalker : Actor
 		STLK XYZ[ 4 Bright;
 		Stop;
 	}
-		
+
 	void A_StalkerChaseDecide ()
 	{
 		if (!bNoGravity)
@@ -151,5 +151,5 @@ class Stalker : Actor
 		A_Chase ();
 	}
 
-	
+
 }

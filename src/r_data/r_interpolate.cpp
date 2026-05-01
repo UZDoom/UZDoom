@@ -55,7 +55,7 @@ public:
 	void UpdateInterpolation();
 	void Restore();
 	void Interpolate(double smoothratio);
-	
+
 	virtual void Serialize(FSerializer &arc);
 	size_t PropagateMark();
 };
@@ -83,7 +83,7 @@ public:
 	void UpdateInterpolation();
 	void Restore();
 	void Interpolate(double smoothratio);
-	
+
 	virtual void Serialize(FSerializer &arc);
 };
 
@@ -111,7 +111,7 @@ public:
 	void UpdateInterpolation();
 	void Restore();
 	void Interpolate(double smoothratio);
-	
+
 	virtual void Serialize(FSerializer &arc);
 };
 
@@ -138,7 +138,7 @@ public:
 	void UpdateInterpolation();
 	void Restore();
 	void Interpolate(double smoothratio);
-	
+
 	virtual void Serialize(FSerializer &arc);
 };
 
@@ -968,5 +968,3 @@ void FPolyObj::StopInterpolation()
 		interpolation->DelRef();
 	}
 }
-
-

@@ -119,7 +119,7 @@ loop:
 	if (isalpha (c))
 	{
 		int buildup = 0;
-		
+
 		token[0] = c;
 		toksize = 1;
 		while (toksize < 79 && (isalnum (c = *sourcep++) || c == '_'))
@@ -305,7 +305,7 @@ void FParseContext::ParseLump(const char *lumpname)
 
 	int lumpno = fileSystem.CheckNumForFullName(lumpname, true);
 
-	if (lumpno == -1) 
+	if (lumpno == -1)
 	{
 		Printf ("%s, line %d: Lump '%s' not found\n", SourceFile, SourceLine, lumpname);
 		return;
@@ -338,4 +338,3 @@ void FParseContext::ParseLump(const char *lumpname)
 	SourceLine = SavedSourceLine;
 	SourceFile = SavedSourceFile;
 }
-

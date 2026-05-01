@@ -799,7 +799,7 @@ int DIntermissionScreenScroller::Responder (FInputEvent *ev)
 		mBackground = mSecondPic;
 		mTicker = mScrollDelay + mScrollTime;
 	}
-	
+
 	return res;
 }
 

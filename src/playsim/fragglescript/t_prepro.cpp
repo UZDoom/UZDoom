@@ -44,7 +44,7 @@
 //
 // during preprocessing all of the {} sections
 // are found. these are stored in a hash table
-// according to their offset in the script. 
+// according to their offset in the script.
 // functions here deal with creating new sections
 // and finding them from a given offset.
 //
@@ -136,7 +136,7 @@ DFsSection *DFsScript::NewSection(const char *brace)
 {
 	int n = section_hash(brace);
 	DFsSection *newsec = Create<DFsSection>();
-	
+
 	newsec->start_index = MakeIndex(brace);
 	newsec->next = sections[n];
 	sections[n] = newsec;
@@ -154,15 +154,15 @@ DFsSection *DFsScript::FindSectionStart(const char *brace)
 {
 	int n = section_hash(brace);
 	DFsSection *current = sections[n];
-	
+
 	// use the hash table: check the appropriate hash chain
-	
+
 	while(current)
-    {
+	{
 		if(SectionStart(current) == brace) return current;
 		current = current->next;
-    }
-	
+	}
+
 	return NULL;    // not found
 }
 
@@ -176,17 +176,17 @@ DFsSection *DFsScript::FindSectionStart(const char *brace)
 DFsSection *DFsScript::FindSectionEnd(const char *brace)
 {
 	int n;
-	
+
 	// hash table is no use, they are hashed according to
 	// the offset of the starting brace
-	
+
 	// we have to go through every entry to find from the
 	// ending brace
-	
+
 	for(n=0; n<SECTIONSLOTS; n++)      // check all sections in all chains
 	{
 		DFsSection *current = sections[n];
-		
+
 		while(current)
 		{
 			if(SectionEnd(current) == brace) return current;        // found it
@@ -213,7 +213,7 @@ DFsSection *DFsScript::FindSectionEnd(const char *brace)
 char *DFsScript::ProcessFindChar(char *datap, char find)
 {
 	while(*datap)
-    {
+	{
 		if(*datap==find) return datap;
 		if(*datap=='\"')       // found a quote: ignore stuff in it
 		{
@@ -227,9 +227,9 @@ char *DFsScript::ProcessFindChar(char *datap, char find)
 			// error: end of script in a constant
 			if(!*datap) return NULL;
 		}
-		
+
 		// comments: blank out
-		
+
 		if(*datap=='/' && *(datap+1)=='*')        // /* -- */ comment
 		{
 			while(*datap && (*datap != '*' || *(datap+1) != '/') )
@@ -251,7 +251,7 @@ char *DFsScript::ProcessFindChar(char *datap, char find)
 				*datap=' '; datap++;       // blank out
 			}
 		}
-		
+
 		/********** labels ****************/
 
 		// labels are also found during the
@@ -265,11 +265,11 @@ char *DFsScript::ProcessFindChar(char *datap, char find)
 		if(*datap==':' && scriptnum != -1) // not in global scripts
 		{
 			char *labelptr = datap-1;
-			
+
 			while(!isop(*labelptr)) labelptr--;
 
 			FString labelname(labelptr+1, strcspn(labelptr+1, ":"));
-			
+
 			if (labelname.Len() == 0)
 			{
 				Printf(PRINT_BOLD,"Script %d: ':' encountrered in incorrect position!\n",scriptnum);
@@ -278,11 +278,11 @@ char *DFsScript::ProcessFindChar(char *datap, char find)
 			DFsVariable *newlabel = NewVariable(labelname.GetChars(), svt_label);
 			newlabel->value.i = MakeIndex(labelptr);
 		}
-		
+
 		if(*datap=='{')  // { -- } sections: add 'em
 		{
 			DFsSection *newsec = NewSection(datap);
-			
+
 			newsec->type = st_empty;
 			// find the ending } and save
 			char * theend = ProcessFindChar(datap+1, '}');
@@ -298,7 +298,7 @@ char *DFsScript::ProcessFindChar(char *datap, char find)
 			datap = theend;
 		}
 		datap++;
-    }
+	}
 	return NULL;
 }
 
@@ -329,7 +329,7 @@ void DFsScript::DryRunScript(FLevelLocals *Level)
 {
 	char *end = Data.Data() + len;
 	char *rover = Data.Data();
-	
+
 	// allocate space for the tokens
 	FParser parse(Level, this);
 	try
@@ -337,9 +337,9 @@ void DFsScript::DryRunScript(FLevelLocals *Level)
 		while(rover < end && *rover)
 		{
 			rover = parse.GetTokens(rover);
-			
+
 			if(!parse.NumTokens) continue;
-			
+
 			if(parse.Section && parse.TokenType[0] == function)
 			{
 				if(!strcmp(parse.Tokens[0], "if"))
@@ -401,26 +401,25 @@ void DFsScript::Preprocess(FLevelLocals *Level)
 void DFsScript::ParseInclude(FLevelLocals *Level, char *lumpname)
 {
 	int lumpnum;
-	
+
 	if((lumpnum = fileSystem.CheckNumForName(lumpname)) == -1)
-    {
+	{
 		I_Error("include lump '%s' not found!\n", lumpname);
 		return;
-    }
-	
+	}
+
 	int lumplen=fileSystem.FileLength(lumpnum);
 	TArray<char> lump(lumplen + 10);
 	fileSystem.ReadFile(lumpnum,lump.Data());
-	
+
 	lump[lumplen]=0;
-	
+
 	// preprocess the include
-	// we assume that it does not include sections or labels or 
+	// we assume that it does not include sections or labels or
 	// other nasty things
 	ProcessFindChar(lump.Data(), 0);
-	
+
 	// now parse the lump
 	FParser parse(Level, this);
 	parse.Run(lump.Data(), lump.Data(), lump.Data() + lumplen);
 }
-

@@ -1707,7 +1707,7 @@ OptionMenu "HapticsOptions" protected
 {
 	Title		"$HAPMNU_TITLE"
 
-	ScaleSlider	"$JOYMNU_HAPTICS",			"haptics_strength",		0, 10, 1, "$OPTVAL_OFF"
+	ScaleSlider	"$JOYMNU_HAPTICS",			"haptics_strength",		0, 10, 1
 	Option 		"$HAPMNU_COMPAT",			"haptics_compat",		"HapticsCompatTypes"
 	StaticText	""
 	StaticText	"$HAPMNU_OPTIONS"
@@ -1808,8 +1808,8 @@ OptionMenu "MiscOptions" protected
 	StaticText " "
 	Option "$MISCMNU_ALWAYSTALLY",				"sv_alwaystally", "AlwaysTally"
 
-	StaticText " "
-	Option "$MISCMNU_DISCORDRPC",				"i_discordrpc",	"OnOff"
+	//StaticText " "
+	//Option "$MISCMNU_DISCORDRPC",				"i_discordrpc",	"OnOff"
 
 }
 
@@ -2910,7 +2910,7 @@ OptionMenu AccessibilityOptions protected
 	Title "$ACCMNU_TITLE"
 
 	StaticText "$ACCMNU_TOOLTIP"
-	Slider "$ACCMNU_TOOLTIP_LINES", "m_tooltip_lines", 1, 4, 1, 0
+	Slider "$ACCMNU_TOOLTIP_LINES", "m_tooltip_lines", 1, 6, 1, 0
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	Slider "$ACCMNU_TOOLTIP_SPEED", "m_tooltip_speed", 1.0, 5.0, 1.0, 0
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
@@ -2918,7 +2918,7 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	Slider "$ACCMNU_TOOLTIP_ALPHA", "m_tooltip_alpha", 0.2, 0.9, 0.05, 2
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	Option "$ACCMNU_TOOLTIP_CAP", "m_tooltip_capwidth", "OnOff"
+	ScaleSlider "$ACCMNU_TOOLTIP_CAP", "m_tooltip_capratio", 0.4, 2, 0.01, "$OPTVAL_OFF", "", "", 0, 'Gray', 2
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
 	Option "$ACCMNU_TOOLTIP_SCALE", "m_tooltip_small", "OffOn"
 	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"

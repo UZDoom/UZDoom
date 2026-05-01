@@ -31,7 +31,7 @@
 struct DynArray_I8 native unsafe(internal)
 {
 	native readonly int Size;
-	
+
 	native void Copy(DynArray_I8 other);
 	native void Move(DynArray_I8 other);
 	native void Append (DynArray_I8 other);
@@ -92,7 +92,7 @@ struct DynArray_I32 native unsafe(internal)
 struct DynArray_F32 native unsafe(internal)
 {
 	native readonly int Size;
-	
+
 	native void Copy(DynArray_F32 other);
 	native void Move(DynArray_F32 other);
 	native void Append (DynArray_F32 other);
@@ -112,7 +112,7 @@ struct DynArray_F32 native unsafe(internal)
 struct DynArray_F64 native unsafe(internal)
 {
 	native readonly int Size;
-	
+
 	native void Copy(DynArray_F64 other);
 	native void Move(DynArray_F64 other);
 	native void Append (DynArray_F64 other);
@@ -132,7 +132,7 @@ struct DynArray_F64 native unsafe(internal)
 struct DynArray_Ptr native unsafe(internal)
 {
 	native readonly int Size;
-	
+
 	native void Copy(DynArray_Ptr other);
 	native void Move(DynArray_Ptr other);
 	native void Append (DynArray_Ptr other);
@@ -152,7 +152,7 @@ struct DynArray_Ptr native unsafe(internal)
 struct DynArray_Obj native unsafe(internal)
 {
 	native readonly int Size;
-	
+
 	native void Copy(DynArray_Obj other);
 	native void Move(DynArray_Obj other);
 	native void Append (DynArray_Obj other);

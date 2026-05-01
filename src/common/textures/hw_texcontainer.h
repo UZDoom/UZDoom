@@ -78,7 +78,7 @@ private:
 
  	TranslatedTexture * GetTexID(int translation, int scaleflags)
 	{
-		// Allow negative indices to pass through unchanged. 
+		// Allow negative indices to pass through unchanged.
 		// This is needed for allowing the client to allocate slots that aren't matched to a palette, e.g. Build's indexed variants.
 		if (translation >= 0)
 		{
@@ -101,7 +101,7 @@ private:
 		}
 
 		translation |= (scaleflags << 24);
-		// normally there aren't more than very few different 
+		// normally there aren't more than very few different
 		// translations here so this isn't performance critical.
 		unsigned index = hwTex_Translated.FindEx([=](auto &element)
 		{
@@ -140,7 +140,7 @@ public:
 	}
 
 	//===========================================================================
-	// 
+	//
 	// Deletes all allocated resources and considers translations
 	//
 	//===========================================================================
@@ -189,4 +189,3 @@ public:
 
 
 };
-

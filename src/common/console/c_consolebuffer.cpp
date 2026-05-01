@@ -125,7 +125,7 @@ void FConsoleBuffer::FormatText(FFont *formatfont, int displaywidth)
 	unsigned brokensize = m_BrokenConsoleText.Size();
 	if (brokensize == mConsoleText.Size())
 	{
-		// The last line got text appended. 
+		// The last line got text appended.
 		if (mLastLineNeedsUpdate)
 		{
 			brokensize--;
@@ -164,4 +164,3 @@ void FConsoleBuffer::ResizeBuffer(unsigned newsize)
 		mBufferWasCleared = true;
 	}
 }
-

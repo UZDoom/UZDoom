@@ -10,13 +10,13 @@ Gameinfo
 
 DoomEdNums
 {
-     0 = Unknown
-     1 = "$Player1Start"
-     2 = "$Player2Start"
-     3 = "$Player3Start"
-     4 = "$Player4Start"
-    11 = "$DeathmatchStart"
-    14 = TeleportDest
+	 0 = Unknown
+	 1 = "$Player1Start"
+	 2 = "$Player2Start"
+	 3 = "$Player3Start"
+	 4 = "$Player4Start"
+	11 = "$DeathmatchStart"
+	14 = TeleportDest
    118 = ZBridge
    888 = MBFHelperDog
   1400 = "$SSeqOverride", 0

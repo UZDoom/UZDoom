@@ -64,11 +64,11 @@
 template<typename T> class TIterator
 {
 public:
-    using iterator_category = std::random_access_iterator_tag;
-    using value_type        = T;
-    using difference_type   = ptrdiff_t;
-    using pointer           = value_type*;
-    using reference         = value_type&;
+	using iterator_category = std::random_access_iterator_tag;
+	using value_type        = T;
+	using difference_type   = ptrdiff_t;
+	using pointer           = value_type*;
+	using reference         = value_type&;
 
 	TIterator(T* ptr = nullptr) { m_ptr = ptr; }
 
@@ -132,13 +132,13 @@ class TArray
 {
 public:
 
-    typedef TIterator<T>                       iterator;
-    typedef TIterator<const T>                 const_iterator;
-    using reverse_iterator       =             std::reverse_iterator<iterator>;
-    using const_reverse_iterator =             std::reverse_iterator<const_iterator>;
+	typedef TIterator<T>                       iterator;
+	typedef TIterator<const T>                 const_iterator;
+	using reverse_iterator       =             std::reverse_iterator<iterator>;
+	using const_reverse_iterator =             std::reverse_iterator<const_iterator>;
 	typedef T							value_type;
 
-    iterator begin()
+	iterator begin()
 	{
 		return &Array[0];
 	}
@@ -221,7 +221,7 @@ public:
 			ConstructEmpty(0, Count - 1);
 		}
 	}
-	
+
 	TArray (std::initializer_list<T> list)
 	{
 		Most = list.size();
@@ -358,16 +358,16 @@ public:
 		return unsigned(elem - Array);
 	}
 
-    unsigned int Find(const T& item) const
-    {
-        unsigned int i;
-        for(i = 0;i < Count;++i)
-        {
-            if(Array[i] == item)
-                break;
-        }
-        return i;
-    }
+	unsigned int Find(const T& item) const
+	{
+		unsigned int i;
+		for(i = 0;i < Count;++i)
+		{
+			if(Array[i] == item)
+				break;
+		}
+		return i;
+	}
 
 	unsigned int FindNoCase(const T& item) const requires requires(const T& t) {t.CompareNoCase(t) == 0;}
 	{
@@ -435,17 +435,17 @@ public:
 	}
 
    bool Contains(const T& item) const
-    {
-        unsigned int i;
-        for(i = 0;i < Count;++i)
-        {
-            if(Array[i] == item)
-                return true;
-        }
-        return false;
-    }
+	{
+		unsigned int i;
+		for(i = 0;i < Count;++i)
+		{
+			if(Array[i] == item)
+				return true;
+		}
+		return false;
+	}
 
-	template<class Func> 
+	template<class Func>
 	bool Contains(const T& item, Func &&compare) const
 	{
 		unsigned int i;
@@ -457,7 +457,7 @@ public:
 		return false;
 	}
 
-	template<class Func> 
+	template<class Func>
 	unsigned int FindEx(Func &&compare) const
 	{
 		unsigned int i;
@@ -631,8 +631,8 @@ public:
 
 	void Delete (unsigned int index, int deletecount)
 	{
-        if(index >= Count) return;
-        
+		if(index >= Count) return;
+
 		if (index + deletecount > Count)
 		{
 			deletecount = Count - index;
@@ -907,7 +907,7 @@ public:
 	{
 		for (unsigned int i = 0; i < TArray<T,TT>::Size(); ++i)
 		{
-			if ((*this)[i] != NULL) 
+			if ((*this)[i] != NULL)
 				delete (*this)[i];
 		}
 	}
@@ -915,7 +915,7 @@ public:
 	{
 		for (unsigned int i = 0; i < TArray<T,TT>::Size(); ++i)
 		{
-			if ((*this)[i] != NULL) 
+			if ((*this)[i] != NULL)
 				delete (*this)[i];
 		}
 		this->Clear();
@@ -932,8 +932,8 @@ public:
 
 	typedef TIterator<T>                       iterator;
 	typedef TIterator<const T>                 const_iterator;
-    using reverse_iterator       =             std::reverse_iterator<iterator>;
-    using const_reverse_iterator =             std::reverse_iterator<const_iterator>;
+	using reverse_iterator       =             std::reverse_iterator<iterator>;
+	using const_reverse_iterator =             std::reverse_iterator<const_iterator>;
 	typedef T                                  value_type;
 
 	iterator begin()
@@ -1199,65 +1199,65 @@ public:
 
   iterator begin()
   {
-    return iterator(*this);
+	return iterator(*this);
   }
   const_iterator begin() const
   {
-    return const_iterator(*this);
+	return const_iterator(*this);
   }
   const_iterator cbegin() const
   {
-    return const_iterator(*this);
+	return const_iterator(*this);
   }
 
   iterator end()
   {
-    auto it = iterator(*this, Size);
-    return it;
+	auto it = iterator(*this, Size);
+	return it;
   }
 
   const_iterator end() const
   {
-    auto it = const_iterator(
-            *this,
-            Size
-    );
-    return it;
+	auto it = const_iterator(
+			*this,
+			Size
+	);
+	return it;
   }
 
   const_iterator cend() const
   {
-    auto it = const_iterator(
-            *this,
-            Size
-    );
-    return it;
+	auto it = const_iterator(
+			*this,
+			Size
+	);
+	return it;
   }
 
   reverse_iterator rbegin()
   {
-    return reverse_iterator(end());
+	return reverse_iterator(end());
   }
   const_reverse_iterator rbegin() const
   {
-    return const_reverse_iterator(end());
+	return const_reverse_iterator(end());
   }
   const_reverse_iterator crbegin() const
   {
-    return const_reverse_iterator(cend());
+	return const_reverse_iterator(cend());
   }
 
   reverse_iterator rend()
   {
-    return reverse_iterator(begin());
+	return reverse_iterator(begin());
   }
   const_reverse_iterator rend() const
   {
-    return const_reverse_iterator(begin());
+	return const_reverse_iterator(begin());
   }
   const_reverse_iterator crend() const
   {
-    return const_reverse_iterator(cbegin());
+	return const_reverse_iterator(cbegin());
   }
 
 	//=======================================================================
@@ -1570,11 +1570,11 @@ protected:
 	}
 
 	/*
-	** Inserts a new key into a hash table; first, check whether key's main 
-	** position is free. If not, check whether colliding node is in its main 
-	** position or not: if it is not, move colliding node to an empty place and 
-	** put new key in its main position; otherwise (colliding node is in its main 
-	** position), new key goes to an empty position. 
+	** Inserts a new key into a hash table; first, check whether key's main
+	** position is free. If not, check whether colliding node is in its main
+	** position or not: if it is not, move colliding node to an empty place and
+	** put new key in its main position; otherwise (colliding node is in its main
+	** position), new key goes to an empty position.
 	**
 	** The Value field is left unconstructed.
 	*/
@@ -1732,7 +1732,7 @@ public:
 	}
 protected:
   explicit TMapIterator(MapType &map, hash_t position)
-        : Map(map), Position(position)
+		: Map(map), Position(position)
   {
   }
 public:
@@ -2163,8 +2163,8 @@ public:
 
 	typedef TIterator<T>                       iterator;
 	typedef TIterator<const T>                 const_iterator;
-    using reverse_iterator       =             std::reverse_iterator<iterator>;
-    using const_reverse_iterator =             std::reverse_iterator<const_iterator>;
+	using reverse_iterator       =             std::reverse_iterator<iterator>;
+	using const_reverse_iterator =             std::reverse_iterator<const_iterator>;
 	typedef T                                  value_type;
 
 	iterator begin()

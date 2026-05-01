@@ -82,7 +82,7 @@ Class KeyYellow : HereticKey
 	}
 }
 
- 
+
 // --- Blue Key gizmo -----------------------------------------------------------
 
 Class KeyGizmoBlue : Actor
@@ -193,4 +193,3 @@ Class KeyGizmoFloatYellow : Actor
 		Stop;
 	}
 }
-

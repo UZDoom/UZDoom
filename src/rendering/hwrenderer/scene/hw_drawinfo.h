@@ -79,15 +79,15 @@ enum area_t : int;
 
 enum SectorRenderFlags
 {
-    // This is used to merge several subsectors into a single draw item
-    SSRF_RENDERFLOOR = 1,
-    SSRF_RENDERCEILING = 2,
-    SSRF_RENDER3DPLANES = 4,
-    SSRF_RENDERALL = 7,
-    SSRF_PROCESSED = 8,
-    SSRF_SEEN = 16,
-    SSRF_PLANEHACK = 32,
-    SSRF_FLOODHACK = 64
+	// This is used to merge several subsectors into a single draw item
+	SSRF_RENDERFLOOR = 1,
+	SSRF_RENDERCEILING = 2,
+	SSRF_RENDER3DPLANES = 4,
+	SSRF_RENDERALL = 7,
+	SSRF_PROCESSED = 8,
+	SSRF_SEEN = 16,
+	SSRF_PLANEHACK = 32,
+	SSRF_FLOODHACK = 64
 };
 
 enum EPortalClip
@@ -150,7 +150,7 @@ struct HWDrawInfo
 	bool isFullbrightScene() const { return !!(FullbrightFlags & Fullbright); }
 	bool isNightvision() const { return !!(FullbrightFlags & Nightvision); }
 	bool isStealthVision() const { return !!(FullbrightFlags & StealthVision); }
-    
+
 	HWDrawList drawlists[GLDL_TYPES];
 	int vpIndex;
 	ELightMode lightmode;
@@ -182,10 +182,10 @@ struct HWDrawInfo
 
 	TArray<SubsectorHackInfo> SubsectorHacks;
 
-    TMap<int, gl_subsectorrendernode*> otherFloorPlanes;
-    TMap<int, gl_subsectorrendernode*> otherCeilingPlanes;
-    TMap<int, gl_floodrendernode*> floodFloorSegs;
-    TMap<int, gl_floodrendernode*> floodCeilingSegs;
+	TMap<int, gl_subsectorrendernode*> otherFloorPlanes;
+	TMap<int, gl_subsectorrendernode*> otherCeilingPlanes;
+	TMap<int, gl_floodrendernode*> floodFloorSegs;
+	TMap<int, gl_floodrendernode*> floodCeilingSegs;
 
 	//TArray<sector_t *> CeilingStacks;
 	//TArray<sector_t *> FloorStacks;
@@ -203,10 +203,10 @@ struct HWDrawInfo
 	bool multithread;
 
 private:
-    // For ProcessLowerMiniseg
-    bool inview;
-    subsector_t * viewsubsector;
-    TArray<seg_t *> lowersegs;
+	// For ProcessLowerMiniseg
+	bool inview;
+	subsector_t * viewsubsector;
+	TArray<seg_t *> lowersegs;
 
 	subsector_t *currentsubsector;	// used by the line processing code.
 	sector_t *currentsector;
@@ -214,7 +214,7 @@ private:
 	void WorkerThread();
 
 	void UnclipSubsector(subsector_t *sub);
-	
+
 	void AddLine(seg_t *seg, bool portalclip);
 	void PolySubsector(subsector_t * sub);
 	void RenderPolyBSPNode(void *node);
@@ -326,15 +326,15 @@ public:
 	void SetDitherTransFlags(AActor* actor);
 
 	void ProcessLowerMinisegs(TArray<seg_t *> &lowersegs);
-    void AddSubsectorToPortal(FSectorPortalGroup *portal, subsector_t *sub);
-    
-    void AddWall(HWWall *w);
-    void AddMirrorSurface(HWWall *w);
+	void AddSubsectorToPortal(FSectorPortalGroup *portal, subsector_t *sub);
+
+	void AddWall(HWWall *w);
+	void AddMirrorSurface(HWWall *w);
 	void AddFlat(HWFlat *flat, bool fog);
 	void AddSprite(HWSprite *sprite, bool translucent);
 
 
-    HWDecal *AddDecal(bool onmirror);
+	HWDecal *AddDecal(bool onmirror);
 
 	void SetFallbackLightMode()
 	{

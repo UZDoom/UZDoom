@@ -89,7 +89,7 @@ void MapLoader::TranslateTeleportThings ()
 	AActor *dest;
 	auto iterator = Level->GetThinkerIterator<AActor>(NAME_TeleportDest);
 	bool foundSomething = false;
-	
+
 	while ( (dest = iterator.Next()) )
 	{
 		if (!Level->SectorHasTags(dest->Sector))
@@ -98,7 +98,7 @@ void MapLoader::TranslateTeleportThings ()
 			foundSomething = true;
 		}
 	}
-	
+
 	if (foundSomething)
 	{
 		for (auto &line : Level->lines)
@@ -273,7 +273,7 @@ void MapLoader::SetTextureNoErr (side_t *side, int position, uint32_t *color, co
 {
 	FTextureID texture;
 	*validcolor = false;
-	texture = TexMan.CheckForTexture (name, ETextureType::Wall,	
+	texture = TexMan.CheckForTexture (name, ETextureType::Wall,
 		FTextureManager::TEXMAN_Overridable|FTextureManager::TEXMAN_TryAny);
 	if (!texture.Exists())
 	{
@@ -293,7 +293,7 @@ void MapLoader::SetTextureNoErr (side_t *side, int position, uint32_t *color, co
 			int l=(int)strlen(name);
 			texture = FNullTextureID();
 			*validcolor = false;
-			if (l>=7) 
+			if (l>=7)
 			{
 				for(stop=name2;stop<name2+6;stop++) if (!isxdigit(*stop)) *stop='0';
 
@@ -303,9 +303,9 @@ void MapLoader::SetTextureNoErr (side_t *side, int position, uint32_t *color, co
 				name2[4]=0; int green=strtol(name2+2,nullptr,16);
 				name2[2]=0; int red=strtol(name2,nullptr,16);
 
-				if (!isFog) 
+				if (!isFog)
 				{
-					if (factor==0) 
+					if (factor==0)
 					{
 						*validcolor=false;
 						return;
@@ -500,7 +500,7 @@ void MapLoader::LoadGLZSegs (FileReader &data, int type)
 			{
 				seg[-1].v2 = seg->v1;
 			}
-			
+
 			seg->PartnerSeg = partner == 0xffffffffu? nullptr : &Level->segs[partner];
 			if (line != 0xFFFFFFFF)
 			{
@@ -714,7 +714,7 @@ bool MapLoader::LoadExtendedNodes (FileReader &dalump, uint32_t id)
 	default:
 		return false;
 	}
-	
+
 	try
 	{
 		if (compressed)
@@ -1069,7 +1069,7 @@ void MapLoader::LoadSectors (MapData *map, FMissingTextureTracker &missingtex)
 	auto msp = map->Read(ML_SECTORS);
 	ms = (mapsector_t*)msp.Data();
 	ss = sectors;
-	
+
 	for (unsigned i = 0; i < numsectors; i++, ss++, ms++)
 	{
 		ss->e = &Level->extsectors[i];
@@ -1164,16 +1164,16 @@ bool MapLoader::LoadNodes (MapData * map)
 	{
 		return false;
 	}
-	
+
 	auto &nodes = Level->nodes;
-	nodes.Alloc(numnodes);		
+	nodes.Alloc(numnodes);
 	TArray<uint16_t> used(numnodes, true);
 	memset (used.data(), 0, sizeof(uint16_t) * numnodes);
 
 	auto mnp = map->Read(ML_NODES);
 	mn = (nodetype*)(mnp.Data() + nodetype::NF_LUMPOFFSET);
 	no = &nodes[0];
-	
+
 	for (unsigned i = 0; i < numnodes; i++, no++, mn++)
 	{
 		no->x = LittleShort(mn->x)<<FRACBITS;
@@ -1454,7 +1454,7 @@ void MapLoader::SpawnThings (int position)
 
 void MapLoader::SetLineID (int i, line_t *ld)
 {
-	if (Level->maptype == MAPTYPE_HEXEN)	
+	if (Level->maptype == MAPTYPE_HEXEN)
 	{
 		int setid = -1;
 		switch (ld->special)
@@ -1489,11 +1489,11 @@ void MapLoader::SetLineID (int i, line_t *ld)
 		case Polyobj_ExplicitLine:
 			setid = ld->args[4];
 			break;
-			
+
 		case Plane_Align:
 			if (!(Level->ib_compatflags & BCOMPATF_NOSLOPEID)) setid = ld->args[2];
 			break;
-			
+
 		case Static_Init:
 			if (ld->args[1] == Init_SectorLink) setid = ld->args[0];
 			break;
@@ -1661,7 +1661,7 @@ void MapLoader::LoadLineDefs (MapData * map)
 	int i, skipped;
 	line_t *ld;
 	maplinedef_t *mld;
-		
+
 	auto mldf = map->Read(ML_LINEDEFS);
 	int numlines = mldf.Size() / sizeof(maplinedef_t);
 	int numsides = map->Size(ML_SIDEDEFS) / sizeof(mapsidedef_t);
@@ -1773,7 +1773,7 @@ void MapLoader::LoadLineDefs2 (MapData * map)
 	line_t *ld;
 	int lumplen = map->Size(ML_LINEDEFS);
 	maplinedef2_t *mld;
-		
+
 	int numlines = lumplen / sizeof(maplinedef2_t);
 	linemap.Resize(numlines);
 
@@ -1922,7 +1922,7 @@ void MapLoader::LoopSidedefs (bool firstloop)
 		line_t *line = Level->sides[i].linedef;
 		int lineside = (line->sidedef[0] != &Level->sides[i]);
 		int vert = lineside ? Index(line->v2) : Index(line->v1);
-		
+
 		sidetemp[i].b.lineside = lineside;
 		sidetemp[i].b.next = sidetemp[vert].b.first;
 		sidetemp[vert].b.first = i;
@@ -1970,7 +1970,7 @@ void MapLoader::LoopSidedefs (bool firstloop)
 			right = sidetemp[right].b.first;
 
 			if (right == NO_SIDE)
-			{ 
+			{
 				// There is no right side!
 				if (firstloop) Printf ("Line %d's right edge is unconnected\n", linemap[Index(line)]);
 				continue;
@@ -2195,7 +2195,7 @@ void MapLoader::LoadSideDefs2 (MapData *map, FMissingTextureTracker &missingtex)
 		imsd.midtexture.CopyCStrPart(msd->midtexture, 8);
 		imsd.bottomtexture.CopyCStrPart(msd->bottomtexture, 8);
 
-		ProcessSideTextures(!map->HasBehavior, sd, sec, &imsd, 
+		ProcessSideTextures(!map->HasBehavior, sd, sec, &imsd,
 							  sidetemp[i].a.special, sidetemp[i].a.tag, &sidetemp[i].a.alpha, missingtex);
 	}
 }
@@ -2515,7 +2515,7 @@ bool FBlockmap::VerifyBlockMap(int count, unsigned numlines)
 				return false;
 			}
 
-			offset = *blockoffset;         
+			offset = *blockoffset;
 
 			// check that list offset is in bounds
 			if(offset < 4 || offset >= count)
@@ -2726,7 +2726,7 @@ void MapLoader::GroupLines (bool buildmap)
 			li->backsector->Lines[linesDoneInEachSector[Index(li->backsector)]++] = li;
 		}
 	}
-	
+
 	sector = &Level->sectors[0];
 	for (unsigned i = 0; i < numsectors; ++i, ++sector)
 	{
@@ -2928,7 +2928,7 @@ void MapLoader::LoadLevel(MapData *map, const char *lumpname, int position)
 {
 	const int *oldvertextable  = nullptr;
 
-	// note: most of this ordering is important 
+	// note: most of this ordering is important
 	ForceNodeBuild = gennodes;
 
 	// [RH] Load in the BEHAVIOR lump
@@ -3156,7 +3156,7 @@ void MapLoader::LoadLevel(MapData *map, const char *lumpname, int position)
 	// use in P_PointInSubsector to avoid problems with maps that depend on the specific
 	// nodes they were built with (P:AR E1M3 is a good example for a map where this is the case.)
 	reloop |= CheckNodes(map, BuildGLNodes, (uint32_t)(endTime - startTime));
-	
+
 	// set the head node for gameplay purposes. If the separate gamenodes array is not empty, use that, otherwise use the render nodes.
 	Level->headgamenode = Level->gamenodes.Size() > 0 ? &Level->gamenodes[Level->gamenodes.Size() - 1] : Level->nodes.Size() ? &Level->nodes[Level->nodes.Size() - 1] : nullptr;
 

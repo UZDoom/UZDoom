@@ -27,7 +27,7 @@
 #include "textures.h"
 #include "texturemanager.h"
 
-template<class TYPE> 
+template<class TYPE>
 void WarpBuffer(TYPE *Pixels, const TYPE *source, int width, int height, int xmul, int ymul, uint64_t time, float Speed, int warptype)
 {
 	int ymask = height - 1;
@@ -88,4 +88,3 @@ void WarpBuffer(TYPE *Pixels, const TYPE *source, int width, int height, int xmu
 		memcpy(Pixels, source, width*height * sizeof(TYPE));
 	}
 }
-

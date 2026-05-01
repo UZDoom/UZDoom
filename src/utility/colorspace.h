@@ -77,4 +77,7 @@ void oklab2oklch(Color& lab);
 
 Color mix(const Color& a, const Color& b, ColorP mix);
 
+Color rgb(uint32_t c);
+uint32_t rgb24(const Color& c);
+
 }

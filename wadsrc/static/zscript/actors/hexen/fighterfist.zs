@@ -61,7 +61,7 @@ class FWeapFist : FighterWeapon
 		FPCH E 10 Offset (0, 150);
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// TryPunch
@@ -92,7 +92,7 @@ class FWeapFist : FighterWeapon
 			if (t.linetarget != null)
 			{
 				// The mass threshold has been changed to CommanderKeen's value which has been used most often for 'unmovable' stuff.
-				if (t.linetarget.player != null || 
+				if (t.linetarget.player != null ||
 					(t.linetarget.Mass < 10000000 && (t.linetarget.bIsMonster)))
 				{
 					if (!t.linetarget.bDontThrust)
@@ -139,7 +139,7 @@ class FWeapFist : FighterWeapon
 		double slope = AimLineAttack (angle, DEFMELEERANGE, null, 0., ALF_CHECK3D);
 		LineAttack (angle, DEFMELEERANGE, slope, damage, 'Melee', "PunchPuff", true);
 	}
-	
+
 }
 
 // Punch puff ---------------------------------------------------------------

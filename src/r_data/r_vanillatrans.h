@@ -1,4 +1,4 @@
-/* 
+/*
 ** r_vanillatrans.h
 **
 **

@@ -95,7 +95,7 @@ FAnmTexture::FAnmTexture (int lumpnum, int w, int h)
 void FAnmTexture::ReadFrame(uint8_t *pixels, uint8_t *palette)
 {
 	auto lump = fileSystem.ReadFile (SourceLump);
-	auto source = lump.bytes(); 
+	auto source = lump.bytes();
 
 	std::unique_ptr<anim_t> anim = std::make_unique<anim_t>(); // note that this struct is very large and should not go onto the stack!
 	if (ANIM_LoadAnim(anim.get(), source, (int)lump.size()) >= 0)
@@ -135,7 +135,7 @@ PalettedPixels FAnmTexture::CreatePalettedPixels(int conversion, int frame)
 	{
 		remap[i] = ColorMatcher.Pick(w->palette[i*3], w->palette[i*3+1], w->palette[i*3+2]);
 	}
-	ImageHelpers::FlipNonSquareBlockRemap (pixels.Data(), w->buffer, Width, Height, Width, remap); 
+	ImageHelpers::FlipNonSquareBlockRemap (pixels.Data(), w->buffer, Width, Height, Width, remap);
 	return pixels;
 }
 
@@ -150,7 +150,7 @@ int FAnmTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	std::unique_ptr<workbuf> w = std::make_unique<workbuf>();
 	ReadFrame(w->buffer, w->palette);
 
-    auto dpix = bmp->GetPixels();
+	auto dpix = bmp->GetPixels();
 	for (int i = 0; i < Width * Height; i++)
 	{
 		int p = i * 4;
@@ -163,5 +163,3 @@ int FAnmTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 
 	return -1;
 }
-
- 

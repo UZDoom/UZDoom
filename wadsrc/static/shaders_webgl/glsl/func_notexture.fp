@@ -17,6 +17,6 @@
 
 vec4 ProcessTexel()
 {
-	return desaturate(uObjectColor);	
+	return desaturate(uObjectColor);
 }
 

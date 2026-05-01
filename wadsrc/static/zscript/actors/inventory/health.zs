@@ -27,9 +27,9 @@ class Health : Inventory
 	transient int PrevHealth;
 	meta int LowHealth;
 	meta String LowHealthMessage;
-	
+
 	property LowMessage: LowHealth, LowHealthMessage;
-	
+
 	Default
 	{
 		+INVENTORY.ISHEALTH
@@ -37,7 +37,7 @@ class Health : Inventory
 		Inventory.MaxAmount 0;
 		Inventory.PickupSound "misc/health_pkup";
 	}
-	
+
 	//===========================================================================
 	//
 	// AHealth :: PickupMessage
@@ -115,7 +115,7 @@ class HealthPickup : Inventory
 		+INVENTORY.INVBAR
 		+INVENTORY.ISHEALTH
 	}
-	
+
 	//===========================================================================
 	//
 	// CreateCopy
@@ -173,5 +173,5 @@ class HealthPickup : Inventory
 		return Owner.GiveBody (health, 0);
 	}
 
-	
+
 }

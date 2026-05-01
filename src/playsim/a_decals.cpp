@@ -832,7 +832,7 @@ void SprayDecal(AActor *shooter, const char *name, double distance, DVector3 off
 		double c = pitch.Cos();
 		dir = DVector3(c * ang.Cos(), c * ang.Sin(), -pitch.Sin());
 	}
-	
+
 	else
 		dir = direction;
 
@@ -881,7 +881,7 @@ DBaseDecal *ShootDecal(FLevelLocals *Level, const FDecalTemplate *tpl, sector_t 
 static void SpawnDecal(AActor *self)
 {
 	const FDecalTemplate *tpl = nullptr;
-	
+
 	if (self->args[0] < 0)
 	{
 		FName name = ENamedName(-self->args[0]);
@@ -892,7 +892,7 @@ static void SpawnDecal(AActor *self)
 		int decalid = self->args[0] + (self->args[1] << 8); // [KS] High byte for decals.
 		tpl = DecalLibrary.GetDecalByNum(decalid);
 	}
-	
+
 	// If no decal is specified, don't try to create one.
 	if (tpl != nullptr)
 	{

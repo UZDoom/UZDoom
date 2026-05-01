@@ -111,7 +111,7 @@ class BetaSkull : LostSoul
 extend class Actor
 {
 	const DEFSKULLSPEED = 20;
-	
+
 	void A_SkullAttack(double skullspeed = DEFSKULLSPEED)
 	{
 		if (target == null) return;
@@ -131,11 +131,8 @@ extend class Actor
 
 		A_StartSound(AttackSound, CHAN_WEAPON);
 		A_FaceTarget();
-		
+
 		int damage = GetMissileDamage(7,1);
 		target.DamageMobj(self, self, damage, 'None');
 	}
 }
-
-
-

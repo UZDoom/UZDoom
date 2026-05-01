@@ -45,7 +45,7 @@ uint8_t IcePalette[16][3] =
 };
 
 //===========================================================================
-// 
+//
 // multi-format pixel copy with colormap application
 // requires the previously defined conversion classes to work
 //
@@ -225,7 +225,7 @@ static const CopyFunc copyfuncs[][12]={
 //
 //===========================================================================
 bool ClipCopyPixelRect(const FClipRect *cr, int &originx, int &originy,
-						const uint8_t *&patch, int &srcwidth, int &srcheight, 
+						const uint8_t *&patch, int &srcwidth, int &srcheight,
 						int &pstep_x, int &pstep_y, int rotate)
 {
 	int pixxoffset;
@@ -343,7 +343,7 @@ bool ClipCopyPixelRect(const FClipRect *cr, int &originx, int &originy,
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -377,7 +377,7 @@ bool FClipRect::Intersect(int ix, int iy, int iw, int ih)
 // True Color texture copy function
 //
 //===========================================================================
-void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, int srcwidth, 
+void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, int srcwidth,
 							   int srcheight, int step_x, int step_y, int rotate, int ct, FCopyInfo *inf,
 							   int r, int g, int b)
 {
@@ -392,7 +392,7 @@ void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, i
 	}
 }
 
-template<class TDest, class TBlend> 
+template<class TDest, class TBlend>
 void iCopyPaletted(uint8_t *buffer, const uint8_t * patch, int srcwidth, int srcheight, int Pitch,
 					int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf)
 {
@@ -440,7 +440,7 @@ static const CopyPalettedFunc copypalettedfuncs[]=
 // Paletted to True Color texture copy function
 //
 //===========================================================================
-void FBitmap::CopyPixelData(int originx, int originy, const uint8_t * patch, int srcwidth, int srcheight, 
+void FBitmap::CopyPixelData(int originx, int originy, const uint8_t * patch, int srcwidth, int srcheight,
 										int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf)
 {
 	if (ClipCopyPixelRect(&ClipRect, originx, originy, patch, srcwidth, srcheight, step_x, step_y, rotate))
@@ -462,7 +462,7 @@ void FBitmap::CopyPixelData(int originx, int originy, const uint8_t * patch, int
 			}
 		}
 
-		copypalettedfuncs[inf==NULL? OP_COPY : inf->op](buffer, patch, srcwidth, srcheight, Pitch, 
+		copypalettedfuncs[inf==NULL? OP_COPY : inf->op](buffer, patch, srcwidth, srcheight, Pitch,
 														step_x, step_y, rotate, palette, inf);
 	}
 }

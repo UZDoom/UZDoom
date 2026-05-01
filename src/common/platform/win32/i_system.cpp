@@ -157,7 +157,7 @@ FString I_DetectOS(void)
 			{
 				osname = (info.wProductType == VER_NT_WORKSTATION) ? "7" : "Server 2008 R2";
 			}
-			else if (info.dwMinorVersion == 2)	
+			else if (info.dwMinorVersion == 2)
 			{
 				// Starting with Windows 8.1, you need to specify in your manifest
 				// the highest version of Windows you support, which will also be the
@@ -219,12 +219,12 @@ void CalculateCPUSpeed()
 		ClockCalibration.Reset();
 
 		// Count cycles for at least 55 milliseconds.
-        // The performance counter may be very low resolution compared to CPU
-        // speeds today, so the longer we count, the more accurate our estimate.
-        // On the other hand, we don't want to count too long, because we don't
-        // want the user to notice us spend time here, since most users will
-        // probably never use the performance statistics.
-        min_diff = freq.LowPart * 11 / 200;
+		// The performance counter may be very low resolution compared to CPU
+		// speeds today, so the longer we count, the more accurate our estimate.
+		// On the other hand, we don't want to count too long, because we don't
+		// want the user to notice us spend time here, since most users will
+		// probably never use the performance statistics.
+		min_diff = freq.LowPart * 11 / 200;
 
 		// just in case we were launched with a custom priority class, keep it
 		DWORD OldPriorityClass = GetPriorityClass(GetCurrentProcess());
@@ -295,7 +295,7 @@ static void PrintToStdOut(const char *cpt, HANDLE StdOut)
 
 	DWORD bytes_written;
 	WriteFile(StdOut, printData.GetChars(), (DWORD)printData.Len(), &bytes_written, NULL);
-	if (terminal) 
+	if (terminal)
 		WriteFile(StdOut, "\033[0m", 4, &bytes_written, NULL);
 }
 
@@ -620,15 +620,15 @@ bool I_WriteIniFailed(const char* filename)
 	char *lpMsgBuf;
 	FString errortext;
 
-	FormatMessageA (FORMAT_MESSAGE_ALLOCATE_BUFFER | 
-					FORMAT_MESSAGE_FROM_SYSTEM | 
+	FormatMessageA (FORMAT_MESSAGE_ALLOCATE_BUFFER |
+					FORMAT_MESSAGE_FROM_SYSTEM |
 					FORMAT_MESSAGE_IGNORE_INSERTS,
 		NULL,
 		GetLastError(),
 		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), // Default language
 		(LPSTR)&lpMsgBuf,
 		0,
-		NULL 
+		NULL
 	);
 	errortext.Format ("The config file %s could not be written:\n%s", filename, lpMsgBuf);
 	LocalFree (lpMsgBuf);

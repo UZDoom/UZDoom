@@ -10,5 +10,3 @@ sector 21 = 0;
 sector 22 = 0;
 sector 23 = 0;
 sector 24 =	0;
-
-

@@ -329,7 +329,7 @@ int VMScriptFunction::FirstScriptCall(VMFunction *func, VMValue *params, int num
 	{
 		ThrowAbortException(X_OTHER, "attempt to call abstract function %s.", func->PrintableName);
 	}
-	
+
 	static_cast<VMScriptFunction*>(func)->JitCompile();
 
 	return func->ScriptCall(func, params, numparams, ret, numret);
@@ -698,7 +698,7 @@ int VMCall(VMFunction *func, VMValue *params, int numparams, VMReturn *results, 
 #if 0
 	try
 #endif
-	{	
+	{
 		if (func->VarFlags & VARF_Native)
 		{
 			return static_cast<VMNativeFunction *>(func)->NativeCall(VM_INVOKE(params, numparams, results, numresults, func->RegTypes));
@@ -928,4 +928,3 @@ CCMD(vmengine)
 	}
 	Printf("Usage: vmengine <default|checked|unchecked>\n");
 }
-

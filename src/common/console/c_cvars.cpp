@@ -2144,4 +2144,3 @@ UCVarValue FZSColorCVar::GenericZSCVarCallback(UCVarValue value, ECVarType type)
 	v.Int = val;
 	return v;
 }
-

@@ -110,7 +110,7 @@ void VulkanPrintLog(const char* typestr, const std::string& msg)
 }
 
 VulkanRenderDevice::VulkanRenderDevice(void *hMonitor, bool fullscreen, std::shared_ptr<VulkanSurface> surface) :
-	Super(hMonitor, fullscreen) 
+	Super(hMonitor, fullscreen)
 {
 	VulkanDeviceBuilder builder;
 	builder.OptionalRayQuery();

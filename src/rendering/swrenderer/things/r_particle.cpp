@@ -124,7 +124,7 @@ namespace swrenderer
 
 		if (x1 >= x2)
 			return;
-		
+
 		auto viewport = thread->Viewport.get();
 
 		yscale = xscale; // YaspectMul is not needed for particles as they should always be square
@@ -246,7 +246,7 @@ namespace swrenderer
 		// vis->renderflags holds translucency level (0-255)
 		fixed_t fglevel = ((vis->renderflags + 1) << 8) & ~0x3ff;
 		uint32_t alpha = fglevel * 256 / FRACUNIT;
-		
+
 		auto viewport = thread->Viewport.get();
 		auto drawers = thread->Drawers(viewport);
 

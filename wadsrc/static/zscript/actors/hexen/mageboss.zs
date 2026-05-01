@@ -135,5 +135,5 @@ class MageBoss : Actor
 		MStaffSpawn2(angle + 5);
 		A_StartSound("MageStaffFire", CHAN_WEAPON);
 	}
-	
+
 }

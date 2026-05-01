@@ -466,7 +466,7 @@ DEFINE_ACTION_FUNCTION(DLevelPostProcessor, GetVertexZ)
 	PARAM_SELF_PROLOGUE(DLevelPostProcessor);
 	PARAM_UINT(vertex);
 	PARAM_INT(planeval);
-	
+
 	double value = 0;
 	bool isset = false;
 
@@ -606,4 +606,3 @@ DEFINE_ACTION_FUNCTION(DLevelPostProcessor, GetDefaultActor)
 }
 
 DEFINE_FIELD(DLevelPostProcessor, Level);
-

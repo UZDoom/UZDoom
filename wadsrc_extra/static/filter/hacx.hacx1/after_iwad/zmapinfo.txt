@@ -1,8 +1,8 @@
 //Mapinfo for HacX
 defaultmap
 {
-	nojump 
-	nocrouch 
+	nojump
+	nocrouch
 }
 
 gameinfo

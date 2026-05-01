@@ -103,8 +103,8 @@ public:
 	void Listaliases();
 	FTextureID GetFrontSkyLayer(FTextureID);
 	FTextureID GetRawTexture(FTextureID tex, bool dontlookup = false);
-	void SetRawTexture(FTextureID texid) 
-	{ 
+	void SetRawTexture(FTextureID texid)
+	{
 		int texidx = texid.GetIndex();
 		if ((unsigned)texidx < Textures.Size())
 		{
@@ -231,7 +231,7 @@ private:
 		FGameTexture* Texture;
 		int Paletted;		// redirection to paletted variant
 		int FrontSkyLayer;	// and front sky layer,
-		int RawTexture;		
+		int RawTexture;
 		int HashNext;
 		uint64_t Flags;
 	};
@@ -272,4 +272,3 @@ public:
 };
 
 extern FTextureManager TexMan;
-

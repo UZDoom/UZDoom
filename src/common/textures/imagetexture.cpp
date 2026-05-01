@@ -62,25 +62,25 @@ void FImageTexture::SetFromImage()
 }
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
 FBitmap FImageTexture::GetBgraBitmap(const PalEntry *p, int *trans)
 {
 	return mImage->GetCachedBitmap(p, bNoRemap0? FImageSource::noremap0 : FImageSource::normal, trans, TexFrame);
-}	
+}
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
 TArray<uint8_t> FImageTexture::Get8BitPixels(bool alpha)
 {
 	return mImage->GetPalettedPixels(alpha? FImageSource::luminance : bNoRemap0 ? FImageSource::noremap0 : FImageSource::normal, TexFrame);
-}	
+}
 
 //===========================================================================
 //
@@ -106,4 +106,3 @@ FTexture* CreateImageTexture(FImageSource* img, int frame) noexcept
 {
 	return new FImageTexture(img, frame);
 }
-

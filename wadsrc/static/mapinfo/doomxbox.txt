@@ -22,4 +22,3 @@ map E1M10 lookup "HUSTR_E1M10"
 	cluster = 1
 	music = "$MUSIC_E2M1"
 }
-

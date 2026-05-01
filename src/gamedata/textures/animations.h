@@ -164,5 +164,3 @@ public:
 };
 
 extern FTextureAnimator TexAnim;
-
-

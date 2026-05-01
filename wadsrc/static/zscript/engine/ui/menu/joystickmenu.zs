@@ -578,4 +578,3 @@ class JoystickConfigMenu : OptionMenu
 {
 	JoystickConfig mJoy;
 }
-

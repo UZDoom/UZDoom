@@ -96,4 +96,3 @@ CUSTOM_CVAR(Bool, gl_paltonemap_reverselookup, true, CVAR_ARCHIVE | CVAR_NOINITC
 }
 
 CVAR(Float, gl_menu_blur, -1.0f, CVAR_ARCHIVE)
-

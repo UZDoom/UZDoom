@@ -113,7 +113,7 @@ IJoystickConfig::~IJoystickConfig()
 //
 // M_SetJoystickConfigSection
 //
-// Sets up the config for reading or writing this controller's axis config. 
+// Sets up the config for reading or writing this controller's axis config.
 //
 //==========================================================================
 
@@ -663,7 +663,7 @@ bool Joy_ManageThumbstick(
 	// for the whole thumbstick instead of awkwardly trying to combine them, but
 	// that requires re-considering how axes are exposed to the rest of the engine.
 	// This will do for now.
-    const double deadzone = (x_bias * deadzone_x) + ((1.0 - x_bias) * deadzone_y);
+	const double deadzone = (x_bias * deadzone_x) + ((1.0 - x_bias) * deadzone_y);
 
 	if (magnitude < deadzone)
 	{

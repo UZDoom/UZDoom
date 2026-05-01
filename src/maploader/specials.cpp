@@ -205,7 +205,7 @@ void MapLoader::SetupCeilingPortal (AActor *point)
 
 //-----------------------------------------------------------------------------
 //
-// 
+//
 //
 //-----------------------------------------------------------------------------
 
@@ -513,7 +513,7 @@ void MapLoader::InitSectorSpecial(sector_t *sector, int special)
 	case dSector_DoorCloseIn30:
 		Level->CreateThinker<DDoor>(sector, DDoor::doorWaitClose, 2, 0, 0, 30 * TICRATE);
 		break;
-			
+
 	case dDamage_End:
 		SetupSectorDamage(sector, 20, 32, 256, NAME_None, SECF_ENDGODMODE|SECF_ENDLEVEL);
 		break;
@@ -595,14 +595,14 @@ void MapLoader::InitSectorSpecial(sector_t *sector, int special)
 				{  1, -1 }, {  2, -2 }, {  4, -4 }
 			};
 
-			
+
 			int i = sector->special - Scroll_North_Slow;
 			double dx = hexenScrollies[i][0] / 2.;
 			double dy = hexenScrollies[i][1] / 2.;
 			CreateScroller(EScroll::sc_floor, dx, dy, sector, nullptr, 0);
 		}
 		else if (sector->special >= Carry_East5 && sector->special <= Carry_East35)
-		{ 
+		{
 			// Heretic scroll special
 			// Only east scrollers also scroll the texture
 			CreateScroller(EScroll::sc_floor,	-0.5 * (1 << ((sector->special & 0xff) - Carry_East5)),	0, sector, nullptr, 0);
@@ -634,7 +634,7 @@ void MapLoader::SpawnSpecials ()
 	}
 
 	ProcessEDSectors();
-	
+
 	// Init other misc stuff
 
 	SpawnScrollers(); // killough 3/7/98: Add generalized scrollers
@@ -660,7 +660,7 @@ void MapLoader::SpawnSpecials ()
 		case Transfer_Heights:
 			{
 				sec = line.frontsector;
-				
+
 				if (line.args[1] & 2)
 				{
 					sec->MoreFlags |= SECMF_FAKEFLOORONLY;
@@ -758,7 +758,7 @@ void MapLoader::SpawnSpecials ()
 
 			// partial support for MBF's stay-on-lift feature.
 			// Unlike MBF we cannot scan all lines for a proper special each time because it'd take too long.
-			// So instead, set the info here, but only for repeatable lifts to keep things simple. 
+			// So instead, set the info here, but only for repeatable lifts to keep things simple.
 			// This also cannot consider lifts triggered by scripts etc.
 		case Generic_Lift:
 			if (line.args[3] != 1) continue;
@@ -894,12 +894,12 @@ int MapLoader::Set3DFloor(line_t * line, int param, int param2, int alpha)
 	int flags;
 	int tag = line->args[0];
 	sector_t * sec = line->frontsector, *ss;
-	
+
 	auto itr = Level->GetSectorTagIterator(tag);
 	while ((s = itr.Next()) >= 0)
 	{
 		ss = &Level->sectors[s];
-		
+
 		if (param == 0)
 		{
 			flags = FF_EXISTS | FF_RENDERALL | FF_SOLID | FF_INVERTSECTOR;
@@ -924,7 +924,7 @@ int MapLoader::Set3DFloor(line_t * line, int param, int param2, int alpha)
 							VC_WATER, VC_LAVA, VC_NUKAGE, VC_SLIME, VC_HELLSLIME,
 							VC_BLOOD, VC_SLUDGE, VC_HAZARD, VC_BOOMWATER };
 						flags |= FF_SWIMMABLE | FF_BOTHPLANES | FF_ALLSIDES | FF_FLOOD;
-						
+
 						l->frontsector->Colormap.FadeColor = vavoomcolors[l->args[0]] & VC_COLORMASK;
 						l->frontsector->Colormap.FogDensity = 0;
 					}
@@ -946,13 +946,13 @@ int MapLoader::Set3DFloor(line_t * line, int param, int param2, int alpha)
 				FF_SWIMMABLE | FF_BOTHPLANES | FF_ALLSIDES | FF_SHOOTTHROUGH | FF_SEETHROUGH,
 				FF_SHOOTTHROUGH | FF_SEETHROUGH,
 			};
-			
+
 			flags = defflags[param & 3] | FF_EXISTS | FF_RENDERALL;
-			
+
 			if (param & 4) flags |= FF_ALLSIDES | FF_BOTHPLANES;
 			if (param & 16) flags ^= FF_SEETHROUGH;
 			if (param & 32) flags ^= FF_SHOOTTHROUGH;
-			
+
 			if (param2 & 1) flags |= FF_NOSHADE;
 			if (param2 & 2) flags |= FF_DOUBLESHADOW;
 			if (param2 & 4) flags |= FF_FOG;
@@ -973,7 +973,7 @@ int MapLoader::Set3DFloor(line_t * line, int param, int param2, int alpha)
 			alpha = clamp(alpha, 0, 255);
 			if (alpha == 0) flags &= ~(FF_RENDERALL | FF_BOTHPLANES | FF_ALLSIDES);
 			else if (alpha != 255) flags |= FF_TRANSLUCENT;
-			
+
 		}
 		P_Add3DFloor(ss, sec, line, flags, alpha);
 	}
@@ -1438,4 +1438,3 @@ void MapLoader::CreateScroller(EScroll type, double dx, double dy, sector_t *sec
 {
 	Level->CreateThinker<DScroller>(type, dx, dy, nullptr, sect, side, accel, scrollpos, scrollmode);
 }
-

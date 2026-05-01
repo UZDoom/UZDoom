@@ -56,8 +56,3 @@ protected:
 	void AddString(int printlevel, FFont *printFont, const FString &source, int formatwidth, float keeptime, int maxlines);
 
 };
-
-
-
-
-

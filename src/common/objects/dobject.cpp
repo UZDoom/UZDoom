@@ -45,7 +45,7 @@ ClassReg DObject::RegistrationInfo =
 	nullptr,								// MyClass
 	"DObject",								// Name
 	nullptr,								// ParentType
-	nullptr,								
+	nullptr,
 	nullptr,								// Pointers
 	&DObject::InPlaceConstructor,			// ConstructNative
 	nullptr,
@@ -334,7 +334,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(DObject, Destroy, NativeDestroy)
 {
 	PARAM_SELF_PROLOGUE(DObject);
 	NativeDestroy(self);
-	return 0;	
+	return 0;
 }
 
 //==========================================================================
@@ -635,7 +635,7 @@ void DObject::Serialize(FSerializer &arc)
 	SerializeFlag("travelling", OF_Travelling);
 	SerializeFlag("transient", OF_Transient);	// This is needed for rollbacks.
 	SerializeFlag("norollback", OF_NoRollback);
-		
+
 	ObjectFlags |= OF_SerialSuccess;
 
 	if (arc.isReading() && (ObjectFlags & OF_Networked) && !arc.IsRollback())
@@ -925,4 +925,3 @@ DEFINE_ACTION_FUNCTION_NATIVE(DObject, GetNetworkEntity, GetNetworkEntity)
 
 	ACTION_RETURN_OBJECT(NetworkEntityManager::GetNetworkEntity(id));
 }
-

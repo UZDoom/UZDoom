@@ -50,9 +50,9 @@
 #define XINPUT_DLL_A  "xinput1_3.dll"
 #define XINPUT_DLL_W L"xinput1_3.dll"
 #ifdef UNICODE
-    #define XINPUT_DLL XINPUT_DLL_W
+	#define XINPUT_DLL XINPUT_DLL_W
 #else
-    #define XINPUT_DLL XINPUT_DLL_A
+	#define XINPUT_DLL XINPUT_DLL_A
 #endif
 #endif
 

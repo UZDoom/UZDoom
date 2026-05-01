@@ -396,7 +396,7 @@ DVector2 DStatusBarCore::GetHUDScale() const
 
 //---------------------------------------------------------------------------
 //
-//  
+//
 //
 //---------------------------------------------------------------------------
 
@@ -409,7 +409,7 @@ void DStatusBarCore::BeginStatusBar(int resW, int resH, int relTop, bool forceSc
 
 //---------------------------------------------------------------------------
 //
-//  
+//
 //
 //---------------------------------------------------------------------------
 
@@ -924,7 +924,7 @@ void DStatusBarCore::Fill(PalEntry color, double x, double y, double w, double h
 
 	int x1 = int(x);
 	int y1 = int(y);
-	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like 
+	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like
 	int hh = int(y + h - y1);	// y=3.5, height = 5.5 where adding both values gives a larger integer than adding the two integers.
 
 	Dim(twod, color, float(Alpha), x1, y1, ww, hh);
@@ -942,9 +942,7 @@ void DStatusBarCore::SetClipRect(double x, double y, double w, double h, int fla
 	TransformRect(x, y, w, h, flags);
 	int x1 = int(x);
 	int y1 = int(y);
-	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like 
+	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like
 	int hh = int(y + h - y1); // y=3.5, height = 5.5 where adding both values gives a larger integer than adding the two integers.
 	twod->SetClipRect(x1, y1, ww, hh);
 }
-
-

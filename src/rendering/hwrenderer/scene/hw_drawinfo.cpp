@@ -214,10 +214,10 @@ HWDrawInfo *HWDrawInfo::EndDrawInfo()
 
 void HWDrawInfo::ClearBuffers()
 {
-    otherFloorPlanes.Clear();
-    otherCeilingPlanes.Clear();
-    floodFloorSegs.Clear();
-    floodCeilingSegs.Clear();
+	otherFloorPlanes.Clear();
+	otherCeilingPlanes.Clear();
+	floodFloorSegs.Clear();
+	floodCeilingSegs.Clear();
 
 	// clear all the lists that might not have been cleared already
 	MissingUpperTextures.Clear();
@@ -295,7 +295,7 @@ void HWDrawInfo::SetViewArea()
 
 //-----------------------------------------------------------------------------
 //
-// 
+//
 //
 //-----------------------------------------------------------------------------
 
@@ -912,7 +912,7 @@ void HWDrawInfo::EndDrawScene(sector_t * viewsector, FRenderState &state)
 		DrawCoronas(state);
 	}*/
 
-	// [BB] HUD models need to be rendered here. 
+	// [BB] HUD models need to be rendered here.
 	const bool renderHUDModel = IsHUDModelForPlayerAvailable(players[consoleplayer].camera->player);
 	if (renderHUDModel)
 	{
@@ -981,7 +981,7 @@ void HWDrawInfo::Set3DViewport(FRenderState &state)
 //
 // gl_drawscene - this function renders the scene from the current
 // viewpoint, including mirrors and skyboxes and other portals
-// It is assumed that the HWPortal::EndFrame returns with the 
+// It is assumed that the HWPortal::EndFrame returns with the
 // stencil, z-buffer and the projection matrix intact!
 //
 //-----------------------------------------------------------------------------
@@ -1073,10 +1073,9 @@ void HWDrawInfo::AddSubsectorToPortal(FSectorPortalGroup *ptg, subsector_t *sub)
 	auto portal = FindPortal(ptg);
 	if (!portal)
 	{
-        portal = new HWSectorStackPortal(&portalState, ptg);
+		portal = new HWSectorStackPortal(&portalState, ptg);
 		Portals.Push(portal);
 	}
-    auto ptl = static_cast<HWSectorStackPortal*>(portal);
+	auto ptl = static_cast<HWSectorStackPortal*>(portal);
 	ptl->AddSubsector(sub);
 }
-

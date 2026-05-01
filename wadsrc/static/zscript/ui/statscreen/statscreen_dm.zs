@@ -23,7 +23,7 @@ class DeathmatchStatusScreen : StatusScreen
 	double FontScale;
 	int RowHeight;
 	Font displayFont;
-	
+
 	//====================================================================
 	//
 	//
@@ -186,7 +186,7 @@ class DeathmatchStatusScreen : StatusScreen
 		name_x = int(icon_x + maxscorewidth * FontScale);
 		frags_x = name_x + int((maxnamewidth + 1 + MAX(displayFont.StringWidth("XXXXXXXXXX"), displayFont.StringWidth(text_frags)) + 16) * FontScale);
 		deaths_x = frags_x + int(((deaths_len = displayFont.StringWidth(text_deaths)) + 16) * FontScale);
-		
+
 		x = (Screen.GetWidth() - deaths_x) >> 1;
 		icon_x += x;
 		name_x += x;
@@ -197,7 +197,7 @@ class DeathmatchStatusScreen : StatusScreen
 		drawTextScaled(displayFont, frags_x - displayFont.StringWidth(text_frags) * FontScale, y, text_frags, FontScale, textcolor);
 		drawTextScaled(displayFont, deaths_x - deaths_len * FontScale, y, text_deaths, FontScale, textcolor);
 		y += height + int(6 * FontScale);
-		
+
 		// Sort all players
 		Array<int> sortedplayers;
 		GetSortedPlayers(sortedplayers, teamplay);
@@ -221,7 +221,7 @@ class DeathmatchStatusScreen : StatusScreen
 			{
 				screen.DrawTexture(player.mo.ScoreIcon, true, icon_x, y, DTA_CleanNoMove, true);
 			}
-			
+
 			drawTextScaled(displayFont, name_x, y + ypadding, player.GetUserName(), FontScale, thiscolor);
 			drawNumScaled(displayFont, frags_x, y + ypadding, FontScale, cnt_frags[pnum], 0, textcolor);
 
@@ -236,7 +236,7 @@ class DeathmatchStatusScreen : StatusScreen
 		y += height + 3 * CleanYfac;
 		drawTextScaled(displayFont, name_x, y, Stringtable.Localize("$SCORE_TOTAL"), FontScale, textcolor);
 		drawNumScaled(displayFont, frags_x, y, FontScale, total_frags, 0, textcolor);
-		
+
 		if (ng_state >= 4)
 		{
 			drawNumScaled(displayFont, deaths_x, y, FontScale, total_deaths, 0, textcolor);
@@ -278,9 +278,9 @@ class DeathmatchStatusScreen : StatusScreen
 		}
 
 		int y = DrawPatchOrText(oldy, entering, enteringPatch, "$WI_ENTERING");
-		
+
 		// If the displayed info is made of patches we need some additional offsetting here.
-		
+
 		if (ispatch)
 		{
 			int h1 = BigFont.GetHeight() - BigFont.GetDisplacement();
@@ -297,12 +297,12 @@ class DeathmatchStatusScreen : StatusScreen
 
 		y = DrawName(y, wbs.LName1, lnametexts[1]);
 
-		if (wbs.LName1.isValid() && authortexts[1].length() > 0) 
+		if (wbs.LName1.isValid() && authortexts[1].length() > 0)
 		{
 			// Consdider the ascender height of the following text.
 			y += author.mFont.GetMaxAscender(authortexts[1]) * scaleFactorY;
 		}
-			
+
 		DrawScoreboard(DrawAuthor(y, authortexts[1]));
 	}
 }

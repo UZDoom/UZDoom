@@ -915,4 +915,3 @@ class Stalagmite : Actor
 		Stop;
 	}
 }
-

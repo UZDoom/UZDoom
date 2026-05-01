@@ -391,7 +391,7 @@ bool FLevelLocals::ChangePortal(line_t *ln, int thisid, int destid)
 inline int P_GetLineSide(const DVector2 &pos, const linebase_t *line)
 {
 	double v = (pos.Y - line->v1->fY()) * line->Delta().X + (line->v1->fX() - pos.X) * line->Delta().Y;
-	return v < -1. / 65536. ? -1 : v > 1. / 65536 ? 1 : 0;
+	return v < -EQUAL_EPSILON ? -1 : v > EQUAL_EPSILON ? 1 : 0;
 }
 
 bool P_ClipLineToPortal(linebase_t* line, linebase_t* portal, DVector2 view, bool partial, bool samebehind)
@@ -421,7 +421,7 @@ bool P_ClipLineToPortal(linebase_t* line, linebase_t* portal, DVector2 view, boo
 	else
 	{
 		// The line intersects with the portal straight, so we need to do another check to see how both ends of the portal lie in relation to the viewer.
-		int viewside = P_GetLineSide(view, line); 
+		int viewside = P_GetLineSide(view, line);
 		int p1side = P_GetLineSide(portal->v1->fPos(), line);
 		int p2side = P_GetLineSide(portal->v2->fPos(), line);
 		// Do the same handling of points on the portal straight as above.
@@ -598,7 +598,7 @@ unsigned FLevelLocals::GetStackPortal(AActor *point, int plane)
 //
 // GetPortalOffsetPosition
 //
-// Offsets a given coordinate if the trace from the origin crosses an 
+// Offsets a given coordinate if the trace from the origin crosses an
 // interactive line-to-line portal.
 //
 //============================================================================
@@ -790,7 +790,7 @@ void FLevelLocals::AddDisplacementForPortal(FLinePortal *portal)
 
 bool FLevelLocals::ConnectPortalGroups()
 {
-	// Now 
+	// Now
 	uint8_t indirect = 1;
 	bool bogus = false;
 	bool changed;

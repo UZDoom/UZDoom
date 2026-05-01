@@ -116,7 +116,7 @@ class ArtiInvulnerability : PowerupGiver
 		Loop;
 	}
 }
-	
+
 // Invulnerability Hexen (Icon of the defender) -----------------------------
 
 class ArtiInvulnerability2 : PowerupGiver
@@ -140,7 +140,7 @@ class ArtiInvulnerability2 : PowerupGiver
 		Loop;
 	}
 }
-	
+
 // Torch --------------------------------------------------------------------
 
 class ArtiTorch : PowerupGiver

@@ -51,7 +51,7 @@ void I_GetVulkanDrawableSize(int *width, int *height)
 
 bool I_GetVulkanPlatformExtensions(unsigned int *count, const char **names)
 {
-	static const char* extensions[] = 
+	static const char* extensions[] =
 	{
 		VK_KHR_SURFACE_EXTENSION_NAME,
 		VK_KHR_WIN32_SURFACE_EXTENSION_NAME

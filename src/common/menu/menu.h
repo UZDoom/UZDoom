@@ -57,7 +57,7 @@ enum EMenuKey
 	MKEY_Clear,		// Clear keybinding/flip player sprite preview
 	NUM_MKEYS,
 
-	// These are not buttons but events sent from other menus 
+	// These are not buttons but events sent from other menus
 
 	MKEY_Input,		// Sent when input is confirmed
 	MKEY_Abort,		// Input aborted
@@ -301,7 +301,7 @@ public:
 	bool GetValue(int i, int *pvalue);
 	void OffsetPositionY(int ydelta) { mYpos += ydelta; }
 	double GetY() { return mYpos; }
-};	
+};
 
 //=============================================================================
 //

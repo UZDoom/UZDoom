@@ -102,7 +102,7 @@ CUSTOM_CVAR(Float, r_line_distance_cull, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	}
 }
 
-CUSTOM_CVAR(Float, r_model_distance_cull, 1024.f, 0/*CVAR_ARCHIVE | CVAR_GLOBALCONFIG*/) // Experimental for the moment until a good default is chosen 
+CUSTOM_CVAR(Float, r_model_distance_cull, 1024.f, 0/*CVAR_ARCHIVE | CVAR_GLOBALCONFIG*/) // Experimental for the moment until a good default is chosen
 {
 	if (r_model_distance_cull > 0.0)
 	{
@@ -239,7 +239,7 @@ namespace swrenderer
 				tempsec->floorplane = sec->floorplane;
 				tempsec->ceilingplane = s->floorplane;
 				tempsec->ceilingplane.FlipVert();
-				tempsec->ceilingplane.ChangeHeight(-1 / 65536.);
+				tempsec->ceilingplane.ChangeHeight(-EQUAL_EPSILON);
 				tempsec->Colormap = s->Colormap;
 			}
 
@@ -251,12 +251,12 @@ namespace swrenderer
 
 				tempsec->ceilingplane = s->floorplane;
 				tempsec->ceilingplane.FlipVert();
-				tempsec->ceilingplane.ChangeHeight(-1 / 65536.);
+				tempsec->ceilingplane.ChangeHeight(-EQUAL_EPSILON);
 				if (s->GetTexture(sector_t::ceiling) == skyflatnum)
 				{
 					tempsec->floorplane = tempsec->ceilingplane;
 					tempsec->floorplane.FlipVert();
-					tempsec->floorplane.ChangeHeight(+1 / 65536.);
+					tempsec->floorplane.ChangeHeight(EQUAL_EPSILON);
 					tempsec->SetTexture(sector_t::ceiling, tempsec->GetTexture(sector_t::floor), false);
 					tempsec->planes[sector_t::ceiling].xform = tempsec->planes[sector_t::floor].xform;
 				}
@@ -288,7 +288,7 @@ namespace swrenderer
 				tempsec->ceilingplane = s->ceilingplane;
 				tempsec->floorplane = s->ceilingplane;
 				tempsec->floorplane.FlipVert();
-				tempsec->floorplane.ChangeHeight(+1 / 65536.);
+				tempsec->floorplane.ChangeHeight(EQUAL_EPSILON);
 				tempsec->Colormap = s->Colormap;
 
 				tempsec->SetTexture(sector_t::ceiling, diffTex ? sec->GetTexture(sector_t::ceiling) : s->GetTexture(sector_t::ceiling), false);
@@ -395,7 +395,7 @@ namespace swrenderer
 			rx2 = t;
 			std::swap(ry1, ry2);
 		}
-		
+
 		auto viewport = Thread->Viewport.get();
 
 		if (rx1 >= -ry1)
@@ -776,14 +776,14 @@ namespace swrenderer
 						position = sector_t::ceiling;
 					}
 
-					tempsec.ceilingplane.ChangeHeight(-1 / 65536.);
+					tempsec.ceilingplane.ChangeHeight(-EQUAL_EPSILON);
 					if (cameraLight->FixedLightLevel() < 0 && sub->sector->e->XFloor.lightlist.Size())
 					{
 						lightlist_t *light = P_GetPlaneLight(sub->sector, &tempsec.ceilingplane, false);
 						basecolormap = GetColorTable(light->extra_colormap);
 						ceilinglightlevel = *light->p_lightlevel;
 					}
-					tempsec.ceilingplane.ChangeHeight(1 / 65536.);
+					tempsec.ceilingplane.ChangeHeight(EQUAL_EPSILON);
 
 					VisiblePlane *ceilingplane3d = Thread->PlaneList->FindPlane(
 						tempsec.ceilingplane,
@@ -932,7 +932,7 @@ namespace swrenderer
 					{
 						thinglightlevel = thing->Sector->GetTexture(sector_t::ceiling) == skyflatnum ? thing->Sector->GetCeilingLight() : thing->Sector->GetFloorLight();
 						auto nc = !!(thing->Level->flags3 & LEVEL3_NOCOLOREDSPRITELIGHTING);
-						thingColormap = GetSpriteColorTable(thing->Sector->Colormap, thing->Sector->SpecialColors[sector_t::sprites], nc);					
+						thingColormap = GetSpriteColorTable(thing->Sector->Colormap, thing->Sector->SpecialColors[sector_t::sprites], nc);
 					}
 					if (thing->LightLevel > -1)
 					{

@@ -143,6 +143,3 @@ class SVELight7974 : SVELight
 		Args 100,100,90,100;
 	}
 }
-
-
-

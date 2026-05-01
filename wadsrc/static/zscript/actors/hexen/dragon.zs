@@ -70,7 +70,7 @@ class Dragon : Actor
 		DRAG M -1;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// DragonSeek
@@ -122,7 +122,7 @@ class Dragon : Actor
 		if (targ.bShootable && random[DragonSeek]() < 64)
 		{ // attack the destination mobj if it's attackable
 			Actor oldTarget;
-			
+
 			if (absangle(angle, AngleTo(targ)) < 22.5)
 			{
 				oldTarget = target;
@@ -136,7 +136,7 @@ class Dragon : Actor
 				}
 				else if (random[DragonSeek]() < 128 && CheckMissileRange())
 				{
-					SpawnMissile(targ, "DragonFireball");		
+					SpawnMissile(targ, "DragonFireball");
 					A_StartSound (AttackSound, CHAN_WEAPON);
 				}
 				target = oldTarget;
@@ -349,7 +349,7 @@ class DragonFireball : Actor
 		DRFX KL 3 Bright;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_DragonFX2

@@ -31,11 +31,11 @@ class CommanderKeen : Actor
 		Height 72;
 		Mass 10000000;
 		PainChance 256;
-		+SOLID 
-		+SPAWNCEILING 
-		+NOGRAVITY 
-		+SHOOTABLE 
-		+COUNTKILL 
+		+SOLID
+		+SPAWNCEILING
+		+NOGRAVITY
+		+SHOOTABLE
+		+COUNTKILL
 		+NOICEDEATH
 		+ISMONSTER
 		PainSound "keen/pain";
@@ -101,5 +101,3 @@ extend class Actor
 		Door_Open(doortag, 16);
 	}
 }
-
-

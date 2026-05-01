@@ -222,7 +222,7 @@ bool IQMModel::Load(const char* path, int lumpnum, const char* buffer, int lengt
 			{
 				baseframe[i] = m;
 				inversebaseframe[i] = invm;
-			}			
+			}
 		}
 
 		TRSData.Resize(num_frames * num_poses);
@@ -497,7 +497,7 @@ double IQMModel::FindFramerate(FName name)
 
 void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int frame1, int frame2, double inter, FTranslationID translation, const FTextureID* surfaceskinids, int boneStartPosition)
 {
-	
+
 	renderer->SetupFrame(this, 0, 0, NumVertices, boneStartPosition >= 0 ? boneStartPosition : screen->mBones->UploadBones(boneData));
 
 	FGameTexture* lastSkin = nullptr;
@@ -514,7 +514,7 @@ void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int fra
 			else if (Meshes[i].Skin.isValid())
 			{
 				meshSkin = TexMan.GetGameTexture(Meshes[i].Skin, true);
-			}	
+			}
 			else
 			{
 				continue;
@@ -581,7 +581,7 @@ FQuaternion InterpolateQuat(const FQuaternion &from, const FQuaternion &to, floa
 	}
 
 	rot += to * t;
-	
+
 	return rot.Unit();
 }
 
@@ -876,7 +876,7 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesOnlyOffsets(TArray<BoneOverride>
 		0.0f, 1.0f, 0.0f, 0.0f,
 		0.0f, 0.0f, 0.0f, 1.0f
 	};
-	
+
 	if(in)
 	{
 		if(out)
@@ -897,7 +897,7 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesOnlyOffsets(TArray<BoneOverride>
 				out->bones_with_override[i] = bone;
 
 				out->positions[i].loadIdentity();
-				
+
 				VSMatrix m;
 				m.loadIdentity();
 				m.translate(bone.translation.X, bone.translation.Y, bone.translation.Z);

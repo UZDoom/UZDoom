@@ -7,4 +7,3 @@ graphic INTERPIC, 560, 200
 {
 	patch TNTINTER, 0, 0 { }
 }
-

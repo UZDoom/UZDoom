@@ -107,11 +107,11 @@ FImageSource * PCXImage_TryCreate(FileReader & file, int lumpnum)
 
 	if (hdr.manufacturer != 10 || hdr.encoding != 1) return NULL;
 	if (hdr.version != 0 && hdr.version != 2 && hdr.version != 3 && hdr.version != 4 && hdr.version != 5) return NULL;
-	if (hdr.bitsPerPixel != 1 && hdr.bitsPerPixel != 8 && hdr.bitsPerPixel != 4) return NULL; 
+	if (hdr.bitsPerPixel != 1 && hdr.bitsPerPixel != 8 && hdr.bitsPerPixel != 4) return NULL;
 	if (hdr.bitsPerPixel == 1 && hdr.numColorPlanes !=1 && hdr.numColorPlanes != 4) return NULL;
 	if (hdr.bitsPerPixel == 8 && hdr.bytesPerScanLine != ((hdr.xmax - hdr.xmin + 2)&~1)) return NULL;
 
-	for (int i = 0; i < 54; i++) 
+	for (int i = 0; i < 54; i++)
 	{
 		if (hdr.padding[i] != 0) return NULL;
 	}
@@ -374,7 +374,7 @@ PalettedPixels FPCXTexture::CreatePalettedPixels(int conversion, int frame)
 			lump.Seek(-769, FileReader::SeekEnd);
 			lump.ReadUInt8();
 			//if (c !=0x0c) memcpy(PaletteMap, GrayMap, 256);	// Fallback for files without palette
-			//else 
+			//else
 			for(int i=0;i<256;i++)
 			{
 				uint8_t r = lump.ReadUInt8();
@@ -462,7 +462,7 @@ int FPCXTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			lump.Seek(-769, FileReader::SeekEnd);
 			uint8_t c = lump.ReadUInt8();
 			c=0x0c;	// Apparently there's many non-compliant PCXs out there...
-			if (c !=0x0c) 
+			if (c !=0x0c)
 			{
 				for(int i=0;i<256;i++) pe[i]=PalEntry(255,i,i,i);	// default to a gray map
 			}
@@ -486,4 +486,3 @@ int FPCXTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	}
 	return 0;
 }
-

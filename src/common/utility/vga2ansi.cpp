@@ -50,26 +50,26 @@ static const char *ansi_esc[2] = {"\x1b[", ";"};
 static const char *ansi_end[2] = {"", "m"};
 
 // Map DOS color to ANSI escape code
-static const char *ansi_fg[16] = 
+static const char *ansi_fg[16] =
 {
-	"30", "34", "32", "36", "31", "35", "33", "37", 
+	"30", "34", "32", "36", "31", "35", "33", "37",
 	"90", "94", "92", "96", "91", "95", "93", "97"
 };
 // Only standard backgrounds (no bright backgrounds in classic ANSI)
-static const char *ansi_bg[8] = 
+static const char *ansi_bg[8] =
 {
 	"40", "44", "42", "46",
 	"41", "45", "43", "47"
 };
 // ANSI codes for truecolor DOS colors
-static const char *ansi_tc_fg[16] = 
+static const char *ansi_tc_fg[16] =
 {
 	"38;2;0;0;0", "38;2;0;0;170", "38;2;0;170;0", "38;2;0;170;170",
 	"38;2;170;0;0", "38;2;170;0;170", "38;2;170;85;0", "38;2;170;170;170",
 	"38;2;85;85;85", "38;2;85;85;255", "38;2;85;255;0", "38;2;85;255;255",
 	"38;2;255;85;85", "38;2;255;85;255", "38;2;255;255;85", "38;2;255;255;255"
 };
-static const char *ansi_tc_bg[8] = 
+static const char *ansi_tc_bg[8] =
 {
 	"48;2;0;0;0", "48;2;0;0;170", "48;2;0;170;0", "48;2;0;170;170",
 	"48;2;170;0;0", "48;2;170;0;170", "48;2;170;85;0", "48;2;170;170;170"
@@ -140,11 +140,11 @@ void vga_to_ansi(const uint8_t *buf)
 			: Support::BASIC;
 #endif
 
-	for (int row = 0; row < 25; ++row) 
+	for (int row = 0; row < 25; ++row)
 	{
 		int last_fg = -1, last_bg = -1;
 		bool last_blink = false;
-		for (int col = 0; col < 80; ++col) 
+		for (int col = 0; col < 80; ++col)
 		{
 			int off = (row * 80 + col) * 2;
 			uint8_t ch = buf[off];
@@ -202,4 +202,3 @@ void vga_to_ansi(const uint8_t *buf)
 		CPrint("\n");
 	}
 }
-

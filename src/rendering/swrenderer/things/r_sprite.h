@@ -37,7 +37,7 @@ namespace swrenderer
 
 		FTranslationID Translation = NO_TRANSLATION;
 		uint32_t FillColor = 0;
-		
+
 		uint32_t dynlightcolor = 0;
 	};
 }

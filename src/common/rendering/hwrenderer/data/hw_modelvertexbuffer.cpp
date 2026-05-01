@@ -104,5 +104,3 @@ void FModelVertexBuffer::UnlockIndexBuffer()
 {
 	if (mIndexBuffer) mIndexBuffer->Unlock();
 }
-
-

@@ -41,7 +41,7 @@ class FConsoleBuffer
 {
 	TArray<FString> mConsoleText;
 	TArray<TArray<FBrokenLines>> m_BrokenConsoleText;	// This holds the structures returned by V_BreakLines and is used for memory management.
-	TArray<unsigned int> mBrokenStart;		
+	TArray<unsigned int> mBrokenStart;
 	TArray<FBrokenLines> mBrokenLines;		// This holds the single lines, indexed by mBrokenStart and is used for printing.
 	FILE * mLogFile;
 	EAddType mAddType;
@@ -66,4 +66,3 @@ public:
 	int GetFormattedLineCount() { return mTextLines; }
 	FBrokenLines *GetLines() { return &mBrokenLines[0]; }
 };
-

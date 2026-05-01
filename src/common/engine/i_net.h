@@ -55,13 +55,13 @@ enum ENetCommand
 enum ENetFlags
 {
 	NCMD_EXIT = 0x80,		// Client has left the game
-	NCMD_RETRANSMIT = 0x40,		// 
+	NCMD_RETRANSMIT = 0x40,		//
 	NCMD_SETUP = 0x20,		// Guest is letting the host know who it is
 	NCMD_LEVELREADY = 0x10,		// After loading a level, guests send this over to the host who then sends it back after all are received
 	NCMD_QUITTERS = 0x08,		// Client is getting info about one or more players quitting
 	NCMD_COMPRESSED = 0x04,		// Remainder of packet is compressed
 	NCMD_LATENCYACK = 0x02,		// A latency packet was just read, so let the sender know.
-	NCMD_LATENCY = 0x01,		// Latency packet, used for measuring RTT.		
+	NCMD_LATENCY = 0x01,		// Latency packet, used for measuring RTT.
 };
 
 struct FVerificationError

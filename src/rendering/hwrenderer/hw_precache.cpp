@@ -91,7 +91,7 @@ void hw_PrecacheTexture(uint8_t *texhitlist, TMap<PClassActor*, bool> &actorhitl
 	TMap<FTexture*, bool> allTextures;
 	TArray<FTexture*> layers;
 
-	// First collect the potential max. texture set 
+	// First collect the potential max. texture set
 	for (int i = 1; i < TexMan.NumTextures(); i++)
 	{
 		auto gametex = TexMan.GameByIndex(i);
@@ -310,7 +310,7 @@ void hw_PrecacheTexture(uint8_t *texhitlist, TMap<PClassActor*, bool> &actorhitl
 		FModelRenderer* renderer = new FHWModelRenderer(nullptr, *screen->RenderState(), -1);
 		for (unsigned i = 0; i < Models.Size(); i++)
 		{
-			if (modellist[i]) 
+			if (modellist[i])
 				Models[i]->BuildVertexBuffer(renderer);
 		}
 		delete renderer;
@@ -323,4 +323,3 @@ void hw_PrecacheTexture(uint8_t *texhitlist, TMap<PClassActor*, bool> &actorhitl
 	delete[] spritelist;
 	delete[] modellist;
 }
-

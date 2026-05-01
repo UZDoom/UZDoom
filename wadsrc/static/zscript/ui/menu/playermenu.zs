@@ -34,7 +34,7 @@ class PlayerMenu : ListMenu
 	PlayerClass mPlayerClass;
 	Array<int> PlayerColorSets;
 	Array<int> mPlayerSkins;
-	
+
 	// All write function for the player config are native to prevent abuse.
 	static native void AutoaimChanged(float val);
 	static native void TeamChanged(int val);
@@ -46,7 +46,7 @@ class PlayerMenu : ListMenu
 	static native void PlayerNameChanged(String name);
 	static native void SkinChanged (int val);
 	static native void ClassChanged(int sel, PlayerClass cls);
-	
+
 	//=============================================================================
 	//
 	//
@@ -57,13 +57,13 @@ class PlayerMenu : ListMenu
 	{
 		Translation.SetPlayerTranslation(TRANSLATION_Players, MAXPLAYERS, consoleplayer, mPlayerClass);
 	}
-	
+
 	protected void SendNewColor (int red, int green, int blue)
 	{
 		ColorChanged(red, green, blue);
 		UpdateTranslation();
 	}
-	
+
 	//=============================================================================
 	//
 	//
@@ -190,7 +190,7 @@ class PlayerMenu : ListMenu
 
 	}
 
-	
+
 	//=============================================================================
 	//
 	//
@@ -359,7 +359,7 @@ class PlayerMenu : ListMenu
 		}
 	}
 
-	
+
 	//=============================================================================
 	//
 	//
@@ -418,7 +418,7 @@ class PlayerMenu : ListMenu
 
 				case 'Color':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						int mycolorset = -1;
 
@@ -432,7 +432,7 @@ class PlayerMenu : ListMenu
 						if (red != NULL) red.Enable(mycolorset == -1);
 						if (green != NULL) green.Enable(mycolorset == -1);
 						if (blue != NULL) blue.Enable(mycolorset == -1);
-						
+
 						ColorSetChanged(v - 1);
 						UpdateTranslation();
 					}
@@ -440,7 +440,7 @@ class PlayerMenu : ListMenu
 
 				case 'Red':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						Color colr = players[consoleplayer].GetColor();
 						SendNewColor (v, colr.g, colr.b);
@@ -449,7 +449,7 @@ class PlayerMenu : ListMenu
 
 				case 'Green':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						Color colr = players[consoleplayer].GetColor();
 						SendNewColor (colr.r, v, colr.b);
@@ -458,16 +458,16 @@ class PlayerMenu : ListMenu
 
 				case 'Blue':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						Color colr = players[consoleplayer].GetColor();
 						SendNewColor (colr.r, colr.g, v);
 					}
 					break;
-					
+
 				case 'Class':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						ChangeClass(li);
 					}
@@ -479,7 +479,7 @@ class PlayerMenu : ListMenu
 
 				case 'Gender':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						GenderChanged(v);
 					}
@@ -487,7 +487,7 @@ class PlayerMenu : ListMenu
 
 				case 'Autoaim':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						AutoaimChanged(v);
 					}
@@ -495,7 +495,7 @@ class PlayerMenu : ListMenu
 
 				case 'Switch':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						SwitchOnPickupChanged(v);
 					}
@@ -503,7 +503,7 @@ class PlayerMenu : ListMenu
 
 				case 'AlwaysRun':
 					[res, v] = li.GetValue(0);
-					if (res) 
+					if (res)
 					{
 						AlwaysRunChanged(v);
 					}
@@ -517,7 +517,7 @@ class PlayerMenu : ListMenu
 		}
 		return Super.MenuEvent(mkey, fromcontroller);
 	}
-	
+
 	//=============================================================================
 	//
 	//
@@ -569,7 +569,7 @@ class PlayerMenu : ListMenu
 		return res;
 	}
 
-	
+
 	//=============================================================================
 	//
 	//
@@ -585,5 +585,5 @@ class PlayerMenu : ListMenu
 		screen.DrawText (SmallFont, Font.CR_GOLD, 320 - 32 - 32 - SmallFont.StringWidth (str)/2, 130 + SmallFont.GetHeight (), str, DTA_Clean, true);
 
 	}
-	
+
 }

@@ -38,7 +38,7 @@ static bool OpenSSI(FResourceFile* file, int version, int EntryCount, LumpFilter
 	uint32_t NumLumps = EntryCount * 2;
 	auto Entries = file->AllocateEntries(NumLumps);
 	auto Reader = file->GetContainerReader();
-	
+
 
 	int32_t j = (version == 2 ? 267 : 254) + (EntryCount * 121);
 	for (uint32_t i = 0; i < NumLumps; i+=2)
@@ -60,7 +60,7 @@ static bool OpenSSI(FResourceFile* file, int version, int EntryCount, LumpFilter
 		Entries[i].FileName = file->NormalizeFileName(fn);
 		if (strstr(fn, ".GRP")) Entries[i].Flags |= RESFF_EMBEDDED;
 
-		// SSI files can swap the order of the extension's characters - but there's no reliable detection for this and it can be mixed inside the same container, 
+		// SSI files can swap the order of the extension's characters - but there's no reliable detection for this and it can be mixed inside the same container,
 		// so we have no choice but to create another file record for the altered name.
 		std::swap(fn[strlength - 1], fn[strlength - 3]);
 

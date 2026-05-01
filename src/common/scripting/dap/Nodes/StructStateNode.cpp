@@ -53,7 +53,7 @@ bool StructStateNode::SerializeToProtocol(dap::Variable &variable)
 	if (inRegisters)
 	{
 		variable.value = StringFormat("%s <REGISTERS>", typeval.c_str());
-	} 
+	}
 	else if (!valid)
 	{
 		variable.value = StringFormat("%s <NULL>", typeval.c_str());

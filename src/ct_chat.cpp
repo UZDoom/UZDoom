@@ -303,7 +303,7 @@ void CT_Drawer (void)
 		}
 		printstr += displayfont->GetCursor();
 
-		DrawText(drawer, displayfont, CR_GREEN, 0, y, prompt.GetChars(), 
+		DrawText(drawer, displayfont, CR_GREEN, 0, y, prompt.GetChars(),
 			DTA_VirtualWidth, screen_width, DTA_VirtualHeight, screen_height, DTA_KeepRatio, true, TAG_DONE);
 		DrawText(drawer, displayfont, CR_GREY, promptwidth, y, printstr.GetChars(),
 			DTA_VirtualWidth, screen_width, DTA_VirtualHeight, screen_height, DTA_KeepRatio, true, TAG_DONE);

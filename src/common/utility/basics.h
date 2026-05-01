@@ -107,12 +107,12 @@ using std::max;
 template<typename T>
 T clamp(T val, T minval, T maxval)
 {
-    return std::max<T>(std::min<T>(val, maxval), minval);
+	return std::max<T>(std::min<T>(val, maxval), minval);
 }
 
 static inline void PrefetchL3(const void* Address)
 {
 #if defined(_M_X64) || defined(__x86_64__) || defined(__amd64__) || defined(__amd64) || defined(__x86_64__) || defined(__x86_64)
-    _mm_prefetch(static_cast<const char*>(Address), _MM_HINT_T1);
+	_mm_prefetch(static_cast<const char*>(Address), _MM_HINT_T1);
 #endif
 }

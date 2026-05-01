@@ -70,6 +70,8 @@ CVAR(Int, defaultnethostteam, 255, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, defaultnetjointeam, 255, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, defaultnetextratic, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, defaultnetsavefile, "", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(String, ui_colors, "", CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
+CVAR(Float, ui_color_mix, .35, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
 
 EXTERN_CVAR(Bool, ui_generic)
 EXTERN_CVAR(Int, vid_preferbackend)
@@ -81,6 +83,9 @@ CUSTOM_CVAR(String, language, "auto", CVAR_ARCHIVE | CVAR_NOINITCALL | CVAR_GLOB
 	UpdateGenericUI(ui_generic);
 	if (sysCallbacks.LanguageChanged) sysCallbacks.LanguageChanged(self);
 }
+
+FARG(pride, "Launcher", "Show pride colors", "",
+	 "Show pride colors in launcher.");
 
 // Some of this info has to be passed and managed from the front end since it's game-engine specific.
 FStartupSelectionInfo::FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs& args, int startFlags) : Wads(&wads), Args(&args), DefaultStartFlags(startFlags)
@@ -132,6 +137,9 @@ FStartupSelectionInfo::FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs
 	DefaultNetAddress = defaultnetaddress;
 	DefaultNetJoinPort = defaultnetjoinport;
 	DefaultNetJoinTeam = defaultnetjointeam;
+
+	prideColors = Args->CheckParm(FArg_pride)? "list": ui_colors;
+	prideMix = ui_color_mix;
 }
 
 // Return whatever IWAD the user selected.

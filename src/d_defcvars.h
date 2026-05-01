@@ -21,4 +21,3 @@
 	if (#name[0]==CurrentFindCVar[0]) \
 		if (CurrentFindCVar.Compare(#name) == 0) \
 			blacklisted = true;
-

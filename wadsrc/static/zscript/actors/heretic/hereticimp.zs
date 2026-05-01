@@ -47,7 +47,7 @@ class HereticImp : Actor
 		HitObituary "$OB_HERETICIMPHIT";
 		Tag "$FN_HERETICIMP";
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -91,8 +91,8 @@ class HereticImp : Actor
 		IMPX Z -1;
 		Stop;
 	}
-	
-	
+
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_ImpMsAttack
@@ -136,7 +136,7 @@ class HereticImp : Actor
 			chunk.vel.y = random2[ImpExplode]() / 64.;
 			chunk.vel.z = 9;
 		}
-		
+
 		if (extremecrash)
 		{
 			SetStateLabel ("XCrash");
@@ -168,7 +168,7 @@ class HereticImp : Actor
 		bNoGravity = true;
 		extremecrash = true;
 	}
-}		
+}
 
 // Heretic imp leader -------------------------------------------------------
 
@@ -191,7 +191,7 @@ class HereticImpLeader : HereticImp
 		Goto See;
 	}
 }
-		
+
 // Heretic imp chunk 1 ------------------------------------------------------
 
 class HereticImpChunk1 : Actor
@@ -261,5 +261,3 @@ class HereticImpBall : Actor
 		Stop;
 	}
 }
-
-

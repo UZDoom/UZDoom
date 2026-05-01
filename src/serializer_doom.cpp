@@ -673,7 +673,7 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FLevelLocal
 			{
 				lev = nullptr;
 			}
-			else 
+			else
 			{
 				lev = doomarc->Level;
 			}
@@ -682,4 +682,3 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FLevelLocal
 	}
 	return arc;
 }
-

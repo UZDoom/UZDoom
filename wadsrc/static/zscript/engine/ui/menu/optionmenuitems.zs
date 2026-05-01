@@ -164,7 +164,7 @@ class OptionMenuItemSubmenu : OptionMenuItem
 	override int Draw(OptionMenuDescriptor desc, int y, int indent, bool selected)
 	{
 		int x = drawLabel(indent, y, selected? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColorMore);
-		if (mCentered) 
+		if (mCentered)
 		{
 			return x - 16*CleanXfac_1;
 		}
@@ -252,7 +252,7 @@ class OptionMenuItemCommand : OptionMenuItemSubmenu
 		{
 			let m = OptionMenu(Menu.GetCurrentMenu());
 			// don't execute if no menu is active
-			if (m == null) return false;	
+			if (m == null) return false;
 			// don't execute if this item cannot be found in the current menu.
 			if (m.GetItem(mAction) != self) return false;
 		}
@@ -347,10 +347,10 @@ class OptionMenuItemOptionBase : OptionMenuItem
 
 	override bool SetString(int i, String newtext)
 	{
-		if (i == OP_VALUES) 
+		if (i == OP_VALUES)
 		{
 			int cnt = OptionValues.GetCount(mValues);
-			if (cnt >= 0) 
+			if (cnt >= 0)
 			{
 				mValues = newtext;
 				int s = GetSelection();
@@ -463,7 +463,7 @@ class OptionMenuItemOption : OptionMenuItemOptionBase
 			{
 				let f = mCVar.GetFloat();
 				for(int i = 0; i < cnt; i++)
-				{ 
+				{
 					if (f ~== OptionValues.GetValue(mValues, i))
 					{
 						Selection = i;
@@ -525,7 +525,7 @@ class EnterKey : Menu
 
 	override bool TranslateKeyboardEvents()
 	{
-		return false; 
+		return false;
 	}
 
 	private void SetMenuMessage(int which)
@@ -804,7 +804,7 @@ class OptionMenuItemStaticTextSwitchable : OptionMenuItem
 
 	override bool SetValue(int i, int val)
 	{
-		if (i == 0) 
+		if (i == 0)
 		{
 			mCurrent = val;
 			return true;
@@ -814,7 +814,7 @@ class OptionMenuItemStaticTextSwitchable : OptionMenuItem
 
 	override bool SetString(int i, String newtext)
 	{
-		if (i == 0) 
+		if (i == 0)
 		{
 			mAltText = newtext;
 			return true;
@@ -895,7 +895,7 @@ class OptionMenuSliderBase : OptionMenuItem
 		String textbuf;
 		double range;
 		int maxlen = 0;
-		int right = x + (12*16 + 4) * CleanXfac_1;	// length of slider. This uses the old ConFont and 
+		int right = x + (12*16 + 4) * CleanXfac_1;	// length of slider. This uses the old ConFont and
 		int cy = y + CleanYFac;
 
 		range = max - min;
@@ -1007,6 +1007,7 @@ class OptionMenuSliderBase : OptionMenuItem
 class OptionMenuItemSlider : OptionMenuSliderBase
 {
 	CVar mCVar;
+	double scale;
 
 	OptionMenuItemSlider Init(
 		String label,
@@ -1022,6 +1023,7 @@ class OptionMenuItemSlider : OptionMenuSliderBase
 	{
 		Super.Init(label, min, max, step, showval, command, graycheck, graycheckVal, graycheckMode);
 		mCVar =CVar.FindCVar(command);
+		scale = 10 ** mShowValue;
 		return self;
 	}
 
@@ -1029,7 +1031,7 @@ class OptionMenuItemSlider : OptionMenuSliderBase
 	{
 		if (mCVar != null)
 		{
-			return mCVar.GetFloat();
+			return round(mCVar.GetFloat()*scale)/scale;
 		}
 		else
 		{
@@ -1041,7 +1043,7 @@ class OptionMenuItemSlider : OptionMenuSliderBase
 	{
 		if (mCVar != null)
 		{
-			mCVar.SetFloat(val);
+			mCVar.SetFloat(round(val*scale)/scale);
 		}
 	}
 }
@@ -1228,7 +1230,7 @@ class OptionMenuItemTextField : OptionMenuFieldBase
 	override String Represent()
 	{
 		if (mEnter) return mEnter.GetText() .. Menu.OptionFont().GetCursor();
-		else 
+		else
 		{
 			bool b;
 			String s;
@@ -1365,14 +1367,15 @@ class OptionMenuItemScaleSlider : OptionMenuItemSlider
 		double min,
 		double max,
 		double step,
-		String zero,
+		String zero = "$OPTVAL_OFF",
 		String negone = "",
 		CVar graycheck = null,
 		int graycheckVal = 0,
-		name graycheckMode = 'Gray'
+		name graycheckMode = 'Gray',
+		int showval = 0
 	)
 	{
-		Super.Init(label, command, min, max, step, 0, graycheck, graycheckVal, graycheckMode);
+		Super.Init(label, command, min, max, step, showval, graycheck, graycheckVal, graycheckMode);
 		mCVar =CVar.FindCVar(command);
 		TextZero = zero;
 		TextNEgOne = negone;
@@ -1385,10 +1388,13 @@ class OptionMenuItemScaleSlider : OptionMenuItemSlider
 	{
 		drawLabel(indent, y, selected? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColor);
 
-		int Selection = int(GetSliderValue());
-		if ((Selection == 0 || Selection == -1) && mClickVal <= 0)
+		double Selection = GetSliderValue();
+		bool is_min = Selection <= mMin || Selection <= 0;
+		bool is_sub = Selection <= -1;
+
+		if (is_min || is_sub && mClickVal <= 0)
 		{
-			String text = Selection == 0? TextZero : Selection == -1? TextNegOne  : "";
+			String text = is_min? TextZero : is_sub? TextNegOne  : "";
 			drawValue(indent, y, OptionMenuSettings.mFontColorValue, text, isGrayed());
 		}
 		else

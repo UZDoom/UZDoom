@@ -1,7 +1,7 @@
 /*******************************************************************************
  *                         DEFAULT DOOM STATUS BAR
  *******************************************************************************
- * If you wish to include this file into a custom status bar please use the 
+ * If you wish to include this file into a custom status bar please use the
  * following command:
  *
  *     base Doom;
@@ -95,7 +95,7 @@ statusbar normal // Standard Doom Status bar
 	gamemode cooperative, singleplayer
 	{
 		drawimage "STARMS", 104, 168;
-		drawswitchableimage weaponslot 2, "STGNUM2", "STYSNUM2", 111, 172; 
+		drawswitchableimage weaponslot 2, "STGNUM2", "STYSNUM2", 111, 172;
 		drawswitchableimage weaponslot 3, "STGNUM3", "STYSNUM3", 123, 172;
 		drawswitchableimage weaponslot 4, "STGNUM4", "STYSNUM4", 135, 172;
 		drawswitchableimage weaponslot 5, "STGNUM5", "STYSNUM5", 111, 182;

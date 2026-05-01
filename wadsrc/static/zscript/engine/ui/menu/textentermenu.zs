@@ -97,7 +97,7 @@ class TextEnterMenu : Menu
 
 	override bool TranslateKeyboardEvents()
 	{
-		return mInputGridOkay; 
+		return mInputGridOkay;
 	}
 
 

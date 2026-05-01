@@ -279,4 +279,3 @@ class OptionMenuItemSliderReverbEditOption : OptionMenuSliderBase
 	}
 
 }
-

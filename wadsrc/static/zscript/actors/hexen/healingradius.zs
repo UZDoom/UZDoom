@@ -29,7 +29,7 @@ class ArtiHealingRadius : Inventory
 		+COUNTITEM
 		+FLOATBOB
 		Inventory.DefMaxAmount;
-		+INVENTORY.INVBAR 
+		+INVENTORY.INVBAR
 		+INVENTORY.FANCYPICKUPSOUND
 		Inventory.PickupFlash "PickupFlash";
 		Inventory.Icon "ARTIHRAD";
@@ -42,13 +42,13 @@ class ArtiHealingRadius : Inventory
 	Spawn:
 		HRAD ABCDEFGHIJKLMNOP 4 Bright;
 		Loop;
-	}	
-	
+	}
+
 	override bool Use (bool pickup)
 	{
 		bool effective = false;
 		Name mode = 'Health';
-		
+
 		PlayerPawn pp = PlayerPawn(Owner);
 		if (pp) mode = pp.HealingRadiusType;
 
@@ -111,6 +111,5 @@ class ArtiHealingRadius : Inventory
 		return effective;
 
 	}
-	
-}
 
+}

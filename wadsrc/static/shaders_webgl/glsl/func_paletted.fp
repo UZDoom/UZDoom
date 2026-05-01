@@ -22,4 +22,3 @@ vec4 ProcessTexel()
 	tex.a = 1.0;
 	return tex;
 }
-

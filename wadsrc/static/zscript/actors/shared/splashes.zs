@@ -26,8 +26,8 @@ class WaterSplash : Actor
 		Radius 2;
 		Height 4;
 		Gravity 0.125;
-		+NOBLOCKMAP 
-		+MISSILE 
+		+NOBLOCKMAP
+		+MISSILE
 		+DROPOFF
 		+NOTELEPORT
 		+CANNOTPUSH
@@ -115,8 +115,8 @@ class SludgeChunk : Actor
 		Radius 2;
 		Height 4;
 		Gravity 0.125;
-		+NOBLOCKMAP 
-		+MISSILE 
+		+NOBLOCKMAP
+		+MISSILE
 		+DROPOFF
 		+NOTELEPORT
 		+CANNOTPUSH
@@ -165,8 +165,8 @@ class BloodSplash : Actor
 		Radius 2;
 		Height 4;
 		Gravity 0.125;
-		+NOBLOCKMAP 
-		+MISSILE 
+		+NOBLOCKMAP
+		+MISSILE
 		+DROPOFF
 		+NOTELEPORT
 		+CANNOTPUSH
@@ -214,8 +214,8 @@ class SlimeChunk : Actor
 		Radius 2;
 		Height 4;
 		Gravity 0.125;
-		+NOBLOCKMAP 
-		+MISSILE 
+		+NOBLOCKMAP
+		+MISSILE
 		+DROPOFF
 		+NOTELEPORT
 		+CANNOTPUSH
@@ -261,7 +261,7 @@ class RocketSmokeTrail : Actor
 		VSpeed 1;
 		+NOBLOCKMAP
 		+NOCLIP
-		+NOGRAVITY 
+		+NOGRAVITY
 		+DONTSPLASH
 		+NOTELEPORT
 	}
@@ -279,8 +279,8 @@ class GrenadeSmokeTrail : Actor
 	{
 		RenderStyle "Translucent";
 		Alpha 0.4;
-		+NOBLOCKMAP 
-		+NOCLIP 
+		+NOBLOCKMAP
+		+NOCLIP
 		+DONTSPLASH
 		+NOTELEPORT
 		Gravity 0.1;

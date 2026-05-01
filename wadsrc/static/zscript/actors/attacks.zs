@@ -56,7 +56,7 @@ extend class Actor
 			puff.Destroy();
 		}
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	//
@@ -118,7 +118,7 @@ extend class Actor
 					SetXYZ(Vec3Offset(ofs.x, ofs.y, 0.));
 					let proj = SpawnMissileAngleZSpeed(Pos.Z + GetBobOffset() + Spawnheight, missile, self.Angle, 0, GetDefaultByType(missile).Speed, self, false);
 					SetXYZ(pos);
-					
+
 					if (proj)
 					{
 						bool temp = (puff == null);
@@ -127,7 +127,7 @@ extend class Actor
 							puff = LineAttack(pangle, range, slope, 0, 'Hitscan', pufftype, laflags | LAF_NOINTERACT, t);
 						}
 						if (puff)
-						{			
+						{
 							AimBulletMissile(proj, puff, flags, temp, true);
 							if (t.unlinked)
 							{
@@ -243,12 +243,12 @@ extend class Actor
 				originator = originator.target;
 			}
 		}
-		if (flags & SXF_TELEFRAG) 
+		if (flags & SXF_TELEFRAG)
 		{
 			mo.TeleportMove(mo.Pos, true);
 			// This is needed to ensure consistent behavior.
 			// Otherwise it will only spawn if nothing gets telefragged
-			flags |= SXF_NOCHECKPOSITION;	
+			flags |= SXF_NOCHECKPOSITION;
 		}
 		if (mo.bIsMonster)
 		{
@@ -275,7 +275,7 @@ extend class Actor
 					Actor attacker=originator.player.attacker;
 					if (attacker)
 					{
-						if (!(attacker.bFriendly) || 
+						if (!(attacker.bFriendly) ||
 							(deathmatch && attacker.FriendPlayer != 0 && attacker.FriendPlayer != mo.FriendPlayer))
 						{
 							// Target the monster which last attacked the player
@@ -352,7 +352,7 @@ extend class Actor
 		{
 			mo.RenderStyle = self.RenderStyle;
 		}
-		
+
 		if (flags & SXF_TRANSFERSPRITEFRAME)
 		{
 			mo.sprite = self.sprite;
@@ -430,7 +430,7 @@ extend class Actor
 	//===========================================================================
 	bool, Actor A_SpawnItemEx(class<Actor> missile, double xofs = 0, double yofs = 0, double zofs = 0, double xvel = 0, double yvel = 0, double zvel = 0, double angle = 0, int flags = 0, int failchance = 0, int tid=0)
 	{
-		if (missile == NULL) 
+		if (missile == NULL)
 		{
 			return false, null;
 		}
@@ -490,7 +490,7 @@ extend class Actor
 		return res, mo;
 	}
 
-	
+
 	//===========================================================================
 	//
 	// A_ThrowGrenade
@@ -550,7 +550,7 @@ extend class Actor
 			bo.target = self;
 			if (!bo.CheckMissileSpawn(radius)) bo = null;
 			return true, bo;
-		} 
+		}
 		else
 		{
 			return false, null;
@@ -574,7 +574,7 @@ extend class Actor
 		if (pos.Z <= floorz + distance && floorsector == floorsec && curSector.GetHeightSec() == NULL && floorsec.heightsec == NULL)
 		{
 			// Explosion splashes never alert monsters. This is because A_Explode has
-			// a separate parameter for that so this would get in the way of proper 
+			// a separate parameter for that so this would get in the way of proper
 			// behavior.
 			Vector3 pos = PosRelative(floorsec);
 			pos.Z = floorz;
@@ -611,7 +611,7 @@ extend class Actor
 				ang = i*360./nails;
 				// Comparing the results of a test wad with Eternity, it seems A_NailBomb does not aim
 				LineAttack(ang, nailrange, 0.,
-					//P_AimLineAttack (self, ang, MISSILERANGE), 
+					//P_AimLineAttack (self, ang, MISSILERANGE),
 					naildamage, 'Hitscan', pufftype, bMissile ? LAF_TARGETISSOURCE : 0);
 			}
 		}
@@ -696,7 +696,7 @@ extend class Actor
 	// old customizable attack functions which use actor parameters.
 	//
 	//==========================================================================
-	
+
 	private void DoAttack (bool domelee, bool domissile, int MeleeDamage, Sound MeleeSound, Class<Actor> MissileType,double MissileHeight)
 	{
 		let targ = target;
@@ -752,13 +752,13 @@ extend class Actor
 		DoAttack(true, true, melee_damage, melee_sound, missile_type, missile_height);
 	}
 
-	
+
 	//==========================================================================
 	//
 	// called with the victim as 'self'
 	//
 	//==========================================================================
-	
+
 	virtual void SpawnLineAttackBlood(Actor attacker, Vector3 bleedpos, double SrcAngleFromTarget, int originaldamage, int actualdamage)
 	{
 		if (!bNoBlood && !bDormant && !bInvulnerable)

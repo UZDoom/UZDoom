@@ -145,7 +145,7 @@ class FWeapQuietus : FighterWeapon
 		FSRD B 1 Bright Offset (5, 40);
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// A_FSwordAttack
@@ -173,7 +173,7 @@ class FWeapQuietus : FighterWeapon
 		A_StartSound ("FighterSwordFire", CHAN_WEAPON);
 	}
 
-	
+
 }
 
 // Fighter Sword Missile ----------------------------------------------------
@@ -210,7 +210,7 @@ class FSwordMissile : Actor
 		FSFX KLM 3 Bright;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage(Actor victim, int damage, Name damagetype)
 	{
 		if (victim.player)
@@ -219,7 +219,7 @@ class FSwordMissile : Actor
 		}
 		return damage;
 	}
-		
+
 	//============================================================================
 	//
 	// A_FSwordFlames

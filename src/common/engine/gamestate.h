@@ -25,7 +25,7 @@
 
 // The current state of the game: whether we are
 // playing, gazing at the intermission screen,
-// the game final animation, or a demo. 
+// the game final animation, or a demo.
 enum gamestate_t : int
 {
 	GS_LEVEL,

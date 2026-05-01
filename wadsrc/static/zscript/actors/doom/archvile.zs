@@ -35,8 +35,8 @@ class Archvile : Actor
 		PainChance 10;
 		Monster;
 		MaxTargetRange 896;
-		+QUICKTORETALIATE 
-		+FLOORCLIP 
+		+QUICKTORETALIATE
+		+FLOORCLIP
 		+NOTARGET
 		SeeSound "vile/sight";
 		PainSound "vile/pain";
@@ -124,7 +124,7 @@ extend class Actor
 	{
 		A_StartSound ("vile/start", CHAN_VOICE);
 	}
-	
+
 	//
 	// A_VileTarget
 	// Spawn the hellfire
@@ -145,7 +145,7 @@ extend class Actor
 			}
 		}
 	}
-	
+
 	void A_VileAttack(sound snd = "vile/stop", int initialdmg = 20, int blastdmg = 70, int blastradius = 70, double thrust = 1.0, name damagetype = "Fire", int flags = 0)
 	{
 		Actor targ = target;
@@ -157,7 +157,7 @@ extend class Actor
 			int newdam = targ.DamageMobj (self, self, initialdmg, (flags & VAF_DMGTYPEAPPLYTODIRECT)? damagetype : 'none');
 
 			targ.TraceBleed (newdam > 0 ? newdam : initialdmg, self);
-			
+
 			Actor fire = tracer;
 			if (fire)
 			{
@@ -171,13 +171,13 @@ extend class Actor
 			}
 		}
 	}
-	
+
 	void A_StartFire()
 	{
 		A_StartSound ("vile/firestrt", CHAN_BODY);
 		A_Fire();
 	}
-	
+
 	//
 	// A_Fire
 	// Keep fire in front of player unless out of sight
@@ -186,13 +186,13 @@ extend class Actor
 	{
 		Actor dest = tracer;
 		if (!dest || !target) return;
-				
+
 		// don't move it if the vile lost sight
 		if (!target.CheckSight (dest, 0) ) return;
 
 		SetOrigin(dest.Vec3Angle(24, dest.angle, spawnheight), true);
 	}
-	
+
 	void A_FireCrackle()
 	{
 		A_StartSound ("vile/firecrkl", CHAN_BODY);

@@ -35,4 +35,3 @@ map MAP33 lookup "HUSTR_33"
 	cluster = 5
 	music = "$MUSIC_READ_M"
 }
-

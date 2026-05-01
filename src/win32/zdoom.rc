@@ -26,19 +26,19 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE 
+1 TEXTINCLUDE
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE 
+2 TEXTINCLUDE
 BEGIN
     "#include ""afxres.h""\r\n"
     "#include ""../version.h""\r\r\n"
     "#include ""../gitinfo.h""\r\0"
 END
 
-3 TEXTINCLUDE 
+3 TEXTINCLUDE
 BEGIN
     "#ifndef NO_MANIFEST\r\n"
     "   CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""zdoom.exe.manifest""\r\n"
@@ -333,4 +333,3 @@ BEGIN
 END
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
-

@@ -56,7 +56,7 @@ int P_VanillaPointOnDivlineSide(double x, double y, const divline_t* line);
 // P_AproxDistance
 //
 // Gives an estimation of distance (not exact)
-// 
+//
 //==========================================================================
 
 int P_AproxDistance (int dx, int dy)
@@ -223,7 +223,7 @@ void P_LineOpening (FLineOpening &open, AActor *actor, const line_t *linedef, co
 		P_LineOpening_XFloors(open, actor, linedef, pos.X, pos.Y, !!(flags & FFCF_3DRESTRICT));
 	}
 
-	if (actor != NULL && linedef->frontsector != NULL && linedef->backsector != NULL && 
+	if (actor != NULL && linedef->frontsector != NULL && linedef->backsector != NULL &&
 		linedef->flags & ML_3DMIDTEX)
 	{
 		open.touchmidtex = P_LineOpening_3dMidtex(actor, linedef, open, !!(flags & FFCF_3DRESTRICT));
@@ -294,7 +294,7 @@ void AActor::UnlinkFromWorld (FLinkContext *ctx)
 		touching_sectorlist = nullptr; //to be restored by P_SetThingPosition
 		touching_rendersectors = nullptr;
 	}
-		
+
 	if (!(flags & MF_NOBLOCKMAP))
 	{
 		// [RH] Unlink from all blocks this actor uses
@@ -592,10 +592,10 @@ FBlockLinesIterator::FBlockLinesIterator(FLevelLocals *l, const FBoundingBox &bo
 //
 //===========================================================================
 
-void FBlockLinesIterator::StartBlock(int x, int y) 
-{ 
-	curx = x; 
-	cury = y; 
+void FBlockLinesIterator::StartBlock(int x, int y)
+{
+	curx = x;
+	cury = y;
 	if (Level->blockmap.isValidBlock(x, y))
 	{
 		unsigned offset = y*Level->blockmap.bmapwidth + x;
@@ -760,7 +760,7 @@ bool FMultiBlockLinesIterator::GoDown(double x, double y)
 
 //===========================================================================
 //
-// Gets the next line - also manages switching between portal groups 
+// Gets the next line - also manages switching between portal groups
 //
 //===========================================================================
 
@@ -831,7 +831,7 @@ bool FMultiBlockLinesIterator::startIteratorForGroup(int group)
 	offset.X += checkpoint.X;
 	offset.Y += checkpoint.Y;
 	cursector = group == startsector->PortalGroup ? startsector : blockIterator.Level->PointInSector(offset);
-	// If we ended up in a different group, 
+	// If we ended up in a different group,
 	// presumably because the spot to be checked is too far outside the actual portal group,
 	// the search needs to abort.
 	if (cursector->PortalGroup != group) return false;
@@ -1059,7 +1059,7 @@ FMultiBlockThingsIterator::FMultiBlockThingsIterator(FPortalGroupArray &check, F
 
 //===========================================================================
 //
-// Gets the next line - also manages switching between portal groups 
+// Gets the next line - also manages switching between portal groups
 //
 //===========================================================================
 
@@ -1164,15 +1164,15 @@ void FPathTraverse::AddLineIntercepts(int bx, int by)
 
 		s1 = P_PointOnDivlineSide (ld->v1->fX(), ld->v1->fY(), &trace);
 		s2 = P_PointOnDivlineSide (ld->v2->fX(), ld->v2->fY(), &trace);
-		
+
 		if (s1 == s2) continue;	// line isn't crossed
-		
+
 		// hit the line
 		P_MakeDivline (ld, &dl);
 		frac = P_InterceptVector (&trace, &dl);
 
 		if (frac < Startfrac || frac > 1.) continue;	// behind source or beyond end point
-			
+
 		intercept_t newintercept;
 
 		newintercept.frac = frac;
@@ -1312,27 +1312,27 @@ void FPathTraverse::AddThingIntercepts (int bx, int by, FBlockThingsIterator &it
 			int 			s1, s2;
 			divline_t		dl;
 			double 		frac;
-				
+
 			bool tracepositive = (trace.dx * trace.dy)>0;
-						
+
 			// check a corner to corner crossection for hit
 			if (tracepositive)
 			{
 				x1 = thing->X() - thing->radius;
 				y1 = thing->Y() + thing->radius;
-						
+
 				x2 = thing->X() + thing->radius;
-				y2 = thing->Y() - thing->radius;					
+				y2 = thing->Y() - thing->radius;
 			}
 			else
 			{
 				x1 = thing->X() - thing->radius;
 				y1 = thing->Y() - thing->radius;
-						
+
 				x2 = thing->X() + thing->radius;
-				y2 = thing->Y() + thing->radius;					
+				y2 = thing->Y() + thing->radius;
 			}
-			
+
 			s1 = P_PointOnDivlineSide (x1, y1, &trace);
 			s2 = P_PointOnDivlineSide (x2, y2, &trace);
 
@@ -1342,7 +1342,7 @@ void FPathTraverse::AddThingIntercepts (int bx, int by, FBlockThingsIterator &it
 				dl.y = y1;
 				dl.dx = x2-x1;
 				dl.dy = y2-y1;
-				
+
 				frac = P_InterceptVector (&trace, &dl);
 
 				if (frac >= Startfrac)
@@ -1363,7 +1363,7 @@ void FPathTraverse::AddThingIntercepts (int bx, int by, FBlockThingsIterator &it
 //===========================================================================
 //
 // FPathTraverse :: Next
-// 
+//
 //===========================================================================
 
 intercept_t *FPathTraverse::Next()
@@ -1380,8 +1380,8 @@ intercept_t *FPathTraverse::Next()
 			in = scan;
 		}
 	}
-	
-	if (dist > 1. || in == NULL) return NULL;	// checked everything in range			
+
+	if (dist > 1. || in == NULL) return NULL;	// checked everything in range
 	in->done = true;
 	return in;
 }
@@ -1393,16 +1393,16 @@ intercept_t *FPathTraverse::Next()
 //
 //===========================================================================
 
-void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, double startfrac) 
+void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, double startfrac)
 {
 	double xt1, yt1, xt2, yt2;
 	double xstep, ystep;
 	double partialx, partialy;
 	double xintercept, yintercept;
-	
+
 	int 		mapx;
 	int 		mapy;
-	
+
 	int 		mapxstep;
 	int 		mapystep;
 
@@ -1524,7 +1524,7 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 	// from skipping the break statement.
 
 	bool compatible = (flags & PT_COMPATIBLE) && (Level->i_compatflags & COMPATF_HITSCAN);
-		
+
 	// we want to use one list of checked actors for the entire operation
 	FBlockThingsIterator btit(Level);
 	for (count = 0 ; count < 1000 ; count++)
@@ -1533,12 +1533,12 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 		{
 			AddLineIntercepts(mapx, mapy);
 		}
-		
+
 		if (flags & PT_ADDTHINGS)
 		{
 			AddThingIntercepts(mapx, mapy, btit, compatible);
 		}
-				
+
 		// both coordinates reached the end, so end the traversing.
 		if ((mapxstep | mapystep) == 0)
 			break;
@@ -1578,7 +1578,7 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 					AddLineIntercepts(mapx + mapxstep, mapy);
 					AddLineIntercepts(mapx, mapy + mapystep);
 				}
-				
+
 				if (flags & PT_ADDTHINGS)
 				{
 					AddThingIntercepts(mapx + mapxstep, mapy, btit, false);
@@ -1617,7 +1617,7 @@ int FPathTraverse::PortalRelocate(intercept_t *in, int flags, DVector3 *optpos)
 	double hity = trace.y;
 	double endx = trace.x + trace.dx;
 	double endy = trace.y + trace.dy;
-	
+
 	P_TranslatePortalXY(in->d.line, hitx, hity);
 	P_TranslatePortalXY(in->d.line, endx, endy);
 	if (optpos != NULL)
@@ -1697,7 +1697,7 @@ AActor *P_BlockmapSearch (AActor *mo, int distance, AActor *(*check)(AActor*, in
 	startX = Level->blockmap.GetBlockX(mo->X());
 	startY = Level->blockmap.GetBlockY(mo->Y());
 	validcount++;
-	
+
 	if (Level->blockmap.isValidBlock(startX, startY))
 	{
 		if ( (target = check (mo, startY*bmapwidth+startX, params)) )
@@ -1732,7 +1732,7 @@ AActor *P_BlockmapSearch (AActor *mo, int distance, AActor *(*check)(AActor*, in
 		thirdStop = secondStop*bmapwidth+blockX;
 		secondStop = secondStop*bmapwidth+firstStop;
 		firstStop += blockY*bmapwidth;
-		finalStop = blockIndex;		
+		finalStop = blockIndex;
 
 		// Trace the first block section (along the top)
 		for (; blockIndex <= firstStop; blockIndex++)
@@ -1749,7 +1749,7 @@ AActor *P_BlockmapSearch (AActor *mo, int distance, AActor *(*check)(AActor*, in
 			{
 				return target;
 			}
-		}		
+		}
 		// Trace the third block section (bottom edge)
 		for (blockIndex -= bmapwidth; blockIndex >= thirdStop; blockIndex--)
 		{
@@ -1767,7 +1767,7 @@ AActor *P_BlockmapSearch (AActor *mo, int distance, AActor *(*check)(AActor*, in
 			}
 		}
 	}
-	return NULL;	
+	return NULL;
 }
 
 struct BlockCheckInfo
@@ -1921,7 +1921,7 @@ int P_VanillaPointOnLineSide(double x, double y, const line_t* line)
 		return delta.X > 0;
 	}
 
-	// Note: This cannot really be converted to floating point 
+	// Note: This cannot really be converted to floating point
 	// without breaking the intended use of this function
 	// (i.e. to emulate the horrible imprecision of the entire method)
 
@@ -1999,20 +1999,20 @@ subsector_t *FLevelLocals::PointInRenderSubsector (fixed_t x, fixed_t y)
 {
 	node_t *node;
 	int side;
-	
+
 	// single subsector is a special case
 	if (nodes.Size() == 0)
 		return &subsectors[0];
-	
+
 	node = HeadNode();
-	
+
 	do
 	{
 		side = R_PointOnSide (x, y, node);
 		node = (node_t *)node->children[side];
 	}
 	while (!((size_t)node & 1));
-	
+
 	return (subsector_t *)((uint8_t *)node - 1);
 }
 
@@ -2103,4 +2103,3 @@ DEFINE_ACTION_FUNCTION(FLevelLocals, BoxOnLineSide)
 	FBoundingBox box(x, y, radius);
 	ACTION_RETURN_INT(BoxOnLineSide(box, l));
 }
-

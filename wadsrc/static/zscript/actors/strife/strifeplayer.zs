@@ -116,7 +116,7 @@ class StrifePlayer : PlayerPawn
 		WAVE ABCD 3 A_HandLower;
 		Loop;
 	}
-	
+
 	void A_ItBurnsItBurns()
 	{
 		A_StartSound ("human/imonfire", CHAN_VOICE);
@@ -172,7 +172,7 @@ class StrifePlayer : PlayerPawn
 					psp.SetState(null);
 					return;
 				}
-				
+
 				psp.y += 9;
 				if (psp.y > WEAPONBOTTOM*2)
 				{
@@ -183,6 +183,5 @@ class StrifePlayer : PlayerPawn
 		}
 		return;
 	}
-	
+
 }
-		

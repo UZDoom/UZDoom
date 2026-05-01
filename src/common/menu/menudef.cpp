@@ -624,7 +624,7 @@ static void DoParseListMenuBody(FScanner &sc, DListMenuDescriptor *desc, bool &s
 					{
 						if (inserting)
 						{
-							// [Player701] If we've inserted a selectable item, 
+							// [Player701] If we've inserted a selectable item,
 							// shift all following selectable items downwards
 							// NB: index has been incremented, so we're not affecting the newly inserted item here.
 							for (unsigned int i = insertIndex; i < desc->mItems.Size(); i++)
@@ -663,7 +663,7 @@ static void ParseListMenuBody(FScanner& sc, DListMenuDescriptor* desc, int inser
 	DoParseListMenuBody(sc, desc, sizecompatible, insertIndex);
 	if (!desc->mCustomSizeSet && !sizecompatible)
 	{
-		// No custom size and incompatible items, 
+		// No custom size and incompatible items,
 		// so force clean scaling for this menu
 		desc->mVirtWidth = -1;
 	}
@@ -739,7 +739,7 @@ static bool FindMatchingItem(DMenuItemBase *desc)
 static bool ReplaceMenu(FScanner &sc, DMenuDescriptor *desc)
 {
 	DMenuDescriptor **pOld = MenuDescriptors.CheckKey(desc->mMenuName);
-	if (pOld != nullptr && *pOld != nullptr) 
+	if (pOld != nullptr && *pOld != nullptr)
 	{
 		if ((*pOld)->mProtected)
 		{
@@ -922,7 +922,7 @@ static void ParseOptionValue(FScanner &sc)
 		}
 	}
 	FOptionValues **pOld = OptionValues.CheckKey(optname);
-	if (pOld != nullptr && *pOld != nullptr) 
+	if (pOld != nullptr && *pOld != nullptr)
 	{
 		delete *pOld;
 	}
@@ -958,7 +958,7 @@ static void ParseOptionString(FScanner &sc)
 		}
 	}
 	FOptionValues **pOld = OptionValues.CheckKey(optname);
-	if (pOld != nullptr && *pOld != nullptr) 
+	if (pOld != nullptr && *pOld != nullptr)
 	{
 		delete *pOld;
 	}
@@ -1775,7 +1775,7 @@ void M_CreateMenus()
 	DMenuDescriptor **menu = MenuDescriptors.CheckKey("MididevicesMenu");
 	I_BuildMIDIMenuList(opt? *opt : nullptr, menu? *menu : nullptr);
 	opt = OptionValues.CheckKey(NAME_Aldevices);
-	if (opt != nullptr) 
+	if (opt != nullptr)
 	{
 		I_BuildALDeviceList(*opt);
 	}

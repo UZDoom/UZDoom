@@ -40,7 +40,7 @@ IMPLEMENT_CLASS(DCeiling, false, false)
 
 //============================================================================
 //
-// 
+//
 //
 //============================================================================
 
@@ -90,7 +90,7 @@ DEFINE_ACTION_FUNCTION(DCeiling, getOldDirection)
 
 //============================================================================
 //
-// 
+//
 //
 //============================================================================
 
@@ -125,7 +125,7 @@ void DCeiling::PlayCeilingSound ()
 void DCeiling::Tick ()
 {
 	EMoveResult res;
-		
+
 	switch (m_Direction)
 	{
 	case 0:
@@ -134,7 +134,7 @@ void DCeiling::Tick ()
 	case 1:
 		// UP
 		res = m_Sector->MoveCeiling (m_Speed, m_TopHeight, m_Direction);
-		
+
 		if (res == EMoveResult::pastdest)
 		{
 			switch (m_Type)
@@ -145,7 +145,7 @@ void DCeiling::Tick ()
 				if (!SN_IsMakingLoopingSound (m_Sector))
 					PlayCeilingSound ();
 				break;
-				
+
 			// movers with texture change, change the texture then get removed
 			case genCeilingChgT:
 			case genCeilingChg0:
@@ -161,11 +161,11 @@ void DCeiling::Tick ()
 			}
 		}
 		break;
-		
+
 	case -1:
 		// DOWN
 		res = m_Sector->MoveCeiling (m_Speed, m_BottomHeight, m_Crush, m_Direction, m_CrushMode == ECrushMode::crushHexen);
-		
+
 		if (res == EMoveResult::pastdest)
 		{
 			switch (m_Type)
@@ -216,7 +216,7 @@ void DCeiling::Tick ()
 
 //============================================================================
 //
-// 
+//
 //
 //============================================================================
 
@@ -243,11 +243,11 @@ void DCeiling::Construct(sector_t *sec, double speed1, double speed2, int silent
 
 //============================================================================
 //
-// 
+//
 //
 //============================================================================
 
-bool FLevelLocals::CreateCeiling(sector_t *sec, DCeiling::ECeiling type, line_t *line, int tag, 
+bool FLevelLocals::CreateCeiling(sector_t *sec, DCeiling::ECeiling type, line_t *line, int tag,
 				   double speed, double speed2, double height,
 				   int crush, int silent, int change, DCeiling::ECrushMode hexencrush)
 {
@@ -258,7 +258,7 @@ bool FLevelLocals::CreateCeiling(sector_t *sec, DCeiling::ECeiling type, line_t 
 	{
 		return false;
 	}
-	
+
 	// new door thinker
 	DCeiling *ceiling = CreateThinker<DCeiling> (sec, speed, speed2, silent & ~4);
 	vertex_t *spot = sec->Lines[0]->v1;
@@ -395,7 +395,7 @@ bool FLevelLocals::CreateCeiling(sector_t *sec, DCeiling::ECeiling type, line_t 
 	default:
 		break;	// Silence GCC
 	}
-			
+
 	ceiling->m_Tag = tag;
 	ceiling->m_Type = type;
 	ceiling->m_Crush = crush;
@@ -510,7 +510,7 @@ bool FLevelLocals::EV_DoCeiling (DCeiling::ECeiling type, line_t *line,
 	int 		secnum;
 	bool 		rtn;
 	sector_t*	sec;
-		
+
 	rtn = false;
 
 	// check if a manual trigger, if so do just the sector on the backside
@@ -524,7 +524,7 @@ bool FLevelLocals::EV_DoCeiling (DCeiling::ECeiling type, line_t *line,
 		rtn |= ActivateInStasisCeiling (tag);
 		return CreateCeiling(sec, type, line, tag, speed, speed2, height, crush, silent, change, hexencrush);
 	}
-	
+
 	//	Reactivate in-stasis ceilings...for certain types.
 	// This restarts a crusher after it has been stopped
 	if (type == DCeiling::ceilCrushAndRaise)

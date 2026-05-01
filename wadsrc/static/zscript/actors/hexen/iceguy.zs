@@ -68,7 +68,7 @@ class IceGuy : Actor
 		ICEY A -1;
 		Goto See;
 	}
-	
+
 	//============================================================================
 	//
 	// SpawnWisp
@@ -88,7 +88,7 @@ class IceGuy : Actor
 			mo.target = self;
 		}
 	}
-	
+
 	//============================================================================
 	//
 	// A_IceGuyLook
@@ -121,7 +121,7 @@ class IceGuy : Actor
 
 	void A_IceGuyAttack()
 	{
-		if(!target) 
+		if(!target)
 		{
 			return;
 		}
@@ -176,7 +176,7 @@ class IceGuyFX : Actor
 		ICPR H 3 Bright;
 		Stop;
 	}
-	
+
 
 	//============================================================================
 	//
@@ -291,4 +291,3 @@ class IceGuyWisp2 : IceGuyWisp1
 		Stop;
 	}
 }
-

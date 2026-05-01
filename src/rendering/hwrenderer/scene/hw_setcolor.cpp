@@ -48,7 +48,7 @@ void SetColor(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, in
 
 //==========================================================================
 //
-// Lighting stuff 
+// Lighting stuff
 //
 //==========================================================================
 
@@ -153,4 +153,3 @@ void SetFog(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, int 
 		}
 	}
 }
-

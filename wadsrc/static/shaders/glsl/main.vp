@@ -62,7 +62,7 @@ void main()
 
 	parmTexCoord = aTexCoord;
 	parmPosition = bones.Position;
-	
+
 	#ifndef SIMPLE
 		vec4 worldcoord = ModelMatrix * mix(parmPosition, aVertex2, uInterpolationFactor);
 	#else

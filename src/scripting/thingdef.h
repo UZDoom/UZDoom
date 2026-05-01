@@ -198,7 +198,7 @@ void HandleActorFlag(FScanner &sc, Baggage &bag, const char *part1, const char *
 FxExpression *ParseParameter(FScanner &sc, PClassActor *cls, PType *type);
 
 
-enum 
+enum
 {
 	DEPF_UNUSED = 0,
 	DEPF_FIREDAMAGE = 1,
@@ -252,7 +252,7 @@ struct FPropertyInfo : FAutoSegEntry<FPropertyInfo>
 	const char *clsname;
 	PropHandler Handler;
 	int category;
-	
+
 	FPropertyInfo(const char * n, const char * p, const char * cn, PropHandler h, int c)
 	: FAutoSegEntry(AutoSegs::Properties, this), name(n), params(p), clsname(cn), Handler(h), category(c) {}
 

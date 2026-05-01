@@ -31,7 +31,7 @@ inline DVector2 rotatepoint(const DVector2& pivot, const DVector2& point, DAngle
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -42,7 +42,7 @@ inline double PointOnLineSide(double x, double y, double linex, double liney, do
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -84,7 +84,7 @@ inline DVector2 NearestPointOnLine(double px, double py, double lx1, double ly1,
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -120,7 +120,7 @@ inline double InterceptVector(double v2x, double v2y, double v2dx, double v2dy, 
 
 //==========================================================================
 //
-// Essentially two InterceptVector calls. We can reduce the calculations 
+// Essentially two InterceptVector calls. We can reduce the calculations
 // because the denominators for both calculations only differ by their sign.
 //
 //==========================================================================
@@ -166,7 +166,7 @@ inline double LinePlaneIntersect(const DVector3& start, const DVector3& trace, c
 // BoxOnLineSide
 //
 // Based on Doom's, but rewritten to be standalone
-// 
+//
 //==========================================================================
 
 inline int BoxOnLineSide(const DVector2& boxtl, const DVector2& boxbr, const DVector2& start, const DVector2& delta)

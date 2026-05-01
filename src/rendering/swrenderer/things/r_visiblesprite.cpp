@@ -176,7 +176,7 @@ namespace swrenderer
 		// killough 3/27/98:
 		// Clip the sprite against deep water and/or fake ceilings.
 		// [RH] rewrote this to be based on which part of the sector is really visible
-		
+
 		auto viewport = thread->Viewport.get();
 
 		double scale = viewport->InvZtoScale * spr->idepth;
@@ -351,7 +351,7 @@ namespace swrenderer
 			if (group.x1 >= x2 || group.x2 <= x1 || group.neardepth > spr->depth)
 				continue;
 
-			if (group.fardepth < spr->depth) 
+			if (group.fardepth < spr->depth)
 			{
 				int r1 = max<int>(group.x1, x1);
 				int r2 = min<int>(group.x2, x2);

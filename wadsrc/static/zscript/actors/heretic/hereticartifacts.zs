@@ -65,7 +65,7 @@ Class ArtiInvisibility : PowerupGiver
 	}
 }
 
- 
+
 // Tome of power ------------------------------------------------------------
 
 Class ArtiTomeOfPower : PowerupGiver
@@ -87,7 +87,7 @@ Class ArtiTomeOfPower : PowerupGiver
 		PWBK A 350;
 		Loop;
 	}
-	
+
 	override bool Use(bool pickup)
 	{
 		EMorphFlags mStyle = Owner.GetMorphStyle();
@@ -109,7 +109,7 @@ Class ArtiTomeOfPower : PowerupGiver
 
 		return Super.Use(pickup);
 	}
-	
+
 }
 
 
@@ -124,7 +124,7 @@ Class ActivatedTimeBomb : Actor
 		Alpha 0.4;
 		DeathSound "misc/timebomb";
 	}
-		
+
 	States
 	{
 	Spawn:
@@ -166,12 +166,12 @@ Class ArtiTimeBomb : Inventory
 		FBMB E 350;
 		Loop;
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		Actor mo = Spawn("ActivatedTimeBomb", Owner.Vec3Angle(24., Owner.angle, - Owner.Floorclip), ALLOW_REPLACE);
 		if (mo != null) mo.target = Owner;
 		return true;
 	}
-	
+
 }

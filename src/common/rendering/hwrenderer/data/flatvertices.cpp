@@ -141,7 +141,7 @@ std::pair<FFlatVertex *, unsigned int> FFlatVertexBuffer::AllocVertices(unsigned
 	auto index = mCurIndex.fetch_add(count);
 	if (index + count >= BUFFER_SIZE_TO_USE)
 	{
-		// If a single scene needs 2'000'000 vertices there must be something very wrong. 
+		// If a single scene needs 2'000'000 vertices there must be something very wrong.
 		I_FatalError("Out of vertex memory. Tried to allocate more than %u vertices for a single frame", index + count);
 	}
 	return std::make_pair(p, index);
@@ -168,4 +168,3 @@ void FFlatVertexBuffer::Copy(int start, int count)
 
 	mVertexBuffer = old;
 }
-

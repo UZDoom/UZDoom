@@ -807,7 +807,7 @@ namespace swrenderer
 		//		has a better chance of optimizing this well.
 		const uint8_t *colormap = args.Colormap(args.Viewport());
 		const uint8_t *source = args.TexturePixels();
-		
+
 		uint32_t dynlight = args.DynamicLight();
 		if (dynlight == 0)
 		{
@@ -832,7 +832,7 @@ namespace swrenderer
 			lit_r = lit_r - light;
 			lit_g = lit_g - light;
 			lit_b = lit_b - light;
-			
+
 			do
 			{
 				auto material = source[frac >> FRACBITS];
@@ -2574,7 +2574,7 @@ namespace swrenderer
 						uint32_t fg = num_dynlights != 0 ? AddLightsSpan(dynlights, num_dynlights, viewpos_x, colormap[texdata], texdata) : colormap[texdata];
 						uint32_t a = fg2rgb[fg] + bg2rgb[*dest];
 						uint32_t b = a;
-	
+
 						a |= 0x01f07c1f;
 						b &= 0x40100400;
 						a &= 0x3fffffff;
@@ -2604,7 +2604,7 @@ namespace swrenderer
 						uint32_t fg = num_dynlights != 0 ? AddLightsSpan(dynlights, num_dynlights, viewpos_x, colormap[texdata], texdata) : colormap[texdata];
 						uint32_t a = fg2rgb[fg] + bg2rgb[*dest];
 						uint32_t b = a;
-	
+
 						a |= 0x01f07c1f;
 						b &= 0x40100400;
 						a &= 0x3fffffff;
@@ -2981,7 +2981,7 @@ namespace swrenderer
 			dest[x] = colormap[dest[x]];
 		} while (++x <= x2);
 	}
-	
+
 	/////////////////////////////////////////////////////////////////////////////
 
 	void SWPalDrawers::DrawParticleColumn(int x, int _dest_y, int _count, uint32_t _fg, uint32_t _alpha, uint32_t _fracposx)

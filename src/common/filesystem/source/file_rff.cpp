@@ -114,7 +114,7 @@ static bool OpenRFF(FResourceFile* file, LumpFilterInfo*)
 		}
 		Entries[i].Namespace = ns_global;
 		Entries[i].ResourceID = LittleLong(lumps[i].IndexNum);
-	
+
 		// Rearrange the name and extension to construct the fullname.
 		char name[13];
 		strncpy(name, lumps[i].Name, 8);

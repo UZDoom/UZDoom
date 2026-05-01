@@ -22,7 +22,7 @@
 namespace swrenderer
 {
 	class RenderThread;
-	
+
 	/* portal structure, this is used in r_ code in order to store drawsegs with portals (and mirrors) */
 	struct PortalDrawseg
 	{

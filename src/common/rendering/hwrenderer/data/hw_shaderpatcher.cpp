@@ -314,4 +314,3 @@ int DFrameBuffer::GetShaderCount()
 
 	return MAX_PASS_TYPES * (countof(defaultshaders) - 1 + usershaders.Size() + MAX_EFFECTS + SHADER_NoTexture);
 }
-

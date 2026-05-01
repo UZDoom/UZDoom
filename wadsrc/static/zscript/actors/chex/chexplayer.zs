@@ -36,7 +36,7 @@ class ChexPlayer : DoomPlayer
 		player.WeaponSlot 5, "ZorchPropulsor";
 		player.WeaponSlot 6, "PhasingZorcher";
 		player.WeaponSlot 7, "LAZDevice";
-		
+
 		Player.Colorset 0, "$TXT_COLOR_LIGHTBLUE",	0xC0, 0xCF,  0xC2;
 		Player.Colorset 1, "$TXT_COLOR_GREEN",		0x70, 0x7F,  0x72;
 		Player.Colorset 2, "$TXT_COLOR_GRAY",		0x60, 0x6F,  0x62;
@@ -46,5 +46,5 @@ class ChexPlayer : DoomPlayer
 		Player.Colorset 6, "$TXT_COLOR_LIGHTBROWN",	0x38, 0x47,  0x3A;
 		Player.Colorset 7, "$TXT_COLOR_LIGHTRED",	0xB0, 0xBF,  0xB2;
 	}
-	
+
 }

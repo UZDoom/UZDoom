@@ -57,4 +57,3 @@ protected:
 	TObjPtr<DInterpolation*> m_Interp_Ceiling;
 	TObjPtr<DInterpolation*> m_Interp_Floor;
 };
-

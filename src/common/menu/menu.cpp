@@ -61,7 +61,11 @@ CVAR(Bool, m_cleanscale, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 // Option Search
 CVAR(Bool, os_isanyof, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 // Tooltip
-CVAR(Bool, m_tooltip_capwidth, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CUSTOM_CVAR(Float, m_tooltip_capratio, 4.0/3.0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self < 0)
+		self = 0;
+}
 CVAR(Bool, m_tooltip_small, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CUSTOM_CVAR(Int, m_tooltip_lines, 3, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
@@ -275,7 +279,7 @@ IMPLEMENT_POINTERS_START(DMenu)
 	IMPLEMENT_POINTER(mParentMenu)
 IMPLEMENT_POINTERS_END
 
-DMenu::DMenu(DMenu *parent) 
+DMenu::DMenu(DMenu *parent)
 {
 	mParentMenu = parent;
 	mMouseCapture = false;
@@ -626,8 +630,8 @@ DEFINE_ACTION_FUNCTION(DMenu, SetMenu)
 //
 //=============================================================================
 
-bool M_Responder (event_t *ev) 
-{ 
+bool M_Responder (event_t *ev)
+{
 	int ch = 0;
 	bool keyup = false;
 	int mkey = NUM_MKEYS;
@@ -638,7 +642,7 @@ bool M_Responder (event_t *ev)
 		return false;
 	}
 
-	if (CurrentMenu != nullptr && menuactive != MENU_Off) 
+	if (CurrentMenu != nullptr && menuactive != MENU_Off)
 	{
 		// There are a few input sources we are interested in:
 		//
@@ -846,7 +850,7 @@ bool M_Responder (event_t *ev)
 			}
 			return false;
 		}
-		else if (ev->type == EV_GUI_Event && ev->subtype == EV_GUI_LButtonDown && 
+		else if (ev->type == EV_GUI_Event && ev->subtype == EV_GUI_LButtonDown &&
 				 ConsoleState != c_down && gamestate != GS_LEVEL && m_use_mouse)
 		{
 			M_StartControlPanel(true);
@@ -863,10 +867,10 @@ bool M_Responder (event_t *ev)
 //
 //=============================================================================
 
-void M_Ticker (void) 
+void M_Ticker (void)
 {
 	MenuTime++;
-	if (CurrentMenu != nullptr && menuactive != MENU_Off) 
+	if (CurrentMenu != nullptr && menuactive != MENU_Off)
 	{
 		CurrentMenu->CallTicker();
 	}
@@ -905,11 +909,11 @@ void M_Ticker (void)
 //
 //=============================================================================
 
-void M_Drawer (void) 
+void M_Drawer (void)
 {
 	PalEntry fade = 0;
 
-	if (CurrentMenu != nullptr && menuactive != MENU_Off) 
+	if (CurrentMenu != nullptr && menuactive != MENU_Off)
 	{
 		if (!CurrentMenu->DontBlur) screen->BlurScene(menuBlurAmount);
 		if (!CurrentMenu->DontDim)
@@ -982,7 +986,7 @@ void M_PreviousMenu()
 //
 //=============================================================================
 
-void M_Init (void) 
+void M_Init (void)
 {
 	try
 	{
@@ -1011,7 +1015,7 @@ void M_Init (void)
 //
 //=============================================================================
 
-void M_EnableMenu (bool on) 
+void M_EnableMenu (bool on)
 {
 	MenuEnabled = on;
 }

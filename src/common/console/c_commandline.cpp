@@ -42,7 +42,7 @@
 //
 // Special processing:
 //   Inside quoted strings, \" becomes just "
-//                          \\ becomes just a single backslash          
+//                          \\ becomes just a single backslash
 //							\c becomes just TEXTCOLOR_ESCAPE
 //   $<cvar> is replaced by the contents of <cvar>
 

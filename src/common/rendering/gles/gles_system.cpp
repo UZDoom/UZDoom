@@ -274,7 +274,7 @@ namespace OpenGLESRenderer
 			gles.depthClampAvailable = true;
 			gles.anistropicFilterAvailable = true;
 		}
-		
+
 		setGlVersion(glVersion);
 	}
 }

@@ -71,7 +71,7 @@ struct wbstartstruct_t
 	int			pnum;
 
 	wbplayerstruct_t	plyr[MAXPLAYERS];
-	
+
 };
 
 // Setup for an intermission screen.

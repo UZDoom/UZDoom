@@ -138,4 +138,3 @@ void FHWModelRenderer::SetupFrame(FModel *model, unsigned int frame1, unsigned i
 		if (mdbuff->indexBuffer()) state.SetIndexBuffer(mdbuff->indexBuffer());
 	}
 }
-

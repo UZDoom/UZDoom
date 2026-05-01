@@ -103,18 +103,18 @@ void DDoor::Tick ()
 				m_Direction = -1; // time to go back down
 				DoorSound (false);
 				break;
-				
+
 			case doorCloseWaitOpen:
 				m_Direction = 1;
 				DoorSound (true);
 				break;
-				
+
 			default:
 				break;
 			}
 		}
 		break;
-		
+
 	case 2:
 		//	INITIAL WAIT
 		if (!--m_TopCountdown)
@@ -126,13 +126,13 @@ void DDoor::Tick ()
 				m_Type = doorRaise;
 				DoorSound (true);
 				break;
-				
+
 			default:
 				break;
 			}
 		}
 		break;
-		
+
 	case -1:
 		// DOWN
 		res = m_Sector->MoveCeiling (m_Speed, m_BotDist, -1, m_Direction, false);
@@ -140,7 +140,7 @@ void DDoor::Tick ()
 		// killough 10/98: implement gradual lighting effects
 		if (m_LightTag != 0 && m_TopDist != -m_Sector->floorplane.fD())
 		{
-			Level->EV_LightTurnOnPartway (m_LightTag, 
+			Level->EV_LightTurnOnPartway (m_LightTag,
 				(m_Sector->ceilingplane.fD() + m_Sector->floorplane.fD()) / (m_TopDist + m_Sector->floorplane.fD()));
 		}
 
@@ -154,12 +154,12 @@ void DDoor::Tick ()
 				m_Sector->ceilingdata = nullptr;	//jff 2/22/98
 				Destroy ();						// unlink and free
 				break;
-				
+
 			case doorCloseWaitOpen:
 				m_Direction = 0;
 				m_TopCountdown = m_TopWait;
 				break;
-				
+
 			default:
 				break;
 			}
@@ -170,7 +170,7 @@ void DDoor::Tick ()
 			{
 			case doorClose:				// DO NOT GO BACK UP!
 				break;
-				
+
 			default:
 				m_Direction = 1;
 				DoorSound (true);
@@ -178,11 +178,11 @@ void DDoor::Tick ()
 			}
 		}
 		break;
-		
+
 	case 1:
 		// UP
 		res = m_Sector->MoveCeiling (m_Speed, m_TopDist, -1, m_Direction, false);
-		
+
 		// killough 10/98: implement gradual lighting effects
 		if (m_LightTag != 0 && m_TopDist != -m_Sector->floorplane.fD())
 		{
@@ -199,13 +199,13 @@ void DDoor::Tick ()
 				m_Direction = 0; // wait at top
 				m_TopCountdown = m_TopWait;
 				break;
-				
+
 			case doorCloseWaitOpen:
 			case doorOpen:
 				m_Sector->ceilingdata = nullptr;	//jff 2/22/98
 				Destroy ();						// unlink and free
 				break;
-				
+
 			default:
 				break;
 			}
@@ -280,7 +280,7 @@ void DDoor::DoorSound(bool raise, DSeqNode *curseq) const
 		default:	/* Doom and Hexen */
 			snd = "DoorNormal";
 			break;
-			
+
 		case GAME_Heretic:
 			snd = "HereticDoor";
 			break;
@@ -515,7 +515,7 @@ bool FLevelLocals::EV_DoDoor (DDoor::EVlDoor type, line_t *line, AActor *thing,
 			if (CreateThinker<DDoor>(sec, type, speed, delay, lightTag, topcountdown))
 				rtn = true;
 		}
-				
+
 	}
 	return rtn;
 }
@@ -536,7 +536,7 @@ void DAnimatedDoor::Construct(sector_t *sec)
 void DAnimatedDoor::Serialize(FSerializer &arc)
 {
 	Super::Serialize (arc);
-	
+
 	arc("line1", m_Line1)
 		("line2", m_Line2)
 		("frame", m_Frame)
@@ -839,4 +839,3 @@ bool FLevelLocals::EV_SlidingDoor (line_t *line, AActor *actor, int tag, int spe
 	}
 	return rtn;
 }
-

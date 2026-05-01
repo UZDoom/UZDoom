@@ -43,9 +43,9 @@ class FDecalBase;
 
 class FDoomSerializer : public FSerializer
 {
-	
+
 	void CloseReaderCustom() override;
-	
+
 public:
 	FLevelLocals* Level;
 

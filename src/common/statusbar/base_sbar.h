@@ -128,7 +128,7 @@ enum DI_Flags
 //
 //============================================================================
 
-class DHUDFont : public DObject 
+class DHUDFont : public DObject
 {
 	// this blocks CreateNew on this class which is the intent here.
 	DECLARE_CLASS(DHUDFont, DObject);

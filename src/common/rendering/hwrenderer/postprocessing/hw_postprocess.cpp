@@ -720,7 +720,7 @@ void PPAmbientOcclusion::UpdateTextures(int width, int height)
 
 void PPAmbientOcclusion::Render(PPRenderState *renderstate, float m5, int sceneWidth, int sceneHeight)
 {
-	if (gl_ssao == 0 || sceneWidth == 0 || sceneHeight == 0)
+	if (gl_ssao == 0 || sceneWidth == 0 || sceneHeight == 0 || level_noAmbientOcclusion)
 	{
 		return;
 	}
@@ -1002,7 +1002,7 @@ PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::uni
 		pipelineInOut += "layout(location=0) in vec2 TexCoord;\n";
 		pipelineInOut += "layout(location=0) out vec4 FragColor;\n";
 	}
-	else 
+	else
 	{
 		pipelineInOut += "in vec2 TexCoord;\n";
 		pipelineInOut += "out vec4 FragColor;\n";

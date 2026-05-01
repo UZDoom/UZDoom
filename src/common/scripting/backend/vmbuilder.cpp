@@ -148,7 +148,7 @@ void VMFunctionBuilder::MakeFunction(VMScriptFunction *func)
 	int i = 0;
 	for (auto &block : Blocks)
 	{
-		
+
 		std::pair new_key = { func->Code + block.first.first, func->Code + block.first.second };
 		func->LocalVariableBlocks.Push({{new_key.first, new_key.second}, block.second});
 		i++;
@@ -1147,7 +1147,7 @@ ExpEmit FunctionCallEmitter::EmitCall(VMFunctionBuilder *build, TArray<ExpEmit> 
 
 		assert(fnptr->Scope != -1);
 		assert(fnptr->PointedType != TypeVoid);
-		
+
 		// OP_LP , Load from memory. rA = *(rB + rkC)
 		// reg = &PFunction->Variants[0] -- PFunction::Variant*
 		build->Emit(OP_LP, reg.RegNum, virtualselfreg, build->GetConstantInt(offsetof(PFunction, Variants) + offsetof(FArray, Array)));

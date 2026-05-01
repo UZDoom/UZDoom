@@ -266,4 +266,3 @@ void CheckCPUID (CPUInfo *cpu);
 FString DumpCPUInfo (const CPUInfo *cpu, bool brief = false);
 
 #endif
-

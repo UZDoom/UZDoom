@@ -131,6 +131,3 @@ int FLightBuffer::GetBinding(unsigned int index, size_t* pOffset, size_t* pSize)
 	*pSize = mBlockSize * ELEMENT_SIZE;
 	return (index - offset);
 }
-
-
-

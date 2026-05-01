@@ -175,7 +175,7 @@ extend class StateProvider
 			if (!weap.DepleteAmmo (weap.bAltFire, true))
 				return;
 		}
-		
+
 		SpawnPlayerMissile ("Rocket");
 	}
 
@@ -200,7 +200,7 @@ extend class StateProvider
 			if (!weap.DepleteAmmo (weap.bAltFire, true))
 				return;
 		}
-			
+
 		// Temporarily raise the pitch to send the grenadetype slightly upwards
 		double savedpitch = pitch;
 		pitch -= 6.328125;

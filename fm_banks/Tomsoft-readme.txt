@@ -12,4 +12,3 @@ https://github.com/Wohlstand/OPN2BankEditor/issues/44
 Then, the bank was tuned by Wohlstand:
 - Corrected note offsets to align octaves of all instruments
 - Merged with xg.wopn to provide the set of percussions.
-

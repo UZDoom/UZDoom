@@ -247,7 +247,7 @@ void ParseCompatibility()
 			md5array.Push(md5);
 			sc.MustGetString();
 		} while (!sc.Compare("{"));
-		
+
 		flags.Flags1 = 0;
 		flags.Flags2 = 0;
 		flags.BugCompatFlags = 0;

@@ -101,7 +101,7 @@ extend class Actor
 	virtual void PostMorph(Actor mo, bool current) {}
 	virtual void PreUnmorph(Actor mo, bool current) {}
 	virtual void PostUnmorph(Actor mo, bool current) {}
-	
+
 	//===========================================================================
 	//
 	// Main entry point
@@ -115,7 +115,7 @@ extend class Actor
 
 		return MorphMonster(monsterClass, duration, style, morphFlash, unmorphFlash);
 	}
-	
+
 	//===========================================================================
 	//
 	// Action function variant whose arguments differ from the generic one.
@@ -145,7 +145,7 @@ extend class Actor
 	{
 		return UnmorphTime && UnmorphTime <= Level.Time && Unmorph(self, MRF_UNDOBYTIMEOUT);
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// FUNC P_MorphMonster
@@ -167,7 +167,7 @@ extend class Actor
 				morphed.ClearCounters();
 				morphed.Destroy();
 			}
-			
+
 			return false;
 		}
 
@@ -235,14 +235,14 @@ extend class Actor
 
 		PostMorph(morphed, false);
 		morphed.PostMorph(self, true);
-		
+
 		if (enterFlash)
 		{
 			Actor fog = Spawn(enterFlash, morphed.Pos.PlusZ(GameInfo.TELEFOGHEIGHT), ALLOW_REPLACE);
 			if (fog)
 				fog.Target = morphed;
 		}
-		
+
 		return true;
 	}
 
@@ -334,7 +334,7 @@ extend class Actor
 
 		PostUnmorph(alt, false);		// From is false here: Leaving the caller's body.
 		alt.PostUnmorph(self, true);	// True here: Entering this body from here.
-		
+
 		if (MorphExitFlash)
 		{
 			Actor fog = Spawn(MorphExitFlash, alt.Pos.PlusZ(GameInfo.TELEFOGHEIGHT), ALLOW_REPLACE);
@@ -370,7 +370,7 @@ class MorphProjectile : Actor
 		-ACTIVATEIMPACT
 		-ACTIVATEPCROSS
 	}
-	
+
 	override int DoSpecialDamage(Actor victim, int dmg, Name dmgType)
 	{
 		victim.Morph(Target, PlayerClass, MonsterClass, Duration, MorphStyle, MorphFlash, UnmorphFlash);

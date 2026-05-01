@@ -80,7 +80,7 @@ public:
 	int GetNumParts() const { return NumParts; }
 	// Query some needed info for texture hack support.
 	bool SupportRemap0() override;
-	bool IsRawCompatible() override 
+	bool IsRawCompatible() override
 	{
 		return NumParts != 1 || Parts[0].OriginY == 0 || bTextual;
 	}

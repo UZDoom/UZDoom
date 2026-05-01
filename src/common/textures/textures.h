@@ -397,5 +397,3 @@ public:
 
 #include "gametexture.h"
 #endif
-
-

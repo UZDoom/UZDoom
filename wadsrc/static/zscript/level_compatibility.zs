@@ -2546,7 +2546,7 @@ class LevelCompatibility : LevelPostProcessor
 				break;
 			}
 
-			case '0B72F20CD1D21B20AA4C45624CC42B56': // UAC Ultra MAP09 
+			case '0B72F20CD1D21B20AA4C45624CC42B56': // UAC Ultra MAP09
 			{
 				// Fixes enemy teleports at the end of the map not appearing on HMP or lower, allowing for 100% kills.
 				SetThingSkills(104, 31);
@@ -2569,4 +2569,3 @@ class LevelCompatibility : LevelPostProcessor
 		}
 	}
 }
-

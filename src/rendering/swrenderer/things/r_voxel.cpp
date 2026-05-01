@@ -689,7 +689,7 @@ namespace swrenderer
 	{
 		return GetSlabStart(mip, x, y + 1);
 	}
-	
+
 	kvxslab_t *RenderVoxel::NextSlab(kvxslab_t *slab)
 	{
 		return (kvxslab_t*)(((uint8_t*)slab) + 3 + slab->zleng);
@@ -912,9 +912,9 @@ namespace swrenderer
 		double sprite_xscale = FIXED2DBL(sprite->xscale);
 		double sprite_yscale = sprite->yscale;
 		FVoxel *voxel = sprite->voxel;
-		
+
 		// Select mipmap level:
-		
+
 		double viewSin = view_angle.Cos();
 		double viewCos = view_angle.Sin();
 		double logmip = fabs((view_origin.X - sprite_origin.X) * viewCos - (view_origin.Y - sprite_origin.Y) * viewSin);
@@ -924,7 +924,7 @@ namespace swrenderer
 			logmip *= 0.5;
 			miplevel++;
 		}
-		
+
 		const FVoxelMipLevel &mip = voxel->Mips[miplevel];
 		if (mip.SlabData == nullptr)
 			return;
@@ -933,30 +933,30 @@ namespace swrenderer
 		maxZ >>= miplevel;
 		sprite_xscale *= (1 << miplevel);
 		sprite_yscale *= (1 << miplevel);
-		
+
 		// Find voxel cube eigenvectors and origin in world space:
 
 		double spriteSin = sprite_angle.Sin();
 		double spriteCos = sprite_angle.Cos();
-		
+
 		DVector2 dirX(spriteSin * sprite_xscale, -spriteCos * sprite_xscale);
 		DVector2 dirY(spriteCos * sprite_xscale, spriteSin * sprite_xscale);
 		double dirZ = -sprite_yscale;
-		
+
 		DVector3 voxel_origin = sprite_origin;
 		voxel_origin.X -= dirX.X * mip.Pivot.X + dirX.Y * mip.Pivot.Y;
 		voxel_origin.Y -= dirY.X * mip.Pivot.X + dirY.Y * mip.Pivot.Y;
 		voxel_origin.Z -= dirZ * mip.Pivot.Z;
-		
+
 		// Voxel cube walking directions:
-		
+
 		int startX[4] = { 0, mip.SizeX - 1,             0, mip.SizeX - 1 };
 		int startY[4] = { 0,             0, mip.SizeY - 1, mip.SizeY - 1 };
 		int stepX[4] = { 1, -1,  1, -1 };
 		int stepY[4] = { 1,  1, -1, -1 };
-		
+
 		// The point in cube mipmap local space where voxel sides change from front to backfacing:
-		
+
 		double dx = (view_origin.X - sprite_origin.X) / sprite_xscale;
 		double dy = (view_origin.Y - sprite_origin.Y) / sprite_xscale;
 		int backX = (int)(dx * spriteCos - dy * spriteSin + mip.Pivot.X);
@@ -967,40 +967,40 @@ namespace swrenderer
 		int endY = mip.SizeY - 1;// clamp(backY, 0, mip.SizeY - 1);
 
 		// Draw the voxel cube:
-		
+
 		for (int index = 0; index < 1; index++)
 		{
 			/*if ((stepX[index] < 0 && endX >= startX[index]) ||
 			    (stepX[index] > 0 && endX <= startX[index]) ||
 			    (stepY[index] < 0 && endY >= startY[index]) ||
 			    (stepY[index] > 0 && endY <= startY[index])) continue;*/
-		
+
 			for (int x = startX[index]; x != endX; x += stepX[index])
 			{
 				for (int y = startY[index]; y != endY; y += stepY[index])
 				{
 					kvxslab_t *slab_start = GetSlabStart(mip, x, y);
 					kvxslab_t *slab_end = GetSlabEnd(mip, x, y);
-				
+
 					for (kvxslab_t *slab = slab_start; slab != slab_end; slab = NextSlab(slab))
 					{
 						// To do: check slab->backfacecull
-						
+
 						int ztop = slab->ztop;
 						int zbottom = ztop + slab->zleng;
-						
+
 						//ztop = max(ztop, minZ);
 						//zbottom = min(zbottom, maxZ);
-						
+
 						for (int z = ztop; z < zbottom; z++)
 						{
 							uint8_t color = slab->col[z - slab->ztop];
-						
+
 							DVector3 voxel_pos = voxel_origin;
 							voxel_pos.X += dirX.X * x + dirX.Y * y;
 							voxel_pos.Y += dirY.X * x + dirY.Y * y;
 							voxel_pos.Z += dirZ * z;
-						
+
 							FillBox(thread, drawerargs, voxel_pos, sprite_xscale, sprite_yscale, color, cliptop, clipbottom, false, false);
 						}
 					}

@@ -37,4 +37,3 @@ enum EGameType
 	GAME_DoomStrifeChex	= GAME_Doom|GAME_Strife|GAME_Chex
 };
 #endif
-

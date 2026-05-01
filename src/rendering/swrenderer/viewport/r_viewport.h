@@ -38,10 +38,10 @@ namespace swrenderer
 	public:
 		RenderViewport();
 		~RenderViewport();
-		
+
 		void SetViewport(FLevelLocals *Level, RenderThread *thread, int width, int height, float trueratio);
 		void SetupFreelook();
-		
+
 		void SetupPolyViewport(RenderThread *thread);
 
 		VSMatrix WorldToView;

@@ -82,7 +82,7 @@ class Templar : Actor
 		PGRD \ -1;
 		Stop;
 	}
-	
+
 	void A_TemplarAttack()
 	{
 		if (target != null)
@@ -100,4 +100,3 @@ class Templar : Actor
 		}
 	}
 }
-

@@ -46,9 +46,9 @@ struct VertexContainer
 	TArray<FQualifiedVertex> vertices;
 	TMap<FQualifiedVertex, uint32_t> vertexmap;
 	bool perSubsector = false;
-	
+
 	TArray<uint32_t> indices;
-	
+
 	uint32_t AddVertex(FQualifiedVertex *vert)
 	{
 		auto check = vertexmap.CheckKey(*vert);
@@ -57,23 +57,23 @@ struct VertexContainer
 		vertexmap[*vert] = index;
 		return index;
 	}
-	
+
 	uint32_t AddVertex(vertex_t *vert, int qualifier)
 	{
 		FQualifiedVertex vertx = { vert, qualifier};
 		return AddVertex(&vertx);
 	}
-	
+
 	uint32_t AddIndexForVertex(FQualifiedVertex *vert)
 	{
 		return indices.Push(AddVertex(vert));
 	}
-	
+
 	uint32_t AddIndexForVertex(vertex_t *vert, int qualifier)
 	{
 		return indices.Push(AddVertex(vert, qualifier));
 	}
-	
+
 	uint32_t AddIndex(uint32_t indx)
 	{
 		return indices.Push(indx);
@@ -87,4 +87,3 @@ VertexContainers BuildVertices(TArray<sector_t> &sectors);
 class FFlatVertexBuffer;
 void CheckUpdate(FFlatVertexBuffer* fvb, sector_t* sector);
 void CreateVBO(FFlatVertexBuffer* fvb, TArray<sector_t>& sectors);
-

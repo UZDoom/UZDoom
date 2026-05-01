@@ -936,7 +936,7 @@ bool C_DoKey(event_t *ev, FKeyBindings *binds, FKeyBindings *doublebinds)
 	{
 		return false;
 	}
-	
+
 	FString binding;
 	const bool hasDoubleBind = doublebinds != nullptr && doublebinds->GetBind(key) != nullptr;
 	const bool hasQueuedPress = QueuedPresses[key] && QueuedBindings[key] == binds;

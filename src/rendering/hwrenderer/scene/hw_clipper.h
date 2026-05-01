@@ -32,7 +32,7 @@
 class ClipNode
 {
 	friend class Clipper;
-	
+
 	ClipNode *prev, *next;
 	angle_t start, end;
 
@@ -96,11 +96,11 @@ public:
 		c->next = c->prev = NULL;
 		return c;
 	}
-    
-    void SetViewpoint(FRenderViewpoint &vp)
-    {
-        viewpoint = &vp;
-    }
+
+	void SetViewpoint(FRenderViewpoint &vp)
+	{
+		viewpoint = &vp;
+	}
 
 	void SetSilhouette();
 
@@ -110,7 +110,7 @@ public:
 		{
 			return (IsRangeVisible(startAngle, ANGLE_MAX) || IsRangeVisible(0, endAngle));
 		}
-		
+
 		return IsRangeVisible(startAngle, endAngle);
 	}
 
@@ -128,13 +128,13 @@ public:
 			AddClipRange(startangle, endangle);
 		}
 	}
-    
-    void SafeAddClipRange(const vertex_t *v1, const vertex_t *v2)
-    {
-        angle_t a2 = PointToPseudoAngle(v1->p.X, v1->p.Y);
-        angle_t a1 = PointToPseudoAngle(v2->p.X, v2->p.Y);
-        SafeAddClipRange(a1,a2);
-    }
+
+	void SafeAddClipRange(const vertex_t *v1, const vertex_t *v2)
+	{
+		angle_t a2 = PointToPseudoAngle(v1->p.X, v1->p.Y);
+		angle_t a1 = PointToPseudoAngle(v2->p.X, v2->p.Y);
+		SafeAddClipRange(a1,a2);
+	}
 
 	void SafeAddClipRangeRealAngles(angle_t startangle, angle_t endangle)
 	{

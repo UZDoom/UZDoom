@@ -65,12 +65,12 @@ bool VkShaderManager::CompileNextShader()
 	if (compileState == 0)
 	{
 		// regular material shaders
-		
+
 		VkShaderProgram prog;
 		prog.vert = LoadVertShader(defaultshaders[i].ShaderName, mainvp, defaultshaders[i].Defines);
 		prog.frag = LoadFragShader(defaultshaders[i].ShaderName, mainfp, defaultshaders[i].gettexelfunc, defaultshaders[i].lightfunc, defaultshaders[i].Defines, true, compilePass == GBUFFER_PASS);
 		mMaterialShaders[compilePass].push_back(std::move(prog));
-		
+
 		compileIndex++;
 		if (defaultshaders[compileIndex].ShaderName == nullptr)
 		{
@@ -81,7 +81,7 @@ bool VkShaderManager::CompileNextShader()
 	else if (compileState == 1)
 	{
 		// NAT material shaders
-		
+
 		VkShaderProgram natprog;
 		natprog.vert = LoadVertShader(defaultshaders[i].ShaderName, mainvp, defaultshaders[i].Defines);
 		natprog.frag = LoadFragShader(defaultshaders[i].ShaderName, mainfp, defaultshaders[i].gettexelfunc, defaultshaders[i].lightfunc, defaultshaders[i].Defines, false, compilePass == GBUFFER_PASS);
@@ -98,7 +98,7 @@ bool VkShaderManager::CompileNextShader()
 	else if (compileState == 2)
 	{
 		// user shaders
-		
+
 		const FString& name = ExtractFileBase(usershaders[i].shader.GetChars());
 		FString defines = defaultshaders[usershaders[i].shaderType].Defines + usershaders[i].defines;
 
@@ -117,7 +117,7 @@ bool VkShaderManager::CompileNextShader()
 	else if (compileState == 3)
 	{
 		// Effect shaders
-		
+
 		VkShaderProgram prog;
 		prog.vert = LoadVertShader(effectshaders[i].ShaderName, effectshaders[i].vp, effectshaders[i].defines);
 		prog.frag = LoadFragShader(effectshaders[i].ShaderName, effectshaders[i].fp1, effectshaders[i].fp2, effectshaders[i].fp3, effectshaders[i].defines, true, compilePass == GBUFFER_PASS);
@@ -197,12 +197,12 @@ static const char *shaderBindings = R"(
 		vec4 uClipLine;
 
 		float uGlobVis;			// uGlobVis = R_GetGlobVis(r_visibility) / 32.0
-		int uPalLightLevels;	
+		int uPalLightLevels;
 		int uViewHeight;		// Software fuzz scaling
 		float uClipHeight;
 		float uClipHeightDirection;
 		int uShadowmapFilter;
-		
+
 		int uLightBlendMode;
 
 		float uThickFogDistance;

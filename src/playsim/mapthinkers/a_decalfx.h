@@ -113,4 +113,3 @@ public:
 	double StartY;
 	bool bStarted;
 };
-

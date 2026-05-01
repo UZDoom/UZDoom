@@ -88,13 +88,13 @@ void P_DamageHealthGroup(FHealthGroup* grp, void* object, AActor* source, int da
 	for (unsigned i = 0; i < grp->sectors.Size(); i++)
 	{
 		sector_t* lsector = grp->sectors[i];
-		
+
 		if (lsector->healthceilinggroup == group && (lsector != object || part != SECPART_Ceiling))
 		{
 			lsector->healthceiling = grp->health + damage;
 			P_DamageSector(lsector, source, damage, damagetype, SECPART_Ceiling, position, isradius, false);
 		}
-		
+
 		if (lsector->healthfloorgroup == group && (lsector != object || part != SECPART_Floor))
 		{
 			lsector->healthfloor = grp->health + damage;
@@ -188,7 +188,7 @@ void P_DamageSector(sector_t* sector, AActor* source, int damage, FName damagety
 
 	int newhealth = *sectorhealth - damage;
 	if (newhealth < 0) newhealth = 0;
-	
+
 	*sectorhealth = newhealth;
 
 	// callbacks here
@@ -303,7 +303,7 @@ void P_InitHealthGroups(FLevelLocals *Level)
 void P_GeometryLineAttack(FTraceResults& trace, AActor* thing, int damage, FName damageType)
 {
 	// [ZZ] hitscan geometry damage logic
-	//      
+	//
 
 	// check 3d floor, but still allow the wall to take generic damage
 	if (trace.HitType == TRACE_HitWall && trace.Tier == TIER_FFloor)
@@ -311,7 +311,7 @@ void P_GeometryLineAttack(FTraceResults& trace, AActor* thing, int damage, FName
 		if (trace.ffloor && trace.ffloor->model && trace.ffloor->model->health3d)
 			P_DamageSector(trace.ffloor->model, thing, damage, damageType, SECPART_3D, trace.HitPos, false, true);
 	}
-	
+
 	if (trace.HitType == TRACE_HitWall && P_CheckLinedefVulnerable(trace.Line, trace.Side))
 	{
 		if (trace.Tier == TIER_Lower || trace.Tier == TIER_Upper) // process back sector health if any
@@ -492,7 +492,7 @@ void P_GeometryRadiusAttack(AActor* bombspot, AActor* bombsource, int bombdamage
 			grp = 0x20000000 | (f->model->sectornum & 0x0FFFFFFF);
 
 		DVector3 spotTo;
-		
+
 		if (bombspot->Z() < ff_bottom) // use bottom plane
 		{
 			double dst = f->bottom.plane->Normal() | (bombspot->Pos() + f->bottom.plane->Normal()*f->bottom.plane->D);
@@ -765,7 +765,7 @@ bool P_ProjectileHitPlane(AActor* mo, int part)
 			P_DamageSector(mo->Blocking3DFloor, mo, mo->GetMissileDamage((mo->flags4 & MF4_STRIFEDAMAGE) ? 3 : 7, 1), mo->DamageType, SECPART_3D, mo->Pos(), false, true);
 			return true;
 		}
-		
+
 		return false;
 	}
 
@@ -788,7 +788,7 @@ bool P_ProjectileHitPlane(AActor* mo, int part)
 // P_CheckLinedefVulnerable
 //
 // If sectorpart is <0: returns if linedef is damageable directly
-// If sectorpart is valid (SECPART_ enum): returns if sector on sidedef is 
+// If sectorpart is valid (SECPART_ enum): returns if sector on sidedef is
 //  damageable through this line at specified sectorpart
 //==========================================================================
 
@@ -868,7 +868,7 @@ void P_SerializeHealthGroups(FLevelLocals *Level, FSerializer& arc)
 }
 
 // ===================== zscript interface =====================
-// 
+//
 // =============================================================
 
 DEFINE_FIELD_X(HealthGroup, FHealthGroup, id)

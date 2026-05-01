@@ -454,9 +454,9 @@ void userinfo_t::Reset(int pnum)
 			case NAME_PlayerClass:	type = CVAR_Int; break;
 			default:				type = cvar->GetRealType(); break;
 			}
-			
+
 			int flags = cvar->GetFlags();
-			
+
 			newcvar = C_CreateCVar(NULL, type, (flags & CVAR_MOD) | ((flags & CVAR_ZS_CUSTOM) << 1) );
 			newcvar->SetGenericRepDefault(cvar->GetGenericRepDefault(CVAR_String), CVAR_String);
 
@@ -864,7 +864,7 @@ void D_ReadUserInfoStrings (int pnum, TArrayView<uint8_t>& stream, bool update)
 				}
 				keyname = FName(ptr, valstart - ptr - 1, true);
 			}
-			
+
 			// A few of these need special handling.
 			switch (keyname.GetIndex())
 			{

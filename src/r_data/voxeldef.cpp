@@ -256,7 +256,7 @@ static void VOX_ReadOptions(FScanner &sc, VoxelOptions &opts)
 void R_InitVoxels()
 {
 	int lump, lastlump = 0;
-	
+
 	while ((lump = fileSystem.FindLump("VOXELDEF", &lastlump)) != -1)
 	{
 		FScanner sc(lump);
@@ -329,4 +329,3 @@ void R_InitVoxels()
 		}
 	}
 }
-

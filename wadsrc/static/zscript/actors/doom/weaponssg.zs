@@ -95,13 +95,13 @@ extend class StateProvider
 		{
 			if (!weap.DepleteAmmo (weap.bAltFire, true))
 				return;
-			
+
 			player.SetPsprite(PSP_FLASH, weap.FindState('Flash'), true);
 		}
 		player.mo.PlayAttacking2 ();
 
 		double pitch = BulletSlope ();
-			
+
 		for (int i = 0 ; i < 20 ; i++)
 		{
 			int damage = 5 * random[FireSG2](1, 3);
@@ -118,18 +118,18 @@ extend class StateProvider
 	}
 
 
-	action void A_OpenShotgun2() 
-	{ 
-		A_StartSound("weapons/sshoto", CHAN_WEAPON); 
+	action void A_OpenShotgun2()
+	{
+		A_StartSound("weapons/sshoto", CHAN_WEAPON);
 	}
-	
-	action void A_LoadShotgun2() 
-	{ 
-		A_StartSound("weapons/sshotl", CHAN_WEAPON); 
+
+	action void A_LoadShotgun2()
+	{
+		A_StartSound("weapons/sshotl", CHAN_WEAPON);
 	}
-	
-	action void A_CloseShotgun2() 
-	{ 
+
+	action void A_CloseShotgun2()
+	{
 		A_StartSound("weapons/sshotc", CHAN_WEAPON);
 		A_Refire();
 	}

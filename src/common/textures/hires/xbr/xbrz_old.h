@@ -41,30 +41,30 @@ http://board.byuu.org/viewtopic.php?f=10&t=2248
 -> support for source/target pitch in bytes!
 -> if your emulator changes only a few image slices during each cycle (e.g. Dosbox) then there's no need to run xBRZ on the complete image:
    Just make sure you enlarge the source image slice by 2 rows on top and 2 on bottom (this is the additional range the xBRZ algorithm is using during analysis)
-   Caveat: If there are multiple changed slices, make sure they do not overlap after adding these additional rows in order to avoid a memory race condition 
+   Caveat: If there are multiple changed slices, make sure they do not overlap after adding these additional rows in order to avoid a memory race condition
    if you are using multiple threads for processing each enlarged slice!
 
 THREAD-SAFETY: - parts of the same image may be scaled by multiple threads as long as the [yFirst, yLast) ranges do not overlap!
-               - there is a minor inefficiency for the first row of a slice, so avoid processing single rows only
+			   - there is a minor inefficiency for the first row of a slice, so avoid processing single rows only
 
 
 */
 void scale(size_t factor, //valid range: 2 - 5
-           const uint32_t* src, uint32_t* trg, int srcWidth, int srcHeight,
-           const ScalerCfg& cfg = ScalerCfg(),
-           int yFirst = 0, int yLast = std::numeric_limits<int>::max()); //slice of source image
+		   const uint32_t* src, uint32_t* trg, int srcWidth, int srcHeight,
+		   const ScalerCfg& cfg = ScalerCfg(),
+		   int yFirst = 0, int yLast = std::numeric_limits<int>::max()); //slice of source image
 
 void nearestNeighborScale(const uint32_t* src, int srcWidth, int srcHeight,
-                          uint32_t* trg, int trgWidth, int trgHeight);
+						  uint32_t* trg, int trgWidth, int trgHeight);
 
 enum SliceType
 {
-    NN_SCALE_SLICE_SOURCE,
-    NN_SCALE_SLICE_TARGET,
+	NN_SCALE_SLICE_SOURCE,
+	NN_SCALE_SLICE_TARGET,
 };
 void nearestNeighborScale(const uint32_t* src, int srcWidth, int srcHeight, int srcPitch, //pitch in bytes!
-                          uint32_t* trg, int trgWidth, int trgHeight, int trgPitch,
-                          SliceType st, int yFirst, int yLast);
+						  uint32_t* trg, int trgWidth, int trgHeight, int trgPitch,
+						  SliceType st, int yFirst, int yLast);
 
 //parameter tuning
 bool equalColor(uint32_t col1, uint32_t col2, double luminanceWeight, double equalColorTolerance);
@@ -76,11 +76,11 @@ bool equalColor(uint32_t col1, uint32_t col2, double luminanceWeight, double equ
 //########################### implementation ###########################
 inline
 void nearestNeighborScale(const uint32_t* src, int srcWidth, int srcHeight,
-                          uint32_t* trg, int trgWidth, int trgHeight)
+						  uint32_t* trg, int trgWidth, int trgHeight)
 {
-    nearestNeighborScale(src, srcWidth, srcHeight, srcWidth * sizeof(uint32_t),
-                         trg, trgWidth, trgHeight, trgWidth * sizeof(uint32_t),
-                         NN_SCALE_SLICE_TARGET, 0, trgHeight);
+	nearestNeighborScale(src, srcWidth, srcHeight, srcWidth * sizeof(uint32_t),
+						 trg, trgWidth, trgHeight, trgWidth * sizeof(uint32_t),
+						 NN_SCALE_SLICE_TARGET, 0, trgHeight);
 }
 }
 

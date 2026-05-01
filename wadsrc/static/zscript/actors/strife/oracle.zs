@@ -52,7 +52,7 @@ class Oracle : Actor
 		ORCL Q -1;
 		Stop;
 	}
-	
+
 	void A_WakeOracleSpectre ()
 	{
 		ThinkerIterator it = ThinkerIterator.Create("AlienSpectre3");
@@ -66,5 +66,5 @@ class Oracle : Actor
 		}
 	}
 
-	
+
 }

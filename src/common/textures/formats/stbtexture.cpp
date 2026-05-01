@@ -21,7 +21,7 @@
 **
 */
 
-#define STB_IMAGE_IMPLEMENTATION    
+#define STB_IMAGE_IMPLEMENTATION
 #define STBI_NO_STDIO
 // Undefine formats we do not want to support here.
 //#define STBI_NO_PNG we need PNG for 16 bit channel images. Regular ones still use our own, more flexible decoder.
@@ -118,7 +118,7 @@ PalettedPixels FStbTexture::CreatePalettedPixels(int conversion, int frame)
 	PalettedPixels Pixels(Width*Height);
 	dest_p = Pixels.Data();
 
-	bool doalpha = conversion == luminance; 
+	bool doalpha = conversion == luminance;
 	// Convert the source image from row-major to column-major format and remap it
 	for (int y = Height; y != 0; --y)
 	{
@@ -129,7 +129,7 @@ PalettedPixels FStbTexture::CreatePalettedPixels(int conversion, int frame)
 			int r = *data++;
 			int a = *data++;
 			if (a < 128) *dest_p = 0;
-			else *dest_p = ImageHelpers::RGBToPalette(doalpha, r, g, b); 
+			else *dest_p = ImageHelpers::RGBToPalette(doalpha, r, g, b);
 			dest_p += dest_adv;
 		}
 		dest_p -= dest_rew;
@@ -145,13 +145,11 @@ PalettedPixels FStbTexture::CreatePalettedPixels(int conversion, int frame)
 
 int FStbTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 {
-	auto lump = fileSystem.OpenFileReader (SourceLump); 
+	auto lump = fileSystem.OpenFileReader (SourceLump);
 	int x, y, chan;
-	auto image = stbi_load_from_callbacks(&callbacks, &lump, &x, &y, &chan, STBI_rgb_alpha); 	
+	auto image = stbi_load_from_callbacks(&callbacks, &lump, &x, &y, &chan, STBI_rgb_alpha);
 	if (image)
-		bmp->CopyPixelDataRGB(0, 0, image, x, y, 4, x*4, 0, CF_RGBA); 	
-	stbi_image_free(image);	
+		bmp->CopyPixelDataRGB(0, 0, image, x, y, 4, x*4, 0, CF_RGBA);
+	stbi_image_free(image);
 	return -1;
 }
-
- 

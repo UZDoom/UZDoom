@@ -91,11 +91,11 @@ AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info
 
 void AboutPage::SetValues(FStartupSelectionInfo& info) const
 {
-	Notes->SetText(GStrings.GetString("PICKER_SHOWNOTES"));
 }
 
 void AboutPage::UpdateLanguage()
 {
+	Notes->SetText(GStrings.GetString("PICKER_SHOWNOTES"));
 }
 
 void AboutPage::OnGeometryChanged()

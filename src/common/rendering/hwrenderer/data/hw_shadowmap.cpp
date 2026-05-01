@@ -29,7 +29,7 @@
 	the fragment shader (main.fp) needs to sample from row 20. That is, the V texture coordinate needs
 	to be 20.5/1024.
 
-    The texel row for each light is split into four parts. One for each direction, like a cube texture,
+	The texel row for each light is split into four parts. One for each direction, like a cube texture,
 	but then only in 2D where this reduces itself to a square. When main.fp samples from the shadow map
 	it first decides in which direction the fragment is (relative to the light), like cubemap sampling does
 	for 3D, but once again just for the 2D case.
@@ -151,4 +151,3 @@ IShadowMap::~IShadowMap()
 {
 	Reset();
 }
-

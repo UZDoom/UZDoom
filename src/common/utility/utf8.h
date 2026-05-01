@@ -32,7 +32,7 @@ inline int GetCharFromString(const char32_t *&string)
 {
 	return *string++;
 }
-const char *MakeUTF8(const char *outline, int *numchars = nullptr);	// returns a pointer to a static buffer, assuming that its caller will immediately process the result. 
+const char *MakeUTF8(const char *outline, int *numchars = nullptr);	// returns a pointer to a static buffer, assuming that its caller will immediately process the result.
 const char *MakeUTF8(int codepoint, int *psize = nullptr);
 
 bool myislower(int code);

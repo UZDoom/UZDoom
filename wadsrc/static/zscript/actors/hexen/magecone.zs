@@ -62,7 +62,7 @@ class MWeapFrost : MageWeapon
 		CONE A 10 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// A_FireConePL1
@@ -123,7 +123,7 @@ class FrostMissile : Actor
 	const SHARDSPAWN_RIGHT	= 2;
 	const SHARDSPAWN_UP		= 4;
 	const SHARDSPAWN_DOWN	= 8;
-	
+
 	Default
 	{
 		Speed 25;
@@ -148,7 +148,7 @@ class FrostMissile : Actor
 		SHEX ABCDE 5 Bright;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor victim, int damage, Name damagetype)
 	{
 		if (special2 > 0)

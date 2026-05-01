@@ -99,8 +99,8 @@ FMaterial::FMaterial(FGameTexture * tx, int scaleflags)
 			mTextureLayers.Push({ tx->Brightmap.get(), scaleflags, -1 });
 			mLayerFlags |= TEXF_Brightmap;
 		}
-		else	
-		{ 
+		else
+		{
 			mTextureLayers.Push({ placeholder->GetTexture(), 0, -1 });
 		}
 		if (tx->Layers && tx->Layers->Detailmap.get())
@@ -191,7 +191,7 @@ IHardwareTexture* FMaterial::GetLayer(int i, int translation, MaterialLayerInfo*
 //==========================================================================
 //
 // Gets a texture from the texture manager and checks its validity for
-// GL rendering. 
+// GL rendering.
 //
 //==========================================================================
 
@@ -216,5 +216,3 @@ void DeleteMaterial(FMaterial* mat)
 {
 	delete mat;
 }
-
-

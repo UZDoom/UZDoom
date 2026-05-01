@@ -77,30 +77,30 @@
 #ifdef __GNUC__
 typedef enum _MINIDUMP_TYPE
 {
-    MiniDumpNormal
+	MiniDumpNormal
 	// Other types omitted.
 } MINIDUMP_TYPE;
 
 typedef struct _MINIDUMP_EXCEPTION_INFORMATION {
-    DWORD ThreadId;
-    PEXCEPTION_POINTERS ExceptionPointers;
-    BOOL ClientPointers;
+	DWORD ThreadId;
+	PEXCEPTION_POINTERS ExceptionPointers;
+	BOOL ClientPointers;
 } MINIDUMP_EXCEPTION_INFORMATION, *PMINIDUMP_EXCEPTION_INFORMATION;
 
 typedef struct _MINIDUMP_USER_STREAM_INFORMATION {
-    ULONG UserStreamCount;
-    void *UserStreamArray;			// Not really void *
+	ULONG UserStreamCount;
+	void *UserStreamArray;			// Not really void *
 } MINIDUMP_USER_STREAM_INFORMATION, *PMINIDUMP_USER_STREAM_INFORMATION;
 
 typedef BOOL (WINAPI * MINIDUMP_CALLBACK_ROUTINE) (
-    IN PVOID CallbackParam,
-    IN CONST void *CallbackInput,	// Not really void *
-    IN OUT void *CallbackOutput		// Not really void *
-    );
+	IN PVOID CallbackParam,
+	IN CONST void *CallbackInput,	// Not really void *
+	IN OUT void *CallbackOutput		// Not really void *
+	);
 
 typedef struct _MINIDUMP_CALLBACK_INFORMATION {
-    MINIDUMP_CALLBACK_ROUTINE CallbackRoutine;
-    PVOID CallbackParam;
+	MINIDUMP_CALLBACK_ROUTINE CallbackRoutine;
+	PVOID CallbackParam;
 } MINIDUMP_CALLBACK_INFORMATION, *PMINIDUMP_CALLBACK_INFORMATION;
 #endif
 

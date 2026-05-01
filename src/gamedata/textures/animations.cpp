@@ -221,7 +221,7 @@ void FTextureAnimator::InitAnimated (void)
 				// different episode ?
 				if (!(pic1 = TexMan.CheckForTexture ((const char*)(anim_p + 10) /* .startname */, ETextureType::Wall, texflags)).Exists() ||
 					!(pic2 = TexMan.CheckForTexture ((const char*)(anim_p + 1) /* .endname */, ETextureType::Wall, texflags)).Exists())
-					continue;		
+					continue;
 
 				// [RH] Bit 1 set means allow decals on walls with this texture
 				bool nodecals = !(*anim_p & 2);
@@ -252,7 +252,7 @@ void FTextureAnimator::InitAnimated (void)
 			{
 				if (tex1->GetUseType() != tex2->GetUseType())
 				{
-					// not the same type - 
+					// not the same type -
 					continue;
 				}
 
@@ -296,7 +296,7 @@ void FTextureAnimator::InitAnimDefs ()
 {
 	const BITFIELD texflags = FTextureManager::TEXMAN_Overridable | FTextureManager::TEXMAN_TryAny;
 	int lump, lastlump = 0;
-	
+
 	while ((lump = fileSystem.FindLump ("ANIMDEFS", &lastlump)) != -1)
 	{
 		FScanner sc(lump);
@@ -669,7 +669,7 @@ void FTextureAnimator::ParseWarp(FScanner &sc)
 		}
 
 		// No decals on warping textures, by default.
-		// Warping information is taken from the last warp 
+		// Warping information is taken from the last warp
 		// definition for this texture.
 		warper->SetNoDecals(true);
 		if (sc.GetString ())
@@ -1233,4 +1233,3 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FDoorAnimat
 	}
 	return arc;
 }
-

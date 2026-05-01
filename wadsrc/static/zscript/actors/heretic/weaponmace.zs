@@ -56,7 +56,7 @@ class Mace : HereticWeapon
 		MACE DEFB 4;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FireMacePL1
@@ -123,14 +123,14 @@ class MacePowered : Mace
 	States
 	{
 	Fire:
-	Hold:	
+	Hold:
 		MACE B 4;
 		MACE D 4 A_FireMacePL2;
 		MACE B 4;
 		MACE A 8 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FireMacePL2
@@ -171,7 +171,7 @@ class MacePowered : Mace
 class MaceFX1 : Actor
 {
 	const MAGIC_JUNK = 1234;
-	
+
 	Default
 	{
 		Radius 8;
@@ -195,7 +195,7 @@ class MaceFX1 : Actor
 		FX02 GHIJ 4 BRIGHT;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_MacePL1Check
@@ -264,7 +264,7 @@ class MaceFX2 : MaceFX1
 		FX02 F 4 A_MaceBallImpact2;
 		goto Super::Death+1;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_MaceBallImpact2
@@ -367,7 +367,7 @@ class MaceFX4 : Actor
 		FX02 GHIJ 4 BRIGHT;
 		Stop;
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// FUNC P_AutoUseChaosDevice
@@ -386,7 +386,7 @@ class MaceFX4 : Actor
 		}
 		return false;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC DoSpecialDamage

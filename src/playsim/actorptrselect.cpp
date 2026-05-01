@@ -120,7 +120,7 @@ AActor *COPY_AAPTREX(FLevelLocals *Level, AActor *origin, int selector, EPTRClie
 			return retMobj;
 		}
 	}
-	
+
 	switch (selector & AAPTR_STATIC_SELECTORS)
 	{
 		case AAPTR_PLAYER1: return AAPTR_RESOLVE_PLAYERNUM(0);
@@ -227,22 +227,22 @@ void VerifyMasterChain(AActor *self)
 //
 //==========================================================================
 
-void ASSIGN_AAPTR(AActor *toActor, int toSlot, AActor *ptr, int flags) 
+void ASSIGN_AAPTR(AActor *toActor, int toSlot, AActor *ptr, int flags)
 {
 	switch (toSlot)
 	{
-		case AAPTR_TARGET: 
-			toActor->target = ptr; 
-			if (!(PTROP_UNSAFETARGET & (flags))) VerifyTargetChain(toActor); 
+		case AAPTR_TARGET:
+			toActor->target = ptr;
+			if (!(PTROP_UNSAFETARGET & (flags))) VerifyTargetChain(toActor);
 			break;
 
-		case AAPTR_MASTER: 
-			toActor->master = ptr; 
-			if (!(PTROP_UNSAFEMASTER & (flags))) VerifyMasterChain(toActor); 
+		case AAPTR_MASTER:
+			toActor->master = ptr;
+			if (!(PTROP_UNSAFEMASTER & (flags))) VerifyMasterChain(toActor);
 			break;
 
-		case AAPTR_TRACER: 
-			toActor->tracer = ptr; 
+		case AAPTR_TRACER:
+			toActor->tracer = ptr;
 			break;
 	}
 }

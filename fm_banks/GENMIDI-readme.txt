@@ -103,4 +103,3 @@ of the offset garbage, lest your mix splatter like crazy.
 * Anyone who makes music with this thing!
 
  YMF262 forever.
-

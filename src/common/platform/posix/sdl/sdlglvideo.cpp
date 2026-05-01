@@ -240,7 +240,7 @@ CUSTOM_CVAR(Int, vid_adapter, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITC
 		// Get displays and default display size
 		Priv::updateDisplayInfo();
 
-    int display = (*self) % Priv::numberOfDisplays;
+	int display = (*self) % Priv::numberOfDisplays;
 
 		// TODO control better when updateDisplayInfo fails
 		SDL_Rect* bounds = &Priv::displayBounds[vid_adapter % Priv::numberOfDisplays];
@@ -281,8 +281,8 @@ CUSTOM_CVAR(Int, vid_adapter, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITC
 			SDL_SetWindowPosition(Priv::window, SDL_WINDOWPOS_CENTERED_DISPLAY(display), SDL_WINDOWPOS_CENTERED_DISPLAY(display));
 		}
 
-    display = SDL_GetWindowDisplayIndex(Priv::window);
-    if (display >= 0) {
+	display = SDL_GetWindowDisplayIndex(Priv::window);
+	if (display >= 0) {
 			Printf("New display is %d\n", display );
 		} else {
 			Printf("A problem occured trying to change of display %s\n", SDL_GetError());
@@ -297,7 +297,7 @@ public:
 	~SDLVideo ();
 
 	void DumpAdapters();
-	
+
 	DFrameBuffer *CreateFrameBuffer ();
 
 private:
@@ -372,14 +372,14 @@ void SDLVideo::DumpAdapters()
 {
 	Priv::updateDisplayInfo();
   for (int i=0; i < Priv::numberOfDisplays; i++) {
-    Printf("%s%d. [%dx%d @ (%d,%d)]\n",
-        vid_adapter == i ? TEXTCOLOR_BOLD : "",
-        i,
-        Priv::displayBounds[i].w,
-        Priv::displayBounds[i].h,
-        Priv::displayBounds[i].x,
-        Priv::displayBounds[i].y
-      );
+	Printf("%s%d. [%dx%d @ (%d,%d)]\n",
+		vid_adapter == i ? TEXTCOLOR_BOLD : "",
+		i,
+		Priv::displayBounds[i].w,
+		Priv::displayBounds[i].h,
+		Priv::displayBounds[i].x,
+		Priv::displayBounds[i].y
+	  );
   }
 }
 
@@ -525,7 +525,7 @@ void SystemBaseFrameBuffer::SetWindowSize(int w, int h)
 		SDL_GetWindowPosition(Priv::window, &x, &y);
 		win_x = x;
 		win_y = y;
-		
+
 	}
 }
 
@@ -552,7 +552,7 @@ SystemGLFrameBuffer::SystemGLFrameBuffer(void *hMonitor, bool fullscreen)
 		int vermin = (int)(gl_version*10.0) % 10;
 
 		while (glvers[glveridx][0] > vermaj || (glvers[glveridx][0] == vermaj &&
-		        glvers[glveridx][1] > vermin))
+				glvers[glveridx][1] > vermin))
 		{
 			glveridx++;
 			if (glvers[glveridx][0] == 0)
@@ -699,4 +699,3 @@ void I_SetWindowTitle(const char* caption)
 		SDL_SetWindowTitle(Priv::window, default_caption.GetChars());
 	}
 }
-

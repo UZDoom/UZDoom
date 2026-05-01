@@ -734,7 +734,7 @@ void FGLRenderBuffers::BindCurrentTexture(int index, int filter, int wrap)
 
 //==========================================================================
 //
-// Makes the frame buffer for the current texture active 
+// Makes the frame buffer for the current texture active
 //
 //==========================================================================
 

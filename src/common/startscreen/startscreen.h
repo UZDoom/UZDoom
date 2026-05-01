@@ -32,7 +32,7 @@
 
 class FGameTexture;
 
-struct RgbQuad 
+struct RgbQuad
 {
 	uint8_t    rgbBlue;
 	uint8_t    rgbGreen;
@@ -72,7 +72,7 @@ public:
 	FBitmap& GetBitmap() { return StartupBitmap; }
 	int GetScale() const { return Scale; }
 
-	
+
 protected:
 	void ClearBlock(FBitmap& bitmap_info, RgbQuad fill, int x, int y, int bytewidth, int height);
 	FBitmap AllocTextBitmap();

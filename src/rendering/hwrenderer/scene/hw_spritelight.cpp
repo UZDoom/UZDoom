@@ -16,7 +16,7 @@
 */
 
 #include "c_dispatch.h"
-#include "a_dynlight.h" 
+#include "a_dynlight.h"
 #include "p_local.h"
 #include "p_effect.h"
 #include "g_level.h"
@@ -102,7 +102,7 @@ void HWDrawInfo::GetDynSpriteLight(AActor *self, float x, float y, float z, FSec
 	FDynamicLight *light;
 	float frac, lr, lg, lb;
 	float radius;
-	
+
 	out[0] = out[1] = out[2] = 0.f;
 
 	LightProbe* probe = FindLightProbe(Level, x, y, z);
@@ -220,7 +220,7 @@ void HWDrawInfo::GetDynSpriteLight(AActor *thing, particle_t *particle, float *o
 
 // static so that we build up a reserve (memory allocations stop)
 // For multithread processing each worker thread needs its own copy, though.
-static thread_local TArray<FDynamicLight*> addedLightsArray; 
+static thread_local TArray<FDynamicLight*> addedLightsArray;
 
 void hw_GetDynModelLight(AActor *self, FDynLightData &modellightdata)
 {

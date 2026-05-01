@@ -111,7 +111,7 @@ struct HWSeg
 	float y1,y2;
 	float fracleft, fracright;	// fractional offset of the 2 vertices on the linedef
 
-	FVector3 Normal() const 
+	FVector3 Normal() const
 	{
 		// we do not use the vector math inlines here because they are not optimized for speed but accuracy in the playsim and this is called quite frequently.
 		float x = y2 - y1;
@@ -338,7 +338,7 @@ public:
 	bool stack;
 	bool ceiling;
 	uint8_t renderflags;
-    uint8_t hacktype;
+	uint8_t hacktype;
 	int iboindex;
 	//int vboheight;
 
@@ -351,12 +351,12 @@ public:
 	void Process(HWDrawInfo *di, sector_t * model, int whichplane, bool notexture);
 	void SetFrom3DFloor(F3DFloor *rover, bool top, bool underside);
 	void ProcessSector(HWDrawInfo *di, sector_t * frontsector, int which = 7 /*SSRF_RENDERALL*/);	// cannot use constant due to circular dependencies.
-	
+
 	void DrawSubsectors(HWDrawInfo *di, FRenderState &state);
 	void DrawFlat(HWDrawInfo *di, FRenderState &state, bool translucent);
-    
-    void DrawOtherPlanes(HWDrawInfo *di, FRenderState &state);
-    void DrawFloodPlanes(HWDrawInfo *di, FRenderState &state);
+
+	void DrawOtherPlanes(HWDrawInfo *di, FRenderState &state);
+	void DrawFloodPlanes(HWDrawInfo *di, FRenderState &state);
 };
 
 //==========================================================================

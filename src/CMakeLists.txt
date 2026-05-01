@@ -24,7 +24,7 @@ if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 endif()
 
 if( APPLE )
-    option( OSX_COCOA_BACKEND "Use native Cocoa backend instead of SDL" ON )
+		option( OSX_COCOA_BACKEND "Use native Cocoa backend instead of SDL" ON )
 endif()
 
 option( ZDOOM_ENABLE_SWR "Enable software renderer" ON )
@@ -332,7 +332,7 @@ add_custom_target( revision_check ALL
 
 # required libraries
 
-set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} miniz "${BZIP2_LIBRARIES}" "${CMAKE_DL_LIBS}" "${DRPC_LIBRARIES}")
+set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} miniz "${BZIP2_LIBRARIES}" "${CMAKE_DL_LIBS}")
 if (HAVE_VULKAN)
 	list( APPEND PROJECT_LIBRARIES "zvulkan" )
 endif()
@@ -372,7 +372,7 @@ else()
 	message( SEND_ERROR "Could not find libvpx" )
 endif()
 
-include_directories( SYSTEM "${BZIP2_INCLUDE_DIR}" "${LZMA_INCLUDE_DIR}" "${ZMUSIC_INCLUDE_DIR}" "${DRPC_INCLUDE_DIR}")
+include_directories( SYSTEM "${BZIP2_INCLUDE_DIR}" "${LZMA_INCLUDE_DIR}" "${ZMUSIC_INCLUDE_DIR}")
 
 if( ${HAVE_VM_JIT} )
 	add_definitions( -DHAVE_VM_JIT )
@@ -801,7 +801,6 @@ endif()
 set (FASTMATH_SOURCES ${FASTMATH_SOURCES})
 
 set (PCH_SOURCES
-	common/thirdparty/richpresence.cpp
 	am_map.cpp
 	playsim/bots/b_bot.cpp
 	playsim/bots/b_func.cpp
@@ -1455,7 +1454,7 @@ set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_
 set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
 
 if(NOT MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
+	set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
 endif()
 
 if( MSVC )

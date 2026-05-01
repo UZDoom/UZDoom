@@ -94,7 +94,7 @@ class AlienSpectre1 : SpectralMonster
 		AL1P R 5 Bright A_AlienSpectreDeath;
 		Stop;
 	}
-	
+
 	//============================================================================
 
 	void A_AlienSpectreDeath ()
@@ -119,7 +119,7 @@ class AlienSpectre1 : SpectralMonster
 		{
 			return;
 		}
-		
+
 		class<Actor> cls = GetClass();
 		if (cls == "AlienSpectre1")
 		{
@@ -204,7 +204,7 @@ class AlienSpectre1 : SpectralMonster
 			player.player.SetSubtitleNumber (log, voc);
 		}
 	}
-	
+
 }
 
 
@@ -270,7 +270,7 @@ class AlienSpectre3 : AlienSpectre1
 		ALN1 J 2 A_Pain;
 		Goto See+6;
 	}
-}	
+}
 
 
 // Alien Spectre 4 -----------------------------------------------------------
@@ -349,4 +349,3 @@ class AlienChunkLarge : Actor
 		Stop;
 	}
 }
-

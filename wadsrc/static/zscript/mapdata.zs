@@ -43,7 +43,7 @@ struct SectorPortal native play
 	native internal readonly Sector mDestination;
 	native readonly Vector2 mDisplacement;
 	native readonly double mPlaneZ;
-	native internal readonly Actor mSkybox;	
+	native internal readonly Actor mSkybox;
 };
 
 struct LinePortal native play
@@ -102,13 +102,13 @@ struct Side native play
 		mid=1,
 		bottom=2
 	};
-	
+
 	enum EColorPos
 	{
 		walltop = 0,
 		wallbottom = 1
 	}
-	
+
 	enum EWallFlags
 	{
 		WALLF_ABSLIGHTING	 = 1,	// Light is absolute instead of relative
@@ -165,7 +165,7 @@ struct Side native play
 	native clearscope Vertex V2() const;
 
 	native clearscope int Index() const;
-	
+
 	clearscope int GetUDMFInt(Name nm) const
 	{
 		return Level.GetUDMFInt(LevelLocals.UDMF_Side, Index(), nm);
@@ -178,7 +178,7 @@ struct Side native play
 	{
 		return Level.GetUDMFString(LevelLocals.UDMF_Side, Index(), nm);
 	}
-	
+
 };
 
 struct Line native play
@@ -245,7 +245,7 @@ struct Line native play
 
 	native readonly int		health;
 	native readonly int		healthgroup;
-	
+
 	native clearscope bool isLinePortal() const;
 	native clearscope bool isVisualPortal() const;
 	native clearscope Line getPortalDestination() const;
@@ -258,7 +258,7 @@ struct Line native play
 	native bool Activate(Actor activator, int side, int type);
 	native bool RemoteActivate(Actor activator, int side, int type, Vector3 pos);
 	native bool, double, double GetMidTexturePosition (int side) const;
-	
+
 	clearscope int GetUDMFInt(Name nm) const
 	{
 		return Level.GetUDMFInt(LevelLocals.UDMF_Line, Index(), nm);
@@ -272,9 +272,9 @@ struct Line native play
 		return Level.GetUDMFString(LevelLocals.UDMF_Line, Index(), nm);
 	}
 
-    native clearscope int GetHealth() const;
-    native void SetHealth(int newhealth);
-	
+	native clearscope int GetHealth() const;
+	native void SetHealth(int newhealth);
+
 	native int CountIDs() const;
 	native int GetID(int index) const;
 }
@@ -284,7 +284,7 @@ struct SecPlane native play
 	native readonly Vector3 Normal;
 	native readonly double D;
 	native readonly double negiC;
-	
+
 	native clearscope bool isSlope() const;
 	native clearscope int PointOnSide(Vector3 pos) const;
 	native clearscope double ZatPoint (Vector2 v) const;
@@ -325,11 +325,11 @@ struct F3DFloor native play
 		FF_CLIPPED       = 0x1000000,	// split into several dynamic ffloors
 		FF_SEETHROUGH    = 0x2000000,
 		FF_SHOOTTHROUGH  = 0x4000000,
-		FF_FADEWALLS     = 0x8000000,	// Applies real fog to walls and doesn't blend the view		
+		FF_FADEWALLS     = 0x8000000,	// Applies real fog to walls and doesn't blend the view
 		FF_ADDITIVETRANS = 0x10000000, // Render this floor with additive translucency
 		FF_FLOOD         = 0x20000000, // extends towards the next lowest flooding or solid 3D floor or the bottom of the sector
 		FF_THISINSIDE    = 0x40000000, // hack for software 3D with FF_BOTHPLANES
-		FF_RESET         = 0x80000000, // light effect is completely reset, once interrupted  
+		FF_RESET         = 0x80000000, // light effect is completely reset, once interrupted
 	};
 
 	native readonly secplane bottom;
@@ -377,14 +377,14 @@ struct Sector native play
 
 	native int			special;
 	native int16 		lightlevel;
-	native int16		seqType;	
+	native int16		seqType;
 
 	native int			sky;
-	native Name			SeqName;	
+	native Name			SeqName;
 
-	native readonly Vector2		centerspot;	
-	native int 			validcount;	
-	native Actor		thinglist;	
+	native readonly Vector2		centerspot;
+	native int 			validcount;
+	native Actor		thinglist;
 
 	native double		friction, movefactor;
 	native int			terrainnum[2];
@@ -403,7 +403,7 @@ struct Sector native play
 		wallbottom,
 		sprites
 	};
-	
+
 	enum EInterpolationType
 	{
 		CeilingMove,
@@ -422,7 +422,7 @@ struct Sector native play
 
 	native readonly @secplane floorplane;
 	native readonly @secplane ceilingplane;
-	
+
 	native readonly Sector		heightsec;
 
 	native uint			bottommap, midmap, topmap;
@@ -430,7 +430,7 @@ struct Sector native play
 	//struct msecnode_t *touching_thinglist;
 	//struct msecnode_t *sectorportal_thinglist;
 
-	native double 		gravity;	
+	native double 		gravity;
 	native Name 		damagetype;
 	native int 			damageamount;
 	native int16 		damageinterval;
@@ -442,7 +442,7 @@ struct Sector native play
 	native readonly int healthfloor;
 	native readonly int healthceilinggroup;
 	native readonly int healthfloorgroup;
-	
+
 	enum ESectorMoreFlags
 	{
 		SECMF_FAKEFLOORONLY	= 2,	// when used as heightsec in R_FakeFlat, only copies floor
@@ -461,7 +461,7 @@ struct Sector native play
 		SECMF_HARMINAIR			= 8192, // Actors in this sector are also hurt mid-air.
 	}
 	native uint16		MoreFlags;
-	
+
 	enum ESectorFlags
 	{
 		SECF_SILENT			= 1,	// actors in sector make no noise
@@ -470,7 +470,7 @@ struct Sector native play
 		SECF_NORESPAWN		= 8,	// players can not respawn in this sector
 		SECF_FRICTION		= 16,	// sector has friction enabled
 		SECF_PUSH			= 32,	// pushers enabled
-		SECF_SILENTMOVE		= 64,	// Sector movement makes mo sound (Eternity got this so this may be useful for an extended cross-port standard.) 
+		SECF_SILENTMOVE		= 64,	// Sector movement makes mo sound (Eternity got this so this may be useful for an extended cross-port standard.)
 		SECF_DMGTERRAINFX	= 128,	// spawns terrain splash when inflicting damage
 		SECF_ENDGODMODE		= 256,	// getting damaged by this sector ends god mode
 		SECF_ENDLEVEL		= 512,	// ends level when health goes below 10
@@ -487,14 +487,14 @@ struct Sector native play
 		SECF_NOMODIFY = SECF_SECRET|SECF_WASSECRET,	// not modifiable by Sector_ChangeFlags
 		SECF_SPECIALFLAGS = SECF_DAMAGEFLAGS|SECF_FRICTION|SECF_PUSH,	// these flags originate from 'special and must be transferrable by floor thinkers
 	}
-	
-	enum EMoveResult 
-	{ 
-		MOVE_OK, 
-		MOVE_CRUSHED, 
+
+	enum EMoveResult
+	{
+		MOVE_OK,
+		MOVE_CRUSHED,
 		MOVE_PASTDEST
 	};
-	
+
 	native uint			Flags;
 
 	native SectorAction		SecActTarget;
@@ -564,7 +564,7 @@ struct Sector native play
 	native void SetSpecialColor(int pos, color color);
 	native void SetAdditiveColor(int pos, Color color);
 	native void SetColorization(int tier, Name cname);
-	
+
 	native clearscope TextureID GetTexture(int pos) const;
 	native void SetTexture(int pos, TextureID tex, bool floorclip = true);
 	native clearscope double GetPlaneTexZ(int pos) const;
@@ -600,7 +600,7 @@ struct Sector native play
 	native clearscope double, Vertex FindNextLowestFloor() const;
 	native clearscope double, Vertex FindLowestCeilingSurrounding() const;
 	native clearscope double, Vertex FindHighestCeilingSurrounding() const;
-	native clearscope double, Vertex FindNextLowestCeiling() const;	
+	native clearscope double, Vertex FindNextLowestCeiling() const;
 	native clearscope double, Vertex FindNextHighestCeiling() const;
 
 	native clearscope double FindShortestTextureAround() const;
@@ -619,7 +619,7 @@ struct Sector native play
 	native clearscope SeqNode CheckSoundSequence (int chan) const;
 	native void StopSoundSequence(int chan);
 	native clearscope bool IsMakingLoopingSound () const;
-	
+
 	 clearscope bool isSecret() const
 	 {
 		 return !!(Flags & SECF_SECRET);
@@ -634,7 +634,7 @@ struct Sector native play
 	 {
 		 Flags &= ~SECF_SECRET;
 	 }
-	 
+
 	clearscope int GetUDMFInt(Name nm) const
 	{
 		return Level.GetUDMFInt(LevelLocals.UDMF_Sector, Index(), nm);
@@ -676,9 +676,9 @@ struct Sector native play
 		return res;
 	}
 
-	
-    native clearscope int GetHealth(SectorPart part) const;
-    native void SetHealth(SectorPart part, int newhealth);
+
+	native clearscope int GetHealth(SectorPart part) const;
+	native void SetHealth(SectorPart part, int newhealth);
 
 	native int CountTags() const;
 	native int GetTag(int index) const;

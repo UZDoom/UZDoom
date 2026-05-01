@@ -655,7 +655,7 @@ sector_t *FindModelCeilingSector (sector_t *sect, double floordestheight)
 int FindMinSurroundingLight (const sector_t *sector, int min)
 {
 	sector_t*	check;
-		
+
 	for (auto line : sector->Lines)
 	{
 		if (NULL != (check = getNextSector (line, sector)) &&
@@ -1056,7 +1056,7 @@ double NextHighestCeilingAt(sector_t *sec, double x, double y, double bottomz, d
 			double delta2 = topz - (ff_bottom + ((ff_top - ff_bottom) / 2));
 
 			if (ff_bottom < realceil && fabs(delta1) > fabs(delta2))
-			{ 
+			{
 				if (resultsec) *resultsec = sec;
 				if (resultffloor) *resultffloor = rover;
 				return ff_bottom;
@@ -1130,14 +1130,14 @@ double NextLowestFloorAt(sector_t *sec, double x, double y, double z, int flags,
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
 double GetFriction(const sector_t *self, int plane, double *pMoveFac)
 {
-	if (self->Flags & SECF_FRICTION) 
-	{ 
+	if (self->Flags & SECF_FRICTION)
+	{
 		if (pMoveFac) *pMoveFac = self->movefactor;
 		return self->friction;
 	}
@@ -1156,7 +1156,7 @@ double GetFriction(const sector_t *self, int plane, double *pMoveFac)
 
  //===========================================================================
  //
- // 
+ //
  //
  //===========================================================================
 
@@ -1358,7 +1358,7 @@ double GetFriction(const sector_t *self, int plane, double *pMoveFac)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -1380,7 +1380,7 @@ double GetFriction(const sector_t *self, int plane, double *pMoveFac)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -1609,7 +1609,7 @@ int side_t::GetLightLevel (bool foggy, int baselight, int which, bool is3dlight,
 			}
 			else
 			{
-				rel = delta.X == 0 ? sector->Level->WallVertLight : 
+				rel = delta.X == 0 ? sector->Level->WallVertLight :
 					  delta.Y == 0 ? sector->Level->WallHorizLight : 0;
 			}
 			if (pfakecontrast != NULL)
@@ -1665,4 +1665,3 @@ void vertex_t::RecalcVertexHeights()
 	if (numheights <= 2) numheights = 0;	// is not in need of any special attention
 	dirty = false;
 }
-

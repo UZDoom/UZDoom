@@ -102,4 +102,3 @@ PalettedPixels FFlatTexture::CreatePalettedPixels(int conversion, int frame)
 	ImageHelpers::FlipSquareBlockRemap(Pixels.Data(), Width, ImageHelpers::GetRemap(conversion == luminance));
 	return Pixels;
 }
-

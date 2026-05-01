@@ -151,11 +151,11 @@ Lock 229 Doom
 Lock 101 Doom
 {
 	//$Title "All keys"
-	BlueCard 
+	BlueCard
 	BlueSkull
-	YellowCard 
+	YellowCard
 	YellowSkull
-	RedCard 
+	RedCard
 	RedSkull
 	Message "$PD_ALL6"
 	RemoteMessage "$PD_ALL6O"
@@ -177,7 +177,7 @@ Lock 1 Heretic
 Lock 2 Heretic
 {
 	//$Title "Blue key"
-	KeyBlue 
+	KeyBlue
 	Message "$TXT_NEEDBLUEKEY"
 	Mapcolor 0 0 255
 }
@@ -204,7 +204,7 @@ Lock 129 Heretic
 Lock 130 Heretic
 {
 	//$Title "Blue key"
-	KeyBlue 
+	KeyBlue
 	Message "$TXT_NEEDBLUEKEY"
 	Mapcolor 0 0 255
 }
@@ -222,8 +222,8 @@ Lock 131 Heretic
 Lock 229 Heretic
 {
 	//$Title "All keys"
-	KeyGreen 
-	KeyYellow 
+	KeyGreen
+	KeyYellow
 	KeyBlue
 	Message "$PD_ALL3"
 	RemoteMessage "$PD_ALL3O"
@@ -232,8 +232,8 @@ Lock 229 Heretic
 Lock 101 Heretic
 {
 	//$Title "All keys"
-	KeyGreen 
-	KeyYellow 
+	KeyGreen
+	KeyYellow
 	KeyBlue
 	Message "$PD_ALL3"
 	RemoteMessage "$PD_ALL3O"
@@ -757,11 +757,11 @@ Lock 229 Chex
 Lock 101 Chex
 {
 	//$Title "All keys"
-	ChexBlueCard 
+	ChexBlueCard
 	ChexBlueSkull
-	ChexYellowCard 
+	ChexYellowCard
 	YellowSkull
-	RedCard 
+	RedCard
 	RedSkull
 	Message "$PD_ALL6"
 	RemoteMessage "$PD_ALL6O"

@@ -132,7 +132,7 @@ static void CenterMouse(int x, int y, LONG *centx, LONG *centy);
 
 extern LPDIRECTINPUT8 g_pdi;
 extern bool GUICapture;
-extern int BlockMouseMove; 
+extern int BlockMouseMove;
 
 // PRIVATE DATA DEFINITIONS ------------------------------------------------
 
@@ -253,7 +253,7 @@ void I_CheckNativeMouse(bool preferNative, bool eventhandlerresult)
 
 	if (!windowed)
 	{
-		// ungrab mouse when in the menu with mouse control on.		
+		// ungrab mouse when in the menu with mouse control on.
 		want_native = m_use_mouse && (menuactive == MENU_On || menuactive == MENU_OnNoPause);
 	}
 	else

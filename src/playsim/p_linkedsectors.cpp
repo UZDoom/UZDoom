@@ -53,11 +53,11 @@ enum
 //============================================================================
 //
 // Checks whether the other sector is linked to this one
-// Used to ignore linked sectors in the FindNextLowest/Highest* 
+// Used to ignore linked sectors in the FindNextLowest/Highest*
 // functions
 //
 // NOTE: After looking at Eternity's code I discovered that this check
-// is not done for the FindNext* function but instead only for 
+// is not done for the FindNext* function but instead only for
 // FindLowestCeilingSurrounding where IMO it makes much less sense
 // because the most frequent use of this feature is most likely lifts
 // with a more detailed surface. Needs to be investigated!
@@ -299,7 +299,7 @@ bool P_AddSectorLinks(sector_t *control, int tag, INTBOOL ceiling, int movetype)
 	int param = movetype;
 
 	// can't be done if the control sector is moving.
-	if ((ceiling && control->PlaneMoving(sector_t::ceiling)) || 
+	if ((ceiling && control->PlaneMoving(sector_t::ceiling)) ||
 		(!ceiling && control->PlaneMoving(sector_t::floor))) return false;
 
 	auto Level = control->Level;
@@ -360,7 +360,7 @@ void P_AddSectorLinksByID(sector_t *control, int id, INTBOOL ceiling)
 		{
 			int movetype = ld->args[3];
 
-			// [GZ] Eternity does allow the attached sector to be the control sector, 
+			// [GZ] Eternity does allow the attached sector to be the control sector,
 			// this permits elevator effects (ceiling attached to floors), so instead
 			// of checking whether the two sectors are the same, we prevent a plane
 			// from being attached to itself. This should be enough to do the trick.

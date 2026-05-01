@@ -220,7 +220,7 @@ void FSingleLumpFont::LoadFON1 (int lump, const uint8_t *data)
 	for (int i = 0x80; i < 0xa0; i++)
 	{
 		if (win1252map[i-0x80] != i && Chars[i].OriginalPic != nullptr && Chars[win1252map[i - 0x80]].OriginalPic == nullptr)
-		{ 
+		{
 			std::swap(Chars[i], Chars[win1252map[i - 0x80]]);
 		}
 	}

@@ -18,7 +18,7 @@
 **
 **---------------------------------------------------------------------------
 **
-*/ 
+*/
 
 #include <time.h>
 #include "c_dispatch.h"
@@ -232,5 +232,3 @@ DEFINE_ACTION_FUNCTION_NATIVE(_SystemTime, Format, FormatTime)
 	FormatTime(timeForm, timeVal, &result);
 	ACTION_RETURN_STRING(result);
 }
-
-

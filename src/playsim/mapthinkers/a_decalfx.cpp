@@ -234,4 +234,3 @@ void DDecalColorer::Tick ()
 		TheDecal->SetShade (r, g, b);
 	}
 }
-

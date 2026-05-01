@@ -320,17 +320,18 @@ class Menu : Object native ui version("2.4")
 
 		int w = Screen.GetWidth();
 		int h = Screen.GetHeight();
-		if (m_tooltip_capwidth && double(w) / h > 16.0 / 9.0)
+		double minratio = 0.4; // if this gets changed, change it in the menudef too
+		if (m_tooltip_capratio > minratio+double.equal_epsilon && double(w) / h > m_tooltip_capratio)
 		{
-			// Cap it to 16:9 to prevent it from stretching to the far corners of the screen.
-			int width = int(h * 16.0 / 9.0) - xPad * 2;
+			// Cap it to prevent it from stretching to the far corners of the screen. Defaults to 4:3
+			int width = int(h * m_tooltip_capratio) - xPad * 2;
 			body.SetArea((w - width) / 2, h - textHeight - yPad * 3, width, textHeight + yPad * 2);
 		}
 		else
 		{
 			body.SetArea(xPad, h - textHeight - yPad * 3, w - xPad * 2, textHeight + yPad * 2);
 		}
-		
+
 		if (text)
 			text.SetArea(body.x + xPad, body.y + yPad, body.width - xPad * 2, body.height - yPad * 2);
 	}
@@ -400,7 +401,7 @@ class Menu : Object native ui version("2.4")
 
 		let [cx, cy, cw, ch] = Screen.GetClipRect();
 		Screen.SetClipRect(text.x, text.y, text.width, text.height);
-		
+
 		int height = mTooltipFont.GetHeight() * textYScale;
 		int curY = text.y - int(mTooltipScrollOffset * height);
 		for (int i; i < bl.Count(); ++i)

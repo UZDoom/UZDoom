@@ -31,8 +31,8 @@ class FGameTexture;
 struct FVoxelVertexHash
 {
 	// Returns the hash value for a key.
-	hash_t Hash(const FModelVertex &key) 
-	{ 
+	hash_t Hash(const FModelVertex &key)
+	{
 		int ix = int(key.x);
 		int iy = int(key.y);
 		int iz = int(key.z);
@@ -40,8 +40,8 @@ struct FVoxelVertexHash
 	}
 
 	// Compares two keys, returning zero if they are the same.
-	int Compare(const FModelVertex &left, const FModelVertex &right) 
-	{ 
+	int Compare(const FModelVertex &left, const FModelVertex &right)
+	{
 		return left.x != right.x || left.y != right.y || left.z != right.z || left.u != right.u || left.v != right.v;
 	}
 };
@@ -83,5 +83,3 @@ public:
 	void BuildVertexBuffer(FModelRenderer *renderer) override;
 	float getAspectFactor(float vscale) override;
 };
-
-

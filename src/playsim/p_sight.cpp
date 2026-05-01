@@ -297,7 +297,7 @@ bool SightCheck::PTR_SightTraverse (intercept_t *in)
 	if(li->frontsector->e->XFloor.ffloors.Size() || li->backsector->e->XFloor.ffloors.Size())
 	{
 		if (frontflag == -1) frontflag = P_PointOnLineSidePrecise(sightstart, li);
-		
+
 		//Check 3D FLOORS!
 		for(int i=1;i<=2;i++)
 		{
@@ -332,7 +332,7 @@ bool SightCheck::PTR_SightTraverse (intercept_t *in)
 				}
 				else
 				{
-					// the 3D-floor is inside the viewing cone but neither clips the top nor the bottom so by 
+					// the 3D-floor is inside the viewing cone but neither clips the top nor the bottom so by
 					// itself it can't be view blocking.
 					// However, if there's a 3D-floor on the other side that obstructs the same vertical range
 					// the 2 together will block sight.
@@ -648,7 +648,7 @@ bool SightCheck::P_SightPathTraverse ()
 		if (sightstart.Z < ff_top) checkceiling = false;
 		if (sightstart.Z >= ff_bottom) checkfloor = false;
 
-		if (sightstart.Z < ff_top && sightstart.Z >= ff_bottom) 
+		if (sightstart.Z < ff_top && sightstart.Z >= ff_bottom)
 		{
 			myseethrough = rover->flags & FF_SEETHROUGH;
 			break;
@@ -888,7 +888,7 @@ sightcounts[0]++;
 		res = true;
 		goto done;
 	}
-	
+
 	// killough 4/19/98: make fake floors and ceilings block monster view
 
 	if (!(flags & SF_IGNOREWATERBOUNDARY))

@@ -62,4 +62,3 @@ int FBuildTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	return -1;
 
 }
-

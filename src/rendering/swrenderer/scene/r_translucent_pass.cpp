@@ -70,9 +70,9 @@ namespace swrenderer
 
 	void RenderTranslucentPass::CollectPortals()
 	{
-		// This function collects all drawsegs that may be of interest to R_ClipSpriteColumnWithPortals 
+		// This function collects all drawsegs that may be of interest to R_ClipSpriteColumnWithPortals
 		// Having that function over the entire list of drawsegs can break down performance quite drastically.
-		// This is doing the costly stuff only once so that R_ClipSpriteColumnWithPortals can 
+		// This is doing the costly stuff only once so that R_ClipSpriteColumnWithPortals can
 		// a) exit early if no relevant info is found and
 		// b) skip most of the collected drawsegs which have no portal attached.
 		portaldrawsegs.Clear();

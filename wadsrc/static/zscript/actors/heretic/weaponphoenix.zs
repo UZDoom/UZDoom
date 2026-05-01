@@ -58,7 +58,7 @@ class PhoenixRod : Weapon
 		PHNX B 0 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FirePhoenixPL1
@@ -82,15 +82,15 @@ class PhoenixRod : Weapon
 		Thrust(4, angle + 180);
 	}
 
-	
+
 }
 
 class PhoenixRodPowered : PhoenixRod
 {
 	const FLAME_THROWER_TICS = (10*TICRATE);
-	
+
 	private int FlameCount;		// for flamethrower duration
-	
+
 	Default
 	{
 		+WEAPON.POWERED_UP
@@ -112,7 +112,7 @@ class PhoenixRodPowered : PhoenixRod
 		PHNX B 4 A_ShutdownPhoenixPL2;
 		Goto Ready;
 	}
-	
+
 
 	override void EndPowerup ()
 	{
@@ -157,7 +157,7 @@ class PhoenixRodPowered : PhoenixRod
 		}
 
 		PhoenixRodPowered flamethrower = PhoenixRodPowered(player.ReadyWeapon);
-		
+
 		if (flamethrower == null || --flamethrower.FlameCount == 0)
 		{ // Out of flame
 			player.SetPsprite(PSP_WEAPON, flamethrower.FindState("Powerdown"));
@@ -185,7 +185,7 @@ class PhoenixRodPowered : PhoenixRod
 		if (!player.refire)
 		{
 			A_StartSound("weapons/phoenixpowshoot", CHAN_WEAPON, CHANF_LOOPING);
-		}	
+		}
 	}
 
 	//----------------------------------------------------------------------------
@@ -209,7 +209,7 @@ class PhoenixRodPowered : PhoenixRod
 		}
 	}
 
-	
+
 }
 
 // Phoenix FX 1 -------------------------------------------------------------
@@ -242,7 +242,7 @@ class PhoenixFX1 : Actor
 		FX08 DEFGH 4 BRIGHT;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor target, int damage, Name damagetype)
 	{
 		Sorcerer2 s2 = Sorcerer2(target);
@@ -277,7 +277,7 @@ class PhoenixFX1 : Actor
 		}
 	}
 
-	
+
 }
 
 // Phoenix puff -------------------------------------------------------------
@@ -333,7 +333,7 @@ class PhoenixFX2 : Actor
 		FX09 JK 5 BRIGHT;
 		Stop;
 	}
-	
+
 
 	override int DoSpecialDamage (Actor target, int damage, Name damagetype)
 	{
@@ -343,7 +343,7 @@ class PhoenixFX2 : Actor
 		}
 		return damage;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FlameEnd
@@ -366,5 +366,5 @@ class PhoenixFX2 : Actor
 		Vel.Z += 1.8;
 	}
 
-	
+
 }

@@ -57,7 +57,7 @@
 
 	typedef GLsync(APIENTRYP PFNGLFENCESYNCPROC)(GLenum condition, GLbitfield flags);
 	GLAPI PFNGLFENCESYNCPROC glFenceSync;
-	
+
 	typedef GLenum(APIENTRYP PFNGLCLIENTWAITSYNCPROC)(GLsync sync, GLbitfield flags, GLuint64 timeout);
 	GLAPI PFNGLCLIENTWAITSYNCPROC glClientWaitSync;
 
@@ -98,7 +98,7 @@
 
 namespace OpenGLESRenderer
 {
-	enum 
+	enum
 	{
 		GLES_MODE_GLES = 0,
 		GLES_MODE_OGL2 = 1,

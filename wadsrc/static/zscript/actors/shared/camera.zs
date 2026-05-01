@@ -32,7 +32,7 @@ class SecurityCamera : Actor
 {
 	default
 	{
-		+NOBLOCKMAP 
+		+NOBLOCKMAP
 		+NOGRAVITY
 		+DONTSPLASH
 		RenderStyle "None";
@@ -43,7 +43,7 @@ class SecurityCamera : Actor
 	double Acc;
 	double Delta;
 	double Range;
-	
+
 	override void PostBeginPlay ()
 	{
 		Super.PostBeginPlay ();
@@ -69,7 +69,7 @@ class SecurityCamera : Actor
 			Angle = Acc;
 	}
 
-	
+
 }
 
 class AimingCamera : SecurityCamera
@@ -247,12 +247,12 @@ Class OrthographicCamera : Actor
 		Super.PostBeginPlay();
 		UpdateViewPos();
 	}
-	
+
 	override void Tick()
 	{
 		if (current != args[0])
 			UpdateViewPos();
-		
+
 		Super.Tick();
 	}
 

@@ -187,7 +187,7 @@ bool MapLoader::LoadGLVertexes(FileReader &lump)
 	int                 i;
 
 	firstglvertex = Level->vertexes.Size();
-	
+
 	lump.Seek(0, FileReader::SeekSet);
 	auto glbuf = lump.Read();
 	auto gllen=lump.GetLength();
@@ -195,11 +195,11 @@ bool MapLoader::LoadGLVertexes(FileReader &lump)
 		return false;
 	auto gldata = glbuf.bytes();
 
-	if (*(int *)gldata == gNd5) 
+	if (*(int *)gldata == gNd5)
 	{
 		format5=true;
 	}
-	else if (*(int *)gldata != gNd2) 
+	else if (*(int *)gldata != gNd2)
 	{
 		// GLNodes V1 and V4 are unsupported.
 		// V1 because the precision is insufficient and
@@ -270,114 +270,44 @@ bool MapLoader::LoadGLSegs(FileReader &lump)
 		return false;
 	auto &segs = Level->segs;
 	const unsigned numverts = Level->vertexes.Size();
-	const unsigned numlines = Level->lines.Size(); 
+	const unsigned numlines = Level->lines.Size();
 
 	if (!format5 && memcmp(data.data(), "gNd3", 4))
 	{
 		numsegs/=sizeof(glseg_t);
 		segs.Alloc(numsegs);
 		memset(&segs[0],0,sizeof(seg_t)*numsegs);
-			
+
 		auto ml = (const glseg_t*)data.data();
 		for(i = 0; i < numsegs; i++)
-		{		
+		{
 			// check for gl-vertices
 			const unsigned v1idx = checkGLVertex(LittleShort(ml->v1));
-			if (v1idx >= numverts) 
+			if (v1idx >= numverts)
 				return false;
 			segs[i].v1 = &Level->vertexes[v1idx];
 
 			const unsigned v2idx = checkGLVertex(LittleShort(ml->v2));
-			if (v2idx >= numverts) 
+			if (v2idx >= numverts)
 				return false;
 			segs[i].v2 = &Level->vertexes[v2idx];
 
 			const int partner = LittleShort(ml->partner);
 			if (partner == 0xFFFF)
 				segs[i].PartnerSeg = nullptr;
-			else if (partner >= numsegs) 
+			else if (partner >= numsegs)
 				return false;
-			else 
+			else
 				segs[i].PartnerSeg = &segs[partner];
 
 			if(ml->linedef != 0xffff)
-			{
-				const unsigned lineidx = LittleShort(ml->linedef);
-				if (lineidx >= numlines) 
-					return false;
-				ldef = &Level->lines[lineidx];
-				segs[i].linedef = ldef;	
-					
-				auto side=LittleShort(ml->side);
-				if (side > 1) 
-					return false;
-				segs[i].sidedef = ldef->sidedef[side];
-				if (ldef->sidedef[side] != nullptr)
-				{
-					segs[i].frontsector = ldef->sidedef[side]->sector;
-				}
-				else
-				{
-					segs[i].frontsector = nullptr;
-				}
-				if (ldef->flags & ML_TWOSIDED && ldef->sidedef[side^1] != nullptr)
-				{
-					segs[i].backsector = ldef->sidedef[side^1]->sector;
-				}
-				else
-				{
-					ldef->flags &= ~ML_TWOSIDED;
-					segs[i].backsector = nullptr;
-				}
-	
-			}
-			else
-			{
-				segs[i].linedef = nullptr;
-				segs[i].sidedef = nullptr;
-	
-				segs[i].frontsector = nullptr;
-				segs[i].backsector  = nullptr;
-			}
-			ml++;		
-		}
-	}
-	else
-	{
-		if (!format5) numsegs-=4;
-		numsegs/=sizeof(glseg3_t);
-		segs.Alloc(numsegs);
-		memset(&segs[0],0,sizeof(seg_t)*numsegs);
-			
-		const glseg3_t * ml = (const glseg3_t*)(data.bytes() + (format5? 0:4));
-		for(i = 0; i < numsegs; i++)
-		{							// check for gl-vertices
-			const unsigned v1idx = checkGLVertex3(LittleLong(ml->v1));
-			if (v1idx >= numverts)
-				return false;
-			segs[i].v1 = &Level->vertexes[v1idx];
-
-			const unsigned v2idx = checkGLVertex3(LittleLong(ml->v2));
-			if (v2idx >= numverts)
-				return false;
-			segs[i].v2 = &Level->vertexes[v2idx];
-
-			const uint32_t partner = LittleLong(ml->partner);
-			if (partner == UINT_MAX)
-				segs[i].PartnerSeg = nullptr;
-			else if (partner >= (uint32_t)numsegs) 
-				return false;
-			else 
-				segs[i].PartnerSeg = &segs[partner];
-	
-			if(ml->linedef != 0xffff) // skip minisegs 
 			{
 				const unsigned lineidx = LittleShort(ml->linedef);
 				if (lineidx >= numlines)
 					return false;
 				ldef = &Level->lines[lineidx];
 				segs[i].linedef = ldef;
-	
+
 				auto side=LittleShort(ml->side);
 				if (side > 1)
 					return false;
@@ -399,7 +329,77 @@ bool MapLoader::LoadGLSegs(FileReader &lump)
 					ldef->flags &= ~ML_TWOSIDED;
 					segs[i].backsector = nullptr;
 				}
-	
+
+			}
+			else
+			{
+				segs[i].linedef = nullptr;
+				segs[i].sidedef = nullptr;
+
+				segs[i].frontsector = nullptr;
+				segs[i].backsector  = nullptr;
+			}
+			ml++;
+		}
+	}
+	else
+	{
+		if (!format5) numsegs-=4;
+		numsegs/=sizeof(glseg3_t);
+		segs.Alloc(numsegs);
+		memset(&segs[0],0,sizeof(seg_t)*numsegs);
+
+		const glseg3_t * ml = (const glseg3_t*)(data.bytes() + (format5? 0:4));
+		for(i = 0; i < numsegs; i++)
+		{							// check for gl-vertices
+			const unsigned v1idx = checkGLVertex3(LittleLong(ml->v1));
+			if (v1idx >= numverts)
+				return false;
+			segs[i].v1 = &Level->vertexes[v1idx];
+
+			const unsigned v2idx = checkGLVertex3(LittleLong(ml->v2));
+			if (v2idx >= numverts)
+				return false;
+			segs[i].v2 = &Level->vertexes[v2idx];
+
+			const uint32_t partner = LittleLong(ml->partner);
+			if (partner == UINT_MAX)
+				segs[i].PartnerSeg = nullptr;
+			else if (partner >= (uint32_t)numsegs)
+				return false;
+			else
+				segs[i].PartnerSeg = &segs[partner];
+
+			if(ml->linedef != 0xffff) // skip minisegs
+			{
+				const unsigned lineidx = LittleShort(ml->linedef);
+				if (lineidx >= numlines)
+					return false;
+				ldef = &Level->lines[lineidx];
+				segs[i].linedef = ldef;
+
+				auto side=LittleShort(ml->side);
+				if (side > 1)
+					return false;
+				segs[i].sidedef = ldef->sidedef[side];
+				if (ldef->sidedef[side] != nullptr)
+				{
+					segs[i].frontsector = ldef->sidedef[side]->sector;
+				}
+				else
+				{
+					segs[i].frontsector = nullptr;
+				}
+				if (ldef->flags & ML_TWOSIDED && ldef->sidedef[side^1] != nullptr)
+				{
+					segs[i].backsector = ldef->sidedef[side^1]->sector;
+				}
+				else
+				{
+					ldef->flags &= ~ML_TWOSIDED;
+					segs[i].backsector = nullptr;
+				}
+
 			}
 			else
 			{
@@ -408,7 +408,7 @@ bool MapLoader::LoadGLSegs(FileReader &lump)
 				segs[i].frontsector = nullptr;
 				segs[i].backsector  = nullptr;
 			}
-			ml++;		
+			ml++;
 		}
 	}
 	return true;
@@ -666,7 +666,7 @@ bool MapLoader::DoLoadGLNodes(FileReader * lumps)
 	for (auto &sub : Level->subsectors)
 	{
 		seg_t * seg = sub.firstline;
-		if (!seg->sidedef) 
+		if (!seg->sidedef)
 		{
 			Printf("GL nodes contain invalid data. The BSP has to be rebuilt.\n");
 			goto fail;
@@ -704,7 +704,7 @@ static bool MatchHeader(const char * label, const char * hdata)
 		size_t labellen = strlen(label);
 		labellen = min(size_t(8), labellen);
 
-		if (strnicmp(hdata+6, label, labellen)==0 && 
+		if (strnicmp(hdata+6, label, labellen)==0 &&
 			(hdata[6+labellen]==0xa || hdata[6+labellen]==0xd))
 		{
 			return true;
@@ -956,7 +956,7 @@ bool MapLoader::CheckNodes(MapData * map, bool rebuilt, int buildtime)
 			};
 			leveldata.FindMapBounds ();
 			FNodeBuilder builder (leveldata, polyspots, anchors, true);
-			
+
 			builder.Extract (*Level);
 			endTime = I_msTime ();
 			DPrintf (DMSG_NOTIFY, "BSP generation took %.3f sec (%u segs)\n", (endTime - startTime) * 0.001, Level->segs.Size());
@@ -1106,7 +1106,7 @@ void MapLoader::CreateCachedNodes(MapData *map)
 		{
 			outlen += 1024;
 		}
-	} 
+	}
 	while (r == Z_BUF_ERROR);
 
 	memcpy(compressed.Data(), "CACH", 4);
@@ -1155,7 +1155,7 @@ bool MapLoader::CheckCachedNodes(MapData *map)
 	if (fr.Read(magic, 4) != 4) return false;
 	if (memcmp(magic, "CACH", 4))  return false;
 
-	if (fr.Read(&numlin, 4) != 4) return false; 
+	if (fr.Read(&numlin, 4) != 4) return false;
 	numlin = LittleLong(numlin);
 	if (numlin != Level->lines.Size()) return false;
 
@@ -1219,13 +1219,13 @@ UNSAFE_CCMD(clearnodecache)
 		}
 	}
 
-		
+
 }
 
 //==========================================================================
 //
 // Keep both the original nodes from the WAD and the GL nodes created here.
-// The original set is only being used to get the sector for in-game 
+// The original set is only being used to get the sector for in-game
 // positioning of actors but not for rendering.
 //
 // This is necessary because ZDBSP is much more sensitive
@@ -1278,7 +1278,7 @@ static bool PointOnLine (int x, int y, int x1, int y1, int dx, int dy)
 //
 // SetRenderSector
 //
-// Sets the render sector for each GL subsector so that the proper flat 
+// Sets the render sector for each GL subsector so that the proper flat
 // information can be retrieved
 //
 //==========================================================================
@@ -1349,7 +1349,7 @@ void MapLoader::SetRenderSector()
 			}
 			seg++;
 		}
-		if(ss.render_sector == nullptr) 
+		if(ss.render_sector == nullptr)
 		{
 			undetermined.Push(&ss);
 		}
@@ -1363,7 +1363,7 @@ void MapLoader::SetRenderSector()
 		{
 			ss=undetermined[i];
 			seg_t * seg = ss->firstline;
-			
+
 			for(j=0; j<ss->numlines; j++)
 			{
 				if (seg->PartnerSeg != nullptr && seg->PartnerSeg->Subsector)
@@ -1383,7 +1383,7 @@ void MapLoader::SetRenderSector()
 		// We still got some left but the loop above was unable to assign them.
 		// This only happens when a subsector is off the map.
 		// Don't bother and just assign the real sector for rendering
-		if (!deleted && undetermined.Size()) 
+		if (!deleted && undetermined.Size())
 		{
 			for(i=undetermined.Size()-1;i>=0;i--)
 			{

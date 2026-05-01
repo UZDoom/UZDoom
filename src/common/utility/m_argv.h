@@ -47,7 +47,7 @@ protected:
 	FString summary, usage, details;
 	bool advanced;
 
-    static TMap<FString, FArg *>& Available() {
+	static TMap<FString, FArg *>& Available() {
 		static TMap<FString, FArg *> Map;
 		return Map;
 	}

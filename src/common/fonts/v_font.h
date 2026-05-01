@@ -214,5 +214,3 @@ char* CleanseString(char* str);
 void V_ApplyLuminosityTranslation(const LuminosityTranslationDesc& lum, uint8_t* pixel, int size);
 void V_LoadTranslations();
 class FBitmap;
-
-

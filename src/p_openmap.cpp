@@ -55,7 +55,7 @@ struct checkstruct
 
 static int GetMapIndex(const char *mapname, int lastindex, const char *lumpname, bool needrequired)
 {
-	static const checkstruct check[] = 
+	static const checkstruct check[] =
 	{
 		{"",		 true},
 		{"THINGS",	 true},
@@ -104,7 +104,7 @@ MapData *P_OpenMapData(const char * mapname, bool justcheck)
 	MapData * map = new MapData;
 	FileReader * wadReader = nullptr;
 	bool externalfile = !strnicmp(mapname, "file:", 5);
-	
+
 	if (externalfile)
 	{
 		mapname += 5;
@@ -122,7 +122,7 @@ MapData *P_OpenMapData(const char * mapname, bool justcheck)
 		int lump_wad;
 		int lump_map;
 		int lump_name = -1;
-		
+
 		// Check for both *.wad and *.map in order to load Build maps
 		// as well. The higher one will take precedence.
 		// Names with more than 8 characters will only be checked as .wad and .map.
@@ -131,7 +131,7 @@ MapData *P_OpenMapData(const char * mapname, bool justcheck)
 		lump_wad = fileSystem.CheckNumForFullName(fmt.GetChars());
 		fmt.Format("maps/%s.map", mapname);
 		lump_map = fileSystem.CheckNumForFullName(fmt.GetChars());
-		
+
 		if (lump_name > lump_wad && lump_name > lump_map && lump_name != -1)
 		{
 			int lumpfile = fileSystem.GetFileContainer(lump_name);
@@ -262,7 +262,7 @@ MapData *P_OpenMapData(const char * mapname, bool justcheck)
 	// reading from a wad file.
 	wadReader->Seek(0, FileReader::SeekSet);
 	wadReader->Read(&id, sizeof(id));
-	
+
 	if (id == IWAD_ID || id == PWAD_ID)
 	{
 		char maplabel[9]="";
@@ -360,7 +360,7 @@ MapData *P_OpenMapData(const char * mapname, bool justcheck)
 			return NULL;
 		}
 	}
-	return map;		
+	return map;
 }
 
 bool P_CheckMapData(const char *mapname)

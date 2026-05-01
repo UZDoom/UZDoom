@@ -29,4 +29,3 @@ void main()
 	FragNormal = vec4(0.5, 0.5, 0.5, 1.0);
 #endif
 }
-

@@ -342,7 +342,7 @@ static int sortforremap2(const void* a, const void* b)
 }
 
 
-void MakeRemap(uint32_t* BaseColors, const uint32_t* colors, uint8_t* remap, const uint8_t* useful, int numcolors) 
+void MakeRemap(uint32_t* BaseColors, const uint32_t* colors, uint8_t* remap, const uint8_t* useful, int numcolors)
 {
 	RemappingWork workspace[255 + 256];
 	int i, j, k;
@@ -504,7 +504,7 @@ void MakeGoodRemap(uint32_t* BaseColors, uint8_t* Remap, const uint8_t* lastcolo
 }
 
 //===========================================================================
-// 
+//
 //	Gets the average color of a texture for use as a sky cap color
 //
 //===========================================================================
@@ -977,4 +977,3 @@ int ReadPalette(int lumpnum, uint8_t* buffer)
 		return 256;
 	}
 }
-

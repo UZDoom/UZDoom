@@ -18,6 +18,8 @@ endif()
 
 project(UZDoom)
 
+set(ABSL_BUILD_TESTING OFF) # don't build/run abseil tests
+
 # make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
 option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
 
@@ -318,6 +320,10 @@ if( MSVC )
 	# Disable warnings for unsecure CRT functions from VC8+
 	set( ALL_C_FLAGS "${ALL_C_FLAGS} /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /D_CRT_NONSTDC_NO_WARNINGS" )
 
+	if( WITH_ASAN )
+		set( ALL_C_FLAGS "${ALL_C_FLAGS} /fsanitize=address" )
+	endif()
+
 	string(REPLACE "/Ob1 " "/Ob2 " CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELWITHDEBINFO} )
 else()
 	set( REL_LINKER_FLAGS "" )
@@ -396,11 +402,6 @@ set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 add_subdirectory( libraries/ZWidget )
 
 add_subdirectory( libraries/webp )
-
-add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
-set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
-set( DRPC_LIBRARIES discord-rpc )
-set( DRPC_LIBRARY discord-rpc )
 
 if( HAVE_VM_JIT AND UNIX )
 	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )

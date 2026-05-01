@@ -51,6 +51,6 @@ struct visstyle_t
 // A pickup is anything the player can pickup (i.e. weapons, ammo, powerups, etc)
 
 bool CallTryPickup(AActor *item, AActor *toucher, AActor **toucher_return = nullptr);
-void DepleteOrDestroy(AActor *item);			// virtual on the script side. 
+void DepleteOrDestroy(AActor *item);			// virtual on the script side.
 
 #endif //__A_PICKUPS_H__

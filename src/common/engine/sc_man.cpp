@@ -695,7 +695,7 @@ void FScanner::MustGetNumber (bool evaluate)
 //
 // FScanner :: CheckNumber
 //
-// similar to GetNumber but ungets the token if it isn't a number 
+// similar to GetNumber but ungets the token if it isn't a number
 // and does not print an error
 //
 //==========================================================================
@@ -933,7 +933,7 @@ bool FScanner::Compare (const char *text)
 bool FScanner::ScanValue(bool allowfloat, bool evaluate)
 {
 	bool neg = false;
-	if (!GetToken(evaluate)) 
+	if (!GetToken(evaluate))
 	{
 		return false;
 	}
@@ -949,7 +949,7 @@ bool FScanner::ScanValue(bool allowfloat, bool evaluate)
 	if (TokenType == TK_FloatConst && !allowfloat)
 		return false;
 
-	if (TokenType != TK_IntConst && TokenType != TK_FloatConst) 
+	if (TokenType != TK_IntConst && TokenType != TK_FloatConst)
 	{
 		auto d = constants.CheckKey(String);
 		if (!d) return false;
@@ -967,8 +967,8 @@ bool FScanner::ScanValue(bool allowfloat, bool evaluate)
 	return true;
 }
 
-bool FScanner::CheckValue(bool allowfloat, bool evaluate) 
-{ 
+bool FScanner::CheckValue(bool allowfloat, bool evaluate)
+{
 	auto savedstate = SavePos();
 	bool res = ScanValue(allowfloat, evaluate);
 	if (!res) RestorePos(savedstate);
@@ -1133,7 +1133,7 @@ void FScanner::CheckOpen()
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1148,7 +1148,7 @@ void FScanner::AddSymbol(const char *name, int64_t value)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1163,7 +1163,7 @@ void FScanner::AddSymbol(const char* name, uint64_t value)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1374,4 +1374,3 @@ int ParseHex(const char* hex, FScriptPosition* sc)
 
 	return num;
 }
-

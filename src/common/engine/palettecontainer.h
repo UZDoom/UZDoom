@@ -59,7 +59,7 @@ struct FRemapTable
 	int Index;
 	int NumEntries;				// # of elements in this table (usually 256)
 	bool Inactive = false;				// This table is inactive and should be treated as if it was passed as NULL
-	bool TwodOnly = false;				// Only used for 2D rendering 
+	bool TwodOnly = false;				// Only used for 2D rendering
 	bool ForFont = false;				// Mark font translations because they may require different handling than the ones for sprites-
 	bool NoTransparency = false;		// This palette has no transparent index and must be excluded from all treatment for that.
 
@@ -266,4 +266,3 @@ struct LuminosityTranslationDesc
 };
 
 extern PaletteContainer GPalette;
-

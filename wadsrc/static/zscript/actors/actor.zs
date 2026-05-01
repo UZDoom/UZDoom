@@ -177,7 +177,7 @@ class Actor : Thinker native
 	const STEEPSLOPE = (46342./65536.);	// [RH] Minimum floorplane.c value for walking
 	const FLOATRANDZ = ONCEILINGZ-1;
 	const TELEFRAG_DAMAGE = 1000000;
-	const MinVel = 1./65536;
+	const MinVel = double.equal_epsilon;
 	const LARGE_MASS = 10000000;	// not INT_MAX on purpose
 	const ORIG_FRICTION = (0xE800/65536.);	// original value
 	const ORIG_FRICTION_FACTOR = (2048/65536.);	// original value
@@ -225,7 +225,7 @@ class Actor : Thinker native
 	native TextureID ceilingpic;
 	native double Height;
 	native readonly double Radius;
-    native readonly double RenderRadius;
+		native readonly double RenderRadius;
 	native double projectilepassheight;
 	native int tics;
 	native readonly State CurState;
@@ -656,7 +656,7 @@ class Actor : Thinker native
 	// 'item' is null due to being destroyed with GoAwayAndDie() on pickup.
 	virtual void HasReceived(Inventory item, class<Inventory> itemcls = null) {}
 
-  // Called in TryMove if the mover ran into another Actor. This isn't called on players
+	// Called in TryMove if the mover ran into another Actor. This isn't called on players
 	// if they're currently predicting. Guarantees collisions unlike CanCollideWith.
 	virtual void CollidedWith(Actor other, bool passive) {}
 
@@ -1600,14 +1600,14 @@ class Actor : Thinker native
 
 
 	//================================================
-	// 
+	//
 	// Animation Sequence
-	// 
+	//
 	//================================================
-	
+
 	native version("4.15.1") AnimationLayer SetAnimationLayerAnimation(AnimationLayer layer, Name animName, double framerate = -1, int startFrame = -1, int loopFrame = -1, int endFrame = -1, int interpolateTics = -1, int flags = 0);
 	native version("4.15.1") ui AnimationLayer SetAnimationLayerAnimationUI(AnimationLayer layer, Name animName, double framerate = -1, int startFrame = -1, int loopFrame = -1, int endFrame = -1, int interpolateTics = -1, int flags = 0);
-	
+
 	native version("4.15.1") AnimationLayer SetAnimationLayerFrameRate(AnimationLayer layer, double framerate);
 	native version("4.15.1") ui AnimationLayer SetAnimationLayerFrameRateUI(AnimationLayer layer, double framerate);
 
@@ -1616,7 +1616,7 @@ class Actor : Thinker native
 
 	native version("4.15.1") static clearscope PrecalculatedAnimationFrame BlendAnimationFrames(PrecalculatedAnimationFrame a, PrecalculatedAnimationFrame b, double t);
 	native version("4.15.1") static clearscope PrecalculatedAnimationFrame OffsetAnimationFrame(PrecalculatedAnimationFrame frame, PrecalculatedAnimationFrame offset);
-	
+
 	native version("4.15.1") clearscope PrecalculatedAnimationFrame CalculateAnimationFrame(readonly<InterpolatedFrame> frame);
 
 	// tic should be Level.totaltime + fractic
@@ -1626,22 +1626,22 @@ class Actor : Thinker native
 	// frame2 is the frame to interpolate to, always an InterpolatedFrame
 	// inter is the ratio between frame1 and frame2, if the animation isn't interpolating, it will be 1 and frame 1 will be null
 	// frame1/2 will both be null if an invalid tic or layer are passed
-	// 
+	//
 	// NOTE: while interpolating, an animation may need to perform up to 4-way blending if both frame1 and frame2 are InterpolatedFrame
 	//
 	native version("4.15.1") static clearscope AnimationFrame, InterpolatedFrame, double FindAnimationFrameAt(readonly<AnimationLayer> layer, double tic);
-	
+
 	native version("4.15.1") clearscope AnimationFrame, InterpolatedFrame, double FindAnimationFrame(readonly<AnimationLayer> layer);
 	native version("4.15.1") clearscope AnimationFrame, InterpolatedFrame, double FindAnimationFrameUI(readonly<AnimationLayer> layer);
 
 	native version("4.15.1") void SetBones(PrecalculatedAnimationFrame bones, int mode = SB_ADD, double interpolation_duration = 1.0);
 	native version("4.15.1") ui void SetBonesUI(PrecalculatedAnimationFrame bones, int mode = SB_ADD, double interpolation_duration = 1.0);
 	native version("4.15.1") ui void OverwriteBones(PrecalculatedAnimationFrame bones, int mode = SB_ADD); // no interpolation, faster
-	
+
 	native version("4.15.1") void SetBonesRange(PrecalculatedAnimationFrame bones, int start, int length, int mode = SB_ADD, double interpolation_duration = 1.0);
 	native version("4.15.1") ui void SetBonesRangeUI(PrecalculatedAnimationFrame bones, int start, int length, int mode = SB_ADD, double interpolation_duration = 1.0);
 	native version("4.15.1") ui void OverwriteBonesRange(PrecalculatedAnimationFrame bones, int start, int length, int mode = SB_ADD); // no interpolation, faster
-	
+
 	native version("4.15.1") void SetBonesMask(PrecalculatedAnimationFrame bones, Array<bool> mask, int mode = SB_ADD, double interpolation_duration = 1.0);
 	native version("4.15.1") ui void SetBonesMaskUI(PrecalculatedAnimationFrame bones, Array<bool> mask, int mode = SB_ADD, double interpolation_duration = 1.0);
 	native version("4.15.1") ui void OverwriteBonesMask(PrecalculatedAnimationFrame bones, Array<bool> mask, int mode = SB_ADD); // no interpolation, faster

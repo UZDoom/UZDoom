@@ -681,14 +681,14 @@ class PlayerPawn : Actor
 			{
 				player.viewheight = defaultviewheight/2;
 				if (player.deltaviewheight <= 0)
-					player.deltaviewheight = 1 / 65536.;
+					player.deltaviewheight = double.equal_epsilon;
 			}
 
 			if (player.deltaviewheight)
 			{
 				player.deltaviewheight += 0.25;
 				if (!player.deltaviewheight)
-					player.deltaviewheight = 1/65536.;
+					player.deltaviewheight = double.equal_epsilon;
 			}
 		}
 

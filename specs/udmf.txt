@@ -18,7 +18,7 @@ et al.
     under the terms of the GNU Free Documentation License, Version 1.2
     or any later version published by the Free Software Foundation;
     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-    
+
 ===============================================================================
 
 
@@ -26,13 +26,13 @@ et al.
 Preface
 =======================================
 
-The Universal Doom Map Format specification is a collaborative effort to 
+The Universal Doom Map Format specification is a collaborative effort to
 create and maintain a cross-port standardized textual representation for Doom
-engine maps. 
+engine maps.
 
-The basic UDMF standard contains a superset of the features of all commercial 
-Doom engine games, and provides facilities for seamless extension in source 
-ports, allowing in-editor access to custom map data which would otherwise be 
+The basic UDMF standard contains a superset of the features of all commercial
+Doom engine games, and provides facilities for seamless extension in source
+ports, allowing in-editor access to custom map data which would otherwise be
 squirreled away in external lumps.
 
 
@@ -76,13 +76,13 @@ used as the values of all boolean fields.
 Comments are supported as C-style single and multi-line comments:
 
     // single line comment
-    
+
     /*
        multi
        line
        comment
     */
-    
+
 Multi-line comments may not be nested.
 
 Implementing editors are not required (but are allowed) to maintain syntactic
@@ -94,21 +94,21 @@ entity follows:
 
     linedef { id = 1; }
 
-Compliant parsers will ignore all unknown keywords in global assignments, 
+Compliant parsers will ignore all unknown keywords in global assignments,
 block-level assignments, and block headers. Compliant parsers should attempt
 to preserve as much of such information as is possible by using a flexible
 mapping such as hashing.
 
 For purposes of forward compatibility, user-defined fields are restricted to
 beginning with the string "user_", but are otherwise normal identifiers.
-Implementing editors should not restrict the entry of custom field names to 
-those beginning with "user_", however, in order to avoid problems with 
+Implementing editors should not restrict the entry of custom field names to
+those beginning with "user_", however, in order to avoid problems with
 out-of-date configurations.
 
 Identifiers and keywords are to be treated as case-insensitive.
 
-A field which specifies "boolean" semantics shall accept keyword value 
-true to mean that the field is asserted, and keyword value false to 
+A field which specifies "boolean" semantics shall accept keyword value
+true to mean that the field is asserted, and keyword value false to
 mean that the field is unasserted. Keyword values can only be defined in
 this specification, and not by implementing ports. Use quoted strings
 instead.
@@ -136,7 +136,7 @@ block of memory serving as the implementing port's lines array:
     linedef { id = 2; }
     linedef { id = 3; }
     linedef { id = 4; }
-    
+
 Data types:
 
 For purposes of internal storage:
@@ -148,12 +148,12 @@ Strings have no reasonable length limitations.
 Hard Data Type Limits
 ---------------------
 No limits on number of definitions are defined as part of this specification,
-but implementors may face the need to impose such limitations due to 
+but implementors may face the need to impose such limitations due to
 restrictions on the amount of memory available, or the amount that can be
 allocated through a single pointer on the host machine or in a private heap
 implementation.
 
-In the event that a map exceeds such an internal engine limitation, an 
+In the event that a map exceeds such an internal engine limitation, an
 implementing port or editor should not continue to attempt loading the map, as
 doing so could destabilize the program.
 
@@ -165,7 +165,7 @@ UDMF maps shall be layed out within the archive directory as follows:
 
     (HEADER)
     TEXTMAP
-    ... 
+    ...
     ENDMAP
 
 (HEADER) = Any lump name from 1 to 8 characters. Serves as the name of the map.
@@ -184,27 +184,27 @@ interfere with the order or presence of the lumps.
 
 Use of non-implementing resource editors to manipulate UDMF-map-containing WAD
 files is not recommended, however.
-    
-    
+
+
 --------------------------------
 II.C : Implementation Dependence
 --------------------------------
 
 A port's list of supported non-standard fields must be provided to implementing
 editors, where they can be provided to the end user as controls, as options
-in a dropbox, or through the ability to input any arbitrary 
+in a dropbox, or through the ability to input any arbitrary
 "identifier = value;" pair in a text box.
 
 Every UDMF map should contain as the first statement in the file the "namespace"
-identifier statement, which declares the source port implementation relative to 
+identifier statement, which declares the source port implementation relative to
 which this map is to be interpreted.
 
 Example:
 
     namespace = "ZDoom";
-    
-Implementing source ports may ignore this information, or they may use it to 
-perform automatic runtime translation of maps they would otherwise be unable to 
+
+Implementing source ports may ignore this information, or they may use it to
+perform automatic runtime translation of maps they would otherwise be unable to
 support.
 
 Implementing source ports should publicly document the value of the "namespace"
@@ -218,15 +218,15 @@ Heretic
 Hexen
 Strife
 
-The use of one of these namespaces indicates that all line specials, sector 
-specials, thing types, and if applicable, thing specials contained in the UDMF 
-map conform to the "vanilla" types for the respective gamemode (with an 
-exception for Doom) and are therefore 100% compatible with all UDMF 
+The use of one of these namespaces indicates that all line specials, sector
+specials, thing types, and if applicable, thing specials contained in the UDMF
+map conform to the "vanilla" types for the respective gamemode (with an
+exception for Doom) and are therefore 100% compatible with all UDMF
 implementors which support the specified gamemode.
 
 An exception is made for the "Doom" translation type. It is considered to
 represent the final fork of the v1.9 Doom engine, and therefore it includes
-all line types added in DOOM II. It is also additionally considered to 
+all line types added in DOOM II. It is also additionally considered to
 include all specials defined in the BOOM and MBF source ports. Implementors
 who support BOOM linedef types can handle these in the normal manner; ports
 which do not support them should zero or otherwise ignore the offending
@@ -247,7 +247,7 @@ III. Standardized Fields
 The UDMF v1.0 specification considers the following fields standard. They must
 be recognized by all implementing ports and editors (support for the features
 they signify is not necessarily required, such as for ports which do not
-implement Hexen support - all fields unknown to a given port should be 
+implement Hexen support - all fields unknown to a given port should be
 ignored and not treated as an error).
 
 All boolean fields take the keyword values true and false.
@@ -256,12 +256,12 @@ All boolean fields take the keyword values true and false.
    {
       id = <integer>; // ID of line. Interpreted as tag or scripting id.
                       // Default = -1. *** see below.
-      
+
       v1 = <integer>; // Index of first vertex. No valid default.
       v2 = <integer>; // Index of second vertex. No valid default.
-      
+
       // All flags default to false.
-      
+
       blocking      = <bool>; // true = line blocks things.
       blockmonsters = <bool>; // true = line blocks monsters.
       twosided      = <bool>; // true = line is 2S.
@@ -271,9 +271,9 @@ All boolean fields take the keyword values true and false.
       blocksound    = <bool>; // true = blocks sound.
       dontdraw      = <bool>; // true = line never drawn on map.
       mapped        = <bool>; // true = always appears on map.
-      
+
       // BOOM passuse flag not supported in Strife/Heretic/Hexen namespaces.
-      
+
       passuse       = <bool>; // true = passes use action.
 
       // Strife specific flags. Support for other games is not defined by
@@ -283,12 +283,12 @@ All boolean fields take the keyword values true and false.
       translucent   = <bool>; // true = line is a Strife translucent line.
       jumpover      = <bool>; // true = line is a Strife railing.
       blockfloaters = <bool>; // true = line is a Strife float-blocker.
-      
+
       // Note: SPAC flags should be set false in Doom/Heretic/Strife
       // namespace maps. Specials in those games do not support this
       // mechanism and instead imply activation parameters through the
       // special number. All flags default to false.
-      
+
       playercross   = <bool>; // true = player can cross.
       playeruse     = <bool>; // true = player can use.
       monstercross  = <bool>; // true = monster can cross.
@@ -298,75 +298,75 @@ All boolean fields take the keyword values true and false.
       monsterpush   = <bool>; // true = monster can push.
       missilecross  = <bool>; // true = projectile can cross.
       repeatspecial = <bool>; // true = repeatable special.
-      
+
       special = <integer>; // Special. Default = 0.
       arg0    = <integer>; // Argument 0. Default = 0.
       arg1    = <integer>; // Argument 1. Default = 0.
       arg2    = <integer>; // Argument 2. Default = 0.
       arg3    = <integer>; // Argument 3. Default = 0.
       arg4    = <integer>; // Argument 4. Default = 0.
-      
+
       sidefront = <integer>; // Sidedef 1 index. No valid default.
       sideback  = <integer>; // Sidedef 2 index. Default = -1.
-      
+
       comment = <string>; // A comment. Implementors should attach no special
                           // semantic meaning to this field.
    }
-   
+
    sidedef
    {
       offsetx = <integer>; // X Offset. Default = 0.
       offsety = <integer>; // Y Offset. Default = 0.
-      
+
       texturetop    = <string>; // Upper texture. Default = "-".
       texturebottom = <string>; // Lower texture. Default = "-".
       texturemiddle = <string>; // Middle texture. Default = "-".
-      
+
       sector = <integer>; // Sector index. No valid default.
 
       comment = <string>; // A comment. Implementors should attach no special
                           // semantic meaning to this field.
    }
-   
+
    vertex
    {
       x = <float>; // X coordinate. No valid default.
       y = <float>; // Y coordinate. No valid default.
    }
-   
+
    sector
    {
       heightfloor   = <integer>; // Floor height. Default = 0.
       heightceiling = <integer>; // Ceiling height. Default = 0.
-      
+
       texturefloor   = <string>; // Floor flat. No valid default.
       textureceiling = <string>; // Ceiling flat. No valid default.
-      
+
       lightlevel = <integer>; // Light level. Default = 160.
-      
+
       special = <integer>; // Sector special. Default = 0.
       id      = <integer>; // Sector tag/id. Default = 0.
 
       comment = <string>; // A comment. Implementors should attach no special
                           // semantic meaning to this field.
    }
-   
+
    thing
    {
       id = <integer>; // Thing ID. Default = 0.
-      
+
       x = <float>; // X coordinate. No valid default.
       y = <float>; // Y coordinate. No valid default.
-      
+
       height = <float>; // Z height relative to floor. Default = 0.
                         // (Relative to ceiling for SPAWNCEILING items).
-                          
+
       angle = <integer>; // Map angle of thing in degrees. Default = 0 (East).
-      
+
       type = <integer>; // DoomedNum. No valid default.
-      
+
       // All flags default to false.
-      
+
       skill1      = <bool>; // true = in skill 1.
       skill2      = <bool>; // true = in skill 2.
       skill3      = <bool>; // true = in skill 3.
@@ -378,16 +378,16 @@ All boolean fields take the keyword values true and false.
       coop        = <bool>; // true = in Coop.
 
       // MBF friend flag not supported in Strife/Heretic/Hexen namespaces.
-      
+
       friend      = <bool>; // true = MBF friend.
-      
+
       // Hexen flags; not supported in Doom/Strife/Heretic namespaces.
-      
+
       dormant     = <bool>; // true = dormant thing.
       class1      = <bool>; // true = Present for pclass 1.
       class2      = <bool>; // true = Present for pclass 2.
       class3      = <bool>; // true = Present for pclass 3.
-      
+
 
       // Strife specific flags. Support for other games is not defined by
       // default and these flags should be ignored when reading maps not for
@@ -396,13 +396,13 @@ All boolean fields take the keyword values true and false.
       strifeally  = <bool>; // true = Strife ally flag.
       translucent = <bool>; // true = Strife translucency flag.
       invisible   = <bool>; // true = Strife invisibility flag.
-            
+
       // Note: suggested editor defaults for all skill, gamemode, and player
       // class flags is true rather than the UDMF default of false.
 
       // Thing special semantics are only defined for the Hexen namespace or
       // ports which implement this feature in their own namespace.
-      
+
       special = <integer>; // Scripting special. Default = 0;
       arg0    = <integer>; // Argument 0. Default = 0.
       arg1    = <integer>; // Argument 1. Default = 0.
@@ -413,30 +413,30 @@ All boolean fields take the keyword values true and false.
       comment = <string>; // A comment. Implementors should attach no special
                           // semantic meaning to this field.
    }
-   
+
 
 *** Tag / ID Behavior for Map Conversion:
-   
+
    Unlike traditional Doom maps UDMF makes a clear distinction between a line's
-   ID and the parameter which identifies the object the line's special is 
+   ID and the parameter which identifies the object the line's special is
    supposed to affect.
 
    The id will be used to identify this line, and arg0 will be used to identify
    the line or sector that this line is to affect or otherwise reference, i.e.
    it is effectively a parameter to the line's special.
 
-   Boom used the linedef's tag for both due to lack of other options so in 
-   order to ensure compatibility any map converter converting maps for the 
+   Boom used the linedef's tag for both due to lack of other options so in
+   order to ensure compatibility any map converter converting maps for the
    Doom/Heretic/Strife namespaces must store the linedef's tag field as both
-   the id and as arg0 in each line. The default value of the id field under 
+   the id and as arg0 in each line. The default value of the id field under
    these namespaces is defined as 0 rather than -1.
-   
+
    Since UDMF provides a line id field, the Hexen line special #121
    (Line_SetIdentification) is obsolete. When converting maps to UDMF under
    Hexen namespace, special 121 should be written as zero, and the arg0 of
    the binary linedef should be written as the id field of the UDMF line.
    The arg0 value of the UDMF line should also then be set to zero.
-   
+
 ===============================================================================
 EOF
 ===============================================================================

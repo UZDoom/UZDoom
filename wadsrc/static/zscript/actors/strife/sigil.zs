@@ -24,7 +24,7 @@ class Sigil : Weapon
 {
 	// NUmPieces gets stored in 'health', so that it can be quickly accessed by ACS's GetSigilPieces function.
 	int downpieces;
-	
+
 	Default
 	{
 		Weapon.Kickback 100;
@@ -38,7 +38,7 @@ class Sigil : Weapon
 		Inventory.Icon "I_SGL1";
 		Inventory.PickupMessage "$TXT_SIGIL";
 	}
-	
+
 	States(Actor)
 	{
 	Spawn:
@@ -95,7 +95,7 @@ class Sigil : Weapon
 		Wait;
 		SIGH E 1 Bright A_Raise;
 		Wait;
-	
+
 	Fire:
 		SIGH A 0 Bright A_SelectSigilAttack;
 
@@ -135,7 +135,7 @@ class Sigil : Weapon
 		SIGF C 0 Bright A_Light0;
 		Stop;
 	}
-	
+
 
 	//============================================================================
 	//
@@ -374,7 +374,7 @@ class Sigil : Weapon
 	action void A_FireSigil4 ()
 	{
 		FTranslatedLineTarget t;
-		
+
 		if (player == null || player.ReadyWeapon == null)
 			return;
 

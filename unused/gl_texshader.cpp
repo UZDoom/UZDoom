@@ -129,8 +129,8 @@ FShaderLayer::~FShaderLayer()
 {
    if (layerMask)
    {
-      delete layerMask;
-      layerMask = NULL;
+	  delete layerMask;
+	  layerMask = NULL;
    }
 }
 
@@ -326,8 +326,8 @@ bool FShaderLayer::ParseLayer(FScanner &sc)
 			}
 			else if (sc.Compare("animate"))
 			{
-               sc.GetString();
-               animate = sc.Compare("true");
+			   sc.GetString();
+			   animate = sc.Compare("true");
 			}
 			else if (sc.Compare("blendfunc"))
 			{
@@ -366,16 +366,16 @@ bool FShaderLayer::ParseLayer(FScanner &sc)
 					sc.MustGetFloat();
 					b2 = float(sc.Float);
 
-                  // get cycle time
+				  // get cycle time
 					sc.MustGetFloat();
 					cycle = sc.Float;
 
 					r.SetParams(r1, r2, cycle);
 					g.SetParams(g1, g2, cycle);
 					b.SetParams(b1, b2, cycle);
-               }
-               else
-               {
+			   }
+			   else
+			   {
 					sc.MustGetFloat();
 					r1 = float(sc.Float);
 					sc.MustGetFloat();
@@ -386,14 +386,14 @@ bool FShaderLayer::ParseLayer(FScanner &sc)
 					r.SetParams(r1, r1, 0.f);
 					g.SetParams(g1, g1, 0.f);
 					b.SetParams(b1, b1, 0.f);
-               }
+			   }
 			}
 			else if (sc.Compare("center"))
 			{
-               sc.MustGetFloat();
-               centerX = sc.Float;
-               sc.MustGetFloat();
-               centerY = sc.Float;
+			   sc.MustGetFloat();
+			   centerX = sc.Float;
+			   sc.MustGetFloat();
+			   centerY = sc.Float;
 			}
 			else if (sc.Compare("emissive"))
 			{
@@ -447,13 +447,13 @@ bool FShaderLayer::ParseLayer(FScanner &sc)
 			}
 			else if (sc.Compare("rotate"))
 			{
-               sc.MustGetFloat();
-               rotate = sc.Float;
+			   sc.MustGetFloat();
+			   rotate = sc.Float;
 			}
 			else if (sc.Compare("rotation"))
 			{
-               sc.MustGetFloat();
-               rotation = sc.Float;
+			   sc.MustGetFloat();
+			   rotation = sc.Float;
 			}
 			else if (sc.Compare("scale"))
 			{
@@ -665,7 +665,7 @@ FString FTextureShader::CreateName()
 	FString compose = "custom";
 	for(unsigned i=0; i<layers.Size(); i++)
 	{
-		compose.AppendFormat("@%de%ds%ud%ut%dw%d", i, layers[i]->emissive, 
+		compose.AppendFormat("@%de%ds%ud%ut%dw%d", i, layers[i]->emissive,
 			layers[i]->blendFuncSrc, layers[i]->blendFuncDst, layers[i]->texgen, layers[i]->warp);
 	}
 	return compose;
@@ -680,9 +680,9 @@ FString FTextureShader::CreateName()
 FString FTextureShader::GenerateCode()
 {
 	static const char *funcnames[] = {"gettexel", "getwarp1", "getwarp2" };
-	static const char *srcblend[] = { "vec4(0.0)", "src", "src*dest", "1.0-src*dest", "src*dest.a", "1.0-src*dest.a", 
+	static const char *srcblend[] = { "vec4(0.0)", "src", "src*dest", "1.0-src*dest", "src*dest.a", "1.0-src*dest.a",
 										"src*src", "1.0-src*src", "src*src.a", "1.0-src*src", "vec4(src.rgb*src.a, 1)" };
-	static const char *dstblend[] = { "vec4(0.0)", "dest", "dest*dest", "1.0-dest*dest", "dest*dest.a", "1.0-dest*dest.a", 
+	static const char *dstblend[] = { "vec4(0.0)", "dest", "dest*dest", "1.0-dest*dest", "dest*dest.a", "1.0-dest*dest.a",
 										"dest*src", "1.0-dest*src", "dest*src.a", "1.0-dest*src", "vec4(dest.rgb*src.a, 1)" };
 	FString compose;
 	for(unsigned i=0; i<layers.Size(); i++)
@@ -690,9 +690,8 @@ FString FTextureShader::GenerateCode()
 		compose.AppendFormat("src = %s(texture%d, glTexCoord[%d].st) * colors[%d];\n",
 			funcnames[layers[i]->warp], i+1, i, i);
 		if (!layers[i]->emissive) compose.AppendFormat("src.rgb *= gl_Color.rgb;\n");
-		compose.AppendFormat("dest = (%s)*srcfactor + (%s)*dstfactor;\n", 
+		compose.AppendFormat("dest = (%s)*srcfactor + (%s)*dstfactor;\n",
 			srcblend[layers[i]->blendFuncSrc], dstblend[layers[i]->blendFuncDst]);
 	}
 	return compose;
 }
-

@@ -56,7 +56,7 @@ TArray<PrecacheDataPaletted> precacheDataPaletted;
 TArray<PrecacheDataRgba> precacheDataRgba;
 
 //===========================================================================
-// 
+//
 // the default just returns an empty texture.
 //
 //===========================================================================
@@ -99,7 +99,7 @@ PalettedPixels FImageSource::GetCachedPalettedPixels(int conversion, int frame)
 	}
 	else
 	{
-		// The image wasn't cached. Now there's two possibilities: 
+		// The image wasn't cached. Now there's two possibilities:
 		auto info = precacheInfo.CheckKey(ImageID);
 		if (!info || info->second <= 1 || conversion != normal)
 		{
@@ -364,7 +364,7 @@ FImageSource * FImageSource::GetImage(int lumpnum, bool isflat)
 	if (ImageForLump[lumpnum] != nullptr) return ImageForLump[lumpnum];
 
 	auto data = fileSystem.OpenFileReader(lumpnum);
-	if (!data.isOpen()) 
+	if (!data.isOpen())
 		return nullptr;
 
 	for (size_t i = 0; i < countof(CreateInfo); i++)

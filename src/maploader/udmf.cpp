@@ -614,54 +614,54 @@ public:
 				break;
 
 			case NAME_Ambush:
-				Flag(th->flags, MTF_AMBUSH, key); 
+				Flag(th->flags, MTF_AMBUSH, key);
 				break;
 
 			case NAME_Dormant:
 				CHECK_N(Hx | Zd | Zdt | Va)
-				Flag(th->flags, MTF_DORMANT, key); 
+				Flag(th->flags, MTF_DORMANT, key);
 				break;
 
 			case NAME_Single:
-				Flag(th->flags, MTF_SINGLE, key); 
+				Flag(th->flags, MTF_SINGLE, key);
 				break;
 
 			case NAME_Coop:
-				Flag(th->flags, MTF_COOPERATIVE, key); 
+				Flag(th->flags, MTF_COOPERATIVE, key);
 				break;
 
 			case NAME_Dm:
-				Flag(th->flags, MTF_DEATHMATCH, key); 
+				Flag(th->flags, MTF_DEATHMATCH, key);
 				break;
 
 			case NAME_Translucent:
 				CHECK_N(St | Zd | Zdt | Va)
-				Flag(th->flags, MTF_SHADOW, key); 
+				Flag(th->flags, MTF_SHADOW, key);
 				break;
 
 			case NAME_Invisible:
 				CHECK_N(St | Zd | Zdt | Va)
-				Flag(th->flags, MTF_ALTSHADOW, key); 
+				Flag(th->flags, MTF_ALTSHADOW, key);
 				break;
 
 			case NAME_Friend:	// This maps to Strife's friendly flag
 				CHECK_N(Dm | Zd | Zdt | Va)
-				Flag(th->flags, MTF_FRIENDLY, key); 
+				Flag(th->flags, MTF_FRIENDLY, key);
 				break;
 
 			case NAME_Strifeally:
 				CHECK_N(St | Zd | Zdt | Va)
-				Flag(th->flags, MTF_FRIENDLY, key); 
+				Flag(th->flags, MTF_FRIENDLY, key);
 				break;
 
 			case NAME_Standing:
 				CHECK_N(St | Zd | Zdt | Va)
-				Flag(th->flags, MTF_STANDSTILL, key); 
+				Flag(th->flags, MTF_STANDSTILL, key);
 				break;
 
 			case NAME_Countsecret:
 				CHECK_N(Zd | Zdt | Va)
-				Flag(th->flags, MTF_SECRET, key); 
+				Flag(th->flags, MTF_SECRET, key);
 				break;
 
 			case NAME_NoCount:
@@ -925,49 +925,49 @@ public:
 				continue;
 
 			case NAME_Blocking:
-				Flag(ld->flags, ML_BLOCKING, key); 
+				Flag(ld->flags, ML_BLOCKING, key);
 				continue;
 
 			case NAME_Blockmonsters:
-				Flag(ld->flags, ML_BLOCKMONSTERS, key); 
+				Flag(ld->flags, ML_BLOCKMONSTERS, key);
 				continue;
 
 			case NAME_Twosided:
-				Flag(ld->flags, ML_TWOSIDED, key); 
+				Flag(ld->flags, ML_TWOSIDED, key);
 				continue;
 
 			case NAME_Dontpegtop:
-				Flag(ld->flags, ML_DONTPEGTOP, key); 
+				Flag(ld->flags, ML_DONTPEGTOP, key);
 				continue;
 
 			case NAME_Dontpegbottom:
-				Flag(ld->flags, ML_DONTPEGBOTTOM, key); 
+				Flag(ld->flags, ML_DONTPEGBOTTOM, key);
 				continue;
 
 			case NAME_Secret:
-				Flag(ld->flags, ML_SECRET, key); 
+				Flag(ld->flags, ML_SECRET, key);
 				continue;
 
 			case NAME_Blocksound:
-				Flag(ld->flags, ML_SOUNDBLOCK, key); 
+				Flag(ld->flags, ML_SOUNDBLOCK, key);
 				continue;
 
 			case NAME_Dontdraw:
-				Flag(ld->flags, ML_DONTDRAW, key); 
+				Flag(ld->flags, ML_DONTDRAW, key);
 				continue;
 
 			case NAME_Mapped:
-				Flag(ld->flags, ML_MAPPED, key); 
+				Flag(ld->flags, ML_MAPPED, key);
 				continue;
 
 			case NAME_Jumpover:
 				CHECK_N(St | Zd | Zdt | Va)
-				Flag(ld->flags, ML_RAILING, key); 
+				Flag(ld->flags, ML_RAILING, key);
 				continue;
 
 			case NAME_Blockfloaters:
 				CHECK_N(St | Zd | Zdt | Va)
-				Flag(ld->flags, ML_BLOCK_FLOATERS, key); 
+				Flag(ld->flags, ML_BLOCK_FLOATERS, key);
 				continue;
 
 			case NAME_Blocklandmonsters:
@@ -978,17 +978,17 @@ public:
 
 			case NAME_Translucent:
 				CHECK_N(St | Zd | Zdt | Va)
-				strifetrans = CheckBool(key); 
+				strifetrans = CheckBool(key);
 				continue;
 
 			case NAME_Transparent:
 				CHECK_N(St | Zd | Zdt | Va)
-				strifetrans2 = CheckBool(key); 
+				strifetrans2 = CheckBool(key);
 				continue;
 
 			case NAME_Passuse:
 				CHECK_N(Dm | Zd | Zdt | Va)
-				passuse = CheckBool(key); 
+				passuse = CheckBool(key);
 				continue;
 
 			default:
@@ -1005,43 +1005,43 @@ public:
 				continue;
 
 			case NAME_Playercross:
-				Flag(ld->activation, SPAC_Cross, key); 
+				Flag(ld->activation, SPAC_Cross, key);
 				continue;
 
 			case NAME_Playeruse:
-				Flag(ld->activation, SPAC_Use, key); 
+				Flag(ld->activation, SPAC_Use, key);
 				continue;
 
 			case NAME_Playeruseback:
-				Flag(ld->activation, SPAC_UseBack, key); 
+				Flag(ld->activation, SPAC_UseBack, key);
 				continue;
 
 			case NAME_Monstercross:
-				Flag(ld->activation, SPAC_MCross, key); 
+				Flag(ld->activation, SPAC_MCross, key);
 				continue;
 
 			case NAME_Impact:
-				Flag(ld->activation, SPAC_Impact, key); 
+				Flag(ld->activation, SPAC_Impact, key);
 				continue;
 
 			case NAME_Playerpush:
-				Flag(ld->activation, SPAC_Push, key); 
+				Flag(ld->activation, SPAC_Push, key);
 				continue;
 
 			case NAME_Missilecross:
-				Flag(ld->activation, SPAC_PCross, key); 
+				Flag(ld->activation, SPAC_PCross, key);
 				continue;
 
 			case NAME_Monsteruse:
-				Flag(ld->activation, SPAC_MUse, key); 
+				Flag(ld->activation, SPAC_MUse, key);
 				continue;
 
 			case NAME_Monsterpush:
-				Flag(ld->activation, SPAC_MPush, key); 
+				Flag(ld->activation, SPAC_MPush, key);
 				continue;
 
 			case NAME_Repeatspecial:
-				Flag(ld->flags, ML_REPEAT_SPECIAL, key); 
+				Flag(ld->flags, ML_REPEAT_SPECIAL, key);
 				continue;
 
 			default:
@@ -1065,61 +1065,61 @@ public:
 			}
 
 			case NAME_Anycross:
-				Flag(ld->activation, SPAC_AnyCross, key); 
+				Flag(ld->activation, SPAC_AnyCross, key);
 				continue;
 
 			case NAME_Monsteractivate:
-				Flag(ld->flags, ML_MONSTERSCANACTIVATE, key); 
+				Flag(ld->flags, ML_MONSTERSCANACTIVATE, key);
 				continue;
 
 			case NAME_Blockplayers:
-				Flag(ld->flags, ML_BLOCK_PLAYERS, key); 
+				Flag(ld->flags, ML_BLOCK_PLAYERS, key);
 				continue;
 
 			case NAME_Blockeverything:
-				Flag(ld->flags, ML_BLOCKEVERYTHING, key); 
+				Flag(ld->flags, ML_BLOCKEVERYTHING, key);
 				continue;
 
 			case NAME_Zoneboundary:
-				Flag(ld->flags, ML_ZONEBOUNDARY, key); 
+				Flag(ld->flags, ML_ZONEBOUNDARY, key);
 				continue;
 
 			case NAME_Clipmidtex:
-				Flag(ld->flags, ML_CLIP_MIDTEX, key); 
+				Flag(ld->flags, ML_CLIP_MIDTEX, key);
 				continue;
 
 			case NAME_Wrapmidtex:
-				Flag(ld->flags, ML_WRAP_MIDTEX, key); 
+				Flag(ld->flags, ML_WRAP_MIDTEX, key);
 				continue;
 
 			case NAME_Midtex3d:
-				Flag(ld->flags, ML_3DMIDTEX, key); 
+				Flag(ld->flags, ML_3DMIDTEX, key);
 				continue;
 
 			case NAME_Checkswitchrange:
-				Flag(ld->flags, ML_CHECKSWITCHRANGE, key); 
+				Flag(ld->flags, ML_CHECKSWITCHRANGE, key);
 				continue;
 
 			case NAME_Firstsideonly:
-				Flag(ld->flags, ML_FIRSTSIDEONLY, key); 
+				Flag(ld->flags, ML_FIRSTSIDEONLY, key);
 				continue;
 
 			case NAME_blockprojectiles:
-				Flag(ld->flags, ML_BLOCKPROJECTILE, key); 
+				Flag(ld->flags, ML_BLOCKPROJECTILE, key);
 				continue;
 
 			case NAME_blockuse:
-				Flag(ld->flags, ML_BLOCKUSE, key); 
+				Flag(ld->flags, ML_BLOCKUSE, key);
 				continue;
 
 			case NAME_blocksight:
-				Flag(ld->flags, ML_BLOCKSIGHT, key); 
+				Flag(ld->flags, ML_BLOCKSIGHT, key);
 				continue;
-			
+
 			case NAME_blockhitscan:
-				Flag(ld->flags, ML_BLOCKHITSCAN, key); 
+				Flag(ld->flags, ML_BLOCKHITSCAN, key);
 				continue;
-			
+
 			// [TP] Locks the special with a key
 			case NAME_Locknumber:
 				ld->locknumber = CheckInt(key);
@@ -1210,7 +1210,7 @@ public:
 			Level->TranslateLineDef(ld, &mld);
 			ld->flags = saved | (ld->flags&(ML_MONSTERSCANACTIVATE|ML_REPEAT_SPECIAL|ML_FIRSTSIDEONLY));
 		}
-		if (passuse && (ld->activation & SPAC_Use)) 
+		if (passuse && (ld->activation & SPAC_Use))
 		{
 			ld->activation = (ld->activation & ~SPAC_Use) | SPAC_UseThrough;
 		}
@@ -1359,7 +1359,7 @@ public:
 			case NAME_light_top:
 				sd->SetLight(CheckInt(key), side_t::top);
 				continue;
-				
+
 			case NAME_lightabsolute_top:
 				Flag(sd->Flags, WALLF_ABSLIGHTING_TOP, key);
 				continue;
@@ -2055,7 +2055,7 @@ public:
 					if (!stricmp(CheckString(key), "translucent")) sec->planes[sector_t::ceiling].Flags &= ~PLANEF_ADDITIVE;
 					else if (!stricmp(CheckString(key), "additive")) sec->planes[sector_t::ceiling].Flags |= PLANEF_ADDITIVE;
 					break;
-				
+
 				case NAME_portal_floor_blocksound:
 					Flag(sec->planes[sector_t::floor].Flags, PLANEF_BLOCKSOUND, key);
 					break;
@@ -2261,7 +2261,7 @@ public:
 			UDMFThrusters.Push({ thrustlocation, index, thrust.X, thrust.Y, thrustgroup });
 		}
 
-		
+
 		// Reset the planes to their defaults if not all of the plane equation's parameters were found.
 		if (fplaneflags != 15)
 		{

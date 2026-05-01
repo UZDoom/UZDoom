@@ -263,7 +263,7 @@ inline bool P_IsBlockedByLine(AActor* actor, line_t* line)
 // For Dehacked modified actors we need to dynamically check the bounce factors because MBF didn't bother to implement this properly and with other flags changing this must adjust.
 inline double GetMBFBounceFactor(AActor* actor)
 {
-	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked. 
+	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked.
 	{
 		constexpr double MBF_BOUNCE_NOGRAVITY = 1;				// With NOGRAVITY: full momentum
 		constexpr double MBF_BOUNCE_FLOATDROPOFF = 0.85;		// With FLOAT and DROPOFF: 85%
@@ -279,7 +279,7 @@ inline double GetMBFBounceFactor(AActor* actor)
 
 inline double GetWallBounceFactor(AActor* actor)
 {
-	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked. 
+	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked.
 	{
 		constexpr double MBF_BOUNCE_NOGRAVITY = 1;				// With NOGRAVITY: full momentum
 		constexpr double MBF_BOUNCE_WALL = 0.5;					// Bouncing off walls: 50%
