@@ -30,7 +30,7 @@ class DAutomapBase : public DObject
 {
 	DECLARE_ABSTRACT_CLASS(DAutomapBase, DObject);
 public:
-	FLevelLocals *Level;	// temporary location so that it can be set from the outside.
+	FLevelLocals* Level;	// temporary location so that it can be set from the outside.
 
 	// Called by main loop.
 	virtual bool Responder(event_t* ev, bool last) = 0;

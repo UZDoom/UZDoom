@@ -66,7 +66,7 @@ struct FBlockmap
 
 	// mapblocks are used to check movement
 	// against lines and things
-	static constexpr int MAPBLOCKUNITS = 128;
+	static constexpr uint32_t MAPBLOCKUNITS = 128;
 
 	inline int GetBlockX(double xpos)
 	{
