@@ -708,14 +708,14 @@ void F2DDrawer::AddShape(FGameTexture* img, DShape2D* shape, DrawParms& parms)
 
 void F2DDrawer::AddPoly(FGameTexture *texture, FVector2 *points, int npoints,
 		double originx, double originy, double scalex, double scaley,
-		DAngle rotation, const FColormap &colormap, PalEntry flatcolor, double fadelevel,
+		DAngle rotation, const FColormap &colormap, double alpha, double fadelevel,
 		uint32_t *indices, size_t indexcount)
 {
 	RenderCommand poly;
 
 	poly.mType = DrawTypeTriangles;
 	poly.mTexture = texture;
-	poly.mRenderStyle = DefaultRenderStyle();
+	poly.mRenderStyle = (alpha < 1.0) ? LegacyRenderStyles[STYLE_Translucent] : DefaultRenderStyle();
 	poly.mFlags |= DTF_Wrap;
 	poly.mDesaturate = colormap.Desaturation;
 
@@ -725,7 +725,7 @@ void F2DDrawer::AddPoly(FGameTexture *texture, FVector2 *points, int npoints,
 	color0.r = uint8_t(colormap.LightColor.r * invfade);
 	color0.g = uint8_t(colormap.LightColor.g * invfade);
 	color0.b = uint8_t(colormap.LightColor.b * invfade);
-	color0.a = 255;
+	color0.a = uint8_t(255 * alpha);
 
 	poly.mColor1.a = 0;
 	poly.mColor1.r = uint8_t(colormap.FadeColor.r * fadelevel);

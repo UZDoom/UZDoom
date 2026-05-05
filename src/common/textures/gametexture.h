@@ -23,15 +23,17 @@
 */
 
 #pragma once
-#include <stdint.h>
+
+#include <cstdint>
 #include <memory>
-#include "vectors.h"
+
 #include "floatrect.h"
-#include "refcounted.h"
-#include "xs_Float.h"
 #include "palentry.h"
-#include "zstring.h"
+#include "refcounted.h"
 #include "textureid.h"
+#include "vectors.h"
+#include "zstring.h"
+#include "m_round.h"
 
 // 15 because 0th texture is our texture
 #define MAX_CUSTOM_HW_SHADER_TEXTURES 15
@@ -294,10 +296,10 @@ public:
 	void SetNoMipmap(bool set) { if (set) flags |= GTexf_NoMipmap; else flags &= ~GTexf_NoMipmap; }
 
 	bool isUserContent() const;
-	int CheckRealHeight() { return xs_RoundToInt(Base->CheckRealHeight() / ScaleY); }
-	void SetSize(int x, int y)
-	{
-		TexelWidth = x;
+	int CheckRealHeight() { return RoundHalfUp(Base->CheckRealHeight() / ScaleY); }
+	void SetSize(int x, int y) 
+	{ 
+		TexelWidth = x; 
 		TexelHeight = y;
 		SetDisplaySize(float(x), float(y));
 		if (GetTexture()) GetTexture()->SetSize(x, y);

@@ -42,6 +42,7 @@
 #include "swrenderer/viewport/r_viewport.h"
 #include "r_memory.h"
 #include "swrenderer/r_renderthread.h"
+#include "m_round.h"
 
 EXTERN_CVAR(Bool, r_fullbrightignoresectorcolor);
 
@@ -192,7 +193,7 @@ namespace swrenderer
 			if (spr->FakeFlatStat != WaterFakeSide::AboveCeiling)
 			{
 				double hz = spr->heightsec->floorplane.ZatPoint(spr->gpos.XY());
-				int h = xs_RoundToInt(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
+				int h = RoundHalfUp(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
 
 				if (spr->FakeFlatStat == WaterFakeSide::BelowFloor)
 				{ // seen below floor: clip top
@@ -214,7 +215,7 @@ namespace swrenderer
 			if (spr->FakeFlatStat != WaterFakeSide::BelowFloor && !(spr->heightsec->MoreFlags & SECMF_FAKEFLOORONLY))
 			{
 				double hz = spr->heightsec->ceilingplane.ZatPoint(spr->gpos.XY());
-				int h = xs_RoundToInt(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
+				int h = RoundHalfUp(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
 
 				if (spr->FakeFlatStat == WaterFakeSide::AboveCeiling)
 				{ // seen above ceiling: clip bottom
@@ -237,7 +238,7 @@ namespace swrenderer
 		// killough 3/27/98: end special clipping for deep water / fake ceilings
 		else if (!spr->IsVoxel() && spr->floorclip)
 		{ // [RH] Move floorclip stuff from R_DrawVisSprite to here
-			int clip = xs_RoundToInt(viewport->CenterY - (spr->texturemid - spr->pic->GetHeight() + spr->floorclip) * spr->yscale);
+			int clip = RoundHalfUp(viewport->CenterY - (spr->texturemid - spr->pic->GetHeight() + spr->floorclip) * spr->yscale);
 			if (clip < botclip)
 			{
 				botclip = max<short>(0, clip);
@@ -257,7 +258,7 @@ namespace swrenderer
 						hz = spr->fakefloor->bottom.plane->Zat0();
 					}
 				}
-				int h = xs_RoundToInt(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
+				int h = RoundHalfUp(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
 				if (h < botclip)
 				{
 					botclip = max<short>(0, h);
@@ -278,7 +279,7 @@ namespace swrenderer
 						hz = spr->fakeceiling->top.plane->Zat0();
 					}
 				}
-				int h = xs_RoundToInt(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
+				int h = RoundHalfUp(viewport->CenterY - (hz - viewport->viewpoint.Pos.Z) * scale);
 				if (h > topclip)
 				{
 					topclip = short(min(h, viewheight));
@@ -480,8 +481,8 @@ namespace swrenderer
 			{
 				fillshort(cliptop + x2, viewwidth - x2, viewheight);
 			}
-			int minvoxely = spr->gzt <= hzt ? 0 : xs_RoundToInt((spr->gzt - hzt) / spr->yscale);
-			int maxvoxely = spr->gzb > hzb ? INT_MAX : xs_RoundToInt((spr->gzt - hzb) / spr->yscale);
+			int minvoxely = spr->gzt <= hzt ? 0 : RoundHalfUp((spr->gzt - hzt) / spr->yscale);
+			int maxvoxely = spr->gzb > hzb ? INT_MAX : RoundHalfUp((spr->gzt - hzb) / spr->yscale);
 			spr->Render(thread, cliptop, clipbot, minvoxely, maxvoxely, clip3DFloor);
 		}
 		spr->Light.BaseColormap = colormap;

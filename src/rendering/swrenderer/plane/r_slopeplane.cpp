@@ -110,8 +110,8 @@ namespace swrenderer
 		yscale = 64.f / lyscale;
 		zeroheight = pl->height.ZatPoint(Thread->Viewport->viewpoint.Pos);
 
-		pviewx = xs_ToFixed(32 - drawerargs.TextureWidthBits(), pl->xform.xOffs * pl->xform.xScale);
-		pviewy = xs_ToFixed(32 - drawerargs.TextureHeightBits(), pl->xform.yOffs * pl->xform.yScale);
+		pviewx = FloatToFixed(pl->xform.xOffs * pl->xform.xScale, 32 - drawerargs.TextureWidthBits());
+		pviewy = FloatToFixed(pl->xform.yOffs * pl->xform.yScale, 32 - drawerargs.TextureHeightBits());
 		planeang = (pl->xform.Angle + pl->xform.baseAngle).Radians();
 
 		// p is the texture origin in view space

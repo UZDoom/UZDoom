@@ -28,16 +28,20 @@
 
 #include <algorithm>
 #include <cassert>
+#include <cmath>
 #include <cstddef>
 #include <cstdint>
 #include <cstdlib>
+#include <limits>
 #include <type_traits>
+
+#include "m_round.h"
+
+// IWYU pragma: end_exports
 
 #if defined(_M_X64) || defined(__x86_64__) || defined(__amd64__) || defined(__amd64) || defined(__x86_64__) || defined(__x86_64)
 #include <xmmintrin.h>
 #endif
-
-// IWYU pragma: end_exports
 
 #define MAXWIDTH 12000
 #define MAXHEIGHT 5000
@@ -92,7 +96,6 @@ typedef uint32_t			angle_t;
 
 using INTBOOL = int;
 using BITFIELD = uint32_t;
-
 
 // always use our own definition for consistency.
 #ifdef M_PI

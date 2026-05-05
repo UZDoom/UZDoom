@@ -163,6 +163,7 @@ public:
 	FTextureID CreateTexture (int lumpnum, ETextureType usetype=ETextureType::Any);	// Also calls AddTexture
 	FTextureID AddGameTexture(FGameTexture* texture, bool addtohash = true);
 	FTextureID GetDefaultTexture() const { return DefaultTexture; }
+	FTextureID GetWhiteTexture() const { return WhiteTexture; }
 
 	void LoadTextureX(int wadnum, FMultipatchTextureBuilder &build);
 	void AddTexturesForWad(int wadnum, FMultipatchTextureBuilder &build);
@@ -249,6 +250,7 @@ private:
 	TMap<uint64_t, int> LocalizedTextures;
 	int HashFirst[HASH_SIZE];
 	FTextureID DefaultTexture;
+	FTextureID WhiteTexture;
 	TArray<int> FirstTextureForFile;
 	TArray<TArray<uint8_t> > BuildTileData;
 	TArray<int> Translation;

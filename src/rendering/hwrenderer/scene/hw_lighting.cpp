@@ -78,7 +78,7 @@ int CalcLightLevel(ELightMode lightmode, int lightlevel, int rellight, bool weap
 	{
 		if (lightlevel > 100)
 		{
-			light = xs_CRoundToInt(192.f - (192 - lightlevel)* 1.87f);
+			light = RoundHalfEven(192.f - (192 - lightlevel)* 1.87f);
 			if (light + rellight < 20)
 			{
 				light = 20 + (light + rellight - 20) / 5;

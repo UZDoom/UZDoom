@@ -43,6 +43,7 @@
 #include "r_utility.h"
 #include "actor.h"
 #include "actorinlines.h"
+#include "m_round.h"
 
 // State.
 #include "po_man.h"
@@ -1452,22 +1453,22 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 	xt2 = x2 / FBlockmap::MAPBLOCKUNITS;
 	yt2 = y2 / FBlockmap::MAPBLOCKUNITS;
 
-	mapx = xs_FloorToInt(xt1);
-	mapy = xs_FloorToInt(yt1);
-	int mapex = xs_FloorToInt(xt2);
-	int mapey = xs_FloorToInt(yt2);
+	mapx = RoundDown(xt1);
+	mapy = RoundDown(yt1);
+	int mapex = RoundDown(xt2);
+	int mapey = RoundDown(yt2);
 
 
 	if (mapex > mapx)
 	{
 		mapxstep = 1;
-		partialx = 1. - xt1 + xs_FloorToInt(xt1);
+		partialx = 1. - xt1 + RoundDown(xt1);
 		ystep = (y2 - y1) / fabs(x2 - x1);
 	}
 	else if (mapex < mapx)
 	{
 		mapxstep = -1;
-		partialx = xt1 - xs_FloorToInt(xt1);
+		partialx = xt1 - RoundDown(xt1);
 		ystep = (y2 - y1) / fabs(x2 - x1);
 	}
 	else
@@ -1481,13 +1482,13 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 	if (mapey > mapy)
 	{
 		mapystep = 1;
-		partialy = 1. - yt1 + xs_FloorToInt(yt1);
+		partialy = 1. - yt1 + RoundDown(yt1);
 		xstep = (x2 - x1) / fabs(y2 - y1);
 	}
 	else if (mapey < mapy)
 	{
 		mapystep = -1;
-		partialy = yt1 - xs_FloorToInt(yt1);
+		partialy = yt1 - RoundDown(yt1);
 		xstep = (x2 - x1) / fabs(y2 - y1);
 	}
 	else
@@ -1545,7 +1546,7 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 
 
 		// [RH] Handle corner cases properly instead of pretending they don't exist.
-		switch (((xs_FloorToInt(yintercept) == mapy) << 1) | (xs_FloorToInt(xintercept) == mapx))
+		switch (((RoundDown(yintercept) == mapy) << 1) | (RoundDown(xintercept) == mapx))
 		{
 		case 0:		// neither xintercept nor yintercept match!
 			count = 1000;	// Stop traversing, because somebody screwed up.

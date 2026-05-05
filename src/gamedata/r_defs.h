@@ -591,12 +591,12 @@ struct FTransform
 	// [RH] floor and ceiling texture rotation
 	DAngle Angle, baseAngle;
 
-	finline bool operator == (const FTransform &other) const
+	inline bool operator == (const FTransform &other) const
 	{
 		return xOffs == other.xOffs && yOffs + baseyOffs == other.yOffs + other.baseyOffs &&
 			xScale == other.xScale && yScale == other.yScale && Angle + baseAngle == other.Angle + other.baseAngle;
 	}
-	finline bool operator != (const FTransform &other) const
+	inline bool operator != (const FTransform &other) const
 	{
 		return !(*this == other);
 	}

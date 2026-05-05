@@ -52,6 +52,7 @@
 #include "p_effect.h"
 #include "c_console.h"
 #include "p_maputl.h"
+#include "m_round.h"
 
 // State.
 #include "doomstat.h"
@@ -402,7 +403,7 @@ namespace swrenderer
 		{
 			if (rx1 > ry1) return false;	// left edge is off the right side
 			if (ry1 == 0) return false;
-			sx1 = xs_RoundToInt(viewport->CenterX + rx1 * viewport->CenterX / ry1);
+			sx1 = RoundHalfUp(viewport->CenterX + rx1 * viewport->CenterX / ry1);
 		}
 		else
 		{
@@ -415,7 +416,7 @@ namespace swrenderer
 		{
 			if (rx2 < -ry2) return false;	// right edge is off the left side
 			if (ry2 == 0) return false;
-			sx2 = xs_RoundToInt(viewport->CenterX + rx2 * viewport->CenterX / ry2);
+			sx2 = RoundHalfUp(viewport->CenterX + rx2 * viewport->CenterX / ry2);
 		}
 		else
 		{

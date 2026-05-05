@@ -65,6 +65,7 @@
 #include "swrenderer/r_renderthread.h"
 #include "g_levellocals.h"
 #include "v_draw.h"
+#include "m_round.h"
 
 EXTERN_CVAR(Bool, r_drawplayersprites)
 EXTERN_CVAR(Bool, r_deathcamera)
@@ -268,14 +269,14 @@ namespace swrenderer
 
 		// calculate edges of the shape
 		tx = (pspr->Flags & PSPF_MIRROR) ? ((BASEXCENTER - twidth) - (sx - tleft)) : ((sx - BASEXCENTER) - tleft);
-		x1 = xs_RoundToInt(viewport->CenterX + tx * pspritexscale);
+		x1 = RoundHalfUp(viewport->CenterX + tx * pspritexscale);
 
 		// off the right side
 		if (x1 > viewwidth)
 			return;
 
 		tx += twidth;
-		x2 = xs_RoundToInt(viewport->CenterX + tx * pspritexscale);
+		x2 = RoundHalfUp(viewport->CenterX + tx * pspritexscale);
 
 		// off the left side
 		if (x2 <= 0)

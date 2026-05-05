@@ -37,6 +37,7 @@
 #include "texturemanager.h"
 #include "textures.h"
 #include "vectors.h"
+#include "m_round.h"
 
 using namespace FileSys;
 FTextureManager TexMan;
@@ -86,6 +87,7 @@ void FTextureManager::DeleteAll()
 	FirstTextureForFile.Clear();
 	memset (HashFirst, -1, sizeof(HashFirst));
 	DefaultTexture.SetInvalid();
+	WhiteTexture.SetInvalid();
 
 	BuildTileData.Clear();
 	tmanips.Clear();
@@ -649,8 +651,8 @@ void FTextureManager::AddHiresTextures (int wadnum)
 							double xscale2 = oldtex->GetTexelLeftOffset(1) * gtex->GetScaleX() / oldtex->GetScaleX();
 							double yscale1 = oldtex->GetTexelTopOffset(0) * gtex->GetScaleY() / oldtex->GetScaleY();
 							double yscale2 = oldtex->GetTexelTopOffset(1) * gtex->GetScaleY() / oldtex->GetScaleY();
-							gtex->SetOffsets(0, xs_RoundToInt(xscale1), xs_RoundToInt(yscale1));
-							gtex->SetOffsets(1, xs_RoundToInt(xscale2), xs_RoundToInt(yscale2));
+							gtex->SetOffsets(0, RoundHalfUp(xscale1), RoundHalfUp(yscale1));
+							gtex->SetOffsets(1, RoundHalfUp(xscale2), RoundHalfUp(yscale2));
 							ReplaceTexture(tlist[i], gtex, true);
 						}
 					}
@@ -749,8 +751,8 @@ void FTextureManager::ParseTextureDef(int lump, FMultipatchTextureBuilder &build
 							double xscale2 = oldtex->GetTexelLeftOffset(1) * gtex->GetScaleX() / oldtex->GetScaleX();
 							double yscale1 = oldtex->GetTexelTopOffset(0) * gtex->GetScaleY() / oldtex->GetScaleY();
 							double yscale2 = oldtex->GetTexelTopOffset(1) * gtex->GetScaleY() / oldtex->GetScaleY();
-							gtex->SetOffsets(0, xs_RoundToInt(xscale1), xs_RoundToInt(yscale1));
-							gtex->SetOffsets(1, xs_RoundToInt(xscale2), xs_RoundToInt(yscale2));
+							gtex->SetOffsets(0, RoundHalfUp(xscale1), RoundHalfUp(yscale1));
+							gtex->SetOffsets(1, RoundHalfUp(xscale2), RoundHalfUp(yscale2));
 							ReplaceTexture(tlist[i], gtex, true);
 						}
 					}
@@ -1211,6 +1213,7 @@ void FTextureManager::AddTextures(void (*progressFunc_)(), void (*checkForHacks)
 	FirstTextureForFile.Push(Textures.Size());
 
 	DefaultTexture = CheckForTexture ("-NOFLAT-", ETextureType::Override, 0);
+	WhiteTexture = CheckForTexture ("-WHITE-", ETextureType::Override, 0);
 
 	InitPalettedVersions();
 	AdjustSpriteOffsets();

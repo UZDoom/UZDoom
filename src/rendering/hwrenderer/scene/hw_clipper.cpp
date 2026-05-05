@@ -349,7 +349,7 @@ angle_t Clipper::AngleToPseudo(angle_t ang)
 	{
 		result = 2.f - result;
 	}
-	return xs_Fix<30>::ToFix(result);
+	return FloatToFixed<30>(result);
 }
 
 //-----------------------------------------------------------------------------
@@ -401,7 +401,7 @@ angle_t Clipper::PointToPseudoAngle(double x, double y)
 		{
 			result = 2. - result;
 		}
-		return xs_Fix<30>::ToFix(result);
+		return FloatToFixed<30>(result);
 	}
 }
 
@@ -438,7 +438,7 @@ angle_t Clipper::PointToPseudoPitch(double x, double y, double z)
 		{
 			result = 2.0 - result;
 		}
-		return xs_Fix<30>::ToFix(result + 1.0); // range to 0 to 2 to 4 (bottom to top to suplex)
+		return FloatToFixed<30>(result + 1.0); // range to 0 to 2 to 4 (bottom to top to suplex)
 	}
 }
 

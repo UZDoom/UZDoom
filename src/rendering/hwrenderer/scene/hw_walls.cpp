@@ -39,6 +39,7 @@
 #include "hw_renderstate.h"
 #include "hw_skydome.h"
 #include "hw_walldispatcher.h"
+#include "m_round.h"
 
 
 void SetGlowPlanes(FRenderState &state, const secplane_t& top, const secplane_t& bottom)
@@ -217,7 +218,7 @@ void HWWall::RenderTexturedWall(HWWallDispatcher*di, FRenderState &state, int rf
 	// Test code, could be reactivated as a compatibility option in the unlikely event that some old vanilla map eve needs it.
 	if (hw_npottest)
 	{
-		int32_t size = xs_CRoundToInt(texture->GetDisplayHeight());
+		int32_t size = RoundHalfEven(texture->GetDisplayHeight());
 		int32_t size2;
 		for (size2 = 1; size2 < size; size2 += size2) {}
 		if (size == size2)
@@ -1267,11 +1268,11 @@ void HWWall::CheckTexturePosition(FTexCoordInfo *tci)
 	{
 		if (tcs[UPLFT].v < tcs[UPRGT].v)
 		{
-			sub = float(xs_FloorToInt(tcs[UPLFT].v));
+			sub = float(RoundDown(tcs[UPLFT].v));
 		}
 		else
 		{
-			sub = float(xs_FloorToInt(tcs[UPRGT].v));
+			sub = float(RoundDown(tcs[UPRGT].v));
 		}
 		tcs[UPLFT].v -= sub;
 		tcs[UPRGT].v -= sub;
@@ -1288,11 +1289,11 @@ void HWWall::CheckTexturePosition(FTexCoordInfo *tci)
 	{
 		if (tcs[LOLFT].v < tcs[LORGT].v)
 		{
-			sub = float(xs_FloorToInt(tcs[LOLFT].v));
+			sub = float(RoundDown(tcs[LOLFT].v));
 		}
 		else
 		{
-			sub = float(xs_FloorToInt(tcs[LORGT].v));
+			sub = float(RoundDown(tcs[LORGT].v));
 		}
 		tcs[UPLFT].v -= sub;
 		tcs[UPRGT].v -= sub;
@@ -1310,7 +1311,7 @@ void HWWall::CheckTexturePosition(FTexCoordInfo *tci)
 	// This intentionally only tests the seg's frontsector.
 	if (seg->frontsector->special == GLSector_Skybox)
 	{
-		sub = (float)xs_FloorToInt(tcs[UPLFT].u);
+		sub = (float)RoundDown(tcs[UPLFT].u);
 		tcs[UPLFT].u -= sub;
 		tcs[UPRGT].u -= sub;
 		tcs[LOLFT].u -= sub;
@@ -1570,12 +1571,12 @@ void HWWall::DoMidTexture(HWWallDispatcher *di, seg_t * seg, bool drawfogboundar
 		if (t_ofs >= 0)
 		{
 			float div = t_ofs / texwidth;
-			t_ofs = (div - xs_FloorToInt(div)) * texwidth;
+			t_ofs = (div - RoundDown(div)) * texwidth;
 		}
 		else
 		{
 			float div = (-t_ofs) / texwidth;
-			t_ofs = texwidth - (div - xs_FloorToInt(div)) * texwidth;
+			t_ofs = texwidth - (div - RoundDown(div)) * texwidth;
 		}
 
 

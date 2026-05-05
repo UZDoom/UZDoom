@@ -376,8 +376,8 @@ void DStatusBarCore::SetScale()
 	int sby = vert - int(RelTop * hud_scalefactor * aspectscale * ViewportAspect);
 	// Use full pixels for destination size.
 
-	ST_X = xs_CRoundToInt((w - refw) / 2);
-	ST_Y = xs_CRoundToInt(h - refh);
+	ST_X = RoundHalfEven((w - refw) / 2);
+	ST_Y = RoundHalfEven(h - refh);
 	SBarTop = Scale(sby, h, vert);
 	SBarScale.X = refw / horz;
 	SBarScale.Y = refh / vert;

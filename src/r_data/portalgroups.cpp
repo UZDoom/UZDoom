@@ -33,7 +33,7 @@
 #include "a_sharedglobal.h"
 #include "g_levellocals.h"
 #include "r_utility.h"
-
+#include "m_round.h"
 
 //==========================================================================
 //
@@ -134,8 +134,8 @@ struct FCoverageBuilder
 
 		if (frac < 0. || frac > 1.) return false;
 
-		v->x = xs_RoundToInt(v2x + frac * v2dx);
-		v->y = xs_RoundToInt(v2y + frac * v2dy);
+		v->x = RoundHalfUp(v2x + frac * v2dx);
+		v->y = RoundHalfUp(v2y + frac * v2dy);
 		return true;
 	}
 
@@ -301,8 +301,8 @@ void BuildPortalCoverage(FLevelLocals *Level, FPortalCoverage *coverage, subsect
 	}
 
 	FCoverageBuilder build(subsector);
-	build.center.x = xs_CRoundToInt(centerx / subsector->numlines);
-	build.center.y = xs_CRoundToInt(centery / subsector->numlines);
+	build.center.x = RoundHalfEven(centerx / subsector->numlines);
+	build.center.y = RoundHalfEven(centery / subsector->numlines);
 
 	build.CollectNode(Level->HeadNode(), shape);
 	coverage->subsectors = new uint32_t[build.collect.Size()];

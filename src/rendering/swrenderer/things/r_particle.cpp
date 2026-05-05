@@ -63,6 +63,7 @@
 #include "swrenderer/drawers/r_draw_pal.h"
 #include "r_memory.h"
 #include "swrenderer/r_renderthread.h"
+#include "m_round.h"
 
 EXTERN_CVAR(Bool, r_fullbrightignoresectorcolor);
 
@@ -119,8 +120,8 @@ namespace swrenderer
 		// calculate edges of the shape
 		double psize = particle->size / 8.0;
 
-		x1 = max<int>(renderportal->WindowLeft, thread->Viewport->viewwindow.centerx + xs_RoundToInt((tx - psize) * xscale));
-		x2 = min<int>(renderportal->WindowRight, thread->Viewport->viewwindow.centerx + xs_RoundToInt((tx + psize) * xscale));
+		x1 = max<int>(renderportal->WindowLeft, thread->Viewport->viewwindow.centerx + RoundHalfUp((tx - psize) * xscale));
+		x2 = min<int>(renderportal->WindowRight, thread->Viewport->viewwindow.centerx + RoundHalfUp((tx + psize) * xscale));
 
 		if (x1 >= x2)
 			return;
@@ -129,8 +130,8 @@ namespace swrenderer
 
 		yscale = xscale; // YaspectMul is not needed for particles as they should always be square
 		ty = (ippz - viewport->viewpoint.Pos.Z) * thread->Viewport->YaspectMul;
-		y1 = xs_RoundToInt(viewport->CenterY - (ty + psize) * yscale);
-		y2 = xs_RoundToInt(viewport->CenterY - (ty - psize) * yscale);
+		y1 = RoundHalfUp(viewport->CenterY - (ty + psize) * yscale);
+		y2 = RoundHalfUp(viewport->CenterY - (ty - psize) * yscale);
 
 		// Clip the particle now. Because it's a point and projected as its subsector is
 		// entered, we don't need to clip it to drawsegs like a normal sprite.

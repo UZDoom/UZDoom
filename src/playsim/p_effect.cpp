@@ -40,6 +40,7 @@
 #include "g_game.h"
 #include "serializer_doom.h"
 #include "p_visualthinker.h"
+#include "m_round.h"
 
 #include "hwrenderer/scene/hw_drawstructs.h"
 
@@ -726,7 +727,7 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 		trail.Push(seg);
 	}
 
-	steps = xs_FloorToInt(length / 3);
+	steps = RoundDown(length / 3);
 	fullbright = !!(flags & RAF_FULLBRIGHT);
 
 	if (steps)
@@ -845,7 +846,7 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 	if (color2 != -1 && r_rail_trailsparsity > 0 && spawnclass == NULL)
 	{
 		double stepsize = 3 * r_rail_trailsparsity * sparsity;
-		int trail_steps = xs_FloorToInt(steps * r_rail_trailsparsity / sparsity);
+		int trail_steps = RoundDown(steps * r_rail_trailsparsity / sparsity);
 
 		color2 = color2 == 0 ? -1 : ParticleColor(color2);
 		DVector3 diff(0, 0, 0);

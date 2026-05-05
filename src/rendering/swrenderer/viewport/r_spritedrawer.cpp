@@ -25,6 +25,7 @@
 #include <stddef.h>
 #include "r_spritedrawer.h"
 #include "swrenderer/r_renderthread.h"
+#include "m_round.h"
 
 namespace swrenderer
 {
@@ -217,8 +218,8 @@ namespace swrenderer
 				const int top = span->TopOffset;
 
 				// calculate unclipped screen coordinates for post
-				dc_yl = xs_RoundToInt(y1 + top / scaleV);
-				dc_yh = xs_RoundToInt(y1 + (top + length) / scaleV);
+				dc_yl = RoundHalfUp(y1 + top / scaleV);
+				dc_yh = RoundHalfUp(y1 + (top + length) / scaleV);
 
 				if (flipY)
 					std::swap(dc_yl, dc_yh);
@@ -255,8 +256,8 @@ namespace swrenderer
 				const int top = span->TopOffset;
 
 				// calculate unclipped screen coordinates for post
-				dc_yl = xs_RoundToInt(y1 + top / scaleV);
-				dc_yh = xs_RoundToInt(y1 + (top + length) / scaleV);
+				dc_yl = RoundHalfUp(y1 + top / scaleV);
+				dc_yh = RoundHalfUp(y1 + (top + length) / scaleV);
 
 				if (flipY)
 					std::swap(dc_yl, dc_yh);

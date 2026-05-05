@@ -25,7 +25,6 @@
 #define __GL_CLIPPER
 
 #include "doomtype.h"
-#include "xs_Float.h"
 #include "r_utility.h"
 #include "memarena.h"
 

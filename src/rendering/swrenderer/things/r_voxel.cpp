@@ -50,6 +50,7 @@
 #include "swrenderer/viewport/r_spritedrawer.h"
 #include "r_memory.h"
 #include "swrenderer/r_renderthread.h"
+#include "m_round.h"
 
 EXTERN_CVAR(Bool, r_fullbrightignoresectorcolor)
 
@@ -296,13 +297,13 @@ namespace swrenderer
 		const double centerxwidebig_f = centerxwide_f * 65536 * 65536 * 8;
 
 		// Convert to Build's coordinate system.
-		fixed_t globalposx = xs_Fix<4>::ToFix(globalpos.X);
-		fixed_t globalposy = xs_Fix<4>::ToFix(-globalpos.Y);
-		fixed_t globalposz = xs_Fix<8>::ToFix(-globalpos.Z);
+		fixed_t globalposx = FloatToFixed<4>(globalpos.X);
+		fixed_t globalposy = FloatToFixed<4>(-globalpos.Y);
+		fixed_t globalposz = FloatToFixed<8>(-globalpos.Z);
 
-		fixed_t dasprx = xs_Fix<4>::ToFix(dasprpos.X);
-		fixed_t daspry = xs_Fix<4>::ToFix(-dasprpos.Y);
-		fixed_t dasprz = xs_Fix<8>::ToFix(-dasprpos.Z);
+		fixed_t dasprx = FloatToFixed<4>(dasprpos.X);
+		fixed_t daspry = FloatToFixed<4>(-dasprpos.Y);
+		fixed_t dasprz = FloatToFixed<8>(-dasprpos.Z);
 
 		// Shift the scales from 16 bits of fractional precision to 6.
 		// Also do some magic voodoo scaling to make them the right size.
@@ -323,7 +324,7 @@ namespace swrenderer
 		// Select mip level
 		i = abs(DMulScale(dasprx - globalposx, cosang, daspry - globalposy, sinang, 6));
 		i = DivScale(i, min(daxscale, dayscale), 6);
-		j = xs_Fix<13>::ToFix(viewport->FocalLengthX);
+		j = FloatToFixed<13>(viewport->FocalLengthX);
 		for (k = 0; i >= j && k < voxobj->NumMips; ++k)
 		{
 			i >>= 1;
@@ -469,8 +470,8 @@ namespace swrenderer
 					voxend = (kvxslab_t *)(slabxoffs + xyoffs[y + 1]);
 					if (voxptr >= voxend) continue;
 
-					lx = xs_RoundToInt(nx * centerxwide_f / (ny + y1)) + viewport->viewwindow.centerx;
-					rx = xs_RoundToInt((nx + nxoff) * centerxwide_f / (ny + y2)) + viewport->viewwindow.centerx;
+					lx = RoundHalfUp(nx * centerxwide_f / (ny + y1)) + viewport->viewwindow.centerx;
+					rx = RoundHalfUp((nx + nxoff) * centerxwide_f / (ny + y2)) + viewport->viewwindow.centerx;
 
 					if (flags & DVF_MIRRORED)
 					{
@@ -490,8 +491,8 @@ namespace swrenderer
 						continue;
 					}
 
-					fixed_t l1 = xs_RoundToInt(centerxwidebig_f / (ny - yoff));
-					fixed_t l2 = xs_RoundToInt(centerxwidebig_f / (ny + yoff));
+					fixed_t l1 = RoundHalfUp(centerxwidebig_f / (ny - yoff));
+					fixed_t l2 = RoundHalfUp(centerxwidebig_f / (ny + yoff));
 					for (; voxptr < voxend; voxptr = (kvxslab_t *)((uint8_t *)voxptr + voxptr->zleng + 3))
 					{
 						const uint8_t *col = voxptr->col;

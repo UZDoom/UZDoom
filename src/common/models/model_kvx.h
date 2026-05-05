@@ -18,10 +18,9 @@
 
 #pragma once
 
-#include "model.h"
 #include "i_modelvertexbuffer.h"
+#include "model.h"
 #include "tarray.h"
-#include "xs_Float.h"
 
 struct FVoxel;
 struct kvxslab_t;

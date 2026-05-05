@@ -38,6 +38,7 @@
 #include "c_cvars.h"
 #include "hw_material.h"
 #include "cmdlib.h"
+#include "m_round.h"
 
 FTexture *CreateBrightmapTexture(FImageSource*);
 
@@ -499,28 +500,28 @@ void FTexCoordInfo::GetFromTexture(FGameTexture *tex, float x, float y, bool for
 {
 	if (x == 1.f)
 	{
-		mRenderWidth = xs_RoundToInt(tex->GetDisplayWidth());
+		mRenderWidth = RoundHalfUp(tex->GetDisplayWidth());
 		mScale.X = tex->GetScaleX();
 		mTempScale.X = 1.f;
 	}
 	else
 	{
 		float scale_x = x * tex->GetScaleX();
-		mRenderWidth = xs_CeilToInt(tex->GetTexelWidth() / scale_x);
+		mRenderWidth = RoundUp(tex->GetTexelWidth() / scale_x);
 		mScale.X = scale_x;
 		mTempScale.X = x;
 	}
 
 	if (y == 1.f)
 	{
-		mRenderHeight = xs_RoundToInt(tex->GetDisplayHeight());
+		mRenderHeight = RoundHalfUp(tex->GetDisplayHeight());
 		mScale.Y = tex->GetScaleY();
 		mTempScale.Y = 1.f;
 	}
 	else
 	{
 		float scale_y = y * tex->GetScaleY();
-		mRenderHeight = xs_CeilToInt(tex->GetTexelHeight() / scale_y);
+		mRenderHeight = RoundUp(tex->GetTexelHeight() / scale_y);
 		mScale.Y = scale_y;
 		mTempScale.Y = y;
 	}

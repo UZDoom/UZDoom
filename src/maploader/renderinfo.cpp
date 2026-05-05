@@ -37,6 +37,7 @@
 #include "g_levellocals.h"
 #include "maploader.h"
 #include "r_utility.h"
+#include "m_round.h"
 
 //==========================================================================
 //
@@ -53,7 +54,7 @@ struct MapSectionGenerator
 	{
 		double X, Y;
 
-		operator int() const { return xs_FloorToInt(X) + 65536 * xs_FloorToInt(Y); }
+		operator int() const { return RoundDown(X) + 65536 * RoundDown(Y); }
 		bool operator!= (const cvertex_t &other) const { return fabs(X - other.X) >= EQUAL_EPSILON || fabs(Y - other.Y) >= EQUAL_EPSILON; }
 		cvertex_t& operator =(const vertex_t *v) { X = v->fX(); Y = v->fY(); return *this; }
 	};
@@ -478,7 +479,7 @@ static int segcmp(const void *a, const void *b)
 {
 	seg_t *A = *(seg_t**)a;
 	seg_t *B = *(seg_t**)b;
-	return xs_RoundToInt(FRACUNIT*(A->sidefrac - B->sidefrac));
+	return RoundHalfUp(FRACUNIT*(A->sidefrac - B->sidefrac));
 }
 
 //==========================================================================

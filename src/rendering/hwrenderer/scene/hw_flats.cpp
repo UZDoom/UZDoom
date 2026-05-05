@@ -38,6 +38,7 @@
 #include "hw_renderstate.h"
 #include "texturemanager.h"
 #include "hw_viewpointbuffer.h"
+#include "m_round.h"
 
 #ifdef _DEBUG
 CVAR(Int, gl_breaksec, -1, 0)
@@ -124,7 +125,7 @@ void HWFlat::CreateSkyboxVertices(FFlatVertex *vert)
 
 	static float uvals[] = { 0, 0, 1, 1 };
 	static float vvals[] = { 1, 0, 0, 1 };
-	int rot = -xs_FloorToInt(plane.Angle / 90.f);
+	int rot = -RoundDown(plane.Angle / 90.f);
 
 	vert[0].Set(minx, z, miny, uvals[rot & 3], vvals[rot & 3]);
 	vert[1].Set(minx, z, maxy, uvals[(rot + 1) & 3], vvals[(rot + 1) & 3]);

@@ -50,6 +50,7 @@
 #include "v_draw.h"
 #include "v_text.h"
 #include "v_video.h"
+#include <string>
 
 extern FILE *Logfile;
 extern bool insave;
@@ -1189,6 +1190,23 @@ CCMD(secret)
 	}
 }
 
+CCMD(roundtest)
+{
+	if (argv.argc() < 2) return;
+	double d = std::stod(argv[1]);
+#define p(f) Printf(#f " %8f %d\n", d, f(d))
+	p(RoundUp);
+	p(RoundDown);
+	p(RoundToZero);
+	p(RoundFromZero);
+	p(RoundHalfUp);
+	p(RoundHalfDown);
+	p(RoundHalfEven);
+	p(RoundHalfToZero);
+	p(RoundHalfFromZero);
+#undef p
+}
+
 CCMD(angleconvtest)
 {
 	Printf("Testing degrees to angle conversion:\n");
@@ -1197,7 +1215,7 @@ CCMD(angleconvtest)
 		unsigned ang1 = DAngle::fromDeg(ang).BAMs();
 		unsigned ang2 = (unsigned)(ang * (0x40000000 / 90.));
 		unsigned ang3 = (unsigned)(int)(ang * (0x40000000 / 90.));
-		Printf("Angle = %.5f: xs_RoundToInt = %08x, unsigned cast = %08x, signed cast = %08x\n",
+		Printf("Angle = %.5f: RoundHalfUp = %08x, unsigned cast = %08x, signed cast = %08x\n",
 			ang, ang1, ang2, ang3);
 	}
 }
