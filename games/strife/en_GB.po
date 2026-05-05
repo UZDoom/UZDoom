@@ -1,0 +1,267 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-21 00:26+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
+"doom-engine-games/strife/en_GB/>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Then die in shame and dishonour."
+
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"Ah, a surfacer in need of a favour. Down here you do a favour to get a "
+"favour and I need the town entrance that is our path to food opened. The "
+"Order has it sealed and guarded."
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Do my favour first, or you'll get squat from me."
+
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"Well, what is it now? Don't you ever take a break? I'm glad that you're "
+"still breathing. I'd hate for my favourite student to come back looking out "
+"from the inside of a body bag."
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "The templar's favourite weapon."
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Leather armour"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Shadow armour?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Shadow armour?"
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Leather armour."
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Metal armour"
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr ""
+"If there is any honour inside that pathetic shell of a body, you'll enter "
+"into the arms of the Order."
+
+msgid "TXT_ILOG103"
+msgstr ""
+"Just when I think we've seen it all! They go in human and come out... I "
+"don't even want to think about it. Destroy this horror!"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Macil's Adviser"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Adviser"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Armourer"
+
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"Hmm. No fuss, no muss, nothing for mum to clean up... Get me one, please.\n"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "Business my arse. Help, guards, I've got a live one."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Yeah, right. OK, get your arse to work."
+
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr ""
+"Halt. No one gets through here without authorisation from the Warden or the "
+"Governor."
+
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr ""
+"What's your clearance? There's no unauthorised personnel allowed up here."
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr ""
+"Good luck. I've opened several of our tunnels for you. It should make your "
+"task easier. Oh, size ten, perfect! ...But dreadful colours."
+
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"Well, I'm back up to my old tricks again, I'm still working on your "
+"implants. Did you know that Macil has now authorised them for everyone? No, "
+"huh? It's because you turned out so well. Anything I can do for you?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"Oh well, word has it that the bailey's warehouse received a shipment of "
+"maulers, that's the weapon that vaporises."
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr ""
+"It's a top secret area. Not only is the Order breeding some kind of... "
+"creature in there, I've seen with my own eyes a strange artifact called a "
+"Talisman. nobody's allowed near it. Rumour is that it holds great power if "
+"united with two others of its kind."
+
+msgid "TXT_ILOG28"
+msgstr ""
+"We're looking for Weran, who calls himself the Rat King. I'm sure it's "
+"descriptive as well as colourful."
+
+msgid "TXT_ILOG1102"
+msgstr "Find the Governor's mansion and talk to the Governor to get your reward"
+
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+"But there are whispers of discontent. If we organise, can we defeat our "
+"masters? Weapons are being stolen, soldiers are being trained. A movement is "
+"born: born of lifelong strife!"
+
+msgid "TXT_SUB_MAP03_4"
+msgstr ""
+"...the Programmer: creator of the AI which controls the Acolytes. Destroy "
+"the Programmer, and we may cripple the Order's troops with a single blow. "
+"But caution: we have reports he can vaporise attackers."
+
+msgid "TXT_SUB_LOG28"
+msgstr ""
+"We're looking for Weran, who calls himself the Rat King. I'm sure it's "
+"descriptive as well as colourful."
+
+msgid "TXT_SUB_LOG23"
+msgstr ""
+"Word from the boss is stand back when you whack the crystal, or else you'll "
+"end up mesquite-flavoured too."
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "AREA 1: Sanctuary"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "AREA 2: Town"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "AREA 3: Front Base"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "AREA 4: Power Station"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "AREA 5: Prison"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "AREA 6: Sewers"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "AREA 7: Castle"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "AREA 8: Audience Chamber"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "AREA 9: Castle: Programmer's Keep"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "AREA 10: New Front Base"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "AREA 11: Borderlands"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "AREA 12: The Temple of the Oracle"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "AREA 13: Catacombs"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "AREA 14: Mines"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "AREA 15: Fortress: Administration"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "AREA 16: Fortress: Bishop's Tower"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "AREA 17: Fortress: The Bailey"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "AREA 18: Fortress: Stores"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "AREA 19: Fortress: Security Complex"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "AREA 20: Factory: Receiving"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "AREA 21: Factory: Manufacturing"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "AREA 22: Factory: Forge"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "AREA 23: Order Commons"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "AREA 24: Factory: Conversion Chapel"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "AREA 25: Catacombs: Ruined Temple"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "AREA 26: Proving Grounds"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "AREA 27: The Lab"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "AREA 28: Alien Ship"
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Pass your ID through here for access."
+
+msgid "TXT_ILOG14"
+msgstr ""
+"OK, \"Trust no one\" is the name of the game! Let's get that prison pass "
+"from the Governor. Take the broken coupling to him."
+
+msgid "TXT_ILOG1009"
+msgstr ""
+"Use the pass Mourel gave you to get into the prison. Once inside, talk to "
+"Warden Montag. Find a way to free the prisoners."
+
+msgid "TXT_SUB_LOG14"
+msgstr ""
+"OK, \"Trust no one\" is the name of the game! Let's get that pass from the "
+"Governor and free those prisoners."
+
+msgid "TXT_SUB_LOG36"
+msgstr "That brick... Didn't we pass that brick? No..."

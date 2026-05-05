@@ -1,0 +1,345 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:38+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/unused/cs/>"
+"\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Emulační jádro OPL"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Nástrojová sada"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Konfigurační soubor GUS"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Konfigurační soubor Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relativní hlasitost"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Konfigurační soubor WildMidi"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Nastavit gamu"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Chat"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Nastavení ovládání chatu"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Grafika (pokročilé)"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Vzhled"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Velikost zaměřovače"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Oznámení"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Velikost stavového panelu"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Povolit textury ve vysokém rozlišení"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Povolit textury"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Vyhladit pohyb myši"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Velikost oznámení"
+
+msgid "NOTSET"
+msgstr "Není nastavené"
+
+msgid "OPTMNU_INPUT"
+msgstr "Vstupní zařízení"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Osvětlení"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Multiplayer"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Sprity"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Systém"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Automapa"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Automapa"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Škálován (nejbližší)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Škálován (lineární)"
+
+msgid "PICKER_NETAUTO"
+msgstr "Automatický (doporučeno)"
+
+msgid "PICKER_NETMODE"
+msgstr "Síťový režim"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Paketový server"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Hustota"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Odrazy"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Ozvěna"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Pokoj"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "SNDMNU_BACKEND"
+msgstr "Zvukový systém"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Zvuk v menu"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Hudba zapnuta"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Zvuk zapnut"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Povolit poměr stran 5:4"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Poměr stran"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Vybrat zařízení Vulkanu"
+
+msgid "VKMNU_ENABLE"
+msgstr "Povolit Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Utnout zvuky, když jejich objekt zmizí"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Průhlednost Ztracených duší"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Povolit definice světel"
+
+msgid "GLMNU_PREFS"
+msgstr "Možnosti"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Předejít šedým stínům"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Oříznout okraje spritů"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Povolit haptické aktivace"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Predikce pohybu"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Vyrovnání latence"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Bez zvuku"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Všechny nepotrvzené"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Vysoký výkon"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dvojitý"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Nízká spotřeba"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optimální"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimalizovaný"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Původní"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Zdvojení pixelů"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Zčtyřnásobení pixelů"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Čtveritý"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Zvětšit na 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Trojitý"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (preferován původní)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (preferován ZDoom)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Výstup True color"
