@@ -1,0 +1,244 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-12-09 12:19+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/doom-engine-games/heretic/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "码头"
+
+msgid "HHUSTR_E1M2"
+msgstr "地牢"
+
+msgid "HHUSTR_E1M3"
+msgstr "门房"
+
+msgid "HHUSTR_E1M4"
+msgstr "守卫塔"
+
+msgid "HHUSTR_E1M5"
+msgstr "城堡"
+
+msgid "HHUSTR_E1M6"
+msgstr "大教堂"
+
+msgid "HHUSTR_E1M7"
+msgstr "地穴"
+
+msgid "HHUSTR_E1M8"
+msgstr "地狱深渊"
+
+msgid "HHUSTR_E1M9"
+msgstr "墓地"
+
+msgid "HHUSTR_E2M1"
+msgstr "火山口"
+
+msgid "HHUSTR_E2M2"
+msgstr "熔岩坑"
+
+msgid "HHUSTR_E2M3"
+msgstr "火焰河"
+
+msgid "HHUSTR_E2M4"
+msgstr "冰窟"
+
+msgid "HHUSTR_E2M5"
+msgstr "地下墓穴"
+
+msgid "HHUSTR_E2M6"
+msgstr "迷宫"
+
+msgid "HHUSTR_E2M7"
+msgstr "大厅"
+
+msgid "HHUSTR_E2M8"
+msgstr "混沌之门"
+
+msgid "HHUSTR_E2M9"
+msgstr "冰川"
+
+msgid "HHUSTR_E3M1"
+msgstr "仓库"
+
+msgid "HHUSTR_E3M2"
+msgstr "污水池"
+
+msgid "HHUSTR_E3M3"
+msgstr "汇流处"
+
+msgid "HHUSTR_E3M4"
+msgstr "蔚蓝堡垒"
+
+msgid "HHUSTR_E3M5"
+msgstr "蛇妖巢穴"
+
+msgid "HHUSTR_E3M6"
+msgstr "恐惧之厅"
+
+msgid "HHUSTR_E3M7"
+msgstr "裂缝"
+
+msgid "HHUSTR_E3M8"
+msgstr "迪萨魔的要塞"
+
+msgid "HHUSTR_E3M9"
+msgstr "蓄水层"
+
+msgid "HHUSTR_E4M1"
+msgstr "灵柩台"
+
+msgid "HHUSTR_E4M2"
+msgstr "碉堡"
+
+msgid "HHUSTR_E4M3"
+msgstr "回廊"
+
+msgid "HHUSTR_E4M4"
+msgstr "墓室"
+
+msgid "HHUSTR_E4M5"
+msgstr "大阶梯"
+
+msgid "HHUSTR_E4M6"
+msgstr "叛教者之厅"
+
+msgid "HHUSTR_E4M7"
+msgstr "堕落壁垒"
+
+msgid "HHUSTR_E4M8"
+msgstr "断桥"
+
+msgid "HHUSTR_E4M9"
+msgstr "陵墓"
+
+msgid "HHUSTR_E5M1"
+msgstr "赭色悬崖"
+
+msgid "HHUSTR_E5M2"
+msgstr "急流"
+
+msgid "HHUSTR_E5M3"
+msgstr "港口"
+
+msgid "HHUSTR_E5M4"
+msgstr "庭院"
+
+msgid "HHUSTR_E5M5"
+msgstr "水牢"
+
+msgid "HHUSTR_E5M6"
+msgstr "柱廊"
+
+msgid "HHUSTR_E5M7"
+msgstr "恶臭宅邸"
+
+msgid "HHUSTR_E5M8"
+msgstr "审判场"
+
+msgid "HHUSTR_E5M9"
+msgstr "迪萨魔之乱"
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+"随着铁巫妖及其爪牙的覆灭，\n"
+"此存在位面的最后一批亡灵已被肃清。\n"
+"\n"
+"那些生物总得来自某个地方，\n"
+"而你隐隐觉得，\n"
+"地狱深渊那熊熊燃烧的传送门，\n"
+"正通往它们的家园所在维度。\n"
+"\n"
+"为了确保不会有更多不死生物\n"
+"（或许更糟的东西）涌出，\n"
+"你得从另一边封住地狱深渊。\n"
+"当然，这意味着你可能会被困在\n"
+"一个非常不友好的世界里，\n"
+"但从来没人说过当异教徒是件容易的事！"
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+"强大的牛头怪们已被你击溃，\n"
+"它们热气腾腾的尸体滑落在地，\n"
+"你心中涌起一股冷酷的满足感，\n"
+"因为它们已被消灭了。\n"
+"\n"
+"他们守卫的门户已然开启，\n"
+"露出的正是你所期盼的归家之路。\n"
+"然而当你迈步踏入，\n"
+"耳边却回荡着嘲弄的笑声。\n"
+"\n"
+"难道是别的什么力量在控制着这些牛头怪？\n"
+"这道门后面会不会还有更可怕的生物？\n"
+"头顶上本应是天空的地方却笼罩着\n"
+"一座水晶穹顶，这显然不是什么好兆头……"
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+"迪萨魔的死亡解开了将他那些生物\n"
+"束缚在这一位面的魔法枷锁，\n"
+"它们临死前的惨叫淹没了他痛苦的哀号。\n"
+"\n"
+"你复仇的誓言已达成，\n"
+"就在穹顶碎成无数片之前，\n"
+"你踏入了通往自己世界的传送门。\n"
+"\n"
+"但倘若迪萨魔的力量永远被破除了，\n"
+"你为何仍觉不安？是临终前那声喊叫，\n"
+"听起来像诅咒的声音？还是在召唤？\n"
+"你其实也说不准，\n"
+"但那或许只是临终的惨叫而已。\n"
+"\n"
+"那么，其他那些巨蛇骑士又怎么样呢？"
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+"你原以为在迪萨魔死后\n"
+"就能回到自己的世界，\n"
+"但他临终前的举动\n"
+"却将你放逐到了他的位面。\n"
+"在这里，你踏入了迪萨魔征服之地的残骸。\n"
+"你击败了这片土地上的最后守护者，\n"
+"但如今你已站在迪萨魔要塞的大门前。\n"
+"直到此刻，你从未怀疑过自己\n"
+"面对任何可能遭遇的挑战能力，\n"
+"然而在这道门之后，\n"
+"便是入侵你世界的邪恶之源。\n"
+"迪萨魔或许已死，\n"
+"但他诞生的深渊依旧存在。\n"
+"现在你必须进入那深渊，\n"
+"期望能找到一条出路。\n"
+"而在迪萨魔领地最黑暗的角落里，\n"
+"他的亲卫队正等着你的到来……"
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+"当最后一只牛头怪发出濒死的咆哮，\n"
+"你意识到自己从未如此接近毁灭。\n"
+"即便是与迪萨魔及其门徒的战斗\n"
+"也没有这般绝望。\n"
+"你阴沉地盯着面前敞开的大门，\n"
+"心想这道门是通往家的方向，\n"
+"还是通向某种未曾想象过的恐怖。\n"
+"你不禁怀疑自己是否还有力量继续前行，\n"
+"是否只有死亡和痛苦在等着自己。\n"
+"但倘若战斗的意志已消逝，\n"
+"你还能做什么？在如此绝望面前，\n"
+"你能强迫自己继续前行吗？\n"
+"你有这个勇气吗？\n"
+"最终你发现自己无法不战而降。\n"
+"双眼圆睁，你走向自己的命运。"
