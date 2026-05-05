@@ -293,8 +293,8 @@ int SoftSynthMIDIDevice::PlayTick()
 		{
 			HandleLongEvent((uint8_t *)&event[3], MEVENT_EVENTPARM(event[2]));
 		}
-		else if (MEVENT_EVENTTYPE(event[2]) == 0)
-		{ // Short MIDI event
+		else if (MEVENT_EVENTTYPE(event[2]) == MEVENT_SHORTMSG)
+		{
 			int status = event[2] & 0xff;
 			int parm1 = (event[2] >> 8) & 0x7f;
 			int parm2 = (event[2] >> 16) & 0x7f;

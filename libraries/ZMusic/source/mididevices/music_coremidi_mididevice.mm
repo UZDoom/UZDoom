@@ -38,6 +38,7 @@
 #include <CoreAudio/HostTime.h>
 
 #include <array>
+#include <atomic>
 #include <condition_variable>
 #include <mutex>
 #include <thread>
@@ -71,13 +72,40 @@ public:
 	int StreamOutSync(MidiHeader* data) override;
 	int Resume() override;
 	void Stop() override;
-	bool Pause(bool paused) override;
 	bool FakeVolume() override;
+	bool Pause(bool paused) override;
 	void InitPlayback() override;
 	void PrecacheInstruments(const uint16_t* instruments, int count) override;
 
 protected:
+	bool Precache;
+
 	bool PullEvent();
+	void PlayerLoop();
+
+	// Event handling
+	void PrepareTempo(uint32_t tempo);
+	void PrepareMidiMsg(uint8_t* msg, uint32_t length);
+	void SendMIDIData(const uint8_t* data, size_t length, MIDITimeStamp timestamp);
+	void SendImmediateShortMsg(uint8_t command, uint8_t data1 = 0, uint8_t data2 = 0);
+	int GetShortMsgLength(uint8_t* msg);
+	std::array<uint8_t, 3> ShortMsgBuffer;
+
+	// PulledEvent structure to hold the next event to be processed
+	enum EventType_t { TempoEv, MidiMsgEv, NOP };
+	union EventData_t
+	{
+		uint32_t tempo;
+		uint8_t* msg;
+	};
+	struct PulledEvent
+	{
+		EventType_t EventType;
+		EventData_t EventData;
+		uint32_t length;
+		uint32_t TickDelta;
+	};
+	PulledEvent PulledEvent;
 
 	// CoreMIDI handles
 	MIDIClientRef midiClient;
@@ -85,46 +113,21 @@ protected:
 	MIDIEndpointRef midiDestination;
 	int deviceID;
 
-	// Event handling
-	enum EventType { TempoEv, MidiMsgEv, NoEvent };
-	union EventMsg
-	{
-		uint32_t tempo;
-		uint8_t* data;
-	};
-	struct PulledEvent
-	{
-		EventType EventType;
-		EventMsg EventMsg;
-		uint32_t length;
-	};
-	PulledEvent PulledEvent;
-	std::array<uint8_t, 3> ShortMsgBuffer;
-	void PrepareTempo(uint32_t tempo);
-	void PrepareMidiMsg(uint8_t* msg, uint32_t length);
-	void SendMIDIData(const uint8_t* data, size_t length, MIDITimeStamp timestamp);
-
 	// Threading
 	std::thread PlayerThread;
-	volatile bool Exit;
-	std::condition_variable ExitCond;
+	std::atomic<bool> Exit;
 	std::mutex Mutex;
-
-	bool isOpen;
-	bool Precache;
+	std::condition_variable ExitCond;
 
 	// Timing
-	int Tempo;
 	int InitialTempo;
+	int Tempo;
 	int Division;
-	MidiHeader* Events; // Linked list of MIDI headers
+
+	// ZMusic MidiHeader data
+	MidiHeader* Events; // Linked list of MIDI headers akin to win32 MIDIHDR
 	uint32_t Position; // Current position in the MidiHeader buffer
 	uint32_t PositionOffset;
-	uint32_t PulledEventTickDelta;
-
-	// Thread functions
-	static void PlayerThreadProc(CoreMIDIDevice* device);
-	void PlayerLoop();
 };
 
 //==========================================================================
@@ -138,7 +141,6 @@ CoreMIDIDevice::CoreMIDIDevice(int deviceID, bool precache)
 	, midiClient(0)
 	, midiOutPort(0)
 	, midiDestination(0)
-	, isOpen(false)
 	, InitialTempo(500000)      // Default: 120 BPM (500,000 µs per quarter note)
 	, Division(100)       // Default PPQN
 	, Events(nullptr)
@@ -168,7 +170,7 @@ CoreMIDIDevice::~CoreMIDIDevice()
 
 int CoreMIDIDevice::Open()
 {
-	if (isOpen)
+	if (midiDestination)
 		return 0;
 
 	OSStatus status;
@@ -204,7 +206,7 @@ int CoreMIDIDevice::Open()
 	}
 
 	midiDestination = MIDIGetDestination(deviceID);
-	if (midiDestination == 0)
+	if (!midiDestination)
 	{
 		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to get destination for device %d\n", deviceID);
 		MIDIPortDispose(midiOutPort);
@@ -214,7 +216,6 @@ int CoreMIDIDevice::Open()
 		return -1;
 	}
 
-	isOpen = true;
 	return 0;
 }
 
@@ -226,7 +227,7 @@ int CoreMIDIDevice::Open()
 
 void CoreMIDIDevice::Close()
 {
-	if (!isOpen)
+	if (!midiDestination)
 		return;
 
 	// Stop player thread
@@ -246,7 +247,6 @@ void CoreMIDIDevice::Close()
 	}
 
 	midiDestination = 0;
-	isOpen = false;
 }
 
 //==========================================================================
@@ -257,7 +257,7 @@ void CoreMIDIDevice::Close()
 
 bool CoreMIDIDevice::IsOpen() const
 {
-	return isOpen;
+	return midiDestination;
 }
 
 //==========================================================================
@@ -276,6 +276,19 @@ int CoreMIDIDevice::GetTechnology() const
 		return offline ? MIDIDEV_SWSYNTH : MIDIDEV_MIDIPORT;
 	}
 	return MIDIDEV_MIDIPORT;
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: FakeVolume
+//
+// CoreMIDI doesn't support volume control directly
+//
+//==========================================================================
+
+bool CoreMIDIDevice::FakeVolume()
+{
+	return true;  // No true volume control support, so fake volume
 }
 
 //==========================================================================
@@ -308,132 +321,6 @@ int CoreMIDIDevice::SetTimeDiv(int timediv)
 
 //==========================================================================
 //
-// CoreMIDIDevice :: StreamOut
-//
-// Queue MIDI data for asynchronous playback
-//
-//==========================================================================
-
-int CoreMIDIDevice::StreamOut(MidiHeader* header)
-{
-	header->lpNext = nullptr;
-	if (Events == nullptr)
-	{
-		Events = header;
-		Position = 0;
-	}
-	else
-	{
-		MidiHeader** p;
-		for (p = &Events; *p != nullptr; p = &(*p)->lpNext)
-		{ }
-		*p = header;
-	}
-	return 0;
-}
-
-//==========================================================================
-//
-// CoreMIDIDevice :: StreamOutSync
-//
-// Queue MIDI data for synchronous playback
-//
-//==========================================================================
-
-int CoreMIDIDevice::StreamOutSync(MidiHeader* header)
-{
-	return StreamOut(header);
-}
-
-//==========================================================================
-//
-// CoreMIDIDevice :: Resume
-//
-// Start or resume playback
-//
-//==========================================================================
-
-int CoreMIDIDevice::Resume()
-{
-	if (!isOpen || PlayerThread.joinable())
-	{
-		return -1;
-	}
-	Exit = false;
-	PlayerThread = std::thread(PlayerThreadProc, this);
-	return 0;
-}
-
-//==========================================================================
-//
-// CoreMIDIDevice :: Stop
-//
-// Stop playback
-//
-//==========================================================================
-
-void CoreMIDIDevice::Stop()
-{
-	Exit = true;
-	ExitCond.notify_all();
-	if (PlayerThread.joinable())
-	{
-		PlayerThread.join();
-	}
-
-	MIDIFlushOutput(midiDestination); // Drop pending events.
-
-	// Send All Notes Off and Reset All Controllers
-	for (int channel = 0; channel < 16; ++channel)
-	{
-		ShortMsgBuffer = { (uint8_t)(0xB0 | channel), 123, 0 };
-		SendMIDIData(ShortMsgBuffer.data(), 3, 0);  // All Notes Off
-		ShortMsgBuffer = { (uint8_t)(0xB0 | channel), 121, 0 };
-		SendMIDIData(ShortMsgBuffer.data(), 3, 0);  // Reset All Controllers
-	}
-}
-
-//==========================================================================
-//
-// CoreMIDIDevice :: Pause
-//
-// Pause/resume playback
-//
-//==========================================================================
-
-bool CoreMIDIDevice::Pause(bool paused)
-{
-	return false; // We don support pausing
-}
-
-//==========================================================================
-//
-// CoreMIDIDevice :: FakeVolume
-//
-// CoreMIDI doesn't support volume control directly
-//
-//==========================================================================
-
-bool CoreMIDIDevice::FakeVolume()
-{
-	return true;  // No true volume control support, so fake volume
-}
-
-//==========================================================================
-//
-// CoreMIDIDevice :: InitPlayback
-//
-// Initialize playback state
-//
-//==========================================================================
-
-void CoreMIDIDevice::InitPlayback()
-{
-	Exit = false;
-}
-
-//==========================================================================
-//
 // CoreMIDIDevice :: PrecacheInstruments
 //
 // This is meant to mirror WinMIDIDevice::PrecacheInstruments
@@ -461,25 +348,20 @@ void CoreMIDIDevice::PrecacheInstruments(const uint16_t* instruments, int count)
 		{
 			if (bank[9] != banknum)
 			{
-				ShortMsgBuffer = { MIDI_CTRLCHANGE | 9, 0, banknum };
-				SendMIDIData(ShortMsgBuffer.data(), 3, 0);
+				SendImmediateShortMsg(MIDI_CTRLCHANGE | 9, 0, banknum);
 				bank[9] = banknum;
 			}
-			ShortMsgBuffer = { MIDI_NOTEON | 9, instr, 1 };
-			SendMIDIData(ShortMsgBuffer.data(), 3, 0);
+			SendImmediateShortMsg(MIDI_NOTEON | 9, instr, 1);
 		}
 		else
 		{ // Melodic
 			if (bank[chan] != banknum)
 			{
-				ShortMsgBuffer = { MIDI_CTRLCHANGE | 9, 0, banknum };
-				SendMIDIData(ShortMsgBuffer.data(), 3, 0);
+				SendImmediateShortMsg(MIDI_CTRLCHANGE | 9, 0, banknum);
 				bank[chan] = banknum;
 			}
-			ShortMsgBuffer = { (uint8_t)(MIDI_PRGMCHANGE | chan), (uint8_t)instruments[i] };
-			SendMIDIData(ShortMsgBuffer.data(), 2, 0);
-			ShortMsgBuffer = { (uint8_t)(MIDI_NOTEON | chan), 60, 1 };
-			SendMIDIData(ShortMsgBuffer.data(), 3, 0);
+			SendImmediateShortMsg(MIDI_PRGMCHANGE | chan, instruments[i]);
+			SendImmediateShortMsg(MIDI_NOTEON | chan, 60, 1);
 			if (++chan == 9)
 			{ // Skip the percussion channel
 				chan = 10;
@@ -494,8 +376,7 @@ void CoreMIDIDevice::PrecacheInstruments(const uint16_t* instruments, int count)
 			for (chan = 15; chan-- != 0; )
 			{
 				// Turn all notes off
-				ShortMsgBuffer = { (uint8_t)(MIDI_CTRLCHANGE | chan), 123, 0 };
-				SendMIDIData(ShortMsgBuffer.data(), 3, 0);
+				SendImmediateShortMsg(MIDI_CTRLCHANGE | chan, 123, 0);
 			}
 			// And now chan is back at 0, ready to start the cycle over.
 		}
@@ -505,10 +386,117 @@ void CoreMIDIDevice::PrecacheInstruments(const uint16_t* instruments, int count)
 	{
 		if (bank[i] != 0)
 		{
-			ShortMsgBuffer = { MIDI_CTRLCHANGE | 9, 0, 0 };
-			SendMIDIData(ShortMsgBuffer.data(), 3, 0);
+			SendImmediateShortMsg(MIDI_CTRLCHANGE | 9, 0, 0);
 		}
 	}
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: InitPlayback
+//
+// Initialize playback state
+//
+//==========================================================================
+
+void CoreMIDIDevice::InitPlayback()
+{
+	Exit.store(false, std::memory_order_relaxed);
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: Resume
+//
+// Start or resume playback
+//
+//==========================================================================
+
+int CoreMIDIDevice::Resume()
+{
+	if (!midiDestination || PlayerThread.joinable())
+	{
+		return -1;
+	}
+	Exit.store(false, std::memory_order_relaxed);
+	PlayerThread = std::thread(&CoreMIDIDevice::PlayerLoop, this);
+	return 0;
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: Stop
+//
+// Stop playback
+//
+//==========================================================================
+
+void CoreMIDIDevice::Stop()
+{
+	Exit.store(true, std::memory_order_relaxed);
+	ExitCond.notify_all();
+	if (PlayerThread.joinable())
+	{
+		PlayerThread.join();
+	}
+	MIDIFlushOutput(midiDestination); // Drop pending events.
+
+	// Reset all channels to prevent hanging notes
+	for (int channel = 0; channel < 16; ++channel)
+	{
+		SendImmediateShortMsg(MIDI_CTRLCHANGE | channel, 123, 0); // All Notes Off
+		SendImmediateShortMsg(MIDI_CTRLCHANGE | channel, 121, 0);  // Reset All Controllers
+	}
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: Pause
+//
+// We cannot pause so just always return false
+//
+//==========================================================================
+
+bool CoreMIDIDevice::Pause(bool paused)
+{
+	return false;
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: StreamOut
+//
+// Gets new midi buffers
+//
+//==========================================================================
+
+int CoreMIDIDevice::StreamOut(MidiHeader* header)
+{
+	header->lpNext = nullptr;
+	if (Events == nullptr)
+	{
+		Events = header;
+		Position = 0;
+	}
+	else
+	{
+		MidiHeader** p;
+		for (p = &Events; *p != nullptr; p = &(*p)->lpNext)
+		{ }
+		*p = header;
+	}
+	return 0;
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: StreamOutSync
+//
+//==========================================================================
+
+int CoreMIDIDevice::StreamOutSync(MidiHeader* header)
+{
+	return StreamOut(header);
 }
 
 //==========================================================================
@@ -536,8 +524,8 @@ bool CoreMIDIDevice::PullEvent()
 		Events = Events->lpNext;
 		Position = 0;
 		if (Callback)
-		{	// This ensures that we always have 2 unused buffers after 1 is used up.
-			// omit this nested "if" block if you want to use up the 2 buffers before requesting new buffers
+		{	// This ensures that we always have the maximum number of unused buffers (most likely 2) after 1 is used up.
+			// omit this nested "if" block if you want to use up all buffers before requesting new buffers
 			Callback(CallbackData);
 		}
 	}
@@ -548,7 +536,7 @@ bool CoreMIDIDevice::PullEvent()
 	}
 
 	uint32_t* event = (uint32_t*)(Events->lpData + Position);
-	PulledEventTickDelta = event[0]; // First 4 bytes of event
+	PulledEvent.TickDelta = event[0]; // First 4 bytes of event
 
 	// Get event size to advance Position
 	if (event[2] < 0x80000000) // Short message (event[2] is the combined status/data bytes)
@@ -568,44 +556,33 @@ bool CoreMIDIDevice::PullEvent()
 		PrepareTempo(MEVENT_EVENTPARM(event[2]));
 		break;
 	case MEVENT_LONGMSG:
-	{	// Long MIDI message (SysEx, etc.), data starts after event[3]
-		int long_msg_len = MEVENT_EVENTPARM(event[2]);
-		uint8_t* long_msg_data = (uint8_t*)&event[3];
-		// Ensure valid sysex message
-		if (long_msg_len > 2 && long_msg_data[0] == 0xF0 && long_msg_data[long_msg_len - 1] == 0xF7)
-		{
-			PrepareMidiMsg(long_msg_data, long_msg_len);
+		{	// Long MIDI message (SysEx, etc.), data starts after event[3]
+			int long_msg_len = MEVENT_EVENTPARM(event[2]);
+			uint8_t* long_msg_data = (uint8_t*)&event[3];
+			// Ensure valid sysex message
+			if (long_msg_len > 2 && long_msg_data[0] == 0xF0 && long_msg_data[long_msg_len - 1] == 0xF7)
+			{
+				PrepareMidiMsg(long_msg_data, long_msg_len);
+			}
+			else
+			{
+				PulledEvent.EventType = NOP;
+			}
 			break;
 		}
-	}
-	case 0: // Short MIDI message (note on/off, control change, etc.)
-	{
-		// event[2] contains the 1, 2, or 3 byte MIDI message
-		ShortMsgBuffer = {	(uint8_t)(event[2] & 0xff), // Status
-							(uint8_t)((event[2] >> 8) & 0xff), // Data 1
-							(uint8_t)((event[2] >> 16) & 0xff) }; // Data 2
+	case MEVENT_SHORTMSG:
+		{
+			// event[2] contains the 1, 2, or 3 byte MIDI message
+			ShortMsgBuffer = {	(uint8_t)(event[2] & 0xff), // Status
+								(uint8_t)((event[2] >> 8) & 0xff), // Data 1
+								(uint8_t)((event[2] >> 16) & 0xff) }; // Data 2
 
-		int msgLen = 0;
-		if (ShortMsgBuffer[0] >= 0xF0) // System messages
-		{
-			if (ShortMsgBuffer[0] == 0xF0 || ShortMsgBuffer[0] == 0xF7) msgLen = 1; // Start/Stop/Continue/Timing/Active Sensing/Reset (1 byte)
-			else if (ShortMsgBuffer[0] == 0xF1 || ShortMsgBuffer[0] == 0xF3) msgLen = 2; // Time Code Quarter Frame, Song Select (2 bytes)
-			else if (ShortMsgBuffer[0] == 0xF2) msgLen = 3; // Song Position Pointer (3 bytes)
-			else msgLen = 1; // Default to 1 for other unknown system messages
+			int msgLen = GetShortMsgLength(ShortMsgBuffer.data());
+			PrepareMidiMsg(ShortMsgBuffer.data(), msgLen);
+			break;
 		}
-		else if (ShortMsgBuffer[0] >= 0xC0 && ShortMsgBuffer[0] < 0xE0) // Program Change or Channel Aftertouch (2 bytes)
-		{
-			msgLen = 2;
-		}
-		else // Note On/Off, Poly Aftertouch, Control Change, Pitch Bend (3 bytes)
-		{
-			msgLen = 3;
-		}
-		PrepareMidiMsg(ShortMsgBuffer.data(), msgLen);
-		break;
-	}
 	default:
-		PulledEvent.EventType = NoEvent;
+		PulledEvent.EventType = NOP;
 	}
 
 	// Indicate that an event was processed.
@@ -614,22 +591,9 @@ bool CoreMIDIDevice::PullEvent()
 
 //==========================================================================
 //
-// CoreMIDIDevice :: PlayerThreadProc
-//
-// Static thread entry point
-//
-//==========================================================================
-
-void CoreMIDIDevice::PlayerThreadProc(CoreMIDIDevice* device)
-{
-	device->PlayerLoop();
-}
-
-//==========================================================================
-//
 // CoreMIDIDevice :: PlayerLoop
 //
-// Main player thread loop - processes MIDI events from queue
+// Main player thread loop
 //
 //==========================================================================
 
@@ -643,7 +607,7 @@ void CoreMIDIDevice::PlayerLoop()
 	MIDITimeStamp buffer_timestamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime());
 
 	// Process all available events and schedule them with CoreMIDI
-	while (!Exit)
+	while (!Exit.load(std::memory_order_relaxed))
 	{
 		if (!PullEvent())
 		{
@@ -652,7 +616,7 @@ void CoreMIDIDevice::PlayerLoop()
 		}
 
 		// CoreAudio and CoreMidi work in nano seconds so multiply by 1000.
-		MIDITimeStamp pulled_ev_timestamp = buffer_timestamp + PulledEventTickDelta * Tempo / Division * 1000;
+		MIDITimeStamp pulled_ev_timestamp = buffer_timestamp + PulledEvent.TickDelta * Tempo / Division * 1000;
 
 		auto time_until_pulled_ev = std::chrono::nanoseconds(pulled_ev_timestamp - AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()));
 		auto schedule_time = time_until_pulled_ev - buffer_step;
@@ -666,19 +630,19 @@ void CoreMIDIDevice::PlayerLoop()
 		if (time_until_pulled_ev < std::chrono::nanoseconds::zero())
 		{	// Can be triggered on playback start.
 			// Message shouldn't be shown by default like other midi backends here.
-			ZMusic_Printf(ZMUSIC_MSG_NOTIFY, "CoreMidi backend underrun by %d nanoseconds!\n", time_until_pulled_ev.count());
+			ZMusic_Printf(ZMUSIC_MSG_DEBUG, "CoreMidi backend underrun by %d nanoseconds!\n", time_until_pulled_ev.count());
 		}
 
 		// Handle PulledEvent
 		switch (PulledEvent.EventType)
 		{
 		case TempoEv:
-			Tempo = PulledEvent.EventMsg.tempo;
+			Tempo = PulledEvent.EventData.tempo;
 			break;
 		case MidiMsgEv:
-			SendMIDIData(PulledEvent.EventMsg.data, PulledEvent.length, AudioConvertNanosToHostTime(pulled_ev_timestamp));
+			SendMIDIData(PulledEvent.EventData.msg, PulledEvent.length, AudioConvertNanosToHostTime(pulled_ev_timestamp));
 			break;
-		case NoEvent:
+		case NOP:
 		default:
 			;
 		}
@@ -698,12 +662,12 @@ void CoreMIDIDevice::PlayerLoop()
 void CoreMIDIDevice::PrepareTempo(const uint32_t tempo)
 {
 	PulledEvent.EventType = TempoEv;
-	PulledEvent.EventMsg.tempo = tempo;
+	PulledEvent.EventData.tempo = tempo;
 }
 void CoreMIDIDevice::PrepareMidiMsg(uint8_t* msg, uint32_t length)
 {
 	PulledEvent.EventType = MidiMsgEv;
-	PulledEvent.EventMsg.data = msg;
+	PulledEvent.EventData.msg = msg;
 	PulledEvent.length = length;
 }
 
@@ -717,15 +681,14 @@ void CoreMIDIDevice::PrepareMidiMsg(uint8_t* msg, uint32_t length)
 
 void CoreMIDIDevice::SendMIDIData(const uint8_t* data, size_t length, MIDITimeStamp timestamp)
 {
-	if (!isOpen || midiOutPort == 0 || midiDestination == 0)
-		return;
-
 	// The required size for the MIDIPacketList is the size of the list itself
 	// plus the size of the packet header and the actual MIDI data.
 	size_t requiredSize = offsetof(MIDIPacketList, packet) + offsetof(MIDIPacket, data) + length;
 
 	// Use a stack buffer for small messages to avoid heap allocation (fast path).
-	Byte small_buffer[256];
+	// Short messages typically need 15-17 bytes (14 offsets + message length)
+	// and long messages can need up to 25 bytes in my testing, so 64 bytes should be sufficient for most cases.
+	Byte small_buffer[64];
 
 	// Choose the buffer to use.
 	Byte* buffer;
@@ -733,6 +696,7 @@ void CoreMIDIDevice::SendMIDIData(const uint8_t* data, size_t length, MIDITimeSt
 
 	if (requiredSize > sizeof(small_buffer))
 	{
+		ZMusic_Printf(ZMUSIC_MSG_DEBUG, "CoreMIDI: Required MIDIPacketList size \"%zu\" exceeds small_buffer size \"%zu\"\n", requiredSize, sizeof(small_buffer));
 		try
 		{
 			large_buffer.resize(requiredSize);
@@ -772,7 +736,50 @@ void CoreMIDIDevice::SendMIDIData(const uint8_t* data, size_t length, MIDITimeSt
 	}
 }
 
+//==========================================================================
+//
+// CoreMIDIDevice :: SendImmediateShortMsg
+//
+// For use with PrecacheInstruments and Stop messages.
+//
+//==========================================================================
 
+void CoreMIDIDevice::SendImmediateShortMsg(uint8_t command, uint8_t data1, uint8_t data2)
+{
+	uint8_t msg[3] = { command, data1, data2 };
+	int msgLen = GetShortMsgLength(msg);
+	SendMIDIData(msg, msgLen, 0);
+}
+
+//==========================================================================
+//
+// CoreMIDIDevice :: GetShortMsgLength
+//
+// Determines the length of a short MIDI message
+// The actual correct length is necessary for CoreMIDI to work.
+//
+//==========================================================================
+
+int CoreMIDIDevice::GetShortMsgLength(uint8_t* msg)
+{
+	int msgLen;
+	if (msg[0] >= 0xF0) // System messages
+	{
+		if (msg[0] == 0xF0 || msg[0] == 0xF7) msgLen = 1; // Start/Stop/Continue/Timing/Active Sensing/Reset (1 byte)
+		else if (msg[0] == 0xF1 || msg[0] == 0xF3) msgLen = 2; // Time Code Quarter Frame, Song Select (2 bytes)
+		else if (msg[0] == 0xF2) msgLen = 3; // Song Position Pointer (3 bytes)
+		else msgLen = 1; // Default to 1 for other unknown system messages
+	}
+	else if (msg[0] >= 0xC0 && msg[0] <= 0xDF) // Program Change or Channel Aftertouch (2 bytes)
+	{
+		msgLen = 2;
+	}
+	else // Note On/Off, Poly Aftertouch, Control Change, Pitch Bend (3 bytes)
+	{
+		msgLen = 3;
+	}
+	return msgLen;
+}
 
 //==========================================================================
 //
