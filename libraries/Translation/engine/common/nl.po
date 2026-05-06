@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-04-28 00:29+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/common/nl/>"
 "\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSYN"
 msgstr "Druk op Y of N."
@@ -309,9 +309,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Vorige item"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Kaartcontroles aanpassen"
+msgstr "Map Controls"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Kaartcontroles"
@@ -352,7 +351,6 @@ msgstr "Toggle textuur"
 msgid "CNTRLMNU_AUTOMAP"
 msgstr "Automap aan/uit"
 
-#, fuzzy
 msgid "CNTRLMNU_CHASECAM"
 msgstr "Chasecam"
 
@@ -407,7 +405,6 @@ msgstr "Muis in menu's inschakelen"
 msgid "MOUSEMNU_SHOWBACKBUTTON"
 msgstr "Toon terug knop"
 
-#, fuzzy
 msgid "MOUSEMNU_CURSOR"
 msgstr "Cursor"
 
@@ -520,20 +517,17 @@ msgstr "Geen configureerbare assen"
 msgid "OPTVAL_NONE"
 msgstr "Geen"
 
-#, fuzzy
 msgid "OPTVAL_TURNING"
-msgstr "Draaien"
+msgstr "Naar links/rechts kijken"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Omhoog/omlaag zoeken"
 
-#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
-msgstr "Voorwaarts bewegen"
+msgstr "Vooruit/Achteruit"
 
-#, fuzzy
 msgid "OPTVAL_STRAFING"
-msgstr "Strafelen"
+msgstr "Naar links/rechts bewegen"
 
 msgid "OPTVAL_MOVINGUPDOWN"
 msgstr "Naar boven/beneden bewegen"
@@ -634,9 +628,8 @@ msgstr "Altijd"
 msgid "OPTVAL_NEVER"
 msgstr "Nooit"
 
-#, fuzzy
 msgid "PLYRMNU_AUTOAIM"
-msgstr "Autoaim"
+msgstr "Automatisch richten"
 
 msgid "PLYRMNU_ALWAYSRUN"
 msgstr "Altijd lopen"
@@ -728,7 +721,6 @@ msgstr "Stereo"
 msgid "OPTSTR_PROLOGIC"
 msgstr "Dolby Pro Logic-decoder"
 
-#, fuzzy
 msgid "OPTSTR_QUAD"
 msgstr "Quad"
 
@@ -747,7 +739,6 @@ msgstr "Afspeelapparaat"
 msgid "OPENALMNU_ENABLEEFX"
 msgstr "EFX inschakelen"
 
-#, fuzzy
 msgid "OPENALMNU_RESAMPLER"
 msgstr "Resampler"
 
@@ -787,9 +778,8 @@ msgstr "Geavanceerde opties"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Module replayer opties"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "MIDI speler opties"
+msgstr "Opties voor MIDI-apparaten"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Geavanceerde geluidsopties"
@@ -860,7 +850,6 @@ msgstr "Selecteer configuratie"
 msgid "ADVSNDMNU_ADVRESAMPLING"
 msgstr "Geavanceerde herbemonstering"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "OPL Bank"
 
@@ -956,9 +945,8 @@ msgstr "Band-beperkt lineair"
 msgid "OPTVAL_CUBICSLOW"
 msgstr "Kubieke (langzamer)"
 
-#, fuzzy
 msgid "OPTVAL_SINC"
-msgstr "Sinc"
+msgstr "Aangezien"
 
 msgid "OPTVAL_NOTEONOFFONLY"
 msgstr "Alleen toon aan/uit"
@@ -987,15 +975,12 @@ msgstr "Chip-o-matic"
 msgid "OPTVAL_MAMEOPL2"
 msgstr "MAME OPL2"
 
-#, fuzzy
 msgid "OPTVAL_DOSBOXOPL3"
 msgstr "DOSBox OPL3"
 
-#, fuzzy
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-#, fuzzy
 msgid "OPTVAL_ESFMu"
 msgstr "ESFMu OPL3"
 
@@ -1005,55 +990,44 @@ msgstr "YMFM OPL2"
 msgid "OPTVAL_YMFMOPL3"
 msgstr "YMFM OPL3"
 
-#, fuzzy
 msgid "OPTVAL_NUKEDOPL3"
 msgstr "Nuked OPL3"
 
-#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr "OPL2-LLE (Extra zwaar!)"
+msgstr "OPL2-LLE (prestatiegericht)"
 
-#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr "OPL3-LLE (Extra zwaar!)"
+msgstr "OPL3-LLE (prestatiegericht)"
 
 msgid "OPTVAL_MAMEOPN2"
 msgstr "MAME OPN2 (YM2612)"
 
-#, fuzzy
 msgid "OPTVAL_NP2OPNA"
 msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
 msgstr "MAME YM2608"
 
-#, fuzzy
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
 
-#, fuzzy
 msgid "OPTVAL_NUKEDOPL3174"
 msgstr "Nuked OPL3 v1.7.4"
 
-#, fuzzy
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
 
-#, fuzzy
 msgid "OPTVAL_NUKEDOPN2YM2612"
 msgstr "Nuked OPN2 (YM2612)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr "OPN2-LLE (YM2612) (Extra zwaar!)"
+msgstr "OPN2-LLE (YM2612) (prestatiegericht)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr "OPN2-LLE (YM3438) (Extra zwaar!)"
+msgstr "OPN2-LLE (YM3438) (prestatiegericht)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr "OPN2-LLE (YMF276) (Extra zwaar!)"
+msgstr "OPN2-LLE (YMF276) (prestatiegericht)"
 
 msgid "OPTVAL_GENSOPN2"
 msgstr "GENS OPN2 (YM2612)"
@@ -1076,11 +1050,9 @@ msgstr "Algemeen"
 msgid "OPNVLMODEL_GENERIC"
 msgstr "Algemeen"
 
-#, fuzzy
 msgid "ADLVLMODEL_NATIVE"
 msgstr "OPL Native"
 
-#, fuzzy
 msgid "OPNVLMODEL_NATIVE"
 msgstr "OPN Native"
 
@@ -1177,6 +1149,7 @@ msgstr "Obvers"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "Revers"
 
+#, fuzzy
 msgid "GLMNU_POSTPROCESS"
 msgstr "Nabewerking"
 
@@ -1189,9 +1162,8 @@ msgstr "Effect van de lensvervorming"
 msgid "GLPREFMNU_FXAA"
 msgstr "FXAA-kwaliteit"
 
-#, fuzzy
 msgid "GLPREFMNU_DITHER"
-msgstr "Dither output"
+msgstr "Dither-uitvoer"
 
 msgid "GLPREFMNU_PALTONEMAPORDER"
 msgstr "Tonemap Palet Orde van het Tonemap-palet"
@@ -1199,9 +1171,8 @@ msgstr "Tonemap Palet Orde van het Tonemap-palet"
 msgid "GLPREFMNU_PALTONEMAPPOWER"
 msgstr "Tonemap Palet Exponent"
 
-#, fuzzy
 msgid "GLPREFMNU_MULTISAMPLE"
-msgstr "Multisample"
+msgstr "Meervoudige steekproef"
 
 msgid "GLPREFMNU_BLOOM"
 msgstr "Bloom-effect"
@@ -1388,11 +1359,9 @@ msgstr "Gebruikergedefinieerd"
 msgid "VIDMNU_MAXFPS"
 msgstr "Max. FPS"
 
-#, fuzzy
 msgid "OPTVAL_60FPS"
 msgstr "60 fps"
 
-#, fuzzy
 msgid "OPTVAL_75FPS"
 msgstr "75 fps"
 
@@ -1402,11 +1371,9 @@ msgstr "90 beelden per seconde"
 msgid "OPTVAL_120FPS"
 msgstr "120 beelden per seconde"
 
-#, fuzzy
 msgid "OPTVAL_144FPS"
 msgstr "144 fps"
 
-#, fuzzy
 msgid "OPTVAL_200FPS"
 msgstr "200 fps"
 
@@ -1450,9 +1417,8 @@ msgstr "Rouleer snelopslag"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Aantal roulerende snelopslagplekken"
 
-#, fuzzy
 msgid "MISCMNU_CLEANMENU"
-msgstr "Schakel uniforme menuschaling uit"
+msgstr "Klassieke menuschaling in ZDoom"
 
 msgid "MISCMNU_PAUSEINBACKGROUND"
 msgstr "Pauzeer het spel op de achtergrond"
@@ -1566,7 +1532,6 @@ msgstr "NormaalNx"
 msgid "OPTVAL_HQNX"
 msgstr "hqNx"
 
-#, fuzzy
 msgid "OPTVAL_HQNXMMX"
 msgstr "hqNx MMX"
 
@@ -1688,9 +1653,8 @@ msgstr "Deze controller inschakelen"
 msgid "CNTRLMNU_OPEN_MAIN"
 msgstr "Hoofdmenu openen"
 
-#, fuzzy
 msgid "MODMNU_REPLAYER"
-msgstr "Module replayer"
+msgstr "Module-speler"
 
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
@@ -1751,13 +1715,11 @@ msgstr "Spelmodus:"
 msgid "PICKER_COOP"
 msgstr "Coöperatie"
 
-#, fuzzy
 msgid "PICKER_DM"
-msgstr "Deathmatch"
+msgstr "Doodsgevecht"
 
-#, fuzzy
 msgid "PICKER_TDM"
-msgstr "Team Deathmatch"
+msgstr "Team Doodsgevecht"
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
@@ -1787,17 +1749,15 @@ msgstr "255 = Willekeurig"
 msgid "PICKER_IP"
 msgstr "Host-IP:"
 
-#, fuzzy
 msgid "PICKER_TDMLABEL"
-msgstr "Team Deathmatch:"
+msgstr "Team Doodsgevecht:"
 
 # Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
 msgstr "Zeg (team):"
 
-#, fuzzy
 msgid "MISCMNU_DISCORDRPC"
-msgstr "Discord Rich Presence"
+msgstr "Discord Rijke Aanwezigheid"
 
 msgid "JOYMNU_TURNSPEED"
 msgstr "Draaisnelheid"
@@ -1814,16 +1774,14 @@ msgstr "Kan uitgaveopmerkingen niet parseren"
 msgid "NOTES_UNKNOWN"
 msgstr "Onbekend"
 
-#, fuzzy
 msgid "NOTES_RELEASED"
-msgstr "uitgebracht"
+msgstr "%s versie %s, uitgebracht %s"
 
 msgid "NOTES_EMPTY"
 msgstr "Geen beschrijving beschikbaar."
 
-#, fuzzy
 msgid "NOTES_DETAILS"
-msgstr "Voor meer informatie zie: %s"
+msgstr "Zie voor meer informatie: %s"
 
 msgid "PICKER_SHOWTHIS"
 msgstr "Deze pagina weergeven na updates"
@@ -1839,3 +1797,9 @@ msgstr "Uitgaveopmerkingen"
 
 msgid "ACCMNU_TITLE"
 msgstr "Toegankelijkheidsopties"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Grootte van de berichtenwachtrij"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Herhaalde berichten stapelen"

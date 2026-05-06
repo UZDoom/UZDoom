@@ -2,184 +2,264 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-22 03:09+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Arabic (Egyptian) <https://hosted.weblate.org/projects/uzdoom/"
-"zdoom-engine-strings/arz/>\n"
-"Language: arz\n"
+"PO-Revision-Date: 2026-04-25 10:09+0000\n"
+"Last-Translator: Automatic translation add-on <noreply-addon-"
+"autotranslate@weblate.org>\n"
+"Language-Team: Thai <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-"
+"strings/th/>\n"
+"Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? "
-"2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) "
-"? 4 : 5))));\n"
-"X-Generator: Weblate 5.17-dev\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
-msgstr ""
+msgstr "กดปุ่มใดก็ได้"
 
 msgid "SECRETMESSAGE"
-msgstr ""
+msgstr "ความลับถูกเปิดเผย!"
 
 msgid "D_DEVSTR"
-msgstr ""
+msgstr "โหมดไร้ประโยชน์: เปิด"
 
 msgid "QUITMSG"
 msgstr ""
+"คุณแน่ใจหรือว่าต้องการ\n"
+"เลิกเล่นเกมดีๆ เกมนี้?"
 
 msgid "LOADNET"
 msgstr ""
+"คุณไม่สามารถโหลดเกมในขณะที่กำลังเล่นออนไลน์ได้!\n"
+"\n"
+"กดปุ่มใดก็ได้เพื่อย้อนกลับ"
 
 msgid "QLOADNET"
 msgstr ""
+"คุณไม่สามารถโหลดเกมในขณะที่กำลังเล่นออนไลน์ได้!\n"
+"\n"
+"กดปุ่มใดก็ได้เพื่อย้อนกลับ"
 
 msgid "QSAVESPOT"
 msgstr ""
+"คุณยังไม่ได้เลือกช่องเซฟด่วนเลย!\n"
+"\n"
+"กดปุ่มใดก็ได้เพื่อย้อนกลับ"
 
 msgid "NEWGAME"
 msgstr ""
+"คุณไม่สามารถเริ่มเกมใหม่\n"
+"ในขณะที่กำลังเล่นออนไลน์ได้!\n"
+"\n"
+"กดปุ่มใดก็ได้เพื่อย้อนกลับ"
 
 msgid "NIGHTMARE"
 msgstr ""
+"คุณแน่ใจหรือ?\n"
+"ระดับความยากนี้ไม่ยุติธรรมเลยแม้แต่น้อย\n"
+"\n"
+"กด Y หรือ N"
 
 msgid "SWSTRING"
 msgstr ""
+"นี่คือ Doom เวอร์ชันแชร์แวร์\n"
+"\n"
+"คุณจำเป็นต้องสั่งซื้อเกมฉบับเต็ม\n"
+"\n"
+"กดปุ่มใดก็ได้เพื่อย้อนกลับ"
 
 msgid "NETEND"
 msgstr ""
+"คุณไม่สามารถจบเกมเน็ตได้!\n"
+"\n"
+"กดปุ่มใดก็ได้เพื่อย้อนกลับ"
 
 msgid "ENDGAME"
 msgstr ""
+"คุณแน่ใจหรือไม่ว่าต้องการจบเกม?\n"
+"\n"
+"กด Y หรือ N"
 
 msgid "RAVENQUITMSG"
-msgstr ""
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการออกจากเกม?"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr ""
+msgstr "มีให้ใช้งานเฉพาะในเวอร์ชันลงทะเบียนแล้วเท่านั้น"
 
 msgid "DOSY"
-msgstr ""
+msgstr "(กด Y เพื่อออก)"
 
 msgid "QUITMSG1"
 msgstr ""
+"อย่าเพิ่งออกไป!\n"
+"ยังมีปีศาจอีกเพียบให้เราจัดการ!"
 
 msgid "QUITMSG2"
 msgstr ""
+"ลุยกันเลย\n"
+"ที่นี่กำลังจะกลายเป็นนองไปด้วยเลือดแล้ว!"
 
 msgid "QUITMSG3"
 msgstr ""
+"ผมจะไม่ไปไหนหรอก ถ้าผมเป็นคุณ\n"
+"DOS มันแย่กว่านี้เยอะเลย"
 
 msgid "QUITMSG4"
 msgstr ""
+"คุณกำลังจะบอกว่าคุณชอบ DOS\n"
+"มากกว่าผมใช่ไหมล่ะ?"
 
 msgid "QUITMSG5"
 msgstr ""
+"อย่าเพิ่งไปนะ\n"
+"ยังมีปีศาจอยู่ตรงหัวมุมนั่นตัวหนึ่ง!"
 
 msgid "QUITMSG6"
 msgstr ""
+"รู้ไว้นะ ครั้งหน้าถ้าแกโผล่หัวเข้ามาในนี้อีก\n"
+"ฉันจะเผาแกให้เกรียมเลย"
 
 msgid "QUITMSG7"
-msgstr ""
+msgstr "ไปเลย เชิญออกไปได้เลย ดูซิว่าผมจะสนไหม"
 
 msgid "QUITMSG8"
 msgstr ""
+"คุณต้องการจะออกงั้นหรือ?\n"
+"ถ้าเช่นนั้น เจ้าก็ได้สูญเสียหนึ่งในแปดไปแล้ว!"
 
 msgid "QUITMSG9"
 msgstr ""
+"อย่าเพิ่งไปตอนนี้เลย มีตัว\n"
+"Dimensional Shambler\n"
+"กำลังรอคุณอยู่ที่พร้อมท์ DOS นะ!"
 
 msgid "QUITMSG10"
 msgstr ""
+"ไปให้พ้นเลย\n"
+"แล้วกลับไปอยู่กับโปรแกรมแสนน่าเบื่อของแกซะ!"
 
 msgid "QUITMSG11"
 msgstr ""
+"ถ้าผมเป็นเจ้านายคุณ\n"
+"ผมคงจะท้าคุณดวล Deathmatch ภายในนาทีเดียวเลยล่ะ!"
 
 msgid "QUITMSG12"
 msgstr ""
+"ฟังนะเพื่อน ถ้าคุณไปตอนนี้\n"
+"คุณก็จะเสียคะแนนสังหาร ของคุณไปเลยนะ!"
 
 msgid "QUITMSG13"
 msgstr ""
+"ไปเลย ถ้ากลับมาเมื่อไหร่\n"
+"ผมจะรอต้อนรับด้วยไม้เบสบอลเอง"
 
 msgid "QUITMSG14"
 msgstr ""
+"คุณโชคดีนะที่ผมไม่ฟาดคุณ\n"
+"โทษฐานที่คิดจะออกไปน่ะ"
 
 msgid "QUITMSG15"
 msgstr ""
+"คุณจะไปไหนกัน!\n"
+"แล้วการปฏิวัติล่ะจะทำยังไง?"
 
 msgid "QUITMSG16"
 msgstr ""
+"ช่างขัดจังหวะความมันส์เสียจริง...\n"
+"น่าหงุดหงิดชะมัด!"
 
 msgid "QUITMSG17"
 msgstr ""
+"แต่คุณคือความหวัง..\n"
+"เป็นโอกาสเดียวของผมเลยนะ!"
 
 msgid "QUITMSG18"
-msgstr ""
+msgstr "ไม่มีใครกล้าเดินหนีจาก Blackbird หรอกนะ"
 
 msgid "QUITMSG19"
-msgstr ""
+msgstr "ผมนึกว่าคุณจะต่างจากคนอื่นเสียอีก.."
 
 msgid "QUITMSG20"
-msgstr ""
+msgstr "เอาเลย! จะฆ่าแล้วหนีก็เชิญ!"
 
 msgid "QUITMSG21"
 msgstr ""
+"คุณจะเลิกเล่นก็ได้...\n"
+"แต่คุณหนีผมไม่พ้นหรอก…"
 
 msgid "QUITMSG22"
 msgstr ""
+"โหห ทำไมอ่ะ?\n"
+"แม่เรียกแล้วเหรอ?"
 
 msgid "QUITMSG23"
 msgstr ""
+"อย่าเพิ่งออก! ยังมีพวก\n"
+"Flemoid เพ่นพ่านอยู่เต็มไปหมด!"
 
 msgid "QUITMSG24"
 msgstr ""
+"อย่ายอมแพ้นะ!\n"
+"เดี๋ยวพวก Flemoid จะได้ใจเอา!"
 
 msgid "QUITMSG25"
 msgstr ""
+"อย่าเพิ่งออกไปเลย\n"
+"เราต้องการความช่วยเหลือจากคุณ"
 
 msgid "QUITMSG26"
 msgstr ""
+"หวังว่าคุณแค่กำลังพักเบรก\n"
+"ไปทาน Chex® Party Mix อยู่สินะ"
 
 msgid "QUITMSG27"
 msgstr ""
+"อย่าออกไปเลย\n"
+"เราต้องการความช่วยเหลือจากคุณ"
 
 msgid "QUITMSG28"
 msgstr ""
+"อย่าเพิ่งทิ้ง\n"
+"กองกำลังสหพันธ์ธัญพืชแห่งจักรวาล ไปนะ!"
 
 msgid "QUITMSG29"
 msgstr ""
+"นักรบ Chex® ตัวจริงเขา\n"
+"ไม่ยอมแพ้ง่ายๆ ขนาดนี้หรอกนะ!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr ""
+msgstr "คุณได้รับไอเทมแล้ว"
 
 msgid "PD_ANY"
-msgstr ""
+msgstr "ใช้กุญแจใดก็ได้เพื่อเปิดประตูนี้"
 
 msgid "PD_ANYOBJ"
-msgstr ""
+msgstr "ใช้กุญแจใดก็ได้เพื่อเปิดใช้งานวัตถุนี้"
 
 msgid "PD_ALL3"
-msgstr ""
+msgstr "คุณต้องใช้กุญแจทั้งสามดอกเพื่อเปิดประตูบานนี้"
 
 msgid "PD_ALL3O"
-msgstr ""
+msgstr "คุณต้องใช้กุญแจทั้งสามดอกเพื่อเปิดใช้งานวัตถุนี้"
 
 msgid "PD_ALL6"
-msgstr ""
+msgstr "คุณต้องใช้กุญแจทั้งหมด หกดอกเพื่อเปิดประตูบานนี้"
 
 msgid "PD_ALL6O"
-msgstr ""
+msgstr "คุณต้องใช้กุญแจทั้งหมด หกดอกเพื่อเปิดใช้งานวัตถุนี้"
 
 msgid "PD_ALLKEYS"
-msgstr ""
+msgstr "คุณจำเป็นต้องมีกุญแจทั้งหมด"
 
 msgid "HUSTR_MSGU"
-msgstr ""
+msgstr "ข้อความไม่ถูกส่งออกไป"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr ""
+msgstr "พึมพำกับตัวเอง"
 
 msgid "HUSTR_TALKTOSELF2"
-msgstr ""
+msgstr "ใครอยู่ที่นั่น?"
 
 msgid "HUSTR_TALKTOSELF3"
 msgstr ""
@@ -467,7 +547,7 @@ msgid "TXT_IMSECRETS"
 msgstr ""
 
 msgid "TXT_IMTIME"
-msgstr ""
+msgstr "เวลา"
 
 msgid "TXT_IMPAR"
 msgstr ""
@@ -2739,7 +2819,7 @@ msgid "MNU_NEWGAME"
 msgstr ""
 
 msgid "MNU_OPTIONS"
-msgstr ""
+msgstr "ตัวเลือก"
 
 msgid "MNU_GAMEFILES"
 msgstr ""
@@ -3751,7 +3831,7 @@ msgid "SCALEMNU_ADAPT"
 msgstr ""
 
 msgid "HUDMNU_TITLE"
-msgstr ""
+msgstr "การตั้งค่า HUD"
 
 msgid "HUDMNU_ALTHUD"
 msgstr ""
@@ -3817,7 +3897,7 @@ msgid "MISCMNU_INTERSCROLL"
 msgstr ""
 
 msgid "NETMNU_TITLE"
-msgstr ""
+msgstr "การตั้งค่าเครือข่าย"
 
 msgid "NETMNU_LOCALOPTIONS"
 msgstr ""
@@ -3889,10 +3969,10 @@ msgid "OPTVAL_BOTH"
 msgstr ""
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr ""
@@ -4009,25 +4089,25 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr ""
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr ""
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr ""
@@ -4159,7 +4239,7 @@ msgid "C_TEAL"
 msgstr ""
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
 msgstr ""
@@ -4927,7 +5007,7 @@ msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
 
 msgid "OPTMNU_ACCESSIBILITY"
-msgstr ""
+msgstr "การตั้งค่าการช่วยสำหรับการเข้าถึง"
 
 msgid "JOYMNU_ANALOGRUN"
 msgstr ""
@@ -4950,8 +5030,12 @@ msgstr ""
 msgid "ACCMNU_TOOLTIP_SCALE"
 msgstr ""
 
+#, fuzzy
 msgid "ACCMNU_TOOLTIP_EXAMPLE"
 msgstr ""
+"\n"
+"\n"
+"\n"
 
 msgid "ACCMNU_TOOLTIP"
 msgstr ""
@@ -5116,4 +5200,31 @@ msgid "TAG_MAULER"
 msgstr ""
 
 msgid "TAG_GLAUNCHER"
+msgstr ""
+
+msgid "ACTION_OPENWADDIR"
+msgstr ""
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr ""
+
+msgid "OPTMNU_OPENWADS"
+msgstr ""
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr ""
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr ""
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr ""
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr ""
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr ""
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
 msgstr ""

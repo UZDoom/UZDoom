@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-04-21 19:39+0000\n"
+"Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/uk/>\n"
 "Language: uk\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Натисніть будь яку клавішу."
@@ -23,7 +23,6 @@ msgstr "Знайдено схованку!"
 msgid "D_DEVSTR"
 msgstr "Марний режим: УВІМК"
 
-#, fuzzy
 msgid "QUITMSG"
 msgstr ""
 "Ти дійсно хочеш вийти з\n"
@@ -118,7 +117,6 @@ msgstr ""
 "Зачекай! Не йди—тут за куточком\n"
 "сховався ще один демон!"
 
-#, fuzzy
 msgid "QUITMSG6"
 msgstr ""
 "Шоб знав, коли повернешся\n"
@@ -525,9 +523,8 @@ msgstr "Бонус"
 msgid "SCORE_COLOR"
 msgstr "Колір"
 
-#, fuzzy
 msgid "SCORE_SECRET"
-msgstr "Схованки"
+msgstr "Схованка"
 
 msgid "SCORE_NAME"
 msgstr "Гравець"
@@ -734,10 +731,10 @@ msgid "GOTCELLBOX"
 msgstr "Взято велику енергетичну батарею."
 
 msgid "GOTSHELLS"
-msgstr "Взято 4 рушничні набої."
+msgstr "Взято 4 дробові набої."
 
 msgid "GOTSHELLBOX"
-msgstr "Взято коробку рушничних набоїв."
+msgstr "Взято коробку дробових набоїв."
 
 msgid "GOTBACKPACK"
 msgstr "Взято рюкзак повний набоїв!"
@@ -937,7 +934,7 @@ msgid "AMMO_CLIP"
 msgstr "Кулі"
 
 msgid "AMMO_SHELLS"
-msgstr "Рушничні набої"
+msgstr "Дробові набої"
 
 msgid "AMMO_ROCKETS"
 msgstr "Ракети"
@@ -4682,9 +4679,8 @@ msgstr "Класична ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Сучасна (WASD)"
 
-#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Сучасна (цифрова клавіатура)"
+msgstr "Сучасна (Для лівшів / Нумпад)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Суворе налаштування клавіш для зброї/гравців"
@@ -4806,7 +4802,6 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Вимкнути підбір випавших предметів на стороні клієнта"
 
 # Disables autoloading save on death
-#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Старт з пістолета після смерті гравця"
 
@@ -5258,7 +5253,6 @@ msgstr "Масіл"
 msgid "TAG_MAULER"
 msgstr "Розсіювач"
 
-#, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Гранатомет"
 
@@ -5356,6 +5350,17 @@ msgstr "Оглянути файли конфігурацій"
 msgid "OPTMNU_OPENWADS"
 msgstr "Оглянути папку IWAD-ів"
 
-#, fuzzy
 msgid "SNDMNU_NOMIDIOPTIONS"
-msgstr "Пристрій Midi не надає жодних налаштувань."
+msgstr "Пристрій MIDI не надає жодних налаштувань."
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Колір прицілу при повному здоров'ї"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Колір прицілу при максимальному здоров'ї"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Динамічні кольори прицілу"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Вертикальне зміщення прицілу"

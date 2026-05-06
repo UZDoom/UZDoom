@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-04-28 00:29+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/common/"
 "en/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSYN"
 msgstr "Press Y or N."
@@ -314,7 +314,6 @@ msgstr "Map Controls"
 msgid "MAPCNTRLMNU_PANLEFT"
 msgstr "Pan left"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_PANRIGHT"
 msgstr "Pan right"
 
@@ -333,135 +332,105 @@ msgstr "Zoom out"
 msgid "MAPCNTRLMNU_TOGGLEZOOM"
 msgstr "Toggle zoom"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
 msgstr "Toggle follow"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_TOGGLEGRID"
 msgstr "Toggle grid"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_ROTATE"
 msgstr "Toggle rotate"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_TOGGLETEXTURE"
 msgstr "Toggle texture"
 
-#, fuzzy
 msgid "CNTRLMNU_AUTOMAP"
 msgstr "Toggle automap"
 
 msgid "CNTRLMNU_CHASECAM"
 msgstr "Chasecam"
 
-#, fuzzy
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Screenshot"
 
 msgid "CNTRLMNU_PAUSE"
 msgstr "Pause"
 
-#, fuzzy
 msgid "CNTRLMNU_DISPLAY_INC"
 msgstr "Increase Display Size"
 
-#, fuzzy
 msgid "CNTRLMNU_DISPLAY_DEC"
 msgstr "Decrease Display Size"
 
-#, fuzzy
 msgid "CNTRLMNU_OPEN_HELP"
 msgstr "Open Help"
 
-#, fuzzy
 msgid "CNTRLMNU_OPEN_SAVE"
 msgstr "Open Save Menu"
 
-#, fuzzy
 msgid "CNTRLMNU_OPEN_LOAD"
 msgstr "Open Load Menu"
 
-#, fuzzy
 msgid "CNTRLMNU_OPEN_OPTIONS"
 msgstr "Open Options Menu"
 
-#, fuzzy
 msgid "CNTRLMNU_OPEN_DISPLAY"
 msgstr "Open Display Menu"
 
-#, fuzzy
 msgid "CNTRLMNU_QUICKSAVE"
 msgstr "Quicksave"
 
-#, fuzzy
 msgid "CNTRLMNU_QUICKLOAD"
 msgstr "Quickload"
 
-#, fuzzy
 msgid "CNTRLMNU_EXIT_TO_MAIN"
 msgstr "Exit to Main Menu"
 
-#, fuzzy
 msgid "CNTRLMNU_TOGGLE_MESSAGES"
 msgstr "Toggle Messages"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Quit Game"
 
-#, fuzzy
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Enable mouse"
 
-#, fuzzy
 msgid "MOUSEMNU_MOUSEINMENU"
 msgstr "Enable mouse in menus"
 
-#, fuzzy
 msgid "MOUSEMNU_SHOWBACKBUTTON"
 msgstr "Show back button"
 
 msgid "MOUSEMNU_CURSOR"
 msgstr "Cursor"
 
-#, fuzzy
 msgid "MOUSEMNU_SENSITIVITY_X"
 msgstr "Horizontal sensitivity"
 
-#, fuzzy
 msgid "MOUSEMNU_SENSITIVITY_Y"
 msgstr "Vertical sensitivity"
 
-#, fuzzy
 msgid "MOUSEMNU_SMOOTHMOUSE"
 msgstr "Smooth mouse movement"
 
-#, fuzzy
 msgid "MOUSEMNU_TURNSPEED"
 msgstr "Turning speed"
 
-#, fuzzy
 msgid "MOUSEMNU_MOUSELOOKSPEED"
 msgstr "Mouselook speed"
 
-#, fuzzy
 msgid "MOUSEMNU_FORWBACKSPEED"
 msgstr "Forward/Backward speed"
 
-#, fuzzy
 msgid "MOUSEMNU_STRAFESPEED"
 msgstr "Strafing speed"
 
-#, fuzzy
 msgid "MOUSEMNU_ALWAYSMOUSELOOK"
 msgstr "Always Mouselook"
 
-#, fuzzy
 msgid "MOUSEMNU_INVERTMOUSE"
 msgstr "Invert Mouse Y"
 
-#, fuzzy
 msgid "MOUSEMNU_INVERTMOUSEX"
 msgstr "Invert Mouse X"
 
@@ -497,70 +466,54 @@ msgstr "System cursor"
 msgid "OPTVAL_DEFAULT"
 msgstr "Default"
 
-#, fuzzy
 msgid "JOYMNU_TITLE"
 msgstr "Configure Controller"
 
-#, fuzzy
 msgid "JOYMNU_OPTIONS"
 msgstr "Controller Options"
 
-#, fuzzy
 msgid "JOYMNU_NOMENU"
 msgstr "Block controller input in menu"
 
-#, fuzzy
 msgid "JOYMNU_ENABLE"
 msgstr "Enable controller support"
 
-#, fuzzy
 msgid "JOYMNU_DINPUT"
 msgstr "Enable DirectInput controllers"
 
-#, fuzzy
 msgid "JOYMNU_XINPUT"
 msgstr "Enable XInput controllers"
 
 msgid "JOYMNU_PS2"
 msgstr "Enable raw PlayStation 2 adapters"
 
-#, fuzzy
 msgid "JOYMNU_NOCON"
 msgstr "No controllers detected"
 
-#, fuzzy
 msgid "JOYMNU_CONFIG"
 msgstr "Configure controllers:"
 
-#, fuzzy
 msgid "JOYMNU_DISABLED1"
 msgstr "Controller support must be"
 
-#, fuzzy
 msgid "JOYMNU_DISABLED2"
 msgstr "enabled to detect any"
 
-#, fuzzy
 msgid "JOYMNU_INVALID"
 msgstr "Invalid controller specified for menu"
 
-#, fuzzy
 msgid "JOYMNU_OVRSENS"
 msgstr "Overall sensitivity"
 
-#, fuzzy
 msgid "JOYMNU_AXIS"
 msgstr "Axis Configuration"
 
-#, fuzzy
 msgid "JOYMNU_INVERT"
 msgstr "Invert"
 
-#, fuzzy
 msgid "JOYMNU_DEADZONE"
 msgstr "Dead zone"
 
-#, fuzzy
 msgid "JOYMNU_NOAXES"
 msgstr "No configurable axes"
 
@@ -667,14 +620,12 @@ msgstr "Rust"
 msgid "PLYRMNU_NAME"
 msgstr "Name"
 
-#, fuzzy
 msgid "PLYRMNU_TEAM"
 msgstr "Team"
 
 msgid "PLYRMNU_PLAYERCOLOR"
 msgstr "Color"
 
-#, fuzzy
 msgid "PLYRMNU_PLAYERGENDER"
 msgstr "Gender"
 
@@ -694,7 +645,6 @@ msgstr "Neutral"
 msgid "OPTVAL_OTHER"
 msgstr "Object"
 
-#, fuzzy
 msgid "GMPLYMNU_TITLE"
 msgstr "Gameplay Options"
 
@@ -706,67 +656,51 @@ msgstr "Always"
 msgid "OPTVAL_NEVER"
 msgstr "Never"
 
-#, fuzzy
 msgid "PLYRMNU_AUTOAIM"
 msgstr "Autoaim"
 
-#, fuzzy
 msgid "PLYRMNU_ALWAYSRUN"
 msgstr "Always Run"
 
-#, fuzzy
 msgid "DSPLYMNU_SCREENSIZE"
 msgstr "Screen size"
 
-#, fuzzy
 msgid "DSPLYMNU_VSYNC"
 msgstr "Vertical Sync"
 
-#, fuzzy
 msgid "DSPLYMNU_MODELS"
 msgstr "Models"
 
-#, fuzzy
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Center messages"
 
-#, fuzzy
 msgid "MSGMNU_MESSAGEQUEUE"
 msgstr "Message queue size"
 
-#, fuzzy
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "Stack repeated messages"
 
-#, fuzzy
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Pulsating message Display"
 
-#, fuzzy
 msgid "MNU_COLORPICKER"
 msgstr "Select Color"
 
-#, fuzzy
 msgid "AUTOMAPMNU_ROTATE"
 msgstr "Rotate automap"
 
-#, fuzzy
 msgid "AUTOMAPMNU_FOLLOW"
 msgstr "Follow player"
 
-#, fuzzy
 msgid "AUTOMAPMNU_LINEALPHA"
 msgstr "Line alpha"
 
-#, fuzzy
 msgid "AUTOMAPMNU_LINETHICKNESS"
 msgstr "Line thickness"
 
-#, fuzzy
 msgid "MAPCOLORMNU_TITLE"
 msgstr "Customize Map Colors"
 
-#, fuzzy
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Restore default custom colors"
 
@@ -854,102 +788,78 @@ msgstr "5.1 speakers"
 msgid "OPTSTR_7POINT1"
 msgstr "7.1 speakers"
 
-#, fuzzy
 msgid "OPENALMNU_PLAYBACKDEVICE"
 msgstr "Playback device"
 
-#, fuzzy
 msgid "OPENALMNU_ENABLEEFX"
 msgstr "Enable EFX"
 
-#, fuzzy
 msgid "OPENALMNU_RESAMPLER"
 msgstr "Resampler"
 
-#, fuzzy
 msgid "SNDMNU_SFXVOLUME"
 msgstr "Sounds volume"
 
-#, fuzzy
 msgid "SNDMNU_MENUVOLUME"
 msgstr "Menu volume"
 
-#, fuzzy
 msgid "SNDMNU_MUSICVOLUME"
 msgstr "Music volume"
 
-#, fuzzy
 msgid "SNDMNU_MIDIDEVICE"
 msgstr "MIDI device"
 
-#, fuzzy
 msgid "SNDMNU_BACKGROUND"
 msgstr "Sound in Background"
 
-#, fuzzy
 msgid "SNDMNU_UNDERWATERREVERB"
 msgstr "Underwater reverb"
 
-#, fuzzy
 msgid "SNDMNU_RANDOMIZEPITCHES"
 msgstr "Randomize pitches"
 
-#, fuzzy
 msgid "SNDMNU_CHANNELS"
 msgstr "Sound channels"
 
-#, fuzzy
 msgid "SNDMNU_OPENAL"
 msgstr "OpenAL options"
 
-#, fuzzy
 msgid "SNDMNU_RESTART"
 msgstr "Restart sound"
 
-#, fuzzy
 msgid "SNDMNU_ADVANCED"
 msgstr "Advanced options"
 
-#, fuzzy
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Module replayer options"
 
 msgid "SNDMNU_MIDIPLAYER"
 msgstr "MIDI device options"
 
-#, fuzzy
 msgid "ADVSNDMNU_TITLE"
 msgstr "Advanced Sound Options"
 
-#, fuzzy
 msgid "ADVSNDMNU_SAMPLERATE"
 msgstr "Sample rate"
 
-#, fuzzy
 msgid "ADVSNDMNU_HRTF"
 msgstr "HRTF"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLSYNTHESIS"
 msgstr "OPL Synthesis"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Number of emulated OPL chips"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLGAIN"
 msgstr "Gain"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Full MIDI stereo panning"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLCORES"
 msgstr "OPL Emulator Core"
 
-#, fuzzy
 msgid "ADVSNDMNU_MIDIVOICES"
 msgstr "MIDI voices"
 
@@ -962,27 +872,21 @@ msgstr "Global"
 msgid "ADVSNDMNU_FREEVERB"
 msgstr "Freeverb"
 
-#, fuzzy
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Global Freeverb"
 
-#, fuzzy
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Gain"
 
-#, fuzzy
 msgid "ADVSNDMNU_REVERB"
 msgstr "Reverb"
 
-#, fuzzy
 msgid "ADVSNDMNU_REVERB_LEVEL"
 msgstr "Reverb Level"
 
-#, fuzzy
 msgid "ADVSNDMNU_CHORUS"
 msgstr "Chorus"
 
-#, fuzzy
 msgid "ADVSNDMNU_TIMIDITY"
 msgstr "Timidity++"
 
@@ -995,83 +899,63 @@ msgstr "OPNMidi"
 msgid "ADVSNDMNU_WILDMIDI"
 msgstr "WildMidi"
 
-#, fuzzy
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Select configuration"
 
-#, fuzzy
 msgid "ADVSNDMNU_ADVRESAMPLING"
 msgstr "Advanced Resampling"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "OPL Bank"
 
-#, fuzzy
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Run emulator at PCM rate"
 
-#, fuzzy
 msgid "ADVSNDMNU_ADLNUMCHIPS"
 msgstr "Number of emulated OPL chips"
 
-#, fuzzy
 msgid "ADVSNDMNU_ADLGAIN"
 msgstr "Gain"
 
-#, fuzzy
 msgid "ADVSNDMNU_VLMODEL"
 msgstr "Volume model"
 
-#, fuzzy
 msgid "ADVSNDMNU_CHANALLOC"
 msgstr "Channel allocation method"
 
-#, fuzzy
 msgid "ADVSNDMNU_AUTOARPEGGIO"
 msgstr "Automatic arpeggio"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPNCORES"
 msgstr "OPN2 Emulator Core"
 
-#, fuzzy
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "GUS Emulation"
 
-#, fuzzy
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "Read DMXGUS lumps"
 
-#, fuzzy
 msgid "ADVSNDMNU_GUSMEMSIZE"
 msgstr "GUS memory size"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPNNUMCHIPS"
 msgstr "Number of emulated OPN chips"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPNGAIN"
 msgstr "Gain"
 
-#, fuzzy
 msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "Use custom WOPL bank"
 
-#, fuzzy
 msgid "ADVSNDMNU_ADLUSEWADBANK"
 msgstr "Use WAD's GENMIDI bank as custom bank"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "WOPL Bank file"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPNCUSTOMBANK"
 msgstr "Use custom WOPN bank"
 
-#, fuzzy
 msgid "ADVSNDMNU_OPNBANKFILE"
 msgstr "WOPN Bank file"
 
@@ -1136,15 +1020,12 @@ msgstr "Note on/off only"
 msgid "OPTVAL_FULLRAMPING"
 msgstr "Full ramping"
 
-#, fuzzy
 msgid "MODMNU_MASTERVOLUME"
 msgstr "Master volume"
 
-#, fuzzy
 msgid "MODMNU_QUALITY"
 msgstr "Quality"
 
-#, fuzzy
 msgid "MODMNU_VOLUMERAMPING"
 msgstr "Volume ramping"
 
@@ -1364,59 +1245,45 @@ msgstr "Obverse"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "Reverse"
 
-#, fuzzy
 msgid "GLMNU_POSTPROCESS"
-msgstr "Postprocessing"
+msgstr "Post-processing"
 
-#, fuzzy
 msgid "GLPREFMNU_TONEMAP"
 msgstr "Tonemap Mode"
 
-#, fuzzy
 msgid "GLPREFMNU_LENS"
 msgstr "Lens distortion effect"
 
-#, fuzzy
 msgid "GLPREFMNU_FXAA"
 msgstr "FXAA Quality"
 
-#, fuzzy
 msgid "GLPREFMNU_DITHER"
 msgstr "Dither output"
 
-#, fuzzy
 msgid "GLPREFMNU_PALTONEMAPORDER"
 msgstr "Tonemap Palette Order"
 
-#, fuzzy
 msgid "GLPREFMNU_PALTONEMAPPOWER"
 msgstr "Tonemap Palette Exponent"
 
-#, fuzzy
 msgid "GLPREFMNU_MULTISAMPLE"
 msgstr "Multisample"
 
-#, fuzzy
 msgid "GLPREFMNU_BLOOM"
 msgstr "Bloom effect"
 
-#, fuzzy
 msgid "GLPREFMNU_SSAO"
 msgstr "Ambient occlusion quality"
 
-#, fuzzy
 msgid "GLPREFMNU_SSAO_PORTALS"
 msgstr "Portals with AO"
 
-#, fuzzy
 msgid "GLPREFMNU_MENUBLUR"
 msgstr "Menu Blur"
 
-#, fuzzy
 msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
 msgstr "Environment map on mirrors"
 
-#, fuzzy
 msgid "GLPREFMNU_RENDERQUALITY"
 msgstr "Rendering quality"
 
@@ -1428,11 +1295,9 @@ msgstr "Speed"
 msgid "OPTVAL_QUALITY"
 msgstr "Quality"
 
-#, fuzzy
 msgid "GLPREFMNU_SECLIGHTMODE"
 msgstr "Sector light mode"
 
-#, fuzzy
 msgid "GLPREFMNU_FOGMODE"
 msgstr "Fog mode"
 
@@ -1444,11 +1309,9 @@ msgstr "Radial"
 msgid "OPTVAL_STANDARD"
 msgstr "Standard"
 
-#, fuzzy
 msgid "GLTEXMNU_TEXFILTER"
 msgstr "Texture Filter mode"
 
-#, fuzzy
 msgid "GLTEXMNU_ANISOTROPIC"
 msgstr "Anisotropic filter"
 
@@ -1487,43 +1350,33 @@ msgstr "16×"
 msgid "OPTVAL_32X"
 msgstr "32×"
 
-#, fuzzy
 msgid "GLTEXMNU_TITLE"
 msgstr "Texture Options"
 
-#, fuzzy
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "High Quality Resize mode"
 
-#, fuzzy
 msgid "GLTEXMNU_HQRESIZEMULT"
 msgstr "High Quality Resize multiplier"
 
-#, fuzzy
 msgid "GLTEXMNU_HQRESIZEWARN"
 msgstr "This mode requires %d times more video memory"
 
-#, fuzzy
 msgid "GLTEXMNU_RESIZETEX"
 msgstr "Resize textures"
 
-#, fuzzy
 msgid "GLTEXMNU_RESIZESPR"
 msgstr "Resize sprites"
 
-#, fuzzy
 msgid "GLTEXMNU_RESIZEFNT"
 msgstr "Resize fonts"
 
-#, fuzzy
 msgid "GLTEXMNU_RESIZESKN"
 msgstr "Resize model skins"
 
-#, fuzzy
 msgid "GLTEXMNU_PRECACHETEX"
 msgstr "Precache GL textures"
 
-#, fuzzy
 msgid "VIDMNU_TITLE"
 msgstr "Video Mode"
 
@@ -1535,87 +1388,66 @@ msgstr "Letterbox"
 msgid "OPTVAL_STRETCH"
 msgstr "Stretch"
 
-#, fuzzy
 msgid "VIDMNU_RENDERMODE"
 msgstr "Render Mode"
 
-#, fuzzy
 msgid "VIDMNU_FULLSCREEN"
 msgstr "Fullscreen"
 
-#, fuzzy
 msgid "VIDMNU_HIDPI"
 msgstr "Retina/HiDPI support"
 
-#, fuzzy
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Force aspect ratio"
 
-#, fuzzy
 msgid "VIDMNU_CROPASPECT"
 msgstr "Forced ratio style"
 
-#, fuzzy
 msgid "VIDMNU_SCALEMODE"
 msgstr "Resolution scale"
 
-#, fuzzy
 msgid "VIDMNU_SCALEFACTOR"
 msgstr "Scale Factor"
 
-#, fuzzy
 msgid "VIDMNU_USELINEAR"
 msgstr "Use Linear Scaling (Fullscreen)"
 
-#, fuzzy
 msgid "VIDMNU_CUSTOMRES"
 msgstr "Custom Pixel Scaling"
 
-#, fuzzy
 msgid "VIDMNU_CUSTOMX"
 msgstr "Custom Width"
 
-#, fuzzy
 msgid "VIDMNU_CUSTOMY"
 msgstr "Custom Height"
 
-#, fuzzy
 msgid "VIDMNU_APPLYW"
 msgstr "Apply Changes (Windowed)"
 
-#, fuzzy
 msgid "VIDMNU_APPLYFS"
 msgstr "Apply Changes (Fullscreen)"
 
-#, fuzzy
 msgid "VIDMNU_RESPRESET"
 msgstr "Choose Resolution Preset"
 
-#, fuzzy
 msgid "VIDMNU_RESPRESETTTL"
 msgstr "Custom Resolution Presets"
 
-#, fuzzy
 msgid "VIDMNU_RESPRESETHEAD"
 msgstr "Preset Resolution Modes"
 
-#, fuzzy
 msgid "VIDMNU_ASPECT43"
 msgstr "4:3 Aspect"
 
-#, fuzzy
 msgid "VIDMNU_ASPECT54"
 msgstr "5:4 Aspect"
 
-#, fuzzy
 msgid "VIDMNU_ASPECT169"
 msgstr "16:9 Aspect"
 
-#, fuzzy
 msgid "VIDMNU_ASPECT1610"
 msgstr "16:10 Aspect"
 
-#, fuzzy
 msgid "VIDMNU_ASPECT219"
 msgstr "21:9 Aspect"
 
@@ -1631,7 +1463,6 @@ msgstr "Lowest Possible Scale"
 msgid "OPTVAL_CUSTOM"
 msgstr "Custom"
 
-#, fuzzy
 msgid "VIDMNU_MAXFPS"
 msgstr "Max FPS"
 
@@ -1659,7 +1490,6 @@ msgstr "144 fps"
 msgid "OPTVAL_200FPS"
 msgstr "200 fps"
 
-#, fuzzy
 msgid "VIDMNU_PREFERBACKEND"
 msgstr "Preferred Rendering API"
 
@@ -1672,58 +1502,45 @@ msgstr "Vulkan"
 msgid "OPTVAL_OPENGLES"
 msgstr "OpenGL ES"
 
-#, fuzzy
 msgid "MISCMNU_MERGEKEYS"
 msgstr "Merge left+right Alt/Ctrl/Shift"
 
-#, fuzzy
 msgid "MISCMNU_WINFULLSCREENTOGGLE"
 msgstr "Alt-Enter toggles fullscreen"
 
-#, fuzzy
 msgid "MISCMNU_MACFULLSCREENTOGGLE"
 msgstr "Command-F toggles fullscreen"
 
-#, fuzzy
 msgid "MISCMNU_ENABLEAUTOSAVES"
 msgstr "Enable autosaves"
 
-#, fuzzy
 msgid "MISCMNU_AUTOSAVECOUNT"
 msgstr "Number of autosaves"
 
-#, fuzzy
 msgid "MISCMNU_SAVELOADCONFIRMATION"
 msgstr "Save/Load confirmation"
 
-#, fuzzy
 msgid "MISCMNU_NOCHEATS"
 msgstr "Disable keyboard cheats"
 
-#, fuzzy
 msgid "MISCMNU_QUICKSAVEROTATION"
 msgstr "Quicksave rotation"
 
-#, fuzzy
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Number of quicksaves in rotation"
 
 msgid "MISCMNU_CLEANMENU"
 msgstr "Classic ZDoom menu scaling"
 
-#, fuzzy
 msgid "MISCMNU_PAUSEINBACKGROUND"
 msgstr "Pause game in background"
 
-#, fuzzy
 msgid "HUDMNU_CROSSHAIR"
 msgstr "Default Crosshair"
 
-#, fuzzy
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Crosshair color"
 
-#, fuzzy
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Scale crosshair"
 
@@ -1735,7 +1552,6 @@ msgstr "Standard"
 msgid "OPTVAL_YES_ENHANCED"
 msgstr "Enhanced"
 
-#, fuzzy
 msgid "OPTMNU_LANGUAGE"
 msgstr "Language"
 
@@ -1743,82 +1559,63 @@ msgstr "Language"
 msgid "TXT_UNDOCHANGES"
 msgstr "Undo Changes"
 
-#, fuzzy
 msgid "REVMNU_SELECT"
 msgstr "Select Environment"
 
-#, fuzzy
 msgid "REVMNU_TEST"
 msgstr "Test Environment"
 
-#, fuzzy
 msgid "REVMNU_EDIT"
 msgstr "Edit Environment"
 
-#, fuzzy
 msgid "REVMNU_NEW"
 msgstr "New Environment"
 
-#, fuzzy
 msgid "REVMNU_Reflections_Scale"
 msgstr "Reflections Scale"
 
-#, fuzzy
 msgid "REVMNU_Reflections_Delay_Scale"
 msgstr "Reflections Delay Scale"
 
-#, fuzzy
 msgid "REVMNU_Decay_Time_Scale"
 msgstr "Decay Time Scale"
 
-#, fuzzy
 msgid "REVMNU_Decay_HF_Limit"
 msgstr "Decay HF Limit"
 
-#, fuzzy
 msgid "REVMNU_Reverb_Scale"
 msgstr "Reverb Scale"
 
-#, fuzzy
 msgid "REVMNU_Reverb_Delay_Scale"
 msgstr "Reverb Delay Scale"
 
-#, fuzzy
 msgid "REVMNU_Echo_Time_Scale"
 msgstr "Echo Time Scale"
 
-#, fuzzy
 msgid "REVMNU_Modulation_Time_Scale"
 msgstr "Modulation Time Scale"
 
-#, fuzzy
 msgid "REVMNU_Based_on"
 msgstr "Based on"
 
 msgid "REVMNU_Name"
 msgstr "Name"
 
-#, fuzzy
 msgid "REVMNU_ID_1"
 msgstr "ID #1"
 
-#, fuzzy
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-#, fuzzy
 msgid "REVMNU_Create"
 msgstr "Create"
 
-#, fuzzy
 msgid "REVMNU_Save"
 msgstr "Save…"
 
-#, fuzzy
 msgid "REVMNU_File_name"
 msgstr "File name"
 
-#, fuzzy
 msgid "REVMNU_Environments_to_save"
 msgstr "Environments to save"
 
@@ -1831,7 +1628,6 @@ msgstr "Vulkan Options"
 msgid "VKMNU_DEVICE"
 msgstr "Vulkan Device ID"
 
-#, fuzzy
 msgid "VKMNU_HDR"
 msgstr "High Dynamic Range"
 
@@ -1888,7 +1684,6 @@ msgstr "0"
 msgid "REQUIRED_CHARACTERS"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#, fuzzy
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "Full options menu"
 

@@ -2,512 +2,592 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: none\n"
-"PO-Revision-Date: 2026-02-12 19:09+0000\n"
+"PO-Revision-Date: 2026-04-21 09:10+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-"
+"games/hacx-filter/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "QUITMSG1"
-msgstr ""
+msgstr "Jesu li ti ovi kukci preteški?"
 
 msgid "QUITMSG"
 msgstr ""
+"Jesi li siguran da\\n"
+"želiš izaći iz akcije?"
 
 msgid "QUITMSG2"
-msgstr ""
+msgstr "Pokušavaš prestati? A zoveš se hakir?"
 
 msgid "QUITMSG3"
-msgstr ""
+msgstr "Vrati se ovamo prije nego što ti pošaljem virus u izduvnu cijev!"
 
 msgid "QUITMSG4"
-msgstr ""
+msgstr "Pravi hakeri nikada ne odustaju od akcije."
 
 msgid "QUITMSG5"
-msgstr ""
+msgstr "Hajde! Još nisi vidio najbolji dio!"
 
 msgid "QUITMSG6"
-msgstr ""
+msgstr "Odustani sada i kibernetički prostor je gotov!"
 
 msgid "QUITMSG7"
-msgstr ""
+msgstr "GENIE šalje svoje najbolje pozdrave, ološu!"
 
 msgid "QUITMSG8"
-msgstr ""
+msgstr "Hmm. Toliko o tome da budeš heroj, Hacker."
 
 msgid "QUITMSG9"
-msgstr ""
+msgstr "Što? Radije bi se vratio u ćeliju?"
 
 msgid "QUITMSG10"
-msgstr ""
+msgstr "Trebao sam uzeti plavu pilulu."
 
 msgid "QUITMSG11"
-msgstr ""
+msgstr "Ime igre nije Twitch n' Run!"
 
 msgid "QUITMSG12"
-msgstr ""
+msgstr "Bez brige. Spašavanje svijeta može pričekati, zar ne?"
 
 msgid "QUITMSG13"
-msgstr ""
+msgstr "Valjda je vrijeme da se, poput interneta, raziđemo!"
 
 msgid "QUITMSG14"
-msgstr ""
+msgstr "Nemoj otići i zaboraviti na HacXa!"
 
 msgid "OB_SUICIDE"
-msgstr ""
+msgstr "%o izbrisan %hself iz svemira."
 
 msgid "OB_FALLING"
-msgstr ""
+msgstr "%o stvorio je krater veličine Kansasa."
 
 msgid "OB_CRUSH"
-msgstr ""
+msgstr "%o postao je ljudski palačinka."
 
 msgid "OB_EXIT"
-msgstr ""
+msgstr "%o je pokušao iskočiti."
 
 msgid "OB_WATER"
-msgstr ""
+msgstr "%o plivao je kao cigla."
 
 msgid "OB_SLIME"
-msgstr ""
+msgstr "%o je krenuo nuklearno."
 
 msgid "OB_LAVA"
-msgstr ""
+msgstr "%o se istuširao."
 
 msgid "OB_BARREL"
-msgstr ""
+msgstr "%o predozirao se nitroglicerinom."
 
 msgid "OB_SPLASH"
-msgstr ""
+msgstr "%o se oguli na sitne komadiće."
 
 msgid "OB_R_SPLASH"
-msgstr ""
+msgstr "%o je želio vidjeti kako %g izgleda iznutra-navrhu."
 
 msgid "OB_ROCKET"
-msgstr ""
+msgstr "%o je želio vidjeti kako %g izgleda iznutra-navrhu."
 
 msgid "OB_KILLEDSELF"
-msgstr ""
+msgstr "%o izbrisan %hself iz svemira."
 
 msgid "OB_THUG"
-msgstr ""
+msgstr "%o više nije dominantna vrsta."
 
 msgid "OB_ANDROID"
-msgstr ""
+msgstr "%o priključen na pogrešan uređaj."
 
 msgid "OB_MONSTRUCT"
 msgstr ""
+"%o je %hs sebi priuštio čudovišno razbijanje protivnika u kibernetičkoj "
+"utrci."
 
 msgid "OB_ICE"
-msgstr ""
+msgstr "%o je zamrznut."
 
 msgid "OB_BUZZER"
-msgstr ""
+msgstr "%o se osjeća pomalo uzbuđeno."
 
 msgid "OB_STEALTH"
-msgstr ""
+msgstr "%o otkriva prilično šokantan razvoj događaja."
 
 msgid "OB_DMAN"
-msgstr ""
+msgstr "%o je izbrisan iz kibernetičkog prostora."
 
 msgid "OB_GLASS"
-msgstr ""
+msgstr "%o je %hselfu dao staklenu čeljust."
 
 msgid "OB_MANIAC"
-msgstr ""
+msgstr "Životno članstvo %o-a je prekinuto."
 
 msgid "OB_MANIACHIT"
-msgstr ""
+msgstr "%o je umro na neki nasumičan način koji ne mogu shvatiti."
 
 msgid "OB_TERMIN"
-msgstr ""
+msgstr "%o je pržen od strane čudne femme fatale."
 
 # This text is not gender neutral, obviously...
 msgid "OB_TERMINHIT"
-msgstr ""
+msgstr "%o se malo približio suprotnom spolu."
 
 msgid "OB_REPLI"
-msgstr ""
+msgstr "%o se oprostio od starog prijatelja."
 
 msgid "OB_REPLIHIT"
-msgstr ""
+msgstr "%o je izbočen u leđa od strane starog prijatelja."
 
 msgid "OB_PHAGE"
-msgstr ""
+msgstr "%o je uklonjen prirodnom selekcijom."
 
 msgid "OB_THORN"
-msgstr ""
+msgstr "%o nije mogao izbjeći trnovitu smrt."
 
 msgid "OB_SUMATIC"
-msgstr ""
+msgstr "%o je primio sumo udarac u prepone."
 
 msgid "OB_GENIE"
-msgstr ""
+msgstr "%o nije dobio %p tri želje."
 
 msgid "OB_MINE"
-msgstr ""
+msgstr "%o je pokušao pomaziti minu."
 
 msgid "OB_MPKICK"
-msgstr ""
+msgstr "%o je primio %k-ov Bruce Lee fu-udarac u lice."
 
 msgid "OB_MPREZNATOR"
-msgstr ""
+msgstr "%o se raspalo zbog šokantnog otkrića %k."
 
 msgid "OB_MPXPISTOL"
-msgstr ""
+msgstr "%o je pretrpio dvostruku dozu %k-ove kazne."
 
 msgid "OB_MPTAZER"
-msgstr ""
+msgstr "%o je bio isključen pomoću %k-ovog šok-štapa."
 
 msgid "OB_MPCRYOGUN"
-msgstr ""
+msgstr "%o je dobio punu facu ledeno hladnog bijesa %k-a."
 
 msgid "OB_MPUZI"
-msgstr ""
+msgstr "%o je bio izbušen pun rupa od strane %k, gangsta-stilom."
 
 msgid "OB_MPZOOKA"
-msgstr ""
+msgstr "%o pojeo je fotonsku bombu %k-a."
 
 msgid "OB_MPZ_SPLASH"
-msgstr ""
+msgstr "%o je sveden na urednu hrpu fotona od strane %k."
 
 # Physically this is utter nonsense, of course.
 msgid "OB_MPANTIGUN"
-msgstr ""
+msgstr "%o je smanjen na antimateriju za %k."
 
 msgid "OB_MPNUKE"
-msgstr ""
+msgstr "%o progutao je nuklearku %k-a."
 
 msgid "OB_MPNUKESPLASH"
 msgstr ""
+"%o je primijenio nuklearno oružje nakon %k-ove serije masovnih razaranja."
 
 msgid "OB_MPTELEFRAG"
-msgstr ""
+msgstr "%o je bio izvrnut naopako od strane %k."
 
 msgid "OB_MONTELEFRAG"
-msgstr ""
+msgstr "Atomska struktura %o-a je razdvojena."
 
 msgid "OB_DEFAULT"
-msgstr ""
+msgstr "%o spontano je isteklo."
 
 msgid "GOTNUKER"
-msgstr ""
+msgstr "Uhvati nuklearcu! Sisi ovo!"
 
 msgid "GOTUZI"
-msgstr ""
+msgstr "Imaš UZI!!"
 
 msgid "GOTREZNATOR"
-msgstr ""
+msgstr "HOIG Reznator - PRŽI neko dupe"
 
 msgid "GOTPHOTONZOOKA"
-msgstr ""
+msgstr "Imaš Photon 'Zooka!"
 
 msgid "GOTBIGSTICK"
-msgstr ""
+msgstr "Nosite veliki štap!"
 
 msgid "GOTTAZER"
-msgstr ""
+msgstr "Imaš Taser!!"
 
 msgid "GOTCRYOGUN"
-msgstr ""
+msgstr "Uhvatiš kriopistol! ZAMRZI!"
 
 msgid "GOTROUNDS"
-msgstr ""
+msgstr "Uzmi nekoliko metaka!"
 
 msgid "GOTROUNDSCASE"
-msgstr ""
+msgstr "Uhvatiš kutiju metaka!"
 
 # Was "grap" for some reason.
 msgid "GOTTORPEDO"
-msgstr ""
+msgstr "Uhvati torpedo!"
 
 msgid "GOTTORPEDOS"
-msgstr ""
+msgstr "Uhvatiš kutiju Torpedosa!"
 
 msgid "GOTMOLECULES"
-msgstr ""
+msgstr "Uhvati molekularni modul!"
 
 msgid "GOTMOLECULESTANK"
-msgstr ""
+msgstr "Hvataš spremnik pun molekula!"
 
 msgid "GOTCARTRIDGES"
-msgstr ""
+msgstr "Uhvatiš nekoliko čahura!"
 
 msgid "GOTCARTRIDGESCASE"
-msgstr ""
+msgstr "Uhvatiš kutiju čahura!"
 
 msgid "GOTVALISE"
-msgstr ""
+msgstr "Uhvatiš kofer napunjen robom!"
 
 msgid "GOTFORCEFIELD"
-msgstr ""
+msgstr "Polje sile!"
 
 msgid "GOTMICROTEL"
-msgstr ""
+msgstr "007Microtel"
 
 msgid "GOTENKBLIND"
-msgstr ""
+msgstr "Ti si EnK slijep!"
 
 msgid "GOTRUBBERBOOTS"
-msgstr ""
+msgstr "Vulcan gumene čizme!"
 
 msgid "GOTSIARRAY"
-msgstr ""
+msgstr "Mapiranje SI niza!"
 
 msgid "GOTINFRARED"
-msgstr ""
+msgstr "Infracrveni vizir!"
 
 msgid "GOTINHALER"
-msgstr ""
+msgstr "Udahni duboko, Inhaler!"
 
 msgid "GOTHYPONEED"
-msgstr ""
+msgstr "Doza Hydergina iz hipo tablete te spašava!"
 
 msgid "GOTHYPO"
-msgstr ""
+msgstr "Uhvatiš hipo!"
 
 msgid "GOTKEYCARD"
-msgstr ""
+msgstr "Pronašao si KeyCard!"
 
 msgid "GOTCKEY"
-msgstr ""
+msgstr "Pronašao si C-ključ!"
 
 msgid "GOTPASSWORD"
-msgstr ""
+msgstr "Pronašao si lozinku!"
 
 msgid "GOTBLUEZKEY"
-msgstr ""
+msgstr "Pronašao si plavi Z-ključ!"
 
 msgid "GOTYELWZKEY"
-msgstr ""
+msgstr "Pronašao si žuti Z-ključ!"
 
 msgid "GOTREDZKEY"
-msgstr ""
+msgstr "Pronašao si crveni Z-ključ!"
 
 msgid "GOTBODYARMOR"
-msgstr ""
+msgstr "Oklop!"
 
 msgid "GOTCENTROPHENOXINE"
-msgstr ""
+msgstr "Centrifenoksin"
 
 msgid "GOTKEVLARVEST"
-msgstr ""
+msgstr "Uhvatiš kevlarsku prsluk!"
 
 msgid "GOTSKEVLARVEST"
-msgstr ""
+msgstr "Uhvati Super Kevlar prsluk!"
 
 msgid "GOTMICROKIT"
-msgstr ""
+msgstr "Uhvati MicroKit!"
 
 msgid "GOTDAMPENER"
-msgstr ""
+msgstr "Uhvati prigušivač!"
 
 msgid "PD_CKEY"
-msgstr ""
+msgstr "Potreban vam je C-ključ za pristup ovom predmetu!"
 
 msgid "PD_KEYCARD"
-msgstr ""
+msgstr "Potrebna vam je KeyCard za pristup ovom predmetu!"
 
 msgid "PD_PASSWORD"
-msgstr ""
+msgstr "Potrebna vam je lozinka za pristup ovom stavku!"
 
 msgid "PD_BLUEZKEY"
-msgstr ""
+msgstr "Potrebna vam je plava Z-tipka da bi ovo funkcioniralo"
 
 msgid "PD_REDZKEY"
-msgstr ""
+msgstr "Potrebna vam je crvena Z-tipka da bi ovo funkcioniralo!"
 
 msgid "PD_YELWZKEY"
-msgstr ""
+msgstr "Potrebna vam je žuta Z-tipka da bi ovo funkcioniralo!"
 
 msgid "X1TEXT"
 msgstr ""
+"Dvadeset milijuna u zlatu\n"
+"ne izgleda kao da vrijedi sve ove gnjavaže,\n"
+"zar ne, hakere?\n"
+"\n"
+"Čini da se ova kazna čini kao pravi piknik!\n"
+"Jezivo ružne bio-mutacije i tvoji suvremeni\n"
+"ljudi ovješeni sa stropa kao vreće za hranu.\n"
+"\n"
+"Što je, dovraga, ovaj GENIE?\n"
+"Nije ni blizu kao bilo koji\n"
+"kompjuter koji si ikad hakirao!\n"
+"\n"
+"Bolje ti je da pronađeš sljedeći terminal,\n"
+"isječeš si prijevoz kroz c-prostor, nasiječeš\n"
+"neku mutantsku guzicu i jebeš se odavde!\n"
+"\n"
 
 msgid "X2TEXT"
 msgstr ""
+"Gdje je sav taj narod?!\n"
+"\n"
+"Pariz je pust grad, osim ako mutante\n"
+"ne smatrate izvanrednim građanima.\n"
+"\n"
+"Našao si se s prokletih otporom.\n"
+"Čovječe, kako se ovi kukci bore!\n"
+"Sreća pa nisu najbistriji u kvartu.\n"
+"\n"
+"Ali dobio si neke od informacija\n"
+"koje pododbor želi. I prilično je gadno!\n"
+"\n"
+"Ljudske živčane tekućine hrane ove kukce!\n"
+"Nije ni čudo što je susjedstvo postalo\n"
+"prilično pusto. Javi se pododboru. I\n"
+"pazi kamo gaziš...\n"
 
 msgid "X3TEXT"
 msgstr ""
+"Civilizacija kakvu ste poznavali je ništa!\n"
+"\n"
+"Nema prijatelja, nema obitelji. Nema više ljudi.\n"
+"U svakom slučaju, ne normalnih ljudi.\n"
+"\n"
+"Ostao je samo jedan... GENI!\n"
+"I ako moraš ići do kraja svemira,\n"
+"naći ćeš njegovo mutirano dupe!\n"
+"'ko si sad bijesan!\n"
+"\n"
+"A zlato? Dođavola, ovo je džabe.\n"
+"\n"
+".....(nastavak slijedi)....."
 
 msgid "X5TEXT"
 msgstr ""
+"Živ si!\n"
+"\n"
+"Koje su šanse, hakere?!\n"
+"jer vrvi od buba.\n"
+"\n"
+"Ne možeš doći do pododbora, što\n"
+"znači da je kompromitiran.\n"
+"\n"
+"\n"
+"Ti... si sam."
 
 msgid "TXT_HACXMAP01"
-msgstr ""
+msgstr "GenEmp Korp."
 
 msgid "TXT_HACXMAP02"
-msgstr ""
+msgstr "Grad tunela"
 
 msgid "TXT_HACXMAP03"
-msgstr ""
+msgstr "Lavski aneks"
 
 msgid "TXT_HACXMAP04"
-msgstr ""
+msgstr "Alkatraz"
 
 msgid "TXT_HACXMAP05"
-msgstr ""
+msgstr "Kibernetički cirkus"
 
 msgid "TXT_HACXMAP06"
-msgstr ""
+msgstr "Digi-Ota"
 
 msgid "TXT_HACXMAP07"
-msgstr ""
+msgstr "Veliki zid"
 
 msgid "TXT_HACXMAP08"
-msgstr ""
+msgstr "Vrt užitaka"
 
 msgid "TXT_HACXMAP09"
-msgstr ""
+msgstr "Skriveni dvorac"
 
 msgid "TXT_HACXMAP10"
-msgstr ""
+msgstr "Anarhistički san"
 
 msgid "TXT_HACXMAP11"
-msgstr ""
+msgstr "Notus mi!"
 
 msgid "TXT_HACXMAP12"
-msgstr ""
+msgstr "Gotički rukavac"
 
 msgid "TXT_HACXMAP13"
-msgstr ""
+msgstr "Odvodnice"
 
 msgid "TXT_HACXMAP14"
-msgstr ""
+msgstr "Trode ratovi"
 
 msgid "TXT_HACXMAP15"
-msgstr ""
+msgstr "Sumrak Enka"
 
 msgid "TXT_HACXMAP16"
-msgstr ""
+msgstr "Proteanski Cybex"
 
 msgid "TXT_HACXMAP17"
-msgstr ""
+msgstr "Rijeka krvi"
 
 msgid "TXT_HACXMAP18"
-msgstr ""
+msgstr "Bizarro"
 
 msgid "TXT_HACXMAP19"
-msgstr ""
+msgstr "Ratne sobe"
 
 msgid "TXT_HACXMAP20"
-msgstr ""
+msgstr "Upozorenje na provalnika!"
 
 msgid "TXT_HACXMAP31"
-msgstr ""
+msgstr "Soba za sušenje"
 
 msgid "STSTR_CLEV"
-msgstr ""
+msgstr "Sada stižemo na...\n"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr ""
+msgstr "...ispeči ti dupe!"
 
 # Hacx's content here was totally useless so it got removed. However, this
 # string has to be defined and minimally altered so that the Dehacked
 # replacement is not being triggered.
 msgid "STSTR_BEHOLD"
-msgstr ""
+msgstr "inVuln, Str, Inviso, Rad, Allmap ili Lite-amp?"
 
 msgid "STSTR_BEHOLDX"
-msgstr ""
+msgstr "Budimo ozbiljni!"
 
 msgid "STSTR_NCON"
-msgstr ""
+msgstr "Cyber-Slicer način rada UKLJUČEN"
 
 msgid "STSTR_NCOFF"
-msgstr ""
+msgstr "Cyberslicer način rada ISKLJUČEN"
 
 msgid "STSTR_NOMUS"
-msgstr ""
+msgstr "Izbor: Nemoguće "
 
 # Should probably not be translated...
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "Pojačaj glasnoću\n"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "INIT-Twitch n'Kill način"
 
 msgid "STSTR_FAADDED"
-msgstr ""
+msgstr "Neka bude, Hacker."
 
 msgid "STSTR_DQDON"
-msgstr ""
+msgstr "Način kibernetičke potencije UKLJUČEN"
 
 msgid "STSTR_DQDOFF"
-msgstr ""
+msgstr "Način cyberpotence isključen"
 
 msgid "AMSTR_FOLLOWON"
-msgstr ""
+msgstr "Prati UKLJUČENO"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr ""
+msgstr "Prati ISKLJUČENO"
 
 msgid "DOSY"
-msgstr ""
+msgstr "- Pritisni Y da pobjegneš! -"
 
 msgid "ENDGAME"
 msgstr ""
+"Jesi li lud ili neprilagođen?\n"
+"Pa? Da ili ne!"
 
 msgid "NIGHTMARE"
 msgstr ""
+"Jesi li siguran? Ne možeš podnijeti\n"
+"ovu vještinu, hakere!\n"
+"\n"
+"Pritisni Y da umreš. \n"
 
 # For most languages the original Doom text should suffice.
 msgid "QSPROMPT"
 msgstr ""
+"Brzo spremanje nad vašim podacima nazvanim\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Pritisnite Y ili N."
 
 msgid "QLPROMPT"
 msgstr ""
+"Želite li brzo učitati podatke naziva\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Pritisnite Y ili N."
 
 msgid "CC_THUG"
-msgstr ""
+msgstr "Guljač"
 
 msgid "CC_ANDROID"
-msgstr ""
+msgstr "Android"
 
 msgid "CC_ICE"
-msgstr ""
+msgstr "led"
 
 msgid "CC_BUZZER"
-msgstr ""
+msgstr "Zvono"
 
 msgid "CC_DMAN"
-msgstr ""
+msgstr "D-Man"
 
 msgid "CC_PHAGE"
-msgstr ""
+msgstr "Fag"
 
 msgid "CC_MONSTRUCT"
-msgstr ""
+msgstr "Monstruktura"
 
 msgid "CC_MECH"
-msgstr ""
+msgstr "Mehanički manijak"
 
 msgid "CC_TERMI"
-msgstr ""
+msgstr "Terminatorica"
 
 msgid "CC_THORN"
-msgstr ""
+msgstr "Trnovita stvar"
 
 msgid "CC_MAJONG"
-msgstr ""
+msgstr "Madžong 7"
 
 msgid "CC_HERO"
-msgstr ""
+msgstr "Dan Evanger"
 
 msgid "SKILL_BABY"
-msgstr ""
+msgstr "Molim vas, nemojte pucati!"
 
 msgid "SKILL_EASY"
-msgstr ""
+msgstr "Aargh, trebam zdravlje!"
 
 msgid "SKILL_NORMAL"
-msgstr ""
+msgstr "Rastrgajmo ih!"
 
 msgid "SKILL_HARD"
-msgstr ""
+msgstr "Ja sam besmrtan!"
 
 msgid "SKILL_NIGHTMARE"
-msgstr ""
+msgstr "Ludilo!"

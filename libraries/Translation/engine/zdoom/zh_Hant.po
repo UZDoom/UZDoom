@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-04-17 12:09+0000\n"
+"Last-Translator: PlayerLin <playerlin@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/zdoom-engine-strings/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
 msgstr "按下任何鍵。"
@@ -127,154 +127,191 @@ msgstr "給我快滾啦，我才懶得管哩。"
 # More info here.
 msgid "QUITMSG8"
 msgstr ""
-"你想離開？\n"
-"那，汝已失去那八分之一的美德！"
+"你想縮了？\n"
+"那，汝離成聖已棋差一著！"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
+"別走呀，有隻次元蹣跚怪\n"
+"牠正在 DOS 提示字元那邊\n"
+"等著你啊！"
 
 msgid "QUITMSG10"
 msgstr ""
+"滾開啦去搞\n"
+"你的無聊程式啦。"
 
 msgid "QUITMSG11"
 msgstr ""
+"若我是你的上司，我想\n"
+"要馬上跟你死鬥一番！"
 
 msgid "QUITMSG12"
 msgstr ""
+"嘿，夥計。你現在閃人\n"
+"的話就會失去你的殺敵紀錄！"
 
 msgid "QUITMSG13"
 msgstr ""
+"滾啦。當你回來的\n"
+"時候，我會請你一頓球棒餐。"
 
 msgid "QUITMSG14"
 msgstr ""
+"你運氣不錯喔我不想因為\n"
+"你想走人而打你。"
 
 msgid "QUITMSG15"
 msgstr ""
+"你要去哪裡啊？！\n"
+"那惡魔暴亂該怎辦呢？"
 
 msgid "QUITMSG16"
 msgstr ""
+"大屠殺已中斷…\n"
+"真吊人胃口呢！"
 
 msgid "QUITMSG17"
 msgstr ""
+"但你是唯一希望\n"
+"—我的唯一機會！！"
 
 msgid "QUITMSG18"
-msgstr ""
+msgstr "搭上黑鳥後沒人能離開的。"
 
 msgid "QUITMSG19"
-msgstr ""
+msgstr "我以為你並不一樣…"
 
 msgid "QUITMSG20"
-msgstr ""
+msgstr "好！就邊跑邊殺吧！"
 
 msgid "QUITMSG21"
 msgstr ""
+"你可以滾…\n"
+"但你躲不過的…"
 
 msgid "QUITMSG22"
 msgstr ""
+"怎、怎麼回事？\n"
+"你老母說要吃晚餐了？"
 
 msgid "QUITMSG23"
 msgstr ""
+"別走啊，那裏還有些在到處\n"
+"遊蕩的綠色黏液怪啊！"
 
 msgid "QUITMSG24"
 msgstr ""
+"別放棄－那些黏液怪會\n"
+"佔了上風的啊！"
 
 msgid "QUITMSG25"
 msgstr ""
+"別走啊。\n"
+"我們需要你的幫忙啊！"
 
 msgid "QUITMSG26"
 msgstr ""
+"我希望你只是要去吃\n"
+"Chex® 牌綜合派對麥片。"
 
 msgid "QUITMSG27"
 msgstr ""
+"別走啊！\n"
+"我們需要你的幫忙呀！"
 
 msgid "QUITMSG28"
 msgstr ""
+"別拋棄了\n"
+"麥片星際聯邦啊！"
 
 msgid "QUITMSG29"
 msgstr ""
+"真正的 Chex® 戰士\n"
+"是不會那麼快放棄的！"
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr ""
+msgstr "你拾取了物品"
 
 msgid "PD_ANY"
-msgstr ""
+msgstr "任何鑰匙都能打開這道門"
 
 msgid "PD_ANYOBJ"
-msgstr ""
+msgstr "任何鑰匙都能啟動這項物件"
 
 msgid "PD_ALL3"
-msgstr ""
+msgstr "你需要全三把鑰匙來開啟這道門"
 
 msgid "PD_ALL3O"
-msgstr ""
+msgstr "你需要全三把鑰匙來啟用這項物件"
 
 msgid "PD_ALL6"
-msgstr ""
+msgstr "你需要全六把鑰匙來開啟這道門"
 
 msgid "PD_ALL6O"
-msgstr ""
+msgstr "你需要全六把鑰匙來啟用這項物件"
 
 msgid "PD_ALLKEYS"
-msgstr ""
+msgstr "你需要全部的鑰匙"
 
 msgid "HUSTR_MSGU"
-msgstr ""
+msgstr "［訊息未送出］"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr ""
+msgstr "你自言自語著"
 
 msgid "HUSTR_TALKTOSELF2"
-msgstr ""
+msgstr "那裏是誰？"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr ""
+msgstr "你嚇了你自己"
 
 msgid "HUSTR_TALKTOSELF4"
-msgstr ""
+msgstr "你開始狂歡"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr ""
+msgstr "你的理智斷線了…"
 
 msgid "HUSTR_MESSAGESENT"
-msgstr ""
+msgstr "［訊息已送出］"
 
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "音樂已改變"
 
 msgid "STSTR_NOMUS"
-msgstr ""
+msgstr "辦不到的選擇"
 
 msgid "STSTR_DQDON"
-msgstr ""
+msgstr "無人能敵模式：開"
 
 msgid "STSTR_DQDOFF"
-msgstr ""
+msgstr "無人能敵模式：關"
 
 msgid "STSTR_DQD2ON"
-msgstr ""
+msgstr "終極無人能敵模式：開"
 
 msgid "STSTR_DQD2OFF"
-msgstr ""
+msgstr "終極無人能敵模式：關"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "非常快樂彈藥已獲取"
 
 msgid "STSTR_FAADDED"
-msgstr ""
+msgstr "彈藥（無鑰匙）已獲取"
 
 msgid "STSTR_NCON"
-msgstr ""
+msgstr "穿牆模式：開"
 
 msgid "STSTR_NCOFF"
-msgstr ""
+msgstr "穿牆模式：關"
 
 msgid "STSTR_NC2ON"
-msgstr ""
+msgstr "三維穿牆模式：開"
 
 msgid "STSTR_NC2OFF"
-msgstr ""
+msgstr "三維穿牆模式：關"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -283,84 +320,84 @@ msgstr ""
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr ""
+msgstr "無敵球 (V) ，狂暴箱 (S) ，模糊球 (I) ，防護服 (R) ，全地圖 (A) ，夜視鏡 (L)"
 
 msgid "STSTR_BEHOLDX"
-msgstr ""
+msgstr "強化效果已啟用"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr ""
+msgstr "… 別搞砸了－GM"
 
 msgid "STSTR_CLEV"
-msgstr ""
+msgstr "切換關卡中…"
 
 msgid "TXT_BUDDHAON"
-msgstr ""
+msgstr "佛陀模式：開"
 
 msgid "TXT_BUDDHAOFF"
-msgstr ""
+msgstr "佛陀模式：關"
 
 msgid "TXT_BUDDHA2ON"
-msgstr ""
+msgstr "終極佛陀模式：開"
 
 msgid "TXT_BUDDHA2OFF"
-msgstr ""
+msgstr "終極佛陀模式：關"
 
 msgid "TXT_CHEATPOWERON"
-msgstr ""
+msgstr "強化術本：開"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr ""
+msgstr "強化術本：關"
 
 msgid "TXT_CHEATHEALTH"
-msgstr ""
+msgstr "生命值全滿"
 
 msgid "TXT_CHEATKEYS"
-msgstr ""
+msgstr "全部的鑰匙"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr ""
+msgstr "音效除錯：開"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr ""
+msgstr "音效除錯：關"
 
 msgid "TXT_CHEATIDDQD"
-msgstr ""
+msgstr "想作弊，對吧？那麼就受死吧！"
 
 msgid "TXT_CHEATIDKFA"
-msgstr ""
+msgstr "作弊者－你得不到武器的"
 
 msgid "TXT_CHEATTICKERON"
-msgstr ""
+msgstr "Ticker：開"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr ""
+msgstr "Ticker：關"
 
 msgid "TXT_CHEATARTIFACTS3"
-msgstr ""
+msgstr "你得到它了"
 
 msgid "TXT_MIDASTOUCH"
-msgstr ""
+msgstr "寶貝，你獲得了點石成金"
 
 msgid "TXT_GOTSTUFF"
-msgstr ""
+msgstr "你得到了道具！"
 
 msgid "TXT_FREEZEON"
-msgstr ""
+msgstr "凍結模式：開"
 
 msgid "TXT_FREEZEOFF"
-msgstr ""
+msgstr "凍結模式：關"
 
 msgid "TXT_STRANGE"
-msgstr ""
+msgstr "你感覺怪怪的…"
 
 msgid "TXT_STRANGER"
-msgstr ""
+msgstr "你感覺更加怪異了。"
 
 msgid "TXT_NOTSTRANGE"
-msgstr ""
+msgstr "你再次感覺到自己了。"
 
 msgid "TXT_LEADBOOTSON"
 msgstr ""
@@ -369,437 +406,437 @@ msgid "TXT_LEADBOOTSOFF"
 msgstr ""
 
 msgid "TXT_LIGHTER"
-msgstr ""
+msgstr "你感覺變輕了"
 
 msgid "TXT_GRAVITY"
-msgstr ""
+msgstr "重力壓垮了你"
 
 msgid "TXT_NOTARGET_ON"
-msgstr ""
+msgstr "無目標：開"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr ""
+msgstr "無目標：關"
 
 msgid "TXT_ANUBIS_ON"
-msgstr ""
+msgstr "「恐懼地顫抖吧！」"
 
 msgid "TXT_ANUBIS_OFF"
-msgstr ""
+msgstr "巨魔鎧甲已失效"
 
 msgid "TXT_CHASECAM_ON"
-msgstr ""
+msgstr "追蹤鏡頭：開"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr ""
+msgstr "追蹤鏡頭：關"
 
 msgid "TXT_BADDIE_KILLED"
-msgstr ""
+msgstr "已殺死一隻壞蛋"
 
 msgid "TXT_BADDIES_KILLED"
-msgstr ""
+msgstr "已殺死 %d 隻壞蛋"
 
 msgid "TXT_MONSTER_KILLED"
-msgstr ""
+msgstr "已殺死一隻怪物"
 
 msgid "TXT_MONSTERS_KILLED"
-msgstr ""
+msgstr "已殺死 %d 隻怪物"
 
 msgid "TXT_NO_RESURRECT"
-msgstr ""
+msgstr "由於玩家角色已遭斬首，故無法進行復活。"
 
 msgid "TXT_ALL_ARTIFACTS"
-msgstr ""
+msgstr "得到所有的神器！"
 
 msgid "TXT_WHAT_KILL"
-msgstr ""
+msgstr "你是想殺死什麼來自遊戲之外的東西嗎？"
 
 msgid "TXT_NOT_FROZEN"
-msgstr ""
+msgstr "凍結玩家角色特性：關"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr ""
+msgstr "跟隨模式：關"
 
 msgid "AMSTR_FOLLOWON"
-msgstr ""
+msgstr "跟隨模式：開"
 
 msgid "AMSTR_GRIDON"
-msgstr ""
+msgstr "網格：開"
 
 msgid "AMSTR_GRIDOFF"
-msgstr ""
+msgstr "網格：關"
 
 msgid "AMSTR_TEXON"
-msgstr ""
+msgstr "材質模式：開"
 
 msgid "AMSTR_TEXOFF"
-msgstr ""
+msgstr "材質模式：關"
 
 msgid "AMSTR_MARKEDSPOT"
-msgstr ""
+msgstr "已標記地點"
 
 msgid "AMSTR_MARKSCLEARED"
-msgstr ""
+msgstr "已清除全部標記"
 
 msgid "TXT_FRAGLIMIT"
-msgstr ""
+msgstr "已到達擊殺上限。"
 
 msgid "TXT_TIMELIMIT"
-msgstr ""
+msgstr "已到達時間限制。"
 
 msgid "SPREEKILLSELF"
-msgstr ""
+msgstr "%o 看來不錯，直到 %h 被 %g 給殺死了！"
 
 msgid "SPREEOVER"
-msgstr ""
+msgstr "%o 的大開殺戒模式被 %k 給終結了"
 
 msgid "SPREE5"
-msgstr ""
+msgstr "%k 正在大開殺戒！"
 
 msgid "SPREE10"
-msgstr ""
+msgstr "%k 正在瘋狂亂殺中！"
 
 msgid "SPREE15"
-msgstr ""
+msgstr "%k 正在佔著上風！"
 
 msgid "SPREE20"
-msgstr ""
+msgstr "%k 已經無人可擋！"
 
 msgid "SPREE25"
-msgstr ""
+msgstr "%k 已如神樣般！"
 
 msgid "MULTI2"
-msgstr ""
+msgstr "雙殺！"
 
 msgid "MULTI3"
-msgstr ""
+msgstr "多殺！"
 
 msgid "MULTI4"
-msgstr ""
+msgstr "極端殺戮！"
 
 msgid "MULTI5"
-msgstr ""
+msgstr "怪物般擊殺！"
 
 msgid "SCORE_BONUS"
-msgstr ""
+msgstr "獎勵"
 
 msgid "SCORE_COLOR"
 msgstr "顏色"
 
 msgid "SCORE_SECRET"
-msgstr ""
+msgstr "秘密"
 
 msgid "SCORE_NAME"
 msgstr "名字"
 
 msgid "SCORE_DELAY"
-msgstr ""
+msgstr "延遲"
 
 msgid "SCORE_FRAGS"
-msgstr ""
+msgstr "擊殺數"
 
 msgid "SCORE_DEATHS"
-msgstr ""
+msgstr "死亡數"
 
 msgid "SCORE_OTHER"
-msgstr ""
+msgstr "其他"
 
 msgid "SCORE_MISSED"
-msgstr ""
+msgstr "錯過"
 
 msgid "SCORE_TOTAL"
-msgstr ""
+msgstr "合計"
 
 msgid "SCORE_LVLTIME"
-msgstr ""
+msgstr "關卡用時"
 
 msgid "TXT_IMKILLS"
-msgstr ""
+msgstr "殺敵數"
 
 msgid "TXT_IMITEMS"
-msgstr ""
+msgstr "物品數"
 
 msgid "TXT_IMSECRETS"
-msgstr ""
+msgstr "秘密數"
 
 msgid "TXT_IMTIME"
-msgstr "時間"
+msgstr "通關用時"
 
 msgid "TXT_IMPAR"
-msgstr ""
+msgstr "標準通關時間"
 
 msgid "WI_FINISHED"
-msgstr ""
+msgstr "已完成"
 
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "正進入"
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "正進入："
 
 msgid "AM_MONSTERS"
-msgstr ""
+msgstr "殺怪數："
 
 msgid "AM_SECRETS"
-msgstr ""
+msgstr "秘密數："
 
 msgid "AM_ITEMS"
-msgstr ""
+msgstr "物品數："
 
 msgid "OB_SUICIDE"
-msgstr ""
+msgstr "%o 自爆了。"
 
 msgid "OB_FALLING"
-msgstr ""
+msgstr "%o 摔的太深了。"
 
 msgid "OB_CRUSH"
-msgstr ""
+msgstr "%o 被壓扁了。"
 
 msgid "OB_EXIT"
-msgstr ""
+msgstr "%o 嘗試要離開。"
 
 msgid "OB_WATER"
-msgstr ""
+msgstr "%o 是個旱鴨子。"
 
 msgid "OB_SLIME"
-msgstr ""
+msgstr "%o 突變了。"
 
 msgid "OB_LAVA"
-msgstr ""
+msgstr "%o 熔化了。"
 
 msgid "OB_BARREL"
-msgstr ""
+msgstr "%o 被炸翻了。"
 
 msgid "OB_SPLASH"
-msgstr ""
+msgstr "%o 站的不夠遠呢。"
 
 msgid "OB_R_SPLASH"
-msgstr ""
+msgstr "%o 應該要站遠一點的。"
 
 msgid "OB_ROCKET"
-msgstr ""
+msgstr "%o 應該要站遠一點的。"
 
 msgid "OB_KILLEDSELF"
-msgstr ""
+msgstr "%o 殺了 %h自己。"
 
 msgid "OB_VOODOO"
-msgstr ""
+msgstr "%o 被巫毒之力給做掉了。"
 
 msgid "OB_MPTELEFRAG"
-msgstr ""
+msgstr "%o 被 %k 給傳送殺了。"
 
 msgid "OB_MONTELEFRAG"
-msgstr ""
+msgstr "%o 被傳送殺了。"
 
 msgid "OB_DEFAULT"
-msgstr ""
+msgstr "%o 掛了。"
 
 msgid "OB_MPDEFAULT"
-msgstr ""
+msgstr "%o 被 %k 給做掉了。"
 
 msgid "OB_FRIENDLY1"
-msgstr ""
+msgstr "%k 撂倒了自己人。"
 
 # English was changed to remove problematic pronoun referencing the killer
 msgid "OB_FRIENDLY2"
-msgstr ""
+msgstr "%k 似乎需要眼鏡。"
 
 msgid "OB_FRIENDLY3"
-msgstr ""
+msgstr "%k 幫對手獲得了一個擊殺數。"
 
 msgid "OB_FRIENDLY4"
-msgstr ""
+msgstr "%k 失去了另一位朋友。"
 
 msgid "GOTARMOR"
-msgstr ""
+msgstr "撿起了護甲。"
 
 msgid "GOTMEGA"
-msgstr ""
+msgstr "撿起了超級護甲！"
 
 msgid "GOTHTHBONUS"
-msgstr ""
+msgstr "撿起了個生命獎勵。"
 
 msgid "GOTARMBONUS"
-msgstr ""
+msgstr "撿起了個護甲獎勵。"
 
 msgid "GOTSTIM"
-msgstr ""
+msgstr "撿起了個治療包。"
 
 msgid "GOTMEDINEED"
-msgstr ""
+msgstr "撿起了個你「非常」需要的急救包！"
 
 msgid "GOTMEDIKIT"
-msgstr ""
+msgstr "撿起了個急救包。"
 
 msgid "GOTSUPER"
-msgstr ""
+msgstr "超級球！"
 
 msgid "GOTBLUECARD"
-msgstr ""
+msgstr "撿起了個藍色鑰匙卡。"
 
 msgid "GOTYELWCARD"
-msgstr ""
+msgstr "撿起了個黃色鑰匙卡。"
 
 msgid "GOTREDCARD"
-msgstr ""
+msgstr "撿起了個紅色鑰匙卡。"
 
 msgid "GOTBLUESKUL"
-msgstr ""
+msgstr "撿起了個藍骷髏鑰匙。"
 
 msgid "GOTYELWSKUL"
-msgstr ""
+msgstr "撿起了個黃骷髏鑰匙。"
 
 msgid "GOTREDSKUL"
-msgstr ""
+msgstr "撿起了個紅骷髏鑰匙。"
 
 msgid "GOTINVUL"
-msgstr ""
+msgstr "無敵球！！"
 
 msgid "GOTBERSERK"
-msgstr ""
+msgstr "狂暴球！！"
 
 msgid "GOTINVIS"
-msgstr ""
+msgstr "模糊球"
 
 msgid "GOTSUIT"
-msgstr ""
+msgstr "輻射防護服"
 
 msgid "GOTMAP"
-msgstr ""
+msgstr "電腦區域地圖"
 
 msgid "GOTVISOR"
-msgstr ""
+msgstr "夜視鏡"
 
 msgid "GOTMSPHERE"
-msgstr ""
+msgstr "超級球！"
 
 msgid "GOTCLIP"
-msgstr ""
+msgstr "撿起了個彈匣。"
 
 msgid "GOTCLIPBOX"
-msgstr ""
+msgstr "撿起了一箱子彈。"
 
 msgid "GOTROCKET"
-msgstr ""
+msgstr "撿起了個火箭彈。"
 
 msgid "GOTROCKBOX"
-msgstr ""
+msgstr "撿起了一箱火箭彈。"
 
 msgid "GOTCELL"
-msgstr ""
+msgstr "撿起了個能量電池。"
 
 msgid "GOTCELLBOX"
-msgstr ""
+msgstr "撿起了個能量電池組。"
 
 msgid "GOTSHELLS"
-msgstr ""
+msgstr "撿起了 4 顆散彈。"
 
 msgid "GOTSHELLBOX"
-msgstr ""
+msgstr "撿起了一箱散彈。"
 
 msgid "GOTBACKPACK"
-msgstr ""
+msgstr "撿起了一個裝滿彈藥的背包！"
 
 msgid "GOTBFG9000"
-msgstr ""
+msgstr "你撿起了 BFG9000！喔，太棒了。"
 
 msgid "GOTCHAINGUN"
-msgstr ""
+msgstr "你撿起了鏈炮！"
 
 msgid "GOTCHAINSAW"
-msgstr ""
+msgstr "一把鏈鋸！來找點肉吧！"
 
 msgid "GOTLAUNCHER"
-msgstr ""
+msgstr "你撿起了火箭發射器！"
 
 msgid "GOTPLASMA"
-msgstr ""
+msgstr "你撿起了電漿槍！"
 
 msgid "GOTSHOTGUN"
-msgstr ""
+msgstr "你撿起了散彈槍！"
 
 msgid "GOTSHOTGUN2"
-msgstr ""
+msgstr "你撿起了超級散彈槍！"
 
 msgid "PICKUP_PISTOL_DROPPED"
-msgstr ""
+msgstr "撿起了個手槍。"
 
 msgid "BETA_BONUS1"
-msgstr ""
+msgstr "你撿起了個惡魔小刀。"
 
 msgid "BETA_BONUS2"
-msgstr ""
+msgstr "你撿起了個顱骨箱。"
 
 msgid "BETA_BONUS3"
-msgstr ""
+msgstr "你撿起了個邪惡權杖。"
 
 msgid "BETA_BONUS4"
-msgstr ""
+msgstr "你撿起了個不潔聖經。"
 
 msgid "PD_BLUEO"
-msgstr ""
+msgstr "你需要藍色鑰匙來啟用這物件"
 
 msgid "PD_REDO"
-msgstr ""
+msgstr "你需要紅色鑰匙來啟用這物件"
 
 msgid "PD_YELLOWO"
-msgstr ""
+msgstr "你需要黃色鑰匙來啟用這物件"
 
 msgid "PD_BLUEK"
-msgstr ""
+msgstr "你需要藍色鑰匙來開啟這道門"
 
 msgid "PD_REDK"
-msgstr ""
+msgstr "你需要紅色鑰匙來開啟這道門"
 
 msgid "PD_YELLOWK"
-msgstr ""
+msgstr "你需要黃色鑰匙來開啟這道門"
 
 msgid "PD_BLUECO"
-msgstr ""
+msgstr "你需要藍色鑰匙卡來啟用這物件"
 
 msgid "PD_REDCO"
-msgstr ""
+msgstr "你需要紅色鑰匙卡來啟用這物件"
 
 msgid "PD_YELLOWCO"
-msgstr ""
+msgstr "你需要黃色鑰匙卡來啟用這物件"
 
 msgid "PD_BLUESO"
-msgstr ""
+msgstr "你需要藍骷髏鑰匙來啟用這物件"
 
 msgid "PD_REDSO"
-msgstr ""
+msgstr "你需要紅骷髏鑰匙來啟用這物件"
 
 msgid "PD_YELLOWSO"
-msgstr ""
+msgstr "你需要黃骷髏鑰匙來啟用這物件"
 
 msgid "PD_BLUEC"
-msgstr ""
+msgstr "你需要藍色鑰匙卡來開啟這道門"
 
 msgid "PD_REDC"
-msgstr ""
+msgstr "你需要紅色鑰匙卡來開啟這道門"
 
 msgid "PD_YELLOWC"
-msgstr ""
+msgstr "你需要黃色鑰匙卡來開啟這道門"
 
 msgid "PD_BLUES"
-msgstr ""
+msgstr "你需要藍骷髏鑰匙來開啟這道門"
 
 msgid "PD_REDS"
-msgstr ""
+msgstr "你需要紅骷髏鑰匙來開啟這道門"
 
 msgid "PD_YELLOWS"
-msgstr ""
+msgstr "你需要黃骷髏鑰匙來開啟這道門"
 
 msgid "CC_ZOMBIE"
-msgstr ""
+msgstr "殭屍士兵"
 
 # a.k.a. (former human) sergeant
 msgid "CC_SHOTGUN"
-msgstr ""
+msgstr "殭屍軍士"
 
 # a.k.a. former commando
 msgid "CC_HEAVY"
-msgstr ""
+msgstr "殭屍突擊隊員"
 
 msgid "CC_IMP"
 msgstr ""

@@ -5201,3 +5201,45 @@ msgstr ""
 
 msgid "HUDMNU_CROSSHAIRYOFFSET"
 msgstr ""
+
+msgid "VALFORMAT_DB"
+msgstr ""
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr ""
+
+msgid "VALFORMAT_DEGREES"
+msgstr ""
+
+msgid "VALFORMAT_FPS"
+msgstr ""
+
+msgid "VALFORMAT_HZ"
+msgstr ""
+
+msgid "VALFORMAT_METER"
+msgstr ""
+
+msgid "VALFORMAT_MSECOND"
+msgstr ""
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr ""
+
+msgid "VALFORMAT_PERCENT"
+msgstr ""
+
+msgid "VALFORMAT_SECOND"
+msgstr ""
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr ""
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr ""
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr ""
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr ""

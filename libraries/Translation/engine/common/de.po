@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-04-28 00:29+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/common/de/>"
 "\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSYN"
 msgstr "Drücke Y oder N."
@@ -310,9 +310,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Vorheriger Gegenstand"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Automapsteuerung anpassen"
+msgstr "Kartensteuerung"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Automapsteuerung"
@@ -723,7 +722,6 @@ msgstr "Stereo"
 msgid "OPTSTR_PROLOGIC"
 msgstr "Dolby Pro Logic Dekodierer"
 
-#, fuzzy
 msgid "OPTSTR_QUAD"
 msgstr "Quad"
 
@@ -781,9 +779,8 @@ msgstr "Erweiterte Optionen"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Modul-Replayer-Optionen"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "MIDI-Spieler-Optionen"
+msgstr "MIDI-Geräte-Optionen"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Erweiterte Soundoptionen"
@@ -1153,6 +1150,7 @@ msgstr "Obvers"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "Revers"
 
+#, fuzzy
 msgid "GLMNU_POSTPROCESS"
 msgstr "Nachbearbeitung"
 
@@ -1777,14 +1775,12 @@ msgstr "Versionshinweise konnten nicht automatisch verarbeitet werden"
 msgid "NOTES_UNKNOWN"
 msgstr "Unbekannt"
 
-#, fuzzy
 msgid "NOTES_RELEASED"
-msgstr "veröffentlicht"
+msgstr "%s Version %s, erschienen am %s"
 
 msgid "NOTES_EMPTY"
 msgstr "Keine Beschreibung angegeben."
 
-#, fuzzy
 msgid "NOTES_DETAILS"
 msgstr "Weitere Details hier: %s"
 

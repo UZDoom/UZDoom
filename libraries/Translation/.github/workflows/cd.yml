@@ -1,0 +1,54 @@
+name: Automated Release
+
+on:
+  workflow_run:
+    workflows: ["Continuous Integration"]
+    branches: [main]
+    types: [completed]
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/download-artifact@v8
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+          path: .
+
+      - name: upload
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat << EOF > notes.md
+          <details><summary>Changes</summary>
+
+          $(git log latest..HEAD --format="* %h %s" --no-merges)
+
+          </details>
+
+          <details><summary>Graphs</summary>
+
+          [![Translation status](https://hosted.weblate.org/widget/uzdoom/horizontal-auto.svg)](https://hosted.weblate.org/engage/uzdoom/)
+          [![Translation status](https://hosted.weblate.org/widget/doom-engine-games/horizontal-auto.svg)](https://hosted.weblate.org/engage/doom-engine-games/)
+
+          </details>
+          EOF
+
+          git tag -d latest || true
+          git push origin :refs/tags/latest || true
+          git tag latest
+          git push origin latest
+
+          sleep 10
+
+          gh release edit latest --title "Latest Changes" --notes-file notes.md --draft=false --verify-tag
+          gh release upload latest 'uzdoom-translation.pk3' --clobber

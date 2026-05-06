@@ -6,6 +6,7 @@
 #include <cmath>
 #include <vector>
 #include <dwmapi.h>
+#include <malloc.h>
 
 #pragma comment(lib, "dwmapi.lib")
 
@@ -737,6 +738,36 @@ LRESULT Win32DisplayWindow::OnWindowMessage(UINT msg, WPARAM wparam, LPARAM lpar
 		NCCALCSIZE_PARAMS* calcsize = (NCCALCSIZE_PARAMS*)lparam;
 		return WVR_REDRAW;
 	}*/
+	else if (msg == WM_CREATE)
+	{
+		DragAcceptFiles(WindowHandle.hwnd, TRUE);
+		return 0;
+	}
+	else if (msg == WM_DROPFILES)
+	{
+		HDROP hdrop = (HDROP)wparam;
+		UINT filecount = DragQueryFileW(hdrop, 0xffffffff, NULL, 0);
+		WCHAR* path = NULL;
+		for (UINT i = 0; i < filecount; i++)
+		{
+			UINT pathlen = DragQueryFileW(hdrop, i, NULL, 0);
+			if (pathlen != 0)
+			{
+				WCHAR* newpath = (WCHAR*)realloc(path, (size_t)(pathlen + 1) * sizeof(WCHAR));
+				if (newpath)
+				{
+					path = newpath;
+					if (DragQueryFileW(hdrop, i, path, pathlen + 1) != 0)
+					{
+						WindowHost->OnFileDrop(from_utf16(path));
+					}
+				}
+			}
+		}
+		free(path);
+		DragFinish(hdrop);
+		return 0;
+	}
 
 	return DefWindowProc(WindowHandle.hwnd, msg, wparam, lparam);
 }

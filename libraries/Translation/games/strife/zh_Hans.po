@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 11:52+0000\n"
+"PO-Revision-Date: 2026-04-25 16:09+0000\n"
 "Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/doom-engine-games/strife/zh_Hans/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "TXT_STRIFE_MAP01"
 msgstr "区域1：圣所"
@@ -684,7 +684,7 @@ msgstr "天哪，你是谁？这里不该有人闲逛！"
 
 # MAP02: Golden guards.
 msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
-msgstr "你那边的，没人被允许进入这里。走开！"
+msgstr "喂，说你呢，这儿不允许任何人进来。走开！"
 
 # MAP02: Irale's shop.
 msgid "TXT_DLG_SCRIPT02_D39416_IRALE"

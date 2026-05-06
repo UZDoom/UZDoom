@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-04-20 22:09+0000\n"
+"Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/de/>\n"
 "Language: de\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
@@ -153,7 +153,6 @@ msgstr ""
 "Also, Kumpel, wenn du jetzt abhaust,\n"
 "begehst du Fahnenflucht!"
 
-#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
 "Geh doch. Wenn du zurückkommst,\n"
@@ -564,7 +563,6 @@ msgstr "Geheimnisse"
 msgid "TXT_IMTIME"
 msgstr "Zeit"
 
-#, fuzzy
 msgid "TXT_IMPAR"
 msgstr "Par"
 
@@ -4456,7 +4454,7 @@ msgid "OPTVAL_PIXELFUZZ"
 msgstr "Pixel"
 
 msgid "OPTVAL_SMOOTHFUZZ"
-msgstr "Glatt"
+msgstr "Glatter Fuzz"
 
 msgid "OPTVAL_SWIRLYFUZZ"
 msgstr "Gewirbelt"
@@ -4682,9 +4680,8 @@ msgstr "ZDoom klassisch"
 msgid "OPTVAL_MODERN"
 msgstr "Modern (WASD)"
 
-#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Modern (Tastatur)"
+msgstr "Modern (Linkshändig / Ziffernblock)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strikte KEYKONF-Waffen und -Spieler"
@@ -5213,7 +5210,7 @@ msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
 msgstr "Additiv"
 
 msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
-msgstr "Transparent"
+msgstr "Durchsichtig"
 
 msgid "OPTVAL_LAX"
 msgstr "Locker"
@@ -5247,18 +5244,144 @@ msgstr ""
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Schwarzpunkt-Anpassung"
 
-#, fuzzy
 msgid "OPTVAL_SMOOTH"
 msgstr "Glatt"
 
-#, fuzzy
 msgid "TAG_MACIL"
 msgstr "Macil"
 
-#, fuzzy
 msgid "TAG_MAULER"
 msgstr "Vernichter"
 
-#, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Granatwerfer"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Passt Monitore an, die dunkle Pixel nicht korrekt darstellen können. Die "
+"Einstellung so lange anpassen, bis die diagonalen weißen Blöcke verblassen. "
+"Diese Funktion soll nicht verwendet werden, um das Spiel heller zu machen, "
+"sondern nur, um sicherzustellen, dass das Bild für die derzeitige "
+"Konfiguration kalibriert ist."
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr ""
+"Setzt alle Optionen in diesem Menü auf die Standardeinstellungen zurück."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Wendet eine lineare Helligkeitsanpassung an. Helligkeit nach persönlichen "
+"Geschmack anpassen oder um im Dunkeln besser sehen zu können."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Passt den wahrgenommenen Unterschied zwischen ähnlichen Farben an. Steuert "
+"wie scharf oder verwaschen die Bilder wirken. Nach persönlichem Geschmack "
+"anpassen."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Passt die Farbintensität an, sodass das Bild lebendiger oder gedämpfter "
+"wirkt. Einstellungen nach persönlichen Geschmack anpassen."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Einstellung anpassen bis der Farbton gleichmäßig grau erscheint."
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Zur Zwischenablage hinzufügen"
+
+msgid "ACTION_RESTART"
+msgstr "Neustart"
+
+msgid "ACTION_ABORT"
+msgstr "Abbrechen"
+
+msgid "ACTION_STARTGAME"
+msgstr "Spiel Starten"
+
+msgid "ACTION_KICK"
+msgstr "Rauswerfen"
+
+msgid "ACTION_BAN"
+msgstr "Sperren"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Report Speichern"
+
+msgid "ERROR_FATAL"
+msgstr "Schwerwiegender Fehler"
+
+msgid "ERROR_ABORT"
+msgstr "Die Ausführung konnte nicht fortgesetzt werden."
+
+msgid "FILEPICKER_ANY"
+msgstr "Alle Dateien"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "Zip-Dateien von Absturzberichten"
+
+msgid "HAPMNU_TITLE"
+msgstr "Optionen für haptisches Feedback"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Kompatibilitätseinstellungen automatisch erkennen"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Intensität der Powerup-Tönung"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Spielerklasse"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Nebeneinander im Letterbox-Format"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Direct Mix"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Super Stereo"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Musikmodus"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Super Stereo Weite"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Lichtanpassung"
+
+msgid "LANG_NATIVE"
+msgstr "Englisch (USA)"
+
+msgid "LANG_ENG"
+msgstr "Englisch (USA)"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "WADs durchsuchen"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Konfigurationen durchsuchen"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "IWAD Ordner durchsuchen"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "MIDI-Gerät bietet keine Optionen an."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Mikoportals emulieren"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Farbe des Fadenkreuzes bei voller Gesundheit"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Farbe des Fadenkreuzes bei maximaler Gesundheit"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Dynamische Farben für das Fadenkreuz"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Vertikaler Versatz des Fadenkreuzes"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Analoges Laufen"

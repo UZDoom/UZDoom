@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-13 22:54+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-05-03 19:09+0000\n"
+"Last-Translator: Tiago Matos <tiagaomatos@hotmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/uzdoom/common/"
 "pt/>\n"
 "Language: pt\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 msgid "PRESSYN"
 msgstr "Carrega Y ou N."
@@ -199,7 +199,7 @@ msgid "CNTRLMNU_JUMP"
 msgstr "Saltar"
 
 msgid "CNTRLMNU_CROUCH"
-msgstr ""
+msgstr "Agachar"
 
 msgid "CNTRLMNU_TOGGLECROUCH"
 msgstr ""
@@ -261,18 +261,18 @@ msgstr ""
 
 # Todo - make game specific
 msgid "CNTRLMNU_SLOT1"
-msgstr ""
+msgstr "Arma 1"
 
 # only show appropriate slots per game
 # 
 msgid "CNTRLMNU_SLOT2"
-msgstr ""
+msgstr "Arma 2"
 
 msgid "CNTRLMNU_SLOT3"
-msgstr ""
+msgstr "Arma 3"
 
 msgid "CNTRLMNU_SLOT4"
-msgstr ""
+msgstr "Arma 4"
 
 msgid "CNTRLMNU_SLOT5"
 msgstr ""
@@ -290,16 +290,16 @@ msgid "CNTRLMNU_SLOT9"
 msgstr ""
 
 msgid "CNTRLMNU_SLOT0"
-msgstr ""
+msgstr "Arma 10"
 
 msgid "CNTRLMNU_INVENTORY"
-msgstr ""
+msgstr "Inventário"
 
 msgid "CNTRLMNU_USEITEM"
-msgstr ""
+msgstr "Ativar ítem"
 
 msgid "CNTRLMNU_USEALLITEMS"
-msgstr ""
+msgstr "Ativar todos os ítens"
 
 msgid "CNTRLMNU_NEXTITEM"
 msgstr ""
@@ -357,7 +357,7 @@ msgid "CNTRLMNU_SCREENSHOT"
 msgstr ""
 
 msgid "CNTRLMNU_PAUSE"
-msgstr ""
+msgstr "Pausa"
 
 msgid "CNTRLMNU_DISPLAY_INC"
 msgstr "Aumentar Tamanho do Ecrã"
@@ -387,7 +387,7 @@ msgid "CNTRLMNU_QUICKLOAD"
 msgstr ""
 
 msgid "CNTRLMNU_EXIT_TO_MAIN"
-msgstr ""
+msgstr "Sair para Menu Principal"
 
 msgid "CNTRLMNU_TOGGLE_MESSAGES"
 msgstr ""

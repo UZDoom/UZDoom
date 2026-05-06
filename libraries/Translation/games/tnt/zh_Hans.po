@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-09 15:48+0000\n"
+"PO-Revision-Date: 2026-04-28 14:11+0000\n"
 "Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/doom-engine-games/tnt-evilution/zh_Hans/>\n"
@@ -11,107 +11,107 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "TXT_TNT_EP"
 msgstr "TNT：邪恶进化"
 
 msgid "THUSTR_1"
-msgstr "Level 1: 系统控制中心"
+msgstr "关卡1: 系统控制中心"
 
 msgid "THUSTR_2"
-msgstr "Level 2: 人类烧烤"
+msgstr "关卡2: 人类烧烤"
 
 msgid "THUSTR_3"
-msgstr "Level 3: 电源控制中心"
+msgstr "关卡3: 电源控制中心"
 
 msgid "THUSTR_4"
-msgstr "Level 4: 虫洞"
+msgstr "关卡4: 虫洞"
 
 # Not "Hangar"
 msgid "THUSTR_5"
-msgstr "Level 5: 挂钩"
+msgstr "关卡5: 挂钩"
 
 msgid "THUSTR_6"
-msgstr "Level 6: 开放狩猎"
+msgstr "关卡6: 开放狩猎"
 
 msgid "THUSTR_7"
-msgstr "Level 7: 监狱"
+msgstr "关卡7: 监狱"
 
 msgid "THUSTR_8"
-msgstr "Level 8: 金属"
+msgstr "关卡8: 金属"
 
 msgid "THUSTR_9"
-msgstr "Level 9: 要塞"
+msgstr "关卡9: 要塞"
 
 msgid "THUSTR_10"
-msgstr "Level 10: 救赎"
+msgstr "关卡10: 救赎"
 
 msgid "THUSTR_11"
-msgstr "Level 11: 储存设施"
+msgstr "关卡11: 储存设施"
 
 msgid "THUSTR_12"
-msgstr "Level 12: 火山口"
+msgstr "关卡12: 火山口"
 
 msgid "THUSTR_13"
-msgstr "Level 13: 核辐射处理区"
+msgstr "关卡13: 核辐射处理区"
 
 msgid "THUSTR_14"
-msgstr "Level 14: 钢铁厂"
+msgstr "关卡14: 钢铁厂"
 
 msgid "THUSTR_15"
-msgstr "Level 15: 死亡地带"
+msgstr "关卡15: 死亡地带"
 
 msgid "THUSTR_16"
-msgstr "Level 16: 最深处"
+msgstr "关卡16: 最深处"
 
 msgid "THUSTR_17"
-msgstr "Level 17: 加工区"
+msgstr "关卡17: 加工区"
 
 msgid "THUSTR_18"
-msgstr "Level 18: 磨坊"
+msgstr "关卡18: 磨坊"
 
 msgid "THUSTR_19"
-msgstr "Level 19: 运输/重生"
+msgstr "关卡19: 运输/重生"
 
 msgid "THUSTR_20"
-msgstr "Level 20: 中央处理区"
+msgstr "关卡20: 中央处理区"
 
 msgid "THUSTR_21"
-msgstr "Level 21: 行政中心"
+msgstr "关卡21: 行政中心"
 
 msgid "THUSTR_22"
-msgstr "Level 22: 栖息地"
+msgstr "关卡22: 栖息地"
 
 msgid "THUSTR_23"
-msgstr "Level 23: 月球采矿工程"
+msgstr "关卡23: 月球采矿工程"
 
 msgid "THUSTR_24"
-msgstr "Level 24: 采石场"
+msgstr "关卡24: 采石场"
 
 msgid "THUSTR_25"
-msgstr "Level 25: 男爵的巢穴"
+msgstr "关卡25: 男爵的巢穴"
 
 msgid "THUSTR_26"
-msgstr "Level 26: 弹幕"
+msgstr "关卡26: 弹幕"
 
 msgid "THUSTR_27"
-msgstr "Level 27: 痛苦山"
+msgstr "关卡27: 痛苦山"
 
 msgid "THUSTR_28"
-msgstr "Level 28: 冥界"
+msgstr "关卡28: 冥界"
 
 msgid "THUSTR_29"
-msgstr "Level 29: 冥河"
+msgstr "关卡29: 冥河"
 
 msgid "THUSTR_30"
-msgstr "Level 30: 最后通牒"
+msgstr "关卡30: 最后通牒"
 
 msgid "THUSTR_31"
-msgstr "Level 31: 法老"
+msgstr "关卡31: 法老"
 
 msgid "THUSTR_32"
-msgstr "Level 32: 加勒比"
+msgstr "关卡32: 加勒比"
 
 # TNT after MAP06
 msgid "T1TEXT"

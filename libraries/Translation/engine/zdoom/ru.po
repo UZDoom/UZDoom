@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 14:09+0000\n"
+"PO-Revision-Date: 2026-04-16 23:09+0000\n"
 "Last-Translator: Blueberry <igory.ygr200@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/ru/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Нажмите любую клавишу."
@@ -4680,9 +4680,8 @@ msgstr "Классическая ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Современная (ЦФЫВ)"
 
-#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Современная (цифр. клавиатура)"
+msgstr "Современная (левша/цифр. клавиатура)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Строгий KEYCONF для оружия/игроков"
@@ -5363,7 +5362,6 @@ msgstr "Обзор конфигураций"
 msgid "OPTMNU_OPENWADS"
 msgstr "Обзор папки IWAD"
 
-#, fuzzy
 msgid "SNDMNU_NOMIDIOPTIONS"
 msgstr "MIDI-устройство не предоставляет никаких настроек."
 

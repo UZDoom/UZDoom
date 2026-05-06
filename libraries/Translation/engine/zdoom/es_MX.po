@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-24 23:09+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-04-28 00:29+0000\n"
+"Last-Translator: Ret Neychozken <retneychozken@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/uzdoom/"
 "zdoom-engine-strings/es_MX/>\n"
 "Language: es_MX\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Presiona cualquier tecla."
@@ -103,13 +103,13 @@ msgstr ""
 
 msgid "QUITMSG3"
 msgstr ""
-"Yo que tú no me voy.\n"
+"Yo no me iría si fuera tu.\n"
 "DOS es muchísimo peór."
 
 msgid "QUITMSG4"
 msgstr ""
-"Intentas decir que prefieres DOS\n"
-"antes que a mí, ¿Verdad?"
+"Estás intentando decir que prefieres\n"
+"más a DOS que a mi, ¿Verdad?"
 
 msgid "QUITMSG5"
 msgstr ""
@@ -118,17 +118,15 @@ msgstr ""
 
 msgid "QUITMSG6"
 msgstr ""
-"La proxima vez que vengas\n"
+"Ya sabes, la proxima vez que vengas\n"
 "aqui acabaré contigo."
 
 msgid "QUITMSG7"
-msgstr "Vete fuera de aqui. No me importa."
+msgstr "Adelante y vete. Mira si me importa."
 
 # More info here.
 msgid "QUITMSG8"
 msgstr ""
-"Si intentas salir\n"
-"del juego, hay tabla!"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
@@ -302,18 +300,16 @@ msgid "STSTR_FAADDED"
 msgstr "Munición (sin llaves) Añadida"
 
 msgid "STSTR_NCON"
-msgstr "Modo Noclip: ACTIVADO"
+msgstr "Modo No Clipping: ACTIVADO"
 
 msgid "STSTR_NCOFF"
-msgstr "Modo Noclip: DESACTIVADO"
+msgstr "Modo No Clipping: DESACTIVADO"
 
-#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "Modo Noclip 2: ACTIVADO"
+msgstr "Modo No Clipping 3D: ACTIVADO"
 
-#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "Modo Noclip 2: DESACTIVADO"
+msgstr "Modo No Clipping 3D: DESACTIVADO"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -322,7 +318,7 @@ msgstr "Modo Noclip 2: DESACTIVADO"
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr "in(V)ulnerar, ber(S)erk, (I)nvisible, (R)adiación, m(A)pa, (L)uz"
+msgstr "in(V)ulnerable, ber(S)erk, (I)nvisible, (R)adiación, m(A)pa, (L)uz"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Power-up Activado"
@@ -372,10 +368,10 @@ msgid "TXT_CHEATIDKFA"
 msgstr "Tramposo—no te mereces las armas"
 
 msgid "TXT_CHEATTICKERON"
-msgstr ""
+msgstr "Ticker: ACTIVADO"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr ""
+msgstr "Ticker: DESACTIVADO"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Lo tienes"
@@ -564,7 +560,7 @@ msgid "TXT_IMTIME"
 msgstr "Tiempo"
 
 msgid "TXT_IMPAR"
-msgstr ""
+msgstr "Par"
 
 msgid "WI_FINISHED"
 msgstr "Terminado"
@@ -1069,7 +1065,7 @@ msgid "OB_MPROCKET"
 msgstr "%o montó el misil de %k."
 
 msgid "OB_MPR_SPLASH"
-msgstr ""
+msgstr "%o casi esquivó el cohete de %k."
 
 msgid "OB_MPPLASMARIFLE"
 msgstr "A %o l@[ao_esp] derritió el fusil de plasma de %k."
@@ -1087,186 +1083,187 @@ msgid "OB_MPBFG_MBF"
 msgstr "A %o l@[ao_esp] calcinó la BFG de %k."
 
 msgid "TXT_GOTBLUEKEY"
-msgstr ""
+msgstr "Llave Azul"
 
 msgid "TXT_GOTYELLOWKEY"
-msgstr ""
+msgstr "Llave Amarilla"
 
 msgid "TXT_GOTGREENKEY"
-msgstr ""
+msgstr "Llave Verde"
 
 msgid "TXT_ARTIHEALTH"
-msgstr ""
+msgstr "Frasco de Cuarzo"
 
 msgid "TXT_ARTIFLY"
-msgstr ""
+msgstr "Alas de Ira"
 
 msgid "TXT_ARTIINVULNERABILITY"
-msgstr ""
+msgstr "Anillo de Invincibilidad"
 
 msgid "TXT_ARTITOMEOFPOWER"
-msgstr ""
+msgstr "Tomo de Poder"
 
 msgid "TXT_ARTIINVISIBILITY"
-msgstr ""
+msgstr "Esfera de Sombras"
 
 msgid "TXT_ARTIEGG"
-msgstr ""
+msgstr "Huevo de Transformación"
 
 msgid "TXT_ARTISUPERHEALTH"
-msgstr ""
+msgstr "Urna Mística"
 
 msgid "TXT_ARTITORCH"
-msgstr ""
+msgstr "Antorcha"
 
 msgid "TXT_ARTIFIREBOMB"
-msgstr ""
+msgstr "Bomba de Tiempo de los Antiguos"
 
 msgid "TXT_ARTITELEPORT"
-msgstr ""
+msgstr "Dispositivo de Caos"
 
 msgid "TXT_ITEMHEALTH"
-msgstr ""
+msgstr "Vial de Cristal"
 
 msgid "TXT_ITEMBAGOFHOLDING"
-msgstr ""
+msgstr "Bolsa de Tenencia"
 
 msgid "TXT_ITEMSHIELD1"
-msgstr ""
+msgstr "Escudo Plateado"
 
 msgid "TXT_ITEMSHIELD2"
-msgstr ""
+msgstr "Escudo Encantado"
 
 msgid "TXT_ITEMSUPERMAP"
-msgstr ""
+msgstr "Mapa Pergamino"
 
 msgid "TXT_AMMOGOLDWAND1"
-msgstr ""
+msgstr "Varita de Cristal"
 
 msgid "TXT_AMMOGOLDWAND2"
-msgstr ""
+msgstr "Geoda de Cristal"
 
 msgid "TXT_AMMOMACE1"
-msgstr ""
+msgstr "Esferas de maza"
 
 msgid "TXT_AMMOMACE2"
-msgstr ""
+msgstr "Pila de Esferas de Maza"
 
 msgid "TXT_AMMOCROSSBOW1"
-msgstr ""
+msgstr "Flechas Etéreas"
 
 msgid "TXT_AMMOCROSSBOW2"
 msgstr "Carcaza de Flechas Etéreas"
 
 msgid "TXT_AMMOBLASTER1"
-msgstr ""
+msgstr "Orbe de Garra"
 
 msgid "TXT_AMMOBLASTER2"
-msgstr ""
+msgstr "Orbe de Energía"
 
 msgid "TXT_AMMOSKULLROD1"
-msgstr ""
+msgstr "Runas Menores"
 
 msgid "TXT_AMMOSKULLROD2"
-msgstr ""
+msgstr "Runas Mayores"
 
 msgid "TXT_AMMOPHOENIXROD1"
-msgstr ""
+msgstr "Orbe de Llamas"
 
 msgid "TXT_AMMOPHOENIXROD2"
-msgstr ""
+msgstr "Orbe Infernal"
 
 msgid "TXT_WPNGOLDWAND"
-msgstr ""
+msgstr "Varita Áurea"
 
 msgid "TXT_WPNMACE"
-msgstr ""
+msgstr "Maza de Fuego"
 
 msgid "TXT_WPNCROSSBOW"
-msgstr ""
+msgstr "Ballesta Etérea"
 
 msgid "TXT_WPNBLASTER"
-msgstr ""
+msgstr "Garra de Dragón"
 
 msgid "TXT_WPNSKULLROD"
-msgstr ""
+msgstr "Bastón Infernal"
 
 msgid "TXT_WPNPHOENIXROD"
-msgstr ""
+msgstr "Vara Fénix"
 
 msgid "TXT_WPNGAUNTLETS"
-msgstr ""
+msgstr "Guanteletes del Nigromante"
 
 msgid "TXT_NEEDBLUEKEY"
-msgstr ""
+msgstr "Necesitas una llave azul para abrir esta puerta"
 
 msgid "TXT_NEEDGREENKEY"
-msgstr ""
+msgstr "Necesitas una llave verde para abrir esta puerta"
 
 msgid "TXT_NEEDYELLOWKEY"
-msgstr ""
+msgstr "Necesitas una llave amarilla para abrir esta puerta"
 
 msgid "FN_CHICKEN"
-msgstr ""
+msgstr "Pollo"
 
 # Wordplay: werewolf
 msgid "FN_BEAST"
-msgstr ""
+msgstr "Hombre Dragón"
 
 # Wordplay: sabre-tooth
 msgid "FN_CLINK"
-msgstr ""
+msgstr "Garra de Sable"
 
+#, fuzzy
 msgid "FN_DSPARIL"
-msgstr ""
+msgstr "D'Sparil"
 
 msgid "FN_HERETICIMP"
-msgstr ""
+msgstr "Gárgola"
 
 msgid "FN_IRONLICH"
-msgstr ""
+msgstr "Liche de Fierro"
 
 msgid "FN_BONEKNIGHT"
-msgstr ""
+msgstr "Guerrero No-muerto"
 
 msgid "FN_MINOTAUR"
-msgstr ""
+msgstr "Maulotauro"
 
 msgid "FN_MUMMY"
-msgstr ""
+msgstr "Gólem"
 
 msgid "FN_MUMMYLEADER"
-msgstr ""
+msgstr "Nitrogólem"
 
 msgid "FN_SNAKE"
-msgstr ""
+msgstr "Ofidiano"
 
 msgid "FN_WIZARD"
 msgstr "Hechicero"
 
 msgid "AMMO_GOLDWAND"
-msgstr ""
+msgstr "Cristales de Varita"
 
 msgid "AMMO_CROSSBOW"
-msgstr ""
+msgstr "Flechas Etéreas"
 
 msgid "AMMO_BLASTER"
-msgstr ""
+msgstr "Orbes de Garra"
 
 msgid "AMMO_MACE"
-msgstr ""
+msgstr "Esferas de Maza"
 
 msgid "AMMO_SKULLROD"
-msgstr ""
+msgstr "Runas del Bastón Infernal"
 
 msgid "AMMO_PHOENIXROD"
-msgstr ""
+msgstr "Orbes de Llamas"
 
 msgid "TAG_STAFF"
-msgstr ""
+msgstr "Bastón"
 
 msgid "TAG_GOLDWAND"
-msgstr ""
+msgstr "Varita Élfica"
 
 msgid "OB_CHICKEN"
 msgstr "A %o l@[ao_esp] picotearon a muerte."

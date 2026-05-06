@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-04-28 00:29+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/common/"
 "uk/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSYN"
 msgstr "Натисніть Y або N."
@@ -107,7 +107,7 @@ msgid "OPTMNU_CONTROLS"
 msgstr "Налаштування керування"
 
 msgid "OPTMNU_MOUSE"
-msgstr "Миш"
+msgstr "Миша"
 
 msgid "OPTMNU_JOYSTICK"
 msgstr "Контролер"
@@ -1159,6 +1159,7 @@ msgstr "Прямий"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "Зворотній"
 
+#, fuzzy
 msgid "GLMNU_POSTPROCESS"
 msgstr "Постобробка"
 
@@ -1687,14 +1688,14 @@ msgid "PICKER_PLAYHOST"
 msgstr "Хостити гру"
 
 msgid "PICKER_PLAYJOIN"
-msgstr "Приєднатись до гри"
+msgstr "Приєднатись"
 
 msgid "PICKER_REMPARM"
 msgstr "Запам'ятати параметри"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr "Підключити допоміжні WADи"
+msgstr "Підключити доп. WADи"
 
 msgid "PICKER_TAB_MULTI"
 msgstr "Гра в мережі"

@@ -2,13 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: none\n"
-"PO-Revision-Date: 2026-02-12 19:09+0000\n"
+"PO-Revision-Date: 2026-05-01 18:09+0000\n"
+"Last-Translator: 이정희 <daemul72@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
+"hacx-filter/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17.1\n"
 
 msgid "QUITMSG1"
 msgstr "고작 버그들 상대하는 것도 버거운 건가?"
@@ -465,7 +468,7 @@ msgid "STSTR_NCOFF"
 msgstr "전자마귀 모드 OFF"
 
 msgid "STSTR_NOMUS"
-msgstr "선택 불가능"
+msgstr "선택: 불가능 "
 
 # Should probably not be translated...
 msgid "STSTR_MUS"

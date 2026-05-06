@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 10:09+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2026-05-01 17:09+0000\n"
+"Last-Translator: OldCactusCN <huchenyi_2019@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -43,7 +43,7 @@ msgstr ""
 
 msgid "QSAVESPOT"
 msgstr ""
-"你还没选择快速保存的槽位咧！\n"
+"你还没选择快速保存的槽位呢！\n"
 "\n"
 "按下任意键。"
 
@@ -93,8 +93,8 @@ msgstr "（按下Y键退出）"
 
 msgid "QUITMSG1"
 msgstr ""
-"别走嘛，还有好多恶魔\n"
-"等着你来干掉咧！"
+"别走！还有好多恶魔\n"
+"等着你来干掉！"
 
 msgid "QUITMSG2"
 msgstr ""
@@ -104,22 +104,22 @@ msgstr ""
 msgid "QUITMSG3"
 msgstr ""
 "要换成我，可不会选择退出。\n"
-"DOS比这糟多啦。"
+"DOS可比这糟多了。"
 
 msgid "QUITMSG4"
 msgstr ""
-"你想说你比起我，\n"
-"更爱DOS是吗？"
+"你是说比起我，\n"
+"你更喜欢DOS是吗？"
 
 msgid "QUITMSG5"
 msgstr ""
 "先别急着走 — 转角\n"
-"那儿还有只恶魔咧！"
+"那儿还有只恶魔呢！"
 
 msgid "QUITMSG6"
 msgstr ""
-"你给我等着，下次你进来的时候\n"
-"就把你干碎。"
+"你丫给我等着，下次你一进来\n"
+"我就把你干碎。"
 
 msgid "QUITMSG7"
 msgstr "哼，那你就走吧。好像我会在乎似的。"
@@ -160,8 +160,8 @@ msgstr ""
 
 msgid "QUITMSG14"
 msgstr ""
-"我没因为你想离开就\n"
-"扇你几巴掌算你走运。"
+"想离开？我不扇你几巴掌\n"
+"你就算走运了。"
 
 msgid "QUITMSG15"
 msgstr ""
@@ -170,8 +170,8 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"杀卡壳了……\n"
-"真让人失望！"
+"射得正爽呢……\n"
+"真吊人胃口！"
 
 msgid "QUITMSG17"
 msgstr ""
@@ -260,13 +260,13 @@ msgid "HUSTR_MSGU"
 msgstr "[消息未发送]"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr "你在喃喃自语"
+msgstr "你喃喃自语"
 
 msgid "HUSTR_TALKTOSELF2"
 msgstr "是谁？"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr "自己吓自己"
+msgstr "你吓了自己一跳"
 
 msgid "HUSTR_TALKTOSELF4"
 msgstr "你开始胡言乱语"
@@ -411,11 +411,12 @@ msgstr "你感觉变轻了"
 msgid "TXT_GRAVITY"
 msgstr "重力将你拉了下来"
 
+#, fuzzy
 msgid "TXT_NOTARGET_ON"
-msgstr "无目标：开"
+msgstr "无视模式：开"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "无目标：关"
+msgstr "无视模式：关"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "“吓得发抖！”"
@@ -1079,7 +1080,7 @@ msgid "OB_MPBFG_SPLASH"
 msgstr "%o 无法躲藏 %k 的BFG。"
 
 msgid "OB_RAILGUN"
-msgstr "%o 死于 %k 的轨道枪。"
+msgstr "%o 被 %k 的轨道枪打了个对穿。"
 
 msgid "OB_MPBFG_MBF"
 msgstr "%o 被 %k 的BFG烧死了。"
@@ -3120,7 +3121,7 @@ msgid "GMPLYMNU_ALLOWFREELOOK"
 msgstr "允许自由视角"
 
 msgid "GMPLYMNU_ALLOWFOV"
-msgstr "允许调整FOV"
+msgstr "允许调整视野"
 
 msgid "GMPLYMNU_BFGFREEAIM"
 msgstr "允许BFG瞄准"
@@ -3339,7 +3340,7 @@ msgid "CMPTMNU_MASKEDMIDTEX"
 msgstr "忽略透明通道中层纹理的Y轴偏移"
 
 msgid "CMPTMNU_SPRITESORT"
-msgstr "反转精灵排序"
+msgstr "反转精灵图排序"
 
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "音效行为"
@@ -3393,7 +3394,7 @@ msgid "PLYRMNU_PLAYERSKIN"
 msgstr "外观"
 
 msgid "PLYRMNU_SWITCHONPICKUP"
-msgstr "拾取新武器时自动切换"
+msgstr "自动切换至拾起的新武器"
 
 msgid "PLYRMNU_PRESSSPACE"
 msgstr "按 \\cj空格键"
@@ -3846,7 +3847,7 @@ msgid "DSPLYMNU_MAXDECALS"
 msgstr "贴花数量"
 
 msgid "DSPLYMNU_PLAYERSPRITES"
-msgstr "显示玩家(武器)精灵"
+msgstr "显示玩家(武器)精灵图"
 
 msgid "DSPLYMNU_DEATHCAM"
 msgstr "死亡时(第三人称)镜头"
@@ -4008,10 +4009,10 @@ msgid "OPTVAL_PARTICLES"
 msgstr "粒子"
 
 msgid "OPTVAL_SPRITES"
-msgstr "精灵"
+msgstr "精灵图"
 
 msgid "OPTVAL_SPRITESPARTICLES"
-msgstr "精灵和粒子"
+msgstr "精灵图与粒子效果"
 
 msgid "OPTVAL_MELT"
 msgstr "融化"
@@ -4354,7 +4355,7 @@ msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "动态光源(硬件)"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
-msgstr "光源影响精灵"
+msgstr "光照影响精灵图"
 
 msgid "GLLIGHTMNU_LIGHTPARTICLES"
 msgstr "光源影响粒子"
@@ -4381,19 +4382,20 @@ msgid "GLPREFMNU_ENVSTEALTH"
 msgstr "夜视时显示隐身怪物"
 
 msgid "GLPREFMNU_SPRCLIP"
-msgstr "调整精灵剪裁"
+msgstr "调整精灵图剪裁"
 
 msgid "GLPREFMNU_SPRBLEND"
-msgstr "平滑精灵边缘"
+msgstr "平滑精灵图边缘"
 
 msgid "GLPREFMNU_FUZZSTYLE"
 msgstr "模糊样式"
 
+#, fuzzy
 msgid "GLPREFMNU_SPRBILLBOARD"
-msgstr "精灵公告板"
+msgstr "精灵图广告牌"
 
 msgid "GLPREFMNU_SPRBILLFACECAMERA"
-msgstr "精灵面部相机"
+msgstr "精灵图面朝摄像机"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "粒子样式"
@@ -4657,7 +4659,7 @@ msgid "SCALEMNU_BORDER"
 msgstr "画面边框"
 
 msgid "SCALEMNU_FACTOR"
-msgstr "缩放因子"
+msgstr "缩放比例"
 
 msgid "SCALEMNU_RATIO"
 msgstr "宽高比"
@@ -4742,7 +4744,7 @@ msgid "GMPLYMNU_MULTIPLAYERTHINGS"
 msgstr "合作模式中刷出多人专用物体"
 
 msgid "DSPLYMNU_SPRITESHADOW"
-msgstr "精灵阴影"
+msgstr "精灵图阴影"
 
 # Will enable sprite shadows for monster and player sprites
 msgid "OPTVAL_SPRSHADALWAYS"
@@ -4750,7 +4752,7 @@ msgstr "怪物和玩家"
 
 # the FOV slider
 msgid "DSPLYMNU_FOV"
-msgstr "FOV"
+msgstr "视野"
 
 msgid "CMPTMNU_NOMBF21"
 msgstr "禁用MBF21特性"
@@ -4788,7 +4790,7 @@ msgstr "使用经典的HUD缩放"
 
 # hud_scalefactor
 msgid "SCALEMNU_HUD_SCALEFACTOR"
-msgstr "HUD缩放因子"
+msgstr "HUD缩放比例"
 
 # Any Actor that only appears in co-op is disabled
 msgid "GMPLYMNU_COOPTHINGS"
@@ -5117,7 +5119,7 @@ msgstr "红钥匙"
 # brightness. Without this option, weapon sprites are generally brighter
 # compared to the sector's brightness
 msgid "GLPREFMNU_WPNPURELIGHT"
-msgstr "武器精灵上使用区域亮度"
+msgstr "应用区域亮度至武器精灵图"
 
 # Mark the player as ready to advance during the intermission in multiplayer
 # games

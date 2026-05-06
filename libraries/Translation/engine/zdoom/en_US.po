@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-04-28 00:29+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-"
 "engine-strings/en/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Press a key."
@@ -251,31 +251,24 @@ msgstr "You need all six keys to activate this object"
 msgid "PD_ALLKEYS"
 msgstr "You need all the keys"
 
-#, fuzzy
 msgid "HUSTR_MSGU"
 msgstr "[Message unsent]"
 
-#, fuzzy
 msgid "HUSTR_TALKTOSELF1"
 msgstr "You mumble to yourself"
 
-#, fuzzy
 msgid "HUSTR_TALKTOSELF2"
 msgstr "Who's there?"
 
-#, fuzzy
 msgid "HUSTR_TALKTOSELF3"
 msgstr "You scare yourself"
 
-#, fuzzy
 msgid "HUSTR_TALKTOSELF4"
 msgstr "You start to rave"
 
-#, fuzzy
 msgid "HUSTR_TALKTOSELF5"
 msgstr "You've lost it…"
 
-#, fuzzy
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Message Sent]"
 
@@ -6472,11 +6465,9 @@ msgstr "Accessibility Options"
 msgid "JOYMNU_ANALOGRUN"
 msgstr "Analog Run"
 
-#, fuzzy
 msgid "ACCMNU_TOOLTIP_LINES"
 msgstr "Tooltip Lines"
 
-#, fuzzy
 msgid "ACCMNU_TOOLTIP_SPEED"
 msgstr "Tooltip Scroll Speed"
 
@@ -6768,3 +6759,45 @@ msgstr "Dynamic crosshair colors"
 
 msgid "HUDMNU_CROSSHAIRYOFFSET"
 msgstr "Crosshair vertical offset"
+
+msgid "VALFORMAT_DB"
+msgstr "%s dB"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s dB/m"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s deg"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s fps"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s Hz"
+
+msgid "VALFORMAT_METER"
+msgstr "%s m"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s ms"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s s"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Fill Alpha"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "Fill Color"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Double-click Threshold"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "Time between subsequent key presses to trigger a double-click event"

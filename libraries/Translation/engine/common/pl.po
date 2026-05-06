@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-04-28 00:29+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/common/pl/>"
 "\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSYN"
 msgstr "Wciśnij Y lub N."
@@ -309,9 +309,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Poprzedni przedmiot"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Ustaw klawisze mapy"
+msgstr "Klawisze mapy"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Klawisze mapy"
@@ -525,13 +524,11 @@ msgstr "Obracanie się"
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Patrzenie w górę/w dół"
 
-#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
-msgstr "Poruszanie się do przodu"
+msgstr "Poruszanie się w Przód/Tył"
 
-#, fuzzy
 msgid "OPTVAL_STRAFING"
-msgstr "Uniki"
+msgstr "Poruszanie się w Lewo/Prawo"
 
 msgid "OPTVAL_MOVINGUPDOWN"
 msgstr "Poruszanie się w górę/w dół"
@@ -1159,6 +1156,7 @@ msgstr "Awers"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "Rewers"
 
+#, fuzzy
 msgid "GLMNU_POSTPROCESS"
 msgstr "Przetwarzanie końcowe"
 

@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-05-04 07:09+0000\n"
+"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/"
 "uzdoom/common/en_GB/>\n"
 "Language: en_GB\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 msgid "PRESSYN"
 msgstr "Press Y or N."
@@ -308,9 +308,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Previous item"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Customise Map Controls"
+msgstr "Map Controls"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Map Controls"
@@ -1150,7 +1149,7 @@ msgid "OPTVAL_REVERSEFIRST"
 msgstr "Reverse"
 
 msgid "GLMNU_POSTPROCESS"
-msgstr "Postprocessing"
+msgstr "Post-processing"
 
 msgid "GLPREFMNU_TONEMAP"
 msgstr "Tonemap Mode"
