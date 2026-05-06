@@ -3303,8 +3303,9 @@ void DAutomap::drawAuthorMarkers ()
 		auto it = Level->GetActorIterator(mark->args[0]);
 		AActor *marked = mark->args[0] == 0 ? mark : it.Next();
 
-		double xscale = mark->Scale.X;
-		double yscale = mark->Scale.Y;
+        DVector2 markscale = mark->InterpolatedScale(r_viewpoint.TicFrac);
+		double xscale = markscale.X;
+		double yscale = markscale.Y;
 		// [MK] scale with automap zoom if args[2] is 1, otherwise keep a constant scale
 		if (mark->args[2] == 1)
 		{
@@ -3316,8 +3317,9 @@ void DAutomap::drawAuthorMarkers ()
 		{
 			if (mark->args[1] == 0 || (mark->args[1] == 1 && (marked->subsector->flags & SSECMF_DRAWN)))
 			{
-				DrawMarker (tex, marked->X(), marked->Y(), 0, flip, xscale, yscale, mark->Translation,
-					mark->Alpha, mark->fillcolor, mark->RenderStyle);
+			    DVector2 markedpos = marked->InterpolatedPosition(r_viewpoint.TicFrac).XY();
+				DrawMarker (tex, markedpos.X, markedpos.Y, 0, flip, xscale, yscale, mark->Translation,
+					mark->InterpolatedAlpha(r_viewpoint.TicFrac), mark->fillcolor, mark->RenderStyle);
 			}
 			marked = mark->args[0] != 0 ? it.Next() : nullptr;
 		}
