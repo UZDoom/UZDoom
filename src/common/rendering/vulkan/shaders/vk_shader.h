@@ -31,7 +31,8 @@
 #include "zvulkan/vulkanbuilders.h"
 #include <list>
 
-#define SHADER_MIN_REQUIRED_TEXTURE_LAYERS 11
+// Bumped from 11 to 13: slot 12 reserved for SceneColor (auto-bound framebuffer copy captured before translucent).
+#define SHADER_MIN_REQUIRED_TEXTURE_LAYERS 13
 
 class VulkanRenderDevice;
 class VulkanDevice;

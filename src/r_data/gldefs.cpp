@@ -1820,6 +1820,10 @@ class GLDefsParser
 				{
 					no_mipmap = true;
 				}
+				else if (sc.Compare("samplesscene"))
+				{
+					desc.samplesscene = true;
+				}
 				else if (sc.Compare("speed"))
 				{
 					sc.MustGetFloat();

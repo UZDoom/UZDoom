@@ -375,10 +375,15 @@ VulkanDescriptorSet* VkMaterial::GetDescriptorSet(const FMaterialState& state)
 	}
 
 	auto dummyImage = fb->GetTextureManager()->GetNullTextureView();
-	for (int i = numLayers; i < SHADER_MIN_REQUIRED_TEXTURE_LAYERS; i++)
+	// Slots 0..(N-2) are material/dummy; slot N-1 is reserved for SceneColor (dummy fallback).
+	for (int i = numLayers; i < SHADER_MIN_REQUIRED_TEXTURE_LAYERS - 1; i++)
 	{
 		update.AddCombinedImageSampler(descriptor.get(), i, dummyImage, sampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 	}
+
+	auto buffers = fb->GetBuffers();
+	auto sceneColorView = (buffers && buffers->SceneColorBackground.View) ? buffers->SceneColorBackground.View.get() : dummyImage;
+	update.AddCombinedImageSampler(descriptor.get(), SHADER_MIN_REQUIRED_TEXTURE_LAYERS - 1, sceneColorView, sampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 
 	update.Execute(fb->device.get());
 	mDescriptorSets.emplace_back(clampmode, translationp, std::move(descriptor));

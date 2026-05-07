@@ -580,6 +580,9 @@ void HWDrawInfo::RenderTranslucent(FRenderState &state)
 {
 	RenderAll.Clock();
 
+	// HWDrawInfo is pooled, reset here to ensure first refractive item triggers a grab.
+	sceneColorDirty = true;
+
 	// final pass: translucent stuff
 	state.AlphaFunc(Alpha_GEqual, gl_mask_sprite_threshold);
 	state.SetRenderStyle(STYLE_Translucent);
@@ -1040,6 +1043,7 @@ void HWDrawInfo::DrawScene(int drawmode)
 	recursion++;
 	portalState.EndFrame(this, RenderState);
 	recursion--;
+
 	RenderTranslucent(RenderState);
 }
 

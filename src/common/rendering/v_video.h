@@ -255,6 +255,8 @@ public:
 	virtual int Backend() { return 0; }
 	virtual const char* DeviceName() const { return "Unknown"; }
 	virtual void AmbientOccludeScene(float m5) {}
+	// Grab pass before translucent for material shaders to read as SceneColor. Default no-op.
+	virtual void GrabSceneColor() {}
 	virtual void FirstEye() {}
 	virtual void NextEye(int eyecount) {}
 	virtual void SetSceneRenderTarget(bool useSSAO) {}

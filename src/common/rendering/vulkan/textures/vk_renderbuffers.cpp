@@ -152,17 +152,21 @@ void VkRenderBuffers::CreateScene(int width, int height, VkSampleCountFlagBits s
 	SceneDepthStencil.Reset(fb);
 	SceneNormal.Reset(fb);
 	SceneFog.Reset(fb);
+	SceneColorBackground.Reset(fb);
 
 	CreateSceneColor(width, height, samples);
 	CreateSceneDepthStencil(width, height, samples);
 	CreateSceneNormal(width, height, samples);
 	CreateSceneFog(width, height, samples);
 
+	CreateSceneColorBackground(width, height);
+
 	VkImageTransition()
 		.AddImage(&SceneColor, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, true)
 		.AddImage(&SceneDepthStencil, VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL, true)
 		.AddImage(&SceneNormal, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, true)
 		.AddImage(&SceneFog, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, true)
+		.AddImage(&SceneColorBackground, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, true)
 		.Execute(fb->GetCommands()->GetDrawCommands());
 }
 
@@ -227,6 +231,22 @@ void VkRenderBuffers::CreateSceneFog(int width, int height, VkSampleCountFlagBit
 	SceneFog.View = ImageViewBuilder()
 		.Image(SceneFog.Image.get(), VK_FORMAT_R8G8B8A8_UNORM)
 		.DebugName("VkRenderBuffers.SceneFogView")
+		.Create(fb->device.get());
+}
+
+void VkRenderBuffers::CreateSceneColorBackground(int width, int height)
+{
+	// Single-sample sampleable copy of scene color, read by material shaders as SceneColor.
+	SceneColorBackground.Image = ImageBuilder()
+		.Size(width, height)
+		.Format(VK_FORMAT_R16G16B16A16_SFLOAT)
+		.Usage(VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT)
+		.DebugName("VkRenderBuffers.SceneColorBackground")
+		.Create(fb->device.get());
+
+	SceneColorBackground.View = ImageViewBuilder()
+		.Image(SceneColorBackground.Image.get(), VK_FORMAT_R16G16B16A16_SFLOAT)
+		.DebugName("VkRenderBuffers.SceneColorBackgroundView")
 		.Create(fb->device.get());
 }
 
