@@ -556,6 +556,26 @@ static float GetRolloff(const FRolloffInfo *rolloff, float distance)
 	return soundEngine->GetRolloff(rolloff, distance);
 }
 
+static float GetSourceScale(bool isSpatializeSupported, ALuint source)
+{
+	if (!isSpatializeSupported)
+		return 1.0f;
+
+	ALint spatialize = AL_AUTO_SOFT;
+	alGetSourcei(source, AL_SOURCE_SPATIALIZE_SOFT, &spatialize);
+	if (spatialize != AL_TRUE)
+		return 1.0f;
+
+	ALint buffer = 0;
+	alGetSourcei(source, AL_BUFFER, &buffer);
+	if (buffer == 0)
+		return 1.0f;
+
+	ALint chans = 1;
+	alGetBufferi(buffer, AL_CHANNELS, &chans);
+	return (chans > 1) ? (1.0f / chans) : 1.0f;
+}
+
 ALCdevice *OpenALSoundRenderer::InitDevice()
 {
 	ALCdevice *device = NULL;
@@ -989,9 +1009,11 @@ void OpenALSoundRenderer::SetSfxVolume(float volume)
 			ALuint source = GET_PTRID(schan->SysChannel);
 			volume = SfxVolume;
 
+			float scale = GetSourceScale(AL.SOFT_source_spatialize, source);
+
 			alDeferUpdatesSOFT();
-			alSourcef(source, AL_MAX_GAIN, volume);
-			alSourcef(source, AL_GAIN, volume * schan->Volume);
+			alSourcef(source, AL_MAX_GAIN, volume * scale);
+			alSourcef(source, AL_GAIN, volume * schan->Volume * scale);
 		}
 		schan = schan->NextChan;
 	}
@@ -1375,6 +1397,16 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 	bool manualRolloff = true;
 	ALuint buffer = GET_PTRID(sfx.data);
 	ALuint source = FreeSfx.Last();
+
+	float scale = 1.0f;
+	if (AL.SOFT_source_spatialize && buffer != 0)
+	{
+		ALint chans = 1;
+		alGetBufferi(buffer, AL_CHANNELS, &chans);
+		if (chans > 1)
+			scale = 1.0f / chans;
+	}
+
 	if(rolloff->RolloffType == ROLLOFF_Log)
 	{
 		if(AL.EXT_source_distance_model)
@@ -1446,8 +1478,8 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 
 	alSourcei(source, AL_LOOPING, (chanflags&SNDF_LOOP) ? AL_TRUE : AL_FALSE);
 
-	alSourcef(source, AL_MAX_GAIN, SfxVolume);
-	alSourcef(source, AL_GAIN, SfxVolume*vol);
+	alSourcef(source, AL_MAX_GAIN, SfxVolume * scale);
+	alSourcef(source, AL_GAIN, SfxVolume * vol * scale);
 	if(AL.SOFT_source_spatialize)
 		alSourcei(source, AL_SOURCE_SPATIALIZE_SOFT, AL_TRUE);
 
@@ -1534,7 +1566,8 @@ void OpenALSoundRenderer::ChannelVolume(FISoundChannel *chan, float volume)
 	alDeferUpdatesSOFT();
 
 	ALuint source = GET_PTRID(chan->SysChannel);
-	alSourcef(source, AL_GAIN, SfxVolume * volume);
+	float scale = GetSourceScale(AL.SOFT_source_spatialize, source);
+	alSourcef(source, AL_GAIN, SfxVolume * volume * scale);
 }
 
 void OpenALSoundRenderer::ChannelPitch(FISoundChannel *chan, float pitch)
@@ -1883,6 +1916,9 @@ float OpenALSoundRenderer::GetAudibility(FISoundChannel *chan)
 
 	alGetSourcef(source, AL_GAIN, &volume);
 	getALError();
+
+	// So that voice eviction logic measures the intended audibility
+	volume /= GetSourceScale(AL.SOFT_source_spatialize, source);
 
 	volume *= GetRolloff(&chan->Rolloff, sqrtf(chan->DistanceSqr) * chan->DistanceScale);
 	return volume;
