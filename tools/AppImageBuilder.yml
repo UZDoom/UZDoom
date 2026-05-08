@@ -23,12 +23,9 @@ AppDir:
       - /lib/x86_64-linux-gnu/libbsd.so.0
       - /lib/x86_64-linux-gnu/libbz2.so.1.0
       - /lib/x86_64-linux-gnu/libdecor-0.so.0
-      - /lib/x86_64-linux-gnu/libexpat.so.1
       - /lib/x86_64-linux-gnu/libffi.so.8
-      - /lib/x86_64-linux-gnu/libgcc_s.so.1
       - /lib/x86_64-linux-gnu/libgcrypt.so.20
       - /lib/x86_64-linux-gnu/libglib-2.0.so.0
-      - /lib/x86_64-linux-gnu/libgpg-error.so.0
       - /lib/x86_64-linux-gnu/liblz4.so.1
       - /lib/x86_64-linux-gnu/liblzma.so.5
       - /lib/x86_64-linux-gnu/libmd.so.0
@@ -43,7 +40,6 @@ AppDir:
       - /lib/x86_64-linux-gnu/libpulse.so.0
       - /lib/x86_64-linux-gnu/libsamplerate.so.0
       - /lib/x86_64-linux-gnu/libsndfile.so.1
-      - /lib/x86_64-linux-gnu/libstdc++.so.6
       - /lib/x86_64-linux-gnu/libvorbis.so.0
       - /lib/x86_64-linux-gnu/libvorbisenc.so.2
       - /lib/x86_64-linux-gnu/libvpx.so.7
@@ -55,12 +51,25 @@ AppDir:
       - /lib/x86_64-linux-gnu/libzstd.so.1
       - /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-16.1.so
     exclude:
+      - lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+      - lib/x86_64-linux-gnu/libX11-xcb.so.1
+      - lib/x86_64-linux-gnu/libX11.so.6
+      - lib/x86_64-linux-gnu/libasound.so.2
       - lib/x86_64-linux-gnu/libc.so.6
+      - lib/x86_64-linux-gnu/libdl.so.2
+      - lib/x86_64-linux-gnu/libdrm.so.2
+      - lib/x86_64-linux-gnu/libexpat.so.1
+      - lib/x86_64-linux-gnu/libgbm.so.1
+      - lib/x86_64-linux-gnu/libgcc_s.so.1
+      - lib/x86_64-linux-gnu/libgpg-error.so.0
       - lib/x86_64-linux-gnu/libm.so.6
-      - lib64/ld-linux-x86-64.so.2
+      - lib/x86_64-linux-gnu/libpthread.so.0
+      - lib/x86_64-linux-gnu/libstdc++.so.6
+      - lib/x86_64-linux-gnu/libwayland-client.so.0
+      - lib/x86_64-linux-gnu/libxcb.so.1
+      - usr/include
       - usr/lib/*.a
       - usr/lib/cmake
-      - usr/include
 
   # ... why are these so old ?
   test:
