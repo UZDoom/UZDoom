@@ -46,7 +46,7 @@ AppDir:
       - /lib/x86_64-linux-gnu/libstdc++.so.6
       - /lib/x86_64-linux-gnu/libvorbis.so.0
       - /lib/x86_64-linux-gnu/libvorbisenc.so.2
-      - /lib/x86_64-linux-gnu/libvpx.so.9
+      - /lib/x86_64-linux-gnu/libvpx.so.7
       - /lib/x86_64-linux-gnu/libwayland-client++.so.1
       - /lib/x86_64-linux-gnu/libwayland-client-extra++.so.1
       - /lib/x86_64-linux-gnu/libwayland-client-unstable++.so.1
