@@ -38,10 +38,22 @@ FModule OpenALModule{"OpenAL"};
 
 #include "oalload.h"
 
+#ifdef __linux
+// SteamDeck exposes a broken JACK device, which takes precedence over the
+// working pulseaudio backend. This raises the priority of pulseaudio, which
+// is the modern linux way of doing audio. The AppImage ships the drivers,
+// so this should work on all systems
+// https://github.com/kcat/openal-soft/blob/993b8c8/alsoftrc.sample#L46-L53
+#define DEFAULT_DRIVER "pulse,"
+#else
+#define DEFAULT_DRIVER ""
+#endif
+
 CUSTOM_CVAR(Int, snd_channels, 128, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)	// number of channels available
 {
 	if (self < 64) self = 64;
 }
+CVARD(String, snd_aldriver, DEFAULT_DRIVER, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "See alsoftrc.sample for details")
 CVAR(Bool, snd_waterreverb, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR (String, snd_aldevice, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (Bool, snd_efx, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
@@ -556,8 +568,22 @@ static float GetRolloff(const FRolloffInfo *rolloff, float distance)
 	return soundEngine->GetRolloff(rolloff, distance);
 }
 
+void trysetenv(const char *k, const char *v)
+{
+#ifdef _WIN32
+	size_t size;
+	getenv_s(&size, nullptr, 0, k);
+	if (size == 0) _putenv_s(k, v);
+#else
+	setenv(k, v, 0);
+#endif
+}
+
 ALCdevice *OpenALSoundRenderer::InitDevice()
 {
+	// allow setting this from game
+	trysetenv("ALSOFT_DRIVERS", snd_aldriver);
+
 	ALCdevice *device = NULL;
 	if (IsOpenALPresent())
 	{
