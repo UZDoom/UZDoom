@@ -7,6 +7,9 @@ on:
       os:
         required: true
         type: string
+      os_image:
+        required: true
+        type: string
       deps_cmdline:
         required: true
         type: string
@@ -34,11 +37,24 @@ jobs:
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
     runs-on: ${{ inputs.os }}
+    container:
+      image: ${{ inputs.os_image }}
+      options: --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined
     defaults:
       run:
         shell: ${{ contains(inputs.name, 'MinGW') && 'msys2 {0}' || 'bash' }}
 
     steps:
+    - name: Prepare Container
+      if: runner.os == 'Linux'
+      run: |
+        # Containers are lean and may not have packages required by early steps
+        elevated() { if [ "$EUID" -ne 0 ]; then sudo "$@"; else "$@"; fi; }
+        if which apt-get; then
+          elevated apt-get -q update
+          elevated apt-get -q install -y curl git sudo tree
+        fi
+
     - name: Checkout
       uses: actions/checkout@v6
       with:
@@ -110,6 +126,7 @@ jobs:
         BUILD_TYPE: ${{ inputs.build_type || 'Release' }}
         BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
+        git config --global --add safe.directory $GITHUB_WORKSPACE
         cmake -B build -S . \
           -DPK3_QUIET_ZIPDIR=ON -G Ninja \
           -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS

@@ -24,6 +24,7 @@ jobs:
       build_type: RelWithDebInfo
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       extra_files: ${{ matrix.config.extra_files }}
@@ -65,10 +66,18 @@ jobs:
 
           - name: Linux
             os: ubuntu-latest
+            os_image: debian:oldstable # use debian/ubuntu distro with oldest glibc, which supports the needed toolchain
             build_opts: &linux_opts
-            build_opts_extra: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+            build_opts_extra: -DCMAKE_C_COMPILER=clang-19 -DCMAKE_CXX_COMPILER=clang++-19
             deps_cmdline: &linux_deps >-
-              sudo apt-get update && sudo apt-get install
+              sudo apt-get -q install -y
+                gtk-update-icon-cache
+                build-essential
+                ninja-build
+                p7zip-full
+                libfuse2
+                clang-19
+                cmake
                 libopenal-dev
                 waylandpp-dev
                 libsdl2-dev
@@ -76,7 +85,6 @@ jobs:
                 libbz2-dev
                 libomp-dev
                 libvpx-dev
-                libfuse2
             extra_files: &linux_files >-
               appimage-builder
                 4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f
@@ -89,6 +97,7 @@ jobs:
     with:
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       build_type: ${{ matrix.config.build_type }}
@@ -99,6 +108,7 @@ jobs:
         config: # put bespoke configs here
           - name: Linux GCC # I'm just here to make sure GCC doesn't break
             os: ubuntu-latest
+            os_image: ubuntu:latest
             build_opts: *linux_opts
             build_opts_extra: ""
             deps_cmdline: *linux_deps
@@ -118,6 +128,7 @@ jobs:
                 mingw-w64-x86_64-bzip2
                 mingw-w64-x86_64-clang
                 mingw-w64-x86_64-gcc
+                mingw-w64-x86_64-git
             extra_files: ""
             build_type: RelWithDebInfo
 
@@ -129,6 +140,7 @@ jobs:
     with:
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       build_type: ${{ matrix.config.build_type }}
@@ -180,6 +192,7 @@ jobs:
       build_type: Release
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       extra_files: ${{ matrix.config.extra_files }}
@@ -197,6 +210,7 @@ jobs:
       build_type: Debug
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
       build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       extra_files: ${{ matrix.config.extra_files }}
