@@ -341,6 +341,7 @@ void FRandom::StaticReadRNGState(FSerializer &arc)
 					if (rng->NameCRC == crc)
 					{
 						arc.Array("u", s32.data(), s32.size());
+						rng->from_s32(s32);
 						break;
 					}
 				}

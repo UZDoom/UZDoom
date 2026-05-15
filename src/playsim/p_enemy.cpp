@@ -1401,7 +1401,7 @@ bool ValidEnemyInBlock(AActor* lookee, AActor* other, void* lookparams)
 
 	// [KS] Hey, shouldn't there be a check for MF3_NOSIGHTCHECK here?
 
-	if (!keepChecking || !P_IsVisible(lookee, other, true, params))
+	if (!keepChecking || !P_IsVisible(lookee, other, (lookee->flags4 & MF4_LOOKALLAROUND), params))
 		return false;			// out of sight
 
 	return true;
@@ -1552,7 +1552,7 @@ AActor *LookForTIDInBlock (AActor *lookee, int index, void *extparams)
 
 		if (!(lookee->flags3 & MF3_NOSIGHTCHECK))
 		{
-			if (!P_IsVisible(lookee, other, true, params))
+			if (!P_IsVisible(lookee, other, (lookee->flags4 & MF4_LOOKALLAROUND), params))
 				continue;			// out of sight
 		}
 

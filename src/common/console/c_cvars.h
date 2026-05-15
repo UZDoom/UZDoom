@@ -745,37 +745,36 @@ void C_RestoreCVars (void);
 
 void C_ForgetCVars (void);
 
-#define CUSTOM_CVAR(type,name,def,flags) \
-	static void cvarfunc_##name(F##type##CVar &, F##type##CVar::ValueType); \
-	F##type##CVarRef name; \
-	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #name, CVarValue<CVAR_##type>(def), nullptr, reinterpret_cast<void*>(cvarfunc_##name) }; \
-	static void cvarfunc_##name(F##type##CVar &self, F##type##CVar::ValueType prev)
-
-
-#define CUSTOM_CVAR_NAMED(type,name,cname,def,flags) \
-	static void cvarfunc_##name(F##type##CVar &, F##type##CVar::ValueType); \
-	F##type##CVarRef name; \
-	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #cname, CVarValue<CVAR_##type>(def), nullptr, reinterpret_cast<void*>(cvarfunc_##name) }; \
-	static void cvarfunc_##name(F##type##CVar &self, F##type##CVar::ValueType prev)
-
-#define CVAR(type,name,def,flags) \
-	F##type##CVarRef name; \
-	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #name, CVarValue<CVAR_##type>(def), nullptr, nullptr};
-
 #define EXTERN_CVAR(type,name) extern F##type##CVarRef name;
 
-#define CUSTOM_CVARD(type,name,def,flags,descr) \
-	static void cvarfunc_##name(F##type##CVar &, F##type##CVar::ValueType); \
-	F##type##CVarRef name; \
-	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #name, CVarValue<CVAR_##type>(def), descr, reinterpret_cast<void*>(cvarfunc_##name) }; \
+#define __CVAR_VALUE_DECLARATION(type,name) \
+	F##type##CVarRef name;
+#define __CVAR_VALUE_DEFINITION(type,name,cname,def,flags,descr,funcptr) \
+	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #cname, CVarValue<CVAR_##type>(def), descr, reinterpret_cast<void*>(funcptr)};
+
+#define __CVAR_CALLBACK_DECLARATION(type,name) \
+	static void cvarfunc_##name(F##type##CVar &, F##type##CVar::ValueType);
+#define __CVAR_CALLBACK_DEFINITION(type,name) \
 	static void cvarfunc_##name(F##type##CVar &self, F##type##CVar::ValueType prev)
 
-#define CVARD(type,name,def,flags, descr) \
-	F##type##CVarRef name; \
-	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #name, CVarValue<CVAR_##type>(def), descr, nullptr};
+#define CVARD_NAMED(type,name,cname,def,flags,descr) \
+	__CVAR_VALUE_DECLARATION(type,name) \
+	__CVAR_VALUE_DEFINITION(type,name,cname,def,flags,descr,NULL)
 
-#define CVARD_NAMED(type,name,varname,def,flags, descr) \
-	F##type##CVarRef name; \
-	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #varname, CVarValue<CVAR_##type>(def), descr, nullptr};
+#define CUSTOM_CVARD_NAMED(type,name,cname,def,flags,descr) \
+	__CVAR_CALLBACK_DECLARATION(type,name) \
+	__CVAR_VALUE_DECLARATION(type,name) \
+	__CVAR_VALUE_DEFINITION(type,name,cname,def,flags,descr,cvarfunc_##name) \
+	__CVAR_CALLBACK_DEFINITION(type,name)
+
+#define DEPR_CVAR(type,name,def,reason) \
+	[[deprecated(reason)]] __CVAR_VALUE_DECLARATION(type,name) \
+	ALLOW_DEPRECATED(__CVAR_VALUE_DEFINITION(type,name,name,def,CVAR_HIDDEN,nullptr,NULL), "so we don't get a warning immediately")
+
+#define CUSTOM_CVAR_NAMED(type,name,cname,def,flags) CUSTOM_CVARD_NAMED(type,name,cname,def,flags,nullptr)
+#define CUSTOM_CVARD(type,name,def,flags,descr) CUSTOM_CVARD_NAMED(type,name,name,def,flags,descr)
+#define CVARD(type,name,def,flags, descr) CVARD_NAMED(type,name,name,def,flags, descr)
+#define CUSTOM_CVAR(type,name,def,flags) CUSTOM_CVARD(type,name,def,flags,nullptr)
+#define CVAR(type,name,def,flags) CVARD(type,name,def,flags, nullptr)
 
 #endif //__C_CVARS_H__

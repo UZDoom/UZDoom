@@ -53,6 +53,10 @@ public:
 		};
 	}
 
+	void from_s32(std::array<uint32_t, 2> s32) {
+		this->s = static_cast<uint64_t>(s32[0]) | (static_cast<uint64_t>(s32[1]) << 32);
+	}
+
 	uint64_t GenRand64() {
 		return (uint64_t(GenRand32()) << 32) + uint64_t(GenRand32());
 	}

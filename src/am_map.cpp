@@ -812,6 +812,11 @@ void FMapInfoParser::ParseAMColors(bool overlay)
 				cset.displayLocks = true;
 			}
 		}
+		else if (nextKey.CompareNoCase("SectorFillAlpha") == 0)
+		{
+			sc.MustGetToken(TK_FloatConst);
+			cset.fillAlpha = clamp(sc.Float, 0.0, 1.0);
+		}
 		else
 		{
 			int i;

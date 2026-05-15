@@ -86,6 +86,22 @@ typedef uint32_t			angle_t;
 #define GCCNOWARN
 #endif
 
+#if defined(__GNUC__)
+#define ALLOW_DEPRECATED(expression, reason) \
+	_Pragma("GCC diagnostic push") \
+	_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"") \
+	expression; \
+	_Pragma("GCC diagnostic pop")
+#elif defined(_MSC_VER)
+#define ALLOW_DEPRECATED(expression, reason) \
+	__pragma(warning(push)) \
+	__pragma(warning(disable : 4996)) \
+	expression; \
+	__pragma(warning(pop))
+#else
+#define ALLOW_DEPRECATED(expression, reason) expression;
+#endif
+
 #ifndef MAKE_ID
 #ifndef __BIG_ENDIAN__
 #define MAKE_ID(a,b,c,d)	((uint32_t)((a)|((b)<<8)|((c)<<16)|((d)<<24)))

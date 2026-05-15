@@ -25,6 +25,7 @@
 #include <cassert>
 
 #include "base_sbar.h"
+#include "basics.h"
 #include "c_cvars.h"
 #include "colorspace.h"
 #include "cmdlib.h"
@@ -49,6 +50,7 @@ CVAR(Color, crosshaircolorFull, 0x00ff00, CVAR_ARCHIVE);
 CVAR(Color, crosshaircolorMax,  0x7f7fff, CVAR_ARCHIVE);
 CVAR(Bool, crosshairshowshealth, false, CVAR_HIDDEN);
 CVAR(Bool, crosshairhascolor, false, CVAR_HIDDEN);
+DEPR_CVAR(Int, crosshairhealth, 0, "replaced by crosshaircolors/crosshairshowshealth/crosshairhascolor");
 CUSTOM_CVARD(Int, crosshaircolors, 2, CVAR_ARCHIVE, "0: basic, 1: show health, 2: show health bonus, 3: inverted")
 {
 	switch (self)
@@ -59,6 +61,7 @@ CUSTOM_CVARD(Int, crosshaircolors, 2, CVAR_ARCHIVE, "0: basic, 1: show health, 2
 		case 3: crosshairshowshealth = false; crosshairhascolor = false; break;
 		default: self = 2;
 	}
+	ALLOW_DEPRECATED((crosshairhealth = self), "for backwards compatibility");
 };
 CVARD(Float, crosshairscale, 1.0, CVAR_ARCHIVE, "changes the size of the crosshair");
 CVARD(Bool, crosshairgrow, false, CVAR_ARCHIVE, "grow crosshair upon pickup");
