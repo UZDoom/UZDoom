@@ -1213,6 +1213,7 @@ set (PCH_SOURCES
 	utility/nodebuilder/nodebuild_extract.cpp
 	utility/nodebuilder/nodebuild_gl.cpp
 	utility/nodebuilder/nodebuild_utility.cpp
+	utility/sc_include.cpp
 	utility/system_theme.cpp
 	utility/simdutf/simdutf.cpp
 )
