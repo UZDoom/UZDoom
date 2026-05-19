@@ -38,8 +38,6 @@ jobs:
             build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
             build_opts_extra: ""
             deps_cmdline: &msvc_deps >-
-              choco install
-                tree
             extra_files: &msvc_x86_files >-
               oalsoft.zip
                 ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6
@@ -61,7 +59,6 @@ jobs:
                 molten-vk
                 libvpx
                 sdl2
-                tree
             extra_files: ""
 
           - name: Linux
