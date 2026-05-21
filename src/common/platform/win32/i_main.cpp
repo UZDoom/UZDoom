@@ -122,10 +122,11 @@ DWORD			MainThreadID;
 HANDLE			StdOut;
 bool			FancyStdOut, AttachedStdOut;
 
-// use custom here, because types are confusing sometimes
-FARG_CUSTOM(stdout, "-stdout", "Debug", false, "Print output to system console", "",
+FARG(cli, "Debug", "Print output to system console", "",
 	"(Win32 only)\nSends all output to a system console. Unix and MacOS builds of ZDoom will"
 	" always do that.");
+// use custom here, because types are confusing sometimes
+FARG_CUSTOM(stdout, "-stdout", "Debug", true, "Alias of -cli", "", "");
 
 // CODE --------------------------------------------------------------------
 
@@ -218,7 +219,8 @@ int DoMain (HINSTANCE hInstance)
 		}
 	}
 	else if (
-		Args->CheckParm(FArg_stdout)
+		Args->CheckParm(FArg_cli)
+		|| Args->CheckParm(FArg_stdout)
 		|| Args->CheckParm(FArg_norun)
 		|| Args->CheckParm(FArg_help)
 		|| Args->CheckParm(FArg_h)
