@@ -123,7 +123,7 @@ bool FPortalSceneState::RenderFirstSkyPortal(int recursion, HWDrawInfo *outer_di
 	for (int i = portals.Size() - 1; i >= 0; --i)
 	{
 		auto p = portals[i];
-		if (p->lines.Size() > 0 && p->IsSky(outer_di))
+		if (p->lines.Size() > 0 && p->IsSky())
 		{
 			// Cannot clear the depth buffer inside a portal recursion
 			if (recursion && p->NeedDepthBuffer()) continue;
@@ -147,18 +147,7 @@ bool FPortalSceneState::RenderFirstSkyPortal(int recursion, HWDrawInfo *outer_di
 	if (best)
 	{
 		portals.Delete(bestindex);
-		if (usestencil && ((strcmp(best->GetName(), "Sky") == 0) || (strcmp(best->GetName(), "Skybox") == 0)))
-		{
-			tempmatrix = outer_di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
-			outer_di->VPUniforms.mProjectionMatrix = outer_di->ProjectionMatrix2;
-		}
-		outer_di->VPUniforms.mThickFogDistance /= 16.0; // Skyviewpoint sectors are scaled up by 16x
-		outer_di->VPUniforms.mThickFogMultiplier *= 16.0; // Skyviewpoint sectors are scaled up by 16x
 		RenderPortal(best, state, usestencil, outer_di);
-		outer_di->VPUniforms.mThickFogDistance *= 16.0; // Revert back
-		outer_di->VPUniforms.mThickFogMultiplier /= 16.0; // Revert back
-		if (usestencil && ((strcmp(best->GetName(), "Sky") == 0) || (strcmp(best->GetName(), "Skybox") == 0)))
-			outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
 		delete best;
 		return true;
 	}
@@ -168,7 +157,13 @@ bool FPortalSceneState::RenderFirstSkyPortal(int recursion, HWDrawInfo *outer_di
 
 void FPortalSceneState::RenderPortal(HWPortal *p, FRenderState &state, bool usestencil, HWDrawInfo *outer_di)
 {
+	if (outer_di->Viewpoint.bDoOrtho && (strcmp(p->GetName(), "Sky") == 0))
+	{
+		tempmatrix = outer_di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
+		outer_di->VPUniforms.mProjectionMatrix = outer_di->ProjectionMatrix2;
+	}
 	if (gl_portals) outer_di->RenderPortal(p, state, usestencil);
+	if (outer_di->Viewpoint.bDoOrtho && (strcmp(p->GetName(), "Sky") == 0)) outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
 }
 
 
@@ -734,6 +729,10 @@ bool HWSkyboxPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 
 	vp.ViewActor = origin;
 
+	di->VPUniforms.mThickFogDistance /= 16.0; // Skyviewpoint sectors are scaled up by 16x
+	di->VPUniforms.mThickFogMultiplier *= 16.0; // Skyviewpoint sectors are scaled up by 16x
+	tempmatrix = di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
+	di->VPUniforms.mProjectionMatrix = di->ProjectionMatrix2;
 	di->SetupView(rstate, vp.Pos.X, vp.Pos.Y, vp.Pos.Z, !!(state->MirrorFlag & 1), !!(state->PlaneMirrorFlag & 1));
 	vp.OffPos = vp.Pos; // Do this after di->SetupView()
 	di->SetViewArea();
@@ -747,6 +746,9 @@ void HWSkyboxPortal::Shutdown(HWDrawInfo *di, FRenderState &rstate)
 {
 	rstate.SetDepthClamp(oldclamp);
 
+	di->VPUniforms.mThickFogDistance *= 16.0; // Revert back
+	di->VPUniforms.mThickFogMultiplier /= 16.0; // Revert back
+	di->VPUniforms.mProjectionMatrix = tempmatrix;
 	auto state = mState;
 	portal->mFlags &= ~PORTSF_INSKYBOX;
 	state->inskybox = false;
@@ -807,11 +809,6 @@ void HWSectorStackPortal::SetupCoverage(HWDrawInfo *di)
 		}
 	}
 	SetCoverage(di, di->Level->HeadNode());
-}
-
-bool HWSectorStackPortal::IsSky(HWDrawInfo *di)
-{
-	return di->Level->thickfogdistance <= 0.0; // although this isn't a real sky it can be handled as one. Unless thickfog is active. That requires depth buffer.
 }
 
 //-----------------------------------------------------------------------------
