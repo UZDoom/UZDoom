@@ -347,22 +347,49 @@ jobs:
       env:
         NAME: ${{ steps.package.outputs.name }}
         GIT_DESCRIBE: ${{ steps.build.outputs.version }}
+        OWNER: ${{ github.repository_owner }}
+        REPO: ${{ github.event.repository.name }}
+        TAG: latest
       run: |
-        ldd ./uzdoom
+        appdir=AppDir
+        pfx=$(realpath $appdir)/usr
+        arch=$(uname -m)
+        mkdir $appdir
 
-        if [[ $(uname -m) != "x86_64" ]]; then
-          mv uzdoom *.pk3 package
-        else
-          mkdir AppDir
+        cmake --install . --prefix "${pfx}"
 
-          cmake --install . --prefix "$(realpath AppDir)/usr"
+        # this is actually in the correct place, but the appimage linter complains
+        # copying it for now, just in case some tooling wants it there
+        mv "${pfx}/share/metainfo/org.zdoom.UZDoom.metainfo.xml" "${pfx}/share/metainfo/org.zdoom.UZDoom.appdata.xml"
 
-          chmod +x appimage-builder
-          ./appimage-builder --skip-tests --recipe ../tools/AppImageBuilder.yml
-          mv *.AppImage "package/${NAME}.AppImage"
+        # cleanup
+        {
+          find "${pfx}" -type f \( -iname \*.a -o -iname \*.h -o -iname \*.cmake \) -print -delete
+          find "${pfx}" -type d -empty -delete -print
+        } | xargs printf 'deleting: %s\n'
 
-          rm package/licenses.zip
-        fi
+        # https://github.com/linuxdeploy/linuxdeploy-plugin-appimage
+        export LDAI_UPDATE_INFORMATION="gh-releases-zsync|${OWNER}|${REPO}|${TAG}|Linux-UZDoom-*-${arch}.AppImage.zsync"
+        # export LDAI_SIGN
+        # export LDAI_SIGN_KEY
+        # export LDAI_OUTPUT
+        export LDAI_RUNTIME_FILE=./appimage-runtime
+        # export LINUXDEPLOY_OUTPUT_APP_NAME
+        # export LINUXDEPLOY_OUTPUT_VERSION
+
+        # our metainfo file is correct, but for some reason the checker crashes on it
+        export LDAI_NO_APPSTREAM=1
+
+        chmod +x linuxdeploy
+        ./linuxdeploy --output appimage \
+          --appdir $appdir \
+          --executable="${pfx}/bin/uzdoom" \
+          --desktop-file="${pfx}/share/applications/org.zdoom.UZDoom.desktop" \
+          --icon-file="${pfx}/share/icons/hicolor/scalable/apps/org.zdoom.UZDoom.svg"
+
+        mv *.AppImage "package/${NAME}.AppImage"
+
+        rm package/licenses.zip
 
     - name: List
       if: always()

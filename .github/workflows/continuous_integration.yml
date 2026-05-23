@@ -68,13 +68,6 @@ jobs:
             build_opts_extra: -DCMAKE_C_COMPILER=clang-19 -DCMAKE_CXX_COMPILER=clang++-19
             deps_cmdline: &linux_deps >-
               sudo apt-get -q install -y
-                gtk-update-icon-cache
-                build-essential
-                ninja-build
-                p7zip-full
-                libfuse2
-                clang-19
-                cmake
                 libopenal-dev
                 waylandpp-dev
                 libsdl2-dev
@@ -82,10 +75,26 @@ jobs:
                 libbz2-dev
                 libomp-dev
                 libvpx-dev
-            extra_files: &linux_files >-
-              appimage-builder
-                4b4f99cae9291d78ba12dbdabca7c0a67c72aa61eb2e5d424089171a9485e96f
-                https://github.com/AppImageCrafters/appimage-builder/releases/download/v1.1.0/appimage-builder-1.1.0-x86_64.AppImage
+                gtk-update-icon-cache
+                libfile-mimeinfo-perl
+                desktop-file-utils
+                build-essential
+                ninja-build
+                p7zip-full
+                appstream
+                clang-19
+                cmake
+                fuse
+            extra_files: &linux_files_x86_64 >-
+              linuxdeploy
+                c20cd71e3a4e3b80c3483cef793cda3f4e990aca14014d23c544ca3ce1270b4d
+                https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20251107-1/linuxdeploy-x86_64.AppImage
+              linuxdeploy-plugin-appimage
+                992d502a248e14ab185448ddf6f6e7d25558cb84d4623c354c3af350c25fccb3
+                https://github.com/linuxdeploy/linuxdeploy-plugin-appimage/releases/download/1-alpha-20250213-1/linuxdeploy-plugin-appimage-x86_64.AppImage
+              appimage-runtime
+                2fca8b443c92510f1483a883f60061ad09b46b978b2631c807cd873a47ec260d
+                https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-x86_64
 
   extra:
     name: ${{ matrix.config.name }}
@@ -109,7 +118,7 @@ jobs:
             build_opts: *linux_opts
             build_opts_extra: ""
             deps_cmdline: *linux_deps
-            extra_files: *linux_files
+            extra_files: *linux_files_x86_64
             build_type: RelWithDebInfo
 
           - name: Windows MinGW GCC
@@ -167,16 +176,17 @@ jobs:
             build_opts: *linux_opts
             build_opts_extra: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
             deps_cmdline: *linux_deps
-            extra_files: ""
+            extra_files: &linux_files_aarch64 >-
+              linuxdeploy
+                620095110d693282b8ebeb244a95b5e911cf8f65f76c88b4b47d16ae6346fcff
+                https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20251107-1/linuxdeploy-aarch64.AppImage
+              linuxdeploy-plugin-appimage
+                83c292149274965a865dcd44c135cfca8ba28c6b7de3eb628d4b8b5f248af17c
+                https://github.com/linuxdeploy/linuxdeploy-plugin-appimage/releases/download/1-alpha-20250213-1/linuxdeploy-plugin-appimage-aarch64.AppImage
+              appimage-runtime
+                00cbdfcf917cc6c0ff6d3347d59e0ca1f7f45a6df1a428a0d6d8a78664d87444
+                https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-aarch64
             build_type: RelWithDebInfo
-
-          # - name: MacOS Intel (Testing)
-          #   os: macos-26-intel
-          #   build_opts: *mac_opts
-          #   build_opts_extra: -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/usr/local/opt/openal-soft/lib/libopenal.dylib
-          #   deps_cmdline: *mac_deps
-          #   extra_files: ""
-          #   build_type: RelWithDebInfo
 
 # ======================
 
