@@ -97,6 +97,7 @@ public:
 	virtual const char *GetName() = 0;
 	virtual bool AllowSSAO() { return true; }
 	virtual bool IsSky() { return false; }
+	virtual bool IsRealSky() { return false; }
 	virtual bool NeedCap() { return true; }
 	virtual bool NeedDepthBuffer() { return true; }
 	virtual void DrawContents(HWDrawInfo *di, FRenderState &state) = 0;
@@ -266,11 +267,11 @@ struct HWSkyboxPortal : public HWScenePortalBase
 	FSectorPortal * portal;
 
 protected:
-	VSMatrix tempmatrix;
 	bool Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clipper) override;
 	void Shutdown(HWDrawInfo *di, FRenderState &rstate) override;
 	virtual void * GetSource() const { return portal; }
 	virtual bool IsSky() { return true; }
+	virtual bool IsRealSky() { return true; }
 	virtual const char *GetName();
 	virtual bool AllowSSAO() override;
 
@@ -384,6 +385,7 @@ protected:
 	virtual void DrawContents(HWDrawInfo *di, FRenderState &state);
 	virtual void * GetSource() const { return origin; }
 	virtual bool IsSky() { return true; }
+	virtual bool IsRealSky() { return true; }
 	virtual bool NeedDepthBuffer() { return false; }
 	virtual const char *GetName();
 

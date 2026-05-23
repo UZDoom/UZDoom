@@ -157,13 +157,13 @@ bool FPortalSceneState::RenderFirstSkyPortal(int recursion, HWDrawInfo *outer_di
 
 void FPortalSceneState::RenderPortal(HWPortal *p, FRenderState &state, bool usestencil, HWDrawInfo *outer_di)
 {
-	if (outer_di->Viewpoint.bDoOrtho && (strcmp(p->GetName(), "Sky") == 0))
+	if (outer_di->Viewpoint.bDoOrtho && p->IsRealSky())
 	{
 		tempmatrix = outer_di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
 		outer_di->VPUniforms.mProjectionMatrix = outer_di->ProjectionMatrix2;
 	}
 	if (gl_portals) outer_di->RenderPortal(p, state, usestencil);
-	if (outer_di->Viewpoint.bDoOrtho && (strcmp(p->GetName(), "Sky") == 0)) outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
+	if (outer_di->Viewpoint.bDoOrtho && p->IsRealSky()) outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
 }
 
 
@@ -731,8 +731,6 @@ bool HWSkyboxPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 
 	di->VPUniforms.mThickFogDistance /= 16.0; // Skyviewpoint sectors are scaled up by 16x
 	di->VPUniforms.mThickFogMultiplier *= 16.0; // Skyviewpoint sectors are scaled up by 16x
-	tempmatrix = di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
-	di->VPUniforms.mProjectionMatrix = di->ProjectionMatrix2;
 	di->SetupView(rstate, vp.Pos.X, vp.Pos.Y, vp.Pos.Z, !!(state->MirrorFlag & 1), !!(state->PlaneMirrorFlag & 1));
 	vp.OffPos = vp.Pos; // Do this after di->SetupView()
 	di->SetViewArea();
@@ -748,7 +746,6 @@ void HWSkyboxPortal::Shutdown(HWDrawInfo *di, FRenderState &rstate)
 
 	di->VPUniforms.mThickFogDistance *= 16.0; // Revert back
 	di->VPUniforms.mThickFogMultiplier /= 16.0; // Revert back
-	di->VPUniforms.mProjectionMatrix = tempmatrix;
 	auto state = mState;
 	portal->mFlags &= ~PORTSF_INSKYBOX;
 	state->inskybox = false;
