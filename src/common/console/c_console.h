@@ -22,10 +22,11 @@
 **
 */
 
-#ifndef __C_CONSOLE__
-#define __C_CONSOLE__
+#pragma once
 
-#include <stdarg.h>
+#include <cstdarg>
+#include <string_view>
+
 #include "basics.h"
 #include "c_tabcomplete.h"
 #include "textureid.h"
@@ -69,7 +70,6 @@ void C_FlushDisplay (void);
 class FNotifyBufferBase;
 void C_SetNotifyBuffer(FNotifyBufferBase *nbb);
 
-
 bool C_Responder (event_t *ev);
 
 extern double NotifyFontScale;
@@ -78,4 +78,8 @@ void C_SetNotifyFontScale(double scale);
 extern const char *console_bar;
 extern int chatmodeon;
 
-#endif
+// Don't call me directly
+void __DebugLog(std::string_view, size_t, const char *, ...) ATTRIBUTE((format(printf,3,4)));
+
+// Heavy print statement that knows where it was called from
+#define DEBUG_LOG(format, ...) __DebugLog(__FILE__, __LINE__, format, __VA_ARGS__);
