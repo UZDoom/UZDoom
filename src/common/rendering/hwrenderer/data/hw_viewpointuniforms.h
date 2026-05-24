@@ -35,6 +35,7 @@ struct HWViewpointUniforms
 	VSMatrix mViewMatrix;
 	VSMatrix mNormalViewMatrix;
 	FVector4 mCameraPos;
+	FVector4 mFogCenterPos;
 	FVector4 mClipLine;
 
 	float mGlobVis = 1.f;

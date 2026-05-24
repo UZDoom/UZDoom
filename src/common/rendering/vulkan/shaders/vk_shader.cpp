@@ -194,6 +194,7 @@ static const char *shaderBindings = R"(
 		mat4 NormalViewMatrix;
 
 		vec4 uCameraPos;
+		vec4 uFogCenterPos;
 		vec4 uClipLine;
 
 		float uGlobVis;			// uGlobVis = R_GetGlobVis(r_visibility) / 32.0

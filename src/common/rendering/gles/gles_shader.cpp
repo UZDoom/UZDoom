@@ -264,6 +264,7 @@ bool FShader::Load(const char * name, const char * vert_prog_lump_, const char *
 		uniform	mat4 NormalViewMatrix;
 
 		uniform	vec4 uCameraPos;
+		uniform	vec4 uFogCenterPos;
 		uniform	vec4 uClipLine;
 
 		uniform	float uGlobVis;			// uGlobVis = R_GetGlobVis(r_visibility) / 32.0
@@ -565,6 +566,7 @@ bool FShader::Load(const char * name, const char * vert_prog_lump_, const char *
 	shaderData->muNormalViewMatrix.Init(shaderData->hShader, "NormalViewMatrix");
 
 	shaderData->muCameraPos.Init(shaderData->hShader, "uCameraPos");
+	shaderData->muFogCenterPos.Init(shaderData->hShader, "uFogCenterPos");
 	shaderData->muClipLine.Init(shaderData->hShader, "uClipLine");
 
 	shaderData->muGlobVis.Init(shaderData->hShader, "uGlobVis");

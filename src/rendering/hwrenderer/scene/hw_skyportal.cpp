@@ -35,6 +35,7 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 {
 	bool drawBoth = false;
 	auto &vp = di->Viewpoint;
+	vp.bFromPortal = true;
 
 	// We have no use for Doom lighting special handling here, so disable it for this function.
 	auto oldlightmode = di->lightmode;
