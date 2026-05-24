@@ -157,13 +157,17 @@ bool FPortalSceneState::RenderFirstSkyPortal(int recursion, HWDrawInfo *outer_di
 
 void FPortalSceneState::RenderPortal(HWPortal *p, FRenderState &state, bool usestencil, HWDrawInfo *outer_di)
 {
-	if (outer_di->Viewpoint.bDoOrtho && p->IsRealSky())
+	VSMatrix tempmatrix;
+	if (outer_di->Viewpoint.bDoOrtho && ((p->GetHWPortalType() == HWP_SKY) || (p->GetHWPortalType() == HWP_SKYBOX)))
 	{
 		tempmatrix = outer_di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
 		outer_di->VPUniforms.mProjectionMatrix = outer_di->ProjectionMatrix2;
 	}
 	if (gl_portals) outer_di->RenderPortal(p, state, usestencil);
-	if (outer_di->Viewpoint.bDoOrtho && p->IsRealSky()) outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
+	if (outer_di->Viewpoint.bDoOrtho && ((p->GetHWPortalType() == HWP_SKY) || (p->GetHWPortalType() == HWP_SKYBOX)))
+	{
+		outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
+	}
 }
 
 
@@ -941,6 +945,7 @@ bool HWPlaneMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *c
 	state->PlaneMirrorFlag++;
 	di->SetClipHeight(planez, state->PlaneMirrorMode < 0 ? -1.f : 1.f);
 	di->SetupView(rstate, vp.Pos.X, vp.Pos.Y, vp.Pos.Z, !!(state->MirrorFlag & 1), !!(state->PlaneMirrorFlag & 1));
+	vp.ViewVector3D.Z = - vp.ViewVector3D.Z;
 	SetupCoverage(di);
 	ClearClipper(di, clipper);
 
