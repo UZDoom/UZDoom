@@ -1233,9 +1233,9 @@ public:
 	}
 };
 
-FCanvas* GetTextureCanvas(const FString& texturename)
+FCanvas *GetTextureCanvas(const FString &texturename, ETextureType usetype = ETextureType::Wall, BITFIELD flags = 0)
 {
-	FTextureID textureid = TexMan.CheckForTexture(texturename.GetChars(), ETextureType::Wall, FTextureManager::TEXMAN_Overridable | FTextureManager::TEXMAN_TryAny);
+	FTextureID textureid = TexMan.CheckForTexture(texturename.GetChars(), usetype, FTextureManager::TEXMAN_Overridable | flags);
 	if (textureid.isValid())
 	{
 		// Only proceed if the texture is a canvas texture.
