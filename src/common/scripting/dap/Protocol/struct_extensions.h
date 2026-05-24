@@ -37,7 +37,7 @@ struct PDSAttachRequest : public AttachRequest
 	string name;
 	string type;
 	string request;
-	optional<array<Source>> projectSources;
+	optional<array<any>> projects;
 };
 
 struct PDSLaunchRequest : public LaunchRequest
@@ -46,7 +46,7 @@ struct PDSLaunchRequest : public LaunchRequest
 	string name;
 	string type;
 	string request;
-	optional<array<Source>> projectSources;
+	optional<array<any>> projects;
 };
 
 DAP_DECLARE_STRUCT_TYPEINFO(PDSAttachRequest);

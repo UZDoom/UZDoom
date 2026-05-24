@@ -124,10 +124,6 @@ static inline std::string GetScriptPathNoQual(const std::string &scriptPath)
 	}
 	return scriptPath.substr(colonPos + 1);
 }
-static inline bool ScriptHasQual(const std::string &scriptPath) { return scriptPath.find(':') != std::string::npos; }
-
-static inline std::string GetScriptWithQual(const std::string &scriptPath, const std::string &container) { return !container.empty() ? container + ":" + GetScriptPathNoQual(scriptPath) : scriptPath; }
-
 
 static inline std::string GetArchiveNameFromPath(const std::string &scriptPath)
 {
@@ -543,11 +539,10 @@ static std::map<std::string, int> FindScripts(const std::string &filter, int bas
 			break;
 		}
 		containerLump = fileSystem.GetFileContainer(filelump);
-		if (truncScriptPath == filter)
+		if (truncScriptPath == filter && (baselump == -1 || containerLump == baselump))
 		{
-			path = GetScriptWithQual(filter, fileSystem.GetResourceFileName(containerLump));
+			scriptNames.insert({fileSystem.GetFileFullPath(filelump), filelump});
 		}
-		scriptNames.insert({path, filelump});
 	}
 	return scriptNames;
 }
@@ -560,10 +555,7 @@ static std::map<std::string, int> FindAllScripts(int baselump = -1)
 		auto fc = fileSystem.GetFileContainer(i);
 		if (baselump == -1 || fc == baselump)
 		{
-			// get the container name
-			std::string containerName = fileSystem.GetResourceFileName(fc);
-			std::string scriptPath = fileSystem.GetFileFullName(i);
-			std::string fqn = GetScriptWithQual(scriptPath, containerName);
+			std::string fqn = fileSystem.GetFileFullPath(i);
 			if (isScriptPath(fqn))
 			{
 				scriptNames.insert({fqn, i});

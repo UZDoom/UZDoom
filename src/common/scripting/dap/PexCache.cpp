@@ -35,9 +35,23 @@ namespace DebugServer
 
 static void NormalizeArchivePath(std::string &path)
 {
-	if (path.find(":") != std::string::npos)
+	auto it = path.find(':');
+	if (it != std::string::npos && (it == 1 && path.size() >= 2 && path[2] == '\\')) // make sure it's not a windows path
 	{
-		path.erase(std::remove(path.begin(), path.end(), ':'), path.end());
+		it = path.find(':', 3);
+	}
+	while (it != std::string::npos)
+	{
+		// check the character prior to this; if it's not a slash or a backslash, remove the colon
+		if (it > 0 && path[it - 1] == '/' && path[it - 1] == '\\')
+		{
+			path.erase(it, 1);
+		}
+		else
+		{
+			path[it] = '/';
+		}
+		it = path.find(':', it + 1);
 	}
 }
 
@@ -71,7 +85,7 @@ PexCache::BinaryPtr PexCache::GetScript(const dap::Source &source)
 	{
 		return binary;
 	}
-	return GetScript(GetScriptWithQual(source.path.value(""), source.origin.value("")));
+	return GetScript(GetScriptPathFromSource(source));
 }
 
 
@@ -512,7 +526,7 @@ std::vector<dap::Module> PexCache::GetModules()
 		module.id = dap::integer(i);
 		std::string name = fileSystem.GetResourceFileName(i);
 		std::string path = fileSystem.GetResourceFileFullName(i);
-		NormalizeArchivePath(name);
+		NormalizeArchivePath(path);
 		module.name = name;
 		module.path = path;
 		modules.push_back(module);
@@ -948,7 +962,7 @@ dap::Source DebugServer::Binary::GetDapSource() const
 	source.origin = archiveName;
 	source.path = unqualifiedScriptPath;
 	source.sourceReference = scriptReference;
-	source.adapterData = archivePath;
+	source.adapterData = dap::integer(lump);
 	return source;
 }
 

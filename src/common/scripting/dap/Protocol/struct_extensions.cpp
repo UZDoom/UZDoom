@@ -31,7 +31,7 @@ DAP_IMPLEMENT_STRUCT_TYPEINFO_EXT(
 	DAP_FIELD(name, "name"),
 	DAP_FIELD(type, "type"),
 	DAP_FIELD(request, "request"),
-	DAP_FIELD(projectSources, "projectSources"));
+	DAP_FIELD(projects, "projects"));
 
 DAP_IMPLEMENT_STRUCT_TYPEINFO_EXT(
 	PDSLaunchRequest,
@@ -40,5 +40,5 @@ DAP_IMPLEMENT_STRUCT_TYPEINFO_EXT(
 	DAP_FIELD(name, "name"),
 	DAP_FIELD(type, "type"),
 	DAP_FIELD(request, "request"),
-	DAP_FIELD(projectSources, "projectSources"));
+	DAP_FIELD(projects, "projects"));
 }
