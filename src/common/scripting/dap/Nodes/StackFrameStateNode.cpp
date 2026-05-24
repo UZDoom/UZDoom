@@ -68,6 +68,10 @@ bool StackFrameStateNode::SerializeToProtocol(dap::StackFrame &stackFrame, PexCa
 {
 	stackFrame.id = GetId();
 	dap::Source source;
+	if (!m_stackFrame->Func)
+	{
+		return false;
+	}
 	if (IsFunctionNative(m_stackFrame->Func))
 	{
 		stackFrame.name = m_stackFrame->Func->PrintableName;
