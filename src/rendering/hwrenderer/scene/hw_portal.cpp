@@ -741,6 +741,7 @@ bool HWSkyboxPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 
 	oldclamp = rstate.SetDepthClamp(false);
 	vp.Pos = origin->InterpolatedPosition(vp.TicFrac);
+	vp.FogCenterPos = vp.Pos;
 	vp.ActorPos = origin->Pos();
 	vp.Angles.Yaw += (origin->PrevAngles.Yaw + deltaangle(origin->PrevAngles.Yaw, origin->Angles.Yaw) * vp.TicFrac);
 
