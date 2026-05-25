@@ -731,6 +731,7 @@ void FTextureAnimator::ParseCameraTexture(FScanner &sc)
 		fitwidth = oldtex->GetDisplayWidth ();
 		fitheight = oldtex->GetDisplayHeight ();
 		viewer->SetUseType(oldtex->GetUseType());
+		viewer->SetOffsets(oldtex->GetDisplayLeftOffset(), oldtex->GetDisplayTopOffset());
 		TexMan.ReplaceTexture (picnum, viewer, true);
 	}
 	else
