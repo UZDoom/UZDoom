@@ -32,6 +32,10 @@ on:
         required: false
       MACOS_CERTIFICATE_ID:
         required: false
+      LINUX_CERTIFICATE:
+        required: false
+      LINUX_CERTIFICATE_ID:
+        required: false
 
 jobs:
   run_build:
@@ -370,15 +374,22 @@ jobs:
 
         # https://github.com/linuxdeploy/linuxdeploy-plugin-appimage
         export LDAI_UPDATE_INFORMATION="gh-releases-zsync|${OWNER}|${REPO}|${TAG}|Linux-UZDoom-*-${arch}.AppImage.zsync"
-        # export LDAI_SIGN
-        # export LDAI_SIGN_KEY
-        # export LDAI_OUTPUT
         export LDAI_RUNTIME_FILE=./appimage-runtime
-        # export LINUXDEPLOY_OUTPUT_APP_NAME
-        # export LINUXDEPLOY_OUTPUT_VERSION
 
         # our metainfo file is correct, but for some reason the checker crashes on it
         export LDAI_NO_APPSTREAM=1
+
+        if [[ -n "${{ secrets.LINUX_CERTIFICATE }}" ]]; then
+          if [[ -n "${{ secrets.LINUX_CERTIFICATE_ID }}" ]]; then
+            export LDAI_SIGN_KEY="${{ secrets.LINUX_CERTIFICATE_ID }}"
+            export LDAI_SIGN=1
+            echo "${{ secrets.LINUX_CERTIFICATE }}" | gpg --import
+          else
+            echo "::error ::Certificate defined, but no ID given"
+          fi
+        else
+          echo "::warning ::Not signing"
+        fi
 
         chmod +x linuxdeploy
         ./linuxdeploy --output appimage \
