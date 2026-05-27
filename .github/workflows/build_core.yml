@@ -98,15 +98,38 @@ jobs:
     - name: Fix Timestamps
       uses: chetan/git-restore-mtime-action@v2
 
-      # To disable caching, add exceptions to the if statement here
-      # Re-running a workflow will also disable the cache
+    - name: Get Cache Ref
+      id: ref
+      shell: bash
+      run: |
+        ref=${{ github.base_ref || github.ref }}
+        echo "ref: $ref"
+        if [[ -z "${ref}" || "${ref}" == refs/* ]]; then
+          main=${{ github.event.repository.master_branch || 'trunk' }}
+          refs=( $(git branch -r --contains ${{ github.sha }} | grep -v 'HEAD' | grep origin/ | sed 's/^[[:space:]]*origin\///' ) )
+          count=${#refs[@]}
+          if [[ ${count} == 0 ]]; then
+            ref=${main}
+          elif [[ ${count} == 1 ]]; then
+            ref=${refs[0]}
+          else
+            for ((i=0; i<count; i++)); do
+              if [[ ${refs[i]} == ${main} ]]; then break; fi
+            done
+            if [[ ! ${i} < ${count} ]]; then i=0; fi
+            ref=${refs[i]}
+          fi
+        fi
+        echo "branch: $ref"
+        echo "branch=$ref" >> "$GITHUB_OUTPUT"
+
     - name: Restore Cache
-      if: github.event_name != 'pull_request'
+      if:
       id: cache
       uses: actions/cache/restore@v5
       with:
         path: build
-        key: ${{ github.repository }}/${{ github.ref }}/${{ inputs.name }}/${{ inputs.build_type }}
+        key: ${{ github.repository }}/${{ steps.ref.outputs.branch }}/${{ inputs.name }}/${{ inputs.build_type }}
 
     - name: Test Cache
       id: cached
@@ -126,6 +149,10 @@ jobs:
         if [[ "${status}" != "okay" ]]; then
           echo "Clearing cache"
           rm -rf build
+        fi
+        # use this condition to enable saving cache
+        if [[ "${status}" != 'skipped' && "${{github.event_name}}" != 'pull_request' ]]; then
+          echo "save=yes" >> "$GITHUB_OUTPUT"
         fi
 
     - name: Setup MSVC
@@ -448,18 +475,18 @@ jobs:
 
       # https://github.com/actions/cache/issues/342
     - name: Clear Cache
-      if: steps.cached.outputs.status != 'skipped' && steps.cached.outputs.status != 'missing'
+      if: steps.cached.outputs.save == 'yes' && steps.cached.outputs.status != 'missing'
       env:
         GITHUB_TOKEN: ${{ github.token }}
         REPO: ${{ github.repository }}
         KEY: ${{ steps.cache.outputs.cache-primary-key }}
       shell: bash
       run: |
-        gh api --method DELETE "/repos/${REPO}/actions/caches?key=${KEY// /%20}"
+        gh api --method DELETE "/repos/${REPO}/actions/caches?key=${KEY// /%20}" || true
         sleep 5
 
     - name: Save Cache
-      if: steps.cached.outputs.status != 'skipped'
+      if: steps.cached.outputs.save == 'yes'
       uses: actions/cache/save@v5
       with:
         path: build
