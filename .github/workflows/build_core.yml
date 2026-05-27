@@ -38,9 +38,31 @@ on:
         required: false
 
 jobs:
+  setup_build:
+    runs-on: ubuntu-latest
+    outputs:
+      env_name: ${{ steps.set-env.outputs.TARGET }}
+    steps:
+    - name: Set Environment
+      id: set-env
+      env:
+        REPO: ${{ github.repository }}
+        REF: ${{ github.ref }}
+      run: |
+        TARGET=""
+        if [[ "$REPO" == UZDoom/UZDoom ]]; then
+          if [[ "$REF" == refs/heads/trunk ]] || [[ "$REF" =~ refs/heads/\d+\.\d+.* ]]; then
+            TARGET="production"
+          fi
+        fi
+        echo "Environment: $TARGET"
+        echo "TARGET=$TARGET" >> "$GITHUB_OUTPUT"
+
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
     runs-on: ${{ inputs.os }}
+    needs: setup_build
+    environment: ${{ needs.setup_build.outputs.env_name }}
     container:
       image: ${{ inputs.os_image }}
       options: --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined
