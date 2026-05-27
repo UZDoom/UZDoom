@@ -41,6 +41,7 @@ jobs:
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
     runs-on: ${{ inputs.os }}
+    environment: production
     container:
       image: ${{ inputs.os_image }}
       options: --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined
