@@ -327,7 +327,7 @@ jobs:
         mkdir -p package/fm_banks
         cp -f ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
 
-        mv -f uzdoom.exe *.pk3 package
+        mv -f *.exe *.pk3 package
 
         cd package
         7z a -sdel -r "${NAME}.zip" *
@@ -448,6 +448,7 @@ jobs:
           --icon-file="${pfx}/share/icons/hicolor/scalable/apps/org.zdoom.UZDoom.svg"
 
         mv *.AppImage "package/${NAME}.AppImage"
+        mv *.zsync "package/${NAME}.AppImage.zsync"
 
         rm package/licenses.zip
 
