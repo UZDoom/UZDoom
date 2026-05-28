@@ -104,15 +104,10 @@ function( add_pk3 PK3_NAME )
 	# Generate target name. Just use "pk3" for main pk3 target.
 	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
 
-	if(EMSCRIPTEN)
-		add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-				COMMAND ${CMAKE_SOURCE_DIR}/zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
-		DEPENDS ${CMAKE_SOURCE_DIR}/zipdir )
-	else ()
-		add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-				COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
-		DEPENDS zipdir )
-	endif ()
+	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
+			COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
+	DEPENDS zipdir )
+
 	# Create a list of source files for this PK3, for use in the IDE
 	# Phase 1: Create a list of all source files for this PK3 archive, except
 	#  for a couple of strife image file names that confuse CMake.

@@ -521,32 +521,17 @@ else()
 	endif( NOT NO_OPENMP )
 endif()
 
-if(NOT EMSCRIPTEN)
-	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h
-		COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y
-		DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y )
+add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h
+	COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y
+	DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y )
 
-	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h
-		COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon
-		DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon )
+add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h
+	COMMAND lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon
+	DEPENDS lemon ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon )
 
-	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h
-		COMMAND re2c --no-generation-date -s -o ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re
-		DEPENDS re2c ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re )
-else ()
-	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h
-			COMMAND ${CMAKE_SOURCE_DIR}/lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y
-			DEPENDS ${CMAKE_SOURCE_DIR}/lemon ${CMAKE_CURRENT_SOURCE_DIR}/gamedata/xlat/xlat_parser.y )
-
-	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.c ${CMAKE_CURRENT_BINARY_DIR}/zcc-parse.h
-			COMMAND ${CMAKE_SOURCE_DIR}/lemon -C${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon
-			DEPENDS ${CMAKE_SOURCE_DIR}/lemon ${CMAKE_CURRENT_SOURCE_DIR}/common/scripting/frontend/zcc-parse.lemon )
-
-	add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h
-			COMMAND ${CMAKE_SOURCE_DIR}/re2c --no-generation-date -s -o ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re
-			DEPENDS ${CMAKE_SOURCE_DIR}/re2c ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re )
-
-endif ()
+add_custom_command( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h
+	COMMAND re2c --no-generation-date -s -o ${CMAKE_CURRENT_BINARY_DIR}/sc_man_scanner.h ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re
+	DEPENDS re2c ${CMAKE_CURRENT_SOURCE_DIR}/common/engine/sc_man_scanner.re )
 
 include_directories( ${CMAKE_CURRENT_BINARY_DIR} )
 
