@@ -182,6 +182,7 @@ void FMapInfoParser::ParseSkill ()
 				else if (sc.Compare("normal")) skill.SpawnFilter |= 4;
 				else if (sc.Compare("hard")) skill.SpawnFilter |= 8;
 				else if (sc.Compare("nightmare")) skill.SpawnFilter |= 16;
+				else sc.ScriptError("Invalid skill filter name '%s' in skill definition for '%s'\n", sc.String, skill.Name.GetChars());
 			}
 		}
 		else if (sc.Compare ("spawnmulti"))

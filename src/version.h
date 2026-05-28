@@ -24,8 +24,6 @@
 
 #pragma once
 
-#include "gitinfo.h"
-
 /** Lots of different version numbers **/
 
 #define VERSIONSTR "5.0.0-pre"
@@ -112,57 +110,8 @@ const int SAVEPICHEIGHT = 162;
 const int VID_MIN_WIDTH = 320;
 const int VID_MIN_HEIGHT = 200;
 
-//==========================================================================
-//
-// <Tag>-<Distance>-g<commit>
-//
-//==========================================================================
-
-constexpr inline const char *GetVersionString()
-{
-	return (GIT_DESCRIPTION[0] == '\0')? VERSIONSTR: GIT_DESCRIPTION;
-}
-
-//==========================================================================
-//
-// <commit>
-//
-//==========================================================================
-
-constexpr inline const char *GetGitHash()
-{
-	return GIT_HASH;
-}
-
-//==========================================================================
-//
-// ISO 8601
-//
-//==========================================================================
-
-constexpr inline const char *GetGitTime()
-{
-	return GIT_TIME;
-}
-
-//==========================================================================
-//
-// Closest git tag
-//
-//==========================================================================
-
-constexpr inline const char *GetGitTag()
-{
-	return GIT_TAG;
-}
-
-//==========================================================================
-//
-// Distance to closest git tag
-//
-//==========================================================================
-
-constexpr inline int GetGitDistance()
-{
-	return GIT_DISTANCE;
-}
+const char *GetVersionString();
+const char *GetGitHash();
+const char *GetGitTime();
+const char *GetGitTag();
+int GetGitDistance();

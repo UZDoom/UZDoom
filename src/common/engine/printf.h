@@ -25,12 +25,7 @@
 #pragma once
 #include <stdarg.h>
 
-#if defined __GNUC__ || defined __clang__
-# define ATTRIBUTE(attrlist) __attribute__(attrlist)
-#else
-# define ATTRIBUTE(attrlist)
-#endif
-
+#include "basics.h"
 #include "stb_sprintf.h"
 
 // This header collects all things printf, so that this doesn't need to pull in other, far more dirty headers, just for outputting some text.

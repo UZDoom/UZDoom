@@ -2577,7 +2577,7 @@ static void UseFlechette(int player)
 //		at the beginning of the command's actual data.
 void Net_DoCommand(int cmd, TArrayView<uint8_t>& stream, int player)
 {
-	uint8_t pos = 0;
+	int8_t pos = 0;
 	const char* s = nullptr;
 	int i = 0;
 
@@ -2698,7 +2698,7 @@ void Net_DoCommand(int cmd, TArrayView<uint8_t>& stream, int player)
 		// Using LEVEL_NOINTERMISSION tends to throw the game out of sync.
 		// That was a long time ago. Maybe it works now?
 		primaryLevel->flags |= LEVEL_CHANGEMAPCHEAT;
-		primaryLevel->ChangeLevel(s, pos, 0);
+		primaryLevel->ChangeLevel(s, max<int>(pos, 0), pos < 0 ? (CHANGELEVEL_RESETHEALTH | CHANGELEVEL_RESETINVENTORY) : 0);
 		break;
 
 	case DEM_SUICIDE:

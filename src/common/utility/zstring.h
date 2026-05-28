@@ -216,6 +216,18 @@ public:
 	FString &AppendCStrPart (const char *tail, size_t tailLen);
 	FString &CopyCStrPart(const char *tail, size_t tailLen);
 
+	// Join strings, inserting path separator between as needed
+	FString operator / (const FString &tail) const;
+	// Join strings, inserting path separator between as needed
+	FString operator / (const char *tail) const;
+	// Join strings, inserting path separator between as needed
+	friend FString operator / (const char *head, const FString &tail);
+
+	// Join strings, inserting path separator between as needed
+	FString &operator /= (const FString &tail);
+	// Join strings, inserting path separator between as needed
+	FString &operator /= (const char *tail);
+
 	FString &operator << (const FString &tail) { return *this += tail; }
 	FString &operator << (const char *tail) { return *this += tail; }
 	FString &operator << (char tail) { return *this += tail; }

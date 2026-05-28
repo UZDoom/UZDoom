@@ -330,7 +330,7 @@ CCMD (changemap)
 {
 	if (!players[consoleplayer].mo || !usergame)
 	{
-		Printf ("Use the map command when not in a game.\n");
+		Printf ("Cannot use changemap command when not in a game. Use map instead\n");
 		return;
 	}
 
@@ -360,7 +360,7 @@ CCMD (changemap)
 		{
 			if (!P_CheckMapData(mapname))
 			{
-				Printf ("No map %s\n", mapname);
+				Printf ("No map %s.\n", mapname);
 			}
 			else
 			{
@@ -379,12 +379,61 @@ CCMD (changemap)
 		catch(CRecoverableError &error)
 		{
 			if (error.GetMessage())
-				Printf("%s", error.GetMessage());
+				Printf("%s\n", error.GetMessage());
 		}
 	}
 	else
 	{
 		Printf ("Usage: changemap <map name> [position]\n");
+	}
+}
+
+CCMD (changeepisode)
+{
+	if (!players[consoleplayer].mo || !usergame)
+	{
+		Printf ("Cannot use changeepisode command when not in a game.\n");
+		return;
+	}
+
+	if (!players[consoleplayer].settings_controller && netgame)
+	{
+		Printf ("Only settings controllers can change the episode.\n");
+		return;
+	}
+
+	if (argv.argc() > 1)
+	{
+		int ep = 0;
+		if (!C_IsValidInt(argv[1], ep) || ep < 1 || ep > AllEpisodes.Size())
+		{
+			Printf ("Episode %s is invalid.\n", argv[1]);
+			return;
+		}
+
+		const char* mapname = AllEpisodes[--ep].mEpisodeMap.GetChars();
+		try
+		{
+			if (!P_CheckMapData(mapname))
+			{
+				Printf ("Episode %s has no valid map.\n", argv[1]);
+			}
+			else
+			{
+				Net_WriteInt8 (DEM_CHANGEMAP2);
+				Net_WriteInt8(-1);
+				Net_WriteString (mapname);
+			}
+		}
+		catch(CRecoverableError &error)
+		{
+			if (error.GetMessage())
+				Printf("%s\n", error.GetMessage());
+		}
+	}
+	else
+	{
+		Printf ("Usage: changeepisode <episode number>\n");
 	}
 }
 

@@ -50,7 +50,9 @@
 #include "v_video.h"
 #include "version.h"
 #include "vm.h"
+#include "zstring.h"
 #include <array>
+#include <string_view>
 
 namespace Console::Defaults
 {
@@ -503,6 +505,31 @@ int DPrintf(DPrintLevel level, const char *format, ...)
 	int count = _DPrintf(level, PRINT_HIGH, format, argptr);
 	va_end(argptr);
 	return count;
+}
+
+void __DebugLog(std::string_view file, size_t line, const char * format, ...)
+{
+	static const size_t start = [&file]() {
+		std::string here = __FILE__;
+		std::string target = "common/console/c_console.cpp";
+#ifdef _WIN32
+		for (char &c: target) if (c == '/') c = '\\';
+#endif
+		size_t size = here.size() - target.size();
+		std::string prefix = here.substr(0, size);
+		if (!here.ends_with(target) || !file.starts_with(prefix)) size = 0; // target need to be updated
+		return size;
+	}();
+	if (start < file.size())
+	{
+		file.remove_prefix(start);
+	}
+	va_list argptr;
+	va_start(argptr, format);
+	FString data;
+	data.VFormat(format, argptr);
+	va_end(argptr);
+	DPrintf(DMSG_SPAMMY, PRINT_HIGH, "%s:%lu : %s\n", file.data(), line, data.GetChars());
 }
 
 void C_FlushDisplay ()

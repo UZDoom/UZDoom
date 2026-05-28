@@ -22,16 +22,20 @@
 **
 */
 
+#include <cstring>
+
 #ifdef __unix__
+#include <dirent.h>
 #include <sys/stat.h>
 #endif // __unix__
 
+#include "c_console.h"
 #include "c_cvars.h"
 #include "cmdlib.h"
 #include "configfile.h"
 #include "findfile.h"
 #include "fs_findfile.h"
-#include "i_system.h"
+#include "m_misc.h"
 #include "printf.h"
 #include "zstring.h"
 
@@ -92,13 +96,13 @@ bool D_AddFile(std::vector<FileSys::ResourceName>& wadfiles, const char* file, b
 				closedir(d);
 				if (!found)
 				{
-					//Printf("Can't find file '%s' in '%s'\n", filename.GetChars(), basepath.GetChars());
+					DPrintf(DMSG_WARNING, "Can't find file '%s' in '%s'\n", filename.GetChars(), basepath.GetChars());
 					return false;
 				}
 			}
 			else
 			{
-				Printf("Can't open directory '%s'\n", basepath.GetChars());
+				DPrintf(DMSG_WARNING, "Can't open directory '%s'\n", basepath.GetChars());
 				return false;
 			}
 		}
@@ -226,6 +230,8 @@ void D_AddDirectory(std::vector<FileSys::ResourceName>& wadfiles, const char* di
 	}
 }
 
+static FString BFSwad; // outside the function to evade C++'s insane rules for constructing static variables inside functions.
+
 //==========================================================================
 //
 // BaseFileSearch
@@ -236,26 +242,27 @@ void D_AddDirectory(std::vector<FileSys::ResourceName>& wadfiles, const char* di
 //
 //==========================================================================
 
-static FString BFSwad; // outside the function to evade C++'s insane rules for constructing static variables inside functions.
-
-const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinprogdir, FConfigFile* config)
+const char* _BaseFileSearch(FString prefix, const char*file, const char* ext, bool lookfirstinprogdir, FConfigFile* config)
 {
 	if (file == nullptr || *file == '\0')
 	{
 		return nullptr;
 	}
+
 	if (lookfirstinprogdir)
 	{
-		BFSwad.Format("%s%s%s", progdir.GetChars(), progdir.Back() == '/' ? "" : "/", file);
+		BFSwad = prefix / progdir / file;
+		DEBUG_LOG("%s", BFSwad.GetChars());
 		if (DirEntryExists(BFSwad.GetChars()))
 		{
 			return BFSwad.GetChars();
 		}
 	}
 
-	if (DirEntryExists(file))
+	BFSwad = prefix / file;
+	if (DirEntryExists(BFSwad.GetChars()))
 	{
-		BFSwad.Format("%s", file);
+		DEBUG_LOG("%s", BFSwad.GetChars());
 		return BFSwad.GetChars();
 	}
 
@@ -273,7 +280,8 @@ const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinpr
 				dir = NicePath(value);
 				if (dir.IsNotEmpty())
 				{
-					BFSwad.Format("%s%s%s", dir.GetChars(), dir.Back() == '/' ? "" : "/", file);
+					BFSwad = prefix / dir / file;
+					DEBUG_LOG("%s", BFSwad.GetChars());
 					if (DirEntryExists(BFSwad.GetChars()))
 					{
 						return BFSwad.GetChars();
@@ -282,9 +290,8 @@ const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinpr
 			}
 			else if (stricmp(key, "RecursivePath") == 0)
 			{
-				FString dir;
-
-				dir = NicePath(value);
+				FString dir = prefix / NicePath(value);
+				DEBUG_LOG("%s", dir.GetChars());
 				if (dir.IsNotEmpty())
 				{
 					if (dir.Back() == '/')
@@ -293,6 +300,7 @@ const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinpr
 					// Folders can't be used here since those are going to be checked
 					// recursively, so only find actual files.
 					FString path = RecursiveFileExists(dir, file);
+					DEBUG_LOG("%s", path.GetChars());
 					if (path.IsNotEmpty())
 					{
 						return path.GetChars();
@@ -309,7 +317,8 @@ const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinpr
 					dir = NicePath(dirname.GetChars());
 					if (dir.IsNotEmpty())
 					{
-						BFSwad.Format("%s%s%s", dir.GetChars(), dir.Back() == '/' ? "" : "/", file);
+						BFSwad = prefix / dir / file;
+						DEBUG_LOG("%s", BFSwad.GetChars());
 						if (DirEntryExists(BFSwad.GetChars()))
 						{
 							return BFSwad.GetChars();
@@ -327,7 +336,31 @@ const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinpr
 		DefaultExtension(tmp, ext);
 		return BaseFileSearch(tmp.GetChars(), nullptr, lookfirstinprogdir, config);
 	}
+
 	return nullptr;
+}
+
+
+const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinprogdir, FConfigFile* config)
+{
+	if (file == nullptr || *file == '\0')
+	{
+		return nullptr;
+	}
+
+	const char *prefix = nullptr;
+
+#ifdef __linux__
+	prefix = getenv("APPDIR");
+#endif
+
+	if (prefix)
+	{
+		auto result = _BaseFileSearch(prefix, file, ext, lookfirstinprogdir, config);
+		if (result) return result;
+	}
+
+	return _BaseFileSearch("", file, ext, lookfirstinprogdir, config);
 }
 
 

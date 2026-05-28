@@ -102,6 +102,12 @@ typedef uint32_t			angle_t;
 #define ALLOW_DEPRECATED(expression, reason) expression;
 #endif
 
+#if defined __GNUC__
+# define ATTRIBUTE(attrlist) __attribute__(attrlist)
+#else
+# define ATTRIBUTE(attrlist)
+#endif
+
 #ifndef MAKE_ID
 #ifndef __BIG_ENDIAN__
 #define MAKE_ID(a,b,c,d)	((uint32_t)((a)|((b)<<8)|((c)<<16)|((d)<<24)))

@@ -34,6 +34,12 @@
 extern uint16_t lowerforupper[65536];
 extern uint16_t upperforlower[65536];
 
+/* I'm 90% sure we use '/' everywhere */
+// #ifdef _WIN32
+// constexpr char PATH_SEPARATOR = '\\';
+// #else
+constexpr char PATH_SEPARATOR = '/';
+// #endif
 
 void ThrowStringBoundsException(int64_t index, size_t len)
 {
@@ -409,6 +415,54 @@ FString &FString::CopyCStrPart(const char *tail, size_t tailLen)
 	return *this;
 }
 
+FString &FString::operator /= (const FString &tail)
+{
+	if (tail.IsEmpty()) return *this;
+	if (this->IsEmpty())
+	{
+		*this = tail;
+		return *this;
+	}
+	size_t offset = Len();
+	bool back = this->Back() == PATH_SEPARATOR;
+	bool front = tail.Front() == PATH_SEPARATOR;
+	bool insert = back == front;
+	if (insert)
+	{
+		insert = !back;
+		offset += insert? 1: -1;
+	}
+	size_t len = tail.Len() + offset;
+	ReallocBuffer(len);
+	if (insert) Chars[offset-1] = PATH_SEPARATOR;
+	StrCopy (Chars + offset, tail);
+	return *this;
+}
+
+FString &FString::operator /= (const char *tail)
+{
+	return *this /= FString{tail};
+}
+
+FString FString::operator / (const FString &tail) const
+{
+	if (tail.IsEmpty()) return *this;
+	if (this->IsEmpty()) return tail;
+	FString str = *this;
+	str /= tail;
+	return str;
+}
+
+FString FString::operator / (const char *tail) const
+{
+	return *this / FString{tail};
+}
+
+FString operator / (const char *head, const FString &tail)
+{
+	return FString{head} / tail;
+}
+
 size_t FString::CharacterCount() const
 {
 	// Counts string length in Unicode code points.
@@ -417,7 +471,6 @@ size_t FString::CharacterCount() const
 	while (GetCharFromString(cp)) len++;
 	return len;
 }
-
 
 int FString::GetNextCharacter(int &position) const
 {
