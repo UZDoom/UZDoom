@@ -56,20 +56,28 @@ jobs:
           pattern: "* Release"
 
       - name: Rename
+        id: files
         run: |
           mkdir -p release
 
+          platforms=""
           function move() {
-            [ "$#" == 2 ] || return;
+            [ "$#" == 3 ] || return;
             dir="$(dirname "$1")";
-            [ -d "$dir" ] && [ -f "$1" ] && mv "$1" "$2";
+            [ -d "$dir" ] && [ -f "$1" ] && mv "$1" "release/$2";
+            if [ "$3" !=  _ ]; then
+              [ -z "${platforms}" ] || platforms+=:
+              platforms+="$3,$2"
+            fi
           }
 
-          move "artifacts/Windows Release"/*.zip release/Windows-UZDoom-${{ inputs.title }}.zip
-          move "artifacts/MacOS Release"/*.dmg release/MacOS-UZDoom-${{ inputs.title }}.dmg
+          move artifacts/Windows\ Release/*.zip Windows-UZDoom-${{ inputs.title }}.zip windows
+          move artifacts/MacOS\ Release/*.dmg MacOS-UZDoom-${{ inputs.title }}.dmg macos
           appimage=Linux-UZDoom-${{ inputs.title }}.AppImage
-          move "artifacts/Linux Release"/*.AppImage release/${appimage}
-          move "artifacts/Linux Release"/*.zsync release/${appimage}.zsync
+          move artifacts/Linux\ Release/*.AppImage ${appimage} linux
+          move artifacts/Linux\ Release/*.zsync ${appimage}.zsync _
+
+          echo "platforms=$platforms" >> $GITHUB_OUTPUT
 
       - id: notes
         name: Generate Notes
@@ -117,6 +125,7 @@ jobs:
           checksums=$(cd release && sha256sum * | jq -Rn 'reduce (inputs | capture("(?<hash>\\w+)\\s+(?<file>.*)")) as $item ({}; .[$item.file] = $item.hash)')
           sizes=$(cd release && du -k * | jq -Rn 'reduce (inputs | capture("(?<size>\\d+)\\s+(?<file>.*)")) as $item ({}; .[$item.file] = $item.size)')
           assets=$(jq -n --argjson c "${checksums}" --argjson s "${sizes}" '$s | with_entries(.key as $f | .value = {size: .value, sha256: $c[$f]})')
+          platforms=$(jq -n --arg input "${{ steps.files.outputs.platforms }}" '$input | split(":") | map(split(",")) | map({key: .[0], value: .[1]}) | from_entries')
 
           jq -n '{ commit: $ARGS.named }'      \
             --arg version  "${version}"        \
@@ -129,7 +138,9 @@ jobs:
             --arg     run       "${RUN}"       \
             --arg     timestamp "${timestamp}" \
           | jq '. + { assets: $assets }'       \
-            --argjson assets    "${assets}"    \
+            --argjson assets "${assets}"       \
+          | jq '. + { platforms: $platforms }'   \
+            --argjson platforms "${platforms}"   \
           > release/_release.json
 
       - name: Upload
