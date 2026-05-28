@@ -67,7 +67,9 @@ jobs:
 
           move "artifacts/Windows Release"/*.zip release/Windows-UZDoom-${{ inputs.title }}.zip
           move "artifacts/MacOS Release"/*.dmg release/MacOS-UZDoom-${{ inputs.title }}.dmg
-          move "artifacts/Linux Release"/*.AppImage release/Linux-UZDoom-${{ inputs.title }}.AppImage
+          appimage=Linux-UZDoom-${{ inputs.title }}.AppImage
+          move "artifacts/Linux Release"/*.AppImage release/${appimage}
+          move "artifacts/Linux Release"/*.zsync release/${appimage}.zsync
 
       - id: notes
         name: Generate Notes
