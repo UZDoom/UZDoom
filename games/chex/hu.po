@@ -1,0 +1,289 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "TXT_CHEX_EP"
+msgstr "Chex Quest"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Kék slejmkulcs felvéve."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Sárga slejmkulcs felvéve."
+
+msgid "GOTREDFLEM"
+msgstr "Piros slejmkulcs felvéve."
+
+msgid "GOTGOGGLES"
+msgstr "Ultraszemüveg felvéve"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "Egy kék kulcs szükséges az objektum aktiválásához"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "Egy piros kulcs szükséges az objektum aktiválásához"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "Egy sárga kulcs szükséges az objektum aktiválásához"
+
+msgid "PD_BLUEFO"
+msgstr "Egy kék slejmkulcs szükséges az objektum aktiválásához"
+
+msgid "PD_REDFO"
+msgstr "Egy piros slejmkulcs szükséges az objektum aktiválásához"
+
+msgid "PD_YELLOWFO"
+msgstr "Egy sárga slejmkulcs szükséges az objektum aktiválásához"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Szörcsölő felvéve."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Leszállópálya"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Raktárépület"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratórium"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arborétum"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Bazoik barlangjai"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Űrkikötő"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Mozi"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Chex-múzeum"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Városi utcák"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Csatornarendszer"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Központi parancsnokság"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Egyesült Gabonapelyhek"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Chex-villa"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Tartományi park"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteor űrhajó"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "Általánusz"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "Kétlábusz"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "Páncélozott kétlábusz"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "Lépkedüsz"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "Slejmakna"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "Szuper Kükloptisz"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "Maximusz"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "Slejmdormány"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "Lord Takony"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "Chex harcos"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "Kell egy kék kulcs hogy kinyisd ezt az ajtót."
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "Kell egy piros kulcs hogy kinyisd ezt az ajtót."
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "Kell egy sárga kulcs hogy kinyisd ezt az ajtót."
+
+msgid "PD_BLUEF"
+msgstr "Kell egy kék slejmkulcs hogy kinyisd ezt az ajtót."
+
+msgid "PD_REDF"
+msgstr "Kell egy piros slejmkulcs hogy kinyisd ezt az ajtót."
+
+msgid "PD_YELLOWF"
+msgstr "Kell egy sárga slejmkulcs hogy kinyisd ezt az ajtót."
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o elsüllyedt a trutyiban."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o elsüllyedt a trutyiban."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o interdimenzionális trutyi áldozata lett!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o interdimenzionális trutyi áldozata lett!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o taknyos lett egy lépkedüsztől."
+
+msgid "OB_FLEMMINE"
+msgstr "%o-t összenyálkázta egy slejmakna."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o-t összenyálkázta egy Szuper Kükloptisz."
+
+msgid "OB_MAXIMUS"
+msgstr "%o-t legyőzte egy Maximusz."
+
+msgid "OB_LARVA"
+msgstr "%o lárvatrutyit kapott a nyakába."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o-t összenyálkázta egy Négylábusz."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o-t legyőzte a Slejmdormány."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o legyőzetett Lord Takony által."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%o-t eltalálta %k hajtóműve."
+
+#, fuzzy
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"Miután visszaküldted a szörnyű Slejmbránt\n"
+"a saját dimenziójába, kiszabadítod a foglyokat.\n"
+"De a slejmoidok még mindenütt ott vannak!\n"
+"A foglyokkal együtt az űrhajóhoz szaladtok.\n"
+"A slejmoidok összenyálkázták az űrhajódat, \n"
+"azonban épphogy, de sikerül kiszöknötök az űrbe.\n"
+"A hazaút során gratulálnak a vakmerő mentőakcióhoz, \n"
+"azonban figyelmeztetsz mindenkit: nem utoljára láttuk a slejmoidokat.\n"
+"\n"
+"Sajnos igazad lett. Amint megérkeztél, szembesülsz azzal, \n"
+"hogy a slejmoidok valahogy hazáig követtek.\n"
+"Készülj fel a terrorra Chexvárosban, jön a Chex Quest 2!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"A csatornában összegyűlt maradék slejmoidokat is szörcsölöd.\n"
+"Chexváros megmenekült. Úgy tűnik, a slejmoidveszély végre megszűnt.\n"
+"\n"
+"\n"
+"Tíz év telt el békében és jólétben. Azonban a slejmoidok nem lettek legyőzve,\n"
+"és a vágyuk a tápanyagokban gazdag gabonapehely-dimenzió irányítására \n"
+"mit sem csökkent.\n"
+"Összegyűlt erőik gigantikus interdimenzionális rést ütöttek az űrben, \n"
+"és most egy óriási trutyilabda száguld egyenesen a gabonapelyhek bolygója felé!\n"
+"\n"
+"Készülj fel az invázióra a Chex Quest 3-ban!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"Egy utolsó dördüléssel visszaszörcsölöd Lord\n"
+"Takonyt a saját dimenziójába!\n"
+"Minden várakozás ellenére egymagad \n"
+"megakadályoztad az inváziót!\n"
+"\n"
+"Reménykedsz abban, hogy a\n"
+"slejmoidok végre megtanulták a leckét és\n"
+"soha többé nem térnek vissza\n"
+"a gabonapelyhek dimenziójába.\n"
+"\n"
+"\n"
+"\n"
+"De ha mégis visszatérnek,\n"
+"te készen állsz majd!"
+
+msgid "M_EPI1"
+msgstr "Mentőakció a Bazoik-on"
+
+msgid "M_EPI2"
+msgstr "Terror Chexvárosban"
+
+msgid "M_EPI3"
+msgstr "Invázió!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ultra Szemüveg"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Kék Flemkulcs"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Sárga Flemkulcs"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Piros Flemkulcs"

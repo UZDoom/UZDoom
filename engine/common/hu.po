@@ -1,0 +1,1791 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-07 15:11+0000\n"
+"Last-Translator: H Tamás <hovanszki@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/common/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17.1\n"
+
+msgid "PRESSYN"
+msgstr "Nyomj Y-t vagy N-t."
+
+msgid "TXT_YES"
+msgstr "Igen"
+
+msgid "TXT_NO"
+msgstr "Nem"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Nem tudsz menteni játékon kívül!\n"
+"\n"
+"Nyomjon meg egy gombot."
+
+msgid "SAFEMESSAGE"
+msgstr "Biztos ezt akarod tenni?"
+
+msgid "QSPROMPT"
+msgstr ""
+"Felülírod az alábbi mentésedet:\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgid "QLPROMPT"
+msgstr ""
+"Betöltöd az alábbi mentésedet:\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s csal"
+
+msgid "MSGOFF"
+msgstr "Üzenetek: KI"
+
+msgid "MSGON"
+msgstr "Üzenetek: BE"
+
+msgid "TXT_SAY"
+msgstr "Üzenet:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Nyomjon egy billentyűt vagy kattintson bárhova a kilépéshez."
+
+msgid "NEWSAVE"
+msgstr "<Új mentés>"
+
+msgid "GGSAVED"
+msgstr "Játék mentve."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Idő"
+
+msgid "MNU_LOADGAME"
+msgstr "Játék betöltése"
+
+msgid "MNU_SAVEGAME"
+msgstr "Játék mentése"
+
+msgid "MNU_NOPICTURE"
+msgstr "Nincs kép"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Eltérő verzió"
+
+msgid "MNU_NOFILES"
+msgstr "Nincsenek fájlok"
+
+msgid "MNU_DELETESG"
+msgstr "Biztosan törlöd a mentést?"
+
+msgid "OPTVAL_OFF"
+msgstr "Ki"
+
+msgid "OPTVAL_ON"
+msgstr "Be"
+
+msgid "OPTVAL_AUTO"
+msgstr "Automatikus"
+
+msgid "OPTMNU_TITLE"
+msgstr "Beállítások"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Irányítás testreszabása"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Egér beállítások"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Játékvezérlő beállítások"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Játékos testreszabása"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Játékmenet beállítások"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Térkép beállítások"
+
+msgid "OPTMNU_HUD"
+msgstr "HUD beállítások"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Egyéb beállítások"
+
+msgid "OPTMNU_SOUND"
+msgstr "Hang beállítások"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Megjelenítés beállítások"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Videó beállítások"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Alapértelmezett beállítások használata"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Legutóbbi mentett beállítások használata"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Jelenlegi beállítások mentése"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Konzol megnyitása"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Hálózati beállítások"
+
+msgid "OPTMNU_REVERB"
+msgstr "Visszhangkörnyezet-szerkesztő"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER a változtatáshoz, BACKSPACE a törléshez"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Nyomj meg egy gombot, ESC a törléshez"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Irányítás"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Tűz"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Másodlagos tüzelés"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Fegyver újratöltése"
+
+msgid "CNTRLMNU_USE"
+msgstr "Akciógomb/Nyitás"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Előre mozgás"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Hátra mozgás"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Balra oldalazás"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Jobbra oldalazás"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Balra fordul"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Jobbra fordul"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Megfordulás"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Ugrás"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Guggolás"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Guggolási kapcsoló"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Egérrel való nézelődés"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Felfele nézés"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Lefele nézés"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Nézet középreigazítása"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Futás"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Futás kapcsoló"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Oldalazás"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Eredményjelző megjelenítése"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Akció"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Akció beállítások testreszabása"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Többjátékos"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Üzenet"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Fegyverbeállítások testreszabása"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Eszköztár beállítások testreszabása"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Egyéb irányítás testreszabása"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Fegyverek"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Következő fegyver"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Előző fegyver"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "1. fegyver"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "2. fegyver"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "3. fegyver"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "4. fegyver"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "5. fegyver"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "6. fegyver"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "7. fegyver"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "8. fegyver"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "9. fegyver"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "0. fegyver"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Eszköztár beállítások testreszabása"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Eszköz használata"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Minden eszköz használata"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Következő eszköz"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Előző eszköz"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Térkép irányítás"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Térkép irányítása"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Balra igazítás"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Jobbra igazítás"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Felfele igazítás"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Lefele igazítás"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Ráközelítés"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Távolítás"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Közelítés átkapcsolása"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Követés átkapcsolása"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Rács kapcsolása"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Forgás kapcsolása"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Textúra kapcsolása"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Térkép ki/bekapcsolása"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Külsőnézetű kamera"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Képernyő lefényképezése"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Szünet"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Képméret növelése"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Képméret csökkentése"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Segítség előhozása"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Mentés menü előhozása"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Betöltés menü előhozása"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Beállítások menü előhozása"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Megjelenítés menü előhozása"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Gyorsmentés"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Gyorstöltés"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Kilépés a főmenübe"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Üzenetek kapcsolása"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Kilépés a játékból"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Egér engedélyezése"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Egér engedélyezése a menüben"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Vissza gomb mutatása"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Egérmutató"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Vízszintes érzékenység"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Függőleges érzékenység"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Egérmozgás simítása"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Fordulás sebessége"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Egérnézés sebessége"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Előre/Hátra sebesség"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Oldalazás sebessége"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Mindig egérrel nézelődés"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Y tengely megfordítása"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "X tengely megfordítása"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Bal fent"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Jobb fent"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Bal lent"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Jobb lent"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Érintőképernyő-szerű"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Sima nyíl"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Rendszer egérmutatója"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Alapbeállítás"
+
+msgid "JOYMNU_TITLE"
+msgstr "Kontroller testreszabása"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Kontroller beállítások"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Kontroller ne működjön a menüben"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Kontroller támogatás engedélyezése"
+
+msgid "JOYMNU_DINPUT"
+msgstr "DirectInput kontrollerek engedélyezése"
+
+msgid "JOYMNU_XINPUT"
+msgstr "XInput kontrollerek engedélyezése"
+
+msgid "JOYMNU_PS2"
+msgstr "PlayStation 2 adapterek engedélyezése"
+
+msgid "JOYMNU_NOCON"
+msgstr "Nem érzékelhető kontroller"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Kontrollerek konfigurációja:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "A kontroller támogatásnak"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "engedélyezve kell lenni, hogy érzékeljen bármit is"
+
+msgid "JOYMNU_INVALID"
+msgstr "Hibás kontroller van a menühöz osztva"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Teljes érzékenység"
+
+msgid "JOYMNU_AXIS"
+msgstr "Tengely konfigurálása"
+
+msgid "JOYMNU_INVERT"
+msgstr "Megfordítás"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Holttér"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Nincs beállítható tengely"
+
+msgid "OPTVAL_NONE"
+msgstr "Nincs"
+
+msgid "OPTVAL_TURNING"
+msgstr "Balra/Jobbra nézés"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Fel-/lenézés"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Előre/Hátra mozgás"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Mozgás Balra/Jobbra"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Felfele/Lefele mozgás"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Felcserélve"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Nincs felcserélve"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Kék"
+
+msgid "TXT_COLOR_RED"
+msgstr "Vörös"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Zöld"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Szürke"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Sötétszürke"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Sötétzöld"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Barna"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Sötétkék"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Világospiros"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Sárga"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Lila"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Olíva"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Bézs"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Világoskék"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Világosszürke"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Világosbarna"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Arany"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Fényeszöld"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rozsda"
+
+msgid "PLYRMNU_NAME"
+msgstr "Név"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Csapat"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Szín"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Nem"
+
+msgid "OPTVAL_MALE"
+msgstr "Férfi"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Nő"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Semleges"
+
+msgid "OPTVAL_OTHER"
+msgstr "Tárgy"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Játékmenet beállításai"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Mindig"
+
+msgid "OPTVAL_NEVER"
+msgstr "Soha"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Automatikus célzás"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Mindig fusson"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Képernyő mérete"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Függőleges szinkronizálás"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "3D modellek"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Üzenetek középre helyezése"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Pulzáló üzenet"
+
+msgid "MNU_COLORPICKER"
+msgstr "Szín választása"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Térkép forgatása"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Kövesse a játékost"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Vonal áttetszóség"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Vonal vastagság"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Térkép színeinek testreszabása"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Eredeti színek visszaállítása"
+
+msgid "OPTVAL_8000HZ"
+msgstr "8000 Hz"
+
+msgid "OPTVAL_11025HZ"
+msgstr "11025 Hz"
+
+msgid "OPTVAL_22050HZ"
+msgstr "22050 Hz"
+
+msgid "OPTVAL_32000HZ"
+msgstr "32000 Hz"
+
+msgid "OPTVAL_44100HZ"
+msgstr "44100 Hz"
+
+msgid "OPTVAL_48000HZ"
+msgstr "48000 Hz"
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 minta"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 minta"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 minta"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 minta"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 minta"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 minta"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 minta"
+
+msgid "OPTSTR_AUTO"
+msgstr "Automatikus"
+
+msgid "OPTSTR_MONO"
+msgstr "Monó"
+
+msgid "OPTSTR_STEREO"
+msgstr "Sztereó"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Dolby Pro Logic Dekódoló"
+
+msgid "OPTSTR_QUAD"
+msgstr "Négyszeres"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 hangfal"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 hangrendszer"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 hangrendszer"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Visszajátszó eszköz"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "EFX engedélyezése"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Minta-újravételező"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Effektek hangereje"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Menü hangereje"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Zene hangereje"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI eszköz"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Háttérhangok"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Vízalatti visszaverődés"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Hangmagasság keverése"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Hangcsatorna"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL beállításai"
+
+msgid "SNDMNU_RESTART"
+msgstr "Hang újraindítása"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Haladó beállítások"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Modul lejátszó beállításai"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "MIDI eszköz beállításai"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Haladó hangbeállítások"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Mintavételezési ráta"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr "HRTF"
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL szintézis"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Emulált OPL csipek száma"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr "Növekedés (gain)"
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Teljes MIDI sztereó tájolás"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL Emulátor Mag"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI hangok"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr "FluidSynth"
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Globális"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Freeverb"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Globális Freeverb"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Visszaverődés"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Visszhang"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Visszhang szintje"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Kórus"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr "Timidity++"
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr "ADLMidi"
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr "OPNMidi"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr "WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Konfiguráció kiválasztása"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Fejlett Resmapling"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "OPL-Bank"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Emulátor futtatása PCM rátán"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Emulált OPL csipek száma"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Visszaverődés"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Hangmodell"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr "Csatorna lefoglalási módszer"
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr "Automatikus arpeggio"
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2 Emulátor Mag"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS Emuláció"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "DMXGUS lumpok beolvasása"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS memória mérete"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Emulált OPN csipek száma"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Visszaverődés"
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Saját WOPL bank használata"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr "A WAD GENMIDI bankjának használata, mint saját bank"
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL Bank fájl"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Saját WOPN bank használata"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN Bank fájl"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Aliasing"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Lineáris"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Lineáris"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Lineáris"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Legközelebbi"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Alacsony)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Közepes)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Magas)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Négyzetes"
+
+msgid "OPTVAL_BLEP"
+msgstr "Sáv-limitált lépés"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Lineáris (Lassabb)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Sáv-limitált lineáris"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Négyzetes (Lassabb)"
+
+msgid "OPTVAL_SINC"
+msgstr "Sinc"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Hangjegy ki/be csak"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Teljes ramping"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Fő hangerő"
+
+msgid "MODMNU_QUALITY"
+msgstr "Minőség"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Hangerő ramping"
+
+msgid "OPTVAL_LIBXMP"
+msgstr "libXMP"
+
+msgid "OPTVAL_DUMB"
+msgstr "Dumb"
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr "Chip-o-matic"
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr "MAME OPL2"
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr "DOSBox OPL3"
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr "Java OPL3"
+
+msgid "OPTVAL_ESFMu"
+msgstr "ESFMu OPL3"
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr "YMFM OPL2"
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr "YMFM OPL3"
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr "Nuked OPL3"
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "OPL2-LLE (erőforrás-igényes)"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "OPL3-LLE (erőforrás-igényes)"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr "MAME OPN2 (YM2612)"
+
+msgid "OPTVAL_NP2OPNA"
+msgstr "Neko Project II Kai OPNA"
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr "MAME YM2608"
+
+msgid "OPTVAL_OPALOPL3"
+msgstr "Opal OPL3"
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr "Nuked OPL3 v1.7.4"
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr "Nuked OPN2 (YM3438)"
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr "Nuked OPN2 (YM2612)"
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr "OPN2-LLE (YM2612) (erőforrás-igényes)"
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr "OPN2-LLE (YM3438) (erőforrás-igényes)"
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr "OPN2-LLE (YMF276) (erőforrás-igényes)"
+
+msgid "OPTVAL_GENSOPN2"
+msgstr "GENS OPN2 (YM2612)"
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr "YMFM OPN2"
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr "YMFM OPNA"
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Automatikus (Beállított bank használata)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Automatikus (Beállított bank használata)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Általános"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Általános"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "Natív OPL"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "Natív OPN"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (Pontos, de AM buggal)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr "Mint a DMX-ben"
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (Pontos, de AM buggal)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr "Mint az Apogee Hangrendszerben (Sound System)"
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Win9X szerű"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9X szerű (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Win9X szerű (Általános FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (AM hanghiba nélkül)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (AM hanghiba nélkül)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "IBM Hang Könyvtár Interfész"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "HMI Hang Operációs Rendszer"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (Régi, bugokkal)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "Automatikus"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "Hang ki késleltetés mérése"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "Első kiadott hangjegy újrahasználata azonos hangszernél"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "Első kiadott hangjegy újrahasználata mindig"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Végtelen"
+
+msgid "OPTVAL_256K"
+msgstr "256K"
+
+msgid "OPTVAL_512K"
+msgstr "512K"
+
+msgid "OPTVAL_768K"
+msgstr "768K"
+
+msgid "OPTVAL_1024K"
+msgstr "1024K"
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr "Uncharted 2"
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr "Hejl-Dawson"
+
+msgid "OPTVAL_REINHARD"
+msgstr "Reinhard"
+
+msgid "OPTVAL_PALETTE"
+msgstr "Paletta"
+
+msgid "OPTVAL_LOW"
+msgstr "Alacsony"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Közepes"
+
+msgid "OPTVAL_HIGH"
+msgstr "Magas"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Extrém"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Ellentétes"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Fordított"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Utófeldolgozás"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Színleképzés módja"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Lencsetorzulás effekt"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA minősége"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Árnyalás kimenet"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Színleképzés paletta sorrend"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Tonemap Paletta Exponens"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Többmintás"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Bloom effekt"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Ambient occlusion minősége"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portálok AO-val"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Menü mosódás"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Környezeti mappolás a tükrökön"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Renderelés minősége"
+
+msgid "OPTVAL_SPEED"
+msgstr "Sebesség"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Minőség"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Szektor fény mód"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Köd mód"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Sugaras"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Szabvány"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Textúrafilter módja"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anizotropikus filter"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Semmilyen (közeli mipmap)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Semmilyen (lineáris mipmap)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Semmilyen (trilineáris)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilineáris"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilineáris"
+
+msgid "OPTVAL_2X"
+msgstr "2-szeres"
+
+msgid "OPTVAL_4X"
+msgstr "4-szeres"
+
+msgid "OPTVAL_8X"
+msgstr "8-szoros"
+
+msgid "OPTVAL_16X"
+msgstr "16-szoros"
+
+msgid "OPTVAL_32X"
+msgstr "32-szeres"
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Textúra Beállítások"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Magas minőségű újraméretező mód"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Magas minőségű újraméretezés szorzó"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Ez a mód a jelenlegi videó memória %d-szeresét igényli"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Textúrák újraméretezése"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Sprite-ok újraméretezése"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Betűk újraméretezése"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Model fazon újraméretezése"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Előcachelt GL textúrák"
+
+msgid "VIDMNU_TITLE"
+msgstr "Videó mód"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Levágott"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Nyújtott"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Render Mód"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Teljes Képernyő"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI támogatás"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Képarány kényszerítése"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Kényszerített képarány stílusa"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Felbontás mérete"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Méretezési Faktor"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Lineáris Méretezés Használata (Teljes képernyő)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Egyéni Pixelméretezés"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Egyéni szélesség"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Egyéni magasság"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Változtatások Elfogadása (Ablak)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Változtatások Elfogadása (Teljes képernyő)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Felbontási Sablon Kiválasztása"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Egyéni Felbontási Sablonok"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Felbontási Sablon Módok"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "4:3 Arány"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "5:4 Arány"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "16:9 Arány"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "16:10 Arány"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "21:9 Arány"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normál"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Lehető legkisebb méret"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Egyéni"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "Maximum FPS"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 fps"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 fps"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 fps"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 fps"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 fps"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 fps"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Előnyben részesített renderelő API"
+
+msgid "OPTVAL_OPENGL"
+msgstr "OpenGL"
+
+msgid "OPTVAL_VULKAN"
+msgstr "Vulkan"
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr "OpenGL ES"
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Bal és jobb Ctrl/Alt/Shift egyként érzékelése"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter teljes képernyőre kapcsol"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F teljes képernyőre kapcsol"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Automentések engedélyezése"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Automentések száma"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Mentés/betöltés megerősítése"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Billentyűs csalások letiltása"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Gyorsmentés forgás"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Gyorsmentések száma a forgásban"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Klasszikus ZDoom menü méretezés"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Játék megállítása a háttérben"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Alap célkereszt"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Célkereszt színe"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Célkereszt mérete"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Alap"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Fejlesztett"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Nyelv"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Változtatások Visszavonása"
+
+msgid "REVMNU_SELECT"
+msgstr "Környezet Kiválasztása"
+
+msgid "REVMNU_TEST"
+msgstr "Környezet Tesztelése"
+
+msgid "REVMNU_EDIT"
+msgstr "Környezet Szerkesztése"
+
+msgid "REVMNU_NEW"
+msgstr "Új Környezet"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Tükröződési Arány"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Tükröződési Késleltetési Arány"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Decay Idő Arány"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Decay HF Limitje"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Reverb Arány"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Reverb Késleltetési Arány"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Visszhang Idő Arány"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Modulációs Idő Arány"
+
+msgid "REVMNU_Based_on"
+msgstr "Minta"
+
+msgid "REVMNU_Name"
+msgstr "Név"
+
+msgid "REVMNU_ID_1"
+msgstr "AZON #1"
+
+msgid "REVMNU_ID_2"
+msgstr "AZON #2"
+
+msgid "REVMNU_Create"
+msgstr "Készítés"
+
+msgid "REVMNU_Save"
+msgstr "Mentés…"
+
+msgid "REVMNU_File_name"
+msgstr "Fájlnév"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Mentendő Környezetek"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan Beállítások (Kísérleti)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan Beállítások"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan Eszköz ID"
+
+msgid "VKMNU_HDR"
+msgstr "Magas Dinamikus Tartomány"
+
+msgid "VK_WARNING"
+msgstr "Vigyázat: A Vulkan renderer még teljesen kísérleti!"
+
+msgid "VK_RESTART"
+msgstr "Ezen beállítások életbelépéséhez újraindítás szükséges."
+
+msgid "OPTVAL_SCALENX"
+msgstr "ScaleNx"
+
+msgid "OPTVAL_NORMALNX"
+msgstr "NormalNx"
+
+msgid "OPTVAL_HQNX"
+msgstr "hqNx"
+
+msgid "OPTVAL_HQNXMMX"
+msgstr "hqNx MMX"
+
+msgid "OPTVAL_NXBRZ"
+msgstr "xBRZ"
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Régi xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Beállítás Keresés"
+
+msgid "OS_ANY"
+msgstr "Bármilyen szótagra keresés"
+
+msgid "OS_ALL"
+msgstr "Összes szótagra keresés"
+
+msgid "OS_NO_RESULTS"
+msgstr "Nincs keresési találat."
+
+msgid "OS_LABEL"
+msgstr "Keresés:"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Teljes beállításmenü"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Egyszerű beállításmenü"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Játék konfiguráció böngészése"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Képernyőképek böngészése"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Elmentett játékok böngészése"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Egérgombok felcserélése"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Csak módosított"
+
+msgid "TXT_UNKNOWN"
+msgstr "Ismeretlen"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Ehhez a mentéshez a következő fájlok kellenek"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Coronák"
+
+msgid "PICKER_SELECT"
+msgstr "Válassza ki, hogy melyik játékfájlt futtassa."
+
+msgid "PICKER_PLAY"
+msgstr "Játék lejátszása"
+
+msgid "PICKER_EXIT"
+msgstr "Kilépés"
+
+msgid "PICKER_GENERAL"
+msgstr "Általános"
+
+msgid "PICKER_EXTRA"
+msgstr "Extra grafika"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Teljes képernyő"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Automatikus betöltés kikapcsolása"
+
+msgid "PICKER_DONTASK"
+msgstr "Ne kérdezz újra"
+
+msgid "PICKER_LIGHTS"
+msgstr "Fények"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Fénytérképek (brightmaps)"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Szélesképernyő"
+
+msgid "PICKER_ADDPARM"
+msgstr "További paraméterek:"
+
+msgid "PICKER_WELCOME"
+msgstr "Üdvözöljük a %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Verzió %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "Renderelő API"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Játék"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Engedélyezze ezt a vezérlőt"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Főmenü megnyitása"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Modul újrajátszó"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Kontroller inputjának engedélyezése a háttérben"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "Mentés fájl rendezési módszer"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Abc szerint"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Utolsó mentési idő"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Játék rendezése"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Csatlakozás játékhoz"
+
+msgid "PICKER_REMPARM"
+msgstr "Emlékezz a paraméterekre"
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr "Támogatási WAD betöltése (például id24-hez)"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Többjátékos"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Mentés fájl betöltése:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Emlékezz a mentés fájlra"
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr "Szervez"
+
+msgid "PICKER_JOIN"
+msgstr "Csatlakozás"
+
+msgid "PICKER_NETRATE"
+msgstr "Csomag ticsebessége:"
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr "Dupla csomag küldése"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Játékmód:"
+
+msgid "PICKER_COOP"
+msgstr "Kooperítív"
+
+msgid "PICKER_DM"
+msgstr "Mérkőzés a halálig"
+
+msgid "PICKER_TDM"
+msgstr "Csapatos deathmatch"
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr "Csapat #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Alternatív deathmatch szabályok használata"
+
+msgid "PICKER_PLAYERS"
+msgstr "Maximális játékosszám:"
+
+msgid "PICKER_PORT"
+msgstr "Házigazda portja:"
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr "Maximum 64"
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr "Alapértelmezett (5029)"
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr "255 = véletlenszerű"
+
+msgid "PICKER_IP"
+msgstr "Házigazda IP címe:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Csapatos deathmatch:"
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr "Mond (Csapat):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Discord Gazdag Jelenlét (Rich Presence)"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "Fordulási sebesség"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "Nézési sebesség"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Analóg oldalazó futás"
+
+msgid "ACCMNU_TITLE"
+msgstr "Akadálymentességi beállítások"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Üzenetsor mérete"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Ismételt üzenetek felhalmozása"
+
+msgid "NOTES_DETAILS"
+msgstr "További részletek: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Ez az oldal megjelenítése frissítések után"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Kiadási jegyzetek megjelenítése"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Névjegy"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Kiadási jegyzetek"
+
+msgid "NOTES_EMPTY"
+msgstr "Leírás nem elérhető."
+
+msgid "NOTES_UNKNOWN"
+msgstr "Ismeretlen"
+
+msgid "NOTES_RELEASED"
+msgstr "%s verzió %s, kiadva %s"
+
+msgid "NOTES_FAIL"
+msgstr "Kiadási jegyzetek feldolgozása nem sikerült"

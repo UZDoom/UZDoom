@@ -1,0 +1,303 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "TXT_CHEX_EP"
+msgstr "Chex Квест"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Взято синій флем-ключ."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Взято жовтий флем-ключ."
+
+msgid "GOTREDFLEM"
+msgstr "Взято червоний флем-ключ."
+
+msgid "GOTGOGGLES"
+msgstr "Знайдено Ультра-окуляри"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "Тобі потрібен синій ключ, щоб активувати цей об'єкт"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "Тобі потрібен червоний ключ, щоб активувати цей об'єкт"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "Тобі потрібен жовтий ключ, щоб активувати цей об'єкт"
+
+msgid "PD_BLUEFO"
+msgstr "Тобі потрібен синій флем-ключ, щоб активувати цей об'єкт"
+
+msgid "PD_REDFO"
+msgstr "Тобі потрібен червоний флем-ключ, щоб активувати цей об'єкт"
+
+msgid "PD_YELLOWFO"
+msgstr "Тобі потрібен жовтий флем-ключ, щоб активувати цей об'єкт"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Взято зорчер."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Зона приземлення"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Складські приміщення"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Лабораторія"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Дендропарк"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Печери Базоїка"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Космопорт"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Кінотеатр"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Музей Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Вулиці міста"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Каналізаційна система"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Центральне командування"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Об'єднані Пластівці"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Вілла Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Провінційний парк"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Космічний корабель «Метеор»"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "Звичайнус"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "Двоногус"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "Двоногус в броні"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "Довгоногус"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "Флем-міна"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "Супер-Циклоптіс"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "Максимус"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "Флемогидота"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "Лорд Снотфолус"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "Chex Воїн"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "Тобі потрібен синій ключ, щоб відкрити ці двері"
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "Тобі потрібен червоний ключ, щоб відкрити ці двері"
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "Тобі потрібен жовтий ключ, щоб відкрити ці двері"
+
+msgid "PD_BLUEF"
+msgstr "Тобі потрібен синій флем-ключ, щоб відкрити ці двері"
+
+msgid "PD_REDF"
+msgstr "Тобі потрібен червоний флем-ключ, щоб відкрити ці двері"
+
+msgid "PD_YELLOWF"
+msgstr "Тобі потрібен жовтий флем-ключ, щоб відкрити ці двері"
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o втопає в якомусь слизі."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o втопає в якомусь слизі."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o потрапи@[adj_1_ua] під удар міжвимірного слизу!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o потрапи@[adj_1_ua] під удар міжвимірного слизу!"
+
+msgid "OB_STRIDICUS"
+msgstr "Довгоногус зашмаркав %o."
+
+msgid "OB_FLEMMINE"
+msgstr "Флем-міна обслизила %o."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "Супер-Циклоптіс заслизив %o."
+
+msgid "OB_MAXIMUS"
+msgstr "Максимус переміг %o."
+
+msgid "OB_LARVA"
+msgstr "Личинка обслизила %o."
+
+msgid "OB_QUADRUMPUS"
+msgstr "Чотириручка заслизив %o."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "Флемогидота перемогла %o."
+
+msgid "OB_SNOTFOLUS"
+msgstr "Лорд Снотфолус переміг %o."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%k поціли@[adj_1_ua] в %o з прискореного зорчера."
+
+#, fuzzy
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"Вигнавши жахливу Флембрану\n"
+"назад у її вимір, ти звільняєш\n"
+"полонених. Але флемоїди все ще всюди!\n"
+"Разом з полоненими, ви прориваєтесь\n"
+"до твого корабля. Флемоїди заслизили\n"
+"корабель, але ви ледь встигли вийти\n"
+"на орбіту.\n"
+"Під час повернення тебе вітають за\n"
+"рішучу рятувальну операцію, проте,\n"
+"ти попереджаєш...\n"
+"Це ще не кінець історії про Флемоїдів.\n"
+"\n"
+"На жаль, ти маєш рацію. Бо коли ти\n"
+"повертаєшся додому, виявилось, що\n"
+"Флемоїди якось прослідкували тебе\n"
+"аж сюди.\n"
+"Приготуйся до\n"
+"Chex-Квест 2: Терор у Chex-Сіті!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"Ти зорчнув усіх флемоїдів які зібрались\n"
+"в каналізаціях. Chex-Сіті врятовано.\n"
+"Схоже, що загроза з боку Флемоїдів\n"
+"нарешті минула.\n"
+"\n"
+"\n"
+"Минуло десять років миру та процвітання.\n"
+"Але Флемоїди все ще не переможені і\n"
+"їхнє прагнення контролювати багатий\n"
+"на поживні речовини вимір пластівців\n"
+"нікуди не зникло.\n"
+"Вони зібрали всі свої сили та відкрили\n"
+"гігантський міжвимірний розлом у просторі\n"
+"і тепер величезна куля слизу мчить\n"
+"прямо на планету пластівців!\n"
+"\n"
+"Приготуйся до\n"
+"Chex-Квест 3: Вторгнення!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"Одним останнім пострілом ти зорчиш\n"
+"Лорда Снотфолуса назад в його вимір!\n"
+"Попри всі труднощі, ти самотужки\n"
+"запобіг вторгненню!\n"
+"\n"
+"Ти щиро сподіваєшся, що Флемоїди\n"
+"нарешті отримали урок і\n"
+"більше ніколи не повернуться у\n"
+"вимір пластівців.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Але якщо це трапиться, то ти знаєш, що будеш\n"
+"до цього готовий!"
+
+msgid "M_EPI1"
+msgstr "Рятувальна операція на Базоїку"
+
+msgid "M_EPI2"
+msgstr "Терор у Chex-Сіті"
+
+msgid "M_EPI3"
+msgstr "Вторгнення!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ультра-окуляри"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Синій флем-ключ"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Жовтий флем-ключ"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Червоний флем-ключ"

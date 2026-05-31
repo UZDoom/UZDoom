@@ -1,0 +1,368 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-games/hexen/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Dvorana prosijavanja"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Sedam portala"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Čuvar leda"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Čuvar vatre"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Čuvar čelika"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Sjajni krucibil"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Sjenovita šuma"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Močvarna zemlja"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Špilje Kirke"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Pustinje"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Sveta šuma"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hipotilski"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Sjemenište heresiarha"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Zmajeva kapela"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Griffinova kapela"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Kapela Smrtnog Vjetra"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Voćnjak žalosti"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Tiha trpezarija"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Vukova kapela"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Napuštena utvrda"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Dvorac tuge"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Vješala"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Vonjavi odvod"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Tamnice"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Pust vrt"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropola"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedekov grob"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Menelkirkova grobnica"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Grobnica Traductusa"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivarij"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Mračni žrtvenik"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Prošavši kroz sedam portala\n"
+"koji su zapečatili ovo carstvo, pred\n"
+"vama se prostire golemo\n"
+"područje surove divljine. Vatra, led i čelik\n"
+"su vas isprobali, ali veći izazovi\n"
+"još vas čekaju. Gusta spletka\n"
+"šume zasigurno skriva neprijateljske poglede,\n"
+"ali ono što se krije dalje bit će još gore.\n"
+"\n"
+"Neplodna pustinja, vlažne močvare\n"
+"i ustajale špilje blokiraju vam put,\n"
+"ali ne smijete dopustiti da vas išta spriječi\n"
+"u ispunjavanju vaše sudbine, čak i\n"
+"ako poželite da bi to bilo tako.\n"
+"\n"
+"A dalje, treperave u daljini,\n"
+"neprestano mijenjajuće se zidove\n"
+"hipostila čine se kao da se rugaju\n"
+"svakom vašem naporu."
+
+#, fuzzy
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Um vam se još uvijek vrti od susreta\n"
+"unutar hipostila, posrtate prema\n"
+"onome za što se nadate da je izlaz.\n"
+"Stvari se čine sve bržima, vid vam\n"
+"se mutni i počinje blijediti...\n"
+"Dok vam se svijet urušava\n"
+"oko vas, svjetlost teleportala\n"
+"vas proguta. Bljesak svjetlosti,\n"
+"i zatim se umorno\n"
+"podižete na noge.\n"
+"\n"
+"Staješ na vrhu visoke kule,\n"
+"a odozdo dopiru krikovi prokletih.\n"
+"Koračaš naprijed i u trenu zvuk\n"
+"demonskog pjevanja ledi ti krv\n"
+"u žilama. Za sve bogove smrti!\n"
+"Koje li si mjesto dospio?\n"
+"Za sve bogove boli,\n"
+"kako ćeš ikadpronaći\n"
+"put van?"
+
+#, fuzzy
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Najmoćnija oružja i artefakti\n"
+"drevnih jedva su bili dovoljni\n"
+"da poraze heresiarca i njegove\n"
+"sluge, ali sada njihovi odvratni\n"
+"ostaci leže razbacani pod tvojim\n"
+"nogama. Sabirajući posljednje\n"
+"snage, pripremaš se ući\n"
+"u portal koji vodi iz heresiarcova\n"
+"unutarnjeg svetišta.\n"
+"\n"
+"Iznad vas se nadvijaju bastioni\n"
+"goleme tvrđave. Šutljive kule\n"
+"i goli zidovi okružuju jedini\n"
+"crni šiljak, koji se u središtu\n"
+"tvrđave smjesti poput zamišljenog\n"
+"diva. Vatra i sjena se uvijaju iza\n"
+"razjapljenih prozora, a deseci\n"
+"zlokobnih očiju\n"
+"zure u vas.\n"
+"Negdje unutra, vaši\n"
+"neprijatelji čekaju..."
+
+#, fuzzy
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... i putovat će u kraljevstva mrtvih,\n"
+"i borit će se s silama ondje,\n"
+"sve do samih vrata očaja.\n"
+"Ali hoće li se ikad\n"
+"vratiti u svijet svjetla,\n"
+"nitko ne zna.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Kvragu."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"U kriku agonije si iz ovog svijeta\n"
+"iztrgnut u drugi, a svaki dio tvog\n"
+"tijela obavijen je mističnom vatrom.\n"
+"Kad ti se vid razjasni, nalaziš se\n"
+"u velikoj dvorani, ispunjanoj\n"
+"sablasnim odjecima i\n"
+"prijetećim sjenama.\n"
+"U daljini vidiš uzvišeni\n"
+"postol, a na njemu jedini\n"
+"izvor svjetlosti u ovom svijetu."
+
+#, fuzzy
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Ovo može biti samo sfera kaosa,\n"
+"izvor Koraksove moći. S ovim\n"
+"možeš stvarati svjetove... ili ih\n"
+"uništiti. Po pravu borbe i osvajanja,\n"
+"ono je tvoje i drhtećim rukama\n"
+"pružaš se da ga zgrabeš. Možda\n"
+"će se sada novi igrač pridružiti\n"
+"kozmičkoj igri moći. Poput pijuna\n"
+"koji je unapređen u damu, odjednom\n"
+"se čini da su ti sam rubovi\n"
+"ploče nadohvat ruke."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Ali postoje i drugi igrači moćniji\n"
+"od tebe, i tko može znati njihove\n"
+"sljedeće poteze?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Vrata su zaključana"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Pozdrav, smrtniče"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Jesi li spreman umrijeti?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Otvorila se vrata Čuvara leda"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Ovaj put je zabranjen"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Jedna polovica zagonetke je riješena"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "na Sedam portala"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Jedna trećina zagonetke je riješena"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Stepenice su se uzdigle na Sedam portala"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Jedna trećina zagonetke je riješena"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "na Sedam portala"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Stepenice su se uzdigle na Sedam portala"
+
+#, fuzzy
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Moraš pronaći drugi prekidač..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Kamenje melje na Sedam portala"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Jedna šesta zagonetke je riješena"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "u Sjenovitoj šumi"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Vrata su iznutra zaključana"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Čujete kako se vrata otvaraju u daljini"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Jedna šesta zagonetke je riješena"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "u Sjenovitoj šumi"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Jedna šesta zagonetke je riješena"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "u Sjenovitoj šumi"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins lijevo"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Predugo si čekao, sada umireš!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Otvorila su se vrata na Zapuštenoj Postavi"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Ova vrata se još neće otvoriti"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Moji sluge mogu osjetiti miris tvoje krvi, čovječe"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Otvorila se vrata na vješalima"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Vrata su iznutra zaključana"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Platforma se spustila u tornju"
+
+#, fuzzy
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Predugo si igrao ovu igru, smrtniče..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Mislim da ću te ukloniti s stranke"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Čuješ kako se gore otvara vrata"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Obožavaj me i možda ću ti biti milostiv"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Opet, možda i ne"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Jedna devetina zagonetke je riješena"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "O samostanu"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Jedna devetina zagonetke je riješena"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "O samostanu"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Jedna devetina zagonetke je riješena"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "O samostanu"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Portal je zapečaćen"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Odaberi svoju sudbinu"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Vrata su iznutra zaključana"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Jesi li dovoljno jak"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Suočiti se sa svojim gospodarima?"

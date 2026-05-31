@@ -1,0 +1,185 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-04-21 11:09+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-games/tnt-evilution/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.17.1-dev\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Zla evolucija"
+
+msgid "THUSTR_1"
+msgstr "Razina 1: Kontrola sustava"
+
+msgid "THUSTR_2"
+msgstr "Razina 2: Ljudski roštilj"
+
+msgid "THUSTR_3"
+msgstr "Razina 3: Kontrola snage"
+
+msgid "THUSTR_4"
+msgstr "Razina 4: Crvotočina"
+
+msgid "THUSTR_5"
+msgstr "Razina 5: Hangar"
+
+msgid "THUSTR_6"
+msgstr "Razina 6: Otvorena sezona"
+
+msgid "THUSTR_7"
+msgstr "Razina 7: Zatvor"
+
+msgid "THUSTR_8"
+msgstr "Razina 8: Metal"
+
+msgid "THUSTR_9"
+msgstr "Razina 9: Utvrda"
+
+msgid "THUSTR_10"
+msgstr "Razina 10: Otkupljenje"
+
+msgid "THUSTR_11"
+msgstr "Razina 11: Skladišni prostor"
+
+msgid "THUSTR_12"
+msgstr "Razina 12: Krater"
+
+msgid "THUSTR_13"
+msgstr "Razina 13: Obrada nukagija"
+
+msgid "THUSTR_14"
+msgstr "Razina 14: Čeličana"
+
+msgid "THUSTR_15"
+msgstr "Razina 15: Mrtva zona"
+
+msgid "THUSTR_16"
+msgstr "Razina 16: Najdublja područja"
+
+msgid "THUSTR_17"
+msgstr "Razina 17: Područje obrade"
+
+msgid "THUSTR_18"
+msgstr "Razina 18: Mlin"
+
+msgid "THUSTR_19"
+msgstr "Razina 19: Transport/ponovno pojavljivanje"
+
+msgid "THUSTR_20"
+msgstr "Razina 20: Središnja obrada"
+
+msgid "THUSTR_21"
+msgstr "Razina 21: Administrativni centar"
+
+msgid "THUSTR_22"
+msgstr "Razina 22: Stanište"
+
+msgid "THUSTR_23"
+msgstr "Razina 23: Mjesečni rudarski projekt"
+
+msgid "THUSTR_24"
+msgstr "Razina 24: Kamenolom"
+
+msgid "THUSTR_25"
+msgstr "Razina 25: Baronsko skrovište"
+
+msgid "THUSTR_26"
+msgstr "Razina 26: Balistyke"
+
+msgid "THUSTR_27"
+msgstr "Razina 27: Planina Bol"
+
+msgid "THUSTR_28"
+msgstr "Razina 28: Prokleto"
+
+msgid "THUSTR_29"
+msgstr "Razina 29: Rijeka Stiks"
+
+msgid "THUSTR_30"
+msgstr "Razina 30: Posljednji poziv"
+
+msgid "THUSTR_31"
+msgstr "Razina 31: Faraon"
+
+msgid "THUSTR_32"
+msgstr "Razina 32: Karibi"
+
+msgid "T1TEXT"
+msgstr ""
+"Proborili ste se iz zaraženih\n"
+"eksperimentalnih laboratorija. Čini se da je\n"
+"UAC opet progutao. S obzirom na njihov\n"
+"visok promet zaposlenika, jadnom\n"
+"starom UAC-u danas mora biti teško kupiti\n"
+"korporativno zdravstveno osiguranje..\n"
+"\n"
+"Pred tobom je vojni kompleks, sada preplavljen\n"
+"bolesnim čudovištima željnim da te rastrgnu. \n"
+"Ako budeš imao sreće, u\n"
+"kompleksu se još uvijek nalazi\n"
+"nešto ratnog streljiva."
+
+msgid "T2TEXT"
+msgstr ""
+"Čuješ struganje teških strojeva ispred sebe.\n"
+"Stvarno se nadaš da ne kuju nove sinove pakla,\n"
+"ali spreman si iskaliti se na čitavom \n"
+"jatu ako zatreba.\n"
+"Možda planiraju krvavu gozbu, ali \n"
+"osjećaš se opako kao dva tisućama manijaka \n"
+"stisnuta u jednog ludog ubojicu.\n"
+"\n"
+"Ne planiraš pasti lako."
+
+msgid "T3TEXT"
+msgstr ""
+"Pogled koji se otvara ispred izgleda prokleto\n"
+"poznato. I miriše poznato --\n"
+"kao prženi izmet. \n"
+"Ovo mjesto ti se i prije nije sviđalo, i sad ga, k \n"
+"vragu, ne namjeravaš zavoljeti. Što više o\n"
+"tome razmišljaš, to si sve ljući. Podižući\n"
+"pištolj, zločesti osmijeh ti se širi na lice.\n"
+"Vrijeme je da se netko potpiše."
+
+msgid "T4TEXT"
+msgstr ""
+"Odjednom, sve je tiho, od jednog\n"
+"horizonta do drugog. Mučni odjek \n"
+"Pakla jenjava, noćna mora od neba\n"
+"postaje plavo, hrpe čudovišnih leševa\n"
+"počinju se isparavati zajedno sa zlim\n"
+"smradom koji je ispunio zrak. Jao,\n"
+"možda si uspio. Jesi li doista pobijedio?\n"
+"\n"
+"Nešto tutnji u daljini.\n"
+"Plava svjetlost počinje svijetliti unutar\n"
+"uništenog lubanje demona-pljuvača."
+
+msgid "T5TEXT"
+msgstr ""
+"Što sad? Izgleda potpuno drugačije.\n"
+"Nekako kao Tutankamonov stan. Pa,\n"
+"što god da je ovdje, ne može biti gore\n"
+"od uobičajenog. Može li? Ili je možda\n"
+"najbolje pustiti spavajuće bogove na miru..."
+
+msgid "T6TEXT"
+msgstr ""
+"Vrijeme je za odmor. Probio si utrobe pakla\n"
+"i, dovraga, spreman si za predah. Mrmljaš\n"
+"sam sebi: \"Možda netko drugi može razvaliti\n"
+"Pakao sljedeći put.\" Pred tobom je miran\n"
+"gradić, s mirno tekućom vodom,\n"
+"šarmantnim zgradama i, pretpostavljamo,\n"
+"bez paklenih stvorenja.\n"
+"\n"
+"Dok sišljavate s prijevoznika, čujete\n"
+"tupkanje željezne cipele kiborgdemona."

@@ -1,0 +1,343 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 06:01+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/unused/ko/>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL 에뮬레이터 코어"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "패치 세트"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS 코딩 파일"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity 코딩 파일"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "비교적인 볼륨"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi 코딩 파일"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "감마 조정"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "채팅"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "사용자 지정 채팅 컨트롤"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "고급 디스플레이 옵션"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "외형"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "조준점 크기"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "메시지"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr ""
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "고해상도 텍스쳐 사용"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "텍스쳐 사용"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "부드러운 움직임"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr ""
+
+msgid "NOTSET"
+msgstr "정하지 않음"
+
+msgid "OPTMNU_INPUT"
+msgstr "입력 옵션"
+
+msgid "OPTMNU_LIGHT"
+msgstr "조명 옵션"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "멀티플레이어 옵션"
+
+msgid "OPTMNU_SPRITE"
+msgstr "스프라이트 옵션"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "시스템 옵션"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "오토맵"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + 오토맵"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "확대 (가깝게)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "확대 (선형 식)"
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "대기 흡수 HF"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "잔향 감쇠 HF 비율"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "잔향 감쇠 LF 비율"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "잔향 감쇠 시간"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "잔향 밀도"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "잔향 확산"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "에코 깊이"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "에코 시간"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "공간 잔향 확산"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "공간 크기"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF 참조치"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF 참조치"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "전조 깊이"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "전조 시간"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "룸 반사"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "룸 반사 딜레이 시간"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "X축 룸 반사"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Y축 룸 반사"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Z축 룸 반사"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "리버브"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "리버브 지연"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "X축 리버브"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Y축 리버브"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Z축 리버브"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "룸 효과"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "룸 효과 HF"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "룸 효과 LF"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "룸 감쇠 양"
+
+msgid "SNDMNU_BACKEND"
+msgstr "음향 말미"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr ""
+
+msgid "SNDMNU_MUSENABLED"
+msgstr ""
+
+msgid "SNDMNU_SNDENABLED"
+msgstr ""
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "5:4 비율 사용"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "화면 비율"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "벌칸 장치를 고르시오"
+
+msgid "VKMNU_ENABLE"
+msgstr "벌칸 렌더러 사용"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "효과음 원천 소멸 시 효과음도 중단"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "로스트 소울 반투명도"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "조명 선명도 사용"
+
+msgid "GLMNU_PREFS"
+msgstr "설정"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "회색 그림자 없에기"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "스프라이트 모서리 다듬기"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "움직임 예측도"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "지연 시간 조정"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "음향 없음"
+
+msgid "OPTSTR_OPENAL"
+msgstr "오픈에이엘"
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "모두 미확인함"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "고 성능"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "2배"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "저전력"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "최적함"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "최적화 형"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "원형"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "2배 픽셀"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "4배 픽셀"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "4배"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "640x400까지 확대"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "3배"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "자동 (바닐라 기본 설정)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "자동 (ZDoom 기본 설정)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "트루 컬러 출력"

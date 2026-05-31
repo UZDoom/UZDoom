@@ -1,0 +1,215 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/doom/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "TXT_D1E2"
+msgstr "Pinggir Neraka"
+
+msgid "TXT_D1E4"
+msgstr "Daging Habis Binasa"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hanggar"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: PLTN"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Pengolahan Limbah"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Pusat Komando"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Lab Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Pemprosesan Pusat"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Ruang Komputer"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Anomali Phobos"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Markas Militer"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Bawah Tanah"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Anomali Deimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Area Penampungan"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Tempat Pemurnian"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Lab Deimos"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Pusat Komando"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Balai Kemalangan"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Menara Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Benteng Misteri"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Kediaman Neraka"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Tempat Kertak Gigi"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Katedral Neraka"
+
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Gunung Erebus"
+
+msgid "HUSTR_E4M1"
+msgstr "E4M1: Dunia Kematian Dibawah"
+
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Sama Sekali Membenci"
+
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Memisahkan Orang Jahat"
+
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Buas tak Terkuasai"
+
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Mereka Akan Bertobat"
+
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Berdusta terhadap Engkau"
+
+msgid "HUSTR_E4M7"
+msgstr "E4M7: Kerajaan Maut Mengikuti"
+
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Kepada Orang Kejam"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Ketakutan"
+
+msgid "TXT_D1E1"
+msgstr "Berlutut di Tengah Kematian"
+
+msgid "TXT_D1E3"
+msgstr "Inferno"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Bak Pemijahan"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Rawa Keputusasaan"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemonium"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Limbo"
+
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dis"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Sarang"
+
+msgid "E1TEXT"
+msgstr ""
+"Setelah kamu mengalahkan para monster besar\n"
+"dan membersihkan pangkalan bulan, seharusnya\n"
+"kamu menang, bukan? Iya, kan? Mana\n"
+"hadiah besarmu dan tiket pulangmu? Apa\n"
+"ini sebenarnya? Seharusnya ini tidak\n"
+"berakhir seperti ini!\n"
+"\n"
+"Tempat ini berbau seperti daging busuk, tetapi tampak\n"
+"seperti pangkalan Deimos yang hilang. Sepertinya\n"
+"kamu terjebak di Tepian Neraka.\n"
+"Satu-satunya jalan keluar adalah terus maju.\n"
+"\n"
+"Untuk melanjutkan pengalaman DOOM, mainkan\n"
+"The Shores of Hell dan sekuel luar biasanya,\n"
+"Inferno!\n"
+
+#, fuzzy
+msgid "E2TEXT"
+msgstr ""
+"Kamu berhasil! Cyberdemon penguasa\n"
+"yang mengerikan yang memerintah pangkalan bulan\n"
+"Deimos yang hilang telah dibunuh dan kamu\n"
+"menang! Tetapi ... di mana\n"
+"kamu? Kamu merayap ke tepi bulan\n"
+"dan melihat ke bawah untuk menyaksikan\n"
+"kebenaran yang mengerikan.\n"
+"\n"
+"Deimos melayang di atas Neraka itu sendiri!\n"
+"Kamu belum pernah mendengar ada orang yang lolos\n"
+"dari Neraka, tetapi kamu akan membuat para bajingan itu\n"
+"menyesal pernah mendengar namamu! Dengan cepat,\n"
+"kamu menuruni tali ke permukaan\n"
+"Neraka.\n"
+"\n"
+"Sekarang, lanjut ke bab terakhir\n"
+"DOOM! -- Inferno."
+
+#, fuzzy
+msgid "E3TEXT"
+msgstr ""
+"Spiderdemon menjijikkan yang\n"
+"merancang invasi ke pangkalan-pangkalan bulan\n"
+"dan menyebabkan begitu banyak kematian akhirnya\n"
+"telah dihajar untuk selamanya.\n"
+"\n"
+"Sebuah pintu tersembunyi terbuka dan kamu masuk.\n"
+"Kamu terbukti terlalu tangguh untuk dikurung\n"
+"oleh Neraka, dan kini Neraka akhirnya bermain\n"
+"adil -- karena kamu keluar dari pintu itu\n"
+"dan melihat hamparan padang hijau Bumi!\n"
+"Akhirnya pulang.\n"
+"\n"
+"Kamu bertanya-tanya apa yang telah terjadi di\n"
+"Bumi saat kamu bertarung melawan kejahatan\n"
+"yang terlepas. Syukurlah tak ada makhluk\n"
+"neraka yang bisa melewati pintu itu\n"
+"bersamamu ..."
+
+msgid "E4TEXT"
+msgstr ""
+"Sang mastermind laba-laba pasti telah mengirimkan\n"
+"legiun makhluk nerakanya sebelum\n"
+"konfrontasi terakhirmu dengan\n"
+"monster mengerikan dari neraka itu. Tetapi kamu maju\n"
+"dan menimpakan kutukan abadi serta\n"
+"penderitaan kepada gerombolan itu sebagaimana pahlawan sejati\n"
+"akan lakukan saat menghadapi sesuatu yang begitu jahat.\n"
+"\n"
+"Lagipula, seseorang harus membayar atas apa\n"
+"yang terjadi pada Daisy, kelinci peliharaanmu.\n"
+"\n"
+"Tetapi sekarang, kamu melihat terbentang di hadapanmu\n"
+"lebih banyak potensi penderitaan dan pembantaian saat\n"
+"sebuah bangsa iblis mengamuk di kota-kota kita.\n"
+"\n"
+"Perhentian berikutnya, Neraka di Bumi!"

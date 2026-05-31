@@ -1,0 +1,298 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "TXT_CHEX_EP"
+msgstr "Misi Chex"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Mengambil flemkey biru."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Mengambil flemkey kuning."
+
+msgid "GOTREDFLEM"
+msgstr "Mengambil flemkey merah."
+
+msgid "GOTGOGGLES"
+msgstr "Menemukan Ultra Goggles"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "Kamu memerlukan kunci biru untuk mengaktifkan objek ini"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "Kamu memerlukan kunci merah untuk mengaktifkan objek ini"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "Kamu memerlukan kunci kuning untuk mengaktifkan objek ini"
+
+msgid "PD_BLUEFO"
+msgstr "Kamu memerlukan flemkey biru untuk mengaktifkan objek ini"
+
+msgid "PD_REDFO"
+msgstr "Kamu memerlukan flemkey merah untuk mengaktifkan objek ini"
+
+msgid "PD_YELLOWFO"
+msgstr "Kamu memerlukan flemkey kuning untuk mengaktifkan objek ini"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Mengambil zorcher."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Zona Pendaratan"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Fasilitas Penyimpanan"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorium"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Arboretum"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Gua Bazoik"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Pelabuhan Antariksa"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Bioskop"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Museum Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Jalanan Kota"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Sistem Selokan"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Komando Pusat"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2: United Cereals"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Vila Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Taman Provinsi"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Pesawat Antariksa Meteor"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "Commonus"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "Bipedicus"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "Bipedicus Berzirah"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "Stridicus"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "Ranjau Flem"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "Super Cycloptis"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "Maximus"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "The Flembomination"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "Lord Snotfolus"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "Prajurit Chex"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "Kamu memerlukan kunci biru untuk membuka pintu ini"
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "Kamu memerlukan kunci merah untuk membuka pintu ini"
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "Kamu memerlukan kunci kuning untuk membuka pintu ini"
+
+msgid "PD_BLUEF"
+msgstr "Kamu memerlukan flemkey biru untuk membuka pintu ini"
+
+msgid "PD_REDF"
+msgstr "Kamu memerlukan flemkey merah untuk membuka pintu ini"
+
+msgid "PD_YELLOWF"
+msgstr "Kamu memerlukan flemkey kuning untuk membuka pintu ini"
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o tenggelam ke dalam lendir."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o tenggelam ke dalam lendir."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o terkena lendir antardimensi!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o terkena lendir antardimensi!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o dikotori oleh seekor stridicus."
+
+msgid "OB_FLEMMINE"
+msgstr "%o terkena lendir oleh ranjau flem."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o terkena lendir oleh super cycloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "%o dikalahkan oleh Maximus."
+
+msgid "OB_LARVA"
+msgstr "%o terkena lendir oleh larva."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o terkena lendir oleh Quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o dikalahkan oleh Flembomination."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o dikalahkan oleh Lord Snotfolus."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%o terkena propulsor milik %k."
+
+#, fuzzy
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"Setelah mengirim Flembrane yang mengerikan\n"
+"kembali ke dimensinya sendiri, kamu membebaskan\n"
+"para tawanan. Namun flemoid ada di mana-mana!\n"
+"Kamu dan para tawanan bergegas menuju\n"
+"pesawat antariksa kamu. Para flemoid melumuri\n"
+"pesawatmu dengan lendir, tetapi kamu nyaris berhasil lolos ke orbit.\n"
+"Selama perjalanan pulang kamu diberi selamat\n"
+"atas penyelamatan yang berani itu, tetapi kamu memberi\n"
+"sebuah peringatan...\n"
+"Kita belum melihat yang terakhir dari para Flemoid.\n"
+"\n"
+"Sayangnya kamu benar. Karena saat kamu\n"
+"kembali ke rumah, kamu mendapati bahwa para Flemoid\n"
+"entah bagaimana telah mengikuti kamu ke sini. Bersiaplah\n"
+"untuk Chex Quest 2: Teror di Kota Chex!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"Kamu men-zorch para flemoid yang tersisa yang telah\n"
+"berkumpul di selokan. Kota Chex telah\n"
+"diselamatkan. Tampaknya ancaman Flemoid\n"
+"akhirnya telah berakhir.\n"
+"\n"
+"\n"
+"Sepuluh tahun berlalu dalam damai dan kemakmuran.\n"
+"Tetapi para Flemoid belum dikalahkan dan\n"
+"keinginan mereka untuk menguasai dimensi sereal\n"
+"yang kaya nutrisi tidak berkurang.\n"
+"Mereka telah mengumpulkan seluruh kekuatan mereka, membuka\n"
+"celah antardimensi raksasa di angkasa\n"
+"dan kini bola lendir besar sedang melaju\n"
+"langsung ke planet para sereal!\n"
+"\n"
+"Bersiaplah untuk\n"
+"Chex Quest 3: Invasi!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"Dengan satu ledakan terakhir, kamu men-zorch Lord\n"
+"Snotfolus kembali ke dimensinya sendiri!\n"
+"Melawan segala rintangan kamu seorang diri\n"
+"berhasil menggagalkan invasi itu!\n"
+"\n"
+"Kamu sungguh berharap para Flemoid\n"
+"akhirnya telah belajar dari kesalahan mereka dan\n"
+"tidak akan pernah lagi kembali ke dimensi\n"
+"sereal.\n"
+"\n"
+"\n"
+"\n"
+"Tetapi jika mereka kembali, kamu tahu kamu akan\n"
+"siap menghadapi mereka!"
+
+msgid "M_EPI1"
+msgstr "Penyelamatan di Bazoik"
+
+msgid "M_EPI2"
+msgstr "Teror di Kota Chex"
+
+msgid "M_EPI3"
+msgstr "Invasi!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ultra Goggles"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Flemkey Biru"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Flemkey Kuning"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Flemkey Merah"

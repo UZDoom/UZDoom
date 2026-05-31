@@ -1,0 +1,297 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-27 13:50+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgid "TXT_CHEX_EP"
+msgstr "Чекс Квест"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Узео сам плавог флемкија."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Узео сам жутог флемкија."
+
+msgid "GOTREDFLEM"
+msgstr "Узео сам црвеног флемкија."
+
+msgid "GOTGOGGLES"
+msgstr "Пронађен ултра-наочаре"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "Треба вам плави кључ да бисте активирали овај предмет"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "Треба вам црвени кључ да бисте активирали овај предмет"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "Треба вам жути кључ да бисте активирали овај предмет"
+
+msgid "PD_BLUEFO"
+msgstr "Потребан вам је плави флемки да бисте активирали овај објекат"
+
+msgid "PD_REDFO"
+msgstr "Потребан вам је црвени флемки да бисте активирали овај објекат"
+
+msgid "PD_YELLOWFO"
+msgstr "Потребан вам је жути флемки да бисте активирали овај објекат"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Узео сам зорчер."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Зона слетања"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Складишни простор"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Лабораторија"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Арборетум"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Пештере Базоика"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Свемирска лука"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Кино"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Чекс музеј"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Градске улице"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Канализациони систем"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Централна команда"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Унајтед Сириалс"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Вила Чекс"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Покрајински парк"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Метеорски свемирски брод"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "Комонус"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "Бипедикус"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "Бипедикус са оклопом"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "Стридикус"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "Флем Мајн"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "Супер Циклоптис"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "Максимус"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "Флембоминација"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "Лорд Снотфолус"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "Чекс Вориор"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "Треба вам плави кључ да бисте отворили ова врата"
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "Треба вам црвени кључ да бисте отворили ова врата"
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "Треба вам жути кључ да бисте отворили ова врата"
+
+msgid "PD_BLUEF"
+msgstr "Потребан ти је плави флемки да отвориш ова врата"
+
+msgid "PD_REDF"
+msgstr "Потребан ти је црвени флемки да отвориш ова врата"
+
+msgid "PD_YELLOWF"
+msgstr "Потребан ти је жути флемки да отвориш ова врата"
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o тоне у неку слуз."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o тоне у неку слуз."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o је погођен међудимензионалном слузи!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o је погођен међудимензионалном слузи!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o је испљунут од стране стридикус."
+
+msgid "OB_FLEMMINE"
+msgstr "%o је био прекривен флегмом из мине."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o је био прекривен слузом супер циклоптиса."
+
+msgid "OB_MAXIMUS"
+msgstr "%o је био побеђен од стране Максимуса."
+
+msgid "OB_LARVA"
+msgstr "%o је био облепљен слузи од стране ларве."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o је био прекривен слузом од стране Квадрумпуса."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o је био поражен од стране Флембоминације."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o је био побеђен од стране лорда Снотнофулуса."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%o је погођен пропулсором %k."
+
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"Након што сте послали чудовишну\n"
+"Флембрану назад у његову димензију,\n"
+"ослобађате заробљенике. Међутим,\n"
+"флемоиди су свуда! Ви и заробљеници\n"
+"бежите ка вашем свемирском броду.\n"
+"Флемоиди га умазу слузом, али ви једва\n"
+"бежите у орбиту. Током повратка честитају\n"
+"вам на храброј спасилачкој акцији, али ви\n"
+"упућујете упозорење…\n"
+"Нисмо се последњи пут опростили од Флемоида.\n"
+"\n"
+"Нажалост, у праву сте. Јер док се враћате кући,\n"
+"сазнајете да су вас Флемоиди некако пратили\n"
+"и овде. Припремите се за\n"
+"Chex Quest 2: Teror u Chex Gradu!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"Ти погубиш преостале флемоиде\n"
+"који су се окупили у канализацији.\n"
+"Чекс Сити је спасен. Чини се да је претња\n"
+"од флемоида коначно окончана.\n"
+"\n"
+"\n"
+"Десет година прође у миру и просперитету.\n"
+"Али Флемоиди нису поражени и њихова\n"
+"жеља да контролишу хранљиво богату\n"
+"димензију житарица није ослабила.\n"
+"Окупили су све своје снаге, отворили\n"
+"гигантски међудимензионални помак\n"
+"у свемиру и сада огромна кугла од слузи\n"
+"лети право ка планети житарица!\n"
+"\n"
+"Припремите се за\n"
+"Chex Quest 3: Invazija!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"Једним последњим ударом, ти враћаш Зорч Лорда\n"
+"Снотфолуса у његову димензију!\n"
+"Против свих изгледа, ти си сам\n"
+"спровео инвазију!\n"
+"\n"
+"Ти се заиста надаш да су Флемоиди\n"
+"конечно научили своју лекцију и да\n"
+"се никада више неће вратити у\n"
+"димензију житарица.\n"
+"\n"
+"\n"
+"\n"
+"Али ако се врате, знаш да ћеш\n"
+"бити спреман за њих!"
+
+msgid "M_EPI1"
+msgstr "Спасавање на Базоику"
+
+msgid "M_EPI2"
+msgstr "Терор у Чекс Ситију"
+
+msgid "M_EPI3"
+msgstr "Инвазија!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ултра наочаре"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Плави Флемки"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Жути Флемки"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Црвени Флемки"
