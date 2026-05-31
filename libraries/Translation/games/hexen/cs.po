@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/doom-engine-games/"
-"hexen/cs/>\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/doom-engine-games/hexen/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Sál prosetí"
@@ -127,6 +126,7 @@ msgstr ""
 "se přetvářející zdi hypostylu zdánlivě se\n"
 "smějí veškerému tvému úsilí."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Stále se vzpamatovávaj@[tgs_pr1_cs] ze střetnutí\n"
@@ -147,6 +147,7 @@ msgstr ""
 "ses to dostal@[ao_cs]? U všech bohů utrpení,\n"
 "jak se kdy odsud dostaneš?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "Nejmocnější zbraně a starobylé artefakty\n"
@@ -165,6 +166,7 @@ msgstr ""
 "desítky zlověstných očí na tě zhoubně zírají.\n"
 "Někde tam uvnitř nepřátelé čekají."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "„... i vypraví se do říše mrtvých\n"
@@ -192,6 +194,7 @@ msgstr ""
 "pódium a na něm jediný zdroj světla\n"
 "v tomto světě."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Toto může být jedině Sféra chaosu,\n"
@@ -247,6 +250,7 @@ msgstr "jedna třetina rébusu."
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Schody se zvedly u Sedmera portálů."
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Musíš najít další spínač."
 
@@ -301,6 +305,7 @@ msgstr "Dveře jsou zatarasené zevnitř."
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Plošina ve věži sjela dolů."
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Tuhle partii jsi už hrál@[ao_cs] moc dlouho, smrtelníče,"
 

@@ -2,17 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:43+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Serbian <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen-deathkings/sr/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15-dev\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Уништено село"
@@ -92,22 +90,21 @@ msgstr "Канализациона јама"
 msgid "TXT_HEXDD_MAP38"
 msgstr "Ружа"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
-"Бришете дрхтаву руку преко вашег крвавог лица, пробате да се саберете и "
-"спремите се за оно што стоји испред...\n"
+"Бришете дрхтаву руку преко вашег крвавог лица, пробате да се саберете и спремите се за оно што стоји испред...\n"
 "\n"
 "...и да заборавите шта стоји иза вас.\n"
 "\n"
-"У даљини, снажни бедеми величанственог замка изгледају да искидају небо "
-"изнад, и смрад пропадања допире из прекршених гробова безбројних мртвих.\n"
+"У даљини, снажни бедеми величанственог замка изгледају да искидају небо изнад, и смрад пропадања допире из прекршених гробова безбројних мртвих.\n"
 "\n"
-"Пажљиво бројите шта ти је остало од артефакта и пробате се поново уверити да "
-"ће бити довољно. На крају крајева, треба да буде довољно, је ли тако?\n"
+"Пажљиво бројите шта ти је остало од артефакта и пробате се поново уверити да ће бити довољно. На крају крајева, треба да буде довољно, је ли тако?\n"
 "\n"
 "\n"
 "Је ли тако?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "Сигурно душе проклетих насељавају овај свет,\n"
@@ -128,6 +125,7 @@ msgstr ""
 "\n"
 "...за срећнике."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Још једном се проналазите у великој дворани\n"
@@ -140,6 +138,7 @@ msgstr ""
 "\n"
 "...очи које штите злобну намеру."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "Једном пре сте зграбили сферу хаоса\n"
@@ -153,10 +152,10 @@ msgstr ""
 "\n"
 "Али још увек, нисте били од оних који се повлаче од изазова..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"...и други играчи вас чекају.\n"
+"\\n...и други играчи вас чекају.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -174,6 +173,7 @@ msgstr "Водопад је блокиран"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "Врата су се отворила у катедрали"
 
+#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "То је чудно..."
 
@@ -204,12 +204,14 @@ msgstr "Две трећине загонетке су решене"
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Чујете како се платформа помера у даљини"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "Готово је..."
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Ниси решио загонетку"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "Упозоравам те..."
 
@@ -222,6 +224,7 @@ msgstr "А још си и глуп"
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Четвртина загонетке је решена"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "Лош избор..."
 
@@ -279,6 +282,7 @@ msgstr "Вајтолни мач ?!?!?!"
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Дај ми мало шећера, душо"
 
+#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
 msgstr "Дух-уххх..."
 
@@ -318,9 +322,11 @@ msgstr "Излаз је отворен"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "Врата неће да се отворе са стране"
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "Врата су отворена..."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...ако си спреман"
 

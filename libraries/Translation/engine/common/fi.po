@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-28 00:29+0000\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/common/"
-"fi/>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/common/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1-dev\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Paina Y tai N."
@@ -63,8 +62,7 @@ msgstr "Sano:"
 
 msgid "TXT_QUITENDOOM"
 msgstr ""
-"Paina mitä tahansa näppäintä tai napsauta minne tahansa ikkunaa "
-"lopettaaksesi."
+"Paina mitä tahansa näppäintä tai napsauta minne tahansa ikkunaa lopettaaksesi."
 
 msgid "NEWSAVE"
 msgstr "<Uusi tallennettu peli>"
@@ -267,7 +265,7 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Aselokero 1"
 
 # only show appropriate slots per game
-# 
+#
 msgid "CNTRLMNU_SLOT2"
 msgstr "Aselokero 2"
 
@@ -1563,18 +1561,6 @@ msgstr "Ei tuloksia."
 
 msgid "OS_LABEL"
 msgstr "Etsi:"
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "0"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-#, fuzzy
-msgid "REQUIRED_CHARACTERS"
-msgstr "ÄÖ"
 
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "Täysi asetusvalikko"

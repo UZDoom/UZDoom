@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/it/>\n"
+"PO-Revision-Date: 2026-05-28 01:48+0000\n"
+"Last-Translator: OldCactusCN <huchenyi_2019@qq.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Premi un tasto."
@@ -308,13 +307,11 @@ msgstr "No Clipping: ATTIVO"
 msgid "STSTR_NCOFF"
 msgstr "No Clipping: SPENTO"
 
-#, fuzzy
 msgid "STSTR_NC2ON"
-msgstr "No Clipping 2: ATTIVO"
+msgstr "3D No Clipping: ATTIVO"
 
-#, fuzzy
 msgid "STSTR_NC2OFF"
-msgstr "No Clipping 2: SPENTO"
+msgstr "3D No Clipping: SPENTO"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -521,7 +518,7 @@ msgid "MULTI5"
 msgstr "Uccisione Mostruosa!"
 
 msgid "SCORE_BONUS"
-msgstr ""
+msgstr "Bonus"
 
 msgid "SCORE_COLOR"
 msgstr "Colore"
@@ -930,7 +927,7 @@ msgid "TAG_PLASMARIFLE"
 msgstr "Fucile al Plasma"
 
 msgid "TAG_BFG9000"
-msgstr ""
+msgstr "BFG 9000"
 
 msgid "AMMO_CLIP"
 msgstr "Proiettili"
@@ -1855,8 +1852,7 @@ msgstr "%o ha ricevuto una notizia \"elettrizzante\" da %k."
 
 msgid "OB_MPMWEAPBLOODSCOURGE"
 msgstr ""
-"%o è stato cancellato dalla faccia dell'universo dal Flagello di Sangue di "
-"%k."
+"%o è stato cancellato dalla faccia dell'universo dal Flagello di Sangue di %k."
 
 msgid "TXT_METALARMOR"
 msgstr "Hai raccolto l'Armatura di Metallo."
@@ -2167,7 +2163,7 @@ msgstr "Pestatore"
 msgid "TAG_GLAUNCHER1"
 msgstr "Lanciagranate"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Lanciagranate"
 
@@ -4571,18 +4567,16 @@ msgstr "Il salvataggio '%s' proviene da un altro motore basato su ZDoom:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Il salvataggio '%s' proviene da una versione precedente: %d (%e è la più "
-"vecchia supportata)."
+"Il salvataggio '%s' proviene da una versione precedente: %d (%e è la più vecchia supportata)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Il salvataggio '%s' proviene da una versione recente: %d (%e è la più "
-"recente supportata)."
+"Il salvataggio '%s' proviene da una versione recente: %d (%e è la più recente supportata)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Il salvataggio '%s' non contiene la mappa corrente."
@@ -4632,8 +4626,7 @@ msgstr "Opzioni per il tipo di carattere"
 
 msgid "FONTMNU_LOG"
 msgstr ""
-"Usa il tipo di carattere di default per la visualizzazione dei messaggi di "
-"log"
+"Usa il tipo di carattere di default per la visualizzazione dei messaggi di log"
 
 msgid "FONTMNU_DLG"
 msgstr ""
@@ -4818,9 +4811,8 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Disabilita il ritiro degli oggetti caduti dal lato client"
 
 # Disables autoloading save on death
-#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
-msgstr "Riavvio del livello in caso di morte"
+msgstr "Riavvio con pistola in caso di morte"
 
 # Resets inventory on every map
 #, fuzzy
@@ -4963,7 +4955,7 @@ msgid "NETMNU_DISABLEPAUSE"
 msgstr ""
 
 msgid "OPTVAL_HOSTONLY"
-msgstr ""
+msgstr "Solo per Host"
 
 # Type of vote system to use to bypass intermissions when playing online.
 msgid "NETMNU_READYTYPE"
@@ -5024,22 +5016,22 @@ msgid "PAUSE_STRING"
 msgstr "Pausa"
 
 msgid "TAG_BACKPACK"
-msgstr ""
+msgstr "Zaino"
 
 msgid "TAG_ARMORBONUS"
 msgstr ""
 
 msgid "TAG_GREENARMOR"
-msgstr ""
+msgstr "Armatura della sicurezza"
 
 msgid "TAG_BLUEARMOR"
-msgstr ""
+msgstr "Armatura della battaglia"
 
 msgid "TAG_INVULSPHERE"
 msgstr ""
 
 msgid "TAG_SOULSPHERE"
-msgstr ""
+msgstr "Sfera dell'anima"
 
 msgid "TAG_MEGAPSHERE"
 msgstr ""
@@ -5177,3 +5169,21 @@ msgstr "Pestatore"
 #, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Lanciagranate"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Colore dell mirino dinamico"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Colore dell mirino a salute massimi"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Colore dell mirino a salute piena"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Posizione verticale per mirino"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Trasparente"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Additivo"

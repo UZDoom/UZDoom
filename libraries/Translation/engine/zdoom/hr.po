@@ -4,14 +4,12 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "PO-Revision-Date: 2026-04-21 11:10+0000\n"
 "Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/hr/>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "PRESSKEY"
@@ -2168,7 +2166,7 @@ msgstr "Mlatenik"
 msgid "TAG_GLAUNCHER1"
 msgstr "Bacač granata"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Bacač granata"
 
@@ -4571,18 +4569,16 @@ msgstr "Spremljena igra '%s' je iz drugog ZDoom engine-a:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Spremljena igra '%s' je iz starije verzije: %d (%e je najstarija podržana "
-"verzija)."
+"Spremljena igra '%s' je iz starije verzije: %d (%e je najstarija podržana verzija)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Spremljena igra '%s' je iz novije verzije: %d (%e je najviše podržana "
-"verzija)."
+"Spremljena igra '%s' je iz novije verzije: %d (%e je najviše podržana verzija)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Spremljenoj igri '%s' nedostaje trenutna mapa."

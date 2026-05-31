@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-02-17 13:09+0000\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/doom-"
-"engine-games/hexen-deathkings/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16.1-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Aldeia Destruída"
@@ -82,6 +81,7 @@ msgstr "Fossa de Esgoto"
 msgid "TXT_HEXDD_MAP38"
 msgstr "A Rosa"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "Passando a mão trêmula pelo seu\n"
@@ -105,6 +105,7 @@ msgstr ""
 "\n"
 "Não é mesmo?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "Certamente as almas dos condenados\n"
@@ -127,6 +128,7 @@ msgstr ""
 "\n"
 "...para os fortunados."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Mais uma vez você se encontra no\n"
@@ -143,6 +145,7 @@ msgstr ""
 "...olhos que escondem uma \n"
 "intenção maléfica."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "Você já tinha pego a Esfera do Caos\n"
@@ -162,10 +165,10 @@ msgstr ""
 "No entanto, nunca foi de sua natureza\n"
 "fugir de um desafio..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"...e os outros jogadores aguardam.\n"
+"\\n...e os outros jogadores aguardam.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -183,6 +186,7 @@ msgstr "A cascata está bloqueada"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "Uma porta se abriu na capela"
 
+#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "Que estranho..."
 
@@ -213,12 +217,14 @@ msgstr "Dois terços do quebra-cabeça foi resolvido"
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Você ouve de longe uma plataforma se movendo"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "Pronto..."
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Você não terminou o quebra-cabeça"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "Estou te avisando..."
 
@@ -231,6 +237,7 @@ msgstr "E estúpid@[ao_ptb] também"
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Um quarto deste quebra-cabeça está completo"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "Péssima escolha..."
 
@@ -288,6 +295,7 @@ msgstr "Vorpal?!?!?!"
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Me dá um pouco de açúcar, baby"
 
+#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
 msgstr "Dãããã-ããã..."
 
@@ -327,9 +335,11 @@ msgstr "A saída está aberta"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "As portas não se abrirão deste lado"
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "As portas estão abertas..."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...se você estiver preparad@[ao_ptb]"
 

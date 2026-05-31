@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-28 00:29+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/common/ko/>"
-"\n"
+"PO-Revision-Date: 2026-05-28 05:11+0000\n"
+"Last-Translator: Yu Ji Wan <z1wan@hanmail.net>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/common/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17.1-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 msgid "PRESSYN"
 msgstr "Y키 또는 N키를 누르시오."
@@ -58,7 +57,7 @@ msgid "MSGON"
 msgstr "메시지: 켜짐"
 
 msgid "TXT_SAY"
-msgstr ""
+msgstr "말하다:"
 
 msgid "TXT_QUITENDOOM"
 msgstr "아무 키를 누르거나 아무 곳이나 클릭하면 종료됩니다."
@@ -343,7 +342,7 @@ msgid "MAPCNTRLMNU_TOGGLEGRID"
 msgstr "그리드 조정"
 
 msgid "MAPCNTRLMNU_ROTATE"
-msgstr ""
+msgstr "회전 토글"
 
 msgid "MAPCNTRLMNU_TOGGLETEXTURE"
 msgstr "미니맵 텍스쳐 조정"
@@ -481,7 +480,7 @@ msgid "JOYMNU_XINPUT"
 msgstr "X인풋 컨트롤러 허용"
 
 msgid "JOYMNU_PS2"
-msgstr "PS2 어뎁터 허용"
+msgstr "PlayStation 2 어댑터 허용"
 
 msgid "JOYMNU_NOCON"
 msgstr "인식된 컨트롤러 없음"
@@ -524,9 +523,8 @@ msgstr "회전"
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "위/아래로 보기"
 
-#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
-msgstr "앞으로 전진"
+msgstr "앞으로 전진/후진"
 
 #, fuzzy
 msgid "OPTVAL_STRAFING"
@@ -563,7 +561,7 @@ msgid "TXT_COLOR_BROWN"
 msgstr "갈색"
 
 msgid "TXT_COLOR_DARKBLUE"
-msgstr ""
+msgstr "진한 파란색"
 
 msgid "TXT_COLOR_LIGHTRED"
 msgstr "옅은 적색"
@@ -650,7 +648,7 @@ msgid "MSGMNU_CENTERMESSAGES"
 msgstr "메시지 중간에 위치"
 
 msgid "MSGMNU_PULSEMESSAGES"
-msgstr ""
+msgstr "깜빡이는 메시지 표시"
 
 msgid "MNU_COLORPICKER"
 msgstr "색상을 고르시오"
@@ -781,9 +779,8 @@ msgstr "고급 설정"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "모듈 재생 설정"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "MIDI 플레이어 설정"
+msgstr "MIDI 디바이스 설정"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "고급 음향 설정"
@@ -801,7 +798,7 @@ msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "에뮬레이트된 OPL 칩 수"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr ""
+msgstr "얻다"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "완전한 MIDI 스테레오 패닝"
@@ -870,10 +867,10 @@ msgid "ADVSNDMNU_VLMODEL"
 msgstr "모델 볼륨"
 
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr ""
+msgstr "채널 할당 방식"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr ""
+msgstr "자동 아르페지오"
 
 msgid "ADVSNDMNU_OPNCORES"
 msgstr "OPN2 에뮬레이터 코어"
@@ -897,7 +894,7 @@ msgid "ADVSNDMNU_ADLCUSTOMBANK"
 msgstr "사용자 지정 WOPL 뱅크 사용"
 
 msgid "ADVSNDMNU_ADLUSEWADBANK"
-msgstr ""
+msgstr "WAD의 GENMIDI 뱅크를 사용자 지정 뱅크로 사용"
 
 msgid "ADVSNDMNU_OPLBANKFILE"
 msgstr "WOPL 뱅크 파일"
@@ -1001,7 +998,7 @@ msgid "OPTVAL_LLENUKEDOPL2"
 msgstr ""
 
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr ""
+msgstr "OPL3 - LLE (성능 집약적)"
 
 msgid "OPTVAL_MAMEOPN2"
 msgstr "마메 OPN2 (YM2612)"
@@ -1025,13 +1022,13 @@ msgid "OPTVAL_NUKEDOPN2YM2612"
 msgstr ""
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr ""
+msgstr "OPN2-LLE ( YM2612 ) (성능 집약적)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM3438) (성능 집약적)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr ""
+msgstr "OPN2-LLE (YMF276) (성능 집약적)"
 
 msgid "OPTVAL_GENSOPN2"
 msgstr ""
@@ -1061,16 +1058,16 @@ msgid "OPNVLMODEL_NATIVE"
 msgstr "고유 OPN"
 
 msgid "ADLVLMODEL_DMX"
-msgstr "데이터 마이닝 확장"
+msgstr "DMX (정확하지만 AM 버그가 있음)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr ""
+msgstr "DMX 처럼"
 
 msgid "ADLVLMODEL_APOGEE"
 msgstr "어포지"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr ""
+msgstr "Apogee Sound System처럼"
 
 msgid "OPNVLMODEL_WIN9X"
 msgstr "Win9X 같게"
@@ -1082,31 +1079,31 @@ msgid "ADLVLMODEL_WIN9XGENERIC"
 msgstr "Win9X 같게 (Generic FM)"
 
 msgid "ADLVLMODEL_DMX_FIXED"
-msgstr ""
+msgstr "DMX (AM 음성 버그 제외)"
 
 msgid "ADLVLMODEL_APOGEE_FIXED"
-msgstr ""
+msgstr "Apogee (AM 음성 버그 제외)"
 
 msgid "ADLVLMODEL_AIL"
-msgstr ""
+msgstr "IBM 오디오 라이브러리 인터페이스"
 
 msgid "ADLVLMODEL_HMI"
-msgstr ""
+msgstr "HMI 사운드 운영 체제"
 
 msgid "ADLVLMODEL_HMIOLD"
-msgstr ""
+msgstr "HMI SOS (구버전, 버그 있음)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "자동"
 
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr ""
+msgstr "소리 끄기 지연 측정됨"
 
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr ""
+msgstr "재사용은 동일한 악기로 처음 출시"
 
 msgid "ADLCHANALLOC_ANYREL"
-msgstr ""
+msgstr "처음 공개된 노트를 재사용"
 
 msgid "OPTVAL_UNLIMITED"
 msgstr "무제한"
@@ -1153,9 +1150,8 @@ msgstr "앞면"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "반전"
 
-#, fuzzy
 msgid "GLMNU_POSTPROCESS"
-msgstr "포스트프로세싱 적용"
+msgstr "포스트 프로세싱"
 
 msgid "GLPREFMNU_TONEMAP"
 msgstr "톤맵 모드"
@@ -1272,7 +1268,7 @@ msgid "GLTEXMNU_RESIZEFNT"
 msgstr "폰트 리사이징"
 
 msgid "GLTEXMNU_RESIZESKN"
-msgstr ""
+msgstr "모델 스킨 크기 조정"
 
 msgid "GLTEXMNU_PRECACHETEX"
 msgstr "지엘 텍스쳐 미리 캐싱함"
@@ -1355,13 +1351,13 @@ msgstr "기본형"
 # This describes vid_scalemode 1, which represents the lowest possible scaling
 # to fill the allocated screen area
 msgid "OPTVAL_LOWEST"
-msgstr ""
+msgstr "가능한 가장 낮은 척도"
 
 msgid "OPTVAL_CUSTOM"
 msgstr "사용자 지정"
 
 msgid "VIDMNU_MAXFPS"
-msgstr ""
+msgstr "최대 FPS"
 
 msgid "OPTVAL_60FPS"
 msgstr ""
@@ -1401,7 +1397,7 @@ msgid "MISCMNU_WINFULLSCREENTOGGLE"
 msgstr "Alt+Enter키로 전체화면 조정"
 
 msgid "MISCMNU_MACFULLSCREENTOGGLE"
-msgstr "COMMAND+F키로 전체화면 조정"
+msgstr "Command+F키로 전체화면 조정"
 
 msgid "MISCMNU_ENABLEAUTOSAVES"
 msgstr "빠른 저장 허용"
@@ -1410,10 +1406,10 @@ msgid "MISCMNU_AUTOSAVECOUNT"
 msgstr "빠른 저장 수"
 
 msgid "MISCMNU_SAVELOADCONFIRMATION"
-msgstr "스크립트로 스크린샷 생성 허용"
+msgstr "저장/불러오기 확인"
 
 msgid "MISCMNU_NOCHEATS"
-msgstr ""
+msgstr "키보드 치트 기능을 비활성화"
 
 msgid "MISCMNU_QUICKSAVEROTATION"
 msgstr "빠른 저장 간격"
@@ -1422,7 +1418,7 @@ msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "빠른 저장 간격의 수"
 
 msgid "MISCMNU_CLEANMENU"
-msgstr ""
+msgstr "클래식 ZDoom 메뉴 크기 조정"
 
 msgid "MISCMNU_PAUSEINBACKGROUND"
 msgstr "백그라운드에서 게임 일시 중지"
@@ -1560,17 +1556,6 @@ msgstr "검색 결과 없음."
 msgid "OS_LABEL"
 msgstr "검색:"
 
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "1"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-msgid "REQUIRED_CHARACTERS"
-msgstr ""
-
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "전체 옵션 메뉴"
 
@@ -1658,119 +1643,149 @@ msgid "CNTRLMNU_OPEN_MAIN"
 msgstr "메인 메뉴 열기"
 
 msgid "MODMNU_REPLAYER"
-msgstr ""
+msgstr "모듈 재생기"
 
 # This is enabled per-controller, it means to enable "this" controller in the
 # background when GZDoom is not in focus.
 msgid "JOYMNU_JOYENABLEINBACKGROUND"
-msgstr ""
+msgstr "백그라운드 컨트롤러 입력 허용"
 
 # Order to sort the list of saved games in the save and load game menu. This
 # used to only be alphabetical.
 msgid "MISCMNU_SAVEORDER"
-msgstr ""
+msgstr "게임 저장 정렬 순서"
 
 msgid "OPTVAL_ALPHABETICAL"
-msgstr ""
+msgstr "알파벳순"
 
 msgid "OPTVAL_LASTSAVEDTIME"
-msgstr ""
+msgstr "마지막 저장 시간"
 
 msgid "PICKER_PLAYHOST"
-msgstr ""
+msgstr "호스트 게임"
 
 msgid "PICKER_PLAYJOIN"
-msgstr ""
+msgstr "게임에 참여"
 
 msgid "PICKER_REMPARM"
-msgstr ""
+msgstr "매개변수를 기억"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr ""
+msgstr "지원되는 WADS 로드"
 
 msgid "PICKER_TAB_MULTI"
-msgstr ""
+msgstr "멀티플레이어"
 
 msgid "PICKER_LOADSAVE"
-msgstr ""
+msgstr "파일 불러오기/저장:"
 
 msgid "PICKER_REMSAVE"
-msgstr ""
+msgstr "저장 파일을 기억"
 
 # As in, to host a game.
 msgid "PICKER_HOST"
-msgstr ""
+msgstr "호스트"
 
 msgid "PICKER_JOIN"
-msgstr ""
+msgstr "가입"
 
 msgid "PICKER_NETRATE"
-msgstr ""
+msgstr "패킷 티크레이트:"
 
 # Sends out duplicate copies of packets to help with spotty connections e.g.
 # wifi.
 msgid "PICKER_NETBACKUP"
-msgstr ""
+msgstr "백업 패킷을 전송"
 
 msgid "PICKER_GAMEMODE"
-msgstr ""
+msgstr "게임 모드:"
 
 msgid "PICKER_COOP"
 msgstr ""
 
 msgid "PICKER_DM"
-msgstr ""
+msgstr "데스매치"
 
 msgid "PICKER_TDM"
-msgstr ""
+msgstr "팀 데스매치"
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
-msgstr ""
+msgstr "팀 #:"
 
 msgid "PICKER_ALTDM"
-msgstr ""
+msgstr "대체 데스매치 규칙을 사용"
 
 msgid "PICKER_PLAYERS"
-msgstr ""
+msgstr "최대 플레이어 수:"
 
 msgid "PICKER_PORT"
-msgstr ""
+msgstr "호스트 포트:"
 
 # Max number of players.
 msgid "PICKER_PLAYERHINT"
-msgstr ""
+msgstr "최대 64"
 
 # GZDoom's default port.
 msgid "PICKER_PORTHINT"
-msgstr ""
+msgstr "기본값 5029"
 
 # Team 255 randomizes which team the player gets put on.
 msgid "PICKER_TEAMHINT"
-msgstr ""
+msgstr "255 = 무작위"
 
 msgid "PICKER_IP"
-msgstr ""
+msgstr "호스트 IP:"
 
 msgid "PICKER_TDMLABEL"
-msgstr ""
+msgstr "팀 데스매치:"
 
 # Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
-msgstr ""
+msgstr "(팀에게) 말하다:"
 
 msgid "MISCMNU_DISCORDRPC"
-msgstr ""
+msgstr "디스코드 리치 프레즌스"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "회전 속도"
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr ""
+msgstr "검색 속도"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr ""
+msgstr "아날로그 스트레이프 런"
 
 msgid "ACCMNU_TITLE"
 msgstr "접근성 설정"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "메시지 큐 크기"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "스택 반복 메시지"
+
+msgid "NOTES_FAIL"
+msgstr "릴리스 노트를 구문 분석할 수 없음"
+
+msgid "NOTES_UNKNOWN"
+msgstr "알려지지 않은"
+
+msgid "NOTES_EMPTY"
+msgstr "설명이 제공되지 않았습니다."
+
+msgid "NOTES_DETAILS"
+msgstr "자세한 내용은 다음을 참조: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "업데이트 후 이 페이지를 표시"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "릴리스 노트 보기"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "에 대한"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "릴리스 노트"

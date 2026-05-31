@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-01 17:09+0000\n"
-"Last-Translator: OldCactusCN <huchenyi_2019@qq.com>\n"
-"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
-"projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
+"PO-Revision-Date: 2026-05-12 16:11+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -2161,7 +2160,7 @@ msgstr "毛勒"
 msgid "TAG_GLAUNCHER1"
 msgstr "榴弹发射器"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "榴弹发射器"
 
@@ -3796,7 +3795,7 @@ msgid "DSPLYMNU_BLENDMETHOD"
 msgstr "透明渲染模式"
 
 msgid "DSPLYMNU_WIPETYPE"
-msgstr "屏幕擦拭样式"
+msgstr "屏幕擦除样式"
 
 msgid "DSPLYMNU_SHOWENDOOM"
 msgstr "显示ENDOOM画面"
@@ -5203,8 +5202,7 @@ msgstr ""
 "这是一个提示信息示例。\n"
 "这里是一些补充说明文字。\n"
 "…\n"
-"这是一行非常长的文字，似乎一直说个不停，但又没有提到任何有趣的内容，这么长似"
-"乎仅仅是因为开发者难以解释该选项的具体功能。"
+"这是一行非常长的文字，似乎一直说个不停，但又没有提到任何有趣的内容，这么长似乎仅仅是因为开发者难以解释该选项的具体功能。"
 
 msgid "ACCMNU_TOOLTIP_LINES"
 msgstr "提示信息行数"
@@ -5237,14 +5235,10 @@ msgid "DSPLYMNU_IMAGEADJUST_TOP2"
 msgstr "放大/超采样可能导致输出不正确。"
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
-msgstr ""
-"补偿你的显示器局限性。调整直到垂直灰色块消失。请勿用此功能让游戏画面更亮，仅"
-"用于确保图像与你的设置相匹配。"
+msgstr "补偿你的显示器局限性。调整直到垂直灰色块消失。请勿用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
-msgstr ""
-"用于补偿显示器无法正确显示暗像素的情况。调整直至对角线上的白色方块消失。请勿"
-"用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
+msgstr "用于补偿显示器无法正确显示暗像素的情况。调整直至对角线上的白色方块消失。请勿用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "将此菜单中的所有选项重置为默认设置。"
@@ -5253,9 +5247,7 @@ msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr "应用线性亮度调整。根据个人喜好调整，或在黑暗中查看。"
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
-msgstr ""
-"调整相似颜色之间的感知差异。控制图像看起来清晰或模糊的程度。根据个人喜好进行"
-"调整。"
+msgstr "调整相似颜色之间的感知差异。控制图像看起来清晰或模糊的程度。根据个人喜好进行调整。"
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr "调整颜色的强度，使图像看起来更鲜艳或更柔和。根据个人喜好进行调整。"
@@ -5326,9 +5318,6 @@ msgstr "超级立体声展宽"
 msgid "CNTRLMNU_ADJUST_LIGHTS"
 msgstr "光照调整"
 
-msgid "LANG_NATIVE"
-msgstr "简体中文"
-
 msgid "OPTVAL_SMOOTH"
 msgstr "平滑"
 
@@ -5340,9 +5329,6 @@ msgstr "毛勒"
 
 msgid "TAG_GLAUNCHER"
 msgstr "榴弹发射器"
-
-msgid "LANG_ENG"
-msgstr "Simplified Chinese"
 
 msgid "ACTION_OPENWADDIR"
 msgstr "浏览WAD"
@@ -5370,3 +5356,45 @@ msgstr "最大生命时准星颜色"
 
 msgid "HUDMNU_CROSSHAIRCOLORFULL"
 msgstr "满生命时准星颜色"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "双击阈值"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "填充颜色"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "填充不透明度"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s 秒"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s 毫秒"
+
+msgid "VALFORMAT_METER"
+msgstr "%s 米"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s 赫兹"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s 帧/秒"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s 度"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s 分贝/米"
+
+msgid "VALFORMAT_DB"
+msgstr "%s 分贝"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "触发双击事件所需的连续按键间隔"

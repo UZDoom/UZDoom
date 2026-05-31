@@ -2,17 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 05:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Serbian <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen/sr/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/doom-engine-games/hexen/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15-dev\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Предсобље просејавања"
@@ -131,6 +129,7 @@ msgstr ""
 "су и сами зидови како би\n"
 "оптеретили сваки Ваш корак."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Једва дошавши до даха након\n"
@@ -157,6 +156,7 @@ msgstr ""
 "О богови бола, како се може изићи\n"
 "из њега?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "Снага моћног оружја и чаролија\n"
@@ -180,6 +180,7 @@ msgstr ""
 "Непријатељи, чекајући Ваш долазак,\n"
 "вребају унутра..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "„...И отићи ће у царство мртвих,\n"
@@ -209,6 +210,7 @@ msgstr ""
 "С уздигнутог положаја, близу Вас,\n"
 "тече усамљено светло."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Ово је сфера хаоса, извор Кораксове\n"
@@ -268,6 +270,7 @@ msgstr "на Седам портала"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Степенице се подижу на Седам портала"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Остао је још један прекидач..."
 
@@ -322,6 +325,7 @@ msgstr "Врата су забрављена изнутра"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Спустио се платформ у централном торњу"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Превише си се заиграо, смртниче..."
 

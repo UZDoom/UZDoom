@@ -5157,12 +5157,6 @@ msgstr ""
 msgid "CNTRLMNU_ADJUST_LIGHTS"
 msgstr ""
 
-msgid "LANG_NATIVE"
-msgstr ""
-
-msgid "LANG_ENG"
-msgstr ""
-
 msgid "OPTVAL_SMOOTH"
 msgstr ""
 

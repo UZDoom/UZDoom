@@ -1,0 +1,247 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: English <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/en/>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+"Do you really think you can handle that?\n"
+"\n"
+"press 'Y' or 'N'…"
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Spot marked"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "Requires the GREEN keycard"
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "Requires the PURPLE keycard"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "Requires the YELLOW keycard"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "Requires the GREEN key"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "Requires the YELLOW key"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "Requires the PURPLE key"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "Picked up armor."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "Picked up Combat Armor."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr "Superhealth"
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "Obtained the GREEN keycard."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "Obtained the YELLOW keycard."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "Obtained the PURPLE keycard."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "Obtained the GREEN key."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "Obtained the YELLOW key."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "Obtained the PURPLE key."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr "Healing mushroom"
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr "Acquired: medical kit."
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr "Acquired: medical kit that you REALLY need."
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "Map"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr "Acquired: case of bullets."
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr "Acquired: Grenade."
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr "Acquired: Grenades."
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr "Acquired: box of shotgun shells."
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr "Acquired: ammo backpack."
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr "Acquired: Grenade."
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr "Acquired: Minigun."
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr "Acquired: Grenade launcher."
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr "Entropy thrower!"
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr "Acquired: Shotgun."
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr "God Mode ON"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr "God Mode OFF"
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr "All weapons/ ammo/ keys"
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr "All weapons and ammo"
+
+msgid "TXT_HARMMAP01"
+msgstr "Abduction"
+
+msgid "TXT_HARMMAP02"
+msgstr "Harm's Way"
+
+msgid "TXT_HARMMAP03"
+msgstr "Owt Mood"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalapolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "The Hospital"
+
+msgid "TXT_HARMMAP06"
+msgstr "The Weapons Factory"
+
+msgid "TXT_HARMMAP07"
+msgstr "The Underwater Lab"
+
+msgid "TXT_HARMMAP08"
+msgstr "Airstrip One"
+
+msgid "TXT_HARMMAP09"
+msgstr "The Launch Base"
+
+msgid "TXT_HARMMAP10"
+msgstr "The Radioactive Zone"
+
+msgid "TXT_HARMMAP11"
+msgstr "Echidna"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"You feel sick to your stomach…\n"
+"Looking in the face of the mutant queen…\n"
+"That thing… That used to be…\n"
+"Your friend… Amira!\n"
+"\n"
+"Those monsters must have found a way to\n"
+"mutate her and turn her into this\n"
+"hideous creature to bear their offspring.\n"
+"\n"
+"-sigh-\n"
+"\n"
+"You get yourself together…\n"
+"They are going to pay for making you kill\n"
+"your friend…\n"
+"\n"
+"\"Hell has no fury like a woman scorned!\"\n"
+"\n"
+"     = T H E  E N D ="
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr "Loading"
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr "Very Easy"
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr "Easy"
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr "Medium"
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr "Hard"
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr "Very Hard"
+
+msgid "HARMQUITMSG"
+msgstr "Thanks for playing"
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr "Harmony"

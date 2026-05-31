@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-01 15:09+0000\n"
-"Last-Translator: yhmtxt <yhmtxt@163.com>\n"
-"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
-"projects/uzdoom/common/zh_Hans/>\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "按Y键确认，按N键取消。"
@@ -264,7 +263,7 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "武器1"
 
 # only show appropriate slots per game
-#
+# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "武器2"
 
@@ -1553,17 +1552,6 @@ msgstr "无搜索结果。"
 
 msgid "OS_LABEL"
 msgstr "搜索："
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "1"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-msgid "REQUIRED_CHARACTERS"
-msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "完整选项菜单"

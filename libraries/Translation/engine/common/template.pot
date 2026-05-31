@@ -1545,12 +1545,6 @@ msgstr ""
 msgid "OS_LABEL"
 msgstr ""
 
-msgid "USE_GENERIC_FONT"
-msgstr ""
-
-msgid "REQUIRED_CHARACTERS"
-msgstr ""
-
 msgid "OPTMNU_FULLOPTIONS"
 msgstr ""
 

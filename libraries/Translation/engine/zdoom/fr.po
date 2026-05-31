@@ -4,8 +4,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -747,7 +746,8 @@ msgid "GOTCHAINGUN"
 msgstr "Vous avez pris une mitrailleuse !"
 
 msgid "GOTCHAINSAW"
-msgstr "Vouz avez pris une tronçonneuse ! Faites des steaks hachés de ceux-la !"
+msgstr ""
+"Vouz avez pris une tronçonneuse ! Faites des steaks hachés de ceux-la !"
 
 msgid "GOTLAUNCHER"
 msgstr "Vouz avez pris un lance-roquettes !"
@@ -2164,7 +2164,7 @@ msgstr "Broyeur"
 msgid "TAG_GLAUNCHER1"
 msgstr "Lance-Grenades Explosif"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Lance-Grenades Incendiaire"
 
@@ -2510,7 +2510,8 @@ msgid "OB_MPMINIMISSILELAUNCHER"
 msgstr "%o a avalé le missile de %k."
 
 msgid "OB_MPSTRIFEGRENADE"
-msgstr "%o a été mis@[e_fr] sens dessus dessous par la grenade explosive de %k."
+msgstr ""
+"%o a été mis@[e_fr] sens dessus dessous par la grenade explosive de %k."
 
 msgid "OB_MPPHOSPHOROUSGRENADE"
 msgstr ""
@@ -4567,18 +4568,16 @@ msgstr "La sauvegarde '%s' vient d'un autre moteur basé sur ZDoom :"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"La sauvegarde '%s' vient d'une version obsolète : %d (%e est la plus "
-"ancienne supportée)."
+"La sauvegarde '%s' vient d'une version obsolète : %d (%e est la plus ancienne supportée)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"La sauvegarde '%s' vient d'une version plus récente : %d (%e est la plus "
-"récente supportée)."
+"La sauvegarde '%s' vient d'une version plus récente : %d (%e est la plus récente supportée)."
 
 msgid "TXT_NOMAPSG"
 msgstr "La sauvegarde '%s' ne contient pas la carte actuelle."

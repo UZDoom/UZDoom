@@ -4,8 +4,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -2166,7 +2165,7 @@ msgstr "Parçalayıcı"
 msgid "TAG_GLAUNCHER1"
 msgstr "El Bombası Fırlatıcı"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "El Bombası Fırlatıcı"
 
@@ -4572,14 +4571,13 @@ msgstr ""
 "%s' kayıt oyunu daha eski bir sürümden: %d (%e desteklenen en eski sürümdür)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"%s' kayıt oyunu daha yeni bir sürümden: %d (%e desteklenen en yüksek "
-"sürümdür)."
+"%s' kayıt oyunu daha yeni bir sürümden: %d (%e desteklenen en yüksek sürümdür)."
 
 msgid "TXT_NOMAPSG"
 msgstr "%s' kayıt oyununda geçerli harita eksik."

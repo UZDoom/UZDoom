@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen/it/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/doom-engine-games/hexen/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Camera di separazione"
@@ -127,6 +126,7 @@ msgstr ""
 "i muri sempre mutevoli dell'ipostilo\n"
 "sembrano prendere in giro ogni tuo sforzo."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "La tua mente ancora vacilla dai tuoi\n"
@@ -149,6 +149,7 @@ msgstr ""
 "sei arrivato? Per tutti gli dei del dolore,\n"
 "come troverai mai la tua via d'uscita?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "Le armi più potenti e gli artefatti degli\n"
@@ -172,6 +173,7 @@ msgstr ""
 "Da qualche parte all'interno,\n"
 "i tuoi nemici ti aspettano..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "\"... Ed egli andrà nei regni dei morti,\n"
@@ -196,6 +198,7 @@ msgstr ""
 "In lontananza vedi una pedana e su di essa\n"
 "l'unica fonte di luce in questo mondo."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Questa può essere solo la sfera del caos,\n"
@@ -253,6 +256,7 @@ msgstr "nei Sette Portali"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Sono sorte le scale nei Sette Portali"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Devi trovare un altro interruttore..."
 
@@ -307,6 +311,7 @@ msgstr "La porta è stata aperta da dentro"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Una piattaforma si è abbassata nella torre"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Ha giocato a questo gioco troppo a lungo, mortale..."
 

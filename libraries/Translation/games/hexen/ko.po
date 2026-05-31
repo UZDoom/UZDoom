@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:58+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/"
-"hexen/ko/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/doom-engine-games/hexen/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "바람 회관"
@@ -120,6 +119,7 @@ msgstr ""
 "그리고 저 너머에 멀리서, 끊임없이 움직이는 다주실의 벽들이 당신의\n"
 "노력을 비웃고 있는 듯하다."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "다주실에서의 대전 때문에 당신의 생각이 여전히 어지럽지만, 당신은\n"
@@ -133,6 +133,7 @@ msgstr ""
 "오싹하게 했다. 모든 죽음의 신들이시여! 대체 당신은 어디에 온 것입니까?\n"
 "모든 죽음의 신들이시여, 어찌하면 이곳에서 벗어날 수 있겠나이까?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "고대인들의 강력한 무기와 유물 덕분에, 당신은 헤러시아크와 그의\n"
@@ -147,6 +148,7 @@ msgstr ""
 "\n"
 "저기 어딘가에, 당신의 적들이 기다리고 있다..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "“...그리고 그가 망자의 영역으로 떠나면서, 그리고 모든 세력이 속해있던\n"
@@ -167,13 +169,13 @@ msgstr ""
 "회당에서 있었다. 저 멀리 솟아오른 연단 위에 이 세상에서 유일하게\n"
 "존재하는 빛의 근원이 보이었다."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "저것은 분명 코락스의 힘의 원천인 혼돈의 구체일 것이다. 이것만 있으면\n"
 "당신은 세상을 창조하거나... 파괴할 수 있다. 당신의 떨리는 손들이 지난\n"
 "모든 전투와 정복의 전리품을 향해 뻗어 나갔다. 아마 지금쯤, 새 도전자가\n"
-"이 권력을 쟁취하는 장대한 싸움에 참여할 것이다. 퀀으로 변한 폰 처럼, 갑자기 "
-"이 판 전체가 당신의 손아귀에 쥐어진 것처럼 보였다."
+"이 권력을 쟁취하는 장대한 싸움에 참여할 것이다. 퀀으로 변한 폰 처럼, 갑자기 이 판 전체가 당신의 손아귀에 쥐어진 것처럼 보였다."
 
 msgid "TXT_HEXEN_WIN3MSG"
 msgstr ""
@@ -217,6 +219,7 @@ msgstr "... 일곱 차원문에서"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "일곱 차원문에서 계단이 솟아났다"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "다른 개폐기를 찾아야 한다"
 
@@ -271,6 +274,7 @@ msgstr "이 문은 안에 빗장이 걸려있다"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "성 안에서 보행판이 내려왔다"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "네 놈은 오랫동안 놀았도다, 필멸자여..."
 
