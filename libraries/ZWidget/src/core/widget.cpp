@@ -11,7 +11,7 @@ Widget::Widget(Widget* parent, WidgetType type, RenderAPI renderAPI, bool window
 	if (type != WidgetType::Child)
 	{
 		Widget* owner = parent ? parent->Window() : nullptr;
-		DispWindow = DisplayWindow::Create(this, type == WidgetType::Popup, owner ? owner->DispWindow.get() : nullptr, renderAPI, windowResizable);
+		DispWindow = DisplayWindow::Create(this, type == WidgetType::Popup, owner ? owner->DispWindow.get() : nullptr, renderAPI, windowResizable, type == WidgetType::Utility);
 		if (renderAPI == RenderAPI::Unspecified || renderAPI == RenderAPI::Bitmap)
 		{
 			DispCanvas = Canvas::create();
@@ -1050,4 +1050,11 @@ Colorf Widget::GetStyleColor(const std::string& propertyName) const
 		return std::get<Colorf>(it->second);
 	WidgetStyle* style = WidgetTheme::GetTheme()->GetStyle(StyleClass);
 	return style ? style->GetColor(StyleState, propertyName) : Colorf::transparent();
+}
+
+void Widget::NotifyWindow()
+{
+	Widget* w = Window();
+	if (w && w->DispWindow)
+		w->DispWindow->NotifyWindow();
 }
