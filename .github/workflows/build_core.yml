@@ -39,6 +39,7 @@ on:
 
 jobs:
   setup_build:
+    name: Setup
     runs-on: ubuntu-latest
     outputs:
       env_name: ${{ steps.set-env.outputs.TARGET }}
@@ -466,25 +467,30 @@ jobs:
         name: ${{ inputs.name }} ${{ inputs.build_type }}
 
     - name: Prepare Cache
-      if: steps.cached.outputs.status != 'skipped'
-      shell: bash
-      run: |
-        # clean up stuff we don't want cached
-        # mainly stuff from packaging steps
-        rm -rf build/AppDir build/package build/*.app
-        sync
-
-      # https://github.com/actions/cache/issues/342
-    - name: Clear Cache
-      if: steps.cached.outputs.save == 'yes' && steps.cached.outputs.status != 'missing'
+      if: steps.cached.outputs.save == 'yes' && steps.cached.outputs.status != 'skipped'
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GH_TOKEN: ${{ github.token }}
         REPO: ${{ github.repository }}
         KEY: ${{ steps.cache.outputs.cache-primary-key }}
       shell: bash
       run: |
-        gh api --method DELETE "/repos/${REPO}/actions/caches?key=${KEY// /%20}" || true
-        sleep 5
+        echo ::group::Cleanup
+        # clean up stuff we don't want cached
+        # mainly stuff from packaging steps
+        rm -rvf build/AppDir build/package build/*.app
+        sync
+        echo ::endgroup::
+
+        # https://github.com/actions/cache/issues/342
+        if [[ "${{ steps.cached.outputs.status }}" != 'missing' ]]; then
+          echo ::group::Delete-Remote
+          if ! err=$(gh api --method DELETE "/repos/${REPO}/actions/caches?key=${KEY// /%20}"); then
+            echo "$err" >&2
+            echo "::warning ::$(jq -r .message <<<$err)"
+          fi
+          sleep 5
+          echo ::endgroup::
+        fi
 
     - name: Save Cache
       if: steps.cached.outputs.save == 'yes'
