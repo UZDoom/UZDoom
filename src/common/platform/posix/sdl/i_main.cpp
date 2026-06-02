@@ -196,6 +196,10 @@ int main (int argc, char **argv)
 
 	setlocale (LC_ALL, "C");
 
+#ifdef __linux
+	SDL_setenv("SDL_VIDEODRIVER", "wayland,x11", 0);
+#endif
+
 	if (SDL_Init (0) < 0)
 	{
 		fprintf (stderr, "Could not initialize SDL:\n%s\n", SDL_GetError());
