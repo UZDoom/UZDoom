@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-27 23:11+0000\n"
+"PO-Revision-Date: 2026-06-01 20:01+0000\n"
 "Last-Translator: Yu Ji Wan <z1wan@hanmail.net>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ko/>\n"
 "Language: ko\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.6.dev0\n"
+"X-Generator: Weblate 2026.6\n"
 
 msgid "PRESSKEY"
 msgstr "키를 누르시오."
@@ -325,7 +325,7 @@ msgstr "노 클립 모드 2: 끔"
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr "무적, 광전사, 투명, 보호복, 지도, 아니면 바이저"
+msgstr "무적(V), 광전사(S), 투명(I), 방사능 보호복(R), 지도(A), 바이저(L)"
 
 msgid "STSTR_BEHOLDX"
 msgstr "파워-업 전환됨"
@@ -374,9 +374,11 @@ msgstr "치트 쓸려고? 그럼 죽어야지!"
 msgid "TXT_CHEATIDKFA"
 msgstr "사기꾼놈! 너는 무기를 가질 자격이 없어"
 
+#, fuzzy
 msgid "TXT_CHEATTICKERON"
 msgstr "프레임 속도 표시: 켜짐"
 
+#, fuzzy
 msgid "TXT_CHEATTICKEROFF"
 msgstr "프레임 속도 표시: 끔"
 
@@ -384,7 +386,7 @@ msgid "TXT_CHEATARTIFACTS3"
 msgstr "얻었다"
 
 msgid "TXT_MIDASTOUCH"
-msgstr "넌 미다스의 손을 얻었어 베이베"
+msgstr "넌 미다스의 손을 얻었어, 베이비"
 
 msgid "TXT_GOTSTUFF"
 msgstr "무언가를 얻었다!"
@@ -405,10 +407,10 @@ msgid "TXT_NOTSTRANGE"
 msgstr "자기 자신처럼 생각하게 됐다."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "납 부츠: 켜짐"
+msgstr "납 장화: 켜짐"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "납 부츠: 끔"
+msgstr "납 장화: 끔"
 
 msgid "TXT_LIGHTER"
 msgstr "가벼운 느낌이 든다"
@@ -663,7 +665,7 @@ msgid "GOTHTHBONUS"
 msgstr "체력 보너스를 얻었다."
 
 msgid "GOTARMBONUS"
-msgstr "보호 보너스를 얻었다."
+msgstr "방어구 보너스를 얻었다."
 
 msgid "GOTSTIM"
 msgstr "스팀팩을 사용했다."
@@ -735,10 +737,10 @@ msgid "GOTCELLBOX"
 msgstr "대용량 에너지 셀을 얻었다."
 
 msgid "GOTSHELLS"
-msgstr "샷건 쉘 4개를 얻었다."
+msgstr "산탄 총 탄약 4발을 얻었다."
 
 msgid "GOTSHELLBOX"
-msgstr "샷건 쉘 보관함을 얻었다."
+msgstr "산탄 총 탄약 보관함을 얻었다."
 
 msgid "GOTBACKPACK"
 msgstr "탄약이 들어있는 배낭을 얻었다!"
@@ -753,16 +755,16 @@ msgid "GOTCHAINSAW"
 msgstr "당신은 전기톱을 습득했다! 도륙할 시간!"
 
 msgid "GOTLAUNCHER"
-msgstr "당신은 로켓 런쳐를 습득했다!"
+msgstr "당신은 로켓 발사기를 습득했다!"
 
 msgid "GOTPLASMA"
-msgstr "당신은 플라즈마 건을 습득했다!"
+msgstr "당신은 플라즈마 총을 습득했다!"
 
 msgid "GOTSHOTGUN"
-msgstr "당신은 샷건을 습득했다!"
+msgstr "당신은 산탄 총을 습득했다!"
 
 msgid "GOTSHOTGUN2"
-msgstr "당신은 슈퍼 샷건을 습득했다!"
+msgstr "당신은 슈퍼 산탄 총을 습득했다!"
 
 msgid "PICKUP_PISTOL_DROPPED"
 msgstr "권총을 주웠다."
@@ -917,19 +919,19 @@ msgid "TAG_PISTOL"
 msgstr "권총"
 
 msgid "TAG_SHOTGUN"
-msgstr "샷건"
+msgstr "산탄 총"
 
 msgid "TAG_SUPERSHOTGUN"
-msgstr "슈퍼 샷건"
+msgstr "슈퍼 산탄 총"
 
 msgid "TAG_CHAINGUN"
 msgstr "체인건"
 
 msgid "TAG_ROCKETLAUNCHER"
-msgstr "로켓 런쳐"
+msgstr "로켓 발사기"
 
 msgid "TAG_PLASMARIFLE"
-msgstr "플라즈마 라이플"
+msgstr "플라즈마 소총"
 
 msgid "TAG_BFG9000"
 msgstr "BFG 9000"
@@ -938,7 +940,7 @@ msgid "AMMO_CLIP"
 msgstr "권총 탄약"
 
 msgid "AMMO_SHELLS"
-msgstr "샷건 탄약"
+msgstr "산탄 총 탄약"
 
 msgid "AMMO_ROCKETS"
 msgstr "로켓"
@@ -1064,7 +1066,7 @@ msgid "OB_MPSHOTGUN"
 msgstr "%o 은(는) %k 의 붐스틱에 꽂혔다."
 
 msgid "OB_MPSSHOTGUN"
-msgstr "%o 은(는) %k 의 슈퍼 샷건에 의해 터졌다."
+msgstr "%o 은(는) %k 의 슈퍼 산탄 총에 의해 터졌다."
 
 msgid "OB_MPCHAINGUN"
 msgstr "%o 은(는) %k 의 체인건에 의해 으깨졌다."
@@ -1076,7 +1078,7 @@ msgid "OB_MPR_SPLASH"
 msgstr "%o 은(는) %k 의 로켓 폭발을 거의 피했다."
 
 msgid "OB_MPPLASMARIFLE"
-msgstr "%o 은(는) %k 의 플라즈마 건에 의해 융해되었다."
+msgstr "%o 은(는) %k 의 플라즈마 총에 의해 융해되었다."
 
 msgid "OB_MPBFG_BOOM"
 msgstr "%o 은(는) %k 의 BFG덕에 산산조각 났다."
@@ -1387,7 +1389,7 @@ msgid "TXT_MANA_2"
 msgstr "녹색 마나"
 
 msgid "TXT_MANA_BOTH"
-msgstr "윰합된 마나"
+msgstr "융합된 마나"
 
 msgid "TXT_KEY_STEEL"
 msgstr "강철 열쇠"
@@ -1942,7 +1944,7 @@ msgid "TXT_ASSAULTGUN"
 msgstr "돌격소총을 획득했다."
 
 msgid "TXT_MMLAUNCHER"
-msgstr "미니 미사일 런쳐를 획득했다."
+msgstr "미니 미사일 발사기를 획득했다."
 
 msgid "TXT_FLAMER"
 msgstr "완성된 화염방사기를 얻었다."
@@ -2151,7 +2153,7 @@ msgid "TAG_ASSAULTGUN"
 msgstr "돌격소총"
 
 msgid "TAG_MMLAUNCHER"
-msgstr "미니 미사일 런쳐"
+msgstr "미니 미사일 발사기"
 
 msgid "TAG_FLAMER"
 msgstr "화염방사기"
@@ -3028,7 +3030,7 @@ msgid "MNU_MAGE"
 msgstr "마법사"
 
 msgid "MNU_RANDOM"
-msgstr "랜덤"
+msgstr "무작위"
 
 msgid "MNU_EPISODE"
 msgstr "에피소드 선택?"
@@ -3126,10 +3128,10 @@ msgid "GMPLYMNU_BFGFREEAIM"
 msgstr "BFG 조준 허용"
 
 msgid "GMPLYMNU_ALLOWAUTOMAP"
-msgstr "오토맵 허용"
+msgstr "맵 지도 허용"
 
 msgid "GMPLYMNU_AUTOMAPALLIES"
-msgstr "오토맵에 아군 표시"
+msgstr "맵 지도에 아군 표시"
 
 msgid "GMPLYMNU_ALLOWSPYING"
 msgstr "관전 허용"
@@ -3230,13 +3232,13 @@ msgid "GMPLYMNU_NOEXTRAAMMO"
 msgstr "무기 추가 탄약 제공(DM)"
 
 msgid "OPTMNU_COMPATIBILITY"
-msgstr "호환 설정"
+msgstr "호환성 설정"
 
 msgid "CMPTMNU_TITLE"
 msgstr "호환성 설정"
 
 msgid "CMPTMNU_MODE"
-msgstr "호환 모드"
+msgstr "호환성 모드"
 
 msgid "CMPTMNU_ACTORBEHAVIOR"
 msgstr "개체 관련 설정"
@@ -3474,7 +3476,7 @@ msgid "CNTRLMNU_TOGGLESCOREBOARD"
 msgstr "점수창 토글"
 
 msgid "MOUSEMNU_LOOKSPRING"
-msgstr "마우스룩 시점 초기화"
+msgstr "마우스 시점 이동"
 
 msgid "MOUSEMNU_LOOKSTRAFE"
 msgstr "마우스룩 좌우 이동"
@@ -3618,7 +3620,7 @@ msgid "AUTOMAPMNU_CONTROLS"
 msgstr "맵 조작 설정"
 
 msgid "AUTOMAPMNU_OVERLAY"
-msgstr "오토맵을 오버레이"
+msgstr "맵 지도를 오버레이"
 
 msgid "AUTOMAPMNU_TEXTURED"
 msgstr "텍스쳐 디스플레이 허용"
@@ -3765,7 +3767,7 @@ msgid "ALTHUDMNU_ARMORGREEN"
 msgstr "녹색 아머 밑에 표시"
 
 msgid "ALTHUDMNU_AUTOMAPHUD"
-msgstr "대체 오토맵 HUD"
+msgstr "대체 맵 지도 HUD"
 
 msgid "ALTHUDMNU_TITLECOLOR"
 msgstr "맵 제목 색깔"
@@ -4054,7 +4056,7 @@ msgid "OPTVAL_BOTH"
 msgstr "둘 다"
 
 msgid "OPTVAL_ZDOOM"
-msgstr "Z둠"
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
 msgstr "스트라이프"
@@ -4204,7 +4206,7 @@ msgid "OPTVAL_MBF21STRICT"
 msgstr "모더의 절친한 친구 (엄격하게)"
 
 msgid "OPTVAL_ZDOOM2063"
-msgstr "Z둠 2.0.63"
+msgstr "ZDoom 2.0.63"
 
 msgid "OPTVAL_ERRORS"
 msgstr "에러"
@@ -4219,7 +4221,7 @@ msgid "OPTVAL_EVERYTHING"
 msgstr "전체"
 
 msgid "OPTVAL_HWPOLY"
-msgstr "오픈지엘 가속"
+msgstr "하드웨어 가속"
 
 msgid "OPTVAL_SWDOOM"
 msgstr "둠 소프트웨어 렌더러"
@@ -4231,7 +4233,7 @@ msgid "OPTVAL_VANILLA"
 msgstr "바닐라"
 
 msgid "OPTVAL_VTFZDOOM"
-msgstr "Z둠 (강제 설정)"
+msgstr "ZDoom (강제 설정)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "바닐라 (강제 설정)"
@@ -4336,13 +4338,13 @@ msgid "OPTSTR_SPLINE"
 msgstr "스플라인"
 
 msgid "DSPLYMNU_GLOPT"
-msgstr "오픈지엘 렌더러"
+msgstr "하드웨어 렌더러"
 
 msgid "DSPLYMNU_SWOPT"
 msgstr "소프트웨어 렌더러"
 
 msgid "GLMNU_TITLE"
-msgstr "오픈지엘 설정"
+msgstr "하드웨어 렌더링 설정"
 
 msgid "GLMNU_DYNLIGHT"
 msgstr "광원 설정"
@@ -4351,10 +4353,10 @@ msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "텍스처별로 생성 목록 정렬"
 
 msgid "GLLIGHTMNU_TITLE"
-msgstr "다이나믹 라이트"
+msgstr "동적 조명"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "다이나믹 라이트(오픈지엘)"
+msgstr "동적 조명 (하드웨어)"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "조명에 영향받는 스프라이트"
@@ -4366,7 +4368,7 @@ msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
 msgstr "조명에 영향받는 섀도우맵"
 
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
-msgstr "섀도우맵 퀄리티"
+msgstr "섀도우맵 품질"
 
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "섀도우맵 필터"
@@ -4535,7 +4537,7 @@ msgid "TCMNU_MIPMAP"
 msgstr "밉맵 텍스쳐 사용"
 
 msgid "TCMNU_DYNLIGHTS"
-msgstr "다이나믹 라이트 (소프트웨어 버전)"
+msgstr "동적 조명 (소프트웨어)"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "항상 키들을 표시"
@@ -4569,7 +4571,7 @@ msgid "TXT_INCOMPATIBLESG"
 msgstr "저장된 게임'%s'은(는) 호환되지 않는 버전입니다."
 
 msgid "TXT_OTHERENGINESG"
-msgstr "저장된 게임 '%s'은(는) 다른 Z둠 기반 엔진입니다:"
+msgstr "저장된 게임 '%s'은(는) 다른 ZDoom 기반 엔진입니다:"
 
 msgid "TXT_TOOOLDSG"
 msgstr "저장된 게임'%s'은(는) 구 버전입니다: %d (%e 이 지원되는 버전 중 가장 오래된 버전)."
@@ -4678,7 +4680,7 @@ msgid "CNTRLMNU_LAYOUT"
 msgstr "기본 키보드 레이아웃"
 
 msgid "OPTVAL_CLASSICZ"
-msgstr "클래식 Z둠"
+msgstr "클래식 ZDoom"
 
 msgid "OPTVAL_MODERN"
 msgstr "모던(WASD)"
@@ -4694,7 +4696,7 @@ msgid "MISCMNU_WIPERCENT"
 msgstr "요약 화면에서 퍼센트 사용"
 
 msgid "MISCMNU_CLEANSTAT"
-msgstr "요약 화면에서 클래식 Z둠 스케일링"
+msgstr "요약 화면에서 클래식 ZDoom 스케일링"
 
 # Called "citizens" according to Doomwiki
 msgid "TAG_STRIFEZOMBIE"
@@ -4969,7 +4971,7 @@ msgid "NETMNU_READYPERCENT"
 msgstr "투표 건너뛰기 비율"
 
 msgid "NETMNU_READYCOUNTDOWN"
-msgstr "투표 마감 카운트다운 시간(초)"
+msgstr "투표 마감 카운트다운 시간 (초)"
 
 # Forces a cool down between chat messages for all players when playing
 # online.
@@ -4990,9 +4992,8 @@ msgstr "시합"
 msgid "OPTVAL_WARN"
 msgstr "경고"
 
-#, fuzzy
 msgid "HAPMNU_OPTIONS"
-msgstr "촉각 피드백 소스를 사용자 지정하세요"
+msgstr "촉각 피드백 소스를 사용자 지정"
 
 # Rumble when using ui elements
 #, fuzzy
@@ -5011,7 +5012,7 @@ msgstr "피해를 입음으로써"
 
 # Rumble from bumping into things, crossing lines, and quakes
 msgid "HAPMNU_OPT_WORLD"
-msgstr "세상 과 소통하는 것부터"
+msgstr "세상과 소통하는 것부터"
 
 msgid "PAUSE_STRING"
 msgstr "일시정지"
@@ -5172,7 +5173,6 @@ msgstr "마실"
 msgid "TAG_MAULER"
 msgstr "마울러"
 
-#, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "유탄발사기"
 

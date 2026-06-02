@@ -22,11 +22,10 @@ RECIPES = {
         "games/hexen-deathkings",
         "games/plutonia",
         "games/strife",
-        "games/tnt",
-        "games/harmony"
+        "games/tnt"
     ],
     "GAMES_CHEX3": [],
-    "GAMES_HARMONY": [],
+    "GAMES_HARMONY": ["games/harmony"],
     "GAMES_HACX": ["games/hacx"]
 }
 RECIPES["ALL"] = list(set(sum(RECIPES.values(), [])))

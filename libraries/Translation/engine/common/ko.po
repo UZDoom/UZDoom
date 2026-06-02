@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-28 05:11+0000\n"
+"PO-Revision-Date: 2026-06-01 20:01+0000\n"
 "Last-Translator: Yu Ji Wan <z1wan@hanmail.net>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/common/ko/>\n"
 "Language: ko\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.6.dev0\n"
+"X-Generator: Weblate 2026.6\n"
 
 msgid "PRESSYN"
 msgstr "Y키 또는 N키를 누르시오."
@@ -102,7 +102,7 @@ msgid "OPTMNU_TITLE"
 msgstr "설정"
 
 msgid "OPTMNU_CONTROLS"
-msgstr "조작 사용자 지정"
+msgstr "조작 설정"
 
 msgid "OPTMNU_MOUSE"
 msgstr "마우스 설정"
@@ -117,13 +117,13 @@ msgid "OPTMNU_GAMEPLAY"
 msgstr "게임 설정"
 
 msgid "OPTMNU_AUTOMAP"
-msgstr "오토맵 설정"
+msgstr "지도 화면 설정"
 
 msgid "OPTMNU_HUD"
 msgstr "HUD 설정"
 
 msgid "OPTMNU_MISCELLANEOUS"
-msgstr "그 외 설정"
+msgstr "기타 설정"
 
 msgid "OPTMNU_SOUND"
 msgstr "음향 설정"
@@ -348,7 +348,7 @@ msgid "MAPCNTRLMNU_TOGGLETEXTURE"
 msgstr "미니맵 텍스쳐 조정"
 
 msgid "CNTRLMNU_AUTOMAP"
-msgstr "오토맵 조정"
+msgstr "지도 화면 조정"
 
 msgid "CNTRLMNU_CHASECAM"
 msgstr "3인칭 카메라"
@@ -432,10 +432,10 @@ msgid "MOUSEMNU_ALWAYSMOUSELOOK"
 msgstr "마우스룩 사용"
 
 msgid "MOUSEMNU_INVERTMOUSE"
-msgstr "마우스 방향 전환"
+msgstr "마우스 상하 반전"
 
 msgid "MOUSEMNU_INVERTMOUSEX"
-msgstr "마우스 방향 전환"
+msgstr "마우스 좌우 반전"
 
 msgid "OPTVAL_UPPERLEFT"
 msgstr "왼쪽 위"
@@ -654,7 +654,7 @@ msgid "MNU_COLORPICKER"
 msgstr "색상을 고르시오"
 
 msgid "AUTOMAPMNU_ROTATE"
-msgstr "오토맵 회전"
+msgstr "지도 화면 회전"
 
 msgid "AUTOMAPMNU_FOLLOW"
 msgstr "플레이어 추적"
@@ -768,7 +768,7 @@ msgid "SNDMNU_CHANNELS"
 msgstr "음향 채널"
 
 msgid "SNDMNU_OPENAL"
-msgstr "오픈에이엘 설정"
+msgstr "OpenAL 설정"
 
 msgid "SNDMNU_RESTART"
 msgstr "음향 재시작"
@@ -780,7 +780,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "모듈 재생 설정"
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "MIDI 디바이스 설정"
+msgstr "MIDI 장치 설정"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "고급 음향 설정"
@@ -995,7 +995,7 @@ msgid "OPTVAL_NUKEDOPL3"
 msgstr ""
 
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr ""
+msgstr "OPL2-LLE (성능 집약적)"
 
 msgid "OPTVAL_LLENUKEDOPL3"
 msgstr "OPL3 - LLE (성능 집약적)"
@@ -1172,16 +1172,16 @@ msgid "GLPREFMNU_PALTONEMAPPOWER"
 msgstr "톤맵 팔레트 지수"
 
 msgid "GLPREFMNU_MULTISAMPLE"
-msgstr "멀티샘플"
+msgstr "안티 앨리어싱(MSAA)"
 
 msgid "GLPREFMNU_BLOOM"
 msgstr "블룸 효과"
 
 msgid "GLPREFMNU_SSAO"
-msgstr "주변 환경 가림 효과 품질"
+msgstr "엠비언트 오클루전 품질"
 
 msgid "GLPREFMNU_SSAO_PORTALS"
-msgstr "주변 환경 가려진 포탈"
+msgstr "엠비언트 오클루전 포탈"
 
 msgid "GLPREFMNU_MENUBLUR"
 msgstr "메뉴 흐림 효과"
@@ -1384,7 +1384,7 @@ msgid "OPTVAL_OPENGL"
 msgstr "OpenGL"
 
 msgid "OPTVAL_VULKAN"
-msgstr "벌칸"
+msgstr "Vulkan"
 
 # Rendering backend
 msgid "OPTVAL_OPENGLES"
@@ -1506,19 +1506,19 @@ msgid "REVMNU_Environments_to_save"
 msgstr "저장할 공간"
 
 msgid "DSPLYMNU_VKOPT"
-msgstr "벌칸 설정(실험적)"
+msgstr "Vulkan 설정 (실험적)"
 
 msgid "VK_TITLE"
-msgstr "벌칸 설정"
+msgstr "Vulkan 설정"
 
 msgid "VKMNU_DEVICE"
-msgstr "벌칸 장치 아이디"
+msgstr "Vulkan 장치 아이디"
 
 msgid "VKMNU_HDR"
-msgstr "하이 다이나믹 레인지"
+msgstr "하이 다이나믹 레인지(HDR)"
 
 msgid "VK_WARNING"
-msgstr "경고: 벌칸 렌더러는 매우 실험적입니다!"
+msgstr "경고: Vulkan 렌더러는 매우 실험적입니다!"
 
 msgid "VK_RESTART"
 msgstr "이 설정을 적용하려면 게임을 재시작해야 합니다."
@@ -1752,7 +1752,7 @@ msgid "JOYMNU_TURNSPEED"
 msgstr "회전 속도"
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr "검색 속도"
+msgstr "룩 속도"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr "아날로그 스트레이프 런"
