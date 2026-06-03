@@ -42,7 +42,7 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     outputs:
-      env_name: ${{ steps.set-env.outputs.TARGET }}
+      env_name: ${{ steps.set-env.outputs.environment }}
     steps:
     - name: Set Environment
       id: set-env
@@ -50,14 +50,13 @@ jobs:
         REPO: ${{ github.repository }}
         REF: ${{ github.ref }}
       run: |
-        TARGET=""
+        environment=""
         if [[ "$REPO" == UZDoom/UZDoom ]]; then
           if [[ "$REF" == refs/heads/trunk ]] || [[ "$REF" =~ refs/heads/\d+\.\d+.* ]]; then
-            TARGET="production"
+            environment="production"
           fi
         fi
-        echo "Environment: $TARGET"
-        echo "TARGET=$TARGET" >> "$GITHUB_OUTPUT"
+        echo "environment=$environment" | tee -a "$GITHUB_OUTPUT"
 
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
@@ -86,7 +85,7 @@ jobs:
 
         if which apt-get; then
           elevated apt-get -q update
-          elevated apt-get -q install -y curl file git gh python3 sudo tree
+          elevated apt-get -q install -y curl file git gh jq python3 sudo tree
         fi
         # fixed dubious ownership issue in a container
         git config --global --add safe.directory $GITHUB_WORKSPACE
@@ -100,13 +99,14 @@ jobs:
       uses: chetan/git-restore-mtime-action@v2
 
     - name: Get Cache Ref
-      id: ref
+      id: key
       shell: bash
       run: |
         ref=${{ github.base_ref || github.ref }}
+        main=${{ github.event.repository.master_branch || 'trunk' }}
+        suffix="${{ inputs.name }}/${{ inputs.build_type }}"
         echo "ref: $ref"
         if [[ -z "${ref}" || "${ref}" == refs/* ]]; then
-          main=${{ github.event.repository.master_branch || 'trunk' }}
           refs=( $(git branch -r --contains ${{ github.sha }} | grep -v 'HEAD' | grep origin/ | sed 's/^[[:space:]]*origin\///' ) )
           count=${#refs[@]}
           if [[ ${count} == 0 ]]; then
@@ -121,8 +121,9 @@ jobs:
             ref=${refs[i]}
           fi
         fi
-        echo "branch: $ref"
-        echo "branch=$ref" >> "$GITHUB_OUTPUT"
+        function key() { echo "$1=$2/${suffix// /_}" | tee -a "$GITHUB_OUTPUT" ; }
+        key primary $ref
+        key secondary $main
 
     - name: Restore Cache
       if:
@@ -130,7 +131,8 @@ jobs:
       uses: actions/cache/restore@v5
       with:
         path: build
-        key: ${{ github.repository }}/${{ steps.ref.outputs.branch }}/${{ inputs.name }}/${{ inputs.build_type }}
+        key: ${{ steps.key.outputs.primary }}
+        restore-keys: ${{ steps.key.outputs.secondary }}
 
     - name: Test Cache
       id: cached
@@ -145,15 +147,19 @@ jobs:
         else
           status=okay
         fi
-        echo "Cache ${status}"
-        echo "status=${status}" >> "$GITHUB_OUTPUT"
+        echo "status=${status}" | tee -a "$GITHUB_OUTPUT"
         if [[ "${status}" != "okay" ]]; then
           echo "Clearing cache"
           rm -rf build
         fi
         # use this condition to enable saving cache
+
         if [[ "${status}" != 'skipped' && "${{github.event_name}}" != 'pull_request' ]]; then
-          echo "save=yes" >> "$GITHUB_OUTPUT"
+          echo "save=yes" | tee -a "$GITHUB_OUTPUT"
+          if [[ "${status}" != 'missing' && \
+          "${{steps.cache.outputs.cache-primary-key}}" == "${{steps.cache.outputs.cache-matched-key}}" ]]; then
+            echo "clear=yes" | tee -a "$GITHUB_OUTPUT"
+          fi
         fi
 
     - name: Setup MSVC
@@ -194,7 +200,7 @@ jobs:
             wait "$watchdog_pid" 2>&1
 
             [ $exit_code -eq 0 ] && return 0
-            echo "::warning ::Attempt $i failed. Retrying in ${delay}s" >&2
+            echo "::notice ::Attempt $i failed. Retrying in ${delay}s" >&2
             sleep "${delay}"
             ((delay*=3))
           done
@@ -250,8 +256,7 @@ jobs:
         BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
         export GIT_DESCRIBE="$(git describe --tags --exclude x-*)"
-        echo "This will be $GIT_DESCRIBE"
-        echo "version=$GIT_DESCRIBE" >> "$GITHUB_OUTPUT"
+        echo "version=$GIT_DESCRIBE" | tee -a "$GITHUB_OUTPUT"
 
         config () { cmake -B build -S . -DPK3_QUIET_ZIPDIR=ON -G Ninja -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS ; }
         build () { cmake --build build --config $BUILD_TYPE ; }
@@ -261,7 +266,7 @@ jobs:
           echo ::group::Config
           if ! config ; then
             echo ::endgroup::
-            echo '::warning ::Quick config failed. Cleaning up and re-trying'
+            echo '::notice ::Quick config failed. Cleaning up and re-trying'
             echo ::group::Config
             rm -rf build/CMakeFiles build/CMakeCache.txt
             config
@@ -279,7 +284,7 @@ jobs:
           echo ::group::Build
           if ! build ; then
             echo ::endgroup::
-            echo '::warning ::Quick build failed. Cleaning up and re-trying'
+            echo '::notice ::Quick build failed. Cleaning up and re-trying'
             echo ::group::Config
             cmake --build build --target clean
             rm -rf build/CMakeFiles build/CMakeCache.txt
@@ -304,7 +309,7 @@ jobs:
         mkdir package
         7z a package/licenses.zip ../docs/licenses/*
 
-        echo "name=${{ runner.os }}-$(uname -m)-UZDoom-${{ steps.build.outputs.version }}" >> "$GITHUB_OUTPUT"
+        echo "name=${{ runner.os }}-$(uname -m)-UZDoom-${{ steps.build.outputs.version }}" | tee -a "$GITHUB_OUTPUT"
 
     - name: Package Windows
       if: runner.os == 'Windows'
@@ -467,11 +472,11 @@ jobs:
         name: ${{ inputs.name }} ${{ inputs.build_type }}
 
     - name: Prepare Cache
-      if: steps.cached.outputs.save == 'yes' && steps.cached.outputs.status != 'skipped'
+      if: steps.cached.outputs.save == 'yes'
       env:
         GH_TOKEN: ${{ github.token }}
         REPO: ${{ github.repository }}
-        KEY: ${{ steps.cache.outputs.cache-primary-key }}
+        KEY: ${{steps.cache.outputs.cache-primary-key}}
       shell: bash
       run: |
         echo ::group::Cleanup
@@ -482,9 +487,9 @@ jobs:
         echo ::endgroup::
 
         # https://github.com/actions/cache/issues/342
-        if [[ "${{ steps.cached.outputs.status }}" != 'missing' ]]; then
+        if [[ "${{ steps.cached.outputs.clear }}" == 'yes' ]]; then
           echo ::group::Delete-Remote
-          if ! err=$(gh api --method DELETE "/repos/${REPO}/actions/caches?key=${KEY// /%20}"); then
+          if ! err=$(gh api --method DELETE "/repos/${REPO}/actions/caches?key=${KEY}"); then
             echo "$err" >&2
             echo "::warning ::$(jq -r .message <<<$err)"
           fi
@@ -497,4 +502,4 @@ jobs:
       uses: actions/cache/save@v5
       with:
         path: build
-        key: ${{ steps.cache.outputs.cache-primary-key }}
+        key: ${{steps.cache.outputs.cache-primary-key}}
