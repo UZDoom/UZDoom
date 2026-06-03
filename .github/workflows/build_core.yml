@@ -410,6 +410,8 @@ jobs:
         REPO: ${{ github.event.repository.name }}
         TAG: latest
       run: |
+        ldd uzdoom
+
         appdir=AppDir
         pfx=$(realpath $appdir)/usr
         arch=$(uname -m)
@@ -446,11 +448,14 @@ jobs:
           echo "::warning ::Not signing"
         fi
 
+        function library() { ldconfig -p | grep -F $1 | head -1 | awk '{print $NF}' ; }
+
         chmod +x linuxdeploy
         ./linuxdeploy --output appimage \
           --appdir $appdir \
           --executable="${pfx}/bin/uzdoom" \
           --desktop-file="${pfx}/share/applications/org.zdoom.UZDoom.desktop" \
+          --library "$(library libopenal.so.)" \
           --icon-file="${pfx}/share/icons/hicolor/scalable/apps/org.zdoom.UZDoom.svg"
 
         mv *.AppImage "package/${NAME}.AppImage"
