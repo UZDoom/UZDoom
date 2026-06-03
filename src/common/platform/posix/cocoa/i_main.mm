@@ -201,9 +201,6 @@ int DoMain(int argc, char** argv)
 	// signal(SIGHUP, SignalHandler);
 	// signal(SIGQUIT, SignalHandler);
 
-	printf(GAMENAME" %s - %s - Cocoa version\nCompiled on %s\n\n",
-		GetVersionString(), GetGitTime(), __DATE__);
-
 	seteuid(getuid());
 
 	// Set LC_NUMERIC environment variable in case some library decides to

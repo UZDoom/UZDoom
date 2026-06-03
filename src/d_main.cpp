@@ -4019,11 +4019,10 @@ static int D_DoomMain_Internal (void)
 	C_InitConsole(80*8, 25*8, false);
 
 	Printf(
-		"%s version %s\nBuild: %s version compiled on %s, dated %s\nOS: %s\n",
+		"%s version %s\nBuild: %s dated %s\nOS: %s\n",
 		GAMENAME,
 		GetVersionString(),
 		BACKEND,
-		__DATE__,
 		GetGitTime(),
 		I_DetectOS().GetChars()
 	);
