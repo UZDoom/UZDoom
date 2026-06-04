@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 16:46+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/"
-"doom-engine-games/strife/ja/>\n"
+"PO-Revision-Date: 2026-05-18 05:11+0000\n"
+"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/doom-engine-games/strife/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 msgid "TXT_STRIFE_MAP01"
 msgstr "エリア 1: 聖域"
@@ -127,6 +126,7 @@ msgstr "エリア 37: 殺害者の地"
 msgid "TXT_STRIFE_MAP38"
 msgstr "エリア 38: カオスの秩序"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT01_D0_IDONT"
 msgstr ""
 "もう面倒事には御免だ、私に近づくな。\n"
@@ -336,6 +336,7 @@ msgstr "値段に合う価値だぜ!"
 msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
 msgstr "頼むぜ、200ゴールドだぞ!"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
 msgstr ""
 "私がこの勤務で足止めとは信じられん。\n"
@@ -480,6 +481,7 @@ msgstr "こちらになります、お気をつけて。"
 msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
 msgstr "ところで、医薬パッチを買う余裕はありますか?"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
 msgstr ""
 "マシルの行いが正しければ良いですが。\n"
@@ -536,6 +538,7 @@ msgstr ""
 msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
 msgstr "他には?"
 
+#, fuzzy
 msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
 msgstr "他は...下水道には鼠やロボが沢山だ。"
 
@@ -566,12 +569,14 @@ msgstr "オーダーは見えてる以上に強大だ。"
 msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
 msgstr "銭を持ってたら話すさ!"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT02_D30320_THATS"
 msgstr ""
 "これはこれは親友、心得の瓶は切らしてるぞ。\n"
 "とにかく俺が知ってる話はこれで全部だ。\n"
 "頑張りな...それともう来なくていいぞ。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
 msgstr ""
 "おう、俺は緊急時の為にここにいる。\n"
@@ -595,6 +600,7 @@ msgstr "お前は許可していないぞ。立ち去れ!"
 msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
 msgstr "イラールが貴方を手助けします!"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
 msgstr ""
 "俺は反乱者への斡旋屋さ。才能を生かして\n"
@@ -738,6 +744,7 @@ msgstr ""
 msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
 msgstr "良好だ。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
 msgstr ""
 "それで、お前が聖杯を盗んだ愚か者か?\n"
@@ -887,6 +894,7 @@ msgstr "問題ない!"
 msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
 msgstr "いや、必要ない!"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
 msgstr ""
 "すいません!知らずに...\n"
@@ -948,6 +956,7 @@ msgstr "ありがとう。"
 msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
 msgstr "ほっといてくれ、年寄り一人にしてくれ。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT03_D0_WELCO"
 msgstr ""
 "ようこそ、ここは我々の僅かな希望が集まる\n"
@@ -1264,6 +1273,7 @@ msgstr ""
 "我々は城門のメカニズムが何処にあるか\n"
 "探し続けているが、あまり良い結果は出ていない"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
 msgstr ""
 "決して捕まるな。投獄されると奴等が\n"
@@ -1436,6 +1446,7 @@ msgstr ""
 "今すぐ作業しないと奴等にバレて撃たれるぞ。\n"
 "さあ行け。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
 msgstr ""
 "オーダーがもしパワークリスタルに負荷を\n"
@@ -1662,6 +1673,7 @@ msgstr ""
 msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
 msgstr "他に出来ることは?"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
 msgstr ""
 "頑張れよ。それとアンタの為に俺達は幾つか\n"
@@ -1889,6 +1901,7 @@ msgstr "奴等に対価を払わせてやるさ!"
 msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
 msgstr "フロントと自由の為の闘争を。さあ向かえ。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
 msgstr ""
 "我が唯一神だ...我は己の肉体を離れ\n"
@@ -2290,6 +2303,7 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
 msgstr "僕がキーマスターだ。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
 msgstr ""
 "皆、この仕事が報われないと思っているが\n"
@@ -2405,6 +2419,7 @@ msgstr "欠片を持ってすぐ戻る!"
 msgid "TXT_DLG_SCRIPT12_D13644_THERI"
 msgstr "事を措いても、時の河は永遠の先に進む。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
 msgstr ""
 "気の毒な者よ、お主は幾千の者達が\n"
@@ -2516,6 +2531,7 @@ msgstr ""
 msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
 msgstr "そうだ。マシルの使者だ。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
 msgstr ""
 "シーッ...静かに、\n"
@@ -2653,6 +2669,7 @@ msgstr ""
 msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
 msgstr "中に何があるのかを知っているのか?"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
 msgstr ""
 "あの場所は極秘エリアだ。\n"
@@ -2667,6 +2684,7 @@ msgstr ""
 msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
 msgstr "それが欲しいということか?"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
 msgstr ""
 "そうではない!もし見つけたら\n"
@@ -2686,6 +2704,7 @@ msgstr ""
 "信じられないかもしれないが、\n"
 "それは遥か前のこの乱世の始まりとも言える。"
 
+#, fuzzy
 msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
 msgstr "だから霊の、唯一神..."
 
@@ -2697,6 +2716,7 @@ msgstr ""
 "その過程で彼らの命は奪われた。\n"
 "私が知っているのはそれだけだ。"
 
+#, fuzzy
 msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
 msgstr "ありがとう...精一杯の事をしよう。"
 
@@ -2924,6 +2944,7 @@ msgstr ""
 "誰一人帰ってこなかった。\n"
 "地下墓地で何か異変が起こっているに違いない。"
 
+#, fuzzy
 msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
 msgstr "それは一体?人間か...?"
 
@@ -3044,6 +3065,7 @@ msgstr ""
 "誰一人帰ってこなかった。\n"
 "地下墓地で何か異変が起こっているに違いない。"
 
+#, fuzzy
 msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
 msgstr "それは一体?人間か...?"
 
@@ -3287,6 +3309,7 @@ msgstr ""
 "これはこれは親友、心得の瓶は切らしてるぞ。\n"
 "とにかく俺が知ってる話はこれで全部だ。"
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
 msgstr ""
 "新しい玩具も買えないぐらい...貧しそうだな\n"
@@ -3365,6 +3388,7 @@ msgstr "何突っ立ってんだ? 知事に報酬を受けて来いよ。"
 msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
 msgstr "くたばれ裏切者が! "
 
+#, fuzzy
 msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
 msgstr ""
 "それで、お前が聖杯を盗んだ愚か者か?\n"
@@ -3852,6 +3876,7 @@ msgstr "どうも、じゃあ!"
 msgid "TXT_RANDOMGOODBYE_3"
 msgstr "また今度!"
 
+#, fuzzy
 msgid "TXT_ILOG1"
 msgstr ""
 "もしもし? 司令部、comユニットが起動されました。\n"
@@ -3888,8 +3913,7 @@ msgctxt "strifeteaser"
 msgid "TXT_ILOG5"
 msgstr ""
 "町にいるフロントへの武器供給者であるイラールの元を訪ねる。\n"
-"彼は武器屋の隣のドアに居る。それで、知事と会う為にマシルから貰ったキーを使う"
-"。"
+"彼は武器屋の隣のドアに居る。それで、知事と会う為にマシルから貰ったキーを使う。"
 
 msgctxt "strifeteaser"
 msgid "TXT_ILOG6"
@@ -4048,8 +4072,7 @@ msgstr ""
 msgid "TXT_ILOG70"
 msgstr ""
 "あら、見事な物ね。是非とも火薬を献上しましょう。\n"
-"それでベイリーに戻ってフォースフィールドが守っていたビショップの塔へ向かおう"
-"。"
+"それでベイリーに戻ってフォースフィールドが守っていたビショップの塔へ向かおう。"
 
 msgid "TXT_ILOG74"
 msgstr ""
@@ -4128,6 +4151,7 @@ msgstr ""
 msgid "TXT_ILOG102"
 msgstr "重い神経波歪曲が直に届いたわ。私達はそれを見つけたという事よ。"
 
+#, fuzzy
 msgid "TXT_ILOG103"
 msgstr ""
 "今まで見てきたことについて考えている!\n"
@@ -4144,8 +4168,7 @@ msgstr ""
 msgid "TXT_ILOG106"
 msgstr ""
 "リヒターの報告では我々が破壊した工場は'研究所'に繋がっていて、\n"
-"奴等はシジルの調印を内部から得ている。工場に戻って自由への次の段階に進みまし"
-"ょう"
+"奴等はシジルの調印を内部から得ている。工場に戻って自由への次の段階に進みましょう"
 
 msgid "TXT_ILOG120"
 msgstr "ビショップを見つけて殺したらオラクルの元へ戻れ。"
@@ -4184,8 +4207,7 @@ msgstr "階段を降り、マシルと会話する。"
 msgid "TXT_ILOG1006"
 msgstr ""
 "町にいるフロントへの武器供給者であるイラールの元を訪ねる。\n"
-"彼は武器屋の隣のドアに居る。それで、知事と会う為にマシルから貰ったキーを使う"
-"。"
+"彼は武器屋の隣のドアに居る。それで、知事と会う為にマシルから貰ったキーを使う。"
 
 msgid "TXT_ILOG1007"
 msgstr ""
@@ -4283,12 +4305,14 @@ msgstr ""
 "三つ目の欠片を持つのはオラクルだ。あいつが裏切者だ。\n"
 "オラクルの所に戻り討ち倒せ。終わったらマシルの元に戻る。"
 
+#, fuzzy
 msgid "TXT_ILOG1025"
 msgstr ""
 "己の癌は切除したが動揺は隠せないままだ。\n"
 "次の欠片は人々を虐殺で支配する外科医...\n"
 "ロアマスターが所持している。奴を止め、欠片を自分の物にする。"
 
+#, fuzzy
 msgid "TXT_ILOG1026"
 msgstr ""
 "次の欠片は人々を虐殺で支配する外科医...\n"
@@ -4308,10 +4332,8 @@ msgstr ""
 
 msgid "TXT_ILOG1029"
 msgstr ""
-"工場に入るにはキーが必要だ。持っていた代理人はコモンズの地下墓所にはいない。"
-"\n"
-"何処かへ連れて行かれたと思われる。それが何であれキーを見つけなければならない"
-"。\n"
+"工場に入るにはキーが必要だ。持っていた代理人はコモンズの地下墓所にはいない。\n"
+"何処かへ連れて行かれたと思われる。それが何であれキーを見つけなければならない。\n"
 "キーを手に入れたら工場の隣の鉱山に向かう。"
 
 msgid "TXT_ILOG1101"
@@ -4527,13 +4549,11 @@ msgid "TXT_SUB_INTRO4"
 msgstr ""
 "その神の声を聞き取れなかった私達は苦しんだ挙げ句、\n"
 "この無慈悲な狂人どもに仕えるのを強いられた。\n"
-"そして奴等は、私達のどんな武器とも比べ物にならないほど強力な兵器を持っている"
-"のだ。"
+"そして奴等は、私達のどんな武器とも比べ物にならないほど強力な兵器を持っているのだ。"
 
 msgid "TXT_SUB_INTRO5"
 msgstr ""
-"奴等は女性や子供を殺害していくため、私達はそういった人々を地下に隠さなければ"
-"ならなかった。\n"
+"奴等は女性や子供を殺害していくため、私達はそういった人々を地下に隠さなければならなかった。\n"
 "我々は動物のように暮らすのを強いられ、命は常に危険に晒されている。"
 
 msgid "TXT_SUB_INTRO6"
@@ -4555,6 +4575,7 @@ msgstr ""
 "全ての戦いは終結した。あなたがもたらした勝利のおかげで、\n"
 "私達の体からウィルスを根絶するためのワクチンを作ることができる。"
 
+#, fuzzy
 msgid "TXT_SUB_GOOD3"
 msgstr ""
 "あなたはこの星を救い、そして自由を取り戻した。さあ、\n"
@@ -4602,25 +4623,24 @@ msgstr ""
 "繁殖行為という選択肢がないオーダーは、\n"
 "彼らのパワーと数を保つには生体工学による人体改造しかないと判断したのだ。"
 
+#, fuzzy
 msgid "TXT_SUB_MAP03_3"
 msgstr ""
 "彼らの肉体へのダメージは深刻で、我らが遭遇した兵士たちは人間と言うよりは\n"
-"もはや機械に近いと言える。だが、彼らの集合意識はたった一人によってコントロー"
-"ルされていると\n"
+"もはや機械に近いと言える。だが、彼らの集合意識はたった一人によってコントロールされていると\n"
 "我々は考えている。"
 
+#, fuzzy
 msgid "TXT_SUB_MAP03_4"
 msgstr ""
 "その者の名はプログラマーだ。\n"
 "彼はアコライト達を操作している人工知能の作成者だ。\n"
-"プログラマーを殺害すれば、それによってオーダーの兵士たちを無力化できるはずだ"
-"。\n"
+"プログラマーを殺害すれば、それによってオーダーの兵士たちを無力化できるはずだ。\n"
 "だが気をつけておけ、ヤツは熱で敵を蒸発させられるとの報告があるからな。"
 
 msgid "TXT_SUB_MAP10_1"
 msgstr ""
-"プログラマーの資料を要約するとその欠片はオーダー達が崇拝する知性を持った武器"
-"、\n"
+"プログラマーの資料を要約するとその欠片はオーダー達が崇拝する知性を持った武器、\n"
 "'シジル'だ。"
 
 msgid "TXT_SUB_MAP10_2"
@@ -4631,8 +4651,7 @@ msgstr ""
 
 msgid "TXT_SUB_MAP10_3"
 msgstr ""
-"君を気絶させた衝撃は、シジルの欠片が脈拍と脳波を同期させた際に起こした様だ。"
-"\n"
+"君を気絶させた衝撃は、シジルの欠片が脈拍と脳波を同期させた際に起こした様だ。\n"
 "それを振り回す時は気を付けろ、代償で体が干上がってしまうらしい。"
 
 msgid "TXT_SUB_MAP10_4"
@@ -4658,8 +4677,7 @@ msgstr ""
 
 msgid "TXT_SUB_LOG5"
 msgstr ""
-"イラールとはフロントの'仲介者'よ。彼は武器屋の隣のマークされてないドアに居る"
-"。\n"
+"イラールとはフロントの'仲介者'よ。彼は武器屋の隣のマークされてないドアに居る。\n"
 "発電所に近い所だ。"
 
 msgid "TXT_SUB_LOG6"
@@ -4686,8 +4704,7 @@ msgstr ""
 "下水処理場の側の階段を下りた小さい部屋だ。"
 
 msgid "TXT_SUB_LOG12"
-msgstr "この任務は時間が掛かりそうだ。私は司令部からこれ以上の情報は得る事は出来ない"
-"。"
+msgstr "この任務は時間が掛かりそうだ。私は司令部からこれ以上の情報は得る事は出来ない。"
 
 msgid "TXT_SUB_LOG13"
 msgstr ""
@@ -4695,8 +4712,7 @@ msgstr ""
 "市庁舎に調査隊が向かった、今すぐ片付けろ!"
 
 msgid "TXT_SUB_LOG14"
-msgstr "よし、'信用しない'のが最も重要なことだ!壊れた配電機を渡して囚人を解放するんだ"
-"。"
+msgstr "よし、'信用しない'のが最も重要なことだ!壊れた配電機を渡して囚人を解放するんだ。"
 
 msgid "TXT_SUB_LOG15"
 msgstr ""
@@ -4707,17 +4723,20 @@ msgstr ""
 msgid "TXT_SUB_LOG16"
 msgstr "倉庫は発電所にある。さっさと済ませよう。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG17"
 msgstr "刑務所にお勤めになるなぞ考えた事もないぞ..."
 
 msgid "TXT_SUB_LOG18"
 msgstr "まあタダでは済まないか。派手に暴れてやれ。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG19"
 msgstr ""
 "よし、知事は喜ばせ刑務所長はぶちのめした...\n"
 "私達が少々手術を施す必要が出来たわ。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG20"
 msgstr ""
 "おいおい手を切り取ったのかよ!\n"
@@ -4740,14 +4759,13 @@ msgstr ""
 msgid "TXT_SUB_LOG26"
 msgstr ""
 "オーダーは封鎖した城内が安全だと思っている。大した自信だな!\n"
-"容易く侵入を許すとも知らずに。それでゲートを開けるには下水道を通る必要がある"
-"。\n"
+"容易く侵入を許すとも知らずに。それでゲートを開けるには下水道を通る必要がある。\n"
 "知事邸の川を挟んだ所にその入り口がある。 "
 
+#, fuzzy
 msgid "TXT_SUB_LOG27"
 msgstr ""
-"下水道の住民は恐ろしい変異体だ。だが彼らのトンネル網には秘密の通路も含まれる"
-"。\n"
+"下水道の住民は恐ろしい変異体だ。だが彼らのトンネル網には秘密の通路も含まれる。\n"
 "良し、ここから降りる前に鼻はつまんどけよ..."
 
 msgid "TXT_SUB_LOG28"
@@ -4772,6 +4790,7 @@ msgstr ""
 msgid "TXT_SUB_LOG35"
 msgstr "今いる場所について私に聞かないでくれ。私も迷った。すまない。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG36"
 msgstr "あの煉瓦...前通ったレンガか?いや..."
 
@@ -4789,6 +4808,7 @@ msgstr ""
 msgid "TXT_SUB_LOG39"
 msgstr "再襲撃するには良い機会だ。地獄に送ってやれ、皆!"
 
+#, fuzzy
 msgid "TXT_SUB_LOG40"
 msgstr ""
 "これは良い。コンピューター...\n"
@@ -4797,6 +4817,7 @@ msgstr ""
 msgid "TXT_SUB_LOG41"
 msgstr "この長い廊下に違いない。それか私のスケール感とどちらかが撃ち落されるな。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG42"
 msgstr ""
 "これら全部悪の神殿の特徴だ。重苦しい建築物、デカいバナー...\n"
@@ -4841,8 +4862,7 @@ msgstr ""
 "奴を仕留めれば得点は倍額でしょう。"
 
 msgid "TXT_SUB_LOG57"
-msgstr "ビショップのいる場所の警備は厳重なので、奴等の制服を盗み紛れ込む方が良いので"
-"は?"
+msgstr "ビショップのいる場所の警備は厳重なので、奴等の制服を盗み紛れ込む方が良いのでは?"
 
 msgid "TXT_SUB_LOG59"
 msgstr ""
@@ -4914,8 +4934,7 @@ msgstr ""
 
 msgid "TXT_SUB_LOG84"
 msgstr ""
-"この形状を見た所、解除するには完成したシジルを持って、ちっこい台座に乗るんだ"
-"わ。\n"
+"この形状を見た所、解除するには完成したシジルを持って、ちっこい台座に乗るんだわ。\n"
 "誰もが雨上がりの虹を見るために。"
 
 msgid "TXT_SUB_LOG85"
@@ -4936,6 +4955,7 @@ msgstr ""
 "工場は鉱山の隣にあるわ。リヒターはデグニン鉱山とも呼んでいる。\n"
 "デグニン石は綺麗だが可燃性で、フォースフィールドを消すにはうってつけよ。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG90"
 msgstr "鉱山、地下墓所、下水道...とんだ初デートだな!"
 
@@ -4944,6 +4964,7 @@ msgstr ""
 "リヒターがもっと具体的な部分に触れてくれて欲しいが。\n"
 "あー、私らが試してみようか。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG92"
 msgstr ""
 "私が思うに...ああ、クソ。\n"
@@ -4986,6 +5007,7 @@ msgstr "ごめんなさい、これは初耳なの。"
 msgid "TXT_SUB_LOG102"
 msgstr "重い神経波の歪曲が直に届いたわ。私達はそれを見つけたという事よ。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG103"
 msgstr ""
 "今まで見てきたことについて考えている!\n"
@@ -5000,8 +5022,7 @@ msgstr ""
 msgid "TXT_SUB_LOG106"
 msgstr ""
 "リヒターの報告では我々が破壊した工場は'研究所'に繋がっていて、\n"
-"奴等はシジルの調印を内部から得ている。工場に戻って自由への次の段階に進みまし"
-"ょう"
+"奴等はシジルの調印を内部から得ている。工場に戻って自由への次の段階に進みましょう"
 
 msgid "TXT_SUB_LOG120"
 msgstr ""
@@ -5029,6 +5050,7 @@ msgstr ""
 "お前は唯一神の前に跪くのだ、希望の光よ。\n"
 "私の元に着き、シジルを完成させるのだ。この神秘的な戯言もうんざりする。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG130"
 msgstr ""
 "キサマ...キサマハ我ガオーダーヲ破壊シニシタ、\n"
@@ -5050,12 +5072,15 @@ msgstr "クソが。アンタ今、台無しにしたぞ!"
 msgid "TXT_SUB_LOG211"
 msgstr "頼むぞ!こっからとっとと失せろ!"
 
+#, fuzzy
 msgid "TXT_SUB_LOG219"
 msgstr "うぉう!黒ずんだアコライト!新しい趣味に目覚めそうだわ..."
 
+#, fuzzy
 msgid "TXT_SUB_LOG229"
 msgstr "私達はもう会えなくなったわ...面と向かって。"
 
+#, fuzzy
 msgid "TXT_SUB_LOG230"
 msgstr "私は貴方に希望を抱いていた...クソ世知辛いわ。"
 
@@ -5114,6 +5139,7 @@ msgstr "素敵ね。私達がラットキングのために買い物とか。"
 msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
 msgstr "この男も酷い悪臭がすると賭けるわ。"
 
+#, fuzzy
 msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
 msgstr "更なる下水道...ヤッバ。下に何が住んでるのか不思議に思うわ。"
 
@@ -5128,6 +5154,7 @@ msgstr ""
 "生体工学'?どうやら奴等は軍隊を無限供給しているという訳だ!\n"
 "それと態度が悪いことも。\n"
 
+#, fuzzy
 msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
 msgstr "クソ腹立つ...!野郎を消せ!"
 
@@ -5137,6 +5164,7 @@ msgstr "彼は醜いだろうが、我々に味方している。"
 msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
 msgstr "最近の記録から判断すると、秘密は公になると私は思う。"
 
+#, fuzzy
 msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
 msgstr ""
 "うーむ。慌てず、騒がず、ママの掃除も無し...\n"

@@ -1,0 +1,251 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/da/>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+#, fuzzy
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+"Tror du virkelig, at du kan klare det?\n"
+"\n"
+"Tryk på Y eller N..."
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Pletmærket"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "Kræver det GRØNNE nøglekort"
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "Kræver det LILLA nøglekort"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "Kræver det GULLE nøglekort"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "Kræver den GRØNNE nøgle"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "Kræver den GULLE nøgle"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "Kræver den LILLA nøgle"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "Hentede rustning."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "Samlet Combat Armor op."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "Opnået det GRØNNE nøglekort."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "Opnået det GULLE nøglekort."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "Opnået det LILLA nøglekort."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "Opnået den GRØNNE nøgle."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "Opnået den GULLE nøgle."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "Opnået den LILLA nøgle."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr "Helbredende svamp"
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr "Erhvervet: medicinsk kit."
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr "Erhvervet: medicinsk kit, som du VIRKELIG har brug for."
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "Kort"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr "Erhvervet: kasse med kugler."
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr "Erhvervet: Granat."
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr "Erhvervet: Granater."
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr "Erhvervet: kasse med haglpatroner."
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr "Erhvervet: ammunitionsrygsæk."
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr "Erhvervet: Granat."
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr "Erhvervet: Minigun."
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr "Erhvervet: Granatkaster."
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr "Entropi-lancer!"
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr "Erhvervet: Shotgun."
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr "Gud-tilstand PÅ"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr "Gud-tilstand FRA"
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr "Alle våben/ ammunition/ nøgler"
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr "Alle våben og ammunition"
+
+msgid "TXT_HARMMAP01"
+msgstr "Bortførelse"
+
+msgid "TXT_HARMMAP02"
+msgstr ""
+
+msgid "TXT_HARMMAP03"
+msgstr ""
+
+msgid "TXT_HARMMAP04"
+msgstr ""
+
+msgid "TXT_HARMMAP05"
+msgstr "Hospitalet"
+
+msgid "TXT_HARMMAP06"
+msgstr "Våbenfabrikken"
+
+msgid "TXT_HARMMAP07"
+msgstr "Undervandslaboratoriet"
+
+msgid "TXT_HARMMAP08"
+msgstr "Landingsbane et"
+
+msgid "TXT_HARMMAP09"
+msgstr "Affyringsbasen"
+
+msgid "TXT_HARMMAP10"
+msgstr "Den radioaktive zone"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+#, fuzzy
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Du har kvalme i maven...\n"
+"Du ser mutantdronningen i øjnene... \n"
+"Den tingest... Det plejede at være... \n"
+"din ven... Amira!\n"
+"\n"
+"De monstre må have fundet en måde at\n"
+"mutere hende på og forvandle hende til\n"
+"dette afskyelige væsen, så hun kan føde\n"
+"deres afkom.\n"
+"\n"
+"-suk-\n"
+"\n"
+"Du tager dig sammen... \n"
+"De kommer til at betale for at få dig til\n"
+"at dræbe din ven...\n"
+"\n"
+"\"Helvede har ingen vrede som en\n"
+"forsmået kvinde!\"\n"
+"\n"
+"     = T H E  E N D ="
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr "Indlæsning"
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr "Meget let"
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr "Let"
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr "Middel"
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr "Svær"
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr "Meget svær"
+
+msgid "HARMQUITMSG"
+msgstr "Tak for at spille"
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr ""

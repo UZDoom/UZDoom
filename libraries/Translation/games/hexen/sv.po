@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:42+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen/sv/>\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/doom-engine-games/hexen/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Hallen för avräkning"
@@ -118,6 +117,7 @@ msgstr ""
 "hypostilens ständigt skiftande\n"
 "väggar håna dina ansträngningar."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Ditt sinne är fortfarande i upplösning\n"
@@ -139,6 +139,7 @@ msgstr ""
 "du kommit? Vid alla smärtans gudar,\n"
 "hur ska du någonsin hitta ut?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "De mäktigaste vapnen och arte-\n"
@@ -162,6 +163,7 @@ msgstr ""
 "Någonstans där inne väntar dina\n"
 "fiender..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "\".... och han skall resa in i de dödas\n"
@@ -188,6 +190,7 @@ msgstr ""
 "upphöjd dais, och på den den\n"
 "enda ljuskällan i den här världen."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Detta kan bara vara kaos-sfären,\n"
@@ -245,6 +248,7 @@ msgstr "på de sju portalerna"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Trappor har stigit upp på de sju portalerna"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Du måste hitta en annan omkopplare..."
 
@@ -299,6 +303,7 @@ msgstr "Dörren är spärrad från insidan"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "En plattform har sänkts i tornet"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Du har spelat det här spelet för länge, dödlig..."
 

@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 05:41+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/"
-"hexen-deathkings/nl/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Ruïneerd dorp"
@@ -91,6 +90,7 @@ msgstr "Rioolput"
 msgid "TXT_HEXDD_MAP38"
 msgstr "De roos"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "Veeg een trillende hand over je bloedende\n"
@@ -111,6 +111,7 @@ msgstr ""
 "\n"
 "Nietwaar?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "De zielen van de verdoemden bewonen deze\n"
@@ -129,6 +130,7 @@ msgstr ""
 "\n"
 "...voor de gelukkigen."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Opnieuw bevind je je in de grote hal van\n"
@@ -144,6 +146,7 @@ msgstr ""
 "...ogen die een kwaadaardige bedoeling\n"
 "verbergen."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "Ooit greep je de chaos sfeer, hield hem\n"
@@ -160,10 +163,10 @@ msgstr ""
 "Maar dan, je was er nooit een om je terug\n"
 "te trekken van een uitdaging..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"...en andere spelers wachten op je.\n"
+"\\n...en andere spelers wachten op je.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -181,6 +184,7 @@ msgstr "De waterval is geblokkeerd"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "Een deur is geopend in de kapel"
 
+#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "Dat is vreemd...."
 
@@ -211,12 +215,14 @@ msgstr "Tweederde van de puzzel is opgelost"
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Je hoort een platform bewegen in de verte"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "Het is gebeurd"
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Je hebt de puzzel nog niet voltooid..."
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "Ik waarschuw je..."
 
@@ -229,6 +235,7 @@ msgstr "En ook dom"
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Een vierde van deze puzzel is compleet"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "Slechte keuze...."
 
@@ -286,6 +293,7 @@ msgstr "Vorpal?!?!?!"
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Geef me wat suiker, schatje."
 
+#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
 msgstr "Duh-uhhh..."
 
@@ -325,9 +333,11 @@ msgstr "De uitgang is open"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "De deuren gaan niet open van deze kant...."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "De deuren zijn open...."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...als je er klaar voor bent..."
 

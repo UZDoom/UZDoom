@@ -82,7 +82,12 @@ By submitting a pull request, you agree to follow these guidelines.
 
 ### AI Generated Art
 
-Absolutely no AI generated art may be submitted to this project.
+No AI generated art of any kind may be submitted. This includes but is not limited to:
+- Art created by generative AI.
+- Modifications or tracings of art created by generative AI.
+- Art modified by generative AI (e.g. filters).
+
+Art generated and modified through traditional algorithmic means is allowed. Asking for clarification is best if unsure. Any undisclosed use of generative AI will result in an organization-wide ban.
 
 ## Code Contributions
 
@@ -112,12 +117,16 @@ all contributors must adhere to the following:
 
 ### AI Generated Code
 
-As LLMs are trained on unknown scraped data, no code generated entirely
-by an LLM may be submitted. All submitted code must be fundamentally
-authored and understood by the contributor to ensure it meets our quality
-and licensing standards. Code generated through traditional mechanical
-processes is not considered AI generated. Any undisclosed use of AI will
-result in an organization-wide ban.
+No AI generated code of any kind may be submitted. This includes but is not limited to:
+- Code created by generative AI.
+- Modifications of code created by generative AI.
+- Code modified by generative AI (e.g. having it fix bugs in your code).
+- Code created with generative AI assistance (i.e. having the generative AI tell you what code to create).
+- Comments created with the assistance of generative AI.
+
+Code generated and modified through traditional algorithmic means is allowed. Asking for clarification is best if unsure. Any undisclosed use of generative AI will result in an organization-wide ban.
+
+When creating commit and pull request messages, authors are expected to use their own words and not generative AI. You may be asked to explain your contributions, and failure to do so will result in rejection.
 
 ### Testing
 

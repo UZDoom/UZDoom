@@ -5709,13 +5709,14 @@ void AActor::HandleSpawnFlags ()
 	}
 	if (SpawnFlags & MTF_FRIENDLY)
 	{
-		flags |= MF_FRIENDLY;
 		// Friendlies don't count as kills!
-		if (flags & MF_COUNTKILL)
+		if(CountsAsKill())
 		{
-			flags &= ~MF_COUNTKILL;
 			Level->total_monsters--;
 		}
+		
+		flags |= MF_FRIENDLY;
+		flags &= ~MF_COUNTKILL;
 	}
 	if (SpawnFlags & MTF_SHADOW)
 	{
@@ -5738,11 +5739,13 @@ void AActor::HandleSpawnFlags ()
 	}
 	if (SpawnFlags & MTF_NOCOUNT)
 	{
-		if (flags & MF_COUNTKILL)
+		if(CountsAsKill())
 		{
-			flags &= ~MF_COUNTKILL;
 			Level->total_monsters--;
 		}
+		
+		flags &= ~MF_COUNTKILL;
+		
 		if (flags & MF_COUNTITEM)
 		{
 			flags &= ~MF_COUNTITEM;

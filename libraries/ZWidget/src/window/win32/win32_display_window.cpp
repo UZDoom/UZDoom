@@ -10,6 +10,8 @@
 
 #pragma comment(lib, "dwmapi.lib")
 
+#define MESSAGE_NOTIFY_WINDOW (WM_APP + 100)
+
 #ifndef HID_USAGE_PAGE_GENERIC
 #define HID_USAGE_PAGE_GENERIC		((USHORT) 0x01)
 #endif
@@ -78,7 +80,7 @@ static double DelayLoadGetDpiScale(HWND hwnd)
 	}
 }
 
-Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI, bool resizable) : WindowHost(windowHost), PopupWindow(popupWindow)
+Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility) : WindowHost(windowHost), PopupWindow(popupWindow)
 {
 	Windows.push_front(this);
 	WindowsIterator = Windows.begin();
@@ -585,6 +587,10 @@ LRESULT Win32DisplayWindow::OnWindowMessage(UINT msg, WPARAM wparam, LPARAM lpar
 		}
 		return 0;
 	}
+	else if (msg == MESSAGE_NOTIFY_WINDOW)
+	{
+		WindowHost->OnWindowNotified();
+	}
 	else if (msg == WM_ACTIVATE)
 	{
 		WindowHost->OnWindowActivated();
@@ -947,6 +953,11 @@ VkSurfaceKHR Win32DisplayWindow::CreateVulkanSurface(VkInstance instance)
 	if (result != VK_SUCCESS)
 		throw std::runtime_error("Could not create vulkan surface");
 	return surface;
+}
+
+void Win32DisplayWindow::NotifyWindow()
+{
+	PostMessageA(WindowHandle.hwnd, MESSAGE_NOTIFY_WINDOW, 0, 0);
 }
 
 std::vector<std::string> Win32DisplayWindow::GetVulkanInstanceExtensions()

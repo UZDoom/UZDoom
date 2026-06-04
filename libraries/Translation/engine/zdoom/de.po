@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-20 22:09+0000\n"
+"PO-Revision-Date: 2026-05-27 20:11+0000\n"
 "Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
@@ -443,8 +442,7 @@ msgstr "%d Monster getötet"
 
 msgid "TXT_NO_RESURRECT"
 msgstr ""
-"Kann nicht wiederbeleben. Der Spieler ist nicht mehr mit seinem Körper "
-"verbunden."
+"Kann nicht wiederbeleben. Der Spieler ist nicht mehr mit seinem Körper verbunden."
 
 msgid "TXT_ALL_ARTIFACTS"
 msgstr "Alle Artefakte!"
@@ -2121,7 +2119,8 @@ msgid "TXT_NEED_BLUECRYSTAL"
 msgstr "Du brauchst den blauen Kristall"
 
 msgid "TXT_RETAIL_ONLY"
-msgstr "Dieser Bereich ist nur in der kompletten Version von Strife erreichbar"
+msgstr ""
+"Dieser Bereich ist nur in der kompletten Version von Strife erreichbar"
 
 msgid "TXT_DOES_NOT_WORK"
 msgstr "Das scheint nicht zu funktionieren"
@@ -2162,7 +2161,7 @@ msgstr "Vernichter"
 msgid "TAG_GLAUNCHER1"
 msgstr "Granatwerfer"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Granatwerfer"
 
@@ -4561,18 +4560,16 @@ msgstr "Spielstand '%s' ist von einer anderen ZDoom-basierten Engine:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Spielstand '%s' ist von einer älteren Version: %s (%e ist die älteste noch "
-"unterstützte Version."
+"Spielstand '%s' ist von einer älteren Version: %s (%e ist die älteste noch unterstützte Version."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Spielstand '%s' ist von einer neueren Version: %s (%e ist die neueste noch "
-"unterstützte Version."
+"Spielstand '%s' ist von einer neueren Version: %s (%e ist die neueste noch unterstützte Version."
 
 msgid "TXT_NOMAPSG"
 msgstr "Spielstand '%s' hat keine Information über den alktuellen Level."
@@ -4804,7 +4801,8 @@ msgstr ""
 
 # Drops from Actors aren't picked up locally
 msgid "GMPLYMNU_NOLOCALDROP"
-msgstr "Client-seitiges Aufheben von fallengelassenen Gegenständen deaktivieren"
+msgstr ""
+"Client-seitiges Aufheben von fallengelassenen Gegenständen deaktivieren"
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
@@ -5176,10 +5174,7 @@ msgstr ""
 "Dies ist ein Beispieltext für Kurzinfos.\n"
 "Her ist noch mehr Text.\n"
 "...\n"
-"Hier ist eine sehr lange Textzeile, die weiter und weiter zu gehen scheint "
-"ohne je etwas Interessantes auszusagen, anscheinend nur so länglich weil die "
-"Entwickler Schwierigkeiten haben auszudrücken wofür eine Funktion nützlich "
-"ist."
+"Hier ist eine sehr lange Textzeile, die weiter und weiter zu gehen scheint ohne je etwas Interessantes auszusagen, anscheinend nur so länglich weil die Entwickler Schwierigkeiten haben auszudrücken wofür eine Funktion nützlich ist."
 
 msgid "ACCMNU_TOOLTIP"
 msgstr "Kurzinfos"
@@ -5189,13 +5184,11 @@ msgstr "Zusätzliche Beleuchtung"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Entfernung des Lichtradius um den Spieler, in Map-Units. Je größer, desto "
-"heller die Szene."
+"Entfernung des Lichtradius um den Spieler, in Map-Units. Je größer, desto heller die Szene."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Menge der zusätzlichen Beleuchtung in vorhandenen Sektor-Lichtniveaus. "
-"Aktueller Beleuchtungsmodus wird beibehalten."
+"Menge der zusätzlichen Beleuchtung in vorhandenen Sektor-Lichtniveaus. Aktueller Beleuchtungsmodus wird beibehalten."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Licht-Radius des Spielers"
@@ -5226,8 +5219,7 @@ msgstr "Display-Kalibrierung"
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP1"
 msgstr ""
-"Passe diese optischen Einstellungen an. Nimm dabei eine natürliche Distanz "
-"zum Display ein."
+"Passe diese optischen Einstellungen an. Nimm dabei eine natürliche Distanz zum Display ein."
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP2"
 msgstr "Upsampling/Supersampling kann die Darstellung verzerren."
@@ -5237,9 +5229,7 @@ msgstr "Bitte schalte diese vor den Anpassungen aus."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Gleicht Schwächen des Monitors aus. Anpassen, bis keine vertikalen Blöcke "
-"mehr sichtbar sind. Dient nur der Kalibrierung, nicht der Regulierung der "
-"Bildhelligkeit."
+"Gleicht Schwächen des Monitors aus. Anpassen, bis keine vertikalen Blöcke mehr sichtbar sind. Dient nur der Kalibrierung, nicht der Regulierung der Bildhelligkeit."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Schwarzpunkt-Anpassung"
@@ -5258,11 +5248,7 @@ msgstr "Granatwerfer"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Passt Monitore an, die dunkle Pixel nicht korrekt darstellen können. Die "
-"Einstellung so lange anpassen, bis die diagonalen weißen Blöcke verblassen. "
-"Diese Funktion soll nicht verwendet werden, um das Spiel heller zu machen, "
-"sondern nur, um sicherzustellen, dass das Bild für die derzeitige "
-"Konfiguration kalibriert ist."
+"Passt Monitore an, die dunkle Pixel nicht korrekt darstellen können. Die Einstellung so lange anpassen, bis die diagonalen weißen Blöcke verblassen. Diese Funktion soll nicht verwendet werden, um das Spiel heller zu machen, sondern nur, um sicherzustellen, dass das Bild für die derzeitige Konfiguration kalibriert ist."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr ""
@@ -5270,19 +5256,15 @@ msgstr ""
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Wendet eine lineare Helligkeitsanpassung an. Helligkeit nach persönlichen "
-"Geschmack anpassen oder um im Dunkeln besser sehen zu können."
+"Wendet eine lineare Helligkeitsanpassung an. Helligkeit nach persönlichen Geschmack anpassen oder um im Dunkeln besser sehen zu können."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Passt den wahrgenommenen Unterschied zwischen ähnlichen Farben an. Steuert "
-"wie scharf oder verwaschen die Bilder wirken. Nach persönlichem Geschmack "
-"anpassen."
+"Passt den wahrgenommenen Unterschied zwischen ähnlichen Farben an. Steuert wie scharf oder verwaschen die Bilder wirken. Nach persönlichem Geschmack anpassen."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Passt die Farbintensität an, sodass das Bild lebendiger oder gedämpfter "
-"wirkt. Einstellungen nach persönlichen Geschmack anpassen."
+"Passt die Farbintensität an, sodass das Bild lebendiger oder gedämpfter wirkt. Einstellungen nach persönlichen Geschmack anpassen."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Einstellung anpassen bis der Farbton gleichmäßig grau erscheint."
@@ -5350,12 +5332,6 @@ msgstr "Super Stereo Weite"
 msgid "CNTRLMNU_ADJUST_LIGHTS"
 msgstr "Lichtanpassung"
 
-msgid "LANG_NATIVE"
-msgstr "Englisch (USA)"
-
-msgid "LANG_ENG"
-msgstr "Englisch (USA)"
-
 msgid "ACTION_OPENWADDIR"
 msgstr "WADs durchsuchen"
 
@@ -5385,3 +5361,45 @@ msgstr "Vertikaler Versatz des Fadenkreuzes"
 
 msgid "JOYMNU_ANALOGRUN"
 msgstr "Analoges Laufen"
+
+msgid "VALFORMAT_DB"
+msgstr "%s dB"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s dB/m"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s deg"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s bps"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s Hz"
+
+msgid "VALFORMAT_METER"
+msgstr "%s m"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s ms"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s sek"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Schwellenwert für Doppelklick"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "Zeit zwischen aufeinanderfolgenden Tastendrücken, um ein Doppelklick-Event auszulösen"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Alpha der Füllung"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "Füllfarbe"

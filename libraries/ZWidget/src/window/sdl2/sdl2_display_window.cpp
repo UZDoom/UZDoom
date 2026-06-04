@@ -1,15 +1,19 @@
 #include "sdl2_display_window.h"
 #include <SDL2/SDL_events.h>
+#include <SDL2/SDL_video.h>
 #include <stdexcept>
 #include <SDL2/SDL_vulkan.h>
+#include <SDL2/SDL_hints.h>
+
+#define EVENT_NOTIFY_WINDOW SDL_USEREVENT + 100
 
 Uint32 SDL2DisplayWindow::PaintEventNumber = 0xffffffff;
 bool SDL2DisplayWindow::ExitRunLoop;
 std::unordered_map<int, SDL2DisplayWindow*> SDL2DisplayWindow::WindowList;
 
-SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, bool resizable) : WindowHost(windowHost), UIScale(uiscale)
+SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, bool resizable, bool utility) : WindowHost(windowHost), UIScale(uiscale)
 {
-	unsigned int flags = resizable ? (SDL_WINDOW_HIDDEN | SDL_WINDOW_RESIZABLE) : SDL_WINDOW_HIDDEN /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
+	unsigned int flags = SDL_WINDOW_HIDDEN /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
 	if (renderAPI == RenderAPI::Vulkan)
 		flags |= SDL_WINDOW_VULKAN;
 	else if (renderAPI == RenderAPI::OpenGL)
@@ -18,20 +22,34 @@ SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWi
 	else if (renderAPI == RenderAPI::Metal)
 		flags |= SDL_WINDOW_METAL;
 #endif
+
+	if (resizable)
+		flags |= SDL_WINDOW_RESIZABLE;
 	if (popupWindow)
 		flags |= SDL_WINDOW_BORDERLESS;
-
-	if (renderAPI == RenderAPI::Vulkan || renderAPI == RenderAPI::OpenGL || renderAPI == RenderAPI::Metal)
+	if (utility)
 	{
-		Handle.window = SDL_CreateWindow("", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 320, 200, flags);
-		if (!Handle.window)
-			throw std::runtime_error(std::string("Unable to create SDL window:") + SDL_GetError());
+		Owner = owner;
+		flags |= (SDL_WINDOW_UTILITY | SDL_WINDOW_ALWAYS_ON_TOP | SDL_WINDOW_SKIP_TASKBAR);
 	}
-	else
+
+	Handle.window = SDL_CreateWindow("", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 320, 200, flags);
+	if (!Handle.window)
+		throw std::runtime_error(std::string("Unable to create SDL window:") + SDL_GetError());
+
+	switch (renderAPI)
 	{
-		int result = SDL_CreateWindowAndRenderer(320, 200, flags, &Handle.window, &RendererHandle);
-		if (result != 0)
-			throw std::runtime_error(std::string("Unable to create SDL window:") + SDL_GetError());
+		case RenderAPI::Vulkan:
+		case RenderAPI::OpenGL:
+		case RenderAPI::Metal:
+			break;
+		default: {
+			RendererHandle = SDL_CreateRenderer(Handle.window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+			if (!RendererHandle)
+				RendererHandle = SDL_CreateRenderer(Handle.window, -1, SDL_RENDERER_SOFTWARE);
+			if (!RendererHandle)
+				throw std::runtime_error(std::string("Unable to create renderer: ") + SDL_GetError());
+		}
 	}
 
 	WindowList[SDL_GetWindowID(Handle.window)] = this;
@@ -78,6 +96,14 @@ VkSurfaceKHR SDL2DisplayWindow::CreateVulkanSurface(VkInstance instance)
 	return surfaceHandle;
 }
 
+void SDL2DisplayWindow::NotifyWindow()
+{
+	SDL_Event e;
+	SDL_zero(e);
+	e.type = EVENT_NOTIFY_WINDOW;
+	SDL_PushEvent(&e);
+}
+
 void SDL2DisplayWindow::SetWindowTitle(const std::string& text)
 {
 	SDL_SetWindowTitle(Handle.window, text.c_str());
@@ -112,7 +138,21 @@ void SDL2DisplayWindow::SetClientFrame(const Rect& box)
 
 void SDL2DisplayWindow::Show()
 {
+	if (Owner)
+	{
+		SDL_SetWindowModalFor(Handle.window, Owner->Handle.window);
+		SDL_SetWindowAlwaysOnTop(Handle.window, SDL_TRUE);
+	}
+
+	// this is a hack, but it seems to prevent unpainted windows on my pc
 	SDL_ShowWindow(Handle.window);
+	SDL_RaiseWindow(Handle.window);
+	SDL_Delay(10);
+	WindowHost->OnWindowGeometryChanged();
+	WindowHost->OnWindowPaint();
+	SDL_Delay(10);
+	Update();
+	ProcessEvents();
 }
 
 void SDL2DisplayWindow::Restore()
@@ -501,6 +541,9 @@ void SDL2DisplayWindow::OnWindowEvent(const SDL_WindowEvent& event)
 {
 	switch (event.event)
 	{
+		case EVENT_NOTIFY_WINDOW:
+			WindowHost->OnWindowNotified();
+			break;
 		case SDL_WINDOWEVENT_CLOSE:
 			WindowHost->OnWindowClose();
 			break;

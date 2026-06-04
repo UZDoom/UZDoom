@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:55+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen-deathkings/fi/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Rauniokylä"
@@ -88,6 +87,7 @@ msgstr "Viemärimonttu"
 msgid "TXT_HEXDD_MAP38"
 msgstr "Ruusu"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "Vapisevin käsin pyyhit verisen naamasi ja\n"
@@ -110,6 +110,7 @@ msgstr ""
 "\n"
 "Eikö niin?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "Epäilemättä kirottujen sielut asuttavat\n"
@@ -132,6 +133,7 @@ msgstr ""
 "\n"
 "...onnekkaille."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Jälleen kerran huomaat olevasi Kaaoskuulan\n"
@@ -147,6 +149,7 @@ msgstr ""
 "...Silmien, jotka kätkevät taakseen pahan\n"
 "aikomuksen."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "Jälleen kerran otit Kaaoskuulan ja pitelit\n"
@@ -164,10 +167,10 @@ msgstr ""
 "Mutta toisaalta et koskaan ollut sellainen,\n"
 "joka peräytyy haasteesta..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"...ja muut pelaajat odottavat.\n"
+"\\n...ja muut pelaajat odottavat.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -185,6 +188,7 @@ msgstr "Vesiputous on tukittu"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "Ovi on avautunut kappelissa"
 
+#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "Onpa kummallista..."
 
@@ -215,12 +219,14 @@ msgstr "Kaksi kolmannesta pulmasta on ratkaistu"
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Kuulet lavan liikkuvan etäällä"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "Se on tehty..."
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Et ole ratkaissut pulmaa"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "Varoitan sinua..."
 
@@ -233,6 +239,7 @@ msgstr "Ja vieläpä tyhmä"
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Neljännes pulmasta on ratkaistu"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "Huono valinta..."
 
@@ -290,6 +297,7 @@ msgstr "Tappava ?!?!?!"
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Anna vähän sokeria, beibi"
 
+#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
 msgstr "Daa-aaa...."
 
@@ -329,9 +337,11 @@ msgstr "Ulospääsy on auki"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "Ovet eivät aukea tältä puolelta"
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "Ovet ovat auki..."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...jos olet valmis"
 

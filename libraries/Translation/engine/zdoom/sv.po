@@ -4,8 +4,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/sv/>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -447,8 +446,7 @@ msgstr "%d monster dödade"
 
 msgid "TXT_NO_RESURRECT"
 msgstr ""
-"Det går inte att återuppliva. Spelaren är inte längre ansluten till sin "
-"kropp."
+"Det går inte att återuppliva. Spelaren är inte längre ansluten till sin kropp."
 
 msgid "TXT_ALL_ARTIFACTS"
 msgstr "Alla artefakter!"
@@ -2168,7 +2166,7 @@ msgstr ""
 msgid "TAG_GLAUNCHER1"
 msgstr "Granatkastare"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Granatkastare"
 
@@ -4572,19 +4570,17 @@ msgstr "Sparfil \"%s\" är från en annan ZDoom-baserad motor:"
 #, fuzzy
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Sparfil \"%s\" är från en äldre version: %d (%e är den äldsta versionen som "
-"stöds)."
+"Sparfil \"%s\" är från en äldre version: %d (%e är den äldsta versionen som stöds)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 #, fuzzy
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Sparfil \"%s\" är från en nyare version: %d (%e är den högsta versionen som "
-"stöds)."
+"Sparfil \"%s\" är från en nyare version: %d (%e är den högsta versionen som stöds)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Sparfil \"%s\" saknar den aktuella kartan."

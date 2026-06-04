@@ -2,25 +2,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-03 19:09+0000\n"
-"Last-Translator: Tiago Matos <tiagaomatos@hotmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/uzdoom/common/"
-"pt/>\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/uzdoom/common/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Carrega Y ou N."
 
 msgid "TXT_YES"
-msgstr ""
+msgstr "Sim"
 
 msgid "TXT_NO"
-msgstr ""
+msgstr "Não"
 
 msgid "SAVEDEAD"
 msgstr ""
@@ -251,7 +250,7 @@ msgid "CNTRLMNU_OTHER_TITLE"
 msgstr "Configurar Outros Controlos"
 
 msgid "CNTRLMNU_WEAPONS"
-msgstr ""
+msgstr "Armas"
 
 msgid "CNTRLMNU_NEXTWEAPON"
 msgstr ""
@@ -393,7 +392,7 @@ msgid "CNTRLMNU_TOGGLE_MESSAGES"
 msgstr ""
 
 msgid "CNTRLMNU_MENU_QUIT"
-msgstr ""
+msgstr "Sair do Jogo"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Permitir uso do rato"
@@ -628,7 +627,7 @@ msgid "OPTVAL_NEVER"
 msgstr ""
 
 msgid "PLYRMNU_AUTOAIM"
-msgstr ""
+msgstr "Mira Automática"
 
 msgid "PLYRMNU_ALWAYSRUN"
 msgstr "Correr Sempre"
@@ -1553,17 +1552,6 @@ msgstr ""
 
 msgid "OS_LABEL"
 msgstr "Procura:"
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "0"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-msgid "REQUIRED_CHARACTERS"
-msgstr ""
 
 msgid "OPTMNU_FULLOPTIONS"
 msgstr ""

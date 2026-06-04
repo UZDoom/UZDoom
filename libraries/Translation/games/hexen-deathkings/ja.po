@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:41+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen-deathkings/ja/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "廃村"
@@ -91,6 +90,7 @@ msgstr "地下溝穴"
 msgid "TXT_HEXDD_MAP38"
 msgstr "薔薇"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "傷付き出血した顔を手で拭い、これから先を考える為に\n"
@@ -110,6 +110,7 @@ msgstr ""
 "\n"
 "そうだろう?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "この世界には地獄に堕とされた善人や親切であろう\n"
@@ -125,6 +126,7 @@ msgstr ""
 "\n"
 "...幸福な者に向けて。"
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "貴方は今一度、あたかも最後の時が止まったままである\n"
@@ -135,6 +137,7 @@ msgstr ""
 "\n"
 "...悪意を遮蔽する目が。"
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "貴方はカオススフィアを掴む前に、一度震える手を握りしめた。\n"
@@ -148,10 +151,10 @@ msgstr ""
 "しかしそれでも、貴方は決して後へ引く事は\n"
 "出来なかった..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"...更なる挑戦者を待ち構えながら。\n"
+"\\n...更なる挑戦者を待ち構えながら。\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -169,6 +172,7 @@ msgstr "滝 は塞がっている"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "庵寺 への扉が開いた"
 
+#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "何かがおかしい..."
 
@@ -199,12 +203,14 @@ msgstr "パズルの 三分の二 が解かれた"
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "昇降機の音が遠くで聞こえる"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "これで完了だ..."
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "パズルはまだ完成していない"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "お前に警告しよう..."
 
@@ -217,6 +223,7 @@ msgstr "そして、あまりにも愚か者だ"
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "パズルの 四分の一 が解かれた"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "拙い選択だ..."
 
@@ -274,6 +281,7 @@ msgstr "ボーパル ?!?!?!"
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "砂糖が欲しいかい、ベイビー"
 
+#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
 msgstr "えぇーとぉー..."
 
@@ -313,9 +321,11 @@ msgstr "出口が開いた"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "扉はこちらから開けない"
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "ドアは開いている..."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...準備が良いなら"
 

@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/hu/>\n"
+"PO-Revision-Date: 2026-05-08 21:11+0000\n"
+"Last-Translator: \"G. Milán\" <milan.gaal.231@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "PRESSKEY"
 msgstr "Nyomjon meg egy gombot."
@@ -321,8 +320,7 @@ msgstr "3D Falonátmenési Mód: KI"
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
 msgstr ""
-"Sérthetetlenség (V), berzerker mód (S), láthatatlanság (i), védőRuha, térkép"
-" (A), vagy éjjelLátó sisak"
+"Sérthetetlenség (V), berzerker mód (S), láthatatlanság (i), védőRuha, térkép (A), vagy éjjelLátó sisak"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Képesség hozzáadva"
@@ -2162,7 +2160,7 @@ msgstr "Marcangoló"
 msgid "TAG_GLAUNCHER1"
 msgstr "Gránátvető"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Gránátvető"
 
@@ -4564,18 +4562,16 @@ msgstr "A '%s' mentés egy másik ZDoom motorhoz való:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"A '%s' mentés egy túl régi verzióhoz való: %d (%e a legfrissebb támogatott "
-"verzió)."
+"A '%s' mentés egy túl régi verzióhoz való: %d (%e a legfrissebb támogatott verzió)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"A '%s' mentés egy túl új verzióhoz való: %d (%e a legkorábbi támogatott "
-"verzió)."
+"A '%s' mentés egy túl új verzióhoz való: %d (%e a legkorábbi támogatott verzió)."
 
 msgid "TXT_NOMAPSG"
 msgstr "A '%s' mentés hiányolja a jelenlegi pályát."
@@ -4683,9 +4679,8 @@ msgstr "Klasszikus ZDoom"
 msgid "OPTVAL_MODERN"
 msgstr "Új (WASD)"
 
-#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Új (Nyilak)"
+msgstr "Modern (Balkezes / Numpad)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Szigorú KEYCONF a Fegyverek/Játékosok esetében"
@@ -5261,10 +5256,7 @@ msgstr ""
 "Ez egy példa a tippre.\n"
 "Itt egy kiegészítő szöveg.\n"
 "...\n"
-"Itt van egy nagyon hosszú sor, ami úgy tűnik, hogy soha nem ér véget, "
-"miközben semmi érdemlegeset sem közöl, látszólag csak azért, mert a "
-"fejlesztők nem tudják röviden összefoglalni azt, hogy egy adott lehetőség "
-"mégis mit csinál."
+"Itt van egy nagyon hosszú sor, ami úgy tűnik, hogy soha nem ér véget, miközben semmi érdemlegeset sem közöl, látszólag csak azért, mert a fejlesztők nem tudják röviden összefoglalni azt, hogy egy adott lehetőség mégis mit csinál."
 
 msgid "ACCMNU_TOOLTIP"
 msgstr "Tippek"
@@ -5277,13 +5269,11 @@ msgstr "Játékos körüli fény sugara"
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr ""
-"Az összes lehetőséget visszaállítja az alapértelmezett értékekere ebben a "
-"menüben."
+"Az összes lehetőséget visszaállítja az alapértelmezett értékekere ebben a menüben."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"A játékos körüli fény sugarát határozza meg, map unitban. A magasabb érték "
-"világosabbá teszi a helyet."
+"A játékos körüli fény sugarát határozza meg, map unitban. A magasabb érték világosabbá teszi a helyet."
 
 msgid "DSPLYMNU_ROCKETEXPSTYLE"
 msgstr "Robbanások megjelenítési módja"
@@ -5299,8 +5289,7 @@ msgstr "Feketepontos kiegyenlítés"
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Lineáris fényesség igazítása. Módosítsa kedve szerint vagy hogy jobban láss "
-"a sötétben."
+"Lineáris fényesség igazítása. Módosítsa kedve szerint vagy hogy jobban láss a sötétben."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Igazítson rajta amég teljesen szürke színűnek nem tűnik."
@@ -5310,31 +5299,23 @@ msgstr "Érintéses visszajelzési lehetőségek"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Az extra világítás mértéke, ami a szektorok alapértelmezett fényerejéhez "
-"hozzáadódik, közben megőrizve azt."
+"Az extra világítás mértéke, ami a szektorok alapértelmezett fényerejéhez hozzáadódik, közben megőrizve azt."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"A monitorja limitációit kompenzálja. Igazítsa, amég a szürke blokkok el nem "
-"tűnnek. Ne használja a játék világosabbá tételére, csakis arra, hogy "
-"megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
+"A monitorja limitációit kompenzálja. Igazítsa, amég a szürke blokkok el nem tűnnek. Ne használja a játék világosabbá tételére, csakis arra, hogy megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Olyan monitorok számára kompenzációt nyújt, amelyek nem képesek a fekete "
-"pixeleket megjeleníteni. Igazítsa, amég az átlós fehér blokkok el nem "
-"tűnnik. Ne használja a játék világosabbá tételére, csakis arra, hogy "
-"megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
+"Olyan monitorok számára kompenzációt nyújt, amelyek nem képesek a fekete pixeleket megjeleníteni. Igazítsa, amég az átlós fehér blokkok el nem tűnnik. Ne használja a játék világosabbá tételére, csakis arra, hogy megbizonyosodjon, hogy a kép megfelelően fog megjelenni."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"A hasonló színek közötti érzékelhető különbséget igazítja. Módosítja, hogy "
-"milyen élesnek/elmosódottnak látszódik a kép. Módosítsa kedve szerint."
+"A hasonló színek közötti érzékelhető különbséget igazítja. Módosítja, hogy milyen élesnek/elmosódottnak látszódik a kép. Módosítsa kedve szerint."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"A szynk erősségét igazítja, ezzel a képet élénkebbé vagy visszafogottabbá "
-"teszi. Módosítsa kedve szerint."
+"A szynk erősségét igazítja, ezzel a képet élénkebbé vagy visszafogottabbá teszi. Módosítsa kedve szerint."
 
 msgid "OPTVAL_SBSLETTERBOX"
 msgstr "Egymás melletti, letterbox-olt"
@@ -5351,12 +5332,6 @@ msgstr "Marcangoló"
 msgid "TAG_GLAUNCHER"
 msgstr "Gránátvető"
 
-msgid "LANG_NATIVE"
-msgstr "English (US)"
-
-msgid "LANG_ENG"
-msgstr "Angol (Egyesült Államok)"
-
 msgid "ACTION_OPENWADDIR"
 msgstr "Böngészés a WAD-ok között"
 
@@ -5366,6 +5341,30 @@ msgstr "Böngészés a beállítások között"
 msgid "OPTMNU_OPENWADS"
 msgstr "Böngészés az IWAD mappában"
 
-#, fuzzy
 msgid "SNDMNU_NOMIDIOPTIONS"
-msgstr "Midi eszköz nem biztosít beállításokat."
+msgstr "MIDI eszköz nem biztosít beállításokat."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Mikoportal-ok szimulációja"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Célkereszt színe teljes életerőnél"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Célkereszt színe teljes életerőnél"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Dinamikus célkereszt színek"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Célkereszt függőleges eltolása"
+
+#, fuzzy
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Alfa Kitöltés"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Kétszeres kattintási küszöb"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s fok"

@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-28 00:29+0000\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Danish <https://hosted.weblate.org/projects/uzdoom/common/da/>"
-"\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/uzdoom/common/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1-dev\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Tryk på Y eller N."
@@ -62,8 +61,7 @@ msgstr "Sig:"
 
 msgid "TXT_QUITENDOOM"
 msgstr ""
-"Tryk på en vilkårlig tast eller klik et vilkårligt sted i vinduet for at "
-"afslutte."
+"Tryk på en vilkårlig tast eller klik et vilkårligt sted i vinduet for at afslutte."
 
 msgid "NEWSAVE"
 msgstr "<Nyt gemmer spil>"
@@ -266,7 +264,7 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Våben 1"
 
 # only show appropriate slots per game
-# 
+#
 msgid "CNTRLMNU_SLOT2"
 msgstr "Våben 2"
 
@@ -1565,18 +1563,6 @@ msgstr "Ingen resultater fundet."
 
 msgid "OS_LABEL"
 msgstr "Søg:"
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "0"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-#, fuzzy
-msgid "REQUIRED_CHARACTERS"
-msgstr "ÅÆØÉ"
 
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "Fuld menu med indstillinger"

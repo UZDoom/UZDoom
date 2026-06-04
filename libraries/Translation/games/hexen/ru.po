@@ -2,18 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen/ru/>\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/doom-engine-games/hexen/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural="
-"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
-"1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Зал отсеивания"
@@ -132,6 +129,7 @@ msgstr ""
 "сами стены ожили, чтобы отяготить\n"
 "каждый ваш шаг."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Едва переведя дух после\n"
@@ -156,6 +154,7 @@ msgstr ""
 "О, боги смерти, что это за место?\n"
 "О, боги боли, как выбраться из него?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "Сил могущественного оружия и чар\n"
@@ -180,6 +179,7 @@ msgstr ""
 "\n"
 "Притаившиеся враги уже ждут внутри..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "«...И сойдёт он в царство мёртвых,\n"
@@ -209,6 +209,7 @@ msgstr ""
 "струится с возвышения неподалёку\n"
 "от вас."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Это сфера хаоса, источник силы\n"
@@ -267,6 +268,7 @@ msgstr "на Семи порталах"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Лестница воздвигнулась на Семи порталах"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Остался ещё один переключатель..."
 
@@ -321,6 +323,7 @@ msgstr "Дверь заблокирована изнутри"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Площадка опустилась в центральной башне"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Ты слишком заигрался, смертный..."
 

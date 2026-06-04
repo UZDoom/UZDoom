@@ -145,13 +145,14 @@ public:
 	virtual void OnWindowActivated() = 0;
 	virtual void OnWindowDeactivated() = 0;
 	virtual void OnWindowDpiScaleChanged() = 0;
+	virtual void OnWindowNotified() = 0;
 	virtual bool OnFileDrop(std::string path) = 0;
 };
 
 class DisplayWindow
 {
 public:
-	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable);
+	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility);
 
 	static void ProcessEvents();
 	static void RunLoop();
@@ -209,6 +210,8 @@ public:
 
 	virtual std::vector<std::string> GetVulkanInstanceExtensions() = 0;
 	virtual VkSurfaceKHR CreateVulkanSurface(VkInstance instance) = 0;
+
+	virtual void NotifyWindow() = 0;
 };
 
 class DisplayBackend
@@ -227,7 +230,7 @@ public:
 	virtual bool IsWin32() { return false; }
 	virtual bool IsSDL2() { return false; }
 
-	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable) = 0;
+	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility) = 0;
 	virtual void ProcessEvents() = 0;
 	virtual void RunLoop() = 0;
 	virtual void ExitLoop() = 0;

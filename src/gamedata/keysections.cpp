@@ -54,7 +54,7 @@ static void LoadKeys (const char *modname, bool dbl)
 	}
 }
 
-static void DoSaveKeys (FConfigFile *config, const char *section, FKeySection *keysection, bool dbl)
+static void DoSaveKeys (FConfigFile *config, FString section, FKeySection *keysection, bool dbl)
 {
 	config->SetSection (section, true);
 	config->ClearCurrentSection ();
@@ -65,14 +65,12 @@ static void DoSaveKeys (FConfigFile *config, const char *section, FKeySection *k
 	}
 }
 
-void M_SaveCustomKeys (FConfigFile *config, char *section, char *subsection, size_t sublen)
+void M_SaveCustomKeys (FConfigFile *config, FString section)
 {
 	for (unsigned i=0; i<KeySections.Size(); i++)
 	{
-		mysnprintf (subsection, sublen, "%s.Bindings", KeySections[i].mSection.GetChars());
-		DoSaveKeys (config, section, &KeySections[i], false);
-		mysnprintf (subsection, sublen, "%s.DoubleBindings", KeySections[i].mSection.GetChars());
-		DoSaveKeys (config, section, &KeySections[i], true);
+		DoSaveKeys (config, section + KeySections[i].mSection + ".Bindings", &KeySections[i], false);
+		DoSaveKeys (config, section + KeySections[i].mSection + ".DoubleBindings", &KeySections[i], true);
 	}
 }
 

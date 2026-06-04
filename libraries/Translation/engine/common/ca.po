@@ -1,0 +1,1763 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-01 23:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/uzdoom/common/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "PRESSYN"
+msgstr "Prem Y o N."
+
+msgid "TXT_YES"
+msgstr "Sí"
+
+msgid "TXT_NO"
+msgstr "No"
+
+msgid "SAVEDEAD"
+msgstr ""
+"No pots desar si no estàs jugant!\r\n"
+"\r\n"
+"Prem una tecla."
+
+msgid "SAFEMESSAGE"
+msgstr "De debò vols fer això?"
+
+msgid "QSPROMPT"
+msgstr ""
+"Vols sobreescriure amb desament ràpid la partida anomenada\r\n"
+"\r\n"
+"'%s'?\r\n"
+"\r\n"
+"Prem Y o N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Vols carregar ràpidament la partida anomenada\r\n"
+"\r\n"
+"'%s'?\r\n"
+"\r\n"
+"Prem Y o N."
+
+msgid "TXT_X_CHEATS"
+msgstr "Trucs de %s"
+
+msgid "MSGOFF"
+msgstr "Missatges: OFF"
+
+msgid "MSGON"
+msgstr "Missatges: ON"
+
+msgid "TXT_SAY"
+msgstr "Digues:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Prem qualsevol tecla o fes clic a qualsevol lloc de la finestra per sortir."
+
+msgid "NEWSAVE"
+msgstr "<Nova partida desada>"
+
+msgid "GGSAVED"
+msgstr "Partida desada."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Temps"
+
+msgid "MNU_LOADGAME"
+msgstr "Carrega partida"
+
+msgid "MNU_SAVEGAME"
+msgstr "Desa partida"
+
+msgid "MNU_NOPICTURE"
+msgstr "Cap imatge"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Versió diferent"
+
+msgid "MNU_NOFILES"
+msgstr "Cap fitxer"
+
+msgid "MNU_DELETESG"
+msgstr "De debò vols suprimir la partida desada?"
+
+msgid "OPTVAL_OFF"
+msgstr "Desactivat"
+
+msgid "OPTVAL_ON"
+msgstr "Activat"
+
+msgid "OPTVAL_AUTO"
+msgstr "Auto"
+
+msgid "OPTMNU_TITLE"
+msgstr "Opcions"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Personalitza els controls"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Opcions del ratolí"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Opcions del comandament"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Configuració del jugador"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Opcions de joc"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Opcions del mapa automàtic"
+
+msgid "OPTMNU_HUD"
+msgstr "Opcions de la interfície"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Opcions diverses"
+
+msgid "OPTMNU_SOUND"
+msgstr "Opcions de so"
+
+msgid "ACCMNU_TITLE"
+msgstr "Opcions d'Accessibilitat"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Opcions de pantalla"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Configura el mode de vídeo"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Restableix els valors per defecte"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Restableix l'últim desat"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Desa la configuració actual"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Ves a la consola"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Opcions de xarxa"
+
+msgid "OPTMNU_REVERB"
+msgstr "Editor d'entorn de reverberació"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER per canviar, RETROCÉS per esborrar"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Prem una tecla nova per al control, ESC per cancel·lar"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Controls"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Dispara"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Dispar secundari"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Recarrega l'arma"
+
+msgid "CNTRLMNU_USE"
+msgstr "Usa / Obre"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Avança"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Retrocedeix"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Desplaça't a l'esquerra"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Desplaça't a la dreta"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Gira a l'esquerra"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Gira a la dreta"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Gir ràpid"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Salta"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Ajup-te"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Alterna ajupir-se"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Vista amb ratolí"
+
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Mira amunt"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Mira avall"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Centra la vista"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Corre"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Alterna córrer"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Desplaçament lateral"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Mostra el marcador"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Acció"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Personalitza els controls d'acció"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Multijugador"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Digues"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Personalitza els controls d'armes"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Personalitza els controls de l’inventari"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Personalitza altres controls"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Armes"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Arma següent"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Arma anterior"
+
+msgid "CNTRLMNU_SLOT1"
+msgstr "Arma 1"
+
+msgid "CNTRLMNU_SLOT2"
+msgstr "Arma 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Arma 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Arma 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Arma 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Arma 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Arma 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Arma 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Arma 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Arma 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventari"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Activa l’objecte"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Activa tots els objectes"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Objecte següent"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Objecte anterior"
+
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Personalitza els controls del mapa"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Controls del mapa"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Desplaça a l’esquerra"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Desplaça a la dreta"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Desplaça amunt"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Desplaça avall"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Amplia"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Redueix"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Alterna el zoom"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Alterna el seguiment"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Alterna la graella"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Alterna la rotació"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Alterna la textura"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Alterna el mapa automàtic"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Càmera de seguiment"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Captura de pantalla"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Pausa"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Augmenta la mida de pantalla"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Redueix la mida de pantalla"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Obre l’ajuda"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Obre el menú de desar"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Obre el menú de carregar"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Obre el menú d’opcions"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Obre el menú de pantalla"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Desament ràpid"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Càrrega ràpida"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Surt al menú principal"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Alterna els missatges"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Surt de la partida"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Activa el ratolí"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Activa el ratolí als menús"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Mostra el botó Enrere"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Cursor"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Sensibilitat horitzontal"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Sensibilitat vertical"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Moviment suau del ratolí"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Velocitat de gir"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Velocitat de vista amb ratolí"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Velocitat endavant/enrere"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Velocitat de desplaçament lateral"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Vista amb ratolí sempre activa"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Inverteix l’eix Y del ratolí"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Inverteix l’eix X del ratolí"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Superior esquerra"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Superior dreta"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Inferior esquerra"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Inferior dreta"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Com en pantalla tàctil"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Fletxa simple"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Cursor del sistema"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Per defecte"
+
+msgid "JOYMNU_TITLE"
+msgstr "Configura el comandament"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Opcions del comandament"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Bloqueja l’entrada del comandament al menú"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Activa la compatibilitat amb comandaments"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Activa comandaments DirectInput"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Activa comandaments XInput"
+
+msgid "JOYMNU_PS2"
+msgstr "Activa adaptadors PlayStation 2 en cru"
+
+msgid "JOYMNU_NOCON"
+msgstr "No s’ha detectat cap comandament"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Configura els comandaments:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "La compatibilitat amb comandaments ha d’estar"
+
+msgid "JOYMNU_DISABLED2"
+msgstr "activada per detectar-ne cap"
+
+msgid "JOYMNU_INVALID"
+msgstr "Comandament no vàlid especificat per al menú"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Sensibilitat global"
+
+msgid "JOYMNU_AXIS"
+msgstr "Configuració dels eixos"
+
+msgid "JOYMNU_INVERT"
+msgstr "Inverteix"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Zona morta"
+
+msgid "JOYMNU_NOAXES"
+msgstr "No hi ha eixos configurables"
+
+msgid "OPTVAL_NONE"
+msgstr "Cap"
+
+msgid "OPTVAL_TURNING"
+msgstr "Gir"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Mirar amunt/avall"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Avançar"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Desplaçament lateral"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Moure’s amunt/avall"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Invertit"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "No invertit"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Blau"
+
+msgid "TXT_COLOR_RED"
+msgstr "Vermell"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Verd"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Gris"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Gris fosc"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Verd fosc"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Marró"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Blau fosc"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Vermell clar"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Groc"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Porpra"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Oliva"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Beix"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Blau clar"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Gris clar"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Marró clar"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Daurat"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Verd brillant"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rovell"
+
+msgid "PLYRMNU_NAME"
+msgstr "Nom"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Equip"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Color"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Gènere"
+
+msgid "OPTVAL_MALE"
+msgstr "Home"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Dona"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neutral"
+
+msgid "OPTVAL_OTHER"
+msgstr "Objecte"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Opcions de joc"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Sempre"
+
+msgid "OPTVAL_NEVER"
+msgstr "Mai"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Apuntat automàtic"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Córrer sempre"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Mida de pantalla"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Sincronització vertical"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Models"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Centra els missatges"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Mida de la cua de missatges"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Apila els missatges repetits"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Visualització polsant dels missatges"
+
+msgid "MNU_COLORPICKER"
+msgstr "Selecciona el color"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Gira el mapa automàtic"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Segueix el jugador"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Alfa de les línies"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Gruix de les línies"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Personalitza els colors del mapa"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Restaura els colors personalitzats per defecte"
+
+msgid "OPTVAL_8000HZ"
+msgstr "8000 Hz"
+
+msgid "OPTVAL_11025HZ"
+msgstr "11025 Hz"
+
+msgid "OPTVAL_22050HZ"
+msgstr "22050 Hz"
+
+msgid "OPTVAL_32000HZ"
+msgstr "32000 Hz"
+
+msgid "OPTVAL_44100HZ"
+msgstr "44100 Hz"
+
+msgid "OPTVAL_48000HZ"
+msgstr "48000 Hz"
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 mostres"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 mostres"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 mostres"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 mostres"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 mostres"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 mostres"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 mostres"
+
+msgid "OPTSTR_AUTO"
+msgstr "Auto"
+
+msgid "OPTSTR_MONO"
+msgstr "Mono"
+
+msgid "OPTSTR_STEREO"
+msgstr "Estèreo"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Descodificador Dolby Pro Logic"
+
+msgid "OPTSTR_QUAD"
+msgstr "Quad"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 altaveus"
+
+msgid "OPTSTR_5POINT1"
+msgstr "Altaveus 5.1"
+
+msgid "OPTSTR_7POINT1"
+msgstr "Altaveus 7.1"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Dispositiu de reproducció"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Activa EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Remostrejador"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Volum dels sons"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Volum del menú"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Volum de la música"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "Dispositiu MIDI"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "So en segon pla"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Reverberació sota l’aigua"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Aleatoritza els tons"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Canals de so"
+
+msgid "SNDMNU_OPENAL"
+msgstr "Opcions d’OpenAL"
+
+msgid "SNDMNU_RESTART"
+msgstr "Reinicia el so"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Opcions avançades"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Opcions del reproductor de mòduls"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Opcions del reproductor MIDI"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Opcions avançades de so"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Freqüència de mostreig"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr "HRTF"
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "Síntesi OPL"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Nombre de xips OPL emulats"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr "Guany"
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Panoramització estèreo MIDI completa"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "Nucli de l’emulador OPL"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "Veus MIDI"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr "FluidSynth"
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Global"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Freeverb"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Freeverb global"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Guany"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Reverberació"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Nivell de reverberació"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Cor"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr "Timidity++"
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr "ADLMidi"
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr "OPNMidi"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr "WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Selecciona la configuració"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Remostreig avançat"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "Banc OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Executa l’emulador a freqüència PCM"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Nombre de xips OPL emulats"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Guany"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Model de volum"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr "Mètode d’assignació de canals"
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr "Arpegi automàtic"
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "Nucli de l’emulador OPN2"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "Emulació GUS"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Llegeix lumps DMXGUS"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Mida de memòria GUS"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Nombre de xips OPN emulats"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Guany"
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Usa un banc WOPL personalitzat"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr "Usa el banc GENMIDI del WAD com a banc personalitzat"
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Fitxer de banc WOPL"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Usa un banc WOPN personalitzat"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Fitxer de banc WOPN"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Aliàsing"
+
+msgid "OPTVAL_LINEAR_1"
+msgstr "Lineal"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Lineal"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Lineal"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Més proper"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (baix)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (mitjà)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (alt)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Cúbic"
+
+msgid "OPTVAL_BLEP"
+msgstr "Pas limitat en banda"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Lineal (més lent)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Lineal limitat en banda"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Cúbic (més lent)"
+
+msgid "OPTVAL_SINC"
+msgstr "Sinc"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Només nota activada/desactivada"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Rampa completa"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Volum mestre"
+
+msgid "MODMNU_QUALITY"
+msgstr "Qualitat"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Rampa de volum"
+
+msgid "OPTVAL_LIBXMP"
+msgstr "libXMP"
+
+msgid "OPTVAL_DUMB"
+msgstr "Dumb"
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr "Chip-o-matic"
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr "MAME OPL2"
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr "DOSBox OPL3"
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr "Java OPL3"
+
+msgid "OPTVAL_ESFMu"
+msgstr "ESFMu OPL3"
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr "YMFM OPL2"
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr "YMFM OPL3"
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr "Nuked OPL3"
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "OPL2-LLE (exigent en rendiment)"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "OPL3-LLE (exigent en rendiment)"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr "MAME OPN2 (YM2612)"
+
+msgid "OPTVAL_NP2OPNA"
+msgstr "Neko Project II Kai OPNA"
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr "MAME YM2608"
+
+msgid "OPTVAL_OPALOPL3"
+msgstr "Opal OPL3"
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr "Nuked OPL3 v1.7.4"
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr "Nuked OPN2 (YM3438)"
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr "Nuked OPN2 (YM2612)"
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr "OPN2-LLE (YM2612) (exigent en rendiment)"
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr "OPN2-LLE (YM3438) (exigent en rendiment)"
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr "OPN2-LLE (YMF276) (exigent en rendiment)"
+
+msgid "OPTVAL_GENSOPN2"
+msgstr "GENS OPN2 (YM2612)"
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr "YMFM OPN2"
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr "YMFM OPNA"
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Auto (usa la configuració del banc)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Automàtic (usa la configuració del banc)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Genèric"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Genèric"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL natiu"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN natiu"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (precís, amb error AM)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr "Com a DMX"
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (precís, amb error AM)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr "Com a Apogee Sound System"
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Com Win9X"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Com Win9X (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Com Win9X (FM genèric)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (sense error de veu AM)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (sense error de veu AM)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "Interfície IBM Audio Library"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "Sistema operatiu de so HMI"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (antic, amb errors)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "Automàtic"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "Retard de so apagat mesurat"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "Reutilitza la primera nota alliberada del mateix instrument"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "Reutilitza qualsevol primera nota alliberada"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Il·limitat"
+
+msgid "OPTVAL_256K"
+msgstr "256K"
+
+msgid "OPTVAL_512K"
+msgstr "512K"
+
+msgid "OPTVAL_768K"
+msgstr "768K"
+
+msgid "OPTVAL_1024K"
+msgstr "1024K"
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr "Uncharted 2"
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr "Hejl-Dawson"
+
+msgid "OPTVAL_REINHARD"
+msgstr "Reinhard"
+
+msgid "OPTVAL_PALETTE"
+msgstr "Paleta"
+
+msgid "OPTVAL_LOW"
+msgstr "Baixa"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Mitjana"
+
+msgid "OPTVAL_HIGH"
+msgstr "Alta"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Extrema"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Anvers"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Revers"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Postprocessament"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Mode de mapatge tonal"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Efecte de distorsió de lent"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Qualitat FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Sortida amb tramat"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Ordre de mapatge tonal de la paleta"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Exponent de mapatge tonal de la paleta"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Multimostreig"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Efecte bloom"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Qualitat de l’oclusió ambiental"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portals amb oclusió ambiental"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Desenfocament del menú"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Mapa d’entorn als miralls"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Qualitat de renderització"
+
+msgid "OPTVAL_SPEED"
+msgstr "Velocitat"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Qualitat"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Mode d’il·luminació dels sectors"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Mode de boira"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radial"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Estàndard"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Mode de filtre de textures"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Filtre anisotròpic"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Cap (mipmap més proper)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Cap (mipmap lineal)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Cap (trilineal)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilineal"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilineal"
+
+msgid "OPTVAL_2X"
+msgstr "2x"
+
+msgid "OPTVAL_4X"
+msgstr "4x"
+
+msgid "OPTVAL_8X"
+msgstr "8x"
+
+msgid "OPTVAL_16X"
+msgstr "16x"
+
+msgid "OPTVAL_32X"
+msgstr "32x"
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Opcions de textures"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Mode de redimensionament d’alta qualitat"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Multiplicador de redimensionament d’alta qualitat"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Aquest mode requereix %d vegades més memòria de vídeo"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Redimensiona textures"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Redimensiona sprites"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Redimensiona fonts"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Redimensiona textures de models"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Precarrega textures GL"
+
+msgid "VIDMNU_TITLE"
+msgstr "Mode de vídeo"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Franges negres"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Estira"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Mode de renderització"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Pantalla completa"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Compatibilitat Retina/HiDPI"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Força la relació d’aspecte"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Estil de relació forçada"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Escala de resolució"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Factor d’escala"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Usa escalat lineal (pantalla completa)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Escalat de píxels personalitzat"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Amplada personalitzada"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Alçada personalitzada"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Aplica els canvis (finestra)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Aplica els canvis (pantalla completa)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Tria un preajust de resolució"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Preajustos de resolució personalitzats"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Modes de resolució predefinits"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Aspecte 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Aspecte 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Aspecte 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Aspecte 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Aspecte 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normal"
+
+msgid "OPTVAL_LOWEST"
+msgstr "Escala mínima possible"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Personalitzat"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "FPS màxims"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 fps"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 fps"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 fps"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 fps"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 fps"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 fps"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "API de renderització preferida"
+
+msgid "OPTVAL_OPENGL"
+msgstr "OpenGL"
+
+msgid "OPTVAL_VULKAN"
+msgstr "Vulkan"
+
+msgid "OPTVAL_OPENGLES"
+msgstr "OpenGL ES"
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Fusiona Alt/Ctrl/Maj esquerra+dreta"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter alterna pantalla completa"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F alterna pantalla completa"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Activa els desaments automàtics"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Nombre de desaments automàtics"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Confirmació de desar/carregar"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Desactiva els trucs de teclat"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rotació de desaments ràpids"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Nombre de desaments ràpids en rotació"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Escalat clàssic de ZDoom"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Pausa el joc en segon pla"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Punt de mira per defecte"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Color del punt de mira"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Escala del punt de mira"
+
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Estàndard"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Millorat"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Idioma"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Desfés els canvis"
+
+msgid "REVMNU_SELECT"
+msgstr "Selecciona l’entorn"
+
+msgid "REVMNU_TEST"
+msgstr "Prova l’entorn"
+
+msgid "REVMNU_EDIT"
+msgstr "Edita l’entorn"
+
+msgid "REVMNU_NEW"
+msgstr "Entorn nou"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Escala de reflexions"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Escala del retard de reflexions"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Escala del temps de decaïment"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Límit de decaïment HF"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Escala de reverberació"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Escala del retard de reverberació"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Escala del temps d’eco"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Escala del temps de modulació"
+
+msgid "REVMNU_Based_on"
+msgstr "Basat en"
+
+msgid "REVMNU_Name"
+msgstr "Nom"
+
+msgid "REVMNU_ID_1"
+msgstr "ID núm. 1"
+
+msgid "REVMNU_ID_2"
+msgstr "ID núm. 2"
+
+msgid "REVMNU_Create"
+msgstr "Crea"
+
+msgid "REVMNU_Save"
+msgstr "Desa…"
+
+msgid "REVMNU_File_name"
+msgstr "Nom del fitxer"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Entorns per desar"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Opcions de Vulkan (experimental)"
+
+msgid "VK_TITLE"
+msgstr "Opcions de Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "ID del dispositiu Vulkan"
+
+msgid "VKMNU_HDR"
+msgstr "Alt rang dinàmic"
+
+msgid "VK_WARNING"
+msgstr "Avís: el renderitzador Vulkan és molt experimental!"
+
+msgid "VK_RESTART"
+msgstr "Aquestes opcions requeriran reiniciar per tenir efecte."
+
+msgid "OPTVAL_SCALENX"
+msgstr "ScaleNx"
+
+msgid "OPTVAL_NORMALNX"
+msgstr "NormalNx"
+
+msgid "OPTVAL_HQNX"
+msgstr "hqNx"
+
+msgid "OPTVAL_HQNXMMX"
+msgstr "hqNx MMX"
+
+msgid "OPTVAL_NXBRZ"
+msgstr "xBRZ"
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "xBRZ antic"
+
+msgid "OS_TITLE"
+msgstr "Cerca d’opcions"
+
+msgid "OS_ANY"
+msgstr "Cerca qualsevol terme"
+
+msgid "OS_ALL"
+msgstr "Cerca tots els termes"
+
+msgid "OS_NO_RESULTS"
+msgstr "No s’ha trobat cap resultat."
+
+msgid "OS_LABEL"
+msgstr "Cerca:"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Menú complet d’opcions"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Menú simple d’opcions"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Explora la configuració del joc"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Explora les captures de pantalla"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Explora les partides desades"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Intercanvia els botons del ratolí"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Només modificades"
+
+msgid "TXT_UNKNOWN"
+msgstr "Desconegut"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Aquesta partida desada necessita aquests fitxers"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Corones"
+
+msgid "PICKER_SELECT"
+msgstr "Selecciona quin fitxer de joc vols executar."
+
+msgid "PICKER_PLAY"
+msgstr "Juga"
+
+msgid "PICKER_EXIT"
+msgstr "Surt"
+
+msgid "PICKER_GENERAL"
+msgstr "General"
+
+msgid "PICKER_EXTRA"
+msgstr "Gràfics extra"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Pantalla completa"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Desactiva la càrrega automàtica"
+
+msgid "PICKER_DONTASK"
+msgstr "No m’ho tornis a preguntar"
+
+msgid "PICKER_LIGHTS"
+msgstr "Llums"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Mapes de brillantor"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Pantalla ampla"
+
+msgid "PICKER_ADDPARM"
+msgstr "Paràmetres addicionals:"
+
+msgid "PICKER_WELCOME"
+msgstr "Benvingut/da a %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Versió %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API de renderització"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Joc"
+
+msgid "JOYMNU_JOYENABLE"
+msgstr "Activa aquest comandament"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Obre el menú principal"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Reproductor de mòduls"
+
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Permet l’entrada del comandament en segon pla"
+
+msgid "MISCMNU_SAVEORDER"
+msgstr "Ordre de les partides desades"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Alfabètic"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Hora de l’últim desament"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Juga i allotja"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Uneix-te a una partida"
+
+msgid "PICKER_REMPARM"
+msgstr "Elimina paràmetre"
+
+msgid "PICKER_SUPPORTWADS"
+msgstr "WADs de suport"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Multijugador"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Carrega partida:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Elimina partida"
+
+msgid "PICKER_HOST"
+msgstr "Allotja"
+
+msgid "PICKER_JOIN"
+msgstr "Uneix-te"
+
+msgid "PICKER_NETRATE"
+msgstr "Taxa de xarxa:"
+
+msgid "PICKER_NETBACKUP"
+msgstr "Còpies de seguretat de xarxa"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Mode de joc:"
+
+msgid "PICKER_COOP"
+msgstr "Cooperatiu"
+
+msgid "PICKER_DM"
+msgstr "Combat a mort"
+
+msgid "PICKER_TDM"
+msgstr "Deathmatch per equips"
+
+msgid "PICKER_TEAM"
+msgstr "Equip #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Deathmatch alternatiu"
+
+msgid "PICKER_PLAYERS"
+msgstr "Màxim de Jugadors:"
+
+msgid "PICKER_PORT"
+msgstr "Port de l'hoste:"
+
+msgid "PICKER_PLAYERHINT"
+msgstr "Nom o nombre de jugadors"
+
+msgid "PICKER_PORTHINT"
+msgstr "Port de xarxa"
+
+msgid "PICKER_TEAMHINT"
+msgstr "Nom de l’equip"
+
+msgid "PICKER_IP"
+msgstr "IP de l'hoste:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Combat a mort per equips:"
+
+msgid "TXT_SAYTEAM"
+msgstr "Digues a l’equip:"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Presència enriquida de Discord"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "Velocitat de gir"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "Velocitat de mirada"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Córrer lateral analògic"
+
+msgid "NOTES_FAIL"
+msgstr "No s’han pogut carregar les notes de la versió"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Versió desconeguda"
+
+msgid "NOTES_RELEASED"
+msgstr "%s versió %s, publicada el %s"
+
+msgid "NOTES_EMPTY"
+msgstr "No hi ha notes de la versió disponibles."
+
+msgid "NOTES_DETAILS"
+msgstr "Per a més detalls, consulta: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Mostra això en iniciar"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Mostra les notes de la versió"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Quant a"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Notes de la versió"

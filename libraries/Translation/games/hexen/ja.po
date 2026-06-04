@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:47+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen/ja/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/doom-engine-games/hexen/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "選抜の間"
@@ -120,6 +119,7 @@ msgstr ""
 "故に、遠くでちらつく、聳え立つ柱の間は貴方のあらゆる\n"
 "努力を嘲ている様にも思える。"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "貴方は聳え立つ柱の間での遭遇に動揺したが\n"
@@ -135,6 +135,7 @@ msgstr ""
 "何処から来たというのだ?死の神々よ!\n"
 "苦痛の神々から、どうやって逃げ出せるだろうか?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "古代人の強力な武器やアーティファクトはヘレシアークと\n"
@@ -147,6 +148,7 @@ msgstr ""
 "窓から灯った火の影から不気味な何十もの目が貴方に\n"
 "向けられている。敵は何処にでも潜んでいるらしい..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "...そして彼は絶望の門を越え、死者の国にいる勢力と\n"
@@ -167,6 +169,7 @@ msgstr ""
 "立っていた。遠くには盛り上がった大皿が見え、\n"
 "その上にこの場所で唯一の光が灯っている。"
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "カオススフィア、コラックスの魔力の源だ。\n"
@@ -218,6 +221,7 @@ msgstr "漆之門 に影響を与えた"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "漆之門 に階段が立ち昇った"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "他のスイッチも探す必要がある..."
 
@@ -272,6 +276,7 @@ msgstr "この扉は内側から塞がれている"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "塔内の昇降機が下りた"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "遊びはここまでだ、小僧"
 

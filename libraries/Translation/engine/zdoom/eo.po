@@ -4,8 +4,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/eo/>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -2163,7 +2162,7 @@ msgstr "Polvigilo (fortega)"
 msgid "TAG_GLAUNCHER1"
 msgstr "Grenadĵetilo (eksplodeg-pova)"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Grenadĵetilo (fosfora)"
 
@@ -4565,18 +4564,16 @@ msgstr "Konservita ludado '%s' estas el alia ZDoom-bazita modulo:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Konservita ludado '%s' estas el pli malnova versio: %d (%e estas la plej "
-"malnova subtenata)."
+"Konservita ludado '%s' estas el pli malnova versio: %d (%e estas la plej malnova subtenata)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Konservita ludado '%s' estas el pli nova versio: %d (%e estas la plej nova "
-"subtenata)."
+"Konservita ludado '%s' estas el pli nova versio: %d (%e estas la plej nova subtenata)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Al la konservita ludado '%s' mankas la nuna mapo."
@@ -5171,9 +5168,7 @@ msgstr ""
 "Ĉi tiu estas ekzempla ŝpruchelpilo.\n"
 "Jen iom da aldona teksto.\n"
 "…\n"
-"Jen tre longa tekstlinio, kiu ŝajnas daŭri senfine sen iam ajn havi ion "
-"interesan por diri, ŝajne nur tiel longa ĉar la programistoj malfacile "
-"klarigas, kion faras opcio."
+"Jen tre longa tekstlinio, kiu ŝajnas daŭri senfine sen iam ajn havi ion interesan por diri, ŝajne nur tiel longa ĉar la programistoj malfacile klarigas, kion faras opcio."
 
 msgid "OPTVAL_STRICT"
 msgstr "Severa"
@@ -5237,43 +5232,34 @@ msgstr "Rulum-rapido de ŝpruchelpilo"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Regas la lumradiusan distancon ĉirkaŭ la ludanto en mapunuoj. Pli grandaj "
-"valoroj briligas the scenon."
+"Regas la lumradiusan distancon ĉirkaŭ la ludanto en mapunuoj. Pli grandaj valoroj briligas the scenon."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Sumo de sektora lumigo aldoni plue de ekzistantaj sektoraj lumniveloj, dum "
-"konservanta la jama lumreĝimo."
+"Sumo de sektora lumigo aldoni plue de ekzistantaj sektoraj lumniveloj, dum konservanta la jama lumreĝimo."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Kompensas la limigojn de via ekrano. Agordu ĝis la vertikalaj grizaj blokoj "
-"dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur uzi ĝin certigi, ke la "
-"bildo estas kalibrita por via agordaĵo."
+"Kompensas la limigojn de via ekrano. Agordu ĝis la vertikalaj grizaj blokoj dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur uzi ĝin certigi, ke la bildo estas kalibrita por via agordaĵo."
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Kompensas por ekranoj, kiuj ne vidigas malhelajn bilderojn ĝuste. Agordu ĝis "
-"la diagonalaj blankaj blokoj dissolvas. Ne uzu ĉi tiun por briligi la ludon, "
-"nur uzi ĝin certigi, ke la bildo estas kalibrita por via agordaĵo."
+"Kompensas por ekranoj, kiuj ne vidigas malhelajn bilderojn ĝuste. Agordu ĝis la diagonalaj blankaj blokoj dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur uzi ĝin certigi, ke la bildo estas kalibrita por via agordaĵo."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "Restartigas ĉiujn opciojn en ĉi tiu menuo al defaŭltaj agordoj."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Agordas la intensecon de la koloroj, igante la bildon aspekti pli viveca aŭ "
-"pli malforta. Agordu laŭ via prefero."
+"Agordas la intensecon de la koloroj, igante la bildon aspekti pli viveca aŭ pli malforta. Agordu laŭ via prefero."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Agordas la perceptitan diferencon inter similaj koloroj. Regas kiel akra aŭ "
-"pala la bildo aspektas. Agordu laŭ via prefero."
+"Agordas la perceptitan diferencon inter similaj koloroj. Regas kiel akra aŭ pala la bildo aspektas. Agordu laŭ via prefero."
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Aplikas linian heleco-ĝustigon. Agordu laŭ via prefero, aŭ por vidi en la "
-"mallumo."
+"Aplikas linian heleco-ĝustigon. Agordu laŭ via prefero, aŭ por vidi en la mallumo."
 
 msgid "ACTION_COPYTOCLIPBOARD"
 msgstr "Kopii al tondujo"

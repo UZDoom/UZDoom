@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
+"PO-Revision-Date: 2026-05-05 22:17-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
-"uzdoom/zdoom-engine-strings/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Pressione qualquer tecla."
@@ -321,8 +320,7 @@ msgstr "Modo sem colisão 3D: DESATIVADO"
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
 msgstr ""
-"Invulnerabilidade (V), Frenesi (S), Invisibilidade (I), Antirradiação (R), "
-"Mapa Completo (A) ou Amplificação de Luz (L)"
+"Invulnerabilidade (V), Frenesi (S), Invisibilidade (I), Antirradiação (R), Mapa Completo (A) ou Amplificação de Luz (L)"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Potencializador ativado"
@@ -2164,7 +2162,7 @@ msgstr "Desintegrador"
 msgid "TAG_GLAUNCHER1"
 msgstr "Lança-granadas"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Lança-granadas"
 
@@ -4567,18 +4565,16 @@ msgstr "O jogo salvo \"%s\" é de outra engine baseada em ZDoom:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"O jogo salvo \"%s\" é de uma versão mais antiga: %d (%e sendo a mais antiga "
-"suportada)."
+"O jogo salvo \"%s\" é de uma versão mais antiga: %d (%e sendo a mais antiga suportada)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"O jogo salvo \"%s\" é de uma versão mais nova: %d (%e sendo a mais recente "
-"suportada)."
+"O jogo salvo \"%s\" é de uma versão mais nova: %d (%e sendo a mais recente suportada)."
 
 msgid "TXT_NOMAPSG"
 msgstr "O jogo salvo \"%s\" não possui o mapa atual."
@@ -5223,9 +5219,7 @@ msgstr ""
 "Este é um tooltip de exemplo.\n"
 "Aqui está um texto complementar.\n"
 "...\n"
-"Aqui está uma linha de texto bem longa que parece só continuar sem nunca ter "
-"algo de interessante para falar, aparentemente sendo longo só porque os "
-"desenvolvedores não conseguem explicar o que uma opção faz."
+"Aqui está uma linha de texto bem longa que parece só continuar sem nunca ter algo de interessante para falar, aparentemente sendo longo só porque os desenvolvedores não conseguem explicar o que uma opção faz."
 
 msgid "ACCMNU_LIGHT_EXTRA"
 msgstr "Iluminação extra"
@@ -5248,9 +5242,6 @@ msgstr "Calibração de Imagem"
 msgid "CNTRLMNU_ADJUST_LIGHTS"
 msgstr "Ajuste de Iluminação"
 
-msgid "LANG_ENG"
-msgstr "Portuguese (Brazil)"
-
 msgid "DSPLYMNU_IMAGEADJUST_TOP1"
 msgstr "De uma distância normal, ajuste as opções abaixo."
 
@@ -5268,6 +5259,3 @@ msgstr "Estilo Visual da Explosão"
 
 msgid "ACCMNU_LIGHT"
 msgstr "Iluminação"
-
-msgid "LANG_NATIVE"
-msgstr "Português (Brasil)"

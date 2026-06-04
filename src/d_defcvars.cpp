@@ -34,8 +34,8 @@
 void D_GrabCVarDefaults()
 {
 	int lump, lastlump = 0;
-	int lumpversion, gamelastrunversion;
-	gamelastrunversion = atoi(LASTRUNVERSION);
+	int lumpversion, lastrunversion;
+	lastrunversion = atoi(ENGINELASTRUNVERSION);
 
 	while ((lump = fileSystem.FindLump("DEFCVARS", &lastlump)) != -1)
 	{
@@ -51,13 +51,13 @@ void D_GrabCVarDefaults()
 
 		sc.MustGetString();
 		if (!sc.Compare("version"))
-			sc.ScriptError("Must declare version for defcvars! (currently: %i)", gamelastrunversion);
+			sc.ScriptError("Must declare version for defcvars! (currently: %i)", lastrunversion);
 		sc.MustGetNumber();
 		lumpversion = sc.Number;
-		if (lumpversion > gamelastrunversion)
-			sc.ScriptError("Unsupported version %i (%i supported)", lumpversion, gamelastrunversion);
+		if (lumpversion > lastrunversion)
+			sc.ScriptError("Unsupported version %i (%i supported)", lumpversion, lastrunversion);
 		if (lumpversion < 219)
-			sc.ScriptError("Version must be at least 219 (current version %i)", gamelastrunversion);
+			sc.ScriptError("Version must be at least 219 (current version %i)", lastrunversion);
 
 		FBaseCVar* var;
 		FString CurrentFindCVar;

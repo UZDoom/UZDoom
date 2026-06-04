@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 05:42+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen-deathkings/tr/>\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Yıkık Köy"
@@ -91,6 +90,7 @@ msgstr "Kanalizasyon Çukuru"
 msgid "TXT_HEXDD_MAP38"
 msgstr "Gül"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "Titreyen elinizi kanayan yüzünüze silerek,\n"
@@ -112,6 +112,7 @@ msgstr ""
 "\n"
 "Değil mi?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "kesinlikle lanetlenmişlerin ruhları bu\n"
@@ -131,6 +132,7 @@ msgstr ""
 "\n"
 "...talihliler için."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Kendinizi bir kez daha kaos küresinin\n"
@@ -145,6 +147,7 @@ msgstr ""
 "\n"
 "...kötücül bir niyeti koruyan gözler."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "Bir zamanlar kaos küresini kavradın,\n"
@@ -163,10 +166,10 @@ msgstr ""
 "okumalardan geri adım atan biri\n"
 "olmadın..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"...ve diğer oyuncular bekliyor.\n"
+"\\n...ve diğer oyuncular bekliyor.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -184,6 +187,7 @@ msgstr "Şelale tıkalı"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "Şapelde bir kapı açıldı."
 
+#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "İşte bu garip."
 
@@ -214,12 +218,14 @@ msgstr "Bulmacanın üçte ikisi çözüldü"
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Uzakta bir platformun hareket ettiğini duyuyorsunuz."
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "Bitti..."
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Bulmacayı tamamlamadınız"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "Seni uyarıyorum."
 
@@ -232,6 +238,7 @@ msgstr "Ve de aptal."
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Bu bulmacanın dörtte biri tamamlandı"
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "Kötü seçim..."
 
@@ -289,6 +296,7 @@ msgstr "Vorpal?!?!?!"
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Bana biraz şeker ver, bebeğim."
 
+#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
 msgstr "Duh-uhhh..."
 
@@ -328,9 +336,11 @@ msgstr "Çıkış açık"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "Kapılar bu taraftan açılmıyor."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "Kapılar açık."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...eğer hazırsanız"
 

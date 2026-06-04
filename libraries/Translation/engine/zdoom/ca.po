@@ -1,0 +1,5288 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-01 23:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "PRESSKEY"
+msgstr "Prem una tecla."
+
+msgid "SECRETMESSAGE"
+msgstr "S’ha revelat un secret!"
+
+msgid "D_DEVSTR"
+msgstr "Mode inútil: ON"
+
+msgid "QUITMSG"
+msgstr ""
+"Segur que vols sortir \n"
+"d’aquest gran joc?"
+
+msgid "LOADNET"
+msgstr ""
+"No pots carregar mentre siguis a una partida en xarxa!\n"
+"\n"
+"Prem una tecla."
+
+msgid "QLOADNET"
+msgstr ""
+"No pots fer una càrrega ràpida durant una partida en xarxa!\n"
+"\n"
+"Prem una tecla."
+
+msgid "QSAVESPOT"
+msgstr ""
+"Encara no has triat cap ranura de desament ràpid!\n"
+"\n"
+"Prem una tecla."
+
+msgid "NEWGAME"
+msgstr ""
+"No pots començar una partida nova\n"
+"mentre siguis a una partida en xarxa.\n"
+"\n"
+"Prem una tecla."
+
+msgid "NIGHTMARE"
+msgstr ""
+"N’estàs segur? Aquest nivell de dificultat\n"
+"no és gens just.\n"
+"\n"
+"Prem Y o N."
+
+msgid "SWSTRING"
+msgstr ""
+"Aquesta és la versió shareware de Doom.\n"
+"\n"
+"Has de demanar la trilogia completa.\n"
+"\n"
+"Prem una tecla."
+
+msgid "NETEND"
+msgstr ""
+"No pots acabar una partida en xarxa!\n"
+"\n"
+"Prem una tecla."
+
+msgid "ENDGAME"
+msgstr ""
+"Segur que vols acabar la partida?\n"
+"\n"
+"Prem Y o N."
+
+msgid "RAVENQUITMSG"
+msgstr "Segur que vols sortir?"
+
+msgctxt "heretic"
+msgid "SWSTRING"
+msgstr "Només disponible a la versió registrada"
+
+msgid "DOSY"
+msgstr "(Prem Y per sortir)"
+
+msgid "QUITMSG1"
+msgstr ""
+"Si us plau, no marxis: encara queden\n"
+" dimonis per rostir!"
+
+msgid "QUITMSG2"
+msgstr ""
+"Fotem el camp: això s’està convertint\n"
+"en un bany de sang!"
+
+msgid "QUITMSG3"
+msgstr ""
+"Jo no marxaria si fos tu. \n"
+"DOS és molt pitjor."
+
+msgid "QUITMSG4"
+msgstr ""
+"Intentes dir que t’agrada més\n"
+" DOS que jo, oi?"
+
+msgid "QUITMSG5"
+msgstr ""
+"No marxis encara: hi ha un dimoni\n"
+"darrere aquella cantonada!"
+
+msgid "QUITMSG6"
+msgstr ""
+"Saps què? La pròxima vegada \n"
+"que entris aquí et rostiré."
+
+msgid "QUITMSG7"
+msgstr "Vinga, marxa. Ja veuràs si m’importa."
+
+msgid "QUITMSG8"
+msgstr ""
+"Vols sortir? \n"
+"Aleshores has perdut una vuitena part!"
+
+msgid "QUITMSG9"
+msgstr ""
+"No marxis ara: hi ha \n"
+"una criatura dimensional esperant\n"
+"al prompt de DOS!"
+
+msgid "QUITMSG10"
+msgstr ""
+"Fuig d’aquí i torna \n"
+"als teus programes avorrits."
+
+msgid "QUITMSG11"
+msgstr ""
+"Si jo fos el teu cap, et faria\n"
+" un deathmatch ara mateix!"
+
+msgid "QUITMSG12"
+msgstr ""
+"Escolta, col·lega: si marxes ara,\n"
+" perds el recompte de morts!"
+
+msgid "QUITMSG13"
+msgstr ""
+"Marxa, va. Quan tornis, \n"
+"t’esperaré amb un bat."
+
+msgid "QUITMSG14"
+msgstr ""
+"Tens sort que no et clavi una\n"
+" plantofada només per pensar a marxar."
+
+msgid "QUITMSG15"
+msgstr ""
+"Surts ara?! \n"
+"Què passa amb la rebel·lió?"
+
+msgid "QUITMSG16"
+msgstr ""
+"Fuig, rebel. Els guàrdies \n"
+"et trobaran igualment."
+
+msgid "QUITMSG17"
+msgstr ""
+"Però tu ets l'esperança\n"
+"la meva única esperança!"
+
+msgid "QUITMSG18"
+msgstr "El Sigil pot esperar, però els teus enemics no."
+
+msgid "QUITMSG19"
+msgstr "Marxa ara i l’Orde guanyarà un altre dia."
+
+msgid "QUITMSG20"
+msgstr "Endavant! Mata i corre!"
+
+msgid "QUITMSG21"
+msgstr ""
+"Un heroi només marxa \n"
+"quan la feina està feta…"
+
+msgid "QUITMSG22"
+msgstr ""
+"D’acord. Però no esperis \n"
+"que els acòlits et trobin a faltar."
+
+msgid "QUITMSG23"
+msgstr ""
+"Segur que vols sortir \n"
+"de Chex Quest?"
+
+msgid "QUITMSG24"
+msgstr ""
+"Els flemoids encara \n"
+"són allà fora!"
+
+msgid "QUITMSG25"
+msgstr ""
+"No deixis enrere \n"
+"els teus zorchers!"
+
+msgid "QUITMSG26"
+msgstr ""
+"Si marxes ara, \n"
+"l’esmorzar està perdut."
+
+msgid "QUITMSG27"
+msgstr ""
+"La Federació Intergalàctica\n"
+" et necessita!"
+
+msgid "QUITMSG28"
+msgstr ""
+"El planeta Bazoik \n"
+"compta amb tu!"
+
+msgid "QUITMSG29"
+msgstr ""
+"Endavant, però els \n"
+"flemoids t’estaran esperant."
+
+msgid "TXT_DEFAULTPICKUPMSG"
+msgstr "Has agafat un objecte"
+
+msgid "PD_ANY"
+msgstr "Necessites una clau per obrir aquesta porta"
+
+msgid "PD_ANYOBJ"
+msgstr "Necessites una clau per activar aquest objecte"
+
+msgid "PD_ALL3"
+msgstr "Necessites les tres claus per obrir aquesta porta"
+
+msgid "PD_ALL3O"
+msgstr "Necessites les tres claus per activar aquest objecte"
+
+msgid "PD_ALL6"
+msgstr "Necessites les sis claus per obrir aquesta porta"
+
+msgid "PD_ALL6O"
+msgstr "Necessites les sis claus per activar aquest objecte"
+
+msgid "PD_ALLKEYS"
+msgstr "Necessites totes les claus per obrir aquesta porta"
+
+msgid "HUSTR_MSGU"
+msgstr "[Missatge no enviat]"
+
+msgid "HUSTR_TALKTOSELF1"
+msgstr "Murmures per a tu mateix"
+
+msgid "HUSTR_TALKTOSELF2"
+msgstr "Qui hi ha?"
+
+msgid "HUSTR_TALKTOSELF3"
+msgstr "T’espantes tu sol"
+
+msgid "HUSTR_TALKTOSELF4"
+msgstr "Comences a delirar"
+
+msgid "HUSTR_TALKTOSELF5"
+msgstr "Has perdut el cap…"
+
+msgid "HUSTR_MESSAGESENT"
+msgstr "[Missatge enviat]"
+
+msgid "STSTR_MUS"
+msgstr "Canvi de música"
+
+msgid "STSTR_NOMUS"
+msgstr "Selecció impossible"
+
+msgid "STSTR_DQDON"
+msgstr "Mode invulnerable: ON"
+
+msgid "STSTR_DQDOFF"
+msgstr "Mode invulnerable: OFF"
+
+msgid "STSTR_DQD2ON"
+msgstr "Mode invulnerable definitiu: ON"
+
+msgid "STSTR_DQD2OFF"
+msgstr "Mode invulnerable definitiu: OFF"
+
+msgid "STSTR_KFAADDED"
+msgstr "Munició molt feliç afegida"
+
+msgid "STSTR_FAADDED"
+msgstr "Munició afegida (sense claus)"
+
+msgid "STSTR_NCON"
+msgstr "Mode travessar parets: ON"
+
+msgid "STSTR_NCOFF"
+msgstr "Mode travessar parets: OFF"
+
+msgid "STSTR_NC2ON"
+msgstr "Mode travessar parets 3D: ON"
+
+msgid "STSTR_NC2OFF"
+msgstr "Mode travessar parets 3D: OFF"
+
+msgid "STSTR_BEHOLD"
+msgstr "Invuln., Força, Invis., Rad., Tot el mapa o Amplificador"
+
+msgid "STSTR_BEHOLDX"
+msgstr "Potenciador commutat"
+
+msgid "STSTR_CHOPPERS"
+msgstr "...no fa pena - GM"
+
+msgid "STSTR_CLEV"
+msgstr "Canviant de nivell…"
+
+msgid "TXT_BUDDHAON"
+msgstr "Mode Buda: ON"
+
+msgid "TXT_BUDDHAOFF"
+msgstr "Mode Buda: OFF"
+
+msgid "TXT_BUDDHA2ON"
+msgstr "Mode Buda definitiu: ON"
+
+msgid "TXT_BUDDHA2OFF"
+msgstr "Mode Buda definitiu: OFF"
+
+msgid "TXT_CHEATPOWERON"
+msgstr "Poder: ACTIVAT"
+
+msgid "TXT_CHEATPOWEROFF"
+msgstr "Poder: DESACTIVAT"
+
+msgid "TXT_CHEATHEALTH"
+msgstr "Salut completa"
+
+msgid "TXT_CHEATKEYS"
+msgstr "Totes les claus"
+
+msgid "TXT_CHEATSOUNDON"
+msgstr "Depuració de so: ACTIVADA"
+
+msgid "TXT_CHEATSOUNDOFF"
+msgstr "Depuració de so: DESACTIVADA"
+
+msgid "TXT_CHEATIDDQD"
+msgstr "Intentant fer trampes, eh? Ara mors!"
+
+msgid "TXT_CHEATIDKFA"
+msgstr "Trampós: no et mereixes armes"
+
+msgid "TXT_CHEATTICKERON"
+msgstr "Ticker: ACTIVAT"
+
+msgid "TXT_CHEATTICKEROFF"
+msgstr "Ticker: DESACTIVAT"
+
+msgid "TXT_CHEATARTIFACTS3"
+msgstr "Ho has aconseguit"
+
+msgid "TXT_MIDASTOUCH"
+msgstr "Has aconseguit el toc de Mides, nano"
+
+msgid "TXT_GOTSTUFF"
+msgstr "Has aconseguit les coses!"
+
+msgid "TXT_FREEZEON"
+msgstr "Mode congelació: ACTIVAT"
+
+msgid "TXT_FREEZEOFF"
+msgstr "Mode congelació: DESACTIVAT"
+
+msgid "TXT_STRANGE"
+msgstr "Estrany…"
+
+msgid "TXT_STRANGER"
+msgstr "Foraster"
+
+msgid "TXT_NOTSTRANGE"
+msgstr "Això no té res d’estrany."
+
+msgid "TXT_LEADBOOTSON"
+msgstr "Botes de plom: ACTIVADES"
+
+msgid "TXT_LEADBOOTSOFF"
+msgstr "Botes de plom: DESACTIVADES"
+
+msgid "TXT_LIGHTER"
+msgstr "Et sents més lleuger"
+
+msgid "TXT_GRAVITY"
+msgstr "La gravetat et pesa"
+
+msgid "TXT_NOTARGET_ON"
+msgstr "Sense objectiu: ACTIVAT"
+
+msgid "TXT_NOTARGET_OFF"
+msgstr "Sense objectiu: DESACTIVAT"
+
+msgid "TXT_ANUBIS_ON"
+msgstr "«Tremoleu de por!»"
+
+msgid "TXT_ANUBIS_OFF"
+msgstr "S’ha acabat l’armadura d’ogre"
+
+msgid "TXT_CHASECAM_ON"
+msgstr "Càmera en tercera persona: ACTIVADA"
+
+msgid "TXT_CHASECAM_OFF"
+msgstr "Càmera en tercera persona: DESACTIVADA"
+
+msgid "TXT_BADDIE_KILLED"
+msgstr "1 enemic eliminat"
+
+msgid "TXT_BADDIES_KILLED"
+msgstr "%d enemics eliminats"
+
+msgid "TXT_MONSTER_KILLED"
+msgstr "1 monstre eliminat"
+
+msgid "TXT_MONSTERS_KILLED"
+msgstr "%d monstres eliminats"
+
+msgid "TXT_NO_RESURRECT"
+msgstr "No es pot ressuscitar. El jugador ja no està connectat al seu cos."
+
+msgid "TXT_ALL_ARTIFACTS"
+msgstr "Tots els artefactes!"
+
+msgid "TXT_WHAT_KILL"
+msgstr "Què vols matar fora d’una partida?"
+
+msgid "TXT_NOT_FROZEN"
+msgstr "Propietats de jugador congelades: DESACTIVADES"
+
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Mode seguiment: DESACTIVAT"
+
+msgid "AMSTR_FOLLOWON"
+msgstr "Mode seguiment: ACTIVAT"
+
+msgid "AMSTR_GRIDON"
+msgstr "Graella: ACTIVADA"
+
+msgid "AMSTR_GRIDOFF"
+msgstr "Graella: DESACTIVADA"
+
+msgid "AMSTR_TEXON"
+msgstr "Mode textures: ACTIVAT"
+
+msgid "AMSTR_TEXOFF"
+msgstr "Mode textures: DESACTIVAT"
+
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Punt marcat"
+
+msgid "AMSTR_MARKSCLEARED"
+msgstr "Totes les marques eliminades"
+
+msgid "TXT_FRAGLIMIT"
+msgstr "S’ha arribat al límit de frags."
+
+msgid "TXT_TIMELIMIT"
+msgstr "S’ha arribat al límit de temps."
+
+msgid "SPREEKILLSELF"
+msgstr "%o anava bé fins que %g va acabar amb %hself!"
+
+msgid "SPREEOVER"
+msgstr "La ratxa de morts de %o ha estat aturada per %k"
+
+msgid "SPREE5"
+msgstr "%k està en ratxa!"
+
+msgid "SPREE10"
+msgstr "%k està arrasant!"
+
+msgid "SPREE15"
+msgstr "%k domina la partida!"
+
+msgid "SPREE20"
+msgstr "%k és imparable!"
+
+msgid "SPREE25"
+msgstr "%k és diví!"
+
+msgid "MULTI2"
+msgstr "Doble mort!"
+
+msgid "MULTI3"
+msgstr "Mort múltiple!"
+
+msgid "MULTI4"
+msgstr "Ultra mort!"
+
+msgid "MULTI5"
+msgstr "Mort monstruosa!"
+
+msgid "SCORE_BONUS"
+msgstr "Bonificació"
+
+msgid "SCORE_COLOR"
+msgstr "Color"
+
+msgid "SCORE_SECRET"
+msgstr "Secret"
+
+msgid "SCORE_NAME"
+msgstr "Nom"
+
+msgid "SCORE_DELAY"
+msgstr "Retard"
+
+msgid "SCORE_FRAGS"
+msgstr "Frags"
+
+msgid "SCORE_DEATHS"
+msgstr "Morts"
+
+msgid "SCORE_OTHER"
+msgstr "Altres"
+
+msgid "SCORE_MISSED"
+msgstr "Fallats"
+
+msgid "SCORE_TOTAL"
+msgstr "Total"
+
+msgid "SCORE_LVLTIME"
+msgstr "Temps del nivell"
+
+msgid "TXT_IMKILLS"
+msgstr "Morts"
+
+msgid "TXT_IMITEMS"
+msgstr "Objectes"
+
+msgid "TXT_IMSECRETS"
+msgstr "Secrets"
+
+msgid "TXT_IMTIME"
+msgstr "Temps"
+
+msgid "TXT_IMPAR"
+msgstr "Par"
+
+msgid "WI_FINISHED"
+msgstr "Completat"
+
+msgid "WI_ENTERING"
+msgstr "Entrant a"
+
+msgctxt "heretic hexen"
+msgid "WI_ENTERING"
+msgstr "Entrant a:"
+
+msgid "AM_MONSTERS"
+msgstr "Monstres:"
+
+msgid "AM_SECRETS"
+msgstr "Secrets:"
+
+msgid "AM_ITEMS"
+msgstr "Objectes:"
+
+msgid "OB_SUICIDE"
+msgstr "%o s’ha suïcidat."
+
+msgid "OB_FALLING"
+msgstr "%o ha caigut massa lluny."
+
+msgid "OB_CRUSH"
+msgstr "%o ha quedat esclafat."
+
+msgid "OB_EXIT"
+msgstr "%o ha intentat marxar."
+
+msgid "OB_WATER"
+msgstr "%o no sap nedar."
+
+msgid "OB_SLIME"
+msgstr "%o ha mutat."
+
+msgid "OB_LAVA"
+msgstr "%o s’ha fos."
+
+msgid "OB_BARREL"
+msgstr "%o han esclatat."
+
+msgid "OB_SPLASH"
+msgstr "%o s’ha posat on no tocava."
+
+msgid "OB_R_SPLASH"
+msgstr "%o s’hauria d’haver apartat."
+
+msgid "OB_ROCKET"
+msgstr "%o s’hauria d’haver apartat."
+
+msgid "OB_KILLEDSELF"
+msgstr "%o s’ha matat %hself."
+
+msgid "OB_VOODOO"
+msgstr "%o ha mort pel poder del vudú."
+
+msgid "OB_MPTELEFRAG"
+msgstr "%o ha estat telefragetat per %k."
+
+msgid "OB_MONTELEFRAG"
+msgstr "%o ha estat telefragetat."
+
+msgid "OB_DEFAULT"
+msgstr "%o ha mort."
+
+msgid "OB_MPDEFAULT"
+msgstr "%o ha estat abatut per %k."
+
+msgid "OB_FRIENDLY1"
+msgstr "%k ha abatut un company d’equip."
+
+msgid "OB_FRIENDLY2"
+msgstr "%k sembla que necessita ulleres."
+
+msgid "OB_FRIENDLY3"
+msgstr "%k aconsegueix un frag per a l’altre equip."
+
+msgid "OB_FRIENDLY4"
+msgstr "%k perd un altre amic."
+
+msgid "GOTARMOR"
+msgstr "Has agafat l’armadura."
+
+msgid "GOTMEGA"
+msgstr "Has agafat la Megaarmadura!"
+
+msgid "GOTHTHBONUS"
+msgstr "Has agafat una bonificació de salut."
+
+msgid "GOTARMBONUS"
+msgstr "Has agafat una bonificació d’armadura."
+
+msgid "GOTSTIM"
+msgstr "Has agafat un estimulant."
+
+msgid "GOTMEDINEED"
+msgstr "Has agafat una farmaciola que et feia MOLTA falta!"
+
+msgid "GOTMEDIKIT"
+msgstr "Has agafat una farmaciola."
+
+msgid "GOTSUPER"
+msgstr "Supercàrrega!"
+
+msgid "GOTBLUECARD"
+msgstr "Has agafat una targeta clau blava."
+
+msgid "GOTYELWCARD"
+msgstr "Has agafat una targeta clau groga."
+
+msgid "GOTREDCARD"
+msgstr "Has agafat una targeta clau vermella."
+
+msgid "GOTBLUESKUL"
+msgstr "Has agafat una clau de crani blava."
+
+msgid "GOTYELWSKUL"
+msgstr "Has agafat una clau de crani groga."
+
+msgid "GOTREDSKUL"
+msgstr "Has agafat una clau de crani vermella."
+
+msgid "GOTINVUL"
+msgstr "Invulnerabilitat!"
+
+msgid "GOTBERSERK"
+msgstr "Berserk!"
+
+msgid "GOTINVIS"
+msgstr "Invisibilitat parcial"
+
+msgid "GOTSUIT"
+msgstr "Vestit de protecció contra radiació"
+
+msgid "GOTMAP"
+msgstr "Mapa informatitzat de l’àrea"
+
+msgid "GOTVISOR"
+msgstr "Visor d’amplificació de llum"
+
+msgid "GOTMSPHERE"
+msgstr "Megaesfera!"
+
+msgid "GOTCLIP"
+msgstr "Has agafat un carregador."
+
+msgid "GOTCLIPBOX"
+msgstr "Has agafat una caixa de bales."
+
+msgid "GOTROCKET"
+msgstr "Has agafat un coet."
+
+msgid "GOTROCKBOX"
+msgstr "Has agafat una caixa de coets."
+
+msgid "GOTCELL"
+msgstr "Has agafat una cel·la d’energia."
+
+msgid "GOTCELLBOX"
+msgstr "Has agafat un paquet de cel·les d’energia."
+
+msgid "GOTSHELLS"
+msgstr "Has agafat 4 cartutxos d’escopeta."
+
+msgid "GOTSHELLBOX"
+msgstr "Has agafat una caixa de cartutxos d’escopeta."
+
+msgid "GOTBACKPACK"
+msgstr "Has agafat una motxilla plena de munició!"
+
+msgid "GOTBFG9000"
+msgstr "Has aconseguit la BFG9000! Oh, sí."
+
+msgid "GOTCHAINGUN"
+msgstr "Has aconseguit la metralladora!"
+
+msgid "GOTCHAINSAW"
+msgstr "Una motoserra! Busca carn!"
+
+msgid "GOTLAUNCHER"
+msgstr "Has aconseguit el llançacoets!"
+
+msgid "GOTPLASMA"
+msgstr "Has aconseguit el fusell de plasma!"
+
+msgid "GOTSHOTGUN"
+msgstr "Has aconseguit l’escopeta!"
+
+msgid "GOTSHOTGUN2"
+msgstr "Has aconseguit la superescopeta!"
+
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Recollida pistola."
+
+msgid "BETA_BONUS1"
+msgstr "Agafes una daga demoníaca."
+
+msgid "BETA_BONUS2"
+msgstr "Agafes un cofre de cranis."
+
+msgid "BETA_BONUS3"
+msgstr "Agafes un ceptre malvat."
+
+msgid "BETA_BONUS4"
+msgstr "Agafes una bíblia impia."
+
+msgid "PD_BLUEO"
+msgstr "Necessites una clau blava per activar aquest objecte"
+
+msgid "PD_REDO"
+msgstr "Necessites una clau vermella per activar aquest objecte"
+
+msgid "PD_YELLOWO"
+msgstr "Necessites una clau groga per activar aquest objecte"
+
+msgid "PD_BLUEK"
+msgstr "Necessites una clau blava per obrir aquesta porta"
+
+msgid "PD_REDK"
+msgstr "Necessites una clau vermella per obrir aquesta porta"
+
+msgid "PD_YELLOWK"
+msgstr "Necessites una clau groga per obrir aquesta porta"
+
+msgid "PD_BLUECO"
+msgstr "Necessites una targeta clau blava per activar aquest objecte"
+
+msgid "PD_REDCO"
+msgstr "Necessites una targeta clau vermella per activar aquest objecte"
+
+msgid "PD_YELLOWCO"
+msgstr "Necessites una targeta clau groga per activar aquest objecte"
+
+msgid "PD_BLUESO"
+msgstr "Necessites una clau de crani blava per activar aquest objecte"
+
+msgid "PD_REDSO"
+msgstr "Necessites una clau de crani vermella per activar aquest objecte"
+
+msgid "PD_YELLOWSO"
+msgstr "Necessites una clau de crani groga per activar aquest objecte"
+
+msgid "PD_BLUEC"
+msgstr "Necessites una targeta clau blava per obrir aquesta porta"
+
+msgid "PD_REDC"
+msgstr "Necessites una targeta clau vermella per obrir aquesta porta"
+
+msgid "PD_YELLOWC"
+msgstr "Necessites una targeta clau groga per obrir aquesta porta"
+
+msgid "PD_BLUES"
+msgstr "Necessites una clau de crani blava per obrir aquesta porta"
+
+msgid "PD_REDS"
+msgstr "Necessites una clau de crani vermella per obrir aquesta porta"
+
+msgid "PD_YELLOWS"
+msgstr "Necessites una clau de crani groga per obrir aquesta porta"
+
+msgid "CC_ZOMBIE"
+msgstr "Zombi"
+
+msgid "CC_SHOTGUN"
+msgstr "Escopeta"
+
+msgid "CC_HEAVY"
+msgstr "soldat pesant"
+
+msgid "CC_IMP"
+msgstr "Imp"
+
+msgid "CC_DEMON"
+msgstr "Dimoni"
+
+msgid "CC_LOST"
+msgstr "Ànima perduda"
+
+msgid "CC_CACO"
+msgstr "Cacodimoni"
+
+msgid "CC_HELL"
+msgstr "Cavaller infernal"
+
+msgid "CC_BARON"
+msgstr "Baró de l’Infern"
+
+msgid "CC_ARACH"
+msgstr "Aracnotró"
+
+msgid "CC_PAIN"
+msgstr "Elemental del dolor"
+
+msgid "CC_REVEN"
+msgstr "Revenant"
+
+msgid "CC_MANCU"
+msgstr "Homcube"
+
+msgid "CC_ARCH"
+msgstr "Arxivile"
+
+msgid "CC_SPIDER"
+msgstr "Ment aranya"
+
+msgid "CC_CYBER"
+msgstr "Cyberdimoni"
+
+msgid "CC_HERO"
+msgstr "Explosives RO"
+
+msgid "FN_SHOTGUN"
+msgstr "Escopeta"
+
+msgid "FN_HEAVY"
+msgstr "soldat pesant"
+
+msgid "FN_SPECTRE"
+msgstr "Espectre"
+
+msgid "FN_SPIDER"
+msgstr "Ment aranya"
+
+msgid "FN_CYBER"
+msgstr "Cyberdimoni"
+
+msgid "FN_WOLFSS"
+msgstr "Soldat SS"
+
+msgid "FN_DOG"
+msgstr "Gos"
+
+msgid "TAG_FIST"
+msgstr "Punys"
+
+msgid "TAG_CHAINSAW"
+msgstr "Motoserra"
+
+msgid "TAG_PISTOL"
+msgstr "Pistola"
+
+msgid "TAG_SHOTGUN"
+msgstr "Escopeta"
+
+msgid "TAG_SUPERSHOTGUN"
+msgstr "Superescopeta"
+
+msgid "TAG_CHAINGUN"
+msgstr "Metralladora"
+
+msgid "TAG_ROCKETLAUNCHER"
+msgstr "Llançacoets"
+
+msgid "TAG_PLASMARIFLE"
+msgstr "Fusell de plasma"
+
+msgid "TAG_BFG9000"
+msgstr "BFG9000"
+
+msgid "AMMO_CLIP"
+msgstr "Bales"
+
+msgid "AMMO_SHELLS"
+msgstr "Cartutxos"
+
+msgid "AMMO_ROCKETS"
+msgstr "Coets"
+
+msgid "AMMO_CELLS"
+msgstr "Cel·les"
+
+msgid "OB_STEALTHBABY"
+msgstr "%o ha mort per culpa de STEALTHBABY."
+
+msgid "OB_STEALTHVILE"
+msgstr "%o ha mort per culpa de STEALTHVILE."
+
+msgid "OB_STEALTHBARON"
+msgstr "%o ha mort per culpa de STEALTH Baró de l’Infern."
+
+msgid "OB_STEALTHCACO"
+msgstr "%o ha mort per culpa de STEALTH Cacodimoni."
+
+msgid "OB_STEALTHCHAINGUY"
+msgstr "%o ha mort per culpa de STEALTHCHAINGUY."
+
+msgid "OB_STEALTHDEMON"
+msgstr "%o ha mort per culpa de STEALTH Dimoni."
+
+msgid "OB_STEALTHKNIGHT"
+msgstr "%o ha mort per culpa de STEALTHKNIGHT."
+
+msgid "OB_STEALTHIMP"
+msgstr "%o ha mort per culpa de STEALTH Imp."
+
+msgid "OB_STEALTHFATSO"
+msgstr "%o ha mort per culpa de STEALTH Mancubus."
+
+msgid "OB_STEALTHUNDEAD"
+msgstr "%o ha mort per culpa de STEALTHUN mort."
+
+msgid "OB_STEALTHSHOTGUNGUY"
+msgstr "%o ha mort per culpa de STEALTH Escopeta GUY."
+
+msgid "OB_STEALTHZOMBIE"
+msgstr "%o ha mort per culpa de STEALTH Zombi."
+
+msgid "OB_UNDEADHIT"
+msgstr "%o ha estat colpejat per UN mort HIT."
+
+msgid "OB_IMPHIT"
+msgstr "%o ha estat colpejat per Imp HIT."
+
+msgid "OB_CACOHIT"
+msgstr "%o ha estat colpejat per cop de cacodimoni."
+
+msgid "OB_DEMONHIT"
+msgstr "%o ha estat colpejat per cop de dimoni."
+
+msgid "OB_SPECTREHIT"
+msgstr "%o ha estat colpejat per Espectre HIT."
+
+msgid "OB_BARONHIT"
+msgstr "%o ha estat colpejat per Baró de l’Infern HIT."
+
+msgid "OB_KNIGHTHIT"
+msgstr "%o ha estat colpejat per KNIGHTHIT."
+
+msgid "OB_ZOMBIE"
+msgstr "%o ha mort per culpa de Zombi."
+
+msgid "OB_SHOTGUY"
+msgstr "%o ha mort per culpa de SHOTGUY."
+
+msgid "OB_VILE"
+msgstr "%o ha mort per culpa de VILE."
+
+msgid "OB_UNDEAD"
+msgstr "%o ha mort per culpa de UN mort."
+
+msgid "OB_FATSO"
+msgstr "%o ha mort per culpa de Mancubus."
+
+msgid "OB_CHAINGUY"
+msgstr "%o ha mort per culpa de CHAINGUY."
+
+msgid "OB_SKULL"
+msgstr "%o ha mort per culpa de Crani."
+
+msgid "OB_IMP"
+msgstr "%o ha mort per culpa de Imp."
+
+msgid "OB_CACO"
+msgstr "%o ha mort per culpa de Cacodimoni."
+
+msgid "OB_BARON"
+msgstr "%o ha mort per culpa de Baró de l’Infern."
+
+msgid "OB_KNIGHT"
+msgstr "%o ha mort per culpa de KNIGHT."
+
+msgid "OB_SPIDER"
+msgstr "%o ha mort per culpa de Ment aranya."
+
+msgid "OB_BABY"
+msgstr "%o ha mort per culpa de BABY."
+
+msgid "OB_CYBORG"
+msgstr "%o ha mort per culpa de Cyberdimoni."
+
+msgid "OB_WOLFSS"
+msgstr "%o ha mort per culpa de Soldat SS."
+
+msgid "OB_DOG"
+msgstr "%o ha mort per culpa de Gos."
+
+msgid "OB_MPFIST"
+msgstr "%o ha estat abatut amb MP Punys."
+
+msgid "OB_MPCHAINSAW"
+msgstr "%o ha estat abatut amb MP Motoserra."
+
+msgid "OB_MPPISTOL"
+msgstr "%o ha estat abatut amb MPPISTOL."
+
+msgid "OB_MPSHOTGUN"
+msgstr "%o ha estat abatut amb MP Escopeta."
+
+msgid "OB_MPSSHOTGUN"
+msgstr "%o ha estat abatut amb MPS Escopeta."
+
+msgid "OB_MPCHAINGUN"
+msgstr "%o ha estat abatut amb MP Metralladora."
+
+msgid "OB_MPROCKET"
+msgstr "%o ha estat abatut amb MP coet."
+
+msgid "OB_MPR_SPLASH"
+msgstr "%o gairebé ha esquivat el coet de %k."
+
+msgid "OB_MPPLASMARIFLE"
+msgstr "%o ha estat abatut amb MPPLASMARIFLE."
+
+msgid "OB_MPBFG_BOOM"
+msgstr "%o ha estat abatut amb MPBFGBOOM."
+
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o ha estat abatut amb MPBFGSPLASH."
+
+msgid "OB_RAILGUN"
+msgstr "%o ha mort per culpa de RAILGUN."
+
+msgid "OB_MPBFG_MBF"
+msgstr "%o ha estat abatut amb MPBFGMBF."
+
+msgid "TXT_GOTBLUEKEY"
+msgstr "Has agafat la clau blava"
+
+msgid "TXT_GOTYELLOWKEY"
+msgstr "Has agafat la clau groga"
+
+msgid "TXT_GOTGREENKEY"
+msgstr "Has agafat la clau verda"
+
+msgid "TXT_ARTIHEALTH"
+msgstr "Flascó de quars"
+
+msgid "TXT_ARTIFLY"
+msgstr "Ales de la ira"
+
+msgid "TXT_ARTIINVULNERABILITY"
+msgstr "Anell d’invencibilitat"
+
+msgid "TXT_ARTITOMEOFPOWER"
+msgstr "Tom del poder"
+
+msgid "TXT_ARTIINVISIBILITY"
+msgstr "Ombresfera"
+
+msgid "TXT_ARTIEGG"
+msgstr "Ou morfador"
+
+msgid "TXT_ARTISUPERHEALTH"
+msgstr "Urna mística"
+
+msgid "TXT_ARTITORCH"
+msgstr "Torxa"
+
+msgid "TXT_ARTIFIREBOMB"
+msgstr "Bomba temporal dels antics"
+
+msgid "TXT_ARTITELEPORT"
+msgstr "Dispositiu del caos"
+
+msgid "TXT_ITEMHEALTH"
+msgstr "Vial de cristall"
+
+msgid "TXT_ITEMBAGOFHOLDING"
+msgstr "Bossa de contenció"
+
+msgid "TXT_ITEMSHIELD1"
+msgstr "Escut de plata"
+
+msgid "TXT_ITEMSHIELD2"
+msgstr "Escut encantat"
+
+msgid "TXT_ITEMSUPERMAP"
+msgstr "Pergamí del mapa"
+
+msgid "TXT_AMMOGOLDWAND1"
+msgstr "Munició vara daurada 1"
+
+msgid "TXT_AMMOGOLDWAND2"
+msgstr "Munició vara daurada 2"
+
+msgid "TXT_AMMOMACE1"
+msgstr "Esferes de maça"
+
+msgid "TXT_AMMOMACE2"
+msgstr "Esferes grans de maça"
+
+msgid "TXT_AMMOCROSSBOW1"
+msgstr "Munició ballesta 1"
+
+msgid "TXT_AMMOCROSSBOW2"
+msgstr "Munició ballesta 2"
+
+msgid "TXT_AMMOBLASTER1"
+msgstr "Munició blàster 1"
+
+msgid "TXT_AMMOBLASTER2"
+msgstr "Munició blàster 2"
+
+msgid "TXT_AMMOSKULLROD1"
+msgstr "Munició vara de crani 1"
+
+msgid "TXT_AMMOSKULLROD2"
+msgstr "Munició vara de crani 2"
+
+msgid "TXT_AMMOPHOENIXROD1"
+msgstr "Munició vara del Fènix 1"
+
+msgid "TXT_AMMOPHOENIXROD2"
+msgstr "Munició vara del Fènix 2"
+
+msgid "TXT_WPNGOLDWAND"
+msgstr "Arma vara daurada"
+
+msgid "TXT_WPNMACE"
+msgstr "Maça de foc"
+
+msgid "TXT_WPNCROSSBOW"
+msgstr "Arma ballesta"
+
+msgid "TXT_WPNBLASTER"
+msgstr "Arma blàster"
+
+msgid "TXT_WPNSKULLROD"
+msgstr "Bastó infernal"
+
+msgid "TXT_WPNPHOENIXROD"
+msgstr "Arma vara del Fènix"
+
+msgid "TXT_WPNGAUNTLETS"
+msgstr "Guantelets del nigromant"
+
+msgid "TXT_NEEDBLUEKEY"
+msgstr "Necessites la clau blava."
+
+msgid "TXT_NEEDGREENKEY"
+msgstr "Necessites la clau verda."
+
+msgid "TXT_NEEDYELLOWKEY"
+msgstr "Necessites la clau groga."
+
+msgid "FN_CHICKEN"
+msgstr "Pollastre"
+
+msgid "FN_BEAST"
+msgstr "Bèstia"
+
+msgid "FN_CLINK"
+msgstr "Clink"
+
+msgid "FN_DSPARIL"
+msgstr "D’Sparil"
+
+msgid "FN_HERETICIMP"
+msgstr "Diabló"
+
+msgid "FN_IRONLICH"
+msgstr "Lich de ferro"
+
+msgid "FN_BONEKNIGHT"
+msgstr "Cavaller d’ossos"
+
+msgid "FN_MINOTAUR"
+msgstr "Minotaure"
+
+msgid "FN_MUMMY"
+msgstr "Mòmia"
+
+msgid "FN_MUMMYLEADER"
+msgstr "Mòmia LEADER"
+
+msgid "FN_SNAKE"
+msgstr "Serpent"
+
+msgid "FN_WIZARD"
+msgstr "Bruixot"
+
+msgid "AMMO_GOLDWAND"
+msgstr "Cristalls de vara daurada"
+
+msgid "AMMO_CROSSBOW"
+msgstr "Fletxes etèries"
+
+msgid "AMMO_BLASTER"
+msgstr "Orbes d’urpa"
+
+msgid "AMMO_MACE"
+msgstr "Esferes de maça"
+
+msgid "AMMO_SKULLROD"
+msgstr "Runes menors"
+
+msgid "AMMO_PHOENIXROD"
+msgstr "Orbes de flama"
+
+msgid "TAG_STAFF"
+msgstr "Bastó"
+
+msgid "TAG_GOLDWAND"
+msgstr "Vara daurada"
+
+msgid "OB_CHICKEN"
+msgstr "%o ha mort per culpa de CHICKEN."
+
+msgid "OB_BEAST"
+msgstr "%o ha mort per culpa de Bèstia."
+
+msgid "OB_CLINK"
+msgstr "%o ha mort per culpa de CLINK."
+
+msgid "OB_DSPARIL1"
+msgstr "%o ha mort per culpa de D’Sparil 1."
+
+msgid "OB_DSPARIL1HIT"
+msgstr "%o ha estat colpejat per D’Sparil 1 HIT."
+
+msgid "OB_DSPARIL2"
+msgstr "%o ha mort per culpa de D’Sparil 2."
+
+msgid "OB_DSPARIL2HIT"
+msgstr "%o ha estat colpejat per D’Sparil 2 HIT."
+
+msgid "OB_HERETICIMP"
+msgstr "%o ha mort per culpa de Diabló."
+
+msgid "OB_HERETICIMPHIT"
+msgstr "%o ha estat colpejat per Diabló HIT."
+
+msgid "OB_IRONLICH"
+msgstr "%o ha mort per culpa de Lich de ferro."
+
+msgid "OB_IRONLICHHIT"
+msgstr "%o ha estat colpejat per Lich de ferro HIT."
+
+msgid "OB_BONEKNIGHT"
+msgstr "%o ha mort per culpa de BONEKNIGHT."
+
+msgid "OB_BONEKNIGHTHIT"
+msgstr "%o ha estat colpejat per BONEKNIGHTHIT."
+
+msgid "OB_MINOTAUR"
+msgstr "%o ha mort per culpa de Minotaure."
+
+msgid "OB_MINOTAURHIT"
+msgstr "%o ha estat colpejat per Minotaure HIT."
+
+msgid "OB_MUMMY"
+msgstr "%o ha mort per culpa de Mòmia."
+
+msgid "OB_MUMMYLEADER"
+msgstr "%o ha mort per culpa de Mòmia LEADER."
+
+msgid "OB_SNAKE"
+msgstr "%o ha mort per culpa de SNAKE."
+
+msgid "OB_WIZARD"
+msgstr "%o ha mort per culpa de Bruixot."
+
+msgid "OB_WIZARDHIT"
+msgstr "%o ha estat colpejat per Bruixot HIT."
+
+msgid "OB_MPSTAFF"
+msgstr "%o ha estat abatut amb MP bastó."
+
+msgid "OB_MPGAUNTLETS"
+msgstr "%o ha estat abatut amb MP guantellets."
+
+msgid "OB_MPGOLDWAND"
+msgstr "%o ha estat abatut amb MP vara daurada."
+
+msgid "OB_MPCROSSBOW"
+msgstr "%o ha estat abatut amb MP ballesta."
+
+msgid "OB_MPBLASTER"
+msgstr "%o ha estat abatut amb MP blàster."
+
+msgid "OB_MPSKULLROD"
+msgstr "%o ha estat abatut amb MP vara de crani."
+
+msgid "OB_MPPHOENIXROD"
+msgstr "%o ha estat abatut amb MP vara del Fènix."
+
+msgid "OB_MPMACE"
+msgstr "%o ha estat abatut amb MP Maça."
+
+msgid "OB_MPPSTAFF"
+msgstr "%o ha estat abatut amb MPP bastó."
+
+msgid "OB_MPPGAUNTLETS"
+msgstr "%o ha estat abatut amb MPP guantellets."
+
+msgid "OB_MPPGOLDWAND"
+msgstr "%o ha estat abatut amb MPP vara daurada."
+
+msgid "OB_MPPCROSSBOW"
+msgstr "%o ha estat abatut amb MPP ballesta."
+
+msgid "OB_MPPBLASTER"
+msgstr "%o ha estat abatut amb MPP blàster."
+
+msgid "OB_MPPSKULLROD"
+msgstr "%o ha estat abatut amb MPP vara de crani."
+
+msgid "OB_MPPPHOENIXROD"
+msgstr "%o ha estat abatut amb MPP vara del Fènix."
+
+msgid "OB_MPPMACE"
+msgstr "%o ha estat abatut amb MPP Maça."
+
+msgid "TXT_MANA_1"
+msgstr "Manà 1"
+
+msgid "TXT_MANA_2"
+msgstr "Manà 2"
+
+msgid "TXT_MANA_BOTH"
+msgstr "Manà tots dos"
+
+msgid "TXT_KEY_STEEL"
+msgstr "Clau d’acer"
+
+msgid "TXT_KEY_CAVE"
+msgstr "Clau de la cova"
+
+msgid "TXT_KEY_AXE"
+msgstr "Clau de la destral"
+
+msgid "TXT_KEY_FIRE"
+msgstr "Clau de foc"
+
+msgid "TXT_KEY_EMERALD"
+msgstr "Clau maragda"
+
+msgid "TXT_KEY_DUNGEON"
+msgstr "Clau de la masmorra"
+
+msgid "TXT_KEY_SILVER"
+msgstr "Clau de plata"
+
+msgid "TXT_KEY_RUSTED"
+msgstr "Clau rovellada"
+
+msgid "TXT_KEY_HORN"
+msgstr "Clau de la banya"
+
+msgid "TXT_KEY_SWAMP"
+msgstr "Clau del pantà"
+
+msgid "TXT_KEY_CASTLE"
+msgstr "Clau del castell"
+
+msgid "TXT_ARTIINVULNERABILITY2"
+msgstr "Anell d’invencibilitat"
+
+msgid "TXT_ARTISUMMON"
+msgstr "Artefacte d’invocació"
+
+msgid "TXT_ARTIEGG2"
+msgstr "Ou morfador"
+
+msgid "TXT_ARTIPOISONBAG"
+msgstr "Fletxeta"
+
+msgid "TXT_ARTITELEPORTOTHER"
+msgstr "Dispositiu de desterrament"
+
+msgid "TXT_ARTISPEED"
+msgstr "Botes de velocitat"
+
+msgid "TXT_ARTIBOOSTMANA"
+msgstr "Cràter del poder"
+
+msgid "TXT_ARTIBOOSTARMOR"
+msgstr "Braçals de pell de drac"
+
+msgid "TXT_ARTIBLASTRADIUS"
+msgstr "Disc de repulsió"
+
+msgid "TXT_ARTIHEALINGRADIUS"
+msgstr "Encantament d’àmbit místic"
+
+msgid "TXT_ARTIPUZZSKULL"
+msgstr "Crani del trencaclosques"
+
+msgid "TXT_ARTIPUZZGEMBIG"
+msgstr "Gema gran"
+
+msgid "TXT_ARTIPUZZGEMRED"
+msgstr "Gema vermella"
+
+msgid "TXT_ARTIPUZZGEMGREEN1"
+msgstr "Gema verda 1"
+
+msgid "TXT_ARTIPUZZGEMGREEN2"
+msgstr "Gema verda 2"
+
+msgid "TXT_ARTIPUZZGEMBLUE1"
+msgstr "Gema blava 1"
+
+msgid "TXT_ARTIPUZZGEMBLUE2"
+msgstr "Gema blava 2"
+
+msgid "TXT_ARTIPUZZBOOK1"
+msgstr "Llibre de trencaclosques 1"
+
+msgid "TXT_ARTIPUZZBOOK2"
+msgstr "Llibre de trencaclosques 2"
+
+msgid "TXT_ARTIPUZZSKULL2"
+msgstr "Crani del trencaclosques 2"
+
+msgid "TXT_ARTIPUZZFWEAPON"
+msgstr "Peça d’arma del lluitador"
+
+msgid "TXT_ARTIPUZZCWEAPON"
+msgstr "Peça d’arma del clergue"
+
+msgid "TXT_ARTIPUZZMWEAPON"
+msgstr "Peça d’arma del mag"
+
+msgid "TXT_ARTIPUZZGEAR"
+msgstr "Engranatge del trencaclosques"
+
+msgid "TXT_USEPUZZLEFAILED"
+msgstr "No pots usar això aquí."
+
+msgid "TXT_ARMOR1"
+msgstr "Armadura 1"
+
+msgid "TXT_ARMOR2"
+msgstr "Armadura 2"
+
+msgid "TXT_ARMOR3"
+msgstr "Armadura 3"
+
+msgid "TXT_ARMOR4"
+msgstr "Armadura 4"
+
+msgid "TXT_WEAPON_F2"
+msgstr "Has agafat la Destral de Timon."
+
+msgid "TXT_WEAPON_F3"
+msgstr "Has agafat el Martell de la retribució."
+
+msgid "TXT_WEAPON_F4"
+msgstr "Has agafat la Quietus."
+
+msgid "TXT_WEAPON_C2"
+msgstr "Has agafat el Bastó serpentí."
+
+msgid "TXT_WEAPON_C3"
+msgstr "Has agafat la Tempesta de foc."
+
+msgid "TXT_WEAPON_C4"
+msgstr "Has agafat la Wraithverge."
+
+msgid "TXT_WEAPON_M2"
+msgstr "Has agafat els Fragments de gel."
+
+msgid "TXT_WEAPON_M3"
+msgstr "Has agafat l’Arc de la mort."
+
+msgid "TXT_WEAPON_M4"
+msgstr "Has agafat la Bloodscourge."
+
+msgid "TXT_WEAPONPIECE"
+msgstr "Una peça d’arma! Avui és el teu dia de sort!"
+
+msgid "TXT_QUIETUS_PIECE"
+msgstr "Peça de Quietus"
+
+msgid "TXT_WRAITHVERGE_PIECE"
+msgstr "Peça de Wraithverge"
+
+msgid "TXT_BLOODSCOURGE_PIECE"
+msgstr "Peça de Bloodscourge"
+
+msgid "TXT_NEED_KEY_STEEL"
+msgstr "Necessites la clau d’acer."
+
+msgid "TXT_NEED_KEY_CAVE"
+msgstr "Necessites la clau de la cova."
+
+msgid "TXT_NEED_KEY_AXE"
+msgstr "Necessites la clau de la destral."
+
+msgid "TXT_NEED_KEY_FIRE"
+msgstr "Necessites la clau de foc."
+
+msgid "TXT_NEED_KEY_EMERALD"
+msgstr "Necessites la clau maragda."
+
+msgid "TXT_NEED_KEY_DUNGEON"
+msgstr "Necessites la clau de la masmorra."
+
+msgid "TXT_NEED_KEY_SILVER"
+msgstr "Necessites la clau de plata."
+
+msgid "TXT_NEED_KEY_RUSTED"
+msgstr "Necessites la clau rovellada."
+
+msgid "TXT_NEED_KEY_HORN"
+msgstr "Necessites la clau de la banya."
+
+msgid "TXT_NEED_KEY_SWAMP"
+msgstr "Necessites la clau del pantà."
+
+msgid "TXT_NEED_KEY_CASTLE"
+msgstr "Necessites la clau del castell."
+
+msgid "FN_FIREDEMON"
+msgstr "Foc Dimoni"
+
+msgid "FN_DEMON1"
+msgstr "Dimoni 1"
+
+msgid "FN_ETTIN"
+msgstr "Ettin"
+
+msgid "FN_CENTAUR"
+msgstr "Centaure"
+
+msgid "FN_SLAUGHTAUR"
+msgstr "Slaughtaur"
+
+msgid "FN_BISHOP"
+msgstr "Bisbe"
+
+msgid "FN_ICEGUY"
+msgstr "Guerrer de gel"
+
+msgid "FN_SERPENT"
+msgstr "Serpent"
+
+msgid "FN_WRAITH"
+msgstr "Espectre"
+
+msgid "FN_DRAGON"
+msgstr "Drac"
+
+msgid "FN_KORAX"
+msgstr "Korax"
+
+msgid "FN_FBOSS"
+msgstr "Cap lluitador"
+
+msgid "FN_MBOSS"
+msgstr "Cap mag"
+
+msgid "FN_CBOSS"
+msgstr "Cap clergue"
+
+msgid "FN_HERESIARCH"
+msgstr "Heresiarca"
+
+msgid "AMMO_MANA1"
+msgstr "Manà blau"
+
+msgid "AMMO_MANA2"
+msgstr "Manà verd"
+
+msgid "TAG_CWEAPMACE"
+msgstr "Maça de contrició"
+
+msgid "TAG_CWEAPSTAFF"
+msgstr "Bastó serpentí"
+
+msgid "TAG_CWEAPFLAME"
+msgstr "Tempesta de foc"
+
+msgid "TAG_CWEAPWRAITHVERGE"
+msgstr "Wraithverge"
+
+msgid "TAG_FWEAPFIST"
+msgstr "Punys"
+
+msgid "TAG_FWEAPAXE"
+msgstr "Destral de Timon"
+
+msgid "TAG_FWEAPHAMMER"
+msgstr "Martell de la retribució"
+
+msgid "TAG_FWEAPQUIETUS"
+msgstr "Quietus"
+
+msgid "TAG_MWEAPWAND"
+msgstr "Vareta de safir"
+
+msgid "TAG_MWEAPFROST"
+msgstr "Fragments de gel"
+
+msgid "TAG_MWEAPLIGHTNING"
+msgstr "Arc de la mort"
+
+msgid "TAG_MWEAPBLOODSCOURGE"
+msgstr "Flagell de sang"
+
+msgid "TAG_ARTIBLASTRADIUS"
+msgstr "Disc de repulsió"
+
+msgid "TAG_ARTIBOOSTARMOR"
+msgstr "Braçals de pell de drac"
+
+msgid "TAG_ARTIBOOSTMANA"
+msgstr "Cràter del poder"
+
+msgid "TAG_ARTIPOISONBAG"
+msgstr "Fletxeta"
+
+msgid "TAG_ARTIPOISONBAG1"
+msgstr "Fletxeta del lluitador"
+
+msgid "TAG_ARTIPOISONBAG2"
+msgstr "Fletxeta del clergue"
+
+msgid "TAG_ARTIPOISONBAG3"
+msgstr "Fletxeta del mag"
+
+msgid "TAG_ARTIHEALINGRADIUS"
+msgstr "Encantament d’àmbit místic"
+
+msgid "TAG_ARTIDEFENDER"
+msgstr "Icona del defensor"
+
+msgid "TAG_ARTIPORK"
+msgstr "Porkalator"
+
+msgid "TAG_ARTISPEED"
+msgstr "Botes de velocitat"
+
+msgid "TAG_ARTISUMMON"
+msgstr "Artefacte d’invocació"
+
+msgid "TAG_ARTITELEPORTOTHER"
+msgstr "Dispositiu de desterrament"
+
+msgid "TAG_ARTIPUZZSKULL"
+msgstr "Crani del trencaclosques"
+
+msgid "TAG_ARTIPUZZGEMBIG"
+msgstr "Gema gran"
+
+msgid "TAG_ARTIPUZZGEMRED"
+msgstr "Gema vermella"
+
+msgid "TAG_ARTIPUZZGEMGREEN1"
+msgstr "Gema verda 1"
+
+msgid "TAG_ARTIPUZZGEMGREEN2"
+msgstr "Gema verda 2"
+
+msgid "TAG_ARTIPUZZGEMBLUE1"
+msgstr "Gema blava 1"
+
+msgid "TAG_ARTIPUZZGEMBLUE2"
+msgstr "Gema blava 2"
+
+msgid "TAG_ARTIPUZZBOOK1"
+msgstr "Llibre de trencaclosques 1"
+
+msgid "TAG_ARTIPUZZBOOK2"
+msgstr "Llibre de trencaclosques 2"
+
+msgid "TAG_ARTIPUZZSKULL2"
+msgstr "Crani del trencaclosques 2"
+
+msgid "TAG_ARTIPUZZFWEAPON"
+msgstr "Peça d’arma del lluitador"
+
+msgid "TAG_ARTIPUZZCWEAPON"
+msgstr "Peça d’arma del clergue"
+
+msgid "TAG_ARTIPUZZMWEAPON"
+msgstr "Peça d’arma del mag"
+
+msgid "TAG_ARTIPUZZGEAR1"
+msgstr "Engranatge 1"
+
+msgid "TAG_ARTIPUZZGEAR2"
+msgstr "Engranatge 2"
+
+msgid "TAG_ARTIPUZZGEAR3"
+msgstr "Engranatge 3"
+
+msgid "TAG_ARTIPUZZGEAR4"
+msgstr "Engranatge 4"
+
+msgid "OB_FIREDEMON"
+msgstr "%o ha mort per culpa de Foc Dimoni."
+
+msgid "OB_DEMON1"
+msgstr "%o ha mort per culpa de Dimoni 1."
+
+msgid "OB_DEMON2"
+msgstr "%o ha mort per culpa de Dimoni 2."
+
+msgid "OB_ETTIN"
+msgstr "%o ha mort per culpa de Ettin."
+
+msgid "OB_CENTAUR"
+msgstr "%o ha mort per culpa de Centaure."
+
+msgid "OB_SLAUGHTAURHIT"
+msgstr "%o ha estat colpejat per SLAUGHTAURHIT."
+
+msgid "OB_SLAUGHTAUR"
+msgstr "%o ha mort per culpa de SLAUGHTAUR."
+
+msgid "OB_BISHOP"
+msgstr "%o ha mort per culpa de Bisbe."
+
+msgid "OB_ICEGUY"
+msgstr "%o ha mort per culpa de Guerrer de gel."
+
+msgid "OB_SERPENTHIT"
+msgstr "%o ha estat colpejat per Serpent HIT."
+
+msgid "OB_SERPENT"
+msgstr "%o ha mort per culpa de Serpent."
+
+msgid "OB_WRAITH"
+msgstr "%o ha mort per culpa de Espectre."
+
+msgid "OB_WRAITHHIT"
+msgstr "%o ha estat colpejat per Espectre HIT."
+
+msgid "OB_DRAGON"
+msgstr "%o ha mort per culpa de Drac."
+
+msgid "OB_KORAX"
+msgstr "%o ha mort per culpa de Korax."
+
+msgid "OB_FBOSS"
+msgstr "%o ha mort per culpa de FBOSS."
+
+msgid "OB_MBOSS"
+msgstr "%o ha mort per culpa de MBOSS."
+
+msgid "OB_CBOSS"
+msgstr "%o ha mort per culpa de CBOSS."
+
+msgid "OB_HERESIARCH"
+msgstr "%o ha mort per culpa de Heresiarca."
+
+msgid "OB_MPFWEAPFIST"
+msgstr "%o ha estat abatut amb MPFWEAP Punys."
+
+msgid "OB_MPFWEAPAXE"
+msgstr "%o ha estat abatut amb MPFWEAP destral."
+
+msgid "OB_MPFWEAPHAMMERM"
+msgstr "%o ha estat abatut amb MPFWEA fòsfor AMMERM."
+
+msgid "OB_MPFWEAPHAMMERR"
+msgstr "%o ha estat abatut amb MPFWEA fòsfor AMMERR."
+
+msgid "OB_MPFWEAPQUIETUS"
+msgstr "%o ha estat abatut amb MPFWEAP Quietus."
+
+msgid "OB_MPCWEAPMACE"
+msgstr "%o ha estat abatut amb MPCWEAP Maça."
+
+msgid "OB_MPCWEAPSTAFFM"
+msgstr "%o ha estat abatut amb MPCWEAP bastó M."
+
+msgid "OB_MPCWEAPSTAFFR"
+msgstr "%o ha estat abatut amb MPCWEAP bastó R."
+
+msgid "OB_MPCWEAPFLAME"
+msgstr "%o ha estat abatut amb MPCWEAPFLAME."
+
+msgid "OB_MPCWEAPWRAITHVERGE"
+msgstr "%o ha estat abatut amb MPCWEAP Wraithverge."
+
+msgid "OB_MPMWEAPWAND"
+msgstr "%o ha estat abatut amb MPMWEAPWAND."
+
+msgid "OB_MPMWEAPFROST"
+msgstr "%o ha estat abatut amb MPMWEAPFROST."
+
+msgid "OB_MPMWEAPLIGHTNING"
+msgstr "%o ha estat abatut amb MPMWEAPLIGHTNING."
+
+msgid "OB_MPMWEAPBLOODSCOURGE"
+msgstr "%o ha estat abatut amb MPMWEAP Bloodscourge."
+
+msgid "TXT_METALARMOR"
+msgstr "Armadura metàl·lica"
+
+msgid "TXT_LEATHERARMOR"
+msgstr "Armadura de cuir"
+
+msgid "TXT_MEDPATCH"
+msgstr "Pegat mèdic"
+
+msgid "TXT_MEDICALKIT"
+msgstr "Kit mèdic"
+
+msgid "TXT_SURGERYKIT"
+msgstr "Kit quirúrgic"
+
+msgid "TXT_STRIFEMAP"
+msgstr "Mapa de Strife"
+
+msgid "TXT_BELDINSRING"
+msgstr "Anell de Beldin"
+
+msgid "TXT_OFFERINGCHALICE"
+msgstr "Calze d’ofrena"
+
+msgid "TXT_EAR"
+msgstr "Orella"
+
+msgid "TXT_BROKENCOUPLING"
+msgstr "Acoblament trencat"
+
+msgid "TXT_SHADOWARMOR"
+msgstr "Armadura d’ombra"
+
+msgid "TXT_ENVSUIT"
+msgstr "Vestit ambiental"
+
+msgid "TXT_GUARDUNIFORM"
+msgstr "Uniforme de guàrdia"
+
+msgid "TXT_OFFICERSUNIFORM"
+msgstr "Uniforme d’oficial"
+
+msgid "TXT_FTHROWERPARTS"
+msgstr "Peces del llançaflames"
+
+msgid "TXT_REPORT"
+msgstr "Informe"
+
+msgid "TXT_INFO"
+msgstr "Informació"
+
+msgid "TXT_TARGETER"
+msgstr "Apuntador"
+
+msgid "TXT_COMMUNICATOR"
+msgstr "Comunicador"
+
+msgid "TXT_COIN"
+msgstr "Has agafat 1 moneda d’or."
+
+msgid "TXT_XGOLD"
+msgstr "Has agafat %d monedes d’or."
+
+msgid "TXT_BEACON"
+msgstr "Balisa"
+
+msgid "TXT_DEGNINORE"
+msgstr "Mineral de Degnin"
+
+msgid "TXT_SCANNER"
+msgstr "Escàner"
+
+msgid "TXT_NEEDMAP"
+msgstr "Necessites el mapa."
+
+msgid "TXT_PRISONPASS"
+msgstr "Passi de la presó"
+
+msgid "TXT_STRIFECROSSBOW"
+msgstr "Ballesta"
+
+msgid "TXT_ASSAULTGUN"
+msgstr "Fusell d’assalt"
+
+msgid "TXT_MMLAUNCHER"
+msgstr "Llançador de minimíssils"
+
+msgid "TXT_FLAMER"
+msgstr "Llançaflames"
+
+msgid "TXT_MAULER"
+msgstr "Mauler"
+
+msgid "TXT_GLAUNCHER"
+msgstr "Llançagranades"
+
+msgid "TXT_SIGIL"
+msgstr "Sigil"
+
+msgid "TXT_BASEKEY"
+msgstr "Clau de la base"
+
+msgid "TXT_GOVSKEY"
+msgstr "Clau del Governador"
+
+msgid "TXT_PASSCARD"
+msgstr "Targeta d’accés"
+
+msgid "TXT_IDBADGE"
+msgstr "Insígnia d’identificació"
+
+msgid "TXT_PRISONKEY"
+msgstr "Clau de la presó"
+
+msgid "TXT_SEVEREDHAND"
+msgstr "Mà tallada"
+
+msgid "TXT_POWER1KEY"
+msgstr "Clau d’energia 1"
+
+msgid "TXT_POWER2KEY"
+msgstr "Clau d’energia 2"
+
+msgid "TXT_POWER3KEY"
+msgstr "Clau d’energia 3"
+
+msgid "TXT_GOLDKEY"
+msgstr "Clau d’or"
+
+msgid "TXT_IDCARD"
+msgstr "Targeta d’identificació"
+
+msgid "TXT_SILVERKEY"
+msgstr "Clau de plata"
+
+msgid "TXT_ORACLEKEY"
+msgstr "Clau de l’Oracle"
+
+msgid "TXT_MILITARYID"
+msgstr "Identificació militar"
+
+msgid "TXT_ORDERKEY"
+msgstr "Clau de l’Orde"
+
+msgid "TXT_WAREHOUSEKEY"
+msgstr "Clau del magatzem"
+
+msgid "TXT_BRASSKEY"
+msgstr "Clau de llautó"
+
+msgid "TXT_REDCRYSTAL"
+msgstr "Cristall vermell"
+
+msgid "TXT_BLUECRYSTAL"
+msgstr "Cristall blau"
+
+msgid "TXT_CHAPELKEY"
+msgstr "Clau de la capella"
+
+msgid "TXT_CATACOMBKEY"
+msgstr "Clau de les catacumbes"
+
+msgid "TXT_SECURITYKEY"
+msgstr "Clau de seguretat"
+
+msgid "TXT_COREKEY"
+msgstr "Clau del nucli"
+
+msgid "TXT_MAULERKEY"
+msgstr "Clau del Mauler"
+
+msgid "TXT_FACTORYKEY"
+msgstr "Clau de la fàbrica"
+
+msgid "TXT_MINEKEY"
+msgstr "Clau de la mina"
+
+msgid "TXT_NEWKEY5"
+msgstr "Clau nova 5"
+
+msgid "TXT_ORACLEPASS"
+msgstr "Passi de l’Oracle"
+
+msgid "TXT_HEGRENADES"
+msgstr "Granades explosives"
+
+msgid "TXT_PHGRENADES"
+msgstr "Granades de fòsfor"
+
+msgid "TXT_CLIPOFBULLETS"
+msgstr "Carregador de bales"
+
+msgid "TXT_BOXOFBULLETS"
+msgstr "Caixa de bales"
+
+msgid "TXT_MINIMISSILES"
+msgstr "Minimíssils"
+
+msgid "TXT_CRATEOFMISSILES"
+msgstr "Caixa de míssils"
+
+msgid "TXT_ENERGYPOD"
+msgstr "Càpsula d’energia"
+
+msgid "TXT_ENERGYPACK"
+msgstr "Paquet d’energia"
+
+msgid "TXT_POISONBOLTS"
+msgstr "Virots verinosos"
+
+msgid "TXT_ELECTRICBOLTS"
+msgstr "Virots elèctrics"
+
+msgid "TXT_AMMOSATCHEL"
+msgstr "Sarró de munició"
+
+msgid "MSG_TALISMANRED"
+msgstr "Has trobat el talismà vermell."
+
+msgid "MSG_TALISMANGREEN"
+msgstr "Has trobat el talismà verd."
+
+msgid "MSG_TALISMANBLUE"
+msgstr "Has trobat el talismà blau."
+
+msgid "MSG_TALISMANPOWER"
+msgstr "El talismà brilla amb poder."
+
+msgid "TXT_NEEDKEY"
+msgstr "Necessites una clau."
+
+msgid "TXT_NEED_PASSCARD"
+msgstr "Necessites targeta d’accés."
+
+msgid "TXT_NEED_PASSCARD_DOOR"
+msgstr "Necessites la targeta d’accés per obrir aquesta porta."
+
+msgid "TXT_NEED_IDCARD"
+msgstr "Necessites targeta d’identificació."
+
+msgid "TXT_NEED_PRISONKEY"
+msgstr "Necessites la clau de la presó."
+
+msgid "TXT_NEED_HANDPRINT"
+msgstr "Necessites empremta de mà."
+
+msgid "TXT_NEED_GOLDKEY"
+msgstr "Necessites la clau d’or."
+
+msgid "TXT_NEED_IDBADGE"
+msgstr "Necessites insígnia d’identificació."
+
+msgid "TXT_NEED_IDBADGE_DOOR"
+msgstr "Necessites la insígnia d’identificació per obrir aquesta porta."
+
+msgid "TXT_NEED_SILVERKEY"
+msgstr "Necessites la clau de plata."
+
+msgid "TXT_NEED_BRASSKEY"
+msgstr "Necessites la clau de llautó."
+
+msgid "TXT_NEED_REDCRYSTAL"
+msgstr "Necessites cristall vermell."
+
+msgid "TXT_NEED_BLUECRYSTAL"
+msgstr "Necessites cristall blau"
+
+msgid "TXT_RETAIL_ONLY"
+msgstr "Aquesta zona només està disponible a la versió comercial de Strife"
+
+msgid "TXT_DOES_NOT_WORK"
+msgstr "Això no sembla funcionar"
+
+msgid "TXT_NEED_CHALICE"
+msgstr "Necessites el calze!"
+
+msgid "TXT_NEED_OPASS"
+msgstr "Necessites el passi de l’Oracle!"
+
+msgid "TAG_PUNCHDAGGER"
+msgstr "Daga de puny"
+
+msgid "TAG_STRIFECROSSBOW1"
+msgstr "Ballesta 1"
+
+msgid "TAG_STRIFECROSSBOW2"
+msgstr "Ballesta 2"
+
+msgid "TAG_ASSAULTGUN"
+msgstr "Fusell d’assalt"
+
+msgid "TAG_MMLAUNCHER"
+msgstr "Llançador de minimíssils"
+
+msgid "TAG_FLAMER"
+msgstr "Llançaflames"
+
+msgid "TAG_MAULER1"
+msgstr "Mauler 1"
+
+msgid "TAG_MAULER2"
+msgstr "Mauler 2"
+
+msgid "TAG_GLAUNCHER1"
+msgstr "Llançagranades 1"
+
+msgid "TAG_GLAUNCHER2"
+msgstr "Llançagranades 2"
+
+msgid "TAG_SIGIL"
+msgstr "Sigil"
+
+msgid "TAG_COIN"
+msgstr "Moneda"
+
+msgid "TAG_MEDPATCH"
+msgstr "Pegat mèdic"
+
+msgid "TAG_MEDICALKIT"
+msgstr "Kit mèdic"
+
+msgid "TAG_SURGERYKIT"
+msgstr "Kit quirúrgic"
+
+msgid "TAG_BELDINSRING"
+msgstr "Anell de Beldin"
+
+msgid "TAG_OFFERINGCHALICE"
+msgstr "Calze d’ofrena"
+
+msgid "TAG_EAR"
+msgstr "Orella"
+
+msgid "TAG_BROKENCOUPLING"
+msgstr "Acoblament trencat"
+
+msgid "TAG_SHADOWARMOR"
+msgstr "Armadura d’ombra"
+
+msgid "TAG_ENVSUIT"
+msgstr "Vestit ambiental"
+
+msgid "TAG_GUARDUNIFORM"
+msgstr "Uniforme de guàrdia"
+
+msgid "TAG_OFFICERSUNIFORM"
+msgstr "Uniforme d’oficial"
+
+msgid "TAG_FTHROWERPARTS"
+msgstr "Peces del llançaflames"
+
+msgid "TAG_REPORT"
+msgstr "Informe"
+
+msgid "TAG_INFO"
+msgstr "Informació"
+
+msgid "TAG_TARGETER"
+msgstr "Apuntador"
+
+msgid "TAG_COMMUNICATOR"
+msgstr "Comunicador"
+
+msgid "TAG_DEGNINORE"
+msgstr "Mineral de Degnin"
+
+msgid "TAG_GUNTRAINING"
+msgstr "Entrenament amb armes"
+
+msgid "TAG_HEALTHTRAINING"
+msgstr "Entrenament de salut"
+
+msgid "TAG_SCANNER"
+msgstr "Escàner"
+
+msgid "TAG_PRISONPASS"
+msgstr "Passi de la presó"
+
+msgid "TAG_ALARM"
+msgstr "Alarma"
+
+msgid "TAG_AMMOFILLUP"
+msgstr "Recàrrega de munició"
+
+msgid "TAG_HEALTHFILLUP"
+msgstr "Recàrrega de salut"
+
+msgid "TAG_TELEPORTERBEACON"
+msgstr "Balisa de teleportació"
+
+msgid "TAG_METALARMOR"
+msgstr "Armadura metàl·lica"
+
+msgid "TAG_LEATHER"
+msgstr "Cuir"
+
+msgid "TAG_HEGRENADES"
+msgstr "Granades explosives"
+
+msgid "TAG_PHGRENADES"
+msgstr "Granades de fòsfor"
+
+msgid "TAG_CLIPOFBULLETS"
+msgstr "Carregador de bales"
+
+msgid "TAG_BOXOFBULLETS"
+msgstr "Caixa de bales"
+
+msgid "TAG_MINIMISSILES"
+msgstr "Minimíssils"
+
+msgid "TAG_CRATEOFMISSILES"
+msgstr "Caixa de míssils"
+
+msgid "TAG_ENERGYPOD"
+msgstr "Càpsula d’energia"
+
+msgid "TAG_ENERGYPACK"
+msgstr "Paquet d’energia"
+
+msgid "TAG_POISONBOLTS"
+msgstr "Virots verinosos"
+
+msgid "TAG_ELECTRICBOLTS"
+msgstr "Virots elèctrics"
+
+msgid "TAG_AMMOSATCHEL"
+msgstr "Sarró de munició"
+
+msgid "TAG_BASEKEY"
+msgstr "Clau de la base"
+
+msgid "TAG_GOVSKEY"
+msgstr "Clau del Governador"
+
+msgid "TAG_PASSCARD"
+msgstr "Targeta d’accés"
+
+msgid "TAG_IDBADGE"
+msgstr "Insígnia d’identificació"
+
+msgid "TAG_PRISONKEY"
+msgstr "Clau de la presó"
+
+msgid "TAG_SEVEREDHAND"
+msgstr "Mà tallada"
+
+msgid "TAG_POWER1KEY"
+msgstr "Clau d’energia 1"
+
+msgid "TAG_POWER2KEY"
+msgstr "Clau d’energia 2"
+
+msgid "TAG_POWER3KEY"
+msgstr "Clau d’energia 3"
+
+msgid "TAG_GOLDKEY"
+msgstr "Clau d’or"
+
+msgid "TAG_IDCARD"
+msgstr "Targeta d’identificació"
+
+msgid "TAG_SILVERKEY"
+msgstr "Clau de plata"
+
+msgid "TAG_ORACLEKEY"
+msgstr "Clau de l’Oracle"
+
+msgid "TAG_MILITARYID"
+msgstr "Identificació militar"
+
+msgid "TAG_ORDERKEY"
+msgstr "Clau de l’Orde"
+
+msgid "TAG_WAREHOUSEKEY"
+msgstr "Clau del magatzem"
+
+msgid "TAG_BRASSKEY"
+msgstr "Clau de llautó"
+
+msgid "TAG_REDCRYSTALKEY"
+msgstr "Clau del cristall vermell"
+
+msgid "TAG_BLUECRYSTALKEY"
+msgstr "Clau del cristall blau"
+
+msgid "TAG_CHAPELKEY"
+msgstr "Clau de la capella"
+
+msgid "TAG_CATACOMBKEY"
+msgstr "Clau de les catacumbes"
+
+msgid "TAG_SECURITYKEY"
+msgstr "Clau de seguretat"
+
+msgid "TAG_COREKEY"
+msgstr "Clau del nucli"
+
+msgid "TAG_MAULERKEY"
+msgstr "Clau del Mauler"
+
+msgid "TAG_FACTORYKEY"
+msgstr "Clau de la fàbrica"
+
+msgid "TAG_MINEKEY"
+msgstr "Clau de la mina"
+
+msgid "TAG_NEWKEY5"
+msgstr "Clau nova 5"
+
+msgid "TAG_ORACLEPASS"
+msgstr "Passi de l’Oracle"
+
+msgid "TAG_10GOLD"
+msgstr "10 monedes d’or"
+
+msgid "TAG_25GOLD"
+msgstr "25 monedes d’or"
+
+msgid "TAG_50GOLD"
+msgstr "50 monedes d’or"
+
+msgid "TAG_300GOLD"
+msgstr "300 monedes d’or"
+
+msgid "TXT_PERSON"
+msgstr "Persona"
+
+msgid "TAG_ACOLYTE"
+msgstr "Acòlit"
+
+msgid "TAG_ARMORER"
+msgstr "Armer"
+
+msgid "TAG_BARKEEP"
+msgstr "Taverner"
+
+msgid "TAG_BEGGAR"
+msgstr "Captaire"
+
+msgid "TAG_MACIL1"
+msgstr "Macil 1"
+
+msgid "TAG_MACIL2"
+msgstr "Macil 2"
+
+msgid "TAG_MEDIC"
+msgstr "Metge"
+
+msgid "TAG_ORACLE"
+msgstr "Oracle"
+
+msgid "TAG_PRIEST"
+msgstr "Sacerdot"
+
+msgid "TAG_RATBUDDY"
+msgstr "Company rata"
+
+msgid "TAG_REBEL"
+msgstr "Rebel"
+
+msgid "TAG_TEMPLAR"
+msgstr "Templer"
+
+msgid "TAG_WEAPONSMITH"
+msgstr "Armer"
+
+msgid "TAG_TALISMANRED"
+msgstr "Talismà vermell"
+
+msgid "TAG_TALISMANGREEN"
+msgstr "Talismà verd"
+
+msgid "TAG_TALISMANBLUE"
+msgstr "Talismà blau"
+
+msgid "OB_ACOLYTE"
+msgstr "%o ha mort per culpa de Acòlit."
+
+msgid "OB_MACIL"
+msgstr "%o ha mort per culpa de Macil."
+
+msgid "OB_REBEL"
+msgstr "%o ha mort per culpa de REBEL."
+
+msgid "OB_BEGGAR"
+msgstr "%o ha mort per culpa de Captaire."
+
+msgid "OB_PEASANT"
+msgstr "%o ha mort per culpa de PEASANT."
+
+msgid "OB_ALIENSPECTRE"
+msgstr "%o ha mort per culpa de Espectre alienígena."
+
+msgid "OB_ENTITY"
+msgstr "%o ha mort per culpa de Entitat."
+
+msgid "OB_LOREMASTER"
+msgstr "%o ha mort per culpa de Mestre del Saber."
+
+msgid "OB_PROGRAMMER"
+msgstr "%o ha mort per culpa de PROGRAMMER."
+
+msgid "OB_STFBISHOP"
+msgstr "%o ha mort per culpa de STF Bisbe."
+
+msgid "OB_SENTINEL"
+msgstr "%o ha mort per culpa de SENTINEL."
+
+msgid "OB_CRUSADER"
+msgstr "%o ha mort per culpa de Creuat."
+
+msgid "OB_INQUISITOR"
+msgstr "%o ha mort per culpa de Inquisidor."
+
+msgid "OB_STALKER"
+msgstr "%o ha mort per culpa de STALKER."
+
+msgid "OB_TURRET"
+msgstr "%o ha mort per culpa de TURRET."
+
+msgid "OB_TEMPLARHIT"
+msgstr "%o ha estat colpejat per Templer HIT."
+
+msgid "OB_TEMPLAR"
+msgstr "%o ha mort per culpa de Templer."
+
+msgid "OB_REAVERHIT"
+msgstr "%o ha estat colpejat per REAVERHIT."
+
+msgid "OB_REAVER"
+msgstr "%o ha mort per culpa de REAVER."
+
+msgid "OB_MPPUNCHDAGGER"
+msgstr "%o ha estat abatut amb MPPUNCHDAGGER."
+
+msgid "OB_MPELECTRICBOLT"
+msgstr "%o ha estat abatut amb MP elèctric BOLT."
+
+msgid "OB_MPPOISONBOLT"
+msgstr "%o ha estat abatut amb MP verí BOLT."
+
+msgid "OB_MPASSAULTGUN"
+msgstr "%o ha estat abatut amb MP Fusell d’assalt."
+
+msgid "OB_MPMINIMISSILELAUNCHER"
+msgstr "%o ha estat abatut amb MP mini MISSILE llançador."
+
+msgid "OB_MPSTRIFEGRENADE"
+msgstr "%o ha estat abatut amb MPSTRIFEGRENADE."
+
+msgid "OB_MPPHOSPHOROUSGRENADE"
+msgstr "%o ha estat abatut amb MP fòsfor OS fòsfor OROUSGRENADE."
+
+msgid "OB_MPFLAMETHROWER"
+msgstr "%o ha estat abatut amb MP llançaflames."
+
+msgid "OB_MPMAULER1"
+msgstr "%o ha estat abatut amb MP Mauler 1."
+
+msgid "OB_MPMAULER"
+msgstr "%o ha estat abatut amb MP Mauler."
+
+msgid "OB_MPSIGIL"
+msgstr "%o s’ha agenollat davant el poder absolut del Sigil de %k."
+
+msgid "TXT_STRIFE_EPI"
+msgstr "Strife"
+
+msgid "TXT_FREED_PRISONERS"
+msgstr "Has alliberat els presoners!"
+
+msgid "TXT_DESTROYED_CONVERTER"
+msgstr "Has destruït el convertidor!"
+
+msgid "TXT_COMPLETED_TRAINING"
+msgstr "Enhorabona! Has completat la zona d’entrenament"
+
+msgid "TXT_QUEST_14"
+msgstr "Has fet esclatar el cristall"
+
+msgid "TXT_QUEST_16"
+msgstr "Has fet esclatar les portes"
+
+msgid "TXT_QUEST_27"
+msgstr "Has fet esclatar l’ordinador"
+
+msgid "TXT_KILLED_BISHOP"
+msgstr "Has derrotat Bisbe."
+
+msgid "TXT_KILLED_ORACLE"
+msgstr "Has derrotat Oracle."
+
+msgid "TXT_KILLED_MACIL"
+msgstr "Has derrotat Macil."
+
+msgid "TXT_KILLED_LOREMASTER"
+msgstr "Has derrotat Mestre del Saber."
+
+msgid "TXT_YOUFOOL"
+msgstr "Insensat!"
+
+msgid "TXT_YOUREDEAD"
+msgstr "Ets mort."
+
+msgid "TXT_HAVEENOUGH"
+msgstr "Sembla que en tens prou!"
+
+msgid "TXT_GOAWAY"
+msgstr "Ves-te’n."
+
+msgid "TXT_COMM0"
+msgstr "Missatge entrant…"
+
+msgid "TXT_COMM1"
+msgstr "Missatge entrant de BlackBird…"
+
+msgid "TXT_FINDHELP"
+msgstr "Busca ajuda"
+
+msgid "TXT_TRADE"
+msgstr "Intercanvia"
+
+msgid "GOTCHEXARMOR"
+msgstr "Has agafat armadura Chex."
+
+msgid "GOTSUPERCHEXARMOR"
+msgstr "Has agafat superarmadura Chex."
+
+msgid "GOTWATER"
+msgstr "Has agafat un got d’aigua."
+
+msgid "GOTREPELLENT"
+msgstr "Has agafat repel·lent de flemoids."
+
+msgid "GOTBREAKFAST"
+msgstr "Has agafat un esmorzar saludable."
+
+msgid "GOTCBLUEKEY"
+msgstr "Has agafat la clau blava."
+
+msgid "GOTCYELLOWKEY"
+msgstr "Has agafat la clau groga."
+
+msgid "GOTCREDKEY"
+msgstr "Has agafat la clau vermella."
+
+msgid "GOTFRUIT"
+msgstr "Has agafat fruita."
+
+msgid "GOTVEGETABLESNEED"
+msgstr "Has agafat verdures que et feien MOLTA falta!"
+
+msgid "GOTVEGETABLES"
+msgstr "Has agafat verdures."
+
+msgid "GOTSLIMESUIT"
+msgstr "Has agafat un vestit antillim."
+
+msgid "GOTCHEXMAP"
+msgstr "Has agafat el mapa informatitzat de l’àrea."
+
+msgid "GOTZORCHRECHARGE"
+msgstr "Has agafat una recàrrega de zorch."
+
+msgid "GOTMINIZORCHPACK"
+msgstr "Has agafat un paquet de mini-zorch."
+
+msgid "GOTPROPULSORRECHARGE"
+msgstr "Has agafat una recàrrega de propulsor zorch."
+
+msgid "GOTPROPULSORPACK"
+msgstr "Has agafat un paquet de propulsor zorch."
+
+msgid "GOTPHASINGZORCHERRECHARGE"
+msgstr "Has agafat una recàrrega de zorcher fàsic."
+
+msgid "GOTPHASINGZORCHERPACK"
+msgstr "Has agafat un paquet de zorcher fàsic."
+
+msgid "GOTLARGEZORCHERRECHARGE"
+msgstr "Has agafat una recàrrega de zorch gran."
+
+msgid "GOTLARGEZORCHERPACK"
+msgstr "Has agafat un paquet de zorcher gran."
+
+msgid "GOTZORCHPACK"
+msgstr "Has agafat un paquet de zorch."
+
+msgid "GOTLAZDEVICE"
+msgstr "Has aconseguit el dispositiu LAZ!"
+
+msgid "GOTRAPIDZORCHER"
+msgstr "Has aconseguit el Rapid Zorcher!"
+
+msgid "GOTSUPERBOOTSPORK"
+msgstr "Has aconseguit la Super Bootspork!"
+
+msgid "GOTZORCHPROPULSOR"
+msgstr "Has aconseguit el Zorch Propulsor!"
+
+msgid "GOTPHASINGZORCHER"
+msgstr "Has aconseguit el Phasing Zorcher!"
+
+msgid "GOTLARGEZORCHER"
+msgstr "Has aconseguit el Large Zorcher!"
+
+msgid "GOTSUPERLARGEZORCHER"
+msgstr "Has aconseguit el Super Large Zorcher!"
+
+msgid "GOTMINIZORCHER"
+msgstr "Has aconseguit el Mini Zorcher!"
+
+msgid "TAG_SPOON"
+msgstr "Cullera"
+
+msgid "TAG_SPORK"
+msgstr "Cullera-forquilla"
+
+msgid "TAG_MINIZORCHER"
+msgstr "Mini-zorcher"
+
+msgid "TAG_LARGEZORCHER"
+msgstr "Zorcher gran"
+
+msgid "TAG_SUPERLARGEZORCHER"
+msgstr "Super-zorcher gran"
+
+msgid "TAG_RAPIDZORCHER"
+msgstr "Zorcher ràpid"
+
+msgid "TAG_ZORCHPROPULSOR"
+msgstr "Propulsor zorch"
+
+msgid "TAG_PHASINGZORCHER"
+msgstr "Zorcher de fase"
+
+msgid "TAG_LAZDEVICE"
+msgstr "Dispositiu LAZ"
+
+msgid "OB_COMMONUS"
+msgstr "%o ha mort per culpa de COMMONUS."
+
+msgid "OB_BIPEDICUS"
+msgstr "%o ha mort per culpa de BIPEDICUS."
+
+msgid "OB_BIPEDICUS2"
+msgstr "%o ha mort per culpa de BIPEDICUS 2."
+
+msgid "OB_CYCLOPTIS"
+msgstr "%o ha mort per culpa de CYCLOPTIS."
+
+msgid "OB_FLEMBRANE"
+msgstr "%o ha mort per culpa de FLEMBRANE."
+
+msgid "OB_MPSPOON"
+msgstr "%o ha estat abatut amb MPSPOON."
+
+msgid "OB_MPBOOTSPORK"
+msgstr "%o ha estat abatut amb MPBOOTSPORK."
+
+msgid "OB_MPZORCH"
+msgstr "%o ha estat abatut amb MPZORCH."
+
+msgid "OB_MPMEGAZORCH"
+msgstr "%o ha estat abatut amb MPMEGAZORCH."
+
+msgid "OB_MPRAPIDZORCH"
+msgstr "%o ha estat abatut amb MPRAPIDZORCH."
+
+msgid "OB_MPPROPULSOR"
+msgstr "%o ha estat abatut amb MPPROPULSOR."
+
+msgid "OB_MPP_SPLASH"
+msgstr "%o ha rebut l’impacte del propulsor de %k."
+
+msgid "OB_MPPHASEZORCH"
+msgstr "%o ha estat abatut amb MP fòsfor ASEZORCH."
+
+msgid "OB_MPLAZ_BOOM"
+msgstr "%o ha estat abatut amb MPLAZBOOM."
+
+msgctxt "chex"
+msgid "OB_MPBFG_SPLASH"
+msgstr "%o ha estat abatut amb MPBFGSPLASH."
+
+msgid "CHUSTR_E1M1"
+msgstr "E1M1: Zona d’aterratge"
+
+msgid "CHUSTR_E1M2"
+msgstr "E1M2: Instal·lació d’emmagatzematge"
+
+msgid "CHUSTR_E1M3"
+msgstr "E1M3: Laboratori experimental"
+
+msgid "CHUSTR_E1M4"
+msgstr "E1M4: Arboretum"
+
+msgid "CHUSTR_E1M5"
+msgstr "E1M5: Cavernes de Bazoik"
+
+msgid "CE1TEXT"
+msgstr ""
+"Missió complerta.\n"
+"\n"
+"Estàs preparat per a la propera missió?\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Prem la tecla Esc per continuar…"
+
+msgid "CE2TEXT"
+msgstr "Ho has aconseguit!"
+
+msgid "CE3TEXT"
+msgstr "Feina excel·lent!"
+
+msgid "CE4TEXT"
+msgstr "Fantàstic"
+
+msgid "CLOADNET"
+msgstr "Carrega partida en xarxa"
+
+msgctxt "chex"
+msgid "QSPROMPT"
+msgstr "Vols sobreescriure amb desament ràpid la partida anomenada'%s'?Prem Y o N."
+
+msgctxt "chex"
+msgid "QLOADNET"
+msgstr ""
+"No pots fer una càrrega ràpida durant una netquest!\n"
+"\n"
+"Prem una tecla."
+
+msgctxt "chex"
+msgid "QLPROMPT"
+msgstr "Vols carregar ràpidament la partida anomenada'%s'?Prem Y o N."
+
+msgid "CNEWGAME"
+msgstr "Partida nova"
+
+msgid "CNIGHTMARE"
+msgstr "Superviscós!"
+
+msgid "CSWSTRING"
+msgstr ""
+"Això és Chex® Quest. Busca\n"
+"\n"
+"nivells futurs a www.chexquest.com.\n"
+"\n"
+"Prem una tecla."
+
+msgctxt "chex"
+msgid "NETEND"
+msgstr ""
+"No pots acabar una netquest!\n"
+"\n"
+"Prem una tecla."
+
+msgctxt "chex"
+msgid "ENDGAME"
+msgstr ""
+"Segur que vols acabar la missió?\n"
+"\n"
+"Prem Y o N."
+
+msgctxt "chex"
+msgid "STSTR_DQDON"
+msgstr "Mode invencible: ACTIVAT"
+
+msgctxt "chex"
+msgid "STSTR_DQDOFF"
+msgstr "Mode invencible: DESACTIVAT"
+
+msgctxt "chex"
+msgid "STSTR_FAADDED"
+msgstr "Zorch afegit"
+
+msgctxt "chex"
+msgid "STSTR_KFAADDED"
+msgstr "Super Zorch afegit"
+
+msgctxt "chex"
+msgid "STSTR_CHOPPERS"
+msgstr "...Menja Chex!"
+
+msgctxt "chex"
+msgid "AMMO_CLIP"
+msgstr "Bales"
+
+msgctxt "chex"
+msgid "AMMO_SHELLS"
+msgstr "Cartutxos"
+
+msgctxt "chex"
+msgid "AMMO_ROCKETS"
+msgstr "Coets"
+
+msgctxt "chex"
+msgid "AMMO_CELLS"
+msgstr "Cel·les"
+
+msgid "MNU_NEWGAME"
+msgstr "Partida nova"
+
+msgid "MNU_OPTIONS"
+msgstr "Opcions"
+
+msgid "MNU_GAMEFILES"
+msgstr "Fitxers de joc"
+
+msgid "MNU_INFO"
+msgstr "Informació"
+
+msgid "MNU_QUITGAME"
+msgstr "Surt del joc"
+
+msgid "MNU_CHOOSESKILL"
+msgstr "Tria nivell de dificultat:"
+
+msgid "SKILL_BABY"
+msgstr "Sóc massa jove per morir"
+
+msgid "SKILL_EASY"
+msgstr "Ei, no tan fort"
+
+msgid "SKILL_NORMAL"
+msgstr "Fes-me mal de valent"
+
+msgid "SKILL_HARD"
+msgstr "Ultraviolència"
+
+msgid "SKILL_NIGHTMARE"
+msgstr "Malson!"
+
+msgid "CSKILL_BABY"
+msgstr "Fàcil"
+
+msgid "CSKILL_EASY"
+msgstr "Mitjà"
+
+msgid "CSKILL_NORMAL"
+msgstr "Difícil"
+
+msgid "CSKILL_HARD"
+msgstr "Molt difícil"
+
+msgid "CSKILL_NIGHTMARE"
+msgstr "Superviscós!"
+
+msgid "SSKILL_BABY"
+msgstr "Entrenament"
+
+msgid "SSKILL_EASY"
+msgstr "Novell"
+
+msgid "SSKILL_NORMAL"
+msgstr "Veterà"
+
+msgid "SSKILL_HARD"
+msgstr "Elit"
+
+msgid "SSKILL_NIGHTMARE"
+msgstr "Bany de sang"
+
+msgid "MNU_WETNURSE"
+msgstr "Necessites una mainadera"
+
+msgid "MNU_YELLOWBELLIES"
+msgstr "Per a covards"
+
+msgid "MNU_BRINGEST"
+msgstr "Que vinguin tots"
+
+msgid "MNU_SMITE"
+msgstr "Necessites una mainadera"
+
+msgid "MNU_BLACKPLAGUE"
+msgstr "La Pesta Negra et posseeix"
+
+msgid "MNU_SQUIRE"
+msgstr "Escuder"
+
+msgid "MNU_KNIGHT"
+msgstr "Cavaller"
+
+msgid "MNU_WARRIOR"
+msgstr "Guerrer"
+
+msgid "MNU_BERSERKER"
+msgstr "Berserker"
+
+msgid "MNU_TITAN"
+msgstr "Tità"
+
+msgid "MNU_ALTARBOY"
+msgstr "Escolà"
+
+msgid "MNU_ACOLYTE"
+msgstr "Acòlit"
+
+msgid "MNU_PRIEST"
+msgstr "Sacerdot"
+
+msgid "MNU_CARDINAL"
+msgstr "Cardenal"
+
+msgid "MNU_POPE"
+msgstr "Papa"
+
+msgid "MNU_APPRENTICE"
+msgstr "Aprenent"
+
+msgid "MNU_ENCHANTER"
+msgstr "Encantador"
+
+msgid "MNU_SORCERER"
+msgstr "Bruixot"
+
+msgid "MNU_WARLOCK"
+msgstr "Mag negre"
+
+msgid "MNU_ARCHMAGE"
+msgstr "Arximag"
+
+msgid "MNU_CHOOSECLASS"
+msgstr "Tria classe:"
+
+msgid "MNU_FIGHTER"
+msgstr "Lluitador"
+
+msgid "MNU_CLERIC"
+msgstr "Clergue"
+
+msgid "MNU_MAGE"
+msgstr "Mag"
+
+msgid "MNU_RANDOM"
+msgstr "Aleatori"
+
+msgid "MNU_EPISODE"
+msgstr "Tria episodi"
+
+msgctxt "strife"
+msgid "MNU_EPISODE"
+msgstr "Tria episodi"
+
+msgid "MNU_COTD"
+msgstr "Ciutat dels condemnats"
+
+msgid "MNU_HELLSMAW"
+msgstr "Les goles de l’infern"
+
+msgid "MNU_DOME"
+msgstr "La cúpula de D’Sparil"
+
+msgid "MNU_OSSUARY"
+msgstr "L’ossari"
+
+msgid "MNU_DEMESNE"
+msgstr "El domini estancat"
+
+msgid "GMPLYMNU_TEAMPLAY"
+msgstr "Joc per equips"
+
+msgid "GMPLYMNU_TEAMDAMAGE"
+msgstr "Dany d’equip"
+
+msgid "GMPLYMNU_SMARTAUTOAIM"
+msgstr "Autoapuntat intel·ligent"
+
+msgid "GMPLYMNU_FALLINGDAMAGE"
+msgstr "Dany per caiguda"
+
+msgid "GMPLYMNU_DROPWEAPON"
+msgstr "Deixa anar l’arma"
+
+msgid "GMPLYMNU_DOUBLEAMMO"
+msgstr "Munició doble"
+
+msgid "GMPLYMNU_INFINITEAMMO"
+msgstr "Munició infinita"
+
+msgid "GMPLYMNU_INFINITEINVENTORY"
+msgstr "Inventari infinit"
+
+msgid "GMPLYMNU_NOMONSTERS"
+msgstr "Sense monstres"
+
+msgid "GMPLYMNU_NOMONSTERSTOEXIT"
+msgstr "Cal matar tots els monstres per sortir"
+
+msgid "GMPLYMNU_MONSTERSRESPAWN"
+msgstr "Els monstres reapareixen"
+
+msgid "GMPLYMNU_NORESPAWN"
+msgstr "Sense reaparició"
+
+msgid "GMPLYMNU_ITEMSRESPAWN"
+msgstr "Els objectes reapareixen"
+
+msgid "GMPLYMNU_SUPERRESPAWN"
+msgstr "Reaparició de superobjectes"
+
+msgid "GMPLYMNU_FASTMONSTERS"
+msgstr "Monstres ràpids"
+
+msgid "GMPLYMNU_INSTANTREACTION"
+msgstr "Reacció instantània"
+
+msgid "GMPLYMNU_DEGENERATION"
+msgstr "Degeneració"
+
+msgid "GMPLYMNU_NOAUTOAIM"
+msgstr "Sense autoapuntat"
+
+msgid "GMPLYMNU_ALLOWSUICIDE"
+msgstr "Permet suïcidar-se"
+
+msgid "GMPLYMNU_ALLOWJUMP"
+msgstr "Permet saltar"
+
+msgid "GMPLYMNU_ALLOWCROUCH"
+msgstr "Permet ajupir-se"
+
+msgid "GMPLYMNU_ALLOWFREELOOK"
+msgstr "Permet mirar lliurement"
+
+msgid "GMPLYMNU_ALLOWFOV"
+msgstr "Permet canviar el camp de visió"
+
+msgid "GMPLYMNU_BFGFREEAIM"
+msgstr "Apuntat lliure amb la BFG"
+
+msgid "GMPLYMNU_ALLOWAUTOMAP"
+msgstr "Permet el mapa automàtic"
+
+msgid "GMPLYMNU_AUTOMAPALLIES"
+msgstr "Mostra aliats al mapa automàtic"
+
+msgid "GMPLYMNU_ALLOWSPYING"
+msgstr "Permet observar altres jugadors"
+
+msgid "GMPLYMNU_CHASECAM"
+msgstr "Càmera en tercera persona"
+
+msgid "GMPLYMNU_DONTCHECKAMMO"
+msgstr "No comprovis la munició"
+
+msgid "GMPLYMNU_KILLBOSSSPAWNS"
+msgstr "Mata les invocacions dels caps"
+
+msgid "GMPLYMNU_NOCOUNTENDMONSTER"
+msgstr "No comptis monstres finals"
+
+msgid "GMPLYMNU_DEATHMATCH"
+msgstr "Combat a mort"
+
+msgid "GMPLYMNU_WEAPONSSTAY"
+msgstr "Les armes romanen"
+
+msgid "GMPLYMNU_ALLOWPOWERUPS"
+msgstr "Permet potenciadors"
+
+msgid "GMPLYMNU_ALLOWHEALTH"
+msgstr "Permet salut"
+
+msgid "GMPLYMNU_ALLOWARMOR"
+msgstr "Permet armadura"
+
+msgid "GMPLYMNU_SPAWNFARTHEST"
+msgstr "Reaparèixer al punt més llunyà"
+
+msgid "GMPLYMNU_SAMEMAP"
+msgstr "Mantén el mateix mapa"
+
+msgid "GMPLYMNU_FORCERESPAWN"
+msgstr "Força la reaparició"
+
+msgid "GMPLYMNU_ALLOWEXIT"
+msgstr "Permet sortir del nivell"
+
+msgid "GMPLYMNU_BARRELSRESPAWN"
+msgstr "Els barrils reapareixen"
+
+msgid "GMPLYMNU_RESPAWNPROTECTION"
+msgstr "Protecció en reaparèixer"
+
+msgid "GMPLYMNU_LOSEFRAG"
+msgstr "Perd un frag"
+
+msgid "GMPLYMNU_KEEPFRAGS"
+msgstr "Conserva els frags"
+
+msgid "GMPLYMNU_NOTEAMSWITCH"
+msgstr "Sense canvi d’equip"
+
+msgid "GMPLYMNU_COOPERATIVE"
+msgstr "Cooperatiu"
+
+msgid "GMPLYMNU_MULTIPLAYERWEAPONS"
+msgstr "Armes multijugador"
+
+msgid "GMPLYMNU_LOSEINVENTORY"
+msgstr "Perd l’inventari"
+
+msgid "GMPLYMNU_KEEPKEYS"
+msgstr "Conserva les claus"
+
+msgid "GMPLYMNU_KEEPWEAPONS"
+msgstr "Conserva les armes"
+
+msgid "GMPLYMNU_KEEPARMOR"
+msgstr "Conserva l’armadura"
+
+msgid "GMPLYMNU_KEEPPOWERUPS"
+msgstr "Conserva els potenciadors"
+
+msgid "GMPLYMNU_KEEPAMMO"
+msgstr "Conserva la munició"
+
+msgid "GMPLYMNU_LOSEHALFAMMO"
+msgstr "Perd la meitat de la munició"
+
+msgid "GMPLYMNU_SPAWNWHEREDIED"
+msgstr "Reaparèixer on has mort"
+
+msgid "GMPLYMNU_ALWAYSSPAWNMULTI"
+msgstr "Genera sempre objectes multijugador"
+
+msgid "GMPLYMNU_NOVERTSPREAD"
+msgstr "Sense dispersió vertical"
+
+msgid "GMPLYMNU_NOEXTRAAMMO"
+msgstr "Sense munició extra"
+
+msgid "OPTMNU_COMPATIBILITY"
+msgstr "Compatibilitat"
+
+msgid "CMPTMNU_TITLE"
+msgstr "Opcions de compatibilitat"
+
+msgid "CMPTMNU_MODE"
+msgstr "Mode"
+
+msgid "CMPTMNU_ACTORBEHAVIOR"
+msgstr "Actorbehavior"
+
+msgid "CMPTMNU_NOBLOCKFRIENDS"
+msgstr "Noblockfriends"
+
+msgid "CMPTMNU_LIMITPAIN"
+msgstr "Limitpain"
+
+msgid "CMPTMNU_MBFMONSTERMOVE"
+msgstr "Mbfmonstermove"
+
+msgid "CMPTMNU_CROSSDROPOFF"
+msgstr "Crossdropoff"
+
+msgid "CMPTMNU_DROPOFF"
+msgstr "Dropoff"
+
+msgid "CMPTMNU_INVISIBILITY"
+msgstr "Invisibility"
+
+msgid "CMPTMNU_MINOTAUR"
+msgstr "Minotaur"
+
+msgid "CMPTMNU_NOTOSSDROPS"
+msgstr "Notossdrops"
+
+msgid "CMPTMNU_DEHACKEDBEHAVIOR"
+msgstr "Dehackedbehavior"
+
+msgid "CMPTMNU_DEHHEALTH"
+msgstr "Dehhealth"
+
+msgid "CMPTMNU_MUSHROOM"
+msgstr "Mushroom"
+
+msgid "CMPTMNU_MAPACTIONBEHAVIOR"
+msgstr "Comportament de les accions de mapa"
+
+msgid "CMPTMNU_USEBLOCKING"
+msgstr "Useblocking"
+
+msgid "CMPTMNU_ANYBOSSDEATH"
+msgstr "Anybossdeath"
+
+msgid "CMPTMNU_NODOORLIGHT"
+msgstr "Nodoorlight"
+
+msgid "CMPTMNU_LIGHT"
+msgstr "Llum"
+
+msgid "CMPTMNU_SHORTTEX"
+msgstr "Shorttex"
+
+msgid "CMPTMNU_STAIRS"
+msgstr "Stairs"
+
+msgid "CMPTMNU_FLOORMOVE"
+msgstr "Floormove"
+
+msgid "CMPTMNU_POINTONLINE"
+msgstr "Pointonline"
+
+msgid "CMPTMNU_MULTIEXIT"
+msgstr "Multiexit"
+
+msgid "CMPTMNU_PHYSICSBEHAVIOR"
+msgstr "Physicsbehavior"
+
+msgid "CMPTMNU_NOPASSOVER"
+msgstr "Nopassover"
+
+msgid "CMPTMNU_BOOMSCROLL"
+msgstr "Boomscroll"
+
+msgid "CMPTMNU_BADANGLES"
+msgstr "Badangles"
+
+msgid "CMPTMNU_WALLRUN"
+msgstr "Wallrun"
+
+msgid "CMPTMNU_RAVENSCROLL"
+msgstr "Ravenscroll"
+
+msgid "CMPTMNU_TRACE"
+msgstr "Trace"
+
+msgid "CMPTMNU_HITSCAN"
+msgstr "Hitscan"
+
+msgid "CMPTMNU_MISSILECLIP"
+msgstr "Missileclip"
+
+msgid "CMPTMNU_RENDERINGBEHAVIOR"
+msgstr "Renderingbehavior"
+
+msgid "CMPTMNU_POLYOBJ"
+msgstr "Polyobj"
+
+msgid "CMPTMNU_MASKEDMIDTEX"
+msgstr "Maskedmidtex"
+
+msgid "CMPTMNU_SPRITESORT"
+msgstr "Spritesort"
+
+msgid "CMPTMNU_SOUNDBEHAVIOR"
+msgstr "Soundbehavior"
+
+msgid "CMPTMNU_SOUNDSLOTS"
+msgstr "Soundslots"
+
+msgid "CMPTMNU_SILENTPICKUP"
+msgstr "Silentpickup"
+
+msgid "CMPTMNU_SILENTINSTANTFLOORS"
+msgstr "Silentinstantfloors"
+
+msgid "CMPTMNU_SECTORSOUNDS"
+msgstr "Sectorsounds"
+
+msgid "CMPTMNU_SOUNDTARGET"
+msgstr "Soundtarget"
+
+msgid "CMPTMNU_TELEPORT"
+msgstr "Teleport"
+
+msgid "CMPTMNU_PUSHWINDOW"
+msgstr "Pushwindow"
+
+msgid "CMPTMNU_CHECKSWITCHRANGE"
+msgstr "Checkswitchrange"
+
+msgid "CMPTMNU_RAILINGHACK"
+msgstr "Railinghack"
+
+msgid "CMPTMNU_EXPLODE1"
+msgstr "Explode 1"
+
+msgid "CMPTMNU_EXPLODE2"
+msgstr "Explode 2"
+
+msgid "PLYRMNU_RED"
+msgstr "Vermell"
+
+msgid "PLYRMNU_GREEN"
+msgstr "Verd"
+
+msgid "PLYRMNU_BLUE"
+msgstr "Blau"
+
+msgid "PLYRMNU_PLAYERCLASS"
+msgstr "Playerclass"
+
+msgid "PLYRMNU_PLAYERSKIN"
+msgstr "Playerskin"
+
+msgid "PLYRMNU_SWITCHONPICKUP"
+msgstr "Switchonpickup"
+
+msgid "PLYRMNU_PRESSSPACE"
+msgstr "Pressspace"
+
+msgid "PLYRMNU_SEEFRONT"
+msgstr "Seefront"
+
+msgid "PLYRMNU_SEEBACK"
+msgstr "Seeback"
+
+msgid "PLYRMNU_VERTSPREAD"
+msgstr "Vertspread"
+
+msgid "CNTRLMNU_ZOOM"
+msgstr "Zoom"
+
+msgid "CNTRLMNU_USER1"
+msgstr "Usuari 1"
+
+msgid "CNTRLMNU_USER2"
+msgstr "Usuari 2"
+
+msgid "CNTRLMNU_USER3"
+msgstr "Usuari 3"
+
+msgid "CNTRLMNU_USER4"
+msgstr "Usuari 4"
+
+msgid "CNTRLMNU_MOVEUP"
+msgstr "Puja"
+
+msgid "CNTRLMNU_MOVEDOWN"
+msgstr "Baixa"
+
+msgid "CNTRLMNU_LAND"
+msgstr "Aterra"
+
+msgid "CNTRLMNU_KEYBOARDLOOK"
+msgstr "Vista amb teclat"
+
+msgid "CNTRLMNU_POPUPS_TITLE"
+msgstr "Emergents Opcions"
+
+msgid "CNTRLMNU_TEAMSAY"
+msgstr "Xat d’equip"
+
+msgid "CNTRLMNU_DROPITEM"
+msgstr "Dropitem"
+
+msgid "CNTRLMNU_QUERYITEM"
+msgstr "Consulta objecte"
+
+msgid "CNTRLMNU_DROPWEAPON"
+msgstr "Dropweapon"
+
+msgid "CNTRLMNU_OTHER"
+msgstr "Altres"
+
+msgid "CNTRLMNU_COOPSPY"
+msgstr "Espia cooperatiu"
+
+msgid "CNTRLMNU_POPUPS"
+msgstr "Emergents"
+
+msgid "CNTRLMNU_MISSION"
+msgstr "Missió"
+
+msgid "CNTRLMNU_KEYS"
+msgstr "Tecles"
+
+msgid "CNTRLMNU_STATS"
+msgstr "Estadístiques"
+
+msgid "CNTRLMNU_TOGGLESCOREBOARD"
+msgstr "Alterna marcador"
+
+msgid "MOUSEMNU_LOOKSPRING"
+msgstr "LOOKSP anell"
+
+msgid "MOUSEMNU_LOOKSTRAFE"
+msgstr "Mirar i desplaçar-se lateralment"
+
+msgid "MAPCOLORMNU_BACKCOLOR"
+msgstr "Backcolor"
+
+msgid "MAPCOLORMNU_YOURCOLOR"
+msgstr "Yourcolor"
+
+msgid "MAPCOLORMNU_WALLCOLOR"
+msgstr "Wallcolor"
+
+msgid "MAPCOLORMNU_FDWALLCOLOR"
+msgstr "Fdwallcolor"
+
+msgid "MAPCOLORMNU_CDWALLCOLOR"
+msgstr "Cdwallcolor"
+
+msgid "MAPCOLORMNU_EFWALLCOLOR"
+msgstr "Efwallcolor"
+
+msgid "MAPCOLORMNU_GRIDCOLOR"
+msgstr "Gridcolor"
+
+msgid "MAPCOLORMNU_XHAIRCOLOR"
+msgstr "Xhaircolor"
+
+msgid "MAPCOLORMNU_NOTSEENCOLOR"
+msgstr "Notseencolor"
+
+msgid "MAPCOLORMNU_LOCKEDCOLOR"
+msgstr "Lockedcolor"
+
+msgid "MAPCOLORMNU_INTRALEVELCOLOR"
+msgstr "Intralevelcolor"
+
+msgid "MAPCOLORMNU_INTERLEVELCOLOR"
+msgstr "Interlevelcolor"
+
+msgid "MAPCOLORMNU_SECRETSECTORCOLOR"
+msgstr "Secretsectorcolor"
+
+msgid "MAPCOLORMNU_UNEXPLOREDSECRETCOLOR"
+msgstr "Unexploredsecretcolor"
+
+msgid "MAPCOLORMNU_SPECIALWALLCOLOR"
+msgstr "Specialwallcolor"
+
+msgid "MAPCOLORMNU_CHEATMODE"
+msgstr "Cheatmode"
+
+msgid "MAPCOLORMNU_TSWALLCOLOR"
+msgstr "Tswallcolor"
+
+msgid "MAPCOLORMNU_SECRETWALLCOLOR"
+msgstr "Secretwallcolor"
+
+msgid "MAPCOLORMNU_THINGCOLOR"
+msgstr "Thingcolor"
+
+msgid "MAPCOLORMNU_MONSTERCOLOR"
+msgstr "Monstercolor"
+
+msgid "MAPCOLORMNU_NONCOUNTINGMONSTERCOLOR"
+msgstr "Noncountingmonstercolor"
+
+msgid "MAPCOLORMNU_FRIENDCOLOR"
+msgstr "Friendcolor"
+
+msgid "MAPCOLORMNU_ITEMCOLOR"
+msgstr "Itemcolor"
+
+msgid "MAPCOLORMNU_COUNTITEMCOLOR"
+msgstr "Countitemcolor"
+
+msgid "MAPCOLORMNU_OVERLAY"
+msgstr "Superposició"
+
+msgid "MAPCOLORMNU_OVCHEATMODE"
+msgstr "Ovcheatmode"
+
+msgid "MAPCOLORMNU_PORTAL"
+msgstr "Portal"
+
+msgid "MSGMNU_TITLE"
+msgstr "Opcions de missatges"
+
+msgid "MSGMNU_SHOWMESSAGES"
+msgstr "Showmessages"
+
+msgid "MSGMNU_SHOWOBITUARIES"
+msgstr "Showobituaries"
+
+msgid "MSGMNU_SHOWSECRETS"
+msgstr "Showsecrets"
+
+msgid "MSGMNU_MESSAGELEVEL"
+msgstr "Messagelevel"
+
+msgid "MSGMNU_MESSAGECOLORS"
+msgstr "Messagecolors"
+
+msgid "MSGMNU_ITEMPICKUP"
+msgstr "Itempickup"
+
+msgid "MSGMNU_OBITUARIES"
+msgstr "Obituaris"
+
+msgid "MSGMNU_CRITICALMESSAGES"
+msgstr "Criticalmessages"
+
+msgid "MSGMNU_CHATMESSAGES"
+msgstr "Chatmessages"
+
+msgid "MSGMNU_TEAMMESSAGES"
+msgstr "Teammessages"
+
+msgid "MSGMNU_CENTEREDMESSAGES"
+msgstr "Centeredmessages"
+
+msgid "MSGMNU_SCREENSHOTMESSAGES"
+msgstr "Screenshotmessages"
+
+msgid "MSGMNU_LONGSAVEMESSAGES"
+msgstr "Longsavemessages"
+
+msgid "MSGMNU_DEVELOPER"
+msgstr "Desenvolupador"
+
+msgid "AUTOMAPMNU_COLORSET"
+msgstr "Conjunt de colors"
+
+msgid "AUTOMAPMNU_CUSTOMCOLORS"
+msgstr "Customcolors"
+
+msgid "AUTOMAPMNU_SETCUSTOMCOLORS"
+msgstr "Defineix colors personalitzats"
+
+msgid "AUTOMAPMNU_CONTROLS"
+msgstr "Controls"
+
+msgid "AUTOMAPMNU_OVERLAY"
+msgstr "Superposició"
+
+msgid "AUTOMAPMNU_TEXTURED"
+msgstr "Amb textures"
+
+msgid "AUTOMAPMNU_SHOWITEMS"
+msgstr "Showitems"
+
+msgid "AUTOMAPMNU_SHOWMONSTERS"
+msgstr "Showmonsters"
+
+msgid "AUTOMAPMNU_SHOWSECRETS"
+msgstr "Showsecrets"
+
+msgid "AUTOMAPMNU_SHOWTIME"
+msgstr "Showtime"
+
+msgid "AUTOMAPMNU_SHOWTOTALTIME"
+msgstr "Showtotaltime"
+
+msgid "AUTOMAPMNU_MAPSECRETS"
+msgstr "Mapsecrets"
+
+msgid "AUTOMAPMNU_SHOWMAPLABEL"
+msgstr "Showmaplabel"
+
+msgid "AUTOMAPMNU_DRAWMAPBACK"
+msgstr "Dibuixa el fons del mapa"
+
+msgid "AUTOMAPMNU_SHOWKEYS"
+msgstr "Showkeys"
+
+msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
+msgstr "Showtriggerlines"
+
+msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr "Mostra sprites d’objectes"
+
+msgid "AUTOMAPMNU_PTOVERLAY"
+msgstr "Superposició parcialment transparent"
+
+msgid "AUTOMAPMNU_EMPTYSPACEMARGIN"
+msgstr "Marge d’espai buit"
+
+msgid "AUTOMAPMNU_MARKFONT"
+msgstr "Markfont"
+
+msgid "AUTOMAPMNU_MARKCOLOR"
+msgstr "Markcolor"
+
+msgid "MAPCNTRLMNU_SETMARK"
+msgstr "Col·loca un marcador"
+
+msgid "MAPCNTRLMNU_CLEARMARK"
+msgstr "CL Orella MARK"
+
+msgid "DSPLYMNU_SCOREBOARD"
+msgstr "Marcador"
+
+msgid "SCRBRDMNU_TITLE"
+msgstr "Opcions del marcador"
+
+msgid "SCRBRDMNU_COOPERATIVE"
+msgstr "Cooperative"
+
+msgid "SCRBRDMNU_ENABLE"
+msgstr "Activa"
+
+msgid "SCRBRDMNU_HEADERCOLOR"
+msgstr "Headercolor"
+
+msgid "SCRBRDMNU_YOURCOLOR"
+msgstr "Yourcolor"
+
+msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
+msgstr "Otherplayercolor"
+
+msgid "SCRBRDMNU_DEATHMATCH"
+msgstr "Deathmatch"
+
+msgid "SCRBRDMNU_TEAMDEATHMATCH"
+msgstr "Teamdeathmatch"
+
+msgid "ALTHUDMNU_TITLE"
+msgstr "Opcions del HUD alternatiu"
+
+msgid "ALTHUDMNU_ENABLE"
+msgstr "Activa"
+
+msgid "ALTHUDMNU_SHOWSECRETS"
+msgstr "Showsecrets"
+
+msgid "ALTHUDMNU_SHOWMONSTERS"
+msgstr "Showmonsters"
+
+msgid "ALTHUDMNU_SHOWITEMS"
+msgstr "Showitems"
+
+msgid "ALTHUDMNU_SHOWSTATS"
+msgstr "Showstats"
+
+msgid "ALTHUDMNU_SHOWBERSERK"
+msgstr "Showberserk"
+
+msgid "ALTHUDMNU_SHOWWEAPONS"
+msgstr "Showweapons"
+
+msgid "ALTHUDMNU_SHOWAMMO"
+msgstr "Showammo"
+
+msgid "ALTHUDMNU_SHOWTIME"
+msgstr "Showtime"
+
+msgid "ALTHUDMNU_TIMECOLOR"
+msgstr "Timecolor"
+
+msgid "ALTHUDMNU_SHOWLAG"
+msgstr "Showlag"
+
+msgid "ALTHUDMNU_AMMOORDER"
+msgstr "Ordre de munició"
+
+msgid "ALTHUDMNU_AMMORED"
+msgstr "Ammored"
+
+msgid "ALTHUDMNU_AMMOYELLOW"
+msgstr "Ammoyellow"
+
+msgid "ALTHUDMNU_HEALTHRED"
+msgstr "Healthred"
+
+msgid "ALTHUDMNU_HEALTHYELLOW"
+msgstr "Healthyellow"
+
+msgid "ALTHUDMNU_HEALTHGREEN"
+msgstr "Healthgreen"
+
+msgid "ALTHUDMNU_ARMORRED"
+msgstr "Armorred"
+
+msgid "ALTHUDMNU_ARMORYELLOW"
+msgstr "Armoryellow"
+
+msgid "ALTHUDMNU_ARMORGREEN"
+msgstr "Armorgreen"
+
+msgid "ALTHUDMNU_AUTOMAPHUD"
+msgstr "HUD al mapa automàtic"
+
+msgid "ALTHUDMNU_TITLECOLOR"
+msgstr "Titlecolor"
+
+msgid "ALTHUDMNU_MAPTIMECOLOR"
+msgstr "Maptimecolor"
+
+msgid "ALTHUDMNU_HUBTIMECOLOR"
+msgstr "Hubtimecolor"
+
+msgid "ALTHUDMNU_TOTALTIMECOLOR"
+msgstr "Totaltimecolor"
+
+msgid "ALTHUDMNU_COORDINATECOLOR"
+msgstr "Coordinatecolor"
+
+msgid "ALTHUDMNU_COORDINATEMODE"
+msgstr "Coordinatemode"
+
+msgid "ALTHUDMNU_STATSNAMECOLOR"
+msgstr "Statsnamecolor"
+
+msgid "ALTHUDMNU_STATSCOLOR"
+msgstr "Statscolor"
+
+msgid "DSPLYMNU_CAPFPS"
+msgstr "Limita els FPS"
+
+msgid "DSPLYMNU_BLENDMETHOD"
+msgstr "Blendmethod"
+
+msgid "DSPLYMNU_WIPETYPE"
+msgstr "Wipetype"
+
+msgid "DSPLYMNU_SHOWENDOOM"
+msgstr "Showendoom"
+
+msgid "DSPLYMNU_BLOODFADE"
+msgstr "Bloodfade"
+
+msgid "DSPLYMNU_PICKUPFADE"
+msgstr "Pickupfade"
+
+msgid "DSPLYMNU_WATERFADE"
+msgstr "Waterfade"
+
+msgid "DSPLYMNU_SKYMODE"
+msgstr "Skymode"
+
+msgid "DSPLYMNU_LINEARSKY"
+msgstr "Linearsky"
+
+msgid "DSPLYMNU_GZDFULLBRIGHT"
+msgstr "Gzdfullbright"
+
+msgid "DSPLYMNU_SCALEFUZZ"
+msgstr "Scalefuzz"
+
+msgid "DSPLYMNU_DRAWFUZZ"
+msgstr "Drawfuzz"
+
+msgid "DSPLYMNU_OLDTRANS"
+msgstr "Oldtrans"
+
+msgid "DSPLYMNU_FAKECONTRAST"
+msgstr "Fakecontrast"
+
+msgid "DSPLYMNU_ROCKETTRAILS"
+msgstr "Rockettrails"
+
+msgid "DSPLYMNU_BLOODTYPE"
+msgstr "Bloodtype"
+
+msgid "DSPLYMNU_PUFFTYPE"
+msgstr "Pufftype"
+
+msgid "DSPLYMNU_MAXPARTICLES"
+msgstr "Maxparticles"
+
+msgid "DSPLYMNU_MAXDECALS"
+msgstr "Maxdecals"
+
+msgid "DSPLYMNU_PLAYERSPRITES"
+msgstr "Playersprites"
+
+msgid "DSPLYMNU_DEATHCAM"
+msgstr "Càmera de mort"
+
+msgid "DSPLYMNU_TELEZOOM"
+msgstr "Telezoom"
+
+msgid "DSPLYMNU_QUAKEINTENSITY"
+msgstr "Quakeintensity"
+
+msgid "DSPLYMNU_NOMONSTERINTERPOLATION"
+msgstr "Nomonsterinterpolation"
+
+msgid "DSPLYMNU_MENUDIM"
+msgstr "Menudim"
+
+msgid "DSPLYMNU_DIMCOLOR"
+msgstr "Color d’enfosquiment"
+
+msgid "DSPLYMNU_MOVEBOB"
+msgstr "Balanceig de moviment"
+
+msgid "DSPLYMNU_STILLBOB"
+msgstr "Stillbob"
+
+msgid "DSPLYMNU_BOBSPEED"
+msgstr "Bobspeed"
+
+msgid "SCALEMNU_TITLE"
+msgstr "Opcions d’escala"
+
+msgid "SCALEMNU_OVERRIDE"
+msgstr "Override"
+
+msgid "SCALEMNU_MESSAGES"
+msgstr "Missatges"
+
+msgid "SCALEMNU_CONSOLE"
+msgstr "Console"
+
+msgid "SCALEMNU_STATBAR"
+msgstr "Statbar"
+
+msgid "SCALEMNU_HUD"
+msgstr "HUD"
+
+msgid "SCALEMNU_ALTHUD"
+msgstr "Althud"
+
+msgid "SCALEMNU_HUDASPECT"
+msgstr "Hudaspect"
+
+msgid "SCALEMNU_USEUI"
+msgstr "Useui"
+
+msgid "SCALEMNU_USEFS"
+msgstr "Usefs"
+
+msgid "SCALEMNU_ADAPT"
+msgstr "Adapt"
+
+msgid "HUDMNU_TITLE"
+msgstr "Opcions del HUD"
+
+msgid "HUDMNU_ALTHUD"
+msgstr "HUD alternatiu"
+
+msgid "HUDMNU_MESSAGE"
+msgstr "Opcions de missatges"
+
+msgid "HUDMNU_UISCALE"
+msgstr "Escala de la interfície"
+
+msgid "HUDMNU_FORCECROSSHAIR"
+msgstr "Força el punt de mira"
+
+msgid "HUDMNU_GROWCROSSHAIR"
+msgstr "El punt de mira creix"
+
+msgid "HUDMNU_NAMETAGS"
+msgstr "Nametags"
+
+msgid "HUDMNU_NAMETAGCOLOR"
+msgstr "Nametagcolor"
+
+msgid "HUDMNU_OLDOUCH"
+msgstr "Oldouch"
+
+msgid "HUDMNU_HEXENFLASHES"
+msgstr "Hexenflashes"
+
+msgid "HUDMNU_POISONFLASHES"
+msgstr "Poisonflashes"
+
+msgid "HUDMNU_ICEFLASHES"
+msgstr "Iceflashes"
+
+msgid "HUDMNU_HAZARDFLASHES"
+msgstr "Hazardflashes"
+
+msgid "HUDMNU_SCALEOPT"
+msgstr "Opcions d’escala"
+
+msgid "MISCMNU_QUERYIWAD"
+msgstr "Pregunta quin IWAD cal usar"
+
+msgid "MISCMNU_ALLCHEATS"
+msgstr "Tots els trucs"
+
+msgid "MISCMNU_ENABLESCRIPTSCREENSHOTS"
+msgstr "Enablescriptscreenshots"
+
+msgid "MISCMNU_DEHLOAD"
+msgstr "Dehload"
+
+msgid "MISCMNU_CACHENODES"
+msgstr "Cachenodes"
+
+msgid "MISCMNU_CACHETIME"
+msgstr "Cachetime"
+
+msgid "MISCMNU_CLEARNODECACHE"
+msgstr "Clearnodecache"
+
+msgid "MISCMNU_INTERSCROLL"
+msgstr "Interscroll"
+
+msgid "NETMNU_TITLE"
+msgstr "Opcions de xarxa"
+
+msgid "NETMNU_LOCALOPTIONS"
+msgstr "Localoptions"
+
+msgid "NETMNU_LINESPECIALPREDICTION"
+msgstr "Linespecialprediction"
+
+msgid "NETMNU_PREDICTIONLERPSCALE"
+msgstr "Predictionlerpscale"
+
+msgid "NETMNU_LERPTHRESHOLD"
+msgstr "Lerpthreshold"
+
+msgid "NETMNU_HOSTOPTIONS"
+msgstr "Hostoptions"
+
+msgid "NETMNU_EXTRATICS"
+msgstr "Extratics"
+
+msgid "OPTVAL_CLASSIC"
+msgstr "Clàssic"
+
+msgid "OPTVAL_PRECISE"
+msgstr "Precise"
+
+msgid "OPTVAL_CAPPED"
+msgstr "Capped"
+
+msgid "OPTVAL_PARTICLES"
+msgstr "Partícules"
+
+msgid "OPTVAL_SPRITES"
+msgstr "Sprites"
+
+msgid "OPTVAL_SPRITESPARTICLES"
+msgstr "Spritesparticles"
+
+msgid "OPTVAL_MELT"
+msgstr "Melt"
+
+msgid "OPTVAL_BURN"
+msgstr "Burn"
+
+msgid "OPTVAL_CROSSFADE"
+msgstr "Crossfade"
+
+msgid "OPTVAL_SMOOTH_1"
+msgstr "Smooth 1"
+
+msgid "OPTVAL_SMOOTH_2"
+msgstr "Smooth 2"
+
+msgid "OPTVAL_TRANSLUCENT"
+msgstr "Translucent"
+
+msgid "OPTVAL_FUZZ"
+msgstr "Fuzz"
+
+msgid "OPTVAL_SHADOW"
+msgstr "Ombra"
+
+msgid "OPTVAL_ITEMS"
+msgstr "Objectes"
+
+msgid "OPTVAL_WEAPONS"
+msgstr "Armes"
+
+msgid "OPTVAL_BOTH"
+msgstr "Tots dos"
+
+msgid "OPTVAL_ZDOOM"
+msgstr "Zdoom"
+
+msgid "OPTVAL_STRIFE"
+msgstr "Strife"
+
+msgid "OPTVAL_PLAYER"
+msgstr "Jugador"
+
+msgid "OPTVAL_MAP"
+msgstr "Mapa"
+
+msgid "OPTVAL_CURRENTWEAPON"
+msgstr "Currentweapon"
+
+msgid "OPTVAL_AVAILABLEWEAPONS"
+msgstr "Availableweapons"
+
+msgid "OPTVAL_ALLWEAPONS"
+msgstr "Allweapons"
+
+msgid "OPTVAL_LEVELMILLISECONDS"
+msgstr "Levelmilliseconds"
+
+msgid "OPTVAL_LEVELSECONDS"
+msgstr "Levelseconds"
+
+msgid "OPTVAL_LEVEL"
+msgstr "Nivell"
+
+msgid "OPTVAL_HUBSECONDS"
+msgstr "Hubseconds"
+
+msgid "OPTVAL_HUB"
+msgstr "Hub"
+
+msgid "OPTVAL_TOTALSECONDS"
+msgstr "Totalseconds"
+
+msgid "OPTVAL_TOTAL"
+msgstr "Total"
+
+msgid "OPTVAL_SYSTEMSECONDS"
+msgstr "Systemseconds"
+
+msgid "OPTVAL_SYSTEM"
+msgstr "System"
+
+msgid "OPTVAL_NETGAMESONLY"
+msgstr "Netgamesonly"
+
+msgid "OPTVAL_AMMOIMAGETEXT"
+msgstr "Ammoimagetext"
+
+msgid "OPTVAL_AMMOTEXTIMAGE"
+msgstr "Ammotextimage"
+
+msgid "OPTVAL_SCRIPTSONLY"
+msgstr "Scriptsonly"
+
+msgid "OPTVAL_ALL"
+msgstr "Tot"
+
+msgid "OPTVAL_ONLYLASTONE"
+msgstr "Onlylastone"
+
+msgid "OPTVAL_TRADITIONALDOOM"
+msgstr "Traditionaldoom"
+
+msgid "OPTVAL_TRADITIONALSTRIFE"
+msgstr "Traditionalstrife"
+
+msgid "OPTVAL_TRADITIONALRAVEN"
+msgstr "Traditionalraven"
+
+msgid "OPTVAL_ONLYWHENFOUND"
+msgstr "Onlywhenfound"
+
+msgid "OPTVAL_ONFOROVERLAYONLY"
+msgstr "Onforoverlayonly"
+
+msgid "OPTVAL_OVERLAYNORMAL"
+msgstr "Overlaynormal"
+
+msgid "OPTVAL_OVERLAYONLY"
+msgstr "Overlayonly"
+
+msgid "OPTVAL_NOTFORHUBS"
+msgstr "Notforhubs"
+
+msgid "OPTVAL_FRONT"
+msgstr "Davant"
+
+msgid "OPTVAL_ANIMATED"
+msgstr "Animated"
+
+msgid "OPTVAL_ROTATED"
+msgstr "Rotated"
+
+msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
+msgstr "Mapdefinedcolorsonly"
+
+msgid "OPTVAL_NODOORS"
+msgstr "Nodoors"
+
+msgid "OPTVAL_ITEMPICKUP"
+msgstr "Itempickup"
+
+msgid "OPTVAL_OBITUARIES"
+msgstr "Obituaris"
+
+msgid "OPTVAL_CRITICALMESSAGES"
+msgstr "Criticalmessages"
+
+msgid "OPTVAL_NEVERFRIENDS"
+msgstr "Neverfriends"
+
+msgid "OPTVAL_ONLYMONSTERS"
+msgstr "Onlymonsters"
+
+msgid "OPTVAL_HEXEN"
+msgstr "Hexen"
+
+msgid "OPTVAL_OLD"
+msgstr "Old"
+
+msgid "OPTVAL_DOOM"
+msgstr "Doom"
+
+msgid "OPTVAL_DOOMSTRICT"
+msgstr "Doomstrict"
+
+msgid "OPTVAL_BOOM"
+msgstr "Boom"
+
+msgid "OPTVAL_BOOMSTRICT"
+msgstr "Boomstrict"
+
+msgid "OPTVAL_MBF"
+msgstr "Mbf"
+
+msgid "OPTVAL_MBFSTRICT"
+msgstr "Mbfstrict"
+
+msgid "OPTVAL_MBF21"
+msgstr "Mbf 21"
+
+msgid "OPTVAL_MBF21STRICT"
+msgstr "Mbf 21 Strict"
+
+msgid "OPTVAL_ZDOOM2063"
+msgstr "Zdoom 2063"
+
+msgid "OPTVAL_ERRORS"
+msgstr "Errors"
+
+msgid "OPTVAL_WARNINGS"
+msgstr "Warnings"
+
+msgid "OPTVAL_NOTIFICATIONS"
+msgstr "Notificacions"
+
+msgid "OPTVAL_EVERYTHING"
+msgstr "Everything"
+
+msgid "OPTVAL_HWPOLY"
+msgstr "Hwpoly"
+
+msgid "OPTVAL_SWDOOM"
+msgstr "Swdoom"
+
+msgid "OPTVAL_SWDOOMTC"
+msgstr "Swdoomtc"
+
+msgid "OPTVAL_VANILLA"
+msgstr "Vanilla"
+
+msgid "OPTVAL_VTFZDOOM"
+msgstr "Vtfzdoom"
+
+msgid "OPTVAL_VTFVANILLA"
+msgstr "Vtfvanilla"
+
+msgid "OPTVAL_SMALL"
+msgstr "Petit"
+
+msgid "OPTVAL_LARGE"
+msgstr "Gran"
+
+msgid "OPTVAL_CONSOLE"
+msgstr "Console"
+
+msgid "C_BRICK"
+msgstr "Brick"
+
+msgid "C_TAN"
+msgstr "Canyella"
+
+msgid "C_GRAY"
+msgstr "Gris"
+
+msgid "C_GREEN"
+msgstr "Verd"
+
+msgid "C_BROWN"
+msgstr "Marró"
+
+msgid "C_GOLD"
+msgstr "Daurat"
+
+msgid "C_RED"
+msgstr "Vermell"
+
+msgid "C_BLUE"
+msgstr "Blau"
+
+msgid "C_ORANGE"
+msgstr "Taronja"
+
+msgid "C_WHITE"
+msgstr "Blanc"
+
+msgid "C_YELLOW"
+msgstr "Groc"
+
+msgid "C_DEFAULT"
+msgstr "Per defecte"
+
+msgid "C_BLACK"
+msgstr "Negre"
+
+msgid "C_LIGHTBLUE"
+msgstr "Lightblue"
+
+msgid "C_CREAM"
+msgstr "Crema"
+
+msgid "C_OLIVE"
+msgstr "Oliva"
+
+msgid "C_DARKGREEN"
+msgstr "Darkgreen"
+
+msgid "C_DARKRED"
+msgstr "Darkred"
+
+msgid "C_DARKBROWN"
+msgstr "Darkbrown"
+
+msgid "C_PURPLE"
+msgstr "Porpra"
+
+msgid "C_DARKGRAY"
+msgstr "Darkgray"
+
+msgid "C_CYAN"
+msgstr "Cian"
+
+msgid "C_ICE"
+msgstr "Gel"
+
+msgid "C_FIRE"
+msgstr "Foc"
+
+msgid "C_SAPPHIRE"
+msgstr "Safir"
+
+msgid "C_TEAL"
+msgstr "Verd blavós"
+
+msgid "OPTSTR_HERETIC"
+msgstr "Explosives RETIC"
+
+msgid "OPTSTR_CHEX"
+msgstr "C explosives %d"
+
+msgid "OPTSTR_NOINTERPOLATION"
+msgstr "Sense interpolació"
+
+msgid "OPTSTR_SPLINE"
+msgstr "Spline"
+
+msgid "DSPLYMNU_GLOPT"
+msgstr "Opcions d’OpenGL"
+
+msgid "DSPLYMNU_SWOPT"
+msgstr "Opcions del renderitzador per programari"
+
+msgid "GLMNU_TITLE"
+msgstr "Opcions d’OpenGL"
+
+msgid "GLMNU_DYNLIGHT"
+msgstr "Dynlight"
+
+msgid "GLTEXMNU_SORTDRAWLIST"
+msgstr "Ordena la llista de dibuix"
+
+msgid "GLLIGHTMNU_TITLE"
+msgstr "Opcions de llums GL"
+
+msgid "GLLIGHTMNU_LIGHTSENABLED"
+msgstr "Lightsenabled"
+
+msgid "GLLIGHTMNU_LIGHTSPRITES"
+msgstr "Lightsprites"
+
+msgid "GLLIGHTMNU_LIGHTPARTICLES"
+msgstr "Lightparticles"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAP"
+msgstr "Lightshadowmap"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPQUALITY"
+msgstr "Lightshadowmapquality"
+
+msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
+msgstr "Lightshadowmapfilter"
+
+msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
+msgstr "Boira sempre lluminosa"
+
+msgid "GLPREFMNU_WPNLIGHTSTR"
+msgstr "Intensitat de llum de l’arma"
+
+msgid "GLPREFMNU_ENV"
+msgstr "Visió nocturna millorada"
+
+msgid "GLPREFMNU_ENVSTEALTH"
+msgstr "Camuflatge amb visió nocturna"
+
+msgid "GLPREFMNU_SPRCLIP"
+msgstr "Retall dels sprites"
+
+msgid "GLPREFMNU_SPRBLEND"
+msgstr "Fusió de sprites"
+
+msgid "GLPREFMNU_FUZZSTYLE"
+msgstr "Estil de distorsió"
+
+msgid "GLPREFMNU_SPRBILLBOARD"
+msgstr "Orientació dels sprites"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERA"
+msgstr "Sprites mirant la càmera"
+
+msgid "GLPREFMNU_PARTICLESTYLE"
+msgstr "Estil de partícules"
+
+msgid "GLPREFMNU_VRMODE"
+msgstr "Mode VR"
+
+msgid "GLPREFMNU_VRQUADSTEREO"
+msgstr "Estèreo quàdruple VR"
+
+msgid "GLPREFMNU_SWLMBANDED"
+msgstr "Llum per bandes en programari"
+
+msgid "GLPREFMNU_VRIPD"
+msgstr "Distància interpupil·lar VR"
+
+msgid "GLPREFMNU_VRSCREENDIST"
+msgstr "Distància de pantalla VR"
+
+msgid "OPTVAL_SMART"
+msgstr "Smart"
+
+msgid "OPTVAL_SMARTER"
+msgstr "Smarter"
+
+msgid "OPTVAL_INFRAREDONLY"
+msgstr "Infraredonly"
+
+msgid "OPTVAL_INFRAREDANDTORCH"
+msgstr "Infraredandtorch"
+
+msgid "OPTVAL_ANYFIXEDCOLORMAP"
+msgstr "Anyfixedcolormap"
+
+msgid "OPTVAL_USEASPALETTE"
+msgstr "Useaspalette"
+
+msgid "OPTVAL_BLEND"
+msgstr "Blend"
+
+msgid "OPTVAL_BRIGHT"
+msgstr "Bright"
+
+msgid "OPTVAL_DARK"
+msgstr "Fosc"
+
+msgid "OPTVAL_LEGACY"
+msgstr "Llegat"
+
+msgid "OPTVAL_SOFTWARE"
+msgstr "Software"
+
+msgid "OPTVAL_YAXIS"
+msgstr "Yaxis"
+
+msgid "OPTVAL_XYAXIS"
+msgstr "Xyaxis"
+
+msgid "OPTVAL_SQUARE"
+msgstr "Square"
+
+msgid "OPTVAL_ROUND"
+msgstr "Round"
+
+msgid "OPTVAL_PIXELFUZZ"
+msgstr "Pixelfuzz"
+
+msgid "OPTVAL_SMOOTHFUZZ"
+msgstr "Smoothfuzz"
+
+msgid "OPTVAL_SWIRLYFUZZ"
+msgstr "Swirlyfuzz"
+
+msgid "OPTVAL_TRANSLUCENTFUZZ"
+msgstr "Translucentfuzz"
+
+msgid "OPTVAL_NOISE"
+msgstr "Noise"
+
+msgid "OPTVAL_SMOOTHNOISE"
+msgstr "Smoothnoise"
+
+msgid "OPTVAL_JAGGEDFUZZ"
+msgstr "Jaggedfuzz"
+
+msgid "OPTVAL_GREENMAGENTA"
+msgstr "Greenmagenta"
+
+msgid "OPTVAL_REDCYAN"
+msgstr "Redcyan"
+
+msgid "OPTVAL_AMBERBLUE"
+msgstr "Amberblue"
+
+msgid "OPTVAL_LEFTEYE"
+msgstr "Lefteye"
+
+msgid "OPTVAL_RIGHTEYE"
+msgstr "Righteye"
+
+msgid "OPTVAL_SBSFULL"
+msgstr "Sbsfull"
+
+msgid "OPTVAL_SBSNARROW"
+msgstr "Sbsnarrow"
+
+msgid "OPTVAL_TOPBOTTOM"
+msgstr "Topbottom"
+
+msgid "OPTVAL_ROWINTERLEAVED"
+msgstr "Rowinterleaved"
+
+msgid "OPTVAL_COLUMNINTERLEAVED"
+msgstr "Columninterleaved"
+
+msgid "OPTVAL_CHECKERBOARD"
+msgstr "Checkerboard"
+
+msgid "OPTVAL_QUADBUFFERED"
+msgstr "Quadbuffered"
+
+msgid "DSPLYMNU_TCOPT"
+msgstr "Opcions de color real"
+
+msgid "TCMNU_TITLE"
+msgstr "Control de textures"
+
+msgid "TCMNU_MINFILTER"
+msgstr "Filtre de reducció"
+
+msgid "TCMNU_MAGFILTER"
+msgstr "Filtre d’ampliació"
+
+msgid "TCMNU_MIPMAP"
+msgstr "Mipmapping"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Llums dinàmics"
+
+msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
+msgstr "Showkeys Always"
+
+msgid "TXT_NO_TEAM_CHANGE"
+msgstr "El canvi d’equip s’ha desactivat!"
+
+msgid "TXT_JOINED_TEAM"
+msgstr "%s s’ha unit a l’equip %t"
+
+msgid "TXT_LONER"
+msgstr "%s ara va per lliure."
+
+msgid "TXT_LEFTWITHFRAGS"
+msgstr "%s ha sortit de la partida amb %d frags"
+
+msgid "TXT_LEFTTHEGAME"
+msgstr "%s ha sortit de la partida"
+
+msgid "TXT_COULDNOTREAD"
+msgstr "No s’ha pogut llegir la partida desada «%s»."
+
+msgid "TXT_NOINFOJSON"
+msgstr "%s no és una partida desada vàlida: falta «info.json»."
+
+msgid "TXT_FAILEDTOREADSG"
+msgstr "No s’ha pogut accedir a la informació de la partida desada a «%s»."
+
+msgid "TXT_INCOMPATIBLESG"
+msgstr "La partida desada «%s» és d’una versió incompatible."
+
+msgid "TXT_OTHERENGINESG"
+msgstr "La partida desada «%s» és d’un altre motor basat en ZDoom:"
+
+msgid "TXT_TOOOLDSG"
+msgstr "La partida desada «%s» és d’una versió massa antiga (%d). La versió més antiga admesa és %e."
+
+msgid "TXT_TOONEWSG"
+msgstr "La partida desada «%s» és d’una versió més nova (%d). La versió més alta admesa és %e."
+
+msgid "TXT_NOMAPSG"
+msgstr "A la partida desada «%s» li falta el mapa actual."
+
+msgid "TXT_NOGLOBALSJSON"
+msgstr "%s no és una partida desada vàlida: falta «globals.json»."
+
+msgid "TXT_SGINFOERR"
+msgstr "No s’ha pogut accedir a la informació de la partida desada a «%s»"
+
+msgid "TXT_SAVEPENDING"
+msgstr "Encara hi ha un desament de partida pendent."
+
+msgid "TXT_NOTSAVEABLE"
+msgstr "No ets en una partida que es pugui desar."
+
+msgid "TXT_NOTINLEVEL"
+msgstr "No ets dins cap nivell"
+
+msgid "TXT_SPPLAYERDEAD"
+msgstr "El jugador és mort en una partida d’un sol jugador"
+
+msgid "TXT_SAVEFAILED"
+msgstr "No s’ha pogut desar"
+
+msgid "TXT_SCREENSHOTERR"
+msgstr "No s’ha pogut crear la captura de pantalla."
+
+msgid "TXT_BY"
+msgstr "Per %s"
+
+msgid "HUDMNU_FLASH"
+msgstr "Flash"
+
+msgid "GLMNU_3DMODE"
+msgstr "3 Dmode"
+
+msgid "HUDMNU_CROSSHAIRON"
+msgstr "Punt de mira activat"
+
+msgid "MSGMNU_SUBTITLES"
+msgstr "Subtítols"
+
+msgid "HUDMNU_FONTOPTIONS"
+msgstr "Fontoptions"
+
+msgid "FONTMNU_LOG"
+msgstr "LOG"
+
+msgid "FONTMNU_DLG"
+msgstr "DLG"
+
+msgid "MISCMNU_QUICKEXIT"
+msgstr "Sortida ràpida"
+
+msgid "DSPLYMNU_CUSTOMINVERTMAP"
+msgstr "Custominvertmap"
+
+msgid "DSPLYMNU_CUSTOMINVERTC1"
+msgstr "Custominvertc 1"
+
+msgid "DSPLYMNU_CUSTOMINVERTC2"
+msgstr "Custominvertc 2"
+
+msgid "DSPLYMNU_BOBFIRE"
+msgstr "Bobfire"
+
+msgid "SCALEMNU_SCALECLASSIC"
+msgstr "Scaleclassic"
+
+msgid "SCALEMNU_INTER"
+msgstr "Inter"
+
+msgid "SCALEMNU_BORDER"
+msgstr "Border"
+
+msgid "SCALEMNU_FACTOR"
+msgstr "Factor"
+
+msgid "SCALEMNU_RATIO"
+msgstr "Ratio"
+
+msgid "MISCMNU_ALWAYSTALLY"
+msgstr "Mostra sempre el recompte"
+
+msgid "OPTVAL_MODDEFINED"
+msgstr "Moddefined"
+
+msgid "OPTVAL_NOTHUBS"
+msgstr "Nothubs"
+
+msgid "OPTVAL_WITHHUBS"
+msgstr "Withhubs"
+
+msgid "CNTRLMNU_LAYOUT"
+msgstr "Disposició"
+
+msgid "OPTVAL_CLASSICZ"
+msgstr "Classicz"
+
+msgid "OPTVAL_MODERN"
+msgstr "Modern"
+
+msgid "OPTVAL_MODERNLEFT"
+msgstr "Modernleft"
+
+msgid "MISCMNU_SETSLOTSTRICT"
+msgstr "Setslotstrict"
+
+msgid "MISCMNU_WIPERCENT"
+msgstr "Wipercent"
+
+msgid "MISCMNU_CLEANSTAT"
+msgstr "Cleanstat"
+
+msgid "TAG_STRIFEZOMBIE"
+msgstr "Zombi de Strife"
+
+msgid "TAG_CEILINGTURRET"
+msgstr "Torreta de sostre"
+
+msgid "TAG_CRUSADER"
+msgstr "Creuat"
+
+msgid "TAG_INQUISITOR"
+msgstr "Inquisidor"
+
+msgid "TAG_PEASANT"
+msgstr "Camperol"
+
+msgid "TAG_REAVER"
+msgstr "Segador"
+
+msgid "TAG_SENTINEL"
+msgstr "Sentinella"
+
+msgid "TAG_STALKER"
+msgstr "Aguaitador"
+
+msgid "TAG_BISHOP"
+msgstr "Bisbe"
+
+msgid "TAG_ENTITY"
+msgstr "Entitat"
+
+msgid "TAG_PROGRAMMER"
+msgstr "Programador"
+
+msgid "TAG_ALIENSPECTRE"
+msgstr "Espectre alienígena"
+
+msgid "TAG_KNEELINGGUY"
+msgstr "Home agenollat"
+
+msgid "GMPLYMNU_MULTIPLAYERTHINGS"
+msgstr "Elements multijugador"
+
+msgid "DSPLYMNU_SPRITESHADOW"
+msgstr "Spriteshadow"
+
+msgid "OPTVAL_SPRSHADALWAYS"
+msgstr "Sprshadalways"
+
+msgid "DSPLYMNU_FOV"
+msgstr "Camp de visió"
+
+msgid "CMPTMNU_NOMBF21"
+msgstr "Nombf 21"
+
+msgid "ALTHUDMNU_SHOWTIMESTAT"
+msgstr "Showtimestat"
+
+msgid "CMPTMNU_VILEGHOSTS"
+msgstr "Vileghosts"
+
+msgid "MISCMNU_FVIEWBOB"
+msgstr "Fviewbob"
+
+msgid "OB_DEMON1HIT"
+msgstr "%o ha estat colpejat per Dimoni 1 HIT."
+
+msgid "AUTOMAPMNU_LINEANTIALIASING"
+msgstr "Lineantialiasing"
+
+msgid "GMPLYMNU_NOPLAYERCLIP"
+msgstr "Sense col·lisió del jugador"
+
+msgid "GMPLYMNU_SHAREKEYS"
+msgstr "Comparteix les claus"
+
+msgid "GLPREFMNU_SPRBILLFACECAMERAFORCE"
+msgstr "Força els sprites a mirar la càmera"
+
+msgid "ALTHUDMNU_SWAPHEALTHARMOR"
+msgstr "Swaphealtharmor"
+
+msgid "SCALEMNU_HUD_OLDSCALE"
+msgstr "HUD Oldscale"
+
+msgid "SCALEMNU_HUD_SCALEFACTOR"
+msgstr "HUD Scalefactor"
+
+msgid "GMPLYMNU_COOPTHINGS"
+msgstr "Elements cooperatius"
+
+msgid "GMPLYMNU_COOPITEMS"
+msgstr "Objectes cooperatius"
+
+msgid "GMPLYMNU_LOCALITEMS"
+msgstr "Objectes locals"
+
+msgid "GMPLYMNU_NOLOCALDROP"
+msgstr "Sense objectes locals deixats"
+
+msgid "MISCMNU_RESTARTONDEATH"
+msgstr "Restartondeath"
+
+msgid "GMPLYMNU_PISTOLSTART"
+msgstr "Comença amb pistola"
+
+msgid "CMPTMNU_VOODOOZOMBIES"
+msgstr "Voodoozombies"
+
+msgid "CMPTMNU_FDTELEPORT"
+msgstr "Fdteleport"
+
+msgid "OPTVAL_ANAMORPHIC"
+msgstr "Anamorphic"
+
+msgid "SNDMNU_FOOTSTEPVOLUME"
+msgstr "Volum dels passos"
+
+msgid "ID24_GOTINCINERATOR"
+msgstr "Has aconseguit l’incinerador!"
+
+msgid "ID24_GOTCALAMITYBLADE"
+msgstr "Has aconseguit la fulla de calamitat!"
+
+msgid "ID24_GOTFUELCAN"
+msgstr "Has agafat un bidó de combustible."
+
+msgid "ID24_GOTFUELTANK"
+msgstr "Has agafat un dipòsit de combustible."
+
+msgid "TAG_ID24INCINERATOR"
+msgstr "Incinerador ID24"
+
+msgid "TAG_ID24CALAMITYBLADE"
+msgstr "Fulla de Calamitat ID24"
+
+msgid "AMMO_ID24FUEL"
+msgstr "Combustible"
+
+msgid "AMMO_ID24FUELTANK"
+msgstr "Dipòsit de combustible"
+
+msgid "ID24_CC_GHOUL"
+msgstr "Ghoul"
+
+msgid "ID24_CC_BANSHEE"
+msgstr "Banshee"
+
+msgid "ID24_CC_SHOCKTROOPER"
+msgstr "Soldat de xoc"
+
+msgid "ID24_CC_MINDWEAVER"
+msgstr "Teixidor mental"
+
+msgid "ID24_CC_VASSAGO"
+msgstr "Vassago"
+
+msgid "ID24_CC_TYRANT"
+msgstr "Tirà"
+
+msgid "ID24_OB_GHOUL"
+msgstr "%o ha rebut una bola d’energia d’un ghoul."
+
+msgid "ID24_OB_BANSHEE"
+msgstr "%o ha estat liquidat per una banshee."
+
+msgid "ID24_OB_SHOCKTROOPER"
+msgstr "%o ha estat fos per un soldat de xoc."
+
+msgid "ID24_OB_MINDWEAVER"
+msgstr "%o ha estat abatut per un teixidor mental."
+
+msgid "ID24_OB_VASSAGO"
+msgstr "%o ha estat socarrimat per un vassago."
+
+msgid "ID24_OB_TYRANT"
+msgstr "%o ha estat fet miques per un tirà."
+
+msgid "AUTOMAPMNU_SHOWLEVELNAME"
+msgstr "Mostra el nom del nivell"
+
+msgid "CNTRLMNU_INVENTORY_HOTKEYS"
+msgstr "Dreceres de l’inventari"
+
+msgid "JOYMNU_HAPTICS"
+msgstr "Intensitat de la resposta hàptica"
+
+msgid "JOYMNU_CURVE"
+msgstr "Corba de resposta"
+
+msgid "JOYMNU_THRESHOLD"
+msgstr "Llindar digital"
+
+msgid "OPTVAL_LINEAR"
+msgstr "Lineal"
+
+msgid "OPTVAL_QUADRATIC"
+msgstr "Quadràtica"
+
+msgid "NETMNU_CHATTYPE"
+msgstr "Tipus de xat"
+
+msgid "OPTVAL_DISABLECHAT"
+msgstr "Desactivat"
+
+msgid "OPTVAL_TEAMONLYCHAT"
+msgstr "Només companys d’equip"
+
+msgid "OPTVAL_GLOBALCHAT"
+msgstr "Global"
+
+msgid "NETMNU_NOBOLDCHAT"
+msgstr "Desactiva el text en negreta al xat"
+
+msgid "NETMNU_NOCHATSND"
+msgstr "Desactiva el so del xat"
+
+msgid "NETMNU_BALANCETICS"
+msgstr "Estabilitza les connexions"
+
+msgid "NETMNU_LIMITCONVO"
+msgstr "Limita les converses a l’amfitrió"
+
+msgid "NETMNU_REPEATCOOLDOWN"
+msgstr "Refredament per a accions repetibles"
+
+msgid "NETMNU_DISABLEPAUSE"
+msgstr "Desactiva la pausa"
+
+msgid "OPTVAL_HOSTONLY"
+msgstr "Només l’amfitrió"
+
+msgid "NETMNU_READYTYPE"
+msgstr "Tipus de salt d’intermissió"
+
+msgid "OPTVAL_VOTE"
+msgstr "Votació"
+
+msgid "OPTVAL_ANYONE"
+msgstr "Qualsevol"
+
+msgid "NETMNU_READYPERCENT"
+msgstr "Percentatge de vots per saltar"
+
+msgid "NETMNU_READYCOUNTDOWN"
+msgstr "Compte enrere de votació (segons)"
+
+msgid "NETMNU_CHATSLOMO"
+msgstr "Mode lent del xat (segons)"
+
+msgid "OPTMNU_HAPTICS"
+msgstr "Opcions hàptiques"
+
+msgid "HAPMNU_COMPAT"
+msgstr "Nivell de compatibilitat de la resposta hàptica"
+
+msgid "OPTVAL_MATCH"
+msgstr "Coincideix"
+
+msgid "OPTVAL_WARN"
+msgstr "Avisa"
+
+msgid "HAPMNU_OPTIONS"
+msgstr "Personalitza les fonts de resposta hàptica"
+
+msgid "HAPMNU_OPT_MENU"
+msgstr "En usar menús"
+
+msgid "HAPMNU_OPT_ACTION"
+msgstr "En fer una acció"
+
+msgid "HAPMNU_OPT_DAMAGE"
+msgstr "En rebre dany"
+
+msgid "HAPMNU_OPT_WORLD"
+msgstr "En interactuar amb el món"
+
+msgid "PAUSE_STRING"
+msgstr "Pausa"
+
+msgid "TAG_BACKPACK"
+msgstr "Motxilla"
+
+msgid "TAG_ARMORBONUS"
+msgstr "Armadura espiritual"
+
+msgid "TAG_GREENARMOR"
+msgstr "Armadura de seguretat"
+
+msgid "TAG_BLUEARMOR"
+msgstr "Armadura de combat"
+
+msgid "TAG_INVULSPHERE"
+msgstr "Artefacte d’invulnerabilitat"
+
+msgid "TAG_SOULSPHERE"
+msgstr "Esfera d’ànima"
+
+msgid "TAG_MEGAPSHERE"
+msgstr "Megaesfera"
+
+msgid "TAG_INVISSPHERE"
+msgstr "Artefacte de desenfocament"
+
+msgid "TAG_RADSUIT"
+msgstr "Vestit de radiació"
+
+msgid "TAG_VISOR"
+msgstr "Visor d’amplificació de llum"
+
+msgid "TAG_ALLMAP"
+msgstr "Mapa informatitzat"
+
+msgid "TAG_BERSERK"
+msgstr "Paquet berserk"
+
+msgid "TAG_HEALTHBONUS"
+msgstr "Poció de salut"
+
+msgid "TAG_STIMPACK"
+msgstr "Estimulant"
+
+msgid "TAG_MEDIKIT"
+msgstr "Farmaciola"
+
+msgid "TAG_BLUECARD"
+msgstr "Targeta clau blava"
+
+msgid "TAG_YELLOWCARD"
+msgstr "Targeta clau groga"
+
+msgid "TAG_REDCARD"
+msgstr "Targeta clau vermella"
+
+msgid "TAG_BLUESKULL"
+msgstr "Clau de crani blava"
+
+msgid "TAG_YELLOWSKULL"
+msgstr "Clau de crani groga"
+
+msgid "TAG_REDSKULL"
+msgstr "Clau de crani vermella"
+
+msgid "TAG_GLASSOFWATER"
+msgstr "Got d’aigua"
+
+msgid "TAG_BOWLOFFRUIT"
+msgstr "Bol de fruita"
+
+msgid "TAG_BOWLOFVEGETABLES"
+msgstr "Bol de verdures"
+
+msgid "TAG_BREAKFAST"
+msgstr "Esmorzar de supercàrrega"
+
+msgid "TAG_REPELLENT"
+msgstr "Repel·lent de baves"
+
+msgid "TAG_CHEXARMOR"
+msgstr "Armadura Chex®"
+
+msgid "TAG_SUPERCHEXARMOR"
+msgstr "Superarmadura Chex®"
+
+msgid "TAG_CHEXMAP"
+msgstr "Mapa informatitzat de l’àrea"
+
+msgid "TAG_SLIMESUIT"
+msgstr "Vestit antibava"
+
+msgid "TAG_ZORCHPACK"
+msgstr "Paquet zorch"
+
+msgid "TAG_CBLUEKEY"
+msgstr "Clau blava"
+
+msgid "TAG_CYELLOWKEY"
+msgstr "Clau groga"
+
+msgid "TAG_CREDKEY"
+msgstr "Clau vermella"
+
+msgid "GLPREFMNU_WPNPURELIGHT"
+msgstr "Usa la brillantor del sector als sprites de l’arma"
+
+msgid "NET_CONTINUE_MKB"
+msgstr "Prem Espai o el botó esquerre del ratolí per indicar que estàs a punt"
+
+msgid "NET_CONTINUE_CONTROLLER"
+msgstr "Prem A per indicar que estàs a punt"
+
+msgid "NET_CONTINUE_JOYSTICK"
+msgstr "Prem Joystick 1 per indicar que estàs a punt"
+
+msgid "GMPLYMNU_REMEMBERWEAP"
+msgstr "Recorda l’última arma"
+
+msgid "CNTRLMNU_COOPSPYPREV"
+msgstr "Espia cooperatiu anterior"
+
+msgid "CNTRLMNU_COOPSPYCANCEL"
+msgstr "Cancel·la l’espia cooperatiu"
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "Opcions d’accessibilitat"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Córrer analògic"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Línies del consell emergent"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Velocitat de desplaçament del consell"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Retard del consell emergent"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Alfa del fons del consell"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Limita l’amplada del consell"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Text gran als consells"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"Aquest és un exemple de descripció emergent.\n"
+"Aquí teniu text suplementari.\n"
+"…\n"
+"Aquí teniu una línia de text molt llarga que sembla que s'allarga i s'allarga sense tenir mai res d'interessant a dir, aparentment només perquè els desenvolupadors tenen dificultats per explicar què fa una opció."
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Consells emergents"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Il·luminació extra"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr "Controla la distància del radi de llum al voltant del jugador en unitats de mapa. Els valors més alts fan que l’escena sigui més clara."
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr "Quantitat de llum de sector que s’afegeix per sobre dels nivells de llum existents, conservant el mode d’il·luminació actual."
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Radi de llum del jugador"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Il·luminació"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Rocketexpstyle"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Rocketexp Style Add"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Rocketexp Style Trans"
+
+msgid "OPTVAL_LAX"
+msgstr "Permissiu"
+
+msgid "OPTVAL_STRICT"
+msgstr "Estricte"
+
+msgid "PICKER_FILELOADING"
+msgstr "Càrrega de fitxers"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Calibratge d’imatge"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "Des d’una distància de visualització normal, ajusta aquests controls."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr "L’escalat o el supermostreig poden produir una sortida incorrecta."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Desactiva’ls abans d’ajustar."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr "Compensa les limitacions del monitor. Ajusta-ho fins que els blocs grisos verticals s’esvaeixin. No ho facis servir per fer el joc més clar, només per assegurar que la imatge estigui calibrada per a la teva configuració."
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Compensació del punt negre"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr "Compensa els monitors que no mostren correctament els píxels foscos. Ajusta-ho fins que els blocs blancs diagonals s’esvaeixin. No ho facis servir per fer el joc més clar, només per assegurar que la imatge estigui calibrada per a la teva configuració."
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "Restableix totes les opcions d’aquest menú als valors predeterminats."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr "Aplica un ajust lineal de brillantor. Ajusta-ho al teu gust o per veure-hi a les zones fosques."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr "Ajusta la diferència percebuda entre colors semblants. Controla com de nítides o esvaïdes es veuen les imatges. Ajusta-ho al teu gust."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr "Ajusta la intensitat dels colors, fent que la imatge sembli més viva o més apagada. Ajusta-ho al teu gust."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Ajusta-ho fins que això sembli un color gris uniforme."
+
+msgid "DSPLYMNU_BRIGHTNESS"
+msgstr "Brillantor"
+
+msgid "DSPLYMNU_GAMMA"
+msgstr "Correcció de gamma"
+
+msgid "DSPLYMNU_CONTRAST"
+msgstr "Contrast"
+
+msgid "DSPLYMNU_SATURATION"
+msgstr "Saturació"
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Copia al porta-retalls"
+
+msgid "ACTION_RESTART"
+msgstr "Reinicia"
+
+msgid "ACTION_ABORT"
+msgstr "Avorta"
+
+msgid "ACTION_STARTGAME"
+msgstr "Comença la partida"
+
+msgid "ACTION_KICK"
+msgstr "Expulsa"
+
+msgid "ACTION_BAN"
+msgstr "Bandeja"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Desa l’informe"
+
+msgid "ERROR_FATAL"
+msgstr "Error fatal"
+
+msgid "ERROR_ABORT"
+msgstr "L’execució no ha pogut continuar."
+
+msgid "FILEPICKER_ANY"
+msgstr "Tots els fitxers"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "Fitxers ZIP d’informe de fallada"
+
+msgid "HAPMNU_TITLE"
+msgstr "Opcions de resposta hàptica"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Detecta automàticament la configuració de compatibilitat"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Powerupfade"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Classe del jugador"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Sbsletterbox"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Mescla directa"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Superestèreo"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Mode de música"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Amplada del superestèreo"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Ajust d’il·luminació"
+
+msgid "OPTVAL_SMOOTH"
+msgstr "Suau"
+
+msgid "TAG_MACIL"
+msgstr "Macil"
+
+msgid "TAG_MAULER"
+msgstr "Mauler"
+
+msgid "TAG_GLAUNCHER"
+msgstr "Llançagranades"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "Explora WADs"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Explora configuracions"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "Explora la carpeta IWAD"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "El dispositiu MIDI no exposa cap opció."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Emula Mikoportals"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Color del punt de mira amb salut completa"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Color del punt de mira amb salut màxima"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Colors dinàmics del punt de mira"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Desplaçament vertical del punt de mira"
+
+msgid "VALFORMAT_DB"
+msgstr "%s dB"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s dB/m"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s graus"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s fps"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s Hz"
+
+msgid "VALFORMAT_METER"
+msgstr "%s m"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s ms"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s s"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Alfa d’emplenament"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "Color d’emplenament"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Llindar de doble clic"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "Temps entre premudes successives per activar un esdeveniment de doble clic"

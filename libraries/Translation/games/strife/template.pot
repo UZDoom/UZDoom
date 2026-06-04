@@ -9,6 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
 
 msgid "TXT_STRIFE_MAP01"
 msgstr ""
@@ -132,39 +133,31 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
 msgstr ""
 
-# 〃
 # (This text is only four seconds on screen)
 msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
 msgstr ""
 
-# 〃
 # (Four seconds)
 msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
 msgstr ""
 
-# 〃
 # (Four seconds)
 msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
 msgstr ""
 
-# 〃
 # (Four seconds)
 msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
 msgstr ""
 
@@ -172,183 +165,140 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
 msgstr ""
 
-# 〃 (After destroying the crystal in the Power Station)
+# (After destroying the crystal in the Power Station)
 msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
 msgstr ""
 
-# 〃 (With flamethrower)
+# (With flamethrower)
 msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
 msgstr ""
 
@@ -374,11 +324,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
 msgstr ""
 
@@ -386,55 +334,42 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
 msgstr ""
 
@@ -442,40 +377,31 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
 msgstr ""
 
-# 〃
 # (in good health = enjoy)
 msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
 msgstr ""
 
@@ -514,91 +440,70 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
 msgstr ""
 
-# 〃 (After destroying the crystal in the Power Station)
+# (After destroying the crystal in the Power Station)
 msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
 msgstr ""
 
@@ -606,50 +511,39 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
 msgstr ""
 
-# 〃
 # (This text is only four seconds on screen)
 msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
 msgstr ""
 
-# 〃
 # (Four seconds)
 msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
 msgstr ""
 
-# 〃
 # (Four seconds)
 msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D30320_THATS"
 msgstr ""
 
@@ -681,55 +575,42 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D45480_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
 msgstr ""
 
@@ -737,103 +618,81 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
 msgstr ""
 
-# 〃
 # ("messy" chore)
 msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
 msgstr ""
 
-# 〃
 # ("bloody" chore)
 msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_DLG_SCRIPT02_D60640_THISK"
 msgstr ""
 
-# 〃
 # (after completing "messy" chore)
 msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
 msgstr ""
 
-# 〃
 # (after completing "bloody" chore)
 msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
 msgstr ""
 
-# 〃
 # (〃)
 msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
 msgstr ""
 
@@ -841,11 +700,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D69736_INASM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
 msgstr ""
 
@@ -856,71 +713,54 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D83380_APITY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
 msgstr ""
 
@@ -928,23 +768,18 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
 msgstr ""
 
@@ -952,23 +787,18 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
 msgstr ""
 
@@ -976,47 +806,37 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
 msgstr ""
 
-# 〃 (after accepting "messy" chore)
+# (after accepting "messy" chore)
 msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D101572_THATS"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
 msgstr ""
 
@@ -1024,95 +844,75 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT03_D0_WELCO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D3032_THEND"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
 msgstr ""
 
-# 〃 (Prison mission)
+# (Prison mission)
 msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
 msgstr ""
 
-# 〃 (Crystal mission)
+# (Crystal mission)
 msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT03_D12128_ASING"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
 msgstr ""
 
-# 〃 (Progammer mission)
+# (Progammer mission)
 msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
 msgstr ""
 
@@ -1129,11 +929,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
 msgstr ""
 
@@ -1141,83 +939,66 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
 msgstr ""
 
-# 〃 (one upgrade)
+# (one upgrade)
 msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
 msgstr ""
 
-# 〃 (two upgrades)
+# (two upgrades)
 msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
 msgstr ""
 
-# 〃 (?)
+# (?)
 msgid "TXT_DLG_SCRIPT03_D31836_THATS"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
 msgstr ""
 
@@ -1225,91 +1006,72 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
 msgstr ""
 
-# 〃 (one training)
+# (one training)
 msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
 msgstr ""
 
-# 〃 (two trainings)
+# (two trainings)
 msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
 msgstr ""
 
-# 〃 (three trainings)
+# (three trainings)
 msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
 msgstr ""
 
@@ -1321,7 +1083,6 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
 msgstr ""
 
@@ -1329,15 +1090,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT03_D43964_WERET"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D46996_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
 msgstr ""
 
@@ -1345,15 +1103,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D0_SORRY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
 msgstr ""
 
@@ -1361,23 +1116,18 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D6064_GOON"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
 msgstr ""
 
@@ -1392,7 +1142,6 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
 msgstr ""
 
@@ -1404,19 +1153,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
 msgstr ""
 
@@ -1424,27 +1169,21 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
 msgstr ""
 
@@ -1456,19 +1195,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
 msgstr ""
 
@@ -1476,19 +1211,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
 msgstr ""
 
@@ -1504,11 +1235,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D43964_THISI"
 msgstr ""
 
@@ -1516,35 +1245,27 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
 msgstr ""
 
-# 〃
 # (bored to tears = extremely bored)
 msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
 msgstr ""
@@ -1553,11 +1274,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
 msgstr ""
 
@@ -1565,15 +1284,13 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT05_D0_HALTN"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
 msgstr ""
 
-# 〃 (After killing Montag)
+# (After killing Montag)
 msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
 msgstr ""
 
@@ -1585,19 +1302,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
 msgstr ""
 
@@ -1605,19 +1318,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
 msgstr ""
 
@@ -1625,23 +1334,18 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D16676_THESK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
 msgstr ""
 
@@ -1649,35 +1353,27 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT06_D0_AHASU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D3032_BRING"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
 msgstr ""
 
@@ -1688,29 +1384,23 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
 msgstr ""
 
-# 〃
 #
 # https://en.wikipedia.org/wiki/Reclaimed_water
 msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
 msgstr ""
 
@@ -1718,19 +1408,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
 msgstr ""
 
@@ -1765,11 +1451,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
 msgstr ""
 
@@ -1777,23 +1461,18 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
 msgstr ""
 
@@ -1801,11 +1480,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
 msgstr ""
 
@@ -1816,27 +1493,21 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT10_D0_GOODY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT10_D3032_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
 msgstr ""
 
@@ -1844,19 +1515,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
 msgstr ""
 
@@ -1872,19 +1539,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT10_D12128_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
 msgstr ""
 
@@ -1892,7 +1555,6 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
 msgstr ""
 
@@ -1900,159 +1562,127 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
 msgstr ""
 
-# 〃 (one upgrade: Mission to talk to the Oracle)
+# (one upgrade: Mission to talk to the Oracle)
 msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
 msgstr ""
 
-# 〃 (two upgrades: Mission to decide between Macil or the Oracle)
+# (two upgrades: Mission to decide between Macil or the Oracle)
 msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
 msgstr ""
 
-# 〃 (during sad/bad ending)
+# (during sad/bad ending)
 msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
 msgstr ""
 
-# 〃 (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+# (three upgrades: Mission to kill the Loremaster with the Oracle alive).
 msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
 msgstr ""
 
-# 〃 (four upgrades).
+# (four upgrades).
 msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
 msgstr ""
 
-# 〃 (five upgrades).
+# (five upgrades).
 msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
 msgstr ""
 
-# 〃 (six upgrades).
+# (six upgrades).
 msgid "TXT_DLG_SCRIPT10_D27288_THISI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
 msgstr ""
 
@@ -2060,204 +1690,161 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
 msgstr ""
 
-# 〃 (one training)
+# (one training)
 msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
 msgstr ""
 
-# 〃 (two trainings)
+# (two trainings)
 msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
 msgstr ""
 
-# 〃 (three trainings)
+# (three trainings)
 msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
 msgstr ""
 
-# 〃 (four trainings)
+# (four trainings)
 msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
 msgstr ""
 
-# 〃 (five trainings)
+# (five trainings)
 msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
 msgstr ""
 
-# 〃 (six trainings)
+# (six trainings)
 msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
 msgstr ""
 
-# 〃 (〃)
 # (in good health = enjoy)
 msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
 msgstr ""
 
-# 〃 (seven trainings)
+# (seven trainings)
 msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
 msgstr ""
 
@@ -2265,51 +1852,39 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
 msgstr ""
 
@@ -2329,23 +1904,19 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
 msgstr ""
 
-# 〃 (Oracle's token)
+# (Oracle's token)
 msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
 msgstr ""
 
@@ -2353,7 +1924,6 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
 msgstr ""
 
@@ -2361,11 +1931,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
 msgstr ""
 
@@ -2373,19 +1941,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT12_D0_WHATI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
 msgstr ""
 
@@ -2393,23 +1957,18 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
 msgstr ""
 
@@ -2429,19 +1988,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT12_D12128_USETH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT12_D13644_THERI"
 msgstr ""
 
@@ -2449,15 +2004,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT12_D16676_THESI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
 msgstr ""
 
@@ -2469,28 +2021,22 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT14_D0_AREYO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
 msgstr ""
 
-# 〃
 # (conveyors = conveyor belts)
 msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
 msgstr ""
 
@@ -2502,19 +2048,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
 msgstr ""
 
@@ -2522,11 +2064,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT15_D0_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
 msgstr ""
 
@@ -2542,15 +2082,13 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
 msgstr ""
 
-# 〃 (if you have it)
+# (if you have it)
 msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
 msgstr ""
 
-# 〃 (〃)
 msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
 msgstr ""
 
@@ -2562,52 +2100,40 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
 msgstr ""
 
-# 〃
 # (five-finger discount = theft)
 msgid "TXT_DLG_SCRIPT17_D12128_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
 msgstr ""
 
@@ -2615,43 +2141,33 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
 msgstr ""
 
@@ -2659,27 +2175,21 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT18_D0_WHATI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT18_D1516_THETE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
 msgstr ""
 
@@ -2694,51 +2204,40 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
 msgstr ""
 
-# 〃 (After giving the blue chalice to Timothy).
+# (After giving the blue chalice to Timothy).
 msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
 msgstr ""
 
@@ -2751,51 +2250,39 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D0_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D0_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO3_SCRIPT23_D0_THATS"
 msgstr ""
 
@@ -2803,51 +2290,39 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
 msgstr ""
 
@@ -2855,39 +2330,30 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
 msgstr ""
 
@@ -2895,39 +2361,30 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
 msgstr ""
 
@@ -2935,47 +2392,38 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
 msgstr ""
 
-# 〃 (dot not recommended)
+# (dot not recommended)
 msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
 msgstr ""
 
-# 〃 (dot not recommended)
+# (dot not recommended)
 msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
 msgstr ""
 
@@ -2989,11 +2437,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
 msgstr ""
 
@@ -3002,15 +2448,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
 msgstr ""
 
@@ -3019,19 +2462,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D15160_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
 msgstr ""
 
@@ -3040,19 +2479,16 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
 msgstr ""
 
-# 〃 (dot not recommended)
+# (dot not recommended)
 msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D12128_THATS"
 msgstr ""
 
@@ -3062,43 +2498,35 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
 msgstr ""
 
-# 〃 (If you keep the chalice)
+# (If you keep the chalice)
 msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
 msgstr ""
 
-# 〃 (If you give the chalice away)
+# (If you give the chalice away)
 msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
 msgstr ""
 
@@ -3107,15 +2535,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D21224_THATB"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
 msgstr ""
 
@@ -3124,15 +2549,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
 msgstr ""
 
@@ -3141,19 +2563,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT23_D24256_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
 msgstr ""
 
@@ -3161,15 +2579,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT27_D0_THEMA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
 msgstr ""
 
@@ -3177,11 +2592,9 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
 msgstr ""
 
@@ -3199,15 +2612,12 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
 msgstr ""
 
@@ -3218,19 +2628,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
 msgstr ""
 
@@ -3238,51 +2644,39 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
 msgstr ""
 
@@ -3290,39 +2684,30 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
 msgstr ""
 
@@ -3330,39 +2715,30 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
 msgstr ""
 
@@ -3370,51 +2746,39 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D13644_THATS"
 msgstr ""
 
@@ -3422,47 +2786,36 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D18192_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
 msgstr ""
 
@@ -3470,27 +2823,22 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
 msgstr ""
 
-# 〃 (if accepting without having the chalice)
+# (if accepting without having the chalice)
 msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
 msgstr ""
 
@@ -3498,19 +2846,15 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
 msgstr ""
 
@@ -3540,7 +2884,6 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
 msgstr ""
 
@@ -3549,83 +2892,63 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D10612_THATS"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
 msgstr ""
 
@@ -3633,91 +2956,69 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
 msgstr ""
 
-# 〃
 msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
 msgstr ""
 
@@ -3726,12 +3027,10 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
 msgstr ""
 
-# 〃
 # (Identical to row 770)
 msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
 msgstr ""
 
-# 〃
 # (Similar to row 771)
 msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
 msgstr ""
@@ -3741,12 +3040,10 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D22740_WERET"
 msgstr ""
 
-# 〃
 # (Similar to row 773)
 msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
 msgstr ""
 
-# 〃
 # (Similar to row 774)
 msgid "TXT_DLG_SCRIPT34_D25772_HERES"
 msgstr ""
@@ -3755,31 +3052,24 @@ msgstr ""
 msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
 msgstr ""
 
-# 〃
 msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
 msgstr ""
 
-# 〃
 msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
 msgstr ""
 
-# 〃
 msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
 msgstr ""
 
@@ -4035,7 +3325,6 @@ msgstr ""
 msgid "TXT_ILOG25"
 msgstr ""
 
-# 〃
 msgid "TXT_ILOG26"
 msgstr ""
 
@@ -4492,23 +3781,18 @@ msgstr ""
 msgid "TXT_SUB_INTRO1"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_INTRO2"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_INTRO3"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_INTRO4"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_INTRO5"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_INTRO6"
 msgstr ""
 
@@ -4516,11 +3800,9 @@ msgstr ""
 msgid "TXT_SUB_GOOD1"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_GOOD2"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_GOOD3"
 msgstr ""
 
@@ -4528,11 +3810,9 @@ msgstr ""
 msgid "TXT_SUB_SAD1"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_SAD2"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_SAD3"
 msgstr ""
 
@@ -4540,11 +3820,9 @@ msgstr ""
 msgid "TXT_SUB_BAD1"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_BAD2"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_BAD3"
 msgstr ""
 
@@ -4552,15 +3830,12 @@ msgstr ""
 msgid "TXT_SUB_MAP03_1"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_MAP03_2"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_MAP03_3"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_MAP03_4"
 msgstr ""
 
@@ -4568,15 +3843,12 @@ msgstr ""
 msgid "TXT_SUB_MAP10_1"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_MAP10_2"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_MAP10_3"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_MAP10_4"
 msgstr ""
 
@@ -4671,11 +3943,9 @@ msgstr ""
 msgid "TXT_SUB_LOG25"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_LOG26"
 msgstr ""
 
-# 〃
 msgid "TXT_SUB_LOG27"
 msgstr ""
 
@@ -5155,15 +4425,12 @@ msgstr ""
 msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
 msgstr ""
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
 msgstr ""
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
 msgstr ""
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
 msgstr ""
 
@@ -5183,7 +4450,6 @@ msgstr ""
 msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
 msgstr ""
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
 msgstr ""
 
@@ -5191,7 +4457,6 @@ msgstr ""
 msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
 msgstr ""
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
 msgstr ""
 
@@ -5207,15 +4472,12 @@ msgstr ""
 msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
 msgstr "\n"
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
 msgstr ""
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
 msgstr ""
 
-# 〃
 msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
 msgstr ""
 

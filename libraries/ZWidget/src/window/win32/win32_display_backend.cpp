@@ -5,9 +5,9 @@
 #include "win32_save_file_dialog.h"
 #include "win32_open_folder_dialog.h"
 
-std::unique_ptr<DisplayWindow> Win32DisplayBackend::Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable)
+std::unique_ptr<DisplayWindow> Win32DisplayBackend::Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility)
 {
-	return std::make_unique<Win32DisplayWindow>(windowHost, popupWindow, static_cast<Win32DisplayWindow*>(owner), renderAPI, resizable);
+	return std::make_unique<Win32DisplayWindow>(windowHost, popupWindow, static_cast<Win32DisplayWindow*>(owner), renderAPI, resizable, utility);
 }
 
 void Win32DisplayBackend::ProcessEvents()

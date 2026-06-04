@@ -4,8 +4,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "PO-Revision-Date: 2026-04-13 18:01+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/cs/>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -2165,7 +2164,7 @@ msgstr "Trhač"
 msgid "TAG_GLAUNCHER1"
 msgstr "Granátomet"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Granátomet"
 
@@ -4567,11 +4566,6 @@ msgid "TXT_TOOOLDSG"
 msgstr ""
 "Uložená hra '%s' je ze starší verze: %d (%e je nejstarší podporovaná verze)."
 
-# Shouldn’t this say “%e is the newest supported”?
-# 
-# — Undead
-# 
-# Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
 "Uložená hra '%s' je z novější verze: %d (%e je nejvyšší podporovaná verze)."

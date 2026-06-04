@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-28 00:29+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/common/"
-"id/>\n"
+"PO-Revision-Date: 2026-05-06 22:58+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/common/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17.1-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 msgid "PRESSYN"
 msgstr "Tekan Y atau N."
@@ -308,9 +307,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Item sebelumnya"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Sesuaikan Kontrol Peta"
+msgstr "Kontrol Peta"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Kontrol Peta"
@@ -333,9 +331,8 @@ msgstr "Perbesar"
 msgid "MAPCNTRLMNU_ZOOMOUT"
 msgstr "Perkecil"
 
-#, fuzzy
 msgid "MAPCNTRLMNU_TOGGLEZOOM"
-msgstr "Toggle zoom"
+msgstr "Alihkan zoom"
 
 msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
 msgstr "Toggle ikuti"
@@ -518,20 +515,17 @@ msgstr "Tidak ada sumbu yang dapat dikonfigurasi"
 msgid "OPTVAL_NONE"
 msgstr "Tidak ada"
 
-#, fuzzy
 msgid "OPTVAL_TURNING"
-msgstr "Berputar"
+msgstr "Melihat Kiri/Kanan"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Melihat Atas/Bawah"
 
-#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
-msgstr "Bergerak Maju"
+msgstr "Bergerak Maju/Mundur"
 
-#, fuzzy
 msgid "OPTVAL_STRAFING"
-msgstr "Strafing"
+msgstr "Bergerak Kiri/Kanan"
 
 msgid "OPTVAL_MOVINGUPDOWN"
 msgstr "Bergerak Naik/Turun"
@@ -782,9 +776,8 @@ msgstr "Opsi lanjutan"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Opsi pemutar modul"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Opsi pemutar MIDI"
+msgstr "Opsi perangkat MIDI"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Opsi Suara Lanjutan"
@@ -998,13 +991,11 @@ msgstr "YMFM OPL3"
 msgid "OPTVAL_NUKEDOPL3"
 msgstr "Nuked OPL3"
 
-#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr "OPL2-LLE (Sangat berat!)"
+msgstr "OPL2-LLE (intensif performa)"
 
-#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr "OPL3-LLE (Sangat berat!)"
+msgstr "OPL3-LLE (intensif performa)"
 
 msgid "OPTVAL_MAMEOPN2"
 msgstr "MAME OPN2 (YM2612)"
@@ -1027,17 +1018,14 @@ msgstr "Nuked OPN2 (YM3438)"
 msgid "OPTVAL_NUKEDOPN2YM2612"
 msgstr "Nuked OPN2 (YM2612)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr "OPN2-LLE (YM2612) (Sangat berat!)"
+msgstr "OPN2-LLE (YM2612) (intensif performa)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr "OPN2-LLE (YM3438) (Sangat berat!)"
+msgstr "OPN2-LLE (YM3438) (intensif performa)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr "OPN2-LLE (YMF276) (Sangat berat!)"
+msgstr "OPN2-LLE (YMF276) (intensif performa)"
 
 msgid "OPTVAL_GENSOPN2"
 msgstr "GENS OPN2 (YM2612)"
@@ -1159,9 +1147,8 @@ msgstr "Depan"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "Belakang"
 
-#, fuzzy
 msgid "GLMNU_POSTPROCESS"
-msgstr "Pemrosesan Akhir"
+msgstr "Pasca-pemrosesan"
 
 msgid "GLPREFMNU_TONEMAP"
 msgstr "Mode Tonemap"
@@ -1566,17 +1553,6 @@ msgstr "Tidak ada hasil yang ditemukan."
 msgid "OS_LABEL"
 msgstr "Cari:"
 
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "0"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-msgid "REQUIRED_CHARACTERS"
-msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "Menu opsi lengkap"
 
@@ -1796,14 +1772,12 @@ msgstr "Tidak dapat membaca catatan rilis"
 msgid "NOTES_UNKNOWN"
 msgstr "Tidak diketahui"
 
-#, fuzzy
 msgid "NOTES_RELEASED"
-msgstr "dirilis"
+msgstr "%s versi %s, dirilis %s"
 
 msgid "NOTES_EMPTY"
 msgstr "Tidak ada deskripsi yang diberikan."
 
-#, fuzzy
 msgid "NOTES_DETAILS"
 msgstr "Untuk detail lebih lanjut lihat: %s"
 
