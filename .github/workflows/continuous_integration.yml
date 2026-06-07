@@ -76,7 +76,6 @@ jobs:
                 libsdl2-dev
                 libwebp-dev
                 libbz2-dev
-                libomp-dev
                 libvpx-dev
                 gtk-update-icon-cache
                 libfile-mimeinfo-perl
