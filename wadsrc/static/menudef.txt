@@ -972,7 +972,6 @@ OptionMenu "VideoOptions" protected
 	Option "$DSPLYMNU_PLAYERSPRITES",          r_drawplayersprites,    OnOff
 	Option "$DSPLYMNU_DEATHCAM",               r_deathcamera,          OnOff
 	Option "$DSPLYMNU_TELEZOOM",               telezoom,               OnOff
-	Slider "$DSPLYMNU_QUAKEINTENSITY",         r_quakeintensity,       0.0, 1.0, 0.05, 0, "", 0, Gray, 100, "$VALFORMAT_PERCENT"
 	Option "$DSPLYMNU_NOMONSTERINTERPOLATION", nomonsterinterpolation, NoYes
 }
 
@@ -2935,6 +2934,9 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
 	Slider "$ACCMNU_DOUBLECLICK_THRESHOLD", "cl_doubleclickthreshold", 100, 1000, 50, 0
 	Tooltip "$ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+
+	StaticText ""
+	Slider "$DSPLYMNU_QUAKEINTENSITY",         r_quakeintensity,       0.0, 1.0, 0.05, 0, "", 0, Gray, 100, "$VALFORMAT_PERCENT"
 
 	StaticText ""
 	SafeCommand "$OPTMNU_DEFAULTS", "acc_reset2defaults"
