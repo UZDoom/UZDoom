@@ -51,7 +51,7 @@ FModule OpenALModule{"OpenAL"};
 
 CUSTOM_CVAR(Int, snd_channels, 128, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)	// number of channels available
 {
-	if (self < 64) self = 64;
+	if (self < 8) self = 8;
 }
 CVARD(String, snd_aldriver, DEFAULT_DRIVER, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "See alsoftrc.sample for details")
 CVAR(Bool, snd_waterreverb, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)

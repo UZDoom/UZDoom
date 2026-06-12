@@ -430,9 +430,9 @@ void FGameConfigFile::DoGlobalSetup ()
 			var = FindCVar("snd_channels", NULL);
 			if (var != NULL)
 			{
-				// old settings were default 32, minimum 8, new settings are default 128, minimum 64.
+				// old settings were default 32, minimum 8, new settings are default 128, minimum 8.
 				UCVarValue v = var->GetGenericRep(CVAR_Int);
-				if (v.Int < 64) var->ResetToDefault();
+				if (v.Int < 8) var->ResetToDefault();
 			}
 		}
 		if (EngineLastRunVer < 214)
