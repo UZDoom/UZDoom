@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"PO-Revision-Date: 2026-06-13 17:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/ru/>\n"
 "Language: ru\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Разрушенная деревня"
@@ -237,9 +237,8 @@ msgstr "Готово..."
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Головоломка не разгадана"
 
-#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
-msgstr "Я тебя предупреждаю..."
+msgstr "Я тебя предупреждаю…"
 
 msgid "TXT_ACS_MAP46_3_STUBB"
 msgstr "Не слишком ли ты упрямый?"
@@ -250,9 +249,8 @@ msgstr "И не слишком-то разумный!"
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Одна четвёртая этой головоломки разгадана"
 
-#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
-msgstr "Плохой выбор..."
+msgstr "А зря…"
 
 msgid "TXT_ACS_MAP47_2_THESY"
 msgstr "Символы не совпадают"
@@ -310,9 +308,8 @@ msgstr "Остренько???!!!"
 msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Подай-ка мне сахар, детка"
 
-#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
-msgstr "Ага-а-а-а..."
+msgstr "Ага-а-а-а…"
 
 msgid "TXT_ACS_MAP51_22_FILMI"
 msgstr "Фильм за час?"
@@ -350,13 +347,11 @@ msgstr "Выход открыт"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "С этой стороны дверь не открыть"
 
-#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
-msgstr "Двери открыты..."
+msgstr "Двери открыты…"
 
-#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
-msgstr "...осмелишься ли ты войти?"
+msgstr "…осмелишься ли ты войти?"
 
 msgid "TXT_ACS_MAP54_9_ADOOR"
 msgstr "Дверь открылась"

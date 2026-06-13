@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-27 20:11+0000\n"
-"Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6.dev0\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
@@ -953,7 +953,7 @@ msgid "OB_STEALTHCACO"
 msgstr "%o dachte, einen Cacodämonen zu sehen."
 
 msgid "OB_STEALTHCHAINGUY"
-msgstr "%o dachte, einen MG-Schützen zu sehen."
+msgstr "%o dachte, %g sah einen MG-Schützen."
 
 msgid "OB_STEALTHDEMON"
 msgstr "%o dachte, einen Dämonen zu sehen."
@@ -4029,7 +4029,7 @@ msgid "OPTVAL_TRANSLUCENT"
 msgstr "Transparent"
 
 msgid "OPTVAL_FUZZ"
-msgstr "Fuzz"
+msgstr "Unschärfe"
 
 msgid "OPTVAL_SHADOW"
 msgstr "Schatten"
@@ -5369,7 +5369,7 @@ msgid "VALFORMAT_DB_P_METER"
 msgstr "%s dB/m"
 
 msgid "VALFORMAT_DEGREES"
-msgstr "%s deg"
+msgstr "%s Grad"
 
 msgid "VALFORMAT_FPS"
 msgstr "%s bps"
@@ -5403,3 +5403,11 @@ msgstr "Alpha der Füllung"
 
 msgid "MAPCOLORMNU_SECTORFILLCOLOR"
 msgstr "Füllfarbe"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automatisch (ZDoom bevorzugt)"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automatisch (ZDoom bevorzugt)"

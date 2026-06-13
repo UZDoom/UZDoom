@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"PO-Revision-Date: 2026-06-13 17:09+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/doom-engine-games/hexen/ru/>\n"
 "Language: ru\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Зал отсеивания"
@@ -323,9 +323,8 @@ msgstr "Дверь заблокирована изнутри"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Площадка опустилась в центральной башне"
 
-#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
-msgstr "Ты слишком заигрался, смертный..."
+msgstr "Ты слишком заигрался, смертный…"
 
 msgid "TXT_ACS_MAP22_29_ITHIN"
 msgstr "Пришло время завершить твою партию"

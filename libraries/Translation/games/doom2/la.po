@@ -1,0 +1,265 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-09 04:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/doom-2/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_D2E1"
+msgstr "Infernum ad Terram"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr "Non Requiem Vivi"
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr "Gradus I: Entryway"
+
+msgid "HUSTR_2"
+msgstr "Gradus II: Subaulae"
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr "Gradus III: Manica"
+
+msgid "HUSTR_4"
+msgstr "Gradus IV: Focus"
+
+msgid "HUSTR_5"
+msgstr "Gradus V: Vastum cuniculis"
+
+msgid "HUSTR_6"
+msgstr "Gradus VI: Confractor"
+
+msgid "HUSTR_7"
+msgstr "Gradus VII: Mortuus Simplex"
+
+msgid "HUSTR_8"
+msgstr "Gradus VIII: Furta et Laquei"
+
+msgid "HUSTR_9"
+msgstr "Gradus IX: Fossa"
+
+msgid "HUSTR_10"
+msgstr "Gradus X: Basis Refectionis"
+
+# Alternative title:
+# Circle of Death
+msgid "HUSTR_11"
+msgstr "Gradus XI: O contritio!"
+
+msgid "HUSTR_12"
+msgstr "Gradus XII: Officina"
+
+msgid "HUSTR_13"
+msgstr "Gradus XIII: Centrum urbis"
+
+msgid "HUSTR_14"
+msgstr "Gradus XIV: Dens intima"
+
+msgid "HUSTR_15"
+msgstr "Gradus XV: Zona Industrialis"
+
+msgid "HUSTR_16"
+msgstr "Gradus XVI: Suburbia"
+
+msgid "HUSTR_17"
+msgstr "Gradus XVII: Tenementa"
+
+msgid "HUSTR_18"
+msgstr "Gradus XVIII: Atrium"
+
+msgid "HUSTR_19"
+msgstr "Gradus XIX: Arcem"
+
+msgid "HUSTR_20"
+msgstr "Gradus XX: Gotcha!"
+
+msgid "HUSTR_21"
+msgstr "Gradus XXI: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Gradus XXII: Catacumbæ"
+
+msgid "HUSTR_23"
+msgstr "Gradus XXIII: Dolia Iucunditatis"
+
+msgid "HUSTR_24"
+msgstr "Gradus XXIV: Chasma"
+
+msgid "HUSTR_25"
+msgstr "Gradus XXV: Casus Sanguinis"
+
+msgid "HUSTR_26"
+msgstr "Gradus XXVI: Metallae Desertae"
+
+msgid "HUSTR_27"
+msgstr "Gradus XXVII: Monstrum Condo"
+
+msgid "HUSTR_28"
+msgstr "Gradus XXVIII: Mundus Spirituum"
+
+msgid "HUSTR_29"
+msgstr "Gradus XXIX: Finis Vivens"
+
+msgid "HUSTR_30"
+msgstr "Gradus XXX: Icon Peccati"
+
+msgid "HUSTR_31"
+msgstr "Gradus XXXI: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Gradus XXXII: Grossa"
+
+msgid "HUSTR_31B"
+msgstr "Gradus XXXI: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Gradus XXXII: Keen"
+
+msgid "HUSTR_33"
+msgstr "Gradus XXXIII: Prodere"
+
+msgid "NHUSTR_1"
+msgstr "Gradus I: Terrae Base"
+
+msgid "NHUSTR_2"
+msgstr "Gradus II: Laboratoria Doloris"
+
+msgid "NHUSTR_3"
+msgstr "Gradus III: Canio Mortuoris"
+
+msgid "NHUSTR_4"
+msgstr "Gradus IV: Infernus Mons"
+
+msgid "NHUSTR_5"
+msgstr "Gradus V: Vivisectio"
+
+msgid "NHUSTR_6"
+msgstr "Gradus VI: Inferno sanguinis"
+
+msgid "NHUSTR_7"
+msgstr "Gradus VII: Convivium Baronis"
+
+msgid "NHUSTR_8"
+msgstr "Gradus VIII: Sepulcrum Malevolentiae"
+
+msgid "NHUSTR_9"
+msgstr "Gradus IX: Iter daemoni"
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+"Ingressus es penitus in infestatione\n"
+"starport. Sed aliquid falsum est. The\n"
+"Monstra sua re\n"
+"cum eis et starport's ars .\n"
+"eorum praesentia subvertitur.\n"
+"\n"
+"Ante, vides stationem inferni, a\n"
+"zona munita. Si praeterire potes,\n"
+"Penetrare potes in cor uada\n"
+"de starbase et moderantum invenire\n"
+"transibit quod tenet terrae populus\n"
+"obsidem."
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+"Vicisti! Tuum victoria est enabled\n"
+"Humanum genus est decedere terram et evadere\n"
+"tantibus. Nunc solus es\n"
+"Humana laeva est telluris in ora.\n"
+"Anthropophagi mutationes, peregrini carnivorae;\n"
+"et spiritus mali proximi tui soli sunt.\n"
+"Sedes et mortem exspecta, contentus\n"
+"quod speciem tuam servasti.\n"
+"\n"
+"Sed tunc, Terra Imperium demittit a\n"
+"nuntius ex spatio: \"Sensores sita sunt\"\n"
+"fons peregrinorum incursus. si\n"
+"ite ibi possis defensio\n"
+"introitum. Basis aliena est in corde\n"
+"patria tua urbs, haud procul a\n"
+"starport. \" Tarde ac dolens vos accipere\n"
+"resupinusque reditque ad proelia."
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+"Corruptum urbis es;\n"
+"cadaveribus hostium circumdatum.\n"
+"Nullo modo vides creaturam destruere'\n"
+"hinc nuam, sic elenchi tuum\n"
+"dentibus immerseris.\n"
+"\n"
+"Oportet esse viam illam claudere\n"
+"alteram partem. Quid ad te pertinet, si quid habes?\n"
+"obtinuit ut per infernum iret ad eam?"
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+"Horrenda visio maximus\n"
+"daemon te umquam saxum ante\n"
+"tu, post sentinam tuam nisl in\n"
+"in aperto cerebro. Monstrum macies\n"
+"et perit\n"
+"vastare innumerabilia milia inferni\n"
+"superficiem.\n"
+"\n"
+"Fecisti. Irruptio dicta est.\n"
+"Terra salvatur. Orcus naufragio. Tu\n"
+"mirum quo malos ibit cum\n"
+"mori nunc. Extergendo sudorem tuum\n"
+"frons incipis longum Iter retro\n"
+"domum suam. Terra aedificanda esse debet\n"
+"plus fun quam pernicies fuit.\n"
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+"Gratulationes, secretum invenisti\n"
+"gradus! Suus similis aedificata\n"
+"Homines, quam daemones. Miraris\n"
+"qui adposita de angulo huius gehennae\n"
+"erit."
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+"Gratulor, invenisti\n"
+"auper arcanum gradus! Melius velis\n"
+"flagrare per hoc unum!\n"
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+"Tribulatio miscendarum in vestri ventus\n"
+"feriarum macula… Infernus. quidam Cyberdemon\n"
+"Punk vicis putavit se posse infernum in a\n"
+"oblectamenti parcum ac tellus\n"
+"tessera umbraculum.\n"
+"\n"
+"Bene, quod spectaculum lusus semi-robot non fecit\n"
+"scito qui venturus sit ad nundinas. Illic's\n"
+"nihil quasi dirigentes gallery plena\n"
+"helloritur ut sanguis elit ...\n"
+"\n"
+"Iam muri daemon labyrinthum\n"
+"sono membrorum metallicum\n"
+"aream Preme. Mortem eius gementes gurgles\n"
+"e per tatam a facie ejus reliquisti.\n"
+"\n"
+"Haec ride clausa est.\n"
+"\n"

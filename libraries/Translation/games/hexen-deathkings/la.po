@@ -1,0 +1,485 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-09 04:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Vicus Ruinatus"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Ruina"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Sentina"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Catacomba"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Terrae Insulae"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Lignum filicum"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Rogus"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Porta Constabularii"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Aerarium"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Forum"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Locus Requiescat"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Experimentum"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Armamentarium"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Navis"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Canticum"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Laqueum"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Vigilia Obscura"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Cloaca"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Tenax Glacialis"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Arx Obscura"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Transitus"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Super et Sub"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Nebula Mortis"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Castellum doloris"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Fossa Cloacalis"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Rosa"
+
+# intermission
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Tergendo manum tremens per tuum\n"
+"cruentis faciem purgare conaris\n"
+"mens tua quid lateat...\n"
+"\n"
+"... et obliviscere quae post tergum iacet.\n"
+"\n"
+"Procul, summae mcenia\n"
+"magnae castellum compositae videntur to\n"
+"caelum scinde superne et fetorem\n"
+"de corruptione excanduit a violatis\n"
+"sepulcra innumeri mortuorum.\n"
+"\n"
+"Diligenter computatis quod modicum\n"
+"reliquiae artificialium tuorum conaris\n"
+"ad confirmandos te ipsum quod vult\n"
+"satis erit. tamen habet esse\n"
+"satis est, annon?\n"
+"\n"
+"\n"
+"annon?"
+
+# intermission
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Num incolunt animas damnatorum\n"
+"hoc mundo, pro nihilo pulchrum vel bonum\n"
+"hic diu superstites esse potuerunt.\n"
+"\n"
+"Sed quod antecessit, non potest nisi\n"
+"erit pallida umbra quae prohibet tua\n"
+"nunc transitus: ipsa arx opaca.\n"
+"\n"
+"Torva mole ecclesiae cathedralis caudices\n"
+"omnia autem fragmentary videbo\n"
+"arx propria est, sed quae conspici potest\n"
+"loquitur sibilantis frigida murmura ;\n"
+"mortem diuturnam ...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...pro felicibus."
+
+# intermission
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Semel iterumque te ipsum invenies in the\n"
+"aula magna chaos sphæra,\n"
+"si nullum tempus transisset, ex quo\n"
+"tandem inter has umbras commotus es.\n"
+"\n"
+"Sed certe aliud est;\n"
+"silentium ubi quondam mollis\n"
+"susurros, sensus observandi\n"
+"occultis oculis ...\n"
+"\n"
+"oculos quos scutum malefic\n"
+"intentus."
+
+# intermission
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Cum ante chaos comprehendisti\n"
+"sphaeram tenuit in tremore\n"
+"manus. nunc contremiscunt manus tuae\n"
+"aliquid plus quam avaritia et\n"
+"metus dapibus fames enim\n"
+"potestas.\n"
+"\n"
+"Si etiam potentia Sphaerae est\n"
+"non satis est ad protegendum te a\n"
+"copiae tenebrarum fortasse est\n"
+"melius intactum reliquit;\n"
+"inculta reliquit.\n"
+"\n"
+"\n"
+"\n"
+"Sed tu numquam unus fuisti\n"
+"RECUMBO ex provocatione …"
+
+# intermission
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n…et alii lusores exspectant.\n"
+"\n"
+
+# script texts
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Audetisne proelium in promptu esse?"
+
+# script texts
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Pro eo morieris!"
+
+# script texts
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Cataracta aperta"
+
+# script texts
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Cataracta obstructus"
+
+# script texts
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Janua in oratorio aperuit"
+
+# script texts
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Nunc id impar …"
+
+# script texts
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Tres partes aenigmatis plures manent"
+
+# script texts
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Duae plures partes aenigmatis manent"
+
+# script texts
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Una pars aenigmatis manet"
+
+# script texts
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Aenigma completum est"
+
+# script texts
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Vos have aenigmate non perficitur"
+
+# script texts
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Area tuta non est!"
+
+# script texts
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Una tertia aenigma solvitur"
+
+# script texts
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Duae partes aenigma solvitur"
+
+# script texts
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Audis suggestum movere in spatio"
+
+# script texts
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Factum est…"
+
+# script texts
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Vos have aenigmate non perficitur"
+
+# script texts
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Moneo te …"
+
+# script texts
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Nonne pertinax es?"
+
+# script texts
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "Et stultus nimis"
+
+# script texts
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Una quarta huius aenigma completum est"
+
+# script texts
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Mala electio…"
+
+# script texts
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Signa non varius"
+
+# script texts
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Ianua non aperiet hinc"
+
+# script texts
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Ianua foris praeclusa est"
+
+# script texts
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Sacrilegium !"
+
+# script texts
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Sepulchrum Erici polluisti."
+
+# script texts
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Et nunc morieris!!!"
+
+# script texts
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Una tertia aenigma solvitur"
+
+# script texts
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Duae partes aenigma solvitur"
+
+# script texts
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Crypta aperta est"
+
+# script texts
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Cavete sepulcrum araneae"
+
+# script texts
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Audis suggestum foris oriri"
+
+# script texts
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Fortunatus ecquid sentis?"
+
+# script texts
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Erras conjectura!"
+
+# script texts
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Bona coniectura"
+
+# script texts
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Potesne omnes litteras meas pro gradus facere?"
+
+# script texts
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Noli tangere gloppy"
+
+# script texts
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal ??????"
+
+# script texts
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Gimme quidam saccharo, parve"
+
+# script texts
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Duh-uhhh…"
+
+# script texts
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Pelliculam in hora?"
+
+# script texts
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Ego ne cippum quidem meum possideo — cf"
+
+# script texts
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Non effundatur sanguis"
+
+# script texts
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Manus in ira non moveatur"
+
+# script texts
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Quis somnos audet turbare nostros?"
+
+# script texts
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Via aperta est"
+
+# script texts
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Habes "
+
+# script texts
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\ x20switches relicto"
+
+# script texts
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Tu modo "
+
+# script texts
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\ x20switch ad sinistram"
+
+# script texts
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Exitus aperta est"
+
+# script texts
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Fores non aperies hinc"
+
+# script texts
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Fores apertae sunt…"
+
+# script texts
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "... si paratus es"
+
+# script texts
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "A ostium aperuit"
+
+# script texts
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "in Chantry"
+
+# script texts
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Pons aedificatus"
+
+# script texts
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "in Abattoir"
+
+# script texts
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "A scala aedificata"
+
+# script texts
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "in tenebris Watch"
+
+# script texts
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Unum calces positus est"
+
+# script texts
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\ x20gears sunt posita"
+
+# script texts
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Obice aperuit"
+
+# script texts
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "De Cloaca"
+
+# script texts
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Via retro aperta est"
+
+# script texts
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Ianua ab intus praeclusa est"
+
+# script texts
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Audes spoliare sepulcrum"
+
+# script texts
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "carnifex?"
+
+# script texts
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Parare ad mortem"
+
+# script texts
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Habes "
+
+# script texts
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\ x20more virgas invenire"
+
+# script texts
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Tu modo "
+
+# script texts
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\ x20switch ad sinistram"
+
+# script texts
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Via ad turris aperta est"
+
+# script texts
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Via aperta est"

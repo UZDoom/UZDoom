@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-12 16:11+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
+"Last-Translator: OldCactusCN <huchenyi_2019@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -1261,7 +1261,7 @@ msgid "AMMO_PHOENIXROD"
 msgstr "火焰宝珠"
 
 msgid "TAG_STAFF"
-msgstr "法杖"
+msgstr "铁头杖"
 
 msgid "TAG_GOLDWAND"
 msgstr "精灵魔杖"
@@ -3795,7 +3795,7 @@ msgid "DSPLYMNU_BLENDMETHOD"
 msgstr "透明渲染模式"
 
 msgid "DSPLYMNU_WIPETYPE"
-msgstr "屏幕擦除样式"
+msgstr "屏幕转场样式"
 
 msgid "DSPLYMNU_SHOWENDOOM"
 msgstr "显示ENDOOM画面"
@@ -5398,3 +5398,11 @@ msgstr "%s 分贝"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr "触发双击事件所需的连续按键间隔"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "自动(原版优先)"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "自动(ZDoom优先)"

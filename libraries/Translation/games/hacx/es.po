@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-18 05:12+0000\n"
-"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"PO-Revision-Date: 2026-06-12 12:01+0000\n"
+"Last-Translator: Libre <6n0n1m0s@proton.me>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6.dev0\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgctxt "doom hacx.hacx1"
 msgid "QUITMSG1"
@@ -264,7 +264,6 @@ msgstr "¡Has pillado una caja de balas!"
 msgid "GOTTORPEDO"
 msgstr "¡Has pillado un torpedo!"
 
-#, fuzzy
 msgid "GOTTORPEDOS"
 msgstr "¡Has pillado una caja de torpedos!"
 
@@ -337,9 +336,8 @@ msgstr "Centrofenoxina"
 msgid "GOTKEVLARVEST"
 msgstr "¡Has pillado un traje de Kevlar!"
 
-#, fuzzy
 msgid "GOTSKEVLARVEST"
-msgstr "¡Has pillado un supertraje de Kevlar!"
+msgstr "¡Has pillado un super‐traje de Kevlar!"
 
 msgid "GOTMICROKIT"
 msgstr "¡Has pillado un MicroKit!"
@@ -379,9 +377,9 @@ msgstr ""
 "\n"
 "¡Más te vale encontrar la próxima terminal, dar\n"
 "un viaje por el ciberespacio, rebanar unos\n"
-"cuantos traseros mutantes, y pirarte de Dodge!"
+"cuantos traseros mutantes, y pirarte de Dodge!\n"
+"\n"
 
-#, fuzzy
 msgid "X2TEXT"
 msgstr ""
 "¡¿Dónde está toda la gente?!\n"
@@ -401,9 +399,8 @@ msgstr ""
 "¡Fluidos neuronales humanos alimentan a\n"
 "estos bichos! No es de extrañar que el\n"
 "vecindario esté algo despoblado. Persónate\n"
-"ante el subcomité. Y vigila tus espaldas...\n"
+"ante el subcomité. Y vigila tus espaldas…\n"
 
-#, fuzzy
 msgid "X3TEXT"
 msgstr ""
 "¡La civilización como la conoces ya no es nada!\n"
@@ -411,14 +408,14 @@ msgstr ""
 "Sin amigos, ni familia. No más gente.\n"
 "No gente normal, de todos modos.\n"
 "\n"
-"Solo queda una cosa... ¡GENIE!\n"
+"Solo queda una cosa… ¡GENIE!\n"
 "¡Y si tienes que ir hasta el fin del universo\n"
 "encontrarás su trasero mutante!\n"
 "¡Porque ahora si que estás cabread@[ao_esp]!\n"
 "\n"
 "¿Y el oro? Para nada, esto es gratis.\n"
 "\n"
-"... (continuará) ..."
+"……(continuará)……"
 
 #, fuzzy
 msgid "X5TEXT"
@@ -435,7 +432,7 @@ msgstr ""
 "Tú... estás sol@[ao_esp]."
 
 msgid "TXT_HACXMAP01"
-msgstr ""
+msgstr "GenEmp Corp."
 
 msgid "TXT_HACXMAP02"
 msgstr "Pueblo Túnel"
@@ -450,7 +447,7 @@ msgid "TXT_HACXMAP05"
 msgstr "Circo Cibernético"
 
 msgid "TXT_HACXMAP06"
-msgstr ""
+msgstr "Digi-Ota"
 
 msgid "TXT_HACXMAP07"
 msgstr "La Gran Muralla"
@@ -486,7 +483,7 @@ msgid "TXT_HACXMAP17"
 msgstr "Río de Sangre"
 
 msgid "TXT_HACXMAP18"
-msgstr ""
+msgstr "Bizarro"
 
 msgid "TXT_HACXMAP19"
 msgstr "Las Salas de Guerra"
@@ -497,10 +494,9 @@ msgstr "¡Alerta de Intruso!"
 msgid "TXT_HACXMAP31"
 msgstr "Sala del Desecante"
 
-#, fuzzy
 msgctxt "doom hacx.hacx1"
 msgid "STSTR_CLEV"
-msgstr "Ahora llegando a...\n"
+msgstr "Ahora llegando a…"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
@@ -605,35 +601,35 @@ msgid "CC_ANDROID"
 msgstr "Androide"
 
 msgid "CC_ICE"
-msgstr ""
+msgstr "ICE"
 
 msgid "CC_BUZZER"
 msgstr "Zumbador"
 
 msgid "CC_DMAN"
-msgstr ""
+msgstr "D-Man"
 
 msgid "CC_PHAGE"
 msgstr "Fago"
 
 msgid "CC_MONSTRUCT"
-msgstr ""
+msgstr "Monstruo"
 
 msgid "CC_MECH"
 msgstr "Meca-Maníaco"
 
 msgid "CC_TERMI"
-msgstr ""
+msgstr "Terminatrix"
 
 msgid "CC_THORN"
 msgstr "Cosa Espinosa"
 
 msgid "CC_MAJONG"
-msgstr ""
+msgstr "Majong 7"
 
 msgctxt "doom hacx.hacx1"
 msgid "CC_HERO"
-msgstr ""
+msgstr "Dan Evanger"
 
 msgctxt "doom hacx.hacx1"
 msgid "SKILL_BABY"
