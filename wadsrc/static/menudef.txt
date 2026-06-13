@@ -2533,7 +2533,7 @@ OptionMenu SoundOptions protected
 	Submenu "$SNDMNU_MIDIDEVICE",       "MidiDevicesMenu"
 	Submenu "$SNDMNU_MIDIPLAYER",       "MidiPlayerOptions"
 	StaticText " "
-	Slider "$SNDMNU_CHANNELS",          "snd_channels",        8, 256, 8, 0
+	Slider "$SNDMNU_CHANNELS",          "snd_channels",        64, 256, 8, 0
 	Option "$SNDMNU_BACKGROUND",        "i_soundinbackground", "OnOff"
 	Option "$SNDMNU_UNDERWATERREVERB",  "snd_waterreverb",     "OnOff"
 	Option "$SNDMNU_RANDOMIZEPITCHES",  "snd_pitched",         "OnOff"
