@@ -741,11 +741,11 @@ class OptionMenu : Menu
 		switch (mkey)
 		{
 		case MKEY_Up:
-			MenuMoveCursor(-1);
+			if (mDesc.mItems.Size() > 0) MenuMoveCursor(-1);
 			break;
 
 		case MKEY_Down:
-			MenuMoveCursor(1);
+			if (mDesc.mItems.Size() > 0) MenuMoveCursor(1);
 			break;
 
 		case MKEY_PageUp:
@@ -759,17 +759,17 @@ class OptionMenu : Menu
 		case MKEY_Home:
 			MenuScrollViewport(-mDesc.mItems.Size(), true);
 			mDesc.mSelectedItem = -1;
-			MenuMoveCursor(1);
+			if (mDesc.mItems.Size() > 0) MenuMoveCursor(1);
 			break;
 
 		case MKEY_End:
 			MenuScrollViewport(mDesc.mItems.Size(), true);
 			mDesc.mSelectedItem = -1;
-			MenuMoveCursor(-1);
+			if (mDesc.mItems.Size() > 0) MenuMoveCursor(-1);
 			break;
 
 		case MKEY_Enter:
-			if (mDesc.mSelectedItem >= 0 && mDesc.mItems[mDesc.mSelectedItem].Activate())
+			if (mDesc.mSelectedItem >= 0 && mDesc.mItems.Size() > 0 && mDesc.mItems[mDesc.mSelectedItem].Activate())
 			{
 				return true;
 			}
@@ -778,7 +778,7 @@ class OptionMenu : Menu
 				// fall through to default
 			}
 		default:
-			if (mDesc.mSelectedItem >= 0 &&
+			if (mDesc.mSelectedItem >= 0 && mDesc.mItems.Size() > 0 &&
 				mDesc.mItems[mDesc.mSelectedItem].MenuEvent(mkey, fromcontroller)) return true;
 			return Super.MenuEvent(mkey, fromcontroller);
 		}
