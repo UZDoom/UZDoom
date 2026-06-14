@@ -578,8 +578,6 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 	placeholder = "\n";
 	vp_comb = pre_placeholder + placeholder + vp_comb;
 
-
-
 	if (light_fragprog)
 	{
 		int pp_lump = fileSystem.CheckNumForFullName(light_fragprog, 0);
