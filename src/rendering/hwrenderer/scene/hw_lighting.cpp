@@ -74,7 +74,8 @@ int CalcLightLevel(ELightMode lightmode, int lightlevel, int rellight, bool weap
 
 	bool darklightmode = (isDarkLightMode(lightmode)) || (isSoftwareLighting(lightmode) && blendfactor > 0);
 
-	if ((darklightmode && lightlevel < 192 && !weapon) || (weapon && weaponPureLightLevel))
+	// [Nash] 14 June 2026 - disabled pure light level temporarily. Will be fixed after UZDoom v5.0
+	if (darklightmode && lightlevel < 192 && !weapon)
 	{
 		if (lightlevel > 100)
 		{
