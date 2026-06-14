@@ -516,8 +516,7 @@ CCMD(setinv)
 
 }
 
-
-CCMD (puke)
+static void DoPuke(FCommandLine &argv)
 {
 	int argc = argv.argc();
 
@@ -559,7 +558,17 @@ CCMD (puke)
 	}
 }
 
-CCMD (pukename)
+CCMD (puke)
+{
+	DoPuke(argv);
+}
+
+CCMD (acs)
+{
+	DoPuke(argv);
+}
+
+static void DoPukeName(FCommandLine &argv)
 {
 	int argc = argv.argc();
 
@@ -595,6 +604,16 @@ CCMD (pukename)
 			Net_WriteInt32(arg[i]);
 		}
 	}
+}
+
+CCMD (pukename)
+{
+	DoPukeName(argv);
+}
+
+CCMD (acsn)
+{
+	DoPukeName(argv);
 }
 
 CCMD (special)
