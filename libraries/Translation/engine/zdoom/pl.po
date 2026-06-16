@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pl/>\n"
 "Language: pl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Wciśnij dowolny klawisz."
@@ -1591,7 +1591,7 @@ msgid "FN_ETTIN"
 msgstr ""
 
 msgid "FN_CENTAUR"
-msgstr ""
+msgstr "Centaur"
 
 msgid "FN_SLAUGHTAUR"
 msgstr "Rzeziotaur"
@@ -5268,3 +5268,11 @@ msgstr "Miażdżyciel"
 #, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Wyrzutnia Granatów"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automatyczny (Preferowany oryginalny)"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automatyczny (Preferowany ZDoom)"

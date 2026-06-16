@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-05 22:17-0400\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/nl/>\n"
 "Language: nl\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: python 3.14.4 polib 1.2.0\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Druk op een toets."
@@ -5358,3 +5358,11 @@ msgstr "Dynamische kleuren voor het dradenkruis"
 
 msgid "HUDMNU_CROSSHAIRYOFFSET"
 msgstr "Verticale verschuiving van het dradenkruis"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (bij voorkeur Vanilla)"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (bij voorkeur ZDoom)"

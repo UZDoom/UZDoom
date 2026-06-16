@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-01 23:01+0000\n"
+"PO-Revision-Date: 2026-06-06 22:01+0000\n"
 "Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ca/>\n"
 "Language: ca\n"
@@ -223,8 +223,8 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"Endavant, però els \n"
-"flemoids t’estaran esperant."
+"El veritable Guerrer Chex®\n"
+"no es rendiria tan ràpid!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr "Has agafat un objecte"
@@ -332,10 +332,10 @@ msgid "TXT_BUDDHA2OFF"
 msgstr "Mode Buda definitiu: OFF"
 
 msgid "TXT_CHEATPOWERON"
-msgstr "Poder: ACTIVAT"
+msgstr "Poder: ON"
 
 msgid "TXT_CHEATPOWEROFF"
-msgstr "Poder: DESACTIVAT"
+msgstr "Poder: OFF"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Salut completa"
@@ -344,10 +344,10 @@ msgid "TXT_CHEATKEYS"
 msgstr "Totes les claus"
 
 msgid "TXT_CHEATSOUNDON"
-msgstr "Depuració de so: ACTIVADA"
+msgstr "Depuració de so: ON"
 
 msgid "TXT_CHEATSOUNDOFF"
-msgstr "Depuració de so: DESACTIVADA"
+msgstr "Depuració de so: OFF"
 
 msgid "TXT_CHEATIDDQD"
 msgstr "Intentant fer trampes, eh? Ara mors!"
@@ -356,10 +356,10 @@ msgid "TXT_CHEATIDKFA"
 msgstr "Trampós: no et mereixes armes"
 
 msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: ACTIVAT"
+msgstr "Ticker: ON"
 
 msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: DESACTIVAT"
+msgstr "Ticker: OFF"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Ho has aconseguit"
@@ -371,25 +371,25 @@ msgid "TXT_GOTSTUFF"
 msgstr "Has aconseguit les coses!"
 
 msgid "TXT_FREEZEON"
-msgstr "Mode congelació: ACTIVAT"
+msgstr "Mode congelació: ON"
 
 msgid "TXT_FREEZEOFF"
-msgstr "Mode congelació: DESACTIVAT"
+msgstr "Mode congelació: OFF"
 
 msgid "TXT_STRANGE"
 msgstr "Estrany…"
 
 msgid "TXT_STRANGER"
-msgstr "Foraster"
+msgstr "Et sents encara més estrany."
 
 msgid "TXT_NOTSTRANGE"
 msgstr "Això no té res d’estrany."
 
 msgid "TXT_LEADBOOTSON"
-msgstr "Botes de plom: ACTIVADES"
+msgstr "Botes de plom: ON"
 
 msgid "TXT_LEADBOOTSOFF"
-msgstr "Botes de plom: DESACTIVADES"
+msgstr "Botes de plom: OFF"
 
 msgid "TXT_LIGHTER"
 msgstr "Et sents més lleuger"
@@ -398,10 +398,10 @@ msgid "TXT_GRAVITY"
 msgstr "La gravetat et pesa"
 
 msgid "TXT_NOTARGET_ON"
-msgstr "Sense objectiu: ACTIVAT"
+msgstr "Sense objectiu: ON"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "Sense objectiu: DESACTIVAT"
+msgstr "Sense objectiu: OFF"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "«Tremoleu de por!»"
@@ -410,10 +410,10 @@ msgid "TXT_ANUBIS_OFF"
 msgstr "S’ha acabat l’armadura d’ogre"
 
 msgid "TXT_CHASECAM_ON"
-msgstr "Càmera en tercera persona: ACTIVADA"
+msgstr "Càmera en tercera persona: ON"
 
 msgid "TXT_CHASECAM_OFF"
-msgstr "Càmera en tercera persona: DESACTIVADA"
+msgstr "Càmera en tercera persona: OFF"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 enemic eliminat"
@@ -437,25 +437,25 @@ msgid "TXT_WHAT_KILL"
 msgstr "Què vols matar fora d’una partida?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Propietats de jugador congelades: DESACTIVADES"
+msgstr "Propietats de jugador congelades: OFF"
 
 msgid "AMSTR_FOLLOWOFF"
-msgstr "Mode seguiment: DESACTIVAT"
+msgstr "Mode seguiment: OFF"
 
 msgid "AMSTR_FOLLOWON"
-msgstr "Mode seguiment: ACTIVAT"
+msgstr "Mode seguiment: ON"
 
 msgid "AMSTR_GRIDON"
-msgstr "Graella: ACTIVADA"
+msgstr "Graella: ON"
 
 msgid "AMSTR_GRIDOFF"
-msgstr "Graella: DESACTIVADA"
+msgstr "Graella: OFF"
 
 msgid "AMSTR_TEXON"
-msgstr "Mode textures: ACTIVAT"
+msgstr "Mode textures: ON"
 
 msgid "AMSTR_TEXOFF"
-msgstr "Mode textures: DESACTIVAT"
+msgstr "Mode textures: OFF"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Punt marcat"
@@ -861,7 +861,7 @@ msgid "CC_CYBER"
 msgstr "Cyberdimoni"
 
 msgid "CC_HERO"
-msgstr "Explosives RO"
+msgstr "El nostre heroi"
 
 msgid "FN_SHOTGUN"
 msgstr "Escopeta"
@@ -879,7 +879,7 @@ msgid "FN_CYBER"
 msgstr "Cyberdimoni"
 
 msgid "FN_WOLFSS"
-msgstr "Soldat SS"
+msgstr "Nazi"
 
 msgid "FN_DOG"
 msgstr "Gos"
@@ -924,46 +924,46 @@ msgid "AMMO_CELLS"
 msgstr "Cel·les"
 
 msgid "OB_STEALTHBABY"
-msgstr "%o ha mort per culpa de STEALTHBABY."
+msgstr "%o va pensar que %g havia vist un aracnotró."
 
 msgid "OB_STEALTHVILE"
-msgstr "%o ha mort per culpa de STEALTHVILE."
+msgstr "%o pensava que %g havia vist un arxivil."
 
 msgid "OB_STEALTHBARON"
-msgstr "%o ha mort per culpa de STEALTH Baró de l’Infern."
+msgstr "%o va pensar que %g va veure un Baró de l'Infern."
 
 msgid "OB_STEALTHCACO"
-msgstr "%o ha mort per culpa de STEALTH Cacodimoni."
+msgstr "%o va pensar que %g havia vist un cacodemon."
 
 msgid "OB_STEALTHCHAINGUY"
-msgstr "%o ha mort per culpa de STEALTHCHAINGUY."
+msgstr "%o pensava que %g havia vist un artiller de cadena."
 
 msgid "OB_STEALTHDEMON"
-msgstr "%o ha mort per culpa de STEALTH Dimoni."
+msgstr "%o va pensar que %g va veure un dimoni."
 
 msgid "OB_STEALTHKNIGHT"
-msgstr "%o ha mort per culpa de STEALTHKNIGHT."
+msgstr "%o pensava que %g havia vist un Cavaller de l'Infern."
 
 msgid "OB_STEALTHIMP"
-msgstr "%o ha mort per culpa de STEALTH Imp."
+msgstr "%o pensava que %g havia vist un imp."
 
 msgid "OB_STEALTHFATSO"
-msgstr "%o ha mort per culpa de STEALTH Mancubus."
+msgstr "%o pensava que %g havia vist un mancubus."
 
 msgid "OB_STEALTHUNDEAD"
-msgstr "%o ha mort per culpa de STEALTHUN mort."
+msgstr "%o pensava que %g havia vist un renascut."
 
 msgid "OB_STEALTHSHOTGUNGUY"
-msgstr "%o ha mort per culpa de STEALTH Escopeta GUY."
+msgstr "%o pensava que %g havia vist un sergent."
 
 msgid "OB_STEALTHZOMBIE"
-msgstr "%o ha mort per culpa de STEALTH Zombi."
+msgstr "%o va pensar que %g havia vist un zombi."
 
 msgid "OB_UNDEADHIT"
-msgstr "%o ha estat colpejat per UN mort HIT."
+msgstr "%o va rebre un cop de puny d'un revenant."
 
 msgid "OB_IMPHIT"
-msgstr "%o ha estat colpejat per Imp HIT."
+msgstr "%o va ser colpejat per un imp."
 
 msgid "OB_CACOHIT"
 msgstr "%o ha estat colpejat per cop de cacodimoni."
@@ -972,31 +972,31 @@ msgid "OB_DEMONHIT"
 msgstr "%o ha estat colpejat per cop de dimoni."
 
 msgid "OB_SPECTREHIT"
-msgstr "%o ha estat colpejat per Espectre HIT."
+msgstr "%o va ser devorat per un espectre."
 
 msgid "OB_BARONHIT"
-msgstr "%o ha estat colpejat per Baró de l’Infern HIT."
+msgstr "%o va ser esbudellat per un Baró de l'Infern."
 
 msgid "OB_KNIGHTHIT"
-msgstr "%o ha estat colpejat per KNIGHTHIT."
+msgstr "%o va ser destripat per un Cavaller de l'Infern."
 
 msgid "OB_ZOMBIE"
 msgstr "%o ha mort per culpa de Zombi."
 
 msgid "OB_SHOTGUY"
-msgstr "%o ha mort per culpa de SHOTGUY."
+msgstr "%o va ser disparat per un sergent."
 
 msgid "OB_VILE"
-msgstr "%o ha mort per culpa de VILE."
+msgstr "%o va ser incinerat per un arxivile."
 
 msgid "OB_UNDEAD"
-msgstr "%o ha mort per culpa de UN mort."
+msgstr "%o no va poder evadir la bola de foc d'un revenant."
 
 msgid "OB_FATSO"
 msgstr "%o ha mort per culpa de Mancubus."
 
 msgid "OB_CHAINGUY"
-msgstr "%o ha mort per culpa de CHAINGUY."
+msgstr "%o va ser perforat per un artiller de cadenes."
 
 msgid "OB_SKULL"
 msgstr "%o ha mort per culpa de Crani."
@@ -1011,49 +1011,49 @@ msgid "OB_BARON"
 msgstr "%o ha mort per culpa de Baró de l’Infern."
 
 msgid "OB_KNIGHT"
-msgstr "%o ha mort per culpa de KNIGHT."
+msgstr "%o va ser aixafat per un Cavaller de l'Infern."
 
 msgid "OB_SPIDER"
 msgstr "%o ha mort per culpa de Ment aranya."
 
 msgid "OB_BABY"
-msgstr "%o ha mort per culpa de BABY."
+msgstr "%o va permetre que un aracnotró obtingués %h."
 
 msgid "OB_CYBORG"
 msgstr "%o ha mort per culpa de Cyberdimoni."
 
 msgid "OB_WOLFSS"
-msgstr "%o ha mort per culpa de Soldat SS."
+msgstr "%o va conèixer un nazi."
 
 msgid "OB_DOG"
 msgstr "%o ha mort per culpa de Gos."
 
 msgid "OB_MPFIST"
-msgstr "%o ha estat abatut amb MP Punys."
+msgstr "%o va mossegar el puny de %k."
 
 msgid "OB_MPCHAINSAW"
-msgstr "%o ha estat abatut amb MP Motoserra."
+msgstr "La motoserra de %k va passar per sobre de %o."
 
 msgid "OB_MPPISTOL"
-msgstr "%o ha estat abatut amb MPPISTOL."
+msgstr "A %o li va fer pessigolles el tirador de pèsols de %k."
 
 msgid "OB_MPSHOTGUN"
-msgstr "%o ha estat abatut amb MP Escopeta."
+msgstr "%o va mastegar el boomstick de %k."
 
 msgid "OB_MPSSHOTGUN"
-msgstr "%o ha estat abatut amb MPS Escopeta."
+msgstr "%o va explosionar per la superescopeta de %k."
 
 msgid "OB_MPCHAINGUN"
-msgstr "%o ha estat abatut amb MP Metralladora."
+msgstr "%o va ser abatut per l'ametralladora de %k."
 
 msgid "OB_MPROCKET"
-msgstr "%o ha estat abatut amb MP coet."
+msgstr "%o va muntar el coet de %k."
 
 msgid "OB_MPR_SPLASH"
 msgstr "%o gairebé ha esquivat el coet de %k."
 
 msgid "OB_MPPLASMARIFLE"
-msgstr "%o ha estat abatut amb MPPLASMARIFLE."
+msgstr "%o va ser fos per la pistola de plasma de %k."
 
 msgid "OB_MPBFG_BOOM"
 msgstr "%o ha estat abatut amb MPBFGBOOM."
@@ -1062,7 +1062,7 @@ msgid "OB_MPBFG_SPLASH"
 msgstr "%o ha estat abatut amb MPBFGSPLASH."
 
 msgid "OB_RAILGUN"
-msgstr "%o ha mort per culpa de RAILGUN."
+msgstr "%o va ser criticat per %k."
 
 msgid "OB_MPBFG_MBF"
 msgstr "%o ha estat abatut amb MPBFGMBF."
@@ -1179,13 +1179,13 @@ msgid "TXT_WPNGAUNTLETS"
 msgstr "Guantelets del nigromant"
 
 msgid "TXT_NEEDBLUEKEY"
-msgstr "Necessites la clau blava."
+msgstr "Necessites la clau blava per obrir aquesta porta"
 
 msgid "TXT_NEEDGREENKEY"
-msgstr "Necessites la clau verda."
+msgstr "Necessites la clau verda per obrir aquesta porta"
 
 msgid "TXT_NEEDYELLOWKEY"
-msgstr "Necessites la clau groga."
+msgstr "Necessites la clau groga per obrir aquesta porta"
 
 msgid "FN_CHICKEN"
 msgstr "Pollastre"
@@ -1215,7 +1215,7 @@ msgid "FN_MUMMY"
 msgstr "Mòmia"
 
 msgid "FN_MUMMYLEADER"
-msgstr "Mòmia LEADER"
+msgstr "Nitrogòlem"
 
 msgid "FN_SNAKE"
 msgstr "Serpent"
@@ -1248,112 +1248,112 @@ msgid "TAG_GOLDWAND"
 msgstr "Vara daurada"
 
 msgid "OB_CHICKEN"
-msgstr "%o ha mort per culpa de CHICKEN."
+msgstr "%o va ser picotejat fins a la mort."
 
 msgid "OB_BEAST"
 msgstr "%o ha mort per culpa de Bèstia."
 
 msgid "OB_CLINK"
-msgstr "%o ha mort per culpa de CLINK."
+msgstr "%o va ser tallat per un urpa de sabre."
 
 msgid "OB_DSPARIL1"
 msgstr "%o ha mort per culpa de D’Sparil 1."
 
 msgid "OB_DSPARIL1HIT"
-msgstr "%o ha estat colpejat per D’Sparil 1 HIT."
+msgstr "%o va ser mastegar per la serp de D'Sparil."
 
 msgid "OB_DSPARIL2"
 msgstr "%o ha mort per culpa de D’Sparil 2."
 
 msgid "OB_DSPARIL2HIT"
-msgstr "%o ha estat colpejat per D’Sparil 2 HIT."
+msgstr "%o va ser colpejat per D'Sparil."
 
 msgid "OB_HERETICIMP"
 msgstr "%o ha mort per culpa de Diabló."
 
 msgid "OB_HERETICIMPHIT"
-msgstr "%o ha estat colpejat per Diabló HIT."
+msgstr "%o va ser piratejat per una gàrgola."
 
 msgid "OB_IRONLICH"
 msgstr "%o ha mort per culpa de Lich de ferro."
 
 msgid "OB_IRONLICHHIT"
-msgstr "%o ha estat colpejat per Lich de ferro HIT."
+msgstr "%o es va acostar a un lich de ferro."
 
 msgid "OB_BONEKNIGHT"
-msgstr "%o ha mort per culpa de BONEKNIGHT."
+msgstr "%o va ser destrossat per un guerrer no-mort."
 
 msgid "OB_BONEKNIGHTHIT"
-msgstr "%o ha estat colpejat per BONEKNIGHTHIT."
+msgstr "%o va ser assassinat per un guerrer no-mort."
 
 msgid "OB_MINOTAUR"
 msgstr "%o ha mort per culpa de Minotaure."
 
 msgid "OB_MINOTAURHIT"
-msgstr "%o ha estat colpejat per Minotaure HIT."
+msgstr "%o va ser fet polpa per un maulotaure."
 
 msgid "OB_MUMMY"
 msgstr "%o ha mort per culpa de Mòmia."
 
 msgid "OB_MUMMYLEADER"
-msgstr "%o ha mort per culpa de Mòmia LEADER."
+msgstr "%o va ser cridat fins a la mort per un nitrogòlem."
 
 msgid "OB_SNAKE"
-msgstr "%o ha mort per culpa de SNAKE."
+msgstr "%o va ser sacsejat per un ofidi."
 
 msgid "OB_WIZARD"
 msgstr "%o ha mort per culpa de Bruixot."
 
 msgid "OB_WIZARDHIT"
-msgstr "%o ha estat colpejat per Bruixot HIT."
+msgstr "%o va ser palpat per un mag."
 
 msgid "OB_MPSTAFF"
-msgstr "%o ha estat abatut amb MP bastó."
+msgstr "%o va rebre personal de %k."
 
 msgid "OB_MPGAUNTLETS"
-msgstr "%o ha estat abatut amb MP guantellets."
+msgstr "%o va rebre una descàrrega dels guants de %k."
 
 msgid "OB_MPGOLDWAND"
-msgstr "%o ha estat abatut amb MP vara daurada."
+msgstr "%o va acomiadar-se de la vareta èlfica de %k."
 
 msgid "OB_MPCROSSBOW"
-msgstr "%o ha estat abatut amb MP ballesta."
+msgstr "%o va ser encertat per la ballesta etèria de %k."
 
 msgid "OB_MPBLASTER"
-msgstr "%o ha estat abatut amb MP blàster."
+msgstr "%o va rebre una nova urpa de drac de %k."
 
 msgid "OB_MPSKULLROD"
-msgstr "%o ha estat abatut amb MP vara de crani."
+msgstr "%o va ser enviat a terra pel bastó infernal de %k."
 
 msgid "OB_MPPHOENIXROD"
-msgstr "%o ha estat abatut amb MP vara del Fènix."
+msgstr "%o va ser reduït a cendres per la vara fènix de %k."
 
 msgid "OB_MPMACE"
-msgstr "%o ha estat abatut amb MP Maça."
+msgstr "%o va ser vapulejat per la maça de foc de %k."
 
 msgid "OB_MPPSTAFF"
-msgstr "%o ha estat abatut amb MPP bastó."
+msgstr "%o va rebre aplaudiments del personal carregat de %k."
 
 msgid "OB_MPPGAUNTLETS"
-msgstr "%o ha estat abatut amb MPP guantellets."
+msgstr "%o va ser deixat dessagnar pels guants de %k."
 
 msgid "OB_MPPGOLDWAND"
-msgstr "%o ha estat abatut amb MPP vara daurada."
+msgstr "%o va ser atacat per la vareta èlfica de %k."
 
 msgid "OB_MPPCROSSBOW"
-msgstr "%o ha estat abatut amb MPP ballesta."
+msgstr "%o va ser ferit per la ballesta etèria de %k."
 
 msgid "OB_MPPBLASTER"
-msgstr "%o ha estat abatut amb MPP blàster."
+msgstr "%o va ser esquinçat per l'urpa de drac de %k."
 
 msgid "OB_MPPSKULLROD"
-msgstr "%o ha estat abatut amb MPP vara de crani."
+msgstr "%k va abocar el bastó infernal sobre %o."
 
 msgid "OB_MPPPHOENIXROD"
-msgstr "%o ha estat abatut amb MPP vara del Fènix."
+msgstr "%o va ser incendiat pel personal fènix de %k."
 
 msgid "OB_MPPMACE"
-msgstr "%o ha estat abatut amb MPP Maça."
+msgstr "%o va ser aixafat per l'esfera de maça gegant de %k."
 
 msgid "TXT_MANA_1"
 msgstr "Manà 1"
@@ -1470,7 +1470,7 @@ msgid "TXT_ARTIPUZZGEAR"
 msgstr "Engranatge del trencaclosques"
 
 msgid "TXT_USEPUZZLEFAILED"
-msgstr "No pots usar això aquí."
+msgstr "No pots usar això aquí"
 
 msgid "TXT_ARMOR1"
 msgstr "Armadura 1"
@@ -1485,31 +1485,31 @@ msgid "TXT_ARMOR4"
 msgstr "Armadura 4"
 
 msgid "TXT_WEAPON_F2"
-msgstr "Has agafat la Destral de Timon."
+msgstr "Destral de Timon"
 
 msgid "TXT_WEAPON_F3"
-msgstr "Has agafat el Martell de la retribució."
+msgstr "Martell de la retribució"
 
 msgid "TXT_WEAPON_F4"
-msgstr "Has agafat la Quietus."
+msgstr "Quietus reunit"
 
 msgid "TXT_WEAPON_C2"
-msgstr "Has agafat el Bastó serpentí."
+msgstr "Bastó serpentí"
 
 msgid "TXT_WEAPON_C3"
-msgstr "Has agafat la Tempesta de foc."
+msgstr "Tempesta de foc"
 
 msgid "TXT_WEAPON_C4"
-msgstr "Has agafat la Wraithverge."
+msgstr "Wraithverge muntat"
 
 msgid "TXT_WEAPON_M2"
-msgstr "Has agafat els Fragments de gel."
+msgstr "Fragments de gel"
 
 msgid "TXT_WEAPON_M3"
-msgstr "Has agafat l’Arc de la mort."
+msgstr "Arc de la mort"
 
 msgid "TXT_WEAPON_M4"
-msgstr "Has agafat la Bloodscourge."
+msgstr "Bloodscourge muntat"
 
 msgid "TXT_WEAPONPIECE"
 msgstr "Una peça d’arma! Avui és el teu dia de sort!"
@@ -1524,37 +1524,37 @@ msgid "TXT_BLOODSCOURGE_PIECE"
 msgstr "Peça de Bloodscourge"
 
 msgid "TXT_NEED_KEY_STEEL"
-msgstr "Necessites la clau d’acer."
+msgstr "Necessites la clau d’acer"
 
 msgid "TXT_NEED_KEY_CAVE"
-msgstr "Necessites la clau de la cova."
+msgstr "Necessites la clau de la cova"
 
 msgid "TXT_NEED_KEY_AXE"
-msgstr "Necessites la clau de la destral."
+msgstr "Necessites la clau de la destral"
 
 msgid "TXT_NEED_KEY_FIRE"
-msgstr "Necessites la clau de foc."
+msgstr "Necessites la clau de foc"
 
 msgid "TXT_NEED_KEY_EMERALD"
-msgstr "Necessites la clau maragda."
+msgstr "Necessites la clau maragda"
 
 msgid "TXT_NEED_KEY_DUNGEON"
-msgstr "Necessites la clau de la masmorra."
+msgstr "Necessites la clau de la masmorra"
 
 msgid "TXT_NEED_KEY_SILVER"
-msgstr "Necessites la clau de plata."
+msgstr "Necessites la clau de plata"
 
 msgid "TXT_NEED_KEY_RUSTED"
-msgstr "Necessites la clau rovellada."
+msgstr "Necessites la clau rovellada"
 
 msgid "TXT_NEED_KEY_HORN"
-msgstr "Necessites la clau de la banya."
+msgstr "Necessites la clau de la banya"
 
 msgid "TXT_NEED_KEY_SWAMP"
-msgstr "Necessites la clau del pantà."
+msgstr "Necessites la clau del pantà"
 
 msgid "TXT_NEED_KEY_CASTLE"
-msgstr "Necessites la clau del castell."
+msgstr "Necessites la clau del castell"
 
 msgid "FN_FIREDEMON"
 msgstr "Foc Dimoni"
@@ -1749,10 +1749,10 @@ msgid "OB_CENTAUR"
 msgstr "%o ha mort per culpa de Centaure."
 
 msgid "OB_SLAUGHTAURHIT"
-msgstr "%o ha estat colpejat per SLAUGHTAURHIT."
+msgstr "%o va ser esquarterat per un Slaughtaur."
 
 msgid "OB_SLAUGHTAUR"
-msgstr "%o ha mort per culpa de SLAUGHTAUR."
+msgstr "%o va ser abatut per una bola de foc d'un Slaughtaur."
 
 msgid "OB_BISHOP"
 msgstr "%o ha mort per culpa de Bisbe."
@@ -1761,7 +1761,7 @@ msgid "OB_ICEGUY"
 msgstr "%o ha mort per culpa de Guerrer de gel."
 
 msgid "OB_SERPENTHIT"
-msgstr "%o ha estat colpejat per Serpent HIT."
+msgstr "%o va ser atacat per un assetjador."
 
 msgid "OB_SERPENT"
 msgstr "%o ha mort per culpa de Serpent."
@@ -1770,7 +1770,7 @@ msgid "OB_WRAITH"
 msgstr "%o ha mort per culpa de Espectre."
 
 msgid "OB_WRAITHHIT"
-msgstr "%o ha estat colpejat per Espectre HIT."
+msgstr "A %o li va robar %p vida un Reiver."
 
 msgid "OB_DRAGON"
 msgstr "%o ha mort per culpa de Drac."
@@ -1779,115 +1779,115 @@ msgid "OB_KORAX"
 msgstr "%o ha mort per culpa de Korax."
 
 msgid "OB_FBOSS"
-msgstr "%o ha mort per culpa de FBOSS."
+msgstr "%o va ser assassinat per Zedek."
 
 msgid "OB_MBOSS"
-msgstr "%o ha mort per culpa de MBOSS."
+msgstr "%o no va poder absorbir el mana de Menelkir."
 
 msgid "OB_CBOSS"
-msgstr "%o ha mort per culpa de CBOSS."
+msgstr "%o va ser batejat per Traductus."
 
 msgid "OB_HERESIARCH"
 msgstr "%o ha mort per culpa de Heresiarca."
 
 msgid "OB_MPFWEAPFIST"
-msgstr "%o ha estat abatut amb MPFWEAP Punys."
+msgstr "%o va ser apallissat fins a convertir-lo en pols pels punys nus de %k."
 
 msgid "OB_MPFWEAPAXE"
-msgstr "%o ha estat abatut amb MPFWEAP destral."
+msgstr "%o va aconseguir la destral de %k."
 
 msgid "OB_MPFWEAPHAMMERM"
-msgstr "%o ha estat abatut amb MPFWEA fòsfor AMMERM."
+msgstr "%o tenia el cap de %p esfondrat pel martell de %k."
 
 msgid "OB_MPFWEAPHAMMERR"
-msgstr "%o ha estat abatut amb MPFWEA fòsfor AMMERR."
+msgstr "L'ànima de %o va ser forjada de nou pel martell de %k."
 
 msgid "OB_MPFWEAPQUIETUS"
-msgstr "%o ha estat abatut amb MPFWEAP Quietus."
+msgstr "%o va ser silenciat pel poderós Quietus de %k."
 
 msgid "OB_MPCWEAPMACE"
-msgstr "%o ha estat abatut amb MPCWEAP Maça."
+msgstr "%o va rebre una maça a la cara de %k."
 
 msgid "OB_MPCWEAPSTAFFM"
-msgstr "%o ha estat abatut amb MPCWEAP bastó M."
+msgstr "%o va ser mossegat pel bastó de serp de %k."
 
 msgid "OB_MPCWEAPSTAFFR"
-msgstr "%o ha estat abatut amb MPCWEAP bastó R."
+msgstr "%o es va ennuegar amb el bastó de serp de %k."
 
 msgid "OB_MPCWEAPFLAME"
-msgstr "%o ha estat abatut amb MPCWEAPFLAME."
+msgstr "%o va ser il·luminat per les flames de %k."
 
 msgid "OB_MPCWEAPWRAITHVERGE"
-msgstr "%o ha estat abatut amb MPCWEAP Wraithverge."
+msgstr "%o va ser purificat pel Wraithverge de %k."
 
 msgid "OB_MPMWEAPWAND"
-msgstr "%o ha estat abatut amb MPMWEAPWAND."
+msgstr "%o va rebre massa raigs de safir de %k."
 
 msgid "OB_MPMWEAPFROST"
-msgstr "%o ha estat abatut amb MPMWEAPFROST."
+msgstr "%o va ser convertit en un nano glaçat per %k."
 
 msgid "OB_MPMWEAPLIGHTNING"
-msgstr "%o ha estat abatut amb MPMWEAPLIGHTNING."
+msgstr "%o va rebre una revelació impactant de %k."
 
 msgid "OB_MPMWEAPBLOODSCOURGE"
-msgstr "%o ha estat abatut amb MPMWEAP Bloodscourge."
+msgstr "%o va ser esborrat de la faç de l'univers pel Flagell Sanguinari de %k."
 
 msgid "TXT_METALARMOR"
-msgstr "Armadura metàl·lica"
+msgstr "Has agafat l'Armadura de metall."
 
 msgid "TXT_LEATHERARMOR"
-msgstr "Armadura de cuir"
+msgstr "Has agafat l'armadura de cuir."
 
 msgid "TXT_MEDPATCH"
-msgstr "Pegat mèdic"
+msgstr "Vas agafar el pegat mèdic."
 
 msgid "TXT_MEDICALKIT"
-msgstr "Kit mèdic"
+msgstr "Has agafat el kit mèdic."
 
 msgid "TXT_SURGERYKIT"
-msgstr "Kit quirúrgic"
+msgstr "Has agafat el kit de cirurgia."
 
 msgid "TXT_STRIFEMAP"
-msgstr "Mapa de Strife"
+msgstr "Has agafat el mapa."
 
 msgid "TXT_BELDINSRING"
-msgstr "Anell de Beldin"
+msgstr "Has agafat l'anell."
 
 msgid "TXT_OFFERINGCHALICE"
-msgstr "Calze d’ofrena"
+msgstr "Has agafat el Calze d’ofrena."
 
 msgid "TXT_EAR"
-msgstr "Orella"
+msgstr "Has agafat l'orella."
 
 msgid "TXT_BROKENCOUPLING"
-msgstr "Acoblament trencat"
+msgstr "Has agafat l'acoblament trencat."
 
 msgid "TXT_SHADOWARMOR"
-msgstr "Armadura d’ombra"
+msgstr "Has agafat l'armadura d'ombra."
 
 msgid "TXT_ENVSUIT"
-msgstr "Vestit ambiental"
+msgstr "Has agafat el tratge ambiental."
 
 msgid "TXT_GUARDUNIFORM"
-msgstr "Uniforme de guàrdia"
+msgstr "Has agafat l'uniforme de guarda."
 
 msgid "TXT_OFFICERSUNIFORM"
-msgstr "Uniforme d’oficial"
+msgstr "Has agafat l'uniforme d'oficial."
 
 msgid "TXT_FTHROWERPARTS"
-msgstr "Peces del llançaflames"
+msgstr "Has agafat les peces de llançaflames."
 
 msgid "TXT_REPORT"
-msgstr "Informe"
+msgstr "Has agafat l'informe."
 
 msgid "TXT_INFO"
-msgstr "Informació"
+msgstr "Has agafat la informació."
 
 msgid "TXT_TARGETER"
-msgstr "Apuntador"
+msgstr "Has agafat l'apuntador."
 
 msgid "TXT_COMMUNICATOR"
-msgstr "Comunicador"
+msgstr "Has agafat el comunicador."
 
 msgid "TXT_COIN"
 msgstr "Has agafat 1 moneda d’or."
@@ -1896,205 +1896,205 @@ msgid "TXT_XGOLD"
 msgstr "Has agafat %d monedes d’or."
 
 msgid "TXT_BEACON"
-msgstr "Balisa"
+msgstr "Has agafat la balisa de teleportació."
 
 msgid "TXT_DEGNINORE"
-msgstr "Mineral de Degnin"
+msgstr "Has agafat el mineral de degnin."
 
 msgid "TXT_SCANNER"
-msgstr "Escàner"
+msgstr "Has agafat l'escàner."
 
 msgid "TXT_NEEDMAP"
-msgstr "Necessites el mapa."
+msgstr "L'escàner no funcionarà sense un mapa!"
 
 msgid "TXT_PRISONPASS"
-msgstr "Passi de la presó"
+msgstr "Has agafat el pas de presó."
 
 msgid "TXT_STRIFECROSSBOW"
-msgstr "Ballesta"
+msgstr "Has agafat la ballesta."
 
 msgid "TXT_ASSAULTGUN"
-msgstr "Fusell d’assalt"
+msgstr "Has agafat la pistola d'assalt."
 
 msgid "TXT_MMLAUNCHER"
-msgstr "Llançador de minimíssils"
+msgstr "Has agafat el llançador de mini-míssils."
 
 msgid "TXT_FLAMER"
-msgstr "Llançaflames"
+msgstr "Has agafat el llançaflames."
 
 msgid "TXT_MAULER"
-msgstr "Mauler"
+msgstr "Has agafat el matador."
 
 msgid "TXT_GLAUNCHER"
-msgstr "Llançagranades"
+msgstr "Has agafat el llançagranades."
 
 msgid "TXT_SIGIL"
-msgstr "Sigil"
+msgstr "Has agafat el SIGIL."
 
 msgid "TXT_BASEKEY"
-msgstr "Clau de la base"
+msgstr "Has agafat la Clau de la base."
 
 msgid "TXT_GOVSKEY"
-msgstr "Clau del Governador"
+msgstr "Has agafat la clau del governador."
 
 msgid "TXT_PASSCARD"
-msgstr "Targeta d’accés"
+msgstr "Has agafar la targeta d’accés."
 
 msgid "TXT_IDBADGE"
-msgstr "Insígnia d’identificació"
+msgstr "Has agafat la identificació."
 
 msgid "TXT_PRISONKEY"
-msgstr "Clau de la presó"
+msgstr "Has agafat la clau de la presó."
 
 msgid "TXT_SEVEREDHAND"
-msgstr "Mà tallada"
+msgstr "Has agafat la mà tallada."
 
 msgid "TXT_POWER1KEY"
-msgstr "Clau d’energia 1"
+msgstr "Has agafat la Clau d’energia 1."
 
 msgid "TXT_POWER2KEY"
-msgstr "Clau d’energia 2"
+msgstr "Has agafat la Clau d’energia 2."
 
 msgid "TXT_POWER3KEY"
-msgstr "Clau d’energia 3"
+msgstr "Has agafat la Clau d’energia 3."
 
 msgid "TXT_GOLDKEY"
-msgstr "Clau d’or"
+msgstr "Has agafat la Clau d’or."
 
 msgid "TXT_IDCARD"
-msgstr "Targeta d’identificació"
+msgstr "Has agafat la targeta d’identificació."
 
 msgid "TXT_SILVERKEY"
-msgstr "Clau de plata"
+msgstr "Has agafat la Clau de plata."
 
 msgid "TXT_ORACLEKEY"
-msgstr "Clau de l’Oracle"
+msgstr "Has agafat la Clau de l’Oracle."
 
 msgid "TXT_MILITARYID"
-msgstr "Identificació militar"
+msgstr "Has agafat la Identificació militar."
 
 msgid "TXT_ORDERKEY"
-msgstr "Clau de l’Orde"
+msgstr "Has agafat la Clau de l’Orde."
 
 msgid "TXT_WAREHOUSEKEY"
-msgstr "Clau del magatzem"
+msgstr "Has agafat la Clau del magatzem."
 
 msgid "TXT_BRASSKEY"
-msgstr "Clau de llautó"
+msgstr "Has agafat la Clau de llautó."
 
 msgid "TXT_REDCRYSTAL"
-msgstr "Cristall vermell"
+msgstr "Has agafat la clau de cristall vermell."
 
 msgid "TXT_BLUECRYSTAL"
-msgstr "Cristall blau"
+msgstr "Has agafat la clau de cristall blau."
 
 msgid "TXT_CHAPELKEY"
-msgstr "Clau de la capella"
+msgstr "Has agafat la clau de la capella."
 
 msgid "TXT_CATACOMBKEY"
-msgstr "Clau de les catacumbes"
+msgstr "Has agafat la clau de les catacombes."
 
 msgid "TXT_SECURITYKEY"
-msgstr "Clau de seguretat"
+msgstr "Has agafat la clau de seguretat."
 
 msgid "TXT_COREKEY"
-msgstr "Clau del nucli"
+msgstr "Has agafat la clau del nucli."
 
 msgid "TXT_MAULERKEY"
-msgstr "Clau del Mauler"
+msgstr "Has agafat la clau del matador."
 
 msgid "TXT_FACTORYKEY"
-msgstr "Clau de la fàbrica"
+msgstr "Has agafat la clau de la fàbrica."
 
 msgid "TXT_MINEKEY"
-msgstr "Clau de la mina"
+msgstr "Has agafat la clau de la mina."
 
 msgid "TXT_NEWKEY5"
-msgstr "Clau nova 5"
+msgstr "Has agafat la Clau nova 5."
 
 msgid "TXT_ORACLEPASS"
-msgstr "Passi de l’Oracle"
+msgstr "Has agafat el Passi de l’Oracle."
 
 msgid "TXT_HEGRENADES"
-msgstr "Granades explosives"
+msgstr "Has agafat les Granades explosives."
 
 msgid "TXT_PHGRENADES"
-msgstr "Granades de fòsfor"
+msgstr "Has agafat les Granades de fòsfor."
 
 msgid "TXT_CLIPOFBULLETS"
-msgstr "Carregador de bales"
+msgstr "Has agafat el carregador de bales."
 
 msgid "TXT_BOXOFBULLETS"
-msgstr "Caixa de bales"
+msgstr "Has agafat la caixa de bales."
 
 msgid "TXT_MINIMISSILES"
-msgstr "Minimíssils"
+msgstr "Has agafat els Minimíssils."
 
 msgid "TXT_CRATEOFMISSILES"
-msgstr "Caixa de míssils"
+msgstr "Has agafat la caixa de míssils."
 
 msgid "TXT_ENERGYPOD"
-msgstr "Càpsula d’energia"
+msgstr "Has agafat la càpsula d’energia."
 
 msgid "TXT_ENERGYPACK"
-msgstr "Paquet d’energia"
+msgstr "Has agafat el paquet d’energia."
 
 msgid "TXT_POISONBOLTS"
-msgstr "Virots verinosos"
+msgstr "Has agafat els virots verinosos."
 
 msgid "TXT_ELECTRICBOLTS"
-msgstr "Virots elèctrics"
+msgstr "Has agafat els virots elèctrics."
 
 msgid "TXT_AMMOSATCHEL"
-msgstr "Sarró de munició"
+msgstr "Has agafat el sarró de munició."
 
 msgid "MSG_TALISMANRED"
-msgstr "Has trobat el talismà vermell."
+msgstr "Tens la sensació que no s'havia de tocar…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Has trobat el talismà verd."
+msgstr "Sigui el que sigui, no pertany a aquest món…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Has trobat el talismà blau."
+msgstr "Ha de fer alguna cosa…"
 
 msgid "MSG_TALISMANPOWER"
-msgstr "El talismà brilla amb poder."
+msgstr "Tens superforça!"
 
 msgid "TXT_NEEDKEY"
-msgstr "Necessites una clau."
+msgstr "No tens la clau"
 
 msgid "TXT_NEED_PASSCARD"
-msgstr "Necessites targeta d’accés."
+msgstr "Necessites una targeta d’accés"
 
 msgid "TXT_NEED_PASSCARD_DOOR"
-msgstr "Necessites la targeta d’accés per obrir aquesta porta."
+msgstr "Necessites la targeta d’accés per obrir aquesta porta"
 
 msgid "TXT_NEED_IDCARD"
-msgstr "Necessites targeta d’identificació."
+msgstr "Necessites targeta d’identificació"
 
 msgid "TXT_NEED_PRISONKEY"
-msgstr "Necessites la clau de la presó."
+msgstr "No tens la clau de la presó"
 
 msgid "TXT_NEED_HANDPRINT"
-msgstr "Necessites empremta de mà."
+msgstr "Empremta de mà no registrada"
 
 msgid "TXT_NEED_GOLDKEY"
-msgstr "Necessites la clau d’or."
+msgstr "Necessites la clau d’or"
 
 msgid "TXT_NEED_IDBADGE"
-msgstr "Necessites insígnia d’identificació."
+msgstr "Necessites una identificació"
 
 msgid "TXT_NEED_IDBADGE_DOOR"
-msgstr "Necessites la insígnia d’identificació per obrir aquesta porta."
+msgstr "Necessites la insígnia d’identificació per obrir aquesta porta"
 
 msgid "TXT_NEED_SILVERKEY"
-msgstr "Necessites la clau de plata."
+msgstr "Necessites la clau de plata"
 
 msgid "TXT_NEED_BRASSKEY"
-msgstr "Necessites la clau de llautó."
+msgstr "Necessites la clau de llautó"
 
 msgid "TXT_NEED_REDCRYSTAL"
-msgstr "Necessites cristall vermell."
+msgstr "Necessites el cristall vermell"
 
 msgid "TXT_NEED_BLUECRYSTAL"
 msgstr "Necessites cristall blau"
@@ -2415,13 +2415,13 @@ msgid "OB_MACIL"
 msgstr "%o ha mort per culpa de Macil."
 
 msgid "OB_REBEL"
-msgstr "%o ha mort per culpa de REBEL."
+msgstr "%o va ser abatut a trets per un rebel."
 
 msgid "OB_BEGGAR"
 msgstr "%o ha mort per culpa de Captaire."
 
 msgid "OB_PEASANT"
-msgstr "%o ha mort per culpa de PEASANT."
+msgstr "%o no hauria d'haver-se barallat mai amb un civil."
 
 msgid "OB_ALIENSPECTRE"
 msgstr "%o ha mort per culpa de Espectre alienígena."
@@ -2433,13 +2433,13 @@ msgid "OB_LOREMASTER"
 msgstr "%o ha mort per culpa de Mestre del Saber."
 
 msgid "OB_PROGRAMMER"
-msgstr "%o ha mort per culpa de PROGRAMMER."
+msgstr "El programador ha suprimit %o."
 
 msgid "OB_STFBISHOP"
-msgstr "%o ha mort per culpa de STF Bisbe."
+msgstr "%o va quedar destrossat pel bisbe."
 
 msgid "OB_SENTINEL"
-msgstr "%o ha mort per culpa de SENTINEL."
+msgstr "%o va ser tirotejat per un sentinel."
 
 msgid "OB_CRUSADER"
 msgstr "%o ha mort per culpa de Creuat."
@@ -2448,52 +2448,52 @@ msgid "OB_INQUISITOR"
 msgstr "%o ha mort per culpa de Inquisidor."
 
 msgid "OB_STALKER"
-msgstr "%o ha mort per culpa de STALKER."
+msgstr "%o va ser molestat per un assetjador."
 
 msgid "OB_TURRET"
-msgstr "%o ha mort per culpa de TURRET."
+msgstr "%o va activar les defenses automàtiques."
 
 msgid "OB_TEMPLARHIT"
-msgstr "%o ha estat colpejat per Templer HIT."
+msgstr "%o va ser esgarrapat per un templer."
 
 msgid "OB_TEMPLAR"
 msgstr "%o ha mort per culpa de Templer."
 
 msgid "OB_REAVERHIT"
-msgstr "%o ha estat colpejat per REAVERHIT."
+msgstr "%o va ser esquarterat per un Reaver."
 
 msgid "OB_REAVER"
-msgstr "%o ha mort per culpa de REAVER."
+msgstr "%o va ser abatut per un Reaver."
 
 msgid "OB_MPPUNCHDAGGER"
-msgstr "%o ha estat abatut amb MPPUNCHDAGGER."
+msgstr "%o va ser apunyalat per l'esquena sense pietat per %k."
 
 msgid "OB_MPELECTRICBOLT"
-msgstr "%o ha estat abatut amb MP elèctric BOLT."
+msgstr "%o va ser lligat a la paret per %k."
 
 msgid "OB_MPPOISONBOLT"
-msgstr "%o ha estat abatut amb MP verí BOLT."
+msgstr "%o va rebre una dosi letal de la ira de %k."
 
 msgid "OB_MPASSAULTGUN"
-msgstr "%o ha estat abatut amb MP Fusell d’assalt."
+msgstr "%o va ser perforat ple de forats per l'arma d'assalt de %k."
 
 msgid "OB_MPMINIMISSILELAUNCHER"
-msgstr "%o ha estat abatut amb MP mini MISSILE llançador."
+msgstr "%o va empassar-se el míssil de %k."
 
 msgid "OB_MPSTRIFEGRENADE"
-msgstr "%o ha estat abatut amb MPSTRIFEGRENADE."
+msgstr "%o va ser invertit per la granada H-E de %k."
 
 msgid "OB_MPPHOSPHOROUSGRENADE"
-msgstr "%o ha estat abatut amb MP fòsfor OS fòsfor OROUSGRENADE."
+msgstr "%o va prendre un bany de flames a la pira de fòsfor de %k."
 
 msgid "OB_MPFLAMETHROWER"
-msgstr "%o ha estat abatut amb MP llançaflames."
+msgstr "%o va ser fet a la barbacoa per %k."
 
 msgid "OB_MPMAULER1"
-msgstr "%o ha estat abatut amb MP Mauler 1."
+msgstr "%o va ser electrocutat per %k."
 
 msgid "OB_MPMAULER"
-msgstr "%o ha estat abatut amb MP Mauler."
+msgstr "%o va ser vaporitzat brutalment per %k."
 
 msgid "OB_MPSIGIL"
 msgstr "%o s’ha agenollat davant el poder absolut del Sigil de %k."
@@ -2520,19 +2520,19 @@ msgid "TXT_QUEST_27"
 msgstr "Has fet esclatar l’ordinador"
 
 msgid "TXT_KILLED_BISHOP"
-msgstr "Has derrotat Bisbe."
+msgstr "Has matat el bisbe!"
 
 msgid "TXT_KILLED_ORACLE"
-msgstr "Has derrotat Oracle."
+msgstr "Has matat l'Oracle!"
 
 msgid "TXT_KILLED_MACIL"
-msgstr "Has derrotat Macil."
+msgstr "Has matat en Macil!"
 
 msgid "TXT_KILLED_LOREMASTER"
-msgstr "Has derrotat Mestre del Saber."
+msgstr "Has matat el Mestre del Saber!"
 
 msgid "TXT_YOUFOOL"
-msgstr "Insensat!"
+msgstr "Ets un ximple! Has fet saltar l'alarma."
 
 msgid "TXT_YOUREDEAD"
 msgstr "Ets mort."
@@ -2541,7 +2541,7 @@ msgid "TXT_HAVEENOUGH"
 msgstr "Sembla que en tens prou!"
 
 msgid "TXT_GOAWAY"
-msgstr "Ves-te’n."
+msgstr "Ves-te’n!"
 
 msgid "TXT_COMM0"
 msgstr "Missatge entrant…"
@@ -2559,7 +2559,7 @@ msgid "GOTCHEXARMOR"
 msgstr "Has agafat armadura Chex."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Has agafat superarmadura Chex."
+msgstr "He aconseguit l'armadura Super Chex®!"
 
 msgid "GOTWATER"
 msgstr "Has agafat un got d’aigua."
@@ -2568,7 +2568,7 @@ msgid "GOTREPELLENT"
 msgstr "Has agafat repel·lent de flemoids."
 
 msgid "GOTBREAKFAST"
-msgstr "Has agafat un esmorzar saludable."
+msgstr "Esmorzar supercàrregat!"
 
 msgid "GOTCBLUEKEY"
 msgstr "Has agafat la clau blava."
@@ -2589,10 +2589,10 @@ msgid "GOTVEGETABLES"
 msgstr "Has agafat verdures."
 
 msgid "GOTSLIMESUIT"
-msgstr "Has agafat un vestit antillim."
+msgstr "He trobat un tratge a prova de llims"
 
 msgid "GOTCHEXMAP"
-msgstr "Has agafat el mapa informatitzat de l’àrea."
+msgstr "Has agafat un mapa informatitzat de l’àrea"
 
 msgid "GOTZORCHRECHARGE"
 msgstr "Has agafat una recàrrega de zorch."
@@ -2607,7 +2607,7 @@ msgid "GOTPROPULSORPACK"
 msgstr "Has agafat un paquet de propulsor zorch."
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "Has agafat una recàrrega de zorcher fàsic."
+msgstr "Has agafat una recàrrega de zorcher fàsic"
 
 msgid "GOTPHASINGZORCHERPACK"
 msgstr "Has agafat un paquet de zorcher fàsic."
@@ -2619,7 +2619,7 @@ msgid "GOTLARGEZORCHERPACK"
 msgstr "Has agafat un paquet de zorcher gran."
 
 msgid "GOTZORCHPACK"
-msgstr "Has agafat un paquet de zorch."
+msgstr "Has agafat un paquet de zorch!"
 
 msgid "GOTLAZDEVICE"
 msgstr "Has aconseguit el dispositiu LAZ!"
@@ -2643,7 +2643,7 @@ msgid "GOTSUPERLARGEZORCHER"
 msgstr "Has aconseguit el Super Large Zorcher!"
 
 msgid "GOTMINIZORCHER"
-msgstr "Has aconseguit el Mini Zorcher!"
+msgstr "Has aconseguit el Mini Zorcher."
 
 msgid "TAG_SPOON"
 msgstr "Cullera"
@@ -2673,50 +2673,50 @@ msgid "TAG_LAZDEVICE"
 msgstr "Dispositiu LAZ"
 
 msgid "OB_COMMONUS"
-msgstr "%o ha mort per culpa de COMMONUS."
+msgstr "%o va ser cobert de mucosa per un flemoide."
 
 msgid "OB_BIPEDICUS"
-msgstr "%o ha mort per culpa de BIPEDICUS."
+msgstr "%o va ser cobert de mucositat per un bipedicus."
 
 msgid "OB_BIPEDICUS2"
-msgstr "%o ha mort per culpa de BIPEDICUS 2."
+msgstr "%o va ser cobert de mucositat per un bipedicus blindat."
 
 msgid "OB_CYCLOPTIS"
-msgstr "%o ha mort per culpa de CYCLOPTIS."
+msgstr "%o va ser cobert de mucositat per un cycloptis."
 
 msgid "OB_FLEMBRANE"
-msgstr "%o ha mort per culpa de FLEMBRANE."
+msgstr "%o va ser derrotat pels Flembrane."
 
 msgid "OB_MPSPOON"
-msgstr "%o ha estat abatut amb MPSPOON."
+msgstr "%o va ser alimentat amb cullera per %k."
 
 msgid "OB_MPBOOTSPORK"
-msgstr "%o ha estat abatut amb MPBOOTSPORK."
+msgstr "%o es va barrejar completament amb el bootspork de %k."
 
 msgid "OB_MPZORCH"
-msgstr "%o ha estat abatut amb MPZORCH."
+msgstr "%o va ser atropellat per %k."
 
 msgid "OB_MPMEGAZORCH"
-msgstr "%o ha estat abatut amb MPMEGAZORCH."
+msgstr "%o va ser colpejat pel mega-zorcher de %k."
 
 msgid "OB_MPRAPIDZORCH"
-msgstr "%o ha estat abatut amb MPRAPIDZORCH."
+msgstr "%o va ser ràpidament atropellat per %k."
 
 msgid "OB_MPPROPULSOR"
-msgstr "%o ha estat abatut amb MPPROPULSOR."
+msgstr "%o va ser atropellat pel propulsor de %k."
 
 msgid "OB_MPP_SPLASH"
 msgstr "%o ha rebut l’impacte del propulsor de %k."
 
 msgid "OB_MPPHASEZORCH"
-msgstr "%o ha estat abatut amb MP fòsfor ASEZORCH."
+msgstr "%o va ser superat per fase per %k."
 
 msgid "OB_MPLAZ_BOOM"
 msgstr "%o ha estat abatut amb MPLAZBOOM."
 
 msgctxt "chex"
 msgid "OB_MPBFG_SPLASH"
-msgstr "%o ha estat abatut amb MPBFGSPLASH."
+msgstr "%o va ser matxacat per %k."
 
 msgid "CHUSTR_E1M1"
 msgstr "E1M1: Zona d’aterratge"
@@ -2756,11 +2756,19 @@ msgid "CE4TEXT"
 msgstr "Fantàstic"
 
 msgid "CLOADNET"
-msgstr "Carrega partida en xarxa"
+msgstr ""
+"No pots carregar mentre estàs en una missió de xarxa!\n"
+"\n"
+"Prem una tecla."
 
 msgctxt "chex"
 msgid "QSPROMPT"
-msgstr "Vols sobreescriure amb desament ràpid la partida anomenada'%s'?Prem Y o N."
+msgstr ""
+"Vols desar ràpidament la teva missió anomenada\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Prem Y o N."
 
 msgctxt "chex"
 msgid "QLOADNET"
@@ -2771,13 +2779,26 @@ msgstr ""
 
 msgctxt "chex"
 msgid "QLPROMPT"
-msgstr "Vols carregar ràpidament la partida anomenada'%s'?Prem Y o N."
+msgstr ""
+"Voleu carregar ràpidament la missió anomenada\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premeu Y o N."
 
 msgid "CNEWGAME"
-msgstr "Partida nova"
+msgstr ""
+"No pots començar una nova missió\n"
+"mentre ets en una missió de xarxa.\n"
+"\n"
+"Prem una tecla."
 
 msgid "CNIGHTMARE"
-msgstr "Superviscós!"
+msgstr ""
+"Compte, això serà difícil.\n"
+"Vols continuar?\n"
+"\n"
+"Prem Y o N."
 
 msgid "CSWSTRING"
 msgstr ""
@@ -2803,11 +2824,11 @@ msgstr ""
 
 msgctxt "chex"
 msgid "STSTR_DQDON"
-msgstr "Mode invencible: ACTIVAT"
+msgstr "Mode invencible: ON"
 
 msgctxt "chex"
 msgid "STSTR_DQDOFF"
-msgstr "Mode invencible: DESACTIVAT"
+msgstr "Mode invencible: OFF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2856,16 +2877,16 @@ msgid "MNU_CHOOSESKILL"
 msgstr "Tria nivell de dificultat:"
 
 msgid "SKILL_BABY"
-msgstr "Sóc massa jove per morir"
+msgstr "Sóc massa jove per morir."
 
 msgid "SKILL_EASY"
-msgstr "Ei, no tan fort"
+msgstr "Ei, no tan fort."
 
 msgid "SKILL_NORMAL"
-msgstr "Fes-me mal de valent"
+msgstr "Fes-me mal de valent."
 
 msgid "SKILL_HARD"
-msgstr "Ultraviolència"
+msgstr "Ultraviolència."
 
 msgid "SKILL_NIGHTMARE"
 msgstr "Malson!"
@@ -2976,7 +2997,7 @@ msgid "MNU_RANDOM"
 msgstr "Aleatori"
 
 msgid "MNU_EPISODE"
-msgstr "Tria episodi"
+msgstr "Quin episodi vols escollir?"
 
 msgctxt "strife"
 msgid "MNU_EPISODE"
@@ -3091,7 +3112,7 @@ msgid "GMPLYMNU_NOCOUNTENDMONSTER"
 msgstr "No comptis monstres finals"
 
 msgid "GMPLYMNU_DEATHMATCH"
-msgstr "Combat a mort"
+msgstr "Configuracions de combat a mort"
 
 msgid "GMPLYMNU_WEAPONSSTAY"
 msgstr "Les armes romanen"
@@ -3226,19 +3247,19 @@ msgid "CMPTMNU_ANYBOSSDEATH"
 msgstr "Anybossdeath"
 
 msgid "CMPTMNU_NODOORLIGHT"
-msgstr "Nodoorlight"
+msgstr "Desactiva l'efecte de llum de la porta BOOM"
 
 msgid "CMPTMNU_LIGHT"
-msgstr "Llum"
+msgstr "Troba una llum veïna com Doom"
 
 msgid "CMPTMNU_SHORTTEX"
-msgstr "Shorttex"
+msgstr "Troba textures més curtes com Doom"
 
 msgid "CMPTMNU_STAIRS"
 msgstr "Stairs"
 
 msgid "CMPTMNU_FLOORMOVE"
-msgstr "Floormove"
+msgstr "Utilitza el comportament de moviment del terra de Doom"
 
 msgid "CMPTMNU_POINTONLINE"
 msgstr "Pointonline"
@@ -3253,7 +3274,7 @@ msgid "CMPTMNU_NOPASSOVER"
 msgstr "Nopassover"
 
 msgid "CMPTMNU_BOOMSCROLL"
-msgstr "Boomscroll"
+msgstr "Els desplaçadors de Boom són additius"
 
 msgid "CMPTMNU_BADANGLES"
 msgstr "Badangles"
@@ -3268,16 +3289,16 @@ msgid "CMPTMNU_TRACE"
 msgstr "Trace"
 
 msgid "CMPTMNU_HITSCAN"
-msgstr "Hitscan"
+msgstr "Utilitzeu el codi de Doom per a les comprovacions de hitscan"
 
 msgid "CMPTMNU_MISSILECLIP"
-msgstr "Missileclip"
+msgstr "Utilitza les altures de Doom per al retall de míssils"
 
 msgid "CMPTMNU_RENDERINGBEHAVIOR"
 msgstr "Renderingbehavior"
 
 msgid "CMPTMNU_POLYOBJ"
-msgstr "Polyobj"
+msgstr "Dibuixa poliobjectes com Hexen"
 
 msgid "CMPTMNU_MASKEDMIDTEX"
 msgstr "Maskedmidtex"
@@ -3313,13 +3334,13 @@ msgid "CMPTMNU_CHECKSWITCHRANGE"
 msgstr "Checkswitchrange"
 
 msgid "CMPTMNU_RAILINGHACK"
-msgstr "Railinghack"
+msgstr "Habilita la barana Strife buguejada"
 
 msgid "CMPTMNU_EXPLODE1"
 msgstr "Explode 1"
 
 msgid "CMPTMNU_EXPLODE2"
-msgstr "Explode 2"
+msgstr "Utilitza el comportament original d'explosió de Doom"
 
 msgid "PLYRMNU_RED"
 msgstr "Vermell"
@@ -3379,7 +3400,7 @@ msgid "CNTRLMNU_KEYBOARDLOOK"
 msgstr "Vista amb teclat"
 
 msgid "CNTRLMNU_POPUPS_TITLE"
-msgstr "Emergents Opcions"
+msgstr "Controls de les pantalles emergents de Strife"
 
 msgid "CNTRLMNU_TEAMSAY"
 msgstr "Xat d’equip"
@@ -3400,7 +3421,7 @@ msgid "CNTRLMNU_COOPSPY"
 msgstr "Espia cooperatiu"
 
 msgid "CNTRLMNU_POPUPS"
-msgstr "Emergents"
+msgstr "Pantalles emergents de Strife"
 
 msgid "CNTRLMNU_MISSION"
 msgstr "Missió"
@@ -3415,7 +3436,7 @@ msgid "CNTRLMNU_TOGGLESCOREBOARD"
 msgstr "Alterna marcador"
 
 msgid "MOUSEMNU_LOOKSPRING"
-msgstr "LOOKSP anell"
+msgstr "Lookspring"
 
 msgid "MOUSEMNU_LOOKSTRAFE"
 msgstr "Mirar i desplaçar-se lateralment"
@@ -3424,7 +3445,7 @@ msgid "MAPCOLORMNU_BACKCOLOR"
 msgstr "Backcolor"
 
 msgid "MAPCOLORMNU_YOURCOLOR"
-msgstr "Yourcolor"
+msgstr "Tu"
 
 msgid "MAPCOLORMNU_WALLCOLOR"
 msgstr "Wallcolor"
@@ -3613,7 +3634,7 @@ msgid "MAPCNTRLMNU_SETMARK"
 msgstr "Col·loca un marcador"
 
 msgid "MAPCNTRLMNU_CLEARMARK"
-msgstr "CL Orella MARK"
+msgstr "Netejar marca"
 
 msgid "DSPLYMNU_SCOREBOARD"
 msgstr "Marcador"
@@ -3631,7 +3652,7 @@ msgid "SCRBRDMNU_HEADERCOLOR"
 msgstr "Headercolor"
 
 msgid "SCRBRDMNU_YOURCOLOR"
-msgstr "Yourcolor"
+msgstr "El teu color de jugador"
 
 msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
 msgstr "Otherplayercolor"
@@ -3733,7 +3754,7 @@ msgid "ALTHUDMNU_STATSCOLOR"
 msgstr "Statscolor"
 
 msgid "DSPLYMNU_CAPFPS"
-msgstr "Limita els FPS"
+msgstr "Interpolació de renderització"
 
 msgid "DSPLYMNU_BLENDMETHOD"
 msgstr "Blendmethod"
@@ -3880,7 +3901,7 @@ msgid "HUDMNU_OLDOUCH"
 msgstr "Oldouch"
 
 msgid "HUDMNU_HEXENFLASHES"
-msgstr "Hexenflashes"
+msgstr "Flaixos d'arma Hexen"
 
 msgid "HUDMNU_POISONFLASHES"
 msgstr "Poisonflashes"
@@ -3943,10 +3964,10 @@ msgid "OPTVAL_CLASSIC"
 msgstr "Clàssic"
 
 msgid "OPTVAL_PRECISE"
-msgstr "Precise"
+msgstr "Precís"
 
 msgid "OPTVAL_CAPPED"
-msgstr "Capped"
+msgstr "Tapat"
 
 msgid "OPTVAL_PARTICLES"
 msgstr "Partícules"
@@ -3958,13 +3979,13 @@ msgid "OPTVAL_SPRITESPARTICLES"
 msgstr "Spritesparticles"
 
 msgid "OPTVAL_MELT"
-msgstr "Melt"
+msgstr "Fondre"
 
 msgid "OPTVAL_BURN"
-msgstr "Burn"
+msgstr "Cremar"
 
 msgid "OPTVAL_CROSSFADE"
-msgstr "Crossfade"
+msgstr "Esvaïment encreuat"
 
 msgid "OPTVAL_SMOOTH_1"
 msgstr "Smooth 1"
@@ -3973,10 +3994,10 @@ msgid "OPTVAL_SMOOTH_2"
 msgstr "Smooth 2"
 
 msgid "OPTVAL_TRANSLUCENT"
-msgstr "Translucent"
+msgstr "Translúcid"
 
 msgid "OPTVAL_FUZZ"
-msgstr "Fuzz"
+msgstr "Pelussa"
 
 msgid "OPTVAL_SHADOW"
 msgstr "Ombra"
@@ -4024,7 +4045,7 @@ msgid "OPTVAL_HUBSECONDS"
 msgstr "Hubseconds"
 
 msgid "OPTVAL_HUB"
-msgstr "Hub"
+msgstr "Centre"
 
 msgid "OPTVAL_TOTALSECONDS"
 msgstr "Totalseconds"
@@ -4057,10 +4078,10 @@ msgid "OPTVAL_ONLYLASTONE"
 msgstr "Onlylastone"
 
 msgid "OPTVAL_TRADITIONALDOOM"
-msgstr "Traditionaldoom"
+msgstr "Doom tradicional"
 
 msgid "OPTVAL_TRADITIONALSTRIFE"
-msgstr "Traditionalstrife"
+msgstr "Strife tradicional"
 
 msgid "OPTVAL_TRADITIONALRAVEN"
 msgstr "Traditionalraven"
@@ -4084,10 +4105,10 @@ msgid "OPTVAL_FRONT"
 msgstr "Davant"
 
 msgid "OPTVAL_ANIMATED"
-msgstr "Animated"
+msgstr "Animat"
 
 msgid "OPTVAL_ROTATED"
-msgstr "Rotated"
+msgstr "Rotat"
 
 msgid "OPTVAL_MAPDEFINEDCOLORSONLY"
 msgstr "Mapdefinedcolorsonly"
@@ -4120,25 +4141,25 @@ msgid "OPTVAL_DOOM"
 msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
-msgstr "Doomstrict"
+msgstr "Doom (estricte)"
 
 msgid "OPTVAL_BOOM"
 msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
-msgstr "Boomstrict"
+msgstr "Boom (estricte)"
 
 msgid "OPTVAL_MBF"
 msgstr "Mbf"
 
 msgid "OPTVAL_MBFSTRICT"
-msgstr "Mbfstrict"
+msgstr "MBF (estricte)"
 
 msgid "OPTVAL_MBF21"
-msgstr "Mbf 21"
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
-msgstr "Mbf 21 Strict"
+msgstr "MBF21 (strict)"
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr "Zdoom 2063"
@@ -4147,19 +4168,19 @@ msgid "OPTVAL_ERRORS"
 msgstr "Errors"
 
 msgid "OPTVAL_WARNINGS"
-msgstr "Warnings"
+msgstr "Avisos"
 
 msgid "OPTVAL_NOTIFICATIONS"
 msgstr "Notificacions"
 
 msgid "OPTVAL_EVERYTHING"
-msgstr "Everything"
+msgstr "Tot"
 
 msgid "OPTVAL_HWPOLY"
 msgstr "Hwpoly"
 
 msgid "OPTVAL_SWDOOM"
-msgstr "Swdoom"
+msgstr "Renderitzador de programari Doom"
 
 msgid "OPTVAL_SWDOOMTC"
 msgstr "Swdoomtc"
@@ -4168,7 +4189,7 @@ msgid "OPTVAL_VANILLA"
 msgstr "Vanilla"
 
 msgid "OPTVAL_VTFZDOOM"
-msgstr "Vtfzdoom"
+msgstr "ZDoom (Forçat)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Vtfvanilla"
@@ -4204,7 +4225,7 @@ msgid "C_RED"
 msgstr "Vermell"
 
 msgid "C_BLUE"
-msgstr "Blau"
+msgstr "\\chBlau"
 
 msgid "C_ORANGE"
 msgstr "Taronja"
@@ -4261,10 +4282,10 @@ msgid "C_TEAL"
 msgstr "Verd blavós"
 
 msgid "OPTSTR_HERETIC"
-msgstr "Explosives RETIC"
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr "C explosives %d"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Sense interpolació"
@@ -4273,13 +4294,13 @@ msgid "OPTSTR_SPLINE"
 msgstr "Spline"
 
 msgid "DSPLYMNU_GLOPT"
-msgstr "Opcions d’OpenGL"
+msgstr "Renderitzador de maquinari"
 
 msgid "DSPLYMNU_SWOPT"
 msgstr "Opcions del renderitzador per programari"
 
 msgid "GLMNU_TITLE"
-msgstr "Opcions d’OpenGL"
+msgstr "Opcions de renderització de maquinari"
 
 msgid "GLMNU_DYNLIGHT"
 msgstr "Dynlight"
@@ -4288,7 +4309,7 @@ msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Ordena la llista de dibuix"
 
 msgid "GLLIGHTMNU_TITLE"
-msgstr "Opcions de llums GL"
+msgstr "Llums dinàmiques"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Lightsenabled"
@@ -4342,22 +4363,22 @@ msgid "GLPREFMNU_VRMODE"
 msgstr "Mode VR"
 
 msgid "GLPREFMNU_VRQUADSTEREO"
-msgstr "Estèreo quàdruple VR"
+msgstr "Activa l'estèreo quàdruple"
 
 msgid "GLPREFMNU_SWLMBANDED"
 msgstr "Llum per bandes en programari"
 
 msgid "GLPREFMNU_VRIPD"
-msgstr "Distància interpupil·lar VR"
+msgstr "Distància entre els teus ulls"
 
 msgid "GLPREFMNU_VRSCREENDIST"
-msgstr "Distància de pantalla VR"
+msgstr "Distància des de la pantalla"
 
 msgid "OPTVAL_SMART"
-msgstr "Smart"
+msgstr "Intel·ligent"
 
 msgid "OPTVAL_SMARTER"
-msgstr "Smarter"
+msgstr "Més intel·ligent"
 
 msgid "OPTVAL_INFRAREDONLY"
 msgstr "Infraredonly"
@@ -4372,16 +4393,16 @@ msgid "OPTVAL_USEASPALETTE"
 msgstr "Useaspalette"
 
 msgid "OPTVAL_BLEND"
-msgstr "Blend"
+msgstr "Barreja"
 
 msgid "OPTVAL_BRIGHT"
-msgstr "Bright"
+msgstr "Brillant"
 
 msgid "OPTVAL_DARK"
 msgstr "Fosc"
 
 msgid "OPTVAL_LEGACY"
-msgstr "Llegat"
+msgstr "Doom Legacy"
 
 msgid "OPTVAL_SOFTWARE"
 msgstr "Software"
@@ -4396,7 +4417,7 @@ msgid "OPTVAL_SQUARE"
 msgstr "Square"
 
 msgid "OPTVAL_ROUND"
-msgstr "Round"
+msgstr "Ronda"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Pixelfuzz"
@@ -4411,7 +4432,7 @@ msgid "OPTVAL_TRANSLUCENTFUZZ"
 msgstr "Translucentfuzz"
 
 msgid "OPTVAL_NOISE"
-msgstr "Noise"
+msgstr "Soroll"
 
 msgid "OPTVAL_SMOOTHNOISE"
 msgstr "Smoothnoise"
@@ -4450,7 +4471,7 @@ msgid "OPTVAL_COLUMNINTERLEAVED"
 msgstr "Columninterleaved"
 
 msgid "OPTVAL_CHECKERBOARD"
-msgstr "Checkerboard"
+msgstr "Tauler d'escacs"
 
 msgid "OPTVAL_QUADBUFFERED"
 msgstr "Quadbuffered"
@@ -4558,10 +4579,10 @@ msgid "HUDMNU_FONTOPTIONS"
 msgstr "Fontoptions"
 
 msgid "FONTMNU_LOG"
-msgstr "LOG"
+msgstr "Utilitza la font estàndard per a la visualització del registre"
 
 msgid "FONTMNU_DLG"
-msgstr "DLG"
+msgstr "Utilitza la font estàndard per als diàlegs"
 
 msgid "MISCMNU_QUICKEXIT"
 msgstr "Sortida ràpida"
@@ -4609,7 +4630,7 @@ msgid "CNTRLMNU_LAYOUT"
 msgstr "Disposició"
 
 msgid "OPTVAL_CLASSICZ"
-msgstr "Classicz"
+msgstr "ZDoom clàssic"
 
 msgid "OPTVAL_MODERN"
 msgstr "Modern"
@@ -4624,7 +4645,7 @@ msgid "MISCMNU_WIPERCENT"
 msgstr "Wipercent"
 
 msgid "MISCMNU_CLEANSTAT"
-msgstr "Cleanstat"
+msgstr "Escalat clàssic de ZDoom per a la pantalla de resum"
 
 msgid "TAG_STRIFEZOMBIE"
 msgstr "Zombi de Strife"
@@ -4678,7 +4699,7 @@ msgid "DSPLYMNU_FOV"
 msgstr "Camp de visió"
 
 msgid "CMPTMNU_NOMBF21"
-msgstr "Nombf 21"
+msgstr "Desactiva les funcions de MBF21"
 
 msgid "ALTHUDMNU_SHOWTIMESTAT"
 msgstr "Showtimestat"
@@ -4690,7 +4711,7 @@ msgid "MISCMNU_FVIEWBOB"
 msgstr "Fviewbob"
 
 msgid "OB_DEMON1HIT"
-msgstr "%o ha estat colpejat per Dimoni 1 HIT."
+msgstr "%o va ser mutilat per una serp."
 
 msgid "AUTOMAPMNU_LINEANTIALIASING"
 msgstr "Lineantialiasing"
@@ -4756,10 +4777,10 @@ msgid "ID24_GOTFUELTANK"
 msgstr "Has agafat un dipòsit de combustible."
 
 msgid "TAG_ID24INCINERATOR"
-msgstr "Incinerador ID24"
+msgstr "Incinerador"
 
 msgid "TAG_ID24CALAMITYBLADE"
-msgstr "Fulla de Calamitat ID24"
+msgstr "Fulla de Calamitat"
 
 msgid "AMMO_ID24FUEL"
 msgstr "Combustible"
@@ -5174,7 +5195,7 @@ msgid "FILEPICKER_ANY"
 msgstr "Tots els fitxers"
 
 msgid "FILEPICKER_REPORTS"
-msgstr "Fitxers ZIP d’informe de fallada"
+msgstr "Fitxers zip d'informe d'error"
 
 msgid "HAPMNU_TITLE"
 msgstr "Opcions de resposta hàptica"

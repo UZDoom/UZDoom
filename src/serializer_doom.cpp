@@ -21,17 +21,7 @@
 **
 */
 
-// The #defines here *MUST* match serializer.cpp, or we will get countless strange errors.
-#define RAPIDJSON_48BITPOINTER_OPTIMIZATION 0	// disable this insanity which is bound to make the code break over time.
-#define RAPIDJSON_HAS_CXX11_RVALUE_REFS 1
-#define RAPIDJSON_HAS_CXX11_RANGE_FOR 1
-#define RAPIDJSON_PARSE_DEFAULT_FLAGS kParseFullPrecisionFlag
-
-#include <miniz.h>
-#include "rapidjson/rapidjson.h"
-#include "rapidjson/writer.h"
-#include "rapidjson/prettywriter.h"
-#include "rapidjson/document.h"
+#include "serializer_rapidjson.h"
 #include "serializer_doom.h"
 #include "actor.h"
 #include "r_defs.h"

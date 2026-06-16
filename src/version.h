@@ -95,6 +95,19 @@
 #define APPID "org.zdoom.UZDoom"
 #define QUERYIWADDEFAULT true
 #define BUGS_URL "https://github.com/UZDoom/UZDoom/issues"
+
+#define UPDATER_URL_STABLE "https://zdoom.org/uzdoom-latest.php"
+#define UPDATER_URL_STABLE_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/latest"
+
+#define UPDATER_URL_PREVIEW "https://zdoom.org/uzdoom-preview.php"
+#define UPDATER_URL_PREVIEW_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/tags/x-preview"
+
+#define UPDATER_URL_TESTING "https://zdoom.org/uzdoom-testing.php"
+#define UPDATER_URL_TESTING_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/tags/x-testing"
+
+#define UPDATER_URL_ALL "https://zdoom.org/uzdoom-all.php"
+#define UPDATER_URL_ALL_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases"
+
 // For QUERYIWADDEFAULT: Set to 'true' to always show dialog box on startup by default, 'false' to disable.
 // Should set to 'false' for standalone games, and set to 'true' for regular source port forks that are meant to run any game.
 
@@ -116,3 +129,101 @@ const char *GetGitHash();
 const char *GetGitTime();
 const char *GetGitTag();
 int GetGitDistance();
+
+#define RC_REVISION_NOTRC 999999
+
+#ifdef __cplusplus
+
+#include <compare>
+#include <cstdint>
+
+class FString;
+
+enum class UpdateChannel
+{
+	STABLE,
+	PREVIEW,
+	TESTING,
+	RELEASE_CANDIDATE,
+};
+
+#define CURRENT_UPDATE_CHANNEL UpdateChannel::PREVIEW
+
+#define RC_REVISION 999999
+
+struct VersionInfo
+{
+	uint16_t major;
+	uint16_t minor;
+	uint32_t revision;
+	uint32_t distance;
+
+	constexpr VersionInfo() = default;
+	constexpr VersionInfo(uint16_t _major, uint16_t _minor, uint32_t _revision = 0, uint32_t _distance = 0)
+		: major(_major), minor(_minor), revision(_revision), distance(_distance)
+	{
+	}
+	explicit VersionInfo(const char *);
+
+	constexpr bool operator <=(const VersionInfo& o) const
+	{
+		return operator<=>(o) != std::strong_ordering::greater;
+	}
+	constexpr bool operator >=(const VersionInfo& o) const
+	{
+		return operator<=>(o) != std::strong_ordering::less;
+	}
+	constexpr bool operator > (const VersionInfo& o) const
+	{
+		return operator<=>(o) == std::strong_ordering::greater;
+	}
+	constexpr bool operator < (const VersionInfo& o) const
+	{
+		return operator<=>(o) == std::strong_ordering::less;
+	}
+	constexpr bool operator == (const VersionInfo& o) const
+	{
+		return operator<=>(o) == std::strong_ordering::equal;
+	}
+	constexpr bool operator != (const VersionInfo& o) const
+	{
+		return operator<=>(o) != std::strong_ordering::equal;
+	}
+
+	constexpr std::strong_ordering operator <=> (const VersionInfo& o) const
+	{
+		if(major != o.major)
+		{
+			return major <=> o.major;
+		}
+		else if(minor != o.minor)
+		{
+			return minor <=> o.minor;
+		}
+		else if(revision != o.revision)
+		{
+			return revision <=> o.revision;
+		}
+		else //if(distance != o.distance)
+		{
+			return distance <=> o.distance;
+		}
+	}
+
+	void operator=(const char* string);
+	explicit operator FString();
+};
+
+// Cannot be a constructor because Lemon would puke on it.
+constexpr VersionInfo MakeVersion(unsigned int ma, unsigned int mi, unsigned int re = 0)
+{
+	return{ (uint16_t)ma, (uint16_t)mi, (uint32_t)re };
+}
+
+VersionInfo GetCurrentVersion();
+
+VersionInfo GetCurrentVersionForUpdate(UpdateChannel channel);
+
+VersionInfo GetCurrentEngineVersion();
+
+#endif // __cplusplus

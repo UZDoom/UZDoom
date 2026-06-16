@@ -60,6 +60,12 @@ private:
 #endif
 	ListView* LangList = nullptr;
 	Dropdown* LoadList = nullptr;
+#ifdef HAS_UPDATER
+	TextLabel* UpdaterSettingsLabel = nullptr;
+	TextLabel* UpdaterIntervalLabel = nullptr;
+	Dropdown* UpdaterSettingsDropdown = nullptr;
+	Dropdown* UpdaterIntervalDropdown = nullptr;
+#endif
 
 	TArray<std::pair<FString, FString>> languages;
 	bool hideLanguage = false;

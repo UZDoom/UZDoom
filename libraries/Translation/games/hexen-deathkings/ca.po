@@ -1,0 +1,486 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Poble en ruïnes"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Plaga"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Clavegueró"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Catacomba"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Terres dolentes"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "Bosc de falgueres"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "Pira"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "La porta del conestable"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Tresoreria"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Mercat"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Descansa en pau"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Ordàlia"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Armeria"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Nau"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Cantària"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Escorxador"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Guàrdia Fosca"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Claveguera"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Retenció de gel"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Ciutadella fosca"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Trànsit"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Més i menys"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Boira mortal"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Castell del dolor"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Pou de clavegueram"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "La rosa"
+
+# intermission
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Netejant-te la cara sagnant\n"
+" amb una mà tremolosa,\n"
+" intentes aclarir la ment per al que t'espera...\n"
+"\n"
+"...i oblidar el que hi ha enrere.\n"
+"\n"
+"A la distància, les austeres muralles\n"
+"d'un gran complex de castells semblen\n"
+"esquinçar el cel, i la pudor\n"
+"de podridura s'estén des de les tombes violades\n"
+"d'innombrables morts.\n"
+"\n"
+"Comptant acuradament les poques\n"
+"quedes dels teus artefactes, intentes\n"
+"assegurar-te que ja serà\n"
+"suficient. Al cap i a la fi, ha de ser\n"
+"suficient, oi?\n"
+"\n"
+"\n"
+"No és així?"
+
+# intermission
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Segurament les ànimes dels condemnats habiten\n"
+"aquest món, ja que res del que és just o bo\n"
+"podria sobreviure aquí gaire temps.\n"
+"\n"
+"Però el que ha passat abans només pot\n"
+"ser una pàl·lida ombra del que ara us barra el\n"
+"pas: la ciutadella fosca mateixa.\n"
+"\n"
+"La massa sinistra de la catedral bloqueja\n"
+"tot excepte fragments de la\n"
+"ciutadella pròpiament dita, però el que es pot veure\n"
+"parla amb xiuxiuejos sibilants\n"
+"de mort freda i\n"
+"persistent...\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"...per als afortunats."
+
+# intermission
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Un cop més et trobes al\n"
+"gran sala de l'esfera del caos, com\n"
+"si no hagués passat temps des de quan\n"
+"l'últim que et vas moure entre aquestes ombres.\n"
+"\n"
+"Però alguna cosa és estranyament diferent,\n"
+"un silenci on abans havia estat suau\n"
+"xiuxiueigs, sensació de ser observat\n"
+"per ulls amagats...\n"
+"\n"
+"â¦uns ulls que protegeixen un malèfic\n"
+"intenció."
+
+# intermission
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Una vegada abans vas agafar l'esfera del caos,\n"
+"la vas sostenir amb mans tremoloses.\n"
+"Ara les teves mans tremolen amb\n"
+"alguna cosa més que avarícia, i\n"
+"la por es barreja amb la fam de\n"
+"poder.\n"
+"\n"
+"Si fins i tot el poder de l'esfera no és\n"
+"suficient per protegir-te de les\n"
+"forces de la foscor, potser és\n"
+"millor deixar-la intacta, la seva promesa\n"
+"descomptada.\n"
+"\n"
+"\n"
+"\n"
+"Però, mai vas ser dels que\n"
+"retiraven un repte…"
+
+# intermission
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n"
+"â¦i altres jugadors esperen.\n"
+"\n"
+
+# script texts
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "T'atreveixes a lluitar a la sala preparada?"
+
+# script texts
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "Per això, moriràs!"
+
+# script texts
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "La cascada està oberta"
+
+# script texts
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "La cascada està bloquejada"
+
+# script texts
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "S'ha obert una porta a la capella"
+
+# script texts
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Ara és estrany…"
+
+# script texts
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Queden tres parts més del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Queden dues parts més del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Queda una part més del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "El trencaclosques està complet"
+
+# script texts
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "No heu completat el trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "El pis no és segur!"
+
+# script texts
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Un terç del trencaclosques està resolt"
+
+# script texts
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Dos terços del trencaclosques estan resolts"
+
+# script texts
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Se sent una plataforma movent-se a la distància"
+
+# script texts
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Està fet…"
+
+# script texts
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "No heu completat el trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "T'estic advertint…"
+
+# script texts
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Tossut, no?"
+
+# script texts
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "I estúpid, també"
+
+# script texts
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Una quarta part d'aquest trencaclosques està completa"
+
+# script texts
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Mala elecció…"
+
+# script texts
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Els símbols no estan alineats"
+
+# script texts
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "La porta no s'obrirà des d'aquest costat"
+
+# script texts
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "La porta està barrada des de l'exterior"
+
+# script texts
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Sacrilegi!"
+
+# script texts
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Has profanat la tomba d'Eric!!"
+
+# script texts
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "I ara et mors!!!"
+
+# script texts
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Un terç del trencaclosques està resolt"
+
+# script texts
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Dos terços del trencaclosques estan resolts"
+
+# script texts
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "La cripta està oberta"
+
+# script texts
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Compte amb la tomba de l'aranya"
+
+# script texts
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Sents una plataforma que s'aixeca fora"
+
+# script texts
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Et sents afortunat?"
+
+# script texts
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Has endevinat malament!"
+
+# script texts
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Bona suposició"
+
+# script texts
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Pots fer tots els scripts per al meu nivell?"
+
+# script texts
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "No em toquis el gloppy"
+
+# script texts
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Vorpal?!?!?!"
+
+# script texts
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Dona'm una mica de sucre, nena"
+
+# script texts
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Bo-oooooh…"
+
+# script texts
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Pel·lícula en una hora?"
+
+# script texts
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "Ni tan sols tinc la meva pròpia làpida - cf"
+
+# script texts
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Que no es vessi sang"
+
+# script texts
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Que cap mà s'aixequi amb ira"
+
+# script texts
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Qui s'atreveix a pertorbar el nostre somni?"
+
+# script texts
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "El camí és obert"
+
+# script texts
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Ho tens "
+
+# script texts
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20interruptors a l'esquerra"
+
+# script texts
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Només tens "
+
+# script texts
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20canvi a l'esquerra"
+
+# script texts
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "La sortida és oberta"
+
+# script texts
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Les portes no s'obriran des d'aquest costat"
+
+# script texts
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Les portes estan obertes…"
+
+# script texts
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "â¦ si estàs preparat"
+
+# script texts
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "S'ha obert una porta"
+
+# script texts
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "a la Capella"
+
+# script texts
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "S'ha construït un pont"
+
+# script texts
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "a l'escorxador"
+
+# script texts
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "S'ha construït una escala"
+
+# script texts
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "al Dark Watch"
+
+# script texts
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "S'ha col·locat un engranatge"
+
+# script texts
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "S'han col·locat \\x20engranatges"
+
+# script texts
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "S'ha obert una barricada"
+
+# script texts
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "A la Cloaca"
+
+# script texts
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "El camí de tornada està obert"
+
+# script texts
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "La porta està barrada des de dins"
+
+# script texts
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "T'atreveixes a saquejar la tomba"
+
+# script texts
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "del botxí?"
+
+# script texts
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Prepara't per morir"
+
+# script texts
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Ho tens "
+
+# script texts
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20més canvis per trobar"
+
+# script texts
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Només tens "
+
+# script texts
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20canvi a l'esquerra"
+
+# script texts
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "El camí cap a la torre és obert"
+
+# script texts
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "El camí és obert"

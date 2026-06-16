@@ -1,0 +1,230 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-09 04:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/doom/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_D1E1"
+msgstr "Genu-altum in Mortuis"
+
+msgid "TXT_D1E2"
+msgstr "Oris Orci"
+
+msgid "TXT_D1E3"
+msgstr "Infernus"
+
+# The episode and levels' names in E4 are taken from the Bible.
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "Caro tua consumpta"
+
+msgid "HUSTR_E1M1"
+msgstr "EIMI: Hangar"
+
+msgid "HUSTR_E1M2"
+msgstr "EIMII: Planta nuclearis"
+
+msgid "HUSTR_E1M3"
+msgstr "EIMIII: Refinarium Toxinorum"
+
+msgid "HUSTR_E1M4"
+msgstr "EIMIV: Imperii Imperium"
+
+msgid "HUSTR_E1M5"
+msgstr "EIMV: Laboratorium Phobi"
+
+msgid "HUSTR_E1M6"
+msgstr "EIMVI: Processus Centralis"
+
+msgid "HUSTR_E1M7"
+msgstr "EIMVII: Statio Computatralis"
+
+msgid "HUSTR_E1M8"
+msgstr "EIMVIII: Anomalia Phobi"
+
+msgid "HUSTR_E1M9"
+msgstr "EIMIX: Basis Militaris"
+
+msgid "HUSTR_E1M10"
+msgstr "EIMX: Cloacae"
+
+msgid "HUSTR_E2M1"
+msgstr "EIIMI: Anomalia Deimi"
+
+msgid "HUSTR_E2M2"
+msgstr "EIIMII: Area Contentionis"
+
+msgid "HUSTR_E2M3"
+msgstr "EIIMIII: Refinarium"
+
+msgid "HUSTR_E2M4"
+msgstr "EIIMIV: Laboratorium Deimos"
+
+msgid "HUSTR_E2M5"
+msgstr "EIIMV: Centrum Imperii"
+
+msgid "HUSTR_E2M6"
+msgstr "EIIMVI: Atria damnatorum"
+
+msgid "HUSTR_E2M7"
+msgstr "EIIMVII: Dolia generationis"
+
+msgid "HUSTR_E2M8"
+msgstr "EIIMVIII: Turris Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "EIIMIX: Arce Mysterii"
+
+msgid "HUSTR_E3M1"
+msgstr "EIIIMI: Inferos custodiunt"
+
+msgid "HUSTR_E3M2"
+msgstr "EIIIMII: Exuviis desperationis"
+
+msgid "HUSTR_E3M3"
+msgstr "EIIIMIII: Pandemonium"
+
+msgid "HUSTR_E3M4"
+msgstr "EIIIMIV: Domus doloris"
+
+msgid "HUSTR_E3M5"
+msgstr "EIIIMV: Ecclesia Cathedralis Impia"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "EIIIMVI: Mons Erebus"
+
+msgid "HUSTR_E3M7"
+msgstr "EIIIMVII: Limbo"
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "EIIIMVIII: Dis"
+
+msgid "HUSTR_E3M9"
+msgstr "EIIIMIX: Labyrinthus"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "EIVMI: Infernus subtus"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "EIVMII: Odium perfectum"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "EIVMIII: Impius Sever"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "EIVMIV: Mali inobedientes"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "EIVMV: Paenitent"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "EIVMVI: Contra te scelerate"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "EIVMVII: Et infernus Secuti sunt"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "EIVMVIII: Ad Crudelem"
+
+msgid "HUSTR_E4M9"
+msgstr "EIVMIX: Timor"
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"Cum tu beat magnus badasses et\n"
+"basis lunae emundare te volo\n"
+"vincere non es? Nonne tu? Where's?\n"
+"tua pinguis merces ac tessera domum? Quid?\n"
+"infernum est? Suus 'non supponitur'\n"
+"finem hoc modo!\n"
+"\n"
+"Sicut caro putrida putescit, sed vultus\n"
+"tanquam turpia damnata Deimos. Similis\n"
+"tu adhæsit in Oris Orci.\n"
+"Solum exitum est per.\n"
+"\n"
+"Pergere FATUM experientia, ludere\n"
+"Oris inferni et miris\n"
+"subnectam, Inferno!\n"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+"Feci! Deformis cyber-\n"
+"daemon dominus qui amissa Deimo regnabat\n"
+"basis lunae occisus est et\n"
+"triumphant! Sed ... ubi sunt\n"
+"es? Tu juveris in ore Dei\n"
+"lunam et despiciat videre awful\n"
+"veritatem.\n"
+"\n"
+"Deimos superne fluitat Orco!\n"
+"Numquam audistis ab aliquo\n"
+"ab inferis, at nothos fies\n"
+"contristati sunt umquam de te! ocius,\n"
+"tu rappel usque ad superficies\n"
+"Orcus.\n"
+"\n"
+"Nunc, est in capite ultimo\n"
+"FATUM! — Inferno."
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+"Quod taetrum spiderdemon quod\n"
+"dominatus tumultus lunae\n"
+"bases et tantam mortem habuit\n"
+"asinum calce in aevum.\n"
+"\n"
+"Ostium abditum aperit et intras.\n"
+"Proven nimium lenta ad inferos to\n"
+"continent, et nunc tandem Orci fabulae\n"
+"aequum - nam tu ab ostio emergere\n"
+"ut virides Terras videas agros!\n"
+"Domum ge- neris.\n"
+"\n"
+"Miraris quid factum est\n"
+"Terra dum male pugnas\n"
+"invehitur. Quod non est bonum Hell-\n"
+"pariunt fieri potuit per quod\n"
+"porta tecum …"
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+"Aranea sollertia emittere debet\n"
+"legiones tuas de helloritur\n"
+"finalis exercitatus cum terribilis\n"
+"bestia ab inferno. sed extiterunt\n"
+"et produxit damnationem aeternam\n"
+"dolorem ut vero heros\n"
+"esset in facie rei tam malae.\n"
+"\n"
+"Praeterea, aliquis amet pretium quod\n"
+"Daisy accidit, deliciolum tuum lepus.\n"
+"\n"
+"Nunc autem ante te divulgatum magis vides\n"
+"potentiale dolor et gibbus in gente\n"
+"daemonum currunt inter urbes.\n"
+"\n"
+"Proxima siste, inferne in terra!"

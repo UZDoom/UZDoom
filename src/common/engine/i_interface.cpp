@@ -77,6 +77,12 @@ EXTERN_CVAR(Bool, ui_generic)
 EXTERN_CVAR(Int, vid_preferbackend)
 EXTERN_CVAR(Bool, vid_fullscreen)
 
+#ifdef HAS_UPDATER
+EXTERN_CVAR(Int, updater_update_interval)
+EXTERN_CVAR(Bool, updater_auto_updates)
+EXTERN_CVAR(Bool, updater_check_updates)
+#endif
+
 CUSTOM_CVAR(String, language, "auto", CVAR_ARCHIVE | CVAR_NOINITCALL | CVAR_GLOBALCONFIG)
 {
 	GStrings.UpdateLanguage(self);
@@ -140,6 +146,12 @@ FStartupSelectionInfo::FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs
 
 	prideColors = Args->CheckParm(FArg_pride)? "list": ui_colors;
 	prideMix = ui_color_mix;
+
+#ifdef HAS_UPDATER
+	DefaultUpdateInterval = updater_update_interval;
+	bAutoUpdate = updater_auto_updates;
+	bCheckUpdate = updater_check_updates;
+#endif
 }
 
 // Return whatever IWAD the user selected.
@@ -153,6 +165,12 @@ int FStartupSelectionInfo::SaveInfo()
 	AdditionalNetArgs.StripLeftRight();
 	DefaultNetAddress.StripLeftRight();
 	DefaultNetSaveFile.StripLeftRight();
+
+#ifdef HAS_UPDATER
+	updater_update_interval = DefaultUpdateInterval;
+	updater_auto_updates = bAutoUpdate;
+	updater_check_updates = bCheckUpdate;
+#endif
 
 	queryiwad = DefaultQueryIWAD;
 	language = DefaultLanguage.GetChars();

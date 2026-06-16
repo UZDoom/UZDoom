@@ -177,6 +177,14 @@ FResourceFile *FResourceFile::OpenResourceFile(const char *filename, bool contai
 	return DoOpenResourceFile(filename, file, containeronly, filter, Printf, sp, optional);
 }
 
+
+FResourceFile *FResourceFile::OpenResourceFileMemory(const char *filename, const void * data, size_t len, bool containeronly, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp, bool optional)
+{
+	FileReader file;
+	if (!file.OpenMemory(data, len)) return nullptr;
+	return DoOpenResourceFile(filename, file, containeronly, filter, Printf, sp, optional);
+}
+
 FResourceFile *FResourceFile::OpenDirectory(const char *filename, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp, bool optional)
 {
 	if (Printf == nullptr) Printf = nulPrintf;

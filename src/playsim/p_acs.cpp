@@ -659,9 +659,11 @@ static bool ShouldIgnoreClientSideScript(AActor* activator)
 	return !owner->Level->isConsolePlayer(owner);
 }
 
+// TODO: Disabled until a new flag can be created for UZDoom's specific type of
+// client-side handling. It was breaking too many existing CLIENTSIDE scripts.
 static bool IsClientSideScript(const ScriptPtr& script)
 {
-	return (script.Flags & SCRIPTF_ClientSide);
+	return false;
 }
 
 class DLevelScript : public DObject

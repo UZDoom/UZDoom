@@ -5237,3 +5237,9 @@ msgstr ""
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr ""
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr ""
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr ""

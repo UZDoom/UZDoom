@@ -168,6 +168,7 @@ FGameConfigFile::FGameConfigFile ()
 	FString pathname;
 
 	OkayToWrite = false;	// Do not allow saving of the config before DoGlobalSetup()
+	QueueWrite = false;
 	bModSetup = false;
 	bGameSetup = false;
 	bKeySetup = false;
@@ -430,9 +431,9 @@ void FGameConfigFile::DoGlobalSetup ()
 			var = FindCVar("snd_channels", NULL);
 			if (var != NULL)
 			{
-				// old settings were default 32, minimum 8, new settings are default 128, minimum 64.
+				// old settings were default 32, minimum 8, new settings are default 128, minimum 8.
 				UCVarValue v = var->GetGenericRep(CVAR_Int);
-				if (v.Int < 64) var->ResetToDefault();
+				if (v.Int < 8) var->ResetToDefault();
 			}
 		}
 		if (EngineLastRunVer < 214)
@@ -701,6 +702,12 @@ void FGameConfigFile::DoGlobalSetup ()
 	}
 
 	OkayToWrite = true;
+
+	if(QueueWrite)
+	{
+		M_SaveDefaults(NULL);
+		QueueWrite = false;
+	}
 }
 
 void FGameConfigFile::DoGameSetup(FString section)
@@ -964,11 +971,11 @@ void FGameConfigFile::ArchiveGlobalData ()
 
 	SetSection ("GlobalSettings", true);
 	ClearCurrentSection ();
-	C_ArchiveCVars (this, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
+	C_ArchiveCVars (this, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, CVAR_CONFIG_ONLY);
 
 	SetSection ("GlobalSettings.Unknown", true);
 	ClearCurrentSection ();
-	C_ArchiveCVars (this, CVAR_ARCHIVE|CVAR_GLOBALCONFIG|CVAR_AUTO);
+	C_ArchiveCVars (this, CVAR_ARCHIVE|CVAR_GLOBALCONFIG|CVAR_AUTO, CVAR_CONFIG_ONLY);
 }
 
 FString FGameConfigFile::GetConfigPath (bool tryProg)

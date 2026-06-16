@@ -117,4 +117,7 @@ void I_NetDone();
 void HandleIncomingConnection();
 void CloseNetwork();
 
+void StartNetworkLean();
+bool IsNetworkStartedLean();
+
 #endif

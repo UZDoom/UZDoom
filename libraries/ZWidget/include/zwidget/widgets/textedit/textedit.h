@@ -135,9 +135,7 @@ private:
 
 	bool mouse_moves_left = false;
 	bool cursor_blink_visible = true;
-	unsigned int blink_timer = 0;
 	int clip_start_offset = 0;
-	int clip_end_offset = 0;
 	bool ignore_mouse_events = false;
 
 	struct UndoInfo

@@ -23,8 +23,9 @@
 
 #pragma once
 
-void UpdateVanillaTransparency();
-bool UseVanillaTransparency();
-extern bool r_UseVanillaTransparency;
+int UseVanillaTransparency();
+extern int r_UseVanillaTransparency;
 extern TMap<FName, bool> AutoTrans;
+extern bool bDehackedTransPresent;
+extern bool bModdedTransPresent;
 EXTERN_CVAR(Int, r_vanillatrans)

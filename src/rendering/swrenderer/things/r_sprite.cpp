@@ -165,9 +165,9 @@ namespace swrenderer
 		if (thing->flags5 & MF5_BRIGHT)
 			vis->renderflags |= RF_FULLBRIGHT;
 		vis->RenderStyle = thing->RenderStyle;
-		if (r_vanillatrans && (thing->renderflags & RF_ZDOOMTRANS))
+		if (r_UseVanillaTransparency && (thing->renderflags & RF_ZDOOMTRANS))
 		{
-			if (r_vanillatrans == 1 || AutoTrans.CheckKey(thing->GetClass()->TypeName) != nullptr)
+			if (r_UseVanillaTransparency == 1 || AutoTrans.CheckKey(thing->GetClass()->TypeName) != nullptr)
 				vis->RenderStyle = LegacyRenderStyles[STYLE_Normal];
 		}
 		vis->FillColor = thing->fillcolor;

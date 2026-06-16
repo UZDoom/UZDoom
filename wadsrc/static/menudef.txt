@@ -934,9 +934,11 @@ OptionValue Fuzziness
 
 OptionValue VanillaTrans
 {
-	0.0, "$OPTVAL_VTFZDOOM"
-	1.0, "$OPTVAL_VTFVANILLA"
-	2.0, "$OPTVAL_AUTO"
+	-1, "$OPTVAL_AUTO"
+	0, "$OPTVAL_VTFZDOOM"
+	1, "$OPTVAL_VTFVANILLA"
+	2, "$OPTVAL_VTAZDOOM"
+	3, "$OPTVAL_VTAVANILLA"
 }
 
 OptionMenu "VideoOptions" protected
@@ -972,7 +974,6 @@ OptionMenu "VideoOptions" protected
 	Option "$DSPLYMNU_PLAYERSPRITES",          r_drawplayersprites,    OnOff
 	Option "$DSPLYMNU_DEATHCAM",               r_deathcamera,          OnOff
 	Option "$DSPLYMNU_TELEZOOM",               telezoom,               OnOff
-	Slider "$DSPLYMNU_QUAKEINTENSITY",         r_quakeintensity,       0.0, 1.0, 0.05, 0, "", 0, Gray, 100, "$VALFORMAT_PERCENT"
 	Option "$DSPLYMNU_NOMONSTERINTERPOLATION", nomonsterinterpolation, NoYes
 }
 
@@ -1401,7 +1402,7 @@ OptionMenu "OpenGLOptions" protected
 	Option "$GLPREFMNU_FOGMODE",                gl_fogmode,                FogMode
 	Option "$GLPREFMNU_FOGFORCEFULLBRIGHT",     gl_brightfog,              YesNo
 	Slider "$GLPREFMNU_WPNLIGHTSTR",            gl_weaponlight,            0,32, 2
-	Option "$GLPREFMNU_WPNPURELIGHT",           gl_weapon_purelightlevel,  OnOff
+//	Option "$GLPREFMNU_WPNPURELIGHT",           gl_weapon_purelightlevel,  OnOff
 	Option "$GLPREFMNU_ENVIRONMENTMAPMIRROR",   gl_mirror_envmap,          OnOff
 	Option "$GLPREFMNU_ENV",                    gl_enhanced_nightvision,   OnOff
 	Option "$GLPREFMNU_ENVSTEALTH",             gl_enhanced_nv_stealth,    EnhancedStealth
@@ -2937,6 +2938,9 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 
 	StaticText ""
+	Slider "$DSPLYMNU_QUAKEINTENSITY",         r_quakeintensity,       0.0, 1.0, 0.05, 0, "", 0, Gray, 100, "$VALFORMAT_PERCENT"
+
+	StaticText ""
 	SafeCommand "$OPTMNU_DEFAULTS", "acc_reset2defaults"
 }
 
@@ -3025,6 +3029,8 @@ OptionString "LanguageOptions"
 	"auto", "Auto"
 	// Since auto works, no reason to keep English at the top.
 	// This list is now alphabetical by language code.
+	"bs", "Босански (Bosnian)"
+	"ca", "Català (Catalan)"
 	"cs", "Česky (Czech)"
 	"da", "Dansk (Danish)"
 	"de", "Deutsch (German)"
@@ -3035,7 +3041,9 @@ OptionString "LanguageOptions"
 	"es-MX", "Español (Latino) (Latin American Spanish)"
 	"fi", "Suomi (Finnish)"
 	"fr", "Français (French)"
+	"hr", "Hrvatski (Croatian)"
 	"hu", "Magyar (Hungarian)"
+	"id", "Bahasa Indonesia (Indonesian)"
 	"it", "Italiano (Italian)"
 	"ja", "日本語 (Japanese)"
 	"ko", "한국어 (Korean)"
@@ -3047,7 +3055,9 @@ OptionString "LanguageOptions"
 	"ro", "Română (Romanian)"
 	"ru", "Русский (Russian)"
 	"sr", "Српски (Serbian)"
+	"sv", "Svenska (Swedish)"
 	"tr", "Türkçe (Turkish)"
+	"uk", "Українська (Ukrainian)"
 	"zh-Hans", "简体中文 (Simplified Chinese)"
 //	"zh-Hant", "繁体中文 (Traditional Chinese)"
 }

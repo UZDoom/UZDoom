@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/fr/>\n"
 "Language: fr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Appuyez sur une touche."
@@ -304,7 +304,7 @@ msgid "STSTR_NCON"
 msgstr "Mode Passe-muraille : ACTIF"
 
 msgid "STSTR_NCOFF"
-msgstr "Mode Passe-muraille: INACTIF"
+msgstr "Mode Passe-muraille : INACTIF"
 
 msgid "STSTR_NC2ON"
 msgstr "Mode Passe-muraille 3D : ACTIF"
@@ -5165,3 +5165,11 @@ msgstr "Broyeur"
 #, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Lance-Grenades"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (Vanilla Préféré)"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (ZDoom Préféré)"

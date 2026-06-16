@@ -1548,7 +1548,7 @@ static int cvarcmp(const void* a, const void* b)
 	return strcmp((*A)->GetName(), (*B)->GetName());
 }
 
-void C_ArchiveCVars (FConfigFile *f, uint32_t filter)
+void C_ArchiveCVars (FConfigFile *f, uint32_t filter, uint32_t allow)
 {
 	TArray<FBaseCVar*> cvarlist;
 
@@ -1557,7 +1557,7 @@ void C_ArchiveCVars (FConfigFile *f, uint32_t filter)
 	while (it.NextPair(pair))
 	{
 		auto cvar = pair->Value;
-		if ((cvar->Flags &
+		if (((cvar->Flags & ~allow) &
 			(CVAR_GLOBALCONFIG|CVAR_ARCHIVE|CVAR_MOD|CVAR_AUTO|CVAR_USERINFO|CVAR_SERVERINFO|CVAR_NOSAVE|CVAR_CONFIG_ONLY))
 			== filter)
 		{

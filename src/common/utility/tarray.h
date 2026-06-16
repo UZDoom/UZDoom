@@ -1722,7 +1722,7 @@ public:
   // STL standard type traits for iteration
   using iterator_category = std::forward_iterator_tag;
   using value_type = typename MapType::Pair;
-  using difference_type = ptrdiff_t;
+  using difference_type = hash_t;
   using pointer = value_type*;
   using reference = value_type&;
 
@@ -1746,19 +1746,32 @@ public:
   bool operator>=(const TMapIterator& other) const { return Position >= other.Position; }
 
   // Arithmetic operators
-  TMapIterator& operator++() { Position++; return *this; }
+  TMapIterator& operator++() {
+	if (Position >= Map.Size){
+		return *this;
+	}
+	while (++Position < Map.Size){
+		if (!Map.Nodes[Position].IsNil())
+		{
+			return *this;
+		}
+	}
+	return *this;
+  }
   TMapIterator operator++(int) { TMapIterator tmp(*this); tmp++; return tmp;}
-  TMapIterator& operator--() { Position--; return *this; }
+  TMapIterator& operator--() {
+	if (Position == 0){
+		return *this;
+	}
+	while (--Position > 0) {
+		if (Position < Map.Size && !Map.Nodes[Position].IsNil())
+		{
+			return *this;
+		}
+	}
+	return *this;
+  }
   TMapIterator operator--(int) { TMapIterator tmp(*this); tmp--; return tmp;}
-  TMapIterator& operator+=(difference_type n) { Position += n; return *this; }
-  TMapIterator operator+(difference_type n) const { TMapIterator tmp(*this); tmp += n; return tmp; }
-  TMapIterator& operator-=(difference_type n) { Position -= n; return *this; }
-  TMapIterator operator-(difference_type n) const { TMapIterator tmp(*this); tmp -= n; return tmp; }
-  difference_type operator-(const TMapIterator& other) const { return Position - other.Position; }
-
-  // Random access operators
-  value_type& operator[](difference_type n) { return *Map.Nodes[Position + n]; }
-  const value_type& operator[](difference_type n) const { return *Map.Nodes[Position + n]; }
 
   value_type& operator*() const { return *reinterpret_cast<value_type *>(&Map.Nodes[Position].Pair); }
   value_type* operator->() { return reinterpret_cast<value_type *>(&Map.Nodes[Position].Pair); }
@@ -1816,10 +1829,48 @@ template<class KT, class VT, class MapType=TMap<KT,VT> >
 class TMapConstIterator
 {
 public:
+	// STL standard type traits for iteration
+	using iterator_category = std::forward_iterator_tag;
+	using value_type = typename MapType::ConstPair;
+	using difference_type = hash_t;
+	using pointer = value_type*;
+	using reference = value_type&;
+
 	TMapConstIterator(const MapType &map)
 		: Map(map), Position(0)
 	{
 	}
+
+	// Arithmetic operators
+	TMapConstIterator& operator++() {
+		if (Position >= Map.Size){
+			return *this;
+		}
+		while (++Position < Map.Size){
+			if (!Map.Nodes[Position].IsNil())
+			{
+				return *this;
+			}
+		}
+		return *this;
+	}
+	TMapConstIterator operator++(int) { TMapIterator tmp(*this); tmp++; return tmp;}
+	TMapConstIterator& operator--() {
+		if (Position == 0){
+			return *this;
+		}
+		while (--Position > 0) {
+			if (Position < Map.Size && !Map.Nodes[Position].IsNil())
+			{
+				return *this;
+			}
+		}
+		return *this;
+	}
+	TMapConstIterator operator--(int) { TMapConstIterator tmp(*this); tmp--; return tmp;}
+
+	value_type& operator*() const { return *reinterpret_cast<value_type *>(&Map.Nodes[Position].Pair); }
+	value_type* operator->() { return reinterpret_cast<value_type *>(&Map.Nodes[Position].Pair); }
 
 	bool NextPair(typename MapType::ConstPair *&pair)
 	{

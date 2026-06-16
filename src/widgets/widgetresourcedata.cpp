@@ -87,8 +87,8 @@ static std::vector<uint8_t> LoadFile(const char* name, bool root)
 	if (!IsZWidgetAvailable())
 		I_FatalError("InitWidgetResources has not been called");
 
-	auto start = root ? 0: WidgetResources->size() - 1;
-	for (auto i = start; i >= 0; i--)
+	int64_t start = root ? 0: WidgetResources->size() - 1;
+	for (int64_t i = start; i >= 0; i--)
 	{
 		auto lump = (*WidgetResources)[i]->FindEntry(name);
 		if (lump == -1) continue;

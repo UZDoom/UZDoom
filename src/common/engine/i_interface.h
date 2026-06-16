@@ -123,6 +123,12 @@ struct FStartupSelectionInfo
 	int DefaultNetJoinPort = 0;
 	int DefaultNetJoinTeam = 255;
 
+#ifdef HAS_UPDATER
+	int DefaultUpdateInterval = 7;
+	bool bAutoUpdate = false;
+	bool bCheckUpdate = false;
+#endif
+
 	FStartupSelectionInfo() = delete;
 	FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs& args, int startFlags);
 	int SaveInfo();

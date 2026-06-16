@@ -69,8 +69,8 @@ void M_SaveCustomKeys (FConfigFile *config, FString section)
 {
 	for (unsigned i=0; i<KeySections.Size(); i++)
 	{
-		DoSaveKeys (config, section + KeySections[i].mSection + ".Bindings", &KeySections[i], false);
-		DoSaveKeys (config, section + KeySections[i].mSection + ".DoubleBindings", &KeySections[i], true);
+		DoSaveKeys (config, section + "." + KeySections[i].mSection + ".Bindings", &KeySections[i], false);
+		DoSaveKeys (config, section + "." + KeySections[i].mSection + ".DoubleBindings", &KeySections[i], true);
 	}
 }
 

@@ -574,13 +574,15 @@ DEFINE_ACTION_FUNCTION_NATIVE(_TexMan, UseGamePalette, UseGamePalette)
 	ACTION_RETURN_INT(UseGamePalette(texid));
 }
 
-FCanvas* GetTextureCanvas(const FString& texturename);
+FCanvas *GetTextureCanvas(const FString &texturename, ETextureType type, BITFIELD flags);
 
 DEFINE_ACTION_FUNCTION(_TexMan, GetCanvas)
 {
 	PARAM_PROLOGUE;
 	PARAM_STRING(texturename);
-	ACTION_RETURN_POINTER(GetTextureCanvas(texturename));
+	PARAM_INT(type);
+	PARAM_INT(flags);
+	ACTION_RETURN_POINTER(GetTextureCanvas(texturename, static_cast<ETextureType>(type), flags));
 }
 
 //=====================================================================================

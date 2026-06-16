@@ -269,7 +269,7 @@ private:
 	friend FBaseCVar *FindCVarSub (const char *var_name, int namelen);
 	friend void UnlatchCVars (void);
 	friend void DestroyCVarsFlagged (uint32_t flags);
-	friend void C_ArchiveCVars (FConfigFile *f, uint32_t filter);
+	friend void C_ArchiveCVars (FConfigFile *f, uint32_t filter, uint32_t allow);
 	friend void C_SetCVarsToDefaults (void);
 	friend void FilterCompactCVars (TArray<FBaseCVar *> &cvars, uint32_t filter);
 	friend void C_DeinitConsole();
@@ -313,7 +313,7 @@ void UnlatchCVars (void);
 void DestroyCVarsFlagged (uint32_t flags);
 
 // archive cvars to FILE f
-void C_ArchiveCVars (FConfigFile *f, uint32_t filter);
+void C_ArchiveCVars (FConfigFile *f, uint32_t filter, uint32_t allow = 0);
 
 // initialize cvars to default values after they are created
 void C_SetCVarsToDefaults (void);
@@ -451,6 +451,7 @@ public:
 		{ UCVarValue val; val.String = const_cast<char *>(stringrep); SetGenericRep (val, CVAR_String); return stringrep; }
 	inline operator const char * () const { return mValue.GetChars(); }
 	inline const char *operator *() const { return mValue.GetChars(); }
+	inline int Length() const { return mValue.Len(); }
 
 protected:
 	virtual UCVarValue DoSet (UCVarValue value, ECVarType type);
@@ -666,6 +667,7 @@ public:
 	int operator= (FStringCVarRef&&) = delete;
 
 	const char* operator= (const char* val) { *ref = val; return val; }
+	const char* operator= (FString val) { *ref = val.GetChars(); return *ref; }
 	inline operator const char* () const { return **ref; }
 	inline const char* operator *() const { return **ref; }
 	inline FStringCVar* operator->() { return ref; }

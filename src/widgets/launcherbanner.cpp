@@ -107,7 +107,7 @@ std::vector<Color::Color> getColors(FName id)
 LauncherBanner::LauncherBanner(Widget* parent, FName colors, float mix) : Widget(parent)
 {
 	bool useColors = colors != "";
-	auto bg = Theme::getHeader(COLOR_BACKGROUND);
+	auto bg = Colorf(0.0f, 0.0f, 0.0f, 0.0f);
 	if (useColors)
 	{
 		auto base = Color::rgb(0xFFFFFF);

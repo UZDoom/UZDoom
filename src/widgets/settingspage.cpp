@@ -84,6 +84,36 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 		break;
 	}
 #endif
+#ifdef HAS_UPDATER
+	UpdaterSettingsLabel = new TextLabel(this);
+	UpdaterIntervalLabel = new TextLabel(this);
+
+	UpdaterSettingsDropdown = new Dropdown(this);
+	UpdaterSettingsDropdown->SetMaxDisplayItems(3);
+	UpdaterSettingsDropdown->AddItem("Disable");
+	UpdaterSettingsDropdown->AddItem("Notify");
+	UpdaterSettingsDropdown->AddItem("Prompt to install");
+
+	int sel = 0;
+	if (info.bAutoUpdate && info.bCheckUpdate)
+		sel = 2;
+	else if (info.bCheckUpdate)
+		sel = 1;
+	UpdaterSettingsDropdown->SetSelectedItem(sel);
+
+	UpdaterIntervalDropdown = new Dropdown(this);
+	UpdaterIntervalDropdown->SetMaxDisplayItems(3);
+	UpdaterIntervalDropdown->AddItem("Other day");
+	UpdaterIntervalDropdown->AddItem("Week");
+	UpdaterIntervalDropdown->AddItem("Month");
+
+	sel = 1;
+	if (info.DefaultUpdateInterval < 7)
+		sel = 0;
+	else if (info.DefaultUpdateInterval > 7)
+		sel = 2;
+	UpdaterIntervalDropdown->SetSelectedItem(sel);
+#endif
 
 	LangList = new ListView(this);
 	try
@@ -140,7 +170,6 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 		LoadLabel = new TextLabel(this);
 		LoadList = new Dropdown(this);
 		LoadList->SetMaxDisplayItems(4);
-		LoadList->SetDropdownDirection(false);
 		int opts = sizeof(FILELOAD_OPTS)/sizeof(FILELOAD_OPTS[0]), selected = opts-1;
 		for (int i = 0; i < opts; i++)
 		{
@@ -175,6 +204,34 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 	else if (GLESCheckbox->GetChecked()) v = 2;
 	info.DefaultBackend = v;
 #endif
+#ifdef HAS_UPDATER
+	switch (UpdaterSettingsDropdown->GetSelectedItem())
+	{
+	case 2:
+		info.bAutoUpdate = info.bCheckUpdate = true;
+		break;
+	case 1:
+		info.bAutoUpdate = false;
+		info.bCheckUpdate = true;
+		break;
+	default:
+		info.bAutoUpdate = info.bCheckUpdate = false;
+		break;
+	}
+
+	switch (UpdaterIntervalDropdown->GetSelectedItem())
+	{
+	case 2:
+		info.DefaultUpdateInterval = 30;
+		break;
+	case 0:
+		info.DefaultUpdateInterval = 2;
+		break;
+	default:
+		info.DefaultUpdateInterval = 7;
+		break;
+	}
+#endif
 }
 
 void SettingsPage::UpdateLanguage()
@@ -205,6 +262,18 @@ void SettingsPage::UpdateLanguage()
 	VulkanCheckbox->SetText(GStrings.GetString("OPTVAL_VULKAN"));
 	OpenGLCheckbox->SetText(GStrings.GetString("OPTVAL_OPENGL"));
 	GLESCheckbox->SetText(GStrings.GetString("OPTVAL_OPENGLES"));
+#endif
+#ifdef HAS_UPDATER
+	// TODO: Add localization support
+	UpdaterSettingsLabel->SetText("Updater Settings");
+	UpdaterIntervalLabel->SetText("Check every:");
+
+	UpdaterSettingsDropdown->UpdateItem("Disable", 0);
+	UpdaterSettingsDropdown->UpdateItem("Notify", 1);
+	UpdaterSettingsDropdown->UpdateItem("Prompt to install", 2);
+	UpdaterIntervalDropdown->UpdateItem("Other day", 0);
+	UpdaterIntervalDropdown->UpdateItem("Week", 1);
+	UpdaterIntervalDropdown->UpdateItem("Month", 2);
 #endif
 }
 
@@ -285,25 +354,39 @@ void SettingsPage::OnGeometryChanged()
 		}
 	}
 
-	y = max<double>(y, max<double>(optionsBottom, backendsBottom)) + 10.0;
+	const double bottomPanelTop = max<double>(y, max<double>(optionsBottom, backendsBottom)) + 10.0;
+	y = bottomPanelTop;
+
+#ifdef HAS_UPDATER
+	UpdaterSettingsLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsLabel->GetPreferredHeight());
+	y += UpdaterSettingsLabel->GetPreferredHeight();
+
+	UpdaterSettingsDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsDropdown->GetPreferredHeight());
+	y += UpdaterSettingsDropdown->GetPreferredHeight();
+
+	UpdaterIntervalLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalLabel->GetPreferredHeight());
+	y += UpdaterIntervalLabel->GetPreferredHeight();
+
+	UpdaterIntervalDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalDropdown->GetPreferredHeight());
+	y += UpdaterIntervalDropdown->GetPreferredHeight() + 10.0;
+#endif
+
+	LoadLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, LoadLabel->GetPreferredHeight());
+	y += LoadLabel->GetPreferredHeight();
+
+	LoadList->SetFrameGeometry(w - panelWidth, y, panelWidth, LoadList->GetPreferredHeight());
+	y += LoadLabel->GetPreferredHeight();
+
+	const double bottomPanelWidth = w - panelWidth - 10.0;
+	y = bottomPanelTop;
 	if (!hideLanguage)
 	{
-		LangLabel->SetFrameGeometry(0.0, y, w, LangLabel->GetPreferredHeight());
+		LangLabel->SetFrameGeometry(0.0, y, bottomPanelWidth, LangLabel->GetPreferredHeight());
 		y += LangLabel->GetPreferredHeight();
-		double temp = std::max(h - y - LoadList->GetPreferredHeight() - 4.0, 0.0);
-		LangList->SetFrameGeometry(0.0, y, w, temp);
+		double temp = std::max(h - y, 0.0);
+		LangList->SetFrameGeometry(0.0, y, bottomPanelWidth, temp);
 		y += temp + 4.0;
 	}
-
-	LoadLabel->SetFrameGeometry(
-		0.0, y+(LoadList->GetPreferredHeight()-LoadLabel->GetPreferredHeight())/2,
-		LoadLabel->GetPreferredWidth(), LoadLabel->GetPreferredHeight()
-	);
-	LoadList->SetFrameGeometry(
-		LoadLabel->GetPreferredWidth()+4.0, y,
-		LoadList->GetPreferredWidth(), LoadList->GetPreferredHeight()
-	);
-	y += LoadList->GetHeight();
 
 	Launcher->UpdatePlayButton();
 

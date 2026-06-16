@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-17 02:11+0000\n"
-"Last-Translator: daioni <weblate@godspe.de>\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/en_GB/>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6.dev0\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Press a key."
@@ -5398,3 +5398,9 @@ msgstr "%s dB"
 
 msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
 msgstr "Double-click Threshold"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (ZDoom Preferred)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (Vanilla Preferred)"

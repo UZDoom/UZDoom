@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-11 03:44+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-06-12 12:01+0000\n"
+"Last-Translator: Libre <6n0n1m0s@proton.me>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Pueblo en ruinas"
@@ -90,13 +90,12 @@ msgstr "Pozo de Residuos"
 msgid "TXT_HEXDD_MAP38"
 msgstr "La Rosa"
 
-#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "Pasando una mano temblorosa por\n"
 "tu cara sangrante, intentas \n"
 "aclarar tu mente para lo que\n"
-"se avecina...\n"
+"se avecina…\n"
 "\n"
 "...y olvidar lo que quedó detrás.\n"
 "\n"
@@ -114,7 +113,6 @@ msgstr ""
 "\n"
 "¿o no?"
 
-#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "Seguramente las almas de los\n"
@@ -135,9 +133,8 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"...para los afortunados."
+"…para los afortunados."
 
-#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Una vez más te encuentras en el\n"
@@ -150,12 +147,11 @@ msgstr ""
 "diferente, hay silencio donde\n"
 "antes hubo susurros suaves,\n"
 "la sensación de ser observado\n"
-"por ojos ocultos....\n"
+"por ojos ocultos…\n"
 "\n"
-"...ojos que escudan una intención\n"
+"…ojos que escudan una intención\n"
 "maléfica."
 
-#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "Una vez tomaste la esfera\n"
@@ -174,12 +170,11 @@ msgstr ""
 "\n"
 "\n"
 "Sin embargo, nunca tú nunca has\n"
-"rechazado un desafío..."
+"rechazado un desafío…"
 
-#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n...y otros jugadores esperan.\n"
+"\\n…y otros jugadores esperan.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -197,9 +192,8 @@ msgstr "La cascada está bloqueada"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "Una puerta se abrió en la Capilla"
 
-#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
-msgstr "Eso es extraño..."
+msgstr "Eso es extraño…"
 
 msgid "TXT_ACS_MAP44_1_THREE"
 msgstr "Quedan tres partes más del acertijo"
@@ -228,16 +222,14 @@ msgstr "Dos tercios del acertijo se han resuelto"
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Escuchas una plataforma moverse a la distancia"
 
-#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
-msgstr "Está terminado..."
+msgstr "Está terminado…"
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "No has completado el acertijo"
 
-#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
-msgstr "Te lo advierto..."
+msgstr "Te lo advierto…"
 
 msgid "TXT_ACS_MAP46_3_STUBB"
 msgstr "Eres obstinado, ¿verdad?"
@@ -248,9 +240,8 @@ msgstr "Y estúpido, también"
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Un cuarto del acertijo se ha resuelto"
 
-#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
-msgstr "Mala decisión..."
+msgstr "Mala decisión…"
 
 msgid "TXT_ACS_MAP47_2_THESY"
 msgstr "Los símbolos no están alineados"
@@ -342,13 +333,11 @@ msgstr "La salida está abierta"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "Las puertas no se abren desde este lado"
 
-#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
-msgstr "Las puertas están abiertas..."
+msgstr "Las puertas están abiertas…"
 
-#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
-msgstr "...si estás listo"
+msgstr "…si estás listo"
 
 msgid "TXT_ACS_MAP54_9_ADOOR"
 msgstr "Se ha abierto una puerta"
@@ -413,6 +402,5 @@ msgstr "El camino a la torre está abierto"
 msgid "TXT_ACS_MAP60_3_THEWA"
 msgstr "El camino está abierto"
 
-#, fuzzy
 msgid "TXT_ACS_MAP51_21_DUHUH"
-msgstr "Duh-uhhh..."
+msgstr "Duh-uhhh…"

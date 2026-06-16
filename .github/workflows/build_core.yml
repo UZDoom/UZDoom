@@ -43,6 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       env_name: ${{ steps.set-env.outputs.environment }}
+      rel_name: ${{ steps.set-env.outputs.stream }}
     steps:
     - name: Set Environment
       id: set-env
@@ -51,12 +52,17 @@ jobs:
         REF: ${{ github.ref }}
       run: |
         environment=""
+        stream="rolling"
         if [[ "$REPO" == UZDoom/UZDoom ]]; then
-          if [[ "$REF" == refs/heads/trunk ]] || [[ "$REF" =~ refs/heads/\d+\.\d+.* ]]; then
+          if [[ "$REF" == refs/heads/trunk ]]; then
             environment="production"
+          elif [[ "$REF" =~ refs/heads/\d+\.\d+.* ]]; then
+            environment="production"
+            stream="versioned"
           fi
         fi
         echo "environment=$environment" | tee -a "$GITHUB_OUTPUT"
+        echo "stream=$stream" | tee -a "$GITHUB_OUTPUT"
 
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
@@ -255,9 +261,6 @@ jobs:
         BUILD_TYPE: ${{ inputs.build_type }}
         BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
-        export GIT_DESCRIBE="$(git describe --tags --exclude x-*)"
-        echo "version=$GIT_DESCRIBE" | tee -a "$GITHUB_OUTPUT"
-
         config () { cmake -B build -S . -DPK3_QUIET_ZIPDIR=ON -G Ninja -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS ; }
         build () { cmake --build build --config $BUILD_TYPE ; }
 
@@ -309,7 +312,7 @@ jobs:
         mkdir package
         7z a package/licenses.zip ../docs/licenses/*
 
-        echo "name=${{ runner.os }}-$(uname -m)-UZDoom-${{ steps.build.outputs.version }}" | tee -a "$GITHUB_OUTPUT"
+        echo "name=${{ runner.os }}-$(uname -m)-UZDoom-$(git describe --tags --exclude x-*)" | tee -a "$GITHUB_OUTPUT"
 
     - name: Package Windows
       if: runner.os == 'Windows'
@@ -318,12 +321,18 @@ jobs:
       env:
         NAME: ${{ steps.package.outputs.name }}
       run: |
-        if [[ -f oalsoft.zip ]]; then
-          unzip -j oalsoft.zip openal-soft-1.23.1-bin/bin/Win64/soft_oal.dll -d package
-        fi
-        if [[ -f sndfile.zip ]]; then
-          unzip -j sndfile.zip libsndfile-1.2.2-win64/bin/sndfile.dll -d package
-        fi
+        function unzip_to_package() {
+          if [[ ! -f "$1" ]]; then
+            echo "skipping $1"
+            return
+          fi
+          f=$(unzip -l "$1" | awk -v pattern="$2" '$0 ~ pattern {print $NF; exit}')
+          echo "$1: $f"
+          unzip -j "$1" "$f" -d package
+        }
+        unzip_to_package oalsoft.zip 'bin/Win64/soft_oal.dll$'
+        unzip_to_package sndfile.zip 'bin/sndfile.dll$'
+        unzip_to_package libcurl.zip 'bin/libcurl.*.dll$'
 
         rm -rf soundfonts fm_banks
 
@@ -333,7 +342,8 @@ jobs:
         mkdir -p package/fm_banks
         cp -f ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
 
-        mv -f *.exe *.pk3 package
+        shopt -s nullglob
+        mv -f *.exe *.pk3 *.pdb package
 
         cd package
         7z a -sdel -r "${NAME}.zip" *
@@ -405,10 +415,9 @@ jobs:
       working-directory: build
       env:
         NAME: ${{ steps.package.outputs.name }}
-        GIT_DESCRIBE: ${{ steps.build.outputs.version }}
         OWNER: ${{ github.repository_owner }}
         REPO: ${{ github.event.repository.name }}
-        TAG: latest
+        TAG: ${{ needs.setup_build.outputs.rel_name == 'rolling' && 'latest-pre' || 'latest' }}
       run: |
         ldd uzdoom
 

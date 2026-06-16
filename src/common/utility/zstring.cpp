@@ -1368,6 +1368,69 @@ void FString::Split(TArray<FString>& tokens, const char *delimiter, EmptyTokenTy
 	}
 }
 
+TArray<FString> FString::SplitNewLines(int minWrapLen, int maxLineLen, EmptyTokenType keepEmpty) const
+{
+	TArray<FString> tokens;
+	SplitNewLines(tokens, minWrapLen, maxLineLen, keepEmpty);
+	return tokens;
+}
+
+void FString::SplitNewLines(TArray<FString>& tokens, int minWrapLen, int maxLineLen, EmptyTokenType keepEmpty) const
+{
+	const auto selfLen = static_cast<ptrdiff_t>(Len());
+	ptrdiff_t lastPos = 0;
+
+	if (selfLen == 0) return;	// Empty strings do not contain tokens, even with TOK_KEEPEMPTY.
+
+	while (lastPos <= selfLen)
+	{
+		int delimLen = 1;
+		int pos = lastPos;
+		bool isMidwordWrap = false;
+
+
+		for(; pos < selfLen; pos++)
+		{
+			if(Chars[pos] == '\n' || Chars[pos] == '\r') break; // find LF or CR
+		}
+
+		if(Chars[pos] == '\r' && (pos + 1) < selfLen && Chars[pos + 1] == '\n') delimLen = 2; // CRLF
+
+		if(minWrapLen > 0 && maxLineLen > 0 && pos > (lastPos + maxLineLen))
+		{
+			pos = lastPos + minWrapLen;
+
+			if(minWrapLen < maxLineLen)
+			{
+				for(;pos < (lastPos + maxLineLen); pos++)
+				{
+					if(Chars[pos] == ' ' || Chars[pos] == '\t') break; // wrap on space ideally, otherwise wrap on maxLineLen
+				}
+
+				if(Chars[pos] != ' ' && Chars[pos] != '\t')
+				{
+					isMidwordWrap = true;
+					pos--;
+				}
+			}
+
+			delimLen = 0;
+		}
+
+		if (pos != lastPos || TOK_KEEPEMPTY == keepEmpty)
+		{
+			tokens.Push(FString(GetChars() + lastPos, pos - lastPos));
+
+			if(isMidwordWrap)
+			{
+				tokens.back() += "-";
+			}
+		}
+
+		lastPos = pos + delimLen;
+	}
+}
+
 // Under Windows, use the system heap functions for managing string memory.
 // Under other OSs, use ordinary memory management instead.
 

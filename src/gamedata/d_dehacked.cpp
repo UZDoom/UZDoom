@@ -52,9 +52,9 @@
 #include "thingdef.h"
 #include "types.h"
 #include "vmbuilder.h"
+#include "r_vanillatrans.h"
 
 extern TArray<PalEntry> TranslationColors;
-extern TMap<FName, bool> AutoTrans;
 
 void JitDumpLog(FILE *file, VMScriptFunction *func);
 
@@ -129,7 +129,6 @@ static PClassActor* FindInfoName(int index, bool mustexist = false)
 			cls = static_cast<PClassActor*>(RUNTIME_CLASS(AActor)->CreateDerivedClass(name.GetChars(), (unsigned)sizeof(AActor)));
 			NewClassType(cls, -1);	// This needs a VM type to work as intended.
 			cls->InitializeDefaults();
-			AutoTrans[cls->TypeName] = true;
 			PClassActor::AllActorClasses.Push(cls);
 		}
 		if (cls)
@@ -1804,6 +1803,8 @@ static int PatchThing (int thingy, int flags)
 
 	if (info != (AActor *)&dummy)
 	{
+		if (hadTranslucency)
+			AutoTrans.Remove(type->TypeName);
 		// Reset heights for things hanging from the ceiling that
 		// don't specify a new height.
 		if (info->flags & MF_SPAWNCEILING &&
@@ -1829,6 +1830,10 @@ static int PatchThing (int thingy, int flags)
 					info->RenderStyle = STYLE_Normal;
 			}
 		}
+		// If the thing being replaced had ZDoom's transparency, let the auto handling know
+		// it should disable it if desired.
+		if ((info->renderflags & RF_ZDOOMTRANS) && type->ActorInfo()->Replacement == nullptr)
+			bDehackedTransPresent = true;
 		// Speed could be either an int of fixed value, depending on its use
 		// If this value is very large it needs to be rescaled.
 		if (fabs(info->Speed) >= 256)
@@ -3795,7 +3800,6 @@ void FinishDehPatch ()
 			if (newlycreated)
 			{
 				subclass->InitializeDefaults();
-				AutoTrans[subclass->TypeName] = true;
 				PClassActor::AllActorClasses.Push(subclass);
 			}
 		}

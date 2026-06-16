@@ -126,7 +126,7 @@ function(main)
 	configure_file("${ScriptDir}/gitinfo.h.in" "${OutputFile}" @ONLY)
 
 	file(RELATIVE_PATH RelativeFile "${ProjectDir}" "${OutputFile}")
-	message(STATUS "Revision ${RelativeFile}: ${Tag}")
+	message(STATUS "Revision ${RelativeFile}: ${Tag} | ${Distance} | ${Hash}")
 endfunction()
 
 main()

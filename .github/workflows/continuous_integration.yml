@@ -38,7 +38,7 @@ jobs:
         config: &common_config
           - name: Windows
             os: windows-latest
-            build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
+            build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DUSE_UPDATER=ON
             build_opts_extra: ""
             deps_cmdline: &msvc_deps >-
             extra_files: &msvc_x86_files >-
@@ -48,6 +48,9 @@ jobs:
               sndfile.zip
                 2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f
                 https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
+              libcurl.zip
+                d290b4ee475968b04dcb2e0c4f046f2ff25c35c65d3e54259cef7cc6cea069e2
+                https://curl.se/windows/dl-8.20.0_5/curl-8.20.0_5-win64-mingw.zip
 
           - name: MacOS
             os: macos-latest

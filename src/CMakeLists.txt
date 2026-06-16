@@ -325,8 +325,9 @@ option(BUILD_FLATPAK "Enable Flatpak-specific build options" OFF)
 
 # Update gitinfo.h
 
-add_custom_target( revision_check ALL
+add_custom_target( revision_check
 	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/cmake/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
+	BYPRODUCTS "${CMAKE_BINARY_DIR}/gitinfo.h"
 	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 )
 
@@ -341,6 +342,16 @@ list( APPEND PROJECT_LIBRARIES "zwidget" )
 list( APPEND PROJECT_LIBRARIES "webp" )
 
 message("Building for target architecture: ${TARGET_ARCHITECTURE}")
+
+# CURL
+
+if( CURL_FOUND )
+	include_directories( SYSTEM "${CURL_INCLUDE_DIRS}" )
+
+	if( NOT DEFINED LOAD_CURL_AT_RUNTIME OR NOT LOAD_CURL_AT_RUNTIME)
+		set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} ${CURL_LIBRARIES} )
+	endif()
+endif()
 
 # VPX
 
@@ -630,6 +641,8 @@ file( GLOB HEADER_FILES
 	rendering/hwrenderer/*.h
 	rendering/hwrenderer/scene/*.h
 	*.h
+
+	${CMAKE_BINARY_DIR}/gitinfo.h
 )
 
 set ( SWRENDER_SOURCES
@@ -784,6 +797,26 @@ if (HAVE_VULKAN)
 endif()
 
 set (FASTMATH_SOURCES ${FASTMATH_SOURCES})
+
+if (DEFINED USE_UPDATER AND USE_UPDATER)
+	set (UPDATER_SOURCES
+		widgets/updatebuttonbar.cpp
+	)
+
+	add_compile_definitions("HAS_UPDATER")
+else()
+	set (UPDATER_SOURCES "")
+endif()
+
+if (DEFINED CURL_REQUIRED AND CURL_REQUIRED AND DEFINED LOAD_CURL_AT_RUNTIME AND LOAD_CURL_AT_RUNTIME)
+	set (CURL_SOURCES
+		curl_loader.cpp
+	)
+
+	add_compile_definitions("RUNTIME_CURL")
+else()
+	set (CURL_SOURCES "")
+endif()
 
 set (PCH_SOURCES
 	am_map.cpp
@@ -984,6 +1017,8 @@ set (PCH_SOURCES
 	widgets/settingspage.cpp
 	widgets/themedata.cpp
 	widgets/widgetresourcedata.cpp
+	${UPDATER_SOURCES}
+	${CURL_SOURCES}
 
 	common/audio/sound/i_sound.cpp
 	common/audio/sound/oalsound.cpp
@@ -1366,7 +1401,7 @@ if( UNIX )
 	endif()
 endif()
 
-target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash)
+target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash )
 include_directories(
 	BEFORE
 	.
@@ -1433,8 +1468,6 @@ include_directories(
 	../libraries/range_map/include
 	${SYSTEM_SOURCES_DIR}
 )
-
-add_dependencies( zdoom revision_check )
 
 set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
 set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
@@ -1610,6 +1643,8 @@ endif()
 install(TARGETS zdoom
 		DESTINATION ${INSTALL_PATH}
 		COMPONENT "Game executable")
+
+add_dependencies( zdoom revision_check )
 
 source_group("Audio Files" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/sound/.+")
 source_group("Game Data" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/gamedata/.+")

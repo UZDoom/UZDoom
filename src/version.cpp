@@ -79,3 +79,30 @@ int GetGitDistance()
 {
 	return GIT_DISTANCE;
 }
+
+VersionInfo GetCurrentVersion()
+{
+	return MakeVersion(VER_MAJOR, VER_MINOR, VER_REVISION);
+}
+
+VersionInfo GetCurrentVersionForUpdate(UpdateChannel channel)
+{
+#ifdef DEBUG_FORCE_UPDATE
+	return VersionInfo(1,0,0,0);
+#endif
+
+	switch(channel)
+	{
+	case UpdateChannel::STABLE:
+	case UpdateChannel::RELEASE_CANDIDATE:
+		return VersionInfo(VER_MAJOR, VER_MINOR, VER_REVISION, RC_REVISION);
+	case UpdateChannel::PREVIEW:
+	case UpdateChannel::TESTING:
+		return VersionInfo(VER_MAJOR, VER_MINOR, VER_REVISION, GIT_DISTANCE);
+	}
+}
+
+VersionInfo GetCurrentEngineVersion()
+{
+	return MakeVersion(ENG_MAJOR, ENG_MINOR, ENG_REVISION);
+}

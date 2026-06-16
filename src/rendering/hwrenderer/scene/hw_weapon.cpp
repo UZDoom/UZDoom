@@ -46,7 +46,7 @@ EXTERN_CVAR(Bool, r_drawplayersprites)
 EXTERN_CVAR(Bool, r_deathcamera)
 
 
-CVARD(Bool, gl_weapon_purelightlevel, false, CVAR_GLOBALCONFIG | CVAR_ARCHIVE, "Makes the lighting on weapon sprites (or models) purely match the sector's light level you're standing in");
+CVARD(Bool, gl_weapon_purelightlevel, false, CVAR_GLOBALCONFIG | CVAR_ARCHIVE, "[This feature is temporarily disabled] Makes the lighting on weapon sprites (or models) purely match the sector's light level you're standing in");
 
 //==========================================================================
 //
