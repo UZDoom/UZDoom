@@ -2089,6 +2089,7 @@ OptionMenu MessageOptions protected
 	Title 	"$MSGMNU_TITLE"
 	Option "$MSGMNU_SHOWMESSAGES",				"show_messages", "OnOff"
 	Slider "$MSGMNU_MESSAGEQUEUE",				"con_notifylines", 1, 10, 1,0
+	Slider "$MSGMNU_MESSAGEFADE",               "con_notifytime", 0.0, 10.0, 0.1,1
 	Option "$MSGMNU_STACKIDENTICAL",			"con_stackident", "OnOff"
 	Option "$MSGMNU_SHOWOBITUARIES",			"show_obituaries", "OnOff"
 	Option "$MSGMNU_SHOWSECRETS",				"cl_showsecretmessage", "OnOff"
