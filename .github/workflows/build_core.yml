@@ -26,15 +26,13 @@ on:
         required: true
         type: string
     secrets:
+      GPG_PRIVATE_KEY:
+        required: false
       MACOS_CERTIFICATE:
         required: false
       MACOS_CERTIFICATE_PASSWORD:
         required: false
       MACOS_CERTIFICATE_ID:
-        required: false
-      LINUX_CERTIFICATE:
-        required: false
-      LINUX_CERTIFICATE_ID:
         required: false
 
 jobs:
@@ -445,14 +443,9 @@ jobs:
         # our metainfo file is correct, but for some reason the checker crashes on it
         export LDAI_NO_APPSTREAM=1
 
-        if [[ -n "${{ secrets.LINUX_CERTIFICATE }}" ]]; then
-          if [[ -n "${{ secrets.LINUX_CERTIFICATE_ID }}" ]]; then
-            export LDAI_SIGN_KEY="${{ secrets.LINUX_CERTIFICATE_ID }}"
-            export LDAI_SIGN=1
-            echo "${{ secrets.LINUX_CERTIFICATE }}" | gpg --import
-          else
-            echo "::error ::Certificate defined, but no ID given"
-          fi
+        if [[ -n "${{ secrets.GPG_PRIVATE_KEY }}" ]]; then
+          export LDAI_SIGN=1
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
         else
           echo "::warning ::Not signing"
         fi

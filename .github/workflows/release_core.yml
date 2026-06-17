@@ -26,11 +26,15 @@ on:
       message:
         required: true
         type: string
+    secrets:
+      GPG_PRIVATE_KEY:
+        required: false
 
 jobs:
   upload_release:
     name: Upload Release
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: write
       actions: read
@@ -139,9 +143,17 @@ jobs:
             --arg     timestamp "${timestamp}" \
           | jq '. + { assets: $assets }'       \
             --argjson assets "${assets}"       \
-          | jq '. + { platforms: $platforms }'   \
-            --argjson platforms "${platforms}"   \
+          | jq '. + { platforms: $platforms }' \
+            --argjson platforms "${platforms}" \
           > release/_release.json
+
+          if [[ -n "${{ secrets.GPG_PRIVATE_KEY }}" ]]; then
+            echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
+            gpg --detach-sign --armor release/_release.json
+            gpg --list-secret-keys
+          else
+            echo "::warning ::Not signing"
+          fi
 
       - name: Upload
         uses: softprops/action-gh-release@v2.5.0 # FIXME: update this
