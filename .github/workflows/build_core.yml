@@ -259,7 +259,7 @@ jobs:
         BUILD_TYPE: ${{ inputs.build_type }}
         BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
-        config () { cmake -B build -S . -DPK3_QUIET_ZIPDIR=ON -G Ninja -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS ; }
+        config () { cmake -B build -S . -G Ninja -DPK3_QUIET_ZIPDIR=ON -DUSE_PCH=OFF -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS ; }
         build () { cmake --build build --config $BUILD_TYPE ; }
 
         if [[ "$CACHED" == "okay" ]] ; then

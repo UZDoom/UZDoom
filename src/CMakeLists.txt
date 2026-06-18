@@ -1321,7 +1321,10 @@ add_executable( zdoom WIN32 MACOSX_BUNDLE ${GAME_SOURCES} )
 
 target_include_directories( zdoom PRIVATE ${CMAKE_BINARY_DIR} )
 
-target_precompile_headers( zdoom PRIVATE g_pch.h )
+option(USE_PCH "Enable Pre-compiled headers" ON)
+if (USE_PCH)
+	target_precompile_headers( zdoom PRIVATE g_pch.h )
+endif()
 
 set_source_files_properties( ${FASTMATH_SOURCES} PROPERTIES COMPILE_FLAGS ${ZD_FASTMATH_FLAG} )
 set_source_files_properties( xlat/parse_xlat.cpp PROPERTIES OBJECT_DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c" )
@@ -1338,6 +1341,7 @@ if (ENABLE_IWYU)
 			CXX_INCLUDE_WHAT_YOU_USE "${IWYU}"
 			"-Xiwyu" "--mapping_file=${CMAKE_SOURCE_DIR}/tools/iwyu.imp"
 		)
+		set_source_files_properties(utility/name.cpp PROPERTIES SKIP_LINTING ON)
 	else()
 		message(WARNING "IWYU not found.")
 	endif()

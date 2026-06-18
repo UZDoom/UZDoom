@@ -42,6 +42,7 @@
 #include <filesystem>
 #include "filesystem.h"
 #include "cmdlib.h"
+#include "zstring.h"
 #ifdef _WIN32
 	#include <shellapi.h>
 #endif
@@ -705,7 +706,7 @@ bool UpdateButtonBar::OnMouseUp(const Point& pos, InputKey key)
 	return false;
 }
 
-double UpdateButtonBar::GetPreferredHeight() const
+double UpdateButtonBar::GetPreferredHeight()
 {
 	return bar_height;
 }

@@ -21,10 +21,11 @@
 **
 */
 
-#include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include <stdlib.h>
+#include <cstdbool>
+#include <cstdint>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 #ifdef _WIN32
 // windows platform code uses special stdout handling, let's make sure to use that

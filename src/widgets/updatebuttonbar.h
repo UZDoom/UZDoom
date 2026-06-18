@@ -20,6 +20,7 @@
 
 #include "basics.h"
 #include "version.h"
+#include "zstring.h"
 
 class LauncherWindow;
 class PushButton;
@@ -41,7 +42,7 @@ class UpdateButtonBar : public Widget
 		UpdateButtonBar(LauncherWindow *parent);
 		void UpdateLanguage();
 
-		double GetPreferredHeight() const;
+		double GetPreferredHeight() override;
 
 		void CheckForUpdate(bool force = false);
 
