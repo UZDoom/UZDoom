@@ -8,10 +8,13 @@
 #include "core/truetypefont.h"
 #include "core/pathfill.h"
 #include "window/window.h"
-#include <vector>
-#include <unordered_map>
-#include <stdexcept>
+
+#include <algorithm>
+#include <cmath>
 #include <cstring>
+#include <stdexcept>
+#include <unordered_map>
+#include <vector>
 
 #if defined(__SSE2__) || defined(_M_X64)
 #include <immintrin.h>
