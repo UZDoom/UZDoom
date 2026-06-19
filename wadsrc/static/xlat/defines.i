@@ -236,7 +236,9 @@ enum
 	ML_FIRSTSIDEONLY			= 0x00800000,
 	ML_BLOCKPROJECTILE			= 0x01000000,
 	ML_BLOCKUSE					= 0x02000000,
-	ML_BLOCKLANDMONSTERS		= 0x80000001,	// goes into the second flag word.
+ 	// goes into the second flag word.
+	ML_BLOCKLANDMONSTERS		= 0x80000001,
+	ML_RESERVEDLINEFLAG			= 0x80000002,
 
 	//
 	ML_PASSTHROUGH				= -1,
