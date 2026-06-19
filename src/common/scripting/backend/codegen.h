@@ -40,7 +40,7 @@ struct FState; // needed for FxConstant. Maybe move the state constructor to a s
 #define SAFE_DELETE(p) if (p!=NULL) { delete p; p=NULL; }
 #define RESOLVE(p,c) if (p!=NULL) p = p->Resolve(c)
 #define ABORT(p) if (!(p)) { delete this; return NULL; }
-#define SAFE_RESOLVE(p,c) RESOLVE(p,c); ABORT(p) 
+#define SAFE_RESOLVE(p,c) RESOLVE(p,c); ABORT(p)
 #define SAFE_RESOLVE_OPT(p,c) if (p!=NULL) { SAFE_RESOLVE(p,c) }
 
 class VMFunctionBuilder;
@@ -319,7 +319,7 @@ protected:
 	{
 	}
 
-public:	
+public:
 	virtual ~FxExpression() {}
 	virtual FxExpression *Resolve(FCompileContext &ctx);
 
@@ -511,7 +511,7 @@ public:
 		ValueType = value.Type = TypeVMFunction;
 		isresolved = true;
 	}
-	
+
 	FxConstant(PFunction* rawptr, const FScriptPosition& pos) : FxExpression(EFX_Constant, pos)
 	{
 		value.pointer = rawptr;
@@ -2321,7 +2321,7 @@ public:
 
 	FxExpression *Resolve(FCompileContext&)
 	{
-		// This should never reach the backend in a supported context, 
+		// This should never reach the backend in a supported context,
 		// it's just needed to extend argument lists with the skipped parameters and needs to be resolved by the parent node.
 		ScriptPosition.Message(MSG_ERROR, "Named arguments not supported here");
 		delete this;

@@ -24,23 +24,23 @@
 #include <stdint.h>
 
 #if defined( __GNUC__ )
-    #ifdef __MINGW32__
-        #define HQX_CALLCONV __stdcall
-    #else
-        #define HQX_CALLCONV
-    #endif
+	#ifdef __MINGW32__
+		#define HQX_CALLCONV __stdcall
+	#else
+		#define HQX_CALLCONV
+	#endif
 #else
-    #define HQX_CALLCONV
+	#define HQX_CALLCONV
 #endif
 
 #if 0 //defined(_WIN32)
-    #ifdef DLL_EXPORT
-        #define HQX_API __declspec(dllexport)
-    #else
-        #define HQX_API __declspec(dllimport)
-    #endif
+	#ifdef DLL_EXPORT
+		#define HQX_API __declspec(dllexport)
+	#else
+		#define HQX_API __declspec(dllimport)
+	#endif
 #else
-    #define HQX_API
+	#define HQX_API
 #endif
 
 HQX_API void HQX_CALLCONV hqxInit(void);

@@ -303,4 +303,3 @@ AActor *DSpotState::GetRandomSpot(PClassActor *type, bool onlyonce)
 	if (list != NULL) return list->GetRandomSpot(onlyonce);
 	return NULL;
 }
-

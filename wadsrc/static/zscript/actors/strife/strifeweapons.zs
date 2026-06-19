@@ -50,7 +50,7 @@ class StrifePuff : Actor
 		Stop;
 	}
 }
-	
+
 
 // A spark when you hit something that doesn't bleed ------------------------
 // Only used by the dagger.
@@ -69,4 +69,3 @@ class StrifeSpark : StrifePuff
 		Stop;
 	}
 }
-

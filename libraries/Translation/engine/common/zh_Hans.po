@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
-"projects/uzdoom/common/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "按Y键确认，按N键取消。"
@@ -264,7 +263,7 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "武器1"
 
 # only show appropriate slots per game
-#
+# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "武器2"
 
@@ -308,9 +307,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "上一件物品"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "自定义地图控制"
+msgstr "地图控制"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "地图控制"
@@ -659,7 +657,7 @@ msgid "AUTOMAPMNU_FOLLOW"
 msgstr "跟随玩家"
 
 msgid "AUTOMAPMNU_LINEALPHA"
-msgstr "线条透明度"
+msgstr "线条不透明度"
 
 msgid "AUTOMAPMNU_LINETHICKNESS"
 msgstr "线条粗细"
@@ -1261,7 +1259,7 @@ msgid "GLTEXMNU_RESIZETEX"
 msgstr "缩放纹理"
 
 msgid "GLTEXMNU_RESIZESPR"
-msgstr "缩放精灵"
+msgstr "缩放精灵图"
 
 msgid "GLTEXMNU_RESIZEFNT"
 msgstr "缩放字体"
@@ -1276,7 +1274,7 @@ msgid "VIDMNU_TITLE"
 msgstr "视频模式"
 
 msgid "OPTVAL_LETTERBOX"
-msgstr "信箱边框"
+msgstr "有边框"
 
 msgid "OPTVAL_STRETCH"
 msgstr "拉伸"
@@ -1300,7 +1298,7 @@ msgid "VIDMNU_SCALEMODE"
 msgstr "分辨率比例"
 
 msgid "VIDMNU_SCALEFACTOR"
-msgstr "比例因子"
+msgstr "缩放比例"
 
 msgid "VIDMNU_USELINEAR"
 msgstr "使用线性缩放(全屏)"
@@ -1554,17 +1552,6 @@ msgstr "无搜索结果。"
 
 msgid "OS_LABEL"
 msgstr "搜索："
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "1"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-msgid "REQUIRED_CHARACTERS"
-msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "完整选项菜单"

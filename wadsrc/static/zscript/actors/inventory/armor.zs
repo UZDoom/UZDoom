@@ -45,7 +45,7 @@ class Armor : Inventory
 
 class BasicArmor : Armor
 {
-	
+
 	int AbsorbCount;
 	double SavePercent;
 	int MaxAbsorb;
@@ -57,7 +57,7 @@ class BasicArmor : Armor
 	private uint ArmorFlags;
 
 	flagdef AltSemantics: ArmorFlags, 0; // Zandronum behaviour.
-	
+
 	Default
 	{
 		Inventory.Amount 0;
@@ -129,7 +129,7 @@ class BasicArmor : Armor
 		}
 		return false;
 	}
-	
+
 	//===========================================================================
 	//
 	// ABasicArmor :: AbsorbDamage
@@ -143,7 +143,7 @@ class BasicArmor : Armor
 		if (!DamageTypeDefinition.IgnoreArmor(damageType))
 		{
 			int full = MAX(0, MaxFullAbsorb - AbsorbCount);
-			
+
 			if (damage < full)
 			{
 				saved = damage;
@@ -151,7 +151,7 @@ class BasicArmor : Armor
 			else
 			{
 				saved = full + int((damage - full) * SavePercent);
-				if (MaxAbsorb > 0 && saved + AbsorbCount > MaxAbsorb) 
+				if (MaxAbsorb > 0 && saved + AbsorbCount > MaxAbsorb)
 				{
 					saved = MAX(0,  MaxAbsorb - AbsorbCount);
 				}
@@ -209,7 +209,7 @@ class BasicArmor : Armor
 //
 //===========================================================================
 
-class BasicArmorBonus : Armor 
+class BasicArmorBonus : Armor
 {
 	double SavePercent;	// The default, for when you don't already have armor
 	int MaxSaveAmount;
@@ -218,7 +218,7 @@ class BasicArmorBonus : Armor
 	int SaveAmount;
 	int BonusCount;
 	int BonusMax;
-	
+
 	property prefix: Armor;
 	property MaxSaveAmount: MaxSaveAmount;
 	property SaveAmount : SaveAmount;
@@ -235,7 +235,7 @@ class BasicArmorBonus : Armor
 		Inventory.MaxAmount 0;
 		Armor.SavePercent 33.335;
 	}
-	
+
 	//===========================================================================
 	//
 	// ABasicArmorBonus :: CreateCopy
@@ -321,7 +321,7 @@ class BasicArmorBonus : Armor
 		return true;
 	}
 
-	
+
 	override void SetGiveAmount(Actor receiver, int amount, bool bycheat)
 	{
 		SaveAmount *= amount;
@@ -360,7 +360,7 @@ class BasicArmorPickup : Armor
 		+Inventory.AUTOACTIVATE;
 		Inventory.MaxAmount 0;
 	}
-	
+
 	//===========================================================================
 	//
 	// ABasicArmorPickup :: CreateCopy
@@ -377,7 +377,7 @@ class BasicArmorPickup : Armor
 
 		return copy;
 	}
-	
+
 	//===========================================================================
 	//
 	// ABasicArmorPickup :: Use
@@ -427,7 +427,7 @@ class BasicArmorPickup : Armor
 				return false;
 			}
 		}
-		
+
 		armor.SavePercent = clamp(SavePercent, 0, 100) / 100;
 		armor.Amount = armor.bAltSemantics ? (min(SaveAmount + armor.Amount, lMaxAmount)) : (SaveAmount + armor.BonusCount);
 		armor.MaxAmount = SaveAmount;
@@ -438,12 +438,12 @@ class BasicArmorPickup : Armor
 		armor.ActualSaveAmount = SaveAmount;
 		return true;
 	}
-	
+
 	override void SetGiveAmount(Actor receiver, int amount, bool bycheat)
 	{
 		SaveAmount *= amount;
 	}
-	
+
 	int GetSaveAmount ()
 	{
 		return !bIgnoreSkill ? int(SaveAmount * G_SkillPropertyFloat(SKILLP_ArmorFactor)) : SaveAmount;
@@ -463,16 +463,16 @@ class BasicArmorPickup : Armor
 
 class HexenArmor : Armor
 {
-	
+
 	double Slots[5];
 	double SlotsIncrement[4];
-	
+
 	Default
 	{
 		+Inventory.KEEPDEPLETED
 		+Inventory.UNTOSSABLE
 	}
-	
+
 	//===========================================================================
 	//
 	// AHexenArmor :: CreateCopy
@@ -600,7 +600,7 @@ class HexenArmor : Armor
 				}
 				int saved = int(damage * savedPercent / 100.);
 				if (saved > savedPercent*2)
-				{	
+				{
 					saved = int(savedPercent*2);
 				}
 				newdamage -= saved;
@@ -621,6 +621,5 @@ class HexenArmor : Armor
 		{
 			Slots[i] = 0;
 		}
-	}	
+	}
 }
-

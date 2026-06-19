@@ -64,7 +64,7 @@ protected:
 
 public:
 	FSoftwareTexture(FGameTexture *tex);
-	
+
 	virtual ~FSoftwareTexture()
 	{
 		FreeAllSpans();
@@ -74,7 +74,7 @@ public:
 	{
 		return mTexture;
 	}
-	
+
 	// The feature from hell... :(
 	bool useWorldPanning(FLevelLocals *Level) const
 	{
@@ -90,9 +90,9 @@ public:
 	{
 		return mTexture->GetRotations();
 	}
-	
+
 	int GetSkyOffset() const { return mTexture->GetSkyOffset(); }
-	
+
 	int GetWidth () { return mTexture->GetTexelWidth(); }
 	int GetHeight () { return mTexture->GetTexelHeight(); }
 	int GetWidthBits() { return WidthBits; }
@@ -104,28 +104,28 @@ public:
 	// Now with improved offset adjustment.
 	int GetLeftOffset(int adjusted) { return mTexture->GetTexelLeftOffset(adjusted); }
 	int GetTopOffset(int adjusted) { return mTexture->GetTexelTopOffset(adjusted); }
-	
+
 	// Interfaces for the different renderers. Everything that needs to check renderer-dependent offsets
 	// should use these, so that if changes are needed, this is the only place to edit.
-	
+
 	// For the original software renderer
 	int GetLeftOffsetSW() { return GetLeftOffset(r_spriteadjustSW); }
 	int GetTopOffsetSW() { return GetTopOffset(r_spriteadjustSW); }
 	double GetScaledLeftOffsetSW() { return mTexture->GetDisplayLeftOffset(r_spriteadjustSW); }
 	double GetScaledTopOffsetSW() { return mTexture->GetDisplayTopOffset(r_spriteadjustSW); }
-	
+
 	DVector2 GetScale() const { return Scale; }
 	int GetPhysicalWidth() { return mPhysicalWidth; }
 	int GetPhysicalHeight() { return mPhysicalHeight; }
 	int GetPhysicalScale() const { return mPhysicalScale; }
-	
+
 	virtual void Unload()
 	{
 		Pixels.Reset();
 		PixelsBgra.Reset();
 		for (auto& d : Unlockeddata) d = {};
 	}
-	
+
 	// Returns true if the next call to GetPixels() will return an image different from the
 	// last call to GetPixels(). This should be considered valid only if a call to CheckModified()
 	// is immediately followed by a call to GetPixels().
@@ -135,7 +135,7 @@ public:
 	void CreatePixelsBgraWithMipmaps();
 	void GenerateBgraMipmaps();
 	int MipmapLevels();
-	
+
 	// Returns true if GetPixelsBgra includes mipmaps
 	virtual bool Mipmapped() { return true; }
 

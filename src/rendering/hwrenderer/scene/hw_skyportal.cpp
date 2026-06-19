@@ -61,7 +61,7 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 	}
 	else
 	{
-		if (origin->texture[0]==origin->texture[1] && origin->doublesky) origin->doublesky=false;	
+		if (origin->texture[0]==origin->texture[1] && origin->doublesky) origin->doublesky=false;
 
 		if (origin->texture[0])
 		{
@@ -71,7 +71,7 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 		}
 
 		state.AlphaFunc(Alpha_Greater, 0.f);
-		
+
 		if (origin->doublesky && origin->texture[1])
 		{
 			vertexBuffer->RenderDome(state, origin->texture[1], origin->x_offset[1], origin->y_offset, false, FSkyVertexBuffer::SKYMODE_SECONDLAYER, !!(di->Level->flags & LEVEL_FORCETILEDSKY));

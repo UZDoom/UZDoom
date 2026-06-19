@@ -118,8 +118,8 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 
 		// [SP] Allow player to tone down intensity of pickup flash.
 		cnt = (int)( cnt * pickup_fade_scalar );
-		
-		V_AddBlend (RPART(gameinfo.pickupcolor)/255.f, GPART(gameinfo.pickupcolor)/255.f, 
+
+		V_AddBlend (RPART(gameinfo.pickupcolor)/255.f, GPART(gameinfo.pickupcolor)/255.f,
 					BPART(gameinfo.pickupcolor)/255.f, cnt > 128 ? 0.5f : cnt / 255.f, blend);
 	}
 
@@ -199,7 +199,7 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 		else
 		{
 			V_AddBlend (0.25f, 0.25f, 0.853f, 0.4f, blend);
-		}		
+		}
 	}
 
 	// cap opacity if desired
@@ -368,4 +368,3 @@ void V_DrawBlend(sector_t* viewsector)
 	const PalEntry bcolor(255, uint8_t(blend.X), uint8_t(blend.Y), uint8_t(blend.Z));
 	Dim(drawer, bcolor, blend.W, 0, 0, drawer->GetWidth(), drawer->GetHeight());
 }
-

@@ -362,7 +362,7 @@ void HostSubPage::OnGeometryChanged()
 	AltDeathmatchCheckbox->SetFrameGeometry(0.0, y, wSize, AltDeathmatchCheckbox->GetPreferredHeight());
 
 	y = 0.0;
-	
+
 	TicDupLabel->SetFrameGeometry(w - DropdownSize, y, DropdownSize, TicDupLabel->GetPreferredHeight());
 	y += TicDupLabel->GetPreferredHeight();
 	TicDupDropdown->SetFrameGeometry(w - DropdownSize, y, DropdownSize, TicDupDropdown->GetPreferredHeight());

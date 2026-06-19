@@ -267,7 +267,7 @@ void R_InitTranslationTables ()
 			stdremaps[0].Remap[i] = 114+(i-225); // yellow
 			stdremaps[1].Remap[i] = 145+(i-225); // red
 			stdremaps[2].Remap[i] = 190+(i-225); // blue
-			
+
 			stdremaps[0].Palette[i] = GPalette.BaseColors[114+(i-225)] | MAKEARGB(255,0,0,0);
 			stdremaps[1].Palette[i] = GPalette.BaseColors[145+(i-225)] | MAKEARGB(255,0,0,0);
 			stdremaps[2].Palette[i] = GPalette.BaseColors[190+(i-225)] | MAKEARGB(255,0,0,0);
@@ -600,8 +600,8 @@ static void R_CreatePlayerTranslation (float h, float s, float v, const FPlayerC
 			}
 		}
 	}
-		
-	
+
+
  }
 
 //----------------------------------------------------------------------------
@@ -772,7 +772,7 @@ void R_ParseTrnslate()
 			{
 				sc.MustGetToken(TK_StringConst);
 				int pallump = fileSystem.CheckNumForFullName(sc.String, true, FileSys::ns_global);
-				if (pallump >= 0)	// 
+				if (pallump >= 0)	//
 				{
 					int start = 0;
 					if (sc.CheckToken(','))
@@ -827,4 +827,3 @@ DEFINE_ACTION_FUNCTION(_Translation, AddTranslation)
 	auto trans = GPalette.StoreTranslation(TRANSLATION_User, &NewTranslation);
 	ACTION_RETURN_INT(trans.index());
 }
-

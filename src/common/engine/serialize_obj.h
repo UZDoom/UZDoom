@@ -29,7 +29,7 @@ template<class T>
 FSerializer &Serialize(FSerializer &arc, const char *key, TObjPtr<T> &value, TObjPtr<T> *)
 {
 	Serialize(arc, key, value.o, nullptr);
-	return arc; 
+	return arc;
 }
 
 template<class T>

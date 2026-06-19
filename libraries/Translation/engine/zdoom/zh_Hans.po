@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 10:09+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
-"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
-"projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
+"Last-Translator: OldCactusCN <huchenyi_2019@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -43,7 +42,7 @@ msgstr ""
 
 msgid "QSAVESPOT"
 msgstr ""
-"你还没选择快速保存的槽位咧！\n"
+"你还没选择快速保存的槽位呢！\n"
 "\n"
 "按下任意键。"
 
@@ -93,8 +92,8 @@ msgstr "（按下Y键退出）"
 
 msgid "QUITMSG1"
 msgstr ""
-"别走嘛，还有好多恶魔\n"
-"等着你来干掉咧！"
+"别走！还有好多恶魔\n"
+"等着你来干掉！"
 
 msgid "QUITMSG2"
 msgstr ""
@@ -104,22 +103,22 @@ msgstr ""
 msgid "QUITMSG3"
 msgstr ""
 "要换成我，可不会选择退出。\n"
-"DOS比这糟多啦。"
+"DOS可比这糟多了。"
 
 msgid "QUITMSG4"
 msgstr ""
-"你想说你比起我，\n"
-"更爱DOS是吗？"
+"你是说比起我，\n"
+"你更喜欢DOS是吗？"
 
 msgid "QUITMSG5"
 msgstr ""
 "先别急着走 — 转角\n"
-"那儿还有只恶魔咧！"
+"那儿还有只恶魔呢！"
 
 msgid "QUITMSG6"
 msgstr ""
-"你给我等着，下次你进来的时候\n"
-"就把你干碎。"
+"你丫给我等着，下次你一进来\n"
+"我就把你干碎。"
 
 msgid "QUITMSG7"
 msgstr "哼，那你就走吧。好像我会在乎似的。"
@@ -160,8 +159,8 @@ msgstr ""
 
 msgid "QUITMSG14"
 msgstr ""
-"我没因为你想离开就\n"
-"扇你几巴掌算你走运。"
+"想离开？我不扇你几巴掌\n"
+"你就算走运了。"
 
 msgid "QUITMSG15"
 msgstr ""
@@ -170,8 +169,8 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"杀卡壳了……\n"
-"真让人失望！"
+"射得正爽呢……\n"
+"真吊人胃口！"
 
 msgid "QUITMSG17"
 msgstr ""
@@ -260,13 +259,13 @@ msgid "HUSTR_MSGU"
 msgstr "[消息未发送]"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr "你在喃喃自语"
+msgstr "你喃喃自语"
 
 msgid "HUSTR_TALKTOSELF2"
 msgstr "是谁？"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr "自己吓自己"
+msgstr "你吓了自己一跳"
 
 msgid "HUSTR_TALKTOSELF4"
 msgstr "你开始胡言乱语"
@@ -411,11 +410,12 @@ msgstr "你感觉变轻了"
 msgid "TXT_GRAVITY"
 msgstr "重力将你拉了下来"
 
+#, fuzzy
 msgid "TXT_NOTARGET_ON"
-msgstr "无目标：开"
+msgstr "无视模式：开"
 
 msgid "TXT_NOTARGET_OFF"
-msgstr "无目标：关"
+msgstr "无视模式：关"
 
 msgid "TXT_ANUBIS_ON"
 msgstr "“吓得发抖！”"
@@ -1079,7 +1079,7 @@ msgid "OB_MPBFG_SPLASH"
 msgstr "%o 无法躲藏 %k 的BFG。"
 
 msgid "OB_RAILGUN"
-msgstr "%o 死于 %k 的轨道枪。"
+msgstr "%o 被 %k 的轨道枪打了个对穿。"
 
 msgid "OB_MPBFG_MBF"
 msgstr "%o 被 %k 的BFG烧死了。"
@@ -1261,7 +1261,7 @@ msgid "AMMO_PHOENIXROD"
 msgstr "火焰宝珠"
 
 msgid "TAG_STAFF"
-msgstr "法杖"
+msgstr "铁头杖"
 
 msgid "TAG_GOLDWAND"
 msgstr "精灵魔杖"
@@ -2160,7 +2160,7 @@ msgstr "毛勒"
 msgid "TAG_GLAUNCHER1"
 msgstr "榴弹发射器"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "榴弹发射器"
 
@@ -3120,7 +3120,7 @@ msgid "GMPLYMNU_ALLOWFREELOOK"
 msgstr "允许自由视角"
 
 msgid "GMPLYMNU_ALLOWFOV"
-msgstr "允许调整FOV"
+msgstr "允许调整视野"
 
 msgid "GMPLYMNU_BFGFREEAIM"
 msgstr "允许BFG瞄准"
@@ -3339,7 +3339,7 @@ msgid "CMPTMNU_MASKEDMIDTEX"
 msgstr "忽略透明通道中层纹理的Y轴偏移"
 
 msgid "CMPTMNU_SPRITESORT"
-msgstr "反转精灵排序"
+msgstr "反转精灵图排序"
 
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "音效行为"
@@ -3393,7 +3393,7 @@ msgid "PLYRMNU_PLAYERSKIN"
 msgstr "外观"
 
 msgid "PLYRMNU_SWITCHONPICKUP"
-msgstr "拾取新武器时自动切换"
+msgstr "自动切换至拾起的新武器"
 
 msgid "PLYRMNU_PRESSSPACE"
 msgstr "按 \\cj空格键"
@@ -3795,7 +3795,7 @@ msgid "DSPLYMNU_BLENDMETHOD"
 msgstr "透明渲染模式"
 
 msgid "DSPLYMNU_WIPETYPE"
-msgstr "屏幕擦拭样式"
+msgstr "屏幕转场样式"
 
 msgid "DSPLYMNU_SHOWENDOOM"
 msgstr "显示ENDOOM画面"
@@ -3846,7 +3846,7 @@ msgid "DSPLYMNU_MAXDECALS"
 msgstr "贴花数量"
 
 msgid "DSPLYMNU_PLAYERSPRITES"
-msgstr "显示玩家(武器)精灵"
+msgstr "显示玩家(武器)精灵图"
 
 msgid "DSPLYMNU_DEATHCAM"
 msgstr "死亡时(第三人称)镜头"
@@ -4008,10 +4008,10 @@ msgid "OPTVAL_PARTICLES"
 msgstr "粒子"
 
 msgid "OPTVAL_SPRITES"
-msgstr "精灵"
+msgstr "精灵图"
 
 msgid "OPTVAL_SPRITESPARTICLES"
-msgstr "精灵和粒子"
+msgstr "精灵图与粒子效果"
 
 msgid "OPTVAL_MELT"
 msgstr "融化"
@@ -4354,7 +4354,7 @@ msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "动态光源(硬件)"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
-msgstr "光源影响精灵"
+msgstr "光照影响精灵图"
 
 msgid "GLLIGHTMNU_LIGHTPARTICLES"
 msgstr "光源影响粒子"
@@ -4381,19 +4381,20 @@ msgid "GLPREFMNU_ENVSTEALTH"
 msgstr "夜视时显示隐身怪物"
 
 msgid "GLPREFMNU_SPRCLIP"
-msgstr "调整精灵剪裁"
+msgstr "调整精灵图剪裁"
 
 msgid "GLPREFMNU_SPRBLEND"
-msgstr "平滑精灵边缘"
+msgstr "平滑精灵图边缘"
 
 msgid "GLPREFMNU_FUZZSTYLE"
 msgstr "模糊样式"
 
+#, fuzzy
 msgid "GLPREFMNU_SPRBILLBOARD"
-msgstr "精灵公告板"
+msgstr "精灵图广告牌"
 
 msgid "GLPREFMNU_SPRBILLFACECAMERA"
-msgstr "精灵面部相机"
+msgstr "精灵图面朝摄像机"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "粒子样式"
@@ -4657,7 +4658,7 @@ msgid "SCALEMNU_BORDER"
 msgstr "画面边框"
 
 msgid "SCALEMNU_FACTOR"
-msgstr "缩放因子"
+msgstr "缩放比例"
 
 msgid "SCALEMNU_RATIO"
 msgstr "宽高比"
@@ -4742,7 +4743,7 @@ msgid "GMPLYMNU_MULTIPLAYERTHINGS"
 msgstr "合作模式中刷出多人专用物体"
 
 msgid "DSPLYMNU_SPRITESHADOW"
-msgstr "精灵阴影"
+msgstr "精灵图阴影"
 
 # Will enable sprite shadows for monster and player sprites
 msgid "OPTVAL_SPRSHADALWAYS"
@@ -4750,7 +4751,7 @@ msgstr "怪物和玩家"
 
 # the FOV slider
 msgid "DSPLYMNU_FOV"
-msgstr "FOV"
+msgstr "视野"
 
 msgid "CMPTMNU_NOMBF21"
 msgstr "禁用MBF21特性"
@@ -4788,7 +4789,7 @@ msgstr "使用经典的HUD缩放"
 
 # hud_scalefactor
 msgid "SCALEMNU_HUD_SCALEFACTOR"
-msgstr "HUD缩放因子"
+msgstr "HUD缩放比例"
 
 # Any Actor that only appears in co-op is disabled
 msgid "GMPLYMNU_COOPTHINGS"
@@ -5117,7 +5118,7 @@ msgstr "红钥匙"
 # brightness. Without this option, weapon sprites are generally brighter
 # compared to the sector's brightness
 msgid "GLPREFMNU_WPNPURELIGHT"
-msgstr "武器精灵上使用区域亮度"
+msgstr "应用区域亮度至武器精灵图"
 
 # Mark the player as ready to advance during the intermission in multiplayer
 # games
@@ -5201,8 +5202,7 @@ msgstr ""
 "这是一个提示信息示例。\n"
 "这里是一些补充说明文字。\n"
 "…\n"
-"这是一行非常长的文字，似乎一直说个不停，但又没有提到任何有趣的内容，这么长似"
-"乎仅仅是因为开发者难以解释该选项的具体功能。"
+"这是一行非常长的文字，似乎一直说个不停，但又没有提到任何有趣的内容，这么长似乎仅仅是因为开发者难以解释该选项的具体功能。"
 
 msgid "ACCMNU_TOOLTIP_LINES"
 msgstr "提示信息行数"
@@ -5235,14 +5235,10 @@ msgid "DSPLYMNU_IMAGEADJUST_TOP2"
 msgstr "放大/超采样可能导致输出不正确。"
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
-msgstr ""
-"补偿你的显示器局限性。调整直到垂直灰色块消失。请勿用此功能让游戏画面更亮，仅"
-"用于确保图像与你的设置相匹配。"
+msgstr "补偿你的显示器局限性。调整直到垂直灰色块消失。请勿用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
-msgstr ""
-"用于补偿显示器无法正确显示暗像素的情况。调整直至对角线上的白色方块消失。请勿"
-"用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
+msgstr "用于补偿显示器无法正确显示暗像素的情况。调整直至对角线上的白色方块消失。请勿用此功能让游戏画面更亮，仅用于确保图像与你的设置相匹配。"
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "将此菜单中的所有选项重置为默认设置。"
@@ -5251,9 +5247,7 @@ msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr "应用线性亮度调整。根据个人喜好调整，或在黑暗中查看。"
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
-msgstr ""
-"调整相似颜色之间的感知差异。控制图像看起来清晰或模糊的程度。根据个人喜好进行"
-"调整。"
+msgstr "调整相似颜色之间的感知差异。控制图像看起来清晰或模糊的程度。根据个人喜好进行调整。"
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr "调整颜色的强度，使图像看起来更鲜艳或更柔和。根据个人喜好进行调整。"
@@ -5324,9 +5318,6 @@ msgstr "超级立体声展宽"
 msgid "CNTRLMNU_ADJUST_LIGHTS"
 msgstr "光照调整"
 
-msgid "LANG_NATIVE"
-msgstr "简体中文"
-
 msgid "OPTVAL_SMOOTH"
 msgstr "平滑"
 
@@ -5338,9 +5329,6 @@ msgstr "毛勒"
 
 msgid "TAG_GLAUNCHER"
 msgstr "榴弹发射器"
-
-msgid "LANG_ENG"
-msgstr "Simplified Chinese"
 
 msgid "ACTION_OPENWADDIR"
 msgstr "浏览WAD"
@@ -5368,3 +5356,53 @@ msgstr "最大生命时准星颜色"
 
 msgid "HUDMNU_CROSSHAIRCOLORFULL"
 msgstr "满生命时准星颜色"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "双击阈值"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "填充颜色"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "填充不透明度"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s 秒"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s 毫秒"
+
+msgid "VALFORMAT_METER"
+msgstr "%s 米"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s 赫兹"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s 帧/秒"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s 度"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s 分贝/米"
+
+msgid "VALFORMAT_DB"
+msgstr "%s 分贝"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "触发双击事件所需的连续按键间隔"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "自动(原版优先)"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "自动(ZDoom优先)"

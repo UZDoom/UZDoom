@@ -12,6 +12,7 @@ inline constexpr uint32_t MEVENT_EVENTPARM(uint32_t x) { return ((x) & 0xffffff)
 
 enum EMidiEvent : uint8_t
 {
+	MEVENT_SHORTMSG = 0,
 	MEVENT_TEMPO = 1,
 	MEVENT_NOP = 2,
 	MEVENT_LONGMSG = 128,

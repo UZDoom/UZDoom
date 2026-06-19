@@ -763,7 +763,7 @@ bool FInputDevice::ProcessRawInput(RAWINPUT *raw, int code)
 //
 // FInputDevice :: WndProcHook
 //
-// Gives subclasses a chance to intercept window messages. 
+// Gives subclasses a chance to intercept window messages.
 //
 //==========================================================================
 
@@ -771,4 +771,3 @@ bool FInputDevice::WndProcHook(HWND hWnd, UINT message, WPARAM wParam, LPARAM lP
 {
 	return false;
 }
-

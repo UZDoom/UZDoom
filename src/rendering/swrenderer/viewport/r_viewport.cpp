@@ -53,7 +53,7 @@ namespace swrenderer
 	RenderViewport::RenderViewport()
 	{
 	}
-	
+
 	RenderViewport::~RenderViewport()
 	{
 	}
@@ -198,7 +198,7 @@ namespace swrenderer
 		}
 
 		CenterY = (viewheight / 2.0) + dy;
-		viewwindow.centery = xs_ToInt(CenterY);
+		viewwindow.centery = RoundToZero(CenterY);
 		globaluclip = -CenterY / InvZtoScale;
 		globaldclip = (viewheight - CenterY) / InvZtoScale;
 	}

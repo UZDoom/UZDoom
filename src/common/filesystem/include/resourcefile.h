@@ -33,7 +33,7 @@
 #include "fs_decompress.h"
 
 namespace FileSys {
-	
+
 class StringPool;
 std::string ExtractBaseName(const char* path, bool include_extension = false);
 void strReplace(std::string& str, const char* from, const char* to);
@@ -172,6 +172,7 @@ private:
 public:
 	static FResourceFile *OpenResourceFile(const char *filename, FileReader &file, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr, bool optional = false);
 	static FResourceFile *OpenResourceFile(const char *filename, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr, bool optional = false);
+	static FResourceFile *OpenResourceFileMemory(const char *filename, const void * data, size_t len, bool containeronly = false, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr, bool optional = false);
 	static FResourceFile *OpenDirectory(const char *filename, LumpFilterInfo* filter = nullptr, FileSystemMessageFunc Printf = nullptr, StringPool* sp = nullptr, bool optional = false);
 	virtual ~FResourceFile();
 	// If this FResourceFile represents a directory, the Reader object is not usable so don't return it.

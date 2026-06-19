@@ -53,4 +53,3 @@ class RatBuddy : Actor
 		Stop;
 	}
 }
-

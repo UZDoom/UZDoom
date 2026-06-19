@@ -240,7 +240,7 @@ struct MoviePlayer native
 
 //---------------------------------------------------------------------------
 //
-// 
+//
 //
 //---------------------------------------------------------------------------
 
@@ -283,12 +283,12 @@ class MoviePlayerJob : SkippableScreenJob
 		empty.Push(int(soundname));
 		return CreateWithSoundInfo(filename, empty, flags, frametime);
 	}
-	
+
 	virtual void DrawFrame()
 	{
 		let tex = player.GetTexture();
 		let size = TexMan.GetScaledSize(tex);
-		
+
 		if (!(flag & MoviePlayer.FIXEDVIEWPORT) || (size.x <= 320 && size.y <= 200) || size.x >= 640 || size.y >= 480)
 		{
 			Screen.DrawTexture(tex, false, 0, 0, DTA_FullscreenEx, FSMode_ScaleToFit43, DTA_Masked, false);
@@ -372,7 +372,7 @@ class ScreenJobRunner : Object UI
 	int terminateState;
 	int fadeticks;
 	int last_paused_tic;
-	
+
 	native static void setTransition(int type);
 
 	ESkipType GetSkipType() const
@@ -448,18 +448,18 @@ class ScreenJobRunner : Object UI
 	bool CanWipe()
 	{
 		if (index < jobs.Size()) return !jobs[max(0, index)].nowipe;
-		return true;		
+		return true;
 	}
 
 	//---------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//---------------------------------------------------------------------------
 
 	protected void AdvanceJob(bool skip)
 	{
-		if (index == jobs.Size()-1) 
+		if (index == jobs.Size()-1)
 		{
 			index++;
 			return; // we need to retain the last element until the runner is done.
@@ -486,13 +486,13 @@ class ScreenJobRunner : Object UI
 
 	//---------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//---------------------------------------------------------------------------
 
 	virtual int DisplayFrame(double smoothratio)
 	{
-		if (jobs.Size() == 0) 
+		if (jobs.Size() == 0)
 		{
 			DrawReadiedPlayers(smoothratio);
 			return 1;
@@ -516,7 +516,7 @@ class ScreenJobRunner : Object UI
 
 	//---------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//---------------------------------------------------------------------------
 
@@ -534,7 +534,7 @@ class ScreenJobRunner : Object UI
 
 	//---------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//---------------------------------------------------------------------------
 
@@ -550,7 +550,7 @@ class ScreenJobRunner : Object UI
 
 	//---------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//---------------------------------------------------------------------------
 
@@ -581,7 +581,7 @@ class ScreenJobRunner : Object UI
 
 	//---------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//---------------------------------------------------------------------------
 

@@ -56,7 +56,7 @@ What I know has to be done. in near future.
 - Do some hunting/fleeing functions.
 - Make the roaming 100% flawfree.
 - Fix all SIGSEVS (Below is known SIGSEVS)
-      -Nada (but they might be there)
+	  -Nada (but they might be there)
 ******************************************
 Everything that is changed is marked (maybe commented) with "Added by MC"
 */
@@ -231,7 +231,7 @@ bool FCajunMaster::SpawnBot (const char *name, int color)
 
 		if (thebot == NULL)
 		{
-   		 	Printf ("couldn't find %s in %s\n", name, BOTFILENAME);
+			Printf ("couldn't find %s in %s\n", name, BOTFILENAME);
 			return false;
 		}
 		else if (thebot->inuse == BOTINUSE_Waiting)
@@ -240,7 +240,7 @@ bool FCajunMaster::SpawnBot (const char *name, int color)
 		}
 		else if (thebot->inuse == BOTINUSE_Yes)
 		{
-   		 	Printf ("%s is already in the thick\n", name);
+			Printf ("%s is already in the thick\n", name);
 			return false;
 		}
 	}

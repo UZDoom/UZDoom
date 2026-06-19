@@ -66,10 +66,10 @@ class Ettin : Actor
 		ETTN NOP 4;
 		ETTN Q -1;
 		Stop;
-	XDeath:		
+	XDeath:
 		ETTB A 4;
 		ETTB B 4 A_NoBlocking;
-		ETTB C 4 A_SpawnItemEx("EttinMace", 0,0,8.5, 
+		ETTB C 4 A_SpawnItemEx("EttinMace", 0,0,8.5,
 								random[DropMace](-128,127) * 0.03125,
 								random[DropMace](-128,127) * 0.03125,
 								10 + random[DropMace](0,255) * 0.015625, 0, SXF_ABSOLUTEVELOCITY);
@@ -130,6 +130,3 @@ class EttinMash : Ettin
 		Stop;
 	}
 }
-
-
-

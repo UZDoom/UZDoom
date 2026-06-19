@@ -19,7 +19,7 @@
 
 extend class Actor
 {
-	
+
 	virtual void ApplyKickback(Actor inflictor, Actor source, int damage, double angle, Name mod, int flags)
 	{
 		double ang;
@@ -94,5 +94,5 @@ extend class Actor
 		}
 	}
 
-	
+
 }

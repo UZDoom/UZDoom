@@ -1,22 +1,16 @@
 cmake_minimum_required( VERSION 3.16 )
 
-if( COMMAND cmake_policy )
-	if( POLICY CMP0011 )
-		cmake_policy( SET CMP0011 NEW )
-	endif()
-	if( POLICY CMP0054 )
-		cmake_policy( SET CMP0054 NEW )
-	endif()
-	if ( POLICY CMP0067 )
-		cmake_policy( SET CMP0067 NEW )
-	endif()
-	if ( POLICY CMP0091 )
-		cmake_policy( SET CMP0091 NEW )
-		set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-	endif()
-endif()
+cmake_policy( SET CMP0067 NEW )
+cmake_policy( SET CMP0091 NEW )
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 project(UZDoom)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+set(ABSL_BUILD_TESTING OFF) # don't build/run abseil tests
 
 # make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
 option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
@@ -33,9 +27,26 @@ if(NOT FORCE_NO_LTO)
 	endif()
 endif()
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+if(WIN32)
+	option( USE_UPDATER "enable auto-updater" OFF )
+endif()
+
+if(USE_UPDATER)
+	set( CURL_REQUIRED TRUE )
+
+	if (WIN32)
+		option( LOAD_CURL_AT_RUNTIME "load curl at runtime instead of linking" ON )
+
+		if (NOT MSVC)
+			# NOTE: not a big issue for now but will need to be fixed if we switch over to mingw as the
+			#       primary windows compiler (which we'll probably have to do eventually for C++26 support)
+			message( FATAL_ERROR "updater.exe currently only builds with msvc" )
+		endif()
+		add_executable( updater WIN32 src/win32/updater.c )
+	else()
+		message( FATAL_ERROR "Updater not available on this platform" )
+	endif()
+endif()
 
 find_package(Threads REQUIRED)
 find_package(Python3 3.6 REQUIRED)
@@ -220,7 +231,6 @@ macro( use_fast_math )
 	set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ZD_FASTMATH_FLAG}" )
 endmacro()
 
-
 include( CheckFunctionExists )
 
 macro( gz_require_stricmp )
@@ -241,6 +251,22 @@ option( NO_OPENAL "Disable OpenAL sound support" OFF )
 
 find_package( BZip2 )
 find_package( VPX )
+
+if (CURL_REQUIRED)
+	find_package( CURL )
+	if( MSVC AND NOT CURL_FOUND )
+		# Use prebuilt library
+		if ( ARM64 )
+			set( CURL_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/bin/Windows/curl/arm64" )
+		else()
+			set( CURL_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/bin/Windows/curl/x64" )
+		endif()
+		set( CURL_INCLUDE_DIRS ${CURL_ROOT_PATH}/include )
+		set( CURL_LIBRARIES ${CURL_ROOT_PATH}/lib/libcurl.dll.a )
+		set( CURL_FOUND TRUE )
+	endif()
+endif()
+
 if (NOT FORCE_INTERNAL_CPPDAP)
 	find_package( cppdap CONFIG )
 endif()
@@ -297,6 +323,10 @@ if( MSVC )
 
 	# Disable warnings for unsecure CRT functions from VC8+
 	set( ALL_C_FLAGS "${ALL_C_FLAGS} /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /D_CRT_NONSTDC_NO_WARNINGS" )
+
+	if( WITH_ASAN )
+		set( ALL_C_FLAGS "${ALL_C_FLAGS} /fsanitize=address" )
+	endif()
 
 	string(REPLACE "/Ob1 " "/Ob2 " CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELWITHDEBINFO} )
 else()
@@ -376,11 +406,6 @@ set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 add_subdirectory( libraries/ZWidget )
 
 add_subdirectory( libraries/webp )
-
-add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
-set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
-set( DRPC_LIBRARIES discord-rpc )
-set( DRPC_LIBRARY discord-rpc )
 
 if( HAVE_VM_JIT AND UNIX )
 	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )

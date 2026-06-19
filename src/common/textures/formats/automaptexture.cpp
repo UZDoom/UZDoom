@@ -19,7 +19,7 @@
 **
 **---------------------------------------------------------------------------
 **
-** This texture type is only used as a last resort when everything else has failed for creating 
+** This texture type is only used as a last resort when everything else has failed for creating
 ** the AUTOPAGE texture. That's because Raven used a raw lump of non-standard proportions to define it.
 **
 */
@@ -97,4 +97,3 @@ PalettedPixels FAutomapTexture::CreatePalettedPixels(int conversion, int frame)
 	}
 	return Pixels;
 }
-

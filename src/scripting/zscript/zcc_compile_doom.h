@@ -54,7 +54,5 @@ private:
 	FxExpression *SetupActionFunction(PClass *cls, ZCC_TreeNode *af, int StateFlags);
 	void CompileStates();
 	int CheckActionKeyword(ZCC_FuncDeclarator *f, uint32_t &varflags, int useflags, ZCC_StructWork *c);
-	
+
 };
-
-

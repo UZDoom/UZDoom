@@ -221,7 +221,7 @@ void FTextureAnimator::InitAnimated (void)
 				// different episode ?
 				if (!(pic1 = TexMan.CheckForTexture ((const char*)(anim_p + 10) /* .startname */, ETextureType::Wall, texflags)).Exists() ||
 					!(pic2 = TexMan.CheckForTexture ((const char*)(anim_p + 1) /* .endname */, ETextureType::Wall, texflags)).Exists())
-					continue;		
+					continue;
 
 				// [RH] Bit 1 set means allow decals on walls with this texture
 				bool nodecals = !(*anim_p & 2);
@@ -252,7 +252,7 @@ void FTextureAnimator::InitAnimated (void)
 			{
 				if (tex1->GetUseType() != tex2->GetUseType())
 				{
-					// not the same type - 
+					// not the same type -
 					continue;
 				}
 
@@ -296,7 +296,7 @@ void FTextureAnimator::InitAnimDefs ()
 {
 	const BITFIELD texflags = FTextureManager::TEXMAN_Overridable | FTextureManager::TEXMAN_TryAny;
 	int lump, lastlump = 0;
-	
+
 	while ((lump = fileSystem.FindLump ("ANIMDEFS", &lastlump)) != -1)
 	{
 		FScanner sc(lump);
@@ -669,7 +669,7 @@ void FTextureAnimator::ParseWarp(FScanner &sc)
 		}
 
 		// No decals on warping textures, by default.
-		// Warping information is taken from the last warp 
+		// Warping information is taken from the last warp
 		// definition for this texture.
 		warper->SetNoDecals(true);
 		if (sc.GetString ())
@@ -715,6 +715,8 @@ void FTextureAnimator::ParseCameraTexture(FScanner &sc)
 	int width, height;
 	double fitwidth, fitheight;
 	FString picname;
+	int offsetx = 0;
+	int offsety = 0;
 
 	sc.MustGetString ();
 	picname = sc.String;
@@ -725,11 +727,14 @@ void FTextureAnimator::ParseCameraTexture(FScanner &sc)
 	FTextureID picnum = TexMan.CheckForTexture (picname.GetChars(), ETextureType::Flat, texflags);
 	auto canvas = new FCanvasTexture(width, height);
 	FGameTexture *viewer = MakeGameTexture(canvas, picname.GetChars(), ETextureType::Wall);
+
 	if (picnum.Exists())
 	{
 		auto oldtex = TexMan.GameTexture(picnum);
 		fitwidth = oldtex->GetDisplayWidth ();
 		fitheight = oldtex->GetDisplayHeight ();
+		offsetx = oldtex->GetDisplayLeftOffset();
+		offsety = oldtex->GetDisplayTopOffset();
 		viewer->SetUseType(oldtex->GetUseType());
 		TexMan.ReplaceTexture (picnum, viewer, true);
 	}
@@ -740,51 +745,43 @@ void FTextureAnimator::ParseCameraTexture(FScanner &sc)
 		// [GRB] No need for oldtex
 		TexMan.AddGameTexture (viewer);
 	}
-	if (sc.GetString())
+
+	while (sc.GetString())
 	{
 		if (sc.Compare ("hdr"))
 		{
 			canvas->SetHDR(true);
 		}
-		else
-		{
-			sc.UnGet();
-		}
-	}
-	if (sc.GetString())
-	{
-		if (sc.Compare ("fit"))
+		else if (sc.Compare ("fit"))
 		{
 			sc.MustGetNumber ();
 			fitwidth = sc.Number;
 			sc.MustGetNumber ();
 			fitheight = sc.Number;
 		}
-		else
-		{
-			sc.UnGet ();
-		}
-	}
-	if (sc.GetString())
-	{
-		if (sc.Compare("WorldPanning"))
+		else if (sc.Compare("WorldPanning"))
 		{
 			viewer->SetWorldPanning(true);
 		}
-		else
-		{
-			sc.UnGet();
-		}
-	}
-	if (sc.GetString())
-	{
-		if (sc.Compare("translucent"))
+		else if (sc.Compare("translucent"))
 		{
 			viewer->SetTranslucent(true);
 		}
+		else if (sc.Compare("offset"))
+		{
+			if (sc.CheckNumber())
+			{
+				offsetx = sc.Number;
+				sc.MustGetNumber();
+				offsety = sc.Number;
+			}
+
+			viewer->SetOffsets(offsetx, offsety);
+		}
 		else
 		{
 			sc.UnGet();
+			break;
 		}
 	}
 
@@ -1233,4 +1230,3 @@ template<> FSerializer &Serialize(FSerializer &arc, const char *key, FDoorAnimat
 	}
 	return arc;
 }
-

@@ -39,7 +39,7 @@ namespace swrenderer
 
 			int32_t frac = args.TextureVPos();
 			int32_t fracstep = args.TextureVStep();
-			
+
 			uint32_t solid_top = args.SolidTopColor();
 			uint32_t solid_bottom = args.SolidBottomColor();
 			bool fadeSky = args.FadeSky();
@@ -95,7 +95,7 @@ namespace swrenderer
 
 				__m128i alpha = _mm_set1_epi16(max(min(frac >> (16 - start_fade), 256), 0));
 				__m128i inv_alpha = _mm_sub_epi16(_mm_set1_epi16(256), alpha);
-				
+
 				__m128i c = _mm_unpacklo_epi8(_mm_cvtsi32_si128(fg), _mm_setzero_si128());
 				c = _mm_srli_epi16(_mm_add_epi16(_mm_mullo_epi16(c, alpha), _mm_mullo_epi16(solid_top_fill, inv_alpha)), 8);
 				*dest = _mm_cvtsi128_si32(_mm_packus_epi16(c, _mm_setzero_si128()));
@@ -126,7 +126,7 @@ namespace swrenderer
 
 				__m128i alpha = _mm_set1_epi16(max(min(((2 << 24) - frac) >> (16 - start_fade), 256), 0));
 				__m128i inv_alpha = _mm_sub_epi16(_mm_set1_epi16(256), alpha);
-				
+
 				__m128i c = _mm_unpacklo_epi8(_mm_cvtsi32_si128(fg), _mm_setzero_si128());
 				c = _mm_srli_epi16(_mm_add_epi16(_mm_mullo_epi16(c, alpha), _mm_mullo_epi16(solid_top_fill, inv_alpha)), 8);
 				*dest = _mm_cvtsi128_si32(_mm_packus_epi16(c, _mm_setzero_si128()));
@@ -145,7 +145,7 @@ namespace swrenderer
 			}
 		}
 	};
-	
+
 	class DrawSkyDouble32Command
 	{
 	public:
@@ -228,7 +228,7 @@ namespace swrenderer
 
 				__m128i alpha = _mm_set1_epi16(max(min(frac >> (16 - start_fade), 256), 0));
 				__m128i inv_alpha = _mm_sub_epi16(_mm_set1_epi16(256), alpha);
-				
+
 				__m128i c = _mm_unpacklo_epi8(_mm_cvtsi32_si128(fg), _mm_setzero_si128());
 				c = _mm_srli_epi16(_mm_add_epi16(_mm_mullo_epi16(c, alpha), _mm_mullo_epi16(solid_top_fill, inv_alpha)), 8);
 				*dest = _mm_cvtsi128_si32(_mm_packus_epi16(c, _mm_setzero_si128()));
@@ -270,7 +270,7 @@ namespace swrenderer
 
 				__m128i alpha = _mm_set1_epi16(max(min(((2 << 24) - frac) >> (16 - start_fade), 256), 0));
 				__m128i inv_alpha = _mm_sub_epi16(_mm_set1_epi16(256), alpha);
-				
+
 				__m128i c = _mm_unpacklo_epi8(_mm_cvtsi32_si128(fg), _mm_setzero_si128());
 				c = _mm_srli_epi16(_mm_add_epi16(_mm_mullo_epi16(c, alpha), _mm_mullo_epi16(solid_top_fill, inv_alpha)), 8);
 				*dest = _mm_cvtsi128_si32(_mm_packus_epi16(c, _mm_setzero_si128()));

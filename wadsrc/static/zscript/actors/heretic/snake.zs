@@ -99,7 +99,7 @@ class SnakeProjA : Actor
 		SNFX HI 3 Bright;
 		Stop;
 	}
-}	
+}
 
 // Snake projectile B -------------------------------------------------------
 
@@ -122,4 +122,4 @@ class SnakeProjB : SnakeProjA
 		SNFX O 3 Bright;
 		Stop;
 	}
-}	
+}

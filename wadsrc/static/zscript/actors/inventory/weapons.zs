@@ -28,7 +28,7 @@ class Weapon : StateProvider
 
 	const ZOOM_INSTANT = 1;
 	const ZOOM_NOSCALETURNING = 2;
-	
+
 	deprecated("3.7") uint WeaponFlags;		// not to be used directly.
 	class<Ammo> AmmoType1, AmmoType2;		// Types of ammo used by self weapon
 	int AmmoGive1, AmmoGive2;				// Amount of each ammo to get when picking up weapon
@@ -64,7 +64,7 @@ class Weapon : StateProvider
 	virtual ui Vector3, Vector3 ModifyBobLayer3D(Vector3 Translation, Vector3 Rotation, int layer, double ticfrac) { return Translation, Rotation; }
 
 	virtual ui Vector3 ModifyBobPivotLayer3D(int layer, double ticfrac) { return BobPivot3D; }
-	
+
 	property AmmoGive: AmmoGive1;
 	property AmmoGive1: AmmoGive1;
 	property AmmoGive2: AmmoGive2;
@@ -153,7 +153,7 @@ class Weapon : StateProvider
 		MarkSound(UpSound);
 		MarkSound(ReadySound);
 	}
-	
+
 	virtual int, int CheckAddToSlots()
 	{
 		if (GetReplacement(GetClass()) == GetClass() && !bPowered_Up)
@@ -163,20 +163,20 @@ class Weapon : StateProvider
 		return -1, 0;
 	}
 
-	
+
 	// [AA] Called when the weapon is selected, including
 	// PowerWeaponLevel2 activation:
 	virtual void OnSelect(bool fromPowerup = false) {}
-	
+
 	// [AA] Called when the weapon is deselected, including
 	// PowerWeaponLevel2 running out or being tossed:
 	virtual void OnDeselect(bool fromPowerup = false, bool onToss = false) {}
-	
+
 	virtual State GetReadyState ()
 	{
 		return FindState('Ready');
 	}
-	
+
 	virtual State GetUpState ()
 	{
 		return FindState('Select');
@@ -194,7 +194,7 @@ class Weapon : StateProvider
 		if (s == null) s = FindState('Fire');
 		return s;
 	}
-	
+
 	virtual State GetAltAtkState (bool hold)
 	{
 		State s = null;
@@ -202,7 +202,7 @@ class Weapon : StateProvider
 		if (s == null) s = FindState('AltFire');
 		return s;
 	}
-	
+
 	virtual void PlayUpSound(Actor origin)
 	{
 		if (UpSound)
@@ -210,13 +210,13 @@ class Weapon : StateProvider
 			origin.A_StartSound(UpSound, CHAN_WEAPON);
 		}
 	}
-	
+
 	override String GetObituary(Actor victim, Actor inflictor, Name mod, bool playerattack)
 	{
 		// Weapons may never return HitObituary by default. Override this if it is needed.
 		return Obituary;
 	}
-	
+
 	action void A_GunFlash(statelabel flashlabel = null, int flags = 0)
 	{
 		let player = player;
@@ -250,7 +250,7 @@ class Weapon : StateProvider
 		}
 		player.SetPsprite(PSP_FLASH, flashstate);
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// PROC A_Lower
@@ -303,7 +303,7 @@ class Weapon : StateProvider
 			return;
 		}
 		ResetPSprite(psp);
-		
+
 		if (player.playerstate == PST_DEAD)
 		{ // Player is dead, so don't bring up a pending weapon
 			// Player is dead, so keep the weapon off screen
@@ -353,7 +353,7 @@ class Weapon : StateProvider
 			return;
 		}
 		psp.y = WEAPONTOP;
-		
+
 		psp.SetState(player.ReadyWeapon.GetReadyState());
 		return;
 	}
@@ -454,7 +454,7 @@ class Weapon : StateProvider
 		if (flags & WRF_AllowUser4) outflags |= WF_USER4OK;
 		return outflags;
 	}
-	
+
 	action void A_WeaponReady(int flags = 0)
 	{
 		if (!player) return;
@@ -462,7 +462,7 @@ class Weapon : StateProvider
 		if ((flags & WRF_NoFire) != WRF_NoFire)			DoReadyWeaponToFire(player.mo, !(flags & WRF_NoPrimary), !(flags & WRF_NoSecondary));
 		if (!(flags & WRF_NoBob))						DoReadyWeaponToBob(player);
 
-		player.WeaponState |= GetButtonStateFlags(flags);														
+		player.WeaponState |= GetButtonStateFlags(flags);
 		DoReadyWeaponDisableSwitch(player, flags & WRF_DisableSwitch);
 	}
 
@@ -482,7 +482,7 @@ class Weapon : StateProvider
 			player.ReadyWeapon.CheckAmmo (player.ReadyWeapon.bAltFire ? Weapon.AltFire : Weapon.PrimaryFire, true);
 		}
 	}
-		
+
 	//===========================================================================
 	//
 	// A_ZoomFactor
@@ -522,7 +522,7 @@ class Weapon : StateProvider
 			player.ReadyWeapon.Crosshair = xhair;
 		}
 	}
-	
+
 	//===========================================================================
 	//
 	// Weapon :: TryPickup
@@ -712,19 +712,19 @@ class Weapon : StateProvider
 	{
 		// Only drop the weapon that is meant to be placed in a level. That is,
 		// only drop the weapon that normally gives you ammo.
-		if (SisterWeapon != NULL && 
+		if (SisterWeapon != NULL &&
 			Default.AmmoGive1 == 0 && Default.AmmoGive2 == 0 &&
 			(SisterWeapon.Default.AmmoGive1 > 0 || SisterWeapon.Default.AmmoGive2 > 0))
 		{
 			return SisterWeapon.CreateTossable (amt);
 		}
-		
+
 		// [AA] This weapon was selected and its amount is about to become 0:
 		if (Amount == 1 && Owner != NULL && Owner.Player != NULL && Owner.Player.ReadyWeapon == self)
 		{
 			OnDeselect(onToss: true);
 		}
-		
+
 		let copy = Weapon(Super.CreateTossable (-1));
 
 		if (copy != NULL)
@@ -918,7 +918,7 @@ class Weapon : StateProvider
 					psp.Caller = SisterWeapon;
 					player.ReadyWeapon = SisterWeapon;
 				}
-				else 
+				else
 				{
 					if (player.PendingWeapon == NULL || player.PendingWeapon == WP_NOCHANGE)
 					{
@@ -933,7 +933,7 @@ class Weapon : StateProvider
 		}
 	}
 
-	
+
 	//===========================================================================
 	//
 	// Weapon :: PostMorphWeapon
@@ -970,13 +970,13 @@ class Weapon : StateProvider
 	// next weapon to use.
 	//
 	//===========================================================================
-	
+
 	virtual bool CheckAmmo(int fireMode, bool autoSwitch, bool requireAmmo = false, int ammocount = -1)
 	{
 		int count1, count2;
 		int enough, enoughmask;
 		int lAmmoUse1;
-        int lAmmoUse2 = AmmoUse2;
+		int lAmmoUse2 = AmmoUse2;
 
 		if (sv_infiniteammo || (Owner.FindInventory ('PowerInfiniteAmmo', true) != null))
 		{
@@ -1041,7 +1041,7 @@ class Weapon : StateProvider
 		return false;
 	}
 
-		
+
 	//===========================================================================
 	//
 	// Weapon :: DepleteAmmo
@@ -1109,7 +1109,7 @@ class Weapon : StateProvider
 		bool ignoreskill = true;
 		double dropammofactor = G_SkillPropertyFloat(SKILLP_DropAmmoFactor);
 		// Default drop amount is half of regular amount * regular ammo multiplication
-		if (dropammofactor == -1) 
+		if (dropammofactor == -1)
 		{
 			dropammofactor = 0.5;
 			ignoreskill = false;
@@ -1124,19 +1124,19 @@ class Weapon : StateProvider
 		AmmoGive2 = int(AmmoGive2 * dropammofactor);
 		bIgnoreSkill = ignoreskill;
 	}
-	
+
 }
 
 class WeaponGiver : Weapon
 {
 	double AmmoFactor;
-	
+
 	Default
 	{
 		Weapon.AmmoGive1 -1;
 		Weapon.AmmoGive2 -1;
 	}
-	
+
 	override bool TryPickup(in out Actor toucher)
 	{
 		DropItem di = GetDropItems();
@@ -1187,7 +1187,7 @@ class WeaponGiver : Weapon
 		}
 		return false;
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// Modifies the drop amount of this item according to the current skill's
@@ -1200,7 +1200,7 @@ class WeaponGiver : Weapon
 		bool ignoreskill = true;
 		double dropammofactor = G_SkillPropertyFloat(SKILLP_DropAmmoFactor);
 		// Default drop amount is half of regular amount * regular ammo multiplication
-		if (dropammofactor == -1) 
+		if (dropammofactor == -1)
 		{
 			dropammofactor = 0.5;
 			ignoreskill = false;
@@ -1209,8 +1209,8 @@ class WeaponGiver : Weapon
 		AmmoFactor = dropammofactor;
 		bIgnoreSkill = ignoreskill;
 	}
-	
-	
+
+
 }
 
 struct WeaponSlots native

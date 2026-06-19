@@ -23,15 +23,17 @@
 */
 
 #pragma once
-#include <stdint.h>
+
+#include <cstdint>
 #include <memory>
-#include "vectors.h"
+
 #include "floatrect.h"
-#include "refcounted.h"
-#include "xs_Float.h"
 #include "palentry.h"
-#include "zstring.h"
+#include "refcounted.h"
 #include "textureid.h"
+#include "vectors.h"
+#include "zstring.h"
+#include "m_round.h"
 
 // 15 because 0th texture is our texture
 #define MAX_CUSTOM_HW_SHADER_TEXTURES 15
@@ -169,10 +171,10 @@ public:
 	void SetSpriteRect();
 
 	ETextureType GetUseType() const { return UseType; }
-	void SetUpscaleFlag(int what, bool manual = false) 
-	{ 
+	void SetUpscaleFlag(int what, bool manual = false)
+	{
 		if ((shouldUpscaleFlag & 2) && !manual) return;	// if set manually this may not be reset.
-		shouldUpscaleFlag = what | (manual? 2 : 0); 
+		shouldUpscaleFlag = what | (manual? 2 : 0);
 	}
 	int GetUpscaleFlag() { return shouldUpscaleFlag & 1; }
 
@@ -185,7 +187,7 @@ public:
 	float GetDisplayLeftOffset(int adjusted = 0) const { return LeftOffset[adjusted] / ScaleX; }
 	float GetDisplayTopOffset(int adjusted = 0) const { return TopOffset[adjusted] / ScaleY; }
 
-	bool isMiscPatch() const { return GetUseType() == ETextureType::MiscPatch; }	// only used by the intermission screen to decide whether to tile the background image or not. 
+	bool isMiscPatch() const { return GetUseType() == ETextureType::MiscPatch; }	// only used by the intermission screen to decide whether to tile the background image or not.
 	bool isFullbrightDisabled() const { return !!(flags & GTexf_DisableFullbrightSprites); }
 	bool isFullbright() const { return !!(flags & GTexf_RenderFullbright); }
 	bool isFullNameTexture() const { return !!(flags & GTexf_FullNameTexture); }
@@ -212,9 +214,9 @@ public:
 	void SetSkyOffset(int offs) { SkyOffset = offs; }
 	int GetSkyOffset() const { return SkyOffset; }
 	void setSeen() { flags |= GTexf_Seen; }
-	bool isSeen(bool reset) 
-	{ 
-		int v = flags & GTexf_Seen;   
+	bool isSeen(bool reset)
+	{
+		int v = flags & GTexf_Seen;
 		if (reset) flags &= ~GTexf_Seen;
 		return v;
 	}
@@ -294,7 +296,7 @@ public:
 	void SetNoMipmap(bool set) { if (set) flags |= GTexf_NoMipmap; else flags &= ~GTexf_NoMipmap; }
 
 	bool isUserContent() const;
-	int CheckRealHeight() { return xs_RoundToInt(Base->CheckRealHeight() / ScaleY); }
+	int CheckRealHeight() { return RoundHalfUp(Base->CheckRealHeight() / ScaleY); }
 	void SetSize(int x, int y) 
 	{ 
 		TexelWidth = x; 
@@ -302,16 +304,16 @@ public:
 		SetDisplaySize(float(x), float(y));
 		if (GetTexture()) GetTexture()->SetSize(x, y);
 	}
-	void SetDisplaySize(float w, float h) 
-	{ 
+	void SetDisplaySize(float w, float h)
+	{
 		DisplayWidth = w;
 		DisplayHeight = h;
 		ScaleX = TexelWidth / w;
 		ScaleY = TexelHeight / h;
 
 		// compensate for roundoff errors
-		if (int(ScaleX * w) != TexelWidth) ScaleX += (1 / 65536.);
-		if (int(ScaleY * h) != TexelHeight) ScaleY += (1 / 65536.);
+		if (int(ScaleX * w) != TexelWidth) ScaleX += EQUAL_EPSILON;
+		if (int(ScaleY * h) != TexelHeight) ScaleY += EQUAL_EPSILON;
 
 	}
 	void SetBase(FTexture* Tex)
@@ -330,7 +332,7 @@ public:
 		LeftOffset[1] = x;
 		TopOffset[1] = y;
 	}
-	void SetScale(float x, float y) 
+	void SetScale(float x, float y)
 	{
 		ScaleX = x;
 		ScaleY = y;

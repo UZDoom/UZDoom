@@ -42,7 +42,7 @@ class ArtiTeleportOther : Inventory
 		TELO ABCD 5;
 		Loop;
 	}
-	
+
 	//===========================================================================
 	//
 	// Activate Teleport Other
@@ -55,7 +55,7 @@ class ArtiTeleportOther : Inventory
 		return true;
 	}
 
-	
+
 }
 
 
@@ -94,7 +94,7 @@ class TelOtherFX1 : Actor
 		TRNG E 3 Bright;
 		Stop;
 	}
-		
+
 	private void TeloSpawn (class<Actor> type)
 	{
 		Actor fx = Spawn (type, pos, ALLOW_REPLACE);
@@ -203,7 +203,7 @@ class TelOtherFX1 : Actor
 		if (destAngle < 65536) victim.Teleport((dest.xy, ONFLOORZ), destangle, TELF_SOURCEFOG | TELF_DESTFOG);
 		else P_TeleportToPlayerStarts(victim);
 	}
-	
+
 }
 
 
@@ -267,5 +267,3 @@ class TelOtherFX5 : TelOtherFX1
 		Loop;
 	}
 }
-
-

@@ -65,7 +65,7 @@ extern int PrintColors[];
 extern TArray<FBitmap> sheetBitmaps;
 
 // PUBLIC DATA DEFINITIONS -------------------------------------------------
-FFont* SmallFont, * SmallFont2, * BigFont, * BigUpper, * ConFont, * IntermissionFont, * NewConsoleFont, * NewSmallFont, 
+FFont* SmallFont, * SmallFont2, * BigFont, * BigUpper, * ConFont, * IntermissionFont, * NewConsoleFont, * NewSmallFont,
 	* CurrentConsoleFont, * OriginalSmallFont, * AlternativeSmallFont, * OriginalBigFont, *AlternativeBigFont;
 
 FFont *FFont::FirstFont = nullptr;
@@ -846,7 +846,7 @@ EColorRange V_ParseFontColor (const uint8_t *&color_value, int normalcolor, int 
 //
 // V_InitFonts
 //
-// Fixme: This really needs to be a bit more flexible 
+// Fixme: This really needs to be a bit more flexible
 // and less rigidly tied to the original game data.
 //
 //==========================================================================
@@ -955,4 +955,3 @@ char* CleanseString(char* str)
 	}
 	return str;
 }
-

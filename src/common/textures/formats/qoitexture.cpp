@@ -59,7 +59,7 @@ FImageSource *QOIImage_TryCreate(FileReader &file, int lumpnum)
 		return nullptr;
 	}
 
-        file.Seek(0, FileReader::SeekSet);
+		file.Seek(0, FileReader::SeekSet);
 	file.Read((void *)&header, sizeof(header));
 
 	header.width = BigLong(header.width);

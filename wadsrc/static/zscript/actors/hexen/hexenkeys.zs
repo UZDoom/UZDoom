@@ -202,4 +202,3 @@ class KeyCastle : HexenKey
 		Stop;
 	}
 }
-

@@ -44,7 +44,14 @@ public:
 	void MoveSectionToStart (const char *name);
 	void SetSectionNote (const char *section, const char *note);
 	void SetSectionNote (const char *note);
+
 	bool SetSection (const char *section, bool allowCreate=false);
+
+	bool SetSection (FString section, bool allowCreate=false)
+	{
+		return SetSection(section.GetChars(), allowCreate);
+	}
+
 	bool SetFirstSection ();
 	bool SetNextSection ();
 	const char *GetCurrentSection () const;
@@ -83,6 +90,7 @@ protected:
 
 	bool OkayToWrite;
 	bool FileExisted;
+	mutable bool QueueWrite;
 
 private:
 	struct FConfigEntry

@@ -53,7 +53,7 @@ public:
 		return fliptop;
 	}
 
-	FGameTexture* GetSkyFace(int num) const 
+	FGameTexture* GetSkyFace(int num) const
 	{
 		return faces[num];
 	}

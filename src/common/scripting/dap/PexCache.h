@@ -147,7 +147,7 @@ public:
 	static void PopulateFromPaths(const std::map<std::string, int> &scripts, BinaryMap &p_scripts, bool clobber = false);
 	static void ScanScriptsInContainer(int baselump, BinaryMap &m_scripts, const std::string &filter = "");
 	static BinaryPtr makeEmptyBinary(const std::string &scriptPath, int lump);
-	
+
 	DisassemblyMap m_disassemblyMap;
 	Binary::FunctionCodeMap m_globalCodeMap;
 	std::recursive_mutex m_scriptsMutex;

@@ -19,17 +19,17 @@
 
 class PowerupGiver : Inventory
 {
-	
+
 	Class<Actor> PowerupType;
 	int EffectTics;		// Non-0 to override the powerup's default tics
 	color BlendColor;	// Non-0 to override the powerup's default blend
 	Name Mode;			// Meaning depends on powerup - used for Invulnerability and Invisibility
 	double Strength;	// Meaning depends on powerup - currently used only by Invisibility
-	
+
 	property prefix: Powerup;
 	property Strength: Strength;
 	property Mode: Mode;
-	
+
 	Default
 	{
 		Inventory.DefMaxAmount;
@@ -37,7 +37,7 @@ class PowerupGiver : Inventory
 		+INVENTORY.FANCYPICKUPSOUND
 		Inventory.PickupSound "misc/p_pkup";
 	}
-	
+
 	//===========================================================================
 	//
 	// APowerupGiver :: Use
@@ -83,7 +83,7 @@ class PowerupGiver : Inventory
 
 class Powerup : Inventory
 {
-	int EffectTics, MaxEffectTics;	
+	int EffectTics, MaxEffectTics;
 	color BlendColor;
 	Name Mode;			// Meaning depends on powerup - used for Invulnerability and Invisibility
 	double Strength;		// Meaning depends on powerup - currently used only by Invisibility
@@ -92,11 +92,11 @@ class Powerup : Inventory
 
 	property Strength: Strength;
 	property Mode: Mode;
-	
+
 	// Note, that while this is an inventory flag, it only has meaning on an active powerup.
-	override bool GetNoTeleportFreeze() 
-	{ 
-		return bNoTeleportFreeze; 
+	override bool GetNoTeleportFreeze()
+	{
+		return bNoTeleportFreeze;
 	}
 
 	//===========================================================================
@@ -137,7 +137,7 @@ class Powerup : Inventory
 			// Color gets transferred if the new item has an effect.
 
 			// Increase the effect's duration.
-			if (power.bAdditiveTime) 
+			if (power.bAdditiveTime)
 			{
 				EffectTics += power.EffectTics;
 				MaxEffectTics = Max(EffectTics, MaxEffectTics);
@@ -212,7 +212,7 @@ class Powerup : Inventory
 	//
 	//===========================================================================
 
-	virtual void InitEffect() 
+	virtual void InitEffect()
 	{
 		// initialize this only once instead of recalculating repeatedly.
 		Colormap = ((BlendColor & 0xFFFF0000) == SPECIALCOLORMAP_MASK)? BlendColor & 0xffff : PlayerInfo.NOFIXEDCOLORMAP;
@@ -239,7 +239,7 @@ class Powerup : Inventory
 				{
 					Owner.player.fixedcolormap = Colormap;
 				}
-				else if (Owner.player.fixedcolormap == Colormap)	
+				else if (Owner.player.fixedcolormap == Colormap)
 				{
 					// only unset if the fixed colormap comes from this item
 					Owner.player.fixedcolormap = PlayerInfo.NOFIXEDCOLORMAP;
@@ -302,7 +302,7 @@ class Powerup : Inventory
 
 	//===========================================================================
 	//
-	// APowerup :: isBlinking 
+	// APowerup :: isBlinking
 	//
 	//===========================================================================
 
@@ -324,7 +324,7 @@ class Powerup : Inventory
 		Destroy ();
 	}
 
-	
+
 }
 
 //===========================================================================
@@ -491,7 +491,7 @@ class PowerStrength : Powerup
 		Powerup.Color "ff 00 00", 0.5;
 		+INVENTORY.HUBPOWER
 	}
-	
+
 	override bool HandlePickup (Inventory item)
 	{
 		if (item.GetClass() == GetClass())
@@ -533,7 +533,7 @@ class PowerStrength : Powerup
 		}
 		return 0;
 	}
-	
+
 }
 
 //===========================================================================
@@ -551,7 +551,7 @@ class PowerInvisibility : Powerup
 		Powerup.Strength 80;
 		Powerup.Mode "Fuzzy";
 	}
-	
+
 	//===========================================================================
 	//
 	// APowerInvisibility :: InitEffect
@@ -583,14 +583,14 @@ class PowerInvisibility : Powerup
 	// APowerInvisibility :: DoEffect
 	//
 	//===========================================================================
-	
+
 	override void DoEffect ()
 	{
 		Super.DoEffect();
 		// Due to potential interference with other PowerInvisibility items
 		// the effect has to be refreshed each tic.
 		double ts = (Strength / 100.) * (special1 + 1);
-		
+
 		if (ts > 1.) ts = 1.;
 		let newAlpha = clamp((1. - ts), 0., 1.);
 		int newStyle;
@@ -719,7 +719,7 @@ class PowerInvisibility : Powerup
 	//
 	// APowerInvisibility :: HandlePickup
 	//
-	// If the player already has the first stage of a cumulative powerup, getting 
+	// If the player already has the first stage of a cumulative powerup, getting
 	// it again increases the player's alpha. (But shouldn't this be in Use()?)
 	//
 	//===========================================================================
@@ -785,7 +785,7 @@ class PowerIronFeet : Powerup
 		Powerup.Color "00 ff 00", 0.125;
 		Powerup.Mode "Normal";
 	}
-	
+
 	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (damageType == 'Drowning')
@@ -801,7 +801,7 @@ class PowerIronFeet : Powerup
 			Owner.player.mo.ResetAirSupply ();
 		}
 	}
-	
+
 }
 
 //===========================================================================
@@ -819,7 +819,7 @@ class PowerMask : PowerIronFeet
 		+INVENTORY.HUBPOWER
 		Inventory.Icon "I_MASK";
 	}
-	
+
 	override void AbsorbDamage (int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags, double angle)
 	{
 		if (damageType == 'Fire' || damageType == 'Drowning')
@@ -836,7 +836,7 @@ class PowerMask : PowerIronFeet
 			Owner.A_StartSound ("misc/mask", CHAN_AUTO);
 		}
 	}
-	
+
 }
 
 //===========================================================================
@@ -858,7 +858,7 @@ class PowerLightAmp : Powerup
 		if (Owner && Owner.player)
 			Owner.player.SetFullbrightMode(FBMODE_DEFAULT);
 	}
-	
+
 	//===========================================================================
 	//
 	// APowerLightAmp :: DoEffect
@@ -873,7 +873,7 @@ class PowerLightAmp : Powerup
 		if (player != NULL && player.fixedcolormap < PlayerInfo.NUMCOLORMAPS)
 		{
 			if (!isBlinking())
-			{	
+			{
 				player.fixedlightlevel = 1;
 			}
 			else
@@ -899,7 +899,7 @@ class PowerLightAmp : Powerup
 				Owner.player.fixedlightlevel = -1;
 		}
 	}
-	
+
 }
 
 //===========================================================================
@@ -918,7 +918,7 @@ class PowerTorch : PowerLightAmp
 		if (Owner && Owner.player)
 			Owner.player.SetFullbrightMode(FBMODE_TORCH);
 	}
-	
+
 	override void DoEffect ()
 	{
 		if (Owner == NULL || Owner.player == NULL)
@@ -931,7 +931,7 @@ class PowerTorch : PowerLightAmp
 		{
 			Super.DoEffect ();
 		}
-		else 
+		else
 		{
 			Powerup.DoEffect ();
 
@@ -966,7 +966,7 @@ class PowerTorch : PowerLightAmp
 		if (Owner && Owner.player)
 			Owner.player.SetFullbrightMode(FBMODE_NONE);
 	}
-	
+
 }
 
 //===========================================================================
@@ -1095,7 +1095,7 @@ class PowerFlight : Powerup
 		}
 	}
 
-	
+
 }
 
 //===========================================================================
@@ -1112,7 +1112,7 @@ class PowerWeaponLevel2 : Powerup
 		Inventory.Icon "SPINBK0";
 		+INVENTORY.NOTELEPORTFREEZE
 	}
-	
+
 	//===========================================================================
 	//
 	// APowerWeaponLevel2 :: InitEffect
@@ -1121,7 +1121,7 @@ class PowerWeaponLevel2 : Powerup
 
 	override void InitEffect ()
 	{
-		
+
 		Super.InitEffect();
 
 		let player = Owner.player;
@@ -1199,7 +1199,7 @@ class PowerSpeed : Powerup
 
 	Property NoTrail: NoTrail;
 	FlagDef NoTrail: NoTrail, 0;	// This was once a flag, not a property.
-	
+
 	Default
 	{
 		Powerup.Duration -45;
@@ -1207,12 +1207,12 @@ class PowerSpeed : Powerup
 		Inventory.Icon "SPBOOT0";
 		+INVENTORY.NOTELEPORTFREEZE
 	}
-	
-	override double GetSpeedFactor() 
-	{ 
-		return Speed; 
+
+	override double GetSpeedFactor()
+	{
+		return Speed;
 	}
-	
+
 	//===========================================================================
 	//
 	// APowerSpeed :: DoEffect
@@ -1222,7 +1222,7 @@ class PowerSpeed : Powerup
 	override void DoEffect ()
 	{
 		Super.DoEffect ();
-		
+
 		if (Owner == NULL || Owner.player == NULL)
 			return;
 
@@ -1282,7 +1282,7 @@ class PlayerSpeedTrail : Actor
 		Alpha 0.6;
 		RenderStyle "Translucent";
 	}
-	
+
 	override void Tick()
 	{
 		Alpha -= .6 / 8;
@@ -1331,7 +1331,7 @@ class PowerTargeter : Powerup
 		TRGT C -1;
 		Stop;
 	}
-	
+
 	override void Travelled ()
 	{
 		InitEffect ();
@@ -1459,7 +1459,7 @@ class PowerTargeter : Powerup
 			}
 		}
 	}
-	
+
 }
 
 //===========================================================================
@@ -1474,7 +1474,7 @@ class PowerFrightener : Powerup
 	{
 		Powerup.Duration -60;
 	}
-	
+
 	override void InitEffect ()
 	{
 		Super.InitEffect();
@@ -1537,7 +1537,7 @@ class PowerTimeFreezer : Powerup
 	{
 		Powerup.Duration -12;
 	}
-	
+
 	//===========================================================================
 	//
 	// InitEffect
@@ -1609,7 +1609,7 @@ class PowerTimeFreezer : Powerup
 		// [RH] The "blinking" can't check against EffectTics exactly or it will
 		// never happen, because InitEffect ensures that EffectTics will always
 		// be odd when Level.maptime is even.
-		Level.SetFrozen ( EffectTics > 4*32 
+		Level.SetFrozen ( EffectTics > 4*32
 			|| (( EffectTics > 3*32 && EffectTics <= 4*32 ) && ((EffectTics + 1) & 15) != 0 )
 			|| (( EffectTics > 2*32 && EffectTics <= 3*32 ) && ((EffectTics + 1) & 7) != 0 )
 			|| (( EffectTics >   32 && EffectTics <= 2*32 ) && ((EffectTics + 1) & 3) != 0 )
@@ -1666,7 +1666,7 @@ class PowerDamage : Powerup
 	{
 		Powerup.Duration -25;
 	}
-	
+
 	//===========================================================================
 	//
 	// InitEffect
@@ -1726,7 +1726,7 @@ class PowerProtection : Powerup
 	{
 		Powerup.Duration -25;
 	}
-	
+
 	//===========================================================================
 	//
 	// InitEffect
@@ -1750,16 +1750,16 @@ class PowerProtection : Powerup
 
 			bDontMorph &= !o.bDontMorph;
 			o.bDontMorph |= bDontMorph;
-			
+
 			bDontSquash &= !o.bDontSquash;
 			o.bDontSquash |= bDontSquash;
 
 			bDontBlast &= !o.bDontBlast;
 			o.bDontBlast |= bDontBlast;
-			
+
 			bNoTeleOther &= !o.bNoTeleOther;
 			o.bNoTeleOther |= bNoTeleOther;
-			
+
 			bNoPain &= !o.bNoPain;
 			o.bNoPain |= bNoPain;
 
@@ -1781,7 +1781,7 @@ class PowerProtection : Powerup
 		if (o != null)
 		{
 			o.A_StartSound(DeathSound, CHAN_AUTO, CHANF_DEFAULT, 1.0, ATTN_NONE);
-			
+
 			o.bNoRadiusDmg &= !bNoRadiusDmg;
 			o.bDontMorph &= !bDontMorph;
 			o.bDontSquash &= !bDontSquash;
@@ -1836,7 +1836,7 @@ class PowerRegeneration : Powerup
 		Powerup.Duration -120;
 		Powerup.Strength 5;
 	}
-	
+
 	override void DoEffect()
 	{
 		Super.DoEffect();
@@ -1904,7 +1904,7 @@ class PowerReflection : Powerup
 	// if 1, reflects the damage type as well.
 	bool ReflectType;
 	property ReflectType : ReflectType;
-	
+
 	Default
 	{
 		Powerup.Duration -60;
@@ -1925,14 +1925,14 @@ class PowerMorph : Powerup
 	class<Actor> MonsterClass, MorphFlash, UnmorphFlash;
 	int MorphStyle;
 	PlayerInfo MorphedPlayer;
-	
+
 	Default
 	{
 		Powerup.Duration -40;
 		PowerMorph.MorphFlash "TeleportFog";
 		PowerMorph.UnmorphFlash "TeleportFog";
 	}
-	
+
 	//===========================================================================
 	//
 	// InitEffect
@@ -1970,7 +1970,7 @@ class PowerMorph : Powerup
 		// Abort if owner already destroyed or unmorphed.
 		if (!Owner || !Owner.Alternative)
 			return;
-		
+
 		// Abort if owner is dead; their Die() method will
 		// take care of any required unmorphing on death.
 		if (Owner.player ? Owner.player.Health <= 0 : Owner.Health <= 0)

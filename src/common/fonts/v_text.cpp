@@ -84,7 +84,7 @@ TArray<FBrokenLines> V_BreakLines (FFont *font, int maxwidth, const uint8_t *str
 			continue;
 		}
 
-		if (myisspace(c)) 
+		if (myisspace(c))
 		{
 			if (!lastWasSpace)
 			{
@@ -298,7 +298,7 @@ void UpdateGenericUI(bool cvar)
 	// Turkish i crap. What a mess, just to save two code points... :(
 	switchstr = GStrings.CheckString("REQUIRED_CHARACTERS");
 	special_i = switchstr && strstr(switchstr, "\xc4\xb0") != nullptr; // capital dotted i (İ).
-	if (special_i) 
+	if (special_i)
 	{
 		upperforlower['i'] = 0x130;
 		lowerforupper['I'] = 0x131;

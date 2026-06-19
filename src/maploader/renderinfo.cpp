@@ -37,6 +37,7 @@
 #include "g_levellocals.h"
 #include "maploader.h"
 #include "r_utility.h"
+#include "m_round.h"
 
 //==========================================================================
 //
@@ -53,11 +54,11 @@ struct MapSectionGenerator
 	{
 		double X, Y;
 
-		operator int() const { return xs_FloorToInt(X) + 65536 * xs_FloorToInt(Y); }
+		operator int() const { return RoundDown(X) + 65536 * RoundDown(Y); }
 		bool operator!= (const cvertex_t &other) const { return fabs(X - other.X) >= EQUAL_EPSILON || fabs(Y - other.Y) >= EQUAL_EPSILON; }
 		cvertex_t& operator =(const vertex_t *v) { X = v->fX(); Y = v->fY(); return *this; }
 	};
-	
+
 	MapSectionGenerator(FLevelLocals *l)
 	{
 		Level = l;
@@ -69,7 +70,7 @@ struct MapSectionGenerator
 
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
@@ -179,7 +180,7 @@ struct MapSectionGenerator
 
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
@@ -243,7 +244,7 @@ static void SpreadHackedFlag(subsector_t * sub)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -260,13 +261,13 @@ void MapLoader::PrepareSectorData()
 	}
 
 	auto subsectorbuffer = Level->subsectorbuffer.Data();
-	for (auto &sec : Level->sectors) 
+	for (auto &sec : Level->sectors)
 	{
 		sec.subsectors = subsectorbuffer;
 		subsectorbuffer += sec.subsectorcount;
 		sec.subsectorcount = 0;
 	}
-	
+
 	for (auto &sub : Level->subsectors)
 	{
 		sub.render_sector->subsectors[sub.render_sector->subsectorcount++] = &sub;
@@ -280,8 +281,8 @@ void MapLoader::PrepareSectorData()
 			seg_t * seg = sub.firstline;
 			for(uint32_t j=0;j<sub.numlines;j++)
 			{
-				if (!(sub.hacked&1) && seg[j].linedef==0 && 
-						seg[j].PartnerSeg!=NULL && 
+				if (!(sub.hacked&1) && seg[j].linedef==0 &&
+						seg[j].PartnerSeg!=NULL &&
 						sub.render_sector != seg[j].PartnerSeg->Subsector->render_sector)
 				{
 					DPrintf(DMSG_NOTIFY, "Found hack: (%f,%f) (%f,%f)\n", seg[j].v1->fX(), seg[j].v1->fY(), seg[j].v2->fX(), seg[j].v2->fY());
@@ -327,7 +328,7 @@ void MapLoader::PrepareTransparentDoors(sector_t * sector)
 			}
 
 			sector_t * sec=getNextSector(ln, sector);
-			if (sec==NULL) 
+			if (sec==NULL)
 			{
 				solidwall=true;
 				continue;
@@ -378,7 +379,7 @@ void MapLoader::PrepareTransparentDoors(sector_t * sector)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -478,7 +479,7 @@ static int segcmp(const void *a, const void *b)
 {
 	seg_t *A = *(seg_t**)a;
 	seg_t *B = *(seg_t**)b;
-	return xs_RoundToInt(FRACUNIT*(A->sidefrac - B->sidefrac));
+	return RoundHalfUp(FRACUNIT*(A->sidefrac - B->sidefrac));
 }
 
 //==========================================================================
@@ -719,7 +720,7 @@ void MapLoader::InitRenderInfo()
 	FloodSectorStacks();
 	TArray<int> checkmap(Level->vertexes.Size(), true);
 	memset(checkmap.Data(), -1, sizeof(int)*Level->vertexes.Size());
-	for(auto &sec : Level->sectors) 
+	for(auto &sec : Level->sectors)
 	{
 		int i = Index(&sec);
 		PrepareTransparentDoors(&sec);
@@ -864,7 +865,7 @@ void MapLoader::FixHoles()
 			{
 				if ((*segloop)[0]->v1 != segloop->Last()->v2)
 				{
-					// There was no connected seg, leaving an unclosed loop. 
+					// There was no connected seg, leaving an unclosed loop.
 					// Clear this and continue looking.
 					segloop->Clear();
 				}

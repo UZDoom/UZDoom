@@ -145,4 +145,3 @@ void R_UpdateSky(double ticFrac)
 		Level->hw_skymistyscale += ticFrac * (Level->skymistyscale - Level->hw_skymistyscale);
 	}
 }
-

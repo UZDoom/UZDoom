@@ -195,32 +195,32 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 	float zpos;
 	bool flipx, flipy;
 	FTextureID decalTile;
-	
-	
+
+
 	if (decal->RenderFlags & RF_INVISIBLE) return;
 	if (type == RENDERWALL_FFBLOCK && texture->isMasked()) return;	// No decals on 3D floors with transparent textures.
 	if (seg == nullptr) return;
-	
-	
+
+
 	decalTile = decal->PicNum;
 	flipx = !!(decal->RenderFlags & RF_XFLIP);
 	flipy = !!(decal->RenderFlags & RF_YFLIP);
 
-	
+
 	auto texture = TexMan.GetGameTexture(decalTile);
 	if (texture == NULL) return;
 
-	
+
 	// the sectors are only used for their texture origin coordinates
 	// so we don't need the fake sectors for deep water etc.
 	// As this is a completely split wall fragment no further splits are
 	// necessary for the decal.
 	sector_t *frontsector;
-	
+
 	// for 3d-floor segments use the model sector as reference
 	if ((decal->RenderFlags&RF_CLIPMASK) == RF_CLIPMID) frontsector = decal->Sector;
 	else frontsector = seg->frontsector;
-	
+
 	switch (decal->RenderFlags & RF_RELMASK)
 	{
 		default:
@@ -229,7 +229,7 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 			return;
 			//zpos = decal->z;
 			//break;
-			
+
 		case RF_RELUPPER:
 			if (type != RENDERWALL_TOP) return;
 			if (line->flags & ML_DONTPEGTOP)
@@ -270,16 +270,16 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 	float decalheight = texture->GetDisplayHeight() * decal->ScaleY;
 	float decallefto = texture->GetDisplayLeftOffset() * decal->ScaleX;
 	float decaltopo = texture->GetDisplayTopOffset()  * decal->ScaleY;
-	
+
 	float leftedge = glseg.fracleft * side->TexelLength;
 	float linelength = glseg.fracright * side->TexelLength - leftedge;
-	
+
 	// texel index of the decal's left edge
 	float decalpixpos = (float)side->TexelLength * decal->LeftDistance - (flipx ? decalwidth - decallefto : decallefto) - leftedge;
-	
+
 	float left, right;
 	float lefttex, righttex;
-	
+
 	// decal is off the left edge
 	if (decalpixpos < 0)
 	{
@@ -291,7 +291,7 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 		left = decalpixpos;
 		lefttex = 0;
 	}
-	
+
 	// decal is off the right edge
 	if (decalpixpos + decalwidth > linelength)
 	{
@@ -303,14 +303,14 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 		right = decalpixpos + decalwidth;
 		righttex = decalwidth;
 	}
-	if (right <= left) 
+	if (right <= left)
 		return;	// nothing to draw
-	
+
 
 	// one texture unit on the wall as vector
 	float vx = (glseg.x2 - glseg.x1) / linelength;
 	float vy = (glseg.y2 - glseg.y1) / linelength;
-	
+
 	DecalVertex dv[4];
 	enum
 	{
@@ -318,30 +318,30 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 	};
 	dv[UL].x = dv[LL].x = glseg.x1 + vx * left;
 	dv[UL].y = dv[LL].y = glseg.y1 + vy * left;
-	
+
 	dv[LR].x = dv[UR].x = glseg.x1 + vx * right;
 	dv[LR].y = dv[UR].y = glseg.y1 + vy * right;
-	
+
 	zpos += (flipy ? decalheight - decaltopo : decaltopo);
-	
+
 	dv[UL].z = dv[UR].z = zpos;
 	dv[LL].z = dv[LR].z = dv[UL].z - decalheight;
 	dv[UL].v = dv[UR].v = 0.f;
-	
+
 	float decalscale = float(decal->ScaleX * texture->GetDisplayWidth());
 	dv[UL].u = dv[LL].u = lefttex / decalscale;
 	dv[LR].u = dv[UR].u = righttex / decalscale;
 	dv[LL].v = dv[LR].v = 1.f;
-	
+
 	// now clip to the top plane
 	float vzt = (ztop[UL] - ztop[LL]) / linelength;
 	float topleft = ztop[LL] + vzt * left;
 	float topright = ztop[LL] + vzt * right;
-	
+
 	// completely below the wall
 	if (topleft < dv[LL].z && topright < dv[LR].z)
 		return;
-	
+
 	if (topleft < dv[UL].z || topright < dv[UR].z)
 	{
 		// decal has to be clipped at the top
@@ -351,16 +351,16 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 		dv[UL].z = topleft;
 		dv[UR].z = topright;
 	}
-	
+
 	// now clip to the bottom plane
 	float vzb = (zbottom[UL] - zbottom[LL]) / linelength;
 	float bottomleft = zbottom[LL] + vzb * left;
 	float bottomright = zbottom[LL] + vzb * right;
-	
+
 	// completely above the wall
 	if (bottomleft > dv[UL].z && bottomright > dv[UR].z)
 		return;
-	
+
 	if (bottomleft > dv[LL].z || bottomright > dv[LR].z)
 	{
 		// decal has to be clipped at the bottom
@@ -370,8 +370,8 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 		dv[LL].z = bottomleft;
 		dv[LR].z = bottomright;
 	}
-	
-	
+
+
 	if (flipx)
 	{
 		for (i = 0; i < 4; i++) dv[i].u = 1.f - dv[i].u;
@@ -411,10 +411,10 @@ void HWWall::ProcessDecal(HWDrawInfo *di, DBaseDecal *decal, const FVector3 &nor
 	gldecal->Normal = normal;
 	gldecal->lightlist = lightlist;
 	memcpy(gldecal->dv, dv, sizeof(dv));
-	
+
 	auto verts = screen->mVertexData->AllocVertices(4);
 	gldecal->vertindex = verts.second;
-	
+
 	for (i = 0; i < 4; i++)
 	{
 		verts.first[i].Set(dv[i].x, dv[i].z, dv[i].y, dv[i].u, dv[i].v);
@@ -443,4 +443,3 @@ void HWWall::ProcessDecals(HWDrawInfo *di)
 		}
 	}
 }
-

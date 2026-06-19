@@ -42,7 +42,7 @@ extend class ScreenJobRunner
 	{
 		if (!netgame || GetSkipType() == ST_UNSKIPPABLE)
 			return;
-		
+
 		if (net_cutscenereadytype == 0)
 		{
 			int totalClients, readyClients;
@@ -59,7 +59,7 @@ extend class ScreenJobRunner
 			{
 				TextureID readyico = TexMan.CheckForTexture("READYICO", TexMan.Type_MiscPatch);
 				Vector2 readysize = TexMan.GetScaledSize(readyico);
-				
+
 				if (IsPlayerReady(consoleplayer))
 					Screen.DrawTexture(readyico, true, 0, 0, DTA_CleanNoMove, true, DTA_TopLeft, true);
 
@@ -102,21 +102,21 @@ extend class ScreenJobRunner
 
 class IntermissionController native ui
 {
-    // This is mostly a black box to the native intermission code.
-    // May be scriptified later, but right now we do not need it.
+	// This is mostly a black box to the native intermission code.
+	// May be scriptified later, but right now we do not need it.
 
-    native void Start();
+	native void Start();
 	native bool Responder(InputEvent ev);
-    native bool Ticker();
-    native void Drawer();
-    native bool NextPage();
+	native bool Ticker();
+	native void Drawer();
+	native bool NextPage();
 }
 
 // Wrapper to play the native intermissions within a screen job.
 class IntermissionScreenJob : ScreenJob
 {
-    IntermissionController controller;
-	
+	IntermissionController controller;
+
 	ScreenJob Init(IntermissionController ctrl, bool allowwipe)
 	{
 		Super.Init();
@@ -132,9 +132,9 @@ class IntermissionScreenJob : ScreenJob
 
 	override void OnDestroy()
 	{
-        if (controller)
-            controller.Destroy();
-        Super.OnDestroy();
+		if (controller)
+			controller.Destroy();
+		Super.OnDestroy();
 	}
 }
 

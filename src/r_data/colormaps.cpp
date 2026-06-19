@@ -144,7 +144,7 @@ void R_InitColormaps (bool allowCustomColormap)
 				b /= 256;
 				// The calculated average is too dark so brighten it according to the palettes's overall brightness
 				int maxcol = max<int>(max<int>(palette_brightness, r), max<int>(g, b));
-				
+
 				fakecmaps[j].blend = PalEntry (255, r * 255 / maxcol, g * 255 / maxcol, b * 255 / maxcol);
 			}
 		}
@@ -174,7 +174,7 @@ uint32_t R_ColormapNumForName (const char *name)
 				return i;
 			}
 		}
-				
+
 		if (!strnicmp (name, "WATERMAP", 8))
 			return MAKEARGB (128,0,0x4f,0xa5);
 	}
@@ -189,7 +189,7 @@ uint32_t R_ColormapNumForName (const char *name)
 
 uint32_t R_BlendForColormap (uint32_t map)
 {
-	return APART(map) ? map : 
+	return APART(map) ? map :
 		map < fakecmaps.Size() ? uint32_t(fakecmaps[map].blend) : 0;
 }
 
@@ -222,4 +222,3 @@ void R_UpdateInvulnerabilityColormap()
 	}
 
 }
-

@@ -164,8 +164,6 @@ private:
 	ShaderUniforms(const ShaderUniforms &) = delete;
 	ShaderUniforms &operator=(const ShaderUniforms &) = delete;
 
-    IDataBuffer *mBuffer = nullptr;
+	IDataBuffer *mBuffer = nullptr;
 	std::vector<UniformFieldDesc> mFields;
 };
-
-

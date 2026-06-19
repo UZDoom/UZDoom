@@ -182,7 +182,7 @@ enum SPAC
 	SPAC_Use = 1<<1,		// when player uses line
 	SPAC_MCross = 1<<2,		// when monster crosses line
 	SPAC_Impact = 1<<3,		// when projectile hits line
-	SPAC_Push = 1<<4,		// when player pushes line	
+	SPAC_Push = 1<<4,		// when player pushes line
 	SPAC_PCross = 1<<5,		// when projectile crosses line
 	SPAC_UseThrough = 1<<6,	// when player uses line (doesn't block)
 	// SPAC_PTOUCH is mapped to SPAC_PCross|SPAC_Impact
@@ -269,7 +269,7 @@ struct mapseg_t
 	int V2() { return LittleShort(v2); }
 };
 
-struct mapseg4_t 
+struct mapseg4_t
 {
 	int32_t v1;
 	int32_t v2;

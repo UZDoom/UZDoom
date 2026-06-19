@@ -44,7 +44,7 @@ public:
 		Width = w;
 		Height = h;
 	}
-	
+
 	FBitmap GetBgraBitmap(const PalEntry*, int *trans) override
 	{
 		FBitmap bmp;
@@ -53,7 +53,7 @@ public:
 		if (trans) *trans = 0;
 		return bmp;
 	}
-	
+
 	uint32_t *GetBuffer()
 	{
 		return WorkBuffer.Data();
@@ -172,7 +172,7 @@ public:
 	bool Run(int ticks) override;
 	bool RunInterpolated(double ticks) override;
 	bool Interpolatable() override { return true; }
-	
+
 private:
 	float Clock = 0;
 };
@@ -184,7 +184,7 @@ public:
 	bool Run(int ticks) override;
 	bool RunInterpolated(double ticks) override;
 	bool Interpolatable() override { return true; }
-	
+
 private:
 	enum { WIDTH = 320, HEIGHT = 200 };
 	double y[WIDTH];
@@ -217,13 +217,13 @@ Wiper *Wiper::Create(int type)
 	{
 		case wipe_Burn:
 			return new Wiper_Burn;
-			
+
 		case wipe_Fade:
 			return new Wiper_Crossfade;
-			
+
 		case wipe_Melt:
 			return new Wiper_Melt;
-			
+
 		default:
 			return nullptr;
 	}
@@ -311,7 +311,7 @@ bool Wiper_Melt::Run(int ticks)
 {
 	bool done = false;
 	DrawTexture(twod, endScreen, 0, 0, DTA_FlipY, screen->RenderTextureIsFlipped(), DTA_Masked, false,  TAG_DONE);
-	
+
 	// Copy the old screen in vertical strips on top of the new one.
 	while (ticks--)
 	{
@@ -340,9 +340,9 @@ bool Wiper_Melt::Run(int ticks)
 					int32_t right;
 					double bottom;
 				} rect;
-				
+
 				// Only draw for the final tick.
-				
+
 				int w = startScreen->GetTexelWidth();
 				int h = startScreen->GetTexelHeight();
 				dpt.x = i * w / WIDTH;
@@ -469,10 +469,10 @@ bool Wiper_Burn::Run(int ticks)
 {
 	bool done = false;
 
-	
+
 	BurnTime += ticks;
 	ticks *= 2;
-	
+
 	// Make the fire burn
 	while (!done && ticks--)
 	{
@@ -496,7 +496,7 @@ bool Wiper_Burn::Run(int ticks)
 
 	DrawTexture(twod, startScreen, 0, 0, DTA_FlipY, screen->RenderTextureIsFlipped(), DTA_Masked, false, TAG_DONE);
 	DrawTexture(twod, endScreen, 0, 0, DTA_FlipY, screen->RenderTextureIsFlipped(), DTA_Burn, true, DTA_Masked, false, TAG_DONE);
-	
+
 	// The fire may not always stabilize, so the wipe is forced to end
 	// after an arbitrary maximum time.
 	return done || (BurnTime > 40);

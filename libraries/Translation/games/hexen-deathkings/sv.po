@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 05:45+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen-deathkings/sv/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Ruinerad by"
@@ -76,6 +75,7 @@ msgstr "Avloppsgrop"
 msgid "TXT_HEXDD_MAP38"
 msgstr "Rosen"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "Du stryker en darrande hand över ditt\n"
@@ -98,6 +98,7 @@ msgstr ""
 " \n"
 " eller hur?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "Säkert bor de fördömdas själar i denna\n"
@@ -121,6 +122,7 @@ msgstr ""
 " \n"
 " ...för de lyckligt lottade."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Ännu en gång befinner du dig i den\n"
@@ -136,6 +138,7 @@ msgstr ""
 "...ögon som skyddar en ondskefull\n"
 "avsikt."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "En gång i tiden greppade du kaos-\n"
@@ -154,10 +157,10 @@ msgstr ""
 "Men du var aldrig den som\n"
 "backade från en utmaning..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"... och andra spelare väntar.\n"
+"\\n... och andra spelare väntar.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -175,6 +178,7 @@ msgstr "Vattenfallet är blockerat"
 msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "En dörr har öppnats i kapellet."
 
+#, fuzzy
 msgid "TXT_ACS_MAP42_4_NOWTH"
 msgstr "Det där är konstigt..."
 
@@ -205,12 +209,14 @@ msgstr "Två tredjedelar av pusslet är löst."
 msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Du hör en plattform som rör sig på avstånd."
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_0_ITISD"
 msgstr "Det är gjort..."
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Du har inte fullbordat pusslet."
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_2_IMWAR"
 msgstr "Jag varnar dig..."
 
@@ -223,6 +229,7 @@ msgstr "Och dum också."
 msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "En fjärdedel av pusslet är klart."
 
+#, fuzzy
 msgid "TXT_ACS_MAP46_9_BADCH"
 msgstr "Dåligt val..."
 
@@ -313,9 +320,11 @@ msgstr "Utgången är öppen"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "Dörrarna öppnas inte från den här sidan"
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "Dörrarna är öppna..."
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_5_IFYOU"
 msgstr "...om du är redo"
 

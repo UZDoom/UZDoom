@@ -70,12 +70,12 @@ bool FWeaponSlot::AddWeapon(const char *type)
 bool FWeaponSlot::AddWeapon(PClassActor *type)
 {
 	unsigned int i;
-	
+
 	if (type == nullptr)
 	{
 		return false;
 	}
-	
+
 	if (!type->IsDescendantOf(NAME_Weapon))
 	{
 		Printf("Can't add non-weapon %s to weapon slots\n", type->TypeName.GetChars());
@@ -942,4 +942,3 @@ PClassActor *Net_ReadWeapon(TArrayView<uint8_t>& stream)
 	}
 	return Weapons_ntoh[index];
 }
-

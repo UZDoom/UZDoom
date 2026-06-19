@@ -1,0 +1,226 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2025-11-19 13:07+0000\n"
+"Last-Translator: inkoalawetrust <someb27@yahoo.gr>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/uzdoom/harmony/el/>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "Χρειάζεται τη πράσινη κάρτα"
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "Χρειάζεται τη μοβ κάρτα"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "Χρειάζεται τη κίτρινη κάρτα"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "Χρειάζεται το πράσινο κλειδί"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "Χρειάζεται το κίτρινο κλειδί"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "Χρειάζεται το μοβ κλειδί"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "Πήρες πανοπλία."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "Πήρες πανοπλία μάχης."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr "Μέγα σφαίρα"
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "Πήρες τη πράσινη κάρτα."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "Πήρες τη κίτρινη κάρτα."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "Πήρες τη μοβ κάρτα."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "Πήρες το πράσινο κλειδί."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "Πήρες το κίτρινο κλειδί."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "Πήρες το μοβ κλειδί."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "Χάρτης"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr ""
+
+msgid "TXT_HARMMAP01"
+msgstr ""
+
+msgid "TXT_HARMMAP02"
+msgstr ""
+
+msgid "TXT_HARMMAP03"
+msgstr ""
+
+msgid "TXT_HARMMAP04"
+msgstr "Μεγαλόπολη"
+
+msgid "TXT_HARMMAP05"
+msgstr "Το Νοσοκομείο"
+
+msgid "TXT_HARMMAP06"
+msgstr "Το Οπλοστάσιο"
+
+msgid "TXT_HARMMAP07"
+msgstr "Το Υποβρύχιο Εργαστήριο"
+
+msgid "TXT_HARMMAP08"
+msgstr "Διάδρομος Ένα"
+
+msgid "TXT_HARMMAP09"
+msgstr ""
+
+msgid "TXT_HARMMAP10"
+msgstr "Η Ραδιενεργή Ζώνη"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr ""
+
+msgid "HARMQUITMSG"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr ""

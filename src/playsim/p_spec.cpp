@@ -272,7 +272,7 @@ bool P_TestActivateLine (line_t *line, AActor *mo, int side, int activationType,
 	if ((lineActivation & activationType) == 0)
 	{
 		if (activationType != SPAC_MCross || lineActivation != SPAC_Cross)
-		{ 
+		{
 			return false;
 		}
 	}
@@ -284,7 +284,7 @@ bool P_TestActivateLine (line_t *line, AActor *mo, int side, int activationType,
 		!(mo->flags & MF_MISSILE) &&
 		!(line->flags & ML_MONSTERSCANACTIVATE) &&
 		(activationType != SPAC_MCross || (!(lineActivation & SPAC_MCross))))
-	{ 
+	{
 		// [RH] monsters' ability to activate this line depends on its type
 		// In Hexen, only MCROSS lines could be activated by monsters. With
 		// lax activation checks, monsters can also activate certain lines
@@ -412,7 +412,7 @@ void P_ActorInSpecialSector (AActor *victim, sector_t * sector, F3DFloor* Ffloor
 		if (!victim->isAtZ(theZ))
 			return;
 	}
-	
+
 	// Has hit ground.
 
 	auto Level = sector->Level;
@@ -429,7 +429,7 @@ void P_ActorInSpecialSector (AActor *victim, sector_t * sector, F3DFloor* Ffloor
 				P_DamageMobj(players[i].mo, nullptr, nullptr, TELEFRAG_DAMAGE, NAME_InstantDeath);
 		if (sector->Flags & SECF_EXIT2)
 			Level->SecretExitLevel(0);
-		else 
+		else
 			Level->ExitLevel(0, false);
 		return;
 	}
@@ -608,7 +608,7 @@ void P_GiveSecret(FLevelLocals *Level, AActor *actor, bool printmessage, bool pl
 			if (printmessage)
 			{
 				C_MidPrint(nullptr, GStrings.CheckString("SECRETMESSAGE"));
-				if (showsecretsector && sectornum >= 0) 
+				if (showsecretsector && sectornum >= 0)
 				{
 					Printf(PRINT_NONOTIFY, "Secret found in sector %d\n", sectornum);
 				}

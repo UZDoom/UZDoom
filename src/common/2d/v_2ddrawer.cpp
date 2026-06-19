@@ -208,7 +208,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(DShape2D, PushTriangle, Shape2D_PushTriangle)
 //
 //==========================================================================
 
-int F2DDrawer::AddCommand(RenderCommand *data) 
+int F2DDrawer::AddCommand(RenderCommand *data)
 {
 	data->mScreenFade = screenFade;
 	if (mData.Size() > 0 && data->isCompatible(mData.Last()))
@@ -376,7 +376,7 @@ bool F2DDrawer::SetStyle(FGameTexture *tex, DrawParms &parms, PalEntry &vertexco
 		else if (quad.mDrawMode == TM_INVERSE) quad.mDrawMode = TM_INVERTOPAQUE;
 	}
 	quad.mRenderStyle = parms.style;	// this  contains the blend mode and blend equation settings.
-    if (parms.burn) quad.mFlags |= DTF_Burn;
+	if (parms.burn) quad.mFlags |= DTF_Burn;
 	return true;
 }
 
@@ -708,24 +708,24 @@ void F2DDrawer::AddShape(FGameTexture* img, DShape2D* shape, DrawParms& parms)
 
 void F2DDrawer::AddPoly(FGameTexture *texture, FVector2 *points, int npoints,
 		double originx, double originy, double scalex, double scaley,
-		DAngle rotation, const FColormap &colormap, PalEntry flatcolor, double fadelevel,
+		DAngle rotation, const FColormap &colormap, double alpha, double fadelevel,
 		uint32_t *indices, size_t indexcount)
 {
 	RenderCommand poly;
 
 	poly.mType = DrawTypeTriangles;
 	poly.mTexture = texture;
-	poly.mRenderStyle = DefaultRenderStyle();
+	poly.mRenderStyle = (alpha < 1.0) ? LegacyRenderStyles[STYLE_Translucent] : DefaultRenderStyle();
 	poly.mFlags |= DTF_Wrap;
 	poly.mDesaturate = colormap.Desaturation;
 
-	PalEntry color0; 
+	PalEntry color0;
 	double invfade = 1. - fadelevel;
 
 	color0.r = uint8_t(colormap.LightColor.r * invfade);
 	color0.g = uint8_t(colormap.LightColor.g * invfade);
 	color0.b = uint8_t(colormap.LightColor.b * invfade);
-	color0.a = 255;
+	color0.a = uint8_t(255 * alpha);
 
 	poly.mColor1.a = 0;
 	poly.mColor1.r = uint8_t(colormap.FadeColor.r * fadelevel);
@@ -987,8 +987,8 @@ void F2DDrawer::AddFlatFill(int left, int top, int right, int bottom, FGameTextu
 
 
 //===========================================================================
-// 
-// 
+//
+//
 //
 //===========================================================================
 
@@ -1233,9 +1233,9 @@ public:
 	}
 };
 
-FCanvas* GetTextureCanvas(const FString& texturename)
+FCanvas *GetTextureCanvas(const FString &texturename, ETextureType usetype = ETextureType::Wall, BITFIELD flags = 0)
 {
-	FTextureID textureid = TexMan.CheckForTexture(texturename.GetChars(), ETextureType::Wall, FTextureManager::TEXMAN_Overridable);
+	FTextureID textureid = TexMan.CheckForTexture(texturename.GetChars(), usetype, FTextureManager::TEXMAN_Overridable | flags);
 	if (textureid.isValid())
 	{
 		// Only proceed if the texture is a canvas texture.

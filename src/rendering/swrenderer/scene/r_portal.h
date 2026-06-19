@@ -31,17 +31,17 @@ namespace swrenderer
 	{
 	public:
 		RenderPortal(RenderThread *thread);
-		
+
 		void SetMainPortal();
 		void CopyStackedViewParameters();
-	
+
 		void RenderPlanePortals();
 		void RenderLinePortals();
 
 		void AddLinePortal(line_t *linedef, int x1, int x2, const short *topclip, const short *bottomclip);
 
 		RenderThread *Thread = nullptr;
-	
+
 		int WindowLeft = 0;
 		int WindowRight = 0;
 		uint16_t MirrorFlags = 0;
@@ -62,7 +62,7 @@ namespace swrenderer
 		double stacked_visibility = 0.0;
 		DVector3 stacked_viewpos;
 		DRotator stacked_angle;
-		
+
 		int numskyboxes = 0; // For ADD_STAT(skyboxes)
 
 		void SetInSkyBox(FSectorPortal *portal) { SectorPortalsInSkyBox.insert(portal); }
@@ -72,7 +72,7 @@ namespace swrenderer
 	private:
 		void RenderLinePortal(PortalDrawseg* pds, int depth);
 		void RenderLinePortalHighlight(PortalDrawseg* pds);
-		
+
 		TArray<DVector3> viewposStack;
 		TArray<VisiblePlane *> visplaneStack;
 		TArray<PortalDrawseg *> WallPortals;

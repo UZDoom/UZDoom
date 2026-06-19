@@ -31,7 +31,7 @@ class SkyViewpoint : Actor
 		+NOGRAVITY
 		+DONTSPLASH
 	}
-	
+
 	// arg0 = Visibility*4 for self skybox
 
 	// If self actor has no TID, make it the default sky box
@@ -63,7 +63,7 @@ class SkyViewpoint : Actor
 
 		Super.OnDestroy();
 	}
-	
+
 }
 
 //---------------------------------------------------------------------------
@@ -85,7 +85,7 @@ class SkyPicker : Actor
 		+NOGRAVITY
 		+DONTSPLASH
 	}
-	
+
 	override void PostBeginPlay ()
 	{
 		Actor box;
@@ -122,7 +122,7 @@ class SkyPicker : Actor
 		}
 		Destroy ();
 	}
-	
+
 }
 
 class SkyCamCompat : SkyViewpoint
@@ -160,7 +160,7 @@ class SectorSilencer : Actor
 		+DONTSPLASH
 		RenderStyle "None";
 	}
-	
+
 	override void BeginPlay ()
 	{
 		Super.BeginPlay ();

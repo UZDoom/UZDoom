@@ -51,7 +51,7 @@ void PrintPickupMessage(bool localview, const FString &str)
 		StaticLastMessageTic = gametic;
 		StaticLastMessage = str;
 		const char *pstr = str.GetChars();
-		
+
 		if (pstr[0] == '$')	pstr = GStrings.GetString(pstr + 1);
 		if (pstr[0] != 0) Printf(PRINT_LOW, "%s\n", pstr);
 		StatusBar->FlashCrosshair();
@@ -95,4 +95,3 @@ bool CallTryPickup(AActor *item, AActor *toucher, AActor **toucher_return)
 	if (toucher_return) *toucher_return = tret;
 	return !!res;
 }
-

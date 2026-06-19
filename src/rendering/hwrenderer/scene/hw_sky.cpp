@@ -34,7 +34,7 @@ CVAR(Bool,gl_noskyboxes, false, 0)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -283,7 +283,7 @@ void HWWall::SkyTop(HWWallDispatcher *di, seg_t * seg,sector_t * fs,sector_t * b
 						seg->sidedef->GetTextureYOffset(side_t::mid) > 0)
 					{
 						ztop[0]=ztop[1]=32768.0f;
-						zbottom[0]=zbottom[1]= 
+						zbottom[0]=zbottom[1]=
 							bs->ceilingplane.ZatPoint(v2) + seg->sidedef->GetTextureYOffset(side_t::mid);
 						SkyPlane(di, fs, sector_t::ceiling, false);
 						return;
@@ -308,7 +308,7 @@ void HWWall::SkyTop(HWWallDispatcher *di, seg_t * seg,sector_t * fs,sector_t * b
 			flags|=HWF_SKYHACK;	// mid textures on such lines need special treatment!
 		}
 	}
-	else 
+	else
 	{
 		float frontreflect = fs->GetReflect(sector_t::ceiling);
 		if (frontreflect > 0)
@@ -359,7 +359,7 @@ void HWWall::SkyBottom(HWWallDispatcher *di, seg_t * seg,sector_t * fs,sector_t 
 	{
 		if (bs->special == GLSector_NoSkyDraw || (bs->MoreFlags & SECMF_NOSKYWALLS) != 0 || (seg->linedef->flags & ML_NOSKYWALLS) != 0) return;
 		auto tex = TexMan.GetGameTexture(seg->sidedef->GetTexture(side_t::bottom), true);
-		
+
 		// For lower skies the normal logic only applies to walls with no lower texture.
 		if (!tex->isValid())
 		{
@@ -391,7 +391,7 @@ void HWWall::SkyBottom(HWWallDispatcher *di, seg_t * seg,sector_t * fs,sector_t 
 			flags |= HWF_SKYHACK;	// mid textures on such lines need special treatment!
 		}
 	}
-	else 
+	else
 	{
 		float frontreflect = fs->GetReflect(sector_t::floor);
 		if (frontreflect > 0)
@@ -427,4 +427,3 @@ void HWWall::SkyBottom(HWWallDispatcher *di, seg_t * seg,sector_t * fs,sector_t 
 
 	SkyPlane(di, fs, sector_t::floor, true);
 }
-

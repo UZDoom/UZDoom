@@ -41,12 +41,23 @@ class OptionMenuSliderVar : OptionMenuSliderBase
 
 	override double GetSliderValue()
 	{
-		return ColorpickerMenu(Menu.GetCurrentMenu()).GetColor(mIndex);
+		let curMenu = Menu.GetCurrentMenu();
+		if (curMenu.GetClassName() == "TextEnterMenu")
+		{
+			return ColorpickerMenu(curMenu.mParentMenu).GetColor(mIndex);
+		}
+		return ColorpickerMenu(curMenu).GetColor(mIndex);
 	}
 
 	override void SetSliderValue(double val)
 	{
-		ColorpickerMenu(Menu.GetCurrentMenu()).setColor(mIndex, val);
+		let curMenu = Menu.GetCurrentMenu();
+		if (curMenu.GetClassName() == "TextEnterMenu")
+		{
+			ColorpickerMenu(curMenu.mParentMenu).SetColor(mIndex, val);
+			return;
+		}
+		ColorpickerMenu(curMenu).SetColor(mIndex, val);
 	}
 }
 

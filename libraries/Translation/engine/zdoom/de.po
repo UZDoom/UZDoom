@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-13 18:01+0000\n"
+"PO-Revision-Date: 2026-06-13 16:30+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
@@ -153,7 +152,6 @@ msgstr ""
 "Also, Kumpel, wenn du jetzt abhaust,\n"
 "begehst du Fahnenflucht!"
 
-#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
 "Geh doch. Wenn du zurückkommst,\n"
@@ -444,8 +442,7 @@ msgstr "%d Monster getötet"
 
 msgid "TXT_NO_RESURRECT"
 msgstr ""
-"Kann nicht wiederbeleben. Der Spieler ist nicht mehr mit seinem Körper "
-"verbunden."
+"Kann nicht wiederbeleben. Der Spieler ist nicht mehr mit seinem Körper verbunden."
 
 msgid "TXT_ALL_ARTIFACTS"
 msgstr "Alle Artefakte!"
@@ -564,7 +561,6 @@ msgstr "Geheimnisse"
 msgid "TXT_IMTIME"
 msgstr "Zeit"
 
-#, fuzzy
 msgid "TXT_IMPAR"
 msgstr "Par"
 
@@ -957,7 +953,7 @@ msgid "OB_STEALTHCACO"
 msgstr "%o dachte, einen Cacodämonen zu sehen."
 
 msgid "OB_STEALTHCHAINGUY"
-msgstr "%o dachte, einen MG-Schützen zu sehen."
+msgstr "%o dachte, %g sah einen MG-Schützen."
 
 msgid "OB_STEALTHDEMON"
 msgstr "%o dachte, einen Dämonen zu sehen."
@@ -2123,7 +2119,8 @@ msgid "TXT_NEED_BLUECRYSTAL"
 msgstr "Du brauchst den blauen Kristall"
 
 msgid "TXT_RETAIL_ONLY"
-msgstr "Dieser Bereich ist nur in der kompletten Version von Strife erreichbar"
+msgstr ""
+"Dieser Bereich ist nur in der kompletten Version von Strife erreichbar"
 
 msgid "TXT_DOES_NOT_WORK"
 msgstr "Das scheint nicht zu funktionieren"
@@ -2164,7 +2161,7 @@ msgstr "Vernichter"
 msgid "TAG_GLAUNCHER1"
 msgstr "Granatwerfer"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Granatwerfer"
 
@@ -4032,7 +4029,7 @@ msgid "OPTVAL_TRANSLUCENT"
 msgstr "Transparent"
 
 msgid "OPTVAL_FUZZ"
-msgstr "Fuzz"
+msgstr "Unschärfe"
 
 msgid "OPTVAL_SHADOW"
 msgstr "Schatten"
@@ -4456,7 +4453,7 @@ msgid "OPTVAL_PIXELFUZZ"
 msgstr "Pixel"
 
 msgid "OPTVAL_SMOOTHFUZZ"
-msgstr "Glatt"
+msgstr "Glatter Fuzz"
 
 msgid "OPTVAL_SWIRLYFUZZ"
 msgstr "Gewirbelt"
@@ -4563,18 +4560,16 @@ msgstr "Spielstand '%s' ist von einer anderen ZDoom-basierten Engine:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Spielstand '%s' ist von einer älteren Version: %s (%e ist die älteste noch "
-"unterstützte Version."
+"Spielstand '%s' ist von einer älteren Version: %s (%e ist die älteste noch unterstützte Version."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Spielstand '%s' ist von einer neueren Version: %s (%e ist die neueste noch "
-"unterstützte Version."
+"Spielstand '%s' ist von einer neueren Version: %s (%e ist die neueste noch unterstützte Version."
 
 msgid "TXT_NOMAPSG"
 msgstr "Spielstand '%s' hat keine Information über den alktuellen Level."
@@ -4682,9 +4677,8 @@ msgstr "ZDoom klassisch"
 msgid "OPTVAL_MODERN"
 msgstr "Modern (WASD)"
 
-#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Modern (Tastatur)"
+msgstr "Modern (Linkshändig / Ziffernblock)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strikte KEYKONF-Waffen und -Spieler"
@@ -4807,7 +4801,8 @@ msgstr ""
 
 # Drops from Actors aren't picked up locally
 msgid "GMPLYMNU_NOLOCALDROP"
-msgstr "Client-seitiges Aufheben von fallengelassenen Gegenständen deaktivieren"
+msgstr ""
+"Client-seitiges Aufheben von fallengelassenen Gegenständen deaktivieren"
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
@@ -5179,10 +5174,7 @@ msgstr ""
 "Dies ist ein Beispieltext für Kurzinfos.\n"
 "Her ist noch mehr Text.\n"
 "...\n"
-"Hier ist eine sehr lange Textzeile, die weiter und weiter zu gehen scheint "
-"ohne je etwas Interessantes auszusagen, anscheinend nur so länglich weil die "
-"Entwickler Schwierigkeiten haben auszudrücken wofür eine Funktion nützlich "
-"ist."
+"Hier ist eine sehr lange Textzeile, die weiter und weiter zu gehen scheint ohne je etwas Interessantes auszusagen, anscheinend nur so länglich weil die Entwickler Schwierigkeiten haben auszudrücken wofür eine Funktion nützlich ist."
 
 msgid "ACCMNU_TOOLTIP"
 msgstr "Kurzinfos"
@@ -5192,13 +5184,11 @@ msgstr "Zusätzliche Beleuchtung"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Entfernung des Lichtradius um den Spieler, in Map-Units. Je größer, desto "
-"heller die Szene."
+"Entfernung des Lichtradius um den Spieler, in Map-Units. Je größer, desto heller die Szene."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Menge der zusätzlichen Beleuchtung in vorhandenen Sektor-Lichtniveaus. "
-"Aktueller Beleuchtungsmodus wird beibehalten."
+"Menge der zusätzlichen Beleuchtung in vorhandenen Sektor-Lichtniveaus. Aktueller Beleuchtungsmodus wird beibehalten."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Licht-Radius des Spielers"
@@ -5213,7 +5203,7 @@ msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
 msgstr "Additiv"
 
 msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
-msgstr "Transparent"
+msgstr "Durchsichtig"
 
 msgid "OPTVAL_LAX"
 msgstr "Locker"
@@ -5229,8 +5219,7 @@ msgstr "Display-Kalibrierung"
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP1"
 msgstr ""
-"Passe diese optischen Einstellungen an. Nimm dabei eine natürliche Distanz "
-"zum Display ein."
+"Passe diese optischen Einstellungen an. Nimm dabei eine natürliche Distanz zum Display ein."
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP2"
 msgstr "Upsampling/Supersampling kann die Darstellung verzerren."
@@ -5240,25 +5229,185 @@ msgstr "Bitte schalte diese vor den Anpassungen aus."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Gleicht Schwächen des Monitors aus. Anpassen, bis keine vertikalen Blöcke "
-"mehr sichtbar sind. Dient nur der Kalibrierung, nicht der Regulierung der "
-"Bildhelligkeit."
+"Gleicht Schwächen des Monitors aus. Anpassen, bis keine vertikalen Blöcke mehr sichtbar sind. Dient nur der Kalibrierung, nicht der Regulierung der Bildhelligkeit."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Schwarzpunkt-Anpassung"
 
-#, fuzzy
 msgid "OPTVAL_SMOOTH"
 msgstr "Glatt"
 
-#, fuzzy
 msgid "TAG_MACIL"
 msgstr "Macil"
 
-#, fuzzy
 msgid "TAG_MAULER"
 msgstr "Vernichter"
 
-#, fuzzy
 msgid "TAG_GLAUNCHER"
 msgstr "Granatwerfer"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Passt Monitore an, die dunkle Pixel nicht korrekt darstellen können. Die Einstellung so lange anpassen, bis die diagonalen weißen Blöcke verblassen. Diese Funktion soll nicht verwendet werden, um das Spiel heller zu machen, sondern nur, um sicherzustellen, dass das Bild für die derzeitige Konfiguration kalibriert ist."
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr ""
+"Setzt alle Optionen in diesem Menü auf die Standardeinstellungen zurück."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Wendet eine lineare Helligkeitsanpassung an. Helligkeit nach persönlichen Geschmack anpassen oder um im Dunkeln besser sehen zu können."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Passt den wahrgenommenen Unterschied zwischen ähnlichen Farben an. Steuert wie scharf oder verwaschen die Bilder wirken. Nach persönlichem Geschmack anpassen."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Passt die Farbintensität an, sodass das Bild lebendiger oder gedämpfter wirkt. Einstellungen nach persönlichen Geschmack anpassen."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Einstellung anpassen bis der Farbton gleichmäßig grau erscheint."
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Zur Zwischenablage hinzufügen"
+
+msgid "ACTION_RESTART"
+msgstr "Neustart"
+
+msgid "ACTION_ABORT"
+msgstr "Abbrechen"
+
+msgid "ACTION_STARTGAME"
+msgstr "Spiel Starten"
+
+msgid "ACTION_KICK"
+msgstr "Rauswerfen"
+
+msgid "ACTION_BAN"
+msgstr "Sperren"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Report Speichern"
+
+msgid "ERROR_FATAL"
+msgstr "Schwerwiegender Fehler"
+
+msgid "ERROR_ABORT"
+msgstr "Die Ausführung konnte nicht fortgesetzt werden."
+
+msgid "FILEPICKER_ANY"
+msgstr "Alle Dateien"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "Zip-Dateien von Absturzberichten"
+
+msgid "HAPMNU_TITLE"
+msgstr "Optionen für haptisches Feedback"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Kompatibilitätseinstellungen automatisch erkennen"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Intensität der Powerup-Tönung"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Spielerklasse"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Nebeneinander im Letterbox-Format"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Direct Mix"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Super Stereo"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Musikmodus"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Super Stereo Weite"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Lichtanpassung"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "WADs durchsuchen"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Konfigurationen durchsuchen"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "IWAD Ordner durchsuchen"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "MIDI-Gerät bietet keine Optionen an."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Mikoportals emulieren"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Farbe des Fadenkreuzes bei voller Gesundheit"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Farbe des Fadenkreuzes bei maximaler Gesundheit"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Dynamische Farben für das Fadenkreuz"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Vertikaler Versatz des Fadenkreuzes"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Analoges Laufen"
+
+msgid "VALFORMAT_DB"
+msgstr "%s dB"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s dB/m"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s Grad"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s bps"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s Hz"
+
+msgid "VALFORMAT_METER"
+msgstr "%s m"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s ms"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s sek"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Schwellenwert für Doppelklick"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "Zeit zwischen aufeinanderfolgenden Tastendrücken, um ein Doppelklick-Event auszulösen"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Alpha der Füllung"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "Füllfarbe"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automatisch (ZDoom bevorzugt)"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automatisch (ZDoom bevorzugt)"

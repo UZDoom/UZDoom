@@ -625,7 +625,7 @@ public:
 	// You'll probably never be able to catch this in a save game, but
 	// just in case, add a proper serializer.
 	void Serialize(FSerializer &arc)
-	{ 
+	{
 		Super::Serialize(arc);
 		arc("pawn", Pawn);
 	}

@@ -32,7 +32,7 @@ class ScoreItem : Inventory
 		Inventory.Amount 1;
 		+Inventory.ALWAYSPICKUP
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		toucher.Score += Amount;
@@ -67,7 +67,7 @@ class Key : Inventory
 	{
 		return sv_coopsharekeys;
 	}
-	
+
 	override bool HandlePickup (Inventory item)
 	{
 		// In single player, you can pick up an infinite number of keys
@@ -121,7 +121,7 @@ class PuzzleItem : Inventory
 	meta int PuzzleItemNumber;
 	meta String PuzzFailMessage;
 	meta Sound PuzzFailSound;
-	
+
 	property Number: PuzzleItemNumber;
 	property FailMessage: PuzzFailMessage;
 	property FailSound: PuzzFailSound;
@@ -142,7 +142,7 @@ class PuzzleItem : Inventory
 	{
 		return sv_coopsharekeys;
 	}
-	
+
 	override bool HandlePickup (Inventory item)
 	{
 		// Can't carry more than 1 of each puzzle item in coop netplay
@@ -172,11 +172,10 @@ class PuzzleItem : Inventory
 	override void UseAll(Actor user)
 	{
 	}
-	
+
 	override bool ShouldStay ()
 	{
 		return !!multiplayer;
 	}
 
 }
-

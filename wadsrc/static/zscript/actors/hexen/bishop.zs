@@ -24,7 +24,7 @@ class Bishop : Actor
 {
 	int missilecount;
 	int bobstate;
-	
+
 	Default
 	{
 		Health 130;
@@ -91,8 +91,8 @@ class Bishop : Actor
 		BISH X 1 A_FreezeDeathChunks;
 		Wait;
 	}
-	
-	
+
+
 
 	//============================================================================
 	//
@@ -243,7 +243,7 @@ class Bishop : Actor
 			mo.angle = angle;
 		}
 	}
-	
+
 }
 
 extend class Actor
@@ -346,4 +346,3 @@ class BishopBlur : Actor
 		Stop;
 	}
 }
-

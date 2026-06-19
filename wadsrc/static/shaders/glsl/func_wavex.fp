@@ -30,4 +30,3 @@ vec4 ProcessTexel()
 {
 	return getTexel(GetTexCoord());
 }
-

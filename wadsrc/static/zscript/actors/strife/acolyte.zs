@@ -91,7 +91,7 @@ class Acolyte : StrifeHumanoid
 		GIBS L 1400;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_AcolyteDie
@@ -164,9 +164,9 @@ class Acolyte : StrifeHumanoid
 			}
 		}
 	}
-	
+
 }
-	
+
 
 // Acolyte 1 ----------------------------------------------------------------
 
@@ -302,7 +302,7 @@ class AcolyteToBe : Acolyte
 	Death:
 		Goto XDeath;
 	}
-	
+
 	//============================================================================
 	//
 	// A_HideDecepticon

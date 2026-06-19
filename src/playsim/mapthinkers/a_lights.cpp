@@ -137,7 +137,7 @@ void DFlicker::Tick ()
 {
 	if (m_Count)
 	{
-		m_Count--;	
+		m_Count--;
 	}
 	else if (m_Sector->lightlevel == m_MaxLight)
 	{
@@ -224,7 +224,7 @@ void DLightFlash::Construct(sector_t *sector)
 	m_MinTime = 7;
 	m_Count = (pr_lightflash() & m_MaxTime) + 1;
 }
-	
+
 void DLightFlash::Construct (sector_t *sector, int min, int max)
 {
 	Super::Construct(sector);
@@ -356,7 +356,7 @@ void DGlow::Tick ()
 			m_Direction = 1;
 		}
 		break;
-		
+
 	case 1:
 		// UP
 		newlight += GLOWSPEED;
@@ -818,5 +818,3 @@ void FLevelLocals::EV_StopLightEffect (int tag)
 		}
 	}
 }
-
-

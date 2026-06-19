@@ -262,4 +262,3 @@ class DynamicValueInterpolator : Object
 		return mCurrentValue;
 	}
 }
-

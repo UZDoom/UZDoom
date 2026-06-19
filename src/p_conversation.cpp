@@ -522,7 +522,7 @@ static void HandleReply(player_t *player, bool isconsole, int nodenum, int reply
 					takestuff = false;
 				}
 			}
-	
+
 			if (takestuff)
 			{
 				auto item = Spawn(player->mo->Level, reply->GiveType);
@@ -540,7 +540,7 @@ static void HandleReply(player_t *player, bool isconsole, int nodenum, int reply
 					takestuff = false;
 				}
 			}
-		
+
 			if (reply->GiveType->IsDescendantOf("SlideshowStarter"))
 				G_StartSlideshow(primaryLevel, NAME_None, FSTATE_InLevel);
 		}
@@ -586,7 +586,7 @@ static void HandleReply(player_t *player, bool isconsole, int nodenum, int reply
 
 		player->SetLogText(log);
 	}
-	else if (reply->LogNumber != 0) 
+	else if (reply->LogNumber != 0)
 	{
 		player->SetLogNumber(reply->LogNumber);
 	}

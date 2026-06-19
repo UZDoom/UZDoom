@@ -37,9 +37,6 @@
 
 #include "common/utility/basics.h"
 
-// this is needed to properly normalize angles. We cannot do that with compiler provided conversions because they differ too much
-#include "xs_Float.h"
-
 // make this a local inline function to avoid any dependencies on other headers and not pollute the global namespace
 namespace pi
 {
@@ -59,8 +56,7 @@ inline double g_sqrt(double v) { return sqrt(v); }
 inline double g_atan2(double v, double w) { return atan2(v, w); }
 #endif
 
-
-#define EQUAL_EPSILON (1/65536.)
+constexpr float EQUAL_EPSILON = 1/65536.;
 
 template<class vec_t> struct TVector3;
 template<class vec_t> struct TRotator;
@@ -238,7 +234,7 @@ struct TVector2
 	{
 		return X*X + Y*Y;
 	}
-	
+
 	double Sum() const
 	{
 		return abs(X) + abs(Y);
@@ -367,7 +363,7 @@ struct TVector3
 	}
 
 	TVector3 (const TRotator<vec_t> &rot);
-	
+
 	template<typename U>
 	constexpr explicit operator TVector3<U> () const noexcept {
 		return TVector3<U>(static_cast<U>(X), static_cast<U>(Y), static_cast<U>(Z));
@@ -583,7 +579,7 @@ struct TVector3
 				right = { 1.f, 0.f, 0.f };
 			}
 			// Unconditional to ease static analysis
-			else // major == 2 && n[2] <= 0.0f		
+			else // major == 2 && n[2] <= 0.0f
 			{
 				right = { -1.f, 0.f, 0.f };
 			}
@@ -620,7 +616,7 @@ struct TVector3
 	{
 		return X*X + Y*Y + Z*Z;
 	}
-	
+
 	double Sum() const
 	{
 		return abs(X) + abs(Y) + abs(Z);
@@ -933,12 +929,12 @@ struct TVector4
 	{
 		return X*X + Y*Y + Z*Z + W*W;
 	}
-	
+
 	double Sum() const
 	{
 		return abs(X) + abs(Y) + abs(Z) + abs(W);
 	}
-	
+
 
 	// Return a unit vector facing the same direction as this one
 	TVector4 Unit() const
@@ -971,7 +967,7 @@ struct TVector4
 		return *this;
 	}
 
-	TVector4 Resized(double len) const 
+	TVector4 Resized(double len) const
 	{
 		double vlen = Length();
 		if (vlen != 0.)
@@ -1257,7 +1253,7 @@ private:
 public:
 
 	constexpr vec_t& Degrees__() { return Degrees_; }
-	
+
 	static constexpr TAngle fromDeg(float deg)
 	{
 		return TAngle(deg);
@@ -1432,7 +1428,7 @@ public:
 
 	unsigned BAMs() const
 	{
-		return xs_CRoundToInt(Degrees_ * (0x40000000 / 90.));
+		return RoundHalfEven(Degrees_ * (0x40000000 / 90.));
 	}
 
 	constexpr vec_t Degrees() const
@@ -1495,8 +1491,8 @@ typedef TAngle<double>		DAngle;
 
 constexpr DAngle nullAngle = DAngle::fromDeg(0.);
 constexpr FAngle nullFAngle = FAngle::fromDeg(0.);
-constexpr DAngle minAngle = DAngle::fromDeg(1. / 65536.);
-constexpr FAngle minFAngle = FAngle::fromDeg(1. / 65536.);
+constexpr DAngle minAngle = DAngle::fromDeg(EQUAL_EPSILON);
+constexpr FAngle minFAngle = FAngle::fromDeg(EQUAL_EPSILON);
 
 constexpr DAngle DAngle1 = DAngle::fromDeg(1);
 constexpr DAngle DAngle15 = DAngle::fromDeg(15);

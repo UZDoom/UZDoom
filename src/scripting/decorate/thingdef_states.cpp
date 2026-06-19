@@ -143,7 +143,7 @@ void ParseStates(FScanner &sc, PClassActor * actor, AActor * defaults, Baggage &
 		statestring = ParseStateString(sc);
 		if (!statestring.CompareNoCase("GOTO"))
 		{
-do_goto:	
+do_goto:
 			statestring = ParseStateString(sc);
 			if (sc.CheckString ("+"))
 			{
@@ -243,17 +243,17 @@ do_stop:
 
 			while (sc.GetString() && (!sc.Crossed || sc.Compare("{")))
 			{
-				if (sc.Compare("BRIGHT")) 
+				if (sc.Compare("BRIGHT"))
 				{
 					state.StateFlags |= STF_FULLBRIGHT;
 					continue;
 				}
-				if (sc.Compare("FAST")) 
+				if (sc.Compare("FAST"))
 				{
 					state.StateFlags |= STF_FAST;
 					continue;
 				}
-				if (sc.Compare("SLOW")) 
+				if (sc.Compare("SLOW"))
 				{
 					state.StateFlags |= STF_SLOW;
 					continue;
@@ -601,7 +601,7 @@ void ParseFunctionParameters(FScanner &sc, PClassActor *cls, TArray<FxExpression
 	}
 	else
 	{
-		if (!sc.CheckString("(")) 
+		if (!sc.CheckString("("))
 		{
 			return;
 		}

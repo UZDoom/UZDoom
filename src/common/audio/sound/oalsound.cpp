@@ -38,11 +38,23 @@ FModule OpenALModule{"OpenAL"};
 
 #include "oalload.h"
 
+#ifdef __linux
+// SteamDeck exposes a broken JACK device, which takes precedence over the
+// working pulseaudio backend. JACK is likely to not be wanted, so disabling
+// it by default shouldn't cause any issues. If someone wants to use JACK,
+// they can change `snd_aldriver` to reflect that (or set ALSOFT_DRIVERS)
+// https://github.com/kcat/openal-soft/blob/993b8c8/alsoftrc.sample#L46-L53
+#define DEFAULT_DRIVER "-jack,"
+#else
+#define DEFAULT_DRIVER ""
+#endif
+
 CUSTOM_CVAR(Int, snd_channels, 128, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)	// number of channels available
 {
-	if (self < 64) self = 64;
+	if (self < 8) self = 8;
 }
-CVAR(Bool, snd_waterreverb, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) 
+CVARD(String, snd_aldriver, DEFAULT_DRIVER, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "See alsoftrc.sample for details")
+CVAR(Bool, snd_waterreverb, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR (String, snd_aldevice, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (Bool, snd_efx, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (String, snd_alresampler, "Default", CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
@@ -110,31 +122,31 @@ namespace {
 
 /* Values used by snd_musicmode. */
 enum MusicMode : int {
-    Normal = 0,
-    DirectMix = 1,
-    SuperStereo = 2,
+	Normal = 0,
+	DirectMix = 1,
+	SuperStereo = 2,
 };
 
 
 static constexpr uint8_t SampleTypeSize(SampleType stype)
 {
-    switch(stype)
-    {
-    case SampleType_UInt8: return sizeof(uint8_t);
-    case SampleType_Int16: return sizeof(int16_t);
-    case SampleType_Float32: return sizeof(float);
-    }
-    return 0;
+	switch(stype)
+	{
+	case SampleType_UInt8: return sizeof(uint8_t);
+	case SampleType_Int16: return sizeof(int16_t);
+	case SampleType_Float32: return sizeof(float);
+	}
+	return 0;
 }
 
 static constexpr uint8_t ChannelCount(ChannelConfig chans)
 {
-    switch(chans)
-    {
-    case ChannelConfig_Mono: return 1;
-    case ChannelConfig_Stereo: return 2;
-    }
-    return 0;
+	switch(chans)
+	{
+	case ChannelConfig_Mono: return 1;
+	case ChannelConfig_Stereo: return 2;
+	}
+	return 0;
 }
 
 static constexpr ALenum GetFormat(SampleType stype, ChannelConfig chans)
@@ -266,14 +278,14 @@ class OpenALSoundStream : public SoundStream
 		if(Renderer->AL.SOFT_UHJ)
 		{
 			const ALenum mode{(*snd_musicmode == MusicMode::SuperStereo)
-			    ? AL_SUPER_STEREO_SOFT : AL_NORMAL_SOFT};
+				? AL_SUPER_STEREO_SOFT : AL_NORMAL_SOFT};
 			alSourcei(Source, AL_STEREO_MODE_SOFT, mode);
 			alSourcef(Source, AL_SUPER_STEREO_WIDTH_SOFT, *snd_superstereowidth);
 		}
 		if(Renderer->AL.SOFT_direct_channels_remix)
 		{
 			const ALenum mode{(*snd_musicmode == MusicMode::DirectMix)
-			    ? AL_REMIX_UNMATCHED_SOFT : AL_FALSE};
+				? AL_REMIX_UNMATCHED_SOFT : AL_FALSE};
 			alSourcei(Source, AL_DIRECT_CHANNELS_SOFT, mode);
 		}
 
@@ -556,8 +568,22 @@ static float GetRolloff(const FRolloffInfo *rolloff, float distance)
 	return soundEngine->GetRolloff(rolloff, distance);
 }
 
+void trysetenv(const char *k, const char *v)
+{
+#ifdef _WIN32
+	size_t size;
+	getenv_s(&size, nullptr, 0, k);
+	if (size == 0) _putenv_s(k, v);
+#else
+	setenv(k, v, 0);
+#endif
+}
+
 ALCdevice *OpenALSoundRenderer::InitDevice()
 {
+	// allow setting this from game
+	trysetenv("ALSOFT_DRIVERS", snd_aldriver);
+
 	ALCdevice *device = NULL;
 	if (IsOpenALPresent())
 	{
@@ -1365,7 +1391,7 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 		if(lowest)
 		{
 			if(lowest->Priority < priority || (lowest->Priority == priority &&
-			                                   lowest->DistanceSqr > dist_sqr))
+											   lowest->DistanceSqr > dist_sqr))
 				StopChannel(lowest);
 		}
 		if(FreeSfx.Size() == 0)
@@ -1732,11 +1758,11 @@ void OpenALSoundRenderer::UpdateListener(SoundListener *listener)
 
 	alListenerfv(AL_ORIENTATION, orient);
 	alListener3f(AL_POSITION, listener->position.X,
-	                          listener->position.Y,
-	                         -listener->position.Z);
+							  listener->position.Y,
+							 -listener->position.Z);
 	alListener3f(AL_VELOCITY, listener->velocity.X,
-	                          listener->velocity.Y,
-	                         -listener->velocity.Z);
+							  listener->velocity.Y,
+							 -listener->velocity.Z);
 	getALError();
 
 	const ReverbContainer *env = ForcedEnvironment;
@@ -2051,10 +2077,10 @@ void OpenALSoundRenderer::LoadReverb(const ReverbContainer *env)
 		if(type == AL_EFFECT_EAXREVERB)
 		{
 			ALfloat reflectpan[3] = { props.ReflectionsPan0,
-			                          props.ReflectionsPan1,
-			                          props.ReflectionsPan2 };
+									  props.ReflectionsPan1,
+									  props.ReflectionsPan2 };
 			ALfloat latepan[3] = { props.ReverbPan0, props.ReverbPan1,
-			                       props.ReverbPan2 };
+								   props.ReverbPan2 };
 #undef SETPARAM
 #define SETPARAM(e,t,v) alEffectf((e), AL_EAXREVERB_##t, clamp((v), AL_EAXREVERB_MIN_##t, AL_EAXREVERB_MAX_##t))
 			SETPARAM(*envReverb, DIFFUSION, props.EnvDiffusion);
@@ -2182,4 +2208,3 @@ void I_BuildALResamplersList(FOptionValues* opt)
 	}
 #endif
 }
-

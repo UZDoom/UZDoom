@@ -122,7 +122,7 @@ namespace swrenderer
 					return;
 			}
 		}
-		
+
 
 		// [RH] Flip for mirrors
 		auto renderportal = thread->Portal.get();
@@ -165,9 +165,9 @@ namespace swrenderer
 		if (thing->flags5 & MF5_BRIGHT)
 			vis->renderflags |= RF_FULLBRIGHT;
 		vis->RenderStyle = thing->RenderStyle;
-		if (r_vanillatrans && (thing->renderflags & RF_ZDOOMTRANS))
+		if (r_UseVanillaTransparency && (thing->renderflags & RF_ZDOOMTRANS))
 		{
-			if (r_vanillatrans == 1 || AutoTrans.CheckKey(thing->GetClass()->TypeName) != nullptr)
+			if (r_UseVanillaTransparency == 1 || AutoTrans.CheckKey(thing->GetClass()->TypeName) != nullptr)
 				vis->RenderStyle = LegacyRenderStyles[STYLE_Normal];
 		}
 		vis->FillColor = thing->fillcolor;
@@ -230,7 +230,7 @@ namespace swrenderer
 							float distance = sqrt(LdotL);
 							float attenuation = 1.0f - distance / radius;
 							if (attenuation > 0.0f)
-							{						
+							{
 								float red = light->GetRed() * (1.0f / 255.0f);
 								float green = light->GetGreen() * (1.0f / 255.0f);
 								float blue = light->GetBlue() * (1.0f / 255.0f);
@@ -242,7 +242,7 @@ namespace swrenderer
 									green = (bright - lg) * -1;
 									blue = (bright - lb) * -1;
 								}*/
-							
+
 								lit_red += red * attenuation;
 								lit_green += green * attenuation;
 								lit_blue += blue * attenuation;

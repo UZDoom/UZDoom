@@ -298,7 +298,7 @@ FSwitchDef *FTextureAnimator::ParseSwitchDef (FScanner &sc, bool ignoreBad)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -354,7 +354,7 @@ void FTextureAnimator::AddSwitchPair (FSwitchDef *def1, FSwitchDef *def2)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -385,4 +385,3 @@ FSwitchDef *FTextureAnimator::FindSwitch (FTextureID texture)
 	}
 	return nullptr;
 }
-

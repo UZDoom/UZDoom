@@ -48,7 +48,7 @@ enum EStateUseFlags
 class PTypeBase
 {
 public:
-	// Allocate everything on the global memory arena because all subtypes of this 
+	// Allocate everything on the global memory arena because all subtypes of this
 	// will live until the end of the game.
 	void *operator new(size_t size)
 	{

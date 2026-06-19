@@ -54,7 +54,7 @@ echo
 phase validate python scripts
 ###
 
-pyfiles=( scripts/compile.py )
+pyfiles=( scripts/*.py )
 pyversion=3.6
 
 for pyfile in "${pyfiles[@]}"; do
@@ -70,6 +70,14 @@ phase check templates
 
 dirty=$(git status --porcelain)
 bash ./scripts/mktemplate.sh || ((error_count++))
+[[ -z "$dirty" ]] && { [[ -z "$(git status --porcelain)" ]] || ((error_count++)) ; }
+
+###
+phase validate po files
+###
+
+dirty=$(git status --porcelain)
+./scripts/validate.py || ((error_count++))
 [[ -z "$dirty" ]] && { [[ -z "$(git status --porcelain)" ]] || ((error_count++)) ; }
 
 ###
@@ -189,10 +197,11 @@ function duplicates() {
 }
 
 duplicates en_US.po games engine
+count=$?
+((error_count+=$count))
 duplicates en_US.po engine
 count=$?
 ((error_count+=$count))
-echo
 
 ###
 phase

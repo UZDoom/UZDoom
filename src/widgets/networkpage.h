@@ -54,11 +54,11 @@ private:
 	TextLabel* SaveFileLabel = nullptr;
 	LineEdit* SaveFileEdit = nullptr;
 	CheckboxLabel* SaveFileCheckbox = nullptr;
-	
+
 	HostSubPage* HostPage = nullptr;
 	JoinSubPage* JoinPage = nullptr;
 	TabWidget* StartPages = nullptr;
-	
+
 	TextLabel* ParametersLabel = nullptr;
 	LineEdit* ParametersEdit = nullptr;
 	CheckboxLabel* SaveParametersCheckbox = nullptr;
@@ -114,7 +114,7 @@ private:
 	TextLabel* AddressPortLabel = nullptr;
 	LineEdit* AddressPortEdit = nullptr;
 	TextLabel* AddressPortHintLabel = nullptr;
-	
+
 	TextLabel* TeamDeathmatchLabel = nullptr;
 	TextLabel* TeamLabel = nullptr;
 	LineEdit* TeamEdit = nullptr;

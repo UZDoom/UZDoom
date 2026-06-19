@@ -198,4 +198,3 @@ void FCanvasTextureInfo::Mark()
 		GC::Mark(info.Viewpoint);
 	}
 }
-

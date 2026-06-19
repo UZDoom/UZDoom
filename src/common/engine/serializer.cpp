@@ -22,16 +22,7 @@
 **
 */
 
-#define RAPIDJSON_48BITPOINTER_OPTIMIZATION 0	// disable this insanity which is bound to make the code break over time.
-#define RAPIDJSON_HAS_CXX11_RVALUE_REFS 1
-#define RAPIDJSON_HAS_CXX11_RANGE_FOR 1
-#define RAPIDJSON_PARSE_DEFAULT_FLAGS kParseFullPrecisionFlag
-
-#include <miniz.h>
-#include "rapidjson/rapidjson.h"
-#include "rapidjson/writer.h"
-#include "rapidjson/prettywriter.h"
-#include "rapidjson/document.h"
+#include "serializer_rapidjson.h"
 #include "serializer.h"
 #include "dobject.h"
 #include "filesystem.h"
@@ -197,7 +188,7 @@ FWriterBuffer FSerializer::CloseAndGetBuffer() {
 }
 
 void FSerializer::Close()
-{	
+{
 	if (w == nullptr && r == nullptr) return;	// double close? This should skip the I_Error at the bottom.
 
 	if (w != nullptr)
@@ -993,7 +984,7 @@ FCompressedBuffer FSerializer::GetCompressedOutput(TArray<TObjPtr<DObject*>>* ob
 	}
 
 	err = deflate(&stream, Z_FINISH);
-	if (err != Z_STREAM_END) 
+	if (err != Z_STREAM_END)
 	{
 		deflateEnd(&stream);
 		goto error;
@@ -1435,14 +1426,14 @@ FSerializer& Serialize(FSerializer& arc, const char* key, FTranslationID& value,
 	int v = value.index();
 	int* defv = (int*)defval;
 	Serialize(arc, key, v, defv);
-	
+
 	if (arc.isReading())
 	{
 		// allow games to alter the loaded value to handle dynamic lists.
 		if (sysCallbacks.RemapTranslation) value = sysCallbacks.RemapTranslation(FTranslationID::fromInt(v));
 		else value = FTranslationID::fromInt(v);
 	}
-		
+
 	return arc;
 }
 

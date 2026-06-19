@@ -368,7 +368,7 @@ static void ParseSingleFile(FScanner *pSC, const char *filename, int lump, void 
 			sc.MustGetAnyToken();
 			// The oh so wonderful grammar has problems with the 'const' token thanks to the overly broad rule for constants,
 			// which effectively prevents use of this token nearly anywhere else. So in order to get 'static const' through
-			// on the class/struct level we have to muck around with the token type here so that both words get combined into 
+			// on the class/struct level we have to muck around with the token type here so that both words get combined into
 			// a single token that doesn't make the grammar throw a fit.
 			if (sc.TokenType == TK_Const)
 			{
@@ -445,6 +445,9 @@ PNamespace *ParseOneScript(const int baselump, ZCCParseState &state)
 		{
 			char *endp;
 			sc.MustGetString();
+
+			state.ParseVersion.distance = 0;
+
 			state.ParseVersion.major = (int16_t)clamp<unsigned long long>(strtoull(sc.String, &endp, 10), 0, USHRT_MAX);
 			if (*endp != '.')
 			{
@@ -1441,7 +1444,7 @@ ZCC_TreeNode *TreeNodeDeepCopy_Internal(ZCC_AST *ast, ZCC_TreeNode *orig, bool c
 
 		break;
 	}
-	
+
 	case AST_FunctionPtrCast:
 	{
 		TreeNodeDeepCopy_Start(FunctionPtrCast);
@@ -1455,7 +1458,7 @@ ZCC_TreeNode *TreeNodeDeepCopy_Internal(ZCC_AST *ast, ZCC_TreeNode *orig, bool c
 
 		break;
 	}
-	
+
 	case AST_StaticArrayStatement:
 	{
 		TreeNodeDeepCopy_Start(StaticArrayStatement);

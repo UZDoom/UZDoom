@@ -81,4 +81,3 @@ class ZombieSpawner : Actor
 		Loop;
 	}
 }
-

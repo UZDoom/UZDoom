@@ -26,7 +26,7 @@
 #include "fs_files.h"
 
 namespace FileSys {
-	
+
 class FZipExploder
 {
 	unsigned int Hold, Bits;

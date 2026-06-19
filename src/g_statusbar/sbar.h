@@ -378,8 +378,8 @@ public:
 	virtual void Tick ();
 	void CallTick();
 	void CallDraw(EHudState state, double ticFrac);
-    void DrawBottomStuff (EHudState state);
-    void DrawTopStuff (EHudState state);
+	void DrawBottomStuff (EHudState state);
+	void DrawTopStuff (EHudState state);
 	void AttachToPlayer(player_t *player);
 	DVector2 GetHUDScale() const override;
 	virtual void FlashCrosshair ();
@@ -409,7 +409,7 @@ public:
 //protected:
 	void DrawPowerups ();
 
-	
+
 	void RefreshBackground () const;
 	void RefreshViewBorder ();
 

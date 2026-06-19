@@ -96,7 +96,7 @@ public:
 		else
 		{
 			// Since this presents itself to the game as a regular named texture
-			// it can easily be used on walls and flats and should work as such, 
+			// it can easily be used on walls and flats and should work as such,
 			// even if it makes little sense.
 			for (int i = 0; i < 512; i++)
 			{

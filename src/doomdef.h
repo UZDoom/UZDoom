@@ -42,7 +42,7 @@ typedef enum
 	// DOOM 2 german edition not handled
 	retail,			// DOOM 1 retail, E4, M36
 	undetermined	// Well, no IWAD found.
-  
+
 } GameMode_t;
 
 // If rangecheck is undefined, most parameter validation debugging code
@@ -256,7 +256,7 @@ enum ELevelBugCompatFlag : uint32_t
 	BCOMPATF_FLOATBOB			= 1 << 8,	// Use Hexen's original method of preventing floatbobbing items from falling down
 	BCOMPATF_NOSLOPEID			= 1 << 9,	// disable line IDs on slopes.
 	BCOMPATF_CLIPMIDTEX			= 1 << 10,	// Always Clip midtex's in the software renderer (required to run certain GZDoom maps, has no effect in the hardware renderer)
-	BCOMPATF_NOSECTIONMERGE		= 1 << 11,	// (for IWAD maps) keep separate sections for sectors with intra-sector linedefs. 
+	BCOMPATF_NOSECTIONMERGE		= 1 << 11,	// (for IWAD maps) keep separate sections for sectors with intra-sector linedefs.
 	BCOMPATF_NOMIRRORS			= 1 << 12,	// disable mirrors, for maps that have broken setups.
 };
 using ELevelBugCompatFlags = TFlags<ELevelBugCompatFlag>;

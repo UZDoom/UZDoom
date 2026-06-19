@@ -1,0 +1,1 @@
+sourced from https://curl.se/windows/

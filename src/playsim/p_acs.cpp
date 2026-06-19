@@ -69,6 +69,7 @@
 #include "v_video.h"
 #include "version.h"
 #include "dobjgc.h"
+#include "m_round.h"
 
 	// P-codes for ACS scripts
 	enum
@@ -366,40 +367,40 @@
 /*290*/	PCD_PLAYERCLASS,			// [GRB]
 		//[MW] start my p-codes
 		PCD_ANDSCRIPTVAR,
-		PCD_ANDMAPVAR, 
-		PCD_ANDWORLDVAR, 
-		PCD_ANDGLOBALVAR, 
-		PCD_ANDMAPARRAY, 
-		PCD_ANDWORLDARRAY, 
+		PCD_ANDMAPVAR,
+		PCD_ANDWORLDVAR,
+		PCD_ANDGLOBALVAR,
+		PCD_ANDMAPARRAY,
+		PCD_ANDWORLDARRAY,
 		PCD_ANDGLOBALARRAY,
-		PCD_EORSCRIPTVAR, 
-		PCD_EORMAPVAR, 
-/*300*/	PCD_EORWORLDVAR, 
-		PCD_EORGLOBALVAR, 
-		PCD_EORMAPARRAY, 
-		PCD_EORWORLDARRAY, 
+		PCD_EORSCRIPTVAR,
+		PCD_EORMAPVAR,
+/*300*/	PCD_EORWORLDVAR,
+		PCD_EORGLOBALVAR,
+		PCD_EORMAPARRAY,
+		PCD_EORWORLDARRAY,
 		PCD_EORGLOBALARRAY,
-		PCD_ORSCRIPTVAR, 
-		PCD_ORMAPVAR, 
-		PCD_ORWORLDVAR, 
-		PCD_ORGLOBALVAR, 
-		PCD_ORMAPARRAY, 
-/*310*/	PCD_ORWORLDARRAY, 
+		PCD_ORSCRIPTVAR,
+		PCD_ORMAPVAR,
+		PCD_ORWORLDVAR,
+		PCD_ORGLOBALVAR,
+		PCD_ORMAPARRAY,
+/*310*/	PCD_ORWORLDARRAY,
 		PCD_ORGLOBALARRAY,
-		PCD_LSSCRIPTVAR, 
-		PCD_LSMAPVAR, 
-		PCD_LSWORLDVAR, 
-		PCD_LSGLOBALVAR, 
-		PCD_LSMAPARRAY, 
-		PCD_LSWORLDARRAY, 
+		PCD_LSSCRIPTVAR,
+		PCD_LSMAPVAR,
+		PCD_LSWORLDVAR,
+		PCD_LSGLOBALVAR,
+		PCD_LSMAPARRAY,
+		PCD_LSWORLDARRAY,
 		PCD_LSGLOBALARRAY,
-		PCD_RSSCRIPTVAR, 
-/*320*/	PCD_RSMAPVAR, 
-		PCD_RSWORLDVAR, 
-		PCD_RSGLOBALVAR, 
-		PCD_RSMAPARRAY, 
-		PCD_RSWORLDARRAY, 
-		PCD_RSGLOBALARRAY, 
+		PCD_RSSCRIPTVAR,
+/*320*/	PCD_RSMAPVAR,
+		PCD_RSWORLDVAR,
+		PCD_RSGLOBALVAR,
+		PCD_RSMAPARRAY,
+		PCD_RSWORLDARRAY,
+		PCD_RSGLOBALARRAY,
 		//[MW] end my p-codes
 		PCD_GETPLAYERINFO,			// [GRB]
 		PCD_CHANGELEVEL,
@@ -534,6 +535,7 @@
 extern int Net_Arbitrator;
 
 FRandom pr_acs ("ACS");
+FCRandom pr_csacs("CSACS");
 
 // I imagine this much stack space is probably overkill, but it could
 // potentially get used with recursive functions.
@@ -604,7 +606,7 @@ inline float ACSToFloat(int acsval)
 
 inline int DoubleToACS(double val)
 {
-	return xs_Fix<16>::ToFix(val);
+	return FloatToFixed<16>(val);
 }
 
 inline DAngle ACSToAngle(int acsval)
@@ -657,9 +659,11 @@ static bool ShouldIgnoreClientSideScript(AActor* activator)
 	return !owner->Level->isConsolePlayer(owner);
 }
 
+// TODO: Disabled until a new flag can be created for UZDoom's specific type of
+// client-side handling. It was breaking too many existing CLIENTSIDE scripts.
 static bool IsClientSideScript(const ScriptPtr& script)
 {
-	return (script.Flags & SCRIPTF_ClientSide);
+	return false;
 }
 
 class DLevelScript : public DObject
@@ -1343,7 +1347,7 @@ void ACSStringPool::ReadStrings(FSerializer &file, const char *key)
 void ACSStringPool::WriteStrings(FSerializer &file, const char *key) const
 {
 	int32_t i, poolsize = (int32_t)Pool.Size();
-	
+
 	if (poolsize == 0)
 	{ // No need to write if we don't have anything.
 		return;
@@ -1467,7 +1471,7 @@ void P_CollectACSGlobalStrings()
 		}
 	}
 	for(auto Level : AllLevels())
-	{ 
+	{
 		Level->Behaviors.MarkLevelVarStrings();
 	}
 	P_MarkWorldVarStrings();
@@ -2240,8 +2244,8 @@ FBehavior::FBehavior()
 	FunctionProfileData = NULL;
 
 }
-	
-	
+
+
 bool FBehavior::Init(FLevelLocals *Level, int lumpnum, FileReader * fr, int len, int reallumpnum)
 {
 	uint8_t *object;
@@ -2305,7 +2309,7 @@ bool FBehavior::Init(FLevelLocals *Level, int lumpnum, FileReader * fr, int len,
 		delete[] object;
 		return false;
 	}
-    LibraryID = Level->Behaviors.StaticModules.Push (this) << LIBRARYID_SHIFT;
+	LibraryID = Level->Behaviors.StaticModules.Push (this) << LIBRARYID_SHIFT;
 
 	if (fr == NULL)
 	{
@@ -3196,7 +3200,7 @@ inline bool FBehavior::CopyStringToArray(int arraynum, int index, int maxLength,
 	if ((unsigned)arraynum >= (unsigned)NumTotalArrays || index < 0)
 		return false;
 	const ArrayInfo *array = Arrays[arraynum];
-	
+
 	if ((signed)array->ArraySize - index < maxLength) maxLength = (signed)array->ArraySize - index;
 
 	while (maxLength-- > 0)
@@ -3632,7 +3636,7 @@ int DLevelScript::Random (int min, int max)
 		std::swap (max, min);
 	}
 
-	return min + pr_acs(max - min + 1);
+	return min + (bClientSide ? pr_csacs(max - min + 1) : pr_acs(max - min + 1));
 }
 
 int DLevelScript::ThingCount (int type, int stringid, int tid, int tag)
@@ -3962,65 +3966,65 @@ void DLevelScript::DoSetFont (int fontnum)
 
 int DLevelScript::DoSetMaster (AActor *self, AActor *master)
 {
-    AActor *defs;
-    if (self->flags3&MF3_ISMONSTER)
-    {
-        if (master)
-        {
-            if (master->flags3&MF3_ISMONSTER)
-            {
-                self->FriendPlayer = 0;
-                self->master = master;
-                Level->total_monsters -= self->CountsAsKill();
-                self->flags = (self->flags & ~MF_FRIENDLY) | (master->flags & MF_FRIENDLY);
-                Level->total_monsters += self->CountsAsKill();
-                // Don't attack your new master
-                if (self->target == self->master) self->target = nullptr;
-                if (self->lastenemy == self->master) self->lastenemy = nullptr;
-                if (self->LastHeard == self->master) self->LastHeard = nullptr;
-                return 1;
-            }
-            else if (master->player)
-            {
-                // [KS] Be friendly to this player
-                self->master = nullptr;
-                Level->total_monsters -= self->CountsAsKill();
-                self->flags|=MF_FRIENDLY;
-                self->SetFriendPlayer(master->player);
+	AActor *defs;
+	if (self->flags3&MF3_ISMONSTER)
+	{
+		if (master)
+		{
+			if (master->flags3&MF3_ISMONSTER)
+			{
+				self->FriendPlayer = 0;
+				self->master = master;
+				Level->total_monsters -= self->CountsAsKill();
+				self->flags = (self->flags & ~MF_FRIENDLY) | (master->flags & MF_FRIENDLY);
+				Level->total_monsters += self->CountsAsKill();
+				// Don't attack your new master
+				if (self->target == self->master) self->target = nullptr;
+				if (self->lastenemy == self->master) self->lastenemy = nullptr;
+				if (self->LastHeard == self->master) self->LastHeard = nullptr;
+				return 1;
+			}
+			else if (master->player)
+			{
+				// [KS] Be friendly to this player
+				self->master = nullptr;
+				Level->total_monsters -= self->CountsAsKill();
+				self->flags|=MF_FRIENDLY;
+				self->SetFriendPlayer(master->player);
 
-                AActor * attacker=master->player->attacker;
-                if (attacker)
-                {
-                    if (!(attacker->flags&MF_FRIENDLY) || 
-                        (deathmatch && attacker->FriendPlayer!=0 && attacker->FriendPlayer!=self->FriendPlayer))
-                    {
-                        self->LastHeard = self->target = attacker;
-                    }
-                }
-                // And stop attacking him if necessary.
-                if (self->target == master) self->target = nullptr;
-                if (self->lastenemy == master) self->lastenemy = nullptr;
-                if (self->LastHeard == master) self->LastHeard = nullptr;
-                return 1;
-            }
-        }
-        else
-        {
-            self->master = nullptr;
-            self->FriendPlayer = 0;
-            // Go back to whatever friendliness we usually have...
-            defs = self->GetDefault();
-            Level->total_monsters -= self->CountsAsKill();
-            self->flags = (self->flags & ~MF_FRIENDLY) | (defs->flags & MF_FRIENDLY);
-            Level->total_monsters += self->CountsAsKill();
-            // ...And re-side with our friends.
-            if (self->target && !self->IsHostile (self->target)) self->target = nullptr;
-            if (self->lastenemy && !self->IsHostile (self->lastenemy)) self->lastenemy = nullptr;
-            if (self->LastHeard && !self->IsHostile (self->LastHeard)) self->LastHeard = nullptr;
-            return 1;
-        }
-    }
-    return 0;
+				AActor * attacker=master->player->attacker;
+				if (attacker)
+				{
+					if (!(attacker->flags&MF_FRIENDLY) ||
+						(deathmatch && attacker->FriendPlayer!=0 && attacker->FriendPlayer!=self->FriendPlayer))
+					{
+						self->LastHeard = self->target = attacker;
+					}
+				}
+				// And stop attacking him if necessary.
+				if (self->target == master) self->target = nullptr;
+				if (self->lastenemy == master) self->lastenemy = nullptr;
+				if (self->LastHeard == master) self->LastHeard = nullptr;
+				return 1;
+			}
+		}
+		else
+		{
+			self->master = nullptr;
+			self->FriendPlayer = 0;
+			// Go back to whatever friendliness we usually have...
+			defs = self->GetDefault();
+			Level->total_monsters -= self->CountsAsKill();
+			self->flags = (self->flags & ~MF_FRIENDLY) | (defs->flags & MF_FRIENDLY);
+			Level->total_monsters += self->CountsAsKill();
+			// ...And re-side with our friends.
+			if (self->target && !self->IsHostile (self->target)) self->target = nullptr;
+			if (self->lastenemy && !self->IsHostile (self->lastenemy)) self->lastenemy = nullptr;
+			if (self->LastHeard && !self->IsHostile (self->LastHeard)) self->LastHeard = nullptr;
+			return 1;
+		}
+	}
+	return 0;
 }
 
 int DoGetMasterTID (AActor *self)
@@ -4357,7 +4361,7 @@ void DLevelScript::DoSetActorProperty (AActor *actor, int property, int value)
 			{
 				actor->player->SoundClass = Level->Behaviors.LookupString(value);
 			}
-		}	
+		}
 		break;
 	case APROP_FriendlySeeBlocks:
 		actor->friendlyseeblocks = value;
@@ -4534,7 +4538,7 @@ int DLevelScript::CheckActorProperty (int tid, int property, int value)
 		case APROP_AttackSound:	string = S_GetSoundName(actor->AttackSound); break;
 		case APROP_PainSound:	string = S_GetSoundName(actor->PainSound); break;
 		case APROP_DeathSound:	string = S_GetSoundName(actor->DeathSound); break;
-		case APROP_ActiveSound:	string = S_GetSoundName(actor->ActiveSound); break; 
+		case APROP_ActiveSound:	string = S_GetSoundName(actor->ActiveSound); break;
 		case APROP_Species:		string = actor->GetSpecies().GetChars(); break;
 		case APROP_NameTag:		string = actor->GetTag(); break;
 		case APROP_DamageType:	string = actor->DamageType.GetChars(); break;
@@ -4744,7 +4748,7 @@ enum EACSFunctions
 	ACSF_SpawnSpotForced,
 	ACSF_SpawnSpotFacingForced,
 	ACSF_CheckActorProperty,
-    ACSF_SetActorVelocity,
+	ACSF_SetActorVelocity,
 	ACSF_SetUserVariable,
 	ACSF_GetUserVariable,
 	ACSF_Radius_Quake2,
@@ -4756,7 +4760,7 @@ enum EACSFunctions
 	ACSF_SoundSequenceOnPolyobj,
 	ACSF_GetPolyobjX,
 	ACSF_GetPolyobjY,
-    ACSF_CheckSight,
+	ACSF_CheckSight,
 	ACSF_SpawnForced,
 	ACSF_AnnouncerSound,	// Skulltag
 	ACSF_SetPointer,
@@ -4866,7 +4870,7 @@ enum EACSFunctions
 int DLevelScript::SideFromID(int id, int side)
 {
 	if (side != 0 && side != 1) return -1;
-	
+
 	if (id == 0)
 	{
 		if (activationline == NULL) return -1;
@@ -5217,7 +5221,7 @@ int DLevelScript::SwapActorTeleFog(AActor *activator, int tid)
 	int count = 0;
 	if (tid == 0)
 	{
-		if ((activator == NULL) || (activator->TeleFogSourceType == activator->TeleFogDestType)) 
+		if ((activator == NULL) || (activator->TeleFogSourceType == activator->TeleFogDestType))
 			return 0; //Does nothing if they're the same.
 
 		std::swap (activator->TeleFogSourceType, activator->TeleFogDestType);
@@ -5227,10 +5231,10 @@ int DLevelScript::SwapActorTeleFog(AActor *activator, int tid)
 	{
 		auto iterator = GetActorIterator(tid);
 		AActor *actor;
-		
+
 		while ((actor = iterator.Next()))
 		{
-			if (actor->TeleFogSourceType == actor->TeleFogDestType) 
+			if (actor->TeleFogSourceType == actor->TeleFogDestType)
 				continue; //They're the same. Save the effort.
 
 			std::swap (actor->TeleFogSourceType, actor->TeleFogDestType);
@@ -5455,7 +5459,7 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 				activator = Level->SingleActorFromTID(args[0], bClientSide, NULL);
 			}
 			return activator != NULL;
-		
+
 		case ACSF_SetActivatorToTarget:
 			MIN_ARG_COUNT(1);
 			// [KS] I revised this a little bit
@@ -5516,7 +5520,7 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 			{
 				return p[args[1]];
 			}
-			else 
+			else
 			{
 				return 0;
 			}
@@ -5621,8 +5625,8 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 		case ACSF_CheckActorProperty:
 			MIN_ARG_COUNT(3);
 			return (CheckActorProperty(args[0], args[1], args[2]));
-        
-        case ACSF_SetActorVelocity:
+
+		case ACSF_SetActorVelocity:
 			MIN_ARG_COUNT(6);
 		{
 			DVector3 vel(ACSToDouble(args[1]), ACSToDouble(args[2]), ACSToDouble(args[3]));
@@ -5639,7 +5643,7 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 					P_Thing_SetVelocity(actor, vel, !!args[4], !!args[5]);
 				}
 			}
-			return 0; 
+			return 0;
 		}
 
 		case ACSF_SetUserVariable:
@@ -5660,7 +5664,7 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 				else
 				{
 					auto iterator = GetActorIterator(args[0]);
-	                
+
 					while ( (actor = iterator.Next()) )
 					{
 						SetUserVariable(actor, varname, 0, args[2]);
@@ -5670,14 +5674,14 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 			}
 			return cnt;
 		}
-		
+
 		case ACSF_GetUserVariable:
 			MIN_ARG_COUNT(2);
 		{
 			FName varname(Level->Behaviors.LookupString(args[1]), true);
 			if (varname != NAME_None)
 			{
-				AActor *a = Level->SingleActorFromTID(args[0], bClientSide, activator); 
+				AActor *a = Level->SingleActorFromTID(args[0], bClientSide, activator);
 				return a != NULL ? GetUserVariable(a, varname, 0) : 0;
 			}
 			return 0;
@@ -5701,7 +5705,7 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 				else
 				{
 					auto iterator = GetActorIterator(args[0]);
-	                
+
 					while ( (actor = iterator.Next()) )
 					{
 						SetUserVariable(actor, varname, args[2], args[3]);
@@ -5711,14 +5715,14 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 			}
 			return cnt;
 		}
-		
+
 		case ACSF_GetUserArray:
 			MIN_ARG_COUNT(3);
 		{
 			FName varname(Level->Behaviors.LookupString(args[1]), true);
 			if (varname != NAME_None)
 			{
-				AActor *a = Level->SingleActorFromTID(args[0], bClientSide, activator); 
+				AActor *a = Level->SingleActorFromTID(args[0], bClientSide, activator);
 				return a != NULL ? GetUserVariable(a, varname, args[2]) : 0;
 			}
 			return 0;
@@ -5823,10 +5827,10 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 				}
 			}
 			return FIXED_MAX;
-        
-        case ACSF_CheckSight:
+
+		case ACSF_CheckSight:
 			MIN_ARG_COUNT(3);
-        {
+		{
 			AActor *source;
 			AActor *dest;
 
@@ -5835,7 +5839,7 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 			if (args[2] & 1) flags |= SF_IGNOREWATERBOUNDARY;
 			if (args[2] & 2) flags |= SF_SEEPASTBLOCKEVERYTHING | SF_SEEPASTSHOOTABLELINES;
 
-			if (args[0] == 0) 
+			if (args[0] == 0)
 			{
 				source = (AActor *) activator;
 
@@ -5867,8 +5871,8 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 					}
 				}
 			}
-            return 0;
-        }
+			return 0;
+		}
 
 		case ACSF_SpawnForced:
 			MIN_ARG_COUNT(4);
@@ -5903,7 +5907,7 @@ int DLevelScript::CallFunction(int argCount, int funcIndex, int32_t *args, int &
 
 		case ACSF_Sqrt:
 			MIN_ARG_COUNT(1);
-			return xs_FloorToInt(g_sqrt(double(args[0])));
+			return RoundDown(g_sqrt(double(args[0])));
 
 		case ACSF_FixedSqrt:
 			MIN_ARG_COUNT(1);
@@ -6166,15 +6170,15 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			break;
 
 		case ACSF_GetWeapon:
-            if (activator == NULL || activator->player == NULL || // Non-players do not have weapons
-                activator->player->ReadyWeapon == NULL)
-            {
-                return GlobalACSStrings.AddString("None");
-            }
-            else
-            {
+			if (activator == NULL || activator->player == NULL || // Non-players do not have weapons
+				activator->player->ReadyWeapon == NULL)
+			{
+				return GlobalACSStrings.AddString("None");
+			}
+			else
+			{
 				return GlobalACSStrings.AddString(activator->player->ReadyWeapon->GetClass()->TypeName.GetChars());
-            }
+			}
 
 		case ACSF_SpawnDecal:
 			// int SpawnDecal(int tid, str decalname, int flags, fixed angle, int|fixed zoffset, int|fixed distance)
@@ -6256,7 +6260,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 		{
 			const char *type = Level->Behaviors.LookupString(args[1]);
 			AActor *inv;
-			
+
 			if (type != NULL)
 			{
 				if (args[0] == 0)
@@ -6274,7 +6278,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 				{
 					auto it = GetActorIterator(args[0]);
 					AActor *actor;
-					
+
 					while ((actor = it.Next()) != NULL)
 					{
 						inv = actor->FindInventory(type);
@@ -6457,7 +6461,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 				{
 					canraiseall &= P_Thing_CanRaise(actor);
 				}
-				
+
 				return canraiseall;
 			}
 			break;
@@ -6477,7 +6481,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			MIN_ARG_COUNT(1);
 			actor = Level->SingleActorFromTID(args[0], bClientSide, activator);
 			return actor != NULL? AngleToACS(actor->Angles.Roll) : 0;
-		
+
 		// [ZK] A_Warp in ACS
 		case ACSF_Warp:
 			MIN_ARG_COUNT(6);
@@ -6486,10 +6490,10 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			{
 				return false;
 			}
-			
+
 			const int dest = args[0];
 			const int flags = args[5];
-			
+
 			AActor* const reference = ((flags & WARPF_USEPTR) && (AAPTR_DEFAULT != dest))
 				? COPY_AAPTREX(Level, activator, dest, static_cast<EPTRClientSideState>(bClientSide))
 				: Level->SingleActorFromTID(dest, bClientSide, activator);
@@ -6499,7 +6503,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 				// there is no actor to warp to
 				return false;
 			}
-			
+
 			const double xofs = ACSToDouble(args[1]);
 			const double yofs = ACSToDouble(args[2]);
 			const double zofs = ACSToDouble(args[3]);
@@ -6512,23 +6516,23 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			{
 				return false;
 			}
-			
+
 			if (argCount > 6)
 			{
 				const char* const statename = Level->Behaviors.LookupString(args[6]);
-				
+
 				if (nullptr != statename)
 				{
 					const bool exact = argCount > 7 && !!args[7];
 					FState* const state = activator->GetClass()->FindStateByString(statename, exact);
-					
+
 					if (nullptr != state)
 					{
 						activator->SetState(state);
 					}
 				}
 			}
-			
+
 			return true;
 		}
 		case ACSF_GetMaxInventory:
@@ -6572,7 +6576,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 				}
 			}
 			break;
-		
+
 		case ACSF_SpawnParticle:
 			MIN_ARG_COUNT(1);
 		{
@@ -6589,7 +6593,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			int accelx = argCount > 10 ? args[10] : 0;
 			int accely = argCount > 11 ? args[11] : 0;
 			int accelz = argCount > 12 ? args[12] : 0;
-			int startalpha = argCount > 13 ? args[13] : 0xFF; // Byte trans			
+			int startalpha = argCount > 13 ? args[13] : 0xFF; // Byte trans
 			int fadestep = argCount > 14 ? args[14] : -1;
 			double endsize = argCount > 15 ? args[15] : -1.;
 
@@ -6643,7 +6647,7 @@ doplaysound:			if (funcIndex == ACSF_PlayActorSound)
 			const char *clsname = Level->Behaviors.LookupString(args[0]);
 			return !!PClass::FindActor(clsname);
 		}
-		
+
 		case ACSF_DamageActor: // [arookas] wrapper around P_DamageMobj
 			MIN_ARG_COUNT(6);
 		{
@@ -8627,7 +8631,7 @@ scriptwait:
 						FString uppername = Level->MapName;
 						uppername.ToUpper();
 						work += uppername;
-						break; 
+						break;
 					}
 
 					case PRINTNAME_NEXTLEVEL:
@@ -9797,17 +9801,17 @@ scriptwait:
 			sp--;
 			break;
 
-        case PCD_CHECKWEAPON:
-            if (activator == NULL || activator->player == NULL || // Non-players do not have weapons
-                activator->player->ReadyWeapon == NULL)
-            {
-                STACK(1) = 0;
-            }
-            else
-            {
+		case PCD_CHECKWEAPON:
+			if (activator == NULL || activator->player == NULL || // Non-players do not have weapons
+				activator->player->ReadyWeapon == NULL)
+			{
+				STACK(1) = 0;
+			}
+			else
+			{
 				STACK(1) = activator->player->ReadyWeapon->GetClass()->TypeName == FName(Level->Behaviors.LookupString (STACK(1)), true);
-            }
-            break;
+			}
+			break;
 
 		case PCD_SETWEAPON:
 			STACK(1) = ScriptUtil::Exec(NAME_SetWeapon, ScriptUtil::Pointer, activator.Get(), ScriptUtil::Class, GetClassForIndex(STACK(1)), ScriptUtil::End);
@@ -10229,7 +10233,7 @@ scriptwait:
 
 				STACK(7) = changes;
 				sp -= 6;
-			}	
+			}
 			break;
 
 		case PCD_UNMORPHACTOR:
@@ -10260,7 +10264,7 @@ scriptwait:
 
 				STACK(2) = changes;
 				sp -= 1;
-			}	
+			}
 			break;
 
 		case PCD_SAVESTRING:
@@ -10269,7 +10273,7 @@ scriptwait:
 				const int str = GlobalACSStrings.AddString(work);
 				PushToStack(str);
 				STRINGBUILDER_FINISH(work);
-			}		
+			}
 			break;
 
 		case PCD_STRCPYTOSCRIPTCHRANGE:
@@ -10292,9 +10296,9 @@ scriptwait:
 				}
 
 				index += STACK(6);
-				
+
 				lookup = Level->Behaviors.LookupString (STACK(2));
-				
+
 				if (!lookup) {
 					// no data, operation complete
 	STRCPYTORANGECOMPLETE:
@@ -10323,7 +10327,7 @@ scriptwait:
 							localarrays->Set(locals, a, index++, *lookup);
 							if (! (*(lookup++))) goto STRCPYTORANGECOMPLETE; // complete with terminating 0
 						}
-						
+
 						Stack[sp-6] = !(*lookup); // true/success if only terminating 0 was not copied
 					}
 					break;
@@ -10346,7 +10350,7 @@ scriptwait:
 							ACS_WorldArrays[a][index++] = *lookup;
 							if (! (*(lookup++))) goto STRCPYTORANGECOMPLETE; // complete with terminating 0
 						}
-						
+
 						Stack[sp-6] = !(*lookup); // true/success if only terminating 0 was not copied
 					}
 					break;
@@ -10359,7 +10363,7 @@ scriptwait:
 							ACS_GlobalArrays[a][index++] = *lookup;
 							if (! (*(lookup++))) goto STRCPYTORANGECOMPLETE; // complete with terminating 0
 						}
-						
+
 						Stack[sp-6] = !(*lookup); // true/success if only terminating 0 was not copied
 					}
 					break;
@@ -10376,8 +10380,8 @@ scriptwait:
 			else
 				pc += 3;
 			break;
- 		}
- 	}
+		}
+	}
 
 	// There are several or more p-codes that can trigger a division or modulus of zero.
 	// Reset the active behavior back to the original if this happens.
@@ -10628,7 +10632,7 @@ int P_StartScript (FLevelLocals *Level, AActor *who, line_t *where, int script, 
 					}
 					Printf(PRINT_BOLD, ")\n");
 				}
-				
+
 				return false;
 			}
 

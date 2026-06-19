@@ -11,7 +11,7 @@
 		<url>https://github.com/UZDoom</url>
 	</developer>
 	<summary>Game engine for Classic Doom</summary>
-	
+
 	<url type="bugtracker">https://github.com/UZDoom/UZDoom/issues</url>
 	<url type="contact">https://dsc.gg/zdoom</url>
 	<url type="contribute">https://github.com/UZDoom/UZDoom/blob/trunk/CONTRIBUTING.md</url>
@@ -101,7 +101,7 @@
 		<control>keyboard</control>
 		<control>pointing</control>
 	</recommends>
-	
+
 	<releases>
 		<!-- Keep 5 full descriptions, and 2 years of releases with just urls -->
 		<release version="4.14.3" date="2025-11-28">

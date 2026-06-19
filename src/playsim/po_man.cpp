@@ -616,7 +616,7 @@ void DPolyDoor::Tick ()
 				m_Close = false;
 				SN_StartSequence (m_PolyObj, m_PolyObj->seqType, SEQ_DOOR, 0);
 			}
-		}			
+		}
 		break;
 
 	default:
@@ -708,7 +708,7 @@ bool EV_StopPoly(FLevelLocals *Level, int polynum)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1077,7 +1077,7 @@ bool FPolyObj::CheckMobjBlocking (side_t *sd)
 						open.top = LINEOPEN_MAX;
 						open.bottom = LINEOPEN_MIN;
 						// [TN] Check wether this actor gets blocked by the line.
-						if (ld->backsector != nullptr && !P_IsBlockedByLine(mobj, ld) 
+						if (ld->backsector != nullptr && !P_IsBlockedByLine(mobj, ld)
 							&& (!(ld->flags & ML_3DMIDTEX) ||
 								(!P_LineOpening_3dMidtex(mobj, ld, open) &&
 									(mobj->Top() < open.top)
@@ -1163,7 +1163,7 @@ void FPolyObj::LinkPolyobj ()
 	for(unsigned i = 0; i < Sidedefs.Size(); i++)
 	{
 		vertex_t *vt;
-		
+
 		vt = Sidedefs[i]->linedef->v1;
 		Bounds.AddToBox(vt->fPos());
 		vt = Sidedefs[i]->linedef->v2;
@@ -1241,7 +1241,7 @@ void FPolyObj::RecalcActorFloorCeil(FBoundingBox bounds) const
 			continue;
 		}
 		// Todo: Be a little more thorough with what gets altered here
-		// because this can dislocate a lot of items that were spawned on 
+		// because this can dislocate a lot of items that were spawned on
 		// the lower side of a sector boundary.
 		P_FindFloorCeiling(actor);
 	}
@@ -1405,12 +1405,12 @@ static bool GetIntersection(FPolySeg *seg, node_t *bsp, FPolyVertex *v)
 	double v1y =  FIXED2DBL(bsp->y);
 	double v1dx = FIXED2DBL(bsp->dx);
 	double v1dy = FIXED2DBL(bsp->dy);
-		
+
 	den = v1dy*v2dx - v1dx*v2dy;
 
 	if (den == 0)
 		return false;		// parallel
-	
+
 	num = (v1x - v2x)*v1dy + (v2y - v1y)*v1dx;
 	frac = num / den;
 
@@ -1430,7 +1430,7 @@ static bool GetIntersection(FPolySeg *seg, node_t *bsp, FPolyVertex *v)
 //==========================================================================
 
 static double PartitionDistance(FPolyVertex *vt, node_t *node)
-{	
+{
 	return fabs(FIXED2DBL(-node->dy) * (vt->pos.X - FIXED2DBL(node->x)) + FIXED2DBL(node->dx) * (vt->pos.Y - FIXED2DBL(node->y))) / node->len;
 }
 
@@ -1524,7 +1524,7 @@ static void SplitPoly(FPolyNode *pnode, void *node, float bbox[4])
 			// on the same side as the polyobj origin. Why? People like to build
 			// polyobject doors flush with their door tracks. This breaks using the
 			// usual assumptions.
-			
+
 
 			// Addition to Eternity code: We must also check any seg with only one
 			// vertex inside the epsilon threshold. If not, these lines will get split but
@@ -1548,7 +1548,7 @@ static void SplitPoly(FPolyNode *pnode, void *node, float bbox[4])
 				int side = R_PointOnSide(seg->v1.pos, bsp);
 				lists[side].Push(*seg);
 			}
-			else 
+			else
 			{
 				int side1 = R_PointOnSide(seg->v1.pos, bsp);
 				int side2 = R_PointOnSide(seg->v2.pos, bsp);
@@ -1572,7 +1572,7 @@ static void SplitPoly(FPolyNode *pnode, void *node, float bbox[4])
 						lists[side1].Push(*seg);
 					}
 				}
-				else 
+				else
 				{
 					// both points on the same side.
 					lists[side1].Push(*seg);
@@ -1591,17 +1591,17 @@ static void SplitPoly(FPolyNode *pnode, void *node, float bbox[4])
 		}
 		else
 		{
-			// create the new node 
+			// create the new node
 			FPolyNode *newnode = NewPolyNode();
 			newnode->poly = pnode->poly;
 			newnode->segs = lists[1];
 
 			// set segs for original node
 			pnode->segs = lists[0];
-		
+
 			// recurse back side
 			SplitPoly(newnode, bsp->children[1], bsp->bbox[1]);
-			
+
 			// recurse front side
 			SplitPoly(pnode, bsp->children[0], bsp->bbox[0]);
 
@@ -1616,7 +1616,7 @@ static void SplitPoly(FPolyNode *pnode, void *node, float bbox[4])
 
 		// Link node to subsector
 		pnode->pnext = sub->polys;
-		if (pnode->pnext != nullptr) 
+		if (pnode->pnext != nullptr)
 		{
 			assert(pnode->pnext->state == 1337);
 			pnode->pnext->pprev = pnode;
@@ -1645,7 +1645,7 @@ static void SplitPoly(FPolyNode *pnode, void *node, float bbox[4])
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1679,7 +1679,7 @@ void FPolyObj::CreateSubsectorLinks()
 
 		// Link node to subsector
 		node->pnext = sub->polys;
-		if (node->pnext != nullptr) 
+		if (node->pnext != nullptr)
 		{
 			assert(node->pnext->state == 1337);
 			node->pnext->pprev = node;

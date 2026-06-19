@@ -19,7 +19,7 @@
 
 // --------------------------------------------------------------------------
 //
-// Pistol 
+// Pistol
 //
 // --------------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ class Pistol : DoomWeapon
 		Stop;
 	}
 }
-		
+
 //===========================================================================
 //
 // Code (must be attached to StateProvider)
@@ -75,7 +75,7 @@ extend class StateProvider
 	//===========================================================================
 	// This is also used by the shotgun and chaingun
 	//===========================================================================
-	
+
 	protected action void GunShot(bool accurate, Class<Actor> pufftype, double pitch)
 	{
 		int damage = 5 * random[GunShot](1, 3);
@@ -93,7 +93,7 @@ extend class StateProvider
 
 		LineAttack(ang, PLAYERMISSILERANGE, pitch, damage, 'Hitscan', pufftype);
 	}
-	
+
 	//===========================================================================
 	action void A_FirePistol()
 	{

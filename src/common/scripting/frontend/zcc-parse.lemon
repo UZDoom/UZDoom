@@ -765,18 +765,18 @@ light_list(X) ::= light_list(A) COMMA STRCONST(B).
 	strconst->Operation = PEX_ConstValue;
 	strconst->Type = TypeString;
 	strconst->StringVal = B.String;
-	AppendTreeNodeSibling(A, strconst); 
+	AppendTreeNodeSibling(A, strconst);
 	X = A; /*X-overwrites-A*/
 }
 
 /* A state action can be either a compound statement or a single action function call. */
-state_action(X) ::= LBRACE(T) statement_list(A) scanner_mode RBRACE.	
+state_action(X) ::= LBRACE(T) statement_list(A) scanner_mode RBRACE.
 {
 	NEW_AST_NODE(CompoundStmt,stmt,T);
 	stmt->Content = A;
 	X = stmt;
 }
-state_action(X) ::= LBRACE scanner_mode RBRACE.	
+state_action(X) ::= LBRACE scanner_mode RBRACE.
 {
 	X = NULL;
 }
@@ -1105,7 +1105,7 @@ func_ptr_params(X) ::= func_ptr_param_list(X).
 //	NEW_AST_NODE(FuncPtrParamDecl,parm,stat->sc->GetMessageLine());
 //	parm->Type = nullptr;
 //	parm->Flags = 0;
-//	X = A; /*X-overwrites-A*/ 
+//	X = A; /*X-overwrites-A*/
 //	AppendTreeNodeSibling(X, parm);
 //}
 
@@ -1344,8 +1344,8 @@ decl_flags(X) ::= decl_flags(F) DEPRECATED(B) LPAREN STRCONST(A) opt_deprecation
 	X->DeprecationMessage = C.String;
 }
 
-decl_flags(X) ::= decl_flags(F) VERSION(B) LPAREN STRCONST(A) RPAREN.	
-{ 
+decl_flags(X) ::= decl_flags(F) VERSION(B) LPAREN STRCONST(A) RPAREN.
+{
 	if (F == nullptr)
 	{
 		NEW_AST_NODE(DeclFlags,nil_f,B.SourceLoc);
@@ -1406,7 +1406,7 @@ func_params(X) ::= func_param_list(A) COMMA ELLIPSIS.
 	parm->Name = NAME_None;
 	parm->Flags = 0;
 	parm->Default = nullptr;
-	X = A; /*X-overwrites-A*/ 
+	X = A; /*X-overwrites-A*/
 	AppendTreeNodeSibling(X, parm);
 }
 
@@ -1887,7 +1887,7 @@ expr(X) ::= expr(A) QUESTION expr(B) COLON expr(C).
 	X = expr;
 }
 
-/************ Expression Lists ***********/ 
+/************ Expression Lists ***********/
 
 %type expr_list{ZCC_Expression *}
 
@@ -2320,7 +2320,7 @@ labeled_statement(X) ::= DEFAULT(T) COLON.
 
 %type assign_statement{ZCC_AssignStmt *}
 
-// The grammar won't let this pass without some syntactic help. 
+// The grammar won't let this pass without some syntactic help.
 // Parentheses and braces aren't accepted either so brackets are the only way to get this through the parser without a conflict.
 assign_statement(X) ::= LBRACKET expr_list(A) RBRACKET EQ expr(B). [EQ]
 {
@@ -2355,8 +2355,8 @@ local_var(X) ::= type(A) variable_list_with_init(B).
 }
 
 %type var_init{ZCC_VarInit *}
-var_init(X) ::= IDENTIFIER(A).						
-{ 
+var_init(X) ::= IDENTIFIER(A).
+{
 	NEW_AST_NODE(VarInit,var,A);
 	var->Name = ENamedName(A.Int);
 	var->ArraySize = NULL;
@@ -2375,8 +2375,8 @@ var_init(X) ::= IDENTIFIER(A) array_size(B).
 	X = var;
 }
 
-var_init(X) ::= IDENTIFIER(A) EQ expr(B).						
-{ 
+var_init(X) ::= IDENTIFIER(A) EQ expr(B).
+{
 	NEW_AST_NODE(VarInit,var,A);
 	var->Name = ENamedName(A.Int);
 	var->ArraySize = NULL;
@@ -2386,7 +2386,7 @@ var_init(X) ::= IDENTIFIER(A) EQ expr(B).
 }
 
 var_init(X) ::= IDENTIFIER(A) EQ  LBRACE expr_list(C) RBRACE.	// this is for arrays which declare the size with the type
-{ 
+{
 	NEW_AST_NODE(VarInit,var,A);
 	var->Name = ENamedName(A.Int);
 	var->ArraySize = NULL;
@@ -2396,7 +2396,7 @@ var_init(X) ::= IDENTIFIER(A) EQ  LBRACE expr_list(C) RBRACE.	// this is for arr
 }
 
 var_init(X) ::= IDENTIFIER(A) array_size(B) EQ  LBRACE expr_list(C) RBRACE.
-{ 
+{
 	NEW_AST_NODE(VarInit,var,A);
 	var->Name = ENamedName(A.Int);
 	var->ArraySize = B;
@@ -2406,7 +2406,7 @@ var_init(X) ::= IDENTIFIER(A) array_size(B) EQ  LBRACE expr_list(C) RBRACE.
 }
 
 var_init(X) ::= IDENTIFIER EQ  LBRACE error RBRACE.
-{ 
+{
 	X = NULL;
 }
 

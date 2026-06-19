@@ -6,8 +6,11 @@
 #include <cmath>
 #include <vector>
 #include <dwmapi.h>
+#include <malloc.h>
 
 #pragma comment(lib, "dwmapi.lib")
+
+#define MESSAGE_NOTIFY_WINDOW (WM_APP + 100)
 
 #ifndef HID_USAGE_PAGE_GENERIC
 #define HID_USAGE_PAGE_GENERIC		((USHORT) 0x01)
@@ -77,7 +80,7 @@ static double DelayLoadGetDpiScale(HWND hwnd)
 	}
 }
 
-Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI, bool resizable) : WindowHost(windowHost), PopupWindow(popupWindow)
+Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility) : WindowHost(windowHost), PopupWindow(popupWindow)
 {
 	Windows.push_front(this);
 	WindowsIterator = Windows.begin();
@@ -584,6 +587,10 @@ LRESULT Win32DisplayWindow::OnWindowMessage(UINT msg, WPARAM wparam, LPARAM lpar
 		}
 		return 0;
 	}
+	else if (msg == MESSAGE_NOTIFY_WINDOW)
+	{
+		WindowHost->OnWindowNotified();
+	}
 	else if (msg == WM_ACTIVATE)
 	{
 		WindowHost->OnWindowActivated();
@@ -737,6 +744,36 @@ LRESULT Win32DisplayWindow::OnWindowMessage(UINT msg, WPARAM wparam, LPARAM lpar
 		NCCALCSIZE_PARAMS* calcsize = (NCCALCSIZE_PARAMS*)lparam;
 		return WVR_REDRAW;
 	}*/
+	else if (msg == WM_CREATE)
+	{
+		DragAcceptFiles(WindowHandle.hwnd, TRUE);
+		return 0;
+	}
+	else if (msg == WM_DROPFILES)
+	{
+		HDROP hdrop = (HDROP)wparam;
+		UINT filecount = DragQueryFileW(hdrop, 0xffffffff, NULL, 0);
+		WCHAR* path = NULL;
+		for (UINT i = 0; i < filecount; i++)
+		{
+			UINT pathlen = DragQueryFileW(hdrop, i, NULL, 0);
+			if (pathlen != 0)
+			{
+				WCHAR* newpath = (WCHAR*)realloc(path, (size_t)(pathlen + 1) * sizeof(WCHAR));
+				if (newpath)
+				{
+					path = newpath;
+					if (DragQueryFileW(hdrop, i, path, pathlen + 1) != 0)
+					{
+						WindowHost->OnFileDrop(from_utf16(path));
+					}
+				}
+			}
+		}
+		free(path);
+		DragFinish(hdrop);
+		return 0;
+	}
 
 	return DefWindowProc(WindowHandle.hwnd, msg, wparam, lparam);
 }
@@ -916,6 +953,11 @@ VkSurfaceKHR Win32DisplayWindow::CreateVulkanSurface(VkInstance instance)
 	if (result != VK_SUCCESS)
 		throw std::runtime_error("Could not create vulkan surface");
 	return surface;
+}
+
+void Win32DisplayWindow::NotifyWindow()
+{
+	PostMessageA(WindowHandle.hwnd, MESSAGE_NOTIFY_WINDOW, 0, 0);
 }
 
 std::vector<std::string> Win32DisplayWindow::GetVulkanInstanceExtensions()

@@ -290,13 +290,14 @@ void FRandom::StaticWriteRNGState (FSerializer &arc)
 	{
 		for (rng = FRandom::RNGList; rng != NULL; rng = rng->Next)
 		{
+			auto s32 = rng->s32();
 			// Only write those RNGs that have names
 			if (rng->NameCRC != 0)
 			{
 				if (arc.BeginObject(nullptr))
 				{
 					arc("crc", rng->NameCRC)
-						.Array("u", rng->s32.data(), rng->s32.size())
+						.Array("u", s32.data(), s32.size())
 						.EndObject();
 				}
 			}
@@ -336,9 +337,11 @@ void FRandom::StaticReadRNGState(FSerializer &arc)
 
 				for (rng = FRandom::RNGList; rng != NULL; rng = rng->Next)
 				{
+					auto s32 = rng->s32();
 					if (rng->NameCRC == crc)
 					{
-						arc.Array("u", rng->s32.data(), rng->s32.size());
+						arc.Array("u", s32.data(), s32.size());
+						rng->from_s32(s32);
 						break;
 					}
 				}
@@ -429,4 +432,3 @@ CCMD (showrngs)
 	FRandom::StaticPrintSeeds ();
 }
 #endif
-

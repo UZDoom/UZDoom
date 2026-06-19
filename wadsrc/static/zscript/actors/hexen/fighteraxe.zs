@@ -94,7 +94,7 @@ class FWeapAxe : FighterWeapon
 		FAXE A 1;
 		Goto ReadyGlow;
 	}
-	
+
 	override State GetUpState ()
 	{
 		return Ammo1.Amount ? FindState ("SelectGlow") : Super.GetUpState();
@@ -115,8 +115,8 @@ class FWeapAxe : FighterWeapon
 		return Ammo1.Amount ? FindState ("FireGlow") :  Super.GetAtkState(hold);
 	}
 
-	
-	
+
+
 	//============================================================================
 	//
 	// A_FAxeCheckReady
@@ -275,7 +275,7 @@ class FWeapAxe : FighterWeapon
 							t.linetarget.Thrust(power, t.attackAngleFromSource);
 						}
 						AdjustPlayerAngle(t);
-						
+
 						weapon.DepleteAmmo (weapon.bAltFire, false);
 
 						if ((weapon.Ammo1 == null || weapon.Ammo1.Amount == 0) &&

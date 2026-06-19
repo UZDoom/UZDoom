@@ -160,7 +160,7 @@ DHUDMessage::DHUDMessage (FFont *font, const char *text, float x, float y, int h
 		Top = y;
 		HUDWidth = hudwidth;
 		HUDHeight = hudheight;
-		
+
 		float intpart;
 		int fracpart = (int)(fabsf (modff (x, &intpart)) * 10.f + 0.5f);
 		if (fracpart & 4)
@@ -501,7 +501,7 @@ void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 //============================================================================
 
 DHUDMessageFadeOut::DHUDMessageFadeOut (FFont *font, const char *text, float x, float y,
-	int hudwidth, int hudheight,									
+	int hudwidth, int hudheight,
 	EColorRange textColor, float holdTime, float fadeOutTime)
 	: DHUDMessage (font, text, x, y, hudwidth, hudheight, textColor, holdTime)
 {
@@ -595,7 +595,7 @@ void DHUDMessageFadeOut::DoDraw (int linenum, int x, int y, bool clean, int hudh
 //============================================================================
 
 DHUDMessageFadeInOut::DHUDMessageFadeInOut (FFont *font, const char *text, float x, float y,
-	int hudwidth, int hudheight,									
+	int hudwidth, int hudheight,
 	EColorRange textColor, float holdTime, float fadeInTime, float fadeOutTime)
 	: DHUDMessageFadeOut (font, text, x, y, hudwidth, hudheight, textColor, holdTime, fadeOutTime)
 {
@@ -767,7 +767,7 @@ bool DHUDMessageTypeOnFadeOut::Tick ()
 				if (State == 3 && --step >= 0)
 				{
 					linedrawcount++;
-					
+
 					if (text.GetNextCharacter(linevis) == TEXTCOLOR_ESCAPE)
 					{
 						if (text[linevis] == '[')
@@ -898,4 +898,3 @@ void C_MidPrint(FFont* font, const char* msg, bool bold)
 		StatusBar->DetachMessage(MAKE_ID('C', 'N', 'T', 'R'));
 	}
 }
-

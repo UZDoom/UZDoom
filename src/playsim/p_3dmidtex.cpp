@@ -213,7 +213,7 @@ void P_Attach3dMidtexLinesToSector(sector_t *sector, int lineid, int tag, bool c
 bool P_GetMidTexturePosition(const line_t *line, int sideno, double *ptextop, double *ptexbot)
 {
 	if (line->sidedef[0]==NULL || line->sidedef[1]==NULL) return false;
-	
+
 	assert(sideno >= 0 && sideno <= 1);
 
 	side_t *side = line->sidedef[sideno];
@@ -240,7 +240,7 @@ bool P_GetMidTexturePosition(const line_t *line, int sideno, double *ptextop, do
 	{
 		*ptextop = y_offset +
 		   min(line->frontsector->GetPlaneTexZ(sector_t::ceiling), line->backsector->GetPlaneTexZ(sector_t::ceiling));
-		
+
 		*ptexbot = *ptextop - textureheight;
 	}
 	return true;
@@ -312,7 +312,7 @@ bool P_LineOpening_3dMidtex(AActor *thing, const line_t *linedef, FLineOpening &
 	return false;
 
 	/* still have to figure out what this code from Eternity means...
-	if((linedef->flags & ML_BLOCKMONSTERS) && 
+	if((linedef->flags & ML_BLOCKMONSTERS) &&
 		!(mo->flags & (MF_FLOAT | MF_DROPOFF)) &&
 		fabs(mo->Z() - tt) <= 24)
 	{

@@ -31,11 +31,11 @@ class CustomMessageBoxMenuBase : Menu abstract
 	Font textFont, arrowFont;
 	int destWidth, destHeight;
 	String selector;
-	
+
 	abstract uint OptionCount();
 	abstract String OptionName(uint index);
 	abstract int OptionXOffset(uint index);
-	
+
 	abstract int OptionForShortcut(int char_key, out bool activate); // -1 for no shortcut, activate = true if this executes the option immediately
 
 	//=============================================================================
@@ -104,17 +104,17 @@ class CustomMessageBoxMenuBase : Menu abstract
 
 		for (i = 0; i < c; i++)
 		{
-			screen.DrawText (textFont, Font.CR_UNTRANSLATED, destWidth/2 - mMessage.StringWidth(i)*NotifyFontScale/2, y, mMessage.StringAt(i), DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true, 
+			screen.DrawText (textFont, Font.CR_UNTRANSLATED, destWidth/2 - mMessage.StringWidth(i)*NotifyFontScale/2, y, mMessage.StringAt(i), DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true,
 				DTA_ScaleX, NotifyFontScale, DTA_ScaleY, NotifyFontScale);
 			y += fontheight;
 		}
 
 		y += fontheight;
 		mMouseY = int(y);
-		
+
 		let n = optionCount();
 		for(uint i = 0; i < n; i++)
-        {
+		{
 			screen.DrawText(textFont, messageSelection == i? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColor, (destWidth / 2) + OptionXOffset(i), y + (fontheight * i), Stringtable.Localize(optionName(i)), DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, 	true, DTA_ScaleX, NotifyFontScale, DTA_ScaleY, NotifyFontScale);
 		}
 
@@ -161,10 +161,10 @@ class CustomMessageBoxMenuBase : Menu abstract
 			// tolower
 			int ch = ev.KeyChar;
 			ch = ch >= 65 && ch <91? ch + 32 : ch;
-			
+
 			bool activate;
 			int opt = optionForShortcut(ch,activate);
-			
+
 			if(opt >= 0){
 				if(activate || opt == messageSelection) {
 					HandleResult(messageSelection);
@@ -236,7 +236,7 @@ class CustomMessageBoxMenuBase : Menu abstract
 		// convert x/y from screen to virtual coordinates, according to CleanX/Yfac use in DrawTexture
 		x = x * destWidth / screen.GetWidth();
 		y = y * destHeight / screen.GetHeight();
-		
+
 		int n = OptionCount();
 
 		if (x >= mMouseLeft && x <= mMouseRight && y >= mMouseY && y < mMouseY + (n * fh))

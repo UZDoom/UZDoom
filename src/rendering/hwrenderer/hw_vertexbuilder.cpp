@@ -30,14 +30,14 @@
 static void CreateVerticesForSubsector(subsector_t *sub, VertexContainer &gen, int qualifier)
 {
 	if (sub->numlines < 3) return;
-	
+
 	uint32_t startindex = gen.indices.Size();
-	
+
 	if ((sub->flags & SSECF_HOLE) && sub->numlines > 3)
 	{
 		// Hole filling "subsectors" are not necessarily convex so they require real triangulation.
 		// These things are extremely rare so performance is secondary here.
-		
+
 		using Point = std::pair<double, double>;
 		std::vector<std::vector<Point>> polygon;
 		std::vector<Point> *curPoly;
@@ -80,7 +80,7 @@ static void CreateVerticesForSubsector(subsector_t *sub, VertexContainer &gen, i
 static void TriangulateSection(FSection &sect, VertexContainer &gen, int qualifier)
 {
 	if (sect.segments.Size() < 3) return;
-	
+
 	// todo
 }
 
@@ -416,7 +416,7 @@ static void UpdatePlaneVertices(FFlatVertexBuffer *fvb, sector_t* sec, int plane
 		if (plane == sector_t::floor && sec->transdoor) vt->z -= 1;
 		mapvt->z = vt->z;
 	}
-	
+
 	fvb->mVertexBuffer->Upload(startvt * sizeof(FFlatVertex), countvt * sizeof(FFlatVertex));
 }
 

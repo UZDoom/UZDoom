@@ -95,7 +95,7 @@ static const char *WI_Cmd[] = {
 class DInterBackground : public DObject
 {
 	DECLARE_ABSTRACT_CLASS(DInterBackground, DObject)
-	
+
 	// These animation variables, structures, etc. are used for the
 	// DOOM/Ultimate DOOM intermission screen animations.  This is
 	// totally different from any sprite or texture/flat animations
@@ -223,7 +223,7 @@ private:
 		// Level names can be upper- and lower case so use tolower to check.
 		return (tolower(name[0]) == 'e' && name[1] >= '1' && name[1] <= '3' && tolower(name[2]) == 'm');
 	}
-	
+
 	//====================================================================
 	//
 	// Draws the splats and the 'You are here' arrows
@@ -355,11 +355,11 @@ DEFINE_ACTION_FUNCTION(DInterBackground, Create)
 }
 
 //====================================================================
-// 
+//
 //	Loads the background - either from a single texture
 //	or an intermission lump.
 //	Unfortunately the texture manager is incapable of recognizing text
-//	files so if you use a script you have to prefix its name by '$' in 
+//	files so if you use a script you have to prefix its name by '$' in
 //  MAPINFO.
 //
 //====================================================================
@@ -538,7 +538,7 @@ bool DInterBackground::LoadBackground(bool isenterpic)
 					{
 						I_Error("Music lump %s not found!", muslump.GetChars());
 					}
-				
+
 					// Check for background lump.
 					FString backgroundimage = jsonReader.GetString("backgroundimage");
 					texture = TexMan.CheckForTexture(backgroundimage.GetChars(), ETextureType::MiscPatch, FTextureManager::TEXMAN_TryAny);
@@ -609,7 +609,7 @@ bool DInterBackground::LoadBackground(bool isenterpic)
 											anim.type = ANIM_FRAME;
 											anim.ctr = 0;
 											anim.data = 0;
-										
+
 											::Serialize(jsonReader, "x", anim.loc.x, nullptr);
 											::Serialize(jsonReader, "y", anim.loc.y, nullptr);
 
@@ -913,7 +913,7 @@ bool DInterBackground::LoadBackground(bool isenterpic)
 		}
 		else
 		{
-			
+
 			Printf("Intermission script %s not found!\n", lumpname + 1);
 			texture = TexMan.GetTextureID("INTERPIC", ETextureType::MiscPatch);
 		}
@@ -934,7 +934,7 @@ DEFINE_ACTION_FUNCTION(DInterBackground, LoadBackground)
 }
 
 //====================================================================
-// 
+//
 //	made this more generic and configurable through a script
 //	Removed all the ugly special case handling for different game modes
 //
@@ -1010,7 +1010,7 @@ DEFINE_ACTION_FUNCTION(DInterBackground, updateAnimatedBack)
 }
 
 //====================================================================
-// 
+//
 //	Draws the background including all animations
 //
 //====================================================================
@@ -1151,7 +1151,7 @@ DEFINE_ACTION_FUNCTION(DInterBackground, IsUsingMusic)
 IMPLEMENT_CLASS(DInterBackground, true, false)
 
 //====================================================================
-// 
+//
 // Setup for an intermission screen.
 //
 //====================================================================
@@ -1178,7 +1178,7 @@ DObject* WI_Start(wbstartstruct_t *wbstartstruct)
 			I_FatalError("Cannot create status screen");
 		}
 	}
-	
+
 	auto WI_Screen = cls->CreateNew();
 
 
@@ -1213,7 +1213,7 @@ DObject* WI_Start(wbstartstruct_t *wbstartstruct)
 }
 
 //====================================================================
-// 
+//
 //
 //
 //====================================================================
@@ -1245,4 +1245,3 @@ DEFINE_FIELD_X(WBStartStruct, wbstartstruct_t, sucktime);
 DEFINE_FIELD_X(WBStartStruct, wbstartstruct_t, totaltime);
 DEFINE_FIELD_X(WBStartStruct, wbstartstruct_t, pnum);
 DEFINE_FIELD_X(WBStartStruct, wbstartstruct_t, plyr);
-

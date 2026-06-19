@@ -23,7 +23,7 @@
 class Loremaster : Actor
 {
 	Default
-	{	
+	{
 		Health 800;
 		Speed 10;
 		Radius 15;
@@ -119,10 +119,10 @@ class LoreShot : Actor
 		OCLW A 6;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor victim, int damage, Name damagetype)
 	{
-		
+
 		if (victim != NULL && target != NULL && !victim.bDontThrust)
 		{
 			Vector3 thrust = victim.Vec3To(target);
@@ -138,7 +138,7 @@ class LoreShot : Actor
 		Spawn("LoreShot2", Vec3Offset(-Vel.x/2., -Vel.y/2., -Vel.z/2.), ALLOW_REPLACE);
 		Spawn("LoreShot2", Vec3Offset(-Vel.x, -Vel.y, -Vel.z), ALLOW_REPLACE);
 	}
-	
+
 }
 
 // Loremaster Subprojectile -------------------------------------------------
@@ -157,4 +157,3 @@ class LoreShot2 : Actor
 		Stop;
 	}
 }
-

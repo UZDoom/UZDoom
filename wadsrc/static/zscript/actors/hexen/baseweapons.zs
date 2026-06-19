@@ -77,7 +77,7 @@ extend class Actor
 			angle = t.angleFromSource;
 		}
 	}
-	
+
 	//============================================================================
 	//
 	// A_DropQuietusPieces
@@ -96,5 +96,5 @@ extend class Actor
 				j = (j == 0) ? random[PieceDrop](1, 2) : 3-j;
 			}
 		}
-	}	
+	}
 }

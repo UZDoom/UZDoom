@@ -38,4 +38,5 @@ private:
 
 	TextEdit* Text = nullptr;
 	PushButton* Notes = nullptr;
+	PushButton* ForceUpdate = nullptr;
 };

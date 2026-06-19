@@ -20,7 +20,7 @@
 **
 **---------------------------------------------------------------------------
 **
-*/ 
+*/
 
 #include "c_bind.h"
 #include "c_console.h"
@@ -123,7 +123,7 @@ void D_ProcessEvents (void)
 // there are dead chars involved, so those should be removed, too. We do
 // this by changing the message type to EV_None rather than by actually
 // removing the event from the queue.
-// 
+//
 //==========================================================================
 
 void D_RemoveNextCharEvent()
@@ -271,4 +271,3 @@ DEFINE_FIELD_X(InputEvent, FInputEvent, KeyString);
 DEFINE_FIELD_X(InputEvent, FInputEvent, KeyChar);
 DEFINE_FIELD_X(InputEvent, FInputEvent, MouseX);
 DEFINE_FIELD_X(InputEvent, FInputEvent, MouseY);
-

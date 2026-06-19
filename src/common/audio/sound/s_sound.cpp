@@ -566,7 +566,7 @@ FSoundChan *SoundEngine::StartSound(int type, const void *source,
 	{
 		chan = NULL;
 	}
-	else 
+	else
 	{
 		int startflags = 0;
 		if (chanflags & CHANF_LOOP) startflags |= SNDF_LOOP;
@@ -691,8 +691,8 @@ void SoundEngine::RestartChannel(FSoundChan *chan)
 		}
 
 		chan->ChanFlags &= ~(CHANF_EVICTED|CHANF_ABSTIME);
-        ochan = (FSoundChan*)GSnd->StartSound3D(sfx->data, &listener, chan->Volume, &chan->Rolloff, chan->DistanceScale, chan->Pitch,
-            chan->Priority, pos, vel, chan->EntChannel, startflags, chan);
+		ochan = (FSoundChan*)GSnd->StartSound3D(sfx->data, &listener, chan->Volume, &chan->Rolloff, chan->DistanceScale, chan->Pitch,
+			chan->Priority, pos, vel, chan->EntChannel, startflags, chan);
 	}
 	else
 	{
@@ -1349,7 +1349,7 @@ void SoundEngine::ChannelEnded(FISoundChannel *ichan)
 			evicted = true;
 		}
 		else
-		{ 
+		{
 			unsigned int pos = GSnd->GetPosition(schan);
 			unsigned int len = GSnd->GetSampleLength(S_sfx[schan->SoundID.index()].data);
 			if (pos == 0)
@@ -1376,7 +1376,7 @@ void SoundEngine::ChannelEnded(FISoundChannel *ichan)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1868,4 +1868,3 @@ ADD_STAT(sound)
 {
 	return GSnd->GatherStats();
 }
-

@@ -15,6 +15,7 @@
 
 #include <cassert>
 #include <cmath>
+#include <cstring>
 
 #include "basics.h"
 #include "colorspace.h"
@@ -33,6 +34,23 @@ Color rgb(ColorP r, ColorP g, ColorP b)
 {
 	return { SRGB, r, g, b };
 }
+
+Color rgb(uint32_t rgb24)
+{
+	ColorP r = ((rgb24>>16)&0xff)/255.0;
+	ColorP g = ((rgb24>>8 )&0xff)/255.0;
+	ColorP b = ((rgb24    )&0xff)/255.0;
+	return rgb(r, g, b);
+}
+
+uint32_t rgb24(const Color& c)
+{
+	Color C {c};
+	memcpy(&C, &c, sizeof(c));
+	_2rgb(C);
+	uint8_t r = C.rgb.r*255, g = C.rgb.g*255, b = C.rgb.b*255;
+	return r<<16 | g<<8 | b;
+};
 
 Color rgb(const Color& c)
 {
@@ -104,8 +122,8 @@ void oklch2oklab(Color& lch)
 {
 	CONVERT(lch, OKLCH, OKLAB);
 	auto c = lch.lch.c, h = lch.lch.h;
-	lch.lab.a = isnan(h) ? 0 : c * cos(h * N_PI / N_180);
-	lch.lab.b = isnan(h) ? 0 : c * sin(h * N_PI / N_180);
+	lch.lab.a = std::isnan(h) ? 0 : c * cos(h * N_PI / N_180);
+	lch.lab.b = std::isnan(h) ? 0 : c * sin(h * N_PI / N_180);
 }
 
 Color oklab(ColorP L, ColorP a, ColorP b)
@@ -160,8 +178,8 @@ void oklab2oklch(Color& lab)
 }
 
 inline ColorP alerp(ColorP a, ColorP b, float t) {
-	if (isnan(a)) return isnan(b)? 0: b;
-	if (isnan(b)) return isnan(a)? 0: a;
+	if (std::isnan(a)) return std::isnan(b)? 0: b;
+	if (std::isnan(b)) return std::isnan(a)? 0: a;
 	ColorP delta = fmod(b - a, N_360);
 	if (delta > N_180) delta -= N_360;
 	if (delta < -N_180) delta += N_360;

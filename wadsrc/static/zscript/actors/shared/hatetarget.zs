@@ -36,7 +36,7 @@ class HateTarget : Actor
 	Spawn:
 		TNT1 A -1;
 	}
-	
+
 	override void BeginPlay()
 	{
 		Super.BeginPlay();
@@ -63,5 +63,5 @@ class HateTarget : Actor
 		}
 	}
 
-	
+
 }

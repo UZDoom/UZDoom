@@ -39,7 +39,7 @@ class Coin : Inventory
 		COIN A -1;
 		Stop;
 	}
-	
+
 	// Coin ---------------------------------------------------------------------
 
 	override String PickupMessage ()
@@ -143,7 +143,7 @@ class Coin : Inventory
 		}
 		return tossed;
 	}
-	
+
 }
 
 
@@ -220,4 +220,3 @@ class Gold300 : Coin
 		Stop;
 	}
 }
-

@@ -103,7 +103,7 @@ public:
 	virtual void PostSerialize();
 	void Serialize(FSerializer &arc) override;
 	size_t PropagateMark();
-	
+
 	void ChangeStatNum (int statnum);
 	inline int GetStatNum() const { return _statNum; }
 	// This is temporary and should only be used with the rollback functionality.

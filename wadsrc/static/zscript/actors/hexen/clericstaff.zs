@@ -69,7 +69,7 @@ class CWeapStaff : ClericWeapon
 		CSSF K 10 Offset (0, 36);
 		Goto Ready + 2;
 	}
-	
+
 	//============================================================================
 	//
 	// A_CStaffCheck
@@ -184,7 +184,7 @@ class CWeapStaff : ClericWeapon
 				player.SetPsprite(PSP_WEAPON, player.ReadyWeapon.FindState ("Blink"));
 				weaponspecial = (random[CStaffBlink]() + 50) >> 2;
 			}
-			else 
+			else
 			{
 				A_WeaponReady();
 			}
@@ -217,7 +217,7 @@ class CStaffMissile : Actor
 		CSSF HI 3 Bright;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor target, int damage, Name damagetype)
 	{
 		// Cleric Serpent Staff does poison damage
@@ -228,7 +228,7 @@ class CStaffMissile : Actor
 		}
 		return damage;
 	}
-	
+
 }
 
 extend class Actor

@@ -777,10 +777,10 @@ void write_zip(const char *zipname, dir_tree_t *trees, int update)
 // append_to_zip
 //
 // Write a given file to the zipFile.
-// 
+//
 // zipfile: zip object to be written to
 //    file: file to read data from
-// 
+//
 // returns: 0 = success, 1 = error
 //
 //==========================================================================
@@ -833,7 +833,7 @@ int append_to_zip(FILE *zip_file, file_sorted_t *filep, FILE *ozip, BYTE *odir)
 	readlen = (unsigned int)fread(readbuf, 1, len, lumpfile);
 	fclose(lumpfile);
 
-	// if read less bytes than expected, 
+	// if read less bytes than expected,
 	if (readlen != len)
 	{
 		// diagnose and return error
@@ -1241,28 +1241,28 @@ int compress_ppmd(Byte *out, unsigned int *outlen, const Byte *in, unsigned int 
 
 int compress_deflate(Byte *out, unsigned int *outlen, const Byte *in, unsigned int inlen)
 {
-    z_stream stream;
-    int err;
+	z_stream stream;
+	int err;
 
-    stream.next_in = (Bytef *)in;
-    stream.avail_in = inlen;
-    stream.next_out = out;
-    stream.avail_out = *outlen;
-    stream.zalloc = (alloc_func)0;
-    stream.zfree = (free_func)0;
-    stream.opaque = (voidpf)0;
+	stream.next_in = (Bytef *)in;
+	stream.avail_in = inlen;
+	stream.next_out = out;
+	stream.avail_out = *outlen;
+	stream.zalloc = (alloc_func)0;
+	stream.zfree = (free_func)0;
+	stream.opaque = (voidpf)0;
 
-    err = deflateInit2(&stream, 9, Z_DEFLATED, -15, 9, Z_DEFAULT_STRATEGY);
-    if (err != Z_OK) return -1;
+	err = deflateInit2(&stream, 9, Z_DEFLATED, -15, 9, Z_DEFAULT_STRATEGY);
+	if (err != Z_OK) return -1;
 
-    err = deflate(&stream, Z_FINISH);
-    if (err != Z_STREAM_END) {
-        deflateEnd(&stream);
-        return -1;
-    }
-    *outlen = stream.total_out;
+	err = deflate(&stream, Z_FINISH);
+	if (err != Z_STREAM_END) {
+		deflateEnd(&stream);
+		return -1;
+	}
+	*outlen = stream.total_out;
 
-    err = deflateEnd(&stream);
+	err = deflateEnd(&stream);
 	return err == Z_OK ? 0 : -1;
 }
 
@@ -1295,7 +1295,7 @@ BYTE *find_central_dir(FILE *fin)
 	{
 		UINT32 read_size, read_pos;
 		int i;
-		if (back_read + BUFREADCOMMENT > max_back) 
+		if (back_read + BUFREADCOMMENT > max_back)
 			back_read = max_back;
 		else
 			back_read += BUFREADCOMMENT;

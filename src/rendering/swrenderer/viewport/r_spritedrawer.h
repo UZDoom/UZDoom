@@ -34,7 +34,7 @@ namespace swrenderer
 	class RenderThread;
 	struct FWallCoords;
 	class ProjectedWallLight;
-	
+
 	class VoxelBlock
 	{
 	public:
@@ -85,7 +85,7 @@ namespace swrenderer
 		uint32_t *DestBlend() const { return dc_destblend; }
 		fixed_t SrcAlpha() const { return dc_srcalpha; }
 		fixed_t DestAlpha() const { return dc_destalpha; }
-		
+
 		uint32_t DynamicLight() const { return dynlightcolor; }
 
 		bool DrawerNeedsPalInput() const { return drawer_needs_pal_input; }
@@ -126,7 +126,7 @@ namespace swrenderer
 		uint32_t dc_color_bgra = 0;
 		uint32_t dc_srccolor = 0;
 		uint32_t dc_srccolor_bgra = 0;
-		
+
 		uint32_t dynlightcolor = 0;
 
 		typedef void(SWPixelFormatDrawers::*SpriteDrawerFunc)(const SpriteDrawerArgs &args);

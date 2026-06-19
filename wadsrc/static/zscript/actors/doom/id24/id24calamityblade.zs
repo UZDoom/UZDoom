@@ -30,22 +30,22 @@ class ID24CalamityBlade : DoomWeapon // Heatwave Generator
 		Inventory.PickupMessage "$ID24_GOTCALAMITYBLADE";
 		Tag "$TAG_ID24CALAMITYBLADE";
 	}
-	
+
 	action void A_CheckAmmo(StateLabel st, int amount)
 	{
 		MBF21_CheckAmmo(ResolveState(st), amount);
 	}
-	
+
 	action void A_GunFlashTo(StateLabel st, int dontchangeplayer)
 	{
 		MBF21_GunFlashTo(ResolveState(st), dontchangeplayer);
 	}
-	
+
 	action void A_RefireTo(StateLabel st, int skipcheck)
 	{
 		MBF21_RefireTo(ResolveState(st), skipcheck);
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -185,7 +185,7 @@ class ID24CalamityBlade : DoomWeapon // Heatwave Generator
 	}
 }
 
-class ID24IncineratorProjectile : Actor // Heatwave Ripper 
+class ID24IncineratorProjectile : Actor // Heatwave Ripper
 {
 	Default
 	{

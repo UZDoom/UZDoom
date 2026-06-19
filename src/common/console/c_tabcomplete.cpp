@@ -105,7 +105,7 @@ void C_RemoveTabCommand (const char *name)
 	if (TabCommands.Size() == 0)
 	{
 		// There are no tab commands that can be removed.
-		// This is important to skip construction of aname 
+		// This is important to skip construction of aname
 		// in case the NameManager has already been destroyed.
 		return;
 	}

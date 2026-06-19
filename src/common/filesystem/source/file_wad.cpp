@@ -246,7 +246,7 @@ void FWadFile::SetNamespace(const char *startmarker, const char *endmarker, name
 			{
 				if (Entries[ii].Length == 4096)
 				{
-					// We can't add this to the flats namespace but 
+					// We can't add this to the flats namespace but
 					// it needs to be flagged for the texture manager.
 					Printf(FSMessageLevel::DebugNotify, "%s: Marking %s as potential flat\n", FileName, Entries[ii].FileName);
 					Entries[ii].Flags |= RESFF_MAYBEFLAT;

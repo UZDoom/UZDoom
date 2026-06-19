@@ -36,7 +36,7 @@ class Cyberdemon : Actor
 		Monster;
 		MinMissileChance 160;
 		MissileChanceMult 0.5;
-		+BOSS 
+		+BOSS
 		+FLOORCLIP
 		+NORADIUSDMG
 		+DONTMORPH
@@ -101,11 +101,11 @@ extend class Actor
 			SpawnMissile (target, "Rocket");
 		}
 	}
-	
+
 	void A_Hoof()
 	{
 		A_StartSound("cyber/hoof", CHAN_BODY, CHANF_DEFAULT, 1, ATTN_IDLE);
 		A_Chase();
 	}
-	
+
 }

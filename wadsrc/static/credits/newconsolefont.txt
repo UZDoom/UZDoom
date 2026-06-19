@@ -15,6 +15,6 @@ with the GNU font embedding exception, as follows:
      GNU General Public License. If you modify this font, you may extend
      this exception to your version of the font, but you are not obligated
      to do so. If you do not wish to do so, delete this exception statement
-     from your version. 
+     from your version.
 
 See "http://www.gnu.org/licenses/gpl-faq.html#FontException" for more details.

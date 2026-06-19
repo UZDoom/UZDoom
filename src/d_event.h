@@ -38,8 +38,8 @@ typedef enum
 {
 	BT_ATTACK		= 1<<0,	// Press "Fire".
 	BT_USE			= 1<<1,	// Use button, to open doors, activate switches.
-    BT_JUMP			= 1<<2,
-    BT_CROUCH		= 1<<3,
+	BT_JUMP			= 1<<2,
+	BT_CROUCH		= 1<<3,
 	BT_TURN180		= 1<<4,
 	BT_ALTATTACK	= 1<<5,	// Press your other "Fire".
 	BT_RELOAD		= 1<<6,	// [XA] Reload key. Causes state jump in A_WeaponReady.

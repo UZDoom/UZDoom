@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-28 21:00+0000\n"
-"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
-"Language-Team: Esperanto <https://hosted.weblate.org/projects/doom-engine-"
-"games/hexen/eo/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/doom-engine-games/hexen/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Solenejo de Separado"
@@ -127,6 +126,7 @@ msgstr ""
 "la movadantaj muroj de la kolonejo\n"
 "ŝajne mokas ĉiom da viaj klopodoj."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Via menso ankoraŭ ŝpinante pro viaj\n"
@@ -148,6 +148,7 @@ msgstr ""
 "Kien vi venis? Per ĉiuj el la dioj de\n"
 "doloro, kiel iam trovos vi vian eliron?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "La plej potencaj armoj kaj artefaktoj\n"
@@ -170,6 +171,7 @@ msgstr ""
 "sinistraj okuloj regardegante sub al vi.\n"
 "Ie interne, viaj malamikoj atendas..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "\"... kaj li veturos en la regnon de la\n"
@@ -197,6 +199,7 @@ msgstr ""
 "kaj sur ĝi estas la sola fonto de lumo\n"
 "en ĉi tiu mondo."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Ĉi tio povas esti nur la ĥaos-sfero —\n"
@@ -253,6 +256,7 @@ msgstr "ĉe la Sep Portaloj"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Ŝtupoj leviĝis ĉe la Sep Portaloj"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Vi bezonas trovi alian ŝaltilon..."
 
@@ -307,6 +311,7 @@ msgstr "La pordo estas barita interne"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Plataĵo malleviĝis en la turo"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Ludis ĉi tiun ludon vi tro longe, mortemul'..."
 

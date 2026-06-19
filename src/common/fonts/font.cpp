@@ -173,7 +173,7 @@ FFont::FFont (const char *name, const char *nametemplate, const char *filetempla
 					{
 						lowercaselatinonly = true;
 					}
-					
+
 				}
 			}
 		}
@@ -326,7 +326,7 @@ FFont::FFont (const char *name, const char *nametemplate, const char *filetempla
 				}
 
 				auto orig = pic->GetTexture();
-				auto tex = MakeGameTexture(orig, nullptr, ETextureType::FontChar); 
+				auto tex = MakeGameTexture(orig, nullptr, ETextureType::FontChar);
 				tex->CopySize(pic, true);
 				TexMan.AddGameTexture(tex);
 				Chars[i].OriginalPic = tex;
@@ -756,8 +756,8 @@ int FFont::GetCharCode(int code, bool needpic) const
 			return 0x80;
 		}
 	}
-		
-		
+
+
 	if (code >= FirstChar && code <= LastChar && Chars[code - FirstChar].OriginalPic != nullptr)
 	{
 		return code;
@@ -867,7 +867,7 @@ int FFont::GetCharWidth (int code) const
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 

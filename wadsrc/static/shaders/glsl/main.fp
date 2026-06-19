@@ -134,7 +134,7 @@ const int Tex_Blend_Hardlight = 4;
 
  vec4 ApplyTextureManipulation(vec4 texel, int blendflags)
  {
-	// Step 1: desaturate according to the material's desaturation factor. 
+	// Step 1: desaturate according to the material's desaturation factor.
 	texel = dodesaturate(texel, uTextureModulateColor.a);
 
 	// Step 2: Invert if requested
@@ -232,7 +232,7 @@ vec4 getTexel(vec2 st)
 			texel = vec4(1.0-texel.r, 1.0-texel.b, 1.0-texel.g, 1.0);
 			break;
 
-		case 7: //TM_FOGLAYER 
+		case 7: //TM_FOGLAYER
 			return texel;
 
 	}
@@ -247,7 +247,7 @@ vec4 getTexel(vec2 st)
 
 	// Apply the texture modification colors.
 	int blendflags = int(uTextureAddColor.a);	// this alpha is unused otherwise
-	if (blendflags != 0)	
+	if (blendflags != 0)
 	{
 		// only apply the texture manipulation if it contains something.
 		texel = ApplyTextureManipulation(texel, blendflags);
@@ -347,7 +347,7 @@ float R_DoomLightingEquation(float light)
 	{
 		z = distance(pixelpos.xyz, uCameraPos.xyz);
 	}
-	else 
+	else
 	{
 		z = pixelpos.w;
 	}
@@ -677,8 +677,8 @@ void SetMaterialProps(inout Material material, vec2 texCoord)
 		texCoord.s += uNpotEmulation.x * floor(mod(texCoord.t, uNpotEmulation.y));
 		texCoord.t = period + mod(texCoord.t, uNpotEmulation.y);
 	}
-#endif	
-	material.Base = getTexel(texCoord.st); 
+#endif
+	material.Base = getTexel(texCoord.st);
 	material.Normal = ApplyNormalMap(texCoord.st);
 
 // OpenGL doesn't care, but Vulkan pukes all over the place if these texture samplings are included in no-texture shaders, even though never called.
@@ -750,12 +750,12 @@ vec4 getLightColor(Material material, float fogdist, float fogfactor)
 	// these cannot be safely applied by the legacy format where the implementation cannot guarantee that the values are set.
 #if !defined LEGACY_USER_SHADER && !defined NO_LAYERS
 	//
-	// apply glow 
+	// apply glow
 	//
 	color.rgb = mix(color.rgb, material.Glow.rgb, material.Glow.a);
 
 	//
-	// apply brightmaps 
+	// apply brightmaps
 	//
 	color.rgb = min(color.rgb + material.Bright.rgb, 1.0);
 #endif
@@ -804,11 +804,11 @@ vec3 AmbientOcclusionColor()
 	//
 	// calculate fog factor
 	//
-	if (uFogEnabled == -1) 
+	if (uFogEnabled == -1)
 	{
 		fogdist = max(16.0, pixelpos.w);
 	}
-	else 
+	else
 	{
 		fogdist = max(16.0, distance(pixelpos.xyz, uCameraPos.xyz));
 	}
@@ -869,11 +869,11 @@ void main()
 		//
 		if (uFogEnabled != 0)
 		{
-			if (uFogEnabled == 1 || uFogEnabled == -1) 
+			if (uFogEnabled == 1 || uFogEnabled == -1)
 			{
 				fogdist = max(16.0, pixelpos.w);
 			}
-			else 
+			else
 			{
 				fogdist = max(16.0, distance(pixelpos.xyz, uCameraPos.xyz));
 			}
@@ -894,7 +894,7 @@ void main()
 			//
 			// colored fog
 			//
-			if (uFogEnabled < 0) 
+			if (uFogEnabled < 0)
 			{
 				frag = applyFog(frag, fogfactor);
 			}

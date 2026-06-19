@@ -450,7 +450,7 @@ namespace swrenderer
 	{
 		if (!mFloorPlane)
 			return false;
-		
+
 		// deep water check
 		if (mFrontSector->GetHeightSec() == nullptr)
 		{
@@ -507,7 +507,7 @@ namespace swrenderer
 	{
 		if (!mCeilingPlane)
 			return false;
-		
+
 		// deep water check
 		if (mFrontSector->GetHeightSec() == nullptr && mFrontSector->GetTexture(sector_t::ceiling) != skyflatnum)
 		{
@@ -582,7 +582,7 @@ namespace swrenderer
 			return linedef->isVisualPortal();
 		}
 	}
-	
+
 	void SWRenderLine::SetWallVariables()
 	{
 		RenderPortal *renderportal = Thread->Portal.get();
@@ -677,34 +677,34 @@ namespace swrenderer
 	{
 		side_t *sidedef = mLineSegment->sidedef;
 		line_t *linedef = mLineSegment->linedef;
-		
+
 		// No top texture for skyhack lines
 		if (mFrontSector->GetTexture(sector_t::ceiling) == skyflatnum && mBackSector->GetTexture(sector_t::ceiling) == skyflatnum) return;
-		
+
 		auto tex = GetPalettedSWTexture(sidedef->GetTexture(side_t::top), true);
 		if (!tex) return;
 		mTopTexture = tex;
 	}
-	
+
 	void SWRenderLine::SetMiddleTexture()
 	{
 		side_t *sidedef = mLineSegment->sidedef;
 		line_t *linedef = mLineSegment->linedef;
-		
+
 		// [RH] Horizon lines do not need to be textured
 		if (linedef->isVisualPortal()) return;
 		if (linedef->special == Line_Horizon) return;
-			
+
 		auto tex = GetPalettedSWTexture(sidedef->GetTexture(side_t::mid), true);
 		if (!tex) return;
 		mMiddleTexture = tex;
 	}
-	
+
 	void SWRenderLine::SetBottomTexture()
 	{
 		side_t *sidedef = mLineSegment->sidedef;
 		line_t *linedef = mLineSegment->linedef;
-		
+
 		auto tex = GetPalettedSWTexture(sidedef->GetTexture(side_t::bottom), true);
 		if (!tex) return;
 		mBottomTexture = tex;
@@ -716,7 +716,7 @@ namespace swrenderer
 			front->Colormap.FadeColor != back->Colormap.FadeColor &&
 			(front->GetTexture(sector_t::ceiling) != skyflatnum || back->GetTexture(sector_t::ceiling) != skyflatnum);
 	}
-	
+
 	void SWRenderLine::ClipSegmentTopBottom(int x1, int x2)
 	{
 		// clip wall to the floor and ceiling

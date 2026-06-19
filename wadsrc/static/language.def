@@ -5,7 +5,7 @@
 // The contents of this file are not supposed to be translated!!!
 // These strings are needed in the string table only so that they can be replaced by Dehacked.
 
-// Music names for Doom. 
+// Music names for Doom.
 // Note that these names are not prefixed with 'd_' because that's how Dehacked patches expect them.
 
 MUSIC_E1M1 = "e1m1";

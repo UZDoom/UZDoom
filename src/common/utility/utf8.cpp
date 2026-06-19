@@ -76,7 +76,7 @@ int utf8_encode(int32_t codepoint, uint8_t *buffer, int *size)
 //
 //==========================================================================
 
-int utf8_decode(const uint8_t *src, int *size) 
+int utf8_decode(const uint8_t *src, int *size)
 {
 	int c = src[0];
 	int r;
@@ -91,10 +91,10 @@ int utf8_decode(const uint8_t *src, int *size)
 	if (c1 < 0x80 || c1 >= 0xc0) return -1;
 	c1 &= 0x3f;
 
-	if ((c & 0xE0) == 0xC0) 
+	if ((c & 0xE0) == 0xC0)
 	{
 		r = ((c & 0x1F) << 6) | c1;
-		if (r >= 128) 
+		if (r >= 128)
 		{
 			*size = 2;
 			return r;
@@ -106,10 +106,10 @@ int utf8_decode(const uint8_t *src, int *size)
 	if (c2 < 0x80 || c2 >= 0xc0) return -1;
 	c2 &= 0x3f;
 
-	if ((c & 0xF0) == 0xE0) 
+	if ((c & 0xF0) == 0xE0)
 	{
 		r = ((c & 0x0F) << 12) | (c1 << 6) | c2;
-		if (r >= 2048 && (r < 55296 || r > 57343)) 
+		if (r >= 2048 && (r < 55296 || r > 57343))
 		{
 			*size = 3;
 			return r;
@@ -121,10 +121,10 @@ int utf8_decode(const uint8_t *src, int *size)
 	if (c3 < 0x80 || c1 >= 0xc0) return -1;
 	c3 &= 0x3f;
 
-	if ((c & 0xF8) == 0xF0) 
+	if ((c & 0xF8) == 0xF0)
 	{
 		r = ((c & 0x07) << 18) | (c1 << 12) | (c2 << 6) | c3;
-		if (r >= 65536 && r <= 1114111) 
+		if (r >= 65536 && r <= 1114111)
 		{
 			*size = 4;
 			return r;
@@ -178,7 +178,7 @@ uint16_t win1252map[] = {
 //
 // reads one character from the string.
 // This can handle both ISO 8859-1/Windows-1252 and UTF-8, as well as mixed strings
-// between both encodings, which may happen if inconsistent encoding is 
+// between both encodings, which may happen if inconsistent encoding is
 // used between different files in a mod.
 //
 //==========================================================================
@@ -200,7 +200,7 @@ int GetCharFromString(const uint8_t *&string)
 		}
 		return z;
 	}
-	else 
+	else
 	{
 		int size = 0;
 		auto chr = utf8_decode(string, &size);
@@ -217,8 +217,8 @@ int GetCharFromString(const uint8_t *&string)
 //==========================================================================
 //
 // convert a potentially mixed-encoded string to pure UTF-8
-// this returns a pointer to a static buffer, 
-// assuming that its caller will immediately process the result. 
+// this returns a pointer to a static buffer,
+// assuming that its caller will immediately process the result.
 //
 //==========================================================================
 
@@ -1210,4 +1210,3 @@ std::wstring WideString(const char* cin)
 	}
 	return buildbuffer;
 }
-

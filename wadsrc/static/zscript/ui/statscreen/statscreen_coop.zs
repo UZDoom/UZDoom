@@ -173,7 +173,7 @@ class CoopStatusScreen : StatusScreen
 				else
 					stillticking = true;
 			}
-		
+
 			if (!stillticking)
 			{
 				PlaySound("intermission/nextstage");
@@ -224,7 +224,7 @@ class CoopStatusScreen : StatusScreen
 				else
 					stillticking = true;
 			}
-		
+
 			if (!stillticking)
 			{
 				PlaySound("intermission/cooptotal");
@@ -407,9 +407,9 @@ class CoopStatusScreen : StatusScreen
 		}
 
 		int y = DrawPatchOrText(oldy, entering, enteringPatch, "$WI_ENTERING");
-		
+
 		// If the displayed info is made of patches we need some additional offsetting here.
-		
+
 		if (ispatch)
 		{
 			int h1 = BigFont.GetHeight() - BigFont.GetDisplacement();
@@ -426,12 +426,12 @@ class CoopStatusScreen : StatusScreen
 
 		y = DrawName(y, wbs.LName1, lnametexts[1]);
 
-		if (wbs.LName1.isValid() && authortexts[1].length() > 0) 
+		if (wbs.LName1.isValid() && authortexts[1].length() > 0)
 		{
 			// Consdider the ascender height of the following text.
 			y += author.mFont.GetMaxAscender(authortexts[1]) * scaleFactorY;
 		}
-			
+
 		DrawScoreboard(DrawAuthor(y, authortexts[1]));
 	}
 }

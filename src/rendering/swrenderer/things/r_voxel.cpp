@@ -50,6 +50,7 @@
 #include "swrenderer/viewport/r_spritedrawer.h"
 #include "r_memory.h"
 #include "swrenderer/r_renderthread.h"
+#include "m_round.h"
 
 EXTERN_CVAR(Bool, r_fullbrightignoresectorcolor)
 
@@ -296,13 +297,13 @@ namespace swrenderer
 		const double centerxwidebig_f = centerxwide_f * 65536 * 65536 * 8;
 
 		// Convert to Build's coordinate system.
-		fixed_t globalposx = xs_Fix<4>::ToFix(globalpos.X);
-		fixed_t globalposy = xs_Fix<4>::ToFix(-globalpos.Y);
-		fixed_t globalposz = xs_Fix<8>::ToFix(-globalpos.Z);
+		fixed_t globalposx = FloatToFixed<4>(globalpos.X);
+		fixed_t globalposy = FloatToFixed<4>(-globalpos.Y);
+		fixed_t globalposz = FloatToFixed<8>(-globalpos.Z);
 
-		fixed_t dasprx = xs_Fix<4>::ToFix(dasprpos.X);
-		fixed_t daspry = xs_Fix<4>::ToFix(-dasprpos.Y);
-		fixed_t dasprz = xs_Fix<8>::ToFix(-dasprpos.Z);
+		fixed_t dasprx = FloatToFixed<4>(dasprpos.X);
+		fixed_t daspry = FloatToFixed<4>(-dasprpos.Y);
+		fixed_t dasprz = FloatToFixed<8>(-dasprpos.Z);
 
 		// Shift the scales from 16 bits of fractional precision to 6.
 		// Also do some magic voodoo scaling to make them the right size.
@@ -323,7 +324,7 @@ namespace swrenderer
 		// Select mip level
 		i = abs(DMulScale(dasprx - globalposx, cosang, daspry - globalposy, sinang, 6));
 		i = DivScale(i, min(daxscale, dayscale), 6);
-		j = xs_Fix<13>::ToFix(viewport->FocalLengthX);
+		j = FloatToFixed<13>(viewport->FocalLengthX);
 		for (k = 0; i >= j && k < voxobj->NumMips; ++k)
 		{
 			i >>= 1;
@@ -469,8 +470,8 @@ namespace swrenderer
 					voxend = (kvxslab_t *)(slabxoffs + xyoffs[y + 1]);
 					if (voxptr >= voxend) continue;
 
-					lx = xs_RoundToInt(nx * centerxwide_f / (ny + y1)) + viewport->viewwindow.centerx;
-					rx = xs_RoundToInt((nx + nxoff) * centerxwide_f / (ny + y2)) + viewport->viewwindow.centerx;
+					lx = RoundHalfUp(nx * centerxwide_f / (ny + y1)) + viewport->viewwindow.centerx;
+					rx = RoundHalfUp((nx + nxoff) * centerxwide_f / (ny + y2)) + viewport->viewwindow.centerx;
 
 					if (flags & DVF_MIRRORED)
 					{
@@ -490,8 +491,8 @@ namespace swrenderer
 						continue;
 					}
 
-					fixed_t l1 = xs_RoundToInt(centerxwidebig_f / (ny - yoff));
-					fixed_t l2 = xs_RoundToInt(centerxwidebig_f / (ny + yoff));
+					fixed_t l1 = RoundHalfUp(centerxwidebig_f / (ny - yoff));
+					fixed_t l2 = RoundHalfUp(centerxwidebig_f / (ny + yoff));
 					for (; voxptr < voxend; voxptr = (kvxslab_t *)((uint8_t *)voxptr + voxptr->zleng + 3))
 					{
 						const uint8_t *col = voxptr->col;
@@ -689,7 +690,7 @@ namespace swrenderer
 	{
 		return GetSlabStart(mip, x, y + 1);
 	}
-	
+
 	kvxslab_t *RenderVoxel::NextSlab(kvxslab_t *slab)
 	{
 		return (kvxslab_t*)(((uint8_t*)slab) + 3 + slab->zleng);
@@ -912,9 +913,9 @@ namespace swrenderer
 		double sprite_xscale = FIXED2DBL(sprite->xscale);
 		double sprite_yscale = sprite->yscale;
 		FVoxel *voxel = sprite->voxel;
-		
+
 		// Select mipmap level:
-		
+
 		double viewSin = view_angle.Cos();
 		double viewCos = view_angle.Sin();
 		double logmip = fabs((view_origin.X - sprite_origin.X) * viewCos - (view_origin.Y - sprite_origin.Y) * viewSin);
@@ -924,7 +925,7 @@ namespace swrenderer
 			logmip *= 0.5;
 			miplevel++;
 		}
-		
+
 		const FVoxelMipLevel &mip = voxel->Mips[miplevel];
 		if (mip.SlabData == nullptr)
 			return;
@@ -933,30 +934,30 @@ namespace swrenderer
 		maxZ >>= miplevel;
 		sprite_xscale *= (1 << miplevel);
 		sprite_yscale *= (1 << miplevel);
-		
+
 		// Find voxel cube eigenvectors and origin in world space:
 
 		double spriteSin = sprite_angle.Sin();
 		double spriteCos = sprite_angle.Cos();
-		
+
 		DVector2 dirX(spriteSin * sprite_xscale, -spriteCos * sprite_xscale);
 		DVector2 dirY(spriteCos * sprite_xscale, spriteSin * sprite_xscale);
 		double dirZ = -sprite_yscale;
-		
+
 		DVector3 voxel_origin = sprite_origin;
 		voxel_origin.X -= dirX.X * mip.Pivot.X + dirX.Y * mip.Pivot.Y;
 		voxel_origin.Y -= dirY.X * mip.Pivot.X + dirY.Y * mip.Pivot.Y;
 		voxel_origin.Z -= dirZ * mip.Pivot.Z;
-		
+
 		// Voxel cube walking directions:
-		
+
 		int startX[4] = { 0, mip.SizeX - 1,             0, mip.SizeX - 1 };
 		int startY[4] = { 0,             0, mip.SizeY - 1, mip.SizeY - 1 };
 		int stepX[4] = { 1, -1,  1, -1 };
 		int stepY[4] = { 1,  1, -1, -1 };
-		
+
 		// The point in cube mipmap local space where voxel sides change from front to backfacing:
-		
+
 		double dx = (view_origin.X - sprite_origin.X) / sprite_xscale;
 		double dy = (view_origin.Y - sprite_origin.Y) / sprite_xscale;
 		int backX = (int)(dx * spriteCos - dy * spriteSin + mip.Pivot.X);
@@ -967,40 +968,40 @@ namespace swrenderer
 		int endY = mip.SizeY - 1;// clamp(backY, 0, mip.SizeY - 1);
 
 		// Draw the voxel cube:
-		
+
 		for (int index = 0; index < 1; index++)
 		{
 			/*if ((stepX[index] < 0 && endX >= startX[index]) ||
 			    (stepX[index] > 0 && endX <= startX[index]) ||
 			    (stepY[index] < 0 && endY >= startY[index]) ||
 			    (stepY[index] > 0 && endY <= startY[index])) continue;*/
-		
+
 			for (int x = startX[index]; x != endX; x += stepX[index])
 			{
 				for (int y = startY[index]; y != endY; y += stepY[index])
 				{
 					kvxslab_t *slab_start = GetSlabStart(mip, x, y);
 					kvxslab_t *slab_end = GetSlabEnd(mip, x, y);
-				
+
 					for (kvxslab_t *slab = slab_start; slab != slab_end; slab = NextSlab(slab))
 					{
 						// To do: check slab->backfacecull
-						
+
 						int ztop = slab->ztop;
 						int zbottom = ztop + slab->zleng;
-						
+
 						//ztop = max(ztop, minZ);
 						//zbottom = min(zbottom, maxZ);
-						
+
 						for (int z = ztop; z < zbottom; z++)
 						{
 							uint8_t color = slab->col[z - slab->ztop];
-						
+
 							DVector3 voxel_pos = voxel_origin;
 							voxel_pos.X += dirX.X * x + dirX.Y * y;
 							voxel_pos.Y += dirY.X * x + dirY.Y * y;
 							voxel_pos.Z += dirZ * z;
-						
+
 							FillBox(thread, drawerargs, voxel_pos, sprite_xscale, sprite_yscale, color, cliptop, clipbottom, false, false);
 						}
 					}

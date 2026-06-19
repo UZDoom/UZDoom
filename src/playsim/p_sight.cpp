@@ -31,6 +31,7 @@
 #include "b_bot.h"
 #include "p_spec.h"
 #include "vm.h"
+#include "m_round.h"
 
 #include "g_levellocals.h"
 #include "actorinlines.h"
@@ -297,7 +298,7 @@ bool SightCheck::PTR_SightTraverse (intercept_t *in)
 	if(li->frontsector->e->XFloor.ffloors.Size() || li->backsector->e->XFloor.ffloors.Size())
 	{
 		if (frontflag == -1) frontflag = P_PointOnLineSidePrecise(sightstart, li);
-		
+
 		//Check 3D FLOORS!
 		for(int i=1;i<=2;i++)
 		{
@@ -332,7 +333,7 @@ bool SightCheck::PTR_SightTraverse (intercept_t *in)
 				}
 				else
 				{
-					// the 3D-floor is inside the viewing cone but neither clips the top nor the bottom so by 
+					// the 3D-floor is inside the viewing cone but neither clips the top nor the bottom so by
 					// itself it can't be view blocking.
 					// However, if there's a 3D-floor on the other side that obstructs the same vertical range
 					// the 2 together will block sight.
@@ -648,7 +649,7 @@ bool SightCheck::P_SightPathTraverse ()
 		if (sightstart.Z < ff_top) checkceiling = false;
 		if (sightstart.Z >= ff_bottom) checkfloor = false;
 
-		if (sightstart.Z < ff_top && sightstart.Z >= ff_bottom) 
+		if (sightstart.Z < ff_top && sightstart.Z >= ff_bottom)
 		{
 			myseethrough = rover->flags & FF_SEETHROUGH;
 			break;
@@ -675,22 +676,22 @@ bool SightCheck::P_SightPathTraverse ()
 	xt2 = x2 / FBlockmap::MAPBLOCKUNITS;
 	yt2 = y2 / FBlockmap::MAPBLOCKUNITS;
 
-	mapx = xs_FloorToInt(xt1);
-	mapy = xs_FloorToInt(yt1);
-	int mapex = xs_FloorToInt(xt2);
-	int mapey = xs_FloorToInt(yt2);
+	mapx = RoundDown(xt1);
+	mapy = RoundDown(yt1);
+	int mapex = RoundDown(xt2);
+	int mapey = RoundDown(yt2);
 
 
 	if (mapex > mapx)
 	{
 		mapxstep = 1;
-		partialx = 1. - xt1 + xs_FloorToInt(xt1);
+		partialx = 1. - xt1 + RoundDown(xt1);
 		ystep = (y2 - y1) / fabs(x2 - x1);
 	}
 	else if (mapex < mapx)
 	{
 		mapxstep = -1;
-		partialx = xt1 - xs_FloorToInt(xt1);
+		partialx = xt1 - RoundDown(xt1);
 		ystep = (y2 - y1) / fabs(x2 - x1);
 	}
 	else
@@ -704,13 +705,13 @@ bool SightCheck::P_SightPathTraverse ()
 	if (mapey > mapy)
 	{
 		mapystep = 1;
-		partialy = 1. - yt1 + xs_FloorToInt(yt1);
+		partialy = 1. - yt1 + RoundDown(yt1);
 		xstep = (x2 - x1) / fabs(y2 - y1);
 	}
 	else if (mapey < mapy)
 	{
 		mapystep = -1;
-		partialy = yt1 - xs_FloorToInt(yt1);
+		partialy = yt1 - RoundDown(yt1);
 		xstep = (x2 - x1) / fabs(y2 - y1);
 	}
 	else
@@ -766,7 +767,7 @@ bool SightCheck::P_SightPathTraverse ()
 		if (itres == -1 || (mapxstep | mapystep) == 0)
 			break;
 
-		switch (((xs_FloorToInt(yintercept) == mapy) << 1) | (xs_FloorToInt(xintercept) == mapx))
+		switch (((RoundDown(yintercept) == mapy) << 1) | (RoundDown(xintercept) == mapx))
 		{
 		case 0:		// neither xintercept nor yintercept match!
 sightcounts[5]++;
@@ -888,7 +889,7 @@ sightcounts[0]++;
 		res = true;
 		goto done;
 	}
-	
+
 	// killough 4/19/98: make fake floors and ceilings block monster view
 
 	if (!(flags & SF_IGNOREWATERBOUNDARY))

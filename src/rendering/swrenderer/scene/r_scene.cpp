@@ -44,7 +44,7 @@ CVAR(Bool, r_models, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
 namespace swrenderer
 {
 	cycle_t WallCycles, PlaneCycles, MaskedCycles;
-	
+
 	RenderScene::RenderScene()
 	{
 		Threads.push_back(std::unique_ptr<RenderThread>(new RenderThread(this)));
@@ -107,7 +107,7 @@ namespace swrenderer
 		WallCycles.Reset();
 		PlaneCycles.Reset();
 		MaskedCycles.Reset();
-		
+
 		R_SetupFrame(MainThread()->Viewport->viewpoint, MainThread()->Viewport->viewwindow, actor);
 
 		if (APART(R_OldBlend)) NormalLight.Maps = realcolormaps.Maps;
@@ -320,7 +320,7 @@ namespace swrenderer
 	void RenderScene::RenderViewToCanvas(AActor *actor, DCanvas *canvas, int x, int y, int width, int height, bool dontmaplines)
 	{
 		auto viewport = MainThread()->Viewport.get();
-		
+
 		// Save a bunch of silly globals:
 		auto savedViewpoint = viewport->viewpoint;
 		auto savedViewwindow = viewport->viewwindow;

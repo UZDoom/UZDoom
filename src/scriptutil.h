@@ -26,7 +26,7 @@ class ScriptUtil
 	static void BuildParameters(va_list ap);
 	static void RunFunction(FName function, unsigned paramstart, VMReturn &returns);
 
-public:	
+public:
 	enum
 	{
 		End,

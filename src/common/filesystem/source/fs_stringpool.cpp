@@ -28,7 +28,7 @@
 #include "fs_stringpool.h"
 
 namespace FileSys {
-	
+
 struct StringPool::Block
 {
 	Block *NextBlock;
@@ -84,7 +84,7 @@ StringPool::Block *StringPool::AddBlock(size_t size)
 	auto mem = (Block *)malloc(size);
 	if (mem == nullptr)
 	{
-		
+
 	}
 	mem->Limit = (uint8_t *)mem + size;
 	mem->Avail = &mem[1];

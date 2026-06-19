@@ -289,6 +289,8 @@ CVAR (Color, am_thingcolor_monster,	0xfcfcfc,	CVAR_ARCHIVE);
 CVAR (Color, am_thingcolor_ncmonster,	0xfcfcfc,	CVAR_ARCHIVE);
 CVAR (Color, am_thingcolor_item,	0xfcfcfc,	CVAR_ARCHIVE);
 CVAR (Color, am_thingcolor_citem,	0xfcfcfc,	CVAR_ARCHIVE);
+CVAR (Color, am_sectorfillcolor,	0x4e3621,	CVAR_ARCHIVE);
+CVAR (Float, am_sectorfillalpha,	0.4f,		CVAR_ARCHIVE);
 CVAR (Color, am_portalcolor,		0x404040,	CVAR_ARCHIVE);
 
 CVAR (Color, am_ovyourcolor,		0xfce8d8,	CVAR_ARCHIVE);
@@ -311,6 +313,8 @@ CVAR (Color, am_ovthingcolor_monster,	0xe88800,	CVAR_ARCHIVE);
 CVAR (Color, am_ovthingcolor_ncmonster,	0xe88800,	CVAR_ARCHIVE);
 CVAR (Color, am_ovthingcolor_item,		0xe88800,	CVAR_ARCHIVE);
 CVAR (Color, am_ovthingcolor_citem,		0xe88800,	CVAR_ARCHIVE);
+CVAR (Color, am_ovsectorfillcolor,		0x000000,	CVAR_ARCHIVE);
+CVAR (Float, am_ovsectorfillalpha,		0.2f,		CVAR_ARCHIVE);
 CVAR (Color, am_ovportalcolor,			0x004022,	CVAR_ARCHIVE);
 
 //=============================================================================
@@ -351,29 +355,30 @@ struct AMColor
 //=============================================================================
 
 static const char *ColorNames[] = {
-		"Background", 
-		"YourColor", 
-		"WallColor", 
+		"Background",
+		"YourColor",
+		"WallColor",
 		"TwoSidedWallColor",
-		"FloorDiffWallColor", 
-		"CeilingDiffWallColor", 
-		"ExtraFloorWallColor", 
+		"FloorDiffWallColor",
+		"CeilingDiffWallColor",
+		"ExtraFloorWallColor",
 		"ThingColor",
-		"ThingColor_Item", 
-		"ThingColor_CountItem", 
-		"ThingColor_Monster", 
-		"ThingColor_NocountMonster", 
+		"ThingColor_Item",
+		"ThingColor_CountItem",
+		"ThingColor_Monster",
+		"ThingColor_NocountMonster",
 		"ThingColor_Friend",
-		"SpecialWallColor", 
-		"SecretWallColor", 
-		"GridColor", 
+		"SpecialWallColor",
+		"SecretWallColor",
+		"GridColor",
 		"XHairColor",
 		"NotSeenColor",
 		"LockedColor",
-		"IntraTeleportColor", 
+		"IntraTeleportColor",
 		"InterTeleportColor",
 		"SecretSectorColor",
 		"UnexploredSecretColor",
+		"SectorFillColor",
 		"PortalColor",
 		"AlmostBackgroundColor",
 		nullptr
@@ -383,45 +388,49 @@ struct AMColorset
 {
 	enum
 	{
-		Background, 
-		YourColor, 
-		WallColor, 
+		Background,
+		YourColor,
+		WallColor,
 		TSWallColor,
-		FDWallColor, 
-		CDWallColor, 
-		EFWallColor, 
+		FDWallColor,
+		CDWallColor,
+		EFWallColor,
 		ThingColor,
-		ThingColor_Item, 
-		ThingColor_CountItem, 
-		ThingColor_Monster, 
-		ThingColor_NocountMonster, 
+		ThingColor_Item,
+		ThingColor_CountItem,
+		ThingColor_Monster,
+		ThingColor_NocountMonster,
 		ThingColor_Friend,
-		SpecialWallColor, 
-		SecretWallColor, 
-		GridColor, 
+		SpecialWallColor,
+		SecretWallColor,
+		GridColor,
 		XHairColor,
 		NotSeenColor,
 		LockedColor,
-		IntraTeleportColor, 
+		IntraTeleportColor,
 		InterTeleportColor,
 		SecretSectorColor,
 		UnexploredSecretColor,
+		SectorFillColor,
 		PortalColor,
 		AlmostBackgroundColor,
 		AM_NUM_COLORS
 	};
 
 	AMColor c[AM_NUM_COLORS];
+	double fillAlpha;
 	bool displayLocks;
 	bool forcebackground;
 	bool defined;	// only for mod specific colorsets: must be true to be usable
 
-	void initFromCVars(FColorCVarRef **values)
+	void initFromCVars(FColorCVarRef **values, FFloatCVarRef &fill_alpha_cv)
 	{
 		for(int i=0;i<AlmostBackgroundColor; i++)
 		{
 			c[i].FromCVar(*(values[i]->get()));
 		}
+
+		fillAlpha = *(fill_alpha_cv.get());
 
 		uint32_t ba = *(values[0]);
 
@@ -454,6 +463,8 @@ struct AMColorset
 				c[i].FromRGB(colors[j], colors[j+1], colors[j+2]);
 			}
 		}
+
+		fillAlpha = 0.0f;
 		displayLocks = showlocks;
 		forcebackground = false;
 	}
@@ -532,6 +543,7 @@ static FColorCVarRef *cv_standard[] = {
 	&am_interlevelcolor,
 	&am_secretsectorcolor,
 	&am_unexploredsecretcolor,
+	&am_sectorfillcolor,
 	&am_portalcolor
 };
 
@@ -559,6 +571,7 @@ static FColorCVarRef *cv_overlay[] = {
 	&am_ovinterlevelcolor,
 	&am_ovsecretsectorcolor,
 	&am_ovunexploredsecretcolor,
+	&am_ovsectorfillcolor,
 	&am_ovportalcolor
 };
 
@@ -568,10 +581,15 @@ CCMD(am_restorecolors)
 	{
 		cv_standard[i]->get()->ResetToDefault();
 	}
+
+	am_sectorfillalpha->ResetToDefault();
+
 	for (unsigned i = 0; i < countof(cv_overlay); i++)
 	{
 		cv_overlay[i]->get()->ResetToDefault();
 	}
+
+	am_ovsectorfillalpha->ResetToDefault();
 }
 
 
@@ -602,6 +620,7 @@ static unsigned char DoomColors[]= {
 	NOT_USED,		// interteleport
 	NOT_USED,		// secretsector
 	NOT_USED,		// unexploredsecretsector
+	NOT_USED,		// sectorfillcolor
 	0x10,0x10,0x10,	// almostbackground
 	0x40,0x40,0x40	// portal
 };
@@ -630,6 +649,7 @@ static unsigned char StrifeColors[]= {
 	NOT_USED,		// interteleport
 	NOT_USED,		// secretsector
 	NOT_USED,		// unexploredsecretsector
+	NOT_USED,		// sectorfillcolor
 	0x10,0x10,0x10,	// almostbackground
 	0x40,0x40,0x40	// portal
 };
@@ -658,6 +678,7 @@ static unsigned char RavenColors[]= {
 	NOT_USED,		// interteleport
 	NOT_USED,		// secretsector
 	NOT_USED,		// unexploredsecretsector
+	NOT_USED,		// sectorfillcolor
 	0x10,0x10,0x10,	// almostbackground
 	0x50,0x50,0x50	// portal
 };
@@ -691,14 +712,14 @@ static void AM_initColors(bool overlayed)
 		}
 		else
 		{
-			AMColors.initFromCVars(cv_overlay);
+			AMColors.initFromCVars(cv_overlay, am_ovsectorfillalpha);
 		}
 	}
 	else if (am_customcolors && AMMod.defined)
 	{
 		AMColors = AMMod;
 	}
-	else 
+	else
 	{
 		int set = am_colorset;
 		if (set == -1)
@@ -715,7 +736,7 @@ static void AM_initColors(bool overlayed)
 		{
 		default:
 			/* Use the custom colors in the am_* cvars */
-			AMColors.initFromCVars(cv_standard);
+			AMColors.initFromCVars(cv_standard, am_sectorfillalpha);
 			break;
 
 		case 1:	// Doom
@@ -783,13 +804,18 @@ void FMapInfoParser::ParseAMColors(bool overlay)
 		}
 		else if (nextKey.CompareNoCase("showlocks") == 0)
 		{
-			if(sc.CheckToken(TK_False)) 
-				cset.displayLocks = false; 
-			else 
-			{ 
-				sc.MustGetToken(TK_True); 
-				cset.displayLocks = true; 
-			} 
+			if(sc.CheckToken(TK_False))
+				cset.displayLocks = false;
+			else
+			{
+				sc.MustGetToken(TK_True);
+				cset.displayLocks = true;
+			}
+		}
+		else if (nextKey.CompareNoCase("SectorFillAlpha") == 0)
+		{
+			sc.MustGetToken(TK_FloatConst);
+			cset.fillAlpha = clamp(sc.Float, 0.0, 1.0);
 		}
 		else
 		{
@@ -803,7 +829,7 @@ void FMapInfoParser::ParseAMColors(bool overlay)
 					FString colorName = V_GetColorStringByName(color.GetChars());
 					if(!colorName.IsEmpty()) color = colorName;
 					int colorval = V_GetColorFromString(color.GetChars());
-					cset.c[i].FromRGB(RPART(colorval), GPART(colorval), BPART(colorval)); 
+					cset.c[i].FromRGB(RPART(colorval), GPART(colorval), BPART(colorval));
 					colorset = true;
 					break;
 				}
@@ -998,7 +1024,7 @@ class DAutomap :public DAutomapBase
 		return int(MTOF((x)-m_x)/* - f_x*/);
 	}
 
-	int CYMTOF(double y) 
+	int CYMTOF(double y)
 	{
 		return int(f_h - MTOF((y)-m_y)/* + f_y*/);
 	}
@@ -1127,12 +1153,12 @@ void DAutomap::restoreScaleAndLoc ()
 	{
 		m_x = old_m_x;
 		m_y = old_m_y;
-    }
+	}
 	else
 	{
 		m_x = players[consoleplayer].camera->X() - m_w/2;
 		m_y = players[consoleplayer].camera->Y() - m_h/2;
-    }
+	}
 	m_x2 = m_x + m_w;
 	m_y2 = m_y + m_h;
 
@@ -1173,20 +1199,20 @@ void DAutomap::findMinMaxBoundaries ()
 {
 	min_x = min_y = FLT_MAX;
 	max_x = max_y = FIXED_MIN;
-  
+
 	for (auto &vert : Level->vertexes)
 	{
 		if (vert.fX() < min_x)
 			min_x = vert.fX();
 		else if (vert.fX() > max_x)
 			max_x = vert.fX();
-    
+
 		if (vert.fY() < min_y)
 			min_y = vert.fY();
 		else if (vert.fY() > max_y)
 			max_y = vert.fY();
 	}
-  
+
 	max_w = max_x - min_x;
 	max_h = max_y - min_y;
 
@@ -1226,7 +1252,7 @@ void DAutomap::ClipRotatedExtents (double pivotx, double pivoty)
 			m_x = max_x - m_w/2;
 		else if (m_x + m_w/2 < min_x)
 			m_x = min_x - m_w/2;
-	  
+
 		if (m_y + m_h/2 > max_y)
 			m_y = max_y - m_h/2;
 		else if (m_y + m_h/2 < min_y)
@@ -1288,7 +1314,7 @@ void DAutomap::changeWindowLoc ()
 
 	double oldmx = m_x, oldmy = m_y;
 	double incx, incy, oincx, oincy;
-	
+
 	incx = m_paninc.x;
 	incy = m_paninc.y;
 
@@ -1331,7 +1357,7 @@ void DAutomap::startDisplay()
 		for (pnum=0;pnum<MAXPLAYERS;pnum++)
 			if (playeringame[pnum])
 				break;
-	assert(pnum >= 0 && pnum < MAXPLAYERS);
+	assert(pnum < MAXPLAYERS);
 	m_x = players[pnum].camera->X() - m_w/2;
 	m_y = players[pnum].camera->Y() - m_h/2;
 	changeWindowLoc();
@@ -1426,7 +1452,7 @@ void DAutomap::NewUIScale()
 	}
 
 	double sc = min<double>(StatusBar->SBarScale.X, StatusBar->SBarScale.Y);
-	line_thickness_scaled = xs_CRoundToInt(sc);
+	line_thickness_scaled = RoundHalfEven(sc);
 
 	if (line_thickness_scaled <= 0)
 	{
@@ -1443,11 +1469,11 @@ void DAutomap::NewUIScale()
 void DAutomap::NewResolution()
 {
 	double oldmin = min_scale_mtof;
-	
-	if ( oldmin == 0 ) 
+
+	if ( oldmin == 0 )
 	{
 		return; // [SP] Not in a game, exit!
-	}	
+	}
 	calcMinMaxMtoF();
 	scale_mtof = scale_mtof * min_scale_mtof / oldmin;
 	scale_ftom = 1 / scale_mtof;
@@ -1714,7 +1740,7 @@ bool DAutomap::clipMline (mline_t *ml, fline_t *fl)
 			outside = outcode1;
 		else
 			outside = outcode2;
-	
+
 		// clip to each side
 		if (outside & TOP)
 		{
@@ -1755,7 +1781,7 @@ bool DAutomap::clipMline (mline_t *ml, fline_t *fl)
 			fl->b = tmp;
 			DOOUTCODE(outcode2, fl->b.x, fl->b.y);
 		}
-	
+
 		if (outcode1 & outcode2)
 			return false; // trivially outside
 	}
@@ -1928,7 +1954,7 @@ sector_t * AM_FakeFlat(AActor *viewer, sector_t * sec, sector_t * dest)
 	if (sec->GetHeightSec() == nullptr) return sec;
 
 	DVector3 pos = viewer->InterpolatedPosition(r_viewpoint.TicFrac);
-	
+
 	if (viewer->player)
 	{
 		pos.Z = viewer->player->viewz;
@@ -2047,8 +2073,9 @@ void DAutomap::drawSubsectors()
 	int floorlight;
 	double scalex, scaley;
 	double originx, originy;
+	double alpha;
 	FColormap colormap;
-	PalEntry flatcolor;
+	//PalEntry flatcolor;
 	mpoint_t originpt;
 
 	auto lm = getRealLightmode(Level, false);
@@ -2092,118 +2119,142 @@ void DAutomap::drawSubsectors()
 			points[j].X = float(f_x + ((pt.x - m_x) * scale));
 			points[j].Y = float(f_y + (f_h - (pt.y - m_y) * scale));
 		}
-		// For lighting and texture determination
-		sector_t *sec = AM_FakeFlat(players[consoleplayer].camera, sub->render_sector, &tempsec);
-		floorlight = sec->GetFloorLight();
-		// Find texture origin.
-		originpt.x = -sec->GetXOffset(sector_t::floor);
-		originpt.y = sec->GetYOffset(sector_t::floor);
-		rotation = -sec->GetAngle(sector_t::floor);
-		// Coloring for the polygon
-		colormap = sec->Colormap;
 
-		FTextureID maptex = sec->GetTexture(sector_t::floor);
-		flatcolor = sec->SpecialColors[sector_t::floor];
+		FTextureID maptex;
 
-		scalex = sec->GetXScale(sector_t::floor);
-		scaley = sec->GetYScale(sector_t::floor);
-
-		if (sec->e->XFloor.ffloors.Size())
+		// Textured mode
+		if (am_textured && !viewactive)
 		{
-			secplane_t *floorplane = &sec->floorplane;
+			alpha = 1.0;
 
-			// Look for the highest floor below the camera viewpoint.
-			// Check the center of the subsector's sector. Do not check each
-			// subsector separately because that might result in different planes for
-			// different subsectors of the same sector which is not wanted here.
-			// (Make the comparison in floating point to avoid overflows and improve performance.)
-			double secx;
-			double secy;
-			double seczb, seczt;
-			auto &vp = r_viewpoint;
-			double cmpz = vp.Pos.Z;
+			// For lighting and texture determination
+			sector_t *sec = AM_FakeFlat(players[consoleplayer].camera, sub->render_sector, &tempsec);
+			floorlight = sec->GetFloorLight();
+			// Find texture origin.
+			originpt.x = -sec->GetXOffset(sector_t::floor);
+			originpt.y = sec->GetYOffset(sector_t::floor);
+			rotation = -sec->GetAngle(sector_t::floor);
+			// Coloring for the polygon
+			colormap = sec->Colormap;
 
-			if (players[consoleplayer].camera && sec == players[consoleplayer].camera->Sector)
-			{
-				// For the actual camera sector use the current viewpoint as reference.
-				secx = vp.Pos.X;
-				secy = vp.Pos.Y;
-			}
-			else
-			{
-				secx = sec->centerspot.X;
-				secy = sec->centerspot.Y;
-			}
-			seczb = floorplane->ZatPoint(secx, secy);
-			seczt = sec->ceilingplane.ZatPoint(secx, secy);
+			maptex = sec->GetTexture(sector_t::floor);
+			//flatcolor = sec->SpecialColors[sector_t::floor];
 
-			for (unsigned int i = 0; i < sec->e->XFloor.ffloors.Size(); ++i)
+			scalex = sec->GetXScale(sector_t::floor);
+			scaley = sec->GetYScale(sector_t::floor);
+
+			if (sec->e->XFloor.ffloors.Size())
 			{
-				F3DFloor *rover = sec->e->XFloor.ffloors[i];
-				if (!(rover->flags & FF_EXISTS)) continue;
-				if (rover->flags & (FF_FOG | FF_THISINSIDE)) continue;
-				if (!(rover->flags & FF_RENDERPLANES)) continue;
-				if (rover->alpha == 0) continue;
-				double roverz = rover->top.plane->ZatPoint(secx, secy);
-				// Ignore 3D floors that are above or below the sector itself:
-				// they are hidden. Since 3D floors are sorted top to bottom,
-				// if we get below the sector floor, we can stop.
-				if (roverz > seczt) continue;
-				if (roverz < seczb) break;
-				if (roverz < cmpz)
+				secplane_t *floorplane = &sec->floorplane;
+
+				// Look for the highest floor below the camera viewpoint.
+				// Check the center of the subsector's sector. Do not check each
+				// subsector separately because that might result in different planes for
+				// different subsectors of the same sector which is not wanted here.
+				// (Make the comparison in floating point to avoid overflows and improve performance.)
+				double secx;
+				double secy;
+				double seczb, seczt;
+				auto &vp = r_viewpoint;
+				double cmpz = vp.Pos.Z;
+
+				if (players[consoleplayer].camera && sec == players[consoleplayer].camera->Sector)
 				{
-					maptex = *(rover->top.texture);
-					floorplane = rover->top.plane;
-					sector_t *model = rover->top.model;
-					int selector = (rover->flags & FF_INVERTPLANES) ? sector_t::floor : sector_t::ceiling;
-					flatcolor = model->SpecialColors[selector];
-					rotation = -model->GetAngle(selector);
-					scalex = model->GetXScale(selector);
-					scaley = model->GetYScale(selector);
-					originpt.x = -model->GetXOffset(selector);
-					originpt.y = model->GetYOffset(selector);
-					break;
+					// For the actual camera sector use the current viewpoint as reference.
+					secx = vp.Pos.X;
+					secy = vp.Pos.Y;
 				}
+				else
+				{
+					secx = sec->centerspot.X;
+					secy = sec->centerspot.Y;
+				}
+				seczb = floorplane->ZatPoint(secx, secy);
+				seczt = sec->ceilingplane.ZatPoint(secx, secy);
+
+				for (unsigned int i = 0; i < sec->e->XFloor.ffloors.Size(); ++i)
+				{
+					F3DFloor *rover = sec->e->XFloor.ffloors[i];
+					if (!(rover->flags & FF_EXISTS)) continue;
+					if (rover->flags & (FF_FOG | FF_THISINSIDE)) continue;
+					if (!(rover->flags & FF_RENDERPLANES)) continue;
+					if (rover->alpha == 0) continue;
+					double roverz = rover->top.plane->ZatPoint(secx, secy);
+					// Ignore 3D floors that are above or below the sector itself:
+					// they are hidden. Since 3D floors are sorted top to bottom,
+					// if we get below the sector floor, we can stop.
+					if (roverz > seczt) continue;
+					if (roverz < seczb) break;
+					if (roverz < cmpz)
+					{
+						maptex = *(rover->top.texture);
+						floorplane = rover->top.plane;
+						sector_t *model = rover->top.model;
+						int selector = (rover->flags & FF_INVERTPLANES) ? sector_t::floor : sector_t::ceiling;
+						//flatcolor = model->SpecialColors[selector];
+						rotation = -model->GetAngle(selector);
+						scalex = model->GetXScale(selector);
+						scaley = model->GetYScale(selector);
+						originpt.x = -model->GetXOffset(selector);
+						originpt.y = model->GetYOffset(selector);
+						break;
+					}
+				}
+
+				lightlist_t *light = P_GetPlaneLight(sec, floorplane, false);
+				floorlight = *light->p_lightlevel;
+				colormap = light->extra_colormap;
+			}
+			if (maptex == skyflatnum)
+			{
+				continue;
 			}
 
-			lightlist_t *light = P_GetPlaneLight(sec, floorplane, false);
-			floorlight = *light->p_lightlevel;
-			colormap = light->extra_colormap;
-		}
-		if (maptex == skyflatnum)
-		{
-			continue;
-		}
+			// Apply the floor's rotation to the texture origin.
+			if (rotation != nullAngle)
+			{
+				rotate(&originpt.x, &originpt.y, rotation);
+			}
+			// Apply the automap's rotation to the texture origin.
+			if (am_rotate == 1 || (am_rotate == 2 && viewactive))
+			{
+				rotation = rotation + DAngle::fromDeg(90.) - players[consoleplayer].camera->InterpolatedAngles(r_viewpoint.TicFrac).Yaw;
+				rotatePoint(&originpt.x, &originpt.y);
+			}
+			originx = f_x + ((originpt.x - m_x) * scale);
+			originy = f_y + (f_h - (originpt.y - m_y) * scale);
 
-		// Apply the floor's rotation to the texture origin.
-		if (rotation != nullAngle)
-		{
-			rotate(&originpt.x, &originpt.y, rotation);
+			// If this subsector has not actually been seen yet (because you are cheating
+			// to see it on the map), tint and desaturate it.
+			// [XA] show it at its true color on am_cheat 4 though, since that's the intent of the feature.
+			if (!(sub->flags & SSECMF_DRAWN) && am_cheat < 4)
+			{
+				colormap.LightColor = PalEntry(
+					(colormap.LightColor.r + 255) / 2,
+					(colormap.LightColor.g + 200) / 2,
+					(colormap.LightColor.b + 160) / 2);
+				colormap.Desaturation = 255 - (255 - colormap.Desaturation) / 4;
+			}
+			// make table based fog visible on the automap as well.
+			if (Level->flags & LEVEL_HASFADETABLE)
+			{
+				colormap.FadeColor = PalEntry(0, 128, 128, 128);
+			}
 		}
-		// Apply the automap's rotation to the texture origin.
-		if (am_rotate == 1 || (am_rotate == 2 && viewactive))
+		else if(AMColors.isValid(AMColors.SectorFillColor))
 		{
-			rotation = rotation + DAngle::fromDeg(90.) - players[consoleplayer].camera->InterpolatedAngles(r_viewpoint.TicFrac).Yaw;
-			rotatePoint(&originpt.x, &originpt.y);
-		}
-		originx = f_x + ((originpt.x - m_x) * scale);
-		originy = f_y + (f_h - (originpt.y - m_y) * scale);
-
-		// If this subsector has not actually been seen yet (because you are cheating
-		// to see it on the map), tint and desaturate it.
-		// [XA] show it at its true color on am_cheat 4 though, since that's the intent of the feature.
-		if (!(sub->flags & SSECMF_DRAWN) && am_cheat < 4)
-		{
-			colormap.LightColor = PalEntry(
-				(colormap.LightColor.r + 255) / 2,
-				(colormap.LightColor.g + 200) / 2,
-				(colormap.LightColor.b + 160) / 2);
-			colormap.Desaturation = 255 - (255 - colormap.Desaturation) / 4;
-		}
-		// make table based fog visible on the automap as well.
-		if (Level->flags & LEVEL_HASFADETABLE)
-		{
-			colormap.FadeColor = PalEntry(0, 128, 128, 128);
+			// [XA] Use sector fill color if defined (and not drawing a texture)
+			maptex = TexMan.GetWhiteTexture();
+			colormap.LightColor = PalEntry(AMColors[AMColors.SectorFillColor].RGB);
+			floorlight = 255;
+			alpha = AMColors.fillAlpha;
+			rotation = nullAngle;
+			scalex = 1.0;
+			scaley = 1.0;
+			originx = 0;
+			originy = 0;
+			originpt.x = 0;
+			originpt.y = 0;
 		}
 
 		// Draw the polygon.
@@ -2231,7 +2282,7 @@ void DAutomap::drawSubsectors()
 
 			// Use an equation similar to player sprites to determine shade
 
-			// Convert a light level into an unbounded colormap index (shade). 
+			// Convert a light level into an unbounded colormap index (shade).
 			// Why the +12? I wish I knew, but experimentation indicates it
 			// is necessary in order to best reproduce Doom's original lighting.
 			double fadelevel;
@@ -2253,7 +2304,7 @@ void DAutomap::drawSubsectors()
 				scale / scaley,
 				rotation,
 				colormap,
-				flatcolor,
+				alpha,
 				fadelevel,
 				indices.data(), indices.size());
 		}
@@ -2414,7 +2465,7 @@ bool AM_Check3DFloors(line_t *line)
 			if (rover2->flags & FF_THISINSIDE) continue;	// only relevant for software rendering.
 			if (!(rover2->flags & FF_EXISTS)) continue;
 			if (rover2->alpha == 0) continue;
-			if (rover->model == rover2->model && rover->flags == rover2->flags) 
+			if (rover->model == rover2->model && rover->flags == rover2->flags)
 			{
 				found = true;
 				break;
@@ -2597,7 +2648,7 @@ void DAutomap::drawWalls (bool allmap)
 		for (auto &line : Level->lines)
 		{
 			int pg;
-			
+
 			if (line.sidedef[0]->Flags & WALLF_POLYOBJ)
 			{
 				// For polyobjects we must test the surrounding sector to get the proper group.
@@ -2866,7 +2917,7 @@ void DAutomap::drawPlayers ()
 		{
 			angle = players[consoleplayer].mo->InterpolatedAngles(r_viewpoint.TicFrac).Yaw;
 		}
-		
+
 		if (am_cheat != 0 && CheatMapArrow.Size() > 0)
 		{
 			arrow = &CheatMapArrow[0];
@@ -2894,7 +2945,7 @@ void DAutomap::drawPlayers ()
 		// We don't always want to show allies on the automap.
 		if (dmflags2 & DF2_NO_AUTOMAP_ALLIES && (int)i != consoleplayer)
 			continue;
-		
+
 		if (deathmatch && !demoplayback &&
 			!p->mo->IsTeammate (players[consoleplayer].mo) &&
 			p != players[consoleplayer].camera->player)
@@ -2933,7 +2984,7 @@ void DAutomap::drawPlayers ()
 
 			drawLineCharacter(&MapArrow[0], MapArrow.Size(), 0, angle, color, pt.x, pt.y);
 		}
-    }
+	}
 }
 
 //=============================================================================
@@ -3024,7 +3075,7 @@ void DAutomap::drawThings ()
 						const size_t spriteIndex = sprite.spriteframes + (show > 1 ? t->frame : 0);
 
 						frame = &SpriteFrames[spriteIndex];
-						DAngle angle = DAngle::fromDeg(270.) - t->InterpolatedAngles(r_viewpoint.TicFrac).Yaw - t->SpriteRotation; 
+						DAngle angle = DAngle::fromDeg(270.) - t->InterpolatedAngles(r_viewpoint.TicFrac).Yaw - t->SpriteRotation;
 						if (frame->Texture[0] != frame->Texture[1]) angle += DAngle::fromDeg(180. / 16);
 						if (am_rotate == 1 || (am_rotate == 2 && viewactive))
 						{
@@ -3257,8 +3308,9 @@ void DAutomap::drawAuthorMarkers ()
 		auto it = Level->GetActorIterator(mark->args[0]);
 		AActor *marked = mark->args[0] == 0 ? mark : it.Next();
 
-		double xscale = mark->Scale.X;
-		double yscale = mark->Scale.Y;
+        DVector2 markscale = mark->InterpolatedScale(r_viewpoint.TicFrac);
+		double xscale = markscale.X;
+		double yscale = markscale.Y;
 		// [MK] scale with automap zoom if args[2] is 1, otherwise keep a constant scale
 		if (mark->args[2] == 1)
 		{
@@ -3270,8 +3322,9 @@ void DAutomap::drawAuthorMarkers ()
 		{
 			if (mark->args[1] == 0 || (mark->args[1] == 1 && (marked->subsector->flags & SSECMF_DRAWN)))
 			{
-				DrawMarker (tex, marked->X(), marked->Y(), 0, flip, xscale, yscale, mark->Translation,
-					mark->Alpha, mark->fillcolor, mark->RenderStyle);
+			    DVector2 markedpos = marked->InterpolatedPosition(r_viewpoint.TicFrac).XY();
+				DrawMarker (tex, markedpos.X, markedpos.Y, 0, flip, xscale, yscale, mark->Translation,
+					mark->InterpolatedAlpha(r_viewpoint.TicFrac), mark->fillcolor, mark->RenderStyle);
 			}
 			marked = mark->args[0] != 0 ? it.Next() : nullptr;
 		}
@@ -3352,7 +3405,7 @@ void DAutomap::Drawer (int bottom)
 
 		clearFB(AMColors[AMColors.Background]);
 	}
-	else 
+	else
 	{
 		f_x = viewwindowx;
 		f_y = viewwindowy;
@@ -3361,10 +3414,10 @@ void DAutomap::Drawer (int bottom)
 	}
 	activateNewScale();
 
-	if (am_textured && !viewactive)
+	if ((am_textured && !viewactive) || (AMColors.isValid(AMColors.SectorFillColor) && AMColors.fillAlpha > 0.0))
 		drawSubsectors();
 
-	if (am_showgrid)	
+	if (am_showgrid)
 		drawGrid(AMColors.GridColor);
 
 	drawWalls(allmap);

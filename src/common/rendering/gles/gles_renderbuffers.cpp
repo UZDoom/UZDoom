@@ -395,7 +395,7 @@ namespace OpenGLESRenderer
 
 	//==========================================================================
 	//
-	// Makes the frame buffer for the current texture active 
+	// Makes the frame buffer for the current texture active
 	//
 	//==========================================================================
 

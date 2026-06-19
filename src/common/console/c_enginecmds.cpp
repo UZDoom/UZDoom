@@ -196,7 +196,7 @@ UNSAFE_CCMD (dir)
 
 	FileSys::FileList list;
 	if (!FileSys::ScanDirectory(list, bpath.GetChars(), base.GetChars(), true))
-	{ 
+	{
 		Printf ("Nothing matching %s\n", path.GetChars());
 	}
 	else
@@ -224,7 +224,7 @@ CCMD (wdir)
 {
 	int wadnum;
 	if (argv.argc() != 2) wadnum = -1;
-	else 
+	else
 	{
 		wadnum = fileSystem.CheckIfResourceFileLoaded (argv[1]);
 		if (wadnum < 0)
@@ -301,4 +301,3 @@ CCMD(printlocalized)
 	}
 
 }
-

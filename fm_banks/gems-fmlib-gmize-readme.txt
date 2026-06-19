@@ -5,4 +5,3 @@ are was organized to provide a proper GM set.
 
 Some instruments was a bit modified, some melodic instruments and percussions
 are was taken from Wohlstand's xg.wopn bank.
-

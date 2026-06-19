@@ -35,7 +35,7 @@ class StrifeCrossbow : StrifeWeapon
 		Tag "$TAG_STRIFECROSSBOW1";
 		Inventory.Icon "CBOWA0";
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -65,7 +65,7 @@ class StrifeCrossbow : StrifeWeapon
 		XBOW KLM 5;
 		Loop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_ClearFlash
@@ -113,7 +113,7 @@ class StrifeCrossbow : StrifeWeapon
 			if (!weapon.DepleteAmmo (weapon.bAltFire))
 				return;
 		}
-		if (proj) 
+		if (proj)
 		{
 			double savedangle = angle;
 			angle += Random2[Electric]() * (5.625/256) * AccuracyFactor();
@@ -224,7 +224,7 @@ class PoisonBolt : Actor
 		AROW A 1;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor target, int damage, Name damagetype)
 	{
 		if (target.bNoBlood)
@@ -233,7 +233,7 @@ class PoisonBolt : Actor
 		}
 		if (target.health < 1000000)
 		{
-			if (!target.bBoss)			
+			if (!target.bBoss)
 				return target.health + 10;
 			else
 				return 50;
@@ -241,7 +241,5 @@ class PoisonBolt : Actor
 		return 1;
 	}
 
-	
+
 }
-
-

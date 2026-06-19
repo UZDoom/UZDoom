@@ -25,14 +25,14 @@
 extend class PlayerPawn
 {
 	enum EAll
-	{ 
-		ALL_NO, 
-		ALL_YES, 
-		ALL_YESYES 
+	{
+		ALL_NO,
+		ALL_YES,
+		ALL_YESYES
 	}
-	
+
 	native void CheatSuicide();
-	
+
 	private bool CheckArtifact(class<Actor> type)
 	{
 		return !(type is "PuzzleItem") && !(type is "Powerup") && !(type is "Ammo") &&	!(type is "Armor") && !(type is "Key") && !(type is "Weapon");
@@ -267,7 +267,7 @@ extend class PlayerPawn
 			}
 		}
 	}
-	
+
 	virtual void CheatTake (String name, int amount)
 	{
 		bool takeall;
@@ -334,7 +334,7 @@ extend class PlayerPawn
 			if (!takeall)
 				return;
 		}
-		
+
 		if (takeall || name ~== "keys")
 		{
 			CheatTakeType("Key");
@@ -390,7 +390,7 @@ extend class PlayerPawn
 		}
 		return;
 	}
-	
+
 	virtual void CheatSetInv(String strng, int amount, bool beyond)
 	{
 		if (strng ~== "health")
@@ -414,7 +414,7 @@ extend class PlayerPawn
 			Console.Printf("Unknown item \"%s\"\n", strng);
 		}
 	}
-	
+
 
 	virtual String CheatMorph(class<PlayerPawn> morphClass, bool undo)
 	{
@@ -446,7 +446,7 @@ extend class PlayerPawn
 
 		return "";
 	}
-	
+
 	virtual void CheatTakeWeaps()
 	{
 		if (Alternative || health <= 0)

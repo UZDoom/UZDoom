@@ -178,7 +178,7 @@ void MapLoader::SpawnPolyobj (int index, int tag, int type, int damage)
 		po->bHasPortals = 0;
 
 		side_t *sd = &Level->sides[i];
-		
+
 		if (sd->linedef->special == Polyobj_StartLine &&
 			sd->linedef->args[0] == tag)
 		{
@@ -207,7 +207,7 @@ void MapLoader::SpawnPolyobj (int index, int tag, int type, int damage)
 		}
 	}
 	if (po->Sidedefs.Size() == 0)
-	{ 
+	{
 		// didn't find a polyobj through PO_LINE_START
 		TArray<side_t *> polySideList;
 		unsigned int psIndexOld;
@@ -248,7 +248,7 @@ void MapLoader::SpawnPolyobj (int index, int tag, int type, int damage)
 		}
 	}
 
-	validcount++;	
+	validcount++;
 	for(unsigned int i=0; i<po->Sidedefs.Size(); i++)
 	{
 		line_t *l = po->Sidedefs[i]->linedef;
@@ -375,18 +375,18 @@ void MapLoader::PO_Init (void)
 		// 9301 (3001) = no crush, 9302 (3002) = crushing, 9303 = hurting touch, Health = crusher/hurter damage
 		int type = polythings[i]->info->Special;
 		if (type >= SMT_PolySpawn && type <= SMT_PolySpawnHurt)
-		{ 
+		{
 			// Polyobj StartSpot Pt.
 			Level->Polyobjects[polyIndex].StartSpot.pos = polythings[i]->pos.XY();
 			SpawnPolyobj(polyIndex, polythings[i]->angle, type, polythings[i]->Health);
 			polyIndex++;
-		} 
+		}
 	}
 	for (int i = polythings.Size() - 1; i >= 0; i--)
 	{
 		int type = polythings[i]->info->Special;
 		if (type == SMT_PolyAnchor)
-		{ 
+		{
 			// Polyobj Anchor Pt.
 			TranslateToStartSpot (polythings[i]->angle, polythings[i]->pos.XY());
 		}

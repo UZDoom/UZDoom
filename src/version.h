@@ -24,8 +24,6 @@
 
 #pragma once
 
-#include "gitinfo.h"
-
 /** Lots of different version numbers **/
 
 #define VERSIONSTR "5.0.0-pre"
@@ -47,7 +45,8 @@
 // Version stored in the ini's [LastRun] section.
 // Bump it if you made some configuration change that you want to
 // be able to migrate in FGameConfigFile::DoGlobalSetup().
-#define LASTRUNVERSION "231"
+#define ENGINELASTRUNVERSION "231"
+#define GAMELASTRUNVERSION "1"
 
 // Protocol version used in demos.
 // Bump it if you change existing DEM_ commands or add new ones.
@@ -80,7 +79,7 @@
 #define ALLOWLOADIN "LZDOOM"
 
 #ifndef LOAD_GZDOOM_4142_SAVES
-    #define LOAD_GZDOOM_4142_SAVES 1
+	#define LOAD_GZDOOM_4142_SAVES 1
 #endif
 
 #define BASEWAD "uzdoom.pk3"
@@ -96,6 +95,19 @@
 #define APPID "org.zdoom.UZDoom"
 #define QUERYIWADDEFAULT true
 #define BUGS_URL "https://github.com/UZDoom/UZDoom/issues"
+
+#define UPDATER_URL_STABLE "https://zdoom.org/uzdoom-latest.php"
+#define UPDATER_URL_STABLE_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/latest"
+
+#define UPDATER_URL_PREVIEW "https://zdoom.org/uzdoom-preview.php"
+#define UPDATER_URL_PREVIEW_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/tags/x-preview"
+
+#define UPDATER_URL_TESTING "https://zdoom.org/uzdoom-testing.php"
+#define UPDATER_URL_TESTING_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/tags/x-testing"
+
+#define UPDATER_URL_ALL "https://zdoom.org/uzdoom-all.php"
+#define UPDATER_URL_ALL_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases"
+
 // For QUERYIWADDEFAULT: Set to 'true' to always show dialog box on startup by default, 'false' to disable.
 // Should set to 'false' for standalone games, and set to 'true' for regular source port forks that are meant to run any game.
 
@@ -112,57 +124,106 @@ const int SAVEPICHEIGHT = 162;
 const int VID_MIN_WIDTH = 320;
 const int VID_MIN_HEIGHT = 200;
 
-//==========================================================================
-//
-// <Tag>-<Distance>-g<commit>
-//
-//==========================================================================
+const char *GetVersionString();
+const char *GetGitHash();
+const char *GetGitTime();
+const char *GetGitTag();
+int GetGitDistance();
 
-constexpr inline const char *GetVersionString()
+#define RC_REVISION_NOTRC 999999
+
+#ifdef __cplusplus
+
+#include <compare>
+#include <cstdint>
+
+class FString;
+
+enum class UpdateChannel
 {
-	return (GIT_DESCRIPTION[0] == '\0')? VERSIONSTR: GIT_DESCRIPTION;
+	STABLE,
+	PREVIEW,
+	TESTING,
+	RELEASE_CANDIDATE,
+};
+
+#define CURRENT_UPDATE_CHANNEL UpdateChannel::PREVIEW
+
+#define RC_REVISION 999999
+
+struct VersionInfo
+{
+	uint16_t major;
+	uint16_t minor;
+	uint32_t revision;
+	uint32_t distance;
+
+	constexpr VersionInfo() = default;
+	constexpr VersionInfo(uint16_t _major, uint16_t _minor, uint32_t _revision = 0, uint32_t _distance = 0)
+		: major(_major), minor(_minor), revision(_revision), distance(_distance)
+	{
+	}
+	explicit VersionInfo(const char *);
+
+	constexpr bool operator <=(const VersionInfo& o) const
+	{
+		return operator<=>(o) != std::strong_ordering::greater;
+	}
+	constexpr bool operator >=(const VersionInfo& o) const
+	{
+		return operator<=>(o) != std::strong_ordering::less;
+	}
+	constexpr bool operator > (const VersionInfo& o) const
+	{
+		return operator<=>(o) == std::strong_ordering::greater;
+	}
+	constexpr bool operator < (const VersionInfo& o) const
+	{
+		return operator<=>(o) == std::strong_ordering::less;
+	}
+	constexpr bool operator == (const VersionInfo& o) const
+	{
+		return operator<=>(o) == std::strong_ordering::equal;
+	}
+	constexpr bool operator != (const VersionInfo& o) const
+	{
+		return operator<=>(o) != std::strong_ordering::equal;
+	}
+
+	constexpr std::strong_ordering operator <=> (const VersionInfo& o) const
+	{
+		if(major != o.major)
+		{
+			return major <=> o.major;
+		}
+		else if(minor != o.minor)
+		{
+			return minor <=> o.minor;
+		}
+		else if(revision != o.revision)
+		{
+			return revision <=> o.revision;
+		}
+		else //if(distance != o.distance)
+		{
+			return distance <=> o.distance;
+		}
+	}
+
+	void operator=(const char* string);
+	explicit operator FString();
+};
+
+// Cannot be a constructor because Lemon would puke on it.
+constexpr VersionInfo MakeVersion(unsigned int ma, unsigned int mi, unsigned int re = 0)
+{
+	return{ (uint16_t)ma, (uint16_t)mi, (uint32_t)re };
 }
 
-//==========================================================================
-//
-// <commit>
-//
-//==========================================================================
+VersionInfo GetCurrentVersion();
 
-constexpr inline const char *GetGitHash()
-{
-	return GIT_HASH;
-}
+VersionInfo GetCurrentVersionForUpdate(UpdateChannel channel);
 
-//==========================================================================
-//
-// ISO 8601
-//
-//==========================================================================
+VersionInfo GetCurrentEngineVersion();
 
-constexpr inline const char *GetGitTime()
-{
-	return GIT_TIME;
-}
-
-//==========================================================================
-//
-// Closest git tag
-//
-//==========================================================================
-
-constexpr inline const char *GetGitTag()
-{
-	return GIT_TAG;
-}
-
-//==========================================================================
-//
-// Distance to closest git tag
-//
-//==========================================================================
-
-constexpr inline int GetGitDistance()
-{
-	return GIT_DISTANCE;
-}
+#endif // __cplusplus

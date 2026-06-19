@@ -21,8 +21,10 @@
 */
 
 #pragma once
+
 #include "IdProvider.h"
 
+#include <memory>
 #include <unordered_map>
 
 namespace DebugServer

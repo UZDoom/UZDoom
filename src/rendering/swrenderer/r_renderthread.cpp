@@ -81,7 +81,7 @@ namespace swrenderer
 	RenderThread::~RenderThread()
 	{
 	}
-	
+
 	SWPixelFormatDrawers *RenderThread::Drawers(RenderViewport *viewport)
 	{
 		if (viewport->RenderTarget->IsBgra())

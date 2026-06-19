@@ -1,0 +1,15 @@
+.clang 22.1.0
+.llvm-mingw 20260224 https://github.com/mstorsjo/llvm-mingw/releases/download/20260224/llvm-mingw-20260224-ucrt-ubuntu-22.04-x86_64.tar.xz
+zlibng 2.3.3 https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.3.3.tar.gz
+zstd 1.5.7 https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
+brotli 1.2.0 https://github.com/google/brotli/archive/v1.2.0.tar.gz
+psl 2026-01-16 https://github.com/publicsuffix/list/archive/944fb53321606f08740f04ef7c386f64df34ff76.tar.gz
+libpsl 0.21.5 https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz
+nghttp3 1.15.0 https://github.com/ngtcp2/nghttp3/releases/download/v1.15.0/nghttp3-1.15.0.tar.xz
+libressl 4.2.1 https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-4.2.1.tar.gz
+ngtcp2 1.21.0 https://github.com/ngtcp2/ngtcp2/releases/download/v1.21.0/ngtcp2-1.21.0.tar.xz
+nghttp2 1.68.0 https://github.com/nghttp2/nghttp2/releases/download/v1.68.0/nghttp2-1.68.0.tar.xz
+libssh2 1.11.1 https://libssh2.org/download/libssh2-1.11.1.tar.xz
+certdata 2025-10-29 https://raw.githubusercontent.com/mozilla-firefox/firefox/397c3187280dfa84ce9da56a9944d945bf73977d/security/nss/lib/ckfw/builtins/certdata.txt
+curl 8.18.0 https://curl.se/download/curl-8.18.0.tar.xz
+trurl 0.16.1 https://curl.se/trurl/dl/trurl-0.16.1.tar.gz

@@ -29,10 +29,9 @@
 #include "PexCache.h"
 #include "BreakpointManager.h"
 #include "DebugExecutionManager.h"
-#include "IdMap.h"
 #include "Protocol/struct_extensions.h"
+#include "Protocol/converters.h"
 
-#include <thread>
 
 namespace DebugServer
 {
@@ -62,10 +61,18 @@ class ZScriptDebugger
 	void SetJustMyCode(bool enable) { }
 	dap::ResponseOrError<dap::EvaluateResponse> Evaluate(const dap::EvaluateRequest &request);
 	;
-	template <typename T, typename = IsEvent<T>> void SendEvent(const T &event);
+	template <typename T, typename = IsEvent<T>> void SendEvent(T &&event);
 	bool IsEndingSession();
 	int GetLastStoppedThreadId() { return 0; }
 
+	struct ProjectItem{
+		std::string path;
+		std::string archive;
+	};
+
+
+	void ConvertSourceToServerCallback(dap::Source &source);
+	void ConvertSourceToClientCallback(dap::Source &source);
 	dap::ResponseOrError<dap::InitializeResponse> Initialize(const dap::InitializeRequest &request);
 	dap::ResponseOrError<dap::LaunchResponse> Launch(const dap::PDSLaunchRequest &request);
 	dap::ResponseOrError<dap::AttachResponse> Attach(const dap::PDSAttachRequest &request);
@@ -94,10 +101,11 @@ class ZScriptDebugger
 	std::shared_ptr<BreakpointManager> m_breakpointManager;
 	std::shared_ptr<RuntimeState> m_runtimeState;
 	std::shared_ptr<DebugExecutionManager> m_executionManager;
-	std::map<int, dap::Source> m_projectSources;
-	std::string m_projectPath;
-	std::string m_projectArchive;
+	caseless_path_map<ProjectItem> m_projectPaths;
+	caseless_path_map<std::string> m_ModulePathToName;
+	std::map<std::string, std::string> m_ModuleNameToPath;
 	dap::InitializeRequest m_clientCaps;
+	dap::ServerCaps m_serverCaps;
 	bool m_printLog = false;
 
 	RuntimeEvents::CreateStackEventHandle m_createStackEventHandle;
@@ -113,6 +121,7 @@ class ZScriptDebugger
 		= false; // Received initialize request; If this isn't true, we don't send events, prevents sending events before the client is ready (or if socket has been closed before initialization)
 	RuntimeEvents::ExceptionThrownEventHandle m_exceptionThrownEventHandle;
 
+	void SetProjectRemaps(const dap::array<dap::any> &projects);
 	void RegisterSessionHandlers();
 	dap::Error Error(const std::string &msg);
 	void EventLogged(int severity, const char *msg);
@@ -122,5 +131,10 @@ class ZScriptDebugger
 	void CheckSourceLoaded(const std::string &scriptName);
 	void BreakpointChanged(const dap::Breakpoint &bpoint, const std::string &reason);
 	void ExceptionThrown(EVMAbortException reason, const std::string &message, const std::string &stackTrace);
+
+	template <typename T>
+	[[nodiscard]] inline T _toServer(const T& request);
+	template <typename T>
+	[[nodiscard]] inline dap::ResponseOrError<T>&& _toClient(dap::ResponseOrError<T> &&response);
 };
 }

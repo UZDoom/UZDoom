@@ -70,7 +70,7 @@ class ImageScrollerPageImageItem : ImageScrollerPage
 	{
 		Super.Init();
 		mTexture = TexMan.CheckForTexture(patch);
-	} 
+	}
 
 	override void Drawer(bool selected)
 	{
@@ -105,7 +105,7 @@ class ImageScrollerPageTextItem : ImageScrollerPage
 		mText = mFont.BreakLines(Stringtable.Localize(txt.Filter()), int(virtWidth / mTextScale));
 		mYpos = y >= 0? y : virtHeight / 2 - mText.Count() * mFont.GetHeight() * mTextScale / 2;
 
-	} 
+	}
 
 	override void Drawer(bool selected)
 	{
@@ -170,7 +170,7 @@ class ImageScrollerMenu : Menu
 
 	//=============================================================================
 	//
-	// 
+	//
 	//
 	//=============================================================================
 
@@ -218,7 +218,7 @@ class ImageScrollerMenu : Menu
 
 	//=============================================================================
 	//
-	// 
+	//
 	//
 	//=============================================================================
 
@@ -234,7 +234,7 @@ class ImageScrollerMenu : Menu
 
 	//=============================================================================
 	//
-	// 
+	//
 	//
 	//=============================================================================
 
@@ -260,7 +260,7 @@ class ImageScrollerMenu : Menu
 
 	//=============================================================================
 	//
-	// 
+	//
 	//
 	//=============================================================================
 

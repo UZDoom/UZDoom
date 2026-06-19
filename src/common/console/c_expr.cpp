@@ -720,7 +720,7 @@ FProduction *ProdLOrDbl (FDoubleProd *prod1, FDoubleProd *prod2)
 //
 // If <expr> is non-zero, execute <true cmd>.
 // If <expr> is zero, execute [false cmd] if specified.
-// 
+//
 //==========================================================================
 
 CCMD (test)
@@ -759,7 +759,7 @@ CCMD (test)
 // CCMD repeat
 //
 // If <expr> is one or more, repeat <cmd>, <expr> times.
-// 
+//
 //==========================================================================
 
 CCMD (repeat)

@@ -185,9 +185,6 @@ int main (int argc, char **argv)
 	// signal(SIGHUP, SignalHandler);
 	// signal(SIGQUIT, SignalHandler);
 
-	printf(GAMENAME" %s - %s - SDL version\nCompiled on %s\n",
-		GetVersionString(), GetGitTime(), __DATE__);
-
 	seteuid (getuid ());
 	// Set LC_NUMERIC environment variable in case some library decides to
 	// clear the setlocale call at least this will be correct.
@@ -195,6 +192,10 @@ int main (int argc, char **argv)
 	setenv ("LC_NUMERIC", "C", 1);
 
 	setlocale (LC_ALL, "C");
+
+#ifdef __linux
+	SDL_setenv("SDL_VIDEODRIVER", "wayland,x11", 0);
+#endif
 
 	if (SDL_Init (0) < 0)
 	{

@@ -133,7 +133,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, A_StopSound, NativeStopSound)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_INT(slot);
-	
+
 	S_StopSound(self, slot);
 	return 0;
 }
@@ -374,7 +374,7 @@ static void VelFromAngle(AActor *self, double speed, double angle)
 	else
 	{
 		if (angle == 1e37)
-			
+
 		{
 			self->VelFromAngle(speed);
 		}
@@ -516,7 +516,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetXYZ, SetXYZ)
 	PARAM_FLOAT(y);
 	PARAM_FLOAT(z);
 	self->SetXYZ(x, y, z);
-	return 0; 
+	return 0;
 }
 
 static void Vec2Angle(AActor *self, double length, double angle, bool absolute, DVector2 *result)
@@ -1105,7 +1105,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, TestMobjZ, P_TestMobjZ)
 {
 	PARAM_SELF_PROLOGUE(AActor);
 	PARAM_BOOL(quick);
-	
+
 	AActor *on = nullptr;
 	bool retv = P_TestMobjZ(self, quick, &on);
 	if (numret > 1) ret[1].SetObject(on);
@@ -1197,7 +1197,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, LineAttack, ZS_LineAttack)
 	PARAM_FLOAT(offsetz);
 	PARAM_FLOAT(offsetforward);
 	PARAM_FLOAT(offsetside);
-	
+
 	int acdmg;
 	auto puff = ZS_LineAttack(self, angle, distance, pitch, damage, damageType, puffType, flags, victim, offsetz, offsetforward, offsetside, &acdmg);
 	if (numret > 0) ret[0].SetObject(puff);
@@ -1252,7 +1252,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, TraceBleedAngle, TraceBleedAngle)
 	PARAM_INT(damage);
 	PARAM_FLOAT(angle);
 	PARAM_FLOAT(pitch);
-	
+
 	P_TraceBleed(damage, self, DAngle::fromDeg(angle), DAngle::fromDeg(pitch));
 	return 0;
 }
@@ -1267,7 +1267,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_FTranslatedLineTarget, TraceBleed, TraceBleedTLT)
 	PARAM_SELF_STRUCT_PROLOGUE(FTranslatedLineTarget);
 	PARAM_INT(damage);
 	PARAM_OBJECT_NOT_NULL(missile, AActor);
-	
+
 	P_TraceBleed(damage, self, missile);
 	return 0;
 }
@@ -1477,7 +1477,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, GetMissileDamage, ZS_GetMissileDamage)
 	PARAM_INT(pick_pointer);
 	ACTION_RETURN_INT(ZS_GetMissileDamage(self, mask, add, pick_pointer));
 }
-	
+
 DEFINE_ACTION_FUNCTION_NATIVE(AActor, SoundAlert, P_NoiseAlert)
 {
 	PARAM_SELF_PROLOGUE(AActor);

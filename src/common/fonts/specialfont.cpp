@@ -50,7 +50,7 @@ protected:
 //
 //==========================================================================
 
-FSpecialFont::FSpecialFont (const char *name, int first, int count, FGameTexture **lumplist, const bool *notranslate, int lump, bool donttranslate) 
+FSpecialFont::FSpecialFont (const char *name, int first, int count, FGameTexture **lumplist, const bool *notranslate, int lump, bool donttranslate)
 	: FFont(lump)
 {
 	int i;
@@ -189,7 +189,7 @@ void FSpecialFont::LoadTranslations()
 	}
 }
 
-FFont *CreateSpecialFont (const char *name, int first, int count, FGameTexture **lumplist, const bool *notranslate, int lump, bool donttranslate) 
+FFont *CreateSpecialFont (const char *name, int first, int count, FGameTexture **lumplist, const bool *notranslate, int lump, bool donttranslate)
 {
 	return new FSpecialFont(name, first, count, lumplist, notranslate, lump, donttranslate);
 }

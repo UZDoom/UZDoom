@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 05:40+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Danish <https://hosted.weblate.org/projects/doom-engine-games/"
-"hexen/da/>\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/doom-engine-games/hexen/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Separationshal"
@@ -113,6 +112,7 @@ msgstr ""
 "fjerne, synes hypostolens evigt skiftende\n"
 "vægge at håne dine anstrengelser."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Dit sind er stadig i sving efter dine\n"
@@ -134,6 +134,7 @@ msgstr ""
 "du kommet til? Ved alle smertens guder,\n"
 "hvordan vil du nogensinde finde ud?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "De mægtigste våben og artefakter fra de\n"
@@ -154,6 +155,7 @@ msgstr ""
 "Et eller andet sted indenfor venter\n"
 "dine fjender..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "\"... og han skal rejse ind i de dødes\n"
@@ -180,6 +182,7 @@ msgstr ""
 "du se en hævet platform og på den\n"
 "den eneste lyskilde i denne verden."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "det kan kun være kaoskuglen, kilden til\n"
@@ -237,6 +240,7 @@ msgstr "på de syv portaler"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Trappen er steget op på de syv portaler"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Du skal finde en anden kontakt..."
 
@@ -291,6 +295,7 @@ msgstr "Døren er spærret indefra"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "En platform er sænket i tårnet"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Du har spillet dette spil for længe, dødelige..."
 

@@ -1,6 +1,8 @@
 #include "widgets/listview/listview.h"
 #include "widgets/scrollbar/scrollbar.h"
 
+#include <cmath>
+
 ListView::ListView(Widget* parent) : Widget(parent)
 {
 	SetStyleClass("listview");

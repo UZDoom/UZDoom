@@ -105,12 +105,12 @@ const char *DPlat::GetSoundByType () const
 void DPlat::Tick ()
 {
 	EMoveResult res;
-		
+
 	switch (m_Status)
 	{
 	case up:
 		res = m_Sector->MoveFloor (m_Speed, m_High, m_Crush, 1, false);
-										
+
 		if (res == EMoveResult::crushed && (m_Crush == -1))
 		{
 			m_Count = m_Wait;
@@ -128,10 +128,10 @@ void DPlat::Tick ()
 				switch (m_Type)
 				{
 					case platRaiseAndStayLockout:
-						// Instead of keeping the dead thinker like Heretic did let's 
+						// Instead of keeping the dead thinker like Heretic did let's
 						// better use a flag to avoid problems elsewhere. For example,
 						// keeping the thinker would make tagwait wait indefinitely.
-						m_Sector->planes[sector_t::floor].Flags |= PLANEF_BLOCKED; 
+						m_Sector->planes[sector_t::floor].Flags |= PLANEF_BLOCKED;
 						[[fallthrough]];
 					case platRaiseAndStay:
 					case platDownByValue:
@@ -148,12 +148,12 @@ void DPlat::Tick ()
 			}
 			else
 			{
-				m_OldStatus = m_Status;		//jff 3/14/98 after action wait  
+				m_OldStatus = m_Status;		//jff 3/14/98 after action wait
 				m_Status = in_stasis;		//for reactivation of toggle
 			}
 		}
 		break;
-		
+
 	case down:
 		res = m_Sector->MoveFloor (m_Speed, m_Low, -1, -1, false);
 
@@ -179,7 +179,7 @@ void DPlat::Tick ()
 			}
 			else
 			{	// instant toggles go into stasis awaiting next activation
-				m_OldStatus = m_Status;		//jff 3/14/98 after action wait  
+				m_OldStatus = m_Status;		//jff 3/14/98 after action wait
 				m_Status = in_stasis;		//for reactivation of toggle
 			}
 		}
@@ -205,7 +205,7 @@ void DPlat::Tick ()
 		}
 
 		break;
-		
+
 	case waiting:
 		if (m_Count > 0 && !--m_Count)
 		{
@@ -352,7 +352,7 @@ bool FLevelLocals::EV_DoPlat (int tag, line_t *line, DPlat::EPlatType type, doub
 			plat->m_Status = DPlat::up;
 			plat->PlayPlatSound ("Floor");
 			break;
-		
+
 		case DPlat::platDownByValue:
 			newheight = sec->floorplane.ZatPoint (sec->centerspot) - height;
 			plat->m_Low = sec->floorplane.PointToDist (sec->centerspot, newheight);
@@ -373,7 +373,7 @@ bool FLevelLocals::EV_DoPlat (int tag, line_t *line, DPlat::EPlatType type, doub
 			plat->m_Status = DPlat::down;
 			plat->PlayPlatSound (plat->GetSoundByType ());
 			break;
-		
+
 		case DPlat::platUpNearestWaitDownStay:
 			newheight = FindNextHighestFloor (sec, &spot);
 			// Intentional fall-through
@@ -490,4 +490,3 @@ void FLevelLocals::EV_StopPlat (int tag, bool remove)
 		scan = next;
 	}
 }
-

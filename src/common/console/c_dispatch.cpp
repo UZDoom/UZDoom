@@ -1156,4 +1156,3 @@ CCMD (pullin)
 	Printf (TEXTCOLOR_BOLD "Pullin" TEXTCOLOR_NORMAL " is only valid from .cfg\n"
 			"files and only when used at startup.\n");
 }
-

@@ -142,7 +142,7 @@ namespace swrenderer
 	{
 	public:
 		using SWPixelFormatDrawers::SWPixelFormatDrawers;
-		
+
 		void DrawWall(const WallDrawerArgs &args) override { DrawWallColumns<DrawWallModeNormal>(args); }
 		void DrawWallMasked(const WallDrawerArgs &args) override { DrawWallColumns<DrawWallModeMasked>(args); }
 		void DrawWallAdd(const WallDrawerArgs &args) override { DrawWallColumns<DrawWallModeAdd>(args); }

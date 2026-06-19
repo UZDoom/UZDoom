@@ -58,12 +58,12 @@ void main()
 
 	vec2 parmTexCoord;
 	vec4 parmPosition;
-	
+
 	BonesResult bones = ApplyBones();
 
 	parmTexCoord = aTexCoord;
 	parmPosition = bones.Position;
-	
+
 	#ifndef SIMPLE
 		vec4 worldcoord = ModelMatrix * mix(parmPosition, aVertex2, uInterpolationFactor);
 	#else
@@ -84,7 +84,7 @@ void main()
 	#ifndef SIMPLE
 		pixelpos.xyz = worldcoord.xyz;
 		pixelpos.w = -eyeCoordPos.z/eyeCoordPos.w;
-  
+
 		if (uGlowTopColor.a > 0.0 || uGlowBottomColor.a > 0.0)
 		{
 			float topatpoint = (uGlowTopPlane.w + uGlowTopPlane.x * worldcoord.x + uGlowTopPlane.y * worldcoord.z) * uGlowTopPlane.z;
@@ -93,7 +93,7 @@ void main()
 			glowdist.y = worldcoord.y - bottomatpoint;
 			glowdist.z = clamp(glowdist.x / (topatpoint - bottomatpoint), 0.0, 1.0);
 		}
-		
+
 		if (uObjectColor2.a != 0.0)
 		{
 			float topatpoint = (uGradientTopPlane.w + uGradientTopPlane.x * worldcoord.x + uGradientTopPlane.y * worldcoord.z) * uGradientTopPlane.z;
@@ -102,18 +102,18 @@ void main()
 			gradientdist.y = worldcoord.y - bottomatpoint;
 			gradientdist.z = clamp(gradientdist.x / (topatpoint - bottomatpoint), 0.0, 1.0);
 		}
-		
+
 		if (uSplitBottomPlane.z != 0.0)
 		{
 			ClipDistance3 = ((uSplitTopPlane.w + uSplitTopPlane.x * worldcoord.x + uSplitTopPlane.y * worldcoord.z) * uSplitTopPlane.z) - worldcoord.y;
 			ClipDistance4 = worldcoord.y - ((uSplitBottomPlane.w + uSplitBottomPlane.x * worldcoord.x + uSplitBottomPlane.y * worldcoord.z) * uSplitBottomPlane.z);
 		}
-		
+
 		vWorldNormal = NormalModelMatrix * vec4(normalize(bones.Normal), 1.0);
 
 		vEyeNormal = NormalViewMatrix * vWorldNormal;
 	#endif
-	
+
 	#ifdef SPHEREMAP
 		vec3 u = normalize(eyeCoordPos.xyz);
 		vec4 n = normalize(NormalViewMatrix * vec4(parmTexCoord.x, 0.0, parmTexCoord.y, 0.0));
@@ -124,7 +124,7 @@ void main()
 	#else
 		vTexCoord = TextureMatrix * vec4(parmTexCoord, 0.0, 1.0);
 	#endif
-	
+
 
 	if (uClipHeightDirection != 0.0) // clip planes used for reflective flats
 	{
@@ -215,10 +215,10 @@ BonesResult ApplyBones()
 BonesResult ApplyBones()
 {
 	BonesResult result;
-	
+
 	result.Position = aPosition;
 	result.Normal = GetAttrNormal();
-	
+
 	return result;
 }
 #endif

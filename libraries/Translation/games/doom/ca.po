@@ -1,0 +1,230 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-06 23:16+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/doom/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_D1E1"
+msgstr "Fins al genoll en els morts"
+
+msgid "TXT_D1E2"
+msgstr "Les Ribes de l'Infern"
+
+msgid "TXT_D1E3"
+msgstr "Infern"
+
+# The episode and levels' names in E4 are taken from the Bible.
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "La teva carn consumida"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Hangar"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Central nuclear"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Refineria de toxines"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Control de comandaments"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Laboratori de Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6: Processament central"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7: Estació informàtica"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8: Anomalia de Fobos"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9: Base Militar"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10: Clavegueres"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Anomalia de Deimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Zona de Contenció"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Refineria"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Laboratori Deimos"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Centre de comandaments"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6: Sales dels Maleïts"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7: Tines de desova"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8: Torre de Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9: Fortalesa del Misteri"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Fortalesa infernal"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Pantà de la Desesperació"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Pandemoni"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Casa del dolor"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Catedral Impía"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "E3M6: Mont Erebus"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7: Limb"
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "E3M8: Dis"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9: Caus"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "E4M1: L'infern a sota"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "E4M2: Odi perfecte"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "E4M3: Tallar els malvats"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "E4M4: Mal indisciplinat"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "E4M5: Es penediran"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "E4M6: Contra els maleïts"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "E4M7: I l'infern va seguir"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "E4M8: Als cruels"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9: Por"
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"Un cop hagis derrotat els grans malvats i\n"
+"hagis netejat la base lunar, se suposa que\n"
+"has de guanyar, oi? Oi? On és\n"
+"la teva recompensa i el bitllet de tornada a casa? Què\n"
+"coi és això? No se suposa que ha d'acabar\n"
+"així!\n"
+"\n"
+"Fa pudor de carn podrida, però sembla\n"
+"la base perduda de Deimos. Sembla que\n"
+"estiguessis atrapat a Les Ribes de l'Infern.\n"
+"L'única sortida és a través d'això.\n"
+"\n"
+"Per continuar l'experiència DOOM, juga a\n"
+"Les Ribes de l'Infern i la seva increïble\n"
+"seqüela, Infern!\n"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+"Ho has aconseguit! El terrible senyor ciber-\n"
+"dimoni que governava la base lunar perduda de Deimos\n"
+"ha estat assassinat i tu\n"
+"ets triomfant! Però... on ets?\n"
+"T'enfiles fins a la vora de la\n"
+"lluna i mires avall per veure la terrible\n"
+"veritat.\n"
+"\n"
+"Deimos sura per sobre del mateix Infern!\n"
+"No has sentit a parlar mai de ningú que s'escapi\n"
+"de l'Infern, però faràs que els bastards\n"
+"s'arrepenteixin haver sentit a parlar de tu! Ràpidament,\n"
+"baixes en ràpel fins a la superfície de\n"
+"l'Infern.\n"
+"\n"
+"Ara, anem al capítol final de\n"
+"DOOM! — Infern."
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+"El repugnant dimoni aranya que\n"
+"va planejar la invasió de les bases lunars\n"
+"i va causar tanta mort ha estat\n"
+"fotut de peu per sempre.\n"
+"\n"
+"S'obre una porta amagada i hi entres.\n"
+"Has demostrat ser massa dur perquè l'Infern el\n"
+"contengui, i ara l'Infern finalment juga\n"
+"just, ja que surts per la porta\n"
+"per veure els camps verds de la Terra!\n"
+"A casa finalment.\n"
+"\n"
+"Et preguntes què ha estat passant a la\n"
+"Terra mentre lluitaves contra el mal\n"
+"desfermat. És bo que cap descendència de l'Infern\n"
+"hagués pogut entrar per aquella\n"
+"porta amb tu…"
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""
+"La ment malèfica aràcnida deu haver enviat\n"
+"les seves legions de descendents de l'infern abans del vostre\n"
+"enfrontament final amb aquella terrible\n"
+"bèstia de l'infern. Però vau fer un pas endavant\n"
+"i vau provocar la condemna eterna i el\n"
+"sofriment sobre l'horda com ho faria un veritable heroi\n"
+"davant d'alguna cosa tan malvada.\n"
+"\n"
+"A més, algú anava a pagar pel que\n"
+"li va passar a Daisy, la vostra conilla mascota.\n"
+"\n"
+"Però ara, veieu que s'escampa davant vostre més\n"
+"dolor i vertigen potencials mentre una nació\n"
+"de dimonis corre descontroladament entre les nostres ciutats.\n"
+"\n"
+"Pròxima parada, l'infern a la Terra!"

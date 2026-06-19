@@ -48,7 +48,7 @@ int r_spriteadjustSW, r_spriteadjustHW;
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -101,7 +101,7 @@ int FTexture::CheckRealHeight()
 }
 
 //===========================================================================
-// 
+//
 //	Finds gaps in the texture which can be skipped by the renderer
 //  This was mainly added to speed up one area in E4M6 of 007LTSD
 //
@@ -220,7 +220,7 @@ void FTexture::CheckTrans(unsigned char* buffer, int size, int trans)
 
 
 //===========================================================================
-// 
+//
 // smooth the edges of transparent fields in the texture
 //
 //===========================================================================
@@ -238,7 +238,7 @@ void FTexture::CheckTrans(unsigned char* buffer, int size, int trans)
 bool FTexture::SmoothEdges(unsigned char* buffer, int w, int h)
 {
 	int x, y;
-	bool trans = buffer[MSB] == 0; // If I set this to false here the code won't detect textures 
+	bool trans = buffer[MSB] == 0; // If I set this to false here the code won't detect textures
 								   // that only contain transparent pixels.
 	bool semitrans = false;
 	unsigned char* l1;
@@ -290,7 +290,7 @@ bool FTexture::SmoothEdges(unsigned char* buffer, int w, int h)
 }
 
 //===========================================================================
-// 
+//
 // Post-process the texture data after the buffer has been created
 //
 //===========================================================================
@@ -306,7 +306,7 @@ bool FTexture::ProcessData(unsigned char* buffer, int w, int h, bool ispatch)
 }
 
 //===========================================================================
-// 
+//
 //	Initializes the buffer for the texture data
 //
 //===========================================================================
@@ -348,7 +348,7 @@ FTextureBuffer FTexture::CreateTexBuffer(int translation, int flags)
 
 			int trans;
 			auto Pixels = GetBgraBitmap(remap ? remap->Palette : nullptr, &trans);
-			
+
 			if(!exx && Pixels.ClipRect.x == 0 && Pixels.ClipRect.y == 0 && Pixels.ClipRect.width == Pixels.Width && Pixels.ClipRect.height == Pixels.Height && (Pixels.FreeBuffer || !IsLuminosityTranslation(translation)))
 			{
 				buffer = Pixels.data;
@@ -364,7 +364,7 @@ FTextureBuffer FTexture::CreateTexBuffer(int translation, int flags)
 
 				bmp.Blit(exx, exx, Pixels);
 			}
-			
+
 			if (IsLuminosityTranslation(translation))
 			{
 				V_ApplyLuminosityTranslation(LuminosityTranslationDesc::fromInt(translation), buffer, W * H);
@@ -410,7 +410,7 @@ FTextureBuffer FTexture::CreateTexBuffer(int translation, int flags)
 }
 
 //===========================================================================
-// 
+//
 // Dummy texture for the 0-entry.
 //
 //===========================================================================
@@ -423,7 +423,7 @@ bool FTexture::DetermineTranslucency()
 }
 
 //===========================================================================
-// 
+//
 // the default just returns an empty texture.
 //
 //===========================================================================
@@ -436,8 +436,8 @@ TArray<uint8_t> FTexture::Get8BitPixels(bool alphatex)
 }
 
 //===========================================================================
-// 
-//  Finds empty space around the texture. 
+//
+//  Finds empty space around the texture.
 //  Used for sprites that got placed into a huge empty frame.
 //
 //===========================================================================
@@ -561,4 +561,3 @@ FWrapperTexture::FWrapperTexture(int w, int h, int bits)
 	// todo: Initialize here.
 	SystemTextures.AddHardwareTexture(0, false, hwtex);
 }
-

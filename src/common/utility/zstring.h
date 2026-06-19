@@ -216,6 +216,18 @@ public:
 	FString &AppendCStrPart (const char *tail, size_t tailLen);
 	FString &CopyCStrPart(const char *tail, size_t tailLen);
 
+	// Join strings, inserting path separator between as needed
+	FString operator / (const FString &tail) const;
+	// Join strings, inserting path separator between as needed
+	FString operator / (const char *tail) const;
+	// Join strings, inserting path separator between as needed
+	friend FString operator / (const char *head, const FString &tail);
+
+	// Join strings, inserting path separator between as needed
+	FString &operator /= (const FString &tail);
+	// Join strings, inserting path separator between as needed
+	FString &operator /= (const char *tail);
+
 	FString &operator << (const FString &tail) { return *this += tail; }
 	FString &operator << (const char *tail) { return *this += tail; }
 	FString &operator << (char tail) { return *this += tail; }
@@ -365,6 +377,11 @@ public:
 	void Split(TArray<FString>& tokens, const FString &delimiter, EmptyTokenType keepEmpty = TOK_KEEPEMPTY) const;
 	void Split(TArray<FString>& tokens, const char *delimiter, EmptyTokenType keepEmpty = TOK_KEEPEMPTY) const;
 
+
+	// split a string into different lines of a specified maximum length (and when it needs to wrap, the maximum length can be reduced down to minWrapLen to avoid splitting words)
+	TArray<FString> SplitNewLines(int minWrapLen = -1, int maxLineLen = -1, EmptyTokenType keepEmpty = TOK_KEEPEMPTY) const;
+	void SplitNewLines(TArray<FString>& tokens, int minWrapLen = -1, int maxLineLen = -1, EmptyTokenType keepEmpty = TOK_KEEPEMPTY) const;
+
 protected:
 	const FStringData *Data() const { return (FStringData *)Chars - 1; }
 	FStringData *Data() { return (FStringData *)Chars - 1; }
@@ -497,4 +514,3 @@ struct StringNoCaseHashTraits
 	// Compares two keys, returning zero if they are the same.
 	int Compare(const FString& left, const FString& right) { return left.CompareNoCase(right); }
 };
-

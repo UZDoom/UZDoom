@@ -4,81 +4,22 @@
 Builds language files
 """
 
-import os
 import sys
 import csv
 import json
 import argparse
 from pathlib import Path
 
-import polib
-
-RECIPES = {
-    "ENGINE": ["engine/common", "engine/zdoom"],
-    "GAMES": [
-        "games/chex",
-        "games/doom",
-        "games/doom2",
-        "games/heretic",
-        "games/hexen",
-        "games/hexen-deathkings",
-        "games/plutonia",
-        "games/strife",
-        "games/tnt",
-    ],
-    "GAMES_CHEX3": ["games/filter/chex_quest_3"],
-    "GAMES_HARMONY": ["games/filter/harmony"],
-    "GAMES_HACX": ["games/filter/hacx"]
-}
-RECIPES["ALL"] = list(sum(RECIPES.values(), []))
-
-SOURCE_LANG = "en_US"
-SOURCE_LANG_ALT = SOURCE_LANG.split("_", maxsplit=1)[0]
-
-# auto-add once a certain portion of strings have been translated
-THRESHOLD = 0.5
-
-# add to table  even if THRESHOLD is not met
-ENABLED = [
-    "en_GB",  # eng enc ena enz eni ens enj enb enl ent enw
-    "cs",
-    "da",
-    "de",
-    "es",
-    "es_MX",  # esm
-    "eo",
-    "fi",
-    "fr",
-    "hu",
-    "it",
-    "ja",  # jp
-    "ko",
-    "nl",
-    "nb_NO",  # no
-    "pl",
-    "pt",  # ptg
-    "pt_BR",  # pt
-    "ro",
-    "ru",
-    "sr",
-    "tr",
-]
-
-# Don't add to table even if THRESHOLD is met
-# If adding a language here, please add a comment why, so it can be
-# re-evaluated later
-DISABLED = [
-    "arz",  # no rtl support in uzdoom yet
-    "he",  # no rtl support in uzdoom yet
-]
-
-KEEP_REMARKS = False
-
-DEBUG = True
-try:
-    DEBUG = DEBUG or 'DEBUG_LANGUAGE' in os.environ
-except OSError:
-    pass
+from libs import polib
+from config import \
+    DEBUG, \
+    DISABLED, \
+    ENABLED, \
+    KEEP_REMARKS, \
+    RECIPES, \
+    SOURCE_LANG, \
+    SOURCE_LANG_ALT, \
+    THRESHOLD
 
 
 def dump_csv(destination, table):
@@ -125,12 +66,14 @@ def fill_dict(path):
     if meta["id"] == SOURCE_LANG or meta["id"] == SOURCE_LANG_ALT:
         meta["id"] = "default"
 
+    has_utf = meta["id"] in ["ja", "ko", "zh_Hans", "zh_Hant"]
+
     for e in po:
         specific_id = e.msgid
         entry = {"id": e.msgid}
 
         if e.msgstr:
-            entry["string"] = remap(e.msgstr)
+            entry["string"] = e.msgstr if has_utf else remap(e.msgstr)
         if e.tcomment:
             entry["remarks"] = e.tcomment
         if e.msgctxt:
@@ -279,18 +222,33 @@ def postprocess_matrix(languages, matrix):
     return [languages, matrix]
 
 
+def modify_globals(args):
+    """Edits globals based on command line args"""
+
+    if args.threshold is not None:
+        globals()["THRESHOLD"] = min(max(0, args.threshold), 1)
+
+    if args.all:
+        globals()["DISABLED"] = []
+
+
 def main(args):
     """loading, matrix building, CSV export"""
+
+    modify_globals(args)
 
     root_dir = Path(__file__).parent.parent
 
     po_files = RECIPES[args.recipe] if args.recipe in RECIPES else None
     po_files = po_files and get_po_files([root_dir / f for f in po_files])
 
-    if po_files is None:
-        print(__doc__)
-        print(f"Available recipes: {' '.join(RECIPES.keys())}")
-        sys.exit(1)
+    if not po_files:
+        if po_files is None:
+            print(__doc__)
+            print(f"Available recipes: {' '.join(RECIPES.keys())}")
+            sys.exit(1)
+        print("Empty preset")
+        return
 
     languages = po_files["languages"]
     po_files = po_files["files"]
@@ -314,7 +272,22 @@ if __name__ == "__main__":
         prog=Path(__file__).name,
         description=__doc__)
 
-    parser.add_argument("--recipe", required=True)
-    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument(
+        "--recipe",
+        required=True,
+        help='Collection of components to compile')
+    parser.add_argument(
+        "--output",
+        required=True,
+        type=Path,
+        help='File to write to')
+    parser.add_argument(
+        "--threshold",
+        type=float,
+        help='How complete a translation needs to be, in order to keep it')
+    parser.add_argument(
+        '--all',
+        action='store_true',
+        help='Consider all languages, even those that have been disabled')
 
     main(parser.parse_args(sys.argv[1:]))

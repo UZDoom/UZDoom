@@ -135,7 +135,7 @@ void FTGATexture::ReadCompressed(FileReader &lump, uint8_t * buffer, int bytespe
 	uint8_t data[4];
 	int Size = Width * Height;
 
-	while (Size > 0) 
+	while (Size > 0)
 	{
 		uint8_t b = lump.ReadUInt8();
 		if (b & 128)
@@ -151,7 +151,7 @@ void FTGATexture::ReadCompressed(FileReader &lump, uint8_t * buffer, int bytespe
 				buffer+=bytesperpixel;
 			}
 		}
-		else 
+		else
 		{
 			lump.Read(buffer, min<int>(Size, (b+1))*bytesperpixel);
 			buffer += (b+1)*bytesperpixel;
@@ -220,19 +220,19 @@ PalettedPixels FTGATexture::CreatePalettedPixels(int conversion, int frame)
 			}
 			PaletteMap[i] = ImageHelpers::RGBToPalettePrecise(conversion == luminance, r, g, b, a);
 		}
-    }
+	}
 
-    int Size = Width * Height * (hdr.bpp>>3);
+	int Size = Width * Height * (hdr.bpp>>3);
 	TArray<uint8_t> buffer(Size, true);
 
-    if (hdr.img_type < 4)	// uncompressed
-    {
-    	lump.Read(buffer.Data(), Size);
-    }
-    else				// compressed
-    {
-    	ReadCompressed(lump, buffer.Data(), hdr.bpp>>3);
-    }
+	if (hdr.img_type < 4)	// uncompressed
+	{
+		lump.Read(buffer.Data(), Size);
+	}
+	else				// compressed
+	{
+		ReadCompressed(lump, buffer.Data(), hdr.bpp>>3);
+	}
 
 	uint8_t * ptr = buffer.Data();
 	int step_x = (hdr.bpp>>3);
@@ -251,8 +251,8 @@ PalettedPixels FTGATexture::CreatePalettedPixels(int conversion, int frame)
 		Pitch = -Pitch;
 	}
 
-    switch (hdr.img_type & 7)
-    {
+	switch (hdr.img_type & 7)
+	{
 	case 1:	// paletted
 		for(int y=0;y<Height;y++)
 		{
@@ -363,9 +363,9 @@ PalettedPixels FTGATexture::CreatePalettedPixels(int conversion, int frame)
 	}
 	default:
 		break;
-    }
+	}
 	return Pixels;
-}	
+}
 
 //===========================================================================
 //
@@ -428,19 +428,19 @@ int FTGATexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			}
 			pe[i] = PalEntry(a, r, g, b);
 		}
-    }
+	}
 
-    int Size = Width * Height * (hdr.bpp>>3);
+	int Size = Width * Height * (hdr.bpp>>3);
 	TArray<uint8_t> sbuffer(Size);
 
-    if (hdr.img_type < 4)	// uncompressed
-    {
-    	lump.Read(sbuffer.Data(), Size);
-    }
-    else				// compressed
-    {
-    	ReadCompressed(lump, sbuffer.Data(), hdr.bpp>>3);
-    }
+	if (hdr.img_type < 4)	// uncompressed
+	{
+		lump.Read(sbuffer.Data(), Size);
+	}
+	else				// compressed
+	{
+		ReadCompressed(lump, sbuffer.Data(), hdr.bpp>>3);
+	}
 
 	uint8_t * ptr = sbuffer.Data();
 	int step_x = (hdr.bpp>>3);
@@ -459,8 +459,8 @@ int FTGATexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 		Pitch = -Pitch;
 	}
 
-    switch (hdr.img_type & 7)
-    {
+	switch (hdr.img_type & 7)
+	{
 	case 1:	// paletted
 		bmp->CopyPixelData(0, 0, ptr, Width, Height, step_x, Pitch, 0, pe);
 		break;
@@ -513,6 +513,6 @@ int FTGATexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 
 	default:
 		break;
-    }
+	}
 	return transval;
-}	
+}

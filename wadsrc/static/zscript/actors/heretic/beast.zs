@@ -76,7 +76,7 @@ class Beast : Actor
 		BEAS Q -1;
 		Stop;
 	}
-}			
+}
 
 // Beast ball ---------------------------------------------------------------
 
@@ -102,7 +102,7 @@ class BeastBall : Actor
 	States
 	{
 	Spawn:
-		FRB1 AABBCC 2 A_SpawnItemEx("Puffy", random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, 
+		FRB1 AABBCC 2 A_SpawnItemEx("Puffy", random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625,
 									0,0,0,0,SXF_ABSOLUTEPOSITION, 64);
 		Loop;
 	Death:
@@ -135,6 +135,3 @@ class Puffy : Actor
 		Stop;
 	}
 }
-
-
-

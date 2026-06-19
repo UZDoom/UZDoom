@@ -21,9 +21,9 @@
 
 class RandomSpawner : Actor
 {
-	
+
 	const MAX_RANDOMSPAWNERS_RECURSION = 32; // Should be largely more than enough, honestly.
-	
+
 	Default
 	{
 		+NOBLOCKMAP
@@ -31,10 +31,10 @@ class RandomSpawner : Actor
 		+NOGRAVITY
 		+THRUACTORS
 	}
-	
+
 	virtual void PostSpawn(Actor spawned)
 	{}
-	
+
 	static bool IsMonster(DropItem di)
 	{
 		class<Actor> pclass = di.Name;
@@ -61,7 +61,7 @@ class RandomSpawner : Actor
 			while (di != null)
 			{
 				bool shouldSkip = (di.Name == 'None') || (nomonsters && IsMonster(di));
-				
+
 				if (!shouldSkip)
 				{
 					int amt = di.Amount;
@@ -116,7 +116,7 @@ class RandomSpawner : Actor
 			return 'None';
 		}
 	}
-	
+
 	// To handle "RandomSpawning" missiles, the code has to be split in two parts.
 	// If the following code is not done in BeginPlay, missiles will use the
 	// random spawner's velocity (0...) instead of their own.
@@ -196,8 +196,8 @@ class RandomSpawner : Actor
 			}
 			newmobj = target.SpawnMissileXYZ(Pos, target.target, cls, false);
 		}
-		else 
-		{		
+		else
+		{
 			newmobj = Spawn(cls, Pos, NO_REPLACE);
 		}
 		if (newmobj != null)
@@ -235,7 +235,7 @@ class RandomSpawner : Actor
 			{
 				newmobj.SetZ(newmobj.ceilingz - newmobj.Height - SpawnPoint.Z);
 			}
-			else if (newmobj.bSpawnFloat) 
+			else if (newmobj.bSpawnFloat)
 			{
 				double space = newmobj.ceilingz - newmobj.Height - newmobj.floorz;
 				if (space > 48)

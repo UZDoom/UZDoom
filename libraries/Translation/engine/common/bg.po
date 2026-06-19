@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-04-14 22:06+0000\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
-"Language-Team: Bulgarian <https://hosted.weblate.org/projects/uzdoom/common/"
-"bg/>\n"
+"Language-Team: Bulgarian <https://hosted.weblate.org/projects/uzdoom/common/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Натисни Y или N."
@@ -62,8 +61,7 @@ msgstr "Пиши:"
 
 msgid "TXT_QUITENDOOM"
 msgstr ""
-"Натиснете който и да е клавиш или щракнете където и да е в прозореца, за да "
-"излезете."
+"Натиснете който и да е клавиш или щракнете където и да е в прозореца, за да излезете."
 
 msgid "NEWSAVE"
 msgstr "<Нов запис на играта>"
@@ -266,7 +264,7 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Оръжие 1"
 
 # only show appropriate slots per game
-# 
+#
 msgid "CNTRLMNU_SLOT2"
 msgstr "Оръжие 2"
 
@@ -1555,17 +1553,6 @@ msgid "OS_NO_RESULTS"
 msgstr ""
 
 msgid "OS_LABEL"
-msgstr ""
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr "0"
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-msgid "REQUIRED_CHARACTERS"
 msgstr ""
 
 msgid "OPTMNU_FULLOPTIONS"

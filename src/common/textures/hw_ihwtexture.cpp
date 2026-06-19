@@ -24,10 +24,9 @@
 #include "hw_ihwtexture.h"
 #include "basics.h"
 #include "tarray.h"
-#include "xs_Float.h"
 
 //===========================================================================
-// 
+//
 //	Quick'n dirty image rescaling.
 //
 // This will only be used when the source texture is larger than
@@ -114,12 +113,11 @@ void IHardwareTexture::Resize(int swidth, int sheight, int width, int height, un
 			}
 
 			// Calculate the average from the sum and number of averaged pixels
-			dst_data[0] = (unsigned char)xs_CRoundToInt(sum_r / averaged_pixels);
-			dst_data[1] = (unsigned char)xs_CRoundToInt(sum_g / averaged_pixels);
-			dst_data[2] = (unsigned char)xs_CRoundToInt(sum_b / averaged_pixels);
-			dst_data[3] = (unsigned char)xs_CRoundToInt(sum_a / averaged_alpha);
+			dst_data[0] = (unsigned char)RoundHalfEven(sum_r / averaged_pixels);
+			dst_data[1] = (unsigned char)RoundHalfEven(sum_g / averaged_pixels);
+			dst_data[2] = (unsigned char)RoundHalfEven(sum_b / averaged_pixels);
+			dst_data[3] = (unsigned char)RoundHalfEven(sum_a / averaged_alpha);
 			dst_data += 4;
 		}
 	}
 }
-

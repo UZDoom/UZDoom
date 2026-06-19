@@ -29,7 +29,7 @@ class ID24Incinerator : DoomWeapon // Incinerator
 		Inventory.PickupMessage "$ID24_GOTINCINERATOR";
 		Tag "$TAG_ID24INCINERATOR";
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -66,7 +66,7 @@ class ID24Incinerator : DoomWeapon // Incinerator
 	}
 }
 
-class ID24IncineratorFlame : Actor // Incinerator Flame 
+class ID24IncineratorFlame : Actor // Incinerator Flame
 {
 	Default
 	{

@@ -29,15 +29,15 @@ IMPLEMENT_CLASS(DThruster, false, false)
 
 enum
 {
-    THRUST_STATIC     = 0x01,
-    THRUST_PLAYER     = 0x02,
-    THRUST_MONSTER    = 0x04,
-    THRUST_PROJECTILE = 0x08,
-    THRUST_WINDTHRUST = 0x10,
-    
-    THRUST_GROUNDED = 1,
-    THRUST_AIRBORNE = 2,
-    THRUST_CEILING  = 4
+	THRUST_STATIC     = 0x01,
+	THRUST_PLAYER     = 0x02,
+	THRUST_MONSTER    = 0x04,
+	THRUST_PROJECTILE = 0x08,
+	THRUST_WINDTHRUST = 0x10,
+
+	THRUST_GROUNDED = 1,
+	THRUST_AIRBORNE = 2,
+	THRUST_CEILING  = 4
 };
 
 
@@ -73,77 +73,76 @@ void DThruster::Construct(sector_t* sec, double dx, double dy, int type, int loc
 
 //-----------------------------------------------------------------------------
 //
-// 
+//
 //
 //-----------------------------------------------------------------------------
 
 void DThruster::Tick ()
 {
-    sector_t* sec = m_Sector;
+	sector_t* sec = m_Sector;
 
-    if (m_PushVec.isZero())
-        return;
+	if (m_PushVec.isZero())
+		return;
 
-    for (auto node = sec->touching_thinglist; node; node = node->m_snext) 
-    {
-        bool thrust_it = false;
-        AActor* thing = node->m_thing;
+	for (auto node = sec->touching_thinglist; node; node = node->m_snext)
+	{
+		bool thrust_it = false;
+		AActor* thing = node->m_thing;
 
-        if (thing->flags & MF_NOCLIP)
-            continue;
+		if (thing->flags & MF_NOCLIP)
+			continue;
 
-        if (!(thing->flags & MF_NOGRAVITY) && thing->Z() <= thing->floorz) 
-        {
-            if (m_Location & THRUST_GROUNDED)
-                thrust_it = true;
-        }
-        else if (
-            thing->flags & MF_SPAWNCEILING &&
-            thing->flags & MF_NOGRAVITY &&
-            thing->Top() == thing->ceilingz
-            ) 
-        {
-            if (m_Location & THRUST_CEILING)
-                thrust_it = true;
-        }
-        else if (thing->flags & MF_NOGRAVITY || thing->Z() > thing->floorz)
-        {
-            if (m_Location & THRUST_AIRBORNE)
-                thrust_it = true;
-        }
+		if (!(thing->flags & MF_NOGRAVITY) && thing->Z() <= thing->floorz)
+		{
+			if (m_Location & THRUST_GROUNDED)
+				thrust_it = true;
+		}
+		else if (
+			thing->flags & MF_SPAWNCEILING &&
+			thing->flags & MF_NOGRAVITY &&
+			thing->Top() == thing->ceilingz
+			)
+		{
+			if (m_Location & THRUST_CEILING)
+				thrust_it = true;
+		}
+		else if (thing->flags & MF_NOGRAVITY || thing->Z() > thing->floorz)
+		{
+			if (m_Location & THRUST_AIRBORNE)
+				thrust_it = true;
+		}
 
-        if (thrust_it) 
-        {
-            thrust_it = false;
+		if (thrust_it)
+		{
+			thrust_it = false;
 
-            if (thing->flags2 & MF2_WINDTHRUST && m_Type & THRUST_WINDTHRUST)
-                thrust_it = true;
-            else if (thing->flags3 & MF3_ISMONSTER) 
-            {
-                if (m_Type & THRUST_MONSTER)
-                    thrust_it = true;
-            }
-            else if (thing->player) 
-            {
-                if (m_Type & THRUST_PLAYER)
-                    thrust_it = true;
-            }
-            else if (thing->flags & MF_MISSILE) 
-            {
-                if (m_Type & THRUST_PROJECTILE)
-                    thrust_it = true;
-            }
-            else 
-            {
-                if (m_Type & THRUST_STATIC)
-                    thrust_it = true;
-            }
+			if (thing->flags2 & MF2_WINDTHRUST && m_Type & THRUST_WINDTHRUST)
+				thrust_it = true;
+			else if (thing->flags3 & MF3_ISMONSTER)
+			{
+				if (m_Type & THRUST_MONSTER)
+					thrust_it = true;
+			}
+			else if (thing->player)
+			{
+				if (m_Type & THRUST_PLAYER)
+					thrust_it = true;
+			}
+			else if (thing->flags & MF_MISSILE)
+			{
+				if (m_Type & THRUST_PROJECTILE)
+					thrust_it = true;
+			}
+			else
+			{
+				if (m_Type & THRUST_STATIC)
+					thrust_it = true;
+			}
 
-            if (thrust_it) 
-            {
-                thing->Vel += m_PushVec;
-            }
-        }
-    }
+			if (thrust_it)
+			{
+				thing->Vel += m_PushVec;
+			}
+		}
+	}
 }
-

@@ -536,4 +536,3 @@ void S_ParseReverbDef ()
 	}
 	InitReverbMenu();
 }
-

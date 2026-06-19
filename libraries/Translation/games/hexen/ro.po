@@ -2,17 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:56+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Romanian <https://hosted.weblate.org/projects/"
-"doom-engine-games/hexen/ro/>\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/doom-engine-games/hexen/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : "
-"(n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Sala de Separare"
@@ -125,6 +123,7 @@ msgstr ""
 "schimbătoare ale hipostilei par să își bată joc de tine\n"
 "la fiecare efort pe care îl faci."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "În timp ce capul tău încă se învârte în urma\n"
@@ -144,6 +143,7 @@ msgstr ""
 "ce loc ai aterizat? În numele tuturor zeilor durerii,\n"
 "cum vei putea ieși de aici vreodată?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "Cele mai puternice arme si artefacte ale anticilor\n"
@@ -163,6 +163,7 @@ msgstr ""
 "prăpăstioase, și zeci de ochi nefaști se holbează la \n"
 "tine. Undeva în interior, dușmanii te așteaptă..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "\"... și va călători în tărâmurile morților, și se va duela\n"
@@ -188,6 +189,7 @@ msgstr ""
 "depărtare vezi un podium ridicat, și pe el, singura\n"
 "sursă de lumină din această lume."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Asta nu poate fi decât sfera haosului, sursa puterii\n"
@@ -242,6 +244,7 @@ msgstr "pe cele Șapte Portaluri"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "S-au ridicat scări pe cele Șapte Portaluri"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Trebuie să găsești alt buton..."
 
@@ -296,6 +299,7 @@ msgstr "Ușa e încuiată din interior"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "O platformă a coborât în turn"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Ai jucat acest joc prea multă vreme, muritorule..."
 

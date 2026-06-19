@@ -57,9 +57,12 @@
 
 // CODE --------------------------------------------------------------------
 
-void VersionInfo::operator=(const char *string)
+VersionInfo::VersionInfo(const char *string)
 {
 	char *endp;
+
+	minor = revision = distance = 0;
+
 	major = (int16_t)clamp<unsigned long long>(strtoull(string, &endp, 10), 0, USHRT_MAX);
 	if (*endp == '.')
 	{
@@ -67,19 +70,38 @@ void VersionInfo::operator=(const char *string)
 		if (*endp == '.')
 		{
 			revision = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
-			if (*endp != 0) major = USHRT_MAX;
+
+			if (*endp == '-' && endp[1] >= '0' && endp[1] <= '9')
+			{
+				distance = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
+			}
 		}
-		else if (*endp == 0)
-		{
-			revision = 0;
-		}
-		else major = USHRT_MAX;
 	}
-	else if (*endp == 0)
+
+	if (*endp != 0 && *endp != '-')
 	{
-		minor = revision = 0;
+		major = USHRT_MAX;
 	}
-	else major = USHRT_MAX;
+}
+
+
+void VersionInfo::operator=(const char *string)
+{
+	(*this) = VersionInfo(string);
+}
+
+VersionInfo::operator FString()
+{
+	FString tmp;
+	if(distance != 0 && distance != RC_REVISION_NOTRC)
+	{
+		tmp.Format("%u.%u.%u-%u", major, minor, revision, distance);
+	}
+	else
+	{
+		tmp.Format("%u.%u.%u", major, minor, revision);
+	}
+	return tmp;
 }
 
 //==========================================================================
@@ -695,7 +717,7 @@ void FScanner::MustGetNumber (bool evaluate)
 //
 // FScanner :: CheckNumber
 //
-// similar to GetNumber but ungets the token if it isn't a number 
+// similar to GetNumber but ungets the token if it isn't a number
 // and does not print an error
 //
 //==========================================================================
@@ -933,7 +955,7 @@ bool FScanner::Compare (const char *text)
 bool FScanner::ScanValue(bool allowfloat, bool evaluate)
 {
 	bool neg = false;
-	if (!GetToken(evaluate)) 
+	if (!GetToken(evaluate))
 	{
 		return false;
 	}
@@ -949,7 +971,7 @@ bool FScanner::ScanValue(bool allowfloat, bool evaluate)
 	if (TokenType == TK_FloatConst && !allowfloat)
 		return false;
 
-	if (TokenType != TK_IntConst && TokenType != TK_FloatConst) 
+	if (TokenType != TK_IntConst && TokenType != TK_FloatConst)
 	{
 		auto d = constants.CheckKey(String);
 		if (!d) return false;
@@ -967,8 +989,8 @@ bool FScanner::ScanValue(bool allowfloat, bool evaluate)
 	return true;
 }
 
-bool FScanner::CheckValue(bool allowfloat, bool evaluate) 
-{ 
+bool FScanner::CheckValue(bool allowfloat, bool evaluate)
+{
 	auto savedstate = SavePos();
 	bool res = ScanValue(allowfloat, evaluate);
 	if (!res) RestorePos(savedstate);
@@ -1133,7 +1155,7 @@ void FScanner::CheckOpen()
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1148,7 +1170,7 @@ void FScanner::AddSymbol(const char *name, int64_t value)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1163,7 +1185,7 @@ void FScanner::AddSymbol(const char* name, uint64_t value)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1374,4 +1396,3 @@ int ParseHex(const char* hex, FScriptPosition* sc)
 
 	return num;
 }
-

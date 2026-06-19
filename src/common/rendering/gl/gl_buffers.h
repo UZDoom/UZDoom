@@ -29,7 +29,7 @@
 #ifdef _MSC_VER
 // silence bogus warning C4250: 'GLVertexBuffer': inherits 'GLBuffer::GLBuffer::SetData' via dominance
 // According to internet infos, the warning is erroneously emitted in this case.
-#pragma warning(disable:4250) 
+#pragma warning(disable:4250)
 #endif
 
 namespace OpenGLRenderer

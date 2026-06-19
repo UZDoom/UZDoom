@@ -227,4 +227,3 @@ unsigned FindModel(const char * path, const char * modelfile, bool silent)
 	model->mFilePath = {path, modelfile};
 	return Models.Push(model);
 }
-

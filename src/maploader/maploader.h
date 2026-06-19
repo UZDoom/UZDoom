@@ -206,7 +206,7 @@ private:
 	void FixHoles();
 	void ReportUnpairedMinisegs();
 	void CalcIndices();
-	
+
 	// Strife dialogue
 	void LoadStrifeConversations (MapData *map, const char *mapname);
 	bool LoadScriptFile (const char *name, bool include, int type);
@@ -214,9 +214,9 @@ private:
 	FStrifeDialogueNode *ReadRetailNode (const char *name, FileReader &lump, uint32_t &prevSpeakerType);
 	FStrifeDialogueNode *ReadTeaserNode (const char *name, FileReader &lump, uint32_t &prevSpeakerType);
 	void ParseReplies (const char *name, int pos, FStrifeDialogueReply **replyptr, Response *responses);
-	
+
 	bool ParseUSDF(int lumpnum, FileReader &lump, int lumplen);
-	
+
 	// Specials
 	void SpawnSpecials();
 	void InitSectorSpecial(sector_t *sector, int special);
@@ -346,4 +346,3 @@ public:
 		Level = lev;
 	}
 };
-

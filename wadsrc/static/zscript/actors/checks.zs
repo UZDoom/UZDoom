@@ -25,36 +25,36 @@ extend class Actor
 	// into an actual checker and a simple wrapper around ResolveState.
 	//
 	//==========================================================================
-	
+
 	action state A_JumpIf(bool expression, statelabel label)
 	{
 		return expression? ResolveState(label) : null;
 	}
 
-	
+
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
-	
+
 	action state A_JumpIfHealthLower(int health, statelabel label, int ptr_selector = AAPTR_DEFAULT)
 	{
 		Actor aptr = GetPointer(ptr_selector);
 		return aptr && aptr.health < health? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
 	bool CheckIfCloser(Actor targ, double dist, bool noz = false)
 	{
 		if (!targ) return false;
-		return 
-			(Distance2D(targ) < dist && (noz || 
+		return
+			(Distance2D(targ) < dist && (noz ||
 			 ((pos.z > targ.pos.z && pos.z - targ.pos.z - targ.height < dist) ||
 			  (pos.z <= targ.pos.z && targ.pos.z - pos.z - height < dist)
 			 )
@@ -74,23 +74,23 @@ extend class Actor
 			// Does the player aim at something that can be shot?
 			targ = AimTarget();
 		}
-		
+
 		return CheckIfCloser(targ, distance, noz)? ResolveState(label) : null;
 	}
-	
+
 	action state A_JumpIfTracerCloser(double distance, statelabel label, bool noz = false)
 	{
 		return CheckIfCloser(tracer, distance, noz)? ResolveState(label) : null;
 	}
-	
+
 	action state A_JumpIfMasterCloser(double distance, statelabel label, bool noz = false)
 	{
 		return CheckIfCloser(master, distance, noz)? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
@@ -98,15 +98,15 @@ extend class Actor
 	{
 		return CheckMeleeRange()? null : ResolveState(label);
 	}
-	
+
 	action state A_JumpIfTargetInsideMeleeRange(statelabel label)
 	{
 		return CheckMeleeRange()? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
@@ -120,7 +120,7 @@ extend class Actor
 		if (target == null) return null;
 		return target.CheckInventory(itemtype, amount, forward_ptr)? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
 	// rather pointless these days to do it this way.
@@ -137,17 +137,17 @@ extend class Actor
 	{
 		return CheckArmorType(Type, amount)? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
 	native bool CheckIfSeen();
 	native bool CheckSightOrRange(double distance, bool two_dimension = false);
 	native bool CheckRange(double distance, bool two_dimension = false);
-	
+
 	action state A_CheckSight(statelabel label)
 	{
 		return CheckIfSeen()? ResolveState(label) : null;
@@ -157,15 +157,15 @@ extend class Actor
 	{
 		return CheckSightOrRange(distance, two_dimension)? ResolveState(label) : null;
 	}
-	
+
 	action state A_CheckRange(double distance, statelabel label, bool two_dimension = false)
 	{
 		return CheckRange(distance, two_dimension)? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
@@ -173,12 +173,12 @@ extend class Actor
 	{
 		return pos.z <= floorz? ResolveState(label) : null;
 	}
-	
+
 	action state A_CheckCeiling(statelabel label)
 	{
 		return pos.z + height >= ceilingz? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
 	// since this is deprecated the checker is private.
@@ -194,12 +194,12 @@ extend class Actor
 
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
 	native bool PlayerSkinCheck();
-	
+
 	action state A_PlayerSkinCheck(statelabel label)
 	{
 		return PlayerSkinCheck()? ResolveState(label) : null;
@@ -207,7 +207,7 @@ extend class Actor
 
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
@@ -216,10 +216,10 @@ extend class Actor
 		Actor aptr = GetPointer(ptr);
 		return aptr && aptr.GetSpecies() == species? ResolveState(label) : null;
 	}
-	
+
 	//==========================================================================
 	//
-	// 
+	//
 	//
 	//==========================================================================
 
@@ -233,17 +233,17 @@ extend class Actor
 	{
 		return CheckLOF(flags, range, minrange, angle, pitch, offsetheight, offsetwidth, ptr_target, offsetforward)? ResolveState(label) : null;
 	}
-	
+
 	action state A_JumpIfTargetInLOS (statelabel label, double fov = 0, int flags = 0, double dist_max = 0, double dist_close = 0)
 	{
 		return CheckIfTargetInLOS(fov, flags, dist_max, dist_close)? ResolveState(label) : null;
 	}
-	
+
 	action state A_JumpIfInTargetLOS (statelabel label, double fov = 0, int flags = 0, double dist_max = 0, double dist_close = 0)
 	{
 		return CheckIfInTargetLOS(fov, flags, dist_max, dist_close)? ResolveState(label) : null;
 	}
-	
+
 	action state A_CheckProximity(statelabel label, class<Actor> classname, double distance, int count = 1, int flags = 0, int ptr = AAPTR_DEFAULT)
 	{
 		// This one was doing some weird stuff that needs to be preserved.
@@ -257,7 +257,7 @@ extend class Actor
 		}
 		return CheckProximity(classname, distance, count, flags, ptr)? jumpto : null;
 	}
-	
+
 	action state A_CheckBlock(statelabel label, int flags = 0, int ptr = AAPTR_DEFAULT, double xofs = 0, double yofs = 0, double zofs = 0, double angle = 0)
 	{
 		return CheckBlock(flags, ptr, xofs, yofs, zofs, angle)? ResolveState(label) : null;
@@ -266,14 +266,14 @@ extend class Actor
 	//===========================================================================
 	// A_JumpIfHigherOrLower
 	//
-	// Jumps if a target, master, or tracer is higher or lower than the calling 
-	// actor. Can also specify how much higher/lower the actor needs to be than 
+	// Jumps if a target, master, or tracer is higher or lower than the calling
+	// actor. Can also specify how much higher/lower the actor needs to be than
 	// itself. Can also take into account the height of the actor in question,
 	// depending on which it's checking. This means adding height of the
-	// calling actor's self if the pointer is higher, or height of the pointer 
+	// calling actor's self if the pointer is higher, or height of the pointer
 	// if its lower.
 	//===========================================================================
-	
+
 	action state A_JumpIfHigherOrLower(statelabel high, statelabel low, double offsethigh = 0, double offsetlow = 0, bool includeHeight = true, int ptr = AAPTR_TARGET)
 	{
 		Actor mobj = GetPointer(ptr);
@@ -291,5 +291,5 @@ extend class Actor
 		}
 		return null;
 	}
-	
+
 }

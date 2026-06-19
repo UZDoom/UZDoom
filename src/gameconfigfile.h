@@ -40,14 +40,13 @@ public:
 
 	void DoAutoloadSetup (FIWadManager *iwad_man);
 	void DoGlobalSetup ();
-	void DoGameSetup (const char *gamename);
-	void DoKeySetup (const char *gamename);
-	void DoModSetup (const char *gamename);
+	void DoGameSetup (FString gamename);
+	void DoKeySetup (FString gamename);
+	void DoModSetup (FString gamename);
 	void ArchiveGlobalData ();
-	void ArchiveGameData (const char *gamename);
+	void ArchiveGameData (FString gamename);
 	void AddAutoexec (FArgs *list, const char *gamename);
 	FString GetConfigPath (bool tryProg);
-	void ReadNetVars ();
 
 protected:
 	void WriteCommentHeader (FileWriter *file) const;
@@ -58,12 +57,13 @@ private:
 	void SetStrifeDefaults ();
 	void ReadCVars (unsigned flags);
 
+	bool bGameSetup;
+	bool bKeySetup;
 	bool bModSetup;
 	int bResetBindFlags;
 
-	char section[64];
-	char *subsection;
-	size_t sublen;
+	double EngineLastRunVer;
+	double GameLastRunVer;
 };
 
 extern FGameConfigFile *GameConfig;

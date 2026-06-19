@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-09 15:09+0000\n"
-"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-"
-"games/hexen/id/>\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/hexen/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP36"
 msgstr "Makam Zedek"
@@ -127,6 +126,7 @@ msgstr ""
 "tembok-tembok hypostyle yang terus bergeser\n"
 "seolah mengejek setiap upayamu."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Pikiranmu masih terasa pusing akibat\n"
@@ -150,6 +150,7 @@ msgstr ""
 "kesakitan, bagaimana kamu akan menemukan\n"
 "jalan keluarmu?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "Senjata dan artefak para leluhur yang paling\n"
@@ -172,6 +173,7 @@ msgstr ""
 "Di suatu tempat di dalamnya, musuh-musuhmu sedang\n"
 "menunggu..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "\"... dan ia akan melakukan perjalanan ke\n"
@@ -199,6 +201,7 @@ msgstr ""
 "melihat sebuah podium yang ditinggikan, dan di atasnya\n"
 "satu-satunya sumber cahaya di dunia ini."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Ini pasti lingkaran kekacauan,\n"
@@ -256,6 +259,7 @@ msgstr "di Tujuh Portal"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Tangga telah muncul di Tujuh Portal"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Kamu harus menemukan sakelar lain..."
 
@@ -310,6 +314,7 @@ msgstr "Pintu dipalang dari dalam"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Sebuah platform telah turun di menara"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Kamu sudah terlalu lama memainkan permainan ini, makhluk fana..."
 

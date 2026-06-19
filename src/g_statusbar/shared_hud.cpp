@@ -50,7 +50,7 @@ CVAR(Bool,hud_althud, false, CVAR_ARCHIVE)				// Enable/Disable the alternate HU
 CVAR (Bool,  hud_showsecrets,	true,CVAR_ARCHIVE);		// Show secrets on HUD
 CVAR (Bool,  hud_showmonsters,	true,CVAR_ARCHIVE);		// Show monster stats on HUD
 CVAR (Bool,  hud_showitems,		false,CVAR_ARCHIVE);	// Show item stats on HUD
-CVAR (Bool,  hud_showstats,		false,	CVAR_ARCHIVE);	// for stamina and accuracy. 
+CVAR (Bool,  hud_showstats,		false,	CVAR_ARCHIVE);	// for stamina and accuracy.
 CVAR (Bool,  hud_showscore,		false,	CVAR_ARCHIVE);	// for user maintained score
 CVAR (Bool,  hud_showweapons,	true, CVAR_ARCHIVE);	// Show weapons collected
 CVAR (Bool,  am_showepisode,	false, CVAR_ARCHIVE);	// Show current episode name
@@ -62,15 +62,15 @@ CVAR (Int ,  hud_timecolor,		CR_GOLD,CVAR_ARCHIVE);	// Color of in-game time on 
 CVAR (Int ,  hud_showlag,		0, CVAR_ARCHIVE);		// Show input latency (maketic - gametic difference)
 
 CVAR (Int, hud_ammo_order, 0, CVAR_ARCHIVE);				// ammo image and text order
-CVAR (Int, hud_ammo_red, 25, CVAR_ARCHIVE)					// ammo percent less than which status is red    
-CVAR (Int, hud_ammo_yellow, 50, CVAR_ARCHIVE)				// ammo percent less is yellow more green        
+CVAR (Int, hud_ammo_red, 25, CVAR_ARCHIVE)					// ammo percent less than which status is red
+CVAR (Int, hud_ammo_yellow, 50, CVAR_ARCHIVE)				// ammo percent less is yellow more green
 CVAR (Bool, hud_swaphealtharmor, false, CVAR_ARCHIVE);		// swap health and armor position on HUD
-CVAR (Int, hud_health_red, 25, CVAR_ARCHIVE)				// health amount less than which status is red   
+CVAR (Int, hud_health_red, 25, CVAR_ARCHIVE)				// health amount less than which status is red
 CVAR (Int, hud_health_yellow, 50, CVAR_ARCHIVE)				// health amount less than which status is yellow
-CVAR (Int, hud_health_green, 100, CVAR_ARCHIVE)				// health amount above is blue, below is green   
-CVAR (Int, hud_armor_red, 25, CVAR_ARCHIVE)					// armor amount less than which status is red    
-CVAR (Int, hud_armor_yellow, 50, CVAR_ARCHIVE)				// armor amount less than which status is yellow 
-CVAR (Int, hud_armor_green, 100, CVAR_ARCHIVE)				// armor amount above is blue, below is green    
+CVAR (Int, hud_health_green, 100, CVAR_ARCHIVE)				// health amount above is blue, below is green
+CVAR (Int, hud_armor_red, 25, CVAR_ARCHIVE)					// armor amount less than which status is red
+CVAR (Int, hud_armor_yellow, 50, CVAR_ARCHIVE)				// armor amount less than which status is yellow
+CVAR (Int, hud_armor_green, 100, CVAR_ARCHIVE)				// armor amount above is blue, below is green
 
 CVAR (Bool, hud_berserk_health, true, CVAR_ARCHIVE);		// when found berserk pack instead of health box
 CVAR (Bool, hud_showangles, false, CVAR_ARCHIVE)			// show player's pitch, yaw, roll

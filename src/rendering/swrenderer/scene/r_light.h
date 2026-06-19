@@ -65,7 +65,7 @@ namespace swrenderer
 
 		void SetCamera(FRenderViewpoint &viewpoint, DCanvas *renderTarget, AActor *actor);
 		void ClearShaderColormap() { realfixedcolormap = nullptr; }
-		
+
 	private:
 		int fixedlightlev = 0;
 		FSWColormap *fixedcolormap = nullptr;

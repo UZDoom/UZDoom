@@ -33,7 +33,7 @@ class AltHud ui
 	Array< Class<Ammo> > orderedammos;
 	const POWERUPICONSIZE = 32;
 
-	
+
 	virtual void Init()
 	{
 		switch (gameinfo.gametype)
@@ -63,7 +63,7 @@ class AltHud ui
 		fragpic = TexMan.CheckForTexture("HU_FRAGS", TexMan.Type_MiscPatch);
 		statspace = SmallFont.StringWidth("Ac:");
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// Draws an image into a box with its bottom center at the bottom
@@ -94,13 +94,13 @@ class AltHud ui
 
 			screen.DrawTexture(tex, animate, x, y,
 				DTA_KeepRatio, true,
-				DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, trans, 
+				DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, trans,
 				DTA_DestWidth, w, DTA_DestHeight, h, DTA_CenterBottomOffset, 1);
 
 		}
 	}
 
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// Draws a text but uses a fixed width for all characters
@@ -139,7 +139,7 @@ class AltHud ui
 		int length = 8 * fnt.GetCharWidth("0");
 		DrawHudText(fnt, color, s, x-length, y, trans);
 	}
-	
+
 	//===========================================================================
 	//
 	// draw the status (number of kills etc)
@@ -149,7 +149,7 @@ class AltHud ui
 	virtual void DrawStatLine(int x, in out int y, String prefix, String text)
 	{
 		y -= SmallFont.GetHeight()-1;
-		screen.DrawText(SmallFont, hudcolor_statnames, x, y, prefix, 
+		screen.DrawText(SmallFont, hudcolor_statnames, x, y, prefix,
 			DTA_KeepRatio, true,
 			DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, 0.75);
 
@@ -165,13 +165,13 @@ class AltHud ui
 		{
 			DrawStatLine(x, y, "Sc:", String.Format("%d ", mo.Score));
 		}
-		
+
 		if (hud_showstats)
 		{
 			DrawStatLine(x, y, "Ac:", String.Format("%i ", mo.accuracy));
 			DrawStatLine(x, y, "St:", String.Format("%i ", mo.stamina));
 		}
-		
+
 		if (!deathmatch)
 		{
 			if (hud_showsecrets)
@@ -180,14 +180,14 @@ class AltHud ui
 					? String.Format("%i/%i/%i ", CPlayer.secretcount, Level.found_secrets, Level.total_secrets)
 					: String.Format("%i/%i ", Level.found_secrets, Level.total_secrets));
 			}
-			
+
 			if (hud_showitems)
 			{
 				DrawStatLine(x, y, "I:", multiplayer
 					? String.Format("%i/%i/%i ", CPlayer.itemcount, Level.found_items, Level.total_items)
 					: String.Format("%i/%i ", Level.found_items, Level.total_items));
 			}
-			
+
 			if (hud_showmonsters)
 			{
 				DrawStatLine(x, y, "K:", multiplayer
@@ -250,7 +250,7 @@ class AltHud ui
 		{
 			let ac = (harmor.Slots[0] + harmor.Slots[1] + harmor.Slots[2] + harmor.Slots[3] + harmor.Slots[4]);
 			ap += int(ac);
-			
+
 			if (ac)
 			{
 				// Find the part of armor that protects the most
@@ -313,13 +313,13 @@ class AltHud ui
 	virtual bool DrawOneKey(int xo, int x, int y, in out int c, Key inv)
 	{
 		TextureID icon;
-		
+
 		if (!inv) return false;
-		
+
 		TextureID AltIcon = inv.AltHUDIcon;
 		if (!AltIcon.Exists()) return false;	// Setting a non-existent AltIcon hides this key.
 
-		if (AltIcon.isValid()) 
+		if (AltIcon.isValid())
 		{
 			icon = AltIcon;
 		}
@@ -330,7 +330,7 @@ class AltHud ui
 			else icon.SetNull();
 		}
 		// missing sprites map to TNT1A0. So if that gets encountered, use the default icon instead.
-		if (icon.isNull() || icon == tnt1a0) icon = inv.Icon; 
+		if (icon.isNull() || icon == tnt1a0) icon = inv.Icon;
 
 		if (icon.isValid())
 		{
@@ -357,7 +357,7 @@ class AltHud ui
 		if (!deathmatch)
 		{
 			int count = Key.GetKeyTypeCount();
-			
+
 			// Go through the key in reverse order of definition, because we start at the right.
 			for(int i = count-1; i >= 0; i--)
 			{
@@ -398,8 +398,8 @@ class AltHud ui
 				if (ammodef && !ammodef.bInvBar)
 				{
 					if (orderedAmmos.Find(ti) == orderedAmmos.Size())
-					{	
-						orderedammos.Push(ti);					
+					{
+						orderedammos.Push(ti);
 					}
 				}
 			}
@@ -428,7 +428,7 @@ class AltHud ui
 			let type = orderedammos[i];
 			let ammoitem = CPlayer.mo.FindInventory(type);
 			int ammomax, ammocur;
-			if (ammoitem == null) 
+			if (ammoitem == null)
 			{
 				ammomax = GetDefaultByType(type).MaxAmount;
 				ammocur = 0;
@@ -447,7 +447,7 @@ class AltHud ui
 
 	//---------------------------------------------------------------------------
 	//
-	// Drawing Ammo 
+	// Drawing Ammo
 	//
 	//---------------------------------------------------------------------------
 
@@ -470,7 +470,7 @@ class AltHud ui
 		else
 		{
 			// Order ammo by use of weapons in the weapon slots
-			for (k = 0; k < PlayerPawn.NUM_WEAPON_SLOTS; k++) 
+			for (k = 0; k < PlayerPawn.NUM_WEAPON_SLOTS; k++)
 			{
 				int slotsize = CPlayer.weapons.SlotSize(k);
 				for(j = 0; j < slotsize; j++)
@@ -481,7 +481,7 @@ class AltHud ui
 					{
 						// Show ammo for available weapons if hud_showammo CVAR is 1
 						// or show ammo for all weapons if hud_showammo is greater than 1
-						
+
 						if (hud_showammo > 1 || CPlayer.mo.FindInventory(weap))
 						{
 							AddAmmoToList(GetDefaultByType(weap));
@@ -547,8 +547,8 @@ class AltHud ui
 
 			int tex_width= clamp(ConFont.StringWidth(buf) - def_width, 0, 1000);
 
-			int fontcolor=( !maxammo ? Font.CR_GRAY :    
-							 ammo < ( (maxammo * hud_ammo_red) / 100) ? Font.CR_RED :   
+			int fontcolor=( !maxammo ? Font.CR_GRAY :
+							 ammo < ( (maxammo * hud_ammo_red) / 100) ? Font.CR_RED :
 							 ammo < ( (maxammo * hud_ammo_yellow) / 100) ? Font.CR_GOLD : Font.CR_GREEN );
 
 			DrawHudText(ConFont, fontcolor, buf, xtext-tex_width, y+yadd, trans);
@@ -589,10 +589,10 @@ class AltHud ui
 			[w, h] = TexMan.GetSize(picnum);
 			int rh;
 			if (w > h) rh = 8;
-			else 
+			else
 			{
 				rh = 16;
-				y -= 8;	
+				y -= 8;
 			}
 			DrawImageToBox(picnum, x-24, y, 20, rh, trans);
 			y-=10;
@@ -609,7 +609,7 @@ class AltHud ui
 		for(inv = CPlayer.mo.Inv; inv; inv = inv.Inv)
 		{
 			let weap = Weapon(inv);
-			if (weap && 
+			if (weap &&
 				!CPlayer.weapons.LocateWeapon(weap.GetClass()))
 			{
 				DrawOneWeapon(CPlayer, x, y, weap);
@@ -620,10 +620,10 @@ class AltHud ui
 		for (k = PlayerPawn.NUM_WEAPON_SLOTS - 1; k >= 0; k--) for(j = CPlayer.weapons.SlotSize(k) - 1; j >= 0; j--)
 		{
 			let weap = CPlayer.weapons.GetWeapon(k, j);
-			if (weap) 
+			if (weap)
 			{
 				let weapitem = Weapon(CPlayer.mo.FindInventory(weap));
-				if (weapitem) 
+				if (weapitem)
 				{
 					DrawOneWeapon(CPlayer, x, y, weapitem);
 				}
@@ -671,11 +671,11 @@ class AltHud ui
 							if (rover.Amount >= 1000) xx = 32 - IndexFont.StringWidth(buffer);
 							else xx = 22;
 
-							screen.DrawText(IndexFont, Font.CR_GOLD, x+xx, y+20, buffer, 
+							screen.DrawText(IndexFont, Font.CR_GOLD, x+xx, y+20, buffer,
 								DTA_KeepRatio, true,
 								DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, trans);
 						}
-						
+
 						x+=32;
 						i++;
 					}
@@ -701,13 +701,13 @@ class AltHud ui
 		DrawImageToBox(fragpic, x, y, 31, 17);
 		DrawHudNumber(HudFont, Font.CR_GRAY, CPlayer.fragcount, x + 33, y + 17);
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// PROC DrawCoordinates
 	//
 	//---------------------------------------------------------------------------
-	
+
 	void DrawCoordinateEntry(int xpos, int ypos, String coordstr, Font fnt = nullptr)
 	{
 		if (fnt == nullptr) fnt = SmallFont;
@@ -723,12 +723,12 @@ class AltHud ui
 		let fnt = generic_ui ? NewSmallFont : SmallFont;
 		int h = fnt.GetHeight();
 		let mo = CPlayer.mo;
-		
-		if (!map_point_coordinates || !automapactive) 
+
+		if (!map_point_coordinates || !automapactive)
 		{
 			pos = mo.Pos;
 		}
-		else 
+		else
 		{
 			pos.xy = Level.GetAutomapPosition();
 			pos.z = Level.PointInSector(pos.xy).floorplane.ZatPoint(pos.xy);
@@ -749,10 +749,10 @@ class AltHud ui
 			screen.DrawText(font, hudcolor_titl, hudwidth - 6 - font.StringWidth(Level.LevelName), ypos + hh, Level.LevelName,
 				DTA_KeepRatio, true,
 				DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight);
-	
+
 			ypos += 2 * hh + h;
 		}
-		
+
 		DrawCoordinateEntry(xpos, ypos, String.Format("X: %.0f", pos.X), fnt);
 		ypos += h;
 		DrawCoordinateEntry(xpos, ypos, String.Format("Y: %.0f", pos.Y), fnt);
@@ -769,7 +769,7 @@ class AltHud ui
 			DrawCoordinateEntry(xpos, ypos, String.Format("R: %.0f", Actor.Normalize180(mo.Roll)), fnt);
 		}
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// Draw in-game time
@@ -837,7 +837,7 @@ class AltHud ui
 	//
 	// Draw in-game latency
 	//
-	// 
+	//
 	//
 	//---------------------------------------------------------------------------
 	native static int, int, int GetLatency();
@@ -895,7 +895,7 @@ class AltHud ui
 			}
 		}
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// main drawer
@@ -907,7 +907,7 @@ class AltHud ui
 		// No HUD in the title level!
 		if (gamestate == GS_TITLELEVEL || !CPlayer) return;
 
-		if (!deathmatch) 
+		if (!deathmatch)
 		{
 			DrawStatus(CPlayer, 5, hudheight-50);
 		}
@@ -1017,5 +1017,5 @@ class AltHud ui
 			DrawAutomap(CPlayer);
 		}
 	}
-	
+
 }

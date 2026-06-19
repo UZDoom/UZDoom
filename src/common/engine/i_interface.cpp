@@ -70,10 +70,18 @@ CVAR(Int, defaultnethostteam, 255, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Int, defaultnetjointeam, 255, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(Bool, defaultnetextratic, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 CVAR(String, defaultnetsavefile, "", CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(String, ui_colors, "", CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
+CVAR(Float, ui_color_mix, .35, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
 
 EXTERN_CVAR(Bool, ui_generic)
 EXTERN_CVAR(Int, vid_preferbackend)
 EXTERN_CVAR(Bool, vid_fullscreen)
+
+#ifdef HAS_UPDATER
+EXTERN_CVAR(Int, updater_update_interval)
+EXTERN_CVAR(Bool, updater_auto_updates)
+EXTERN_CVAR(Bool, updater_check_updates)
+#endif
 
 CUSTOM_CVAR(String, language, "auto", CVAR_ARCHIVE | CVAR_NOINITCALL | CVAR_GLOBALCONFIG)
 {
@@ -81,6 +89,9 @@ CUSTOM_CVAR(String, language, "auto", CVAR_ARCHIVE | CVAR_NOINITCALL | CVAR_GLOB
 	UpdateGenericUI(ui_generic);
 	if (sysCallbacks.LanguageChanged) sysCallbacks.LanguageChanged(self);
 }
+
+FARG(pride, "Launcher", "Show pride colors", "",
+	 "Show pride colors in launcher.");
 
 // Some of this info has to be passed and managed from the front end since it's game-engine specific.
 FStartupSelectionInfo::FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs& args, int startFlags) : Wads(&wads), Args(&args), DefaultStartFlags(startFlags)
@@ -132,6 +143,15 @@ FStartupSelectionInfo::FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs
 	DefaultNetAddress = defaultnetaddress;
 	DefaultNetJoinPort = defaultnetjoinport;
 	DefaultNetJoinTeam = defaultnetjointeam;
+
+	prideColors = Args->CheckParm(FArg_pride)? "list": ui_colors;
+	prideMix = ui_color_mix;
+
+#ifdef HAS_UPDATER
+	DefaultUpdateInterval = updater_update_interval;
+	bAutoUpdate = updater_auto_updates;
+	bCheckUpdate = updater_check_updates;
+#endif
 }
 
 // Return whatever IWAD the user selected.
@@ -145,6 +165,12 @@ int FStartupSelectionInfo::SaveInfo()
 	AdditionalNetArgs.StripLeftRight();
 	DefaultNetAddress.StripLeftRight();
 	DefaultNetSaveFile.StripLeftRight();
+
+#ifdef HAS_UPDATER
+	updater_update_interval = DefaultUpdateInterval;
+	updater_auto_updates = bAutoUpdate;
+	updater_check_updates = bCheckUpdate;
+#endif
 
 	queryiwad = DefaultQueryIWAD;
 	language = DefaultLanguage.GetChars();

@@ -176,13 +176,13 @@ void AddLightDefaults(FLightDefaults *defaults, double attnFactor)
    // remove duplicates
    for (i = 0; i < LightDefaults.Size(); i++)
    {
-      temp = LightDefaults[i];
+	  temp = LightDefaults[i];
 	  if (temp->GetName() == defaults->GetName())
-      {
-         delete temp;
-         LightDefaults.Delete(i);
-         break;
-      }
+	  {
+		 delete temp;
+		 LightDefaults.Delete(i);
+		 break;
+	  }
    }
    if (defaults->GetAttenuate())
    {
@@ -223,7 +223,7 @@ FInternalLightAssociation::FInternalLightAssociation(FLightAssociation * asso)
 		}
 	}
 
-	// Only handle lights for full frames. 
+	// Only handle lights for full frames.
 	// I won't bother with special lights for single rotations
 	// because there is no decent use for them!
 	if (strlen(asso->FrameName())==5 || asso->FrameName()[5]=='0')

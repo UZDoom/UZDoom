@@ -237,7 +237,7 @@ void FSavegameManager::PerformLoadGame(const char *fn, bool flag)
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -283,4 +283,3 @@ DEFINE_ACTION_FUNCTION(FSavegameManager, GetManager)
 	PARAM_PROLOGUE;
 	ACTION_RETURN_POINTER(&savegameManager);
 }
-

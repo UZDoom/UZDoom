@@ -38,7 +38,7 @@ extend class Actor
 
 	//============================================================================
 	//
-	// 
+	//
 	//
 	//============================================================================
 
@@ -65,7 +65,7 @@ extend class Actor
 			mo.LastHeard = null;
 		}
 	}
-	
+
 	//==========================================================================
 	//
 	// A_TossGib
@@ -106,7 +106,7 @@ extend class Actor
 		double pitch = AimLineAttack (angle, MISSILERANGE);
 		LineAttack (Angle + Random2[ShootGun]() * (11.25 / 256), MISSILERANGE, pitch, 3*random[ShootGun](1, 5), 'Hitscan', "StrifePuff");
 	}
-	
+
 	//==========================================================================
 	//
 	//
@@ -144,7 +144,7 @@ extend class Actor
 			Die (target, target);
 		}
 	}
-	
+
 	//==========================================================================
 	//
 	//
@@ -159,7 +159,7 @@ extend class Actor
 			drop.Vel.Z = -1.;
 		}
 		A_Explode(64, 64, XF_NOSPLASH|XF_HURTSOURCE|XF_NOTMISSILE, damagetype: 'Fire');
-	}	
+	}
 
 	//==========================================================================
 	//
@@ -172,7 +172,7 @@ extend class Actor
 		bSpecial = false;
 		CurSector.RemoveForceField();
 	}
-	
+
 	//==========================================================================
 	//
 	//
@@ -218,5 +218,5 @@ extend class Actor
 		}
 	}
 
-	
+
 }

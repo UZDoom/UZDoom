@@ -29,7 +29,7 @@ namespace swrenderer
 {
 	class RenderThread;
 	class RenderViewport;
-	
+
 	class WallDrawerArgs : public DrawerArgs
 	{
 	public:

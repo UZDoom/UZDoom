@@ -1,0 +1,644 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-27 16:12+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG1"
+msgstr "Zijn deze bugs te hard voor je?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG"
+msgstr ""
+"Weet je zeker dat je\n"
+"de actie wilt staken?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG2"
+msgstr "Proberen te stoppen? En je noemt jezelf een hacker?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG3"
+msgstr "Kom terug voordat ik een virus in je uitlaatpijp stuur!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG4"
+msgstr "Echte hackers komen nooit uit de actie."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG5"
+msgstr "Kom op! Je hebt het beste deel nog niet gezien!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG6"
+msgstr "Geef het nu op, en cyberspace is een toast!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG7"
+msgstr "GENIE doet je de groeten, klootzak!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG8"
+msgstr "Hmm. Tot zover de held, Hacker."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG9"
+msgstr "Wat? Ga je liever terug naar de pen?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG10"
+msgstr "Je had de blauwe pil moeten nemen."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG11"
+msgstr "De naam van het spel is niet Twitch n' Run!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG12"
+msgstr "Het redden van de wereld kan wachten, toch?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG13"
+msgstr "Denk dat het tijd is om het te maken als het 'net en splitsen!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG14"
+msgstr "Ga niet af en vergeet HacX niet, nu!"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SUICIDE"
+msgstr "%o verwijderd zichzelf uit het universum."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_FALLING"
+msgstr "%o vormde een krater ter grootte van Kansas."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_CRUSH"
+msgstr "%o werd een menselijke pannenkoek."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_EXIT"
+msgstr "%o probeerde zich terug te trekken."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_WATER"
+msgstr "%o zwom als een baksteen."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SLIME"
+msgstr "%o werd nucleair."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_LAVA"
+msgstr "%o nam een warm bad."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_BARREL"
+msgstr "%o overdosering op nitroglycerine."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SPLASH"
+msgstr "%o wordt gevild in kleine stukjes."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_R_SPLASH"
+msgstr "%o wilde zien hoe %g er binnenstebuiten uitzag."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_ROCKET"
+msgstr "%o wilde zien hoe %g er binnenstebuiten uitzag."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_KILLEDSELF"
+msgstr "%o schrapte zichzelf uit het universum."
+
+msgid "OB_THUG"
+msgstr "%o is niet langer de dominante soort."
+
+msgid "OB_ANDROID"
+msgstr "%o aangesloten op de verkeerde machine."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o kreeg een monsterlijke cybertrap in @[zijn_haar_nl] kont."
+
+msgid "OB_ICE"
+msgstr "%o was IJS'd."
+
+msgid "OB_BUZZER"
+msgstr "%o voelt een beetje gezoemd."
+
+msgid "OB_STEALTH"
+msgstr "%o ontdekt een nogal schokkende ontwikkeling."
+
+msgid "OB_DMAN"
+msgstr "%o werd gewist uit cyberspace."
+
+msgid "OB_GLASS"
+msgstr "%o gaf zichzelf een glazen kaak."
+
+msgid "OB_MANIAC"
+msgstr "%o's levenslange lidmaatschap werd beëindigd."
+
+msgid "OB_MANIACHIT"
+msgstr ""
+"%o stierf op een of andere willekeurige manier die ik me niet kan voorstellen."
+
+msgid "OB_TERMIN"
+msgstr "%o werd gebakken door een femme fatale freak."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o kwam een beetje in de buurt van het andere geslacht."
+
+msgid "OB_REPLI"
+msgstr "%o nam afscheid van een oude vriendin."
+
+msgid "OB_REPLIHIT"
+msgstr "%o werd in de rug gestoken door een oude vriend."
+
+msgid "OB_PHAGE"
+msgstr "%o werd door natuurlijke selectie weggehaald."
+
+msgid "OB_THORN"
+msgstr "%o kon niet ontsnappen aan een netelige dood."
+
+msgid "OB_SUMATIC"
+msgstr "%o nam een sumo punch in de lies."
+
+msgid "OB_GENIE"
+msgstr "%o kreeg niet drie wensen."
+
+msgid "OB_MINE"
+msgstr "%o probeerde een mijn te aaien."
+
+msgid "OB_MPKICK"
+msgstr "%o nam %k's Bruce Lee fu-kick in het gezicht."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o viel uit elkaar via %k's schokkende onthulling."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o nam een dubbele dosis van %k's straf."
+
+msgid "OB_MPTAZER"
+msgstr "%o werd uitgeschakeld door %k's schokstick."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o kreeg een gezicht vol met %k's ijskoude toorn."
+
+msgid "OB_MPUZI"
+msgstr "%o werd vol gaten geboord met %k, in gangsta-stijl."
+
+msgid "OB_MPZOOKA"
+msgstr "%o at %o %k's fotonbom."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o werd gereduceerd tot een nette stapel fotonen met %k."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o werd gereduceerd tot antimaterie met %k."
+
+msgid "OB_MPNUKE"
+msgstr "%o geslikt %o nuke %k's nuke."
+
+msgid "OB_MPNUKESPLASH"
+msgstr ""
+"%o werd nucleair van de massavernietigingswoede van %k's massavernietigingswoede."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MPTELEFRAG"
+msgstr "%o werd binnenstebuiten gekeerd met %k."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MONTELEFRAG"
+msgstr "De atoomstructuur van %o werd gesplitst."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_DEFAULT"
+msgstr "%o is spontaan verlopen."
+
+msgid "GOTNUKER"
+msgstr "Je pakt een NUKER! Zuig hier maar aan!"
+
+msgid "GOTUZI"
+msgstr "Je hebt een UZI!!"
+
+msgid "GOTREZNATOR"
+msgstr "Een HOIG Reznator - FRY sommige kont"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Je hebt een Photon 'Zooka!"
+
+msgid "GOTBIGSTICK"
+msgstr "Je draagt een Big Stick!"
+
+msgid "GOTTAZER"
+msgstr "Je hebt een Tazer!!"
+
+msgid "GOTCRYOGUN"
+msgstr "Je pakt een Cryogun! FREEZE!"
+
+msgid "GOTROUNDS"
+msgstr "Je pakt wat rondes!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Je pakt een kist met rondes!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Je pakt een Torpedo!"
+
+#, fuzzy
+msgid "GOTTORPEDOS"
+msgstr "Je pakt een kist Torpedo's!"
+
+msgid "GOTMOLECULES"
+msgstr "Je pakt een molecuulmodule!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Je pakt een tank vol met moleculen!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Je pakt een paar patronen!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Je pakt een kist patronen!"
+
+msgid "GOTVALISE"
+msgstr "Je pakt een Valise gevuld met goederen!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Krachtveld!"
+
+msgid "GOTMICROTEL"
+msgstr "007Microtel"
+
+msgid "GOTENKBLIND"
+msgstr "Jij bent EnK Blind!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Vulcan rubber Laarzen!"
+
+msgid "GOTSIARRAY"
+msgstr "SI Array-toewijzing!"
+
+msgid "GOTINFRARED"
+msgstr "Infrarood vizier!"
+
+msgid "GOTINHALER"
+msgstr "Adem diep in, inhalator!"
+
+msgid "GOTHYPONEED"
+msgstr "Een dosis Hydergine van een Hypo redt je!"
+
+msgid "GOTHYPO"
+msgstr "Je pakt een Hypo!"
+
+msgid "GOTKEYCARD"
+msgstr "U heeft een sleutelkaart gevonden!"
+
+msgid "GOTCKEY"
+msgstr "Je hebt een C-sleutel gevonden!"
+
+msgid "GOTPASSWORD"
+msgstr "U heeft een wachtwoord gevonden!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Je hebt een blauwe Z-sleutel gevonden!"
+
+msgid "GOTYELWZKEY"
+msgstr "Je hebt een gele Z-sleutel gevonden!"
+
+msgid "GOTREDZKEY"
+msgstr "Je hebt een rode Z-sleutel gevonden!"
+
+msgid "GOTBODYARMOR"
+msgstr "Kogelvrije vesten!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrofenoxine"
+
+msgid "GOTKEVLARVEST"
+msgstr "Pak een Kevlar vest!"
+
+#, fuzzy
+msgid "GOTSKEVLARVEST"
+msgstr "Je pakt een Super Kevlar vest!"
+
+msgid "GOTMICROKIT"
+msgstr "Je pakt een MicroKit!"
+
+msgid "GOTDAMPENER"
+msgstr "Je pakt een Demper!"
+
+msgid "PD_CKEY"
+msgstr "Je hebt een C-sleutel nodig om toegang te krijgen tot dit item!"
+
+msgid "PD_KEYCARD"
+msgstr "U heeft een sleutelkaart nodig om toegang te krijgen tot dit item!"
+
+msgid "PD_PASSWORD"
+msgstr "Je hebt een wachtwoord nodig om toegang te krijgen tot dit item!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Je hebt een blauwe Z-sleutel nodig om dit te laten werken."
+
+msgid "PD_REDZKEY"
+msgstr "Je hebt een rode Z-sleutel nodig om dit te laten werken!"
+
+msgid "PD_YELWZKEY"
+msgstr "Je hebt een gele Z-sleutel nodig om dit te laten werken!"
+
+msgid "X1TEXT"
+msgstr ""
+"Twintig miljoen in goud lijkt al die verergering\n"
+"niet waard, of wel, hacker? Het laat de gevangenis\n"
+"eruit zien als een verdomde picknick!\n"
+"Lelijk bio-mutaties en je medemensen hingen\n"
+"als voedselzakken aan een plafond.\n"
+"\n"
+"Wat is dit GENIE in godsnaam? Als geen enkele\n"
+"computer die je ooit hebt gehackt!\n"
+"Je kunt maar beter de volgende terminal vinden,\n"
+"een ritje door de c-ruimte maken, een paar\n"
+"gemuteerde kontdobbelstenen dobbelen,\n"
+"en Dodge in hemelsnaam verlaten!"
+
+#, fuzzy
+msgid "X2TEXT"
+msgstr ""
+"Waar zijn alle mensen?! \n"
+"Parijs is een spookstad, tenzij je mutanten\n"
+"als uitstekende burgers beschouwt.\n"
+"\n"
+"Je hebt bloedige weerstand geraakt. Man, kan\n"
+"deze beestjes vechten! Gelukkig voor jou\n"
+"zijn ze niet de helderste lichten op het blok.\n"
+"\n"
+"Maar je hebt een aantal van de informatica\n"
+"gekregen die de subcommissie wil. En het is\n"
+"vervelend! \n"
+"Menselijke neurale vloeistoffen voeden deze\n"
+"beestjes! Geen wonder dat de buurt een\n"
+"beetje schaarser wordt. Rapporteer aan\n"
+"de subcommissie. En let op je rug..."
+
+#, fuzzy
+msgid "X3TEXT"
+msgstr ""
+"De beschaving zoals je die kende is nada! \n"
+"\n"
+"Geen vrienden, geen familie. Geen mensen meer.\n"
+"In ieder geval geen normale mensen.\n"
+"Nog maar één ding over...GENIE!\n"
+"\n"
+"En als je naar het einde van het universum\n"
+"moet gaan, vind je de gemuteerde kont!\n"
+"want nu ben je boos!\n"
+"\n"
+"En het goud? Hel, dit is gratis.\n"
+"\n"
+"... (wordt vervolgd)..."
+
+#, fuzzy
+msgid "X5TEXT"
+msgstr ""
+"Je leeft nog!\n"
+"Wat zijn die kansen, hacker?!\n"
+"\n"
+"Je kunt het subcommissie niet bereiken,\n"
+"wat betekent dat het in gevaar is gebracht.\n"
+"\n"
+"Je... bent alleen."
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp Corp."
+
+msgid "TXT_HACXMAP02"
+msgstr "Tunnelstad"
+
+msgid "TXT_HACXMAP03"
+msgstr "Lava Bijlage"
+
+msgid "TXT_HACXMAP04"
+msgstr "Alcatraz"
+
+msgid "TXT_HACXMAP05"
+msgstr "Cyber Circus"
+
+msgid "TXT_HACXMAP06"
+msgstr "Digi-Ota"
+
+msgid "TXT_HACXMAP07"
+msgstr "De grote muur"
+
+msgid "TXT_HACXMAP08"
+msgstr "Tuin van lekkernijen"
+
+msgid "TXT_HACXMAP09"
+msgstr "Verborgen Vesting"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarchistische droom"
+
+msgid "TXT_HACXMAP11"
+msgstr "Nietus Onsus!"
+
+msgid "TXT_HACXMAP12"
+msgstr "Gothische-handschoen"
+
+msgid "TXT_HACXMAP13"
+msgstr "De Riolen"
+
+msgid "TXT_HACXMAP14"
+msgstr "Trode oorlogen"
+
+msgid "TXT_HACXMAP15"
+msgstr "Schemering van Enk's"
+
+msgid "TXT_HACXMAP16"
+msgstr "Proteanische Cybex"
+
+msgid "TXT_HACXMAP17"
+msgstr "Rivier van bloed"
+
+msgid "TXT_HACXMAP18"
+msgstr "Bizarro"
+
+msgid "TXT_HACXMAP19"
+msgstr "De oorlogskamers"
+
+msgid "TXT_HACXMAP20"
+msgstr "Inbreker alarm!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Drogende kamer"
+
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CLEV"
+msgstr "Nu we aankomen bij...."
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CHOPPERS"
+msgstr "...gaat je kont bakken!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap of Lite-amp?"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLDX"
+msgstr "Laten we serieus worden!"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCON"
+msgstr "Cyberslicer-modus AAN"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCOFF"
+msgstr "Cyberslicer-modus UIT"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NOMUS"
+msgstr "Selectie: Onmogelijk"
+
+# Should probably not be translated...
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_MUS"
+msgstr "Zet het volume harder\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Twitch n'Kill-modus"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_FAADDED"
+msgstr "Het zij zo, Hacker."
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDON"
+msgstr "Cyberpotentiemodus AAN"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDOFF"
+msgstr "Cyberpotentiemodus UIT"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWON"
+msgstr "Tracking AAN"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Tracking UIT"
+
+msgctxt "doom hacx.hacx1"
+msgid "DOSY"
+msgstr "- druk op Y om weg te lopen! -"
+
+msgctxt "doom hacx.hacx1"
+msgid "ENDGAME"
+msgstr ""
+"Ben je gek of onaangepast?\n"
+"Nou? Ja of Nee!"
+
+msgctxt "doom hacx.hacx1"
+msgid "NIGHTMARE"
+msgstr ""
+"Weet u het zeker? Je kunt niet omgaan met\n"
+"deze vaardigheid, hacker!\n"
+"\n"
+"Druk op Y om te sterven."
+
+# For most languages the original Doom text should suffice.
+msgctxt "doom hacx.hacx1"
+msgid "QSPROMPT"
+msgstr ""
+"Snel opslaan over je spel genaamd\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Druk op Y of N."
+
+msgctxt "doom hacx.hacx1"
+msgid "QLPROMPT"
+msgstr ""
+"Wil je het spel snel laden met de naam\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Druk op Y of N."
+
+msgid "CC_THUG"
+msgstr "Schurk"
+
+msgid "CC_ANDROID"
+msgstr "Androïde"
+
+msgid "CC_ICE"
+msgstr "IJS"
+
+msgid "CC_BUZZER"
+msgstr "Zoemer"
+
+msgid "CC_DMAN"
+msgstr "D-Man"
+
+msgid "CC_PHAGE"
+msgstr "Faag"
+
+msgid "CC_MONSTRUCT"
+msgstr "Monstructie"
+
+msgid "CC_MECH"
+msgstr "Mecha Maniak"
+
+msgid "CC_TERMI"
+msgstr "Terminatrix"
+
+msgid "CC_THORN"
+msgstr "Doornding"
+
+msgid "CC_MAJONG"
+msgstr "Majong 7"
+
+msgctxt "doom hacx.hacx1"
+msgid "CC_HERO"
+msgstr "Dan Evanger"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_BABY"
+msgstr "Niet schieten, alsjeblieft!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_EASY"
+msgstr "Aargh, ik heb gezondheid nodig!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NORMAL"
+msgstr "Laten we ze uit elkaar scheuren!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_HARD"
+msgstr "Ik ben onsterfelijk!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NIGHTMARE"
+msgstr "Waanzin!"

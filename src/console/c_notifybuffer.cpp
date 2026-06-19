@@ -139,7 +139,7 @@ void FNotifyBuffer::Draw()
 	bool center = (con_centernotify != 0.f);
 	int line, lineadv, color, j;
 	bool canskip;
-	
+
 	FFont* font = generic_ui ? NewSmallFont : AlternativeSmallFont;
 
 	line = Top + font->GetDisplacement();

@@ -176,7 +176,7 @@ struct FVector4PalEntry
 		return *this;
 	}
 
-	FVector4PalEntry& SetFlt(float v1, float v2, float v3, float v4)	
+	FVector4PalEntry& SetFlt(float v1, float v2, float v3, float v4)
 	{
 		r = v1;
 		g = v2;
@@ -694,7 +694,7 @@ public:
 
 	template <class T> void SetVertexBuffer(T *buffer)
 	{
-		auto ptrs = buffer->GetBufferObjects(); 
+		auto ptrs = buffer->GetBufferObjects();
 		SetVertexBuffer(ptrs.first, 0, 0);
 		SetIndexBuffer(ptrs.second);
 	}
@@ -766,4 +766,3 @@ public:
 	}
 
 };
-

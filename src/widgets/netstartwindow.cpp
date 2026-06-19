@@ -62,7 +62,7 @@ void NetStartWindow::NetConnect(int client, const char* name, unsigned flags, in
 
 	Instance->LobbyWindow->UpdateItem(value, client, 1);
 	Instance->LobbyWindow->UpdateItem(name, client, 2);
-	
+
 	value = "";
 	if (status == 1)
 		value = "CONNECTING";

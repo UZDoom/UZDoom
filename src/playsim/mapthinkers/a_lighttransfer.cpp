@@ -171,4 +171,3 @@ void DWallLightTransfer::DoTransfer (short lightlevel, int target, uint8_t flags
 		}
 	}
 }
-

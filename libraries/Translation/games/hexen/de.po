@@ -2,16 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 05:40+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/"
-"hexen/de/>\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/hexen/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 msgid "TXT_HEXEN_MAP01"
 msgstr "Trennungshalle"
@@ -129,6 +128,7 @@ msgstr ""
 "Wände der Säulenhalle all\n"
 "deinen Fortschritt zu verspotten."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS2MSG"
 msgstr ""
 "Während deine Gedanken immer noch\n"
@@ -154,6 +154,7 @@ msgstr ""
 "den Göttern des Schmerzes, wie wirst\n"
 "du jemals hinaus finden können?"
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS3MSG"
 msgstr ""
 "Die mächtigsten Waffen und Artefakte\n"
@@ -178,6 +179,7 @@ msgstr ""
 "Irgendwo da drin warten deine Feinde\n"
 "auf dich..."
 
+#, fuzzy
 msgid "TXT_HEXEN_CLUS4MSG"
 msgstr ""
 "„... und er soll reisen in das Reich der\n"
@@ -206,6 +208,7 @@ msgstr ""
 "erhabenes Podium und darauf die\n"
 "einzige Lichtquelle in dieser Welt."
 
+#, fuzzy
 msgid "TXT_HEXEN_WIN2MSG"
 msgstr ""
 "Dies kann nur die Chaossphäre sein,\n"
@@ -265,6 +268,7 @@ msgstr "bei den Sieben Portalen"
 msgid "TXT_ACS_MAP05_8_STAIR"
 msgstr "Stufen bei den Sieben Portale wurden erbaut"
 
+#, fuzzy
 msgid "TXT_ACS_MAP05_9_YOUHA"
 msgstr "Du must einen weiteren Schalter finden..."
 
@@ -319,6 +323,7 @@ msgstr "Die Tür ist von innen verriegelt"
 msgid "TXT_ACS_MAP22_3_APLAT"
 msgstr "Im Turm hat sich eine Plattform gesenkt"
 
+#, fuzzy
 msgid "TXT_ACS_MAP22_27_YOUHA"
 msgstr "Du spielst schon zu lange, Sterblicher..."
 

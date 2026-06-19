@@ -54,6 +54,3 @@ struct HWViewpointUniforms
 		mNormalViewMatrix.computeNormalMatrix(mViewMatrix);
 	}
 };
-
-
-

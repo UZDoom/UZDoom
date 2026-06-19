@@ -64,7 +64,7 @@ class StrifeGrenadeLauncher : StrifeWeapon
 		GREF B 5 Bright A_Light2;
 		Goto LightDone;
 	}
-	
+
 	//============================================================================
 	//
 	// A_FireGrenade
@@ -262,7 +262,7 @@ class PhosphorousFire : Actor
 		FLBE JK 2 Bright;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor target, int damage, Name damagetype)
 	{
 		// This may look a bit weird but is the same as in SVE:
@@ -278,7 +278,7 @@ class PhosphorousFire : Actor
 		}
 		return damage;
 	}
-	
+
 	// This function is mostly redundant and only kept in case some mod references it.
 	void A_Burnarea ()
 	{
@@ -316,7 +316,7 @@ class PhosphorousFire : Actor
 			}
 
 			Vector2 newpos = Vec2Offset(xofs, yofs);
-			
+
 			Sector sec = Level.PointInSector(newpos);
 			// Consider portals and 3D floors instead of just using the current sector's z.
 			double floorh = sec.NextLowestFloorAt(newpos.x, newpos.y, pos.z+4, 0, MaxStepHeight);
@@ -339,6 +339,5 @@ class PhosphorousFire : Actor
 		}
 	}
 
-	
-}
 
+}

@@ -43,7 +43,7 @@ int		BlendR, BlendG, BlendB, BlendA;
 void InitPalette ()
 {
 	uint8_t pal[768];
-	
+
 	ReadPalette(fileSystem.GetNumForName("PLAYPAL"), pal);
 
 	GPalette.Init(NUM_TRANSLATION_TABLES, nullptr);
@@ -76,4 +76,3 @@ void InitPalette ()
 	BuildTransTable (GPalette.BaseColors);
 
 }
-

@@ -35,7 +35,7 @@ namespace swrenderer
 	public:
 		VisibleSprite() { RenderStyle = STYLE_Normal; }
 		virtual ~VisibleSprite() { }
-		
+
 		void Render(RenderThread *thread, Fake3DTranslucent clip3DFloor);
 
 		bool IsCurrentPortalUniq(int portalUniq) const { return CurrentPortalUniq == portalUniq; }

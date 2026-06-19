@@ -3,7 +3,9 @@
 #include "widgets/scrollbar/scrollbar.h"
 #include "core/utf8reader.h"
 #include "core/colorf.h"
+
 #include <algorithm>
+#include <cmath>
 
 #ifdef _MSC_VER
 #pragma warning(disable: 4267) // warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
@@ -549,6 +551,19 @@ void TextEdit::OnKeyDown(InputKey key)
 
 void TextEdit::OnKeyUp(InputKey key)
 {
+}
+
+bool TextEdit::OnMouseWheel(const Point& pos, InputKey key)
+{
+	if (key == InputKey::MouseWheelUp)
+	{
+		vert_scrollbar->SetPosition(vert_scrollbar->GetPosition() - 1);
+	}
+	else if (key == InputKey::MouseWheelDown)
+	{
+		vert_scrollbar->SetPosition(vert_scrollbar->GetPosition() + 1);
+	}
+	return true;
 }
 
 void TextEdit::OnSetFocus()

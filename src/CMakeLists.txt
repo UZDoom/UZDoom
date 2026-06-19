@@ -24,7 +24,7 @@ if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 endif()
 
 if( APPLE )
-    option( OSX_COCOA_BACKEND "Use native Cocoa backend instead of SDL" ON )
+		option( OSX_COCOA_BACKEND "Use native Cocoa backend instead of SDL" ON )
 endif()
 
 option( ZDOOM_ENABLE_SWR "Enable software renderer" ON )
@@ -325,14 +325,15 @@ option(BUILD_FLATPAK "Enable Flatpak-specific build options" OFF)
 
 # Update gitinfo.h
 
-add_custom_target( revision_check ALL
+add_custom_target( revision_check
 	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/cmake/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
+	BYPRODUCTS "${CMAKE_BINARY_DIR}/gitinfo.h"
 	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 )
 
 # required libraries
 
-set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} miniz "${BZIP2_LIBRARIES}" "${CMAKE_DL_LIBS}" "${DRPC_LIBRARIES}")
+set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} miniz "${BZIP2_LIBRARIES}" "${CMAKE_DL_LIBS}")
 if (HAVE_VULKAN)
 	list( APPEND PROJECT_LIBRARIES "zvulkan" )
 endif()
@@ -341,6 +342,16 @@ list( APPEND PROJECT_LIBRARIES "zwidget" )
 list( APPEND PROJECT_LIBRARIES "webp" )
 
 message("Building for target architecture: ${TARGET_ARCHITECTURE}")
+
+# CURL
+
+if( CURL_FOUND )
+	include_directories( SYSTEM "${CURL_INCLUDE_DIRS}" )
+
+	if( NOT DEFINED LOAD_CURL_AT_RUNTIME OR NOT LOAD_CURL_AT_RUNTIME)
+		set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} ${CURL_LIBRARIES} )
+	endif()
+endif()
 
 # VPX
 
@@ -372,7 +383,7 @@ else()
 	message( SEND_ERROR "Could not find libvpx" )
 endif()
 
-include_directories( SYSTEM "${BZIP2_INCLUDE_DIR}" "${LZMA_INCLUDE_DIR}" "${ZMUSIC_INCLUDE_DIR}" "${DRPC_INCLUDE_DIR}")
+include_directories( SYSTEM "${BZIP2_INCLUDE_DIR}" "${LZMA_INCLUDE_DIR}" "${ZMUSIC_INCLUDE_DIR}")
 
 if( ${HAVE_VM_JIT} )
 	add_definitions( -DHAVE_VM_JIT )
@@ -630,6 +641,8 @@ file( GLOB HEADER_FILES
 	rendering/hwrenderer/*.h
 	rendering/hwrenderer/scene/*.h
 	*.h
+
+	${CMAKE_BINARY_DIR}/gitinfo.h
 )
 
 set ( SWRENDER_SOURCES
@@ -785,8 +798,27 @@ endif()
 
 set (FASTMATH_SOURCES ${FASTMATH_SOURCES})
 
+if (DEFINED USE_UPDATER AND USE_UPDATER)
+	set (UPDATER_SOURCES
+		widgets/updatebuttonbar.cpp
+	)
+
+	add_compile_definitions("HAS_UPDATER")
+else()
+	set (UPDATER_SOURCES "")
+endif()
+
+if (DEFINED CURL_REQUIRED AND CURL_REQUIRED AND DEFINED LOAD_CURL_AT_RUNTIME AND LOAD_CURL_AT_RUNTIME)
+	set (CURL_SOURCES
+		curl_loader.cpp
+	)
+
+	add_compile_definitions("RUNTIME_CURL")
+else()
+	set (CURL_SOURCES "")
+endif()
+
 set (PCH_SOURCES
-	common/thirdparty/richpresence.cpp
 	am_map.cpp
 	playsim/bots/b_bot.cpp
 	playsim/bots/b_func.cpp
@@ -816,6 +848,7 @@ set (PCH_SOURCES
 	hu_scores.cpp
 	m_cheat.cpp
 	m_misc.cpp
+	version.cpp
 	playsim/p_acs.cpp
 	playsim/p_actionfunctions.cpp
 	p_conversation.cpp
@@ -984,6 +1017,8 @@ set (PCH_SOURCES
 	widgets/settingspage.cpp
 	widgets/themedata.cpp
 	widgets/widgetresourcedata.cpp
+	${UPDATER_SOURCES}
+	${CURL_SOURCES}
 
 	common/audio/sound/i_sound.cpp
 	common/audio/sound/oalsound.cpp
@@ -1286,7 +1321,10 @@ add_executable( zdoom WIN32 MACOSX_BUNDLE ${GAME_SOURCES} )
 
 target_include_directories( zdoom PRIVATE ${CMAKE_BINARY_DIR} )
 
-target_precompile_headers( zdoom PRIVATE g_pch.h )
+option(USE_PCH "Enable Pre-compiled headers" ON)
+if (USE_PCH)
+	target_precompile_headers( zdoom PRIVATE g_pch.h )
+endif()
 
 set_source_files_properties( ${FASTMATH_SOURCES} PROPERTIES COMPILE_FLAGS ${ZD_FASTMATH_FLAG} )
 set_source_files_properties( xlat/parse_xlat.cpp PROPERTIES OBJECT_DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c" )
@@ -1299,12 +1337,16 @@ if (ENABLE_IWYU)
 	find_program(IWYU NAMES include-what-you-use iwyu)
 	if(IWYU)
 		message(STATUS "Using IWYU, found at ${IWYU}")
+		if (USE_PCH)
+			message(WARNING "PCH is known to make IWYU diagnostics fail. Consider disabling PCH with USE_PCH=OFF")
+		endif()
 		set_target_properties(zdoom PROPERTIES
 			CXX_INCLUDE_WHAT_YOU_USE "${IWYU}"
 			"-Xiwyu" "--mapping_file=${CMAKE_SOURCE_DIR}/tools/iwyu.imp"
 		)
+		set_source_files_properties(utility/name.cpp PROPERTIES SKIP_LINTING ON)
 	else()
-		message(WARNING "IWYU not found.")
+		message(STATUS "IWYU not found. Diagnostics disabled")
 	endif()
 endif()
 
@@ -1324,7 +1366,7 @@ if( UNIX )
 	endif()
 endif()
 
-target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash)
+target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash )
 include_directories(
 	BEFORE
 	.
@@ -1392,13 +1434,11 @@ include_directories(
 	${SYSTEM_SOURCES_DIR}
 )
 
-add_dependencies( zdoom revision_check )
-
 set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
 set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
 
 if(NOT MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
+	set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
 endif()
 
 if( MSVC )
@@ -1568,6 +1608,8 @@ endif()
 install(TARGETS zdoom
 		DESTINATION ${INSTALL_PATH}
 		COMPONENT "Game executable")
+
+add_dependencies( zdoom revision_check )
 
 source_group("Audio Files" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/sound/.+")
 source_group("Game Data" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/gamedata/.+")

@@ -109,7 +109,7 @@ class MessageBoxMenu : Menu
 
 		for (i = 0; i < c; i++)
 		{
-			screen.DrawText (textFont, Font.CR_UNTRANSLATED, destWidth/2 - mMessage.StringWidth(i)*NotifyFontScale/2, y, mMessage.StringAt(i), DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true, 
+			screen.DrawText (textFont, Font.CR_UNTRANSLATED, destWidth/2 - mMessage.StringWidth(i)*NotifyFontScale/2, y, mMessage.StringAt(i), DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true,
 				DTA_ScaleX, NotifyFontScale, DTA_ScaleY, NotifyFontScale);
 			y += fontheight;
 		}
@@ -154,7 +154,7 @@ class MessageBoxMenu : Menu
 	{
 		if (Handler != null)
 		{
-			if (res) 
+			if (res)
 			{
 				CallHandler();
 			}
@@ -168,12 +168,12 @@ class MessageBoxMenu : Menu
 		{
 			if (mMessageMode == 0)
 			{
-				if (mAction == 'None') 
+				if (mAction == 'None')
 				{
 					mParentMenu.MenuEvent(res? MKEY_MBYes : MKEY_MBNo, false);
 					Close();
 				}
-				else 
+				else
 				{
 					Close();
 					if (res) SetMenu(mAction, -1);
@@ -199,12 +199,12 @@ class MessageBoxMenu : Menu
 				int ch = ev.KeyChar;
 				ch = ch >= 65 && ch <91? ch + 32 : ch;
 
-				if (ch == 110 /*'n'*/ || ch == 32) 
+				if (ch == 110 /*'n'*/ || ch == 32)
 				{
-					HandleResult(false);		
+					HandleResult(false);
 					return true;
 				}
-				else if (ch == 121 /*'y'*/) 
+				else if (ch == 121 /*'y'*/)
 				{
 					HandleResult(true);
 					return true;
@@ -307,6 +307,3 @@ class MessageBoxMenu : Menu
 
 
 }
-
-
-

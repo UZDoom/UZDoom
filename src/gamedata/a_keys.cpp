@@ -221,7 +221,7 @@ static void PrintMessage (const char *str)
 {
 	if (str != NULL)
 	{
-		if (str[0]=='$') 
+		if (str[0]=='$')
 		{
 			str = GStrings.GetString(str+1);
 		}
@@ -318,7 +318,7 @@ static void ParseLock(FScanner &sc, int &currentnumber)
 
 		default:
 			mi = PClass::FindActor(sc.String);
-			if (mi) 
+			if (mi)
 			{
 				lock->keylist.Reserve(1);
 				AddOneKey(&lock->keylist.Last(), mi, sc, ignorekey, currentnumber);
@@ -370,7 +370,7 @@ static void ClearLocks()
 
 //---------------------------------------------------------------------------
 //
-// create a sorted list of the defined keys so 
+// create a sorted list of the defined keys so
 // this doesn't have to be done each frame
 //
 // For use by the HUD and statusbar code to get a consistent order.
@@ -432,7 +432,7 @@ void P_InitKeyMessages()
 		FScanner sc(lump);
 		while (sc.GetString ())
 		{
-			if (sc.Compare("LOCK")) 
+			if (sc.Compare("LOCK"))
 			{
 				ParseLock(sc, currentnumber);
 			}
@@ -477,7 +477,7 @@ int P_CheckKeys (AActor *owner, int keynum, bool remote, bool quiet)
 	FSoundID failage[2] = { S_FindSound("*keytry"), S_FindSound("misc/keytry") };
 
 	auto lock = Locks.CheckKey(keynum);
-	if (!lock) 
+	if (!lock)
 	{
 		if (quiet) return false;
 		if (keynum == 103 && (gameinfo.flags & GI_SHAREWARE))
@@ -500,7 +500,7 @@ int P_CheckKeys (AActor *owner, int keynum, bool remote, bool quiet)
 	// If we get here, that means the actor isn't holding an appropriate key.
 
 	// show a message if we're viewing as the current actor, or if the message was triggered by a voodoo doll of the current player
-	bool doprintmsg = owner->CheckLocalView() || 
+	bool doprintmsg = owner->CheckLocalView() ||
 		(!(owner->Level->i_compatflags2 & COMPATF2_NOVDOLLLOCKMSG) && owner->player && owner->player->mo->CheckLocalView());
 	if ( doprintmsg )
 	{

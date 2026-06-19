@@ -53,11 +53,11 @@ typedef enum
   FF_CLIPPED		   = 0x1000000,	// split into several dynamic ffloors
   FF_SEETHROUGH        = 0x2000000,
   FF_SHOOTTHROUGH      = 0x4000000,
-  FF_FADEWALLS         = 0x8000000,	// Applies real fog to walls and doesn't blend the view		
+  FF_FADEWALLS         = 0x8000000,	// Applies real fog to walls and doesn't blend the view
   FF_ADDITIVETRANS	   = 0x10000000, // Render this floor with additive translucency
   FF_FLOOD			   = 0x20000000, // extends towards the next lowest flooding or solid 3D floor or the bottom of the sector
   FF_THISINSIDE		   = 0x40000000, // hack for software 3D with FF_BOTHPLANES
-  FF_RESET			   = 0x80000000, // light effect is completely reset, once interrupted  
+  FF_RESET			   = 0x80000000, // light effect is completely reset, once interrupted
 } ffloortype_e;
 
 // This is for the purpose of Sector_SetContents:
@@ -106,13 +106,13 @@ struct F3DFloor
 	planeref			top;
 
 	short				*toplightlevel;
-	
+
 	unsigned int		flags;
 	line_t*				master;
-	
+
 	sector_t *			model;
 	sector_t *			target;
-	
+
 	int					lastlight;
 	int					alpha;
 
@@ -150,7 +150,7 @@ void P_Spawn3DFloors( void );
 
 struct FLineOpening;
 
-void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *linedef, 
+void P_LineOpening_XFloors (FLineOpening &open, AActor * thing, const line_t *linedef,
 							double x, double y, bool restrict);
 
 secplane_t P_FindFloorPlane(sector_t * sector, const DVector3 &pos);

@@ -187,7 +187,7 @@ DEFINE_GLOBAL(LocalViewPitch);
 static bool UseChaseCam(const player_t& player)
 {
 	return gamestate == GS_LEVEL &&
-	       ((player.cheats & CF_CHASECAM) || (r_deathcamera && player.playerstate == PST_DEAD));
+		   ((player.cheats & CF_CHASECAM) || (r_deathcamera && player.playerstate == PST_DEAD));
 }
 
 //==========================================================================
@@ -261,7 +261,7 @@ void R_SetWindow (FRenderViewpoint &viewpoint, FViewWindow &viewwindow, int wind
 		DrawFSHUD = (windowSize == 11);
 	}
 
-	
+
 	// [RH] Sky height fix for screens not 200 (or 240) pixels tall
 	R_InitSkyMap ();
 
@@ -904,7 +904,7 @@ void R_AddInterpolationPoint(const DVector3a &vec)
 //==========================================================================
 
 static double QuakePower(double factor, double intensity, double offset)
-{ 
+{
 	double randumb;
 	if (intensity == 0)
 	{
@@ -1047,7 +1047,7 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 			// No chase/death cam, so use the view offset.
 			if (!viewPoint.bForceNoViewer)
 				viewPoint.bForceNoViewer = (viewOffset->Flags & VPSF_ABSOLUTEPOS) || !viewOffset->Offset.isZero();
-			
+
 			if (viewOffset->Flags & VPSF_ABSOLUTEPOS)
 			{
 				iView->New.ViewPos.Zero();
@@ -1164,7 +1164,7 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		{
 			const secplane_t& plane = (i < lightlist.Size() - 1u) ? lightlist[i + 1u].plane : viewPoint.sector->floorplane;
 			int viewSide = plane.PointOnSide(viewPoint.Pos);
-			
+
 			// Reverse the direction of the test if the plane was downward facing.
 			// We want to know if the view is above it, whatever its orientation may be.
 			if (plane.fC() < 0.0)
@@ -1226,14 +1226,14 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		screen->SetClearColor(color);
 		SWRenderer->SetClearColor(color);
 	}
-    else
+	else
 	{
 		screen->SetClearColor(GPalette.BlackIndex);
-    }
-	
-	
+	}
+
+
 	// And finally some info that is needed for the hardware renderer
-	
+
 	// Scale the pitch to account for the pixel stretching, because the playsim doesn't know about this and treats it as 1:1.
 	// However, to set up a projection matrix this needs to be adjusted.
 	const double radPitch = viewPoint.Angles.Pitch.Normalized180().Radians();
@@ -1243,7 +1243,7 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 
 	viewPoint.HWAngles.Pitch = FAngle::fromRad((float)asin(angy / alen));
 	viewPoint.HWAngles.Roll = FAngle::fromDeg(viewPoint.Angles.Roll.Degrees());
-	
+
 	// ViewActor only gets set if the camera actor shouldn't be rendered.
 	viewPoint.ViewActor = viewPoint.showviewer ? nullptr : actor;
 }
@@ -1269,7 +1269,7 @@ bool R_ShouldDrawSpriteShadow(AActor *thing)
 {
 	int rf = thing->renderflags;
 	// for wall and flat sprites the shadow math does not work so these must be unconditionally skipped.
-	if (rf & (RF_FLATSPRITE | RF_WALLSPRITE)) return false;	
+	if (rf & (RF_FLATSPRITE | RF_WALLSPRITE)) return false;
 
 	bool doit = false;
 	switch (r_actorspriteshadow)

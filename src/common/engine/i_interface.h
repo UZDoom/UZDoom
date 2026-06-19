@@ -98,6 +98,8 @@ struct FStartupSelectionInfo
 	bool DefaultFullscreen = true;
 	int DefaultFileLoadBehaviour = 0;
 	bool notifyNewRelease = true;
+	FName prideColors = {};
+	float prideMix = 0;
 
 	// Net game info
 	int DefaultNetIWAD = 0;
@@ -120,6 +122,12 @@ struct FStartupSelectionInfo
 	FString DefaultNetAddress = {};
 	int DefaultNetJoinPort = 0;
 	int DefaultNetJoinTeam = 255;
+
+#ifdef HAS_UPDATER
+	int DefaultUpdateInterval = 7;
+	bool bAutoUpdate = false;
+	bool bCheckUpdate = false;
+#endif
 
 	FStartupSelectionInfo() = delete;
 	FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs& args, int startFlags);

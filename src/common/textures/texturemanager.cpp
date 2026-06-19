@@ -37,6 +37,7 @@
 #include "texturemanager.h"
 #include "textures.h"
 #include "vectors.h"
+#include "m_round.h"
 
 using namespace FileSys;
 FTextureManager TexMan;
@@ -86,6 +87,7 @@ void FTextureManager::DeleteAll()
 	FirstTextureForFile.Clear();
 	memset (HashFirst, -1, sizeof(HashFirst));
 	DefaultTexture.SetInvalid();
+	WhiteTexture.SetInvalid();
 
 	BuildTileData.Clear();
 	tmanips.Clear();
@@ -297,7 +299,7 @@ int FTextureManager::ListTextures (const char *name, TArray<FTextureID> &list, b
 		{
 			auto texUseType = tex->GetUseType();
 			// NULL textures must be ignored.
-			if (texUseType!=ETextureType::Null) 
+			if (texUseType!=ETextureType::Null)
 			{
 				unsigned int j = list.Size();
 				if (!listall)
@@ -649,8 +651,8 @@ void FTextureManager::AddHiresTextures (int wadnum)
 							double xscale2 = oldtex->GetTexelLeftOffset(1) * gtex->GetScaleX() / oldtex->GetScaleX();
 							double yscale1 = oldtex->GetTexelTopOffset(0) * gtex->GetScaleY() / oldtex->GetScaleY();
 							double yscale2 = oldtex->GetTexelTopOffset(1) * gtex->GetScaleY() / oldtex->GetScaleY();
-							gtex->SetOffsets(0, xs_RoundToInt(xscale1), xs_RoundToInt(yscale1));
-							gtex->SetOffsets(1, xs_RoundToInt(xscale2), xs_RoundToInt(yscale2));
+							gtex->SetOffsets(0, RoundHalfUp(xscale1), RoundHalfUp(yscale1));
+							gtex->SetOffsets(1, RoundHalfUp(xscale2), RoundHalfUp(yscale2));
 							ReplaceTexture(tlist[i], gtex, true);
 						}
 					}
@@ -749,8 +751,8 @@ void FTextureManager::ParseTextureDef(int lump, FMultipatchTextureBuilder &build
 							double xscale2 = oldtex->GetTexelLeftOffset(1) * gtex->GetScaleX() / oldtex->GetScaleX();
 							double yscale1 = oldtex->GetTexelTopOffset(0) * gtex->GetScaleY() / oldtex->GetScaleY();
 							double yscale2 = oldtex->GetTexelTopOffset(1) * gtex->GetScaleY() / oldtex->GetScaleY();
-							gtex->SetOffsets(0, xs_RoundToInt(xscale1), xs_RoundToInt(yscale1));
-							gtex->SetOffsets(1, xs_RoundToInt(xscale2), xs_RoundToInt(yscale2));
+							gtex->SetOffsets(0, RoundHalfUp(xscale1), RoundHalfUp(yscale1));
+							gtex->SetOffsets(1, RoundHalfUp(xscale2), RoundHalfUp(yscale2));
 							ReplaceTexture(tlist[i], gtex, true);
 						}
 					}
@@ -789,7 +791,7 @@ void FTextureManager::ParseTextureDef(int lump, FMultipatchTextureBuilder &build
 						newtex->SetDisplaySize((float)width, (float)height);
 
 						FTextureID oldtex = TexMan.CheckForTexture(src.GetChars(), ETextureType::MiscPatch);
-						if (oldtex.isValid()) 
+						if (oldtex.isValid())
 						{
 							ReplaceTexture(oldtex, newtex, true);
 							newtex->SetUseType(ETextureType::Override);
@@ -797,7 +799,7 @@ void FTextureManager::ParseTextureDef(int lump, FMultipatchTextureBuilder &build
 						else AddGameTexture(newtex);
 					}
 				}
-			}				
+			}
 			//else Printf("Unable to define hires texture '%s'\n", tex->Name);
 		}
 		else if (sc.Compare("notrim"))
@@ -981,7 +983,7 @@ void FTextureManager::AddTexturesForWad(int wadnum, FMultipatchTextureBuilder &b
 			if (fileSystem.CheckNumForName(Name, ns_graphics) != i)
 			{
 				if (iwad)
-				{ 
+				{
 					// We need to make an exception for font characters of the SmallFont coming from the IWAD to be able to construct the original font.
 					if (strncmp(Name, "STCFN", 5) != 0 && strncmp(Name, "FONTA", 5) != 0) continue;
 					force = true;
@@ -1016,7 +1018,7 @@ void FTextureManager::AddTexturesForWad(int wadnum, FMultipatchTextureBuilder &b
 		// Unfortunately we have to look at everything that comes through here...
 		auto out = MakeGameTexture(CreateTextureFromLump(i), Name, skin ? ETextureType::SkinGraphic : ETextureType::MiscPatch);
 
-		if (out != NULL) 
+		if (out != NULL)
 		{
 			AddGameTexture (out);
 		}
@@ -1061,8 +1063,8 @@ void FTextureManager::SortTexturesByType(int start, int end)
 	Translation.Resize(start);
 
 	static ETextureType texturetypes[] = {
-		ETextureType::Sprite, ETextureType::Null, ETextureType::FirstDefined, 
-		ETextureType::WallPatch, ETextureType::Wall, ETextureType::Flat, 
+		ETextureType::Sprite, ETextureType::Null, ETextureType::FirstDefined,
+		ETextureType::WallPatch, ETextureType::Wall, ETextureType::Flat,
 		ETextureType::Override, ETextureType::MiscPatch, ETextureType::SkinGraphic
 	};
 
@@ -1166,7 +1168,7 @@ void FTextureManager::Init()
 {
 	DeleteAll();
 
-	// Add all the static content 
+	// Add all the static content
 	auto nulltex = MakeGameTexture(new FImageTexture(CreateEmptyTexture()), nullptr, ETextureType::Null);
 	AddGameTexture(nulltex);
 
@@ -1211,6 +1213,7 @@ void FTextureManager::AddTextures(void (*progressFunc_)(), void (*checkForHacks)
 	FirstTextureForFile.Push(Textures.Size());
 
 	DefaultTexture = CheckForTexture ("-NOFLAT-", ETextureType::Override, 0);
+	WhiteTexture = CheckForTexture ("-WHITE-", ETextureType::Override, 0);
 
 	InitPalettedVersions();
 	AdjustSpriteOffsets();
@@ -1273,7 +1276,7 @@ void FTextureManager::InitPalettedVersions()
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -1431,7 +1434,7 @@ int FTextureManager::CountTexturesX ()
 
 		// Only count the patches if the PNAMES come from the current file
 		// Otherwise they have already been counted.
-		if (fileSystem.GetFileContainer(pnames) == wadnum) 
+		if (fileSystem.GetFileContainer(pnames) == wadnum)
 		{
 			count += CountLumpTextures (pnames);
 		}
@@ -1457,7 +1460,7 @@ int FTextureManager::CountLumpTextures (int lumpnum)
 {
 	if (lumpnum >= 0)
 	{
-		auto file = fileSystem.OpenFileReader (lumpnum); 
+		auto file = fileSystem.OpenFileReader (lumpnum);
 		uint32_t numtex = file.ReadUInt32();
 
 		return int(numtex) >= 0 ? numtex : 0;
