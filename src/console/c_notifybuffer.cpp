@@ -115,12 +115,13 @@ void FNotifyBuffer::AddString(int printlevel, FString source)
 		countedIdentical = 1;
 	}
 
-    // Make the suffix directly a part ofthe message string
+	source.StripRight();
+    // insert the suffix directly as part ofthe message string 
     if (countedIdentical > 1)
     {
         source.AppendFormat(" (x%d)", countedIdentical);
     }
-
+	source += '\n';
 
 	// [MK] allow the status bar to take over notify printing
 	if (StatusBar != nullptr)
