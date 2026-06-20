@@ -115,6 +115,12 @@ void FNotifyBuffer::AddString(int printlevel, FString source)
 		countedIdentical = 1;
 	}
 
+    // Make the suffix directly a part ofthe message string
+    if (countedIdentical > 1)
+    {
+        source.AppendFormat(" (x%d)", countedIdentical);
+    }
+
 
 	// [MK] allow the status bar to take over notify printing
 	if (StatusBar != nullptr)
@@ -169,36 +175,17 @@ void FNotifyBuffer::Draw()
 				color = PrintColors[notify.PrintLevel];
 
 			int scale = active_con_scaletext(twod, generic_ui);
-			FString suffix      = "";
-			int     suffixWidth = 0;
+			int textWidth = font->StringWidth(notify.Text);
+			int xPos = 0;
 
-			if (con_stackident && i == Text.Size() - 1 && countedIdentical > 1)
-			{
-				suffix.Format(" (x%d)", countedIdentical);
-				suffixWidth = font->StringWidth(suffix);
-			}
+            if (center)
+            {
+				xPos = (twod->GetWidth() / scale - textWidth) / 2;
+            }
 
-			int textWidth  = font->StringWidth(notify.Text);
-			int totalWidth = textWidth + suffixWidth;
-			int xPos       = 0;
-
-			if (center)
-			{
-				// Calculate center of text + suffix
-				xPos = (twod->GetWidth() / scale - totalWidth) / 2;
-			}
-
-			// Draw the main text
-			DrawText(twod, font, color, xPos, line, notify.Text.GetChars(), DTA_VirtualWidth, twod->GetWidth() / scale,
-			         DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true, DTA_Alpha, alpha, TAG_DONE);
-
-			// Draw the suffix if it exists
-			if (suffixWidth > 0)
-			{
-				DrawText(twod, font, color, xPos + textWidth, line, suffix.GetChars(), DTA_VirtualWidth,
-				         twod->GetWidth() / scale, DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true,
-				         DTA_Alpha, alpha, TAG_DONE);
-			}
+            // Draw the main text
+            DrawText(twod, font, color, xPos, line, notify.Text.GetChars(), DTA_VirtualWidth, twod->GetWidth() / scale,
+                     DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true, DTA_Alpha, alpha, TAG_DONE);
 
 			line += lineadv;
 			canskip = false;
