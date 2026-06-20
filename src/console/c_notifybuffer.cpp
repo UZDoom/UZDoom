@@ -29,6 +29,7 @@
 #include "i_time.h"
 #include "printf.h"
 #include "sbar.h"
+#include "gstrings.h"
 #include "v_video.h"
 #include "vm.h"
 
@@ -119,8 +120,10 @@ void FNotifyBuffer::AddString(int printlevel, FString source)
     // insert the suffix directly as part ofthe message string 
     if (countedIdentical > 1)
     {
-        source.AppendFormat(" (x%d)", countedIdentical);
-    }
+		source += " (";
+		source.AppendFormat(GStrings.GetString("VALFORMAT_MULTIPLIER"), std::to_string(countedIdentical).c_str());
+		source += ")";
+	}
 	source += '\n';
 
 	// [MK] allow the status bar to take over notify printing
