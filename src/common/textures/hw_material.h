@@ -28,7 +28,6 @@ struct MaterialLayerInfo
 {
 	FTexture* layerTexture;
 	int scaleFlags;
-	int clampflags;
 };
 
 //===========================================================================

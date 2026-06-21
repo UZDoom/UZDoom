@@ -113,7 +113,7 @@ public:
 	void TokenMustBe(int token);
 	void MustGetToken(int token, bool evaluate = false);
 	bool CheckToken(int token, bool evaluate = false);
-	bool CheckTokenId(ENamedName id);
+	bool PeekToken(int token, bool evaluate = false);
 
 	bool GetNumber(bool evaluate = false);
 	void MustGetNumber(bool evaluate = false);

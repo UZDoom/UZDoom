@@ -84,3 +84,5 @@ EXTERN_CVAR(Bool, r_radarclipper)
 EXTERN_CVAR(Bool, r_dithertransparency)
 
 EXTERN_CVAR(Bool, gl_portals)
+
+EXTERN_CVAR(Bool, gl_strict_gldefs_errors)
