@@ -94,25 +94,13 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 	UpdaterSettingsDropdown->AddItem("Notify");
 	UpdaterSettingsDropdown->AddItem("Prompt to install");
 
-	int sel = 0;
-	if (info.bAutoUpdate && info.bCheckUpdate)
-		sel = 2;
-	else if (info.bCheckUpdate)
-		sel = 1;
-	UpdaterSettingsDropdown->SetSelectedItem(sel);
-
 	UpdaterIntervalDropdown = new Dropdown(this);
 	UpdaterIntervalDropdown->SetMaxDisplayItems(3);
 	UpdaterIntervalDropdown->AddItem("Other day");
 	UpdaterIntervalDropdown->AddItem("Week");
 	UpdaterIntervalDropdown->AddItem("Month");
 
-	sel = 1;
-	if (info.DefaultUpdateInterval < 7)
-		sel = 0;
-	else if (info.DefaultUpdateInterval > 7)
-		sel = 2;
-	UpdaterIntervalDropdown->SetSelectedItem(sel);
+	UpdateUpdaterValues(info.bAutoUpdate, info.bCheckUpdate, info.DefaultUpdateInterval);
 #endif
 
 	LangList = new ListView(this);
@@ -274,6 +262,25 @@ void SettingsPage::UpdateLanguage()
 	UpdaterIntervalDropdown->UpdateItem("Other day", 0);
 	UpdaterIntervalDropdown->UpdateItem("Week", 1);
 	UpdaterIntervalDropdown->UpdateItem("Month", 2);
+#endif
+}
+
+void SettingsPage::UpdateUpdaterValues(bool autoUpdate, bool check, int interval)
+{
+#ifdef HAS_UPDATER
+	int sel = 0;
+	if (autoUpdate && check)
+		sel = 2;
+	else if (check)
+		sel = 1;
+	UpdaterSettingsDropdown->SetSelectedItem(sel);
+
+	sel = 1;
+	if (interval < 7)
+		sel = 0;
+	else if (interval > 7)
+		sel = 2;
+	UpdaterIntervalDropdown->SetSelectedItem(sel);
 #endif
 }
 

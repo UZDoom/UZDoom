@@ -7037,7 +7037,7 @@ int DLevelScript::RunScript()
 
 	while (state == SCRIPT_Running)
 	{
-		if ( ptr && !(ptr->Flags & SCRIPTF_Busy) && (++runaway > 2000000) )
+		if ( (++runaway > 2000000) && ptr && !(ptr->Flags & SCRIPTF_Busy) )
 		{
 			Printf ("Runaway %s terminated\n", ScriptPresentation(script).GetChars());
 			state = SCRIPT_PleaseRemove;

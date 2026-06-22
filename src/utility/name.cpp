@@ -21,6 +21,10 @@
 **
 */
 
+// NOTE: This file has all linting disabled through cmake.
+//       This is due to IWYU segfaulting when it encounters this file.
+//       It's less than ideal, but it's the only solution I have right now.
+
 #include <cstdint>
 #include <string.h>
 #include <string_view>

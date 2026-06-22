@@ -15,6 +15,7 @@
 
 #include <cassert>
 #include <cmath>
+#include <cstring>
 
 #include "basics.h"
 #include "colorspace.h"
@@ -121,8 +122,8 @@ void oklch2oklab(Color& lch)
 {
 	CONVERT(lch, OKLCH, OKLAB);
 	auto c = lch.lch.c, h = lch.lch.h;
-	lch.lab.a = isnan(h) ? 0 : c * cos(h * N_PI / N_180);
-	lch.lab.b = isnan(h) ? 0 : c * sin(h * N_PI / N_180);
+	lch.lab.a = std::isnan(h) ? 0 : c * cos(h * N_PI / N_180);
+	lch.lab.b = std::isnan(h) ? 0 : c * sin(h * N_PI / N_180);
 }
 
 Color oklab(ColorP L, ColorP a, ColorP b)
@@ -177,8 +178,8 @@ void oklab2oklch(Color& lab)
 }
 
 inline ColorP alerp(ColorP a, ColorP b, float t) {
-	if (isnan(a)) return isnan(b)? 0: b;
-	if (isnan(b)) return isnan(a)? 0: a;
+	if (std::isnan(a)) return std::isnan(b)? 0: b;
+	if (std::isnan(b)) return std::isnan(a)? 0: a;
 	ColorP delta = fmod(b - a, N_360);
 	if (delta > N_180) delta -= N_360;
 	if (delta < -N_180) delta += N_360;

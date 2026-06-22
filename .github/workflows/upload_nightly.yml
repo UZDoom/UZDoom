@@ -13,6 +13,7 @@ jobs:
     permissions:
       contents: write
       actions: read
+    secrets: inherit
     with:
       title: Preview
       run-id: ${{ github.event.workflow_run.id }}
@@ -28,6 +29,7 @@ jobs:
     permissions:
       contents: write
       actions: read
+    secrets: inherit
     with:
       title: Experimental
       run-id: ${{ github.event.workflow_run.id }}

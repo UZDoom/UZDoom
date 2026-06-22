@@ -1504,7 +1504,7 @@ enum ECompatFlags
 	COMPATF2_SCRIPTWAIT		= 1 << 11,	// Use old scriptwait implementation where it doesn't wait on a non-running script.
 	COMPATF2_AVOID_HAZARDS	= 1 << 12,	// another MBF thing.
 	COMPATF2_STAYONLIFT		= 1 << 13,	// yet another MBF thing.
-	COMPATF2_NOMBF21		= 1 << 14,	// disable MBF21 features that may clash with certain maps
+	COMPATF2_RESERVEDLINEFLAG		= 1 << 14,	// disable certain linedef flag features that may clash with certain maps
 	COMPATF2_VOODOO_ZOMBIES = 1 << 15,  // allow playerinfo, playerpawn, and voodoo health to all be different, and allow monster targetting of 'dead' players that have positive health
 };
 

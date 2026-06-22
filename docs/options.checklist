@@ -32,3 +32,5 @@ N/A                                   comp_respawn                              
 N/A                                   comp_soul                                                 Buggy lost soul bouncing
 COMPATF_CROSSDROPOFF                  comp_ledgeblock                         10                       Monsters are blocked by ledges (except when scrolling)
 ---todo                               comp_friendlyspawn                      1                          Spawned things inherit the friend attribute from the source
+---todo                               comp_voodooscroller                                       [fix voodoo doll speed on slow scrollers: - When on: voodoo dolls on slow scrollers move too slowly - When off (default): voodoo dolls move the same speed as the floor]
+COMPATF2_RESERVEDLINEFLAG             comp_reservedlineflag                   0                 Clear non-vanilla linedef flag bits, if ML_RESERVED is present, certain old editors set them all to ON.

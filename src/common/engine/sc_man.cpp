@@ -650,6 +650,27 @@ bool FScanner::CheckToken (int token, bool evaluate)
 	return false;
 }
 
+
+//==========================================================================
+//
+// FScanner :: PeekToken
+//
+// Checks if the next token matches the specified token. Returns true if
+// it does. If it doesn't returns false. Always ungets it.
+//
+//==========================================================================
+
+bool FScanner::PeekToken (int token, bool evaluate)
+{
+	bool ok = false;
+	if (GetToken (evaluate))
+	{
+		ok = (TokenType == token);
+		UnGet ();
+	}
+	return ok;
+}
+
 //==========================================================================
 //
 // FScanner :: GetNumber

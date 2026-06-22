@@ -1941,7 +1941,7 @@ MapFlagHandlers[] =
 	{ "compat_scriptwait",				MITYPE_COMPATFLAG, 0, COMPATF2_SCRIPTWAIT },
 	{ "compat_avoidhazards",			MITYPE_COMPATFLAG, 0, COMPATF2_AVOID_HAZARDS },
 	{ "compat_stayonlift",				MITYPE_COMPATFLAG, 0, COMPATF2_STAYONLIFT },
-	{ "compat_nombf21",					MITYPE_COMPATFLAG, 0, COMPATF2_NOMBF21 },
+	{ "compat_reservedlineflag",	MITYPE_COMPATFLAG, 0, COMPATF2_RESERVEDLINEFLAG },
 	{ "compat_voodoozombies",			MITYPE_COMPATFLAG, 0, COMPATF2_VOODOO_ZOMBIES },
 	{ "compat_noacsargcheck",			MITYPE_COMPATFLAG, 0, COMPATF2_NOACSARGCHECK },
 	{ "compat_novdolllockmsg",			MITYPE_COMPATFLAG, 0, COMPATF2_NOVDOLLLOCKMSG },
@@ -2709,7 +2709,7 @@ void G_ParseMapInfo(FString basemapinfo)
 					COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
 
 				flags2 =
-					COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_NOMBF21 | COMPATF2_POINTONLINE;
+					COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE;
 			}
 			else if (length == 4 && !strnicmp("boom", data, 4))
 			{
@@ -2718,7 +2718,7 @@ void G_ParseMapInfo(FString basemapinfo)
 					COMPATF_INVISIBILITY;
 
 				flags2 =
-					COMPATF2_EXPLODE1 | COMPATF2_NOMBF21 | COMPATF2_POINTONLINE;
+					COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE;
 			}
 			else if (length == 3 && !strnicmp("mbf", data, 3))
 			{
@@ -2727,7 +2727,7 @@ void G_ParseMapInfo(FString basemapinfo)
 					COMPATF_MBFMONSTERMOVE | COMPATF_NOBLOCKFRIENDS | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
 
 				flags2 =
-					COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_NOMBF21 | COMPATF2_POINTONLINE;
+					COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE;
 			}
 			else if (length == 5 && !strnicmp("mbf21", data, 5))
 			{

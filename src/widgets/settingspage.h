@@ -33,6 +33,7 @@ class SettingsPage : public Widget
 public:
 	SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo& info);
 	void UpdateLanguage();
+	void UpdateUpdaterValues(bool autoUpdate, bool check, int interval);
 	void SetValues(FStartupSelectionInfo& info) const;
 
 private:

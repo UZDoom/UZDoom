@@ -79,13 +79,6 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info) : Widget(nullptr, Wi
 	Pages->SetStyleColor("background-color", Theme::getMain(COLOR_BACKGROUND));
 	Buttonbar = new LauncherButtonbar(this);
 	Buttonbar->SetStyleColor("background-color", Theme::getMain(COLOR_BACKGROUND));
-#ifdef HAS_UPDATER
-	if(IsCurlLoaded())
-	{
-		UpdateBar = new UpdateButtonBar(this);
-		UpdateBar->Hide();
-	}
-#endif
 
 	bool releasenotes = info.isNewRelease && info.notifyNewRelease;
 
@@ -93,6 +86,14 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info) : Widget(nullptr, Wi
 	Settings = new SettingsPage(this, info);
 	Network = new NetworkPage(this, info);
 	About = new AboutPage(this, info);
+
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded())
+	{
+		UpdateBar = new UpdateButtonBar(this, Settings);
+		UpdateBar->Hide();
+	}
+#endif
 
 	if (releasenotes)
 	{

@@ -26,11 +26,15 @@ on:
       message:
         required: true
         type: string
+    secrets:
+      GPG_PRIVATE_KEY:
+        required: false
 
 jobs:
   upload_release:
     name: Upload Release
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: write
       actions: read
@@ -71,9 +75,9 @@ jobs:
             fi
           }
 
-          move artifacts/Windows\ Release/*.zip Windows-UZDoom-${{ inputs.title }}.zip windows
-          move artifacts/MacOS\ Release/*.dmg MacOS-UZDoom-${{ inputs.title }}.dmg macos
-          appimage=Linux-UZDoom-${{ inputs.title }}.AppImage
+          move artifacts/Windows\ Release/*.zip Windows-UZDoom-${{ inputs.title }}-x86_64.zip windows
+          move artifacts/MacOS\ Release/*.dmg MacOS-UZDoom-${{ inputs.title }}-x86_64.dmg macos
+          appimage=Linux-UZDoom-${{ inputs.title }}-x86_64.AppImage
           move artifacts/Linux\ Release/*.AppImage ${appimage} linux
           move artifacts/Linux\ Release/*.zsync ${appimage}.zsync _
 
@@ -139,9 +143,17 @@ jobs:
             --arg     timestamp "${timestamp}" \
           | jq '. + { assets: $assets }'       \
             --argjson assets "${assets}"       \
-          | jq '. + { platforms: $platforms }'   \
-            --argjson platforms "${platforms}"   \
+          | jq '. + { platforms: $platforms }' \
+            --argjson platforms "${platforms}" \
           > release/_release.json
+
+          if [[ -n "${{ secrets.GPG_PRIVATE_KEY }}" ]]; then
+            echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
+            gpg --detach-sign --armor release/_release.json
+            gpg --list-secret-keys
+          else
+            echo "::warning ::Not signing"
+          fi
 
       - name: Upload
         uses: softprops/action-gh-release@v2.5.0 # FIXME: update this

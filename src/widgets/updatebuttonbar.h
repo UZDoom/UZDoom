@@ -20,9 +20,11 @@
 
 #include "basics.h"
 #include "version.h"
+#include "zstring.h"
 
 class LauncherWindow;
 class PushButton;
+class SettingsPage;
 
 struct update_info_t
 {
@@ -38,10 +40,11 @@ struct update_info_t
 class UpdateButtonBar : public Widget
 {
 	public:
-		UpdateButtonBar(LauncherWindow *parent);
+		UpdateButtonBar(LauncherWindow *parent, SettingsPage* settings = nullptr);
 		void UpdateLanguage();
+		void UpdateSettingsPage();
 
-		double GetPreferredHeight() const;
+		double GetPreferredHeight() override;
 
 		void CheckForUpdate(bool force = false);
 
@@ -85,6 +88,8 @@ class UpdateButtonBar : public Widget
 		void StartUpdate();
 		FString UpdateToString();
 		bool InitCurl();
+
+		SettingsPage* _settings = nullptr;
 
 		template<typename T>
 		std::optional<update_info_t> ParseRelease(T &&doc, bool &ok, bool &silentfail);

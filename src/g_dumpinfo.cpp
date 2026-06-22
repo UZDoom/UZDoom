@@ -22,18 +22,47 @@
 **
 */
 
-#include "c_dispatch.h"
-#include "g_levellocals.h"
+// IWYU pragma: no_include "fs_decompress.h"
+// IWYU pragma: no_include "info.h"
+
 #include "a_dynlight.h"
 #include "a_sharedglobal.h"
-#include "d_net.h"
-#include "p_setup.h"
-#include "filesystem.h"
-#include "v_text.h"
+#include "actor.h"
+#include "basics.h"
+#include "c_commandline.h"
+#include "c_dispatch.h"
 #include "c_functions.h"
-#include "gstrings.h"
-#include "texturemanager.h"
+#include "cmdlib.h"
 #include "d_main.h"
+#include "d_net.h"
+#include "d_player.h"
+#include "d_protocol.h"
+#include "dobjgc.h"
+#include "doomstat.h"
+#include "dthinker.h"
+#include "filesystem.h"
+#include "fs_filesystem.h"
+#include "g_level.h"
+#include "g_levellocals.h"
+#include "g_mapinfo.h"
+#include "gametexture.h"
+#include "name.h"
+#include "p_3dfloors.h"
+#include "p_setup.h"
+#include "p_tags.h"
+#include "portal.h"
+#include "printf.h"
+#include "r_defs.h"
+#include "r_interpolate.h"
+#include "r_state.h"
+#include "sprites.h"
+#include "statnums.h"
+#include "stats.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "texturemanager.h"
+#include "vectors.h"
+#include "zstring.h"
 
 //==========================================================================
 //
@@ -111,58 +140,46 @@ CCMD (spray)
 
 CCMD (mapchecksum)
 {
-	if (argv.argc() == 1)
-	{  //current map
-		const char *wadname = fileSystem.GetResourceFileName(fileSystem.GetFileContainer(level.lumpnum));
-
-		for (size_t i = 0; i < 16; ++i)
+	auto printmap = [](const char *name)
+	{
+		if (name[0] == '*')
 		{
-			Printf("%02X", level.md5[i]);
+			name = level.MapName.GetChars();
 		}
 
-		Printf(" // %s %s\n", wadname, level.MapName.GetChars());
-	}
-	else if (argv.argc() < 2)
+		MapData *map = P_OpenMapData(name, true);
+		uint8_t sum[16];
+		int lump = 0;
+		if (map)
+		{
+			map->GetChecksum(sum);
+			lump = map->lumpnum;
+			delete map;
+		}
+		else if (name[0] != '\0')
+		{
+			Printf("Cannot load %s as a map\n", name);
+			return;
+		}
+
+		Printf(
+			"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X // %s %s\n",
+			sum[0], sum[1], sum[2], sum[3], sum[4], sum[5], sum[6], sum[7],
+			sum[8], sum[9], sum[10], sum[11], sum[12], sum[13], sum[14], sum[15],
+			fileSystem.GetResourceFileName(fileSystem.GetFileContainer(lump)),
+			name
+		);
+	};
+
+	if (argv.argc() == 1)
 	{
-		Printf("Usage: mapchecksum <map> ...\n");
+		printmap("*");
 	}
 	else
 	{
-		MapData *map;
-		uint8_t cksum[16];
-
 		for (int i = 1; i < argv.argc(); ++i)
 		{
-			if(!strcmp(argv[i], "*"))
-			{
-				const char *wadname = fileSystem.GetResourceFileName(fileSystem.GetFileContainer(level.lumpnum));
-
-				for (size_t i = 0; i < 16; ++i)
-				{
-					Printf("%02X", level.md5[i]);
-				}
-
-				Printf(" // %s %s\n", wadname, level.MapName.GetChars());
-			}
-			else
-			{
-				map = P_OpenMapData(argv[i], true);
-				if (map == NULL)
-				{
-					Printf("Cannot load %s as a map\n", argv[i]);
-				}
-				else
-				{
-					map->GetChecksum(cksum);
-					const char *wadname = fileSystem.GetResourceFileName(fileSystem.GetFileContainer(map->lumpnum));
-					delete map;
-					for (size_t j = 0; j < sizeof(cksum); ++j)
-					{
-						Printf("%02X", cksum[j]);
-					}
-					Printf(" // %s %s\n", wadname, argv[i]);
-				}
-			}
+			printmap(argv[i]);
 		}
 	}
 }
@@ -177,7 +194,13 @@ CCMD (hiddencompatflags)
 {
 	for(auto Level : AllLevels())
 	{
-		Printf("%s: %08x %08x %08x\n", Level->MapName.GetChars(), Level->ii_compatflags, Level->ii_compatflags2, Level->ib_compatflags);
+		Printf(
+			"%s: %08x %08x %08x\n",
+			Level->MapName.GetChars(),
+			static_cast<uint32_t>(Level->ii_compatflags),
+			static_cast<uint32_t>(Level->ii_compatflags2),
+			static_cast<uint32_t>(Level->ib_compatflags)
+		);
 	}
 }
 
@@ -251,8 +274,6 @@ CCMD(dumptags)
 	}
 }
 
-
-
 CCMD(dump3df)
 {
 	if (argv.argc() > 1)
@@ -273,12 +294,10 @@ CCMD(dump3df)
 			double height = ffloors[i]->top.plane->ZatPoint(sector->centerspot);
 			double bheight = ffloors[i]->bottom.plane->ZatPoint(sector->centerspot);
 
-			IGNORE_FORMAT_PRE
-				Printf("FFloor %d @ top = %f (model = %d), bottom = %f (model = %d), flags = %B, alpha = %d %s %s\n",
-					i, height, ffloors[i]->top.model->sectornum,
-					bheight, ffloors[i]->bottom.model->sectornum,
-					ffloors[i]->flags, ffloors[i]->alpha, (ffloors[i]->flags&FF_EXISTS) ? "Exists" : "", (ffloors[i]->flags&FF_DYNAMIC) ? "Dynamic" : "");
-			IGNORE_FORMAT_POST
+			Printf("FFloor %d @ top = %f (model = %d), bottom = %f (model = %d), flags = %B, alpha = %d %s %s\n",
+				i, height, ffloors[i]->top.model->sectornum,
+				bheight, ffloors[i]->bottom.model->sectornum,
+				ffloors[i]->flags, ffloors[i]->alpha, (ffloors[i]->flags&FF_EXISTS) ? "Exists" : "", (ffloors[i]->flags&FF_DYNAMIC) ? "Dynamic" : "");
 		}
 	}
 }

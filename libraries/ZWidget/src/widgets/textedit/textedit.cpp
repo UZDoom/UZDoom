@@ -3,7 +3,9 @@
 #include "widgets/scrollbar/scrollbar.h"
 #include "core/utf8reader.h"
 #include "core/colorf.h"
+
 #include <algorithm>
+#include <cmath>
 
 #ifdef _MSC_VER
 #pragma warning(disable: 4267) // warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data

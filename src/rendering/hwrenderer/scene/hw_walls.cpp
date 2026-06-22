@@ -2075,6 +2075,9 @@ void HWWall::DoFFloorBlocks(HWWallDispatcher *di, seg_t * seg, sector_t * fronts
 		GetPlanePos(&rover->top, ff_topleft, ff_topright);
 		GetPlanePos(&rover->bottom, ff_bottomleft, ff_bottomright);
 
+		// completely below floor
+		if (ff_topleft < bottomleft && ff_topright < bottomright) continue;
+
 		// completely above ceiling
 		if (ff_bottomleft > topleft && ff_bottomright > topright && !renderedsomething) continue;
 

@@ -171,7 +171,8 @@ enum ELineFlags : uint32_t
 	ML_DRAWFULLHEIGHT			= 0x40000000,	// Draw the full height of the upper/lower sections
 	ML_PORTALCONNECT			= 0x80000000,	// for internal use only: This line connects to a sector with a linked portal (used to speed up sight checks.)
 	// Flag words may not exceed 32 bit due to VM limitations.
-	ML2_BLOCKLANDMONSTERS		= 0x1,	// MBF21
+	ML2_BLOCKLANDMONSTERS		= 0x00000001,	// MBF21
+	ML2_RESERVEDLINEFLAG		= 0x00000002,	// MBF21
 };
 
 

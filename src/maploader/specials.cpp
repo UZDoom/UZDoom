@@ -452,12 +452,11 @@ void MapLoader::InitSectorSpecial(sector_t *sector, int special)
 	{
 		sector->Flags |= SECF_PUSH;
 	}
-	// Nom MBF21 compatibility needs to be checked here, because after this point there is no longer any context in which it can be done.
-	if ((sector->special & KILL_MONSTERS_MASK) && Level->MBF21Enabled())
+	if (sector->special & KILL_MONSTERS_MASK)
 	{
 		sector->Flags |= SECF_KILLMONSTERS;
 	}
-	if (!(sector->special & DEATH_MASK) || !Level->MBF21Enabled())
+	if (!(sector->special & DEATH_MASK))
 	{
 		if ((sector->special & DAMAGE_MASK) == 0x100)
 		{

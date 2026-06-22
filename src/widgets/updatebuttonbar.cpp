@@ -32,6 +32,7 @@
 #include "widgets/themedata.h"
 #include <zwidget/widgets/pushbutton/pushbutton.h>
 #include <zwidget/widgets/textlabel/textlabel.h>
+#include "settingspage.h"
 #include <ctime>
 #include "curl_loader_internal.h"
 #include <algorithm>
@@ -42,6 +43,7 @@
 #include <filesystem>
 #include "filesystem.h"
 #include "cmdlib.h"
+#include "zstring.h"
 #ifdef _WIN32
 	#include <shellapi.h>
 #endif
@@ -442,7 +444,7 @@ void LauncherWindow::OnWindowClose()
 	if(!currentPopup) Close();
 }
 
-UpdateButtonBar::UpdateButtonBar(LauncherWindow *parent) : Widget(parent)
+UpdateButtonBar::UpdateButtonBar(LauncherWindow *parent, SettingsPage* settings) : Widget(parent)
 {
 	SetStyleColor("bg-default-color", Colorf(0.0f, 0.3f, 0.5f, 1.0f));
 	SetStyleColor("bg-highlight-color", Colorf(0.2f, 0.5f, 0.75f, 1.0f));
@@ -454,6 +456,7 @@ UpdateButtonBar::UpdateButtonBar(LauncherWindow *parent) : Widget(parent)
 	SetStyleColor("color", Colorf(1.0f, 1.0f, 1.0f, 1.0f));
 	arrow = Image::LoadResource("ui/arrow.png");
 	close = Image::LoadResource("ui/close.png");
+	_settings = settings;
 }
 
 FString UpdateButtonBar::UpdateToString()
@@ -497,6 +500,12 @@ void UpdateButtonBar::UpdateLanguage()
 	{
 		text = "";
 	}
+}
+
+void UpdateButtonBar::UpdateSettingsPage()
+{
+	if (_settings != nullptr)
+		_settings->UpdateUpdaterValues(updater_auto_updates, updater_check_updates, updater_update_interval);
 }
 
 void UpdateButtonBar::OnPaint(Canvas* canvas)
@@ -705,7 +714,7 @@ bool UpdateButtonBar::OnMouseUp(const Point& pos, InputKey key)
 	return false;
 }
 
-double UpdateButtonBar::GetPreferredHeight() const
+double UpdateButtonBar::GetPreferredHeight()
 {
 	return bar_height;
 }
@@ -738,11 +747,12 @@ void UpdateButtonBar::OpenUpdateInitChoice()
 			},
 			//ACTIONF_FLOAT_RIGHT
 		},{
-			"No", [](auto &self) // TODO: localize
+			"No", [this](auto &self) // TODO: localize
 			{
 				updater_check_updates = false;
 				updater_check_updates_initialized = true;
 				M_SaveDefaults(NULL); // save settings
+				UpdateSettingsPage();
 				self.Close();
 			},
 			//0, 1
@@ -756,33 +766,36 @@ void UpdateButtonBar::OpenUpdateIntervalChoice()
 	OpenPopup(this, "Update Checker", {"How often would you like to check for updates?", "(this can be changed later in the options tab)"}, // TODO: localize
 	{
 		{
-			"Every other day", [](auto &self) // TODO: localize
+			"Every other day", [this](auto &self) // TODO: localize
 			{
 				updater_check_updates = true;
 				updater_update_interval = 2;
 				updater_check_updates_initialized = true;
 				updater_last_update_check = std::to_string(getCurrentDate()).c_str();
 				M_SaveDefaults(NULL); // save settings
+				UpdateSettingsPage();
 				self.Close();
 			}
 		},{
-			"Every week", [](auto &self) // TODO: localize
+			"Every week", [this](auto &self) // TODO: localize
 			{
 				updater_check_updates = true;
 				updater_update_interval = 7;
 				updater_check_updates_initialized = true;
 				updater_last_update_check = std::to_string(getCurrentDate() - daysToSeconds(5)).c_str(); // first check always in 2 days
 				M_SaveDefaults(NULL); // save settings
+				UpdateSettingsPage();
 				self.Close();
 			}
 		},{
-			"Every month", [](auto &self) // TODO: localize
+			"Every month", [this](auto &self) // TODO: localize
 			{
 				updater_check_updates = true;
 				updater_update_interval = 30;
 				updater_check_updates_initialized = true;
 				updater_last_update_check = std::to_string(getCurrentDate() - daysToSeconds(28)).c_str(); // first check always in 2 days
 				M_SaveDefaults(NULL); // save settings
+				UpdateSettingsPage();
 				self.Close();
 			}
 		},{

@@ -161,7 +161,7 @@ static FCompatOption Options[] =
 	{ "explode2",				COMPATF2_EXPLODE2, SLOT_COMPAT2 },
 	{ "railing",				COMPATF2_RAILING, SLOT_COMPAT2 },
 	{ "scriptwait",				COMPATF2_SCRIPTWAIT, SLOT_COMPAT2 },
-	{ "nombf21",				COMPATF2_NOMBF21, SLOT_COMPAT2 },
+	{ "reservedlineflag",				COMPATF2_RESERVEDLINEFLAG, SLOT_COMPAT2 },
 	{ "voodoozombies",			COMPATF2_VOODOO_ZOMBIES, SLOT_COMPAT2 },
 	{ "fdteleport",				COMPATF2_FDTELEPORT, SLOT_COMPAT2 },
 	{ "noacsargcheck",			COMPATF2_NOACSARGCHECK, SLOT_COMPAT2 },
