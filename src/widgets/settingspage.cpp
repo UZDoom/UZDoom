@@ -30,6 +30,10 @@
 #include "sc_man.h"
 #include "settingspage.h"
 
+#ifdef HAS_UPDATER
+#include "curl_loader.h"
+#endif
+
 static constexpr struct { const char* string; int flag; } FILELOAD_OPTS[] = {
 	{"OPTVAL_LAX", REQUIRE_NONE},
 	{"OPTVAL_DEFAULT", REQUIRE_DEFAULT},
@@ -85,22 +89,25 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 	}
 #endif
 #ifdef HAS_UPDATER
-	UpdaterSettingsLabel = new TextLabel(this);
-	UpdaterIntervalLabel = new TextLabel(this);
+	if(IsCurlLoaded())
+	{
+		UpdaterSettingsLabel = new TextLabel(this);
+		UpdaterIntervalLabel = new TextLabel(this);
 
-	UpdaterSettingsDropdown = new Dropdown(this);
-	UpdaterSettingsDropdown->SetMaxDisplayItems(3);
-	UpdaterSettingsDropdown->AddItem("Disable");
-	UpdaterSettingsDropdown->AddItem("Notify");
-	UpdaterSettingsDropdown->AddItem("Prompt to install");
+		UpdaterSettingsDropdown = new Dropdown(this);
+		UpdaterSettingsDropdown->SetMaxDisplayItems(3);
+		UpdaterSettingsDropdown->AddItem("Disable");
+		UpdaterSettingsDropdown->AddItem("Notify");
+		UpdaterSettingsDropdown->AddItem("Prompt to install");
 
-	UpdaterIntervalDropdown = new Dropdown(this);
-	UpdaterIntervalDropdown->SetMaxDisplayItems(3);
-	UpdaterIntervalDropdown->AddItem("Other day");
-	UpdaterIntervalDropdown->AddItem("Week");
-	UpdaterIntervalDropdown->AddItem("Month");
+		UpdaterIntervalDropdown = new Dropdown(this);
+		UpdaterIntervalDropdown->SetMaxDisplayItems(3);
+		UpdaterIntervalDropdown->AddItem("Other day");
+		UpdaterIntervalDropdown->AddItem("Week");
+		UpdaterIntervalDropdown->AddItem("Month");
 
-	UpdateUpdaterValues(info.bAutoUpdate, info.bCheckUpdate, info.DefaultUpdateInterval);
+		UpdateUpdaterValues(info.bAutoUpdate, info.bCheckUpdate, info.DefaultUpdateInterval);
+	}
 #endif
 
 	LangList = new ListView(this);
@@ -193,31 +200,34 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 	info.DefaultBackend = v;
 #endif
 #ifdef HAS_UPDATER
-	switch (UpdaterSettingsDropdown->GetSelectedItem())
+	if(IsCurlLoaded())
 	{
-	case 2:
-		info.bAutoUpdate = info.bCheckUpdate = true;
-		break;
-	case 1:
-		info.bAutoUpdate = false;
-		info.bCheckUpdate = true;
-		break;
-	default:
-		info.bAutoUpdate = info.bCheckUpdate = false;
-		break;
-	}
+		switch (UpdaterSettingsDropdown->GetSelectedItem())
+		{
+		case 2:
+			info.bAutoUpdate = info.bCheckUpdate = true;
+			break;
+		case 1:
+			info.bAutoUpdate = false;
+			info.bCheckUpdate = true;
+			break;
+		default:
+			info.bAutoUpdate = info.bCheckUpdate = false;
+			break;
+		}
 
-	switch (UpdaterIntervalDropdown->GetSelectedItem())
-	{
-	case 2:
-		info.DefaultUpdateInterval = 30;
-		break;
-	case 0:
-		info.DefaultUpdateInterval = 2;
-		break;
-	default:
-		info.DefaultUpdateInterval = 7;
-		break;
+		switch (UpdaterIntervalDropdown->GetSelectedItem())
+		{
+		case 2:
+			info.DefaultUpdateInterval = 30;
+			break;
+		case 0:
+			info.DefaultUpdateInterval = 2;
+			break;
+		default:
+			info.DefaultUpdateInterval = 7;
+			break;
+		}
 	}
 #endif
 }
@@ -252,35 +262,41 @@ void SettingsPage::UpdateLanguage()
 	GLESCheckbox->SetText(GStrings.GetString("OPTVAL_OPENGLES"));
 #endif
 #ifdef HAS_UPDATER
-	// TODO: Add localization support
-	UpdaterSettingsLabel->SetText("Updater Settings");
-	UpdaterIntervalLabel->SetText("Check every:");
+	if(IsCurlLoaded())
+	{
+		// TODO: Add localization support
+		UpdaterSettingsLabel->SetText("Updater Settings");
+		UpdaterIntervalLabel->SetText("Check every:");
 
-	UpdaterSettingsDropdown->UpdateItem("Disable", 0);
-	UpdaterSettingsDropdown->UpdateItem("Notify", 1);
-	UpdaterSettingsDropdown->UpdateItem("Prompt to install", 2);
-	UpdaterIntervalDropdown->UpdateItem("Other day", 0);
-	UpdaterIntervalDropdown->UpdateItem("Week", 1);
-	UpdaterIntervalDropdown->UpdateItem("Month", 2);
+		UpdaterSettingsDropdown->UpdateItem("Disable", 0);
+		UpdaterSettingsDropdown->UpdateItem("Notify", 1);
+		UpdaterSettingsDropdown->UpdateItem("Prompt to install", 2);
+		UpdaterIntervalDropdown->UpdateItem("Other day", 0);
+		UpdaterIntervalDropdown->UpdateItem("Week", 1);
+		UpdaterIntervalDropdown->UpdateItem("Month", 2);
+	}
 #endif
 }
 
 void SettingsPage::UpdateUpdaterValues(bool autoUpdate, bool check, int interval)
 {
 #ifdef HAS_UPDATER
-	int sel = 0;
-	if (autoUpdate && check)
-		sel = 2;
-	else if (check)
-		sel = 1;
-	UpdaterSettingsDropdown->SetSelectedItem(sel);
+	if(IsCurlLoaded())
+	{
+		int sel = 0;
+		if (autoUpdate && check)
+			sel = 2;
+		else if (check)
+			sel = 1;
+		UpdaterSettingsDropdown->SetSelectedItem(sel);
 
-	sel = 1;
-	if (interval < 7)
-		sel = 0;
-	else if (interval > 7)
-		sel = 2;
-	UpdaterIntervalDropdown->SetSelectedItem(sel);
+		sel = 1;
+		if (interval < 7)
+			sel = 0;
+		else if (interval > 7)
+			sel = 2;
+		UpdaterIntervalDropdown->SetSelectedItem(sel);
+	}
 #endif
 }
 
@@ -365,17 +381,20 @@ void SettingsPage::OnGeometryChanged()
 	y = bottomPanelTop;
 
 #ifdef HAS_UPDATER
-	UpdaterSettingsLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsLabel->GetPreferredHeight());
-	y += UpdaterSettingsLabel->GetPreferredHeight();
+	if(IsCurlLoaded())
+	{
+		UpdaterSettingsLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsLabel->GetPreferredHeight());
+		y += UpdaterSettingsLabel->GetPreferredHeight();
 
-	UpdaterSettingsDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsDropdown->GetPreferredHeight());
-	y += UpdaterSettingsDropdown->GetPreferredHeight();
+		UpdaterSettingsDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsDropdown->GetPreferredHeight());
+		y += UpdaterSettingsDropdown->GetPreferredHeight();
 
-	UpdaterIntervalLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalLabel->GetPreferredHeight());
-	y += UpdaterIntervalLabel->GetPreferredHeight();
+		UpdaterIntervalLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalLabel->GetPreferredHeight());
+		y += UpdaterIntervalLabel->GetPreferredHeight();
 
-	UpdaterIntervalDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalDropdown->GetPreferredHeight());
-	y += UpdaterIntervalDropdown->GetPreferredHeight() + 10.0;
+		UpdaterIntervalDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalDropdown->GetPreferredHeight());
+		y += UpdaterIntervalDropdown->GetPreferredHeight() + 10.0;
+	}
 #endif
 
 	LoadLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, LoadLabel->GetPreferredHeight());

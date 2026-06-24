@@ -1735,6 +1735,24 @@ void UpdateButtonBar::CheckForUpdate(bool force)
 						Show();
 					}
 				}
+				else if(force)
+				{
+					OpenPopup(this, "Up to Date!", {"No updates were found"}, // TODO: localize
+					{
+						{"Ok", [](auto &self){
+							self.Close();
+						}}
+					});
+				}
+			}
+			else if(force)
+			{
+				OpenPopup(this, "Up to Date!", {"No updates were found"}, // TODO: localize
+				{
+					{"Ok", [](auto &self){
+						self.Close();
+					}}
+				});
 			}
 		}
 	}
