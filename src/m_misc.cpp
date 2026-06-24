@@ -68,12 +68,15 @@ FGameConfigFile *GameConfig;
 CVAR(Bool, screenshot_quiet, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR(String, screenshot_type, "png", CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR(String, screenshot_dir, "", CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
+CVAR(Bool, nosaveconfig, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
 EXTERN_CVAR(Bool, longsavemessages);
 
 FARG(shotdir, "Configuration", "Sets an alternate directory for saving screenshots.", "path",
 	"Specifies an alternate directory to use for screenshots. If this is not specified, " GAMENAME
 	" stores them in the directory indicated by the screenshot_dir CVAR.");
 
+FARG(nosaveconfig, "Configuration", "Disables the saving to any config file.", "", "");
+	
 static size_t ParseCommandLine (const char *args, int *argc, char **argv);
 
 //---------------------------------------------------------------------------
@@ -341,7 +344,8 @@ bool M_SaveDefaults (const char *filename)
 	FString oldpath;
 	bool success;
 
-	if (GameConfig == nullptr) return true;
+	if (Args->CheckParm(FArg_nosaveconfig) || nosaveconfig || GameConfig == nullptr)
+		return true;
 	if (filename != nullptr)
 	{
 		oldpath = GameConfig->GetPathName();
