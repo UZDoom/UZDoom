@@ -68,7 +68,7 @@ FGameConfigFile *GameConfig;
 CVAR(Bool, screenshot_quiet, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR(String, screenshot_type, "png", CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR(String, screenshot_dir, "", CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
-CVAR(Bool, nosaveconfig, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
+CVAR(Bool, con_nosaveconfig, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
 EXTERN_CVAR(Bool, longsavemessages);
 
 FARG(shotdir, "Configuration", "Sets an alternate directory for saving screenshots.", "path",
@@ -344,7 +344,7 @@ bool M_SaveDefaults (const char *filename)
 	FString oldpath;
 	bool success;
 
-	if (Args->CheckParm(FArg_nosaveconfig) || nosaveconfig || GameConfig == nullptr)
+	if (Args->CheckParm(FArg_nosaveconfig) || con_nosaveconfig || GameConfig == nullptr)
 		return true;
 	if (filename != nullptr)
 	{
@@ -378,7 +378,7 @@ void M_SaveDefaultsFinal ()
 UNSAFE_CCMD (writeini)
 {
 	const char *filename = (argv.argc() == 1) ? NULL : argv[1];
-	if (!M_SaveDefaults (filename))
+	if (Args->CheckParm(FArg_nosaveconfig) || con_nosaveconfig || !M_SaveDefaults(filename))
 	{
 		Printf ("Writing config failed: %s\n", strerror(errno));
 	}

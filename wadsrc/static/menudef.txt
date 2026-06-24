@@ -1796,7 +1796,7 @@ OptionMenu "MiscOptions" protected
 	Option "$OPTMNU_LANGUAGE",					"language", "LanguageOptions"
 
 	StaticText " "
-	Option "$MISCMNU_NOSAVECONFIG",			"nosaveconfig", "OnOff"
+	Option "$MISCMNU_NOSAVECONFIG",			"con_nosaveconfig", "OnOff"
 	Option "$MISCMNU_QUICKEXIT",				"m_quickexit", "OnOff"
 
 	StaticText " "
