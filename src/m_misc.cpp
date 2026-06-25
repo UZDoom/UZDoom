@@ -74,8 +74,6 @@ EXTERN_CVAR(Bool, longsavemessages);
 FARG(shotdir, "Configuration", "Sets an alternate directory for saving screenshots.", "path",
 	"Specifies an alternate directory to use for screenshots. If this is not specified, " GAMENAME
 	" stores them in the directory indicated by the screenshot_dir CVAR.");
-
-FARG(nosaveconfig, "Configuration", "Disables the saving to any config file.", "", "");
 	
 static size_t ParseCommandLine (const char *args, int *argc, char **argv);
 
