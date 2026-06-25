@@ -1071,6 +1071,9 @@ void HWSprite::Process(HWDrawInfo *di, AActor* thing, sector_t * sector, area_t 
 		if (!texture || !texture->isValid())
 			return;
 
+		// Canvas textures are stored upside down
+		if (texture && texture->isHardwareCanvas()) std::swap(vt, vb);
+
 		if (thing->renderflags & RF_SPRITEFLIP) // [SP] Flip back
 			thing->renderflags ^= RF_XFLIP;
 
