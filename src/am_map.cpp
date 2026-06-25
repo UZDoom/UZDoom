@@ -290,7 +290,7 @@ CVAR (Color, am_thingcolor_ncmonster,	0xfcfcfc,	CVAR_ARCHIVE);
 CVAR (Color, am_thingcolor_item,	0xfcfcfc,	CVAR_ARCHIVE);
 CVAR (Color, am_thingcolor_citem,	0xfcfcfc,	CVAR_ARCHIVE);
 CVAR (Color, am_sectorfillcolor,	0x4e3621,	CVAR_ARCHIVE);
-CVAR (Float, am_sectorfillalpha,	0.4f,		CVAR_ARCHIVE);
+CVAR (Float, am_sectorfillalpha,	0.0f,		CVAR_ARCHIVE);
 CVAR (Color, am_portalcolor,		0x404040,	CVAR_ARCHIVE);
 
 CVAR (Color, am_ovyourcolor,		0xfce8d8,	CVAR_ARCHIVE);
@@ -314,7 +314,7 @@ CVAR (Color, am_ovthingcolor_ncmonster,	0xe88800,	CVAR_ARCHIVE);
 CVAR (Color, am_ovthingcolor_item,		0xe88800,	CVAR_ARCHIVE);
 CVAR (Color, am_ovthingcolor_citem,		0xe88800,	CVAR_ARCHIVE);
 CVAR (Color, am_ovsectorfillcolor,		0x000000,	CVAR_ARCHIVE);
-CVAR (Float, am_ovsectorfillalpha,		0.2f,		CVAR_ARCHIVE);
+CVAR (Float, am_ovsectorfillalpha,		0.0f,		CVAR_ARCHIVE);
 CVAR (Color, am_ovportalcolor,			0x004022,	CVAR_ARCHIVE);
 
 //=============================================================================

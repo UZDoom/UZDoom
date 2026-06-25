@@ -24,7 +24,11 @@
 #include "version.h"
 #include "m_argv.h"
 #include "m_random.h"
-#ifndef __EMSCRIPTEN__ // building 64-bit wasm is still pain in arse
+#ifdef HAS_UPDATER
+#include "curl_loader.h"
+#endif
+
+#ifndef __EMSCRIPTEN__ //allow emscripten to produce wasm32
 static_assert(sizeof(void*) == 8,
 	"Only LP64/LLP64 builds are officially supported. "
 	"Please do not attempt to build for other platforms; "
@@ -167,9 +171,12 @@ int FStartupSelectionInfo::SaveInfo()
 	DefaultNetSaveFile.StripLeftRight();
 
 #ifdef HAS_UPDATER
-	updater_update_interval = DefaultUpdateInterval;
-	updater_auto_updates = bAutoUpdate;
-	updater_check_updates = bCheckUpdate;
+	if(IsCurlLoaded())
+	{
+		updater_update_interval = DefaultUpdateInterval;
+		updater_auto_updates = bAutoUpdate;
+		updater_check_updates = bCheckUpdate;
+	}
 #endif
 
 	queryiwad = DefaultQueryIWAD;
