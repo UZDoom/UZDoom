@@ -94,13 +94,20 @@ jobs:
         # fixed dubious ownership issue in a container
         git config --global --add safe.directory $GITHUB_WORKSPACE
 
+    # https://github.com/actions/runner-images/issues/14083
+    - name: Install Winget
+      if: inputs.os == 'windows-11-arm'
+      shell: pwsh
+      run: |
+        Install-Module -Name Microsoft.WinGet.Client -Repository PSGallery -Force
+        Repair-WinGetPackageManager -Latest -Force
+        Write-Output "Winget Version: $(winget --version)"
+        "C:\Users\runneradmin\AppData\Local\Microsoft\WinGet\Links" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+
     - name: Checkout
       uses: actions/checkout@v6
       with:
         fetch-depth: 0
-
-    - name: Fix Timestamps
-      uses: chetan/git-restore-mtime-action@v2
 
     - name: Get Cache Ref
       id: key
@@ -134,7 +141,7 @@ jobs:
       id: cache
       uses: actions/cache/restore@v5
       with:
-        path: build
+        path: .cache
         key: ${{ steps.key.outputs.primary }}
         restore-keys: ${{ steps.key.outputs.secondary }}
 
@@ -154,7 +161,7 @@ jobs:
         echo "status=${status}" | tee -a "$GITHUB_OUTPUT"
         if [[ "${status}" != "okay" ]]; then
           echo "Clearing cache"
-          rm -rf build
+          rm -rf .cache
         fi
         # use this condition to enable saving cache
 
@@ -182,7 +189,8 @@ jobs:
         DEPS_COMMAND: ${{ inputs.deps_cmdline }}
         EXTRA_FILES: ${{ inputs.extra_files }}
       run: |
-        mkdir -p build && cd build
+        mkdir -p build
+        mkdir -p .cache/files && cd .cache/files
 
         attempt() (
           set +e
@@ -247,60 +255,52 @@ jobs:
         echo ::endgroup::
 
         echo ::group::List
-        cd ..
+        shopt -s nullglob
+        cp * ../../build || true
+        cd ../..
         git status || true
         find build -ls || true
         echo ::endgroup::
 
     - name: Build
-      id: build
       env:
-        CACHED: ${{ steps.cached.outputs.status }}
         BUILD_TYPE: ${{ inputs.build_type }}
         BUILD_OPTS: ${{ inputs.build_opts }}
       run: |
-        config () { cmake -B build -S . -G Ninja -DPK3_QUIET_ZIPDIR=ON -DUSE_PCH=OFF -DCMAKE_BUILD_TYPE=$BUILD_TYPE $BUILD_OPTS ; }
-        build () { cmake --build build --config $BUILD_TYPE ; }
+        echo ::group::Cache Inspect
+        export CCACHE_COMPRESSLEVEL=5
+        export CCACHE_DIR="$PWD/.cache/ccache"
+        ccache -v
+        ccache -s
+        ccache -p
+        SECONDS=0
+        echo ::endgroup::
 
-        if [[ "$CACHED" == "okay" ]] ; then
-          echo 'Cache hit. Trying quick config'
-          echo ::group::Config
-          if ! config ; then
-            echo ::endgroup::
-            echo '::notice ::Quick config failed. Cleaning up and re-trying'
-            echo ::group::Config
-            rm -rf build/CMakeFiles build/CMakeCache.txt
-            config
-          fi
-          echo ::endgroup::
-        else
-          echo 'Configuring'
-          echo ::group::Config
-          config
-          echo ::endgroup::
-        fi
+        echo ::group::Configure
+        cmake \
+          -B build \
+          -S . \
+          -G Ninja \
+          -D PK3_QUIET_ZIPDIR=ON \
+          -D CMAKE_C_COMPILER_LAUNCHER=ccache \
+          -D CMAKE_CXX_COMPILER_LAUNCHER=ccache \
+          -D USE_PCH=OFF \
+          -D CMAKE_BUILD_TYPE=$BUILD_TYPE \
+          $BUILD_OPTS
+        echo ::endgroup::
 
-        if [[ "$CACHED" == "okay" ]] ; then
-          echo 'Cache hit. Trying quick build'
-          echo ::group::Build
-          if ! build ; then
-            echo ::endgroup::
-            echo '::notice ::Quick build failed. Cleaning up and re-trying'
-            echo ::group::Config
-            cmake --build build --target clean
-            rm -rf build/CMakeFiles build/CMakeCache.txt
-            config
-            echo ::endgroup::
-            echo ::group::Build
-            build
-          fi
-          echo ::endgroup::
-        else
-          echo 'Building'
-          echo ::group::Build
-          build
-          echo ::endgroup::
-        fi
+        echo ::group::Configure Inspect
+        cat build/CMakeCache.txt | grep -Ev '^$|^[#/]'
+        echo ::endgroup::
+
+        echo ::group::Build
+        cmake --build build --config $BUILD_TYPE
+        echo ::endgroup::
+
+        echo ::group::Cache Stats
+        ccache --evict-older-than $((SECONDS+10))s
+        ccache -s
+        echo ::endgroup::
 
     - name: Pre Package
       id: package
@@ -486,13 +486,6 @@ jobs:
         KEY: ${{steps.cache.outputs.cache-primary-key}}
       shell: bash
       run: |
-        echo ::group::Cleanup
-        # clean up stuff we don't want cached
-        # mainly stuff from packaging steps
-        rm -rvf build/AppDir build/package build/*.app
-        sync
-        echo ::endgroup::
-
         # https://github.com/actions/cache/issues/342
         if [[ "${{ steps.cached.outputs.clear }}" == 'yes' ]]; then
           echo ::group::Delete-Remote
@@ -508,5 +501,5 @@ jobs:
       if: steps.cached.outputs.save == 'yes'
       uses: actions/cache/save@v5
       with:
-        path: build
+        path: .cache
         key: ${{steps.cache.outputs.cache-primary-key}}
