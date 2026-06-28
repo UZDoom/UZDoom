@@ -203,7 +203,7 @@ extend class Actor
 		SetStateLabel('null');
 	}
 
-	void A_GenericFreezeDeath(let translation = 'Ice', int mintics = 75)
+	void A_GenericFreezeDeath(string translation = "Ice", int mintics = 75)
 	{
 		A_SetTranslation(translation);
 		A_FreezeDeath(mintics);
