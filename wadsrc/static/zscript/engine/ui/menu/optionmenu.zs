@@ -813,7 +813,7 @@ class OptionMenu : Menu
 
 			for (int i = 0; i < mDesc.mItems.Size(); i++)
 			{
-				if (i == mDesc.mScrollTop)
+				if (i == mDesc.mScrollTop && mDesc.mScrollPos >= 0)
 				{
 					i += mDesc.mScrollPos;
 
