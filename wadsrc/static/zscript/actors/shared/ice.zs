@@ -98,11 +98,11 @@ extend class Actor
 	//
 	//============================================================================
 
-	void A_FreezeDeath()
+	void A_FreezeDeath(int mintics = 75)
 	{
 
 		int t = random[freezedeath]();
-		tics = 75+t+random[freezedeath]();
+		tics = mintics+t+random[freezedeath]();
 		bSolid = bShootable = bNoBlood = bIceCorpse = bPushable = bTelestomp = bCanPass = bSlidesOnWalls = bCrashed = true;
 		Height = Default.Height;
 		A_SetRenderStyle(1, STYLE_Normal);
@@ -203,11 +203,10 @@ extend class Actor
 		SetStateLabel('null');
 	}
 
-	void A_GenericFreezeDeath()
+	void A_GenericFreezeDeath(let translation = 'Ice', int mintics = 75)
 	{
-		A_SetTranslation('Ice');
-		A_FreezeDeath();
+		A_SetTranslation(translation);
+		A_FreezeDeath(mintics);
 	}
-
 
 }
