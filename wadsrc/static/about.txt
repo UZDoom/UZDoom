@@ -13,7 +13,7 @@ UZDoom would not be possible without the work of many people. We extend our imme
 - id Software for creating the original DOOM and releasing its source code.
 - Marisa Heit for her foundational work on ZDoom, and Christoph Oelckers for his work on GZDoom.
 - The countless modders, mappers, and artists in the DOOM community who continue to create amazing content.
-- All the contributors who have submitted code, reported bugs, and helped improve the project over the years.
+- All the contributors who have submitted code, reported bugs, translated, and helped improve the project over the years.
 
 The UZDoom Icon was designed by Carlos "Cardboard Marty" Sanchez, copyrighted to the the UZDoom team, licensed under Creative Commons BY-SA 4.0
 

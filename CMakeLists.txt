@@ -307,8 +307,6 @@ if( MSVC )
 	# Use SSE 2 as minimum always as the true color drawers needs it for __vectorcall
 	#set( ALL_C_FLAGS "${ALL_C_FLAGS} /arch:SSE2") # This is already the default
 
-
-
 	# Avoid CRT DLL dependancies in release builds, optionally generate assembly output for checking crash locations.
 	option( ZDOOM_GENERATE_ASM "Generate assembly output." OFF )
 	if( ZDOOM_GENERATE_ASM )
@@ -316,7 +314,6 @@ if( MSVC )
 	else()
 		set( REL_C_FLAGS "/Oy /Oi /GS-" )
 	endif()
-
 
 	# Debug allocations in debug builds
 	set( DEB_C_FLAGS "/D _CRTDBG_MAP_ALLOC" )
@@ -329,6 +326,10 @@ if( MSVC )
 	endif()
 
 	string(REPLACE "/Ob1 " "/Ob2 " CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELWITHDEBINFO} )
+	string(REPLACE "/Zi" "/Z7" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+	string(REPLACE "/Zi" "/Z7" CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
+	string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+	string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO}")
 else()
 	set( REL_LINKER_FLAGS "" )
 	set( ALL_C_FLAGS "-ffp-contract=off" )

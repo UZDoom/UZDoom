@@ -86,40 +86,11 @@ if( WIN32 )
 	endif()
 else()
 	if( APPLE )
-		set( NO_GTK ON )
-		set( DYN_GTK OFF )
-
 		# Prevent inclusion of fp.h and FixMath.h from Carbon framework
 		# Declarations from these files are not used but cause the following conflicts:
 		#  - redefinition of 'FixedToFloat' and 'FloatToFixed' macros
 		#  - redefinition of 'pi' as different kind of symbol
 		add_definitions( -D__FP__ -D__FIXMATH__ )
-	else()
-		option( NO_GTK "Disable GTK+ dialogs (Not applicable to Windows)" )
-		option( DYN_GTK "Load GTK+ at runtime instead of compile time" ON )
-
-		# Use GTK+ for the IWAD picker, if available.
-		if( NOT NO_GTK )
-			pkg_check_modules( GTK3 gtk+-3.0 )
-			if( GTK3_FOUND )
-				if( NOT DYN_GTK )
-					set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} ${GTK3_LIBRARIES} )
-				endif()
-				include_directories( SYSTEM ${GTK3_INCLUDE_DIRS} )
-				link_directories( ${GTK3_LIBRARY_DIRS} )
-			else()
-				pkg_check_modules( GTK2 gtk+-2.0 )
-				if( GTK2_FOUND )
-					if( NOT DYN_GTK )
-						set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} ${GTK2_LIBRARIES} )
-					endif()
-					include_directories( SYSTEM ${GTK2_INCLUDE_DIRS} )
-					link_directories( ${GTK2_LIBRARY_DIRS} )
-				else()
-					set( NO_GTK ON )
-				endif()
-			endif()
-		endif()
 	endif()
 
 	if ( NOT WIN32 )
@@ -127,14 +98,6 @@ else()
 		if ( NO_SDL_JOYSTICK )
 			add_definitions( -DNO_SDL_JOYSTICK=1 )
 		endif()
-	endif()
-
-	if( NO_GTK )
-		add_definitions( -DNO_GTK )
-	elseif( DYN_GTK )
-		add_definitions( -DDYN_GTK=1 )
-	else()
-		add_definitions( -DDYN_GTK=0 )
 	endif()
 
 	# Non-Windows version also needs SDL except native OS X backend
@@ -447,8 +410,7 @@ set( PLAT_SDL_SOURCES
 	common/platform/posix/sdl/sdlglvideo.cpp
 	common/platform/posix/sdl/st_start.cpp )
 set( PLAT_UNIX_SOURCES
-	common/platform/posix/unix/i_specialpaths.cpp
-	common/platform/posix/unix/gtk_dialogs.cpp )
+	common/platform/posix/unix/i_specialpaths.cpp )
 set( PLAT_OSX_SOURCES
 	common/platform/posix/osx/iwadpicker_cocoa.mm
 	common/platform/posix/osx/i_specialpaths.mm

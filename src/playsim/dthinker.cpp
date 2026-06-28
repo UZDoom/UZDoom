@@ -39,8 +39,8 @@
 
 #include "p_visualthinker.h"
 
-static int ThinkCount;
-static cycle_t ThinkCycles;
+static int ThinkCount, ClientSideThinkCount;
+static cycle_t ThinkCycles, ClientSideThinkCycles;
 extern cycle_t BotSupportCycles;
 extern cycle_t ActionCycles;
 extern int BotWTG;
@@ -58,8 +58,9 @@ struct ProfileInfo
 	}
 };
 
-static TMap<FName, ProfileInfo> Profiles;
+static TMap<FName, ProfileInfo> Profiles, ClientSideProfiles;
 static unsigned int profilethinkers, profilelimit;
+static unsigned int csprofilethinkers, csprofilelimit;
 DThinker *NextToThink;
 
 //==========================================================================
@@ -106,7 +107,7 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 		// Tick every thinker left from last time
 		for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
 		{
-			Thinkers[i].TickThinkers(nullptr);
+			Thinkers[i].TickThinkers(nullptr, ThinkCount);
 		}
 
 		// Keep ticking the fresh thinkers until there are no new ones.
@@ -115,7 +116,7 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 			count = 0;
 			for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
 			{
-				count += FreshThinkers[i].TickThinkers(&Thinkers[i]);
+				count += FreshThinkers[i].TickThinkers(&Thinkers[i], ThinkCount);
 			}
 		} while (count != 0);
 	}
@@ -125,7 +126,7 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 		// Tick every thinker left from last time
 		for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
 		{
-			Thinkers[i].ProfileThinkers(nullptr);
+			Thinkers[i].ProfileThinkers(nullptr, ThinkCount, Profiles);
 		}
 
 		// Keep ticking the fresh thinkers until there are no new ones.
@@ -134,7 +135,7 @@ void FThinkerCollection::RunThinkers(FLevelLocals *Level)
 			count = 0;
 			for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
 			{
-				count += FreshThinkers[i].ProfileThinkers(&Thinkers[i]);
+				count += FreshThinkers[i].ProfileThinkers(&Thinkers[i], ThinkCount, Profiles);
 			}
 		} while (count != 0);
 
@@ -216,7 +217,7 @@ static void RecreateDynamicLights(AActor* mobj, bool dolights, bool frozen)
 			mobj->SetDynamicLights();
 	}
 	// This was merged from P_RunEffects to eliminate the costly duplicate ThinkerIterator loop.
-	if ((mobj->effects || mobj->fountaincolor) && mobj->ShouldRenderLocally() && !frozen)
+	if ((mobj->effects || mobj->fountaincolor) && !frozen && mobj->ShouldRenderLocally())
 	{
 		P_RunEffect(mobj, mobj->effects);
 	}
@@ -225,6 +226,11 @@ static void RecreateDynamicLights(AActor* mobj, bool dolights, bool frozen)
 void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 {
 	int i, count;
+
+	ClientSideThinkCount = 0;
+	ClientSideThinkCycles.Reset();
+
+	ClientSideThinkCycles.Clock();
 
 	bool dolights;
 	if ((gl_lights && vid_rendermode == 4) || (r_dynlights && vid_rendermode != 4))
@@ -244,7 +250,7 @@ void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 	auto recreateLights = [=]() {
 		// Set dynamic lights at the end of the tick, so that this catches all changes being made through the last
 		// frame.
-		const bool frozen = Level->isFrozen();
+		const bool frozen = paused || Level->isFrozen();
 		auto it = Level->GetThinkerIterator<AActor>();
 		while (auto ac = it.Next())
 		{
@@ -261,49 +267,133 @@ void FThinkerCollection::RunClientSideThinkers(FLevelLocals* Level)
 	// Tick every thinker left from last time
 	if (!paused)
 	{
-		for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+		if (!csprofilethinkers)
 		{
-			Thinkers[i].TickThinkers(nullptr);
-		}
-
-		// Keep ticking the fresh thinkers until there are no new ones.
-		do
-		{
-			count = 0;
 			for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
 			{
-				count += FreshThinkers[i].TickThinkers(&Thinkers[i]);
+				Thinkers[i].TickThinkers(nullptr, ClientSideThinkCount);
 			}
-		} while (count != 0);
+
+			// Keep ticking the fresh thinkers until there are no new ones.
+			do
+			{
+				count = 0;
+				for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+				{
+					count += FreshThinkers[i].TickThinkers(&Thinkers[i], ClientSideThinkCount);
+				}
+			} while (count != 0);
+		}
+		else
+		{
+			ClientSideProfiles.Clear();
+			// Tick every thinker left from last time
+			for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+			{
+				Thinkers[i].ProfileThinkers(nullptr, ClientSideThinkCount, ClientSideProfiles);
+			}
+
+			// Keep ticking the fresh thinkers until there are no new ones.
+			do
+			{
+				count = 0;
+				for (i = STAT_FIRST_THINKING; i <= MAX_STATNUM; ++i)
+				{
+					count += FreshThinkers[i].ProfileThinkers(&Thinkers[i], ClientSideThinkCount, ClientSideProfiles);
+				}
+			} while (count != 0);
+		}
 	}
 
 	recreateLights();
 	if (dolights && !paused)
 	{
-		/*if (profilethinkers)
+		if (!csprofilethinkers)
+		{
+			for (auto light = Level->lights; light;)
+			{
+				auto next = light->next;
+				light->Tick();
+				light = next;
+			}
+		}
+		else
 		{
 			// Also profile the internal dynamic lights, even though they are not implemented as thinkers.
-			auto &prof = Profiles[NAME_InternalDynamicLight];
+			auto& prof = ClientSideProfiles[NAME_InternalDynamicLight];
 			prof.timer.Clock();
 			for (auto light = Level->lights; light;)
 			{
-				prof.numcalls++;
+				++prof.numcalls;
 				auto next = light->next;
 				light->Tick();
 				light = next;
 			}
 			prof.timer.Unclock();
 		}
-		else
-		{*/
-			for (auto light = Level->lights; light;)
-			{
-				auto next = light->next;
-				light->Tick();
-				light = next;
-			}
-		//}
 	}
+
+	if (!paused && csprofilethinkers)
+	{
+		struct SortedProfileInfo
+		{
+			const char* className;
+			int numcalls;
+			double time;
+		};
+
+		TArray<SortedProfileInfo> sorted;
+		sorted.Grow(ClientSideProfiles.CountUsed());
+
+		auto it = TMap<FName, ProfileInfo>::Iterator(ClientSideProfiles);
+		TMap<FName, ProfileInfo>::Pair *pair;
+		while (it.NextPair(pair))
+		{
+			sorted.Push({ pair->Key.GetChars(), pair->Value.numcalls, pair->Value.timer.TimeMS() });
+		}
+
+		std::sort(sorted.begin(), sorted.end(), [](const SortedProfileInfo& left, const SortedProfileInfo& right)
+		{
+			switch (csprofilethinkers)
+			{
+			case 1: // by name, from A to Z
+				return stricmp(left.className, right.className) < 0;
+			case 2: // by name, from Z to A
+				return stricmp(right.className, left.className) < 0;
+			case 3: // number of calls, ascending
+				return left.numcalls < right.numcalls;
+			case 4: // number of calls, descending
+				return right.numcalls < left.numcalls;
+			case 5: // average time, ascending
+				return left.time / left.numcalls < right.time / right.numcalls;
+			case 6: // average time, descending
+				return right.time / right.numcalls < left.time / left.numcalls;
+			case 7: // total time, ascending
+				return left.time < right.time;
+			default: // total time, descending
+				return right.time < left.time;
+			}
+		});
+
+		Printf(TEXTCOLOR_YELLOW "Total, ms   Averg, ms   Calls   Actor class\n");
+		Printf(TEXTCOLOR_YELLOW "----------  ----------  ------  --------------------\n");
+
+		const unsigned count = min(csprofilelimit > 0 ? csprofilelimit : UINT_MAX, sorted.Size());
+
+		for (unsigned i = 0; i < count; ++i)
+		{
+			const SortedProfileInfo& info = sorted[i];
+			Printf("%s%10.6f  %s%10.6f  %s%6d  %s%s\n",
+				csprofilethinkers >= 7 ? TEXTCOLOR_YELLOW : TEXTCOLOR_WHITE, info.time,
+				csprofilethinkers == 5 || csprofilethinkers == 6 ? TEXTCOLOR_YELLOW : TEXTCOLOR_WHITE, info.time / info.numcalls,
+				csprofilethinkers == 3 || csprofilethinkers == 4 ? TEXTCOLOR_YELLOW : TEXTCOLOR_WHITE, info.numcalls,
+				csprofilethinkers == 1 || csprofilethinkers == 2 ? TEXTCOLOR_YELLOW : TEXTCOLOR_WHITE, info.className);
+		}
+
+		csprofilethinkers = 0;
+	}
+
+	ClientSideThinkCycles.Unclock();
 }
 
 //==========================================================================
@@ -704,7 +794,7 @@ void FThinkerList::OnLoad()
 //
 //==========================================================================
 
-int FThinkerList::TickThinkers(FThinkerList *dest)
+int FThinkerList::TickThinkers(FThinkerList *dest, int& counter)
 {
 	int count = 0;
 	DThinker *node = GetHead();
@@ -735,7 +825,7 @@ int FThinkerList::TickThinkers(FThinkerList *dest)
 
 		if (!(node->ObjectFlags & OF_EuthanizeMe))
 		{ // Only tick thinkers not scheduled for destruction
-			ThinkCount++;
+			++counter;
 			node->CallTick();
 			node->ObjectFlags &= ~OF_JustSpawned;
 		}
@@ -749,7 +839,7 @@ int FThinkerList::TickThinkers(FThinkerList *dest)
 //
 //
 //==========================================================================
-int FThinkerList::ProfileThinkers(FThinkerList *dest)
+int FThinkerList::ProfileThinkers(FThinkerList *dest, int& counter, TMap<FName, ProfileInfo>& profiles)
 {
 	int count = 0;
 	DThinker *node = GetHead();
@@ -780,9 +870,9 @@ int FThinkerList::ProfileThinkers(FThinkerList *dest)
 
 		if (!(node->ObjectFlags & OF_EuthanizeMe))
 		{ // Only tick thinkers not scheduled for destruction
-			ThinkCount++;
+			++counter;
 
-			auto &prof = Profiles[node->GetClass()->TypeName];
+			auto &prof = profiles[node->GetClass()->TypeName];
 			prof.numcalls++;
 			prof.timer.Clock();
 			node->CallTick();
@@ -1085,6 +1175,56 @@ CCMD(profilethinkers)
 	}
 }
 
+CCMD(profilecsthinkers)
+{
+	const int argc = argv.argc();
+
+	if (argc == 2 || argc == 3)
+	{
+		const char *str = argv[1];
+		bool ascend = true;
+
+		if (*str == '+')
+		{
+			++str;
+		}
+		else if (*str == '-')
+		{
+			ascend = false;
+			++str;
+		}
+
+		int mode = 0;
+
+		switch (*str)
+		{
+		case 't': mode = ascend ? 7 : 8; break;
+		case 'a': mode = ascend ? 5 : 6; break;
+		case '#': mode = ascend ? 3 : 4; break;
+		case 'c': mode = ascend ? 1 : 2; break;
+		default: mode = atoi(str); break;
+		}
+
+		csprofilethinkers = mode;
+		csprofilelimit = argc == 3 ? atoi(argv[2]) : 0;
+	}
+	else
+	{
+		Printf(
+			"Usage: profilecsthinkers [+|-][t|a|#|c] [limit]\n"
+			"       profilecsthinkers [1..8] [limit]\n\n"
+			"Sorting modes:\n"
+			TEXTCOLOR_YELLOW "c +c 1  " TEXTCOLOR_NORMAL "actor class, ascending\n"
+			TEXTCOLOR_YELLOW "  -c 2  " TEXTCOLOR_NORMAL "actor class, descending\n"
+			TEXTCOLOR_YELLOW "# +# 3  " TEXTCOLOR_NORMAL "number of calls, ascending\n"
+			TEXTCOLOR_YELLOW "  -# 4  " TEXTCOLOR_NORMAL "number of calls, descending\n"
+			TEXTCOLOR_YELLOW "a +a 5  " TEXTCOLOR_NORMAL "average time, ascending\n"
+			TEXTCOLOR_YELLOW "  -a 6  " TEXTCOLOR_NORMAL "average time, descending\n"
+			TEXTCOLOR_YELLOW "t +t 7  " TEXTCOLOR_NORMAL "total time, ascending\n"
+			TEXTCOLOR_YELLOW "  -t 8  " TEXTCOLOR_NORMAL "total time, descending\n");
+	}
+}
+
 //==========================================================================
 //
 //
@@ -1263,6 +1403,7 @@ DThinker *FThinkerIterator::Next (bool exact)
 ADD_STAT (think)
 {
 	FString out;
-	out.Format ("Think time = %04.2f ms - %d thinkers, Action = %04.2f ms", ThinkCycles.TimeMS(), ThinkCount, ActionCycles.TimeMS());
+	out.Format ("Think time = %04.2f ms - %d thinkers, Client-side think time = %04.2f ms - %d thinkers\nAction = %04.2f ms",
+		ThinkCycles.TimeMS(), ThinkCount, ClientSideThinkCycles.TimeMS(), ClientSideThinkCount, ActionCycles.TimeMS());
 	return out;
 }
