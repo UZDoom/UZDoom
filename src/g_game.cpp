@@ -119,7 +119,7 @@ void G_PlayerReborn (int player);
 
 void G_DoAutoSave ();
 void G_DoPlayDemo (void);
-void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, const char *description);
+void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, const char *description, bool saveFromScript);
 void G_DoVictory (void);
 
 void SetupLoadingCVars();
@@ -1263,13 +1263,13 @@ void G_Ticker ()
 			G_DoLoadGame ();
 			break;
 		case ga_savegame:
-			G_DoSaveGame (true, false, savegamefile, savedescription.GetChars());
+			G_DoSaveGame (true, false, savegamefile, savedescription.GetChars(), false);
 			gameaction = ga_nothing;
 			savegamefile = "";
 			savedescription = "";
 			break;
 		case ga_quicksave:
-			G_DoSaveGame(true, true, savegamefile, savedescription.GetChars());
+			G_DoSaveGame(true, true, savegamefile, savedescription.GetChars(), false);
 			gameaction = ga_nothing;
 			savegamefile = "";
 			savedescription = "";
@@ -2316,7 +2316,7 @@ void G_DoAutoSave ()
 
 	readableTime = myasctime ();
 	description.Format("Autosave %s", readableTime);
-	G_DoSaveGame (false, false, file, description.GetChars());
+	G_DoSaveGame (false, false, file, description.GetChars(), true);
 }
 
 void G_DoQuickSave ()
@@ -2400,7 +2400,16 @@ static void PutSavePic (FileWriter *file, int width, int height)
 	}
 }
 
-void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, const char *description)
+static bool IsSavingAllowed ()
+{
+	if (dmflags3 & DF3_NO_SAVE)
+		return false;
+	if (dmflags3 & DF3_YES_SAVE)
+		return true;
+	return !(level.flags3 & LEVEL3_SAVE_NO);
+}
+
+void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, const char *description, bool saveFromScript)
 {
 	TArray<FCompressedBuffer> savegame_content;
 	TArray<FString> savegame_filenames;
@@ -2414,6 +2423,12 @@ void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, c
 		return;
 	}
 
+	if (!(IsSavingAllowed () || saveFromScript))
+	{
+		Printf (PRINT_HIGH, "Saving is not allowed.\n");
+		return;
+	}
+	
 	if (demoplayback)
 	{
 		filename = G_BuildSaveName ("demosave");

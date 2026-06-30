@@ -260,6 +260,8 @@ enum ELevelFlags : unsigned int
 	LEVEL3_SECRET				= 0x00200000,   // level is a secret level
 	LEVEL3_SKYMIST				= 0x00400000,   // level skyfog uses the skymist texture
 	LEVEL3_NOAMBIENTOCCLUSION	= 0x00800000,   // disables ambient occlusion on this map
+	LEVEL3_SAVE_NO				= 0x01000000,   // disables manual saving on this map
+	LEVEL3_AUTOAUTOSAVE_NO      = 0x02000000,   // disables the automatic autosaves on loading this map
 };
 
 
