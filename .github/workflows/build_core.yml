@@ -384,6 +384,7 @@ jobs:
         fi
 
         mkdir -p ${app}/Contents/Frameworks
+        cp -L $(brew --prefix sdl3)/lib/libSDL3.dylib ${app}/Contents/Frameworks/libSDL3.dylib
         cp $(brew --prefix molten-vk)/lib/libMoltenVK.dylib ${app}/Contents/Frameworks/
         dylibbundler -ns -of -cd -b \
           -x ./${app}/Contents/MacOS/uzdoom \
