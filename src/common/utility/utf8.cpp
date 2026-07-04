@@ -185,6 +185,8 @@ uint16_t win1252map[] = {
 
 int GetCharFromString(const uint8_t *&string)
 {
+	if (!string) return 0;
+
 	int z;
 
 	z = *string;
@@ -226,10 +228,12 @@ static TArray<char> UTF8String;
 
 const char *MakeUTF8(const char *outline, int *numchars)
 {
+	if (numchars) *numchars = 0;
+	if (!outline) return nullptr;
+
 	UTF8String.Clear();
 	const uint8_t *in = (const uint8_t*)outline;
 
-	if (numchars) *numchars = 0;
 	while (int chr = GetCharFromString(in))
 	{
 		int size = 0;

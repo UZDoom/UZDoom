@@ -502,6 +502,17 @@ class OptionMenuItemOption : OptionMenuItemOptionBase
 			}
 		}
 	}
+
+	override bool MenuEvent (int mkey, bool fromcontroller)
+	{
+		if (mkey == Menu.MKEY_Clear && mCVar != null)
+		{
+			mCVar.ResetToDefault();
+			Menu.MenuSound("menu/change");
+			return true;
+		}
+		return Super.MenuEvent(mkey, fromcontroller);
+	}
 }
 
 //=============================================================================
@@ -839,6 +850,7 @@ class OptionMenuSliderBase : OptionMenuItem
 	CONST HELD_RESET_TICS = 6;
 
 	// command is a CVAR
+	CVar mCVar;
 	double mMin, mMax, mStep;
 	int mShowValue;
 	int mDrawX;
@@ -872,6 +884,7 @@ class OptionMenuSliderBase : OptionMenuItem
 		mShowValue = showval;
 		mDrawX = 0;
 		mSliderShort = 0;
+		mCVar = CVar.FindCVar(command);
 		mDisplayScale = displayScale;
 		mValueFormat = valueFormat;
 
@@ -1175,6 +1188,14 @@ class OptionMenuSliderBase : OptionMenuItem
 				SetSliderValue(SlideValue(GetSliderValue(), 1));
 				break;
 
+			case Menu.MKEY_Clear:
+				ResetHoldState();
+				if (mCVar)
+				{
+					SetSliderValue(ClampSliderValue(mCVar.GetDefaultFloat()));
+				}
+				break;
+
 			default:
 				ResetHoldState();
 				return OptionMenuItem.MenuEvent(mkey, fromcontroller);
@@ -1232,7 +1253,6 @@ class OptionMenuSliderBase : OptionMenuItem
 
 class OptionMenuItemSlider : OptionMenuSliderBase
 {
-	CVar mCVar;
 	double scale;
 
 	OptionMenuItemSlider Init(
@@ -1250,7 +1270,6 @@ class OptionMenuItemSlider : OptionMenuSliderBase
 	)
 	{
 		Super.Init(label, min, max, step, showval, command, graycheck, graycheckVal, graycheckMode, displayScale, valueFormat);
-		mCVar = CVar.FindCVar(command);
 		scale = (10 ** mShowValue) * displayScale;
 		return self;
 	}
@@ -1355,6 +1374,18 @@ class OptionMenuItemColorPicker : OptionMenuItem
 	override bool Selectable()
 	{
 		return !isGrayed();
+	}
+
+	override bool MenuEvent (int mkey, bool fromcontroller)
+	{
+		if (mkey == Menu.MKEY_Clear)
+		{
+			SetValue(CPF_RESET, 0);
+			Menu.MenuSound("menu/change");
+			return true;
+		}
+
+		return Super.MenuEvent(mkey, fromcontroller);
 	}
 }
 
@@ -1601,7 +1632,6 @@ class OptionMenuItemScaleSlider : OptionMenuItemSlider
 	)
 	{
 		Super.Init(label, command, min, max, step, showval, graycheck, graycheckVal, graycheckMode);
-		mCVar =CVar.FindCVar(command);
 		TextZero = zero;
 		TextNEgOne = negone;
 		mClickVal = -10;
