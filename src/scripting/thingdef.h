@@ -55,7 +55,7 @@ struct FFlagDef
 
 void FinalizeClass(PClass *cls, FStateDefinitions &statedef);
 FFlagDef *FindFlag (const PClass *type, const char *part1, const char *part2, bool strict = false);
-void HandleDeprecatedFlags(AActor *defaults, int set, int index);
+int HandleDeprecatedFlags(AActor *defaults, int set, int index);
 int CheckDeprecatedFlags(AActor *actor, int index);
 const char *GetFlagName(unsigned int flagnum, int flagoffset);
 void ModActorFlag(AActor *actor, FFlagDef *fd, bool set);

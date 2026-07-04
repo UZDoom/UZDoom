@@ -171,6 +171,13 @@ FString I_DetectOS()
 
 void I_StartupJoysticks();
 
+#define SDL_SETENV(k, v)                                           \
+	do {                                                           \
+		auto old = SDL_getenv(k);                                  \
+		if (old) DEBUG_LOG("%s already set as '%s'", k, old);      \
+		if (SDL_setenv(k, v, 0)) DEBUG_LOG("Failed to set %s", k); \
+	} while (0);
+
 int main (int argc, char **argv)
 {
 #if !defined (__APPLE__)
@@ -195,7 +202,7 @@ int main (int argc, char **argv)
 
 /* currently this is causing issues in the appimage build
 #ifdef __linux
-	SDL_setenv("SDL_VIDEODRIVER", "wayland,x11", 0);
+	SDL_SETENV("SDL_VIDEODRIVER", "wayland,x11");
 #endif
 */
 

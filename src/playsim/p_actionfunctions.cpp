@@ -6354,15 +6354,17 @@ FModel * FindFModel(AActor * self)
 		return nullptr;
 	}
 
+	auto &bsmf = BaseSpriteModelFrames[smf_class];
+
 	int animID = -1;
 
 	if(self->modelData->animationIDs.Size() > 0 && self->modelData->animationIDs[0] >= 0)
 	{
 		animID = self->modelData->animationIDs[0];
 	}
-	else
+	else if(bsmf.animationIDs.Size() > 0)
 	{
-		animID = BaseSpriteModelFrames[smf_class].animationIDs[0];
+		animID = bsmf.animationIDs[0];
 	}
 
 	if (animID >= 0 && animID < Models.SSize())
@@ -6373,9 +6375,13 @@ FModel * FindFModel(AActor * self)
 	{
 		return Models[self->modelData->models[0].modelID];
 	}
+	else if(bsmf.modelIDs.Size() > 0 && bsmf.modelIDs[0] >= 0 && bsmf.modelIDs[0] < Models.SSize())
+	{
+		return Models[bsmf.modelIDs[0]];
+	}
 	else
 	{
-		return Models[BaseSpriteModelFrames[smf_class].modelIDs[0]];
+		return nullptr;
 	}
 }
 
@@ -6419,6 +6425,8 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 	}
 
 	FModel * animation = FindFModel(self);
+
+	if(!animation) return false;
 
 	int animStart = animation->FindFirstFrame(animName);
 

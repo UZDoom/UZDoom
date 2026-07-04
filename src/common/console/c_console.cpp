@@ -53,6 +53,7 @@
 #include "zstring.h"
 #include <array>
 #include <string_view>
+#include <vector>
 
 namespace Console::Defaults
 {
@@ -408,49 +409,78 @@ void WriteLineToLog(FILE *LogFile, const char *outline)
 	fflush(LogFile);
 }
 
+namespace detail
+{
+inline int PrintString(PrintFlag iprintlevel, const char *outline)
+{
+	PrintFlag printlevel = static_cast<PrintFlag>(iprintlevel & PRINT_TYPES);
+	bool toScreen = printlevel != PRINT_LOG;
+	bool toFile = Logfile != nullptr && !(iprintlevel & PRINT_NOLOG);
+	bool toDebugger = !(iprintlevel & PRINT_NODAPEVENT);
+	int count = 0;
+
+	if (toScreen || toFile || toDebugger)
+	{
+		// Convert everything coming through here to UTF-8 so that all console text is in a consistent format
+		outline = MakeUTF8(outline, &count);
+	}
+	if (count == 0) return 0;
+
+	if (toScreen)
+	{
+		I_PrintStr(outline);
+		if (!(iprintlevel & PRINT_NOCONSOLE))
+			conbuffer->AddText(printlevel, outline);
+		if (vidactive && screen && !(iprintlevel & PRINT_NONOTIFY) && NotifyStrings)
+		{
+			if (printlevel >= msglevel)
+			{
+				NotifyStrings->AddString(iprintlevel, outline);
+			}
+		}
+	}
+	if (toFile)
+	{
+		WriteLineToLog(Logfile, outline);
+	}
+	if (toDebugger)
+	{
+		DebugServer::RuntimeEvents::EmitLogEvent(iprintlevel, outline);
+	}
+
+	return count;
+}
+}
+
+
 extern bool gameisdead;
+struct BufferedWrite { PrintFlag l; std::string s; };
+std::unique_ptr<std::vector<BufferedWrite>> prebuffer;
 
 int PrintString (PrintFlag iprintlevel, const char *outline)
 {
 	if (gameisdead)
 		return 0;
 
-	if (!conbuffer) return 0;	// when called too early
-	PrintFlag printlevel = static_cast<PrintFlag>(iprintlevel & PRINT_TYPES);
-	if (*outline == '\0')
+	if (!conbuffer)
 	{
+		if (!prebuffer) prebuffer = std::make_unique<std::vector<BufferedWrite>>();
+		if (prebuffer) prebuffer->push_back({iprintlevel, outline});
 		return 0;
 	}
-	if (printlevel != PRINT_LOG || !(iprintlevel & PRINT_NODAPEVENT) || Logfile != nullptr)
-	{
-		// Convert everything coming through here to UTF-8 so that all console text is in a consistent format
-		int count;
-		outline = MakeUTF8(outline, &count);
 
-		if (printlevel != PRINT_LOG)
+	auto ret = ::detail::PrintString(iprintlevel, outline);
+
+	if (prebuffer) // we want the version string to be the first thing printed
+	{
+		for (auto &line: *prebuffer)
 		{
-			I_PrintStr(outline);
-			if (!(iprintlevel & PRINT_NOCONSOLE))
-				conbuffer->AddText(printlevel, outline);
-			if (vidactive && screen && !(iprintlevel & PRINT_NONOTIFY) && NotifyStrings)
-			{
-				if (printlevel >= msglevel)
-				{
-					NotifyStrings->AddString(iprintlevel, outline);
-				}
-			}
+			::detail::PrintString(line.l, line.s.c_str());
 		}
-		if (Logfile != nullptr && !(iprintlevel & PRINT_NOLOG))
-		{
-			WriteLineToLog(Logfile, outline);
-		}
-		if (!(iprintlevel & PRINT_NODAPEVENT))
-		{
-			DebugServer::RuntimeEvents::EmitLogEvent(iprintlevel, outline);
-		}
-		return count;
+		prebuffer.reset();
 	}
-	return 0;	// Don't waste time on calculating this if nothing at all was printed...
+
+	return ret;
 }
 
 int VPrintf (PrintFlag printlevel, const char *format, va_list parms)
@@ -484,16 +514,19 @@ int Printf (const char *format, ...)
 	return count;
 }
 
-inline int _DPrintf(DPrintLevel level, PrintFlag printlevel, const char *format, va_list argptr)
+namespace detail
 {
-	return (developer >= level)? VPrintf(printlevel, format, argptr): 0;
+inline int DPrintf(DPrintLevel level, PrintFlag printlevel, const char *format, va_list argptr)
+{
+	return (!developer.get() || developer >= level)? VPrintf(printlevel, format, argptr): 0;
+}
 }
 
 int DPrintf (DPrintLevel level, PrintFlag printlevel, const char *format, ...)
 {
 	va_list argptr;
 	va_start(argptr, format);
-	int count = _DPrintf(level, printlevel, format, argptr);
+	int count = ::detail::DPrintf(level, printlevel, format, argptr);
 	va_end(argptr);
 	return count;
 }
@@ -502,12 +535,14 @@ int DPrintf(DPrintLevel level, const char *format, ...)
 {
 	va_list argptr;
 	va_start(argptr, format);
-	int count = _DPrintf(level, PRINT_HIGH, format, argptr);
+	int count = ::detail::DPrintf(level, PRINT_HIGH, format, argptr);
 	va_end(argptr);
 	return count;
 }
 
-void __DebugLog(std::string_view file, size_t line, const char * format, ...)
+namespace detail
+{
+void DebugLog(std::string_view file, size_t line, const char * format, ...)
 {
 	static const size_t start = [&file]() {
 		std::string here = __FILE__;
@@ -530,6 +565,7 @@ void __DebugLog(std::string_view file, size_t line, const char * format, ...)
 	data.VFormat(format, argptr);
 	va_end(argptr);
 	DPrintf(DMSG_SPAMMY, PRINT_HIGH, "%s:%lu : %s\n", file.data(), line, data.GetChars());
+}
 }
 
 void C_FlushDisplay ()
