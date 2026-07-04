@@ -524,17 +524,25 @@ void FRawMouse::Grab()
 
 		rid.usUsagePage = HID_GENERIC_DESKTOP_PAGE;
 		rid.usUsage = HID_GDP_MOUSE;
-		rid.dwFlags = RIDEV_CAPTUREMOUSE | RIDEV_NOLEGACY;
+		rid.dwFlags = RIDEV_NOLEGACY;
 		rid.hwndTarget = mainwindow.GetHandle();
 		if (RegisterRawInputDevices(&rid, 1, sizeof(rid)))
 		{
 			GetCursorPos(&UngrabbedPointerPos);
-			Grabbed = true;
-			SetCursorState(false);
+			ClipCursor(NULL);
+
+			// Manually create the window rect for the cursor to grab
+			RECT rect;
+			GetClientRect(rid.hwndTarget, &rect);
+
 			// By setting the cursor position, we force the pointer image
 			// to change right away instead of having it delayed until
 			// some time in the future.
 			CenterMouse(-1, -1, NULL, NULL);
+			
+			ClipCursor(&rect);
+			Grabbed = true;
+			SetCursorState(false);
 		}
 	}
 }
@@ -560,6 +568,7 @@ void FRawMouse::Ungrab()
 			Grabbed = false;
 			ClearButtonState();
 		}
+		ClipCursor(NULL); // this releases the cursor again
 		SetCursorState(true);
 		SetCursorPos(UngrabbedPointerPos.x, UngrabbedPointerPos.y);
 	}
