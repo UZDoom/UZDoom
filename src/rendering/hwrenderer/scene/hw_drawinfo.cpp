@@ -144,6 +144,7 @@ void HWDrawInfo::StartScene(FRenderViewpoint &parentvp, HWViewpointUniforms *uni
 		// The clip planes will never be inherited from the parent drawinfo.
 		VPUniforms.mClipLine.X = -1000001.f;
 		VPUniforms.mClipHeight = 0;
+		VPUniforms.mClipHeightDirection = 0.f;
 	}
 	else
 	{

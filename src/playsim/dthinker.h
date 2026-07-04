@@ -35,6 +35,7 @@ struct FState;
 class DThinker;
 class FSerializer;
 struct FLevelLocals;
+struct ProfileInfo;
 
 class FThinkerIterator;
 
@@ -52,8 +53,8 @@ struct FThinkerList
 	bool DoDestroyThinkers();
 	void RemoveTravellers(bool saveGame);
 	void OnLoad();
-	int TickThinkers(FThinkerList *dest);	// Returns: # of thinkers ticked
-	int ProfileThinkers(FThinkerList *dest);
+	int TickThinkers(FThinkerList *dest, int& counter);	// Returns: # of thinkers ticked
+	int ProfileThinkers(FThinkerList *dest, int& counter, TMap<FName, ProfileInfo>& profiles);
 	void SaveList(FSerializer &arc);
 
 private:

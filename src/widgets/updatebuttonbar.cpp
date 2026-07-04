@@ -1360,15 +1360,27 @@ public:
 						int argc;
 						LPWSTR * argv = CommandLineToArgvW(GetCommandLineW(), &argc);
 
-						std::string updater_filename = (progdir + "updater.exe");
+						std::string updater_filename(progdir + "updater.exe");
 
+						FString updater_filename_quoted((progdir + "updater.exe").c_str());
+
+						updater_filename_quoted.Substitute("\\", "\\\\");
+						updater_filename_quoted.Substitute("\"", "\\\"");
+						updater_filename_quoted = "\""+updater_filename_quoted+"\"";
+						
 						int numchars = MultiByteToWideChar(CP_UTF8, 0, updater_filename.c_str(), updater_filename.length(), NULL, 0);
 
 						WCHAR * updater_filename_w = new WCHAR[numchars + 1];
 						MultiByteToWideChar(CP_UTF8, 0, updater_filename.c_str(), updater_filename.length(), updater_filename_w, numchars);
 						updater_filename_w[numchars] = 0;
 
-						argv[0] = updater_filename_w;
+						numchars = MultiByteToWideChar(CP_UTF8, 0, updater_filename_quoted.GetChars(), updater_filename_quoted.Len(), NULL, 0);
+
+						WCHAR * updater_filename_quoted_w = new WCHAR[numchars + 1];
+						MultiByteToWideChar(CP_UTF8, 0, updater_filename_quoted.GetChars(), updater_filename_quoted.Len(), updater_filename_quoted_w, numchars);
+						updater_filename_quoted_w[numchars] = 0;
+
+						argv[0] = updater_filename_quoted_w;
 						_wexecv(updater_filename_w, argv);
 					}}
 				}, 500.0, POPUPF_DISALLOW_CLOSE);

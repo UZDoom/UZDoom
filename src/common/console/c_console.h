@@ -78,8 +78,11 @@ void C_SetNotifyFontScale(double scale);
 extern const char *console_bar;
 extern int chatmodeon;
 
+namespace detail
+{
 // Don't call me directly
-void __DebugLog(std::string_view, size_t, const char *, ...) ATTRIBUTE((format(printf,3,4)));
+void DebugLog(std::string_view, size_t, const char *, ...) ATTRIBUTE((format(printf,3,4)));
+}
 
 // Heavy print statement that knows where it was called from
-#define DEBUG_LOG(format, ...) __DebugLog(__FILE__, __LINE__, format, __VA_ARGS__);
+#define DEBUG_LOG(format, ...) ::detail::DebugLog(__FILE__, __LINE__, format, __VA_ARGS__);

@@ -136,7 +136,7 @@ const char *KeyNames[NUM_KEYS] =
 	"Guide",       "Pad_Misc",   "Pad_Touchpad",               //
 };
 
-CVAR(Int, cl_doubleclickthreshold, 250, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Int, cl_doubleclickthreshold, 225, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 FKeyBindings Bindings;
 FKeyBindings DoubleBindings;

@@ -292,9 +292,24 @@ int WINAPI wWinMain (HINSTANCE hInstance, HINSTANCE nothing, LPWSTR cmdline, int
 		op.pFrom = backup_path_fucked_up.str;
 		SHFileOperationW(&op);
 
+		wstr_t exe_path_new = wstr_raw(L"\"");
+
+		wchar_t tmp[2] = L"\0\0";
+
+		for(int i = 0; i < exe_path.len; i++)
+		{
+			if(exe_path.str[i] == L'\"' || exe_path.str[i] == L'\\')
+			{
+				exe_path_new = str_concat(exe_path_new, (wstr_t){L"\\", 1});
+			}
+			tmp[0] = exe_path.str[i];
+			exe_path_new = str_concat(exe_path_new, (wstr_t){tmp, 1});
+		}
+		exe_path_new = str_concat(exe_path_new, (wstr_t){L"\"", 1});
+
 		int argc;
 		LPWSTR * argv = CommandLineToArgvW(GetCommandLineW(), &argc);
-		argv[0] = exe_path.str;
+		argv[0] = exe_path_new.str;
 		_wexecv(exe_path.str, (const wchar_t * const *)argv);
 		return 0;
 	}

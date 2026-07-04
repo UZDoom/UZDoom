@@ -41,6 +41,7 @@ jobs:
             build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DUSE_UPDATER=ON
             build_opts_extra: ""
             deps_cmdline: &msvc_deps >-
+              winget install --accept-source-agreements --verbose --exact --id=Ccache.Ccache
             extra_files: &msvc_x86_files >-
               oalsoft.zip
                 ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6
@@ -63,6 +64,7 @@ jobs:
                 openal-soft
                 vulkan-volk
                 molten-vk
+                ccache
                 libvpx
                 sdl2
             extra_files: ""
@@ -88,6 +90,7 @@ jobs:
                 p7zip-full
                 appstream
                 clang-19
+                ccache
                 cmake
                 fuse
             extra_files: &linux_files_x86_64 >-
@@ -132,6 +135,7 @@ jobs:
             build_opts_extra: -DFORCE_NO_LTO=true
             deps_cmdline: &mingw_deps |
               pacman -S --noconfirm --needed
+                mingw-w64-x86_64-ccache
                 mingw-w64-x86_64-openal
                 mingw-w64-x86_64-libvpx
                 mingw-w64-x86_64-cmake

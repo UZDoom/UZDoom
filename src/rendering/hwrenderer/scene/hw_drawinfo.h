@@ -250,6 +250,7 @@ public:
 	{
 		VPUniforms.mClipLine = { (float)line->v1->fX(), (float)line->v1->fY(), (float)line->Delta().X, (float)line->Delta().Y };
 		VPUniforms.mClipHeight = 0;
+		VPUniforms.mClipHeightDirection = 0.f;
 	}
 
 	HWPortal * FindPortal(const void * src);

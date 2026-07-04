@@ -410,7 +410,20 @@ DEFINE_ACTION_FUNCTION(DObject,S_GetLength)
 FSoundID S_AddSound (const char *logicalname, const char *lumpname, FScanner *sc)
 {
 	int lump = fileSystem.CheckNumForFullName (lumpname, true, ns_sounds);
-	return S_AddSound (logicalname, lump);
+
+	if (developer >= DMSG_WARNING && lump <= -1)
+	{
+		if (sc)
+		{
+			Printf(PRINT_NONOTIFY, TEXTCOLOR_ORANGE "%s, " TEXTCOLOR_WHITE "%s" TEXTCOLOR_ORANGE " - Lump doesn't exist: " TEXTCOLOR_WHITE "%s\n", sc->ScriptName.GetChars(), logicalname, lumpname);
+		}
+		else
+		{
+			Printf(PRINT_NONOTIFY, TEXTCOLOR_WHITE "%s" TEXTCOLOR_ORANGE " - Lump doesn't exist: " TEXTCOLOR_WHITE "%s\n", logicalname, lumpname);
+		}
+	}
+
+	return S_AddSound (logicalname, lump, sc);
 }
 
 static FSoundID S_AddSound (const char *logicalname, int lumpnum, FScanner *sc)
@@ -471,11 +484,18 @@ static FSoundID S_AddSound (const char *logicalname, int lumpnum, FScanner *sc)
 
 FSoundID S_AddPlayerSound (const char *pclass, int gender, FSoundID refid, const char *lumpname)
 {
-	int lump=-1;
+	int lump = -1;
 
 	if (lumpname)
 	{
 		lump = fileSystem.CheckNumForFullName (lumpname, true, ns_sounds);
+
+		if (developer >= DMSG_WARNING && lump <= -1)
+		{
+			Printf(PRINT_NONOTIFY,
+			       TEXTCOLOR_ORANGE "Player sound " TEXTCOLOR_WHITE "%s, %s" TEXTCOLOR_ORANGE " - Lump doesn't exist: " TEXTCOLOR_WHITE "%s\n",
+			       pclass, soundEngine->GetSoundName(refid), lumpname);
+		}
 	}
 
 	return S_AddPlayerSound (pclass, gender, refid, lump);
